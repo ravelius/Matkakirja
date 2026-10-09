@@ -122,22 +122,9 @@ namespace Matkakirja.Natiivi
             Debug.Log($"MATKAKIRJA kaupunkipallot: {pallot.Count} kaupunkia: {string.Join(", ", pallot.Select(p => p.Id))}");
         }
 
-        /// <summary>
-        /// Pidemmälle viety kaupunki (omistaja 8.10.2026: Tukholma ja Pariisi): lista on Linssisepän Ytimessä
-        /// (Matkakirja.Linssit.Kehityskaupungit.On); kunnes se on mukana, varana omistajan nimeämät.
-        /// </summary>
-        static bool Kehityskaupunki(string id)
-        {
-            if (kehitysOn == null && !kehitysHaettu)
-            {
-                kehitysHaettu = true;
-                var m = System.Type.GetType("Matkakirja.Linssit.Kehityskaupungit, Matkakirja.Linssit.Ydin")?.GetMethod("On", new[] { typeof(string) });
-                if (m != null && m.ReturnType == typeof(bool)) kehitysOn = (System.Func<string, bool>)System.Delegate.CreateDelegate(typeof(System.Func<string, bool>), m);
-            }
-            return kehitysOn != null ? kehitysOn(id) : id == "tukholma" || id == "pariisi";
-        }
-        static System.Func<string, bool> kehitysOn;
-        static bool kehitysHaettu;
+        /// <summary>Pidemmälle viety kaupunki (omistaja 8.10.2026: Tukholma ja Pariisi): LS1:n Ydin Matkakirja.Linssit.Kehityskaupungit
+        /// suoraan (9.10.: heijastus pois, puuttuva rajapinta kaatuu käännökseen; KehityskaupungitTestit).</summary>
+        static bool Kehityskaupunki(string id) => Matkakirja.Linssit.Kehityskaupungit.On(id);
 
         static void Avaa(string id)
         {

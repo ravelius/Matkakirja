@@ -18,7 +18,7 @@ namespace Matkakirja.Natiivi
     public sealed class SeikkailuEsineet : MonoBehaviour
     {
         public static SeikkailuEsineet Aktiivinen { get; private set; }
-        public const float PoimintaM = 1.2f, HeittoEteen = 7f, HeittoYlos = 3.5f, KuuluuM = 12f, ValitsinAste = 30f;
+        public const float PoimintaM = 1.2f, KuuluuM = 12f, ValitsinAste = 30f;   // heiton nopeus: Heittorata (kantama 3–9 m katseesta)
         static readonly int IdKuva = Shader.PropertyToID("_Kuva"), IdPohjaKuva = Shader.PropertyToID("_PohjaKuva"), IdTila = Shader.PropertyToID("_Tila");
         /// <summary>Kolahduksen klippi (rakennus.json aanet pikari-1); Sovitin asettaa.</summary>
         public static AudioClip KolahdusKlippi;
@@ -220,6 +220,7 @@ namespace Matkakirja.Natiivi
         {
             // Pukeutuminen 2 s paikallaan (pää alas -jaksossa, pelattavuusmalli 8.2 huone 6 vaihe 3): esine pois naulakosta.
             pukeutuu = true; p.KasiEle("poiminta");
+            SeikkailuAanet.Soita("viitta", p.transform.position + Vector3.up * 1.2f, 0.7f);   // kankaan kahina (aanet-lapi-v1)
             kirjaa?.Invoke($"seikkailu: pukeutuu ({e.Id})");
             yield return new WaitForSeconds(PukeutuminenS);
             pukeutuu = false;
@@ -232,6 +233,7 @@ namespace Matkakirja.Natiivi
         public static IEnumerator Lataa(KavelyData d, string juuri, Func<string, string> url, Transform isa, Action<string> kirjaa)
         {
             Poista();
+            SeikkailuKaukokuva.Nollaa();
             if (d == null) yield break;
             var go = new GameObject("Seikkailu esineet") { layer = DioraamaNayttamo.Kerros };
             go.transform.SetParent(isa, false);
@@ -467,8 +469,12 @@ namespace Matkakirja.Natiivi
             var akseli = Vector3.Cross(Vector3.up, suunta.sqrMagnitude > 1e-4f ? suunta.normalized : p.Hahmo.forward);
             StartCoroutine(Kaatuu(e, akseli));
             SeikkailuVartijat.Aani(e.Go.transform.position, e.AaniM);
-            SeikkailuAanet.Soita("kivi-kolahdus", e.Go.transform.position, 1f, 0.8f);
-            if (KolahdusKlippi != null) AudioSource.PlayClipAtPoint(KolahdusKlippi, e.Go.transform.position, 0.9f);
+            if (SeikkailuAanet.Klippi("patapino") != null) SeikkailuAanet.Soita("patapino", e.Go.transform.position);   // aanet-lapi-v1 (Pelikoodari 9.10.)
+            else
+            {
+                SeikkailuAanet.Soita("kivi-kolahdus", e.Go.transform.position, 1f, 0.8f);
+                if (KolahdusKlippi != null) AudioSource.PlayClipAtPoint(KolahdusKlippi, e.Go.transform.position, 0.9f);
+            }
             Kolahti?.Invoke(e.Go.transform.position);
             kirjaa?.Invoke($"seikkailu: kaadettu {e.Id} (kuuluu {e.AaniM:F0} m)");
         }
@@ -558,10 +564,14 @@ namespace Matkakirja.Natiivi
                     if (a != null) { v.Kuva = DioraamaAstc.Lue(a, "Esine:" + glb, out var syy, TextureWrapMode.Clamp); v.Astc = v.Kuva != null; if (v.Kuva == null) kirjaa?.Invoke($"seikkailu: {astc} ei käytössä ({syy}), JPEG"); }
                     if (v.Kuva != null) { v.KuvaUrl = astcUrl; break; }
                 }
-                if (v.Kuva == null && v.Ladattu && v.Malli.Kuvat.Count > 0 && v.Malli.Kuvat[0] != null)
+                // Varakuva: materiaalin baseColorTexture-indeksi (LS2 9.10.: rekvisiitan glb:ssä Kuvat[0] on normaalikartta → sinivioletti).
+                int perus = -1;
+                foreach (var sm in v.Malli.Solmut) { foreach (var os in sm.Osat) if (os.Kuva >= 0) { perus = os.Kuva; break; } if (perus >= 0) break; }
+                if (perus < 0 && v.Malli.Kuvat.Count > 0) perus = 0;
+                if (v.Kuva == null && v.Ladattu && perus >= 0 && perus < v.Malli.Kuvat.Count && v.Malli.Kuvat[perus] != null)
                 {
                     var k = new Texture2D(2, 2, TextureFormat.RGBA32, true, false) { name = "Esine:" + glb };
-                    if (k.LoadImage(v.Malli.Kuvat[0], true)) v.Kuva = k; else Destroy(k);   // markNonReadable: CPU-kopio pois
+                    if (k.LoadImage(v.Malli.Kuvat[perus], true)) v.Kuva = k; else Destroy(k);   // markNonReadable: CPU-kopio pois
                 }
                 // Normaalikartta (LR v45o): <glb>-normaali-4x4.astcm (esineet) tai <glb>-normaali-6x6.astcm (rekvisiitta v45p);
                 // lineaarinen, sama UV0 ja v-suunta kuin perusvärillä.
@@ -738,6 +748,7 @@ namespace Matkakirja.Natiivi
             var p = SeikkailuPelaaja.Aktiivinen;
             if (p == null) return;
             if (Time.unscaledTime >= huoneTarkistus) { huoneTarkistus = Time.unscaledTime + 1f; HuoneLataus(p.transform.position); }
+            SeikkailuKaukokuva.Paivita(p);   // K3 muurikäytävään tultaessa (pelattavuusmalli 7)
             if (p.Ohjataan)
             {
                 // Ohjattu jakso (pako): toimintonappi vain jakson omalle teolle (Katkaise).
@@ -887,10 +898,15 @@ namespace Matkakirja.Natiivi
             // Katseen suunta, jos kamera on käännetty (heitto sinne, minne pelaaja katsoo).
             var k = Quaternion.Euler(0, (float)p.Tila.KameraYaw, 0) * Vector3.forward;
             if (k.sqrMagnitude > 0.5f) eteen = k;
-            e.Rb.linearVelocity = eteen * HeittoEteen + Vector3.up * HeittoYlos;
+            // Tähtäys (pelattavuusmalli 2.4, juna 170): kantama katseen pystykulmasta 3–9 m (KameraPitch + = alas), rata laskeutuu
+            // lattiaan kantaman päähän esineen todellisesta korkeudesta (kyyryssä matalammalta).
+            double ylos = -p.Tila.KameraPitch, kasi = e.Go.transform.position.y - p.transform.position.y;
+            double kantama = Heittorata.Kantama(ylos);
+            var (vx, vy) = Heittorata.Nopeus(kantama, kasi);
+            e.Rb.linearVelocity = eteen * (float)vx + Vector3.up * (float)vy;
             e.Rb.angularVelocity = UnityEngine.Random.insideUnitSphere * 8f;
             e.Heitetty = true;
-            kirjaa?.Invoke($"seikkailu: heitetty {e.Id} suuntaan {eteen}");
+            kirjaa?.Invoke($"seikkailu: heitetty {e.Id} suuntaan {eteen}, kantama {kantama:F1} m (katse {ylos:F0}°)");
         }
 
         /// <summary>Nostettu (kalkki, pateeni, liuskekivi) lasketaan varovasti eteen (ei heitetä: pyhä esine).</summary>
@@ -996,6 +1012,7 @@ namespace Matkakirja.Natiivi
             SeikkailuVartijat.Aani(kohta, KuuluuM);
             Kolahti?.Invoke(kohta);
             if (e.Laji == Laji.Irrotettava || e.Id.StartsWith("kivi", StringComparison.Ordinal)) SeikkailuAanet.Soita("kivi-kolahdus", kohta);
+            else if (e.Id.StartsWith("savipurkki", StringComparison.Ordinal) && SeikkailuAanet.Klippi("savipurkki") != null) SeikkailuAanet.Soita("savipurkki", kohta);   // rikkoutuu (aanet-lapi-v1)
             else if (KolahdusKlippi != null)
             {
                 var a = SeikkailuKuulija.Lahde("Kolahdus:" + e.Id, 2f, 30f);

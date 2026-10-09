@@ -6,8 +6,9 @@
 // LÄHDE: Documents/omat-mallit/mallit.json (kehitys, file://), StreamingAssets/omat-mallit/mallit.json (appin mukana) tai
 // R2 (omistaja 7.10. 08.4x "Egypti loppuun omilla malleilla"): media.matkakirja.app/kartta/omat-mallit/uusin.json → {"mallit":
 // "<versio>/mallit.json"}; haetaan kerran kaupunkinäkymän avautuessa, ja jos lähellä on kohteita, mallit avataan kun json saapuu.
-// KORKEUS: mallit.json:n ellipsoidikorkeus (EGM2008 + N-arvio); Googlen pinta näytteistetään leikkauskulmista lokiin, ja jos ero
-// on yli KorjausRajaM, malli siirretään Googlen pinnan mukaan (sauma ei saa jäädä ilmaan eikä hautautua).
+// KORKEUS (PT 9.10. päätös 2; Map Tiles C4: Googlen laatoista ei lueta korkeuksia): vain mallit.json:n ellipsoidikorkeus omasta
+// korkeusmallista (IGN RGE ALTI / Lantmäteriet / DEM + geoidi). Mallia EI siirretä Googlen pinnan mukaan. Kehittäjätilassa
+// (Linssirekisteri.Kehittajatila, ei oma korkeusmalli) Googlen pinta näytteistetään leikkauskulmista VAIN lokiin saumojen arviointiin.
 // TEKIJÄRIVI: Tekijat (esim. "Pyramidien 3D-malli: Matkakirja") näytetään erillään Googlen riveistä (Natiivi-UI, KrediititTiivis).
 using System;
 using System.Collections.Generic;
@@ -24,20 +25,30 @@ namespace Matkakirja.Linssit
     {
         /// <summary>Näkyvien omien mallien tekijärivi (null = ei omia malleja ruudulla). Googlen rivien erillään (Map Tiles -ohjeet).</summary>
         public static string Tekijat { get; private set; }
-        /// <summary>Korkeuskorjauksen raja (m): pienempi ero jätetään (maapohjan reuna on vinoutettu 0,3 m alas).</summary>
-        public const double KorjausRajaM = 0.5;
-        /// <summary>Korjaus vain, kun kulmien hajonta on enintään tämä (m): kuopassa (Sfinksin aitaus) kulmat ovat reunoilla eri
-        /// korkeuksilla, eikä yksi siirto sovi; silloin vain loki (Linnanrakentaja säätää DEM-arvoilla). Simu 7.10. 01.07.</summary>
-        public const double HajontaRajaM = 2.0;
+        /// <summary>☰ › Lähteet (Natiivi-UI 9.10.): kaikkien mallit.json-kohteiden krediittirivit (myös ei näkyvien); tyhjä, kunnes json on
+        /// saatavilla (Documents, StreamingAssets tai R2-osoitin).</summary>
+        public static IReadOnlyList<string> Lahderivit
+        {
+            get
+            {
+                var (json, _, _) = Lue();
+                if (json == null) return System.Array.Empty<string>();
+                if (!ReferenceEquals(json, lahdeJson)) { lahdeJson = json; lahdeRivit = OmatMallit.Lahderivit(OmatMallit.Lue(json)); }
+                return lahdeRivit;
+            }
+        }
+        static string lahdeJson; static List<string> lahdeRivit = new List<string>();
         /// <summary>Tyhjä näyte (Googlen laatat eivät vielä ladattu): uusi yritys näin monta kertaa 3 s välein.</summary>
         public const int NayteYrityksia = 5;
+        /// <summary>Omien mallien ruutuvirheraja (Googlen oma on 8–16): mallit tarkentuvat LOD0:aan pallon etäisyyksillä.</summary>
+        public const float OmaSse = 4f;
 
         readonly Action<string> kirjaa;
         GameObject juuri;
         Cesium3DTileset google;
         CesiumPolygonRasterOverlay leikkaus;
         readonly List<(OmatMallit.Kohde kohde, Cesium3DTileset tileset, CesiumCartographicPolygon polygoni)> mallit = new();
-        string tekija;
+        OmatMallit.Paketti paketti;
 
         public CesiumOmatMallit(Action<string> kirjaa) { this.kirjaa = kirjaa; VerkkoSaapui += Saapui; }
 
@@ -45,7 +56,10 @@ namespace Matkakirja.Linssit
         /// (omistaja 7.10. 08.4x), kun ennen/jälkeen-kuva on todennettu. Testi pois: Documents/omat-mallit/leikkaus-pois.</summary>
         static bool Leikkaa => !File.Exists(Path.Combine(Application.persistentDataPath, "omat-mallit", "leikkaus-pois"));
 
-        public const string VerkkoOsoitin = "https://media.matkakirja.app/kartta/omat-mallit/uusin.json";
+        /// <summary>uusin-2.json (9.10., juna 170): kaupunkien omat mallit (Riddarholmen, Concorde) vain buildeille, joissa ilmakehän
+        /// laattavarjostimen leikkaus on oikein päin (fa5efa25c); vanhat buildit lukevat uusin.json:ia (vain Giza), muuten niissä
+        /// kehityskaupungin koko Googlen kaupunki katoaisi leikkauksen kohdalla.</summary>
+        public const string VerkkoOsoitin = "https://media.matkakirja.app/kartta/omat-mallit/uusin-2.json";
         static string verkkoJson, verkkoJuuri;
         static bool verkkoHaettu, verkkoHaussa;
         /// <summary>R2:n mallit.json saapui (avoin kaupunkinäkymä avaa lähellä olevat mallit).</summary>
@@ -127,7 +141,7 @@ namespace Matkakirja.Linssit
             var lahella = OmatMallit.Lahella(paketti, lat, lon);
             if (lahella.Count == 0) return;
             avattu = string.Join(",", lahella.ConvertAll(k => k.Id));
-            google = googleTileset; tekija = paketti.Tekija;
+            google = googleTileset; this.paketti = paketti;
             juuri = new GameObject("Omat mallit") { layer = kerros };
             juuri.transform.SetParent(vanhempi, false);
             foreach (var k in lahella)
@@ -141,7 +155,9 @@ namespace Matkakirja.Linssit
                 t.showCreditsOnScreen = false;   // oma tekijärivi Tekijat-kentästä
                 t.createPhysicsMeshes = false;
                 t.forbidHoles = true;
-                t.maximumScreenSpaceError = googleTileset != null ? googleTileset.maximumScreenSpaceError : 16f;
+                // Omat mallit tarkemmin kuin Googlen laatat (simu 9.10. 04.5x: Googlen SSE 16 piti 420 m:stä Notre-Damen karkeimmalla LOD2:lla,
+                // virhe 1,7 m → SSE ~15). Mallit ovat pieniä (LOD0 30–120 k), joten LOD0 jo noin 1 km:stä.
+                t.maximumScreenSpaceError = Mathf.Min(OmaSse, googleTileset != null ? googleTileset.maximumScreenSpaceError : 16f);
                 var kohde = k;
                 t.OnTileGameObjectCreated += laatta => MalliLadattu(kohde, laatta);
                 go.SetActive(true);
@@ -184,7 +200,7 @@ namespace Matkakirja.Linssit
         {
             if (google == null || juuri == null) return;
             if (laatta != null) laatta.layer = juuri.layer;
-            Tekijat = tekija;
+            Tekijat = OmatMallit.Tekijat(paketti, mallit.ConvertAll(m => m.kohde));
             if (!Leikkaa) return;   // oletuksena pois (Päätoimittaja 7.10.); testi Documents/omat-mallit/leikkaus-paalle
             if (leikkaus == null)
             {
@@ -245,11 +261,12 @@ namespace Matkakirja.Linssit
             }
         }
 
-        /// <summary>Googlen pinta leikkauskulmien ulkopuolelta (+3 m ulospäin) → ero mallin korkeuteen lokiin ja korjaus.</summary>
+        /// <summary>Kehittäjätilan diagnoosi: Googlen pinta leikkauskulmien ulkopuolelta (+3 m ulospäin) → ero mallin korkeuteen VAIN lokiin
+        /// (ei korjausta; korkeus aina mallit.json:sta, OmatMallit.KorkeusOmastaMallista).</summary>
         async void MittaaKorkeudet()
         {
-            // Map Tiles C4 (Linssiseppä 8.10.): Googlen pintaa ei näytteistetä, kun oma korkeusmalli on käytössä; mallit.json:n korkeus.
-            if (Matkakirja.Natiivi.OpasSovitin.OmaKorkeusPaalla) { kirjaa?.Invoke("omat mallit: korkeuskorjaus pois (oma korkeusmalli, ei Googlen pintaa)"); return; }
+            if (!OmatMallit.GooglenPintaLokiin(Linssirekisteri.Kehittajatila, Matkakirja.Natiivi.OpasSovitin.OmaKorkeusPaalla))
+            { kirjaa?.Invoke("omat mallit: korkeus mallit.jsonista (oma korkeusmalli), Googlen pintaa ei näytteistetä"); return; }
             var g = google;
             foreach (var (k, t, _) in new List<(OmatMallit.Kohde, Cesium3DTileset, CesiumCartographicPolygon)>(mallit))
             for (int yritys = 1; yritys <= NayteYrityksia; yritys++)
@@ -272,15 +289,9 @@ namespace Matkakirja.Linssit
                 if (hs.Count < pisteet.Count) { kirjaa?.Invoke($"omat mallit: {k.Id} korkeusnäyte {hs.Count}/{pisteet.Count} (yritys {yritys})"); continue; }
                 var jarj = new List<double>(hs); jarj.Sort();
                 double mediaani = jarj[jarj.Count / 2], ero = mediaani - k.KorkeusM, hajonta = jarj[^1] - jarj[0];
-                bool korjaa = Math.Abs(ero) > KorjausRajaM && hajonta <= HajontaRajaM;
-                // Kulmat leikkauspolygonin järjestyksessä (pyramideilla NE, SE, SW, NW): ero mallin pohjaan kulmittain.
-                kirjaa?.Invoke($"omat mallit: {k.Id} Googlen pinta kulmissa {string.Join(" / ", hs.ConvertAll(h => $"{h:F1} ({h - k.KorkeusM:+0.0;-0.0})"))} m, " +
-                    $"malli {k.KorkeusM:F1} m, mediaaniero {ero:+0.0;-0.0} m, hajonta {hajonta:F1} m{(korjaa ? " → korjataan" : hajonta > HajontaRajaM ? " → ei korjata (hajonta)" : "")}");
-                if (!korjaa) break;
-                // Siirto georeferenssin ylös-akselilla (kaupungin origo on lähellä: kallistusvirhe alle 0,2 m 15 km:n päässä).
-                t.transform.localPosition += Vector3.up * (float)ero;
-                var ank = mallit.Find(m => m.kohde == k).polygoni;
-                if (ank != null) { var a = ank.GetComponent<CesiumGlobeAnchor>(); a.longitudeLatitudeHeight = new double3(k.Lon, k.Lat, mediaani); }
+                // Kulmat leikkauspolygonin järjestyksessä (pyramideilla NE, SE, SW, NW): ero mallin pohjaan kulmittain. Vain loki.
+                kirjaa?.Invoke($"omat mallit: {k.Id} (kehittäjä, vain loki) Googlen pinta kulmissa {string.Join(" / ", hs.ConvertAll(h => $"{h:F1} ({h - k.KorkeusM:+0.0;-0.0})"))} m, " +
+                    $"malli {k.KorkeusM:F1} m, mediaaniero {ero:+0.0;-0.0} m, hajonta {hajonta:F1} m (ei korjausta: korkeus omasta mallista)");
                 break;
             }
         }

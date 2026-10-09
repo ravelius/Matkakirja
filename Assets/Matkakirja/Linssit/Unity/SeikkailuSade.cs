@@ -16,7 +16,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Korkean tuulen raja (m, Unity y): muurin harja ja tornin yläosa ulkona (piha ~0, harja ~10–12).</summary>
         public const float KorkeallaY = 8.5f;
         static readonly string[] Tunnukset = { "sade-kivi", "sade-vesi", "sade-puu", "sade-pressu", "tippuminen-raystas", "tippuminen-muuri", "ukkonen-jyly",
-            "tuuli-kostea", "tuuli-korkea" };   // Sonniss-tuulet (Pelikoodari 9.10., ämpärissä sonniss-tuulet-v1)
+            "tuuli-kostea", "tuuli-korkea",   // Sonniss-tuulet (Pelikoodari 9.10., ämpärissä sonniss-tuulet-v1)
+            "yolinnut", "koira" };   // elokuun yön linnut ja kaukainen koira (aanet-lapi-v1, Pelikoodari 9.10.; Tausta-voima)
         readonly Dictionary<string, AudioSource> lahteet = new Dictionary<string, AudioSource>();
         readonly Dictionary<string, float> tavoite = new Dictionary<string, float>();
         float tarkistusT;
@@ -46,6 +47,9 @@ namespace Matkakirja.Natiivi
             // Kostea tuuli sateen ja yön alla (ulkona ja veneessä, sisällä vaimeana), korkea tuuli muurin harjalla ja tornissa.
             ulos["tuuli-kostea"] = veneessa ? 0.5f : ulkona ? 0.4f : 0.1f;
             ulos["tuuli-korkea"] = korkealla && !veneessa ? 0.55f : 0f;
+            // Yön elämä ulkona (huuhkaja, kaukainen koira rannalta) sateen alla hiljaa; sisällä tuskin kuuluvissa.
+            ulos["yolinnut"] = ulkona ? (korkealla ? 0.4f : 0.3f) : 0.06f;
+            ulos["koira"] = veneessa ? 0.25f : ulkona ? 0.18f : 0f;
         }
 
         void Update()
@@ -74,9 +78,10 @@ namespace Matkakirja.Natiivi
                 bool korkealla = p != null && markyys >= 0.5 && p.transform.position.y > KorkeallaY;
                 Tavoitteet(markyys, veneessa, puulla, tavoite, korkealla);
             }
-            float taso = Asetukset.Taso(Voima.Saa);
+            float saaTaso = Asetukset.Taso(Voima.Saa), taustaTaso = Asetukset.Taso(Voima.Tausta);
             foreach (var t in Tunnukset)
             {
+                float taso = AaniLuokka.OnkoSaa(t) ? saaTaso : taustaTaso;
                 tavoite.TryGetValue(t, out var v);
                 if (!lahteet.TryGetValue(t, out var l) || l == null)
                 {

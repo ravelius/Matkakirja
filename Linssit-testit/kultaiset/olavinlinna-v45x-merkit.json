@@ -1354,76 +1354,195 @@
  {
   "nimi": "ote:kellotorni-1",
   "paikka": [
-   -39.216,
-   16.7,
-   -10.15
+   -38.47,
+   16.853,
+   -9.506
   ],
   "ulkonormaali": [
-   0.602,
+   0.702,
    0.0,
-   -0.799
+   -0.712
   ],
   "tyyppi": "tulkinta",
-  "kompassi": 37.0,
+  "kompassi": 44.6,
   "huom": "ote (telinereikä tai reuna, TULKINTA)",
   "osa": "muurikaytava"
  },
  {
   "nimi": "ote:kellotorni-2",
   "paikka": [
-   -40.67,
-   16.5,
-   -11.006
+   -38.994,
+   17.161,
+   -9.976
   ],
   "ulkonormaali": [
-   0.407,
+   0.632,
    0.0,
-   -0.914
+   -0.775
   ],
   "tyyppi": "tulkinta",
-  "kompassi": 24.0,
+  "kompassi": 39.2,
   "huom": "ote (telinereikä tai reuna, TULKINTA)",
   "osa": "muurikaytava"
  },
  {
   "nimi": "ote:kellotorni-3",
   "paikka": [
-   -42.278,
-   16.3,
-   -11.513
+   -39.561,
+   16.98,
+   -10.395
   ],
   "ulkonormaali": [
-   0.191,
+   0.556,
    0.0,
-   -0.982
+   -0.831
   ],
   "tyyppi": "tulkinta",
-  "kompassi": 11.0,
+  "kompassi": 33.8,
   "huom": "ote (telinereikä tai reuna, TULKINTA)",
   "osa": "muurikaytava"
  },
  {
   "nimi": "ote:kellotorni-4",
   "paikka": [
-   -43.96,
-   16.1,
-   -11.645
+   -40.164,
+   17.265,
+   -10.758
   ],
   "ulkonormaali": [
-   -0.035,
+   0.475,
    0.0,
-   -0.999
+   -0.88
   ],
   "tyyppi": "tulkinta",
-  "kompassi": 358.0,
+  "kompassi": 28.3,
   "huom": "ote (telinereikä tai reuna, TULKINTA)",
   "osa": "muurikaytava"
  },
  {
   "nimi": "ote:kellotorni-5",
   "paikka": [
+   -40.799,
+   17.053,
+   -11.062
+  ],
+  "ulkonormaali": [
+   0.389,
+   0.0,
+   -0.921
+  ],
+  "tyyppi": "tulkinta",
+  "kompassi": 22.9,
+  "huom": "ote (telinereikä tai reuna, TULKINTA)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-6",
+  "paikka": [
+   -41.459,
+   17.299,
+   -11.305
+  ],
+  "ulkonormaali": [
+   0.301,
+   0.0,
+   -0.954
+  ],
+  "tyyppi": "tulkinta",
+  "kompassi": 17.5,
+  "huom": "ote (telinereikä tai reuna, TULKINTA)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-7",
+  "paikka": [
+   -42.14,
+   17.042,
+   -11.485
+  ],
+  "ulkonormaali": [
+   0.209,
+   0.0,
+   -0.978
+  ],
+  "tyyppi": "tulkinta",
+  "kompassi": 12.1,
+  "huom": "ote (telinereikä tai reuna, TULKINTA)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-8",
+  "paikka": [
+   -42.835,
+   17.24,
+   -11.6
+  ],
+  "ulkonormaali": [
+   0.116,
+   0.0,
+   -0.993
+  ],
+  "tyyppi": "tulkinta",
+  "kompassi": 6.7,
+  "huom": "ote (telinereikä tai reuna, TULKINTA)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-9",
+  "paikka": [
+   -43.537,
+   16.93,
+   -11.648
+  ],
+  "ulkonormaali": [
+   0.022,
+   0.0,
+   -1.0
+  ],
+  "tyyppi": "tulkinta",
+  "kompassi": 1.2,
+  "huom": "ote (telinereikä tai reuna, TULKINTA)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-10",
+  "paikka": [
+   -44.241,
+   17.073,
+   -11.631
+  ],
+  "ulkonormaali": [
+   -0.073,
+   0.0,
+   -0.997
+  ],
+  "tyyppi": "tulkinta",
+  "kompassi": 355.8,
+  "huom": "ote (telinereikä tai reuna, TULKINTA)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-11",
+  "paikka": [
+   -44.94,
+   16.709,
+   -11.546
+  ],
+  "ulkonormaali": [
+   -0.166,
+   0.0,
+   -0.986
+  ],
+  "tyyppi": "tulkinta",
+  "kompassi": 350.4,
+  "huom": "ote (telinereikä tai reuna, TULKINTA)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-12",
+  "paikka": [
    -45.628,
-   15.9,
+   16.799,
    -11.396
   ],
   "ulkonormaali": [
@@ -1437,78 +1556,197 @@
   "osa": "muurikaytava"
  },
  {
-  "nimi": "ote:kellotorni-6",
+  "nimi": "ote:kellotorni-13",
   "paikka": [
-   -47.198,
-   15.7,
-   -10.778
+   -46.299,
+   16.386,
+   -11.182
   ],
   "ulkonormaali": [
-   -0.469,
+   -0.349,
    0.0,
-   -0.883
+   -0.937
   ],
   "tyyppi": "tulkinta",
-  "kompassi": 332.0,
+  "kompassi": 339.6,
   "huom": "ote (telinereikä tai reuna, TULKINTA)",
   "osa": "muurikaytava"
  },
  {
-  "nimi": "ote:kellotorni-7",
+  "nimi": "ote:kellotorni-14",
   "paikka": [
-   -48.588,
-   15.5,
-   -9.823
+   -46.946,
+   16.432,
+   -10.906
   ],
   "ulkonormaali": [
-   -0.656,
+   -0.436,
    0.0,
-   -0.755
+   -0.9
   ],
   "tyyppi": "tulkinta",
-  "kompassi": 319.0,
+  "kompassi": 334.2,
   "huom": "ote (telinereikä tai reuna, TULKINTA)",
   "osa": "muurikaytava"
  },
  {
-  "nimi": "ote:kellotorni-8",
+  "nimi": "ote:kellotorni-15",
   "paikka": [
-   -49.727,
-   15.3,
-   -8.579
+   -47.565,
+   15.98,
+   -10.569
   ],
   "ulkonormaali": [
-   -0.809,
+   -0.519,
    0.0,
-   -0.588
+   -0.855
+  ],
+  "tyyppi": "tulkinta",
+  "kompassi": 328.8,
+  "huom": "ote (telinereikä tai reuna, TULKINTA)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-16",
+  "paikka": [
+   -48.149,
+   15.994,
+   -10.176
+  ],
+  "ulkonormaali": [
+   -0.597,
+   0.0,
+   -0.802
+  ],
+  "tyyppi": "tulkinta",
+  "kompassi": 323.3,
+  "huom": "ote (telinereikä tai reuna, TULKINTA)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-17",
+  "paikka": [
+   -48.693,
+   15.52,
+   -9.729
+  ],
+  "ulkonormaali": [
+   -0.67,
+   0.0,
+   -0.742
+  ],
+  "tyyppi": "tulkinta",
+  "kompassi": 317.9,
+  "huom": "ote (telinereikä tai reuna, TULKINTA)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-18",
+  "paikka": [
+   -49.193,
+   15.52,
+   -9.233
+  ],
+  "ulkonormaali": [
+   -0.737,
+   0.0,
+   -0.676
   ],
   "tyyppi": "krampi",
-  "kompassi": 306.0,
+  "kompassi": 312.5,
   "huom": "rautakramppi laatan vieressä [1L]",
   "osa": "muurikaytava"
  },
  {
-  "nimi": "ote:kellotorni-9",
+  "nimi": "ote:kellotorni-19",
   "paikka": [
-   -50.558,
-   15.1,
-   -7.111
+   -49.643,
+   15.197,
+   -8.692
   ],
   "ulkonormaali": [
-   -0.921,
+   -0.798,
    0.0,
-   -0.391
+   -0.603
   ],
   "tyyppi": "krampi",
-  "kompassi": 293.0,
+  "kompassi": 307.1,
   "huom": "rautakramppi laatan vieressä [1L]",
   "osa": "muurikaytava"
  },
  {
-  "nimi": "ote:kellotorni-10",
+  "nimi": "ote:kellotorni-20",
+  "paikka": [
+   -50.041,
+   15.353,
+   -8.111
+  ],
+  "ulkonormaali": [
+   -0.851,
+   0.0,
+   -0.525
+  ],
+  "tyyppi": "krampi",
+  "kompassi": 301.7,
+  "huom": "rautakramppi laatan vieressä [1L]",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-21",
+  "paikka": [
+   -50.382,
+   15.03,
+   -7.495
+  ],
+  "ulkonormaali": [
+   -0.897,
+   0.0,
+   -0.442
+  ],
+  "tyyppi": "krampi",
+  "kompassi": 296.2,
+  "huom": "rautakramppi laatan vieressä [1L]",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-22",
+  "paikka": [
+   -50.663,
+   15.187,
+   -6.85
+  ],
+  "ulkonormaali": [
+   -0.935,
+   0.0,
+   -0.356
+  ],
+  "tyyppi": "krampi",
+  "kompassi": 290.8,
+  "huom": "rautakramppi laatan vieressä [1L]",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-23",
+  "paikka": [
+   -50.882,
+   14.863,
+   -6.18
+  ],
+  "ulkonormaali": [
+   -0.964,
+   0.0,
+   -0.266
+  ],
+  "tyyppi": "krampi",
+  "kompassi": 285.4,
+  "huom": "rautakramppi laatan vieressä [1L]",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-24",
   "paikka": [
    -51.037,
-   14.9,
+   15.02,
    -5.494
   ],
   "ulkonormaali": [
@@ -1524,9 +1762,9 @@
  {
   "nimi": "tuuli:puuska-1",
   "paikka": [
-   -43.96,
-   16.1,
-   -11.645
+   -42.14,
+   17.042,
+   -11.485
   ],
   "kesto_s": 2.5,
   "huom": "tuulenpuuska: liike lipsauttaa otteen",
@@ -1535,9 +1773,20 @@
  {
   "nimi": "tuuli:puuska-2",
   "paikka": [
-   -49.727,
-   15.3,
-   -8.579
+   -46.946,
+   16.432,
+   -10.906
+  ],
+  "kesto_s": 2.5,
+  "huom": "tuulenpuuska: liike lipsauttaa otteen",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "tuuli:puuska-3",
+  "paikka": [
+   -50.041,
+   15.353,
+   -8.111
   ],
   "kesto_s": 2.5,
   "huom": "tuulenpuuska: liike lipsauttaa otteen",
@@ -4037,5 +4286,20 @@
   "kierto_y": 1.8784,
   "glb": "rekvisiitta-carved_wooden_plate.glb",
   "osa": "tyrma-E101"
+ },
+ {
+  "nimi": "kamera:K3",
+  "paikka": [
+   -37.2,
+   14.9,
+   -8.75
+  ],
+  "katse": [
+   -22.3,
+   14.1,
+   -14.9
+  ],
+  "osa": "muurikaytava",
+  "huom": "huone 7:n alun kaukokuva: muurikäytävä länsipäästä ovelle (Fogg reitti 82)"
  }
 ]

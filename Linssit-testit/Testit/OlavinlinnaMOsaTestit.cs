@@ -64,7 +64,7 @@ namespace Matkakirja.Linssit.Testit
             if (HarjaKorjattu) Oleta.Tosi(tulos.Loppu != null && tulos.Loppu.Kiinni == 0, $"harja hiipien ({tulos.Pisin + 1}/{KiipeilyAlku + 1})");
         }
 
-        /// <summary>Kiipeily (huone 8): otteet ote:kellotorni-1…10, puuskat tuuli:-merkkien otteilla, lyhty yllä puolivälissä kerran
+        /// <summary>Kiipeily (huone 8): otteet ote:kellotorni-1…24 (LR v45x), puuskat tuuli:-merkkien otteilla, lyhty yllä puolivälissä kerran
         /// (SeikkailuPelaaja); kurinalainen kiipeilijä pysähtyy varoituksiin.</summary>
         static (double Aika, bool Putosi, bool Havaittu) Kiipea(int otteita, IEnumerable<int> puuskat)
         {
@@ -91,8 +91,8 @@ namespace Matkakirja.Linssit.Testit
             foreach (var m in d.Lajia("tuuli")) for (int i = 0; i < otteet.Count; i++) if (Huonesimulaatio.Etaisyys3(m.X, m.Y, m.Z, otteet[i].X, otteet[i].Y, otteet[i].Z) < 0.5) puuskat.Add(i);
             var (kiipeily, putosi, havaittu) = Kiipea(otteet.Count, puuskat);
             Console.WriteLine($"      kiipeily: {otteet.Count} otetta, puuskat {string.Join(",", puuskat)}, kurinalainen {kiipeily:F1} s");
-            Oleta.Tosi(otteet.Count == 10 && puuskat.Count == 2, $"10 otetta ja 2 puuskaa ({otteet.Count}, {puuskat.Count})");
-            Oleta.Tosi(!putosi && !havaittu && kiipeily < 30, $"kurinalainen perille ilman putoamista ja havaintoa ({kiipeily:F1} s)");
+            Oleta.Tosi(otteet.Count == 24 && puuskat.Count == 3, $"24 otetta ja 3 puuskaa (LR v45x; {otteet.Count}, {puuskat.Count})");
+            Oleta.Tosi(!putosi && !havaittu && kiipeily < 45, $"kurinalainen perille ilman putoamista ja havaintoa ({kiipeily:F1} s)");
             // Huone 9: komero hitaasti vetäen (ensimmäinen putoaa, muut komeroon: ei kurkistusta), kilvet 3 × 15°, kansi auki.
             var komero = new Komero(); int putosiTiilia = 0;
             for (int i = 0; i < komero.Tiilet.Maara; i++) { komero.Raavi(i); if (komero.Raavi(i, 0) == TiiliTulos.Putosi) putosiTiilia++; komero.Tiilet.Paivita(3); }
