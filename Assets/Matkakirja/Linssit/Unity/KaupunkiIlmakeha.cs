@@ -34,6 +34,8 @@ namespace Matkakirja.Natiivi
         public static float IltaAurinkoAst = -7f;
         /// <summary>Valotuksen kerroin hämärässä (aurinko −7°): taivaan purppura ja iltarusko näkyviin (LUT:n radianssi on pieni).</summary>
         public static float HamaraValotus = 18f;
+        /// <summary>Kameran korkeus maasta (m) viimeisestä Paivita-kutsusta (CesiumKaupunki: aluskerros korkealla).</summary>
+        public static float KameraKorkeusM;
         /// <summary>Sinisen hetken gradientin voima (asetus "sininenhetki"; 0 = vain fysikaalinen taivas).</summary>
         public static float SininenHetki = 1f;
         static float taivasValotus = 1f;
@@ -99,7 +101,7 @@ namespace Matkakirja.Natiivi
         /// pilvisyys 0–1, tuulen siirtymä (m), maailman mittakaava (maailmayksikköä metriä kohden, georeferenssin skaala).</summary>
         public static void Paivita(double lat, double lon, float korkeusM, float aurinkoKorkeusAst, float aurinkoAtsimuuttiAst, float pilvisyys, Vector2 tuuliM, float mitta)
         {
-            Kaupunki(lat, lon);
+            Kaupunki(lat, lon); KameraKorkeusM = korkeusM;
             if (IltaYolla && KaupunkiKuva.Nyt == "yo") aurinkoKorkeusAst = Mathf.Max(aurinkoKorkeusAst, IltaAurinkoAst);
             voima = Mathf.MoveTowards(voima, Paalla ? 1f : 0f, Time.unscaledDeltaTime);
             Shader.SetGlobalVector(IdHamara, Vector4.zero);   // varhaisessa paluussa ei vanhaa sinistä hetkeä

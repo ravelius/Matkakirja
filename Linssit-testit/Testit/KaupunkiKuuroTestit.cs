@@ -78,6 +78,11 @@ namespace Matkakirja.Linssit.Testit
             string vahti = c.Substring(i, j - i);
             Oleta.Tosi(!vahti.Contains("maximumScreenSpaceError") && !vahti.Contains("maximumCachedBytes"), "hädässä ei SSE- eikä välimuistivaihtoa");
             Oleta.Tosi(vahti.Contains("Karkeaksi()") && c.Contains("bool halu = Tauko && !muistiPysaytys && Latausaste >= ValmisProsentti;"), "karkea valinta hädässä, suspendUpdate tauolla");
+        [Testi] static void AluskerrosKorkealla()
+        {
+            // PT 9.10.: korkealta (vapaan lennon katto 12 km) Googlen laattojen takana ei ollut maata → aluskerros yli 1200 m:ssä.
+            string c = System.IO.File.ReadAllText(System.IO.Path.Combine(AppContext.BaseDirectory, "..", "..", "Assets", "Matkakirja", "Linssit", "Unity", "CesiumKaupunki.cs"));
+            Oleta.Tosi(c.Contains("KaupunkiIlmakeha.KameraKorkeusM > AluskerrosKorkeusM") && c.Contains("AluskerrosKorkeusM = 1200f"), "aluskerros korkealla");
         }
 
         [Testi] static void LaattojenLeikkausKutenCesium()

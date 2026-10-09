@@ -624,6 +624,9 @@ namespace Matkakirja.Natiivi
         /// ja "aluskerros 1" (aluskerros päälle ilman reikiä).</summary>
         public static bool? SumuKarsinta;
         public static bool AluskerrosPakotettu;
+        /// <summary>Aluskerros päälle, kun kamera nousee tämän yli (m maasta): korkealta näkyy Googlen 3D-laattojen latausalueen reuna, jonka
+        /// takana ei ollut maata (PT 9.10.). Kerran luotuna se jää (ei välkettä noustessa ja laskiessa).</summary>
+        public static float AluskerrosKorkeusM = 1200f;
         public bool AluskerrosPaalla => aluskerros != null;
         void LokiRivi(string viesti, string pino, LogType tyyppi) => reiat.Kirjaa(viesti);
 
@@ -633,7 +636,7 @@ namespace Matkakirja.Natiivi
             if (aluskerrosMat != null && kamera != null) aluskerrosMat.SetColor(IdVari, RenderSettings.fog ? RenderSettings.fogColor : kamera.backgroundColor);
             if (maasto != null && SumuKarsinta.HasValue && maasto.enableFogCulling != SumuKarsinta.Value)
             { maasto.enableFogCulling = SumuKarsinta.Value; kirjaa($"kaupunki: sumukarsinta {(SumuKarsinta.Value ? "päällä" : "pois")} (kaukomaan testi)"); }
-            if (aluskerros != null || !auki || Kaytossa != Lahde.Google || string.IsNullOrEmpty(tunnus) || juuri == null || !(reiat.AluskerrosTarvitaan || AluskerrosPakotettu)) return;
+            if (aluskerros != null || !auki || Kaytossa != Lahde.Google || string.IsNullOrEmpty(tunnus) || juuri == null || !(reiat.AluskerrosTarvitaan || AluskerrosPakotettu || KaupunkiIlmakeha.KameraKorkeusM > AluskerrosKorkeusM)) return;
             var sh = Resources.Load<Shader>("Varjostimet/ReikaTayte");
             if (sh == null) { kirjaa("kaupunki: reikätäytteen varjostin puuttuu"); return; }
             aluskerrosMat = new Material(sh) { name = "ReikaTayte" };
@@ -642,7 +645,7 @@ namespace Matkakirja.Natiivi
             aluskerros.opaqueMaterial = aluskerrosMat;   // vain muoto, tasainen sävy, ei kuvaa
             aluskerros.transform.localPosition = new Vector3(0f, -AluskerrosSyvyysM, 0f);   // georeferenssin paikallinen ylös = y origossa
             aluskerros.gameObject.SetActive(true);
-            kirjaa($"kaupunki: Googlen 404-tiiliä {reiat.Maara} → aluskerros (maastomuoto ilman kuvaa, sumun sävy, {AluskerrosSyvyysM:F0} m alla) täyttää reiät");
+            kirjaa($"kaupunki: {(reiat.AluskerrosTarvitaan ? $"Googlen 404-tiiliä {reiat.Maara}" : $"kamera {KaupunkiIlmakeha.KameraKorkeusM:F0} m")} → aluskerros (maastomuoto ilman kuvaa, sumun sävy, {AluskerrosSyvyysM:F0} m alla) täyttää reiät");
         }
 
         void PoistaAluskerros()
