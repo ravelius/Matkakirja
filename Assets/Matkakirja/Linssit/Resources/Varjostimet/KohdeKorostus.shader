@@ -22,6 +22,8 @@ Shader "Matkakirja/Linssit/KohdeKorostus"
             // URP:n UNITY_MATRIX_I_VP ja _WorldSpaceCameraPos eivät enää ole kaupunkikameran (9.10. simu: maailmanpaikka tyhjä).
             float4x4 _KaupunkiInvVP;
             float4 _KaupunkiKamera;
+            TEXTURE2D(_KaupunkiSyvyys);   // kameran syvyyden kopio läpinäkyvien jälkeen (KaupunkiPassi)
+            float KaupunkiSyvyys(float2 uv) { return SAMPLE_TEXTURE2D_LOD(_KaupunkiSyvyys, sampler_PointClamp, uv, 0).r; }
 
             TEXTURE2D(_Maski); SAMPLER(sampler_Maski);
             float4x4 _MaailmaKohde;      // Unityn maailma → kohteen paikallinen ENU (m): x itä, y ylös (maa = 0), z pohjoinen
@@ -34,7 +36,7 @@ Shader "Matkakirja/Linssit/KohdeKorostus"
                 float2 uv = i.texcoord;
                 half4 c = SAMPLE_TEXTURE2D_X_LOD(_BlitTexture, sampler_PointClamp, uv, 0);
                 if (_MaskiAlue.w < 0.5 || _KorostusParam.x <= 0.001) return c;
-                float syvyys = SampleSceneDepth(uv);
+                float syvyys = KaupunkiSyvyys(uv);
                 #if UNITY_REVERSED_Z
                 if (syvyys <= 1e-7) return c;
                 #else

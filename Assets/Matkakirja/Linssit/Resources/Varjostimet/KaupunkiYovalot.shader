@@ -34,6 +34,8 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
             // URP:n UNITY_MATRIX_I_VP ja _WorldSpaceCameraPos eivät enää ole kaupunkikameran (9.10. simu: maailmanpaikka tyhjä).
             float4x4 _KaupunkiInvVP;
             float4 _KaupunkiKamera;
+            TEXTURE2D(_KaupunkiSyvyys);   // kameran syvyyden kopio läpinäkyvien jälkeen (KaupunkiPassi)
+            float KaupunkiSyvyys(float2 uv) { return SAMPLE_TEXTURE2D_LOD(_KaupunkiSyvyys, sampler_PointClamp, uv, 0).r; }
 
             TEXTURE2D(_Valot); SAMPLER(sampler_Valot);
             float4x4 _MaailmaPaikallinen;   // Unityn maailma → paikallinen ENU (m): x itä, y ylös, z pohjoinen
@@ -87,7 +89,7 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
 
             float3 Paikka(float2 uv)
             {
-                float d = SampleSceneDepth(uv);
+                float d = KaupunkiSyvyys(uv);
                 return mul(_MaailmaPaikallinen, float4(ComputeWorldSpacePosition(uv, d, _KaupunkiInvVP), 1.0)).xyz;
             }
 
@@ -97,7 +99,7 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                 float2 uv = i.texcoord, px = _BlitTexture_TexelSize.xy;
                 half4 c = SAMPLE_TEXTURE2D_X_LOD(_BlitTexture, sampler_PointClamp, uv, 0);
                 if (_ValoDebug.x > 0.5 && _ValoDebug.x < 1.5) return half4(c.rgb * 0.5h + half3(0.5h, 0.0h, 0.5h), 1.0h);
-                float syvyys = SampleSceneDepth(uv);
+                float syvyys = KaupunkiSyvyys(uv);
                 if (_ValoDebug.x > 4.5 && _ValoDebug.x < 5.5) return half4(syvyys > 1e-7 && syvyys < 1.0 - 1e-7 ? half3(0.0h, 1.0h, 0.0h) : half3(1.0h, 0.0h, 0.0h), 1.0h);   // 5: syvyys (vihreä = on)
                 if (_ValoDebug.x > 5.5) return half4((half3)frac(syvyys * 200.0), 1.0h);   // 6: syvyyden arvo
                 #if UNITY_REVERSED_Z

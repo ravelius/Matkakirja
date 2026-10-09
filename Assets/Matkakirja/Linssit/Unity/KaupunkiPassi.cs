@@ -64,6 +64,38 @@ namespace Matkakirja.Natiivi
             public string tila;
         }
 
+        /// <summary>
+        /// SYVYYSKOPIO (9.10. simu 6a07a258: jälkikäsittelyn jälkeen _CameraDepthTexture on tyhjä, ja aiemmat vaiheet korvautuvat
+        /// jälkikäsittelyssä): läpinäkyvien jälkeen kameran syvyys kopioidaan omaan R32-tekstuuriin _KaupunkiSyvyys, jota passit lukevat.
+        /// </summary>
+        sealed class SyvyysVaihe : ScriptableRenderPass
+        {
+            public RTHandle kohde; public string tila;
+            public SyvyysVaihe()
+            {
+                renderPassEvent = RenderPassEvent.AfterRenderingTransparents;
+                ConfigureInput(ScriptableRenderPassInput.Depth);
+                profilingSampler = new ProfilingSampler("Matkakirja kaupungin syvyys");
+            }
+            public override void RecordRenderGraph(RenderGraph rg, ContextContainer frameData)
+            {
+                var res = frameData.Get<UniversalResourceData>();
+                var kuvaus = frameData.Get<UniversalCameraData>().cameraTargetDescriptor;
+                if (!res.cameraDepthTexture.IsValid()) { tila = "syvyys: ei tekstuuria"; return; }
+                if (kohde == null || kohde.rt == null || kohde.rt.width != kuvaus.width || kohde.rt.height != kuvaus.height)
+                {
+                    kohde?.Release();
+                    kohde = RTHandles.Alloc(kuvaus.width, kuvaus.height, colorFormat: UnityEngine.Experimental.Rendering.GraphicsFormat.R32_SFloat, filterMode: FilterMode.Point, name: "Matkakirja kaupungin syvyys");
+                }
+                var dst = rg.ImportTexture(kohde);
+                rg.AddBlitPass(res.cameraDepthTexture, dst, Vector2.one, Vector2.zero, passName: "Matkakirja kaupungin syvyys");
+                tila = $"syvyys: kopio {kuvaus.width}×{kuvaus.height}";
+                foreach (var v in aktiiviset.Values) v.materiaali?.SetTexture(IdSyvyys, kohde);
+            }
+        }
+        static readonly SyvyysVaihe syvyysVaihe = new SyvyysVaihe();
+        static readonly int IdSyvyys = Shader.PropertyToID("_KaupunkiSyvyys");
+
         static readonly Dictionary<string, Vaihe> vaiheet = new Dictionary<string, Vaihe>();
         static readonly Dictionary<string, Vaihe> aktiiviset = new Dictionary<string, Vaihe>();
         /// <summary>Kaupungin peruskamera (KaupunkiYovalot.Paivita asettaa joka kehys).</summary>
@@ -86,9 +118,10 @@ namespace Matkakirja.Natiivi
             if (c == null || c != Kamera || aktiiviset.Count == 0) return;
             var r = c.GetUniversalAdditionalCameraData()?.scriptableRenderer;
             if (r == null) return;
+            r.EnqueuePass(syvyysVaihe);
             foreach (var v in aktiiviset.Values) { if (Tapahtuma.HasValue) v.renderPassEvent = Tapahtuma.Value; r.EnqueuePass(v); }
         }
 
-        public static string Tila(string nimi) => vaiheet.TryGetValue(nimi, out var v) ? (v.tila ?? $"{nimi}: ei vielä ajettu") + (aktiiviset.ContainsKey(nimi) ? "" : " (pois)") : $"{nimi}: ei luotu";
+        public static string Tila(string nimi) => (vaiheet.TryGetValue(nimi, out var v) ? (v.tila ?? $"{nimi}: ei vielä ajettu") + (aktiiviset.ContainsKey(nimi) ? "" : " (pois)") : $"{nimi}: ei luotu") + ", " + (syvyysVaihe.tila ?? "syvyys: ei vielä");
     }
 }
