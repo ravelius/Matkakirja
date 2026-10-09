@@ -304,6 +304,8 @@ namespace Matkakirja.Natiivi
                         case "omavarjo": CesiumOmatMallit.VarjoNosto = v; break;
                         case "terava": Terava = v; KaupunkiTerava.Aseta(v); break;
                         case "yovalot": KaupunkiYovalot.Kaytossa = v != 0; break;
+                        case "yolamput": KaupunkiYovalot.OsmLamput = v != 0; break;
+                        case "yoalueet": KaupunkiYovalot.AlueVoima = v; break;
                         case "yohehku": KaupunkiYovalot.Hehku = v; break;
                         case "yopisteet": KaupunkiYovalot.Pisteet = v; break;
                         case "yosolu": KaupunkiYovalot.SoluM = v; break;

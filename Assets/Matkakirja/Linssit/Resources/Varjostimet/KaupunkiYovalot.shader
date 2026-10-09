@@ -49,6 +49,8 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
             float4 _KohdeParam;             // x = säde (m), y = voima
             TEXTURE2D(_Vedet); SAMPLER(sampler_Vedet);
             float4 _VesiAlue;               // x = keskipisteen lat, y = lon, z = sivu (m), w = heijastuksen voima (0 = ei maskia)
+            float4 _Vedet_TexelSize;        // v12: 1/N, 1/N, N, N
+            float4 _LamppuParam;            // v12 OSM-lamput vesimaskissa (G lamppu, B paikka solussa, A alue): x = 1 käytössä, y = alueiden voima
             float4 _KameraP;                // kamera paikallisessa ENU:ssa (m)
             float4 _Maamerkit[8];           // xyz = maapiste paikallisessa ENU:ssa, w = säde (m); w = 0 tyhjä
             float4 _MaamerkkiParam;         // x = määrä, y = voima
@@ -112,6 +114,34 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                 return SAMPLE_TEXTURE2D_LOD(_Vedet, sampler_Vedet, vuv, 0).r;
             }
 
+            float2 VesiUv(float3 paikka)
+            {
+                float2 ll = Asteet(paikka);
+                float2 m = float2((ll.y - _VesiAlue.y) * MAA_R * cos(_VesiAlue.x / ASTE) / ASTE, (ll.x - _VesiAlue.x) * MAA_R / ASTE);
+                return m / _VesiAlue.z + 0.5;
+            }
+
+            // v12 OSM-LAMPUT (Karttasepän katuvalot, valaistut tiet ja sillat, rantavalot; tyokalut/yovalot_lamput.py): 3 × 3 solua (8 m)
+            // ympäriltä, lamppu solun G:ssä ja paikka B:ssä (x ylänelikko, y alanelikko, (v + 0,5) / 16 solun lounaiskulmasta). Gauss-säde m.
+            float3 OsmLamput(float2 vuv, float sadeM)
+            {
+                float2 N = _Vedet_TexelSize.zw; float solu = _VesiAlue.z * _Vedet_TexelSize.x;
+                float2 q = vuv * N, ci = floor(q); float3 l = 0.0;
+                for (int y = -1; y <= 1; y++)
+                for (int x = -1; x <= 1; x++)
+                {
+                    int2 sc = int2(ci) + int2(x, y);
+                    if (any(sc < 0) || any(sc >= int2(N))) continue;
+                    float4 t = LOAD_TEXTURE2D_LOD(_Vedet, sc, 0);
+                    if (t.g < 0.5) continue;
+                    uint bb = (uint)round(t.b * 255.0);
+                    float2 d = (q - (float2(sc) + (float2(bb >> 4, bb & 15u) + 0.5) / 16.0)) * solu;
+                    float3 h = Hash32(float2(sc));
+                    l += exp(-dot(d, d) / (sadeM * sadeM)) * lerp(_ValoVari.rgb, float3(0.95, 0.97, 1.0), step(1.0 - _ValoVari.a, frac(h.z * 7.13)));
+                }
+                return l;
+            }
+
             float3 Paikka(float2 uv)
             {
                 float d = KaupunkiSyvyys(uv);
@@ -169,6 +199,10 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
 
                 // Katuvalot OSM-katujen mukaan (v4): maski kaduista; vaakapinnoilla valonauha (katu valaistu) ja lamput nauhan keskellä.
                 float vaaka = saturate((n.y - 0.82) / 0.1) * tasainen;
+                // v12: OSM-lamput vesimaskin alueella (oikeat paikat); muualla solukon lamput katumaskin mukaan kuten ennen.
+                float2 vuvL = _LamppuParam.x > 0.5 ? VesiUv(p) : float2(-1.0, -1.0);
+                bool osmL = all(vuvL > 0.002) && all(vuvL < 0.998);
+                float sadeL = max(1.0, jalanjalki * 0.75), nakyvyysL = saturate(2.0 - jalanjalki * 2.5 / _ValoParam.w);
                 if (vaaka > 0.0 && _TieAlue.w > 0.5)
                 {
                     float2 ll = Asteet(p);
@@ -182,7 +216,7 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                         // Lamput: solun piste palaa vain, jos se osuu kadulle (pikseli kadulla ja lähellä pistettä).
                         float solu = _ValoParam.w, nakyvyys = saturate(2.0 - jalanjalki * 2.5 / solu);
                         float3 lamput = 0.0;
-                        if (nakyvyys > 0.0 && tie > 0.35)
+                        if (nakyvyys > 0.0 && tie > 0.35 && !osmL)
                         {
                             float2 q = p.xz / solu, ci = floor(q);
                             float sade = max(1.0, jalanjalki * 0.75) / solu;
@@ -211,11 +245,29 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                             {
                                 float sk = solu * (0.3 + 0.43 * k);
                                 float tie2 = SAMPLE_TEXTURE2D_LOD(_Tiet, sampler_Tiet, tuv + vk * sk / _TieAlue.z, 0).r;
-                                heijL += Lamput(p.xz + vk * sk, solu, sadeH) * saturate((tie2 - 0.35) / 0.3) * (1.0 - 0.2 * k);
+                                float3 lk = osmL ? OsmLamput(VesiUv(p + float3(vk.x * sk, 0.0, vk.y * sk)), sadeH * solu) : Lamput(p.xz + vk * sk, solu, sadeH);
+                                heijL += lk * saturate((tie2 - 0.35) / 0.3) * (1.0 - 0.2 * k);
                             }
                             lisa += heijL * _ValoParam.z * mark * 0.3 * vaaka * nakyvyys;
                         }
                     }
+                }
+
+                // v12 OSM-lamput ja valaistut alueet (kentät valkoisina LED-valoina, kohteet himmeämmin) vaakapinnoille. Katot katujen
+                // päällä karsitaan katumaskilla (lamppu on jalkakäytävällä, maski LOD 1 ≈ 12 m), jos kadut on ladattu.
+                if (osmL && vaaka > 0.0)
+                {
+                    float katu = 1.0;
+                    if (_TieAlue.w > 0.5)
+                    {
+                        float2 ll = Asteet(p);
+                        float2 m = float2((ll.y - _TieAlue.y) * MAA_R * cos(_TieAlue.x / ASTE) / ASTE, (ll.x - _TieAlue.x) * MAA_R / ASTE);
+                        float2 tuv = m / _TieAlue.z + 0.5;
+                        if (all(tuv > 0.0) && all(tuv < 1.0)) katu = saturate((SAMPLE_TEXTURE2D_LOD(_Tiet, sampler_Tiet, tuv, 1).r - 0.05) / 0.15);
+                    }
+                    if (nakyvyysL > 0.0) lisa += OsmLamput(vuvL, sadeL) * nakyvyysL * katu * _ValoParam.z * vaaka;
+                    float alue = SAMPLE_TEXTURE2D_GRAD(_Vedet, sampler_Vedet, vuvL, dx.xz / _VesiAlue.z, dy.xz / _VesiAlue.z).a;
+                    lisa += float3(0.9, 0.93, 1.0) * alue * 0.1 * _LamppuParam.y * vaaka;
                 }
 
                 // Kohteen paino (valonheitto alla); kohteessa ei ikkunoita (v5: Eiffelin ristikkoon syttyi ikkunoita).
@@ -266,7 +318,12 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                     {
                         float s = 25.0 * exp2((float)k * 1.25);   // 25, 60, 141, 336 m
                         float3 q3 = p + float3(v.x * s, 0.0, v.y * s);
-                        ranta = max(ranta, BlackMarble(q3) * (1.0 - Vesi(q3)) / (1.0 + s / 250.0));
+                        // v12: OSM-lamppujen tiheys (LOD 2 ≈ 32 m; sillat mukana) maskin alueella, muuten Black Marble rannalta.
+                        float2 vq = VesiUv(q3);
+                        float rl = osmL && all(vq > 0.0) && all(vq < 1.0)
+                            ? saturate(SAMPLE_TEXTURE2D_LOD(_Vedet, sampler_Vedet, vq, 2).g * 3.0) * 0.7
+                            : BlackMarble(q3) * (1.0 - Vesi(q3));
+                        ranta = max(ranta, rl / (1.0 + s / 250.0));
                     }
                     float3 heij = _ValoVari.rgb * ranta * 0.2;    // v9: puolet (junan 170 kuvat: vesi tasaisen kullanruskea)
                     float3 kulta = float3(1.0, 0.74, 0.36);
