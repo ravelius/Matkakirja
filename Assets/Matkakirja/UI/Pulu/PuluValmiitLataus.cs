@@ -91,7 +91,10 @@ namespace Matkakirja.Natiivi
             if (hakemisto.TryGetValue(maa, out var versio))
             {
                 string levy = Path.Combine(Kansio, maa + "-" + Turva(versio) + ".json");
-                try { if (File.Exists(levy)) p = PuluValmiit.Lue(File.ReadAllText(levy)); } catch { p = null; }
+                // Luku ja jäsennys taustasäikeessä (Ranska ~600 kt, Macilla 3 ms; laitteella ei saa nykiä kortin avausta).
+                var tyo = System.Threading.Tasks.Task.Run(() => { try { return File.Exists(levy) ? PuluValmiit.Lue(File.ReadAllText(levy)) : null; } catch { return null; } });
+                while (!tyo.IsCompleted) yield return null;
+                p = tyo.Result;
                 if (p == null)
                 {
                     using var r = UnityWebRequest.Get(Juuri + maa + ".json?v=" + UnityWebRequest.EscapeURL(versio));
@@ -99,7 +102,10 @@ namespace Matkakirja.Natiivi
                     yield return r.SendWebRequest();
                     if (r.result == UnityWebRequest.Result.Success)
                     {
-                        p = PuluValmiit.Lue(r.downloadHandler.text);
+                        string teksti = r.downloadHandler.text;
+                        var jasennys = System.Threading.Tasks.Task.Run(() => PuluValmiit.Lue(teksti));
+                        while (!jasennys.IsCompleted) yield return null;
+                        p = jasennys.Result;
                         if (p != null) try { Directory.CreateDirectory(Kansio); File.WriteAllText(levy, r.downloadHandler.text); } catch (Exception e) { Debug.Log("MATKAKIRJA pulun valmiit: levylle: " + e.Message); }
                     }
                     else Debug.Log("MATKAKIRJA pulun valmiit: " + maa + " ei latautunut (" + r.error + ")");
