@@ -23,7 +23,11 @@ KOHTEET = ['Assets/Matkakirja/UI/Linssit/' + n + '.cs' for n in
           ['Assets/Matkakirja/UI/' + n + '.cs' for n in ('Aloitusnakyma', 'Lehti/Lehtinakyma', 'Matkalaukku', 'Nostoselain', 'Reaktiot',
                                                          'KysymysNakyma', 'Pulu/Poimintapillerit', 'Pulu/Matkakirjakortti',
                                                          'Pelit/TavliNakyma', 'Pelit/MyllyNakyma', 'Sahke/Sahketehtava', 'Sahke/SahkeNakyma',
-                                                         'Kuvavinkki', 'PalauteLomake')]   # sisääntuloreitti, pallon reitti ja erä 2 (juna 174)
+                                                         'Kuvavinkki', 'PalauteLomake')] + \
+          ['Assets/Matkakirja/UI/Linssit/' + n + '.cs' for n in
+           ('Kuvanakyma', 'RadioNakyma', 'AikajanaNakyma', 'MaidenNakyma', 'MaapallonVuosiNakyma', 'IssKyytiNakyma', 'IssKytkinpoyta',
+            'IssOhjaamo', 'IssOmatKuvat', 'AvaruuskavelyNakyma', 'AstronautinNakyma', 'IhmisenNostokortti', 'AjattelijaNakyma',
+            'Tiedeliitenakyma', 'Sijaintipallo', 'Puhujakuva')] + ['Assets/Matkakirja/UI/AjattelijaPaat.cs']   # erä 4 (linssien näkymät)   # sisääntuloreitti, pallon reitti ja erä 2 (juna 174)
 NIELU = re.compile(r'Rakenne\.Teksti\(|Rakenne\.Nappi\(|Ohjausnappi\.Nappi\(|\bKomento\(|\bAlanakyma\(|\bTakaisin\(|tooltip\s*=|\.text\s*=|'
                    r'\bKysy\(|KorttiValinta\(|\bOpasNappi\(|\bKytkin\(|\bTyhja\(|\bKytkinrivi\(|placeholder')
 LIT = re.compile(r'(?<![\$@\w])"((?:[^"\\\n]|\\.)*)"')

@@ -155,21 +155,21 @@ namespace Matkakirja.Natiivi
             otsikko = Rakenne.Teksti("", "mk-astrokuva__otsikko", otsikkoRivi);
             Kirjasimet.Aseta(otsikko, Kirjasin.Kone);
             // Striimilukija otsikkorivin oikeaan päähän (omistaja 5.10.2026, ks. otsake); napautus ei kelaa selitettä.
-            lukija = new KortinLukija(otsikkoRivi, "Kuuntele selite", "mk-astrokuva__lukija tk-teema-lasi-avaruus", saatimet: true,
+            lukija = new KortinLukija(otsikkoRivi, Kieli.T("ui.kuvanakyma.kuuntele-selite"), "mk-astrokuva__lukija tk-teema-lasi-avaruus", saatimet: true,
                 rajaus: () => turva.worldBound, loppui: LukijaLoppui);
             lukija.Juuri.RegisterCallback<ClickEvent>(e => e.StopPropagation());
             runko = Rakenne.El("mk-astrokuva__runko", selite, PickingMode.Ignore);
             teksti = Rakenne.Teksti("", "mk-astrokuva__teksti", runko);
             var vakasenRivi = Rakenne.El("mk-astrokuva__vakasenRivi", runko, PickingMode.Ignore);
             vakanen = Rakenne.Nappi(null, "mk-astrokuva__vakanen", null, vakasenRivi, Ikonit.NuoliAlas);
-            vakanen.tooltip = "Näytä lisätiedot";
+            vakanen.tooltip = Kieli.T("ui.kuvanakyma.nayta-lisatiedot");
             // Väkänen ei kelaa selitettä (web: stopPropagation).
             vakanen.RegisterCallback<ClickEvent>(e => { e.StopPropagation(); Lisatiedot(!lisatiedotAuki); });
             lisatiedot = Rakenne.El("mk-astrokuva__lisatiedot", runko, PickingMode.Ignore);
             lisatiedot.style.display = DisplayStyle.None;
 
             // ✕ OHJAUSNAPPI-neliönä harmaalla teemalla (omistaja 16.9. harmaa, 2.10. klo 14.2x EI OVAALEJA; Päätoimittaja 3.10.).
-            var sulku = Ohjausnappi.Nappi(Ikonit.Viiva["rasti"], "Sulje kuva", SuljeKuva, turva, "harmaa");
+            var sulku = Ohjausnappi.Nappi(Ikonit.Viiva["rasti"], Kieli.T("ui.kuvanakyma.sulje-kuva"), SuljeKuva, turva, "harmaa");
             sulku.AddToClassList("mk-kuvanakyma__sulku");
             sulkuNappi = sulku;
 
@@ -182,7 +182,7 @@ namespace Matkakirja.Natiivi
             foreach (int suunta in new[] { -1, 1 })
             {
                 int s = suunta;
-                var n = Ohjausnappi.Nappi(s < 0 ? Ikonit.Takaisin : Ikonit.NuoliOikea, s < 0 ? "Edellinen kohde kartalla" : "Seuraava kohde kartalla",
+                var n = Ohjausnappi.Nappi(s < 0 ? Ikonit.Takaisin : Ikonit.NuoliOikea, Kieli.T(s < 0 ? "ui.kuvanakyma.edellinen-kohde" : "ui.kuvanakyma.seuraava-kohde"),
                     () => VaihdaKohde(s), kohdeNapit, "lasi-avaruus");
                 n.AddToClassList("mk-astrokuva__kohdenappi");
             }
@@ -193,21 +193,21 @@ namespace Matkakirja.Natiivi
             kohdeNapit.Insert(0, autoKulma);
             autoNappi = Rakenne.Nappi(null, "mk-astrokuva__auto", () => AsetaAuto(!Nostoselain.Auto), autoKulma);
             Rakenne.El("mk-astrokuva__autopiste", autoNappi, PickingMode.Ignore);
-            Kirjasimet.Aseta(Rakenne.Teksti("AUTO", "mk-nappi__teksti mk-astrokuva__autoteksti", autoNappi), Kirjasin.KoneBold);
-            autoNappi.tooltip = "Auto: lukee kohteen ja siirtyy seuraavaan";
-            taukoNappi = Ohjausnappi.Nappi(Ikonit.Tauko, "Tauko", () => AsetaTauko(!tauolla), null, "lasi-avaruus");
+            Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.kuvanakyma.auto"), "mk-nappi__teksti mk-astrokuva__autoteksti", autoNappi), Kirjasin.KoneBold);
+            autoNappi.tooltip = Kieli.T("ui.kuvanakyma.auto-selite");
+            taukoNappi = Ohjausnappi.Nappi(Ikonit.Tauko, Kieli.T("ui.kuvanakyma.tauko"), () => AsetaTauko(!tauolla), null, "lasi-avaruus");
             taukoNappi.AddToClassList("mk-astrokuva__kohdenappi");
             kohdeNapit.Insert(1, taukoNappi);
             taukoIkoni = taukoNappi.Q<SvgIkoni>();
             autoLappu = Rakenne.El("mk-astrokuva__autolappu tk-teema-tumma", turva);
             autoLappu.style.display = DisplayStyle.None;
             var lappuTeksti = Rakenne.El("mk-astrokuva__autolapputeksti", autoLappu, PickingMode.Ignore);
-            Kirjasimet.Aseta(Rakenne.Teksti("Seuraava:", "mk-astrokuva__autolappuohje", lappuTeksti), Kirjasin.Kone);
+            Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.kuvanakyma.seuraava-kaksoispiste"), "mk-astrokuva__autolappuohje", lappuTeksti), Kirjasin.Kone);
             autoNimi = Rakenne.Teksti("", "mk-astrokuva__autolappunimi", lappuTeksti);
             Kirjasimet.Aseta(autoNimi, Kirjasin.Kone);
             autoAika = Rakenne.Teksti("", "mk-astrokuva__autolappuaika", autoLappu);
             Kirjasimet.Aseta(autoAika, Kirjasin.KoneBold);
-            var pysayta = Rakenne.Nappi("Pysäytä", "mk-astrokuva__autopysayta", () => AsetaAuto(false), autoLappu);
+            var pysayta = Rakenne.Nappi(Kieli.T("ui.kuvanakyma.pysayta"), "mk-astrokuva__autopysayta", () => AsetaAuto(false), autoLappu);
             Kirjasimet.Aseta(pysayta, Kirjasin.KoneBold);
             autoPalkki = Rakenne.El("mk-astrokuva__autopalkki", autoLappu, PickingMode.Ignore);
             // AUTOn aikana (web sama): piilotettujen nappien aikana ensimmäinen napautus vain palauttaa ne (ei toimintoa alla);
@@ -675,7 +675,7 @@ namespace Matkakirja.Natiivi
             LopetaSiirto();
             // Omistaja 2.10. 21.3x: AUTOn aikana ei "Seuraava … Pysäytä" -lappua; siirto tapahtuu hiljaa samalla 3 s:n viiveellä.
             autoNimi.text = seuraava.Nimi;
-            autoAika.text = Mathf.CeilToInt(AutoSiirtoS) + " s";
+            autoAika.text = Kieli.T("ui.kuvanakyma.sekuntia", Mathf.CeilToInt(AutoSiirtoS));
             autoPalkki.style.width = Length.Percent(0);
             autoAlku = Time.unscaledTime;
             Ruudunpaivitys.Herata(AutoSiirtoS + 0.2f);
@@ -684,7 +684,7 @@ namespace Matkakirja.Natiivi
                 if (tauolla) return;   // II: laskuri seisoo
                 float t = Time.unscaledTime - autoAlku;
                 if (t >= AutoSiirtoS) { LopetaSiirto(); if (Auki && AutoKaytossa) VaihdaKohde(1); return; }
-                autoAika.text = Mathf.CeilToInt(AutoSiirtoS - t) + " s";
+                autoAika.text = Kieli.T("ui.kuvanakyma.sekuntia", Mathf.CeilToInt(AutoSiirtoS - t));
                 autoPalkki.style.width = Length.Percent(100f * t / AutoSiirtoS);
             }).Every(0);
         }
@@ -713,7 +713,7 @@ namespace Matkakirja.Natiivi
                 if (autoAjo != null) Ruudunpaivitys.Herata(AutoSiirtoS + 0.2f);
             }
             if (taukoIkoni != null) taukoIkoni.Polku = paalle ? Ikonit.Toista : Ikonit.Tauko;
-            taukoNappi.tooltip = paalle ? "Jatka" : "Tauko";
+            taukoNappi.tooltip = Kieli.T(paalle ? "ui.kuvanakyma.jatka" : "ui.kuvanakyma.tauko");
             taukoNappi.EnableInClassList("mk-valittu", paalle);
             Debug.Log("MATKAKIRJA kuvaselite: II " + (paalle ? "tauko" : "jatkuu") + (luki ? " (lukija)" : "") + (autoAjo != null ? " (AUTO-siirto)" : ""));
         }
@@ -723,7 +723,7 @@ namespace Matkakirja.Natiivi
         {
             tauolla = false;
             if (taukoIkoni != null) taukoIkoni.Polku = Ikonit.Tauko;
-            taukoNappi.tooltip = "Tauko";
+            taukoNappi.tooltip = Kieli.T("ui.kuvanakyma.tauko");
             taukoNappi.EnableInClassList("mk-valittu", false);
         }
 
@@ -894,7 +894,7 @@ namespace Matkakirja.Natiivi
             if (auki) LadoLisatiedot();
             lisatiedot.style.display = auki ? DisplayStyle.Flex : DisplayStyle.None;
             vakanen.EnableInClassList("mk-auki", auki);
-            vakanen.tooltip = auki ? "Piilota lisätiedot" : "Näytä lisätiedot";
+            vakanen.tooltip = Kieli.T(auki ? "ui.kuvanakyma.piilota-lisatiedot" : "ui.kuvanakyma.nayta-lisatiedot");
         }
 
         void LadoLisatiedot()
@@ -903,15 +903,15 @@ namespace Matkakirja.Natiivi
             if (kohde == null) return;
             var h = indeksi >= 0 && indeksi < kohde.Havainnot.Count ? kohde.Havainnot[indeksi] : new Havainto();
             var l = AstronauttiLinssi.AstronauttiTiedot.Lahde;
-            Rivi("Aineisto", l?.Aineisto);
-            Rivi("Kuvausaika", Aikateksti(h.Aika));
-            Rivi("Paikka", Liita(kohde.Seutu, Paikkateksti(kohde.Lat, kohde.Lon)));
-            Rivi("Kuvaustapa", Liita(h.Kuvaustapa, h.Retkikunta, string.IsNullOrEmpty(h.Kuvaaja) ? null : "kuvaaja " + h.Kuvaaja));
-            Rivi("Kuvatunnus", h.Id);
-            Rivi("Lisenssi", l?.Lisenssi);
+            Rivi(Kieli.T("ui.kuvanakyma.aineisto"), l?.Aineisto);
+            Rivi(Kieli.T("ui.kuvanakyma.kuvausaika"), Aikateksti(h.Aika));
+            Rivi(Kieli.T("ui.kuvanakyma.paikka"), Liita(kohde.Seutu, Paikkateksti(kohde.Lat, kohde.Lon)));
+            Rivi(Kieli.T("ui.kuvanakyma.kuvaustapa"), Liita(h.Kuvaustapa, h.Retkikunta, string.IsNullOrEmpty(h.Kuvaaja) ? null : Kieli.T("ui.kuvanakyma.kuvaaja", h.Kuvaaja)));
+            Rivi(Kieli.T("ui.kuvanakyma.kuvatunnus"), h.Id);
+            Rivi(Kieli.T("ui.kuvanakyma.lisenssi"), l?.Lisenssi);
             // Web ulkolinkki: kuvasivu ja kuvakirjasto avautuvat selaimeen.
-            Rivi("Lähde", string.IsNullOrEmpty(h.Sivu) ? null : "NASAn kuvasivu", h.Sivu);
-            Rivi("Kuvakirjasto", string.IsNullOrEmpty(l?.Osoite) ? null : "NASA Image and Video Library", l?.Osoite);
+            Rivi(Kieli.T("ui.kuvanakyma.lahde"), string.IsNullOrEmpty(h.Sivu) ? null : Kieli.T("ui.kuvanakyma.nasan-kuvasivu"), h.Sivu);
+            Rivi(Kieli.T("ui.kuvanakyma.kuvakirjasto"), string.IsNullOrEmpty(l?.Osoite) ? null : Kieli.T("ui.kuvanakyma.nasa-kirjasto"), l?.Osoite);
         }
 
         void Rivi(string nimi, string arvo, string osoite = null)
@@ -939,7 +939,7 @@ namespace Matkakirja.Natiivi
             if (string.IsNullOrEmpty(aika)) return null;
             if (DateTime.TryParse(aika, CultureInfo.InvariantCulture, DateTimeStyles.AdjustToUniversal | DateTimeStyles.AssumeUniversal, out var d))
                 return aika.Length > 10
-                    ? d.ToString("d.M.yyyy 'klo' H.mm 'UTC'", CultureInfo.InvariantCulture)
+                    ? Kieli.T("ui.kuvanakyma.aika-klo", d.ToString("d.M.yyyy", CultureInfo.InvariantCulture), d.ToString("H.mm", CultureInfo.InvariantCulture))
                     : d.ToString("d.M.yyyy", CultureInfo.InvariantCulture);
             return aika;
         }
@@ -949,7 +949,7 @@ namespace Matkakirja.Natiivi
         {
             if (double.IsNaN(lat) || double.IsNaN(lon)) return null;
             string A(double x) => Math.Abs(x).ToString("0.0", CultureInfo.InvariantCulture).Replace('.', ',');
-            return A(lat) + "° " + (lat >= 0 ? "P" : "E") + " · " + A(lon) + "° " + (lon >= 0 ? "I" : "L");
+            return Kieli.T("ui.kuvanakyma.paikkateksti", A(lat), Kieli.T(lat >= 0 ? "ui.kuvanakyma.suunta-pohjoinen" : "ui.kuvanakyma.suunta-etela"), A(lon), Kieli.T(lon >= 0 ? "ui.kuvanakyma.suunta-ita" : "ui.kuvanakyma.suunta-lansi"));
         }
 
         // --- zoomi -------------------------------------------------------------------

@@ -61,7 +61,7 @@ namespace Matkakirja.Natiivi
             ylarivi = new VisualElement { pickingMode = PickingMode.Ignore };
             ylarivi.style.flexDirection = FlexDirection.Row; ylarivi.style.alignItems = Align.Center; ylarivi.style.marginBottom = 14;
             Juuri.Add(ylarivi);
-            Live = new IssKytkimet.Merkkivalo("LIVE");
+            Live = new IssKytkimet.Merkkivalo(Kieli.T("ui.iss.live"));
             Live.AddManipulator(new Clickable(() => palaaLive?.Invoke()));
             ylarivi.Add(Live);
             Lukema = new IssKytkimet.Lukema();
@@ -73,18 +73,18 @@ namespace Matkakirja.Natiivi
             Juuri.Add(saatimet);
             string[] kertoimet = new string[Matkakirja.Linssit.Iss.Simukello.Nopeudet.Length];
             for (int i = 0; i < kertoimet.Length; i++)
-                kertoimet[i] = Matkakirja.Linssit.Iss.Simukello.Nopeudet[i] == 1 ? "LIVE" : Matkakirja.Linssit.Iss.Simukello.Nopeudet[i] + "×";
-            Nopeus = new IssKytkimet.Kiertokytkin("NOPEUS", kertoimet, i => nopeus?.Invoke(Matkakirja.Linssit.Iss.Simukello.Nopeudet[i]));
-            Pilvet = new IssKytkimet.Nuppi("PILVET", 0f, 1f, v => pilvet?.Invoke(v));
+                kertoimet[i] = Matkakirja.Linssit.Iss.Simukello.Nopeudet[i] == 1 ? Kieli.T("ui.iss.live") : Matkakirja.Linssit.Iss.Simukello.Nopeudet[i] + "×";
+            Nopeus = new IssKytkimet.Kiertokytkin(Kieli.T("ui.iss.nopeus-iso"), kertoimet, i => nopeus?.Invoke(Matkakirja.Linssit.Iss.Simukello.Nopeudet[i]));
+            Pilvet = new IssKytkimet.Nuppi(Kieli.T("ui.iss.pilvet-iso"), 0f, 1f, v => pilvet?.Invoke(v));
             // Vuodenaika (omistaja 1.10.): 0 talvi, 1 kevät, 2 kesä, 3 syksy (Matkakirja.Linssit.Iss.Vuodenaika); sama nuppi.
-            Vuodenaika = new IssKytkimet.Nuppi("VUODENAIKA", 0f, 3f, v => kuukausi?.Invoke(v), kokonaisluku: true);
+            Vuodenaika = new IssKytkimet.Nuppi(Kieli.T("ui.iss.vuodenaika-iso"), 0f, 3f, v => kuukausi?.Invoke(v), kokonaisluku: true);
             // Vuorokaudenaika (omistaja 1.10.): 0 aamu, 1 päivä, 2 ilta, 3 yö (Matkakirja.Linssit.Iss.Vuorokausi); sama nuppi, v4-paneeli.
-            Vuorokausi = new IssKytkimet.Nuppi("VUOROKAUSI", 0f, 3f, v => vuorokausi?.Invoke(v), kokonaisluku: true);
-            Kohde = new IssKytkimet.Painike("KOHDE", "LENNÄ", () => kohde?.Invoke());
+            Vuorokausi = new IssKytkimet.Nuppi(Kieli.T("ui.iss.vuorokausi-iso"), 0f, 3f, v => vuorokausi?.Invoke(v), kokonaisluku: true);
+            Kohde = new IssKytkimet.Painike(Kieli.T("ui.iss.kohde-iso"), Kieli.T("ui.iss.lenna-iso"), () => kohde?.Invoke());
             // ISS-kamera (omistaja 1.10.2026, A): KUVAA korvaa OMA PAIKKA -vivun (oma paikka on KOHDE-listan rivinä); paneeli v3.
-            Kuvaa = new IssKytkimet.Painike("KUVAA", "●", () => kuvaa?.Invoke());
+            Kuvaa = new IssKytkimet.Painike(Kieli.T("ui.iss.kuvaa-iso"), "●", () => kuvaa?.Invoke());
             // Ilman ×-merkkiä, pelkkä POISTU (omistaja 5.10.2026 klo 00.1x, ✕-inventaario: turhat x:t pois).
-            Sulku = new IssKytkimet.Painike("POISTU", "", () => sulku?.Invoke(), leveys: 52f);
+            Sulku = new IssKytkimet.Painike(Kieli.T("ui.iss.poistu-iso"), "", () => sulku?.Invoke(), leveys: 52f);
             foreach (var m in new VisualElement[] { Nopeus, Pilvet, Vuodenaika, Vuorokausi, Kohde, Kuvaa, Sulku }) saatimet.Add(m);
             moduulit = new IssKytkimet.Kytkin[] { Live, Lukema, Nopeus, Pilvet, Vuodenaika, Vuorokausi, Kohde, Kuvaa, Sulku };
             foreach (var m in moduulit) m.Muuttui += () => { if (asettelu != null) PaivitaKerrokset(); };

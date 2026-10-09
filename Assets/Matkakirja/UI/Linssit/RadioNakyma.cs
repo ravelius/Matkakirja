@@ -175,10 +175,10 @@ namespace Matkakirja.Natiivi
             var lamppualue = Rakenne.El("mk-radio__lamppualue", rivi, PickingMode.Ignore);
             lamppu = new RadioLamppu(PainaLamppua);
             lamppu.AddToClassList("mk-radio__lamppu");
-            lamppu.tooltip = "Sulje radio";
+            lamppu.tooltip = Kieli.T("ui.radio.sulje");
             lamppualue.Add(lamppu);
             // Pieni nimiö virtanapin alle (Päätoimittajan katselmus 29.9.: nappi ei kellu yksin).
-            var virta = Rakenne.Teksti("VIRTA", "mk-radio__virta", lamppualue);
+            var virta = Rakenne.Teksti(Kieli.T("ui.radio.virta"), "mk-radio__virta", lamppualue);
             virta.pickingMode = PickingMode.Ignore;
             Kirjasimet.Aseta(virta, Kirjasin.KoneLihava);
 
@@ -201,10 +201,10 @@ namespace Matkakirja.Natiivi
             linkkiRivi = Rakenne.El("mk-radio__linkki", keskio, PickingMode.Ignore);
             linkkiNimi = Rakenne.Teksti("", "mk-radio__linkkinimi", linkkiRivi);
             Kirjasimet.Aseta(linkkiNimi, Kirjasin.LukuKursiivi);
-            avaaSivu = Rakenne.Nappi("Avaa aseman sivu", "mk-nappi--kulta mk-radio__sivu", AvaaSivu, linkkiRivi);
+            avaaSivu = Rakenne.Nappi(Kieli.T("ui.radio.avaa-sivu"), "mk-nappi--kulta mk-radio__sivu", AvaaSivu, linkkiRivi);
             Rakenne.Tausta(avaaSivu, Kuviot.Kulta);
             Kirjasimet.Aseta(avaaSivu, Kirjasin.KoneLihava);
-            avaaSivu.tooltip = "Avaa aseman oma sivu selaimessa";
+            avaaSivu.tooltip = Kieli.T("ui.radio.avaa-sivu-selaimessa");
 
             juuri.RegisterCallback<GeometryChangedEvent>(e => Mitoita(e.newRect.width));
             kerros.TurvaMuuttui += Asettele;
@@ -361,7 +361,7 @@ namespace Matkakirja.Natiivi
             naytto.NaytaTeksti(t.Rivi1 ?? "");
             naytto2.NaytaTeksti(t.Rivi2 ?? "");
             lamppu.Vaihe = vaihe;
-            lamppu.tooltip = tauolla ? "Jatka lähetystä" : "Keskeytä lähetys";
+            lamppu.tooltip = Kieli.T(tauolla ? "ui.radio.jatka-lahetysta" : "ui.radio.keskeyta-lahetys");
 
             // Linkkiasema: nimi kokonaan ja sivun nappi.
             bool linkki = vaihe == RadioVaihe.Linkki;
@@ -515,7 +515,7 @@ namespace Matkakirja.Natiivi
                 naytetyt[i] = id;
                 paikat[i].text = id == null ? "" : Nimi(id).ToUpperInvariant();
                 SovitaNimi(paikat[i]);
-                paikat[i].tooltip = id == null ? null : "Viritä kanava: " + Nimi(id);
+                paikat[i].tooltip = id == null ? null : Kieli.T("ui.radio.virita-kanava", Nimi(id));
                 paikat[i].pickingMode = id == null ? PickingMode.Ignore : PickingMode.Position;
             }
         }
@@ -765,7 +765,7 @@ namespace Matkakirja.Natiivi
             // Oikea tauko (Linssiseppä 943be95): lähetys ja viritysääni pysähtyvät, tila säilyy.
             linssi?.Tauko(paalle);
             lamppu.Tauko = paalle;
-            lamppu.tooltip = SuljePyynto != null ? "Sulje radio" : paalle ? "Jatka lähetystä" : "Keskeytä lähetys";
+            lamppu.tooltip = Kieli.T(SuljePyynto != null ? "ui.radio.sulje" : paalle ? "ui.radio.jatka-lahetysta" : "ui.radio.keskeyta-lahetys");
         }
 
         void AvaaSivu()
@@ -959,7 +959,7 @@ namespace Matkakirja.Natiivi
             switch (mika)
             {
                 case "hiljaa":
-                    TilaMuuttui(new RadioTila { Vaihe = RadioVaihe.Hiljaa, Rivi1 = "EI ASEMAA", Rivi2 = "VALITSE KAUPUNKI" });
+                    TilaMuuttui(new RadioTila { Vaihe = RadioVaihe.Hiljaa, Rivi1 = "EI ASEMAA", Rivi2 = "VALITSE KAUPUNKI" });   // kieli: ei (testikomento (ui linssi radio); oikea teksti tulee RadioLinssistä)
                     return null;
                 case "viritys":
                     Simuloi("pariisi", false);
@@ -1032,7 +1032,7 @@ namespace Matkakirja.Natiivi
             {
                 Vaihe = v, AsemaId = id, Nimi = nimi, Naytto = nimi, Maa = maa, KaupunkiId = id, KaupunkiNimi = kaupunkiNimi,
                 Viesti = v == RadioVaihe.Virhe ? viesti : null, Sivu = v == RadioVaihe.Linkki ? sivuOsoite : null,
-                Rivi1 = v switch { RadioVaihe.Viritys => "VIRITTÄÄ...", RadioVaihe.Virhe => "EI KUULU", _ => naytto },
+                Rivi1 = v switch { RadioVaihe.Viritys => "VIRITTÄÄ...", RadioVaihe.Virhe => "EI KUULU", _ => naytto },   // kieli: ei (testikomennon testitila)
                 Rivi2 = v == RadioVaihe.Soi || v == RadioVaihe.Linkki ? kaupunkiNimi.ToUpperInvariant() : v == RadioVaihe.Virhe ? (viesti ?? "").ToUpperInvariant() : "",
             };
         }
@@ -1572,7 +1572,7 @@ namespace Matkakirja.Natiivi
                 if (d.Soi) Kirjasimet.Aseta(n.Nimi, Kirjasin.LukuLihava); else Kirjasimet.Aseta(n.Nimi, Kirjasin.Luku);
                 bool muuttui = n.Tieto == null || n.Tieto.Soi != d.Soi || n.Tieto.OnKanava != d.OnKanava;
                 n.Tieto = d;
-                n.tooltip = d.OnKanava ? "Soita " + d.Kaupunki : d.Kaupunki;
+                n.tooltip = d.OnKanava ? Kieli.T("ui.radio.soita", d.Kaupunki) : d.Kaupunki;
                 if (muuttui) n.MarkDirtyRepaint();
                 // Soiva päällimmäiseksi, jotta hehku ei jää naapurin alle.
                 if (d.Soi) n.BringToFront();
