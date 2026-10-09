@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "b64f48bfe93fa10a",
-  "kansio": "dioraama/olavinlinna/blender/b64f48bfe93fa10a/",
+  "hash": "aaa593cef0c39c72",
+  "kansio": "dioraama/olavinlinna/blender/aaa593cef0c39c72/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-0-6x6.astcm",
@@ -1355,8 +1355,8 @@
     },
     {
       "polku": "kavely/osat.json",
-      "sha256": "6b3561d9843552ca36137d334c45ac5291993694dc791029338e16932b127083",
-      "tavuja": 30600
+      "sha256": "2e5b2dcf059c2c8c7282aecd690ec02a4f24d3d094dfb08a1ad46f8060c8c827",
+      "tavuja": 30597
     },
     {
       "polku": "kavely/ovi-tammi-100x190-normaali-6x6.astcm",
@@ -1455,8 +1455,8 @@
     },
     {
       "polku": "kavely/ranta-1499.glb",
-      "sha256": "16a84e46232f524251475eb0104d4b4f6c14004ab6fafb7df8842b0b92757c1b",
-      "tavuja": 1129316
+      "sha256": "c79768fb4e272cb081549774eefd9ce6eaece15f40b9e2c1b36b82fc324f1065",
+      "tavuja": 1131964
     },
     {
       "polku": "kavely/rekvisiitta-Barrel_01-normaali-6x6.astcm",
@@ -2330,23 +2330,23 @@
     },
     {
       "polku": "kavely/valot/ranta-1499-4x4.astcm",
-      "sha256": "420c25f60a1b6b438af7ce46ad0fb81dac884b6d3870fcf33c489fba510df41b",
+      "sha256": "54005ee20df6eff1aa8e0cc10062098666c8cf6788f0d4aa0bf0f4597af9f770",
       "tavuja": 1398144
     },
     {
       "polku": "kavely/valot/ranta-1499-512-4x4.astcm",
-      "sha256": "32007534f1cc29bbb58564645e36f4c0aff0297dbe4430225f58c8d7ff8ab825",
+      "sha256": "c9228a93a14b9fb6cde6eebaec891437da79aff8cc34a266fe9f69028dd90943",
       "tavuja": 349568
     },
     {
       "polku": "kavely/valot/ranta-1499-512.jpg",
-      "sha256": "159e4a3b35b0f4e61ccaf593bbf4d3b3d59dc1de92ac50328c376a097f071732",
-      "tavuja": 147106
+      "sha256": "df769620e1b31c788e71ff984dbddec981d272a3e6326e56e665a42fa8c7860b",
+      "tavuja": 141639
     },
     {
       "polku": "kavely/valot/ranta-1499.jpg",
-      "sha256": "1ee1189ebbbd4f3d52320ee256b412df2876c14e8594bfe34bd0afaa5dd56133",
-      "tavuja": 560159
+      "sha256": "b6473b51d9e74d15a2357e9d2ab70209bb890a2a572867acd7f0919e1be7b328",
+      "tavuja": 513241
     },
     {
       "polku": "kavely/valot/tyrma-E101-4x4.astcm",
@@ -2885,8 +2885,8 @@
     },
     {
       "polku": "vaiheet/tyhja-saari.glb",
-      "sha256": "f16fb7d874064fc67fc9661e79933401b1b2f823180b0a040a3c2dce7bfefcbb",
-      "tavuja": 1171480
+      "sha256": "afa48662c62e4c504c286a1525e4c9ee27277e10cf494b85275eeceb87f7b4ca",
+      "tavuja": 1064160
     },
     {
       "polku": "vaiheet/vaiheet.json",
