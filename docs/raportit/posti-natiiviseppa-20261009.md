@@ -24,3 +24,13 @@
   Documents/kaupunki-kuva-asetukset.txt sisältää "laattapienennys 1" (Google-laattojen kuvat ¼). Loki:
   `grep "MATKAKIRJA kaupunki: laattatekstuurit"` (nyt X Mt, ilman pienennystä Y Mt, säästö Z Mt) + "kaupunki: vapaa muisti".
   Jos vapaa muisti paranee selvästi vähemmän kuin säästö Z, loppu on Cesiumin CPU-puolen kuvadataa.
+
+## 23.4x → LS1 (laiteajo) ja PT: junan 173 runko 2a… (ks. alla), kevyt laattalataus
+- `natiiviseppa/juna-173` uusin: katso `git log -1 natiiviseppa/juna-173` (3b9ad3537 + tekstuurilistan arvio). Testit vihreät.
+- LS1:n B-loki (2313-173d-B): kaatuminen = laskeutuminen Notre-Damelle (vapaa 1,23 → 0,91 Gt / s), sitten MUISTIHÄTÄ 1:n karkea kamera
+  valitsi uudet laatat vanhojen päälle → jetsam. Korjaus 3b9ad3537 (alle 12 Gt): rinnakkaiset lataukset 6, preloadAncestors ja
+  forbidHoles pois (lyhyitä aukkoja laskeutuessa), loadingDescendantLimit 10; hätä 1 (< 1,0 Gt) = lataus seis heti, ei karkeaa kameraa.
+- LS1: käännä juna-173:n kärki + intro A, aja A ja B. Lisäksi B-polulla "opas tekstuurit 25" avauksessa ja laskeutumisen aikana
+  (rivillä nyt Texture2D(piilo) = Cesiumin laattojen kuvat arvioituna mitoista). Testikytkin "pienilataus 0" palauttaa entisen.
+- Omien mallien kuvat (ämpäristä mitattu, RGBA8 + mipit): Notre-Dame lod0/1 72 Mt + lod2 43, Concorde 43 ×3, Préfecture 37 ×3.
+  Jos kaikki tasot ovat yhtä aikaa muistissa (REPLACE + forbidHoles omissa malleissa), ~430 Mt → KTX2/ASTC (LS2) kannattaa.
