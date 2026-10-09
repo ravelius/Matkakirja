@@ -180,7 +180,12 @@ namespace Matkakirja.Natiivi
             foreach (var n in Tehostetaulu.Kaikki.Keys) Mikseri.Rekisteroi("kartta", "tehosteet", MikseriId("tehoste/", n), n);
             foreach (var kv in pulunTehosteet) Mikseri.Rekisteroi("kartta", "pulu", MikseriId("pulu/", kv.Key.Replace("pulu.", "")), "Pulu: " + kv.Key.Replace("pulu.", ""));
             Mikseri.Rekisteroi("kartta", "pulu", PulunPuheId, "Pulun puhe");
+            Mikseri.Rekisteroi("kartta", "tehosteet", LentoId, "Lentomoottori", LentoId);
         }
+
+        public const string LentoId = "tehoste/lento";
+        /// <summary>Lentomoottorin väylä: tehosteväylä × äänen kerroin (tehoste/lento).</summary>
+        static float LentoTaso() => Taso(AaniKanava.Tehoste) * Mikseri.AaniKerroin(Mikseri.Nyt, LentoId);
 
         /// <summary>Hakee äänitteen (https-osoite tai ämpärin avain). valmis(null) = ei saatu.</summary>
         public static void Hae(string urlTaiAvain, Action<AudioClip> valmis)
@@ -772,7 +777,9 @@ namespace Matkakirja.Natiivi
                 s.clip = silmukka != null ? silmukka : klippi;
                 s.loop = true;
                 s.pitch = 1f;
-                s.volume = Hiljaisuus * Taso(AaniKanava.Tehoste);
+                if (silmukka != null) silmukka.name = LentoId;   // äänivahti
+                Rekisteroi("tehosteet", LentoId, "Lentomoottori", LentoId, klippi.name);
+                s.volume = Hiljaisuus * LentoTaso();
                 // Varareitti: ilman leikkausta silmukka palaa äänitteen alkuun.
                 if (silmukka == null && alku > 0f) s.time = alku;
                 s.Play();
@@ -791,7 +798,7 @@ namespace Matkakirja.Natiivi
                 if (s.Lahde == null || !soivat.Contains(s)) yield break;
                 float t = Time.unscaledTime - alku;
                 taso = t < a ? Hiljaisuus : t >= b ? huippu : Hiljaisuus * Mathf.Pow(huippu / Hiljaisuus, (t - a) / (b - a));
-                s.Lahde.volume = taso * Taso(AaniKanava.Tehoste);
+                s.Lahde.volume = taso * LentoTaso();
                 yield return null;
             }
             // Moottori hiipuu rauhassa nykyisestä tasosta 0,0001:een.
@@ -800,7 +807,7 @@ namespace Matkakirja.Natiivi
             {
                 if (s.Lahde == null || !soivat.Contains(s)) yield break;
                 float u = (Time.unscaledTime - laskuAlku) / kesto;
-                s.Lahde.volume = v0 * Mathf.Pow(Hiljaisuus / v0, u) * Taso(AaniKanava.Tehoste);
+                s.Lahde.volume = v0 * Mathf.Pow(Hiljaisuus / v0, u) * LentoTaso();
                 yield return null;
             }
             Vapauta(s);
