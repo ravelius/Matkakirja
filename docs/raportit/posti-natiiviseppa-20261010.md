@@ -36,3 +36,29 @@ osoitin ohitettu vain diagnostiikkakäännöksessä):
   maxTextureSize 4096; myös 172:ssa). Kierroksen alussa tulee +300 Mt tekstuureja, joita Google- ja omat laatat eivät selitä.
   Mittaan seuraavaksi diagnostiikka-asetuksella "leikkaus 0" (2775102b6). Muut isot erät: latauskuvan kerrokset ja napakalotit
   pysyvät kaupungissa muistissa (~0,2 Gt), cesium-native pitää puretut kuvat CPU:lla (malloc 1,6–2,0 Gt) ja GC-keko on ~0,45 Gt.
+
+## 02.0x → PT: lisäkorjaukset d + e mitattu; B läpi, A ei vielä (≥ 0,5 Gt)
+Ehdokas `natiiviseppa/juna173-ehdokas-mt` **1ef5bd1dc** = juna-173 9abe4b3b9 + c (2,72) + b (omat kevyesti) + d (leikkausmaski pienellä
+muistilla SSE 2 / 1024 px, ennen 0,5 / 4096 → ~0,27 Gt) + e (pienen muistin hätä: seis < 0,6, jatkuu > 0,8 Gt, tarkistus 0,5 s;
+ennen 1,0 / 1,3 / 2 s jäädytti kaupungin pysyvästi) + mittausloki ja diagnostiikka-asetukset (päällä vain tiedostoista).
+Testit: Linssit 1258, Peli 442, Kartta 453, unity 0, tarkista ok.
+
+| ajo | polku | asetus | jetsam | vapaa min | kaupunki kierroksella |
+|---|---|---|---|---|---|
+| R11 | B | b+c+d, v6h3 | ei | 0,70 Gt | hätä 1,0 jäädytti 84 %:iin → Orsay/Concorde/Eiffel vettä |
+| R12 | B | b+c+d+e, v6h3 | ei | 0,50 Gt | hätä seis/jatkuu, kaikki kohteet näkyvät (myöhemmät karkeampia) |
+| R13 | A (intro) | b+c+d+e, v6h3 | ei | 0,35 Gt ✗ | hätä introssa 118 s |
+| R14 | A | sama + kerroin 4,25 | ei | 0,43 Gt ✗ | hätä seis/jatkuu 3 kertaa |
+| R15 | A | b+c+d+e, KTX2 v6hk3 | ei | 0,36 Gt ✗ | hätä 144 s, ei palautunut |
+
+- v6h3 on laitteella OK: ND 14 renderöijää / 13 tekstuuria, Concorde 4 tekstuuria. **Julkaisija: uusin-3 → v6h3, uusin-2 → v6b3**
+  (PT:n päätös; v6b3 sama muunnos).
+- A-polun syy: intron laajat näkymät lataavat kertoimella 2,72 Googlelta ~700 laattaa (675 Mt). Hätä pysäyttää päivityksen
+  (suspendUpdate), jolloin välimuisti ei vapaudu. Vapaa ei siksi palaudu, ja muut kulut (omat mallit, kuvanostot) laskevat sen
+  0,35 Gt:iin. KTX2 ei auta A:ssa.
+- **Ehdotus f (pienen muistin hätä uusiksi, vaatii PT:n OK + mittauksen):** taso 1 (< 0,8 Gt) = esilatauskamerat pois (esikamera,
+  3 reittikameraa, lähikamera), mutta päivitys jatkuu, jolloin välimuisti 64 Mt vapauttaa käyttämättömät laatat. Taso 2 (< 0,5 Gt)
+  = lataus seis. Kierroksen alussa reittikamerat pudottivat latausasteen 99 → 55 %, eli ne ovat työjoukon suurin yksittäinen erä.
+  Vaihtoehto junaan 173: portiksi B-polku + "ei jetsamia", ja A korjataan 174:ssä.
+- Konteksti 66 % → kirjoitan luovutuksen (viesti-natiiviseppa-luovutus-20261010.md). Siivous (PT:n rivi: worktreet ≤ 3, unity67
+  T7:lle) junan 173 jälkeen.
