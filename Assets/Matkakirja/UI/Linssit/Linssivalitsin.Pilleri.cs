@@ -382,8 +382,11 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(l, Kirjasin.Kone);
         }
 
-        void AarreRivi(string id, string nimi, string kuvaUrl, string selite, Action nayta, VisualElement isa = null, string ikoni = null)
+        /// <param name="rivikuvaUrl">Rivikuvakkeen pieni kuva (fotorealistinen minikuva, FotoMinit); null = sama kuin kuvaUrl.</param>
+        void AarreRivi(string id, string nimi, string kuvaUrl, string selite, Action nayta, VisualElement isa = null, string ikoni = null,
+            string rivikuvaUrl = null)
         {
+            rivikuvaUrl ??= kuvaUrl;
             ikoni ??= Ikonit.Laukku;
             ensimmainenAarre ??= (id, kuvaUrl, nimi, selite);
             Button b = null;
@@ -403,8 +406,8 @@ namespace Matkakirja.Natiivi
                 var vara = new SvgIkoni(ikoni);
                 vara.AddToClassList("mk-linssirivi__varaikoni");
                 kehys.Add(vara);
-                if (!string.IsNullOrEmpty(kuvaUrl))
-                    Kuvat.Hae(kuvaUrl, tex =>
+                if (!string.IsNullOrEmpty(rivikuvaUrl))
+                    Kuvat.Hae(rivikuvaUrl, tex =>
                     {
                         if (tex == null || kehys.panel == null) return;
                         kehys.style.backgroundImage = new StyleBackground(tex);
