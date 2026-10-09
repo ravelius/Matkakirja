@@ -311,7 +311,8 @@ namespace Matkakirja.Natiivi
             // Varustekuva viivaikonin päälle; jos se ei lataudu, viivaikoni jää (web aarreIkoni onerror).
             var kuva = Rakenne.El("mk-laukku__linssikuva", b, PickingMode.Ignore);
             kuva.style.display = DisplayStyle.None;
-            Kuvat.Hae(VarusteKuva(id), tex =>
+            // Fotorealistinen minikuva (omistaja 9.10.2026, Linssivalitsin.FotoMinit), muuten webin varustekuva.
+            Kuvat.Hae(Linssivalitsin.RivinKuva(id, VarusteKuva(id)), tex =>
             {
                 if (tex == null || kuva.panel == null) return;
                 kuva.style.backgroundImage = new StyleBackground(tex);

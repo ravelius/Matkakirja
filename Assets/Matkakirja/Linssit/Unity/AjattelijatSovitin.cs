@@ -50,6 +50,8 @@ namespace Matkakirja.Natiivi
         public const string Juuri = "https://media.matkakirja.app/";
         /// <summary>Prologin kytkimen napsahdus (web AJATTELIJA_KYTKIN v2, #3892: aito katkaisijaäänite ja konvoluutiokaiku, CC0).</summary>
         public const string Kytkin = "ajattelijat/yhteiset/v2/kytkin-kaiku.mp3";
+        /// <summary>Mikseritunnus (PT 9.10.): prologin valokytkin linssit-kontekstissa.</summary>
+        public const string KytkinId = "ajattelijat.kytkin-kaiku";
 
         public static readonly LinssiTiedot AjattelijatTiedot = new LinssiTiedot
         {
@@ -249,6 +251,7 @@ namespace Matkakirja.Natiivi
             puhe = LuoLahde("Puhe");
             musiikki = LuoLahde("Musiikki");
             kytkin = LuoLahde("Kytkin");
+            Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen.Rekisteroi("linssit", "tehosteet", KytkinId, "Ajattelijat: kytkimen kaiku", KytkinId, "kytkin-kaiku");
             Muuttui?.Invoke();
             Vaihe("ui", vk);
             o.StartCoroutine(Lataa(a, s));
@@ -627,7 +630,7 @@ namespace Matkakirja.Natiivi
                     if (!kytkinSoi && g < a.Prologi.Kytkin && kytkin.clip != null)
                     {
                         kytkinSoi = true;
-                        kytkin.volume = !AaniKaappaus.Kaynnissa && (EsityksenAani.Mykistetty?.Invoke() ?? false) ? 0f : 1f;
+                        kytkin.volume = !AaniKaappaus.Kaynnissa && (EsityksenAani.Mykistetty?.Invoke() ?? false) ? 0f : Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen.Kerroin("tehosteet", KytkinId);
                         // Kytkinkin on MP3: sama alkuviiveen ohitus (tallenne 4.10.: ääni 54 ms ajastettua myöhemmin ilman sitä).
                         kytkin.timeSamples = Math.Min(kytkin.clip.samples - 1, Mp3Ohitus(kytkin.clip));
                         kytkin.PlayScheduled(AjattelijaTahti.Hetki(dspNolla, a.Prologi.Kytkin));

@@ -37,7 +37,7 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(korostus, Kirjasin.LukuLihava);
             var napit = Rakenne.El("mk-kortti__napit", kortti.Sisus, PickingMode.Ignore);
             // Peru-nappi: valinnainen kunPeruttu (esim. seikkailun "Alusta"); Esc ja Sulje eivät kutsu sitä.
-            peru = Rakenne.Nappi("Peruuta", "mk-nappi--toiminto", () => { var p = peruttu; Sulje(); p?.Invoke(); }, napit);
+            peru = Rakenne.Nappi(Kieli.T("ui.yleinen.peruuta"), "mk-nappi--toiminto", () => { var p = peruttu; Sulje(); p?.Invoke(); }, napit);
             ok = Rakenne.Nappi("", "mk-nappi--kulta", () => { var v = vahvistettu; Sulje(); v?.Invoke(); }, napit);
             Kirjasimet.Aseta(napit, Kirjasin.Kone);
             Kirjasimet.Aseta(ok, Kirjasin.KoneLihava);

@@ -46,9 +46,9 @@ namespace Matkakirja.Natiivi
             kortti.style.display = DisplayStyle.None;
             kortti.style.opacity = 0f;
             float s = Tyylikirja.Kesto.Avaus / 1000f;
-            kortti.style.transitionProperty = new List<StylePropertyName> { "opacity", "left", "top", "width" };
-            kortti.style.transitionDuration = new List<TimeValue> { new TimeValue(s), new TimeValue(s), new TimeValue(s), new TimeValue(s) };
-            kortti.tooltip = "Kuva";
+            kortti.style.transitionProperty = new List<StylePropertyName> { "opacity", "left", "top", "width", "translate" };
+            kortti.style.transitionDuration = new List<TimeValue> { new TimeValue(s), new TimeValue(s), new TimeValue(s), new TimeValue(s), new TimeValue(s) };
+            kortti.tooltip = Kieli.T("ui.opas.kuva.kuva");
             kehys = Rakenne.El("mk-nosto__kuvakehys mk-nosto__kuvakehys--nyky", kortti, PickingMode.Ignore);
             kehys.style.transitionProperty = new List<StylePropertyName> { "height" };
             kehys.style.transitionDuration = new List<TimeValue> { new TimeValue(s) };
@@ -79,8 +79,21 @@ namespace Matkakirja.Natiivi
                 kuva.style.backgroundImage = new StyleBackground(t);
                 suhde = t.width / (float)Mathf.Max(1, t.height);
                 Asettele();
+                // TARINAKUVA LENTÄÄ NÄKYVIIN (omistaja TF 169, 9.10.2026 klo 10.0x: "niitä, jotka seuraavat tarinaa ja tulevat siihen
+                // lentäen näkyville"): oikean reunan takaa paikalleen samalla Avaus-siirtymällä (0,22 s) kuin häivytys.
+                float w = isa.layout.width;
+                float lento = float.IsNaN(w) ? 0f : Mathf.Max(0f, w - kortti.style.left.value.value);
+                kortti.style.transitionDuration = new List<TimeValue> { new TimeValue(0), new TimeValue(0), new TimeValue(0), new TimeValue(0), new TimeValue(0) };
+                kortti.style.translate = new Translate(lento, 0);
                 kortti.style.display = DisplayStyle.Flex;
-                kortti.schedule.Execute(() => { if (v == versio) kortti.style.opacity = este ? 0f : 1f; }).ExecuteLater(16);
+                kortti.schedule.Execute(() =>
+                {
+                    if (v != versio) return;
+                    float s2 = Tyylikirja.Kesto.Avaus / 1000f;
+                    kortti.style.transitionDuration = new List<TimeValue> { new TimeValue(s2), new TimeValue(s2), new TimeValue(s2), new TimeValue(s2), new TimeValue(s2) };
+                    kortti.style.translate = new Translate(0, 0);
+                    kortti.style.opacity = este ? 0f : 1f;
+                }).ExecuteLater(16);
                 Debug.Log($"MATKAKIRJA opas: kuvanosto {k.Ankkuri ?? k.Url} ({t.width}×{t.height})");
             });
         }

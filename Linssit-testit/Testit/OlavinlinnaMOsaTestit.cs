@@ -66,12 +66,14 @@ namespace Matkakirja.Linssit.Testit
 
         /// <summary>Kiipeily (huone 8): otteet ote:kellotorni-1…24 (LR v45x), puuskat tuuli:-merkkien otteilla, lyhty yllä puolivälissä kerran
         /// (SeikkailuPelaaja); kurinalainen kiipeilijä pysähtyy varoituksiin.</summary>
-        static (double Aika, bool Putosi, bool Havaittu) Kiipea(int otteita, IEnumerable<int> puuskat)
+        static (double Aika, bool Putosi, bool Havaittu) Kiipea(int otteita, IEnumerable<int> puuskat, IEnumerable<int> kapeat = null, IEnumerable<int> levot = null, bool lepaa = true)
         {
-            var k = new Kiipeily(otteita, puuskat); bool lyhty = false, putosi = false, havaittu = false; double t = 0;
-            for (; t < 120 && !k.Perilla; t += Huonesimulaatio.Dt)
+            var k = new Kiipeily(otteita, puuskat, kapeat, levot); bool lyhty = false, putosi = false, havaittu = false; double t = 0;
+            for (; t < 180 && !k.Perilla; t += Huonesimulaatio.Dt)
             {
-                int s = k.PuuskaVaroittaa || k.Puuska || k.LyhtyVaroittaa || k.LyhtyValaisee || k.Himmenee ? 0 : 1;
+                // Kurinalainen: pysähtyy varoituksiin, kapealla tarkkaan otteeseen ja lepää lepo-otteella voiman palautumiseen asti.
+                bool lepo = lepaa && k.Siirtyy == 0 && k.Lepo(k.Ote) && k.Voima < 0.95;
+                int s = k.PuuskaVaroittaa || k.Puuska || k.LyhtyVaroittaa || k.LyhtyValaisee || k.Himmenee || k.KapeaOdottaa || lepo ? 0 : 1;
                 k.Paivita(Huonesimulaatio.Dt, s);
                 if (!lyhty && k.Ote >= otteita / 2 && k.Siirtyy == 0) { lyhty = true; k.LyhtyYlla(); }
                 putosi |= k.Putosi; havaittu |= k.Havaittu;
@@ -87,12 +89,15 @@ namespace Matkakirja.Linssit.Testit
             // Huone 8: kiipeily tornin ympäri.
             var otteet = new List<(double X, double Y, double Z)>();
             for (int i = 1; ; i++) { KavelyMerkki m = null; foreach (var x in d.Merkit) if (x.Nimi == "ote:kellotorni-" + i) m = x; if (m == null) break; otteet.Add((m.X, m.Y, m.Z)); }
-            var puuskat = new List<int>();
+            var puuskat = new List<int>(); var kapeat = new List<int>(); var levot = new List<int>();
             foreach (var m in d.Lajia("tuuli")) for (int i = 0; i < otteet.Count; i++) if (Huonesimulaatio.Etaisyys3(m.X, m.Y, m.Z, otteet[i].X, otteet[i].Y, otteet[i].Z) < 0.5) puuskat.Add(i);
-            var (kiipeily, putosi, havaittu) = Kiipea(otteet.Count, puuskat);
-            Console.WriteLine($"      kiipeily: {otteet.Count} otetta, puuskat {string.Join(",", puuskat)}, kurinalainen {kiipeily:F1} s");
+            for (int i = 0; i < otteet.Count; i++) foreach (var x in d.Merkit) if (x.Nimi == "ote:kellotorni-" + (i + 1)) { if (x.Kapea) kapeat.Add(i); if (x.Tyyppi == "lepo") levot.Add(i); }
+            var (kiipeily, putosi, havaittu) = Kiipea(otteet.Count, puuskat, kapeat, levot);
+            var (ilmanLepoa, putosiIlman, _) = Kiipea(otteet.Count, puuskat, kapeat, levot, lepaa: false);
+            Console.WriteLine($"      kiipeily: {otteet.Count} otetta, puuskat {string.Join(",", puuskat)}, kapeat {string.Join(",", kapeat)}, lepo {string.Join(",", levot)}; kurinalainen {kiipeily:F1} s, ilman lepoa {(putosiIlman ? "putoaa" : "perille")} ({ilmanLepoa:F1} s)");
             Oleta.Tosi(otteet.Count == 24 && puuskat.Count == 3, $"24 otetta ja 3 puuskaa (LR v45x; {otteet.Count}, {puuskat.Count})");
-            Oleta.Tosi(!putosi && !havaittu && kiipeily < 45, $"kurinalainen perille ilman putoamista ja havaintoa ({kiipeily:F1} s)");
+            Oleta.Tosi(kapeat.Count == 5 && levot.Count == 1, $"LR v45y: 5 kapeaa ja 1 lepo-ote ({kapeat.Count}, {levot.Count})");
+            Oleta.Tosi(!putosi && !havaittu && kiipeily < 60, $"kurinalainen perille ilman putoamista ja havaintoa ({kiipeily:F1} s)");
             // Huone 9: komero hitaasti vetäen (ensimmäinen putoaa, muut komeroon: ei kurkistusta), kilvet 3 × 15°, kansi auki.
             var komero = new Komero(); int putosiTiilia = 0;
             for (int i = 0; i < komero.Tiilet.Maara; i++) { komero.Raavi(i); if (komero.Raavi(i, 0) == TiiliTulos.Putosi) putosiTiilia++; komero.Tiilet.Paivita(3); }

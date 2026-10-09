@@ -66,7 +66,7 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void Rekvisiitta()
         {
-            // LR v45v: 46 rekvisiittamerkkiä, glb ja osa jokaisella; ei esineiden eikä reittien päällä (sijoittelu LR:n).
+            // LR v45v: 46 rekvisiittamerkkiä + v46a 12 + v46b 3 Codex-rekvisiittaa = 61, glb ja osa jokaisella; ei esineiden eikä reittien päällä (sijoittelu LR:n).
             var d = Matkakirja.Linssit.Testit.Huonesimulaatio.Data;
             int n = 0; var ohitetut = new System.Collections.Generic.List<string>();
             foreach (var m in d.Lajia("rekvisiitta"))
@@ -75,7 +75,7 @@ namespace Matkakirja.Linssit.Testit
                 if (d.RekvisiittaPeittaa(m)) ohitetut.Add(m.Tunnus);
                 n++;
             }
-            Oleta.Sama(46, n);
+            Oleta.Sama(61, n);
             // Esineen päällä olevat ohitetaan (v45p: kulho 0,11 m tarjottimesta) — v45r: LR siirsi pöytärekvisiitan ≥ r + 0,3 m:n päähän, joten mitään ei ohiteta.
             Oleta.Tosi(ohitetut.Count == 0, "ohitetut: " + string.Join(", ", ohitetut));
             System.Console.WriteLine("      rekvisiitta: ohitetaan esineen päältä " + string.Join(", ", ohitetut));

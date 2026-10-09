@@ -135,6 +135,15 @@ namespace Matkakirja.Peli
         /// <summary>Kerran loppuun soinut pohjaraita: ei uudelleen ennen kuin paikka tai ketju vaihtuu (KERRAN LÄPI).</summary>
         string soinutPolku;
 
+        // KAUPUNKIJAKSO (AaniTaulut.Jaksot): vaihe 0 nopea (kerran), 1 tauko, 2 hidas (kerran), 3 tausta (silmukka).
+        string jaksoKaupunki;
+        int jaksoVaihe;
+        /// <summary>Kasvaa jokaisella jakson tauolla; soitin ajastaa JaksonTaukoMs:n ja kutsuu JaksonTaukoOhi(nro).</summary>
+        public int JaksonTaukoNro { get; private set; }
+        public int JaksonTaukoMs { get; private set; }
+        /// <summary>Testeille ja lokiin: "pariisi:nopea" tms. tai null (ei jaksoa).</summary>
+        public string Jakso => jaksoKaupunki == null ? null : jaksoKaupunki + ":" + new[] { "nopea", "tauko", "hidas", "tausta" }[jaksoVaihe];
+
         /// <summary>
         /// KERRAN LÄPI (omistaja 30.9.2026; oletus). false = webin käytös (arvottu aloituskohta, #alku, silmukat):
         /// kultaiset webvertailut (AaniTestit) ajetaan sillä.
@@ -174,7 +183,7 @@ namespace Matkakirja.Peli
         /// </summary>
         public void Paikka(string paikka, string tyyppi) => Tee(() =>
         {
-            if (paikka != this.paikka) soinutPolku = null; // uusi laukaisu: musiikki saa soida uudelleen
+            if (paikka != this.paikka) { soinutPolku = null; jaksoKaupunki = null; jaksoVaihe = 0; } // uusi laukaisu: musiikki (ja jakso) alusta
             this.paikka = paikka;
             paikanTyyppi = paikka == null ? null : tyyppi;
             SoitaPaikka();
@@ -441,11 +450,31 @@ namespace Matkakirja.Peli
         {
             var s = pohja;
             if (s == null) return;
+            if (jaksoKaupunki != null && (jaksoVaihe == 0 || jaksoVaihe == 2))
+            {
+                pohja = null;
+                pohjaPolku = null;
+                s.Tauko = true;
+                Vapauta(s);
+                var j = t.Jaksot[jaksoKaupunki];
+                if (jaksoVaihe == 0 && j.TaukoMs > 0) { jaksoVaihe = 1; JaksonTaukoMs = j.TaukoMs; JaksonTaukoNro++; return; }
+                jaksoVaihe = jaksoVaihe == 0 ? 2 : 3;
+                KaynnistaPohja(musiikinPaikka, musiikinMaa);
+                return;
+            }
             soinutPolku = s.Polku;
             pohja = null;
             pohjaPolku = null;
             s.Tauko = true; // ended → paused
             Vapauta(s);
+        });
+
+        /// <summary>Jakson tauko kului (soitin ajastaa JaksonTaukoMs:n): hidas kappale alkaa. Vanha numero = ohitetaan.</summary>
+        public void JaksonTaukoOhi(int nro) => Tee(() =>
+        {
+            if (nro != JaksonTaukoNro || jaksoKaupunki == null || jaksoVaihe != 1) return;
+            jaksoVaihe = 2;
+            KaynnistaPohja(musiikinPaikka, musiikinMaa);
         });
 
         /// <summary>Portin "Aloita seikkailu" (true) ja intron loppu / eteneminen kartalle (false).</summary>
@@ -647,6 +676,13 @@ namespace Matkakirja.Peli
             musiikinMaa = maa;
             if (!Aanimaisema || !Musiikki || pito) { LopetaPohja(); return; }
             var polku = Musiikkivalitsin.Valitse(valitsin.Ketju(tilat, cityId, maa, VisaAuki), puuttuvat);
+            if (KerranLapi && cityId != null && t.Jaksot.TryGetValue(cityId, out var jakso))
+            {
+                var oma = Musiikkivalitsin.Valitse(valitsin.Ketju(null, cityId, maa), puuttuvat);
+                if (polku == oma) { if (jaksoKaupunki != cityId) { jaksoKaupunki = cityId; jaksoVaihe = 0; } SoitaJakso(jakso, oma); return; }
+                // Tilaraita (lehti, kohtaaminen …) keskeyttää: saapumisen nopea ja tauko jäävät väliin, paluussa hidas.
+                if (jaksoKaupunki == cityId && jaksoVaihe < 2) jaksoVaihe = 2;
+            }
             if (polku == null || (pohja != null && pohjaPolku == polku)) return;
             if (pohja == null && polku == soinutPolku) return; // soi jo kerran läpi tässä laukaisussa
             var vaistyva = pohja;
@@ -654,6 +690,31 @@ namespace Matkakirja.Peli
             pohjaPolku = null;
             if (vaistyva != null) { Ramppi(vaistyva, 0, AaniVakiot.PohjaVaihtoMs); Vapauta(vaistyva); }
             var s = Uusi(Kanava.Pohja, AaniOsoite.Url(polku), !KerranLapi); // KERRAN LÄPI: ei silmukkaa (PohjaLoppui)
+            s.Polku = polku;
+            pohja = s;
+            pohjaPolku = polku;
+            var nousu = vaistyva != null ? AaniVakiot.PohjaVaihtoMs : AaniVakiot.PohjaNousuMs;
+            Soita(s, () =>
+            {
+                if (pohja != s) { s.Tauko = true; return; }
+                Ramppi(s, PohjaTaso(Voimassa), nousu);
+            });
+        }
+
+        /// <summary>Jakson nykyinen vaihe pohjakanavalle; puuttuva raita ohitetaan (nopea → hidas ilman taukoa, hidas → tausta).</summary>
+        void SoitaJakso(KaupunkiJakso j, string oma)
+        {
+            if (jaksoVaihe == 1) { LopetaPohja(); return; }
+            string Polku(int v) => v == 0 ? t.MusaPolku(j.Nopea) : v == 2 ? (j.Hidas != null ? t.MusaPolku(j.Hidas) : oma) : t.MusaPolku(j.Tausta ?? t.Pohjaraita);
+            var polku = Polku(jaksoVaihe);
+            while (polku != null && puuttuvat.Contains(polku) && jaksoVaihe < 3) { jaksoVaihe = jaksoVaihe == 0 ? 2 : 3; polku = Polku(jaksoVaihe); }
+            if (polku == null || puuttuvat.Contains(polku)) { LopetaPohja(); return; }
+            if (pohja != null && pohjaPolku == polku) return;
+            var vaistyva = pohja;
+            pohja = null;
+            pohjaPolku = null;
+            if (vaistyva != null) { Ramppi(vaistyva, 0, AaniVakiot.PohjaVaihtoMs); Vapauta(vaistyva); }
+            var s = Uusi(Kanava.Pohja, AaniOsoite.Url(polku), jaksoVaihe == 3); // nopea ja hidas kerran läpi, tausta silmukkana
             s.Polku = polku;
             pohja = s;
             pohjaPolku = polku;
@@ -853,7 +914,7 @@ namespace Matkakirja.Peli
             if (siirtyma != null && siirtymaLaji == laji) return;
             if (siirtyma != null) LopetaSiirtyma();
             ajonHimmennys = 1;
-            var s = Uusi(Kanava.Siirtyma, raita.Ampari, true);
+            var s = Uusi(Kanava.Siirtyma, AaniOsoite.Musiikkiversio(raita.Ampari), true);
             s.Polku = laji;
             siirtyma = s;
             siirtymaLaji = laji;

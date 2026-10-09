@@ -5,7 +5,7 @@ namespace Matkakirja.Linssit.Seikkailu
 {
     public static class PelattavaPala
     {
-        public const string Hash = "6ae3c7f5544feab3";
-        public const string Versio = "v45x";   // v45v + Kellotornin otteet 24 (0,7 m, kaari, krampit 18–24), puuskat 3, kamera:K3, kivikehykset keittiö/Linnantupa/Voudin sali (LR 9.10.)
+        public const string Hash = "410c7bc5bb1c4e07";
+        public const string Versio = "v46d";   // v46c + pako-kellobastionin leikkaukset y −7,5…8 vesipohjalla; v46b + ranta-1499:n vuosileikkausten vesipohja −7,02 ja tyhjä saari v2 (leivottu 2048²-kuva); v46a + kappelin alttarikaappi ja brokadi sekä keittiön noki (alfa); v45z + Codex-rekvisiitta 12 merkkiä (voudin sali, Linnantupa, keittiö, tyrmä; seinäesineet seina: true) ja tammiovien lehdet ovi-tammi-100x190/200.glb (pääovi, muurikäytävä, Kellotorni, tyrmä; LR 9.10.)
     }
 }

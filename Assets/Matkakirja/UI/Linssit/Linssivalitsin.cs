@@ -387,7 +387,41 @@ namespace Matkakirja.Natiivi
         readonly Dictionary<string, LinssiTiedot> linssiTiedot = new Dictionary<string, LinssiTiedot>();
         /// <summary>KESKENERÄISET-osio auki (oletuksena kiinni; istunnon ajan, testikomento ui pilleri kesken).</summary>
         public static bool KeskenAuki;
-        static string EsikatselunKuva(LinssiTiedot t) => string.IsNullOrEmpty(t.Havainnekuva) ? Matkalaukku.VarusteKuva(t.Id) : t.Havainnekuva;
+        static string EsikatselunKuva(LinssiTiedot t) => !string.IsNullOrEmpty(t.Havainnekuva) ? t.Havainnekuva
+            : KatalogiKuvat.TryGetValue(t.Id, out var k) ? k : Matkalaukku.VarusteKuva(t.Id);
+
+        /// <summary>
+        /// LINSSIKATALOGIN HAVAINNEKUVAT (Codex, fotorealistiset, 1600 × 900; Päätoimittaja hyväksyi 9.10.2026, Sisältökirjuri): linssin tai
+        /// pelin esikatselukuva, kun sillä ei ole omaa kuvaa. Merkintä "havainnekuva" kuvan alle (Raamattu, KUVAT). Yokartta, maapallon-vuosi
+        /// ja tavli uusintana -havainne-v2.jpg (Sisältökirjuri tarkisti, Päätoimittaja 9.10.2026; yökartan Pohjois-Afrikan ja Niilin valot ovat todellisia).
+        /// </summary>
+        internal static readonly Dictionary<string, string> KatalogiKuvat = new Dictionary<string, string>
+        {
+            ["tahdet"] = KatalogiJuuri + "tahtitaivas-havainne.jpg", ["lontoo"] = KatalogiJuuri + "lontoo-havainne.jpg",
+            ["ihmisen-matka-2"] = KatalogiJuuri + "ihmisen-matka-2-havainne.jpg", ["mylly"] = KatalogiJuuri + "mylly-havainne.jpg",
+            ["lentopeli"] = KatalogiJuuri + "lentopeli-havainne.jpg",
+            ["yokartta"] = KatalogiJuuri + "yokartta-havainne-v2.jpg", ["maapallon-vuosi"] = KatalogiJuuri + "maapallon-vuosi-havainne-v2.jpg",
+            ["tavli"] = KatalogiJuuri + "tavli-havainne-v2.jpg",
+        };
+        const string KatalogiJuuri = "https://media.matkakirja.app/linssikatalogi/";
+
+        /// <summary>
+        /// VARUSTEKUVAT FOTOREALISTISINA (omistaja 9.10.2026 klo 12.0x, Raamattu #4280; Sisältökirjurin avainkartta
+        /// varustekuvat-foto-kartta-20261009.json): minikuva listan rivikuvakkeeksi ja laukun ruutuun, iso kuva esikatseluun
+        /// (KatalogiKuvat). Uusinnat tulevat uusilla -v2-avaimilla; tahdet, yokartta ja poikkileikkaus odottavat v2-minejä.
+        /// </summary>
+        internal static readonly Dictionary<string, string> FotoMinit = new Dictionary<string, string>
+        {
+            ["ihmisen-matka-2"] = FotoMiniJuuri + "varuste-ihmisen-matka-2-foto.jpg", ["lentopeli"] = FotoMiniJuuri + "varuste-lentopeli-foto.jpg",
+            ["lontoo"] = FotoMiniJuuri + "varuste-lontoo-foto.jpg", ["mylly"] = FotoMiniJuuri + "varuste-mylly-foto.jpg",
+            ["maapallon-vuosi"] = FotoMiniJuuri + "varuste-maapallon-vuosi-foto.jpg", ["tavli"] = FotoMiniJuuri + "varuste-tavli-foto.jpg",
+            ["isoisa-1873"] = FotoMiniJuuri + "varuste-isoisa-1873-foto.jpg",
+        };
+        const string FotoMiniJuuri = "https://media.matkakirja.app/julisteet/varustekuvat-foto/20261009/";
+
+        /// <summary>Rivin pieni kuva: fotorealistinen minikuva, jos sellainen on, muuten sama kuin esikatselussa.</summary>
+        internal static string RivinKuva(string id, string iso) => id != null && FotoMinit.TryGetValue(id, out var m) ? m : iso;
+        internal static bool OnKatalogiKuva(string url) => url != null && url.StartsWith(KatalogiJuuri, System.StringComparison.Ordinal);
         static string EsikatselunTeksti(LinssiTiedot t) => string.IsNullOrEmpty(t.Esittely) ? t.Lyhyt : t.Esittely;
 
         /// <summary>"Ei linssiä" -rivin tunnus rivilistassa (web linssiRivi(null)).</summary>
@@ -431,7 +465,7 @@ namespace Matkakirja.Natiivi
             Button b = null;
             Label tila = null;
             // Web (Pelikoodari): kuva LINSSI.havainnekuva tai varana varusteen kuva, teksti esittely tai varana lyhyt.
-            string kuva = EsikatselunKuva(t);
+            string kuva = RivinKuva(id, EsikatselunKuva(t));
             // Pillerivalikko (Pelikoodari 29.9., web malli): 1. napautus esikatselu vasemmalle ja rivi "Aktivoi", 2. avaa.
             b = Rakenne.Nappi(null, "mk-linssirivi", () =>
             {

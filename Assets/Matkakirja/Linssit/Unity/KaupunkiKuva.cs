@@ -163,11 +163,31 @@ namespace Matkakirja.Natiivi
             var kamera = kameraNyt;
             if (kamera == null) return;
             bool taa = KaupunkiKooste.Kaytossa;
-            if (GraphicsSettings.currentRenderPipeline is UniversalRenderPipelineAsset urp) urp.msaaSampleCount = taa ? 1 : Mathf.Max(1, Msaa);
+            // Skaalain (#4220 kohta 7, juna 172): ajallisena STP renderScalella 0,8–0,9 + terävöitys (KaupunkiSkaalain, Ydin); muuten ennallaan.
+            var sk = Matkakirja.Linssit.Kierros.KaupunkiSkaalain.Valitse(taa, Matkakirja.Peli.Asetus.Kokonais("kaupunki.Skaalain", 1),
+                Matkakirja.Peli.Asetus.Luku("kaupunki.RenderScale", Matkakirja.Linssit.Kierros.KaupunkiSkaalain.StpOletus), Terava);
+            if (GraphicsSettings.currentRenderPipeline is UniversalRenderPipelineAsset urp)
+            {
+                urp.msaaSampleCount = taa ? 1 : Mathf.Max(1, Msaa);
+                if (skaalaTallessa < 0f) { skaalaTallessa = urp.renderScale; suodinTallessa = urp.upscalingFilter; }
+                urp.renderScale = sk.Stp ? sk.RenderScale : skaalaTallessa;
+                urp.upscalingFilter = sk.Stp ? UpscalingFilterSelection.STP : suodinTallessa;
+            }
             if (taa) { var d = kamera.GetUniversalAdditionalCameraData(); if (d != null) d.renderPostProcessing = true; }
             Laatutaso.KaytaAjallista(kamera, taa);
             kamera.allowMSAA = !taa;
-            Debug.Log($"MATKAKIRJA kaupunki: reunanpehmennys {(taa ? "ajallinen (TAA, MSAA 1, overlayt koosteessa)" : $"MSAA {Msaa}x")}");
+            KaupunkiTerava.Aseta(sk.Terava);
+            Debug.Log($"MATKAKIRJA kaupunki: reunanpehmennys {(sk.Stp ? $"STP (renderScale {sk.RenderScale:F2}, terävöitys {sk.Terava:F2}, MSAA 1, overlayt koosteessa)" : taa ? "ajallinen (TAA, MSAA 1, overlayt koosteessa)" : $"MSAA {Msaa}x")}");
+        }
+
+        // Skaalaimen alkuperäiset URP-arvot (palautetaan sulkiessa; −1 = ei tallessa).
+        static float skaalaTallessa = -1f;
+        static UpscalingFilterSelection suodinTallessa;
+        static void PalautaSkaalain()
+        {
+            if (skaalaTallessa < 0f) return;
+            if (GraphicsSettings.currentRenderPipeline is UniversalRenderPipelineAsset urp) { urp.renderScale = skaalaTallessa; urp.upscalingFilter = suodinTallessa; }
+            skaalaTallessa = -1f;
         }
 
         static void Suljettu(CesiumKaupunki k)
@@ -176,6 +196,7 @@ namespace Matkakirja.Natiivi
             tallennettu = false;
             Laatutaso.Muuttui -= AsetaReunat;
             if (kameraNyt != null) Laatutaso.KaytaAjallista(kameraNyt, false);
+            PalautaSkaalain();
             kameraNyt = null;
             GoogleSse = 16f; MaastoSse = 10f; RakennusSse = 16f; Msaa = 4; // asetustiedosto luetaan uudelleen seuraavassa avauksessa
             AlkuKerroin = 15f; LoppuKerroin = 80f; AlkuMinM = 3000f; LoppuMinM = 15000f; Sumu = false; Savytys = false; Volyymi = false;
@@ -228,6 +249,8 @@ namespace Matkakirja.Natiivi
                         case "ilmakeha": KaupunkiIlmakeha.Pakotettu = v != 0; break;   // LS2 8.10.: fysikaalinen taivas, ilmaperspektiivi, pilvien varjot
                         case "ilmvalotus": KaupunkiIlmakeha.Valotus = v; break;
                         case "hamaravalotus": KaupunkiIlmakeha.HamaraValotus = v; break;
+                        case "sumukarsinta": CesiumKaupunki.SumuKarsinta = v != 0; break;   // LS2 9.10.: kaukomaan testi (PT)
+                        case "aluskerros": CesiumKaupunki.AluskerrosPakotettu = v != 0; break;
                         case "sininenhetki": KaupunkiIlmakeha.SininenHetki = v; break;
                         case "pilvet": KaupunkiIlmakeha.PilvetPakotettu = v != 0; break;   // LS2: pallon pilvikerros (kohta 6a), oletus kehityskaupungeissa
                         case "pilvipohja": KaupunkiIlmakeha.PilviKorkeusM = v; break;
@@ -251,6 +274,11 @@ namespace Matkakirja.Natiivi
                         case "tunti": Tunti = v; break;
                         case "kupoli": Kupoli = v != 0; break;
                         case "ymparistovalo": Ymparistovalo = v != 0; break;
+                        case "omavalo": CesiumOmatMallit.OmaValo = v != 0; break;   // LS2 9.10.: omien mallien valo (seuraava avaus)
+                        case "omavalotus": CesiumOmatMallit.Valotus = v; break;
+                        case "omajulkisivu": CesiumOmatMallit.Julkisivu = v; break;
+                        case "omahehku": CesiumOmatMallit.Hehku = v; break;
+                        case "omavarjo": CesiumOmatMallit.VarjoNosto = v; break;
                         case "terava": Terava = v; KaupunkiTerava.Aseta(v); break;
                         case "yovalot": KaupunkiYovalot.Kaytossa = v != 0; break;
                         case "yohehku": KaupunkiYovalot.Hehku = v; break;
@@ -433,7 +461,9 @@ namespace Matkakirja.Natiivi
             // Yövalot (kuvanlaatujärjestys kohta 2): hämärästä yöhön auringon tai valitun kellonajan mukaan.
             double yoOsuus = !KaupunkiKuva.SavyKaytossa ? 0 : pakko >= 0 ? Matkakirja.Linssit.Kierros.KaupunkiYovalot.OsuusTunnista(tunti)
                 : Matkakirja.Linssit.Kierros.KaupunkiYovalot.OsuusAuringosta(aurinko);
-            KaupunkiYovalot.Paivita(this, georef0, kamera, yoOsuus);
+            double ikkunaOsuus = !KaupunkiKuva.SavyKaytossa ? 0 : pakko >= 0 ? Matkakirja.Linssit.Kierros.KaupunkiYovalot.IkkunatTunnista(tunti)
+                : Matkakirja.Linssit.Kierros.KaupunkiYovalot.IkkunatAuringosta(aurinko);
+            KaupunkiYovalot.Paivita(this, georef0, kamera, yoOsuus, ikkunaOsuus);
             KaupunkiIlmakeha.YoOsuus = (float)yoOsuus;   // LS2: kaupungin valojen heijastus omaan veteen
             Color V(double[] x) => new Color((float)x[0], (float)x[1], (float)x[2], 1f);
             Color horisontti = V(savy.Horisontti);
@@ -468,7 +498,8 @@ namespace Matkakirja.Natiivi
                 var gr = kaupunki.Georef; float mt = gr != null ? gr.transform.lossyScale.x : 1f;
                 float kork = gr != null ? Mathf.Max(30f, (kamera.transform.position.y - gr.transform.position.y) / Mathf.Max(1e-6f, mt)) : 300f;
                 // LS1:n automaattiset kuurot (kierros-170 PalloKuurot, OpasSovitin.KuuroVoima): heijastuksella, ettei haara riipu toisesta.
-                Matkakirja.Linssit.Kierros.KaupunkiKuuro.Voima = System.Math.Max(OpasKuuroVoima(), Matkakirja.Linssit.Kierros.KaupunkiKuuro.KasinVoima);
+                // Sään sade (PalloSaaVaikutus.Sade, PT junaan 171: sade = tummat matalat pilvet + märät kadut) samaan maksimiin.
+                Matkakirja.Linssit.Kierros.KaupunkiKuuro.Voima = System.Math.Max(System.Math.Max(OpasKuuroVoima(), Matkakirja.Linssit.Kierros.KaupunkiKuuro.KasinVoima), KaupunkiKuva.Saa.Sade);
                 Matkakirja.Linssit.Kierros.KaupunkiKuuro.Paivita(Time.deltaTime);
                 KaupunkiIlmakeha.Paivita(lat, lon, kork, KaupunkiKuva.KoriAurinkoKorkeus, KaupunkiKuva.KoriAtsimuutti, Mathf.Lerp(0.45f, 0.95f, harmaus),
                     KaupunkiIlmakeha.TuuliMs * Time.time, mt);

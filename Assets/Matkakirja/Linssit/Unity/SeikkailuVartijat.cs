@@ -48,6 +48,8 @@ namespace Matkakirja.Natiivi
         }
         /// <summary>Askeläänen klippi (rakennus.json aanet askel-kivi); SeikkailuVartijat.Askeleet asettaa.</summary>
         public static AudioClip AskelKlippi;
+        /// <summary>Askelten mikseritunnukset (tehosteet; DioraamaSovitin rekisteröi askel-klipit ladatessaan).</summary>
+        public const string VartijanAskeleet = "vartijan-askeleet", PelaajanAskeleet = "omat-askeleet";
         /// <summary>Rakennuksen askeläänitteet tunnuksella (askel-kivi, askel-puu; DioraamaSovitin lataa). Pelaajan omat askeleet.</summary>
         public static readonly Dictionary<string, AudioClip> AskelKlipit = new Dictionary<string, AudioClip>(StringComparer.Ordinal);
         AudioSource omatAskeleet;
@@ -186,7 +188,7 @@ namespace Matkakirja.Natiivi
                     Uppoutunut = seisoo && eka.Tunnus.StartsWith("harja", StringComparison.Ordinal),   // huone 8: katsovat järvelle
                     Torkkuu = istuu && eka.Profiili != null, Syo = istuu && (eka.Tunnus.StartsWith("linnavaki", StringComparison.Ordinal) || eka.Tunnus.StartsWith("noppa", StringComparison.Ordinal)) }, Agentti = ag, Osa = eka.Osa ?? kv.Key, Nimi = kv.Key, Henkilo = henkilo, Askeleet = SeikkailuKuulija.Lahde("Askeleet:" + kv.Key, 2f, 28f) };
                 foreach (var pm in d.Lajia("piilo")) v.Aivot.Piilot.Add((pm.X, -pm.Z));   // vaihe 3: piilot ja varjot etsintään
-                v.Askeleet.loop = true; v.Askeleet.volume = 0.9f;
+                v.Askeleet.loop = true; v.Askeleet.volume = 0.9f * SeikkailuAanet.Taso("tehosteet", VartijanAskeleet);
                 // Kannettu valo (pelattavuusmalli 8.1: portinvartijan lyhty, portaiden vastaantulijan soihtu): oikea pistevalo ilman varjoja,
                 // joten valo kasvaa kierreportaan kaarevalla seinällä ennen kuin kantaja tulee näkyviin; liekki käden kohdalle, hehku laatutasolla.
                 var kantaja = kv.Value.Find(x => x.Lyhty || x.Soihtu);
@@ -367,6 +369,18 @@ namespace Matkakirja.Natiivi
                 float v2 = new Vector2(ag.velocity.x, ag.velocity.z).magnitude;
                 v.Kavelee = v2 > 0.15f;
                 if (tyot == null && SeikkailuKavely.Data != null) { tyot = new List<KavelyMerkki>(); foreach (var m in SeikkailuKavely.Data.Lajia("lakaisu")) if (m.Aani != null) tyot.Add(m); }
+                // Kokin työ (aanet-lapi-v2 "kauha"): seisova kokki hämmentää pataa, kuuluu lähellä; muurin partio puhuu itsekseen rauhassa.
+                if (!v.Kavelee && p != null && Time.unscaledTime > v.TyoAsti && (vp - p.transform.position).sqrMagnitude < 12f * 12f)
+                {
+                    if (v.Aivot.Profiili == VartijaProfiili.Kokki && v.Aivot.Tila == VartijanTila.Partio && SeikkailuAanet.Klippi("kauha") != null)
+                    { SeikkailuAanet.Soita("kauha", vp + Vector3.up * 0.9f, 0.6f); v.TyoAsti = Time.unscaledTime + 9f; }
+                    else if (v.Aivot.Profiili == VartijaProfiili.Vartija && v.Osa == "muurikaytava" && v.Aivot.Tila == VartijanTila.Partio)
+                    {
+                        var rr = SeikkailuRepliikit.Aktiivinen; string rauha = ++v.RepliikkiLaskuri % 2 == 0 ? "muuri-vartija-rauha-2" : "muuri-vartija-rauha-1";
+                        if (rr != null && rr.Valmis && rr.On(rauha) && Time.unscaledTime >= v.RepliikkiAsti) { rr.Soita(rauha, v.Agentti.transform); v.RepliikkiAsti = Time.unscaledTime + 6f; }
+                        v.TyoAsti = Time.unscaledTime + 25f;
+                    }
+                }
                 if (!v.Kavelee && tyot != null && tyot.Count > 0 && Time.unscaledTime > v.TyoAsti)
                     foreach (var m in tyot)
                     {
@@ -388,7 +402,7 @@ namespace Matkakirja.Natiivi
                 {
                     SeikkailuKuulija.Aseta(aa, ag.transform.position + Vector3.up * 0.1f);
                     if (aa.clip == null && AskelKlippi != null) aa.clip = AskelKlippi;
-                    if (v.Kavelee && aa.clip != null) { aa.pitch = Mathf.Clamp(0.85f + 0.25f * v2, 0.85f, 1.25f); aa.volume = 0.9f * Asetukset.Taso(Voima.Tehosteet); if (!aa.isPlaying) aa.Play(); }
+                    if (v.Kavelee && aa.clip != null) { aa.pitch = Mathf.Clamp(0.85f + 0.25f * v2, 0.85f, 1.25f); aa.volume = 0.9f * SeikkailuAanet.Taso("tehosteet", VartijanAskeleet); if (!aa.isPlaying) aa.Play(); }
                     else if (aa.isPlaying) aa.Stop();
                 }
                 // Kävelytahti nopeuden mukaan (silmukka on mitoitettu sykliMs:iin), ei liukuvia jalkoja.
@@ -435,6 +449,16 @@ namespace Matkakirja.Natiivi
                 t = (v.Nimi == "piha" || v.Nimi == "kirkkotorni-portaat") && r.On("vartija-paluu-3") ? "vartija-paluu-3" : n % 2 == 0 ? "vartija-paluu-2" : "vartija-paluu-1";   // pihan vartija
             else if (nyt == VartijanTila.Kiinni) t = "vartija-kiinni-1";
             if (t == null) return;
+            // Muurikäytävän partion omat repliikit (repliikit-lapi-v1, Sisältökirjuri 9.10.), jotta muurilla ei toistu pihan vartija-*;
+            // puuttuessa yleinen repliikki kuten ennen.
+            if (pr == VartijaProfiili.Vartija && v.Osa == "muurikaytava")
+            {
+                string m = nyt == VartijanTila.Epaily ? (n % 2 == 0 ? "muuri-vartija-epaily-2" : "muuri-vartija-epaily-1")
+                    : nyt == VartijanTila.Etsinta ? "muuri-vartija-etsinta-1" : nyt == VartijanTila.Etsii ? "muuri-vartija-etsinta-2"
+                    : nyt == VartijanTila.Halytys ? (n % 2 == 0 ? "muuri-vartija-halytys-2" : "muuri-vartija-halytys-1")
+                    : nyt == VartijanTila.Kiinni ? "muuri-vartija-kiinni-1" : palasi ? (n % 2 == 0 ? "muuri-vartija-paluu-2" : "muuri-vartija-paluu-1") : null;
+                if (m != null && r.On(m)) t = m;
+            }
             double kesto = r.Soita(t, v.Agentti.transform);
             v.RepliikkiAsti = Time.unscaledTime + (float)Math.Max(4.0, kesto + 0.5);
         }
@@ -467,7 +491,7 @@ namespace Matkakirja.Natiivi
             bool liikkuu = p.Tila.Vauhti > 0.3 && !p.Eleessa && !p.Otteessa && klippi != null;
             if (!liikkuu) { if (omatAskeleet.isPlaying) omatAskeleet.Stop(); return; }
             if (omatAskeleet.clip != klippi) { omatAskeleet.clip = klippi; omatAskeleet.Play(); }
-            omatAskeleet.volume = voima * Asetukset.Taso(Voima.Tehosteet); omatAskeleet.pitch = Mathf.Clamp(0.8f + 0.2f * (float)p.Tila.Vauhti, 0.8f, 1.45f);
+            omatAskeleet.volume = voima * SeikkailuAanet.Taso("tehosteet", PelaajanAskeleet); omatAskeleet.pitch = Mathf.Clamp(0.8f + 0.2f * (float)p.Tila.Vauhti, 0.8f, 1.45f);
             if (!omatAskeleet.isPlaying) omatAskeleet.Play();
         }
 
@@ -581,7 +605,7 @@ namespace Matkakirja.Natiivi
                 // Anteeksianto (pelattavuusmalli 4.2): 2. kiinnijäänti samassa huoneessa → näkö −15 % ja epäilyraja 0,4; 3. → Pulun taso 2 heti.
                 kiinniOsassa = osa == kiinniOsa ? kiinniOsassa + 1 : 1; kiinniOsa = osa;
                 if (kiinniOsassa >= 2) foreach (var x in vartijat) x.Aivot.Helpotettu = true;
-                if (kiinniOsassa >= 3) SeikkailuVihjeet.Aktiivinen?.Pakota(2, "3. kiinnijäänti");
+                if (kiinniOsassa >= 3) SeikkailuVihjeet.Aktiivinen?.Pakota(2, "3. kiinnijäänti");   // kieli: ei (tekninen)
                 kirjaa?.Invoke($"seikkailu: kiinnijäänti {kiinniOsassa}. kerran osassa {osa}{(kiinniOsassa >= 2 ? " (helpotus)" : "")}");
             }
             if (p != null) p.Siirra(tarkistus);

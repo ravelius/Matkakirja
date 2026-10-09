@@ -111,11 +111,11 @@ namespace Matkakirja.Natiivi
             var turva = kerros.Turva(SulkuKerros);
             // OHJAUSNAPPI-mitoin harmaalla teemalla (Päätoimittaja 3.10.: kutistunut ✕ täsmälleen kuin KUVANÄKYMÄn ✕): 40 pt korkea,
             // rasti viivakuvakkeena 22 pt; teksti sulaa pois kuten ennen (löydös 32), jolloin jää 40 × 40 -neliö.
-            sulje = Rakenne.Nappi("Sulje linssi", "mk-linssiSulje tk-teema-harmaa", SuljeLinssi, turva);
+            sulje = Rakenne.Nappi(Kieli.T("ui.linssi.sulje"), "mk-linssiSulje tk-teema-harmaa", SuljeLinssi, turva);
             sulje.Insert(0, Rakenne.Ikoni(Ikonit.Viiva["rasti"], "mk-linssiSulje__risti"));
             sulkuTeksti = sulje.Q<Label>(className: "mk-nappi__teksti");
             Kirjasimet.Aseta(sulje, Kirjasin.Kone);
-            sulje.tooltip = "Sulje linssi";
+            sulje.tooltip = Kieli.T("ui.linssi.sulje");
             sulje.style.display = DisplayStyle.None;
             // Selitteen nimilappu samalle riville ✕:n vasemmalle (web .linssi-selite.pieni); ✕:n leveys muuttuu tekstin
             // sulaessa, joten lappu seuraa sitä.
@@ -128,8 +128,8 @@ namespace Matkakirja.Natiivi
             // napin alle) ja sen alla Sulje linssi. Selitekytkin vain, jos linssillä on seliterivejä (web kortissaSisaltoa).
             foreach (var (id, nimi) in Karttalinssit)
             {
-                var v = new LinssiValikko(kerros, new List<(string, Action)>(), "Sulje linssi", SuljeLinssi, aanet: false,
-                    kytkimet: new List<(string, Func<bool>, Action<bool>)> { (nimi, () => Selite.AukiKokonaan, auki => Selite.Avaa(auki)) },
+                var v = new LinssiValikko(kerros, new List<(string, Action)>(), Kieli.T("ui.linssi.sulje"), SuljeLinssi, aanet: false,
+                    kytkimet: new List<(string, Func<bool>, Action<bool>)> { (Kieli.T(nimi), () => Selite.AukiKokonaan, auki => Selite.Avaa(auki)) },
                     teema: "lasi");
                 var ryhma = Ohjausnappi.Ryhma(turva, "lasi");
                 ryhma.Add(v.Nappi);
@@ -137,17 +137,17 @@ namespace Matkakirja.Natiivi
                 karttaValikot[id] = (v, ryhma);
             }
             // OHJAUSNAPPI-koe (`ui ohjausnapit 1` rivi: ‹ → ↻ → säätö → taikalasit → ✕ viimeisenä; `2` yksi hampurilainen).
-            var koeValinnat = new List<(string, Action)> { ("Linssit", Valitsin.Avaa) };
-            var koeValikko = new LinssiValikko(kerros, koeValinnat, "Sulje linssi", SuljeLinssi);
+            var koeValinnat = new List<(string, Action)> { (Kieli.T("ui.linssi.linssit"), Valitsin.Avaa) };
+            var koeValikko = new LinssiValikko(kerros, koeValinnat, Kieli.T("ui.linssi.sulje"), SuljeLinssi);
             // Napautus valikkoon sulkee Pulun taulun kuten muukin napautus taulun ohi (PulunTauluNakyma.UlkoNapautus).
             koeValikko.Avautuu += () => Astronautti?.Taulu?.Sulje("valikko");
             new OhjausryhmaKoe(turva, sulje, new (VisualElement, string, string, Action)[]
             {
-                (Dioraama.Paluu, Ikonit.Takaisin, "Takaisin", DioraamaTaulu.PyydaPaluu),
-                (Dioraama.Uusinta, Ikonit.PaivitaVersio, "Kertoja uudelleen", DioraamaTaulu.KertojaUudelleen),
-                (Mikseri.Lappu, Ikonit.Mikseri, "Mikseri", Mikseri.Vaihda),
-                (Valitsin.Nappi, Ikonit.Viiva["taikalasit"], "Linssit", Valitsin.Vaihda),
-                (sulje, Ikonit.Viiva["rasti"], "Sulje linssi", SuljeLinssi),
+                (Dioraama.Paluu, Ikonit.Takaisin, Kieli.T("ui.linssi.takaisin"), DioraamaTaulu.PyydaPaluu),
+                (Dioraama.Uusinta, Ikonit.PaivitaVersio, Kieli.T("ui.linna.taulu.kertoja-uudelleen"), DioraamaTaulu.KertojaUudelleen),
+                (Mikseri.Lappu, Ikonit.Mikseri, Kieli.T("ui.linna.mikseri"), Mikseri.Vaihda),
+                (Valitsin.Nappi, Ikonit.Viiva["taikalasit"], Kieli.T("ui.linssi.linssit"), Valitsin.Vaihda),
+                (sulje, Ikonit.Viiva["rasti"], Kieli.T("ui.linssi.sulje"), SuljeLinssi),
             }, koeValikko);
             Asettele();
 
@@ -247,7 +247,7 @@ namespace Matkakirja.Natiivi
             catch (ArgumentException e)
             {
                 Debug.LogWarning("MATKAKIRJA ui linssit: " + e.Message);
-                ui.Tilarivi.Viesti("Linssi ei ole vielä käytössä");
+                ui.Tilarivi.Viesti(Kieli.T("ui.linssi.ei-kaytossa"));
             }
         }
 
@@ -359,7 +359,7 @@ namespace Matkakirja.Natiivi
             ui.Karttaselite.LinssiPaalla = paalla;
             if (paalla) ui.Karttaselite.Sulje();
             // Maatiedot näyttää peruskartalta, kunnes maata napautetaan (esittelylinssien katselmus 30.9.2026): lyhyt vihje.
-            if (paalla && id == "maatiedot") ui.Tilarivi.Viesti("Napauta maata", 4f);
+            if (paalla && id == "maatiedot") ui.Tilarivi.Viesti(Kieli.T("ui.linssi.napauta-maata"), 4f);
             // Löydös S3 (Laitetestaaja b18): linssin avaus sulkee kartan kortit (nosto, kaupunkikortti, matkakirjan
             // postikortit), muuten laajennettu nostokortti jäi linssin päälle auki.
             if (paalla) { ui.Nostokortti.Sulje(); ui.Kaupunkikortti.Sulje(); Postikortti.Sulje(); }
@@ -412,11 +412,11 @@ namespace Matkakirja.Natiivi
         /// eikä korvaa aikajanan hampurilainen (sen "Poistu").
         /// </summary>
         /// <summary>Karttalinssit (web kerros ≠ false) ja selitekytkimen nimi (web valikko.selite): hampurilainen ✕:n tilalla.</summary>
-        static readonly (string Id, string Selite)[] Karttalinssit = { ("topografia", "Korkeustasot"), ("vesistot", "Joet ja järvet") };
+        static readonly (string Id, string Selite)[] Karttalinssit = { ("topografia", "ui.linssi.selite.korkeustasot"), ("vesistot", "ui.linssi.selite.joet-ja-jarvet") };   // Kieli-avaimet
         readonly Dictionary<string, (LinssiValikko Valikko, VisualElement Ryhma)> karttaValikot =
             new Dictionary<string, (LinssiValikko, VisualElement)>();
 
-        string KarttaSelite(string id) { foreach (var (k, n) in Karttalinssit) if (k == id) return n; return null; }
+        string KarttaSelite(string id) { foreach (var (k, n) in Karttalinssit) if (k == id) return Kieli.T(n); return null; }
 
         /// <summary>Testikomento `ui linssi karttavalikko [auki|selite]` (vanha nimi topovalikko, selite = korkeustasot):
         /// auki olevan karttalinssin hampurilaisen tila ja selitekytkimen rivin paikka oikeaa sim-tappia varten.</summary>
@@ -467,7 +467,7 @@ namespace Matkakirja.Natiivi
         // Löydös 32 (omistaja, build 10; natiivin oma lisäys, webissä ei vastinetta): "✕ Sulje linssi" näkyy ensin
         // kokonaan, ja 1,2 s:n päästä teksti sulaa oikealta vasemmalle kirjain kerrallaan 0,6 s:ssa pehmeällä
         // easingillä (smoothstep), kunnes jäljellä on pelkkä ✕ yläkulmassa. Pieni liike pois: suoraan ✕:ksi.
-        const string SulkuTeksti = "Sulje linssi";
+        static string SulkuTeksti => Kieli.T("ui.linssi.sulje");
         const float KutistusViive = 1.2f, KutistusKesto = 0.6f;
         Label sulkuTeksti;
         bool sulkuNakyi;

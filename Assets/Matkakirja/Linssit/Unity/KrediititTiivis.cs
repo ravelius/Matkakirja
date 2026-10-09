@@ -1,6 +1,11 @@
 // KREDIITIT (Googlen Map Tiles -policy; omistaja 6.10. 12.2x, Päätoimittaja tarkisti ehdot): Google Maps -logo vasemmassa alakulmassa
-// 16 dp muuttamattomana, sen alla datalähteet yhdellä pienellä rivillä aina näkyvissä (napautus rivittää koko listan). Cesium ion -logo
-// vain linssin latautuessa ja ☰ Tietoja ja lähteet -kohdasta.
+// 16 dp muuttamattomana. OMISTAJA 9.10.2026 klo 09.5x (TF 169, Natiivi-UI; LS1 katselmoi): "tee mahdollisimman pieni datasources nappi
+// joka on pelkkä teksti googlen nimen alla ja sen perään mahdollisimman pieni openstreetmap maininta ja kaikki muut pois ja
+// hampurilaiseen". Logon alla yksi rivi: Googlen datalinja kokonaisena, jos se mahtuu ruudun leveydelle (iPad, Mac, puhelin vaaka),
+// muuten tekstinappi "Data sources" (Googlen ohje: "consider adding … a clickable UI element labeled Data sources" tilanpuutteessa),
+// joka avaa koko listan kartan päälle; perässä erillään "© OpenStreetMap" (OSM-ohje: maininta kartan kulmassa; napautus → ☰ Lähteet).
+// Kolmannen osapuolen tekstit eivät ole Googlen listassa (Googlen ehto). Omat mallit, vesi, ESA, Copernicus, IGN ja MET Norway
+// ovat ☰ › Lähteet -kohdassa. Cesium ion -logo vain linssin latautuessa ja ☰ Tietoja ja lähteet -kohdasta.
 //
 // TOTEUTUS: Cesium for Unity rakentaa krediittipuun uudelleen aina krediittien muuttuessa (OnScreenCredits/PopupCredits.Clear), joten
 // tämä kutsutaan joka kehys kaupunkinäkymän ajan: OnScreenCreditsin tekstit (datantuottajat, erottimet) siirretään logon alle omaan
@@ -40,7 +45,11 @@ namespace Matkakirja.Natiivi
         public const string OsmTeksti = "© OpenStreetMap contributors";
 
         static VisualElement lahteet, lista;
-        static Label tiivis;
+        static Label tiivis, dataNappi, osm;
+        /// <summary>☰ › Lähteet (OpasValikko asettaa): "© OpenStreetMap" -maininnan napautus.</summary>
+        public static System.Action AvaaLahteet;
+        /// <summary>Googlen datalinja kokonaisena (mahtuu) vai Data sources -nappi (testi ja OpasValikko).</summary>
+        public static bool KokoRivi { get; private set; }
         // OMAT 3D-MALLIT (LS1 7.10. 00.4x, Gizan pyramidit Googlen tiilien päällä): oma tekijärivi Matkakirja.Linssit.CesiumOmatMallit
         // .Tekijat erillään Googlen riveistä (Googlen ehdot: ei Google-logon eikä Googlen rivien päällä eikä niiden joukossa), omana
         // rivinään lähderivin alla samalla rivipohjalla (Riviin). Piilossa, kun omia malleja ei ole ruudulla (Tekijat null).
@@ -134,11 +143,11 @@ namespace Matkakirja.Natiivi
                 if (!(c is Label) && t != null && t.height > 0) { if (t != ion) google = true; continue; }
                 if (c is Label l && !string.IsNullOrWhiteSpace(l.text) && !l.text.Contains("Data Attribution")) odotettu.Add(l.text.Replace("<u>", "").Replace("</u>", ""));
             }
-            if (OsmNakyvissa) odotettu.Add(OsmTeksti);
             var omat = lista.Children().OfType<Label>().Select(x => x.text).ToList();
             bool sama = omat.SequenceEqual(odotettu) && tiivis.text == string.Join(" ", odotettu);
             bool logo = !google || googleEl.resolvedStyle.display != DisplayStyle.None;
-            return $"vertailu: {(sama && logo ? "OK" : "ERO")} – Cesium {odotettu.Count} tekstiä, omat {omat.Count}, Google-kuva {(google ? "on" : "ei")}, oma logo {(googleEl.resolvedStyle.display != DisplayStyle.None ? "näkyy" : "piilossa")}"
+            return $"vertailu: {(sama && logo ? "OK" : "ERO")} – Cesium {odotettu.Count} tekstiä, omat {omat.Count}, Google-kuva {(google ? "on" : "ei")}, oma logo {(googleEl.resolvedStyle.display != DisplayStyle.None ? "näkyy" : "piilossa")}, "
+                   + $"{(KokoRivi ? "koko rivi" : "Data sources -nappi")}, OSM {(osm.resolvedStyle.display != DisplayStyle.None ? "näkyy" : "piilossa")}"
                    + (sama ? "" : $" | ero: [{string.Join(" ¦ ", odotettu.Except(omat))}] vs [{string.Join(" ¦ ", omat.Except(odotettu))}]");
         }
 
@@ -177,12 +186,24 @@ namespace Matkakirja.Natiivi
                 ionEl = new VisualElement { name = "MatkakirjaIon", pickingMode = PickingMode.Ignore };
                 googleEl = new VisualElement { name = "MatkakirjaGoogle", pickingMode = PickingMode.Ignore };
                 foreach (var e in new[] { ionEl, googleEl }) { e.style.unityBackgroundScaleMode = ScaleMode.ScaleToFit; e.style.flexShrink = 0; oma.Add(e); }
-                lahteet = new VisualElement { name = "MatkakirjaDatalahteet", pickingMode = PickingMode.Position };
+                lahteet = new VisualElement { name = "MatkakirjaDatalahteet", pickingMode = PickingMode.Ignore };
+                // Rivi: Googlen datalinja kokonaisena TAI Data sources -tekstinappi, perässä erillään © OpenStreetMap.
+                var rivi = new VisualElement { name = "MatkakirjaKrediittiRivi", pickingMode = PickingMode.Ignore };
+                rivi.style.flexDirection = FlexDirection.Row;
+                rivi.style.alignItems = Align.Center;
                 tiivis = Riviin(new Label { name = "MatkakirjaLahdeRivi" });
                 tiivis.style.whiteSpace = WhiteSpace.NoWrap;
-                tiivis.style.overflow = Overflow.Hidden;
-                tiivis.style.textOverflow = TextOverflow.Ellipsis;
-                lahteet.Add(tiivis);
+                dataNappi = Riviin(new Label(Kieli.T("ui.krediitit.data-sources")) { name = "MatkakirjaDataSources" });
+                dataNappi.style.whiteSpace = WhiteSpace.NoWrap;
+                dataNappi.tooltip = Kieli.T("ui.krediitit.data-sources-nimi");
+                osm = Riviin(new Label(Kieli.T("ui.krediitit.osm")) { name = "MatkakirjaOsm" });
+                osm.style.whiteSpace = WhiteSpace.NoWrap;
+                osm.tooltip = Kieli.T("ui.krediitit.osm-nimi");
+                foreach (var l in new[] { tiivis, dataNappi }) { l.pickingMode = PickingMode.Position; l.AddManipulator(new Clickable(() => kaikkiAsti = Time.unscaledTime < kaikkiAsti ? -1f : Time.unscaledTime + KaikkiS)); }
+                osm.pickingMode = PickingMode.Position;
+                osm.AddManipulator(new Clickable(() => AvaaLahteet?.Invoke()));
+                rivi.Add(tiivis); rivi.Add(dataNappi); rivi.Add(osm);
+                lahteet.Add(rivi);
                 lista = new VisualElement { name = "MatkakirjaLahdeLista", pickingMode = PickingMode.Ignore };
                 lista.style.flexDirection = FlexDirection.Row;
                 lista.style.flexWrap = Wrap.Wrap;
@@ -191,8 +212,9 @@ namespace Matkakirja.Natiivi
                 lista.style.paddingLeft = lista.style.paddingRight = lista.style.paddingTop = lista.style.paddingBottom = 4;
                 lista.style.borderTopLeftRadius = lista.style.borderTopRightRadius = lista.style.borderBottomLeftRadius = lista.style.borderBottomRightRadius = 4;
                 lista.style.alignItems = Align.Center;
-                lahteet.Add(lista);
-                lahteet.AddManipulator(new Clickable(() => kaikkiAsti = Time.unscaledTime < kaikkiAsti ? -1f : Time.unscaledTime + KaikkiS));
+                lista.pickingMode = PickingMode.Position;
+                lista.AddManipulator(new Clickable(() => kaikkiAsti = -1f));   // koko lista kiinni napautuksella
+                lahteet.Insert(0, lista);   // kartan päälle rivin yläpuolelle
                 oma.Add(lahteet);
                 omaTekija = Riviin(new Label { name = "MatkakirjaOmatMallit" });
                 omaTekija.style.whiteSpace = WhiteSpace.NoWrap;
@@ -218,7 +240,6 @@ namespace Matkakirja.Natiivi
                 if (c is Label l && !string.IsNullOrWhiteSpace(l.text) && !l.text.Contains("Data Attribution"))
                     tekstit.Add(l.text.Replace("<u>", "").Replace("</u>", ""));
             }
-            if (OsmNakyvissa) tekstit.Add(OsmTeksti);
             string avain = (google != null ? "G" : "-") + string.Join("\n", tekstit);
             if (avain != sisaltoAvain)
             {
@@ -235,22 +256,33 @@ namespace Matkakirja.Natiivi
             if (googleEl.worldBound.height > 0 && juuri.worldBound.height > 0)
                 GoogleYlaOsuus = 1f - googleEl.worldBound.yMin / juuri.worldBound.height;
 
-            // Yksi rivi kiinteällä leveydellä (~40 % ruudusta), leikataan "…":llä; napautus näyttää listan rivitettynä.
+            // Googlen datalinja kokonaisena, jos se mahtuu ruudun leveydelle OSM-maininnan kanssa; muuten Data sources -nappi.
             bool kaikki = Time.unscaledTime < kaikkiAsti;
             float lev = juuri.worldBound.width - 2 * TyhjaSivuPt * pt;
-            float rivi = Mathf.Min(lev, juuri.worldBound.width * RiviOsuus);
-            if (Mathf.Abs(tiivis.resolvedStyle.width - rivi) > 0.5f) tiivis.style.width = rivi;
-            if (Mathf.Abs(lista.resolvedStyle.width - lev) > 0.5f) lista.style.width = lev;
-            var td = kaikki ? DisplayStyle.None : DisplayStyle.Flex;
-            if (tiivis.style.display != td) { tiivis.style.display = td; lista.style.display = kaikki ? DisplayStyle.Flex : DisplayStyle.None; }
             foreach (var t in lahteet.Query<Label>().ToList())
                 if (Mathf.Abs(t.resolvedStyle.fontSize - RiviPt * pt) > 0.5f) t.style.fontSize = RiviPt * pt;
+            float vali = 6f * pt;
+            osm.style.marginLeft = vali;
+            // © OpenStreetMap vain, kun näkymässä on OSM-dataa (OpasSovitin asettaa OsmNakyvissa koko kaupunkinäkymän ajaksi; LS1:n katselmointi
+            // 9.10.: kaupunkikierroksella ei OSM-sisältöä).
+            var osmd = OsmNakyvissa ? DisplayStyle.Flex : DisplayStyle.None;
+            if (osm.style.display != osmd) osm.style.display = osmd;
+            float koko = tekstit.Count == 0 ? 0f : tiivis.MeasureTextSize(tiivis.text, 0f, VisualElement.MeasureMode.Undefined, 0f, VisualElement.MeasureMode.Undefined).x;
+            float osmLev = osm.MeasureTextSize(osm.text, 0f, VisualElement.MeasureMode.Undefined, 0f, VisualElement.MeasureMode.Undefined).x;
+            KokoRivi = tekstit.Count > 0 && koko > 0f && koko + (OsmNakyvissa ? vali + osmLev : 0f) <= lev;
+            var td = KokoRivi ? DisplayStyle.Flex : DisplayStyle.None;
+            if (tiivis.style.display != td) tiivis.style.display = td;
+            var dd = !KokoRivi && tekstit.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+            if (dataNappi.style.display != dd) dataNappi.style.display = dd;
+            // Osuma-ala (ei näkyvää muutosta): pystysuunnassa 6 pt lisää kummallekin napille.
+            foreach (var l in new[] { tiivis, dataNappi, osm }) { l.style.paddingTop = l.style.paddingBottom = 6f * pt; l.style.marginTop = l.style.marginBottom = -6f * pt; }
+            if (Mathf.Abs(lista.resolvedStyle.width - lev) > 0.5f) lista.style.width = lev;
+            var ld = kaikki ? DisplayStyle.Flex : DisplayStyle.None;
+            if (lista.style.display != ld) lista.style.display = ld;
+            if (kaikki) lista.style.marginBottom = 2 * pt;
 
-            // Oma tekijärivi Googlen rivien alle, erilleen niistä (väli 2 dp kuten logon alla).
-            string omat = Matkakirja.Linssit.CesiumOmatMallit.Tekijat;
-            // Oma vesipinta (LS2 8.10., ODbL vaatii näkyvän nimeämisen): veden tekijärivi samalle omalle riville, Googlen rivien ulkopuolelle.
-            string vesi = KaupunkiVesi.KrediittiNyt;
-            if (!string.IsNullOrEmpty(vesi)) omat = string.IsNullOrEmpty(omat) ? vesi : omat + " · " + vesi;
+            // Omat mallit ja vesi (OSM, ESA WorldCover) ☰ › Lähteet -kohdassa (omistaja 9.10. 09.5x); ruudulla vain © OpenStreetMap.
+            string omat = null;
             var od = string.IsNullOrEmpty(omat) ? DisplayStyle.None : DisplayStyle.Flex;
             if (omaTekija.style.display != od) omaTekija.style.display = od;
             if (od == DisplayStyle.Flex)

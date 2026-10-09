@@ -478,7 +478,7 @@ namespace Matkakirja.Natiivi
             alunEsihaku = puhe.EsihaeAlku(palat[0], "kertoja", tagit[0]);
         }
 
-        static IEnumerable<string> LuennanTekstit(Nosto n) =>
+        internal static IEnumerable<string> LuennanTekstit(Nosto n) =>
             new[] { n.Otsikko, n.Ingressi }.Concat(Kappaleet(n.Teksti)).Where(t => !string.IsNullOrWhiteSpace(t)).Select(t => t.Trim());
 
         // --- koko ja paikka (löydökset 130, 131, 135) --------------------------------------------
@@ -1420,7 +1420,7 @@ namespace Matkakirja.Natiivi
             for (int i = 0; i < sanat.Length; i++)
                 Rakenne.Teksti(sanat[i], i < sanat.Length - 1 ? "mk-nosto__kuvasana mk-nosto__kuvasana--vali" : "mk-nosto__kuvasana", kotelo);
             var m = Rakenne.Teksti("Havainnekuva".ToUpperInvariant(), "mk-nosto__havainne", kotelo);
-            m.tooltip = "Tekoälyllä tuotettu havainnekuva";
+            m.tooltip = "Havainnekuva";   // Raamattu KUVAT: sana havainnekuva (PT 9.10.)
             Kirjasimet.Aseta(m, Kirjasin.Kone);
         }
 

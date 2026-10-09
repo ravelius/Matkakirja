@@ -384,6 +384,52 @@ namespace Matkakirja.Linssit.Testit
             return TeeGlbTavut(json, bin.ToArray());
         }
 
+        /// <summary>Sparse float -accessor morph-kohteessa (Blenderin muotoavainten oletus; LR:n MetaHuman 9.10.): ei pohjaa (nollat),
+        /// yksi harva arvo kärjelle 2.</summary>
+        /// <summary>LR v46b: glTF alphaMode → alfaraja (noki BLEND → 0,5; MASK alphaCutoffilla; OPAQUE ja puuttuva 0).</summary>
+        [Testi] static void GlbAlfaRaja()
+        {
+            Oleta.Sama(0.5f, Matkakirja.Linssit.Dioraama.DioraamaGlb.AlfaRajaMateriaalista(new System.Collections.Generic.Dictionary<string, object> { ["alphaMode"] = "BLEND" }));
+            Oleta.Sama(0.3f, Matkakirja.Linssit.Dioraama.DioraamaGlb.AlfaRajaMateriaalista(new System.Collections.Generic.Dictionary<string, object> { ["alphaMode"] = "MASK", ["alphaCutoff"] = 0.3 }));
+            Oleta.Sama(0.5f, Matkakirja.Linssit.Dioraama.DioraamaGlb.AlfaRajaMateriaalista(new System.Collections.Generic.Dictionary<string, object> { ["alphaMode"] = "MASK" }));
+            Oleta.Sama(0f, Matkakirja.Linssit.Dioraama.DioraamaGlb.AlfaRajaMateriaalista(new System.Collections.Generic.Dictionary<string, object> { ["alphaMode"] = "OPAQUE" }));
+            Oleta.Sama(0f, Matkakirja.Linssit.Dioraama.DioraamaGlb.AlfaRajaMateriaalista(null));
+        }
+
+        [Testi] static void GlbSparseMorph()
+        {
+            float[] pos = { 0, 0, 2, 1, 0, 2, 0, 1, 5 };
+            uint[] idx = { 0, 1, 2 };
+            var bin = new List<byte>();
+            foreach (var f in pos) bin.AddRange(BitConverter.GetBytes(f));        // 0..35
+            foreach (var ix in idx) bin.AddRange(BitConverter.GetBytes(ix));      // 36..47
+            bin.AddRange(BitConverter.GetBytes((ushort)2)); bin.AddRange(new byte[2]);   // 48..51 sparse-indeksi (+ täyte)
+            foreach (var f in new float[] { 0, 0.5f, 0 }) bin.AddRange(BitConverter.GetBytes(f));   // 52..63 sparse-arvo
+            string json = @"{
+              ""asset"": {""version"":""2.0""},
+              ""nodes"": [{""name"":""paa"",""mesh"":0}],
+              ""meshes"": [{""primitives"":[{""attributes"":{""POSITION"":0},""indices"":1,""targets"":[{""POSITION"":2}]}],""extras"":{""targetNames"":[""jawOpen""]}}],
+              ""accessors"": [
+                {""bufferView"":0,""componentType"":5126,""count"":3,""type"":""VEC3""},
+                {""bufferView"":1,""componentType"":5125,""count"":3,""type"":""SCALAR""},
+                {""componentType"":5126,""count"":3,""type"":""VEC3"",""sparse"":{""count"":1,""indices"":{""bufferView"":2,""componentType"":5123},""values"":{""bufferView"":3}}}
+              ],
+              ""bufferViews"": [
+                {""buffer"":0,""byteOffset"":0,""byteLength"":36},
+                {""buffer"":0,""byteOffset"":36,""byteLength"":12},
+                {""buffer"":0,""byteOffset"":48,""byteLength"":2},
+                {""buffer"":0,""byteOffset"":52,""byteLength"":12}
+              ],
+              ""buffers"": [{""byteLength"":64}]
+            }";
+            var malli = DioraamaGlb.Lue(TeeGlbTavut(json, bin.ToArray()), unityyn: false);
+            var m = malli.Osat[0].Muodot;
+            Oleta.Sama(1, m.Count);
+            Oleta.Sama("jawOpen", m[0].Nimi);
+            Oleta.Sama(0f, m[0].Deltat[1]); Oleta.Sama(0f, m[0].Deltat[4]);
+            Oleta.Sama(0.5f, m[0].Deltat[7]);   // kärki 2, y
+        }
+
         [Testi] static void GlbLukijaJasennysJaVarit()
         {
             var malli = DioraamaGlb.Lue(TestiGlb(), unityyn: false);

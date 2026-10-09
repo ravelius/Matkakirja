@@ -78,7 +78,7 @@
   },
   "ranta-1499": {
    "kolmiot": {
-    "nakyva": 13280,
+    "nakyva": 13298,
     "-tormays": 13280,
     "-kavely": 9944
    },
@@ -98,7 +98,9 @@
       21.5,
       45.5
      ],
-     "kierto_y": 0.0
+     "kierto_y": 0.0,
+     "vuodesta": 1749,
+     "huom": "Vesiportin bastioni: korjaus alkoi 1749, rakennus 1751–55 (#4249)"
     },
     {
      "nimi": "b1499-vesiportin-bastioni-e",
@@ -112,7 +114,9 @@
       21.5,
       29.6
      ],
-     "kierto_y": 0.0
+     "kierto_y": 0.0,
+     "vuodesta": 1749,
+     "huom": "Vesiportin bastioni: korjaus alkoi 1749, rakennus 1751–55 (#4249)"
     },
     {
      "nimi": "b1499-vesiportin-bastioni-fw",
@@ -126,7 +130,9 @@
       21.5,
       20.7
      ],
-     "kierto_y": -0.6055
+     "kierto_y": -0.6055,
+     "vuodesta": 1749,
+     "huom": "Vesiportin bastioni: korjaus alkoi 1749, rakennus 1751–55 (#4249)"
     },
     {
      "nimi": "b1499-porttikurtiini-s101",
@@ -140,7 +146,9 @@
       21.5,
       8.5
      ],
-     "kierto_y": -0.7314
+     "kierto_y": -0.7314,
+     "vuodesta": 1749,
+     "huom": "kurtiinien työt 1749–55 (#4249)"
     },
     {
      "nimi": "b1499-s201-rakennus",
@@ -154,7 +162,10 @@
       21.5,
       8.0
      ],
-     "kierto_y": 0.0
+     "kierto_y": 0.0,
+     "vuodesta": null,
+     "historia_vuosi": 1745,
+     "huom": "S 201: rakennusvuosi ei tiedossa (Venäjän ajan rakenteet), TULKINTA"
     },
     {
      "nimi": "b1499-kellobastioni",
@@ -168,7 +179,10 @@
       21.5,
       10.1
      ],
-     "kierto_y": 0.0
+     "kierto_y": 0.0,
+     "vuodesta": null,
+     "historia_vuosi": 1745,
+     "huom": "Kellobastioni: rakennusvuosi ei tiedossa, olemassa 1751 (Venäjän aika, #4249)"
     },
     {
      "nimi": "b1499-vesiportin-bastioni-itakylki",
@@ -182,7 +196,9 @@
       21.5,
       21.0
      ],
-     "kierto_y": 0.0
+     "kierto_y": 0.0,
+     "vuodesta": 1749,
+     "huom": "Vesiportin bastioni: korjaus alkoi 1749, rakennus 1751–55 (#4249)"
     },
     {
      "nimi": "b1499-ponttonisilta",
@@ -196,7 +212,10 @@
       21.5,
       9.0
      ],
-     "kierto_y": -0.585
+     "kierto_y": -0.585,
+     "vuodesta": null,
+     "historia_vuosi": 1975,
+     "huom": "nykyinen ponttonisilta; vuosi ei tiedossa, TULKINTA: yleisölle avaaminen 1975 (#4249)"
     },
     {
      "nimi": "b1499-kellobastioni-lounas",
@@ -210,20 +229,23 @@
       21.5,
       7.0
      ],
-     "kierto_y": -0.3883
+     "kierto_y": -0.3883,
+     "vuodesta": null,
+     "historia_vuosi": 1745,
+     "huom": "Kellobastioni: rakennusvuosi ei tiedossa, olemassa 1751 (Venäjän aika, #4249)"
     }
    ],
    "varmuus": "V kerrokset, A porras",
    "rajat": {
     "min": [
-     -85.75,
+     -98.48,
      -7.77,
-     -8.25
+     -8.6
     ],
     "max": [
-     -16.25,
+     -16.0,
      0.19,
-     65.75
+     66.0
     ]
    },
    "naapurit": [
@@ -240,7 +262,7 @@
     "kavely": "ranta-1499-kavely.glb"
    },
    "muistiarvio": {
-    "kolmiot_nakyva": 13280,
+    "kolmiot_nakyva": 13298,
     "tekstuurit_mt": 0,
     "huom": "pinnat rakennuksen pinta-materiaaleista"
    },
@@ -1070,7 +1092,7 @@
   },
   "muurikaytava": {
    "kolmiot": {
-    "nakyva": 794,
+    "nakyva": 800,
     "-tormays": 524,
     "-kavely": 198
    },
@@ -1112,8 +1134,23 @@
     "ote:kellotorni-8",
     "ote:kellotorni-9",
     "ote:kellotorni-10",
+    "ote:kellotorni-11",
+    "ote:kellotorni-12",
+    "ote:kellotorni-13",
+    "ote:kellotorni-14",
+    "ote:kellotorni-15",
+    "ote:kellotorni-16",
+    "ote:kellotorni-17",
+    "ote:kellotorni-18",
+    "ote:kellotorni-19",
+    "ote:kellotorni-20",
+    "ote:kellotorni-21",
+    "ote:kellotorni-22",
+    "ote:kellotorni-23",
+    "ote:kellotorni-24",
     "tuuli:puuska-1",
     "tuuli:puuska-2",
+    "tuuli:puuska-3",
     "komero:kellotorni",
     "tiili:komero-1",
     "tiili:komero-2",
@@ -1203,49 +1240,58 @@
      "nimi": "pako-kellobastioni-1",
      "keskipiste": [
       -54.907,
-      4.0,
+      0.25,
       -5.181
      ],
      "koko": [
       4.0,
-      8.0,
+      15.5,
       5.5
      ],
-     "kierto_y": -4.7997
+     "kierto_y": -4.7997,
+     "vuodesta": null,
+     "historia_vuosi": 1745,
+     "huom": "Kellobastioni: rakennusvuosi ei tiedossa, olemassa 1751 (Venäjän aika, #4249)"
     },
     {
      "nimi": "pako-kellobastioni-2",
      "keskipiste": [
       -60.635,
-      4.0,
+      0.25,
       -5.682
      ],
      "koko": [
       6.0,
-      8.0,
+      15.5,
       6.0
      ],
-     "kierto_y": -4.7997
+     "kierto_y": -4.7997,
+     "vuodesta": null,
+     "historia_vuosi": 1745,
+     "huom": "Kellobastioni: rakennusvuosi ei tiedossa, olemassa 1751 (Venäjän aika, #4249)"
     },
     {
      "nimi": "pako-kellobastioni-3",
      "keskipiste": [
       -68.854,
-      4.0,
+      0.25,
       -6.401
      ],
      "koko": [
       9.6,
-      8.0,
+      15.5,
       10.5
      ],
-     "kierto_y": -4.7997
+     "kierto_y": -4.7997,
+     "vuodesta": null,
+     "historia_vuosi": 1745,
+     "huom": "Kellobastioni: rakennusvuosi ei tiedossa, olemassa 1751 (Venäjän aika, #4249)"
     }
    ],
    "varmuus": "V kerrokset, A porras",
    "rajat": {
     "min": [
-     -74.2,
+     -74.5,
      -7.76,
      -16.27
     ],
@@ -1290,7 +1336,7 @@
     "kavely": "muurikaytava-kavely.glb"
    },
    "muistiarvio": {
-    "kolmiot_nakyva": 794,
+    "kolmiot_nakyva": 800,
     "tekstuurit_mt": 0,
     "huom": "pinnat rakennuksen pinta-materiaaleista"
    },

@@ -23,7 +23,9 @@ namespace Matkakirja.Linssit.Seikkailu
         readonly HashSet<string> avatut = new HashSet<string>(StringComparer.Ordinal);
         public IReadOnlyCollection<string> Avatut => avatut;
 
-        public static Tietokerros Lue(string json, IEnumerable<string> joAvatut = null)
+        static string Avain(string alue, string id, string kentta) => alue == null ? null : Matkakirja.Linssit.Dioraama.DioraamaData.TekstiAvain(alue, "tietokortti", id) + "." + kentta;
+
+        public static Tietokerros Lue(string json, IEnumerable<string> joAvatut = null, string alue = "olavinlinna")
         {
             var t = new Tietokerros();
             object j; try { j = MiniJson.Jasenna(json ?? ""); } catch (Exception) { j = null; }
@@ -33,8 +35,10 @@ namespace Matkakirja.Linssit.Seikkailu
                 if (string.IsNullOrEmpty(id)) continue;
                 var k = new Tietokortti
                 {
-                    Id = id, Otsikko = MiniJson.Teksti(o, "otsikko"), Lyhyt = MiniJson.Teksti(o, "lyhyt") ?? MiniJson.Teksti(o, "otsikko"),
-                    Teksti = MiniJson.Teksti(o, "teksti"), Varmuus = MiniJson.Teksti(o, "varmuus"),
+                    // Tekstit avaimella (PT 9.10., käännettävyys): <alue>.tietokortti.<id>.otsikko/lyhyt/teksti, datan teksti varalla.
+                    Id = id, Otsikko = Kielitaulu.TaiData(Avain(alue, id, "otsikko"), MiniJson.Teksti(o, "otsikko")),
+                    Lyhyt = Kielitaulu.TaiData(Avain(alue, id, "lyhyt"), MiniJson.Teksti(o, "lyhyt") ?? MiniJson.Teksti(o, "otsikko")),
+                    Teksti = Kielitaulu.TaiData(Avain(alue, id, "teksti"), MiniJson.Teksti(o, "teksti")), Varmuus = MiniJson.Teksti(o, "varmuus"),
                 };
                 var nro = MiniJson.Kentta(o, "numero");
                 k.Numero = nro is double dn ? (int)dn : nro is string sn && int.TryParse(sn, out var ni) ? ni : t.Kortit.Count + 1;
