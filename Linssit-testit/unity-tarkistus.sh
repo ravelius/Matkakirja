@@ -98,7 +98,18 @@ kartta() {
 # (välilyönnit, "Shared Scripts"). $1 = ios|editori, loput = moduuliviitteet ja määrittelyt.
 FP_RSP="$ULOS/firstpass.rsp"
 : > "$FP_RSP"
-[ -d "$ASSETS/../Plugins" ] && find "$ASSETS/../Plugins" -name '*.cs' -not -path '*/Editor/*' | while IFS= read -r f; do printf '"%s"\n' "$f" >> "$FP_RSP"; done
+[ -d "$ASSETS/../Plugins" ] && find "$ASSETS/../Plugins" -name '*.cs' -not -path '*/Editor/*' -not -path '*/Plugins/SteamAudio/*' | while IFS= read -r f; do printf '"%s"\n' "$f" >> "$FP_RSP"; done
+# Steam Audio (Linssiseppä 9.10.2026): oma asmdef SteamAudioUnity kuten Unityssä, STEAMAUDIO_ENABLED (asmdefin versionDefines).
+# Editorikäännös vain moduuleja vasten: UnityEditor.dll + UnityEditor.CoreModule.dll yhdessä antaisi CS0433:n (AssetDatabase kahdesti).
+SA_RUNTIME="$ASSETS/../Plugins/SteamAudio/Scripts/Runtime"
+steamaudio() { # $1 = ios|editori, loput = moduuliviitteet ja määrittelyt
+  kohde=$1; shift
+  SA_REF=""
+  [ -d "$SA_RUNTIME" ] || return 0
+  kaanna "SteamAudioUnity ($kohde)" "$ULOS/steamaudio-$kohde.log" $YHTEISET $NETSTD "$@" -nowarn:0618,0414,0649,0169,0162 \
+    -out:"$ULOS/SteamAudioUnity-$kohde.dll" $(find "$SA_RUNTIME" -name '*.cs')
+  SA_REF="-r:$ULOS/SteamAudioUnity-$kohde.dll"
+}
 firstpass() {
   kohde=$1; shift
   FP_REF=""
@@ -113,7 +124,8 @@ IOS=""
 for f in "$IOS_MODUULIT"/UnityEngine*.dll; do IOS="$IOS -r:$f"; done
 kartta ios $IOS -define:"$DEF_YHT;ENABLE_IL2CPP"
 firstpass ios $IOS -define:"$DEF_YHT;ENABLE_IL2CPP"
-kaanna "Assembly-CSharp (ios)" "$ULOS/ios.log" $YHTEISET $NETSTD $IOS $PAKETIT $FP_REF -r:"$ULOS/Matkakirja.Peli.dll" -r:"$ULOS/Matkakirja.Linssit.Ydin.dll" $KARTTA_REF \
+steamaudio ios $IOS -define:"$DEF_YHT;ENABLE_IL2CPP;STEAMAUDIO_ENABLED"
+kaanna "Assembly-CSharp (ios)" "$ULOS/ios.log" $YHTEISET $NETSTD $IOS $PAKETIT $FP_REF $SA_REF -r:"$ULOS/Matkakirja.Peli.dll" -r:"$ULOS/Matkakirja.Linssit.Ydin.dll" $KARTTA_REF \
   -define:"$DEF_YHT;ENABLE_IL2CPP" -out:"$ULOS/Assembly-CSharp-ios.dll" $SKRIPTIT
 
 # 2b. Editori iOS-kohteella: UNITY_EDITOR, joten #else-haarat käännetään.
@@ -122,7 +134,10 @@ for f in "$EDITORI_MODUULIT"/*.dll; do EDI="$EDI -r:$f"; done
 EDI="$EDI -r:$S/Managed/UnityEditor.dll"
 kartta editori $EDI -define:"$DEF_YHT;UNITY_EDITOR;UNITY_EDITOR_OSX;UNITY_EDITOR_64"
 firstpass editori $EDI -define:"$DEF_YHT;UNITY_EDITOR;UNITY_EDITOR_OSX;UNITY_EDITOR_64"
-kaanna "Assembly-CSharp (editori)" "$ULOS/editori.log" $YHTEISET $NETSTD $EDI $PAKETIT $FP_REF -r:"$ULOS/Matkakirja.Peli.dll" -r:"$ULOS/Matkakirja.Linssit.Ydin.dll" $KARTTA_REF \
+EDI_MODUULIT=""
+for f in "$EDITORI_MODUULIT"/*.dll; do EDI_MODUULIT="$EDI_MODUULIT -r:$f"; done
+steamaudio editori $EDI_MODUULIT -define:"$DEF_YHT;UNITY_EDITOR;UNITY_EDITOR_OSX;UNITY_EDITOR_64;STEAMAUDIO_ENABLED"
+kaanna "Assembly-CSharp (editori)" "$ULOS/editori.log" $YHTEISET $NETSTD $EDI $PAKETIT $FP_REF $SA_REF -r:"$ULOS/Matkakirja.Peli.dll" -r:"$ULOS/Matkakirja.Linssit.Ydin.dll" $KARTTA_REF \
   -define:"$DEF_YHT;UNITY_EDITOR;UNITY_EDITOR_OSX;UNITY_EDITOR_64" -out:"$ULOS/Assembly-CSharp-editori.dll" $SKRIPTIT
 
 echo "unity-tarkistus: $(echo "$SKRIPTIT" | wc -l | tr -d ' ') skriptiä + $(echo "$KARTTA" | grep -c . || true) karttaskriptiä + $(find "$ASSETS/Peli" -name '*.cs' | wc -l | tr -d ' ') pelilogiikkatiedostoa, virheitä yhteensä $VIRHEITA"
