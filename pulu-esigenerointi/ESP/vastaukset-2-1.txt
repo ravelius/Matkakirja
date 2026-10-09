@@ -29,7 +29,7 @@ JATKOT:
 Miksi Kolumbus tarvitsi hallitsijoiden tuen matkalleen?
 Millainen leivos pionono on ja miten sitä valmistetaan?
 ### 7
-Capileira on Alpujarran alueella, Sierra Nevadan eteläpuolella sijaitseva vuoristokylä Granadan maakunnassa. Se on yksi vuoriston korkeimmalla sijaitsevista kylistä ja kuuluu [[Poqueiran]] rotkolaakson kyliin yhdessä [[Pampaneiran]] ja [[Bubiónin]] kanssa. Kylästä alkavat monet Mulhacénin huipulle johtavat vaellusreitit. Kylä on tunnettu valkoisista taloistaan, joiden katot ovat litteät, ja kapeista kaduistaan. Ajantasaiset tiedot reiteistä ja kulkuyhteyksistä kannattaa tarkistaa kansallispuiston ohjeista.
+Capileira on Alpujarran alueella, Sierra Nevadan eteläpuolella sijaitseva vuoristokylä Granadan maakunnassa. Se on yksi vuoriston korkeimmalla sijaitsevista kylistä ja kuuluu [[Poqueiran]] rotkolaakson kyliin yhdessä [[Pampaneiran]] ja [[Bubiónin]] kanssa. Kylästä alkavat monet Mulhacénin huipulle johtavat vaellusreitit. Kylä on tunnettu valkoisista taloistaan, joiden katot ovat litteät, ja kapeista kaduistaan. Ajantasaiset tiedot reiteistä ja kulkuyhteyksistä kannattaa tarkistaa kansallispuiston viralliselta taholta.
 JATKOT:
 Millaista on vaellus Mulhacénin huipulle Capileirasta?
 Miksi Alpujarran kylien talot ovat valkoisia?
@@ -324,12 +324,12 @@ JATKOT:
 Kuka oli Elías Valiña Sampedro?
 Mitkä ovat Jaakobin tien tunnetuimmat reitit?
 ### 66
-Pyhiinvaelluksen päätyttyä Santiago de Compostelassa pyhiinvaeltaja voi hakea Compostela-nimisen todistuksen kaupungin pyhiinvaeltajien vastaanottotoimistosta, [[Oficina del Peregrino]]. Nykyisten ohjeiden mukaan viimeiset noin sata kilometriä kuljetaan jalan ja pyöräillen noin kaksisataa kilometriä, mutta tarkat rajat kannattaa tarkistaa toimiston omista tiedoista. Perille saapuneet voivat osallistua katedraalin messuun, jossa suuri suitsutusastia [[Botafumeiro]] heilutetaan joissakin tilaisuuksissa. Pyhiinvaeltajia on erityisen paljon pyhinä vuosina, joita kutsutaan nimellä [[Xacobeo]].
+Pyhiinvaelluksen päätyttyä Santiago de Compostelassa pyhiinvaeltaja voi hakea Compostela-nimisen todistuksen kaupungin pyhiinvaeltajien vastaanottotoimistosta, [[Oficina del Peregrino]]. Nykyisten sääntöjen mukaan viimeiset noin sata kilometriä kuljetaan jalan ja pyöräillen noin kaksisataa kilometriä, mutta tarkat rajat kannattaa tarkistaa toimiston omista tiedoista. Perille saapuneet voivat osallistua katedraalin messuun, jossa suuri suitsutusastia [[Botafumeiro]] heilutetaan joissakin tilaisuuksissa. Pyhiinvaeltajia on erityisen paljon pyhinä vuosina, joita kutsutaan nimellä [[Xacobeo]].
 JATKOT:
 Miksi Botafumeiro heilutetaan katedraalissa?
 Milloin vietetään pyhä vuosi ja mitä se tarkoittaa?
 ### 67
-Pyhiinvaeltajan passi, espanjaksi [[credencial]], on asiakirja, johon pyhiinvaeltaja kerää reitin varrelta leimoja. Leimoja saa esimerkiksi pyhiinvaeltajien majataloista, joita kutsutaan nimellä [[albergue]], sekä kirkoista ja muista reitin varrella olevista paikoista. Leimat toimivat todisteena kuljetusta reitistä, ja niitä tarvitaan, kun Santiago de Compostelassa haetaan [[Compostela-todistusta]]. Nykyisten ohjeiden mukaan leimoja vaaditaan viimeisellä sadalla kilometrillä vähintään kaksi päivässä, mutta tarkat ehdot kannattaa tarkistaa pyhiinvaeltajien toimistosta. Passia tarvitaan myös majoittuessa pyhiinvaeltajien majataloissa.
+Pyhiinvaeltajan passi, espanjaksi [[credencial]], on asiakirja, johon pyhiinvaeltaja kerää reitin varrelta leimoja. Leimoja saa esimerkiksi pyhiinvaeltajien majataloista, joita kutsutaan nimellä [[albergue]], sekä kirkoista ja muista reitin varrella olevista paikoista. Leimat toimivat todisteena kuljetusta reitistä, ja niitä tarvitaan, kun Santiago de Compostelassa haetaan [[Compostela-todistusta]]. Nykyisten sääntöjen mukaan leimoja vaaditaan viimeisellä sadalla kilometrillä vähintään kaksi päivässä, mutta tarkat ehdot kannattaa tarkistaa pyhiinvaeltajien toimistosta. Passia tarvitaan myös majoittuessa pyhiinvaeltajien majataloissa.
 JATKOT:
 Mistä pyhiinvaeltajan passin voi hankkia?
 Millaisia ovat pyhiinvaeltajien majatalot?
@@ -354,7 +354,7 @@ JATKOT:
 Mitä damnatio memoriae tarkoitti Roomassa?
 Kuka oli Nerva ja mitä hän teki keisarina?
 ### 72
-Traianus oli Rooman keisari vuosina 98–117. Hän oli syntyisin Hispaniasta, kaupungista [[Italica]], joka sijaitsi lähellä nykyistä Sevillaa, ja häntä pidetään usein ensimmäisenä provinssista tulleena keisarina. Hänen aikanaan Rooman valtakunta kasvoi, ja [[Daakian]] valloituksen muistoksi Roomassa pystytettiin [[Traianuksen pylväs]]. Hänen seuraajansa oli [[Hadrianus]], jonka suku oli myös Italicasta. Segovian akveduktin ajoitus siirtyy tuoreimman arkeologisen aineiston mukaan Traianuksen tai varhaisen Hadrianuksen aikaan.
+Traianus oli Rooman keisari vuosina 98–117. Hän oli syntyisin Hispaniasta, kaupungista [[Italica]], joka sijaitsi lähellä nykyistä Sevillaa, ja häntä pidetään usein ensimmäisenä provinssista tulleena keisarina. Hänen aikanaan Rooman valtakunta kasvoi, ja [[Daakian]] valloituksen muistoksi Roomassa pystytettiin [[Traianuksen pylväs]]. Hänen seuraajansa oli [[Hadrianus]], jonka suku oli myös Italicasta. Segovian akveduktin ajoitus siirtyy tuoreimpien arkeologisten tutkimusten mukaan Traianuksen tai varhaisen Hadrianuksen aikaan.
 JATKOT:
 Miksi Traianuksen pylväs pystytettiin Roomaan?
 Millainen keisari Hadrianus oli?
@@ -394,7 +394,7 @@ JATKOT:
 Miten kohde pääsee Unescon maailmanperintöluetteloon?
 Mitä muita Espanjan kohteita luettelossa on?
 ### 80
-Altamiran luola on luolasto lähellä [[Santillana del Marin]] vanhaa kaupunkia Kantabriassa Pohjois-Espanjassa, ja se tunnetaan esihistoriallisesta luolataiteesta: hiilipiirroksista ja monivärimaalauksista, joissa on aikakauden paikallisia eläimiä ja ihmisen käsiä. Luolan löysi vuonna 1868 [[Modesto Cubillas]], ja sitä tutki [[Marcelino Sanz de Sautuola]], joka julkaisi tutkimuksensa 1880. Kertomuksen mukaan Sautuolan kahdeksanvuotias tytär María huomasi katossa biisonit ja huusi: "Katso, isä, härkiä!" Tiedemiehet pitivät Sautuolaa väärentäjänä kaksikymmentä vuotta, koska maalaukset olivat heidän mielestään liian taitavia kivikauden ihmiselle, eikä hän elänyt nähdäkseen oikeaksi todistumistaan. Kiista päättyi vuonna 1902, kun vastaavia löytöjä oli kertynyt niin paljon, ettei todistusaineistoa voinut enää sivuuttaa. Maalausten iästä esitetään eri lukuja: yhden arvion mukaan ne ovat noin 15 000 vuotta vanhoja, mutta vanhimpien maalausten sanotaan syntyneen ylemmällä paleoliittisella kaudella noin 36 000 vuotta sitten. Luola otettiin maailmanperintöluetteloon vuonna 1985.
+Altamiran luola on luolasto lähellä [[Santillana del Marin]] vanhaa kaupunkia Kantabriassa Pohjois-Espanjassa, ja se tunnetaan esihistoriallisesta luolataiteesta: hiilipiirroksista ja monivärimaalauksista, joissa on aikakauden paikallisia eläimiä ja ihmisen käsiä. Luolan löysi vuonna 1868 [[Modesto Cubillas]], ja sitä tutki [[Marcelino Sanz de Sautuola]], joka julkaisi tutkimuksensa 1880. Kertomuksen mukaan Sautuolan kahdeksanvuotias tytär María huomasi katossa biisonit ja huusi: "Katso, isä, härkiä." Tiedemiehet pitivät Sautuolaa väärentäjänä kaksikymmentä vuotta, koska maalaukset olivat heidän mielestään liian taitavia kivikauden ihmiselle, eikä hän elänyt nähdäkseen oikeaksi todistumistaan. Kiista päättyi vuonna 1902, kun vastaavia löytöjä oli kertynyt niin paljon, ettei todistusaineistoa voinut enää sivuuttaa. Maalausten iästä esitetään eri lukuja: yhden arvion mukaan ne ovat noin 15 000 vuotta vanhoja, mutta vanhimpien maalausten sanotaan syntyneen ylemmällä paleoliittisella kaudella noin 36 000 vuotta sitten. Luola otettiin maailmanperintöluetteloon vuonna 1985.
 JATKOT:
 Mitä eläimiä Altamiran luolan maalauksissa on?
 Miksi Altamiran luolasta on rakennettu jäljennös?
