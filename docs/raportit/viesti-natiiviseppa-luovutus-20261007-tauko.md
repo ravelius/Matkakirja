@@ -10,20 +10,23 @@ ajo-id:llä (mac-tf-odottaja.sh 4. arg = ajo-id, korjattu 9.10.: peruttu yöajo 
 juna/b13 → e1386897 10.36. Taukokaatumisen syy: CesiumKaupunki.Muistivahti asetti SSE:n → Cesium RecreateTileset (Cesium3DTileset.cs:255);
 korjaus LS2 9e15ec414 (karkea laattavalinta, ei SSE-vaihtoa; suspendUpdate tauolla). Hätätoisto: scratchpad hata-ajo.sh <app> <tunniste>.
 **JUNA 172 = YKSI ISO JUNA (omistaja 10.3x: 172–175 yhdessä, ei välijunia/TF:iä ennen PT:n ilmoitusta)** — runko natiiviseppa/juna-172
-(wt/proto-natiiviseppa-j172) **c39ab9924** BUILD 171:n päällä; 453/420/1188, unity 0, tarkista 0. TARKISTUSLISTA:
+(wt/proto-natiiviseppa-j172) **bd9e65ef7** BUILD 171:n päällä; 453/420/1188, unity 0, tarkista 0. TARKISTUSLISTA:
   [x] 172 NUI cd4553c8d (⊇ Siirtoseppä 18227438d + pysty + krediitit + ef56acf4e)
   [x] 173 Siirtoseppä f5346bac4 (⊇ 5d8e362f7 ⊇ bed0c2d97, v45z, äänet; ⊇ 174:n Siirtoseppä-osa)
   [x] 173–175 NUI 1fce56a22 (⊇ 2bb472819 ⊇ 500126589 mikseri ⊇ c00f125a9 ⊇ 9ca6e2795 ⊇ 54182ab06 ⊇ 17ee84663 ⊇ becff9f1b); konfliktit
       KrediititTiivis + LinnaValikko → 1fce:n versio
   [x] NUI 6ed450fd4 (nostoluennat 6 lajiin, ⊇ c79d12fd6)
-  [x] LS2 8c516911f (⊇ 807b14e4e ⊇ ddbee4e70; ISS-äänet mikseriin 8/8, ei Cupolan radiota)
-  [x] Pelikoodari ade5ad9f3 (lyria-v2, data ämpärissä) + 2cb133c61 → cf5a16cb8 (mikserirekisteröinnit + kartan äänimaisemakori ja lentomoottori, ⊇ NUI c79d12fd6 nostoluennat — omistaja hyväksyi, PT:lle tiedoksi)
+  [x] LS2 2996980aa (⊇ 8c516911f ⊇ 807b14e4e ⊇ ddbee4e70; ISS 8/8, maisemakerroin kerran)
+  [x] LS1 219ce1cd3 (⊇ bd217b509 + esittelykorkeus 696de08e9, pallo-elava-v2 df0208884, ohiajot 13c1a7076, linssien 11 ääntä)
+  [x] Pelikoodari ade5ad9f3 (lyria-v2, data ämpärissä) + 2cb133c61 → 049e4ce21 (mikserirekisteröinnit + kartan maisemat ja lentomoottori, linssitausta ohitettu; NUI katselmoi, ⊇ NUI c79d12fd6 nostoluennat — omistaja hyväksyi, PT:lle tiedoksi)
   [x] OMA 86a016ed5 näyttönimi "Matkakirja" (iOS plist + Mac plutil; productName ennallaan) — Editor-koodi, todentuu käännöksessä
   [x] LS1 bd217b509 (merge 17e01cf2a: 171-erän osat + pallon mikserirekisteröinti; konflikti KaupunkiAanimaisemaSoitin → LS1:n versio kokonaan,
       KaupunkiKuuroTestit → molemmat testit)
   [x] Siirtoseppä 9950cb17e (historia-elokuva + 3 korjausta, loppumusiikki, hahmokorvaus, glb sparse, linnan äänet mikseriin)
   [x] Siirtoseppä cb262e9c6 (⊇ 9950cb17e; PelattavaPala v46a 460ceacae1645a3a: Codex-rekvisiitta 12 + tammiovet, 825/825 200)
   [ ] LS1:n kamera/kohtauslista-korjaukset
+  [ ] NUI fe8d84616 (katalogikuvat -havainne-v2) — odottaa PT:n kuittausta
+  [ ] LS1 Steam Audio -koe 4869a5dc9 (erillinen, kytkin pois; vaatii iOS libz/bitcode + Mac-allekirjoitus) — PT päättää
   [ ] LS2 laivat-171 (vana 657676845 = 7f1a0c6f2 sisältö) + kaukomaa-171b
   [ ] Siirtoseppä: historia-arvio 2:n korjaukset, v45-pinnat ("valmis 172:een" -rivi tulee)
   [ ] LR: Codex-pinnat
