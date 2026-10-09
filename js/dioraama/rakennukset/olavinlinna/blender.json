@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "a9838ab14798895b",
-  "kansio": "dioraama/olavinlinna/blender/a9838ab14798895b/",
+  "hash": "b64f48bfe93fa10a",
+  "kansio": "dioraama/olavinlinna/blender/b64f48bfe93fa10a/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-0-6x6.astcm",
@@ -1335,8 +1335,8 @@
     },
     {
       "polku": "kavely/merkit.json",
-      "sha256": "de06e7c7dc29db63069507a71d92a124d877810b7bca4ffcf242a14b79698fcb",
-      "tavuja": 74016
+      "sha256": "e19d5f24ce2bd207d9d15aac7b0abe6257f7b9ccede56aaf9444543a113b73c9",
+      "tavuja": 74649
     },
     {
       "polku": "kavely/muurikaytava-kavely.glb",
@@ -1620,8 +1620,8 @@
     },
     {
       "polku": "kavely/rekvisiitta-codex-brokadi.glb",
-      "sha256": "cb4c920e69c8d35482c8c887c9215ce1f6f37f19e86d9e0d9f47621cc559f916",
-      "tavuja": 239732
+      "sha256": "4089cc34275d6b12890be340b06c67b19305e8aeb04cc4e6f39c06b6b7b95b56",
+      "tavuja": 238124
     },
     {
       "polku": "kavely/rekvisiitta-codex-kuvakudos-normaali-6x6.astcm",
@@ -1685,23 +1685,23 @@
     },
     {
       "polku": "kavely/rekvisiitta-codex-noki-normaali-6x6.astcm",
-      "sha256": "5d67a23a88912a43c7d9ed1cc1a3a494943483edb43fa5d983df203160ce5ab1",
-      "tavuja": 626304
+      "sha256": "6bafa8079d1c3f08eb64baa62d996f1837accc9d2abcf9a492d5c4e93178a2f1",
+      "tavuja": 158448
     },
     {
       "polku": "kavely/rekvisiitta-codex-noki-orm-6x6.astcm",
-      "sha256": "01fd0c10ff340ce5f55fd5b7888c4f146f2b2e157713102ad5095f69681fa199",
-      "tavuja": 626304
+      "sha256": "145a548f85f69835ce35d02f1b6852f3c15712a1c48519a6e0cdc69057e576be",
+      "tavuja": 158448
     },
     {
       "polku": "kavely/rekvisiitta-codex-noki-vari-6x6.astcm",
-      "sha256": "102d00658d0cbd87c9cfc91e6adb34ae533f3ed82f495d37e114be902d861b44",
-      "tavuja": 626304
+      "sha256": "e5f24c8c66c7a0730b040b55fa55438b2459840e4799e92e03837cfe61a61ae2",
+      "tavuja": 158448
     },
     {
       "polku": "kavely/rekvisiitta-codex-noki.glb",
-      "sha256": "cfa89e609b46b8b7107ae7658fe5f012cda14ecd0bf265ecd8daa2b282625c37",
-      "tavuja": 501744
+      "sha256": "1a9a89e673353b6dd0d031169b43f20cd62a9061d088ca2c25c00c16c8964cfd",
+      "tavuja": 1412328
     },
     {
       "polku": "kavely/rekvisiitta-codex-raapustukset-normaali-6x6.astcm",
