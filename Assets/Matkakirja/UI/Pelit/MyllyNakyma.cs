@@ -143,30 +143,36 @@ namespace Matkakirja.Natiivi
             korttiTaso.style.display = DisplayStyle.None;
 
             // Kortit lisätään himmennykseen yksi kerrallaan (NaytaKortti): Rakenne.Nayta ponnauttaa kaikki Kortti-lapset.
-            valintaKortti = new Kortti("mk-peli__kortti", pohja: true);
-            var vk = Rakenne.Teksti("", "mk-kortti__kapiteeli mk-peli__valinta-kapiteeli", valintaKortti.Sisus);
+            // Vierittyvä kortti kuten tietokerroksen kortisto (mk-tietoja: enintään 86 % ruudusta; asettelutesti 10.10.2026: iPhone
+            // vaaka, Lauta-napit ja Aloita ruudun alareunan alla): sisältö ScrollViewiin, Peruuta ja Aloita kiinteästi alaosaan.
+            valintaKortti = new Kortti("mk-peli__kortti mk-tietoja", pohja: true);
+            var valintaSisalto = new ScrollView(ScrollViewMode.Vertical);
+            valintaSisalto.AddToClassList("mk-tietoja__vieritys");
+            valintaSisalto.verticalScrollerVisibility = ScrollerVisibility.Hidden;
+            valintaKortti.Sisus.Add(valintaSisalto);
+            var vk = Rakenne.Teksti("", "mk-kortti__kapiteeli mk-peli__valinta-kapiteeli", valintaSisalto);
             Kirjasimet.Aseta(vk, Tyylikirja.Kirjain.Kapiteeli);
-            Kirjasimet.Aseta(Rakenne.Teksti(Asetus.T("mylly.valinta.otsikko", Kieli.T("ui.mylly.valinta-otsikko")), "mk-kortti__otsikko", valintaKortti.Sisus), Tyylikirja.Kirjain.Otsikko);
-            var ala = Rakenne.Teksti("", "mk-kortti__alaotsikko mk-peli__valinta-ala", valintaKortti.Sisus);
+            Kirjasimet.Aseta(Rakenne.Teksti(Asetus.T("mylly.valinta.otsikko", Kieli.T("ui.mylly.valinta-otsikko")), "mk-kortti__otsikko", valintaSisalto), Tyylikirja.Kirjain.Otsikko);
+            var ala = Rakenne.Teksti("", "mk-kortti__alaotsikko mk-peli__valinta-ala", valintaSisalto);
             Kirjasimet.Aseta(ala, Tyylikirja.Kirjain.Apuri);
             Rakenne.Teksti(Kieli.T("ui.mylly.valinta-selite"),
-                "mk-kortti__teksti", valintaKortti.Sisus);
-            var vo = Rakenne.Teksti(Kieli.T("ui.pelit.vastustaja"), "mk-peli__valiotsikko", valintaKortti.Sisus);
+                "mk-kortti__teksti", valintaSisalto);
+            var vo = Rakenne.Teksti(Kieli.T("ui.pelit.vastustaja"), "mk-peli__valiotsikko", valintaSisalto);
             Kirjasimet.Aseta(vo, Tyylikirja.Kirjain.Valiotsikko);
-            var ryhma = Rakenne.El("mk-peli__kytkinryhma", valintaKortti.Sisus);
+            var ryhma = Rakenne.El("mk-peli__kytkinryhma", valintaSisalto);
             foreach (var (teksti, v) in new[] { (Kieli.T("ui.pelit.botti-helppo"), Vastustaja.BottiHelppo), (Kieli.T("ui.pelit.botti-normaali"), Vastustaja.BottiNormaali), (Kieli.T("ui.pelit.botti-vaikea"), Vastustaja.BottiVaikea) })
                 tasoNapit.Add(Kirjasimet.Aseta(Rakenne.Nappi(teksti, "mk-peli__kytkin", () => ValitseVastustaja(v), ryhma), Kirjasin.Luku));
-            var kaveriRyhma = Rakenne.El("mk-peli__kytkinryhma", valintaKortti.Sisus);
+            var kaveriRyhma = Rakenne.El("mk-peli__kytkinryhma", valintaSisalto);
             tasoNapit.Add(Kirjasimet.Aseta(Rakenne.Nappi(Kieli.T("ui.pelit.kaveri-samalla-laitteella"), "mk-peli__kytkin", () => ValitseVastustaja(Vastustaja.Kaveri), kaveriRyhma), Kirjasin.Luku));
-            var lo = Rakenne.Teksti(Kieli.T("ui.pelit.lauta"), "mk-peli__valiotsikko", valintaKortti.Sisus);
+            var lo = Rakenne.Teksti(Kieli.T("ui.pelit.lauta"), "mk-peli__valiotsikko", valintaSisalto);
             Kirjasimet.Aseta(lo, Tyylikirja.Kirjain.Valiotsikko);
-            var lautaRyhma = Rakenne.El("mk-peli__kytkinryhma", valintaKortti.Sisus);
+            var lautaRyhma = Rakenne.El("mk-peli__kytkinryhma", valintaSisalto);
             for (int i = 0; i < Laudat.Length; i++)
             {
                 int ii = i;
                 lautaNapit.Add(Kirjasimet.Aseta(Rakenne.Nappi(Laudat[i].Nimi, "mk-peli__kytkin", () => ValitseLauta(ii), lautaRyhma), Kirjasin.Luku));
             }
-            lautaHistoria = Rakenne.Teksti("", "mk-kortti__alaotsikko mk-peli__historia", valintaKortti.Sisus);
+            lautaHistoria = Rakenne.Teksti("", "mk-kortti__alaotsikko mk-peli__historia", valintaSisalto);
             Kirjasimet.Aseta(lautaHistoria, Tyylikirja.Kirjain.Apuri);
             var vn = Rakenne.El("mk-kortti__napit", valintaKortti.Sisus, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Nappi(Kieli.T("ui.yleinen.peruuta"), "mk-nappi--toiminto", Sulje, vn), Kirjasin.Kone);
