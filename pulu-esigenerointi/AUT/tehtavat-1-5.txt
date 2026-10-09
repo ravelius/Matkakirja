@@ -1,0 +1,206 @@
+================ KOHTA 21 (kohde:hahmotelma-traunsee) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Traunsee (luonto · järvi)
+Tietoruudun teksti: Traunsee on järvi Salzkammergutissa Ylä-Itävallassa. Sen pinta-ala on noin 24,5 neliökilometriä ja suurin syvyys 191 metriä, joten se on kokonaan Itävallan alueella sijaitsevista järvistä syvin ja tilavuudeltaan suurin; vain rajalla oleva Bodenjärvi on syvempi ja suurempi. Järven pohjoispäässä on Gmunden ja eteläpäässä Ebensee, ja sitä ympäröivät vuoret, joihin kuuluu Traunstein. Järven nähtävyyksiin kuuluu keskiaikainen Schloss Ort -linna. Paikallinen legenda kertoo vesihevosesta, joka asuu järvessä, ja paikalliset kutsuvat sitä nimellä "Lungy".
+
+### 21.1
+KYSYMYS: Kuinka syvä Traunsee on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Traunsee (luonto · järvi)
+Tietoruudun teksti: Traunsee on järvi Salzkammergutissa Ylä-Itävallassa. Sen pinta-ala on noin 24,5 neliökilometriä ja suurin syvyys 191 metriä, joten se on kokonaan Itävallan alueella sijaitsevista järvistä syvin ja tilavuudeltaan suurin; vain rajalla oleva Bodenjärvi on syvempi ja suurempi. Järven pohjoispäässä on Gmunden ja eteläpäässä Ebensee, ja sitä ympäröivät vuoret, joihin kuuluu Traunstein. Järven nähtävyyksiin kuuluu keskiaikainen Schloss Ort -linna. Paikallinen legenda kertoo vesihevosesta, joka asuu järvessä, ja paikalliset kutsuvat sitä nimellä "Lungy".
+
+### 21.2
+KYSYMYS: Mikä Lungy on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Traunsee (luonto · järvi)
+Tietoruudun teksti: Traunsee on järvi Salzkammergutissa Ylä-Itävallassa. Sen pinta-ala on noin 24,5 neliökilometriä ja suurin syvyys 191 metriä, joten se on kokonaan Itävallan alueella sijaitsevista järvistä syvin ja tilavuudeltaan suurin; vain rajalla oleva Bodenjärvi on syvempi ja suurempi. Järven pohjoispäässä on Gmunden ja eteläpäässä Ebensee, ja sitä ympäröivät vuoret, joihin kuuluu Traunstein. Järven nähtävyyksiin kuuluu keskiaikainen Schloss Ort -linna. Paikallinen legenda kertoo vesihevosesta, joka asuu järvessä, ja paikalliset kutsuvat sitä nimellä "Lungy".
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:hahmotelma-zell-am-see) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zell am See (luonto · järvi)
+Tietoruudun teksti: Zell am See on Zell am Seen piirikunnan hallinnollinen keskus Salzburgin osavaltiossa Itävallassa. Se sijaitsee Kitzbühelin Alpeilla, ja se on tärkeä matkailukohde hiihtokeskustensa ja Zellinjärven rannan vuoksi. Zell am See on ollut Euroopan aateliston suosima talvi- ja kesäpaikka 1800-luvulta lähtien. Kaupunki on noin 80 kilometriä Salzburgista etelään ja 30 kilometriä Itävallan korkeimmasta vuoresta Großglocknerista pohjoiseen, ja sen historiallinen keskusta on 68 metriä syvän Zellinjärven läntisellä rannalla. Kaupungin oma kotivuori on 1 965 metrin korkuinen Schmittenhöhe.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Pešićan jäätikköjärvi Bjelasican rinteellä] jääkauden perua — Bjelasica on vuorijono Kolašinin lähellä, ja sen korkein huippu Crna Glava kohoaa 2 139 metriin. Jono rajautuu Lim- ja Tara-jokiin, ja siinä on kymmenen yli 2 000 metrin huippua ja kuusi jäätikköjärveä. Pešićan järvi on niistä toiseksi suurimpia: se on noin 290 metriä pitkä ja sijaitsee noin 1 800 metrin korkeudessa Crna Glavan juurella. Kesäisin rinteillä toimivat paimenten katunit eli vuoristomajat, joissa yöpyy nykyään myös retkeilijöitä. Bjelasica ja Durmitor ovat Montenegron vuoristomatkailun keskuksia, ja Kolašinin hiihtokeskus houkuttaa vuorelle myös talvella.
+- [Teheran — kohdekartta / Kohdekartta: Masoudiehin talo] 1878 Talon rakennutti Mas'ud Mirza Zell-e Soltan, Naser al-Din Shahin vanhin poika ja Isfahanin kuvernööri vuosina 1872–1907; shaahiksi hän ei voinut nousta, koska hänen äitinsä ei ollut qajar-sukua. Rakennus valmistui vuonna 1878 Baharestanin aukion laidalle, ja rakentajaksi mainitaan Reza Qoli Khan, lisänimeltään Siraj al-Mulk. Tonttia on noin 4 000 neliömetriä. Talo jakautuu qajar-tapaan ulko-osaan eli divanhuoneeseen ja sisäosaan, ja näiden lisäksi on sivurakennuksia. Tyyliksi merkitään qajar-ajan uusbarokki. Julkisivujen koristeluun kuuluu myös turkoosinvihreää reikälaattaa, ja keskeltä nousevassa kaarevassa päätykentässä on persiankielinen kirjoituslaatta. Talo on ollut monessa käytös…
+
+### 22.1
+KYSYMYS: Missä Zell am See sijaitsee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zell am See (luonto · järvi)
+Tietoruudun teksti: Zell am See on Zell am Seen piirikunnan hallinnollinen keskus Salzburgin osavaltiossa Itävallassa. Se sijaitsee Kitzbühelin Alpeilla, ja se on tärkeä matkailukohde hiihtokeskustensa ja Zellinjärven rannan vuoksi. Zell am See on ollut Euroopan aateliston suosima talvi- ja kesäpaikka 1800-luvulta lähtien. Kaupunki on noin 80 kilometriä Salzburgista etelään ja 30 kilometriä Itävallan korkeimmasta vuoresta Großglocknerista pohjoiseen, ja sen historiallinen keskusta on 68 metriä syvän Zellinjärven läntisellä rannalla. Kaupungin oma kotivuori on 1 965 metrin korkuinen Schmittenhöhe.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Teheran — kohdekartta / Kohdekartta: Masoudiehin talo] 1878 Talon rakennutti Mas'ud Mirza Zell-e Soltan, Naser al-Din Shahin vanhin poika ja Isfahanin kuvernööri vuosina 1872–1907; shaahiksi hän ei voinut nousta, koska hänen äitinsä ei ollut qajar-sukua. Rakennus valmistui vuonna 1878 Baharestanin aukion laidalle, ja rakentajaksi mainitaan Reza Qoli Khan, lisänimeltään Siraj al-Mulk. Tonttia on noin 4 000 neliömetriä. Talo jakautuu qajar-tapaan ulko-osaan eli divanhuoneeseen ja sisäosaan, ja näiden lisäksi on sivurakennuksia. Tyyliksi merkitään qajar-ajan uusbarokki. Julkisivujen koristeluun kuuluu myös turkoosinvihreää reikälaattaa, ja keskeltä nousevassa kaarevassa päätykentässä on persiankielinen kirjoituslaatta. Talo on ollut monessa käytös…
+
+### 22.2
+KYSYMYS: Miksi kaupunki on hiihtokeskus?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zell am See (luonto · järvi)
+Tietoruudun teksti: Zell am See on Zell am Seen piirikunnan hallinnollinen keskus Salzburgin osavaltiossa Itävallassa. Se sijaitsee Kitzbühelin Alpeilla, ja se on tärkeä matkailukohde hiihtokeskustensa ja Zellinjärven rannan vuoksi. Zell am See on ollut Euroopan aateliston suosima talvi- ja kesäpaikka 1800-luvulta lähtien. Kaupunki on noin 80 kilometriä Salzburgista etelään ja 30 kilometriä Itävallan korkeimmasta vuoresta Großglocknerista pohjoiseen, ja sen historiallinen keskusta on 68 metriä syvän Zellinjärven läntisellä rannalla. Kaupungin oma kotivuori on 1 965 metrin korkuinen Schmittenhöhe.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Pešićan jäätikköjärvi Bjelasican rinteellä] jääkauden perua — Bjelasica on vuorijono Kolašinin lähellä, ja sen korkein huippu Crna Glava kohoaa 2 139 metriin. Jono rajautuu Lim- ja Tara-jokiin, ja siinä on kymmenen yli 2 000 metrin huippua ja kuusi jäätikköjärveä. Pešićan järvi on niistä toiseksi suurimpia: se on noin 290 metriä pitkä ja sijaitsee noin 1 800 metrin korkeudessa Crna Glavan juurella. Kesäisin rinteillä toimivat paimenten katunit eli vuoristomajat, joissa yöpyy nykyään myös retkeilijöitä. Bjelasica ja Durmitor ovat Montenegron vuoristomatkailun keskuksia, ja Kolašinin hiihtokeskus houkuttaa vuorelle myös talvella.
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:hahmotelma-millstatt) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Millstätter See (luonto · järvi)
+Tietoruudun teksti: Millstätter See eli Millstattin järvi on järvi Kärntenissä Itävallassa. Se sijaitsee 588 metrin korkeudessa Gurktalin Alpeilla Spittal an der Draun kaupungin lähellä, ja sen pinta-ala on 13,3 neliökilometriä. Se on Kärntenin toiseksi suurin järvi Wörthersee jälkeen, mutta 142 metrin syvyydellään selvästi tilavin. Jyrkkien rantojensa vuoksi järvi on vuonomainen. Pohjoisessa kohoavat jopa 2 100 metrin korkuiset Millstätter Alpe -vuoret suojaavat järveä kylmiltä tuulilta, joten veden lämpötila voi nousta kesällä 25 asteeseen. Järven nimi tulee pohjoisrannalla olevasta Millstattin kauppalasta, ja lähes asumaton eteläranta on ollut suojelualue vuodesta 1970.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Luonto: Järvi, jonka pohjalla kasvatettiin riisiä] 1864–1870 — Neusiedlerjärvi on arojärvi, joka ei ole missään kohtaa 1,8 metriä syvempi eikä laske vettään mihinkään jokeen. Vuosina 1864–1870 se kuivui kokonaan, ja tyhjään pohjaan kylvettiin riisiä. Vuonna 1872 järvi oli taas täynnä. Noin puolet pinta-alasta on ruovikkoa, joka on Tonavan suiston jälkeen Euroopan laajin. Järvi on 34 kilometriä pitkä, ja matka riittää maapallon kaarevuuteen: 22 kilometrin päähän toiselle rannalle ei näy kymmenmetrisessä mastossa palava varoitusvalo.
+- [Sofia — kaupunkilehti / Arki ja tavat: Vesi tulee lämpimänä maasta] Sofian alla on 49 kivennäis- ja lämpölähdettä. Keskustan lähde antaa vettä 110 litraa sekunnissa, ja sen päälle valmistui vuonna 1913 suuri kylpylä, jonka pienimmissä altaissa vesi oli 37- ja 46-asteista. Kylpylä suljettiin 1986, ja nykyään talon toisessa puoliskossa on kaupunginmuseo. Seinustalla on silti yhä julkisia hanoja, joista tulee lämmintä lähdevettä — niiden luona seisoo joka päivä ihmisiä pullot ja kanisterit mukanaan.
+
+### 23.1
+KYSYMYS: Miksi järvi on niin syvä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Millstätter See (luonto · järvi)
+Tietoruudun teksti: Millstätter See eli Millstattin järvi on järvi Kärntenissä Itävallassa. Se sijaitsee 588 metrin korkeudessa Gurktalin Alpeilla Spittal an der Draun kaupungin lähellä, ja sen pinta-ala on 13,3 neliökilometriä. Se on Kärntenin toiseksi suurin järvi Wörthersee jälkeen, mutta 142 metrin syvyydellään selvästi tilavin. Jyrkkien rantojensa vuoksi järvi on vuonomainen. Pohjoisessa kohoavat jopa 2 100 metrin korkuiset Millstätter Alpe -vuoret suojaavat järveä kylmiltä tuulilta, joten veden lämpötila voi nousta kesällä 25 asteeseen. Järven nimi tulee pohjoisrannalla olevasta Millstattin kauppalasta, ja lähes asumaton eteläranta on ollut suojelualue vuodesta 1970.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Luonto: Järvi, jonka pohjalla kasvatettiin riisiä] 1864–1870 — Neusiedlerjärvi on arojärvi, joka ei ole missään kohtaa 1,8 metriä syvempi eikä laske vettään mihinkään jokeen. Vuosina 1864–1870 se kuivui kokonaan, ja tyhjään pohjaan kylvettiin riisiä. Vuonna 1872 järvi oli taas täynnä. Noin puolet pinta-alasta on ruovikkoa, joka on Tonavan suiston jälkeen Euroopan laajin. Järvi on 34 kilometriä pitkä, ja matka riittää maapallon kaarevuuteen: 22 kilometrin päähän toiselle rannalle ei näy kymmenmetrisessä mastossa palava varoitusvalo.
+
+### 23.2
+KYSYMYS: Miksi vesi on lämmintä kesällä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Millstätter See (luonto · järvi)
+Tietoruudun teksti: Millstätter See eli Millstattin järvi on järvi Kärntenissä Itävallassa. Se sijaitsee 588 metrin korkeudessa Gurktalin Alpeilla Spittal an der Draun kaupungin lähellä, ja sen pinta-ala on 13,3 neliökilometriä. Se on Kärntenin toiseksi suurin järvi Wörthersee jälkeen, mutta 142 metrin syvyydellään selvästi tilavin. Jyrkkien rantojensa vuoksi järvi on vuonomainen. Pohjoisessa kohoavat jopa 2 100 metrin korkuiset Millstätter Alpe -vuoret suojaavat järveä kylmiltä tuulilta, joten veden lämpötila voi nousta kesällä 25 asteeseen. Järven nimi tulee pohjoisrannalla olevasta Millstattin kauppalasta, ja lähes asumaton eteläranta on ollut suojelualue vuodesta 1970.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sofia — kaupunkilehti / Arki ja tavat: Vesi tulee lämpimänä maasta] Sofian alla on 49 kivennäis- ja lämpölähdettä. Keskustan lähde antaa vettä 110 litraa sekunnissa, ja sen päälle valmistui vuonna 1913 suuri kylpylä, jonka pienimmissä altaissa vesi oli 37- ja 46-asteista. Kylpylä suljettiin 1986, ja nykyään talon toisessa puoliskossa on kaupunginmuseo. Seinustalla on silti yhä julkisia hanoja, joista tulee lämmintä lähdevettä — niiden luona seisoo joka päivä ihmisiä pullot ja kanisterit mukanaan.
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:hahmotelma-oetscher) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ötscher (luonto · vuori)
+Tietoruudun teksti: Ötscher on 1 893 metriä korkea huomattava huippu Ala-Itävallan lounaisosassa. Sen nimellä on slaavilaiset juuret, ja se tarkoittaa suunnilleen sanan isä pienennösmuotoa. Ötscherin seutu kuuluu Ybbstalin Alppeihin, jotka ovat osa Pohjoisia kalkkialppeja. Lilienfeldin ja Scheibbsin piirikuntien raja kulkee suoraan sen huipulla.
+
+### 24.1
+KYSYMYS: Mistä Ötscherin nimi tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ötscher (luonto · vuori)
+Tietoruudun teksti: Ötscher on 1 893 metriä korkea huomattava huippu Ala-Itävallan lounaisosassa. Sen nimellä on slaavilaiset juuret, ja se tarkoittaa suunnilleen sanan isä pienennösmuotoa. Ötscherin seutu kuuluu Ybbstalin Alppeihin, jotka ovat osa Pohjoisia kalkkialppeja. Lilienfeldin ja Scheibbsin piirikuntien raja kulkee suoraan sen huipulla.
+
+### 24.2
+KYSYMYS: Missä Ybbstalin Alpit sijaitsevat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ötscher (luonto · vuori)
+Tietoruudun teksti: Ötscher on 1 893 metriä korkea huomattava huippu Ala-Itävallan lounaisosassa. Sen nimellä on slaavilaiset juuret, ja se tarkoittaa suunnilleen sanan isä pienennösmuotoa. Ötscherin seutu kuuluu Ybbstalin Alppeihin, jotka ovat osa Pohjoisia kalkkialppeja. Lilienfeldin ja Scheibbsin piirikuntien raja kulkee suoraan sen huipulla.
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-grossvenediger) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großvenediger (luonto · vuori)
+Tietoruudun teksti: Großvenediger on Venediger-ryhmän päähuippu Hohe Tauernin vuoristossa Tirolin (Itä-Tirol) ja Salzburgin rajalla. Sitä pidetään yleensä Itävallan neljänneksi korkeimpana vuorena, ja jäätikön peittämä huippu kuuluu Hohe Tauernin kansallispuistoon. Alun perin vuorta kutsuttiin nimellä Stützerkopf, ja nimi Großvenediger, suuri venetsialainen, on ensimmäisen kerran kirjattu vuoden 1797 rajamittauksesta; nimen alkuperä on epäselvä, ja se juontuu todennäköisesti solia ylittäneistä venetsialaisista kauppiaista. Ensimmäinen onnistunut nousu tehtiin 3. syyskuuta 1841 Josef Schwabin johtamana, ja mukana oli kirjailija ja vuorikiipeilijä Ignaz von Kürsinger.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Whitehorse — kaupunkilehti / Laakso, sää ja tie: Kolme vuorta ja määräys numero 426] Kaupunkia kehystää kolme vuorta: Grey Mountain idässä, Mount Sumanik luoteessa ja Golden Horn Mountain etelässä. Lempinimi erämaakaupunki on ansaittu kahdesti. Ensinnäkin pinta-alaa on 413,94 neliökilometriä ja metropolialueella 8 465, vaikka asukkaita on 28 201 — Whitehorse on Kanadan kuudenneksikymmenenneljäs kaupunki pinta-alaltaan. Toiseksi kaupunki on itse päättänyt pitää metsänsä: vuoden 1975 määräys numero 426 rajoittaa moottoriajoneuvot merkityille teille suojelluilla alueilla, jotta ympäristön laatu säilyy.
+- [Slovakia — maalehti / Luonto: Huipulle köysiradalla] 1793 — Lomnický štít on Korkeiden Tatrojen toiseksi korkein huippu, 2634 metriä. Ensimmäinen kirjattu nousu tehtiin 16. elokuuta 1793, kun englantilainen matkailija Robert Townson kiipesi sinne oppaan kanssa. Hän mittasi korkeudeksi 2633 metriä eli vain metrin liian vähän. Talvella huipulle noustiin ensimmäisen kerran 1891. Vuodesta 1940 lähtien Tatranská Lomnicasta on päässyt huipulle köysiradalla, ja siellä saa viipyä 50 minuuttia. Huipun asemalla toimii ympärivuotisesti aurinko-observatorio ja sääasema.
+- [Kilimandžaro — kaupunkilehti / Kilimanjaro: Ensimmäinen huipulle] Saksalainen maantieteilijä Hans Meyer yritti nousta Kibon huipulle jo 1887, mutta joutui kääntymään takaisin puutteellisten varusteiden vuoksi. Toisella yrityksellä 1889 hän eteni yhdessä itävaltalaisen vuorikiipeilijän Ludwig Purtschellerin ja paikallisen oppaan Yohane Lauwon kanssa, ja lokakuun 6. päivänä he saavuttivat Kibon kraatterin reunan korkeimman kohdan. Meyer nimesi huipun Kaiser-Wilhelm-Spitzeksi keisari Vilhelmin mukaan; nimi vaihtui Uhuru Peakiksi eli Vapauden huipuksi vasta Tanganjikan itsenäistyttyä 1960-luvun alussa.
+
+### 25.1
+KYSYMYS: Miksi vuorta kutsutaan nimellä Suuri venetsialainen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großvenediger (luonto · vuori)
+Tietoruudun teksti: Großvenediger on Venediger-ryhmän päähuippu Hohe Tauernin vuoristossa Tirolin (Itä-Tirol) ja Salzburgin rajalla. Sitä pidetään yleensä Itävallan neljänneksi korkeimpana vuorena, ja jäätikön peittämä huippu kuuluu Hohe Tauernin kansallispuistoon. Alun perin vuorta kutsuttiin nimellä Stützerkopf, ja nimi Großvenediger, suuri venetsialainen, on ensimmäisen kerran kirjattu vuoden 1797 rajamittauksesta; nimen alkuperä on epäselvä, ja se juontuu todennäköisesti solia ylittäneistä venetsialaisista kauppiaista. Ensimmäinen onnistunut nousu tehtiin 3. syyskuuta 1841 Josef Schwabin johtamana, ja mukana oli kirjailija ja vuorikiipeilijä Ignaz von Kürsinger.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Whitehorse — kaupunkilehti / Laakso, sää ja tie: Kolme vuorta ja määräys numero 426] Kaupunkia kehystää kolme vuorta: Grey Mountain idässä, Mount Sumanik luoteessa ja Golden Horn Mountain etelässä. Lempinimi erämaakaupunki on ansaittu kahdesti. Ensinnäkin pinta-alaa on 413,94 neliökilometriä ja metropolialueella 8 465, vaikka asukkaita on 28 201 — Whitehorse on Kanadan kuudenneksikymmenenneljäs kaupunki pinta-alaltaan. Toiseksi kaupunki on itse päättänyt pitää metsänsä: vuoden 1975 määräys numero 426 rajoittaa moottoriajoneuvot merkityille teille suojelluilla alueilla, jotta ympäristön laatu säilyy.
+
+### 25.2
+KYSYMYS: Kuka nousi huipulle ensimmäisenä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großvenediger (luonto · vuori)
+Tietoruudun teksti: Großvenediger on Venediger-ryhmän päähuippu Hohe Tauernin vuoristossa Tirolin (Itä-Tirol) ja Salzburgin rajalla. Sitä pidetään yleensä Itävallan neljänneksi korkeimpana vuorena, ja jäätikön peittämä huippu kuuluu Hohe Tauernin kansallispuistoon. Alun perin vuorta kutsuttiin nimellä Stützerkopf, ja nimi Großvenediger, suuri venetsialainen, on ensimmäisen kerran kirjattu vuoden 1797 rajamittauksesta; nimen alkuperä on epäselvä, ja se juontuu todennäköisesti solia ylittäneistä venetsialaisista kauppiaista. Ensimmäinen onnistunut nousu tehtiin 3. syyskuuta 1841 Josef Schwabin johtamana, ja mukana oli kirjailija ja vuorikiipeilijä Ignaz von Kürsinger.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Luonto: Huipulle köysiradalla] 1793 — Lomnický štít on Korkeiden Tatrojen toiseksi korkein huippu, 2634 metriä. Ensimmäinen kirjattu nousu tehtiin 16. elokuuta 1793, kun englantilainen matkailija Robert Townson kiipesi sinne oppaan kanssa. Hän mittasi korkeudeksi 2633 metriä eli vain metrin liian vähän. Talvella huipulle noustiin ensimmäisen kerran 1891. Vuodesta 1940 lähtien Tatranská Lomnicasta on päässyt huipulle köysiradalla, ja siellä saa viipyä 50 minuuttia. Huipun asemalla toimii ympärivuotisesti aurinko-observatorio ja sääasema.
+- [Kilimandžaro — kaupunkilehti / Kilimanjaro: Ensimmäinen huipulle] Saksalainen maantieteilijä Hans Meyer yritti nousta Kibon huipulle jo 1887, mutta joutui kääntymään takaisin puutteellisten varusteiden vuoksi. Toisella yrityksellä 1889 hän eteni yhdessä itävaltalaisen vuorikiipeilijän Ludwig Purtschellerin ja paikallisen oppaan Yohane Lauwon kanssa, ja lokakuun 6. päivänä he saavuttivat Kibon kraatterin reunan korkeimman kohdan. Meyer nimesi huipun Kaiser-Wilhelm-Spitzeksi keisari Vilhelmin mukaan; nimi vaihtui Uhuru Peakiksi eli Vapauden huipuksi vasta Tanganjikan itsenäistyttyä 1960-luvun alussa.
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

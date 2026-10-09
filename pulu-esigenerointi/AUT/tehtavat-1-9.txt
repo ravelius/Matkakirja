@@ -1,0 +1,188 @@
+================ KOHTA 41 (kohde:hahmotelma-steyr) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Steyr (tekniikka)
+Tietoruudun teksti: Steyr on Ylä-Itävallan osavaltion kaupunki, joka on Itävallan kahdestoista väkirikkain kaupunki ja Ylä-Itävallan kolmanneksi suurin. Sillä on pitkä historia valmistuskeskuksena, ja siitä on saanut nimensä useita siellä toimineita valmistajia, kuten entinen Steyr-Daimler-Puch-konserni. Kaupungin läpi virtaavat Steyr- ja Enns-joet, jotka kohtaavat keskustan lähellä Lambergin linnan ja Pyhän Mikaelin kirkon alla. Vuonna 1830 seppä Leopold Werndl perusti Steyriin asetehtaan, jonka hänen poikansa Josef ja Franz Werndl perustivat uudelleen osakeyhtiöksi vuonna 1864; vuodesta 1869 sen nimi oli Österreichische Waffenfabriksgesellschaft.
+
+### 41.1
+KYSYMYS: Mitä Steyr-Daimler-Puch oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Steyr (tekniikka)
+Tietoruudun teksti: Steyr on Ylä-Itävallan osavaltion kaupunki, joka on Itävallan kahdestoista väkirikkain kaupunki ja Ylä-Itävallan kolmanneksi suurin. Sillä on pitkä historia valmistuskeskuksena, ja siitä on saanut nimensä useita siellä toimineita valmistajia, kuten entinen Steyr-Daimler-Puch-konserni. Kaupungin läpi virtaavat Steyr- ja Enns-joet, jotka kohtaavat keskustan lähellä Lambergin linnan ja Pyhän Mikaelin kirkon alla. Vuonna 1830 seppä Leopold Werndl perusti Steyriin asetehtaan, jonka hänen poikansa Josef ja Franz Werndl perustivat uudelleen osakeyhtiöksi vuonna 1864; vuodesta 1869 sen nimi oli Österreichische Waffenfabriksgesellschaft.
+
+### 41.2
+KYSYMYS: Missä Steyr ja Enns kohtaavat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Steyr (tekniikka)
+Tietoruudun teksti: Steyr on Ylä-Itävallan osavaltion kaupunki, joka on Itävallan kahdestoista väkirikkain kaupunki ja Ylä-Itävallan kolmanneksi suurin. Sillä on pitkä historia valmistuskeskuksena, ja siitä on saanut nimensä useita siellä toimineita valmistajia, kuten entinen Steyr-Daimler-Puch-konserni. Kaupungin läpi virtaavat Steyr- ja Enns-joet, jotka kohtaavat keskustan lähellä Lambergin linnan ja Pyhän Mikaelin kirkon alla. Vuonna 1830 seppä Leopold Werndl perusti Steyriin asetehtaan, jonka hänen poikansa Josef ja Franz Werndl perustivat uudelleen osakeyhtiöksi vuonna 1864; vuodesta 1869 sen nimi oli Österreichische Waffenfabriksgesellschaft.
+
+### 41.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+================ KOHTA 42 (kohde:hahmotelma-hall-in-tirol) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hall in Tirol (kauppa)
+Tietoruudun teksti: Hall in Tirol on kaupunki Innsbruck-Landin piirikunnassa Tirolissa Itävallassa, noin viisi kilometriä Innsbruckista itään Inn-laaksossa 574 metrin korkeudessa. Hall mainitaan ensimmäisen kerran suolatehtaana Thaurin linnan lähellä vuoden 1232 asiakirjassa, ja nykyinen nimi on vuodelta 1256; kuten Halle, Hallein, Schwäbisch Hall ja Hallstatt, se johtuu keltinkielisestä suolaa tarkoittavasta sanasta. Absamin suolakaivos Hall-laaksossa oli 1200-luvulta alkaen kaupungin pääelinkeino: ensimmäinen kaivoskäytävä tehtiin vuonna 1272 kreivi Meinhard II:n käskystä, ja suolavesi johdettiin 10 kilometrin pituista putkea pitkin haihdutusaltaalle. Hallista tuli kaupunki vuonna 1303, ja suolakauppa vei tavaraa aina Sveitsiin, Mustaanmetsään ja Reinin laaksoon asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salvador — kaupunkilehti / Salvador: Nimi joka syntyi pyhäinpäivänä] Kaupungin nimi tulee juhlapäivästä. Italialainen purjehtija Amerigo Vespucci näki lahden pyhäinpäivänä 1. marraskuuta 1502 ja nimesi sen kotiseurakuntansa mukaan Firenzessä: Kaikkien pyhien lahdeksi. Portugalilaiset asettuivat niemelle 1549 Tomé de Sousan johdolla ja antoivat linnoitukselleen nimen São Salvador da Bahia de Todos os Santos, Kaikkien pyhien lahden pyhä Vapahtaja. Täältä hallittiin koko Portugalin Brasiliaa vuoteen 1763, jolloin hallinto siirrettiin Rio de Janeiroon, josta tuli samalla varakuningaskunnan pääkaupunki.
+- [Bolivia — maalehti / Ruoka: Kansallisjuoma, jonka nimi tulee rautatieslangista] Singani tislataan valkoisesta Muscat of Alexandria -rypäleestä, ja sitä tehdään vain Boliviassa. Laki vaatii, että viinitarhat ovat vähintään 1 600 metrissä; korkeimmat yltävät lähes kolmeen kilometriin. Viljelyalaa on noin 8 000 hehtaaria, kun konjakilla sitä on 89 000. 1800-luvulla Andeille tulleet brittiläiset ja yhdysvaltalaiset ratainsinöörit kaipasivat kotoista giniä inkiväärikaljan kanssa; kun kumpaakaan ei ollut, he sekoittivat singania ja mitä tahansa kuplivaa. Rautatiesanastossa shoofly tarkoittaa väliaikaista kiertoraidetta — ja juomasta tuli chuflay.
+- [Itävalta — maalehti / Ruoka: Jälkiruoka, joka syntyi vahingosta] 1854 — Kaiserschmarrn tehdään ohukaistaikinasta, johon vatkataan valkuaisvaahto. Paistettu levy revitään pannussa paloiksi, päälle siivilöidään tomusokeria ja viereen tulee zwetschkenröster eli haudutetut luumut, joskus omenasose. Nimi tarkoittaa suunnilleen keisarin sotkua. Tarinan mukaan annos tarjottiin ensimmäisen kerran vuonna 1854 keisarinna Elisabetille ja repesi tarjolle pantaessa vahingossa rikki. Vasta sen jälkeen se nimettiin uudelleen keisari Frans Joosefin mukaan.
+
+### 42.1
+KYSYMYS: Mistä Hall-nimi tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hall in Tirol (kauppa)
+Tietoruudun teksti: Hall in Tirol on kaupunki Innsbruck-Landin piirikunnassa Tirolissa Itävallassa, noin viisi kilometriä Innsbruckista itään Inn-laaksossa 574 metrin korkeudessa. Hall mainitaan ensimmäisen kerran suolatehtaana Thaurin linnan lähellä vuoden 1232 asiakirjassa, ja nykyinen nimi on vuodelta 1256; kuten Halle, Hallein, Schwäbisch Hall ja Hallstatt, se johtuu keltinkielisestä suolaa tarkoittavasta sanasta. Absamin suolakaivos Hall-laaksossa oli 1200-luvulta alkaen kaupungin pääelinkeino: ensimmäinen kaivoskäytävä tehtiin vuonna 1272 kreivi Meinhard II:n käskystä, ja suolavesi johdettiin 10 kilometrin pituista putkea pitkin haihdutusaltaalle. Hallista tuli kaupunki vuonna 1303, ja suolakauppa vei tavaraa aina Sveitsiin, Mustaanmetsään ja Reinin laaksoon asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salvador — kaupunkilehti / Salvador: Nimi joka syntyi pyhäinpäivänä] Kaupungin nimi tulee juhlapäivästä. Italialainen purjehtija Amerigo Vespucci näki lahden pyhäinpäivänä 1. marraskuuta 1502 ja nimesi sen kotiseurakuntansa mukaan Firenzessä: Kaikkien pyhien lahdeksi. Portugalilaiset asettuivat niemelle 1549 Tomé de Sousan johdolla ja antoivat linnoitukselleen nimen São Salvador da Bahia de Todos os Santos, Kaikkien pyhien lahden pyhä Vapahtaja. Täältä hallittiin koko Portugalin Brasiliaa vuoteen 1763, jolloin hallinto siirrettiin Rio de Janeiroon, josta tuli samalla varakuningaskunnan pääkaupunki.
+- [Bolivia — maalehti / Ruoka: Kansallisjuoma, jonka nimi tulee rautatieslangista] Singani tislataan valkoisesta Muscat of Alexandria -rypäleestä, ja sitä tehdään vain Boliviassa. Laki vaatii, että viinitarhat ovat vähintään 1 600 metrissä; korkeimmat yltävät lähes kolmeen kilometriin. Viljelyalaa on noin 8 000 hehtaaria, kun konjakilla sitä on 89 000. 1800-luvulla Andeille tulleet brittiläiset ja yhdysvaltalaiset ratainsinöörit kaipasivat kotoista giniä inkiväärikaljan kanssa; kun kumpaakaan ei ollut, he sekoittivat singania ja mitä tahansa kuplivaa. Rautatiesanastossa shoofly tarkoittaa väliaikaista kiertoraidetta — ja juomasta tuli chuflay.
+- [Itävalta — maalehti / Ruoka: Jälkiruoka, joka syntyi vahingosta] 1854 — Kaiserschmarrn tehdään ohukaistaikinasta, johon vatkataan valkuaisvaahto. Paistettu levy revitään pannussa paloiksi, päälle siivilöidään tomusokeria ja viereen tulee zwetschkenröster eli haudutetut luumut, joskus omenasose. Nimi tarkoittaa suunnilleen keisarin sotkua. Tarinan mukaan annos tarjottiin ensimmäisen kerran vuonna 1854 keisarinna Elisabetille ja repesi tarjolle pantaessa vahingossa rikki. Vasta sen jälkeen se nimettiin uudelleen keisari Frans Joosefin mukaan.
+
+### 42.2
+KYSYMYS: Miten suolavesi kulki kaivokselta kaupunkiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hall in Tirol (kauppa)
+Tietoruudun teksti: Hall in Tirol on kaupunki Innsbruck-Landin piirikunnassa Tirolissa Itävallassa, noin viisi kilometriä Innsbruckista itään Inn-laaksossa 574 metrin korkeudessa. Hall mainitaan ensimmäisen kerran suolatehtaana Thaurin linnan lähellä vuoden 1232 asiakirjassa, ja nykyinen nimi on vuodelta 1256; kuten Halle, Hallein, Schwäbisch Hall ja Hallstatt, se johtuu keltinkielisestä suolaa tarkoittavasta sanasta. Absamin suolakaivos Hall-laaksossa oli 1200-luvulta alkaen kaupungin pääelinkeino: ensimmäinen kaivoskäytävä tehtiin vuonna 1272 kreivi Meinhard II:n käskystä, ja suolavesi johdettiin 10 kilometrin pituista putkea pitkin haihdutusaltaalle. Hallista tuli kaupunki vuonna 1303, ja suolakauppa vei tavaraa aina Sveitsiin, Mustaanmetsään ja Reinin laaksoon asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Gao — kaupunkilehti / Songhain kultainen valtakunta: Kulta ja suola kulkivat jokea pitkin] Kulta-suolakauppa oli koko Sahelin talouden selkäranka, ja Songhain valtakunta hallitsi sen tärkeintä solmukohtaa. Pohjoisesta tuotu suola ja etelästä noussut kulta vaihtoivat kuljetusvälinettä Timbuktussa, kun kamelikaravaanit kohtasivat joella kulkevat lastiveneet. Tavarat matkasivat vielä noin 800 kilometrin matkan Nigerjokea pitkin Djennéstä Gaohon ja takaisin, ja jokivarren kaupungit vaurastuivat tästä liikenteestä vuosisatojen ajan. Ilmasta katsottuna joki näyttää kapealta vihreältä nauhalta hiekan keskellä - juuri tämä nauha teki Songhaista mahdollisen keskellä maailman suurinta aavikkoa.
+- [Mekka — kaupunkilehti / Mekka: Kaivo, jolla oli oma ammattikunta] Kaksikymmentä metriä Kaabasta itään on Zamzamin kaivo, jonka varassa kaupunki eli ennen vesijohtoja. Se on noin kolmekymmentä metriä syvä ja halkaisijaltaan runsaasta metristä kahteen ja puoleen; yläpuolisko on hiekkakerroksissa kivimuurattuna, alapuolisko louhittu kallioon. Perimätiedon mukaan kaivo avautui, kun Hagar etsi vettä pojalleen Ismailille. Vettä nostettiin köydellä ja ämpärillä, ja jakelua hoiti oma ammattikunta, zamzamit: 1800-luvulla tulijalle osoitettiin oma zamzami, joka säilytti hänen nimellään merkittyä ruukkua ja kantoi vettä koko matkan. Vuonna 1964 kaivon suu siirrettiin kellariin, ja nyt sitä katsellaan lasin takaa.
+
+### 42.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+================ KOHTA 43 (kohde:hahmotelma-ferlach) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ferlach (kauppa)
+Tietoruudun teksti: Ferlach on Klagenfurt-Landin piirikunnan kaupunki Kärntenissä ja Itävallan eteläisin kaupunki. Se on tunnettu vuosisatoja vanhasta asesepänperinteestään, joka on ollut osa Itävallan aineetonta kulttuuriperintöä vuodesta 2010. Kaupunki sijaitsee Draun Rosental-laaksossa noin 17 kilometriä Klagenfurtista etelään, ja Karavankien harja muodostaa etelässä rajan Slovenian kanssa. Kärntenin herttuakunnan pääkaupungin siirto lähellä olevaan Klagenfurtiin noin vuoden 1518 tienoilla edisti ratkaisevasti Ferlachin kehittymistä ampuma-asevalmistuksen keskukseksi. Keisarinna Maria Teresian aikana kaupungin asesepistä tuli Habsburgien monarkian pääasiallisia asetoimittajia, ja Ferlachin aseita käyttivät myös Espanjan, Ranskan ja Turkin armeijat.
+
+### 43.1
+KYSYMYS: Miksi Ferlachista tuli asesepänkaupunki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ferlach (kauppa)
+Tietoruudun teksti: Ferlach on Klagenfurt-Landin piirikunnan kaupunki Kärntenissä ja Itävallan eteläisin kaupunki. Se on tunnettu vuosisatoja vanhasta asesepänperinteestään, joka on ollut osa Itävallan aineetonta kulttuuriperintöä vuodesta 2010. Kaupunki sijaitsee Draun Rosental-laaksossa noin 17 kilometriä Klagenfurtista etelään, ja Karavankien harja muodostaa etelässä rajan Slovenian kanssa. Kärntenin herttuakunnan pääkaupungin siirto lähellä olevaan Klagenfurtiin noin vuoden 1518 tienoilla edisti ratkaisevasti Ferlachin kehittymistä ampuma-asevalmistuksen keskukseksi. Keisarinna Maria Teresian aikana kaupungin asesepistä tuli Habsburgien monarkian pääasiallisia asetoimittajia, ja Ferlachin aseita käyttivät myös Espanjan, Ranskan ja Turkin armeijat.
+
+### 43.2
+KYSYMYS: Missä Ferlach on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ferlach (kauppa)
+Tietoruudun teksti: Ferlach on Klagenfurt-Landin piirikunnan kaupunki Kärntenissä ja Itävallan eteläisin kaupunki. Se on tunnettu vuosisatoja vanhasta asesepänperinteestään, joka on ollut osa Itävallan aineetonta kulttuuriperintöä vuodesta 2010. Kaupunki sijaitsee Draun Rosental-laaksossa noin 17 kilometriä Klagenfurtista etelään, ja Karavankien harja muodostaa etelässä rajan Slovenian kanssa. Kärntenin herttuakunnan pääkaupungin siirto lähellä olevaan Klagenfurtiin noin vuoden 1518 tienoilla edisti ratkaisevasti Ferlachin kehittymistä ampuma-asevalmistuksen keskukseksi. Keisarinna Maria Teresian aikana kaupungin asesepistä tuli Habsburgien monarkian pääasiallisia asetoimittajia, ja Ferlachin aseita käyttivät myös Espanjan, Ranskan ja Turkin armeijat.
+
+### 43.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+================ KOHTA 44 (kohde:hahmotelma-st-anton) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: St. Anton am Arlberg (kulttuuri)
+Tietoruudun teksti: St. Anton am Arlberg, tavallisesti St. Anton, on kylä ja hiihtokeskus Tirolin osavaltiossa Itävallassa. Se sijaitsee Tirolin Alpeilla, ja köysiradat ja tuolihissit nousevat siellä 2 811 metriin, jolloin pystysuora pudotus on 1 507 metriä. St. Anton on suosittu kesäkohde myös vaeltajien ja vuorikiipeilijöiden keskuudessa. Hiihdolla on St. Antonissa pitkä historia: alueen hiihtoopettajat muuttivat 1930-luvulla Yhdysvaltoihin ja auttoivat tekemään lajin tunnetuksi. Kylä on osa Arlbergin hiihtoaluetta, johon kuuluu 94 köysirataa ja hissiä sekä 340 kilometriä kunnostettuja rinteitä. Lähellä olevassa Pyhän Christophin kylässä paimen Heinrich Findelkind rakensi 1300-luvulla hospiisin suojaksi Arlbergin solan ylittäville matkaajille.
+
+### 44.1
+KYSYMYS: Mitä Arlbergin hospiisi oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: St. Anton am Arlberg (kulttuuri)
+Tietoruudun teksti: St. Anton am Arlberg, tavallisesti St. Anton, on kylä ja hiihtokeskus Tirolin osavaltiossa Itävallassa. Se sijaitsee Tirolin Alpeilla, ja köysiradat ja tuolihissit nousevat siellä 2 811 metriin, jolloin pystysuora pudotus on 1 507 metriä. St. Anton on suosittu kesäkohde myös vaeltajien ja vuorikiipeilijöiden keskuudessa. Hiihdolla on St. Antonissa pitkä historia: alueen hiihtoopettajat muuttivat 1930-luvulla Yhdysvaltoihin ja auttoivat tekemään lajin tunnetuksi. Kylä on osa Arlbergin hiihtoaluetta, johon kuuluu 94 köysirataa ja hissiä sekä 340 kilometriä kunnostettuja rinteitä. Lähellä olevassa Pyhän Christophin kylässä paimen Heinrich Findelkind rakensi 1300-luvulla hospiisin suojaksi Arlbergin solan ylittäville matkaajille.
+
+### 44.2
+KYSYMYS: Miksi St. Anton on hiihdon kehto?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: St. Anton am Arlberg (kulttuuri)
+Tietoruudun teksti: St. Anton am Arlberg, tavallisesti St. Anton, on kylä ja hiihtokeskus Tirolin osavaltiossa Itävallassa. Se sijaitsee Tirolin Alpeilla, ja köysiradat ja tuolihissit nousevat siellä 2 811 metriin, jolloin pystysuora pudotus on 1 507 metriä. St. Anton on suosittu kesäkohde myös vaeltajien ja vuorikiipeilijöiden keskuudessa. Hiihdolla on St. Antonissa pitkä historia: alueen hiihtoopettajat muuttivat 1930-luvulla Yhdysvaltoihin ja auttoivat tekemään lajin tunnetuksi. Kylä on osa Arlbergin hiihtoaluetta, johon kuuluu 94 köysirataa ja hissiä sekä 340 kilometriä kunnostettuja rinteitä. Lähellä olevassa Pyhän Christophin kylässä paimen Heinrich Findelkind rakensi 1300-luvulla hospiisin suojaksi Arlbergin solan ylittäville matkaajille.
+
+### 44.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+================ KOHTA 45 (kohde:hahmotelma-oberndorf) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oberndorf (historia)
+Tietoruudun teksti: Oberndorf bei Salzburg on pieni kaupunki Salzburgin osavaltiossa Itävallassa, noin 17 kilometriä Salzburgin kaupungista pohjoiseen Salzach-joen varrella. Joen toisella puolella on Baijerin Laufen. Kaupunki jaettiin kahtia Napoleonin sotien jälkeen, kun Salzburgin arkkipiispakunta jaettiin vuonna 1816 Wienin kongressin jälkeen Baijerin kuningaskunnan ja Itävallan keisarikunnan kesken. Oberndorf on tunnettu maailmanlaajuisesti Stille Nacht -joululaulun syntypaikkana: koulumestari Franz Xaver Gruber ja nuori pappi Joseph Mohr esittivät laulun ensimmäisen kerran jouluaattona 1818 Nikolauskirchessä. 1890-luvulla Salzachin tulvat tuhosivat suuren osan Oberndorfia, kirkko purettiin lopulta ja sen paikalle rakennettiin muistokappeli vuonna 1937.
+
+### 45.1
+KYSYMYS: Kuka sävelsi Stille Nachtin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oberndorf (historia)
+Tietoruudun teksti: Oberndorf bei Salzburg on pieni kaupunki Salzburgin osavaltiossa Itävallassa, noin 17 kilometriä Salzburgin kaupungista pohjoiseen Salzach-joen varrella. Joen toisella puolella on Baijerin Laufen. Kaupunki jaettiin kahtia Napoleonin sotien jälkeen, kun Salzburgin arkkipiispakunta jaettiin vuonna 1816 Wienin kongressin jälkeen Baijerin kuningaskunnan ja Itävallan keisarikunnan kesken. Oberndorf on tunnettu maailmanlaajuisesti Stille Nacht -joululaulun syntypaikkana: koulumestari Franz Xaver Gruber ja nuori pappi Joseph Mohr esittivät laulun ensimmäisen kerran jouluaattona 1818 Nikolauskirchessä. 1890-luvulla Salzachin tulvat tuhosivat suuren osan Oberndorfia, kirkko purettiin lopulta ja sen paikalle rakennettiin muistokappeli vuonna 1937.
+
+### 45.2
+KYSYMYS: Miksi Oberndorf ja Laufen on jaettu kahtia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oberndorf (historia)
+Tietoruudun teksti: Oberndorf bei Salzburg on pieni kaupunki Salzburgin osavaltiossa Itävallassa, noin 17 kilometriä Salzburgin kaupungista pohjoiseen Salzach-joen varrella. Joen toisella puolella on Baijerin Laufen. Kaupunki jaettiin kahtia Napoleonin sotien jälkeen, kun Salzburgin arkkipiispakunta jaettiin vuonna 1816 Wienin kongressin jälkeen Baijerin kuningaskunnan ja Itävallan keisarikunnan kesken. Oberndorf on tunnettu maailmanlaajuisesti Stille Nacht -joululaulun syntypaikkana: koulumestari Franz Xaver Gruber ja nuori pappi Joseph Mohr esittivät laulun ensimmäisen kerran jouluaattona 1818 Nikolauskirchessä. 1890-luvulla Salzachin tulvat tuhosivat suuren osan Oberndorfia, kirkko purettiin lopulta ja sen paikalle rakennettiin muistokappeli vuonna 1937.
+
+### 45.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI

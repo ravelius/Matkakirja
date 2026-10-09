@@ -1,0 +1,230 @@
+================ KOHTA 1 (kohde:groglockner) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großglockner (luonto · vuori)
+Tietoruudun teksti: Großglockner on 3 798 metriä Adrianmeren pinnasta ja siten Itävallan korkein vuori sekä Alppien korkein Brennerin solan itäpuolella. Se kuuluu Hohe Tauernin vuoriston Glockner-ryhmään Keski-Itäalppien pääharjanteella. Sen itärinteellä lepää Pasterze, Itävallan laajin jäätikkö.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Luonto: Köysirata rakennettiin jään reunaan, ja jää lähti] 1963 — Pasterze on Itävallan suurin jäätikkö, noin kahdeksan kilometriä pitkä. Vuonna 1963 näköalapaikalta rakennettiin köysirata alas juuri siihen kohtaan, jossa jään reuna silloin oli. Nyt ala-asemalta joutuu kävelemään noin kaksi kilometriä ennen kuin jäätikkö alkaa. Pinta-alasta on 1850-luvun jälkeen sulanut lähes puolet. Jään alta on paljastunut turvetta ja puuta: seitsemäntuhatta vuotta sitten samalla paikalla kasvoi sembramänty, ja karja kävi syömässä ruohoa.
+
+### 1.1
+KYSYMYS: Mikä Pasterze on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großglockner (luonto · vuori)
+Tietoruudun teksti: Großglockner on 3 798 metriä Adrianmeren pinnasta ja siten Itävallan korkein vuori sekä Alppien korkein Brennerin solan itäpuolella. Se kuuluu Hohe Tauernin vuoriston Glockner-ryhmään Keski-Itäalppien pääharjanteella. Sen itärinteellä lepää Pasterze, Itävallan laajin jäätikkö.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Luonto: Köysirata rakennettiin jään reunaan, ja jää lähti] 1963 — Pasterze on Itävallan suurin jäätikkö, noin kahdeksan kilometriä pitkä. Vuonna 1963 näköalapaikalta rakennettiin köysirata alas juuri siihen kohtaan, jossa jään reuna silloin oli. Nyt ala-asemalta joutuu kävelemään noin kaksi kilometriä ennen kuin jäätikkö alkaa. Pinta-alasta on 1850-luvun jälkeen sulanut lähes puolet. Jään alta on paljastunut turvetta ja puuta: seitsemäntuhatta vuotta sitten samalla paikalla kasvoi sembramänty, ja karja kävi syömässä ruohoa.
+
+### 1.2
+KYSYMYS: Miksi korkeus mitataan Adrianmerestä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großglockner (luonto · vuori)
+Tietoruudun teksti: Großglockner on 3 798 metriä Adrianmeren pinnasta ja siten Itävallan korkein vuori sekä Alppien korkein Brennerin solan itäpuolella. Se kuuluu Hohe Tauernin vuoriston Glockner-ryhmään Keski-Itäalppien pääharjanteella. Sen itärinteellä lepää Pasterze, Itävallan laajin jäätikkö.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:wildspitze) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wildspitze (luonto · vuori)
+Tietoruudun teksti: Wildspitzellä on kaksi huippua, ja se kumpi niistä on korkeampi, on vaihtunut kesken kaiken. Kalliosta koostuva eteläinen huippu nousee 3 768 metriin, ja pohjoinen oli pitkään sitä korkeampi — 1800-luvulla se mitattiin 11 947 wieniläisen jalan korkuiseksi. Mutta pohjoinen huippu on lunta ja jäätä, ja sulaminen madalsi sen 1900-luvun loppuun mennessä noin 3 765 metriin. Niinpä korkein kohta on nykyään etelässä, ja samalla ensinousun vuodeksi vaihtui 1848, jolloin Rofenin laakson karjatilallinen ja opas Leander Klotz nousi sinne nimettömän naapurinsa kanssa. Vuori on Ötztalin Alppien ja Pohjois-Tirolin korkein sekä Itävallan toiseksi korkein Großglocknerin jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Rata, joka kiertää vuoren kaksin verroin pidemmäksi] 1854 — Semmeringin rata avattiin vuonna 1854, ja se oli Euroopan ensimmäinen normaaliraiteinen vuoristorautatie. Carl von Ghega johdatti kiskot Gloggnitzista Mürzzuschlagiin vuoren yli. Linnuntietä päätepisteiden väli on 21 kilometriä, mutta rataa on 42, koska nousu piti kiertää loivaksi. Ylin kohta on 898 metrissä. Matkalla on 14 tunnelia, 16 viaduktia ja yli sata holvattua kivisiltaa. Moni piti hanketta mahdottomana, koska kukaan ei tiennyt, jaksaisiko veturi nousta niin jyrkkää.
+- [Uruguay — maalehti / Luonto: Vuori, joka vaihtui kesken kaiken] 1973 — Uruguayn korkein kohta on Cerro Catedral, 513,66 metriä. Se on kukkula Maldonadon departementissa Sierra Carapén ketjussa, joka kuuluu maan halki kulkevaan Cuchilla Grandeen. Nimi tulee huipun kalliomuodoista, jotka muistuttavat kirkon torneja. Vielä vuonna 1973 maan korkeimpana pidettiin Cerro de las Ánimasia, jonka korkeus on 501 metriä — kunnes sotilaallisen karttalaitoksen tutkijat mittasivat Cerro Catedralin uudelleen ja huippu vaihtui. Molemmat jäävät alle Suomen Halticin.
+
+### 2.1
+KYSYMYS: Miksi vuoren korkein huippu vaihtui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wildspitze (luonto · vuori)
+Tietoruudun teksti: Wildspitzellä on kaksi huippua, ja se kumpi niistä on korkeampi, on vaihtunut kesken kaiken. Kalliosta koostuva eteläinen huippu nousee 3 768 metriin, ja pohjoinen oli pitkään sitä korkeampi — 1800-luvulla se mitattiin 11 947 wieniläisen jalan korkuiseksi. Mutta pohjoinen huippu on lunta ja jäätä, ja sulaminen madalsi sen 1900-luvun loppuun mennessä noin 3 765 metriin. Niinpä korkein kohta on nykyään etelässä, ja samalla ensinousun vuodeksi vaihtui 1848, jolloin Rofenin laakson karjatilallinen ja opas Leander Klotz nousi sinne nimettömän naapurinsa kanssa. Vuori on Ötztalin Alppien ja Pohjois-Tirolin korkein sekä Itävallan toiseksi korkein Großglocknerin jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Rata, joka kiertää vuoren kaksin verroin pidemmäksi] 1854 — Semmeringin rata avattiin vuonna 1854, ja se oli Euroopan ensimmäinen normaaliraiteinen vuoristorautatie. Carl von Ghega johdatti kiskot Gloggnitzista Mürzzuschlagiin vuoren yli. Linnuntietä päätepisteiden väli on 21 kilometriä, mutta rataa on 42, koska nousu piti kiertää loivaksi. Ylin kohta on 898 metrissä. Matkalla on 14 tunnelia, 16 viaduktia ja yli sata holvattua kivisiltaa. Moni piti hanketta mahdottomana, koska kukaan ei tiennyt, jaksaisiko veturi nousta niin jyrkkää.
+- [Uruguay — maalehti / Luonto: Vuori, joka vaihtui kesken kaiken] 1973 — Uruguayn korkein kohta on Cerro Catedral, 513,66 metriä. Se on kukkula Maldonadon departementissa Sierra Carapén ketjussa, joka kuuluu maan halki kulkevaan Cuchilla Grandeen. Nimi tulee huipun kalliomuodoista, jotka muistuttavat kirkon torneja. Vielä vuonna 1973 maan korkeimpana pidettiin Cerro de las Ánimasia, jonka korkeus on 501 metriä — kunnes sotilaallisen karttalaitoksen tutkijat mittasivat Cerro Catedralin uudelleen ja huippu vaihtui. Molemmat jäävät alle Suomen Halticin.
+
+### 2.2
+KYSYMYS: Kuka oli Leander Klotz?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wildspitze (luonto · vuori)
+Tietoruudun teksti: Wildspitzellä on kaksi huippua, ja se kumpi niistä on korkeampi, on vaihtunut kesken kaiken. Kalliosta koostuva eteläinen huippu nousee 3 768 metriin, ja pohjoinen oli pitkään sitä korkeampi — 1800-luvulla se mitattiin 11 947 wieniläisen jalan korkuiseksi. Mutta pohjoinen huippu on lunta ja jäätä, ja sulaminen madalsi sen 1900-luvun loppuun mennessä noin 3 765 metriin. Niinpä korkein kohta on nykyään etelässä, ja samalla ensinousun vuodeksi vaihtui 1848, jolloin Rofenin laakson karjatilallinen ja opas Leander Klotz nousi sinne nimettömän naapurinsa kanssa. Vuori on Ötztalin Alppien ja Pohjois-Tirolin korkein sekä Itävallan toiseksi korkein Großglocknerin jälkeen.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:tonava) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Sen varrella on neljä pääkaupunkia — Wien, Bratislava, Budapest ja Belgrad — ja valuma-alue on 817 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Ruoka: Aprikoosi keitetään taikinan sisällä] 1509 — Sana Marille eli aprikoosi on kirjattu Wachaun laaksossa jo vuoden 1509 vaiheilla, ja isot istutukset tehtiin 1890-luvulta alkaen. Nykyään laaksossa kukkii yli satatuhatta aprikoosipuuta, ja Wachauer Marille on EU:n suojaama alkuperänimitys. Kesällä tehdään marillenknödeliä: kokonainen aprikoosi kääritään perunataikinaan, keitetään vedessä ja pyöritetään voissa paahdetuissa korppujauhoissa. Yleisin lajike on nimeltään Klosterneuburger.
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+
+### 3.1
+KYSYMYS: Kuinka monen pääkaupungin läpi Tonava virtaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Sen varrella on neljä pääkaupunkia — Wien, Bratislava, Budapest ja Belgrad — ja valuma-alue on 817 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+
+### 3.2
+KYSYMYS: Mikä Wachaun laakso on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Sen varrella on neljä pääkaupunkia — Wien, Bratislava, Budapest ja Belgrad — ja valuma-alue on 817 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Ruoka: Aprikoosi keitetään taikinan sisällä] 1509 — Sana Marille eli aprikoosi on kirjattu Wachaun laaksossa jo vuoden 1509 vaiheilla, ja isot istutukset tehtiin 1890-luvulta alkaen. Nykyään laaksossa kukkii yli satatuhatta aprikoosipuuta, ja Wachauer Marille on EU:n suojaama alkuperänimitys. Kesällä tehdään marillenknödeliä: kokonainen aprikoosi kääritään perunataikinaan, keitetään vedessä ja pyöritetään voissa paahdetuissa korppujauhoissa. Yleisin lajike on nimeltään Klosterneuburger.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:inn) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inn (luonto · joki)
+Tietoruudun teksti: Inn on 518 kilometrin pituinen joki Sveitsissä, Itävallassa ja Saksassa ja virtaamaltaan Tonavan kolmanneksi suurin sivujoki. Sen valuma-alueen korkein kohta on Piz Berninan huippu 4 049 metrissä. Engadin, joen laakso Sveitsin puolella, on maan ainoa laakso, jonka vedet päätyvät Mustallemerelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sahara — kaupunkilehti / Eliöstö ja maasto: Suolajärviä hiekkameren keskellä] Libyan Fezzanin alueella, keskellä 58 000 neliökilometrin laajuista Awbarin hiekkamerta, piilee yli kaksikymmentä järveä palmulehtoineen. Vettä ei virtaa niihin mistään joesta, joten haihtuminen on tehnyt osasta järvistä lähes viisi kertaa merivettä suolaisempia; suolaa sietävät levät värjäävät joidenkin pinnan punertavaksi. Noin 200 000 vuotta sitten alue oli osa valtavaa Megafezzan-järveä, joka kutistui vähitellen muutaman tuhannen vuoden kuluessa. Nykyiset järvet ovat siis viimeiset jäänteet ajasta, jolloin Sahara oli vihreä ja vetinen.
+
+### 4.1
+KYSYMYS: Mikä Engadin on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inn (luonto · joki)
+Tietoruudun teksti: Inn on 518 kilometrin pituinen joki Sveitsissä, Itävallassa ja Saksassa ja virtaamaltaan Tonavan kolmanneksi suurin sivujoki. Sen valuma-alueen korkein kohta on Piz Berninan huippu 4 049 metrissä. Engadin, joen laakso Sveitsin puolella, on maan ainoa laakso, jonka vedet päätyvät Mustallemerelle.
+
+### 4.2
+KYSYMYS: Miksi Inn on niin vetinen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inn (luonto · joki)
+Tietoruudun teksti: Inn on 518 kilometrin pituinen joki Sveitsissä, Itävallassa ja Saksassa ja virtaamaltaan Tonavan kolmanneksi suurin sivujoki. Sen valuma-alueen korkein kohta on Piz Berninan huippu 4 049 metrissä. Engadin, joen laakso Sveitsin puolella, on maan ainoa laakso, jonka vedet päätyvät Mustallemerelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sahara — kaupunkilehti / Eliöstö ja maasto: Suolajärviä hiekkameren keskellä] Libyan Fezzanin alueella, keskellä 58 000 neliökilometrin laajuista Awbarin hiekkamerta, piilee yli kaksikymmentä järveä palmulehtoineen. Vettä ei virtaa niihin mistään joesta, joten haihtuminen on tehnyt osasta järvistä lähes viisi kertaa merivettä suolaisempia; suolaa sietävät levät värjäävät joidenkin pinnan punertavaksi. Noin 200 000 vuotta sitten alue oli osa valtavaa Megafezzan-järveä, joka kutistui vähitellen muutaman tuhannen vuoden kuluessa. Nykyiset järvet ovat siis viimeiset jäänteet ajasta, jolloin Sahara oli vihreä ja vetinen.
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:hallstatt) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hallstatt (historia)
+Tietoruudun teksti: Hallstatt on pieni kaupunki Ylä-Itävallassa, Hallstätter Seen lounaisrannan ja Dachstein-massiivin jyrkkien rinteiden välissä Salzkammergutin alueella.
+
+Kaupunki tunnetaan suolantuotannostaan, joka ulottuu esihistoriaan asti, ja se on antanut nimen Hallstattin kulttuurille — varhaisen rautakauden arkeologiselle kulttuurille, joka liitetään esikelttiläisiin ja varhaisiin keltteihin noin 800–450 eaa. Pronssikaudella suolantuotanto oli jokapäiväistä kauppaa ja ilmeisen järjestäytynyttä, ja sen tuoma vauraus näkyy kaupungin esihistoriallisissa kalmistoissa.
+
+Vuonna 1846 Johann Georg Ramsauer löysi Salzbergin kaivosten läheltä suuren esihistoriallisen kalmiston ja kaivoi sitä 1800-luvun jälkipuoliskon ajan. Kaivauksista tuli lopulta 1 045 hautaa, vaikka itse asuinpaikkaa ei ole vieläkään löydetty — se saattaa olla myöhemmän kylän alla.
+
+Kaivoskäytävissä suola on säilyttänyt orgaanista ainest…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Historia: Kahdeksan polvea kenkiä ja yksi tehdaskaupunki] 1894 — Tomáš Baťan suku oli tehnyt kenkiä kahdeksassa polvessa, yli kolmensadan vuoden ajan. Vuonna 1894 hän perusti sisarustensa kanssa Zlínin kaupunkiin kenkätehtaan 800 guldenilla, jotka hän oli perinyt äidiltään. Baťa kävi Yhdysvalloissa katsomassa, miten koneet tekevät kenkiä, ja toi liukuhihnan Zlíniin vuonna 1927. 1930-luvun alkuun mennessä Tšekkoslovakiasta oli tullut maailman suurin kenkien viejä. Tehdas rakensi työntekijöilleen kokonaisen kaupungin, ja sen konttoritalo numero 21 nousi 77,5 metriin — valmistuessaan 1938 Euroopan toiseksi korkein moderni rakennus.
+
+### 5.1
+KYSYMYS: Miksi kaivoksesta löytyy tuhansia vuosia vanhoja kenkiä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hallstatt (historia)
+Tietoruudun teksti: Hallstatt on pieni kaupunki Ylä-Itävallassa, Hallstätter Seen lounaisrannan ja Dachstein-massiivin jyrkkien rinteiden välissä Salzkammergutin alueella.
+
+Kaupunki tunnetaan suolantuotannostaan, joka ulottuu esihistoriaan asti, ja se on antanut nimen Hallstattin kulttuurille — varhaisen rautakauden arkeologiselle kulttuurille, joka liitetään esikelttiläisiin ja varhaisiin keltteihin noin 800–450 eaa. Pronssikaudella suolantuotanto oli jokapäiväistä kauppaa ja ilmeisen järjestäytynyttä, ja sen tuoma vauraus näkyy kaupungin esihistoriallisissa kalmistoissa.
+
+Vuonna 1846 Johann Georg Ramsauer löysi Salzbergin kaivosten läheltä suuren esihistoriallisen kalmiston ja kaivoi sitä 1800-luvun jälkipuoliskon ajan. Kaivauksista tuli lopulta 1 045 hautaa, vaikka itse asuinpaikkaa ei ole vieläkään löydetty — se saattaa olla myöhemmän kylän alla.
+
+Kaivoskäytävissä suola on säilyttänyt orgaanista ainest…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Historia: Kahdeksan polvea kenkiä ja yksi tehdaskaupunki] 1894 — Tomáš Baťan suku oli tehnyt kenkiä kahdeksassa polvessa, yli kolmensadan vuoden ajan. Vuonna 1894 hän perusti sisarustensa kanssa Zlínin kaupunkiin kenkätehtaan 800 guldenilla, jotka hän oli perinyt äidiltään. Baťa kävi Yhdysvalloissa katsomassa, miten koneet tekevät kenkiä, ja toi liukuhihnan Zlíniin vuonna 1927. 1930-luvun alkuun mennessä Tšekkoslovakiasta oli tullut maailman suurin kenkien viejä. Tehdas rakensi työntekijöilleen kokonaisen kaupungin, ja sen konttoritalo numero 21 nousi 77,5 metriin — valmistuessaan 1938 Euroopan toiseksi korkein moderni rakennus.
+
+### 5.2
+KYSYMYS: Mikä Hallstattin kulttuuri on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hallstatt (historia)
+Tietoruudun teksti: Hallstatt on pieni kaupunki Ylä-Itävallassa, Hallstätter Seen lounaisrannan ja Dachstein-massiivin jyrkkien rinteiden välissä Salzkammergutin alueella.
+
+Kaupunki tunnetaan suolantuotannostaan, joka ulottuu esihistoriaan asti, ja se on antanut nimen Hallstattin kulttuurille — varhaisen rautakauden arkeologiselle kulttuurille, joka liitetään esikelttiläisiin ja varhaisiin keltteihin noin 800–450 eaa. Pronssikaudella suolantuotanto oli jokapäiväistä kauppaa ja ilmeisen järjestäytynyttä, ja sen tuoma vauraus näkyy kaupungin esihistoriallisissa kalmistoissa.
+
+Vuonna 1846 Johann Georg Ramsauer löysi Salzbergin kaivosten läheltä suuren esihistoriallisen kalmiston ja kaivoi sitä 1800-luvun jälkipuoliskon ajan. Kaivauksista tuli lopulta 1 045 hautaa, vaikka itse asuinpaikkaa ei ole vieläkään löydetty — se saattaa olla myöhemmän kylän alla.
+
+Kaivoskäytävissä suola on säilyttänyt orgaanista ainest…
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

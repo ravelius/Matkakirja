@@ -1,0 +1,186 @@
+================ KOHTA 31 (kohde:hahmotelma-riegersburg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riegersburg (historia)
+Tietoruudun teksti: Riegersburgin linna on keskiaikainen linna sammuneen tulivuoren päällä Riegersburgin kaupungin yläpuolella Steiermarkin osavaltiossa Itävallassa. Linnan omistaa Liechtensteinin ruhtinassuku, ja siinä on museo, jossa on vaihtuvia näyttelyjä. Linna on rakennettu kukkulalle, joka on suuren kerrostulivuoren kiinteytyneen sisuksen jäänne; tulivuori sammui todennäköisesti noin kaksi miljoonaa vuotta sitten, ja linnan rakentamiseen on käytetty kukkulan muinaista basalttia. Kukkulan huippu on 482 metriä merenpinnan yläpuolella. Alueella on asuttu tuhansia vuosia, ja linnan historia alkaa vuodesta 1122, jolloin ensimmäinen tunnettu asukas oli ritari Rudiger von Hohenberg.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Edinburgh — kaupunkilehti / Edinburgh: Linna seisoo tulivuoren tulpalla] Linnan alla oleva kallio on tulivuoren kurkku, joka jähmettyi noin 350 miljoonaa vuotta sitten poikkeuksellisen kovaksi kiveksi. Kun jäätikkö myöhemmin jyräsi paikan yli, se ei pystynyt kalliolle vaan kaivoi maan sen ympäriltä ja jätti taakseen pitkän loivan hännän. Sitä häntää pitkin laskeutuu Royal Mile linnalta palatsille asti, ja siksi linnaan pääsee kävellen vain idästä. Vettä kalliolta ei sen sijaan tahtonut saada: 34 metriä syvä kaivo ehtyi piiritysten aikana.
+
+### 31.1
+KYSYMYS: Miksi linna on tulivuoren päällä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riegersburg (historia)
+Tietoruudun teksti: Riegersburgin linna on keskiaikainen linna sammuneen tulivuoren päällä Riegersburgin kaupungin yläpuolella Steiermarkin osavaltiossa Itävallassa. Linnan omistaa Liechtensteinin ruhtinassuku, ja siinä on museo, jossa on vaihtuvia näyttelyjä. Linna on rakennettu kukkulalle, joka on suuren kerrostulivuoren kiinteytyneen sisuksen jäänne; tulivuori sammui todennäköisesti noin kaksi miljoonaa vuotta sitten, ja linnan rakentamiseen on käytetty kukkulan muinaista basalttia. Kukkulan huippu on 482 metriä merenpinnan yläpuolella. Alueella on asuttu tuhansia vuosia, ja linnan historia alkaa vuodesta 1122, jolloin ensimmäinen tunnettu asukas oli ritari Rudiger von Hohenberg.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Edinburgh — kaupunkilehti / Edinburgh: Linna seisoo tulivuoren tulpalla] Linnan alla oleva kallio on tulivuoren kurkku, joka jähmettyi noin 350 miljoonaa vuotta sitten poikkeuksellisen kovaksi kiveksi. Kun jäätikkö myöhemmin jyräsi paikan yli, se ei pystynyt kalliolle vaan kaivoi maan sen ympäriltä ja jätti taakseen pitkän loivan hännän. Sitä häntää pitkin laskeutuu Royal Mile linnalta palatsille asti, ja siksi linnaan pääsee kävellen vain idästä. Vettä kalliolta ei sen sijaan tahtonut saada: 34 metriä syvä kaivo ehtyi piiritysten aikana.
+
+### 31.2
+KYSYMYS: Kuka omistaa Riegersburgin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riegersburg (historia)
+Tietoruudun teksti: Riegersburgin linna on keskiaikainen linna sammuneen tulivuoren päällä Riegersburgin kaupungin yläpuolella Steiermarkin osavaltiossa Itävallassa. Linnan omistaa Liechtensteinin ruhtinassuku, ja siinä on museo, jossa on vaihtuvia näyttelyjä. Linna on rakennettu kukkulalle, joka on suuren kerrostulivuoren kiinteytyneen sisuksen jäänne; tulivuori sammui todennäköisesti noin kaksi miljoonaa vuotta sitten, ja linnan rakentamiseen on käytetty kukkulan muinaista basalttia. Kukkulan huippu on 482 metriä merenpinnan yläpuolella. Alueella on asuttu tuhansia vuosia, ja linnan historia alkaa vuodesta 1122, jolloin ensimmäinen tunnettu asukas oli ritari Rudiger von Hohenberg.
+
+### 31.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+================ KOHTA 32 (kohde:hahmotelma-kreuzenstein) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burg Kreuzenstein (historia)
+Tietoruudun teksti: Burg Kreuzenstein on linna Leobendorfin lähellä Ala-Itävallassa, 265 metrin korkeudessa merenpinnasta. Se rakennettiin keskiaikaisen linnan jäänteille, joka oli rappeutunut ja purettu kolmikymmenvuotisen sodan aikana. Linna oli tarkoitettu Wilczekin suvun sukuhaudaksi, ja kreivi Johann Nepomuk Wilczek, tunnettu napa-alueiden tutkimusmatkailija, aloitti sen jälleenrakennuksen vuonna 1874 Sleesian hiilikaivostensa tuotoilla. Kreivi osti eri puolilta Eurooppaa keskiaikaisten rakennusten osia, joista linna koottiin uskottavan näköiseksi, joten sitä voidaan pitää sekä uus- että alkuperäisenä keskiaikaisena rakenteena. Linna sijaitsee Wienistä ja Tonavasta pohjoiseen Korneuburgin ja Stockerauin välillä.
+
+### 32.1
+KYSYMYS: Miksi Kreuzenstein on sekä uus- että alkuperäinen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burg Kreuzenstein (historia)
+Tietoruudun teksti: Burg Kreuzenstein on linna Leobendorfin lähellä Ala-Itävallassa, 265 metrin korkeudessa merenpinnasta. Se rakennettiin keskiaikaisen linnan jäänteille, joka oli rappeutunut ja purettu kolmikymmenvuotisen sodan aikana. Linna oli tarkoitettu Wilczekin suvun sukuhaudaksi, ja kreivi Johann Nepomuk Wilczek, tunnettu napa-alueiden tutkimusmatkailija, aloitti sen jälleenrakennuksen vuonna 1874 Sleesian hiilikaivostensa tuotoilla. Kreivi osti eri puolilta Eurooppaa keskiaikaisten rakennusten osia, joista linna koottiin uskottavan näköiseksi, joten sitä voidaan pitää sekä uus- että alkuperäisenä keskiaikaisena rakenteena. Linna sijaitsee Wienistä ja Tonavasta pohjoiseen Korneuburgin ja Stockerauin välillä.
+
+### 32.2
+KYSYMYS: Kuka Wilczek oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burg Kreuzenstein (historia)
+Tietoruudun teksti: Burg Kreuzenstein on linna Leobendorfin lähellä Ala-Itävallassa, 265 metrin korkeudessa merenpinnasta. Se rakennettiin keskiaikaisen linnan jäänteille, joka oli rappeutunut ja purettu kolmikymmenvuotisen sodan aikana. Linna oli tarkoitettu Wilczekin suvun sukuhaudaksi, ja kreivi Johann Nepomuk Wilczek, tunnettu napa-alueiden tutkimusmatkailija, aloitti sen jälleenrakennuksen vuonna 1874 Sleesian hiilikaivostensa tuotoilla. Kreivi osti eri puolilta Eurooppaa keskiaikaisten rakennusten osia, joista linna koottiin uskottavan näköiseksi, joten sitä voidaan pitää sekä uus- että alkuperäisenä keskiaikaisena rakenteena. Linna sijaitsee Wienistä ja Tonavasta pohjoiseen Korneuburgin ja Stockerauin välillä.
+
+### 32.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+================ KOHTA 33 (kohde:hahmotelma-forchtenstein) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Forchtenstein (historia)
+Tietoruudun teksti: Forchtensteinin linna on myöhäiskeskiajalla rakennettu linna Forchtensteinin kunnan lähellä Pohjois-Burgenlandissa Itävallassa, 511 metrin korkeudessa. Linna on Mattersburgin eteläpuolella Wulka-laakson yläpuolella. Sen ensimmäisen osan, 50 metriä korkean päätornin, rakensivat 1400-luvun alussa Mattersburgin herrat, jotka nimittivät itseään myöhemmin Forchtensteinin herroiksi. Noin vuonna 1450 suku kuoli sukupuuttoon, ja linna siirtyi Habsburgeille, jotka omistivat sen 170 vuotta. Vuonna 1622 Nikolaus Esterházy sai linnan keisari Ferdinand II:lta, ja Esterházy-suku vahvisti ja koristeli sitä; suvun aikana linnasta tuli aseiden, arkistojen, kronometrien, koneiden ja muiden "ihmeiden" säilytyspaikka, ja aarrekammioon pääsi vain salaisen käytävän kautta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Persepolis — kohdekartta / Kohdekartta: Aarrekammio] Dareios I:n aikaa; kaivettu 1934–1939 Aarrekammio on terassin kaakkoisosassa, ja se on yksi Dareios I:n kolmesta alkuperäisestä tilauksesta. Nimi ei ole antiikista vaan kaivauksilta: kun Erich Schmidtin ryhmä kaivoi tätä rakennusryhmää 1930-luvulla, sieltä löytyi ohuita kultalehtiä, ja sen mukaan koko kortteli ja sieltä löytyneet savitaulut nimettiin. Taulut kertovat palkanmaksusta. Suurin osa niistä koskee hopeaa, joka maksettiin työläisille ja käsityöläisille kokonaan tai osittain sen sijaan, että heille olisi annettu luvattu annos lampaita, viiniä tai viljaa. Osa on hallinnon kirjeitä, joissa määrätään maksu suoritettavaksi, ja osa kuittauksia siitä, että maksu on tehty. Aineisto kattaa …
+
+### 33.1
+KYSYMYS: Keitä Esterházyt olivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Forchtenstein (historia)
+Tietoruudun teksti: Forchtensteinin linna on myöhäiskeskiajalla rakennettu linna Forchtensteinin kunnan lähellä Pohjois-Burgenlandissa Itävallassa, 511 metrin korkeudessa. Linna on Mattersburgin eteläpuolella Wulka-laakson yläpuolella. Sen ensimmäisen osan, 50 metriä korkean päätornin, rakensivat 1400-luvun alussa Mattersburgin herrat, jotka nimittivät itseään myöhemmin Forchtensteinin herroiksi. Noin vuonna 1450 suku kuoli sukupuuttoon, ja linna siirtyi Habsburgeille, jotka omistivat sen 170 vuotta. Vuonna 1622 Nikolaus Esterházy sai linnan keisari Ferdinand II:lta, ja Esterházy-suku vahvisti ja koristeli sitä; suvun aikana linnasta tuli aseiden, arkistojen, kronometrien, koneiden ja muiden "ihmeiden" säilytyspaikka, ja aarrekammioon pääsi vain salaisen käytävän kautta.
+
+### 33.2
+KYSYMYS: Mitä aarrekammiossa säilytettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Forchtenstein (historia)
+Tietoruudun teksti: Forchtensteinin linna on myöhäiskeskiajalla rakennettu linna Forchtensteinin kunnan lähellä Pohjois-Burgenlandissa Itävallassa, 511 metrin korkeudessa. Linna on Mattersburgin eteläpuolella Wulka-laakson yläpuolella. Sen ensimmäisen osan, 50 metriä korkean päätornin, rakensivat 1400-luvun alussa Mattersburgin herrat, jotka nimittivät itseään myöhemmin Forchtensteinin herroiksi. Noin vuonna 1450 suku kuoli sukupuuttoon, ja linna siirtyi Habsburgeille, jotka omistivat sen 170 vuotta. Vuonna 1622 Nikolaus Esterházy sai linnan keisari Ferdinand II:lta, ja Esterházy-suku vahvisti ja koristeli sitä; suvun aikana linnasta tuli aseiden, arkistojen, kronometrien, koneiden ja muiden "ihmeiden" säilytyspaikka, ja aarrekammioon pääsi vain salaisen käytävän kautta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Persepolis — kohdekartta / Kohdekartta: Aarrekammio] Dareios I:n aikaa; kaivettu 1934–1939 Aarrekammio on terassin kaakkoisosassa, ja se on yksi Dareios I:n kolmesta alkuperäisestä tilauksesta. Nimi ei ole antiikista vaan kaivauksilta: kun Erich Schmidtin ryhmä kaivoi tätä rakennusryhmää 1930-luvulla, sieltä löytyi ohuita kultalehtiä, ja sen mukaan koko kortteli ja sieltä löytyneet savitaulut nimettiin. Taulut kertovat palkanmaksusta. Suurin osa niistä koskee hopeaa, joka maksettiin työläisille ja käsityöläisille kokonaan tai osittain sen sijaan, että heille olisi annettu luvattu annos lampaita, viiniä tai viljaa. Osa on hallinnon kirjeitä, joissa määrätään maksu suoritettavaksi, ja osa kuittauksia siitä, että maksu on tehty. Aineisto kattaa …
+
+### 33.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+================ KOHTA 34 (kohde:hahmotelma-bad-ischl) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bad Ischl (kulttuuri)
+Tietoruudun teksti: Bad Ischl on kylpylä Ylä-Itävallan eteläosassa Traun-joen varrella Salzkammergutin keskellä. Sen Kaiservilla oli Itävalta-Unkarin hallitsijoiden, keisari Frans Joosefin ja keisarinna Elisabethin, kesäasunto. Ihmiset ovat asuneet Ischlin seudulla jo esihistoriallisen Hallstatt-kulttuurin ajasta lähtien. Vuonna 1563 avattiin ensimmäinen suolakaivos ja vuonna 1571 suolan haihdutusallas. Kun suolavesi tuli 1800-luvun alussa lääketieteellisesti suosituksi, Ischl muuttui muodikkaaksi kylpyläkaupungiksi; Hotel Post avattiin vuonna 1828, ja vuonna 1849 keisari Frans Joosef I valitsi kaupungin kesäasunnokseen. Vuonna 2024 Bad Ischl oli yksi Euroopan kulttuuripääkaupungeista.
+
+### 34.1
+KYSYMYS: Miksi keisari valitsi Bad Ischlin kesäpaikakseen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bad Ischl (kulttuuri)
+Tietoruudun teksti: Bad Ischl on kylpylä Ylä-Itävallan eteläosassa Traun-joen varrella Salzkammergutin keskellä. Sen Kaiservilla oli Itävalta-Unkarin hallitsijoiden, keisari Frans Joosefin ja keisarinna Elisabethin, kesäasunto. Ihmiset ovat asuneet Ischlin seudulla jo esihistoriallisen Hallstatt-kulttuurin ajasta lähtien. Vuonna 1563 avattiin ensimmäinen suolakaivos ja vuonna 1571 suolan haihdutusallas. Kun suolavesi tuli 1800-luvun alussa lääketieteellisesti suosituksi, Ischl muuttui muodikkaaksi kylpyläkaupungiksi; Hotel Post avattiin vuonna 1828, ja vuonna 1849 keisari Frans Joosef I valitsi kaupungin kesäasunnokseen. Vuonna 2024 Bad Ischl oli yksi Euroopan kulttuuripääkaupungeista.
+
+### 34.2
+KYSYMYS: Miten suola liittyy Ischliin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bad Ischl (kulttuuri)
+Tietoruudun teksti: Bad Ischl on kylpylä Ylä-Itävallan eteläosassa Traun-joen varrella Salzkammergutin keskellä. Sen Kaiservilla oli Itävalta-Unkarin hallitsijoiden, keisari Frans Joosefin ja keisarinna Elisabethin, kesäasunto. Ihmiset ovat asuneet Ischlin seudulla jo esihistoriallisen Hallstatt-kulttuurin ajasta lähtien. Vuonna 1563 avattiin ensimmäinen suolakaivos ja vuonna 1571 suolan haihdutusallas. Kun suolavesi tuli 1800-luvun alussa lääketieteellisesti suosituksi, Ischl muuttui muodikkaaksi kylpyläkaupungiksi; Hotel Post avattiin vuonna 1828, ja vuonna 1849 keisari Frans Joosef I valitsi kaupungin kesäasunnokseen. Vuonna 2024 Bad Ischl oli yksi Euroopan kulttuuripääkaupungeista.
+
+### 34.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+================ KOHTA 35 (kohde:hahmotelma-gmunden) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gmunden (kulttuuri)
+Tietoruudun teksti: Gmunden on kaupunki Ylä-Itävallassa, ja siellä asuu noin 13 200 ihmistä. Se sijaitsee Traunseen ja Traun-joen äärellä, ja sitä ympäröivät korkeat vuoret, joihin kuuluvat Traunstein (1 660 metriä), Erlakogel (1 570 metriä), Wilder Kogel (2 090 metriä) ja Höllengebirge. Kaupungin ympäristön nähtävyyksiin kuuluvat Traunin putous 16 kilometriä pohjoiseen, Schloss Ort -linna ja keramiikkatehdas, joka valmistaa Gmundner Keramik -nimistä keramiikkaa. Myös kaupungintalo on suosittu kohde. Gmundenin seudulla illyyrialaiset louhivat suolaa jo vuonna 1000 eaa.
+
+### 35.1
+KYSYMYS: Mikä Gmundner Keramik on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gmunden (kulttuuri)
+Tietoruudun teksti: Gmunden on kaupunki Ylä-Itävallassa, ja siellä asuu noin 13 200 ihmistä. Se sijaitsee Traunseen ja Traun-joen äärellä, ja sitä ympäröivät korkeat vuoret, joihin kuuluvat Traunstein (1 660 metriä), Erlakogel (1 570 metriä), Wilder Kogel (2 090 metriä) ja Höllengebirge. Kaupungin ympäristön nähtävyyksiin kuuluvat Traunin putous 16 kilometriä pohjoiseen, Schloss Ort -linna ja keramiikkatehdas, joka valmistaa Gmundner Keramik -nimistä keramiikkaa. Myös kaupungintalo on suosittu kohde. Gmundenin seudulla illyyrialaiset louhivat suolaa jo vuonna 1000 eaa.
+
+### 35.2
+KYSYMYS: Mikä Traunstein on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gmunden (kulttuuri)
+Tietoruudun teksti: Gmunden on kaupunki Ylä-Itävallassa, ja siellä asuu noin 13 200 ihmistä. Se sijaitsee Traunseen ja Traun-joen äärellä, ja sitä ympäröivät korkeat vuoret, joihin kuuluvat Traunstein (1 660 metriä), Erlakogel (1 570 metriä), Wilder Kogel (2 090 metriä) ja Höllengebirge. Kaupungin ympäristön nähtävyyksiin kuuluvat Traunin putous 16 kilometriä pohjoiseen, Schloss Ort -linna ja keramiikkatehdas, joka valmistaa Gmundner Keramik -nimistä keramiikkaa. Myös kaupungintalo on suosittu kohde. Gmundenin seudulla illyyrialaiset louhivat suolaa jo vuonna 1000 eaa.
+
+### 35.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI

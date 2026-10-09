@@ -1,0 +1,192 @@
+================ KOHTA 16 (kohde:hahmotelma-vanha-burgtheater) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wienin vanha Burgtheater (historia)
+Tietoruudun teksti: Wienin keisarillinen hoviteatteri avattiin vuonna 1741. Siellä kantaesitettiin muun muassa Mozartin Figaron häät vuonna 1786. Kun uusi Burgtheater avattiin Ringstraßella 1888, vanha rakennus purettiin Hofburgin laajennuksen tieltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kaupunkilehti / Historian hetki: Burgtheater 1786 — palvelijat nolaavat isäntänsä] 1.5.1786 — Partituurin muste on tuskin kuivunut, kun cembalo aloittaa. Wienin Burgtheaterissa on 1. toukokuuta 1786, ja Wolfgang Amadeus Mozart, 30, johtaa Figaron häitä soittimensa äärestä, kuten tapa on. Ooppera perustuu Beaumarchais'n näytelmään, jonka keisari Joosef II on kieltänyt Wienin näyttämöiltä, koska siinä palvelija nolaa isäntänsä; Lorenzo Da Ponte kirjoitti libreton kuudessa viikossa, poisti poliittiset puheet ja sai keisarilta luvan oopperalle. Susannaa laulaa englantilainen Nancy Storace, Figaroa Francesco Benucci. Yleisö vaatii ensi-iltana viisi numeroa uudelleen ja toisessa esityksessä seitsemän, kunnes keisari määrää, ettei useamman laulajan numeroita saa toistaa — esitys…
+
+### 16.1
+KYSYMYS: Miltä Wienin vanha Burgtheater näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wienin vanha Burgtheater (historia)
+Tietoruudun teksti: Wienin keisarillinen hoviteatteri avattiin vuonna 1741. Siellä kantaesitettiin muun muassa Mozartin Figaron häät vuonna 1786. Kun uusi Burgtheater avattiin Ringstraßella 1888, vanha rakennus purettiin Hofburgin laajennuksen tieltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kaupunkilehti / Historian hetki: Burgtheater 1786 — palvelijat nolaavat isäntänsä] 1.5.1786 — Partituurin muste on tuskin kuivunut, kun cembalo aloittaa. Wienin Burgtheaterissa on 1. toukokuuta 1786, ja Wolfgang Amadeus Mozart, 30, johtaa Figaron häitä soittimensa äärestä, kuten tapa on. Ooppera perustuu Beaumarchais'n näytelmään, jonka keisari Joosef II on kieltänyt Wienin näyttämöiltä, koska siinä palvelija nolaa isäntänsä; Lorenzo Da Ponte kirjoitti libreton kuudessa viikossa, poisti poliittiset puheet ja sai keisarilta luvan oopperalle. Susannaa laulaa englantilainen Nancy Storace, Figaroa Francesco Benucci. Yleisö vaatii ensi-iltana viisi numeroa uudelleen ja toisessa esityksessä seitsemän, kunnes keisari määrää, ettei useamman laulajan numeroita saa toistaa — esitys…
+
+### 16.2
+KYSYMYS: Miksi Wienin vanha Burgtheater katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wienin vanha Burgtheater (historia)
+Tietoruudun teksti: Wienin keisarillinen hoviteatteri avattiin vuonna 1741. Siellä kantaesitettiin muun muassa Mozartin Figaron häät vuonna 1786. Kun uusi Burgtheater avattiin Ringstraßella 1888, vanha rakennus purettiin Hofburgin laajennuksen tieltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kaupunkilehti / Historian hetki: Burgtheater 1786 — palvelijat nolaavat isäntänsä] 1.5.1786 — Partituurin muste on tuskin kuivunut, kun cembalo aloittaa. Wienin Burgtheaterissa on 1. toukokuuta 1786, ja Wolfgang Amadeus Mozart, 30, johtaa Figaron häitä soittimensa äärestä, kuten tapa on. Ooppera perustuu Beaumarchais'n näytelmään, jonka keisari Joosef II on kieltänyt Wienin näyttämöiltä, koska siinä palvelija nolaa isäntänsä; Lorenzo Da Ponte kirjoitti libreton kuudessa viikossa, poisti poliittiset puheet ja sai keisarilta luvan oopperalle. Susannaa laulaa englantilainen Nancy Storace, Figaroa Francesco Benucci. Yleisö vaatii ensi-iltana viisi numeroa uudelleen ja toisessa esityksessä seitsemän, kunnes keisari määrää, ettei useamman laulajan numeroita saa toistaa — esitys…
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:hahmotelma-karntnertor-bastioni) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kärntnertor-bastioni (historia)
+Tietoruudun teksti: Wieniä ympäröivät 1500-luvulta renessanssiajan bastionimuurit. Keisari Frans Joosef määräsi muurit purettaviksi vuonna 1857. Kärntnertor ja sen bastioni katosivat, ja vapautuneelle alueelle rakennettiin Ringstraße.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kaupunkilehti / Historian hetki: Kärntnertor 1824 — suosionosoitukset, joita ei kuule] 7.5.1824 — ”Kääntäkää hänet.” Kukaan ei tiedä, kuka sen sanoo, mutta Caroline Unger tekee sen. Wienin Kärntnertor-teatterissa on 7. toukokuuta 1824, ja yhdeksännen sinfonian viimeinen sointu on juuri vaiennut. Ludwig van Beethoven, 53, seisoo orkesterin edessä selin saliin ja lyö tahtia, sillä hän on lähes täysin kuuro eikä kuule, että teos on ohi. Kapellimestari Michael Umlauf on neuvonut soittajia seuraamaan häntä eikä säveltäjää; kaksi vuotta aiemmin hän näki Beethovenin Fidelio-harjoituksen romahtavan. Kaksikymmentävuotias alttolaulaja Unger ottaa säveltäjää hihasta ja kääntää hänet kohti yleisöä. Sali on jaloillaan: ihmiset heiluttavat hattuja ja nenäliinoja, jotta kuuro mies näkisi, m…
+
+### 17.1
+KYSYMYS: Miltä Kärntnertor-bastioni näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kärntnertor-bastioni (historia)
+Tietoruudun teksti: Wieniä ympäröivät 1500-luvulta renessanssiajan bastionimuurit. Keisari Frans Joosef määräsi muurit purettaviksi vuonna 1857. Kärntnertor ja sen bastioni katosivat, ja vapautuneelle alueelle rakennettiin Ringstraße.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kaupunkilehti / Historian hetki: Kärntnertor 1824 — suosionosoitukset, joita ei kuule] 7.5.1824 — ”Kääntäkää hänet.” Kukaan ei tiedä, kuka sen sanoo, mutta Caroline Unger tekee sen. Wienin Kärntnertor-teatterissa on 7. toukokuuta 1824, ja yhdeksännen sinfonian viimeinen sointu on juuri vaiennut. Ludwig van Beethoven, 53, seisoo orkesterin edessä selin saliin ja lyö tahtia, sillä hän on lähes täysin kuuro eikä kuule, että teos on ohi. Kapellimestari Michael Umlauf on neuvonut soittajia seuraamaan häntä eikä säveltäjää; kaksi vuotta aiemmin hän näki Beethovenin Fidelio-harjoituksen romahtavan. Kaksikymmentävuotias alttolaulaja Unger ottaa säveltäjää hihasta ja kääntää hänet kohti yleisöä. Sali on jaloillaan: ihmiset heiluttavat hattuja ja nenäliinoja, jotta kuuro mies näkisi, m…
+
+### 17.2
+KYSYMYS: Miksi Kärntnertor-bastioni katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kärntnertor-bastioni (historia)
+Tietoruudun teksti: Wieniä ympäröivät 1500-luvulta renessanssiajan bastionimuurit. Keisari Frans Joosef määräsi muurit purettaviksi vuonna 1857. Kärntnertor ja sen bastioni katosivat, ja vapautuneelle alueelle rakennettiin Ringstraße.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kaupunkilehti / Historian hetki: Kärntnertor 1824 — suosionosoitukset, joita ei kuule] 7.5.1824 — ”Kääntäkää hänet.” Kukaan ei tiedä, kuka sen sanoo, mutta Caroline Unger tekee sen. Wienin Kärntnertor-teatterissa on 7. toukokuuta 1824, ja yhdeksännen sinfonian viimeinen sointu on juuri vaiennut. Ludwig van Beethoven, 53, seisoo orkesterin edessä selin saliin ja lyö tahtia, sillä hän on lähes täysin kuuro eikä kuule, että teos on ohi. Kapellimestari Michael Umlauf on neuvonut soittajia seuraamaan häntä eikä säveltäjää; kaksi vuotta aiemmin hän näki Beethovenin Fidelio-harjoituksen romahtavan. Kaksikymmentävuotias alttolaulaja Unger ottaa säveltäjää hihasta ja kääntää hänet kohti yleisöä. Sali on jaloillaan: ihmiset heiluttavat hattuja ja nenäliinoja, jotta kuuro mies näkisi, m…
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:hahmotelma-wienin-rotunde) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wienin maailmannäyttelyn Rotunde (historia)
+Tietoruudun teksti: Praterin puistoon rakennettu Rotunde oli 1873 maailmannäyttelyn keskuspaviljonki ja valmistuessaan maailman suurin kupolirakennus, 108 metriä halkaisijaltaan. Näyttely avattiin 1.5.1873, samana keväänä kun isoisä aloitti oman Eurooppansa kiertueen. Rakennus paloi täysin selittämättömässä tulipalossa 17.9.1937.
+
+### 18.1
+KYSYMYS: Miltä Wienin maailmannäyttelyn Rotunde näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wienin maailmannäyttelyn Rotunde (historia)
+Tietoruudun teksti: Praterin puistoon rakennettu Rotunde oli 1873 maailmannäyttelyn keskuspaviljonki ja valmistuessaan maailman suurin kupolirakennus, 108 metriä halkaisijaltaan. Näyttely avattiin 1.5.1873, samana keväänä kun isoisä aloitti oman Eurooppansa kiertueen. Rakennus paloi täysin selittämättömässä tulipalossa 17.9.1937.
+
+### 18.2
+KYSYMYS: Miksi Wienin maailmannäyttelyn Rotunde katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wienin maailmannäyttelyn Rotunde (historia)
+Tietoruudun teksti: Praterin puistoon rakennettu Rotunde oli 1873 maailmannäyttelyn keskuspaviljonki ja valmistuessaan maailman suurin kupolirakennus, 108 metriä halkaisijaltaan. Näyttely avattiin 1.5.1873, samana keväänä kun isoisä aloitti oman Eurooppansa kiertueen. Rakennus paloi täysin selittämättömässä tulipalossa 17.9.1937.
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:hahmotelma-neusiedl) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neusiedlinjärvi (luonto · järvi)
+Tietoruudun teksti: Neusiedlinjärvi eli unkariksi Fertő tó on Keski- ja Länsi-Euroopan suurin päätyjärvi ja Euroopan toiseksi suurin sellainen Kaspianmeren jälkeen; se sijaitsee Itävallan ja Unkarin rajalla. Järvi on suolainen ja kattaa 315 neliökilometriä, josta 240 on Itävallan puolella. Se on pohjoisesta etelään noin 36 kilometriä pitkä ja enintään 1,8 metriä syvä. Ympäröivä maisema on ollut asuttua noin vuodesta 6000 eaa., ja järven ympärillä olevat kylät ovat vuosisatojen ajan olleet paikallisten ihmisten ja laajempien kulttuurien kauppa- ja kohtaamispaikkoja. UNESCO merkitsi järven ja sen ympäristön maailmanperintöluetteloon vuonna 2001.
+
+### 19.1
+KYSYMYS: Miksi Neusiedlinjärvi on niin matala?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neusiedlinjärvi (luonto · järvi)
+Tietoruudun teksti: Neusiedlinjärvi eli unkariksi Fertő tó on Keski- ja Länsi-Euroopan suurin päätyjärvi ja Euroopan toiseksi suurin sellainen Kaspianmeren jälkeen; se sijaitsee Itävallan ja Unkarin rajalla. Järvi on suolainen ja kattaa 315 neliökilometriä, josta 240 on Itävallan puolella. Se on pohjoisesta etelään noin 36 kilometriä pitkä ja enintään 1,8 metriä syvä. Ympäröivä maisema on ollut asuttua noin vuodesta 6000 eaa., ja järven ympärillä olevat kylät ovat vuosisatojen ajan olleet paikallisten ihmisten ja laajempien kulttuurien kauppa- ja kohtaamispaikkoja. UNESCO merkitsi järven ja sen ympäristön maailmanperintöluetteloon vuonna 2001.
+
+### 19.2
+KYSYMYS: Mikä tekee Neusiedlinjärvestä UNESCO-kohteen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neusiedlinjärvi (luonto · järvi)
+Tietoruudun teksti: Neusiedlinjärvi eli unkariksi Fertő tó on Keski- ja Länsi-Euroopan suurin päätyjärvi ja Euroopan toiseksi suurin sellainen Kaspianmeren jälkeen; se sijaitsee Itävallan ja Unkarin rajalla. Järvi on suolainen ja kattaa 315 neliökilometriä, josta 240 on Itävallan puolella. Se on pohjoisesta etelään noin 36 kilometriä pitkä ja enintään 1,8 metriä syvä. Ympäröivä maisema on ollut asuttua noin vuodesta 6000 eaa., ja järven ympärillä olevat kylät ovat vuosisatojen ajan olleet paikallisten ihmisten ja laajempien kulttuurien kauppa- ja kohtaamispaikkoja. UNESCO merkitsi järven ja sen ympäristön maailmanperintöluetteloon vuonna 2001.
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:hahmotelma-woerthersee) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wörthersee (luonto · järvi)
+Tietoruudun teksti: Wörthersee on järvi Itävallan eteläisessä Kärntenin osavaltiossa, ja se on Kärntenin suurin järvi. Järvi on noin 16,5 kilometriä pitkä ja 1,5 kilometriä leveä, ja se ulottuu Klagenfurtin laitamilta Veldenin lahdelle. Sen vesi on erottuvan sinivihreää ja läpinäkyvää, ja rannoilla on tiheitä metsiä, joiden takaa näkyvät lumihuippuiset Alpit. 1800-luvun alussa järven soiset rannat olivat vain muutaman köyhän talonpojan kotina. Kun Itävallan eteläinen rautatie, Südbahn, avattiin Klagenfurtiin vuonna 1863, Wörthersee muuttui nopeasti Wienin aatelin ja varakkaan porvariston eksklusiiviseksi kesäpaikaksi, ja erityisesti Veldenistä ja Pörtschachista kehittyi päämatkailukohteita.
+
+### 20.1
+KYSYMYS: Miksi Wörthersee on tullut kesäpaikaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wörthersee (luonto · järvi)
+Tietoruudun teksti: Wörthersee on järvi Itävallan eteläisessä Kärntenin osavaltiossa, ja se on Kärntenin suurin järvi. Järvi on noin 16,5 kilometriä pitkä ja 1,5 kilometriä leveä, ja se ulottuu Klagenfurtin laitamilta Veldenin lahdelle. Sen vesi on erottuvan sinivihreää ja läpinäkyvää, ja rannoilla on tiheitä metsiä, joiden takaa näkyvät lumihuippuiset Alpit. 1800-luvun alussa järven soiset rannat olivat vain muutaman köyhän talonpojan kotina. Kun Itävallan eteläinen rautatie, Südbahn, avattiin Klagenfurtiin vuonna 1863, Wörthersee muuttui nopeasti Wienin aatelin ja varakkaan porvariston eksklusiiviseksi kesäpaikaksi, ja erityisesti Veldenistä ja Pörtschachista kehittyi päämatkailukohteita.
+
+### 20.2
+KYSYMYS: Mikä Südbahn oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wörthersee (luonto · järvi)
+Tietoruudun teksti: Wörthersee on järvi Itävallan eteläisessä Kärntenin osavaltiossa, ja se on Kärntenin suurin järvi. Järvi on noin 16,5 kilometriä pitkä ja 1,5 kilometriä leveä, ja se ulottuu Klagenfurtin laitamilta Veldenin lahdelle. Sen vesi on erottuvan sinivihreää ja läpinäkyvää, ja rannoilla on tiheitä metsiä, joiden takaa näkyvät lumihuippuiset Alpit. 1800-luvun alussa järven soiset rannat olivat vain muutaman köyhän talonpojan kotina. Kun Itävallan eteläinen rautatie, Südbahn, avattiin Klagenfurtiin vuonna 1863, Wörthersee muuttui nopeasti Wienin aatelin ja varakkaan porvariston eksklusiiviseksi kesäpaikaksi, ja erityisesti Veldenistä ja Pörtschachista kehittyi päämatkailukohteita.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

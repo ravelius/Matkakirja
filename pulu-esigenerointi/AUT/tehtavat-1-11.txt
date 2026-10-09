@@ -1,0 +1,190 @@
+================ KOHTA 51 (nosto:lipizzanit) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Valkoiset hevoset syntyvät tummina
+Tietoruudun teksti: Hofburgin palatsissa toimii ratsastuskoulu, jonne lipizzanoriit tuodaan nelivuotiaina Piberin siitostallilta Steiermarkista. Valkoisia ne eivät silloin vielä ole: varsat syntyvät ruunikkoina tai mustina ja vaalenevat vuosi vuodelta, kunnes ovat 6–10 vuoden iässä valkoisia. Perinne vaatii, että tallissa on aina myös yksi ruunikko. Ratsastajat tervehtivät salin seinällä olevaa keisari Kaarle VI:n muotokuvaa ennen kuin ratsastavat.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Lipizzanit] Hofburgin palatsissa toimii ratsastuskoulu, jonne lipizzanoriit tuodaan nelivuotiaina Piberin siitostallilta Steiermarkista. Valkoisia ne eivät silloin vielä ole: varsat syntyvät ruunikkoina tai mustina ja vaalenevat vuosi vuodelta, kunnes ovat 6–10 vuoden iässä valkoisia. Perinne vaatii, että tallissa on aina myös yksi ruunikko. Ratsastajat tervehtivät salin seinällä olevaa keisari Kaarle VI:n muotokuvaa ennen kuin ratsastavat.
+
+### 51.1
+KYSYMYS: Miksi lipizzanit kasvatetaan Steiermarkissa eikä Wienissä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Valkoiset hevoset syntyvät tummina
+Tietoruudun teksti: Hofburgin palatsissa toimii ratsastuskoulu, jonne lipizzanoriit tuodaan nelivuotiaina Piberin siitostallilta Steiermarkista. Valkoisia ne eivät silloin vielä ole: varsat syntyvät ruunikkoina tai mustina ja vaalenevat vuosi vuodelta, kunnes ovat 6–10 vuoden iässä valkoisia. Perinne vaatii, että tallissa on aina myös yksi ruunikko. Ratsastajat tervehtivät salin seinällä olevaa keisari Kaarle VI:n muotokuvaa ennen kuin ratsastavat.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Lipizzanit] Hofburgin palatsissa toimii ratsastuskoulu, jonne lipizzanoriit tuodaan nelivuotiaina Piberin siitostallilta Steiermarkista. Valkoisia ne eivät silloin vielä ole: varsat syntyvät ruunikkoina tai mustina ja vaalenevat vuosi vuodelta, kunnes ovat 6–10 vuoden iässä valkoisia. Perinne vaatii, että tallissa on aina myös yksi ruunikko. Ratsastajat tervehtivät salin seinällä olevaa keisari Kaarle VI:n muotokuvaa ennen kuin ratsastavat.
+
+### 51.2
+KYSYMYS: Mitä ratsastuskoulussa opetetaan hevosille neljän vuoden iästä eteenpäin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Valkoiset hevoset syntyvät tummina
+Tietoruudun teksti: Hofburgin palatsissa toimii ratsastuskoulu, jonne lipizzanoriit tuodaan nelivuotiaina Piberin siitostallilta Steiermarkista. Valkoisia ne eivät silloin vielä ole: varsat syntyvät ruunikkoina tai mustina ja vaalenevat vuosi vuodelta, kunnes ovat 6–10 vuoden iässä valkoisia. Perinne vaatii, että tallissa on aina myös yksi ruunikko. Ratsastajat tervehtivät salin seinällä olevaa keisari Kaarle VI:n muotokuvaa ennen kuin ratsastavat.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Lipizzanit] Hofburgin palatsissa toimii ratsastuskoulu, jonne lipizzanoriit tuodaan nelivuotiaina Piberin siitostallilta Steiermarkista. Valkoisia ne eivät silloin vielä ole: varsat syntyvät ruunikkoina tai mustina ja vaalenevat vuosi vuodelta, kunnes ovat 6–10 vuoden iässä valkoisia. Perinne vaatii, että tallissa on aina myös yksi ruunikko. Ratsastajat tervehtivät salin seinällä olevaa keisari Kaarle VI:n muotokuvaa ennen kuin ratsastavat.
+
+### 51.3
+KYSYMYS: Miksi tallissa pidetään perinteen vuoksi aina yksi ruunikko?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Valkoiset hevoset syntyvät tummina
+Tietoruudun teksti: Hofburgin palatsissa toimii ratsastuskoulu, jonne lipizzanoriit tuodaan nelivuotiaina Piberin siitostallilta Steiermarkista. Valkoisia ne eivät silloin vielä ole: varsat syntyvät ruunikkoina tai mustina ja vaalenevat vuosi vuodelta, kunnes ovat 6–10 vuoden iässä valkoisia. Perinne vaatii, että tallissa on aina myös yksi ruunikko. Ratsastajat tervehtivät salin seinällä olevaa keisari Kaarle VI:n muotokuvaa ennen kuin ratsastavat.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Lipizzanit] Hofburgin palatsissa toimii ratsastuskoulu, jonne lipizzanoriit tuodaan nelivuotiaina Piberin siitostallilta Steiermarkista. Valkoisia ne eivät silloin vielä ole: varsat syntyvät ruunikkoina tai mustina ja vaalenevat vuosi vuodelta, kunnes ovat 6–10 vuoden iässä valkoisia. Perinne vaatii, että tallissa on aina myös yksi ruunikko. Ratsastajat tervehtivät salin seinällä olevaa keisari Kaarle VI:n muotokuvaa ennen kuin ratsastavat.
+
+### 51.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
+
+### 51.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
+
+================ KOHTA 52 (nosto:taikahuilu-wiedenissa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Taikahuilu tehtiin esikaupungin teatteriin
+Tietoruudun teksti: Mozartin viimeinen ooppera ei syntynyt hovia varten. Taikahuilu sai ensi-iltansa 30. syyskuuta 1791 Emanuel Schikanederin teatterissa Wienin Wiedenin esikaupungissa, ja se laulettiin saksaksi eikä italiaksi — tavallisen wieniläisen kielellä. Schikaneder kirjoitti sanat itse ja näytteli linnustaja Papagenoa. Mozart kuoli kaksi kuukautta myöhemmin. Kymmenen vuoden päästä Schikaneder avasi kaupunkiin uuden teatterin ja antoi veistää itsensä Papagenona sen portin päälle.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Taikahuilu] Mozartin viimeinen ooppera ei syntynyt hovia varten. Taikahuilu sai ensi-iltansa 30. syyskuuta 1791 Emanuel Schikanederin teatterissa Wienin Wiedenin esikaupungissa, ja se laulettiin saksaksi eikä italiaksi — tavallisen wieniläisen kielellä. Schikaneder kirjoitti sanat itse ja näytteli linnustaja Papagenoa. Mozart kuoli kaksi kuukautta myöhemmin. Kymmenen vuoden päästä Schikaneder avasi kaupunkiin uuden teatterin ja antoi veistää itsensä Papagenona sen portin päälle.
+- [Wien — kaupunkilehti / Musiikki] Valssi, jonka toinen isku tulee etuajassa, ja satuooppera, joka kirjoitettiin esikaupungin puiselle näyttämölle — molemmat odottavat nyt omilla paikoillaan kaupungin kartalla.
+
+### 52.1
+KYSYMYS: Miksi Mozartin viimeinen ooppera syntyi esikaupungin teatteriin eikä hoville?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Taikahuilu tehtiin esikaupungin teatteriin
+Tietoruudun teksti: Mozartin viimeinen ooppera ei syntynyt hovia varten. Taikahuilu sai ensi-iltansa 30. syyskuuta 1791 Emanuel Schikanederin teatterissa Wienin Wiedenin esikaupungissa, ja se laulettiin saksaksi eikä italiaksi — tavallisen wieniläisen kielellä. Schikaneder kirjoitti sanat itse ja näytteli linnustaja Papagenoa. Mozart kuoli kaksi kuukautta myöhemmin. Kymmenen vuoden päästä Schikaneder avasi kaupunkiin uuden teatterin ja antoi veistää itsensä Papagenona sen portin päälle.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kaupunkilehti / Musiikki] Valssi, jonka toinen isku tulee etuajassa, ja satuooppera, joka kirjoitettiin esikaupungin puiselle näyttämölle — molemmat odottavat nyt omilla paikoillaan kaupungin kartalla.
+
+### 52.2
+KYSYMYS: Mitä merkitsi, että ooppera laulettiin saksaksi eikä italiaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Taikahuilu tehtiin esikaupungin teatteriin
+Tietoruudun teksti: Mozartin viimeinen ooppera ei syntynyt hovia varten. Taikahuilu sai ensi-iltansa 30. syyskuuta 1791 Emanuel Schikanederin teatterissa Wienin Wiedenin esikaupungissa, ja se laulettiin saksaksi eikä italiaksi — tavallisen wieniläisen kielellä. Schikaneder kirjoitti sanat itse ja näytteli linnustaja Papagenoa. Mozart kuoli kaksi kuukautta myöhemmin. Kymmenen vuoden päästä Schikaneder avasi kaupunkiin uuden teatterin ja antoi veistää itsensä Papagenona sen portin päälle.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Taikahuilu] Mozartin viimeinen ooppera ei syntynyt hovia varten. Taikahuilu sai ensi-iltansa 30. syyskuuta 1791 Emanuel Schikanederin teatterissa Wienin Wiedenin esikaupungissa, ja se laulettiin saksaksi eikä italiaksi — tavallisen wieniläisen kielellä. Schikaneder kirjoitti sanat itse ja näytteli linnustaja Papagenoa. Mozart kuoli kaksi kuukautta myöhemmin. Kymmenen vuoden päästä Schikaneder avasi kaupunkiin uuden teatterin ja antoi veistää itsensä Papagenona sen portin päälle.
+
+### 52.3
+KYSYMYS: Miksi Schikaneder halusi itsensä veistettynä Papagenona teatterinsa portin päälle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Taikahuilu tehtiin esikaupungin teatteriin
+Tietoruudun teksti: Mozartin viimeinen ooppera ei syntynyt hovia varten. Taikahuilu sai ensi-iltansa 30. syyskuuta 1791 Emanuel Schikanederin teatterissa Wienin Wiedenin esikaupungissa, ja se laulettiin saksaksi eikä italiaksi — tavallisen wieniläisen kielellä. Schikaneder kirjoitti sanat itse ja näytteli linnustaja Papagenoa. Mozart kuoli kaksi kuukautta myöhemmin. Kymmenen vuoden päästä Schikaneder avasi kaupunkiin uuden teatterin ja antoi veistää itsensä Papagenona sen portin päälle.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Taikahuilu] Mozartin viimeinen ooppera ei syntynyt hovia varten. Taikahuilu sai ensi-iltansa 30. syyskuuta 1791 Emanuel Schikanederin teatterissa Wienin Wiedenin esikaupungissa, ja se laulettiin saksaksi eikä italiaksi — tavallisen wieniläisen kielellä. Schikaneder kirjoitti sanat itse ja näytteli linnustaja Papagenoa. Mozart kuoli kaksi kuukautta myöhemmin. Kymmenen vuoden päästä Schikaneder avasi kaupunkiin uuden teatterin ja antoi veistää itsensä Papagenona sen portin päälle.
+
+### 52.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 52 YHTEINEN KONTEKSTI
+
+### 52.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 52 YHTEINEN KONTEKSTI
+
+================ KOHTA 53 (nosto:tonava-kaunoinen) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki sävelsi oman jokensa
+Tietoruudun teksti: Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+- [Wien — kaupunkilehti / Musiikki] Valssi, jonka toinen isku tulee etuajassa, ja satuooppera, joka kirjoitettiin esikaupungin puiselle näyttämölle — molemmat odottavat nyt omilla paikoillaan kaupungin kartalla.
+
+### 53.1
+KYSYMYS: Miksi valssi tehtiin ensin mieskuorolle eikä orkesterille?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki sävelsi oman jokensa
+Tietoruudun teksti: Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+
+### 53.2
+KYSYMYS: Miten etuajassa tuleva toinen isku opitaan, jos sitä ei voi laskea?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki sävelsi oman jokensa
+Tietoruudun teksti: Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+
+### 53.3
+KYSYMYS: Miten yhdestä valssista tuli kokonaisen kaupungin tunnusmerkki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki sävelsi oman jokensa
+Tietoruudun teksti: Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kaupunkilehti / Musiikki] Valssi, jonka toinen isku tulee etuajassa, ja satuooppera, joka kirjoitettiin esikaupungin puiselle näyttämölle — molemmat odottavat nyt omilla paikoillaan kaupungin kartalla.
+
+### 53.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 53 YHTEINEN KONTEKSTI
+
+### 53.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 53 YHTEINEN KONTEKSTI

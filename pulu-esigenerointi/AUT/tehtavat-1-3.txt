@@ -1,0 +1,295 @@
+================ KOHTA 11 (kohde:carnuntum) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carnuntum (kaupungit)
+Tietoruudun teksti: Carnuntum oli roomalainen legioonalinnoitus ja Pannonian laivaston päämaja vuodesta 50 jaa. Ensimmäisen vuosisadan jälkeen siitä tuli Pannonia Superior -provinssin pääkaupunki, ja se kasvoi noin viidenkymmenentuhannen asukkaan suurkaupungiksi.
+
+Rauniot ovat Tonavan varrella Ala-Itävallassa puolimatkassa Wienin ja Bratislavan välillä. Arkeologinen puisto kattaa kymmenen neliökilometriä Petronell-Carnuntumin ja Bad Deutsch-Altenburgin kylien liepeillä.
+
+Carnuntum tulee historiaan Augustuksen aikana vuonna 6 jaa., kun Tiberius teki siitä tukikohtansa sotaretkillään Maroboduusta vastaan. Legio XV Apollinaris sijoitettiin sinne varuskunnaksi ennen vuotta 14, ja paikasta tuli Tonavan varustusketjun keskus Vindobonasta eli Wienistä Brigetioon. Vuosina 117–118 Carnuntumista tuli Legio XIV Geminan pysyvä sijoituspaikka, ja legioona pysyi siellä kolme vuosisataa, kunnes raja romahti vuonna 430.
+
+…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+
+### 11.1
+KYSYMYS: Kuinka suuri Carnuntum oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carnuntum (kaupungit)
+Tietoruudun teksti: Carnuntum oli roomalainen legioonalinnoitus ja Pannonian laivaston päämaja vuodesta 50 jaa. Ensimmäisen vuosisadan jälkeen siitä tuli Pannonia Superior -provinssin pääkaupunki, ja se kasvoi noin viidenkymmenentuhannen asukkaan suurkaupungiksi.
+
+Rauniot ovat Tonavan varrella Ala-Itävallassa puolimatkassa Wienin ja Bratislavan välillä. Arkeologinen puisto kattaa kymmenen neliökilometriä Petronell-Carnuntumin ja Bad Deutsch-Altenburgin kylien liepeillä.
+
+Carnuntum tulee historiaan Augustuksen aikana vuonna 6 jaa., kun Tiberius teki siitä tukikohtansa sotaretkillään Maroboduusta vastaan. Legio XV Apollinaris sijoitettiin sinne varuskunnaksi ennen vuotta 14, ja paikasta tuli Tonavan varustusketjun keskus Vindobonasta eli Wienistä Brigetioon. Vuosina 117–118 Carnuntumista tuli Legio XIV Geminan pysyvä sijoituspaikka, ja legioona pysyi siellä kolme vuosisataa, kunnes raja romahti vuonna 430.
+
+…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+
+### 11.2
+KYSYMYS: Mikä meripihkatie oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carnuntum (kaupungit)
+Tietoruudun teksti: Carnuntum oli roomalainen legioonalinnoitus ja Pannonian laivaston päämaja vuodesta 50 jaa. Ensimmäisen vuosisadan jälkeen siitä tuli Pannonia Superior -provinssin pääkaupunki, ja se kasvoi noin viidenkymmenentuhannen asukkaan suurkaupungiksi.
+
+Rauniot ovat Tonavan varrella Ala-Itävallassa puolimatkassa Wienin ja Bratislavan välillä. Arkeologinen puisto kattaa kymmenen neliökilometriä Petronell-Carnuntumin ja Bad Deutsch-Altenburgin kylien liepeillä.
+
+Carnuntum tulee historiaan Augustuksen aikana vuonna 6 jaa., kun Tiberius teki siitä tukikohtansa sotaretkillään Maroboduusta vastaan. Legio XV Apollinaris sijoitettiin sinne varuskunnaksi ennen vuotta 14, ja paikasta tuli Tonavan varustusketjun keskus Vindobonasta eli Wienistä Brigetioon. Vuosina 117–118 Carnuntumista tuli Legio XIV Geminan pysyvä sijoituspaikka, ja legioona pysyi siellä kolme vuosisataa, kunnes raja romahti vuonna 430.
+
+…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:eisriesenwelt) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eisriesenwelt (luonto · vuori)
+Tietoruudun teksti: Eisriesenwelt — saksaksi jääjättiläisten maailma — on kalkkikivestä ja jäästä muodostuva luola Werfenissä, noin neljäkymmentä kilometriä Salzburgista etelään. Se on Hochkogel-vuoren sisässä Tennengebirgessä ja on maailman suurin jääluola: yli 42 kilometriä pitkä ja noin 200 000 kävijää vuodessa.
+
+Vaikka luola on 42 kilometriä pitkä, vain ensimmäinen kilometri — juuri se osa, johon matkailijat pääsevät — on jään peitossa. Loppu on paljasta kalkkikiveä. Luolan kaiversi Salzach-joki, ja jäämuodostelmat syntyivät sulavasta lumesta, joka valui luolaan ja jäätyi talvella.
+
+Jää säilyy, koska sisäänkäynti on auki ympäri vuoden. Talvella kylmä tuuli puhaltaa sisään ja jäädyttää lumen, ja kesällä kylmä ilmavirta puhaltaa luolasta ulos päin eikä päästä lämpimää sisään sulattamaan muodostelmia.
+
+Luonnontieteilijä Anton Posselt löysi luolan virallisesti 1879, mutta hän tutki siitä vain ensimmäiset k…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Luonto: Jääluola, jossa jää kasvaa keväällä] 1879 — Tennengebirgen vuoreen johtaa 42 kilometriä käytäviä: Eisriesenwelt on maailman suurin jääluola. Jäätä on kuitenkin vain ensimmäisessä kilometrissä. Talvella kylmä ilma valuu luolaan kuin savupiippuun ja jäähdyttää kallion, ja kun kevään sulamisvedet tihkuvat rakoihin, ne jäätyvät. Kesällä lattian jäästä sulaa 5–10 senttiä, mutta seuraavana keväänä se kasvaa takaisin. Anton Posselt pääsi vuonna 1879 noin 200 metrin päähän ja merkitsi kääntöpaikkansa mustalla ristillä. Kierroksella astutaan 1 400 porrasta.
+- [Tampere — kohdekartta / Kohdekartta: Finlayson] Skotlantilainen James Finlayson perusti kosken yläjuoksulle vuonna 1820 konepajan, jonka oli tarkoitus valmistaa kehruukoneita. Koneet eivät menneet kaupaksi, joten tehdas alkoi kehrätä itse. Finlayson myi laitoksensa 1836 kahdelle pietarilaiselle liikemiehelle, Carl Samuel Nottbeckille ja Georg Adolf Rauchille, ja vasta siitä kasvu alkoi. Vuonna 1837 valmistui talo, jota kaupunki kutsuu yhä Kuusvooninkiseksi: nimi tulee ruotsin sanoista sex våningar, kuusi kerrosta. Puutalojen keskellä se oli pilvenpiirtäjä. Se on myös Suomen ensimmäinen moderni tehdasrakennus, koska sen välipohjia eivät kannata väliseinät vaan valurautapylväät, jotka valettiin Fiskarsissa. Kehruu alkoi 1838, kudonta 1839.…
+
+### 12.1
+KYSYMYS: Miksi jää ei sula kesällä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eisriesenwelt (luonto · vuori)
+Tietoruudun teksti: Eisriesenwelt — saksaksi jääjättiläisten maailma — on kalkkikivestä ja jäästä muodostuva luola Werfenissä, noin neljäkymmentä kilometriä Salzburgista etelään. Se on Hochkogel-vuoren sisässä Tennengebirgessä ja on maailman suurin jääluola: yli 42 kilometriä pitkä ja noin 200 000 kävijää vuodessa.
+
+Vaikka luola on 42 kilometriä pitkä, vain ensimmäinen kilometri — juuri se osa, johon matkailijat pääsevät — on jään peitossa. Loppu on paljasta kalkkikiveä. Luolan kaiversi Salzach-joki, ja jäämuodostelmat syntyivät sulavasta lumesta, joka valui luolaan ja jäätyi talvella.
+
+Jää säilyy, koska sisäänkäynti on auki ympäri vuoden. Talvella kylmä tuuli puhaltaa sisään ja jäädyttää lumen, ja kesällä kylmä ilmavirta puhaltaa luolasta ulos päin eikä päästä lämpimää sisään sulattamaan muodostelmia.
+
+Luonnontieteilijä Anton Posselt löysi luolan virallisesti 1879, mutta hän tutki siitä vain ensimmäiset k…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Luonto: Jääluola, jossa jää kasvaa keväällä] 1879 — Tennengebirgen vuoreen johtaa 42 kilometriä käytäviä: Eisriesenwelt on maailman suurin jääluola. Jäätä on kuitenkin vain ensimmäisessä kilometrissä. Talvella kylmä ilma valuu luolaan kuin savupiippuun ja jäähdyttää kallion, ja kun kevään sulamisvedet tihkuvat rakoihin, ne jäätyvät. Kesällä lattian jäästä sulaa 5–10 senttiä, mutta seuraavana keväänä se kasvaa takaisin. Anton Posselt pääsi vuonna 1879 noin 200 metrin päähän ja merkitsi kääntöpaikkansa mustalla ristillä. Kierroksella astutaan 1 400 porrasta.
+
+### 12.2
+KYSYMYS: Miksi paikalliset eivät menneet luolaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eisriesenwelt (luonto · vuori)
+Tietoruudun teksti: Eisriesenwelt — saksaksi jääjättiläisten maailma — on kalkkikivestä ja jäästä muodostuva luola Werfenissä, noin neljäkymmentä kilometriä Salzburgista etelään. Se on Hochkogel-vuoren sisässä Tennengebirgessä ja on maailman suurin jääluola: yli 42 kilometriä pitkä ja noin 200 000 kävijää vuodessa.
+
+Vaikka luola on 42 kilometriä pitkä, vain ensimmäinen kilometri — juuri se osa, johon matkailijat pääsevät — on jään peitossa. Loppu on paljasta kalkkikiveä. Luolan kaiversi Salzach-joki, ja jäämuodostelmat syntyivät sulavasta lumesta, joka valui luolaan ja jäätyi talvella.
+
+Jää säilyy, koska sisäänkäynti on auki ympäri vuoden. Talvella kylmä tuuli puhaltaa sisään ja jäädyttää lumen, ja kesällä kylmä ilmavirta puhaltaa luolasta ulos päin eikä päästä lämpimää sisään sulattamaan muodostelmia.
+
+Luonnontieteilijä Anton Posselt löysi luolan virallisesti 1879, mutta hän tutki siitä vain ensimmäiset k…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tampere — kohdekartta / Kohdekartta: Finlayson] Skotlantilainen James Finlayson perusti kosken yläjuoksulle vuonna 1820 konepajan, jonka oli tarkoitus valmistaa kehruukoneita. Koneet eivät menneet kaupaksi, joten tehdas alkoi kehrätä itse. Finlayson myi laitoksensa 1836 kahdelle pietarilaiselle liikemiehelle, Carl Samuel Nottbeckille ja Georg Adolf Rauchille, ja vasta siitä kasvu alkoi. Vuonna 1837 valmistui talo, jota kaupunki kutsuu yhä Kuusvooninkiseksi: nimi tulee ruotsin sanoista sex våningar, kuusi kerrosta. Puutalojen keskellä se oli pilvenpiirtäjä. Se on myös Suomen ensimmäinen moderni tehdasrakennus, koska sen välipohjia eivät kannata väliseinät vaan valurautapylväät, jotka valettiin Fiskarsissa. Kehruu alkoi 1838, kudonta 1839.…
+- [Uusi-Seelanti — maalehti / Historia: Sota vaikenee ilman ratkaisua] 1872 — Viimeinen vaihe päättyi ilman ratkaisutaistelua. Rangatira Te Kooti Arikirangi Te Turuki, jota hallituksen joukot olivat jahdanneet itärannikolla vuodesta 1868, sai vuonna 1872 turvapaikan māorikuninkaalta ja siirtyi King Countryyn, jonne takaa-ajajat eivät menneet; siellä hän kehitti perustamaansa Ringatū-uskoa rauhassa, ja armahdus tuli vasta 1883. Taranakissa Tītokowaru ei ollut hävinnyt yhtäkään taistelua, mutta hylkäsi 1869 vahvan asemansa yllättäen, ja joukot hajosivat. Vuonna 1873 ase on vaiennut koko maassa, mutta maakysymystä ei ole ratkaistu.
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:erzberg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Erzberg (kauppa)
+Tietoruudun teksti: Erzberg on suuri avolouhos Eisenerzissä Steiermarkissa, kuusikymmentä kilometriä Grazista luoteeseen. Se on Itävallan suurin rautamalmiesiintymä: varantoja arvioidaan olevan 235 miljoonaa tonnia, ja kaivos tuottaa noin 3,2 miljoonaa tonnia puhdasta rautamalmia vuodessa. Malmin päämineraalit ovat sideriitti, ankeriitti ja rautapitoinen dolomiitti, ja rautapitoisuus on keskimäärin 21 prosenttia.
+
+Rautaa on louhittu täällä yli 1 300 vuotta. Eisenerzin Oswaldikirchessä oli asiakirja, jonka mukaan louhinta alkoi vuonna 712, mutta tietoa ei ole vahvistettu. Aluksi malmia otettiin pinnasta: 1100-luvulla louhittiin lähellä pintaa ollutta limoniittia, ja se sulatettiin pienissä ahjoissa kuoppien vieressä. Kaivosmiesten toimeentulo oli vaatimatonta.
+
+Maanalainen louhinta alkoi 1500-luvulla keisarin käskystä, ja työ tehtiin vasaralla ja hakulla. Yläosaa louhivat Vordernbergin ja alaosaa Innerbergi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Whitehorse — kaupunkilehti / Laakso, sää ja tie: Kolme vuorta ja määräys numero 426] Kaupunkia kehystää kolme vuorta: Grey Mountain idässä, Mount Sumanik luoteessa ja Golden Horn Mountain etelässä. Lempinimi erämaakaupunki on ansaittu kahdesti. Ensinnäkin pinta-alaa on 413,94 neliökilometriä ja metropolialueella 8 465, vaikka asukkaita on 28 201 — Whitehorse on Kanadan kuudenneksikymmenenneljäs kaupunki pinta-alaltaan. Toiseksi kaupunki on itse päättänyt pitää metsänsä: vuoden 1975 määräys numero 426 rajoittaa moottoriajoneuvot merkityille teille suojelluilla alueilla, jotta ympäristön laatu säilyy.
+- [Mount Isa — kaupunkilehti / Mount Isa: Maailman rikkain malmisuoni] Mount Isan malmiot ovat maailman suurimpia lyijyn, sinkin ja hopean kertymiä, ja niiden vieressä louhitaan erikseen kuparia. Malmi on kerrostunut noin 1,6 miljardia vuotta sitten syntyneeseen Urquhart-liuskeeseen, ja se jatkuu maan alla yli neljän ja puolen kilometrin matkalla ja puolentoista kilometrin syvyyteen. Kaivoskaupungin maisemaa hallitsevat kaksi piippua: korkeampi kuuluu lyijysulatolle ja punavalkoraidallinen kuparisulatolle. Niiden juurella kohoavat avolouhoksen kasat ja vanha nostotorni, joka on jo poissa käytöstä mutta seisoo yhä paikallaan kaupungin symbolina.
+
+### 13.1
+KYSYMYS: Kuinka kauan vuorta on louhittu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Erzberg (kauppa)
+Tietoruudun teksti: Erzberg on suuri avolouhos Eisenerzissä Steiermarkissa, kuusikymmentä kilometriä Grazista luoteeseen. Se on Itävallan suurin rautamalmiesiintymä: varantoja arvioidaan olevan 235 miljoonaa tonnia, ja kaivos tuottaa noin 3,2 miljoonaa tonnia puhdasta rautamalmia vuodessa. Malmin päämineraalit ovat sideriitti, ankeriitti ja rautapitoinen dolomiitti, ja rautapitoisuus on keskimäärin 21 prosenttia.
+
+Rautaa on louhittu täällä yli 1 300 vuotta. Eisenerzin Oswaldikirchessä oli asiakirja, jonka mukaan louhinta alkoi vuonna 712, mutta tietoa ei ole vahvistettu. Aluksi malmia otettiin pinnasta: 1100-luvulla louhittiin lähellä pintaa ollutta limoniittia, ja se sulatettiin pienissä ahjoissa kuoppien vieressä. Kaivosmiesten toimeentulo oli vaatimatonta.
+
+Maanalainen louhinta alkoi 1500-luvulla keisarin käskystä, ja työ tehtiin vasaralla ja hakulla. Yläosaa louhivat Vordernbergin ja alaosaa Innerbergi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Whitehorse — kaupunkilehti / Laakso, sää ja tie: Kolme vuorta ja määräys numero 426] Kaupunkia kehystää kolme vuorta: Grey Mountain idässä, Mount Sumanik luoteessa ja Golden Horn Mountain etelässä. Lempinimi erämaakaupunki on ansaittu kahdesti. Ensinnäkin pinta-alaa on 413,94 neliökilometriä ja metropolialueella 8 465, vaikka asukkaita on 28 201 — Whitehorse on Kanadan kuudenneksikymmenenneljäs kaupunki pinta-alaltaan. Toiseksi kaupunki on itse päättänyt pitää metsänsä: vuoden 1975 määräys numero 426 rajoittaa moottoriajoneuvot merkityille teille suojelluilla alueilla, jotta ympäristön laatu säilyy.
+
+### 13.2
+KYSYMYS: Miten malmi saatiin ennen laaksoon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Erzberg (kauppa)
+Tietoruudun teksti: Erzberg on suuri avolouhos Eisenerzissä Steiermarkissa, kuusikymmentä kilometriä Grazista luoteeseen. Se on Itävallan suurin rautamalmiesiintymä: varantoja arvioidaan olevan 235 miljoonaa tonnia, ja kaivos tuottaa noin 3,2 miljoonaa tonnia puhdasta rautamalmia vuodessa. Malmin päämineraalit ovat sideriitti, ankeriitti ja rautapitoinen dolomiitti, ja rautapitoisuus on keskimäärin 21 prosenttia.
+
+Rautaa on louhittu täällä yli 1 300 vuotta. Eisenerzin Oswaldikirchessä oli asiakirja, jonka mukaan louhinta alkoi vuonna 712, mutta tietoa ei ole vahvistettu. Aluksi malmia otettiin pinnasta: 1100-luvulla louhittiin lähellä pintaa ollutta limoniittia, ja se sulatettiin pienissä ahjoissa kuoppien vieressä. Kaivosmiesten toimeentulo oli vaatimatonta.
+
+Maanalainen louhinta alkoi 1500-luvulla keisarin käskystä, ja työ tehtiin vasaralla ja hakulla. Yläosaa louhivat Vordernbergin ja alaosaa Innerbergi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mount Isa — kaupunkilehti / Mount Isa: Maailman rikkain malmisuoni] Mount Isan malmiot ovat maailman suurimpia lyijyn, sinkin ja hopean kertymiä, ja niiden vieressä louhitaan erikseen kuparia. Malmi on kerrostunut noin 1,6 miljardia vuotta sitten syntyneeseen Urquhart-liuskeeseen, ja se jatkuu maan alla yli neljän ja puolen kilometrin matkalla ja puolentoista kilometrin syvyyteen. Kaivoskaupungin maisemaa hallitsevat kaksi piippua: korkeampi kuuluu lyijysulatolle ja punavalkoraidallinen kuparisulatolle. Niiden juurella kohoavat avolouhoksen kasat ja vanha nostotorni, joka on jo poissa käytöstä mutta seisoo yhä paikallaan kaupungin symbolina.
+- [Pariisi — kaupunkilehti / Historian hetki: Pariisi 1898 — tonni malmia, kymmenesosagramma radiumia] 1898 — Olkapäät ovat puutuneet jo aamupäivällä, mutta tankoa ei voi laskea. Marie Curie sekoittaa kiehuvaa pikivälkeliuosta rautakattilassa, ja vaja, joka oli ennen lääketieteellisen koulun ruumiinavaussali, vuotaa sateella katosta. Pierre mittaa vieressä säteilyä; luku on se, joka kertoo työn kannattavan. Curiet olivat ilmoittaneet poloniumin heinäkuussa 1898 ja radiumin 26. joulukuuta samana vuonna, mutta ilmoitus ei riitä kemisteille — uusi alkuaine on saatava käteen puhtaana. Se tarkoittaa tonneittain kaivosten pikivälkejätettä, joka keitetään, suodatetaan ja kiteytetään yhä uudelleen. Työ vie vuoteen 1902, jolloin tonnista malmia on eristetty kymmenesosagramma radiumkloridia. Aviopari …
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:bregenzin-jarvinayttamo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bregenzin järvinäyttämö (kulttuuri)
+Tietoruudun teksti: Bregenzer Festspiele on esittävän taiteen festivaali, joka järjestetään joka heinä- ja elokuu Bregenzissä Vorarlbergissä. Sen tunnus on suuri kelluva näyttämö Bodenjärvellä.
+
+Kansainvälinen tapahtuma siitä tuli heti ensimmäisenä vuonna 1946, vuosi toisen maailmansodan päättymisen jälkeen: väkeä tuli Saksasta, Sveitsistä ja Ranskasta. Kaksi näyttämöä rakennettiin kelluvista proomuista, toinen Wienin sinfoniaorkesterille ja toinen lavasteille. Orkesteri on ollut festivaalin suurin tekijä ja esiintynyt siellä joka vuosi alusta asti.
+
+Vuonna 2001 ohjelmaan tuli nykytaiteen tapahtumia yhteistyössä Kunsthaus Bregenzin kanssa, ja sen rinnalle on kasvanut lastenfestivaali sekä ooppera- ja orkesterityöpajoja. Taiteellisena johtajana toimi joulukuusta 2003 vuoteen 2014 David Pountney, ja 2015 hänen jälkeensä aloitti Elisabeth Sobotka, joka perusti myös nuorille laulajille tarkoitetun oopperastudi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Ankaran linna] Linnassa on kaksi muurikehää. Ulomman kehän tornit ovat noin 40 metrin välein. Sisempi kehä on paljon tiheämpi: siinä tornit seuraavat toisiaan lyhyin välein, ja muurin sisään jää alue, joka on noin 350 metriä pitkä ja 150 metriä leveä. Pohjana on laavakieleke, joka kohoaa selvästi vanhan kaupungin yläpuolelle. Tarkkoja rakennusvuosia ei tiedetä. Molemmat kehät ovat kuitenkin vuotta 622 nuorempia: silloin persialaiset valtasivat ja hävittivät kaupungin, ja muurit nousivat vasta sen jälkeen. Tutkija Clive Foss on arvioinut sisemmän kehän keisari Konstans II:n ajalta — hän hallitsi Bysantissa vuosina 641–668 — ja ulompaa kehää pidetään hieman nuorempana. Kukkula oli linnoitettu jo kauan ennen…
+
+### 14.1
+KYSYMYS: Mistä ensimmäiset näyttämöt rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bregenzin järvinäyttämö (kulttuuri)
+Tietoruudun teksti: Bregenzer Festspiele on esittävän taiteen festivaali, joka järjestetään joka heinä- ja elokuu Bregenzissä Vorarlbergissä. Sen tunnus on suuri kelluva näyttämö Bodenjärvellä.
+
+Kansainvälinen tapahtuma siitä tuli heti ensimmäisenä vuonna 1946, vuosi toisen maailmansodan päättymisen jälkeen: väkeä tuli Saksasta, Sveitsistä ja Ranskasta. Kaksi näyttämöä rakennettiin kelluvista proomuista, toinen Wienin sinfoniaorkesterille ja toinen lavasteille. Orkesteri on ollut festivaalin suurin tekijä ja esiintynyt siellä joka vuosi alusta asti.
+
+Vuonna 2001 ohjelmaan tuli nykytaiteen tapahtumia yhteistyössä Kunsthaus Bregenzin kanssa, ja sen rinnalle on kasvanut lastenfestivaali sekä ooppera- ja orkesterityöpajoja. Taiteellisena johtajana toimi joulukuusta 2003 vuoteen 2014 David Pountney, ja 2015 hänen jälkeensä aloitti Elisabeth Sobotka, joka perusti myös nuorille laulajille tarkoitetun oopperastudi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Ankaran linna] Linnassa on kaksi muurikehää. Ulomman kehän tornit ovat noin 40 metrin välein. Sisempi kehä on paljon tiheämpi: siinä tornit seuraavat toisiaan lyhyin välein, ja muurin sisään jää alue, joka on noin 350 metriä pitkä ja 150 metriä leveä. Pohjana on laavakieleke, joka kohoaa selvästi vanhan kaupungin yläpuolelle. Tarkkoja rakennusvuosia ei tiedetä. Molemmat kehät ovat kuitenkin vuotta 622 nuorempia: silloin persialaiset valtasivat ja hävittivät kaupungin, ja muurit nousivat vasta sen jälkeen. Tutkija Clive Foss on arvioinut sisemmän kehän keisari Konstans II:n ajalta — hän hallitsi Bysantissa vuosina 641–668 — ja ulompaa kehää pidetään hieman nuorempana. Kukkula oli linnoitettu jo kauan ennen…
+
+### 14.2
+KYSYMYS: Mikä elokuva kuvattiin näyttämöllä 2008?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bregenzin järvinäyttämö (kulttuuri)
+Tietoruudun teksti: Bregenzer Festspiele on esittävän taiteen festivaali, joka järjestetään joka heinä- ja elokuu Bregenzissä Vorarlbergissä. Sen tunnus on suuri kelluva näyttämö Bodenjärvellä.
+
+Kansainvälinen tapahtuma siitä tuli heti ensimmäisenä vuonna 1946, vuosi toisen maailmansodan päättymisen jälkeen: väkeä tuli Saksasta, Sveitsistä ja Ranskasta. Kaksi näyttämöä rakennettiin kelluvista proomuista, toinen Wienin sinfoniaorkesterille ja toinen lavasteille. Orkesteri on ollut festivaalin suurin tekijä ja esiintynyt siellä joka vuosi alusta asti.
+
+Vuonna 2001 ohjelmaan tuli nykytaiteen tapahtumia yhteistyössä Kunsthaus Bregenzin kanssa, ja sen rinnalle on kasvanut lastenfestivaali sekä ooppera- ja orkesterityöpajoja. Taiteellisena johtajana toimi joulukuusta 2003 vuoteen 2014 David Pountney, ja 2015 hänen jälkeensä aloitti Elisabeth Sobotka, joka perusti myös nuorille laulajille tarkoitetun oopperastudi…
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:krimmlin-vesiputoukset) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krimmlin vesiputoukset (luonto · joki)
+Tietoruudun teksti: Krimmlin vesiputoukset ovat kokonaiskorkeudeltaan 380 metriä ja Itävallan korkeimmat. Ne ovat Krimmler Ache -joessa Krimmlin kylän lähellä Korkean Tauernin kansallispuistossa Salzburgin osavaltiossa. Vesi laskee kolmessa portaassa: ylin pudotus on 140 metriä, keskimmäinen 100 ja alin 140. Putouksen korkein kohta on 1 470 metriä merenpinnan yläpuolella.
+
+Krimmler Ache on jäätikköpuro, ja sen virtaama vaihtelee rajusti vuodenajan mukaan. Kesä- ja heinäkuussa se on 5,6 kuutiometriä sekunnissa, helmikuussa vain 0,14. Suurin mitattu virtaama oli 25. elokuuta 1987, jolloin se nousi 166,7 kuutiometriin sekunnissa. Putousten jälkeen joki yhtyy Salzachiin, joka vie veden Inniin, sieltä Tonavaan ja lopulta Mustaanmereen.
+
+Jotta putouksen näkisi vaivatta, Ignaz von Kürsinger Mittersillistä rakennutti polun sen yläosaan, ja Itävallan alppikerho paransi tietä 1879 näköalojen vuoksi. Kävijöitä on noi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Caracas — kaupunkilehti / Luonto: Lentäjä joka etsi kultaa ja löysi putouksen] Guayanan ylängöllä kohoaa Auyán-tepui, pöytävuori, jonka nimi tarkoittaa pemonien kielellä jumalten taloa. Sen reunalta vesi putoaa 979 metriä, josta 807 metriä yhtäjaksoisesti – lähes yhdeksäntoista kertaa Niagaran putouksen korkeus. Paikalliset tunsivat putouksen kauan, mutta ulkomaailma sai siitä tiedon vasta 16. marraskuuta 1933, kun yhdysvaltalainen lentäjä Jimmie Angel lensi sen yli kultamalmia etsiessään; putous nimettiin hänen mukaansa Angelin putoukseksi. Tarkka korkeus mitattiin vasta 13. toukokuuta 1949 yhdysvaltalaisen toimittajan Ruth Robertsonin rahoittamalla retkikunnalla.
+- [Viktorian putoukset — kaupunkilehti / Viktorian putoukset: Uinti putouksen partaalla] Livingstone-saaren kupeessa, aivan putouksen reunalla, muodostuu kuivan kauden aikana syyskuusta joulukuuhun luonnollinen kivialtaanpohja nimeltä Devil's Pool eli "paholaisen allas". Veden alla oleva kivikynnys pidättää uimarit paikoillaan juuri ennen kuin vesi syöksyy 108 metriä alaspäin rotkoon, joten rohkeat matkailijat voivat paikallisen oppaan varmistamana kellua altaassa ja kurkistaa suoraan putouksen yli. Isoisälle tällainen matka-allas olisi ollut tuntematon: siitä kerrottiin laajemmin vasta 1900-luvun lopulla, kun putouksista tuli suosittu matkailukohde.
+
+### 15.1
+KYSYMYS: Kuinka paljon virtaama vaihtelee vuodenajan mukaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krimmlin vesiputoukset (luonto · joki)
+Tietoruudun teksti: Krimmlin vesiputoukset ovat kokonaiskorkeudeltaan 380 metriä ja Itävallan korkeimmat. Ne ovat Krimmler Ache -joessa Krimmlin kylän lähellä Korkean Tauernin kansallispuistossa Salzburgin osavaltiossa. Vesi laskee kolmessa portaassa: ylin pudotus on 140 metriä, keskimmäinen 100 ja alin 140. Putouksen korkein kohta on 1 470 metriä merenpinnan yläpuolella.
+
+Krimmler Ache on jäätikköpuro, ja sen virtaama vaihtelee rajusti vuodenajan mukaan. Kesä- ja heinäkuussa se on 5,6 kuutiometriä sekunnissa, helmikuussa vain 0,14. Suurin mitattu virtaama oli 25. elokuuta 1987, jolloin se nousi 166,7 kuutiometriin sekunnissa. Putousten jälkeen joki yhtyy Salzachiin, joka vie veden Inniin, sieltä Tonavaan ja lopulta Mustaanmereen.
+
+Jotta putouksen näkisi vaivatta, Ignaz von Kürsinger Mittersillistä rakennutti polun sen yläosaan, ja Itävallan alppikerho paransi tietä 1879 näköalojen vuoksi. Kävijöitä on noi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iguazú — kaupunkilehti / Iguazú: 275 putousta ja kurkku, joka nielee joen] Iguazú ei ole yksi putous vaan kenkähevosen muotoinen kokonaisuus, jossa laskee arvioiden mukaan noin 275 erillistä putousta ja putousryhmää lähes kolmen kilometrin matkalla. Suurin ja pelottavin niistä on Garganta del Diablo, Paholaisen kurkku: siihen syöksyy noin puolet koko joen vedestä yhtenä U-kirjaimen muotoisena putouksena, jonka pohjaa ei erota vaahdon ja sumun keskeltä. Putousten korkeus vaihtelee 60–82 metrin välillä, ja sadekaudella virtaama voi moninkertaistua kuivan kauden lukemiin verrattuna. Osa Argentiinan ja Brasilian välisestä rajasta kulkee juuri tätä kurkkua pitkin, joten sama jylisevä näky kuuluu molemmille maille.
+- [Sepik — kaupunkilehti / Sepik: Kylä joka seisoo vedessä] Sepikin alajuoksulla joki ei koskaan muodosta suistoa vaan hajoaa laajaksi, paikoin 70 kilometriä leveäksi tulva-alueeksi, jonka halki mutkittelee noin 1 500 hylättyä jokimutkaa. Kylät, kuten tässä näkyvä Kambaramba, on siksi rakennettu paalujen varaan veden päälle: talot, kirkot ja koulut lepäävät puupilarien varassa aivan kuin laiturit. Aluetta on kutsuttu Aasian ja Tyynenmeren laajimmaksi koskemattomaksi makean veden kosteikoksi. Vedenpinta vaihtelee sadekauden mukaan niin paljon, että moni kylä joutuu ajan mittaan pystyttämään rakennuksensa uudelleen.
+
+### 15.2
+KYSYMYS: Minne putouksen vesi lopulta päätyy?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krimmlin vesiputoukset (luonto · joki)
+Tietoruudun teksti: Krimmlin vesiputoukset ovat kokonaiskorkeudeltaan 380 metriä ja Itävallan korkeimmat. Ne ovat Krimmler Ache -joessa Krimmlin kylän lähellä Korkean Tauernin kansallispuistossa Salzburgin osavaltiossa. Vesi laskee kolmessa portaassa: ylin pudotus on 140 metriä, keskimmäinen 100 ja alin 140. Putouksen korkein kohta on 1 470 metriä merenpinnan yläpuolella.
+
+Krimmler Ache on jäätikköpuro, ja sen virtaama vaihtelee rajusti vuodenajan mukaan. Kesä- ja heinäkuussa se on 5,6 kuutiometriä sekunnissa, helmikuussa vain 0,14. Suurin mitattu virtaama oli 25. elokuuta 1987, jolloin se nousi 166,7 kuutiometriin sekunnissa. Putousten jälkeen joki yhtyy Salzachiin, joka vie veden Inniin, sieltä Tonavaan ja lopulta Mustaanmereen.
+
+Jotta putouksen näkisi vaivatta, Ignaz von Kürsinger Mittersillistä rakennutti polun sen yläosaan, ja Itävallan alppikerho paransi tietä 1879 näköalojen vuoksi. Kävijöitä on noi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Caracas — kaupunkilehti / Luonto: Lentäjä joka etsi kultaa ja löysi putouksen] Guayanan ylängöllä kohoaa Auyán-tepui, pöytävuori, jonka nimi tarkoittaa pemonien kielellä jumalten taloa. Sen reunalta vesi putoaa 979 metriä, josta 807 metriä yhtäjaksoisesti – lähes yhdeksäntoista kertaa Niagaran putouksen korkeus. Paikalliset tunsivat putouksen kauan, mutta ulkomaailma sai siitä tiedon vasta 16. marraskuuta 1933, kun yhdysvaltalainen lentäjä Jimmie Angel lensi sen yli kultamalmia etsiessään; putous nimettiin hänen mukaansa Angelin putoukseksi. Tarkka korkeus mitattiin vasta 13. toukokuuta 1949 yhdysvaltalaisen toimittajan Ruth Robertsonin rahoittamalla retkikunnalla.
+- [Viktorian putoukset — kaupunkilehti / Viktorian putoukset: Uinti putouksen partaalla] Livingstone-saaren kupeessa, aivan putouksen reunalla, muodostuu kuivan kauden aikana syyskuusta joulukuuhun luonnollinen kivialtaanpohja nimeltä Devil's Pool eli "paholaisen allas". Veden alla oleva kivikynnys pidättää uimarit paikoillaan juuri ennen kuin vesi syöksyy 108 metriä alaspäin rotkoon, joten rohkeat matkailijat voivat paikallisen oppaan varmistamana kellua altaassa ja kurkistaa suoraan putouksen yli. Isoisälle tällainen matka-allas olisi ollut tuntematon: siitä kerrottiin laajemmin vasta 1900-luvun lopulla, kun putouksista tuli suosittu matkailukohde.
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

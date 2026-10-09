@@ -1,0 +1,186 @@
+================ KOHTA 36 (kohde:hahmotelma-kitzbuehel) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kitzbühel (kulttuuri)
+Tietoruudun teksti: Kitzbühel on keskiaikainen kaupunki Kitzbühelin Alpeilla Tirolissa Itävallassa, noin 100 kilometriä Innsbruckista itään ja Kitzbühelin piirikunnan hallinnollinen keskus. Se on yksi maailman kuuluisimmista ja eksklusiivisimmista hiihtokeskuksista, jossa vierailee kansainvälistä ylintä seurapiiriä. Vuosittain järjestettävä Hahnenkamm-kilpailu on maailman vaikeimpana pidetty hiihtokilpailu. Kitzbühel sijaitsee Zell am Seen ja Innsbruckin välissä Leukentalin laaksossa Kitzbüheler Ache -joen varrella. Ensimmäiset tunnetut asukkaat olivat illyyrialaiset, jotka louhivat kuparia kukkuloilla vuosien 1100 ja 800 eaa. välillä.
+
+### 36.1
+KYSYMYS: Mikä Hahnenkamm-kilpailu on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kitzbühel (kulttuuri)
+Tietoruudun teksti: Kitzbühel on keskiaikainen kaupunki Kitzbühelin Alpeilla Tirolissa Itävallassa, noin 100 kilometriä Innsbruckista itään ja Kitzbühelin piirikunnan hallinnollinen keskus. Se on yksi maailman kuuluisimmista ja eksklusiivisimmista hiihtokeskuksista, jossa vierailee kansainvälistä ylintä seurapiiriä. Vuosittain järjestettävä Hahnenkamm-kilpailu on maailman vaikeimpana pidetty hiihtokilpailu. Kitzbühel sijaitsee Zell am Seen ja Innsbruckin välissä Leukentalin laaksossa Kitzbüheler Ache -joen varrella. Ensimmäiset tunnetut asukkaat olivat illyyrialaiset, jotka louhivat kuparia kukkuloilla vuosien 1100 ja 800 eaa. välillä.
+
+### 36.2
+KYSYMYS: Milloin Kitzbühelissä louhittiin kuparia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kitzbühel (kulttuuri)
+Tietoruudun teksti: Kitzbühel on keskiaikainen kaupunki Kitzbühelin Alpeilla Tirolissa Itävallassa, noin 100 kilometriä Innsbruckista itään ja Kitzbühelin piirikunnan hallinnollinen keskus. Se on yksi maailman kuuluisimmista ja eksklusiivisimmista hiihtokeskuksista, jossa vierailee kansainvälistä ylintä seurapiiriä. Vuosittain järjestettävä Hahnenkamm-kilpailu on maailman vaikeimpana pidetty hiihtokilpailu. Kitzbühel sijaitsee Zell am Seen ja Innsbruckin välissä Leukentalin laaksossa Kitzbüheler Ache -joen varrella. Ensimmäiset tunnetut asukkaat olivat illyyrialaiset, jotka louhivat kuparia kukkuloilla vuosien 1100 ja 800 eaa. välillä.
+
+### 36.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+================ KOHTA 37 (kohde:hahmotelma-piber) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Piber (ruoka)
+Tietoruudun teksti: Piberin valtion siitoslaitos eli Bundesgestüt Piber on lipizzanhevosten kasvatukseen omistettu talli Piberin kylässä lähellä Köflachin kaupunkia Länsi-Steiermarkissa. Talli perustettiin vuonna 1798 sotahevosten kasvatusta varten, ja lipizzanien kasvatus alkoi vuonna 1920; nykyisin se on pääasiallinen laitos, joka tuottaa Espanjalaisen ratsastuskoulun käyttämät orit. Piberin linna oli aiemmin Pyhän Lambrechtin luostari. Vuonna 1867 talli siirtyi Itävalta-Unkarin keisarillisen maatalousministeriön hallintaan. Yksi Piberin päätavoitteista on ylläpitää olennainen osa Itävallan kulttuuriperintöä ja säilyttää yksi kauneimmista hevosroduista alkuperäisessä muodossaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Lipizzanit] Hofburgin palatsissa toimii ratsastuskoulu, jonne lipizzanoriit tuodaan nelivuotiaina Piberin siitostallilta Steiermarkista. Valkoisia ne eivät silloin vielä ole: varsat syntyvät ruunikkoina tai mustina ja vaalenevat vuosi vuodelta, kunnes ovat 6–10 vuoden iässä valkoisia. Perinne vaatii, että tallissa on aina myös yksi ruunikko. Ratsastajat tervehtivät salin seinällä olevaa keisari Kaarle VI:n muotokuvaa ennen kuin ratsastavat.
+
+### 37.1
+KYSYMYS: Mitä Espanjalainen ratsastuskoulu on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Piber (ruoka)
+Tietoruudun teksti: Piberin valtion siitoslaitos eli Bundesgestüt Piber on lipizzanhevosten kasvatukseen omistettu talli Piberin kylässä lähellä Köflachin kaupunkia Länsi-Steiermarkissa. Talli perustettiin vuonna 1798 sotahevosten kasvatusta varten, ja lipizzanien kasvatus alkoi vuonna 1920; nykyisin se on pääasiallinen laitos, joka tuottaa Espanjalaisen ratsastuskoulun käyttämät orit. Piberin linna oli aiemmin Pyhän Lambrechtin luostari. Vuonna 1867 talli siirtyi Itävalta-Unkarin keisarillisen maatalousministeriön hallintaan. Yksi Piberin päätavoitteista on ylläpitää olennainen osa Itävallan kulttuuriperintöä ja säilyttää yksi kauneimmista hevosroduista alkuperäisessä muodossaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Lipizzanit] Hofburgin palatsissa toimii ratsastuskoulu, jonne lipizzanoriit tuodaan nelivuotiaina Piberin siitostallilta Steiermarkista. Valkoisia ne eivät silloin vielä ole: varsat syntyvät ruunikkoina tai mustina ja vaalenevat vuosi vuodelta, kunnes ovat 6–10 vuoden iässä valkoisia. Perinne vaatii, että tallissa on aina myös yksi ruunikko. Ratsastajat tervehtivät salin seinällä olevaa keisari Kaarle VI:n muotokuvaa ennen kuin ratsastavat.
+
+### 37.2
+KYSYMYS: Miksi lipizzaneja kasvatetaan Piberissä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Piber (ruoka)
+Tietoruudun teksti: Piberin valtion siitoslaitos eli Bundesgestüt Piber on lipizzanhevosten kasvatukseen omistettu talli Piberin kylässä lähellä Köflachin kaupunkia Länsi-Steiermarkissa. Talli perustettiin vuonna 1798 sotahevosten kasvatusta varten, ja lipizzanien kasvatus alkoi vuonna 1920; nykyisin se on pääasiallinen laitos, joka tuottaa Espanjalaisen ratsastuskoulun käyttämät orit. Piberin linna oli aiemmin Pyhän Lambrechtin luostari. Vuonna 1867 talli siirtyi Itävalta-Unkarin keisarillisen maatalousministeriön hallintaan. Yksi Piberin päätavoitteista on ylläpitää olennainen osa Itävallan kulttuuriperintöä ja säilyttää yksi kauneimmista hevosroduista alkuperäisessä muodossaan.
+
+### 37.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+================ KOHTA 38 (kohde:hahmotelma-eisenstadt) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eisenstadt (kulttuuri)
+Tietoruudun teksti: Eisenstadt on Burgenlandin osavaltion pääkaupunki Itävallassa; kaupungissa asuu noin 16 100 ihmistä, ja se on Itävallan pienin osavaltion pääkaupunki. Se sijaitsee Leithavuorten juurella. Vuosina 1648–1921 Kismarton eli Eisenstadt kuului Habsburgien valtakunnan Unkarin kuningaskuntaan ja oli unkarilaisen Esterházy-aatelissuvun kotipaikka. Sinä aikana säveltäjä Joseph Haydn asui ja työskenteli Eisenstadtissa hovimuusikkona Esterházyjen suojeluksessa. Haydnin nimittäminen ruhtinaan Hofkapellmeisteriksi aloitti kaupungin suuren taiteellisen kauden. Kaupungin Bergkirchessä on Haydnin hauta. Burgenland liitettiin Itävaltaan vuonna 1921, ja Eisenstadtista tuli osavaltion pääkaupunki vuonna 1925.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Historia: Ehkä maailman vanhin sotilassoittokunta] Mehter on osmanien sotilassoittokunta, jota pidetään vanhimpana tunnettuna yhä toimivana marssivana soittokuntana maailmassa. Täydessä kokoonpanossa jokaista soitinta oli yhdeksän: yhdeksän rumpua, yhdeksän kimeää zurnaa, yhdeksän lautasparia. Jyminä kuului Euroopan puolelle asti, ja Haydn, Mozart ja Beethoven kirjoittivat kaikki musiikkia, joka matkii sitä. Soittokunta lakkautettiin 1826, mutta Istanbulin sotilasmuseon johtaja herätti sen henkiin 1911. Museossa se marssii yhä.
+
+### 38.1
+KYSYMYS: Kuka Joseph Haydn oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eisenstadt (kulttuuri)
+Tietoruudun teksti: Eisenstadt on Burgenlandin osavaltion pääkaupunki Itävallassa; kaupungissa asuu noin 16 100 ihmistä, ja se on Itävallan pienin osavaltion pääkaupunki. Se sijaitsee Leithavuorten juurella. Vuosina 1648–1921 Kismarton eli Eisenstadt kuului Habsburgien valtakunnan Unkarin kuningaskuntaan ja oli unkarilaisen Esterházy-aatelissuvun kotipaikka. Sinä aikana säveltäjä Joseph Haydn asui ja työskenteli Eisenstadtissa hovimuusikkona Esterházyjen suojeluksessa. Haydnin nimittäminen ruhtinaan Hofkapellmeisteriksi aloitti kaupungin suuren taiteellisen kauden. Kaupungin Bergkirchessä on Haydnin hauta. Burgenland liitettiin Itävaltaan vuonna 1921, ja Eisenstadtista tuli osavaltion pääkaupunki vuonna 1925.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Historia: Ehkä maailman vanhin sotilassoittokunta] Mehter on osmanien sotilassoittokunta, jota pidetään vanhimpana tunnettuna yhä toimivana marssivana soittokuntana maailmassa. Täydessä kokoonpanossa jokaista soitinta oli yhdeksän: yhdeksän rumpua, yhdeksän kimeää zurnaa, yhdeksän lautasparia. Jyminä kuului Euroopan puolelle asti, ja Haydn, Mozart ja Beethoven kirjoittivat kaikki musiikkia, joka matkii sitä. Soittokunta lakkautettiin 1826, mutta Istanbulin sotilasmuseon johtaja herätti sen henkiin 1911. Museossa se marssii yhä.
+
+### 38.2
+KYSYMYS: Miksi Eisenstadt oli osa Unkaria?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eisenstadt (kulttuuri)
+Tietoruudun teksti: Eisenstadt on Burgenlandin osavaltion pääkaupunki Itävallassa; kaupungissa asuu noin 16 100 ihmistä, ja se on Itävallan pienin osavaltion pääkaupunki. Se sijaitsee Leithavuorten juurella. Vuosina 1648–1921 Kismarton eli Eisenstadt kuului Habsburgien valtakunnan Unkarin kuningaskuntaan ja oli unkarilaisen Esterházy-aatelissuvun kotipaikka. Sinä aikana säveltäjä Joseph Haydn asui ja työskenteli Eisenstadtissa hovimuusikkona Esterházyjen suojeluksessa. Haydnin nimittäminen ruhtinaan Hofkapellmeisteriksi aloitti kaupungin suuren taiteellisen kauden. Kaupungin Bergkirchessä on Haydnin hauta. Burgenland liitettiin Itävaltaan vuonna 1921, ja Eisenstadtista tuli osavaltion pääkaupunki vuonna 1925.
+
+### 38.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+================ KOHTA 39 (kohde:hahmotelma-lienz) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lienz (kulttuuri)
+Tietoruudun teksti: Lienz on keskiaikainen kaupunki Tirolin osavaltiossa Itävallassa. Se on Lienzin piirikunnan hallinnollinen keskus, joka kattaa koko Itä-Tirolin. Lienz sijaitsee Iselin ja Draun jokien yhtymäkohdassa Itäalpeilla, pohjoisessa olevan Hohe Tauernin vuoriston ja etelässä olevien Gailtalin Alppien välissä. Iselsbergin sola yhdistää sen Kärntenin Winklerniin. Lienzin alue on ollut asuttua pronssikaudelta noin vuodesta 2000 eaa. lähtien, ja kelttejä siellä asui noin vuodesta 300 eaa. Kaupunki sijaitsee yhden Alppien tai koko maailman suurimmista alppimegafaaneista juurella: se on 350 metriä korkea ja säteeltään 2,5 kilometriä.
+
+### 39.1
+KYSYMYS: Missä Itä-Tirol on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lienz (kulttuuri)
+Tietoruudun teksti: Lienz on keskiaikainen kaupunki Tirolin osavaltiossa Itävallassa. Se on Lienzin piirikunnan hallinnollinen keskus, joka kattaa koko Itä-Tirolin. Lienz sijaitsee Iselin ja Draun jokien yhtymäkohdassa Itäalpeilla, pohjoisessa olevan Hohe Tauernin vuoriston ja etelässä olevien Gailtalin Alppien välissä. Iselsbergin sola yhdistää sen Kärntenin Winklerniin. Lienzin alue on ollut asuttua pronssikaudelta noin vuodesta 2000 eaa. lähtien, ja kelttejä siellä asui noin vuodesta 300 eaa. Kaupunki sijaitsee yhden Alppien tai koko maailman suurimmista alppimegafaaneista juurella: se on 350 metriä korkea ja säteeltään 2,5 kilometriä.
+
+### 39.2
+KYSYMYS: Mikä megafaani on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lienz (kulttuuri)
+Tietoruudun teksti: Lienz on keskiaikainen kaupunki Tirolin osavaltiossa Itävallassa. Se on Lienzin piirikunnan hallinnollinen keskus, joka kattaa koko Itä-Tirolin. Lienz sijaitsee Iselin ja Draun jokien yhtymäkohdassa Itäalpeilla, pohjoisessa olevan Hohe Tauernin vuoriston ja etelässä olevien Gailtalin Alppien välissä. Iselsbergin sola yhdistää sen Kärntenin Winklerniin. Lienzin alue on ollut asuttua pronssikaudelta noin vuodesta 2000 eaa. lähtien, ja kelttejä siellä asui noin vuodesta 300 eaa. Kaupunki sijaitsee yhden Alppien tai koko maailman suurimmista alppimegafaaneista juurella: se on 350 metriä korkea ja säteeltään 2,5 kilometriä.
+
+### 39.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+================ KOHTA 40 (kohde:hahmotelma-bregenzerwald) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bregenzerwald (kulttuuri)
+Tietoruudun teksti: Bregenzerwald on yksi Vorarlbergin osavaltion pääalueista Itävallassa, ja se kuuluu Pohjoisiin kalkkialppeihin. Se on Bregenzer Ach -joen valuma-alue, ja siellä asuu noin 31 400 ihmistä. Alue rajoittuu lännessä Bodenjärven seutuun Reinin laaksossa ja pohjoisessa Saksaan ja Baijeriin. Asukkaat jakavat alueen usein kahteen osaan: Vorderwaldiin eli alempaan Bregenzerwaldiin ja Hinterwaldiin eli ylempään Bregenzerwaldiin, jossa vuoret nousevat jopa 2 000 metriin. Bezauta pidetään historiallisista syistä päämarkkinakaupunkina, ja alueella kulkee juustoreitti; 1900-luvun alussa lukemattomilla alpeilla ja tiloilla harjoitettiin maanviljelyä, karjanhoitoa ja juuston valmistusta.
+
+### 40.1
+KYSYMYS: Mikä Bregenzerwaldin juustoreitti on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bregenzerwald (kulttuuri)
+Tietoruudun teksti: Bregenzerwald on yksi Vorarlbergin osavaltion pääalueista Itävallassa, ja se kuuluu Pohjoisiin kalkkialppeihin. Se on Bregenzer Ach -joen valuma-alue, ja siellä asuu noin 31 400 ihmistä. Alue rajoittuu lännessä Bodenjärven seutuun Reinin laaksossa ja pohjoisessa Saksaan ja Baijeriin. Asukkaat jakavat alueen usein kahteen osaan: Vorderwaldiin eli alempaan Bregenzerwaldiin ja Hinterwaldiin eli ylempään Bregenzerwaldiin, jossa vuoret nousevat jopa 2 000 metriin. Bezauta pidetään historiallisista syistä päämarkkinakaupunkina, ja alueella kulkee juustoreitti; 1900-luvun alussa lukemattomilla alpeilla ja tiloilla harjoitettiin maanviljelyä, karjanhoitoa ja juuston valmistusta.
+
+### 40.2
+KYSYMYS: Missä Bregenzerwaldin päälaakso on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bregenzerwald (kulttuuri)
+Tietoruudun teksti: Bregenzerwald on yksi Vorarlbergin osavaltion pääalueista Itävallassa, ja se kuuluu Pohjoisiin kalkkialppeihin. Se on Bregenzer Ach -joen valuma-alue, ja siellä asuu noin 31 400 ihmistä. Alue rajoittuu lännessä Bodenjärven seutuun Reinin laaksossa ja pohjoisessa Saksaan ja Baijeriin. Asukkaat jakavat alueen usein kahteen osaan: Vorderwaldiin eli alempaan Bregenzerwaldiin ja Hinterwaldiin eli ylempään Bregenzerwaldiin, jossa vuoret nousevat jopa 2 000 metriin. Bezauta pidetään historiallisista syistä päämarkkinakaupunkina, ja alueella kulkee juustoreitti; 1900-luvun alussa lukemattomilla alpeilla ja tiloilla harjoitettiin maanviljelyä, karjanhoitoa ja juuston valmistusta.
+
+### 40.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI

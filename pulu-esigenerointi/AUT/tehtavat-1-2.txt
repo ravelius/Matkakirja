@@ -1,0 +1,288 @@
+================ KOHTA 6 (kohde:melkin-luostari) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melkin luostari (kulttuuri)
+Tietoruudun teksti: Melkin luostari on benediktiiniluostari Melkin kaupungin yläpuolella kalliokielekkeellä, joka kohoaa Tonavan yllä Wachaun laakson kupeessa. Kirkossa on pyhän Kolomanin hauta ja useiden Babenbergien — Itävallan ensimmäisen hallitsijasuvun — jäännökset.
+
+Luostari perustettiin 1089, kun Itävallan rajakreivi Leopold II antoi yhden linnoistaan Lambachin benediktiinimunkeille. Luostarikoulu perustettiin 1100-luvulla, ja kirjasto tuli pian kuuluisaksi laajasta käsikirjoituskokoelmastaan ja käsikirjoitusten valmistuksesta. 1400-luvulla luostarista tuli Melkin reformin keskus, joka uudisti Itävallan ja Etelä-Saksan luostarielämää.
+
+Nykyinen barokkiluostari rakennettiin 1702–1736 Jakob Prandtauerin suunnitelmien mukaan; kirkon freskot ovat Johann Michael Rottmayrin ja Paul Trogerin. 1700-luvun lopulla Melk oli valistusajattelun keskus, ja luostarissa toimi jopa vapaamuurariloosi.
+
+Maineensa ja op…
+
+### 6.1
+KYSYMYS: Miksi Melk säästyi lakkauttamiselta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melkin luostari (kulttuuri)
+Tietoruudun teksti: Melkin luostari on benediktiiniluostari Melkin kaupungin yläpuolella kalliokielekkeellä, joka kohoaa Tonavan yllä Wachaun laakson kupeessa. Kirkossa on pyhän Kolomanin hauta ja useiden Babenbergien — Itävallan ensimmäisen hallitsijasuvun — jäännökset.
+
+Luostari perustettiin 1089, kun Itävallan rajakreivi Leopold II antoi yhden linnoistaan Lambachin benediktiinimunkeille. Luostarikoulu perustettiin 1100-luvulla, ja kirjasto tuli pian kuuluisaksi laajasta käsikirjoituskokoelmastaan ja käsikirjoitusten valmistuksesta. 1400-luvulla luostarista tuli Melkin reformin keskus, joka uudisti Itävallan ja Etelä-Saksan luostarielämää.
+
+Nykyinen barokkiluostari rakennettiin 1702–1736 Jakob Prandtauerin suunnitelmien mukaan; kirkon freskot ovat Johann Michael Rottmayrin ja Paul Trogerin. 1700-luvun lopulla Melk oli valistusajattelun keskus, ja luostarissa toimi jopa vapaamuurariloosi.
+
+Maineensa ja op…
+
+### 6.2
+KYSYMYS: Kuka on Melkin Adso?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melkin luostari (kulttuuri)
+Tietoruudun teksti: Melkin luostari on benediktiiniluostari Melkin kaupungin yläpuolella kalliokielekkeellä, joka kohoaa Tonavan yllä Wachaun laakson kupeessa. Kirkossa on pyhän Kolomanin hauta ja useiden Babenbergien — Itävallan ensimmäisen hallitsijasuvun — jäännökset.
+
+Luostari perustettiin 1089, kun Itävallan rajakreivi Leopold II antoi yhden linnoistaan Lambachin benediktiinimunkeille. Luostarikoulu perustettiin 1100-luvulla, ja kirjasto tuli pian kuuluisaksi laajasta käsikirjoituskokoelmastaan ja käsikirjoitusten valmistuksesta. 1400-luvulla luostarista tuli Melkin reformin keskus, joka uudisti Itävallan ja Etelä-Saksan luostarielämää.
+
+Nykyinen barokkiluostari rakennettiin 1702–1736 Jakob Prandtauerin suunnitelmien mukaan; kirkon freskot ovat Johann Michael Rottmayrin ja Paul Trogerin. 1700-luvun lopulla Melk oli valistusajattelun keskus, ja luostarissa toimi jopa vapaamuurariloosi.
+
+Maineensa ja op…
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:hohensalzburg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hohensalzburgin linnoitus (historia)
+Tietoruudun teksti: Hohensalzburgin linnoitus on suuri keskiaikainen linnoitus Salzburgin kaupungissa. Se seisoo Festungsbergin päällä 506 metrin korkeudessa, ja sen rakennuttivat Salzburgin ruhtinasarkkipiispat. Linnoitus on 250 metriä pitkä ja 150 metriä leveä, mikä tekee siitä yhden Euroopan suurimmista keskiaikaisista linnoista.
+
+Rakentaminen alkoi 1077 arkkipiispa Gebhard von Helfensteinin aikana. Alkuperäinen suunnitelma oli yksinkertainen puumuurinen esilinna. Helfensteinin riita keisari Henrik IV:n kanssa investituurakiistassa vauhditti laajennuksia: arkkipiispa asettui paavi Gregorius VII:n puolelle.
+
+Vuonna 1515 koadjutori Matthäus Lang von Wellenburg kuvasi Reisszugin, hyvin varhaisen ja alkeellisen köysiradan, joka toi tavaraa linnan ylemmälle pihalle. Rata on yhä olemassa uudistettuna, ja se on todennäköisesti maailman vanhin toiminnassa oleva rautatie.
+
+Ainoa kerta, kun linnoitus joutui todel…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Afganistan — maalehti / Musiikki: Piiri, joka kiihtyy tuntikausia] Attan on Afganistanin kansallistanssi. Tanssijat asettuvat piiriin rummuttajan ympärille, ja askel alkaa hitaana ja kiihtyy vähitellen niin, että piiri voi pyöriä kaksi tai kolme tuntia ilman muuta taukoa kuin tempon lasku. Tahdin lyö dohol, kaksipäinen tynnyrirumpu. Tyylejä on kymmeniä, ja jokainen tunnistaa omansa: kabuli, wardaki, logari, paktia, khosti, kandahari ja herati. Naisten juhlapuvuissa on pieniä peilejä, joiden sanotaan tarkoittavan valoa, ja miesten turbaanin sitomistapa kertoo heimon. Tanssin juuret johdetaan zarathustralaisiin menoihin lähes kolmentuhannen vuoden takaa.
+- [Sarajevo — kohdekartta / Kohdekartta: Sarajevon katedraali] 1884–1889 Sarajevon suurin katolinen kirkko, Pyhän Sydämen katedraali, kohoaa kahdella tornillaan keskustan sydämessä. Rakennustyöt alkoivat vuonna 1884, ja kirkko vihittiin käyttöön jo viiden vuoden kuluttua, vuonna 1889. Arkkitehti Josip Vancaš otti mallia kaukaisesta Ranskan Dijonista, Notre-Damen kirkosta, ja niin Sarajevoon syntyi oma pieni sisarrakennus sille. Katedraalin kaksi tornia kohoavat yli 43 metrin korkeuteen, ja koko rakennus on lähes 42 metriä pitkä. Sen suippokaariset ikkunat ja pyöreät tornit ovat niin tunnettuja, että ne on kuvattu Sarajevon kaupungin vaakunassa ja koko kantonin lipussa — katedraali on siis virallisesti osa kaupungin tunnusta. 1990-luvun alussa Sarajevoa…
+
+### 7.1
+KYSYMYS: Mikä Reisszug on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hohensalzburgin linnoitus (historia)
+Tietoruudun teksti: Hohensalzburgin linnoitus on suuri keskiaikainen linnoitus Salzburgin kaupungissa. Se seisoo Festungsbergin päällä 506 metrin korkeudessa, ja sen rakennuttivat Salzburgin ruhtinasarkkipiispat. Linnoitus on 250 metriä pitkä ja 150 metriä leveä, mikä tekee siitä yhden Euroopan suurimmista keskiaikaisista linnoista.
+
+Rakentaminen alkoi 1077 arkkipiispa Gebhard von Helfensteinin aikana. Alkuperäinen suunnitelma oli yksinkertainen puumuurinen esilinna. Helfensteinin riita keisari Henrik IV:n kanssa investituurakiistassa vauhditti laajennuksia: arkkipiispa asettui paavi Gregorius VII:n puolelle.
+
+Vuonna 1515 koadjutori Matthäus Lang von Wellenburg kuvasi Reisszugin, hyvin varhaisen ja alkeellisen köysiradan, joka toi tavaraa linnan ylemmälle pihalle. Rata on yhä olemassa uudistettuna, ja se on todennäköisesti maailman vanhin toiminnassa oleva rautatie.
+
+Ainoa kerta, kun linnoitus joutui todel…
+
+### 7.2
+KYSYMYS: Milloin linnoitusta piiritettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hohensalzburgin linnoitus (historia)
+Tietoruudun teksti: Hohensalzburgin linnoitus on suuri keskiaikainen linnoitus Salzburgin kaupungissa. Se seisoo Festungsbergin päällä 506 metrin korkeudessa, ja sen rakennuttivat Salzburgin ruhtinasarkkipiispat. Linnoitus on 250 metriä pitkä ja 150 metriä leveä, mikä tekee siitä yhden Euroopan suurimmista keskiaikaisista linnoista.
+
+Rakentaminen alkoi 1077 arkkipiispa Gebhard von Helfensteinin aikana. Alkuperäinen suunnitelma oli yksinkertainen puumuurinen esilinna. Helfensteinin riita keisari Henrik IV:n kanssa investituurakiistassa vauhditti laajennuksia: arkkipiispa asettui paavi Gregorius VII:n puolelle.
+
+Vuonna 1515 koadjutori Matthäus Lang von Wellenburg kuvasi Reisszugin, hyvin varhaisen ja alkeellisen köysiradan, joka toi tavaraa linnan ylemmälle pihalle. Rata on yhä olemassa uudistettuna, ja se on todennäköisesti maailman vanhin toiminnassa oleva rautatie.
+
+Ainoa kerta, kun linnoitus joutui todel…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Afganistan — maalehti / Musiikki: Piiri, joka kiihtyy tuntikausia] Attan on Afganistanin kansallistanssi. Tanssijat asettuvat piiriin rummuttajan ympärille, ja askel alkaa hitaana ja kiihtyy vähitellen niin, että piiri voi pyöriä kaksi tai kolme tuntia ilman muuta taukoa kuin tempon lasku. Tahdin lyö dohol, kaksipäinen tynnyrirumpu. Tyylejä on kymmeniä, ja jokainen tunnistaa omansa: kabuli, wardaki, logari, paktia, khosti, kandahari ja herati. Naisten juhlapuvuissa on pieniä peilejä, joiden sanotaan tarkoittavan valoa, ja miesten turbaanin sitomistapa kertoo heimon. Tanssin juuret johdetaan zarathustralaisiin menoihin lähes kolmentuhannen vuoden takaa.
+- [Sarajevo — kohdekartta / Kohdekartta: Sarajevon katedraali] 1884–1889 Sarajevon suurin katolinen kirkko, Pyhän Sydämen katedraali, kohoaa kahdella tornillaan keskustan sydämessä. Rakennustyöt alkoivat vuonna 1884, ja kirkko vihittiin käyttöön jo viiden vuoden kuluttua, vuonna 1889. Arkkitehti Josip Vancaš otti mallia kaukaisesta Ranskan Dijonista, Notre-Damen kirkosta, ja niin Sarajevoon syntyi oma pieni sisarrakennus sille. Katedraalin kaksi tornia kohoavat yli 43 metrin korkeuteen, ja koko rakennus on lähes 42 metriä pitkä. Sen suippokaariset ikkunat ja pyöreät tornit ovat niin tunnettuja, että ne on kuvattu Sarajevon kaupungin vaakunassa ja koko kantonin lipussa — katedraali on siis virallisesti osa kaupungin tunnusta. 1990-luvun alussa Sarajevoa…
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:semmeringin-rata) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Semmeringin rata (tekniikka)
+Tietoruudun teksti: Semmeringin rata alkaa Gloggnitzista ja kulkee Semmeringin yli Mürzzuschlagiin. Se oli Euroopan ensimmäinen normaaliraiteinen vuoristorata, ja sitä pidetään yleisesti maailman ensimmäisenä varsinaisena vuoristoratana — sekä maasto että korkeusero olivat siihen asti näkemättömän vaikeita.
+
+Rata rakennettiin 1848–1854. Työssä oli noin 20 000 ihmistä, ja hanketta johti sen suunnittelija Carl von Ghega. Radalla on neljätoista tunnelia, joista pisin on huipputunneli 1 431 metriä, kuusitoista viaduktia ja yli sata kiviholvisiltaa. Asemat ja työnjohtajien rakennukset tehtiin usein suoraan tunneleista louhitusta kivestä.
+
+Neljänkymmenenyhden kilometrin matkalla rata voittaa 460 metrin korkeuseron. Kuudellakymmenellä prosentilla matkasta nousu on 2,0–2,5 prosenttia, ja kuudellatoista prosentilla kaarresäde on vain 190 metriä. Rakennusaikana oli kehitettävä uudet mittausvälineet ja -menetelmät, j…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Rata, joka kiertää vuoren kaksin verroin pidemmäksi] 1854 — Semmeringin rata avattiin vuonna 1854, ja se oli Euroopan ensimmäinen normaaliraiteinen vuoristorautatie. Carl von Ghega johdatti kiskot Gloggnitzista Mürzzuschlagiin vuoren yli. Linnuntietä päätepisteiden väli on 21 kilometriä, mutta rataa on 42, koska nousu piti kiertää loivaksi. Ylin kohta on 898 metrissä. Matkalla on 14 tunnelia, 16 viaduktia ja yli sata holvattua kivisiltaa. Moni piti hanketta mahdottomana, koska kukaan ei tiennyt, jaksaisiko veturi nousta niin jyrkkää.
+- [Yellowstone — kaupunkilehti / Yellowstone: Valokuvaaja joka todisti ihmeen] Hayden palkkasi retkikuntaansa valokuvaaja William Henry Jacksonin, jonka tehtävänä oli vangita puiston geysirit ja kuumat lähteet kameralle. Työ oli raskasta: lasilevynegatiivit, kemikaalit ja pimiöteltta kulkivat muulien selässä, ja jokainen kuva piti kehittää paikan päällä tuoreeltaan, ennen kuin emulsio ehti kuivua. Jacksonin kuvat olivat ensimmäiset koskaan otetut valokuvat Yellowstonen ihmeistä, ja niitä käytettiin todisteena, kun kongressille esiteltiin lakiehdotusta puiston perustamisesta. Toisin kuin kertomuksia, valokuvia ei voinut leimata liioitteluksi — ne osoittivat mustavalkoisen kiistattomasti, että geysirit ja terassit olivat totta.
+
+### 8.1
+KYSYMYS: Miksi radalle piti kehittää oma veturityyppi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Semmeringin rata (tekniikka)
+Tietoruudun teksti: Semmeringin rata alkaa Gloggnitzista ja kulkee Semmeringin yli Mürzzuschlagiin. Se oli Euroopan ensimmäinen normaaliraiteinen vuoristorata, ja sitä pidetään yleisesti maailman ensimmäisenä varsinaisena vuoristoratana — sekä maasto että korkeusero olivat siihen asti näkemättömän vaikeita.
+
+Rata rakennettiin 1848–1854. Työssä oli noin 20 000 ihmistä, ja hanketta johti sen suunnittelija Carl von Ghega. Radalla on neljätoista tunnelia, joista pisin on huipputunneli 1 431 metriä, kuusitoista viaduktia ja yli sata kiviholvisiltaa. Asemat ja työnjohtajien rakennukset tehtiin usein suoraan tunneleista louhitusta kivestä.
+
+Neljänkymmenenyhden kilometrin matkalla rata voittaa 460 metrin korkeuseron. Kuudellakymmenellä prosentilla matkasta nousu on 2,0–2,5 prosenttia, ja kuudellatoista prosentilla kaarresäde on vain 190 metriä. Rakennusaikana oli kehitettävä uudet mittausvälineet ja -menetelmät, j…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Rata, joka kiertää vuoren kaksin verroin pidemmäksi] 1854 — Semmeringin rata avattiin vuonna 1854, ja se oli Euroopan ensimmäinen normaaliraiteinen vuoristorautatie. Carl von Ghega johdatti kiskot Gloggnitzista Mürzzuschlagiin vuoren yli. Linnuntietä päätepisteiden väli on 21 kilometriä, mutta rataa on 42, koska nousu piti kiertää loivaksi. Ylin kohta on 898 metrissä. Matkalla on 14 tunnelia, 16 viaduktia ja yli sata holvattua kivisiltaa. Moni piti hanketta mahdottomana, koska kukaan ei tiennyt, jaksaisiko veturi nousta niin jyrkkää.
+- [Yellowstone — kaupunkilehti / Yellowstone: Valokuvaaja joka todisti ihmeen] Hayden palkkasi retkikuntaansa valokuvaaja William Henry Jacksonin, jonka tehtävänä oli vangita puiston geysirit ja kuumat lähteet kameralle. Työ oli raskasta: lasilevynegatiivit, kemikaalit ja pimiöteltta kulkivat muulien selässä, ja jokainen kuva piti kehittää paikan päällä tuoreeltaan, ennen kuin emulsio ehti kuivua. Jacksonin kuvat olivat ensimmäiset koskaan otetut valokuvat Yellowstonen ihmeistä, ja niitä käytettiin todisteena, kun kongressille esiteltiin lakiehdotusta puiston perustamisesta. Toisin kuin kertomuksia, valokuvia ei voinut leimata liioitteluksi — ne osoittivat mustavalkoisen kiistattomasti, että geysirit ja terassit olivat totta.
+
+### 8.2
+KYSYMYS: Kuinka paljon rata nousee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Semmeringin rata (tekniikka)
+Tietoruudun teksti: Semmeringin rata alkaa Gloggnitzista ja kulkee Semmeringin yli Mürzzuschlagiin. Se oli Euroopan ensimmäinen normaaliraiteinen vuoristorata, ja sitä pidetään yleisesti maailman ensimmäisenä varsinaisena vuoristoratana — sekä maasto että korkeusero olivat siihen asti näkemättömän vaikeita.
+
+Rata rakennettiin 1848–1854. Työssä oli noin 20 000 ihmistä, ja hanketta johti sen suunnittelija Carl von Ghega. Radalla on neljätoista tunnelia, joista pisin on huipputunneli 1 431 metriä, kuusitoista viaduktia ja yli sata kiviholvisiltaa. Asemat ja työnjohtajien rakennukset tehtiin usein suoraan tunneleista louhitusta kivestä.
+
+Neljänkymmenenyhden kilometrin matkalla rata voittaa 460 metrin korkeuseron. Kuudellakymmenellä prosentilla matkasta nousu on 2,0–2,5 prosenttia, ja kuudellatoista prosentilla kaarresäde on vain 190 metriä. Rakennusaikana oli kehitettävä uudet mittausvälineet ja -menetelmät, j…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Rata, joka kiertää vuoren kaksin verroin pidemmäksi] 1854 — Semmeringin rata avattiin vuonna 1854, ja se oli Euroopan ensimmäinen normaaliraiteinen vuoristorautatie. Carl von Ghega johdatti kiskot Gloggnitzista Mürzzuschlagiin vuoren yli. Linnuntietä päätepisteiden väli on 21 kilometriä, mutta rataa on 42, koska nousu piti kiertää loivaksi. Ylin kohta on 898 metrissä. Matkalla on 14 tunnelia, 16 viaduktia ja yli sata holvattua kivisiltaa. Moni piti hanketta mahdottomana, koska kukaan ei tiennyt, jaksaisiko veturi nousta niin jyrkkää.
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:mauthausen) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mauthausen (historia)
+Tietoruudun teksti: Mauthausen oli kansallissosialistien keskitysleiri kukkulalla Mauthausenin kauppalan yllä Ylä-Itävallassa, noin kaksikymmentä kilometriä Linzistä itään. Se oli pääleiri ryhmälle, johon kuului lähes sata alaleiriä eri puolilla Itävaltaa ja Etelä-Saksaa.
+
+Pääleiri toimi 8. elokuuta 1938 alkaen — muutama kuukausi Itävallan liittämisen jälkeen — 5. toukokuuta 1945 asti, jolloin Yhdysvaltain armeija vapautti sen. Tammikuussa 1945 leireillä oli noin 85 000 vankia.
+
+Paikka valittiin läheisen graniittilouhoksen ja Linzin läheisyyden takia. Vaikka leiri oli alusta asti Saksan valtion hallinnassa, sen perusti yksityinen yhtiö taloudellisena hankkeena. Vangit pakotettiin orjatyöhön louhoksissa, kaivoksissa, ammustehtaissa ja asetehtaissa oloissa, jotka tappoivat.
+
+Mauthausenin olot olivat ankarammat kuin useimmissa muissa leireissä: sen ja alaleiriensä 190 000 vangista puolet kuoli. Se oli yksi en…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Birdsville — kaupunkilehti / Birdsville: Leiri numero 76] Vuonna 1861 Robert O'Hara Burke ja William John Wills palasivat epäonnistuneelta Pohjois-Australian ylitykseltä nälkiintyneinä ja aikataulusta jäljessä. Retkikunnan reitti kulki Diamantina-joen vartta, ja yksi sen leiripaikoista — virallisissa kartoissa leiri numero 76 — osui lähes tarkalleen kohtaan, johon Birdsville parikymmentä vuotta myöhemmin rakennettiin. Burke ja Wills eivät saaneet tietää siitä: he kuolivat nälkään muutaman viikon kuluttua Cooper Creekin varrella. Heidän karttansa jäivät kuitenkin jäljelle, ja niiden ansiosta tiedetään, että eurooppalaiset kulkivat Birdsvillen kohdalla jo kaksitoista vuotta ennen isoisän matkaa.
+- [Chicago — kaupunkilehti / Alkuperäiskansat: Linnake joka tuhoutui kahdesti] Yhdysvaltain armeija rakensi Fort Dearbornin Chicago-joen suulle 1803. Vuoden 1812 sodan aikana varuskunnan evakuointikolonnaa vastaan hyökkäsi noin viisisataa Potawatomi-soturia, ja hyökkäyksessä kuoli suurin osa siviileistä sekä 54 sotilasta. Päällikkö Mucktypoke eli Musta peltopyy oli neuvonut hyökkäystä vastaan etukäteen ja pelasti myöhemmin osan vangeista. Linnake rakennettiin uudelleen samalle paikalle 1816 ja poistettiin käytöstä 1837; sen viimeiset jäänteet tuhoutuivat suurpalossa 1871.
+
+### 9.1
+KYSYMYS: Miksi leiri perustettiin juuri tähän paikkaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mauthausen (historia)
+Tietoruudun teksti: Mauthausen oli kansallissosialistien keskitysleiri kukkulalla Mauthausenin kauppalan yllä Ylä-Itävallassa, noin kaksikymmentä kilometriä Linzistä itään. Se oli pääleiri ryhmälle, johon kuului lähes sata alaleiriä eri puolilla Itävaltaa ja Etelä-Saksaa.
+
+Pääleiri toimi 8. elokuuta 1938 alkaen — muutama kuukausi Itävallan liittämisen jälkeen — 5. toukokuuta 1945 asti, jolloin Yhdysvaltain armeija vapautti sen. Tammikuussa 1945 leireillä oli noin 85 000 vankia.
+
+Paikka valittiin läheisen graniittilouhoksen ja Linzin läheisyyden takia. Vaikka leiri oli alusta asti Saksan valtion hallinnassa, sen perusti yksityinen yhtiö taloudellisena hankkeena. Vangit pakotettiin orjatyöhön louhoksissa, kaivoksissa, ammustehtaissa ja asetehtaissa oloissa, jotka tappoivat.
+
+Mauthausenin olot olivat ankarammat kuin useimmissa muissa leireissä: sen ja alaleiriensä 190 000 vangista puolet kuoli. Se oli yksi en…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Birdsville — kaupunkilehti / Birdsville: Leiri numero 76] Vuonna 1861 Robert O'Hara Burke ja William John Wills palasivat epäonnistuneelta Pohjois-Australian ylitykseltä nälkiintyneinä ja aikataulusta jäljessä. Retkikunnan reitti kulki Diamantina-joen vartta, ja yksi sen leiripaikoista — virallisissa kartoissa leiri numero 76 — osui lähes tarkalleen kohtaan, johon Birdsville parikymmentä vuotta myöhemmin rakennettiin. Burke ja Wills eivät saaneet tietää siitä: he kuolivat nälkään muutaman viikon kuluttua Cooper Creekin varrella. Heidän karttansa jäivät kuitenkin jäljelle, ja niiden ansiosta tiedetään, että eurooppalaiset kulkivat Birdsvillen kohdalla jo kaksitoista vuotta ennen isoisän matkaa.
+
+### 9.2
+KYSYMYS: Kuinka moni vangeista kuoli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mauthausen (historia)
+Tietoruudun teksti: Mauthausen oli kansallissosialistien keskitysleiri kukkulalla Mauthausenin kauppalan yllä Ylä-Itävallassa, noin kaksikymmentä kilometriä Linzistä itään. Se oli pääleiri ryhmälle, johon kuului lähes sata alaleiriä eri puolilla Itävaltaa ja Etelä-Saksaa.
+
+Pääleiri toimi 8. elokuuta 1938 alkaen — muutama kuukausi Itävallan liittämisen jälkeen — 5. toukokuuta 1945 asti, jolloin Yhdysvaltain armeija vapautti sen. Tammikuussa 1945 leireillä oli noin 85 000 vankia.
+
+Paikka valittiin läheisen graniittilouhoksen ja Linzin läheisyyden takia. Vaikka leiri oli alusta asti Saksan valtion hallinnassa, sen perusti yksityinen yhtiö taloudellisena hankkeena. Vangit pakotettiin orjatyöhön louhoksissa, kaivoksissa, ammustehtaissa ja asetehtaissa oloissa, jotka tappoivat.
+
+Mauthausenin olot olivat ankarammat kuin useimmissa muissa leireissä: sen ja alaleiriensä 190 000 vangista puolet kuoli. Se oli yksi en…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chicago — kaupunkilehti / Alkuperäiskansat: Linnake joka tuhoutui kahdesti] Yhdysvaltain armeija rakensi Fort Dearbornin Chicago-joen suulle 1803. Vuoden 1812 sodan aikana varuskunnan evakuointikolonnaa vastaan hyökkäsi noin viisisataa Potawatomi-soturia, ja hyökkäyksessä kuoli suurin osa siviileistä sekä 54 sotilasta. Päällikkö Mucktypoke eli Musta peltopyy oli neuvonut hyökkäystä vastaan etukäteen ja pelasti myöhemmin osan vangeista. Linnake rakennettiin uudelleen samalle paikalle 1816 ja poistettiin käytöstä 1837; sen viimeiset jäänteet tuhoutuivat suurpalossa 1871.
+- [Cayenne — kaupunkilehti / Bagne — rangaistussiirtolan verkosto: Ei paluuta kotiin] Rangaistussiirtolan olot olivat tunnetusti raskaat: trooppiset taudit ja uupumus nostivat kuolleisuuden pahimmillaan noin 75 prosenttiin vangeista. Vuodesta 1868 lähtien vapautuneen vangin piti itse maksaa paluumatkansa Ranskaan, mutta koska töitä ja rahaa ei siirtokunnasta juuri löytynyt, harva pystyi koskaan maksamaan lipun kotiin. Moni jäi siksi pysyvästi Ranskan Guayanaan vapautumisensa jälkeenkin. Tänään monet leirien selliosastot ovat luhistumassa, ja sademetsä on hitaasti vallannut takaisin niiden kivi- ja betoniseinät, joiden sisällä satojen tuhansien vankien elämä joskus kului.
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:durnstein) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dürnstein (sana)
+Tietoruudun teksti: Dürnstein on pieni kaupunki Tonavan rannalla Ala-Itävallassa. Se on Wachaun alueen käydyimpiä matkakohteita ja tunnettu viinialue.
+
+Nimi tulee keskiaikaisesta Dürnsteinin linnasta, joka kohosi kaupungin yllä. Linnan nimi taas tulee saksan sanoista dürr, kuiva, ja Stein, kivi: kivilinna oli kuiva, koska se seisoi kalliokummulla korkealla Tonavan kostean rannan yläpuolella. Nykyinen kaupunki on linnan ja joen välissä.
+
+Dürnstein mainitaan ensi kerran vuonna 1192, kun Englannin kuningas Rikhard I oli kaupungin yläpuolisessa linnassa Itävallan herttuan Leopold V:n vankina. Rikhard Leijonamieli oli loukannut Leopoldia heittämällä tämän lipun alas muureilta Akkonin valtauksen jälkeen, ja herttua epäili kuninkaan määränneen serkkunsa Konrad Montferratilaisen murhan Jerusalemissa. Paavi Kölestinus III julisti Leopoldin pannaan ristiretkeläistoverin vangitsemisesta.
+
+Lopulta herttua luovutti kun…
+
+### 10.1
+KYSYMYS: Miksi Leopold vangitsi Rikhardin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dürnstein (sana)
+Tietoruudun teksti: Dürnstein on pieni kaupunki Tonavan rannalla Ala-Itävallassa. Se on Wachaun alueen käydyimpiä matkakohteita ja tunnettu viinialue.
+
+Nimi tulee keskiaikaisesta Dürnsteinin linnasta, joka kohosi kaupungin yllä. Linnan nimi taas tulee saksan sanoista dürr, kuiva, ja Stein, kivi: kivilinna oli kuiva, koska se seisoi kalliokummulla korkealla Tonavan kostean rannan yläpuolella. Nykyinen kaupunki on linnan ja joen välissä.
+
+Dürnstein mainitaan ensi kerran vuonna 1192, kun Englannin kuningas Rikhard I oli kaupungin yläpuolisessa linnassa Itävallan herttuan Leopold V:n vankina. Rikhard Leijonamieli oli loukannut Leopoldia heittämällä tämän lipun alas muureilta Akkonin valtauksen jälkeen, ja herttua epäili kuninkaan määränneen serkkunsa Konrad Montferratilaisen murhan Jerusalemissa. Paavi Kölestinus III julisti Leopoldin pannaan ristiretkeläistoverin vangitsemisesta.
+
+Lopulta herttua luovutti kun…
+
+### 10.2
+KYSYMYS: Mistä nimi Dürnstein tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dürnstein (sana)
+Tietoruudun teksti: Dürnstein on pieni kaupunki Tonavan rannalla Ala-Itävallassa. Se on Wachaun alueen käydyimpiä matkakohteita ja tunnettu viinialue.
+
+Nimi tulee keskiaikaisesta Dürnsteinin linnasta, joka kohosi kaupungin yllä. Linnan nimi taas tulee saksan sanoista dürr, kuiva, ja Stein, kivi: kivilinna oli kuiva, koska se seisoi kalliokummulla korkealla Tonavan kostean rannan yläpuolella. Nykyinen kaupunki on linnan ja joen välissä.
+
+Dürnstein mainitaan ensi kerran vuonna 1192, kun Englannin kuningas Rikhard I oli kaupungin yläpuolisessa linnassa Itävallan herttuan Leopold V:n vankina. Rikhard Leijonamieli oli loukannut Leopoldia heittämällä tämän lipun alas muureilta Akkonin valtauksen jälkeen, ja herttua epäili kuninkaan määränneen serkkunsa Konrad Montferratilaisen murhan Jerusalemissa. Paavi Kölestinus III julisti Leopoldin pannaan ristiretkeläistoverin vangitsemisesta.
+
+Lopulta herttua luovutti kun…
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

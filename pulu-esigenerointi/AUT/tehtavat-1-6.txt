@@ -1,0 +1,213 @@
+================ KOHTA 26 (kohde:hahmotelma-mariazell) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mariazell (historia)
+Tietoruudun teksti: Mariazell on itävaltalainen kaupunki Steiermarkin kaakkoisosassa, ja se on tunnettu talviurheilun keskuksena ja pyhiinvaelluskohteena. Se sijaitsee 143 kilometriä Grazista pohjoiseen Salza-joen laaksossa Pohjois-Steiermarkin Alppien keskellä. Kaupunki on katolilaisten pyhiinvaelluskohde Itävallasta ja naapurimaista. Palvonnan kohteena on lehmuspuuhun veistetty Neitsyt Marian kuva, jonka uskotaan tekevän ihmeitä; se tuotiin paikalle vuonna 1157 ja on nykyään kappelissa, jota koristavat hopeaesineet. Kappeli on osa suurta kirkkoa, joka rakennettiin vuonna 1644 laajennukseksi Unkarin kuningas Ludvig I:n pienemmälle kirkolle, jonka hän rakennutti voitettuaan ottomaanit vuonna 1363.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valparaíso — kohdekartta / Kohdekartta: Pyhien sydänten kirkko] 1874 Laiva Sylphide saapui Bordeaux’sta Valparaísoon 13. toukokuuta 1834, ja sen matkustajina oli neljä Jeesuksen ja Marian pyhien sydänten sääntökunnan pappia, joiden määränpää oli Gambiersaaret Ranskan Polynesiassa. Heistä Chrysostome Liausu jäi kaupunkiin ja perusti sääntökunnan ensimmäisen yhteisön eteläamerikkalaiseen satamaan. Vuonna 1837 kaupungin cabildo antoi hänelle luvan perustaa koulun — itsenäisen Chilen ensimmäisen yksityiskoulun. Koulu muutti 1840 Independencia-kadulle nykyiselle paikalleen, jota laajennettiin ostamalla viereisiä tontteja, ja sinne rakennettiin kappeli. Vuoden 1860 lopulla isä Oliver määräsi rakennettavaksi uuden kirkon, jonka suunnittelivat arkkitehdit Lucie…
+- [Havanna — kohdekartta / Kohdekartta: Pyhän Hengen kirkko] 1635 Kirkko rakennettiin 1635 Cuba- ja Acosta-katujen kulmaan, ja se uusittiin ja laajennettiin 1648, jolloin siitä tuli seurakuntakirkko. Sen kiinnostavuus on koruttomuudessa: seinät ovat korallikiveä ja koristelu on niukkaa. Kuubalainen arkkitehti ja historioitsija Joaquín Weiss luki sen 1600-luvun kuubalaiseen yksilaivaiseen tyyliin, jossa kirkossa on vain yksi keskilaiva. Kellotorni rakennettiin 1700-luvun ensi vuosina, kuorin holvi noin 1720 ja sivulaiva — kahdeksan kertaa 29 metriä — vuonna 1760 piispa Pedro Morell de Santa Cruzin käskystä. Kirkolla oli siirtomaa-aikana poikkeuksellinen asema. Paavin bulla 1772 ja Kaarle III:n kuninkaallinen kirje 1773 julistivat sen kaupungin ainoaks…
+
+### 26.1
+KYSYMYS: Mikä Mariazellin ihmekuva on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mariazell (historia)
+Tietoruudun teksti: Mariazell on itävaltalainen kaupunki Steiermarkin kaakkoisosassa, ja se on tunnettu talviurheilun keskuksena ja pyhiinvaelluskohteena. Se sijaitsee 143 kilometriä Grazista pohjoiseen Salza-joen laaksossa Pohjois-Steiermarkin Alppien keskellä. Kaupunki on katolilaisten pyhiinvaelluskohde Itävallasta ja naapurimaista. Palvonnan kohteena on lehmuspuuhun veistetty Neitsyt Marian kuva, jonka uskotaan tekevän ihmeitä; se tuotiin paikalle vuonna 1157 ja on nykyään kappelissa, jota koristavat hopeaesineet. Kappeli on osa suurta kirkkoa, joka rakennettiin vuonna 1644 laajennukseksi Unkarin kuningas Ludvig I:n pienemmälle kirkolle, jonka hän rakennutti voitettuaan ottomaanit vuonna 1363.
+
+### 26.2
+KYSYMYS: Milloin kirkko laajennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mariazell (historia)
+Tietoruudun teksti: Mariazell on itävaltalainen kaupunki Steiermarkin kaakkoisosassa, ja se on tunnettu talviurheilun keskuksena ja pyhiinvaelluskohteena. Se sijaitsee 143 kilometriä Grazista pohjoiseen Salza-joen laaksossa Pohjois-Steiermarkin Alppien keskellä. Kaupunki on katolilaisten pyhiinvaelluskohde Itävallasta ja naapurimaista. Palvonnan kohteena on lehmuspuuhun veistetty Neitsyt Marian kuva, jonka uskotaan tekevän ihmeitä; se tuotiin paikalle vuonna 1157 ja on nykyään kappelissa, jota koristavat hopeaesineet. Kappeli on osa suurta kirkkoa, joka rakennettiin vuonna 1644 laajennukseksi Unkarin kuningas Ludvig I:n pienemmälle kirkolle, jonka hän rakennutti voitettuaan ottomaanit vuonna 1363.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valparaíso — kohdekartta / Kohdekartta: Pyhien sydänten kirkko] 1874 Laiva Sylphide saapui Bordeaux’sta Valparaísoon 13. toukokuuta 1834, ja sen matkustajina oli neljä Jeesuksen ja Marian pyhien sydänten sääntökunnan pappia, joiden määränpää oli Gambiersaaret Ranskan Polynesiassa. Heistä Chrysostome Liausu jäi kaupunkiin ja perusti sääntökunnan ensimmäisen yhteisön eteläamerikkalaiseen satamaan. Vuonna 1837 kaupungin cabildo antoi hänelle luvan perustaa koulun — itsenäisen Chilen ensimmäisen yksityiskoulun. Koulu muutti 1840 Independencia-kadulle nykyiselle paikalleen, jota laajennettiin ostamalla viereisiä tontteja, ja sinne rakennettiin kappeli. Vuoden 1860 lopulla isä Oliver määräsi rakennettavaksi uuden kirkon, jonka suunnittelivat arkkitehdit Lucie…
+- [Havanna — kohdekartta / Kohdekartta: Pyhän Hengen kirkko] 1635 Kirkko rakennettiin 1635 Cuba- ja Acosta-katujen kulmaan, ja se uusittiin ja laajennettiin 1648, jolloin siitä tuli seurakuntakirkko. Sen kiinnostavuus on koruttomuudessa: seinät ovat korallikiveä ja koristelu on niukkaa. Kuubalainen arkkitehti ja historioitsija Joaquín Weiss luki sen 1600-luvun kuubalaiseen yksilaivaiseen tyyliin, jossa kirkossa on vain yksi keskilaiva. Kellotorni rakennettiin 1700-luvun ensi vuosina, kuorin holvi noin 1720 ja sivulaiva — kahdeksan kertaa 29 metriä — vuonna 1760 piispa Pedro Morell de Santa Cruzin käskystä. Kirkolla oli siirtomaa-aikana poikkeuksellinen asema. Paavin bulla 1772 ja Kaarle III:n kuninkaallinen kirje 1773 julistivat sen kaupungin ainoaks…
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-heiligenkreuz) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heiligenkreuzin luostari (historia)
+Tietoruudun teksti: Heiligenkreuzin luostari on sisterssiläisluostari Heiligenkreuzin kylässä Wienin metsän eteläosassa Ala-Itävallassa, noin 13 kilometriä Badenista luoteeseen. Se on maailman vanhin yhtäjaksoisesti asuttu sisterssiläisluostari. Itävallan markkreivi Leopold III perusti sen vuonna 1133 poikansa Otton pyynnöstä, ja ensimmäiset kaksitoista munkkia ja apotti Gottschalk tulivat Burgundin Morimondin luostarista. Luostari vihittiin 11. syyskuuta 1133, ja se sai nimensä Pyhä Risti uskonnollisesta omistautumisesta ristin kautta tapahtuvalle lunastukselle. Vuonna 1188 Leopold V lahjoitti luostarille Pyhän Ristin reliikin, joka on yhä nähtävillä.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bangkok — kohdekartta / Kohdekartta: Wat Saket ja Kultainen vuori] Ayutthayan kaudelta; kukkula 1800-luvulta Wat Saket on Ayutthayan kaudelta periytyvä temppeli, jonka Rama I kunnosti ja nimesi uudelleen: nimi viittaa hiusten pesemiseen, sillä perimätiedon mukaan kuningas pysähtyi tänne peseytymään palatessaan sotaretkeltä, ennen kuin astui kaupunkiin. Temppeli jäi muurien ulkopuolelle, ja siksi siitä tuli kaupungin hautajaistemppeli — polttohautausta muurien sisällä pidettiin epäonnisena. Vuoden 1820 koleraepidemiassa, joka vaati pääkaupungissa yli 30 000 uhria, temppelistä tuli kaupungin tärkein vainajien vastaanottopaikka. Kultainen vuori syntyi vahingossa. Rama III rakennutti temppeliin jättimäistä chediä, mutta pehmeä savimaa ei kantanut sen painoa, j…
+
+### 27.1
+KYSYMYS: Kuka perusti Heiligenkreuzin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heiligenkreuzin luostari (historia)
+Tietoruudun teksti: Heiligenkreuzin luostari on sisterssiläisluostari Heiligenkreuzin kylässä Wienin metsän eteläosassa Ala-Itävallassa, noin 13 kilometriä Badenista luoteeseen. Se on maailman vanhin yhtäjaksoisesti asuttu sisterssiläisluostari. Itävallan markkreivi Leopold III perusti sen vuonna 1133 poikansa Otton pyynnöstä, ja ensimmäiset kaksitoista munkkia ja apotti Gottschalk tulivat Burgundin Morimondin luostarista. Luostari vihittiin 11. syyskuuta 1133, ja se sai nimensä Pyhä Risti uskonnollisesta omistautumisesta ristin kautta tapahtuvalle lunastukselle. Vuonna 1188 Leopold V lahjoitti luostarille Pyhän Ristin reliikin, joka on yhä nähtävillä.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+### 27.2
+KYSYMYS: Mikä on Pyhän Ristin reliikki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heiligenkreuzin luostari (historia)
+Tietoruudun teksti: Heiligenkreuzin luostari on sisterssiläisluostari Heiligenkreuzin kylässä Wienin metsän eteläosassa Ala-Itävallassa, noin 13 kilometriä Badenista luoteeseen. Se on maailman vanhin yhtäjaksoisesti asuttu sisterssiläisluostari. Itävallan markkreivi Leopold III perusti sen vuonna 1133 poikansa Otton pyynnöstä, ja ensimmäiset kaksitoista munkkia ja apotti Gottschalk tulivat Burgundin Morimondin luostarista. Luostari vihittiin 11. syyskuuta 1133, ja se sai nimensä Pyhä Risti uskonnollisesta omistautumisesta ristin kautta tapahtuvalle lunastukselle. Vuonna 1188 Leopold V lahjoitti luostarille Pyhän Ristin reliikin, joka on yhä nähtävillä.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bangkok — kohdekartta / Kohdekartta: Wat Saket ja Kultainen vuori] Ayutthayan kaudelta; kukkula 1800-luvulta Wat Saket on Ayutthayan kaudelta periytyvä temppeli, jonka Rama I kunnosti ja nimesi uudelleen: nimi viittaa hiusten pesemiseen, sillä perimätiedon mukaan kuningas pysähtyi tänne peseytymään palatessaan sotaretkeltä, ennen kuin astui kaupunkiin. Temppeli jäi muurien ulkopuolelle, ja siksi siitä tuli kaupungin hautajaistemppeli — polttohautausta muurien sisällä pidettiin epäonnisena. Vuoden 1820 koleraepidemiassa, joka vaati pääkaupungissa yli 30 000 uhria, temppelistä tuli kaupungin tärkein vainajien vastaanottopaikka. Kultainen vuori syntyi vahingossa. Rama III rakennutti temppeliin jättimäistä chediä, mutta pehmeä savimaa ei kantanut sen painoa, j…
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-kremsmuenster) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremsmünsterin luostari (historia)
+Tietoruudun teksti: Kremsmünsterin luostari on benediktiiniluostari Kremsmünsterissä Ylä-Itävallassa. Baijerin herttua Tassilo III perusti sen vuonna 777, ja perimätiedon mukaan hän perusti sen paikalle, jossa villisika haavoitti kuolettavasti hänen poikaansa Guntheria metsästyksessä. Luostari sai runsaasti lahjoituksia perustajalta sekä Kaarle Suurelta ja hänen seuraajiltaan, ja sen apotit käyttivät aikoinaan piispallista toimivaltaa. 1700-luvun tunnetuin apotti Alexander Fixlmillner rakennutti suuren observatorion, ja luostarin eteläsiiven päässä on 51 metriä korkea Matemaattinen torni, jossa observatorio sijaitsee.
+
+### 28.1
+KYSYMYS: Kuka perusti Kremsmünsterin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremsmünsterin luostari (historia)
+Tietoruudun teksti: Kremsmünsterin luostari on benediktiiniluostari Kremsmünsterissä Ylä-Itävallassa. Baijerin herttua Tassilo III perusti sen vuonna 777, ja perimätiedon mukaan hän perusti sen paikalle, jossa villisika haavoitti kuolettavasti hänen poikaansa Guntheria metsästyksessä. Luostari sai runsaasti lahjoituksia perustajalta sekä Kaarle Suurelta ja hänen seuraajiltaan, ja sen apotit käyttivät aikoinaan piispallista toimivaltaa. 1700-luvun tunnetuin apotti Alexander Fixlmillner rakennutti suuren observatorion, ja luostarin eteläsiiven päässä on 51 metriä korkea Matemaattinen torni, jossa observatorio sijaitsee.
+
+### 28.2
+KYSYMYS: Mitä Kremsmünsterin tähtitornissa tehtiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremsmünsterin luostari (historia)
+Tietoruudun teksti: Kremsmünsterin luostari on benediktiiniluostari Kremsmünsterissä Ylä-Itävallassa. Baijerin herttua Tassilo III perusti sen vuonna 777, ja perimätiedon mukaan hän perusti sen paikalle, jossa villisika haavoitti kuolettavasti hänen poikaansa Guntheria metsästyksessä. Luostari sai runsaasti lahjoituksia perustajalta sekä Kaarle Suurelta ja hänen seuraajiltaan, ja sen apotit käyttivät aikoinaan piispallista toimivaltaa. 1700-luvun tunnetuin apotti Alexander Fixlmillner rakennutti suuren observatorion, ja luostarin eteläsiiven päässä on 51 metriä korkea Matemaattinen torni, jossa observatorio sijaitsee.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-admont) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Admontin luostari (historia)
+Tietoruudun teksti: Admontin luostari on benediktiiniluostari Enns-joen varrella Admontin kaupungissa Steiermarkissa. Se on Steiermarkin vanhin säilynyt luostari, ja se väittää sisältävänsä maailman suurimman luostarikirjaston sekä pitkään kerätyn tieteellisen kokoelman. Luostari tunnetaan barokkiarkkitehtuuristaan, taiteestaan ja käsikirjoituksistaan. Se sijaitsee Gesäusen kansallispuiston rajalla, ja nimi Admont tulee latinan sanoista ad montes, vuorten luona. Salzburgin arkkipiispa Gebhard perusti luostarin vuonna 1074, ja 27. huhtikuuta 1865 tulipalo tuhosi lähes koko luostarin. Kirjasto saatiin pelastettua, ja jälleenrakennus alkoi seuraavana vuonna mutta ei ollut valmis vielä vuonna 1890.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ulan Bator — kohdekartta / Kohdekartta: Gandantegchinlenin luostari] perustettu 1809 Nimi on tiibetiä ja tarkoittaa täydellistä riemua; se tulee Tiibetin Gandenin luostarista, jonka perusti gelug-koulukunnan alkuunpanija Tsongkhapa. Ulan Batorin Gandan sai alkunsa 1809, kun Khüreen länsipuoliselle kukkulalle rakennettiin Sharin temppeli. Lamrinin sali nousi 1824, ja viides Jebtsundamba Khutuktu rakennutti kukkulalle vuosina 1834–1838 palatsin nimeltä Gandantegchinlen — nimi siirtyi siitä koko luostarille. Ochirdarin temppeliin vuodelta 1840 sijoitettiin Zanabazarin vuonna 1683 tekemä hopea- ja kultapatsas. Alueen korkein rakennus on Megzed Janraisegin temppeli. Kahdeksas Jebtsundamba määräsi sen rakennettavaksi itsenäistymisen kunniaksi, ja se valmistui 1913…
+- [Wellington — kaupunkilehti / Historia: Museo, joka syntyi samana vuonna kuin pääkaupunki] Colonial Museum avasi ovensa 1865, samana vuonna kuin Wellingtonista tuli pääkaupunki. Sitä johti geologi James Hector, joka pysyi museon johdossa vuoteen 1903 asti. Kokoelma alkoi luonnontieteen näytteistä, mutta karttui pian lahjoituksin myös taiteella ja esineistöllä. Vuonna 1907 museo nimettiin uudelleen Dominion Museumiksi, ja monen vaiheen kautta samasta perustasta kasvoi lopulta Te Papa: se perustettiin lailla 1992 ja avautui nykyisessä rakennuksessaan 1998. Museon juuret ulottuvat siis suoraan pääkaupungin ensimmäiseen vuoteen.
+
+### 29.1
+KYSYMYS: Mikä Admontin luostarin kirjasto on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Admontin luostari (historia)
+Tietoruudun teksti: Admontin luostari on benediktiiniluostari Enns-joen varrella Admontin kaupungissa Steiermarkissa. Se on Steiermarkin vanhin säilynyt luostari, ja se väittää sisältävänsä maailman suurimman luostarikirjaston sekä pitkään kerätyn tieteellisen kokoelman. Luostari tunnetaan barokkiarkkitehtuuristaan, taiteestaan ja käsikirjoituksistaan. Se sijaitsee Gesäusen kansallispuiston rajalla, ja nimi Admont tulee latinan sanoista ad montes, vuorten luona. Salzburgin arkkipiispa Gebhard perusti luostarin vuonna 1074, ja 27. huhtikuuta 1865 tulipalo tuhosi lähes koko luostarin. Kirjasto saatiin pelastettua, ja jälleenrakennus alkoi seuraavana vuonna mutta ei ollut valmis vielä vuonna 1890.
+
+### 29.2
+KYSYMYS: Mitä luostarille tapahtui vuonna 1865?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Admontin luostari (historia)
+Tietoruudun teksti: Admontin luostari on benediktiiniluostari Enns-joen varrella Admontin kaupungissa Steiermarkissa. Se on Steiermarkin vanhin säilynyt luostari, ja se väittää sisältävänsä maailman suurimman luostarikirjaston sekä pitkään kerätyn tieteellisen kokoelman. Luostari tunnetaan barokkiarkkitehtuuristaan, taiteestaan ja käsikirjoituksistaan. Se sijaitsee Gesäusen kansallispuiston rajalla, ja nimi Admont tulee latinan sanoista ad montes, vuorten luona. Salzburgin arkkipiispa Gebhard perusti luostarin vuonna 1074, ja 27. huhtikuuta 1865 tulipalo tuhosi lähes koko luostarin. Kirjasto saatiin pelastettua, ja jälleenrakennus alkoi seuraavana vuonna mutta ei ollut valmis vielä vuonna 1890.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ulan Bator — kohdekartta / Kohdekartta: Gandantegchinlenin luostari] perustettu 1809 Nimi on tiibetiä ja tarkoittaa täydellistä riemua; se tulee Tiibetin Gandenin luostarista, jonka perusti gelug-koulukunnan alkuunpanija Tsongkhapa. Ulan Batorin Gandan sai alkunsa 1809, kun Khüreen länsipuoliselle kukkulalle rakennettiin Sharin temppeli. Lamrinin sali nousi 1824, ja viides Jebtsundamba Khutuktu rakennutti kukkulalle vuosina 1834–1838 palatsin nimeltä Gandantegchinlen — nimi siirtyi siitä koko luostarille. Ochirdarin temppeliin vuodelta 1840 sijoitettiin Zanabazarin vuonna 1683 tekemä hopea- ja kultapatsas. Alueen korkein rakennus on Megzed Janraisegin temppeli. Kahdeksas Jebtsundamba määräsi sen rakennettavaksi itsenäistymisen kunniaksi, ja se valmistui 1913…
+- [Wellington — kaupunkilehti / Historia: Museo, joka syntyi samana vuonna kuin pääkaupunki] Colonial Museum avasi ovensa 1865, samana vuonna kuin Wellingtonista tuli pääkaupunki. Sitä johti geologi James Hector, joka pysyi museon johdossa vuoteen 1903 asti. Kokoelma alkoi luonnontieteen näytteistä, mutta karttui pian lahjoituksin myös taiteella ja esineistöllä. Vuonna 1907 museo nimettiin uudelleen Dominion Museumiksi, ja monen vaiheen kautta samasta perustasta kasvoi lopulta Te Papa: se perustettiin lailla 1992 ja avautui nykyisessä rakennuksessaan 1998. Museon juuret ulottuvat siis suoraan pääkaupungin ensimmäiseen vuoteen.
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-hochosterwitz) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hochosterwitz (historia)
+Tietoruudun teksti: Hochosterwitzin linna on Itävallan vaikuttavimpiin keskiaikaisiin linnoihin luettu linna 172 metriä korkealla dolomiittikalliolla Sankt Georgen am Längsee -kunnan lähellä Sankt Veit an der Glanin itäpuolella Kärntenissä. Se sijaitsee 664 metrin korkeudessa Zollfeldin tasangon reunalla, ja se näkyy selkeällä säällä jopa 30 kilometrin päähän. Kalliolla on ollut asutusta pronssikaudesta lähtien, ja se mainitaan ensimmäisen kerran vuoden 860 asiakirjassa. Vuonna 1571 paroni George Khevenhüller osti linnan ja linnoitti sen turkkilaisten hyökkäysten uhan vuoksi rakentaen asehuoneen ja 14 porttia vuosina 1570–1586. Turistit saavat kävellä 620 metriä pitkän polun porttien läpi linnaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Birdsville — kaupunkilehti / Birdsville: Punainen dyyni autiomaan portilla] Kolmenkymmenenviiden kilometrin päässä Birdsvillestä länteen alkaa Simpsonin aavikko, ja sen ensimmäinen dyyni on kaupungin tunnetuin retkikohde. Big Rediksi kutsuttu hiekkaharju — alkuperäiseltä nimeltään Nappanerica — on nelikymmentä metriä korkea ja värjäytynyt punaiseksi hiekkaan sitoutuneesta raudasta. Se on ensimmäinen yli tuhannesta samansuuntaisesta dyynistä, jotka juovittavat koko aavikkoa idästä länteen. Nykyään harjulle kiivetään auringonlaskun aikaan katsomaan, kun taivas ja hiekka värjäytyvät molemmat oranssinpunaisiksi — ja moni yrittää ajaa harjun yli nelivetoautolla, mikä ei aina onnistu ensiyrittämällä.
+- [Cayenne — kaupunkilehti / Cayenne: Sademetsän portilla] Cayenne rakentui kapealle niemelle Amazonin sademetsän reunalle, ja kaupungin portilta alkoi heti aarniometsä täynnä lajeja, joita Euroopassa ei tunnettu lainkaan. Yksi näyttävimmistä asukkaista on Morpho menelaus -perhonen, jonka siivet ovat päältä metallisen siniset, mutta joka lepää päivisin ja öisin siivet suljettuina: silloin näkyy vain ruskea alapinta täynnä pöllön silmiä muistuttavia täpliä, jotka säikäyttävät lintuja ja muita saalistajia. Isoisän matkapäiväkirjassa sademetsän hyönteiset ja perhoset olivat yksi Cayennen suurimmista ihmeistä, aivan toisenlaisia kuin mikään kotimaassa.
+
+### 30.1
+KYSYMYS: Miksi linna on rakennettu 14 portilla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hochosterwitz (historia)
+Tietoruudun teksti: Hochosterwitzin linna on Itävallan vaikuttavimpiin keskiaikaisiin linnoihin luettu linna 172 metriä korkealla dolomiittikalliolla Sankt Georgen am Längsee -kunnan lähellä Sankt Veit an der Glanin itäpuolella Kärntenissä. Se sijaitsee 664 metrin korkeudessa Zollfeldin tasangon reunalla, ja se näkyy selkeällä säällä jopa 30 kilometrin päähän. Kalliolla on ollut asutusta pronssikaudesta lähtien, ja se mainitaan ensimmäisen kerran vuoden 860 asiakirjassa. Vuonna 1571 paroni George Khevenhüller osti linnan ja linnoitti sen turkkilaisten hyökkäysten uhan vuoksi rakentaen asehuoneen ja 14 porttia vuosina 1570–1586. Turistit saavat kävellä 620 metriä pitkän polun porttien läpi linnaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Birdsville — kaupunkilehti / Birdsville: Punainen dyyni autiomaan portilla] Kolmenkymmenenviiden kilometrin päässä Birdsvillestä länteen alkaa Simpsonin aavikko, ja sen ensimmäinen dyyni on kaupungin tunnetuin retkikohde. Big Rediksi kutsuttu hiekkaharju — alkuperäiseltä nimeltään Nappanerica — on nelikymmentä metriä korkea ja värjäytynyt punaiseksi hiekkaan sitoutuneesta raudasta. Se on ensimmäinen yli tuhannesta samansuuntaisesta dyynistä, jotka juovittavat koko aavikkoa idästä länteen. Nykyään harjulle kiivetään auringonlaskun aikaan katsomaan, kun taivas ja hiekka värjäytyvät molemmat oranssinpunaisiksi — ja moni yrittää ajaa harjun yli nelivetoautolla, mikä ei aina onnistu ensiyrittämällä.
+- [Cayenne — kaupunkilehti / Cayenne: Sademetsän portilla] Cayenne rakentui kapealle niemelle Amazonin sademetsän reunalle, ja kaupungin portilta alkoi heti aarniometsä täynnä lajeja, joita Euroopassa ei tunnettu lainkaan. Yksi näyttävimmistä asukkaista on Morpho menelaus -perhonen, jonka siivet ovat päältä metallisen siniset, mutta joka lepää päivisin ja öisin siivet suljettuina: silloin näkyy vain ruskea alapinta täynnä pöllön silmiä muistuttavia täpliä, jotka säikäyttävät lintuja ja muita saalistajia. Isoisän matkapäiväkirjassa sademetsän hyönteiset ja perhoset olivat yksi Cayennen suurimmista ihmeistä, aivan toisenlaisia kuin mikään kotimaassa.
+
+### 30.2
+KYSYMYS: Kuka Khevenhüller oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hochosterwitz (historia)
+Tietoruudun teksti: Hochosterwitzin linna on Itävallan vaikuttavimpiin keskiaikaisiin linnoihin luettu linna 172 metriä korkealla dolomiittikalliolla Sankt Georgen am Längsee -kunnan lähellä Sankt Veit an der Glanin itäpuolella Kärntenissä. Se sijaitsee 664 metrin korkeudessa Zollfeldin tasangon reunalla, ja se näkyy selkeällä säällä jopa 30 kilometrin päähän. Kalliolla on ollut asutusta pronssikaudesta lähtien, ja se mainitaan ensimmäisen kerran vuoden 860 asiakirjassa. Vuonna 1571 paroni George Khevenhüller osti linnan ja linnoitti sen turkkilaisten hyökkäysten uhan vuoksi rakentaen asehuoneen ja 14 porttia vuosina 1570–1586. Turistit saavat kävellä 620 metriä pitkän polun porttien läpi linnaan.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI

@@ -1,0 +1,291 @@
+================ KOHTA 46 (kohde:hahmotelma-mayerling) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mayerling (historia)
+Tietoruudun teksti: Mayerling on pieni kylä Ala-Itävallassa, ja se kuuluu Allandin kuntaan Badenin piirikunnassa. Se sijaitsee Schwechat-joen varrella Wienin metsässä, 24 kilometriä Wienistä lounaaseen. Vuodesta 1550 alkaen kylä kuului Heiligenkreuzin luostarille. Vuonna 1886 keisari Frans Joosefin ja keisarinna Elisabethin ainoa poika, kruununprinssi Rudolf, hankki kartanon ja muutti sen metsästyshuvilaksi; kruununprinssi kuoli siellä 30. tammikuuta 1889. Tarkkoja tapahtumia ei tiedetä. Kuoleman jälkeen keisari Frans Joosef, joka halusi lahjoittaa uuden kirkon, muutti metsästyshuvilan luostariksi, jonka asukkaiksi tulivat karmeliittanunnat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Izmir — kohdekartta / Kohdekartta: Smyrnan agora] 178 Torin lattiaa kannattaa kolmikerroksinen suorakaiteen muotoinen rakennus, joka on ladottu pylväiden ja kaarien varaan suuren sisäpihan ympärille ja jonka etusivulla nousevat portaat. Saksalainen arkeologi Rudolf Naumann ja İzmirin ja Efesoksen museoiden johtaja Selâhattin Kantar kaivoivat sen esiin vuosina 1931–1942. Läntisen pylväshallin korinttilaiset pylväät seisovat yhä rivissä, ja hallin toisessa kaaressa on keisarin vaimon Faustinan rintakuva. Kreikkalaiset rakensivat torin 300-luvulla eaa. Pagos-kukkulan pohjoisrinteen juurelle. Se oli kaupungin kaupan, oikeudenkäytön ja hallinnon keskus sekä opetuksen paikka. Vuoden 178 maanjäristys tuhosi sen, ja keisari Marcus Aurelius määräsi…
+- [Ljubljana — kohdekartta / Kohdekartta: Ljubljanan linna] 1100-luku Linnavuorella on asuttu arkeologien mukaan yhtäjaksoisesti vuodesta 1200 eaa. Ensimmäinen linna oli luultavasti 1000-luvulla rakennettu puu- ja kivilinnoitus. Vanhin kirjallinen maininta on Udinen tuomiokirkon arkistossa säilytetyssä pergamentissa, luultavasti vuoden 1161 jälkipuoliskolta: siinä linna on nimeltään castrum Leibach. Vuonna 1256 se mainitaan Krainin hallitsijoiden tärkeimpänä linnana, ja 1278 se siirtyi Rudolf Habsburgille. Nykyisen ääriviivansa linna sai 1400-luvulla, kun se purettiin lähes kokonaan ja rakennettiin uudelleen muureineen, porttitorneineen ja nostosiltoineen; samaan aikaan valmistui Pyhän Yrjön kappeli. Erasmuksen tornissa pidettiin luultavasti ylhäisi…
+
+### 46.1
+KYSYMYS: Kuka kruununprinssi Rudolf oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mayerling (historia)
+Tietoruudun teksti: Mayerling on pieni kylä Ala-Itävallassa, ja se kuuluu Allandin kuntaan Badenin piirikunnassa. Se sijaitsee Schwechat-joen varrella Wienin metsässä, 24 kilometriä Wienistä lounaaseen. Vuodesta 1550 alkaen kylä kuului Heiligenkreuzin luostarille. Vuonna 1886 keisari Frans Joosefin ja keisarinna Elisabethin ainoa poika, kruununprinssi Rudolf, hankki kartanon ja muutti sen metsästyshuvilaksi; kruununprinssi kuoli siellä 30. tammikuuta 1889. Tarkkoja tapahtumia ei tiedetä. Kuoleman jälkeen keisari Frans Joosef, joka halusi lahjoittaa uuden kirkon, muutti metsästyshuvilan luostariksi, jonka asukkaiksi tulivat karmeliittanunnat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Izmir — kohdekartta / Kohdekartta: Smyrnan agora] 178 Torin lattiaa kannattaa kolmikerroksinen suorakaiteen muotoinen rakennus, joka on ladottu pylväiden ja kaarien varaan suuren sisäpihan ympärille ja jonka etusivulla nousevat portaat. Saksalainen arkeologi Rudolf Naumann ja İzmirin ja Efesoksen museoiden johtaja Selâhattin Kantar kaivoivat sen esiin vuosina 1931–1942. Läntisen pylväshallin korinttilaiset pylväät seisovat yhä rivissä, ja hallin toisessa kaaressa on keisarin vaimon Faustinan rintakuva. Kreikkalaiset rakensivat torin 300-luvulla eaa. Pagos-kukkulan pohjoisrinteen juurelle. Se oli kaupungin kaupan, oikeudenkäytön ja hallinnon keskus sekä opetuksen paikka. Vuoden 178 maanjäristys tuhosi sen, ja keisari Marcus Aurelius määräsi…
+- [Ljubljana — kohdekartta / Kohdekartta: Ljubljanan linna] 1100-luku Linnavuorella on asuttu arkeologien mukaan yhtäjaksoisesti vuodesta 1200 eaa. Ensimmäinen linna oli luultavasti 1000-luvulla rakennettu puu- ja kivilinnoitus. Vanhin kirjallinen maininta on Udinen tuomiokirkon arkistossa säilytetyssä pergamentissa, luultavasti vuoden 1161 jälkipuoliskolta: siinä linna on nimeltään castrum Leibach. Vuonna 1256 se mainitaan Krainin hallitsijoiden tärkeimpänä linnana, ja 1278 se siirtyi Rudolf Habsburgille. Nykyisen ääriviivansa linna sai 1400-luvulla, kun se purettiin lähes kokonaan ja rakennettiin uudelleen muureineen, porttitorneineen ja nostosiltoineen; samaan aikaan valmistui Pyhän Yrjön kappeli. Erasmuksen tornissa pidettiin luultavasti ylhäisi…
+
+### 46.2
+KYSYMYS: Mikä Mayerlingin huvilasta tuli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mayerling (historia)
+Tietoruudun teksti: Mayerling on pieni kylä Ala-Itävallassa, ja se kuuluu Allandin kuntaan Badenin piirikunnassa. Se sijaitsee Schwechat-joen varrella Wienin metsässä, 24 kilometriä Wienistä lounaaseen. Vuodesta 1550 alkaen kylä kuului Heiligenkreuzin luostarille. Vuonna 1886 keisari Frans Joosefin ja keisarinna Elisabethin ainoa poika, kruununprinssi Rudolf, hankki kartanon ja muutti sen metsästyshuvilaksi; kruununprinssi kuoli siellä 30. tammikuuta 1889. Tarkkoja tapahtumia ei tiedetä. Kuoleman jälkeen keisari Frans Joosef, joka halusi lahjoittaa uuden kirkon, muutti metsästyshuvilan luostariksi, jonka asukkaiksi tulivat karmeliittanunnat.
+
+### 46.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+================ KOHTA 47 (kohde:hahmotelma-bad-gastein) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bad Gastein (kulttuuri)
+Tietoruudun teksti: Bad Gastein on kylpyläkaupunki St. Johann im Pongaun piirikunnassa Itävallassa. Se sijaitsee kauniisti Hohe Tauernin vuoriston korkeassa laaksossa, ja se on tunnettu Gasteinin vesiputouksesta ja monista suurista hotellirakennuksista. Kaupungin keskusta on vesiputouksen luona noin tuhannen metrin korkeudessa merenpinnasta. Sana Bad tarkoittaa kylpyä, ja kaupungin maine perustuu paikallisen Heilstollen-parannustunnelin kuumaan lähdeveteen, jota Paracelsus (1493–1541) oli tutkinut. 1500-luvulla Gasteinin kuumat lähteet alkoivat olla suosittu kylpylämatkakohde, ja Salzburgin arkkipiispa Colloredo rakennutti kaupunkiin klassistisen palatsin, joka kunnostettiin julkiseksi kylpylaitokseksi vuonna 1807; samana vuonna kaupunkia kävi katsomassa myös keisari Frans II.
+
+### 47.1
+KYSYMYS: Miksi Bad Gastein on kylpyläkaupunki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bad Gastein (kulttuuri)
+Tietoruudun teksti: Bad Gastein on kylpyläkaupunki St. Johann im Pongaun piirikunnassa Itävallassa. Se sijaitsee kauniisti Hohe Tauernin vuoriston korkeassa laaksossa, ja se on tunnettu Gasteinin vesiputouksesta ja monista suurista hotellirakennuksista. Kaupungin keskusta on vesiputouksen luona noin tuhannen metrin korkeudessa merenpinnasta. Sana Bad tarkoittaa kylpyä, ja kaupungin maine perustuu paikallisen Heilstollen-parannustunnelin kuumaan lähdeveteen, jota Paracelsus (1493–1541) oli tutkinut. 1500-luvulla Gasteinin kuumat lähteet alkoivat olla suosittu kylpylämatkakohde, ja Salzburgin arkkipiispa Colloredo rakennutti kaupunkiin klassistisen palatsin, joka kunnostettiin julkiseksi kylpylaitokseksi vuonna 1807; samana vuonna kaupunkia kävi katsomassa myös keisari Frans II.
+
+### 47.2
+KYSYMYS: Kuka Paracelsus oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bad Gastein (kulttuuri)
+Tietoruudun teksti: Bad Gastein on kylpyläkaupunki St. Johann im Pongaun piirikunnassa Itävallassa. Se sijaitsee kauniisti Hohe Tauernin vuoriston korkeassa laaksossa, ja se on tunnettu Gasteinin vesiputouksesta ja monista suurista hotellirakennuksista. Kaupungin keskusta on vesiputouksen luona noin tuhannen metrin korkeudessa merenpinnasta. Sana Bad tarkoittaa kylpyä, ja kaupungin maine perustuu paikallisen Heilstollen-parannustunnelin kuumaan lähdeveteen, jota Paracelsus (1493–1541) oli tutkinut. 1500-luvulla Gasteinin kuumat lähteet alkoivat olla suosittu kylpylämatkakohde, ja Salzburgin arkkipiispa Colloredo rakennutti kaupunkiin klassistisen palatsin, joka kunnostettiin julkiseksi kylpylaitokseksi vuonna 1807; samana vuonna kaupunkia kävi katsomassa myös keisari Frans II.
+
+### 47.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+================ KOHTA 48 (nosto:maailmannayttely-1873) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Keisari avasi maailmannäyttelyn — kahdeksan päivää myöhemmin poliisi sulki pörssin
+Tietoruudun teksti: Keisari Franz Joseph avasi maailmannäyttelyn 1. toukokuuta 1873 sanoen, että Itävalta-Unkari on kaikin puolin ilahduttavassa nousussa. Kupla oli jo puhkeamassa: maan suurin pankki oli juuri irtisanonut pörssitalletukset ja myynyt 20 miljoonan guldenin arvosta arvopapereita.
+
+Yhdeksäntenä toukokuuta aamulla ilmoitti maksukyvyttömyydestään meklari Adolf Petschek, jota kutsuttiin meklarikaupan kuninkaaksi. Samana aamupäivänä kaatui 120 muuta pankkia, ja kello 13 poliisi sulki pörssin — päivä on Itävallan historian "musta perjantai". Romahdus levisi Berliiniin ja syyskuussa New Yorkiin, jonka pörssi suljettiin ensimmäistä kertaa historiassaan kymmeneksi päiväksi. Näyttelylle odotettiin 20 miljoonaa kävijää; tuli 7,25 miljoonaa, ja tappiota kertyi noin 15 miljoonaa guldenia.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kaupunkilehti / Historian hetki] Wienin pörssi romahti 9. toukokuuta 1873 vain viikko maailmannäyttelyn avajaisten jälkeen — "Der Krach" painoi Itävallan talouden vuosien lamaan.
+- [Tanska — maalehti / Ruoka: Wienerleipä ei ole Wienistä] 1850 — Tanskalaiset leipurit menivät vuonna 1850 lakkoon, ja leipomot palkkasivat tilalle ulkomaisia työntekijöitä — muun muassa itävaltalaisia. He toivat mukanaan taikinan, joka taitellaan voin kanssa monta kertaa, niin että paistuessa syntyy satoja ohuita kerroksia. Lakon jälkeen tanskalaiset leipurit jatkoivat menetelmällä ja kehittivät siitä omansa. Siksi tanskalainen sanoo leivosta wienerleiväksi, mutta muualla maailmassa sitä sanotaan tanskalaiseksi.
+- [Asunción — kaupunkilehti / Asunción: Talo, jonka ohi käveltiin hakemaan itsenäisyyttä] Keskustan kadunkulmassa seisoo vuonna 1772 rakennettu talo: seinät adobea, runko bambua ja palmupuuta. Sen suojissa paraguaylaiset salaliittolaiset kokoontuivat suunnittelemaan kapinaa Espanjan vallanpitäjiä vastaan, ja yön 14.–15. toukokuuta 1811 aikana Pedro Juan Caballeron johtama ryhmä käveli talon vierestä kuvernööri Bernardo de Velascon asunnolle ja pakotti tämän antautumaan. Talo avattiin museona 14. toukokuuta 1965, ja siinä on nähtävänä muun muassa Cabildon istuntosalin jäljennös.
+
+### 48.1
+KYSYMYS: Mitä maailmannäyttelyssä 1873 oli nähtävänä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Keisari avasi maailmannäyttelyn — kahdeksan päivää myöhemmin poliisi sulki pörssin
+Tietoruudun teksti: Keisari Franz Joseph avasi maailmannäyttelyn 1. toukokuuta 1873 sanoen, että Itävalta-Unkari on kaikin puolin ilahduttavassa nousussa. Kupla oli jo puhkeamassa: maan suurin pankki oli juuri irtisanonut pörssitalletukset ja myynyt 20 miljoonan guldenin arvosta arvopapereita.
+
+Yhdeksäntenä toukokuuta aamulla ilmoitti maksukyvyttömyydestään meklari Adolf Petschek, jota kutsuttiin meklarikaupan kuninkaaksi. Samana aamupäivänä kaatui 120 muuta pankkia, ja kello 13 poliisi sulki pörssin — päivä on Itävallan historian "musta perjantai". Romahdus levisi Berliiniin ja syyskuussa New Yorkiin, jonka pörssi suljettiin ensimmäistä kertaa historiassaan kymmeneksi päiväksi. Näyttelylle odotettiin 20 miljoonaa kävijää; tuli 7,25 miljoonaa, ja tappiota kertyi noin 15 miljoonaa guldenia.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Asunción — kaupunkilehti / Asunción: Talo, jonka ohi käveltiin hakemaan itsenäisyyttä] Keskustan kadunkulmassa seisoo vuonna 1772 rakennettu talo: seinät adobea, runko bambua ja palmupuuta. Sen suojissa paraguaylaiset salaliittolaiset kokoontuivat suunnittelemaan kapinaa Espanjan vallanpitäjiä vastaan, ja yön 14.–15. toukokuuta 1811 aikana Pedro Juan Caballeron johtama ryhmä käveli talon vierestä kuvernööri Bernardo de Velascon asunnolle ja pakotti tämän antautumaan. Talo avattiin museona 14. toukokuuta 1965, ja siinä on nähtävänä muun muassa Cabildon istuntosalin jäljennös.
+
+### 48.2
+KYSYMYS: Mikä aiheutti Wienin pörssiromahduksen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Keisari avasi maailmannäyttelyn — kahdeksan päivää myöhemmin poliisi sulki pörssin
+Tietoruudun teksti: Keisari Franz Joseph avasi maailmannäyttelyn 1. toukokuuta 1873 sanoen, että Itävalta-Unkari on kaikin puolin ilahduttavassa nousussa. Kupla oli jo puhkeamassa: maan suurin pankki oli juuri irtisanonut pörssitalletukset ja myynyt 20 miljoonan guldenin arvosta arvopapereita.
+
+Yhdeksäntenä toukokuuta aamulla ilmoitti maksukyvyttömyydestään meklari Adolf Petschek, jota kutsuttiin meklarikaupan kuninkaaksi. Samana aamupäivänä kaatui 120 muuta pankkia, ja kello 13 poliisi sulki pörssin — päivä on Itävallan historian "musta perjantai". Romahdus levisi Berliiniin ja syyskuussa New Yorkiin, jonka pörssi suljettiin ensimmäistä kertaa historiassaan kymmeneksi päiväksi. Näyttelylle odotettiin 20 miljoonaa kävijää; tuli 7,25 miljoonaa, ja tappiota kertyi noin 15 miljoonaa guldenia.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kaupunkilehti / Historian hetki] Wienin pörssi romahti 9. toukokuuta 1873 vain viikko maailmannäyttelyn avajaisten jälkeen — "Der Krach" painoi Itävallan talouden vuosien lamaan.
+
+### 48.3
+KYSYMYS: Miten romahdus levisi Wienistä New Yorkiin asti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Keisari avasi maailmannäyttelyn — kahdeksan päivää myöhemmin poliisi sulki pörssin
+Tietoruudun teksti: Keisari Franz Joseph avasi maailmannäyttelyn 1. toukokuuta 1873 sanoen, että Itävalta-Unkari on kaikin puolin ilahduttavassa nousussa. Kupla oli jo puhkeamassa: maan suurin pankki oli juuri irtisanonut pörssitalletukset ja myynyt 20 miljoonan guldenin arvosta arvopapereita.
+
+Yhdeksäntenä toukokuuta aamulla ilmoitti maksukyvyttömyydestään meklari Adolf Petschek, jota kutsuttiin meklarikaupan kuninkaaksi. Samana aamupäivänä kaatui 120 muuta pankkia, ja kello 13 poliisi sulki pörssin — päivä on Itävallan historian "musta perjantai". Romahdus levisi Berliiniin ja syyskuussa New Yorkiin, jonka pörssi suljettiin ensimmäistä kertaa historiassaan kymmeneksi päiväksi. Näyttelylle odotettiin 20 miljoonaa kävijää; tuli 7,25 miljoonaa, ja tappiota kertyi noin 15 miljoonaa guldenia.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Ruoka: Wienerleipä ei ole Wienistä] 1850 — Tanskalaiset leipurit menivät vuonna 1850 lakkoon, ja leipomot palkkasivat tilalle ulkomaisia työntekijöitä — muun muassa itävaltalaisia. He toivat mukanaan taikinan, joka taitellaan voin kanssa monta kertaa, niin että paistuessa syntyy satoja ohuita kerroksia. Lakon jälkeen tanskalaiset leipurit jatkoivat menetelmällä ja kehittivät siitä omansa. Siksi tanskalainen sanoo leivosta wienerleiväksi, mutta muualla maailmassa sitä sanotaan tanskalaiseksi.
+
+### 48.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+### 48.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+================ KOHTA 49 (nosto:kirahvimuoti) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yksi kirahvi muutti koko kaupungin muodin — kampaukset, hajuveden ja näytelmän
+Tietoruudun teksti: Schönbrunnin eläintarha sai ensimmäisen kirahvinsa vuonna 1828 lahjaksi Egyptin varakuninkaalta. Eläin herätti sellaisen innostuksen, että se levisi muotiin, käsitöihin ja seuraelämään.
+
+Kirahvikuvioita ilmestyi vaatteisiin, kenkiin ja käyttöesineisiin, ja kirahvin innoittamina keksittiin uusia kampauksia, hajuvesi, näytelmä ja kaksi sävellystä. Tarha itse oli tuolloin yhä keisariperheen yksityisomaisuutta, ja se pysyi sellaisena aina Itävalta-Unkarin hajoamiseen 1918 asti.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kaupunkilehti / Wien: Keisarin aamiaishuone eläintarhan keskellä] Maria Teresian puoliso Frans Stefan teetti Schönbrunnin puistoon eläintarhan, joka esiteltiin vieraille kesällä 1752. Se on maailman vanhin yhä toimiva eläintarha. Keskelle valmistui 1759 kahdeksankulmainen paviljonki, jonka keisariperhe rakennutti aamiaishuoneekseen. Sen ympärille oli asetettu kaksitoista samankokoista tarhaa kuin kakunpalat, joten pöydästä näki joka suuntaan eläimiä. Paviljonki on nykyään ravintola.
+- [Wien — kaupunkilehti / Eläimet kaupungissa] Wienin keskushautausmaalla laiduntaa parikymmentä kaurista vanhojen hautakivien lomassa, ja Schönbrunniin tuotu kirahvi muutti aikoinaan kaupungin kampaukset, kankaat ja seuraelämän — kumpikin tarina odottaa kartalla omalla merkillään.
+- [Meksiko — maalehti / Musiikki: Uutinen, joka myytiin lauluna] Corrido on kertova balladi, jonka nimi tulee verbistä correr, juosta. Kaava on tiukka: laulaja tervehtii, pohjustaa, kertoo tarinan, vetää opetuksen ja hyvästelee. Tyypillisesti säkeistöjä on kahdeksan ja rivissä kahdeksan tavua. Ennen radiota corrido oli uutisväline: laulut painettiin lentolehtisiksi ja myytiin toreilla. Lehtisiä kuvitti José Guadalupe Posada, jonka luurankopiirrokset eli kalaverat tekivät vainajista tavallisia ihmisiä juhlimassa, ratsastamassa ja kinastelemassa.
+
+### 49.1
+KYSYMYS: Miksi kirahvi oli 1800-luvun Euroopassa niin suuri uutinen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yksi kirahvi muutti koko kaupungin muodin — kampaukset, hajuveden ja näytelmän
+Tietoruudun teksti: Schönbrunnin eläintarha sai ensimmäisen kirahvinsa vuonna 1828 lahjaksi Egyptin varakuninkaalta. Eläin herätti sellaisen innostuksen, että se levisi muotiin, käsitöihin ja seuraelämään.
+
+Kirahvikuvioita ilmestyi vaatteisiin, kenkiin ja käyttöesineisiin, ja kirahvin innoittamina keksittiin uusia kampauksia, hajuvesi, näytelmä ja kaksi sävellystä. Tarha itse oli tuolloin yhä keisariperheen yksityisomaisuutta, ja se pysyi sellaisena aina Itävalta-Unkarin hajoamiseen 1918 asti.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kaupunkilehti / Eläimet kaupungissa] Wienin keskushautausmaalla laiduntaa parikymmentä kaurista vanhojen hautakivien lomassa, ja Schönbrunniin tuotu kirahvi muutti aikoinaan kaupungin kampaukset, kankaat ja seuraelämän — kumpikin tarina odottaa kartalla omalla merkillään.
+- [Meksiko — maalehti / Musiikki: Uutinen, joka myytiin lauluna] Corrido on kertova balladi, jonka nimi tulee verbistä correr, juosta. Kaava on tiukka: laulaja tervehtii, pohjustaa, kertoo tarinan, vetää opetuksen ja hyvästelee. Tyypillisesti säkeistöjä on kahdeksan ja rivissä kahdeksan tavua. Ennen radiota corrido oli uutisväline: laulut painettiin lentolehtisiksi ja myytiin toreilla. Lehtisiä kuvitti José Guadalupe Posada, jonka luurankopiirrokset eli kalaverat tekivät vainajista tavallisia ihmisiä juhlimassa, ratsastamassa ja kinastelemassa.
+- [Pariisi — kohdekartta / Kohdekartta: Kirahvin kävelymatka] Egyptin varakuningas lähetti kirahvin Ranskan kuninkaalle Kaarle X:lle. Eläin saapui laivalla Marseilleen 31. lokakuuta 1826 — kannessa oli sahattu reikä, josta kaula mahtui ulos. Merimatkaa Atlantin ympäri pidettiin liian vaarallisena, joten päätettiin, että kirahvi kävelee Pariisiin. Luonnontieteilijä Étienne Geoffroy Saint-Hilaire, 55, käveli mukana ja teetti eläimelle kaksiosaisen keltaisen takin ja kengät. Matka kesti 41 päivää. Lyonissa vastassa oli 30 000 ihmistä, ja Pariisissa kirahvia kävi katsomassa yli 100 000 — joka kahdeksas kaupunkilainen. Hiukset kammattiin torneiksi, kankaisiin ilmestyi täpliä ja väri nimeltä "kirahvin vatsa" myi kaiken. Aikalaiset kutsuivat eläintä nimellä …
+
+### 49.2
+KYSYMYS: Miten eläimiä kuljetettiin Egyptistä Wieniin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yksi kirahvi muutti koko kaupungin muodin — kampaukset, hajuveden ja näytelmän
+Tietoruudun teksti: Schönbrunnin eläintarha sai ensimmäisen kirahvinsa vuonna 1828 lahjaksi Egyptin varakuninkaalta. Eläin herätti sellaisen innostuksen, että se levisi muotiin, käsitöihin ja seuraelämään.
+
+Kirahvikuvioita ilmestyi vaatteisiin, kenkiin ja käyttöesineisiin, ja kirahvin innoittamina keksittiin uusia kampauksia, hajuvesi, näytelmä ja kaksi sävellystä. Tarha itse oli tuolloin yhä keisariperheen yksityisomaisuutta, ja se pysyi sellaisena aina Itävalta-Unkarin hajoamiseen 1918 asti.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Historian hetki: Sarajevo 1914 — auto pysähtyy väärään paikkaan] 28.6.1914 — Kuljettaja tajuaa virheen vasta, kun on jo kääntynyt väärään kujaan: reitti piti muuttaa sairaalavierailun vuoksi, mutta kukaan ei ehtinyt kertoa sitä hänelle. Se on sunnuntai 28. kesäkuuta 1914, ja arkkiherttua Franz Ferdinand istuu avoautossa vaimonsa Sophien vierellä Sarajevossa, missä joku on jo aiemmin samana aamuna heittänyt pommin heidän saattueensa kohti. Kuljettaja yrittää perua autoa takaisin Latin-sillan kupeessa, mutta moottori sammuu juuri siinä kohtaa, missä nuori Gavrilo Princip seisoo katukahvilan edessä — yksi kuudesta salamurhaajasta, joka oli jo luullut suunnitelman epäonnistuneen. Princip ampuu kahdesti muutaman metrin päästä. Hän yrittää vielä nielaista syan…
+- [Slovenia — maalehti / Ruoka: Mehiläisten opettaja maalasi pesät] 1770 — Anton Janša syntyi noin vuonna 1734 Breznican kylässä ja lähti lukutaidottomana opiskelemaan maalariksi Wieniin. Isän yli sadan pesän parissa kasvanut mies valitsi lopulta mehiläiset, ja vuonna 1770 hänestä tuli kaikkien Itävallan maiden ensimmäinen keisarillinen mehiläishoidon opettaja. Hän muotoili pesät niin, että ne voi pinota kuin palikat, koristi niiden etupuolet maalauksilla ja neuvoi viemään pesät kukkivien niittyjen luo. Seudun oma krainilainen mehiläinen on tunnettu rauhallisuudestaan ja hunajavarastoistaan. Maria Teresia määräsi hänen kuolemansa jälkeen kaikki opettajat käyttämään hänen kirjojaan.
+
+### 49.3
+KYSYMYS: Millainen paikka Schönbrunnin eläintarha oli 1800-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yksi kirahvi muutti koko kaupungin muodin — kampaukset, hajuveden ja näytelmän
+Tietoruudun teksti: Schönbrunnin eläintarha sai ensimmäisen kirahvinsa vuonna 1828 lahjaksi Egyptin varakuninkaalta. Eläin herätti sellaisen innostuksen, että se levisi muotiin, käsitöihin ja seuraelämään.
+
+Kirahvikuvioita ilmestyi vaatteisiin, kenkiin ja käyttöesineisiin, ja kirahvin innoittamina keksittiin uusia kampauksia, hajuvesi, näytelmä ja kaksi sävellystä. Tarha itse oli tuolloin yhä keisariperheen yksityisomaisuutta, ja se pysyi sellaisena aina Itävalta-Unkarin hajoamiseen 1918 asti.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kaupunkilehti / Wien: Keisarin aamiaishuone eläintarhan keskellä] Maria Teresian puoliso Frans Stefan teetti Schönbrunnin puistoon eläintarhan, joka esiteltiin vieraille kesällä 1752. Se on maailman vanhin yhä toimiva eläintarha. Keskelle valmistui 1759 kahdeksankulmainen paviljonki, jonka keisariperhe rakennutti aamiaishuoneekseen. Sen ympärille oli asetettu kaksitoista samankokoista tarhaa kuin kakunpalat, joten pöydästä näki joka suuntaan eläimiä. Paviljonki on nykyään ravintola.
+
+### 49.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+### 49.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+================ KOHTA 50 (nosto:praterin-ratas) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Ratas, joka kulkee kävelyä hitaammin
+Tietoruudun teksti: Praterin jättiratas nousi vuonna 1897 keisari Frans Joosefin 50-vuotisen hallitsijajuhlan kunniaksi. Se ei ole ympyrä vaan kolmikymmenkulmio: yksi kulma jokaista alkuperäistä vaunua kohti. Vaunuja oli kolmekymmentä, kunnes ratas paloi huhtikuussa 1945. Kun se avattiin uudelleen 1947, vaunuja ripustettiin takaisin vain viisitoista — ja niin ne roikkuvat siitä asti joka toisessa kulmassa. Ratas kulkee 2,7 kilometriä tunnissa.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Rattaan kulmat] Praterin jättiratas nousi vuonna 1897 keisari Frans Joosefin 50-vuotisen hallitsijajuhlan kunniaksi. Se ei ole ympyrä vaan kolmikymmenkulmio: yksi kulma jokaista alkuperäistä vaunua kohti. Vaunuja oli kolmekymmentä, kunnes ratas paloi huhtikuussa 1945. Kun se avattiin uudelleen 1947, vaunuja ripustettiin takaisin vain viisitoista — ja niin ne roikkuvat siitä asti joka toisessa kulmassa. Ratas kulkee 2,7 kilometriä tunnissa.
+- [Wien — kaupunkilehti / Wien: Ratas, joka kulkee kävelyä hitaammin] Praterin jättiratas nousi vuonna 1897 keisari Frans Joosefin 50-vuotisen hallitsijajuhlan kunniaksi. Se ei ole ympyrä vaan kolmikymmenkulmio: yksi kulma jokaista alkuperäistä vaunua kohti. Vaunuja oli kolmekymmentä, kunnes ratas paloi huhtikuussa 1945. Kun se avattiin uudelleen 1947, vaunuja ripustettiin takaisin vain viisitoista — ja niin ne roikkuvat siitä asti joka toisessa kulmassa. Ratas kulkee 2,7 kilometriä tunnissa.
+
+### 50.1
+KYSYMYS: Miksi rattaan kehästä tehtiin kolmikymmenkulmio eikä pyöreää?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Ratas, joka kulkee kävelyä hitaammin
+Tietoruudun teksti: Praterin jättiratas nousi vuonna 1897 keisari Frans Joosefin 50-vuotisen hallitsijajuhlan kunniaksi. Se ei ole ympyrä vaan kolmikymmenkulmio: yksi kulma jokaista alkuperäistä vaunua kohti. Vaunuja oli kolmekymmentä, kunnes ratas paloi huhtikuussa 1945. Kun se avattiin uudelleen 1947, vaunuja ripustettiin takaisin vain viisitoista — ja niin ne roikkuvat siitä asti joka toisessa kulmassa. Ratas kulkee 2,7 kilometriä tunnissa.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Rattaan kulmat] Praterin jättiratas nousi vuonna 1897 keisari Frans Joosefin 50-vuotisen hallitsijajuhlan kunniaksi. Se ei ole ympyrä vaan kolmikymmenkulmio: yksi kulma jokaista alkuperäistä vaunua kohti. Vaunuja oli kolmekymmentä, kunnes ratas paloi huhtikuussa 1945. Kun se avattiin uudelleen 1947, vaunuja ripustettiin takaisin vain viisitoista — ja niin ne roikkuvat siitä asti joka toisessa kulmassa. Ratas kulkee 2,7 kilometriä tunnissa.
+
+### 50.2
+KYSYMYS: Miksi vaunuja ripustettiin sodan jälkeen takaisin vain puolet?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Ratas, joka kulkee kävelyä hitaammin
+Tietoruudun teksti: Praterin jättiratas nousi vuonna 1897 keisari Frans Joosefin 50-vuotisen hallitsijajuhlan kunniaksi. Se ei ole ympyrä vaan kolmikymmenkulmio: yksi kulma jokaista alkuperäistä vaunua kohti. Vaunuja oli kolmekymmentä, kunnes ratas paloi huhtikuussa 1945. Kun se avattiin uudelleen 1947, vaunuja ripustettiin takaisin vain viisitoista — ja niin ne roikkuvat siitä asti joka toisessa kulmassa. Ratas kulkee 2,7 kilometriä tunnissa.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kaupunkilehti / Wien: Ratas, joka kulkee kävelyä hitaammin] Praterin jättiratas nousi vuonna 1897 keisari Frans Joosefin 50-vuotisen hallitsijajuhlan kunniaksi. Se ei ole ympyrä vaan kolmikymmenkulmio: yksi kulma jokaista alkuperäistä vaunua kohti. Vaunuja oli kolmekymmentä, kunnes ratas paloi huhtikuussa 1945. Kun se avattiin uudelleen 1947, vaunuja ripustettiin takaisin vain viisitoista — ja niin ne roikkuvat siitä asti joka toisessa kulmassa. Ratas kulkee 2,7 kilometriä tunnissa.
+- [Wien — kohdekartta / Kohdekartta: Rattaan kulmat] Praterin jättiratas nousi vuonna 1897 keisari Frans Joosefin 50-vuotisen hallitsijajuhlan kunniaksi. Se ei ole ympyrä vaan kolmikymmenkulmio: yksi kulma jokaista alkuperäistä vaunua kohti. Vaunuja oli kolmekymmentä, kunnes ratas paloi huhtikuussa 1945. Kun se avattiin uudelleen 1947, vaunuja ripustettiin takaisin vain viisitoista — ja niin ne roikkuvat siitä asti joka toisessa kulmassa. Ratas kulkee 2,7 kilometriä tunnissa.
+
+### 50.3
+KYSYMYS: Millaista Praterissa oli silloin, kun ratas nousi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Ratas, joka kulkee kävelyä hitaammin
+Tietoruudun teksti: Praterin jättiratas nousi vuonna 1897 keisari Frans Joosefin 50-vuotisen hallitsijajuhlan kunniaksi. Se ei ole ympyrä vaan kolmikymmenkulmio: yksi kulma jokaista alkuperäistä vaunua kohti. Vaunuja oli kolmekymmentä, kunnes ratas paloi huhtikuussa 1945. Kun se avattiin uudelleen 1947, vaunuja ripustettiin takaisin vain viisitoista — ja niin ne roikkuvat siitä asti joka toisessa kulmassa. Ratas kulkee 2,7 kilometriä tunnissa.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kaupunkilehti / Wien: Ratas, joka kulkee kävelyä hitaammin] Praterin jättiratas nousi vuonna 1897 keisari Frans Joosefin 50-vuotisen hallitsijajuhlan kunniaksi. Se ei ole ympyrä vaan kolmikymmenkulmio: yksi kulma jokaista alkuperäistä vaunua kohti. Vaunuja oli kolmekymmentä, kunnes ratas paloi huhtikuussa 1945. Kun se avattiin uudelleen 1947, vaunuja ripustettiin takaisin vain viisitoista — ja niin ne roikkuvat siitä asti joka toisessa kulmassa. Ratas kulkee 2,7 kilometriä tunnissa.
+
+### 50.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 50 YHTEINEN KONTEKSTI
+
+### 50.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 50 YHTEINEN KONTEKSTI
