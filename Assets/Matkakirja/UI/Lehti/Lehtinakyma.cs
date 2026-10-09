@@ -1770,6 +1770,30 @@ namespace Matkakirja.Natiivi
             return tekstit;
         }
 
+        /// <summary>
+        /// LUENTAVIENTI (Natiivi-UI 9.10.2026, Pelikoodarin esigenerointi, omistajan lupa 10.2x): kaupunkilehti auki ja jokainen sivu
+        /// vuorollaan näkyviin; sivu(i, tekstit) saa samat tekstit kuin kaiutin (SivunTekstit, ilman jatkuvan luennan yläotsikkoa).
+        /// Lehti suljetaan lopuksi. Ei lehteä tai aikaraja (20 s) → ei sivuja.
+        /// </summary>
+        internal System.Collections.IEnumerator VieLuennat(string kaupunki, Action<int, List<string>> sivuValmis)
+        {
+            var ennen = lehti;
+            Nayta(LehtiLaji.Kaupunki, kaupunki, null, 0);
+            float raja = Time.realtimeSinceStartup + 20f;
+            while ((lehti == null || ReferenceEquals(lehti, ennen) || lehti.Omistaja != kaupunki) && Time.realtimeSinceStartup < raja) yield return null;
+            if (lehti == null || lehti.Omistaja != kaupunki) { Debug.Log("MATKAKIRJA lehti: luentavienti ei lehteä " + kaupunki); yield break; }
+            bool otsikko = lueOtsikko;
+            lueOtsikko = false;
+            for (int i = 0; i < lehti.Sivut.Count; i++)
+            {
+                if (i != nyt) NaytaSivu(i, 0);
+                yield return null; yield return null;
+                sivuValmis?.Invoke(i, SivunTekstit().ToList());
+            }
+            lueOtsikko = otsikko;
+            Sulje();
+        }
+
         // --- jatkuva luenta (web js/lukija.js AUTO_AVAIN ja js/lehti.js jatkaLehdenLuentaa) -------------------------
 
         /// <summary>Sama avain kuin webin localStorage 'matkakirja-lukija-auto'; oletus pois.</summary>
