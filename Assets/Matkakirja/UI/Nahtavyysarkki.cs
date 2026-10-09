@@ -337,6 +337,56 @@ namespace Matkakirja.Natiivi
             Reaktiot.Piirra(sisus, Reaktiot.JuttuAvain(kartta?.Kaupunki ?? PeliOhjain.Instanssi?.PelaajanKaupunki, k.Nimi), k.Nimi);
             // Web: pöllöpoiminnat jutun loppuun reaktioiden jälkeen.
             if (!opas) Poimintapillerit.Piirra(sisus, Reaktiot.JuttuAvain(kartta?.Kaupunki ?? PeliOhjain.Instanssi?.PelaajanKaupunki, k.Nimi));
+            AsetaLuettavat(JutunLuettavat(k));
+        }
+
+        // LUETTAVAT YHDESTÄ KOOSTAJASTA (Natiivi-UI 9.10.2026, Pelikoodarin luentavienti NostoluentaVienti): arkki ja vienti saavat
+        // täsmälleen samat tekstit samassa järjestyksessä (otsikko, kappaleet, lainaus kappaleen (n + 1) / 2 jälkeen; oppaassa ingressi,
+        // jaksot, MILLOIN MATKAAN? -laatikon paras aika ja kausien kuvaukset jakson 0 jälkeen ja nosto jakson 1 jälkeen).
+        internal static List<string> JutunLuettavat(NahtavyysKohde k)
+        {
+            var l = new List<string>();
+            if (k == null) return l;
+            if (!string.IsNullOrEmpty(k.Nimi)) l.Add(k.Nimi);
+            var kappaleet = Kappaleet(k.Teksti).ToList();
+            int lainaus = string.IsNullOrEmpty(k.LainausTeksti) ? -1 : (kappaleet.Count + 1) / 2;
+            for (int i = 0; i < kappaleet.Count; i++)
+            {
+                l.Add(kappaleet[i]);
+                if (i + 1 == lainaus) l.Add(k.LainausTeksti);
+            }
+            return l;
+        }
+
+        internal static List<string> OppaanLuettavat(OpasArtikkeli o)
+        {
+            var l = new List<string>();
+            if (o == null) return l;
+            if (!string.IsNullOrEmpty(o.Nimi)) l.Add(o.Nimi);
+            l.AddRange(Kappaleet(o.Teksti));
+            var valiin = new SortedDictionary<int, Action>();
+            if (!string.IsNullOrEmpty(o.ParasAika) || o.Kaudet.Count > 0)
+                valiin[0] = () =>
+                {
+                    if (!string.IsNullOrEmpty(o.ParasAika)) l.Add(o.ParasAika);
+                    foreach (var k in o.Kaudet) if (!string.IsNullOrEmpty(k.Kuvaus)) l.Add(k.Kuvaus);
+                };
+            if (!string.IsNullOrEmpty(o.Nosto)) valiin[1] = () => l.Add(o.Nosto);
+            for (int i = 0; i < o.Jaksot.Count; i++)
+            {
+                l.AddRange(Kappaleet(o.Jaksot[i].Teksti));
+                if (valiin.TryGetValue(i, out var lohko)) lohko();
+            }
+            foreach (var kv in valiin) if (kv.Key >= o.Jaksot.Count) kv.Value();
+            return l;
+        }
+
+        void AsetaLuettavat(List<string> l)
+        {
+            luettavat.Clear();
+            luettavat.AddRange(l);
+            otsikonPituus = luettavat.Count > 0 && !string.IsNullOrEmpty(l[0]) ? l[0].Length : 0;
+            PaivitaKaiutin();
         }
 
         static void Lahderivi(VisualElement isa, string lahde)
@@ -350,8 +400,6 @@ namespace Matkakirja.Natiivi
         {
             var l = Rakenne.El("mk-nahtavyys__lainaus", isa, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti(teksti, "mk-nahtavyys__lainausteksti", l), Kirjasin.LukuKursiivi);
-            luettavat.Add(teksti);
-            PaivitaKaiutin();
             if (!string.IsNullOrEmpty(lahde)) Kirjasimet.Aseta(Rakenne.Teksti(lahde, "mk-nahtavyys__lainauslahde", l), Kirjasin.Kone);
         }
 
@@ -375,6 +423,7 @@ namespace Matkakirja.Natiivi
             foreach (var kv in valiin) if (kv.Key >= o.Jaksot.Count) sisus.Add(kv.Value());
             if (o.Linkit.Count > 0) sisus.Add(Linkit(o));
             Lahderivi(sisus, o.Lahde);
+            AsetaLuettavat(OppaanLuettavat(o));
         }
 
         VisualElement Jakso(OpasJakso j, VisualElement kainalo, bool levea)
@@ -479,8 +528,6 @@ namespace Matkakirja.Natiivi
         {
             var n = Rakenne.El("mk-opas__nosto", null, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti(teksti, "mk-opas__nostoteksti", n), Kirjasin.LukuKursiivi);
-            luettavat.Add(teksti);
-            PaivitaKaiutin();
             return n;
         }
 
@@ -563,8 +610,6 @@ namespace Matkakirja.Natiivi
             var l = Rakenne.Teksti(Vuosikorosta(teksti), luokka, isa);
             l.enableRichText = true;
             Kirjasimet.Aseta(l, Kirjasin.Luku);
-            luettavat.Add(teksti);
-            PaivitaKaiutin();
         }
 
         const string VuosiJakso = @"(?:\s?[–-]\s?\d{2,4})?";
