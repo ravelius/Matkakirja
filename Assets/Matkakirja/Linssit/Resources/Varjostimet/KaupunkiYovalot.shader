@@ -61,6 +61,23 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                 return frac((p3.xxy + p3.yzz) * p3.zyx);
             }
 
+            float4 _IlmSaa;                 // LS2 (KaupunkiIlmakeha, globaali): x = katujen märkyys 0–1 (kuuro ja sää, kuivuu hitaasti)
+
+            // Katulamput solukossa (sama kaava kuin katuvaloissa): solun piste, gauss-säde ja LED-osuus.
+            float3 Lamput(float2 xz, float solu, float sade)
+            {
+                float2 q = xz / solu, ci = floor(q); float3 l = 0.0;
+                for (int y = -1; y <= 1; y++)
+                for (int x = -1; x <= 1; x++)
+                {
+                    float2 sc = ci + float2(x, y);
+                    float3 h = Hash32(sc);
+                    float2 d = q - (sc + 0.2 + 0.6 * h.xy);
+                    l += exp(-dot(d, d) / (sade * sade)) * lerp(_ValoVari.rgb, float3(0.95, 0.97, 1.0), step(1.0 - _ValoVari.a, frac(h.z * 7.13)));
+                }
+                return l;
+            }
+
             static const float MAA_R = 6371000.0, ASTE = 57.2957795;
 
             float2 Asteet(float3 paikka)
@@ -178,6 +195,22 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                             lamput *= nakyvyys * saturate((tie - 0.35) / 0.3);
                         }
                         lisa += (nauha + lamput * _ValoParam.z) * vaaka;
+                        // MÄRÄT KADUT (junan 171 erä; märkyys ja tummuminen LS2:n IlmakehaLaatoissa): katulamppujen heijastus juovana kohti
+                        // kameraa. Maan pikseliin heijastuu katsesuunnassa kauempana oleva lamppu: näytteet 0,3–1,6 solun päästä.
+                        float mark = _IlmSaa.x;
+                        if (mark > 0.02 && tie > 0.2 && nakyvyys > 0.0)
+                        {
+                            float2 vk = normalize(p.xz - _KameraP.xz + 1e-4);
+                            float sadeH = max(1.0, jalanjalki * 0.75) / solu * 1.6;
+                            float3 heijL = 0.0;
+                            [unroll] for (int k = 0; k < 4; k++)
+                            {
+                                float sk = solu * (0.3 + 0.43 * k);
+                                float tie2 = SAMPLE_TEXTURE2D_LOD(_Tiet, sampler_Tiet, tuv + vk * sk / _TieAlue.z, 0).r;
+                                heijL += Lamput(p.xz + vk * sk, solu, sadeH) * saturate((tie2 - 0.35) / 0.3) * (1.0 - 0.2 * k);
+                            }
+                            lisa += heijL * _ValoParam.z * mark * 0.3 * vaaka * nakyvyys;
+                        }
                     }
                 }
 
