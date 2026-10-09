@@ -14,8 +14,12 @@
  *     tasot: { <konteksti>: { ryhmat: { <ryhmä>: <kerroin> }, aanet: { <äänitunnus>: <kerroin> } } } }
  *   konteksti esim. "kartta", "pallo", "olavinlinna", "linssi:iss"; ryhmä esim. "musiikki", "tausta", "tehosteet",
  *   "lukija"; äänitunnus esim. "aanet/sonniss-aanet-v3/kolikot-1". Kerroin 0–4 (1 = ennallaan), lineaarinen.
- *   POST-runko: { tasot, pohjaVersio? }. Jos pohjaVersio annetaan ja se ei ole nykyinen versio → 409 (toisen tallennus
- *   ei jää huomaamatta). Kaikki muut kentät ohitetaan.
+ *   POST (tai PUT) -runko: { tasot, pohjaVersio? }. Jos pohjaVersio annetaan ja se ei ole nykyinen versio → 409 (toisen
+ *   tallennus ei jää huomaamatta). Kaikki muut kentät ohitetaan.
+ *   ?konteksti=<k>: tallennetaan VAIN konteksti k (rungon tasot saa sisältää vain sen); muut kontekstit säilyvät ennallaan.
+ *   Ilman parametria runko korvaa kaikki tasot.
+ *   GET /mikseri/historia: viimeiset 10 versiota uusin ensin ({ versiot: [...] }), peruutusta varten; peruutus = vanhan
+ *   version tasot POSTina takaisin (syntyy uusi versio, historiaa ei kirjoiteta yli).
  *
  * TALLENNUS: R2 (PUHE_R2) mikseri/tasot.json (voimassa oleva) + mikseri/historia/<versio>.json (jokainen tallennus,
  * palautusta varten). Vanhat appit eivät tunne reittiä, joten niille ei muutu mitään.
@@ -23,6 +27,8 @@
 import { vertaaSalaisuus } from './rajat.js';
 
 export const MIKSERI_POLKU = '/mikseri/tasot';
+export const MIKSERI_HISTORIA_POLKU = '/mikseri/historia';
+const HISTORIAA = 10;
 export const MIKSERI_AVAIN = 'mikseri/tasot.json';
 export const MIKSERI_HISTORIA = (v) => `mikseri/historia/${String(v).padStart(6, '0')}.json`;
 export const MIKSERI_OTSAKE = 'x-pollo-kehittaja';
@@ -72,7 +78,23 @@ export async function hoidaMikseriLuku(env, otsakkeet = {}) {
   return json(d, 200, { ...otsakkeet, 'cache-control': 'public, max-age=60' });
 }
 
-/** POST: tallennus kehittäjäkoodilla. */
+function yhdista(vanhat, konteksti, uusi) {
+  const ulos = { ...(vanhat || {}) };
+  if (uusi) ulos[konteksti] = uusi; else delete ulos[konteksti];   // tyhjä runko ?konteksti=k → kontekstin tasot oletuksiin
+  return ulos;
+}
+
+/** GET /mikseri/historia: viimeiset 10 versiota, uusin ensin. */
+export async function hoidaMikseriHistoria(env, otsakkeet = {}) {
+  const r2 = env.PUHE_R2; const nyk = await lueNykyinen(r2); const versiot = [];
+  for (let v = Number(nyk.versio) || 0; v > 0 && versiot.length < HISTORIAA; v--) {
+    const o = await r2.get(MIKSERI_HISTORIA(v)).catch(() => null);
+    if (o) { try { versiot.push(JSON.parse(await o.text())); } catch { /* rikkinäinen rivi ohitetaan */ } }
+  }
+  return json({ versiot }, 200, { ...otsakkeet, 'cache-control': 'no-store' });
+}
+
+/** POST/PUT: tallennus kehittäjäkoodilla. */
 export async function hoidaMikseriTallennus(pyynto, env, otsakkeet = {}, nyt = new Date()) {
   const ei = { ...otsakkeet, 'cache-control': 'no-store' };
   if (!env.POLLO_KEHITTAJAKOODI || !vertaaSalaisuus(pyynto.headers.get(MIKSERI_OTSAKE), env.POLLO_KEHITTAJAKOODI)) {
@@ -85,11 +107,16 @@ export async function hoidaMikseriTallennus(pyynto, env, otsakkeet = {}, nyt = n
   try { runko = JSON.parse(teksti); } catch { return json({ virhe: 'kysely', viesti: 'Pyyntö ei ollut JSONia.' }, 400, ei); }
   const t = tarkistaTasot(runko?.tasot);
   if (t.virhe) return json({ virhe: 'skeema', viesti: t.virhe }, 400, ei);
+  const konteksti = new URL(pyynto.url).searchParams.get('konteksti');
+  if (konteksti !== null) {
+    const muut = Object.keys(t.tasot).filter((k) => k !== konteksti);
+    if (!TUNNUS.test(konteksti) || muut.length) return json({ virhe: 'skeema', viesti: `?konteksti=${konteksti.slice(0, 40)}: runko saa sisältää vain tämän kontekstin` }, 400, ei);
+  }
   const nykyinen = await lueNykyinen(env.PUHE_R2);
   if (runko.pohjaVersio !== undefined && runko.pohjaVersio !== nykyinen.versio) {
     return json({ virhe: 'versio', viesti: 'Tasot ovat muuttuneet välillä.', versio: nykyinen.versio }, 409, ei);
   }
-  const uusi = { versio: (Number(nykyinen.versio) || 0) + 1, skeema: 1, paivitetty: nyt.toISOString(), tasot: t.tasot };
+  const uusi = { versio: (Number(nykyinen.versio) || 0) + 1, skeema: 1, paivitetty: nyt.toISOString(), tasot: konteksti === null ? t.tasot : yhdista(nykyinen.tasot, konteksti, t.tasot[konteksti]) };
   const data = JSON.stringify(uusi);
   await env.PUHE_R2.put(MIKSERI_HISTORIA(uusi.versio), data, { httpMetadata: { contentType: 'application/json' } });
   await env.PUHE_R2.put(MIKSERI_AVAIN, data, { httpMetadata: { contentType: 'application/json' } });

@@ -37,7 +37,7 @@ import {
   MAAILMAN_SUOSIKIT_KEHOTE,
 } from './kohteet.js';
 import { OPAS_AINEISTOT } from './aineistot.js';
-import { MIKSERI_POLKU, hoidaMikseriLuku, hoidaMikseriTallennus } from './mikseri.js';
+import { MIKSERI_POLKU, MIKSERI_HISTORIA_POLKU, hoidaMikseriLuku, hoidaMikseriTallennus, hoidaMikseriHistoria } from './mikseri.js';
 import { SAA_RAJAPINTA, SAA_UA, SAA_VALIMUISTI_S, SAA_LAHDE, saaAvain, jasennaSaa } from './saa.js';
 import { kuluKentat, valitseMalli, kuluRivi } from './kulut.js';
 import { tarkistaSyote, TURVA_JATKOT } from './opas-turva.js';
@@ -3742,12 +3742,16 @@ export default {
       return v;
     }
     // Mikserin tasot kaikille (omistaja 9.10.2026, mikseri.js): GET julkinen luku, POST vain kehittäjäkoodilla.
-    if (new URL(pyynto.url).pathname === MIKSERI_POLKU) {
+    const mikseriPolku = new URL(pyynto.url).pathname;
+    if (mikseriPolku === MIKSERI_POLKU || mikseriPolku === MIKSERI_HISTORIA_POLKU) {
       if (!oppaanAsiakas(pyynto, kors, env)) return new Response('Origin ei ole sallittu', { status: 403 });
       const ots = origin ? korsOtsakkeet(origin, sallitut) : {};
+      if (mikseriPolku === MIKSERI_HISTORIA_POLKU) {
+        return pyynto.method === 'GET' ? hoidaMikseriHistoria(env, ots) : vastaa({ virhe: 'menetelma', viesti: 'Vain GET.' }, { status: 405, ...kors });
+      }
       if (pyynto.method === 'GET') return hoidaMikseriLuku(env, ots);
-      if (pyynto.method === 'POST') return hoidaMikseriTallennus(pyynto, env, ots);
-      return vastaa({ virhe: 'menetelma', viesti: 'Vain GET tai POST.' }, { status: 405, ...kors });
+      if (pyynto.method === 'POST' || pyynto.method === 'PUT') return hoidaMikseriTallennus(pyynto, env, ots);
+      return vastaa({ virhe: 'menetelma', viesti: 'Vain GET, POST tai PUT.' }, { status: 405, ...kors });
     }
     if (pyynto.method !== 'POST') {
       return vastaa({ virhe: 'menetelma', viesti: 'Vain POST.' }, { status: 405, ...kors });

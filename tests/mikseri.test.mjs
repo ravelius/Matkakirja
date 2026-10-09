@@ -88,3 +88,27 @@ test('natiivi ilman Originia (sovellustunniste + user-agent): luku ja tallennus 
   assert.equal((await v.json()).versio, 1);
   assert.equal((await hae(env, { 'user-agent': 'curl/8' })).status, 403);
 });
+
+test('?konteksti=pallo yhdistää vain sen kontekstin (PUT), muut säilyvät; vieras konteksti rungossa → 400', async () => {
+  const env = ymparisto();
+  await tallenna(env, { tasot: TASOT });
+  const put = (q, runko) => worker.fetch(new Request(`https://pollo.example/mikseri/tasot${q}`, { method: 'PUT',
+    headers: { ...O, 'content-type': 'application/json', 'x-pollo-kehittaja': KOODI }, body: JSON.stringify(runko) }), env, {});
+  assert.equal((await put('?konteksti=pallo', { tasot: { pallo: { ryhmat: { tuuli: 0.3 } } } })).status, 200);
+  const l = await (await hae(env)).json();
+  assert.equal(l.versio, 2); assert.equal(l.tasot.pallo.ryhmat.tuuli, 0.3); assert.equal(l.tasot.kartta.ryhmat.musiikki, 0.8);
+  assert.equal((await put('?konteksti=pallo', { tasot: { kartta: { ryhmat: { musiikki: 0 } } } })).status, 400);
+  assert.equal((await put('?konteksti=pallo', { tasot: {} })).status, 200);
+  const t = (await (await hae(env)).json()).tasot;
+  assert.ok(!t.pallo && t.kartta, 'tyhjä runko palauttaa kontekstin oletuksiin');
+});
+
+test('GET /mikseri/historia: viimeiset 10 uusin ensin, ei välimuistia', async () => {
+  const env = ymparisto();
+  for (let i = 1; i <= 12; i++) await tallenna(env, { tasot: { kartta: { ryhmat: { musiikki: i / 10 } } } });
+  const v = await worker.fetch(new Request('https://pollo.example/mikseri/historia', { headers: O }), env, {});
+  assert.equal(v.status, 200); assert.match(v.headers.get('cache-control'), /no-store/);
+  const { versiot } = await v.json();
+  assert.equal(versiot.length, 10); assert.equal(versiot[0].versio, 12); assert.equal(versiot[9].versio, 3);
+  assert.equal(versiot[0].tasot.kartta.ryhmat.musiikki, 1.2);
+});
