@@ -88,7 +88,8 @@ namespace Matkakirja.Natiivi
             materiaali.SetMatrix(IdMatriisi, Matrix4x4.Translate(-pk) * g.transform.worldToLocalMatrix);
             materiaali.SetTexture(IdMaski, maski);
             materiaali.SetVector(IdAlue, new Vector4((float)muoto.KulmaX, (float)muoto.KulmaZ, (float)muoto.SivuM, 1f));
-            materiaali.SetVector(IdParam, new Vector4(voima, KaupunkiYovalot.Osuus, korkeus, AariviivaVoima));
+            // Eiffel (Päätoimittaja 9.10., SETE): ei yön julkisivuvaloa korostuksessa (päivän korostus säilyy, yöllä himmeä).
+            materiaali.SetVector(IdParam, new Vector4(OpasSovitin.OnEiffel(lat, lon) ? voima * (1f - 0.7f * KaupunkiYovalot.Osuus) : voima, OpasSovitin.OnEiffel(lat, lon) ? 0f : KaupunkiYovalot.Osuus, korkeus, AariviivaVoima));
         }
 
         static bool Luo()

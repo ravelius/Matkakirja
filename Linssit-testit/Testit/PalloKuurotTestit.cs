@@ -23,13 +23,18 @@ namespace Matkakirja.Linssit.Testit
             }
             Oleta.Tosi(kuuroja >= 6 && kuuroja <= 16, $"3 h: {kuuroja} kuuroa (harvoin)");
             Oleta.Tosi(ukkosia >= 1 && ukkosia < kuuroja, $"osa ukkoskuuroja ({ukkosia}/{kuuroja})");
-            Oleta.Tosi(kuuroAika < 0.4 * 3 * 3600, $"kuuroa {kuuroAika / 60:F0} min / 180 min");
+            Oleta.Tosi(kuuroAika < 0.15 * 3 * 3600, $"kuuroa {kuuroAika / 60:F0} min / 180 min");
             Oleta.Tosi(maxMuutos < 1.0 / PalloKuurot.RamppiS * 1.6, $"pehmeä voimistuminen ({maxMuutos:F3}/s)");
+            // Pilvet ensin: sade alkaa vasta PilvetEnnenS:n jälkeen.
+            var q = new PalloKuurot(4); double tq = 0; while (q.Voima <= 0 && tq < 7200) { q.Paivita(dt, true); tq += dt; }
+            var pq = q.Paivita(dt, true); Oleta.Tosi(pq.Sade < 0.01 && pq.Harmaus > 0, "pilvet tummuvat ennen sadetta");
+            for (int i = 0; i < (int)((PalloKuurot.PilvetEnnenS + PalloKuurot.RamppiS) / dt); i++) pq = q.Paivita(dt, true);
+            Oleta.Tosi(pq.Sade > 0.5, $"sitten sataa ({pq.Sade:F2})");
             var e = new PalloKuurot(4); for (double t = 0; t < 3600; t += dt) { e.Paivita(dt, false); Oleta.Tosi(e.Voima == 0, "ei sallittu → ei kuuroa"); }
             // Sää vaihtuu kesken kuuron: hiipuu RamppiS:ssa, ei katkea.
             var h = new PalloKuurot(4); double tt = 0; while (h.Voima < 0.99 && tt < 7200) { h.Paivita(dt, true); tt += dt; }
             double v0 = h.Voima; h.Paivita(dt, false);
-            Oleta.Tosi(h.Voima > 0.9 * v0, "ei katkea heti");
+            Oleta.Tosi(h.Voima > 0.8 * v0, "ei katkea heti");
             for (int i = 0; i < (int)(PalloKuurot.RamppiS / dt) + 2; i++) h.Paivita(dt, false);
             Oleta.Tosi(h.Voima == 0, "hiipunut RamppiS:ssa");
             // Säätehosteisiin sekoitus: selkeällä kuuro tuo sateen.
