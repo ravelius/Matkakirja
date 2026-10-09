@@ -1,0 +1,209 @@
+================ KOHTA 16 (kohde:aliakmonas) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aliákmonas (luonto · joki)
+Tietoruudun teksti: Aliákmonas on 297 kilometrin pituinen ja Kreikan pisin joki, joka virtaa alusta loppuun maan omalla puolella rajaa: Évros, Strymónas ja Axiós ovat kokonaisuutena pidempiä, mutta ne tulevat naapurimaista, eikä yksikään niistä yllä Kreikan puolella tämän mittaan. Nimi on antiikin kreikkaa ja rakentuu sanoista álas, suola tai meri, ja ákmon, alasin. Roomalainen Plinius vanhempi kirjasi Makedoniasta tavan, jonka mukaan valkoisia lampaita haluava juotti laumansa Aliákmonaassa ja mustia haluava Axióksessa. Joki nousee Grámoksen vuorilta aivan Albanian rajan tuntumasta, kiertää laajan kaaren Vourinoksen vuorten ympäri ja laskee Thermaïkoksen lahteen. Isoisän matkan aikaan sen alajuoksulla ei ollut vakituista uomaa lainkaan: joki tulvi vapaasti ja levitti eteensä laajoja soita, ja pysyvän uransa se sai vasta 1950-luvun patotöissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historian hetki: Pompeji 79 — ropina katolla] 79 jaa. — Ropina katolla kuulostaa ensin rakeilta. Sitten kadulle putoaa kevyitä, vaaleita kiviä, joita voi pitää kädessä — hohkakiveä — ja niitä sataa tunti tunnilta tiheämmin. Pompejin torilla on iltapäivä vuonna 79, ja vuoren päällä seisoo pilvi, jota nuorempi Plinius kuvaa myöhemmin kirjeessään Tacitukselle pinjapuuksi: pitkä runko ja levenevä latva. Hän katselee sitä lahden toiselta puolelta Misenumista, 29 kilometrin päästä, ja hänen enonsa Plinius vanhempi, laivaston komentaja, lähtee laivalla pelastamaan ihmisiä ja kuolee Stabiaen rannalla. Pompejissa kukaan ei kirjoita mitään. Ensimmäisen päivän valkoinen hohkakivi kasaa katoille lähes kolmen metrin kerroksen, ja katot romahtavat; …
+- [Afganistan — maalehti / Kuvataide: Sininen, joka maksoi enemmän kuin kulta] Sar-e Sangin kaivoksia Kokchan laaksossa Badakhshanissa on louhittu yli kuudentuhannen vuoden ajan, ja pitkään ne olivat koko tunnetun maailman ainoa lapis lazulin lähde. Kivi on lazuriittia, valkoista kalsiittia ja kullankeltaista pyriittiä; Plinius vanhempi kuvasi sen läpinäkymättömäksi ja kullanhippusin ripotelluksi. Sitä on Urin kuningashaudoissa ja Tutankhamonin naamiossa, ja Kleopatra jauhoi siitä silmämeikkinsä. Keskiajan lopulla Eurooppa alkoi tuoda kiveä jauhettavaksi ultramariiniksi, ja Masaccio, Tizian ja Vermeer säästivät sen yleensä kuvan tärkeimmän hahmon vaatteisiin.
+
+### 16.1
+KYSYMYS: Kuka Plinius vanhempi oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aliákmonas (luonto · joki)
+Tietoruudun teksti: Aliákmonas on 297 kilometrin pituinen ja Kreikan pisin joki, joka virtaa alusta loppuun maan omalla puolella rajaa: Évros, Strymónas ja Axiós ovat kokonaisuutena pidempiä, mutta ne tulevat naapurimaista, eikä yksikään niistä yllä Kreikan puolella tämän mittaan. Nimi on antiikin kreikkaa ja rakentuu sanoista álas, suola tai meri, ja ákmon, alasin. Roomalainen Plinius vanhempi kirjasi Makedoniasta tavan, jonka mukaan valkoisia lampaita haluava juotti laumansa Aliákmonaassa ja mustia haluava Axióksessa. Joki nousee Grámoksen vuorilta aivan Albanian rajan tuntumasta, kiertää laajan kaaren Vourinoksen vuorten ympäri ja laskee Thermaïkoksen lahteen. Isoisän matkan aikaan sen alajuoksulla ei ollut vakituista uomaa lainkaan: joki tulvi vapaasti ja levitti eteensä laajoja soita, ja pysyvän uransa se sai vasta 1950-luvun patotöissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historian hetki: Pompeji 79 — ropina katolla] 79 jaa. — Ropina katolla kuulostaa ensin rakeilta. Sitten kadulle putoaa kevyitä, vaaleita kiviä, joita voi pitää kädessä — hohkakiveä — ja niitä sataa tunti tunnilta tiheämmin. Pompejin torilla on iltapäivä vuonna 79, ja vuoren päällä seisoo pilvi, jota nuorempi Plinius kuvaa myöhemmin kirjeessään Tacitukselle pinjapuuksi: pitkä runko ja levenevä latva. Hän katselee sitä lahden toiselta puolelta Misenumista, 29 kilometrin päästä, ja hänen enonsa Plinius vanhempi, laivaston komentaja, lähtee laivalla pelastamaan ihmisiä ja kuolee Stabiaen rannalla. Pompejissa kukaan ei kirjoita mitään. Ensimmäisen päivän valkoinen hohkakivi kasaa katoille lähes kolmen metrin kerroksen, ja katot romahtavat; …
+- [Afganistan — maalehti / Kuvataide: Sininen, joka maksoi enemmän kuin kulta] Sar-e Sangin kaivoksia Kokchan laaksossa Badakhshanissa on louhittu yli kuudentuhannen vuoden ajan, ja pitkään ne olivat koko tunnetun maailman ainoa lapis lazulin lähde. Kivi on lazuriittia, valkoista kalsiittia ja kullankeltaista pyriittiä; Plinius vanhempi kuvasi sen läpinäkymättömäksi ja kullanhippusin ripotelluksi. Sitä on Urin kuningashaudoissa ja Tutankhamonin naamiossa, ja Kleopatra jauhoi siitä silmämeikkinsä. Keskiajan lopulla Eurooppa alkoi tuoda kiveä jauhettavaksi ultramariiniksi, ja Masaccio, Tizian ja Vermeer säästivät sen yleensä kuvan tärkeimmän hahmon vaatteisiin.
+
+### 16.2
+KYSYMYS: Mitä joen tulvasoille tapahtui patojen jälkeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aliákmonas (luonto · joki)
+Tietoruudun teksti: Aliákmonas on 297 kilometrin pituinen ja Kreikan pisin joki, joka virtaa alusta loppuun maan omalla puolella rajaa: Évros, Strymónas ja Axiós ovat kokonaisuutena pidempiä, mutta ne tulevat naapurimaista, eikä yksikään niistä yllä Kreikan puolella tämän mittaan. Nimi on antiikin kreikkaa ja rakentuu sanoista álas, suola tai meri, ja ákmon, alasin. Roomalainen Plinius vanhempi kirjasi Makedoniasta tavan, jonka mukaan valkoisia lampaita haluava juotti laumansa Aliákmonaassa ja mustia haluava Axióksessa. Joki nousee Grámoksen vuorilta aivan Albanian rajan tuntumasta, kiertää laajan kaaren Vourinoksen vuorten ympäri ja laskee Thermaïkoksen lahteen. Isoisän matkan aikaan sen alajuoksulla ei ollut vakituista uomaa lainkaan: joki tulvi vapaasti ja levitti eteensä laajoja soita, ja pysyvän uransa se sai vasta 1950-luvun patotöissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bali — kaupunkilehti / Riisipellot ja jumalten temppelit: Subak – tuhat vuotta vanha vesidemokratia] Balin jyrkillä rinteillä viljelty riisi ei kasva ilman vettä, ja vuosisatoja balilaiset ovat jakaneet sitä subak-järjestelmän kautta: viljelijät muodostavat itsehallinnollisia yhteisöjä, jotka ohjaavat vettä tulivuorijärvistä kanavien ja patojen kautta pelloille. Järjestelmä pohjautuu tri hita karana -filosofiaan, tasapainoon ihmisen, luonnon ja jumalallisen välillä; jokaisen subakin keskuksena toimii vesitemppeli, jossa neuvotellaan jaosta ja rukoillaan hyvää satoa. Vuonna 2012 Unesco merkitsi viisi subak-aluetta, yhteensä yli 19000 hehtaaria riisiterasseja, maailmanperintölistalle ainutlaatuisena maatalouden ja uskonnon liittona.
+- [Porto Alegre — kaupunkilehti / Luonto: Vesi, jota toiset sanovat järveksi ja toiset joeksi] Guaíba syntyy siinä, missä neljä jokea yhtyy kaupungin edustalla, ja jatkuu sieltä etelään kohti Patojen laguunia ja lopulta merta. Onko se järvi vai joki? Kysymystä on puitu paikallisessa tieteellisessä keskustelussa pitkään, eikä Wikipedia itsekään valitse puolta; käytännössä kaupunkilaiset sanovat sitä järveksi. Vesi on matalaa ja leveää, ja sen matalikoilla ruokailee jalohaikaroita. Rauhallinen se ei aina ole: vuoden 1941 suurtulvassa Guaíba nousi 4,76 metriin, ja lukema pysyi ennätyksenä yli kahdeksankymmentä vuotta.
+- [Alankomaat — maalehti / Historian hetki] Afsluitdijkin viimeinen aukko suljettiin 28. toukokuuta 1932 kello 13.02 — Zuiderzeestä tuli patojen taakse IJsselmeeri.
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:strymonas) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Strymónas (luonto · joki)
+Tietoruudun teksti: Strymónas saa alkunsa Vitošan vuorelta Bulgariasta ja laskee 415 kilometrin jälkeen Strymonin lahteen Amfipoliin kohdalla. Nimi on traakialaista perua ja juontuu kantaindoeurooppalaisesta sanasta srew-, "virrata" — samasta juuresta tulee englannin sana stream. Antiikissa joki oli purjehduskelpoinen suulta sisämaan Kerkinitis-järvelle asti, ja se oli tärkeä väylä Strymonin lahden ja Traakian sisämaan välillä melkein Serresin kaupunkiin saakka; tuo järvi on sittemmin kuivunut. Nykyään joki täyttää ja tyhjentää Kerkinin tekojärveä, joka padottiin 1932 laajan suoalueen paikalle ja on nyt yksi Kreikan parhaista lintupaikoista: alueelta on tavattu yli kolmesataa lintulajia. Isoisän matkan aikaan joki ei ylittänyt yhtään valtakunnanrajaa — sekä nykyisen Bulgarian että Kreikan puoleiset rannat kuuluivat Ottomaanien valtakuntaan, ja Bulgarian ruhtinaskunta perustettiin vasta 1878.
+
+### 17.1
+KYSYMYS: Mitä Amfipoliista on kaivettu esiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Strymónas (luonto · joki)
+Tietoruudun teksti: Strymónas saa alkunsa Vitošan vuorelta Bulgariasta ja laskee 415 kilometrin jälkeen Strymonin lahteen Amfipoliin kohdalla. Nimi on traakialaista perua ja juontuu kantaindoeurooppalaisesta sanasta srew-, "virrata" — samasta juuresta tulee englannin sana stream. Antiikissa joki oli purjehduskelpoinen suulta sisämaan Kerkinitis-järvelle asti, ja se oli tärkeä väylä Strymonin lahden ja Traakian sisämaan välillä melkein Serresin kaupunkiin saakka; tuo järvi on sittemmin kuivunut. Nykyään joki täyttää ja tyhjentää Kerkinin tekojärveä, joka padottiin 1932 laajan suoalueen paikalle ja on nyt yksi Kreikan parhaista lintupaikoista: alueelta on tavattu yli kolmesataa lintulajia. Isoisän matkan aikaan joki ei ylittänyt yhtään valtakunnanrajaa — sekä nykyisen Bulgarian että Kreikan puoleiset rannat kuuluivat Ottomaanien valtakuntaan, ja Bulgarian ruhtinaskunta perustettiin vasta 1878.
+
+### 17.2
+KYSYMYS: Mitä lintuja Kerkinillä talvehtii?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Strymónas (luonto · joki)
+Tietoruudun teksti: Strymónas saa alkunsa Vitošan vuorelta Bulgariasta ja laskee 415 kilometrin jälkeen Strymonin lahteen Amfipoliin kohdalla. Nimi on traakialaista perua ja juontuu kantaindoeurooppalaisesta sanasta srew-, "virrata" — samasta juuresta tulee englannin sana stream. Antiikissa joki oli purjehduskelpoinen suulta sisämaan Kerkinitis-järvelle asti, ja se oli tärkeä väylä Strymonin lahden ja Traakian sisämaan välillä melkein Serresin kaupunkiin saakka; tuo järvi on sittemmin kuivunut. Nykyään joki täyttää ja tyhjentää Kerkinin tekojärveä, joka padottiin 1932 laajan suoalueen paikalle ja on nyt yksi Kreikan parhaista lintupaikoista: alueelta on tavattu yli kolmesataa lintulajia. Isoisän matkan aikaan joki ei ylittänyt yhtään valtakunnanrajaa — sekä nykyisen Bulgarian että Kreikan puoleiset rannat kuuluivat Ottomaanien valtakuntaan, ja Bulgarian ruhtinaskunta perustettiin vasta 1878.
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:evros) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Évros (luonto · joki)
+Tietoruudun teksti: Samalla joella on kolme nimeä: bulgariaksi Marica, kreikaksi Évros ja turkiksi Meriç. Se on 480 kilometriä pitkä ja Balkanin niemimaan pisin kokonaan sisämaassa kulkeva joki, ja se saa alkunsa Rilan vuoriston Maričini-järvistä. Vanhin tunnettu nimi on Éuros, jonka runoilija Alkman kirjoitti muistiin 700–600-luvuilla eaa.; se tarkoitti "leveää", ja traakian kielessä siitä tuli Ebros, kreikassa Hébros. Antiikin taru kertoo, että laulaja Orfeuksen kuoltua hänen päänsä ja lyyransa kelluivat Hébrosta pitkin mereen ja tuuli kantoi ne Lesboksen saarelle asti. Edirnessä — isoisän kartoissa Adrianopoli — jokeen yhtyvät sen kaksi suurinta sivujokea Tundža ja Arda, ja sieltä se kääntyy etelään kohti Egeanmerta. Isoisän matkan aikaan laaksossa kulki jo juna: Konstantinopolista Edirnen kautta pohjoiseen johtava rata haaroineen oli liikenteessä vuoteen 1874 mennessä. Rajajoeksi Évros tuli vasta 1923.
+
+### 18.1
+KYSYMYS: Miksi Edirne oli ottomaaneille niin tärkeä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Évros (luonto · joki)
+Tietoruudun teksti: Samalla joella on kolme nimeä: bulgariaksi Marica, kreikaksi Évros ja turkiksi Meriç. Se on 480 kilometriä pitkä ja Balkanin niemimaan pisin kokonaan sisämaassa kulkeva joki, ja se saa alkunsa Rilan vuoriston Maričini-järvistä. Vanhin tunnettu nimi on Éuros, jonka runoilija Alkman kirjoitti muistiin 700–600-luvuilla eaa.; se tarkoitti "leveää", ja traakian kielessä siitä tuli Ebros, kreikassa Hébros. Antiikin taru kertoo, että laulaja Orfeuksen kuoltua hänen päänsä ja lyyransa kelluivat Hébrosta pitkin mereen ja tuuli kantoi ne Lesboksen saarelle asti. Edirnessä — isoisän kartoissa Adrianopoli — jokeen yhtyvät sen kaksi suurinta sivujokea Tundža ja Arda, ja sieltä se kääntyy etelään kohti Egeanmerta. Isoisän matkan aikaan laaksossa kulki jo juna: Konstantinopolista Edirnen kautta pohjoiseen johtava rata haaroineen oli liikenteessä vuoteen 1874 mennessä. Rajajoeksi Évros tuli vasta 1923.
+
+### 18.2
+KYSYMYS: Miten Orfeuksen taru päättyi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Évros (luonto · joki)
+Tietoruudun teksti: Samalla joella on kolme nimeä: bulgariaksi Marica, kreikaksi Évros ja turkiksi Meriç. Se on 480 kilometriä pitkä ja Balkanin niemimaan pisin kokonaan sisämaassa kulkeva joki, ja se saa alkunsa Rilan vuoriston Maričini-järvistä. Vanhin tunnettu nimi on Éuros, jonka runoilija Alkman kirjoitti muistiin 700–600-luvuilla eaa.; se tarkoitti "leveää", ja traakian kielessä siitä tuli Ebros, kreikassa Hébros. Antiikin taru kertoo, että laulaja Orfeuksen kuoltua hänen päänsä ja lyyransa kelluivat Hébrosta pitkin mereen ja tuuli kantoi ne Lesboksen saarelle asti. Edirnessä — isoisän kartoissa Adrianopoli — jokeen yhtyvät sen kaksi suurinta sivujokea Tundža ja Arda, ja sieltä se kääntyy etelään kohti Egeanmerta. Isoisän matkan aikaan laaksossa kulki jo juna: Konstantinopolista Edirnen kautta pohjoiseen johtava rata haaroineen oli liikenteessä vuoteen 1874 mennessä. Rajajoeksi Évros tuli vasta 1923.
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:korintin-kanava) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korintin kanava (tekniikka)
+Tietoruudun teksti: Katso Ateenasta länteen, Korintin kannakselle. Isoisäsi matkan aikaan siellä ei ollut kanavaa. Tyranni Periandros harkitsi sitä jo 600-luvulla eaa., mutta rakensi sen sijaan laivoille kivetyn vetotien. Kolme roomalaishallitsijaa halusi kanavan ja kuoli kaikki väkivaltaisesti: Caesar ja Caligula ennen kuin pääsivät edes alkuun, Nero pian sen jälkeen, kun oli 67 jaa. itse lyönyt kuokalla ensimmäisen kuopan. Kanava valmistui vasta 1881–1893, isoisäsi matkan jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Perlovin teetalo] Se samovaarin tee oli matkustanut kauemmin kuin isoisäsi. Venäjän tee tuli Kiinasta maitse, ja koko kauppa kulki yhden ainoan pisteen läpi: Kyahtan, joka perustettiin 1727 aivan rajalle. Kiinan puolelle rakennettiin heti oma kauppakylänsä Maimaitsheng, ja kaksi kaupunkia seisoivat nokakkain muurirajan yli. Vuoden 1762 jälkeen siellä ei juuri käytetty rahaa vaan vaihdettiin tavaraa tavaraan: venäläiset toivat turkiksia, kankaita ja vuotia, kiinalaiset silkkiä, puuvillaa, posliinia ja teetä. Matka kesti tavallisesti kuudestatoista kahdeksaantoista kuukauteen, ja juuri siitä syntyi maku: tee nukkui yönsä karavaanin nuotioiden vieressä ja imi savun itseensä. Sitä sekoitusta myydään nykyäänkin n…
+- [Egypti — maalehti / Kanava: Port Said 1869 — keulan edessä vain kaivettua vettä] 17.11.1869 — Keulan edessä ei ole enää mitään paitsi kaivettua vettä. Keisarillinen huvijahti L'Aigle kääntyy Port Saidista kanavaan 17. marraskuuta 1869 ensimmäisenä, ja sen perässä jonoon asettuu kymmeniä laivoja: Itävallan keisari Frans Joosef, Preussin kruununprinssi, ruhtinaita ja lähettiläitä. Kannella seisoo keisarinna Eugénie, jonka serkku Ferdinand de Lesseps on ajanut hanketta viisitoista vuotta. Kaupunki, josta lähdetään, on itse kanavan lapsi: Port Said perustettiin hiekkasärkälle huhtikuussa 1859, kun kaivaminen alkoi. Kymmenen vuoden työ tehtiin aluksi Egyptin talonpoikien pakkotyönä, corvéena, kunnes se kiellettiin 1864 ja tilalle tuotiin ruoppaajia ja kauhakoneita. Työntekij…
+
+### 19.1
+KYSYMYS: Kuljetaanko kanavan läpi vielä nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korintin kanava (tekniikka)
+Tietoruudun teksti: Katso Ateenasta länteen, Korintin kannakselle. Isoisäsi matkan aikaan siellä ei ollut kanavaa. Tyranni Periandros harkitsi sitä jo 600-luvulla eaa., mutta rakensi sen sijaan laivoille kivetyn vetotien. Kolme roomalaishallitsijaa halusi kanavan ja kuoli kaikki väkivaltaisesti: Caesar ja Caligula ennen kuin pääsivät edes alkuun, Nero pian sen jälkeen, kun oli 67 jaa. itse lyönyt kuokalla ensimmäisen kuopan. Kanava valmistui vasta 1881–1893, isoisäsi matkan jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Perlovin teetalo] Se samovaarin tee oli matkustanut kauemmin kuin isoisäsi. Venäjän tee tuli Kiinasta maitse, ja koko kauppa kulki yhden ainoan pisteen läpi: Kyahtan, joka perustettiin 1727 aivan rajalle. Kiinan puolelle rakennettiin heti oma kauppakylänsä Maimaitsheng, ja kaksi kaupunkia seisoivat nokakkain muurirajan yli. Vuoden 1762 jälkeen siellä ei juuri käytetty rahaa vaan vaihdettiin tavaraa tavaraan: venäläiset toivat turkiksia, kankaita ja vuotia, kiinalaiset silkkiä, puuvillaa, posliinia ja teetä. Matka kesti tavallisesti kuudestatoista kahdeksaantoista kuukauteen, ja juuri siitä syntyi maku: tee nukkui yönsä karavaanin nuotioiden vieressä ja imi savun itseensä. Sitä sekoitusta myydään nykyäänkin n…
+- [Košice — kaupunkilehti / Luonto: Rotkot, joihin matkailijat eivät vielä kulje] Košicesta länteen alkaa vuoristo, jota nykyään kutsutaan Slovenský rajksi eli Slovakian paratiisiksi — kalkkikivirotkoja, joissa polku kulkee puisia tikapuita ja ketjuja pitkin vesiputousten ohi. Metsästäjät ja paimenet tunsivat rotkot jo kauan, mutta järjestäytynyt vuoristomatkailu näille seuduille alkoi vasta Unkarin Karpaattiseuran (Magyarországi Kárpátegyesület) perustamisen jälkeen — seura syntyi Popradissa vuonna 1873, isoisän matkan aikoihin. Nykyisin tunnetut tikapuu- ja ketjupolut rotkoihin rakennettiin vasta seuraavina vuosikymmeninä, joten isoisän matkan aikaan rotkot ovat yhä lähes koskemattomia.
+
+### 19.2
+KYSYMYS: Miksi kaivaminen onnistui vasta 1800-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korintin kanava (tekniikka)
+Tietoruudun teksti: Katso Ateenasta länteen, Korintin kannakselle. Isoisäsi matkan aikaan siellä ei ollut kanavaa. Tyranni Periandros harkitsi sitä jo 600-luvulla eaa., mutta rakensi sen sijaan laivoille kivetyn vetotien. Kolme roomalaishallitsijaa halusi kanavan ja kuoli kaikki väkivaltaisesti: Caesar ja Caligula ennen kuin pääsivät edes alkuun, Nero pian sen jälkeen, kun oli 67 jaa. itse lyönyt kuokalla ensimmäisen kuopan. Kanava valmistui vasta 1881–1893, isoisäsi matkan jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Egypti — maalehti / Kanava: Port Said 1869 — keulan edessä vain kaivettua vettä] 17.11.1869 — Keulan edessä ei ole enää mitään paitsi kaivettua vettä. Keisarillinen huvijahti L'Aigle kääntyy Port Saidista kanavaan 17. marraskuuta 1869 ensimmäisenä, ja sen perässä jonoon asettuu kymmeniä laivoja: Itävallan keisari Frans Joosef, Preussin kruununprinssi, ruhtinaita ja lähettiläitä. Kannella seisoo keisarinna Eugénie, jonka serkku Ferdinand de Lesseps on ajanut hanketta viisitoista vuotta. Kaupunki, josta lähdetään, on itse kanavan lapsi: Port Said perustettiin hiekkasärkälle huhtikuussa 1859, kun kaivaminen alkoi. Kymmenen vuoden työ tehtiin aluksi Egyptin talonpoikien pakkotyönä, corvéena, kunnes se kiellettiin 1864 ja tilalle tuotiin ruoppaajia ja kauhakoneita. Työntekij…
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:santorini) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Santoríni (luonto · saari)
+Tietoruudun teksti: Noin 3 600 vuotta sitten Santorini räjähti yhdessä historian suurimmista tulivuorenpurkauksista, joka hautasi minolaisen kaupungin Akrotirin tuhkaan — ja loi saaren keskelle avautuvan, yhä näkyvän kalderan. Purkausta on esitetty myös kadonneen Atlantiksen tarun innoittajaksi. Akrotirin kaivauksissa 1967 alkaen on löytynyt kolmikerroksisia taloja ja hyvin säilyneitä freskoja, jotka paljastavat yllättävän vauraan yhteisön.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rub al-Khali — kaupunkilehti / Rub al-Khali: Hiekkojen Atlantis] Beduiinit kertoivat tutkimusmatkailijoille kadonneesta kaupungista, jonka Jumala tuhosi. Thomasin opas osoitti dyynien välissä kulkevia leveitä uria: tuolla on tie Ubariin. Nimen hiekkojen Atlantis on usein luultu olevan T. E. Lawrencen, mutta se ei esiinny hänen julkaistuissa teksteissään — luultavasti sen keksi juuri Thomas. Helmikuussa 1992 uutisoitiin, että Ubar oli löytynyt Shisrin kaivolta Omanista. Paikka on aito: sisämaan kauppa-asema, joka rakennettiin 300-luvulla ja hylättiin 1400–1500-luvuilla lähteen ehdyttyä. Samastus Ubariin ei silti ole tutkijoiden hyväksymä, ja sen esittänyt Nicholas Clapp kumosi sen itsekin myöhemmin.
+- [Darfur — kaupunkilehti / Darfur: Deriban kaksoisjärvet] Jebel Marran laella, sammuneen tulivuoren huipulla, kimaltavat Deriban kaksoisjärvet noin 3000 metrin korkeudessa – toinen makean, toinen rikkipitoisen happaman veden täyttämä. Kraatterijärvet syntyivät viimeisimmän purkauksen jälkeen, ja Fur-kansa piti niitä pyhinä paikkoina, joihin liittyi lukuisia uskomuksia. Vuoristoinen, vaikeakulkuinen ylänkö toimi samalla luonnollisena linnoituksena: se auttoi Keira-suvun sulttaaneja, jotka olivat nousseet valtaan 1500-luvun lopulla ja tehneet islamista valtionuskonnon 1600-luvulla, pitämään valtakuntansa itsenäisenä lähes kolmen vuosisadan ajan naapurien paineesta huolimatta.
+
+### 20.1
+KYSYMYS: Kuinka laajalle purkauksen tuhka levisi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Santoríni (luonto · saari)
+Tietoruudun teksti: Noin 3 600 vuotta sitten Santorini räjähti yhdessä historian suurimmista tulivuorenpurkauksista, joka hautasi minolaisen kaupungin Akrotirin tuhkaan — ja loi saaren keskelle avautuvan, yhä näkyvän kalderan. Purkausta on esitetty myös kadonneen Atlantiksen tarun innoittajaksi. Akrotirin kaivauksissa 1967 alkaen on löytynyt kolmikerroksisia taloja ja hyvin säilyneitä freskoja, jotka paljastavat yllättävän vauraan yhteisön.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Darfur — kaupunkilehti / Darfur: Deriban kaksoisjärvet] Jebel Marran laella, sammuneen tulivuoren huipulla, kimaltavat Deriban kaksoisjärvet noin 3000 metrin korkeudessa – toinen makean, toinen rikkipitoisen happaman veden täyttämä. Kraatterijärvet syntyivät viimeisimmän purkauksen jälkeen, ja Fur-kansa piti niitä pyhinä paikkoina, joihin liittyi lukuisia uskomuksia. Vuoristoinen, vaikeakulkuinen ylänkö toimi samalla luonnollisena linnoituksena: se auttoi Keira-suvun sulttaaneja, jotka olivat nousseet valtaan 1500-luvun lopulla ja tehneet islamista valtionuskonnon 1600-luvulla, pitämään valtakuntansa itsenäisenä lähes kolmen vuosisadan ajan naapurien paineesta huolimatta.
+- [Quito — kaupunkilehti / Tiede: Tulivuori joka näytti itsensä tiedemiehille ja kiipeilijöille] Cotopaxi, Quitosta noin 50 kilometriä etelään kohoava 5 897 metrin tulivuori, on purkautunut 87 kertaa. Retkikunnan tiedemiehet näkivät purkauksen omin silmin, mutta vuosiluvusta lähteet eivät ole yhtä mieltä: joko kesäkuussa 1742 tai vuosina 1743 ja 1744. Huipulle päästiin vasta pitkän yrittämisen jälkeen. Alexander von Humboldt yritti 1802 ja pääsi vain noin 4 500 metriin; ensimmäinen onnistunut nousu tehtiin 28. marraskuuta 1872. Jo seuraavana vuonna 1873 huipulle nousi geologi Moritz Alphons Stübel neljän ecuadorilaisen – Rafael Jantuin, Melchor Páezin, Vicente Ramónin ja Eusebio Rodriguezin – kanssa.
+
+### 20.2
+KYSYMYS: Miksi Atlantis-tarua yhdistetään Santoriniin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Santoríni (luonto · saari)
+Tietoruudun teksti: Noin 3 600 vuotta sitten Santorini räjähti yhdessä historian suurimmista tulivuorenpurkauksista, joka hautasi minolaisen kaupungin Akrotirin tuhkaan — ja loi saaren keskelle avautuvan, yhä näkyvän kalderan. Purkausta on esitetty myös kadonneen Atlantiksen tarun innoittajaksi. Akrotirin kaivauksissa 1967 alkaen on löytynyt kolmikerroksisia taloja ja hyvin säilyneitä freskoja, jotka paljastavat yllättävän vauraan yhteisön.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rub al-Khali — kaupunkilehti / Rub al-Khali: Hiekkojen Atlantis] Beduiinit kertoivat tutkimusmatkailijoille kadonneesta kaupungista, jonka Jumala tuhosi. Thomasin opas osoitti dyynien välissä kulkevia leveitä uria: tuolla on tie Ubariin. Nimen hiekkojen Atlantis on usein luultu olevan T. E. Lawrencen, mutta se ei esiinny hänen julkaistuissa teksteissään — luultavasti sen keksi juuri Thomas. Helmikuussa 1992 uutisoitiin, että Ubar oli löytynyt Shisrin kaivolta Omanista. Paikka on aito: sisämaan kauppa-asema, joka rakennettiin 300-luvulla ja hylättiin 1400–1500-luvuilla lähteen ehdyttyä. Samastus Ubariin ei silti ole tutkijoiden hyväksymä, ja sen esittänyt Nicholas Clapp kumosi sen itsekin myöhemmin.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

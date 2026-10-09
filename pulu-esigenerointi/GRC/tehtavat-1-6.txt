@@ -1,0 +1,222 @@
+================ KOHTA 26 (kohde:marathon) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marathon (sana)
+Tietoruudun teksti: Marathonin tasangolla Ateenan alivoimainen armeija löi Persian suurvallan joukot 490 eaa. Tarun mukaan airut Feidippides juoksi taistelukentältä Ateenaan asti ilmoittamaan voitosta — ja tästä legendasta maratonjuoksu sai uudella ajalla nimensä. Itse paikannimi on arkisempi: se tulee fenkolia tarkoittavasta kreikan sanasta ja merkitsee "fenkolien paikkaa". Tasangolla kohoaa yhä Soros, kumpuhauta taistelussa kaatuneille 192 ateenalaiselle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Košice: Euroopan vanhin maraton] Košicen rauhanmaraton on juostu vuodesta 1924, ja se on Euroopan vanhin maraton ja yksi maailman vanhimmista, heti Bostonin maratonin jälkeen. Sen järjesti ensimmäisen kerran kaupunkilainen urheilun ystävä Vojtech Bukovský Pariisin olympialaisten innoittamana. Kisan ovat voittaneet muun muassa Juan Carlos Zabala 1931, joka voitti seuraavana vuonna olympiamaratonin, sekä Abebe Bikila 1961. Reitti on tasainen ja kulkee kahtena kierroksena kaupungin keskustassa.
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Elmon linnake] 1552 (rakennus), 1565 (piiritys) Linnake rakennettiin 1552 vartioimaan kahden sataman, Grand Harbourin ja Marsamxettin, suuta samalta kapealta niemenkärjeltä, jolle Valletta myöhemmin nousi. Tähden muotoinen muuri oli aikanaan uutta linnoitustekniikkaa, mutta osmanien saapuessa 1565 moni piti sitä silti liian pienenä kestämään pitkää piiritystä. Se piti pintansa lähes kuukauden, 18. toukokuuta – 23. kesäkuuta, vaikka miehistö oli moninkertaisesti alivoimainen. Yöllä veneet toivat Birgusta lisää puolustajia ja veivät haavoittuneita pois, ja monet pahoin haavoittuneet ritarit kieltäytyivät poistumasta: he pyysivät kantaa itsensä tuoleilla muurille jatkaakseen taistelua istualtaan viimeiseen a…
+
+### 26.1
+KYSYMYS: Kuinka pitkä nykyinen maratonmatka on ja miksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marathon (sana)
+Tietoruudun teksti: Marathonin tasangolla Ateenan alivoimainen armeija löi Persian suurvallan joukot 490 eaa. Tarun mukaan airut Feidippides juoksi taistelukentältä Ateenaan asti ilmoittamaan voitosta — ja tästä legendasta maratonjuoksu sai uudella ajalla nimensä. Itse paikannimi on arkisempi: se tulee fenkolia tarkoittavasta kreikan sanasta ja merkitsee "fenkolien paikkaa". Tasangolla kohoaa yhä Soros, kumpuhauta taistelussa kaatuneille 192 ateenalaiselle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Košice: Euroopan vanhin maraton] Košicen rauhanmaraton on juostu vuodesta 1924, ja se on Euroopan vanhin maraton ja yksi maailman vanhimmista, heti Bostonin maratonin jälkeen. Sen järjesti ensimmäisen kerran kaupunkilainen urheilun ystävä Vojtech Bukovský Pariisin olympialaisten innoittamana. Kisan ovat voittaneet muun muassa Juan Carlos Zabala 1931, joka voitti seuraavana vuonna olympiamaratonin, sekä Abebe Bikila 1961. Reitti on tasainen ja kulkee kahtena kierroksena kaupungin keskustassa.
+
+### 26.2
+KYSYMYS: Miten alivoimainen armeija voitti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marathon (sana)
+Tietoruudun teksti: Marathonin tasangolla Ateenan alivoimainen armeija löi Persian suurvallan joukot 490 eaa. Tarun mukaan airut Feidippides juoksi taistelukentältä Ateenaan asti ilmoittamaan voitosta — ja tästä legendasta maratonjuoksu sai uudella ajalla nimensä. Itse paikannimi on arkisempi: se tulee fenkolia tarkoittavasta kreikan sanasta ja merkitsee "fenkolien paikkaa". Tasangolla kohoaa yhä Soros, kumpuhauta taistelussa kaatuneille 192 ateenalaiselle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Elmon linnake] 1552 (rakennus), 1565 (piiritys) Linnake rakennettiin 1552 vartioimaan kahden sataman, Grand Harbourin ja Marsamxettin, suuta samalta kapealta niemenkärjeltä, jolle Valletta myöhemmin nousi. Tähden muotoinen muuri oli aikanaan uutta linnoitustekniikkaa, mutta osmanien saapuessa 1565 moni piti sitä silti liian pienenä kestämään pitkää piiritystä. Se piti pintansa lähes kuukauden, 18. toukokuuta – 23. kesäkuuta, vaikka miehistö oli moninkertaisesti alivoimainen. Yöllä veneet toivat Birgusta lisää puolustajia ja veivät haavoittuneita pois, ja monet pahoin haavoittuneet ritarit kieltäytyivät poistumasta: he pyysivät kantaa itsensä tuoleilla muurille jatkaakseen taistelua istualtaan viimeiseen a…
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:antikythera) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antikythera (tekniikka)
+Tietoruudun teksti: Symin sienisukeltajat löysivät Antikytheran edustalta roomalaisen rahtilaivan hylyn vuonna 1900 — isoisän aikaan meri piti salaisuutensa vielä visusti. Nostetun lastin joukosta paljastui pronssinen laite, Antikytheran mekanismi: 100-luvulla eaa. rakennettu käsikäyttöinen taivaankoneisto ja vanhin tunnettu analogiatietokone, joka ennusti taivaankappaleiden asemat ja pimennykset vuosikymmeniksi eteenpäin. Suurimmassa rattaassa oli 223 hammasta. Yhtä monimutkaisia koneita tehtiin seuraavan kerran vasta 1300-luvun Euroopassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Tiede ja keksinnöt: Ensimmäinen höyrykone oli huvikapine] n. 60 jaa. — Heron Aleksandrialainen kuvasi laitteen, jossa kattilan päällä lepää ontto pallo kahden putken varassa. Kun vesi kiehuu, höyry karkaa pallon kahdesta vastakkaisiin suuntiin taivutetusta suuttimesta ja pallo alkaa pyöriä. Se on vanhin tunnettu höyrykone, eikä sillä tehty mitään työtä. Heron rakensi myös automaatin, joka antoi kolikkoa vastaan tietyn määrän pyhää vettä — se on maailman ensimmäinen tunnettu myyntiautomaatti — sekä temppelin ovet, jotka aukesivat itsestään, kun alttarilla sytytettiin tuli.
+- [Whitehorse — kohdekartta / Kohdekartta: SS Klondike] 1929–1955 Nimellä SS Klondike kulki kaksi siipiratasalusta. Ensimmäisen rakensi 1929 British Yukon Navigation Company, White Pass and Yukon Route -rautatien tytäryhtiö. Alus oli poikkeuksellinen: siihen mahtui puolitoista kertaa enemmän kuin tavalliseen siipiratasalukseen, mutta se oli yhä niin matalakulkuinen ja niin mittainen, että se pystyi kulkemaan Yukonjokea. Rahtia meni 270 tonnia ilman proomuakin. Kesäkuussa 1936 Klondike I ajoi karille Thirty Mile -osuuden pohjoispuolella. Yhtiö nosti hylystä kattilan, koneet ja varusteet ja rakensi niistä seuraavana vuonna lähes tarkan kaksoiskappaleen, Klondike II:n. Se ajoi rahtia 1950-luvun alkuun asti, kunnes Dawsonin ja Whitehorsen välinen ma…
+
+### 27.1
+KYSYMYS: Kuka laitteen rakensi ja missä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antikythera (tekniikka)
+Tietoruudun teksti: Symin sienisukeltajat löysivät Antikytheran edustalta roomalaisen rahtilaivan hylyn vuonna 1900 — isoisän aikaan meri piti salaisuutensa vielä visusti. Nostetun lastin joukosta paljastui pronssinen laite, Antikytheran mekanismi: 100-luvulla eaa. rakennettu käsikäyttöinen taivaankoneisto ja vanhin tunnettu analogiatietokone, joka ennusti taivaankappaleiden asemat ja pimennykset vuosikymmeniksi eteenpäin. Suurimmassa rattaassa oli 223 hammasta. Yhtä monimutkaisia koneita tehtiin seuraavan kerran vasta 1300-luvun Euroopassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Tiede ja keksinnöt: Ensimmäinen höyrykone oli huvikapine] n. 60 jaa. — Heron Aleksandrialainen kuvasi laitteen, jossa kattilan päällä lepää ontto pallo kahden putken varassa. Kun vesi kiehuu, höyry karkaa pallon kahdesta vastakkaisiin suuntiin taivutetusta suuttimesta ja pallo alkaa pyöriä. Se on vanhin tunnettu höyrykone, eikä sillä tehty mitään työtä. Heron rakensi myös automaatin, joka antoi kolikkoa vastaan tietyn määrän pyhää vettä — se on maailman ensimmäinen tunnettu myyntiautomaatti — sekä temppelin ovet, jotka aukesivat itsestään, kun alttarilla sytytettiin tuli.
+
+### 27.2
+KYSYMYS: Mitä muuta hylystä nostettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antikythera (tekniikka)
+Tietoruudun teksti: Symin sienisukeltajat löysivät Antikytheran edustalta roomalaisen rahtilaivan hylyn vuonna 1900 — isoisän aikaan meri piti salaisuutensa vielä visusti. Nostetun lastin joukosta paljastui pronssinen laite, Antikytheran mekanismi: 100-luvulla eaa. rakennettu käsikäyttöinen taivaankoneisto ja vanhin tunnettu analogiatietokone, joka ennusti taivaankappaleiden asemat ja pimennykset vuosikymmeniksi eteenpäin. Suurimmassa rattaassa oli 223 hammasta. Yhtä monimutkaisia koneita tehtiin seuraavan kerran vasta 1300-luvun Euroopassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Whitehorse — kohdekartta / Kohdekartta: SS Klondike] 1929–1955 Nimellä SS Klondike kulki kaksi siipiratasalusta. Ensimmäisen rakensi 1929 British Yukon Navigation Company, White Pass and Yukon Route -rautatien tytäryhtiö. Alus oli poikkeuksellinen: siihen mahtui puolitoista kertaa enemmän kuin tavalliseen siipiratasalukseen, mutta se oli yhä niin matalakulkuinen ja niin mittainen, että se pystyi kulkemaan Yukonjokea. Rahtia meni 270 tonnia ilman proomuakin. Kesäkuussa 1936 Klondike I ajoi karille Thirty Mile -osuuden pohjoispuolella. Yhtiö nosti hylystä kattilan, koneet ja varusteet ja rakensi niistä seuraavana vuonna lähes tarkan kaksoiskappaleen, Klondike II:n. Se ajoi rahtia 1950-luvun alkuun asti, kunnes Dawsonin ja Whitehorsen välinen ma…
+- [Namib — kaupunkilehti / Namib: Hylky joka vaelsi sisämaahan] Rannikon yli tuhannesta hylystä kuuluisin lienee saksalainen rahtilaiva Eduard Bohlen, joka ajoi karille sumussa syyskuussa 1909. Haaksirikon hetkellä laiva makasi vain reilut 500 metriä rannasta, mutta aavikko on sittemmin hivuttautunut kohti merta: nykyään ruostunut hylky lojuu kuivalla hiekalla lähes 400 metrin päässä rantaviivasta, keskellä autiota dyynimaisemaa. Samanlainen kohtalo on odottanut satoja muitakin aluksia, joita sumu, karikot ja Benguela-virran voimakkaat aallot ovat ajaneet karille vuosisatojen ajan. Monista hylyistä on jäljellä enää hajanaisia rautaosia, jotka pilkistävät hiekasta muistutuksena rannikon vaarallisuudesta.
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:rodoksen-kolossi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rodoksen kolossi (historia)
+Tietoruudun teksti: Rodoksen kaupunkiin pystytettiin vuonna 280 eaa. pronssinen patsas auringonjumala Helioksesta. Sen teki Khares Lindoslainen juhlistamaan sitä, että saari oli kestänyt Demetrios Makedonialaisen vuoden mittaisen piirityksen. Patsas oli noin 33 metriä korkea — antiikin maailman korkein — ja se kuului seitsemään ihmeeseen. Maanjäristys kaatoi sen jo 226 eaa., ja Delfoin oraakkelin neuvosta rodoslaiset jättivät sen rakentamatta uudelleen. Palaset makasivat maassa vuosisatoja, kunnes ne vuonna 653 myytiin pois. Patsaan tarkasta paikasta kiistellään yhä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vancouver — kohdekartta / Kohdekartta: Keskuskirjasto] 1995 Vancouverin kirjastolla on kolme taloa, ja tämä on kolmas. Ensimmäinen syntyi, kun teräsmagnaatti Andrew Carnegie lupasi 1901 viisikymmentätuhatta dollaria, jos kaupunki antaisi tontin ja viisituhatta dollaria vuodessa toimintaan. Kaupungin itä- ja länsipuoli riitelivät heti siitä, kumpi saisi kirjaston, ja asia ratkaistiin kansanäänestyksellä. Talo avattiin marraskuussa 1903, ja se toimii nykyään asukastalona. Keskuskirjasto muutti 1957 Burrard Streetille ja sieltä 1995 nykyiseen taloonsa. Nykyinen talo on kaupungin siihenastisista hankkeista suurin. Marraskuussa 1990 pidettiin kansanäänestys, jonka jälkeen järjestettiin suunnittelukilpailu. Moshe Safdien ja DA Architectsin ehdotus ol…
+- [Jerusalem — kohdekartta / Kohdekartta: Jaffan portti] 1538 Jaffan portti on vanhankaupungin läntinen sisäänkäynti ja ottomaanien rakennuttama vuonna 1538. Nimi tulee siitä, että täältä lähti tie rannikolle Jaffaan — se oli 1800-luvulla ainoa reitti, jota pitkin matkalainen ylipäätään saapui kaupunkiin, ja vuonna 1861 se päällystettiin ajokelpoiseksi. Arabiaksi portti on Bab el-Khalil, ystävän portti. Nimi viittaa Abrahamiin, ja koska hänen hautapaikkanaan pidetään Hebronia, jonka arabiankielinen nimi on juuri el-Khalil, sama nimi tarkoittaa myös Hebronin porttia. Nykyään nimi tarkoittaa kahta asiaa. Varsinainen porttitorni vuodelta 1538 on kapea ja vain jalankulkijoille. Sen vieressä muurissa on leveä aukko, jonka ottomaanihallinto teetti vuon…
+
+### 28.1
+KYSYMYS: Miten noin iso pronssipatsas ylipäätään rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rodoksen kolossi (historia)
+Tietoruudun teksti: Rodoksen kaupunkiin pystytettiin vuonna 280 eaa. pronssinen patsas auringonjumala Helioksesta. Sen teki Khares Lindoslainen juhlistamaan sitä, että saari oli kestänyt Demetrios Makedonialaisen vuoden mittaisen piirityksen. Patsas oli noin 33 metriä korkea — antiikin maailman korkein — ja se kuului seitsemään ihmeeseen. Maanjäristys kaatoi sen jo 226 eaa., ja Delfoin oraakkelin neuvosta rodoslaiset jättivät sen rakentamatta uudelleen. Palaset makasivat maassa vuosisatoja, kunnes ne vuonna 653 myytiin pois. Patsaan tarkasta paikasta kiistellään yhä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vancouver — kohdekartta / Kohdekartta: Keskuskirjasto] 1995 Vancouverin kirjastolla on kolme taloa, ja tämä on kolmas. Ensimmäinen syntyi, kun teräsmagnaatti Andrew Carnegie lupasi 1901 viisikymmentätuhatta dollaria, jos kaupunki antaisi tontin ja viisituhatta dollaria vuodessa toimintaan. Kaupungin itä- ja länsipuoli riitelivät heti siitä, kumpi saisi kirjaston, ja asia ratkaistiin kansanäänestyksellä. Talo avattiin marraskuussa 1903, ja se toimii nykyään asukastalona. Keskuskirjasto muutti 1957 Burrard Streetille ja sieltä 1995 nykyiseen taloonsa. Nykyinen talo on kaupungin siihenastisista hankkeista suurin. Marraskuussa 1990 pidettiin kansanäänestys, jonka jälkeen järjestettiin suunnittelukilpailu. Moshe Safdien ja DA Architectsin ehdotus ol…
+- [Jerusalem — kohdekartta / Kohdekartta: Jaffan portti] 1538 Jaffan portti on vanhankaupungin läntinen sisäänkäynti ja ottomaanien rakennuttama vuonna 1538. Nimi tulee siitä, että täältä lähti tie rannikolle Jaffaan — se oli 1800-luvulla ainoa reitti, jota pitkin matkalainen ylipäätään saapui kaupunkiin, ja vuonna 1861 se päällystettiin ajokelpoiseksi. Arabiaksi portti on Bab el-Khalil, ystävän portti. Nimi viittaa Abrahamiin, ja koska hänen hautapaikkanaan pidetään Hebronia, jonka arabiankielinen nimi on juuri el-Khalil, sama nimi tarkoittaa myös Hebronin porttia. Nykyään nimi tarkoittaa kahta asiaa. Varsinainen porttitorni vuodelta 1538 on kapea ja vain jalankulkijoille. Sen vieressä muurissa on leveä aukko, jonka ottomaanihallinto teetti vuon…
+
+### 28.2
+KYSYMYS: Miksi rodoslaiset eivät rakentaneet sitä uudelleen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rodoksen kolossi (historia)
+Tietoruudun teksti: Rodoksen kaupunkiin pystytettiin vuonna 280 eaa. pronssinen patsas auringonjumala Helioksesta. Sen teki Khares Lindoslainen juhlistamaan sitä, että saari oli kestänyt Demetrios Makedonialaisen vuoden mittaisen piirityksen. Patsas oli noin 33 metriä korkea — antiikin maailman korkein — ja se kuului seitsemään ihmeeseen. Maanjäristys kaatoi sen jo 226 eaa., ja Delfoin oraakkelin neuvosta rodoslaiset jättivät sen rakentamatta uudelleen. Palaset makasivat maassa vuosisatoja, kunnes ne vuonna 653 myytiin pois. Patsaan tarkasta paikasta kiistellään yhä.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:knossos) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knossoksen palatsi (historia)
+Tietoruudun teksti: Knossos on minolaisen kulttuurin suurin keskus ja usein Euroopan vanhimmaksi kaupungiksi kutsuttu paikka: kukkulaa on asuttu noin vuodesta 7000 eaa., ensimmäinen palatsi nousi noin 1900 eaa. ja lopullinen tuhoutui noin 1350 eaa. Palatsi oli noin 14 000 neliömetriä — sokkeloinen rypäs pihoja, portaikkoja ja varastoja, joissa seisoi ihmisen kokoisia pithos-ruukkuja. Isoisäsi matkan aikaan siitä ei näkynyt maan päälle mitään: ensimmäiset kaivaukset teki iraklionilainen kauppias ja muinaistutkija Minos Kalokairinos vasta 1878–1879 omalla maallaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kaupunkilehti / Bryssel: Palatsi, jossa kuningas työskentelee mutta ei asu] Kuninkaanpalatsi on Belgian kuninkaan virallinen palatsi, mutta kuningasperhe asuu Laekenin linnassa; Brysselissä kuningas hoitaa valtiollisia tehtäviään ja vastaanottaa vieraita. Paikalla seisoi ennen Coudenbergin palatsi, joka tuhoutui tulipalossa vuonna 1731. Nykyisen palatsin ensimmäinen ydin on 1700-luvun lopulta, mutta Leopold II laajensi sitä niin, että sen pinta-ala lähes kaksinkertaistui. Yleisölle palatsi on avoinna kesällä, Belgian kansallispäivästä 21. heinäkuuta syyskuun alkuun.
+- [Sansibar — kohdekartta / Kohdekartta: Sulttaanin palatsi] 1800-luvun loppu Mizingani Roadilla, Ihmeiden talon ja vanhan apteekin välissä, seisoo kolmikerroksinen valkoinen talo, jonka kattoreunaa kiertää hammastus. Se on rakennettu aiemman palatsin Bait As-Sahelin paikalle; edellinen tuhoutui vuoden 1896 sodassa. Nykyinen talo valmistui 1800-luvun lopulla sulttaanin perheen asunnoksi. Vuonna 1964 talo nimettiin Kansan palatsiksi ja otettiin hallinnon käyttöön. Museoksi se muutettiin 1994. Kokoelma kertoo Sansibarin hallitsijasuvusta ja kaupungin historiasta: esillä on huonekaluja ja perheen esineitä, jotka antavat kuvan siitä, millaista elämä palatsissa oli 1800-luvulla. Yksi kerros on omistettu sulttaani Sir Khalifa bin Harubille ja toinen Sayyid…
+
+### 29.1
+KYSYMYS: Mihin palatsin valtavia saviruukkuja käytettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knossoksen palatsi (historia)
+Tietoruudun teksti: Knossos on minolaisen kulttuurin suurin keskus ja usein Euroopan vanhimmaksi kaupungiksi kutsuttu paikka: kukkulaa on asuttu noin vuodesta 7000 eaa., ensimmäinen palatsi nousi noin 1900 eaa. ja lopullinen tuhoutui noin 1350 eaa. Palatsi oli noin 14 000 neliömetriä — sokkeloinen rypäs pihoja, portaikkoja ja varastoja, joissa seisoi ihmisen kokoisia pithos-ruukkuja. Isoisäsi matkan aikaan siitä ei näkynyt maan päälle mitään: ensimmäiset kaivaukset teki iraklionilainen kauppias ja muinaistutkija Minos Kalokairinos vasta 1878–1879 omalla maallaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Tarut ja sadut: Käännösvirhe, joka on elänyt viisisataa vuotta] 1508 — Hesiodoksen tarinassa Pandora on maailman ensimmäinen nainen, muotoiltu savesta. Hän avaa astian, josta pääsevät maailmalle kaikki vitsaukset, ja pohjalle jää vain Toivo. Kreikaksi astia on pithos: ihmisen kokoinen saviruukku, jollaisia kaivettiin maahan viljan, viinin ja öljyn säilytystä varten. Hollantilainen oppinut Erasmus käänsi vuoden 1508 sananlaskukokoelmassaan sanan pithos latinan sanaksi pyxis, joka tarkoittaa pientä rasiaa. Virhe jäi elämään, ja suomeksikin puhutaan yhä Pandoran lippaasta.
+
+### 29.2
+KYSYMYS: Miksi palatsi tuhoutui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knossoksen palatsi (historia)
+Tietoruudun teksti: Knossos on minolaisen kulttuurin suurin keskus ja usein Euroopan vanhimmaksi kaupungiksi kutsuttu paikka: kukkulaa on asuttu noin vuodesta 7000 eaa., ensimmäinen palatsi nousi noin 1900 eaa. ja lopullinen tuhoutui noin 1350 eaa. Palatsi oli noin 14 000 neliömetriä — sokkeloinen rypäs pihoja, portaikkoja ja varastoja, joissa seisoi ihmisen kokoisia pithos-ruukkuja. Isoisäsi matkan aikaan siitä ei näkynyt maan päälle mitään: ensimmäiset kaivaukset teki iraklionilainen kauppias ja muinaistutkija Minos Kalokairinos vasta 1878–1879 omalla maallaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kaupunkilehti / Bryssel: Palatsi, jossa kuningas työskentelee mutta ei asu] Kuninkaanpalatsi on Belgian kuninkaan virallinen palatsi, mutta kuningasperhe asuu Laekenin linnassa; Brysselissä kuningas hoitaa valtiollisia tehtäviään ja vastaanottaa vieraita. Paikalla seisoi ennen Coudenbergin palatsi, joka tuhoutui tulipalossa vuonna 1731. Nykyisen palatsin ensimmäinen ydin on 1700-luvun lopulta, mutta Leopold II laajensi sitä niin, että sen pinta-ala lähes kaksinkertaistui. Yleisölle palatsi on avoinna kesällä, Belgian kansallispäivästä 21. heinäkuuta syyskuun alkuun.
+- [Sansibar — kohdekartta / Kohdekartta: Sulttaanin palatsi] 1800-luvun loppu Mizingani Roadilla, Ihmeiden talon ja vanhan apteekin välissä, seisoo kolmikerroksinen valkoinen talo, jonka kattoreunaa kiertää hammastus. Se on rakennettu aiemman palatsin Bait As-Sahelin paikalle; edellinen tuhoutui vuoden 1896 sodassa. Nykyinen talo valmistui 1800-luvun lopulla sulttaanin perheen asunnoksi. Vuonna 1964 talo nimettiin Kansan palatsiksi ja otettiin hallinnon käyttöön. Museoksi se muutettiin 1994. Kokoelma kertoo Sansibarin hallitsijasuvusta ja kaupungin historiasta: esillä on huonekaluja ja perheen esineitä, jotka antavat kuvan siitä, millaista elämä palatsissa oli 1800-luvulla. Yksi kerros on omistettu sulttaani Sir Khalifa bin Harubille ja toinen Sayyid…
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-vikos) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vikosin rotko (luonto · vuori)
+Tietoruudun teksti: Vikosin rotko on rotko Pindoksen vuoristossa Luoteis-Kreikassa. Se sijaitsee Tymphe-vuoren eteläisillä rinteillä, ja sen pituus on noin 32 kilometriä, syvyys 120–1 350 metriä ja leveys 2 500 metristä vain muutamaan metriin kapeimmassa kohdassa. Guinnessin ennätyskirja ja muut lähteet luettelevat Vikosin maailman "syvimmäksi suhteessa leveyteensä" olevaksi rotkoksi. Rotkon pääosa on Vikos–Aoos-kansallispuiston ydinalueella Zagorin seudulla. Nimen alkuperästä on useita selityksiä: sen on arveltu tulevan slaavilaisesta sanasta rotko, kreikan sanasta vikos eli korvallinen astia tai albaniasta ja sanasta silta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Rotko avattiin kävelijöille] 1893 — Vintgarin rotko Bledin luoteispuolella on 1,6 kilometrin mittainen kuilu, jonka Radovna-joki on kaivertanut kallioon. Seinämät nousevat 50–100 metrin korkeuteen, ja jokeen on syntynyt vesialtaita ja koskia. Rotko oli pitkään melkein saavuttamaton, kunnes Gorjen pormestari Jakob Žumer ja valokuvaaja Benedikt Lergetporer tutkivat sen vuonna 1891. Kaksi vuotta myöhemmin siihen rakennettiin puisia kävelysiltoja, ja rotko avattiin yleisölle 26. elokuuta 1893. Rotkon päässä putoaa 13-metrinen Šum-vesiputous, Slovenian suurin jokivesiputous. Sana vintgar on sittemmin alkanut tarkoittaa muitakin suojeltuja rotkoja.
+- [Petra — kaupunkilehti / Petra: Kapea rotko on ainoa portti kaupunkiin] Siq on runsaan kilometrin mittainen rotko, joka on kapeimmillaan vain noin kolme metriä leveä, kun seinät kohoavat yhdeksästäkymmenestä lähes kahteensataan metriin. Toisin kuin useimmat kanjonit se ei ole veden kaivama vaan luonnollinen murros, jonka maankuoren liike halkaisi ja jonka vesi vasta myöhemmin hioi sileäksi. Seinissä on votiivikoloja pyhille kivikuville, ja kun tietä madallettiin vuonna 1998, esiin tuli kaksi lähes kaksinkertaisessa koossa veistettyä kauppiasta, kumpikin taluttamassa kahta kamelia. Rotkon suulla ollut holvikaari romahti maanjäristyksessä 1896.
+
+### 30.1
+KYSYMYS: Miksi Vikosin rotko on ennätys?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vikosin rotko (luonto · vuori)
+Tietoruudun teksti: Vikosin rotko on rotko Pindoksen vuoristossa Luoteis-Kreikassa. Se sijaitsee Tymphe-vuoren eteläisillä rinteillä, ja sen pituus on noin 32 kilometriä, syvyys 120–1 350 metriä ja leveys 2 500 metristä vain muutamaan metriin kapeimmassa kohdassa. Guinnessin ennätyskirja ja muut lähteet luettelevat Vikosin maailman "syvimmäksi suhteessa leveyteensä" olevaksi rotkoksi. Rotkon pääosa on Vikos–Aoos-kansallispuiston ydinalueella Zagorin seudulla. Nimen alkuperästä on useita selityksiä: sen on arveltu tulevan slaavilaisesta sanasta rotko, kreikan sanasta vikos eli korvallinen astia tai albaniasta ja sanasta silta.
+
+### 30.2
+KYSYMYS: Mistä rotkon nimi tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vikosin rotko (luonto · vuori)
+Tietoruudun teksti: Vikosin rotko on rotko Pindoksen vuoristossa Luoteis-Kreikassa. Se sijaitsee Tymphe-vuoren eteläisillä rinteillä, ja sen pituus on noin 32 kilometriä, syvyys 120–1 350 metriä ja leveys 2 500 metristä vain muutamaan metriin kapeimmassa kohdassa. Guinnessin ennätyskirja ja muut lähteet luettelevat Vikosin maailman "syvimmäksi suhteessa leveyteensä" olevaksi rotkoksi. Rotkon pääosa on Vikos–Aoos-kansallispuiston ydinalueella Zagorin seudulla. Nimen alkuperästä on useita selityksiä: sen on arveltu tulevan slaavilaisesta sanasta rotko, kreikan sanasta vikos eli korvallinen astia tai albaniasta ja sanasta silta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Rotko avattiin kävelijöille] 1893 — Vintgarin rotko Bledin luoteispuolella on 1,6 kilometrin mittainen kuilu, jonka Radovna-joki on kaivertanut kallioon. Seinämät nousevat 50–100 metrin korkeuteen, ja jokeen on syntynyt vesialtaita ja koskia. Rotko oli pitkään melkein saavuttamaton, kunnes Gorjen pormestari Jakob Žumer ja valokuvaaja Benedikt Lergetporer tutkivat sen vuonna 1891. Kaksi vuotta myöhemmin siihen rakennettiin puisia kävelysiltoja, ja rotko avattiin yleisölle 26. elokuuta 1893. Rotkon päässä putoaa 13-metrinen Šum-vesiputous, Slovenian suurin jokivesiputous. Sana vintgar on sittemmin alkanut tarkoittaa muitakin suojeltuja rotkoja.
+- [Petra — kaupunkilehti / Petra: Kapea rotko on ainoa portti kaupunkiin] Siq on runsaan kilometrin mittainen rotko, joka on kapeimmillaan vain noin kolme metriä leveä, kun seinät kohoavat yhdeksästäkymmenestä lähes kahteensataan metriin. Toisin kuin useimmat kanjonit se ei ole veden kaivama vaan luonnollinen murros, jonka maankuoren liike halkaisi ja jonka vesi vasta myöhemmin hioi sileäksi. Seinissä on votiivikoloja pyhille kivikuville, ja kun tietä madallettiin vuonna 1998, esiin tuli kaksi lähes kaksinkertaisessa koossa veistettyä kauppiasta, kumpikin taluttamassa kahta kamelia. Rotkon suulla ollut holvikaari romahti maanjäristyksessä 1896.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI

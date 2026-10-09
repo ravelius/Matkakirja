@@ -1,0 +1,198 @@
+================ KOHTA 11 (kohde:psiloritis) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Psilorítis (luonto · vuori)
+Tietoruudun teksti: Psilorítis eli Ida on Kreetan korkein vuori, 2 456 metriä, ja se kohoaa saaren keskiosassa Iraklionin lounaispuolella. Vuoren pohjoisrinteessä noin 1 500 metrin korkeudessa on Idan luola, jossa taruston mukaan Rhea kätki vastasyntyneen Zeuksen isänsä Kronoksen ulottumattomiin. Luolasta on kaivettu esiin pronssikautisia uhrilahjoja, ja se oli merkittävä pyhäkkö jo minolaisella ajalla. Huipulla seisoo Ristin kappeli, ja lampaita paimennetaan rinteillä yhä samaan tapaan kuin vuosisatoja sitten.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreeta — kaupunkilehti / Maasto: Luola vuoren kyljessä] Kreetan korkeimman vuoren Psiloritiksen kyljessä, noin 1 500 metrin korkeudessa, aukeaa Idan luola. Sinne on tuotu uhrilahjoja tuhansia vuosia, ja kaivauksissa on löydetty pronssisia kilpiä 700-luvulta ennen ajanlaskua. Luolan edessä avautuu Nidan tasanko, jonne paimenet vievät lampaansa yhä kesäksi. Luola on kolea ja pimeä myös helteellä, ja sisään mennään taskulampun kanssa.
+
+### 11.1
+KYSYMYS: Mitä Idan luolasta on löydetty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Psilorítis (luonto · vuori)
+Tietoruudun teksti: Psilorítis eli Ida on Kreetan korkein vuori, 2 456 metriä, ja se kohoaa saaren keskiosassa Iraklionin lounaispuolella. Vuoren pohjoisrinteessä noin 1 500 metrin korkeudessa on Idan luola, jossa taruston mukaan Rhea kätki vastasyntyneen Zeuksen isänsä Kronoksen ulottumattomiin. Luolasta on kaivettu esiin pronssikautisia uhrilahjoja, ja se oli merkittävä pyhäkkö jo minolaisella ajalla. Huipulla seisoo Ristin kappeli, ja lampaita paimennetaan rinteillä yhä samaan tapaan kuin vuosisatoja sitten.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreeta — kaupunkilehti / Maasto: Luola vuoren kyljessä] Kreetan korkeimman vuoren Psiloritiksen kyljessä, noin 1 500 metrin korkeudessa, aukeaa Idan luola. Sinne on tuotu uhrilahjoja tuhansia vuosia, ja kaivauksissa on löydetty pronssisia kilpiä 700-luvulta ennen ajanlaskua. Luolan edessä avautuu Nidan tasanko, jonne paimenet vievät lampaansa yhä kesäksi. Luola on kolea ja pimeä myös helteellä, ja sisään mennään taskulampun kanssa.
+
+### 11.2
+KYSYMYS: Miksi Zeus piilotettiin juuri Kreetalle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Psilorítis (luonto · vuori)
+Tietoruudun teksti: Psilorítis eli Ida on Kreetan korkein vuori, 2 456 metriä, ja se kohoaa saaren keskiosassa Iraklionin lounaispuolella. Vuoren pohjoisrinteessä noin 1 500 metrin korkeudessa on Idan luola, jossa taruston mukaan Rhea kätki vastasyntyneen Zeuksen isänsä Kronoksen ulottumattomiin. Luolasta on kaivettu esiin pronssikautisia uhrilahjoja, ja se oli merkittävä pyhäkkö jo minolaisella ajalla. Huipulla seisoo Ristin kappeli, ja lampaita paimennetaan rinteillä yhä samaan tapaan kuin vuosisatoja sitten.
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:egeanmeri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Egeanmeri (meri)
+Tietoruudun teksti: Vanhan tarun mukaan Egeanmeri sai nimensä kuningas Aigeuksesta, Theseuksen isästä. Theseus lähti tappamaan Minotaurosta ja lupasi nostaa valkoiset purjeet onnistuessaan — mutta unohti sen. Kun Aigeus näki laivan palaavan mustin purjein, hän uskoi poikansa kuolleen ja heittäytyi mereen. Legenda selittää yhä, miksi tämä Kreikan ja Vähän-Aasian välinen meri kantaa hänen nimeään.
+
+### 12.1
+KYSYMYS: Miksi Theseus unohti vaihtaa purjeet?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Egeanmeri (meri)
+Tietoruudun teksti: Vanhan tarun mukaan Egeanmeri sai nimensä kuningas Aigeuksesta, Theseuksen isästä. Theseus lähti tappamaan Minotaurosta ja lupasi nostaa valkoiset purjeet onnistuessaan — mutta unohti sen. Kun Aigeus näki laivan palaavan mustin purjein, hän uskoi poikansa kuolleen ja heittäytyi mereen. Legenda selittää yhä, miksi tämä Kreikan ja Vähän-Aasian välinen meri kantaa hänen nimeään.
+
+### 12.2
+KYSYMYS: Miksi Egeanmerellä on niin paljon saaria?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Egeanmeri (meri)
+Tietoruudun teksti: Vanhan tarun mukaan Egeanmeri sai nimensä kuningas Aigeuksesta, Theseuksen isästä. Theseus lähti tappamaan Minotaurosta ja lupasi nostaa valkoiset purjeet onnistuessaan — mutta unohti sen. Kun Aigeus näki laivan palaavan mustin purjein, hän uskoi poikansa kuolleen ja heittäytyi mereen. Legenda selittää yhä, miksi tämä Kreikan ja Vähän-Aasian välinen meri kantaa hänen nimeään.
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:joonianmeri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Joonianmeri (meri)
+Tietoruudun teksti: Joonianmeren nimen alkuperä on hämärän peitossa, mutta antiikin kirjailijat — etenkin Aiskhylos — yhdistivät sen Io-nymfin taruun: Io ui tämän meren yli, ja siitä meri sai nimensä. Meri on yksi Välimeren seismisesti aktiivisimmista alueista, ja sen syvin kohta, Kalypson syvänne (5 109 m), on koko Välimeren syvin paikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sisilia — kaupunkilehti / Rauniot: Teatteri, jossa esitetään yhä] Syrakusan kreikkalainen teatteri on hakattu suoraan kallioon 400-luvulla ennen ajanlaskua, ja katsomoon mahtui noin viisitoistatuhatta ihmistä. Näytelmäkirjailija Aiskhylos näki omia näytelmiään ensi-illassa juuri täällä. Teatteri ei ole museokohde vaan käytössä: joka kevät siellä esitetään antiikin tragedioita, ja yleisö istuu samoilla kiviportailla kuin kaksituhatta neljäsataa vuotta sitten. Kesällä kivi kuumenee niin, että mukaan otetaan tyyny.
+- [Vietnam — maalehti / Historia: Silta pitää hirviötä aloillaan] 1593–1595 — Hoi An oli 1600-luvulla vilkas satamakaupunki, jossa asui japanilaisia ja kiinalaisia kauppiaita. Japanilaiset keräsivät rahat katetulle puusillalle, joka lepää kivipilarien varassa ja on noin kahdeksantoista metriä pitkä. Tarun mukaan silta on miekka, joka pitää aloillaan Namazu-hirviötä: kun hirviö heilauttaa pyrstöään, maa järisee. Toisessa päässä seisovat koiran patsaat, toisessa apinan. Vuonna 1719 ruhtinas Nguyen Phuc Chu antoi sillalle nimen Lai Vien Kieu, kaukaisten vieraiden silta. Kappelissa sillan kyljessä ei ole Buddhan kuvaa.
+- [Kiina — maalehti / Tiede] Kiinalaiset keksinnöt eivät synny tyhjästä vaan ongelmasta: joki tulvii, kirjaa tarvitaan monta kappaletta, maa järisee kaukana eikä kukaan tiedä missä.
+
+### 13.1
+KYSYMYS: Kuka oli Aiskhylos?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Joonianmeri (meri)
+Tietoruudun teksti: Joonianmeren nimen alkuperä on hämärän peitossa, mutta antiikin kirjailijat — etenkin Aiskhylos — yhdistivät sen Io-nymfin taruun: Io ui tämän meren yli, ja siitä meri sai nimensä. Meri on yksi Välimeren seismisesti aktiivisimmista alueista, ja sen syvin kohta, Kalypson syvänne (5 109 m), on koko Välimeren syvin paikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sisilia — kaupunkilehti / Rauniot: Teatteri, jossa esitetään yhä] Syrakusan kreikkalainen teatteri on hakattu suoraan kallioon 400-luvulla ennen ajanlaskua, ja katsomoon mahtui noin viisitoistatuhatta ihmistä. Näytelmäkirjailija Aiskhylos näki omia näytelmiään ensi-illassa juuri täällä. Teatteri ei ole museokohde vaan käytössä: joka kevät siellä esitetään antiikin tragedioita, ja yleisö istuu samoilla kiviportailla kuin kaksituhatta neljäsataa vuotta sitten. Kesällä kivi kuumenee niin, että mukaan otetaan tyyny.
+
+### 13.2
+KYSYMYS: Miksi meri järisee juuri täällä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Joonianmeri (meri)
+Tietoruudun teksti: Joonianmeren nimen alkuperä on hämärän peitossa, mutta antiikin kirjailijat — etenkin Aiskhylos — yhdistivät sen Io-nymfin taruun: Io ui tämän meren yli, ja siitä meri sai nimensä. Meri on yksi Välimeren seismisesti aktiivisimmista alueista, ja sen syvin kohta, Kalypson syvänne (5 109 m), on koko Välimeren syvin paikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vietnam — maalehti / Historia: Silta pitää hirviötä aloillaan] 1593–1595 — Hoi An oli 1600-luvulla vilkas satamakaupunki, jossa asui japanilaisia ja kiinalaisia kauppiaita. Japanilaiset keräsivät rahat katetulle puusillalle, joka lepää kivipilarien varassa ja on noin kahdeksantoista metriä pitkä. Tarun mukaan silta on miekka, joka pitää aloillaan Namazu-hirviötä: kun hirviö heilauttaa pyrstöään, maa järisee. Toisessa päässä seisovat koiran patsaat, toisessa apinan. Vuonna 1719 ruhtinas Nguyen Phuc Chu antoi sillalle nimen Lai Vien Kieu, kaukaisten vieraiden silta. Kappelissa sillan kyljessä ei ole Buddhan kuvaa.
+- [Kiina — maalehti / Tiede] Kiinalaiset keksinnöt eivät synny tyhjästä vaan ongelmasta: joki tulvii, kirjaa tarvitaan monta kappaletta, maa järisee kaukana eikä kukaan tiedä missä.
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:kreetanmeri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kreetanmeri (meri)
+Tietoruudun teksti: Kreetanmeri on Egeanmeren eteläisin osa: 45 000 neliökilometriä ulappaa Kreetan pohjoispuolella. Lännessä sen porttia vartioivat Kythira ja Antikythera, pohjoisessa ovat Kykladit ja idässä Karpathos ja Kasos. Koillis-Kreetan edustalla pohja painuu syvimmilleen — merikartat antavat 2 591 metriä, osa mittauksista lähes 3 300. Saaren toisella puolen alkaa jo Libyanmeri. Isoisän matkan aikaan tämän meren ylitys vei maasta toiseen: Kreeta oli yhä Ottomaanien saari, ja itsehallintonsa se sai vasta 1898. Nykyään samaa reittiä kulkevat Pireuksen ja Iraklionin lautat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreeta — kaupunkilehti / Maasto: Luola vuoren kyljessä] Kreetan korkeimman vuoren Psiloritiksen kyljessä, noin 1 500 metrin korkeudessa, aukeaa Idan luola. Sinne on tuotu uhrilahjoja tuhansia vuosia, ja kaivauksissa on löydetty pronssisia kilpiä 700-luvulta ennen ajanlaskua. Luolan edessä avautuu Nidan tasanko, jonne paimenet vievät lampaansa yhä kesäksi. Luola on kolea ja pimeä myös helteellä, ja sisään mennään taskulampun kanssa.
+
+### 14.1
+KYSYMYS: Miksi Egeanmerta jaetaan pienempiin meriin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kreetanmeri (meri)
+Tietoruudun teksti: Kreetanmeri on Egeanmeren eteläisin osa: 45 000 neliökilometriä ulappaa Kreetan pohjoispuolella. Lännessä sen porttia vartioivat Kythira ja Antikythera, pohjoisessa ovat Kykladit ja idässä Karpathos ja Kasos. Koillis-Kreetan edustalla pohja painuu syvimmilleen — merikartat antavat 2 591 metriä, osa mittauksista lähes 3 300. Saaren toisella puolen alkaa jo Libyanmeri. Isoisän matkan aikaan tämän meren ylitys vei maasta toiseen: Kreeta oli yhä Ottomaanien saari, ja itsehallintonsa se sai vasta 1898. Nykyään samaa reittiä kulkevat Pireuksen ja Iraklionin lautat.
+
+### 14.2
+KYSYMYS: Mitä Kreetanmeren pohjasta on löydetty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kreetanmeri (meri)
+Tietoruudun teksti: Kreetanmeri on Egeanmeren eteläisin osa: 45 000 neliökilometriä ulappaa Kreetan pohjoispuolella. Lännessä sen porttia vartioivat Kythira ja Antikythera, pohjoisessa ovat Kykladit ja idässä Karpathos ja Kasos. Koillis-Kreetan edustalla pohja painuu syvimmilleen — merikartat antavat 2 591 metriä, osa mittauksista lähes 3 300. Saaren toisella puolen alkaa jo Libyanmeri. Isoisän matkan aikaan tämän meren ylitys vei maasta toiseen: Kreeta oli yhä Ottomaanien saari, ja itsehallintonsa se sai vasta 1898. Nykyään samaa reittiä kulkevat Pireuksen ja Iraklionin lautat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreeta — kaupunkilehti / Maasto: Luola vuoren kyljessä] Kreetan korkeimman vuoren Psiloritiksen kyljessä, noin 1 500 metrin korkeudessa, aukeaa Idan luola. Sinne on tuotu uhrilahjoja tuhansia vuosia, ja kaivauksissa on löydetty pronssisia kilpiä 700-luvulta ennen ajanlaskua. Luolan edessä avautuu Nidan tasanko, jonne paimenet vievät lampaansa yhä kesäksi. Luola on kolea ja pimeä myös helteellä, ja sisään mennään taskulampun kanssa.
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:traakianmeri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Traakianmeri (meri)
+Tietoruudun teksti: Traakianmeri on Egeanmeren pohjoisin osa, ja koko sen ulappa jää 40. leveyspiirin pohjoispuolelle. Se rajautuu Itä-Makedoniaan, Etelä-Traakiaan ja Luoteis-Anatoliaan; saarina siinä ovat Thasos, Samothraki ja Gökçeada, ja etelässä se päättyy Limnoksen pohjoisrantaan. Nestos ja Évros laskevat siihen, ja Dardanellien salmi vie siitä Marmaranmeren ja Bosporin kautta Mustallemerelle — sitä kapeaa reittiä pitkin 1800-luvun laivat purjehtivat Egeanmereltä Konstantinopoliin. Meren pohjoisosassa elää yhä uhanalainen Mustanmeren pyöriäinen.
+
+### 15.1
+KYSYMYS: Miksi Dardanellit ovat olleet niin tärkeät?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Traakianmeri (meri)
+Tietoruudun teksti: Traakianmeri on Egeanmeren pohjoisin osa, ja koko sen ulappa jää 40. leveyspiirin pohjoispuolelle. Se rajautuu Itä-Makedoniaan, Etelä-Traakiaan ja Luoteis-Anatoliaan; saarina siinä ovat Thasos, Samothraki ja Gökçeada, ja etelässä se päättyy Limnoksen pohjoisrantaan. Nestos ja Évros laskevat siihen, ja Dardanellien salmi vie siitä Marmaranmeren ja Bosporin kautta Mustallemerelle — sitä kapeaa reittiä pitkin 1800-luvun laivat purjehtivat Egeanmereltä Konstantinopoliin. Meren pohjoisosassa elää yhä uhanalainen Mustanmeren pyöriäinen.
+
+### 15.2
+KYSYMYS: Millainen eläin on Mustanmeren pyöriäinen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Traakianmeri (meri)
+Tietoruudun teksti: Traakianmeri on Egeanmeren pohjoisin osa, ja koko sen ulappa jää 40. leveyspiirin pohjoispuolelle. Se rajautuu Itä-Makedoniaan, Etelä-Traakiaan ja Luoteis-Anatoliaan; saarina siinä ovat Thasos, Samothraki ja Gökçeada, ja etelässä se päättyy Limnoksen pohjoisrantaan. Nestos ja Évros laskevat siihen, ja Dardanellien salmi vie siitä Marmaranmeren ja Bosporin kautta Mustallemerelle — sitä kapeaa reittiä pitkin 1800-luvun laivat purjehtivat Egeanmereltä Konstantinopoliin. Meren pohjoisosassa elää yhä uhanalainen Mustanmeren pyöriäinen.
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

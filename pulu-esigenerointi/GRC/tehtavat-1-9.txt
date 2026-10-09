@@ -1,0 +1,203 @@
+================ KOHTA 41 (kohde:hahmotelma-delos) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Delos (historia)
+Tietoruudun teksti: Delos on pieni kreikkalainen saari Mykonoksen lähellä Kykladien saariston keskuksessa. Vaikka sen pinta-ala on vain 3,43 neliökilometriä, se on yksi Kreikan tärkeimmistä mytologisista, historiallisista ja arkeologisista kohteista, ja saarella meneillään olevat kaivaukset ovat Välimeren laajimpia. Delos oli pyhäkkönä tuhannen vuoden ajan ennen kuin olympialainen mytologia teki siitä Apollon ja Artemiin syntymäpaikan. Sen pyhästä satamasta näkyvät kolme kartiomaista kumpua, joita on pidetty jumalattaren pyhinä maisemina. Löydöt on esillä Delosin arkeologisessa museossa ja Ateenan kansallisessa arkeologisessa museossa, ja UNESCO merkitsi saaren maailmanperintöluetteloon vuonna 1990.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Honiara — kaupunkilehti / Rautapohjan meri] Guadalcanalin ja Tulagin välisissä meritaisteluissa upposi niin monta alusta molemmilta puolilta, että vesialuetta alettiin kutsua nimellä Ironbottom Sound eli Rautapohja. Cape Esperancen taistelu käytiin 11. lokakuuta 1942 saaren luoteisrannikon edustalla, ja marraskuun alun monipäiväinen meritaistelu käänsi koko kampanjan. Japanilaiset joukot evakuoitiin helmikuussa 1943, ja saari julistettiin turvatuksi 9. helmikuuta. Etsinnät ovat jatkuneet sodan jälkeen: noin seitsemäntuhannen japanilaissotilaan jäänteet ovat yhä kateissa saarella, ja luita on kaivettu esiin vielä 2010-luvulla.
+- [Qatar — maalehti / Meri: Kolme miljoonaa murskattua kotiloa] Al Khorin lahdella on pieni saari, jota sanotaan Purppurasaareksi. Nimi on ansaittu: sieltä on kaivettu esiin kolme miljoonaa rikottua merikotilon kuorta. Kassilaiset valmistivat saarella purppuraväriä noin vuosina 1400–1100 eaa. Väri saadaan murex-kotilon rauhasesta, ja pienenkin väriannoksen saamiseksi kotiloita tarvitaan tuhansia — siksi purppura oli kallista. Saarta pidetään vanhimpana tunnettuna paikkana, jossa kotilopurppuraa on valmistettu, ja se on Qatarin ainoa toiselle vuosituhannelle eaa. ajoittuva muinaisjäännös.
+- [Kuwait — maalehti / Rakennukset: Saari oli Dilmunin kaupan solmukohta] Failakan saari on kahdenkymmenen kilometrin päässä Kuwait Cityn rannikosta. Sinne asetuttiin noin vuoden 2000 eaa. tienoilla, kun merenpinta laski, ja Urin kauppiaat pitivät saarella tukikohtaa. Dilmunin aikaan saari tunnettiin nimellä Agarum, ja sitä pidettiin Enzak-jumalan maana. Saarelta on löytynyt nuolenpääkirjoitusta ja sinettejä, joihin on kaiverrettu kuninkaiden nimiä. Kivikorttelit on kaivettu esiin ja peitetty paikoin suojaverkoilla, jottei tuuli kuluttaisi muureja.
+
+### 41.1
+KYSYMYS: Miksi Delos oli pyhä saari?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Delos (historia)
+Tietoruudun teksti: Delos on pieni kreikkalainen saari Mykonoksen lähellä Kykladien saariston keskuksessa. Vaikka sen pinta-ala on vain 3,43 neliökilometriä, se on yksi Kreikan tärkeimmistä mytologisista, historiallisista ja arkeologisista kohteista, ja saarella meneillään olevat kaivaukset ovat Välimeren laajimpia. Delos oli pyhäkkönä tuhannen vuoden ajan ennen kuin olympialainen mytologia teki siitä Apollon ja Artemiin syntymäpaikan. Sen pyhästä satamasta näkyvät kolme kartiomaista kumpua, joita on pidetty jumalattaren pyhinä maisemina. Löydöt on esillä Delosin arkeologisessa museossa ja Ateenan kansallisessa arkeologisessa museossa, ja UNESCO merkitsi saaren maailmanperintöluetteloon vuonna 1990.
+
+### 41.2
+KYSYMYS: Mitä saarella on kaivettu esiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Delos (historia)
+Tietoruudun teksti: Delos on pieni kreikkalainen saari Mykonoksen lähellä Kykladien saariston keskuksessa. Vaikka sen pinta-ala on vain 3,43 neliökilometriä, se on yksi Kreikan tärkeimmistä mytologisista, historiallisista ja arkeologisista kohteista, ja saarella meneillään olevat kaivaukset ovat Välimeren laajimpia. Delos oli pyhäkkönä tuhannen vuoden ajan ennen kuin olympialainen mytologia teki siitä Apollon ja Artemiin syntymäpaikan. Sen pyhästä satamasta näkyvät kolme kartiomaista kumpua, joita on pidetty jumalattaren pyhinä maisemina. Löydöt on esillä Delosin arkeologisessa museossa ja Ateenan kansallisessa arkeologisessa museossa, ja UNESCO merkitsi saaren maailmanperintöluetteloon vuonna 1990.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Honiara — kaupunkilehti / Rautapohjan meri] Guadalcanalin ja Tulagin välisissä meritaisteluissa upposi niin monta alusta molemmilta puolilta, että vesialuetta alettiin kutsua nimellä Ironbottom Sound eli Rautapohja. Cape Esperancen taistelu käytiin 11. lokakuuta 1942 saaren luoteisrannikon edustalla, ja marraskuun alun monipäiväinen meritaistelu käänsi koko kampanjan. Japanilaiset joukot evakuoitiin helmikuussa 1943, ja saari julistettiin turvatuksi 9. helmikuuta. Etsinnät ovat jatkuneet sodan jälkeen: noin seitsemäntuhannen japanilaissotilaan jäänteet ovat yhä kateissa saarella, ja luita on kaivettu esiin vielä 2010-luvulla.
+- [Qatar — maalehti / Meri: Kolme miljoonaa murskattua kotiloa] Al Khorin lahdella on pieni saari, jota sanotaan Purppurasaareksi. Nimi on ansaittu: sieltä on kaivettu esiin kolme miljoonaa rikottua merikotilon kuorta. Kassilaiset valmistivat saarella purppuraväriä noin vuosina 1400–1100 eaa. Väri saadaan murex-kotilon rauhasesta, ja pienenkin väriannoksen saamiseksi kotiloita tarvitaan tuhansia — siksi purppura oli kallista. Saarta pidetään vanhimpana tunnettuna paikkana, jossa kotilopurppuraa on valmistettu, ja se on Qatarin ainoa toiselle vuosituhannelle eaa. ajoittuva muinaisjäännös.
+- [Kuwait — maalehti / Rakennukset: Saari oli Dilmunin kaupan solmukohta] Failakan saari on kahdenkymmenen kilometrin päässä Kuwait Cityn rannikosta. Sinne asetuttiin noin vuoden 2000 eaa. tienoilla, kun merenpinta laski, ja Urin kauppiaat pitivät saarella tukikohtaa. Dilmunin aikaan saari tunnettiin nimellä Agarum, ja sitä pidettiin Enzak-jumalan maana. Saarelta on löytynyt nuolenpääkirjoitusta ja sinettejä, joihin on kaiverrettu kuninkaiden nimiä. Kivikorttelit on kaivettu esiin ja peitetty paikoin suojaverkoilla, jottei tuuli kuluttaisi muureja.
+
+### 41.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+================ KOHTA 42 (kohde:hahmotelma-monemvasia) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monemvasia (historia)
+Tietoruudun teksti: Monemvasia on kaupunki ja kunta Lakoniassa Kreikassa, joka sijaitsee Peloponnesoksen itärannikon edustalla olevalla kytketyllä saarella Myrtoanmeren ympäröimänä. Sitä yhdistää mantereeseen 400 metrin pituinen hiekkakannas. Vuonna 1890 kannaksen pieni osa katkaistiin tekemään laivoille ja veneille keinotekoinen väylä. Kaupunki perustettiin 500-luvulla, ja se on yksi Euroopan vanhimmista yhtäjaksoisesti asutuista linnoitetuista kaupungeista. Keskiaikainen linnoitus oli aikoinaan voimakas, ja kaupunki oli yksi Itä-Välimeren tärkeimmistä kauppakeskuksista. Kaupungin muurit ja bysanttilaiset kirkot ovat yhä jäljellä. Nimi tulee sanoista moni, yksi, ja emvasis, sisäänpääsy, ja sen italialainen muoto Malvasia antoi nimen malvasiaviinille; Monemvasiaa on kutsuttu idän Gibraltariksi.
+
+### 42.1
+KYSYMYS: Mistä Monemvasian nimi tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monemvasia (historia)
+Tietoruudun teksti: Monemvasia on kaupunki ja kunta Lakoniassa Kreikassa, joka sijaitsee Peloponnesoksen itärannikon edustalla olevalla kytketyllä saarella Myrtoanmeren ympäröimänä. Sitä yhdistää mantereeseen 400 metrin pituinen hiekkakannas. Vuonna 1890 kannaksen pieni osa katkaistiin tekemään laivoille ja veneille keinotekoinen väylä. Kaupunki perustettiin 500-luvulla, ja se on yksi Euroopan vanhimmista yhtäjaksoisesti asutuista linnoitetuista kaupungeista. Keskiaikainen linnoitus oli aikoinaan voimakas, ja kaupunki oli yksi Itä-Välimeren tärkeimmistä kauppakeskuksista. Kaupungin muurit ja bysanttilaiset kirkot ovat yhä jäljellä. Nimi tulee sanoista moni, yksi, ja emvasis, sisäänpääsy, ja sen italialainen muoto Malvasia antoi nimen malvasiaviinille; Monemvasiaa on kutsuttu idän Gibraltariksi.
+
+### 42.2
+KYSYMYS: Mistä Malvasia-viini on saanut nimensä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monemvasia (historia)
+Tietoruudun teksti: Monemvasia on kaupunki ja kunta Lakoniassa Kreikassa, joka sijaitsee Peloponnesoksen itärannikon edustalla olevalla kytketyllä saarella Myrtoanmeren ympäröimänä. Sitä yhdistää mantereeseen 400 metrin pituinen hiekkakannas. Vuonna 1890 kannaksen pieni osa katkaistiin tekemään laivoille ja veneille keinotekoinen väylä. Kaupunki perustettiin 500-luvulla, ja se on yksi Euroopan vanhimmista yhtäjaksoisesti asutuista linnoitetuista kaupungeista. Keskiaikainen linnoitus oli aikoinaan voimakas, ja kaupunki oli yksi Itä-Välimeren tärkeimmistä kauppakeskuksista. Kaupungin muurit ja bysanttilaiset kirkot ovat yhä jäljellä. Nimi tulee sanoista moni, yksi, ja emvasis, sisäänpääsy, ja sen italialainen muoto Malvasia antoi nimen malvasiaviinille; Monemvasiaa on kutsuttu idän Gibraltariksi.
+
+### 42.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+================ KOHTA 43 (kohde:hahmotelma-sounion) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sounionin temppeli (historia)
+Tietoruudun teksti: Sounionin niemi on Attikan niemimaan eteläisin kärki, 8 kilometriä Lavrion kaupungin eteläpuolella ja 69,5 kilometriä Ateenan kaakkoon Ateenan Rivieralla. Se on kuuluisa Poseidonin temppelistä, joka on yksi Ateenan kulta-ajan tärkeimmistä monumenteista. Temppelin rauniot seisovat niemellä kolmelta puolelta Egeanmeren ympäröimänä. Poseidonin temppeli rakennettiin vuosina 444–440 eaa. Perikleen johtaessa Ateenaa, samana aikana kun hän rakennutti uudelleen Parthenonin, ja se rakennettiin arkaaisen ajan temppelin raunioille. Temppeli on lähes 60 metrin korkeudessa meren yläpuolella. Vuonna 1906 temppelin itäpuolelta kuopasta löytyi Sounion-kouros, joka oli luultavasti yksi Poseidonille omistetuista lahjapatsaista.
+
+### 43.1
+KYSYMYS: Kuka Perikles oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sounionin temppeli (historia)
+Tietoruudun teksti: Sounionin niemi on Attikan niemimaan eteläisin kärki, 8 kilometriä Lavrion kaupungin eteläpuolella ja 69,5 kilometriä Ateenan kaakkoon Ateenan Rivieralla. Se on kuuluisa Poseidonin temppelistä, joka on yksi Ateenan kulta-ajan tärkeimmistä monumenteista. Temppelin rauniot seisovat niemellä kolmelta puolelta Egeanmeren ympäröimänä. Poseidonin temppeli rakennettiin vuosina 444–440 eaa. Perikleen johtaessa Ateenaa, samana aikana kun hän rakennutti uudelleen Parthenonin, ja se rakennettiin arkaaisen ajan temppelin raunioille. Temppeli on lähes 60 metrin korkeudessa meren yläpuolella. Vuonna 1906 temppelin itäpuolelta kuopasta löytyi Sounion-kouros, joka oli luultavasti yksi Poseidonille omistetuista lahjapatsaista.
+
+### 43.2
+KYSYMYS: Mitä Sounion-kouros on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sounionin temppeli (historia)
+Tietoruudun teksti: Sounionin niemi on Attikan niemimaan eteläisin kärki, 8 kilometriä Lavrion kaupungin eteläpuolella ja 69,5 kilometriä Ateenan kaakkoon Ateenan Rivieralla. Se on kuuluisa Poseidonin temppelistä, joka on yksi Ateenan kulta-ajan tärkeimmistä monumenteista. Temppelin rauniot seisovat niemellä kolmelta puolelta Egeanmeren ympäröimänä. Poseidonin temppeli rakennettiin vuosina 444–440 eaa. Perikleen johtaessa Ateenaa, samana aikana kun hän rakennutti uudelleen Parthenonin, ja se rakennettiin arkaaisen ajan temppelin raunioille. Temppeli on lähes 60 metrin korkeudessa meren yläpuolella. Vuonna 1906 temppelin itäpuolelta kuopasta löytyi Sounion-kouros, joka oli luultavasti yksi Poseidonille omistetuista lahjapatsaista.
+
+### 43.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+================ KOHTA 44 (kohde:hahmotelma-samothrace) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samothrake (historia)
+Tietoruudun teksti: Samothrake on kreikkalainen saari Pohjois-Egeanmerellä ja kunta Evroksen alueella Traakiassa. Saari on 17 kilometriä pitkä ja 178 neliökilometrin kokoinen, ja vuonna 2021 siellä asui 2 596 ihmistä. Se on yksi Kreikan karuimmista saarista, ja sen korkein huippu on Saos-vuoren Fengari, 1 611 metriä. Saaren tunnetuin paikka on Suurten jumalien pyhäkkö, jossa pidettiin tärkeitä hellenistisiä ja esihellenistisiä uskonnollisia seremonioita. Pyhäkön tunnetuin esine on noin vuodelta 190 eaa. peräisin oleva 2,5 metrin marmoripatsas Nike, nykyisin Samothraken Nike eli Siivekäs voitto, joka löydettiin palasina saarelta vuonna 1863 ja on nyt Louvressa Pariisissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Historia: Temppeli, jolta leikattiin siivet] Propylaian ohi Akropoliin lounaiskulmaan noustaan kallion pienimmän temppelin luo: Athena Niken pyhäkköön. Sen kaidetta koristi aikoinaan marmoripatsas voitonjumalattaresta — mutta kuvanveistäjä oli jättänyt siltä siivet pois. Myöhemmät ateenalaiset selittivät asian omalla tavallaan: Voitto ei koskaan saisi lentää pois heidän kaupungistaan, joten sen siivet piti riisua. Temppelin toinen nimi, Nike Aptera, tarkoittaa juuri siivetöntä Voittoa.
+- [San Francisco — kohdekartta / Kohdekartta: Union Square] 1850–1903 Aukio oli alun perin hiekkadyyni. Kaupungin ensimmäinen yhdysvaltalainen pormestari John Geary erotti sen julkiseksi puistoksi 1850, ja se on yhä saman kokoinen kortteli Gearyn, Powellin, Postin ja Stocktonin katujen välissä — pinta-alaa on 2,6 eekkeriä. Nimi ei tarkoita ammattiyhdistystä vaan unionia: aukiolla pidettiin sisällissodan kynnyksellä ja sen aikana pappi Thomas Starr Kingin johtamia mielenosoituksia pohjoisvaltioiden puolesta. Isoisän matkan aikaan aukio oli siis runsaan kahdenkymmenen vuoden ikäinen puisto keskellä uutta kaupunginosaa. Aukion keskellä kohoaa Dewey-muistomerkki, joka vihittiin 1903. Kokonaiskorkeus on 97 jalkaa: pylväs on 85 jalkaa ja sen päällä seisov…
+
+### 44.1
+KYSYMYS: Mikä Voiton Nike on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samothrake (historia)
+Tietoruudun teksti: Samothrake on kreikkalainen saari Pohjois-Egeanmerellä ja kunta Evroksen alueella Traakiassa. Saari on 17 kilometriä pitkä ja 178 neliökilometrin kokoinen, ja vuonna 2021 siellä asui 2 596 ihmistä. Se on yksi Kreikan karuimmista saarista, ja sen korkein huippu on Saos-vuoren Fengari, 1 611 metriä. Saaren tunnetuin paikka on Suurten jumalien pyhäkkö, jossa pidettiin tärkeitä hellenistisiä ja esihellenistisiä uskonnollisia seremonioita. Pyhäkön tunnetuin esine on noin vuodelta 190 eaa. peräisin oleva 2,5 metrin marmoripatsas Nike, nykyisin Samothraken Nike eli Siivekäs voitto, joka löydettiin palasina saarelta vuonna 1863 ja on nyt Louvressa Pariisissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Historia: Temppeli, jolta leikattiin siivet] Propylaian ohi Akropoliin lounaiskulmaan noustaan kallion pienimmän temppelin luo: Athena Niken pyhäkköön. Sen kaidetta koristi aikoinaan marmoripatsas voitonjumalattaresta — mutta kuvanveistäjä oli jättänyt siltä siivet pois. Myöhemmät ateenalaiset selittivät asian omalla tavallaan: Voitto ei koskaan saisi lentää pois heidän kaupungistaan, joten sen siivet piti riisua. Temppelin toinen nimi, Nike Aptera, tarkoittaa juuri siivetöntä Voittoa.
+- [San Francisco — kohdekartta / Kohdekartta: Union Square] 1850–1903 Aukio oli alun perin hiekkadyyni. Kaupungin ensimmäinen yhdysvaltalainen pormestari John Geary erotti sen julkiseksi puistoksi 1850, ja se on yhä saman kokoinen kortteli Gearyn, Powellin, Postin ja Stocktonin katujen välissä — pinta-alaa on 2,6 eekkeriä. Nimi ei tarkoita ammattiyhdistystä vaan unionia: aukiolla pidettiin sisällissodan kynnyksellä ja sen aikana pappi Thomas Starr Kingin johtamia mielenosoituksia pohjoisvaltioiden puolesta. Isoisän matkan aikaan aukio oli siis runsaan kahdenkymmenen vuoden ikäinen puisto keskellä uutta kaupunginosaa. Aukion keskellä kohoaa Dewey-muistomerkki, joka vihittiin 1903. Kokonaiskorkeus on 97 jalkaa: pylväs on 85 jalkaa ja sen päällä seisov…
+
+### 44.2
+KYSYMYS: Mikä Suurten jumalien pyhäkkö oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samothrake (historia)
+Tietoruudun teksti: Samothrake on kreikkalainen saari Pohjois-Egeanmerellä ja kunta Evroksen alueella Traakiassa. Saari on 17 kilometriä pitkä ja 178 neliökilometrin kokoinen, ja vuonna 2021 siellä asui 2 596 ihmistä. Se on yksi Kreikan karuimmista saarista, ja sen korkein huippu on Saos-vuoren Fengari, 1 611 metriä. Saaren tunnetuin paikka on Suurten jumalien pyhäkkö, jossa pidettiin tärkeitä hellenistisiä ja esihellenistisiä uskonnollisia seremonioita. Pyhäkön tunnetuin esine on noin vuodelta 190 eaa. peräisin oleva 2,5 metrin marmoripatsas Nike, nykyisin Samothraken Nike eli Siivekäs voitto, joka löydettiin palasina saarelta vuonna 1863 ja on nyt Louvressa Pariisissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — kaupunkilehti / Historia: Päätös, joka vaihtoi uskonnon ilman sotaa] Vuoden 999 tai 1000 Alþingillä kristityt ja vanhauskoiset olivat ajautumassa avoimeen yhteenottoon siitä, pitäisikö koko saaren siirtyä kristinuskoon. Kokous antoi ratkaisun lakimies Þorgeir Ljósvetningagoðille, joka vetäytyi vuorokaudeksi makaamaan viitan alle miettimään — perimätiedon mukaan ilman ruokaa ja puhumatta kenellekään. Nousuaan hän julisti koko saaren kristityksi, mutta salli vanhojen jumalien palvonnan yksityisesti kotona: kompromissi, joka vältti sisällissodan uhan. Þorgeir itse heitti perimätiedon mukaan omat epäjumalankuvansa lähistön Goðafossiin, "jumalten koskeen".
+
+### 44.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+================ KOHTA 45 (kohde:hahmotelma-meteora) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Meteora (kulttuuri)
+Tietoruudun teksti: Meteora on kalliomuodostuma Trikalan alueella Thessaliassa Luoteis-Kreikassa, ja siinä on yksi ortodoksisen kirkon merkittävimmistä luostarikomplekseista; sitä pidetään paikallisesti tärkeydessä toisena vain Athos-vuoren jälkeen. Kalliopylväät ja kukkulamaiset lohkareet nousevat yli 20 metrin korkeuteen. Niiden huipulle perustettiin 24 luostaria pääasiassa 1300-luvun jälkipuoliskolla serbien, kreikkalaisten ja albaanien keisariksi itsensä julistaneen Simeon Uroksen hallinnon aikana. Joulukuussa 2025 neljä alkuperäistä luostaria oli edelleen käytössä ja avoinna vierailijoille: Suuri Meteoron (perustettu 1356), Varlaam, Pyhä Kolminaisuus ja Pyhä Stefanos, joka muuttui nunnaluostariksi vuonna 1961.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Townsville — kaupunkilehti / Kuiva tropiikki: Kallio, joka yritettiin korottaa vuoreksi] Castle Hill on vaaleanpunaista graniittia ja 286 metriä merenpinnasta. Sen alkuperäiskansan nimi on Cootharinga, ja se on toinen kahdesta seudulla säilyneestä alkuperäiskansan paikannimestä. Kallio määräsi kaupungin epäsäännöllisen katuverkon. 1800-luvulla asukkaat kaatoivat sen puut ja villit vuohet söivät loput; vuohet poistettiin vasta 1930-luvulla, ja huipulle vievä tie rakennettiin 1935—36 työllisyystyönä. Ylös pääsee myös Goat Trackia, jossa on 758 porrasta. Kukkula merkittiin perintörekisteriin 1993. Lähde kertoo myös, että korkeutta on ainakin kahdesti yritetty nostaa, jotta kallio kelpaisi vuoreksi.
+- [São Paulo — kohdekartta / Kohdekartta: São Benton luostari] 1598 Luostari perustettiin 14. heinäkuuta 1598. Ylikapteeni Jorge Correia lahjoitti kaksi maalohkoa Anhangabaún ja Tamanduateín jokien väliltä, ja perustaja oli munkki Mauro Teixeira, José de Anchietan oppilas. Valtuusto vahvisti lahjakirjan 15. huhtikuuta 1600, ja rakennukset valmistuivat 1634. Suojeluspyhimys vaihtui kahdesti: ensin Montserratin Neitsyeksi ja 1720 Taivaaseen otetuksi Neitsyeksi. Luostari joutui kerran valtakunnanpolitiikan näyttämöksi. Kun Iberian unioni päättyi ja Juhana IV kruunattiin 1641 Portugalin kuninkaaksi, osa São Paulon espanjalaisperäisistä asukkaista halusi estää uuden kuninkaan tunnustamisen ja tarjosi Amador Buenolle "São Paulon kuninkaan" arvoa. Bueno kielt…
+
+### 45.1
+KYSYMYS: Miten luostarit rakennettiin kalliopylväiden päälle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Meteora (kulttuuri)
+Tietoruudun teksti: Meteora on kalliomuodostuma Trikalan alueella Thessaliassa Luoteis-Kreikassa, ja siinä on yksi ortodoksisen kirkon merkittävimmistä luostarikomplekseista; sitä pidetään paikallisesti tärkeydessä toisena vain Athos-vuoren jälkeen. Kalliopylväät ja kukkulamaiset lohkareet nousevat yli 20 metrin korkeuteen. Niiden huipulle perustettiin 24 luostaria pääasiassa 1300-luvun jälkipuoliskolla serbien, kreikkalaisten ja albaanien keisariksi itsensä julistaneen Simeon Uroksen hallinnon aikana. Joulukuussa 2025 neljä alkuperäistä luostaria oli edelleen käytössä ja avoinna vierailijoille: Suuri Meteoron (perustettu 1356), Varlaam, Pyhä Kolminaisuus ja Pyhä Stefanos, joka muuttui nunnaluostariksi vuonna 1961.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Townsville — kaupunkilehti / Kuiva tropiikki: Kallio, joka yritettiin korottaa vuoreksi] Castle Hill on vaaleanpunaista graniittia ja 286 metriä merenpinnasta. Sen alkuperäiskansan nimi on Cootharinga, ja se on toinen kahdesta seudulla säilyneestä alkuperäiskansan paikannimestä. Kallio määräsi kaupungin epäsäännöllisen katuverkon. 1800-luvulla asukkaat kaatoivat sen puut ja villit vuohet söivät loput; vuohet poistettiin vasta 1930-luvulla, ja huipulle vievä tie rakennettiin 1935—36 työllisyystyönä. Ylös pääsee myös Goat Trackia, jossa on 758 porrasta. Kukkula merkittiin perintörekisteriin 1993. Lähde kertoo myös, että korkeutta on ainakin kahdesti yritetty nostaa, jotta kallio kelpaisi vuoreksi.
+- [São Paulo — kohdekartta / Kohdekartta: São Benton luostari] 1598 Luostari perustettiin 14. heinäkuuta 1598. Ylikapteeni Jorge Correia lahjoitti kaksi maalohkoa Anhangabaún ja Tamanduateín jokien väliltä, ja perustaja oli munkki Mauro Teixeira, José de Anchietan oppilas. Valtuusto vahvisti lahjakirjan 15. huhtikuuta 1600, ja rakennukset valmistuivat 1634. Suojeluspyhimys vaihtui kahdesti: ensin Montserratin Neitsyeksi ja 1720 Taivaaseen otetuksi Neitsyeksi. Luostari joutui kerran valtakunnanpolitiikan näyttämöksi. Kun Iberian unioni päättyi ja Juhana IV kruunattiin 1641 Portugalin kuninkaaksi, osa São Paulon espanjalaisperäisistä asukkaista halusi estää uuden kuninkaan tunnustamisen ja tarjosi Amador Buenolle "São Paulon kuninkaan" arvoa. Bueno kielt…
+
+### 45.2
+KYSYMYS: Miksi Meteoraa sanotaan Athoksen jälkeen tärkeimmäksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Meteora (kulttuuri)
+Tietoruudun teksti: Meteora on kalliomuodostuma Trikalan alueella Thessaliassa Luoteis-Kreikassa, ja siinä on yksi ortodoksisen kirkon merkittävimmistä luostarikomplekseista; sitä pidetään paikallisesti tärkeydessä toisena vain Athos-vuoren jälkeen. Kalliopylväät ja kukkulamaiset lohkareet nousevat yli 20 metrin korkeuteen. Niiden huipulle perustettiin 24 luostaria pääasiassa 1300-luvun jälkipuoliskolla serbien, kreikkalaisten ja albaanien keisariksi itsensä julistaneen Simeon Uroksen hallinnon aikana. Joulukuussa 2025 neljä alkuperäistä luostaria oli edelleen käytössä ja avoinna vierailijoille: Suuri Meteoron (perustettu 1356), Varlaam, Pyhä Kolminaisuus ja Pyhä Stefanos, joka muuttui nunnaluostariksi vuonna 1961.
+
+### 45.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI

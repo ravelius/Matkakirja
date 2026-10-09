@@ -1,0 +1,180 @@
+================ KOHTA 46 (kohde:hahmotelma-athos) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Athoksen luostarit (kulttuuri)
+Tietoruudun teksti: Athos on vuori samannimisellä niemimaalla Koillis-Kreikassa suoraan Egeanmeren rannalla, ja se on tärkeä itäortodoksisen luostarielämän keskus. Vuori ja suurin osa niemimaasta on autonominen hallintoalue Kreikassa, jota hallitsee Athoksen munkkiyhteisö, joka kuuluu kirkollisesti suoraan Konstantinopolin ekumeenisen patriarkan alaisuuteen. Kreikan lain ja uskonnollisen perinteen mukaan naiset eivät saa mennä munkkiyhteisön hallitsemalle alueelle. Athoksella on asuttu antiikista lähtien, ja sen kristillinen luostaripaikka ulottuu ainakin 800-luvulle bysanttilaiselle ajalle. UNESCO merkitsi Athoksen munkkiyhteisön maailmanperintöluetteloon vuonna 1988 luostareiden hyvin säilyneen arkkitehtuurin ja niemimaan luonnon säilymisen vuoksi.
+
+### 46.1
+KYSYMYS: Miksi naiset eivät pääse Athokselle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Athoksen luostarit (kulttuuri)
+Tietoruudun teksti: Athos on vuori samannimisellä niemimaalla Koillis-Kreikassa suoraan Egeanmeren rannalla, ja se on tärkeä itäortodoksisen luostarielämän keskus. Vuori ja suurin osa niemimaasta on autonominen hallintoalue Kreikassa, jota hallitsee Athoksen munkkiyhteisö, joka kuuluu kirkollisesti suoraan Konstantinopolin ekumeenisen patriarkan alaisuuteen. Kreikan lain ja uskonnollisen perinteen mukaan naiset eivät saa mennä munkkiyhteisön hallitsemalle alueelle. Athoksella on asuttu antiikista lähtien, ja sen kristillinen luostaripaikka ulottuu ainakin 800-luvulle bysanttilaiselle ajalle. UNESCO merkitsi Athoksen munkkiyhteisön maailmanperintöluetteloon vuonna 1988 luostareiden hyvin säilyneen arkkitehtuurin ja niemimaan luonnon säilymisen vuoksi.
+
+### 46.2
+KYSYMYS: Kuka Athoksen luostareita hallitsee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Athoksen luostarit (kulttuuri)
+Tietoruudun teksti: Athos on vuori samannimisellä niemimaalla Koillis-Kreikassa suoraan Egeanmeren rannalla, ja se on tärkeä itäortodoksisen luostarielämän keskus. Vuori ja suurin osa niemimaasta on autonominen hallintoalue Kreikassa, jota hallitsee Athoksen munkkiyhteisö, joka kuuluu kirkollisesti suoraan Konstantinopolin ekumeenisen patriarkan alaisuuteen. Kreikan lain ja uskonnollisen perinteen mukaan naiset eivät saa mennä munkkiyhteisön hallitsemalle alueelle. Athoksella on asuttu antiikista lähtien, ja sen kristillinen luostaripaikka ulottuu ainakin 800-luvulle bysanttilaiselle ajalle. UNESCO merkitsi Athoksen munkkiyhteisön maailmanperintöluetteloon vuonna 1988 luostareiden hyvin säilyneen arkkitehtuurin ja niemimaan luonnon säilymisen vuoksi.
+
+### 46.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+================ KOHTA 47 (kohde:hahmotelma-metsovo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Metsovo (ruoka)
+Tietoruudun teksti: Metsovo on kaupunki Epeiroksessa Pindoksen vuoristossa Pohjois-Kreikassa, Ioanninan ja Meteoran välissä. Se on Kreikan suurin aromanialaisten eli vlahien elämän keskus ja laaja alueellinen keskus, jonka ympärillä on useita pieniä kyliä Pindoksen seudulla. Kaupungin talous perustuu maanviljelyyn ja matkailuun, joka kukoistaa erityisesti talvella. Metsovo on kuuluisa paikallisista juustoistaan, joihin kuuluvat Metsovone ja Metsovela, sekä viininvalmistuksestaan, muun muassa Averoffin suvun Katógi-viinitarhasta. Kaupungissa on Georgios Averoffin, hyväntekijän (1815–1899), mukaan nimetty Averoff-galleria.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historian hetki: Kruševo 1903 — kymmenen päivän tasavalta] 2.8.1903 — Kirkonkellot soivat kaikkialla Kruševossa samaan aikaan, ja hetken ne peittävät alleen jokaisen muun äänen. On Elian päivä, Ilinden, 2. elokuuta 1903, ja makedonialaiset kapinalliset ovat juuri vallanneet pienen vuoristokaupungin ottomaanihallinnolta. Julistus tasavallasta tehdään Tomalevski-suvun talossa; torilla sen uutinen leviää väkijoukkoon — sekakomitea, jossa istuvat sekä slaavilaiset että kutzovlach-aromanialaiset asukkaat, hallitsee kaupunkia yhdessä. Kapinallisten riveissä taistelee puutteen vuoksi myös naisia ja nuoria poikia, joille on jaettu kivääreitä ilman koulutusta. Kellojen soidessa moni asukas ei vielä tiedä, kuinka lyhyeksi juhla jää: kymmenen päivän kuluttua …
+
+### 47.1
+KYSYMYS: Keitä aromanialaiset ovat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Metsovo (ruoka)
+Tietoruudun teksti: Metsovo on kaupunki Epeiroksessa Pindoksen vuoristossa Pohjois-Kreikassa, Ioanninan ja Meteoran välissä. Se on Kreikan suurin aromanialaisten eli vlahien elämän keskus ja laaja alueellinen keskus, jonka ympärillä on useita pieniä kyliä Pindoksen seudulla. Kaupungin talous perustuu maanviljelyyn ja matkailuun, joka kukoistaa erityisesti talvella. Metsovo on kuuluisa paikallisista juustoistaan, joihin kuuluvat Metsovone ja Metsovela, sekä viininvalmistuksestaan, muun muassa Averoffin suvun Katógi-viinitarhasta. Kaupungissa on Georgios Averoffin, hyväntekijän (1815–1899), mukaan nimetty Averoff-galleria.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historian hetki: Kruševo 1903 — kymmenen päivän tasavalta] 2.8.1903 — Kirkonkellot soivat kaikkialla Kruševossa samaan aikaan, ja hetken ne peittävät alleen jokaisen muun äänen. On Elian päivä, Ilinden, 2. elokuuta 1903, ja makedonialaiset kapinalliset ovat juuri vallanneet pienen vuoristokaupungin ottomaanihallinnolta. Julistus tasavallasta tehdään Tomalevski-suvun talossa; torilla sen uutinen leviää väkijoukkoon — sekakomitea, jossa istuvat sekä slaavilaiset että kutzovlach-aromanialaiset asukkaat, hallitsee kaupunkia yhdessä. Kapinallisten riveissä taistelee puutteen vuoksi myös naisia ja nuoria poikia, joille on jaettu kivääreitä ilman koulutusta. Kellojen soidessa moni asukas ei vielä tiedä, kuinka lyhyeksi juhla jää: kymmenen päivän kuluttua …
+
+### 47.2
+KYSYMYS: Mitä Metsovon juustoja on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Metsovo (ruoka)
+Tietoruudun teksti: Metsovo on kaupunki Epeiroksessa Pindoksen vuoristossa Pohjois-Kreikassa, Ioanninan ja Meteoran välissä. Se on Kreikan suurin aromanialaisten eli vlahien elämän keskus ja laaja alueellinen keskus, jonka ympärillä on useita pieniä kyliä Pindoksen seudulla. Kaupungin talous perustuu maanviljelyyn ja matkailuun, joka kukoistaa erityisesti talvella. Metsovo on kuuluisa paikallisista juustoistaan, joihin kuuluvat Metsovone ja Metsovela, sekä viininvalmistuksestaan, muun muassa Averoffin suvun Katógi-viinitarhasta. Kaupungissa on Georgios Averoffin, hyväntekijän (1815–1899), mukaan nimetty Averoff-galleria.
+
+### 47.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+================ KOHTA 48 (kohde:hahmotelma-korfu) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korfu (kulttuuri)
+Tietoruudun teksti: Korfu eli Kerkyra on yksi Joonianmeren saarista Länsi-Kreikassa, ja se on pohjoisin saari Kreikan länsirannikolla, lukuun ottamatta sen Diapontian-satelliittisaaria, jotka ovat koko Kreikan läntisin kohta. Saari on sidoksissa Kreikan historiaan kreikkalaisen mytologian alusta lähtien. Keskiajalta 1600-luvulle asti saari kuului vuodesta 1204 Venetsian tasavaltaan, ja se torjui menestyksekkäästi ottomaanit useissa piirityksissä; sitä pidettiin Euroopan valtioiden ja Ottomaanien valtakunnan välisenä linnakkeena ja se oli yksi Euroopan vahvimmin linnoitetuista paikoista. Vuonna 2007 saaren vanhakaupunki lisättiin UNESCOn maailmanperintöluetteloon, ja Korfu on suosittu matkailukohde.
+
+### 48.1
+KYSYMYS: Miksi Korfu oli tärkeä linnoitus?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korfu (kulttuuri)
+Tietoruudun teksti: Korfu eli Kerkyra on yksi Joonianmeren saarista Länsi-Kreikassa, ja se on pohjoisin saari Kreikan länsirannikolla, lukuun ottamatta sen Diapontian-satelliittisaaria, jotka ovat koko Kreikan läntisin kohta. Saari on sidoksissa Kreikan historiaan kreikkalaisen mytologian alusta lähtien. Keskiajalta 1600-luvulle asti saari kuului vuodesta 1204 Venetsian tasavaltaan, ja se torjui menestyksekkäästi ottomaanit useissa piirityksissä; sitä pidettiin Euroopan valtioiden ja Ottomaanien valtakunnan välisenä linnakkeena ja se oli yksi Euroopan vahvimmin linnoitetuista paikoista. Vuonna 2007 saaren vanhakaupunki lisättiin UNESCOn maailmanperintöluetteloon, ja Korfu on suosittu matkailukohde.
+
+### 48.2
+KYSYMYS: Mikä on Kerkyra?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korfu (kulttuuri)
+Tietoruudun teksti: Korfu eli Kerkyra on yksi Joonianmeren saarista Länsi-Kreikassa, ja se on pohjoisin saari Kreikan länsirannikolla, lukuun ottamatta sen Diapontian-satelliittisaaria, jotka ovat koko Kreikan läntisin kohta. Saari on sidoksissa Kreikan historiaan kreikkalaisen mytologian alusta lähtien. Keskiajalta 1600-luvulle asti saari kuului vuodesta 1204 Venetsian tasavaltaan, ja se torjui menestyksekkäästi ottomaanit useissa piirityksissä; sitä pidettiin Euroopan valtioiden ja Ottomaanien valtakunnan välisenä linnakkeena ja se oli yksi Euroopan vahvimmin linnoitetuista paikoista. Vuonna 2007 saaren vanhakaupunki lisättiin UNESCOn maailmanperintöluetteloon, ja Korfu on suosittu matkailukohde.
+
+### 48.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+### 48.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+### 48.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+================ KOHTA 49 (kohde:hahmotelma-kastoria) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kastoria (kulttuuri)
+Tietoruudun teksti: Kastoria on kaupunki Pohjois-Kreikassa Länsi-Makedoniassa, Kastorian alueen pääkaupunki. Se sijaitsee niemellä Orestiada-järven läntisellä rannalla laaksossa, jota ympäröivät kalkkikivivuoret. Kaupunki on tunnettu monista bysanttilaisista kirkoistaan, bysanttilaisesta ja ottomaanien ajan asuinarkkitehtuuristaan, järvestään ja turkisteollisuudestaan. Nimi Kastoria tarkoittaa majavien paikkaa, ja se johtuu kreikan sanasta kastori, majava, joka oli eläin, jota asui järven rannoilla. Ensimmäisen kerran kaupunki mainitaan historioitsija Ioannes Skylitzeksen kirjoituksessa 900-luvun lopulta. Kreikan sisällissodan jälkeen suuri joukko Kastorian kreikkalaisia muutti ulkomaille, ja 1980-luvulla New Yorkin seudulla heitä oli 25 000, ja he työskentelivät turkkureina.
+
+### 49.1
+KYSYMYS: Miksi Kastoriaa sanotaan majavan paikaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kastoria (kulttuuri)
+Tietoruudun teksti: Kastoria on kaupunki Pohjois-Kreikassa Länsi-Makedoniassa, Kastorian alueen pääkaupunki. Se sijaitsee niemellä Orestiada-järven läntisellä rannalla laaksossa, jota ympäröivät kalkkikivivuoret. Kaupunki on tunnettu monista bysanttilaisista kirkoistaan, bysanttilaisesta ja ottomaanien ajan asuinarkkitehtuuristaan, järvestään ja turkisteollisuudestaan. Nimi Kastoria tarkoittaa majavien paikkaa, ja se johtuu kreikan sanasta kastori, majava, joka oli eläin, jota asui järven rannoilla. Ensimmäisen kerran kaupunki mainitaan historioitsija Ioannes Skylitzeksen kirjoituksessa 900-luvun lopulta. Kreikan sisällissodan jälkeen suuri joukko Kastorian kreikkalaisia muutti ulkomaille, ja 1980-luvulla New Yorkin seudulla heitä oli 25 000, ja he työskentelivät turkkureina.
+
+### 49.2
+KYSYMYS: Miksi Kastoria tunnetaan turkiksista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kastoria (kulttuuri)
+Tietoruudun teksti: Kastoria on kaupunki Pohjois-Kreikassa Länsi-Makedoniassa, Kastorian alueen pääkaupunki. Se sijaitsee niemellä Orestiada-järven läntisellä rannalla laaksossa, jota ympäröivät kalkkikivivuoret. Kaupunki on tunnettu monista bysanttilaisista kirkoistaan, bysanttilaisesta ja ottomaanien ajan asuinarkkitehtuuristaan, järvestään ja turkisteollisuudestaan. Nimi Kastoria tarkoittaa majavien paikkaa, ja se johtuu kreikan sanasta kastori, majava, joka oli eläin, jota asui järven rannoilla. Ensimmäisen kerran kaupunki mainitaan historioitsija Ioannes Skylitzeksen kirjoituksessa 900-luvun lopulta. Kreikan sisällissodan jälkeen suuri joukko Kastorian kreikkalaisia muutti ulkomaille, ja 1980-luvulla New Yorkin seudulla heitä oli 25 000, ja he työskentelivät turkkureina.
+
+### 49.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+### 49.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+### 49.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+================ KOHTA 50 (kohde:hahmotelma-naoussa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naoussa (ruoka)
+Tietoruudun teksti: Naousa on kaupunki Imathian alueella Keski-Makedoniassa Kreikassa Vermion-vuorten juurella. Vuoden 2021 väestönlaskennan mukaan kaupungissa asui 19 706 ihmistä ja saman niminen metropolialue 30 054. Vuonna 1955 kuninkaallinen asetus nimesi Naousan sankarikaupungiksi, ja sen jälkeen kunnan virallinen nimi on ollut Naousan sankarikaupunki, kunnioittamaan asukkaiden taistelua Kreikan vapaussodassa. Naousa on kuuluisa karnevaalistaan, hiihtokeskuksestaan ja viininvalmistuksestaan sekä antiikin Miezan alueella löydetyistä arkeologisista kohteista. Kaupunki sai sadassa vuodessa väkilukunsa lähes kaksinkertaiseksi, ja sen maine perustui sekä viineihin että koulutustoimintaan.
+
+### 50.1
+KYSYMYS: Miksi Naoussa on Sankarikaupunki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naoussa (ruoka)
+Tietoruudun teksti: Naousa on kaupunki Imathian alueella Keski-Makedoniassa Kreikassa Vermion-vuorten juurella. Vuoden 2021 väestönlaskennan mukaan kaupungissa asui 19 706 ihmistä ja saman niminen metropolialue 30 054. Vuonna 1955 kuninkaallinen asetus nimesi Naousan sankarikaupungiksi, ja sen jälkeen kunnan virallinen nimi on ollut Naousan sankarikaupunki, kunnioittamaan asukkaiden taistelua Kreikan vapaussodassa. Naousa on kuuluisa karnevaalistaan, hiihtokeskuksestaan ja viininvalmistuksestaan sekä antiikin Miezan alueella löydetyistä arkeologisista kohteista. Kaupunki sai sadassa vuodessa väkilukunsa lähes kaksinkertaiseksi, ja sen maine perustui sekä viineihin että koulutustoimintaan.
+
+### 50.2
+KYSYMYS: Mikä Mieza oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naoussa (ruoka)
+Tietoruudun teksti: Naousa on kaupunki Imathian alueella Keski-Makedoniassa Kreikassa Vermion-vuorten juurella. Vuoden 2021 väestönlaskennan mukaan kaupungissa asui 19 706 ihmistä ja saman niminen metropolialue 30 054. Vuonna 1955 kuninkaallinen asetus nimesi Naousan sankarikaupungiksi, ja sen jälkeen kunnan virallinen nimi on ollut Naousan sankarikaupunki, kunnioittamaan asukkaiden taistelua Kreikan vapaussodassa. Naousa on kuuluisa karnevaalistaan, hiihtokeskuksestaan ja viininvalmistuksestaan sekä antiikin Miezan alueella löydetyistä arkeologisista kohteista. Kaupunki sai sadassa vuodessa väkilukunsa lähes kaksinkertaiseksi, ja sen maine perustui sekä viineihin että koulutustoimintaan.
+
+### 50.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 50 YHTEINEN KONTEKSTI
+
+### 50.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 50 YHTEINEN KONTEKSTI
+
+### 50.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 50 YHTEINEN KONTEKSTI

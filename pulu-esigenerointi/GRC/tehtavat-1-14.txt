@@ -1,0 +1,186 @@
+================ KOHTA 66 (kohde:hahmotelma-melissani) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melissanin luolajärvi ja kadonnut meri (luonto · järvi)
+Tietoruudun teksti: Melissani on luolajärvi Kefalonian saarella Samin luoteispuolella: kalkkikiven sortuminen avasi luolan katon ja paljasti pohjaveden. Järveä kierretään pienellä veneellä, ja sen vesi on murtovettä, jossa sisämaan makea vesi ja saaren alle tunkeutunut merivesi sekoittuvat. Tarustossa luolaa pidettiin nymfien luolana. Saaren toisella puolella Argostolin lähellä merivesi valuu katavothres-nieluihin, kulkee saaren ali Melissanin kautta ja purkautuu noin kahden viikon päästä Samin seudulla – ja virtauksen voimalla pyöritettiin jo 1835 myllyä.
+
+### 66.1
+KYSYMYS: Miten meri katoaa Kefalonian alle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melissanin luolajärvi ja kadonnut meri (luonto · järvi)
+Tietoruudun teksti: Melissani on luolajärvi Kefalonian saarella Samin luoteispuolella: kalkkikiven sortuminen avasi luolan katon ja paljasti pohjaveden. Järveä kierretään pienellä veneellä, ja sen vesi on murtovettä, jossa sisämaan makea vesi ja saaren alle tunkeutunut merivesi sekoittuvat. Tarustossa luolaa pidettiin nymfien luolana. Saaren toisella puolella Argostolin lähellä merivesi valuu katavothres-nieluihin, kulkee saaren ali Melissanin kautta ja purkautuu noin kahden viikon päästä Samin seudulla – ja virtauksen voimalla pyöritettiin jo 1835 myllyä.
+
+### 66.2
+KYSYMYS: Miksi Melissanin vesi on murtovettä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melissanin luolajärvi ja kadonnut meri (luonto · järvi)
+Tietoruudun teksti: Melissani on luolajärvi Kefalonian saarella Samin luoteispuolella: kalkkikiven sortuminen avasi luolan katon ja paljasti pohjaveden. Järveä kierretään pienellä veneellä, ja sen vesi on murtovettä, jossa sisämaan makea vesi ja saaren alle tunkeutunut merivesi sekoittuvat. Tarustossa luolaa pidettiin nymfien luolana. Saaren toisella puolella Argostolin lähellä merivesi valuu katavothres-nieluihin, kulkee saaren ali Melissanin kautta ja purkautuu noin kahden viikon päästä Samin seudulla – ja virtauksen voimalla pyöritettiin jo 1835 myllyä.
+
+### 66.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 66 YHTEINEN KONTEKSTI
+
+### 66.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 66 YHTEINEN KONTEKSTI
+
+### 66.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 66 YHTEINEN KONTEKSTI
+
+================ KOHTA 67 (kohde:hahmotelma-gla) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gla, kuivatun järven linnoitus (historia)
+Tietoruudun teksti: Gla on mykeneläinen linnoitus Boiotiassa kalkkikivikummulla, joka pisti aikoinaan esiin Kopaisjärvestä tai oli sen saari. Noin 1300 eaa. rakennetut, lähes kolme kilometriä pitkät kyklooppimuurit ympäröivät lähes 20 hehtaarin alueen, noin kymmenen kertaa enemmän kuin Ateenan tai Tirynsin mykeneläiset linnavuoret. Paikan antiikin nimeä ei tunneta, eikä sitä ole pystytty yhdistämään yhteenkään Iliaan paikannimeen. Samoihin aikoihin mykeneläiset kuivattivat osan järvestä padoilla ja kanavilla – yksi esihistoriallisen insinööritaidon hämmästyttävimmistä saavutuksista – mutta järjestelmä romahti ja järvi palasi.
+
+### 67.1
+KYSYMYS: Mitä Kopaisjärvelle tapahtui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gla, kuivatun järven linnoitus (historia)
+Tietoruudun teksti: Gla on mykeneläinen linnoitus Boiotiassa kalkkikivikummulla, joka pisti aikoinaan esiin Kopaisjärvestä tai oli sen saari. Noin 1300 eaa. rakennetut, lähes kolme kilometriä pitkät kyklooppimuurit ympäröivät lähes 20 hehtaarin alueen, noin kymmenen kertaa enemmän kuin Ateenan tai Tirynsin mykeneläiset linnavuoret. Paikan antiikin nimeä ei tunneta, eikä sitä ole pystytty yhdistämään yhteenkään Iliaan paikannimeen. Samoihin aikoihin mykeneläiset kuivattivat osan järvestä padoilla ja kanavilla – yksi esihistoriallisen insinööritaidon hämmästyttävimmistä saavutuksista – mutta järjestelmä romahti ja järvi palasi.
+
+### 67.2
+KYSYMYS: Miksi Glan antiikin nimeä ei tunneta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gla, kuivatun järven linnoitus (historia)
+Tietoruudun teksti: Gla on mykeneläinen linnoitus Boiotiassa kalkkikivikummulla, joka pisti aikoinaan esiin Kopaisjärvestä tai oli sen saari. Noin 1300 eaa. rakennetut, lähes kolme kilometriä pitkät kyklooppimuurit ympäröivät lähes 20 hehtaarin alueen, noin kymmenen kertaa enemmän kuin Ateenan tai Tirynsin mykeneläiset linnavuoret. Paikan antiikin nimeä ei tunneta, eikä sitä ole pystytty yhdistämään yhteenkään Iliaan paikannimeen. Samoihin aikoihin mykeneläiset kuivattivat osan järvestä padoilla ja kanavilla – yksi esihistoriallisen insinööritaidon hämmästyttävimmistä saavutuksista – mutta järjestelmä romahti ja järvi palasi.
+
+### 67.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 67 YHTEINEN KONTEKSTI
+
+### 67.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 67 YHTEINEN KONTEKSTI
+
+### 67.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 67 YHTEINEN KONTEKSTI
+
+================ KOHTA 68 (kohde:hahmotelma-kastan-kumpu) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kastan kumpu Amfipoliissa (historia)
+Tietoruudun teksti: Kastan kumpu muinaisen Amfipoliin lähellä on suurin Kreikasta koskaan löydetty antiikin hautakumpu, paljon suurempi kuin Filippos II:n kumpu Verginassa. Se on 300-luvun viimeiseltä neljännekseltä eaa., ja sitä kiertää 158 metrin läpimittainen muuri, jonka kalkkikivi on verhottu Thasoksen marmorilla. Sisähauta löytyi vasta 2012: sisäänkäyntiä vartioivat sfinksit, kaksi karyatidia kannattelee seuraavan kammion oven palkkia, ja lattiamosaiikissa Hades ryöstää Persefoneen. Haudasta löytyi viiden ihmisen jäänteet, mutta kenelle se rakennettiin, on yhä kiistanalaista – kaivausryhmän mukaan Aleksanteri Suuren ystävälle Hefaistionille, toisten mukaan Aleksanterin äidille Olympiakselle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jerusalem — kohdekartta / Kohdekartta: Pyhän haudan kirkko] Pyhän haudan kirkko ei ole yksi rakennus vaan monta päällekkäistä: kirkkoa on rakennettu, poltettu, korjattu ja laajennettu vuosisatojen ajan, ja lopputulos on sokkelo, jossa eri kristilliset yhteisöt hallitsevat kukin omaa osaansa. Rakennuksen kohdalla oli roomalaisaikana Venuksen temppeli, jonka keisari Hadrianus rakennutti perustaessaan kaupungin uudelleen nimellä Aelia Capitolina. Kirkon sisällä on kaksi erillistä pyhää paikkaa saman katon alla. Golgatan kappeli on yläkerrassa, kallion päällä johon noustaan portaita; alakerrassa on itse hauta pienessä kappelissa keskellä pyöreää salia. Päälaivan yllä kaartuu katolikonin kupoli, jonka keskellä on kultapohjainen Kristus-mosaiikki ja reuno…
+
+### 68.1
+KYSYMYS: Kenelle Kastan hauta rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kastan kumpu Amfipoliissa (historia)
+Tietoruudun teksti: Kastan kumpu muinaisen Amfipoliin lähellä on suurin Kreikasta koskaan löydetty antiikin hautakumpu, paljon suurempi kuin Filippos II:n kumpu Verginassa. Se on 300-luvun viimeiseltä neljännekseltä eaa., ja sitä kiertää 158 metrin läpimittainen muuri, jonka kalkkikivi on verhottu Thasoksen marmorilla. Sisähauta löytyi vasta 2012: sisäänkäyntiä vartioivat sfinksit, kaksi karyatidia kannattelee seuraavan kammion oven palkkia, ja lattiamosaiikissa Hades ryöstää Persefoneen. Haudasta löytyi viiden ihmisen jäänteet, mutta kenelle se rakennettiin, on yhä kiistanalaista – kaivausryhmän mukaan Aleksanteri Suuren ystävälle Hefaistionille, toisten mukaan Aleksanterin äidille Olympiakselle.
+
+### 68.2
+KYSYMYS: Mitä haudan lattiamosaiikissa on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kastan kumpu Amfipoliissa (historia)
+Tietoruudun teksti: Kastan kumpu muinaisen Amfipoliin lähellä on suurin Kreikasta koskaan löydetty antiikin hautakumpu, paljon suurempi kuin Filippos II:n kumpu Verginassa. Se on 300-luvun viimeiseltä neljännekseltä eaa., ja sitä kiertää 158 metrin läpimittainen muuri, jonka kalkkikivi on verhottu Thasoksen marmorilla. Sisähauta löytyi vasta 2012: sisäänkäyntiä vartioivat sfinksit, kaksi karyatidia kannattelee seuraavan kammion oven palkkia, ja lattiamosaiikissa Hades ryöstää Persefoneen. Haudasta löytyi viiden ihmisen jäänteet, mutta kenelle se rakennettiin, on yhä kiistanalaista – kaivausryhmän mukaan Aleksanteri Suuren ystävälle Hefaistionille, toisten mukaan Aleksanterin äidille Olympiakselle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jerusalem — kohdekartta / Kohdekartta: Pyhän haudan kirkko] Pyhän haudan kirkko ei ole yksi rakennus vaan monta päällekkäistä: kirkkoa on rakennettu, poltettu, korjattu ja laajennettu vuosisatojen ajan, ja lopputulos on sokkelo, jossa eri kristilliset yhteisöt hallitsevat kukin omaa osaansa. Rakennuksen kohdalla oli roomalaisaikana Venuksen temppeli, jonka keisari Hadrianus rakennutti perustaessaan kaupungin uudelleen nimellä Aelia Capitolina. Kirkon sisällä on kaksi erillistä pyhää paikkaa saman katon alla. Golgatan kappeli on yläkerrassa, kallion päällä johon noustaan portaita; alakerrassa on itse hauta pienessä kappelissa keskellä pyöreää salia. Päälaivan yllä kaartuu katolikonin kupoli, jonka keskellä on kultapohjainen Kristus-mosaiikki ja reuno…
+
+### 68.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 68 YHTEINEN KONTEKSTI
+
+### 68.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 68 YHTEINEN KONTEKSTI
+
+### 68.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 68 YHTEINEN KONTEKSTI
+
+================ KOHTA 69 (kohde:hahmotelma-gortynin-laki) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gortynin lakikivi (historia)
+Tietoruudun teksti: Gortynin laki on Etelä-Kreetalla sijainneen antiikin Gortynin kaupunkivaltion siviililakien kokoelma, joka hakattiin 400-luvun alkupuoliskolla eaa. pyöreän julkisen rakennuksen seinään. Säilyneet kaksitoista tekstipalstaa ovat yhteensä noin kymmenen metriä pitkiä ja sisältävät noin 600 riviä, jotka luetaan vuororiveittäin eri suuntiin. Se on yhtä poikkeusta lukuun ottamatta pisin säilynyt antiikin kreikkalainen kirjoitus, ja se säätelee muun muassa avioeroa, perintöä, adoptiota ja orjien asemaa: eronneella naisella oli oikeus omaisuuteen, jonka hän oli tuonut avioliittoon. Suurin osa kivistä oli myöhemmin käytetty roomalaisen odeionin perustuksiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Grönlanti — maalehti / Kuvataide: Kartat, joita luetaan sormenpäillä] 1885 — Kun Gustav Holmin retkikunta pääsi 1880-luvulla Ammassalikin rannikolle Itä-Grönlantiin, se tapasi tunumiit-yhteisöjä, joilla monien mukaan ei ollut ollut aiempaa suoraa kosketusta eurooppalaisiin. Umivikista kotoisin ollut Kunit tuli Holmin luo 8. helmikuuta 1885 ja myi hänelle puisia rannikkokarttoja: kapuloita, joiden reunaan vuonot ja niemet on veistetty kohokuvaksi niin, että kartta luetaan sormin eikä silmin. Maaliskuussa hän toi vielä yhden. Pariisin maantieteellisessä seurassa epäiltiin 1886, olivatko paikalliset voineet tehdä sellaista; Holm kumosi epäilyn. Kartat ovat nyt Grönlannin kansallismuseossa Nuukissa.
+
+### 69.1
+KYSYMYS: Mitä Gortynin laki sääti avioerosta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gortynin lakikivi (historia)
+Tietoruudun teksti: Gortynin laki on Etelä-Kreetalla sijainneen antiikin Gortynin kaupunkivaltion siviililakien kokoelma, joka hakattiin 400-luvun alkupuoliskolla eaa. pyöreän julkisen rakennuksen seinään. Säilyneet kaksitoista tekstipalstaa ovat yhteensä noin kymmenen metriä pitkiä ja sisältävät noin 600 riviä, jotka luetaan vuororiveittäin eri suuntiin. Se on yhtä poikkeusta lukuun ottamatta pisin säilynyt antiikin kreikkalainen kirjoitus, ja se säätelee muun muassa avioeroa, perintöä, adoptiota ja orjien asemaa: eronneella naisella oli oikeus omaisuuteen, jonka hän oli tuonut avioliittoon. Suurin osa kivistä oli myöhemmin käytetty roomalaisen odeionin perustuksiin.
+
+### 69.2
+KYSYMYS: Miten lakia luetaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gortynin lakikivi (historia)
+Tietoruudun teksti: Gortynin laki on Etelä-Kreetalla sijainneen antiikin Gortynin kaupunkivaltion siviililakien kokoelma, joka hakattiin 400-luvun alkupuoliskolla eaa. pyöreän julkisen rakennuksen seinään. Säilyneet kaksitoista tekstipalstaa ovat yhteensä noin kymmenen metriä pitkiä ja sisältävät noin 600 riviä, jotka luetaan vuororiveittäin eri suuntiin. Se on yhtä poikkeusta lukuun ottamatta pisin säilynyt antiikin kreikkalainen kirjoitus, ja se säätelee muun muassa avioeroa, perintöä, adoptiota ja orjien asemaa: eronneella naisella oli oikeus omaisuuteen, jonka hän oli tuonut avioliittoon. Suurin osa kivistä oli myöhemmin käytetty roomalaisen odeionin perustuksiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Grönlanti — maalehti / Kuvataide: Kartat, joita luetaan sormenpäillä] 1885 — Kun Gustav Holmin retkikunta pääsi 1880-luvulla Ammassalikin rannikolle Itä-Grönlantiin, se tapasi tunumiit-yhteisöjä, joilla monien mukaan ei ollut ollut aiempaa suoraa kosketusta eurooppalaisiin. Umivikista kotoisin ollut Kunit tuli Holmin luo 8. helmikuuta 1885 ja myi hänelle puisia rannikkokarttoja: kapuloita, joiden reunaan vuonot ja niemet on veistetty kohokuvaksi niin, että kartta luetaan sormin eikä silmin. Maaliskuussa hän toi vielä yhden. Pariisin maantieteellisessä seurassa epäiltiin 1886, olivatko paikalliset voineet tehdä sellaista; Holm kumosi epäilyn. Kartat ovat nyt Grönlannin kansallismuseossa Nuukissa.
+
+### 69.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 69 YHTEINEN KONTEKSTI
+
+### 69.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 69 YHTEINEN KONTEKSTI
+
+### 69.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 69 YHTEINEN KONTEKSTI
+
+================ KOHTA 70 (kohde:hahmotelma-chlemoutsi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chlemoutsin ristiretkilinna (historia)
+Tietoruudun teksti: Chlemoutsi eli Clermont on keskiaikainen linna Elisissä Peloponnesoksen luoteiskulmassa, 226 metrin korkeudella pienellä ylätasangolla. Sen rakennutti 1220–1223 Akhaian ruhtinaskunnan ristiretkeläishallitsija Geoffroi I de Villehardouin, joka takavarikoi kirkon omaisuutta, kun papisto kieltäytyi antamasta lisävaroja maan puolustukseen. Linnan ydin on sisäpihan ympärille rakennettu kuusikulmainen päälinna, ja se on säilynyt suurelta osin 1200-luvun asussaan. Ruhtinaskunnan aikana linnaa ei kertaakaan piiritetty, vaan se toimi arvovankien vankilana; italialaisten käyttämä nimi Castel Tornese syntyi ilmeisesti sekaannuksesta läheisen Glarentzan rahapajan kanssa, jossa lyötiin tornese-hopearahoja.
+
+### 70.1
+KYSYMYS: Kuka rakennutti Chlemoutsin linnan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chlemoutsin ristiretkilinna (historia)
+Tietoruudun teksti: Chlemoutsi eli Clermont on keskiaikainen linna Elisissä Peloponnesoksen luoteiskulmassa, 226 metrin korkeudella pienellä ylätasangolla. Sen rakennutti 1220–1223 Akhaian ruhtinaskunnan ristiretkeläishallitsija Geoffroi I de Villehardouin, joka takavarikoi kirkon omaisuutta, kun papisto kieltäytyi antamasta lisävaroja maan puolustukseen. Linnan ydin on sisäpihan ympärille rakennettu kuusikulmainen päälinna, ja se on säilynyt suurelta osin 1200-luvun asussaan. Ruhtinaskunnan aikana linnaa ei kertaakaan piiritetty, vaan se toimi arvovankien vankilana; italialaisten käyttämä nimi Castel Tornese syntyi ilmeisesti sekaannuksesta läheisen Glarentzan rahapajan kanssa, jossa lyötiin tornese-hopearahoja.
+
+### 70.2
+KYSYMYS: Miksi linnaa kutsuttiin Castel Torneseksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chlemoutsin ristiretkilinna (historia)
+Tietoruudun teksti: Chlemoutsi eli Clermont on keskiaikainen linna Elisissä Peloponnesoksen luoteiskulmassa, 226 metrin korkeudella pienellä ylätasangolla. Sen rakennutti 1220–1223 Akhaian ruhtinaskunnan ristiretkeläishallitsija Geoffroi I de Villehardouin, joka takavarikoi kirkon omaisuutta, kun papisto kieltäytyi antamasta lisävaroja maan puolustukseen. Linnan ydin on sisäpihan ympärille rakennettu kuusikulmainen päälinna, ja se on säilynyt suurelta osin 1200-luvun asussaan. Ruhtinaskunnan aikana linnaa ei kertaakaan piiritetty, vaan se toimi arvovankien vankilana; italialaisten käyttämä nimi Castel Tornese syntyi ilmeisesti sekaannuksesta läheisen Glarentzan rahapajan kanssa, jossa lyötiin tornese-hopearahoja.
+
+### 70.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 70 YHTEINEN KONTEKSTI
+
+### 70.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 70 YHTEINEN KONTEKSTI
+
+### 70.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 70 YHTEINEN KONTEKSTI

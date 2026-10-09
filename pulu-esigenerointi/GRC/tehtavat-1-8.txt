@@ -1,0 +1,197 @@
+================ KOHTA 36 (kohde:hahmotelma-milos) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Milos (luonto · saari)
+Tietoruudun teksti: Milos on tulivuoriperäinen kreikkalainen saari Egeanmerellä, aivan Kreetanmeren pohjoispuolella, ja se on Kykladien lounaisin saari. Sen veistoksiin kuuluvat Louvressa oleva Venus de Milo, Ateenan kansallisessa arkeologisessa museossa oleva Melosin Poseidon ja Britannian museossa oleva Melosin Asklepios. Saaren ja sen asumattomien Antimilosin ja Akradiesin saarten yhteinen maa-ala on 160 neliökilometriä, ja vuoden 2021 väestönlaskennassa saarella oli 5 193 asukasta. Milosin obsidiaania, lasimaista tulivuorikiveä, käytiin kauppaa jo noin 15 000 vuotta sitten, ja se muotoiltiin erittäin teräviksi kivityökaluiksi ennen maanviljelyn alkua.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Kuvataide: Venus nousi merestä Firenzessä] Sandro Botticellin Venus nousee merestä simpukankuoressa, ja tuulet puhaltavat sen rantaan ruusujen sateessa. Maalaus syntyi 1480-luvun Firenzessä Medici-suvun tilauksesta, ja se oli rohkea teko: ensimmäisiä suuria maalauksia vuosisatoihin, joiden aihe ei ollut Raamatusta vaan antiikin tarustosta. Vuosisatoja myöhemmin siitä on tullut yksi maailman tunnistetuimmista kuvista — Venus katsoo ohi, kuin ei huomaisi koko mainetta.
+
+### 36.1
+KYSYMYS: Mikä Venus de Milo on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Milos (luonto · saari)
+Tietoruudun teksti: Milos on tulivuoriperäinen kreikkalainen saari Egeanmerellä, aivan Kreetanmeren pohjoispuolella, ja se on Kykladien lounaisin saari. Sen veistoksiin kuuluvat Louvressa oleva Venus de Milo, Ateenan kansallisessa arkeologisessa museossa oleva Melosin Poseidon ja Britannian museossa oleva Melosin Asklepios. Saaren ja sen asumattomien Antimilosin ja Akradiesin saarten yhteinen maa-ala on 160 neliökilometriä, ja vuoden 2021 väestönlaskennassa saarella oli 5 193 asukasta. Milosin obsidiaania, lasimaista tulivuorikiveä, käytiin kauppaa jo noin 15 000 vuotta sitten, ja se muotoiltiin erittäin teräviksi kivityökaluiksi ennen maanviljelyn alkua.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Kuvataide: Venus nousi merestä Firenzessä] Sandro Botticellin Venus nousee merestä simpukankuoressa, ja tuulet puhaltavat sen rantaan ruusujen sateessa. Maalaus syntyi 1480-luvun Firenzessä Medici-suvun tilauksesta, ja se oli rohkea teko: ensimmäisiä suuria maalauksia vuosisatoihin, joiden aihe ei ollut Raamatusta vaan antiikin tarustosta. Vuosisatoja myöhemmin siitä on tullut yksi maailman tunnistetuimmista kuvista — Venus katsoo ohi, kuin ei huomaisi koko mainetta.
+
+### 36.2
+KYSYMYS: Miksi obsidiaani oli arvokasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Milos (luonto · saari)
+Tietoruudun teksti: Milos on tulivuoriperäinen kreikkalainen saari Egeanmerellä, aivan Kreetanmeren pohjoispuolella, ja se on Kykladien lounaisin saari. Sen veistoksiin kuuluvat Louvressa oleva Venus de Milo, Ateenan kansallisessa arkeologisessa museossa oleva Melosin Poseidon ja Britannian museossa oleva Melosin Asklepios. Saaren ja sen asumattomien Antimilosin ja Akradiesin saarten yhteinen maa-ala on 160 neliökilometriä, ja vuoden 2021 väestönlaskennassa saarella oli 5 193 asukasta. Milosin obsidiaania, lasimaista tulivuorikiveä, käytiin kauppaa jo noin 15 000 vuotta sitten, ja se muotoiltiin erittäin teräviksi kivityökaluiksi ennen maanviljelyn alkua.
+
+### 36.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+================ KOHTA 37 (kohde:hahmotelma-vergina) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vergina (historia)
+Tietoruudun teksti: Vergina on pieni kaupunki Kreikan Makedoniassa Veroian kunnassa Imathiassa. Se on parhaiten tunnettu muinaisen Aigain paikkana, joka oli Makedonian ensimmäinen pääkaupunki. Vuonna 336 eaa. Filippos II murhattiin Aigain teatterissa ja hänen poikansa Aleksanteri Suuri julistettiin kuninkaaksi. Vuonna 1977 arkeologi Manolis Andronikos kaivoi Suuressa Kumpuseudussa esiin Verginan haudat, jotka on numeroitu I, II ja III. Verginan arkeologinen museo on rakennettu kaikkia löytöjä varten, ja se on yksi Kreikan tärkeimmistä museoista. UNESCO merkitsi Aigain maailmanperintökohteeksi poikkeuksellisena todistuksena siirtymästä kaupunkivaltioista hellenistiseen ja roomalaiseen valtiorakenteeseen.
+
+### 37.1
+KYSYMYS: Kuka Filippos II oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vergina (historia)
+Tietoruudun teksti: Vergina on pieni kaupunki Kreikan Makedoniassa Veroian kunnassa Imathiassa. Se on parhaiten tunnettu muinaisen Aigain paikkana, joka oli Makedonian ensimmäinen pääkaupunki. Vuonna 336 eaa. Filippos II murhattiin Aigain teatterissa ja hänen poikansa Aleksanteri Suuri julistettiin kuninkaaksi. Vuonna 1977 arkeologi Manolis Andronikos kaivoi Suuressa Kumpuseudussa esiin Verginan haudat, jotka on numeroitu I, II ja III. Verginan arkeologinen museo on rakennettu kaikkia löytöjä varten, ja se on yksi Kreikan tärkeimmistä museoista. UNESCO merkitsi Aigain maailmanperintökohteeksi poikkeuksellisena todistuksena siirtymästä kaupunkivaltioista hellenistiseen ja roomalaiseen valtiorakenteeseen.
+
+### 37.2
+KYSYMYS: Mikä Aigai oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vergina (historia)
+Tietoruudun teksti: Vergina on pieni kaupunki Kreikan Makedoniassa Veroian kunnassa Imathiassa. Se on parhaiten tunnettu muinaisen Aigain paikkana, joka oli Makedonian ensimmäinen pääkaupunki. Vuonna 336 eaa. Filippos II murhattiin Aigain teatterissa ja hänen poikansa Aleksanteri Suuri julistettiin kuninkaaksi. Vuonna 1977 arkeologi Manolis Andronikos kaivoi Suuressa Kumpuseudussa esiin Verginan haudat, jotka on numeroitu I, II ja III. Verginan arkeologinen museo on rakennettu kaikkia löytöjä varten, ja se on yksi Kreikan tärkeimmistä museoista. UNESCO merkitsi Aigain maailmanperintökohteeksi poikkeuksellisena todistuksena siirtymästä kaupunkivaltioista hellenistiseen ja roomalaiseen valtiorakenteeseen.
+
+### 37.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+================ KOHTA 38 (kohde:hahmotelma-pella) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pella (historia)
+Tietoruudun teksti: Pella oli muinaisen kreikkalaisen Makedonian kuningaskunnan pääkaupunki 300-luvulta eaa. roomalaisten valloitukseen vuonna 168 eaa. asti. Filippos II syntyi Pellassa vuonna 382 eaa. ja hänen poikansa Aleksanteri Suuri vuonna 356 eaa. Kaupunki sijaitsee kilometrin päässä nykyisestä Pellan kaupungista Keski-Makedoniassa. Pellan perusti todennäköisesti 300-luvun alussa eaa. Arkelaos I uudeksi pääkaupungiksi korvaamaan Aigain, joka pysyi kuninkaiden ja kuningasperheen hautapaikkana. Pellasta tuli nopeasti Makedonian suurin ja rikkain kaupunki, ja se kukoisti erityisesti Kassandroksen ja Antigonos II:n aikana. Roomalaiset ryöstivät sen kolmannessa Makedonian sodassa, ja sen merkityksen ohitti lähellä oleva Thessalonike.
+
+### 38.1
+KYSYMYS: Kuka syntyi Pellassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pella (historia)
+Tietoruudun teksti: Pella oli muinaisen kreikkalaisen Makedonian kuningaskunnan pääkaupunki 300-luvulta eaa. roomalaisten valloitukseen vuonna 168 eaa. asti. Filippos II syntyi Pellassa vuonna 382 eaa. ja hänen poikansa Aleksanteri Suuri vuonna 356 eaa. Kaupunki sijaitsee kilometrin päässä nykyisestä Pellan kaupungista Keski-Makedoniassa. Pellan perusti todennäköisesti 300-luvun alussa eaa. Arkelaos I uudeksi pääkaupungiksi korvaamaan Aigain, joka pysyi kuninkaiden ja kuningasperheen hautapaikkana. Pellasta tuli nopeasti Makedonian suurin ja rikkain kaupunki, ja se kukoisti erityisesti Kassandroksen ja Antigonos II:n aikana. Roomalaiset ryöstivät sen kolmannessa Makedonian sodassa, ja sen merkityksen ohitti lähellä oleva Thessalonike.
+
+### 38.2
+KYSYMYS: Miksi Pellan merkitys väheni?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pella (historia)
+Tietoruudun teksti: Pella oli muinaisen kreikkalaisen Makedonian kuningaskunnan pääkaupunki 300-luvulta eaa. roomalaisten valloitukseen vuonna 168 eaa. asti. Filippos II syntyi Pellassa vuonna 382 eaa. ja hänen poikansa Aleksanteri Suuri vuonna 356 eaa. Kaupunki sijaitsee kilometrin päässä nykyisestä Pellan kaupungista Keski-Makedoniassa. Pellan perusti todennäköisesti 300-luvun alussa eaa. Arkelaos I uudeksi pääkaupungiksi korvaamaan Aigain, joka pysyi kuninkaiden ja kuningasperheen hautapaikkana. Pellasta tuli nopeasti Makedonian suurin ja rikkain kaupunki, ja se kukoisti erityisesti Kassandroksen ja Antigonos II:n aikana. Roomalaiset ryöstivät sen kolmannessa Makedonian sodassa, ja sen merkityksen ohitti lähellä oleva Thessalonike.
+
+### 38.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+================ KOHTA 39 (kohde:hahmotelma-philippi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Filippoi (historia)
+Tietoruudun teksti: Filippoi oli merkittävä kreikkalainen kaupunki Thasos-saaren luoteispuolella mantereella. Sen alkuperäinen nimi oli Krenides eli lähteet, ja Filippos II Makedonialainen antoi sille uuden nimen vuonna 356 eaa. Kaupunki hylättiin 1300-luvulla ottomaanien valloituksen jälkeen. Nykyinen Filippoin kylä on lähellä muinaisen kaupungin raunioita Kavalan kaupungin alueella Itä-Makedonian ja Traakian hallintoalueella. UNESCO merkitsi arkeologisen alueen maailmanperintökohteeksi vuonna 2016 poikkeuksellisen roomalaisen arkkitehtuurin, Roomaa pienoiskoossa muistuttavan kaupunkirakenteen ja varhaiskristillisen merkityksen vuoksi. Filippoissa käytiin myös vuonna 42 eaa. Filippoin taistelu, ja Uuden testamentin mukaan apostoli Paavali vieraili kaupungissa toisella lähetysmatkallaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: San Thomen basilika] 1523, nykyinen rakennus 1896 Portugalilaiset lähettivät 1521 lähetyssaarnaajia etsimään apostoli Tuomaan hautaa, jonka perimätieto sijoitti seudulle. Paikka löytyi hoitamattomana, ja kuningas Juhana III:n tuella sinne rakennettiin kirkko, joka vihittiin käyttöön 1523. Fransiscus Xaverius vieraili pyhäkössä 1545 ja asui noin vuoden sen pappilassa. Paavi Paavali V teki kirkosta katedraalin 1606. Nykyinen rakennus on vuodelta 1896, jolloin britit rakensivat kirkon uudelleen uusgoottilaiseen tyyliin kapteeni J. A. Powerin piirustusten mukaan. Se vihittiin juhlallisesti 1. huhtikuuta 1896. Pituutta on 64 metriä, leveyttä 12 ja korkeutta 41. Holvikatto on tiikkiä, ja ikkunoita on kuusitoista ja v…
+- [Kamtšatka — kaupunkilehti / Kamtšatka: Kaksi pakettivenettä antoi satamalle nimen] Merenkulkija Ivan Jelagin lähti Vitus Beringin käskystä Ohotskista syksyllä 1739, talvehti Kamtšatkalla ja purjehti seuraavana keväänä Bolšeretskista niemimaan eteläkärjen ympäri Avatšanlahdelle 10. kesäkuuta 1740. Syyskuun 20. päivänä hän ilmoitti, että rantaan oli valmistunut yhteen liitetty asuinrakennus viisine huoneineen, kolme kasarmia ja kolme kaksikerroksista aittaa. Syyskuun lopulla lahdelle saapui Aleksei Tširikovin pakettivene Pyhä apostoli Paavali ja 6. lokakuuta Beringin Pyhä apostoli Pietari. Satama sai nimensä aluksilta, ja jälkimmäistä päivää — uutta lukua 17. lokakuuta — pidetään kaupungin perustamispäivänä.
+
+### 39.1
+KYSYMYS: Mitä Filippoin taistelussa 42 eaa. tapahtui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Filippoi (historia)
+Tietoruudun teksti: Filippoi oli merkittävä kreikkalainen kaupunki Thasos-saaren luoteispuolella mantereella. Sen alkuperäinen nimi oli Krenides eli lähteet, ja Filippos II Makedonialainen antoi sille uuden nimen vuonna 356 eaa. Kaupunki hylättiin 1300-luvulla ottomaanien valloituksen jälkeen. Nykyinen Filippoin kylä on lähellä muinaisen kaupungin raunioita Kavalan kaupungin alueella Itä-Makedonian ja Traakian hallintoalueella. UNESCO merkitsi arkeologisen alueen maailmanperintökohteeksi vuonna 2016 poikkeuksellisen roomalaisen arkkitehtuurin, Roomaa pienoiskoossa muistuttavan kaupunkirakenteen ja varhaiskristillisen merkityksen vuoksi. Filippoissa käytiin myös vuonna 42 eaa. Filippoin taistelu, ja Uuden testamentin mukaan apostoli Paavali vieraili kaupungissa toisella lähetysmatkallaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marokko — maalehti / Historia: Taistelu, jossa kuoli kolme kuningasta] 4.8.1578 — Syrjäytetty sulttaani Abu Abdallah Mohammed II pyysi apua Portugalin kuninkaalta Sebastian I:ltä saadakseen valtaistuimensa takaisin sedältään Abd al-Malikilta. Armeijat kohtasivat Ksar el-Kebirin lähellä 4. elokuuta 1578. Päivä päättyi niin, että kaikki kolme johtajaa olivat kuolleet: Abd al-Malik kuoli kesken taistelun, Abu Abdallah hukkui jokeen paetessaan ja 24-vuotias Sebastian kaatui kentälle jättämättä perillistä. Marokossa taistelua sanotaan kolmen kuninkaan taisteluksi. Vangituista portugalilaisaatelisista maksetut lunnaat veivät Portugalin lähes vararikkoon, ja kaksi vuotta myöhemmin Espanjan Filip II otti maan haltuunsa.
+
+### 39.2
+KYSYMYS: Miksi apostoli Paavali kävi Filippoissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Filippoi (historia)
+Tietoruudun teksti: Filippoi oli merkittävä kreikkalainen kaupunki Thasos-saaren luoteispuolella mantereella. Sen alkuperäinen nimi oli Krenides eli lähteet, ja Filippos II Makedonialainen antoi sille uuden nimen vuonna 356 eaa. Kaupunki hylättiin 1300-luvulla ottomaanien valloituksen jälkeen. Nykyinen Filippoin kylä on lähellä muinaisen kaupungin raunioita Kavalan kaupungin alueella Itä-Makedonian ja Traakian hallintoalueella. UNESCO merkitsi arkeologisen alueen maailmanperintökohteeksi vuonna 2016 poikkeuksellisen roomalaisen arkkitehtuurin, Roomaa pienoiskoossa muistuttavan kaupunkirakenteen ja varhaiskristillisen merkityksen vuoksi. Filippoissa käytiin myös vuonna 42 eaa. Filippoin taistelu, ja Uuden testamentin mukaan apostoli Paavali vieraili kaupungissa toisella lähetysmatkallaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: San Thomen basilika] 1523, nykyinen rakennus 1896 Portugalilaiset lähettivät 1521 lähetyssaarnaajia etsimään apostoli Tuomaan hautaa, jonka perimätieto sijoitti seudulle. Paikka löytyi hoitamattomana, ja kuningas Juhana III:n tuella sinne rakennettiin kirkko, joka vihittiin käyttöön 1523. Fransiscus Xaverius vieraili pyhäkössä 1545 ja asui noin vuoden sen pappilassa. Paavi Paavali V teki kirkosta katedraalin 1606. Nykyinen rakennus on vuodelta 1896, jolloin britit rakensivat kirkon uudelleen uusgoottilaiseen tyyliin kapteeni J. A. Powerin piirustusten mukaan. Se vihittiin juhlallisesti 1. huhtikuuta 1896. Pituutta on 64 metriä, leveyttä 12 ja korkeutta 41. Holvikatto on tiikkiä, ja ikkunoita on kuusitoista ja v…
+- [Kamtšatka — kaupunkilehti / Kamtšatka: Kaksi pakettivenettä antoi satamalle nimen] Merenkulkija Ivan Jelagin lähti Vitus Beringin käskystä Ohotskista syksyllä 1739, talvehti Kamtšatkalla ja purjehti seuraavana keväänä Bolšeretskista niemimaan eteläkärjen ympäri Avatšanlahdelle 10. kesäkuuta 1740. Syyskuun 20. päivänä hän ilmoitti, että rantaan oli valmistunut yhteen liitetty asuinrakennus viisine huoneineen, kolme kasarmia ja kolme kaksikerroksista aittaa. Syyskuun lopulla lahdelle saapui Aleksei Tširikovin pakettivene Pyhä apostoli Paavali ja 6. lokakuuta Beringin Pyhä apostoli Pietari. Satama sai nimensä aluksilta, ja jälkimmäistä päivää — uutta lukua 17. lokakuuta — pidetään kaupungin perustamispäivänä.
+
+### 39.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+================ KOHTA 40 (kohde:hahmotelma-bassae) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bassain temppeli (historia)
+Tietoruudun teksti: Bassai on arkeologinen kohde Oichalian kunnassa Messenian koillisosassa Kreikassa; antiikin aikana alue kuului Arkadiaan. Se sijaitsee 1 131 metrin korkeudessa Kotylion-vuoren rinteillä lähellä Skliroksen kylää. Paikka on kuuluisa hyvin säilyneestä 400-luvun eaa. puolivälin ja loppupuolen Apollon Epikurioksen temppelistä. Vaikka temppeli on maantieteellisesti syrjässä antiikin Kreikan suurista keskuksista, se on yksi tutkituimmista antiikin kreikkalaisista temppeleistä, koska siinä on paljon epätavallisia piirteitä ja koska se on säilynyt lähes ehjänä. Temppelin arkkitehtuuri poikkeaa merkittävästi doorilaisen ja joonialaisen tyylin normeista, ja siinä on ehkä ensimmäistä kertaa käytetty korinttilaista pylväsjärjestystä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Alegre — kohdekartta / Kohdekartta: Vanha kaupungintalo] 1898–1901 Porto Alegren kaupunginjohto toimi 1800-luvun lopulla vuokratiloissa siellä täällä vanhassa keskustassa. Kun José Montaury valittiin 1897 intendantiksi, hän lupasi rakentaa kaupungille oman talon. Rahat kerättiin myymällä kaupungin kiinteistöjä ja täyttämällä maata Doca do Carvãossa. Ensimmäinen suunnitelma oli insinööri Oscar Bittencourtin, mutta se kaadettiin poliittisista syistä, ja uusi tilattiin venetsialaiselta insinööriltä Giovanni Colfoscolta. Peruskivi laskettiin 5. huhtikuuta 1898, työ alkoi saman vuoden 28. syyskuuta ja talo valmistui huhtikuussa 1901. Toukokuun 15. päivästä alkaen siihen muuttivat kaupunginvaltuusto, sihteeristö, kirjanpito, rahasto ja verotus sekä jul…
+
+### 40.1
+KYSYMYS: Miksi Bassain temppeli on erikoinen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bassain temppeli (historia)
+Tietoruudun teksti: Bassai on arkeologinen kohde Oichalian kunnassa Messenian koillisosassa Kreikassa; antiikin aikana alue kuului Arkadiaan. Se sijaitsee 1 131 metrin korkeudessa Kotylion-vuoren rinteillä lähellä Skliroksen kylää. Paikka on kuuluisa hyvin säilyneestä 400-luvun eaa. puolivälin ja loppupuolen Apollon Epikurioksen temppelistä. Vaikka temppeli on maantieteellisesti syrjässä antiikin Kreikan suurista keskuksista, se on yksi tutkituimmista antiikin kreikkalaisista temppeleistä, koska siinä on paljon epätavallisia piirteitä ja koska se on säilynyt lähes ehjänä. Temppelin arkkitehtuuri poikkeaa merkittävästi doorilaisen ja joonialaisen tyylin normeista, ja siinä on ehkä ensimmäistä kertaa käytetty korinttilaista pylväsjärjestystä.
+
+### 40.2
+KYSYMYS: Mikä on korinttilainen pylväsjärjestys?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bassain temppeli (historia)
+Tietoruudun teksti: Bassai on arkeologinen kohde Oichalian kunnassa Messenian koillisosassa Kreikassa; antiikin aikana alue kuului Arkadiaan. Se sijaitsee 1 131 metrin korkeudessa Kotylion-vuoren rinteillä lähellä Skliroksen kylää. Paikka on kuuluisa hyvin säilyneestä 400-luvun eaa. puolivälin ja loppupuolen Apollon Epikurioksen temppelistä. Vaikka temppeli on maantieteellisesti syrjässä antiikin Kreikan suurista keskuksista, se on yksi tutkituimmista antiikin kreikkalaisista temppeleistä, koska siinä on paljon epätavallisia piirteitä ja koska se on säilynyt lähes ehjänä. Temppelin arkkitehtuuri poikkeaa merkittävästi doorilaisen ja joonialaisen tyylin normeista, ja siinä on ehkä ensimmäistä kertaa käytetty korinttilaista pylväsjärjestystä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Alegre — kohdekartta / Kohdekartta: Vanha kaupungintalo] 1898–1901 Porto Alegren kaupunginjohto toimi 1800-luvun lopulla vuokratiloissa siellä täällä vanhassa keskustassa. Kun José Montaury valittiin 1897 intendantiksi, hän lupasi rakentaa kaupungille oman talon. Rahat kerättiin myymällä kaupungin kiinteistöjä ja täyttämällä maata Doca do Carvãossa. Ensimmäinen suunnitelma oli insinööri Oscar Bittencourtin, mutta se kaadettiin poliittisista syistä, ja uusi tilattiin venetsialaiselta insinööriltä Giovanni Colfoscolta. Peruskivi laskettiin 5. huhtikuuta 1898, työ alkoi saman vuoden 28. syyskuuta ja talo valmistui huhtikuussa 1901. Toukokuun 15. päivästä alkaen siihen muuttivat kaupunginvaltuusto, sihteeristö, kirjanpito, rahasto ja verotus sekä jul…
+
+### 40.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI

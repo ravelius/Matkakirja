@@ -1,0 +1,196 @@
+================ KOHTA 61 (kohde:hahmotelma-deinokrateen-vuori) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Deinokrateen vuoripatsas (luonto · vuori)
+Tietoruudun teksti: Athos-vuori nousee niemimaan kärjessä jyrkkinä, metsäisinä rinteinä 2033 metrin korkeuteen. Roomalainen arkkitehti Vitruvius kertoo tarinan, jonka todenperäisyys on epävarma: Aleksanteri Suuren arkkitehti Deinokrates olisi ehdottanut koko vuoren veistämistä valtavaksi miehen hahmoksi: toisessa kädessä olisi kaupunki ja toisesta virtaisi joki mereen. Aleksanteri olisi hylännyt ajatuksen, koska Deinokrates ei ollut miettinyt, mistä kaupungin asukkaat saisivat ruokansa, ja kaupunki perustettiin sen sijaan Niilin hedelmälliseen suistoon – siitä tuli Aleksandria. Vuorella kasvaa ainakin 35 kasvilajia, joita ei ole missään muualla, ja useimmat niistä huipun tuntumassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Novosibirsk — kohdekartta / Kohdekartta: Aleksanteri Nevskin katedraali] 1896–1899 Katedraali on kaupungin ensimmäisiä kivirakennuksia. Se rakennettiin vuosina 1896–1899, siis samaan aikaan kuin rautatiesilta ja sen ympärille kasvava taajama, ja vihittiin käyttöön 29. joulukuuta 1899. Katedraalin aseman se sai vuonna 1915. Tyyli on uusbysanttilainen: massiivinen keskuskupoli, punatiiliset seinät ja kaari-ikkunoiden rivistöt. Mallina oli Pietarissa muutamaa vuotta aiemmin rakennettu Armollisen Jumalanäidin kirkko. Tiili on täällä poikkeuksellisen näkyvässä osassa — sitä ei ole rapattu lainkaan, ja koristeaiheet on ladottu itse muurauksesta. Kirkko on myös muistomerkki. Se pystytettiin keisari Aleksanteri III:n muistolle: hän oli pannut alulle Transsiperian radan,…
+
+### 61.1
+KYSYMYS: Kuka oli Deinokrates?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Deinokrateen vuoripatsas (luonto · vuori)
+Tietoruudun teksti: Athos-vuori nousee niemimaan kärjessä jyrkkinä, metsäisinä rinteinä 2033 metrin korkeuteen. Roomalainen arkkitehti Vitruvius kertoo tarinan, jonka todenperäisyys on epävarma: Aleksanteri Suuren arkkitehti Deinokrates olisi ehdottanut koko vuoren veistämistä valtavaksi miehen hahmoksi: toisessa kädessä olisi kaupunki ja toisesta virtaisi joki mereen. Aleksanteri olisi hylännyt ajatuksen, koska Deinokrates ei ollut miettinyt, mistä kaupungin asukkaat saisivat ruokansa, ja kaupunki perustettiin sen sijaan Niilin hedelmälliseen suistoon – siitä tuli Aleksandria. Vuorella kasvaa ainakin 35 kasvilajia, joita ei ole missään muualla, ja useimmat niistä huipun tuntumassa.
+
+### 61.2
+KYSYMYS: Miksi Aleksanteri hylkäsi vuoripatsaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Deinokrateen vuoripatsas (luonto · vuori)
+Tietoruudun teksti: Athos-vuori nousee niemimaan kärjessä jyrkkinä, metsäisinä rinteinä 2033 metrin korkeuteen. Roomalainen arkkitehti Vitruvius kertoo tarinan, jonka todenperäisyys on epävarma: Aleksanteri Suuren arkkitehti Deinokrates olisi ehdottanut koko vuoren veistämistä valtavaksi miehen hahmoksi: toisessa kädessä olisi kaupunki ja toisesta virtaisi joki mereen. Aleksanteri olisi hylännyt ajatuksen, koska Deinokrates ei ollut miettinyt, mistä kaupungin asukkaat saisivat ruokansa, ja kaupunki perustettiin sen sijaan Niilin hedelmälliseen suistoon – siitä tuli Aleksandria. Vuorella kasvaa ainakin 35 kasvilajia, joita ei ole missään muualla, ja useimmat niistä huipun tuntumassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Novosibirsk — kohdekartta / Kohdekartta: Aleksanteri Nevskin katedraali] 1896–1899 Katedraali on kaupungin ensimmäisiä kivirakennuksia. Se rakennettiin vuosina 1896–1899, siis samaan aikaan kuin rautatiesilta ja sen ympärille kasvava taajama, ja vihittiin käyttöön 29. joulukuuta 1899. Katedraalin aseman se sai vuonna 1915. Tyyli on uusbysanttilainen: massiivinen keskuskupoli, punatiiliset seinät ja kaari-ikkunoiden rivistöt. Mallina oli Pietarissa muutamaa vuotta aiemmin rakennettu Armollisen Jumalanäidin kirkko. Tiili on täällä poikkeuksellisen näkyvässä osassa — sitä ei ole rapattu lainkaan, ja koristeaiheet on ladottu itse muurauksesta. Kirkko on myös muistomerkki. Se pystytettiin keisari Aleksanteri III:n muistolle: hän oli pannut alulle Transsiperian radan,…
+
+### 61.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 61 YHTEINEN KONTEKSTI
+
+### 61.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 61 YHTEINEN KONTEKSTI
+
+### 61.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 61 YHTEINEN KONTEKSTI
+
+================ KOHTA 62 (kohde:hahmotelma-eleusiin-mysteerit) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eleusiin mysteerit (historia)
+Tietoruudun teksti: Eleusis oli Demeterin ja Persefoneen pyhäkkö Ateenan länsipuolella, ja sen vihkimysmenot olivat antiikin Kreikan kuuluisimpia salaisia riittejä. Joka syksy kulkue vaelsi Ateenasta Pyhää tietä pitkin Eleusiiseen, ja vihittävät astuivat Telesterion-saliin, johon mahtui tuhansia ihmisiä. Menojen ydintä ei saanut paljastaa kenellekään, ja rangaistus oli kuolema – siksi niistä tiedetään yhä hyvin vähän. Mysteerejä vietettiin lähes kaksituhatta vuotta, kunnes keisari Theodosius I lakkautti ne 392 jaa. ja goottikuningas Alarikin joukot hävittivät pyhäkön 396.
+
+### 62.1
+KYSYMYS: Mitä Eleusiin mysteereistä tiedetään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eleusiin mysteerit (historia)
+Tietoruudun teksti: Eleusis oli Demeterin ja Persefoneen pyhäkkö Ateenan länsipuolella, ja sen vihkimysmenot olivat antiikin Kreikan kuuluisimpia salaisia riittejä. Joka syksy kulkue vaelsi Ateenasta Pyhää tietä pitkin Eleusiiseen, ja vihittävät astuivat Telesterion-saliin, johon mahtui tuhansia ihmisiä. Menojen ydintä ei saanut paljastaa kenellekään, ja rangaistus oli kuolema – siksi niistä tiedetään yhä hyvin vähän. Mysteerejä vietettiin lähes kaksituhatta vuotta, kunnes keisari Theodosius I lakkautti ne 392 jaa. ja goottikuningas Alarikin joukot hävittivät pyhäkön 396.
+
+### 62.2
+KYSYMYS: Kuka lakkautti mysteerit?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eleusiin mysteerit (historia)
+Tietoruudun teksti: Eleusis oli Demeterin ja Persefoneen pyhäkkö Ateenan länsipuolella, ja sen vihkimysmenot olivat antiikin Kreikan kuuluisimpia salaisia riittejä. Joka syksy kulkue vaelsi Ateenasta Pyhää tietä pitkin Eleusiiseen, ja vihittävät astuivat Telesterion-saliin, johon mahtui tuhansia ihmisiä. Menojen ydintä ei saanut paljastaa kenellekään, ja rangaistus oli kuolema – siksi niistä tiedetään yhä hyvin vähän. Mysteerejä vietettiin lähes kaksituhatta vuotta, kunnes keisari Theodosius I lakkautti ne 392 jaa. ja goottikuningas Alarikin joukot hävittivät pyhäkön 396.
+
+### 62.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 62 YHTEINEN KONTEKSTI
+
+### 62.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 62 YHTEINEN KONTEKSTI
+
+### 62.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 62 YHTEINEN KONTEKSTI
+
+================ KOHTA 63 (kohde:hahmotelma-nekromanteion) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuolleiden oraakkeli Akheronin rannalla (historia)
+Tietoruudun teksti: Muinaiset kreikkalaiset uskoivat, että Epeiroksessa Akheron-joen rannalla oli kuolleiden oraakkeli, Nekromanteion, jossa saattoi puhutella vainajia. Herodotoksen mukaan Korintin tyranni Periandros lähetti sinne viestinviejiä kysymään neuvoa kuolleelta vaimoltaan Melissalta, ja Homeroksen Odysseiassa paikka on portti, jonka kautta Odysseus laskeutui manalaan. Vuonna 1958 arkeologi Sotirios Dakaris tunnisti Mesopotamoksen kylän kukkulalta löytyneen rakennuksen oraakkeliksi. Tulkinta on sittemmin kyseenalaistettu: rauniot ovat vasta 300-luvun lopulta eaa., ja pronssiosat, joita Dakaris piti näyttämönosturin osina, osoittautuivat katapulttien osiksi, joten rakennus saattoi olla linnoitettu maatila.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Etelä-Sudan — maalehti / Tarinat ja uskomukset: Kolme oraakkelia, joilla oli eri hinta] Azandet käyttivät kolmea oraakkelia, ja niillä oli selvä arvojärjestys. Arvostetuin oli benge, myrkkyoraakkeli, jota vain miehet saivat käyttää ja jonka päätöstä ei kyseenalaistettu. Sitä halvempi ja kaikille avoin oli termiittioraakkeli, jonka vastausta naiset, miehet ja lapset saivat kysyä. Halvin ja epäluotettavimpana pidetty oli hankausoraakkeli, kahdesta puupalasta tehty väline, joka kulki mukana ja jolta saattoi kysyä missä ja milloin tahansa. Pitkään oraakkelit olivat myös oikeuslaitos: ne osoittivat, kuka oli aiheuttanut onnettomuuden.
+- [Etelä-Sudan — maalehti / Tarinat ja uskomukset] Kun jokin menee pieleen, kysymys ei ole mitä tapahtui vaan kuka sen takana on — ja vastauksen antaa oraakkeli.
+
+### 63.1
+KYSYMYS: Mikä oli kuolleiden oraakkeli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuolleiden oraakkeli Akheronin rannalla (historia)
+Tietoruudun teksti: Muinaiset kreikkalaiset uskoivat, että Epeiroksessa Akheron-joen rannalla oli kuolleiden oraakkeli, Nekromanteion, jossa saattoi puhutella vainajia. Herodotoksen mukaan Korintin tyranni Periandros lähetti sinne viestinviejiä kysymään neuvoa kuolleelta vaimoltaan Melissalta, ja Homeroksen Odysseiassa paikka on portti, jonka kautta Odysseus laskeutui manalaan. Vuonna 1958 arkeologi Sotirios Dakaris tunnisti Mesopotamoksen kylän kukkulalta löytyneen rakennuksen oraakkeliksi. Tulkinta on sittemmin kyseenalaistettu: rauniot ovat vasta 300-luvun lopulta eaa., ja pronssiosat, joita Dakaris piti näyttämönosturin osina, osoittautuivat katapulttien osiksi, joten rakennus saattoi olla linnoitettu maatila.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Etelä-Sudan — maalehti / Tarinat ja uskomukset: Kolme oraakkelia, joilla oli eri hinta] Azandet käyttivät kolmea oraakkelia, ja niillä oli selvä arvojärjestys. Arvostetuin oli benge, myrkkyoraakkeli, jota vain miehet saivat käyttää ja jonka päätöstä ei kyseenalaistettu. Sitä halvempi ja kaikille avoin oli termiittioraakkeli, jonka vastausta naiset, miehet ja lapset saivat kysyä. Halvin ja epäluotettavimpana pidetty oli hankausoraakkeli, kahdesta puupalasta tehty väline, joka kulki mukana ja jolta saattoi kysyä missä ja milloin tahansa. Pitkään oraakkelit olivat myös oikeuslaitos: ne osoittivat, kuka oli aiheuttanut onnettomuuden.
+- [Etelä-Sudan — maalehti / Tarinat ja uskomukset] Kun jokin menee pieleen, kysymys ei ole mitä tapahtui vaan kuka sen takana on — ja vastauksen antaa oraakkeli.
+
+### 63.2
+KYSYMYS: Miksi Nekromanteionin tulkinta on kyseenalaistettu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuolleiden oraakkeli Akheronin rannalla (historia)
+Tietoruudun teksti: Muinaiset kreikkalaiset uskoivat, että Epeiroksessa Akheron-joen rannalla oli kuolleiden oraakkeli, Nekromanteion, jossa saattoi puhutella vainajia. Herodotoksen mukaan Korintin tyranni Periandros lähetti sinne viestinviejiä kysymään neuvoa kuolleelta vaimoltaan Melissalta, ja Homeroksen Odysseiassa paikka on portti, jonka kautta Odysseus laskeutui manalaan. Vuonna 1958 arkeologi Sotirios Dakaris tunnisti Mesopotamoksen kylän kukkulalta löytyneen rakennuksen oraakkeliksi. Tulkinta on sittemmin kyseenalaistettu: rauniot ovat vasta 300-luvun lopulta eaa., ja pronssiosat, joita Dakaris piti näyttämönosturin osina, osoittautuivat katapulttien osiksi, joten rakennus saattoi olla linnoitettu maatila.
+
+### 63.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 63 YHTEINEN KONTEKSTI
+
+### 63.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 63 YHTEINEN KONTEKSTI
+
+### 63.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 63 YHTEINEN KONTEKSTI
+
+================ KOHTA 64 (kohde:hahmotelma-keros) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keros ja rikotut marmorihahmot (luonto · saari)
+Tietoruudun teksti: Keros on asumaton Kykladien saari noin kymmenen kilometriä Naxoksesta kaakkoon, ja sille on nykyään kielletty nousemasta maihin. Noin 2500 eaa. se oli kykladisen kulttuurin tärkeä paikka: saaren länsirannan Kavoksen seudulta on peräisin niin sanottu Keroksen aarre, valtava kasa kykladisia marmorihahmoja. Cambridgen yliopiston kaivauksissa 2006–2008 selvisi, että hahmot ja marmoriastiat oli rikottu jo muualla ja tuotu saarelle tarkoituksella, eikä joukosta löydy toisiinsa sopivia palasia. Viereisellä Dhaskalion luodolla, joka oli ennen kiinni Keroksessa, on Kykladien laajin varhaispronssikautinen asuinpaikka, ja sen rinteet oli muurattu mahtaviksi terasseiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Auckland — kohdekartta / Kohdekartta: Symonds Streetin hautausmaa] 1842 Symonds Streetin hautausmaa oli Aucklandin ensimmäinen virallinen hautausmaa, ja siihen haudattiin vuodesta 1842 alkaen. Se on 5,8 hehtaarin lehtimetsä Grafton Gullyn länsirinteellä Symonds Streetin ja Karangahape Roadin kulmassa, ja nimi tulee William Cornwallis Symondsilta, brittiupseerilta, joka oli näkyvästi mukana siirtokunnan perustamisessa. Alue jaettiin aluksi neljään osaan: anglikaaneille, katolisille ja juutalaisille sekä yhteinen osa presbyteereille, wesleyläisille ja muille. Vuoteen 1852 mennessä yhteisestä osasta tuli presbyteerien, ja rinnalle tehtiin uusi wesleyläisten ja yleinen osa. Kun Länsi-Aucklandiin perustettiin uusi kunnallinen hautausmaa Waikumeteen, Symonds Str…
+- [Bryssel — kohdekartta / Kohdekartta: Manneken Pis] 1619 Manneken Pis on 55,5 senttimetrin korkuinen pronssinen suihkulähdepatsas, joka esittää alastonta poikaa pissaamassa altaaseen. Suihkulähde mainitaan jo vuosien 1451–1452 asiakirjassa kaupungin vesijohdoista, ja alun perin se jakoi asukkaille juomavettä. Nykyisen hahmon muotoili kuvanveistäjä Jérôme Duquesnoy vanhempi kaupunginneuvoston tilauksesta vuonna 1619, ja sinisestä kivestä tehty rokokoosyvennys on vuodelta 1770. Patsasta on varastettu ja rikottu monta kertaa. Vuonna 1817 vapautettu vanki Antoine Licas vei sen, ja patsas hajosi yhteentoista palaan. Varas tuomittiin elinkautiseen pakkotyöhön, ja ensin hänet sidottiin tunniksi häpeäpaaluun Grand-Placella. Palat koottiin ja niistä …
+
+### 64.1
+KYSYMYS: Mikä on Keroksen aarre?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keros ja rikotut marmorihahmot (luonto · saari)
+Tietoruudun teksti: Keros on asumaton Kykladien saari noin kymmenen kilometriä Naxoksesta kaakkoon, ja sille on nykyään kielletty nousemasta maihin. Noin 2500 eaa. se oli kykladisen kulttuurin tärkeä paikka: saaren länsirannan Kavoksen seudulta on peräisin niin sanottu Keroksen aarre, valtava kasa kykladisia marmorihahmoja. Cambridgen yliopiston kaivauksissa 2006–2008 selvisi, että hahmot ja marmoriastiat oli rikottu jo muualla ja tuotu saarelle tarkoituksella, eikä joukosta löydy toisiinsa sopivia palasia. Viereisellä Dhaskalion luodolla, joka oli ennen kiinni Keroksessa, on Kykladien laajin varhaispronssikautinen asuinpaikka, ja sen rinteet oli muurattu mahtaviksi terasseiksi.
+
+### 64.2
+KYSYMYS: Miksi hahmot oli rikottu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keros ja rikotut marmorihahmot (luonto · saari)
+Tietoruudun teksti: Keros on asumaton Kykladien saari noin kymmenen kilometriä Naxoksesta kaakkoon, ja sille on nykyään kielletty nousemasta maihin. Noin 2500 eaa. se oli kykladisen kulttuurin tärkeä paikka: saaren länsirannan Kavoksen seudulta on peräisin niin sanottu Keroksen aarre, valtava kasa kykladisia marmorihahmoja. Cambridgen yliopiston kaivauksissa 2006–2008 selvisi, että hahmot ja marmoriastiat oli rikottu jo muualla ja tuotu saarelle tarkoituksella, eikä joukosta löydy toisiinsa sopivia palasia. Viereisellä Dhaskalion luodolla, joka oli ennen kiinni Keroksessa, on Kykladien laajin varhaispronssikautinen asuinpaikka, ja sen rinteet oli muurattu mahtaviksi terasseiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Auckland — kohdekartta / Kohdekartta: Symonds Streetin hautausmaa] 1842 Symonds Streetin hautausmaa oli Aucklandin ensimmäinen virallinen hautausmaa, ja siihen haudattiin vuodesta 1842 alkaen. Se on 5,8 hehtaarin lehtimetsä Grafton Gullyn länsirinteellä Symonds Streetin ja Karangahape Roadin kulmassa, ja nimi tulee William Cornwallis Symondsilta, brittiupseerilta, joka oli näkyvästi mukana siirtokunnan perustamisessa. Alue jaettiin aluksi neljään osaan: anglikaaneille, katolisille ja juutalaisille sekä yhteinen osa presbyteereille, wesleyläisille ja muille. Vuoteen 1852 mennessä yhteisestä osasta tuli presbyteerien, ja rinnalle tehtiin uusi wesleyläisten ja yleinen osa. Kun Länsi-Aucklandiin perustettiin uusi kunnallinen hautausmaa Waikumeteen, Symonds Str…
+- [Bryssel — kohdekartta / Kohdekartta: Manneken Pis] 1619 Manneken Pis on 55,5 senttimetrin korkuinen pronssinen suihkulähdepatsas, joka esittää alastonta poikaa pissaamassa altaaseen. Suihkulähde mainitaan jo vuosien 1451–1452 asiakirjassa kaupungin vesijohdoista, ja alun perin se jakoi asukkaille juomavettä. Nykyisen hahmon muotoili kuvanveistäjä Jérôme Duquesnoy vanhempi kaupunginneuvoston tilauksesta vuonna 1619, ja sinisestä kivestä tehty rokokoosyvennys on vuodelta 1770. Patsasta on varastettu ja rikottu monta kertaa. Vuonna 1817 vapautettu vanki Antoine Licas vei sen, ja patsas hajosi yhteentoista palaan. Varas tuomittiin elinkautiseen pakkotyöhön, ja ensin hänet sidottiin tunniksi häpeäpaaluun Grand-Placella. Palat koottiin ja niistä …
+
+### 64.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 64 YHTEINEN KONTEKSTI
+
+### 64.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 64 YHTEINEN KONTEKSTI
+
+### 64.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 64 YHTEINEN KONTEKSTI
+
+================ KOHTA 65 (kohde:hahmotelma-abdera) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Abdera, hölmöjen ja atomien kaupunki (historia)
+Tietoruudun teksti: Abdera oli antiikin kaupunki Traakian rannikolla vastapäätä Thasoksen saarta. Ensimmäinen siirtokunta epäonnistui, mutta 544 eaa. suurin osa Teoksen asukkaista muutti tänne pakoon persialaisia. Myöhemmin abderalaisista tuli vitsien aihe: Cicero käytti kaupungin nimeä tyhmyyden vertauskuvana, ja antiikin vitsikirjassa Philogeloksessa on kokonainen luku abderalaisvitsejä. Silti kaupungista tulivat filosofit Demokritos, joka muistetaan atomiteoriastaan, ja Protagoras, jonka lause "ihminen on kaiken mitta" tunnetaan yhä.
+
+### 65.1
+KYSYMYS: Miksi abderalaisille naurettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Abdera, hölmöjen ja atomien kaupunki (historia)
+Tietoruudun teksti: Abdera oli antiikin kaupunki Traakian rannikolla vastapäätä Thasoksen saarta. Ensimmäinen siirtokunta epäonnistui, mutta 544 eaa. suurin osa Teoksen asukkaista muutti tänne pakoon persialaisia. Myöhemmin abderalaisista tuli vitsien aihe: Cicero käytti kaupungin nimeä tyhmyyden vertauskuvana, ja antiikin vitsikirjassa Philogeloksessa on kokonainen luku abderalaisvitsejä. Silti kaupungista tulivat filosofit Demokritos, joka muistetaan atomiteoriastaan, ja Protagoras, jonka lause "ihminen on kaiken mitta" tunnetaan yhä.
+
+### 65.2
+KYSYMYS: Kuka oli Demokritos?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Abdera, hölmöjen ja atomien kaupunki (historia)
+Tietoruudun teksti: Abdera oli antiikin kaupunki Traakian rannikolla vastapäätä Thasoksen saarta. Ensimmäinen siirtokunta epäonnistui, mutta 544 eaa. suurin osa Teoksen asukkaista muutti tänne pakoon persialaisia. Myöhemmin abderalaisista tuli vitsien aihe: Cicero käytti kaupungin nimeä tyhmyyden vertauskuvana, ja antiikin vitsikirjassa Philogeloksessa on kokonainen luku abderalaisvitsejä. Silti kaupungista tulivat filosofit Demokritos, joka muistetaan atomiteoriastaan, ja Protagoras, jonka lause "ihminen on kaiken mitta" tunnetaan yhä.
+
+### 65.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 65 YHTEINEN KONTEKSTI
+
+### 65.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 65 YHTEINEN KONTEKSTI
+
+### 65.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 65 YHTEINEN KONTEKSTI

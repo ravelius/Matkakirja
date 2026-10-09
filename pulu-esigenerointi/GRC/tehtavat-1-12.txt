@@ -1,0 +1,190 @@
+================ KOHTA 56 (kohde:hahmotelma-thermopylae) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thermopylai (historia)
+Tietoruudun teksti: Thermopylai on kapea solakohta ja nykyaikainen kaupunki Lamian alueella Phthiotiksessa Kreikassa. Nimi tarkoittaa kuumia portteja, ja se tulee paikan kuumista rikkilähteistä; kreikkalaisessa mytologiassa Kuumat portit olivat yksi Haadeksen sisäänkäynneistä. Paikka on kuuluisa vuoden 480 eaa. taistelusta, jossa kreikkalaisjoukot, joiden joukossa oli 300 spartalaista, kohtasivat hyökkäävät persialaiset. Taistelua muistetaan Keoksen Simonideen epitafilla, jossa sanotaan, että ohikulkijan tulee kertoa spartalaisille, että täällä he makaavat noudattaen lakeja. Thermopylai on ainoa riittävän suuri maayhteys Lokriin ja Thessalian välillä, ja nykyisen moottoritien itäpuolella on kuningas Leonidas I:n muistomerkki.
+
+### 56.1
+KYSYMYS: Mitä Thermopylain taistelussa tapahtui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thermopylai (historia)
+Tietoruudun teksti: Thermopylai on kapea solakohta ja nykyaikainen kaupunki Lamian alueella Phthiotiksessa Kreikassa. Nimi tarkoittaa kuumia portteja, ja se tulee paikan kuumista rikkilähteistä; kreikkalaisessa mytologiassa Kuumat portit olivat yksi Haadeksen sisäänkäynneistä. Paikka on kuuluisa vuoden 480 eaa. taistelusta, jossa kreikkalaisjoukot, joiden joukossa oli 300 spartalaista, kohtasivat hyökkäävät persialaiset. Taistelua muistetaan Keoksen Simonideen epitafilla, jossa sanotaan, että ohikulkijan tulee kertoa spartalaisille, että täällä he makaavat noudattaen lakeja. Thermopylai on ainoa riittävän suuri maayhteys Lokriin ja Thessalian välillä, ja nykyisen moottoritien itäpuolella on kuningas Leonidas I:n muistomerkki.
+
+### 56.2
+KYSYMYS: Mitä Simonideen epitafi sanoo?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thermopylai (historia)
+Tietoruudun teksti: Thermopylai on kapea solakohta ja nykyaikainen kaupunki Lamian alueella Phthiotiksessa Kreikassa. Nimi tarkoittaa kuumia portteja, ja se tulee paikan kuumista rikkilähteistä; kreikkalaisessa mytologiassa Kuumat portit olivat yksi Haadeksen sisäänkäynneistä. Paikka on kuuluisa vuoden 480 eaa. taistelusta, jossa kreikkalaisjoukot, joiden joukossa oli 300 spartalaista, kohtasivat hyökkäävät persialaiset. Taistelua muistetaan Keoksen Simonideen epitafilla, jossa sanotaan, että ohikulkijan tulee kertoa spartalaisille, että täällä he makaavat noudattaen lakeja. Thermopylai on ainoa riittävän suuri maayhteys Lokriin ja Thessalian välillä, ja nykyisen moottoritien itäpuolella on kuningas Leonidas I:n muistomerkki.
+
+### 56.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 56 YHTEINEN KONTEKSTI
+
+### 56.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 56 YHTEINEN KONTEKSTI
+
+### 56.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 56 YHTEINEN KONTEKSTI
+
+================ KOHTA 57 (kohde:hahmotelma-missolonghi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mesolongi (historia)
+Tietoruudun teksti: Mesolongi eli Missolonghi on kaupunki Länsi-Kreikassa ja Aitolia-Akarnanian alueen pääkaupunki. Vuoden 2021 väestönlaskennan mukaan kunnassa asuu 32 048 ihmistä, joista 13 965 kaupungissa. Kaupunki on Achelooksen ja Evinoksen jokien välissä ja sillä on satama Patrasin lahdella; sen kauppatavaroita ovat kala, viini ja tupakka. Läheinen Mesolongin–Aitolikon laguuniryhmä on osa aluetta. Mesolongi tunnetaan Kreikan vapaussodan aikaisesta dramaattisesta piirityksestä, jossa myös runoilija Lord Byron kuoli. Asukkaiden sankarillisen vastarinnan ja sen jälkeisen kaupunkilaisten teurastuksen vuoksi Mesolongi sai kunnianimen Hiera Polis eli Pyhä kaupunki, joka on ainutlaatuinen Kreikan kaupunkien joukossa.
+
+### 57.1
+KYSYMYS: Miksi Mesolongi sai nimen Pyhä kaupunki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mesolongi (historia)
+Tietoruudun teksti: Mesolongi eli Missolonghi on kaupunki Länsi-Kreikassa ja Aitolia-Akarnanian alueen pääkaupunki. Vuoden 2021 väestönlaskennan mukaan kunnassa asuu 32 048 ihmistä, joista 13 965 kaupungissa. Kaupunki on Achelooksen ja Evinoksen jokien välissä ja sillä on satama Patrasin lahdella; sen kauppatavaroita ovat kala, viini ja tupakka. Läheinen Mesolongin–Aitolikon laguuniryhmä on osa aluetta. Mesolongi tunnetaan Kreikan vapaussodan aikaisesta dramaattisesta piirityksestä, jossa myös runoilija Lord Byron kuoli. Asukkaiden sankarillisen vastarinnan ja sen jälkeisen kaupunkilaisten teurastuksen vuoksi Mesolongi sai kunnianimen Hiera Polis eli Pyhä kaupunki, joka on ainutlaatuinen Kreikan kaupunkien joukossa.
+
+### 57.2
+KYSYMYS: Miksi Byron tuli Kreikkaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mesolongi (historia)
+Tietoruudun teksti: Mesolongi eli Missolonghi on kaupunki Länsi-Kreikassa ja Aitolia-Akarnanian alueen pääkaupunki. Vuoden 2021 väestönlaskennan mukaan kunnassa asuu 32 048 ihmistä, joista 13 965 kaupungissa. Kaupunki on Achelooksen ja Evinoksen jokien välissä ja sillä on satama Patrasin lahdella; sen kauppatavaroita ovat kala, viini ja tupakka. Läheinen Mesolongin–Aitolikon laguuniryhmä on osa aluetta. Mesolongi tunnetaan Kreikan vapaussodan aikaisesta dramaattisesta piirityksestä, jossa myös runoilija Lord Byron kuoli. Asukkaiden sankarillisen vastarinnan ja sen jälkeisen kaupunkilaisten teurastuksen vuoksi Mesolongi sai kunnianimen Hiera Polis eli Pyhä kaupunki, joka on ainutlaatuinen Kreikan kaupunkien joukossa.
+
+### 57.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 57 YHTEINEN KONTEKSTI
+
+### 57.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 57 YHTEINEN KONTEKSTI
+
+### 57.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 57 YHTEINEN KONTEKSTI
+
+================ KOHTA 58 (kohde:hahmotelma-navarino) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Navarino (historia)
+Tietoruudun teksti: Navarinon taistelu oli meritaistelu, joka käytiin 20. lokakuuta 1827 Kreikan vapaussodan aikana Navarinon lahdella, nykyisen Pyloksen kohdalla Peloponnesoksen länsirannikolla Joonianmerellä. Britannian, Ranskan ja Venäjän liittoutuneet joukot kukistivat ratkaisevasti ottomaanien ja egyptiläiset joukot, jotka yrittivät tukahduttaa kreikkalaiset, ja tekivät näin Kreikan itsenäisyydestä paljon todennäköisemmän. Ottomaanien laivasto, johon kuului keisarillisten sotalaivojen lisäksi laivueita Egyptin, Algerin ja Tunisin alueilta, tuhoutui. Se oli historian viimeinen suuri meritaistelu, joka käytiin kokonaan purjelaivoilla, vaikka useimmat laivat taistelivat ankkurissa. Liittoutuneiden voitto perustui ylivoimaiseen tulivoimaan ja tykkitaitoon.
+
+### 58.1
+KYSYMYS: Miksi Navarinon taistelu oli tärkeä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Navarino (historia)
+Tietoruudun teksti: Navarinon taistelu oli meritaistelu, joka käytiin 20. lokakuuta 1827 Kreikan vapaussodan aikana Navarinon lahdella, nykyisen Pyloksen kohdalla Peloponnesoksen länsirannikolla Joonianmerellä. Britannian, Ranskan ja Venäjän liittoutuneet joukot kukistivat ratkaisevasti ottomaanien ja egyptiläiset joukot, jotka yrittivät tukahduttaa kreikkalaiset, ja tekivät näin Kreikan itsenäisyydestä paljon todennäköisemmän. Ottomaanien laivasto, johon kuului keisarillisten sotalaivojen lisäksi laivueita Egyptin, Algerin ja Tunisin alueilta, tuhoutui. Se oli historian viimeinen suuri meritaistelu, joka käytiin kokonaan purjelaivoilla, vaikka useimmat laivat taistelivat ankkurissa. Liittoutuneiden voitto perustui ylivoimaiseen tulivoimaan ja tykkitaitoon.
+
+### 58.2
+KYSYMYS: Ketkä taistelivat Navarinolla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Navarino (historia)
+Tietoruudun teksti: Navarinon taistelu oli meritaistelu, joka käytiin 20. lokakuuta 1827 Kreikan vapaussodan aikana Navarinon lahdella, nykyisen Pyloksen kohdalla Peloponnesoksen länsirannikolla Joonianmerellä. Britannian, Ranskan ja Venäjän liittoutuneet joukot kukistivat ratkaisevasti ottomaanien ja egyptiläiset joukot, jotka yrittivät tukahduttaa kreikkalaiset, ja tekivät näin Kreikan itsenäisyydestä paljon todennäköisemmän. Ottomaanien laivasto, johon kuului keisarillisten sotalaivojen lisäksi laivueita Egyptin, Algerin ja Tunisin alueilta, tuhoutui. Se oli historian viimeinen suuri meritaistelu, joka käytiin kokonaan purjelaivoilla, vaikka useimmat laivat taistelivat ankkurissa. Liittoutuneiden voitto perustui ylivoimaiseen tulivoimaan ja tykkitaitoon.
+
+### 58.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 58 YHTEINEN KONTEKSTI
+
+### 58.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 58 YHTEINEN KONTEKSTI
+
+### 58.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 58 YHTEINEN KONTEKSTI
+
+================ KOHTA 59 (kohde:hahmotelma-heraion) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heraion (historia)
+Tietoruudun teksti: Heran pyhäkkö sijaitsi matalalla rantatasangolla Samoksen kaupungin lounaispuolella. 500-luvulla eaa. tyranni Polykrates laajennutti sinne yhden antiikin Kreikan suurimmista temppeleistä — historioitsija Herodotos piti sitä suurimpana näkemänään rakennuksena. Kaksinkertainen pylväsrivi käsitti alun perin yli sata pylvästä. Maanjäristykset ja vuosisatojen kivenryöstö veivät temppelin lähes kokonaan — jäljellä on nykyään vain yksi pystyssä seisova pylväs laajalla perustusalueella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sitka — kaupunkilehti / Tlingit ja Sitkan taistelu: Pylväät jotka kertovat suvusta] Tlingit-kansa jakautuu kahteen puoliskoon, Korppiin ja Kotkaan, jotka jakautuvat edelleen lukuisiin sukuihin; suku ja omaisuus periytyvät äidin kautta, ja jokainen lapsi kuuluu äitinsä puoliskoon. Suvun tunnukset — korppi, kotka, susi, karhu tai muu eläinolento — veistettiin totemipylväisiin, kanoottien kylkiin ja hirsitalojen seinäpylväisiin kertomaan katsojalle, kenen suvun ja puoliskon alueella tämä oli. Sitkan alkuperäinen väestö tunnetaan nimellä Sheetʼká Ḵwáan, ja juuri Kiksʼádi-suku puolusti vuonna 1804 aluettaan venäläisiä vastaan. Pylväät eivät olleet jumalankuvia vaan sukujen kirjoittamatonta historiaa ja omistusoikeutta puuhun kaiverrettuna.
+- [Islanti — kaupunkilehti / Historia: Mies, joka heitti pylväät mereen ja seurasi niitä] Norjalainen päällikkö Ingólfur Arnarson heitti perimätiedon mukaan laivansa kunniapylväät mereen lähestyessään Islannin rannikkoa noin vuonna 874 ja lupasi asettua sinne, minne pylväät ajautuisivat. Ne löytyivät lahdesta, jossa hän näki maasta nousevaa höyryä — hän nimesi paikan Reykjavíkiksi, "savuiseksi lahdeksi", kuumien lähteiden mukaan. Ingólfuria pidetään Islannin ensimmäisenä pysyvänä asukkaana, ja häntä seurasivat vuosikymmenten aikana tuhannet muut siirtolaiset, pääosin Norjasta ja Brittein saarilta. Asutuskausi kesti perimätiedon mukaan noin vuoteen 930 asti, jolloin koko saari katsottiin asutetuksi.
+
+### 59.1
+KYSYMYS: Kuka piti temppeliä suurimpana näkemänään rakennuksena?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heraion (historia)
+Tietoruudun teksti: Heran pyhäkkö sijaitsi matalalla rantatasangolla Samoksen kaupungin lounaispuolella. 500-luvulla eaa. tyranni Polykrates laajennutti sinne yhden antiikin Kreikan suurimmista temppeleistä — historioitsija Herodotos piti sitä suurimpana näkemänään rakennuksena. Kaksinkertainen pylväsrivi käsitti alun perin yli sata pylvästä. Maanjäristykset ja vuosisatojen kivenryöstö veivät temppelin lähes kokonaan — jäljellä on nykyään vain yksi pystyssä seisova pylväs laajalla perustusalueella.
+
+### 59.2
+KYSYMYS: Miksi pylväät olivat kaksinkertaisessa rivissä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heraion (historia)
+Tietoruudun teksti: Heran pyhäkkö sijaitsi matalalla rantatasangolla Samoksen kaupungin lounaispuolella. 500-luvulla eaa. tyranni Polykrates laajennutti sinne yhden antiikin Kreikan suurimmista temppeleistä — historioitsija Herodotos piti sitä suurimpana näkemänään rakennuksena. Kaksinkertainen pylväsrivi käsitti alun perin yli sata pylvästä. Maanjäristykset ja vuosisatojen kivenryöstö veivät temppelin lähes kokonaan — jäljellä on nykyään vain yksi pystyssä seisova pylväs laajalla perustusalueella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sitka — kaupunkilehti / Tlingit ja Sitkan taistelu: Pylväät jotka kertovat suvusta] Tlingit-kansa jakautuu kahteen puoliskoon, Korppiin ja Kotkaan, jotka jakautuvat edelleen lukuisiin sukuihin; suku ja omaisuus periytyvät äidin kautta, ja jokainen lapsi kuuluu äitinsä puoliskoon. Suvun tunnukset — korppi, kotka, susi, karhu tai muu eläinolento — veistettiin totemipylväisiin, kanoottien kylkiin ja hirsitalojen seinäpylväisiin kertomaan katsojalle, kenen suvun ja puoliskon alueella tämä oli. Sitkan alkuperäinen väestö tunnetaan nimellä Sheetʼká Ḵwáan, ja juuri Kiksʼádi-suku puolusti vuonna 1804 aluettaan venäläisiä vastaan. Pylväät eivät olleet jumalankuvia vaan sukujen kirjoittamatonta historiaa ja omistusoikeutta puuhun kaiverrettuna.
+- [Islanti — kaupunkilehti / Historia: Mies, joka heitti pylväät mereen ja seurasi niitä] Norjalainen päällikkö Ingólfur Arnarson heitti perimätiedon mukaan laivansa kunniapylväät mereen lähestyessään Islannin rannikkoa noin vuonna 874 ja lupasi asettua sinne, minne pylväät ajautuisivat. Ne löytyivät lahdesta, jossa hän näki maasta nousevaa höyryä — hän nimesi paikan Reykjavíkiksi, "savuiseksi lahdeksi", kuumien lähteiden mukaan. Ingólfuria pidetään Islannin ensimmäisenä pysyvänä asukkaana, ja häntä seurasivat vuosikymmenten aikana tuhannet muut siirtolaiset, pääosin Norjasta ja Brittein saarilta. Asutuskausi kesti perimätiedon mukaan noin vuoteen 930 asti, jolloin koko saari katsottiin asutetuksi.
+
+### 59.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 59 YHTEINEN KONTEKSTI
+
+### 59.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 59 YHTEINEN KONTEKSTI
+
+### 59.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 59 YHTEINEN KONTEKSTI
+
+================ KOHTA 60 (kohde:hahmotelma-korintin-apollon-temppeli) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korintin Apollon temppeli (historia)
+Tietoruudun teksti: Doorilainen Apollon temppeli rakennettiin antiikin Korinttiin noin 540 eaa. — sen 38 pylvästä olivat poikkeuksellisesti yhdestä kalkkikivilohkareesta veistettyjä, ei kasattuja rumpuja niin kuin useimmissa temppeleissä. Roomalaiskenraali Lucius Mummius tuhosi koko kaupungin vuonna 146 eaa., ja temppeli jäi raunioiksi. Kaupunki perustettiin uudelleen roomalaissiirtokuntana 44 eaa. Nykyään pystyssä on enää seitsemän alkuperäistä pylvästä, ja Acrocorinthin linnavuori kohoaa raunioiden takana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Kirkot: Seinään kirjoitettiin vuosiluku] Asinoun kirkko eli Panagia Phorbiotissa on Troodoksen pohjoisrinteillä kolme kilometriä Nikitarin kylästä etelään. Se on yksilaivainen ja tynnyriholvattu, muurattu paikallisesta kovasta kivestä. Piirtokirjoituksen mukaan kirkko rakennettiin tai maalattiin vuonna 1105 tai 1106 Nikeforos Ischyrioksen lahjoituksella; miehellä oli bysanttilainen arvonimi magistros. Päivätyt piirtokirjoitukset tekevät Troodoksen kirkoista tutkijoille poikkeuksellisia: keskiajan itäisellä Välimerellä maalauksia päivättiin harvoin, joten näiden avulla voidaan ajoittaa muitakin. Asinoussa on useita maalauskerroksia, ja eteishuone sai yhtenäisen ohjelmansa vuonna 1332 tai 1333. Sen omistuskirjoituksen mukaan työ teh…
+- [Masqat — kohdekartta / Kohdekartta: Al Alamin palatsi] 1972 Julkisivun tunnistaa pylväistä. Ne ovat alhaalta kapeita ja levenevät ylöspäin sienimäisiksi kannattimiksi, jotka kantavat litteän kattolaatan. Laatta työntyy joka sivulla pitkälle ulos seinälinjasta, joten pylväsrivi jää varjoon. Osa pylväistä on kullanvärisiä, osa sinisen mosaiikin peitossa, ja niiden väliin jää korkeita kaari-ikkunoita. Katon yli nousee lipputanko — nimi Qasr al-Alam tarkoittaa lipun palatsia. Talossa ei asuta. Se on sulttaanin seremoniallinen palatsi: siellä otetaan vastaan valtiovieraita ja valtionpäämiehiä, ja asunnot ovat muualla. Nykyisen rakennuksen teetti sulttaani Qaboos bin Said, ja sen suunnitteli ja rakensi mumbailainen Shapoorji Pallonji. Talo valmistui …
+
+### 60.1
+KYSYMYS: Mikä teki temppelin pylväistä poikkeuksellisia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korintin Apollon temppeli (historia)
+Tietoruudun teksti: Doorilainen Apollon temppeli rakennettiin antiikin Korinttiin noin 540 eaa. — sen 38 pylvästä olivat poikkeuksellisesti yhdestä kalkkikivilohkareesta veistettyjä, ei kasattuja rumpuja niin kuin useimmissa temppeleissä. Roomalaiskenraali Lucius Mummius tuhosi koko kaupungin vuonna 146 eaa., ja temppeli jäi raunioiksi. Kaupunki perustettiin uudelleen roomalaissiirtokuntana 44 eaa. Nykyään pystyssä on enää seitsemän alkuperäistä pylvästä, ja Acrocorinthin linnavuori kohoaa raunioiden takana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Kirkot: Seinään kirjoitettiin vuosiluku] Asinoun kirkko eli Panagia Phorbiotissa on Troodoksen pohjoisrinteillä kolme kilometriä Nikitarin kylästä etelään. Se on yksilaivainen ja tynnyriholvattu, muurattu paikallisesta kovasta kivestä. Piirtokirjoituksen mukaan kirkko rakennettiin tai maalattiin vuonna 1105 tai 1106 Nikeforos Ischyrioksen lahjoituksella; miehellä oli bysanttilainen arvonimi magistros. Päivätyt piirtokirjoitukset tekevät Troodoksen kirkoista tutkijoille poikkeuksellisia: keskiajan itäisellä Välimerellä maalauksia päivättiin harvoin, joten näiden avulla voidaan ajoittaa muitakin. Asinoussa on useita maalauskerroksia, ja eteishuone sai yhtenäisen ohjelmansa vuonna 1332 tai 1333. Sen omistuskirjoituksen mukaan työ teh…
+- [Masqat — kohdekartta / Kohdekartta: Al Alamin palatsi] 1972 Julkisivun tunnistaa pylväistä. Ne ovat alhaalta kapeita ja levenevät ylöspäin sienimäisiksi kannattimiksi, jotka kantavat litteän kattolaatan. Laatta työntyy joka sivulla pitkälle ulos seinälinjasta, joten pylväsrivi jää varjoon. Osa pylväistä on kullanvärisiä, osa sinisen mosaiikin peitossa, ja niiden väliin jää korkeita kaari-ikkunoita. Katon yli nousee lipputanko — nimi Qasr al-Alam tarkoittaa lipun palatsia. Talossa ei asuta. Se on sulttaanin seremoniallinen palatsi: siellä otetaan vastaan valtiovieraita ja valtionpäämiehiä, ja asunnot ovat muualla. Nykyisen rakennuksen teetti sulttaani Qaboos bin Said, ja sen suunnitteli ja rakensi mumbailainen Shapoorji Pallonji. Talo valmistui …
+
+### 60.2
+KYSYMYS: Kuka tuhosi antiikin Korintin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korintin Apollon temppeli (historia)
+Tietoruudun teksti: Doorilainen Apollon temppeli rakennettiin antiikin Korinttiin noin 540 eaa. — sen 38 pylvästä olivat poikkeuksellisesti yhdestä kalkkikivilohkareesta veistettyjä, ei kasattuja rumpuja niin kuin useimmissa temppeleissä. Roomalaiskenraali Lucius Mummius tuhosi koko kaupungin vuonna 146 eaa., ja temppeli jäi raunioiksi. Kaupunki perustettiin uudelleen roomalaissiirtokuntana 44 eaa. Nykyään pystyssä on enää seitsemän alkuperäistä pylvästä, ja Acrocorinthin linnavuori kohoaa raunioiden takana.
+
+### 60.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 60 YHTEINEN KONTEKSTI
+
+### 60.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 60 YHTEINEN KONTEKSTI
+
+### 60.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 60 YHTEINEN KONTEKSTI

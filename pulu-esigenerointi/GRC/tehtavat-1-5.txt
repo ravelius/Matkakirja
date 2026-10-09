@@ -1,0 +1,214 @@
+================ KOHTA 21 (kohde:delfoi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Delfoi (historia)
+Tietoruudun teksti: Muinaiset kreikkalaiset pitivät Delfoita koko maailman keskipisteenä — paikkaa merkitsi Omfalos-kivi, "maailman napa". Täällä toimi Pythia, oraakkeli, jota kysyttiin tärkeistä päätöksistä kaikkialta antiikin maailmasta. Legendan mukaan nimi juontuu käärmeolento Delfynestä, jonka jumala Apollon surmasi. Pyhäkkö sijaitsee Parnassos-vuoren lounaisrinteellä ja on nykyään Unescon maailmanperintökohde.
+
+### 21.1
+KYSYMYS: Miksi oraakkelin vastaukset olivat niin moniselitteisiä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Delfoi (historia)
+Tietoruudun teksti: Muinaiset kreikkalaiset pitivät Delfoita koko maailman keskipisteenä — paikkaa merkitsi Omfalos-kivi, "maailman napa". Täällä toimi Pythia, oraakkeli, jota kysyttiin tärkeistä päätöksistä kaikkialta antiikin maailmasta. Legendan mukaan nimi juontuu käärmeolento Delfynestä, jonka jumala Apollon surmasi. Pyhäkkö sijaitsee Parnassos-vuoren lounaisrinteellä ja on nykyään Unescon maailmanperintökohde.
+
+### 21.2
+KYSYMYS: Kuka sai tulla kysymään neuvoa Delfoista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Delfoi (historia)
+Tietoruudun teksti: Muinaiset kreikkalaiset pitivät Delfoita koko maailman keskipisteenä — paikkaa merkitsi Omfalos-kivi, "maailman napa". Täällä toimi Pythia, oraakkeli, jota kysyttiin tärkeistä päätöksistä kaikkialta antiikin maailmasta. Legendan mukaan nimi juontuu käärmeolento Delfynestä, jonka jumala Apollon surmasi. Pyhäkkö sijaitsee Parnassos-vuoren lounaisrinteellä ja on nykyään Unescon maailmanperintökohde.
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:olympia) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olympia (urheilu)
+Tietoruudun teksti: Antiikin olympialaiset käytiin Olympian pyhäkköalueella joka neljäs vuosi Zeuksen kunniaksi 700-luvulta eaa. aina 300-luvulle jaa., ja hänen temppelissään seisoi Feidiaan kullasta ja norsunluusta veistämä Zeus-patsas, yksi antiikin seitsemästä ihmeestä. Stadionin kentän pituudesta tuli kreikkalaisten matkamitta, stadion. Isoisän matkan aikaan rauniot olivat vielä suurelta osin kaivamatta: saksalaisten suurkaivaus alkoi 1875 ja kirjasi kaikkiaan 14 000 esinettä. Kisojen aate herätettiin henkiin 1894.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vancouver — kaupunkilehti / Alkuperäiskansat: Neljä isäntäkansaa vuoden 2010 kisoissa] Kun Vancouver isännöi 2010 talviolympialaisia, squamishit, musqueamit, tsleil-waututhit ja lil'watit perustivat Four Host First Nations -yhdistyksen ja valvoivat etujaan kisojen järjestelykomitean rinnalla. Neljätoista kahdestakymmenestä olympia- ja paralympialajista kilpailtiin kansojen yhteisillä alueilla, pääosin Whistlerin ympäristössä. Tsleil-Waututh-kansan mukaan tämä oli ensimmäinen kerta, kun olympialiike tunnusti alkuperäiskansat maiden haltijoina. Squamishit ja lil'watit olivat avanneet Whistleriin oman kulttuurikeskuksensa jo heinäkuussa 2008 vuoden 2001 yhteistyösopimuksen pohjalta.
+- [Granada — kaupunkilehti / Granada: Aamulla hiihtoa, iltapäivällä merta] Granadan keskustasta on vajaat kolmekymmentä kilometriä Euroopan eteläisimpään hiihtokeskukseen ja noin seitsemänkymmentä Välimeren rannalle, joten saman päivän aikana ehtii sekä rinteeseen että uimaan. Hissit nousevat yli kolmen kilometrin korkeuteen, ja vieressä kohoaa Mulhacén, 3 479 metriä, Iberian niemimaan korkein huippu. Lunta ei silti ole taattu: alppihiihdon MM-kisat oli määrä pitää täällä 1995, mutta ne siirrettiin vuodella, koska rinteet olivat paljaat.
+
+### 22.1
+KYSYMYS: Mitä lajeja antiikin kisoissa kilpailtiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olympia (urheilu)
+Tietoruudun teksti: Antiikin olympialaiset käytiin Olympian pyhäkköalueella joka neljäs vuosi Zeuksen kunniaksi 700-luvulta eaa. aina 300-luvulle jaa., ja hänen temppelissään seisoi Feidiaan kullasta ja norsunluusta veistämä Zeus-patsas, yksi antiikin seitsemästä ihmeestä. Stadionin kentän pituudesta tuli kreikkalaisten matkamitta, stadion. Isoisän matkan aikaan rauniot olivat vielä suurelta osin kaivamatta: saksalaisten suurkaivaus alkoi 1875 ja kirjasi kaikkiaan 14 000 esinettä. Kisojen aate herätettiin henkiin 1894.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vancouver — kaupunkilehti / Alkuperäiskansat: Neljä isäntäkansaa vuoden 2010 kisoissa] Kun Vancouver isännöi 2010 talviolympialaisia, squamishit, musqueamit, tsleil-waututhit ja lil'watit perustivat Four Host First Nations -yhdistyksen ja valvoivat etujaan kisojen järjestelykomitean rinnalla. Neljätoista kahdestakymmenestä olympia- ja paralympialajista kilpailtiin kansojen yhteisillä alueilla, pääosin Whistlerin ympäristössä. Tsleil-Waututh-kansan mukaan tämä oli ensimmäinen kerta, kun olympialiike tunnusti alkuperäiskansat maiden haltijoina. Squamishit ja lil'watit olivat avanneet Whistleriin oman kulttuurikeskuksensa jo heinäkuussa 2008 vuoden 2001 yhteistyösopimuksen pohjalta.
+
+### 22.2
+KYSYMYS: Miksi kisat aikanaan loppuivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olympia (urheilu)
+Tietoruudun teksti: Antiikin olympialaiset käytiin Olympian pyhäkköalueella joka neljäs vuosi Zeuksen kunniaksi 700-luvulta eaa. aina 300-luvulle jaa., ja hänen temppelissään seisoi Feidiaan kullasta ja norsunluusta veistämä Zeus-patsas, yksi antiikin seitsemästä ihmeestä. Stadionin kentän pituudesta tuli kreikkalaisten matkamitta, stadion. Isoisän matkan aikaan rauniot olivat vielä suurelta osin kaivamatta: saksalaisten suurkaivaus alkoi 1875 ja kirjasi kaikkiaan 14 000 esinettä. Kisojen aate herätettiin henkiin 1894.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Granada — kaupunkilehti / Granada: Aamulla hiihtoa, iltapäivällä merta] Granadan keskustasta on vajaat kolmekymmentä kilometriä Euroopan eteläisimpään hiihtokeskukseen ja noin seitsemänkymmentä Välimeren rannalle, joten saman päivän aikana ehtii sekä rinteeseen että uimaan. Hissit nousevat yli kolmen kilometrin korkeuteen, ja vieressä kohoaa Mulhacén, 3 479 metriä, Iberian niemimaan korkein huippu. Lunta ei silti ole taattu: alppihiihdon MM-kisat oli määrä pitää täällä 1995, mutta ne siirrettiin vuodella, koska rinteet olivat paljaat.
+- [Auckland — kohdekartta / Kohdekartta: Eden Park] 1900 Stadionin paikalla oli suo, jota ruokkivat Maungawhaun ja Mount Albertin laavaonkalot yli 30 000 vuoden takaa. Tāmakin maorit keräsivät suolta ruokaa ja tarveaineita. Vuonna 1845 alueen osti cornwallilainen maanviljelijä John Walters, eli isoisän aikaan tässä oli maatila. Urheilukenttänä paikka on ollut vuodesta 1900 ja krikettikenttänä 1903 alkaen, ja siitä saa kiittää Harry Ryania, joka vuokrasi innostuneena palan Waltersin maata. Kenttä oli kivinen ja kallioinen laidun, jonka notko täyttyi sateella ja pysyi veden alla koko talven. Vuonna 1907 kenttä oli kahdesti viikon ajan veden alla. Ylläpito kävi kalliiksi, ja 1910 paikallinen krikettiseura pyysi Aucklandin krikettiliittoa ottama…
+- [Ranska — maalehti / Urheilu] Ranskan kuuluisimmat kisat syntyivät oudoista syistä: ystävä ei enää jaksanut juosta, kentän punainen väri on jauhetta, ja yksi kisa on nimetty lentäjän mukaan.
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:kalamata) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalamata (ruoka)
+Tietoruudun teksti: Kalamata on antanut nimensä suurelle, tummanvioletille ja mantelinmuotoiselle pöytäoliiville, jota säilötään perinteisesti viinietikassa tai oliiviöljyssä. Lajiketta viljeltiin alun perin kaupungin ympäristössä Messeniassa ja naapurissa Lakoniassa. Kalamata-oliivia ei voi korjata vihreänä, ja se poimitaan käsin, jotta hedelmä ei kolhiinnu. EU:ssa nimi on suojattu: Kalamataksi saa kutsua vain seudun omia oliiveja, ja muualla kasvatetut myydään nimellä Kalamon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Luonto: Puolet maailman oliiviöljystä] Espanja tuottaa noin puolet koko maailman oliiviöljystä, ja siitä valtaosa tulee yhdestä maakunnasta: Jaénissa kasvaa yli 60 miljoonaa oliivipuuta niin tasaisin rivein, että maisema näyttää lentokoneesta ruudukolta. Sato korjataan talvella ravistamalla puita koneella, ja hedelmät puristetaan öljyksi saman vuorokauden aikana — nopeus ratkaisee maun. Oliivipuu elää satoja vuosia ja kestää kuivuutta paremmin kuin melkein mikään muu viljelykasvi, mikä on yhä tärkeämpää.
+- [Santarém — kaupunkilehti / Sademetsä ja joet: Perhonen joka paljasti valheasun] Englantilainen luonnontutkija Henry Walter Bates saapui Santarémiin lokakuussa 1849 ja piti pientä jokikaupunkia tukikohtanaan peräti kolme vuotta osana yhdentoista vuoden Amazon-matkaansa. Bates keräsi alueelta kaikkiaan noin 14 000 hyönteislajia, joista lähes 8 000 oli tiedolle ennestään tuntemattomia. Tutkiessaan sademetsän perhosia hän huomasi, että monet syötäväksi kelpaavat lajit olivat kehittyneet muistuttamaan väritykseltään myrkyllisiä sukulaislajejaan välttyäkseen linnuilta. Ilmiö tunnetaan nykyään nimellä Batesin mimikry, ja se oli aikansa vahvimpia todisteita Charles Darwinin luonnonvalinnan puolesta.
+
+### 23.1
+KYSYMYS: Kuinka vanhaksi oliivipuu voi elää?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalamata (ruoka)
+Tietoruudun teksti: Kalamata on antanut nimensä suurelle, tummanvioletille ja mantelinmuotoiselle pöytäoliiville, jota säilötään perinteisesti viinietikassa tai oliiviöljyssä. Lajiketta viljeltiin alun perin kaupungin ympäristössä Messeniassa ja naapurissa Lakoniassa. Kalamata-oliivia ei voi korjata vihreänä, ja se poimitaan käsin, jotta hedelmä ei kolhiinnu. EU:ssa nimi on suojattu: Kalamataksi saa kutsua vain seudun omia oliiveja, ja muualla kasvatetut myydään nimellä Kalamon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Luonto: Puolet maailman oliiviöljystä] Espanja tuottaa noin puolet koko maailman oliiviöljystä, ja siitä valtaosa tulee yhdestä maakunnasta: Jaénissa kasvaa yli 60 miljoonaa oliivipuuta niin tasaisin rivein, että maisema näyttää lentokoneesta ruudukolta. Sato korjataan talvella ravistamalla puita koneella, ja hedelmät puristetaan öljyksi saman vuorokauden aikana — nopeus ratkaisee maun. Oliivipuu elää satoja vuosia ja kestää kuivuutta paremmin kuin melkein mikään muu viljelykasvi, mikä on yhä tärkeämpää.
+
+### 23.2
+KYSYMYS: Miksi tuore oliivi ei kelpaa syötäväksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalamata (ruoka)
+Tietoruudun teksti: Kalamata on antanut nimensä suurelle, tummanvioletille ja mantelinmuotoiselle pöytäoliiville, jota säilötään perinteisesti viinietikassa tai oliiviöljyssä. Lajiketta viljeltiin alun perin kaupungin ympäristössä Messeniassa ja naapurissa Lakoniassa. Kalamata-oliivia ei voi korjata vihreänä, ja se poimitaan käsin, jotta hedelmä ei kolhiinnu. EU:ssa nimi on suojattu: Kalamataksi saa kutsua vain seudun omia oliiveja, ja muualla kasvatetut myydään nimellä Kalamon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Santarém — kaupunkilehti / Sademetsä ja joet: Perhonen joka paljasti valheasun] Englantilainen luonnontutkija Henry Walter Bates saapui Santarémiin lokakuussa 1849 ja piti pientä jokikaupunkia tukikohtanaan peräti kolme vuotta osana yhdentoista vuoden Amazon-matkaansa. Bates keräsi alueelta kaikkiaan noin 14 000 hyönteislajia, joista lähes 8 000 oli tiedolle ennestään tuntemattomia. Tutkiessaan sademetsän perhosia hän huomasi, että monet syötäväksi kelpaavat lajit olivat kehittyneet muistuttamaan väritykseltään myrkyllisiä sukulaislajejaan välttyäkseen linnuilta. Ilmiö tunnetaan nykyään nimellä Batesin mimikry, ja se oli aikansa vahvimpia todisteita Charles Darwinin luonnonvalinnan puolesta.
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:ermoupoli) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ermoupoli (merenkulku)
+Tietoruudun teksti: Hermeksen kaupungiksi nimetty Ermoupoli perustettiin Syroksen saarelle 1820-luvulla, kun vapaussodan pakolaiset muilta saarilta asettuivat sinne. Siitä kasvoi nopeasti Kreikan johtava kauppa- ja teollisuuskaupunki ja maan pääsatama: Kreikan höyrylaivayhtiö perustettiin täällä 1856, ja Syroksen telakoilta laskettiin vesille tuhansia laivoja. Vasta 1800-luvun lopulla Pireus ajoi kaupungin ohi, ja Ermoupoli jäi Kykladien hallintokeskukseksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Saari, jolta Odysseus ei tahtonut lähteä] 2023 — Djerba on 514 neliökilometriä ja Pohjois-Afrikan suurin saari; vuoden 2014 laskennassa siellä asui 163 726 ihmistä. Saarta on pidetty lootuksensyöjien saarena, jonne Odysseus ajautui ja jossa miehistö unohti kotimatkan; kreikkalaisille se tunnettiin nimillä Lytos ja Meninx. Saaren juutalaisyhteisön El Ghriban synagoga on ollut yhtäjaksoisessa käytössä yli kaksituhatta vuotta, ja perimätiedon mukaan Jerusalemin temppelin tuhoutuessa paenneet papit toivat mukanaan oven ja kiviä, jotka muurattiin rakennukseen. Unesco otti koko saaren maailmanperintöluetteloon vuonna 2023.
+- [Jakarta — kohdekartta / Kohdekartta: Sunda Kelapan satama] Sundan pääsatama 1200–1500-luvuilla Sunda Kelapa on Ciliwung-joen suulla, ja siitä Jakarta alkoi. Se oli Sundan valtakunnan tärkein satama, ja sitä palveli sisämaan pääkaupunki Pakuan Pajajaran kuudenkymmenen kilometrin päässä ylävirrassa, nykyisen Bogorin paikalla. Satama eli pippurikaupasta. Portugalilainen Tomé Pires kirjoitti 1510-luvulla, että Calapan satama on kaikista tärkein ja paras ja että sinne purjehditaan Sumatralta, Palembangista, Malakasta, Makassarista, Jaavalta ja Madurasta. Vuonna 1522 Portugali ja Sundan kuningas sopivat linnoituksesta ja vapaasta pippurikaupasta; sopimuksesta pystytettiin kivinen muistopatsas padrão. Viisi vuotta myöhemmin Demakin joukot valtasivat satam…
+
+### 24.1
+KYSYMYS: Mistä saarille paenneet ihmiset tulivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ermoupoli (merenkulku)
+Tietoruudun teksti: Hermeksen kaupungiksi nimetty Ermoupoli perustettiin Syroksen saarelle 1820-luvulla, kun vapaussodan pakolaiset muilta saarilta asettuivat sinne. Siitä kasvoi nopeasti Kreikan johtava kauppa- ja teollisuuskaupunki ja maan pääsatama: Kreikan höyrylaivayhtiö perustettiin täällä 1856, ja Syroksen telakoilta laskettiin vesille tuhansia laivoja. Vasta 1800-luvun lopulla Pireus ajoi kaupungin ohi, ja Ermoupoli jäi Kykladien hallintokeskukseksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Saari, jolta Odysseus ei tahtonut lähteä] 2023 — Djerba on 514 neliökilometriä ja Pohjois-Afrikan suurin saari; vuoden 2014 laskennassa siellä asui 163 726 ihmistä. Saarta on pidetty lootuksensyöjien saarena, jonne Odysseus ajautui ja jossa miehistö unohti kotimatkan; kreikkalaisille se tunnettiin nimillä Lytos ja Meninx. Saaren juutalaisyhteisön El Ghriban synagoga on ollut yhtäjaksoisessa käytössä yli kaksituhatta vuotta, ja perimätiedon mukaan Jerusalemin temppelin tuhoutuessa paenneet papit toivat mukanaan oven ja kiviä, jotka muurattiin rakennukseen. Unesco otti koko saaren maailmanperintöluetteloon vuonna 2023.
+
+### 24.2
+KYSYMYS: Mitä telakoilla rakennetaan nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ermoupoli (merenkulku)
+Tietoruudun teksti: Hermeksen kaupungiksi nimetty Ermoupoli perustettiin Syroksen saarelle 1820-luvulla, kun vapaussodan pakolaiset muilta saarilta asettuivat sinne. Siitä kasvoi nopeasti Kreikan johtava kauppa- ja teollisuuskaupunki ja maan pääsatama: Kreikan höyrylaivayhtiö perustettiin täällä 1856, ja Syroksen telakoilta laskettiin vesille tuhansia laivoja. Vasta 1800-luvun lopulla Pireus ajoi kaupungin ohi, ja Ermoupoli jäi Kykladien hallintokeskukseksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jakarta — kohdekartta / Kohdekartta: Sunda Kelapan satama] Sundan pääsatama 1200–1500-luvuilla Sunda Kelapa on Ciliwung-joen suulla, ja siitä Jakarta alkoi. Se oli Sundan valtakunnan tärkein satama, ja sitä palveli sisämaan pääkaupunki Pakuan Pajajaran kuudenkymmenen kilometrin päässä ylävirrassa, nykyisen Bogorin paikalla. Satama eli pippurikaupasta. Portugalilainen Tomé Pires kirjoitti 1510-luvulla, että Calapan satama on kaikista tärkein ja paras ja että sinne purjehditaan Sumatralta, Palembangista, Malakasta, Makassarista, Jaavalta ja Madurasta. Vuonna 1522 Portugali ja Sundan kuningas sopivat linnoituksesta ja vapaasta pippurikaupasta; sopimuksesta pystytettiin kivinen muistopatsas padrão. Viisi vuotta myöhemmin Demakin joukot valtasivat satam…
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:epidauros) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Epidauros (kulttuuri)
+Tietoruudun teksti: Epidauroksen teatteri rakennettiin 300-luvulla eaa. parantajajumala Asklepioksen pyhäkön vaurastuttua, ja Polykleitos nuoremman suunnittelemaan katsomoon mahtuu jopa 14 000 katsojaa. Teatteri on kuulu akustiikastaan, jolle on mitattu selityskin: kalkkikiviset istuinrivit suodattavat yleisön matalaa huminaa ja vahvistavat näyttämön korkeita ääniä. Roomalaiset jatkoivat katsomoa 21 rivillä, ja antiikin näytelmiä esitetään samoilla penkeillä yhä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sisilia — kaupunkilehti / Rauniot: Teatteri, jossa esitetään yhä] Syrakusan kreikkalainen teatteri on hakattu suoraan kallioon 400-luvulla ennen ajanlaskua, ja katsomoon mahtui noin viisitoistatuhatta ihmistä. Näytelmäkirjailija Aiskhylos näki omia näytelmiään ensi-illassa juuri täällä. Teatteri ei ole museokohde vaan käytössä: joka kevät siellä esitetään antiikin tragedioita, ja yleisö istuu samoilla kiviportailla kuin kaksituhatta neljäsataa vuotta sitten. Kesällä kivi kuumenee niin, että mukaan otetaan tyyny.
+- [Alice Springs — kohdekartta / Kohdekartta: Totem-teatteri] 1945 Totem-teatterin kaksi päärakennusta ovat Sidney Williams -halleja, jotka Australian armeija pystytti vuonna 1945. Sota toi Alice Springsiin poikkeuksellisen määrän sotilaita ja siviilityövoimaa, ja sen mukana kaupunki sai parannuksia, jotka jäivät: Stuart Highwayn päällystyksen, vanhan lennätinlinjan kunnostuksen niin että kaukopuhelut tulivat mahdollisiksi, ja ensimmäistä kertaa juoksevan veden koteihin. Sodan jälkeen armeijan omaisuus inventoitiin ja pantiin myyntiin. Sidney Williams -hallit olivat erityisen haluttuja, ja useimmat siirrettiin muualle tai muutettiin asunnoiksi ja liiketiloiksi; ne on sittemmin lähes kaikki purettu. Totem-teatterin rakennukset jäivät paikoilleen ja näy…
+
+### 25.1
+KYSYMYS: Miten sairaita hoidettiin Asklepioksen pyhäkössä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Epidauros (kulttuuri)
+Tietoruudun teksti: Epidauroksen teatteri rakennettiin 300-luvulla eaa. parantajajumala Asklepioksen pyhäkön vaurastuttua, ja Polykleitos nuoremman suunnittelemaan katsomoon mahtuu jopa 14 000 katsojaa. Teatteri on kuulu akustiikastaan, jolle on mitattu selityskin: kalkkikiviset istuinrivit suodattavat yleisön matalaa huminaa ja vahvistavat näyttämön korkeita ääniä. Roomalaiset jatkoivat katsomoa 21 rivillä, ja antiikin näytelmiä esitetään samoilla penkeillä yhä.
+
+### 25.2
+KYSYMYS: Mitä näytelmiä teatterissa esitetään nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Epidauros (kulttuuri)
+Tietoruudun teksti: Epidauroksen teatteri rakennettiin 300-luvulla eaa. parantajajumala Asklepioksen pyhäkön vaurastuttua, ja Polykleitos nuoremman suunnittelemaan katsomoon mahtuu jopa 14 000 katsojaa. Teatteri on kuulu akustiikastaan, jolle on mitattu selityskin: kalkkikiviset istuinrivit suodattavat yleisön matalaa huminaa ja vahvistavat näyttämön korkeita ääniä. Roomalaiset jatkoivat katsomoa 21 rivillä, ja antiikin näytelmiä esitetään samoilla penkeillä yhä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sisilia — kaupunkilehti / Rauniot: Teatteri, jossa esitetään yhä] Syrakusan kreikkalainen teatteri on hakattu suoraan kallioon 400-luvulla ennen ajanlaskua, ja katsomoon mahtui noin viisitoistatuhatta ihmistä. Näytelmäkirjailija Aiskhylos näki omia näytelmiään ensi-illassa juuri täällä. Teatteri ei ole museokohde vaan käytössä: joka kevät siellä esitetään antiikin tragedioita, ja yleisö istuu samoilla kiviportailla kuin kaksituhatta neljäsataa vuotta sitten. Kesällä kivi kuumenee niin, että mukaan otetaan tyyny.
+- [Alice Springs — kohdekartta / Kohdekartta: Totem-teatteri] 1945 Totem-teatterin kaksi päärakennusta ovat Sidney Williams -halleja, jotka Australian armeija pystytti vuonna 1945. Sota toi Alice Springsiin poikkeuksellisen määrän sotilaita ja siviilityövoimaa, ja sen mukana kaupunki sai parannuksia, jotka jäivät: Stuart Highwayn päällystyksen, vanhan lennätinlinjan kunnostuksen niin että kaukopuhelut tulivat mahdollisiksi, ja ensimmäistä kertaa juoksevan veden koteihin. Sodan jälkeen armeijan omaisuus inventoitiin ja pantiin myyntiin. Sidney Williams -hallit olivat erityisen haluttuja, ja useimmat siirrettiin muualle tai muutettiin asunnoiksi ja liiketiloiksi; ne on sittemmin lähes kaikki purettu. Totem-teatterin rakennukset jäivät paikoilleen ja näy…
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

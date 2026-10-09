@@ -1,0 +1,163 @@
+================ KOHTA 76 (kohde:akropolis) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ateena
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Akropolis (historia)
+Tietoruudun teksti: Akropolis on kalliolinna keskellä Ateenaa: 156 metrin kalkkikivikallio, jonka päällä seisovat Parthenonin, Erekhtheionin ja Athena Niken temppelit sekä Propylaia-portti. Nykyiset rakennukset pystytettiin 400-luvulla eaa. Perikleen aikana, mutta kalliolla oli asuttu ja rakennettu jo tuhansia vuosia aiemmin.
+Isoisän matkakirjamerkintä: Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Historia: Puolet Parthenonin veistoksista lähti laivalla] Thomas Bruce, seitsemäs Elginin jaarli, oli Britannian suurlähettiläänä Konstantinopolissa vuodesta 1799. Hänen miehensä irrottivat vuosina 1801–1812 noin puolet Parthenonin säilyneistä veistoksista sekä paloja Propylaiasta ja Erekhtheionista. Lupa perustui osmanihallinnon kirjeeseen, jonka alkuperäistä ei ole löytynyt: jäljellä on vain italiankielinen käännös, ja juuri siitä kiistellään yhä. Yksi kuljetuslaivoista upposi Kytheran edustalla 1802, ja laatikot nostettiin merestä kahden vuoden työllä. Elginin varat loppuivat, ja parlamentti osti kokoelman 1816 British Museumille 35 000 punnalla. Akropoliin museo avattiin 2009, ja siinä on sali valmiina veistosten paluuta varten.
+- [Ateena — kohdekartta / Kohdekartta: Akropolis] 460–430 eaa. Akropolis kohoaa 150 metrin korkeuteen jyrkällä kalliolla keskellä Ateenaa. Ensimmäiset ihmiset asuivat kalliolla jo tuhansia vuosia sitten, ja pronssikaudella sen ympärille rakennettiin valtava puolustusmuuri, joka oli peräti 760 metriä pitkä. Persialaiset tuhosivat kukkulan temppelit vuonna 480 eaa., mutta valtiomies Perikleen johdolla Ateena rakensi tilalle vielä komeamman kokonaisuuden vuosina 460–430 eaa. Silloin nousivat muun muassa Parthenon ja Erekhteion, jonka pylväinä seisoo kuusi naishahmoista patsasta. Toisen maailmansodan aikana, vuonna 1941, nuori Manolis Glezos kiipesi salaa yöllä Akropolikselle ja repi alas natsi-Saksan lipun — rohkea teko, josta tuli koko Kreik…
+
+### 76.1
+KYSYMYS: Miksi Parthenon rakennettiin juuri kalliolle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ateena
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Akropolis (historia)
+Tietoruudun teksti: Akropolis on kalliolinna keskellä Ateenaa: 156 metrin kalkkikivikallio, jonka päällä seisovat Parthenonin, Erekhtheionin ja Athena Niken temppelit sekä Propylaia-portti. Nykyiset rakennukset pystytettiin 400-luvulla eaa. Perikleen aikana, mutta kalliolla oli asuttu ja rakennettu jo tuhansia vuosia aiemmin.
+Isoisän matkakirjamerkintä: Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Historia: Puolet Parthenonin veistoksista lähti laivalla] Thomas Bruce, seitsemäs Elginin jaarli, oli Britannian suurlähettiläänä Konstantinopolissa vuodesta 1799. Hänen miehensä irrottivat vuosina 1801–1812 noin puolet Parthenonin säilyneistä veistoksista sekä paloja Propylaiasta ja Erekhtheionista. Lupa perustui osmanihallinnon kirjeeseen, jonka alkuperäistä ei ole löytynyt: jäljellä on vain italiankielinen käännös, ja juuri siitä kiistellään yhä. Yksi kuljetuslaivoista upposi Kytheran edustalla 1802, ja laatikot nostettiin merestä kahden vuoden työllä. Elginin varat loppuivat, ja parlamentti osti kokoelman 1816 British Museumille 35 000 punnalla. Akropoliin museo avattiin 2009, ja siinä on sali valmiina veistosten paluuta varten.
+- [Ateena — kohdekartta / Kohdekartta: Akropolis] 460–430 eaa. Akropolis kohoaa 150 metrin korkeuteen jyrkällä kalliolla keskellä Ateenaa. Ensimmäiset ihmiset asuivat kalliolla jo tuhansia vuosia sitten, ja pronssikaudella sen ympärille rakennettiin valtava puolustusmuuri, joka oli peräti 760 metriä pitkä. Persialaiset tuhosivat kukkulan temppelit vuonna 480 eaa., mutta valtiomies Perikleen johdolla Ateena rakensi tilalle vielä komeamman kokonaisuuden vuosina 460–430 eaa. Silloin nousivat muun muassa Parthenon ja Erekhteion, jonka pylväinä seisoo kuusi naishahmoista patsasta. Toisen maailmansodan aikana, vuonna 1941, nuori Manolis Glezos kiipesi salaa yöllä Akropolikselle ja repi alas natsi-Saksan lipun — rohkea teko, josta tuli koko Kreik…
+
+### 76.2
+KYSYMYS: Mitä Akropoliilla tehtiin ennen temppeleitä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ateena
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Akropolis (historia)
+Tietoruudun teksti: Akropolis on kalliolinna keskellä Ateenaa: 156 metrin kalkkikivikallio, jonka päällä seisovat Parthenonin, Erekhtheionin ja Athena Niken temppelit sekä Propylaia-portti. Nykyiset rakennukset pystytettiin 400-luvulla eaa. Perikleen aikana, mutta kalliolla oli asuttu ja rakennettu jo tuhansia vuosia aiemmin.
+Isoisän matkakirjamerkintä: Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.
+
+### 76.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 76 YHTEINEN KONTEKSTI
+
+### 76.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 76 YHTEINEN KONTEKSTI
+
+### 76.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 76 YHTEINEN KONTEKSTI
+
+================ KOHTA 77 (kohde:akropolis-museo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ateena
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Akropolis-museo (kulttuuri)
+Tietoruudun teksti: Akropolis-museo avattiin vuonna 2009 kallion kaakkoispuolelle, ja se rakennettiin kokoamaan yhteen kaikki Akropoliilta ja sen rinteiltä löytynyt — yli 4 250 esinettä pronssikaudelta Bysantin aikaan. Rakennus seisoo pilarien varassa antiikin kaupunginosan raunioiden päällä, ja kaivaus näkyy lasilattioiden läpi. Ylin kerros on käännetty vinoon muuhun rakennukseen nähden: se seuraa Parthenonin suuntaa, ja temppelin veistokset on aseteltu saliin samaan järjestykseen ja samoin päin kuin ne olivat itse temppelissä, lasiseinien läpi tulevassa luonnonvalossa.
+Isoisän matkakirjamerkintä: Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Syyria — maalehti / Käsityö: Maali menee lasin päälle, ei sisään] Damaskoksessa lasiin maalataan käsin ohuella siveltimellä. Kuvan maljassa työ on kesken juuri siinä vaiheessa, jossa ääriviivat ovat valmiit mutta värikentät vasta osittain täytetty. Aiheet ovat lähes aina kasveja: kukkia, lehtiä ja kiertyviä varsia. Kaupungin lasi oli keskiajalla haluttua kauppatavaraa Eurooppaa myöten, ja lasinpuhaltamoja on toiminut vanhassakaupungissa polvesta polveen. Työ tehdään ilman koneita ja ilman kaavaa, joten kahta samanlaista kappaletta ei synny.
+- [Unkari — maalehti / Historia: Kruunu, jonka risti on vinossa] 1000 — Unkarin pyhä kruunu on kahdesta osasta: alempi vanne on tehty Bysantissa ja ylempi kaariosa lännessä, ja ne on liitetty yhteen. Kruunua kiertää rivi emalikuvia pyhimyksistä, ja reunasta riippuu ketjuja. Huipulla oleva risti on kallellaan, ja arvellaan että se vääntyi, kun kruunua tungettiin liian pieneen arkkuun. Sitä ei ole suoristettu. Kruunulla oli erikoinen asema: kuningasta ei pidetty oikeana kuninkaana, ellei häntä kruunattu juuri tällä esineellä.
+- [Mumbai — kaupunkilehti / Mumbai: Riemuportti, jolle ei rakennettu tietä] Kuningas Yrjö V ja kuningatar Mary nousivat maihin Apollo Bunderissa 2. joulukuuta 1911, ja heitä varten paikalle pystytettiin pahvinen malli — oikeaa muistomerkkiä ei ollut alettu rakentaa. Peruskivi laskettiin 31. maaliskuuta 1913, George Wittetin lopullinen suunnitelma hyväksyttiin elokuussa 1914, ja rantaa piti täyttää ja meriseinää rakentaa vuosina 1915–1919 ennen kuin keltaisesta basaltista voitiin muurata kaksikymmentäkuusi metriä korkea kaari. Portti valmistui 1924 ja avattiin yleisölle joulukuun neljäntenä päivänä. Rahat loppuivat kesken, eikä sille johtavaa juhlakatua koskaan rakennettu: portti seisoo siksi vinossa kulmassa katuun nähden.
+
+### 77.1
+KYSYMYS: Miksi museon ylin kerros on vinossa muihin nähden?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ateena
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Akropolis-museo (kulttuuri)
+Tietoruudun teksti: Akropolis-museo avattiin vuonna 2009 kallion kaakkoispuolelle, ja se rakennettiin kokoamaan yhteen kaikki Akropoliilta ja sen rinteiltä löytynyt — yli 4 250 esinettä pronssikaudelta Bysantin aikaan. Rakennus seisoo pilarien varassa antiikin kaupunginosan raunioiden päällä, ja kaivaus näkyy lasilattioiden läpi. Ylin kerros on käännetty vinoon muuhun rakennukseen nähden: se seuraa Parthenonin suuntaa, ja temppelin veistokset on aseteltu saliin samaan järjestykseen ja samoin päin kuin ne olivat itse temppelissä, lasiseinien läpi tulevassa luonnonvalossa.
+Isoisän matkakirjamerkintä: Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Historia: Kruunu, jonka risti on vinossa] 1000 — Unkarin pyhä kruunu on kahdesta osasta: alempi vanne on tehty Bysantissa ja ylempi kaariosa lännessä, ja ne on liitetty yhteen. Kruunua kiertää rivi emalikuvia pyhimyksistä, ja reunasta riippuu ketjuja. Huipulla oleva risti on kallellaan, ja arvellaan että se vääntyi, kun kruunua tungettiin liian pieneen arkkuun. Sitä ei ole suoristettu. Kruunulla oli erikoinen asema: kuningasta ei pidetty oikeana kuninkaana, ellei häntä kruunattu juuri tällä esineellä.
+- [Mumbai — kaupunkilehti / Mumbai: Riemuportti, jolle ei rakennettu tietä] Kuningas Yrjö V ja kuningatar Mary nousivat maihin Apollo Bunderissa 2. joulukuuta 1911, ja heitä varten paikalle pystytettiin pahvinen malli — oikeaa muistomerkkiä ei ollut alettu rakentaa. Peruskivi laskettiin 31. maaliskuuta 1913, George Wittetin lopullinen suunnitelma hyväksyttiin elokuussa 1914, ja rantaa piti täyttää ja meriseinää rakentaa vuosina 1915–1919 ennen kuin keltaisesta basaltista voitiin muurata kaksikymmentäkuusi metriä korkea kaari. Portti valmistui 1924 ja avattiin yleisölle joulukuun neljäntenä päivänä. Rahat loppuivat kesken, eikä sille johtavaa juhlakatua koskaan rakennettu: portti seisoo siksi vinossa kulmassa katuun nähden.
+
+### 77.2
+KYSYMYS: Mitä museon lattian lasin alta näkyy?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ateena
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Akropolis-museo (kulttuuri)
+Tietoruudun teksti: Akropolis-museo avattiin vuonna 2009 kallion kaakkoispuolelle, ja se rakennettiin kokoamaan yhteen kaikki Akropoliilta ja sen rinteiltä löytynyt — yli 4 250 esinettä pronssikaudelta Bysantin aikaan. Rakennus seisoo pilarien varassa antiikin kaupunginosan raunioiden päällä, ja kaivaus näkyy lasilattioiden läpi. Ylin kerros on käännetty vinoon muuhun rakennukseen nähden: se seuraa Parthenonin suuntaa, ja temppelin veistokset on aseteltu saliin samaan järjestykseen ja samoin päin kuin ne olivat itse temppelissä, lasiseinien läpi tulevassa luonnonvalossa.
+Isoisän matkakirjamerkintä: Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Syyria — maalehti / Käsityö: Maali menee lasin päälle, ei sisään] Damaskoksessa lasiin maalataan käsin ohuella siveltimellä. Kuvan maljassa työ on kesken juuri siinä vaiheessa, jossa ääriviivat ovat valmiit mutta värikentät vasta osittain täytetty. Aiheet ovat lähes aina kasveja: kukkia, lehtiä ja kiertyviä varsia. Kaupungin lasi oli keskiajalla haluttua kauppatavaraa Eurooppaa myöten, ja lasinpuhaltamoja on toiminut vanhassakaupungissa polvesta polveen. Työ tehdään ilman koneita ja ilman kaavaa, joten kahta samanlaista kappaletta ei synny.
+
+### 77.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 77 YHTEINEN KONTEKSTI
+
+### 77.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 77 YHTEINEN KONTEKSTI
+
+### 77.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 77 YHTEINEN KONTEKSTI
+
+================ KOHTA 78 (kohde:olympieion) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ateena
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olympieion (historia)
+Tietoruudun teksti: Olympieion oli antiikin Kreikan suurin temppeli. Peisistratoksen pojat Hippias ja Hipparkhos aloittivat sen noin 520 eaa., mutta työ keskeytyi tyrannivallan kaaduttua vuonna 510 eaa. ja perustus jäi paikalleen 336 vuodeksi; Aristoteles käytti temppeliä esimerkkinä siitä, miten tyrannit sitovat kansan suurtöihin. Seleukidikuningas Antiokhos neljäs jatkoi hanketta vuonna 174 eaa., vaihtoi kiven pentelinmarmoriksi ja doorilaisen tyylin korinttilaiseksi — ensimmäisen kerran suuren temppelin ulkopuolella. Valmiissa rakennuksessa oli 104 pylvästä, kukin 17 metriä korkea, ja se oli 110 metriä pitkä ja 44 metriä leveä. Keisari Hadrianus vihki temppelin vuonna 132 eli 638 vuotta aloituksesta, ja cellassa seisoi norsunluusta ja kullasta tehty Zeuksen patsas. Herulit ryöstivät temppelin vuonna 267, eikä sitä enää korjattu.
+Isoisän matkakirjamerkintä: Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Historia: Iliou Melathron — Troijan palatsi] Kesäkuussa 1873, kaivauksen viimeisenä päivänä, Heinrich Schliemann löysi Hisarlikin kummulta kultaa, jonka uskoi kuningas Priamoksen aarteeksi. Muutamaa vuotta myöhemmin hän rakennutti Ateenaan kadun varteen komean palatsin, Iliou Melathronin — Troijan palatsin. Se seisoo paikallaan yhä: nykyään talossa lasketaan vanhoja kolikoita, sillä se on numismaattinen museo. Talon friisissä Schliemann kaivaa ikuisesti, lapio kädessä.
+- [Ateena — kohdekartta / Kohdekartta: Iliou Melathron] Kesäkuussa 1873, kaivauksen viimeisenä päivänä, Heinrich Schliemann löysi Hisarlikin kummulta kultaa, jonka uskoi kuningas Priamoksen aarteeksi. Muutamaa vuotta myöhemmin hän rakennutti Ateenaan kadun varteen komean palatsin, Iliou Melathronin — Troijan palatsin. Se seisoo paikallaan yhä: nykyään talossa lasketaan vanhoja kolikoita, sillä se on numismaattinen museo. Talon friisissä Schliemann kaivaa ikuisesti, lapio kädessä.
+- [Guatemala — maalehti / Historia: Pyhä kirja, joka päätyi Chicagoon] 1701–1941 — Popol Vuh on kʼicheʼ-mayojen luomiskertomus ja sukuhistoria. Dominikaani Francisco Ximénez kirjoitti sen muistiin Chichicastenangossa vuodesta 1701 alkaen kahtena rinnakkaisena palstana, kʼicheʼksi ja espanjaksi. Käsikirjoitus päätyi San Carlosin yliopiston kirjastoon, josta Carl Scherzer kopioi sen 1854 — ja jonka hyllystä apotti Brasseur de Bourbourg vei niteen 1855 Ranskaan. Sieltä se kulki keräilijältä toiselle Chicagon Newberry-kirjastoon, ja Adrián Recinos löysi sen sieltä uudelleen 1941. Isoisän matkavuonna kirja oli Euroopassa.
+
+### 78.1
+KYSYMYS: Mihin temppelin marmori lopulta päätyi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ateena
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olympieion (historia)
+Tietoruudun teksti: Olympieion oli antiikin Kreikan suurin temppeli. Peisistratoksen pojat Hippias ja Hipparkhos aloittivat sen noin 520 eaa., mutta työ keskeytyi tyrannivallan kaaduttua vuonna 510 eaa. ja perustus jäi paikalleen 336 vuodeksi; Aristoteles käytti temppeliä esimerkkinä siitä, miten tyrannit sitovat kansan suurtöihin. Seleukidikuningas Antiokhos neljäs jatkoi hanketta vuonna 174 eaa., vaihtoi kiven pentelinmarmoriksi ja doorilaisen tyylin korinttilaiseksi — ensimmäisen kerran suuren temppelin ulkopuolella. Valmiissa rakennuksessa oli 104 pylvästä, kukin 17 metriä korkea, ja se oli 110 metriä pitkä ja 44 metriä leveä. Keisari Hadrianus vihki temppelin vuonna 132 eli 638 vuotta aloituksesta, ja cellassa seisoi norsunluusta ja kullasta tehty Zeuksen patsas. Herulit ryöstivät temppelin vuonna 267, eikä sitä enää korjattu.
+Isoisän matkakirjamerkintä: Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Guatemala — maalehti / Historia: Pyhä kirja, joka päätyi Chicagoon] 1701–1941 — Popol Vuh on kʼicheʼ-mayojen luomiskertomus ja sukuhistoria. Dominikaani Francisco Ximénez kirjoitti sen muistiin Chichicastenangossa vuodesta 1701 alkaen kahtena rinnakkaisena palstana, kʼicheʼksi ja espanjaksi. Käsikirjoitus päätyi San Carlosin yliopiston kirjastoon, josta Carl Scherzer kopioi sen 1854 — ja jonka hyllystä apotti Brasseur de Bourbourg vei niteen 1855 Ranskaan. Sieltä se kulki keräilijältä toiselle Chicagon Newberry-kirjastoon, ja Adrián Recinos löysi sen sieltä uudelleen 1941. Isoisän matkavuonna kirja oli Euroopassa.
+
+### 78.2
+KYSYMYS: Miksi Hadrianus rakennutti Ateenaan niin paljon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ateena
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olympieion (historia)
+Tietoruudun teksti: Olympieion oli antiikin Kreikan suurin temppeli. Peisistratoksen pojat Hippias ja Hipparkhos aloittivat sen noin 520 eaa., mutta työ keskeytyi tyrannivallan kaaduttua vuonna 510 eaa. ja perustus jäi paikalleen 336 vuodeksi; Aristoteles käytti temppeliä esimerkkinä siitä, miten tyrannit sitovat kansan suurtöihin. Seleukidikuningas Antiokhos neljäs jatkoi hanketta vuonna 174 eaa., vaihtoi kiven pentelinmarmoriksi ja doorilaisen tyylin korinttilaiseksi — ensimmäisen kerran suuren temppelin ulkopuolella. Valmiissa rakennuksessa oli 104 pylvästä, kukin 17 metriä korkea, ja se oli 110 metriä pitkä ja 44 metriä leveä. Keisari Hadrianus vihki temppelin vuonna 132 eli 638 vuotta aloituksesta, ja cellassa seisoi norsunluusta ja kullasta tehty Zeuksen patsas. Herulit ryöstivät temppelin vuonna 267, eikä sitä enää korjattu.
+Isoisän matkakirjamerkintä: Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Historia: Iliou Melathron — Troijan palatsi] Kesäkuussa 1873, kaivauksen viimeisenä päivänä, Heinrich Schliemann löysi Hisarlikin kummulta kultaa, jonka uskoi kuningas Priamoksen aarteeksi. Muutamaa vuotta myöhemmin hän rakennutti Ateenaan kadun varteen komean palatsin, Iliou Melathronin — Troijan palatsin. Se seisoo paikallaan yhä: nykyään talossa lasketaan vanhoja kolikoita, sillä se on numismaattinen museo. Talon friisissä Schliemann kaivaa ikuisesti, lapio kädessä.
+- [Ateena — kohdekartta / Kohdekartta: Iliou Melathron] Kesäkuussa 1873, kaivauksen viimeisenä päivänä, Heinrich Schliemann löysi Hisarlikin kummulta kultaa, jonka uskoi kuningas Priamoksen aarteeksi. Muutamaa vuotta myöhemmin hän rakennutti Ateenaan kadun varteen komean palatsin, Iliou Melathronin — Troijan palatsin. Se seisoo paikallaan yhä: nykyään talossa lasketaan vanhoja kolikoita, sillä se on numismaattinen museo. Talon friisissä Schliemann kaivaa ikuisesti, lapio kädessä.
+
+### 78.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 78 YHTEINEN KONTEKSTI
+
+### 78.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 78 YHTEINEN KONTEKSTI
+
+### 78.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 78 YHTEINEN KONTEKSTI

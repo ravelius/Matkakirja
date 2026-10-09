@@ -1,0 +1,224 @@
+================ KOHTA 71 (kohde:hahmotelma-dispilio) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dispilion paalukylä ja puulaatta (historia)
+Tietoruudun teksti: Dispilion kylän lähellä Kastorianjärven rannalla on kivikautisen paalukylän jäänteet; asutus oli tekosaarella rantavedessä. Paalut paljastuivat 1932, kun järven pinta oli poikkeuksellisen matalalla, ja kaivaukset alkoivat 1992 professori Georgios Hourmouziadisin johdolla. Myöhäisneoliittiset rakennusvaiheet on ajoitettu vuosiin 5328–5140 eaa., ja märässä maassa ovat säilyneet puu, siemenet ja jopa huilut, joista osa on tehty ihmisen luusta. Suurimman huomion sai 1993 löydetty puulaatta, jonka viivamerkintöjä jotkut ovat pitäneet varhaisena kirjoituksena: se löytyi kaivausojaan tulleen veden pinnalta kellumasta, eikä sitä ole vieläkään julkaistu kokonaan tieteellisesti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kanada — maalehti / Alkuperäiskansat: Paalu, jota ei palvota] 1830–1880 — Haidan kielellä toteemipaalu on gyáaʼaang. Paalut kaiverretaan jättiläistuijasta, ja niissä kerrotaan sukulinjoja, tapahtumia ja oikeuksia — ne eivät ole palvonnan kohteita, vaikka niin usein luullaan. Osa on suorastaan häpeäpaaluja, jotka pystytettiin muistuttamaan maksamattomasta velasta. Kaiverrus kukoisti vuosina 1830–1880, kun rautatyökalut ja turkiskaupan varallisuus kohtasivat, ja loppui lähes kokonaan vuoteen 1901 mennessä. Paalu kestää sateisella rannikolla 60–80 vuotta; nyt niitä kaiverretaan taas.
+
+### 71.1
+KYSYMYS: Mikä on Dispilion puulaatta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dispilion paalukylä ja puulaatta (historia)
+Tietoruudun teksti: Dispilion kylän lähellä Kastorianjärven rannalla on kivikautisen paalukylän jäänteet; asutus oli tekosaarella rantavedessä. Paalut paljastuivat 1932, kun järven pinta oli poikkeuksellisen matalalla, ja kaivaukset alkoivat 1992 professori Georgios Hourmouziadisin johdolla. Myöhäisneoliittiset rakennusvaiheet on ajoitettu vuosiin 5328–5140 eaa., ja märässä maassa ovat säilyneet puu, siemenet ja jopa huilut, joista osa on tehty ihmisen luusta. Suurimman huomion sai 1993 löydetty puulaatta, jonka viivamerkintöjä jotkut ovat pitäneet varhaisena kirjoituksena: se löytyi kaivausojaan tulleen veden pinnalta kellumasta, eikä sitä ole vieläkään julkaistu kokonaan tieteellisesti.
+
+### 71.2
+KYSYMYS: Miten paalut löytyivät?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dispilion paalukylä ja puulaatta (historia)
+Tietoruudun teksti: Dispilion kylän lähellä Kastorianjärven rannalla on kivikautisen paalukylän jäänteet; asutus oli tekosaarella rantavedessä. Paalut paljastuivat 1932, kun järven pinta oli poikkeuksellisen matalalla, ja kaivaukset alkoivat 1992 professori Georgios Hourmouziadisin johdolla. Myöhäisneoliittiset rakennusvaiheet on ajoitettu vuosiin 5328–5140 eaa., ja märässä maassa ovat säilyneet puu, siemenet ja jopa huilut, joista osa on tehty ihmisen luusta. Suurimman huomion sai 1993 löydetty puulaatta, jonka viivamerkintöjä jotkut ovat pitäneet varhaisena kirjoituksena: se löytyi kaivausojaan tulleen veden pinnalta kellumasta, eikä sitä ole vieläkään julkaistu kokonaan tieteellisesti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kanada — maalehti / Alkuperäiskansat: Paalu, jota ei palvota] 1830–1880 — Haidan kielellä toteemipaalu on gyáaʼaang. Paalut kaiverretaan jättiläistuijasta, ja niissä kerrotaan sukulinjoja, tapahtumia ja oikeuksia — ne eivät ole palvonnan kohteita, vaikka niin usein luullaan. Osa on suorastaan häpeäpaaluja, jotka pystytettiin muistuttamaan maksamattomasta velasta. Kaiverrus kukoisti vuosina 1830–1880, kun rautatyökalut ja turkiskaupan varallisuus kohtasivat, ja loppui lähes kokonaan vuoteen 1901 mennessä. Paalu kestää sateisella rannikolla 60–80 vuotta; nyt niitä kaiverretaan taas.
+
+### 71.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 71 YHTEINEN KONTEKSTI
+
+### 71.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 71 YHTEINEN KONTEKSTI
+
+### 71.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 71 YHTEINEN KONTEKSTI
+
+================ KOHTA 72 (kohde:hahmotelma-pavlopetri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pavlopetri, meren alle vajonnut kaupunki (meri)
+Tietoruudun teksti: Pavlopetri on muinainen kaupunki Vatikan lahdella Lakonian etelärannikolla, Elafonisoksen saaren ja mantereen välissä. Noin 5000 vuotta vanhana sitä pidetään maailman vanhimpana tunnettuna veden alle vajonneena kaupunkina, ja siitä on säilynyt lähes koko asemakaava katuineen, rakennuksineen ja hautoineen. Muurit mainittiin ensimmäisen kerran 1904, mutta kaupunki löydettiin uudelleen 1967 ja kartoitettiin seuraavana vuonna. Maanjäristykset ja noussut merenpinta upottivat sen, ja koska paikalle ei rakennettu uudestaan eikä sitä viljelty, pohjapiirros erottuu yhä merenpohjassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Sadut ja tarinat: Soittaja, jota seurattiin kaupungista] 1284 — Hamelnin kaupungin kirjoihin merkittiin 1284 outo suru: sata kolmekymmentä lasta lähti kaupungista kirjavan soittajan perässä eikä palannut. Kukaan ei tiedä varmasti, mitä oikeasti tapahtui — vasta myöhemmin tarinaan liitettiin rotat, jotka soittaja houkutteli ensin jokeen. Hamelnissa tarina elää yhä: kesäsunnuntaisin se esitetään näytelmänä, ja Bungelosenstrassella eli Rummuttomalla kadulla ei edelleenkään soiteta musiikkia — kunnioituksesta kadonneita kohtaan.
+- [Kimberley — kaupunkilehti / Timanttiryntäys: Kivi joka sai nimensä kaupungista] Timantit eivät synny sattumalta minkä tahansa kiven sisään, vaan tietynlaisessa syvältä maankuoresta nousseessa kivilajissa. Kun geologit alkoivat tutkia Kimberleyn seudun piippumaisia, alaspäin kapenevia kivimuodostumia, he huomasivat niiden olevan poikkeuksellisen rikkaita timanteista. Koska juuri Kimberleyn ympäristöstä löytyi useita timanttipitoisia piippuja, tutkijat ristivät kivilajin kimberliitiksi. Rapautunut kimberliitti sai lempinimen "yellowground", syvemmällä säilynyt, rapautumaton kivi taas nimen "blueground". Nimi levisi tieteen kieleksi ympäri maailmaa, vaikka moni muukin paikka tuotti myöhemmin timantteja samasta kivilajista.
+
+### 72.1
+KYSYMYS: Miksi Pavlopetri vajosi veden alle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pavlopetri, meren alle vajonnut kaupunki (meri)
+Tietoruudun teksti: Pavlopetri on muinainen kaupunki Vatikan lahdella Lakonian etelärannikolla, Elafonisoksen saaren ja mantereen välissä. Noin 5000 vuotta vanhana sitä pidetään maailman vanhimpana tunnettuna veden alle vajonneena kaupunkina, ja siitä on säilynyt lähes koko asemakaava katuineen, rakennuksineen ja hautoineen. Muurit mainittiin ensimmäisen kerran 1904, mutta kaupunki löydettiin uudelleen 1967 ja kartoitettiin seuraavana vuonna. Maanjäristykset ja noussut merenpinta upottivat sen, ja koska paikalle ei rakennettu uudestaan eikä sitä viljelty, pohjapiirros erottuu yhä merenpohjassa.
+
+### 72.2
+KYSYMYS: Mitä kaupungista on säilynyt?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pavlopetri, meren alle vajonnut kaupunki (meri)
+Tietoruudun teksti: Pavlopetri on muinainen kaupunki Vatikan lahdella Lakonian etelärannikolla, Elafonisoksen saaren ja mantereen välissä. Noin 5000 vuotta vanhana sitä pidetään maailman vanhimpana tunnettuna veden alle vajonneena kaupunkina, ja siitä on säilynyt lähes koko asemakaava katuineen, rakennuksineen ja hautoineen. Muurit mainittiin ensimmäisen kerran 1904, mutta kaupunki löydettiin uudelleen 1967 ja kartoitettiin seuraavana vuonna. Maanjäristykset ja noussut merenpinta upottivat sen, ja koska paikalle ei rakennettu uudestaan eikä sitä viljelty, pohjapiirros erottuu yhä merenpohjassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Sadut ja tarinat: Soittaja, jota seurattiin kaupungista] 1284 — Hamelnin kaupungin kirjoihin merkittiin 1284 outo suru: sata kolmekymmentä lasta lähti kaupungista kirjavan soittajan perässä eikä palannut. Kukaan ei tiedä varmasti, mitä oikeasti tapahtui — vasta myöhemmin tarinaan liitettiin rotat, jotka soittaja houkutteli ensin jokeen. Hamelnissa tarina elää yhä: kesäsunnuntaisin se esitetään näytelmänä, ja Bungelosenstrassella eli Rummuttomalla kadulla ei edelleenkään soiteta musiikkia — kunnioituksesta kadonneita kohtaan.
+- [Kimberley — kaupunkilehti / Timanttiryntäys: Kivi joka sai nimensä kaupungista] Timantit eivät synny sattumalta minkä tahansa kiven sisään, vaan tietynlaisessa syvältä maankuoresta nousseessa kivilajissa. Kun geologit alkoivat tutkia Kimberleyn seudun piippumaisia, alaspäin kapenevia kivimuodostumia, he huomasivat niiden olevan poikkeuksellisen rikkaita timanteista. Koska juuri Kimberleyn ympäristöstä löytyi useita timanttipitoisia piippuja, tutkijat ristivät kivilajin kimberliitiksi. Rapautunut kimberliitti sai lempinimen "yellowground", syvemmällä säilynyt, rapautumaton kivi taas nimen "blueground". Nimi levisi tieteen kieleksi ympäri maailmaa, vaikka moni muukin paikka tuotti myöhemmin timantteja samasta kivilajista.
+
+### 72.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 72 YHTEINEN KONTEKSTI
+
+### 72.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 72 YHTEINEN KONTEKSTI
+
+### 72.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 72 YHTEINEN KONTEKSTI
+
+================ KOHTA 73 (kohde:hahmotelma-poliokhni) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Poliokhni, Troijaa vanhempi kaupunki (historia)
+Tietoruudun teksti: Poliokhni oli asutus Limnoksen saaren itärannikolla, ja sitä pidetään yhtenä Euroopan vanhimmista kaupungeista – se on vanhempi kuin Troijan varhaisin kerros. Talot oli rakennettu tiiviisti kiinni toisiinsa yhteisten seinien varaan, ja myöhemmin kaupunkia suojasi puolustusmuuri. Italialaiset arkeologit alkoivat kaivaa paikkaa 1930, ja kaivausten johtaja Luigi Bernabò Brea nimesi myöhemmin seitsemän asutusvaihetta väreillä, kuten musta, sininen ja keltainen. Keltaisen kauden kerroksista löytyi runsaasti kultakoruja, samaan tapaan kuin Troijasta, jonka arvellaan olleen Poliokhnin tärkein kilpailija kaupassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Kirahvin kävelymatka] Egyptin varakuningas lähetti kirahvin Ranskan kuninkaalle Kaarle X:lle. Eläin saapui laivalla Marseilleen 31. lokakuuta 1826 — kannessa oli sahattu reikä, josta kaula mahtui ulos. Merimatkaa Atlantin ympäri pidettiin liian vaarallisena, joten päätettiin, että kirahvi kävelee Pariisiin. Luonnontieteilijä Étienne Geoffroy Saint-Hilaire, 55, käveli mukana ja teetti eläimelle kaksiosaisen keltaisen takin ja kengät. Matka kesti 41 päivää. Lyonissa vastassa oli 30 000 ihmistä, ja Pariisissa kirahvia kävi katsomassa yli 100 000 — joka kahdeksas kaupunkilainen. Hiukset kammattiin torneiksi, kankaisiin ilmestyi täpliä ja väri nimeltä "kirahvin vatsa" myi kaiken. Aikalaiset kutsuivat eläintä nimellä …
+- [Vanuatu — maalehti / Kuvataide: Lippu, jonka lehdykät laskettiin parlamentin mukaan] 1980 — Lippu otettiin käyttöön 18. helmikuuta 1980. Värit tulevat itsenäisyyttä ajaneen puolueen lipusta, jonka paikallinen taiteilija Kalontas Malon suunnitteli 1977: vihreä on saarten rehevyys, punainen ihmisiä yhdistävä veri ja musta melanesialainen ni-vanuatulainen väestö. Pääministeri Walter Lini pyysi keltaisen ja mustan reunaviivan, jotta musta erottuisi. Keltainen Y on saariketju kartalla. Mustan kentän tunnus on sianhammas, vaurauden ja perinteen merkki; sitä ympäröivissä namelen lehdissä on 39 lehdykkää, yhtä monta kuin ensimmäisessä parlamentissa oli jäseniä.
+
+### 73.1
+KYSYMYS: Miksi Poliokhni on vanhempi kuin Troija?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Poliokhni, Troijaa vanhempi kaupunki (historia)
+Tietoruudun teksti: Poliokhni oli asutus Limnoksen saaren itärannikolla, ja sitä pidetään yhtenä Euroopan vanhimmista kaupungeista – se on vanhempi kuin Troijan varhaisin kerros. Talot oli rakennettu tiiviisti kiinni toisiinsa yhteisten seinien varaan, ja myöhemmin kaupunkia suojasi puolustusmuuri. Italialaiset arkeologit alkoivat kaivaa paikkaa 1930, ja kaivausten johtaja Luigi Bernabò Brea nimesi myöhemmin seitsemän asutusvaihetta väreillä, kuten musta, sininen ja keltainen. Keltaisen kauden kerroksista löytyi runsaasti kultakoruja, samaan tapaan kuin Troijasta, jonka arvellaan olleen Poliokhnin tärkein kilpailija kaupassa.
+
+### 73.2
+KYSYMYS: Mitä keltaisen kauden kerroksista löytyi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Poliokhni, Troijaa vanhempi kaupunki (historia)
+Tietoruudun teksti: Poliokhni oli asutus Limnoksen saaren itärannikolla, ja sitä pidetään yhtenä Euroopan vanhimmista kaupungeista – se on vanhempi kuin Troijan varhaisin kerros. Talot oli rakennettu tiiviisti kiinni toisiinsa yhteisten seinien varaan, ja myöhemmin kaupunkia suojasi puolustusmuuri. Italialaiset arkeologit alkoivat kaivaa paikkaa 1930, ja kaivausten johtaja Luigi Bernabò Brea nimesi myöhemmin seitsemän asutusvaihetta väreillä, kuten musta, sininen ja keltainen. Keltaisen kauden kerroksista löytyi runsaasti kultakoruja, samaan tapaan kuin Troijasta, jonka arvellaan olleen Poliokhnin tärkein kilpailija kaupassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Kirahvin kävelymatka] Egyptin varakuningas lähetti kirahvin Ranskan kuninkaalle Kaarle X:lle. Eläin saapui laivalla Marseilleen 31. lokakuuta 1826 — kannessa oli sahattu reikä, josta kaula mahtui ulos. Merimatkaa Atlantin ympäri pidettiin liian vaarallisena, joten päätettiin, että kirahvi kävelee Pariisiin. Luonnontieteilijä Étienne Geoffroy Saint-Hilaire, 55, käveli mukana ja teetti eläimelle kaksiosaisen keltaisen takin ja kengät. Matka kesti 41 päivää. Lyonissa vastassa oli 30 000 ihmistä, ja Pariisissa kirahvia kävi katsomassa yli 100 000 — joka kahdeksas kaupunkilainen. Hiukset kammattiin torneiksi, kankaisiin ilmestyi täpliä ja väri nimeltä "kirahvin vatsa" myi kaiken. Aikalaiset kutsuivat eläintä nimellä …
+- [Vanuatu — maalehti / Kuvataide: Lippu, jonka lehdykät laskettiin parlamentin mukaan] 1980 — Lippu otettiin käyttöön 18. helmikuuta 1980. Värit tulevat itsenäisyyttä ajaneen puolueen lipusta, jonka paikallinen taiteilija Kalontas Malon suunnitteli 1977: vihreä on saarten rehevyys, punainen ihmisiä yhdistävä veri ja musta melanesialainen ni-vanuatulainen väestö. Pääministeri Walter Lini pyysi keltaisen ja mustan reunaviivan, jotta musta erottuisi. Keltainen Y on saariketju kartalla. Mustan kentän tunnus on sianhammas, vaurauden ja perinteen merkki; sitä ympäröivissä namelen lehdissä on 39 lehdykkää, yhtä monta kuin ensimmäisessä parlamentissa oli jäseniä.
+
+### 73.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 73 YHTEINEN KONTEKSTI
+
+### 73.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 73 YHTEINEN KONTEKSTI
+
+### 73.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 73 YHTEINEN KONTEKSTI
+
+================ KOHTA 74 (kohde:hahmotelma-sporadien-meripuisto) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjoisten Sporadien merikansallispuisto (meri)
+Tietoruudun teksti: Alonnisoksen ja Pohjoisten Sporadien merikansallispuisto perustettiin presidentin asetuksella 16. toukokuuta 1992. Se oli Kreikan ensimmäinen merikansallispuisto, ja noin 2 260 neliökilometrin laajuisena se on nykyään Euroopan suurin merensuojelualue. Puistoon kuuluvat Alonnisoksen saari, kuusi pienempää saarta – Peristera, Kyra Panagia, Gioura, Psathoura, Piperi ja Skantzoura – sekä 22 asumatonta luotoa ja karia pohjoisella Egeanmerellä. Suojelua ehdotti ensimmäisenä saksalainen eläintieteilijä Thomas Schultze-Westrum tutkimusmatkoillaan 1976, ja Alonnisoksen kalastajat sitoutuivat auttamaan. Puiston tärkeimpiä tehtäviä on välimerenmunkkihylkeen suojelu: Alonnisokselle perustettiin lajin ensimmäinen hoitokeskus koko Välimerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Peru — maalehti / Luonto: Saaria, joita lisätään joka viikko] Titicaca on Etelä-Amerikan suurin järvi sekä pinta-alaltaan että vesitilavuudeltaan, ja sen pinta on 3 812 metrin korkeudessa. Järvi on kahden maan: länsiranta kuuluu Perun Punoon ja itäranta Bolivian La Pazin departementtiin. Uros-kansa rakentaa vesialueelle kelluvia saaria totora-kaislasta: pohja lahoaa alta ja pinnalle lisätään jatkuvasti uutta kaislaa. Vuoden 1986 myrskyn jälkeen moni saari siirrettiin lähemmäs rantaa; vuonna 2011 saarilla asui noin 1 200 ihmistä.
+- [Albania — maalehti / Luonto: Karaburun ja Sazan meren rannalla] vuodesta 2010 — Karaburun–Sazanin meripuisto perustettiin 28. huhtikuuta 2010 Vlorën lahden lounaispuolelle, ja sen pinta-ala on noin 12 400 hehtaaria. Karaburunin niemimaa on noin 24 kilometriä pitkä ja 4–7 kilometriä leveä, ja sen korkein huippu Maja e Shendelliut nousee 1 499,5 metriin. Sazanin saari on 4,8 kilometriä pitkä ja 2,7 kilometriä leveä, ja sen pinta-ala on 5,7 neliökilometriä. Puiston vesillä on havaittu uhanalaisia lajeja, kuten karettikilpikonna ja Välimeren munkkihylje. Pohjassa lepää myös antiikin kreikkalaisten ja roomalaisten alusten hylkyjä.
+
+### 74.1
+KYSYMYS: Miksi meripuisto perustettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjoisten Sporadien merikansallispuisto (meri)
+Tietoruudun teksti: Alonnisoksen ja Pohjoisten Sporadien merikansallispuisto perustettiin presidentin asetuksella 16. toukokuuta 1992. Se oli Kreikan ensimmäinen merikansallispuisto, ja noin 2 260 neliökilometrin laajuisena se on nykyään Euroopan suurin merensuojelualue. Puistoon kuuluvat Alonnisoksen saari, kuusi pienempää saarta – Peristera, Kyra Panagia, Gioura, Psathoura, Piperi ja Skantzoura – sekä 22 asumatonta luotoa ja karia pohjoisella Egeanmerellä. Suojelua ehdotti ensimmäisenä saksalainen eläintieteilijä Thomas Schultze-Westrum tutkimusmatkoillaan 1976, ja Alonnisoksen kalastajat sitoutuivat auttamaan. Puiston tärkeimpiä tehtäviä on välimerenmunkkihylkeen suojelu: Alonnisokselle perustettiin lajin ensimmäinen hoitokeskus koko Välimerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Luonto: Karaburun ja Sazan meren rannalla] vuodesta 2010 — Karaburun–Sazanin meripuisto perustettiin 28. huhtikuuta 2010 Vlorën lahden lounaispuolelle, ja sen pinta-ala on noin 12 400 hehtaaria. Karaburunin niemimaa on noin 24 kilometriä pitkä ja 4–7 kilometriä leveä, ja sen korkein huippu Maja e Shendelliut nousee 1 499,5 metriin. Sazanin saari on 4,8 kilometriä pitkä ja 2,7 kilometriä leveä, ja sen pinta-ala on 5,7 neliökilometriä. Puiston vesillä on havaittu uhanalaisia lajeja, kuten karettikilpikonna ja Välimeren munkkihylje. Pohjassa lepää myös antiikin kreikkalaisten ja roomalaisten alusten hylkyjä.
+
+### 74.2
+KYSYMYS: Mitä saaria puistoon kuuluu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjoisten Sporadien merikansallispuisto (meri)
+Tietoruudun teksti: Alonnisoksen ja Pohjoisten Sporadien merikansallispuisto perustettiin presidentin asetuksella 16. toukokuuta 1992. Se oli Kreikan ensimmäinen merikansallispuisto, ja noin 2 260 neliökilometrin laajuisena se on nykyään Euroopan suurin merensuojelualue. Puistoon kuuluvat Alonnisoksen saari, kuusi pienempää saarta – Peristera, Kyra Panagia, Gioura, Psathoura, Piperi ja Skantzoura – sekä 22 asumatonta luotoa ja karia pohjoisella Egeanmerellä. Suojelua ehdotti ensimmäisenä saksalainen eläintieteilijä Thomas Schultze-Westrum tutkimusmatkoillaan 1976, ja Alonnisoksen kalastajat sitoutuivat auttamaan. Puiston tärkeimpiä tehtäviä on välimerenmunkkihylkeen suojelu: Alonnisokselle perustettiin lajin ensimmäinen hoitokeskus koko Välimerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Peru — maalehti / Luonto: Saaria, joita lisätään joka viikko] Titicaca on Etelä-Amerikan suurin järvi sekä pinta-alaltaan että vesitilavuudeltaan, ja sen pinta on 3 812 metrin korkeudessa. Järvi on kahden maan: länsiranta kuuluu Perun Punoon ja itäranta Bolivian La Pazin departementtiin. Uros-kansa rakentaa vesialueelle kelluvia saaria totora-kaislasta: pohja lahoaa alta ja pinnalle lisätään jatkuvasti uutta kaislaa. Vuoden 1986 myrskyn jälkeen moni saari siirrettiin lähemmäs rantaa; vuonna 2011 saarilla asui noin 1 200 ihmistä.
+
+### 74.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 74 YHTEINEN KONTEKSTI
+
+### 74.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 74 YHTEINEN KONTEKSTI
+
+### 74.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 74 YHTEINEN KONTEKSTI
+
+================ KOHTA 75 (kohde:antiikin-agora) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ateena
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antiikin agora (historia)
+Tietoruudun teksti: Akropoliin luoteispuolella, Areiopagin ja Agoraios Kolonos -kukkulan välissä, oli antiikin Ateenan agora: kaupungin tori, kokouspaikka ja sydän 500-luvulta eaa. alkaen. Kukkulan päällä seisoo Hefaistoksen temppeli, joka valmistui 449–415 eaa. ja on säilynyt lähes ehjänä — syy on sen katkeamaton käyttö: 600-luvulta vuoteen 1834 se oli Pyhän Yrjön kreikkalaiskatolinen kirkko. Isoisäsi matkan aikaan agoran päällä oli tavallinen ateenalainen asuinkortteli; alue kaivettiin esiin vasta vuodesta 1931 alkaen.
+Isoisän matkakirjamerkintä: Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kohdekartta / Kohdekartta: Antiikin agora] 500-luku eaa. Antiikin agora oli vanhan Ateenan sydän. Jo 500-luvulta eaa. lähtien tälle aukiolle kokoontuivat kauppiaat, poliitikot ja tavalliset kaupunkilaiset. Toreilla myytiin hedelmiä, kankaita, saviastioita ja tuoksuvia voiteita, ja yllättävän moni myyjä oli nainen, vaikka naiset viettivät muuten aikansa yleensä kotona. Agoran laidalla seisoo yhä pystyssä Hefaistoksen temppeli, yksi maailman parhaiten säilyneistä antiikin kreikkalaisista temppeleistä. Se on kestänyt lähes koskemattomana yli 2 400 vuotta, vaikka moni muu agoran rakennus on murentunut ajan saatossa. Arkeologit ovat kaivaneet agoraa esiin vuodesta 1931 lähtien: pelkästään vuoteen 1935 mennessä maasta nousi noin 600 patsa…
+
+### 75.1
+KYSYMYS: Mitä agoralla tehtiin tavallisena päivänä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ateena
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antiikin agora (historia)
+Tietoruudun teksti: Akropoliin luoteispuolella, Areiopagin ja Agoraios Kolonos -kukkulan välissä, oli antiikin Ateenan agora: kaupungin tori, kokouspaikka ja sydän 500-luvulta eaa. alkaen. Kukkulan päällä seisoo Hefaistoksen temppeli, joka valmistui 449–415 eaa. ja on säilynyt lähes ehjänä — syy on sen katkeamaton käyttö: 600-luvulta vuoteen 1834 se oli Pyhän Yrjön kreikkalaiskatolinen kirkko. Isoisäsi matkan aikaan agoran päällä oli tavallinen ateenalainen asuinkortteli; alue kaivettiin esiin vasta vuodesta 1931 alkaen.
+Isoisän matkakirjamerkintä: Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kohdekartta / Kohdekartta: Antiikin agora] 500-luku eaa. Antiikin agora oli vanhan Ateenan sydän. Jo 500-luvulta eaa. lähtien tälle aukiolle kokoontuivat kauppiaat, poliitikot ja tavalliset kaupunkilaiset. Toreilla myytiin hedelmiä, kankaita, saviastioita ja tuoksuvia voiteita, ja yllättävän moni myyjä oli nainen, vaikka naiset viettivät muuten aikansa yleensä kotona. Agoran laidalla seisoo yhä pystyssä Hefaistoksen temppeli, yksi maailman parhaiten säilyneistä antiikin kreikkalaisista temppeleistä. Se on kestänyt lähes koskemattomana yli 2 400 vuotta, vaikka moni muu agoran rakennus on murentunut ajan saatossa. Arkeologit ovat kaivaneet agoraa esiin vuodesta 1931 lähtien: pelkästään vuoteen 1935 mennessä maasta nousi noin 600 patsa…
+
+### 75.2
+KYSYMYS: Miksi juuri Hefaistoksen temppeli säilyi näin ehjänä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ateena
+Maa, jossa pelaaja on: Kreikka
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antiikin agora (historia)
+Tietoruudun teksti: Akropoliin luoteispuolella, Areiopagin ja Agoraios Kolonos -kukkulan välissä, oli antiikin Ateenan agora: kaupungin tori, kokouspaikka ja sydän 500-luvulta eaa. alkaen. Kukkulan päällä seisoo Hefaistoksen temppeli, joka valmistui 449–415 eaa. ja on säilynyt lähes ehjänä — syy on sen katkeamaton käyttö: 600-luvulta vuoteen 1834 se oli Pyhän Yrjön kreikkalaiskatolinen kirkko. Isoisäsi matkan aikaan agoran päällä oli tavallinen ateenalainen asuinkortteli; alue kaivettiin esiin vasta vuodesta 1931 alkaen.
+Isoisän matkakirjamerkintä: Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kohdekartta / Kohdekartta: Antiikin agora] 500-luku eaa. Antiikin agora oli vanhan Ateenan sydän. Jo 500-luvulta eaa. lähtien tälle aukiolle kokoontuivat kauppiaat, poliitikot ja tavalliset kaupunkilaiset. Toreilla myytiin hedelmiä, kankaita, saviastioita ja tuoksuvia voiteita, ja yllättävän moni myyjä oli nainen, vaikka naiset viettivät muuten aikansa yleensä kotona. Agoran laidalla seisoo yhä pystyssä Hefaistoksen temppeli, yksi maailman parhaiten säilyneistä antiikin kreikkalaisista temppeleistä. Se on kestänyt lähes koskemattomana yli 2 400 vuotta, vaikka moni muu agoran rakennus on murentunut ajan saatossa. Arkeologit ovat kaivaneet agoraa esiin vuodesta 1931 lähtien: pelkästään vuoteen 1935 mennessä maasta nousi noin 600 patsa…
+
+### 75.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 75 YHTEINEN KONTEKSTI
+
+### 75.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 75 YHTEINEN KONTEKSTI
+
+### 75.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 75 YHTEINEN KONTEKSTI

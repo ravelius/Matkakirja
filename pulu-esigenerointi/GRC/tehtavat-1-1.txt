@@ -1,0 +1,217 @@
+================ KOHTA 1 (kohde:thessaloniki) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thessaloniki (kaupungit)
+Tietoruudun teksti: Kaupungin perusti makedonialainen kuningas Kassandros vuonna 315 eaa. ja nimesi sen vaimonsa Thessaloniken mukaan — tämä oli Aleksanteri Suuren sisarpuoli. Bysantin aikana kaupunkia kutsuttiin "kanssapääkaupungiksi" (Symprotevousa) Konstantinopolin rinnalla. Ottomaanivallan 1430–1912 aikana täällä asui rinnakkain kristittyjä, muslimeja ja juutalaisia, ja 1500–1900-luvuilla se oli Euroopan ainoa juutalaisenemmistöinen kaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Manaus — kohdekartta / Kohdekartta: Beit Yaacovin synagoga] 1962 Amazonin juutalaisyhteisö on vanha ja sen synagoga nuori. Manausin seurakunta syntyi kahdesta aiemmasta, joiden juuret ovat 1920-luvulla; nykyinen talo valmistui 1962, kun seurakunnat yhdistyivät. Se on yksi Pohjois-Brasilian suurimmista ja vaikutusvaltaisimmista amazonianjuutalaisten seurakunnista. Yhteisö tuli jokea pitkin kaupan mukana. Marokon juutalaiset alkoivat 1800-luvun alussa muuttaa Brasiliaan, ja moni päätyi Amazonille: he perustivat kauppaverkostoja, jotka ulottuivat Belémistä ja Manausista jokivarren takamaille asti, ja toimivat välikäsinä kumin tuottajien ja vientisatamien välillä. Manaus on tässä poikkeus, sillä sinne saapuivat ensin elsassilaiset juutalaiset Ranskan–Pr…
+- [Fès — kaupunkilehti / Kirjat ja kirjoitus: Maimonides ja Fèsin oppineet] Fèsin juutalaisyhteisö oli olemassa jo kaupungin ensimmäisinä vuosisatoina, ja siitä nousi oppineita, joiden nimet tunnetaan yhä: runoilija Dunash Ben Labrat, kielioppineen Judah ben David Hayyuj ja talmudisti Isaac al-Fasi. Vuosina 1159–1165 kaupungissa asui Maimonides, aikansa merkittävimpiä juutalaisia ajattelijoita, joka oli paennut al-Andalusista. Yhteisö siirrettiin 1400-luvulla Fes Jdidiin syntyneeseen Mellahiin; tarkkaa ajankohtaa ja olosuhteita ei ole vahvistettu. Nykyään yhteisö on hyvin pieni, eivätkä korttelin synagogat ole enää käytössä.
+
+### 1.1
+KYSYMYS: Miksi juutalaisyhteisö kasvoi täällä niin suureksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thessaloniki (kaupungit)
+Tietoruudun teksti: Kaupungin perusti makedonialainen kuningas Kassandros vuonna 315 eaa. ja nimesi sen vaimonsa Thessaloniken mukaan — tämä oli Aleksanteri Suuren sisarpuoli. Bysantin aikana kaupunkia kutsuttiin "kanssapääkaupungiksi" (Symprotevousa) Konstantinopolin rinnalla. Ottomaanivallan 1430–1912 aikana täällä asui rinnakkain kristittyjä, muslimeja ja juutalaisia, ja 1500–1900-luvuilla se oli Euroopan ainoa juutalaisenemmistöinen kaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Manaus — kohdekartta / Kohdekartta: Beit Yaacovin synagoga] 1962 Amazonin juutalaisyhteisö on vanha ja sen synagoga nuori. Manausin seurakunta syntyi kahdesta aiemmasta, joiden juuret ovat 1920-luvulla; nykyinen talo valmistui 1962, kun seurakunnat yhdistyivät. Se on yksi Pohjois-Brasilian suurimmista ja vaikutusvaltaisimmista amazonianjuutalaisten seurakunnista. Yhteisö tuli jokea pitkin kaupan mukana. Marokon juutalaiset alkoivat 1800-luvun alussa muuttaa Brasiliaan, ja moni päätyi Amazonille: he perustivat kauppaverkostoja, jotka ulottuivat Belémistä ja Manausista jokivarren takamaille asti, ja toimivat välikäsinä kumin tuottajien ja vientisatamien välillä. Manaus on tässä poikkeus, sillä sinne saapuivat ensin elsassilaiset juutalaiset Ranskan–Pr…
+- [Fès — kaupunkilehti / Kirjat ja kirjoitus: Maimonides ja Fèsin oppineet] Fèsin juutalaisyhteisö oli olemassa jo kaupungin ensimmäisinä vuosisatoina, ja siitä nousi oppineita, joiden nimet tunnetaan yhä: runoilija Dunash Ben Labrat, kielioppineen Judah ben David Hayyuj ja talmudisti Isaac al-Fasi. Vuosina 1159–1165 kaupungissa asui Maimonides, aikansa merkittävimpiä juutalaisia ajattelijoita, joka oli paennut al-Andalusista. Yhteisö siirrettiin 1400-luvulla Fes Jdidiin syntyneeseen Mellahiin; tarkkaa ajankohtaa ja olosuhteita ei ole vahvistettu. Nykyään yhteisö on hyvin pieni, eivätkä korttelin synagogat ole enää käytössä.
+
+### 1.2
+KYSYMYS: Millainen hallitsija Kassandros oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thessaloniki (kaupungit)
+Tietoruudun teksti: Kaupungin perusti makedonialainen kuningas Kassandros vuonna 315 eaa. ja nimesi sen vaimonsa Thessaloniken mukaan — tämä oli Aleksanteri Suuren sisarpuoli. Bysantin aikana kaupunkia kutsuttiin "kanssapääkaupungiksi" (Symprotevousa) Konstantinopolin rinnalla. Ottomaanivallan 1430–1912 aikana täällä asui rinnakkain kristittyjä, muslimeja ja juutalaisia, ja 1500–1900-luvuilla se oli Euroopan ainoa juutalaisenemmistöinen kaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historia: Valkoinen kaupunki tuhannella ikkunalla] 314 eaa. – 2008 — Makedonialainen kenraali Kassandros perusti kaupungin nimellä Antipatreia vuonna 314 eaa. isänsä Antipatroksen kunniaksi, vanhan illyrialaisasutuksen paikalle. Bysantin aikaan se tunnettiin nimellä Pulcheriopolis, ja keskiajan slaavilainen nimi Beligrad – Valkoinen kaupunki – kuvasi jo silloin sen valkoisia taloja. Osmanit valtasivat kaupungin 1417. Nykyisin Osum-joen kahta rantaa reunustavat Mangalemin ja Gorican korttelit, joiden rinteille kiipeävissä taloissa on niin paljon ikkunoita, että albaanit kutsuvat kaupunkia tuhannen ikkunan kaupungiksi. Unesco liitti Beratin maailmanperintöluetteloon 2008 yhdessä Gjirokastërin kanssa.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:patras) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Patras (kaupungit)
+Tietoruudun teksti: Patras oli yksi ensimmäisistä kaupungeista, joissa Kreikan itsenäisyyssota syttyi vuonna 1821 — ottomaanien varuskunta linnoituksessa piti kuitenkin pintansa aina vuoteen 1828 asti. Sodan jälkeen suuri osa kaupungista makasi raunioina, ja se rakennettiin uudelleen ruutukaavan mukaan vuoden 1858 kaupunkisuunnitelmalla. Isoisän vieraillessa 1873 katukuva oli siis vain reilun kymmenen vuoden ikäinen.
+
+### 2.1
+KYSYMYS: Miksi kapina alkoi juuri Patrasista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Patras (kaupungit)
+Tietoruudun teksti: Patras oli yksi ensimmäisistä kaupungeista, joissa Kreikan itsenäisyyssota syttyi vuonna 1821 — ottomaanien varuskunta linnoituksessa piti kuitenkin pintansa aina vuoteen 1828 asti. Sodan jälkeen suuri osa kaupungista makasi raunioina, ja se rakennettiin uudelleen ruutukaavan mukaan vuoden 1858 kaupunkisuunnitelmalla. Isoisän vieraillessa 1873 katukuva oli siis vain reilun kymmenen vuoden ikäinen.
+
+### 2.2
+KYSYMYS: Mistä Patras elää nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Patras (kaupungit)
+Tietoruudun teksti: Patras oli yksi ensimmäisistä kaupungeista, joissa Kreikan itsenäisyyssota syttyi vuonna 1821 — ottomaanien varuskunta linnoituksessa piti kuitenkin pintansa aina vuoteen 1828 asti. Sodan jälkeen suuri osa kaupungista makasi raunioina, ja se rakennettiin uudelleen ruutukaavan mukaan vuoden 1858 kaupunkisuunnitelmalla. Isoisän vieraillessa 1873 katukuva oli siis vain reilun kymmenen vuoden ikäinen.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:ioannina) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ioánnina (kaupungit)
+Tietoruudun teksti: Vuosina 1788–1822 kaupunkia hallitsi ottomaani-albaanialainen ruhtinas Ali-pasha, jonka hovi houkutteli aikansa vaikutusvaltaisia hahmoja ja jonka kaudella kaupungissa kukoisti sekä kauppa että kreikkalainen valistus. Kun hän yritti irtautua sulttaanin vallasta, Istanbul julisti hänet petturiksi: sulttaanin joukot piirittivät kaupunkia, ja Ali-pasha salamurhattiin 1822 järven saaren luostarissa, jonne hän oli paennut odottamaan armahdusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Vanha katedraali Antiga Sé] 1761–1770 Karmeliitat tulivat Rioon 1590 ja asettuivat pieneen kappeliin lahden rannalle. Nykyinen kirkko alkoi nousta noin 1761, ja työtä johti todennäköisesti portugalilainen arkkitehti Manuel Alves Setúbal. Kirkko vihittiin 1770 julkisivu vielä keskeneräisenä, ja sisustuksen kullatun rokokoopuuveiston teki vuoden 1785 jälkeen Inácio Ferreira Pinto, aikansa parhaita veistäjiä kaupungissa. Vuonna 1808 Portugalin hovi saapui Rioon, ja karmeliittojen talot otettiin käyttöön: kuningatar Maria I majoitettiin konventtiin ja viereisestä kirkosta tehtiin ensin kuninkaallinen kappeli ja pian kaupungin katedraali. Siellä pidettiin Maria I:n hautajaiset 1816 ja Te Deum, kun João VI julistettiin kuni…
+- [Fès — kaupunkilehti / Kirjat ja kirjoitus: Maimonides ja Fèsin oppineet] Fèsin juutalaisyhteisö oli olemassa jo kaupungin ensimmäisinä vuosisatoina, ja siitä nousi oppineita, joiden nimet tunnetaan yhä: runoilija Dunash Ben Labrat, kielioppineen Judah ben David Hayyuj ja talmudisti Isaac al-Fasi. Vuosina 1159–1165 kaupungissa asui Maimonides, aikansa merkittävimpiä juutalaisia ajattelijoita, joka oli paennut al-Andalusista. Yhteisö siirrettiin 1400-luvulla Fes Jdidiin syntyneeseen Mellahiin; tarkkaa ajankohtaa ja olosuhteita ei ole vahvistettu. Nykyään yhteisö on hyvin pieni, eivätkä korttelin synagogat ole enää käytössä.
+
+### 3.1
+KYSYMYS: Miten Ali-pasha nousi niin mahtavaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ioánnina (kaupungit)
+Tietoruudun teksti: Vuosina 1788–1822 kaupunkia hallitsi ottomaani-albaanialainen ruhtinas Ali-pasha, jonka hovi houkutteli aikansa vaikutusvaltaisia hahmoja ja jonka kaudella kaupungissa kukoisti sekä kauppa että kreikkalainen valistus. Kun hän yritti irtautua sulttaanin vallasta, Istanbul julisti hänet petturiksi: sulttaanin joukot piirittivät kaupunkia, ja Ali-pasha salamurhattiin 1822 järven saaren luostarissa, jonne hän oli paennut odottamaan armahdusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sansibar — kohdekartta / Kohdekartta: Tippu Tipin talo] 1800-luvun loppu Shanganin kaupunginosassa, Suicide Alleyn varrella, on talo, jossa asui Tippu Tip (1837–1905). Lähde kuvaa hänet mahtavaksi kauppiaaksi ja orjakauppiaaksi. Hän johti sisämaahan retkikuntia, joissa saattoi olla nelisentuhatta miestä, toi norsunluuta Sansibariin ja nousi saaren rikkaimpien joukkoon. Talo oli yksityisasunto vuoden 1964 vallankumoukseen asti, ja sen jälkeen se muutettiin kerrostaloksi. Vaikka se on matkailunähtävyys, se ei ole virallisesti avoinna kävijöille, ja se on niin huonossa kunnossa, että sitä on kutsuttu koko Afrikan komeimmaksi valtaustaloksi. Kaksi asiaa kertoo yhä, kuka talon rakensi: suuri veistetty puuovi ja mustavalkoiset marmoriportaat. Kivikaup…
+
+### 3.2
+KYSYMYS: Näkyykö hänen aikansa kaupungissa yhä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ioánnina (kaupungit)
+Tietoruudun teksti: Vuosina 1788–1822 kaupunkia hallitsi ottomaani-albaanialainen ruhtinas Ali-pasha, jonka hovi houkutteli aikansa vaikutusvaltaisia hahmoja ja jonka kaudella kaupungissa kukoisti sekä kauppa että kreikkalainen valistus. Kun hän yritti irtautua sulttaanin vallasta, Istanbul julisti hänet petturiksi: sulttaanin joukot piirittivät kaupunkia, ja Ali-pasha salamurhattiin 1822 järven saaren luostarissa, jonne hän oli paennut odottamaan armahdusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Vanha katedraali Antiga Sé] 1761–1770 Karmeliitat tulivat Rioon 1590 ja asettuivat pieneen kappeliin lahden rannalle. Nykyinen kirkko alkoi nousta noin 1761, ja työtä johti todennäköisesti portugalilainen arkkitehti Manuel Alves Setúbal. Kirkko vihittiin 1770 julkisivu vielä keskeneräisenä, ja sisustuksen kullatun rokokoopuuveiston teki vuoden 1785 jälkeen Inácio Ferreira Pinto, aikansa parhaita veistäjiä kaupungissa. Vuonna 1808 Portugalin hovi saapui Rioon, ja karmeliittojen talot otettiin käyttöön: kuningatar Maria I majoitettiin konventtiin ja viereisestä kirkosta tehtiin ensin kuninkaallinen kappeli ja pian kaupungin katedraali. Siellä pidettiin Maria I:n hautajaiset 1816 ja Te Deum, kun João VI julistettiin kuni…
+- [Fès — kaupunkilehti / Kirjat ja kirjoitus: Maimonides ja Fèsin oppineet] Fèsin juutalaisyhteisö oli olemassa jo kaupungin ensimmäisinä vuosisatoina, ja siitä nousi oppineita, joiden nimet tunnetaan yhä: runoilija Dunash Ben Labrat, kielioppineen Judah ben David Hayyuj ja talmudisti Isaac al-Fasi. Vuosina 1159–1165 kaupungissa asui Maimonides, aikansa merkittävimpiä juutalaisia ajattelijoita, joka oli paennut al-Andalusista. Yhteisö siirrettiin 1400-luvulla Fes Jdidiin syntyneeseen Mellahiin; tarkkaa ajankohtaa ja olosuhteita ei ole vahvistettu. Nykyään yhteisö on hyvin pieni, eivätkä korttelin synagogat ole enää käytössä.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:nafplio) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Náfplio (kaupungit)
+Tietoruudun teksti: Nafpliosta tuli itsenäistyneen Kreikan ensimmäinen virallinen pääkaupunki vuonna 1829. Maan ensimmäinen valtionpäämies, kreivi Ioannis Kapodistrias, astui Kreikan mantereelle juuri täällä 1828 — ja hänet murhattiin Pyhän Spyridonin kirkon portailla 1831. Pääkaupunki siirtyi Ateenaan 1834, kun kuningas Otto niin päätti, mutta 1873 isoisä olisi yhä nähnyt kaupungin entisen aseman jäljet sen linnoituksissa ja kirkoissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Historian hetki: Hisarlık 1873 — kulta kaivannon seinämässä] toukokuu 1873 — Kaivannon seinämän juuresta, muurin alta, on tullut esiin kuparinen astia, ja sen sisältä alkaa nousta kultaa: diadeemeja, korvakoruja, nappeja, tuhansia pieniä kultaesineitä sekä hopeaa ja pronssia. Heinrich Schliemann on 51-vuotias, rikastunut kauppias, joka on tullut kummulle todistaakseen, että Homeroksen Troija oli totta, ja hän nimeää löydön saman tien Priamoksen aarteeksi. Oman kertomuksensa mukaan hän lähetti työmiehet tauolle ja kaivoi kullan esiin itse veitsellä, jottei kukaan näkisi; tutkijat ovat sittemmin epäilleet kertomusta, ja ne kaivajat, joiden käsien kautta löydöt kulkivat, jäivät hänen sankaritarinansa ulkopuolelle. Päiväkirjaan hän kirjoitti myös, että v…
+- [Ateena — kaupunkilehti / Ateena: Vesikantaja voitti ensimmäisen maratonin] Ateenan Kallimarmaro on maailman ainoa kokonaan marmorista rakennettu stadion. Kun uuden ajan ensimmäiset olympialaiset alkoivat siellä keväällä 1896, katsomossa oli noin 60 000 ihmistä. Maratonille lähti seitsemäntoista juoksijaa, ja voittaja oli 23-vuotias Spyridon Louis. Hän kantoi työkseen juomavettä Maroúsista Ateenaan, jossa ei vielä ollut vesijohtoa. Aika oli 2.58.50. Voittajat eivät saaneet kultaa vaan hopeamitalin ja oliivinoksan.
+- [Ateena — kaupunkilehti / Historia: Iliou Melathron — Troijan palatsi] Kesäkuussa 1873, kaivauksen viimeisenä päivänä, Heinrich Schliemann löysi Hisarlikin kummulta kultaa, jonka uskoi kuningas Priamoksen aarteeksi. Muutamaa vuotta myöhemmin hän rakennutti Ateenaan kadun varteen komean palatsin, Iliou Melathronin — Troijan palatsin. Se seisoo paikallaan yhä: nykyään talossa lasketaan vanhoja kolikoita, sillä se on numismaattinen museo. Talon friisissä Schliemann kaivaa ikuisesti, lapio kädessä.
+
+### 4.1
+KYSYMYS: Miksi pääkaupunki siirrettiin Ateenaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Náfplio (kaupungit)
+Tietoruudun teksti: Nafpliosta tuli itsenäistyneen Kreikan ensimmäinen virallinen pääkaupunki vuonna 1829. Maan ensimmäinen valtionpäämies, kreivi Ioannis Kapodistrias, astui Kreikan mantereelle juuri täällä 1828 — ja hänet murhattiin Pyhän Spyridonin kirkon portailla 1831. Pääkaupunki siirtyi Ateenaan 1834, kun kuningas Otto niin päätti, mutta 1873 isoisä olisi yhä nähnyt kaupungin entisen aseman jäljet sen linnoituksissa ja kirkoissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Ateena: Vesikantaja voitti ensimmäisen maratonin] Ateenan Kallimarmaro on maailman ainoa kokonaan marmorista rakennettu stadion. Kun uuden ajan ensimmäiset olympialaiset alkoivat siellä keväällä 1896, katsomossa oli noin 60 000 ihmistä. Maratonille lähti seitsemäntoista juoksijaa, ja voittaja oli 23-vuotias Spyridon Louis. Hän kantoi työkseen juomavettä Maroúsista Ateenaan, jossa ei vielä ollut vesijohtoa. Aika oli 2.58.50. Voittajat eivät saaneet kultaa vaan hopeamitalin ja oliivinoksan.
+- [Ateena — kaupunkilehti / Historia: Iliou Melathron — Troijan palatsi] Kesäkuussa 1873, kaivauksen viimeisenä päivänä, Heinrich Schliemann löysi Hisarlikin kummulta kultaa, jonka uskoi kuningas Priamoksen aarteeksi. Muutamaa vuotta myöhemmin hän rakennutti Ateenaan kadun varteen komean palatsin, Iliou Melathronin — Troijan palatsin. Se seisoo paikallaan yhä: nykyään talossa lasketaan vanhoja kolikoita, sillä se on numismaattinen museo. Talon friisissä Schliemann kaivaa ikuisesti, lapio kädessä.
+- [Ateena — kohdekartta / Kohdekartta: Iliou Melathron] Kesäkuussa 1873, kaivauksen viimeisenä päivänä, Heinrich Schliemann löysi Hisarlikin kummulta kultaa, jonka uskoi kuningas Priamoksen aarteeksi. Muutamaa vuotta myöhemmin hän rakennutti Ateenaan kadun varteen komean palatsin, Iliou Melathronin — Troijan palatsin. Se seisoo paikallaan yhä: nykyään talossa lasketaan vanhoja kolikoita, sillä se on numismaattinen museo. Talon friisissä Schliemann kaivaa ikuisesti, lapio kädessä.
+
+### 4.2
+KYSYMYS: Mistä kuningas Otto tuli Kreikkaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Náfplio (kaupungit)
+Tietoruudun teksti: Nafpliosta tuli itsenäistyneen Kreikan ensimmäinen virallinen pääkaupunki vuonna 1829. Maan ensimmäinen valtionpäämies, kreivi Ioannis Kapodistrias, astui Kreikan mantereelle juuri täällä 1828 — ja hänet murhattiin Pyhän Spyridonin kirkon portailla 1831. Pääkaupunki siirtyi Ateenaan 1834, kun kuningas Otto niin päätti, mutta 1873 isoisä olisi yhä nähnyt kaupungin entisen aseman jäljet sen linnoituksissa ja kirkoissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Historian hetki: Hisarlık 1873 — kulta kaivannon seinämässä] toukokuu 1873 — Kaivannon seinämän juuresta, muurin alta, on tullut esiin kuparinen astia, ja sen sisältä alkaa nousta kultaa: diadeemeja, korvakoruja, nappeja, tuhansia pieniä kultaesineitä sekä hopeaa ja pronssia. Heinrich Schliemann on 51-vuotias, rikastunut kauppias, joka on tullut kummulle todistaakseen, että Homeroksen Troija oli totta, ja hän nimeää löydön saman tien Priamoksen aarteeksi. Oman kertomuksensa mukaan hän lähetti työmiehet tauolle ja kaivoi kullan esiin itse veitsellä, jottei kukaan näkisi; tutkijat ovat sittemmin epäilleet kertomusta, ja ne kaivajat, joiden käsien kautta löydöt kulkivat, jäivät hänen sankaritarinansa ulkopuolelle. Päiväkirjaan hän kirjoitti myös, että v…
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:iraklion) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Iraklion (kaupungit)
+Tietoruudun teksti: Iraklionin seutua on asutettu yhtäjaksoisesti ainakin vuodesta 7000 eaa., mikä tekee siitä yhden Euroopan pisimpään asuttuja alueita. Kaupungin kupeessa sijaitsee Knossoksen palatsi, minolaisen kulttuurin keskus noin vuosilta 2000–1350 eaa. ja usein Euroopan vanhimpana kaupunkina pidetty paikka — nykyään Kreikan toiseksi suosituin nähtävyys Parthenonin jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreeta — kaupunkilehti / Historia: Valtaistuinhuone, jota kukaan ei enää istu] Arkeologi Arthur Evans kaivoi Knossoksen palatsin esiin vuodesta 1900 alkaen ja löysi sen sydämestä huoneen, jonka keskellä seisoo yhä paikoillaan alabasterinen tuoli — Euroopan vanhin säilynyt valtaistuin, veistetty noin 1400-luvulla eaa. Evans nimesi huoneen valtaistuinhuoneeksi ja uskoi tuolissa istuneen legendaarisen kuningas Minoksen, vaikka nykytutkijat epäilevät huoneen olleen ennemmin kulttikäytössä kuin hallitsijan istuinsalina. Seiniä koristavat kopiot alkuperäisistä griffinfreskoista, ja Evans myös jälleenrakensi osia palatsista betonilla omien tulkintojensa mukaan — ratkaisu, jota myöhemmät arkeologit ovat arvostelleet liian vapaaksi.
+- [Kreeta — kaupunkilehti / Kreeta: Härän yli hypättiin] Knossoksen seinämaalauksissa nuoret tarttuvat juoksevan härän sarviin ja heittävät kuperkeikan sen selän yli. Tutkijat kiistelevät yhä siitä, oliko se urheilua, uskonnon meno vai molempia — eikä kukaan tiedä, onnistuiko se oikeasti koskaan.
+
+### 5.1
+KYSYMYS: Millainen kansa minolaiset olivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Iraklion (kaupungit)
+Tietoruudun teksti: Iraklionin seutua on asutettu yhtäjaksoisesti ainakin vuodesta 7000 eaa., mikä tekee siitä yhden Euroopan pisimpään asuttuja alueita. Kaupungin kupeessa sijaitsee Knossoksen palatsi, minolaisen kulttuurin keskus noin vuosilta 2000–1350 eaa. ja usein Euroopan vanhimpana kaupunkina pidetty paikka — nykyään Kreikan toiseksi suosituin nähtävyys Parthenonin jälkeen.
+
+### 5.2
+KYSYMYS: Miten Knossoksen rauniot löydettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Iraklion (kaupungit)
+Tietoruudun teksti: Iraklionin seutua on asutettu yhtäjaksoisesti ainakin vuodesta 7000 eaa., mikä tekee siitä yhden Euroopan pisimpään asuttuja alueita. Kaupungin kupeessa sijaitsee Knossoksen palatsi, minolaisen kulttuurin keskus noin vuosilta 2000–1350 eaa. ja usein Euroopan vanhimpana kaupunkina pidetty paikka — nykyään Kreikan toiseksi suosituin nähtävyys Parthenonin jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreeta — kaupunkilehti / Historia: Valtaistuinhuone, jota kukaan ei enää istu] Arkeologi Arthur Evans kaivoi Knossoksen palatsin esiin vuodesta 1900 alkaen ja löysi sen sydämestä huoneen, jonka keskellä seisoo yhä paikoillaan alabasterinen tuoli — Euroopan vanhin säilynyt valtaistuin, veistetty noin 1400-luvulla eaa. Evans nimesi huoneen valtaistuinhuoneeksi ja uskoi tuolissa istuneen legendaarisen kuningas Minoksen, vaikka nykytutkijat epäilevät huoneen olleen ennemmin kulttikäytössä kuin hallitsijan istuinsalina. Seiniä koristavat kopiot alkuperäisistä griffinfreskoista, ja Evans myös jälleenrakensi osia palatsista betonilla omien tulkintojensa mukaan — ratkaisu, jota myöhemmät arkeologit ovat arvostelleet liian vapaaksi.
+- [Kreeta — kaupunkilehti / Kreeta: Härän yli hypättiin] Knossoksen seinämaalauksissa nuoret tarttuvat juoksevan härän sarviin ja heittävät kuperkeikan sen selän yli. Tutkijat kiistelevät yhä siitä, oliko se urheilua, uskonnon meno vai molempia — eikä kukaan tiedä, onnistuiko se oikeasti koskaan.
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

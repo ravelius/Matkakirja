@@ -1,0 +1,200 @@
+================ KOHTA 51 (kohde:hahmotelma-lavrio) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lavrion hopeakaivokset (kauppa)
+Tietoruudun teksti: Lavrio on kaupunki Attikan kaakkoisosassa Kreikassa, ja se kuuluu Ateenan suurkaupunkialueeseen. Laurium tunnettiin antiikissa hopeakaivoksistaan, jotka olivat yksi Ateenan valtion tärkeimmistä tulonlähteistä, ja hopeaa käytettiin pääasiassa rahoihin. Kaupunki on noin 60 kilometriä Ateenan keskustasta kaakkoon lahdella, josta näkee Makronisos-saaren. Varhaisimmat todisteet louhinnasta ovat pronssikauden alusta, noin vuodelta 3200 eaa., ja järjestelmällinen louhinta näyttää alkaneen 500-luvulla eaa. Peisistratoksen aikana. Marathonin taistelun jälkeen Themistokles sai ateenalaiset käyttämään noin vuonna 483 eaa. tehdyn suuren hopeasuonen löydön tuotot laivaston laajentamiseen 200 triremiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Ateena] Kaupunki, jossa marmoritorni mittasi aikaa vedellä ja jossa vesikantaja voitti maailman ensimmäisen olympiamaratonin.
+
+### 51.1
+KYSYMYS: Miksi hopea oli Ateenalle tärkeää?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lavrion hopeakaivokset (kauppa)
+Tietoruudun teksti: Lavrio on kaupunki Attikan kaakkoisosassa Kreikassa, ja se kuuluu Ateenan suurkaupunkialueeseen. Laurium tunnettiin antiikissa hopeakaivoksistaan, jotka olivat yksi Ateenan valtion tärkeimmistä tulonlähteistä, ja hopeaa käytettiin pääasiassa rahoihin. Kaupunki on noin 60 kilometriä Ateenan keskustasta kaakkoon lahdella, josta näkee Makronisos-saaren. Varhaisimmat todisteet louhinnasta ovat pronssikauden alusta, noin vuodelta 3200 eaa., ja järjestelmällinen louhinta näyttää alkaneen 500-luvulla eaa. Peisistratoksen aikana. Marathonin taistelun jälkeen Themistokles sai ateenalaiset käyttämään noin vuonna 483 eaa. tehdyn suuren hopeasuonen löydön tuotot laivaston laajentamiseen 200 triremiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Ateena] Kaupunki, jossa marmoritorni mittasi aikaa vedellä ja jossa vesikantaja voitti maailman ensimmäisen olympiamaratonin.
+
+### 51.2
+KYSYMYS: Mitä Themistokles teki hopealla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lavrion hopeakaivokset (kauppa)
+Tietoruudun teksti: Lavrio on kaupunki Attikan kaakkoisosassa Kreikassa, ja se kuuluu Ateenan suurkaupunkialueeseen. Laurium tunnettiin antiikissa hopeakaivoksistaan, jotka olivat yksi Ateenan valtion tärkeimmistä tulonlähteistä, ja hopeaa käytettiin pääasiassa rahoihin. Kaupunki on noin 60 kilometriä Ateenan keskustasta kaakkoon lahdella, josta näkee Makronisos-saaren. Varhaisimmat todisteet louhinnasta ovat pronssikauden alusta, noin vuodelta 3200 eaa., ja järjestelmällinen louhinta näyttää alkaneen 500-luvulla eaa. Peisistratoksen aikana. Marathonin taistelun jälkeen Themistokles sai ateenalaiset käyttämään noin vuonna 483 eaa. tehdyn suuren hopeasuonen löydön tuotot laivaston laajentamiseen 200 triremiin.
+
+### 51.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
+
+### 51.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
+
+### 51.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
+
+================ KOHTA 52 (kohde:hahmotelma-kalavryta) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalavryta (tekniikka)
+Tietoruudun teksti: Kalavryta on kaupunki ja kunta Achaian alueen vuoristoisessa itä-keskiosassa Kreikassa. Kaupunki on Vouraikos-joen oikealla rannalla, 24 kilometriä Aigiosta etelään, 40 kilometriä Patrasista kaakkoon ja 62 kilometriä Tripolista luoteeseen. Kalavryta on Diakopto–Kalavryta-hammasraiteen eteläinen päätepiste, jonka italialaiset insinöörit rakensivat vuosina 1885–1895. Keskiajan lopulla kaupunki oli Achaian frankkiruhtinaskunnan Kalavrytan paronikunnan keskus, ja se valloitettiin uudelleen bysanttilaisille 1270-luvulla. Kreikan vapaussodan alussa Kalavryta oli merkittävässä asemassa: Agia Lavran luostarissa Vanhan Patran piispa Germanos III nosti kapinan lipun 21. maaliskuuta 1821.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Fidži — maalehti / Perinteet: Hammas, jota ei myydä vaan annetaan] Tabua on kiillotettu kaskelotin hammas ja fidžiläisen seremonian arvokkain esine. Sitä annetaan sovinnoksi, kunnianosoitukseksi ja päälliköiden välisissä neuvotteluissa, ja sen ojentaminen on nimeltään sevusevu. Alun perin hampaita sai vain rantautuneista valaista ja vaihtokaupasta Tongan kanssa. Kun eurooppalaiset huomasivat 1800-luvun alussa, mitä hampaista maksettiin, saarille tuotiin tuhansia hampaita ja myös norsunluusta ja mursunsyöksyhampaista tehtyjä jäljennöksiä. Tabua tummuu vuosien mittaan käsien rasvoista. Vientiin tarvitaan nykyään lupa.
+
+### 52.1
+KYSYMYS: Mikä hammasraide on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalavryta (tekniikka)
+Tietoruudun teksti: Kalavryta on kaupunki ja kunta Achaian alueen vuoristoisessa itä-keskiosassa Kreikassa. Kaupunki on Vouraikos-joen oikealla rannalla, 24 kilometriä Aigiosta etelään, 40 kilometriä Patrasista kaakkoon ja 62 kilometriä Tripolista luoteeseen. Kalavryta on Diakopto–Kalavryta-hammasraiteen eteläinen päätepiste, jonka italialaiset insinöörit rakensivat vuosina 1885–1895. Keskiajan lopulla kaupunki oli Achaian frankkiruhtinaskunnan Kalavrytan paronikunnan keskus, ja se valloitettiin uudelleen bysanttilaisille 1270-luvulla. Kreikan vapaussodan alussa Kalavryta oli merkittävässä asemassa: Agia Lavran luostarissa Vanhan Patran piispa Germanos III nosti kapinan lipun 21. maaliskuuta 1821.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Fidži — maalehti / Perinteet: Hammas, jota ei myydä vaan annetaan] Tabua on kiillotettu kaskelotin hammas ja fidžiläisen seremonian arvokkain esine. Sitä annetaan sovinnoksi, kunnianosoitukseksi ja päälliköiden välisissä neuvotteluissa, ja sen ojentaminen on nimeltään sevusevu. Alun perin hampaita sai vain rantautuneista valaista ja vaihtokaupasta Tongan kanssa. Kun eurooppalaiset huomasivat 1800-luvun alussa, mitä hampaista maksettiin, saarille tuotiin tuhansia hampaita ja myös norsunluusta ja mursunsyöksyhampaista tehtyjä jäljennöksiä. Tabua tummuu vuosien mittaan käsien rasvoista. Vientiin tarvitaan nykyään lupa.
+
+### 52.2
+KYSYMYS: Mitä Agia Lavrassa tapahtui vuonna 1821?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalavryta (tekniikka)
+Tietoruudun teksti: Kalavryta on kaupunki ja kunta Achaian alueen vuoristoisessa itä-keskiosassa Kreikassa. Kaupunki on Vouraikos-joen oikealla rannalla, 24 kilometriä Aigiosta etelään, 40 kilometriä Patrasista kaakkoon ja 62 kilometriä Tripolista luoteeseen. Kalavryta on Diakopto–Kalavryta-hammasraiteen eteläinen päätepiste, jonka italialaiset insinöörit rakensivat vuosina 1885–1895. Keskiajan lopulla kaupunki oli Achaian frankkiruhtinaskunnan Kalavrytan paronikunnan keskus, ja se valloitettiin uudelleen bysanttilaisille 1270-luvulla. Kreikan vapaussodan alussa Kalavryta oli merkittävässä asemassa: Agia Lavran luostarissa Vanhan Patran piispa Germanos III nosti kapinan lipun 21. maaliskuuta 1821.
+
+### 52.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 52 YHTEINEN KONTEKSTI
+
+### 52.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 52 YHTEINEN KONTEKSTI
+
+### 52.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 52 YHTEINEN KONTEKSTI
+
+================ KOHTA 53 (kohde:hahmotelma-chios) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chios ja mastiksi (kauppa)
+Tietoruudun teksti: Chios eli Scio on Kreikan viidenneksi suurin saari, ja se sijaitsee pohjoisella Egeanmerellä. Saarta erottaa Anatolian mantereesta Chioksen salmi. Chios on tunnettu mastiksihartsin viennistä, ja sen lempinimi on mastiksisaari. Nähtävyyksiin kuuluvat keskiaikaiset kylät ja 1000-luvun Nea Monin luostari, joka on UNESCOn maailmanperintökohde. Saaren pääkaupunki on Chios eli Chora, ja mastiksia tuottava eteläinen alue on Mastichochória. Saari kuului Ottomaanien valtakuntaan vuoteen 1912 asti. Vapaussodan aikana vuonna 1822 saari koki Chioksen verilöylyn.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Muinaisuus: Hahmojen nimet ladottiin kiveen] Nea Pafos perustettiin 300-luvun eaa. lopulla, ja roomalaisajalla se oli saaren hallinnollinen keskus. Varakkaiden talojen lattiat päällystettiin mosaiikilla. Aionin talon lattia löytyi vasta vuonna 1983, kun puolalainen retkikunta kaivoi esiin 68 neliömetrin huoneen; kuvakenttää siitä on 16 neliömetriä, ja se jakautuu viiteen kohtaukseen. Kivenpalat eli tesserat ovat 2–5 millimetrin kokoisia. Talo on saanut nimensä keskimmäisen kohtauksen tuomarista: Aion on ikuisen ajan jumala, ja hän ratkaisee kauneuskilpailun, jossa Kassiopeia kilpailee merenneitoja vastaan. Aihe on harvinainen — muita esityksiä tunnetaan vain kaksi, molemmat Syyriasta. Lattian erikoisuus on se, että lähes jokaisen hahm…
+
+### 53.1
+KYSYMYS: Mitä mastiksi on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chios ja mastiksi (kauppa)
+Tietoruudun teksti: Chios eli Scio on Kreikan viidenneksi suurin saari, ja se sijaitsee pohjoisella Egeanmerellä. Saarta erottaa Anatolian mantereesta Chioksen salmi. Chios on tunnettu mastiksihartsin viennistä, ja sen lempinimi on mastiksisaari. Nähtävyyksiin kuuluvat keskiaikaiset kylät ja 1000-luvun Nea Monin luostari, joka on UNESCOn maailmanperintökohde. Saaren pääkaupunki on Chios eli Chora, ja mastiksia tuottava eteläinen alue on Mastichochória. Saari kuului Ottomaanien valtakuntaan vuoteen 1912 asti. Vapaussodan aikana vuonna 1822 saari koki Chioksen verilöylyn.
+
+### 53.2
+KYSYMYS: Mikä Nea Moni on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chios ja mastiksi (kauppa)
+Tietoruudun teksti: Chios eli Scio on Kreikan viidenneksi suurin saari, ja se sijaitsee pohjoisella Egeanmerellä. Saarta erottaa Anatolian mantereesta Chioksen salmi. Chios on tunnettu mastiksihartsin viennistä, ja sen lempinimi on mastiksisaari. Nähtävyyksiin kuuluvat keskiaikaiset kylät ja 1000-luvun Nea Monin luostari, joka on UNESCOn maailmanperintökohde. Saaren pääkaupunki on Chios eli Chora, ja mastiksia tuottava eteläinen alue on Mastichochória. Saari kuului Ottomaanien valtakuntaan vuoteen 1912 asti. Vapaussodan aikana vuonna 1822 saari koki Chioksen verilöylyn.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Muinaisuus: Hahmojen nimet ladottiin kiveen] Nea Pafos perustettiin 300-luvun eaa. lopulla, ja roomalaisajalla se oli saaren hallinnollinen keskus. Varakkaiden talojen lattiat päällystettiin mosaiikilla. Aionin talon lattia löytyi vasta vuonna 1983, kun puolalainen retkikunta kaivoi esiin 68 neliömetrin huoneen; kuvakenttää siitä on 16 neliömetriä, ja se jakautuu viiteen kohtaukseen. Kivenpalat eli tesserat ovat 2–5 millimetrin kokoisia. Talo on saanut nimensä keskimmäisen kohtauksen tuomarista: Aion on ikuisen ajan jumala, ja hän ratkaisee kauneuskilpailun, jossa Kassiopeia kilpailee merenneitoja vastaan. Aihe on harvinainen — muita esityksiä tunnetaan vain kaksi, molemmat Syyriasta. Lattian erikoisuus on se, että lähes jokaisen hahm…
+
+### 53.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 53 YHTEINEN KONTEKSTI
+
+### 53.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 53 YHTEINEN KONTEKSTI
+
+### 53.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 53 YHTEINEN KONTEKSTI
+
+================ KOHTA 54 (kohde:hahmotelma-zagori) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagorin kivisillat (tekniikka)
+Tietoruudun teksti: Zagori on alue, kunta ja UNESCOn maailmanperintökohde Pindoksen vuoristossa Epeiroksessa Luoteis-Kreikassa. Sen pinta-ala on noin tuhat neliökilometriä ja siihen kuuluu 46 kylää, joita kutsutaan Zagorin kyliksi. Väkeä alueella on noin 3 400, eli asukastiheys on 3,4 asukasta neliökilometrillä. Zagori on erittäin kaunista luontoa, jossa on näyttävä geologia ja kaksi kansallispuistoa: toinen käsittää Aoos-joen ja Vikosin rotkon, toinen Valia Kaldan. Zagorin 46 kylää oli yhdistetty toisiinsa vuoristoteillä ja perinteisillä kaarevilla kivisilloilla. 1600-luvulta alkaen alueen talous perustui pääasiassa ulkomaille muuttaneiden lähettämiin rahoihin ja testamentteihin.
+
+### 54.1
+KYSYMYS: Miksi Zagorin kylät oli yhdistetty kivisilloilla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagorin kivisillat (tekniikka)
+Tietoruudun teksti: Zagori on alue, kunta ja UNESCOn maailmanperintökohde Pindoksen vuoristossa Epeiroksessa Luoteis-Kreikassa. Sen pinta-ala on noin tuhat neliökilometriä ja siihen kuuluu 46 kylää, joita kutsutaan Zagorin kyliksi. Väkeä alueella on noin 3 400, eli asukastiheys on 3,4 asukasta neliökilometrillä. Zagori on erittäin kaunista luontoa, jossa on näyttävä geologia ja kaksi kansallispuistoa: toinen käsittää Aoos-joen ja Vikosin rotkon, toinen Valia Kaldan. Zagorin 46 kylää oli yhdistetty toisiinsa vuoristoteillä ja perinteisillä kaarevilla kivisilloilla. 1600-luvulta alkaen alueen talous perustui pääasiassa ulkomaille muuttaneiden lähettämiin rahoihin ja testamentteihin.
+
+### 54.2
+KYSYMYS: Mitä Zagorin ulkomaankauppa oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagorin kivisillat (tekniikka)
+Tietoruudun teksti: Zagori on alue, kunta ja UNESCOn maailmanperintökohde Pindoksen vuoristossa Epeiroksessa Luoteis-Kreikassa. Sen pinta-ala on noin tuhat neliökilometriä ja siihen kuuluu 46 kylää, joita kutsutaan Zagorin kyliksi. Väkeä alueella on noin 3 400, eli asukastiheys on 3,4 asukasta neliökilometrillä. Zagori on erittäin kaunista luontoa, jossa on näyttävä geologia ja kaksi kansallispuistoa: toinen käsittää Aoos-joen ja Vikosin rotkon, toinen Valia Kaldan. Zagorin 46 kylää oli yhdistetty toisiinsa vuoristoteillä ja perinteisillä kaarevilla kivisilloilla. 1600-luvulta alkaen alueen talous perustui pääasiassa ulkomaille muuttaneiden lähettämiin rahoihin ja testamentteihin.
+
+### 54.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 54 YHTEINEN KONTEKSTI
+
+### 54.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 54 YHTEINEN KONTEKSTI
+
+### 54.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 54 YHTEINEN KONTEKSTI
+
+================ KOHTA 55 (kohde:hahmotelma-arta) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Artan silta (tekniikka)
+Tietoruudun teksti: Artan silta on kivisilta, joka ylittää Arachthos-joen Artan kaupungin länsipuolella Luoteis-Kreikassa. Se on rakennettu uudelleen monta kertaa vuosisatojen kuluessa, alkaen roomalaisajan tai ehkä vanhemmista perustuksista, ja nykyinen silta on luultavasti 1600-luvun ottomaanien rakentama. Artan sillan kansanballadi kertoo ihmisuhrista sillan rakentamisen aikana, ja ballaadista on syntynyt useita kreikkalaisia sananparsia, jotka liittyvät loputtomiin viivytyksiin: päivällä rakennettiin, ja yöllä se romahti. Perinteen mukaan silta rakennettiin uudelleen, kun Arta tuli Epeiroksen despotaatin pääkaupungiksi. Kun Arta liitettiin Kreikkaan vuonna 1881, sillan korkein kohta oli vuoteen 1912 asti Ottomaanien valtakunnan ja Kreikan kuningaskunnan raja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Hanoi — kohdekartta / Kohdekartta: Long Biênin silta] 1899–1902 Long Biênin silta ylittää Punaisenjoen ja yhdistää Hoàn Kiếmin ja Long Biênin kaupunginosat. Se rakennettiin vuosina 1899–1902 pariisilaisen Daydé & Pillén piirustusten mukaan ja avattiin liikenteelle vuonna 1903. Nimi tulee Long Biênistä, joka on yksi kaupungin vanhimmista nimistä ja tarkoittaa toisiinsa kietoutuvia lohikäärmeitä. Ensimmäiset vuosikymmenensä silta kantoi kenraalikuvernöörin nimeä ja oli Paul Doumerin silta. Rakenne on terästä ja tyypiltään ulokepalkkisilta: yhdeksäntoista jännettä, leveyttä 13,5 metriä ja korkeutta 43,5 metriä. Pituudesta Wikipedia antaa kaksi lukua, infoboksin 2 290 metriä ja leipätekstin 2,4 kilometriä, mutta kummallakin luvulla se oli valmistu…
+- [Istanbul — kohdekartta / Kohdekartta: Galatan silta] 1845 Kultaisen sarven yli on suunniteltu siltaa kauan. Vuosina 1502–1503 sulttaani Bajasid II pyysi ehdotuksia, ja Leonardo da Vinci piirsi 280 metrin yhtenäisen jännevälin — aikansa pisimmän. Sulttaani ei hyväksynyt sitä, ja myös Michelangelo kieltäytyi tehtävästä. Ajatus jäi lepäämään kolmeksi ja puoleksi vuosisadaksi. Ensimmäinen silta nykyiselle paikalle rakennettiin puusta vuonna 1845 sulttaanin äidin pyynnöstä. Kolme ensimmäistä päivää ylitys oli ilmainen, sitten alkoi tulli: jalankulkija maksoi viisi paraa, selkäreppuinen kymmenen ja hevosvaunut sata. Maksua keräsivät valkopukuiset virkailijat sillan molemmissa päissä aina vuoteen 1930. Puusilta korvattiin 1863, ja 1875 valmistui bri…
+
+### 55.1
+KYSYMYS: Mitä Artan sillan kansanlaulu kertoo?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Artan silta (tekniikka)
+Tietoruudun teksti: Artan silta on kivisilta, joka ylittää Arachthos-joen Artan kaupungin länsipuolella Luoteis-Kreikassa. Se on rakennettu uudelleen monta kertaa vuosisatojen kuluessa, alkaen roomalaisajan tai ehkä vanhemmista perustuksista, ja nykyinen silta on luultavasti 1600-luvun ottomaanien rakentama. Artan sillan kansanballadi kertoo ihmisuhrista sillan rakentamisen aikana, ja ballaadista on syntynyt useita kreikkalaisia sananparsia, jotka liittyvät loputtomiin viivytyksiin: päivällä rakennettiin, ja yöllä se romahti. Perinteen mukaan silta rakennettiin uudelleen, kun Arta tuli Epeiroksen despotaatin pääkaupungiksi. Kun Arta liitettiin Kreikkaan vuonna 1881, sillan korkein kohta oli vuoteen 1912 asti Ottomaanien valtakunnan ja Kreikan kuningaskunnan raja.
+
+### 55.2
+KYSYMYS: Miksi silta rakennettiin monta kertaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Artan silta (tekniikka)
+Tietoruudun teksti: Artan silta on kivisilta, joka ylittää Arachthos-joen Artan kaupungin länsipuolella Luoteis-Kreikassa. Se on rakennettu uudelleen monta kertaa vuosisatojen kuluessa, alkaen roomalaisajan tai ehkä vanhemmista perustuksista, ja nykyinen silta on luultavasti 1600-luvun ottomaanien rakentama. Artan sillan kansanballadi kertoo ihmisuhrista sillan rakentamisen aikana, ja ballaadista on syntynyt useita kreikkalaisia sananparsia, jotka liittyvät loputtomiin viivytyksiin: päivällä rakennettiin, ja yöllä se romahti. Perinteen mukaan silta rakennettiin uudelleen, kun Arta tuli Epeiroksen despotaatin pääkaupungiksi. Kun Arta liitettiin Kreikkaan vuonna 1881, sillan korkein kohta oli vuoteen 1912 asti Ottomaanien valtakunnan ja Kreikan kuningaskunnan raja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Hanoi — kohdekartta / Kohdekartta: Long Biênin silta] 1899–1902 Long Biênin silta ylittää Punaisenjoen ja yhdistää Hoàn Kiếmin ja Long Biênin kaupunginosat. Se rakennettiin vuosina 1899–1902 pariisilaisen Daydé & Pillén piirustusten mukaan ja avattiin liikenteelle vuonna 1903. Nimi tulee Long Biênistä, joka on yksi kaupungin vanhimmista nimistä ja tarkoittaa toisiinsa kietoutuvia lohikäärmeitä. Ensimmäiset vuosikymmenensä silta kantoi kenraalikuvernöörin nimeä ja oli Paul Doumerin silta. Rakenne on terästä ja tyypiltään ulokepalkkisilta: yhdeksäntoista jännettä, leveyttä 13,5 metriä ja korkeutta 43,5 metriä. Pituudesta Wikipedia antaa kaksi lukua, infoboksin 2 290 metriä ja leipätekstin 2,4 kilometriä, mutta kummallakin luvulla se oli valmistu…
+- [Istanbul — kohdekartta / Kohdekartta: Galatan silta] 1845 Kultaisen sarven yli on suunniteltu siltaa kauan. Vuosina 1502–1503 sulttaani Bajasid II pyysi ehdotuksia, ja Leonardo da Vinci piirsi 280 metrin yhtenäisen jännevälin — aikansa pisimmän. Sulttaani ei hyväksynyt sitä, ja myös Michelangelo kieltäytyi tehtävästä. Ajatus jäi lepäämään kolmeksi ja puoleksi vuosisadaksi. Ensimmäinen silta nykyiselle paikalle rakennettiin puusta vuonna 1845 sulttaanin äidin pyynnöstä. Kolme ensimmäistä päivää ylitys oli ilmainen, sitten alkoi tulli: jalankulkija maksoi viisi paraa, selkäreppuinen kymmenen ja hevosvaunut sata. Maksua keräsivät valkopukuiset virkailijat sillan molemmissa päissä aina vuoteen 1930. Puusilta korvattiin 1863, ja 1875 valmistui bri…
+
+### 55.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 55 YHTEINEN KONTEKSTI
+
+### 55.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 55 YHTEINEN KONTEKSTI
+
+### 55.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 55 YHTEINEN KONTEKSTI

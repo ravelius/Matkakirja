@@ -1,0 +1,202 @@
+================ KOHTA 6 (kohde:olympos) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ólympos (luonto · vuori)
+Tietoruudun teksti: Kreikkalaisessa mytologiassa Olympos oli jumalten koti, ja 52-huippuinen vuoristo kohoaa yhä Kreikan korkeimpaan pisteeseensä, Mytikakseen (2 917,7 m). Vuoresta tuli maan ensimmäinen kansallispuisto 1938, ja heinäkuussa 2026 koko alue otettiin Unescon maailmanperintölistalle sekä luonnostaan että kulttuuriperinnöstään. Suosituin nousureitti alkaa yhä Litohoron kylästä vuoren juurelta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Tarut ja sadut: Jumalten vuorelle noustiin vasta 1913] 1913 — Antiikin kreikkalaiset sijoittivat kahdentoista jumalan kodin Olympokselle, Kreikan korkeimmalle vuorelle. Sen ylin huippu Mytikas on 2 917 metriä korkea, ja nimi tarkoittaa nenää. Vuori kohoaa lähes kolmeen kilometriin vain 18 kilometrin päässä Litochoron kaupungista. Huipulla ei silti käynyt kukaan ennen 2. elokuuta 1913. Silloin sinne kiipesivät sveitsiläiset Frédéric Boissonnas ja Daniel Baud-Bovy sekä litochorolainen vuohenmetsästäjä Christos Kakkalos, joka tunsi vuoren parhaiten ja nousi kolmikosta ensimmäisenä huipulle. Olympoksesta tuli 1938 Kreikan ensimmäinen kansallispuisto.
+
+### 6.1
+KYSYMYS: Kuka kiipesi Olympokselle ensimmäisenä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ólympos (luonto · vuori)
+Tietoruudun teksti: Kreikkalaisessa mytologiassa Olympos oli jumalten koti, ja 52-huippuinen vuoristo kohoaa yhä Kreikan korkeimpaan pisteeseensä, Mytikakseen (2 917,7 m). Vuoresta tuli maan ensimmäinen kansallispuisto 1938, ja heinäkuussa 2026 koko alue otettiin Unescon maailmanperintölistalle sekä luonnostaan että kulttuuriperinnöstään. Suosituin nousureitti alkaa yhä Litohoron kylästä vuoren juurelta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Tarut ja sadut: Jumalten vuorelle noustiin vasta 1913] 1913 — Antiikin kreikkalaiset sijoittivat kahdentoista jumalan kodin Olympokselle, Kreikan korkeimmalle vuorelle. Sen ylin huippu Mytikas on 2 917 metriä korkea, ja nimi tarkoittaa nenää. Vuori kohoaa lähes kolmeen kilometriin vain 18 kilometrin päässä Litochoron kaupungista. Huipulla ei silti käynyt kukaan ennen 2. elokuuta 1913. Silloin sinne kiipesivät sveitsiläiset Frédéric Boissonnas ja Daniel Baud-Bovy sekä litochorolainen vuohenmetsästäjä Christos Kakkalos, joka tunsi vuoren parhaiten ja nousi kolmikosta ensimmäisenä huipulle. Olympoksesta tuli 1938 Kreikan ensimmäinen kansallispuisto.
+
+### 6.2
+KYSYMYS: Miksi juuri Olympos oli jumalten koti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ólympos (luonto · vuori)
+Tietoruudun teksti: Kreikkalaisessa mytologiassa Olympos oli jumalten koti, ja 52-huippuinen vuoristo kohoaa yhä Kreikan korkeimpaan pisteeseensä, Mytikakseen (2 917,7 m). Vuoresta tuli maan ensimmäinen kansallispuisto 1938, ja heinäkuussa 2026 koko alue otettiin Unescon maailmanperintölistalle sekä luonnostaan että kulttuuriperinnöstään. Suosituin nousureitti alkaa yhä Litohoron kylästä vuoren juurelta.
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:parnassos) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Parnassós (luonto · vuori)
+Tietoruudun teksti: Muinaiset kreikkalaiset pyhittivät Parnassoksen kahdelle jumalalle kerralla: Apollonille, jonka oraakkeli sijaitsi vuoren eteläisellä rinteellä Delfoissa, ja Dionysokselle, jonka riemujuhlia vietettiin vuoren huipuilla. Homeroksen Iliaassa mainitaan useita vuoren kylistä, ja sen kalkkikivessä on myös bauksiittia — alumiinimalmia, jota louhitaan yhä. Talvella samat rinteet täyttyvät hiihtäjistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Izmir — kohdekartta / Kohdekartta: Smyrnan agora] 178 Torin lattiaa kannattaa kolmikerroksinen suorakaiteen muotoinen rakennus, joka on ladottu pylväiden ja kaarien varaan suuren sisäpihan ympärille ja jonka etusivulla nousevat portaat. Saksalainen arkeologi Rudolf Naumann ja İzmirin ja Efesoksen museoiden johtaja Selâhattin Kantar kaivoivat sen esiin vuosina 1931–1942. Läntisen pylväshallin korinttilaiset pylväät seisovat yhä rivissä, ja hallin toisessa kaaressa on keisarin vaimon Faustinan rintakuva. Kreikkalaiset rakensivat torin 300-luvulla eaa. Pagos-kukkulan pohjoisrinteen juurelle. Se oli kaupungin kaupan, oikeudenkäytön ja hallinnon keskus sekä opetuksen paikka. Vuoden 178 maanjäristys tuhosi sen, ja keisari Marcus Aurelius määräsi…
+
+### 7.1
+KYSYMYS: Miten Dionysoksen juhlia vietettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Parnassós (luonto · vuori)
+Tietoruudun teksti: Muinaiset kreikkalaiset pyhittivät Parnassoksen kahdelle jumalalle kerralla: Apollonille, jonka oraakkeli sijaitsi vuoren eteläisellä rinteellä Delfoissa, ja Dionysokselle, jonka riemujuhlia vietettiin vuoren huipuilla. Homeroksen Iliaassa mainitaan useita vuoren kylistä, ja sen kalkkikivessä on myös bauksiittia — alumiinimalmia, jota louhitaan yhä. Talvella samat rinteet täyttyvät hiihtäjistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Izmir — kohdekartta / Kohdekartta: Smyrnan agora] 178 Torin lattiaa kannattaa kolmikerroksinen suorakaiteen muotoinen rakennus, joka on ladottu pylväiden ja kaarien varaan suuren sisäpihan ympärille ja jonka etusivulla nousevat portaat. Saksalainen arkeologi Rudolf Naumann ja İzmirin ja Efesoksen museoiden johtaja Selâhattin Kantar kaivoivat sen esiin vuosina 1931–1942. Läntisen pylväshallin korinttilaiset pylväät seisovat yhä rivissä, ja hallin toisessa kaaressa on keisarin vaimon Faustinan rintakuva. Kreikkalaiset rakensivat torin 300-luvulla eaa. Pagos-kukkulan pohjoisrinteen juurelle. Se oli kaupungin kaupan, oikeudenkäytön ja hallinnon keskus sekä opetuksen paikka. Vuoden 178 maanjäristys tuhosi sen, ja keisari Marcus Aurelius määräsi…
+
+### 7.2
+KYSYMYS: Mitä Homeros kertoo Parnassoksesta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Parnassós (luonto · vuori)
+Tietoruudun teksti: Muinaiset kreikkalaiset pyhittivät Parnassoksen kahdelle jumalalle kerralla: Apollonille, jonka oraakkeli sijaitsi vuoren eteläisellä rinteellä Delfoissa, ja Dionysokselle, jonka riemujuhlia vietettiin vuoren huipuilla. Homeroksen Iliaassa mainitaan useita vuoren kylistä, ja sen kalkkikivessä on myös bauksiittia — alumiinimalmia, jota louhitaan yhä. Talvella samat rinteet täyttyvät hiihtäjistä.
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:taygetos) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taÿ́getos (luonto · vuori)
+Tietoruudun teksti: Taygetos on yksi Euroopan vanhimmista muistiin merkityistä paikannimistä — se mainitaan jo Homeroksen Odysseiassa, ja kreikkalaisen taruston mukaan vuori on nimetty Taygete-nymfin mukaan. Bysantin ajalta 1800-luvulle asti sitä kutsuttiin myös nimellä Pentadaktylos, "viisisormi". Korkein huippu, Profitis Ilias (2 405 m), on koko Peloponnesoksen korkein kohta, ja vuori hallitsee yhä Spartan ja Kalamatan kaupunkien taivasrajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salomonsaaret — maalehti / Musiikki: Musiikki, jota kirkko ei aina sallinut] Malaitan eteläosan vanha uskonto oli esi-isien kunnioittamista, ja perinteinen musiikki liittyi siihen suoraan. Siirtomaa-aikana kristinusko levisi nopeasti, ja 1970-luvun puoliväliin mennessä ainakin puolet väestöstä oli kääntynyt; ensimmäiset raamatunosat käännettiin ’are’aren kielelle 1957. Nykyään noin puolet kuuluu South Seas Evangelical Churchiin ja puolet katoliseen kirkkoon tai Melanesian anglikaaniseen kirkkoon. Ensiksi mainittu ei salli perinteistä musiikkia, koska se yhdistetään esi-isien henkiin — ja siksi panhuiluperinne on säilynyt toisissa kylissä paremmin kuin toisissa.
+- [Hongkong — maalehti / Urheilu: Suomaa, joka oli ainoa tasainen paikka] 1845– — Happy Valleyn kilparata rakennettiin 1845, koska se oli ainoa tasainen maa koko Hongkong-saarella — ja se oli suota. Tieltä hallinto kielsi riisinviljelyn ympäröivissä kylissä. Ensimmäinen kilpailu ajettiin joulukuussa 1846, ja laji levisi vuosien mittaan brittiyhteisöstä myös kiinalaisten asukkaiden keskuuteen. Radan historian pahin onnettomuus sattui 26. helmikuuta 1918, kun väliaikainen katsomo romahti ja siitä syttyi tulipalo. Nykyään kilpailut ajetaan keskiviikkoiltaisin, ja seitsenkerroksisiin katsomoihin mahtuu noin 55 000 katsojaa.
+
+### 8.1
+KYSYMYS: Kuka oli Taygete?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taÿ́getos (luonto · vuori)
+Tietoruudun teksti: Taygetos on yksi Euroopan vanhimmista muistiin merkityistä paikannimistä — se mainitaan jo Homeroksen Odysseiassa, ja kreikkalaisen taruston mukaan vuori on nimetty Taygete-nymfin mukaan. Bysantin ajalta 1800-luvulle asti sitä kutsuttiin myös nimellä Pentadaktylos, "viisisormi". Korkein huippu, Profitis Ilias (2 405 m), on koko Peloponnesoksen korkein kohta, ja vuori hallitsee yhä Spartan ja Kalamatan kaupunkien taivasrajaa.
+
+### 8.2
+KYSYMYS: Millaista elämä on vuoren kylissä nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taÿ́getos (luonto · vuori)
+Tietoruudun teksti: Taygetos on yksi Euroopan vanhimmista muistiin merkityistä paikannimistä — se mainitaan jo Homeroksen Odysseiassa, ja kreikkalaisen taruston mukaan vuori on nimetty Taygete-nymfin mukaan. Bysantin ajalta 1800-luvulle asti sitä kutsuttiin myös nimellä Pentadaktylos, "viisisormi". Korkein huippu, Profitis Ilias (2 405 m), on koko Peloponnesoksen korkein kohta, ja vuori hallitsee yhä Spartan ja Kalamatan kaupunkien taivasrajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salomonsaaret — maalehti / Musiikki: Musiikki, jota kirkko ei aina sallinut] Malaitan eteläosan vanha uskonto oli esi-isien kunnioittamista, ja perinteinen musiikki liittyi siihen suoraan. Siirtomaa-aikana kristinusko levisi nopeasti, ja 1970-luvun puoliväliin mennessä ainakin puolet väestöstä oli kääntynyt; ensimmäiset raamatunosat käännettiin ’are’aren kielelle 1957. Nykyään noin puolet kuuluu South Seas Evangelical Churchiin ja puolet katoliseen kirkkoon tai Melanesian anglikaaniseen kirkkoon. Ensiksi mainittu ei salli perinteistä musiikkia, koska se yhdistetään esi-isien henkiin — ja siksi panhuiluperinne on säilynyt toisissa kylissä paremmin kuin toisissa.
+- [Hongkong — maalehti / Urheilu: Suomaa, joka oli ainoa tasainen paikka] 1845– — Happy Valleyn kilparata rakennettiin 1845, koska se oli ainoa tasainen maa koko Hongkong-saarella — ja se oli suota. Tieltä hallinto kielsi riisinviljelyn ympäröivissä kylissä. Ensimmäinen kilpailu ajettiin joulukuussa 1846, ja laji levisi vuosien mittaan brittiyhteisöstä myös kiinalaisten asukkaiden keskuuteen. Radan historian pahin onnettomuus sattui 26. helmikuuta 1918, kun väliaikainen katsomo romahti ja siitä syttyi tulipalo. Nykyään kilpailut ajetaan keskiviikkoiltaisin, ja seitsenkerroksisiin katsomoihin mahtuu noin 55 000 katsojaa.
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:pindos) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Píndos (luonto · vuori)
+Tietoruudun teksti: Noin 160 kilometrin pituinen Pindos kulkee pohjoisesta etelään pitkin Kreikan mannerta ja tunnetaan puhekielessä "Kreikan selkärankana". Vuoristo on geologisesti Dinaaristen Alppien jatke ja ulottuu Albanian rajalta aina Peloponnesoksen pohjoisosiin asti. Korkein huippu on Smolikas (2 637 m), ja vuoristo erottaa perinteisesti Epeiroksen alueen muusta Kreikan mantereesta.
+
+### 9.1
+KYSYMYS: Asuuko vuoristossa yhä ihmisiä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Píndos (luonto · vuori)
+Tietoruudun teksti: Noin 160 kilometrin pituinen Pindos kulkee pohjoisesta etelään pitkin Kreikan mannerta ja tunnetaan puhekielessä "Kreikan selkärankana". Vuoristo on geologisesti Dinaaristen Alppien jatke ja ulottuu Albanian rajalta aina Peloponnesoksen pohjoisosiin asti. Korkein huippu on Smolikas (2 637 m), ja vuoristo erottaa perinteisesti Epeiroksen alueen muusta Kreikan mantereesta.
+
+### 9.2
+KYSYMYS: Miksi Epeiros jäi muusta Kreikasta erilleen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Píndos (luonto · vuori)
+Tietoruudun teksti: Noin 160 kilometrin pituinen Pindos kulkee pohjoisesta etelään pitkin Kreikan mannerta ja tunnetaan puhekielessä "Kreikan selkärankana". Vuoristo on geologisesti Dinaaristen Alppien jatke ja ulottuu Albanian rajalta aina Peloponnesoksen pohjoisosiin asti. Korkein huippu on Smolikas (2 637 m), ja vuoristo erottaa perinteisesti Epeiroksen alueen muusta Kreikan mantereesta.
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:smolikas) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smólikas (luonto · vuori)
+Tietoruudun teksti: Smólikas on Píndoksen korkein huippu ja Kreikan toiseksi korkein vuori heti Olympoksen jälkeen. Lehteen painettu lukema 2 637 metriä on vanhaa perua; uudempi mittaus antaa huipulle 2 631,4 metriä. Vuori on ofioliittia, vanhaa merenpohjan kuorta, jonka maankuoren liike on nostanut yli kahden kilometrin korkeuteen, ja jäätiköt sulivat sen pohjois- ja itärinteiltä vasta noin 11 500 vuotta sitten. Länsirinteellä lepää pieni vuoristojärvi Drakolímni eli "lohikäärmejärvi": paikallisen tarun mukaan järvien lohikäärmeet tappelivat heittelemällä toisiaan männyillä ja kivillä ja muotoilivat siinä koko maiseman. Isoisän matkan aikaan vuori ei ollut Kreikassa lainkaan — Epeiros kuului yhä Ottomaanien valtakuntaan, ja raja siirtyi tänne vasta 1913.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Historian hetki: Palos de la Frontera 1492 — kolme laivaa laskuveden mukana] 3.8.1492 — Santa Marían nuori laivapoika kuuntelee Palosin kirkonkelloja ja yrittää olla näyttämättä, ettei ole koskaan ollut avomerellä. Hänen ympärillään kaikki tuntevat toisensa: karavelleja Pintaa ja Niñaa luotsaavat paikkakunnan omat merenkulkijat, veljekset Martín Alonso ja Vicente Yáñez Pinzón, ja miehistö on värvätty naapureista Palosista ja Moguerista. Laiturilla seisova väki tuntee lähtijät nimeltä, ja se on pojan onni ja pelko yhtä aikaa. Aamu on juuri valjennut. Río Tinton suistossa vesi laskee, ja juuri sitä on odotettu: laskuvesi vie laivat merelle ilman soutua. Suurin aluksista on Santa María, pyöreärunkoinen nao, jonka omistaa Juan de la Cosa ja jota Kolumbus itse komentaa. …
+- [Lagos — kaupunkilehti / Laguuni ja sillat: Kaupunki, joka tekee itse maansa] Lagos on kasvanut myös ulospäin vedestä. Ikoyi on liitetty Lagosin saareen täyttömaalla, ja osa saaria erottavista salmista on ruopattu ja rakennettu umpeen. Victoria Islandin merenpuoleinen Bar Beach on rakennettu ympäristöllisesti uudelleen, ja laguunin suulle nousee Eko Atlantic, joka laajentaa Victoria Islandia. Kaupunki levittäytyy yli kolmenkymmenen kilometrin matkalle laguunin lounais- ja länsirannalla. Vesi maksaa siitä hintansa: laguuniin päätyy päivittäin suuri määrä kaupungin ja teollisuuden jätevettä, ja Ogun- ja Osun-joet tuovat lisää. Merenpinnan nousu ja maan painuminen koskettavat Lagosia enemmän kuin useimpia Afrikan suurkaupunkeja.
+
+### 10.1
+KYSYMYS: Miten merenpohja päätyy vuoren huipulle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smólikas (luonto · vuori)
+Tietoruudun teksti: Smólikas on Píndoksen korkein huippu ja Kreikan toiseksi korkein vuori heti Olympoksen jälkeen. Lehteen painettu lukema 2 637 metriä on vanhaa perua; uudempi mittaus antaa huipulle 2 631,4 metriä. Vuori on ofioliittia, vanhaa merenpohjan kuorta, jonka maankuoren liike on nostanut yli kahden kilometrin korkeuteen, ja jäätiköt sulivat sen pohjois- ja itärinteiltä vasta noin 11 500 vuotta sitten. Länsirinteellä lepää pieni vuoristojärvi Drakolímni eli "lohikäärmejärvi": paikallisen tarun mukaan järvien lohikäärmeet tappelivat heittelemällä toisiaan männyillä ja kivillä ja muotoilivat siinä koko maiseman. Isoisän matkan aikaan vuori ei ollut Kreikassa lainkaan — Epeiros kuului yhä Ottomaanien valtakuntaan, ja raja siirtyi tänne vasta 1913.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Historian hetki: Palos de la Frontera 1492 — kolme laivaa laskuveden mukana] 3.8.1492 — Santa Marían nuori laivapoika kuuntelee Palosin kirkonkelloja ja yrittää olla näyttämättä, ettei ole koskaan ollut avomerellä. Hänen ympärillään kaikki tuntevat toisensa: karavelleja Pintaa ja Niñaa luotsaavat paikkakunnan omat merenkulkijat, veljekset Martín Alonso ja Vicente Yáñez Pinzón, ja miehistö on värvätty naapureista Palosista ja Moguerista. Laiturilla seisova väki tuntee lähtijät nimeltä, ja se on pojan onni ja pelko yhtä aikaa. Aamu on juuri valjennut. Río Tinton suistossa vesi laskee, ja juuri sitä on odotettu: laskuvesi vie laivat merelle ilman soutua. Suurin aluksista on Santa María, pyöreärunkoinen nao, jonka omistaa Juan de la Cosa ja jota Kolumbus itse komentaa. …
+- [Lagos — kaupunkilehti / Laguuni ja sillat: Kaupunki, joka tekee itse maansa] Lagos on kasvanut myös ulospäin vedestä. Ikoyi on liitetty Lagosin saareen täyttömaalla, ja osa saaria erottavista salmista on ruopattu ja rakennettu umpeen. Victoria Islandin merenpuoleinen Bar Beach on rakennettu ympäristöllisesti uudelleen, ja laguunin suulle nousee Eko Atlantic, joka laajentaa Victoria Islandia. Kaupunki levittäytyy yli kolmenkymmenen kilometrin matkalle laguunin lounais- ja länsirannalla. Vesi maksaa siitä hintansa: laguuniin päätyy päivittäin suuri määrä kaupungin ja teollisuuden jätevettä, ja Ogun- ja Osun-joet tuovat lisää. Merenpinnan nousu ja maan painuminen koskettavat Lagosia enemmän kuin useimpia Afrikan suurkaupunkeja.
+
+### 10.2
+KYSYMYS: Elääkö lohikäärmejärvessä mitään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smólikas (luonto · vuori)
+Tietoruudun teksti: Smólikas on Píndoksen korkein huippu ja Kreikan toiseksi korkein vuori heti Olympoksen jälkeen. Lehteen painettu lukema 2 637 metriä on vanhaa perua; uudempi mittaus antaa huipulle 2 631,4 metriä. Vuori on ofioliittia, vanhaa merenpohjan kuorta, jonka maankuoren liike on nostanut yli kahden kilometrin korkeuteen, ja jäätiköt sulivat sen pohjois- ja itärinteiltä vasta noin 11 500 vuotta sitten. Länsirinteellä lepää pieni vuoristojärvi Drakolímni eli "lohikäärmejärvi": paikallisen tarun mukaan järvien lohikäärmeet tappelivat heittelemällä toisiaan männyillä ja kivillä ja muotoilivat siinä koko maiseman. Isoisän matkan aikaan vuori ei ollut Kreikassa lainkaan — Epeiros kuului yhä Ottomaanien valtakuntaan, ja raja siirtyi tänne vasta 1913.
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
