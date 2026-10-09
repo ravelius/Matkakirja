@@ -25,14 +25,43 @@ def cs_purku(s):
     return s.encode('latin-1', 'backslashreplace').decode('unicode_escape') if '\\' in s else s
 
 
+def _jasenna(t, i, tulos):
+    """Merkkijono kohdasta i (t[i] == '"', etuliite jo ohitettu): palauttaa loppukohdan. Interpoloidun lausekkeet jäsennetään
+    rekursiivisesti (sisäkkäiset $"…"), kiinteät osat tulokseen. Lausekkeen paikalle {} (vertailu muotoilupohjiin)."""
+    interp = i > 0 and t[i - 1] == '$' or i > 1 and t[i - 2:i] in ('$@', '@$')
+    i += 1; osa = []
+    while i < len(t):
+        c = t[i]
+        if c == '\\': osa.append(t[i:i + 2]); i += 2; continue
+        if c == '"': break
+        if interp and c == '{':
+            if t[i:i + 2] == '{{': osa.append('{'); i += 2; continue
+            osa.append('\x00'); i += 1; syv = 1
+            while i < len(t) and syv:
+                if t[i] == '"': i = _jasenna(t, i, tulos) + 1; continue
+                if t[i] == '{': syv += 1
+                elif t[i] == '}': syv -= 1
+                i += 1
+            continue
+        if interp and t[i:i + 2] == '}}': osa.append('}'); i += 2; continue
+        osa.append(c); i += 1
+    s = cs_purku(''.join(osa))
+    tulos += [o for o in s.split('\x00') if o]
+    return i
+
+
 def literaalit(teksti):
-    """C#-merkkijonot (myös $-interpoloitujen kiinteät osat) purettuina."""
-    tulos = []
-    for etu, s in LIT.findall(teksti):
-        s = cs_purku(s)
-        if '$' in etu: tulos += [o for o in re.split(r'\{[^{}]*\}', s) if o]
-        else: tulos.append(s)
-    return tulos
+    """C#-merkkijonot (myös $-interpoloitujen kiinteät osat, sisäkkäisetkin) purettuina. Rivien yli jatkuvat "a" + "b" yhdistetään;
+    nimetyt paikkamerkit ({paivat}, .Replace-kaava) jaetaan osiin kuten muotoilupohjat."""
+    teksti = re.sub(r'"\s*\+\s*"', '', re.sub(r'(?m)//[^"\n]*$', '', teksti))
+    tulos, i = [], 0
+    while i < len(teksti):
+        if teksti[i] == '"' and (i == 0 or teksti[i - 1] != "'"):
+            i = _jasenna(teksti, i, tulos) + 1
+        elif teksti[i:i + 2] == "'\"" or teksti[i:i + 3] == "'\\\"":
+            i += 3
+        else: i += 1
+    return [o for l in tulos for o in ([l] + [x for x in re.split(r'\{[a-z_]+\}', l) if x] if re.search(r'\{[a-z_]+\}', l) else [l])]
 
 
 def jonona(osa, palat, syvyys=3, alku=True):
@@ -47,7 +76,11 @@ def jonona(osa, palat, syvyys=3, alku=True):
     return False
 
 
+PAIKKA = re.compile(r'\{[a-z_]+\}|\{\d+(?:[:,][^}]*)?\}')
+
+
 def suomea(x):
+    x = PAIKKA.sub('', x)
     return bool(re.search(r'[A-ZÄÖÅa-zäöå]{2}', x)) and not re.match(r'^(mk-|tk-|ui\.|<|http|Fontit/|Symbolit/|MATKAKIRJA)', x) \
         and 'mk-' not in x and not re.fullmatch(r'[a-z0-9_.\-:/ ]+', x)
 
@@ -70,6 +103,7 @@ arvot = list(taulu.values())
 osat = set(o for v in arvot for o in MUOTO.split(v) if o)
 nyt = set(l for t in uusi_koodi.values() for l in literaalit(t))
 poistuneet = 0
+normit = set(PAIKKA.sub('\x00', v) for v in arvot)
 for p in tiedostot:
     for l in set(literaalit(vanha_koodi[p])) - set(literaalit(uusi_koodi[p])):
         if not suomea(l): continue
@@ -77,6 +111,7 @@ for p in tiedostot:
         if l in osat or any(l in v for v in arvot) or l in nyt: continue
         if l.strip() and any(l.strip() == o.strip() for o in osat): continue
         if jonona(l, osat): continue
+        if PAIKKA.sub('\x00', l) in normit: continue   # nimetyt paikkamerkit ({paivat} → {0}, .Replace-kaava)
         virheet.append(f'{p}: {l!r} poistui koodista eikä löydy ui.fi.json:sta')
 
 for v in virheet: print('KIELISIIRTO:', v)

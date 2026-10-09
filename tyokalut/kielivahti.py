@@ -19,7 +19,9 @@ KOHTEET = ['Assets/Matkakirja/UI/Linssit/' + n + '.cs' for n in
           ['Assets/Matkakirja/UI/' + n + '.cs' for n in ('KaupunkiPallot', 'Vahvistus')] + \
           ['Assets/Matkakirja/UI/Linssit/' + n + '.cs' for n in
            ('Linssivalitsin', 'Linssivalitsin.Pilleri', 'Linssivalitsin.ValikkoV2', 'LinssiValikko', 'MikseriPaneeli')] + \
-          ['Assets/Matkakirja/UI/' + n + '.cs' for n in ('Paavalikko', 'Aanentasot', 'Nostokortti', 'Pulu/PuluChat')]   # sisääntuloreitti ja pallon reitti (juna 174)
+          ['Assets/Matkakirja/UI/' + n + '.cs' for n in ('Paavalikko', 'Aanentasot', 'Nostokortti', 'Pulu/PuluChat')] + \
+          ['Assets/Matkakirja/UI/' + n + '.cs' for n in ('Aloitusnakyma', 'Lehti/Lehtinakyma', 'Matkalaukku', 'Nostoselain', 'Reaktiot',
+                                                         'KysymysNakyma', 'Pulu/Poimintapillerit', 'Pulu/Matkakirjakortti')]   # sisääntuloreitti, pallon reitti ja erä 2 (juna 174)
 NIELU = re.compile(r'Rakenne\.Teksti\(|Rakenne\.Nappi\(|Ohjausnappi\.Nappi\(|\bKomento\(|\bAlanakyma\(|\bTakaisin\(|tooltip\s*=|\.text\s*=|'
                    r'\bKysy\(|KorttiValinta\(|\bOpasNappi\(|\bKytkin\(|\bTyhja\(|\bKytkinrivi\(|placeholder')
 LIT = re.compile(r'(?<![\$@\w])"((?:[^"\\\n]|\\.)*)"')
