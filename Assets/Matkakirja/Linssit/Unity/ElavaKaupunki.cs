@@ -11,6 +11,8 @@
 // (OpasSovitin.OmaMaa; maa kolmen pisteen pienimmästä, ettei katupuu nosta autoa); oikea kaista kaksisuuntaisilla, päissä piilossa.
 // Näkyvyys: veneet NakyvaM ja parvet ParviNakyvaM kameran ympäriltä. Määrä muistin mukaan (15 / 40 / 100). Krediitti: Krediitti
 // (© OpenStreetMap contributors, ODbL) Lähteet-näkymään. Kytkin: asetukset.json "elava.Paalla" (oletus 1), komento `opas elava 0|1`.
+// SAVU JA LIPUT (B8, juna 171; ElavaSavuLiput + Ydin SavuJaLiput): savu lähimmistä savuavista piipuista ja liput lähimmistä tangoista
+// (10 / 30 / 80 muistin mukaan), tuuli LIVE-säästä tai muiden pallojen varatuulesta; kytkimet `opas savu|liput 0|1`, tila Tila().
 using System.Collections.Generic;
 using CesiumForUnity;
 using Matkakirja.Linssit;
@@ -45,6 +47,7 @@ namespace Matkakirja.Natiivi
         string katuJson; KatuLiikenne katu; int autoRaja; float katuYritys = -9f; double lat0, lon0;
         static readonly Dictionary<int, Mesh> autoVerkot = new Dictionary<int, Mesh>(); static Mesh raitioVerkko;
         readonly List<Transform> autoT = new List<Transform>(), raitioT = new List<Transform>();
+        SavuJaLiput savuData; ElavaSavuLiput savuLiput; int taso; double varaTuuliAst;
 
         VesiLiikenne liikenne;
         sealed class VeneOlio { public Transform T; public ReittiLiike.Kulkija K; public float Vaihe; }
@@ -103,9 +106,15 @@ namespace Matkakirja.Natiivi
             e2.maaM = (float)gr.height;
             int siemen = Mathf.Abs((int)(lat * 1000) * 31 + (int)(lon * 1000));
             e2.pallot = new MuutPallot(new[] { 2, 4, 6 }[taso], PallotSadeM, siemen % 360, 3.0, siemen);
+            e2.taso = taso; e2.varaTuuliAst = siemen % 360;   // savu ja liput samaan suuntaan kuin muut pallot, kun LIVE-säätä ei ole
+            if (kj != null && (kj.Contains("\"piiput\"") || kj.Contains("\"liput\"")))
+            {
+                try { e2.savuData = SavuJaLiput.Lue(kj, 20261009); }
+                catch (System.Exception e) { Debug.Log($"MATKAKIRJA kaupunki: elävä {id}: savu ja liput virheellinen ({e.Message})"); }
+            }
             e2.Rakenna();
             Nykyinen = e2; Krediitti = l?.Krediitti;
-            Debug.Log($"MATKAKIRJA kaupunki: elävä {id ?? "-"}: {l?.Liike.Kulkijat.Count ?? 0} venettä {l?.Reitteja ?? 0} reitillä (raja {raja}), {l?.Parvet.Count ?? 0} lokkiparvea, {e2.pallot.Maara} muuta palloa");
+            Debug.Log($"MATKAKIRJA kaupunki: elävä {id ?? "-"}: {l?.Liike.Kulkijat.Count ?? 0} venettä {l?.Reitteja ?? 0} reitillä (raja {raja}), {l?.Parvet.Count ?? 0} lokkiparvea, {e2.pallot.Maara} muuta palloa, {e2.savuData?.Savuavia ?? 0}/{e2.savuData?.Piiput.Count ?? 0} savuavaa piippua, {e2.savuData?.Liput.Count ?? 0} lipputankoa");
         }
 
         static Mesh Verkko(VeneVerkko v, string nimi)
@@ -156,6 +165,11 @@ namespace Matkakirja.Natiivi
                 palloT[j] = Olio("muu pallo", transform, pm, kohdeMat).transform;
             }
             RakennaTaivas();
+            if (savuData != null)
+            {
+                savuLiput = new ElavaSavuLiput(savuData, MaaAlla, SavuJaLiput.Maarat[taso]);
+                savuLiput.Rakenna(transform, kerros, kohdeMat, Olio);
+            }
             if (liikenne == null) return;
             int i = 0;
             foreach (var k in liikenne.Liike.Kulkijat)
@@ -219,6 +233,24 @@ namespace Matkakirja.Natiivi
             return double.IsNaN(h) ? h : h - (x * x + z * z) / (2 * 6371000.0);
         }
 
+        /// <summary>Maa kohteen alla (piippu, lipputanko): pienin keskeltä ja kuudesta pisteestä 25 m:n kehältä (piipun tai katon
+        /// huippu ei ole maa); NaN, jos oma korkeusmalli ei ole muistissa.</summary>
+        double MaaAlla(double x, double z)
+        {
+            double h = Maa(x, z);
+            if (double.IsNaN(h)) return h;
+            for (int i = 0; i < 6; i++)
+            {
+                double hk = Maa(x + 25 * System.Math.Cos(i * System.Math.PI / 3), z + 25 * System.Math.Sin(i * System.Math.PI / 3));
+                if (!double.IsNaN(hk)) h = System.Math.Min(h, hk);
+            }
+            return h;
+        }
+
+        /// <summary>Diagnoosi (`opas savu|liput`): paketti, savu ja liput näkyvissä, tuuli.</summary>
+        public static string Tila() => Nykyinen == null ? "elävä kaupunki: ei auki"
+            : $"elävä kaupunki {Nykyinen.paketti ?? "-"}: " + (Nykyinen.savuLiput?.Tila() ?? "ei savua eikä lippuja paketissa");
+
         void RakennaKatu()
         {
             if (katuJson == null || katu != null || Time.unscaledTime - katuYritys < 2f) return;
@@ -262,6 +294,11 @@ namespace Matkakirja.Natiivi
             AsetaValo();
             Vector3 c = kamera != null ? transform.InverseTransformPoint(kamera.transform.position) : Vector3.zero;
             RakennaKatu();
+            if (savuLiput != null)
+            {
+                var st = Saatila.Live ? OpasSovitin.SaaTiedot : null;   // LIVE-sää: tuulen mistä-suunta ja nopeus (MET Norway)
+                savuLiput.Paivita(c, st?.TuulenSuuntaAst, st?.TuuliMs, varaTuuliAst);
+            }
             if (katu != null)
             {
                 katu.Autot.Paivita(dt); katu.Raitiot.Paivita(dt);

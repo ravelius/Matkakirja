@@ -2194,6 +2194,9 @@ namespace Matkakirja.Natiivi
                     else if (osat.Length > 2 && osat[1] == "lahi") { CesiumKaupunki.LahiSallittu = osat[2] == "1"; Kirjaa($"opas: lähitarkkuus {(CesiumKaupunki.LahiSallittu ? $"sallittu (kerroin {CesiumKaupunki.LahiKerroin:F1})" : "pois")}"); }
                     else if (osat.Length > 2 && osat[1] == "korkeus") { OpasSovitin.OmaKorkeusPakko = osat[2] != "google"; Kirjaa($"opas: korkeus {(OpasSovitin.OmaKorkeusPaalla ? "oma malli" : "Google (SampleHeightMostDetailed)")}"); }
                     else if (osat.Length > 2 && osat[1] == "elava") { ElavaKaupunki.Pakko = osat[2] == "1"; Kirjaa($"opas: elävä kaupunki {(ElavaKaupunki.Paalla ? "päällä" : "pois")} (seuraava kaupungin avaus)"); }
+                    // Savu piipuista ja liput (B8, juna 171): heti voimaan; "tila" vain tulostaa.
+                    else if (osat.Length > 2 && osat[1] == "savu") { if (osat[2] != "tila") ElavaSavuLiput.SavuPaalla = osat[2] == "1"; Kirjaa("opas: " + ElavaKaupunki.Tila()); }
+                    else if (osat.Length > 2 && osat[1] == "liput") { if (osat[2] != "tila") ElavaSavuLiput.LiputPaalla = osat[2] == "1"; Kirjaa("opas: " + ElavaKaupunki.Tila()); }
                     else if (osat.Length > 3 && osat[1] == "pinta")
                     {
                         var pp = new List<(double, double)>();
