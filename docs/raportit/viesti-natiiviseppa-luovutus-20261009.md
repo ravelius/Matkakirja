@@ -3,6 +3,19 @@
 Rooli: Natiiviseppä (Opus, high). Junat, BUILD-merget proto masteriin, simukäännökset vain Julkaisijan NYT:llä, Mac TF -odottaja,
 juna/b13. Vanhempi historia: `docs/raportit/viesti-natiiviseppa-luovutus-20261007-tauko.md` (TILA-osiot, uusin ylimpänä).
 
+## TILA 9.10. 16.2x
+
+- **Juna 173 runko** `natiiviseppa/juna-173` 26ab381a2 (lähtee 10.10., PT: päivän TF-raja täynnä). Lisäksi 14.1x:n jälkeen: NUI c3270b673,
+  38ec50e9f, f6af5f0a8, a2ae61457, 064b5a7f7, b08c47595 (⊇ foto-v3 9de8361f9; nyt-rivi myös poimintana 0138b057d); Pelikoodari intro
+  2ae1b0e1a (⊇ 35393b309 ⊇ cc22e018f ⊇ 20e55df36); LS1 2b9ba3189, bf0017f1b (nykyintro), eb983f45a (⊇ f5088ce94 ⊇ 5fe96a74d ⊇ 034505648);
+  LS2 a72f1ee21 (osoitin uusin-3.json, 200); Siirtoseppä Sonniss v4 848021bae (puhdas cherry-pick; 4f831e6e3 toi kuittaamattoman historian →
+  palautettu ennen pushia). Linssit 1243, Peli 438, Kartta 453, unity 0, tarkista 0. Simukäännös 7aadc9501 14.27 OK: Steam Audio pois
+  simulaattorista (6 liitännäistä, ei ipl-symboleja). Linssit-ajo antoi kerran 1210/1211 (satunnainen, uusinta läpi).
+- ODOTTAA: Siirtosepän historia (ff65c5d0f / juna173-historia) vasta arvio 7:n jälkeen (illalla). EI kivilinnaa 7fbca9c90 ilman kuittausta.
+- **Juna 174 jono:** NUI kieli-pallo-174-2 773d7e09e (korvaa PT:n kuittaaman fbb5b29cb:n; vahvista PT:ltä).
+- Unity 6.7: Library-tuonti illalla, kun ei käännöksiä/simuja (swap + vapaa > 20 Gt). Raporttiin PT:n pyyntö: suositus odotetaanko
+  Cesiumin 6.7-tukea.
+
 ## TILA 9.10. 14.1x (seuraaja)
 
 - Mac TF 171 OK (37902594763). TF 172 iOS 37919863047 OK; Mac TF 172 -odottaja käynnisti 37921284135 klo 14.02 (loki `lokit/natiiviseppa-mac-tf-172.log`).
