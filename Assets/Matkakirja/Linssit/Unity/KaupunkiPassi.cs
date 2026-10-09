@@ -105,6 +105,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Diagnoosi: passin tapahtuma (opas yovalotvaihe N); null = AfterRenderingPostProcessing.</summary>
         public static RenderPassEvent? Tapahtuma;
         static bool kytketty;
+        /// <summary>Diagnoosi (opas passi &lt;nimi&gt; 0|1): passit, joita ei lisätä vaikka aktiivisia.</summary>
+        public static readonly HashSet<string> Estetyt = new HashSet<string>();
 
         /// <summary>Passi (nimi) päälle tällä materiaalilla seuraavista kehyksistä alkaen; null = pois.</summary>
         public static void Aseta(string nimi, Material m)
@@ -121,7 +123,21 @@ namespace Matkakirja.Natiivi
             var r = c.GetUniversalAdditionalCameraData()?.scriptableRenderer;
             if (r == null) return;
             r.EnqueuePass(syvyysVaihe);
-            foreach (var v in aktiiviset.Values) { if (Tapahtuma.HasValue) v.renderPassEvent = Tapahtuma.Value; r.EnqueuePass(v); }
+            foreach (var v in aktiiviset.Values) { if (Estetyt.Contains(v.nimi)) continue; if (Tapahtuma.HasValue) v.renderPassEvent = Tapahtuma.Value; r.EnqueuePass(v); }
+        }
+
+        /// <summary>Diagnoosi (opas ssao 0|1): nykyisen renderöijän SSAO-ominaisuus päälle/pois; palauttaa tilan.</summary>
+        public static string Ssao(bool? paalla)
+        {
+            if (!(GraphicsSettings.currentRenderPipeline is UniversalRenderPipelineAsset urp) || urp.rendererDataList.Length == 0) return "ssao: ei URP:tä";
+            var tulos = "";
+            foreach (var f in urp.rendererDataList[0].rendererFeatures)
+            {
+                if (f == null || !f.GetType().Name.Contains("AmbientOcclusion")) continue;
+                if (paalla.HasValue) f.SetActive(paalla.Value);
+                tulos += $"{f.name} {(f.isActive ? "päällä" : "pois")} ";
+            }
+            return "ssao: " + (tulos == "" ? "ei ominaisuutta" : tulos.Trim());
         }
 
         public static string Tila(string nimi) => (vaiheet.TryGetValue(nimi, out var v) ? (v.tila ?? $"{nimi}: ei vielä ajettu") + (aktiiviset.ContainsKey(nimi) ? "" : " (pois)") : $"{nimi}: ei luotu") + ", " + (syvyysVaihe.tila ?? "syvyys: ei vielä");

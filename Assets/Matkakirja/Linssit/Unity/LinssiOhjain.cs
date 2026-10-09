@@ -2185,6 +2185,8 @@ namespace Matkakirja.Natiivi
                     else if (osat.Length > 2 && osat[1] == "katse") { if (osat[2] != "tila") KoriKatseVeto.Kaytossa = osat[2] == "1"; Kirjaa("opas: " + OpasSovitin.KoriKatseTila); }
                     else if (osat.Length > 2 && osat[1] == "yovalotvaihe" && int.TryParse(osat[2], out var yv)) { KaupunkiPassi.Tapahtuma = (UnityEngine.Rendering.Universal.RenderPassEvent)yv; Kirjaa($"opas: yövalojen passi tapahtumassa {KaupunkiPassi.Tapahtuma}"); }
                     else if (osat.Length > 2 && osat[1] == "yovalotmsaa") { KaupunkiYovalot.MsaaPois = osat[2] == "0"; Kirjaa($"opas: yövalot MSAA {(KaupunkiYovalot.MsaaPois.Value ? "pois" : "päällä")}"); }
+                    else if (osat.Length > 3 && osat[1] == "passi") { if (osat[3] == "0") KaupunkiPassi.Estetyt.Add(osat[2]); else KaupunkiPassi.Estetyt.Remove(osat[2]); Kirjaa($"opas: passi {osat[2]} {(osat[3] == "0" ? "estetty" : "sallittu")}"); }
+                    else if (osat.Length > 2 && osat[1] == "ssao") { Kirjaa("opas: " + KaupunkiPassi.Ssao(osat[2] == "tila" ? (bool?)null : osat[2] == "1")); }
                     else if (osat.Length > 2 && osat[1] == "vuorokausi") { KaupunkiKuva.Valinta = osat[2]; Kirjaa($"opas: vuorokausi {KaupunkiKuva.Valinta}"); }
                     else if (osat.Length > 2 && osat[1] == "yovalot" && float.TryParse(osat[2], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var yd))
                     { KaupunkiYovalot.Diagnoosi = yd; Kirjaa($"opas: yövalojen diagnoosi {yd} (osuus {KaupunkiYovalot.Osuus:F2}, käytössä {KaupunkiYovalot.Kaytossa}, {KaupunkiYovalot.Tila()})"); }
