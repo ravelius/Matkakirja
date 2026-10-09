@@ -15,7 +15,8 @@ os.chdir(os.path.join(os.path.dirname(__file__), '..'))
 TAULU = 'Assets/Matkakirja/UI/Resources/Tekstit/ui.fi.json'
 KOHTEET = ['Assets/Matkakirja/UI/Linssit/' + n + '.cs' for n in
            ('OpasValikko', 'OpasTapit', 'OpasKuvanosto', 'OpasNimilappu', 'OpasMetrolinja', 'KierrosTaulu', 'LinnaValikko',
-            'DioraamaTaulu', 'SeikkailuTapit', 'OlavinlinnaAlku')]
+            'DioraamaTaulu', 'SeikkailuTapit', 'OlavinlinnaAlku', 'LinssiUi', 'Linssivalitsin.Pelit')] + \
+          ['Assets/Matkakirja/UI/' + n + '.cs' for n in ('KaupunkiPallot', 'Vahvistus')]   # sisääntuloreitti (juna 174)
 NIELU = re.compile(r'Rakenne\.Teksti\(|Rakenne\.Nappi\(|Ohjausnappi\.Nappi\(|\bKomento\(|\bAlanakyma\(|\bTakaisin\(|tooltip\s*=|\.text\s*=|'
                    r'\bKysy\(|KorttiValinta\(|\bOpasNappi\(|\bKytkin\(|\bTyhja\(|\bKytkinrivi\(|placeholder')
 LIT = re.compile(r'(?<![\$@\w])"((?:[^"\\\n]|\\.)*)"')

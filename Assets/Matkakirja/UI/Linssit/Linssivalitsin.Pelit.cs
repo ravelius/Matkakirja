@@ -51,7 +51,7 @@ namespace Matkakirja.Natiivi
         /// tyhjä vene lyhtyineen, hehkuva portti; Päätoimittaja: erinomainen) uudella polulla 20261008/peli-yo.jpg (1600 × 900).
         static readonly (string Id, string Nimi, string Selite, string Ikoni, string KuvaUrl, System.Action Avaa)[] Keskeneraiset =
         {
-            ("olavinlinna", "Olavinlinna", "1499 · koko seikkailu, noin 25 min", "linna",
+            ("olavinlinna", "ui.pelit.olavinlinna", "ui.pelit.olavinlinna-selite", "linna",   // Kieli-avaimet
                 "https://media.matkakirja.app/julisteet/olavinlinna-kortti/20261008/peli-yo.jpg", SeikkailuTapit.AvaaPelattavaPala),
         };
 
@@ -66,8 +66,8 @@ namespace Matkakirja.Natiivi
             pelit.style.display = DisplayStyle.None;
             valilehdet = Rakenne.El("mk-selite__valilehdet", null, PickingMode.Ignore);
             ylarivi.Insert(ylarivi.IndexOf(otsikko), valilehdet);
-            valilehtiLinssit = Rakenne.Nappi("LINSSIT", "mk-selite__valilehti", () => NaytaNakyma(Nakyma.Linssit), valilehdet);
-            valilehtiPelit = Rakenne.Nappi("PELIT", "mk-selite__valilehti", () => NaytaNakyma(Nakyma.Pelit), valilehdet);
+            valilehtiLinssit = Rakenne.Nappi(Kieli.T("ui.pelit.valilehti-linssit"), "mk-selite__valilehti", () => NaytaNakyma(Nakyma.Linssit), valilehdet);
+            valilehtiPelit = Rakenne.Nappi(Kieli.T("ui.pelit.valilehti-pelit"), "mk-selite__valilehti", () => NaytaNakyma(Nakyma.Pelit), valilehdet);
             valilehdet.style.display = DisplayStyle.None;
         }
 
@@ -102,16 +102,16 @@ namespace Matkakirja.Natiivi
             }
             if (Asetukset.Kehittaja)
             {
-                Osio("Keskeneräiset", -1, -1, pelit);
+                Osio(Kieli.T("ui.pelit.keskeneraiset"), -1, -1, pelit);
                 foreach (var v in Keskeneraiset)
                 {
                     var avaa = v.Avaa;
-                    AarreRivi("peli:" + v.Id, v.Nimi, v.KuvaUrl, v.Selite, () => { Sulje(); Debug.Log("MATKAKIRJA ui pelit: keskeneräinen " + v.Id); avaa(); }, pelit, Ikonit.Viiva[v.Ikoni]);
+                    AarreRivi("peli:" + v.Id, Kieli.T(v.Nimi), v.KuvaUrl, Kieli.T(v.Selite), () => { Sulje(); Debug.Log("MATKAKIRJA ui pelit: keskeneräinen " + v.Id); avaa(); }, pelit, Ikonit.Viiva[v.Ikoni]);
                 }
-                AarreRivi("peli:lentopeli", "Lentopeli", null, null, AloitaLentopeli, pelit, Ikonit.Viiva["lentopeli"]);
+                AarreRivi("peli:lentopeli", Kieli.T("ui.pelit.lentopeli"), null, null, AloitaLentopeli, pelit, Ikonit.Viiva["lentopeli"]);
             }
             if (lauta.Count == 0 && !Asetukset.Kehittaja)
-                Rakenne.Teksti("Ei vielä pelejä.", "mk-linssivalitsin__tyhja", pelit);
+                Rakenne.Teksti(Kieli.T("ui.pelit.ei-peleja"), "mk-linssivalitsin__tyhja", pelit);
         }
 
         /// <summary>Lentopeli vaihe 1 kuten "lentopeli aloita": lähtö pelaajan kaupungista, jos sillä on kotirengas, muuten Ateenasta.</summary>
