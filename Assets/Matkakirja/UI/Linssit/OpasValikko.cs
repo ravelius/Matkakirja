@@ -171,6 +171,19 @@ namespace Matkakirja.Natiivi
         /// <summary>Oppaan linssi auki (✕ pois, LinssiUi.PaivitaSulku).</summary>
         public static bool Nakyy => Viimeisin != null && Viimeisin.nakyy;
 
+        /// <summary>Alarivin (väkänen tai kierroksen esitysrivi) yläreuna paneelin koordinaateissa, kun rivi näkyy; muuten null.
+        /// NytRivi asettuu tämän yläpuolelle (LS1:n kuva-arkki beb3fe9d, iPad vaaka: rivi peitti väkäsen alareunan).</summary>
+        internal static float? AlarivinYla
+        {
+            get
+            {
+                var v = Viimeisin;
+                if (v == null || !v.nakyy) return null;
+                var r = v.esitysNakyy ? v.esitysRivi : v.nappiNakyy ? v.napit : null;
+                return r != null && r.panel != null && r.resolvedStyle.display == DisplayStyle.Flex ? r.worldBound.yMin : (float?)null;
+            }
+        }
+
         public readonly VisualElement Juuri;
         readonly VisualElement ryhma, valikko, sirurivi;
         readonly Button puhuSiru, taukoNappi, seuraavaNappi;

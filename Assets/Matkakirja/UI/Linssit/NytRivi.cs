@@ -86,8 +86,20 @@ namespace Matkakirja.Natiivi
             while (haussa && lampotila == null && Time.unscaledTime < raja) yield return null;
             Luo();
             lappu.text = Teksti(nimi, DateTime.Now, lampotila);
+            Sijoita();
             kyltti.Nayta();
             Debug.Log("MATKAKIRJA nyt-rivi: " + lappu.text);
+        }
+
+        /// <summary>Vasen alakulma (USS --tk-vali-xl), mutta oppaan alarivin yläpuolelle, jos väkänen tai kierroksen nappirivi
+        /// näkyy (LS1:n kuva-arkki beb3fe9d, iPad vaaka: rivi peitti väkäsen alareunan; sama koskee iPhonen pystyä).</summary>
+        static void Sijoita()
+        {
+            float ala = Tyylikirja.Vali.Xl;
+            var isa = lappu.parent;
+            if (OpasValikko.AlarivinYla is float y && isa != null && isa.panel != null)
+                ala = Mathf.Max(ala, isa.worldBound.yMax - y + Tyylikirja.Vali.S);
+            lappu.style.bottom = ala;
         }
 
         /// <summary>Piiloon heti (intro keskeytettiin).</summary>
