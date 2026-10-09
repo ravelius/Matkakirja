@@ -275,7 +275,7 @@ Mikä oli suppilopikarikulttuuri?
 Miten hunebedit rakennettiin?
 
 ### 447
-Orvelte on museokylä Drenthen maakunnassa Alankomaissa. Kylän nimi mainitaan ensimmäisen kerran vuonna 1362, ja se on keskiajalla kehittynyt [[esdorp]]-tyyppinen kylä. Bruntingerhof-tila on rakennettu vuosien 1560 ja 1650 välillä, ja se siirrettiin Orvelteen 1960-luvulla. Vuonna 1967 kylä nimettiin suojelukohteeksi, ja sen asettelua yritettiin palauttaa vuoden 1830 mukaiseksi. Historiallisia tiloja ja latoja on siirretty sinne muista kylistä, joita oltiin purkamassa. Kylässä ei saa ajaa autoilla, ja julkisena liikenteenä on [[hevosraitiovaunu]]. Tilan nimi on [[Bruntingerhof]].
+Orvelte on museokylä Drenthen maakunnassa Alankomaissa. Kylän nimi mainitaan ensimmäisen kerran vuonna 1362, ja se on keskiajalla kehittynyt [[esdorp]]-tyyppinen kylä. Bruntingerhof-tila on rakennettu vuosien 1560 ja 1650 välillä, ja se siirrettiin Orvelteen 1960-luvulla. 1960-luvulla kylä nimettiin suojelukohteeksi, ja sen asettelua yritettiin palauttaa vuoden 1830 mukaiseksi. Historiallisia tiloja ja latoja on siirretty sinne muista kylistä, joita oltiin purkamassa. Kylässä ei saa ajaa autoilla, ja julkisena liikenteenä on [[hevosraitiovaunu]]. Tilan nimi on [[Bruntingerhof]].
 JATKOT:
 Mikä Bruntingerhof on?
 Mitä esdorp-kylä tarkoittaa?
@@ -311,13 +311,13 @@ Mikä TT Assen on?
 Mitä esdorp tarkoittaa?
 
 ### 453
-Bruntingerhof siirrettiin Orvelteen 1960-luvulla osana toimintaa, jossa historiallisia tiloja ja latoja pelastettiin muista kylistä, joita oltiin purkamassa. Tila on rakennettu vuosien 1560 ja 1650 välillä, ja se on [[Drenthen]] vanhin säilynyt maatila. Orvelten nimi mainitaan ensimmäisen kerran vuonna 1362, ja kylä on keskiajalla kehittynyt [[esdorp]]-tyyppinen kylä. Vuonna 1967 kylä nimettiin suojelukohteeksi, ja sen asettelua yritettiin palauttaa vuoden 1830 mukaiseksi. Kylässä ei saa ajaa autoilla, ja julkisena liikenteenä on hevosraitiovaunu.
+Bruntingerhof siirrettiin Orvelteen 1960-luvulla osana toimintaa, jossa historiallisia tiloja ja latoja pelastettiin muista kylistä, joita oltiin purkamassa. Tila on rakennettu vuosien 1560 ja 1650 välillä, ja se on [[Drenthen]] vanhin säilynyt maatila. Orvelten nimi mainitaan ensimmäisen kerran vuonna 1362, ja kylä on keskiajalla kehittynyt [[esdorp]]-tyyppinen kylä. 1960-luvulla kylä nimettiin suojelukohteeksi, ja sen asettelua yritettiin palauttaa vuoden 1830 mukaiseksi. Kylässä ei saa ajaa autoilla, ja julkisena liikenteenä on hevosraitiovaunu.
 JATKOT:
 Miksi vanhoja rakennuksia siirretään museokyliin?
 Mikä on hevosraitiovaunu?
 
 ### 454
-Orvelte on kylä Drenthen maakunnassa Alankomaissa, ja se toimii museokylänä. Kylän nimi mainitaan ensimmäisen kerran vuonna 1362. Keskiajalla se kehittyi esdorp-tyyppiseksi kyläksi, jossa talot ryhmittyivät yhteisen peltoalueen ympärille. Vuonna 1967 kylä nimettiin suojelukohteeksi, ja sen asettelua yritettiin palauttaa vuoden 1830 mukaiseksi. Kylään on siirretty historiallisia tiloja ja latoja muista kylistä, joita oltiin purkamassa, ja yksi näistä on [[Bruntingerhof]]. Autoilla ei kylässä saa ajaa, vaan julkisena liikenteenä on [[hevosraitiovaunu]].
+Orvelte on kylä Drenthen maakunnassa Alankomaissa, ja se toimii museokylänä. Kylän nimi mainitaan ensimmäisen kerran vuonna 1362. Keskiajalla se kehittyi esdorp-tyyppiseksi kyläksi, jossa talot ryhmittyivät yhteisen peltoalueen ympärille. 1960-luvulla kylä nimettiin suojelukohteeksi, ja sen asettelua yritettiin palauttaa vuoden 1830 mukaiseksi. Kylään on siirretty historiallisia tiloja ja latoja muista kylistä, joita oltiin purkamassa, ja yksi näistä on [[Bruntingerhof]]. Autoilla ei kylässä saa ajaa, vaan julkisena liikenteenä on [[hevosraitiovaunu]].
 JATKOT:
 Milloin Orvelte nimettiin suojelukohteeksi?
 Mikä on esdorp-kylä?
