@@ -303,6 +303,14 @@ namespace Matkakirja.Natiivi
                 $"kamera {(viimeKamera != null ? viimeKamera.name : "-")} jälkik. {(ca != null ? ca.renderPostProcessing.ToString() : "?")} syvyys {(ca != null ? ca.requiresDepthOption.ToString() : "?")} tyyppi {(ca != null ? ca.renderType.ToString() : "?")} pino {(ca != null ? ca.cameraStack?.Count ?? 0 : 0)}";
         }
 
+        static void VainPeruskamera(ScriptableRenderContext _, Camera k)
+        {
+            if (feature == null) { RenderPipelineManager.beginCameraRendering -= VainPeruskamera; return; }
+            var d = k != null ? k.GetComponent<UniversalAdditionalCameraData>() : null;
+            bool peruskamera = d != null && d.renderType == CameraRenderType.Base && k.targetTexture == null && k.cameraType == CameraType.Game;
+            if (feature.isActive != peruskamera) feature.SetActive(peruskamera);
+        }
+
         static bool Luo()
         {
             var varjostin = Shader.Find("Matkakirja/Linssit/KaupunkiYovalot");
@@ -320,6 +328,9 @@ namespace Matkakirja.Natiivi
             feature.fetchColorBuffer = true;
             feature.requirements = ScriptableRenderPassInput.Depth;
             feature.passMaterial = materiaali;
+            // Vain kaupungin peruskameralle (ei korin, kuvun eikä koosteen päällyskameroille, joiden syvyys on tyhjä): aktiivisuus
+            // vaihdetaan kameran alussa (9.10. simudiagnoosi: päällyskameran passi korvasi peruskameran tuloksen).
+            RenderPipelineManager.beginCameraRendering -= VainPeruskamera; RenderPipelineManager.beginCameraRendering += VainPeruskamera;
             feature.passIndex = 0;
             data.rendererFeatures.Add(feature);
             data.SetDirty();
