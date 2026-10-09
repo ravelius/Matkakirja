@@ -298,7 +298,8 @@ namespace Matkakirja.Natiivi
                 // yleisnäkymässä ja kertojan esittelyssä vain linnan yleisäänet (massa: tuuli, laineet); huoneen äänet vain, kun kamera
                 // on siinä huoneessa. Häivytys pehmeästi (Aanimaisema-liuku + kahvan 1,2 s:n liuku alla).
                 bool kertojaPuhuu = !pelaajaOhjaimissa && nakyma.KertojaJakso >= 0;
-                bool huoneenAanet = tila.Id == Aanimaisema.MassaTilaId || (kohde == tila.Id && !kertojaPuhuu);
+                // Pelaaja huoneessa (PT 10.10.): vain huoneen oma äänimaisema, ei massan yleisääniä (kappelissa soi keskushallin ambienssi).
+                bool huoneenAanet = tila.Id == Aanimaisema.MassaTilaId ? !(pelaajaOhjaimissa && kohde != null) : kohde == tila.Id && !kertojaPuhuu;
                 if (!huoneenAanet) tavoite = 0;
                 foreach (var ap in tila.Aanet)
                 {
