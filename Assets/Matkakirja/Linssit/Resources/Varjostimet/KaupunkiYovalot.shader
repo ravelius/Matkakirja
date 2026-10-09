@@ -188,6 +188,11 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                 float sx = dot(normalize(pr - p + 1e-6), normalize(p - pl + 1e-6)), sy = dot(normalize(pu - p + 1e-6), normalize(p - pd + 1e-6));
                 float tasainen = saturate((min(sx, sy) - 0.97) / 0.025);   // v5: tiukempi (puiden kipinät)
                 tasainen = lerp(tasainen, 1.0, saturate((jalanjalki - 2.0) / 4.0));   // kaukana (pikseli > 2–6 m) mattoa ei karsita
+                // v12c (PT 10.10. 01.4x: maassa ruskea korkeuskäyrämäinen juovakuvio, myös vanhassa tilassa): laattojen porrastus kääntää
+                // pikselin normaalin pystyyn porrasreunalla, jolloin maahan piirtyi ikkunakuvio ja katuvalot katkesivat vyöhykkeittäin.
+                // Toinen normaali 4 pikselin kannasta: ikkunat vain, kun molemmat ovat pystyssä; vaakapinta, kun jompikumpi on vaaka.
+                float3 n4 = cross(Paikka(uv + float2(0, 4.0 * px.y)) - Paikka(uv - float2(0, 4.0 * px.y)), Paikka(uv + float2(4.0 * px.x, 0)) - Paikka(uv - float2(4.0 * px.x, 0)));
+                n4 = dot(n4, n4) > 1e-12 ? n4 * rsqrt(dot(n4, n4)) : n; if (n4.y < 0.0) n4 = -n4;
 
                 float3 lisa = _ValoVari.rgb * bm * bm * _ValoParam.y;  // valosaaste
                 // KAUKAISET VALOT (v7, Päätoimittaja 9.10.: filmikuvissa horisonttiin katsottaessa kaupunki oli musta, B163:n alaspäin
@@ -198,7 +203,7 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                 lisa += _ValoVari.rgb * bm * kauko * _ValoParam.z * 0.35;
 
                 // Katuvalot OSM-katujen mukaan (v4): maski kaduista; vaakapinnoilla valonauha (katu valaistu) ja lamput nauhan keskellä.
-                float vaaka = saturate((n.y - 0.82) / 0.1) * tasainen;
+                float vaaka = max(saturate((n.y - 0.82) / 0.1) * tasainen, saturate((n4.y - 0.82) / 0.1) * 0.6);   // 0,6: lehvästö ei täysin
                 // v12: OSM-lamput vesimaskin alueella (oikeat paikat); muualla solukon lamput katumaskin mukaan kuten ennen.
                 float2 vuvL = _LamppuParam.x > 0.5 ? VesiUv(p) : float2(-1.0, -1.0);
                 bool osmL = all(vuvL > 0.002) && all(vuvL < 0.998);
@@ -268,8 +273,11 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                     }
                     // v12b: säde × 1,3 (OSM-lamppuja ~28 m välein, solukossa 18 m; simu 01.09: himmeämpi kuin ennen)
                     if (nakyvyysL > 0.0) lisa += OsmLamput(vuvL, sadeL * 1.3) * nakyvyysL * katu * _ValoParam.z * vaaka;
-                    float alue = SAMPLE_TEXTURE2D_GRAD(_Vedet, sampler_Vedet, vuvL, dx.xz / _VesiAlue.z, dy.xz / _VesiAlue.z).a;
-                    lisa += float3(0.9, 0.93, 1.0) * alue * 0.1 * _LamppuParam.y * vaaka;
+                    // v12c valolammikot (PT: yhtenäinen valoketju rannoilla ja kaduilla): G suodatettuna = lampun valo kadulla (8–16 m),
+                    // kaukana mipeistä lamppujen tiheys → katujen valoketjut jatkuvina. A = valaistut alueet.
+                    float2 ga = SAMPLE_TEXTURE2D_GRAD(_Vedet, sampler_Vedet, vuvL, dx.xz / _VesiAlue.z, dy.xz / _VesiAlue.z).ga;
+                    lisa += _ValoVari.rgb * saturate(ga.x * 1.5) * 0.22 * katu * _ValoParam.z * vaaka;
+                    lisa += float3(0.9, 0.93, 1.0) * ga.y * 0.1 * _LamppuParam.y * vaaka;
                 }
 
                 // Kohteen paino (valonheitto alla); kohteessa ei ikkunoita (v5: Eiffelin ristikkoon syttyi ikkunoita).
@@ -280,7 +288,7 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                     wKohde = exp(-dot(dk, dk) / (_KohdeParam.x * _KohdeParam.x)) * saturate((p.y - _KohdeP.y + 4.0) / 4.0);
                 }
                 // Ikkunat pystypinnoille: julkisivun vaakasuunta × korkeus, 3,2 × 3,0 m.
-                float pysty = saturate((0.35 - abs(n.y)) / 0.2) * (1.0 - saturate(wKohde * 3.0));
+                float pysty = saturate((0.35 - abs(n.y)) / 0.2) * saturate((0.35 - abs(n4.y)) / 0.2) * (1.0 - saturate(wKohde * 3.0));
                 // ILTAIKKUNAT (v11, junan 171 erä): ikkunat omana summanaan iltaikkunoiden osuudella (_IkkunaParam.z), joka alkaa ennen
                 // katuvaloja; palavien osuus kasvaa illan mittaan (valot syttyvät vähitellen), neon vasta yöllä.
                 float3 ikk = 0.0; float osI = _IkkunaParam.z;
