@@ -18,16 +18,18 @@ jobs:
           FREESOUND_API_KEY: ${{ secrets.FREESOUND_API }}
         run: >
           node tools/aanet/freesound-haku.mjs /tmp/fs
-          "r071-kori|wicker basket|1|120|by"
-          "r071-kori|wicker creak|1|120|by"
-          "r071-kori|basket creak|1|120|by"
-          "r071-kori|hot air balloon|3|300|by"
-          "r071-kori|rope creak|1|120|by"
-          "r071-kori|rattan|1|120|by"
-          "r003-rako|wind howling|10|300|by"
-          "r003-rako|wind whistling|10|300|by"
-          "r003-rako|wind door gap|5|300|by"
-          "r003-rako|wind keyhole|5|300|by"
+          "r067-piikivi|flint steel|0.3|30|by"
+          "r067-piikivi|flint striker|0.3|30|by"
+          "r067-piikivi|fire steel|0.3|30|by"
+          "r067-soihtu|torch ignite|0.5|30|by"
+          "r067-soihtu|torch fire|2|60|by"
+          "r125-syke|heartbeat fast|2|60|by"
+          "r125-syke|heartbeat|2|60|by"
+          "r125-syke|heart beat|2|60|by"
+          "r074-kaivo|well bucket|1|60|by"
+          "r074-kaivo|winch rope|1|60|by"
+          "r074-kaivo|windlass|1|60|by"
+          "r074-kaivo|bucket water well|1|60|by"
       - if: always()
         uses: actions/upload-artifact@v4
         with:
