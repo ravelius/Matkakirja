@@ -8,7 +8,12 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-2. **`docs/raportit/viesti-linnanrakentaja-luovutus-20261009-yo.md`** – lue myös loppuosan LISÄYKSET 20.5x–22.3x, joissa on uusin tila:
+1b. **NYT (nollaus 9.10. 22.5x):** lue luovutuksen loppuosa "NOLLAUS 9.10. klo 22.5x". Järjestys:
+   1. ranta-1499 v2b on PT:llä. v25-viennissä märkyys ≤ 0,15.
+   2. v25-kuoren tekoälyseinien 1–5 projisointi (`atlas-tekoaly-v1/projisoi_ol.zsh`, aja uudelleen jos katkesi) → hämärä → ASTC → v25-paketti +
+      ranta-1499 + `"asu": "1499"`.
+   3. ND v3 -projisointi, kun Karttaseppä ilmoittaa (`tekoaly_koko.zsh nd v3`).
+2. **`docs/raportit/viesti-linnanrakentaja-luovutus-20261009-yo.md`** – lue myös loppuosan LISÄYKSET 20.5x–22.5x, joissa on uusin tila:
    - ND v10 on viety (muotokorjaus tehty, 244 k / 89 k / 5 k), ja uudet ohjauskuvat ovat valmiit.
    - Karttaseppä generoi v3:a. Kun se on valmis, aja `tekoaly_koko.zsh nd v3`.
    - Kappalaisen rukouskirja on v46l (peili 83b6185bc898d1e7, haara v45d).

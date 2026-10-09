@@ -221,3 +221,34 @@ Seuraavaksi:
   - `kavely.py` lisää kivet kallio-pintaan ilman törmäystä. Varmuuskopio `kavely_ennen_kivia.py`.
   - Vertailu `linna-laatu/ranta1499-v2-kallio-vertailu.jpg`.
   - Vienti v25:n kanssa: ranta1499.py v25-kuorta vasten → kavely.py → valoatlas → `"asu": "1499"` → peili.
+
+## NOLLAUS 9.10. klo 22.5x (PT, konteksti 71 %): TILA JA JATKO
+
+**NYT tässä järjestyksessä:**
+1. **ranta-1499 v2b on valmis ja PT:llä** (vertailu `linna-laatu/ranta1499-v2b-vertailu.jpg`):
+   - Mattapinta. Rantaviiva leikataan tarkasti korkeuskäyrää −7,3 pitkin (`kavely.py` ranta_1499: `leikkaa()`).
+   - Etuvarustuksen alla on kallio (katto −6,1), eikä −5,8-ankkuria enää ole.
+   - Rantakivet: 13 kpl, kansiossa `olavinlinna-kavely-v1/lahde/`, ks. `ranta1499.py`.
+   - Koe v24-kuorella: `ranta1499-v2b-koe-v24kuori.json`. Esikatselu: `lahde/ranta_nayta2.py -- <kuori> <json> <etuliite>`, Cycles.
+   - **Märkyys (Siirtoseppä 22.5x):** valkoiset läiskät pelissä tulevat DioraamaMarkyys-varjostimesta (märkyys 0,75). Sovittiin, että
+     v25-viennissä ranta-1499-osaan (tai kallio-pintamerkkiin) tulee **märkyys ≤ 0,15** ja kallion detaljikarheus ≥ 0,8
+     (olavinlinna-detaljit-v1). Pelin puolelle ei tule muutosta.
+   - Vienti v25:n kanssa: ranta1499.py v25-kuorta vasten → kavely.py → valoatlas (leivo_kavely --pohja 0,3 + astc-mip.swift) → `"asu": "1499"`
+     ulkokuoreen → vie-blender.sh → peili Siirtosepälle.
+2. **v25-kuoren tekoälyseinät 1–5 (PT: kyllä, ND v3:n odotusaikana):**
+   - Tulokset `tekoaly_takaisin.py`:llä täyteen kehykseen (tehty): s1 ja s2 kansioon `olavinlinna-codex-ohje-v25/seina<n>/tekoaly/`, s3–s5
+     kansioon `olavinlinna-codex-ohje/seina<n>/tekoaly/` (`olavinlinna_s<n>_tekoaly_v1.png`; kattavuus 91–99 %).
+   - **Projisointiketju käynnistettiin 22.46** (`linna-laatu/ulkokuori-v25-koe/atlas-tekoaly-v1/projisoi_ol.zsh`, tulos
+     `ulkokuori-8k-s5.jpg` = kaikki seinät). Jos ketju katkesi nollauksessa, aja skripti uudelleen (`zsh <polku>`, ~5 × 2–4 min).
+   - Sitten tarkistus renderillä → hämärä-atlas (kuori_putki.sh / kuori_hamara.py) → ASTC 8k/4k/2k → v25-paketti yhdessä ranta-1499:n kanssa.
+   - Katot s6 Karttaseppä ajaa ND v3:n jälkeen.
+3. **ND v3:** Karttaseppä generoi (etelä, katot ja pohjoinen valmiina 22.4x; länsi, apsis ja spiira tulossa). Kun hän ilmoittaa:
+   `zsh _valmiit/kaupunkipinnat-v1/lahde/tekoaly_koko.zsh nd v3 <ulos>` → tarkistus (`notre-dame-v1/lahde/nd_render_tarkistus.py`,
+   G=… ULOS=…) → vienti → LS2:n pelikuva valokuvan rinnalle → PT. Ohjauskuvat ovat v10:stä (`codex-ohje`, vanhat `codex-ohje-v9`). glb v10
+   (244 k / 89 k / 5 k) on viety.
+
+**Muut tilat:**
+- Rukouskirja: v46l on kiinnitetty (Siirtoseppä 7bfcb9505), haara `linnanrakentaja-linna-v45d` on junassa. Poista v45d-worktree
+  junan mergen jälkeen (`tools/uusi-worktree.sh --poista linnanrakentaja-linna-v45d`).
+- ND:n lähde v10: `notre-dame-v1/lahde/notre_dame.py`. `--nopea` = pikaesikatselu (`nd_nopea.py`), täysi ajo noin 1 min.
+- Olavinlinnan kuoreen ei tehty muutoksia (laatta oli ranta-1499). `vesilaatta_laske.py`-koe jäi viemättä.
