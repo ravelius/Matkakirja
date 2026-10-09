@@ -124,7 +124,7 @@ namespace Matkakirja.Natiivi
         public void AsetaLahikamera(Vector3? kohde)
         {
             float k = LahiKerroin;
-            bool paalle = kohde.HasValue && k > 1.01f && auki && hallinta != null && kamera != null && !karkeaKaytossa && !kuormaValinta;
+            bool paalle = kohde.HasValue && k > 1.01f && auki && hallinta != null && kamera != null && !karkeaKaytossa && !kuormaValinta && !EsilatausEstetty;
             if (!paalle)
             {
                 if (lahiKaytossa && hallinta != null && lahi != null) hallinta.additionalCameras.Remove(lahi);
@@ -274,13 +274,16 @@ namespace Matkakirja.Natiivi
         public bool Tauko;
         /// <summary>Muistihädän vapautusraja: lataus jatkuu, kun vapaata on taas HataGt + tämä (Gt).</summary>
         public const double HataPalautusGt = 0.3;
-        /// <summary>PIENI MUISTI (juna 173, Natiiviseppä 10.10. iPad-mittaus R6–R11): kaupunki toimii 8 Gt:n iPadilla 0,7–1,0 Gt vapaalla, joten
+        /// <summary>PIENI MUISTI (juna 173, Natiiviseppä 10.10. iPad-mittaus R6–R15): kaupunki toimii 8 Gt:n iPadilla 0,7–1,0 Gt vapaalla, joten
         /// raja 1,0 / palautus 1,3 pysäytti laattojen latauksen pysyvästi ensimmäisen kohteen jälkeen (Orsay ja Concorde jäivät vedeksi).
-        /// ND-puiden korjauksen jälkeen suurin 1 s:n nousu on 0,14–0,54 Gt, joten pienellä muistilla: seis alle HataPieniGt, jatkuu yli
-        /// HataPieniGt + HataPieniPalautusGt, tarkistus 0,5 s välein. Asetus "hataraja Gt" (testi).</summary>
-        public static double HataPieniGt = 0.6, HataPieniPalautusGt = 0.2;
-        static double HataRaja => KaupunkiKuva.PieniMuisti ? HataPieniGt : HataGt;
-        static double HataPalautus => KaupunkiKuva.PieniMuisti ? HataPieniPalautusGt : HataPalautusGt;
+        /// Hätä kahdessa portaassa (PieniMuistihata, PT 10.10. 02.2x f): alle HataPieni1Gt esilatauskamerat pois ja päivitys jatkuu
+        /// (välimuisti vapauttaa niiden laatat), alle HataPieniGt lataus seis; palautus porras kerrallaan yli rajan + HataPieniPalautusGt,
+        /// tarkistus 0,5 s välein. Asetukset "hataraja1 Gt" ja "hataraja Gt" (testi; hataraja1 0 = vain lataus seis kuten ennen).</summary>
+        public static double HataPieni1Gt = Matkakirja.Linssit.Kierros.PieniMuistihata.Taso1Oletus, HataPieniGt = Matkakirja.Linssit.Kierros.PieniMuistihata.Taso2Oletus,
+            HataPieniPalautusGt = Matkakirja.Linssit.Kierros.PieniMuistihata.PalautusOletus;
+        readonly Matkakirja.Linssit.Kierros.PieniMuistihata pieniHata = new Matkakirja.Linssit.Kierros.PieniMuistihata();
+        /// <summary>Pienen muistin hädän taso 1 tai 2: esikamera, reittikamerat ja lähikamera pois laattavalinnasta.</summary>
+        public bool EsilatausEstetty => KaupunkiKuva.PieniMuisti && pieniHata.Taso >= 1;
         /// <summary>Karkean valinnan pikselikerroin muistihädässä (myös iPadilla, jossa KarkeaSkaala voi olla 1).</summary>
         public const float HataSkaala = 0.5f;   // 0,6 → 0,5 (juna 173: 0,6 ei vapauttanut tarpeeksi ennen jetsamia)
         float KarkeaNyt => muistiPysaytys ? Mathf.Min(KarkeaSkaala, HataSkaala) : KarkeaSkaala;
@@ -298,34 +301,57 @@ namespace Matkakirja.Natiivi
             if (v > 0 && v < minVapaa) minVapaa = v;
             // Laitemittaus (Päätoimittaja: huippu ja vapaa muisti ennen/jälkeen): vapaa nyt ja pienin 15 s välein.
             if (v > 0 && Time.realtimeSinceStartup - muistiKirjattu > 15f)
-            { muistiKirjattu = Time.realtimeSinceStartup; kirjaa($"kaupunki: vapaa muisti {v / 1e9:F2} Gt (pienin {minVapaa / 1e9:F2} Gt), kerroin {SseKerroin:F2}, laatat {Latausaste:F0} %"); }
+            { muistiKirjattu = Time.realtimeSinceStartup; kirjaa($"kaupunki: vapaa muisti {v / 1e9:F2} Gt (pienin {minVapaa / 1e9:F2} Gt), kerroin {SseKerroin:F2}, laatat {Latausaste:F0} %{(KaupunkiKuva.PieniMuisti ? $", hätä {pieniHata.Taso}" : "")}"); }
             if (v <= 0) return;
-            if (!muistiPysaytys && v / 1e9 < HataRaja)
+            // Pienellä muistilla ei karkeaa kameraa (LS1 iPad 23.1x: karkea valinta latasi uudet laatat vanhojen päälle → jetsam alle
+            // sekunnissa), vaan hätä kahdessa portaassa (PieniHata).
+            if (KaupunkiKuva.PieniMuisti) { PieniHata(v); return; }
+            if (!muistiPysaytys && v / 1e9 < HataGt)
             {
                 muistiPysaytys = hataKaytetty = true;
-                // Pienellä muistilla ei karkeaa kameraa (LS1 iPad 23.1x: karkea valinta latasi uudet laatat vanhojen päälle → jetsam
-                // alle sekunnissa), vaan lataus seis heti (hätä 2 -tila).
-                if (KaupunkiKuva.PieniMuisti) { hataSeis = true; if (lahiKaytossa) AsetaLahikamera(null); }
-                else { karkeaKaytossa = false; Karkeaksi(); }   // karkea valinta (HataSkaala) ja lähikamera pois; Tarkenna ei palauta hädän aikana
-                kirjaa(KaupunkiKuva.PieniMuisti ? $"kaupunki: MUISTIHÄTÄ vapaa {v / 1e9:F2} Gt → laattojen lataus seis (pieni muisti)" : $"kaupunki: MUISTIHÄTÄ vapaa {v / 1e9:F2} Gt → laattavalinta karkea (pikselit ×{KarkeaNyt:F2}; ei SSE-vaihtoa)");
+                karkeaKaytossa = false; Karkeaksi();   // karkea valinta (HataSkaala) ja lähikamera pois; Tarkenna ei palauta hädän aikana
+                kirjaa($"kaupunki: MUISTIHÄTÄ vapaa {v / 1e9:F2} Gt → laattavalinta karkea (pikselit ×{KarkeaNyt:F2}; ei SSE-vaihtoa)");
             }
-            else if (muistiPysaytys && v / 1e9 > HataRaja + HataPalautus)
+            else if (muistiPysaytys && v / 1e9 > HataGt + HataPalautusGt)
             { muistiPysaytys = false; hataSeis = false; kirjaa($"kaupunki: muisti vapaa {v / 1e9:F2} Gt → hätä ohi, tarkentuu normaalisti"); }
             if (muistiPysaytys && !hataSeis && v / 1e9 < HataSeisGt)
             { hataSeis = true; kirjaa($"kaupunki: MUISTIHÄTÄ 2 vapaa {v / 1e9:F2} Gt → laattojen lataus seis"); }
         }
 
+        /// <summary>Pienen muistin hätä (PieniMuistihata): taso 1 = esilatauskamerat pois ja päivitys jatkuu (välimuisti vapauttaa niiden
+        /// laatat), taso 2 = lisäksi lataus seis (hataSeis → PaivitaPysaytys).</summary>
+        void PieniHata(long v)
+        {
+            int ennen = pieniHata.Taso;
+            if (!pieniHata.Paivita(v / 1e9, HataPieni1Gt, HataPieniGt, HataPieniPalautusGt)) return;
+            int nyt = pieniHata.Taso;
+            hataSeis = nyt >= 2;
+            if (nyt >= 1) { hataKaytetty = true; EsilatausPois(); }
+            kirjaa(nyt > ennen
+                ? $"kaupunki: MUISTIHÄTÄ {nyt} vapaa {v / 1e9:F2} Gt → {(nyt >= 2 ? "laattojen lataus seis" : "esilatauskamerat pois, päivitys jatkuu")} (pieni muisti)"
+                : $"kaupunki: muisti vapaa {v / 1e9:F2} Gt → {(nyt == 1 ? "lataus jatkuu, esilataus yhä pois" : "hätä ohi, esilataus jatkuu")} (pieni muisti)");
+        }
+
+        /// <summary>Esikamera, reittikamerat ja lähikamera pois laattavalinnasta (pienen muistin hätä; ne palaavat sovittimen seuraavassa
+        /// kutsussa, kun EsilatausEstetty on taas false).</summary>
+        void EsilatausPois()
+        {
+            EsikameraPois();
+            ReittikameratPois();
+            if (lahiKaytossa) AsetaLahikamera(null);
+        }
+
         /// <summary>Joka kehys: laattojen päivitys seis tauolla, kun laatat ovat valmiit ja kamera paikallaan (tauko pysäyttää lennon ja kierron),
-        /// ei muistihädässä (karkea valinta tarvitsee päivityksen vapauttaakseen hienot laatat).</summary>
+        /// ei muistihädässä (karkea valinta ja pienen muistin taso 1 tarvitsevat päivityksen vapauttaakseen laatat).</summary>
         void PaivitaPysaytys()
         {
             if (!auki || maasto == null) return;
-            bool halu = (Tauko && !muistiPysaytys && Latausaste >= ValmisProsentti) || hataSeis;
+            bool halu = (Tauko && !muistiPysaytys && !EsilatausEstetty && Latausaste >= ValmisProsentti) || hataSeis;
             if (halu == pysaytettyTassa) return;
             pysaytettyTassa = halu;
             maasto.suspendUpdate = halu;
             if (rakennukset != null) rakennukset.suspendUpdate = halu;
-            kirjaa($"kaupunki: laattojen päivitys {(halu ? "seis" : "jatkuu")} ({(hataSeis ? "muistihätä 2" : muistiPysaytys ? "muistihätä" : Tauko ? "tauko" : "normaali")})");
+            kirjaa($"kaupunki: laattojen päivitys {(halu ? "seis" : "jatkuu")} ({(hataSeis ? "muistihätä 2" : muistiPysaytys ? "muistihätä" : EsilatausEstetty ? "muistihätä 1" : Tauko ? "tauko" : "normaali")})");
         }
         public const long GoogleAsset = 2275207;
         public const uint Rinnakkain = 12;   // 8 → 12 (omistaja TF 144: nopeampi lento, saapuessa laatat 68 %)
@@ -522,6 +548,7 @@ namespace Matkakirja.Natiivi
 #endif
             karkeaKaytossa = false; kuormaValinta = false; tarkkaAlku = -1f;
             hataKaytetty = muistiPysaytys = pysaytettyTassa = Tauko = hataSeis = false; muistiTarkistettu = 0f; muistiKirjattu = 0f; minVapaa = long.MaxValue;
+            pieniHata.Nollaa();
             kirjaa($"kaupunki: muisti vapaa {(vapaa > 0 ? (vapaa / 1e9).ToString("F2") + " Gt" : "ei tiedossa")}, näyttö {Screen.width}×{Screen.height} (kerroin {NayttoKerroin:F2}) → SSE-kerroin {kerroin:F2}{(pakotettu > 0 ? " (pakotettu)" : "")}, välimuisti {GoogleValimuistiNyt >> 20} Mt{(Mac ? $", Mac-profiili {MacProfiili}" : "")}");
 
             // Pallon tileset: ei SetActivea (pallo on samassa oliossa kuin georeferenssi → SetOrigin heitti "Initialize"-poikkeuksen, simu 18.0x).
@@ -855,6 +882,7 @@ namespace Matkakirja.Natiivi
         public void AsetaEsikamera(Kuvakulma k, float skaala = 1f)
         {
             if (esikamera == null || georef == null) return;
+            if (EsilatausEstetty) { EsikameraPois(); return; }   // pienen muistin hätä (taso 1–2)
             if (hallinta != null && !hallinta.additionalCameras.Contains(esikamera)) hallinta.additionalCameras.Add(esikamera);
             Suuntaa(esikamera, k);
             if (skaala < 0.999f) { var r = esikamera.pixelRect; esikamera.pixelRect = new Rect(r.x, r.y, Mathf.Max(8f, r.width * skaala), Mathf.Max(8f, r.height * skaala)); }
@@ -866,7 +894,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public void AsetaReittikamerat(Kuvakulma[] nakymat, int maara)
         {
-            if (georef == null || juuri == null || nakymat == null) maara = 0;
+            if (georef == null || juuri == null || nakymat == null || EsilatausEstetty) maara = 0;   // pienen muistin hätä: kaikki pois
             while (reittikamerat.Count < maara)
             {
                 var c = new GameObject("Kaupunki reitin esilataus").AddComponent<Camera>();

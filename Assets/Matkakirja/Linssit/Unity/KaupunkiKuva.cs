@@ -302,7 +302,8 @@ namespace Matkakirja.Natiivi
                         case "omatmallit": CesiumOmatMallit.Kaytossa = v != 0; break;
                         case "leikkaus": CesiumOmatMallit.LeikkausSallittu = v != 0; break;   // diagnostiikka (juna 173 jetsam): ei leikkausmaskia
                         case "leikkaustarkka": CesiumOmatMallit.LeikkausTarkka = v != 0; break;   // pienen muistin kevyt maski pois (vertailu)
-                        case "hataraja": CesiumKaupunki.HataPieniGt = v; break;   // pienen muistin muistihädän raja (Gt, testi)   // diagnostiikka (juna 173 jetsam): kaupunki ilman omia malleja
+                        case "hataraja": CesiumKaupunki.HataPieniGt = v; break;   // pienen muistin hätä 2 (lataus seis, Gt, testi)
+                        case "hataraja1": CesiumKaupunki.HataPieni1Gt = v; break;   // pienen muistin hätä 1 (esilataus pois, Gt; 0 = ei tasoa 1, testi)
                         case "omavalo": CesiumOmatMallit.OmaValo = v != 0; break;   // LS2 9.10.: omien mallien valo (seuraava avaus)
                         case "omavalotus": CesiumOmatMallit.Valotus = v; break;
                         case "omavarjot": OmatVarjot.Paalla = v != 0; break;   // LS2 9.10.: omien mallien aurinkovarjot

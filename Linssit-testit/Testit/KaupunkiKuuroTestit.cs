@@ -77,10 +77,21 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(i > 0 && j > i, "Muistivahti ja PaivitaPysaytys");
             string vahti = c.Substring(i, j - i);
             Oleta.Tosi(!vahti.Contains("maximumScreenSpaceError") && !vahti.Contains("maximumCachedBytes"), "hädässä ei SSE- eikä välimuistivaihtoa");
-            Oleta.Tosi(vahti.Contains("Karkeaksi()") && c.Contains("bool halu = (Tauko && !muistiPysaytys && Latausaste >= ValmisProsentti) || hataSeis;"), "karkea valinta hädässä, suspendUpdate tauolla ja hädän toisessa portaassa");
+            Oleta.Tosi(vahti.Contains("Karkeaksi()") && c.Contains("bool halu = (Tauko && !muistiPysaytys && !EsilatausEstetty && Latausaste >= ValmisProsentti) || hataSeis;"), "karkea valinta hädässä, suspendUpdate tauolla ja hädän toisessa portaassa");
             Oleta.Tosi(vahti.Contains("hataSeis = true") && c.Contains("HataSeisGt = 0.6"), "hätä 2: lataus seis alle 0,6 Gt (juna 173)");
             Oleta.Tosi(c.Contains("bool kevyt = KaupunkiKuva.PieniMuisti && KaupunkiKuva.PieniLataus;") && c.Contains("t.forbidHoles = !kevyt;") && c.Contains("t.preloadAncestors = !kevyt;"), "pieni muisti: kevyt laattalataus (juna 173)");
-            Oleta.Tosi(vahti.Contains("if (KaupunkiKuva.PieniMuisti) { hataSeis = true;"), "pieni muisti: hätä 1 pysäyttää latauksen ilman karkeaa kameraa");
+            // Juna 173 f (PT 10.10. 02.2x): pienellä muistilla ei karkeaa kameraa, vaan kaksi porrasta (esilataus pois → lataus seis).
+            Oleta.Tosi(vahti.Contains("if (KaupunkiKuva.PieniMuisti) { PieniHata(v); return; }") && vahti.Contains("hataSeis = nyt >= 2;") && vahti.Contains("EsilatausPois();"), "pieni muisti: hätä kahdessa portaassa ilman karkeaa kameraa");
+        }
+
+        [Testi] static void PienenMuistinHataPoistaaEsilatauksen()
+        {
+            // Juna 173 f: tasolla 1 esikamera, reittikamerat ja lähikamera pois laattavalinnasta, päivitys jatkuu (välimuisti vapautuu).
+            string c = System.IO.File.ReadAllText(System.IO.Path.Combine(AppContext.BaseDirectory, "..", "..", "Assets", "Matkakirja", "Linssit", "Unity", "CesiumKaupunki.cs"));
+            Oleta.Tosi(c.Contains("if (EsilatausEstetty) { EsikameraPois(); return; }"), "esikamera");
+            Oleta.Tosi(c.Contains("if (georef == null || juuri == null || nakymat == null || EsilatausEstetty) maara = 0;"), "reittikamerat");
+            Oleta.Tosi(c.Contains("&& !kuormaValinta && !EsilatausEstetty;"), "lähikamera");
+            Oleta.Tosi(c.Contains("public bool EsilatausEstetty => KaupunkiKuva.PieniMuisti && pieniHata.Taso >= 1;") && c.Contains("pieniHata.Nollaa();"), "vain pienellä muistilla, nollaus avauksessa");
         }
 
         [Testi] static void AluskerrosKorkealla()
