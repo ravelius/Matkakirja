@@ -38,6 +38,8 @@
 
 ## 4. Muut tämän päivän toimitukset
 
+- **YÖVALOT (PT 10.10. 00.2x, LS1:lle):** `proto-3d/_tyo/karttaseppa/yovalot-20261010/` (LUEMINUT.md). OSM-PBF → katuvalot, valaistut tiet ja sillat, kohteet, kentät ja rantavalot (heijastukseen), maa_m omasta korkeusmallista. Työkalut T7 `vesimaski/yovalot.mjs` ja `yovalot-rikasta.py`. Valmis 00.30. KL-, ND- ja Olavinlinna-pintoja ei tehdä (PT), ja KL:n sävyt odottavat omistajaa (LS2 v6j).
+
 - **Kaukomaa (PT päätös B, 9.10. ilta):** S2-kaukomaata (v1p, yo-v1p) ei tuoda Googlen laattojen näkymään ("samassa näkymässä ei muuta karttaa"). Ämpärin kaukomaa-tiedostot jätettiin paikalleen, eikä niitä kytketä. Aluskerroksen täyte hoidetaan utu-taulukoilla.
 - **ND ODOTTAA (PT 20.xx):** LR korjaa ND:n muodon, ja ohjauskuvat uusitaan. `tekoalypinnat/ODOTA_ND` saa aja-nakymat.py:n ohittamaan ND:n (aja-yo3 päättyi tyhjänä). Vanhat ND-työkopiot ovat kansiossa `tyo/_nd-vanhat-syotteet-20261009/`. Kun LR ilmoittaa: `rm ODOTA_ND` ja aja ND kaikki näkymät **tunnisteella v3** (nd_etela_koko_v2 on olemassa, joten v2 ohittaisi koko-vaiheen). nd_etela_v2 jää vertailuksi.
 - **Yöajon jono 20.0x:** KL v2 → ND-loput v2 (aja-yo3) → Olavinlinnan seinät 1–5 (aja-yo4, `aja-olavinlinna.py`) → Olavinlinnan katot s6 palat (aja-yo5). Tulokset ovat LR:lle.
