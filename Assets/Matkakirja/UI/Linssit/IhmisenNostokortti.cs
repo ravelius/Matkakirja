@@ -114,7 +114,7 @@ namespace Matkakirja.Natiivi
             if (!string.IsNullOrEmpty(p.Aito))
             {
                 // Aito kuva on suurennettava, ja sen lähderivi näkyy suurennoksessa (web KUVALAHDE_VAIN_SUURENNOKSESSA).
-                string aito = p.Aito, selite = p.AitoSelite ?? "Aito kuva";
+                string aito = p.Aito, selite = p.AitoSelite ?? Kieli.T("ui.ihmisenmatka.aito-kuva");
                 string lahde = p.AidonTiedot != null && p.AidonTiedot.TryGetValue("lahde", out var l) ? l as string : null;
                 Kuva(kuvat, aito, selite, "mk-ihmisnosto__kuvakehys--aito", kuvat.childCount > 0 ? Upotus : Hero,
                     () => suurennos.Avaa(new List<LehtiKuva> { new LehtiKuva { Lahde = aito, Selite = selite, LahdeRivi = lahde } }));
@@ -151,7 +151,7 @@ namespace Matkakirja.Natiivi
                         Teksti = p.Loyto,
                     };
                     var parit = kysymykset.Select(k => (k, valmiit != null && valmiit.Vastaukset.TryGetValue(k.Trim(), out var v) ? v.Vastaus : null)).ToList();
-                    Kirjasimet.Aseta(Rakenne.Nappi("Kysy", "mk-nosto__toiminto", () =>
+                    Kirjasimet.Aseta(Rakenne.Nappi(Kieli.T("ui.nosto.kysy"), "mk-nosto__toiminto", () =>
                     {
                         var c = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
                         if (c == null) return;
@@ -161,8 +161,8 @@ namespace Matkakirja.Natiivi
                 if (lue)
                 {
                     var paikka = p;
-                    var b = Rakenne.Nappi("Lue lisää", "mk-nosto__toiminto mk-nappi--kulta", () => lueLisaa(paikka), toimintorivi);
-                    b.tooltip = "Tiedeliite: koko juttu";
+                    var b = Rakenne.Nappi(Kieli.T("ui.ihmisenmatka.lue-lisaa"), "mk-nosto__toiminto mk-nappi--kulta", () => lueLisaa(paikka), toimintorivi);
+                    b.tooltip = Kieli.T("ui.ihmisenmatka.tiedeliite-koko-juttu");
                     Kirjasimet.Aseta(b, Kirjasin.KoneLihava);
                 }
             }

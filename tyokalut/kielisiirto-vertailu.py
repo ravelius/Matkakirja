@@ -89,6 +89,7 @@ tiedostot = [p for p in git('diff', '--name-only', PERUS, '--', 'Assets/Matkakir
 vanha_koodi = {p: git('show', f'{PERUS}:{p}') for p in tiedostot}
 uusi_koodi = {p: open(p, encoding='utf-8').read() for p in tiedostot}
 vanhat = set(l for t in vanha_koodi.values() for l in literaalit(t))
+vanhat |= set(l.replace("'", '') for l in vanhat if re.search(r"'[^']+'", l))   # DateTime-muotoilun 'klo' 'UTC'
 vanha_taulu = json.loads(git('show', f'{PERUS}:{TAULU}'))
 taulu = json.load(open(TAULU, encoding='utf-8'))
 virheet = []
@@ -111,7 +112,9 @@ for p in tiedostot:
         if l in osat or any(l in v for v in arvot) or l in nyt: continue
         if l.strip() and any(l.strip() == o.strip() for o in osat): continue
         if jonona(l, osat): continue
-        if PAIKKA.sub('\x00', l) in normit: continue   # nimetyt paikkamerkit ({paivat} → {0}, .Replace-kaava)
+        if PAIKKA.sub('\x00', l) in normit: continue
+        lain = re.findall(r"'([^']+)'", l)   # DateTime-muoto: lainatut sanat löytyvät avaimen arvosta
+        if lain and all(any(x in v for v in arvot) for x in lain): continue   # nimetyt paikkamerkit ({paivat} → {0}, .Replace-kaava)
         virheet.append(f'{p}: {l!r} poistui koodista eikä löydy ui.fi.json:sta')
 
 for v in virheet: print('KIELISIIRTO:', v)
