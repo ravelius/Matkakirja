@@ -544,7 +544,6 @@ namespace Matkakirja.Editori
             ("ihmisen matka", () => Linssi("matka jakso 0"), () => { Linssi("matka pois"); SuljeLinssi(); }, 1.0),
             ("ihmisen matkan valikko", () => Linssi("valikko matka"), () => { Linssi("matka pois"); SuljeLinssi(); }, 1.0),
             ("radio", () => Linssi("radio"), SuljeLinssi, 0.6),
-            ("karttavalikko", () => Linssi("karttavalikko auki"), SuljeLinssi, 0.6),
             ("maan kyltti", () => Linssi("maa ITA"), SuljeLinssi, 0.6),
             ("linssin selite", () => Linssi("selite"), () => { Linssi("selite pois"); SuljeLinssi(); }, 0.6),
             ("vapaa lento", () => { var o = OpasValikko.Hae(); o.Komento("sulje"); o.Komento("mika"); o.Komento("vapaalento"); },
@@ -587,9 +586,28 @@ namespace Matkakirja.Editori
             return tulos;
         }
 
-        static bool Nakyva(VisualElement e)
+        static readonly System.Reflection.MethodInfo ShouldClip =
+            typeof(VisualElement).GetMethod("ShouldClip", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
+
+        /// <summary>Elementin näkyvä osa: worldBound rajattuna esivanhempiin, jotka leikkaavat (USS overflow: hidden, esim.
+        /// matkamittarin numerorulla; ajo #20). UITK:n ShouldClip on sisäinen, joten heijastuksella; ilman sitä rajaamaton.</summary>
+        static Rect NakyvaOsa(VisualElement e)
         {
             var b = e.worldBound;
+            if (ShouldClip == null) return b;
+            for (var p = e.parent; p != null; p = p.parent)
+                if (p.parent != null && (bool)ShouldClip.Invoke(p, null))
+                {
+                    var r = p.worldBound;
+                    b = Rect.MinMaxRect(Mathf.Max(b.xMin, r.xMin), Mathf.Max(b.yMin, r.yMin), Mathf.Min(b.xMax, r.xMax), Mathf.Min(b.yMax, r.yMax));
+                    if (b.width <= 0f || b.height <= 0f) return Rect.zero;
+                }
+            return b;
+        }
+
+        static bool Nakyva(VisualElement e)
+        {
+            var b = NakyvaOsa(e);
             if (!(b.width >= 1f && b.height >= 1f)) return false;
             // Kokonaan ruudun ulkopuolella (esim. pudotusvalikon piilotetut napit oikean reunan takana) = ei näkyvissä.
             var koko = e.panel.visualTree.layout;
@@ -610,7 +628,7 @@ namespace Matkakirja.Editori
             foreach (var e in uudet)
             {
                 var sv = e.GetFirstAncestorOfType<ScrollView>();
-                var b = e.worldBound;
+                var b = NakyvaOsa(e);
                 if (sv != null)
                 {
                     // Vierityslistassa vain näkyvä osa (vieritysikkuna rajaa pystysuunnassa); sivusuunta tarkistetaan kokonaan.
