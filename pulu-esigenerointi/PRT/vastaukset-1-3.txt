@@ -105,14 +105,14 @@ Missä muualla azulejoja voi nähdä?
 
 ### 14.1
 KYSYMYS: Miltä Paço da Ribeira näytti loistoaikanaan?
-Tuota niin. Tästä ei ole kuvaa omassa päässäni, joten kerron sen minkä tiedän. Paço da Ribeira sijaitsi Tejo-joen rannalla Lissabonissa, ja se oli Portugalin kuninkaiden päähallintokeskus vuoteen 1755. Manuel I:n aikana valmistunut palatsi sijaitsi aukiolla, jota kutsuttiin Terreiro do Paçoksi eli palatsin pihaksi. Se oli osa laajaa rakennuskokonaisuutta, johon kuului hallinto- ja kauppatoimintaa sekä kuninkaallinen kirjasto, jonka kokoelmien kerrotaan olleen valtavat. Tarkkoja yksityiskohtia palatsin ulkonäöstä en ole varma kertomaan, sillä rakennus tuhoutui lähes kokonaan vuoden 1755 maanjäristyksessä, ja tietoa on säilynyt lähinnä vanhoista piirroksista ja kuvauksista. Paikalla on nykyään [[Praça do Comércio]]. Harmi, ettei kukaan voi enää mennä katsomaan.
+Tuota niin, tästä ei ole kuvaa omassa päässäni, joten kerron sen minkä tiedän. Paço da Ribeira sijaitsi Tejo-joen rannalla Lissabonissa ja toimi Portugalin kuninkaiden päähallintokeskuksena, ja sen valmistumisen aikoihin hallitsija oli [[Manuel I]]. Palatsin edustalla oli aukio, jota kutsuttiin nimellä Terreiro do Paço. Tarkkoja yksityiskohtia ulkoasusta en ole varma kertomaan, sillä rakennus tuhoutui vuoden 1755 [[Lissabonin maanjäristyksessä]], ja sen paikalla on nykyään [[Praça do Comércio]]. Harmi, ettei kukaan voi enää mennä katsomaan.
 JATKOT:
 Mitä palatsin kirjastolle tapahtui maanjäristyksessä?
 Miksi aukio on nimeltään Praça do Comércio?
 
 ### 14.2
 KYSYMYS: Miksi Paço da Ribeira katosi?
-Kääk. Tämä on raskas aihe, joten kerron sen rauhallisesti. Paço da Ribeira tuhoutui 1. marraskuuta 1755, kun Lissabonin seutua kohtasi voimakas maanjäristys, jota seurasivat hyökyaalto ja tulipalo. Tuhot olivat laajat, ja palatsi vaurioitui niin pahoin, ettei sitä jälleenrakennettu. Tapahtumasta on nyt kulunut yli kaksisataa vuotta; tuolloin Portugalia hallitsi vielä kuningas Joosef I, ja kaupunki rakennettiin uudelleen hänen hallintonsa aikana. Palatsin tilalle suunniteltiin avara, jokea vasten avautuva [[Praça do Comércio]] -aukio, joka on edelleen yksi Lissabonin keskeisistä paikoista. Maanjäristys oli suuri onnettomuus, jonka muisto on säilynyt koko kaupungin historiassa. Onpas siitä onneksi pitkä aika.
+Kääk. Tämä on raskas aihe, joten kerron sen rauhallisesti. Paço da Ribeira tuhoutui 1. marraskuuta 1755, kun [[Lissabonin maanjäristys]] ja sitä seurannut hyökyaalto ja tulipalo tuhosivat suuren osan kaupungista. Palatsia ei rakennettu uudelleen, vaan kaupungin jälleenrakennusta johti valtionhallinnossa vaikuttanut [[Pombalin markiisi]], ja palatsin paikalle suunniteltiin avara, jokea vasten avautuva [[Praça do Comércio]]. Tapahtumasta on kulunut yli kaksisataa vuotta, ja kaupunki on sittemmin rakennettu uudelleen. Onpas siitä onneksi pitkä aika.
 JATKOT:
 Miten Lissabonin kaupunki rakennettiin uudelleen?
 Kuka oli kuningas Joosef I?
@@ -126,46 +126,42 @@ Kuka oli Pombalin markiisi?
 
 ### 14.4
 KYSYMYS: Kuka oli kuningas Manuel I?
-No jopas, kuninkaita ja kyyhkyjä, tuttu aihe. Manuel I oli Portugalin kuningas, joka hallitsi 1495–1521. Hänen aikanaan Portugalin merentakainen valta ja kauppa kasvoivat voimakkaasti, ja hänen hallituskaudellaan tehtiin muun muassa Vasco da Gaman ensimmäinen matka Intiaan vuosina 1497–1499. Manuelin aikana Lissaboniin rakennettiin paljon, ja hänen mukaansa nimetty myöhäisgoottilainen ja renessanssia sivuava tyyli, [[manuelilainen tyyli]], tunnetaan runsaasta koristelustaan, jossa näkyy meri- ja löytöretkiaiheita. Hän rakennutti myös Paço da Ribeira -palatsin, joka valmistui vuonna 1502 ja toimi kuninkaiden hallinnon keskuksena. Hän on yksi Portugalin tunnetuimmista hallitsijoista, ja hänen aikaansa kutsutaan usein Portugalin löytöretkien kukoistuskaudeksi.
-
-Meikäläisten muistiinpanojen mukaan hänen aikanaan kirjeitä lähetettiin kyllä paljon, mutta kyyhkyt jäivät mainitsematta. En ota sitä henkilökohtaisesti.
+No jopas, kuninkaita ja kyyhkyjä, tuttu aihe. Manuel I oli Portugalin kuningas, joka hallitsi 1495–1521. Hänen aikanaan Portugalin merentakainen valta ja kauppa kasvoivat voimakkaasti, ja hänen hallituskaudellaan tehtiin muun muassa [[Vasco da Gaman]] ensimmäinen matka Intiaan vuosina 1497–1499. Hänen mukaansa nimetty myöhäisgoottilainen tyyli, [[manuelilainen tyyli]], tunnetaan runsaasta koristelustaan, jossa näkyy meri- ja löytöretkiaiheita. Hänen aikanaan valmistui myös [[Paço da Ribeira]], josta tuli kuninkaiden hallinnon keskus. Hänen aikaansa kutsutaan usein Portugalin löytöretkien kukoistuskaudeksi. Meikäläisten muistiinpanojen mukaan kirjeitä lähetettiin tuolloin kyllä paljon, mutta kyyhkyt jäivät mainitsematta, enkä ota sitä henkilökohtaisesti.
 JATKOT:
 Mitä manuelilaiselle tyylille on ominaista?
 Mihin Vasco da Gaman matka Intiaan perustui?
 
 ### 14.5
 KYSYMYS: Miten tsunami syntyy?
-Kääk. Tämä on vakava aihe, joten pysyn asiassa. Tsunami eli hyökyaalto syntyy, kun suuri määrä vettä siirtyy äkillisesti, tavallisimmin merenpohjan voimakkaan maanjäristyksen takia. Kun merenpohja nousee tai laskee, sen yläpuolella oleva vesi lähtee liikkeelle ja leviää aaltona joka suuntaan. Avomerellä aalto on matala ja pitkä, joten sitä ei välttämättä huomaa, mutta rannikon lähellä veden syvyyden pienentyessä aalto hidastuu ja nousee korkeammaksi. Tsunamin voivat aiheuttaa myös tulivuorenpurkaukset ja maanvyörymät. Lissabonin vuoden 1755 maanjäristyksen yhteydessä tsunami kohtasi kaupungin rannikon, ja lähteiden mukaan sen keskus oli Atlantilla. Nykyään tsunamien varoitusjärjestelmät auttavat varautumaan tällaisiin tapahtumiin. Onneksi siitä on jo pitkä aika.
+Kääk. Tämä on vakava aihe, joten pysyn asiassa. Tsunami eli hyökyaalto syntyy, kun suuri määrä vettä siirtyy äkillisesti, tavallisimmin merenpohjan voimakkaan [[maanjäristyksen]] takia. Kun merenpohja nousee tai laskee, sen yläpuolella oleva vesi lähtee liikkeelle ja leviää aaltona joka suuntaan. Avomerellä aalto on matala ja pitkä, mutta rannikon lähellä veden syvyyden pienentyessä se hidastuu ja nousee korkeammaksi. Tsunamin voivat aiheuttaa myös [[tulivuorenpurkaukset]] ja maanvyörymät. Hyökyaalto kuului myös [[Lissabonin maanjäristyksen]] tuhoihin vuonna 1755. Nykyään tsunamien varoitusjärjestelmät auttavat varautumaan tällaisiin tapahtumiin. Onneksi siitä on jo pitkä aika.
 JATKOT:
 Miten tsunamivaroitukset toimivat?
 Mikä aiheuttaa maanjäristyksiä?
 
 ### 15.1
 KYSYMYS: Miltä Hospital Real de Todos-os-Santos näytti loistoaikanaan?
-Nyt muistan: tämä on se iso sairaala, jonka yli kyyhky lensi mielellään. Hospital Real de Todos-os-Santos rakennettiin Lissaboniin vuosina 1492–1504, ja se oli aikansa Euroopan suurimpia sairaaloita. Tarkkoja yksityiskohtia sen ulkonäöstä en ole varma kertomaan, koska rakennus tuhoutui vuoden 1755 maanjäristyksessä ja tulipalossa eikä sitä enää rakennettu uudelleen. Tiedetään kuitenkin, että kyseessä oli laaja rakennuskokonaisuus, ja kuninkaallinen sairaala oli tarkoitettu hoitamaan sairaita ja tarjoamaan huolenpitoa. Se oli osa Lissabonin keskustaa, ja aikansa sairaaloiden tapaan sillä oli tärkeä sosiaalinen tehtävä. Nimi kuvaa tarkoitusta: sairaala kuului kaikille pyhille, ja sen toiminta oli kristillisen hyväntekeväisyyden ilmaus. Pitkä aika sitten, ja silti tuntuu jotenkin tutulta.
+Nyt muistan: tämä on se iso sairaala. Kuninkaallinen Hospital Real de Todos-os-Santos rakennettiin [[Lissaboniin]] vuosina 1492–1504, ja lähteiden mukaan se oli aikansa Euroopan suurimpia sairaaloita. Tarkkoja yksityiskohtia sen ulkonäöstä en ole varma kertomaan, koska rakennus tuhoutui vuoden 1755 [[Lissabonin maanjäristyksessä]] ja sitä seuranneessa tulipalossa eikä sitä enää rakennettu uudelleen. Sairaalan tehtävä oli hoitaa sairaita ja tarjota huolenpitoa, ja sen toiminta oli osa [[kristillisen hyväntekeväisyyden]] perinnettä. Nimi kuvaa tarkoitusta: sairaala kuului kaikille pyhille. Pitkä aika sitten, ja silti tuntuu jotenkin tutulta.
 JATKOT:
 Miten sairaalat ennen vanhaan hoitivat potilaita?
 Mikä Lissabonin keskusta on nykyään paikalla?
 
 ### 15.2
 KYSYMYS: Miksi Hospital Real de Todos-os-Santos katosi?
-Kääk. Tämä on surullinen tarina, joten kerron sen suoraan. Hospital Real de Todos-os-Santos tuhoutui 1. marraskuuta 1755 Lissabonin maanjäristyksessä ja sitä seuranneessa tulipalossa. Tuolloin Portugalissa oli vielä kuninkaan yksinvalta, eikä kaupungissa ollut nykyaikaisia pelastuslaitoksia. Rakennusta ei jälleenrakennettu, vaan alue otettiin uuteen käyttöön osana kaupungin laajaa uudelleenrakentamista. Sairaalan toiminta siirtyi muualle Lissaboniin, ja sen perinne jatkui myöhemmissä sairaaloissa. Tapahtumasta on kulunut yli kaksisataa vuotta, ja Lissabon on sen jälkeen rakennettu uudestaan nykyaikaiseksi pääkaupungiksi. Onpas siitä onneksi pitkä aika.
+Kääk. Tämä on surullinen tarina, joten kerron sen suoraan. Hospital Real de Todos-os-Santos tuhoutui 1. marraskuuta 1755 [[Lissabonin maanjäristyksessä]] ja sitä seuranneessa tulipalossa. Rakennusta ei jälleenrakennettu, vaan alue otettiin uuteen käyttöön osana kaupungin laajaa uudelleenrakentamista, jota johti [[Pombalin markiisi]]. Tapahtumasta on kulunut yli kaksisataa vuotta, ja Lissabon on sen jälkeen rakennettu uudestaan. Onpas siitä onneksi pitkä aika.
 JATKOT:
 Mitä sairaalan paikalla on nykyään Lissabonissa?
 Miten maanjäristyksen jälkeen kaupunkia suojattiin tulipaloilta?
 
 ### 15.3
 KYSYMYS: Miten keskiajan sairaalat toimivat?
-Katotaas. Sairaalat olivat aivan toisenlaisia kuin nykyään. Keskiajan sairaalat olivat yleensä kirkon, luostarien tai hyväntekeväisyysjärjestöjen ylläpitämiä, ja niiden tehtävä oli huolehtia sairaista, köyhistä, matkaajista ja vanhuksista. Hoito perustui pitkälti lepoon, ravintoon, rukoukseen ja yksinkertaisiin lääkekasveihin, koska nykyaikaista lääketiedettä ei vielä ollut. Henkilökuntana oli usein munkkeja, nunnia tai maallikkoveljiä, ja lääkärin rooli vaihteli paikasta toiseen. Sairaala oli siis enemmän huolenpidon ja hoivan paikka kuin parantamisen. Kuninkaalliset sairaalat, kuten [[Hospital Real de Todos-os-Santos]], olivat suuria laitoksia, jotka kuvastivat hallitsijan huolenpitoa alamaisistaan. Eri maissa tapa vaihteli, ja tarkat käytännöt riippuivat ajasta. Viisas Pöllö parantelee sillä välin siipirikkoaan, joten täältä kyyhkyltä tämä tieto.
+Katotaas. Sairaalat olivat aivan toisenlaisia kuin nykyään. Keskiajan sairaalat olivat yleensä kirkon, [[luostarien]] tai hyväntekeväisyysjärjestöjen ylläpitämiä, ja niiden tehtävä oli huolehtia sairaista, köyhistä, matkaajista ja vanhuksista. Hoito perustui pitkälti lepoon, ravintoon, rukoukseen ja yksinkertaisiin [[lääkekasveihin]], koska nykyaikaista lääketiedettä ei vielä ollut. Henkilökuntana oli usein munkkeja, nunnia tai maallikkoveljiä, ja lääkärin rooli vaihteli paikasta toiseen. Kuninkaalliset sairaalat, kuten Lissabonin [[Hospital Real de Todos-os-Santos]], olivat suuria laitoksia, jotka kuvastivat hallitsijan huolenpitoa. Eri maissa tapa vaihteli, ja käytännöt riippuivat ajasta. Viisas Pöllö parantelee sillä välin siipirikkoaan, joten täältä kyyhkyltä tämä tieto.
 JATKOT:
 Milloin nykyaikainen sairaala syntyi?
 Mitä lääkekasveja keskiajalla käytettiin?
 
 ### 15.4
 KYSYMYS: Mitä sana hospitaali alun perin tarkoitti?
-Ai se. Sanojen alkuperä on kyyhkyn herkkua. Sana hospitaali tulee latinan sanasta hospitalis, joka liittyy sanaan hospes, vieras tai isäntä. Alun perin kyse oli vieraanvaraisuudesta: hospitaali oli paikka, jossa matkaajille, köyhille ja sairaille tarjottiin suojaa, ruokaa ja hoivaa. Keskiajalla tällaisia paikkoja ylläpitivät usein luostarit ja kirkolliset yhteisöt. Pikkuhiljaa sanan merkitys kapeni tarkoittamaan erityisesti sairaiden hoitopaikkaa, ja nykyisin sanasta ovat peräisin muun muassa englannin hospital, hotel ja hostel. Suomen sana sairaala on omaa perua, mutta [[hospitaalia]] tavataan vanhemmassa kielessä ja joissakin maissa yhä. Sanan juuri kertoo, että hoito ja vieraanvaraisuus kuuluivat ennen yhteen.
-
-Minusta on kaunista, että sama sana kelpaa sekä hotellille että sairaalalle. Kumpaankin tullaan väsyneenä ja lähdetään vähän virkeämpänä.
+Ai se. Sanojen alkuperä on kyyhkyn herkkua. Sana hospitaali tulee [[latinan]] sanasta hospitalis, joka liittyy sanaan [[hospes]], vieras tai isäntä. Alun perin kyse oli vieraanvaraisuudesta: hospitaali oli paikka, jossa matkaajille, köyhille ja sairaille tarjottiin suojaa, ruokaa ja hoivaa. Keskiajalla tällaisia paikkoja ylläpitivät usein [[luostarit]] ja kirkolliset yhteisöt. Pikkuhiljaa sanan merkitys kapeni tarkoittamaan erityisesti sairaiden hoitopaikkaa, ja samasta juuresta ovat peräisin muun muassa englannin sanat hospital, hotel ja hostel. Minusta on kaunista, että sama sana kelpaa sekä hotellille että sairaalalle, sillä kumpaankin tullaan väsyneenä ja lähdetään vähän virkeämpänä.
 JATKOT:
 Mistä sana hotelli on peräisin?
 Mitä hospes tarkoitti latinassa?
