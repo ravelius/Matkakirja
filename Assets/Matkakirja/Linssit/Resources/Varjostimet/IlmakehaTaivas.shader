@@ -41,7 +41,11 @@ Shader "Matkakirja/Linssit/IlmakehaTaivas"
                 L = L * (1.0 - pilvi.a) + pilvi.rgb;
                 L += IlmSateenkaari(d) * (1.0 - pilvi.a);   // kuuron jälkeen, pilvien takana ei näy
                 float3 c = IlmSavytys(L * _IlmParam.y * max(1.0, _IlmMaailma.w));   // hämärässä silmä sopeutuu (iltarusko näkyviin)
-                c += IlmSininenHetki(d) * (1.0 - pilvi.a * 0.6);   // loppuillan sininen hetki (PT 9.10.), pilvet himmentävät
+                // Loppuillan sininen hetki (PT 9.10.) pilvien taakse; pilvet itse näyttöarvona (LS1 9.10.: kuuro yöllä → taivas tasaisen sininen,
+                // fysikaalisesti valaistut pilvet lähes mustia): siniharmaa massa, alapinnassa kaupungin valojen lämmin hehku, sadepilvet tummempia.
+                c += IlmSininenHetki(d) * (1.0 - pilvi.a);
+                float3 pilviYo = (float3(0.17, 0.16, 0.21) + float3(0.22, 0.12, 0.05) * _IlmMaailma.z * saturate(1.0 - d.y * 2.5)) * _IlmHamara.y * (1.0 - 0.45 * _IlmSaa.y);
+                c = lerp(c, pilviYo, pilvi.a * _IlmHamara.x * 0.9);
                 half3 vanha = lerp(_TaivasHorisontti.rgb, _TaivasLaki.rgb, (half)saturate(d.y * 2.0));
                 float3 ulos = lerp((float3)vanha, c, _IlmParam.w);
                 return half4((half3)IlmDither(ulos, i.paikkaH.xy), 1);   // ei portaita B10G11R11-puskurissa
