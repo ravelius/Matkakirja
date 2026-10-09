@@ -3,7 +3,7 @@
 // (SeikkailuKavely.AsetaKasvu, kun kävelydata ja leikkaukset ovat käytössä), avainsana (vuosiluku + muutama sana) näkyy
 // DioraamaTaulussa vain tämän ajon aikana (PT:n ehto 2: ei pelin aikana). Ilman kertojaa (ehto 2); kertoja tulee omistajan luvalla.
 // Käynnistys: kehityskomento "poikki historia" (Natiivi-UI:n alun valintakortti "Linnan historia" kutsuu Aloita, kun
-// Historiajana.Lukittu). Napautus tai Esc lopettaa. Vaihemallit (jääkausi, 1475, 1700-luku, palo) tulevat LR:ltä; siihen asti
+// Historiajana.Lukittu). Esc tai Natiivi-UI:n ⏭ Ohita lopettaa (napautus ei). Vaihemallit (jääkausi, 1475, 1700-luku, palo) tulevat LR:ltä; siihen asti
 // näkyy nykyinen kuori ja ympäristö.
 using System;
 using System.Collections;
@@ -105,9 +105,9 @@ namespace Matkakirja.Natiivi
                 if (i != vaihe) { vaihe = i; kirjaa?.Invoke($"seikkailu: historia vaihe {i} ({h.Vaiheet[i].VuosiTeksti}) {t:F1} s"); }
                 Avainsana = h.Avainsana(t);
                 if (Avainsana != nakyva) { nakyva = Avainsana; if (nakyva != null) Debug.Log($"MATKAKIRJA linssit: historia avainsana {nakyva.VuosiTeksti} {nakyva.Sanat} ({t:F1} s)"); }
-                var kb = Keyboard.current; var hiiri = Mouse.current; var kos = Touchscreen.current;
-                if ((kb != null && kb.escapeKey.wasPressedThisFrame) || (hiiri != null && hiiri.leftButton.wasPressedThisFrame)
-                    || (kos != null && kos.primaryTouch.press.wasPressedThisFrame)) break;
+                // Vain Esc ja Natiivi-UI:n ⏭ Ohita (Lopeta) päättävät historian; napautus ei (PT 9.10.: vahinkonapautus ei katkaise).
+                var kb = Keyboard.current;
+                if (kb != null && kb.escapeKey.wasPressedThisFrame) break;
                 yield return null;
             }
             Avainsana = null;

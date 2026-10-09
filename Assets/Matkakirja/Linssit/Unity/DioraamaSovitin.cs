@@ -964,7 +964,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// ☰ › Linnan historia (Natiivi-UI). Pelin aikana peli pysähtyy (aika 0, pelaajan ja vartijoiden ohjaus pois), historia soi,
-        /// ja lopussa peli jatkuu samasta kohdasta ilman Pelaa-korttia; sitten valmis(). Napautus/Esc lopettaa historian aiemmin.
+        /// ja lopussa peli jatkuu samasta kohdasta ilman Pelaa-korttia; sitten valmis(). Esc tai ⏭ Ohita lopettaa historian aiemmin (napautus ei).
         /// </summary>
         public static void AloitaHistoria(Action valmis)
         {
