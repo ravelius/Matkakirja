@@ -35,6 +35,14 @@ kappeli). Lue tämä osio ja alin TILA-loki (päivän loppu), sitten CLAUDE.md j
   Jos aika loppuu, pois tässä järjestyksessä: K1, renki, portinvartija, torkkuva vartija (EI varoitussääntö, tyrmä, kappeli, tallennus).
 - Kädet v44l on jo kytketty (2b88ec9a).
 
+## TILA 9.10. 05.0x — JUNA 171 kärki 9bd44cca6 (siirtoseppa/juna171-b, wt face), JUNA 172 kärki 0fbf20001 (siirtoseppa/juna172, wt kello)
+
+- Juna 171: NUI:n 2a0d607be (⏭ Ohita) + 9bd44cca6 (napautus ei lopeta historiaa, avainsana 4 s). SHA Natiivisepälle (varakanava).
+- Juna 172 (PT kuittasi e00415cea ehdolla, LS2 muisti +0 Mt): v45y 731d4ca7142127b8, datavuodet, vaihemallit (SeikkailuVaiheet: tyhjä saari,
+  puuvarustus, palon jäljet; linna piiloon < 1477), otetyypit (voima 30 s, kapea, lepo; MOsa.cs Kiipeily), sonniss-aanet-v3 (22 tunnusta),
+  Vefects LAHTEET.md. Uusin kärki 0fbf20001 odottaa PT:n kuittausta → SHA Natiivisepälle; LS2: botti huone 8 + ääni-muisti.
+- SendMessage-raja Desktop-sessioihin täyttyi 04.4x; uds-sokettiosoitteet toimivat, Natiiviseppä varakanavalla (mcp send_message).
+
 ## TILA 9.10. 03.5x — JUNA 170 kärki 778202265 (LS2:n muisti +0 Mt), JUNA 171 kärki 516ff1b32 (NUI:n yhdistys), JUNA 172 bcae96d0f
 
 - Juna 171 = 516ff1b32 (NUI yhdisti 90a93e5ad + a918d7e97; oma rinnakkainen 49786e8dc on sisällöltään sama, ei käytössä).
