@@ -49,3 +49,36 @@ pois, ja ReplayKitiä, GameCenteriä ja DEVELOPMENT_BUILD-määritettä ei käyt
    simulaattoriajo ja laite-TF sisäisille testaajille ennen päähaaraan vientiä.
 3. Seuraava askel tässä kopiossa, jos omistaja haluaa: simulaattorin savuajo (käynnistys, pallo, Pariisi, Olavinlinna; Julkaisijan
    NYT-vuoro) ja Mac-käännös. Ne kertovat ajonaikaiset viat ennen LTS:ää.
+
+## Jatko-osa 9.10. 22.2x: simulaattoriajo ja A/B 6.3 vs 6.7 (omistaja 19.3x "testataan erillään")
+
+Sama sisältö: A = Unity 6.3 käännös 3f1d54d1b (junan 173 runko), B = Unity 6.7 b4 samasta sisällöstä (natiiviseppa/unity-67 e0f6ab0ae,
+7 rivin korjaukset). Simulaattori natiiviseppa-iPhone (CDA479DE), järjestys A1 B1 A2 B2, jokainen ajo on puhdas asennus. Vaiheet:
+kartta, Pariisi ja Tukholma (opas, kiinteä kamera, Cesium-laatat), Olavinlinna (poikkileikkaus) ja ISS (satelliitti, kyyti Cupolaan),
+60 s mittaus per vaihe. A1 ajettiin rauhallisella koneella. B1, A2 ja B2 uusittiin PT:n rauhallisessa ikkunassa (21.44–22.13), koska
+ensimmäinen kierros osui LS1:n laitekäännöksiin. Lokit: proto-3d/lokit/natiiviseppa-ab67-20261009-yhdistetty/ (ab-tulos.md).
+
+**Toimiiko 6.7 ajossa? KYLLÄ.** Kaikki vaiheet menivät läpi molemmilla, myös Cesium (Google-laatat, omat mallit, vesi), linnan
+poikkileikkaus ja ISS-kyyti. Poikkeuksia (Exception) tai VIRHE-rivejä ei ollut kummassakaan, eikä yhtään PUUTE-merkintää.
+
+| Vaihe | Kehys ms A / B | GPU ms A / B | Unity varattu Mt A / B | Tekstuurit Mt A / B |
+|---|---|---|---|---|
+| kartta | 31,9 / 33,4 (30 fps lepo) | 0,54 / 0,51 | 279 / 278 | 478 / 478 |
+| Pariisi | 16,7 / 16,7 | 1,76 / 1,67 (−5 %) | 489 / 486 | 1496 / 1496 |
+| Tukholma | 16,7 / 16,7 | 1,62 / 1,61 | 482 / 480 | 1622 / 1621 |
+| Olavinlinna | 16,7 / 16,7 | 1,19 / 0,89 (−25 %) | 580 / 580 | 998 / 994 |
+| ISS | 33,3 / 33,3 (30 fps) | 0,94 / 0,89 | 465 / 465 | 939 / 902 |
+
+- Kehysajat ovat samat, koska simulaattori pysyy ruudunpäivityksen rajassa (60/30 fps). Simulaattori piirtää Macin GPU:lla, joten
+  GPU-ero ei ole laitteen ero. Olavinlinnan −25 % toistui molemmissa B-ajoissa (1,12 ja 0,88 ms vs. A 1,30 ja 1,34 ms).
+- Unityn muisti (varattu, tekstuurit) on sama ±1 %.
+- Macin prosessin RSS ei kelpaa vertailuun: se vaihtelee macOS:n muistinpakkauksen mukaan (A2 Tukholma 0,8 Gt vs. A1 3,6 Gt).
+  B oli molemmissa ajoissa korkeampi Olavinlinnassa ja ISS:ssä (4,4 vs. 2,6–3,5 Gt ja 3,9–4,2 vs. 2,1–2,4 Gt). Tämä tarkistetaan
+  laitteella (jetsam-raja), koska se voi tarkoittaa, että kaupungin muistia vapautuu 6.7:ssä hitaammin.
+
+**Laite-A/B (iPad Pro 13, ABAB)** tehdään seuraavaksi: 6.3-laiteappi on tallessa (9dba62a6), 6.7-laitekäännös tehdään T7:llä, kun
+junan 173 laitetyöt ovat ohi, ja skripti on valmis. Mitattavat: kehysaika, GPU ms, vapaa muisti jetsam-rajaan ja lämpö. Tämä täydentää
+suosituksen.
+
+**Suositus ennallaan:** 6.7 toimii ja on suorituskyvyltään vähintään samaa tasoa. Vaihto tehdään vasta 6.7 LTS:n ja Cesiumin
+6.7-tuen jälkeen, ja ennen sitä tarvitaan laite-ABAB:n muistitulos.
