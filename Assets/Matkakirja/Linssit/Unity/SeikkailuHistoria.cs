@@ -183,7 +183,7 @@ namespace Matkakirja.Natiivi
         static Texture2D rantaSavy; static MaterialPropertyBlock rantaLohko;
         static void TasainenRanta(Renderer r)
         {
-            if (rantaSavy == null) { rantaSavy = new Texture2D(1, 1, TextureFormat.RGBA32, false) { name = "Historia:rantasävy" }; rantaSavy.SetPixel(0, 0, new Color(0.42f, 0.43f, 0.45f)); rantaSavy.Apply(false, true); }
+            if (rantaSavy == null) { rantaSavy = new Texture2D(1, 1, TextureFormat.RGBA32, false) { name = "Historia:rantasavy" }; rantaSavy.SetPixel(0, 0, new Color(0.42f, 0.43f, 0.45f)); rantaSavy.Apply(false, true); }
             rantaLohko ??= new MaterialPropertyBlock();
             r.GetPropertyBlock(rantaLohko); rantaLohko.SetTexture("_ValoAtlas", rantaSavy); r.SetPropertyBlock(rantaLohko);
         }
