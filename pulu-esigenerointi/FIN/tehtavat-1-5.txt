@@ -1,0 +1,201 @@
+================ KOHTA 21 (kohde:hahmotelma-merenkurkku) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Merenkurkun saaristo (luonto · saari)
+Tietoruudun teksti: Merenkurkku on Pohjanlahden kapea osa, joka erottaa Perämeren Selkämerestä. Uloimpien saarten väli on vain noin 25 kilometriä, ja vesi on vain noin 25 metriä syvää. Jääkauden päättyessä noin 9 600 vuotta sitten paksu jäätikkö vetäytyi, ja sen painama maankuori alkoi kohota. Maankohoaminen ei ole vieläkään loppunut: maa nousee lähes 10 millimetriä vuodessa. Merenkurkun saaristossa on yli 5 600 pientä saarta ja säännöllisiä De Geer -moreeneja, ja osia siitä liitettiin Unescon maailmanperintökohteeseen vuonna 2006. Arvion mukaan noin 2 000 vuoden kuluttua merenpohja kohoaa alueella vedestä ja Pohjanlahti jakautuu kahtia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Milford Sound — kaupunkilehti / Milford Sound: Piispanhiippa vedestä nousee] Vuonon suulla kohoava Mitre Peak eli māoriksi Rahotu on Milford Soundin tunnetuin maamerkki: se nousee 1 692 metrin korkeuteen lähes suoraan merenpinnasta, mikä tekee siitä yhden maailman jyrkimmistä rannikkovuorista. Englantilaiset nimesivät vuoren sen terävän muodon mukaan - huipun useat lähekkäiset piikit muistuttavat tietystä kulmasta katsottuna piispan päähinettä eli mitraa. Tyynellä säällä huippu peilautuu vuonon liikkumattomaan veteen niin tarkasti, että kuva näyttää lähes symmetriseltä. Vuori on osa samaa jäätiköiden vuosimiljoonien saatossa kuluttamaa kallioperää, josta koko Piopiotahin vuono on veistynyt.
+- [Mount Rushmore — kaupunkilehti / Mount Rushmore: Idea neljästä presidentistä] Etelä-Dakotan osavaltionhistorioitsija Doane Robinson ehdotti 1920-luvun alussa jättiveistosta houkuttelemaan matkailijoita alueelle. Hän halusi kuvata alueen omia sankareita, mutta kutsuttu kuvanveistäjä Gutzon Borglum vaati kunnianhimoisempaa aihetta: koko kansakunnan tarinaa. Borglum hylkäsi ehdotukset Lewis ja Clarkista tai paikallisista hahmoista ja valitsi sen sijaan neljä presidenttiä kuvaamaan Yhdysvaltain syntyä, kasvua, kehitystä ja säilymistä. Työ alkoi lokakuussa 1927, muutaman kuukauden kuluttua vihkiäisistä.
+
+### 21.1
+KYSYMYS: Miksi maa nousee Merenkurkussa yhä edelleen ylös vedestä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Merenkurkun saaristo (luonto · saari)
+Tietoruudun teksti: Merenkurkku on Pohjanlahden kapea osa, joka erottaa Perämeren Selkämerestä. Uloimpien saarten väli on vain noin 25 kilometriä, ja vesi on vain noin 25 metriä syvää. Jääkauden päättyessä noin 9 600 vuotta sitten paksu jäätikkö vetäytyi, ja sen painama maankuori alkoi kohota. Maankohoaminen ei ole vieläkään loppunut: maa nousee lähes 10 millimetriä vuodessa. Merenkurkun saaristossa on yli 5 600 pientä saarta ja säännöllisiä De Geer -moreeneja, ja osia siitä liitettiin Unescon maailmanperintökohteeseen vuonna 2006. Arvion mukaan noin 2 000 vuoden kuluttua merenpohja kohoaa alueella vedestä ja Pohjanlahti jakautuu kahtia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Milford Sound — kaupunkilehti / Milford Sound: Piispanhiippa vedestä nousee] Vuonon suulla kohoava Mitre Peak eli māoriksi Rahotu on Milford Soundin tunnetuin maamerkki: se nousee 1 692 metrin korkeuteen lähes suoraan merenpinnasta, mikä tekee siitä yhden maailman jyrkimmistä rannikkovuorista. Englantilaiset nimesivät vuoren sen terävän muodon mukaan - huipun useat lähekkäiset piikit muistuttavat tietystä kulmasta katsottuna piispan päähinettä eli mitraa. Tyynellä säällä huippu peilautuu vuonon liikkumattomaan veteen niin tarkasti, että kuva näyttää lähes symmetriseltä. Vuori on osa samaa jäätiköiden vuosimiljoonien saatossa kuluttamaa kallioperää, josta koko Piopiotahin vuono on veistynyt.
+
+### 21.2
+KYSYMYS: Mitä Merenkurkun alueelle tapahtuu noin 2 000 vuoden kuluttua?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Merenkurkun saaristo (luonto · saari)
+Tietoruudun teksti: Merenkurkku on Pohjanlahden kapea osa, joka erottaa Perämeren Selkämerestä. Uloimpien saarten väli on vain noin 25 kilometriä, ja vesi on vain noin 25 metriä syvää. Jääkauden päättyessä noin 9 600 vuotta sitten paksu jäätikkö vetäytyi, ja sen painama maankuori alkoi kohota. Maankohoaminen ei ole vieläkään loppunut: maa nousee lähes 10 millimetriä vuodessa. Merenkurkun saaristossa on yli 5 600 pientä saarta ja säännöllisiä De Geer -moreeneja, ja osia siitä liitettiin Unescon maailmanperintökohteeseen vuonna 2006. Arvion mukaan noin 2 000 vuoden kuluttua merenpohja kohoaa alueella vedestä ja Pohjanlahti jakautuu kahtia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mount Rushmore — kaupunkilehti / Mount Rushmore: Idea neljästä presidentistä] Etelä-Dakotan osavaltionhistorioitsija Doane Robinson ehdotti 1920-luvun alussa jättiveistosta houkuttelemaan matkailijoita alueelle. Hän halusi kuvata alueen omia sankareita, mutta kutsuttu kuvanveistäjä Gutzon Borglum vaati kunnianhimoisempaa aihetta: koko kansakunnan tarinaa. Borglum hylkäsi ehdotukset Lewis ja Clarkista tai paikallisista hahmoista ja valitsi sen sijaan neljä presidenttiä kuvaamaan Yhdysvaltain syntyä, kasvua, kehitystä ja säilymistä. Työ alkoi lokakuussa 1927, muutaman kuukauden kuluttua vihkiäisistä.
+- [Tanger — kaupunkilehti / Tanger: Myötäjäisiksi annettu kaupunki] Portugalilaiset epäonnistuivat kolmesti ja ottivat Tangerin lopulta ilman taistelua 28. elokuuta 1471, kun varuskunta pakeni. Kahdensadan vuoden kuluttua kaupunki vaihtoi taas omistajaa ilman laukaustakaan: se luovutettiin 1661 Englannin Kaarle II:lle osana Katariina Braganzalaisen myötäjäisiä, ja englantilaiset ottivat sen haltuunsa tammikuussa 1662. Kaarle kutsui saalistaan kruunun korvaamattomaksi jalokiveksi. Satamaan rakennettiin aallonmurtaja, joka ylsi 1436 jalkaan ja maksoi 340 000 puntaa. Moulay Ismailin piiritys 1678–1680 ei murtanut kaupunkia, mutta parlamentti kyllästyi laskuun: lähtevät joukot räjäyttivät sataman, ja Marokko sai kaupungin 7. helmikuuta 1684.
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:hahmotelma-pallas) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pallas-Yllästunturin kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Pallas-Yllästunturin kansallispuisto on Suomen kolmanneksi suurin, noin 1 020 neliökilometrin laajuinen kansallispuisto Länsi-Lapissa. Maisemaa hallitsee noin 100 kilometrin pituinen tunturijono, joka on muinaisen poimuvuoriston kuluneet juuret, sekä havumetsävyöhyke. Sana kero tarkoittaa tunturin pyöreää, puutonta huippua, ja puiston korkein kohta on Pallastunturien Taivaskero, 809 metriä merenpinnan yläpuolella. Hetta–Pallas-reitti on puiston tunnetuin vaellusreitti ja Suomen vanhin merkitty vaellusreitti vuodelta 1934. Nykyisessä muodossaan puisto perustettiin vuonna 2005, ja vierailijamäärillä mitattuna se on Suomen suosituin kansallispuisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Kaksi viikkoa jolloin tunturi syttyy tuleen] syyskuu — Ruska on lyhyt, muutaman viikon mittainen ajanjakso syyskuun alussa, jolloin Lapin tunturikoivikot ja -kanervikot värjäytyvät nopeasti keltaisiksi, oransseiksi ja tulipunaisiksi ennen lehtien putoamista. Ilmiö johtuu siitä, että öiset pakkaset pysäyttävät lehtivihreän tuotannon, jolloin lehdissä koko kasvukauden piilleet keltaiset ja punaiset väripigmentit pääsevät näkyviin. Tunturien paljailla laella väri leviää poikkeuksellisen laajana ja yhtenäisenä, toisin kuin metsäisemmällä Etelä-Suomella. Ruska houkuttelee syksyisin retkeilijöitä Pallas-Yllästunturin ja Urho Kekkosen kansallispuistoihin, ja ajankohta vaihtelee vuosittain sään mukaan.
+- [Mount Isa — kaupunkilehti / Aavikon kaivoskaupungin arki: Ghantownin kamelikuskit] 1890- ja 1900-luvun vaihteessa Cloncurryn seudulla, kivenheiton päässä Mount Isasta, toimi Queenslandin suurin niin kutsuttu ghantown: yli 200 Afganistanista, Intiasta ja Lähi-idästä tullutta kamelinajajaa ja noin 2 000 kamelia. Hevoset ja härät eivät kestäneet kaivosseudun kuivuutta ja teräviä kiviä yhtä hyvin kuin kamelit, joten karavaanit kuljettivat malmia, polttoainetta, ruokaa ja työkaluja kaivoksille ja takaisin rautatien päästä. Kamelinajajilla oli oma moskeijansa Coppermine Creekin varrella, ja he pitivät myös omia kauppapuutarhoja. Viimeiset kamelikaravaanit väistyivät vasta, kun kuorma-autot yleistyivät 1920-luvulla.
+
+### 22.1
+KYSYMYS: Miksi Pallaksen tunturit ovat pyöreitä eivätkä teräviä vuorenhuippuja?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pallas-Yllästunturin kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Pallas-Yllästunturin kansallispuisto on Suomen kolmanneksi suurin, noin 1 020 neliökilometrin laajuinen kansallispuisto Länsi-Lapissa. Maisemaa hallitsee noin 100 kilometrin pituinen tunturijono, joka on muinaisen poimuvuoriston kuluneet juuret, sekä havumetsävyöhyke. Sana kero tarkoittaa tunturin pyöreää, puutonta huippua, ja puiston korkein kohta on Pallastunturien Taivaskero, 809 metriä merenpinnan yläpuolella. Hetta–Pallas-reitti on puiston tunnetuin vaellusreitti ja Suomen vanhin merkitty vaellusreitti vuodelta 1934. Nykyisessä muodossaan puisto perustettiin vuonna 2005, ja vierailijamäärillä mitattuna se on Suomen suosituin kansallispuisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mount Isa — kaupunkilehti / Aavikon kaivoskaupungin arki: Ghantownin kamelikuskit] 1890- ja 1900-luvun vaihteessa Cloncurryn seudulla, kivenheiton päässä Mount Isasta, toimi Queenslandin suurin niin kutsuttu ghantown: yli 200 Afganistanista, Intiasta ja Lähi-idästä tullutta kamelinajajaa ja noin 2 000 kamelia. Hevoset ja härät eivät kestäneet kaivosseudun kuivuutta ja teräviä kiviä yhtä hyvin kuin kamelit, joten karavaanit kuljettivat malmia, polttoainetta, ruokaa ja työkaluja kaivoksille ja takaisin rautatien päästä. Kamelinajajilla oli oma moskeijansa Coppermine Creekin varrella, ja he pitivät myös omia kauppapuutarhoja. Viimeiset kamelikaravaanit väistyivät vasta, kun kuorma-autot yleistyivät 1920-luvulla.
+
+### 22.2
+KYSYMYS: Mitä sana kero tarkoittaa ja mistä sen tunnistaa tunturilla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pallas-Yllästunturin kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Pallas-Yllästunturin kansallispuisto on Suomen kolmanneksi suurin, noin 1 020 neliökilometrin laajuinen kansallispuisto Länsi-Lapissa. Maisemaa hallitsee noin 100 kilometrin pituinen tunturijono, joka on muinaisen poimuvuoriston kuluneet juuret, sekä havumetsävyöhyke. Sana kero tarkoittaa tunturin pyöreää, puutonta huippua, ja puiston korkein kohta on Pallastunturien Taivaskero, 809 metriä merenpinnan yläpuolella. Hetta–Pallas-reitti on puiston tunnetuin vaellusreitti ja Suomen vanhin merkitty vaellusreitti vuodelta 1934. Nykyisessä muodossaan puisto perustettiin vuonna 2005, ja vierailijamäärillä mitattuna se on Suomen suosituin kansallispuisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Kaksi viikkoa jolloin tunturi syttyy tuleen] syyskuu — Ruska on lyhyt, muutaman viikon mittainen ajanjakso syyskuun alussa, jolloin Lapin tunturikoivikot ja -kanervikot värjäytyvät nopeasti keltaisiksi, oransseiksi ja tulipunaisiksi ennen lehtien putoamista. Ilmiö johtuu siitä, että öiset pakkaset pysäyttävät lehtivihreän tuotannon, jolloin lehdissä koko kasvukauden piilleet keltaiset ja punaiset väripigmentit pääsevät näkyviin. Tunturien paljailla laella väri leviää poikkeuksellisen laajana ja yhtenäisenä, toisin kuin metsäisemmällä Etelä-Suomella. Ruska houkuttelee syksyisin retkeilijöitä Pallas-Yllästunturin ja Urho Kekkosen kansallispuistoihin, ja ajankohta vaihtelee vuosittain sään mukaan.
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:hahmotelma-oulanka) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oulangan kansallispuisto (luonto · joki)
+Tietoruudun teksti: Oulangan kansallispuisto on noin 270 neliökilometrin laajuinen alue Pohjois-Pohjanmaalla ja Lapissa, ja se rajautuu Venäjän Paanajärven kansallispuistoon. Puisto perustettiin vuonna 1956, ja sen luonnossa yhdistyvät pohjoinen, eteläinen ja itäinen luonto: laajoja soita, koskia ja hiekkarantaisia jokilaaksoja sekä koskematonta havumetsää. Ravinteikas maaperä on tehnyt alueesta harvinaisten kasvien kotia, ja siellä kasvaa yli 500 putkilokasvilajia. Tunnetuin vaellusreitti on 80 kilometrin Karhunkierros, joka on kuljettavissa ympäri vuoden. Alueen ensimmäiset asukkaat olivat saamelaisia, ja 1600-luvun lopulla seudulle saapui suomalaisia uudisasukkaita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tromssa — kohdekartta / Kohdekartta: Polaria] 1998 Polaria on maailman pohjoisin akvaario, ja se avattiin Tromssan rantaan toukokuussa 1998. Rakennuksen muoto ei ole sattumaa: se on suunniteltu näyttämään jäälautoilta, jotka meri on työntänyt rantaan - aivan kuin arktisella merellä oikeasti tapahtuu myrskyjen aikana. Akvaarion tähtiä ovat koulutetut partahylkeet, joita voi katsella altaan reunalta tai kävellä niiden 'alla' läpinäkyvässä tunnelissa altaan pohjan alla. Muissa näyttelyissä pääsee tutustumaan Norjan rannikon kaloihin ja eläimiin, ja viisiruutuisessa panoraamaelokuvateatterissa voi kokea arktisen luonnon aivan uudella tavalla. Polarian pihapiirissä on myös oma pieni museo, jossa säilytetään Polstjerna-nimistä vanhaa hylkeen…
+
+### 23.1
+KYSYMYS: Miksi Oulangan luonnossa kohtaavat pohjoiset, eteläiset ja itäiset lajit?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oulangan kansallispuisto (luonto · joki)
+Tietoruudun teksti: Oulangan kansallispuisto on noin 270 neliökilometrin laajuinen alue Pohjois-Pohjanmaalla ja Lapissa, ja se rajautuu Venäjän Paanajärven kansallispuistoon. Puisto perustettiin vuonna 1956, ja sen luonnossa yhdistyvät pohjoinen, eteläinen ja itäinen luonto: laajoja soita, koskia ja hiekkarantaisia jokilaaksoja sekä koskematonta havumetsää. Ravinteikas maaperä on tehnyt alueesta harvinaisten kasvien kotia, ja siellä kasvaa yli 500 putkilokasvilajia. Tunnetuin vaellusreitti on 80 kilometrin Karhunkierros, joka on kuljettavissa ympäri vuoden. Alueen ensimmäiset asukkaat olivat saamelaisia, ja 1600-luvun lopulla seudulle saapui suomalaisia uudisasukkaita.
+
+### 23.2
+KYSYMYS: Mitä Karhunkierrokselta voi nähdä ja kokea vuoden ympäri?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oulangan kansallispuisto (luonto · joki)
+Tietoruudun teksti: Oulangan kansallispuisto on noin 270 neliökilometrin laajuinen alue Pohjois-Pohjanmaalla ja Lapissa, ja se rajautuu Venäjän Paanajärven kansallispuistoon. Puisto perustettiin vuonna 1956, ja sen luonnossa yhdistyvät pohjoinen, eteläinen ja itäinen luonto: laajoja soita, koskia ja hiekkarantaisia jokilaaksoja sekä koskematonta havumetsää. Ravinteikas maaperä on tehnyt alueesta harvinaisten kasvien kotia, ja siellä kasvaa yli 500 putkilokasvilajia. Tunnetuin vaellusreitti on 80 kilometrin Karhunkierros, joka on kuljettavissa ympäri vuoden. Alueen ensimmäiset asukkaat olivat saamelaisia, ja 1600-luvun lopulla seudulle saapui suomalaisia uudisasukkaita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tromssa — kohdekartta / Kohdekartta: Polaria] 1998 Polaria on maailman pohjoisin akvaario, ja se avattiin Tromssan rantaan toukokuussa 1998. Rakennuksen muoto ei ole sattumaa: se on suunniteltu näyttämään jäälautoilta, jotka meri on työntänyt rantaan - aivan kuin arktisella merellä oikeasti tapahtuu myrskyjen aikana. Akvaarion tähtiä ovat koulutetut partahylkeet, joita voi katsella altaan reunalta tai kävellä niiden 'alla' läpinäkyvässä tunnelissa altaan pohjan alla. Muissa näyttelyissä pääsee tutustumaan Norjan rannikon kaloihin ja eläimiin, ja viisiruutuisessa panoraamaelokuvateatterissa voi kokea arktisen luonnon aivan uudella tavalla. Polarian pihapiirissä on myös oma pieni museo, jossa säilytetään Polstjerna-nimistä vanhaa hylkeen…
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:hahmotelma-aavasaksa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aavasaksa (luonto · vuori)
+Tietoruudun teksti: Aavasaksa on 242 metriä korkea vaara Ylitorniolla Lapissa Tornionjoen varrella. Se kohoaa selvästi ympäristön vaaroja korkeammalle, ja siltä avautuu näkymiä sekä Suomeen että Ruotsiin. Ranskan tiedeakatemia teki vaaralla mittauksia vuosina 1736–1737 Pierre Louis Maupertuis'n johdolla, ja 1800-luvun alkupuoliskolla se oli yksi Struven ketjun mittauspisteistä, minkä vuoksi se on Unescon maailmanperintökohde. Huipulla on koristeellinen Keisarinmaja, jonka rakentaminen aloitettiin keisari Aleksanteri II:n vierailua ajatellen, mutta vierailu ei koskaan toteutunut. Aavasaksaa pidetään Suomen eteläisimpänä paikkana, jossa keskiyön aurinko näkyy.
+
+### 24.1
+KYSYMYS: Miksi Ranskan tiedeakatemia lähetti tutkijoita mittaamaan juuri Aavasaksalla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aavasaksa (luonto · vuori)
+Tietoruudun teksti: Aavasaksa on 242 metriä korkea vaara Ylitorniolla Lapissa Tornionjoen varrella. Se kohoaa selvästi ympäristön vaaroja korkeammalle, ja siltä avautuu näkymiä sekä Suomeen että Ruotsiin. Ranskan tiedeakatemia teki vaaralla mittauksia vuosina 1736–1737 Pierre Louis Maupertuis'n johdolla, ja 1800-luvun alkupuoliskolla se oli yksi Struven ketjun mittauspisteistä, minkä vuoksi se on Unescon maailmanperintökohde. Huipulla on koristeellinen Keisarinmaja, jonka rakentaminen aloitettiin keisari Aleksanteri II:n vierailua ajatellen, mutta vierailu ei koskaan toteutunut. Aavasaksaa pidetään Suomen eteläisimpänä paikkana, jossa keskiyön aurinko näkyy.
+
+### 24.2
+KYSYMYS: Miksi Aavasaksalle rakennettiin Keisarinmaja, vaikka keisari ei koskaan tullut käymään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aavasaksa (luonto · vuori)
+Tietoruudun teksti: Aavasaksa on 242 metriä korkea vaara Ylitorniolla Lapissa Tornionjoen varrella. Se kohoaa selvästi ympäristön vaaroja korkeammalle, ja siltä avautuu näkymiä sekä Suomeen että Ruotsiin. Ranskan tiedeakatemia teki vaaralla mittauksia vuosina 1736–1737 Pierre Louis Maupertuis'n johdolla, ja 1800-luvun alkupuoliskolla se oli yksi Struven ketjun mittauspisteistä, minkä vuoksi se on Unescon maailmanperintökohde. Huipulla on koristeellinen Keisarinmaja, jonka rakentaminen aloitettiin keisari Aleksanteri II:n vierailua ajatellen, mutta vierailu ei koskaan toteutunut. Aavasaksaa pidetään Suomen eteläisimpänä paikkana, jossa keskiyön aurinko näkyy.
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-imatra) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Imatrankoski (luonto · joki)
+Tietoruudun teksti: Imatrankoski on Vuoksen koski Imatralla, ja siitä tuli kuuluisa matkailukohde jo 1700-luvun lopulla. Vuoksi ja koski syntyivät noin 5 000 vuotta sitten, kun Saimaan vedet murtautuivat Salpausselän reunamuodostuman läpi jääkauden jälkeisen maankohoamisen vuoksi. Matkailun katsotaan alkaneen vuonna 1772, kun Venäjän keisarinna Katariina Suuri vieraili koskella, ja Suomen vanhin luonnonpuisto Kruununpuisto perustettiin vuonna 1842 keisari Nikolai I:n aikana. 1800-luvun lopulla Imatrankoski oli yksi Euroopan tunnetuimmista luontonähtävyyksistä. Vuodesta 1929 koski on ollut padottu, kun Imatran voimalaitos aloitti toimintansa, mutta pato avataan kesäisin ja koski kuohuu jälleen.
+
+### 25.1
+KYSYMYS: Mitä Imatrankoskelle tapahtui vuonna 1929, ja miksi se kuohuu nykyään vain tiettyinä hetkinä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Imatrankoski (luonto · joki)
+Tietoruudun teksti: Imatrankoski on Vuoksen koski Imatralla, ja siitä tuli kuuluisa matkailukohde jo 1700-luvun lopulla. Vuoksi ja koski syntyivät noin 5 000 vuotta sitten, kun Saimaan vedet murtautuivat Salpausselän reunamuodostuman läpi jääkauden jälkeisen maankohoamisen vuoksi. Matkailun katsotaan alkaneen vuonna 1772, kun Venäjän keisarinna Katariina Suuri vieraili koskella, ja Suomen vanhin luonnonpuisto Kruununpuisto perustettiin vuonna 1842 keisari Nikolai I:n aikana. 1800-luvun lopulla Imatrankoski oli yksi Euroopan tunnetuimmista luontonähtävyyksistä. Vuodesta 1929 koski on ollut padottu, kun Imatran voimalaitos aloitti toimintansa, mutta pato avataan kesäisin ja koski kuohuu jälleen.
+
+### 25.2
+KYSYMYS: Miksi Imatrankoskella vieraili niin arvovaltaisia matkailijoita?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Imatrankoski (luonto · joki)
+Tietoruudun teksti: Imatrankoski on Vuoksen koski Imatralla, ja siitä tuli kuuluisa matkailukohde jo 1700-luvun lopulla. Vuoksi ja koski syntyivät noin 5 000 vuotta sitten, kun Saimaan vedet murtautuivat Salpausselän reunamuodostuman läpi jääkauden jälkeisen maankohoamisen vuoksi. Matkailun katsotaan alkaneen vuonna 1772, kun Venäjän keisarinna Katariina Suuri vieraili koskella, ja Suomen vanhin luonnonpuisto Kruununpuisto perustettiin vuonna 1842 keisari Nikolai I:n aikana. 1800-luvun lopulla Imatrankoski oli yksi Euroopan tunnetuimmista luontonähtävyyksistä. Vuodesta 1929 koski on ollut padottu, kun Imatran voimalaitos aloitti toimintansa, mutta pato avataan kesäisin ja koski kuohuu jälleen.
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

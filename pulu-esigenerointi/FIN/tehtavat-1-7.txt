@@ -1,0 +1,196 @@
+================ KOHTA 31 (kohde:hahmotelma-uusikaupunki) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uusikaupunki (historia)
+Tietoruudun teksti: Uusikaupunki on Varsinais-Suomessa Pohjanlahden rannalla sijaitseva kaupunki, jonka nimi tarkoittaa sekä suomeksi että ruotsiksi (Nystad) uutta kaupunkia. Alueella käytiin kauppaa puuesineillä ja suolalla jo varhaiskeskiajalla, ja kaupunki perustettiin laillistamaan tätä kauppaa; kuningas Kustaa II Aadolf antoi sille kaupunkioikeudet vuonna 1617. Keskusta on rakennettu ruutukaavaan, ja siellä on yksi maan parhaiten säilyneistä empiretyylisistä puutalokortteleista. Vuonna 1721 Uudessakaupungissa solmittiin Uudenkaupungin rauha, joka päätti Suuren Pohjan sodan Ruotsin ja Venäjän välillä. Vuonna 1855 brittiläinen ja ranskalainen laivasto hyökkäsivät kaupunkiin Ahvenanmaan sodan aikana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suva — kaupunkilehti / Kuningaskunnasta pääkaupungiksi: Vuosi, jolloin sisämaassa käytiin sotaa] Samaan aikaan kun isoisän matka vei hänet Fidžin ohi 1873, saaren sisämaassa käytiin sotaa. Cakobaun hallitus lähetti aseistetun joukon kukistamaan kai colo -heimoja, jotka eivät olleet kääntyneet kristinuskoon eivätkä tunnustaneet Cakobaun valtaa; taustalla oli myös kiista maanomistuksesta. Kahdeksankuukautinen kampanja maalis–lokakuussa 1873 päättyi antautumiseen. Sota oli yksi viimeisistä merkeistä siitä, ettei koko saari ollut vielä yhden hallinnon alla. Sisämaan heimojen jälkeläiset ovat tänäkin päivänä elävä osa Fidžin iTaukei-väestöä, ja ylänköjen kylissä vaalitaan omia perinteitä.
+- [Jemen — maalehti / Rakennukset: Kaupunki jyrkänteen reunalla] Kawkaban on vuoren laella lähes kolmen kilometrin korkeudessa, ja aivan sen alapuolella tasangolla on toinen kaupunki nimeltä Shibam — ei sama kuin Hadramautin savitiilikaupunki. Ylhäällä asuttiin, alhaalla käytiin kauppaa, ja väliä kuljettiin kallioon hakattuja portaita pitkin: niitä on runsaat tuhat ja korkeuseroa lähes 600 metriä. Nimi tarkoittaa arabiaksi kahta planeettaa. Kaupunki oli Yufirien hallitsijasuvun pääkaupunki 800-luvulta alkaen ja Sharaf ad-Dinin suvun tukikohta 1500-luvulta. Lähdettä ei ylhäällä ole, joten kalliosta louhittiin sadevesialtaita, joilla on omat nimensä. Vettä myös riittää: Kawkabaniin sataa vuodessa noin 380 millimetriä, enemmän kuin lähelle jäävään Sanaaseen.
+
+### 31.1
+KYSYMYS: Mitä Uudenkaupungin rauhalla vuonna 1721 lopetettiin, ja keiden kesken?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uusikaupunki (historia)
+Tietoruudun teksti: Uusikaupunki on Varsinais-Suomessa Pohjanlahden rannalla sijaitseva kaupunki, jonka nimi tarkoittaa sekä suomeksi että ruotsiksi (Nystad) uutta kaupunkia. Alueella käytiin kauppaa puuesineillä ja suolalla jo varhaiskeskiajalla, ja kaupunki perustettiin laillistamaan tätä kauppaa; kuningas Kustaa II Aadolf antoi sille kaupunkioikeudet vuonna 1617. Keskusta on rakennettu ruutukaavaan, ja siellä on yksi maan parhaiten säilyneistä empiretyylisistä puutalokortteleista. Vuonna 1721 Uudessakaupungissa solmittiin Uudenkaupungin rauha, joka päätti Suuren Pohjan sodan Ruotsin ja Venäjän välillä. Vuonna 1855 brittiläinen ja ranskalainen laivasto hyökkäsivät kaupunkiin Ahvenanmaan sodan aikana.
+
+### 31.2
+KYSYMYS: Miksi kaupunki perustettiin, vaikka alueella käytiin jo kauppaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uusikaupunki (historia)
+Tietoruudun teksti: Uusikaupunki on Varsinais-Suomessa Pohjanlahden rannalla sijaitseva kaupunki, jonka nimi tarkoittaa sekä suomeksi että ruotsiksi (Nystad) uutta kaupunkia. Alueella käytiin kauppaa puuesineillä ja suolalla jo varhaiskeskiajalla, ja kaupunki perustettiin laillistamaan tätä kauppaa; kuningas Kustaa II Aadolf antoi sille kaupunkioikeudet vuonna 1617. Keskusta on rakennettu ruutukaavaan, ja siellä on yksi maan parhaiten säilyneistä empiretyylisistä puutalokortteleista. Vuonna 1721 Uudessakaupungissa solmittiin Uudenkaupungin rauha, joka päätti Suuren Pohjan sodan Ruotsin ja Venäjän välillä. Vuonna 1855 brittiläinen ja ranskalainen laivasto hyökkäsivät kaupunkiin Ahvenanmaan sodan aikana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suva — kaupunkilehti / Kuningaskunnasta pääkaupungiksi: Vuosi, jolloin sisämaassa käytiin sotaa] Samaan aikaan kun isoisän matka vei hänet Fidžin ohi 1873, saaren sisämaassa käytiin sotaa. Cakobaun hallitus lähetti aseistetun joukon kukistamaan kai colo -heimoja, jotka eivät olleet kääntyneet kristinuskoon eivätkä tunnustaneet Cakobaun valtaa; taustalla oli myös kiista maanomistuksesta. Kahdeksankuukautinen kampanja maalis–lokakuussa 1873 päättyi antautumiseen. Sota oli yksi viimeisistä merkeistä siitä, ettei koko saari ollut vielä yhden hallinnon alla. Sisämaan heimojen jälkeläiset ovat tänäkin päivänä elävä osa Fidžin iTaukei-väestöä, ja ylänköjen kylissä vaalitaan omia perinteitä.
+- [Jemen — maalehti / Rakennukset: Kaupunki jyrkänteen reunalla] Kawkaban on vuoren laella lähes kolmen kilometrin korkeudessa, ja aivan sen alapuolella tasangolla on toinen kaupunki nimeltä Shibam — ei sama kuin Hadramautin savitiilikaupunki. Ylhäällä asuttiin, alhaalla käytiin kauppaa, ja väliä kuljettiin kallioon hakattuja portaita pitkin: niitä on runsaat tuhat ja korkeuseroa lähes 600 metriä. Nimi tarkoittaa arabiaksi kahta planeettaa. Kaupunki oli Yufirien hallitsijasuvun pääkaupunki 800-luvulta alkaen ja Sharaf ad-Dinin suvun tukikohta 1500-luvulta. Lähdettä ei ylhäällä ole, joten kalliosta louhittiin sadevesialtaita, joilla on omat nimensä. Vettä myös riittää: Kawkabaniin sataa vuodessa noin 380 millimetriä, enemmän kuin lähelle jäävään Sanaaseen.
+
+### 31.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+================ KOHTA 32 (kohde:hahmotelma-loviisa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loviisa (historia)
+Tietoruudun teksti: Loviisa perustettiin vuonna 1745 nimellä Degerby raja- ja linnoituskaupungiksi, sillä Turun rauhan 1743 jälkeen Itä-Suomen ainoa kauppakaupunki Hamina jäi rajan taakse. Kuningas Aadolf Fredrik antoi kaupungille uuden nimen vuonna 1752 kuningattarensa Lovisa Ulrikan mukaan. Kaupungin eteläpuolelle rakennettiin Svartholman merilinnoitus, joka antautui venäläisille lähes taistelematta vuonna 1808. Krimin sodan aikana heinäkuussa 1855 englantilaiset laivat ampuivat Svartholmaa, ja linnoitus räjähti raunioiksi; samoihin aikoihin kaupungissa syttyi tulipalo, joka tuhosi suuren osan vanhasta keskustasta ja puisen kirkon. Palon syy on jäänyt arvoitukseksi, mutta senaatti päätti rakentaa Loviisan uudelleen entiselle paikalleen, ja 1860-luvun alussa kaupunki alkoi kehittyä kylpyläkaupungiksi.
+
+### 32.1
+KYSYMYS: Miksi kaupungin nimi vaihtui Degerbystä Loviisaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loviisa (historia)
+Tietoruudun teksti: Loviisa perustettiin vuonna 1745 nimellä Degerby raja- ja linnoituskaupungiksi, sillä Turun rauhan 1743 jälkeen Itä-Suomen ainoa kauppakaupunki Hamina jäi rajan taakse. Kuningas Aadolf Fredrik antoi kaupungille uuden nimen vuonna 1752 kuningattarensa Lovisa Ulrikan mukaan. Kaupungin eteläpuolelle rakennettiin Svartholman merilinnoitus, joka antautui venäläisille lähes taistelematta vuonna 1808. Krimin sodan aikana heinäkuussa 1855 englantilaiset laivat ampuivat Svartholmaa, ja linnoitus räjähti raunioiksi; samoihin aikoihin kaupungissa syttyi tulipalo, joka tuhosi suuren osan vanhasta keskustasta ja puisen kirkon. Palon syy on jäänyt arvoitukseksi, mutta senaatti päätti rakentaa Loviisan uudelleen entiselle paikalleen, ja 1860-luvun alussa kaupunki alkoi kehittyä kylpyläkaupungiksi.
+
+### 32.2
+KYSYMYS: Mitä Loviisassa tapahtui Krimin sodan aikana kesällä 1855?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loviisa (historia)
+Tietoruudun teksti: Loviisa perustettiin vuonna 1745 nimellä Degerby raja- ja linnoituskaupungiksi, sillä Turun rauhan 1743 jälkeen Itä-Suomen ainoa kauppakaupunki Hamina jäi rajan taakse. Kuningas Aadolf Fredrik antoi kaupungille uuden nimen vuonna 1752 kuningattarensa Lovisa Ulrikan mukaan. Kaupungin eteläpuolelle rakennettiin Svartholman merilinnoitus, joka antautui venäläisille lähes taistelematta vuonna 1808. Krimin sodan aikana heinäkuussa 1855 englantilaiset laivat ampuivat Svartholmaa, ja linnoitus räjähti raunioiksi; samoihin aikoihin kaupungissa syttyi tulipalo, joka tuhosi suuren osan vanhasta keskustasta ja puisen kirkon. Palon syy on jäänyt arvoitukseksi, mutta senaatti päätti rakentaa Loviisan uudelleen entiselle paikalleen, ja 1860-luvun alussa kaupunki alkoi kehittyä kylpyläkaupungiksi.
+
+### 32.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+================ KOHTA 33 (kohde:hahmotelma-vaasa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaasa (historia)
+Tietoruudun teksti: Vaasan edeltäjän, Mustasaaren kaupungin, perusti kuningas Kaarle IX vuonna 1606, ja vuonna 1611 kaupunki sai kaupunkioikeudet sekä nimen Vaasa-suvun mukaan. Meriyhteydet, laivanrakennus ja tervakauppa toivat kaupungille vaurautta 1600-luvulla. Elokuussa 1852 tiheään rakennettu puukaupunki paloi lähes kokonaan, ja 379 rakennuksesta vain 24 yksityistä taloa säilyi. Kaupungin nimeksi muutettiin vuonna 1855 tsaari Nikolai I:n muistoksi Nikolainkaupunki, mutta asukkaat käyttivät edelleen vanhaa nimeä. Uusi kaupunki nousi vuonna 1862 noin seitsemän kilometriä luoteeseen meren rannalle, ja Carl Axel Setterbergin empiretyylisessä asemakaavassa viisi leveää katua jakoi korttelit osiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kohdekartta / Kohdekartta: Kaupungintalo] 1923 Arkkitehti Ragnar Östberg suunnitteli kaupungintalon, joka rakennettiin kaupungin rantaan vuosina 1911–1923 — melkein kahdeksan miljoonaa punaista tiiltä. Tornissa on 106 metriä ja huipulla kolme kultaista kruunua, Ruotsin vanha tunnus. Talon sisällä on Sininen sali, jossa Nobelin palkintojen juhlaillallinen syödään joka vuosi. Sen jälkeen vieraat tanssivat Kultaisessa salissa, jonka seinät on peitetty yli 18 miljoonalla pienellä mosaiikkipalalla. Kaupungintalo avattiin juhlallisesti 23. kesäkuuta 1923. Avaajat luulivat sen olevan tasan 400 vuotta siitä, kun kuningas Kustaa Vaasa saapui Tukholmaan — todellisuudessa päivämäärä oli hieman väärin, mutta juhla pidettiin silti.
+- [Varsova — kohdekartta / Kohdekartta: Varsovan linna] 1971–1984 (alkuperäinen linna 1300-luvulta) Varsovan linna on seisonut Wisła-joen rannalla jo 1300-luvulta lähtien, aluksi vaatimattomana Mazovian herttuoiden linnana. 1600-luvun alussa kuningas Zygmunt III Vaasa siirsi hovinsa Krakovasta Varsovaan ja rakennutti linnasta komean barokkilinnan, jota kruunaa 60 metriä korkea Sigismundin torni. Linnan sisällä sijaitsee sali, jossa hyväksyttiin Euroopan ensimmäinen kirjoitettu perustuslaki vuonna 1791. Kuninkaallisissa asunnoissa riippuu maalauksia mestari Canaletolta, ja linnan kappelissa säilytetään jopa sotasankari Tadeusz Kościuszkon sydäntä. Toinen maailmansota tuhosi linnan lähes kokonaan - ensin pommeissa syksyllä 1939, sitten saksalaiste…
+
+### 33.1
+KYSYMYS: Miksi Vaasa rakennettiin palon jälkeen aivan uuteen paikkaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaasa (historia)
+Tietoruudun teksti: Vaasan edeltäjän, Mustasaaren kaupungin, perusti kuningas Kaarle IX vuonna 1606, ja vuonna 1611 kaupunki sai kaupunkioikeudet sekä nimen Vaasa-suvun mukaan. Meriyhteydet, laivanrakennus ja tervakauppa toivat kaupungille vaurautta 1600-luvulla. Elokuussa 1852 tiheään rakennettu puukaupunki paloi lähes kokonaan, ja 379 rakennuksesta vain 24 yksityistä taloa säilyi. Kaupungin nimeksi muutettiin vuonna 1855 tsaari Nikolai I:n muistoksi Nikolainkaupunki, mutta asukkaat käyttivät edelleen vanhaa nimeä. Uusi kaupunki nousi vuonna 1862 noin seitsemän kilometriä luoteeseen meren rannalle, ja Carl Axel Setterbergin empiretyylisessä asemakaavassa viisi leveää katua jakoi korttelit osiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kohdekartta / Kohdekartta: Kaupungintalo] 1923 Arkkitehti Ragnar Östberg suunnitteli kaupungintalon, joka rakennettiin kaupungin rantaan vuosina 1911–1923 — melkein kahdeksan miljoonaa punaista tiiltä. Tornissa on 106 metriä ja huipulla kolme kultaista kruunua, Ruotsin vanha tunnus. Talon sisällä on Sininen sali, jossa Nobelin palkintojen juhlaillallinen syödään joka vuosi. Sen jälkeen vieraat tanssivat Kultaisessa salissa, jonka seinät on peitetty yli 18 miljoonalla pienellä mosaiikkipalalla. Kaupungintalo avattiin juhlallisesti 23. kesäkuuta 1923. Avaajat luulivat sen olevan tasan 400 vuotta siitä, kun kuningas Kustaa Vaasa saapui Tukholmaan — todellisuudessa päivämäärä oli hieman väärin, mutta juhla pidettiin silti.
+- [Varsova — kohdekartta / Kohdekartta: Varsovan linna] 1971–1984 (alkuperäinen linna 1300-luvulta) Varsovan linna on seisonut Wisła-joen rannalla jo 1300-luvulta lähtien, aluksi vaatimattomana Mazovian herttuoiden linnana. 1600-luvun alussa kuningas Zygmunt III Vaasa siirsi hovinsa Krakovasta Varsovaan ja rakennutti linnasta komean barokkilinnan, jota kruunaa 60 metriä korkea Sigismundin torni. Linnan sisällä sijaitsee sali, jossa hyväksyttiin Euroopan ensimmäinen kirjoitettu perustuslaki vuonna 1791. Kuninkaallisissa asunnoissa riippuu maalauksia mestari Canaletolta, ja linnan kappelissa säilytetään jopa sotasankari Tadeusz Kościuszkon sydäntä. Toinen maailmansota tuhosi linnan lähes kokonaan - ensin pommeissa syksyllä 1939, sitten saksalaiste…
+
+### 33.2
+KYSYMYS: Miksi kaupunkia kutsuttiin Nikolainkaupungiksi, vaikka asukkaat käyttivät vanhaa nimeä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaasa (historia)
+Tietoruudun teksti: Vaasan edeltäjän, Mustasaaren kaupungin, perusti kuningas Kaarle IX vuonna 1606, ja vuonna 1611 kaupunki sai kaupunkioikeudet sekä nimen Vaasa-suvun mukaan. Meriyhteydet, laivanrakennus ja tervakauppa toivat kaupungille vaurautta 1600-luvulla. Elokuussa 1852 tiheään rakennettu puukaupunki paloi lähes kokonaan, ja 379 rakennuksesta vain 24 yksityistä taloa säilyi. Kaupungin nimeksi muutettiin vuonna 1855 tsaari Nikolai I:n muistoksi Nikolainkaupunki, mutta asukkaat käyttivät edelleen vanhaa nimeä. Uusi kaupunki nousi vuonna 1862 noin seitsemän kilometriä luoteeseen meren rannalle, ja Carl Axel Setterbergin empiretyylisessä asemakaavassa viisi leveää katua jakoi korttelit osiin.
+
+### 33.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+================ KOHTA 34 (kohde:hahmotelma-kajaani) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kajaanin linna (historia)
+Tietoruudun teksti: Kajaanin linna on graniitista rakennettu linnanrauniot Kajaaninjoen saarella Ämmäkosken ja Koivukosken välissä. Kuningas Kaarle IX aloitti sen rakentamisen vuonna 1604 suojaamaan Teusinan rauhassa 1595 Ruotsille siirtynyttä Kainuuta, ja se oli Ruotsissa viimeinen keskiaikaiseen tyyliin rakennettu kivilinna. Keskeneräistä linnaa käytettiin aluksi vankilana, ja sen tunnetuin vanki oli historioitsija Johannes Messenius, joka kirjoitti vankeutensa aikana Skandinavian historiaa käsittelevän teoksen Scondia illustrata. Linnan viereen perustettiin vuonna 1651 Kajaanin kaupunki. Suuren Pohjan sodan aikana venäläiset joukot valtasivat linnan ja räjäyttivät sen vuonna 1716, ja jäljelle jäivät vain katottomat rauniot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Qatar — maalehti / Aavikko: Dyyni, joka hurisee kun hiekka vyöryy] Noin neljänkymmenen kilometrin päässä Dohasta, Mesaieedin suunnassa, on dyyni, jonka rinne pitää ääntä. Kun kuiva hiekka lähtee vyörymään alas jyrkkää sivua, siitä nousee hurina, jota on verrattu kaukaiseen moottoriin. Ääni voi jatkua minuutteja ja yltää yli sadan desibelin. Mikä tahansa hiekka ei laula: jyvien on oltava kuivia, pyöreitä, pinnaltaan puhtaita ja kooltaan 0,1–0,5 millimetriä. Kostea hiekka vaikenee, koska jyvät tarttuvat toisiinsa. Tällaisia laulavia dyynejä tunnetaan maailmasta noin 35 paikassa. Qatarissa rinteelle kiivetään iltapäivällä ja ääni saadaan aikaan liukumalla alas.
+
+### 34.1
+KYSYMYS: Miksi Kajaanin linna rakennettiin kaukaiseen Kainuuseen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kajaanin linna (historia)
+Tietoruudun teksti: Kajaanin linna on graniitista rakennettu linnanrauniot Kajaaninjoen saarella Ämmäkosken ja Koivukosken välissä. Kuningas Kaarle IX aloitti sen rakentamisen vuonna 1604 suojaamaan Teusinan rauhassa 1595 Ruotsille siirtynyttä Kainuuta, ja se oli Ruotsissa viimeinen keskiaikaiseen tyyliin rakennettu kivilinna. Keskeneräistä linnaa käytettiin aluksi vankilana, ja sen tunnetuin vanki oli historioitsija Johannes Messenius, joka kirjoitti vankeutensa aikana Skandinavian historiaa käsittelevän teoksen Scondia illustrata. Linnan viereen perustettiin vuonna 1651 Kajaanin kaupunki. Suuren Pohjan sodan aikana venäläiset joukot valtasivat linnan ja räjäyttivät sen vuonna 1716, ja jäljelle jäivät vain katottomat rauniot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Qatar — maalehti / Aavikko: Dyyni, joka hurisee kun hiekka vyöryy] Noin neljänkymmenen kilometrin päässä Dohasta, Mesaieedin suunnassa, on dyyni, jonka rinne pitää ääntä. Kun kuiva hiekka lähtee vyörymään alas jyrkkää sivua, siitä nousee hurina, jota on verrattu kaukaiseen moottoriin. Ääni voi jatkua minuutteja ja yltää yli sadan desibelin. Mikä tahansa hiekka ei laula: jyvien on oltava kuivia, pyöreitä, pinnaltaan puhtaita ja kooltaan 0,1–0,5 millimetriä. Kostea hiekka vaikenee, koska jyvät tarttuvat toisiinsa. Tällaisia laulavia dyynejä tunnetaan maailmasta noin 35 paikassa. Qatarissa rinteelle kiivetään iltapäivällä ja ääni saadaan aikaan liukumalla alas.
+
+### 34.2
+KYSYMYS: Miksi vankeja lähetettiin juuri Kajaanin linnaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kajaanin linna (historia)
+Tietoruudun teksti: Kajaanin linna on graniitista rakennettu linnanrauniot Kajaaninjoen saarella Ämmäkosken ja Koivukosken välissä. Kuningas Kaarle IX aloitti sen rakentamisen vuonna 1604 suojaamaan Teusinan rauhassa 1595 Ruotsille siirtynyttä Kainuuta, ja se oli Ruotsissa viimeinen keskiaikaiseen tyyliin rakennettu kivilinna. Keskeneräistä linnaa käytettiin aluksi vankilana, ja sen tunnetuin vanki oli historioitsija Johannes Messenius, joka kirjoitti vankeutensa aikana Skandinavian historiaa käsittelevän teoksen Scondia illustrata. Linnan viereen perustettiin vuonna 1651 Kajaanin kaupunki. Suuren Pohjan sodan aikana venäläiset joukot valtasivat linnan ja räjäyttivät sen vuonna 1716, ja jäljelle jäivät vain katottomat rauniot.
+
+### 34.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+================ KOHTA 35 (kohde:hahmotelma-raseborg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Raaseporin linna (historia)
+Tietoruudun teksti: Raaseporin linna on keskiaikainen linna Raaseporissa, jonka ensimmäinen vaihe valmistui arviolta 1370-luvun lopulla ja josta on ensimmäinen kirjallinen maininta vuodelta 1378. Se rakennettiin pienelle saarelle merenlahden pohjukkaan turvaamaan Ruotsin etuja Etelä-Suomessa Tallinnan hansakaupunkia vastaan. Linnan pohjapiirros muistuttaa suurta D-kirjainta, jonka yhdessä kulmassa on pyöreä, paksuseinäinen torni. Maankohoamisen vuoksi meren puolelta oli yhä vaikeampi lähestyä linnaa, ja kun Helsinki perustettiin vuonna 1550, Raasepori menetti asemansa: linna hylättiin vuonna 1553. Rauniot ovat nykyisin kesäisin avoinna yleisölle, ja niiden vieressä esitetään ruotsinkielistä kesäteatteria.
+
+### 35.1
+KYSYMYS: Miksi veneillä oli yhä vaikeampi päästä saarelle rakennetulle Raaseporin linnalle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Raaseporin linna (historia)
+Tietoruudun teksti: Raaseporin linna on keskiaikainen linna Raaseporissa, jonka ensimmäinen vaihe valmistui arviolta 1370-luvun lopulla ja josta on ensimmäinen kirjallinen maininta vuodelta 1378. Se rakennettiin pienelle saarelle merenlahden pohjukkaan turvaamaan Ruotsin etuja Etelä-Suomessa Tallinnan hansakaupunkia vastaan. Linnan pohjapiirros muistuttaa suurta D-kirjainta, jonka yhdessä kulmassa on pyöreä, paksuseinäinen torni. Maankohoamisen vuoksi meren puolelta oli yhä vaikeampi lähestyä linnaa, ja kun Helsinki perustettiin vuonna 1550, Raasepori menetti asemansa: linna hylättiin vuonna 1553. Rauniot ovat nykyisin kesäisin avoinna yleisölle, ja niiden vieressä esitetään ruotsinkielistä kesäteatteria.
+
+### 35.2
+KYSYMYS: Miksi Helsingin perustaminen vaikutti Raaseporin linnan kohtaloon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Raaseporin linna (historia)
+Tietoruudun teksti: Raaseporin linna on keskiaikainen linna Raaseporissa, jonka ensimmäinen vaihe valmistui arviolta 1370-luvun lopulla ja josta on ensimmäinen kirjallinen maininta vuodelta 1378. Se rakennettiin pienelle saarelle merenlahden pohjukkaan turvaamaan Ruotsin etuja Etelä-Suomessa Tallinnan hansakaupunkia vastaan. Linnan pohjapiirros muistuttaa suurta D-kirjainta, jonka yhdessä kulmassa on pyöreä, paksuseinäinen torni. Maankohoamisen vuoksi meren puolelta oli yhä vaikeampi lähestyä linnaa, ja kun Helsinki perustettiin vuonna 1550, Raasepori menetti asemansa: linna hylättiin vuonna 1553. Rauniot ovat nykyisin kesäisin avoinna yleisölle, ja niiden vieressä esitetään ruotsinkielistä kesäteatteria.
+
+### 35.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI

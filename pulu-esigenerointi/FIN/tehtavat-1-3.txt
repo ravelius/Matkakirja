@@ -1,0 +1,213 @@
+================ KOHTA 11 (kohde:kerimaenkirkko) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kerimäen kirkko (sana)
+Tietoruudun teksti: Kerimäen kirkko Savonlinnan Kerimäellä on maailman suurin puukirkko. Sen suunnitteli Anders Fredrik Granstedt, ja se rakennettiin vuosina 1844–1847: pituutta 45 metriä, leveyttä 42, korkeutta 37 ja istumapaikkoja yli 3 000 — väkeä kirkkoon mahtuu kerralla 5 000. Sitkeän huhun mukaan koko johtuu laskuvirheestä: arkkitehdin senttimetrit olisi luettu tuumiksi, jotka ovat 2,54 kertaa suurempia. Myöhemmät tutkimukset ovat kuitenkin osoittaneet, että kirkko oli tarkoituskin rakentaa juuri näin isoksi, jotta puolet seudun väestä mahtuisi sinne yhtä aikaa. Talvella jumalanpalvelukset pidetään pienemmässä talvikirkossa, sillä pääkirkossa ei ole lämmitystä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Rakennukset: Kirkko, johon mahtuu yli viisituhatta ihmistä] Pyhän Elisabetin tuomiokirkko on Slovakian suurin kirkko ja yksi Euroopan itäisimmistä goottilaisista katedraaleista. Se on 60 metriä pitkä ja 36 metriä leveä, pohjoinen torni kohoaa 59 metriin, ja kirkkoon mahtuu yli 5 000 ihmistä. Nykyinen kirkko alkoi nousta noin vuoden 1380 palon jälkeen aiemman, Elisabetille pyhitetyn kirkon paikalle, ja sen katsotaan valmistuneen vuonna 1508. Sisällä keskilaivaa leikkaa yhtä korkea ja leveä poikkilaiva, ja yhdessä ne muodostavat kreikkalaisen ristin.
+- [Alankomaat — maalehti / Keksinnöt: Levyn keskireiän mitta otettiin kolikosta] 1979 — Philipsin laboratoriossa kehitettiin 1970-luvulla levy, jota luetaan laservalolla eikä neulalla. Prototyyppi näytettiin lehdistölle maaliskuussa 1979: se oli 11,5 senttiä leveä, ja keskireikä tehtiin kymmenen sentin kolikon kokoiseksi. Kehityspäällikkö kertoi myöhemmin laskeneensa kolikon pöydälle ja todenneensa, että siinä on mitta. Japanilainen kumppani Sony vaati levylle 74 minuutin soittoajan, ja siksi valmiista cd-levystä tuli 12 senttiä leveä. Tiedot ovat pieninä kuoppina kierteellä, joka suoraksi vedettynä on jopa 5,4 kilometriä pitkä.
+
+### 11.1
+KYSYMYS: Kuinka moni kirkkoon mahtuu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kerimäen kirkko (sana)
+Tietoruudun teksti: Kerimäen kirkko Savonlinnan Kerimäellä on maailman suurin puukirkko. Sen suunnitteli Anders Fredrik Granstedt, ja se rakennettiin vuosina 1844–1847: pituutta 45 metriä, leveyttä 42, korkeutta 37 ja istumapaikkoja yli 3 000 — väkeä kirkkoon mahtuu kerralla 5 000. Sitkeän huhun mukaan koko johtuu laskuvirheestä: arkkitehdin senttimetrit olisi luettu tuumiksi, jotka ovat 2,54 kertaa suurempia. Myöhemmät tutkimukset ovat kuitenkin osoittaneet, että kirkko oli tarkoituskin rakentaa juuri näin isoksi, jotta puolet seudun väestä mahtuisi sinne yhtä aikaa. Talvella jumalanpalvelukset pidetään pienemmässä talvikirkossa, sillä pääkirkossa ei ole lämmitystä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Rakennukset: Kirkko, johon mahtuu yli viisituhatta ihmistä] Pyhän Elisabetin tuomiokirkko on Slovakian suurin kirkko ja yksi Euroopan itäisimmistä goottilaisista katedraaleista. Se on 60 metriä pitkä ja 36 metriä leveä, pohjoinen torni kohoaa 59 metriin, ja kirkkoon mahtuu yli 5 000 ihmistä. Nykyinen kirkko alkoi nousta noin vuoden 1380 palon jälkeen aiemman, Elisabetille pyhitetyn kirkon paikalle, ja sen katsotaan valmistuneen vuonna 1508. Sisällä keskilaivaa leikkaa yhtä korkea ja leveä poikkilaiva, ja yhdessä ne muodostavat kreikkalaisen ristin.
+
+### 11.2
+KYSYMYS: Pitääkö tarina mittavirheestä paikkansa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kerimäen kirkko (sana)
+Tietoruudun teksti: Kerimäen kirkko Savonlinnan Kerimäellä on maailman suurin puukirkko. Sen suunnitteli Anders Fredrik Granstedt, ja se rakennettiin vuosina 1844–1847: pituutta 45 metriä, leveyttä 42, korkeutta 37 ja istumapaikkoja yli 3 000 — väkeä kirkkoon mahtuu kerralla 5 000. Sitkeän huhun mukaan koko johtuu laskuvirheestä: arkkitehdin senttimetrit olisi luettu tuumiksi, jotka ovat 2,54 kertaa suurempia. Myöhemmät tutkimukset ovat kuitenkin osoittaneet, että kirkko oli tarkoituskin rakentaa juuri näin isoksi, jotta puolet seudun väestä mahtuisi sinne yhtä aikaa. Talvella jumalanpalvelukset pidetään pienemmässä talvikirkossa, sillä pääkirkossa ei ole lämmitystä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Keksinnöt: Levyn keskireiän mitta otettiin kolikosta] 1979 — Philipsin laboratoriossa kehitettiin 1970-luvulla levy, jota luetaan laservalolla eikä neulalla. Prototyyppi näytettiin lehdistölle maaliskuussa 1979: se oli 11,5 senttiä leveä, ja keskireikä tehtiin kymmenen sentin kolikon kokoiseksi. Kehityspäällikkö kertoi myöhemmin laskeneensa kolikon pöydälle ja todenneensa, että siinä on mitta. Japanilainen kumppani Sony vaati levylle 74 minuutin soittoajan, ja siksi valmiista cd-levystä tuli 12 senttiä leveä. Tiedot ovat pieninä kuoppina kierteellä, joka suoraksi vedettynä on jopa 5,4 kilometriä pitkä.
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:bomarsund) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bomarsund (historia)
+Tietoruudun teksti: Bomarsund on Ahvenanmaan Sundissa sijaitseva linnoitus, jonka rakentamisen Venäjä aloitti vuonna 1832. Elokuussa 1854 siellä käytiin Krimin sotaan kuuluneen Ahvenanmaan sodan ainoa suuri taistelu: englantilais-ranskalainen retkikunta piiritti, valtasi ja lopuksi hävitti linnoituksen. Linnoitus oli kesken — suunnitelluista kahdestatoista aputornista oli valmiina kaksi — ja sen suunnittelijat olivat olettaneet, etteivät suuret sota-alukset pääsisi lähistön kapeista salmista; höyrylaivojen aikaan oletus ei enää pitänyt. Ensimmäinen yhteenotto 21. kesäkuuta 1854 jäi ratkaisemattomaksi tykistökaksintaisteluksi, ja juuri siinä Charles Davis Lucas heitti kannelle pudonneen kranaatin mereen ja sai ensimmäisenä ihmisenä Victoria Crossin. Heinäkuun lopulla linnoituksen ympärillä oli 25 brittialusta, ja 8. elokuuta maihin nousi etelään 7 000 ranskalaista sotilasta sekä pohjoiseen loput 2 000 ransk…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Honiara — kohdekartta / Kohdekartta: Holy Crossin katedraali] 1957 ja 1978 Honiaran ensimmäinen katolinen katedraali pystytettiin Vavayan harjanteen juurelle kukkulalle, jota kutsutaan nykyään yleisesti Cathedral Hilliksi. Se oli väliaikainen ratkaisu, ja se tehtiin suuresta quonset-parakista: kirkko siunattiin ja avattiin yleisölle 1957. Julkisivuun muurattiin tiili Salomonsaarten ensimmäisestä katolisesta lähetysasemasta, joka oli rakennettu 1845. Paikan valintaan oli oma syynsä. Sen uskottiin olevan se kohta, johon Álvaro de Mendañan retkikunta pystytti Salomonsaarten ensimmäisen ristin vuonna 1568. Pysyvän katedraalin peruskivi laskettiin 1976 samalle kukkulalle, ja rakennus vihittiin ja avattiin 1978. Samana vuonna paavi Johannes Paavali II korot…
+- [Suomi — maalehti / Luonto: Meri jossa on 50 000 saarta] nykyään — Saaristomeri Turun ja Ahvenanmaan välissä on joidenkin määritelmien mukaan maailman saarirunsain saaristo: sillä on arviolta 50 000 saarta, joskin suuri osa niistä on aivan pieniä ja tiiviisti toistensa lähellä. Suurimmat saaret ovat asuttuja ja niille pääsee lautoilla ja silloilla, kun taas ulompi saaristo koostuu enimmäkseen asumattomista luodoista ja karikoista. Ahvenanmaa, alueen suurin saariryhmä, on Suomen itsehallinnollinen, ruotsinkielinen maakunta. Saaristomeri on suosittu purjehdus- ja veneilykohde kesäisin, ja sen rikas saaristolintukanta ja poikkeuksellinen kasvillisuus tekevät siitä myös merkittävän luontokohteen.
+
+### 12.1
+KYSYMYS: Mikä Ahvenanmaan sota oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bomarsund (historia)
+Tietoruudun teksti: Bomarsund on Ahvenanmaan Sundissa sijaitseva linnoitus, jonka rakentamisen Venäjä aloitti vuonna 1832. Elokuussa 1854 siellä käytiin Krimin sotaan kuuluneen Ahvenanmaan sodan ainoa suuri taistelu: englantilais-ranskalainen retkikunta piiritti, valtasi ja lopuksi hävitti linnoituksen. Linnoitus oli kesken — suunnitelluista kahdestatoista aputornista oli valmiina kaksi — ja sen suunnittelijat olivat olettaneet, etteivät suuret sota-alukset pääsisi lähistön kapeista salmista; höyrylaivojen aikaan oletus ei enää pitänyt. Ensimmäinen yhteenotto 21. kesäkuuta 1854 jäi ratkaisemattomaksi tykistökaksintaisteluksi, ja juuri siinä Charles Davis Lucas heitti kannelle pudonneen kranaatin mereen ja sai ensimmäisenä ihmisenä Victoria Crossin. Heinäkuun lopulla linnoituksen ympärillä oli 25 brittialusta, ja 8. elokuuta maihin nousi etelään 7 000 ranskalaista sotilasta sekä pohjoiseen loput 2 000 ransk…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Meri jossa on 50 000 saarta] nykyään — Saaristomeri Turun ja Ahvenanmaan välissä on joidenkin määritelmien mukaan maailman saarirunsain saaristo: sillä on arviolta 50 000 saarta, joskin suuri osa niistä on aivan pieniä ja tiiviisti toistensa lähellä. Suurimmat saaret ovat asuttuja ja niille pääsee lautoilla ja silloilla, kun taas ulompi saaristo koostuu enimmäkseen asumattomista luodoista ja karikoista. Ahvenanmaa, alueen suurin saariryhmä, on Suomen itsehallinnollinen, ruotsinkielinen maakunta. Saaristomeri on suosittu purjehdus- ja veneilykohde kesäisin, ja sen rikas saaristolintukanta ja poikkeuksellinen kasvillisuus tekevät siitä myös merkittävän luontokohteen.
+
+### 12.2
+KYSYMYS: Kuka sai ensimmäisen Victoria Crossin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bomarsund (historia)
+Tietoruudun teksti: Bomarsund on Ahvenanmaan Sundissa sijaitseva linnoitus, jonka rakentamisen Venäjä aloitti vuonna 1832. Elokuussa 1854 siellä käytiin Krimin sotaan kuuluneen Ahvenanmaan sodan ainoa suuri taistelu: englantilais-ranskalainen retkikunta piiritti, valtasi ja lopuksi hävitti linnoituksen. Linnoitus oli kesken — suunnitelluista kahdestatoista aputornista oli valmiina kaksi — ja sen suunnittelijat olivat olettaneet, etteivät suuret sota-alukset pääsisi lähistön kapeista salmista; höyrylaivojen aikaan oletus ei enää pitänyt. Ensimmäinen yhteenotto 21. kesäkuuta 1854 jäi ratkaisemattomaksi tykistökaksintaisteluksi, ja juuri siinä Charles Davis Lucas heitti kannelle pudonneen kranaatin mereen ja sai ensimmäisenä ihmisenä Victoria Crossin. Heinäkuun lopulla linnoituksen ympärillä oli 25 brittialusta, ja 8. elokuuta maihin nousi etelään 7 000 ranskalaista sotilasta sekä pohjoiseen loput 2 000 ransk…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Honiara — kohdekartta / Kohdekartta: Holy Crossin katedraali] 1957 ja 1978 Honiaran ensimmäinen katolinen katedraali pystytettiin Vavayan harjanteen juurelle kukkulalle, jota kutsutaan nykyään yleisesti Cathedral Hilliksi. Se oli väliaikainen ratkaisu, ja se tehtiin suuresta quonset-parakista: kirkko siunattiin ja avattiin yleisölle 1957. Julkisivuun muurattiin tiili Salomonsaarten ensimmäisestä katolisesta lähetysasemasta, joka oli rakennettu 1845. Paikan valintaan oli oma syynsä. Sen uskottiin olevan se kohta, johon Álvaro de Mendañan retkikunta pystytti Salomonsaarten ensimmäisen ristin vuonna 1568. Pysyvän katedraalin peruskivi laskettiin 1976 samalle kukkulalle, ja rakennus vihittiin ja avattiin 1978. Samana vuonna paavi Johannes Paavali II korot…
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:saimaa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saimaa (meri)
+Tietoruudun teksti: Saimaa on noin 4 279 neliökilometrin järvi Kaakkois-Suomessa: maan suurin ja Euroopan neljänneksi suurin luonnollinen makean veden järvi. Se syntyi jääkauden sulamisvesistä, ja noin kuusituhatta vuotta sitten muinainen Saimaa — silloin lähes 9 000 neliökilometriä — purkautui äkillisesti uudesta lasku-uomasta ja jätti jälkeensä tuhansia neliökilometrejä uutta soistuvaa maata. Nykyään vedet lähtevät Vuoksea myöten Laatokkaan. Järvi on saarten ja kapeiden salmien sokkelo, jonka jokainen osa on oma vetensä: Orivesi, Puruvesi, Haukivesi, Yövesi, Pihlajavesi, Pyhäselkä. Ulkoministeriön englanninkielisen esittelyn mukaan alueella on 14 000 saarta ja enemmän rantaviivaa pinta-alaa kohti kuin missään muualla maailmassa, yhteensä lähes 15 000 kilometriä. Rannoilla ovat Lappeenranta, Imatra, Savonlinna, Mikkeli, Varkaus ja Joensuu. Järvessä elää kaksi lajia, joita ei ole missään muualla: uhanalain…
+
+### 13.1
+KYSYMYS: Miksi saimaannorppa elää vain täällä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saimaa (meri)
+Tietoruudun teksti: Saimaa on noin 4 279 neliökilometrin järvi Kaakkois-Suomessa: maan suurin ja Euroopan neljänneksi suurin luonnollinen makean veden järvi. Se syntyi jääkauden sulamisvesistä, ja noin kuusituhatta vuotta sitten muinainen Saimaa — silloin lähes 9 000 neliökilometriä — purkautui äkillisesti uudesta lasku-uomasta ja jätti jälkeensä tuhansia neliökilometrejä uutta soistuvaa maata. Nykyään vedet lähtevät Vuoksea myöten Laatokkaan. Järvi on saarten ja kapeiden salmien sokkelo, jonka jokainen osa on oma vetensä: Orivesi, Puruvesi, Haukivesi, Yövesi, Pihlajavesi, Pyhäselkä. Ulkoministeriön englanninkielisen esittelyn mukaan alueella on 14 000 saarta ja enemmän rantaviivaa pinta-alaa kohti kuin missään muualla maailmassa, yhteensä lähes 15 000 kilometriä. Rannoilla ovat Lappeenranta, Imatra, Savonlinna, Mikkeli, Varkaus ja Joensuu. Järvessä elää kaksi lajia, joita ei ole missään muualla: uhanalain…
+
+### 13.2
+KYSYMYS: Mihin Saimaan vedet laskevat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saimaa (meri)
+Tietoruudun teksti: Saimaa on noin 4 279 neliökilometrin järvi Kaakkois-Suomessa: maan suurin ja Euroopan neljänneksi suurin luonnollinen makean veden järvi. Se syntyi jääkauden sulamisvesistä, ja noin kuusituhatta vuotta sitten muinainen Saimaa — silloin lähes 9 000 neliökilometriä — purkautui äkillisesti uudesta lasku-uomasta ja jätti jälkeensä tuhansia neliökilometrejä uutta soistuvaa maata. Nykyään vedet lähtevät Vuoksea myöten Laatokkaan. Järvi on saarten ja kapeiden salmien sokkelo, jonka jokainen osa on oma vetensä: Orivesi, Puruvesi, Haukivesi, Yövesi, Pihlajavesi, Pyhäselkä. Ulkoministeriön englanninkielisen esittelyn mukaan alueella on 14 000 saarta ja enemmän rantaviivaa pinta-alaa kohti kuin missään muualla maailmassa, yhteensä lähes 15 000 kilometriä. Rannoilla ovat Lappeenranta, Imatra, Savonlinna, Mikkeli, Varkaus ja Joensuu. Järvessä elää kaksi lajia, joita ei ole missään muualla: uhanalain…
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:koli) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koli (luonto · vuori)
+Tietoruudun teksti: Koli on metsäisten vaarojen jono Pielisen länsirannalla Pohjois-Karjalassa. Huipun nimi on Ukko-Koli, ja siltä avautuu itään laaja näkymä järvelle. Paikka oli aikanaan pakanallinen uhripaikka ja myöhemmin kaskiviljelyyn raivattua maata; kansallispuiston kolmestakymmenestä neliökilometristä osa pidetään yhä avoimena niittämällä ja laiduntamalla suomalaisilla lehmä- ja lammasroduilla, koska perinnemaiseman kasvillisuus katoaisi muuten. Maalarit löysivät Kolin 1800-luvulla, ja sitä on sen jälkeen kutsuttu yhdeksi Suomen komeimmista luonnonnäkymistä: Jean Sibelius, Juhani Aho ja Eero Järnefelt hakivat siitä aiheensa, ja Järnefeltin vuonna 1911 A. W. Finchin ja Ilmari Aallon kanssa maalaama suuri maisema roikkuu Helsingin rautatieaseman ravintolassa. Vaarojen kyljissä on myös luolia, joista tunnetuin on 34 metriä pitkä Pirunkirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Vaara jolle uhrattiin ja jolla laidunnetaan yhä] 1991 — Kolin vaarat kohoavat Pielisjärven länsirannalla, ja Ukko-Kolin huipulta avautuu näkymä kymmenien saarten ja selkien yli — yksi Suomen tunnetuimmista maisemista. Paikka oli aikoinaan pyhä uhripaikka, ja myöhemmin sen rinteillä harjoitettiin kaskiviljelyä, joka poltti metsän tuhkalannoitteeksi pelloille. Kansallispuisto perustettiin vuonna 1991 juuri tämän perinnemaiseman suojelemiseksi: 30 neliökilometrin alueella niityt niitetään yhä käsin ja perinteiset suomalaiset lehmä- ja lammasrodut laiduntavat avoimilla kedoilla, jotta harvinainen niittykasvillisuus säilyy. Ilman jatkuvaa laidunnusta avoimet vaaranlaet metsittyisivät muutamassa vuosikymmenessä.
+
+### 14.1
+KYSYMYS: Kuka maalasi Kolin kuuluisaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koli (luonto · vuori)
+Tietoruudun teksti: Koli on metsäisten vaarojen jono Pielisen länsirannalla Pohjois-Karjalassa. Huipun nimi on Ukko-Koli, ja siltä avautuu itään laaja näkymä järvelle. Paikka oli aikanaan pakanallinen uhripaikka ja myöhemmin kaskiviljelyyn raivattua maata; kansallispuiston kolmestakymmenestä neliökilometristä osa pidetään yhä avoimena niittämällä ja laiduntamalla suomalaisilla lehmä- ja lammasroduilla, koska perinnemaiseman kasvillisuus katoaisi muuten. Maalarit löysivät Kolin 1800-luvulla, ja sitä on sen jälkeen kutsuttu yhdeksi Suomen komeimmista luonnonnäkymistä: Jean Sibelius, Juhani Aho ja Eero Järnefelt hakivat siitä aiheensa, ja Järnefeltin vuonna 1911 A. W. Finchin ja Ilmari Aallon kanssa maalaama suuri maisema roikkuu Helsingin rautatieaseman ravintolassa. Vaarojen kyljissä on myös luolia, joista tunnetuin on 34 metriä pitkä Pirunkirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Vaara jolle uhrattiin ja jolla laidunnetaan yhä] 1991 — Kolin vaarat kohoavat Pielisjärven länsirannalla, ja Ukko-Kolin huipulta avautuu näkymä kymmenien saarten ja selkien yli — yksi Suomen tunnetuimmista maisemista. Paikka oli aikoinaan pyhä uhripaikka, ja myöhemmin sen rinteillä harjoitettiin kaskiviljelyä, joka poltti metsän tuhkalannoitteeksi pelloille. Kansallispuisto perustettiin vuonna 1991 juuri tämän perinnemaiseman suojelemiseksi: 30 neliökilometrin alueella niityt niitetään yhä käsin ja perinteiset suomalaiset lehmä- ja lammasrodut laiduntavat avoimilla kedoilla, jotta harvinainen niittykasvillisuus säilyy. Ilman jatkuvaa laidunnusta avoimet vaaranlaet metsittyisivät muutamassa vuosikymmenessä.
+
+### 14.2
+KYSYMYS: Mitä Ukko-Kolilta näkyy?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koli (luonto · vuori)
+Tietoruudun teksti: Koli on metsäisten vaarojen jono Pielisen länsirannalla Pohjois-Karjalassa. Huipun nimi on Ukko-Koli, ja siltä avautuu itään laaja näkymä järvelle. Paikka oli aikanaan pakanallinen uhripaikka ja myöhemmin kaskiviljelyyn raivattua maata; kansallispuiston kolmestakymmenestä neliökilometristä osa pidetään yhä avoimena niittämällä ja laiduntamalla suomalaisilla lehmä- ja lammasroduilla, koska perinnemaiseman kasvillisuus katoaisi muuten. Maalarit löysivät Kolin 1800-luvulla, ja sitä on sen jälkeen kutsuttu yhdeksi Suomen komeimmista luonnonnäkymistä: Jean Sibelius, Juhani Aho ja Eero Järnefelt hakivat siitä aiheensa, ja Järnefeltin vuonna 1911 A. W. Finchin ja Ilmari Aallon kanssa maalaama suuri maisema roikkuu Helsingin rautatieaseman ravintolassa. Vaarojen kyljissä on myös luolia, joista tunnetuin on 34 metriä pitkä Pirunkirkko.
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:saimaankanava) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saimaan kanava (tekniikka)
+Tietoruudun teksti: Kun isoisäsi matkusti, kanava oli uusi: se rakennettiin vuosina 1845–1856 ja avattiin 7. syyskuuta 1856. Väylä yhdistää Saimaan Suomenlahteen Viipurin kohdalla, ja sen pohjoispää on Lauritsalassa Lappeenrannassa. Pituutta on 42,9 kilometriä. Matkalla on kahdeksan sulkua, jotka nostavat laivan merenpinnasta Saimaan tasolle 75,7 metriä; korkein yksittäinen nosto on Mälkiän 12,4 metriä. Kanava oli avain koko sisämaahan: sen kautta pääsee Suomen järvialueen 120 toisiinsa liittyvään järveen, ja Saimaan syväväyliä on 814 kilometriä aina Kuopioon asti. Talvisin kanava on kiinni. Se peruskorjattiin ja levennettiin vuosina 1963–1968, ja nykyinen "saimax"-mitta sallii enintään 82,5 metriä pitkän ja 12,6 metriä leveän aluksen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Panama — kaupunkilehti / Kannaksen oikotie: Sulku, joka nostaa laivan vuoren yli] Ranskalainen Compagnie Universelle du Canal Interocéanique aloitti Ferdinand de Lesseps’n johdolla merenpinnan tasoisen kanavan kaivamisen 1. tammikuuta 1881. Hanke kaatui: kuolonuhreja kertyi vuoteen 1889 mennessä yli 22 000, ja yhtiö meni konkurssiin 800 000 pienisijoittajan säästöjen mukana. Yhdysvallat osti kaluston, kaivannot ja rautatien 1904 neljälläkymmenellä miljoonalla dollarilla ja rakensi merenpintakanavan sijasta sulkukanavan: laivat nostetaan Gatún-tekojärven tasolle 26 metriin merenpinnan yläpuolelle ja lasketaan toisella puolella takaisin. Kanava avattiin elokuussa 1914, ja Panama sai sen hallintaansa keskipäivällä 31. joulukuuta 1999.
+- [Oslo — kaupunkilehti / Historian hetki: Kristiania 1893 — laiva, jonka jää nostaa] 24.6.1893 — Milloin isä tulee takaisin? Sitä ei laiturilla osaa sanoa kukaan. 31-vuotias Fridtjof Nansen jättää rantaan Eva-vaimonsa ja muutaman kuukauden ikäisen Liv-tyttärensä eikä lupaa paluupäivää. Rantakadut ovat mustanaan väkeä, linnoitukselta ammutaan kunnialaukaukset, ja vuonolle liukuu alus, joka näyttää väärin rakennetulta. Fram on matala ja pyöreäpohjainen: Colin Archer suunnitteli sen niin, ettei jäällä ole mistään otetta, vaan ahtojää nostaa laivan ylös eikä murskaa sitä. Runko on kolmea puukerrosta paksu — kuudestakymmenestä seitsemäänkymmeneen senttiä, keulassa runsaan metrin — ja päällystetty greenheart-puulla. Kannella on kolmetoista miestä, ja suunnitelma on se, jota moni …
+
+### 15.1
+KYSYMYS: Kuinka korkealle kanava nostaa laivan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saimaan kanava (tekniikka)
+Tietoruudun teksti: Kun isoisäsi matkusti, kanava oli uusi: se rakennettiin vuosina 1845–1856 ja avattiin 7. syyskuuta 1856. Väylä yhdistää Saimaan Suomenlahteen Viipurin kohdalla, ja sen pohjoispää on Lauritsalassa Lappeenrannassa. Pituutta on 42,9 kilometriä. Matkalla on kahdeksan sulkua, jotka nostavat laivan merenpinnasta Saimaan tasolle 75,7 metriä; korkein yksittäinen nosto on Mälkiän 12,4 metriä. Kanava oli avain koko sisämaahan: sen kautta pääsee Suomen järvialueen 120 toisiinsa liittyvään järveen, ja Saimaan syväväyliä on 814 kilometriä aina Kuopioon asti. Talvisin kanava on kiinni. Se peruskorjattiin ja levennettiin vuosina 1963–1968, ja nykyinen "saimax"-mitta sallii enintään 82,5 metriä pitkän ja 12,6 metriä leveän aluksen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Panama — kaupunkilehti / Kannaksen oikotie: Sulku, joka nostaa laivan vuoren yli] Ranskalainen Compagnie Universelle du Canal Interocéanique aloitti Ferdinand de Lesseps’n johdolla merenpinnan tasoisen kanavan kaivamisen 1. tammikuuta 1881. Hanke kaatui: kuolonuhreja kertyi vuoteen 1889 mennessä yli 22 000, ja yhtiö meni konkurssiin 800 000 pienisijoittajan säästöjen mukana. Yhdysvallat osti kaluston, kaivannot ja rautatien 1904 neljälläkymmenellä miljoonalla dollarilla ja rakensi merenpintakanavan sijasta sulkukanavan: laivat nostetaan Gatún-tekojärven tasolle 26 metriin merenpinnan yläpuolelle ja lasketaan toisella puolella takaisin. Kanava avattiin elokuussa 1914, ja Panama sai sen hallintaansa keskipäivällä 31. joulukuuta 1999.
+- [Oslo — kaupunkilehti / Historian hetki: Kristiania 1893 — laiva, jonka jää nostaa] 24.6.1893 — Milloin isä tulee takaisin? Sitä ei laiturilla osaa sanoa kukaan. 31-vuotias Fridtjof Nansen jättää rantaan Eva-vaimonsa ja muutaman kuukauden ikäisen Liv-tyttärensä eikä lupaa paluupäivää. Rantakadut ovat mustanaan väkeä, linnoitukselta ammutaan kunnialaukaukset, ja vuonolle liukuu alus, joka näyttää väärin rakennetulta. Fram on matala ja pyöreäpohjainen: Colin Archer suunnitteli sen niin, ettei jäällä ole mistään otetta, vaan ahtojää nostaa laivan ylös eikä murskaa sitä. Runko on kolmea puukerrosta paksu — kuudestakymmenestä seitsemäänkymmeneen senttiä, keulassa runsaan metrin — ja päällystetty greenheart-puulla. Kannella on kolmetoista miestä, ja suunnitelma on se, jota moni …
+
+### 15.2
+KYSYMYS: Mihin kaupunkiin kanava aikanaan päättyi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saimaan kanava (tekniikka)
+Tietoruudun teksti: Kun isoisäsi matkusti, kanava oli uusi: se rakennettiin vuosina 1845–1856 ja avattiin 7. syyskuuta 1856. Väylä yhdistää Saimaan Suomenlahteen Viipurin kohdalla, ja sen pohjoispää on Lauritsalassa Lappeenrannassa. Pituutta on 42,9 kilometriä. Matkalla on kahdeksan sulkua, jotka nostavat laivan merenpinnasta Saimaan tasolle 75,7 metriä; korkein yksittäinen nosto on Mälkiän 12,4 metriä. Kanava oli avain koko sisämaahan: sen kautta pääsee Suomen järvialueen 120 toisiinsa liittyvään järveen, ja Saimaan syväväyliä on 814 kilometriä aina Kuopioon asti. Talvisin kanava on kiinni. Se peruskorjattiin ja levennettiin vuosina 1963–1968, ja nykyinen "saimax"-mitta sallii enintään 82,5 metriä pitkän ja 12,6 metriä leveän aluksen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kaupunkilehti / Puisto kaupungin rajalla: Muutto, joka päättyi kaupunkiin] Ennen kaupunkia laumat seurasivat sateita ja liikkuivat tasangoilla Kilimanjarolta Kenia-vuorelle. Muutto oli lähteen mukaan yhtä suuri kuin Serengetin muutto. Kun kaupunki kasvoi, puistosta tuli muuton pohjoisin raja. Gnuut ja seeprat käyttävät yhä Kitengelan käytävää: sadekaudella ne hajaantuvat Athi-Kapitin tasangoille ja kuivalla kaudella palaavat puistoon, jossa Mbagathi-joen padot pitävät veden saatavilla. Kitengelan entiset maasaiden ryhmätilat on yksityistetty, ja maanomistajat ovat perustaneet yhdistyksen, joka etsii riistaviranomaisen kanssa ratkaisuja sekä eläimille että ihmisille.
+- [Siinai — kaupunkilehti / Siinai: Kanava, joka teki niemimaasta Aasiaa] Vuonna 1859 alkoi työ, joka muutti Siinain aseman kartalla. Ranskalaisen Ferdinand de Lessepsin yhtiö alkoi kaivaa kanavaa Välimereltä Punaisellemerelle, ja urakka kesti kymmenen vuotta. Osa työstä tehtiin pakkotyönä, kunnes se lopetettiin kesken hankkeen. Kanava avattiin 17. marraskuuta 1869 — neljä vuotta ennen isoisän matkaa — ja se on 193 kilometriä pitkä. Sen jälkeen Siinai on ollut käytännössä oma saarensa: kanava vetää rajan Afrikan ja Aasian väliin, ja Siinai jää Aasian puolelle.
+- [Egypti — maalehti / Historia: Kanava, jota maailma vahtii] 1869 — Suezin kanava avattiin 1869, ja se lyhensi merimatkan Euroopasta Aasiaan tuhansilla kilometreillä — laivojen ei enää tarvinnut kiertää koko Afrikkaa. Nykyään kanavan kautta kulkee yli kymmenesosa maailmankaupasta. Keväällä 2021 koko maailma sai muistutuksen kapeikon merkityksestä, kun 400-metrinen konttilaiva Ever Given juuttui poikittain kanavaan kuudeksi päiväksi: sadat laivat jonottivat, ja kaivinkone kaivoi keulaa irti hiekasta koko maailman seuratessa.
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

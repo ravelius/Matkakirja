@@ -1,0 +1,212 @@
+================ KOHTA 6 (kohde:turunlinna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turun linna (historia)
+Tietoruudun teksti: Turun linna seisoo Aurajoen rannalla, ja se on tuomiokirkon ohella Suomen vanhimpia yhä käytössä olevia rakennuksia sekä maan suurin säilynyt keskiaikainen rakennus. Rakentaminen alkoi noin vuonna 1280, kun alueelle sijoittuneet ruotsalaiset pystyttivät sinne sotilaslinnoituksen ja etuvartion. Linna oli Österlandin — sen alueen, jota nykyään kutsutaan Suomeksi — puolustusrakennus ja hallintokeskus, ja se joutui mukaan Ruotsin ja Kalmarin unionin valtataisteluihin ja kesti piirityksiä. Huippunsa se koki 1500-luvun puolivälissä Juhana-herttuan ja Katarina Jagellonican aikana, jolloin päälinnaa laajennettiin tuntuvasti; hallintokeskuksen aseman se menetti 1600-luvulla Pietari Brahen kenraalikuvernöörikauden jälkeen. Nykyään se on Suomen suosituin museo, ja kävijöitä on hyvin yli satatuhatta vuodessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Paulo — kohdekartta / Kohdekartta: São Benton luostari] 1598 Luostari perustettiin 14. heinäkuuta 1598. Ylikapteeni Jorge Correia lahjoitti kaksi maalohkoa Anhangabaún ja Tamanduateín jokien väliltä, ja perustaja oli munkki Mauro Teixeira, José de Anchietan oppilas. Valtuusto vahvisti lahjakirjan 15. huhtikuuta 1600, ja rakennukset valmistuivat 1634. Suojeluspyhimys vaihtui kahdesti: ensin Montserratin Neitsyeksi ja 1720 Taivaaseen otetuksi Neitsyeksi. Luostari joutui kerran valtakunnanpolitiikan näyttämöksi. Kun Iberian unioni päättyi ja Juhana IV kruunattiin 1641 Portugalin kuninkaaksi, osa São Paulon espanjalaisperäisistä asukkaista halusi estää uuden kuninkaan tunnustamisen ja tarjosi Amador Buenolle "São Paulon kuninkaan" arvoa. Bueno kielt…
+- [São Paulo — kohdekartta / Kohdekartta: Mustien veljeskunnan kirkko] 1906 Mustien veljeskunnat syntyivät orjuuden aikana yhdessäolon, avunannon ja vastarinnan muodoksi. Ruusukon Neitsyen veljeskunta anoi Portugalin kuninkaalta Juhana V:ltä lupaa omaan kirkkoon 1721. Vastausta ei ole tallella, mutta rahankeruu alkoi: erakko Domingo de Melo Tavares kiersi 1725 Minas Geraisin keräämässä almuja. Kaupunginvaltuusto lahjoitti tontin 10. heinäkuuta 1728, ja kirkko valmistui 1737. Sitä ennen orjat, joita ei päästetty valkoisten kirkkoihin, olivat kokoontuneet pieneen kappeliin Anhangabaú-joen rannalla. Kirkossa katolinen ja bantulainen perinne sekoittuivat. Pyhää Benedictusta kutsuttiin nimellä Lingongo, pyhää Antoniusta nimellä Vereque ja Murheellista Neitsyttä nim…
+
+### 6.1
+KYSYMYS: Mikä Österland oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turun linna (historia)
+Tietoruudun teksti: Turun linna seisoo Aurajoen rannalla, ja se on tuomiokirkon ohella Suomen vanhimpia yhä käytössä olevia rakennuksia sekä maan suurin säilynyt keskiaikainen rakennus. Rakentaminen alkoi noin vuonna 1280, kun alueelle sijoittuneet ruotsalaiset pystyttivät sinne sotilaslinnoituksen ja etuvartion. Linna oli Österlandin — sen alueen, jota nykyään kutsutaan Suomeksi — puolustusrakennus ja hallintokeskus, ja se joutui mukaan Ruotsin ja Kalmarin unionin valtataisteluihin ja kesti piirityksiä. Huippunsa se koki 1500-luvun puolivälissä Juhana-herttuan ja Katarina Jagellonican aikana, jolloin päälinnaa laajennettiin tuntuvasti; hallintokeskuksen aseman se menetti 1600-luvulla Pietari Brahen kenraalikuvernöörikauden jälkeen. Nykyään se on Suomen suosituin museo, ja kävijöitä on hyvin yli satatuhatta vuodessa.
+
+### 6.2
+KYSYMYS: Kuka oli Juhana-herttua?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turun linna (historia)
+Tietoruudun teksti: Turun linna seisoo Aurajoen rannalla, ja se on tuomiokirkon ohella Suomen vanhimpia yhä käytössä olevia rakennuksia sekä maan suurin säilynyt keskiaikainen rakennus. Rakentaminen alkoi noin vuonna 1280, kun alueelle sijoittuneet ruotsalaiset pystyttivät sinne sotilaslinnoituksen ja etuvartion. Linna oli Österlandin — sen alueen, jota nykyään kutsutaan Suomeksi — puolustusrakennus ja hallintokeskus, ja se joutui mukaan Ruotsin ja Kalmarin unionin valtataisteluihin ja kesti piirityksiä. Huippunsa se koki 1500-luvun puolivälissä Juhana-herttuan ja Katarina Jagellonican aikana, jolloin päälinnaa laajennettiin tuntuvasti; hallintokeskuksen aseman se menetti 1600-luvulla Pietari Brahen kenraalikuvernöörikauden jälkeen. Nykyään se on Suomen suosituin museo, ja kävijöitä on hyvin yli satatuhatta vuodessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Paulo — kohdekartta / Kohdekartta: São Benton luostari] 1598 Luostari perustettiin 14. heinäkuuta 1598. Ylikapteeni Jorge Correia lahjoitti kaksi maalohkoa Anhangabaún ja Tamanduateín jokien väliltä, ja perustaja oli munkki Mauro Teixeira, José de Anchietan oppilas. Valtuusto vahvisti lahjakirjan 15. huhtikuuta 1600, ja rakennukset valmistuivat 1634. Suojeluspyhimys vaihtui kahdesti: ensin Montserratin Neitsyeksi ja 1720 Taivaaseen otetuksi Neitsyeksi. Luostari joutui kerran valtakunnanpolitiikan näyttämöksi. Kun Iberian unioni päättyi ja Juhana IV kruunattiin 1641 Portugalin kuninkaaksi, osa São Paulon espanjalaisperäisistä asukkaista halusi estää uuden kuninkaan tunnustamisen ja tarjosi Amador Buenolle "São Paulon kuninkaan" arvoa. Bueno kielt…
+- [São Paulo — kohdekartta / Kohdekartta: Mustien veljeskunnan kirkko] 1906 Mustien veljeskunnat syntyivät orjuuden aikana yhdessäolon, avunannon ja vastarinnan muodoksi. Ruusukon Neitsyen veljeskunta anoi Portugalin kuninkaalta Juhana V:ltä lupaa omaan kirkkoon 1721. Vastausta ei ole tallella, mutta rahankeruu alkoi: erakko Domingo de Melo Tavares kiersi 1725 Minas Geraisin keräämässä almuja. Kaupunginvaltuusto lahjoitti tontin 10. heinäkuuta 1728, ja kirkko valmistui 1737. Sitä ennen orjat, joita ei päästetty valkoisten kirkkoihin, olivat kokoontuneet pieneen kappeliin Anhangabaú-joen rannalla. Kirkossa katolinen ja bantulainen perinne sekoittuivat. Pyhää Benedictusta kutsuttiin nimellä Lingongo, pyhää Antoniusta nimellä Vereque ja Murheellista Neitsyttä nim…
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:vanharauma) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Rauma (kulttuuri)
+Tietoruudun teksti: Vanha Rauma on Rauman puinen keskusta, ja se otettiin maailmanperintöluetteloon vuonna 1991 puuarkkitehtuurinsa ja säilyneen keskiaikaisen kaupunkirakenteensa takia. Alue on noin 0,3 neliökilometriä, siinä on noin kuusisataa rakennusta ja siellä asuu noin 800 ihmistä. Vanhimmat talot ovat 1700-luvulta, sillä vuosien 1640 ja 1682 tulipalot tuhosivat suuren osan kaupungista — kaavarunko sen sijaan on yhä suurelta osin keskiaikainen. Asuintalot ovat pääkatujen varsilla ja aitat ja vajat kapeilla kujilla, ja lähes kaikki rakennukset ovat yksikerroksisia. Keskiajalta säilyi fransiskaanien luostarikirkko, vuonna 1512 vihitty Pyhän Ristin kirkko, jonka seinillä on keskiaikaisia maalauksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Pyhän ristin kirkko] 1679–1696 Pyhän ristin kirkko rakennettiin Krakowskie Przedmieście -kadun varrelle vuosina 1679–1696 komeaan barokkityyliin, pääsuunnittelijanaan Józef Szymon Bellotti. Julkisivun koristeelliset huiput lisättiin vielä 1720- ja 1730-luvuilla. Kirkon pilariin muurattiin vuonna 1882 pieni uurna, jossa säilytetään säveltäjä Fryderyk Chopinin sydäntä. Chopinin sisar oli salakuljettanut sydämen Pariisista Varsovaan jo vuonna 1849 veljensä toiveen mukaisesti - vaikka ruumis haudattiin Ranskaan, sydän sai levätä kotimaassa. Sodan aikana vuonna 1944 saksalaiset joukot räjäyttivät kirkon pahoin, mutta Chopinin sydän ehdittiin siirtää turvaan ennen räjäytyksiä. Kirkko rakennettiin uudelleen vuosina 19…
+- [Yellowknife — kaupunkilehti / Järvi, jää ja kesäyö: Talot, jotka kelluvat lahdella] Yellowknife Bayssä on Jolliffe Island, joka siirtyi kaupungin julkiseksi maaksi, kun öljy-yhtiö luopui paikasta. Saarta ympäröi asuntolaivayhteisö, jossa on asuttu sähköverkon ulkopuolella vuodesta 1978. Suhde kaupunkiin on mutkikas: laivat ovat matkailijoiden suosikkinäky, mutta asukkaat ovat kaupungin veropiirin ulkopuolella ja käyttävät silti kaupungin palveluja, ja siitä on seurannut oikeudenkäyntejä ja kitkaa. Saaren takana kohoaa Old Townin kalliokärki, jonne kaupunki alun perin rakennettiin ja jossa ovat sen vanhimmat talot.
+
+### 7.1
+KYSYMYS: Miksi vanhimmat talot ovat vasta 1700-luvulta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Rauma (kulttuuri)
+Tietoruudun teksti: Vanha Rauma on Rauman puinen keskusta, ja se otettiin maailmanperintöluetteloon vuonna 1991 puuarkkitehtuurinsa ja säilyneen keskiaikaisen kaupunkirakenteensa takia. Alue on noin 0,3 neliökilometriä, siinä on noin kuusisataa rakennusta ja siellä asuu noin 800 ihmistä. Vanhimmat talot ovat 1700-luvulta, sillä vuosien 1640 ja 1682 tulipalot tuhosivat suuren osan kaupungista — kaavarunko sen sijaan on yhä suurelta osin keskiaikainen. Asuintalot ovat pääkatujen varsilla ja aitat ja vajat kapeilla kujilla, ja lähes kaikki rakennukset ovat yksikerroksisia. Keskiajalta säilyi fransiskaanien luostarikirkko, vuonna 1512 vihitty Pyhän Ristin kirkko, jonka seinillä on keskiaikaisia maalauksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yellowknife — kaupunkilehti / Järvi, jää ja kesäyö: Talot, jotka kelluvat lahdella] Yellowknife Bayssä on Jolliffe Island, joka siirtyi kaupungin julkiseksi maaksi, kun öljy-yhtiö luopui paikasta. Saarta ympäröi asuntolaivayhteisö, jossa on asuttu sähköverkon ulkopuolella vuodesta 1978. Suhde kaupunkiin on mutkikas: laivat ovat matkailijoiden suosikkinäky, mutta asukkaat ovat kaupungin veropiirin ulkopuolella ja käyttävät silti kaupungin palveluja, ja siitä on seurannut oikeudenkäyntejä ja kitkaa. Saaren takana kohoaa Old Townin kalliokärki, jonne kaupunki alun perin rakennettiin ja jossa ovat sen vanhimmat talot.
+
+### 7.2
+KYSYMYS: Mikä Pyhän Ristin kirkko on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Rauma (kulttuuri)
+Tietoruudun teksti: Vanha Rauma on Rauman puinen keskusta, ja se otettiin maailmanperintöluetteloon vuonna 1991 puuarkkitehtuurinsa ja säilyneen keskiaikaisen kaupunkirakenteensa takia. Alue on noin 0,3 neliökilometriä, siinä on noin kuusisataa rakennusta ja siellä asuu noin 800 ihmistä. Vanhimmat talot ovat 1700-luvulta, sillä vuosien 1640 ja 1682 tulipalot tuhosivat suuren osan kaupungista — kaavarunko sen sijaan on yhä suurelta osin keskiaikainen. Asuintalot ovat pääkatujen varsilla ja aitat ja vajat kapeilla kujilla, ja lähes kaikki rakennukset ovat yksikerroksisia. Keskiajalta säilyi fransiskaanien luostarikirkko, vuonna 1512 vihitty Pyhän Ristin kirkko, jonka seinillä on keskiaikaisia maalauksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Pyhän ristin kirkko] 1679–1696 Pyhän ristin kirkko rakennettiin Krakowskie Przedmieście -kadun varrelle vuosina 1679–1696 komeaan barokkityyliin, pääsuunnittelijanaan Józef Szymon Bellotti. Julkisivun koristeelliset huiput lisättiin vielä 1720- ja 1730-luvuilla. Kirkon pilariin muurattiin vuonna 1882 pieni uurna, jossa säilytetään säveltäjä Fryderyk Chopinin sydäntä. Chopinin sisar oli salakuljettanut sydämen Pariisista Varsovaan jo vuonna 1849 veljensä toiveen mukaisesti - vaikka ruumis haudattiin Ranskaan, sydän sai levätä kotimaassa. Sodan aikana vuonna 1944 saksalaiset joukot räjäyttivät kirkon pahoin, mutta Chopinin sydän ehdittiin siirtää turvaan ennen räjäytyksiä. Kirkko rakennettiin uudelleen vuosina 19…
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:verla) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Verla (tekniikka)
+Tietoruudun teksti: Verla on hyvin säilynyt 1800-luvun tehdaskylä Jaalassa Kouvolassa Kymijoen pohjoishaaran varrella. Puuhiomo, viereiset voimalaitokset ja asuintalot otettiin maailmanperintöluetteloon vuonna 1996 todisteena 1800-luvun puunjalostuksesta ja sen työläisten elämästä. Ensimmäisen hiomon perusti Hugo Neuman vuonna 1872, se paloi 1876, ja vuonna 1882 Gottlieb Kreidl ja Louis Haenel perustivat isomman hiomo- ja pahvitehtaan, joka kävi 18. heinäkuuta 1964 asti — siihen päivään, jona viimeinen vanhoista työntekijöistä jäi eläkkeelle. Koneet jätettiin paikoilleen, ja tehtaasta tuli pahvinvalmistuksen museo vuonna 1972; opastettu kierros seuraa työvaiheita puun sahauksesta massaan, kuivaukseen, lajitteluun ja pakkaukseen. Joen itärannalta on löytynyt myös noin kuusituhatta vuotta vanhoja kalliomaalauksia, joissa on hirviä, ihmisiä ja kuvioita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Taiwan — maalehti / Tekniikka: Tehdas, joka ei suunnittele mitään] 1987 — Hsinchun tiedepuisto perustettiin 15. joulukuuta 1980. Ajatus oli Shu Shien-Siun, joka oli kiertänyt 1976 Yhdysvalloissa, Euroopassa ja Japanissa ja halusi Piilaakson kaltaisen alueen kahden yliopiston viereen. Puistoon perustettiin 1987 TSMC, valtion, tutkimuslaitoksen ja yksityisten sijoittajien yhteisyritys, jota johti Morris Chang. Sen idea oli uusi: tehdas, joka ei suunnittele omia piirejään lainkaan vaan valmistaa vain muiden suunnittelemia — maailman ensimmäinen pelkkä sopimusvalimo. Vuonna 2022 saaren mikropiirivienti oli 184 miljardia dollaria eli lähes neljännes koko talouden arvosta.
+
+### 8.1
+KYSYMYS: Mitä puuhiomo tekee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Verla (tekniikka)
+Tietoruudun teksti: Verla on hyvin säilynyt 1800-luvun tehdaskylä Jaalassa Kouvolassa Kymijoen pohjoishaaran varrella. Puuhiomo, viereiset voimalaitokset ja asuintalot otettiin maailmanperintöluetteloon vuonna 1996 todisteena 1800-luvun puunjalostuksesta ja sen työläisten elämästä. Ensimmäisen hiomon perusti Hugo Neuman vuonna 1872, se paloi 1876, ja vuonna 1882 Gottlieb Kreidl ja Louis Haenel perustivat isomman hiomo- ja pahvitehtaan, joka kävi 18. heinäkuuta 1964 asti — siihen päivään, jona viimeinen vanhoista työntekijöistä jäi eläkkeelle. Koneet jätettiin paikoilleen, ja tehtaasta tuli pahvinvalmistuksen museo vuonna 1972; opastettu kierros seuraa työvaiheita puun sahauksesta massaan, kuivaukseen, lajitteluun ja pakkaukseen. Joen itärannalta on löytynyt myös noin kuusituhatta vuotta vanhoja kalliomaalauksia, joissa on hirviä, ihmisiä ja kuvioita.
+
+### 8.2
+KYSYMYS: Milloin tehdas lopetti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Verla (tekniikka)
+Tietoruudun teksti: Verla on hyvin säilynyt 1800-luvun tehdaskylä Jaalassa Kouvolassa Kymijoen pohjoishaaran varrella. Puuhiomo, viereiset voimalaitokset ja asuintalot otettiin maailmanperintöluetteloon vuonna 1996 todisteena 1800-luvun puunjalostuksesta ja sen työläisten elämästä. Ensimmäisen hiomon perusti Hugo Neuman vuonna 1872, se paloi 1876, ja vuonna 1882 Gottlieb Kreidl ja Louis Haenel perustivat isomman hiomo- ja pahvitehtaan, joka kävi 18. heinäkuuta 1964 asti — siihen päivään, jona viimeinen vanhoista työntekijöistä jäi eläkkeelle. Koneet jätettiin paikoilleen, ja tehtaasta tuli pahvinvalmistuksen museo vuonna 1972; opastettu kierros seuraa työvaiheita puun sahauksesta massaan, kuivaukseen, lajitteluun ja pakkaukseen. Joen itärannalta on löytynyt myös noin kuusituhatta vuotta vanhoja kalliomaalauksia, joissa on hirviä, ihmisiä ja kuvioita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Taiwan — maalehti / Tekniikka: Tehdas, joka ei suunnittele mitään] 1987 — Hsinchun tiedepuisto perustettiin 15. joulukuuta 1980. Ajatus oli Shu Shien-Siun, joka oli kiertänyt 1976 Yhdysvalloissa, Euroopassa ja Japanissa ja halusi Piilaakson kaltaisen alueen kahden yliopiston viereen. Puistoon perustettiin 1987 TSMC, valtion, tutkimuslaitoksen ja yksityisten sijoittajien yhteisyritys, jota johti Morris Chang. Sen idea oli uusi: tehdas, joka ei suunnittele omia piirejään lainkaan vaan valmistaa vain muiden suunnittelemia — maailman ensimmäinen pelkkä sopimusvalimo. Vuonna 2022 saaren mikropiirivienti oli 184 miljardia dollaria eli lähes neljännes koko talouden arvosta.
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:petajavedenvanhakirkko) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Petäjäveden vanha kirkko (kulttuuri)
+Tietoruudun teksti: Petäjäveden vanha kirkko on hirsikirkko, joka rakennettiin vuosina 1763–1765, kun Häme kuului vielä Ruotsiin; kellotapuli tuli vuonna 1821. Se otettiin maailmanperintöluetteloon vuonna 1994 pohjoismaisen puukirkkoarkkitehtuurin todistuskappaleena. Kirkon suunnitteli ja rakensi vesankalainen kirkonrakentaja Jaakko Klemetinpoika Leppänen, ja tapulin lisäsi hänen pojanpoikansa Erkki Leppänen. Ristikirkon tasavartinen pohjakaava oli 1700-luvun maaseutukirkkojen tavallinen muoto, mutta korkea katto muistuttaa vanhempaa goottilaista tapaa ja kahdeksankulmainen kattoholvi juontuu renessanssin oculuksesta; saarnastuoli, penkit, parvet ja kruunut ovat paikallisten käsityöläisten männystä veistämiä. Kirkko jäi pois käytöstä 1879 uuden kirkon valmistuttua ja seisoi pitkään hylättynä, kunnes puolalais-itävaltalainen taidehistorioitsija Josef Strzygowski huomasi sen arvon 1920-luvulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kohdekartta / Kohdekartta: Kharitonovin kartano] 1794–1824 Kartanon tilasi vuonna 1794 vanhauskoinen kauppias ja maanomistaja Lev Rastorgujev, ja päärakennus nousi Nousemuksen kukkulalle. Samaan aikaan rakennettiin viereen Nousemuksen kirkko. Tyyli on uusklassismi: pylväikkö, kolmiopääty ja holvikaarinen alakerta, siis sama kieli, jota Pietarissa puhuttiin — Uralin ruukinomistajat rakensivat itselleen pääkaupungin mukaan. Nykyisen nimensä talo sai vävystä. Pjotr Kharitonov peri sen vuonna 1824 ja palkkasi arkkitehti Mihail Malahovin yhdistämään rakennukset katetuilla käytävillä; puiston hän teetti englantilaiseen tapaan vapaamuotoiseksi. Samana vuonna talossa vieraili keisari Aleksanteri I. Kharitonov sai maaorjiensa kohtelusta virallisen…
+
+### 9.1
+KYSYMYS: Kuka rakensi Petäjäveden vanhan kirkon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Petäjäveden vanha kirkko (kulttuuri)
+Tietoruudun teksti: Petäjäveden vanha kirkko on hirsikirkko, joka rakennettiin vuosina 1763–1765, kun Häme kuului vielä Ruotsiin; kellotapuli tuli vuonna 1821. Se otettiin maailmanperintöluetteloon vuonna 1994 pohjoismaisen puukirkkoarkkitehtuurin todistuskappaleena. Kirkon suunnitteli ja rakensi vesankalainen kirkonrakentaja Jaakko Klemetinpoika Leppänen, ja tapulin lisäsi hänen pojanpoikansa Erkki Leppänen. Ristikirkon tasavartinen pohjakaava oli 1700-luvun maaseutukirkkojen tavallinen muoto, mutta korkea katto muistuttaa vanhempaa goottilaista tapaa ja kahdeksankulmainen kattoholvi juontuu renessanssin oculuksesta; saarnastuoli, penkit, parvet ja kruunut ovat paikallisten käsityöläisten männystä veistämiä. Kirkko jäi pois käytöstä 1879 uuden kirkon valmistuttua ja seisoi pitkään hylättynä, kunnes puolalais-itävaltalainen taidehistorioitsija Josef Strzygowski huomasi sen arvon 1920-luvulla.
+
+### 9.2
+KYSYMYS: Miksi kirkko jäi tyhjilleen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Petäjäveden vanha kirkko (kulttuuri)
+Tietoruudun teksti: Petäjäveden vanha kirkko on hirsikirkko, joka rakennettiin vuosina 1763–1765, kun Häme kuului vielä Ruotsiin; kellotapuli tuli vuonna 1821. Se otettiin maailmanperintöluetteloon vuonna 1994 pohjoismaisen puukirkkoarkkitehtuurin todistuskappaleena. Kirkon suunnitteli ja rakensi vesankalainen kirkonrakentaja Jaakko Klemetinpoika Leppänen, ja tapulin lisäsi hänen pojanpoikansa Erkki Leppänen. Ristikirkon tasavartinen pohjakaava oli 1700-luvun maaseutukirkkojen tavallinen muoto, mutta korkea katto muistuttaa vanhempaa goottilaista tapaa ja kahdeksankulmainen kattoholvi juontuu renessanssin oculuksesta; saarnastuoli, penkit, parvet ja kruunut ovat paikallisten käsityöläisten männystä veistämiä. Kirkko jäi pois käytöstä 1879 uuden kirkon valmistuttua ja seisoi pitkään hylättynä, kunnes puolalais-itävaltalainen taidehistorioitsija Josef Strzygowski huomasi sen arvon 1920-luvulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kohdekartta / Kohdekartta: Kharitonovin kartano] 1794–1824 Kartanon tilasi vuonna 1794 vanhauskoinen kauppias ja maanomistaja Lev Rastorgujev, ja päärakennus nousi Nousemuksen kukkulalle. Samaan aikaan rakennettiin viereen Nousemuksen kirkko. Tyyli on uusklassismi: pylväikkö, kolmiopääty ja holvikaarinen alakerta, siis sama kieli, jota Pietarissa puhuttiin — Uralin ruukinomistajat rakensivat itselleen pääkaupungin mukaan. Nykyisen nimensä talo sai vävystä. Pjotr Kharitonov peri sen vuonna 1824 ja palkkasi arkkitehti Mihail Malahovin yhdistämään rakennukset katetuilla käytävillä; puiston hän teetti englantilaiseen tapaan vapaamuotoiseksi. Samana vuonna talossa vieraili keisari Aleksanteri I. Kharitonov sai maaorjiensa kohtelusta virallisen…
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:sammallahdenmaki) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sammallahdenmäki (historia)
+Tietoruudun teksti: Sammallahdenmäki on pronssikautinen hautapaikka Raumalla Satakunnassa: harjanteen laella on 33 graniittista hautaröykkiötä, jotka on ladottu 1500–500 eaa. Se on yksi Fennoskandian suurimmista ja täydellisimmistä pronssikautisista kohteista, ja se merkittiin maailmanperintöluetteloon vuonna 1999. Röykkiöistä 28 on varhaiselta pronssikaudelta ja loput varhaiselta rautakaudelta, ja joukossa on kaksi poikkeuksellista: Huilun pitkä raunio muinaisine kivimuureineen ja Kirkonlaattia, tasakattoinen 16 × 19 metrin suorakaide, jonka kaltaista ei tunneta muualta Skandinaviasta. Röykkiöt ladottiin alun perin niin, että niiltä avautui näkymä merelle Pohjanlahdelle, mutta maankohoaminen on vienyt meren näkyvistä. Ne saattavat liittyä auringonpalvontaan, joka levisi Skandinaviaan pronssikaudella, ja ne kertovat sukuyhteisön maanomistuksesta — asiasta, joka tuli maanviljelyn mukana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [FLK — maalehti / Rakennukset: Peltikatot joka värissä] nykyään — Port Stanleyn talot on tehty ja katettu aallotetulla peltilevyllä, sillä puuttomilla saarilla puutavara piti aina tuoda laivalla ja se oli kallista. Peltikatot maalattiin kirkkaisiin väreihin, punaisesta vihreään ja siniseen, osin siksi, että väri suojasi peltiä ruostumiselta Falklandin kosteassa ja tuulisessa säässä. Yhden paikallistarinan mukaan osa väreistä on peräisin haaksirikkoutuneesta maalilastista, joka huuhtoutui rantaan ja jaettiin asukkaiden kesken. Nykyään värikkäät katot ovat Port Stanleyn tavaramerkki, ja niitä näkee parhaiten sataman yllä kohoavalta mäeltä tai suoraan laivan kannelta saapuessa.
+- [Tunisia — maalehti / Kuvataide: Kylä, joka maalattiin kahdella värillä] 1920-luku — Sidi Bou Saïd sai nimensä uskonnollisesta hahmosta Abu Said al-Bajista; sitä ennen kylää kutsuttiin nimellä Jbel el-Menar. Kylän kuuluisan sinivalkoisen väriparin teki suosituksi 1920-luvulla ranskalainen paroni Rodolphe d’Erlanger, joka asui siellä. Valkoiset seinät, siniset ikkunaluukut ja ovet sekä bougainvillean punainen ovat siitä lähtien olleet kylän tunnusmerkit, ja mäeltä avautuu näkymä Tunisin lahdelle. Kylään pääsee TGM-junalla, joka kulkee Tunisista La Marsaan — sama rata, jota pitkin taidemaalarit ovat tulleet sinne sata vuotta.
+
+### 10.1
+KYSYMYS: Mikä hiidenkiuas on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sammallahdenmäki (historia)
+Tietoruudun teksti: Sammallahdenmäki on pronssikautinen hautapaikka Raumalla Satakunnassa: harjanteen laella on 33 graniittista hautaröykkiötä, jotka on ladottu 1500–500 eaa. Se on yksi Fennoskandian suurimmista ja täydellisimmistä pronssikautisista kohteista, ja se merkittiin maailmanperintöluetteloon vuonna 1999. Röykkiöistä 28 on varhaiselta pronssikaudelta ja loput varhaiselta rautakaudelta, ja joukossa on kaksi poikkeuksellista: Huilun pitkä raunio muinaisine kivimuureineen ja Kirkonlaattia, tasakattoinen 16 × 19 metrin suorakaide, jonka kaltaista ei tunneta muualta Skandinaviasta. Röykkiöt ladottiin alun perin niin, että niiltä avautui näkymä merelle Pohjanlahdelle, mutta maankohoaminen on vienyt meren näkyvistä. Ne saattavat liittyä auringonpalvontaan, joka levisi Skandinaviaan pronssikaudella, ja ne kertovat sukuyhteisön maanomistuksesta — asiasta, joka tuli maanviljelyn mukana.
+
+### 10.2
+KYSYMYS: Miksi meri ei enää näy mäeltä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sammallahdenmäki (historia)
+Tietoruudun teksti: Sammallahdenmäki on pronssikautinen hautapaikka Raumalla Satakunnassa: harjanteen laella on 33 graniittista hautaröykkiötä, jotka on ladottu 1500–500 eaa. Se on yksi Fennoskandian suurimmista ja täydellisimmistä pronssikautisista kohteista, ja se merkittiin maailmanperintöluetteloon vuonna 1999. Röykkiöistä 28 on varhaiselta pronssikaudelta ja loput varhaiselta rautakaudelta, ja joukossa on kaksi poikkeuksellista: Huilun pitkä raunio muinaisine kivimuureineen ja Kirkonlaattia, tasakattoinen 16 × 19 metrin suorakaide, jonka kaltaista ei tunneta muualta Skandinaviasta. Röykkiöt ladottiin alun perin niin, että niiltä avautui näkymä merelle Pohjanlahdelle, mutta maankohoaminen on vienyt meren näkyvistä. Ne saattavat liittyä auringonpalvontaan, joka levisi Skandinaviaan pronssikaudella, ja ne kertovat sukuyhteisön maanomistuksesta — asiasta, joka tuli maanviljelyn mukana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [FLK — maalehti / Rakennukset: Peltikatot joka värissä] nykyään — Port Stanleyn talot on tehty ja katettu aallotetulla peltilevyllä, sillä puuttomilla saarilla puutavara piti aina tuoda laivalla ja se oli kallista. Peltikatot maalattiin kirkkaisiin väreihin, punaisesta vihreään ja siniseen, osin siksi, että väri suojasi peltiä ruostumiselta Falklandin kosteassa ja tuulisessa säässä. Yhden paikallistarinan mukaan osa väreistä on peräisin haaksirikkoutuneesta maalilastista, joka huuhtoutui rantaan ja jaettiin asukkaiden kesken. Nykyään värikkäät katot ovat Port Stanleyn tavaramerkki, ja niitä näkee parhaiten sataman yllä kohoavalta mäeltä tai suoraan laivan kannelta saapuessa.
+- [Tunisia — maalehti / Kuvataide: Kylä, joka maalattiin kahdella värillä] 1920-luku — Sidi Bou Saïd sai nimensä uskonnollisesta hahmosta Abu Said al-Bajista; sitä ennen kylää kutsuttiin nimellä Jbel el-Menar. Kylän kuuluisan sinivalkoisen väriparin teki suosituksi 1920-luvulla ranskalainen paroni Rodolphe d’Erlanger, joka asui siellä. Valkoiset seinät, siniset ikkunaluukut ja ovet sekä bougainvillean punainen ovat siitä lähtien olleet kylän tunnusmerkit, ja mäeltä avautuu näkymä Tunisin lahdelle. Kylään pääsee TGM-junalla, joka kulkee Tunisista La Marsaan — sama rata, jota pitkin taidemaalarit ovat tulleet sinne sata vuotta.
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

@@ -1,0 +1,198 @@
+================ KOHTA 41 (kohde:hahmotelma-mariehamn) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maarianhamina (merenkulku)
+Tietoruudun teksti: Maarianhamina on Ahvenanmaan autonomisen maakunnan pääkaupunki, jossa sijaitsevat maakunnan hallitus ja parlamentti. Kaupunki perustettiin 21. helmikuuta 1861 Övernäsin kylän maille, ja se nimettiin Venäjän keisarinnan Maria Aleksandrovnan mukaan. Kaupunki kasvoi suunnitellun asemakaavan pohjalta, joka on säilynyt pääosin ehjänä, ja vanhimpiin katuihin kuuluvalla Södragatanilla on yhä 1800-luvun puutaloja. 1800-luvun lopulla merenkulusta tuli paikallisen elinkeinoelämän keskus, ja laivanvarustajat sekä telakat asettuivat kaupunkiin. Länsisatamassa on kiinnitettynä nelimastoparkki Pommern, joka kuuluu Ahvenanmaan merenkulkumuseoon.
+
+### 41.1
+KYSYMYS: Miksi Maarianhamina on nimetty Venäjän keisarinnan mukaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maarianhamina (merenkulku)
+Tietoruudun teksti: Maarianhamina on Ahvenanmaan autonomisen maakunnan pääkaupunki, jossa sijaitsevat maakunnan hallitus ja parlamentti. Kaupunki perustettiin 21. helmikuuta 1861 Övernäsin kylän maille, ja se nimettiin Venäjän keisarinnan Maria Aleksandrovnan mukaan. Kaupunki kasvoi suunnitellun asemakaavan pohjalta, joka on säilynyt pääosin ehjänä, ja vanhimpiin katuihin kuuluvalla Södragatanilla on yhä 1800-luvun puutaloja. 1800-luvun lopulla merenkulusta tuli paikallisen elinkeinoelämän keskus, ja laivanvarustajat sekä telakat asettuivat kaupunkiin. Länsisatamassa on kiinnitettynä nelimastoparkki Pommern, joka kuuluu Ahvenanmaan merenkulkumuseoon.
+
+### 41.2
+KYSYMYS: Mitä nelimastoparkki Pommern kertoo Maarianhaminan merenkulusta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maarianhamina (merenkulku)
+Tietoruudun teksti: Maarianhamina on Ahvenanmaan autonomisen maakunnan pääkaupunki, jossa sijaitsevat maakunnan hallitus ja parlamentti. Kaupunki perustettiin 21. helmikuuta 1861 Övernäsin kylän maille, ja se nimettiin Venäjän keisarinnan Maria Aleksandrovnan mukaan. Kaupunki kasvoi suunnitellun asemakaavan pohjalta, joka on säilynyt pääosin ehjänä, ja vanhimpiin katuihin kuuluvalla Södragatanilla on yhä 1800-luvun puutaloja. 1800-luvun lopulla merenkulusta tuli paikallisen elinkeinoelämän keskus, ja laivanvarustajat sekä telakat asettuivat kaupunkiin. Länsisatamassa on kiinnitettynä nelimastoparkki Pommern, joka kuuluu Ahvenanmaan merenkulkumuseoon.
+
+### 41.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+================ KOHTA 42 (kohde:hahmotelma-ilomantsi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ilomantsi (kulttuuri)
+Tietoruudun teksti: Ilomantsi on Pohjois-Karjalan kunta, jossa Suomen itäisin piste sijaitsee Hattuvaaran kylän lähellä. Kunnan maisemaa hallitsevat metsät ja suot, ja alueella ovat esimerkiksi Petkeljärven ja Patvinsuon kansallispuistot. Ilomantsissa on Suomen kunnista suurin ortodoksinen vähemmistö, 17,4 prosenttia asukkaista, ja paikallinen ortodoksiyhteisö on yli 500 vuotta vanha. Profeetta Elialle omistettu puinen ortodoksinen kirkko on Suomen suurin, ja kunnassa on lisäksi viisi tsasounaa. Nähtävyyksiin kuuluu myös Parppeinvaaran runokylä, ja tunnettuihin ilomantsilaisiin lukeutuu kansanlaulaja Mateli Kuivalatar (1771–1846).
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Argentiina — maalehti / Musiikki: Vielä ei ole tangoa] 1880-luku — Kun isoisä kirjoittaa päiväkirjaansa vuonna 1873, tangoa ei siis ole. Sana tarkoittaa yhä afrikkalaisperäistä tanssitilaisuutta, ja itse tanssi muotoutuu vasta 1880-luvulla Río de la Platan satamakortteleissa, joiden baareihin omistajat palkkasivat yhtyeitä viihdyttämään asiakkaita. Maailmanmaine on vielä kauempana: tanssijat ja orkesterit vievät tangon Pariisiin 1900-luvun alussa, ja vuoden 1913 lopulla se saapuu New Yorkiin ja Suomeen asti. Isoisän Argentiina soi toisenlaista musiikkia — juuri niitä aineksia, joista seuraavat polvet rakentavat tangon.
+
+### 42.1
+KYSYMYS: Miksi Ilomantsissa on niin paljon ortodokseja muuhun Suomeen verrattuna?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ilomantsi (kulttuuri)
+Tietoruudun teksti: Ilomantsi on Pohjois-Karjalan kunta, jossa Suomen itäisin piste sijaitsee Hattuvaaran kylän lähellä. Kunnan maisemaa hallitsevat metsät ja suot, ja alueella ovat esimerkiksi Petkeljärven ja Patvinsuon kansallispuistot. Ilomantsissa on Suomen kunnista suurin ortodoksinen vähemmistö, 17,4 prosenttia asukkaista, ja paikallinen ortodoksiyhteisö on yli 500 vuotta vanha. Profeetta Elialle omistettu puinen ortodoksinen kirkko on Suomen suurin, ja kunnassa on lisäksi viisi tsasounaa. Nähtävyyksiin kuuluu myös Parppeinvaaran runokylä, ja tunnettuihin ilomantsilaisiin lukeutuu kansanlaulaja Mateli Kuivalatar (1771–1846).
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Argentiina — maalehti / Musiikki: Vielä ei ole tangoa] 1880-luku — Kun isoisä kirjoittaa päiväkirjaansa vuonna 1873, tangoa ei siis ole. Sana tarkoittaa yhä afrikkalaisperäistä tanssitilaisuutta, ja itse tanssi muotoutuu vasta 1880-luvulla Río de la Platan satamakortteleissa, joiden baareihin omistajat palkkasivat yhtyeitä viihdyttämään asiakkaita. Maailmanmaine on vielä kauempana: tanssijat ja orkesterit vievät tangon Pariisiin 1900-luvun alussa, ja vuoden 1913 lopulla se saapuu New Yorkiin ja Suomeen asti. Isoisän Argentiina soi toisenlaista musiikkia — juuri niitä aineksia, joista seuraavat polvet rakentavat tangon.
+
+### 42.2
+KYSYMYS: Mikä tekee Parppeinvaaran runokylästä erityisen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ilomantsi (kulttuuri)
+Tietoruudun teksti: Ilomantsi on Pohjois-Karjalan kunta, jossa Suomen itäisin piste sijaitsee Hattuvaaran kylän lähellä. Kunnan maisemaa hallitsevat metsät ja suot, ja alueella ovat esimerkiksi Petkeljärven ja Patvinsuon kansallispuistot. Ilomantsissa on Suomen kunnista suurin ortodoksinen vähemmistö, 17,4 prosenttia asukkaista, ja paikallinen ortodoksiyhteisö on yli 500 vuotta vanha. Profeetta Elialle omistettu puinen ortodoksinen kirkko on Suomen suurin, ja kunnassa on lisäksi viisi tsasounaa. Nähtävyyksiin kuuluu myös Parppeinvaaran runokylä, ja tunnettuihin ilomantsilaisiin lukeutuu kansanlaulaja Mateli Kuivalatar (1771–1846).
+
+### 42.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+================ KOHTA 43 (kohde:hahmotelma-fiskars) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fiskars (tekniikka)
+Tietoruudun teksti: Fiskars on kylä Raaseporin kaupungin Pohjan alueella Etelä-Suomessa. Kylä kasvoi rautaruukin ympärille, jonka saksalaissyntyinen Petter Thorwöste perusti vuonna 1649; ruukissa valmistettiin myös kuparia. Vuonna 1822 ruukin osti John Jacob von Julin, ja hänen aikanaan Fiskarsiin perustettiin vuonna 1836 Suomen ensimmäinen työpaja. Tehtaissa ja pajoissa tehtiin arjen tarvekaluja saksista ja puukoista auroihin ja voimansiirtolaitteisiin, ja tuotteet kuljetettiin Pohjankurun satamaan kapearaiteista rautatietä pitkin vuosina 1891–1952. Nykyään alle tuhannen asukkaan kylä on suosittu matkailukohde, jossa asuu ja työskentelee taiteilijoita ja käsityöläisiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kapkaupunki — kohdekartta / Kohdekartta: Greenmarket Square] 1696 Greenmarket Square syntyi luonnostaan: se oli lähin aukio yhtiön puutarhan ja ympäröivien tilojen tuotteille. Aukiosta tuli kaupungin hallinnollinen ja sosiaalinen keskus 1696, kun sen laitaan pystytettiin porvarivartion vahtitupa. Keskellä oli lähde, josta kaupunkilaiset hakivat juomavetensä. Torilla myytiin tuoretuotteiden lisäksi muuta tavaraa ja myös orjuutettuja ihmisiä. Vahtitupa purettiin 1761 ja tilalle rakennettiin Old Town House, joka toimi aikanaan kaupungintalona ja jossa on nykyään Michaelis-taidekokoelma. Talon pääoven edusta on Kapkaupungin historiallinen keskipiste. 1730-luvulla aukion olkikattoiset talot alkoivat vaihtua tasakattoisiin, ja vuoteen 1845 mennessä lähes k…
+- [Jekaterinburg — kaupunkilehti / Jekaterinburg] Kaupunki alkoi padosta: 18. marraskuuta 1723 Iset-joen rannalla koeajettiin rautaruukin vasarapaja, ja siitä päivästä lasketaan Jekaterinburgin ikä. Kaksi vuotta myöhemmin ruukissa alettiin lyödä ruplaa, joka oli neliskulmainen kuparilaatta ja painoi 1 638 grammaa.
+
+### 43.1
+KYSYMYS: Miksi Fiskarsin tuotteille tarvittiin kapearaiteinen rautatie Pohjankurun satamaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fiskars (tekniikka)
+Tietoruudun teksti: Fiskars on kylä Raaseporin kaupungin Pohjan alueella Etelä-Suomessa. Kylä kasvoi rautaruukin ympärille, jonka saksalaissyntyinen Petter Thorwöste perusti vuonna 1649; ruukissa valmistettiin myös kuparia. Vuonna 1822 ruukin osti John Jacob von Julin, ja hänen aikanaan Fiskarsiin perustettiin vuonna 1836 Suomen ensimmäinen työpaja. Tehtaissa ja pajoissa tehtiin arjen tarvekaluja saksista ja puukoista auroihin ja voimansiirtolaitteisiin, ja tuotteet kuljetettiin Pohjankurun satamaan kapearaiteista rautatietä pitkin vuosina 1891–1952. Nykyään alle tuhannen asukkaan kylä on suosittu matkailukohde, jossa asuu ja työskentelee taiteilijoita ja käsityöläisiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kapkaupunki — kohdekartta / Kohdekartta: Greenmarket Square] 1696 Greenmarket Square syntyi luonnostaan: se oli lähin aukio yhtiön puutarhan ja ympäröivien tilojen tuotteille. Aukiosta tuli kaupungin hallinnollinen ja sosiaalinen keskus 1696, kun sen laitaan pystytettiin porvarivartion vahtitupa. Keskellä oli lähde, josta kaupunkilaiset hakivat juomavetensä. Torilla myytiin tuoretuotteiden lisäksi muuta tavaraa ja myös orjuutettuja ihmisiä. Vahtitupa purettiin 1761 ja tilalle rakennettiin Old Town House, joka toimi aikanaan kaupungintalona ja jossa on nykyään Michaelis-taidekokoelma. Talon pääoven edusta on Kapkaupungin historiallinen keskipiste. 1730-luvulla aukion olkikattoiset talot alkoivat vaihtua tasakattoisiin, ja vuoteen 1845 mennessä lähes k…
+
+### 43.2
+KYSYMYS: Mitä kaikkea ruukissa ja sen pajoissa osattiin valmistaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fiskars (tekniikka)
+Tietoruudun teksti: Fiskars on kylä Raaseporin kaupungin Pohjan alueella Etelä-Suomessa. Kylä kasvoi rautaruukin ympärille, jonka saksalaissyntyinen Petter Thorwöste perusti vuonna 1649; ruukissa valmistettiin myös kuparia. Vuonna 1822 ruukin osti John Jacob von Julin, ja hänen aikanaan Fiskarsiin perustettiin vuonna 1836 Suomen ensimmäinen työpaja. Tehtaissa ja pajoissa tehtiin arjen tarvekaluja saksista ja puukoista auroihin ja voimansiirtolaitteisiin, ja tuotteet kuljetettiin Pohjankurun satamaan kapearaiteista rautatietä pitkin vuosina 1891–1952. Nykyään alle tuhannen asukkaan kylä on suosittu matkailukohde, jossa asuu ja työskentelee taiteilijoita ja käsityöläisiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Jekaterinburg] Kaupunki alkoi padosta: 18. marraskuuta 1723 Iset-joen rannalla koeajettiin rautaruukin vasarapaja, ja siitä päivästä lasketaan Jekaterinburgin ikä. Kaksi vuotta myöhemmin ruukissa alettiin lyödä ruplaa, joka oli neliskulmainen kuparilaatta ja painoi 1 638 grammaa.
+
+### 43.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+================ KOHTA 44 (kohde:hahmotelma-noormarkku) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Noormarkku (tekniikka)
+Tietoruudun teksti: Noormarkku on Satakunnassa sijaitseva entinen kunta, joka liitettiin Poriin vuoden 2010 alussa. Paikka on Ahlström-yhtiön syntysija: Antti Ahlström osti Noormarkusta sahan, rautaruukin ja kartanon vuonna 1870, ja liiketoiminta lähti nopeaan kasvuun. Ahlström kehitti kylää laajasti: hän rakennutti tieverkkoa ja perusti yhden Suomen ensimmäisistä suomenkielisistä kouluista. Ruukin puistoalueella on paljon kulttuurihistoriallisesti arvokkaita rakennuksia, ja se on Noormarkun suosituin nähtävyys. Nykyisin ruukkialueen omistaa A. Ahlström Osakeyhtiö.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki: Bern 1905 — patenttipino ja valonsäde] 1905 — Pöydän kulmalla kasvaa pino patenttihakemuksia, ja jokainen uusi tulokas työntää fysiikan muistiinpanot laatikon pohjalle. Bernin patenttiviraston kolmannen luokan tekninen asiantuntija Albert Einstein on 26-vuotias, ja hänen palkkansa elättää Mileva-vaimon ja pienen Hans Albertin. Iltaisin hän palaa kysymykseen, jota on kantanut teini-ikäisestä asti: miltä valo näyttäisi, jos sen voisi ajaa kiinni? Ajatella ääneen hän voi harvojen kanssa: ystävän ja työtoverin Michele Besson kanssa kotimatkalla, ja iltaisin muutaman tuttavan kesken, jotka kutsuvat itseään pilaillen Olympia-akatemiaksi. Virastoon hän päätyi siksi, ettei yksikään haettu opettajanpaikka auennut. Vuonna 1905 Einstein lä…
+- [Peking — kohdekartta / Kohdekartta: Tiananmen] 1420, nykyasu 1651 Taivaallisen rauhan portti on Keisarikaupungin pääportti, jonka kautta jokainen palatsiin tulija kulki. Ensimmäinen portti valmistui 1420 nimellä Chengtianmen, mutta salama poltti sen 1457; uudelleenrakennus 1465 muutti muodon porttikaaresta porttitaloksi. Vuonna 1644 portti paloi jälleen kapinajoukkojen vallatessa kaupungin, ja Qing-dynastia rakensi sen uudelleen — nykyinen nimi on vuodelta 1651. Rakennus on 66 metriä pitkä, 37 leveä ja 32 korkea. Edustalla seisoo kaksi kivileijonaa pahoja henkiä torjumassa ja kaksi huabiao-pylvästä, joiden huipulla istuu taruolento. Portin edestä virtaa vallihauta, ja sen takana avautuu nykyään Tiananmenin aukio. Portilla on erityinen a…
+
+### 44.1
+KYSYMYS: Miksi Noormarkusta tuli Ahlström-yhtiön syntysija?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Noormarkku (tekniikka)
+Tietoruudun teksti: Noormarkku on Satakunnassa sijaitseva entinen kunta, joka liitettiin Poriin vuoden 2010 alussa. Paikka on Ahlström-yhtiön syntysija: Antti Ahlström osti Noormarkusta sahan, rautaruukin ja kartanon vuonna 1870, ja liiketoiminta lähti nopeaan kasvuun. Ahlström kehitti kylää laajasti: hän rakennutti tieverkkoa ja perusti yhden Suomen ensimmäisistä suomenkielisistä kouluista. Ruukin puistoalueella on paljon kulttuurihistoriallisesti arvokkaita rakennuksia, ja se on Noormarkun suosituin nähtävyys. Nykyisin ruukkialueen omistaa A. Ahlström Osakeyhtiö.
+
+### 44.2
+KYSYMYS: Miksi suomenkielinen koulu oli erityinen asia 1800-luvun Suomessa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Noormarkku (tekniikka)
+Tietoruudun teksti: Noormarkku on Satakunnassa sijaitseva entinen kunta, joka liitettiin Poriin vuoden 2010 alussa. Paikka on Ahlström-yhtiön syntysija: Antti Ahlström osti Noormarkusta sahan, rautaruukin ja kartanon vuonna 1870, ja liiketoiminta lähti nopeaan kasvuun. Ahlström kehitti kylää laajasti: hän rakennutti tieverkkoa ja perusti yhden Suomen ensimmäisistä suomenkielisistä kouluista. Ruukin puistoalueella on paljon kulttuurihistoriallisesti arvokkaita rakennuksia, ja se on Noormarkun suosituin nähtävyys. Nykyisin ruukkialueen omistaa A. Ahlström Osakeyhtiö.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki: Bern 1905 — patenttipino ja valonsäde] 1905 — Pöydän kulmalla kasvaa pino patenttihakemuksia, ja jokainen uusi tulokas työntää fysiikan muistiinpanot laatikon pohjalle. Bernin patenttiviraston kolmannen luokan tekninen asiantuntija Albert Einstein on 26-vuotias, ja hänen palkkansa elättää Mileva-vaimon ja pienen Hans Albertin. Iltaisin hän palaa kysymykseen, jota on kantanut teini-ikäisestä asti: miltä valo näyttäisi, jos sen voisi ajaa kiinni? Ajatella ääneen hän voi harvojen kanssa: ystävän ja työtoverin Michele Besson kanssa kotimatkalla, ja iltaisin muutaman tuttavan kesken, jotka kutsuvat itseään pilaillen Olympia-akatemiaksi. Virastoon hän päätyi siksi, ettei yksikään haettu opettajanpaikka auennut. Vuonna 1905 Einstein lä…
+- [Peking — kohdekartta / Kohdekartta: Tiananmen] 1420, nykyasu 1651 Taivaallisen rauhan portti on Keisarikaupungin pääportti, jonka kautta jokainen palatsiin tulija kulki. Ensimmäinen portti valmistui 1420 nimellä Chengtianmen, mutta salama poltti sen 1457; uudelleenrakennus 1465 muutti muodon porttikaaresta porttitaloksi. Vuonna 1644 portti paloi jälleen kapinajoukkojen vallatessa kaupungin, ja Qing-dynastia rakensi sen uudelleen — nykyinen nimi on vuodelta 1651. Rakennus on 66 metriä pitkä, 37 leveä ja 32 korkea. Edustalla seisoo kaksi kivileijonaa pahoja henkiä torjumassa ja kaksi huabiao-pylvästä, joiden huipulla istuu taruolento. Portin edestä virtaa vallihauta, ja sen takana avautuu nykyään Tiananmenin aukio. Portilla on erityinen a…
+
+### 44.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+================ KOHTA 45 (kohde:hahmotelma-varkaus) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varkaus (tekniikka)
+Tietoruudun teksti: Varkaus on Pohjois-Savon teollisuuskaupunki Saimaan kahden osan välisillä salmilla; vanhassa suomessa sana varkaus tarkoitti salmea. Paikka kehittyi 1800-luvun aikana merkittäväksi teollisuuskeskukseksi vesivoiman ja hyvän vesireittisijainnin ansiosta: siellä oli puu- ja paperiteollisuutta sekä laivanrakennusta. Taipaleen kanava oli ensimmäinen Suomessa rakennettu sulkukanava, ja se yhdisti Leppävirran reitin Saimaan vesiteihin. Ruukki siirtyi 1900-luvun alussa A. Ahlström Osakeyhtiölle, ja Walter Ahlström halusi rakentaa tehtaiden ympärille kokonaisen teollisuuskaupungin. Varkaus tuli itsenäiseksi kauppalaksi vuonna 1929 ja kaupungiksi vuonna 1962.
+
+### 45.1
+KYSYMYS: Miksi tehtaat rakennettiin juuri Varkauteen, salmien ja koskien äärelle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varkaus (tekniikka)
+Tietoruudun teksti: Varkaus on Pohjois-Savon teollisuuskaupunki Saimaan kahden osan välisillä salmilla; vanhassa suomessa sana varkaus tarkoitti salmea. Paikka kehittyi 1800-luvun aikana merkittäväksi teollisuuskeskukseksi vesivoiman ja hyvän vesireittisijainnin ansiosta: siellä oli puu- ja paperiteollisuutta sekä laivanrakennusta. Taipaleen kanava oli ensimmäinen Suomessa rakennettu sulkukanava, ja se yhdisti Leppävirran reitin Saimaan vesiteihin. Ruukki siirtyi 1900-luvun alussa A. Ahlström Osakeyhtiölle, ja Walter Ahlström halusi rakentaa tehtaiden ympärille kokonaisen teollisuuskaupungin. Varkaus tuli itsenäiseksi kauppalaksi vuonna 1929 ja kaupungiksi vuonna 1962.
+
+### 45.2
+KYSYMYS: Mitä sulkukanava tekee, ja miksi Taipaleen kanava oli tärkeä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varkaus (tekniikka)
+Tietoruudun teksti: Varkaus on Pohjois-Savon teollisuuskaupunki Saimaan kahden osan välisillä salmilla; vanhassa suomessa sana varkaus tarkoitti salmea. Paikka kehittyi 1800-luvun aikana merkittäväksi teollisuuskeskukseksi vesivoiman ja hyvän vesireittisijainnin ansiosta: siellä oli puu- ja paperiteollisuutta sekä laivanrakennusta. Taipaleen kanava oli ensimmäinen Suomessa rakennettu sulkukanava, ja se yhdisti Leppävirran reitin Saimaan vesiteihin. Ruukki siirtyi 1900-luvun alussa A. Ahlström Osakeyhtiölle, ja Walter Ahlström halusi rakentaa tehtaiden ympärille kokonaisen teollisuuskaupungin. Varkaus tuli itsenäiseksi kauppalaksi vuonna 1929 ja kaupungiksi vuonna 1962.
+
+### 45.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI

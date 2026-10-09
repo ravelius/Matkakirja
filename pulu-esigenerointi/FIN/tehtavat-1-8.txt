@@ -1,0 +1,202 @@
+================ KOHTA 36 (kohde:hahmotelma-kuhmo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuhmo (kulttuuri)
+Tietoruudun teksti: Kuhmo on laaja, harvaan asuttu erämaakunta Kainuun kaakkoiskulmassa, ja sen nimenä oli vuoteen 1937 asti Kuhmoniemi. Elias Lönnrot kulki 1800-luvulla Kuhmon kautta keräämään runoja Karjalaan ja muokkasi osan Kalevalasta Kuhmossa; hänen majapaikkansa jäljennös on nykyisin Kalevalakylässä. Kalevalan ilmestyminen vuonna 1835 vauhditti karelianismin syntyä, ja sen tunnetuimpiin edustajiin kuuluva Akseli Gallen-Kallela vietti häämatkansa Kuhmossa. Hän maalasi töitään Lentua-järven Lapinsalmella, ja Lentuan maisema on Aino-triptyykin keskimmäisen taulun taustana. Kuhmon tervantuotanto oli vuonna 1900 Suomen suurin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Sävel: Kaksi laulajaa, yksi käsipari] 1894 — Vanhoja runoja ei luettu vaan laulettiin, ja laulutapa oli erikoinen: kaksi laulajaa istui vastakkain, tarttui toisiaan käsistä ja keinui edestakaisin. Toinen aloitti säkeen ja toinen toisti sen, jolloin ensimmäinen ehti muistella seuraavaa. Säkeet ovat kalevalamittaa, jossa on kahdeksan tavua. Elias Lönnrot keräsi näitä runoja 1830-luvulta alkaen ja kokosi niistä Kalevalan. Valokuvaaja I. K. Inha kuvasi laulajaveljekset Vienan Uhtualla vuonna 1894.
+
+### 36.1
+KYSYMYS: Miksi Elias Lönnrot kulki Kuhmon kautta Karjalaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuhmo (kulttuuri)
+Tietoruudun teksti: Kuhmo on laaja, harvaan asuttu erämaakunta Kainuun kaakkoiskulmassa, ja sen nimenä oli vuoteen 1937 asti Kuhmoniemi. Elias Lönnrot kulki 1800-luvulla Kuhmon kautta keräämään runoja Karjalaan ja muokkasi osan Kalevalasta Kuhmossa; hänen majapaikkansa jäljennös on nykyisin Kalevalakylässä. Kalevalan ilmestyminen vuonna 1835 vauhditti karelianismin syntyä, ja sen tunnetuimpiin edustajiin kuuluva Akseli Gallen-Kallela vietti häämatkansa Kuhmossa. Hän maalasi töitään Lentua-järven Lapinsalmella, ja Lentuan maisema on Aino-triptyykin keskimmäisen taulun taustana. Kuhmon tervantuotanto oli vuonna 1900 Suomen suurin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Sävel: Kaksi laulajaa, yksi käsipari] 1894 — Vanhoja runoja ei luettu vaan laulettiin, ja laulutapa oli erikoinen: kaksi laulajaa istui vastakkain, tarttui toisiaan käsistä ja keinui edestakaisin. Toinen aloitti säkeen ja toinen toisti sen, jolloin ensimmäinen ehti muistella seuraavaa. Säkeet ovat kalevalamittaa, jossa on kahdeksan tavua. Elias Lönnrot keräsi näitä runoja 1830-luvulta alkaen ja kokosi niistä Kalevalan. Valokuvaaja I. K. Inha kuvasi laulajaveljekset Vienan Uhtualla vuonna 1894.
+
+### 36.2
+KYSYMYS: Mikä on karelianismi, ja miten Kuhmo liittyy siihen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuhmo (kulttuuri)
+Tietoruudun teksti: Kuhmo on laaja, harvaan asuttu erämaakunta Kainuun kaakkoiskulmassa, ja sen nimenä oli vuoteen 1937 asti Kuhmoniemi. Elias Lönnrot kulki 1800-luvulla Kuhmon kautta keräämään runoja Karjalaan ja muokkasi osan Kalevalasta Kuhmossa; hänen majapaikkansa jäljennös on nykyisin Kalevalakylässä. Kalevalan ilmestyminen vuonna 1835 vauhditti karelianismin syntyä, ja sen tunnetuimpiin edustajiin kuuluva Akseli Gallen-Kallela vietti häämatkansa Kuhmossa. Hän maalasi töitään Lentua-järven Lapinsalmella, ja Lentuan maisema on Aino-triptyykin keskimmäisen taulun taustana. Kuhmon tervantuotanto oli vuonna 1900 Suomen suurin.
+
+### 36.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+================ KOHTA 37 (kohde:hahmotelma-kaustinen) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaustinen (kulttuuri)
+Tietoruudun teksti: Kaustinen on Keski-Pohjanmaan maaseutukunta, joka tunnetaan vanhasta pelimanniperinteestä. Kaustislaiset lähettivät valtuuskunnan Tukholmaan, ja kuningas Kustaa III antoi kesäkuussa 1776 luvan oman kirkon rakentamiseen, jotta pitkät kirkkomatkat jäisivät pois; kirkko valmistui syksyllä 1777. Terva oli 1600-luvun alusta 1800-luvun loppuun asti talonpojan tärkein tulonlähde. Kunnan vaakunassa on viulu, joka viittaa yhä elävään kansanmusiikkiperinteeseen, ja joka heinäkuu paikkakunnalla järjestetään Kaustisen kansanmusiikkijuhlat. Vuonna 2021 kaustislainen viulunsoitto hyväksyttiin Unescon aineettoman kulttuuriperinnön luetteloon.
+
+### 37.1
+KYSYMYS: Miksi kaustislaiset matkustivat Tukholmaan kuningas Kustaa III:n puheille?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaustinen (kulttuuri)
+Tietoruudun teksti: Kaustinen on Keski-Pohjanmaan maaseutukunta, joka tunnetaan vanhasta pelimanniperinteestä. Kaustislaiset lähettivät valtuuskunnan Tukholmaan, ja kuningas Kustaa III antoi kesäkuussa 1776 luvan oman kirkon rakentamiseen, jotta pitkät kirkkomatkat jäisivät pois; kirkko valmistui syksyllä 1777. Terva oli 1600-luvun alusta 1800-luvun loppuun asti talonpojan tärkein tulonlähde. Kunnan vaakunassa on viulu, joka viittaa yhä elävään kansanmusiikkiperinteeseen, ja joka heinäkuu paikkakunnalla järjestetään Kaustisen kansanmusiikkijuhlat. Vuonna 2021 kaustislainen viulunsoitto hyväksyttiin Unescon aineettoman kulttuuriperinnön luetteloon.
+
+### 37.2
+KYSYMYS: Mitä yhteistä Kaustisella ja Peanuts-sarjan Woodstock-linnulla on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaustinen (kulttuuri)
+Tietoruudun teksti: Kaustinen on Keski-Pohjanmaan maaseutukunta, joka tunnetaan vanhasta pelimanniperinteestä. Kaustislaiset lähettivät valtuuskunnan Tukholmaan, ja kuningas Kustaa III antoi kesäkuussa 1776 luvan oman kirkon rakentamiseen, jotta pitkät kirkkomatkat jäisivät pois; kirkko valmistui syksyllä 1777. Terva oli 1600-luvun alusta 1800-luvun loppuun asti talonpojan tärkein tulonlähde. Kunnan vaakunassa on viulu, joka viittaa yhä elävään kansanmusiikkiperinteeseen, ja joka heinäkuu paikkakunnalla järjestetään Kaustisen kansanmusiikkijuhlat. Vuonna 2021 kaustislainen viulunsoitto hyväksyttiin Unescon aineettoman kulttuuriperinnön luetteloon.
+
+### 37.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+================ KOHTA 38 (kohde:hahmotelma-inari) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inari (kulttuuri)
+Tietoruudun teksti: Inari on pinta-alaltaan Suomen suurin kunta, mutta samalla yksi harvimmin asutuista. Sen alueella on osia Lemmenjoen ja Urho Kekkosen kansallispuistoista, ja Inarijärvi on maan kolmanneksi suurin järvi. Inaria kutsutaan saamelaiskulttuurin pääkaupungiksi: Inarin kylässä ovat Siida, Saamelaismuseo ja Pohjois-Lapin luontokeskus, sekä saamelaiskulttuurikeskus Sajos. Kunnalla on neljä virallista kieltä, suomi sekä inarinsaame, koltansaame ja pohjoissaame, mikä on enemmän kuin missään muussa Suomen kunnassa. Tärkeitä elinkeinoja ovat matkailu, palvelut ja kylmänkestotestaus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rovaniemi — kaupunkilehti / Lappi: Kieli, jota puhutaan vain Suomessa] Inarinsaamea puhutaan ainoastaan Inarijärven ympärillä. 1990-luvun puolivälissä kieltä puhui lapsilleen enää kaksi perhettä ja alle 20-vuotiaita puhujia oli neljä. Vuonna 1997 Inarissa aloitettiin kielipesä, jossa aikuiset puhuvat lapsille vain inarinsaamea. Nyt puhujia on muutama sata, ja osa kielipesän lapsista opettaa kieltä itse.
+- [Kioto — kohdekartta / Kohdekartta: Fushimi Inari-taisha] perustettu 711 Pyhäkön perusti vuonna 711 Hata-suku, Korean niemimaalta muuttanut mahtisuku, joka toi mukanaan kastelun, silkinviljelyn ja sakenpanon taidot. Se on omistettu Inarille, riisin ja maanviljelyn kamille — ja kun riisi oli myös maksuväline, kauppiaat alkoivat palvoa Inaria liike-elämän suojelijana. Inari-pyhäköitä on jaettu ympäri Japania niin ahkerasti, että sivupyhäköitä lasketaan olevan noin 32 000. Ensimmäiset rakennukset nousivat Inari-vuorelle 711, ja pyhäkkö siirrettiin vuonna 816 munkki Kūkain pyynnöstä nykyiselle paikalleen vuoren juurelle. Päärakennus on vuodelta 1499. Vuosina 1871–1946 Fushimi Inari oli valtion tukemien pyhäköiden ylimmässä luokassa. Kuuluisimpia ovat …
+
+### 38.1
+KYSYMYS: Miksi Inaria kutsutaan saamelaiskulttuurin pääkaupungiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inari (kulttuuri)
+Tietoruudun teksti: Inari on pinta-alaltaan Suomen suurin kunta, mutta samalla yksi harvimmin asutuista. Sen alueella on osia Lemmenjoen ja Urho Kekkosen kansallispuistoista, ja Inarijärvi on maan kolmanneksi suurin järvi. Inaria kutsutaan saamelaiskulttuurin pääkaupungiksi: Inarin kylässä ovat Siida, Saamelaismuseo ja Pohjois-Lapin luontokeskus, sekä saamelaiskulttuurikeskus Sajos. Kunnalla on neljä virallista kieltä, suomi sekä inarinsaame, koltansaame ja pohjoissaame, mikä on enemmän kuin missään muussa Suomen kunnassa. Tärkeitä elinkeinoja ovat matkailu, palvelut ja kylmänkestotestaus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kioto — kohdekartta / Kohdekartta: Fushimi Inari-taisha] perustettu 711 Pyhäkön perusti vuonna 711 Hata-suku, Korean niemimaalta muuttanut mahtisuku, joka toi mukanaan kastelun, silkinviljelyn ja sakenpanon taidot. Se on omistettu Inarille, riisin ja maanviljelyn kamille — ja kun riisi oli myös maksuväline, kauppiaat alkoivat palvoa Inaria liike-elämän suojelijana. Inari-pyhäköitä on jaettu ympäri Japania niin ahkerasti, että sivupyhäköitä lasketaan olevan noin 32 000. Ensimmäiset rakennukset nousivat Inari-vuorelle 711, ja pyhäkkö siirrettiin vuonna 816 munkki Kūkain pyynnöstä nykyiselle paikalleen vuoren juurelle. Päärakennus on vuodelta 1499. Vuosina 1871–1946 Fushimi Inari oli valtion tukemien pyhäköiden ylimmässä luokassa. Kuuluisimpia ovat …
+
+### 38.2
+KYSYMYS: Mitä kieliä Inarissa puhutaan, ja mitä ne kertovat alueen asukkaista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inari (kulttuuri)
+Tietoruudun teksti: Inari on pinta-alaltaan Suomen suurin kunta, mutta samalla yksi harvimmin asutuista. Sen alueella on osia Lemmenjoen ja Urho Kekkosen kansallispuistoista, ja Inarijärvi on maan kolmanneksi suurin järvi. Inaria kutsutaan saamelaiskulttuurin pääkaupungiksi: Inarin kylässä ovat Siida, Saamelaismuseo ja Pohjois-Lapin luontokeskus, sekä saamelaiskulttuurikeskus Sajos. Kunnalla on neljä virallista kieltä, suomi sekä inarinsaame, koltansaame ja pohjoissaame, mikä on enemmän kuin missään muussa Suomen kunnassa. Tärkeitä elinkeinoja ovat matkailu, palvelut ja kylmänkestotestaus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rovaniemi — kaupunkilehti / Lappi: Kieli, jota puhutaan vain Suomessa] Inarinsaamea puhutaan ainoastaan Inarijärven ympärillä. 1990-luvun puolivälissä kieltä puhui lapsilleen enää kaksi perhettä ja alle 20-vuotiaita puhujia oli neljä. Vuonna 1997 Inarissa aloitettiin kielipesä, jossa aikuiset puhuvat lapsille vain inarinsaamea. Nyt puhujia on muutama sata, ja osa kielipesän lapsista opettaa kieltä itse.
+
+### 38.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+================ KOHTA 39 (kohde:hahmotelma-kuopio) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuopio (kulttuuri)
+Tietoruudun teksti: Kuopio on Pohjois-Savon maakuntakeskus, jota ympäröi Kallavesi ja jonka osat sijaitsevat saarilla. Kaupungin virallinen perustamispäivä on 17. marraskuuta 1775, jolloin Ruotsin kuningas Kustaa III määräsi sen Savo-Karjalan läänin hallintokaupungiksi, vaikka asutus oli perustettu jo vuonna 1653. Kuopion ensimmäinen asemakaava on vuodelta 1776, ja sen perintönä katuverkossa on rännikatu: joka toinen katu on varattu jalankulkijoille ja pyöräilijöille. Se tehtiin alun perin palokatkoksi pääosin puisessa kaupungissa. Kuopio tunnetaan myös savolaisesta kalakukosta, minkä vuoksi sitä kutsutaan kalakukon luvatuksi maaksi, sekä Puijon mäestä ja sen tornista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Medina — kaupunkilehti / Medina: Muuri, joka on nykyään kehätie] Vanha Medina oli soikea muurikaupunki. Muuri oli yhdeksästä kahteentoista metriin korkea, sitä kiersivät tornit, ja sisään pääsi neljästä portista — kauneimpana pidettiin Bab al-Salamia eli Rauhan porttia. Muurien ulkopuolella lännessä ja etelässä oli esikaupunkeja: matalia taloja, pihoja, puutarhoja ja viljelyksiä. Saudi-Arabian aikana muurit purettiin, ja niiden paikalle vedettiin kolme kehätietä, King Faisal Road, King Abdullah Road ja King Khalid Road. Vanhan kaupungin soikea ääriviiva elää siis yhä katuverkossa, vaikka muurikiveä ei ole jäljellä.
+
+### 39.1
+KYSYMYS: Miksi Kuopion katuverkossa on joka toinen katu varattu jalankulkijoille ja pyöräilijöille?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuopio (kulttuuri)
+Tietoruudun teksti: Kuopio on Pohjois-Savon maakuntakeskus, jota ympäröi Kallavesi ja jonka osat sijaitsevat saarilla. Kaupungin virallinen perustamispäivä on 17. marraskuuta 1775, jolloin Ruotsin kuningas Kustaa III määräsi sen Savo-Karjalan läänin hallintokaupungiksi, vaikka asutus oli perustettu jo vuonna 1653. Kuopion ensimmäinen asemakaava on vuodelta 1776, ja sen perintönä katuverkossa on rännikatu: joka toinen katu on varattu jalankulkijoille ja pyöräilijöille. Se tehtiin alun perin palokatkoksi pääosin puisessa kaupungissa. Kuopio tunnetaan myös savolaisesta kalakukosta, minkä vuoksi sitä kutsutaan kalakukon luvatuksi maaksi, sekä Puijon mäestä ja sen tornista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Medina — kaupunkilehti / Medina: Muuri, joka on nykyään kehätie] Vanha Medina oli soikea muurikaupunki. Muuri oli yhdeksästä kahteentoista metriin korkea, sitä kiersivät tornit, ja sisään pääsi neljästä portista — kauneimpana pidettiin Bab al-Salamia eli Rauhan porttia. Muurien ulkopuolella lännessä ja etelässä oli esikaupunkeja: matalia taloja, pihoja, puutarhoja ja viljelyksiä. Saudi-Arabian aikana muurit purettiin, ja niiden paikalle vedettiin kolme kehätietä, King Faisal Road, King Abdullah Road ja King Khalid Road. Vanhan kaupungin soikea ääriviiva elää siis yhä katuverkossa, vaikka muurikiveä ei ole jäljellä.
+
+### 39.2
+KYSYMYS: Mitä kalakukko on, ja miksi Kuopiota sanotaan sen luvatuksi maaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuopio (kulttuuri)
+Tietoruudun teksti: Kuopio on Pohjois-Savon maakuntakeskus, jota ympäröi Kallavesi ja jonka osat sijaitsevat saarilla. Kaupungin virallinen perustamispäivä on 17. marraskuuta 1775, jolloin Ruotsin kuningas Kustaa III määräsi sen Savo-Karjalan läänin hallintokaupungiksi, vaikka asutus oli perustettu jo vuonna 1653. Kuopion ensimmäinen asemakaava on vuodelta 1776, ja sen perintönä katuverkossa on rännikatu: joka toinen katu on varattu jalankulkijoille ja pyöräilijöille. Se tehtiin alun perin palokatkoksi pääosin puisessa kaupungissa. Kuopio tunnetaan myös savolaisesta kalakukosta, minkä vuoksi sitä kutsutaan kalakukon luvatuksi maaksi, sekä Puijon mäestä ja sen tornista.
+
+### 39.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+================ KOHTA 40 (kohde:hahmotelma-kristinestad) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kristiinankaupunki (kulttuuri)
+Tietoruudun teksti: Kristiinankaupunki sijaitsee Pohjanmaalla Selkämeren rannalla Suomen länsirannikolla. Kaupunki sai kaupunkioikeudet vuonna 1649 Per Brahe nuoremman toimesta Koppön saarella, ja se on nimetty Ruotsin kuningatar Kristiinan mukaan. Kristiinankaupunki tunnetaan vanhasta kaupunginosastaan, jossa on matalia puutaloja ja kapeita kujia. Se on kaksikielinen: runsas puolet asukkaista puhuu ruotsia ja noin 39 prosenttia suomea. Suomenkielinen nimi on Suomen pisin käytössä oleva kunnan nimi, ja paikallisesti kaupunkia kutsutaan usein pelkäksi Kristiinaksi. Vuonna 2011 siitä tuli Suomen ensimmäinen Cittaslow-kaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxor — kaupunkilehti / Arki ja kulkeminen: Vaunun malli on nimetty kuningattaren mukaan] Luxorissa ajetaan hevosvaunuilla, joita sanotaan arabiaksi hantouriksi. Malli on englantilainen victoria: nelipyöräinen avovaunu, jossa on edessä korotettu ajajan istuin ja sen takana kahden matkustajan penkki taitettavan kuomun alla. Vaunu kehitettiin Ranskassa, tuotiin Englantiin vuonna 1869 ja nimettiin kuningatar Victorian mukaan, minkä jälkeen siitä tuli muotiajoneuvo puistoajeluille. Kyytiin noustaan matalalta askelmalta, ja pyörien päällä on leveät kaarevat lokasuojat, jotka suojaavat matkustajia mudalta ja roiskeilta. Egyptissä ja Levantissa hantour on vuokra-ajoneuvo.
+
+### 40.1
+KYSYMYS: Miksi kaupunki on nimetty Ruotsin kuningattaren mukaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kristiinankaupunki (kulttuuri)
+Tietoruudun teksti: Kristiinankaupunki sijaitsee Pohjanmaalla Selkämeren rannalla Suomen länsirannikolla. Kaupunki sai kaupunkioikeudet vuonna 1649 Per Brahe nuoremman toimesta Koppön saarella, ja se on nimetty Ruotsin kuningatar Kristiinan mukaan. Kristiinankaupunki tunnetaan vanhasta kaupunginosastaan, jossa on matalia puutaloja ja kapeita kujia. Se on kaksikielinen: runsas puolet asukkaista puhuu ruotsia ja noin 39 prosenttia suomea. Suomenkielinen nimi on Suomen pisin käytössä oleva kunnan nimi, ja paikallisesti kaupunkia kutsutaan usein pelkäksi Kristiinaksi. Vuonna 2011 siitä tuli Suomen ensimmäinen Cittaslow-kaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxor — kaupunkilehti / Arki ja kulkeminen: Vaunun malli on nimetty kuningattaren mukaan] Luxorissa ajetaan hevosvaunuilla, joita sanotaan arabiaksi hantouriksi. Malli on englantilainen victoria: nelipyöräinen avovaunu, jossa on edessä korotettu ajajan istuin ja sen takana kahden matkustajan penkki taitettavan kuomun alla. Vaunu kehitettiin Ranskassa, tuotiin Englantiin vuonna 1869 ja nimettiin kuningatar Victorian mukaan, minkä jälkeen siitä tuli muotiajoneuvo puistoajeluille. Kyytiin noustaan matalalta askelmalta, ja pyörien päällä on leveät kaarevat lokasuojat, jotka suojaavat matkustajia mudalta ja roiskeilta. Egyptissä ja Levantissa hantour on vuokra-ajoneuvo.
+
+### 40.2
+KYSYMYS: Mitä Cittaslow tarkoittaa, ja miksi Kristiinankaupungista tuli Suomen ensimmäinen Cittaslow-kaupunki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kristiinankaupunki (kulttuuri)
+Tietoruudun teksti: Kristiinankaupunki sijaitsee Pohjanmaalla Selkämeren rannalla Suomen länsirannikolla. Kaupunki sai kaupunkioikeudet vuonna 1649 Per Brahe nuoremman toimesta Koppön saarella, ja se on nimetty Ruotsin kuningatar Kristiinan mukaan. Kristiinankaupunki tunnetaan vanhasta kaupunginosastaan, jossa on matalia puutaloja ja kapeita kujia. Se on kaksikielinen: runsas puolet asukkaista puhuu ruotsia ja noin 39 prosenttia suomea. Suomenkielinen nimi on Suomen pisin käytössä oleva kunnan nimi, ja paikallisesti kaupunkia kutsutaan usein pelkäksi Kristiinaksi. Vuonna 2011 siitä tuli Suomen ensimmäinen Cittaslow-kaupunki.
+
+### 40.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI

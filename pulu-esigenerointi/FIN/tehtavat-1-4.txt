@@ -1,0 +1,209 @@
+================ KOHTA 16 (kohde:hameenlinna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hämeen linna (historia)
+Tietoruudun teksti: Hämeen linna seisoo Hämeenlinnassa Vanajaveden rannalla — alun perin saarella, nykyään rannalla. Siinä on keskustorni ja sitä kiertävä muuri vallihautoineen; tornissa oli alkujaan viisi tornia, joista kaksi erottuu yhä, ja muurissa on porttirakennus, kahdeksankulmainen tiilitorni ja pyöreä tykkitorni. Alaosat ovat harmaakiveä, yläosat punatiiltä. Ikä on kiistanalainen: perinne liittää linnan Birger jaarlin toiseen ristiretkeen ja siis 1200-luvun puoliväliin, mutta kaivauksista ei ole löytynyt mitään, joka varmasti olisi 1320-lukua vanhempaa, eikä vuoden 1308 kuninkaallinen asiakirja tunne Hämeestä kuin yhden linnan. Foggin matkan aikaan linna ei ollut linna lainkaan: Suomen sodan jälkeen siitä tehtiin vankila, ja vankilana se oli vuoteen 1953. Museo siitä tuli vasta 1979.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Ljubljana: Linna, josta tuli vankila ja sitten kulttuurikeskus] Ljubljanan linna kohoaa Linnavuorella vanhankaupungin yläpuolella. Nykyisen ulkoasunsa se sai 1400-luvun perusteellisessa uudistuksessa, ja suurin osa rakennuksista on 1500- ja 1600-luvuilta. Linna oli ensin Krainin herrojen pääpaikka, mutta 1800-luvulla siitä tehtiin muun muassa vankila, ja vuonna 1905 kaupunki osti sen. Nykyään linnassa järjestetään konsertteja, näyttelyitä ja häitä. Ylös pääsee metsäpolkuja pitkin tai vuonna 2006 avatulla köysiradalla.
+- [Belgia — maalehti / Historia: Linna, joka pelotteli omia kaupunkilaisiaan] 1180 — Vuonna 1180 Flanderin kreivi Filip Elsassilainen rakennutti Gentin ytimeen kivilinnan, jonka tehtävä ei ollut vain torjua vihollisia. Se oli tarkoitettu myös muistuttamaan kaupungin itsepäisiä porvareita siitä, kuka on herra talossa. Kreivit asuivat linnassa vuoteen 1353 asti. Sen jälkeen siellä toimi oikeussali, vankila ja rahapaja, ja 1800-luvulla osa rakennuksista muutettiin puuvillatehtaaksi. Linna oli jo purkulistalla, kunnes kaupunki osti sen vähitellen ja aloitti vuonna 1893 laajan entisöinnin.
+
+### 16.1
+KYSYMYS: Miksi linnan ikä on kiistanalainen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hämeen linna (historia)
+Tietoruudun teksti: Hämeen linna seisoo Hämeenlinnassa Vanajaveden rannalla — alun perin saarella, nykyään rannalla. Siinä on keskustorni ja sitä kiertävä muuri vallihautoineen; tornissa oli alkujaan viisi tornia, joista kaksi erottuu yhä, ja muurissa on porttirakennus, kahdeksankulmainen tiilitorni ja pyöreä tykkitorni. Alaosat ovat harmaakiveä, yläosat punatiiltä. Ikä on kiistanalainen: perinne liittää linnan Birger jaarlin toiseen ristiretkeen ja siis 1200-luvun puoliväliin, mutta kaivauksista ei ole löytynyt mitään, joka varmasti olisi 1320-lukua vanhempaa, eikä vuoden 1308 kuninkaallinen asiakirja tunne Hämeestä kuin yhden linnan. Foggin matkan aikaan linna ei ollut linna lainkaan: Suomen sodan jälkeen siitä tehtiin vankila, ja vankilana se oli vuoteen 1953. Museo siitä tuli vasta 1979.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aden — kohdekartta / Kohdekartta: Tawilan altaat] ikä kiistanalainen, kunnostus 1800-luvulla Wadi Tawilan uomaan hakattu allassarja on Adenin vanhin yhä näkyvä rakennelma ja samalla sen paras selitys: kraatterissa sataa vähän, eikä pohjavettä ole, joten kaupunki eli sen varassa, mitä Shamsanin rinteiltä saatiin talteen. Altaita on jäljellä kolmetoista, ja niiden yhteistilavuus on noin yhdeksäntoista miljoonaa gallonaa. Suurimmat ovat päälaitoksen keskellä oleva Coghlanin allas ja alimpana, varsinaisen alueen ulkopuolella, pyöreä Playfairin allas. Coghlanin altaassa on suorakaiteen muotoinen syvennys, jota kohteen johtajan mukaan on voitu käyttää esi-islamilaisiin uhritoimituksiin — se sopisi yhteen yleisimmän ikäoletuksen kanssa. Kirjallis…
+- [Kypros — maalehti / Kirkot: Kirkko nimettiin kattonsa mukaan] Agios Nikolaos tis Stegis on Kakopetriasta kaksi kilometriä lounaaseen, 800 metrin korkeudessa. Kirkkosali on 1000-luvulta ja kupolillinen eteishuone 1100-luvun alusta; molemmat katettiin alun perin tiilellä. Myöhemmin niiden ylle rakennettiin päädyt ja iso puukatto, joka peittää kupolin ja holvit kokonaan. Siitä tulee myös nimi: kreikan stegi tarkoittaa kattoa, ja vanhin tunnettu nimen esiintymä on myöhäiseltä 1200-luvulta oleva ikoni, joka tilattiin tähän kirkkoon. Kyproksen kirkoista se on ainoa, joka on nimetty kattonsa mukaan. Katon ikä on kiistanalainen: lähteet ajoittavat sen 1100-luvun alusta 1200-luvulle. Kate on erikoisvalmisteista litteää koukkutiiltä, ja kukin tiili peittää seur…
+
+### 16.2
+KYSYMYS: Mitä linnassa tehtiin 1800-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hämeen linna (historia)
+Tietoruudun teksti: Hämeen linna seisoo Hämeenlinnassa Vanajaveden rannalla — alun perin saarella, nykyään rannalla. Siinä on keskustorni ja sitä kiertävä muuri vallihautoineen; tornissa oli alkujaan viisi tornia, joista kaksi erottuu yhä, ja muurissa on porttirakennus, kahdeksankulmainen tiilitorni ja pyöreä tykkitorni. Alaosat ovat harmaakiveä, yläosat punatiiltä. Ikä on kiistanalainen: perinne liittää linnan Birger jaarlin toiseen ristiretkeen ja siis 1200-luvun puoliväliin, mutta kaivauksista ei ole löytynyt mitään, joka varmasti olisi 1320-lukua vanhempaa, eikä vuoden 1308 kuninkaallinen asiakirja tunne Hämeestä kuin yhden linnan. Foggin matkan aikaan linna ei ollut linna lainkaan: Suomen sodan jälkeen siitä tehtiin vankila, ja vankilana se oli vuoteen 1953. Museo siitä tuli vasta 1979.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Ljubljana: Linna, josta tuli vankila ja sitten kulttuurikeskus] Ljubljanan linna kohoaa Linnavuorella vanhankaupungin yläpuolella. Nykyisen ulkoasunsa se sai 1400-luvun perusteellisessa uudistuksessa, ja suurin osa rakennuksista on 1500- ja 1600-luvuilta. Linna oli ensin Krainin herrojen pääpaikka, mutta 1800-luvulla siitä tehtiin muun muassa vankila, ja vuonna 1905 kaupunki osti sen. Nykyään linnassa järjestetään konsertteja, näyttelyitä ja häitä. Ylös pääsee metsäpolkuja pitkin tai vuonna 2006 avatulla köysiradalla.
+- [Belgia — maalehti / Historia: Linna, joka pelotteli omia kaupunkilaisiaan] 1180 — Vuonna 1180 Flanderin kreivi Filip Elsassilainen rakennutti Gentin ytimeen kivilinnan, jonka tehtävä ei ollut vain torjua vihollisia. Se oli tarkoitettu myös muistuttamaan kaupungin itsepäisiä porvareita siitä, kuka on herra talossa. Kreivit asuivat linnassa vuoteen 1353 asti. Sen jälkeen siellä toimi oikeussali, vankila ja rahapaja, ja 1800-luvulla osa rakennuksista muutettiin puuvillatehtaaksi. Linna oli jo purkulistalla, kunnes kaupunki osti sen vähitellen ja aloitti vuonna 1893 laajan entisöinnin.
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:ruotsinsalmi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruotsinsalmi (merenkulku)
+Tietoruudun teksti: Suomenlahdella nykyisen Kotkan edustalla käytiin 9. ja 10. heinäkuuta 1790 toinen Ruotsinsalmen taistelu. Ruotsin merivoimat löivät Venäjän laivaston niin perusteellisesti, että se lopetti vuosien 1788–1790 Venäjän ja Ruotsin välisen sodan. Taistelu on Ruotsin suurin merivoitto ja suurin meritaistelu, joka Itämerellä on koskaan käyty; alusten lukumäärällä mitattuna se kuuluu koko maailmanhistorian suurimpien meritaistelujen joukkoon. Isoisäsi aikaan taistelusta oli kulunut runsaat kahdeksankymmentä vuotta, ja Kotkan edustan salmi oli yhä merenkulkijoiden muistissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Tiede: Puhelin jota myytiin 250 miljoonaa kappaletta] 2003 — Nokia 1100 esiteltiin elokuussa 2003 halpana ja kestävänä peruspuhelimena, jossa ei ollut kameraa eikä väriruutua — vain soitto, tekstiviestit ja pölynkestävä kotelo kehitysmaiden vaativiin oloihin. Puhelimesta tuli silti kaikkien aikojen myydyin matkapuhelinmalli: sitä on myyty yli 250 miljoonaa kappaletta, mikä tekee siitä myös maailman myydyimmän yksittäisen kulutuselektroniikkatuotteen ilmestymisaikanaan. Malli oli viimeinen Nokian puhelin, jossa soi vain yksiäänisiä soittoääniä — poikkeuksena ylellinen 8910i, joka jatkoi markkinoilla vuoteen 2007 asti. Nokia lopetti 1100:n valmistuksen vuonna 2010.
+
+### 17.1
+KYSYMYS: Kuinka suuri taistelu Ruotsinsalmi oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruotsinsalmi (merenkulku)
+Tietoruudun teksti: Suomenlahdella nykyisen Kotkan edustalla käytiin 9. ja 10. heinäkuuta 1790 toinen Ruotsinsalmen taistelu. Ruotsin merivoimat löivät Venäjän laivaston niin perusteellisesti, että se lopetti vuosien 1788–1790 Venäjän ja Ruotsin välisen sodan. Taistelu on Ruotsin suurin merivoitto ja suurin meritaistelu, joka Itämerellä on koskaan käyty; alusten lukumäärällä mitattuna se kuuluu koko maailmanhistorian suurimpien meritaistelujen joukkoon. Isoisäsi aikaan taistelusta oli kulunut runsaat kahdeksankymmentä vuotta, ja Kotkan edustan salmi oli yhä merenkulkijoiden muistissa.
+
+### 17.2
+KYSYMYS: Minkä sodan taistelu lopetti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruotsinsalmi (merenkulku)
+Tietoruudun teksti: Suomenlahdella nykyisen Kotkan edustalla käytiin 9. ja 10. heinäkuuta 1790 toinen Ruotsinsalmen taistelu. Ruotsin merivoimat löivät Venäjän laivaston niin perusteellisesti, että se lopetti vuosien 1788–1790 Venäjän ja Ruotsin välisen sodan. Taistelu on Ruotsin suurin merivoitto ja suurin meritaistelu, joka Itämerellä on koskaan käyty; alusten lukumäärällä mitattuna se kuuluu koko maailmanhistorian suurimpien meritaistelujen joukkoon. Isoisäsi aikaan taistelusta oli kulunut runsaat kahdeksankymmentä vuotta, ja Kotkan edustan salmi oli yhä merenkulkijoiden muistissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Tiede: Puhelin jota myytiin 250 miljoonaa kappaletta] 2003 — Nokia 1100 esiteltiin elokuussa 2003 halpana ja kestävänä peruspuhelimena, jossa ei ollut kameraa eikä väriruutua — vain soitto, tekstiviestit ja pölynkestävä kotelo kehitysmaiden vaativiin oloihin. Puhelimesta tuli silti kaikkien aikojen myydyin matkapuhelinmalli: sitä on myyty yli 250 miljoonaa kappaletta, mikä tekee siitä myös maailman myydyimmän yksittäisen kulutuselektroniikkatuotteen ilmestymisaikanaan. Malli oli viimeinen Nokian puhelin, jossa soi vain yksiäänisiä soittoääniä — poikkeuksena ylellinen 8910i, joka jatkoi markkinoilla vuoteen 2007 asti. Nokia lopetti 1100:n valmistuksen vuonna 2010.
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:kultala) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kultala (kauppa)
+Tietoruudun teksti: Tämä on uutinen, joka on juuri nyt tuore. Norjalainen geologi Tellef Dahll löysi 1860-luvulla kultaa Tenojoesta ja huomasi lupaavimpien paikkojen olevan Suomen puolella. Suomi näki nälkää, ja vuorihallitus lähetti 1868 insinööri Conrad Lihrin johtaman retkikunnan pohjoiseen; syyskuussa se löysi kultaa Ivalojoesta Inarista. Aleksanteri II vahvisti huhtikuussa 1870 lain, joka luopui hallitsijan yksinoikeudesta jalometalleihin ja avasi huuhdonnan jokaiselle "kunnolliselle" suuriruhtinaskunnan ja Venäjän keisarikunnan miehelle. Saman kevään ja kesän aikana noin viisisataa kullankaivajaa hiihti, käveli ja souti satoja kilometrejä Ivalojoen ja Sotajoen yhtymäkohtaan. Sinne perustettiin Kultalan kruununasema, jossa viranomaiset myönsivät valtaukset ja ostivat kullan; asemalla oli myös järjestyksenvalvojat ja kartoittajat. Ryntäys kesti vain muutaman vuoden.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Taivas joka syttyy vihreäksi] nykyään — Revontulet syntyvät, kun Auringosta virtaavat varatut hiukkaset törmäävät ilmakehän happi- ja typpiatomeihin ja saavat ne hehkumaan — happi loistaa vihreänä ja punaisena, typpi sinisenä ja violettina. Suomen Lappi sijaitsee juuri sillä leveysasteella, jolla revontulet näkyvät useimmin, koska maapallon magneettikenttä ohjaa hiukkaset kehämäiselle vyöhykkeelle napojen ympärille. Pilvettöminä, pimeinä talvi-iltoina valot voivat leimahtaa taivaalle verhoina, säteinä tai kiemuroina, jotka muuttavat muotoaan minuuteissa. Ilmiö tunnetaan nimellä aurora borealis, ja Lapin talvimatkailu ajoittuu pitkälti pimeän vuodenajan ympärille juuri revontulten vuoksi.
+- [Suomi — maalehti / Luonto: Kaksi viikkoa jolloin tunturi syttyy tuleen] syyskuu — Ruska on lyhyt, muutaman viikon mittainen ajanjakso syyskuun alussa, jolloin Lapin tunturikoivikot ja -kanervikot värjäytyvät nopeasti keltaisiksi, oransseiksi ja tulipunaisiksi ennen lehtien putoamista. Ilmiö johtuu siitä, että öiset pakkaset pysäyttävät lehtivihreän tuotannon, jolloin lehdissä koko kasvukauden piilleet keltaiset ja punaiset väripigmentit pääsevät näkyviin. Tunturien paljailla laella väri leviää poikkeuksellisen laajana ja yhtenäisenä, toisin kuin metsäisemmällä Etelä-Suomella. Ruska houkuttelee syksyisin retkeilijöitä Pallas-Yllästunturin ja Urho Kekkosen kansallispuistoihin, ja ajankohta vaihtelee vuosittain sään mukaan.
+
+### 18.1
+KYSYMYS: Mistä Lapin kulta löytyi ensimmäisenä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kultala (kauppa)
+Tietoruudun teksti: Tämä on uutinen, joka on juuri nyt tuore. Norjalainen geologi Tellef Dahll löysi 1860-luvulla kultaa Tenojoesta ja huomasi lupaavimpien paikkojen olevan Suomen puolella. Suomi näki nälkää, ja vuorihallitus lähetti 1868 insinööri Conrad Lihrin johtaman retkikunnan pohjoiseen; syyskuussa se löysi kultaa Ivalojoesta Inarista. Aleksanteri II vahvisti huhtikuussa 1870 lain, joka luopui hallitsijan yksinoikeudesta jalometalleihin ja avasi huuhdonnan jokaiselle "kunnolliselle" suuriruhtinaskunnan ja Venäjän keisarikunnan miehelle. Saman kevään ja kesän aikana noin viisisataa kullankaivajaa hiihti, käveli ja souti satoja kilometrejä Ivalojoen ja Sotajoen yhtymäkohtaan. Sinne perustettiin Kultalan kruununasema, jossa viranomaiset myönsivät valtaukset ja ostivat kullan; asemalla oli myös järjestyksenvalvojat ja kartoittajat. Ryntäys kesti vain muutaman vuoden.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Taivas joka syttyy vihreäksi] nykyään — Revontulet syntyvät, kun Auringosta virtaavat varatut hiukkaset törmäävät ilmakehän happi- ja typpiatomeihin ja saavat ne hehkumaan — happi loistaa vihreänä ja punaisena, typpi sinisenä ja violettina. Suomen Lappi sijaitsee juuri sillä leveysasteella, jolla revontulet näkyvät useimmin, koska maapallon magneettikenttä ohjaa hiukkaset kehämäiselle vyöhykkeelle napojen ympärille. Pilvettöminä, pimeinä talvi-iltoina valot voivat leimahtaa taivaalle verhoina, säteinä tai kiemuroina, jotka muuttavat muotoaan minuuteissa. Ilmiö tunnetaan nimellä aurora borealis, ja Lapin talvimatkailu ajoittuu pitkälti pimeän vuodenajan ympärille juuri revontulten vuoksi.
+- [Suomi — maalehti / Luonto: Kaksi viikkoa jolloin tunturi syttyy tuleen] syyskuu — Ruska on lyhyt, muutaman viikon mittainen ajanjakso syyskuun alussa, jolloin Lapin tunturikoivikot ja -kanervikot värjäytyvät nopeasti keltaisiksi, oransseiksi ja tulipunaisiksi ennen lehtien putoamista. Ilmiö johtuu siitä, että öiset pakkaset pysäyttävät lehtivihreän tuotannon, jolloin lehdissä koko kasvukauden piilleet keltaiset ja punaiset väripigmentit pääsevät näkyviin. Tunturien paljailla laella väri leviää poikkeuksellisen laajana ja yhtenäisenä, toisin kuin metsäisemmällä Etelä-Suomella. Ruska houkuttelee syksyisin retkeilijöitä Pallas-Yllästunturin ja Urho Kekkosen kansallispuistoihin, ja ajankohta vaihtelee vuosittain sään mukaan.
+
+### 18.2
+KYSYMYS: Kuka sai luvan huuhtoa kultaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kultala (kauppa)
+Tietoruudun teksti: Tämä on uutinen, joka on juuri nyt tuore. Norjalainen geologi Tellef Dahll löysi 1860-luvulla kultaa Tenojoesta ja huomasi lupaavimpien paikkojen olevan Suomen puolella. Suomi näki nälkää, ja vuorihallitus lähetti 1868 insinööri Conrad Lihrin johtaman retkikunnan pohjoiseen; syyskuussa se löysi kultaa Ivalojoesta Inarista. Aleksanteri II vahvisti huhtikuussa 1870 lain, joka luopui hallitsijan yksinoikeudesta jalometalleihin ja avasi huuhdonnan jokaiselle "kunnolliselle" suuriruhtinaskunnan ja Venäjän keisarikunnan miehelle. Saman kevään ja kesän aikana noin viisisataa kullankaivajaa hiihti, käveli ja souti satoja kilometrejä Ivalojoen ja Sotajoen yhtymäkohtaan. Sinne perustettiin Kultalan kruununasema, jossa viranomaiset myönsivät valtaukset ja ostivat kullan; asemalla oli myös järjestyksenvalvojat ja kartoittajat. Ryntäys kesti vain muutaman vuoden.
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:hahmotelma-turun-tuomiokirkon-vanha-torni) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turun tuomiokirkon vanha torni (historia)
+Tietoruudun teksti: Turun tuomiokirkon keskiaikainen torni sai barokkisen sipulikupolin 1600–1700-luvuilla. Turun suuri palo tuhosi huipun vuonna 1827. C. L. Engelin suunnittelema nykyinen korkeampi torni valmistui vuonna 1836.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Meri jossa on 50 000 saarta] nykyään — Saaristomeri Turun ja Ahvenanmaan välissä on joidenkin määritelmien mukaan maailman saarirunsain saaristo: sillä on arviolta 50 000 saarta, joskin suuri osa niistä on aivan pieniä ja tiiviisti toistensa lähellä. Suurimmat saaret ovat asuttuja ja niille pääsee lautoilla ja silloilla, kun taas ulompi saaristo koostuu enimmäkseen asumattomista luodoista ja karikoista. Ahvenanmaa, alueen suurin saariryhmä, on Suomen itsehallinnollinen, ruotsinkielinen maakunta. Saaristomeri on suosittu purjehdus- ja veneilykohde kesäisin, ja sen rikas saaristolintukanta ja poikkeuksellinen kasvillisuus tekevät siitä myös merkittävän luontokohteen.
+
+### 19.1
+KYSYMYS: Miltä Turun tuomiokirkon vanha torni näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turun tuomiokirkon vanha torni (historia)
+Tietoruudun teksti: Turun tuomiokirkon keskiaikainen torni sai barokkisen sipulikupolin 1600–1700-luvuilla. Turun suuri palo tuhosi huipun vuonna 1827. C. L. Engelin suunnittelema nykyinen korkeampi torni valmistui vuonna 1836.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Meri jossa on 50 000 saarta] nykyään — Saaristomeri Turun ja Ahvenanmaan välissä on joidenkin määritelmien mukaan maailman saarirunsain saaristo: sillä on arviolta 50 000 saarta, joskin suuri osa niistä on aivan pieniä ja tiiviisti toistensa lähellä. Suurimmat saaret ovat asuttuja ja niille pääsee lautoilla ja silloilla, kun taas ulompi saaristo koostuu enimmäkseen asumattomista luodoista ja karikoista. Ahvenanmaa, alueen suurin saariryhmä, on Suomen itsehallinnollinen, ruotsinkielinen maakunta. Saaristomeri on suosittu purjehdus- ja veneilykohde kesäisin, ja sen rikas saaristolintukanta ja poikkeuksellinen kasvillisuus tekevät siitä myös merkittävän luontokohteen.
+
+### 19.2
+KYSYMYS: Miksi Turun tuomiokirkon vanha torni katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turun tuomiokirkon vanha torni (historia)
+Tietoruudun teksti: Turun tuomiokirkon keskiaikainen torni sai barokkisen sipulikupolin 1600–1700-luvuilla. Turun suuri palo tuhosi huipun vuonna 1827. C. L. Engelin suunnittelema nykyinen korkeampi torni valmistui vuonna 1836.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Meri jossa on 50 000 saarta] nykyään — Saaristomeri Turun ja Ahvenanmaan välissä on joidenkin määritelmien mukaan maailman saarirunsain saaristo: sillä on arviolta 50 000 saarta, joskin suuri osa niistä on aivan pieniä ja tiiviisti toistensa lähellä. Suurimmat saaret ovat asuttuja ja niille pääsee lautoilla ja silloilla, kun taas ulompi saaristo koostuu enimmäkseen asumattomista luodoista ja karikoista. Ahvenanmaa, alueen suurin saariryhmä, on Suomen itsehallinnollinen, ruotsinkielinen maakunta. Saaristomeri on suosittu purjehdus- ja veneilykohde kesäisin, ja sen rikas saaristolintukanta ja poikkeuksellinen kasvillisuus tekevät siitä myös merkittävän luontokohteen.
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:hahmotelma-punkaharju) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Punkaharju (luonto · vuori)
+Tietoruudun teksti: Punkaharju on kapea, noin seitsemän kilometriä pitkä harju Etelä-Savossa, Saimaan Pihlajaveden ja Puruveden välissä. Se syntyi viimeisen jääkauden aikana, kun mannerjäätikkö vetäytyi, ja harjun korkein kohta nousee 31 metriä Saimaan pinnan yläpuolelle. Jäätiköstä irronneiden jäälohkareiden sulaessa maahan painui kymmeniä suppia, joista osa on täyttynyt vedellä. Harjun yli rakennettiin tie jo 1700-luvulla, ja se oli osa Savonlinnasta Viipuriin johtavaa reittiä. Keisari Aleksanteri I määräsi vuonna 1803 säästämään harjumetsät kaadolta, ja 1800-luvulla Punkaharjusta tuli suosittu nähtävyys. Nykyään se on yksi Suomen kansallismaisemista.
+
+### 20.1
+KYSYMYS: Mikä jääkaudella sai aikaan Punkaharjun kapean harjun?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Punkaharju (luonto · vuori)
+Tietoruudun teksti: Punkaharju on kapea, noin seitsemän kilometriä pitkä harju Etelä-Savossa, Saimaan Pihlajaveden ja Puruveden välissä. Se syntyi viimeisen jääkauden aikana, kun mannerjäätikkö vetäytyi, ja harjun korkein kohta nousee 31 metriä Saimaan pinnan yläpuolelle. Jäätiköstä irronneiden jäälohkareiden sulaessa maahan painui kymmeniä suppia, joista osa on täyttynyt vedellä. Harjun yli rakennettiin tie jo 1700-luvulla, ja se oli osa Savonlinnasta Viipuriin johtavaa reittiä. Keisari Aleksanteri I määräsi vuonna 1803 säästämään harjumetsät kaadolta, ja 1800-luvulla Punkaharjusta tuli suosittu nähtävyys. Nykyään se on yksi Suomen kansallismaisemista.
+
+### 20.2
+KYSYMYS: Mitä suppa on ja miten se syntyy?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Punkaharju (luonto · vuori)
+Tietoruudun teksti: Punkaharju on kapea, noin seitsemän kilometriä pitkä harju Etelä-Savossa, Saimaan Pihlajaveden ja Puruveden välissä. Se syntyi viimeisen jääkauden aikana, kun mannerjäätikkö vetäytyi, ja harjun korkein kohta nousee 31 metriä Saimaan pinnan yläpuolelle. Jäätiköstä irronneiden jäälohkareiden sulaessa maahan painui kymmeniä suppia, joista osa on täyttynyt vedellä. Harjun yli rakennettiin tie jo 1700-luvulla, ja se oli osa Savonlinnasta Viipuriin johtavaa reittiä. Keisari Aleksanteri I määräsi vuonna 1803 säästämään harjumetsät kaadolta, ja 1800-luvulla Punkaharjusta tuli suosittu nähtävyys. Nykyään se on yksi Suomen kansallismaisemista.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

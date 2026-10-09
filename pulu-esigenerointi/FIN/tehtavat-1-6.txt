@@ -1,0 +1,195 @@
+================ KOHTA 26 (kohde:hahmotelma-paijanne) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Päijänne (luonto · järvi)
+Tietoruudun teksti: Päijänne on Suomen toiseksi suurin järvi, jonka vedet virtaavat Kymijokea pitkin Suomenlahteen. Järvi on yli sata kilometriä pitkä, ja sen syvin kohta, 95,3 metriä, on Suomen järvistä syvin. Päijänteen nimen alkuperää ei tiedetä varmasti, mutta sen on arveltu periytyvän jostakin suomalais-ugrilaista kantakieltä vanhemmasta kielestä. Aina 1940-luvulle asti järvi oli Keski-Suomen tärkeä kulkuväylä, jolla laivat kuljettivat matkustajia ja tavaraa rantojen välillä. Eteläosassa on nykyään Päijänteen kansallispuisto, jonka vesillä on noin viisikymmentä rakentamatonta saarta, ja järven alta kulkee vesitunneli Helsingin seudulle.
+
+### 26.1
+KYSYMYS: Mistä Päijänteen nimi voisi olla peräisin, kun kukaan ei tiedä sen merkitystä varmasti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Päijänne (luonto · järvi)
+Tietoruudun teksti: Päijänne on Suomen toiseksi suurin järvi, jonka vedet virtaavat Kymijokea pitkin Suomenlahteen. Järvi on yli sata kilometriä pitkä, ja sen syvin kohta, 95,3 metriä, on Suomen järvistä syvin. Päijänteen nimen alkuperää ei tiedetä varmasti, mutta sen on arveltu periytyvän jostakin suomalais-ugrilaista kantakieltä vanhemmasta kielestä. Aina 1940-luvulle asti järvi oli Keski-Suomen tärkeä kulkuväylä, jolla laivat kuljettivat matkustajia ja tavaraa rantojen välillä. Eteläosassa on nykyään Päijänteen kansallispuisto, jonka vesillä on noin viisikymmentä rakentamatonta saarta, ja järven alta kulkee vesitunneli Helsingin seudulle.
+
+### 26.2
+KYSYMYS: Miksi laivat olivat pitkään tärkein tapa kulkea Päijänteen rantakylien ja -kaupunkien välillä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Päijänne (luonto · järvi)
+Tietoruudun teksti: Päijänne on Suomen toiseksi suurin järvi, jonka vedet virtaavat Kymijokea pitkin Suomenlahteen. Järvi on yli sata kilometriä pitkä, ja sen syvin kohta, 95,3 metriä, on Suomen järvistä syvin. Päijänteen nimen alkuperää ei tiedetä varmasti, mutta sen on arveltu periytyvän jostakin suomalais-ugrilaista kantakieltä vanhemmasta kielestä. Aina 1940-luvulle asti järvi oli Keski-Suomen tärkeä kulkuväylä, jolla laivat kuljettivat matkustajia ja tavaraa rantojen välillä. Eteläosassa on nykyään Päijänteen kansallispuisto, jonka vesillä on noin viisikymmentä rakentamatonta saarta, ja järven alta kulkee vesitunneli Helsingin seudulle.
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-lemmenjoki) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lemmenjoen kansallispuisto (luonto · joki)
+Tietoruudun teksti: Lemmenjoen kansallispuisto sijaitsee Lapissa Inarin ja Kittilän kuntien alueella, ja se on perustettu vuonna 1956. Noin 2 850 neliökilometrin laajuisena se on Suomen suurin kansallispuisto ja yksi Euroopan suurimmista. Puisto on saanut nimensä sen halki virtaavasta, noin 80 kilometriä pitkästä Lemmenjoesta, ja osaksi se rajoittuu Norjan Anárjohkan kansallispuistoon. Kullankaivun historiaan voi tutustua Kultareitti-nimisellä vaellusreitillä, jonka varrella on vanhoja kulta-alueita ja mökkejä. Koneellinen kullanhuuhdonta kiellettiin puistossa vuonna 2020 ympäristöhaittojen vuoksi, ja nykyään kultaa etsitään vain käsityönä, esimerkiksi pannulla ja lapiolla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Boa Vista — kaupunkilehti / Boa Vista: Kulta ja timantit toivat asukkaita] Pitkään Boa Vistan ja koko seudun talous nojasi karjatalouteen, mutta 1900-luvulla alueelle virtasi uusia asukkaita kullan ja timanttien perässä. Garimpeiroiksi kutsutut itsenäiset kaivostyöläiset seuloivat jokien hiekkaa käsin ja yksinkertaisin välinein, ja monet heistä asettuivat lopulta pysyvästi kasvavaan kaupunkiin. Myöhemmin koneellinen kaivostoiminta kiellettiin, koska se aiheutti pahoja tuhoja joki- ja metsäalueille. Kaupungin keskustassa seisova patsas kumartuneesta kullankaivajasta muistuttaa yhä tästä Boa Vistan historian vaiheesta.
+- [Singapore — kohdekartta / Kohdekartta: Raffles Hotel] avattu 1887, päärakennus 1899 Beach Roadin numero yksi oli 1830-luvun alussa yksityinen rantahuvila. Lääkäri Charles Emerson vuokrasi sen hotelliksi vuonna 1878, ja kun vuokrasopimus päättyi 1887, armenialaiset Sarkies-veljekset ottivat paikan haltuunsa. He avasivat 1. joulukuuta 1887 kymmenen huoneen hotellin ja nimesivät sen Stamford Rafflesin mukaan. Kymmenessä vuodessa hotellista tuli kortteli. Vuonna 1890 valmistui kaksi kaksikerroksista siipeä, kummassakin 22 huoneistoa, ja 1894 naapuritalosta kunnostettu Palm Court -siipi nosti huoneluvun 75:een. Vanhan rantahuvilan paikalle rakennettiin uusi päärakennus, jonka suunnitteli Regent Alfred John Bidwell toimistosta Swan and Maclaren. Se …
+
+### 27.1
+KYSYMYS: Miksi koneellinen kullanhuuhdonta kiellettiin Lemmenjoen kansallispuistossa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lemmenjoen kansallispuisto (luonto · joki)
+Tietoruudun teksti: Lemmenjoen kansallispuisto sijaitsee Lapissa Inarin ja Kittilän kuntien alueella, ja se on perustettu vuonna 1956. Noin 2 850 neliökilometrin laajuisena se on Suomen suurin kansallispuisto ja yksi Euroopan suurimmista. Puisto on saanut nimensä sen halki virtaavasta, noin 80 kilometriä pitkästä Lemmenjoesta, ja osaksi se rajoittuu Norjan Anárjohkan kansallispuistoon. Kullankaivun historiaan voi tutustua Kultareitti-nimisellä vaellusreitillä, jonka varrella on vanhoja kulta-alueita ja mökkejä. Koneellinen kullanhuuhdonta kiellettiin puistossa vuonna 2020 ympäristöhaittojen vuoksi, ja nykyään kultaa etsitään vain käsityönä, esimerkiksi pannulla ja lapiolla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Boa Vista — kaupunkilehti / Boa Vista: Kulta ja timantit toivat asukkaita] Pitkään Boa Vistan ja koko seudun talous nojasi karjatalouteen, mutta 1900-luvulla alueelle virtasi uusia asukkaita kullan ja timanttien perässä. Garimpeiroiksi kutsutut itsenäiset kaivostyöläiset seuloivat jokien hiekkaa käsin ja yksinkertaisin välinein, ja monet heistä asettuivat lopulta pysyvästi kasvavaan kaupunkiin. Myöhemmin koneellinen kaivostoiminta kiellettiin, koska se aiheutti pahoja tuhoja joki- ja metsäalueille. Kaupungin keskustassa seisova patsas kumartuneesta kullankaivajasta muistuttaa yhä tästä Boa Vistan historian vaiheesta.
+
+### 27.2
+KYSYMYS: Mitä Kultareitin varrella voi oppia kullankaivusta ja alueen tarinoista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lemmenjoen kansallispuisto (luonto · joki)
+Tietoruudun teksti: Lemmenjoen kansallispuisto sijaitsee Lapissa Inarin ja Kittilän kuntien alueella, ja se on perustettu vuonna 1956. Noin 2 850 neliökilometrin laajuisena se on Suomen suurin kansallispuisto ja yksi Euroopan suurimmista. Puisto on saanut nimensä sen halki virtaavasta, noin 80 kilometriä pitkästä Lemmenjoesta, ja osaksi se rajoittuu Norjan Anárjohkan kansallispuistoon. Kullankaivun historiaan voi tutustua Kultareitti-nimisellä vaellusreitillä, jonka varrella on vanhoja kulta-alueita ja mökkejä. Koneellinen kullanhuuhdonta kiellettiin puistossa vuonna 2020 ympäristöhaittojen vuoksi, ja nykyään kultaa etsitään vain käsityönä, esimerkiksi pannulla ja lapiolla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Singapore — kohdekartta / Kohdekartta: Raffles Hotel] avattu 1887, päärakennus 1899 Beach Roadin numero yksi oli 1830-luvun alussa yksityinen rantahuvila. Lääkäri Charles Emerson vuokrasi sen hotelliksi vuonna 1878, ja kun vuokrasopimus päättyi 1887, armenialaiset Sarkies-veljekset ottivat paikan haltuunsa. He avasivat 1. joulukuuta 1887 kymmenen huoneen hotellin ja nimesivät sen Stamford Rafflesin mukaan. Kymmenessä vuodessa hotellista tuli kortteli. Vuonna 1890 valmistui kaksi kaksikerroksista siipeä, kummassakin 22 huoneistoa, ja 1894 naapuritalosta kunnostettu Palm Court -siipi nosti huoneluvun 75:een. Vanhan rantahuvilan paikalle rakennettiin uusi päärakennus, jonka suunnitteli Regent Alfred John Bidwell toimistosta Swan and Maclaren. Se …
+- [Odessa — kohdekartta / Kohdekartta: Privozin tori] 1827 Privoz on Odessan suurin ja vanhin ruokatori, ja sen tarina alkoi vuonna 1827. Aluksi kauppiaat myivät tavaroitaan suoraan hevoskärryjen lavalta – nimi ”Privoz” tarkoittaakin suunnilleen ”tuotu tavara”. Vuosikymmenten kuluessa torista kasvoi koko kaupungin sydän, paikka jossa ei vain ostettu ja myyty, vaan vaihdettiin myös kaikki tuoreimmat kaupungin kuulumiset. Tulipalo tuhosi torin, mutta se rakennettiin kokonaan uudelleen 1900-luvun alussa. Vuonna 1904 torille valmistui kaunis Hedelmäkäytävä, jonka kaarevat holvikäytävät ja koristeelliset julkisivut tekivät siitä torin näyttävimmän rakennuksen. Sitä pidetään edelleen torin ainoana varsinaisena arkkitehtuurinähtävyytenä. Privozilla m…
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-porvoo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Porvoo (historia)
+Tietoruudun teksti: Porvoo on Suomenlahden rannikolla Uudellamaalla sijaitseva kaupunki, joka kuului Suomen kuuteen keskiaikaiseen kaupunkiin. Sen vanha kaupunki on tunnettu tiiviistä, keskiaikaisesta katuverkostaan ja pääosin puisista 1600- ja 1700-luvun taloistaan. Vanhan kaupungin keskipisteenä on 1400-luvulla rakennettu tuomiokirkko. Vuoden 1760 tulipalossa tuhoutui noin kaksi kolmasosaa rakennuksista, mutta uudet talot rakennettiin vanhoille perustuksille kaupunkisuunnitelmaa muuttamatta. Vuonna 1809 Porvoon valtiopäivillä tsaari Aleksanteri I teki Suomesta autonomisen suuriruhtinaskunnan.
+
+### 28.1
+KYSYMYS: Miksi Porvoon vanha kaupunki on säilynyt niin hyvin, vaikka sen purkamista suunniteltiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Porvoo (historia)
+Tietoruudun teksti: Porvoo on Suomenlahden rannikolla Uudellamaalla sijaitseva kaupunki, joka kuului Suomen kuuteen keskiaikaiseen kaupunkiin. Sen vanha kaupunki on tunnettu tiiviistä, keskiaikaisesta katuverkostaan ja pääosin puisista 1600- ja 1700-luvun taloistaan. Vanhan kaupungin keskipisteenä on 1400-luvulla rakennettu tuomiokirkko. Vuoden 1760 tulipalossa tuhoutui noin kaksi kolmasosaa rakennuksista, mutta uudet talot rakennettiin vanhoille perustuksille kaupunkisuunnitelmaa muuttamatta. Vuonna 1809 Porvoon valtiopäivillä tsaari Aleksanteri I teki Suomesta autonomisen suuriruhtinaskunnan.
+
+### 28.2
+KYSYMYS: Mitä Porvoossa tapahtui vuonna 1809, ja miksi se muutti Suomen aseman?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Porvoo (historia)
+Tietoruudun teksti: Porvoo on Suomenlahden rannikolla Uudellamaalla sijaitseva kaupunki, joka kuului Suomen kuuteen keskiaikaiseen kaupunkiin. Sen vanha kaupunki on tunnettu tiiviistä, keskiaikaisesta katuverkostaan ja pääosin puisista 1600- ja 1700-luvun taloistaan. Vanhan kaupungin keskipisteenä on 1400-luvulla rakennettu tuomiokirkko. Vuoden 1760 tulipalossa tuhoutui noin kaksi kolmasosaa rakennuksista, mutta uudet talot rakennettiin vanhoille perustuksille kaupunkisuunnitelmaa muuttamatta. Vuonna 1809 Porvoon valtiopäivillä tsaari Aleksanteri I teki Suomesta autonomisen suuriruhtinaskunnan.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-hamina) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hamina (historia)
+Tietoruudun teksti: Hamina on Kymenlaakson kaupunki Suomenlahden rannalla, noin 145 kilometriä Helsingistä itään. Kun Viipuri joutui Venäjälle vuonna 1721, Haminasta tehtiin sen korvaaja: kaupunki sai laajat ulkomaankaupan oikeudet ja rakennettiin uudelleen vuosina 1722–1724. Kaupungin tähtimäisen linnoituksen ja ympyränmuotoisen katuverkon suunnitteli Axel Löwen keskieurooppalaisten ja italialaisten renessanssimallien mukaan, ja sellaiset kaupungit ovat harvinaisia. Vuonna 1809 Haminassa allekirjoitettiin rauhansopimus, jolla Ruotsi luovutti Suomen Venäjälle, ja Suomesta tuli autonominen suuriruhtinaskunta. Haminan kadettikoulu perustettiin vuonna 1819, ja samoissa tiloissa aloitti vuonna 1920 reserviupseerikoulu.
+
+### 29.1
+KYSYMYS: Miksi Haminan linnoitus ja kaupunki on rakennettu tähden ja ympyrän muotoon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hamina (historia)
+Tietoruudun teksti: Hamina on Kymenlaakson kaupunki Suomenlahden rannalla, noin 145 kilometriä Helsingistä itään. Kun Viipuri joutui Venäjälle vuonna 1721, Haminasta tehtiin sen korvaaja: kaupunki sai laajat ulkomaankaupan oikeudet ja rakennettiin uudelleen vuosina 1722–1724. Kaupungin tähtimäisen linnoituksen ja ympyränmuotoisen katuverkon suunnitteli Axel Löwen keskieurooppalaisten ja italialaisten renessanssimallien mukaan, ja sellaiset kaupungit ovat harvinaisia. Vuonna 1809 Haminassa allekirjoitettiin rauhansopimus, jolla Ruotsi luovutti Suomen Venäjälle, ja Suomesta tuli autonominen suuriruhtinaskunta. Haminan kadettikoulu perustettiin vuonna 1819, ja samoissa tiloissa aloitti vuonna 1920 reserviupseerikoulu.
+
+### 29.2
+KYSYMYS: Mitä vuonna 1809 Haminassa sovittiin, ja miksi se oli Suomelle niin tärkeää?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hamina (historia)
+Tietoruudun teksti: Hamina on Kymenlaakson kaupunki Suomenlahden rannalla, noin 145 kilometriä Helsingistä itään. Kun Viipuri joutui Venäjälle vuonna 1721, Haminasta tehtiin sen korvaaja: kaupunki sai laajat ulkomaankaupan oikeudet ja rakennettiin uudelleen vuosina 1722–1724. Kaupungin tähtimäisen linnoituksen ja ympyränmuotoisen katuverkon suunnitteli Axel Löwen keskieurooppalaisten ja italialaisten renessanssimallien mukaan, ja sellaiset kaupungit ovat harvinaisia. Vuonna 1809 Haminassa allekirjoitettiin rauhansopimus, jolla Ruotsi luovutti Suomen Venäjälle, ja Suomesta tuli autonominen suuriruhtinaskunta. Haminan kadettikoulu perustettiin vuonna 1819, ja samoissa tiloissa aloitti vuonna 1920 reserviupseerikoulu.
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-tornio) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornio (historia)
+Tietoruudun teksti: Tornio on Lapin kaupunki Tornionjoen suulla, ja se muodostaa Ruotsin puolella olevan Haaparannan kanssa rajat ylittävän kaksoiskaupungin. Kaupunki sai kaupunkioikeudet kuningas Kustaa II Aadolfilta vuonna 1621, ja silloin se oli maailman pohjoisin kaupunki. Ranskalaisen Maupertuis'n retkikunta mittasi 1730-luvulla Tornionlaaksossa pituuspiirin kaarta, ja Tornion kirkon torni oli yksi mittauksen kiintopisteistä. Vuoden 1808 sodan jälkeen raja vedettiin jokien syvimmän uoman mukaan, ja Tornio jäi tsaarin erityisestä toiveesta Venäjän puolelle. Ruotsi rakensi vastapainoksi Haaparannan, ja Tornion vuonna 1686 rakennettu puukirkko on säilynyt nykypäivään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Xi’an — kohdekartta / Kohdekartta: Suuri moskeija] 742, nykyinen muoto 1392 Tang-keisari Xuanzong määräsi noin vuonna 742 rakennettavaksi rukouspaikan kaupungin muslimikauppiaille ja käsityöläisille. Song-kaudelta on säilynyt keisarillinen kilpi, joka todistaa paikan olleen silloin käytössä. Moskeija on rakennettu uudelleen ainakin neljä kertaa; 1260-luvulla sen kunnosti Yuan-hallinto, ja nykyinen muoto on Ming-keisari Hongwun ajalta vuodelta 1392. Qing-kaudella lisättiin etuportti, kunniaportti ja vesipiste. Alaa kokonaisuudella on 1,23 hehtaaria ja rakennuksia yli kaksikymmentä. Pohjakaava on kiinalainen: neljä muurein erotettua pihaa peräkkäin, joista kaksi ensimmäistä ovat puutarhoja ja kaksi jälkimmäistä rakennusten aluetta. Jokaisen p…
+- [Kanton — kaupunkilehti / Kanton: Ankkuripaikka nimeltä Whampoa] Suuret purjelaivat eivät päässeet kaupungin rantaan asti. Ne ankkuroivat runsaan kahdentoista mailin päähän alavirtaan Whampoan saaren itälahteen — saari tunnetaan nykyään nimellä Pazhou — ja tavara kulki sieltä kaupunkiin pienillä lastiveneillä. Ankkuripaikalla oli kullakin maalla oma paikkansa: sisimpänä amerikkalaiset, sitten hollantilaiset ja ruotsalaiset, sitten tanskalaiset ja ranskalaiset, uloimpana britit. Laivan piti tulla sisään kirjava kangas laidoillaan ja miehistö juhla-asussa, ja tervehdyslaukauksiin vastattiin aina samalla mitalla, joten parinkymmenen laivan ankkuripaikka oli meluisa.
+
+### 30.1
+KYSYMYS: Mitä ranskalaiset tutkijat mittasivat Tornionlaaksossa 1730-luvulla, ja mitä he halusivat sillä todistaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornio (historia)
+Tietoruudun teksti: Tornio on Lapin kaupunki Tornionjoen suulla, ja se muodostaa Ruotsin puolella olevan Haaparannan kanssa rajat ylittävän kaksoiskaupungin. Kaupunki sai kaupunkioikeudet kuningas Kustaa II Aadolfilta vuonna 1621, ja silloin se oli maailman pohjoisin kaupunki. Ranskalaisen Maupertuis'n retkikunta mittasi 1730-luvulla Tornionlaaksossa pituuspiirin kaarta, ja Tornion kirkon torni oli yksi mittauksen kiintopisteistä. Vuoden 1808 sodan jälkeen raja vedettiin jokien syvimmän uoman mukaan, ja Tornio jäi tsaarin erityisestä toiveesta Venäjän puolelle. Ruotsi rakensi vastapainoksi Haaparannan, ja Tornion vuonna 1686 rakennettu puukirkko on säilynyt nykypäivään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Xi’an — kohdekartta / Kohdekartta: Suuri moskeija] 742, nykyinen muoto 1392 Tang-keisari Xuanzong määräsi noin vuonna 742 rakennettavaksi rukouspaikan kaupungin muslimikauppiaille ja käsityöläisille. Song-kaudelta on säilynyt keisarillinen kilpi, joka todistaa paikan olleen silloin käytössä. Moskeija on rakennettu uudelleen ainakin neljä kertaa; 1260-luvulla sen kunnosti Yuan-hallinto, ja nykyinen muoto on Ming-keisari Hongwun ajalta vuodelta 1392. Qing-kaudella lisättiin etuportti, kunniaportti ja vesipiste. Alaa kokonaisuudella on 1,23 hehtaaria ja rakennuksia yli kaksikymmentä. Pohjakaava on kiinalainen: neljä muurein erotettua pihaa peräkkäin, joista kaksi ensimmäistä ovat puutarhoja ja kaksi jälkimmäistä rakennusten aluetta. Jokaisen p…
+
+### 30.2
+KYSYMYS: Miksi Tornion satamaa piti siirtää joen varrella alavirtaan kahdesti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tornio (historia)
+Tietoruudun teksti: Tornio on Lapin kaupunki Tornionjoen suulla, ja se muodostaa Ruotsin puolella olevan Haaparannan kanssa rajat ylittävän kaksoiskaupungin. Kaupunki sai kaupunkioikeudet kuningas Kustaa II Aadolfilta vuonna 1621, ja silloin se oli maailman pohjoisin kaupunki. Ranskalaisen Maupertuis'n retkikunta mittasi 1730-luvulla Tornionlaaksossa pituuspiirin kaarta, ja Tornion kirkon torni oli yksi mittauksen kiintopisteistä. Vuoden 1808 sodan jälkeen raja vedettiin jokien syvimmän uoman mukaan, ja Tornio jäi tsaarin erityisestä toiveesta Venäjän puolelle. Ruotsi rakensi vastapainoksi Haaparannan, ja Tornion vuonna 1686 rakennettu puukirkko on säilynyt nykypäivään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kanton — kaupunkilehti / Kanton: Ankkuripaikka nimeltä Whampoa] Suuret purjelaivat eivät päässeet kaupungin rantaan asti. Ne ankkuroivat runsaan kahdentoista mailin päähän alavirtaan Whampoan saaren itälahteen — saari tunnetaan nykyään nimellä Pazhou — ja tavara kulki sieltä kaupunkiin pienillä lastiveneillä. Ankkuripaikalla oli kullakin maalla oma paikkansa: sisimpänä amerikkalaiset, sitten hollantilaiset ja ruotsalaiset, sitten tanskalaiset ja ranskalaiset, uloimpana britit. Laivan piti tulla sisään kirjava kangas laidoillaan ja miehistö juhla-asussa, ja tervehdyslaukauksiin vastattiin aina samalla mitalla, joten parinkymmenen laivan ankkuripaikka oli meluisa.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI

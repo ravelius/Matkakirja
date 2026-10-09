@@ -1,0 +1,206 @@
+================ KOHTA 1 (kohde:halti) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Halti (luonto · vuori)
+Tietoruudun teksti: Halti on tunturi Norjan ja Suomen rajalla. Sen varsinainen huippu Ráisduottarháldi on Norjan puolella, noin kilometrin päässä rajasta, ja Suomen puolen korkein kohta on 1 324 metrissä oleva Hálditšohkka — maan korkein piste, mutta rinteellä eikä huipulla. Rajan mutka juontuu Ruotsin ja Tanskan rajasopimuksesta vuodelta 1734, jolloin rajapyykit lyötiin sinne minne oli kätevintä ja raja sovittiin kulkevaksi suoraan niiden välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Kaksi viikkoa jolloin tunturi syttyy tuleen] syyskuu — Ruska on lyhyt, muutaman viikon mittainen ajanjakso syyskuun alussa, jolloin Lapin tunturikoivikot ja -kanervikot värjäytyvät nopeasti keltaisiksi, oransseiksi ja tulipunaisiksi ennen lehtien putoamista. Ilmiö johtuu siitä, että öiset pakkaset pysäyttävät lehtivihreän tuotannon, jolloin lehdissä koko kasvukauden piilleet keltaiset ja punaiset väripigmentit pääsevät näkyviin. Tunturien paljailla laella väri leviää poikkeuksellisen laajana ja yhtenäisenä, toisin kuin metsäisemmällä Etelä-Suomella. Ruska houkuttelee syksyisin retkeilijöitä Pallas-Yllästunturin ja Urho Kekkosen kansallispuistoihin, ja ajankohta vaihtelee vuosittain sään mukaan.
+- [Uruguay — maalehti / Luonto: Vuori, joka vaihtui kesken kaiken] 1973 — Uruguayn korkein kohta on Cerro Catedral, 513,66 metriä. Se on kukkula Maldonadon departementissa Sierra Carapén ketjussa, joka kuuluu maan halki kulkevaan Cuchilla Grandeen. Nimi tulee huipun kalliomuodoista, jotka muistuttavat kirkon torneja. Vielä vuonna 1973 maan korkeimpana pidettiin Cerro de las Ánimasia, jonka korkeus on 501 metriä — kunnes sotilaallisen karttalaitoksen tutkijat mittasivat Cerro Catedralin uudelleen ja huippu vaihtui. Molemmat jäävät alle Suomen Halticin.
+
+### 1.1
+KYSYMYS: Miksi Suomen korkein kohta ei ole huippu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Halti (luonto · vuori)
+Tietoruudun teksti: Halti on tunturi Norjan ja Suomen rajalla. Sen varsinainen huippu Ráisduottarháldi on Norjan puolella, noin kilometrin päässä rajasta, ja Suomen puolen korkein kohta on 1 324 metrissä oleva Hálditšohkka — maan korkein piste, mutta rinteellä eikä huipulla. Rajan mutka juontuu Ruotsin ja Tanskan rajasopimuksesta vuodelta 1734, jolloin rajapyykit lyötiin sinne minne oli kätevintä ja raja sovittiin kulkevaksi suoraan niiden välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uruguay — maalehti / Luonto: Vuori, joka vaihtui kesken kaiken] 1973 — Uruguayn korkein kohta on Cerro Catedral, 513,66 metriä. Se on kukkula Maldonadon departementissa Sierra Carapén ketjussa, joka kuuluu maan halki kulkevaan Cuchilla Grandeen. Nimi tulee huipun kalliomuodoista, jotka muistuttavat kirkon torneja. Vielä vuonna 1973 maan korkeimpana pidettiin Cerro de las Ánimasia, jonka korkeus on 501 metriä — kunnes sotilaallisen karttalaitoksen tutkijat mittasivat Cerro Catedralin uudelleen ja huippu vaihtui. Molemmat jäävät alle Suomen Halticin.
+
+### 1.2
+KYSYMYS: Mikä on korkein kokonaan Suomessa oleva tunturi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Halti (luonto · vuori)
+Tietoruudun teksti: Halti on tunturi Norjan ja Suomen rajalla. Sen varsinainen huippu Ráisduottarháldi on Norjan puolella, noin kilometrin päässä rajasta, ja Suomen puolen korkein kohta on 1 324 metrissä oleva Hálditšohkka — maan korkein piste, mutta rinteellä eikä huipulla. Rajan mutka juontuu Ruotsin ja Tanskan rajasopimuksesta vuodelta 1734, jolloin rajapyykit lyötiin sinne minne oli kätevintä ja raja sovittiin kulkevaksi suoraan niiden välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Kaksi viikkoa jolloin tunturi syttyy tuleen] syyskuu — Ruska on lyhyt, muutaman viikon mittainen ajanjakso syyskuun alussa, jolloin Lapin tunturikoivikot ja -kanervikot värjäytyvät nopeasti keltaisiksi, oransseiksi ja tulipunaisiksi ennen lehtien putoamista. Ilmiö johtuu siitä, että öiset pakkaset pysäyttävät lehtivihreän tuotannon, jolloin lehdissä koko kasvukauden piilleet keltaiset ja punaiset väripigmentit pääsevät näkyviin. Tunturien paljailla laella väri leviää poikkeuksellisen laajana ja yhtenäisenä, toisin kuin metsäisemmällä Etelä-Suomella. Ruska houkuttelee syksyisin retkeilijöitä Pallas-Yllästunturin ja Urho Kekkosen kansallispuistoihin, ja ajankohta vaihtelee vuosittain sään mukaan.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:pohjanlahti) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Lahden eteläpäässä on Ahvenanmaa, Ahvenanmeren ja Saaristomeren välissä; Suomen puolen suurimmat satamat tonneissa mitattuna ovat Rauma, Kokkola ja Tornio.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamerun — kaupunkilehti / Kamerun: Mustat rannat] Kamerunvuoren toistuvat purkaukset ovat värjänneet koko Ambas-lahden rannikon: hiekan ja pikkukivien joukossa on niin paljon mustaa laavakiveä, että rannat näyttävät kauttaaltaan tumman harmailta tai jopa mustilta. Limbén kaupungin edustalla paikalliset uivat ja viilentyvät näillä laavakivien reunustamilla rannoilla edelleen. Samat mustat kivet kertovat vuoren pitkästä purkaushistoriasta paljon konkreettisemmin kuin mikään aikakirja koskaan pystyisi kertomaan.
+
+### 2.1
+KYSYMYS: Mikä Merenkurkku on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Lahden eteläpäässä on Ahvenanmaa, Ahvenanmeren ja Saaristomeren välissä; Suomen puolen suurimmat satamat tonneissa mitattuna ovat Rauma, Kokkola ja Tornio.
+
+### 2.2
+KYSYMYS: Miksi Pohjanlahden rannat nousevat yhä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanlahti (meri)
+Tietoruudun teksti: Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Lahden eteläpäässä on Ahvenanmaa, Ahvenanmeren ja Saaristomeren välissä; Suomen puolen suurimmat satamat tonneissa mitattuna ovat Rauma, Kokkola ja Tornio.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamerun — kaupunkilehti / Kamerun: Mustat rannat] Kamerunvuoren toistuvat purkaukset ovat värjänneet koko Ambas-lahden rannikon: hiekan ja pikkukivien joukossa on niin paljon mustaa laavakiveä, että rannat näyttävät kauttaaltaan tumman harmailta tai jopa mustilta. Limbén kaupungin edustalla paikalliset uivat ja viilentyvät näillä laavakivien reunustamilla rannoilla edelleen. Samat mustat kivet kertovat vuoren pitkästä purkaushistoriasta paljon konkreettisemmin kuin mikään aikakirja koskaan pystyisi kertomaan.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:suomenlahti~2) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suomenlahti (meri)
+Tietoruudun teksti: Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Doha — kohdekartta / Kohdekartta: Corniche] Kartalla näkyvä kaari on Corniche, seitsemän kilometrin rantabulevardi puolikuun muotoisen Dohanlahden ympäri: pohjoispäässä West Bayn Sheraton, eteläpäässä Al Khulaifatin puisto, välissä kuusikaistainen katu ja yhtenäinen jalankulkuraitti. Kaari ei seuraa vanhaa rantaviivaa. Vesiraja kulki ennen nykyisten kortteleiden kohdalla, ja Souq Waqif — joka oli satamatori — jäi sisämaahan. Kaari piirrettiin 1970-luvun puolivälissä, kun lahden pohjukkaan oli kasattu 630 hehtaaria uutta maata. Emiirin hallintoviraston suunnittelutoimistoa johtanut Hisham Qaddumi kutsui Dohaan amerikkalaisen arkkitehdin William Pereiran vuonna 1975. Kaksikko teki yli neljäkymmentä luonnosta: kaari suljettiin puoliympy…
+- [Bergen — kaupunkilehti / Bergen] Puinen satamakaupunki kasvoi vuonon pohjukkaan vuorten väliin ja eli vuosisatoja kalasta ja hansakaupasta. Isoisän matkan aikoihin se ylitti ensi kertaa vanhat rajansa ja levisi etelään uusiin kortteleihin.
+- [Izmir — kaupunkilehti / İzmir] İzmir on rakennettu lahden pohjukkaan jyrkkien rinteiden väliin: ylös noustaan hissitornia ja portaita pitkin, vastarannalle mennään lautalla.
+
+### 3.1
+KYSYMYS: Mikä joki laskee Suomenlahden pohjukkaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suomenlahti (meri)
+Tietoruudun teksti: Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Doha — kohdekartta / Kohdekartta: Corniche] Kartalla näkyvä kaari on Corniche, seitsemän kilometrin rantabulevardi puolikuun muotoisen Dohanlahden ympäri: pohjoispäässä West Bayn Sheraton, eteläpäässä Al Khulaifatin puisto, välissä kuusikaistainen katu ja yhtenäinen jalankulkuraitti. Kaari ei seuraa vanhaa rantaviivaa. Vesiraja kulki ennen nykyisten kortteleiden kohdalla, ja Souq Waqif — joka oli satamatori — jäi sisämaahan. Kaari piirrettiin 1970-luvun puolivälissä, kun lahden pohjukkaan oli kasattu 630 hehtaaria uutta maata. Emiirin hallintoviraston suunnittelutoimistoa johtanut Hisham Qaddumi kutsui Dohaan amerikkalaisen arkkitehdin William Pereiran vuonna 1975. Kaksikko teki yli neljäkymmentä luonnosta: kaari suljettiin puoliympy…
+- [Bergen — kaupunkilehti / Bergen] Puinen satamakaupunki kasvoi vuonon pohjukkaan vuorten väliin ja eli vuosisatoja kalasta ja hansakaupasta. Isoisän matkan aikoihin se ylitti ensi kertaa vanhat rajansa ja levisi etelään uusiin kortteleihin.
+- [Izmir — kaupunkilehti / İzmir] İzmir on rakennettu lahden pohjukkaan jyrkkien rinteiden väliin: ylös noustaan hissitornia ja portaita pitkin, vastarannalle mennään lautalla.
+
+### 3.2
+KYSYMYS: Miksi lahden ympäristöongelmat ovat pahimpia juuri täällä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suomenlahti (meri)
+Tietoruudun teksti: Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:kemijoki) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kemijoki (luonto · joki)
+Tietoruudun teksti: Isoisäsi aikaan Kemijoella oli juuri alkanut uitto: tukit lähtivät ensimmäisen kerran alas 1860-luvulla, ja viimeiset uitettiin kesällä 1991 — satakolmekymmentä vuotta samaa työtä, kunnes auto ja juna veivät sen. Uiton rinnalle tuli toinen käyttö. Ensimmäinen voimalaitos rakennettiin Isohaaraan 1946, ja vähitellen Suomen pisimpään jokeen ja sen valuma-alueelle nousi 21 laitosta, jotka tuottavat yli kolmanneksen maan vesivoimasta. Yksi iso haara jätettiin rauhaan: Ounasjoki, joka yhtyy Kemijokeen Rovaniemellä, rauhoitettiin lailla 1983, eikä siihen rakennettu yhtään voimalaa. Kemijoki itse on 550 kilometriä pitkä ja laskee Pohjanlahteen Kemissä.
+
+### 4.1
+KYSYMYS: Miksi Ounasjoki rauhoitettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kemijoki (luonto · joki)
+Tietoruudun teksti: Isoisäsi aikaan Kemijoella oli juuri alkanut uitto: tukit lähtivät ensimmäisen kerran alas 1860-luvulla, ja viimeiset uitettiin kesällä 1991 — satakolmekymmentä vuotta samaa työtä, kunnes auto ja juna veivät sen. Uiton rinnalle tuli toinen käyttö. Ensimmäinen voimalaitos rakennettiin Isohaaraan 1946, ja vähitellen Suomen pisimpään jokeen ja sen valuma-alueelle nousi 21 laitosta, jotka tuottavat yli kolmanneksen maan vesivoimasta. Yksi iso haara jätettiin rauhaan: Ounasjoki, joka yhtyy Kemijokeen Rovaniemellä, rauhoitettiin lailla 1983, eikä siihen rakennettu yhtään voimalaa. Kemijoki itse on 550 kilometriä pitkä ja laskee Pohjanlahteen Kemissä.
+
+### 4.2
+KYSYMYS: Milloin Kemijoen uitto loppui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kemijoki (luonto · joki)
+Tietoruudun teksti: Isoisäsi aikaan Kemijoella oli juuri alkanut uitto: tukit lähtivät ensimmäisen kerran alas 1860-luvulla, ja viimeiset uitettiin kesällä 1991 — satakolmekymmentä vuotta samaa työtä, kunnes auto ja juna veivät sen. Uiton rinnalle tuli toinen käyttö. Ensimmäinen voimalaitos rakennettiin Isohaaraan 1946, ja vähitellen Suomen pisimpään jokeen ja sen valuma-alueelle nousi 21 laitosta, jotka tuottavat yli kolmanneksen maan vesivoimasta. Yksi iso haara jätettiin rauhaan: Ounasjoki, joka yhtyy Kemijokeen Rovaniemellä, rauhoitettiin lailla 1983, eikä siihen rakennettu yhtään voimalaa. Kemijoki itse on 550 kilometriä pitkä ja laskee Pohjanlahteen Kemissä.
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:olavinlinna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olavinlinna (historia)
+Tietoruudun teksti: Olavinlinna on 1400-luvun kolmitorninen linna Savonlinnassa, saarella Kyrönsalmessa Haukiveden ja Pihlajaveden välissä. Se on pohjoisin yhä pystyssä oleva keskiaikainen kivilinnoitus ja koko Ruotsin valtakunnan parhaiten säilynyt keskiaikainen linna. Erik Axelsson Tott perusti sen vuonna 1475 nimellä Sankt Olofsborg hyötyäkseen siitä sekasorrosta, joka seurasi Iivana III:n Novgorodin valloituksesta, ja paikka valittiin Savosta niin että se veisi rajaa Pähkinäsaaren rauhan venäläiselle puolelle. Se oli ensimmäinen ruotsalainen linna, jonka paksut pyöreät tornit oli suunniteltu kestämään tykkitulta, eikä järvien verkko sen ympärillä ollut sattumaa: vesistöt hidastaisivat hyökkääjää. Linnaa ei koskaan vallattu väkisin, ja vuodesta 1912 sen piha on ollut Savonlinnan oopperajuhlien näyttämö.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sitka — kaupunkilehti / Sitka: Tulivuori joka vartioi salmea] Sitka on Yhdysvaltain pinta-alaltaan suurin kaupunki, sillä se ulottuu peräti noin 4 815 neliömailin alueelle Baranofin ja Tšitšagofin saarille Alexanterin saaristossa. Kaupungin salmea vartioi Mount Edgecumbe, sammunut tulivuori, jonka lumihuippuinen, punertava tuhkakartio kohoaa merestä naapurisaaren keskellä. Ilmasto on lauhkea mutta hyvin sateinen: vuotuinen sademäärä on peräti noin 335 senttimetriä. Kalastus ja kalanjalostus ovat kaupungin tärkeimpiä elinkeinoja tänäkin päivänä, ja satamassa risteilevät kalastusveneet ovat yhtä pysyvä näky kuin sata vuotta sitten.
+
+### 5.1
+KYSYMYS: Mikä Pähkinäsaaren rauha oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olavinlinna (historia)
+Tietoruudun teksti: Olavinlinna on 1400-luvun kolmitorninen linna Savonlinnassa, saarella Kyrönsalmessa Haukiveden ja Pihlajaveden välissä. Se on pohjoisin yhä pystyssä oleva keskiaikainen kivilinnoitus ja koko Ruotsin valtakunnan parhaiten säilynyt keskiaikainen linna. Erik Axelsson Tott perusti sen vuonna 1475 nimellä Sankt Olofsborg hyötyäkseen siitä sekasorrosta, joka seurasi Iivana III:n Novgorodin valloituksesta, ja paikka valittiin Savosta niin että se veisi rajaa Pähkinäsaaren rauhan venäläiselle puolelle. Se oli ensimmäinen ruotsalainen linna, jonka paksut pyöreät tornit oli suunniteltu kestämään tykkitulta, eikä järvien verkko sen ympärillä ollut sattumaa: vesistöt hidastaisivat hyökkääjää. Linnaa ei koskaan vallattu väkisin, ja vuodesta 1912 sen piha on ollut Savonlinnan oopperajuhlien näyttämö.
+
+### 5.2
+KYSYMYS: Miksi linna rakennettiin keskelle salmea?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olavinlinna (historia)
+Tietoruudun teksti: Olavinlinna on 1400-luvun kolmitorninen linna Savonlinnassa, saarella Kyrönsalmessa Haukiveden ja Pihlajaveden välissä. Se on pohjoisin yhä pystyssä oleva keskiaikainen kivilinnoitus ja koko Ruotsin valtakunnan parhaiten säilynyt keskiaikainen linna. Erik Axelsson Tott perusti sen vuonna 1475 nimellä Sankt Olofsborg hyötyäkseen siitä sekasorrosta, joka seurasi Iivana III:n Novgorodin valloituksesta, ja paikka valittiin Savosta niin että se veisi rajaa Pähkinäsaaren rauhan venäläiselle puolelle. Se oli ensimmäinen ruotsalainen linna, jonka paksut pyöreät tornit oli suunniteltu kestämään tykkitulta, eikä järvien verkko sen ympärillä ollut sattumaa: vesistöt hidastaisivat hyökkääjää. Linnaa ei koskaan vallattu väkisin, ja vuodesta 1912 sen piha on ollut Savonlinnan oopperajuhlien näyttämö.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sitka — kaupunkilehti / Sitka: Tulivuori joka vartioi salmea] Sitka on Yhdysvaltain pinta-alaltaan suurin kaupunki, sillä se ulottuu peräti noin 4 815 neliömailin alueelle Baranofin ja Tšitšagofin saarille Alexanterin saaristossa. Kaupungin salmea vartioi Mount Edgecumbe, sammunut tulivuori, jonka lumihuippuinen, punertava tuhkakartio kohoaa merestä naapurisaaren keskellä. Ilmasto on lauhkea mutta hyvin sateinen: vuotuinen sademäärä on peräti noin 335 senttimetriä. Kalastus ja kalanjalostus ovat kaupungin tärkeimpiä elinkeinoja tänäkin päivänä, ja satamassa risteilevät kalastusveneet ovat yhtä pysyvä näky kuin sata vuotta sitten.
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

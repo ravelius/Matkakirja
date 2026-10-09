@@ -1,0 +1,187 @@
+================ KOHTA 46 (kohde:hahmotelma-kemi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kemi (kauppa)
+Tietoruudun teksti: Kemi on Perämeren rannalla Kemijoen suulla sijaitseva kaupunki, jonka perusti keisari Aleksanteri II:n asetus vuonna 1869. Paikka valittiin syvänmerisataman läheisyyden vuoksi, ja ensimmäinen asemakaava oli tehty jo kymmenen vuotta aiemmin. Kaupungin rakennusperintöön ovat vaikuttaneet meren läheisyyden lisäksi saha- ja paperiteollisuuden kehitys. Ennen vuonna 1975 käyttöön otettua jäänmurtaja Urhoa Kemin satama saattoi olla jäiden saartama joulukuun alusta huhtikuuhun. Nykyään Kemi tunnetaan myös maailman suurimmasta lumilinnasta, joka rakennetaan sataman läheisyyteen joka vuosi uudelleen.
+
+### 46.1
+KYSYMYS: Miksi kaupunki perustettiin juuri Kemijoen suulle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kemi (kauppa)
+Tietoruudun teksti: Kemi on Perämeren rannalla Kemijoen suulla sijaitseva kaupunki, jonka perusti keisari Aleksanteri II:n asetus vuonna 1869. Paikka valittiin syvänmerisataman läheisyyden vuoksi, ja ensimmäinen asemakaava oli tehty jo kymmenen vuotta aiemmin. Kaupungin rakennusperintöön ovat vaikuttaneet meren läheisyyden lisäksi saha- ja paperiteollisuuden kehitys. Ennen vuonna 1975 käyttöön otettua jäänmurtaja Urhoa Kemin satama saattoi olla jäiden saartama joulukuun alusta huhtikuuhun. Nykyään Kemi tunnetaan myös maailman suurimmasta lumilinnasta, joka rakennetaan sataman läheisyyteen joka vuosi uudelleen.
+
+### 46.2
+KYSYMYS: Miksi Kemin satama saattoi talvella olla jäiden saartama?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kemi (kauppa)
+Tietoruudun teksti: Kemi on Perämeren rannalla Kemijoen suulla sijaitseva kaupunki, jonka perusti keisari Aleksanteri II:n asetus vuonna 1869. Paikka valittiin syvänmerisataman läheisyyden vuoksi, ja ensimmäinen asemakaava oli tehty jo kymmenen vuotta aiemmin. Kaupungin rakennusperintöön ovat vaikuttaneet meren läheisyyden lisäksi saha- ja paperiteollisuuden kehitys. Ennen vuonna 1975 käyttöön otettua jäänmurtaja Urhoa Kemin satama saattoi olla jäiden saartama joulukuun alusta huhtikuuhun. Nykyään Kemi tunnetaan myös maailman suurimmasta lumilinnasta, joka rakennetaan sataman läheisyyteen joka vuosi uudelleen.
+
+### 46.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+================ KOHTA 47 (kohde:hahmotelma-nokia) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nokia (tekniikka)
+Tietoruudun teksti: Nokia on kaupunki Pirkanmaalla Nokianvirran rannalla, noin 15 kilometrin päässä Tampereelta länteen. Nimen alkuperä on epäselvä, mutta yleisimmän teorian mukaan se juontuu vanhasta sanasta, joka tarkoitti soopelia. Nimi mainitaan kirjallisesti ensimmäisen kerran vuonna 1505, ja Nokian kartanon ympärillä käytiin vuosina 1596-1597 yksi nuijasodan suurimmista taisteluista. Vuonna 1868 kaivosinsinööri Fredrik Idestam perusti toisen puuhiomonsa Nokianvirran rannalle, ja hänen yrityksensä nimettiin Nokia Aktiebolagiksi vuonna 1871. Yhtiön myöhempi matkapuhelinliiketoiminta alkoi vasta 1960-luvulla, eikä puhelimia koskaan valmistettu Nokian kaupungissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Tiede: Puhelu joka aloitti matkapuhelinajan] 1991 — 1. heinäkuuta 1991 pääministeri Harri Holkeri soitti Tampereen apulaispormestari Kaarina Suoniolle Nokian ja Siemensin rakentamalla, Radiolinjan operoimalla verkolla — puhelua on vuosikymmenet pidetty maailman ensimmäisenä GSM-puheluna. Vuonna 2021 entinen Nokia-insinööri Pekka Lonka paljasti Helsingin Sanomille soittaneensa testipuhelun pari tuntia aiemmin samana päivänä Saloon: Maailman ensimmäisen GSM-puhelun soitin minä. GSM kehitettiin yhteiseurooppalaisena hankkeena, ja Suomi oli sen ensimmäisten kaupallisten verkkojen joukossa. Siitä kasvoi maailman käytetyin matkapuhelinteknologia, josta 3G, 4G ja 5G ovat myöhempiä kehitysaskeleita.
+- [Suomi — maalehti / Tiede: Puhelin jota myytiin 250 miljoonaa kappaletta] 2003 — Nokia 1100 esiteltiin elokuussa 2003 halpana ja kestävänä peruspuhelimena, jossa ei ollut kameraa eikä väriruutua — vain soitto, tekstiviestit ja pölynkestävä kotelo kehitysmaiden vaativiin oloihin. Puhelimesta tuli silti kaikkien aikojen myydyin matkapuhelinmalli: sitä on myyty yli 250 miljoonaa kappaletta, mikä tekee siitä myös maailman myydyimmän yksittäisen kulutuselektroniikkatuotteen ilmestymisaikanaan. Malli oli viimeinen Nokian puhelin, jossa soi vain yksiäänisiä soittoääniä — poikkeuksena ylellinen 8910i, joka jatkoi markkinoilla vuoteen 2007 asti. Nokia lopetti 1100:n valmistuksen vuonna 2010.
+
+### 47.1
+KYSYMYS: Mistä kaupungin nimi Nokia voi olla peräisin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nokia (tekniikka)
+Tietoruudun teksti: Nokia on kaupunki Pirkanmaalla Nokianvirran rannalla, noin 15 kilometrin päässä Tampereelta länteen. Nimen alkuperä on epäselvä, mutta yleisimmän teorian mukaan se juontuu vanhasta sanasta, joka tarkoitti soopelia. Nimi mainitaan kirjallisesti ensimmäisen kerran vuonna 1505, ja Nokian kartanon ympärillä käytiin vuosina 1596-1597 yksi nuijasodan suurimmista taisteluista. Vuonna 1868 kaivosinsinööri Fredrik Idestam perusti toisen puuhiomonsa Nokianvirran rannalle, ja hänen yrityksensä nimettiin Nokia Aktiebolagiksi vuonna 1871. Yhtiön myöhempi matkapuhelinliiketoiminta alkoi vasta 1960-luvulla, eikä puhelimia koskaan valmistettu Nokian kaupungissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Tiede: Puhelu joka aloitti matkapuhelinajan] 1991 — 1. heinäkuuta 1991 pääministeri Harri Holkeri soitti Tampereen apulaispormestari Kaarina Suoniolle Nokian ja Siemensin rakentamalla, Radiolinjan operoimalla verkolla — puhelua on vuosikymmenet pidetty maailman ensimmäisenä GSM-puheluna. Vuonna 2021 entinen Nokia-insinööri Pekka Lonka paljasti Helsingin Sanomille soittaneensa testipuhelun pari tuntia aiemmin samana päivänä Saloon: Maailman ensimmäisen GSM-puhelun soitin minä. GSM kehitettiin yhteiseurooppalaisena hankkeena, ja Suomi oli sen ensimmäisten kaupallisten verkkojen joukossa. Siitä kasvoi maailman käytetyin matkapuhelinteknologia, josta 3G, 4G ja 5G ovat myöhempiä kehitysaskeleita.
+- [Suomi — maalehti / Tiede: Puhelin jota myytiin 250 miljoonaa kappaletta] 2003 — Nokia 1100 esiteltiin elokuussa 2003 halpana ja kestävänä peruspuhelimena, jossa ei ollut kameraa eikä väriruutua — vain soitto, tekstiviestit ja pölynkestävä kotelo kehitysmaiden vaativiin oloihin. Puhelimesta tuli silti kaikkien aikojen myydyin matkapuhelinmalli: sitä on myyty yli 250 miljoonaa kappaletta, mikä tekee siitä myös maailman myydyimmän yksittäisen kulutuselektroniikkatuotteen ilmestymisaikanaan. Malli oli viimeinen Nokian puhelin, jossa soi vain yksiäänisiä soittoääniä — poikkeuksena ylellinen 8910i, joka jatkoi markkinoilla vuoteen 2007 asti. Nokia lopetti 1100:n valmistuksen vuonna 2010.
+
+### 47.2
+KYSYMYS: Miksi puuhiomo rakennettiin juuri Nokianvirran rannalle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nokia (tekniikka)
+Tietoruudun teksti: Nokia on kaupunki Pirkanmaalla Nokianvirran rannalla, noin 15 kilometrin päässä Tampereelta länteen. Nimen alkuperä on epäselvä, mutta yleisimmän teorian mukaan se juontuu vanhasta sanasta, joka tarkoitti soopelia. Nimi mainitaan kirjallisesti ensimmäisen kerran vuonna 1505, ja Nokian kartanon ympärillä käytiin vuosina 1596-1597 yksi nuijasodan suurimmista taisteluista. Vuonna 1868 kaivosinsinööri Fredrik Idestam perusti toisen puuhiomonsa Nokianvirran rannalle, ja hänen yrityksensä nimettiin Nokia Aktiebolagiksi vuonna 1871. Yhtiön myöhempi matkapuhelinliiketoiminta alkoi vasta 1960-luvulla, eikä puhelimia koskaan valmistettu Nokian kaupungissa.
+
+### 47.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+================ KOHTA 48 (kohde:hahmotelma-vanha-vaasa-kirkko) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanhan Vaasan kirkko (historia)
+Tietoruudun teksti: Vanhan Vaasan Pyhän Marian kirkko rakennettiin harmaasta kivestä 1500-luvun alkupuolella keskiaikaisen Mustasaaren kylän keskukseen, ja siitä tuli vuonna 1606 perustetun Vaasan kaupungin pääkirkko. Kirkkoa laajennettiin 1649, ja se muutettiin ristikirkoksi vuosina 1749–1753 koko maakunnan tarpeisiin. Elokuun 3. päivänä 1852 syttynyt Vaasan suurpalo tuhosi lähes koko puisen kaupungin ja kirkon sisustuksen, mutta paksut kivimuurit jäivät pystyyn. Kaupunki rakennettiin palon jälkeen uudelleen noin seitsemän kilometrin päähän nykyiselle paikalleen, eikä vanhaa kirkkoa koskaan kunnostettu käyttöön. Kirkon rauniomuurit jätettiin muistomerkiksi entisen Vanhan Vaasan keskustan paikalle, nykyiseen Mustasaareen, ja niitä on entisöity useaan otteeseen 1910-luvulta lähtien, viimeksi Museoviraston toimesta 2007–2016.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Toronto — kaupunkilehti / Historia: Kokoontumissali palon raunioille] Vuoden 1849 palon jälkeen vanhan markkina-alueen pohjoisosa oli purettava, ja tilalle nousi 1850–51 St. Lawrence Hall. Arkkitehti William Thomasin suunnittelemassa talossa oli tuhannen istumapaikan juhlasali, ja siitä tuli nopeasti kaupungin yhteiskuntaelämän keskus: salissa puhuivat muun muassa John A. Macdonald ja George Brown, molemmat Kanadan valaliiton isiä. 1870-luvulle tultaessa kaupunkiin oli rakennettu suurempia ja soveliaampia esiintymistiloja, ja Hallin merkitys väheni. Rakennus säilyi silti, ja se entisöitiin täysin 1967 Kanadan satavuotisjuhlaan; samana vuonna siitä tuli kansallinen historiallinen kohde.
+- [Tukholma — kohdekartta / Kohdekartta: Kaupungintalo] 1923 Arkkitehti Ragnar Östberg suunnitteli kaupungintalon, joka rakennettiin kaupungin rantaan vuosina 1911–1923 — melkein kahdeksan miljoonaa punaista tiiltä. Tornissa on 106 metriä ja huipulla kolme kultaista kruunua, Ruotsin vanha tunnus. Talon sisällä on Sininen sali, jossa Nobelin palkintojen juhlaillallinen syödään joka vuosi. Sen jälkeen vieraat tanssivat Kultaisessa salissa, jonka seinät on peitetty yli 18 miljoonalla pienellä mosaiikkipalalla. Kaupungintalo avattiin juhlallisesti 23. kesäkuuta 1923. Avaajat luulivat sen olevan tasan 400 vuotta siitä, kun kuningas Kustaa Vaasa saapui Tukholmaan — todellisuudessa päivämäärä oli hieman väärin, mutta juhla pidettiin silti.
+
+### 48.1
+KYSYMYS: Miksi kirkkoa ei rakennettu uudelleen palon jälkeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanhan Vaasan kirkko (historia)
+Tietoruudun teksti: Vanhan Vaasan Pyhän Marian kirkko rakennettiin harmaasta kivestä 1500-luvun alkupuolella keskiaikaisen Mustasaaren kylän keskukseen, ja siitä tuli vuonna 1606 perustetun Vaasan kaupungin pääkirkko. Kirkkoa laajennettiin 1649, ja se muutettiin ristikirkoksi vuosina 1749–1753 koko maakunnan tarpeisiin. Elokuun 3. päivänä 1852 syttynyt Vaasan suurpalo tuhosi lähes koko puisen kaupungin ja kirkon sisustuksen, mutta paksut kivimuurit jäivät pystyyn. Kaupunki rakennettiin palon jälkeen uudelleen noin seitsemän kilometrin päähän nykyiselle paikalleen, eikä vanhaa kirkkoa koskaan kunnostettu käyttöön. Kirkon rauniomuurit jätettiin muistomerkiksi entisen Vanhan Vaasan keskustan paikalle, nykyiseen Mustasaareen, ja niitä on entisöity useaan otteeseen 1910-luvulta lähtien, viimeksi Museoviraston toimesta 2007–2016.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Toronto — kaupunkilehti / Historia: Kokoontumissali palon raunioille] Vuoden 1849 palon jälkeen vanhan markkina-alueen pohjoisosa oli purettava, ja tilalle nousi 1850–51 St. Lawrence Hall. Arkkitehti William Thomasin suunnittelemassa talossa oli tuhannen istumapaikan juhlasali, ja siitä tuli nopeasti kaupungin yhteiskuntaelämän keskus: salissa puhuivat muun muassa John A. Macdonald ja George Brown, molemmat Kanadan valaliiton isiä. 1870-luvulle tultaessa kaupunkiin oli rakennettu suurempia ja soveliaampia esiintymistiloja, ja Hallin merkitys väheni. Rakennus säilyi silti, ja se entisöitiin täysin 1967 Kanadan satavuotisjuhlaan; samana vuonna siitä tuli kansallinen historiallinen kohde.
+
+### 48.2
+KYSYMYS: Kuinka kaukana uusi Vaasa rakennettiin vanhan kaupungin paikalta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanhan Vaasan kirkko (historia)
+Tietoruudun teksti: Vanhan Vaasan Pyhän Marian kirkko rakennettiin harmaasta kivestä 1500-luvun alkupuolella keskiaikaisen Mustasaaren kylän keskukseen, ja siitä tuli vuonna 1606 perustetun Vaasan kaupungin pääkirkko. Kirkkoa laajennettiin 1649, ja se muutettiin ristikirkoksi vuosina 1749–1753 koko maakunnan tarpeisiin. Elokuun 3. päivänä 1852 syttynyt Vaasan suurpalo tuhosi lähes koko puisen kaupungin ja kirkon sisustuksen, mutta paksut kivimuurit jäivät pystyyn. Kaupunki rakennettiin palon jälkeen uudelleen noin seitsemän kilometrin päähän nykyiselle paikalleen, eikä vanhaa kirkkoa koskaan kunnostettu käyttöön. Kirkon rauniomuurit jätettiin muistomerkiksi entisen Vanhan Vaasan keskustan paikalle, nykyiseen Mustasaareen, ja niitä on entisöity useaan otteeseen 1910-luvulta lähtien, viimeksi Museoviraston toimesta 2007–2016.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kohdekartta / Kohdekartta: Kaupungintalo] 1923 Arkkitehti Ragnar Östberg suunnitteli kaupungintalon, joka rakennettiin kaupungin rantaan vuosina 1911–1923 — melkein kahdeksan miljoonaa punaista tiiltä. Tornissa on 106 metriä ja huipulla kolme kultaista kruunua, Ruotsin vanha tunnus. Talon sisällä on Sininen sali, jossa Nobelin palkintojen juhlaillallinen syödään joka vuosi. Sen jälkeen vieraat tanssivat Kultaisessa salissa, jonka seinät on peitetty yli 18 miljoonalla pienellä mosaiikkipalalla. Kaupungintalo avattiin juhlallisesti 23. kesäkuuta 1923. Avaajat luulivat sen olevan tasan 400 vuotta siitä, kun kuningas Kustaa Vaasa saapui Tukholmaan — todellisuudessa päivämäärä oli hieman väärin, mutta juhla pidettiin silti.
+
+### 48.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+### 48.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+### 48.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+================ KOHTA 49 (nosto:tervakauppa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Helsinki
+Maa, jossa pelaaja on: Suomi
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Maailman laivat pysyivät kuivina suomalaisella tervalla — ja tynnyrit oli pakko soutaa Tukholmaan
+Tietoruudun teksti: Terva on pihkaista mäntyä, joka poltetaan hapettomassa ja riittävän kuumassa haudassa. Lopputulos hylkii vettä, ja siksi sillä suojattiin laivojen puuosat ja köysistö. Kun Euroopan omat metsät oli hakattu, tervaa kannatti tuoda kaukaa, ja 1600-luvun lopulla se oli Suomen tärkein vientituote. Polttopaikat olivat aina vesistön varrella — painavia tynnyreitä ei yksinkertaisesti saanut liikkumaan maateitse, joten ne laskettiin jokea alas tervaveneillä.
+
+Kauppa ei ollut vapaata. Vuoden 1617 järjestelmässä ulkomaankauppa sallittiin vain tapulikaupungeille, ja muiden oli vietävä tervansa Tukholmaan, jonka porvareilla oli tervakaupan yksinoikeus. Pohjalaisia se suututti, ja monopoli kumottiin vasta vuonna 1765 — siihen vaikutti kokkolalainen valtiopäivämies Anders Chydenius, joka kannatti vapaakauppaa. Sen jälkeen tervaraha jäi kotiin, ja Pohjanmaan kaupunkeihin nousi kokonainen tervaporvarien …
+Isoisän matkakirjamerkintä: Kirkon apostolit katsoivat merelle. Torilla kalakauppias punnitsi silakoita. Kummankin työ vaikutti vakavalta. Tuuli nosti karttani; nainen painoi sen silakalla paikoilleen. Suomenlahdelle jäi rasvajälki. Harvoin olen saanut yhtä täsmällistä paikallistietoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New Orleans — kohdekartta / Kohdekartta: Gallier House] 1857–1860 Talo on arkkitehdin oma koti. James Gallier Jr. (1827–1868) aloitti sen rakentamisen Royal Streetille 1857 ja muutti sisään vaimonsa ja lastensa kanssa 1860. Isä oli luovuttanut toimistonsa pojalleen 1849, ja nuoremman Gallierin toimisto piirsi kaupunkiin muun muassa Ranskalaisen oopperatalon 1859 — se paloi 1919. Gallier Jr. kuoli neljänkymmenen vuoden iässä kotonaan, eikä kuolintodistukseen merkitty syytä. Rakennus yhdistää tyylejä: julkisivun stukki on italialaisvaikutteinen ja suojaa pehmeää paikallista tiiltä tuulelta ja vedeltä, mutta pääsisäänkäynti on klassinen. Suurin osa Ranskan Korttelin valuraudasta tilattiin kuvastosta, mutta tämän talon portin Gallier suunnitteli its…
+
+### 49.1
+KYSYMYS: Miksi terva suojaa puuta vedeltä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Helsinki
+Maa, jossa pelaaja on: Suomi
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Maailman laivat pysyivät kuivina suomalaisella tervalla — ja tynnyrit oli pakko soutaa Tukholmaan
+Tietoruudun teksti: Terva on pihkaista mäntyä, joka poltetaan hapettomassa ja riittävän kuumassa haudassa. Lopputulos hylkii vettä, ja siksi sillä suojattiin laivojen puuosat ja köysistö. Kun Euroopan omat metsät oli hakattu, tervaa kannatti tuoda kaukaa, ja 1600-luvun lopulla se oli Suomen tärkein vientituote. Polttopaikat olivat aina vesistön varrella — painavia tynnyreitä ei yksinkertaisesti saanut liikkumaan maateitse, joten ne laskettiin jokea alas tervaveneillä.
+
+Kauppa ei ollut vapaata. Vuoden 1617 järjestelmässä ulkomaankauppa sallittiin vain tapulikaupungeille, ja muiden oli vietävä tervansa Tukholmaan, jonka porvareilla oli tervakaupan yksinoikeus. Pohjalaisia se suututti, ja monopoli kumottiin vasta vuonna 1765 — siihen vaikutti kokkolalainen valtiopäivämies Anders Chydenius, joka kannatti vapaakauppaa. Sen jälkeen tervaraha jäi kotiin, ja Pohjanmaan kaupunkeihin nousi kokonainen tervaporvarien …
+Isoisän matkakirjamerkintä: Kirkon apostolit katsoivat merelle. Torilla kalakauppias punnitsi silakoita. Kummankin työ vaikutti vakavalta. Tuuli nosti karttani; nainen painoi sen silakalla paikoilleen. Suomenlahdelle jäi rasvajälki. Harvoin olen saanut yhtä täsmällistä paikallistietoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New Orleans — kohdekartta / Kohdekartta: Gallier House] 1857–1860 Talo on arkkitehdin oma koti. James Gallier Jr. (1827–1868) aloitti sen rakentamisen Royal Streetille 1857 ja muutti sisään vaimonsa ja lastensa kanssa 1860. Isä oli luovuttanut toimistonsa pojalleen 1849, ja nuoremman Gallierin toimisto piirsi kaupunkiin muun muassa Ranskalaisen oopperatalon 1859 — se paloi 1919. Gallier Jr. kuoli neljänkymmenen vuoden iässä kotonaan, eikä kuolintodistukseen merkitty syytä. Rakennus yhdistää tyylejä: julkisivun stukki on italialaisvaikutteinen ja suojaa pehmeää paikallista tiiltä tuulelta ja vedeltä, mutta pääsisäänkäynti on klassinen. Suurin osa Ranskan Korttelin valuraudasta tilattiin kuvastosta, mutta tämän talon portin Gallier suunnitteli its…
+
+### 49.2
+KYSYMYS: Miksi tervatynnyrit piti kuljettaa jokea pitkin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Helsinki
+Maa, jossa pelaaja on: Suomi
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Maailman laivat pysyivät kuivina suomalaisella tervalla — ja tynnyrit oli pakko soutaa Tukholmaan
+Tietoruudun teksti: Terva on pihkaista mäntyä, joka poltetaan hapettomassa ja riittävän kuumassa haudassa. Lopputulos hylkii vettä, ja siksi sillä suojattiin laivojen puuosat ja köysistö. Kun Euroopan omat metsät oli hakattu, tervaa kannatti tuoda kaukaa, ja 1600-luvun lopulla se oli Suomen tärkein vientituote. Polttopaikat olivat aina vesistön varrella — painavia tynnyreitä ei yksinkertaisesti saanut liikkumaan maateitse, joten ne laskettiin jokea alas tervaveneillä.
+
+Kauppa ei ollut vapaata. Vuoden 1617 järjestelmässä ulkomaankauppa sallittiin vain tapulikaupungeille, ja muiden oli vietävä tervansa Tukholmaan, jonka porvareilla oli tervakaupan yksinoikeus. Pohjalaisia se suututti, ja monopoli kumottiin vasta vuonna 1765 — siihen vaikutti kokkolalainen valtiopäivämies Anders Chydenius, joka kannatti vapaakauppaa. Sen jälkeen tervaraha jäi kotiin, ja Pohjanmaan kaupunkeihin nousi kokonainen tervaporvarien …
+Isoisän matkakirjamerkintä: Kirkon apostolit katsoivat merelle. Torilla kalakauppias punnitsi silakoita. Kummankin työ vaikutti vakavalta. Tuuli nosti karttani; nainen painoi sen silakalla paikoilleen. Suomenlahdelle jäi rasvajälki. Harvoin olen saanut yhtä täsmällistä paikallistietoa.
+
+### 49.3
+KYSYMYS: Mitä Suomessa tehdään tervalla nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Helsinki
+Maa, jossa pelaaja on: Suomi
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Maailman laivat pysyivät kuivina suomalaisella tervalla — ja tynnyrit oli pakko soutaa Tukholmaan
+Tietoruudun teksti: Terva on pihkaista mäntyä, joka poltetaan hapettomassa ja riittävän kuumassa haudassa. Lopputulos hylkii vettä, ja siksi sillä suojattiin laivojen puuosat ja köysistö. Kun Euroopan omat metsät oli hakattu, tervaa kannatti tuoda kaukaa, ja 1600-luvun lopulla se oli Suomen tärkein vientituote. Polttopaikat olivat aina vesistön varrella — painavia tynnyreitä ei yksinkertaisesti saanut liikkumaan maateitse, joten ne laskettiin jokea alas tervaveneillä.
+
+Kauppa ei ollut vapaata. Vuoden 1617 järjestelmässä ulkomaankauppa sallittiin vain tapulikaupungeille, ja muiden oli vietävä tervansa Tukholmaan, jonka porvareilla oli tervakaupan yksinoikeus. Pohjalaisia se suututti, ja monopoli kumottiin vasta vuonna 1765 — siihen vaikutti kokkolalainen valtiopäivämies Anders Chydenius, joka kannatti vapaakauppaa. Sen jälkeen tervaraha jäi kotiin, ja Pohjanmaan kaupunkeihin nousi kokonainen tervaporvarien …
+Isoisän matkakirjamerkintä: Kirkon apostolit katsoivat merelle. Torilla kalakauppias punnitsi silakoita. Kummankin työ vaikutti vakavalta. Tuuli nosti karttani; nainen painoi sen silakalla paikoilleen. Suomenlahdelle jäi rasvajälki. Harvoin olen saanut yhtä täsmällistä paikallistietoa.
+
+### 49.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+### 49.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
