@@ -5,6 +5,14 @@ Proto: `/Users/Shared/Claude/proto-3d/Matkakirja-proto` (paikallinen git). Workt
 Testit: `Linssit-testit/kaanna.sh`, `tyokalut/tarkista.sh` (virheitä 0). Käännös vain Julkaisijan KÄÄNNÖS NYT:llä
 (`PROTO_APP_KOPIO=… tyokalut/proto-kaanna.sh brA+brB A26BC7D0…`), simu vain SIMULAATTORI NYT:llä, "simu vapaa" heti perään.
 
+## TILA 14.3x
+- Juna 173 kuitattu ja Natiivisepällä: pbr-173 86bd795f1 (korvaa 2f641e53c; OmaMalli PBR + VALO KAUPUNGIN AURINGOSTA _IlmAurinko,
+  koska URP:n päävalo = kartan kameraa seuraava aurinko → ND harmaa) ja talvi-173 b64cb3b75. 1209/1209.
+- PT palautti ND v6 -kuvat: LR korjaa puiston latvuskuvat (oma nurmi tai tiheät puut), sävyt (kalkkikivi ~195/182/158, lyijy ~100/105/112,
+  myös prefektuuri) sekä säleaukot ja lasimaalaukset. KL v2b (leikkaus 84 p.) viety → vienti27.
+- SEURAAVA: kun LR ilmoittaa → uusi vienti (proto-päächeckout tai pbr-worktree, omat_mallit_tileset.py) → Julkaisijalta KÄÄNNÖS
+  (scratchpad kaanna-pbr2.sh → app 173pbr2) + SIMU (kuvat-pbr2.sh, päivitä VIENTI) → ND 3 + KL 2 merkittyinä (merkitse.py) PT:lle.
+
 ## TILA 14.1x
 - Juna 172: osoitin uusin-2 → v6b (v6 ilman Vasaa, ämpärissä 13.28, URLit 37/37) julkaisussa. v8 ämpärissä, ei käytössä.
 - JUNAAN 173 valmiina (SHA:t Natiivisepälle kun 173 avautuu): linssiseppa2/pbr-173 2f641e53c (OmaMalli normal/MR/AO + työkalun
