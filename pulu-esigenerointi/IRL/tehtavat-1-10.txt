@@ -1,0 +1,230 @@
+================ KOHTA 46 (kohde:hahmotelma-waterford) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Waterford Crystal (kauppa)
+Tietoruudun teksti: Waterford Crystal on irlantilainen kristallilasitavaroiden, erityisesti kaiverrettujen lasituotteiden, valmistaja, ja se on nimetty Waterfordin kaupungin mukaan. Kristallin valmistus Waterfordissa alkoi vuonna 1783, kun George Penrose ja hänen veljenpoikansa William Penrose perustivat Waterford Glassworksin, joka tuotti erittäin hienoa piikivilasia, josta tuli maailmankuulua. Yritys suljettiin kesäkuussa 1851. Tuotannon elvyttämiseksi tehtiin yrityksiä 1900-luvun alusta lähtien, ja vuonna 2010 tuotanto siirtyi kaupungin keskustaan Mallille, jossa on vieraskeskus ja maailman suurin Waterford-kristallien kokoelma.
+
+### 46.1
+KYSYMYS: Milloin kristallin valmistus Waterfordissa alkoi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Waterford Crystal (kauppa)
+Tietoruudun teksti: Waterford Crystal on irlantilainen kristallilasitavaroiden, erityisesti kaiverrettujen lasituotteiden, valmistaja, ja se on nimetty Waterfordin kaupungin mukaan. Kristallin valmistus Waterfordissa alkoi vuonna 1783, kun George Penrose ja hänen veljenpoikansa William Penrose perustivat Waterford Glassworksin, joka tuotti erittäin hienoa piikivilasia, josta tuli maailmankuulua. Yritys suljettiin kesäkuussa 1851. Tuotannon elvyttämiseksi tehtiin yrityksiä 1900-luvun alusta lähtien, ja vuonna 2010 tuotanto siirtyi kaupungin keskustaan Mallille, jossa on vieraskeskus ja maailman suurin Waterford-kristallien kokoelma.
+
+### 46.2
+KYSYMYS: Milloin alkuperäinen lasitehdas suljettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Waterford Crystal (kauppa)
+Tietoruudun teksti: Waterford Crystal on irlantilainen kristallilasitavaroiden, erityisesti kaiverrettujen lasituotteiden, valmistaja, ja se on nimetty Waterfordin kaupungin mukaan. Kristallin valmistus Waterfordissa alkoi vuonna 1783, kun George Penrose ja hänen veljenpoikansa William Penrose perustivat Waterford Glassworksin, joka tuotti erittäin hienoa piikivilasia, josta tuli maailmankuulua. Yritys suljettiin kesäkuussa 1851. Tuotannon elvyttämiseksi tehtiin yrityksiä 1900-luvun alusta lähtien, ja vuonna 2010 tuotanto siirtyi kaupungin keskustaan Mallille, jossa on vieraskeskus ja maailman suurin Waterford-kristallien kokoelma.
+
+### 46.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+================ KOHTA 47 (kohde:hahmotelma-valentia) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valentia (tekniikka)
+Tietoruudun teksti: Valentia on Irlannin läntisimpiä kohtia, saari Dinglen lahdessa Iveraghin niemimaan edustalla Kerryn kreivikunnassa; sen ja mantereen yhdistää Portmageen silta. Saari on noin 11 kilometriä pitkä ja lähes kolme kilometriä leveä. Se oli ensimmäisen kaupallisesti toimivan Atlantin lennätinkaapelin itäpää: ensimmäinen yritys vuonna 1857 epäonnistui, ja myös kaapelit vuosina 1858 ja 1865 epäonnistuivat, kunnes vuonna 1866 kaapeli lopulta saatiin toimimaan. Vuonna 1866 Yhdysvaltain rannikkomittauslaitos teki saarella pituuspiirimittauksen yhdistääkseen Yhdysvaltojen ja Greenwichin pituuspiirit, ja mittauksia varten rakennettiin väliaikainen observatorio. Saaren liuskelouhoksen liuskeita käytettiin Britannian parlamenttitalossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Samarkand — kohdekartta / Kohdekartta: Ulugbekin observatorio] 1420-luku Ulugbek oli Timurin pojanpoika ja Samarkandin hallitsija, joka oli ennen kaikkea tähtitieteilijä. Hän kutsui kaupunkiin yli kuusikymmentä matemaatikkoa ja tähtitieteilijää, ja observatorion perustukset laskettiin 1420-luvun alkupuolella. Rakennus valmistui noin vuonna 1428. Se oli lieriön muotoinen, halkaisijaltaan 46 metriä ja korkeudeltaan kolmisenkymmentä metriä, ja se seisoi kukkulalla parikymmentä metriä ympäristöään ylempänä. Keskellä lieriötä oli Fakhri-sekstantti, jonka säde oli 40,04 metriä — aikansa suurin tähtitieteellinen mittalaite. Niin suuri kaari ei olisi mahtunut rakennuksen sisään pystysuunnassa, joten se rakennettiin osittain maan alle noin kahden metrin levyise…
+- [Quito — kaupunkilehti / Tiede: Observatorio joka kantoi retkikunnan perintöä eteenpäin] Quiton observatorio, joka avattiin La Alameda -puistoon 1873, ei syntynyt tyhjästä: se jatkoi tiedeperinnettä, jonka ranskalais-espanjalainen retkikunta oli aloittanut 130 vuotta aiemmin. Kokoelmissa on 1800-luvun mittalaitteita, muun muassa Repsoldin meridiaanipiiri ja 1875 Münchenissä valmistettu 24-senttinen Merzin kaukoputki. 1900-luvun alussa toinen ranskalainen retkikunta työskenteli samoissa tiloissa vahvistaakseen vanhat mittaustulokset – sen vuosiksi lähteet antavat joko 1901–1906 tai 1902–1914.
+
+### 47.1
+KYSYMYS: Minkä kaapelin itäpää Valentia oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valentia (tekniikka)
+Tietoruudun teksti: Valentia on Irlannin läntisimpiä kohtia, saari Dinglen lahdessa Iveraghin niemimaan edustalla Kerryn kreivikunnassa; sen ja mantereen yhdistää Portmageen silta. Saari on noin 11 kilometriä pitkä ja lähes kolme kilometriä leveä. Se oli ensimmäisen kaupallisesti toimivan Atlantin lennätinkaapelin itäpää: ensimmäinen yritys vuonna 1857 epäonnistui, ja myös kaapelit vuosina 1858 ja 1865 epäonnistuivat, kunnes vuonna 1866 kaapeli lopulta saatiin toimimaan. Vuonna 1866 Yhdysvaltain rannikkomittauslaitos teki saarella pituuspiirimittauksen yhdistääkseen Yhdysvaltojen ja Greenwichin pituuspiirit, ja mittauksia varten rakennettiin väliaikainen observatorio. Saaren liuskelouhoksen liuskeita käytettiin Britannian parlamenttitalossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Broome — kaupunkilehti / Broome: Kaapeli joka yhdisti mantereet] Vuonna 1889 merenalainen lennätinkaapeli laskettiin Broomesta noin 1 650 kilometrin päähän Banyuwangiin Jaavalle, ja siitä eteenpäin viesti kulki maayhteyksiä pitkin aina Lontooseen asti – matka, joka isoisän 1873 purjehtineelle laivalle olisi vienyt kuukausia, kutistui parissa tunnissa. Kaapelin rantautumispaikka länsipuolella sai nimen Cable Beach, ja siitä tuli myöhemmin 22 kilometrin pituinen valkohiekkainen ranta, joka on nykyään Broomen tunnetuin maamerkki ja suosittu kamelisafarien näyttämö auringonlaskun aikaan.
+- [St. John’s — kaupunkilehti / Viesti valtameren yli: Kaapeli, joka nousi merestä] Ensimmäisen pysyvän valtamerenalaisen lennätinkaapelin läntinen pääte oli Heart’s Content Newfoundlandilla, itäinen Valentian saarella Irlannissa. Kaapeli vedettiin maihin 27. heinäkuuta 1866 useiden epäonnistuneiden yritysten jälkeen, ja sen toi paikalle Great Eastern, aikansa suurin höyrylaiva. Ensimmäiset viestit lähetettiin morsella, ja asemalla työskenteli kolme ihmistä. Isoisän matkavuonna 1873 yhteys oli seitsemän vuotta vanha ja yhä ihme. Parhaimmillaan yli kaksisataa kylän asukasta työskenteli kaapeliyhtiölle; asema suljettiin 1965, kun puhelinkaapelit ja satelliitit tekivät lennättimen tarpeettomaksi.
+
+### 47.2
+KYSYMYS: Mitä varten saarelle rakennettiin observatorio vuonna 1866?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valentia (tekniikka)
+Tietoruudun teksti: Valentia on Irlannin läntisimpiä kohtia, saari Dinglen lahdessa Iveraghin niemimaan edustalla Kerryn kreivikunnassa; sen ja mantereen yhdistää Portmageen silta. Saari on noin 11 kilometriä pitkä ja lähes kolme kilometriä leveä. Se oli ensimmäisen kaupallisesti toimivan Atlantin lennätinkaapelin itäpää: ensimmäinen yritys vuonna 1857 epäonnistui, ja myös kaapelit vuosina 1858 ja 1865 epäonnistuivat, kunnes vuonna 1866 kaapeli lopulta saatiin toimimaan. Vuonna 1866 Yhdysvaltain rannikkomittauslaitos teki saarella pituuspiirimittauksen yhdistääkseen Yhdysvaltojen ja Greenwichin pituuspiirit, ja mittauksia varten rakennettiin väliaikainen observatorio. Saaren liuskelouhoksen liuskeita käytettiin Britannian parlamenttitalossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Samarkand — kohdekartta / Kohdekartta: Ulugbekin observatorio] 1420-luku Ulugbek oli Timurin pojanpoika ja Samarkandin hallitsija, joka oli ennen kaikkea tähtitieteilijä. Hän kutsui kaupunkiin yli kuusikymmentä matemaatikkoa ja tähtitieteilijää, ja observatorion perustukset laskettiin 1420-luvun alkupuolella. Rakennus valmistui noin vuonna 1428. Se oli lieriön muotoinen, halkaisijaltaan 46 metriä ja korkeudeltaan kolmisenkymmentä metriä, ja se seisoi kukkulalla parikymmentä metriä ympäristöään ylempänä. Keskellä lieriötä oli Fakhri-sekstantti, jonka säde oli 40,04 metriä — aikansa suurin tähtitieteellinen mittalaite. Niin suuri kaari ei olisi mahtunut rakennuksen sisään pystysuunnassa, joten se rakennettiin osittain maan alle noin kahden metrin levyise…
+- [Quito — kaupunkilehti / Tiede: Observatorio joka kantoi retkikunnan perintöä eteenpäin] Quiton observatorio, joka avattiin La Alameda -puistoon 1873, ei syntynyt tyhjästä: se jatkoi tiedeperinnettä, jonka ranskalais-espanjalainen retkikunta oli aloittanut 130 vuotta aiemmin. Kokoelmissa on 1800-luvun mittalaitteita, muun muassa Repsoldin meridiaanipiiri ja 1875 Münchenissä valmistettu 24-senttinen Merzin kaukoputki. 1900-luvun alussa toinen ranskalainen retkikunta työskenteli samoissa tiloissa vahvistaakseen vanhat mittaustulokset – sen vuosiksi lähteet antavat joko 1901–1906 tai 1902–1914.
+
+### 47.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+================ KOHTA 48 (kohde:hahmotelma-birr) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Birrin linna (tekniikka)
+Tietoruudun teksti: Birrin linna on linna Birrin kaupungissa Offalyn kreivikunnassa, ja siellä asuu Rossen 7. jaarli perheineen; linnan puutarhat ovat yleisölle avoimet. Linnan paikalla on ollut linna vuodesta 1170, ja 1300–1600-luvuilla O'Carrollien suku hallitsi täältä. Sir Lawrence Parsons sai linnan ja 1 277 eekkeriä maata vuonna 1620, ja Rossen 2. jaarli goottilaisti linnaa 1800-luvun alussa. Hänen poikansa, Rossen 3. jaarli, rakennutti linnan puistoon Leviathan-nimisen suuren teleskoopin, jonka 183 senttimetrin peili valmistui vuonna 1845 ja joka oli maailman suurin teleskooppi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [GUF — maalehti / Rakennukset: Raketti joka vei teleskoopin avaruuteen] 25.12.2021 — Ensimmäinen Ariane-kantoraketti laukaistiin Kouroun avaruuskeskuksesta joulukuussa 1979, ja siitä alkoi eurooppalaisen avaruustekniikan menestys-tarina. Vuonna 2008 valmistunut ELA-3-laukaisualue rakennettiin raskaille Ariane 5 -raketeille. Jouluaamuna 25. joulukuuta 2021 juuri tältä laukaisualustalta nousi Ariane 5, jonka kyydissä oli Nasan James Webb -avaruusteleskooppi. Se on tähän mennessä rakennetuista avaruus-teleskoopeista suurin ja tarkin, ja sen kuljettaminen onnistuneesti radalle oli yksi Kouroun avaruuskeskuksen tunnetuimmista laukaisuista.
+
+### 48.1
+KYSYMYS: Mikä nimi Birrin suurella teleskoopilla on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Birrin linna (tekniikka)
+Tietoruudun teksti: Birrin linna on linna Birrin kaupungissa Offalyn kreivikunnassa, ja siellä asuu Rossen 7. jaarli perheineen; linnan puutarhat ovat yleisölle avoimet. Linnan paikalla on ollut linna vuodesta 1170, ja 1300–1600-luvuilla O'Carrollien suku hallitsi täältä. Sir Lawrence Parsons sai linnan ja 1 277 eekkeriä maata vuonna 1620, ja Rossen 2. jaarli goottilaisti linnaa 1800-luvun alussa. Hänen poikansa, Rossen 3. jaarli, rakennutti linnan puistoon Leviathan-nimisen suuren teleskoopin, jonka 183 senttimetrin peili valmistui vuonna 1845 ja joka oli maailman suurin teleskooppi.
+
+### 48.2
+KYSYMYS: Kuka rakennutti teleskoopin linnan puistoon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Birrin linna (tekniikka)
+Tietoruudun teksti: Birrin linna on linna Birrin kaupungissa Offalyn kreivikunnassa, ja siellä asuu Rossen 7. jaarli perheineen; linnan puutarhat ovat yleisölle avoimet. Linnan paikalla on ollut linna vuodesta 1170, ja 1300–1600-luvuilla O'Carrollien suku hallitsi täältä. Sir Lawrence Parsons sai linnan ja 1 277 eekkeriä maata vuonna 1620, ja Rossen 2. jaarli goottilaisti linnaa 1800-luvun alussa. Hänen poikansa, Rossen 3. jaarli, rakennutti linnan puistoon Leviathan-nimisen suuren teleskoopin, jonka 183 senttimetrin peili valmistui vuonna 1845 ja joka oli maailman suurin teleskooppi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [GUF — maalehti / Rakennukset: Raketti joka vei teleskoopin avaruuteen] 25.12.2021 — Ensimmäinen Ariane-kantoraketti laukaistiin Kouroun avaruuskeskuksesta joulukuussa 1979, ja siitä alkoi eurooppalaisen avaruustekniikan menestys-tarina. Vuonna 2008 valmistunut ELA-3-laukaisualue rakennettiin raskaille Ariane 5 -raketeille. Jouluaamuna 25. joulukuuta 2021 juuri tältä laukaisualustalta nousi Ariane 5, jonka kyydissä oli Nasan James Webb -avaruusteleskooppi. Se on tähän mennessä rakennetuista avaruus-teleskoopeista suurin ja tarkin, ja sen kuljettaminen onnistuneesti radalle oli yksi Kouroun avaruuskeskuksen tunnetuimmista laukaisuista.
+
+### 48.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+### 48.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+### 48.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+================ KOHTA 49 (kohde:hahmotelma-mellifont) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mellifontin luostari (historia)
+Tietoruudun teksti: Mellifontin luostari Co. Louthissa oli Irlannin ensimmäinen sistersiläisluostari: Armaghin arkkipiispa pyhä Malakia perusti sen vuonna 1142 ranskalaisten munkkien avulla. Luostarin kahdeksankulmainen lavabo-rakennus, jossa munkit pesivät kätensä ennen aterioita, oli ainutlaatuinen rakennelma Irlannissa. Henrik VIII:n luostarien lakkautus päätti luostarin uskonnollisen käytön vuonna 1539, ja Edward Moore rakensi paikalle linnoitetun kartanon vuonna 1556 käyttäen vanhan luostarin kiviä rakennusaineena. Kartano toimi myöhemmin muun muassa Vilhelm Oranialaisen päämajana Boynen taistelun aikaan 1690, mutta lopulta koko paikka hylättiin kokonaan. Nykyään paikalla on nähtävissä keskiaikaisia raunioita, joista tunnetuin on juuri se ainutlaatuinen kahdeksankulmainen lavabo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kapkaupunki — kohdekartta / Kohdekartta: District Six -museo] 1994 District Six sai nimensä 1966, kun siitä tehtiin Kapkaupungin kuudes kunnallispiiri. Kaupunginosa oli alkanut kasvaa orjuuden lakkauttamisen jälkeen, ja siellä asui aikanaan lähes kymmenesosa koko kaupungin väestöstä: vapautuneiden orjien jälkeläisiä, käsityöläisiä, kauppiaita ja siirtolaisia. Alue julistettiin 11. helmikuuta 1966 valkoisten alueeksi, siirrot alkoivat 1968, ja yli kuusikymmentätuhatta asukasta siirrettiin pakolla Cape Flatsin lakeuksille. Talot purettiin, mutta suunniteltua uutta kaupunginosaa ei koskaan rakennettu. Alue nimettiin 1970 uudelleen Zonnebloemiksi, ja suuri osa siitä jäi tyhjäksi maaksi. Vanha nimi palautettiin virallisesti 17. joulukuuta 2019 sen jälkeen,…
+- [PRI — maalehti / Musiikki: Rumpu vastaa tanssijalle] 1600-luku — Bomba syntyi 1600-luvulla, kun orjuutetut länsiafrikkalaiset ja heidän jälkeläisensä loivat rannikkokaupungeissa, erityisesti Loízassa, oman musiikki- ja tanssiperinteensä sokeriplantaasien keskellä. Bombassa tanssija ei seuraa rumpalia vaan päinvastoin: tanssija haastaa subidor-rumpalin hameen heilautuksilla tai vartalon iskuilla, ja rumpalin on seurattava jokaista piquetea eli äkkinäistä liikettä täsmällisesti barril-rummullaan. Kutsu-ja-vastaus-laulu ja moniäänekäs rumpujen soitto periytyvät Länsi-Afrikan perinteistä. Orjuuden lakkauttamisen jälkeen 1873 bomba jatkoi elämäänsä mustien yhteisöjen juhlissa, vaikka yläluokka usein halveksuikin sitä.
+
+### 49.1
+KYSYMYS: Minä vuonna Mellifontin luostari perustettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mellifontin luostari (historia)
+Tietoruudun teksti: Mellifontin luostari Co. Louthissa oli Irlannin ensimmäinen sistersiläisluostari: Armaghin arkkipiispa pyhä Malakia perusti sen vuonna 1142 ranskalaisten munkkien avulla. Luostarin kahdeksankulmainen lavabo-rakennus, jossa munkit pesivät kätensä ennen aterioita, oli ainutlaatuinen rakennelma Irlannissa. Henrik VIII:n luostarien lakkautus päätti luostarin uskonnollisen käytön vuonna 1539, ja Edward Moore rakensi paikalle linnoitetun kartanon vuonna 1556 käyttäen vanhan luostarin kiviä rakennusaineena. Kartano toimi myöhemmin muun muassa Vilhelm Oranialaisen päämajana Boynen taistelun aikaan 1690, mutta lopulta koko paikka hylättiin kokonaan. Nykyään paikalla on nähtävissä keskiaikaisia raunioita, joista tunnetuin on juuri se ainutlaatuinen kahdeksankulmainen lavabo.
+
+### 49.2
+KYSYMYS: Mitä luostarin kivistä rakennettiin lakkauttamisen jälkeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mellifontin luostari (historia)
+Tietoruudun teksti: Mellifontin luostari Co. Louthissa oli Irlannin ensimmäinen sistersiläisluostari: Armaghin arkkipiispa pyhä Malakia perusti sen vuonna 1142 ranskalaisten munkkien avulla. Luostarin kahdeksankulmainen lavabo-rakennus, jossa munkit pesivät kätensä ennen aterioita, oli ainutlaatuinen rakennelma Irlannissa. Henrik VIII:n luostarien lakkautus päätti luostarin uskonnollisen käytön vuonna 1539, ja Edward Moore rakensi paikalle linnoitetun kartanon vuonna 1556 käyttäen vanhan luostarin kiviä rakennusaineena. Kartano toimi myöhemmin muun muassa Vilhelm Oranialaisen päämajana Boynen taistelun aikaan 1690, mutta lopulta koko paikka hylättiin kokonaan. Nykyään paikalla on nähtävissä keskiaikaisia raunioita, joista tunnetuin on juuri se ainutlaatuinen kahdeksankulmainen lavabo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kapkaupunki — kohdekartta / Kohdekartta: District Six -museo] 1994 District Six sai nimensä 1966, kun siitä tehtiin Kapkaupungin kuudes kunnallispiiri. Kaupunginosa oli alkanut kasvaa orjuuden lakkauttamisen jälkeen, ja siellä asui aikanaan lähes kymmenesosa koko kaupungin väestöstä: vapautuneiden orjien jälkeläisiä, käsityöläisiä, kauppiaita ja siirtolaisia. Alue julistettiin 11. helmikuuta 1966 valkoisten alueeksi, siirrot alkoivat 1968, ja yli kuusikymmentätuhatta asukasta siirrettiin pakolla Cape Flatsin lakeuksille. Talot purettiin, mutta suunniteltua uutta kaupunginosaa ei koskaan rakennettu. Alue nimettiin 1970 uudelleen Zonnebloemiksi, ja suuri osa siitä jäi tyhjäksi maaksi. Vanha nimi palautettiin virallisesti 17. joulukuuta 2019 sen jälkeen,…
+- [PRI — maalehti / Musiikki: Rumpu vastaa tanssijalle] 1600-luku — Bomba syntyi 1600-luvulla, kun orjuutetut länsiafrikkalaiset ja heidän jälkeläisensä loivat rannikkokaupungeissa, erityisesti Loízassa, oman musiikki- ja tanssiperinteensä sokeriplantaasien keskellä. Bombassa tanssija ei seuraa rumpalia vaan päinvastoin: tanssija haastaa subidor-rumpalin hameen heilautuksilla tai vartalon iskuilla, ja rumpalin on seurattava jokaista piquetea eli äkkinäistä liikettä täsmällisesti barril-rummullaan. Kutsu-ja-vastaus-laulu ja moniäänekäs rumpujen soitto periytyvät Länsi-Afrikan perinteistä. Orjuuden lakkauttamisen jälkeen 1873 bomba jatkoi elämäänsä mustien yhteisöjen juhlissa, vaikka yläluokka usein halveksuikin sitä.
+
+### 49.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+### 49.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+### 49.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+================ KOHTA 50 (nosto:maljat) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dublin
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaksi poikaa nosti perunapellosta Irlannin hienoimman maljan — sata vuotta myöhemmin toinen samanlainen löytö muutti koko maan lain
+Tietoruudun teksti: Syyskuun lopulla 1868 Jim Quin ja Paddy Flanagan kaivoivat perunapellossa Reerasta-nimisen rengaslinnakkeen lounaisreunalla, Ardaghin kylän vieressä Limerickin kreivikunnassa. Maasta tuli esiin kivilaatta ja sen alta malja, joka piti sisällään muut esineet: koruttomamman jalallisen kupin ja neljä solkea. Pelkkä laatta päällä tarkoittaa, että tavarat oli pantu maahan kiireessä ja luultavasti tilapäisesti — joku aikoi hakea ne takaisin eikä hakenut. Malja on koottu 354 erillisestä osasta, ja sen kupin ympäri kiertää kaiverrettuna apostolien nimet. Quinin äiti myi löydön Limerickin piispalle. Poikien tiet erosivat: Quin muutti Australiaan ja kuoli Melbournessa 1934, Flanagan jäi kotiin ja on haudattu Newcastle Westin vaivaishautausmaalle. Isoisäsi kävi Dublinissa viisi vuotta löydön jälkeen. Joku oli siis ehtinyt ensin.
+
+Toinen puolisko tapahtui 17. helmikuuta 1980. Michael Webb ja hänen s…
+Isoisän matkakirjamerkintä: Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiina — maalehti / Historia: Savisotilaat tehtiin osista] 210 eaa. — Kiinan ensimmäinen keisari Qin Shi Huang haudattiin vuosina 210–209 eaa., ja hänen hautansa lähelle upotettiin maahan savesta poltettu saattue. Kolmesta kuopasta on arvioitu löytyvän yli 8 000 hahmoa, 130 vaunua ja yli 600 hevosta. Hahmot valmistettiin osista kuin tehtaassa: vartalot muotista, kädet ja päät erikseen, ja vasta viimeistelyssä jokaiselle kasvolle tehtiin oma ilme. Paikallinen maanviljelijä osui kaivoa kaivaessaan ensimmäisiin palasiin vuonna 1974. Muutkin kuin sotilaat ovat päässeet esiin: virkamiehiä, akrobaatteja ja soittajia.
+
+### 50.1
+KYSYMYS: Mitä Ardaghin maljan sisältä löytyi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dublin
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaksi poikaa nosti perunapellosta Irlannin hienoimman maljan — sata vuotta myöhemmin toinen samanlainen löytö muutti koko maan lain
+Tietoruudun teksti: Syyskuun lopulla 1868 Jim Quin ja Paddy Flanagan kaivoivat perunapellossa Reerasta-nimisen rengaslinnakkeen lounaisreunalla, Ardaghin kylän vieressä Limerickin kreivikunnassa. Maasta tuli esiin kivilaatta ja sen alta malja, joka piti sisällään muut esineet: koruttomamman jalallisen kupin ja neljä solkea. Pelkkä laatta päällä tarkoittaa, että tavarat oli pantu maahan kiireessä ja luultavasti tilapäisesti — joku aikoi hakea ne takaisin eikä hakenut. Malja on koottu 354 erillisestä osasta, ja sen kupin ympäri kiertää kaiverrettuna apostolien nimet. Quinin äiti myi löydön Limerickin piispalle. Poikien tiet erosivat: Quin muutti Australiaan ja kuoli Melbournessa 1934, Flanagan jäi kotiin ja on haudattu Newcastle Westin vaivaishautausmaalle. Isoisäsi kävi Dublinissa viisi vuotta löydön jälkeen. Joku oli siis ehtinyt ensin.
+
+Toinen puolisko tapahtui 17. helmikuuta 1980. Michael Webb ja hänen s…
+Isoisän matkakirjamerkintä: Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.
+
+### 50.2
+KYSYMYS: Miksi Derrynaflanin löydöstä käräjöitiin seitsemän vuotta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dublin
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaksi poikaa nosti perunapellosta Irlannin hienoimman maljan — sata vuotta myöhemmin toinen samanlainen löytö muutti koko maan lain
+Tietoruudun teksti: Syyskuun lopulla 1868 Jim Quin ja Paddy Flanagan kaivoivat perunapellossa Reerasta-nimisen rengaslinnakkeen lounaisreunalla, Ardaghin kylän vieressä Limerickin kreivikunnassa. Maasta tuli esiin kivilaatta ja sen alta malja, joka piti sisällään muut esineet: koruttomamman jalallisen kupin ja neljä solkea. Pelkkä laatta päällä tarkoittaa, että tavarat oli pantu maahan kiireessä ja luultavasti tilapäisesti — joku aikoi hakea ne takaisin eikä hakenut. Malja on koottu 354 erillisestä osasta, ja sen kupin ympäri kiertää kaiverrettuna apostolien nimet. Quinin äiti myi löydön Limerickin piispalle. Poikien tiet erosivat: Quin muutti Australiaan ja kuoli Melbournessa 1934, Flanagan jäi kotiin ja on haudattu Newcastle Westin vaivaishautausmaalle. Isoisäsi kävi Dublinissa viisi vuotta löydön jälkeen. Joku oli siis ehtinyt ensin.
+
+Toinen puolisko tapahtui 17. helmikuuta 1980. Michael Webb ja hänen s…
+Isoisän matkakirjamerkintä: Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.
+
+### 50.3
+KYSYMYS: Kuka omistaa Irlannissa maasta löytyvän aarteen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dublin
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaksi poikaa nosti perunapellosta Irlannin hienoimman maljan — sata vuotta myöhemmin toinen samanlainen löytö muutti koko maan lain
+Tietoruudun teksti: Syyskuun lopulla 1868 Jim Quin ja Paddy Flanagan kaivoivat perunapellossa Reerasta-nimisen rengaslinnakkeen lounaisreunalla, Ardaghin kylän vieressä Limerickin kreivikunnassa. Maasta tuli esiin kivilaatta ja sen alta malja, joka piti sisällään muut esineet: koruttomamman jalallisen kupin ja neljä solkea. Pelkkä laatta päällä tarkoittaa, että tavarat oli pantu maahan kiireessä ja luultavasti tilapäisesti — joku aikoi hakea ne takaisin eikä hakenut. Malja on koottu 354 erillisestä osasta, ja sen kupin ympäri kiertää kaiverrettuna apostolien nimet. Quinin äiti myi löydön Limerickin piispalle. Poikien tiet erosivat: Quin muutti Australiaan ja kuoli Melbournessa 1934, Flanagan jäi kotiin ja on haudattu Newcastle Westin vaivaishautausmaalle. Isoisäsi kävi Dublinissa viisi vuotta löydön jälkeen. Joku oli siis ehtinyt ensin.
+
+Toinen puolisko tapahtui 17. helmikuuta 1980. Michael Webb ja hänen s…
+Isoisän matkakirjamerkintä: Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiina — maalehti / Historia: Savisotilaat tehtiin osista] 210 eaa. — Kiinan ensimmäinen keisari Qin Shi Huang haudattiin vuosina 210–209 eaa., ja hänen hautansa lähelle upotettiin maahan savesta poltettu saattue. Kolmesta kuopasta on arvioitu löytyvän yli 8 000 hahmoa, 130 vaunua ja yli 600 hevosta. Hahmot valmistettiin osista kuin tehtaassa: vartalot muotista, kädet ja päät erikseen, ja vasta viimeistelyssä jokaiselle kasvolle tehtiin oma ilme. Paikallinen maanviljelijä osui kaivoa kaivaessaan ensimmäisiin palasiin vuonna 1974. Muutkin kuin sotilaat ovat päässeet esiin: virkamiehiä, akrobaatteja ja soittajia.
+
+### 50.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 50 YHTEINEN KONTEKSTI
+
+### 50.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 50 YHTEINEN KONTEKSTI

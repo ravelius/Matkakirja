@@ -1,0 +1,212 @@
+================ KOHTA 16 (kohde:rock-of-dunamase) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rock of Dunamase (historia)
+Tietoruudun teksti: Rock of Dunamase on Laoisin kreivikunnassa Irlannissa oleva kalliokumpu, joka kohoaa noin 46 metriä ympäröivän tasangon yläpuolelle. Paikalla oli linnoitus 800-luvulla, ja kivilinna rakennettiin 1100-luvun jälkipuoliskolla. Myöhemmin linna siirtyi Marshalin suvulle. Vuonna 1650 linnan puolustusrakenteet tuhottiin. Nykyisin raunioinen linna on Irlannin kansallismonumentti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Australia — maalehti / Alkuperäiskansat: Punainen kallio saa toisen nimen] 1873 — Heinäkuun 19. päivänä 1873 maanmittaaja William Gosse näki tasangolta kohoavan hiekkakiviselänteen ja nimesi sen Ayers Rockiksi Etelä-Australian ylisihteerin Henry Ayersin mukaan. Alueen anangu-kansalle paikka oli jo silloin Uluru: sen ympärillä on lähteitä, vesikuoppia, luolia ja vanhoja kalliomaalauksia. Kallio kohoaa tasangolta 348 metriä, ja sen ympärysmitta on 9,4 kilometriä. Maanomistus palautettiin anangulle 26. lokakuuta 1985. Puiston hallitus päätti 2017 yksimielisesti kieltää kiipeämisen, ja kielto astui voimaan lokakuussa 2019 — kalliota katsotaan nyt vain sen juurelta.
+- [Edinburgh — kohdekartta / Kohdekartta: Edinburghin linna] 1130–1650 Edinburghin linna seisoo sammuneen tulivuoren kalliolla, joka syntyi noin 350 miljoonaa vuotta sitten. Linnan vanhin osa, Pyhän Margareetan kappeli, rakennettiin 1100-luvun alussa ja on koko Edinburghin vanhin säilynyt rakennus. Linnaa on piiritetty ainakin 26 kertaa yli 1100 vuoden aikana. Linnassa säilytetään Skotlannin kruununjalokivia. Ne olivat unohtuneet lukittuun huoneeseen, kunnes kirjailija Sir Walter Scott löysi ne uudelleen vuonna 1818. Pihalla lojuu myös jättiläismäinen Mons Meg -tykki, joka tuotiin Edinburghiin jo vuonna 1457. Joka päivä kello yksi linnasta ammutaan yhä tykinlaukaus — perinne, jonka avulla kaupunkilaiset pystyivät ennen tarkistamaan kellonsa. Nykyään …
+
+### 16.1
+KYSYMYS: Kuinka korkealle kallio kohoaa ympäristöään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rock of Dunamase (historia)
+Tietoruudun teksti: Rock of Dunamase on Laoisin kreivikunnassa Irlannissa oleva kalliokumpu, joka kohoaa noin 46 metriä ympäröivän tasangon yläpuolelle. Paikalla oli linnoitus 800-luvulla, ja kivilinna rakennettiin 1100-luvun jälkipuoliskolla. Myöhemmin linna siirtyi Marshalin suvulle. Vuonna 1650 linnan puolustusrakenteet tuhottiin. Nykyisin raunioinen linna on Irlannin kansallismonumentti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Australia — maalehti / Alkuperäiskansat: Punainen kallio saa toisen nimen] 1873 — Heinäkuun 19. päivänä 1873 maanmittaaja William Gosse näki tasangolta kohoavan hiekkakiviselänteen ja nimesi sen Ayers Rockiksi Etelä-Australian ylisihteerin Henry Ayersin mukaan. Alueen anangu-kansalle paikka oli jo silloin Uluru: sen ympärillä on lähteitä, vesikuoppia, luolia ja vanhoja kalliomaalauksia. Kallio kohoaa tasangolta 348 metriä, ja sen ympärysmitta on 9,4 kilometriä. Maanomistus palautettiin anangulle 26. lokakuuta 1985. Puiston hallitus päätti 2017 yksimielisesti kieltää kiipeämisen, ja kielto astui voimaan lokakuussa 2019 — kalliota katsotaan nyt vain sen juurelta.
+
+### 16.2
+KYSYMYS: Mitä linnalle tapahtui vuonna 1650?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rock of Dunamase (historia)
+Tietoruudun teksti: Rock of Dunamase on Laoisin kreivikunnassa Irlannissa oleva kalliokumpu, joka kohoaa noin 46 metriä ympäröivän tasangon yläpuolelle. Paikalla oli linnoitus 800-luvulla, ja kivilinna rakennettiin 1100-luvun jälkipuoliskolla. Myöhemmin linna siirtyi Marshalin suvulle. Vuonna 1650 linnan puolustusrakenteet tuhottiin. Nykyisin raunioinen linna on Irlannin kansallismonumentti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Edinburgh — kohdekartta / Kohdekartta: Edinburghin linna] 1130–1650 Edinburghin linna seisoo sammuneen tulivuoren kalliolla, joka syntyi noin 350 miljoonaa vuotta sitten. Linnan vanhin osa, Pyhän Margareetan kappeli, rakennettiin 1100-luvun alussa ja on koko Edinburghin vanhin säilynyt rakennus. Linnaa on piiritetty ainakin 26 kertaa yli 1100 vuoden aikana. Linnassa säilytetään Skotlannin kruununjalokivia. Ne olivat unohtuneet lukittuun huoneeseen, kunnes kirjailija Sir Walter Scott löysi ne uudelleen vuonna 1818. Pihalla lojuu myös jättiläismäinen Mons Meg -tykki, joka tuotiin Edinburghiin jo vuonna 1457. Joka päivä kello yksi linnasta ammutaan yhä tykinlaukaus — perinne, jonka avulla kaupunkilaiset pystyivät ennen tarkistamaan kellonsa. Nykyään …
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:hill-of-uisneach) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uisneachin kukkula (kulttuuri)
+Tietoruudun teksti: Uisneachin kukkula sijaitsee Westmeathin kreivikunnassa Irlannissa, ja sen huippu on 182 metriä merenpinnan yläpuolella. Perinteessä sitä kutsutaan saaren symboliseksi ja pyhäksi keskukseksi. Noin kahden neliökilometrin alueella on arviolta 40 muinaismuistoa, joista noin puolet näkyy maan päällä, ja ihmistoimintaa on ollut noin 5 000 vuotta. Tunnetuin kohde on kivimöhkäle Ail na Míreann, "jakojen kivi", jota pidetään maakuntien kohtaamispaikkana. Alue on kansallismonumentti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saudi-Arabia — maalehti / Vuoret: Harakka, jota ei ole muualla] Asirin vuoristossa elää harakka, jota ei tavata missään muualla maailmassa. Asirinharakka on eurooppalaista sukulaistaan tummempi: sen takaruumis on musta eikä valkoinen, nokka ja jalat ovat tanakammat, ja ääni on pitkä valittava kirkaisu. Se elää afrikanjuniperimetsissä yli kahdentuhannen metrin korkeudella, missä on varjoa ja kosteutta. Lintuja arvioidaan olevan jäljellä noin 270 aikuista, ja määrä laskee, koska juniperimetsä ei uudistu. Kesällä ruokana ovat toukat, muina aikoina siemenet ja katajanmarjat.
+
+### 17.1
+KYSYMYS: Kuinka monta muinaismuistoa alueella arvioidaan olevan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uisneachin kukkula (kulttuuri)
+Tietoruudun teksti: Uisneachin kukkula sijaitsee Westmeathin kreivikunnassa Irlannissa, ja sen huippu on 182 metriä merenpinnan yläpuolella. Perinteessä sitä kutsutaan saaren symboliseksi ja pyhäksi keskukseksi. Noin kahden neliökilometrin alueella on arviolta 40 muinaismuistoa, joista noin puolet näkyy maan päällä, ja ihmistoimintaa on ollut noin 5 000 vuotta. Tunnetuin kohde on kivimöhkäle Ail na Míreann, "jakojen kivi", jota pidetään maakuntien kohtaamispaikkana. Alue on kansallismonumentti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saudi-Arabia — maalehti / Vuoret: Harakka, jota ei ole muualla] Asirin vuoristossa elää harakka, jota ei tavata missään muualla maailmassa. Asirinharakka on eurooppalaista sukulaistaan tummempi: sen takaruumis on musta eikä valkoinen, nokka ja jalat ovat tanakammat, ja ääni on pitkä valittava kirkaisu. Se elää afrikanjuniperimetsissä yli kahdentuhannen metrin korkeudella, missä on varjoa ja kosteutta. Lintuja arvioidaan olevan jäljellä noin 270 aikuista, ja määrä laskee, koska juniperimetsä ei uudistu. Kesällä ruokana ovat toukat, muina aikoina siemenet ja katajanmarjat.
+
+### 17.2
+KYSYMYS: Mikä on Ail na Míreann?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uisneachin kukkula (kulttuuri)
+Tietoruudun teksti: Uisneachin kukkula sijaitsee Westmeathin kreivikunnassa Irlannissa, ja sen huippu on 182 metriä merenpinnan yläpuolella. Perinteessä sitä kutsutaan saaren symboliseksi ja pyhäksi keskukseksi. Noin kahden neliökilometrin alueella on arviolta 40 muinaismuistoa, joista noin puolet näkyy maan päällä, ja ihmistoimintaa on ollut noin 5 000 vuotta. Tunnetuin kohde on kivimöhkäle Ail na Míreann, "jakojen kivi", jota pidetään maakuntien kohtaamispaikkana. Alue on kansallismonumentti.
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:rathcroghan) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rathcroghan (historia)
+Tietoruudun teksti: Rathcroghan on Roscommonin kreivikunnassa Tulskin lähellä sijaitseva arkeologinen kokonaisuus, jossa on yli 240 muinaisjäännöstä noin kuuden neliökilometrin alueella. Paikan tunnistetaan olevan Cruachan, connachtien perinteinen pääkaupunki ja Irlannin kuninkaallinen keskus. Alueen kumpu on 89 metriä leveä ja 5,5 metriä korkea. Oweynagatin luolan ogham-kirjoituksessa mainitaan Fraech, kuningatar Medbin poika, ja Táin Bó Cúailnge -eepoksen kerrotaan alkavan ja päättyvän täällä. Alue on suurelta osin kaivamatta, ja Tulskissa on ollut vierailukeskus vuodesta 1999.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [BHR — maalehti / Muinaisuus: Kumpu palmujen keskellä] Bahrainin pääsaarella maa on täynnä matalia kumpuja. Ne ovat hautoja, ja niitä on säilynyt yli kymmenentuhatta; aikanaan niitä oli yli satatuhatta, ja korkeimmat arviot koko saaren historian ajalta nousevat satoihin tuhansiin. Vanhimmat on tehty pronssikaudella noin neljätuhatta vuotta sitten. Tavallinen hauta on metrin tai parin korkuinen ja alle kymmenen metriä leveä, ja sen sisällä on kivinen kammio. A'alin kylässä ovat suurimmat, niin sanotut kuninkaalliset kummut, jotka kohoavat talojen ja palmujen yli kuin pienet mäet. Haudoista on löytynyt ruukkuja, sinettejä, norsunluuta ja kuparia. Alue otettiin maailmanperintöluetteloon vuonna 2019.
+- [Mosul — kohdekartta / Kohdekartta: Kuyunjikin kumpu] pääkaupunki noin 700–612 eKr. Kuyunjik on Niniven kahdesta kummusta pohjoisempi, ja se on kaupungin akropoli. Kummun alla ovat Sanheribin ja hänen seuraajiensa palatsit: Asarhaddonin, Assurbanipalin, Assur-etel-ilanin, Sin-shumu-lisirin ja Sin-shar-ishkunin. Sanherib teki Ninivestä Assyrian pääkaupungin noin vuonna 700 eKr., ja rakennustyö oli mittava: kaupungista tuli suurempi kuin Babylon, Kalhu tai Assur, ja aikansa suurin koko maailmassa. Asukkaita oli yli satatuhatta, ehkä lähes sataviisikymmentätuhatta, eli noin kaksi kertaa niin paljon kuin Babylonissa. Nimi Kuyunjik on Layardin mukaan turkkia ja tarkoittaa lampaan deminutiivia; arabit tunsivat kummun myös nimellä Armousheeah. Kumpu …
+
+### 18.1
+KYSYMYS: Kuka kuningatar liitetään Rathcroghaniin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rathcroghan (historia)
+Tietoruudun teksti: Rathcroghan on Roscommonin kreivikunnassa Tulskin lähellä sijaitseva arkeologinen kokonaisuus, jossa on yli 240 muinaisjäännöstä noin kuuden neliökilometrin alueella. Paikan tunnistetaan olevan Cruachan, connachtien perinteinen pääkaupunki ja Irlannin kuninkaallinen keskus. Alueen kumpu on 89 metriä leveä ja 5,5 metriä korkea. Oweynagatin luolan ogham-kirjoituksessa mainitaan Fraech, kuningatar Medbin poika, ja Táin Bó Cúailnge -eepoksen kerrotaan alkavan ja päättyvän täällä. Alue on suurelta osin kaivamatta, ja Tulskissa on ollut vierailukeskus vuodesta 1999.
+
+### 18.2
+KYSYMYS: Kuinka leveä alueen kumpu on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rathcroghan (historia)
+Tietoruudun teksti: Rathcroghan on Roscommonin kreivikunnassa Tulskin lähellä sijaitseva arkeologinen kokonaisuus, jossa on yli 240 muinaisjäännöstä noin kuuden neliökilometrin alueella. Paikan tunnistetaan olevan Cruachan, connachtien perinteinen pääkaupunki ja Irlannin kuninkaallinen keskus. Alueen kumpu on 89 metriä leveä ja 5,5 metriä korkea. Oweynagatin luolan ogham-kirjoituksessa mainitaan Fraech, kuningatar Medbin poika, ja Táin Bó Cúailnge -eepoksen kerrotaan alkavan ja päättyvän täällä. Alue on suurelta osin kaivamatta, ja Tulskissa on ollut vierailukeskus vuodesta 1999.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [BHR — maalehti / Muinaisuus: Kumpu palmujen keskellä] Bahrainin pääsaarella maa on täynnä matalia kumpuja. Ne ovat hautoja, ja niitä on säilynyt yli kymmenentuhatta; aikanaan niitä oli yli satatuhatta, ja korkeimmat arviot koko saaren historian ajalta nousevat satoihin tuhansiin. Vanhimmat on tehty pronssikaudella noin neljätuhatta vuotta sitten. Tavallinen hauta on metrin tai parin korkuinen ja alle kymmenen metriä leveä, ja sen sisällä on kivinen kammio. A'alin kylässä ovat suurimmat, niin sanotut kuninkaalliset kummut, jotka kohoavat talojen ja palmujen yli kuin pienet mäet. Haudoista on löytynyt ruukkuja, sinettejä, norsunluuta ja kuparia. Alue otettiin maailmanperintöluetteloon vuonna 2019.
+- [Mosul — kohdekartta / Kohdekartta: Kuyunjikin kumpu] pääkaupunki noin 700–612 eKr. Kuyunjik on Niniven kahdesta kummusta pohjoisempi, ja se on kaupungin akropoli. Kummun alla ovat Sanheribin ja hänen seuraajiensa palatsit: Asarhaddonin, Assurbanipalin, Assur-etel-ilanin, Sin-shumu-lisirin ja Sin-shar-ishkunin. Sanherib teki Ninivestä Assyrian pääkaupungin noin vuonna 700 eKr., ja rakennustyö oli mittava: kaupungista tuli suurempi kuin Babylon, Kalhu tai Assur, ja aikansa suurin koko maailmassa. Asukkaita oli yli satatuhatta, ehkä lähes sataviisikymmentätuhatta, eli noin kaksi kertaa niin paljon kuin Babylonissa. Nimi Kuyunjik on Layardin mukaan turkkia ja tarkoittaa lampaan deminutiivia; arabit tunsivat kummun myös nimellä Armousheeah. Kumpu …
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:skerriesin-myllyt) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skerriesin myllyt (tekniikka)
+Tietoruudun teksti: Skerries Mills on myllykokonaisuus Skerriesin rannikkokaupungissa Irlannin Fingalin alueella, noin 30 kilometrin päässä Dublinista pohjoiseen. Kokonaisuus entisöitiin 1900-luvun lopulla alkaneessa hankkeessa: siihen kuuluu kaksi entisöityä ja toimivaa tuulimyllyä, vesimylly, museo ja kahvila. Tammikuun 2007 myrskyissä toisen tuulimyllyn siivet vaurioituivat, mutta ne korjattiin myöhemmin. Nykyisin paikka toimii paikallisena virkistys- ja matkailukohteena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Addis Abeba — kohdekartta / Kohdekartta: Taitu-hotelli] 1905 Etiopian vanhin hotelli seisoo Piazzassa. Sen perusti keisarinna Taytu Betul, Menelik II:n puoliso, jotta ulkomaisilla vierailla olisi paikka levätä ja ruokailla. Rakennusvuosi on 1905, mutta kaupungin oma artikkeli antaa vuoden 1898 Etiopian kalenterin mukaan ja aikajana merkitsee hotellin olleen toiminnassa 1907 — luvut sopivat yhteen, koska etiopialainen vuosiluku on noin seitsemän vuotta länsimaista jäljessä. Hotelli kuului palatsialueeseen, josta modernin kaupungin ydin kasvoi, ja se oli osa Menelikin uudistuksia Adwan taistelun jälkeen. Läntinen siipi rakennettiin 1902 muistoksi sopimuksesta, joka liitti Baro Salientin Etiopiaan. Talo oli diplomaattien, toimittajien ja matkailijo…
+
+### 19.1
+KYSYMYS: Mitä kaikkea Skerries Mills -kokonaisuuteen kuuluu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skerriesin myllyt (tekniikka)
+Tietoruudun teksti: Skerries Mills on myllykokonaisuus Skerriesin rannikkokaupungissa Irlannin Fingalin alueella, noin 30 kilometrin päässä Dublinista pohjoiseen. Kokonaisuus entisöitiin 1900-luvun lopulla alkaneessa hankkeessa: siihen kuuluu kaksi entisöityä ja toimivaa tuulimyllyä, vesimylly, museo ja kahvila. Tammikuun 2007 myrskyissä toisen tuulimyllyn siivet vaurioituivat, mutta ne korjattiin myöhemmin. Nykyisin paikka toimii paikallisena virkistys- ja matkailukohteena.
+
+### 19.2
+KYSYMYS: Mikä vaurioitti toisen tuulimyllyn siipiä tammikuussa 2007?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skerriesin myllyt (tekniikka)
+Tietoruudun teksti: Skerries Mills on myllykokonaisuus Skerriesin rannikkokaupungissa Irlannin Fingalin alueella, noin 30 kilometrin päässä Dublinista pohjoiseen. Kokonaisuus entisöitiin 1900-luvun lopulla alkaneessa hankkeessa: siihen kuuluu kaksi entisöityä ja toimivaa tuulimyllyä, vesimylly, museo ja kahvila. Tammikuun 2007 myrskyissä toisen tuulimyllyn siivet vaurioituivat, mutta ne korjattiin myöhemmin. Nykyisin paikka toimii paikallisena virkistys- ja matkailukohteena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Addis Abeba — kohdekartta / Kohdekartta: Taitu-hotelli] 1905 Etiopian vanhin hotelli seisoo Piazzassa. Sen perusti keisarinna Taytu Betul, Menelik II:n puoliso, jotta ulkomaisilla vierailla olisi paikka levätä ja ruokailla. Rakennusvuosi on 1905, mutta kaupungin oma artikkeli antaa vuoden 1898 Etiopian kalenterin mukaan ja aikajana merkitsee hotellin olleen toiminnassa 1907 — luvut sopivat yhteen, koska etiopialainen vuosiluku on noin seitsemän vuotta länsimaista jäljessä. Hotelli kuului palatsialueeseen, josta modernin kaupungin ydin kasvoi, ja se oli osa Menelikin uudistuksia Adwan taistelun jälkeen. Läntinen siipi rakennettiin 1902 muistoksi sopimuksesta, joka liitti Baro Salientin Etiopiaan. Talo oli diplomaattien, toimittajien ja matkailijo…
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:glencarin-vesiputous) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glencarin vesiputous (luonto · joki)
+Tietoruudun teksti: Glencarin vesiputous sijaitsee Leitrimin kreivikunnassa Glencar Loughin pohjarannan lähellä, noin 11 kilometrin päässä Manorhamiltonista. Vesiputous on yksi järven pääasiallisista vesilähteistä, toinen on Diffreen-joki, joka laskee järveen sen itäpäässä. Järvi on 2,5 kilometriä pitkä, 0,6 kilometriä leveä ja pinta-alaltaan 1,15 neliökilometriä. Vesiputous tunnetaan W. B. Yeatsin runosta The Stolen Child, jonka hän kirjoitti vuonna 1886 ja joka julkaistiin vuonna 1889 kokoelmassa The Wanderings of Oisin and Other Poems.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Winnipeg — kohdekartta / Kohdekartta: Saint-Bonifacen katedraali] 1818–1972 Punaisenjoen itärannalla on ollut kirkko vuodesta 1818, jolloin vastasaapunut pastori Norbert Provencher rakensi kahden työtoverin kanssa hirsitalon Selkirkin jaarlin lahjoittamalle maalle. Rakennus oli viisikymmentä jalkaa pitkä ja kolmekymmentä leveä, ja se oli yhtä aikaa kappeli, asunto ja koulu. Piispaksi noussut Provencher rakensi ensimmäisen varsinaisen katedraalin 1832. Kirkon kellot pääsivät runoon: yhdysvaltalainen John Greenleaf Whittier kirjoitti niistä 1859 runossaan The Red River Voyageur, ja 17. joulukuuta 1891, runoilijan 84-vuotispäivänä, arkkipiispa Taché soitatti niitä hänen kunniakseen. Provencherin katedraali oli silloin jo palanut — se tuhoutui 14. joulukuuta …
+- [Fidži — maalehti / Perinteet: Tanssi, jonka sanat opitaan unessa] 1896 — Meke on fidžiläisen tanssin yleisnimi, ja sana on sukua tongan sanalle me’e ja samoan sanalle mē. Perinteisesti meken tanssivat joko pelkät miehet tai pelkät naiset, mutta naapurisaarten vaikutus näkyy: tongalaisesta ma’ulu’ulusta tuli fidžiläinen vakamalolo, jota tanssivat molemmat. Friedrich Ratzel kirjoitti 1896, että meke on yhtä aikaa laulu ja tanssi ja että sen keksijöitä on vain harvoja — ja että nämä kertovat oppineensa sekä sävelen että liikkeet henkimaailmassa. Runossa jokainen säe päättyy samaan vokaaliin.
+
+### 20.1
+KYSYMYS: Minkä runoilijan runossa vesiputous mainitaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glencarin vesiputous (luonto · joki)
+Tietoruudun teksti: Glencarin vesiputous sijaitsee Leitrimin kreivikunnassa Glencar Loughin pohjarannan lähellä, noin 11 kilometrin päässä Manorhamiltonista. Vesiputous on yksi järven pääasiallisista vesilähteistä, toinen on Diffreen-joki, joka laskee järveen sen itäpäässä. Järvi on 2,5 kilometriä pitkä, 0,6 kilometriä leveä ja pinta-alaltaan 1,15 neliökilometriä. Vesiputous tunnetaan W. B. Yeatsin runosta The Stolen Child, jonka hän kirjoitti vuonna 1886 ja joka julkaistiin vuonna 1889 kokoelmassa The Wanderings of Oisin and Other Poems.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Winnipeg — kohdekartta / Kohdekartta: Saint-Bonifacen katedraali] 1818–1972 Punaisenjoen itärannalla on ollut kirkko vuodesta 1818, jolloin vastasaapunut pastori Norbert Provencher rakensi kahden työtoverin kanssa hirsitalon Selkirkin jaarlin lahjoittamalle maalle. Rakennus oli viisikymmentä jalkaa pitkä ja kolmekymmentä leveä, ja se oli yhtä aikaa kappeli, asunto ja koulu. Piispaksi noussut Provencher rakensi ensimmäisen varsinaisen katedraalin 1832. Kirkon kellot pääsivät runoon: yhdysvaltalainen John Greenleaf Whittier kirjoitti niistä 1859 runossaan The Red River Voyageur, ja 17. joulukuuta 1891, runoilijan 84-vuotispäivänä, arkkipiispa Taché soitatti niitä hänen kunniakseen. Provencherin katedraali oli silloin jo palanut — se tuhoutui 14. joulukuuta …
+- [Fidži — maalehti / Perinteet: Tanssi, jonka sanat opitaan unessa] 1896 — Meke on fidžiläisen tanssin yleisnimi, ja sana on sukua tongan sanalle me’e ja samoan sanalle mē. Perinteisesti meken tanssivat joko pelkät miehet tai pelkät naiset, mutta naapurisaarten vaikutus näkyy: tongalaisesta ma’ulu’ulusta tuli fidžiläinen vakamalolo, jota tanssivat molemmat. Friedrich Ratzel kirjoitti 1896, että meke on yhtä aikaa laulu ja tanssi ja että sen keksijöitä on vain harvoja — ja että nämä kertovat oppineensa sekä sävelen että liikkeet henkimaailmassa. Runossa jokainen säe päättyy samaan vokaaliin.
+
+### 20.2
+KYSYMYS: Mikä joki laskee Glencar Loughiin sen itäpäässä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glencarin vesiputous (luonto · joki)
+Tietoruudun teksti: Glencarin vesiputous sijaitsee Leitrimin kreivikunnassa Glencar Loughin pohjarannan lähellä, noin 11 kilometrin päässä Manorhamiltonista. Vesiputous on yksi järven pääasiallisista vesilähteistä, toinen on Diffreen-joki, joka laskee järveen sen itäpäässä. Järvi on 2,5 kilometriä pitkä, 0,6 kilometriä leveä ja pinta-alaltaan 1,15 neliökilometriä. Vesiputous tunnetaan W. B. Yeatsin runosta The Stolen Child, jonka hän kirjoitti vuonna 1886 ja joka julkaistiin vuonna 1889 kokoelmassa The Wanderings of Oisin and Other Poems.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

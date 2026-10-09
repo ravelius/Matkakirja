@@ -1,0 +1,230 @@
+================ KOHTA 1 (kohde:carrauntoohil) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carrauntoohil (luonto · vuori)
+Tietoruudun teksti: Carrauntoohil on Irlannin korkein vuori, 1 038,6 metriä. Se on Iveraghin niemimaalla Kerryn kreivikunnassa lähellä maan korkeimman vuorijonon MacGillycuddy's Reeksin keskustaa. Vuori on pääosin hiekkakiveä, jonka jäätiköityminen on veistänyt jyrkiksi rotkoiksi ja teräviksi harjanteiksi itä- ja koillisseinämiin. Irlanninkielinen nimi Corrán Tuathail tarkoittaa Tuathalin sirppiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yhdysvallat — maalehti / Lento: Kill Devil Hills 1903 — kaksitoista sekuntia ilmassa] 17.12.1903 — Orville makaa vatsallaan Flyerin ohjaimissa, lantiollaan kehto, joka kiertää siipien kärkiä. Wilbur juoksee siiven rinnalla niin pitkään kuin pystyy. Kahdentoista sekunnin kuluttua kone osuu hiekkaan 36 metrin päässä lähtökohdasta — ja siinä on kaikki, mitä maailman ensimmäiseltä moottorilennolta jää nähtäväksi. Kill Devil Hillsin pelastusasemalla työskentelevä John T. Daniels ei ole koskaan ennen ottanut valokuvaa. Hän puristaa kameran laukaisupalloa juuri oikealla hetkellä, ja hänen levylleen jää kuva, joka on nyt jokaisessa oppikirjassa. Aamu on kylmä ja tuuli kova, ja koneen on rakentanut kaksi polkupyöräkauppiasta Daytonista: siivet ovat kangasta ja kuusipuuta, moottori he…
+
+### 1.1
+KYSYMYS: Mitä nimi Corrán Tuathail tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carrauntoohil (luonto · vuori)
+Tietoruudun teksti: Carrauntoohil on Irlannin korkein vuori, 1 038,6 metriä. Se on Iveraghin niemimaalla Kerryn kreivikunnassa lähellä maan korkeimman vuorijonon MacGillycuddy's Reeksin keskustaa. Vuori on pääosin hiekkakiveä, jonka jäätiköityminen on veistänyt jyrkiksi rotkoiksi ja teräviksi harjanteiksi itä- ja koillisseinämiin. Irlanninkielinen nimi Corrán Tuathail tarkoittaa Tuathalin sirppiä.
+
+### 1.2
+KYSYMYS: Mikä on Devil's Ladder?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carrauntoohil (luonto · vuori)
+Tietoruudun teksti: Carrauntoohil on Irlannin korkein vuori, 1 038,6 metriä. Se on Iveraghin niemimaalla Kerryn kreivikunnassa lähellä maan korkeimman vuorijonon MacGillycuddy's Reeksin keskustaa. Vuori on pääosin hiekkakiveä, jonka jäätiköityminen on veistänyt jyrkiksi rotkoiksi ja teräviksi harjanteiksi itä- ja koillisseinämiin. Irlanninkielinen nimi Corrán Tuathail tarkoittaa Tuathalin sirppiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yhdysvallat — maalehti / Lento: Kill Devil Hills 1903 — kaksitoista sekuntia ilmassa] 17.12.1903 — Orville makaa vatsallaan Flyerin ohjaimissa, lantiollaan kehto, joka kiertää siipien kärkiä. Wilbur juoksee siiven rinnalla niin pitkään kuin pystyy. Kahdentoista sekunnin kuluttua kone osuu hiekkaan 36 metrin päässä lähtökohdasta — ja siinä on kaikki, mitä maailman ensimmäiseltä moottorilennolta jää nähtäväksi. Kill Devil Hillsin pelastusasemalla työskentelevä John T. Daniels ei ole koskaan ennen ottanut valokuvaa. Hän puristaa kameran laukaisupalloa juuri oikealla hetkellä, ja hänen levylleen jää kuva, joka on nyt jokaisessa oppikirjassa. Aamu on kylmä ja tuuli kova, ja koneen on rakentanut kaksi polkupyöräkauppiasta Daytonista: siivet ovat kangasta ja kuusipuuta, moottori he…
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:irlanninmeri~2) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Irlanninmeri (meri)
+Tietoruudun teksti: Irlanninmeri on 46 007 neliökilometrin vesialue, joka erottaa Irlannin saaren Isosta-Britanniasta. Etelässä se yhtyy Kelttienmereen Yrjönkanaalin kautta ja pohjoisessa Skotlannin länsipuolisiin sisämeriin Pohjoiskanaalin kautta. Sen suurin saari on Anglesey Pohjois-Walesissa ja toiseksi suurin Mansaari.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kaupunkilehti / Chennai: Linnoitus, joka valmistui Pyhän Yrjön päivänä] Elokuussa 1639 kauppias Francis Day tapasi Chandragirissä Vijayanagaran keisarin Peda Venkata Rayan ja pyysi kaistaletta Koromandelin rannikkoa kauppahuonetta ja varastoa varten. Lupa annettiin 22. elokuuta, ja paikalla oli tuolloin kalastajakylä nimeltä Madraspatnam. Englannin Itä-Intian kauppakomppania rakensi rantaan linnoituksen, joka valmistui 23. huhtikuuta 1644 eli Pyhän Yrjön päivänä noin kolmentuhannen punnan kustannuksin. Muurien sisään jäi White Town, ulkopuolelle kasvoi George Town, ja näistä kahdesta tuli Madras. Muurien sisällä on myös St. Mary’s, Intian vanhin anglikaaninen kirkko, rakennettu 1678–1680.
+- [Addis Abeba — kaupunkilehti / Kahvin pääkaupunki: Merkato, Afrikan suurin tori] Merkato on Afrikan suurin ulkoilmatori: se peittää useita neliökilometrejä ja työllistää arviolta 13 000 ihmistä 7 100 yrityksessä. Sen läpi kulkeva päätavara on paikallisesti kasvatettu kahvi. Tori syntyi miehityksen aikana: vanha kauppapaikka oli Pyhän Yrjön kirkon luona, ja miehityshallinto siirsi sen länteen ja nimesi uuden torin italian sanalla markkinat. Tori kasvoi ilman kaavaa ja jakautui tavaralajien mukaan osastoihin, joita kutsutaan nimellä terra: yhdessä myydään huonekaluja, toisessa kodinkoneita, kolmannessa kierrätettyä romumetallia.
+
+### 2.1
+KYSYMYS: Mikä Yrjönkanaali on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Irlanninmeri (meri)
+Tietoruudun teksti: Irlanninmeri on 46 007 neliökilometrin vesialue, joka erottaa Irlannin saaren Isosta-Britanniasta. Etelässä se yhtyy Kelttienmereen Yrjönkanaalin kautta ja pohjoisessa Skotlannin länsipuolisiin sisämeriin Pohjoiskanaalin kautta. Sen suurin saari on Anglesey Pohjois-Walesissa ja toiseksi suurin Mansaari.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kaupunkilehti / Chennai: Linnoitus, joka valmistui Pyhän Yrjön päivänä] Elokuussa 1639 kauppias Francis Day tapasi Chandragirissä Vijayanagaran keisarin Peda Venkata Rayan ja pyysi kaistaletta Koromandelin rannikkoa kauppahuonetta ja varastoa varten. Lupa annettiin 22. elokuuta, ja paikalla oli tuolloin kalastajakylä nimeltä Madraspatnam. Englannin Itä-Intian kauppakomppania rakensi rantaan linnoituksen, joka valmistui 23. huhtikuuta 1644 eli Pyhän Yrjön päivänä noin kolmentuhannen punnan kustannuksin. Muurien sisään jäi White Town, ulkopuolelle kasvoi George Town, ja näistä kahdesta tuli Madras. Muurien sisällä on myös St. Mary’s, Intian vanhin anglikaaninen kirkko, rakennettu 1678–1680.
+- [Addis Abeba — kaupunkilehti / Kahvin pääkaupunki: Merkato, Afrikan suurin tori] Merkato on Afrikan suurin ulkoilmatori: se peittää useita neliökilometrejä ja työllistää arviolta 13 000 ihmistä 7 100 yrityksessä. Sen läpi kulkeva päätavara on paikallisesti kasvatettu kahvi. Tori syntyi miehityksen aikana: vanha kauppapaikka oli Pyhän Yrjön kirkon luona, ja miehityshallinto siirsi sen länteen ja nimesi uuden torin italian sanalla markkinat. Tori kasvoi ilman kaavaa ja jakautui tavaralajien mukaan osastoihin, joita kutsutaan nimellä terra: yhdessä myydään huonekaluja, toisessa kodinkoneita, kolmannessa kierrätettyä romumetallia.
+
+### 2.2
+KYSYMYS: Miksi Mansaari on oma alueensa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Irlanninmeri (meri)
+Tietoruudun teksti: Irlanninmeri on 46 007 neliökilometrin vesialue, joka erottaa Irlannin saaren Isosta-Britanniasta. Etelässä se yhtyy Kelttienmereen Yrjönkanaalin kautta ja pohjoisessa Skotlannin länsipuolisiin sisämeriin Pohjoiskanaalin kautta. Sen suurin saari on Anglesey Pohjois-Walesissa ja toiseksi suurin Mansaari.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:shannon) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shannon (luonto · joki)
+Tietoruudun teksti: Kukaan ei tiedä varmasti, kuinka pitkä Irlannin pisin joki on. Perinteinen luku on 390 kilometriä, virallinen irlantilainen lähde sanoo 360,5, oppaat 344 ja osa tutkijoista 280 — ja moni kieltäytyy antamasta lukua lainkaan. Syy on yksinkertainen: suistoon laskevalla joella ei ole selvää loppua. Alku sen sijaan tunnetaan tarkasti. Shannon Pot on pieni lampi Cuilcagh-vuoren rinteellä Cavanin kreivikunnassa, ja siitä joki lähtee taimenpuron kokoisena — mutta mittaukset ovat osoittaneet, että sen vesi tulee nielukuiluista kilometrien päästä, osa jopa Pohjois-Irlannin puolelta. Shannon jakaa saaren idän ja lännen: Dowran ja Limerickin välillä sen yli pääsee alle kolmestakymmenestäviidestä kohdasta.
+
+### 3.1
+KYSYMYS: Miksi Shannonin pituudesta ei päästä yksimielisyyteen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shannon (luonto · joki)
+Tietoruudun teksti: Kukaan ei tiedä varmasti, kuinka pitkä Irlannin pisin joki on. Perinteinen luku on 390 kilometriä, virallinen irlantilainen lähde sanoo 360,5, oppaat 344 ja osa tutkijoista 280 — ja moni kieltäytyy antamasta lukua lainkaan. Syy on yksinkertainen: suistoon laskevalla joella ei ole selvää loppua. Alku sen sijaan tunnetaan tarkasti. Shannon Pot on pieni lampi Cuilcagh-vuoren rinteellä Cavanin kreivikunnassa, ja siitä joki lähtee taimenpuron kokoisena — mutta mittaukset ovat osoittaneet, että sen vesi tulee nielukuiluista kilometrien päästä, osa jopa Pohjois-Irlannin puolelta. Shannon jakaa saaren idän ja lännen: Dowran ja Limerickin välillä sen yli pääsee alle kolmestakymmenestäviidestä kohdasta.
+
+### 3.2
+KYSYMYS: Mikä on Shannon Pot?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shannon (luonto · joki)
+Tietoruudun teksti: Kukaan ei tiedä varmasti, kuinka pitkä Irlannin pisin joki on. Perinteinen luku on 390 kilometriä, virallinen irlantilainen lähde sanoo 360,5, oppaat 344 ja osa tutkijoista 280 — ja moni kieltäytyy antamasta lukua lainkaan. Syy on yksinkertainen: suistoon laskevalla joella ei ole selvää loppua. Alku sen sijaan tunnetaan tarkasti. Shannon Pot on pieni lampi Cuilcagh-vuoren rinteellä Cavanin kreivikunnassa, ja siitä joki lähtee taimenpuron kokoisena — mutta mittaukset ovat osoittaneet, että sen vesi tulee nielukuiluista kilometrien päästä, osa jopa Pohjois-Irlannin puolelta. Shannon jakaa saaren idän ja lännen: Dowran ja Limerickin välillä sen yli pääsee alle kolmestakymmenestäviidestä kohdasta.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:newgrange) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Newgrange (historia)
+Tietoruudun teksti: Newgrange on esihistoriallinen monumentti Meathin kreivikunnassa kummulla, josta on näkymä Boyne-joelle, kahdeksan kilometriä Droghedasta länteen. Se on poikkeuksellisen suuri käytävähauta neoliittiselta kaudelta noin 3100 eaa. — vanhempi kuin Stonehenge ja Egyptin pyramidit.
+
+Newgrange on Brú na Bóinnen kokonaisuuden päämonumentti. Samaan maailmanperintökohteeseen kuuluvat myös Knowthin ja Dowthin käytävähaudat sekä muita hautakumpuja ja pystykiviä.
+
+Rakennelma on suuri pyöreä kumpu, jonka sisällä on kivikäytävä ja ristinmuotoinen kammio. Kammiosta on löytynyt sekä poltettuja että polttamattomia ihmisen luita ja mahdollisia hauta- tai uhrilahjoja. Julkisivu on tehty enimmäkseen valkoisista kvartsimukulakivistä, ja monet suurista kivistä on peitetty megaliittitaiteella.
+
+Tarkoituksesta ei ole yksimielisyyttä, mutta hauta on suunnattu tarkasti: talvipäivänseisauksena nouseva aurinko pais…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Hobart — kaupunkilehti / Nykytaide: Valonsäde talvipäivänseisauksena] MONAn omistaja David Walsh, ohjaaja Leigh Carmichael ja muusikko Brian Ritchie käynnistivät 2013 talvifestivaalin, jonka piti alun perin vain houkutella museoon kävijöitä hiljaisimpaan aikaan. Dark Mofon tapahtumat ovat öisiä ja johtavat eteläisen talvipäivänseisaukseen kesäkuussa. Ensimmäisenä vuonna Ryoji Ikeda pystytti kaupungin ylle viisitoista kilometriä korkean valopatsaan nimeltä spectra. Ohjelmaan kuuluu Winter Feast -ruokajuhla, ja Salamanca Placen puut koristellaan punaisilla valoilla. Vuonna 2023 kävijöitä laskettiin 427 000.
+
+### 4.1
+KYSYMYS: Mitä talvipäivänseisauksena tapahtuu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Newgrange (historia)
+Tietoruudun teksti: Newgrange on esihistoriallinen monumentti Meathin kreivikunnassa kummulla, josta on näkymä Boyne-joelle, kahdeksan kilometriä Droghedasta länteen. Se on poikkeuksellisen suuri käytävähauta neoliittiselta kaudelta noin 3100 eaa. — vanhempi kuin Stonehenge ja Egyptin pyramidit.
+
+Newgrange on Brú na Bóinnen kokonaisuuden päämonumentti. Samaan maailmanperintökohteeseen kuuluvat myös Knowthin ja Dowthin käytävähaudat sekä muita hautakumpuja ja pystykiviä.
+
+Rakennelma on suuri pyöreä kumpu, jonka sisällä on kivikäytävä ja ristinmuotoinen kammio. Kammiosta on löytynyt sekä poltettuja että polttamattomia ihmisen luita ja mahdollisia hauta- tai uhrilahjoja. Julkisivu on tehty enimmäkseen valkoisista kvartsimukulakivistä, ja monet suurista kivistä on peitetty megaliittitaiteella.
+
+Tarkoituksesta ei ole yksimielisyyttä, mutta hauta on suunnattu tarkasti: talvipäivänseisauksena nouseva aurinko pais…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Hobart — kaupunkilehti / Nykytaide: Valonsäde talvipäivänseisauksena] MONAn omistaja David Walsh, ohjaaja Leigh Carmichael ja muusikko Brian Ritchie käynnistivät 2013 talvifestivaalin, jonka piti alun perin vain houkutella museoon kävijöitä hiljaisimpaan aikaan. Dark Mofon tapahtumat ovat öisiä ja johtavat eteläisen talvipäivänseisaukseen kesäkuussa. Ensimmäisenä vuonna Ryoji Ikeda pystytti kaupungin ylle viisitoista kilometriä korkean valopatsaan nimeltä spectra. Ohjelmaan kuuluu Winter Feast -ruokajuhla, ja Salamanca Placen puut koristellaan punaisilla valoilla. Vuonna 2023 kävijöitä laskettiin 427 000.
+
+### 4.2
+KYSYMYS: Kumpi on vanhempi, Newgrange vai Stonehenge?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Newgrange (historia)
+Tietoruudun teksti: Newgrange on esihistoriallinen monumentti Meathin kreivikunnassa kummulla, josta on näkymä Boyne-joelle, kahdeksan kilometriä Droghedasta länteen. Se on poikkeuksellisen suuri käytävähauta neoliittiselta kaudelta noin 3100 eaa. — vanhempi kuin Stonehenge ja Egyptin pyramidit.
+
+Newgrange on Brú na Bóinnen kokonaisuuden päämonumentti. Samaan maailmanperintökohteeseen kuuluvat myös Knowthin ja Dowthin käytävähaudat sekä muita hautakumpuja ja pystykiviä.
+
+Rakennelma on suuri pyöreä kumpu, jonka sisällä on kivikäytävä ja ristinmuotoinen kammio. Kammiosta on löytynyt sekä poltettuja että polttamattomia ihmisen luita ja mahdollisia hauta- tai uhrilahjoja. Julkisivu on tehty enimmäkseen valkoisista kvartsimukulakivistä, ja monet suurista kivistä on peitetty megaliittitaiteella.
+
+Tarkoituksesta ei ole yksimielisyyttä, mutta hauta on suunnattu tarkasti: talvipäivänseisauksena nouseva aurinko pais…
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:taran-kukkula) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarán kukkula (sana)
+Tietoruudun teksti: Tarán kukkula on muinainen seremonia- ja hautapaikka Skrynen lähellä Meathin kreivikunnassa. Perimätieto pitää kukkulaa Irlannin ylikuninkaiden virkaanasettamispaikkana ja istuimena, ja se esiintyy myös irlantilaisessa mytologiassa.
+
+Nimi Tara on englanninnos iirin sanasta Teamhair; muinaisiiriksi Temair. Sen uskotaan tulevan kantakelttiläisestä sanasta, joka tarkoittaa pyhäkköä tai seremoniaa varten erotettua pyhää tilaa — samaa juurta ovat kreikan temenos ja latinan templum. Toisen tulkinnan mukaan se tarkoittaa korkeaa paikkaa, jolta on näköala.
+
+Näkyvissä on kahdenkymmenen muinaisjäännöksen jäänteet, ja geofysikaaliset mittaukset ja ilmakuvat ovat paljastaneet ainakin kolme kertaa niin monta. Kukkulalla on käytävähauta, hautakumpuja, pyöreitä aitauksia, seremonia-avenue ja pystykivi, jota pidetään Lia Fáilina eli kohtalon kivenä. Kukkulalla on myös kirkko ja hautausmaa.
+
+Vanhin näky…
+
+### 5.1
+KYSYMYS: Mitä nimi Temair tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarán kukkula (sana)
+Tietoruudun teksti: Tarán kukkula on muinainen seremonia- ja hautapaikka Skrynen lähellä Meathin kreivikunnassa. Perimätieto pitää kukkulaa Irlannin ylikuninkaiden virkaanasettamispaikkana ja istuimena, ja se esiintyy myös irlantilaisessa mytologiassa.
+
+Nimi Tara on englanninnos iirin sanasta Teamhair; muinaisiiriksi Temair. Sen uskotaan tulevan kantakelttiläisestä sanasta, joka tarkoittaa pyhäkköä tai seremoniaa varten erotettua pyhää tilaa — samaa juurta ovat kreikan temenos ja latinan templum. Toisen tulkinnan mukaan se tarkoittaa korkeaa paikkaa, jolta on näköala.
+
+Näkyvissä on kahdenkymmenen muinaisjäännöksen jäänteet, ja geofysikaaliset mittaukset ja ilmakuvat ovat paljastaneet ainakin kolme kertaa niin monta. Kukkulalla on käytävähauta, hautakumpuja, pyöreitä aitauksia, seremonia-avenue ja pystykivi, jota pidetään Lia Fáilina eli kohtalon kivenä. Kukkulalla on myös kirkko ja hautausmaa.
+
+Vanhin näky…
+
+### 5.2
+KYSYMYS: Mikä Lia Fáil on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarán kukkula (sana)
+Tietoruudun teksti: Tarán kukkula on muinainen seremonia- ja hautapaikka Skrynen lähellä Meathin kreivikunnassa. Perimätieto pitää kukkulaa Irlannin ylikuninkaiden virkaanasettamispaikkana ja istuimena, ja se esiintyy myös irlantilaisessa mytologiassa.
+
+Nimi Tara on englanninnos iirin sanasta Teamhair; muinaisiiriksi Temair. Sen uskotaan tulevan kantakelttiläisestä sanasta, joka tarkoittaa pyhäkköä tai seremoniaa varten erotettua pyhää tilaa — samaa juurta ovat kreikan temenos ja latinan templum. Toisen tulkinnan mukaan se tarkoittaa korkeaa paikkaa, jolta on näköala.
+
+Näkyvissä on kahdenkymmenen muinaisjäännöksen jäänteet, ja geofysikaaliset mittaukset ja ilmakuvat ovat paljastaneet ainakin kolme kertaa niin monta. Kukkulalla on käytävähauta, hautakumpuja, pyöreitä aitauksia, seremonia-avenue ja pystykivi, jota pidetään Lia Fáilina eli kohtalon kivenä. Kukkulalla on myös kirkko ja hautausmaa.
+
+Vanhin näky…
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

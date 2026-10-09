@@ -1,0 +1,137 @@
+================ KOHTA 51 (nosto:newgrange) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dublin
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kumpu kaivettiin auki rakennuskiven takia — ja sisällä oli huone, johon aurinko osuu kerran vuodessa
+Tietoruudun teksti: Vuonna 1699 Boynen laaksossa seisoi multakumpu, jota kukaan ei pitänyt minään. Paikallinen maanomistaja Charles Campbell käski työmiestensä kaivaa siitä rakennuskiveä. Kivien sijasta aukeni sisäänkäynti ja sen takaa yli kahdeksantoista metriä pitkä käytävä kammioon, joka oli ollut suljettuna noin 3200 eaa. asti — vanhempi kuin Egyptin pyramidit ja Stonehenge. Kunnioitus tuli hitaasti: 1800-luvun alussa kummun taakse rakennettiin huvimaja kivistä, jotka oli otettu Newgrangesta itsestään.
+
+Annie ja Bob Hickey hoitivat kohdetta vartijoina ja oppaina noin vuodesta 1890 alkaen kuudenkymmenen vuoden ajan. He kertoivat kävijöille, että talvipäivänseisauksen aikaan sisälle tulee valojuova, joka osuu tiettyyn kiveen. Arkeologi Michael J. O’Kelly kaivoi paikkaa vuosina 1962–1975, ja 21. joulukuuta 1967 hän seisoi itse kammiossa ja näki sen: valo tulee sisään sisäänkäynnin yläpuolisesta kattolaati…
+Isoisän matkakirjamerkintä: Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Historia: Aurinko käy sisällä kerran vuodessa] 3200 eaa — Boynen laaksossa on ruohon peittämä kumpu, jonka sisään johtaa yli 18 metriä pitkä käytävä. Se rakennettiin noin 3200 vuotta ennen ajanlaskun alkua, eli se on vanhempi kuin Egyptin pyramidit ja Stonehenge. Sisäänkäynnin yläpuolella on aukko, jota kutsutaan kattolaatikoksi. Talvipäivänseisauksen aamuna nouseva aurinko osuu juuri siihen, ja valo kulkee käytävää pitkin kammioon noin seitsemäntoista minuuttia. Muina päivinä kammio on pimeä. Katsojat arvotaan sisään, koska tilaa on vain parillekymmenelle.
+- [Sri Lanka — maalehti / Urheilu: Bambumaila ja neljä pysäkkiä] Elle on kylien maila- ja pallopeli, joka muistuttaa softballia mutta on saaren omaa perua. Maila on kuivattua bambua, pallo nykyään tennispallo — ennen se oli wel kaduru -puun kuivattu hedelmä. Joukkueessa on kahdestatoista kuuteentoista pelaajaa, lyöjällä on kolme yritystä osua alakautta heitettyyn palloon, ja radalla on neljä pysäkkiä noin 55 metrin välein. Juoksija palaa poltetuksi, jos pallo napataan ilmasta tai jos häneen osutaan heitolla kesken juoksun. Peliä pelataan riisinkorjuun jälkeen ja uutenavuotena, eikä se vaadi muuta kuin kentän ja mailan.
+
+### 51.1
+KYSYMYS: Mitä Newgrangen sisältä on löydetty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dublin
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kumpu kaivettiin auki rakennuskiven takia — ja sisällä oli huone, johon aurinko osuu kerran vuodessa
+Tietoruudun teksti: Vuonna 1699 Boynen laaksossa seisoi multakumpu, jota kukaan ei pitänyt minään. Paikallinen maanomistaja Charles Campbell käski työmiestensä kaivaa siitä rakennuskiveä. Kivien sijasta aukeni sisäänkäynti ja sen takaa yli kahdeksantoista metriä pitkä käytävä kammioon, joka oli ollut suljettuna noin 3200 eaa. asti — vanhempi kuin Egyptin pyramidit ja Stonehenge. Kunnioitus tuli hitaasti: 1800-luvun alussa kummun taakse rakennettiin huvimaja kivistä, jotka oli otettu Newgrangesta itsestään.
+
+Annie ja Bob Hickey hoitivat kohdetta vartijoina ja oppaina noin vuodesta 1890 alkaen kuudenkymmenen vuoden ajan. He kertoivat kävijöille, että talvipäivänseisauksen aikaan sisälle tulee valojuova, joka osuu tiettyyn kiveen. Arkeologi Michael J. O’Kelly kaivoi paikkaa vuosina 1962–1975, ja 21. joulukuuta 1967 hän seisoi itse kammiossa ja näki sen: valo tulee sisään sisäänkäynnin yläpuolisesta kattolaati…
+Isoisän matkakirjamerkintä: Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.
+
+### 51.2
+KYSYMYS: Miten kattolaatikko osaa osua juuri oikeaan aamuun?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dublin
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kumpu kaivettiin auki rakennuskiven takia — ja sisällä oli huone, johon aurinko osuu kerran vuodessa
+Tietoruudun teksti: Vuonna 1699 Boynen laaksossa seisoi multakumpu, jota kukaan ei pitänyt minään. Paikallinen maanomistaja Charles Campbell käski työmiestensä kaivaa siitä rakennuskiveä. Kivien sijasta aukeni sisäänkäynti ja sen takaa yli kahdeksantoista metriä pitkä käytävä kammioon, joka oli ollut suljettuna noin 3200 eaa. asti — vanhempi kuin Egyptin pyramidit ja Stonehenge. Kunnioitus tuli hitaasti: 1800-luvun alussa kummun taakse rakennettiin huvimaja kivistä, jotka oli otettu Newgrangesta itsestään.
+
+Annie ja Bob Hickey hoitivat kohdetta vartijoina ja oppaina noin vuodesta 1890 alkaen kuudenkymmenen vuoden ajan. He kertoivat kävijöille, että talvipäivänseisauksen aikaan sisälle tulee valojuova, joka osuu tiettyyn kiveen. Arkeologi Michael J. O’Kelly kaivoi paikkaa vuosina 1962–1975, ja 21. joulukuuta 1967 hän seisoi itse kammiossa ja näki sen: valo tulee sisään sisäänkäynnin yläpuolisesta kattolaati…
+Isoisän matkakirjamerkintä: Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sri Lanka — maalehti / Urheilu: Bambumaila ja neljä pysäkkiä] Elle on kylien maila- ja pallopeli, joka muistuttaa softballia mutta on saaren omaa perua. Maila on kuivattua bambua, pallo nykyään tennispallo — ennen se oli wel kaduru -puun kuivattu hedelmä. Joukkueessa on kahdestatoista kuuteentoista pelaajaa, lyöjällä on kolme yritystä osua alakautta heitettyyn palloon, ja radalla on neljä pysäkkiä noin 55 metrin välein. Juoksija palaa poltetuksi, jos pallo napataan ilmasta tai jos häneen osutaan heitolla kesken juoksun. Peliä pelataan riisinkorjuun jälkeen ja uutenavuotena, eikä se vaadi muuta kuin kentän ja mailan.
+
+### 51.3
+KYSYMYS: Miten talvipäivänseisauksen paikat arvotaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dublin
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kumpu kaivettiin auki rakennuskiven takia — ja sisällä oli huone, johon aurinko osuu kerran vuodessa
+Tietoruudun teksti: Vuonna 1699 Boynen laaksossa seisoi multakumpu, jota kukaan ei pitänyt minään. Paikallinen maanomistaja Charles Campbell käski työmiestensä kaivaa siitä rakennuskiveä. Kivien sijasta aukeni sisäänkäynti ja sen takaa yli kahdeksantoista metriä pitkä käytävä kammioon, joka oli ollut suljettuna noin 3200 eaa. asti — vanhempi kuin Egyptin pyramidit ja Stonehenge. Kunnioitus tuli hitaasti: 1800-luvun alussa kummun taakse rakennettiin huvimaja kivistä, jotka oli otettu Newgrangesta itsestään.
+
+Annie ja Bob Hickey hoitivat kohdetta vartijoina ja oppaina noin vuodesta 1890 alkaen kuudenkymmenen vuoden ajan. He kertoivat kävijöille, että talvipäivänseisauksen aikaan sisälle tulee valojuova, joka osuu tiettyyn kiveen. Arkeologi Michael J. O’Kelly kaivoi paikkaa vuosina 1962–1975, ja 21. joulukuuta 1967 hän seisoi itse kammiossa ja näki sen: valo tulee sisään sisäänkäynnin yläpuolisesta kattolaati…
+Isoisän matkakirjamerkintä: Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Historia: Aurinko käy sisällä kerran vuodessa] 3200 eaa — Boynen laaksossa on ruohon peittämä kumpu, jonka sisään johtaa yli 18 metriä pitkä käytävä. Se rakennettiin noin 3200 vuotta ennen ajanlaskun alkua, eli se on vanhempi kuin Egyptin pyramidit ja Stonehenge. Sisäänkäynnin yläpuolella on aukko, jota kutsutaan kattolaatikoksi. Talvipäivänseisauksen aamuna nouseva aurinko osuu juuri siihen, ja valo kulkee käytävää pitkin kammioon noin seitsemäntoista minuuttia. Muina päivinä kammio on pimeä. Katsojat arvotaan sisään, koska tilaa on vain parillekymmenelle.
+
+### 51.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
+
+### 51.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
+
+================ KOHTA 52 (nosto:suovoi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dublin
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suosta nostettiin viisikymmentä kiloa voita, joka haisi yhä maidolta
+Tietoruudun teksti: Irlannissa on ensimmäiseltä vuosisadalta jaa. alkaen haudattu voita suohon. Se pakattiin puuastiaan — sankoon, tynnyriin tai kirnuun — ja astia vuorattiin usein vielä hirvennahalla tai kasvikuiduilla ennen kuin se painettiin turpeeseen. Syytä ei tiedetä varmasti. Suo on kylmä, vähähappinen ja hapan, eli se on käytännössä pakastin, joka ei tarvitse virtaa; toisen selityksen mukaan tarkoitus ei ollut säilöä vaan muuttaa makua. Vasta vuonna 2003 Bristolin yliopistossa selvitettiin, mistä aine oikeastaan on: osa näytteistä on maitopohjaisia ja osa eläinrasvaa.
+
+Huhtikuun 28. päivänä 2011 uutisoitiin löydöstä Tullamoren lähellä Offalyn kreivikunnassa. Koverretussa puuastiassa, joka oli kolmekymmentä senttiä leveä ja kuusikymmentä korkea, oli noin viisikymmentä kiloa suovoita, ja astia makasi 2,3 metrin syvyydessä. Astiassa haisi yhä heikosti maito. Nykykokeissa valmistettua suovoita maistane…
+Isoisän matkakirjamerkintä: Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Luonto: Metri tuhannessa vuodessa] Vuosituhansia — Irlannin soissa kasvava rahkasammal ei maadu kunnolla, koska vesi on hapanta ja hapetonta. Kuolleet kasvit painuvat kerroksiksi, ja tuhannessa vuodessa syntyy noin metri turvetta. Turvetta on nostettu lämmitykseen vuosisatoja: se leikataan pitkällä terällä palasiksi, jotka pinotaan pystyyn kuivumaan tuuleen. Suo säilyttää myös sen, mikä sinne joutuu, ja soista on löytynyt puisia teitä, voita puuastioissa ja kirjoja. Nykyään nostoa rajoitetaan, koska suot sitovat hiiltä ja niitä on jäljellä vain murto-osa.
+- [Pietari — kaupunkilehti / Historian hetki: Jänissaari 1703 — kuusi bastionia suohon] 27.5.1703 — Mittakeppi ja kartta ovat ainoat kuivat esineet Jänissaarella. Vartiosotilas pitää kartan kulmasta kiinni, kun tsaari Pietari, yli kaksimetrinen mies, kävelee saaren märkää rantaa ja näyttää, mihin kuusi bastionia tulevat. On 27. toukokuuta 1703, ja kaksi viikkoa aiemmin venäläiset valtasivat ylempänä Nevalla ruotsalaisten Nyenskansin linnoituksen. Suuri Pohjan sota on käynnissä, ja Ruotsin laivasto voi ilmestyä Suomenlahdelle milloin tahansa; siksi linnake pitää saada saarelle jokisuuhun ennen talvea, ensin maasta ja puusta. Kivi tulee myöhemmin, Domenico Trezzinin piirustuksin vuodesta 1706. Sotilaille ja pakkotyöhön käsketyille talonpojille paikka on suo, jossa on hyttysiä ja…
+
+### 52.1
+KYSYMYS: Miksi voita haudattiin suohon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dublin
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suosta nostettiin viisikymmentä kiloa voita, joka haisi yhä maidolta
+Tietoruudun teksti: Irlannissa on ensimmäiseltä vuosisadalta jaa. alkaen haudattu voita suohon. Se pakattiin puuastiaan — sankoon, tynnyriin tai kirnuun — ja astia vuorattiin usein vielä hirvennahalla tai kasvikuiduilla ennen kuin se painettiin turpeeseen. Syytä ei tiedetä varmasti. Suo on kylmä, vähähappinen ja hapan, eli se on käytännössä pakastin, joka ei tarvitse virtaa; toisen selityksen mukaan tarkoitus ei ollut säilöä vaan muuttaa makua. Vasta vuonna 2003 Bristolin yliopistossa selvitettiin, mistä aine oikeastaan on: osa näytteistä on maitopohjaisia ja osa eläinrasvaa.
+
+Huhtikuun 28. päivänä 2011 uutisoitiin löydöstä Tullamoren lähellä Offalyn kreivikunnassa. Koverretussa puuastiassa, joka oli kolmekymmentä senttiä leveä ja kuusikymmentä korkea, oli noin viisikymmentä kiloa suovoita, ja astia makasi 2,3 metrin syvyydessä. Astiassa haisi yhä heikosti maito. Nykykokeissa valmistettua suovoita maistane…
+Isoisän matkakirjamerkintä: Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kaupunkilehti / Historian hetki: Jänissaari 1703 — kuusi bastionia suohon] 27.5.1703 — Mittakeppi ja kartta ovat ainoat kuivat esineet Jänissaarella. Vartiosotilas pitää kartan kulmasta kiinni, kun tsaari Pietari, yli kaksimetrinen mies, kävelee saaren märkää rantaa ja näyttää, mihin kuusi bastionia tulevat. On 27. toukokuuta 1703, ja kaksi viikkoa aiemmin venäläiset valtasivat ylempänä Nevalla ruotsalaisten Nyenskansin linnoituksen. Suuri Pohjan sota on käynnissä, ja Ruotsin laivasto voi ilmestyä Suomenlahdelle milloin tahansa; siksi linnake pitää saada saarelle jokisuuhun ennen talvea, ensin maasta ja puusta. Kivi tulee myöhemmin, Domenico Trezzinin piirustuksin vuodesta 1706. Sotilaille ja pakkotyöhön käsketyille talonpojille paikka on suo, jossa on hyttysiä ja…
+
+### 52.2
+KYSYMYS: Miltä suovoi maistuu nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dublin
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suosta nostettiin viisikymmentä kiloa voita, joka haisi yhä maidolta
+Tietoruudun teksti: Irlannissa on ensimmäiseltä vuosisadalta jaa. alkaen haudattu voita suohon. Se pakattiin puuastiaan — sankoon, tynnyriin tai kirnuun — ja astia vuorattiin usein vielä hirvennahalla tai kasvikuiduilla ennen kuin se painettiin turpeeseen. Syytä ei tiedetä varmasti. Suo on kylmä, vähähappinen ja hapan, eli se on käytännössä pakastin, joka ei tarvitse virtaa; toisen selityksen mukaan tarkoitus ei ollut säilöä vaan muuttaa makua. Vasta vuonna 2003 Bristolin yliopistossa selvitettiin, mistä aine oikeastaan on: osa näytteistä on maitopohjaisia ja osa eläinrasvaa.
+
+Huhtikuun 28. päivänä 2011 uutisoitiin löydöstä Tullamoren lähellä Offalyn kreivikunnassa. Koverretussa puuastiassa, joka oli kolmekymmentä senttiä leveä ja kuusikymmentä korkea, oli noin viisikymmentä kiloa suovoita, ja astia makasi 2,3 metrin syvyydessä. Astiassa haisi yhä heikosti maito. Nykykokeissa valmistettua suovoita maistane…
+Isoisän matkakirjamerkintä: Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.
+
+### 52.3
+KYSYMYS: Mitä muuta irlantilaisista soista on löytynyt?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Dublin
+Maa, jossa pelaaja on: Irlanti
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suosta nostettiin viisikymmentä kiloa voita, joka haisi yhä maidolta
+Tietoruudun teksti: Irlannissa on ensimmäiseltä vuosisadalta jaa. alkaen haudattu voita suohon. Se pakattiin puuastiaan — sankoon, tynnyriin tai kirnuun — ja astia vuorattiin usein vielä hirvennahalla tai kasvikuiduilla ennen kuin se painettiin turpeeseen. Syytä ei tiedetä varmasti. Suo on kylmä, vähähappinen ja hapan, eli se on käytännössä pakastin, joka ei tarvitse virtaa; toisen selityksen mukaan tarkoitus ei ollut säilöä vaan muuttaa makua. Vasta vuonna 2003 Bristolin yliopistossa selvitettiin, mistä aine oikeastaan on: osa näytteistä on maitopohjaisia ja osa eläinrasvaa.
+
+Huhtikuun 28. päivänä 2011 uutisoitiin löydöstä Tullamoren lähellä Offalyn kreivikunnassa. Koverretussa puuastiassa, joka oli kolmekymmentä senttiä leveä ja kuusikymmentä korkea, oli noin viisikymmentä kiloa suovoita, ja astia makasi 2,3 metrin syvyydessä. Astiassa haisi yhä heikosti maito. Nykykokeissa valmistettua suovoita maistane…
+Isoisän matkakirjamerkintä: Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Luonto: Metri tuhannessa vuodessa] Vuosituhansia — Irlannin soissa kasvava rahkasammal ei maadu kunnolla, koska vesi on hapanta ja hapetonta. Kuolleet kasvit painuvat kerroksiksi, ja tuhannessa vuodessa syntyy noin metri turvetta. Turvetta on nostettu lämmitykseen vuosisatoja: se leikataan pitkällä terällä palasiksi, jotka pinotaan pystyyn kuivumaan tuuleen. Suo säilyttää myös sen, mikä sinne joutuu, ja soista on löytynyt puisia teitä, voita puuastioissa ja kirjoja. Nykyään nostoa rajoitetaan, koska suot sitovat hiiltä ja niitä on jäljellä vain murto-osa.
+
+### 52.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 52 YHTEINEN KONTEKSTI
+
+### 52.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 52 YHTEINEN KONTEKSTI

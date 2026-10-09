@@ -1,0 +1,311 @@
+================ KOHTA 6 (kohde:clonmacnoise) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Clonmacnoise (kulttuuri)
+Tietoruudun teksti: Clonmacnoise on luostarin rauniot Offalyn kreivikunnassa Shannon-joen varrella Athlonesta etelään. Pyhä Ciarán perusti sen vuonna 544, ja 800-luvulle asti luostarilla oli läheiset suhteet Connachtin kuninkaisiin.
+
+Paikka valittiin risteyksen takia. Irlannin suuri itä–länsisuuntainen maareitti Slighe Mhór ylittää Shannonin juuri tässä, kuljettuaan Keski-Irlannin soiden yli Eiscir Riadan harjua pitkin — harju on jääkauden vetäytyvien jäätiköiden jättämä. Sijainti teki luostarista 800-luvulle mennessä uskonnon, oppineisuuden, käsityön ja kaupan keskuksen.
+
+Yhdessä Clonardin kanssa Clonmacnoise oli Irlannin kuuluisimpia paikkoja, ja sinne tuli oppineita eri puolilta Eurooppaa. Monet Taran ylikuninkaista ja Connachtin kuninkaista haudattiin tänne.
+
+Luostari jäi suurelta osin autioksi 1200-luvun loppuun mennessä. Nykyään paikalla on yhdeksän kirkon rauniot, linna, kaksi pyöreää tornia sekä su…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jakutsk — kohdekartta / Kohdekartta: Nikolskin kirkko] suojeltu kohde 1400036000 Nikolskin eli Pyhän Nikolauksen kirkko on kartan läntisin kohde ja Jakutskin ortodoksisista kirkoista sirointi. Se on kivestä, valkoiseksi rapattu, ja sen kolmiportaisesta kellotornista kohoaa kullattu kupoli ja sen päältä pitkä terävä huippu. Rakennus kuuluu Venäjän kulttuuriperintökohteisiin tunnuksella 1400036000. Kirkko kertoo siitä, miten Jakutskin uskonnollinen kartta on kerroksellinen. Ortodoksisuus tuli kaupunkiin linnoituksen mukana 1600-luvulla, ja sen laitokset ovat yhä näkyvissä: Preobraženskin katedraali, hengellinen seminaari ja Spasskin luostari. Niiden rinnalla elävät kuitenkin vanhemmat käsitykset. Jakuuttien perinteinen usko tuntee kolme maailmaa …
+- [Varsova — kohdekartta / Kohdekartta: Wienin asema] Tässä kaupungissa mitta oli kahdenlainen, ja isoisäsi olisi pitänyt siitä enemmän kuin torin väreistä. Varsovasta lounaaseen lähtevä Wienin rata avattiin 14. kesäkuuta 1845, ensin kolmenkymmenen kilometrin pätkänä, ja se ylsi Itävallan rajalle huhtikuussa 1848: kaikkiaan runsaat 327 kilometriä ja 27 asemaa. Se oli ensimmäinen rata Kongressi-Puolassa ja toinen koko keisarikunnassa. Ja se oli rakennettu eurooppalaiseen mittaan, 1 435 millimetriä kiskosta kiskoon, kun kaikilla muilla keisarikunnan radoilla mitta oli leveämpi, 1 524. Kaksi rataa, kaksi mittaa, eikä yhtäkään vaunua voinut ajaa toiselta toiselle. Pietarin rata tuli Varsovaan 1862 ja pysähtyi joen toiselle rannalle. Kierbedźin sil…
+
+### 6.1
+KYSYMYS: Miksi luostari rakennettiin juuri tähän?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Clonmacnoise (kulttuuri)
+Tietoruudun teksti: Clonmacnoise on luostarin rauniot Offalyn kreivikunnassa Shannon-joen varrella Athlonesta etelään. Pyhä Ciarán perusti sen vuonna 544, ja 800-luvulle asti luostarilla oli läheiset suhteet Connachtin kuninkaisiin.
+
+Paikka valittiin risteyksen takia. Irlannin suuri itä–länsisuuntainen maareitti Slighe Mhór ylittää Shannonin juuri tässä, kuljettuaan Keski-Irlannin soiden yli Eiscir Riadan harjua pitkin — harju on jääkauden vetäytyvien jäätiköiden jättämä. Sijainti teki luostarista 800-luvulle mennessä uskonnon, oppineisuuden, käsityön ja kaupan keskuksen.
+
+Yhdessä Clonardin kanssa Clonmacnoise oli Irlannin kuuluisimpia paikkoja, ja sinne tuli oppineita eri puolilta Eurooppaa. Monet Taran ylikuninkaista ja Connachtin kuninkaista haudattiin tänne.
+
+Luostari jäi suurelta osin autioksi 1200-luvun loppuun mennessä. Nykyään paikalla on yhdeksän kirkon rauniot, linna, kaksi pyöreää tornia sekä su…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jakutsk — kohdekartta / Kohdekartta: Nikolskin kirkko] suojeltu kohde 1400036000 Nikolskin eli Pyhän Nikolauksen kirkko on kartan läntisin kohde ja Jakutskin ortodoksisista kirkoista sirointi. Se on kivestä, valkoiseksi rapattu, ja sen kolmiportaisesta kellotornista kohoaa kullattu kupoli ja sen päältä pitkä terävä huippu. Rakennus kuuluu Venäjän kulttuuriperintökohteisiin tunnuksella 1400036000. Kirkko kertoo siitä, miten Jakutskin uskonnollinen kartta on kerroksellinen. Ortodoksisuus tuli kaupunkiin linnoituksen mukana 1600-luvulla, ja sen laitokset ovat yhä näkyvissä: Preobraženskin katedraali, hengellinen seminaari ja Spasskin luostari. Niiden rinnalla elävät kuitenkin vanhemmat käsitykset. Jakuuttien perinteinen usko tuntee kolme maailmaa …
+- [Varsova — kohdekartta / Kohdekartta: Wienin asema] Tässä kaupungissa mitta oli kahdenlainen, ja isoisäsi olisi pitänyt siitä enemmän kuin torin väreistä. Varsovasta lounaaseen lähtevä Wienin rata avattiin 14. kesäkuuta 1845, ensin kolmenkymmenen kilometrin pätkänä, ja se ylsi Itävallan rajalle huhtikuussa 1848: kaikkiaan runsaat 327 kilometriä ja 27 asemaa. Se oli ensimmäinen rata Kongressi-Puolassa ja toinen koko keisarikunnassa. Ja se oli rakennettu eurooppalaiseen mittaan, 1 435 millimetriä kiskosta kiskoon, kun kaikilla muilla keisarikunnan radoilla mitta oli leveämpi, 1 524. Kaksi rataa, kaksi mittaa, eikä yhtäkään vaunua voinut ajaa toiselta toiselle. Pietarin rata tuli Varsovaan 1862 ja pysähtyi joen toiselle rannalle. Kierbedźin sil…
+
+### 6.2
+KYSYMYS: Mikä Eiscir Riada on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Clonmacnoise (kulttuuri)
+Tietoruudun teksti: Clonmacnoise on luostarin rauniot Offalyn kreivikunnassa Shannon-joen varrella Athlonesta etelään. Pyhä Ciarán perusti sen vuonna 544, ja 800-luvulle asti luostarilla oli läheiset suhteet Connachtin kuninkaisiin.
+
+Paikka valittiin risteyksen takia. Irlannin suuri itä–länsisuuntainen maareitti Slighe Mhór ylittää Shannonin juuri tässä, kuljettuaan Keski-Irlannin soiden yli Eiscir Riadan harjua pitkin — harju on jääkauden vetäytyvien jäätiköiden jättämä. Sijainti teki luostarista 800-luvulle mennessä uskonnon, oppineisuuden, käsityön ja kaupan keskuksen.
+
+Yhdessä Clonardin kanssa Clonmacnoise oli Irlannin kuuluisimpia paikkoja, ja sinne tuli oppineita eri puolilta Eurooppaa. Monet Taran ylikuninkaista ja Connachtin kuninkaista haudattiin tänne.
+
+Luostari jäi suurelta osin autioksi 1200-luvun loppuun mennessä. Nykyään paikalla on yhdeksän kirkon rauniot, linna, kaksi pyöreää tornia sekä su…
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:rock-of-cashel) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rock of Cashel (historia)
+Tietoruudun teksti: Rock of Cashel on historiallinen paikka, joka kohoaa näyttävästi tasangon yllä Cashelissa Tipperaryn kreivikunnassa. Iiriksi se on Carraig Phádraig, Patrickin kallio.
+
+Paikallinen taru kertoo, että kallio sinkoutui tänne Devil’s Bit -vuoresta kolmenkymmenen kilometrin päästä pohjoisesta, kun pyhä Patrick karkotti Saatanan luolasta. Pyhän Patrickin kolmiosaisen elämäkerran mukaan Cashel on myös se paikka, jossa Patrick käännytti Munsterin kuninkaan 400-luvulla.
+
+Kallio oli Munsterin kuninkaiden perinteinen istuin jo 300-luvulla. 400-luvulla Eóganachta-suku rakensi sinne linnoituksen ja piti valtaa satojen vuosien ajan. Vuonna 977 Brian Boru kruunattiin kalliolla kuninkaaksi ja teki Cashelista pääkaupunkinsa. Vuonna 1101 Munsterin kuningas Muirchertach Ua Briain lahjoitti linnoituksensa kirkolle.
+
+Varhaisista rakennuksista on jäljellä vähän: valtaosa nykyisistä on 1100- ja 1200-luvuilta. …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kohdekartta / Kohdekartta: Saint-Victorin kirkko] 415 Munkki ja teologi Johannes Cassianus perusti luostarin Marseilleen vuonna 415 tultuaan Egyptin erakkoluostareista — se on yksi Ranskan vanhimmista luostareista. Kirkon alla olevissa kryptoissa on jäljellä muinaiskreikkalainen kivilouhos, josta tuli myöhemmin hautapaikka. Saraseenit hyökkäsivät ja hävittivät luostarin kahdesti, vuosina 838 ja 923, mutta munkit palasivat 977. Vuonna 1020 apotti Isarn aloitti ison rakennusurakan, ja kirkosta tehtiin samalla myös linnoitus — siksi siinä on yhä paksut harjakivimuurit. Vuonna 1365 paavi Urbanus V — joka oli aiemmin ollut tämän saman luostarin apotti — palasi Marseilleen ja vihki kirkon alttarin.
+- [Borneo — kaupunkilehti / Borneo: Kullan maa, kamferttisaari, timanttisaari] Kiinalaisissa asiakirjoissa saari mainitaan jo vuonna 977 nimellä Bo-ni. Arvokkaimmiksi vientitavaroiksi luetellaan kultaa, kamferttia, kilpikonnankuorta, sarvinokkien nokkaluuta, mehiläisvahaa, rottinkia, mausteita ja syötäviä pääskynpesiä. Intialaiset kutsuivat saarta nimillä Suvarnabhumi eli kullan maa ja Karpuradvipa eli kamferttisaari, jaavalaiset nimellä Puradvipa eli timanttisaari. Sarawakin jokisuisto oli 500-luvulta noin vuoteen 1300 vilkas Intian ja Kiinan välisen kaupan keskus, ja pääskynpesiä kerätään yhä Gomantongin luolista Sabahissa.
+
+### 7.1
+KYSYMYS: Kuka kruunattiin kalliolla vuonna 977?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rock of Cashel (historia)
+Tietoruudun teksti: Rock of Cashel on historiallinen paikka, joka kohoaa näyttävästi tasangon yllä Cashelissa Tipperaryn kreivikunnassa. Iiriksi se on Carraig Phádraig, Patrickin kallio.
+
+Paikallinen taru kertoo, että kallio sinkoutui tänne Devil’s Bit -vuoresta kolmenkymmenen kilometrin päästä pohjoisesta, kun pyhä Patrick karkotti Saatanan luolasta. Pyhän Patrickin kolmiosaisen elämäkerran mukaan Cashel on myös se paikka, jossa Patrick käännytti Munsterin kuninkaan 400-luvulla.
+
+Kallio oli Munsterin kuninkaiden perinteinen istuin jo 300-luvulla. 400-luvulla Eóganachta-suku rakensi sinne linnoituksen ja piti valtaa satojen vuosien ajan. Vuonna 977 Brian Boru kruunattiin kalliolla kuninkaaksi ja teki Cashelista pääkaupunkinsa. Vuonna 1101 Munsterin kuningas Muirchertach Ua Briain lahjoitti linnoituksensa kirkolle.
+
+Varhaisista rakennuksista on jäljellä vähän: valtaosa nykyisistä on 1100- ja 1200-luvuilta. …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kohdekartta / Kohdekartta: Saint-Victorin kirkko] 415 Munkki ja teologi Johannes Cassianus perusti luostarin Marseilleen vuonna 415 tultuaan Egyptin erakkoluostareista — se on yksi Ranskan vanhimmista luostareista. Kirkon alla olevissa kryptoissa on jäljellä muinaiskreikkalainen kivilouhos, josta tuli myöhemmin hautapaikka. Saraseenit hyökkäsivät ja hävittivät luostarin kahdesti, vuosina 838 ja 923, mutta munkit palasivat 977. Vuonna 1020 apotti Isarn aloitti ison rakennusurakan, ja kirkosta tehtiin samalla myös linnoitus — siksi siinä on yhä paksut harjakivimuurit. Vuonna 1365 paavi Urbanus V — joka oli aiemmin ollut tämän saman luostarin apotti — palasi Marseilleen ja vihki kirkon alttarin.
+- [Borneo — kaupunkilehti / Borneo: Kullan maa, kamferttisaari, timanttisaari] Kiinalaisissa asiakirjoissa saari mainitaan jo vuonna 977 nimellä Bo-ni. Arvokkaimmiksi vientitavaroiksi luetellaan kultaa, kamferttia, kilpikonnankuorta, sarvinokkien nokkaluuta, mehiläisvahaa, rottinkia, mausteita ja syötäviä pääskynpesiä. Intialaiset kutsuivat saarta nimillä Suvarnabhumi eli kullan maa ja Karpuradvipa eli kamferttisaari, jaavalaiset nimellä Puradvipa eli timanttisaari. Sarawakin jokisuisto oli 500-luvulta noin vuoteen 1300 vilkas Intian ja Kiinan välisen kaupan keskus, ja pääskynpesiä kerätään yhä Gomantongin luolista Sabahissa.
+
+### 7.2
+KYSYMYS: Mitä tarun mukaan tapahtui Devil’s Bitissä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rock of Cashel (historia)
+Tietoruudun teksti: Rock of Cashel on historiallinen paikka, joka kohoaa näyttävästi tasangon yllä Cashelissa Tipperaryn kreivikunnassa. Iiriksi se on Carraig Phádraig, Patrickin kallio.
+
+Paikallinen taru kertoo, että kallio sinkoutui tänne Devil’s Bit -vuoresta kolmenkymmenen kilometrin päästä pohjoisesta, kun pyhä Patrick karkotti Saatanan luolasta. Pyhän Patrickin kolmiosaisen elämäkerran mukaan Cashel on myös se paikka, jossa Patrick käännytti Munsterin kuninkaan 400-luvulla.
+
+Kallio oli Munsterin kuninkaiden perinteinen istuin jo 300-luvulla. 400-luvulla Eóganachta-suku rakensi sinne linnoituksen ja piti valtaa satojen vuosien ajan. Vuonna 977 Brian Boru kruunattiin kalliolla kuninkaaksi ja teki Cashelista pääkaupunkinsa. Vuonna 1101 Munsterin kuningas Muirchertach Ua Briain lahjoitti linnoituksensa kirkolle.
+
+Varhaisista rakennuksista on jäljellä vähän: valtaosa nykyisistä on 1100- ja 1200-luvuilta. …
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:skellig-michael) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skellig Michael (kulttuuri)
+Tietoruudun teksti: Skellig Michael on kaksihuippuinen kallioluoto 11,6 kilometriä Iveraghin niemimaasta länteen Kerryn kreivikunnassa. Saari on nimetty arkkienkeli Mikaelin mukaan, ja Skellig tulee iirin sanasta sceilig, kivensirpale. Sen kaksoissaari Little Skellig on pienempi eikä sinne pääse.
+
+Saarta on noin 22 hehtaaria pelkkää kalliota. Korkein kohta, nimeltään Spit, on 218 metriä merenpinnan yläpuolella, ja huippujen välissä on laakso nimeltä Kristuksen satula. Maisema on jyrkkä ja epävieraanvarainen.
+
+Saari tunnetaan parhaiten gaelilaisesta luostaristaan, joka perustettiin 500- ja 700-luvun välillä, sekä lajistostaan: suulia, lunneja, ruokkiyhdyskunta ja noin viidenkymmenen harmaahylkeen kanta. Luostarialue pohjoisella huipulla on arkeologisesti poikkeuksellisen hyvin säilynyt, ja sinne noustaan kapeita ja jyrkkiä kiviportaita kolmesta rantautumispaikasta.
+
+Eteläisen huipun erakkoluolalle johtaa va…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kazakstan — maalehti / Luonto: Kanjoni, jonka yli pääsee vain kävelysiltaa] Aksu-Zhabagly läntisellä Tienšanilla on Keski-Aasian vanhin luonnonsuojelualue. Se kattaa runsaat 1 300 neliökilometriä ja nousee 1 100 metristä 4 236 metriin, ja sen halki kulkee Aksun kanjoni, joka on viisisataa metriä syvä: yli pääsee vain kapeaa jalankulkusiltaa myöten alueen eteläpäässä. Putkilokasveja on laskettu 1 312 lajia, joista 44 on Kazakstanin punaisessa kirjassa — mukana villiomena, villiviiniköynnös ja useita villitulppaaneja. Lumileopardi on alueen kuuluisin asukas, mutta sen näkee harvoin.
+- [Tansania — maalehti / Luonto: Apina, joka jäi saarelle meren noustessa] Sansibarinpunakolobi elää vain Ungujan saarella. Sen esi-isät jäivät saarelle, kun merenpinta nousi jääkauden lopulla, ja eristys on pienentänyt kalloa saarisäännön mukaisesti. Yksilöitä arvioidaan olevan 1 600–3 000, ja puolet niistä elää suojelualueiden ulkopuolella; tärkein turvapaikka on Jozanin kansallispuiston 25 neliökilometriä. Ryhmässä on 30–50 eläintä, ja koiraat pitävät yhtä — ne siistivät toisiaan ja puolustavat ryhmää yhdessä. Paikalliset kutsuvat lajia nimellä kima punju, myrkkyapina, sen voimakkaan hajun takia.
+
+### 8.1
+KYSYMYS: Mitä sana sceilig tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skellig Michael (kulttuuri)
+Tietoruudun teksti: Skellig Michael on kaksihuippuinen kallioluoto 11,6 kilometriä Iveraghin niemimaasta länteen Kerryn kreivikunnassa. Saari on nimetty arkkienkeli Mikaelin mukaan, ja Skellig tulee iirin sanasta sceilig, kivensirpale. Sen kaksoissaari Little Skellig on pienempi eikä sinne pääse.
+
+Saarta on noin 22 hehtaaria pelkkää kalliota. Korkein kohta, nimeltään Spit, on 218 metriä merenpinnan yläpuolella, ja huippujen välissä on laakso nimeltä Kristuksen satula. Maisema on jyrkkä ja epävieraanvarainen.
+
+Saari tunnetaan parhaiten gaelilaisesta luostaristaan, joka perustettiin 500- ja 700-luvun välillä, sekä lajistostaan: suulia, lunneja, ruokkiyhdyskunta ja noin viidenkymmenen harmaahylkeen kanta. Luostarialue pohjoisella huipulla on arkeologisesti poikkeuksellisen hyvin säilynyt, ja sinne noustaan kapeita ja jyrkkiä kiviportaita kolmesta rantautumispaikasta.
+
+Eteläisen huipun erakkoluolalle johtaa va…
+
+### 8.2
+KYSYMYS: Miksi saarelle pääsee vain kesällä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skellig Michael (kulttuuri)
+Tietoruudun teksti: Skellig Michael on kaksihuippuinen kallioluoto 11,6 kilometriä Iveraghin niemimaasta länteen Kerryn kreivikunnassa. Saari on nimetty arkkienkeli Mikaelin mukaan, ja Skellig tulee iirin sanasta sceilig, kivensirpale. Sen kaksoissaari Little Skellig on pienempi eikä sinne pääse.
+
+Saarta on noin 22 hehtaaria pelkkää kalliota. Korkein kohta, nimeltään Spit, on 218 metriä merenpinnan yläpuolella, ja huippujen välissä on laakso nimeltä Kristuksen satula. Maisema on jyrkkä ja epävieraanvarainen.
+
+Saari tunnetaan parhaiten gaelilaisesta luostaristaan, joka perustettiin 500- ja 700-luvun välillä, sekä lajistostaan: suulia, lunneja, ruokkiyhdyskunta ja noin viidenkymmenen harmaahylkeen kanta. Luostarialue pohjoisella huipulla on arkeologisesti poikkeuksellisen hyvin säilynyt, ja sinne noustaan kapeita ja jyrkkiä kiviportaita kolmesta rantautumispaikasta.
+
+Eteläisen huipun erakkoluolalle johtaa va…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kazakstan — maalehti / Luonto: Kanjoni, jonka yli pääsee vain kävelysiltaa] Aksu-Zhabagly läntisellä Tienšanilla on Keski-Aasian vanhin luonnonsuojelualue. Se kattaa runsaat 1 300 neliökilometriä ja nousee 1 100 metristä 4 236 metriin, ja sen halki kulkee Aksun kanjoni, joka on viisisataa metriä syvä: yli pääsee vain kapeaa jalankulkusiltaa myöten alueen eteläpäässä. Putkilokasveja on laskettu 1 312 lajia, joista 44 on Kazakstanin punaisessa kirjassa — mukana villiomena, villiviiniköynnös ja useita villitulppaaneja. Lumileopardi on alueen kuuluisin asukas, mutta sen näkee harvoin.
+- [Tansania — maalehti / Luonto: Apina, joka jäi saarelle meren noustessa] Sansibarinpunakolobi elää vain Ungujan saarella. Sen esi-isät jäivät saarelle, kun merenpinta nousi jääkauden lopulla, ja eristys on pienentänyt kalloa saarisäännön mukaisesti. Yksilöitä arvioidaan olevan 1 600–3 000, ja puolet niistä elää suojelualueiden ulkopuolella; tärkein turvapaikka on Jozanin kansallispuiston 25 neliökilometriä. Ryhmässä on 30–50 eläintä, ja koiraat pitävät yhtä — ne siistivät toisiaan ja puolustavat ryhmää yhdessä. Paikalliset kutsuvat lajia nimellä kima punju, myrkkyapina, sen voimakkaan hajun takia.
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:ceide-fields) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Céide Fields (historia)
+Tietoruudun teksti: Céide Fields on laaja esihistoriallinen arkeologinen maisema Mayon kreivikunnan pohjoisrannikolla. Iirinkielinen nimi Achaidh Chéide tarkoittaa litteähuippuisen kukkulan peltoja.
+
+Kokonaisuuteen kuuluu kivimuurien rajaamia peltojärjestelmiä, asumisen jälkiä, aitauksia ja megaliittimonumentteja, jotka ovat säilyneet keidassuon alla. Turpeen alle arvioidaan kätkeytyvän yli sata kilometriä peltoja rajaavaa kivimuuria. Perinteisesti maisemaa on tulkittu neoliittiseksi viljelymaisemaksi neljänneltä vuosituhannelta eaa., mutta osa tutkijoista on esittänyt myöhempää, pronssi- tai rautakautista ajoitusta.
+
+Löytö alkoi 1930-luvulla, kun opettaja Patrick Caulfield huomasi turvetta nostaessaan suoria kiviröykkiöitä. Hän päätteli, että kivet olivat ihmisen asettamia, koska niiden asetelma ei ollut luonnollinen — ja koska ne olivat suon alla, niiden oli oltava suota vanhempia.
+
+Löydön merkitys avaut…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Punta Arenas — kaupunkilehti / Salmi ja Etelämanner: Beaglen jäljillä ja Darwinin pyynnöstä] Salmi kartoitettiin kunnolla vasta 1800-luvulla. Phillip Parker King mittasi rannat 1826–1830 HMS Adventurella yhdessä HMS Beaglen kanssa, ja työstä kerrottiin Lontoon maantieteellisen seuran kahdessa kokouksessa 1831. Richard Charles Mayne johti HMS Nassaun mittausretkeä 1866–1869; luonnontieteilijänä oli Robert Oliver Cunningham. Charles Darwin pyysi amiraliteettia käskemään Maynen keräämään venelastin verran sukupuuttoon kuolleiden nelijalkaisten fossiileja, ja löydöt vietiin British Museumiin. Amiraliteetti kokosi salmen purjehdusohjeet 1871, kaksi vuotta ennen isoisän matkaa. Vuoden 1881 rajasopimuksessa Argentiina tunnusti salmen Chilelle.
+- [Turkki — maalehti / Historian hetki: Hisarlık 1873 — kulta kaivannon seinämässä] toukokuu 1873 — Kaivannon seinämän juuresta, muurin alta, on tullut esiin kuparinen astia, ja sen sisältä alkaa nousta kultaa: diadeemeja, korvakoruja, nappeja, tuhansia pieniä kultaesineitä sekä hopeaa ja pronssia. Heinrich Schliemann on 51-vuotias, rikastunut kauppias, joka on tullut kummulle todistaakseen, että Homeroksen Troija oli totta, ja hän nimeää löydön saman tien Priamoksen aarteeksi. Oman kertomuksensa mukaan hän lähetti työmiehet tauolle ja kaivoi kullan esiin itse veitsellä, jottei kukaan näkisi; tutkijat ovat sittemmin epäilleet kertomusta, ja ne kaivajat, joiden käsien kautta löydöt kulkivat, jäivät hänen sankaritarinansa ulkopuolelle. Päiväkirjaan hän kirjoitti myös, että v…
+
+### 9.1
+KYSYMYS: Miten suon alla olevat muurit kartoitettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Céide Fields (historia)
+Tietoruudun teksti: Céide Fields on laaja esihistoriallinen arkeologinen maisema Mayon kreivikunnan pohjoisrannikolla. Iirinkielinen nimi Achaidh Chéide tarkoittaa litteähuippuisen kukkulan peltoja.
+
+Kokonaisuuteen kuuluu kivimuurien rajaamia peltojärjestelmiä, asumisen jälkiä, aitauksia ja megaliittimonumentteja, jotka ovat säilyneet keidassuon alla. Turpeen alle arvioidaan kätkeytyvän yli sata kilometriä peltoja rajaavaa kivimuuria. Perinteisesti maisemaa on tulkittu neoliittiseksi viljelymaisemaksi neljänneltä vuosituhannelta eaa., mutta osa tutkijoista on esittänyt myöhempää, pronssi- tai rautakautista ajoitusta.
+
+Löytö alkoi 1930-luvulla, kun opettaja Patrick Caulfield huomasi turvetta nostaessaan suoria kiviröykkiöitä. Hän päätteli, että kivet olivat ihmisen asettamia, koska niiden asetelma ei ollut luonnollinen — ja koska ne olivat suon alla, niiden oli oltava suota vanhempia.
+
+Löydön merkitys avaut…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Punta Arenas — kaupunkilehti / Salmi ja Etelämanner: Beaglen jäljillä ja Darwinin pyynnöstä] Salmi kartoitettiin kunnolla vasta 1800-luvulla. Phillip Parker King mittasi rannat 1826–1830 HMS Adventurella yhdessä HMS Beaglen kanssa, ja työstä kerrottiin Lontoon maantieteellisen seuran kahdessa kokouksessa 1831. Richard Charles Mayne johti HMS Nassaun mittausretkeä 1866–1869; luonnontieteilijänä oli Robert Oliver Cunningham. Charles Darwin pyysi amiraliteettia käskemään Maynen keräämään venelastin verran sukupuuttoon kuolleiden nelijalkaisten fossiileja, ja löydöt vietiin British Museumiin. Amiraliteetti kokosi salmen purjehdusohjeet 1871, kaksi vuotta ennen isoisän matkaa. Vuoden 1881 rajasopimuksessa Argentiina tunnusti salmen Chilelle.
+
+### 9.2
+KYSYMYS: Kuka löydön teki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Céide Fields (historia)
+Tietoruudun teksti: Céide Fields on laaja esihistoriallinen arkeologinen maisema Mayon kreivikunnan pohjoisrannikolla. Iirinkielinen nimi Achaidh Chéide tarkoittaa litteähuippuisen kukkulan peltoja.
+
+Kokonaisuuteen kuuluu kivimuurien rajaamia peltojärjestelmiä, asumisen jälkiä, aitauksia ja megaliittimonumentteja, jotka ovat säilyneet keidassuon alla. Turpeen alle arvioidaan kätkeytyvän yli sata kilometriä peltoja rajaavaa kivimuuria. Perinteisesti maisemaa on tulkittu neoliittiseksi viljelymaisemaksi neljänneltä vuosituhannelta eaa., mutta osa tutkijoista on esittänyt myöhempää, pronssi- tai rautakautista ajoitusta.
+
+Löytö alkoi 1930-luvulla, kun opettaja Patrick Caulfield huomasi turvetta nostaessaan suoria kiviröykkiöitä. Hän päätteli, että kivet olivat ihmisen asettamia, koska niiden asetelma ei ollut luonnollinen — ja koska ne olivat suon alla, niiden oli oltava suota vanhempia.
+
+Löydön merkitys avaut…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Historian hetki: Hisarlık 1873 — kulta kaivannon seinämässä] toukokuu 1873 — Kaivannon seinämän juuresta, muurin alta, on tullut esiin kuparinen astia, ja sen sisältä alkaa nousta kultaa: diadeemeja, korvakoruja, nappeja, tuhansia pieniä kultaesineitä sekä hopeaa ja pronssia. Heinrich Schliemann on 51-vuotias, rikastunut kauppias, joka on tullut kummulle todistaakseen, että Homeroksen Troija oli totta, ja hän nimeää löydön saman tien Priamoksen aarteeksi. Oman kertomuksensa mukaan hän lähetti työmiehet tauolle ja kaivoi kullan esiin itse veitsellä, jottei kukaan näkisi; tutkijat ovat sittemmin epäilleet kertomusta, ja ne kaivajat, joiden käsien kautta löydöt kulkivat, jäivät hänen sankaritarinansa ulkopuolelle. Päiväkirjaan hän kirjoitti myös, että v…
+- [Nuuk — kaupunkilehti / Tiede ja tekniikka: Kivi, jossa saattaa olla vanhin elämä] Nuukin pääkaupunkiseudun lähellä on Isuan viherkivivyöhyke, 3,7–3,8 miljardia vuotta vanhaa kalliota ja maailman laajin näin vanhojen kivien paljastuma. Vuonna 1996 geologi Steve Mojzsis työtovereineen esitti, että kivien hiilirikkaiden kerrosten isotooppisesti kevyt hiili viittaa biologiseen toimintaan. Elokuussa 2016 australialaisryhmä ilmoitti löytäneensä sulaneen lumen alta pieniä kupumaisia rakenteita, jotka olisivat 3,7 miljardia vuotta vanhoja stromatoliitteja. Kiista jatkuu: osa geologeista pitää muotoja kiven myöhemmän muodonmuutoksen tuloksena, ja yksi löydön puolustajista julkaisi 2018 itse artikkelin, joka kyseenalaistaa tulkinnan.
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:moherin-kalliot) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moherin kalliot (luonto · vuori)
+Tietoruudun teksti: Moherin kalliot ovat merikallioita Burrenin alueen lounaisreunassa Claren kreivikunnassa. Ne jatkuvat noin neljäntoista kilometrin matkan.
+
+Eteläpäässä kalliot kohoavat 120 metriä Atlantin yllä Hag’s Headissa. Kahdeksan kilometriä pohjoisempana ne saavuttavat korkeimman kohtansa, 214 metriä, hieman O’Brienin tornin pohjoispuolella; tornin rakennutti 1835 Sir Cornelius O’Brien. Kallioilta näkyvät Aransaaret Galwaynlahdella sekä Maumturkin ja Twelve Pinsin vuoristot pohjoisessa.
+
+Nimi tulee vanhasta Mothar-nimisestä niemilinnoituksesta, joka seisoi Hag’s Headissa, kallioiden eteläisimmässä kärjessä. Linnoitus oli pystyssä vielä 1780, mutta se purettiin 1808, jotta sen kivistä saatiin rakennettua tähystys- ja lennätintorni varoittamaan ranskalaisten maihinnoususta Napoleonin sotien aikana.
+
+Kalliot ovat Irlannin käydyimpiä matkakohteita: vuonna 2006 ne nousivat nähtävyyksien kärkeen, ja ny…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Delhi — kohdekartta / Kohdekartta: Punainen linnoitus] 1638/1639–1648 Shah Jahanin linnoitus on kaupunki kaupungin sisällä: muurien ympärysmitta on yli kaksi kilometriä, ja punaisesta hiekkakivestä ladottu muuri nousee korkeimmillaan kolmeenkymmeneenkolmeen metriin. Sisään mennään Lahori-portista, jonka takana avautuu Chhatta Chowk, katettu basaarikuja — Mughal-aikana täällä myytiin silkkiä ja koruja hoville. Basaarin päässä on Naubat Khana, rumputalo, jonka parvella soitettiin musiikkia päivittäin määrätunteina — ja jonka kohdalla jokaisen muun paitsi kuninkaallisten oli laskeuduttava ratsailta. Sen takana olivat audienssisali ja joen puolella marmoripaviljongit. Vuoden 1857 jälkeen linnoitus muuttui varuskunnaksi, ja noin neljä viidesosaa rak…
+- [Mekka — kaupunkilehti / Historia: Linnoitus, joka vartioi kukkulalta] Moskeijan eteläpuolella kohoavalla Bulbul-kukkulalla seisoi vuodesta 1780 osmanien linnoitus. Ajyadin linnake peitti noin kaksikymmentäkolmetuhatta neliömetriä, se rakennettiin suojaamaan pyhäkköä rosvoilta ja hyökkääjiltä, ja kukkulalta näki suoraan moskeijan pihaan. Linnoitus kuului Mekan siluettiin koko 1800-luvun — se näkyy tämän lehden vuoden 1889 valokuvassa moskeijan takana. Tammikuun ensimmäisen ja yhdeksännen päivän välillä vuonna 2002 linnoitus purettiin ja suurin osa kukkulasta tasoitettiin kellotornikompleksin tieltä. Rakennuksesta on jäljellä 1:25-kokoinen pienoismalli Istanbulin Miniatürk-puistossa.
+
+### 10.1
+KYSYMYS: Mistä kallioiden nimi tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moherin kalliot (luonto · vuori)
+Tietoruudun teksti: Moherin kalliot ovat merikallioita Burrenin alueen lounaisreunassa Claren kreivikunnassa. Ne jatkuvat noin neljäntoista kilometrin matkan.
+
+Eteläpäässä kalliot kohoavat 120 metriä Atlantin yllä Hag’s Headissa. Kahdeksan kilometriä pohjoisempana ne saavuttavat korkeimman kohtansa, 214 metriä, hieman O’Brienin tornin pohjoispuolella; tornin rakennutti 1835 Sir Cornelius O’Brien. Kallioilta näkyvät Aransaaret Galwaynlahdella sekä Maumturkin ja Twelve Pinsin vuoristot pohjoisessa.
+
+Nimi tulee vanhasta Mothar-nimisestä niemilinnoituksesta, joka seisoi Hag’s Headissa, kallioiden eteläisimmässä kärjessä. Linnoitus oli pystyssä vielä 1780, mutta se purettiin 1808, jotta sen kivistä saatiin rakennettua tähystys- ja lennätintorni varoittamaan ranskalaisten maihinnoususta Napoleonin sotien aikana.
+
+Kalliot ovat Irlannin käydyimpiä matkakohteita: vuonna 2006 ne nousivat nähtävyyksien kärkeen, ja ny…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Darwin — kaupunkilehti / Darwin: Kansa jolla oli paikalle oma nimi] Larrakia-kansa on asunut Darwinin seudulla kauan ennen eurooppalaisia ja kutsuu aluetta nimellä Garramilla, "valkoinen kivi", seudun kallioiden ja merenrantajyrkänteiden värin mukaan. Kansa tunnettiin aiemmin nimellä Gulumirrgin, ja sama sana on yhä sen kielen rinnakkaisnimi; vuoden 2021 väestönlaskennassa 41 ihmistä ilmoitti osaavansa kieltä. Vuonna 1997 perustettu Larrakia Nation Aboriginal Corporation edustaa kansaa nykyään, ja sillä oli joulukuussa 2021 yli 740 jäsentä. Maaliskuussa 2021 Vesteys Beach sai nimekseen Bundilla Beach, jolla larrakiat olivat sitä pitkään kutsuneet.
+- [Townsville — kaupunkilehti / Kuiva tropiikki: Kallio, joka yritettiin korottaa vuoreksi] Castle Hill on vaaleanpunaista graniittia ja 286 metriä merenpinnasta. Sen alkuperäiskansan nimi on Cootharinga, ja se on toinen kahdesta seudulla säilyneestä alkuperäiskansan paikannimestä. Kallio määräsi kaupungin epäsäännöllisen katuverkon. 1800-luvulla asukkaat kaatoivat sen puut ja villit vuohet söivät loput; vuohet poistettiin vasta 1930-luvulla, ja huipulle vievä tie rakennettiin 1935—36 työllisyystyönä. Ylös pääsee myös Goat Trackia, jossa on 758 porrasta. Kukkula merkittiin perintörekisteriin 1993. Lähde kertoo myös, että korkeutta on ainakin kahdesti yritetty nostaa, jotta kallio kelpaisi vuoreksi.
+
+### 10.2
+KYSYMYS: Miksi vanha linnoitus purettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moherin kalliot (luonto · vuori)
+Tietoruudun teksti: Moherin kalliot ovat merikallioita Burrenin alueen lounaisreunassa Claren kreivikunnassa. Ne jatkuvat noin neljäntoista kilometrin matkan.
+
+Eteläpäässä kalliot kohoavat 120 metriä Atlantin yllä Hag’s Headissa. Kahdeksan kilometriä pohjoisempana ne saavuttavat korkeimman kohtansa, 214 metriä, hieman O’Brienin tornin pohjoispuolella; tornin rakennutti 1835 Sir Cornelius O’Brien. Kallioilta näkyvät Aransaaret Galwaynlahdella sekä Maumturkin ja Twelve Pinsin vuoristot pohjoisessa.
+
+Nimi tulee vanhasta Mothar-nimisestä niemilinnoituksesta, joka seisoi Hag’s Headissa, kallioiden eteläisimmässä kärjessä. Linnoitus oli pystyssä vielä 1780, mutta se purettiin 1808, jotta sen kivistä saatiin rakennettua tähystys- ja lennätintorni varoittamaan ranskalaisten maihinnoususta Napoleonin sotien aikana.
+
+Kalliot ovat Irlannin käydyimpiä matkakohteita: vuonna 2006 ne nousivat nähtävyyksien kärkeen, ja ny…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Delhi — kohdekartta / Kohdekartta: Punainen linnoitus] 1638/1639–1648 Shah Jahanin linnoitus on kaupunki kaupungin sisällä: muurien ympärysmitta on yli kaksi kilometriä, ja punaisesta hiekkakivestä ladottu muuri nousee korkeimmillaan kolmeenkymmeneenkolmeen metriin. Sisään mennään Lahori-portista, jonka takana avautuu Chhatta Chowk, katettu basaarikuja — Mughal-aikana täällä myytiin silkkiä ja koruja hoville. Basaarin päässä on Naubat Khana, rumputalo, jonka parvella soitettiin musiikkia päivittäin määrätunteina — ja jonka kohdalla jokaisen muun paitsi kuninkaallisten oli laskeuduttava ratsailta. Sen takana olivat audienssisali ja joen puolella marmoripaviljongit. Vuoden 1857 jälkeen linnoitus muuttui varuskunnaksi, ja noin neljä viidesosaa rak…
+- [Mekka — kaupunkilehti / Historia: Linnoitus, joka vartioi kukkulalta] Moskeijan eteläpuolella kohoavalla Bulbul-kukkulalla seisoi vuodesta 1780 osmanien linnoitus. Ajyadin linnake peitti noin kaksikymmentäkolmetuhatta neliömetriä, se rakennettiin suojaamaan pyhäkköä rosvoilta ja hyökkääjiltä, ja kukkulalta näki suoraan moskeijan pihaan. Linnoitus kuului Mekan siluettiin koko 1800-luvun — se näkyy tämän lehden vuoden 1889 valokuvassa moskeijan takana. Tammikuun ensimmäisen ja yhdeksännen päivän välillä vuonna 2002 linnoitus purettiin ja suurin osa kukkulasta tasoitettiin kellotornikompleksin tieltä. Rakennuksesta on jäljellä 1:25-kokoinen pienoismalli Istanbulin Miniatürk-puistossa.
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

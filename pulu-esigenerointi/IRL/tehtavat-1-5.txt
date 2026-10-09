@@ -1,0 +1,205 @@
+================ KOHTA 21 (kohde:corlean-puupolku) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corlea Trackway (historia)
+Tietoruudun teksti: Corlea Trackway on Longfordin kreivikunnassa Keenaghin lähellä sijaitseva rautakautinen puutie suon yli. Dendrokronologia ajoittaa käytetyt tammet vuosiin 148–147 eaa. Tie oli noin kilometrin pituinen ja 3,2 metriä leveä, ja sen poikkipuihin tarvittiin noin 300 suurta tammea. Suo peitti tien kymmenen vuoden kuluessa, ja se säilyi noin kaksi vuosituhatta. Vuoden 1984 radiohiiliajoitus osoitti sen rautakautiseksi, ei pronssikautiseksi. Nykyään se on kansallismonumentti, jota hoitaa Office of Public Works, ja paikalla on vierailukeskus.
+
+### 21.1
+KYSYMYS: Minä vuosina tammet dendrokronologian mukaan kaadettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corlea Trackway (historia)
+Tietoruudun teksti: Corlea Trackway on Longfordin kreivikunnassa Keenaghin lähellä sijaitseva rautakautinen puutie suon yli. Dendrokronologia ajoittaa käytetyt tammet vuosiin 148–147 eaa. Tie oli noin kilometrin pituinen ja 3,2 metriä leveä, ja sen poikkipuihin tarvittiin noin 300 suurta tammea. Suo peitti tien kymmenen vuoden kuluessa, ja se säilyi noin kaksi vuosituhatta. Vuoden 1984 radiohiiliajoitus osoitti sen rautakautiseksi, ei pronssikautiseksi. Nykyään se on kansallismonumentti, jota hoitaa Office of Public Works, ja paikalla on vierailukeskus.
+
+### 21.2
+KYSYMYS: Miksi tie säilyi suossa noin kaksi vuosituhatta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corlea Trackway (historia)
+Tietoruudun teksti: Corlea Trackway on Longfordin kreivikunnassa Keenaghin lähellä sijaitseva rautakautinen puutie suon yli. Dendrokronologia ajoittaa käytetyt tammet vuosiin 148–147 eaa. Tie oli noin kilometrin pituinen ja 3,2 metriä leveä, ja sen poikkipuihin tarvittiin noin 300 suurta tammea. Suo peitti tien kymmenen vuoden kuluessa, ja se säilyi noin kaksi vuosituhatta. Vuoden 1984 radiohiiliajoitus osoitti sen rautakautiseksi, ei pronssikautiseksi. Nykyään se on kansallismonumentti, jota hoitaa Office of Public Works, ja paikalla on vierailukeskus.
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:devils-bit) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Devil's Bit (luonto · vuori)
+Tietoruudun teksti: Devil's Bit on 480 metriä korkea vuori Tipperaryn kreivikunnassa Templemoren luoteispuolella. Sen harjanteessa on ainutlaatuinen lovi, josta vuori on saanut nimensä; iiriksi nimi on Bearnán Éile, "Éilen pieni loveva kukkula". Kansantarinan mukaan paholainen puraisi palan vuoresta, mursi hampaansa ja sylki Cashelin kallion nykyiselle paikalleen. Huipulla on vuosina 1953–1954 pystytetty 45 jalan korkuinen risti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+- [San Juan — kaupunkilehti / Linnoitukset: Piru vei vahdin] Kauimpana muusta linnoituksesta törröttävä pieni kivinen vartiokoju tunnetaan nimellä Garita del Diablo, Pirun vahtikoju. Legendan mukaan sinne komennettu sotilas nimeltä Sánchez katosi jäljettömiin kesken vahtivuoronsa; aamulla paikalta löytyivät vain hänen varusteensa, ei miestä itseään. Tuulen ulvonta ja aaltojen jyske tekivät paikasta pelätyn vartiopaikan, ja sotilaat uskoivat pian, että itse paholainen oli noutanut kadonneen toverinsa. Toisen, maallisemman version mukaan Sánchez ei hukkunut mereen, vaan pakeni rakastettunsa Dianan kanssa vuorille perustaakseen uuden elämän kaukana vartiokojusta. Kumpi tarina on totta, sitä ei tiedä kukaan.
+
+### 22.1
+KYSYMYS: Minkä kuuluisan kallion paholainen taru sanoo sylkeneen vuoresta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Devil's Bit (luonto · vuori)
+Tietoruudun teksti: Devil's Bit on 480 metriä korkea vuori Tipperaryn kreivikunnassa Templemoren luoteispuolella. Sen harjanteessa on ainutlaatuinen lovi, josta vuori on saanut nimensä; iiriksi nimi on Bearnán Éile, "Éilen pieni loveva kukkula". Kansantarinan mukaan paholainen puraisi palan vuoresta, mursi hampaansa ja sylki Cashelin kallion nykyiselle paikalleen. Huipulla on vuosina 1953–1954 pystytetty 45 jalan korkuinen risti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Juan — kaupunkilehti / Linnoitukset: Piru vei vahdin] Kauimpana muusta linnoituksesta törröttävä pieni kivinen vartiokoju tunnetaan nimellä Garita del Diablo, Pirun vahtikoju. Legendan mukaan sinne komennettu sotilas nimeltä Sánchez katosi jäljettömiin kesken vahtivuoronsa; aamulla paikalta löytyivät vain hänen varusteensa, ei miestä itseään. Tuulen ulvonta ja aaltojen jyske tekivät paikasta pelätyn vartiopaikan, ja sotilaat uskoivat pian, että itse paholainen oli noutanut kadonneen toverinsa. Toisen, maallisemman version mukaan Sánchez ei hukkunut mereen, vaan pakeni rakastettunsa Dianan kanssa vuorille perustaakseen uuden elämän kaukana vartiokojusta. Kumpi tarina on totta, sitä ei tiedä kukaan.
+
+### 22.2
+KYSYMYS: Minä vuosina huipun risti pystytettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Devil's Bit (luonto · vuori)
+Tietoruudun teksti: Devil's Bit on 480 metriä korkea vuori Tipperaryn kreivikunnassa Templemoren luoteispuolella. Sen harjanteessa on ainutlaatuinen lovi, josta vuori on saanut nimensä; iiriksi nimi on Bearnán Éile, "Éilen pieni loveva kukkula". Kansantarinan mukaan paholainen puraisi palan vuoresta, mursi hampaansa ja sylki Cashelin kallion nykyiselle paikalleen. Huipulla on vuosina 1953–1954 pystytetty 45 jalan korkuinen risti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:hahmotelma-dublinin-keskiaikainen-linna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dublinin keskiaikainen linna (historia)
+Tietoruudun teksti: Kuningas Juhana Maattoman käskystä rakennettu Dublinin linna valmistui 1200-luvulla ja oli Englannin vallan keskus Irlannissa. Huhtikuun 1684 tulipalo tuhosi suuren osan keskiaikaisista rakennuksista, jotka korvattiin georgiaanisilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dublin — kohdekartta / Kohdekartta: Dublinin linna] 1204–1230 Dublinin linna on yksi Irlannin historian tärkeimmistä paikoista. Sen rakennutti normanni Meiler Fitzhenry kuningas Juhana Maattoman käskystä vuonna 1204, ja se oli pääosin valmis vuoteen 1230 mennessä. Alun perin se oli vahva linnoitus, jota ympäröivät paksut muurit ja pyöreät kulmatornit. Lähes 700 vuoden ajan linna toimi Englannin ja myöhemmin Britannian vallan keskuksena Irlannissa. Vuonna 1907 linnasta varastettiin Irlannin kruununjalokivet — niitä ei ole koskaan löydetty, ja arvoitus on yhä ratkaisematta! Irlannin itsenäistyessä linna luovutettiin juhlallisesti uudelle hallitukselle Michael Collinsin johdolla vuoden 1921 sopimuksen jälkeen. Vuodesta 1938 lähtien linnassa on …
+
+### 23.1
+KYSYMYS: Miltä Dublinin keskiaikainen linna näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dublinin keskiaikainen linna (historia)
+Tietoruudun teksti: Kuningas Juhana Maattoman käskystä rakennettu Dublinin linna valmistui 1200-luvulla ja oli Englannin vallan keskus Irlannissa. Huhtikuun 1684 tulipalo tuhosi suuren osan keskiaikaisista rakennuksista, jotka korvattiin georgiaanisilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dublin — kohdekartta / Kohdekartta: Dublinin linna] 1204–1230 Dublinin linna on yksi Irlannin historian tärkeimmistä paikoista. Sen rakennutti normanni Meiler Fitzhenry kuningas Juhana Maattoman käskystä vuonna 1204, ja se oli pääosin valmis vuoteen 1230 mennessä. Alun perin se oli vahva linnoitus, jota ympäröivät paksut muurit ja pyöreät kulmatornit. Lähes 700 vuoden ajan linna toimi Englannin ja myöhemmin Britannian vallan keskuksena Irlannissa. Vuonna 1907 linnasta varastettiin Irlannin kruununjalokivet — niitä ei ole koskaan löydetty, ja arvoitus on yhä ratkaisematta! Irlannin itsenäistyessä linna luovutettiin juhlallisesti uudelle hallitukselle Michael Collinsin johdolla vuoden 1921 sopimuksen jälkeen. Vuodesta 1938 lähtien linnassa on …
+
+### 23.2
+KYSYMYS: Miksi Dublinin keskiaikainen linna katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dublinin keskiaikainen linna (historia)
+Tietoruudun teksti: Kuningas Juhana Maattoman käskystä rakennettu Dublinin linna valmistui 1200-luvulla ja oli Englannin vallan keskus Irlannissa. Huhtikuun 1684 tulipalo tuhosi suuren osan keskiaikaisista rakennuksista, jotka korvattiin georgiaanisilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dublin — kohdekartta / Kohdekartta: Dublinin linna] 1204–1230 Dublinin linna on yksi Irlannin historian tärkeimmistä paikoista. Sen rakennutti normanni Meiler Fitzhenry kuningas Juhana Maattoman käskystä vuonna 1204, ja se oli pääosin valmis vuoteen 1230 mennessä. Alun perin se oli vahva linnoitus, jota ympäröivät paksut muurit ja pyöreät kulmatornit. Lähes 700 vuoden ajan linna toimi Englannin ja myöhemmin Britannian vallan keskuksena Irlannissa. Vuonna 1907 linnasta varastettiin Irlannin kruununjalokivet — niitä ei ole koskaan löydetty, ja arvoitus on yhä ratkaisematta! Irlannin itsenäistyessä linna luovutettiin juhlallisesti uudelle hallitukselle Michael Collinsin johdolla vuoden 1921 sopimuksen jälkeen. Vuodesta 1938 lähtien linnassa on …
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:hahmotelma-killarney) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Killarney (luonto · järvi)
+Tietoruudun teksti: Killarneyn kansallispuisto Kerryn kreivikunnassa oli Irlannin ensimmäinen kansallispuisto: se perustettiin, kun Muckrossin kartano lahjoitettiin Irlannin vapaavaltiolle vuonna 1932. Puisto on sittemmin laajentunut yli sadan neliökilometrin kokoiseksi, ja siihen kuuluvat Killarneyn järvet, kansainvälisesti merkittävät tammi- ja marjakuusimetsät sekä vuorenhuiput. Puistossa elää Irlannin mantereen ainoa punahirvilauma, ja sillä on Irlannin laajin luonnonmetsäala; Unesco nimesi sen biosfäärialueeksi vuonna 1981. Lough Leane on Killarneyn järvistä suurin, ja siinä on yli 30 saarta; Herbertin suvun Muckross House valmistui vuonna 1843.
+
+### 24.1
+KYSYMYS: Mikä on Killarneyn järvistä suurin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Killarney (luonto · järvi)
+Tietoruudun teksti: Killarneyn kansallispuisto Kerryn kreivikunnassa oli Irlannin ensimmäinen kansallispuisto: se perustettiin, kun Muckrossin kartano lahjoitettiin Irlannin vapaavaltiolle vuonna 1932. Puisto on sittemmin laajentunut yli sadan neliökilometrin kokoiseksi, ja siihen kuuluvat Killarneyn järvet, kansainvälisesti merkittävät tammi- ja marjakuusimetsät sekä vuorenhuiput. Puistossa elää Irlannin mantereen ainoa punahirvilauma, ja sillä on Irlannin laajin luonnonmetsäala; Unesco nimesi sen biosfäärialueeksi vuonna 1981. Lough Leane on Killarneyn järvistä suurin, ja siinä on yli 30 saarta; Herbertin suvun Muckross House valmistui vuonna 1843.
+
+### 24.2
+KYSYMYS: Minä vuonna Muckross House valmistui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Killarney (luonto · järvi)
+Tietoruudun teksti: Killarneyn kansallispuisto Kerryn kreivikunnassa oli Irlannin ensimmäinen kansallispuisto: se perustettiin, kun Muckrossin kartano lahjoitettiin Irlannin vapaavaltiolle vuonna 1932. Puisto on sittemmin laajentunut yli sadan neliökilometrin kokoiseksi, ja siihen kuuluvat Killarneyn järvet, kansainvälisesti merkittävät tammi- ja marjakuusimetsät sekä vuorenhuiput. Puistossa elää Irlannin mantereen ainoa punahirvilauma, ja sillä on Irlannin laajin luonnonmetsäala; Unesco nimesi sen biosfäärialueeksi vuonna 1981. Lough Leane on Killarneyn järvistä suurin, ja siinä on yli 30 saarta; Herbertin suvun Muckross House valmistui vuonna 1843.
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-connemara) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Connemara (luonto · vuori)
+Tietoruudun teksti: Connemara on Galwayn kreivikunnan länsiosassa Atlantin rannikolla oleva alue, jolla on vahva yhteys perinteiseen irlantilaiseen kulttuuriin: se kattaa suurimman osan Connachtin gaeltachtista, Irlannin suurimmasta irlanninkielisestä alueesta. Maisemassa on paljon vuoria, joista tunnetuimmat ovat Twelve Pins, sekä niemimaita, poukamia, saaria ja pieniä järviä. Alueen suurin asutuskeskus on Clifden, jonka ympäristössä on runsaasti megaliittihautoja, ja Connemaran vihreä marmori oli arvokasta kauppatavaraa jo esihistoriallisina aikoina. Suuren nälänhädän aikana 1840-luvun lopulla Connemara autioitui rajusti, ja vuonna 1843 Daniel O'Connell puhui Clifdenin kansankokouksessa, johon arvioitiin osallistuneen 100 000 ihmistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: Government Museum] 1851, nykyisellä paikalla 1854 Museo perustettiin 1851 College Roadille Nungambakkamiin ja siirtyi 1854 Pantheonin alueelle Egmoreen. Alue on vanhempi kuin museo: elokuussa 1778 kuvernööri myönsi neljäkymmentäkolme eekkeriä eräälle virkamiehelle, joka luovutti maat 1793 kahdenkymmenenneljän hengen toimikunnalle, joka järjesti kaupungin julkiset huvit. Päätalo ja puutarha myytiin 1821 armenialaiselle kauppiaalle E. S. Mooratille, joka myi ne takaisin hallitukselle 1830. Rakennuksia laajennettiin 1864–1890. Vanhan museorakennuksen ytimessä ovat Pantheonin ainoat säilyneet osat, jotka tunnistaa pohjoispuolen leveistä portaista. Kokoelmassa on 1,7 miljoonaa esinettä, muun muassa yksi Euroopan u…
+- [Chennai — kaupunkilehti / Chennai: Intian toiseksi vanhin museo] Government Museum perustettiin 1851 College Roadille Nungambakkamiin ja siirtyi 1854 Pantheonin alueelle Egmoreen, jossa se on yhä. Vanhempi museo Intiassa on vain Kalkutan Intian museo. Kokoelmassa on 1,7 miljoonaa esinettä, ja siihen kuuluu yksi Euroopan ulkopuolen laajimmista roomalaisten rahojen kokoelmista sekä viisisataa pronssiveistosta. Samassa korttelissa ovat Museum Theatre, kansallinen taidegalleria ja Connemaran kirjasto, jonka peruskiven kuvernööri lordi Connemara laski 1890 ja joka avattiin yleisölle 1896.
+
+### 25.1
+KYSYMYS: Mitkä ovat Connemaran tunnetuimmat vuoret?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Connemara (luonto · vuori)
+Tietoruudun teksti: Connemara on Galwayn kreivikunnan länsiosassa Atlantin rannikolla oleva alue, jolla on vahva yhteys perinteiseen irlantilaiseen kulttuuriin: se kattaa suurimman osan Connachtin gaeltachtista, Irlannin suurimmasta irlanninkielisestä alueesta. Maisemassa on paljon vuoria, joista tunnetuimmat ovat Twelve Pins, sekä niemimaita, poukamia, saaria ja pieniä järviä. Alueen suurin asutuskeskus on Clifden, jonka ympäristössä on runsaasti megaliittihautoja, ja Connemaran vihreä marmori oli arvokasta kauppatavaraa jo esihistoriallisina aikoina. Suuren nälänhädän aikana 1840-luvun lopulla Connemara autioitui rajusti, ja vuonna 1843 Daniel O'Connell puhui Clifdenin kansankokouksessa, johon arvioitiin osallistuneen 100 000 ihmistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: Government Museum] 1851, nykyisellä paikalla 1854 Museo perustettiin 1851 College Roadille Nungambakkamiin ja siirtyi 1854 Pantheonin alueelle Egmoreen. Alue on vanhempi kuin museo: elokuussa 1778 kuvernööri myönsi neljäkymmentäkolme eekkeriä eräälle virkamiehelle, joka luovutti maat 1793 kahdenkymmenenneljän hengen toimikunnalle, joka järjesti kaupungin julkiset huvit. Päätalo ja puutarha myytiin 1821 armenialaiselle kauppiaalle E. S. Mooratille, joka myi ne takaisin hallitukselle 1830. Rakennuksia laajennettiin 1864–1890. Vanhan museorakennuksen ytimessä ovat Pantheonin ainoat säilyneet osat, jotka tunnistaa pohjoispuolen leveistä portaista. Kokoelmassa on 1,7 miljoonaa esinettä, muun muassa yksi Euroopan u…
+- [Chennai — kaupunkilehti / Chennai: Intian toiseksi vanhin museo] Government Museum perustettiin 1851 College Roadille Nungambakkamiin ja siirtyi 1854 Pantheonin alueelle Egmoreen, jossa se on yhä. Vanhempi museo Intiassa on vain Kalkutan Intian museo. Kokoelmassa on 1,7 miljoonaa esinettä, ja siihen kuuluu yksi Euroopan ulkopuolen laajimmista roomalaisten rahojen kokoelmista sekä viisisataa pronssiveistosta. Samassa korttelissa ovat Museum Theatre, kansallinen taidegalleria ja Connemaran kirjasto, jonka peruskiven kuvernööri lordi Connemara laski 1890 ja joka avattiin yleisölle 1896.
+
+### 25.2
+KYSYMYS: Mikä on Connemaran suurin asutuskeskus?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Connemara (luonto · vuori)
+Tietoruudun teksti: Connemara on Galwayn kreivikunnan länsiosassa Atlantin rannikolla oleva alue, jolla on vahva yhteys perinteiseen irlantilaiseen kulttuuriin: se kattaa suurimman osan Connachtin gaeltachtista, Irlannin suurimmasta irlanninkielisestä alueesta. Maisemassa on paljon vuoria, joista tunnetuimmat ovat Twelve Pins, sekä niemimaita, poukamia, saaria ja pieniä järviä. Alueen suurin asutuskeskus on Clifden, jonka ympäristössä on runsaasti megaliittihautoja, ja Connemaran vihreä marmori oli arvokasta kauppatavaraa jo esihistoriallisina aikoina. Suuren nälänhädän aikana 1840-luvun lopulla Connemara autioitui rajusti, ja vuonna 1843 Daniel O'Connell puhui Clifdenin kansankokouksessa, johon arvioitiin osallistuneen 100 000 ihmistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: Government Museum] 1851, nykyisellä paikalla 1854 Museo perustettiin 1851 College Roadille Nungambakkamiin ja siirtyi 1854 Pantheonin alueelle Egmoreen. Alue on vanhempi kuin museo: elokuussa 1778 kuvernööri myönsi neljäkymmentäkolme eekkeriä eräälle virkamiehelle, joka luovutti maat 1793 kahdenkymmenenneljän hengen toimikunnalle, joka järjesti kaupungin julkiset huvit. Päätalo ja puutarha myytiin 1821 armenialaiselle kauppiaalle E. S. Mooratille, joka myi ne takaisin hallitukselle 1830. Rakennuksia laajennettiin 1864–1890. Vanhan museorakennuksen ytimessä ovat Pantheonin ainoat säilyneet osat, jotka tunnistaa pohjoispuolen leveistä portaista. Kokoelmassa on 1,7 miljoonaa esinettä, muun muassa yksi Euroopan u…
+- [Chennai — kaupunkilehti / Chennai: Intian toiseksi vanhin museo] Government Museum perustettiin 1851 College Roadille Nungambakkamiin ja siirtyi 1854 Pantheonin alueelle Egmoreen, jossa se on yhä. Vanhempi museo Intiassa on vain Kalkutan Intian museo. Kokoelmassa on 1,7 miljoonaa esinettä, ja siihen kuuluu yksi Euroopan ulkopuolen laajimmista roomalaisten rahojen kokoelmista sekä viisisataa pronssiveistosta. Samassa korttelissa ovat Museum Theatre, kansallinen taidegalleria ja Connemaran kirjasto, jonka peruskiven kuvernööri lordi Connemara laski 1890 ja joka avattiin yleisölle 1896.
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

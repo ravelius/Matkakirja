@@ -1,0 +1,184 @@
+================ KOHTA 31 (kohde:hahmotelma-slieve-league) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slieve League (luonto · vuori)
+Tietoruudun teksti: Slieve League, irlanniksi Sliabh Liag eli kivipylväiden vuori, on Donegalin kreivikunnan Atlantin rannikolla oleva vuori. Sen 601 metrin merikalliot ovat Irlannin toiseksi korkeimmat Croaghaunin jälkeen ja Euroopan korkeimpien joukossa. Luonnontieteilijä Robert Lloyd Praeger kirjoitti vuonna 1937 muistelmissaan vuoren pohjoispuolen jyrkänteestä ja huipun veitsenteräisestä One Man's Path -harjanteesta, joka on yksi Irlannin merkittävimmistä vaelluksista. Vuorta kuvataan usein Bunglassin näköalapaikalta, jonne pääsee kapeaa tietä pitkin Teelinistä, ja tien viimeiset kilometrit kulkevat jyrkänteen reunaa.
+
+### 31.1
+KYSYMYS: Mitä nimi Sliabh Liag tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slieve League (luonto · vuori)
+Tietoruudun teksti: Slieve League, irlanniksi Sliabh Liag eli kivipylväiden vuori, on Donegalin kreivikunnan Atlantin rannikolla oleva vuori. Sen 601 metrin merikalliot ovat Irlannin toiseksi korkeimmat Croaghaunin jälkeen ja Euroopan korkeimpien joukossa. Luonnontieteilijä Robert Lloyd Praeger kirjoitti vuonna 1937 muistelmissaan vuoren pohjoispuolen jyrkänteestä ja huipun veitsenteräisestä One Man's Path -harjanteesta, joka on yksi Irlannin merkittävimmistä vaelluksista. Vuorta kuvataan usein Bunglassin näköalapaikalta, jonne pääsee kapeaa tietä pitkin Teelinistä, ja tien viimeiset kilometrit kulkevat jyrkänteen reunaa.
+
+### 31.2
+KYSYMYS: Mikä on Slieve Leaguen tunnettu vaellusharjanne?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slieve League (luonto · vuori)
+Tietoruudun teksti: Slieve League, irlanniksi Sliabh Liag eli kivipylväiden vuori, on Donegalin kreivikunnan Atlantin rannikolla oleva vuori. Sen 601 metrin merikalliot ovat Irlannin toiseksi korkeimmat Croaghaunin jälkeen ja Euroopan korkeimpien joukossa. Luonnontieteilijä Robert Lloyd Praeger kirjoitti vuonna 1937 muistelmissaan vuoren pohjoispuolen jyrkänteestä ja huipun veitsenteräisestä One Man's Path -harjanteesta, joka on yksi Irlannin merkittävimmistä vaelluksista. Vuorta kuvataan usein Bunglassin näköalapaikalta, jonne pääsee kapeaa tietä pitkin Teelinistä, ja tien viimeiset kilometrit kulkevat jyrkänteen reunaa.
+
+### 31.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+================ KOHTA 32 (kohde:hahmotelma-malin-head) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Malin Head (meri)
+Tietoruudun teksti: Malin Head on Irlannin mantereen pohjoisin kohta Donegalin Inishowenin niemimaalla, ja sen pohjoisin piste on Dunalderagh 55,38 asteen pohjoista leveyttä. Niemeltä on nimensä saanut Malinin merialue, ja sen sääasema on yksi BBC:n merisäätiedotuksessa kuuluvista 22 asemasta; säähavainnot alkoivat siellä vuonna 1885. Tower Hillillä on vuonna 1805 rakennettu torni, ja noin vuonna 1902 lähelle rakennettiin Marconi-yhtiön käyttämä merkinantoasema. Ballyhillionin nousseiden rantojen järjestelmä on kansainvälisesti tieteellisesti merkittävä, sillä sen selvät rantaviivat kertovat, miten meren ja maan suhde muuttui, kun jäätiköt alkoivat sulaa noin 15 000 vuotta sitten.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Luonto: Pylväät, jotka laava latoi] 60 milj. vuotta sitten — Pohjois-Irlannin rannikolla on noin 40 000 kivipylvästä, jotka nousevat merestä kuin ladotut askelmat. Ne syntyivät, kun paksu laavakerros jäähtyi hyvin hitaasti. Jäähtyessään laava kutistui ja halkeili, ja halkeamat etsivät lyhimmän reitin — siksi useimmista pylväistä tuli kuusikulmaisia. Osassa on kuitenkin neljä, viisi, seitsemän tai kahdeksan sivua. Vanha tarina selittää saman toisin: jättiläinen Fionn mac Cumhaill rakensi kivitien Skotlantiin päästäkseen tappelemaan toisen jättiläisen kanssa.
+- [Irlanti — maalehti / Luonto: Metri tuhannessa vuodessa] Vuosituhansia — Irlannin soissa kasvava rahkasammal ei maadu kunnolla, koska vesi on hapanta ja hapetonta. Kuolleet kasvit painuvat kerroksiksi, ja tuhannessa vuodessa syntyy noin metri turvetta. Turvetta on nostettu lämmitykseen vuosisatoja: se leikataan pitkällä terällä palasiksi, jotka pinotaan pystyyn kuivumaan tuuleen. Suo säilyttää myös sen, mikä sinne joutuu, ja soista on löytynyt puisia teitä, voita puuastioissa ja kirjoja. Nykyään nostoa rajoitetaan, koska suot sitovat hiiltä ja niitä on jäljellä vain murto-osa.
+- [Irlanti — maalehti / Historia: Kaksi valtiatarta, yksi yhteinen kieli] 1593 — Gráinne Ní Mháille johti 1500-luvulla laivastoa Länsi-Irlannin rannikolla. Hän peri isältään merenkulkusuvun ja piti hallussaan linnoja ja aluksia, joilla kerättiin maksuja ohi kulkevilta laivoilta. Vuonna 1593 hän purjehti Lontooseen tapaamaan kuningatar Elisabet I:tä, koska hänen poikansa oli vangittu. Kumpikaan ei osannut toisen kieltä, joten keskustelu käytiin latinaksi. Gráinne kieltäytyi kumartamasta, koska ei tunnustanut Elisabetia Irlannin kuningattareksi. Poika päästettiin silti vapaaksi.
+
+### 32.1
+KYSYMYS: Mikä on Irlannin mantereen pohjoisin kohta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Malin Head (meri)
+Tietoruudun teksti: Malin Head on Irlannin mantereen pohjoisin kohta Donegalin Inishowenin niemimaalla, ja sen pohjoisin piste on Dunalderagh 55,38 asteen pohjoista leveyttä. Niemeltä on nimensä saanut Malinin merialue, ja sen sääasema on yksi BBC:n merisäätiedotuksessa kuuluvista 22 asemasta; säähavainnot alkoivat siellä vuonna 1885. Tower Hillillä on vuonna 1805 rakennettu torni, ja noin vuonna 1902 lähelle rakennettiin Marconi-yhtiön käyttämä merkinantoasema. Ballyhillionin nousseiden rantojen järjestelmä on kansainvälisesti tieteellisesti merkittävä, sillä sen selvät rantaviivat kertovat, miten meren ja maan suhde muuttui, kun jäätiköt alkoivat sulaa noin 15 000 vuotta sitten.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Luonto: Pylväät, jotka laava latoi] 60 milj. vuotta sitten — Pohjois-Irlannin rannikolla on noin 40 000 kivipylvästä, jotka nousevat merestä kuin ladotut askelmat. Ne syntyivät, kun paksu laavakerros jäähtyi hyvin hitaasti. Jäähtyessään laava kutistui ja halkeili, ja halkeamat etsivät lyhimmän reitin — siksi useimmista pylväistä tuli kuusikulmaisia. Osassa on kuitenkin neljä, viisi, seitsemän tai kahdeksan sivua. Vanha tarina selittää saman toisin: jättiläinen Fionn mac Cumhaill rakensi kivitien Skotlantiin päästäkseen tappelemaan toisen jättiläisen kanssa.
+- [Irlanti — maalehti / Luonto: Metri tuhannessa vuodessa] Vuosituhansia — Irlannin soissa kasvava rahkasammal ei maadu kunnolla, koska vesi on hapanta ja hapetonta. Kuolleet kasvit painuvat kerroksiksi, ja tuhannessa vuodessa syntyy noin metri turvetta. Turvetta on nostettu lämmitykseen vuosisatoja: se leikataan pitkällä terällä palasiksi, jotka pinotaan pystyyn kuivumaan tuuleen. Suo säilyttää myös sen, mikä sinne joutuu, ja soista on löytynyt puisia teitä, voita puuastioissa ja kirjoja. Nykyään nostoa rajoitetaan, koska suot sitovat hiiltä ja niitä on jäljellä vain murto-osa.
+- [Irlanti — maalehti / Historia: Kaksi valtiatarta, yksi yhteinen kieli] 1593 — Gráinne Ní Mháille johti 1500-luvulla laivastoa Länsi-Irlannin rannikolla. Hän peri isältään merenkulkusuvun ja piti hallussaan linnoja ja aluksia, joilla kerättiin maksuja ohi kulkevilta laivoilta. Vuonna 1593 hän purjehti Lontooseen tapaamaan kuningatar Elisabet I:tä, koska hänen poikansa oli vangittu. Kumpikaan ei osannut toisen kieltä, joten keskustelu käytiin latinaksi. Gráinne kieltäytyi kumartamasta, koska ei tunnustanut Elisabetia Irlannin kuningattareksi. Poika päästettiin silti vapaaksi.
+
+### 32.2
+KYSYMYS: Minä vuonna Malin Headin torni rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Malin Head (meri)
+Tietoruudun teksti: Malin Head on Irlannin mantereen pohjoisin kohta Donegalin Inishowenin niemimaalla, ja sen pohjoisin piste on Dunalderagh 55,38 asteen pohjoista leveyttä. Niemeltä on nimensä saanut Malinin merialue, ja sen sääasema on yksi BBC:n merisäätiedotuksessa kuuluvista 22 asemasta; säähavainnot alkoivat siellä vuonna 1885. Tower Hillillä on vuonna 1805 rakennettu torni, ja noin vuonna 1902 lähelle rakennettiin Marconi-yhtiön käyttämä merkinantoasema. Ballyhillionin nousseiden rantojen järjestelmä on kansainvälisesti tieteellisesti merkittävä, sillä sen selvät rantaviivat kertovat, miten meren ja maan suhde muuttui, kun jäätiköt alkoivat sulaa noin 15 000 vuotta sitten.
+
+### 32.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+================ KOHTA 33 (kohde:hahmotelma-loop-head) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loop Head (meri)
+Tietoruudun teksti: Loop Head, irlanniksi Ceann Léime eli hyppyniemi, on Shannon-joen suun pohjoispuolella Clarein kreivikunnassa Länsi-Irlannissa oleva niemi. Sen kärkeä merkitsee näkyvä majakka, ja vastapäätä Shannonin toisella puolella on Kerry Head. Niemimaan toisella puolella on Atlantti ja toisella Shannonin suisto, ja vain noin mailin levyinen maakaistale estää sitä olemasta saari. Vuonna 2010 niemimaa sai EU:n European Destinations of Excellence -tunnustuksen, ja sen kärjessä on toisen maailmansodan Emergency-ajalta jäänyt jättimäinen Eire-kyltti.
+
+### 33.1
+KYSYMYS: Mitä nimi Ceann Léime tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loop Head (meri)
+Tietoruudun teksti: Loop Head, irlanniksi Ceann Léime eli hyppyniemi, on Shannon-joen suun pohjoispuolella Clarein kreivikunnassa Länsi-Irlannissa oleva niemi. Sen kärkeä merkitsee näkyvä majakka, ja vastapäätä Shannonin toisella puolella on Kerry Head. Niemimaan toisella puolella on Atlantti ja toisella Shannonin suisto, ja vain noin mailin levyinen maakaistale estää sitä olemasta saari. Vuonna 2010 niemimaa sai EU:n European Destinations of Excellence -tunnustuksen, ja sen kärjessä on toisen maailmansodan Emergency-ajalta jäänyt jättimäinen Eire-kyltti.
+
+### 33.2
+KYSYMYS: Mikä merkitsee Loop Headin kärkeä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loop Head (meri)
+Tietoruudun teksti: Loop Head, irlanniksi Ceann Léime eli hyppyniemi, on Shannon-joen suun pohjoispuolella Clarein kreivikunnassa Länsi-Irlannissa oleva niemi. Sen kärkeä merkitsee näkyvä majakka, ja vastapäätä Shannonin toisella puolella on Kerry Head. Niemimaan toisella puolella on Atlantti ja toisella Shannonin suisto, ja vain noin mailin levyinen maakaistale estää sitä olemasta saari. Vuonna 2010 niemimaa sai EU:n European Destinations of Excellence -tunnustuksen, ja sen kärjessä on toisen maailmansodan Emergency-ajalta jäänyt jättimäinen Eire-kyltti.
+
+### 33.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+================ KOHTA 34 (kohde:hahmotelma-cobh) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cobh (Queenstown) (merenkulku)
+Tietoruudun teksti: Cobh, jota kutsuttiin vuosina 1849–1920 nimellä Queenstown, on satamakaupunki Corkin kreivikunnan etelärannikolla Corkin sataman Great Islandin eteläpuolella. Nimi Queenstown annettiin vuonna 1849 kuningatar Victorian vierailun aikana, ja nimi Cobh, joka on englanninkielisen nimen Cove gaelisointi, palautettiin vuonna 1920. Kaupungin korkealla kohdalla kohoaa Pyhän Colmanin katedraali, joka on 91,4 metriä korkea. Cobh oli suuri transatlanttinen satama: sieltä lähti 2,5 miljoonaa niistä kuudesta miljoonasta irlantilaisesta, jotka muuttivat Pohjois-Amerikkaan vuosina 1848–1950. Kaupungin siirtolais- ja merenkulkuperintö on nykyään matkailun perusta.
+
+### 34.1
+KYSYMYS: Millä nimellä Cobhia kutsuttiin vuosina 1849–1920?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cobh (Queenstown) (merenkulku)
+Tietoruudun teksti: Cobh, jota kutsuttiin vuosina 1849–1920 nimellä Queenstown, on satamakaupunki Corkin kreivikunnan etelärannikolla Corkin sataman Great Islandin eteläpuolella. Nimi Queenstown annettiin vuonna 1849 kuningatar Victorian vierailun aikana, ja nimi Cobh, joka on englanninkielisen nimen Cove gaelisointi, palautettiin vuonna 1920. Kaupungin korkealla kohdalla kohoaa Pyhän Colmanin katedraali, joka on 91,4 metriä korkea. Cobh oli suuri transatlanttinen satama: sieltä lähti 2,5 miljoonaa niistä kuudesta miljoonasta irlantilaisesta, jotka muuttivat Pohjois-Amerikkaan vuosina 1848–1950. Kaupungin siirtolais- ja merenkulkuperintö on nykyään matkailun perusta.
+
+### 34.2
+KYSYMYS: Kuinka moni Irlannista Pohjois-Amerikkaan muuttanut lähti Cobhista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cobh (Queenstown) (merenkulku)
+Tietoruudun teksti: Cobh, jota kutsuttiin vuosina 1849–1920 nimellä Queenstown, on satamakaupunki Corkin kreivikunnan etelärannikolla Corkin sataman Great Islandin eteläpuolella. Nimi Queenstown annettiin vuonna 1849 kuningatar Victorian vierailun aikana, ja nimi Cobh, joka on englanninkielisen nimen Cove gaelisointi, palautettiin vuonna 1920. Kaupungin korkealla kohdalla kohoaa Pyhän Colmanin katedraali, joka on 91,4 metriä korkea. Cobh oli suuri transatlanttinen satama: sieltä lähti 2,5 miljoonaa niistä kuudesta miljoonasta irlantilaisesta, jotka muuttivat Pohjois-Amerikkaan vuosina 1848–1950. Kaupungin siirtolais- ja merenkulkuperintö on nykyään matkailun perusta.
+
+### 34.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+================ KOHTA 35 (kohde:hahmotelma-bunratty) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bunratty (historia)
+Tietoruudun teksti: Bunratty Castle on suuri 1400-luvun tornitalo Clarein kreivikunnassa Bunrattyn kylän keskustassa, Limerickin ja Ennisin välisen tien varrella lähellä Shannonin kaupunkia ja sen lentokenttää. Nimi tarkoittaa irlanniksi Ratty-joen suuta; Ratty on toinen nimi Owenogarney-joelle, joka laskee Shannonin suistoon linnan ohi. Nykyinen, neljäs linna aloitettiin noin vuonna 1450, ja sen rakentajaksi arvellaan MacNamaran päällikköä. Vuonna 1558 Irlannin kuninkaan sijainen Thomas Radclyffe valtasi linnan, joka oli tuolloin yksi Thomondin tärkeimmistä linnoituksista, ja vuonna 1956 varakreivi Gort osti ja kunnosti linnan pelastaen sen raunioitumiselta; yleisölle se avattiin vuonna 1960.
+
+### 35.1
+KYSYMYS: Mitä nimi Bunratty tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bunratty (historia)
+Tietoruudun teksti: Bunratty Castle on suuri 1400-luvun tornitalo Clarein kreivikunnassa Bunrattyn kylän keskustassa, Limerickin ja Ennisin välisen tien varrella lähellä Shannonin kaupunkia ja sen lentokenttää. Nimi tarkoittaa irlanniksi Ratty-joen suuta; Ratty on toinen nimi Owenogarney-joelle, joka laskee Shannonin suistoon linnan ohi. Nykyinen, neljäs linna aloitettiin noin vuonna 1450, ja sen rakentajaksi arvellaan MacNamaran päällikköä. Vuonna 1558 Irlannin kuninkaan sijainen Thomas Radclyffe valtasi linnan, joka oli tuolloin yksi Thomondin tärkeimmistä linnoituksista, ja vuonna 1956 varakreivi Gort osti ja kunnosti linnan pelastaen sen raunioitumiselta; yleisölle se avattiin vuonna 1960.
+
+### 35.2
+KYSYMYS: Kuka pelasti linnan raunioitumiselta vuonna 1956?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bunratty (historia)
+Tietoruudun teksti: Bunratty Castle on suuri 1400-luvun tornitalo Clarein kreivikunnassa Bunrattyn kylän keskustassa, Limerickin ja Ennisin välisen tien varrella lähellä Shannonin kaupunkia ja sen lentokenttää. Nimi tarkoittaa irlanniksi Ratty-joen suuta; Ratty on toinen nimi Owenogarney-joelle, joka laskee Shannonin suistoon linnan ohi. Nykyinen, neljäs linna aloitettiin noin vuonna 1450, ja sen rakentajaksi arvellaan MacNamaran päällikköä. Vuonna 1558 Irlannin kuninkaan sijainen Thomas Radclyffe valtasi linnan, joka oli tuolloin yksi Thomondin tärkeimmistä linnoituksista, ja vuonna 1956 varakreivi Gort osti ja kunnosti linnan pelastaen sen raunioitumiselta; yleisölle se avattiin vuonna 1960.
+
+### 35.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI

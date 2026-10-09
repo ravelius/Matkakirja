@@ -1,0 +1,292 @@
+================ KOHTA 11 (kohde:kilkennyn-linna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kilkennyn linna (kaupungit)
+Tietoruudun teksti: Kilkennyn linna rakennettiin vuonna 1260 valvomaan Nore-joen kahluupaikkaa ja useiden teiden risteystä. Se oli normannivallan näkyvä merkki, ja alkuperäisessä 1200-luvun asussaan se oli tärkeä osa kaupungin puolustusta: neljä suurta pyöreää kulmatornia ja valtava vallihauta, jonka osa näkyy yhä Paraden kohdalla.
+
+Ensimmäisen, todennäköisesti puisen linnan rakennutti 1100-luvulla Richard de Clare eli Strongbow. Anglonormannit olivat perustaneet paikalle linnan jo 1173, mahdollisesti Osraigen Mac Giolla Phádraig -kuninkaiden aiemman asuinpaikan päälle.
+
+Ensimmäinen kivilinna valmistui 1260. Se oli neliömäinen ja siinä oli torni jokaisessa kulmassa; neljästä alkuperäisestä tornista kolme on yhä pystyssä. Kruunu takavarikoi linnan ja myi sen Butlerin suvulle 1391.
+
+Vuonna 1967 Arthur Butler, kuudes Ormonden markiisi, myi linnan viidelläkymmenellä punnalla Kilkennyn asukkaiden perustamalle k…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Santa Fe — kaupunkilehti / Taiteen kaupunki: Hinta maksettiin historialla] Vuoteen 1930 mennessä sallittuun kirjoon lisättiin territoriaalityyli, osavaltioasemaa edeltävä tapa, johon kuuluvat portales eli suuret katetut kuistit ja valkoiseksi maalatut ikkuna- ja oviotsat. Vuoden 1957 asetus teki siitä lain: uusien ja uudelleen rakennettujen talojen on etenkin historiallisilla alueilla noudatettava pueblo- tai espanjalais-territoriaalista tyyliä tasakattoineen. Kaupungista tuli "erilainen", kuten matkailumainos lupasi — mutta hinta maksettiin historialla: puebloittamisen kiireessä revittiin pois valurautaiset liikejulkisivut ja viktoriaaniset koristeet, ja suuri osa kaupungin omaa rakennushistoriaa katosi. Tyylin keskeisiä arkkitehteja olivat T. Charles Gaastra ja …
+- [Varsova — kohdekartta / Kohdekartta: Wienin asema] Tässä kaupungissa mitta oli kahdenlainen, ja isoisäsi olisi pitänyt siitä enemmän kuin torin väreistä. Varsovasta lounaaseen lähtevä Wienin rata avattiin 14. kesäkuuta 1845, ensin kolmenkymmenen kilometrin pätkänä, ja se ylsi Itävallan rajalle huhtikuussa 1848: kaikkiaan runsaat 327 kilometriä ja 27 asemaa. Se oli ensimmäinen rata Kongressi-Puolassa ja toinen koko keisarikunnassa. Ja se oli rakennettu eurooppalaiseen mittaan, 1 435 millimetriä kiskosta kiskoon, kun kaikilla muilla keisarikunnan radoilla mitta oli leveämpi, 1 524. Kaksi rataa, kaksi mittaa, eikä yhtäkään vaunua voinut ajaa toiselta toiselle. Pietarin rata tuli Varsovaan 1862 ja pysähtyi joen toiselle rannalle. Kierbedźin sil…
+
+### 11.1
+KYSYMYS: Paljonko linnasta maksettiin vuonna 1967?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kilkennyn linna (kaupungit)
+Tietoruudun teksti: Kilkennyn linna rakennettiin vuonna 1260 valvomaan Nore-joen kahluupaikkaa ja useiden teiden risteystä. Se oli normannivallan näkyvä merkki, ja alkuperäisessä 1200-luvun asussaan se oli tärkeä osa kaupungin puolustusta: neljä suurta pyöreää kulmatornia ja valtava vallihauta, jonka osa näkyy yhä Paraden kohdalla.
+
+Ensimmäisen, todennäköisesti puisen linnan rakennutti 1100-luvulla Richard de Clare eli Strongbow. Anglonormannit olivat perustaneet paikalle linnan jo 1173, mahdollisesti Osraigen Mac Giolla Phádraig -kuninkaiden aiemman asuinpaikan päälle.
+
+Ensimmäinen kivilinna valmistui 1260. Se oli neliömäinen ja siinä oli torni jokaisessa kulmassa; neljästä alkuperäisestä tornista kolme on yhä pystyssä. Kruunu takavarikoi linnan ja myi sen Butlerin suvulle 1391.
+
+Vuonna 1967 Arthur Butler, kuudes Ormonden markiisi, myi linnan viidelläkymmenellä punnalla Kilkennyn asukkaiden perustamalle k…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Santa Fe — kaupunkilehti / Taiteen kaupunki: Hinta maksettiin historialla] Vuoteen 1930 mennessä sallittuun kirjoon lisättiin territoriaalityyli, osavaltioasemaa edeltävä tapa, johon kuuluvat portales eli suuret katetut kuistit ja valkoiseksi maalatut ikkuna- ja oviotsat. Vuoden 1957 asetus teki siitä lain: uusien ja uudelleen rakennettujen talojen on etenkin historiallisilla alueilla noudatettava pueblo- tai espanjalais-territoriaalista tyyliä tasakattoineen. Kaupungista tuli "erilainen", kuten matkailumainos lupasi — mutta hinta maksettiin historialla: puebloittamisen kiireessä revittiin pois valurautaiset liikejulkisivut ja viktoriaaniset koristeet, ja suuri osa kaupungin omaa rakennushistoriaa katosi. Tyylin keskeisiä arkkitehteja olivat T. Charles Gaastra ja …
+
+### 11.2
+KYSYMYS: Miksi linna rakennettiin juuri tähän?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kilkennyn linna (kaupungit)
+Tietoruudun teksti: Kilkennyn linna rakennettiin vuonna 1260 valvomaan Nore-joen kahluupaikkaa ja useiden teiden risteystä. Se oli normannivallan näkyvä merkki, ja alkuperäisessä 1200-luvun asussaan se oli tärkeä osa kaupungin puolustusta: neljä suurta pyöreää kulmatornia ja valtava vallihauta, jonka osa näkyy yhä Paraden kohdalla.
+
+Ensimmäisen, todennäköisesti puisen linnan rakennutti 1100-luvulla Richard de Clare eli Strongbow. Anglonormannit olivat perustaneet paikalle linnan jo 1173, mahdollisesti Osraigen Mac Giolla Phádraig -kuninkaiden aiemman asuinpaikan päälle.
+
+Ensimmäinen kivilinna valmistui 1260. Se oli neliömäinen ja siinä oli torni jokaisessa kulmassa; neljästä alkuperäisestä tornista kolme on yhä pystyssä. Kruunu takavarikoi linnan ja myi sen Butlerin suvulle 1391.
+
+Vuonna 1967 Arthur Butler, kuudes Ormonden markiisi, myi linnan viidelläkymmenellä punnalla Kilkennyn asukkaiden perustamalle k…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Wienin asema] Tässä kaupungissa mitta oli kahdenlainen, ja isoisäsi olisi pitänyt siitä enemmän kuin torin väreistä. Varsovasta lounaaseen lähtevä Wienin rata avattiin 14. kesäkuuta 1845, ensin kolmenkymmenen kilometrin pätkänä, ja se ylsi Itävallan rajalle huhtikuussa 1848: kaikkiaan runsaat 327 kilometriä ja 27 asemaa. Se oli ensimmäinen rata Kongressi-Puolassa ja toinen koko keisarikunnassa. Ja se oli rakennettu eurooppalaiseen mittaan, 1 435 millimetriä kiskosta kiskoon, kun kaikilla muilla keisarikunnan radoilla mitta oli leveämpi, 1 524. Kaksi rataa, kaksi mittaa, eikä yhtäkään vaunua voinut ajaa toiselta toiselle. Pietarin rata tuli Varsovaan 1862 ja pysähtyi joen toiselle rannalle. Kierbedźin sil…
+- [Kiova — kohdekartta / Kohdekartta: Andreaksen kirkko] 1747–1754 Andreaksen kirkko kohoaa jyrkällä mäellä Kiovan Podilin yläpuolella, ja sen taustalla on vanha legenda. Tarinan mukaan apostoli Andreas nousi tälle samalle kukkulalle jo lähes kaksituhatta vuotta sitten, pystytti sinne ristin ja ennusti paikalle nousevan suuren kaupungin, jossa olisi paljon kirkkoja. Juuri tähän pyhäksi uskottuun paikkaan rakennettiin vuosina 1747–1754 kirkko, joka on saanut nimensä apostolin käynnin muistoksi. Kirkon suunnitteli italialainen arkkitehti Bartolomeo Rastrelli, joka piirsi myös komeita palatseja Pietariin, ja rakennustyötä valvoi paikan päällä Ivan Mitšurin. Kirkko seisoo 15 metriä korkealla kivijalustalla, minkä ansiosta se näyttää melkein leijuvan …
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:croagh-patrick) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Croagh Patrick (luonto · vuori)
+Tietoruudun teksti: Croagh Patrick on 764 metriä korkea vuori Mayon kreivikunnassa Murriskin kylän takana, ja sen laelta avautuu näkymä Clew Baylle. Perimätiedon mukaan pyhä Patrick paastosi huipulla neljäkymmentä päivää, ja vuori on siitä asti ollut Irlannin tunnetuin pyhiinvaelluskohde.
+
+Heinäkuun viimeisenä sunnuntaina eli Reek Sundayna huipulle nousee jopa neljäkymmentätuhatta ihmistä vuodessa. Osa kiipeää paljain jaloin katumusharjoituksena, ja huipun kappelissa pidetään messuja. Nykyinen pieni kappeli vihittiin 20. heinäkuuta 1905, mutta kivinen rukoushuone on ollut laella jo 400-luvulta.
+
+Arkeologinen kartoitus on löytänyt laen ympäriltä aitauksen jäänteet ja sen kylkeen liittyviä pyöreitä majanpohjia, jotka ajoittuvat pronssikaudelle. Vuori on siis ollut kokoontumispaikka kauan ennen kristinuskoa.
+
+Vuoren ytimestä löytyi 1980-luvulla kultaa. Mayon kreivikunnanvaltuusto päätti olla sallimatta kaivos…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Fidži — maalehti / Perinteet: Kivet, joilla kävellään paljain jaloin] Vilavilairevo eli tulikävely kuuluu Sawau-heimolle, joka asuu Beqan saarella kymmenen kilometriä Viti Levusta etelään. Kylät kuumentavat kuoppaan ladotut kivet valkohehkuisiksi, ja kävelijät astuvat niiden yli paljain jaloin. Vanhan kertomuksen mukaan heimon esi-isä sai kyvyn henkijumalalta, jonka hän oli saanut kiinni ankeriaita kalastaessaan; hengen henki oli hinta lahjasta. Ennen kävelyä noudatetaan tiukkoja sääntöjä. Ilmiö oli matkailijoiden nähtävyys jo 1902, jolloin Robert Fulton julkaisi siitä ensimmäisen luonnontieteellisen selitysyrityksen.
+- [Montenegro — maalehti / Luonto: Barnojärvi, vuoren silmä joka katoaa] jääkauden perua — Durmitorin massiivissa on 18 jäätikköjärveä, joita kutsutaan nimellä gorske oči eli vuoren silmät. Barnojärvi on yksi niistä, ja se sijaitsee 1 489 metrin korkeudessa lähellä tunnetumpaa Mustaajärveä. Se on kuitenkin outo silmä: syvimmillään vettä on vain noin metri, ja rannat ovat tiheää kosteikkokasvillisuutta. Kesällä veden pintaa ei usein näe lainkaan, sillä järvi rajoittuu turvesuohon ja vesi on tummaa. Durmitorin alue on ollut Unescon maailmanperintökohde vuodesta 1980, ja noin kymmenen kilometrin kolmen järven kierros yhdistää Barnon Mustaanjärveen ja Zminje-järveen.
+
+### 12.1
+KYSYMYS: Miksi vuorelle noustaan paljain jaloin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Croagh Patrick (luonto · vuori)
+Tietoruudun teksti: Croagh Patrick on 764 metriä korkea vuori Mayon kreivikunnassa Murriskin kylän takana, ja sen laelta avautuu näkymä Clew Baylle. Perimätiedon mukaan pyhä Patrick paastosi huipulla neljäkymmentä päivää, ja vuori on siitä asti ollut Irlannin tunnetuin pyhiinvaelluskohde.
+
+Heinäkuun viimeisenä sunnuntaina eli Reek Sundayna huipulle nousee jopa neljäkymmentätuhatta ihmistä vuodessa. Osa kiipeää paljain jaloin katumusharjoituksena, ja huipun kappelissa pidetään messuja. Nykyinen pieni kappeli vihittiin 20. heinäkuuta 1905, mutta kivinen rukoushuone on ollut laella jo 400-luvulta.
+
+Arkeologinen kartoitus on löytänyt laen ympäriltä aitauksen jäänteet ja sen kylkeen liittyviä pyöreitä majanpohjia, jotka ajoittuvat pronssikaudelle. Vuori on siis ollut kokoontumispaikka kauan ennen kristinuskoa.
+
+Vuoren ytimestä löytyi 1980-luvulla kultaa. Mayon kreivikunnanvaltuusto päätti olla sallimatta kaivos…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Fidži — maalehti / Perinteet: Kivet, joilla kävellään paljain jaloin] Vilavilairevo eli tulikävely kuuluu Sawau-heimolle, joka asuu Beqan saarella kymmenen kilometriä Viti Levusta etelään. Kylät kuumentavat kuoppaan ladotut kivet valkohehkuisiksi, ja kävelijät astuvat niiden yli paljain jaloin. Vanhan kertomuksen mukaan heimon esi-isä sai kyvyn henkijumalalta, jonka hän oli saanut kiinni ankeriaita kalastaessaan; hengen henki oli hinta lahjasta. Ennen kävelyä noudatetaan tiukkoja sääntöjä. Ilmiö oli matkailijoiden nähtävyys jo 1902, jolloin Robert Fulton julkaisi siitä ensimmäisen luonnontieteellisen selitysyrityksen.
+
+### 12.2
+KYSYMYS: Miksi vuoren kultaa ei kaivettu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Croagh Patrick (luonto · vuori)
+Tietoruudun teksti: Croagh Patrick on 764 metriä korkea vuori Mayon kreivikunnassa Murriskin kylän takana, ja sen laelta avautuu näkymä Clew Baylle. Perimätiedon mukaan pyhä Patrick paastosi huipulla neljäkymmentä päivää, ja vuori on siitä asti ollut Irlannin tunnetuin pyhiinvaelluskohde.
+
+Heinäkuun viimeisenä sunnuntaina eli Reek Sundayna huipulle nousee jopa neljäkymmentätuhatta ihmistä vuodessa. Osa kiipeää paljain jaloin katumusharjoituksena, ja huipun kappelissa pidetään messuja. Nykyinen pieni kappeli vihittiin 20. heinäkuuta 1905, mutta kivinen rukoushuone on ollut laella jo 400-luvulta.
+
+Arkeologinen kartoitus on löytänyt laen ympäriltä aitauksen jäänteet ja sen kylkeen liittyviä pyöreitä majanpohjia, jotka ajoittuvat pronssikaudelle. Vuori on siis ollut kokoontumispaikka kauan ennen kristinuskoa.
+
+Vuoren ytimestä löytyi 1980-luvulla kultaa. Mayon kreivikunnanvaltuusto päätti olla sallimatta kaivos…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Barnojärvi, vuoren silmä joka katoaa] jääkauden perua — Durmitorin massiivissa on 18 jäätikköjärveä, joita kutsutaan nimellä gorske oči eli vuoren silmät. Barnojärvi on yksi niistä, ja se sijaitsee 1 489 metrin korkeudessa lähellä tunnetumpaa Mustaajärveä. Se on kuitenkin outo silmä: syvimmillään vettä on vain noin metri, ja rannat ovat tiheää kosteikkokasvillisuutta. Kesällä veden pintaa ei usein näe lainkaan, sillä järvi rajoittuu turvesuohon ja vesi on tummaa. Durmitorin alue on ollut Unescon maailmanperintökohde vuodesta 1980, ja noin kymmenen kilometrin kolmen järven kierros yhdistää Barnon Mustaanjärveen ja Zminje-järveen.
+- [Ranska — maalehti / Ruoka: Juusto kypsyy vuoren sisällä] 1411 — Roquefortiksi saa kutsua vain juustoa, joka on kypsytetty Roquefort-sur-Soulzonin kylässä Combalou-vuoren luonnonluolissa. Vuori on aikoinaan sortunut, ja lohkareiden väliin jäi halkeamia, joita kutsutaan fleurineiksi. Ne puhaltavat luoliin kosteaa ilmaa ja pitävät lämpötilan tasaisena ympäri vuoden. Juusto tehdään lampaan maidosta, ja yhteen kiloon menee noin neljä ja puoli litraa maitoa. Kuningas Kaarle VI antoi kyläläisille yksinoikeuden kypsytykseen jo vuonna 1411, ja 1925 roquefort sai ensimmäisenä ranskalaisena juustona virallisen alkuperäsuojan.
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:dun-aonghasa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dún Aonghasa (historia)
+Tietoruudun teksti: Dún Aonghasa seisoo sadan metrin korkuisen jyrkänteen reunalla Inis Mórilla, Aransaarten suurimmalla saarella Galwayn kreivikunnassa. Linnake on neljä sisäkkäistä kuivamuurattua kivikehää, ja uloin niistä rajaa noin kuuden hehtaarin alueen.
+
+Kehien ulkopuolella on puolustusvyöhyke, jota kutsutaan nimellä chevaux de frise: kalkkikiven rakoihin on pystytetty teräviä kivipaaluja pystyyn ja ulospäin kallistuneina niin tiheään, ettei hyökkääjä pääse juoksemaan.
+
+Paikkaa ei rakennettu kerralla. Ensimmäinen vaihe ajoittuu noin vuoteen 1100 eaa., jolloin suurten pystykivien viereen kasattiin kiviaines ensimmäiseksi aitaukseksi. Pronssin työstöstä on jälkiä noin vuodelta 900 eaa., ja kolminkertainen muuri linnakkeen länsisivulla rakennettiin todennäköisesti noin 500 eaa.
+
+Vuoden 1839 kaivauksissa löytyi varhaiselle rautakaudelle ajoittuva linnunpääsolki, joka vahvistaa paikan olleen käytössä pro…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Masqat — kohdekartta / Kohdekartta: Al-Miranin linnake] 1587 Linnake ei seiso kalliolla vaan jatkaa sitä: muurit on ladottu kiinni sataman länsipuolen jyrkänteeseen, ja pohjakaava on epäsäännöllinen, koska se noudattaa kallion muotoa. Tasot ovat eri korkeuksilla — pyöreitä torneja, ampuma-aukoin varustettuja muureja ja pihoja, joiden välillä kuljetaan jyrkkiä kapeita portaita. Linnake oli paikalla jo ennen portugalilaisia, ja se oli Omanin ensimmäinen tykeillä aseistettu linnoitus. Kallio ei kuitenkaan suojannut ylhäältä. Vuonna 1552 osmanien laivasto — neljä galleonia, kaksikymmentäviisi kaleeria ja kahdeksansataaviisikymmentä miestä — valtasi kaupungin ja piiritti linnaketta kahdeksantoista päivää. Ratkaisun teki yksi ainoa tykki, joka hinatti…
+- [Bergen — kohdekartta / Kohdekartta: Fredriksbergin linnake] 1667 Linnake seisoo Nordnesin niemen korkeimmalla kohdalla, ja sen länsipuolella putoaa jyrkkä kallioseinä suoraan mereen. Työn aloitti hollantilainen insinööri, kenraalimajuri Henrik Ruse. Suunnitelmassa oli maan puolella kolme bastionia ja yksi puolibastioni ja kallion puolella pelkkä muuri. Linnake rakennettiin 1666–1667 Vågenin meritaistelun jälkeen ja pitkälti sen takia, ja se nimettiin kuningas Fredrik III:n mukaan. Rakentaminen pysähtyi ja varustukset rapistuivat. Vasta kun Christian V:n poika Christian Gyldenløve tarkasti Bergenin 1695, työt käynnistyivät uudelleen, ja 1706 linnake oli valmis — yksinkertaisempana kuin alkuperäisessä suunnitelmassa. Katten-bastioni oli noussut jo 166…
+
+### 13.1
+KYSYMYS: Mikä chevaux de frise on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dún Aonghasa (historia)
+Tietoruudun teksti: Dún Aonghasa seisoo sadan metrin korkuisen jyrkänteen reunalla Inis Mórilla, Aransaarten suurimmalla saarella Galwayn kreivikunnassa. Linnake on neljä sisäkkäistä kuivamuurattua kivikehää, ja uloin niistä rajaa noin kuuden hehtaarin alueen.
+
+Kehien ulkopuolella on puolustusvyöhyke, jota kutsutaan nimellä chevaux de frise: kalkkikiven rakoihin on pystytetty teräviä kivipaaluja pystyyn ja ulospäin kallistuneina niin tiheään, ettei hyökkääjä pääse juoksemaan.
+
+Paikkaa ei rakennettu kerralla. Ensimmäinen vaihe ajoittuu noin vuoteen 1100 eaa., jolloin suurten pystykivien viereen kasattiin kiviaines ensimmäiseksi aitaukseksi. Pronssin työstöstä on jälkiä noin vuodelta 900 eaa., ja kolminkertainen muuri linnakkeen länsisivulla rakennettiin todennäköisesti noin 500 eaa.
+
+Vuoden 1839 kaivauksissa löytyi varhaiselle rautakaudelle ajoittuva linnunpääsolki, joka vahvistaa paikan olleen käytössä pro…
+
+### 13.2
+KYSYMYS: Miksi linnake on kallion reunalla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dún Aonghasa (historia)
+Tietoruudun teksti: Dún Aonghasa seisoo sadan metrin korkuisen jyrkänteen reunalla Inis Mórilla, Aransaarten suurimmalla saarella Galwayn kreivikunnassa. Linnake on neljä sisäkkäistä kuivamuurattua kivikehää, ja uloin niistä rajaa noin kuuden hehtaarin alueen.
+
+Kehien ulkopuolella on puolustusvyöhyke, jota kutsutaan nimellä chevaux de frise: kalkkikiven rakoihin on pystytetty teräviä kivipaaluja pystyyn ja ulospäin kallistuneina niin tiheään, ettei hyökkääjä pääse juoksemaan.
+
+Paikkaa ei rakennettu kerralla. Ensimmäinen vaihe ajoittuu noin vuoteen 1100 eaa., jolloin suurten pystykivien viereen kasattiin kiviaines ensimmäiseksi aitaukseksi. Pronssin työstöstä on jälkiä noin vuodelta 900 eaa., ja kolminkertainen muuri linnakkeen länsisivulla rakennettiin todennäköisesti noin 500 eaa.
+
+Vuoden 1839 kaivauksissa löytyi varhaiselle rautakaudelle ajoittuva linnunpääsolki, joka vahvistaa paikan olleen käytössä pro…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Masqat — kohdekartta / Kohdekartta: Al-Miranin linnake] 1587 Linnake ei seiso kalliolla vaan jatkaa sitä: muurit on ladottu kiinni sataman länsipuolen jyrkänteeseen, ja pohjakaava on epäsäännöllinen, koska se noudattaa kallion muotoa. Tasot ovat eri korkeuksilla — pyöreitä torneja, ampuma-aukoin varustettuja muureja ja pihoja, joiden välillä kuljetaan jyrkkiä kapeita portaita. Linnake oli paikalla jo ennen portugalilaisia, ja se oli Omanin ensimmäinen tykeillä aseistettu linnoitus. Kallio ei kuitenkaan suojannut ylhäältä. Vuonna 1552 osmanien laivasto — neljä galleonia, kaksikymmentäviisi kaleeria ja kahdeksansataaviisikymmentä miestä — valtasi kaupungin ja piiritti linnaketta kahdeksantoista päivää. Ratkaisun teki yksi ainoa tykki, joka hinatti…
+- [Bergen — kohdekartta / Kohdekartta: Fredriksbergin linnake] 1667 Linnake seisoo Nordnesin niemen korkeimmalla kohdalla, ja sen länsipuolella putoaa jyrkkä kallioseinä suoraan mereen. Työn aloitti hollantilainen insinööri, kenraalimajuri Henrik Ruse. Suunnitelmassa oli maan puolella kolme bastionia ja yksi puolibastioni ja kallion puolella pelkkä muuri. Linnake rakennettiin 1666–1667 Vågenin meritaistelun jälkeen ja pitkälti sen takia, ja se nimettiin kuningas Fredrik III:n mukaan. Rakentaminen pysähtyi ja varustukset rapistuivat. Vasta kun Christian V:n poika Christian Gyldenløve tarkasti Bergenin 1695, työt käynnistyivät uudelleen, ja 1706 linnake oli valmis — yksinkertaisempana kuin alkuperäisessä suunnitelmassa. Katten-bastioni oli noussut jo 166…
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:glendalough) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glendalough (kulttuuri)
+Tietoruudun teksti: Glendalough on luostarilaakso Wicklowin kreivikunnassa. Nimi tulee iirin sanoista Gleann Dá Loch, kahden järven laakso: laakson pohjalla on kaksi järveä, jotka Poulanass-joen tuoma suistokerrostuma erottaa toisistaan. Ympärillä kohoavat vuoret, niiden joukossa 699-metrinen Camaderry.
+
+Luostarin perusti 500-luvulla pyhä Kevin, joka kuoli noin vuonna 618 — perimätiedon mukaan 3. kesäkuuta. Yhteisö kukoisti kuusi vuosisataa, kunnes sen hiippakunta yhdistettiin Dublinin kanssa vuonna 1214 ja laakson asema alkoi heiketä.
+
+Alueen tunnetuin rakennus on noin kolmekymmenmetrinen pyöreä torni. Se oli romahtanut, ja vuonna 1876 se muurattiin uudelleen pystyyn sen omista, paikalta kerätyistä kivistä.
+
+Englantilaiset joukot tuhosivat luostariasutuksen vuonna 1398. Sen jälkeenkin paikalla toimi paikallinen kirkko ja sinne tultiin pyhiinvaellukselle. Nykyään laakso on suosittu retkeilykohde, jonka yhd…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubrovnik — kaupunkilehti / Muurit: Torni, jonka rakennutti paavi] Muurin vaikuttavin torni on pyöreä Minčeta, joka nousee kaupungin korkeimmalta kohdalta maan puolelta. Paavi Pius II lähetti sen rakentajat Dubrovnikiin vuonna 1463, juuri kun Ottomaanien uhka Balkanilla oli suurimmillaan — Konstantinopoli oli kaatunut vain kymmenen vuotta aiemmin. Alun perin nelikulmainen linnake muutettiin myöhemmin pyöreäksi, koska pyöreä muoto kesti tykkitulta paremmin kuin terävät kulmat. Torni ei koskaan joutunut todelliseen taisteluun — se riitti, että se näytti vahvalta.
+- [Dubrovnik — kohdekartta / Kohdekartta: Minčetan torni] 1463–1464 Minčetan torni ei ollut alun perin kovin vaikuttava: vuonna 1319 samalla paikalla seisoi vaatimaton nelikulmainen linnoitus, joka sai nimensä sen maat omistaneelta Menčetićin suvulta. Kaikki muuttui 1400-luvulla, kun Osmanien valtakunta alkoi uhata Dubrovnikia. Paavi Pius II lähetti kaupunkiin italialaisia insinöörejä, ja he suunnittelivat yhdessä paikallisen rakentajan Nicifor Ranjinan kanssa tornille kokonaan uuden muodon. Työtä johti kuuluisa firenzeläinen arkkitehti Michelozzo, ja korkean, pyöreän tornin lopullisen piirustuksen teki kuvanveistäjä Giorgio da Sebenico. Torni valmistui vuonna 1464, ja sen muurit ovat paikoin jopa kuusi metriä paksut! Muurien sisään rakennettiin s…
+
+### 14.1
+KYSYMYS: Mitä nimi Gleann Dá Loch tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glendalough (kulttuuri)
+Tietoruudun teksti: Glendalough on luostarilaakso Wicklowin kreivikunnassa. Nimi tulee iirin sanoista Gleann Dá Loch, kahden järven laakso: laakson pohjalla on kaksi järveä, jotka Poulanass-joen tuoma suistokerrostuma erottaa toisistaan. Ympärillä kohoavat vuoret, niiden joukossa 699-metrinen Camaderry.
+
+Luostarin perusti 500-luvulla pyhä Kevin, joka kuoli noin vuonna 618 — perimätiedon mukaan 3. kesäkuuta. Yhteisö kukoisti kuusi vuosisataa, kunnes sen hiippakunta yhdistettiin Dublinin kanssa vuonna 1214 ja laakson asema alkoi heiketä.
+
+Alueen tunnetuin rakennus on noin kolmekymmenmetrinen pyöreä torni. Se oli romahtanut, ja vuonna 1876 se muurattiin uudelleen pystyyn sen omista, paikalta kerätyistä kivistä.
+
+Englantilaiset joukot tuhosivat luostariasutuksen vuonna 1398. Sen jälkeenkin paikalla toimi paikallinen kirkko ja sinne tultiin pyhiinvaellukselle. Nykyään laakso on suosittu retkeilykohde, jonka yhd…
+
+### 14.2
+KYSYMYS: Miksi pyöreä torni rakennettiin uudelleen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glendalough (kulttuuri)
+Tietoruudun teksti: Glendalough on luostarilaakso Wicklowin kreivikunnassa. Nimi tulee iirin sanoista Gleann Dá Loch, kahden järven laakso: laakson pohjalla on kaksi järveä, jotka Poulanass-joen tuoma suistokerrostuma erottaa toisistaan. Ympärillä kohoavat vuoret, niiden joukossa 699-metrinen Camaderry.
+
+Luostarin perusti 500-luvulla pyhä Kevin, joka kuoli noin vuonna 618 — perimätiedon mukaan 3. kesäkuuta. Yhteisö kukoisti kuusi vuosisataa, kunnes sen hiippakunta yhdistettiin Dublinin kanssa vuonna 1214 ja laakson asema alkoi heiketä.
+
+Alueen tunnetuin rakennus on noin kolmekymmenmetrinen pyöreä torni. Se oli romahtanut, ja vuonna 1876 se muurattiin uudelleen pystyyn sen omista, paikalta kerätyistä kivistä.
+
+Englantilaiset joukot tuhosivat luostariasutuksen vuonna 1398. Sen jälkeenkin paikalla toimi paikallinen kirkko ja sinne tultiin pyhiinvaellukselle. Nykyään laakso on suosittu retkeilykohde, jonka yhd…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubrovnik — kaupunkilehti / Muurit: Torni, jonka rakennutti paavi] Muurin vaikuttavin torni on pyöreä Minčeta, joka nousee kaupungin korkeimmalta kohdalta maan puolelta. Paavi Pius II lähetti sen rakentajat Dubrovnikiin vuonna 1463, juuri kun Ottomaanien uhka Balkanilla oli suurimmillaan — Konstantinopoli oli kaatunut vain kymmenen vuotta aiemmin. Alun perin nelikulmainen linnake muutettiin myöhemmin pyöreäksi, koska pyöreä muoto kesti tykkitulta paremmin kuin terävät kulmat. Torni ei koskaan joutunut todelliseen taisteluun — se riitti, että se näytti vahvalta.
+- [Dubrovnik — kohdekartta / Kohdekartta: Minčetan torni] 1463–1464 Minčetan torni ei ollut alun perin kovin vaikuttava: vuonna 1319 samalla paikalla seisoi vaatimaton nelikulmainen linnoitus, joka sai nimensä sen maat omistaneelta Menčetićin suvulta. Kaikki muuttui 1400-luvulla, kun Osmanien valtakunta alkoi uhata Dubrovnikia. Paavi Pius II lähetti kaupunkiin italialaisia insinöörejä, ja he suunnittelivat yhdessä paikallisen rakentajan Nicifor Ranjinan kanssa tornille kokonaan uuden muodon. Työtä johti kuuluisa firenzeläinen arkkitehti Michelozzo, ja korkean, pyöreän tornin lopullisen piirustuksen teki kuvanveistäjä Giorgio da Sebenico. Torni valmistui vuonna 1464, ja sen muurit ovat paikoin jopa kuusi metriä paksut! Muurien sisään rakennettiin s…
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:brownshillin-dolmen) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brownshillin dolmen (historia)
+Tietoruudun teksti: Brownshillin dolmen on kolmen kilometrin päässä Carlowin kaupungista itään, Irlannin Carlowin kreivikunnassa sijaitseva portaalihauta. Se rakennettiin arviolta 4000–3000 eaa., ja sen graniittinen kansikivi painaa arviolta 150 tonnia, minkä sanotaan olevan Euroopan painavin. Rakenteen korkeus on 3,5 metriä. Sisäänkäynnin pystykivet ja portinkivi ovat yhä alkuperäisillä paikoillaan, ja kansikivi lepää niiden päällä kallistuen poispäin sisäänkäynnistä kohti maata. Hautaa ei ole kaivettu. Dolmen on suojeltu kansallismonumentti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Tapaskierros] Madridissa lounas on kahdelta ja illallinen yhdeksän jälkeen, ja väliin jää tunteja, jotka täytetään tapaksilla. Tapa tarkoittaa kantta: juomalasin päälle asetettiin viipale kinkkua tai leipää, jottei kärpäsiä päässyt sisään — kansi muuttui ruoaksi. Tapaksia syödään seisten baaritiskillä ja siirrytään sitten seuraavaan paikkaan; kierros on nimeltään tapeo, ja se on yhtä paljon kävelyä kuin syömistä. Vuoden 1916 valurautainen San Miguelin halli on kierroksen tunnetuin pysäkki.
+- [Egypti — maalehti / Kirjoitus: Rosetta 1799 — musta kivi muurin sisästä] heinäkuu 1799 — Ranskalaiset sotilaat purkavat vanhaa muuria Fort Julienin linnoituksessa Niilin suistossa, kun lapio kolahtaa kiveen, joka ei ole tavallinen. Se on musta, sileäksi hiottu paasi, ja sen pintaan on kaiverrettu kolme erilaista kirjoitusta päällekkäin: ylinnä hieroglyfejä, keskellä tuntemattomia kursiivimerkkejä, alinna kreikkaa. Pioneeriupseeri Pierre-François Bouchard ymmärtää heti, että kreikkalainen teksti voi olla avain kahteen muuhun, ja kivi lähetetään Napoleonin tutkijoille Kairoon. Egyptin retkikunnan oma lehti Courier de l'Égypte kertoo löydöstä syyskuussa 1799. Kivi ei jää ranskalaisille: kun Britannia voittaa vuonna 1801, se siirtyy antautumissopimuksen ehtona Lonto…
+
+### 15.1
+KYSYMYS: Kuinka paljon kansikiven arvioidaan painavan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brownshillin dolmen (historia)
+Tietoruudun teksti: Brownshillin dolmen on kolmen kilometrin päässä Carlowin kaupungista itään, Irlannin Carlowin kreivikunnassa sijaitseva portaalihauta. Se rakennettiin arviolta 4000–3000 eaa., ja sen graniittinen kansikivi painaa arviolta 150 tonnia, minkä sanotaan olevan Euroopan painavin. Rakenteen korkeus on 3,5 metriä. Sisäänkäynnin pystykivet ja portinkivi ovat yhä alkuperäisillä paikoillaan, ja kansikivi lepää niiden päällä kallistuen poispäin sisäänkäynnistä kohti maata. Hautaa ei ole kaivettu. Dolmen on suojeltu kansallismonumentti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Tapaskierros] Madridissa lounas on kahdelta ja illallinen yhdeksän jälkeen, ja väliin jää tunteja, jotka täytetään tapaksilla. Tapa tarkoittaa kantta: juomalasin päälle asetettiin viipale kinkkua tai leipää, jottei kärpäsiä päässyt sisään — kansi muuttui ruoaksi. Tapaksia syödään seisten baaritiskillä ja siirrytään sitten seuraavaan paikkaan; kierros on nimeltään tapeo, ja se on yhtä paljon kävelyä kuin syömistä. Vuoden 1916 valurautainen San Miguelin halli on kierroksen tunnetuin pysäkki.
+- [Egypti — maalehti / Kirjoitus: Rosetta 1799 — musta kivi muurin sisästä] heinäkuu 1799 — Ranskalaiset sotilaat purkavat vanhaa muuria Fort Julienin linnoituksessa Niilin suistossa, kun lapio kolahtaa kiveen, joka ei ole tavallinen. Se on musta, sileäksi hiottu paasi, ja sen pintaan on kaiverrettu kolme erilaista kirjoitusta päällekkäin: ylinnä hieroglyfejä, keskellä tuntemattomia kursiivimerkkejä, alinna kreikkaa. Pioneeriupseeri Pierre-François Bouchard ymmärtää heti, että kreikkalainen teksti voi olla avain kahteen muuhun, ja kivi lähetetään Napoleonin tutkijoille Kairoon. Egyptin retkikunnan oma lehti Courier de l'Égypte kertoo löydöstä syyskuussa 1799. Kivi ei jää ranskalaisille: kun Britannia voittaa vuonna 1801, se siirtyy antautumissopimuksen ehtona Lonto…
+
+### 15.2
+KYSYMYS: Mihin aikaan dolmen rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brownshillin dolmen (historia)
+Tietoruudun teksti: Brownshillin dolmen on kolmen kilometrin päässä Carlowin kaupungista itään, Irlannin Carlowin kreivikunnassa sijaitseva portaalihauta. Se rakennettiin arviolta 4000–3000 eaa., ja sen graniittinen kansikivi painaa arviolta 150 tonnia, minkä sanotaan olevan Euroopan painavin. Rakenteen korkeus on 3,5 metriä. Sisäänkäynnin pystykivet ja portinkivi ovat yhä alkuperäisillä paikoillaan, ja kansikivi lepää niiden päällä kallistuen poispäin sisäänkäynnistä kohti maata. Hautaa ei ole kaivettu. Dolmen on suojeltu kansallismonumentti.
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

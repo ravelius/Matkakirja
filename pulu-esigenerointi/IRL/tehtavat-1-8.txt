@@ -1,0 +1,198 @@
+================ KOHTA 36 (kohde:hahmotelma-blarney) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blarney (historia)
+Tietoruudun teksti: Blarney Castle on keskiaikainen linnoitus Blarneyn kaupungissa Corkin kreivikunnassa. Nykyisen tornin rakennutti Desmondin kuninkaiden sivuhaaran MacCarthy of Muskerryn suku, ja se on vuodelta 1446; Blarneyn kivi on linnan ylimmän ulkonevan kaiteen osana. Linnan paikalla oli ennen vuotta 1200 puutalo, joka korvattiin noin vuonna 1210 kivilinnoituksella, ja Cormac Láidir MacCarthy rakensi sen uudelleen vuoden 1446 tuhon jälkeen. Parlamentaariset joukot valtasivat linnan vuonna 1646, ja Williamiittien sodassa 1690-luvulla se takavarikoitiin; vuonna 1874 linnan lähelle rakennettiin uusi Blarney House -kartano skotlantilaiseen paroni-tyyliin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuwait — kohdekartta / Kohdekartta: Al Hamra -torni] Tornin pohjakaava on pyöristetty neliö, josta on leikattu neljännes pois. Puuttuva neljännes ei ole joka kerroksessa samassa kohdassa: alhaalla se on lounaisnurkassa, ylhäällä kaakkoisnurkassa ja siirtyy kerros kerrokselta vähän. Siksi torni näyttää kiertyvän. Viillon reunoina on kaksi betoniseinää, jotka nousevat ytimen nurkista katolle asti ja kaartuvat ulospäin. Niiden väliin jäävä eteläsivu on lähes umpinainen kalkkikiviseinä; lasia on vain pohjoisessa, idässä ja lännessä. Muodon sanelee aurinko. Kuwait City on 29. leveyspiirillä, joten aurinko on keskipäivällä aina etelässä ja eteläjulkisivu saisi päivän kovimman säteilyn. Poistettu neljännes siirtää toimistokerrokset pois siltä puolel…
+- [Dubrovnik — kohdekartta / Kohdekartta: Minčetan torni] 1463–1464 Minčetan torni ei ollut alun perin kovin vaikuttava: vuonna 1319 samalla paikalla seisoi vaatimaton nelikulmainen linnoitus, joka sai nimensä sen maat omistaneelta Menčetićin suvulta. Kaikki muuttui 1400-luvulla, kun Osmanien valtakunta alkoi uhata Dubrovnikia. Paavi Pius II lähetti kaupunkiin italialaisia insinöörejä, ja he suunnittelivat yhdessä paikallisen rakentajan Nicifor Ranjinan kanssa tornille kokonaan uuden muodon. Työtä johti kuuluisa firenzeläinen arkkitehti Michelozzo, ja korkean, pyöreän tornin lopullisen piirustuksen teki kuvanveistäjä Giorgio da Sebenico. Torni valmistui vuonna 1464, ja sen muurit ovat paikoin jopa kuusi metriä paksut! Muurien sisään rakennettiin s…
+
+### 36.1
+KYSYMYS: Kuka suku rakennutti Blarneyn nykyisen tornin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blarney (historia)
+Tietoruudun teksti: Blarney Castle on keskiaikainen linnoitus Blarneyn kaupungissa Corkin kreivikunnassa. Nykyisen tornin rakennutti Desmondin kuninkaiden sivuhaaran MacCarthy of Muskerryn suku, ja se on vuodelta 1446; Blarneyn kivi on linnan ylimmän ulkonevan kaiteen osana. Linnan paikalla oli ennen vuotta 1200 puutalo, joka korvattiin noin vuonna 1210 kivilinnoituksella, ja Cormac Láidir MacCarthy rakensi sen uudelleen vuoden 1446 tuhon jälkeen. Parlamentaariset joukot valtasivat linnan vuonna 1646, ja Williamiittien sodassa 1690-luvulla se takavarikoitiin; vuonna 1874 linnan lähelle rakennettiin uusi Blarney House -kartano skotlantilaiseen paroni-tyyliin.
+
+### 36.2
+KYSYMYS: Milloin torni valmistui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blarney (historia)
+Tietoruudun teksti: Blarney Castle on keskiaikainen linnoitus Blarneyn kaupungissa Corkin kreivikunnassa. Nykyisen tornin rakennutti Desmondin kuninkaiden sivuhaaran MacCarthy of Muskerryn suku, ja se on vuodelta 1446; Blarneyn kivi on linnan ylimmän ulkonevan kaiteen osana. Linnan paikalla oli ennen vuotta 1200 puutalo, joka korvattiin noin vuonna 1210 kivilinnoituksella, ja Cormac Láidir MacCarthy rakensi sen uudelleen vuoden 1446 tuhon jälkeen. Parlamentaariset joukot valtasivat linnan vuonna 1646, ja Williamiittien sodassa 1690-luvulla se takavarikoitiin; vuonna 1874 linnan lähelle rakennettiin uusi Blarney House -kartano skotlantilaiseen paroni-tyyliin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuwait — kohdekartta / Kohdekartta: Al Hamra -torni] Tornin pohjakaava on pyöristetty neliö, josta on leikattu neljännes pois. Puuttuva neljännes ei ole joka kerroksessa samassa kohdassa: alhaalla se on lounaisnurkassa, ylhäällä kaakkoisnurkassa ja siirtyy kerros kerrokselta vähän. Siksi torni näyttää kiertyvän. Viillon reunoina on kaksi betoniseinää, jotka nousevat ytimen nurkista katolle asti ja kaartuvat ulospäin. Niiden väliin jäävä eteläsivu on lähes umpinainen kalkkikiviseinä; lasia on vain pohjoisessa, idässä ja lännessä. Muodon sanelee aurinko. Kuwait City on 29. leveyspiirillä, joten aurinko on keskipäivällä aina etelässä ja eteläjulkisivu saisi päivän kovimman säteilyn. Poistettu neljännes siirtää toimistokerrokset pois siltä puolel…
+- [Dubrovnik — kohdekartta / Kohdekartta: Minčetan torni] 1463–1464 Minčetan torni ei ollut alun perin kovin vaikuttava: vuonna 1319 samalla paikalla seisoi vaatimaton nelikulmainen linnoitus, joka sai nimensä sen maat omistaneelta Menčetićin suvulta. Kaikki muuttui 1400-luvulla, kun Osmanien valtakunta alkoi uhata Dubrovnikia. Paavi Pius II lähetti kaupunkiin italialaisia insinöörejä, ja he suunnittelivat yhdessä paikallisen rakentajan Nicifor Ranjinan kanssa tornille kokonaan uuden muodon. Työtä johti kuuluisa firenzeläinen arkkitehti Michelozzo, ja korkean, pyöreän tornin lopullisen piirustuksen teki kuvanveistäjä Giorgio da Sebenico. Torni valmistui vuonna 1464, ja sen muurit ovat paikoin jopa kuusi metriä paksut! Muurien sisään rakennettiin s…
+
+### 36.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+================ KOHTA 37 (kohde:hahmotelma-hook) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hook Head (historia)
+Tietoruudun teksti: Hook Head -majakka on Wexfordin kreivikunnassa Hookin niemimaan kärjessä oleva rakennus, joka on yksi maailman vanhimmista majakoista ja Espanjan Herkuleen tornin jälkeen toiseksi vanhin toimiva majakka. Nykyinen torni on 1100-luvulta, vaikka perimätiedon mukaan lähetyssaarnaaja Dubhán perusti merkkitulen jo 400-luvulla. Tornin rakennutti Strongbow'n vävy William Marshall, Pembroken jaarli, joka oli perustanut sataman New Rossiin noin 30 kilometrin päähän ylävirtaan; jotta satama menestyisi ja laivat pääsisivät turvallisesti perille, hän rakennutti 36 metriä korkean tornin Waterfordin sataman suulle. Ensimmäiset valonvartijat olivat niemellä asuneen luostarin munkit, jotka sytyttivät varoitustulia vaarallisten karien varoitukseksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nouméa — kaupunkilehti / Nouméa: Majakka joka rakennettiin Pariisissa] Nouméan edustan suojariutassa on vain kolme laivoille kelpaavaa aukkoa, ja tärkeintä niistä, Boularin väylää, valvoo Amédéen saaren majakka. Sen 56-metrinen rautatorni valmistettiin osina Pariisissa vuonna 1862, kuljetettiin Seineä pitkin Le Havreen ja purjehdittiin sieltä maailman toiselle laidalle. Torni koottiin lopulliselle paikalleen ja sytytettiin ensi kertaa marraskuussa 1865 - Ranskan ensimmäinen metallinen majakka. 247 kierreporrasta johtavat huipulle, josta valo kantoi kauas merelle ja opasti etenkin vankilaivoja turvallisesti perille asti.
+- [Kap Palmas — kaupunkilehti / Kap Palmas: Kalliokärki ja majakka] Kap Palmas on kapea, kivikkoinen niemi, joka yhdistyy mantereeseen kapealla hiekkakannaksella – muoto, joka teki siitä 1830-luvulla ihanteellisen paikan uudisasutukselle ja satamalle. Niemen kärkeen rakennettiin majakka opastamaan laivoja karikkoisen rannikon ohi kohti Harperin satamaa, ja se seisoo yhä paikallaan palmujen keskellä, vaikka moni sitä ympäröinyt siirtokunnan aikainen rakennus on sittemmin rapistunut. Cavallajoki, joka nykyään erottaa Liberian Norsunluurannikosta, laskee mereen vain parinkymmenen kilometrin päässä niemestä.
+- [Salvador — kaupunkilehti / Salvador: Majakka jonka kauppa teki välttämättömäksi] Barran niemen kärkeen rakennettiin 1600-luvulla majakka, koska kaupan ja orjakaupan kasvu vaati opastetta lahden suulle. Se tehtiin savesta ja se oli toinen koko Amerikan mantereelle rakennettu majakka. Vuonna 1668 galjooni Santíssimo Sacramento haaksirikkoutui hiekkasärkälle, ja englantilainen kaappari William Dampier kirjasi lokikirjaansa 1699 nähneensä linnoituksen lyhtyjen opastavan laivoja yöllä. Nykyinen 22-metrinen torni tilattiin Englannista, ja Pedro II vihki sen käyttöön 2. joulukuuta 1839.
+
+### 37.1
+KYSYMYS: Kuka rakennutti Hook Headin majakan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hook Head (historia)
+Tietoruudun teksti: Hook Head -majakka on Wexfordin kreivikunnassa Hookin niemimaan kärjessä oleva rakennus, joka on yksi maailman vanhimmista majakoista ja Espanjan Herkuleen tornin jälkeen toiseksi vanhin toimiva majakka. Nykyinen torni on 1100-luvulta, vaikka perimätiedon mukaan lähetyssaarnaaja Dubhán perusti merkkitulen jo 400-luvulla. Tornin rakennutti Strongbow'n vävy William Marshall, Pembroken jaarli, joka oli perustanut sataman New Rossiin noin 30 kilometrin päähän ylävirtaan; jotta satama menestyisi ja laivat pääsisivät turvallisesti perille, hän rakennutti 36 metriä korkean tornin Waterfordin sataman suulle. Ensimmäiset valonvartijat olivat niemellä asuneen luostarin munkit, jotka sytyttivät varoitustulia vaarallisten karien varoitukseksi.
+
+### 37.2
+KYSYMYS: Miksi majakka rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hook Head (historia)
+Tietoruudun teksti: Hook Head -majakka on Wexfordin kreivikunnassa Hookin niemimaan kärjessä oleva rakennus, joka on yksi maailman vanhimmista majakoista ja Espanjan Herkuleen tornin jälkeen toiseksi vanhin toimiva majakka. Nykyinen torni on 1100-luvulta, vaikka perimätiedon mukaan lähetyssaarnaaja Dubhán perusti merkkitulen jo 400-luvulla. Tornin rakennutti Strongbow'n vävy William Marshall, Pembroken jaarli, joka oli perustanut sataman New Rossiin noin 30 kilometrin päähän ylävirtaan; jotta satama menestyisi ja laivat pääsisivät turvallisesti perille, hän rakennutti 36 metriä korkean tornin Waterfordin sataman suulle. Ensimmäiset valonvartijat olivat niemellä asuneen luostarin munkit, jotka sytyttivät varoitustulia vaarallisten karien varoitukseksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nouméa — kaupunkilehti / Nouméa: Majakka joka rakennettiin Pariisissa] Nouméan edustan suojariutassa on vain kolme laivoille kelpaavaa aukkoa, ja tärkeintä niistä, Boularin väylää, valvoo Amédéen saaren majakka. Sen 56-metrinen rautatorni valmistettiin osina Pariisissa vuonna 1862, kuljetettiin Seineä pitkin Le Havreen ja purjehdittiin sieltä maailman toiselle laidalle. Torni koottiin lopulliselle paikalleen ja sytytettiin ensi kertaa marraskuussa 1865 - Ranskan ensimmäinen metallinen majakka. 247 kierreporrasta johtavat huipulle, josta valo kantoi kauas merelle ja opasti etenkin vankilaivoja turvallisesti perille asti.
+- [Kap Palmas — kaupunkilehti / Kap Palmas: Kalliokärki ja majakka] Kap Palmas on kapea, kivikkoinen niemi, joka yhdistyy mantereeseen kapealla hiekkakannaksella – muoto, joka teki siitä 1830-luvulla ihanteellisen paikan uudisasutukselle ja satamalle. Niemen kärkeen rakennettiin majakka opastamaan laivoja karikkoisen rannikon ohi kohti Harperin satamaa, ja se seisoo yhä paikallaan palmujen keskellä, vaikka moni sitä ympäröinyt siirtokunnan aikainen rakennus on sittemmin rapistunut. Cavallajoki, joka nykyään erottaa Liberian Norsunluurannikosta, laskee mereen vain parinkymmenen kilometrin päässä niemestä.
+- [Salvador — kaupunkilehti / Salvador: Majakka jonka kauppa teki välttämättömäksi] Barran niemen kärkeen rakennettiin 1600-luvulla majakka, koska kaupan ja orjakaupan kasvu vaati opastetta lahden suulle. Se tehtiin savesta ja se oli toinen koko Amerikan mantereelle rakennettu majakka. Vuonna 1668 galjooni Santíssimo Sacramento haaksirikkoutui hiekkasärkälle, ja englantilainen kaappari William Dampier kirjasi lokikirjaansa 1699 nähneensä linnoituksen lyhtyjen opastavan laivoja yöllä. Nykyinen 22-metrinen torni tilattiin Englannista, ja Pedro II vihki sen käyttöön 2. joulukuuta 1839.
+
+### 37.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+================ KOHTA 38 (kohde:hahmotelma-kinsale) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kinsale (historia)
+Tietoruudun teksti: Kinsale on historiallinen satama- ja kalastajakaupunki Corkin kreivikunnassa, noin 25 kilometriä Corkista etelään Bandon-joen suulla, ja se tunnetaan ravintoloistaan ja gourmet-festivaaleistaan. Vuonna 1601 espanjalainen sotaretkikunta, viimeinen Englantia vastaan lähetetyistä armadoista, nousi Kinsalessa maihin yhdistyäkseen irlantilaisten kapinallisten kanssa; sen seurauksena käytiin Kinsalen taistelu Yhdeksänvuotisen sodan lopussa, jossa englantilaiset Lord Mountjoyn johdolla löivät Hugh O'Neillin ja Red Hugh O'Donnellin irlantilaisjoukot. Kaupungin tärkeitä rakennuksia ovat Desmond Castle, James Fort ja Charles Fort, vuonna 1677 rakennettu tähtilinnoitus, joka suojelee sataman sisäänkäyntiä.
+
+### 38.1
+KYSYMYS: Minä vuonna espanjalaiset nousivat maihin Kinsalessa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kinsale (historia)
+Tietoruudun teksti: Kinsale on historiallinen satama- ja kalastajakaupunki Corkin kreivikunnassa, noin 25 kilometriä Corkista etelään Bandon-joen suulla, ja se tunnetaan ravintoloistaan ja gourmet-festivaaleistaan. Vuonna 1601 espanjalainen sotaretkikunta, viimeinen Englantia vastaan lähetetyistä armadoista, nousi Kinsalessa maihin yhdistyäkseen irlantilaisten kapinallisten kanssa; sen seurauksena käytiin Kinsalen taistelu Yhdeksänvuotisen sodan lopussa, jossa englantilaiset Lord Mountjoyn johdolla löivät Hugh O'Neillin ja Red Hugh O'Donnellin irlantilaisjoukot. Kaupungin tärkeitä rakennuksia ovat Desmond Castle, James Fort ja Charles Fort, vuonna 1677 rakennettu tähtilinnoitus, joka suojelee sataman sisäänkäyntiä.
+
+### 38.2
+KYSYMYS: Mikä on Kinsalen tähtilinnoitus?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kinsale (historia)
+Tietoruudun teksti: Kinsale on historiallinen satama- ja kalastajakaupunki Corkin kreivikunnassa, noin 25 kilometriä Corkista etelään Bandon-joen suulla, ja se tunnetaan ravintoloistaan ja gourmet-festivaaleistaan. Vuonna 1601 espanjalainen sotaretkikunta, viimeinen Englantia vastaan lähetetyistä armadoista, nousi Kinsalessa maihin yhdistyäkseen irlantilaisten kapinallisten kanssa; sen seurauksena käytiin Kinsalen taistelu Yhdeksänvuotisen sodan lopussa, jossa englantilaiset Lord Mountjoyn johdolla löivät Hugh O'Neillin ja Red Hugh O'Donnellin irlantilaisjoukot. Kaupungin tärkeitä rakennuksia ovat Desmond Castle, James Fort ja Charles Fort, vuonna 1677 rakennettu tähtilinnoitus, joka suojelee sataman sisäänkäyntiä.
+
+### 38.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+================ KOHTA 39 (kohde:hahmotelma-carrowmore) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carrowmore (historia)
+Tietoruudun teksti: Carrowmore, irlanniksi suuri neljännes, on suuri megaliittimuistomerkkien ryhmä Coolera-niemimaalla Sligon länsipuolella, ja ne rakennettiin 4. vuosituhannella eaa. neoliittisella kivikaudella. Nykyään säilyneitä hautoja on 30, ja vielä 25 on tuhoutunut vuoden 1800 jälkeen, joten Carrowmore on yksi Irlannin suurimmista megaliittihautojen keskittymistä ja yksi neljästä suuresta yhdessä Carrowkeelin, Loughcrewin ja Brú na Bóinnen kanssa. Alueen hallitsee lännessä Knocknarea-vuori, jonka huipulla on suuri Miosgán Médhbhin kummuke. Osa monumenteista on joutunut louhinnan ja pellonraivauksen uhriksi 1700-, 1800- ja 1900-luvun alussa, ja kompleksi on suojeltu kansallinen muistomerkki.
+
+### 39.1
+KYSYMYS: Minä vuosituhantena Carrowmoren haudat rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carrowmore (historia)
+Tietoruudun teksti: Carrowmore, irlanniksi suuri neljännes, on suuri megaliittimuistomerkkien ryhmä Coolera-niemimaalla Sligon länsipuolella, ja ne rakennettiin 4. vuosituhannella eaa. neoliittisella kivikaudella. Nykyään säilyneitä hautoja on 30, ja vielä 25 on tuhoutunut vuoden 1800 jälkeen, joten Carrowmore on yksi Irlannin suurimmista megaliittihautojen keskittymistä ja yksi neljästä suuresta yhdessä Carrowkeelin, Loughcrewin ja Brú na Bóinnen kanssa. Alueen hallitsee lännessä Knocknarea-vuori, jonka huipulla on suuri Miosgán Médhbhin kummuke. Osa monumenteista on joutunut louhinnan ja pellonraivauksen uhriksi 1700-, 1800- ja 1900-luvun alussa, ja kompleksi on suojeltu kansallinen muistomerkki.
+
+### 39.2
+KYSYMYS: Mikä vuori hallitsee Carrowmoren maisemaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carrowmore (historia)
+Tietoruudun teksti: Carrowmore, irlanniksi suuri neljännes, on suuri megaliittimuistomerkkien ryhmä Coolera-niemimaalla Sligon länsipuolella, ja ne rakennettiin 4. vuosituhannella eaa. neoliittisella kivikaudella. Nykyään säilyneitä hautoja on 30, ja vielä 25 on tuhoutunut vuoden 1800 jälkeen, joten Carrowmore on yksi Irlannin suurimmista megaliittihautojen keskittymistä ja yksi neljästä suuresta yhdessä Carrowkeelin, Loughcrewin ja Brú na Bóinnen kanssa. Alueen hallitsee lännessä Knocknarea-vuori, jonka huipulla on suuri Miosgán Médhbhin kummuke. Osa monumenteista on joutunut louhinnan ja pellonraivauksen uhriksi 1700-, 1800- ja 1900-luvun alussa, ja kompleksi on suojeltu kansallinen muistomerkki.
+
+### 39.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+================ KOHTA 40 (kohde:hahmotelma-loughcrew) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loughcrew (historia)
+Tietoruudun teksti: Loughcrew on historiallisesti merkittävä alue Oldcastlen lähellä Meathin kreivikunnassa, jossa on 4. vuosituhannen eaa. muinaisia hautoja, joista osa on koristeltu harvinaisella megaliittitaiteella ja jotka sijaitsevat kukkuloiden huipuilla. Kukkulat ja haudat tunnetaan yhdessä nimellä Slieve na Calliagh eli Cailleachin, irlantilaisen mytologian jumalallisen akan, vuori, ja ne ovat Meathin korkein kohta. Yli kolmekymmentä hautaa on jäänteinä neljällä kukkulalla, ja monumentit arvioidaan noin vuoteen 3300 eaa. Legendan mukaan ne syntyivät, kun jättiläisakka pudotti astellessaan esiliinastaan suuria kiviä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Ruoka: Calçot syödään esiliina kaulassa] Talvella — Calçot on pitkäksi kasvatettu kevätsipuli, jota paahdetaan avotulella viiniköynnöksen oksista. Musta kuori vedetään sormin pois, valkoinen sisus kastetaan romesco-kastikkeeseen ja pudotetaan suuhun pää takakenossa — siksi kaulaan sidotaan esiliina. Kausi kestää marraskuusta huhtikuuhun. Valls, josta laji on kotoisin, järjestää calçotada-juhlansa tammikuun viimeisenä sunnuntaina, ja siellä kilpaillaan myös syömisessä.
+
+### 40.1
+KYSYMYS: Mitä nimi Slieve na Calliagh tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loughcrew (historia)
+Tietoruudun teksti: Loughcrew on historiallisesti merkittävä alue Oldcastlen lähellä Meathin kreivikunnassa, jossa on 4. vuosituhannen eaa. muinaisia hautoja, joista osa on koristeltu harvinaisella megaliittitaiteella ja jotka sijaitsevat kukkuloiden huipuilla. Kukkulat ja haudat tunnetaan yhdessä nimellä Slieve na Calliagh eli Cailleachin, irlantilaisen mytologian jumalallisen akan, vuori, ja ne ovat Meathin korkein kohta. Yli kolmekymmentä hautaa on jäänteinä neljällä kukkulalla, ja monumentit arvioidaan noin vuoteen 3300 eaa. Legendan mukaan ne syntyivät, kun jättiläisakka pudotti astellessaan esiliinastaan suuria kiviä.
+
+### 40.2
+KYSYMYS: Kuka legendan mukaan pudotti Loughcrewin kivet esiliinastaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loughcrew (historia)
+Tietoruudun teksti: Loughcrew on historiallisesti merkittävä alue Oldcastlen lähellä Meathin kreivikunnassa, jossa on 4. vuosituhannen eaa. muinaisia hautoja, joista osa on koristeltu harvinaisella megaliittitaiteella ja jotka sijaitsevat kukkuloiden huipuilla. Kukkulat ja haudat tunnetaan yhdessä nimellä Slieve na Calliagh eli Cailleachin, irlantilaisen mytologian jumalallisen akan, vuori, ja ne ovat Meathin korkein kohta. Yli kolmekymmentä hautaa on jäänteinä neljällä kukkulalla, ja monumentit arvioidaan noin vuoteen 3300 eaa. Legendan mukaan ne syntyivät, kun jättiläisakka pudotti astellessaan esiliinastaan suuria kiviä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Ruoka: Calçot syödään esiliina kaulassa] Talvella — Calçot on pitkäksi kasvatettu kevätsipuli, jota paahdetaan avotulella viiniköynnöksen oksista. Musta kuori vedetään sormin pois, valkoinen sisus kastetaan romesco-kastikkeeseen ja pudotetaan suuhun pää takakenossa — siksi kaulaan sidotaan esiliina. Kausi kestää marraskuusta huhtikuuhun. Valls, josta laji on kotoisin, järjestää calçotada-juhlansa tammikuun viimeisenä sunnuntaina, ja siellä kilpaillaan myös syömisessä.
+
+### 40.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI

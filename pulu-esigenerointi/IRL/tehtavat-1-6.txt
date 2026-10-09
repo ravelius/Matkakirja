@@ -1,0 +1,211 @@
+================ KOHTA 26 (kohde:hahmotelma-burren) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burren (luonto · vuori)
+Tietoruudun teksti: Burren on Clarein kreivikunnan länsirannikolla sijaitseva karsti- ja jäätikkökarstimaisema, jonka pinta-ala on noin 530 neliökilometriä; nimi tarkoittaa irlanniksi kivistä aluetta. Alueen luonnonnähtävyyksiin kuuluvat Mullaghmoren kukkula ja Ailladien kalliot sekä historiallisiin muistomerkkeihin Poulnabronen dolmen ja Caherconnellin kivilinnoitus. Burren tunnetaan kasvistostaan: yli 70 prosenttia Irlannin kukkalajeista löytyy sieltä, ja epätavallisen ympäristön ansiosta arktis-alppiset ja Välimeren alueen kasvit kasvavat rinnakkain. Burrenin kansallispuisto on Irlannin kahdeksasta kansallispuistosta pienin.
+
+### 26.1
+KYSYMYS: Mitä nimi Burren tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burren (luonto · vuori)
+Tietoruudun teksti: Burren on Clarein kreivikunnan länsirannikolla sijaitseva karsti- ja jäätikkökarstimaisema, jonka pinta-ala on noin 530 neliökilometriä; nimi tarkoittaa irlanniksi kivistä aluetta. Alueen luonnonnähtävyyksiin kuuluvat Mullaghmoren kukkula ja Ailladien kalliot sekä historiallisiin muistomerkkeihin Poulnabronen dolmen ja Caherconnellin kivilinnoitus. Burren tunnetaan kasvistostaan: yli 70 prosenttia Irlannin kukkalajeista löytyy sieltä, ja epätavallisen ympäristön ansiosta arktis-alppiset ja Välimeren alueen kasvit kasvavat rinnakkain. Burrenin kansallispuisto on Irlannin kahdeksasta kansallispuistosta pienin.
+
+### 26.2
+KYSYMYS: Millaista kasvillisuutta Burrenissa kasvaa rinnakkain?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burren (luonto · vuori)
+Tietoruudun teksti: Burren on Clarein kreivikunnan länsirannikolla sijaitseva karsti- ja jäätikkökarstimaisema, jonka pinta-ala on noin 530 neliökilometriä; nimi tarkoittaa irlanniksi kivistä aluetta. Alueen luonnonnähtävyyksiin kuuluvat Mullaghmoren kukkula ja Ailladien kalliot sekä historiallisiin muistomerkkeihin Poulnabronen dolmen ja Caherconnellin kivilinnoitus. Burren tunnetaan kasvistostaan: yli 70 prosenttia Irlannin kukkalajeista löytyy sieltä, ja epätavallisen ympäristön ansiosta arktis-alppiset ja Välimeren alueen kasvit kasvavat rinnakkain. Burrenin kansallispuisto on Irlannin kahdeksasta kansallispuistosta pienin.
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-dingle) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglen niemimaa (luonto · vuori)
+Tietoruudun teksti: Dinglen niemimaa, irlanniksi Corca Dhuibhne, on Kerryn kreivikunnan pohjoisin suuri niemimaa, ja sen päättää Dunmore Head, Irlannin läntisin mantereen piste. Niemimaa on saanut nimensä Dinglen kaupungista, ja Dinglen lahti erottaa sen etelässä olevasta Iveraghin niemimaasta. Korkein vuori on 951 metrin Mount Brandon, ja Conor Pass on Irlannin korkein vuoriylikulku. Niemimaan länsipää on gaeltacht-aluetta, josta on tullut tärkeitä irlanninkielisiä kertojia, runoilijoita ja kirjailijoita. Länsirannikon edustan Blasketinsaaret tunnetaan entisten asukkaidensa kirjallisesta ja kielellisestä perinnöstä; ne ovat olleet asumattomia 1950-luvulta lähtien.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nome — kaupunkilehti / Nome: Yhdeksänkymmentä kilometriä Siperiaan] Nome on saman Seward-niemimaan pääkaupunki, jonka kärjessä sata seitsemänkymmentä kilometriä luoteeseen kohoaa Cape Prince of Wales, Yhdysvaltain manneralueen läntisin piste ja lähempänä Siperiaa kuin mikään muu paikka Pohjois-Amerikan mantereella, reilut 88 kilometriä yli Beringinsalmen. Salmen keskellä kaksi pientä saarta, Iso- ja Pikku-Diomede, ovat toisistaan vain 3,8 kilometrin päässä, ja niiden välistä kulkee sekä valtakunnanraja että kansainvälinen päivämääräraja: Pikku-Diomedeltä katsottuna huominen alkaa jo naapurisaarella. Talvella salmi jäätyy niin lujaa, että saarten väliä on kävelty jäätä pitkin.
+
+### 27.1
+KYSYMYS: Mikä on Irlannin läntisin mantereen piste?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglen niemimaa (luonto · vuori)
+Tietoruudun teksti: Dinglen niemimaa, irlanniksi Corca Dhuibhne, on Kerryn kreivikunnan pohjoisin suuri niemimaa, ja sen päättää Dunmore Head, Irlannin läntisin mantereen piste. Niemimaa on saanut nimensä Dinglen kaupungista, ja Dinglen lahti erottaa sen etelässä olevasta Iveraghin niemimaasta. Korkein vuori on 951 metrin Mount Brandon, ja Conor Pass on Irlannin korkein vuoriylikulku. Niemimaan länsipää on gaeltacht-aluetta, josta on tullut tärkeitä irlanninkielisiä kertojia, runoilijoita ja kirjailijoita. Länsirannikon edustan Blasketinsaaret tunnetaan entisten asukkaidensa kirjallisesta ja kielellisestä perinnöstä; ne ovat olleet asumattomia 1950-luvulta lähtien.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nome — kaupunkilehti / Nome: Yhdeksänkymmentä kilometriä Siperiaan] Nome on saman Seward-niemimaan pääkaupunki, jonka kärjessä sata seitsemänkymmentä kilometriä luoteeseen kohoaa Cape Prince of Wales, Yhdysvaltain manneralueen läntisin piste ja lähempänä Siperiaa kuin mikään muu paikka Pohjois-Amerikan mantereella, reilut 88 kilometriä yli Beringinsalmen. Salmen keskellä kaksi pientä saarta, Iso- ja Pikku-Diomede, ovat toisistaan vain 3,8 kilometrin päässä, ja niiden välistä kulkee sekä valtakunnanraja että kansainvälinen päivämääräraja: Pikku-Diomedeltä katsottuna huominen alkaa jo naapurisaarella. Talvella salmi jäätyy niin lujaa, että saarten väliä on kävelty jäätä pitkin.
+
+### 27.2
+KYSYMYS: Mikä vuori on Dinglen niemimaan korkein?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglen niemimaa (luonto · vuori)
+Tietoruudun teksti: Dinglen niemimaa, irlanniksi Corca Dhuibhne, on Kerryn kreivikunnan pohjoisin suuri niemimaa, ja sen päättää Dunmore Head, Irlannin läntisin mantereen piste. Niemimaa on saanut nimensä Dinglen kaupungista, ja Dinglen lahti erottaa sen etelässä olevasta Iveraghin niemimaasta. Korkein vuori on 951 metrin Mount Brandon, ja Conor Pass on Irlannin korkein vuoriylikulku. Niemimaan länsipää on gaeltacht-aluetta, josta on tullut tärkeitä irlanninkielisiä kertojia, runoilijoita ja kirjailijoita. Länsirannikon edustan Blasketinsaaret tunnetaan entisten asukkaidensa kirjallisesta ja kielellisestä perinnöstä; ne ovat olleet asumattomia 1950-luvulta lähtien.
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-corrib) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lough Corrib (luonto · järvi)
+Tietoruudun teksti: Lough Corrib on Länsi-Irlannissa oleva järvi, jonka Corrib-joki eli Galway-joki yhdistää mereen Galwayssa. Se on Irlannin tasavallan suurin järvi ja koko Irlannin saaren toiseksi suurin Lough Neaghin jälkeen; sen pinta-ala on 176 neliökilometriä. Saaren ensimmäinen kanava, Friar's Cut, kaivettiin 1100-luvulla, ja sen ansiosta veneet pääsivät Corribilta mereen Galwayssa. Vuodesta 2007 tehdyt kartoitukset ovat paljastaneet järvestä muun muassa pronssi- ja rautakautisia kaivettuja puuveneitä sekä 900-luvun aluksen, jossa oli kolme viikinkien taistelukirvestä, joten Corrib on kansainvälisesti merkittävä meriarkeologinen kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — kaupunkilehti / Historia: Mies, joka heitti pylväät mereen ja seurasi niitä] Norjalainen päällikkö Ingólfur Arnarson heitti perimätiedon mukaan laivansa kunniapylväät mereen lähestyessään Islannin rannikkoa noin vuonna 874 ja lupasi asettua sinne, minne pylväät ajautuisivat. Ne löytyivät lahdesta, jossa hän näki maasta nousevaa höyryä — hän nimesi paikan Reykjavíkiksi, "savuiseksi lahdeksi", kuumien lähteiden mukaan. Ingólfuria pidetään Islannin ensimmäisenä pysyvänä asukkaana, ja häntä seurasivat vuosikymmenten aikana tuhannet muut siirtolaiset, pääosin Norjasta ja Brittein saarilta. Asutuskausi kesti perimätiedon mukaan noin vuoteen 930 asti, jolloin koko saari katsottiin asutetuksi.
+- [Tanska — maalehti / Luonto: Liitukallio joka syöksyy mereen] 2025 — Mönin saaren itärannikolla kohoaa kuuden kilometrin pituinen liitukallioiden vyö, joka syöksyy jyrkästi mereen — korkein kohta, Dronningestolen, on 128 metriä. Valkoinen kallio koostuu miljardeista pikkuruisista merieliöiden kuorista, jotka kertyivät merenpohjaan liitukaudella miljoonia vuosia sitten. Meri kuluttaa kalliota jatkuvasti, ja lohkeamiset paljastavat uusia fossiileja — merisiilejä ja simpukoita — jotka huuhtoutuvat rantaan etsittäviksi. Alueella kulkee poluilla vuosittain noin 250 000 kävijää, ja heinäkuussa 2025 Unesco lisäsi Mönin liitukalliot maailmanperintöluetteloon.
+
+### 28.1
+KYSYMYS: Mikä on Irlannin tasavallan suurin järvi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lough Corrib (luonto · järvi)
+Tietoruudun teksti: Lough Corrib on Länsi-Irlannissa oleva järvi, jonka Corrib-joki eli Galway-joki yhdistää mereen Galwayssa. Se on Irlannin tasavallan suurin järvi ja koko Irlannin saaren toiseksi suurin Lough Neaghin jälkeen; sen pinta-ala on 176 neliökilometriä. Saaren ensimmäinen kanava, Friar's Cut, kaivettiin 1100-luvulla, ja sen ansiosta veneet pääsivät Corribilta mereen Galwayssa. Vuodesta 2007 tehdyt kartoitukset ovat paljastaneet järvestä muun muassa pronssi- ja rautakautisia kaivettuja puuveneitä sekä 900-luvun aluksen, jossa oli kolme viikinkien taistelukirvestä, joten Corrib on kansainvälisesti merkittävä meriarkeologinen kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Luonto: Pylväät, jotka laava latoi] 60 milj. vuotta sitten — Pohjois-Irlannin rannikolla on noin 40 000 kivipylvästä, jotka nousevat merestä kuin ladotut askelmat. Ne syntyivät, kun paksu laavakerros jäähtyi hyvin hitaasti. Jäähtyessään laava kutistui ja halkeili, ja halkeamat etsivät lyhimmän reitin — siksi useimmista pylväistä tuli kuusikulmaisia. Osassa on kuitenkin neljä, viisi, seitsemän tai kahdeksan sivua. Vanha tarina selittää saman toisin: jättiläinen Fionn mac Cumhaill rakensi kivitien Skotlantiin päästäkseen tappelemaan toisen jättiläisen kanssa.
+- [Irlanti — maalehti / Luonto: Metri tuhannessa vuodessa] Vuosituhansia — Irlannin soissa kasvava rahkasammal ei maadu kunnolla, koska vesi on hapanta ja hapetonta. Kuolleet kasvit painuvat kerroksiksi, ja tuhannessa vuodessa syntyy noin metri turvetta. Turvetta on nostettu lämmitykseen vuosisatoja: se leikataan pitkällä terällä palasiksi, jotka pinotaan pystyyn kuivumaan tuuleen. Suo säilyttää myös sen, mikä sinne joutuu, ja soista on löytynyt puisia teitä, voita puuastioissa ja kirjoja. Nykyään nostoa rajoitetaan, koska suot sitovat hiiltä ja niitä on jäljellä vain murto-osa.
+- [Irlanti — maalehti / Historia: Kaksi valtiatarta, yksi yhteinen kieli] 1593 — Gráinne Ní Mháille johti 1500-luvulla laivastoa Länsi-Irlannin rannikolla. Hän peri isältään merenkulkusuvun ja piti hallussaan linnoja ja aluksia, joilla kerättiin maksuja ohi kulkevilta laivoilta. Vuonna 1593 hän purjehti Lontooseen tapaamaan kuningatar Elisabet I:tä, koska hänen poikansa oli vangittu. Kumpikaan ei osannut toisen kieltä, joten keskustelu käytiin latinaksi. Gráinne kieltäytyi kumartamasta, koska ei tunnustanut Elisabetia Irlannin kuningattareksi. Poika päästettiin silti vapaaksi.
+
+### 28.2
+KYSYMYS: Mikä joki yhdistää järven mereen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lough Corrib (luonto · järvi)
+Tietoruudun teksti: Lough Corrib on Länsi-Irlannissa oleva järvi, jonka Corrib-joki eli Galway-joki yhdistää mereen Galwayssa. Se on Irlannin tasavallan suurin järvi ja koko Irlannin saaren toiseksi suurin Lough Neaghin jälkeen; sen pinta-ala on 176 neliökilometriä. Saaren ensimmäinen kanava, Friar's Cut, kaivettiin 1100-luvulla, ja sen ansiosta veneet pääsivät Corribilta mereen Galwayssa. Vuodesta 2007 tehdyt kartoitukset ovat paljastaneet järvestä muun muassa pronssi- ja rautakautisia kaivettuja puuveneitä sekä 900-luvun aluksen, jossa oli kolme viikinkien taistelukirvestä, joten Corrib on kansainvälisesti merkittävä meriarkeologinen kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — kaupunkilehti / Historia: Mies, joka heitti pylväät mereen ja seurasi niitä] Norjalainen päällikkö Ingólfur Arnarson heitti perimätiedon mukaan laivansa kunniapylväät mereen lähestyessään Islannin rannikkoa noin vuonna 874 ja lupasi asettua sinne, minne pylväät ajautuisivat. Ne löytyivät lahdesta, jossa hän näki maasta nousevaa höyryä — hän nimesi paikan Reykjavíkiksi, "savuiseksi lahdeksi", kuumien lähteiden mukaan. Ingólfuria pidetään Islannin ensimmäisenä pysyvänä asukkaana, ja häntä seurasivat vuosikymmenten aikana tuhannet muut siirtolaiset, pääosin Norjasta ja Brittein saarilta. Asutuskausi kesti perimätiedon mukaan noin vuoteen 930 asti, jolloin koko saari katsottiin asutetuksi.
+- [Tanska — maalehti / Luonto: Liitukallio joka syöksyy mereen] 2025 — Mönin saaren itärannikolla kohoaa kuuden kilometrin pituinen liitukallioiden vyö, joka syöksyy jyrkästi mereen — korkein kohta, Dronningestolen, on 128 metriä. Valkoinen kallio koostuu miljardeista pikkuruisista merieliöiden kuorista, jotka kertyivät merenpohjaan liitukaudella miljoonia vuosia sitten. Meri kuluttaa kalliota jatkuvasti, ja lohkeamiset paljastavat uusia fossiileja — merisiilejä ja simpukoita — jotka huuhtoutuvat rantaan etsittäviksi. Alueella kulkee poluilla vuosittain noin 250 000 kävijää, ja heinäkuussa 2025 Unesco lisäsi Mönin liitukalliot maailmanperintöluetteloon.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-achill) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Achill (luonto · saari)
+Tietoruudun teksti: Achill on Mayon kreivikunnan edustalla Irlannin länsirannikolla oleva saari, joka on Irlannin saarista suurin: sen pinta-ala on noin 148 neliökilometriä. Saarta on asutettu ainakin neoliittisesta kivikaudesta lähtien, ja Slievemore-vuoren juurella on Autio kylä, jossa on 80–100 raunioitunutta yhden huoneen kivitaloa. Saaren länsipäässä Croaghaunin kalliot ovat Euroopan kolmanneksi korkeimmat merikalliot, mutta niille ei pääse tietä pitkin. Suuri nälänhätä 1845–1849 iski Achilliin erityisen kovasti, koska maaperä oli huonoa ja saarelaiset olivat lähes täysin perunan varassa. Saari on ollut sillalla yhteydessä mantereeseen vuodesta 1887, ja Michael Davittin silta kulkee Achill Soundin ja Polrannyn kylien välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Luonto: Pylväät, jotka laava latoi] 60 milj. vuotta sitten — Pohjois-Irlannin rannikolla on noin 40 000 kivipylvästä, jotka nousevat merestä kuin ladotut askelmat. Ne syntyivät, kun paksu laavakerros jäähtyi hyvin hitaasti. Jäähtyessään laava kutistui ja halkeili, ja halkeamat etsivät lyhimmän reitin — siksi useimmista pylväistä tuli kuusikulmaisia. Osassa on kuitenkin neljä, viisi, seitsemän tai kahdeksan sivua. Vanha tarina selittää saman toisin: jättiläinen Fionn mac Cumhaill rakensi kivitien Skotlantiin päästäkseen tappelemaan toisen jättiläisen kanssa.
+- [Irlanti — maalehti / Luonto: Metri tuhannessa vuodessa] Vuosituhansia — Irlannin soissa kasvava rahkasammal ei maadu kunnolla, koska vesi on hapanta ja hapetonta. Kuolleet kasvit painuvat kerroksiksi, ja tuhannessa vuodessa syntyy noin metri turvetta. Turvetta on nostettu lämmitykseen vuosisatoja: se leikataan pitkällä terällä palasiksi, jotka pinotaan pystyyn kuivumaan tuuleen. Suo säilyttää myös sen, mikä sinne joutuu, ja soista on löytynyt puisia teitä, voita puuastioissa ja kirjoja. Nykyään nostoa rajoitetaan, koska suot sitovat hiiltä ja niitä on jäljellä vain murto-osa.
+- [Irlanti — maalehti / Historia: Kaksi valtiatarta, yksi yhteinen kieli] 1593 — Gráinne Ní Mháille johti 1500-luvulla laivastoa Länsi-Irlannin rannikolla. Hän peri isältään merenkulkusuvun ja piti hallussaan linnoja ja aluksia, joilla kerättiin maksuja ohi kulkevilta laivoilta. Vuonna 1593 hän purjehti Lontooseen tapaamaan kuningatar Elisabet I:tä, koska hänen poikansa oli vangittu. Kumpikaan ei osannut toisen kieltä, joten keskustelu käytiin latinaksi. Gráinne kieltäytyi kumartamasta, koska ei tunnustanut Elisabetia Irlannin kuningattareksi. Poika päästettiin silti vapaaksi.
+
+### 29.1
+KYSYMYS: Mikä on Irlannin saarista suurin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Achill (luonto · saari)
+Tietoruudun teksti: Achill on Mayon kreivikunnan edustalla Irlannin länsirannikolla oleva saari, joka on Irlannin saarista suurin: sen pinta-ala on noin 148 neliökilometriä. Saarta on asutettu ainakin neoliittisesta kivikaudesta lähtien, ja Slievemore-vuoren juurella on Autio kylä, jossa on 80–100 raunioitunutta yhden huoneen kivitaloa. Saaren länsipäässä Croaghaunin kalliot ovat Euroopan kolmanneksi korkeimmat merikalliot, mutta niille ei pääse tietä pitkin. Suuri nälänhätä 1845–1849 iski Achilliin erityisen kovasti, koska maaperä oli huonoa ja saarelaiset olivat lähes täysin perunan varassa. Saari on ollut sillalla yhteydessä mantereeseen vuodesta 1887, ja Michael Davittin silta kulkee Achill Soundin ja Polrannyn kylien välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Luonto: Pylväät, jotka laava latoi] 60 milj. vuotta sitten — Pohjois-Irlannin rannikolla on noin 40 000 kivipylvästä, jotka nousevat merestä kuin ladotut askelmat. Ne syntyivät, kun paksu laavakerros jäähtyi hyvin hitaasti. Jäähtyessään laava kutistui ja halkeili, ja halkeamat etsivät lyhimmän reitin — siksi useimmista pylväistä tuli kuusikulmaisia. Osassa on kuitenkin neljä, viisi, seitsemän tai kahdeksan sivua. Vanha tarina selittää saman toisin: jättiläinen Fionn mac Cumhaill rakensi kivitien Skotlantiin päästäkseen tappelemaan toisen jättiläisen kanssa.
+- [Irlanti — maalehti / Luonto: Metri tuhannessa vuodessa] Vuosituhansia — Irlannin soissa kasvava rahkasammal ei maadu kunnolla, koska vesi on hapanta ja hapetonta. Kuolleet kasvit painuvat kerroksiksi, ja tuhannessa vuodessa syntyy noin metri turvetta. Turvetta on nostettu lämmitykseen vuosisatoja: se leikataan pitkällä terällä palasiksi, jotka pinotaan pystyyn kuivumaan tuuleen. Suo säilyttää myös sen, mikä sinne joutuu, ja soista on löytynyt puisia teitä, voita puuastioissa ja kirjoja. Nykyään nostoa rajoitetaan, koska suot sitovat hiiltä ja niitä on jäljellä vain murto-osa.
+- [Irlanti — maalehti / Historia: Kaksi valtiatarta, yksi yhteinen kieli] 1593 — Gráinne Ní Mháille johti 1500-luvulla laivastoa Länsi-Irlannin rannikolla. Hän peri isältään merenkulkusuvun ja piti hallussaan linnoja ja aluksia, joilla kerättiin maksuja ohi kulkevilta laivoilta. Vuonna 1593 hän purjehti Lontooseen tapaamaan kuningatar Elisabet I:tä, koska hänen poikansa oli vangittu. Kumpikaan ei osannut toisen kieltä, joten keskustelu käytiin latinaksi. Gráinne kieltäytyi kumartamasta, koska ei tunnustanut Elisabetia Irlannin kuningattareksi. Poika päästettiin silti vapaaksi.
+
+### 29.2
+KYSYMYS: Minä vuonna silta yhdisti Achillin mantereeseen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Achill (luonto · saari)
+Tietoruudun teksti: Achill on Mayon kreivikunnan edustalla Irlannin länsirannikolla oleva saari, joka on Irlannin saarista suurin: sen pinta-ala on noin 148 neliökilometriä. Saarta on asutettu ainakin neoliittisesta kivikaudesta lähtien, ja Slievemore-vuoren juurella on Autio kylä, jossa on 80–100 raunioitunutta yhden huoneen kivitaloa. Saaren länsipäässä Croaghaunin kalliot ovat Euroopan kolmanneksi korkeimmat merikalliot, mutta niille ei pääse tietä pitkin. Suuri nälänhätä 1845–1849 iski Achilliin erityisen kovasti, koska maaperä oli huonoa ja saarelaiset olivat lähes täysin perunan varassa. Saari on ollut sillalla yhteydessä mantereeseen vuodesta 1887, ja Michael Davittin silta kulkee Achill Soundin ja Polrannyn kylien välillä.
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-powerscourt) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Powerscourtin vesiputous (luonto · joki)
+Tietoruudun teksti: Powerscourtin vesiputous on Irlannin toiseksi korkein vesiputous: se on 121 metriä korkea, ja se sijaitsee Wicklowin kreivikunnassa Enniskerryn lähellä Dargle-joessa. Putous on Glensoulanin riippulaakson pohjalla, jonka läpi Dargle virtaa lähteeltään Tonduff-vuoren etelärinteeltä jyrkkään kuoppaan, jossa vesiputous on. Sen yllä kohoavat Djouce (725 metriä) ja Maulin (570 metriä), ja se virtaa koko vuoden hevosenhännän muotoisena viuhkana. Vesiputous on osa Powerscourtin tilaa, ja lippuja saa 363 päivänä vuodessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Los Angeles — kohdekartta / Kohdekartta: Fort Mooren muistomuuri] 1847 Yhdysvaltain joukot miehittivät Los Angelesin elokuussa 1846, mutta kapteeni Archibald Gillespien ankara sotatila sytytti kapinan. Californiot piirittivät kaupungin, ja Gillespien viisikymmentä merisotilasta perääntyi mäelle, jossa he pinosivat hiekkasäkeistä suojan ja asettivat tykkinsä. Vastapuolen voimat kasvoivat yli kuuteensataan mieheen, ja Gillespie suostui poistumaan kaupungista 30. syyskuuta 1846. Amerikkalaiset palasivat 10. tammikuuta 1847, ja Cahuengan sopimus päätti sodan Ylä-Kaliforniassa kolme päivää myöhemmin. Samalle mäelle alettiin heti rakentaa linnaketta. Ensimmäinen, tähdenmuotoinen suunnitelma jäi kesken, ja 23. huhtikuuta 1847 aloitettiin suurempi. Sen piirsi luu…
+- [Slovenia — maalehti / Luonto: Rotko avattiin kävelijöille] 1893 — Vintgarin rotko Bledin luoteispuolella on 1,6 kilometrin mittainen kuilu, jonka Radovna-joki on kaivertanut kallioon. Seinämät nousevat 50–100 metrin korkeuteen, ja jokeen on syntynyt vesialtaita ja koskia. Rotko oli pitkään melkein saavuttamaton, kunnes Gorjen pormestari Jakob Žumer ja valokuvaaja Benedikt Lergetporer tutkivat sen vuonna 1891. Kaksi vuotta myöhemmin siihen rakennettiin puisia kävelysiltoja, ja rotko avattiin yleisölle 26. elokuuta 1893. Rotkon päässä putoaa 13-metrinen Šum-vesiputous, Slovenian suurin jokivesiputous. Sana vintgar on sittemmin alkanut tarkoittaa muitakin suojeltuja rotkoja.
+
+### 30.1
+KYSYMYS: Kuinka korkea Powerscourtin vesiputous on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Powerscourtin vesiputous (luonto · joki)
+Tietoruudun teksti: Powerscourtin vesiputous on Irlannin toiseksi korkein vesiputous: se on 121 metriä korkea, ja se sijaitsee Wicklowin kreivikunnassa Enniskerryn lähellä Dargle-joessa. Putous on Glensoulanin riippulaakson pohjalla, jonka läpi Dargle virtaa lähteeltään Tonduff-vuoren etelärinteeltä jyrkkään kuoppaan, jossa vesiputous on. Sen yllä kohoavat Djouce (725 metriä) ja Maulin (570 metriä), ja se virtaa koko vuoden hevosenhännän muotoisena viuhkana. Vesiputous on osa Powerscourtin tilaa, ja lippuja saa 363 päivänä vuodessa.
+
+### 30.2
+KYSYMYS: Minkä joen vesiputous se on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Powerscourtin vesiputous (luonto · joki)
+Tietoruudun teksti: Powerscourtin vesiputous on Irlannin toiseksi korkein vesiputous: se on 121 metriä korkea, ja se sijaitsee Wicklowin kreivikunnassa Enniskerryn lähellä Dargle-joessa. Putous on Glensoulanin riippulaakson pohjalla, jonka läpi Dargle virtaa lähteeltään Tonduff-vuoren etelärinteeltä jyrkkään kuoppaan, jossa vesiputous on. Sen yllä kohoavat Djouce (725 metriä) ja Maulin (570 metriä), ja se virtaa koko vuoden hevosenhännän muotoisena viuhkana. Vesiputous on osa Powerscourtin tilaa, ja lippuja saa 363 päivänä vuodessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Los Angeles — kohdekartta / Kohdekartta: Fort Mooren muistomuuri] 1847 Yhdysvaltain joukot miehittivät Los Angelesin elokuussa 1846, mutta kapteeni Archibald Gillespien ankara sotatila sytytti kapinan. Californiot piirittivät kaupungin, ja Gillespien viisikymmentä merisotilasta perääntyi mäelle, jossa he pinosivat hiekkasäkeistä suojan ja asettivat tykkinsä. Vastapuolen voimat kasvoivat yli kuuteensataan mieheen, ja Gillespie suostui poistumaan kaupungista 30. syyskuuta 1846. Amerikkalaiset palasivat 10. tammikuuta 1847, ja Cahuengan sopimus päätti sodan Ylä-Kaliforniassa kolme päivää myöhemmin. Samalle mäelle alettiin heti rakentaa linnaketta. Ensimmäinen, tähdenmuotoinen suunnitelma jäi kesken, ja 23. huhtikuuta 1847 aloitettiin suurempi. Sen piirsi luu…
+- [Slovenia — maalehti / Luonto: Rotko avattiin kävelijöille] 1893 — Vintgarin rotko Bledin luoteispuolella on 1,6 kilometrin mittainen kuilu, jonka Radovna-joki on kaivertanut kallioon. Seinämät nousevat 50–100 metrin korkeuteen, ja jokeen on syntynyt vesialtaita ja koskia. Rotko oli pitkään melkein saavuttamaton, kunnes Gorjen pormestari Jakob Žumer ja valokuvaaja Benedikt Lergetporer tutkivat sen vuonna 1891. Kaksi vuotta myöhemmin siihen rakennettiin puisia kävelysiltoja, ja rotko avattiin yleisölle 26. elokuuta 1893. Rotkon päässä putoaa 13-metrinen Šum-vesiputous, Slovenian suurin jokivesiputous. Sana vintgar on sittemmin alkanut tarkoittaa muitakin suojeltuja rotkoja.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI

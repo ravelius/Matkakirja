@@ -1,0 +1,203 @@
+================ KOHTA 41 (kohde:hahmotelma-new-ross) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: New Ross (merenkulku)
+Tietoruudun teksti: New Ross on noin 8 600 asukkaan kaupunki Wexfordin kreivikunnan lounaisosassa Barrow-joen varrella, 20 kilometriä Waterfordista koilliseen. Kaupunki nousi merkittäväksi normannien valloituksen jälkeen: ritari William Marshall ja hänen vaimonsa Isabella de Clare saapuivat 1200-luvun alussa, ja Rossin kronikan mukaan Isabella ryhtyi vuonna 1189 rakentamaan ihanaa kaupunkia Barrow-joen rannalle. Kaupunki kasvoi William Marshallin rakennuttaman sillan ympärille. Nykyään satamalaiturilla on Dunbrody-nälänhätälaivan jäljennös ja Siirtolaisliekki, joka palaa nälänhädän aikana lähteneiden siirtolaisten muistoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Darwin — kohdekartta / Kohdekartta: Vic-hotelli] 1890 Hotellin rakennutti Ellen Ryan, yksi territorion varakkaimmista naisista, joka omisti maata ja useita kaivosvaltauksia. Vuonna 1888 hän haki lupaviranomaisilta lupaa arvokkaalle hotellille Smith Streetin numeroon 27 keskellä kaupunkia, joka tunnettiin silloin Palmerstonina. H. C. Debross rakensi talon 4 000 punnalla, ja siitä tuli Darwinin ensimmäinen kivirakennus: kaksikerroksinen, paikallista monivärista porselaniittia, julkisivussa päätykolmio ja kuistit. Ovet avattiin 8. syyskuuta 1890. Nimi vaihtui kahdesti: ensin Royal Hotel, muutamaa päivää myöhemmin North Australian Hotel ja 1896 Victoria Hotel. Talo menetti kattonsa kolmesti alle sadassa vuodessa. Ensimmäinen kerta oli 6. tamm…
+- [Dunedin — kohdekartta / Kohdekartta: Knoxin kirkko] 1872–1876 Knoxin seurakunta syntyi 1860, kun First Churchista lähtenyt kolmannes ja kaupungin itsenäinen seurakunta yhdistyivät. Ensimmäinen kirkko avattiin 6. toukokuuta 1861 Great Kingin ja Frederick Streetin kulmassa, ja se oli siirtokunnan toinen presbyteerikirkko. Tontin lahjoitti John Hyde Harris, joka ehdotti myös nimeä. Talo oli puinen, ja ensimmäinen pappi oli Englannista tammikuussa 1861 saapunut D. M. Stuart. Kultaryntäys kasvatti väkimäärää niin nopeasti, että 1871 päätettiin rakentaa uusi kirkko tuhannelle hengelle. Tontti ostettiin Georgen ja Pittin kadun kulmasta 569 punnalla, ja suunnittelukilpailuun tuli 17 ehdotusta. Voittaja oli Robert Lawson, mutta hänen suunnitelmansa y…
+
+### 41.1
+KYSYMYS: Kuka rakennutti sillan, jonka ympärille New Ross kasvoi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: New Ross (merenkulku)
+Tietoruudun teksti: New Ross on noin 8 600 asukkaan kaupunki Wexfordin kreivikunnan lounaisosassa Barrow-joen varrella, 20 kilometriä Waterfordista koilliseen. Kaupunki nousi merkittäväksi normannien valloituksen jälkeen: ritari William Marshall ja hänen vaimonsa Isabella de Clare saapuivat 1200-luvun alussa, ja Rossin kronikan mukaan Isabella ryhtyi vuonna 1189 rakentamaan ihanaa kaupunkia Barrow-joen rannalle. Kaupunki kasvoi William Marshallin rakennuttaman sillan ympärille. Nykyään satamalaiturilla on Dunbrody-nälänhätälaivan jäljennös ja Siirtolaisliekki, joka palaa nälänhädän aikana lähteneiden siirtolaisten muistoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Darwin — kohdekartta / Kohdekartta: Vic-hotelli] 1890 Hotellin rakennutti Ellen Ryan, yksi territorion varakkaimmista naisista, joka omisti maata ja useita kaivosvaltauksia. Vuonna 1888 hän haki lupaviranomaisilta lupaa arvokkaalle hotellille Smith Streetin numeroon 27 keskellä kaupunkia, joka tunnettiin silloin Palmerstonina. H. C. Debross rakensi talon 4 000 punnalla, ja siitä tuli Darwinin ensimmäinen kivirakennus: kaksikerroksinen, paikallista monivärista porselaniittia, julkisivussa päätykolmio ja kuistit. Ovet avattiin 8. syyskuuta 1890. Nimi vaihtui kahdesti: ensin Royal Hotel, muutamaa päivää myöhemmin North Australian Hotel ja 1896 Victoria Hotel. Talo menetti kattonsa kolmesti alle sadassa vuodessa. Ensimmäinen kerta oli 6. tamm…
+
+### 41.2
+KYSYMYS: Minkä laivan jäljennös on New Rossin laiturilla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: New Ross (merenkulku)
+Tietoruudun teksti: New Ross on noin 8 600 asukkaan kaupunki Wexfordin kreivikunnan lounaisosassa Barrow-joen varrella, 20 kilometriä Waterfordista koilliseen. Kaupunki nousi merkittäväksi normannien valloituksen jälkeen: ritari William Marshall ja hänen vaimonsa Isabella de Clare saapuivat 1200-luvun alussa, ja Rossin kronikan mukaan Isabella ryhtyi vuonna 1189 rakentamaan ihanaa kaupunkia Barrow-joen rannalle. Kaupunki kasvoi William Marshallin rakennuttaman sillan ympärille. Nykyään satamalaiturilla on Dunbrody-nälänhätälaivan jäljennös ja Siirtolaisliekki, joka palaa nälänhädän aikana lähteneiden siirtolaisten muistoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dunedin — kohdekartta / Kohdekartta: Knoxin kirkko] 1872–1876 Knoxin seurakunta syntyi 1860, kun First Churchista lähtenyt kolmannes ja kaupungin itsenäinen seurakunta yhdistyivät. Ensimmäinen kirkko avattiin 6. toukokuuta 1861 Great Kingin ja Frederick Streetin kulmassa, ja se oli siirtokunnan toinen presbyteerikirkko. Tontin lahjoitti John Hyde Harris, joka ehdotti myös nimeä. Talo oli puinen, ja ensimmäinen pappi oli Englannista tammikuussa 1861 saapunut D. M. Stuart. Kultaryntäys kasvatti väkimäärää niin nopeasti, että 1871 päätettiin rakentaa uusi kirkko tuhannelle hengelle. Tontti ostettiin Georgen ja Pittin kadun kulmasta 569 punnalla, ja suunnittelukilpailuun tuli 17 ehdotusta. Voittaja oli Robert Lawson, mutta hänen suunnitelmansa y…
+- [Dunedin — kohdekartta / Kohdekartta: Otagon museo] 1868 Nimeä Otago Museum käytti ensimmäisenä James Hector geologisista kokoelmistaan, jotka olivat esillä Dunedinin suurnäyttelyssä 1865. Osa niistä muodosti museon ytimen, ja museo avattiin yleisölle 12. syyskuuta 1868 Princes Streetin Exchange-rakennuksessa. Kokoelma kasvoi nopeasti ulos tiloistaan, ja nykyisen paikan perustuskivi Great King Streetillä laskettiin joulukuussa 1874. Dunedinilaisen arkkitehdin David Rossin suunnittelema talo avattiin elokuussa 1877, ja se on yhä osa museota: alkuperäinen sisäänkäynti Oamarun kiven doorilaisine pylväineen näkyy kadulle, vaikka kävijät tulevat nykyään puiston puolelta. Museon hallinto siirtyi Otagon yliopistolle 1877, ja järjestely kesti vuotee…
+
+### 41.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+================ KOHTA 42 (kohde:hahmotelma-grianan) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grianán of Aileach (historia)
+Tietoruudun teksti: Grianán of Aileach on Inishowenin niemimaalla Donegalin kreivikunnassa 244 metriä korkean Greenan-vuoren huipulla oleva linnoitettu kukkula. Sen päärakenne on 1800-luvun jälleenrakennus kivisestä ringfortista, jonka Pohjoisen Uí Néillin arvellaan rakentaneen 500- tai 600-luvulla; kohde on tunnistettu Ailechin kuningaskunnan istuimeksi ja yhdeksi gaelilaisen Irlannin kuninkaallisista paikoista. Muuri on noin 4,5 metriä paksu ja 5 metriä korkea, ja sisällä on kolme portaiden yhdistämää terassia sekä kaksi pitkää käytävää. Irlantilaisen kirjallisuuden mukaan Munsterin kuningas Muirchertach Ua Briain tuhosi linnoituksen suurelta osin vuonna 1101, ja merkittäviä kunnostustöitä tehtiin vuonna 1870.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxor — kaupunkilehti / Arki ja kulkeminen: Vaunun malli on nimetty kuningattaren mukaan] Luxorissa ajetaan hevosvaunuilla, joita sanotaan arabiaksi hantouriksi. Malli on englantilainen victoria: nelipyöräinen avovaunu, jossa on edessä korotettu ajajan istuin ja sen takana kahden matkustajan penkki taitettavan kuomun alla. Vaunu kehitettiin Ranskassa, tuotiin Englantiin vuonna 1869 ja nimettiin kuningatar Victorian mukaan, minkä jälkeen siitä tuli muotiajoneuvo puistoajeluille. Kyytiin noustaan matalalta askelmalta, ja pyörien päällä on leveät kaarevat lokasuojat, jotka suojaavat matkustajia mudalta ja roiskeilta. Egyptissä ja Levantissa hantour on vuokra-ajoneuvo.
+- [Montevideo — kaupunkilehti / Historia: Muurien sisällä] Ciudad Vieja oli vuoteen 1829 asti muurien ympäröimä linnoitus niemellä sataman suulla. Muurien sisään rakennettiin vuosina 1804–1812 Cabildo, siirtomaahallinnon virallinen istuin, Plaza de la Constitución -aukion laidalle; aukiota kutsutaan yhä Plaza Matriziksi. Samalla aukiolla seisoo Montevideon katedraali, jonka kryptaan on haudattu kolme presidenttiä: Fructuoso Rivera, Juan Antonio Lavalleja ja Venancio Flores. Muurit purettiin 1829, ja niiden ulkopuolelle suunniteltiin heti uusi kaupunginosa Ciudad Nueva — se kasvoi kuitenkin hitaasti, koska sodat tulivat väliin.
+
+### 42.1
+KYSYMYS: Milloin Grianán of Aileachin merkittävä kunnostus tehtiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grianán of Aileach (historia)
+Tietoruudun teksti: Grianán of Aileach on Inishowenin niemimaalla Donegalin kreivikunnassa 244 metriä korkean Greenan-vuoren huipulla oleva linnoitettu kukkula. Sen päärakenne on 1800-luvun jälleenrakennus kivisestä ringfortista, jonka Pohjoisen Uí Néillin arvellaan rakentaneen 500- tai 600-luvulla; kohde on tunnistettu Ailechin kuningaskunnan istuimeksi ja yhdeksi gaelilaisen Irlannin kuninkaallisista paikoista. Muuri on noin 4,5 metriä paksu ja 5 metriä korkea, ja sisällä on kolme portaiden yhdistämää terassia sekä kaksi pitkää käytävää. Irlantilaisen kirjallisuuden mukaan Munsterin kuningas Muirchertach Ua Briain tuhosi linnoituksen suurelta osin vuonna 1101, ja merkittäviä kunnostustöitä tehtiin vuonna 1870.
+
+### 42.2
+KYSYMYS: Minkä kuningaskunnan istuin linnoitus oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grianán of Aileach (historia)
+Tietoruudun teksti: Grianán of Aileach on Inishowenin niemimaalla Donegalin kreivikunnassa 244 metriä korkean Greenan-vuoren huipulla oleva linnoitettu kukkula. Sen päärakenne on 1800-luvun jälleenrakennus kivisestä ringfortista, jonka Pohjoisen Uí Néillin arvellaan rakentaneen 500- tai 600-luvulla; kohde on tunnistettu Ailechin kuningaskunnan istuimeksi ja yhdeksi gaelilaisen Irlannin kuninkaallisista paikoista. Muuri on noin 4,5 metriä paksu ja 5 metriä korkea, ja sisällä on kolme portaiden yhdistämää terassia sekä kaksi pitkää käytävää. Irlantilaisen kirjallisuuden mukaan Munsterin kuningas Muirchertach Ua Briain tuhosi linnoituksen suurelta osin vuonna 1101, ja merkittäviä kunnostustöitä tehtiin vuonna 1870.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxor — kaupunkilehti / Arki ja kulkeminen: Vaunun malli on nimetty kuningattaren mukaan] Luxorissa ajetaan hevosvaunuilla, joita sanotaan arabiaksi hantouriksi. Malli on englantilainen victoria: nelipyöräinen avovaunu, jossa on edessä korotettu ajajan istuin ja sen takana kahden matkustajan penkki taitettavan kuomun alla. Vaunu kehitettiin Ranskassa, tuotiin Englantiin vuonna 1869 ja nimettiin kuningatar Victorian mukaan, minkä jälkeen siitä tuli muotiajoneuvo puistoajeluille. Kyytiin noustaan matalalta askelmalta, ja pyörien päällä on leveät kaarevat lokasuojat, jotka suojaavat matkustajia mudalta ja roiskeilta. Egyptissä ja Levantissa hantour on vuokra-ajoneuvo.
+- [Montevideo — kaupunkilehti / Historia: Muurien sisällä] Ciudad Vieja oli vuoteen 1829 asti muurien ympäröimä linnoitus niemellä sataman suulla. Muurien sisään rakennettiin vuosina 1804–1812 Cabildo, siirtomaahallinnon virallinen istuin, Plaza de la Constitución -aukion laidalle; aukiota kutsutaan yhä Plaza Matriziksi. Samalla aukiolla seisoo Montevideon katedraali, jonka kryptaan on haudattu kolme presidenttiä: Fructuoso Rivera, Juan Antonio Lavalleja ja Venancio Flores. Muurit purettiin 1829, ja niiden ulkopuolelle suunniteltiin heti uusi kaupunginosa Ciudad Nueva — se kasvoi kuitenkin hitaasti, koska sodat tulivat väliin.
+
+### 42.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+================ KOHTA 43 (kohde:hahmotelma-lismore) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lismore (historia)
+Tietoruudun teksti: Lismore Castle on linna Lismoren kaupungissa Waterfordin kreivikunnassa. Se kuului Desmondin jaarleille, Corkin jaarleille ja vuodesta 1753 Cavendishin suvulle, ja nykyään se on Devonshiren herttuan Irlannin koti. Ensimmäisen linnan rakennutti vuonna 1185 Irlannin herra, Englannin prinssi John, vartioimaan joen ylityspaikkaa, ja paikalla oli aiemmin 600-luvun alussa perustettu Lismoren luostari, tärkeä oppineisuuden keskus. Vuonna 1589 Sir Walter Raleigh vuokrasi linnan ja hankki sen myöhemmin, ja hän myi sen vankeutensa aikana vuonna 1602 Richard Boylelle, josta tuli vuonna 1620 Corkin ensimmäinen jaarli. 1800-luvun puolivälissä linna rakennettiin suurelta osin uudelleen goottilaiseen tyyliin Devonshiren kuudennelle herttualle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Historia: Luostari kalliolla keskellä merta] 600-luku — Kaksitoista kilometriä Kerryn rannikolta nousee merestä jyrkkä kallio, Skellig Michael. Sen laelle munkit rakensivat luostarin joskus 500- tai 600-luvulla. Ylös noustaan yli kuudensadan kiviportaan matka. Asumukset ovat mehiläispesän muotoisia: kivet on ladottu ilman laastia niin, että jokainen kerros työntyy hieman edellisen sisäpuolelle, ja katto sulkeutuu lopulta itsestään. Rakennukset ovat pysyneet kuivina yli tuhat vuotta. Munkit elivät kalalla, linnunmunilla ja sadevedellä, ja luostarista luovuttiin 1100-luvulla.
+- [Perth — kohdekartta / Kohdekartta: London Court] 1937 Nelikerroksinen kauppakuja Hay Streetin ja St Georges Terracen välissä näyttää Tudorin ajalta, mutta se on vuodelta 1937. Rakennuttaja oli kultarahoittaja Claude de Bernales, joka osti tontin helmikuussa 1935 75 000 punnalla entiseltä pormestarilta Thomas Molloylta — samalta mieheltä, joka oli rakennuttanut His Majesty’s -teatterin. Paikalla oli siihen asti ollut kujaverkosto nimeltä Gun Alley. Piirustukset teki melbournelainen arkkitehti Bernard Evans, työ alkoi elokuussa 1936 ja kesti alle vuoden. Hinta oli 80 000 puntaa. Hay Streetin päädyssä on suuri kello, joka lyö neljännestunnein, ja jokaisella lyönnillä linnanportista tulee neljä koneellista ritaria turnajaisiin. St Georges Ter…
+
+### 43.1
+KYSYMYS: Kuka osti linnan Sir Walter Raleighilta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lismore (historia)
+Tietoruudun teksti: Lismore Castle on linna Lismoren kaupungissa Waterfordin kreivikunnassa. Se kuului Desmondin jaarleille, Corkin jaarleille ja vuodesta 1753 Cavendishin suvulle, ja nykyään se on Devonshiren herttuan Irlannin koti. Ensimmäisen linnan rakennutti vuonna 1185 Irlannin herra, Englannin prinssi John, vartioimaan joen ylityspaikkaa, ja paikalla oli aiemmin 600-luvun alussa perustettu Lismoren luostari, tärkeä oppineisuuden keskus. Vuonna 1589 Sir Walter Raleigh vuokrasi linnan ja hankki sen myöhemmin, ja hän myi sen vankeutensa aikana vuonna 1602 Richard Boylelle, josta tuli vuonna 1620 Corkin ensimmäinen jaarli. 1800-luvun puolivälissä linna rakennettiin suurelta osin uudelleen goottilaiseen tyyliin Devonshiren kuudennelle herttualle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Perth — kohdekartta / Kohdekartta: London Court] 1937 Nelikerroksinen kauppakuja Hay Streetin ja St Georges Terracen välissä näyttää Tudorin ajalta, mutta se on vuodelta 1937. Rakennuttaja oli kultarahoittaja Claude de Bernales, joka osti tontin helmikuussa 1935 75 000 punnalla entiseltä pormestarilta Thomas Molloylta — samalta mieheltä, joka oli rakennuttanut His Majesty’s -teatterin. Paikalla oli siihen asti ollut kujaverkosto nimeltä Gun Alley. Piirustukset teki melbournelainen arkkitehti Bernard Evans, työ alkoi elokuussa 1936 ja kesti alle vuoden. Hinta oli 80 000 puntaa. Hay Streetin päädyssä on suuri kello, joka lyö neljännestunnein, ja jokaisella lyönnillä linnanportista tulee neljä koneellista ritaria turnajaisiin. St Georges Ter…
+
+### 43.2
+KYSYMYS: Mikä luostari oli paikalla ennen linnaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lismore (historia)
+Tietoruudun teksti: Lismore Castle on linna Lismoren kaupungissa Waterfordin kreivikunnassa. Se kuului Desmondin jaarleille, Corkin jaarleille ja vuodesta 1753 Cavendishin suvulle, ja nykyään se on Devonshiren herttuan Irlannin koti. Ensimmäisen linnan rakennutti vuonna 1185 Irlannin herra, Englannin prinssi John, vartioimaan joen ylityspaikkaa, ja paikalla oli aiemmin 600-luvun alussa perustettu Lismoren luostari, tärkeä oppineisuuden keskus. Vuonna 1589 Sir Walter Raleigh vuokrasi linnan ja hankki sen myöhemmin, ja hän myi sen vankeutensa aikana vuonna 1602 Richard Boylelle, josta tuli vuonna 1620 Corkin ensimmäinen jaarli. 1800-luvun puolivälissä linna rakennettiin suurelta osin uudelleen goottilaiseen tyyliin Devonshiren kuudennelle herttualle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Historia: Luostari kalliolla keskellä merta] 600-luku — Kaksitoista kilometriä Kerryn rannikolta nousee merestä jyrkkä kallio, Skellig Michael. Sen laelle munkit rakensivat luostarin joskus 500- tai 600-luvulla. Ylös noustaan yli kuudensadan kiviportaan matka. Asumukset ovat mehiläispesän muotoisia: kivet on ladottu ilman laastia niin, että jokainen kerros työntyy hieman edellisen sisäpuolelle, ja katto sulkeutuu lopulta itsestään. Rakennukset ovat pysyneet kuivina yli tuhat vuotta. Munkit elivät kalalla, linnunmunilla ja sadevedellä, ja luostarista luovuttiin 1100-luvulla.
+
+### 43.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+================ KOHTA 44 (kohde:hahmotelma-skibbereen) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skibbereen (historia)
+Tietoruudun teksti: Skibbereen on Länsi-Corkin kaupunki N71-tien varrella; Ilen-joki virtaa kaupungin läpi ja saavuttaa meren noin 12 kilometrin päässä Baltimoren kylässä. Vuosina 1845–1852 seudulla riehui vakava nälänhätä, jota kutsutaan Suureksi nälänhädäksi tai irlanniksi an Gorta Mór. Nälänhädän aikana kaupunki oli paikallisen avustuskomitean organisointikeskus, joka koordinoi vapaaehtoista avustustyötä ja antoi mallin keittiöavustuksille sekä siirtolaisohjelmille. Skibbereenin perintökeskus arvioi, että lähellä olevalla Abbeystrewery-hautausmaalla on nälänhädän uhrien hautakuopissa 8 000–10 000 uhria, ja keskuksessa on pysyvä näyttely heidän muistokseen. Skibbereen oli myös vuonna 2009 Irlannin ensimmäisen kansallisen nälänhätämuistopäivän kohde.
+
+### 44.1
+KYSYMYS: Millä nimellä nälänhätää kutsutaan irlanniksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skibbereen (historia)
+Tietoruudun teksti: Skibbereen on Länsi-Corkin kaupunki N71-tien varrella; Ilen-joki virtaa kaupungin läpi ja saavuttaa meren noin 12 kilometrin päässä Baltimoren kylässä. Vuosina 1845–1852 seudulla riehui vakava nälänhätä, jota kutsutaan Suureksi nälänhädäksi tai irlanniksi an Gorta Mór. Nälänhädän aikana kaupunki oli paikallisen avustuskomitean organisointikeskus, joka koordinoi vapaaehtoista avustustyötä ja antoi mallin keittiöavustuksille sekä siirtolaisohjelmille. Skibbereenin perintökeskus arvioi, että lähellä olevalla Abbeystrewery-hautausmaalla on nälänhädän uhrien hautakuopissa 8 000–10 000 uhria, ja keskuksessa on pysyvä näyttely heidän muistokseen. Skibbereen oli myös vuonna 2009 Irlannin ensimmäisen kansallisen nälänhätämuistopäivän kohde.
+
+### 44.2
+KYSYMYS: Mikä komitea toimi Skibbereenissä nälänhädän aikana?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skibbereen (historia)
+Tietoruudun teksti: Skibbereen on Länsi-Corkin kaupunki N71-tien varrella; Ilen-joki virtaa kaupungin läpi ja saavuttaa meren noin 12 kilometrin päässä Baltimoren kylässä. Vuosina 1845–1852 seudulla riehui vakava nälänhätä, jota kutsutaan Suureksi nälänhädäksi tai irlanniksi an Gorta Mór. Nälänhädän aikana kaupunki oli paikallisen avustuskomitean organisointikeskus, joka koordinoi vapaaehtoista avustustyötä ja antoi mallin keittiöavustuksille sekä siirtolaisohjelmille. Skibbereenin perintökeskus arvioi, että lähellä olevalla Abbeystrewery-hautausmaalla on nälänhädän uhrien hautakuopissa 8 000–10 000 uhria, ja keskuksessa on pysyvä näyttely heidän muistokseen. Skibbereen oli myös vuonna 2009 Irlannin ensimmäisen kansallisen nälänhätämuistopäivän kohde.
+
+### 44.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+================ KOHTA 45 (kohde:hahmotelma-knock) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knock (kulttuuri)
+Tietoruudun teksti: Knock, irlanniksi An Cnoc eli kukkula, on kylä Mayon kreivikunnassa, ja se tunnetaan Marian pyhäkkönä ja pyhiinvaelluskohteena. Katolisen uskon mukaan Neitsyt Maria, pyhä Joosef ja evankelista Johannes ilmestyivät todistajille kylässä 21. elokuuta 1879, ja nykyään kylä tunnetaan irlanniksi myös nimellä Cnoc Mhuire eli Marian kukkula. 1900-luvulla Knockista tuli yksi Euroopan eniten vierailluista Marian pyhäköistä Lourdesin ja Fatiman rinnalla, ja toisen maailmansodan aikana siellä järjestettiin rauhan pyhiinvaelluksia. Vuonna 1979 ilmestysten satavuotispäivänä paavi Johannes Paavali II vieraili pyhäkössä.
+
+### 45.1
+KYSYMYS: Minä vuonna Knockin ilmestyksen kerrotaan tapahtuneen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knock (kulttuuri)
+Tietoruudun teksti: Knock, irlanniksi An Cnoc eli kukkula, on kylä Mayon kreivikunnassa, ja se tunnetaan Marian pyhäkkönä ja pyhiinvaelluskohteena. Katolisen uskon mukaan Neitsyt Maria, pyhä Joosef ja evankelista Johannes ilmestyivät todistajille kylässä 21. elokuuta 1879, ja nykyään kylä tunnetaan irlanniksi myös nimellä Cnoc Mhuire eli Marian kukkula. 1900-luvulla Knockista tuli yksi Euroopan eniten vierailluista Marian pyhäköistä Lourdesin ja Fatiman rinnalla, ja toisen maailmansodan aikana siellä järjestettiin rauhan pyhiinvaelluksia. Vuonna 1979 ilmestysten satavuotispäivänä paavi Johannes Paavali II vieraili pyhäkössä.
+
+### 45.2
+KYSYMYS: Minkä nimen kylä sai ilmestysten jälkeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knock (kulttuuri)
+Tietoruudun teksti: Knock, irlanniksi An Cnoc eli kukkula, on kylä Mayon kreivikunnassa, ja se tunnetaan Marian pyhäkkönä ja pyhiinvaelluskohteena. Katolisen uskon mukaan Neitsyt Maria, pyhä Joosef ja evankelista Johannes ilmestyivät todistajille kylässä 21. elokuuta 1879, ja nykyään kylä tunnetaan irlanniksi myös nimellä Cnoc Mhuire eli Marian kukkula. 1900-luvulla Knockista tuli yksi Euroopan eniten vierailluista Marian pyhäköistä Lourdesin ja Fatiman rinnalla, ja toisen maailmansodan aikana siellä järjestettiin rauhan pyhiinvaelluksia. Vuonna 1979 ilmestysten satavuotispäivänä paavi Johannes Paavali II vieraili pyhäkössä.
+
+### 45.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
