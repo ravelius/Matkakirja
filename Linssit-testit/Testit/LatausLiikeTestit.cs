@@ -1,5 +1,5 @@
 // Latauskuvan liike (pohja LATAUSKUVA, omistaja 8.10.2026): vähäeleinen sinimuotoinen heilahdus ±0,5–0,75°, jakso 7–8 s, ei nykimistä;
-// köysi seuraa liikkuvaa kerrosta.
+// köysi seuraa liikkuvaa kerrosta. Kuumailmapallo tuulessa ja ankkuriköysi ketjukäyränä (omistaja 10.10. 16.5x).
 using System;
 
 namespace Matkakirja.Linssit.Testit
@@ -131,6 +131,95 @@ namespace Matkakirja.Linssit.Testit
                 OletaPeittaa(LatausLiike.Peita(w, h, suhde[2]), w, h, "pysty vanhalla kuvalla");
             }
             OletaPeittaa(LatausLiike.Peita(1366, 1024, double.NaN), 1366, 1024, "tuntematon kuvasuhde");
+        }
+
+        // TUULI (omistaja 10.10. 16.5x): pallo selkeästi tuulessa, kori seuraa, liike sileä.
+        static readonly LatausLiike.Profiili Kupu = new LatausLiike.Profiili { Tuuli = true, KulmaAste = 2.5, SivuPt = 12, NousuPt = 4, JaksoS = 6, Puuska = 1 };
+        static readonly LatausLiike.Profiili Kori = new LatausLiike.Profiili { Tuuli = true, KulmaAste = 1.6, SivuPt = 12, NousuPt = 3, JaksoS = 6, Puuska = 1, ViiveS = 0.25 };
+
+        [Testi] static void TuuliHeiluttaaSelvasti()
+        {
+            double maksK = 0, maksS = 0;
+            for (double t = 0; t < 60; t += 1.0 / 60)
+            {
+                var a = LatausLiike.Tila(Kupu, t);
+                maksK = Math.Max(maksK, Math.Abs(a.KulmaAste)); maksS = Math.Max(maksS, Math.Abs(a.SivuPt));
+            }
+            Oleta.Tosi(maksK <= 2.5 + 1e-9 && maksK > 2.0, $"kallistus ±{maksK:F2}° (tavoite 2–3)");
+            Oleta.Tosi(maksS <= 12 + 1e-9 && maksS > 9.6, $"sivuliike ±{maksS:F1} pt (tavoite 10–15)");
+            // Puuskat: liike ei toistu täsmälleen perusjakson välein.
+            var a0 = LatausLiike.Tila(Kupu, 2.0); var a1 = LatausLiike.Tila(Kupu, 8.0);
+            Oleta.Tosi(Math.Abs(a0.SivuPt - a1.SivuPt) > 0.3, $"epäsäännöllinen: {a0.SivuPt:F2} / {a1.SivuPt:F2} pt");
+            var q = new LatausLiike.Profiili { Tuuli = true, KulmaAste = 9, SivuPt = 40, JaksoS = 2, Puuska = 5, ViiveS = 9 }.Rajattu();
+            Oleta.Tosi(q.KulmaAste == 3 && q.SivuPt == 15 && q.JaksoS == 5 && q.Puuska == 1 && q.ViiveS == 1.5, "tuulen rajat");
+        }
+
+        [Testi] static void TuuliEiNyi()
+        {
+            double dt = 1.0 / 30, maksK = 0, maksS = 0, maksKiihtyvyys = 0, edV = double.NaN;
+            var e = LatausLiike.Tila(Kupu, 0);
+            for (double t = dt; t < 60; t += dt)
+            {
+                var a = LatausLiike.Tila(Kupu, t);
+                double v = (a.SivuPt - e.SivuPt) / dt;
+                maksK = Math.Max(maksK, Math.Abs(a.KulmaAste - e.KulmaAste)); maksS = Math.Max(maksS, Math.Abs(a.SivuPt - e.SivuPt));
+                if (!double.IsNaN(edV)) maksKiihtyvyys = Math.Max(maksKiihtyvyys, Math.Abs(v - edV) / dt);
+                edV = v; e = a;
+            }
+            Oleta.Tosi(maksK < 0.2, $"kallistus enintään {maksK:F3}° / kehys");
+            Oleta.Tosi(maksS < 1.0, $"sivuliike enintään {maksS:F2} pt / kehys");
+            Oleta.Tosi(maksKiihtyvyys < 60, $"kiihtyvyys enintään {maksKiihtyvyys:F1} pt/s² (sileä)");
+        }
+
+        [Testi] static void KoriSeuraaPalloaViiveella()
+        {
+            // Sama tuuli 0,25 s myöhemmin: korin sivuliike = pallon sivuliike hetkellä t − 0,25.
+            for (double t = 1; t < 20; t += 0.7)
+            {
+                double kori = LatausLiike.Tila(Kori, t).SivuPt, pallo = LatausLiike.Tila(Kupu, t - 0.25).SivuPt;
+                Oleta.Tosi(Math.Abs(kori - pallo) < 1e-9, $"t {t:F1}: kori {kori:F2} / pallo {pallo:F2}");
+            }
+            double ero = 0;
+            for (double t = 0; t < 30; t += 1.0 / 30) ero = Math.Max(ero, Math.Abs(LatausLiike.Tila(Kori, t).SivuPt - LatausLiike.Tila(Kupu, t).SivuPt));
+            Oleta.Tosi(ero < 6, $"kori enintään {ero:F1} pt pallosta (köydet eivät veny näkyvästi)");
+        }
+
+        static double Pituus((double X, double Y)[] p)
+        {
+            double l = 0;
+            for (int i = 1; i < p.Length; i++) l += Math.Sqrt((p[i].X - p[i - 1].X) * (p[i].X - p[i - 1].X) + (p[i].Y - p[i - 1].Y) * (p[i].Y - p[i - 1].Y));
+            return l;
+        }
+
+        [Testi] static void AnkkurikoysiRiippuuKetjukayrana()
+        {
+            // Maa (vasen alhaalla) → kori (oikea ylhäällä), y alas; köysi 5 % lepoetäisyyttä pidempi.
+            double L = Math.Sqrt(120 * 120 + 300 * 300) * 1.05;
+            var k = LatausLiike.Ketjukayra(0, 400, 120, 100, L, 200);
+            Oleta.Tosi(k[0] == (0.0, 400.0) && k[k.Length - 1] == (120.0, 100.0), "päät kiinni");
+            Oleta.Tosi(Math.Abs(Pituus(k) - L) < L * 0.002, $"pituus {Pituus(k):F1} / {L:F1}");
+            // Painuma: köysi kulkee jänteen alapuolella (y suurempi) ja on aidosti kaareva.
+            double suurin = 0;
+            for (int i = 1; i < k.Length - 1; i++)
+            {
+                double u = (k[i].X - 0) / 120, jy = 400 + (100 - 400) * u;
+                suurin = Math.Max(suurin, k[i].Y - jy);
+            }
+            Oleta.Tosi(suurin > 15, $"painuma {suurin:F1} pt jänteen alla");
+            // Kori liikkuu 12 pt oikealle: köysi kiristyy (painuma pienenee), vasemmalle: löystyy.
+            double Painuma(double bx)
+            {
+                var q = LatausLiike.Ketjukayra(0, 400, bx, 100, L, 200); double m = 0;
+                for (int i = 1; i < q.Length - 1; i++) { double u = q[i].X / bx; m = Math.Max(m, q[i].Y - (400 - 300 * u)); }
+                return m;
+            }
+            Oleta.Tosi(Painuma(132) < suurin && Painuma(108) > suurin, $"painuma seuraa koria: {Painuma(108):F1} > {suurin:F1} > {Painuma(132):F1}");
+            var kirea = LatausLiike.Ketjukayra(0, 0, 100, 0, 90, 10);
+            Oleta.Tosi(Math.Abs(kirea[5].Y) < 1e-9 && Math.Abs(kirea[5].X - 50) < 1e-9, "liian lyhyt köysi: suora");
+            var pysty = LatausLiike.Ketjukayra(0, 300, 0, 0, 315, 50);
+            Oleta.Tosi(pysty[0] == (0.0, 300.0) && pysty[50] == (0.0, 0.0) && !double.IsNaN(pysty[25].X), "pystysuora köysi ei hajoa");
+            var oikealta = LatausLiike.Ketjukayra(120, 100, 0, 400, L, 50);
+            Oleta.Tosi(oikealta[0] == (120.0, 100.0) && oikealta[50] == (0.0, 400.0), "suunta oikealta vasemmalle");
         }
 
         [Testi] static void KoydenRiippuma()

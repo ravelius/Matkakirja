@@ -6,7 +6,8 @@
 //               (kori → kupu) ja ankkuriköysi korista maan kiinnityspisteeseen taustassa (omistaja 8.10. 08.4x: "köysi, joka pitää
 //               pallon paikallaan"; isompi riippuma, pieni kaari)
 //   kerrokset   1–2 liikkuvaa kuvaa alfalla; vähäeleinen sinimuotoinen heilahdus ja nousu (Ydin LatausLiike, ±0,5–0,75°,
-//               nousu ≤ 4 pt, jakso 7–8 s)
+//               nousu ≤ 4 pt, jakso 7–8 s); kuumailmapallo tuulessa (omistaja 10.10. 16.5x): LatausLiike.Profiili.Tuuli ±2–3°,
+//               sivuliike ±10–15 pt, jakso 5–7 s puuskineen, kori viiveellä; ankkuriköysi ketjukäyränä (Koysi.Ketju)
 //   valokuva   koko kuvan hidas lähentyminen (Ken Burns 1,00 → 1,04 / 8 s ja takaisin; TaustaLahentyy, Päätoimittaja 8.10.);
 //              sama liike oppaan latauskuvan valokuvalle Kuvasuurennoksessa (Kuvasuurennos.Lahentyy → Latauskuva.AsetaRajaus).
 //   alaosa     valinnainen toinen kuva (sama rajaus) taustan alaosaan kohdasta AlaosaAlku alkaen: korvaa taustan etualan
@@ -50,10 +51,14 @@ namespace Matkakirja.Natiivi
             public Color Vari = Tyylikirja.Kehys.MapInk;
             /// <summary>Riippuma köyden pituudesta (0 = suora).</summary>
             public float Riippuma = 0.03f;
+            /// <summary>Ketjukäyrä (omistaja 10.10. 16.5x "köysi pitää taipua aidosti"): vakiopituinen köysi, pituus = lepoasennon
+            /// etäisyys × (1 + Lotko); painuma ja kaari seuraavat kiinnityspistettä joka ruudussa (LatausLiike.Ketjukayra).</summary>
+            public bool Ketju;
+            public float Lotko = 0.05f;
 
-            /// <summary>Ankkuriköysi maasta (taustan osuus) korin kerrokseen: hieman paksumpi, roikkuu pienellä kaarella.</summary>
+            /// <summary>Ankkuriköysi maasta (taustan osuus) korin kerrokseen: hieman paksumpi, riippuu ketjukäyränä.</summary>
             public static Koysi Ankkuri(Vector2 maa, int koriKerros, Vector2 kiinnitys) =>
-                new Koysi { Kiinto = maa, Kerros = koriKerros, Kiinnitys = kiinnitys, LeveysPt = 2f, Riippuma = 0.06f };
+                new Koysi { Kiinto = maa, Kerros = koriKerros, Kiinnitys = kiinnitys, LeveysPt = 2f, Riippuma = 0.06f, Ketju = true };
         }
 
         public const int PaivitysMs = 33;
@@ -241,18 +246,19 @@ namespace Matkakirja.Natiivi
             {
                 var a = LatausLiike.Tila(k.Liike, t);
                 el.style.rotate = new Rotate(new Angle((float)a.KulmaAste));
-                el.style.translate = new Translate(0f, (float)-a.NousuPt);
+                el.style.translate = new Translate((float)a.SivuPt, (float)-a.NousuPt);
             }
             if (koydet.Count > 0) koysiTaso.MarkDirtyRepaint();
         }
 
         /// <summary>Kerroksen paikallinen piste (osuuksina) isännän koordinaatteihin nykyisessä asennossa.</summary>
-        Vector2 KerroksenPiste(int i, Vector2 osuus, double t)
+        Vector2 KerroksenPiste(int i, Vector2 osuus, double t, bool lepo = false)
         {
             var k = kerrokset[i].K;
             float x0 = ala.x + k.Paikka.x * ala.width, y0 = ala.y + k.Paikka.y * ala.height;
             float w = k.Paikka.width * ala.width, h = k.Paikka.height * ala.height;
-            var p = LatausLiike.Muunna(x0 + osuus.x * w, y0 + osuus.y * h, x0 + k.Kaanto.x * w, y0 + k.Kaanto.y * h, LatausLiike.Tila(k.Liike, t));
+            var p = LatausLiike.Muunna(x0 + osuus.x * w, y0 + osuus.y * h, x0 + k.Kaanto.x * w, y0 + k.Kaanto.y * h,
+                lepo ? default : LatausLiike.Tila(k.Liike, t));
             return new Vector2((float)p.X, (float)p.Y);
         }
 
@@ -266,12 +272,22 @@ namespace Matkakirja.Natiivi
             {
                 var a = k.KiintoKerros >= 0 ? KerroksenPiste(k.KiintoKerros, k.Kiinto, t) : new Vector2(ala.x + k.Kiinto.x * ala.width, ala.y + k.Kiinto.y * ala.height);
                 var b = KerroksenPiste(k.Kerros, k.Kiinnitys, t);
-                var c = LatausLiike.Ohjauspiste(a.x, a.y, b.x, b.y, k.Riippuma);
                 p.strokeColor = k.Vari;
                 p.lineWidth = k.LeveysPt;
                 p.BeginPath();
                 p.MoveTo(a);
-                p.QuadraticCurveTo(new Vector2((float)c.X, (float)c.Y), b);
+                if (k.Ketju)
+                {
+                    var a0 = k.KiintoKerros >= 0 ? KerroksenPiste(k.KiintoKerros, k.Kiinto, t, lepo: true) : a;
+                    var b0 = KerroksenPiste(k.Kerros, k.Kiinnitys, t, lepo: true);
+                    var kayra = LatausLiike.Ketjukayra(a.x, a.y, b.x, b.y, Vector2.Distance(a0, b0) * (1f + k.Lotko));
+                    for (int i = 1; i < kayra.Length; i++) p.LineTo(new Vector2((float)kayra[i].X, (float)kayra[i].Y));
+                }
+                else
+                {
+                    var c = LatausLiike.Ohjauspiste(a.x, a.y, b.x, b.y, k.Riippuma);
+                    p.QuadraticCurveTo(new Vector2((float)c.X, (float)c.Y), b);
+                }
                 p.Stroke();
             }
         }
@@ -284,7 +300,7 @@ namespace Matkakirja.Natiivi
             foreach (var (_, k) in kerrokset)
             {
                 var a = LatausLiike.Tila(k.Liike, t);
-                sb.Append($" | {a.KulmaAste:+0.00;-0.00}° {a.NousuPt:+0.0;-0.0} pt");
+                sb.Append($" | {a.KulmaAste:+0.00;-0.00}° {a.NousuPt:+0.0;-0.0} pt sivu {a.SivuPt:+0.0;-0.0} pt");
             }
             return sb.ToString();
         }
