@@ -38,6 +38,8 @@
 
 ## 4. Muut tämän päivän toimitukset
 
+- **YÖVALOT VAIHE 2 (04.3x, LS1:lle):** `yovalot-20261010/yovalot-ikkunat-<id>.png` (LS1:n muoto: 1536², 8 m/px, R = osuus, G = K) + `yovalot-rakennukset-<id>.json`. Työkalut T7 `vesimaski/rakennusvalot.mjs` ja `.py`. LUEMINUT.md, vaihe 2.
+
 - **RH v3 (03.2x):** `rh-v3.py`: julkisivut v2 + katot ja kupolit katot_v2:n patinalla + spiira spiira_v2:sta (värinsiirto luokan 7 ja z:n mukaan). LR projisoi tekselitasolla, ja glb:t ovat LS2:lla. LR:n havainto: tiili tuli tummaksi (84/48/46 vs valokuvan 234/173/124), joten pidä sävyt lähempänä valokuvaa.
 - **PARIISI (04.3x):** ortho_ohje-kopioon lisätty mallit pp (Préfecture) ja co (vain obeliski), `codex-ohje-pp/` ja `codex-ohje-co/` (co tekoaly-pala 64 px/m). **pp v1** valmis (LR hyväksyi sävyt). **co v2** suositeltu (v1 oli pinkki ja sileä; v2: reunat 0,45/0,5, tile 0,15, kultainen pyramidion). LR projisoi.
 - **VESI ALUENOSTO (03.1x, PT + LS2 e15f16e18):** `_tyo/karttaseppa/vesi-aluenosto-20261010/` (index-v6, tukholma5-*): Norrström yhteensä 2,0 m, Strömmen 1,5 m, smoothstep 120 m. LS2:n haara vesi-v6-174 c94c7c1b1 lukee v6:n. Kuvapari LS2:lta, ja vienti Julkaisijalle kuittauksen jälkeen (paketti tehdään silloin, LAHTEET pohjana v5).
