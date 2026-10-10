@@ -38,6 +38,9 @@
 
 ## 4. Muut tämän päivän toimitukset
 
+- **KADUT (05.1x, LS1:lle):** `_tyo/karttaseppa/kadut-20261010/kadut-{pariisi(10 km),tukholma(15 km)}.json` (ajosuunnat, kaistat, nopeus, liittymät; oneway=-1 käännetty). Työkalu T7 `vesimaski/kadut.mjs`. Tukholman maanpinta: Lantmäteriet CC0, mutta vaatii Geotorget-tunnuksen (omistaja).
+- **VESIVÄRI (AJOSSA 05.16 →, LS2:lle):** T7 `vesimaski/vesivari.mjs` (S2 L2A Earth Search, SCL 6, Seine 4, Mälaren 3, Saltsjön 3 ikkunaa, 2019–2025), loki `vesivari/ajo.log`. Valmistuttua `python3 -I vesivari-kaudet.py vesivari/vesivari-raaka.json <_tyo/karttaseppa/vesivari-20261010/vesivari-kaudet.json>`, jossa kaksoiskappaleiden BOA-offset korjataan. Kd490 KD2 ei ole luotettava sameassa vedessä, joten käytetään sameus_fnu:ta. Vienti ilmakeha/… tai vesi/… sovitaan LS2:n kanssa.
+
 - **s5 v3/v3b (05.0x):** v3 (img2img 0,5) jäi yliteräväksi, joten **v3b suositeltu** (v1:n värit + v3:n luminanssin ylipäästö). LR valitsee.
 - **PILVET (05.1x, LS2:lle):** `_tyo/karttaseppa/pilvet-kaudet-20261010/pilvet-kaudet.json`. METAR IEM 2016–2025 (Orly, Bromma): peitto, pohja, matala-osuus, paksuus (arvio) kaupunki × kausi. **ÄMPÄRISSÄ 04.58** (ilmakeha/pilvet-v1/, paksuus = ilmastollinen arvio LS2:n mukaan). Data T7 `pilvet-metar/`.
 
