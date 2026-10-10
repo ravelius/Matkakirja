@@ -303,7 +303,8 @@ namespace Matkakirja
         string LiikkeenSyy()
         {
             if (Time.unscaledTime < vieritysAsti) return "vieritys";
-            if (Kosketus.activeTouches.Count > 0) return "kosketus";
+            // EnhancedTouch on päällä vain PalloKierron aikana (6.7: ilman sitä activeTouches heittää joka ruudussa → LateUpdate katkesi).
+            if (UnityEngine.InputSystem.EnhancedTouch.EnhancedTouchSupport.enabled && Kosketus.activeTouches.Count > 0) return "kosketus";
             // Mac: hiiren veto on kosketus (täysi taajuus vedon ajan).
             if (UnityEngine.InputSystem.Mouse.current?.leftButton.isPressed ?? false) return "kosketus";
             if (kierto != null && kierto.Liikkeessa && !kierto.Peitetty) return "pallo";

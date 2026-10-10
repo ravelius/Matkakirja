@@ -89,7 +89,7 @@ namespace Matkakirja.Natiivi
 
         public void Paivita(Rakennus rakennus, double t)
         {
-            var sormet = Kosketus.activeTouches;
+            var sormet = UnityEngine.InputSystem.EnhancedTouch.EnhancedTouchSupport.enabled ? Kosketus.activeTouches : default;
             int n = sormet.Count;
             // MAC (Natiivi-UI, juna 152): hiiren vasen nappi on yhden sormen veto ja napautus, kun kosketuksia ei ole
             // (iPad-sovellus Macilla ja natiivi Mac; samoin kartta PalloKierrossa ja Cupola).

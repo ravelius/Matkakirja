@@ -35,7 +35,7 @@ namespace Matkakirja.Natiivi
             bool sallittu = Kaytossa && korissa && kam != null;
             if (pk != null && sallittu != vetoAsetettu) { pk.YhdenSormenVetoMuualla = sallittu; vetoAsetettu = sallittu; }
             double kulma = kam != null ? Mathf.Asin(Mathf.Clamp(kam.transform.forward.y, -1f, 1f)) * Mathf.Rad2Deg : 0;
-            var sormet = Kosketus.activeTouches;
+            var sormet = UnityEngine.InputSystem.EnhancedTouch.EnhancedTouchSupport.enabled ? Kosketus.activeTouches : default;
             int n = sormet.Count;
             bool painettu = n == 1 || (n == 0 && Mouse.current != null && Mouse.current.leftButton.isPressed);
             Vector2 px = n >= 1 ? sormet[0].screenPosition : Mouse.current != null ? Mouse.current.position.ReadValue() : Vector2.zero;
