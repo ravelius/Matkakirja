@@ -449,7 +449,7 @@ export function lisaaBlender(rakennusJson, blender) {
   const mallit = [...on.keys()].filter((p) => /^ymparisto\/mallit\/[^/]+\.glb$/.test(p) && !p.endsWith('-kevyt.glb')).sort()
     .map((p) => { const id = p.slice('ymparisto/mallit/'.length, -4); const kevyt = `ymparisto/mallit/${id}-kevyt.glb`;
       return { id, huippu: B(p), kevyt: B(on.has(kevyt) ? kevyt : p), ...(rakennusJson.ymparistoMallit?.[id] ?? {}) }; });
-  delete rakennusJson.ymparistoMallit; delete rakennusJson.lisaHenkilot;   // rakennuskohtaiset lisäkentät malleille, esim. vene { maailmaan: false } (Siirtoseppä 7.10.)
+  delete rakennusJson.ymparistoMallit; delete rakennusJson.lisaHenkilot; delete rakennusJson.lisaPinnat;   // rakennuskohtaiset lisäkentät malleille, esim. vene { maailmaan: false } (Siirtoseppä 7.10.)
   if (mallit.length) { rakennusJson.ymparisto = rakennusJson.ymparisto || {}; rakennusJson.ymparisto.mallit = mallit; }
   // Vapaa kävely (omistaja 7.10. 08.4x; Linnanrakentaja + Siirtoseppä): kavely/osat.json (osien glb:t, rajat, naapurit,
   // portaalit, leikkaukset, kamera_rajat) ja kavely/merkit.json (ovi:, piilo:, esine:, partio:). Polut osat.jsonissa
@@ -560,7 +560,12 @@ export async function rakennaData(rakennus, {
   }
   const tilaIdt = new Set(rakennus.tilat.map((t) => t.id));
 
-  const kaytetytPinnat = new Set();
+  // lisaPinnat (10.10.2026, Linnanrakentaja + Siirtoseppä): pinnat, joita käyttävät vain Blender-tuotokset (esim. kävely-glb:n
+  // 'rantakivi'), eivät tilojen osat. Natiivi lukee pinnat vain rakennus.jsonista, joten ne on vietävä tänne kuvineen.
+  const kaytetytPinnat = new Set(rakennus.lisaPinnat ?? []);
+  for (const id of kaytetytPinnat) {
+    if (!PINNAT[id]) throw new Error(`rakenna: lisaPinnat: tuntematon pinta '${id}' (ei js/dioraama/pankit/pinnat.js:ssä)`);
+  }
   // lisaHenkilot (7.10.2026, Siirtoseppä): henkilöt, joita ei ole vielä sijoitettu tiloihin mutta joiden kohtaus tulee
   // käsikirjoituksesta (esim. pystyleikkeen portinvartija). Mukaan rakennus.json:n henkilöihin skin-glb:ineen.
   const kaytetytHenkilot = new Set(rakennus.lisaHenkilot ?? []);
