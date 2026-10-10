@@ -3,7 +3,7 @@
 // Kaikki MuseoValaistu-varjostimella kerroksessa MuseoNayttamo.Kerros. Teoksen kuva: teokset.json:n "kuva" (sisältöpaketti,
 // Natiivi.Kuvat.Hae) tai siihen asti paikkakuva (hillitty sävy teoksen tunnuksesta, oikea kuvasuhde, ei tekstiä).
 // SALI-GLB (LS1 10.10., PT 11.2x): Linnanrakentajan sali-lod{0,1}.glb (_valmiit/taidemuseo-alankomaat-v1, samat mitat ja origo)
-// ladataan ämpäristä (LataaSali: <maan juuri>sali-v1/, tyokalut/museo_sali_paketti.py) ja vaihdetaan väliaikaishallin,
+// ladataan ämpäristä (LataaSali: <maan juuri>SaliKansio, tyokalut/museo_sali_paketti.py; v2 = LR:n v2f: kehysten ja patsaiden varjot atlaksessa) ja vaihdetaan väliaikaishallin,
 // kattoikkunoiden ja omien tekstitaulujen tilalle, kun malli, valoatlas ja tekstuurit ovat valmiit; muuten väliaikaishalli jää.
 // Teokset, kehykset ja kohdevalot pysyvät tässä (atlas antaa hallille hajavalon ja keilat, kohdevalot vain kiillon).
 using System;
@@ -261,14 +261,17 @@ namespace Matkakirja.Natiivi
         /// <summary>Atlaksen koodaus (leivo_sali.py LX_YKSIKKO): E_lx = näyte_lineaarinen × 1200.</summary>
         public const float AtlasLx = 1200f;
 
-        /// <summary>Lataa &lt;maaJuuri&gt;sali-v1/{sali-lod&lt;L&gt;.glb, valot/sali-lod&lt;L&gt;-4x4.astcm, tekstuurit/&lt;materiaali&gt;.astcm} ja vaihtaa
+        /// <summary>Atlaksen ja sali.json:n versio (LR:n v2f 10.10.: kehys- ja patsasvarjot); vaihdetaan yhdessä Resources/Museo/&lt;maa&gt;/sali.json:n kanssa.</summary>
+        public const string SaliKansio = "sali-v2/";
+
+        /// <summary>Lataa &lt;maaJuuri&gt;SaliKansio{sali-lod&lt;L&gt;.glb, valot/sali-lod&lt;L&gt;-4x4.astcm, tekstuurit/&lt;materiaali&gt;.astcm} ja vaihtaa
         /// väliaikaishallin tilalle, kun kaikki on valmiina. Puuttuva malli tai atlas jättää väliaikaishallin; puuttuva tekstuuri jättää
         /// materiaalin pohjavärin.</summary>
         public IEnumerator LataaSali(string maaJuuri, int lod, Action<string> kirjaa)
         {
             if (string.IsNullOrEmpty(maaJuuri) || SaliGlb) yield break;
             float t0 = Time.realtimeSinceStartup;
-            string kansio = maaJuuri + "sali-v1/";
+            string kansio = maaJuuri + SaliKansio;
             byte[] glb = null, atlasData = null;
             yield return MuseoTekstuurit.Hae(kansio + $"sali-lod{lod}.glb", b => glb = b);
             if (juuri == null) yield break;
@@ -328,6 +331,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>glTF-materiaali (pinnan nimi LR:n sali_blender.py:stä) MuseoValaistu-materiaaliksi: baseColorFactor lineaarisena,
         /// kiilto ja karheus nimen mukaan (glTF:n roughnessFactor ei ole GlbOsassa), lasi hehkuu kuten väliaikaishallin kattoikkuna.</summary>
+        const float LattiaHeijastusParketti = 0.3f, LattiaHeijastusMarmori = 0.5f;
+
         Material SaliMateriaali(GlbOsa o, Texture atlas)
         {
             var c = o.Vari != null && o.Vari.Length >= 3 ? new Color(o.Vari[0], o.Vari[1], o.Vari[2]) : Color.white;
@@ -343,6 +348,9 @@ namespace Matkakirja.Natiivi
             else if (p == "penkki_nahka") karheus = 0.5f;
             else if (p.StartsWith("damasti", StringComparison.Ordinal)) karheus = 0.6f;
             var m = Materiaali("Sali " + p, c, kiilto, karheus, metalli);
+            // Lattiaheijastus (juna 180): parketti hillitysti, kiillotettu marmori selvemmin (MuseoNayttamo.PaivitaHeijastus).
+            if (p.StartsWith("parketti", StringComparison.Ordinal)) m.SetFloat("_Heijastus", LattiaHeijastusParketti);
+            else if (p.StartsWith("kivi_marmori", StringComparison.Ordinal)) m.SetFloat("_Heijastus", LattiaHeijastusMarmori);
             m.SetTexture("_Atlas", atlas);
             m.SetFloat("_AtlasLx", AtlasLx);
             if (p.StartsWith("lasi", StringComparison.Ordinal))

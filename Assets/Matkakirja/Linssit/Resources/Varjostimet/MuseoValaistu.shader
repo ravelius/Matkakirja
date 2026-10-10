@@ -8,6 +8,10 @@
 //  - LR:n sali-GLB (sali-v1): _AtlasLx > 0 → hajavalo ja kohdevalojen HAJAOSA tulevat leivotusta valoatlaksesta (TEXCOORD1;
 //    atlas = E / 1200 lx lineaarisena sRGB-pakattuna, ks. taidemuseo-runko/lahde/leivo_sali.py), kohdevalot antavat vain kiillon.
 // Molemmat puolet piirretään (geometriageneraattorin kiertosuunnalla ei väliä), normaali käännetään katsojaan päin.
+// LATTIAHEIJASTUS (omistaja 10.10. 17.2x, PT:n kuittaama suunnitelma, juna 180): _Heijastus > 0 (parketti, marmori) ja ylöspäin
+// katsova pinta → MuseoNayttamon peilikamera (lattian tason y = 0 yli, vino lähitaso) piirtää salin puoliresoluutioiseen kuvaan
+// _MuseoHeijastusKuva; lattia lukee sitä ruudun kohdasta, karheuden mukaan sumeampana (mip) ja Fresnelin painolla (hillitty).
+// _MuseoHeijastusMaara = 0 peilikameran omassa piirrossa ja kun heijastus on pois ("museo heijastus 0").
 Shader "Matkakirja/MuseoValaistu"
 {
     Properties
@@ -21,6 +25,7 @@ Shader "Matkakirja/MuseoValaistu"
         _Hehku ("Itsevalaisu cd/m²", Color) = (0, 0, 0, 0)
         _Atlas ("Valoatlas (E / AtlasLx)", 2D) = "black" {}
         _AtlasLx ("Atlaksen lx-kerroin (0 = ei atlasta)", Float) = 0
+        _Heijastus ("Lattiaheijastus (0 = ei)", Range(0, 1)) = 0
     }
     SubShader
     {
@@ -46,7 +51,11 @@ Shader "Matkakirja/MuseoValaistu"
                 float _Kiilto, _Karheus, _Metalli, _KarkiVari;
                 float4 _Hehku;
                 float _AtlasLx;
+                float _Heijastus;
             CBUFFER_END
+            TEXTURE2D(_MuseoHeijastusKuva); SAMPLER(sampler_MuseoHeijastusKuva);
+            float _MuseoHeijastusMaara;     // 0 = ei heijastusta (peilikameran piirto, kytkin)
+            float _MuseoHeijastusMipit;     // heijastuskuvan mip-tasojen määrä − 1
 
             int _MuseoSpotMaara;
             float4 _MuseoSpotP[SPOTTEJA];   // paikka.xyz, cos ulkoreuna
@@ -109,7 +118,19 @@ Shader "Matkakirja/MuseoValaistu"
                     L += e * (hajaSpot * diff / PI + f * spek);
                 }
                 L += _Hehku.rgb;
-                return float4(L * _MuseoValotus, 1);
+                float3 c = L * _MuseoValotus;
+                if (_Heijastus > 0 && _MuseoHeijastusMaara > 0 && n.y > 0.9)
+                {
+                    float2 suv = GetNormalizedScreenSpaceUV(i.paikka);
+                    // Sumeus karheus² · 2 mip-ketjusta (LS2:n A/B 10.10.: lineaarinen karheus sumensi parketin tunnistamattomaksi;
+                    // nyt marmori 0,3 → 18 %, parketti 0,45 → 40 %).
+                    float3 r = SAMPLE_TEXTURE2D_LOD(_MuseoHeijastusKuva, sampler_MuseoHeijastusKuva, suv, saturate(_Karheus * _Karheus * 2) * _MuseoHeijastusMipit).rgb;
+                    // Fresnel pohjalla 0,25 (simu 10.10. 18.59: puhdas Schlick 4 % → heijastus näkymätön tavallisella katsekulmalla;
+                    // vahattu lattia näyttää heijastuksen myös jyrkemmin).
+                    float fr = lerp(0.25, 1, pow(1 - saturate(dot(n, v)), 5));
+                    c = lerp(c, r, saturate(_Heijastus * fr * _MuseoHeijastusMaara));
+                }
+                return float4(c, 1);
             }
             ENDHLSL
         }
