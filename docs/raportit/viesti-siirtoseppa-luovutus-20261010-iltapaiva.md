@@ -6,7 +6,7 @@ Olet Siirtoseppä (Opus, high): johdat Olavinlinnan historiamoottoria (pelattava
 LR:n pakettien kytkentä). Lue tämä, CLAUDE.md ja Raamatun Ydinajatus kohta 2. Testaus vain automaattisin; simuajot vain kuva-arkkeihin ja PT:n
 pyytämiin kaappauksiin Julkaisijan KÄÄNNÖS NYT / SIMULAATTORI NYT -vuorolla. Oma simu 8362879F-30B9-4625-9F42-57326EBC3439 (T7-sarja:
 `source /Users/Shared/Claude/proto-3d/tyokalut/simusarja.sh`). Ilmoita Julkaisijalle "lukko vapaa" / "simu vapaa".
-Proto-worktree /Users/Shared/Claude/wt/proto-siirtoseppa-kello (nyt haara siirtoseppa/historia-suoja, puhdas). Varmuuskopio natiivi-backup
+Proto-worktree /Users/Shared/Claude/wt/proto-siirtoseppa-kello (nyt haara siirtoseppa/historia-kamera 04915cace, puhdas). Varmuuskopio natiivi-backup
 peili/proto/siirtoseppa-<haara> (push -f estetty → uusi nimi). Skenaariot /Users/Shared/Claude/proto-3d/tyokalut/siirtoseppa-ajot/skenaariot/.
 Unity 6.7 on päälinja. Ei uusia GetInstanceID-kutsuja (CS0619).
 
@@ -17,7 +17,7 @@ kytke uusi paketti (PelattavaPala.Hash/Versio + kultaiset osat/merkit/rakennus/l
 `https://media.matkakirja.app/dioraama/olavinlinna/<hash>/rakennus.json` ja `blender/kavely/{osat,merkit}.json`; liekit eivät ole paketissa,
 kopioi edellinen kultainen nimellä), poista `Linssit-testit/Testit/OsaviipaleetTestit.cs`:n `OdottaaKorjausta`-rivit (testi kaatuu, kun viipale
 katoaa) ja tarkista, tarvitaanko `ThiefAjuri.cs`:n `RauhallinenYlitys { 69 }` vielä (kokeile ilman: OlavinlinnaMOsaTestit.KiinniTarkistuspisteeseenJaLoppuun
-ja PiiloonMenoTekeeTarkistuspisteen; PT: rajaa EI löysätä). Linssit + unity-tarkistus → SHA PT:lle. Uusi haara 1210b674e:n päälle.
+ja PiiloonMenoTekeeTarkistuspisteen; PT: rajaa EI löysätä). Linssit + unity-tarkistus → SHA PT:lle. Uusi haara junan 177 rungon (tai 04915cace:n) päälle.
 
 ## JUNA 176 (build 177) — KUITATTU
 
@@ -36,6 +36,13 @@ f0f3b7fe6 → 85cb145f6 → b49804af5 → 4ced0237b → 023c37675 (haara siirtos
 
 Vaihearkki (PT hyväksyi): /Users/Shared/Claude/proto-3d/lokit/todistus-vaiheet-v46z-176-b-20261010-1224/kuva-arkki.png (käännös 648e2395f).
 Skenaario skenaariot/vaiheet-v46z-176.txt (odottaa automaattista käynnistystä; ÄLÄ käytä "poikki vaiheet nyt" saapumiskaaren aikana).
+
+## JUNA 177 — KORJAUS (Natiivisepän iPad-muistiajo c830407bf)
+
+`siirtoseppa/historia-kamera` 04915cace (rungon 2900f8e39 päällä; 596f74c82 + 04915cace): linnan sulkeminen kesken esittelyhistorian
+→ tuhottu kamera päättää SeikkailuHistoria.Aja-silmukan, siivous finallyssä (Siivoa) myös poikkeuksessa (ajossa = null, KameraVapaa,
+VainVuosileikkaukset, MustaKorvaus). Ennen: NullReferenceException → Kaynnissa jäi true → 1210b674e:n suoja ohitti kaikki myöhemmät historiat.
+unity-tarkistus 0, Linssit 1307/1307. SHA Natiivisepällä; todennus Natiivisepän muistiajossa (linna kiinni t≈60 s → seuraava historia alkaa).
 
 ## AUKI / MUILLE
 
