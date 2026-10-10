@@ -26,7 +26,7 @@ namespace Matkakirja.Natiivi
             var r = contentRect;
             if (r.width < 8 || r.height < 8) return;
             var vari = resolvedStyle.borderTopColor;
-            if (vari.a <= 0) vari = new Color(70 / 255f, 51 / 255f, 31 / 255f, 0.78f);
+            if (vari.a <= 0) vari = Tyylikirja.Kehys.MapInk78;
             var p = mgc.painter2D;
             p.strokeColor = vari;
             p.lineWidth = Paksuus;

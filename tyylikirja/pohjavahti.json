@@ -2,15 +2,9 @@
  "_ohje": "Pohjavahdin lähtötaso (tyokalut/pohjavahti.py). Määrät saavat vain pienentyä; kasvu = uusi pinta pohjien ohi → kysy Päätoimittajalta (omistaja). Päivitys --kirjaa vain omistajan päätöksellä tai siirron jälkeen.",
  "tiedostot": {
   "Assets/Matkakirja/UI/Aloitusnakyma.cs": {
-   "vari": 3
-  },
-  "Assets/Matkakirja/UI/KarheaKehys.cs": {
-   "vari": 1
+   "vari": 2
   },
   "Assets/Matkakirja/UI/KohdekarttaNakyma.cs": {
-   "vari": 1
-  },
-  "Assets/Matkakirja/UI/Kortti.cs": {
    "vari": 1
   },
   "Assets/Matkakirja/UI/Kuvat.cs": {
@@ -26,7 +20,7 @@
    "vari": 1
   },
   "Assets/Matkakirja/UI/Lehti/Lehtinakyma.cs": {
-   "vari": 5
+   "vari": 4
   },
   "Assets/Matkakirja/UI/Lehti/MaaNumeroina.cs": {
    "vari": 3

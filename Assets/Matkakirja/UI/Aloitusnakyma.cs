@@ -585,7 +585,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         void AvausTausta(bool avaus)
         {
-            intro.style.backgroundColor = avaus ? new Color(239 / 255f, 220 / 255f, 180 / 255f, 0.62f) : new StyleColor(StyleKeyword.Null);
+            intro.style.backgroundColor = avaus ? (Color)Tyylikirja.Kuulto.Paper62 : new StyleColor(StyleKeyword.Null);
             arkki.style.borderTopWidth = avaus ? 0f : new StyleFloat(StyleKeyword.Null);
             if (avaus) arkki.style.backgroundImage = new StyleBackground(StyleKeyword.None);
             else Rakenne.Tausta(arkki, Kuviot.Pergamentti);
