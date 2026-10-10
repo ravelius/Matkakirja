@@ -211,6 +211,8 @@ export const RAAMATTU = {
           + 'kallioranta, matala etuvarustus ja puusilta; nykylinna näkyy vain loppukuvan dronenäkymässä. Pelin valmistuttua tehdään '
           + 'Olavinlinnan historia-animaatio (tyhjä saari → rakentaminen 1475 → laajennusvaiheet → nykylinna, mukana Suomen esihistoriaa), '
           + 'ja alussa pelaaja valitsee, katsooko linnan ja sen historian vai pelaako. '
+          + 'ESITTELY NÄYTTÄÄ LINNAN VAIHEET (omistaja 10.10.2026 klo 07.1x: "esittelyn pitää näyttää linnan nykyinen malli" → "tai itseasiassa esittelyn pitää näyttää linnan eri vaiheet"): '
+          + 'esittely ei ole 1499-asussa, vaan se näyttää linnan rakennusvaiheet Historiajanan vuosileikkauksilla nykylinnaan asti; vain pelattava pala on vuoden 1499 linna. '
           + 'PINNAT (omistaja 8.10.2026 klo 20.58: "Voisiko codex renderöidä linnan pintaan paremmat tekstuurit?"): toistuvat peruspinnat '
           + '(kivi, rappaus, puu, lankku) tehdään vapaista CC0-skannauksista (Poly Haven, ambientCG) normaali- ja karheuskarttoineen, ja '
           + 'Codexilta tilataan vain ainutlaatuiset pinnat (holvimaalaukset, vaakunat, kuvakudokset, kankaat, ovet ja helat, kirjat, '

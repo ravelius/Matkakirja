@@ -12160,3 +12160,7 @@ Omistaja: "siis tee vain keskeneräiset maat loppuun". Kesken olleet LTU ja RUS 
 ## PILVISESSIOT KULUTTAVAT VIIKKOSALDOA KREDIITIN JÄLKEEN (omistaja 10.10.2026 klo 07.0x) (10.10.2026 klo 07.03)
 
 Omistaja: "pilvisaldo vain kuluttaa normaalia viikkosaldoa" ja "siis ne jotka on aloitettu". Kun tilin pilvikrediitti on käytetty, pilvisessiot eivät pysähdy vaan kuluttavat tilauksen tavallista viikkosaldoa samoin kuin paikalliset ajot. Siksi aloitetut Pulu-maat (LTU, RUS) jatkuvat pilvessä loppuun, ja uusia pilvisessioita avataan vain omistajan päätöksellä.
+
+## ESITTELY NÄYTTÄÄ LINNAN VAIHEET (omistaja 10.10.2026 klo 07.1x) (10.10.2026 klo 07.08)
+
+Omistaja kysyi Olavinlinnan tilaa ja kuuli, että junassa 175 esittely oli siirretty 1499-asuun (PT:n yöllinen linja 03.0x). Omistaja: "esittelyn pitää näyttää linnan nykyinen malli" ja heti perään "tai itseasiassa esittelyn pitää näyttää linnan eri vaiheet". Päätös: esittelyn 1499-asu (600086317) poistetaan junasta 175, jolloin esittely palaa nykyasuun kiinnitetyllä paketilla. Siirtoseppä suunnittelee esittelyn, joka näyttää rakennusvaiheet olemassa olevilla Historiajanan vuosileikkauksilla (1475 → 1499 → 1600-luvun bastionit → 1790-luku ja Paksu bastioni → nykylinna), ja suunnitelma tulee PT:lle ennen toteutusta. Pelattava pala pysyy vuoden 1499 linnana. OPETUS: PT:n yöllinen tulkinta (esittelykin 1499-asuun) meni omistajan tarkoituksen ohi; esittelyn ja pelin aikakerrokset kysytään, kun linja ei ole yksiselitteinen.
