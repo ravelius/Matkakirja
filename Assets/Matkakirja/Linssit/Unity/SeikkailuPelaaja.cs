@@ -245,6 +245,8 @@ namespace Matkakirja.Natiivi
         public string BottiReitti { get; private set; }
         /// <summary>Miksi napautusreitti päättyi viimeksi ennen perille pääsyä (botin loki; perillä = null).</summary>
         public string ReittiLoppui;
+        /// <summary>Liike (tappi, näppäimet) ohitetaan tähän hetkeen asti; katse toimii (tyrmän herätys, omistaja TF 180).</summary>
+        public float LiikeEstettyAsti;
         public bool KaveleKohti(Vector3 kohde)
         {
             napautusReitti.Clear(); ReittiLoppui = null;
@@ -523,6 +525,7 @@ namespace Matkakirja.Natiivi
         {
             float dt = Mathf.Min(Time.unscaledDeltaTime, 0.05f);
             var s = LueSyote();
+            if (Time.unscaledTime < LiikeEstettyAsti) { s.LiikeX = s.LiikeY = 0; s.Juoksu = false; }   // herätys tyrmässä: pidetty tappi ei kävelytä
             NapautusSyote(ref s, dt);
             if (Time.unscaledTime > leikkausTarkistus) { leikkausTarkistus = Time.unscaledTime + 0.5f; SeikkailuKavely.PaivitaLeikkaukset(transform.position); }
             if (Otteessa) { s.LiikeX = s.LiikeY = 0; s.Juoksu = false; if (napautusReitti.Count > 0) ReittiLoppui = "otteessa"; napautusReitti.Clear(); }

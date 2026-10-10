@@ -856,7 +856,15 @@ namespace Matkakirja.Natiivi
                 if (SeikkailuPelaaja.Ensimmainen && p.Silmat != null)
                 {
                     // Valitsin (pelattavuusmalli 2.4): katseen suunnassa ±30°, lähin kulma voittaa (ei pelkkä etäisyys).
-                    float kulma = Vector3.Angle(p.Silmat.forward, e.Go.transform.position - p.Silmat.position);
+                    var kohti = e.Go.transform.position - p.Silmat.position;
+                    float kulma = Vector3.Angle(p.Silmat.forward, kohti);
+                    // Lattialla (yli 0,5 m silmien alapuolella, esim. avaimet tyrmän oljissa): vaakasuunta riittää, kameraa ei tarvitse
+                    // kallistaa alas (tyrmä-pako 11.10.: kosketuspelaaja katsoo eteenpäin; jalkojen juuressa = suoraan edessä).
+                    if (kohti.y < -0.5f)
+                    {
+                        var kv = new Vector3(kohti.x, 0f, kohti.z); var ev = new Vector3(p.Silmat.forward.x, 0f, p.Silmat.forward.z);
+                        kulma = kv.sqrMagnitude < 0.09f ? 0f : Mathf.Min(kulma, Vector3.Angle(ev, kv));
+                    }
                     if (kulma > ValitsinAste) continue;
                     d = kulma;
                 }
