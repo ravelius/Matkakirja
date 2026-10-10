@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import worker, { katseSuunta, katseKaari } from '../tools/pollo/worker.js';
 import { tyhjennaReunamuisti } from '../tools/pollo/reuna.js';
 import { tyhjennaKuvalista } from '../tools/pollo/opas-kuvat.js';
-import { oppaanEsittely, kaupunkiId, tyhjennaEsittelyt, valmisKohde } from '../tools/pollo/opas-esittely.js';
+import { oppaanEsittely, kaupunkiId, tyhjennaEsittelyt, valmisKohde, valmiinPaikka } from '../tools/pollo/opas-esittely.js';
 
 beforeEach(() => { tyhjennaReunamuisti(); tyhjennaKuvalista(); tyhjennaEsittelyt(); });
 const kuva = (n) => ({ url: `https://media.matkakirja.app/kuvat/${n}.jpg`, tyyppi: 'valokuva', tekija: 'T', lisenssi: 'CC BY 4.0', lahdeUrl: `https://c/${n}`, jarjestys: 1 });
@@ -312,9 +312,23 @@ test('historia_polut: kehityskaupunkien historiaosiot (Tukholma, Pariisi) omasta
   assert.deepEqual(Object.keys(OPAS_AINEISTOT.historia_yksityiskohdat_polut).sort(), Object.keys(OPAS_AINEISTOT.historia_polut).sort());
 });
 
-test('esittely_polut: Pariisi v1e (v1d + katse_kaari 12 Concordelle ja Champs-Élysées\'lle), äänet ennallaan', async () => {
+test('esittely_polut: Pariisi v1f (v1e + Louvren paikka pyramidille), äänet ennallaan', async () => {
   const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
-  assert.equal(OPAS_AINEISTOT.esittely_polut.pariisi, 'opas/esittely-v1e/pariisi.json');
+  assert.equal(OPAS_AINEISTOT.esittely_polut.pariisi, 'opas/esittely-v1f/pariisi.json');
+});
+
+test('esittelyn omat lat/lon voittavat kohdelistan (Louvren pyramidi, LS1/PT 10.10.)', async () => {
+  const paikka = { id: 'Q19675', nimi: 'Louvre', lat: 48.8606, lon: 2.3376, lahde: 'wikipedia' };
+  assert.deepEqual(valmiinPaikka(paikka, { lat: 48.86098, lon: 2.33585 }), { ...paikka, lat: 48.86098, lon: 2.33585 });
+  assert.equal(valmiinPaikka(paikka, { koko_m: 25 }), paikka, 'ilman omia asteita kohdelistan paikka');
+  assert.equal(valmiinPaikka(paikka, { lat: 'x', lon: 2 }), paikka, 'kelvoton arvo ei kelpaa');
+  assert.equal(valmiinPaikka(paikka, null), paikka);
+  // Päästä päähän: valmis pysähdys palauttaa esittelyn asteet ja koon.
+  const env = ymparisto();
+  env.OPAS_ESITTELY_TESTI = { testila: { ...ESITTELY, kohteet: ESITTELY.kohteet.map((k, i) => (i === 0 ? { ...k, lat: 60.0123, lon: 25.0456, koko_m: 25 } : k)) } };
+  const { d, malli } = await opas(env, { toive: 'Esittele kaupunki', istunto: 'louvre' });
+  assert.equal(malli, 0); assert.equal(d.id, 'Q100');
+  assert.equal(d.lat, 60.0123); assert.equal(d.lon, 25.0456); assert.equal(d.koko_m, 25);
 });
 
 test('lisakuvat_polut: Tukholman Kuninkaanlinnan lisäkuvat (Sisältökirjuri 9.10.), vain esittelykaupungeille', async () => {
