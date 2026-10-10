@@ -1,0 +1,126 @@
+{
+ "lahde": "METAR, IEM ASOS -arkisto (Iowa Environmental Mesonet, Iowa State University), 2016–2025, tunneittain; vapaa käyttö lähteen maininnalla",
+ "menetelma": "Peitto: kerrosten oktat FEW 1,5 · SCT 3,5 · BKN 6 · OVC 8 · VV 8, havainnon peitto = suurin kerros / 8; M/NSC/NCD/CAVOK = 0 (ei pilveä alle 1500 m;\nylemmät pilvet jäävät METARista pois, joten peitto on alaraja). Pohja: alimman BKN/OVC-kerroksen korkeus (ceiling), mediaani, kun ceiling on.\nMatalan osuus: ceilingeistä pohja < 2000 m. Paksuus: arvio = ylimmän ≥ SCT-kerroksen pohja − alimman pohja + 400 m (yksi kerros → 400 m), mediaani.\nKäyttö: pilvet-kaudet.py <ulos.json> ASEMA:kaupunki ...",
+ "kaudet": "talvi = joulu–helmi, kevät = maalis–touko, kesä = kesä–elo, syksy = syys–marras",
+ "kaupungit": {
+  "pariisi": {
+   "asema": "LFPO",
+   "kesa": {
+    "pilvipeitto": 0.267,
+    "pohja_m": 1372,
+    "pohja_p25_p75_m": [
+     701,
+     2438
+    ],
+    "matala_osuus": 0.675,
+    "paksuus_m": 1000,
+    "katto_m": 2372,
+    "ceiling_osuus": 0.299,
+    "havaintoja": 21775,
+    "paksuus_metar_arvio_m": 613
+   },
+   "kevat": {
+    "pilvipeitto": 0.318,
+    "pohja_m": 1128,
+    "pohja_p25_p75_m": [
+     549,
+     1890
+    ],
+    "matala_osuus": 0.765,
+    "paksuus_m": 700,
+    "katto_m": 1828,
+    "ceiling_osuus": 0.365,
+    "havaintoja": 21745,
+    "paksuus_metar_arvio_m": 522
+   },
+   "talvi": {
+    "pilvipeitto": 0.556,
+    "pohja_m": 518,
+    "pohja_p25_p75_m": [
+     274,
+     1097
+    ],
+    "matala_osuus": 0.903,
+    "paksuus_m": 500,
+    "katto_m": 1018,
+    "ceiling_osuus": 0.616,
+    "havaintoja": 21368,
+    "paksuus_metar_arvio_m": 400
+   },
+   "syksy": {
+    "pilvipeitto": 0.406,
+    "pohja_m": 823,
+    "pohja_p25_p75_m": [
+     335,
+     1615
+    ],
+    "matala_osuus": 0.804,
+    "paksuus_m": 700,
+    "katto_m": 1523,
+    "ceiling_osuus": 0.45,
+    "havaintoja": 21572,
+    "paksuus_metar_arvio_m": 400
+   }
+  },
+  "tukholma": {
+   "asema": "ESSB",
+   "kesa": {
+    "pilvipeitto": 0.296,
+    "pohja_m": 1280,
+    "pohja_p25_p75_m": [
+     457,
+     2377
+    ],
+    "matala_osuus": 0.667,
+    "paksuus_m": 1000,
+    "katto_m": 2280,
+    "ceiling_osuus": 0.276,
+    "havaintoja": 21916,
+    "paksuus_metar_arvio_m": 400
+   },
+   "kevat": {
+    "pilvipeitto": 0.345,
+    "pohja_m": 701,
+    "pohja_p25_p75_m": [
+     274,
+     1554
+    ],
+    "matala_osuus": 0.826,
+    "paksuus_m": 700,
+    "katto_m": 1401,
+    "ceiling_osuus": 0.358,
+    "havaintoja": 21851,
+    "paksuus_metar_arvio_m": 400
+   },
+   "talvi": {
+    "pilvipeitto": 0.588,
+    "pohja_m": 366,
+    "pohja_p25_p75_m": [
+     183,
+     762
+    ],
+    "matala_osuus": 0.957,
+    "paksuus_m": 500,
+    "katto_m": 866,
+    "ceiling_osuus": 0.634,
+    "havaintoja": 21523,
+    "paksuus_metar_arvio_m": 400
+   },
+   "syksy": {
+    "pilvipeitto": 0.511,
+    "pohja_m": 549,
+    "pohja_p25_p75_m": [
+     244,
+     1097
+    ],
+    "matala_osuus": 0.911,
+    "paksuus_m": 700,
+    "katto_m": 1249,
+    "ceiling_osuus": 0.536,
+    "havaintoja": 21690,
+    "paksuus_metar_arvio_m": 400
+   }
+  }
+ },
+ "paksuus": "paksuus_m = ilmastollinen ARVIO (LS2 10.10.: talvi-stratus 500, kevät/syksy 700, kesä-kumpu 1000 m); paksuus_metar_arvio_m = METAR-kerroksista johdettu (useimmiten 400 = yksi kerros). katto_m = pohja_m + paksuus_m."
+}

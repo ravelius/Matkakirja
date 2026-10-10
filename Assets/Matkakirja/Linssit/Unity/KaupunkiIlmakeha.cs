@@ -24,6 +24,48 @@ namespace Matkakirja.Natiivi
             if (k != kehitys || !kaupunkiKirjattu) { kaupunkiKirjattu = true; Debug.Log($"MATKAKIRJA kaupunki: ilmakehä kaupunki {lat:F4},{lon:F4} → kehityskaupunki {k}, pakotettu {(Pakotettu?.ToString() ?? "-")}"); }
             kehitys = k;
             LataaAerosoli(Matkakirja.Linssit.Kehityskaupungit.Lahella(lat, lon));
+            PaivitaPilviIlmasto(Matkakirja.Linssit.Kehityskaupungit.Lahella(lat, lon));
+        }
+
+        // PILVIEN ILMASTO (LS2 10.10.; Karttaseppä ilmakeha/pilvet-v1, METAR 2016–2025): pilvikerroksen pohja ja paksuus kaupungin ja
+        // kauden mukaan (Ydin PilviKaudet, pohja ≥ 900 m pallon yläpuolelle); asetukset "pilvipohja"/"pilvipaksuus" ohittavat, "pilvi-ilmasto 0|1".
+        // Ladataan kerran laitteelle (Caches, versioitu polku), sitten kaupungin vaihtuessa vain haku muistista.
+        public static bool PilviIlmasto = true, PilviAsetettu;
+        static string pilviJson, pilviAvain; static bool pilviPyydetty;
+        static void PaivitaPilviIlmasto(string id)
+        {
+            if (!PilviIlmasto || PilviAsetettu || id == null) return;
+            string avain = id + "/" + Kausi(System.DateTime.Now.Month);
+            if (pilviJson != null)
+            {
+                if (avain == pilviAvain) return;
+                pilviAvain = avain;
+                if (Matkakirja.Linssit.Ilmakeha.PilviKaudet.Hae(pilviJson, id, Kausi(System.DateTime.Now.Month)) is { } k)
+                {
+                    PilviKorkeusM = (float)k.PohjaM; PilviPaksuusM = (float)k.PaksuusM;
+                    Debug.Log($"MATKAKIRJA kaupunki: pilvet {avain} (METAR): {k}");
+                }
+                return;
+            }
+            if (pilviPyydetty) return;
+            pilviPyydetty = true;
+            string tiedosto = System.IO.Path.Combine(Application.temporaryCachePath, "ilmakeha", "pilvet-v1", "pilvet-kaudet.json");
+            try { if (System.IO.File.Exists(tiedosto)) { pilviJson = System.IO.File.ReadAllText(tiedosto); PaivitaPilviIlmasto(id); return; } }
+            catch (System.Exception e) { Debug.Log($"MATKAKIRJA kaupunki: pilvet: välimuisti: {e.Message}"); }
+            var r = UnityEngine.Networking.UnityWebRequest.Get(Matkakirja.Linssit.Ilmakeha.PilviKaudet.Osoite);
+            r.timeout = 20;
+            r.SendWebRequest().completed += _ =>
+            {
+                if (r.result == UnityEngine.Networking.UnityWebRequest.Result.Success && !string.IsNullOrEmpty(r.downloadHandler.text))
+                {
+                    pilviJson = r.downloadHandler.text;
+                    try { System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(tiedosto)); System.IO.File.WriteAllText(tiedosto, pilviJson); }
+                    catch (System.Exception e) { Debug.Log($"MATKAKIRJA kaupunki: pilvet: välimuistiin: {e.Message}"); }
+                    PaivitaPilviIlmasto(id);
+                }
+                else { Debug.Log($"MATKAKIRJA kaupunki: pilvet-kaudet ei latautunut ({r.error}), kiinteä pohja {PilviKorkeusM:F0} m"); pilviPyydetty = false; }
+                r.Dispose();
+            };
         }
 
         // MITATTU UTU (PT 9.10. ilta hyväksyi utu-A/B:n suosituksen; Karttaseppä ilmakeha-aerosoli-20261009): kaupungin ja vuodenajan
