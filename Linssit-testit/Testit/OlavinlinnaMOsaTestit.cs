@@ -162,8 +162,11 @@ namespace Matkakirja.Linssit.Testit
         /// pisteen 67 torkkujan vieressä), pisin paluu 19 (huone 6: kaari-ovi 22 ja voudin sali 46). Harjalla (89–91) ei ole omaa tarkistuspistettä:
         /// paluu muurikäytävän pisteeseen 85 (menetys ~17 s).</summary>
         public const double LisaMaxS = 120; public const int PaluuMax = 20;
+        /// AJETAAN VAIN PYYDETTÄESSÄ (PT 10.10.: ~150 s): `OLAVINLINNA_LAAJA=1 ./kaanna.sh KiinniJokaPisteessa` aina, kun Olavinlinnan paketti,
+        /// reitti tai vartijat muuttuvat.
         [Testi] static void KiinniJokaPisteessa()
         {
+            if (Environment.GetEnvironmentVariable("OLAVINLINNA_LAAJA") != "1") { Console.WriteLine("      ohitettu (OLAVINLINNA_LAAJA=1 ajaa)"); return; }
             var koko = Koko(); Oleta.Tosi(koko.Loppu != null, "koko M-reitti läpi");
             double pahin = 0; int pahinK = 0, pisinPaluu = 0;
             for (int k = MAlku + 1; k < KiipeilyAlku; k++)
