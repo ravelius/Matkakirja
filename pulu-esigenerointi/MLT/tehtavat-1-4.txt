@@ -1,0 +1,204 @@
+================ KOHTA 16 (kohde:hahmotelma-mellieha) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mellieħa (kaupungit)
+Tietoruudun teksti: Mellieħa on suuri kylä Maltan pohjoisosassa, ja sen nimi juontuu seemiläisestä sanajuuresta, joka tarkoittaa suolaa – todennäköisesti alueella sijainneiden foinikialais-roomalaisten suolapatojen mukaan. Perimätiedon mukaan apostoli Paavalin matkakumppani Luukas maalasi Neitsyt Marian kuvan erään Mellieħan luolan kallioseinään, ja luola vihittiin kirkoksi vuonna 409; siitä tuli myöhemmin Neitsyt Marian pyhäkkökirkko. Kylä oli yksi Maltan kymmenestä ensimmäisestä seurakunnasta, mutta se autioitui 1400–1500-lukujen taitteessa korsaarien hyökkäysten vuoksi eikä asutus palannut ennen 1500-luvun loppua. Pohjoisrannikkoa alettiin linnoittaa 1600-luvun alussa, ja ensimmäinen Mellieħan linnoitus, Pyhän Agatan torni, valmistui vuonna 1649.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+- [Bergen — kohdekartta / Kohdekartta: Nykirken] 1621 Tämä osa Bergeniä kuului alun perin tuomiokirkon seurakuntaan, mutta vuoden 1608 kuninkaallinen asetus perusti Strandenille oman seurakunnan ja antoi asukkaille luvan rakentaa kirkon omalla kustannuksellaan. Vuoteen 1618 mennessä rahat oli kerätty ja tontti hankittu. Kirkko nousi arkkipiispan asuintalon raunioille — 1300-luvun kivitalon, joka oli palanut — ja piispa Nils Paaske vihki sen 18. syyskuuta 1621 Pyhän Kolminaisuuden kirkoksi. Koska Bergenissä oli jo useita satoja vuosia vanhoja kirkkoja, tätä alettiin kutsua uudeksi kirkoksi, ja lempinimi jäi. Nimi osoittautui osuvaksi. Ensimmäinen kirkko seisoi kaksi vuotta ja paloi alkuvuodesta 1623; se rakennettiin heti samanlaisena uudel…
+
+### 16.1
+KYSYMYS: Mistä Mellieħan nimi juontuu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mellieħa (kaupungit)
+Tietoruudun teksti: Mellieħa on suuri kylä Maltan pohjoisosassa, ja sen nimi juontuu seemiläisestä sanajuuresta, joka tarkoittaa suolaa – todennäköisesti alueella sijainneiden foinikialais-roomalaisten suolapatojen mukaan. Perimätiedon mukaan apostoli Paavalin matkakumppani Luukas maalasi Neitsyt Marian kuvan erään Mellieħan luolan kallioseinään, ja luola vihittiin kirkoksi vuonna 409; siitä tuli myöhemmin Neitsyt Marian pyhäkkökirkko. Kylä oli yksi Maltan kymmenestä ensimmäisestä seurakunnasta, mutta se autioitui 1400–1500-lukujen taitteessa korsaarien hyökkäysten vuoksi eikä asutus palannut ennen 1500-luvun loppua. Pohjoisrannikkoa alettiin linnoittaa 1600-luvun alussa, ja ensimmäinen Mellieħan linnoitus, Pyhän Agatan torni, valmistui vuonna 1649.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kaupunkilehti / Historian hetki: Valletta 1565 — purjeet horisontissa] 7.9.1565 — Puolustaja nojaa muurin ampuma-aukkoon, kun toinen tarttuu hänen olkapäähänsä ja osoittaa merelle — silmät ovat liian väsyneet neljän kuukauden valvomisesta uskoakseen ensin sitä, mitä näkevät. Purjeet horisontissa eivät ole uusi osmanien laivue vaan sisilialainen apulaivasto, jota Don García de Toledo on kerännyt Messinasta kuukausia. Yli kahdeksantuhatta miestä nousee maihin Mellieħan lahdessa 7. syyskuuta, ja tieto kulkee muurilta muurille nopeammin kuin kukaan ehtii huutaa sitä ääneen. Ottomaanien komentaja Mustafa Pasha, jonka joukot ovat menettäneet paljon miehiä ja suurimman osan kesästä yhteen linnakkeeseen, ei enää usko voittoon uuden armeijan edessä. Muutaman päivän kul…
+- [Valletta — kaupunkilehti / Historian hetki] Neljä kuukautta kestänyt piiritys päättyi, kun sisilialainen apulaivasto laski maihin Mellieħan lahdessa syyskuun alussa 1565 — osmaanit purjehtivat pois muutamassa päivässä.
+
+### 16.2
+KYSYMYS: Minä vuonna pyhäkkökirkon luola vihittiin kirkoksi perimätiedon mukaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mellieħa (kaupungit)
+Tietoruudun teksti: Mellieħa on suuri kylä Maltan pohjoisosassa, ja sen nimi juontuu seemiläisestä sanajuuresta, joka tarkoittaa suolaa – todennäköisesti alueella sijainneiden foinikialais-roomalaisten suolapatojen mukaan. Perimätiedon mukaan apostoli Paavalin matkakumppani Luukas maalasi Neitsyt Marian kuvan erään Mellieħan luolan kallioseinään, ja luola vihittiin kirkoksi vuonna 409; siitä tuli myöhemmin Neitsyt Marian pyhäkkökirkko. Kylä oli yksi Maltan kymmenestä ensimmäisestä seurakunnasta, mutta se autioitui 1400–1500-lukujen taitteessa korsaarien hyökkäysten vuoksi eikä asutus palannut ennen 1500-luvun loppua. Pohjoisrannikkoa alettiin linnoittaa 1600-luvun alussa, ja ensimmäinen Mellieħan linnoitus, Pyhän Agatan torni, valmistui vuonna 1649.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+- [Bergen — kohdekartta / Kohdekartta: Nykirken] 1621 Tämä osa Bergeniä kuului alun perin tuomiokirkon seurakuntaan, mutta vuoden 1608 kuninkaallinen asetus perusti Strandenille oman seurakunnan ja antoi asukkaille luvan rakentaa kirkon omalla kustannuksellaan. Vuoteen 1618 mennessä rahat oli kerätty ja tontti hankittu. Kirkko nousi arkkipiispan asuintalon raunioille — 1300-luvun kivitalon, joka oli palanut — ja piispa Nils Paaske vihki sen 18. syyskuuta 1621 Pyhän Kolminaisuuden kirkoksi. Koska Bergenissä oli jo useita satoja vuosia vanhoja kirkkoja, tätä alettiin kutsua uudeksi kirkoksi, ja lempinimi jäi. Nimi osoittautui osuvaksi. Ensimmäinen kirkko seisoi kaksi vuotta ja paloi alkuvuodesta 1623; se rakennettiin heti samanlaisena uudel…
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:hahmotelma-marsaskala) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsaskala (merenkulku)
+Tietoruudun teksti: Marsaskala, maltaksi myös Wied il-Għajn, on rantakaupunki Maltan eteläosassa; se oli alun perin kalastajakylä, mutta on kasvanut suosituksi matkailukohteeksi ja pysyväksi asuinpaikaksi. Nimi on koostesana arabiasta: marsa tarkoittaa satamaa, ja jälkiosa skala juontuu todennäköisesti sisilialaisia kalastajia tarkoittavasta sanasta. Maltaksi kaupunkia kutsutaan myös Wied il-Għajniksi, koska lahden pohjukkaan laskeutui ennen kaksi laaksoa, joiden makean veden lähde virtasi sisimpään lahteen. Nykyinen seurakuntakirkko, joka on omistettu Pyhälle Annalle, valmistui vasta 1953, ja kaupungin juhlaa vietetään heinäkuun lopussa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 17.1
+KYSYMYS: Mitä marsa tarkoittaa arabiaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsaskala (merenkulku)
+Tietoruudun teksti: Marsaskala, maltaksi myös Wied il-Għajn, on rantakaupunki Maltan eteläosassa; se oli alun perin kalastajakylä, mutta on kasvanut suosituksi matkailukohteeksi ja pysyväksi asuinpaikaksi. Nimi on koostesana arabiasta: marsa tarkoittaa satamaa, ja jälkiosa skala juontuu todennäköisesti sisilialaisia kalastajia tarkoittavasta sanasta. Maltaksi kaupunkia kutsutaan myös Wied il-Għajniksi, koska lahden pohjukkaan laskeutui ennen kaksi laaksoa, joiden makean veden lähde virtasi sisimpään lahteen. Nykyinen seurakuntakirkko, joka on omistettu Pyhälle Annalle, valmistui vasta 1953, ja kaupungin juhlaa vietetään heinäkuun lopussa.
+
+### 17.2
+KYSYMYS: Minä vuonna kaupungin seurakuntakirkko valmistui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsaskala (merenkulku)
+Tietoruudun teksti: Marsaskala, maltaksi myös Wied il-Għajn, on rantakaupunki Maltan eteläosassa; se oli alun perin kalastajakylä, mutta on kasvanut suosituksi matkailukohteeksi ja pysyväksi asuinpaikaksi. Nimi on koostesana arabiasta: marsa tarkoittaa satamaa, ja jälkiosa skala juontuu todennäköisesti sisilialaisia kalastajia tarkoittavasta sanasta. Maltaksi kaupunkia kutsutaan myös Wied il-Għajniksi, koska lahden pohjukkaan laskeutui ennen kaksi laaksoa, joiden makean veden lähde virtasi sisimpään lahteen. Nykyinen seurakuntakirkko, joka on omistettu Pyhälle Annalle, valmistui vasta 1953, ja kaupungin juhlaa vietetään heinäkuun lopussa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:hahmotelma-verdala-palace) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Verdalan palatsi (historia)
+Tietoruudun teksti: Verdalan palatsi kohoaa Buskettin puutarhojen keskellä Siġġiewin kunnan alueella, ja se toimii nykyään Maltan presidentin virallisena kesäasuntona. Paikalla oli 1550–1560-luvuilla Johanniittaritarikunnan suurmestari Jean Parisot de la Valetten rakennuttama metsästysmaja Boschetton riistamaalla, ja maja laajennettiin palatsiksi vuonna 1586 suurmestari Hugues Loubenx de Verdallen aikana, jonka mukaan palatsi on nimetty. Rakennusta koristeltiin lisää 1600- ja 1700-luvuilla suurmestarien Giovanni Paolo Lascarisin ja António Manoel de Vilhenan kausina. Brittiaikana palatsi toimi Maltan kuvernöörin residenssinä San Anton -palatsin ohella, ja siellä majoittui myös brittihallitsijoita ja muuta ylhäisöä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kaupunkilehti / Historia: Lähes neljän kuukauden piiritys] Sulttaani Suleiman Suuri lähetti vuonna 1565 valtavan laivaston ajamaan ritarit Maltalta. Piiritys kesti 18. toukokuuta – 8. syyskuuta, ja saarta puolusti noin 500 ritaria ja 6 000 jalkaväen sotilasta. Osmanit hyökkäsivät ensin Pyhän Elmon linnakkeeseen Sciberras-vuoren kärjessä, nykyisen Vallettan paikalla, ja sen valtaaminen 23. kesäkuuta maksoi heille ainakin 6 000 miestä. Birgu ja Senglea kestivät silti pommituksen, jossa aikalaiskertoja Francisco Balbin mukaan ammuttiin noin 130 000 tykinkuulaa. Voiton jälkeen Euroopasta virtasi Maltalle rahaa, ja suurmestari Jean de Valette rakensi Sciberras-vuorelle linnoitetun kaupungin, joka sai hänen nimensä.
+- [Malta — maalehti / Arki: Parveke josta näkee kaiken] 1600-luku — Maltalaisten talojen julkisivuja koristavat suljetut puuparvekkeet, gallariji. Ne polveutuvat arabialaisista mashrabiya-parvekkeista, mutta yleistyivät vasta 1600-luvulla. Vanhin tunnettu esitys on Vallettan suurmestarin palatsin kulmaparveke noin vuodelta 1675. Vuonna 1679 eräs vieras kirjoitti, että suurmestari käveli lasitetulla parvekkeella mielellään, koska sieltä näki aukioiden tapahtumat itse näkymättä. Parvekkeita kannattavia kivikonsoleja sanotaan saljaturiksi, ja lasiläpät ovat purtelleja.
+
+### 18.1
+KYSYMYS: Minkä suurmestarin mukaan palatsi on nimetty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Verdalan palatsi (historia)
+Tietoruudun teksti: Verdalan palatsi kohoaa Buskettin puutarhojen keskellä Siġġiewin kunnan alueella, ja se toimii nykyään Maltan presidentin virallisena kesäasuntona. Paikalla oli 1550–1560-luvuilla Johanniittaritarikunnan suurmestari Jean Parisot de la Valetten rakennuttama metsästysmaja Boschetton riistamaalla, ja maja laajennettiin palatsiksi vuonna 1586 suurmestari Hugues Loubenx de Verdallen aikana, jonka mukaan palatsi on nimetty. Rakennusta koristeltiin lisää 1600- ja 1700-luvuilla suurmestarien Giovanni Paolo Lascarisin ja António Manoel de Vilhenan kausina. Brittiaikana palatsi toimi Maltan kuvernöörin residenssinä San Anton -palatsin ohella, ja siellä majoittui myös brittihallitsijoita ja muuta ylhäisöä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kaupunkilehti / Historia: Lähes neljän kuukauden piiritys] Sulttaani Suleiman Suuri lähetti vuonna 1565 valtavan laivaston ajamaan ritarit Maltalta. Piiritys kesti 18. toukokuuta – 8. syyskuuta, ja saarta puolusti noin 500 ritaria ja 6 000 jalkaväen sotilasta. Osmanit hyökkäsivät ensin Pyhän Elmon linnakkeeseen Sciberras-vuoren kärjessä, nykyisen Vallettan paikalla, ja sen valtaaminen 23. kesäkuuta maksoi heille ainakin 6 000 miestä. Birgu ja Senglea kestivät silti pommituksen, jossa aikalaiskertoja Francisco Balbin mukaan ammuttiin noin 130 000 tykinkuulaa. Voiton jälkeen Euroopasta virtasi Maltalle rahaa, ja suurmestari Jean de Valette rakensi Sciberras-vuorelle linnoitetun kaupungin, joka sai hänen nimensä.
+- [Malta — maalehti / Arki: Parveke josta näkee kaiken] 1600-luku — Maltalaisten talojen julkisivuja koristavat suljetut puuparvekkeet, gallariji. Ne polveutuvat arabialaisista mashrabiya-parvekkeista, mutta yleistyivät vasta 1600-luvulla. Vanhin tunnettu esitys on Vallettan suurmestarin palatsin kulmaparveke noin vuodelta 1675. Vuonna 1679 eräs vieras kirjoitti, että suurmestari käveli lasitetulla parvekkeella mielellään, koska sieltä näki aukioiden tapahtumat itse näkymättä. Parvekkeita kannattavia kivikonsoleja sanotaan saljaturiksi, ja lasiläpät ovat purtelleja.
+
+### 18.2
+KYSYMYS: Mitä rakennusta paikalla oli ennen palatsia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Verdalan palatsi (historia)
+Tietoruudun teksti: Verdalan palatsi kohoaa Buskettin puutarhojen keskellä Siġġiewin kunnan alueella, ja se toimii nykyään Maltan presidentin virallisena kesäasuntona. Paikalla oli 1550–1560-luvuilla Johanniittaritarikunnan suurmestari Jean Parisot de la Valetten rakennuttama metsästysmaja Boschetton riistamaalla, ja maja laajennettiin palatsiksi vuonna 1586 suurmestari Hugues Loubenx de Verdallen aikana, jonka mukaan palatsi on nimetty. Rakennusta koristeltiin lisää 1600- ja 1700-luvuilla suurmestarien Giovanni Paolo Lascarisin ja António Manoel de Vilhenan kausina. Brittiaikana palatsi toimi Maltan kuvernöörin residenssinä San Anton -palatsin ohella, ja siellä majoittui myös brittihallitsijoita ja muuta ylhäisöä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kaupunkilehti / Bryssel: Palatsi, jossa kuningas työskentelee mutta ei asu] Kuninkaanpalatsi on Belgian kuninkaan virallinen palatsi, mutta kuningasperhe asuu Laekenin linnassa; Brysselissä kuningas hoitaa valtiollisia tehtäviään ja vastaanottaa vieraita. Paikalla seisoi ennen Coudenbergin palatsi, joka tuhoutui tulipalossa vuonna 1731. Nykyisen palatsin ensimmäinen ydin on 1700-luvun lopulta, mutta Leopold II laajensi sitä niin, että sen pinta-ala lähes kaksinkertaistui. Yleisölle palatsi on avoinna kesällä, Belgian kansallispäivästä 21. heinäkuuta syyskuun alkuun.
+- [Lima — kaupunkilehti / Historia: Ichman laakso ennen espanjalaisia] Rímacin, Chillónin ja Lurínin jokilaaksoissa asui vuosisatojen ajan yhteisöjä, jotka kokosi yhteen Ichman herruus; alueen ilmeen loivat Marangan ja Liman kulttuurit. Inkavallan aikana laakso kuului Pachacamacin provinssiin, jonka pyhäkkö oli rannikon tärkein pyhiinvaelluskohde 300-luvulta 1400-luvulle. Espanjalaisten saapuessa laaksoa hallitsi kuraakka Taulichusco, joka oli aiemmin palvellut inkakeisari Huayna Capacin puolisoa Mama Viloa. Uusi kaupunki rakennettiin suoraan vanhan päälle: Taulichuscon palatsin paikalla on nykyinen hallituksen palatsi ja Puma Intin temppelin paikalla tuomiokirkko.
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:hahmotelma-ghar-dalam) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Għar Dalam (historia)
+Tietoruudun teksti: Għar Dalam on 144 metriä pitkä luolaputki Birżebbuġan liepeillä, ja sen kerrostumista on löydetty pleistoseeni- ja holoseenikautisten eläinten luita: kääpiönorsuja, virtahepoja, jättiläisjoutsenia, peuroja ja karhuja. Luola on antanut nimensä Maltan esihistorian varhaiselle Għar Dalam -vaiheelle, ja sitä pidetään yhtenä saarten tärkeimmistä muinaismuistoista. Ensimmäiset tieteelliset kaivaukset teki italialainen paleontologi Arturo Issel vuonna 1865, ja lisäkaivauksia teki John H. Cooke vuonna 1892; osa löydöistä lähetettiin vertailukokoelmaksi Lontoon British Museumiin.
+
+### 19.1
+KYSYMYS: Minä vuonna Arturo Issel teki ensimmäiset tieteelliset kaivaukset luolassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Għar Dalam (historia)
+Tietoruudun teksti: Għar Dalam on 144 metriä pitkä luolaputki Birżebbuġan liepeillä, ja sen kerrostumista on löydetty pleistoseeni- ja holoseenikautisten eläinten luita: kääpiönorsuja, virtahepoja, jättiläisjoutsenia, peuroja ja karhuja. Luola on antanut nimensä Maltan esihistorian varhaiselle Għar Dalam -vaiheelle, ja sitä pidetään yhtenä saarten tärkeimmistä muinaismuistoista. Ensimmäiset tieteelliset kaivaukset teki italialainen paleontologi Arturo Issel vuonna 1865, ja lisäkaivauksia teki John H. Cooke vuonna 1892; osa löydöistä lähetettiin vertailukokoelmaksi Lontoon British Museumiin.
+
+### 19.2
+KYSYMYS: Millaisten eläinten luita luolasta on löydetty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Għar Dalam (historia)
+Tietoruudun teksti: Għar Dalam on 144 metriä pitkä luolaputki Birżebbuġan liepeillä, ja sen kerrostumista on löydetty pleistoseeni- ja holoseenikautisten eläinten luita: kääpiönorsuja, virtahepoja, jättiläisjoutsenia, peuroja ja karhuja. Luola on antanut nimensä Maltan esihistorian varhaiselle Għar Dalam -vaiheelle, ja sitä pidetään yhtenä saarten tärkeimmistä muinaismuistoista. Ensimmäiset tieteelliset kaivaukset teki italialainen paleontologi Arturo Issel vuonna 1865, ja lisäkaivauksia teki John H. Cooke vuonna 1892; osa löydöistä lähetettiin vertailukokoelmaksi Lontoon British Museumiin.
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:hahmotelma-kalkara) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalkara (merenkulku)
+Tietoruudun teksti: Kalkara on kylä Maltan satama-alueella Kalkaran puron ympärillä, ja sen naapureina ovat Birgu, Żabbar ja Xgħajra. Nimi juontuu latinan kalkkia tarkoittavasta sanasta calce, ja alueella uskotaan olleen kalkinpolttouuni jo roomalaisajalta. Kylä syntyi pienenä kalastajayhteisönä suojaisan Kalkaran puron ympärille, ja jotkut historioitsijat arvelevat sen olleen yksi Maltan ensimmäisistä asutuista paikoista, koska Grand Harbourin poukamat tarjosivat suojan pitkän merimatkan jälkeen. Kristinusko saapui alueelle mahdollisesti jo varhain, sillä Santa Duminkan kedolta on löydetty varhaiskristillisiä hypogeumeja.
+
+### 20.1
+KYSYMYS: Mistä latinan sanasta Kalkaran nimi juontuu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalkara (merenkulku)
+Tietoruudun teksti: Kalkara on kylä Maltan satama-alueella Kalkaran puron ympärillä, ja sen naapureina ovat Birgu, Żabbar ja Xgħajra. Nimi juontuu latinan kalkkia tarkoittavasta sanasta calce, ja alueella uskotaan olleen kalkinpolttouuni jo roomalaisajalta. Kylä syntyi pienenä kalastajayhteisönä suojaisan Kalkaran puron ympärille, ja jotkut historioitsijat arvelevat sen olleen yksi Maltan ensimmäisistä asutuista paikoista, koska Grand Harbourin poukamat tarjosivat suojan pitkän merimatkan jälkeen. Kristinusko saapui alueelle mahdollisesti jo varhain, sillä Santa Duminkan kedolta on löydetty varhaiskristillisiä hypogeumeja.
+
+### 20.2
+KYSYMYS: Mitkä kylät rajaavat Kalkaraa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalkara (merenkulku)
+Tietoruudun teksti: Kalkara on kylä Maltan satama-alueella Kalkaran puron ympärillä, ja sen naapureina ovat Birgu, Żabbar ja Xgħajra. Nimi juontuu latinan kalkkia tarkoittavasta sanasta calce, ja alueella uskotaan olleen kalkinpolttouuni jo roomalaisajalta. Kylä syntyi pienenä kalastajayhteisönä suojaisan Kalkaran puron ympärille, ja jotkut historioitsijat arvelevat sen olleen yksi Maltan ensimmäisistä asutuista paikoista, koska Grand Harbourin poukamat tarjosivat suojan pitkän merimatkan jälkeen. Kristinusko saapui alueelle mahdollisesti jo varhain, sillä Santa Duminkan kedolta on löydetty varhaiskristillisiä hypogeumeja.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

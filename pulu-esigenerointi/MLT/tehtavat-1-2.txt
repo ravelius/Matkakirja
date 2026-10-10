@@ -1,0 +1,230 @@
+================ KOHTA 6 (kohde:hahmotelma-ggantija) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ġgantija (historia)
+Tietoruudun teksti: Ġgantija, jättiläisten paikka, on neoliittinen megaliittinen temppelikompleksi Maltan Gozon saarella Xagħran ylätasangon reunalla, ajalta noin 3600–2500 eaa. Kaksi temppeliä on yli 5 500 vuotta vanhoja, ne ovat vanhimpia Maltan megaliittitemppeleistä ja vanhempia kuin Egyptin pyramidit, ja ne ovat maailman toiseksi vanhimpia yhä olemassa olevia ihmisen rakentamia uskonnollisia rakennelmia Göbekli Tepen jälkeen. Paikallisen gozolaisen kansantarinan mukaan jättiläisnainen Sansuna, joka söi vain härkäpapuja ja hunajaa, rakensi temppelit lapsi olallaan. Eteläinen temppeli on suurempi ja vanhempi, viiden apsiksen temppeli, jonka korkeus on kuusi metriä. Gozon apulaiskuvernööri, everstiluutnantti John Otto Bayer, raivautti paikan raunioista maata vuonna 1827, mutta multa ja löydöt menetettiin tutkimatta, ja rauniot rapautuivat; Unesco hyväksyi temppelit maailmanperintökohteeksi vuonna 1980.
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Jättiläisten temppeli] n. 3600–2500 eaa. — Gozon Xagħran tasangolla seisoo kiviseinä, jonka lohkareet ovat ihmistä suurempia. Paikallisen tarinan mukaan sen rakensi jättiläisnainen Sansuna, joka söi pelkkiä härkäpapuja ja hunajaa ja kantoi samalla lastaan olallaan. Todellisuudessa Ġgantijan kaksi temppeliä pystytettiin yli 5 500 vuotta sitten, ennen Egyptin pyramideja. Eteläisen temppelin seinä nousee kuuteen metriin, ja se avautuu kaakkoon. Nimi tarkoittaa jättiläisten paikkaa. Kohde liitettiin Unescon maailmanperintöluetteloon vuonna 1980.
+
+### 6.1
+KYSYMYS: Kuka jättiläisnainen kansantarinan mukaan rakensi temppelit?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ġgantija (historia)
+Tietoruudun teksti: Ġgantija, jättiläisten paikka, on neoliittinen megaliittinen temppelikompleksi Maltan Gozon saarella Xagħran ylätasangon reunalla, ajalta noin 3600–2500 eaa. Kaksi temppeliä on yli 5 500 vuotta vanhoja, ne ovat vanhimpia Maltan megaliittitemppeleistä ja vanhempia kuin Egyptin pyramidit, ja ne ovat maailman toiseksi vanhimpia yhä olemassa olevia ihmisen rakentamia uskonnollisia rakennelmia Göbekli Tepen jälkeen. Paikallisen gozolaisen kansantarinan mukaan jättiläisnainen Sansuna, joka söi vain härkäpapuja ja hunajaa, rakensi temppelit lapsi olallaan. Eteläinen temppeli on suurempi ja vanhempi, viiden apsiksen temppeli, jonka korkeus on kuusi metriä. Gozon apulaiskuvernööri, everstiluutnantti John Otto Bayer, raivautti paikan raunioista maata vuonna 1827, mutta multa ja löydöt menetettiin tutkimatta, ja rauniot rapautuivat; Unesco hyväksyi temppelit maailmanperintökohteeksi vuonna 1980.
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Jättiläisten temppeli] n. 3600–2500 eaa. — Gozon Xagħran tasangolla seisoo kiviseinä, jonka lohkareet ovat ihmistä suurempia. Paikallisen tarinan mukaan sen rakensi jättiläisnainen Sansuna, joka söi pelkkiä härkäpapuja ja hunajaa ja kantoi samalla lastaan olallaan. Todellisuudessa Ġgantijan kaksi temppeliä pystytettiin yli 5 500 vuotta sitten, ennen Egyptin pyramideja. Eteläisen temppelin seinä nousee kuuteen metriin, ja se avautuu kaakkoon. Nimi tarkoittaa jättiläisten paikkaa. Kohde liitettiin Unescon maailmanperintöluetteloon vuonna 1980.
+
+### 6.2
+KYSYMYS: Minä vuonna Bayer raivautti temppelin raunioilta maata?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ġgantija (historia)
+Tietoruudun teksti: Ġgantija, jättiläisten paikka, on neoliittinen megaliittinen temppelikompleksi Maltan Gozon saarella Xagħran ylätasangon reunalla, ajalta noin 3600–2500 eaa. Kaksi temppeliä on yli 5 500 vuotta vanhoja, ne ovat vanhimpia Maltan megaliittitemppeleistä ja vanhempia kuin Egyptin pyramidit, ja ne ovat maailman toiseksi vanhimpia yhä olemassa olevia ihmisen rakentamia uskonnollisia rakennelmia Göbekli Tepen jälkeen. Paikallisen gozolaisen kansantarinan mukaan jättiläisnainen Sansuna, joka söi vain härkäpapuja ja hunajaa, rakensi temppelit lapsi olallaan. Eteläinen temppeli on suurempi ja vanhempi, viiden apsiksen temppeli, jonka korkeus on kuusi metriä. Gozon apulaiskuvernööri, everstiluutnantti John Otto Bayer, raivautti paikan raunioista maata vuonna 1827, mutta multa ja löydöt menetettiin tutkimatta, ja rauniot rapautuivat; Unesco hyväksyi temppelit maailmanperintökohteeksi vuonna 1980.
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:hahmotelma-marsaxlokk) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsaxlokk (merenkulku)
+Tietoruudun teksti: Marsaxlokk on pieni, perinteinen kalastajakylä Maltan eteläosassa; se on turistikohde, jonka sunnuntaisin pidettävä kalatori on kuuluisa. Foinikialaiset, kartagolaiset ja roomalaiset käyttivät paikkaa satamana, ja siellä on roomalaisajan sataman jäänteitä. Alun perin Żejtunin kaupunkiin kuulunut kylä tuli omaksi seurakunnakseen 1800-luvun lopulla. Nimi tulee arabian sanasta marsa eli satama ja maltan sanasta xlokk eli kaakko; asukkaita kutsutaan xlukkajreiksi, ja he ovat perinteisesti kalastajia. Suojaisessa sisäsatamassa on perinteisiä luzzi-veneitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Arki: Vene jonka keulassa on silmät] n. 1900-luvun alku — Marsaxlokkin satamassa värikkäät luzzu-kalastusveneet keinuvat rivissä, ja jokaisen keulassa on kaksi silmää. Silmien arvellaan olevan perua muinaisten foinikialaisten tavasta, ja niiden sanotaan suojelevan kalastajia merellä. Luzzu kehittyi 1900-luvun alussa italialaisesta gozzo-veneestä. Rungon yläkaista, viiksi eli mustaċċ, kertoi ennen omistajan kotipaikan, ja musta viiksi ilmaisi surua perheessä. Uusia luzzuja ei enää rakenneta, mutta muutama sata on yhä käytössä.
+- [Puola — maalehti / Ruoka: Taskut jotka täytetään millä tahansa] nykyään — Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.
+
+### 7.1
+KYSYMYS: Minä päivänä viikosta Marsaxlokkin kalatori pidetään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsaxlokk (merenkulku)
+Tietoruudun teksti: Marsaxlokk on pieni, perinteinen kalastajakylä Maltan eteläosassa; se on turistikohde, jonka sunnuntaisin pidettävä kalatori on kuuluisa. Foinikialaiset, kartagolaiset ja roomalaiset käyttivät paikkaa satamana, ja siellä on roomalaisajan sataman jäänteitä. Alun perin Żejtunin kaupunkiin kuulunut kylä tuli omaksi seurakunnakseen 1800-luvun lopulla. Nimi tulee arabian sanasta marsa eli satama ja maltan sanasta xlokk eli kaakko; asukkaita kutsutaan xlukkajreiksi, ja he ovat perinteisesti kalastajia. Suojaisessa sisäsatamassa on perinteisiä luzzi-veneitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Arki: Vene jonka keulassa on silmät] n. 1900-luvun alku — Marsaxlokkin satamassa värikkäät luzzu-kalastusveneet keinuvat rivissä, ja jokaisen keulassa on kaksi silmää. Silmien arvellaan olevan perua muinaisten foinikialaisten tavasta, ja niiden sanotaan suojelevan kalastajia merellä. Luzzu kehittyi 1900-luvun alussa italialaisesta gozzo-veneestä. Rungon yläkaista, viiksi eli mustaċċ, kertoi ennen omistajan kotipaikan, ja musta viiksi ilmaisi surua perheessä. Uusia luzzuja ei enää rakenneta, mutta muutama sata on yhä käytössä.
+
+### 7.2
+KYSYMYS: Millä nimellä kylän asukkaita kutsutaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsaxlokk (merenkulku)
+Tietoruudun teksti: Marsaxlokk on pieni, perinteinen kalastajakylä Maltan eteläosassa; se on turistikohde, jonka sunnuntaisin pidettävä kalatori on kuuluisa. Foinikialaiset, kartagolaiset ja roomalaiset käyttivät paikkaa satamana, ja siellä on roomalaisajan sataman jäänteitä. Alun perin Żejtunin kaupunkiin kuulunut kylä tuli omaksi seurakunnakseen 1800-luvun lopulla. Nimi tulee arabian sanasta marsa eli satama ja maltan sanasta xlokk eli kaakko; asukkaita kutsutaan xlukkajreiksi, ja he ovat perinteisesti kalastajia. Suojaisessa sisäsatamassa on perinteisiä luzzi-veneitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Taskut jotka täytetään millä tahansa] nykyään — Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.
+- [Tampere — kohdekartta / Kohdekartta: Amurin työläismuseokortteli] 1882–1973 Amuri rakennettiin 1860-luvulta alkaen työväen asuinalueeksi tehtaiden länsipuolelle. Nimi on aikalaisten vertaus: samaan aikaan suomalaisia lähti siirtolaisiksi kaukaiselle Amurinmaalle Venäjän itälaidalle, ja uusi kaupunginosa tuntui yhtä kaukaiselta keskustasta katsottuna. Talot olivat yksikerroksisia puutaloja ja asunnot yhteiskeittiöasuntoja: kahdella tai neljällä huoneella oli yksi yhteinen keittiö, ja jokaisessa huoneessa asui oma perheensä. 1960-luvulla Amurin puutalot purettiin ja tilalle nousivat kerrostalot. Yksi kortteli säästettiin ja siitä tehtiin museo: viisi asuintaloa ja neljä piharakennusta, joiden huoneet on sisustettu eri vuosikymmenten näköisiksi vuodesta 1882…
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:hahmotelma-comino) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Comino (luonto · saari)
+Tietoruudun teksti: Comino, maltaksi Kemmuna, on pieni saari Maltan ja Gozon välissä, pinta-alaltaan 3,5 neliökilometriä; nimi tulee kuminansiemenestä, ja pysyviä asukkaita on vain kaksi. Saari on lintusuojelualue ja luonnonsuojelualue, ja sillä on karstimaisema, jossa kasvaa kovalehtistä pensastoa; Santa Marian lahden dyyneillä kasvaa alkuperäistä kasvillisuutta. Antiikin kreikassa saarta kutsuttiin Ephaestiaksi, ja roomalaisaikana sillä asuivat viljelijät; sen jyrkät kalkkikalliot ja luolat olivat keskiajalla merirosvojen suosimia, ja vuosina 1285–1290 saarella asui maanpaossa oleva juutalainen kabbalisti Abraham Abulafia. Johanniittaritarit käyttivät saarta metsästys- ja virkistysmaana, ja salametsästäjää uhkasi kolmen vuoden orjagalleeri.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Turkoosi laguuni] nykyään — Maltan ja Gozon välissä on pieni Comino eli Kemmuna. Saaren nimi tulee kumminasta, ja pysyviä asukkaita siellä on vain kaksi. Comino on lintujen suojelualue, ja sen kalkkikivirannat ovat jyrkkiä ja täynnä luolia. Sininen laguuni on Cominon ja Cominotto-luodon välissä oleva kirkasvetinen lahti, jonka vesi hohtaa turkoosina. Keskiajalla saaren luolissa piileskelivät merirosvot, ja myöhemmin ritarit käyttivät saarta metsästysmaanaan ja vartioivat riistaa tiukasti.
+
+### 8.1
+KYSYMYS: Mistä Comino on saanut nimensä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Comino (luonto · saari)
+Tietoruudun teksti: Comino, maltaksi Kemmuna, on pieni saari Maltan ja Gozon välissä, pinta-alaltaan 3,5 neliökilometriä; nimi tulee kuminansiemenestä, ja pysyviä asukkaita on vain kaksi. Saari on lintusuojelualue ja luonnonsuojelualue, ja sillä on karstimaisema, jossa kasvaa kovalehtistä pensastoa; Santa Marian lahden dyyneillä kasvaa alkuperäistä kasvillisuutta. Antiikin kreikassa saarta kutsuttiin Ephaestiaksi, ja roomalaisaikana sillä asuivat viljelijät; sen jyrkät kalkkikalliot ja luolat olivat keskiajalla merirosvojen suosimia, ja vuosina 1285–1290 saarella asui maanpaossa oleva juutalainen kabbalisti Abraham Abulafia. Johanniittaritarit käyttivät saarta metsästys- ja virkistysmaana, ja salametsästäjää uhkasi kolmen vuoden orjagalleeri.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Turkoosi laguuni] nykyään — Maltan ja Gozon välissä on pieni Comino eli Kemmuna. Saaren nimi tulee kumminasta, ja pysyviä asukkaita siellä on vain kaksi. Comino on lintujen suojelualue, ja sen kalkkikivirannat ovat jyrkkiä ja täynnä luolia. Sininen laguuni on Cominon ja Cominotto-luodon välissä oleva kirkasvetinen lahti, jonka vesi hohtaa turkoosina. Keskiajalla saaren luolissa piileskelivät merirosvot, ja myöhemmin ritarit käyttivät saarta metsästysmaanaan ja vartioivat riistaa tiukasti.
+
+### 8.2
+KYSYMYS: Kuinka monta pysyvää asukasta Cominolla on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Comino (luonto · saari)
+Tietoruudun teksti: Comino, maltaksi Kemmuna, on pieni saari Maltan ja Gozon välissä, pinta-alaltaan 3,5 neliökilometriä; nimi tulee kuminansiemenestä, ja pysyviä asukkaita on vain kaksi. Saari on lintusuojelualue ja luonnonsuojelualue, ja sillä on karstimaisema, jossa kasvaa kovalehtistä pensastoa; Santa Marian lahden dyyneillä kasvaa alkuperäistä kasvillisuutta. Antiikin kreikassa saarta kutsuttiin Ephaestiaksi, ja roomalaisaikana sillä asuivat viljelijät; sen jyrkät kalkkikalliot ja luolat olivat keskiajalla merirosvojen suosimia, ja vuosina 1285–1290 saarella asui maanpaossa oleva juutalainen kabbalisti Abraham Abulafia. Johanniittaritarit käyttivät saarta metsästys- ja virkistysmaana, ja salametsästäjää uhkasi kolmen vuoden orjagalleeri.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Turkoosi laguuni] nykyään — Maltan ja Gozon välissä on pieni Comino eli Kemmuna. Saaren nimi tulee kumminasta, ja pysyviä asukkaita siellä on vain kaksi. Comino on lintujen suojelualue, ja sen kalkkikivirannat ovat jyrkkiä ja täynnä luolia. Sininen laguuni on Cominon ja Cominotto-luodon välissä oleva kirkasvetinen lahti, jonka vesi hohtaa turkoosina. Keskiajalla saaren luolissa piileskelivät merirosvot, ja myöhemmin ritarit käyttivät saarta metsästysmaanaan ja vartioivat riistaa tiukasti.
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:hahmotelma-dingli) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglin kalliot (luonto · vuori)
+Tietoruudun teksti: Dingli on kylä Maltan länsiosassa noin 13 kilometrin päässä Vallettasta, ylätasangolla noin 230 metriä merenpinnan yläpuolella, lähellä Maltan korkeinta kohtaa. Kalliot tarjoavat näkymän avomerelle pienelle, asumattomalle Filfla-saarelle sekä Buskettin puutarhoille ja Verdalan palatsille. Nimen arvellaan tulevan englantilaisesta Johanniittaritarikunnan ritarista Sir Thomas Dingleystä, jolla oli paljon maata ympäristössä. Dinglin alueelta on löydetty foinikialais-, kartagolais- ja roomalaisaikaisia kalliohautoja sekä roomalaisia kylpylöitä. 1500-luvun alkuun asti lähellä oli pieni Ħal Tartarnin kylä, jonka asukkaat siirtyivät lähemmäs peltoja, ja uusi kylä kasvoi nykyiseksi Dingliksi; seurakunta perustettiin vuonna 1678.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Jyrkänne Maltan katolla] nykyään — Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. Maltan korkein kohta, Ta' Dmejrek, nousee 253 metriin. Ritarikunnan aikana Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.
+
+### 9.1
+KYSYMYS: Minkä englantilaisen ritarin mukaan Dingli on nimetty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglin kalliot (luonto · vuori)
+Tietoruudun teksti: Dingli on kylä Maltan länsiosassa noin 13 kilometrin päässä Vallettasta, ylätasangolla noin 230 metriä merenpinnan yläpuolella, lähellä Maltan korkeinta kohtaa. Kalliot tarjoavat näkymän avomerelle pienelle, asumattomalle Filfla-saarelle sekä Buskettin puutarhoille ja Verdalan palatsille. Nimen arvellaan tulevan englantilaisesta Johanniittaritarikunnan ritarista Sir Thomas Dingleystä, jolla oli paljon maata ympäristössä. Dinglin alueelta on löydetty foinikialais-, kartagolais- ja roomalaisaikaisia kalliohautoja sekä roomalaisia kylpylöitä. 1500-luvun alkuun asti lähellä oli pieni Ħal Tartarnin kylä, jonka asukkaat siirtyivät lähemmäs peltoja, ja uusi kylä kasvoi nykyiseksi Dingliksi; seurakunta perustettiin vuonna 1678.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Jyrkänne Maltan katolla] nykyään — Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. Maltan korkein kohta, Ta' Dmejrek, nousee 253 metriin. Ritarikunnan aikana Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.
+
+### 9.2
+KYSYMYS: Minä vuonna Dinglin seurakunta perustettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinglin kalliot (luonto · vuori)
+Tietoruudun teksti: Dingli on kylä Maltan länsiosassa noin 13 kilometrin päässä Vallettasta, ylätasangolla noin 230 metriä merenpinnan yläpuolella, lähellä Maltan korkeinta kohtaa. Kalliot tarjoavat näkymän avomerelle pienelle, asumattomalle Filfla-saarelle sekä Buskettin puutarhoille ja Verdalan palatsille. Nimen arvellaan tulevan englantilaisesta Johanniittaritarikunnan ritarista Sir Thomas Dingleystä, jolla oli paljon maata ympäristössä. Dinglin alueelta on löydetty foinikialais-, kartagolais- ja roomalaisaikaisia kalliohautoja sekä roomalaisia kylpylöitä. 1500-luvun alkuun asti lähellä oli pieni Ħal Tartarnin kylä, jonka asukkaat siirtyivät lähemmäs peltoja, ja uusi kylä kasvoi nykyiseksi Dingliksi; seurakunta perustettiin vuonna 1678.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Jyrkänne Maltan katolla] nykyään — Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. Maltan korkein kohta, Ta' Dmejrek, nousee 253 metriin. Ritarikunnan aikana Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:hahmotelma-mosta) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mostan rotunda (historia)
+Tietoruudun teksti: Mostan rotunda, Neitsyt Marian taivaaseenottamisen basilika, on roomalaiskatolinen seurakuntakirkko Mostassa; se rakennettiin vuosina 1833–1860-luvun alku Giorgio Grognet de Vassén uusklassisten piirustusten mukaan aiemman, noin vuonna 1614 rakennetun renessanssikirkon paikalle. Kirkon esikuva on Rooman Pantheon, ja sen kupoli on maailman kolmanneksi suurin tukematon kupoli; kirkko on Maltan suurin. Kaupungin väkiluku oli 1830-luvulla kasvanut liian suureksi vanhalle kirkolle, ja uusi kirkko rakennettiin vanhan ympärille, joka pysyi käytössä koko rakennusajan; mostalaiset osallistuivat rakennustyöhön sunnuntaisin ja pyhäpäivinä. Rotunda valmistui 28 vuodessa 1860-luvun alussa, vanha kirkko purettiin vuonna 1860, ja uusi vihittiin 15. lokakuuta 1871. Toisen maailmansodan aikana pommi lävisti kupolin mutta ei räjähtänyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Rakennukset: Kylän kupoli Pantheonin mallilla] 1833–1860-luku — Mostan asukkaat totesivat 1830-luvulla, että vanha kirkko oli liian pieni, ja aloittivat uuden rakentamisen. Vanha kirkko pysyi käytössä koko ajan, ja uusi nousi sen ympärille. Kyläläiset osallistuivat rakennustöihin sunnuntaisin ja pyhäpäivinä. Esikuvana oli Rooman Pantheon: pyöreän kirkon kupolin sisähalkaisija on 40 metriä, ja kupoli oli aikanaan maailman kolmanneksi suurin. Rotunda valmistui 1860-luvun alussa 28 vuoden urakan jälkeen, ja kirkko vihittiin käyttöön vuonna 1871.
+- [Sofia — kohdekartta / Kohdekartta: Pyhän Yrjön rotunda] 300-luku Sofian keskustassa, hotellin ja presidentinlinnan välisellä pihalla, seisoo pyöreä punatiilinen rakennus. Se on kaupungin vanhin yhä pystyssä oleva rakennus: rotunda pystytettiin jo 300-luvun alussa, alun perin roomalaisen kylpylän kupolikattoiseksi saliksi – kauan ennen kuin siitä tuli kirkko. Kupoli kohoaa lähes 14 metrin korkeuteen, ja sisäseinillä on peräti viisi eri aikakauden freskokerrosta päällekkäin. Vaikuttavin niistä on peräisin 900-luvulta, Bulgarian niin sanotulta kultakaudelta: maalauksissa on 22 yli kaksimetristä profeettaa ja enkeli, jonka kasvot on maalattu niin taidokkaasti, että ne ovat innoittaneet taiteilijoita vuosisatojen ajan. 1500-luvulla osmanit muuttivat …
+
+### 10.1
+KYSYMYS: Minkä Rooman rakennuksen mukaan rotunda on suunniteltu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mostan rotunda (historia)
+Tietoruudun teksti: Mostan rotunda, Neitsyt Marian taivaaseenottamisen basilika, on roomalaiskatolinen seurakuntakirkko Mostassa; se rakennettiin vuosina 1833–1860-luvun alku Giorgio Grognet de Vassén uusklassisten piirustusten mukaan aiemman, noin vuonna 1614 rakennetun renessanssikirkon paikalle. Kirkon esikuva on Rooman Pantheon, ja sen kupoli on maailman kolmanneksi suurin tukematon kupoli; kirkko on Maltan suurin. Kaupungin väkiluku oli 1830-luvulla kasvanut liian suureksi vanhalle kirkolle, ja uusi kirkko rakennettiin vanhan ympärille, joka pysyi käytössä koko rakennusajan; mostalaiset osallistuivat rakennustyöhön sunnuntaisin ja pyhäpäivinä. Rotunda valmistui 28 vuodessa 1860-luvun alussa, vanha kirkko purettiin vuonna 1860, ja uusi vihittiin 15. lokakuuta 1871. Toisen maailmansodan aikana pommi lävisti kupolin mutta ei räjähtänyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Rakennukset: Kylän kupoli Pantheonin mallilla] 1833–1860-luku — Mostan asukkaat totesivat 1830-luvulla, että vanha kirkko oli liian pieni, ja aloittivat uuden rakentamisen. Vanha kirkko pysyi käytössä koko ajan, ja uusi nousi sen ympärille. Kyläläiset osallistuivat rakennustöihin sunnuntaisin ja pyhäpäivinä. Esikuvana oli Rooman Pantheon: pyöreän kirkon kupolin sisähalkaisija on 40 metriä, ja kupoli oli aikanaan maailman kolmanneksi suurin. Rotunda valmistui 1860-luvun alussa 28 vuoden urakan jälkeen, ja kirkko vihittiin käyttöön vuonna 1871.
+- [Sofia — kohdekartta / Kohdekartta: Pyhän Yrjön rotunda] 300-luku Sofian keskustassa, hotellin ja presidentinlinnan välisellä pihalla, seisoo pyöreä punatiilinen rakennus. Se on kaupungin vanhin yhä pystyssä oleva rakennus: rotunda pystytettiin jo 300-luvun alussa, alun perin roomalaisen kylpylän kupolikattoiseksi saliksi – kauan ennen kuin siitä tuli kirkko. Kupoli kohoaa lähes 14 metrin korkeuteen, ja sisäseinillä on peräti viisi eri aikakauden freskokerrosta päällekkäin. Vaikuttavin niistä on peräisin 900-luvulta, Bulgarian niin sanotulta kultakaudelta: maalauksissa on 22 yli kaksimetristä profeettaa ja enkeli, jonka kasvot on maalattu niin taidokkaasti, että ne ovat innoittaneet taiteilijoita vuosisatojen ajan. 1500-luvulla osmanit muuttivat …
+
+### 10.2
+KYSYMYS: Minä vuonna kirkko vihittiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mostan rotunda (historia)
+Tietoruudun teksti: Mostan rotunda, Neitsyt Marian taivaaseenottamisen basilika, on roomalaiskatolinen seurakuntakirkko Mostassa; se rakennettiin vuosina 1833–1860-luvun alku Giorgio Grognet de Vassén uusklassisten piirustusten mukaan aiemman, noin vuonna 1614 rakennetun renessanssikirkon paikalle. Kirkon esikuva on Rooman Pantheon, ja sen kupoli on maailman kolmanneksi suurin tukematon kupoli; kirkko on Maltan suurin. Kaupungin väkiluku oli 1830-luvulla kasvanut liian suureksi vanhalle kirkolle, ja uusi kirkko rakennettiin vanhan ympärille, joka pysyi käytössä koko rakennusajan; mostalaiset osallistuivat rakennustyöhön sunnuntaisin ja pyhäpäivinä. Rotunda valmistui 28 vuodessa 1860-luvun alussa, vanha kirkko purettiin vuonna 1860, ja uusi vihittiin 15. lokakuuta 1871. Toisen maailmansodan aikana pommi lävisti kupolin mutta ei räjähtänyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+- [Ankara — kohdekartta / Kohdekartta: Augustuksen temppeli] Rooma valloitti Keski-Anatolian ja perusti Galatian maakunnan, jonka hallintokeskus oli Ancyra. Augustuksen ja Rooman temppeli rakennettiin sinne noin 25–20 eaa. Sitä laajennettiin 100-luvulla jaa., ja 400-luvulla siitä tehtiin kirkko. Pystyssä ovat enää sivuseinät ja koristeltu oviaukon kehys, ja kuuden pylvään paikat erottuvat yhä. Viereen nousi 1400-luvun alussa Hacı Bayramin moskeija. Augustus kuoli 19. elokuuta vuonna 14 jaa., ja selonteko hänen teoistaan oli valmistunut kuukautta aiemmin. Testamentissaan hän määräsi senaatin pystyttämään tekstin. Alkuperäinen kaiverrettiin kahteen pronssipilariin Roomaan mausoleumin eteen, eivätkä pilarit ole säilyneet. Ancyrassa latina hakattiin etei…
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

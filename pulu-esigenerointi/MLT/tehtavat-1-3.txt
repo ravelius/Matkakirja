@@ -1,0 +1,224 @@
+================ KOHTA 11 (kohde:hahmotelma-hypogeum) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ħal Saflieni (historia)
+Tietoruudun teksti: Ħal Saflienin hypogeum on neoliittinen maanalainen rakenne Paolassa Maltalla, Saflieni-kaudelta (3300–3000 eaa.). Sitä pidetään pyhäkkönä ja hautausmaana, ja arkeologit ovat dokumentoineet yli 7 000 ihmisen jäännökset; se on yksi parhaiten säilyneitä Maltan temppelirakentajakulttuurin kohteita. Rakenne löytyi vahingossa vuonna 1902, kun työmiehet louhivat sisternejä uudelle asuinalueelle ja puhkaisivat sen katon; kaivauksia johti aluksi Manuel Magri vuodesta 1903 ja sitten Themistocles Zammit, joka julkaisi raporttinsa vuodesta 1910. Hypogeum avattiin kävijöille jo vuonna 1908, ja nykyään Heritage Malta päästää sisään vain 80 kävijää päivässä ja säätelee tarkasti mikroilmastoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Colosseum] 72–80 Keisari Vespasianus aloitti jättimäisen areenan rakentamisen vuonna 72, ja hänen poikansa Titus vihki sen käyttöön kahdeksan vuotta myöhemmin, vuonna 80. Avajaisia juhlittiin peräti 100 päivän ajan erilaisin näytöksin. Rakennuksen oikea nimi oli Flavolaisten amfiteatteri — lempinimi 'Colosseum' tulee sen vierestä kohonneesta jättiläismäisestä Colossus-patsaasta, ei areenasta itsestään. Katsomoon mahtui kerralla 50 000–80 000 katsojaa, enemmän kuin moneen nykyaikaiseen jalkapallostadioniin. Areenalla nähtiin gladiaattoritaisteluita ja villieläinten metsästyksiä — sinne tuotiin leijonia, norsuja ja jopa sarvikuonoja kaukaa Afrikasta. Areena voitiin jopa täyttää vedellä ja lavastaa siell…
+- [Malta — maalehti / Historia: Katto romahti kaivuutyömaalla] 1902 — Vuonna 1902 Paolassa rakennettiin uutta asuinaluetta, ja työmiehet louhivat vesisäiliötä. Yhtäkkiä he puhkaisivat vahingossa katon, ja alta paljastui kolmikerroksinen labyrintti, joka oli veistetty pehmeään kalkkikiveen. Ħal Saflienin hypogeumi toimi pyhäkkönä ja hautakammiona, ja sinne haudattiin arviolta 7 000 ihmistä. Kattoon on maalattu punaokralla kierteitä ja pilkkuja, ja yhden kammion kolo saattoi vahvistaa laulun ja rummutuksen kaikua muihin huoneisiin. Nykyään sisään pääsee vain 80 kävijää päivässä.
+
+### 11.1
+KYSYMYS: Minä vuonna hypogeum löydettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ħal Saflieni (historia)
+Tietoruudun teksti: Ħal Saflienin hypogeum on neoliittinen maanalainen rakenne Paolassa Maltalla, Saflieni-kaudelta (3300–3000 eaa.). Sitä pidetään pyhäkkönä ja hautausmaana, ja arkeologit ovat dokumentoineet yli 7 000 ihmisen jäännökset; se on yksi parhaiten säilyneitä Maltan temppelirakentajakulttuurin kohteita. Rakenne löytyi vahingossa vuonna 1902, kun työmiehet louhivat sisternejä uudelle asuinalueelle ja puhkaisivat sen katon; kaivauksia johti aluksi Manuel Magri vuodesta 1903 ja sitten Themistocles Zammit, joka julkaisi raporttinsa vuodesta 1910. Hypogeum avattiin kävijöille jo vuonna 1908, ja nykyään Heritage Malta päästää sisään vain 80 kävijää päivässä ja säätelee tarkasti mikroilmastoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Colosseum] 72–80 Keisari Vespasianus aloitti jättimäisen areenan rakentamisen vuonna 72, ja hänen poikansa Titus vihki sen käyttöön kahdeksan vuotta myöhemmin, vuonna 80. Avajaisia juhlittiin peräti 100 päivän ajan erilaisin näytöksin. Rakennuksen oikea nimi oli Flavolaisten amfiteatteri — lempinimi 'Colosseum' tulee sen vierestä kohonneesta jättiläismäisestä Colossus-patsaasta, ei areenasta itsestään. Katsomoon mahtui kerralla 50 000–80 000 katsojaa, enemmän kuin moneen nykyaikaiseen jalkapallostadioniin. Areenalla nähtiin gladiaattoritaisteluita ja villieläinten metsästyksiä — sinne tuotiin leijonia, norsuja ja jopa sarvikuonoja kaukaa Afrikasta. Areena voitiin jopa täyttää vedellä ja lavastaa siell…
+- [Malta — maalehti / Historia: Katto romahti kaivuutyömaalla] 1902 — Vuonna 1902 Paolassa rakennettiin uutta asuinaluetta, ja työmiehet louhivat vesisäiliötä. Yhtäkkiä he puhkaisivat vahingossa katon, ja alta paljastui kolmikerroksinen labyrintti, joka oli veistetty pehmeään kalkkikiveen. Ħal Saflienin hypogeumi toimi pyhäkkönä ja hautakammiona, ja sinne haudattiin arviolta 7 000 ihmistä. Kattoon on maalattu punaokralla kierteitä ja pilkkuja, ja yhden kammion kolo saattoi vahvistaa laulun ja rummutuksen kaikua muihin huoneisiin. Nykyään sisään pääsee vain 80 kävijää päivässä.
+
+### 11.2
+KYSYMYS: Kuinka monta kävijää päivässä hypogeumiin nykyään päästetään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ħal Saflieni (historia)
+Tietoruudun teksti: Ħal Saflienin hypogeum on neoliittinen maanalainen rakenne Paolassa Maltalla, Saflieni-kaudelta (3300–3000 eaa.). Sitä pidetään pyhäkkönä ja hautausmaana, ja arkeologit ovat dokumentoineet yli 7 000 ihmisen jäännökset; se on yksi parhaiten säilyneitä Maltan temppelirakentajakulttuurin kohteita. Rakenne löytyi vahingossa vuonna 1902, kun työmiehet louhivat sisternejä uudelle asuinalueelle ja puhkaisivat sen katon; kaivauksia johti aluksi Manuel Magri vuodesta 1903 ja sitten Themistocles Zammit, joka julkaisi raporttinsa vuodesta 1910. Hypogeum avattiin kävijöille jo vuonna 1908, ja nykyään Heritage Malta päästää sisään vain 80 kävijää päivässä ja säätelee tarkasti mikroilmastoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Katto romahti kaivuutyömaalla] 1902 — Vuonna 1902 Paolassa rakennettiin uutta asuinaluetta, ja työmiehet louhivat vesisäiliötä. Yhtäkkiä he puhkaisivat vahingossa katon, ja alta paljastui kolmikerroksinen labyrintti, joka oli veistetty pehmeään kalkkikiveen. Ħal Saflienin hypogeumi toimi pyhäkkönä ja hautakammiona, ja sinne haudattiin arviolta 7 000 ihmistä. Kattoon on maalattu punaokralla kierteitä ja pilkkuja, ja yhden kammion kolo saattoi vahvistaa laulun ja rummutuksen kaikua muihin huoneisiin. Nykyään sisään pääsee vain 80 kävijää päivässä.
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:hahmotelma-ta-pinu) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ta’ Pinu (kulttuuri)
+Tietoruudun teksti: Ta’ Pinun kansallinen pyhäkkö on roomalaiskatolinen basilika noin 700 metrin päässä Għarbin kylästä Maltan sisarsaarella Gozolla. Pyhäkön alkuperä on tuntematon: vuonna 1575 apostolinen visitaattori Pietro Dusina piti kappelin kuntoa niin huonona, että määräsi sen suljettavaksi ja purettavaksi, mutta työmiehen käsi murtui ensimmäisessä iskussa, mitä pidettiin merkkinä, ja kappeli jäi saaren ainoaksi, joka säilyi. Vuonna 1598 Pinu Gauci tuli kappelin hoitajaksi, ja nimi muuttui Gentilen kappelista Ta’ Pinuksi eli Filipin; vuonna 1619 Amadeo Perugino maalasi pääalttarille Neitsyt Marian taivaaseenottamisen. Vuonna 1883 Karmni Grima kuuli kappelin ohi kulkiessaan äänen, joka pyysi häntä lausumaan kolme Ave Mariaa, ja seuraavina vuosina kappelin Neitsyt Marialle liitettiin ihmeitä; uuden kirkon rakentaminen aloitettiin 30. toukokuuta 1920.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+- [Istanbul — kohdekartta / Kohdekartta: Hagia Sofia] 532–537 Keisari Justinianus I rakennutti nykyisen Hagia Sofian uskomattoman nopeasti, vain viidessä vuodessa 532–537. Rakennustöitä johtivat kaksi matemaatikkoa, ja työmaalla saattoi olla yhtä aikaa yli 10 000 työntekijää. Rakennus on 82 metriä pitkä ja 73 metriä leveä, ja sen valtava kupoli kohoaa lähes 56 metrin korkeuteen halkaisijaltaan noin 33-metrisenä. Aikanaan se oli maailman suurin katettu tila, ja monet pitivät sen pysymistä pystyssä pienenä ihmeenä. Hagia Sofia on elänyt monta elämää: kirkkona se toimi yli tuhat vuotta (360–1453), sitten moskeijana Osmannien valloituksen jälkeen, museona vuodesta 1935 ja jälleen moskeijana vuodesta 2020 alkaen. "Salomo, minä olen voittanut sinut!…
+
+### 12.1
+KYSYMYS: Mitä Ta’ Pinu tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ta’ Pinu (kulttuuri)
+Tietoruudun teksti: Ta’ Pinun kansallinen pyhäkkö on roomalaiskatolinen basilika noin 700 metrin päässä Għarbin kylästä Maltan sisarsaarella Gozolla. Pyhäkön alkuperä on tuntematon: vuonna 1575 apostolinen visitaattori Pietro Dusina piti kappelin kuntoa niin huonona, että määräsi sen suljettavaksi ja purettavaksi, mutta työmiehen käsi murtui ensimmäisessä iskussa, mitä pidettiin merkkinä, ja kappeli jäi saaren ainoaksi, joka säilyi. Vuonna 1598 Pinu Gauci tuli kappelin hoitajaksi, ja nimi muuttui Gentilen kappelista Ta’ Pinuksi eli Filipin; vuonna 1619 Amadeo Perugino maalasi pääalttarille Neitsyt Marian taivaaseenottamisen. Vuonna 1883 Karmni Grima kuuli kappelin ohi kulkiessaan äänen, joka pyysi häntä lausumaan kolme Ave Mariaa, ja seuraavina vuosina kappelin Neitsyt Marialle liitettiin ihmeitä; uuden kirkon rakentaminen aloitettiin 30. toukokuuta 1920.
+
+### 12.2
+KYSYMYS: Minä vuonna uuden kirkon rakentaminen aloitettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ta’ Pinu (kulttuuri)
+Tietoruudun teksti: Ta’ Pinun kansallinen pyhäkkö on roomalaiskatolinen basilika noin 700 metrin päässä Għarbin kylästä Maltan sisarsaarella Gozolla. Pyhäkön alkuperä on tuntematon: vuonna 1575 apostolinen visitaattori Pietro Dusina piti kappelin kuntoa niin huonona, että määräsi sen suljettavaksi ja purettavaksi, mutta työmiehen käsi murtui ensimmäisessä iskussa, mitä pidettiin merkkinä, ja kappeli jäi saaren ainoaksi, joka säilyi. Vuonna 1598 Pinu Gauci tuli kappelin hoitajaksi, ja nimi muuttui Gentilen kappelista Ta’ Pinuksi eli Filipin; vuonna 1619 Amadeo Perugino maalasi pääalttarille Neitsyt Marian taivaaseenottamisen. Vuonna 1883 Karmni Grima kuuli kappelin ohi kulkiessaan äänen, joka pyysi häntä lausumaan kolme Ave Mariaa, ja seuraavina vuosina kappelin Neitsyt Marialle liitettiin ihmeitä; uuden kirkon rakentaminen aloitettiin 30. toukokuuta 1920.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+- [Istanbul — kohdekartta / Kohdekartta: Hagia Sofia] 532–537 Keisari Justinianus I rakennutti nykyisen Hagia Sofian uskomattoman nopeasti, vain viidessä vuodessa 532–537. Rakennustöitä johtivat kaksi matemaatikkoa, ja työmaalla saattoi olla yhtä aikaa yli 10 000 työntekijää. Rakennus on 82 metriä pitkä ja 73 metriä leveä, ja sen valtava kupoli kohoaa lähes 56 metrin korkeuteen halkaisijaltaan noin 33-metrisenä. Aikanaan se oli maailman suurin katettu tila, ja monet pitivät sen pysymistä pystyssä pienenä ihmeenä. Hagia Sofia on elänyt monta elämää: kirkkona se toimi yli tuhat vuotta (360–1453), sitten moskeijana Osmannien valloituksen jälkeen, museona vuodesta 1935 ja jälleen moskeijana vuodesta 2020 alkaen. "Salomo, minä olen voittanut sinut!…
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:hahmotelma-birgu) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vittoriosa (Birgu) (historia)
+Tietoruudun teksti: Birgu, italiaksi Vittoriosa eli Voitokas kaupunki, on vanha linnoitettu kaupunki Grand Harbourin eteläpuolella niemellä, jonka kärjessä on Fort Saint Angelo ja tyvellä Cospicua. Ennen Vallettan perustamista Grand Harbourin hallitsemiseksi oli valloitettava Birgu. Kaupunki oli Johanniittaritarikunnan tukikohta ja käytännössä Maltan pääkaupunki vuosina 1530–1571: kun ritarikunta oli menettänyt Rodoksen osmaneille ja saanut Maltan uudeksi kodikseen, se valitsi Birgun pääkaupungiksi, koska Mdina oli sisämaassa eikä sopinut sen merisotilaallisiin tarpeisiin. Birgu on tunnettu tärkeästä osastaan Maltan suuressa piirityksessä vuonna 1565. 1900-luvun alussa kaupungissa oli yli 6 000 asukasta, ja paikalliset puhuvat Cottonera-murretta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Hiljainen kaupunki] n. 700-luku eaa. — Foinikialaiset perustivat Mdinan paikalle asutuksen noin 700-luvulla eaa., ja roomalaisten aikana se sai nimen Melita. Nykyinen nimi tulee arabian sanasta madīnah, kaupunki. Mdina oli Maltan pääkaupunki antiikista keskiajalle, kunnes Pyhän Johanneksen ritarikunta asettui vuonna 1530 Birguun. Sen jälkeen kaupunki ei enää kasvanut muurien ulkopuolelle, ja sitä alettiin kutsua Hiljaiseksi kaupungiksi. Vuonna 2024 muurien sisällä asui vain 242 ihmistä, ja omaisuus siirtyy yhä sukupolvelta toiselle.
+- [Puola — maalehti / Ruoka: Taskut jotka täytetään millä tahansa] nykyään — Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.
+
+### 13.1
+KYSYMYS: Minä vuosina Birgu oli Maltan käytännön pääkaupunki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vittoriosa (Birgu) (historia)
+Tietoruudun teksti: Birgu, italiaksi Vittoriosa eli Voitokas kaupunki, on vanha linnoitettu kaupunki Grand Harbourin eteläpuolella niemellä, jonka kärjessä on Fort Saint Angelo ja tyvellä Cospicua. Ennen Vallettan perustamista Grand Harbourin hallitsemiseksi oli valloitettava Birgu. Kaupunki oli Johanniittaritarikunnan tukikohta ja käytännössä Maltan pääkaupunki vuosina 1530–1571: kun ritarikunta oli menettänyt Rodoksen osmaneille ja saanut Maltan uudeksi kodikseen, se valitsi Birgun pääkaupungiksi, koska Mdina oli sisämaassa eikä sopinut sen merisotilaallisiin tarpeisiin. Birgu on tunnettu tärkeästä osastaan Maltan suuressa piirityksessä vuonna 1565. 1900-luvun alussa kaupungissa oli yli 6 000 asukasta, ja paikalliset puhuvat Cottonera-murretta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Hiljainen kaupunki] n. 700-luku eaa. — Foinikialaiset perustivat Mdinan paikalle asutuksen noin 700-luvulla eaa., ja roomalaisten aikana se sai nimen Melita. Nykyinen nimi tulee arabian sanasta madīnah, kaupunki. Mdina oli Maltan pääkaupunki antiikista keskiajalle, kunnes Pyhän Johanneksen ritarikunta asettui vuonna 1530 Birguun. Sen jälkeen kaupunki ei enää kasvanut muurien ulkopuolelle, ja sitä alettiin kutsua Hiljaiseksi kaupungiksi. Vuonna 2024 muurien sisällä asui vain 242 ihmistä, ja omaisuus siirtyy yhä sukupolvelta toiselle.
+
+### 13.2
+KYSYMYS: Millä nimellä kaupunkia kutsutaan italiaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vittoriosa (Birgu) (historia)
+Tietoruudun teksti: Birgu, italiaksi Vittoriosa eli Voitokas kaupunki, on vanha linnoitettu kaupunki Grand Harbourin eteläpuolella niemellä, jonka kärjessä on Fort Saint Angelo ja tyvellä Cospicua. Ennen Vallettan perustamista Grand Harbourin hallitsemiseksi oli valloitettava Birgu. Kaupunki oli Johanniittaritarikunnan tukikohta ja käytännössä Maltan pääkaupunki vuosina 1530–1571: kun ritarikunta oli menettänyt Rodoksen osmaneille ja saanut Maltan uudeksi kodikseen, se valitsi Birgun pääkaupungiksi, koska Mdina oli sisämaassa eikä sopinut sen merisotilaallisiin tarpeisiin. Birgu on tunnettu tärkeästä osastaan Maltan suuressa piirityksessä vuonna 1565. 1900-luvun alussa kaupungissa oli yli 6 000 asukasta, ja paikalliset puhuvat Cottonera-murretta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Taskut jotka täytetään millä tahansa] nykyään — Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:hahmotelma-fort-manoel) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fort Manoel (historia)
+Tietoruudun teksti: Fort Manoel on tähtimäinen linnoitus Manoel-saarella Gżiran edustalla Marsamxettin satamassa. Sen rakensi 1700-luvulla Johanniittaritarikunta suurmestari António Manoel de Vilhenan aikana, jonka mukaan sekä saari että linnoitus on nimetty. Linnoitus hallitsee Marsamxettin satamaa ja Slieman ankkuripaikkaa, ja se yhdistää barokkiarkkitehtuurin käytännöllisyyteen. Ranskalaismiehityksen jälkeen britit ottivat linnoituksen käyttöönsä vuonna 1800 ja pitivät sitä varuskuntanaan vuoteen 1964 asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Rakennukset: Teatteri kymmenessä kuukaudessa] 1731 — Suurmestari António Manoel de Vilhena tilasi Vallettaan julkisen teatterin vuonna 1731 ja maksoi sen itse, jotta ihmisillä olisi kunniallista huvia. Rakennus valmistui kuulemma vain kymmenessä kuukaudessa. Ensimmäinen näytelmä, Merope, esitettiin 9. tammikuuta 1732, ja näyttelijöinä olivat ritarit itse. Salissa on 534 paikkaa, ja kolme parvekekerrosta on tehty kokonaan puusta ja koristeltu lehtikullalla. Teatteria pidetään Euroopan kolmanneksi vanhimpana yhä toimivana teatterina.
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 14.1
+KYSYMYS: Kenen mukaan Fort Manoel on nimetty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fort Manoel (historia)
+Tietoruudun teksti: Fort Manoel on tähtimäinen linnoitus Manoel-saarella Gżiran edustalla Marsamxettin satamassa. Sen rakensi 1700-luvulla Johanniittaritarikunta suurmestari António Manoel de Vilhenan aikana, jonka mukaan sekä saari että linnoitus on nimetty. Linnoitus hallitsee Marsamxettin satamaa ja Slieman ankkuripaikkaa, ja se yhdistää barokkiarkkitehtuurin käytännöllisyyteen. Ranskalaismiehityksen jälkeen britit ottivat linnoituksen käyttöönsä vuonna 1800 ja pitivät sitä varuskuntanaan vuoteen 1964 asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Rakennukset: Teatteri kymmenessä kuukaudessa] 1731 — Suurmestari António Manoel de Vilhena tilasi Vallettaan julkisen teatterin vuonna 1731 ja maksoi sen itse, jotta ihmisillä olisi kunniallista huvia. Rakennus valmistui kuulemma vain kymmenessä kuukaudessa. Ensimmäinen näytelmä, Merope, esitettiin 9. tammikuuta 1732, ja näyttelijöinä olivat ritarit itse. Salissa on 534 paikkaa, ja kolme parvekekerrosta on tehty kokonaan puusta ja koristeltu lehtikullalla. Teatteria pidetään Euroopan kolmanneksi vanhimpana yhä toimivana teatterina.
+
+### 14.2
+KYSYMYS: Minä vuonna britit ottivat linnoituksen haltuunsa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fort Manoel (historia)
+Tietoruudun teksti: Fort Manoel on tähtimäinen linnoitus Manoel-saarella Gżiran edustalla Marsamxettin satamassa. Sen rakensi 1700-luvulla Johanniittaritarikunta suurmestari António Manoel de Vilhenan aikana, jonka mukaan sekä saari että linnoitus on nimetty. Linnoitus hallitsee Marsamxettin satamaa ja Slieman ankkuripaikkaa, ja se yhdistää barokkiarkkitehtuurin käytännöllisyyteen. Ranskalaismiehityksen jälkeen britit ottivat linnoituksen käyttöönsä vuonna 1800 ja pitivät sitä varuskuntanaan vuoteen 1964 asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+- [Tunisia — maalehti / Kuvataide: Kaksi viikkoa, jotka muuttivat maalaustaidetta] 1914 — Sveitsiläis-saksalainen Paul Klee matkusti huhtikuussa 1914 Tunisiaan ystäviensä August Macken ja Louis Moillietin kanssa. Valo teki häneen niin suuren vaikutuksen, että hän kirjoitti päiväkirjaansa: väri on ottanut minut haltuunsa, enää minun ei tarvitse juosta sen perässä — väri ja minä olemme yhtä, olen maalari. Kotiin palattuaan hän maalasi ensimmäisen täysin abstraktin teoksensa "Kairouanin tapaan", joka koostuu värillisistä suorakaiteista ja muutamasta ympyrästä. Värillisestä suorakaiteesta tuli hänen perusrakennuspalikkansa, jota tutkijat ovat verranneet nuottiin. Egyptissä hän kävi 1928, mutta se ei tehnyt samaa.
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:hahmotelma-popeye-village) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Popeye Village (kulttuuri)
+Tietoruudun teksti: Popeye Village, tunnetaan myös nimellä Sweethaven Village, on alun perin elokuvalavasteeksi rakennettu puukylä Ankkurilahdella lähellä Mellieħaa. Se pystytettiin vuonna 1980 ilmestyneen Popeye-elokuvan kuvauksia varten, jonka tuottivat Paramount Pictures ja Walt Disney Productions ja jossa pääosissa olivat Robin Williams ja Shelley Duvall. Kuvausten jälkeen rapistuneen näköisistä puurakennuksista tehtiin yleisölle avoin ulkoilmamuseo ja rantapuisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Musiikki: Zorbaksen tanssi keksittiin elokuvaa varten] 1964 — Sirtaki ei ole vanha kansantanssi. Se koottiin vanhoista tansseista vuonna 1964 elokuvaa Kerro minulle, Zorbas varten. Pääosan näyttelijä Anthony Quinn kertoi, ettei pystynyt loukkaantuneella jalallaan hyppimään, joten askeleista tuli liukuvia ja vauhti kiihtyy vasta lopussa. Musiikin sävelsi Mikis Theodorakis. Kun sotilasjuntta kielsi hänen musiikkinsa vuonna 1967, sitä laulettiin muualla — kiertueen solistina oli suomalainen Arja Saijonmaa.
+- [Darwin — kohdekartta / Kohdekartta: Star-teatteri] 1929 Star oli Darwinin ensimmäinen varta vasten rakennettu elokuvateatteri, ja sen rakensi 1920-luvulla darwinilaisen Harold Snellin yhtiö Snell and Gordon. Sali oli osittain ulkoilmateatteri: katto ulottui vain takarivien ja parven yli, ja Snell oli käynyt opiskelemassa kattorakennetta Englannissa. Näyttämö oli pyörien päällä, jotta sen sai siirtää nyrkkeilyotteluiden tieltä, ja lattia valettiin betonista rullaluistelua ja tansseja varten. Paikkoja oli 860. Talo avattiin 14. syyskuuta 1929 elokuvalla The Cat and the Canary. Sali oli jaettu. Parvi kuului kaupungin hienostolle, ja työväki ja aboriginaalit istuivat alakerrassa; aboriginaalit tarvitsivat lisäksi suojeluviranomaisen luvan rikko…
+
+### 15.1
+KYSYMYS: Mitä elokuvaa varten kylä alun perin rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Popeye Village (kulttuuri)
+Tietoruudun teksti: Popeye Village, tunnetaan myös nimellä Sweethaven Village, on alun perin elokuvalavasteeksi rakennettu puukylä Ankkurilahdella lähellä Mellieħaa. Se pystytettiin vuonna 1980 ilmestyneen Popeye-elokuvan kuvauksia varten, jonka tuottivat Paramount Pictures ja Walt Disney Productions ja jossa pääosissa olivat Robin Williams ja Shelley Duvall. Kuvausten jälkeen rapistuneen näköisistä puurakennuksista tehtiin yleisölle avoin ulkoilmamuseo ja rantapuisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Musiikki: Zorbaksen tanssi keksittiin elokuvaa varten] 1964 — Sirtaki ei ole vanha kansantanssi. Se koottiin vanhoista tansseista vuonna 1964 elokuvaa Kerro minulle, Zorbas varten. Pääosan näyttelijä Anthony Quinn kertoi, ettei pystynyt loukkaantuneella jalallaan hyppimään, joten askeleista tuli liukuvia ja vauhti kiihtyy vasta lopussa. Musiikin sävelsi Mikis Theodorakis. Kun sotilasjuntta kielsi hänen musiikkinsa vuonna 1967, sitä laulettiin muualla — kiertueen solistina oli suomalainen Arja Saijonmaa.
+
+### 15.2
+KYSYMYS: Ketkä olivat elokuvan pääosien näyttelijät?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Popeye Village (kulttuuri)
+Tietoruudun teksti: Popeye Village, tunnetaan myös nimellä Sweethaven Village, on alun perin elokuvalavasteeksi rakennettu puukylä Ankkurilahdella lähellä Mellieħaa. Se pystytettiin vuonna 1980 ilmestyneen Popeye-elokuvan kuvauksia varten, jonka tuottivat Paramount Pictures ja Walt Disney Productions ja jossa pääosissa olivat Robin Williams ja Shelley Duvall. Kuvausten jälkeen rapistuneen näköisistä puurakennuksista tehtiin yleisölle avoin ulkoilmamuseo ja rantapuisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Darwin — kohdekartta / Kohdekartta: Star-teatteri] 1929 Star oli Darwinin ensimmäinen varta vasten rakennettu elokuvateatteri, ja sen rakensi 1920-luvulla darwinilaisen Harold Snellin yhtiö Snell and Gordon. Sali oli osittain ulkoilmateatteri: katto ulottui vain takarivien ja parven yli, ja Snell oli käynyt opiskelemassa kattorakennetta Englannissa. Näyttämö oli pyörien päällä, jotta sen sai siirtää nyrkkeilyotteluiden tieltä, ja lattia valettiin betonista rullaluistelua ja tansseja varten. Paikkoja oli 860. Talo avattiin 14. syyskuuta 1929 elokuvalla The Cat and the Canary. Sali oli jaettu. Parvi kuului kaupungin hienostolle, ja työväki ja aboriginaalit istuivat alakerrassa; aboriginaalit tarvitsivat lisäksi suojeluviranomaisen luvan rikko…
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

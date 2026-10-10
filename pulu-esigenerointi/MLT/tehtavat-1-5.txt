@@ -1,0 +1,221 @@
+================ KOHTA 21 (kohde:hahmotelma-blue-grotto) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sininen luola (luonto · vuori)
+Tietoruudun teksti: Sininen luola on joukko meriluolia Maltan kaakkoisrannikolla, lähellä Wied iż-Żurrieqin kalastajasatamaa. Luolat ja satama kuuluvat Qrendin kylän alueeseen, mikä vahvistettiin Qrendin ja Żurrieqin välisessä rajakiistassa vuonna 1910. Luolien seinät heijastavat merenveden erilaisia sinisen sävyjä, ja jotkin luolat heijastavat myös vedenalaisen kasviston ja eläimistön fosforoivia värejä. Aivan luolien edustalla, merenselällä, sijaitsee asumaton Filfla-saari, joka on nykyään lintujensuojelualue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lalibela — kaupunkilehti / Lalibela: Talot, joissa portaat ovat ulkoseinällä] Lalibela ei ole pelkkä kirkkoalue vaan kaupunki, jossa asuu ihmisiä — vuoden 2007 laskennassa 17 367. Sandro Angelini luetteloi 1970 kaupungin perinteiset rakennukset ja erotti kaksi tyyppiä. Tukul on pyöreä, kivestä ladottu talo, jossa on yleensä kaksi kerrosta ja portaat ulkoseinällä ylempään kerrokseen. Chika on yksikerroksinen pyöreä rakennus, joka on tehty maasta ja risuista; Angelini piti sitä niukkuuden merkkinä. Molemmat kuuluvat maailmanperintökohteen alueeseen, ja niiden säilyminen on osa samaa suojelutyötä kuin kirkkojen.
+- [Granada — kohdekartta / Kohdekartta: Sacromonten luolat] 1500-luku Granadan itälaidalla kohoaa Sacromonten kukkula, jonka rinteisiin on kaiverrettu satoja luolakoteja jo 1500-luvulta lähtien. Ensin luoliin piiloutuivat ihmiset, jotka oli karkotettu kaupungista, mutta pian niistä tuli koti romanikansalle eli gitaneille, jotka asettuivat Granadaan sen jälkeen kun kaupunki oli vuonna 1492 vallattu takaisin kristityille. Jokainen luola on erimuotoinen, sillä se on louhittu suoraan kukkulan kallioon - ovena toimii usein pyöreä, valkoiseksi kalkittu kaariaukko. Lähellä sijaitsevassa rotkossa, jota kutsutaan Mustien rotkoksi, kerrotaan tarina vapautetuista orjista, jotka etsivät sotien jälkeen kätkettyä arabikultaa oliivilehdosta - aivan kuin suoraan aa…
+
+### 21.1
+KYSYMYS: Minkä kylän alueeseen luolat kuuluvat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sininen luola (luonto · vuori)
+Tietoruudun teksti: Sininen luola on joukko meriluolia Maltan kaakkoisrannikolla, lähellä Wied iż-Żurrieqin kalastajasatamaa. Luolat ja satama kuuluvat Qrendin kylän alueeseen, mikä vahvistettiin Qrendin ja Żurrieqin välisessä rajakiistassa vuonna 1910. Luolien seinät heijastavat merenveden erilaisia sinisen sävyjä, ja jotkin luolat heijastavat myös vedenalaisen kasviston ja eläimistön fosforoivia värejä. Aivan luolien edustalla, merenselällä, sijaitsee asumaton Filfla-saari, joka on nykyään lintujensuojelualue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lalibela — kaupunkilehti / Lalibela: Talot, joissa portaat ovat ulkoseinällä] Lalibela ei ole pelkkä kirkkoalue vaan kaupunki, jossa asuu ihmisiä — vuoden 2007 laskennassa 17 367. Sandro Angelini luetteloi 1970 kaupungin perinteiset rakennukset ja erotti kaksi tyyppiä. Tukul on pyöreä, kivestä ladottu talo, jossa on yleensä kaksi kerrosta ja portaat ulkoseinällä ylempään kerrokseen. Chika on yksikerroksinen pyöreä rakennus, joka on tehty maasta ja risuista; Angelini piti sitä niukkuuden merkkinä. Molemmat kuuluvat maailmanperintökohteen alueeseen, ja niiden säilyminen on osa samaa suojelutyötä kuin kirkkojen.
+
+### 21.2
+KYSYMYS: Mikä asumaton saari näkyy luolien edustalla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sininen luola (luonto · vuori)
+Tietoruudun teksti: Sininen luola on joukko meriluolia Maltan kaakkoisrannikolla, lähellä Wied iż-Żurrieqin kalastajasatamaa. Luolat ja satama kuuluvat Qrendin kylän alueeseen, mikä vahvistettiin Qrendin ja Żurrieqin välisessä rajakiistassa vuonna 1910. Luolien seinät heijastavat merenveden erilaisia sinisen sävyjä, ja jotkin luolat heijastavat myös vedenalaisen kasviston ja eläimistön fosforoivia värejä. Aivan luolien edustalla, merenselällä, sijaitsee asumaton Filfla-saari, joka on nykyään lintujensuojelualue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Granada — kohdekartta / Kohdekartta: Sacromonten luolat] 1500-luku Granadan itälaidalla kohoaa Sacromonten kukkula, jonka rinteisiin on kaiverrettu satoja luolakoteja jo 1500-luvulta lähtien. Ensin luoliin piiloutuivat ihmiset, jotka oli karkotettu kaupungista, mutta pian niistä tuli koti romanikansalle eli gitaneille, jotka asettuivat Granadaan sen jälkeen kun kaupunki oli vuonna 1492 vallattu takaisin kristityille. Jokainen luola on erimuotoinen, sillä se on louhittu suoraan kukkulan kallioon - ovena toimii usein pyöreä, valkoiseksi kalkittu kaariaukko. Lähellä sijaitsevassa rotkossa, jota kutsutaan Mustien rotkoksi, kerrotaan tarina vapautetuista orjista, jotka etsivät sotien jälkeen kätkettyä arabikultaa oliivilehdosta - aivan kuin suoraan aa…
+- [Kiova — kaupunkilehti / Historia: Luola, josta kasvoi luostari] Vuonna 1051 munkki Antonius asettui Athos-vuorelta palattuaan Dnipro-joen rantatörmään kaivettuun luolaan. Hänen askeettinen elämänsä veti puoleensa seuraajia, ja pian luolaan kokoontui pieni munkkiyhteisö. Kolmas johtaja, Teodosios, järjesti yhteisölle omat säännöt ja rakennutti ensimmäiset maanpäälliset rakennukset luolien yläpuolelle. Nimi Petšerska tulee sanasta petšera, luola — ja koko luostarikompleksi kantaa sitä nimeä yhä.
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:hahmotelma-victoria-cittadella) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Victoria (Cittadella) (kaupungit)
+Tietoruudun teksti: Cittadella on Gozon pääkaupungin linnoitettu ydin, jota kutsutaan myös Castelloksi; itse kaupunki tunnettiin ennen nimeä Victoria yksinkertaisesti Rabatina. Aluetta on asutettu pronssikaudesta lähtien, ja Cittadellan paikalla sijaitsi todennäköisesti puunilais-roomalaisen Gaulos-kaupungin akropolis. Keskiajalla akropoliksesta tehtiin linna, joka toimi turvapaikkana saaren väestölle, ja sen ulkopuolelle kasvoi 1400-luvulla esikaupunki, josta muodostui nykyisen kaupungin vanha keskusta. Linnoitus oli 1500-luvulle tultaessa vanhentunut, ja osmanit valtasivat ja ryöstivät sen vuonna 1551; eteläismuurit rakennettiin uudelleen ruutilinnoitukseksi vuosina 1599–1622. Ison-Britannian hallitus antoi kaupungille nimen Victoria vasta vuonna 1887 kuningatar Victorian kultaisten kruunajaisten kunniaksi, ja moni gozolainen kutsuu sitä yhä vanhalla nimellä Rabat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 22.1
+KYSYMYS: Minä vuonna osmanit valtasivat ja ryöstivät Cittadellan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Victoria (Cittadella) (kaupungit)
+Tietoruudun teksti: Cittadella on Gozon pääkaupungin linnoitettu ydin, jota kutsutaan myös Castelloksi; itse kaupunki tunnettiin ennen nimeä Victoria yksinkertaisesti Rabatina. Aluetta on asutettu pronssikaudesta lähtien, ja Cittadellan paikalla sijaitsi todennäköisesti puunilais-roomalaisen Gaulos-kaupungin akropolis. Keskiajalla akropoliksesta tehtiin linna, joka toimi turvapaikkana saaren väestölle, ja sen ulkopuolelle kasvoi 1400-luvulla esikaupunki, josta muodostui nykyisen kaupungin vanha keskusta. Linnoitus oli 1500-luvulle tultaessa vanhentunut, ja osmanit valtasivat ja ryöstivät sen vuonna 1551; eteläismuurit rakennettiin uudelleen ruutilinnoitukseksi vuosina 1599–1622. Ison-Britannian hallitus antoi kaupungille nimen Victoria vasta vuonna 1887 kuningatar Victorian kultaisten kruunajaisten kunniaksi, ja moni gozolainen kutsuu sitä yhä vanhalla nimellä Rabat.
+
+### 22.2
+KYSYMYS: Minä vuonna kaupunki sai nimen Victoria?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Victoria (Cittadella) (kaupungit)
+Tietoruudun teksti: Cittadella on Gozon pääkaupungin linnoitettu ydin, jota kutsutaan myös Castelloksi; itse kaupunki tunnettiin ennen nimeä Victoria yksinkertaisesti Rabatina. Aluetta on asutettu pronssikaudesta lähtien, ja Cittadellan paikalla sijaitsi todennäköisesti puunilais-roomalaisen Gaulos-kaupungin akropolis. Keskiajalla akropoliksesta tehtiin linna, joka toimi turvapaikkana saaren väestölle, ja sen ulkopuolelle kasvoi 1400-luvulla esikaupunki, josta muodostui nykyisen kaupungin vanha keskusta. Linnoitus oli 1500-luvulle tultaessa vanhentunut, ja osmanit valtasivat ja ryöstivät sen vuonna 1551; eteläismuurit rakennettiin uudelleen ruutilinnoitukseksi vuosina 1599–1622. Ison-Britannian hallitus antoi kaupungille nimen Victoria vasta vuonna 1887 kuningatar Victorian kultaisten kruunajaisten kunniaksi, ja moni gozolainen kutsuu sitä yhä vanhalla nimellä Rabat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:hahmotelma-wied-il-ghasri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wied il-Għasri (luonto · vuori)
+Tietoruudun teksti: Wied il-Għasri on kapea merikuru Gozon pohjoisrannikolla, ja laakso jatkuu maalle päin kohti Għasrin kylää. Kurun pohjalla on rauhallinen ranta noin 300 metrin päässä merestä, ja merelle pääsee vain kapean, jyrkkäseinäisen sisäänkäynnin kautta. Laakson reunalla, vedenalaisen luolan vieressä, uskotaan sijainneen Maltan perinteisiä suolapatoja. Nykyään syrjäinen ranta on suosittu sukeltajien ja uimareiden keskuudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kathmandu — kaupunkilehti / Historia: Laakso joka oli järvi] Buddhalaisen Swayambhu-puranan mukaan laakso oli aikanaan syvä järvi, jossa asuivat käärmejumalat Karkotaka, Takshaka ja Kulika. Buddha Vipassī kylvi veteen lootuksen siemenen, ja siitä kasvoi tuhatlehtinen kukka, joka hehkui valoa. Bodhisattva Manjushri saapui katsomaan valoa ja mietti, miten ihmiset pääsisivät sen luo. Hän halkaisi vuoren särkymättömällä miekallaan, laski järven veden pois ja kaivoi käärmeille uudet lammet suojaksi; valon paikalle jäi Swayambhu, itsestään syntynyt. Kertomus jatkuu niin, että Manjushri perusti laaksoon ensimmäisen kaupungin.
+- [Unkari — maalehti / Luonto: Luolasto jatkuu rajan toiselle puolelle] Vuosimiljoonia — Aggtelekin kalkkikivialueella maan alla kulkee luolasto, jonka käytäviä on mitattu noin 25 kilometriä. Luolasto ei pysähdy valtakunnan rajalle, vaan jatkuu Slovakian puolelle, ja sitä hoidetaan yhtenä kokonaisuutena kahden maan kesken. Tippukivet kasvavat, kun kalkkipitoinen vesi tihkuu katosta ja jättää joka pisarasta ohuen kalkkikerroksen. Kasvu on hidasta, luokkaa senttimetri sadassa vuodessa. Yhdessä salissa on niin hyvä kaiku, että siellä pidetään konsertteja.
+- [Pakistan — maalehti / Ruoka: Uuni, joka oli koko kylän] Punjabilainen tandoor on kellon muotoinen saviuuni, joka joko upotetaan maahan tai seisoo maan päällä. Puilla tai hiilellä lämmitettynä sen sisus nousee noin 480 asteeseen. Kämmenellä litistetty taikinalevy läiskäistään uunin kuumaan sisäseinään, jossa se tarttuu kiinni ja irrotetaan kypsänä. Kylissä uuni oli usein yhteinen: yksi tandoor palveli koko naapurustoa, ja osassa kyliä tapa jatkuu yhä. Uunin nimi on ikivanha. Se juontaa akkadin sanaan tinūru, joka esiintyy jo Gilgamesh-eepoksessa.
+
+### 23.1
+KYSYMYS: Minkä kylän suuntaan laakso jatkuu maalle päin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wied il-Għasri (luonto · vuori)
+Tietoruudun teksti: Wied il-Għasri on kapea merikuru Gozon pohjoisrannikolla, ja laakso jatkuu maalle päin kohti Għasrin kylää. Kurun pohjalla on rauhallinen ranta noin 300 metrin päässä merestä, ja merelle pääsee vain kapean, jyrkkäseinäisen sisäänkäynnin kautta. Laakson reunalla, vedenalaisen luolan vieressä, uskotaan sijainneen Maltan perinteisiä suolapatoja. Nykyään syrjäinen ranta on suosittu sukeltajien ja uimareiden keskuudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kathmandu — kaupunkilehti / Historia: Laakso joka oli järvi] Buddhalaisen Swayambhu-puranan mukaan laakso oli aikanaan syvä järvi, jossa asuivat käärmejumalat Karkotaka, Takshaka ja Kulika. Buddha Vipassī kylvi veteen lootuksen siemenen, ja siitä kasvoi tuhatlehtinen kukka, joka hehkui valoa. Bodhisattva Manjushri saapui katsomaan valoa ja mietti, miten ihmiset pääsisivät sen luo. Hän halkaisi vuoren särkymättömällä miekallaan, laski järven veden pois ja kaivoi käärmeille uudet lammet suojaksi; valon paikalle jäi Swayambhu, itsestään syntynyt. Kertomus jatkuu niin, että Manjushri perusti laaksoon ensimmäisen kaupungin.
+- [Unkari — maalehti / Luonto: Luolasto jatkuu rajan toiselle puolelle] Vuosimiljoonia — Aggtelekin kalkkikivialueella maan alla kulkee luolasto, jonka käytäviä on mitattu noin 25 kilometriä. Luolasto ei pysähdy valtakunnan rajalle, vaan jatkuu Slovakian puolelle, ja sitä hoidetaan yhtenä kokonaisuutena kahden maan kesken. Tippukivet kasvavat, kun kalkkipitoinen vesi tihkuu katosta ja jättää joka pisarasta ohuen kalkkikerroksen. Kasvu on hidasta, luokkaa senttimetri sadassa vuodessa. Yhdessä salissa on niin hyvä kaiku, että siellä pidetään konsertteja.
+- [Pakistan — maalehti / Ruoka: Uuni, joka oli koko kylän] Punjabilainen tandoor on kellon muotoinen saviuuni, joka joko upotetaan maahan tai seisoo maan päällä. Puilla tai hiilellä lämmitettynä sen sisus nousee noin 480 asteeseen. Kämmenellä litistetty taikinalevy läiskäistään uunin kuumaan sisäseinään, jossa se tarttuu kiinni ja irrotetaan kypsänä. Kylissä uuni oli usein yhteinen: yksi tandoor palveli koko naapurustoa, ja osassa kyliä tapa jatkuu yhä. Uunin nimi on ikivanha. Se juontaa akkadin sanaan tinūru, joka esiintyy jo Gilgamesh-eepoksessa.
+
+### 23.2
+KYSYMYS: Mitä laakson reunalla uskotaan sijainneen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wied il-Għasri (luonto · vuori)
+Tietoruudun teksti: Wied il-Għasri on kapea merikuru Gozon pohjoisrannikolla, ja laakso jatkuu maalle päin kohti Għasrin kylää. Kurun pohjalla on rauhallinen ranta noin 300 metrin päässä merestä, ja merelle pääsee vain kapean, jyrkkäseinäisen sisäänkäynnin kautta. Laakson reunalla, vedenalaisen luolan vieressä, uskotaan sijainneen Maltan perinteisiä suolapatoja. Nykyään syrjäinen ranta on suosittu sukeltajien ja uimareiden keskuudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bangkok — kohdekartta / Kohdekartta: Hua Lamphong] 1916 Bangkokin vanha päärautatieasema avattiin 25. kesäkuuta 1916 kuuden rakennusvuoden jälkeen: työt alkoivat 1910 Chulalongkornin viimeisenä elinvuonna, ja asema valmistui hänen poikansa Vajiravudhin kaudella. Torinolaisen arkkitehdin Mario Tamagnon piirtämä julkisivu on italialaista uusrenessanssia kaarihalleineen ja lasimaalauksineen, ja esikuvasta kiistellään yhä: toisten mielestä mallina oli Frankfurtin, toisten mielestä Torinon päärautatieasema. Nimikin on lainaa. Hua Lamphong oli alun perin vastapäätä sijainneen yksityisen Paknam-radan aseman nimi — se avattiin 1893, kun rautatieliikenne Siamissa alkoi, ja suljettiin 1960. Kansan suussa nimi tarttui valtionradan suureen asemaan, vai…
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:hahmotelma-fungus-rock) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fungus Rock (luonto · saari)
+Tietoruudun teksti: Fungus Rock on 60 metriä korkea kalkkikivisaareke Dwejran lähes ympyränmuotoisen mustan laguunin suulla Gozolla, ja se tunnetaan maltaksi myös nimellä Kenraalin kivi. Johanniittaritarikunnan ritarit löysivät kalliolta loisikasvin, jota kutsuttiin virheellisesti "maltalaiseksi sieneksi" ja jonka uskottiin ajan lääketieteessä parantavan haavoja ja punatautia; ritarit pitivät kasvia niin arvokkaana, että antoivat sitä lahjaksi arvovaltaisille vieraille. Suurmestari Pinto julisti kallion kielletyksi alueeksi vuonna 1746, ja luvattomalle kalliolle kiipeäjälle luvattiin kolmen vuoden rangaistus soutuorjana. Kallion vieressä sijaitsi myös luonnonkaari, Sininen ikkuna, joka romahti mereen vasta vuonna 2017.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Singapore — kohdekartta / Kohdekartta: Fort Canningin kukkula] linnoitus 1861, purettu 1907 Kaupungin keskellä kohoava 48 metrin kukkula tunnettiin malaijiksi nimellä Bukit Larangan, Kielletty kukkula. Perimätiedon mukaan siellä lepäsivät muinaisen Singapuran kuninkaat, ja paikkaa pidettiin aavemaisena. Rinteen länsipuolella pulppusi lähde, jota kutsuttiin kielletyksi lähteeksi; 1800-luvun alussa siitä otettiin juomavesi jokaiseen satamaan poikkeavaan laivaan, kunnes kysyntä ylitti sen tuoton ja lähde kuivui kaivojen myötä. Kun sopimus oli allekirjoitettu 6. helmikuuta 1819, majuri William Farquhar nousi kukkulalle, veti sinne ensimmäisen tykin ja nosti lipun. Raffles rakennutti laelle asuinrakennuksen, jonka piirsi George Drumgoole Coleman: puinen bun…
+- [Malesia — maalehti / Ruoka: Kuninkaalla on kaksisataa sukua] Durian sai nimensä malaijin sanasta duri, piikki. Malesia on pitänyt lajikeluetteloa vuodesta 1934, ja rekisterissä on yli kaksisataa nimettyä lajiketta, joilla kaikilla on D-alkuinen koodi. Tunnetuin niistä löytyi 1980-luvulla, kun Tan Lai Fook Raubista törmäsi durianpuuhun Gua Musangissa ja vei siitä oksan kotiin vartettavaksi. Lajike sai nimen löytöpaikkansa mukaan: Musang King. Alfred Russel Wallace kuvasi 1856 maun kermavanukkaaksi, jossa on runsaasti mantelia — haju taas on saanut hedelmän kielletyksi monissa hotelleissa ja busseissa.
+
+### 24.1
+KYSYMYS: Minä vuonna suurmestari Pinto julisti kallion kielletyksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fungus Rock (luonto · saari)
+Tietoruudun teksti: Fungus Rock on 60 metriä korkea kalkkikivisaareke Dwejran lähes ympyränmuotoisen mustan laguunin suulla Gozolla, ja se tunnetaan maltaksi myös nimellä Kenraalin kivi. Johanniittaritarikunnan ritarit löysivät kalliolta loisikasvin, jota kutsuttiin virheellisesti "maltalaiseksi sieneksi" ja jonka uskottiin ajan lääketieteessä parantavan haavoja ja punatautia; ritarit pitivät kasvia niin arvokkaana, että antoivat sitä lahjaksi arvovaltaisille vieraille. Suurmestari Pinto julisti kallion kielletyksi alueeksi vuonna 1746, ja luvattomalle kalliolle kiipeäjälle luvattiin kolmen vuoden rangaistus soutuorjana. Kallion vieressä sijaitsi myös luonnonkaari, Sininen ikkuna, joka romahti mereen vasta vuonna 2017.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Singapore — kohdekartta / Kohdekartta: Fort Canningin kukkula] linnoitus 1861, purettu 1907 Kaupungin keskellä kohoava 48 metrin kukkula tunnettiin malaijiksi nimellä Bukit Larangan, Kielletty kukkula. Perimätiedon mukaan siellä lepäsivät muinaisen Singapuran kuninkaat, ja paikkaa pidettiin aavemaisena. Rinteen länsipuolella pulppusi lähde, jota kutsuttiin kielletyksi lähteeksi; 1800-luvun alussa siitä otettiin juomavesi jokaiseen satamaan poikkeavaan laivaan, kunnes kysyntä ylitti sen tuoton ja lähde kuivui kaivojen myötä. Kun sopimus oli allekirjoitettu 6. helmikuuta 1819, majuri William Farquhar nousi kukkulalle, veti sinne ensimmäisen tykin ja nosti lipun. Raffles rakennutti laelle asuinrakennuksen, jonka piirsi George Drumgoole Coleman: puinen bun…
+- [Malesia — maalehti / Ruoka: Kuninkaalla on kaksisataa sukua] Durian sai nimensä malaijin sanasta duri, piikki. Malesia on pitänyt lajikeluetteloa vuodesta 1934, ja rekisterissä on yli kaksisataa nimettyä lajiketta, joilla kaikilla on D-alkuinen koodi. Tunnetuin niistä löytyi 1980-luvulla, kun Tan Lai Fook Raubista törmäsi durianpuuhun Gua Musangissa ja vei siitä oksan kotiin vartettavaksi. Lajike sai nimen löytöpaikkansa mukaan: Musang King. Alfred Russel Wallace kuvasi 1856 maun kermavanukkaaksi, jossa on runsaasti mantelia — haju taas on saanut hedelmän kielletyksi monissa hotelleissa ja busseissa.
+
+### 24.2
+KYSYMYS: Mitä rangaistusta luvattomalle kiipeäjälle uhattiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fungus Rock (luonto · saari)
+Tietoruudun teksti: Fungus Rock on 60 metriä korkea kalkkikivisaareke Dwejran lähes ympyränmuotoisen mustan laguunin suulla Gozolla, ja se tunnetaan maltaksi myös nimellä Kenraalin kivi. Johanniittaritarikunnan ritarit löysivät kalliolta loisikasvin, jota kutsuttiin virheellisesti "maltalaiseksi sieneksi" ja jonka uskottiin ajan lääketieteessä parantavan haavoja ja punatautia; ritarit pitivät kasvia niin arvokkaana, että antoivat sitä lahjaksi arvovaltaisille vieraille. Suurmestari Pinto julisti kallion kielletyksi alueeksi vuonna 1746, ja luvattomalle kalliolle kiipeäjälle luvattiin kolmen vuoden rangaistus soutuorjana. Kallion vieressä sijaitsi myös luonnonkaari, Sininen ikkuna, joka romahti mereen vasta vuonna 2017.
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-marsalforn) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsalforn (kaupungit)
+Tietoruudun teksti: Marsalforn on kaupunki Gozon pohjoisrannikolla, Xagħran ja Żebbuġin kukkulakylien välissä, ja siihen kuuluu myös Qbajjarin lahti. Nimi on yhdistelmäsana: marsa on arabiaa ja tarkoittaa satamaa, mutta jälkiosan forn-sanan alkuperästä ei olla varmoja. Kaupunki on Gozon suosituimpia matkailukeskuksia, ja siellä on runsaasti hotelleja, ravintoloita ja baareja, vaikka hiekkarantaa on vain vähän. Kivikkoisella rannikolla on sen sijaan lukuisia uimapaikkoja kallioiden lomassa.
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+### 25.1
+KYSYMYS: Mitä sana marsa tarkoittaa arabiaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsalforn (kaupungit)
+Tietoruudun teksti: Marsalforn on kaupunki Gozon pohjoisrannikolla, Xagħran ja Żebbuġin kukkulakylien välissä, ja siihen kuuluu myös Qbajjarin lahti. Nimi on yhdistelmäsana: marsa on arabiaa ja tarkoittaa satamaa, mutta jälkiosan forn-sanan alkuperästä ei olla varmoja. Kaupunki on Gozon suosituimpia matkailukeskuksia, ja siellä on runsaasti hotelleja, ravintoloita ja baareja, vaikka hiekkarantaa on vain vähän. Kivikkoisella rannikolla on sen sijaan lukuisia uimapaikkoja kallioiden lomassa.
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+### 25.2
+KYSYMYS: Minkä kahden kylän välissä Marsalforn sijaitsee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marsalforn (kaupungit)
+Tietoruudun teksti: Marsalforn on kaupunki Gozon pohjoisrannikolla, Xagħran ja Żebbuġin kukkulakylien välissä, ja siihen kuuluu myös Qbajjarin lahti. Nimi on yhdistelmäsana: marsa on arabiaa ja tarkoittaa satamaa, mutta jälkiosan forn-sanan alkuperästä ei olla varmoja. Kaupunki on Gozon suosituimpia matkailukeskuksia, ja siellä on runsaasti hotelleja, ravintoloita ja baareja, vaikka hiekkarantaa on vain vähän. Kivikkoisella rannikolla on sen sijaan lukuisia uimapaikkoja kallioiden lomassa.
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

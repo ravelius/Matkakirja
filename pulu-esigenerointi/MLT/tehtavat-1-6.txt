@@ -1,0 +1,139 @@
+================ KOHTA 26 (kohde:hahmotelma-ramla-bay) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ramla Bay (merenkulku)
+Tietoruudun teksti: Ramla Bay, maltaksi Ir-Ramla l-Ħamra eli "punainen hiekka", on lahti Gozon koillisrannikolla Marsalfornin ja San Blasin lahtien välissä, lähimpänä kylänä Xagħra. Lahden hiekka on nimensä mukaisesti punertavaa, mikä tekee siitä poikkeuksellisen Maltan saarilla, joilla suurin osa rannoista on vaaleaa kalkkikiveä tai kivikkoa. Lahtea reunustavat hiekkadyynit ja jyrkät kalliot, ja sen länsilaidalla sijaitsee luola, jonka perimätieto yhdistää Homeroksen Odysseiaan ja nymfi Kalypsoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jordania — maalehti / Rauniot: Aavikkolinnan katossa on tähtitaivas] Itäisellä aavikolla on rivi pieniä linnoja, joita kalifien hovi käytti levähdyspaikkoina ja kylpylöinä 700-luvulla. Tunnetuin on Qusayr Amra, jonka seinät ja holvit on maalattu täyteen kuvia: metsästystä, työmiehiä, soittajia ja eläimiä. Kylpyhuoneen kupoliin on maalattu tähtitaivas tähtikuvioineen — se on vanhimpia säilyneitä yrityksiä kuvata taivas pyöreälle pinnalle. Linna on Unescon maailmanperintökohde, ja sen vieressä on yhä vanha kaivo.
+
+### 26.1
+KYSYMYS: Mitä Ir-Ramla l-Ħamra tarkoittaa suomeksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ramla Bay (merenkulku)
+Tietoruudun teksti: Ramla Bay, maltaksi Ir-Ramla l-Ħamra eli "punainen hiekka", on lahti Gozon koillisrannikolla Marsalfornin ja San Blasin lahtien välissä, lähimpänä kylänä Xagħra. Lahden hiekka on nimensä mukaisesti punertavaa, mikä tekee siitä poikkeuksellisen Maltan saarilla, joilla suurin osa rannoista on vaaleaa kalkkikiveä tai kivikkoa. Lahtea reunustavat hiekkadyynit ja jyrkät kalliot, ja sen länsilaidalla sijaitsee luola, jonka perimätieto yhdistää Homeroksen Odysseiaan ja nymfi Kalypsoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jordania — maalehti / Rauniot: Aavikkolinnan katossa on tähtitaivas] Itäisellä aavikolla on rivi pieniä linnoja, joita kalifien hovi käytti levähdyspaikkoina ja kylpylöinä 700-luvulla. Tunnetuin on Qusayr Amra, jonka seinät ja holvit on maalattu täyteen kuvia: metsästystä, työmiehiä, soittajia ja eläimiä. Kylpyhuoneen kupoliin on maalattu tähtitaivas tähtikuvioineen — se on vanhimpia säilyneitä yrityksiä kuvata taivas pyöreälle pinnalle. Linna on Unescon maailmanperintökohde, ja sen vieressä on yhä vanha kaivo.
+
+### 26.2
+KYSYMYS: Minkä myyttisen hahmon nimeä lahden luola kantaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ramla Bay (merenkulku)
+Tietoruudun teksti: Ramla Bay, maltaksi Ir-Ramla l-Ħamra eli "punainen hiekka", on lahti Gozon koillisrannikolla Marsalfornin ja San Blasin lahtien välissä, lähimpänä kylänä Xagħra. Lahden hiekka on nimensä mukaisesti punertavaa, mikä tekee siitä poikkeuksellisen Maltan saarilla, joilla suurin osa rannoista on vaaleaa kalkkikiveä tai kivikkoa. Lahtea reunustavat hiekkadyynit ja jyrkät kalliot, ja sen länsilaidalla sijaitsee luola, jonka perimätieto yhdistää Homeroksen Odysseiaan ja nymfi Kalypsoon.
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-fort-chambray) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fort Chambray (historia)
+Tietoruudun teksti: Fort Chambray on bastionilinnoitus Għajnsielemin kunnan alueella Gozolla, rakennettu 1700-luvun puolivälissä Johanniittaritarikunnan toimesta Ras it-Tafalin niemelle Mġarrin sataman ja Xatt l-Aħmarin välille. Linnoituksen oli tarkoitus toimia uuden kaupungin, joka olisi korvannut Cittadellan Gozon pääkaupunkina, ydinlinnakkeena, mutta suunnitelma ei koskaan toteutunut kokonaan. Ranskalaismiehityksen aikana vuonna 1798 linnoitus näki taisteluita, ja myöhemmin siitä tehtiin sotilassairaala ja mielisairaala. Nykyään linnoitusta kunnostetaan ja siihen rakennetaan majoitustiloja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Saari, jonka vuokra oli yksi haukka] 1530 — Johanniittaritarit menettivät tukikohtansa Rodoksella vuonna 1522, kun osmanit valtasivat saaren kuuden kuukauden piirityksen jälkeen. Seitsemän vuoden vaelluksen jälkeen keisari Kaarle V antoi heille Sisilian kuninkaana Maltan, Gozon ja Pohjois-Afrikan Tripolin ikuiseksi läänitykseksi. Vuosimaksu oli yksi maltalainen haukka, joka lähetettiin Sisilian varakuninkaalle. Suurmestari Philippe Villiers de L'Isle-Adam purjehti Suureen satamaan 26. lokakuuta 1530, mutta moni ritari haaveili yhä Rodoksen takaisinvaltaamisesta, sillä Malta oli pieni ja karu saari. Ritarit asettuivat Birgun kaupunkiin ja rakensivat sen vanhan linnan uudelleen Pyhän Angelon linnakkeeksi.
+- [Malta — maalehti / Historia: Jättiläisten temppeli] n. 3600–2500 eaa. — Gozon Xagħran tasangolla seisoo kiviseinä, jonka lohkareet ovat ihmistä suurempia. Paikallisen tarinan mukaan sen rakensi jättiläisnainen Sansuna, joka söi pelkkiä härkäpapuja ja hunajaa ja kantoi samalla lastaan olallaan. Todellisuudessa Ġgantijan kaksi temppeliä pystytettiin yli 5 500 vuotta sitten, ennen Egyptin pyramideja. Eteläisen temppelin seinä nousee kuuteen metriin, ja se avautuu kaakkoon. Nimi tarkoittaa jättiläisten paikkaa. Kohde liitettiin Unescon maailmanperintöluetteloon vuonna 1980.
+
+### 27.1
+KYSYMYS: Mitä kaupunkia linnoituksen oli tarkoitus korvata Gozon pääkaupunkina?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fort Chambray (historia)
+Tietoruudun teksti: Fort Chambray on bastionilinnoitus Għajnsielemin kunnan alueella Gozolla, rakennettu 1700-luvun puolivälissä Johanniittaritarikunnan toimesta Ras it-Tafalin niemelle Mġarrin sataman ja Xatt l-Aħmarin välille. Linnoituksen oli tarkoitus toimia uuden kaupungin, joka olisi korvannut Cittadellan Gozon pääkaupunkina, ydinlinnakkeena, mutta suunnitelma ei koskaan toteutunut kokonaan. Ranskalaismiehityksen aikana vuonna 1798 linnoitus näki taisteluita, ja myöhemmin siitä tehtiin sotilassairaala ja mielisairaala. Nykyään linnoitusta kunnostetaan ja siihen rakennetaan majoitustiloja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Saari, jonka vuokra oli yksi haukka] 1530 — Johanniittaritarit menettivät tukikohtansa Rodoksella vuonna 1522, kun osmanit valtasivat saaren kuuden kuukauden piirityksen jälkeen. Seitsemän vuoden vaelluksen jälkeen keisari Kaarle V antoi heille Sisilian kuninkaana Maltan, Gozon ja Pohjois-Afrikan Tripolin ikuiseksi läänitykseksi. Vuosimaksu oli yksi maltalainen haukka, joka lähetettiin Sisilian varakuninkaalle. Suurmestari Philippe Villiers de L'Isle-Adam purjehti Suureen satamaan 26. lokakuuta 1530, mutta moni ritari haaveili yhä Rodoksen takaisinvaltaamisesta, sillä Malta oli pieni ja karu saari. Ritarit asettuivat Birgun kaupunkiin ja rakensivat sen vanhan linnan uudelleen Pyhän Angelon linnakkeeksi.
+- [Malta — maalehti / Historia: Jättiläisten temppeli] n. 3600–2500 eaa. — Gozon Xagħran tasangolla seisoo kiviseinä, jonka lohkareet ovat ihmistä suurempia. Paikallisen tarinan mukaan sen rakensi jättiläisnainen Sansuna, joka söi pelkkiä härkäpapuja ja hunajaa ja kantoi samalla lastaan olallaan. Todellisuudessa Ġgantijan kaksi temppeliä pystytettiin yli 5 500 vuotta sitten, ennen Egyptin pyramideja. Eteläisen temppelin seinä nousee kuuteen metriin, ja se avautuu kaakkoon. Nimi tarkoittaa jättiläisten paikkaa. Kohde liitettiin Unescon maailmanperintöluetteloon vuonna 1980.
+
+### 27.2
+KYSYMYS: Miksi linnoitusta käytettiin ranskalaismiehityksen jälkeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fort Chambray (historia)
+Tietoruudun teksti: Fort Chambray on bastionilinnoitus Għajnsielemin kunnan alueella Gozolla, rakennettu 1700-luvun puolivälissä Johanniittaritarikunnan toimesta Ras it-Tafalin niemelle Mġarrin sataman ja Xatt l-Aħmarin välille. Linnoituksen oli tarkoitus toimia uuden kaupungin, joka olisi korvannut Cittadellan Gozon pääkaupunkina, ydinlinnakkeena, mutta suunnitelma ei koskaan toteutunut kokonaan. Ranskalaismiehityksen aikana vuonna 1798 linnoitus näki taisteluita, ja myöhemmin siitä tehtiin sotilassairaala ja mielisairaala. Nykyään linnoitusta kunnostetaan ja siihen rakennetaan majoitustiloja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Macapá — kaupunkilehti / Macapá: Rajalinnake syntyy] Portugalilaiset perustivat São José de Macapán 4. helmikuuta 1758 entisen, jo vuodesta 1738 toimineen sotilasvartion paikalle Amazonin suiston pohjoisrannalla. Alue oli kiistanalainen: Ranska hallitsi lähialueita Ranskan Guyanassa, ja myös Alankomaat oli kiinnostunut suistosta. Vuonna 1764 italialainen insinööri Henrique António Galuzzi aloitti Fortaleza de São José de Macapán rakentamisen; tähdenmuotoinen, nelibastioninen linnoitus valmistui vasta 1782, kun kuumeet ja orjien pakenemiset hidastivat 18 vuotta kestänyttä urakkaa. Linnoitusta pidetään nykyisin kaupungin symbolisena syntymäpaikkana.
+- [São Luís — kaupunkilehti / São Luís: Kaupunki jonka Ranska perusti] São Luís syntyi syyskuussa 1612, kun ranskalainen upseeri Daniel de la Touche, Sieur de la Ravardière, pystytti saarelle Fort Saint-Louis’n ja nimesi paikan kuningas Ludvig XIII:n mukaan. Ranskalaiset haaveilivat mantereen kokoisesta Ranskan Ekvaattorista, mutta unelma jäi lyhyeksi: portugalilaiset karkottivat heidät jo 1615, ja hollantilaiset hallitsivat kaupunkia vielä vuosina 1641–1644. Kun isoisä saapui satamaan 1873, hän astui ainoaan Brasilian osavaltion pääkaupunkiin, jonka Ranska on koskaan perustanut – kadunkulmien ranskalainen, hollantilainen ja portugalilainen kerrostuma näkyy yhä kivikaduilla ja vanhoissa kauppahuoneissa.
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-nadur) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nadur (kaupungit)
+Tietoruudun teksti: Nadur on Gozon toiseksi suurin kaupunki, ja se levittäytyy korkealle harjanteelle Victorian itäpuolelle; sitä kutsutaan saaren "toiseksi kaupungiksi". Nimi juontuu arabian sanasta nadara, joka tarkoittaa tähystyspaikkaa, ja sama ajatus näkyy kaupungin tunnuslauseessa "Valpas" sekä vaakunassa, jossa aurinko nousee sinisestä merestä. Kaupunki tunnetaan leipomoistaan, ja sen lähellä ovat San Blasin ja Daħlet Qorrotin pienet kalliorannat, jotka ovat suosittuja uinti- ja retkeilypaikkoja. Varhaisimmista asukkaista ei ole säilynyt asiakirjoja, mutta harjanteella on ollut maatiloja jo kauan ennen kuin alueesta tuli oma seurakuntansa.
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marokko — maalehti / Käsityö: Kaupunki, joka teki savesta ammatin] Safi on Atlantin rannikon kaupunki, jossa asuu noin 346 000 ihmistä ja joka oli portugalilaisten hallussa vuosina 1488–1541. Savenvalanta oli kaupungissa vanhaa työtä, mutta 1900-luvun alussa marokkolainen mestari Boujemâa Lamali perusti sinne keramiikkakoulun siirtomaahallinnon tuella, ja siitä lähtien keramiikka on ollut Safin elinkeino: ennen koronapandemiaa kaupungissa oli 212 työpajaa ja kaksituhatta rekisteröityä käsityöläistä sekä tuhansia rekisteröimättömiä. Samasta satamasta lähtee myös suurin osa maan sardiinisaaliista.
+- [Magadan — kohdekartta / Kohdekartta: Severovostokzoloton talo] Proletarskajan katu 12 Proletarskajan kadun numerossa 12 seisoo Magadanin komein 1950-luvun talo. Se on kolmikerroksinen, valkoinen ja pitkä, ja sen ikkunoita kehystävät kaksoispylväät ja pienet päätykolmiot. Alakerta on punertavaa lohkokiveä jäljittelevää rappausta, ja sisäänkäynnin kohdalla julkisivusta työntyy esiin punainen pylväsportikko. Talon kansanomainen nimi on lyhenne SVZ. Nimi kertoo kaupungin elinkeinosta. Magadanin talouden kaksi tukijalkaa ovat kullankaivuu ja kalastus, ja kaupunki syntyi nimenomaan siksi, että Kolyman sisämaasta löytyi kultaa: satama rakennettiin viemään sitä ulos. Kullantuotanto on sittemmin laskenut, ja kalastuskin on jäänyt kiintiöidensä alle, mutta kaupu…
+
+### 28.1
+KYSYMYS: Mistä arabian sanasta Nadurin nimi juontuu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nadur (kaupungit)
+Tietoruudun teksti: Nadur on Gozon toiseksi suurin kaupunki, ja se levittäytyy korkealle harjanteelle Victorian itäpuolelle; sitä kutsutaan saaren "toiseksi kaupungiksi". Nimi juontuu arabian sanasta nadara, joka tarkoittaa tähystyspaikkaa, ja sama ajatus näkyy kaupungin tunnuslauseessa "Valpas" sekä vaakunassa, jossa aurinko nousee sinisestä merestä. Kaupunki tunnetaan leipomoistaan, ja sen lähellä ovat San Blasin ja Daħlet Qorrotin pienet kalliorannat, jotka ovat suosittuja uinti- ja retkeilypaikkoja. Varhaisimmista asukkaista ei ole säilynyt asiakirjoja, mutta harjanteella on ollut maatiloja jo kauan ennen kuin alueesta tuli oma seurakuntansa.
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+### 28.2
+KYSYMYS: Mistä elinkeinosta kaupunki on tunnettu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Valletta
+Maa, jossa pelaaja on: Malta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nadur (kaupungit)
+Tietoruudun teksti: Nadur on Gozon toiseksi suurin kaupunki, ja se levittäytyy korkealle harjanteelle Victorian itäpuolelle; sitä kutsutaan saaren "toiseksi kaupungiksi". Nimi juontuu arabian sanasta nadara, joka tarkoittaa tähystyspaikkaa, ja sama ajatus näkyy kaupungin tunnuslauseessa "Valpas" sekä vaakunassa, jossa aurinko nousee sinisestä merestä. Kaupunki tunnetaan leipomoistaan, ja sen lähellä ovat San Blasin ja Daħlet Qorrotin pienet kalliorannat, jotka ovat suosittuja uinti- ja retkeilypaikkoja. Varhaisimmista asukkaista ei ole säilynyt asiakirjoja, mutta harjanteella on ollut maatiloja jo kauan ennen kuin alueesta tuli oma seurakuntansa.
+Isoisän matkakirjamerkintä: Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marokko — maalehti / Käsityö: Kaupunki, joka teki savesta ammatin] Safi on Atlantin rannikon kaupunki, jossa asuu noin 346 000 ihmistä ja joka oli portugalilaisten hallussa vuosina 1488–1541. Savenvalanta oli kaupungissa vanhaa työtä, mutta 1900-luvun alussa marokkolainen mestari Boujemâa Lamali perusti sinne keramiikkakoulun siirtomaahallinnon tuella, ja siitä lähtien keramiikka on ollut Safin elinkeino: ennen koronapandemiaa kaupungissa oli 212 työpajaa ja kaksituhatta rekisteröityä käsityöläistä sekä tuhansia rekisteröimättömiä. Samasta satamasta lähtee myös suurin osa maan sardiinisaaliista.
+- [Magadan — kohdekartta / Kohdekartta: Severovostokzoloton talo] Proletarskajan katu 12 Proletarskajan kadun numerossa 12 seisoo Magadanin komein 1950-luvun talo. Se on kolmikerroksinen, valkoinen ja pitkä, ja sen ikkunoita kehystävät kaksoispylväät ja pienet päätykolmiot. Alakerta on punertavaa lohkokiveä jäljittelevää rappausta, ja sisäänkäynnin kohdalla julkisivusta työntyy esiin punainen pylväsportikko. Talon kansanomainen nimi on lyhenne SVZ. Nimi kertoo kaupungin elinkeinosta. Magadanin talouden kaksi tukijalkaa ovat kullankaivuu ja kalastus, ja kaupunki syntyi nimenomaan siksi, että Kolyman sisämaasta löytyi kultaa: satama rakennettiin viemään sitä ulos. Kullantuotanto on sittemmin laskenut, ja kalastuskin on jäänyt kiintiöidensä alle, mutta kaupu…
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI

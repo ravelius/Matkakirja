@@ -1,0 +1,224 @@
+================ KOHTA 1 (kohde:hahmotelma-mdinan-vanha-katedraali) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mdinan vanha normannikatedraali (historia)
+Tietoruudun teksti: Mdinan normanniaikainen katedraali rakennettiin 1200-luvulla. Sisilian maanjäristys vaurioitti sitä pahoin vuonna 1693, minkä jälkeen se purettiin ja korvattiin vuosina 1696–1705 nykyisellä barokkikatedraalilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Hiljainen kaupunki] n. 700-luku eaa. — Foinikialaiset perustivat Mdinan paikalle asutuksen noin 700-luvulla eaa., ja roomalaisten aikana se sai nimen Melita. Nykyinen nimi tulee arabian sanasta madīnah, kaupunki. Mdina oli Maltan pääkaupunki antiikista keskiajalle, kunnes Pyhän Johanneksen ritarikunta asettui vuonna 1530 Birguun. Sen jälkeen kaupunki ei enää kasvanut muurien ulkopuolelle, ja sitä alettiin kutsua Hiljaiseksi kaupungiksi. Vuonna 2024 muurien sisällä asui vain 242 ihmistä, ja omaisuus siirtyy yhä sukupolvelta toiselle.
+
+### 1.1
+KYSYMYS: Miltä Mdinan vanha normannikatedraali näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mdinan vanha normannikatedraali (historia)
+Tietoruudun teksti: Mdinan normanniaikainen katedraali rakennettiin 1200-luvulla. Sisilian maanjäristys vaurioitti sitä pahoin vuonna 1693, minkä jälkeen se purettiin ja korvattiin vuosina 1696–1705 nykyisellä barokkikatedraalilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Hiljainen kaupunki] n. 700-luku eaa. — Foinikialaiset perustivat Mdinan paikalle asutuksen noin 700-luvulla eaa., ja roomalaisten aikana se sai nimen Melita. Nykyinen nimi tulee arabian sanasta madīnah, kaupunki. Mdina oli Maltan pääkaupunki antiikista keskiajalle, kunnes Pyhän Johanneksen ritarikunta asettui vuonna 1530 Birguun. Sen jälkeen kaupunki ei enää kasvanut muurien ulkopuolelle, ja sitä alettiin kutsua Hiljaiseksi kaupungiksi. Vuonna 2024 muurien sisällä asui vain 242 ihmistä, ja omaisuus siirtyy yhä sukupolvelta toiselle.
+
+### 1.2
+KYSYMYS: Miksi Mdinan vanha normannikatedraali katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mdinan vanha normannikatedraali (historia)
+Tietoruudun teksti: Mdinan normanniaikainen katedraali rakennettiin 1200-luvulla. Sisilian maanjäristys vaurioitti sitä pahoin vuonna 1693, minkä jälkeen se purettiin ja korvattiin vuosina 1696–1705 nykyisellä barokkikatedraalilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Hiljainen kaupunki] n. 700-luku eaa. — Foinikialaiset perustivat Mdinan paikalle asutuksen noin 700-luvulla eaa., ja roomalaisten aikana se sai nimen Melita. Nykyinen nimi tulee arabian sanasta madīnah, kaupunki. Mdina oli Maltan pääkaupunki antiikista keskiajalle, kunnes Pyhän Johanneksen ritarikunta asettui vuonna 1530 Birguun. Sen jälkeen kaupunki ei enää kasvanut muurien ulkopuolelle, ja sitä alettiin kutsua Hiljaiseksi kaupungiksi. Vuonna 2024 muurien sisällä asui vain 242 ihmistä, ja omaisuus siirtyy yhä sukupolvelta toiselle.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:hahmotelma-royal-opera-house-valletta) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vallettan Royal Opera House (historia)
+Tietoruudun teksti: Arkkitehti Edward Middleton Barryn suunnittelema Royal Opera House valmistui Vallettaan 1866 ja oli kaupungin arkkitehtoninen ylpeys. Saksalainen pommi-isku tuhosi teatterin 7.4.1942, ja rauniot seisoivat vuosikymmeniä ennen kuin Renzo Piano muotoili ne avoimeksi ulkoilmateatteriksi, Pjazza Teatru Rjaliksi (2013).
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Astana — kohdekartta / Kohdekartta: Astana Opera] 2010–2013 Oopperatalo nousi Vasemmalle rannalle yhdeksän hehtaarin tontille. Rakentaminen alkoi 6. heinäkuuta 2010, ja talo avattiin vuonna 2013 kazakstanilaisella oopperalla Birzhan ja Sara. Suunnittelusta vastasi italialainen arkkitehtitoimisto ABDR ja rakentamisesta Mabetex-yhtiö. Harjakorkeus on 32 metriä ja kerrosala 64 163 neliömetriä; pelkkää näyttämöalaa on 3 000 neliömetriä. Saleja on kaksi. Pääsalissa on 1 250 paikkaa ja orkesterisyvennys, johon mahtuu 120 soittajaa; kamarimusiikkisalissa on 250 paikkaa. Aulassa riippuu kolmentoista metrin korkeudessa kruunu, joka painaa 1,6 tonnia. Akustiikan suunnittelivat italialaiset Enrico Moretti ja Maria Cairoli. Julkisivu on antiikin kreik…
+- [Peking — kaupunkilehti / Historia: Puutarha jonka isoisä näki raunioina] Qing-keisarit rakensivat luoteeseen kaupungista laajoja puistopalatseja, joista suurin oli Vanha kesäpalatsi eli Yuanmingyuan. Toisen oopiumisodan lopussa 1860 anglo-ranskalaiset joukot ryöstivät ja polttivat sen. Vuonna 1873 — isoisän matkavuonna — nuori Tongzhi-keisari yritti entisöidä osan rakennuksista, mutta hovin rahat eivät riittäneet, ja hanke keskeytettiin jo 1874. Matkustaja olisi siis nähnyt rikkinäisiä pylväitä, marmoriportaita ja kesken jääneen työmaan — ei loistavaa palatsia. Myös naapurin kesäpalatsi oli tuolloin vielä rauniona.
+
+### 2.1
+KYSYMYS: Miltä Vallettan Royal Opera House näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vallettan Royal Opera House (historia)
+Tietoruudun teksti: Arkkitehti Edward Middleton Barryn suunnittelema Royal Opera House valmistui Vallettaan 1866 ja oli kaupungin arkkitehtoninen ylpeys. Saksalainen pommi-isku tuhosi teatterin 7.4.1942, ja rauniot seisoivat vuosikymmeniä ennen kuin Renzo Piano muotoili ne avoimeksi ulkoilmateatteriksi, Pjazza Teatru Rjaliksi (2013).
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Astana — kohdekartta / Kohdekartta: Astana Opera] 2010–2013 Oopperatalo nousi Vasemmalle rannalle yhdeksän hehtaarin tontille. Rakentaminen alkoi 6. heinäkuuta 2010, ja talo avattiin vuonna 2013 kazakstanilaisella oopperalla Birzhan ja Sara. Suunnittelusta vastasi italialainen arkkitehtitoimisto ABDR ja rakentamisesta Mabetex-yhtiö. Harjakorkeus on 32 metriä ja kerrosala 64 163 neliömetriä; pelkkää näyttämöalaa on 3 000 neliömetriä. Saleja on kaksi. Pääsalissa on 1 250 paikkaa ja orkesterisyvennys, johon mahtuu 120 soittajaa; kamarimusiikkisalissa on 250 paikkaa. Aulassa riippuu kolmentoista metrin korkeudessa kruunu, joka painaa 1,6 tonnia. Akustiikan suunnittelivat italialaiset Enrico Moretti ja Maria Cairoli. Julkisivu on antiikin kreik…
+
+### 2.2
+KYSYMYS: Miksi Vallettan Royal Opera House on nykyään raunioina?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vallettan Royal Opera House (historia)
+Tietoruudun teksti: Arkkitehti Edward Middleton Barryn suunnittelema Royal Opera House valmistui Vallettaan 1866 ja oli kaupungin arkkitehtoninen ylpeys. Saksalainen pommi-isku tuhosi teatterin 7.4.1942, ja rauniot seisoivat vuosikymmeniä ennen kuin Renzo Piano muotoili ne avoimeksi ulkoilmateatteriksi, Pjazza Teatru Rjaliksi (2013).
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Astana — kohdekartta / Kohdekartta: Astana Opera] 2010–2013 Oopperatalo nousi Vasemmalle rannalle yhdeksän hehtaarin tontille. Rakentaminen alkoi 6. heinäkuuta 2010, ja talo avattiin vuonna 2013 kazakstanilaisella oopperalla Birzhan ja Sara. Suunnittelusta vastasi italialainen arkkitehtitoimisto ABDR ja rakentamisesta Mabetex-yhtiö. Harjakorkeus on 32 metriä ja kerrosala 64 163 neliömetriä; pelkkää näyttämöalaa on 3 000 neliömetriä. Saleja on kaksi. Pääsalissa on 1 250 paikkaa ja orkesterisyvennys, johon mahtuu 120 soittajaa; kamarimusiikkisalissa on 250 paikkaa. Aulassa riippuu kolmentoista metrin korkeudessa kruunu, joka painaa 1,6 tonnia. Akustiikan suunnittelivat italialaiset Enrico Moretti ja Maria Cairoli. Julkisivu on antiikin kreik…
+- [Peking — kaupunkilehti / Historia: Puutarha jonka isoisä näki raunioina] Qing-keisarit rakensivat luoteeseen kaupungista laajoja puistopalatseja, joista suurin oli Vanha kesäpalatsi eli Yuanmingyuan. Toisen oopiumisodan lopussa 1860 anglo-ranskalaiset joukot ryöstivät ja polttivat sen. Vuonna 1873 — isoisän matkavuonna — nuori Tongzhi-keisari yritti entisöidä osan rakennuksista, mutta hovin rahat eivät riittäneet, ja hanke keskeytettiin jo 1874. Matkustaja olisi siis nähnyt rikkinäisiä pylväitä, marmoriportaita ja kesken jääneen työmaan — ei loistavaa palatsia. Myös naapurin kesäpalatsi oli tuolloin vielä rauniona.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:hahmotelma-valletta) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valletta (historia)
+Tietoruudun teksti: Valletta on Maltan pääkaupunki Grand Harbourin ja Marsamxett-sataman välissä; asukkaita on 5 157 (2021). Se on Euroopan eteläisin pääkaupunki ja pinta-alaltaan, 0,61 neliökilometriä, EU:n toiseksi pienin. Kaupungin 1500-luvun rakennukset rakennutti Johanniittaritarikunta, ja se on nimetty ranskalaisen Jean Parisot de Valetten mukaan, joka puolusti saarta osmaneja vastaan suuressa piirityksessä; peruskivi laskettiin 28. maaliskuuta 1566. Kaupunki on luonteeltaan barokki, ja sen 320 muistomerkkiä mahtuvat 0,55 neliökilometrin alueelle; Unesco hyväksyi sen maailmanperintökohteeksi vuonna 1980. Britit ottivat kaupungin haltuunsa syyskuussa 1800, ja linnoitusten purkamista ehdotettiin 1800-luvun alussa sekä uudelleen 1870- ja 1880-luvuilla, mutta linnoitukset ovat säilyneet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Kaupunki piirrettiin viivaimella] 1566 — Maaliskuun 28. päivänä 1566 suurmestari Jean de Valette laski peruskiven uudelle kaupungille Sciberras-niemellä. Suuren piirityksen jälkeen ritarikunta halusi rakentaa linnoitetun pääkaupungin, ja paavi lähetti suunnittelijaksi Francesco Laparellin. Hän hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat kaupunginportilta kohti Fort St. Elmoa. Laparellin kuoltua työtä johti maltalainen Girolamo Cassar. Valletta valmistui pääosin 1570-luvun alkuun mennessä, ja siitä tuli pääkaupunki vuonna 1571.
+- [Malta — maalehti / Arki: Vanhin maltankielinen runo] n. 1470-luku — Maltan kieli on ainoa semiittinen kieli, jota kirjoitetaan latinalaisilla aakkosilla. Sen juuret ovat Sisilian arabiassa, mutta sanastoon on tullut paljon italiaa ja sisilian kieltä. Vanhin tunnettu maltankielinen kirjallinen teksti on Il-Kantilena, Pietru Caxaron runo. Se on kirjoitettu 1400-luvulla, luultavasti 1470-luvulla, mutta löydettiin vasta vuonna 1966. Runo säilytetään Vallettan notaariarkistossa, ja huhtikuussa 2025 se liitettiin Unescon Muisti maailmassa -luetteloon.
+- [Malta — maalehti / Arki: Parveke josta näkee kaiken] 1600-luku — Maltalaisten talojen julkisivuja koristavat suljetut puuparvekkeet, gallariji. Ne polveutuvat arabialaisista mashrabiya-parvekkeista, mutta yleistyivät vasta 1600-luvulla. Vanhin tunnettu esitys on Vallettan suurmestarin palatsin kulmaparveke noin vuodelta 1675. Vuonna 1679 eräs vieras kirjoitti, että suurmestari käveli lasitetulla parvekkeella mielellään, koska sieltä näki aukioiden tapahtumat itse näkymättä. Parvekkeita kannattavia kivikonsoleja sanotaan saljaturiksi, ja lasiläpät ovat purtelleja.
+
+### 3.1
+KYSYMYS: Minä päivänä Vallettan peruskivi laskettiin vuonna 1566?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valletta (historia)
+Tietoruudun teksti: Valletta on Maltan pääkaupunki Grand Harbourin ja Marsamxett-sataman välissä; asukkaita on 5 157 (2021). Se on Euroopan eteläisin pääkaupunki ja pinta-alaltaan, 0,61 neliökilometriä, EU:n toiseksi pienin. Kaupungin 1500-luvun rakennukset rakennutti Johanniittaritarikunta, ja se on nimetty ranskalaisen Jean Parisot de Valetten mukaan, joka puolusti saarta osmaneja vastaan suuressa piirityksessä; peruskivi laskettiin 28. maaliskuuta 1566. Kaupunki on luonteeltaan barokki, ja sen 320 muistomerkkiä mahtuvat 0,55 neliökilometrin alueelle; Unesco hyväksyi sen maailmanperintökohteeksi vuonna 1980. Britit ottivat kaupungin haltuunsa syyskuussa 1800, ja linnoitusten purkamista ehdotettiin 1800-luvun alussa sekä uudelleen 1870- ja 1880-luvuilla, mutta linnoitukset ovat säilyneet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Kaupunki piirrettiin viivaimella] 1566 — Maaliskuun 28. päivänä 1566 suurmestari Jean de Valette laski peruskiven uudelle kaupungille Sciberras-niemellä. Suuren piirityksen jälkeen ritarikunta halusi rakentaa linnoitetun pääkaupungin, ja paavi lähetti suunnittelijaksi Francesco Laparellin. Hän hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat kaupunginportilta kohti Fort St. Elmoa. Laparellin kuoltua työtä johti maltalainen Girolamo Cassar. Valletta valmistui pääosin 1570-luvun alkuun mennessä, ja siitä tuli pääkaupunki vuonna 1571.
+
+### 3.2
+KYSYMYS: Minä vuonna Unesco hyväksyi Vallettan maailmanperintökohteeksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valletta (historia)
+Tietoruudun teksti: Valletta on Maltan pääkaupunki Grand Harbourin ja Marsamxett-sataman välissä; asukkaita on 5 157 (2021). Se on Euroopan eteläisin pääkaupunki ja pinta-alaltaan, 0,61 neliökilometriä, EU:n toiseksi pienin. Kaupungin 1500-luvun rakennukset rakennutti Johanniittaritarikunta, ja se on nimetty ranskalaisen Jean Parisot de Valetten mukaan, joka puolusti saarta osmaneja vastaan suuressa piirityksessä; peruskivi laskettiin 28. maaliskuuta 1566. Kaupunki on luonteeltaan barokki, ja sen 320 muistomerkkiä mahtuvat 0,55 neliökilometrin alueelle; Unesco hyväksyi sen maailmanperintökohteeksi vuonna 1980. Britit ottivat kaupungin haltuunsa syyskuussa 1800, ja linnoitusten purkamista ehdotettiin 1800-luvun alussa sekä uudelleen 1870- ja 1880-luvuilla, mutta linnoitukset ovat säilyneet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Arki: Vanhin maltankielinen runo] n. 1470-luku — Maltan kieli on ainoa semiittinen kieli, jota kirjoitetaan latinalaisilla aakkosilla. Sen juuret ovat Sisilian arabiassa, mutta sanastoon on tullut paljon italiaa ja sisilian kieltä. Vanhin tunnettu maltankielinen kirjallinen teksti on Il-Kantilena, Pietru Caxaron runo. Se on kirjoitettu 1400-luvulla, luultavasti 1470-luvulla, mutta löydettiin vasta vuonna 1966. Runo säilytetään Vallettan notaariarkistossa, ja huhtikuussa 2025 se liitettiin Unescon Muisti maailmassa -luetteloon.
+- [Malta — maalehti / Arki: Parveke josta näkee kaiken] 1600-luku — Maltalaisten talojen julkisivuja koristavat suljetut puuparvekkeet, gallariji. Ne polveutuvat arabialaisista mashrabiya-parvekkeista, mutta yleistyivät vasta 1600-luvulla. Vanhin tunnettu esitys on Vallettan suurmestarin palatsin kulmaparveke noin vuodelta 1675. Vuonna 1679 eräs vieras kirjoitti, että suurmestari käveli lasitetulla parvekkeella mielellään, koska sieltä näki aukioiden tapahtumat itse näkymättä. Parvekkeita kannattavia kivikonsoleja sanotaan saljaturiksi, ja lasiläpät ovat purtelleja.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:hahmotelma-mdina) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mdina (historia)
+Tietoruudun teksti: Mdina on linnoitettu kaupunki Maltan länsiosassa, ja se oli saaren pääkaupunki antiikista keskiajalle; kaupunki ei ole koskaan levinnyt muurien ulkopuolelle, ja asukkaita on 242. Foinikialaiset perustivat paikalle 700-luvulla eaa. siirtokunnan nimeltä Ann, ja roomalaiset nimesivät sen Melitaksi; nimi Mdina tulee arabian sanasta madīnah eli kaupunki. Kaupunki oli Maltan pääkaupunki, kunnes Johanniittaritarikunta saapui vuonna 1530 ja teki pääkaupungiksi Birgun; sen jälkeen Mdina taantui, vaikka 1700-luvun alussa siihen rakennettiin useita barokkirakennuksia. Kaupunki on pysynyt Maltan aatelin ja kirkollisten viranomaisten keskuksena, mutta se ei ole koskaan saavuttanut takaisin vuotta 1530 edeltänyttä merkitystään, minkä vuoksi sitä kutsutaan Hiljaiseksi kaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Hiljainen kaupunki] n. 700-luku eaa. — Foinikialaiset perustivat Mdinan paikalle asutuksen noin 700-luvulla eaa., ja roomalaisten aikana se sai nimen Melita. Nykyinen nimi tulee arabian sanasta madīnah, kaupunki. Mdina oli Maltan pääkaupunki antiikista keskiajalle, kunnes Pyhän Johanneksen ritarikunta asettui vuonna 1530 Birguun. Sen jälkeen kaupunki ei enää kasvanut muurien ulkopuolelle, ja sitä alettiin kutsua Hiljaiseksi kaupungiksi. Vuonna 2024 muurien sisällä asui vain 242 ihmistä, ja omaisuus siirtyy yhä sukupolvelta toiselle.
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Elmon linnake] 1552 (rakennus), 1565 (piiritys) Linnake rakennettiin 1552 vartioimaan kahden sataman, Grand Harbourin ja Marsamxettin, suuta samalta kapealta niemenkärjeltä, jolle Valletta myöhemmin nousi. Tähden muotoinen muuri oli aikanaan uutta linnoitustekniikkaa, mutta osmanien saapuessa 1565 moni piti sitä silti liian pienenä kestämään pitkää piiritystä. Se piti pintansa lähes kuukauden, 18. toukokuuta – 23. kesäkuuta, vaikka miehistö oli moninkertaisesti alivoimainen. Yöllä veneet toivat Birgusta lisää puolustajia ja veivät haavoittuneita pois, ja monet pahoin haavoittuneet ritarit kieltäytyivät poistumasta: he pyysivät kantaa itsensä tuoleilla muurille jatkaakseen taistelua istualtaan viimeiseen a…
+
+### 4.1
+KYSYMYS: Mikä on Mdinan lempinimi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mdina (historia)
+Tietoruudun teksti: Mdina on linnoitettu kaupunki Maltan länsiosassa, ja se oli saaren pääkaupunki antiikista keskiajalle; kaupunki ei ole koskaan levinnyt muurien ulkopuolelle, ja asukkaita on 242. Foinikialaiset perustivat paikalle 700-luvulla eaa. siirtokunnan nimeltä Ann, ja roomalaiset nimesivät sen Melitaksi; nimi Mdina tulee arabian sanasta madīnah eli kaupunki. Kaupunki oli Maltan pääkaupunki, kunnes Johanniittaritarikunta saapui vuonna 1530 ja teki pääkaupungiksi Birgun; sen jälkeen Mdina taantui, vaikka 1700-luvun alussa siihen rakennettiin useita barokkirakennuksia. Kaupunki on pysynyt Maltan aatelin ja kirkollisten viranomaisten keskuksena, mutta se ei ole koskaan saavuttanut takaisin vuotta 1530 edeltänyttä merkitystään, minkä vuoksi sitä kutsutaan Hiljaiseksi kaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Hiljainen kaupunki] n. 700-luku eaa. — Foinikialaiset perustivat Mdinan paikalle asutuksen noin 700-luvulla eaa., ja roomalaisten aikana se sai nimen Melita. Nykyinen nimi tulee arabian sanasta madīnah, kaupunki. Mdina oli Maltan pääkaupunki antiikista keskiajalle, kunnes Pyhän Johanneksen ritarikunta asettui vuonna 1530 Birguun. Sen jälkeen kaupunki ei enää kasvanut muurien ulkopuolelle, ja sitä alettiin kutsua Hiljaiseksi kaupungiksi. Vuonna 2024 muurien sisällä asui vain 242 ihmistä, ja omaisuus siirtyy yhä sukupolvelta toiselle.
+
+### 4.2
+KYSYMYS: Minä vuonna Johanniittaritarikunta teki Birgusta pääkaupungin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mdina (historia)
+Tietoruudun teksti: Mdina on linnoitettu kaupunki Maltan länsiosassa, ja se oli saaren pääkaupunki antiikista keskiajalle; kaupunki ei ole koskaan levinnyt muurien ulkopuolelle, ja asukkaita on 242. Foinikialaiset perustivat paikalle 700-luvulla eaa. siirtokunnan nimeltä Ann, ja roomalaiset nimesivät sen Melitaksi; nimi Mdina tulee arabian sanasta madīnah eli kaupunki. Kaupunki oli Maltan pääkaupunki, kunnes Johanniittaritarikunta saapui vuonna 1530 ja teki pääkaupungiksi Birgun; sen jälkeen Mdina taantui, vaikka 1700-luvun alussa siihen rakennettiin useita barokkirakennuksia. Kaupunki on pysynyt Maltan aatelin ja kirkollisten viranomaisten keskuksena, mutta se ei ole koskaan saavuttanut takaisin vuotta 1530 edeltänyttä merkitystään, minkä vuoksi sitä kutsutaan Hiljaiseksi kaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Elmon linnake] 1552 (rakennus), 1565 (piiritys) Linnake rakennettiin 1552 vartioimaan kahden sataman, Grand Harbourin ja Marsamxettin, suuta samalta kapealta niemenkärjeltä, jolle Valletta myöhemmin nousi. Tähden muotoinen muuri oli aikanaan uutta linnoitustekniikkaa, mutta osmanien saapuessa 1565 moni piti sitä silti liian pienenä kestämään pitkää piiritystä. Se piti pintansa lähes kuukauden, 18. toukokuuta – 23. kesäkuuta, vaikka miehistö oli moninkertaisesti alivoimainen. Yöllä veneet toivat Birgusta lisää puolustajia ja veivät haavoittuneita pois, ja monet pahoin haavoittuneet ritarit kieltäytyivät poistumasta: he pyysivät kantaa itsensä tuoleilla muurille jatkaakseen taistelua istualtaan viimeiseen a…
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:hahmotelma-hagar-qim) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ħaġar Qim (historia)
+Tietoruudun teksti: Ħaġar Qim, kirjaimellisesti palvontakivet, on megaliittinen temppelikompleksi Maltan eteläreunalla, ajalta Ġgantija-kaudelta (3600–3200 eaa.). Maltan megaliittitemppelit ovat maailman vanhimpia uskonnollisia kohteita, ja Unesco hyväksyi Ħaġar Qimin ja neljä muuta rakennelmaa maailmanperintökohteiksi vuonna 1992. Rakentajat käyttivät pehmeää globigerinakalkkikiveä, minkä vuoksi temppeli on rapautunut ja hilseillyt vuosituhansien mittaan; suojateltta valmistui vuonna 2009. Julkisivun tunnusmerkkejä ovat kolmikivinen sisäänkäynti, ulkopenkki ja pystykivet, ja alueelta ei ole löytynyt hautauksia eikä ihmisluita, mutta lukuisia uhrieläinten luita. Noin 500 metrin päässä on Mnajdran temppelikompleksi, joka on rakennettu kovemmasta koralliittikalkkikivestä, ja rannikolla ovat Sinisen luolan meriluolat, joissa veden sininen väri heijastuu luolien seinistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+- [Ankara — kohdekartta / Kohdekartta: Augustuksen temppeli] Rooma valloitti Keski-Anatolian ja perusti Galatian maakunnan, jonka hallintokeskus oli Ancyra. Augustuksen ja Rooman temppeli rakennettiin sinne noin 25–20 eaa. Sitä laajennettiin 100-luvulla jaa., ja 400-luvulla siitä tehtiin kirkko. Pystyssä ovat enää sivuseinät ja koristeltu oviaukon kehys, ja kuuden pylvään paikat erottuvat yhä. Viereen nousi 1400-luvun alussa Hacı Bayramin moskeija. Augustus kuoli 19. elokuuta vuonna 14 jaa., ja selonteko hänen teoistaan oli valmistunut kuukautta aiemmin. Testamentissaan hän määräsi senaatin pystyttämään tekstin. Alkuperäinen kaiverrettiin kahteen pronssipilariin Roomaan mausoleumin eteen, eivätkä pilarit ole säilyneet. Ancyrassa latina hakattiin etei…
+
+### 5.1
+KYSYMYS: Mitä Ħaġar Qim tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ħaġar Qim (historia)
+Tietoruudun teksti: Ħaġar Qim, kirjaimellisesti palvontakivet, on megaliittinen temppelikompleksi Maltan eteläreunalla, ajalta Ġgantija-kaudelta (3600–3200 eaa.). Maltan megaliittitemppelit ovat maailman vanhimpia uskonnollisia kohteita, ja Unesco hyväksyi Ħaġar Qimin ja neljä muuta rakennelmaa maailmanperintökohteiksi vuonna 1992. Rakentajat käyttivät pehmeää globigerinakalkkikiveä, minkä vuoksi temppeli on rapautunut ja hilseillyt vuosituhansien mittaan; suojateltta valmistui vuonna 2009. Julkisivun tunnusmerkkejä ovat kolmikivinen sisäänkäynti, ulkopenkki ja pystykivet, ja alueelta ei ole löytynyt hautauksia eikä ihmisluita, mutta lukuisia uhrieläinten luita. Noin 500 metrin päässä on Mnajdran temppelikompleksi, joka on rakennettu kovemmasta koralliittikalkkikivestä, ja rannikolla ovat Sinisen luolan meriluolat, joissa veden sininen väri heijastuu luolien seinistä.
+
+### 5.2
+KYSYMYS: Minä vuonna suojateltta valmistui temppelin päälle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ħaġar Qim (historia)
+Tietoruudun teksti: Ħaġar Qim, kirjaimellisesti palvontakivet, on megaliittinen temppelikompleksi Maltan eteläreunalla, ajalta Ġgantija-kaudelta (3600–3200 eaa.). Maltan megaliittitemppelit ovat maailman vanhimpia uskonnollisia kohteita, ja Unesco hyväksyi Ħaġar Qimin ja neljä muuta rakennelmaa maailmanperintökohteiksi vuonna 1992. Rakentajat käyttivät pehmeää globigerinakalkkikiveä, minkä vuoksi temppeli on rapautunut ja hilseillyt vuosituhansien mittaan; suojateltta valmistui vuonna 2009. Julkisivun tunnusmerkkejä ovat kolmikivinen sisäänkäynti, ulkopenkki ja pystykivet, ja alueelta ei ole löytynyt hautauksia eikä ihmisluita, mutta lukuisia uhrieläinten luita. Noin 500 metrin päässä on Mnajdran temppelikompleksi, joka on rakennettu kovemmasta koralliittikalkkikivestä, ja rannikolla ovat Sinisen luolan meriluolat, joissa veden sininen väri heijastuu luolien seinistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+- [Ankara — kohdekartta / Kohdekartta: Augustuksen temppeli] Rooma valloitti Keski-Anatolian ja perusti Galatian maakunnan, jonka hallintokeskus oli Ancyra. Augustuksen ja Rooman temppeli rakennettiin sinne noin 25–20 eaa. Sitä laajennettiin 100-luvulla jaa., ja 400-luvulla siitä tehtiin kirkko. Pystyssä ovat enää sivuseinät ja koristeltu oviaukon kehys, ja kuuden pylvään paikat erottuvat yhä. Viereen nousi 1400-luvun alussa Hacı Bayramin moskeija. Augustus kuoli 19. elokuuta vuonna 14 jaa., ja selonteko hänen teoistaan oli valmistunut kuukautta aiemmin. Testamentissaan hän määräsi senaatin pystyttämään tekstin. Alkuperäinen kaiverrettiin kahteen pronssipilariin Roomaan mausoleumin eteen, eivätkä pilarit ole säilyneet. Ancyrassa latina hakattiin etei…
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
