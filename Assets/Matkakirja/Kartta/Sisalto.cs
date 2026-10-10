@@ -105,11 +105,11 @@ namespace Matkakirja
             Debug.Log("MATKAKIRJA sisältö: tuore osoitin tallennettu taustalla (" + OsoittimenPolku(tuore) + ", käyttöön seuraavassa käynnistyksessä)");
         }
 
-        /// <summary>Hakee kokoelman. valmis(null) = ei verkkoa eikä välimuistia.</summary>
-        public static IEnumerator Hae<T>(string kokoelma, Action<T[]> valmis)
+        /// <summary>Hakee kokoelman. valmis(null) = ei verkkoa eikä välimuistia (valinnainen: tai kokoelmaa ei ole paketissa).</summary>
+        public static IEnumerator Hae<T>(string kokoelma, Action<T[]> valmis, bool valinnainen = false)
         {
             string teksti = null;
-            yield return HaeTeksti(kokoelma, t => teksti = t);
+            yield return HaeTeksti(kokoelma, t => teksti = t, valinnainen);
             valmis(teksti == null ? null : JsonUtility.FromJson<Kokoelma<T>>(teksti).alkiot);
         }
 

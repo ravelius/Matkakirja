@@ -199,6 +199,26 @@ namespace Matkakirja.Linssit.Testit
             finally { Linssirekisteri.Kehittajatila = vanha; }
         }
 
+        [Testi] static void KaupunkipalloOhittaaSaatavuuden()
+        {
+            // Omistaja Mac TF 177 (LS1 10.10.): kaupunkipallo avaa oppaan ilman kehittäjätilaa; valitsimen saatavuus ennallaan.
+            bool vanha = Linssirekisteri.Kehittajatila;
+            Linssirekisteri.Kehittajatila = false;
+            try
+            {
+                var r = new Linssirekisteri(new ValeYmparisto());
+                var a = new Koe("opas", 1);
+                r.Lisaa(a);
+                Oleta.Sama(false, r.Valitse("opas"), "valitsimesta ei aukea ilman kehittäjätilaa");
+                Oleta.Sama(0, a.Avauksia);
+                Oleta.Sama(true, r.Valitse("opas", ohitaSaatavuus: true), "pallo avaa");
+                Oleta.Sama(1, a.Avauksia);
+                Oleta.Sama("opas", r.Auki?.Tiedot.Id);
+                Oleta.Sama(0, r.Valittavat.Count, "valitsimessa yhä kiinni");
+            }
+            finally { Linssirekisteri.Kehittajatila = vanha; }
+        }
+
         [Testi] static void KynnyksetOmistajanPaatoksella()
         {
             // Omistaja 23.9. (A8/C9): radio 1400 takaisin, topografia samalla kynnyksellä.

@@ -11,10 +11,8 @@ namespace Matkakirja.Linssit.Testit
     public static class OsaviipaleetTestit
     {
         const double Askel = 0.02, MinViipale = 0.5;
-        // ODOTTAA LR:N RAJAKORJAUSTA (PT 11.4x: LR:n jonossa ND v4:n ja NL-sali v2:n jälkeen): palatsin rajat.min z −10,95 + Askelaanin
-        // 0,3 m:n vaakavara ulottuu kirkkotorniportaiden yläpäähän (x −19,4, z −11,25…−10,95), jossa kappeli-kavely alkaa vasta y 8,6:sta
-        // → 0,42 m:n palatsi-viipale molempiin suuntiin. Rivi poistetaan, kun viipale katoaa (testi kaatuu, jos odotettu ei enää toteudu).
-        static readonly (int I, string Osa)[] OdottaaKorjausta = { (40, "palatsi"), (68, "palatsi") };
+        // Odottavat viipaleet (väli, osa), jotka LR korjaa; tyhjä = ei yhtään. v47a poisti palatsi-viipaleen (rajat.min z −10,6).
+        static readonly (int I, string Osa)[] OdottaaKorjausta = { };
 
         /// <summary>Reitin ohuet viipaleet: (väli i → i+1, osa, pituus m, alun paikka).</summary>
         public static List<(int I, string Osa, double Pituus, (double X, double Y, double Z) P)> Viipaleet()

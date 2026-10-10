@@ -161,11 +161,16 @@ namespace Matkakirja.Linssit
         /// sulkee sen (web: valitsimen nappi on vaihtokytkin). Palauttaa, onko
         /// jokin linssi nyt auki.
         /// </summary>
-        public bool Valitse(string id)
+        public bool Valitse(string id) => Valitse(id, false);
+
+        /// <param name="ohitaSaatavuus">Avataan, vaikka linssi ei olisi valitsimessa saatavilla: kartan kaupunkipallo (kaikille pelaajille
+        /// näkyvä karttaelementti) avaa oppaan suoraan myös ilman kehittäjätilaa, valmiita linssejä tai omistusta (omistaja Mac TF 177,
+        /// LS1 10.10.: pallon napautus asetti kaupunkitilan, mutta linssi jäi kiinni ilman ilmoitusta).</param>
+        public bool Valitse(string id, bool ohitaSaatavuus)
         {
             var linssi = Hae(id) ?? throw new ArgumentException("tuntematon linssi: " + id);
             if (Auki == linssi) { Sulje(); return false; }
-            if (!Saatavilla(id)) return Auki != null;
+            if (!ohitaSaatavuus && !Saatavilla(id)) return Auki != null;
             SuljeHiljaa();
             Avautuu?.Invoke(linssi);   // käsittelijät hoitavat omat virheensä (LinssiOhjain)
             Auki = linssi;

@@ -152,7 +152,7 @@ namespace Matkakirja.Natiivi
             var joukko = new HashSet<string>(kohteet) { oma };
             foreach (var kv in verkko.Kaupungit) if (kv.Value.Maa == iso) joukko.Add(kv.Key);
             pelaajanKaupungit = joukko;
-            merkit.PeliSuodatin(joukko);
+            merkit.PeliSuodatin(joukko, iso); // iso: pelaajan maan pääkaupunkipiste näkyy rajauksessa (skeema 1.60)
             merkit.Himmeat(himmeat ? verkko.Kaupungit.Keys.Where(k => !joukko.Contains(k)).ToList() : null);
         }
 
