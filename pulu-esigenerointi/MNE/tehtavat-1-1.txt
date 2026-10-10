@@ -1,0 +1,228 @@
+================ KOHTA 1 (kohde:kotorinlahti) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kotorinlahti (meri)
+Tietoruudun teksti: Kotorinlahti on Montenegron rannikon syvälle vuoristoon työntyvä merenlahti, joka on noin 28 kilometriä pitkä ja jonka ranta-alue kiertää kaikkiaan yli 107 kilometriä. Kapeimmillaan Verigen salmessa lahti kutistuu vain 0,3 kilometrin levyiseksi, ja suurin syvyys on 60 metriä. Lahtea reunustavat Orjenin ja Lovćenin vuoristot, ja sen rannoilla ovat Kotor, Perast, Risan, Tivat ja Herceg Novi. Lahden alue on Unescon maailmanperintökohde vuodesta 1979, ja siihen kuuluvat myös Perastin edustan saarekkeet Sveti Đorđe ja Neitsyt Marian kalliosaari. Kotorin vanhankaupungin linnoitusjärjestelmä nousee yli 260 metrin korkeuteen, ja suurin osa rakenteista on Venetsian ajalta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Miami — kaupunkilehti / Ruohojoki ja lahti] Kaupungin länsipuolella alkaa ruohojoki ja itäpuolella lahti, jossa on satoja saaria. Väliin jää kalkkikivikaista, joka on juuri ja juuri merenpinnan yläpuolella.
+- [Odessa — kaupunkilehti / Odessa: Lahti, joka on suolaisempi kuin meri] Kahdeksan kilometrin päässä keskustasta pohjoiseen on vesi, joka ei ole meri eikä järvi. Kuyalnykin lahti on kaksikymmentäkahdeksan kilometriä pitkä ja keskimäärin metrin syvyinen. Se oli aikoinaan joen suu, sitten merenlahti, ja noin 1300-luvulla hiekka kasautui sen ja meren väliin kannakseksi. Siitä lähtien vesi on haihtunut pääsemättä minnekään: suolapitoisuus on mittausten mukaan vaihdellut 29 ja 269 promillen välillä. Näin suolaisessa vedessä elää bakteerien lisäksi vain kaksi lajia, ja lisääntymisaikaan pikkuäyriäisiä on niin paljon, että koko veden sävy kääntyy punertavaksi. Kylpylä perustettiin rannalle jo 1834.
+- [Montenegro — maalehti / Historia: Muuri joka kiipeää vuorelle] 9.–18. vuosisata — Kotor kätkeytyy Euroopan eteläisimmän vuonon perukkaan, jyrkkien vuorten ja meren väliin. Kaupunki on ollut asutettu yli 2000 vuotta, ja roomalaiset, bysanttilaiset, venetsialaiset, itävaltalaiset ja osmanit ovat jättäneet siihen jälkensä – vanhankaupungin sydämessä kohoaa vuonna 1166 vihitty Pyhän Tryphonin katedraali. Suurin osa muureista nousi venetsialaisvallan aikana: ne kiipeävät 260 metrin korkeuteen kaupungin yllä, ja pituutta niillä on lähes 4,5 kilometriä. Unesco listasi Kotorin maailmanperinnöksi jo 1979, ja 2017 muurit liitettiin vielä venetsialaisten puolustusrakennelmien sarjaan.
+
+### 1.1
+KYSYMYS: Kuinka kapea Kotorinlahti on kapeimmillaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kotorinlahti (meri)
+Tietoruudun teksti: Kotorinlahti on Montenegron rannikon syvälle vuoristoon työntyvä merenlahti, joka on noin 28 kilometriä pitkä ja jonka ranta-alue kiertää kaikkiaan yli 107 kilometriä. Kapeimmillaan Verigen salmessa lahti kutistuu vain 0,3 kilometrin levyiseksi, ja suurin syvyys on 60 metriä. Lahtea reunustavat Orjenin ja Lovćenin vuoristot, ja sen rannoilla ovat Kotor, Perast, Risan, Tivat ja Herceg Novi. Lahden alue on Unescon maailmanperintökohde vuodesta 1979, ja siihen kuuluvat myös Perastin edustan saarekkeet Sveti Đorđe ja Neitsyt Marian kalliosaari. Kotorin vanhankaupungin linnoitusjärjestelmä nousee yli 260 metrin korkeuteen, ja suurin osa rakenteista on Venetsian ajalta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Historia: Muuri joka kiipeää vuorelle] 9.–18. vuosisata — Kotor kätkeytyy Euroopan eteläisimmän vuonon perukkaan, jyrkkien vuorten ja meren väliin. Kaupunki on ollut asutettu yli 2000 vuotta, ja roomalaiset, bysanttilaiset, venetsialaiset, itävaltalaiset ja osmanit ovat jättäneet siihen jälkensä – vanhankaupungin sydämessä kohoaa vuonna 1166 vihitty Pyhän Tryphonin katedraali. Suurin osa muureista nousi venetsialaisvallan aikana: ne kiipeävät 260 metrin korkeuteen kaupungin yllä, ja pituutta niillä on lähes 4,5 kilometriä. Unesco listasi Kotorin maailmanperinnöksi jo 1979, ja 2017 muurit liitettiin vielä venetsialaisten puolustusrakennelmien sarjaan.
+
+### 1.2
+KYSYMYS: Minkä vuoristojen väliin lahti jää?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kotorinlahti (meri)
+Tietoruudun teksti: Kotorinlahti on Montenegron rannikon syvälle vuoristoon työntyvä merenlahti, joka on noin 28 kilometriä pitkä ja jonka ranta-alue kiertää kaikkiaan yli 107 kilometriä. Kapeimmillaan Verigen salmessa lahti kutistuu vain 0,3 kilometrin levyiseksi, ja suurin syvyys on 60 metriä. Lahtea reunustavat Orjenin ja Lovćenin vuoristot, ja sen rannoilla ovat Kotor, Perast, Risan, Tivat ja Herceg Novi. Lahden alue on Unescon maailmanperintökohde vuodesta 1979, ja siihen kuuluvat myös Perastin edustan saarekkeet Sveti Đorđe ja Neitsyt Marian kalliosaari. Kotorin vanhankaupungin linnoitusjärjestelmä nousee yli 260 metrin korkeuteen, ja suurin osa rakenteista on Venetsian ajalta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Miami — kaupunkilehti / Ruohojoki ja lahti] Kaupungin länsipuolella alkaa ruohojoki ja itäpuolella lahti, jossa on satoja saaria. Väliin jää kalkkikivikaista, joka on juuri ja juuri merenpinnan yläpuolella.
+- [Odessa — kaupunkilehti / Odessa: Lahti, joka on suolaisempi kuin meri] Kahdeksan kilometrin päässä keskustasta pohjoiseen on vesi, joka ei ole meri eikä järvi. Kuyalnykin lahti on kaksikymmentäkahdeksan kilometriä pitkä ja keskimäärin metrin syvyinen. Se oli aikoinaan joen suu, sitten merenlahti, ja noin 1300-luvulla hiekka kasautui sen ja meren väliin kannakseksi. Siitä lähtien vesi on haihtunut pääsemättä minnekään: suolapitoisuus on mittausten mukaan vaihdellut 29 ja 269 promillen välillä. Näin suolaisessa vedessä elää bakteerien lisäksi vain kaksi lajia, ja lisääntymisaikaan pikkuäyriäisiä on niin paljon, että koko veden sävy kääntyy punertavaksi. Kylpylä perustettiin rannalle jo 1834.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:ostrogin-luostari) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ostrogin luostari (kulttuuri)
+Tietoruudun teksti: Ostrogin luostari on serbiortodoksinen luostari lähellä Danilovgradia Montenegrossa. Se on rakennettu lähes pystysuoraan kallioseinämään Ostroška Greda -kallioon. Luostarin perusti 1600-luvun alussa Hertsegovinan metropoliitta Vasilije Jovanović, Ostrogin pyhä Basileios, joka kuoli siellä vuonna 1671; hänen pyhäinjäännöksensä lepäävät luolakirkossa. Vuosina 1923–1926 luostari rakennettiin uudelleen suuren tulipalon jälkeen, mutta kaksi alkuperäistä luolakirkkoa säilyi. Pyhiinvaeltajat kulkevat perinteisesti alaluostarilta yläluostarille noin kolme kilometriä, monet paljain jaloin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Historia: Luostari joka kasvoi kalliosta] 1665–1671 — Korkealle Ostroškan kallioseinämään on veistetty luostari, joka näyttää kasvaneen suoraan vuoresta. Sen perusti 1665 Hertsegovinan metropoliitta Vasilije, joka valitsi paikan osin suojaksi eteneviä osmaneja vastaan – samoissa luolissa oli ennen häntä asunut erakkona pyhä Isaija Onogoštilainen. Ylempi, kahteen luolaan louhittu kirkko koristeltiin freskoin, ja Vasilije johti laajennustyötä kuolemaansa 1671 asti, minkä jälkeen hänet julistettiin pyhäksi. Ostrog on nykyään Balkanin vierailluin pyhiinvaelluskohde: sinne saapuu vuosittain yli miljoona kävijää kaikista uskonnoista.
+- [Moldova — maalehti / Historia: Luola kaiverrettiin kallioon] 1200-luvulta — Räutin joen mutkassa kohoaa kalkkikivijyrkänne, johon ortodoksimunkit kaivoivat luolaluostarin 1200-luvulla. Kammioissa asuttiin lähes 1700-luvun loppuun, kunnes paikka autioitui vuosisadoiksi. Samaan jyrkänteeseen ja sen alle kerrostuu yli 2000 vuotta historiaa: geto-daakialainen linnavuori, Kultaisen ordan aikainen kaupunki ja Tsehi Suuren 1400-luvulla rakennuttama linnoitus. Moldovan itsenäistyttyä 1991 munkit palasivat luoliin vuonna 1996 ensi kertaa vuosikymmeniin, siivosivat kammiot ja aloittivat rukoukset uudelleen samoissa kallioon hakatuissa seinissä.
+
+### 2.1
+KYSYMYS: Kuka perusti luostarin kallioon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ostrogin luostari (kulttuuri)
+Tietoruudun teksti: Ostrogin luostari on serbiortodoksinen luostari lähellä Danilovgradia Montenegrossa. Se on rakennettu lähes pystysuoraan kallioseinämään Ostroška Greda -kallioon. Luostarin perusti 1600-luvun alussa Hertsegovinan metropoliitta Vasilije Jovanović, Ostrogin pyhä Basileios, joka kuoli siellä vuonna 1671; hänen pyhäinjäännöksensä lepäävät luolakirkossa. Vuosina 1923–1926 luostari rakennettiin uudelleen suuren tulipalon jälkeen, mutta kaksi alkuperäistä luolakirkkoa säilyi. Pyhiinvaeltajat kulkevat perinteisesti alaluostarilta yläluostarille noin kolme kilometriä, monet paljain jaloin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Historia: Luostari joka kasvoi kalliosta] 1665–1671 — Korkealle Ostroškan kallioseinämään on veistetty luostari, joka näyttää kasvaneen suoraan vuoresta. Sen perusti 1665 Hertsegovinan metropoliitta Vasilije, joka valitsi paikan osin suojaksi eteneviä osmaneja vastaan – samoissa luolissa oli ennen häntä asunut erakkona pyhä Isaija Onogoštilainen. Ylempi, kahteen luolaan louhittu kirkko koristeltiin freskoin, ja Vasilije johti laajennustyötä kuolemaansa 1671 asti, minkä jälkeen hänet julistettiin pyhäksi. Ostrog on nykyään Balkanin vierailluin pyhiinvaelluskohde: sinne saapuu vuosittain yli miljoona kävijää kaikista uskonnoista.
+- [Moldova — maalehti / Historia: Luola kaiverrettiin kallioon] 1200-luvulta — Räutin joen mutkassa kohoaa kalkkikivijyrkänne, johon ortodoksimunkit kaivoivat luolaluostarin 1200-luvulla. Kammioissa asuttiin lähes 1700-luvun loppuun, kunnes paikka autioitui vuosisadoiksi. Samaan jyrkänteeseen ja sen alle kerrostuu yli 2000 vuotta historiaa: geto-daakialainen linnavuori, Kultaisen ordan aikainen kaupunki ja Tsehi Suuren 1400-luvulla rakennuttama linnoitus. Moldovan itsenäistyttyä 1991 munkit palasivat luoliin vuonna 1996 ensi kertaa vuosikymmeniin, siivosivat kammiot ja aloittivat rukoukset uudelleen samoissa kallioon hakatuissa seinissä.
+
+### 2.2
+KYSYMYS: Mikä säilyi vuoden 1923 palosta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ostrogin luostari (kulttuuri)
+Tietoruudun teksti: Ostrogin luostari on serbiortodoksinen luostari lähellä Danilovgradia Montenegrossa. Se on rakennettu lähes pystysuoraan kallioseinämään Ostroška Greda -kallioon. Luostarin perusti 1600-luvun alussa Hertsegovinan metropoliitta Vasilije Jovanović, Ostrogin pyhä Basileios, joka kuoli siellä vuonna 1671; hänen pyhäinjäännöksensä lepäävät luolakirkossa. Vuosina 1923–1926 luostari rakennettiin uudelleen suuren tulipalon jälkeen, mutta kaksi alkuperäistä luolakirkkoa säilyi. Pyhiinvaeltajat kulkevat perinteisesti alaluostarilta yläluostarille noin kolme kilometriä, monet paljain jaloin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kööpenhamina — kaupunkilehti / Historian hetki: Christiansborg 1884 — savu valtaosien alla] 3.10.1884 — Vartija pysähtyy käytävällä ja nuuskii ilmaa — hajussa on jotain, joka ei kuulu perjantai-iltapäivään Christiansborgin linnassa. Se on 3. lokakuuta 1884, ja savu nousee huoneesta aivan Riddersalenin, ritarisalin, alapuolelta, missä vanha kaakeliuuni on juuri sytyttänyt jotain palamaan. Kukaan ei vielä tiedä, että linnan seinien sisällä on vuosikymmenten aikana syntynyt lukemattomia onttoja välitiloja, jotka vetävät liekkiä eteenpäin kuin savupiiput. Palokunta saapuu nopeasti, mutta tuli leviää käytävästä käytävään nopeammin kuin kukaan osaa sitä pysäyttää. Yön aikana koko linnan päärakennus — valtiopäivien, hallituksen ja kuninkaan asuintilojen koti — palaa lähes tyhjäksi kuorek…
+- [Espanja — maalehti / Historian hetki: Palos de la Frontera 1492 — kolme laivaa laskuveden mukana] 3.8.1492 — Santa Marían nuori laivapoika kuuntelee Palosin kirkonkelloja ja yrittää olla näyttämättä, ettei ole koskaan ollut avomerellä. Hänen ympärillään kaikki tuntevat toisensa: karavelleja Pintaa ja Niñaa luotsaavat paikkakunnan omat merenkulkijat, veljekset Martín Alonso ja Vicente Yáñez Pinzón, ja miehistö on värvätty naapureista Palosista ja Moguerista. Laiturilla seisova väki tuntee lähtijät nimeltä, ja se on pojan onni ja pelko yhtä aikaa. Aamu on juuri valjennut. Río Tinton suistossa vesi laskee, ja juuri sitä on odotettu: laskuvesi vie laivat merelle ilman soutua. Suurin aluksista on Santa María, pyöreärunkoinen nao, jonka omistaa Juan de la Cosa ja jota Kolumbus itse komentaa. …
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:taran-kanjoni) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taran kanjoni (luonto · joki)
+Tietoruudun teksti: Tara on 146 kilometriä pitkä joki, joka virtaa Montenegrossa ja liittyy Drinaan. Sen kanjoni on syvimmillään noin 1 300 metriä, ja se kuuluu Durmitorin kansallispuiston Unescon maailmanperintökohteeseen. Lähellä on Žabljakin vuoristokaupunki, joka toimii koskenlaskun tukikohtana. Đurđevića Taran silta on rakennettu vuosina 1937–1940, ja se on 365 metriä pitkä ja noin 170 metriä joen yläpuolella. Partisaanit räjäyttivät sen yhden kaaren toisessa maailmansodassa, ja silta korjattiin 1946.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wellington — kaupunkilehti / Wellington] Pohjoissaaren lounaiskärkeen, sataman ja jyrkkien mäkien väliin puristunut pääkaupunki Cookinsalmen rannalla. Sataman māorinkielinen nimi Te Whanganui-a-Tara tarkoittaa Taran suurta satamaa.
+- [Dubrovnik — kohdekartta / Kohdekartta: Sponzan palatsi] 1516–1522 Sponzan palatsi rakennettiin vuosina 1516–1522 arkkitehti Paskoje Miličevićin suunnitelmien mukaan, ja se yhdistelee kahta tyyliä: osa rakennuksesta on goottilaista, osa renessanssia. Nimi 'Sponza' tulee latinan sanasta, joka tarkoittaa paikkaa, johon sadevesi kerääntyy - katoilta valuva vesi kerääntyi juuri tämän talon pihalle. Palatsissa toimi melkein kaikki, mitä kaupungin talouselämä tarvitsi: tulli, tavaravarasto, rahapaja, asevarasto ja pankki, kaikki saman katon alla! Sisäpihan holvikäytävässä kauppiaat punnitsivat tavaransa julkisesti niin, ettei kukaan voinut huijata - seinään oli hakattu latinankielinen muistutus rehellisyydestä. Kun valtava maanjäristys tuhosi suuren os…
+- [Bosnia ja Hertsegovina — maalehti / Historia: Kuningas kruunattiin, ja linna jäi pääkaupungiksi] 1377 — Tvrtko I Kotromanić kruunattiin Bosnian kuninkaaksi vuonna 1377, ja hänen hallintoaikanaan Bosnian kuningaskunta laajeni suurimpaan koskaan ulottuvuuteensa. Kuninkaiden pääasiallinen linnoitus oli Bobovac keskisessä Bosniassa: sinne oli koottu valtakunnan kruununjalokivet ja kuninkaiden haudat, eikä sinne johtanut kunnollista tietä turvallisuussyistä. Bobovac kesti Ottomaanien piirityksiä vuosikymmeniä, kunnes se kavallettiin vihollisille vuonna 1463 — samana vuonna Bosnian viimeinen kuningas Stjepan Tomašević vangittiin ja teloitettiin Jajcessa, ja itsenäinen keskiaikainen Bosnia lakkasi olemasta.
+
+### 3.1
+KYSYMYS: Kuinka syvä Taran kanjoni on syvimmillään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taran kanjoni (luonto · joki)
+Tietoruudun teksti: Tara on 146 kilometriä pitkä joki, joka virtaa Montenegrossa ja liittyy Drinaan. Sen kanjoni on syvimmillään noin 1 300 metriä, ja se kuuluu Durmitorin kansallispuiston Unescon maailmanperintökohteeseen. Lähellä on Žabljakin vuoristokaupunki, joka toimii koskenlaskun tukikohtana. Đurđevića Taran silta on rakennettu vuosina 1937–1940, ja se on 365 metriä pitkä ja noin 170 metriä joen yläpuolella. Partisaanit räjäyttivät sen yhden kaaren toisessa maailmansodassa, ja silta korjattiin 1946.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wellington — kaupunkilehti / Wellington] Pohjoissaaren lounaiskärkeen, sataman ja jyrkkien mäkien väliin puristunut pääkaupunki Cookinsalmen rannalla. Sataman māorinkielinen nimi Te Whanganui-a-Tara tarkoittaa Taran suurta satamaa.
+
+### 3.2
+KYSYMYS: Mitä Đurđevića Taran sillalle tapahtui toisessa maailmansodassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taran kanjoni (luonto · joki)
+Tietoruudun teksti: Tara on 146 kilometriä pitkä joki, joka virtaa Montenegrossa ja liittyy Drinaan. Sen kanjoni on syvimmillään noin 1 300 metriä, ja se kuuluu Durmitorin kansallispuiston Unescon maailmanperintökohteeseen. Lähellä on Žabljakin vuoristokaupunki, joka toimii koskenlaskun tukikohtana. Đurđevića Taran silta on rakennettu vuosina 1937–1940, ja se on 365 metriä pitkä ja noin 170 metriä joen yläpuolella. Partisaanit räjäyttivät sen yhden kaaren toisessa maailmansodassa, ja silta korjattiin 1946.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wellington — kaupunkilehti / Wellington] Pohjoissaaren lounaiskärkeen, sataman ja jyrkkien mäkien väliin puristunut pääkaupunki Cookinsalmen rannalla. Sataman māorinkielinen nimi Te Whanganui-a-Tara tarkoittaa Taran suurta satamaa.
+- [Dubrovnik — kohdekartta / Kohdekartta: Sponzan palatsi] 1516–1522 Sponzan palatsi rakennettiin vuosina 1516–1522 arkkitehti Paskoje Miličevićin suunnitelmien mukaan, ja se yhdistelee kahta tyyliä: osa rakennuksesta on goottilaista, osa renessanssia. Nimi 'Sponza' tulee latinan sanasta, joka tarkoittaa paikkaa, johon sadevesi kerääntyy - katoilta valuva vesi kerääntyi juuri tämän talon pihalle. Palatsissa toimi melkein kaikki, mitä kaupungin talouselämä tarvitsi: tulli, tavaravarasto, rahapaja, asevarasto ja pankki, kaikki saman katon alla! Sisäpihan holvikäytävässä kauppiaat punnitsivat tavaransa julkisesti niin, ettei kukaan voinut huijata - seinään oli hakattu latinankielinen muistutus rehellisyydestä. Kun valtava maanjäristys tuhosi suuren os…
+- [Bosnia ja Hertsegovina — maalehti / Historia: Kuningas kruunattiin, ja linna jäi pääkaupungiksi] 1377 — Tvrtko I Kotromanić kruunattiin Bosnian kuninkaaksi vuonna 1377, ja hänen hallintoaikanaan Bosnian kuningaskunta laajeni suurimpaan koskaan ulottuvuuteensa. Kuninkaiden pääasiallinen linnoitus oli Bobovac keskisessä Bosniassa: sinne oli koottu valtakunnan kruununjalokivet ja kuninkaiden haudat, eikä sinne johtanut kunnollista tietä turvallisuussyistä. Bobovac kesti Ottomaanien piirityksiä vuosikymmeniä, kunnes se kavallettiin vihollisille vuonna 1463 — samana vuonna Bosnian viimeinen kuningas Stjepan Tomašević vangittiin ja teloitettiin Jajcessa, ja itsenäinen keskiaikainen Bosnia lakkasi olemasta.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:biogradska-gora) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biogradska Gora (luonto · vuori)
+Tietoruudun teksti: Biogradska Gora on kansallispuisto Montenegron keskiosassa Bjelasican vuoristossa, Taran ja Limin jokien välissä. Se julistettiin kansallispuistoksi 1952, ja Unescon Ihminen ja biosfääri -ohjelman suoja lisättiin 1977. Puiston pinta-ala on 54 neliökilometriä, ja siitä 16 neliökilometriä on aarniometsää, jossa kasvaa yli viisisataa vuotta vanhoja puita. Metsän keskellä on Biogradskojärvi, puiston suurin jääkausijärvi; viisi muuta jääkausijärveä sijaitsee 1 820 metrin korkeudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Aarniometsän ydin aidattiin] 1858 — Šumavan vuorilla Etelä-Böömissä kasvaa metsä, jota ei ole koskaan hakattu: Boubínský prales. Metsänhoitaja Josef John sai sen suojeluun jo vuonna 1858, mikä tekee siitä Tšekin kolmanneksi vanhimman luonnonsuojelualueen. Vanhimmat puut ovat 400–500 vuoden ikäisiä, ja kuuluisin niistä oli Kuusten kuningas, jonka lumimyrsky kaatoi vuonna 1970. Metsän ydin on aidattu, jotta kävijät ja peurat eivät talloisi taimia. Kaatuneet rungot jätetään maahan lahoamaan, sillä niiden päältä nousee uusi puusukupolvi.
+
+### 4.1
+KYSYMYS: Kuinka vanhoja aarniometsän puut ovat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biogradska Gora (luonto · vuori)
+Tietoruudun teksti: Biogradska Gora on kansallispuisto Montenegron keskiosassa Bjelasican vuoristossa, Taran ja Limin jokien välissä. Se julistettiin kansallispuistoksi 1952, ja Unescon Ihminen ja biosfääri -ohjelman suoja lisättiin 1977. Puiston pinta-ala on 54 neliökilometriä, ja siitä 16 neliökilometriä on aarniometsää, jossa kasvaa yli viisisataa vuotta vanhoja puita. Metsän keskellä on Biogradskojärvi, puiston suurin jääkausijärvi; viisi muuta jääkausijärveä sijaitsee 1 820 metrin korkeudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Aarniometsän ydin aidattiin] 1858 — Šumavan vuorilla Etelä-Böömissä kasvaa metsä, jota ei ole koskaan hakattu: Boubínský prales. Metsänhoitaja Josef John sai sen suojeluun jo vuonna 1858, mikä tekee siitä Tšekin kolmanneksi vanhimman luonnonsuojelualueen. Vanhimmat puut ovat 400–500 vuoden ikäisiä, ja kuuluisin niistä oli Kuusten kuningas, jonka lumimyrsky kaatoi vuonna 1970. Metsän ydin on aidattu, jotta kävijät ja peurat eivät talloisi taimia. Kaatuneet rungot jätetään maahan lahoamaan, sillä niiden päältä nousee uusi puusukupolvi.
+
+### 4.2
+KYSYMYS: Mikä on puiston suurin jääkausijärvi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biogradska Gora (luonto · vuori)
+Tietoruudun teksti: Biogradska Gora on kansallispuisto Montenegron keskiosassa Bjelasican vuoristossa, Taran ja Limin jokien välissä. Se julistettiin kansallispuistoksi 1952, ja Unescon Ihminen ja biosfääri -ohjelman suoja lisättiin 1977. Puiston pinta-ala on 54 neliökilometriä, ja siitä 16 neliökilometriä on aarniometsää, jossa kasvaa yli viisisataa vuotta vanhoja puita. Metsän keskellä on Biogradskojärvi, puiston suurin jääkausijärvi; viisi muuta jääkausijärveä sijaitsee 1 820 metrin korkeudessa.
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:stari-bar) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stari Bar (historia)
+Tietoruudun teksti: Stari Bar on raunioitunut keskiaikainen kaupunki Montenegrossa, noin kolmen kilometrin päässä Adrianmeren rannikolla sijaitsevasta uudesta Barista. Se seisoo vuoren rinteellä 184 metrin korkeudessa. Varhaisella keskiajalla paikka kuului Bysantille, ja Stefan Vojislav liitti sen valtaansa noin vuonna 1040. Kaupunki tuhoutui pitkälti vuosien 1877–1878 piirityksessä, ja vuoden 1979 maanjäristys vaurioitti raunioita uudelleen. Osmanniajan akveduktin kunnostuksen jälkeen ihmiset ovat alkaneet palata alueelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kaupunkilehti / Historian hetki: Bernauer Straße 1961 — piikkilanka kadun poikki] 13.8.1961 — Ilmavasaroiden ääni herättää Bernauer Straßen ennen aamunkoittoa. On sunnuntai 13. elokuuta 1961, ja keskiyöllä Itä-Saksan poliisi, armeija ja tehtaiden taisteluryhmät ovat alkaneet sulkea rajaa Länsi-Berliiniin: katukiveys revitään, betonipylväät nostetaan pystyyn, piikkilanka vedetään väliin 43 kilometrin matkalle kaupungin halki. Kadulla, jolla talot ovat itää ja jalkakäytävä länttä, ihmiset seisovat yöpuvuissaan ja katselevat. Kaksi kuukautta aiemmin Walter Ulbricht oli sanonut lehdistötilaisuudessa, ettei kenelläkään ole aikomusta rakentaa muuria; edellisenä iltana hän allekirjoitti käskyn hallituksen vierastalossa Döllnseellä. Sulkemisen syy on yksinkertainen: DDR:stä on l…
+- [Berliini — kohdekartta / Kohdekartta: Muuri 1961] Ilmavasaroiden ääni herättää Bernauer Straßen ennen aamunkoittoa. On sunnuntai 13. elokuuta 1961, ja keskiyöllä Itä-Saksan poliisi, armeija ja tehtaiden taisteluryhmät ovat alkaneet sulkea rajaa Länsi-Berliiniin: katukiveys revitään, betonipylväät nostetaan pystyyn, piikkilanka vedetään väliin 43 kilometrin matkalle kaupungin halki. Kadulla, jolla talot ovat itää ja jalkakäytävä länttä, ihmiset seisovat yöpuvuissaan ja katselevat. Kaksi kuukautta aiemmin Walter Ulbricht oli sanonut lehdistötilaisuudessa, ettei kenelläkään ole aikomusta rakentaa muuria; edellisenä iltana hän allekirjoitti käskyn hallituksen vierastalossa Döllnseellä. Sulkemisen syy on yksinkertainen: DDR:stä on lähtenyt vuod…
+
+### 5.1
+KYSYMYS: Kuinka korkealla Stari Bar sijaitsee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stari Bar (historia)
+Tietoruudun teksti: Stari Bar on raunioitunut keskiaikainen kaupunki Montenegrossa, noin kolmen kilometrin päässä Adrianmeren rannikolla sijaitsevasta uudesta Barista. Se seisoo vuoren rinteellä 184 metrin korkeudessa. Varhaisella keskiajalla paikka kuului Bysantille, ja Stefan Vojislav liitti sen valtaansa noin vuonna 1040. Kaupunki tuhoutui pitkälti vuosien 1877–1878 piirityksessä, ja vuoden 1979 maanjäristys vaurioitti raunioita uudelleen. Osmanniajan akveduktin kunnostuksen jälkeen ihmiset ovat alkaneet palata alueelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Vuori joka halkeaa kahtia] nykyään — Velebit-vuoriston eteläisillä rinteillä Paklenica halkeaa kahdeksi jyrkkäseinäiseksi kalkkikivirotkoksi, Velika ja Mala Paklenicaksi. Vuosituhansien aikana virtaava vesi on syövyttänyt vuoreen kapean, satoja metrejä syvän kanjonin, jonka pystysuorat seinämät houkuttelevat kalliokiipeilijöitä ympäri Eurooppaa. Rotkon pohjalla kulkeva polku on varjoisa ja viileä silloinkin, kun Dalmatian rannikolla paahtaa kesähelle. Paklenica on yksi Kroatian vanhimmista kansallispuistoista ja sijaitsee lähellä Starigradin kaupunkia.
+
+### 5.2
+KYSYMYS: Mikä rakennelma kunnostettiin, minkä jälkeen ihmiset ovat alkaneet palata?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stari Bar (historia)
+Tietoruudun teksti: Stari Bar on raunioitunut keskiaikainen kaupunki Montenegrossa, noin kolmen kilometrin päässä Adrianmeren rannikolla sijaitsevasta uudesta Barista. Se seisoo vuoren rinteellä 184 metrin korkeudessa. Varhaisella keskiajalla paikka kuului Bysantille, ja Stefan Vojislav liitti sen valtaansa noin vuonna 1040. Kaupunki tuhoutui pitkälti vuosien 1877–1878 piirityksessä, ja vuoden 1979 maanjäristys vaurioitti raunioita uudelleen. Osmanniajan akveduktin kunnostuksen jälkeen ihmiset ovat alkaneet palata alueelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kaupunkilehti / Historian hetki: Bernauer Straße 1961 — piikkilanka kadun poikki] 13.8.1961 — Ilmavasaroiden ääni herättää Bernauer Straßen ennen aamunkoittoa. On sunnuntai 13. elokuuta 1961, ja keskiyöllä Itä-Saksan poliisi, armeija ja tehtaiden taisteluryhmät ovat alkaneet sulkea rajaa Länsi-Berliiniin: katukiveys revitään, betonipylväät nostetaan pystyyn, piikkilanka vedetään väliin 43 kilometrin matkalle kaupungin halki. Kadulla, jolla talot ovat itää ja jalkakäytävä länttä, ihmiset seisovat yöpuvuissaan ja katselevat. Kaksi kuukautta aiemmin Walter Ulbricht oli sanonut lehdistötilaisuudessa, ettei kenelläkään ole aikomusta rakentaa muuria; edellisenä iltana hän allekirjoitti käskyn hallituksen vierastalossa Döllnseellä. Sulkemisen syy on yksinkertainen: DDR:stä on l…
+- [Berliini — kohdekartta / Kohdekartta: Muuri 1961] Ilmavasaroiden ääni herättää Bernauer Straßen ennen aamunkoittoa. On sunnuntai 13. elokuuta 1961, ja keskiyöllä Itä-Saksan poliisi, armeija ja tehtaiden taisteluryhmät ovat alkaneet sulkea rajaa Länsi-Berliiniin: katukiveys revitään, betonipylväät nostetaan pystyyn, piikkilanka vedetään väliin 43 kilometrin matkalle kaupungin halki. Kadulla, jolla talot ovat itää ja jalkakäytävä länttä, ihmiset seisovat yöpuvuissaan ja katselevat. Kaksi kuukautta aiemmin Walter Ulbricht oli sanonut lehdistötilaisuudessa, ettei kenelläkään ole aikomusta rakentaa muuria; edellisenä iltana hän allekirjoitti käskyn hallituksen vierastalossa Döllnseellä. Sulkemisen syy on yksinkertainen: DDR:stä on lähtenyt vuod…
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

@@ -1,0 +1,116 @@
+================ KOHTA 6 (kohde:plavjarvi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plavjärvi (luonto · järvi)
+Tietoruudun teksti: Plavjärvi sijaitsee Montenegron koillisosassa Plavin kunnassa Prokletijen eli Kirottujen vuorten ja Visitor-vuoriston välissä. Sen pinta-ala on noin 1,99 km², pituus noin 2,2 km ja pinta 906 metrin korkeudessa. Järvi on matala, keskisyvyydeltään vain noin yhdeksän metriä, ja sen pohjassa on kalkkikiviluolia sekä lukuisia lähteitä, joista vesi pulppuaa maasta. Vesi virtaa pois Lim-jokeen.
+
+### 6.1
+KYSYMYS: Minkä vuoriston juurella Plavjärvi on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plavjärvi (luonto · järvi)
+Tietoruudun teksti: Plavjärvi sijaitsee Montenegron koillisosassa Plavin kunnassa Prokletijen eli Kirottujen vuorten ja Visitor-vuoriston välissä. Sen pinta-ala on noin 1,99 km², pituus noin 2,2 km ja pinta 906 metrin korkeudessa. Järvi on matala, keskisyvyydeltään vain noin yhdeksän metriä, ja sen pohjassa on kalkkikiviluolia sekä lukuisia lähteitä, joista vesi pulppuaa maasta. Vesi virtaa pois Lim-jokeen.
+
+### 6.2
+KYSYMYS: Mihin jokeen Plavjärven vesi virtaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plavjärvi (luonto · järvi)
+Tietoruudun teksti: Plavjärvi sijaitsee Montenegron koillisosassa Plavin kunnassa Prokletijen eli Kirottujen vuorten ja Visitor-vuoriston välissä. Sen pinta-ala on noin 1,99 km², pituus noin 2,2 km ja pinta 906 metrin korkeudessa. Järvi on matala, keskisyvyydeltään vain noin yhdeksän metriä, ja sen pohjassa on kalkkikiviluolia sekä lukuisia lähteitä, joista vesi pulppuaa maasta. Vesi virtaa pois Lim-jokeen.
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:lovcen-njegosin-mausoleumi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lovćen ja Njegošin mausoleumi (historia)
+Tietoruudun teksti: Njegošin mausoleumi seisoo Lovćenin vuoren Jezerski Vrh -huipulla, 1 657 metrin korkeudessa. Cetinjestä sinne johtaa noin 21 kilometrin asfalttitie. Petar II Petrović-Njegoš suunnitteli huipulle kappelin vuonna 1845 ja valitsi paikan itse hautapaikakseen; hänen jäännöksensä siirrettiin vuorelle 1855. Kappeli vaurioitui ensimmäisessä maailmansodassa, rakennettiin uudelleen 1925 ja purettiin 1960-luvun lopulla. Ivan Meštrovićin suunnittelema nykyinen mausoleumi vihittiin käyttöön 1974, ja sen sisäänkäyntiä kantavat patsaat esittävät montenegrolaisia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kašgar — kaupunkilehti / Kašgar: Pyhäkkö, jossa lepää viisi sukupolvea] Kolmen ja puolen kilometrin päässä keskustasta koilliseen seisoo Afaq Khojan mausoleumi, alueen pyhin muslimikohde. Se rakennettiin noin vuonna 1640 keskiaasialaisen sufiopettajan Muhammad Yusufin haudaksi, ja hänen poikansa Afaq Khoja haudattiin sinne 1694. Kaakeloituun hautaan on aikojen kuluessa laskettu saman suvun viisi sukupolvea, kaikkiaan seitsemänkymmentäkaksi vainajaa. Keskellä on seitsemäntoista metriä leveä kupoli ja nurkissa neljä raidallista minareettia; haudat on peitetty värikkäillä silkeillä. Afaq Khoja hallitsi aikanaan Kašgarin lisäksi Khotania, Yarkandia, Korlaa, Kuchaa ja Aksua.
+- [Samarkand — kohdekartta / Kohdekartta: Khoja Doniyorin mausoleumi] 1900-luvun alku Mausoleumi on Afrasiyabin kummun itälaidalla Siyob-puron varressa, ja se on Samarkandin tunnetuimpia pyhiä paikkoja. Rakennus on suorakaiteen muotoinen, noin viisitoista metriä pitkä sali, jonka katolla on viisi kupolia. Se on 1900-luvun alusta, mutta paikka on vanha: Abu Tahirhojan teoksen "Samaria" mukaan Khoja Doniyor oli Qutham ibn Abbasin seuralaisia, ja perimätiedon mukaan Timur rakennutti haudan päälle moskeijan. Paikan erikoisuus on se, että kolmen uskonnon — islamin, kristinuskon ja juutalaisuuden — perinteissä esiintyy sama nimi: Doniyor, Daniil, Daniel. Siksi mausoleumilla käy kaikkien kolmen perinteen edustajia. Hautakammion vieressä on lähde, jota pidetään siuna…
+
+### 7.1
+KYSYMYS: Kuka suunnitteli nykyisen mausoleumin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lovćen ja Njegošin mausoleumi (historia)
+Tietoruudun teksti: Njegošin mausoleumi seisoo Lovćenin vuoren Jezerski Vrh -huipulla, 1 657 metrin korkeudessa. Cetinjestä sinne johtaa noin 21 kilometrin asfalttitie. Petar II Petrović-Njegoš suunnitteli huipulle kappelin vuonna 1845 ja valitsi paikan itse hautapaikakseen; hänen jäännöksensä siirrettiin vuorelle 1855. Kappeli vaurioitui ensimmäisessä maailmansodassa, rakennettiin uudelleen 1925 ja purettiin 1960-luvun lopulla. Ivan Meštrovićin suunnittelema nykyinen mausoleumi vihittiin käyttöön 1974, ja sen sisäänkäyntiä kantavat patsaat esittävät montenegrolaisia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kašgar — kohdekartta / Kohdekartta: Yusuf Khass Hajibin mausoleumi] runoilija kuoli 1077, mausoleumi 1865 Yusuf Khass Hajib syntyi noin vuonna 1019 Balasagunissa, kara-hanidien pääkaupungissa nykyisen Kirgisian alueella. Hän aloitti pääteoksensa Kutadgu Biligin kotikaupungissaan ja sai sen valmiiksi Kašgarissa vuosina 1069–1070. Kun hän luovutti sen Kašgarin ruhtinaalle, tämä antoi hänelle arvonimen khass hajib, suunnilleen ylikamariherra. Kutadgu Bilig eli ”onnea tuova tieto” on ensimmäinen islamilaisten turkkilaisten kielellä kirjoitettu teos. Se on hallitsijanpeili: neljä päähenkilöä edustavat kukin yhtä abstraktia periaatetta, ja runomitta on arabialainen mutaqarib, yksitoistatavuisia riimipareja — ensimmäinen kerta, kun sitä sovellettiin turkkilaiskiel…
+- [Montenegro — maalehti / Historia: 461 porrasta pilviin] 1851–1974 — Petar II Petrović-Njegoš oli sekä Montenegron ruhtinaspiispa että maan tärkein runoilija, ja hänen toiveensa oli levätä Lovćenin vuoren huipulla. Kuoltuaan 1851 hänet haudattiin sinne pieneen kappeliin. Ensimmäisessä maailmansodassa Itävalta-Unkarin miehittäjät halusivat pystyttää huipulle muistomerkin keisari Franz Josefille ja vaativat jäännökset siirrettäväksi Cetinjeen; kappeli rappeutui pahoin. Vasta 1970-luvulla kroatialainen kuvanveistäjä Ivan Meštrović sai valmiiksi uuden mausoleumin Jezerski vrhin huipulle, 1660 metrin korkeuteen. Huipulle kiipeää 461 kiviporrasta, ja mausoleumia pidetään maailman korkeimpana.
+
+### 7.2
+KYSYMYS: Minkä huipun päällä mausoleumi seisoo?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lovćen ja Njegošin mausoleumi (historia)
+Tietoruudun teksti: Njegošin mausoleumi seisoo Lovćenin vuoren Jezerski Vrh -huipulla, 1 657 metrin korkeudessa. Cetinjestä sinne johtaa noin 21 kilometrin asfalttitie. Petar II Petrović-Njegoš suunnitteli huipulle kappelin vuonna 1845 ja valitsi paikan itse hautapaikakseen; hänen jäännöksensä siirrettiin vuorelle 1855. Kappeli vaurioitui ensimmäisessä maailmansodassa, rakennettiin uudelleen 1925 ja purettiin 1960-luvun lopulla. Ivan Meštrovićin suunnittelema nykyinen mausoleumi vihittiin käyttöön 1974, ja sen sisäänkäyntiä kantavat patsaat esittävät montenegrolaisia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kašgar — kohdekartta / Kohdekartta: Yusuf Khass Hajibin mausoleumi] runoilija kuoli 1077, mausoleumi 1865 Yusuf Khass Hajib syntyi noin vuonna 1019 Balasagunissa, kara-hanidien pääkaupungissa nykyisen Kirgisian alueella. Hän aloitti pääteoksensa Kutadgu Biligin kotikaupungissaan ja sai sen valmiiksi Kašgarissa vuosina 1069–1070. Kun hän luovutti sen Kašgarin ruhtinaalle, tämä antoi hänelle arvonimen khass hajib, suunnilleen ylikamariherra. Kutadgu Bilig eli ”onnea tuova tieto” on ensimmäinen islamilaisten turkkilaisten kielellä kirjoitettu teos. Se on hallitsijanpeili: neljä päähenkilöä edustavat kukin yhtä abstraktia periaatetta, ja runomitta on arabialainen mutaqarib, yksitoistatavuisia riimipareja — ensimmäinen kerta, kun sitä sovellettiin turkkilaiskiel…
+- [Kašgar — kaupunkilehti / Kašgar: Pyhäkkö, jossa lepää viisi sukupolvea] Kolmen ja puolen kilometrin päässä keskustasta koilliseen seisoo Afaq Khojan mausoleumi, alueen pyhin muslimikohde. Se rakennettiin noin vuonna 1640 keskiaasialaisen sufiopettajan Muhammad Yusufin haudaksi, ja hänen poikansa Afaq Khoja haudattiin sinne 1694. Kaakeloituun hautaan on aikojen kuluessa laskettu saman suvun viisi sukupolvea, kaikkiaan seitsemänkymmentäkaksi vainajaa. Keskellä on seitsemäntoista metriä leveä kupoli ja nurkissa neljä raidallista minareettia; haudat on peitetty värikkäillä silkeillä. Afaq Khoja hallitsi aikanaan Kašgarin lisäksi Khotania, Yarkandia, Korlaa, Kuchaa ja Aksua.
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:hahmotelma-zabljak-crnojevica) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žabljak Crnojevića (historia)
+Tietoruudun teksti: Žabljak Crnojevića oli Zetan ruhtinaskunnan linnoitettu pääkaupunki Skadarjärven rannalla, Stefan ja Ivan Crnojevićin hallintokeskus. Osmanit valtasivat sen Shkodran piirityksen yhteydessä 1478, ja pääkaupunki siirtyi lopulta Cetinjeen. Alue palasi Montenegron hallintaan vasta 1878 Berliinin kongressissa, 400 vuotta myöhemmin. Rauniot seisovat yhä järven rannalla.
+
+### 8.1
+KYSYMYS: Miltä Žabljak Crnojevića näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žabljak Crnojevića (historia)
+Tietoruudun teksti: Žabljak Crnojevića oli Zetan ruhtinaskunnan linnoitettu pääkaupunki Skadarjärven rannalla, Stefan ja Ivan Crnojevićin hallintokeskus. Osmanit valtasivat sen Shkodran piirityksen yhteydessä 1478, ja pääkaupunki siirtyi lopulta Cetinjeen. Alue palasi Montenegron hallintaan vasta 1878 Berliinin kongressissa, 400 vuotta myöhemmin. Rauniot seisovat yhä järven rannalla.
+
+### 8.2
+KYSYMYS: Miksi Žabljak Crnojevića on nykyään raunioina?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žabljak Crnojevića (historia)
+Tietoruudun teksti: Žabljak Crnojevića oli Zetan ruhtinaskunnan linnoitettu pääkaupunki Skadarjärven rannalla, Stefan ja Ivan Crnojevićin hallintokeskus. Osmanit valtasivat sen Shkodran piirityksen yhteydessä 1478, ja pääkaupunki siirtyi lopulta Cetinjeen. Alue palasi Montenegron hallintaan vasta 1878 Berliinin kongressissa, 400 vuotta myöhemmin. Rauniot seisovat yhä järven rannalla.
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
