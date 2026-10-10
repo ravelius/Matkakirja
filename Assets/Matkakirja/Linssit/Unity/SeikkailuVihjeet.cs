@@ -52,6 +52,7 @@ namespace Matkakirja.Natiivi
         bool Pyydetty()
         {
             var p = SeikkailuPelaaja.Aktiivinen; if (p == null) return false;
+            if (PimeaIlmanKynttilaa(p)) { KynttilaVihje(p, "pyyntö pimeässä"); return true; }   // kieli: ei (tekninen)
             int taso = ydin.Pyyda(Vaara(p));
             if (taso == 0) return true;   // liian pian: napautus käytetty, ei uutta vihjettä
             Nayta(p, taso, "pyyntö");   // kieli: ei (tekninen)
@@ -67,6 +68,23 @@ namespace Matkakirja.Natiivi
             if (ydin.Paivita(Time.deltaTime, Vaara(p), keskustelu || p.Eleessa) == 2) Nayta(p, 2, "jumi");
             Laituri(p);
             Kimallus(p);
+            if (!pimeaVihjeAnnettu && !p.Eleessa && PimeaIlmanKynttilaa(p)) { pimeaVihjeAnnettu = true; KynttilaVihje(p, "ensimmäinen pimeä"); }   // kieli: ei (tekninen)
+        }
+
+        /// <summary>KYNTTILÄVIHJE (PT:n Olavinlinna-suunnitelma B2, vaihtoehto B 11.10.; Laitetestaaja 11.10. a3: liekkinappi ilman selitystä):
+        /// kerran per peli ensimmäisellä pimeällä hetkellä (valoisuus alle SeikkailuNakyvyys.Pimea ja oma kynttilä sammuksissa) sekä aina
+        /// ☰ › Vihjeestä pimeässä ilman kynttilää: liekkinappi korostuu 3 s (Natiivi-UI SeikkailuTapit.KorostaToiminto) ja vihjeen kimallusääni.</summary>
+        bool pimeaVihjeAnnettu;
+        static bool PimeaIlmanKynttilaa(SeikkailuPelaaja p)
+        {
+            var ky = SeikkailuKynttilat.Aktiivinen;
+            return ky != null && ky.Ydin.OmaKynttila && !ky.Ydin.OmaPalaa && ky.OmaAsetettu == null && SeikkailuVartijat.PelaajanValoisuus(p) < SeikkailuNakyvyys.Pimea;
+        }
+        void KynttilaVihje(SeikkailuPelaaja p, string syy)
+        {
+            SeikkailuTapit.KorostaToiminto();
+            SeikkailuAanet.SoitaTaiVara("vihje-kimallus", "hopea-kilahdus", p.transform.position + Vector3.up, 0.3f);
+            kirjaa?.Invoke($"seikkailu: kynttilävihje ({syy})");
         }
 
         /// <summary>Kimalluksen valo seuraa ValoVihjeen kirkkautta; pelaajan etäisyys kohteeseen sammuttaa tason 3 sykkeen.</summary>

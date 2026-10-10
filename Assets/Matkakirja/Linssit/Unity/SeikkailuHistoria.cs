@@ -24,6 +24,8 @@ namespace Matkakirja.Natiivi
         public static bool Kaynnissa => ajossa != null;
         /// <summary>Avainsana nyt (DioraamaTaulu näyttää; null = ei).</summary>
         public static HistoriaVaihe Avainsana { get; private set; }
+        /// <summary>Historian vuosi nyt (Historiajana.Vuosi); DioraamaTaulu piilottaa huoneiden nimilaput ennen linnaa (PT B4). NaN = ei käynnissä.</summary>
+        public static double Vuosi { get; private set; } = double.NaN;
         /// <summary>Drone-kaaren alkuatsimuutti (kompassi) ja linnan keskipiste/säde Unityssa (SeikkailuNousun luvut).</summary>
         public static float AlkuAtsimuutti = 0f;   // siirtää koko kamerakäyrää (kohtauslistan atsimuutit ovat kompassisuuntia)
 
@@ -265,6 +267,7 @@ namespace Matkakirja.Natiivi
                 if (suunta.sqrMagnitude > 1e-6f) kamera.rotation = Quaternion.LookRotation(suunta, Vector3.up);
                 if (cam != null) cam.fieldOfView = (float)Historiajana.Fov;
                 double vuosi = h.Vuosi(t);
+                Vuosi = vuosi;
                 if (t >= seurLoki) { seurLoki += 5; kirjaa?.Invoke($"seikkailu: historia t={t:F1} vuosi {vuosi:F0} kamera {sij}"); }   // kuva-arkin aikaleimat
                 // Kivilinna rakentuu (arvio 3): kuori nousee vedestä leikkausrajan alta, muu linna (huoneet,
                 // esineet, hahmot, liekit, valot) pysyy piilossa, kunnes linna on valmis.
@@ -318,7 +321,7 @@ namespace Matkakirja.Natiivi
         {
             try
             {
-            Avainsana = null;
+            Avainsana = null; Vuosi = double.NaN;
             LinnaNakyviin(true);
             ValotLoppuun();   // historia päättyy: ei jätetä valoja himmeiksi (objekti tuhotaan)
             vaiheet?.Tuhoa(); vaiheet = null;
