@@ -5,6 +5,17 @@ Edellinen: viesti-natiiviseppa-luovutus-20261010-aamu.md (TILA-osiot 08.0x–11.
 Viestit: SendMessage-raja oli täynnä → varakanava mcp__ccd_session_mgmt__send_message (PT local_593b89a1…, Julkaisija local_22b29f10…,
 LS1 local_45a869de…, LS2 local_fc4fcc54…, NUI local_33ba1387…, Pelikoodari local_97810d35…, Sisältökirjuri local_256f6a15…).
 
+## TILA 15.1x — JUNA 178 RUNKO + MUSEOAJO
+- **JUNA 178 runko natiiviseppa/juna-178 = 350a97ac0** (wt proto-natiiviseppa-j175; BUILD 177 3d0c8c4a7 -puu + LS1 pallomerkit d74c8142c, opas-kori 063fba058;
+  Siirtoseppä palatsiraja 99b9fead3 (v47a, paketit 200); NUI pulu-pallovaisto 2c05d4700, tahdet-iso-v4 3b7e3d8c1 (kuva 200), paakaupungit-178-2 723a578f0;
+  Pelikoodari kultaiset 6e152384d — ehto täyttyi: #4344 mainissa + v648 14.55). L1307/P456/K460, unity 0, tarkista ok (Peli 455 kerran kuormassa, uusinnat 456 × 6).
+  Lisää muistia: ei. Käännöspalvelu KÄÄNNETTY 14.27 (195bde7c6-vaiheessa). Omistaja kerää junaan lisää bugeja; TF vasta omistajan luvalla (PT kertoo).
+  Muutoslokiluonnos lähetetty PT:lle 15.0x. Lukitus kuten 177: proto-kaanna.sh → juna/b13 → merge masteriin → SHA Julkaisijalle.
+- **MUSEO iPad 139bd24cd** (lokit/natiiviseppa-museomuisti-20261010-1426-m1-177): 2 avausta, 11 pysähdystä, vapaa kulku, sulku. Ei jetsameja/varoituksia,
+  min vapaa 2,4 Gt, fp huippu 2,68 Gt. Löydös: kahden patsaan rinnakkainen GLB-luku → hallittu keko 448 → 652 Mt. Korjaus **378daacc3** natiiviseppa/museo-muisti
+  (peräkkäin lähin ensin, verkko float-tauluista virtoina; unity 0, L1322) → museo-muisti-177 8dd197de0; varmistusajo PATSASKUVAT=1 ... 11 pyydetty Julkaisijalta.
+  LS1:lle kerrottava 378daacc3 (ei vielä taidemuseo-176:ssa).
+
 ## TILA 14.1x (uusi sessio tilinvaihdon jälkeen)
 - Unity 6.3 T7:llä tarkistettu: sisäisellä vain K63-kääntäjäketju 126 Mt (tarkoituksella), symlinkki ok, levy 73 Gi vapaana.
 - Museo: LS1 kytki patsaat (4b92767ed) → MuseoVeistokset-kohta TEHTY. Pohjaväri-kohta HYLÄTTY: kaikki 4 tekstuuritonta = Blenderin oletusvalkoinen
