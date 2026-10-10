@@ -7,7 +7,7 @@ Vaihe 0 tehty (konteksti, säädata Open-Meteo OK, malli).
 |---|---|---|---|---|---|---|---|
 | zagreb | ✓ | | | | | | |
 | belgrad | ✓ | | | | | | |
-| tirana | | | | | | | |
+| tirana | ✓ | | | | | | |
 | skopje | | | | | | | |
 | podgorica | | | | | | | |
 | chisinau | | | | | | | |
