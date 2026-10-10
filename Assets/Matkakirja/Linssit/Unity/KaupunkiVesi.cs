@@ -51,6 +51,48 @@ namespace Matkakirja.Natiivi
         /// <summary>Vettä piirretään (KaupunkiIlmakeha pitää taivaan arvot ajan tasalla veden heijastukselle, vaikka ilmakehä olisi pois).</summary>
         public static bool Nakyvissa;
 
+        // MITATTU VEDEN VÄRI (LS2 10.10.; Karttaseppä vesi/vari-v1, Sentinel-2): VesiPinta sekoittaa _Syva-sävyn mitattuun syvän ja matalan
+        // (rannan 0–15 m) veden väriin voimalla VariVoima; kärjen uv.y = vesistö (Ydin VesiVari.Tunniste: Tukholmassa 0 Saltsjön, 1 makea).
+        // Mitattu heijastus on ~2× nykyisen _Syva-sävyn tasoa, joten Kerroin skaalaa (kuvapari ratkaisee). Asetukset vesivari 0|1, vesivarikerroin.
+        public static bool Vari = true;
+        public static float VariKerroin = 0.5f;
+        static string variJson; static bool variPyydetty; static string variAvain;
+        static readonly int IdSyva0 = Shader.PropertyToID("_VesiSyva0"), IdSyva1 = Shader.PropertyToID("_VesiSyva1"),
+            IdMatala0 = Shader.PropertyToID("_VesiMatala0"), IdMatala1 = Shader.PropertyToID("_VesiMatala1"), IdVariVoima = Shader.PropertyToID("_VesiVariVoima");
+        string kohdeId;
+
+        static void AsetaVari(string kohde)
+        {
+            if (!Vari || kohde == null) { Shader.SetGlobalFloat(IdVariVoima, 0f); variAvain = null; return; }
+            string kausi = KaupunkiIlmakeha.Kausi(DateTime.Now.Month), avain = kohde + "/" + kausi + "/" + VariKerroin;
+            if (variJson == null)
+            {
+                Shader.SetGlobalFloat(IdVariVoima, 0f);
+                if (variPyydetty) return;
+                variPyydetty = true;
+                var r = UnityWebRequest.Get(VesiVari.Osoite); r.timeout = 20;
+                r.SendWebRequest().completed += _ =>
+                {
+                    if (r.result == UnityWebRequest.Result.Success) { variJson = r.downloadHandler.text; AsetaVari(kohde); }
+                    else { Debug.Log($"MATKAKIRJA kaupunki: veden väri ei latautunut ({r.error}), _Syva"); variPyydetty = false; }
+                    r.Dispose();
+                };
+                return;
+            }
+            if (avain == variAvain) return;
+            variAvain = avain;
+            var vedet = VesiVari.Vedet(kohde);
+            var a = vedet != null ? VesiVari.Hae(variJson, kohde, vedet[0], kausi) : null;
+            var b = vedet != null ? VesiVari.Hae(variJson, kohde, vedet[1], kausi) : null;
+            if (a == null || b == null) { Shader.SetGlobalFloat(IdVariVoima, 0f); Debug.Log($"MATKAKIRJA kaupunki: veden väri {kohde}/{kausi}: ei mittausta, _Syva"); return; }
+            Vector4 S(VesiVari.Vesi w) => new Vector4((float)w.SR, (float)w.SG, (float)w.SB, 0) * VariKerroin;
+            Vector4 M(VesiVari.Vesi w) => new Vector4((float)w.MR, (float)w.MG, (float)w.MB, 0) * VariKerroin;
+            Shader.SetGlobalVector(IdSyva0, S(a.Value)); Shader.SetGlobalVector(IdMatala0, M(a.Value));
+            Shader.SetGlobalVector(IdSyva1, S(b.Value)); Shader.SetGlobalVector(IdMatala1, M(b.Value));
+            Shader.SetGlobalFloat(IdVariVoima, 1f);
+            Debug.Log($"MATKAKIRJA kaupunki: veden väri {kohde}/{kausi} ×{VariKerroin:F2}: {vedet[0]} {a.Value}; {vedet[1]} {b.Value}");
+        }
+
         // VANAT (PT 9.10., omistaja TF 168): LS1:n ElavaKaupunki kutsuu joka kehys jokaiselle näkyvälle veneelle; VesiPinta piirtää
         // kameraa lähimmät 16 (Ydin VesiVanat: kiila, keskivana, keula-aalto; vanhentuneet 0,5 s:n jälkeen pois).
         static readonly VesiVanat vanat = new VesiVanat();
@@ -126,6 +168,7 @@ namespace Matkakirja.Natiivi
             }
             Debug.Log($"MATKAKIRJA kaupunki: vesi indeksi {(indeksi != null ? "ok" : "PUUTTUU")}, kohde {k ?? "-"}");
             if (k == null || tama != avaus || Pakotettu == null && Array.IndexOf(OletusKohteet, k) < 0) yield break;
+            kohdeId = k;
             string pohja = juuriUrl + (string.IsNullOrEmpty(tiedosto) ? k : tiedosto);
             VesiVerkko l = null, ka = null, ka2 = null; (double Lat, double Lon)? origo = null;
             var (ruudut, raja) = VesiIndeksi.Tasot(tarkkuudet);
@@ -179,6 +222,7 @@ namespace Matkakirja.Natiivi
             if (juuri.activeSelf != nakyy) juuri.SetActive(nakyy);
             if (!nakyy) return;
             Nakyvissa = true;
+            AsetaVari(kohdeId);
             LahetaVanat(kamera);
             for (int n = 0; n < PalojaKehyksessa && jono.Count > 0; n++)
             {
@@ -206,7 +250,8 @@ namespace Matkakirja.Natiivi
             v.Unityyn(i, NostoM, paikat, ranta, kolmiot);
             var m = new Mesh { name = $"Vesi {(taso == 0 ? "6m" : taso == 1 ? "16m" : "48m")} {i}", indexFormat = UnityEngine.Rendering.IndexFormat.UInt32 };
             m.SetVertices(paikat.Select(x => new Vector3(x.X, x.Y, x.Z)).ToList());
-            m.SetUVs(0, ranta.Select(d => new Vector2(d, 0)).ToList());
+            // uv.y = vesistö (VesiVari.Tunniste; Unity-paikka: x itä, y ylös nostolla, z pohjoinen).
+            m.SetUVs(0, ranta.Select((d, n) => new Vector2(d, VesiVari.Tunniste(kohdeId, paikat[n].X, paikat[n].Z, paikat[n].Y - NostoM))).ToList());
             m.SetTriangles(kolmiot, 0); m.RecalculateBounds();
             m.UploadMeshData(true);   // Natiiviseppä 9.10. (v5 +16 Mt): CPU-kopio pois; VedenKorkeus lukee VesiVerkkoa, ei meshiä
             var go = new GameObject(m.name) { layer = kerros };
