@@ -1,0 +1,760 @@
+### 321
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Basel (tekniikka)
+Tietoruudun teksti: Basel on Sveitsin kolmanneksi suurin kaupunki Reinin varrella, ja siitä kasvaa 1900-luvulla maan kemian- ja lääketeollisuuden keskus. Perusta on jo olemassa: silkinvärjääjä Alexander Clavel alkoi vuonna 1859 valmistaa Baselissa synteettistä fuksiini-väriainetta silkkinauhateollisuudelle, yhtenä ensimmäisistä koko Sveitsissä. Väriaineen valmistuksessa syntyneet arseenihuurut ajoivat tehtaan kaupungin laidalle Klybeckin Reininrantaan vuonna 1864. Vain viikkoja sitten, alkuvuodesta 1873, Clavel myi tehtaansa kemisti Robert Bindschedlerille ja liikemies Albert Buschille — kauppa, josta kasvaa vuosikymmenten kuluessa kemianjätti Ciba.
+AIEMPI KYSYMYS: Mitä väriainetta Alexander Clavel alkoi valmistaa Baselissa vuonna 1859?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Alexander Clavel alkoi valmistaa Baselissa vuonna 1859 synteettistä [[fuksiinia]], väriainetta, jota tarvittiin silkkinauhateollisuudessa. Clavel oli itse silkinvärjääjä, ja hän oli yksi ensimmäisistä, jotka valmistivat tällaista väriainetta Sveitsissä. Väriaineen valmistuksessa syntyi [[arseenihuuruja]], minkä vuoksi tehdas siirrettiin vuonna 1864 kaupungin laidalle Klybeckin Reininrantaan. Ja tämän kaiken kerroin ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: fuksiinia
+
+### 322
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Basel (tekniikka)
+Tietoruudun teksti: Basel on Sveitsin kolmanneksi suurin kaupunki Reinin varrella, ja siitä kasvaa 1900-luvulla maan kemian- ja lääketeollisuuden keskus. Perusta on jo olemassa: silkinvärjääjä Alexander Clavel alkoi vuonna 1859 valmistaa Baselissa synteettistä fuksiini-väriainetta silkkinauhateollisuudelle, yhtenä ensimmäisistä koko Sveitsissä. Väriaineen valmistuksessa syntyneet arseenihuurut ajoivat tehtaan kaupungin laidalle Klybeckin Reininrantaan vuonna 1864. Vain viikkoja sitten, alkuvuodesta 1873, Clavel myi tehtaansa kemisti Robert Bindschedlerille ja liikemies Albert Buschille — kauppa, josta kasvaa vuosikymmenten kuluessa kemianjätti Ciba.
+AIEMPI KYSYMYS: Mitä väriainetta Alexander Clavel alkoi valmistaa Baselissa vuonna 1859?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Alexander Clavel alkoi valmistaa Baselissa vuonna 1859 synteettistä [[fuksiinia]], väriainetta, jota tarvittiin silkkinauhateollisuudessa. Clavel oli itse silkinvärjääjä, ja hän oli yksi ensimmäisistä, jotka valmistivat tällaista väriainetta Sveitsissä. Väriaineen valmistuksessa syntyi [[arseenihuuruja]], minkä vuoksi tehdas siirrettiin vuonna 1864 kaupungin laidalle Klybeckin Reininrantaan. Ja tämän kaiken kerroin ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: arseenihuuruja
+
+### 323
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Basel (tekniikka)
+Tietoruudun teksti: Basel on Sveitsin kolmanneksi suurin kaupunki Reinin varrella, ja siitä kasvaa 1900-luvulla maan kemian- ja lääketeollisuuden keskus. Perusta on jo olemassa: silkinvärjääjä Alexander Clavel alkoi vuonna 1859 valmistaa Baselissa synteettistä fuksiini-väriainetta silkkinauhateollisuudelle, yhtenä ensimmäisistä koko Sveitsissä. Väriaineen valmistuksessa syntyneet arseenihuurut ajoivat tehtaan kaupungin laidalle Klybeckin Reininrantaan vuonna 1864. Vain viikkoja sitten, alkuvuodesta 1873, Clavel myi tehtaansa kemisti Robert Bindschedlerille ja liikemies Albert Buschille — kauppa, josta kasvaa vuosikymmenten kuluessa kemianjätti Ciba.
+AIEMPI KYSYMYS: Kenelle Clavel myi tehtaansa juuri ennen kuolemaansa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Clavel myi tehtaansa alkuvuodesta 1873 kemisti [[Robert Bindschedlerille]] ja liikemies [[Albert Buschille]]. Siitä kaupasta kasvoi vuosikymmenten kuluessa kemianjätti [[Ciba]]. Kysymyksessä on oletus kuolemasta, enkä ole varma Clavelin kuolinajasta, joten sitä en voi vahvistaa. Kauppa tehtiin siis alkuvuodesta 1873 ja kohteena oli Klybeckin tehdas Reinin rannalla. Oikaisu meni nyt lyhyeksi.
+KYSYMYS: Kerro lisää: Robert Bindschedlerille
+
+### 324
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Basel (tekniikka)
+Tietoruudun teksti: Basel on Sveitsin kolmanneksi suurin kaupunki Reinin varrella, ja siitä kasvaa 1900-luvulla maan kemian- ja lääketeollisuuden keskus. Perusta on jo olemassa: silkinvärjääjä Alexander Clavel alkoi vuonna 1859 valmistaa Baselissa synteettistä fuksiini-väriainetta silkkinauhateollisuudelle, yhtenä ensimmäisistä koko Sveitsissä. Väriaineen valmistuksessa syntyneet arseenihuurut ajoivat tehtaan kaupungin laidalle Klybeckin Reininrantaan vuonna 1864. Vain viikkoja sitten, alkuvuodesta 1873, Clavel myi tehtaansa kemisti Robert Bindschedlerille ja liikemies Albert Buschille — kauppa, josta kasvaa vuosikymmenten kuluessa kemianjätti Ciba.
+AIEMPI KYSYMYS: Kenelle Clavel myi tehtaansa juuri ennen kuolemaansa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Clavel myi tehtaansa alkuvuodesta 1873 kemisti [[Robert Bindschedlerille]] ja liikemies [[Albert Buschille]]. Siitä kaupasta kasvoi vuosikymmenten kuluessa kemianjätti [[Ciba]]. Kysymyksessä on oletus kuolemasta, enkä ole varma Clavelin kuolinajasta, joten sitä en voi vahvistaa. Kauppa tehtiin siis alkuvuodesta 1873 ja kohteena oli Klybeckin tehdas Reinin rannalla. Oikaisu meni nyt lyhyeksi.
+KYSYMYS: Kerro lisää: Albert Buschille
+
+### 325
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Basel (tekniikka)
+Tietoruudun teksti: Basel on Sveitsin kolmanneksi suurin kaupunki Reinin varrella, ja siitä kasvaa 1900-luvulla maan kemian- ja lääketeollisuuden keskus. Perusta on jo olemassa: silkinvärjääjä Alexander Clavel alkoi vuonna 1859 valmistaa Baselissa synteettistä fuksiini-väriainetta silkkinauhateollisuudelle, yhtenä ensimmäisistä koko Sveitsissä. Väriaineen valmistuksessa syntyneet arseenihuurut ajoivat tehtaan kaupungin laidalle Klybeckin Reininrantaan vuonna 1864. Vain viikkoja sitten, alkuvuodesta 1873, Clavel myi tehtaansa kemisti Robert Bindschedlerille ja liikemies Albert Buschille — kauppa, josta kasvaa vuosikymmenten kuluessa kemianjätti Ciba.
+AIEMPI KYSYMYS: Kenelle Clavel myi tehtaansa juuri ennen kuolemaansa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Clavel myi tehtaansa alkuvuodesta 1873 kemisti [[Robert Bindschedlerille]] ja liikemies [[Albert Buschille]]. Siitä kaupasta kasvoi vuosikymmenten kuluessa kemianjätti [[Ciba]]. Kysymyksessä on oletus kuolemasta, enkä ole varma Clavelin kuolinajasta, joten sitä en voi vahvistaa. Kauppa tehtiin siis alkuvuodesta 1873 ja kohteena oli Klybeckin tehdas Reinin rannalla. Oikaisu meni nyt lyhyeksi.
+KYSYMYS: Kerro lisää: Ciba
+
+### 326
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Basel (tekniikka)
+Tietoruudun teksti: Basel on Sveitsin kolmanneksi suurin kaupunki Reinin varrella, ja siitä kasvaa 1900-luvulla maan kemian- ja lääketeollisuuden keskus. Perusta on jo olemassa: silkinvärjääjä Alexander Clavel alkoi vuonna 1859 valmistaa Baselissa synteettistä fuksiini-väriainetta silkkinauhateollisuudelle, yhtenä ensimmäisistä koko Sveitsissä. Väriaineen valmistuksessa syntyneet arseenihuurut ajoivat tehtaan kaupungin laidalle Klybeckin Reininrantaan vuonna 1864. Vain viikkoja sitten, alkuvuodesta 1873, Clavel myi tehtaansa kemisti Robert Bindschedlerille ja liikemies Albert Buschille — kauppa, josta kasvaa vuosikymmenten kuluessa kemianjätti Ciba.
+AIEMPI KYSYMYS: Miksi väritehdas siirrettiin Baselin laidalle 1860-luvulla?
+AIEMPI VASTAUS (Livia):
+No niin. Väriaineen valmistuksessa syntyi [[arseenihuuruja]], jotka ajoivat Clavelin tehtaan vuonna 1864 pois kaupungin keskeltä Klybeckin [[Reininrantaan]]. Arseeni on myrkyllistä, joten tehdas haluttiin kauemmas asutuksesta. Sama ongelma seurasi monia varhaisia kemiantehtaita Euroopassa. Tehdas valmisti synteettistä fuksiinia silkkinauhateollisuudelle. Hyvä että ilmanlaatua pidettiin silloinkin edes jotenkin mielessä.
+KYSYMYS: Kerro lisää: Reininrantaan
+
+### 327
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Basel (tekniikka)
+Tietoruudun teksti: Basel on Sveitsin kolmanneksi suurin kaupunki Reinin varrella, ja siitä kasvaa 1900-luvulla maan kemian- ja lääketeollisuuden keskus. Perusta on jo olemassa: silkinvärjääjä Alexander Clavel alkoi vuonna 1859 valmistaa Baselissa synteettistä fuksiini-väriainetta silkkinauhateollisuudelle, yhtenä ensimmäisistä koko Sveitsissä. Väriaineen valmistuksessa syntyneet arseenihuurut ajoivat tehtaan kaupungin laidalle Klybeckin Reininrantaan vuonna 1864. Vain viikkoja sitten, alkuvuodesta 1873, Clavel myi tehtaansa kemisti Robert Bindschedlerille ja liikemies Albert Buschille — kauppa, josta kasvaa vuosikymmenten kuluessa kemianjätti Ciba.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kaupunkilehti / Marseille: Hymni sai nimensä matkalla] Rouget de Lisle sävelsi laulun Strasbourgissa yhden yön aikana 25.–26. huhtikuuta 1792, ja se sai nimekseen Reinin armeijan sotalaulu. Nuotti kulkeutui etelään, ja Marseillen vapaaehtoiset ottivat sen marssilaulukseen. Kun he saapuivat Pariisiin 30. heinäkuuta 1792, he lauloivat sitä koko matkan, ja pariisilaiset alkoivat sanoa sitä marseillelaisten lauluksi. Nimi jäi, vaikka kaupungilla ei ollut sävelmän synnyn kanssa mitään tekemistä.
+- [Saksa — maalehti / Kirjapaino] Reinin rannan kauppakaupungissa latojat asettivat 1450-luvulla kirjaimen kerrallaan peilikuvaksi riveille, ja ensimmäinen painettu Raamattu syntyi — velaksi, jonka rahoittaja peri pajan mukana.
+AIEMPI KYSYMYS: Minkä joen varrella Basel sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tämä on helppo. Basel sijaitsee [[Reinin]] varrella, ja se on [[Sveitsin]] kolmanneksi suurin kaupunki. Rein on yksi Euroopan tärkeimmistä jokiväylistä, ja Baselissa on pitkään ollut satamatoimintaa. Väritehtaan siirto Klybeckin rantaan vuonna 1864 liittyi juuri tähän jokimaisemaan. Joesta olen varma, satamasta vähemmän tarkkojen lukujen osalta. Jokirannasta näkee kyl hyvin.
+KYSYMYS: Kerro lisää: Reinin
+
+### 328
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Basel (tekniikka)
+Tietoruudun teksti: Basel on Sveitsin kolmanneksi suurin kaupunki Reinin varrella, ja siitä kasvaa 1900-luvulla maan kemian- ja lääketeollisuuden keskus. Perusta on jo olemassa: silkinvärjääjä Alexander Clavel alkoi vuonna 1859 valmistaa Baselissa synteettistä fuksiini-väriainetta silkkinauhateollisuudelle, yhtenä ensimmäisistä koko Sveitsissä. Väriaineen valmistuksessa syntyneet arseenihuurut ajoivat tehtaan kaupungin laidalle Klybeckin Reininrantaan vuonna 1864. Vain viikkoja sitten, alkuvuodesta 1873, Clavel myi tehtaansa kemisti Robert Bindschedlerille ja liikemies Albert Buschille — kauppa, josta kasvaa vuosikymmenten kuluessa kemianjätti Ciba.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Luonto: Pikku-Sveitsin kalliot] nykyään — Luxemburgin Pikku-Sveitsi eli Müllerthal on hiekkakivikallioiden ja tiheiden metsien seutu maan itäosassa. Se kattaa vain seitsemän prosenttia maasta, mutta siellä on rotkoja, luolia ja lukemattomia pieniä puroja. Korkein kohta on vain 414 metrissä. Alueen ainoa keskikokoinen asutus on Echternach, Luxemburgin vanhin säilynyt kaupunki. Kalliot houkuttivat kävijöitä jo 1800-luvulla: Berdorfin nuoriso kaiversi Hohllayn kallioseinään 1880 kiitoksen hallitukselle, joka avasi rotkot yleisön ulottuville.
+- [Sveitsi — maalehti / Historian hetki: Gotthard 1880 — valokuva kulkee kalliossa] 29.2.1880 — Pieni valokuva kulkee käsistä käsiin viimeisen kivikerroksen läpi ennen kuin kukaan ehtii sanoa mitään. Se esittää Louis Favrea, insinööriä, joka johti Gotthardin rautatietunnelin louhintaa vuodesta 1872, mutta joka kuoli sydänkohtaukseen tunnelissa heinäkuussa 1879 — kahdeksan kuukautta ennen tätä hetkeä. Sunnuntaina 29. helmikuuta 1880 pohjoisesta Göschenenistä ja etelästä Airolosta louhitut käytävät kohtaavat vihdoin syvällä Gotthard-massiivin sisällä, lähes 1 700 metrin kiven alla, ja saksankielinen ja italiankielinen työryhmä puhkaisevat viimeisen ohuen kivimuurin toistensa väliltä. Ensimmäinen kättely tapahtuu reiän läpi, ennen kuin kukaan pääsee kokonaan toiselle puolelle…
+AIEMPI KYSYMYS: Minkä joen varrella Basel sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tämä on helppo. Basel sijaitsee [[Reinin]] varrella, ja se on [[Sveitsin]] kolmanneksi suurin kaupunki. Rein on yksi Euroopan tärkeimmistä jokiväylistä, ja Baselissa on pitkään ollut satamatoimintaa. Väritehtaan siirto Klybeckin rantaan vuonna 1864 liittyi juuri tähän jokimaisemaan. Joesta olen varma, satamasta vähemmän tarkkojen lukujen osalta. Jokirannasta näkee kyl hyvin.
+KYSYMYS: Kerro lisää: Sveitsin
+
+### 329
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emmental (ruoka)
+Tietoruudun teksti: Emmental on kukkulainen laakso Bernin kantonissa, Emme- ja Ilfis-jokien varrella, ja sen tärkeimmät kylät ovat Burgdorf ja Langnau. Seutu elää pääasiassa maidontuotannosta, ja juuri täältä on kotoisin reikäinen Emmentaler-juusto, joka on levinnyt maailmalle sveitsiläisen juuston esikuvana. Pappi ja kirjailija Jeremias Gotthelf kuvasi 1800-luvun alkupuolella emmentalilaista talonpoikaiselämää romaaneissaan, ja hänen teoksensa tekivät laakson tunnetuksi kaukana kotikantonin ulkopuolella. Perinteiset emmentalilaiset maatalot tunnistaa niiden jyrkistä, lähes maahan asti ulottuvista kattokaarista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Historia: Nälänhätä jota valtio yritti salata] 1932–1933 — Neuvostojohtaja Josif Stalinin vuonna 1929 käynnistämä maatalouden pakkokollektivisointi ajoi ukrainalaiset talonpojat luopumaan maastaan ja omaisuudestaan, ja vastarintaa yritettiin murtaa kiristämällä viljan pakko-otot äärimmilleen. Elokuussa 1932 Stalin kirjoitti, että "jos emme nyt toimi, voimme menettää Ukrainan" – ja syksyllä tehdyt päätökset syvensivät nälänhätää nimenomaan Ukrainassa. Arviot uhrien määrästä vaihtelevat muutamasta miljoonasta yli kymmeneen miljoonaan, eikä yksimielisyyttä ole saavutettu, mutta parikymmentä valtiota on tunnustanut tapahtuman kansanmurhaksi. Neuvostoliitossa nälänhädästä vaiettiin aina perestroikaan asti.
+AIEMPI KYSYMYS: Mistä kahdesta joesta Emmental-laakso koostuu?
+AIEMPI VASTAUS (Livia):
+Kato, tähän on selvä vastaus. Emmental on kukkulainen laakso Bernin kantonissa, ja se sijaitsee [[Emme-joen]] ja [[Ilfis-joen]] varrella. Nimi Emmental viittaa Emme-jokeen, ja sana "tal" tarkoittaa saksaksi laaksoa. Laakson tärkeimmät kylät ovat [[Burgdorf]] ja Langnau, ja seutu elää pääasiassa maidontuotannosta. Joet ovat siis olleet laaksossa päänäyttämönä. Sanoin senkin hyvin.
+KYSYMYS: Kerro lisää: Emme-joen
+
+### 330
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emmental (ruoka)
+Tietoruudun teksti: Emmental on kukkulainen laakso Bernin kantonissa, Emme- ja Ilfis-jokien varrella, ja sen tärkeimmät kylät ovat Burgdorf ja Langnau. Seutu elää pääasiassa maidontuotannosta, ja juuri täältä on kotoisin reikäinen Emmentaler-juusto, joka on levinnyt maailmalle sveitsiläisen juuston esikuvana. Pappi ja kirjailija Jeremias Gotthelf kuvasi 1800-luvun alkupuolella emmentalilaista talonpoikaiselämää romaaneissaan, ja hänen teoksensa tekivät laakson tunnetuksi kaukana kotikantonin ulkopuolella. Perinteiset emmentalilaiset maatalot tunnistaa niiden jyrkistä, lähes maahan asti ulottuvista kattokaarista.
+AIEMPI KYSYMYS: Mistä kahdesta joesta Emmental-laakso koostuu?
+AIEMPI VASTAUS (Livia):
+Kato, tähän on selvä vastaus. Emmental on kukkulainen laakso Bernin kantonissa, ja se sijaitsee [[Emme-joen]] ja [[Ilfis-joen]] varrella. Nimi Emmental viittaa Emme-jokeen, ja sana "tal" tarkoittaa saksaksi laaksoa. Laakson tärkeimmät kylät ovat [[Burgdorf]] ja Langnau, ja seutu elää pääasiassa maidontuotannosta. Joet ovat siis olleet laaksossa päänäyttämönä. Sanoin senkin hyvin.
+KYSYMYS: Kerro lisää: Ilfis-joen
+
+### 331
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emmental (ruoka)
+Tietoruudun teksti: Emmental on kukkulainen laakso Bernin kantonissa, Emme- ja Ilfis-jokien varrella, ja sen tärkeimmät kylät ovat Burgdorf ja Langnau. Seutu elää pääasiassa maidontuotannosta, ja juuri täältä on kotoisin reikäinen Emmentaler-juusto, joka on levinnyt maailmalle sveitsiläisen juuston esikuvana. Pappi ja kirjailija Jeremias Gotthelf kuvasi 1800-luvun alkupuolella emmentalilaista talonpoikaiselämää romaaneissaan, ja hänen teoksensa tekivät laakson tunnetuksi kaukana kotikantonin ulkopuolella. Perinteiset emmentalilaiset maatalot tunnistaa niiden jyrkistä, lähes maahan asti ulottuvista kattokaarista.
+AIEMPI KYSYMYS: Mistä kahdesta joesta Emmental-laakso koostuu?
+AIEMPI VASTAUS (Livia):
+Kato, tähän on selvä vastaus. Emmental on kukkulainen laakso Bernin kantonissa, ja se sijaitsee [[Emme-joen]] ja [[Ilfis-joen]] varrella. Nimi Emmental viittaa Emme-jokeen, ja sana "tal" tarkoittaa saksaksi laaksoa. Laakson tärkeimmät kylät ovat [[Burgdorf]] ja Langnau, ja seutu elää pääasiassa maidontuotannosta. Joet ovat siis olleet laaksossa päänäyttämönä. Sanoin senkin hyvin.
+KYSYMYS: Kerro lisää: Burgdorf
+
+### 332
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emmental (ruoka)
+Tietoruudun teksti: Emmental on kukkulainen laakso Bernin kantonissa, Emme- ja Ilfis-jokien varrella, ja sen tärkeimmät kylät ovat Burgdorf ja Langnau. Seutu elää pääasiassa maidontuotannosta, ja juuri täältä on kotoisin reikäinen Emmentaler-juusto, joka on levinnyt maailmalle sveitsiläisen juuston esikuvana. Pappi ja kirjailija Jeremias Gotthelf kuvasi 1800-luvun alkupuolella emmentalilaista talonpoikaiselämää romaaneissaan, ja hänen teoksensa tekivät laakson tunnetuksi kaukana kotikantonin ulkopuolella. Perinteiset emmentalilaiset maatalot tunnistaa niiden jyrkistä, lähes maahan asti ulottuvista kattokaarista.
+AIEMPI KYSYMYS: Kuka kuvasi emmentalilaista talonpoikaiselämää kirjoissaan?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Emmentalilaista talonpoikaiselämää kuvasi 1800-luvun alkupuolella pappi ja kirjailija [[Jeremias Gotthelf]]. Hänen romaaninsa tekivät laakson tunnetuksi kaukana kotikantonin, [[Bernin]] kantonin, ulkopuolella. Gotthelfin teoksissa seudun maatalot, perheet ja tavat ovat keskeisessä asemassa. Kirjailijan tarkkoja teoksia en ole varma luettelemaan. Sepä oli kiva kysymys kirjallisuudesta.
+KYSYMYS: Kerro lisää: Jeremias Gotthelf
+
+### 333
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emmental (ruoka)
+Tietoruudun teksti: Emmental on kukkulainen laakso Bernin kantonissa, Emme- ja Ilfis-jokien varrella, ja sen tärkeimmät kylät ovat Burgdorf ja Langnau. Seutu elää pääasiassa maidontuotannosta, ja juuri täältä on kotoisin reikäinen Emmentaler-juusto, joka on levinnyt maailmalle sveitsiläisen juuston esikuvana. Pappi ja kirjailija Jeremias Gotthelf kuvasi 1800-luvun alkupuolella emmentalilaista talonpoikaiselämää romaaneissaan, ja hänen teoksensa tekivät laakson tunnetuksi kaukana kotikantonin ulkopuolella. Perinteiset emmentalilaiset maatalot tunnistaa niiden jyrkistä, lähes maahan asti ulottuvista kattokaarista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki: Bern 1905 — patenttipino ja valonsäde] 1905 — Pöydän kulmalla kasvaa pino patenttihakemuksia, ja jokainen uusi tulokas työntää fysiikan muistiinpanot laatikon pohjalle. Bernin patenttiviraston kolmannen luokan tekninen asiantuntija Albert Einstein on 26-vuotias, ja hänen palkkansa elättää Mileva-vaimon ja pienen Hans Albertin. Iltaisin hän palaa kysymykseen, jota on kantanut teini-ikäisestä asti: miltä valo näyttäisi, jos sen voisi ajaa kiinni? Ajatella ääneen hän voi harvojen kanssa: ystävän ja työtoverin Michele Besson kanssa kotimatkalla, ja iltaisin muutaman tuttavan kesken, jotka kutsuvat itseään pilaillen Olympia-akatemiaksi. Virastoon hän päätyi siksi, ettei yksikään haettu opettajanpaikka auennut. Vuonna 1905 Einstein lä…
+- [Sveitsi — maalehti / Ruoka: Peruna paistetaan pannun kokoiseksi kakuksi] Aamiaisella — Rösti tehdään raastetusta perunasta, joka painetaan pannulle kakuksi ja paistetaan voissa kummaltakin puolelta rapeaksi. Alun perin se oli Bernin seudun maanviljelijöiden aamiaista, ja sitä syötiin ennen töihin lähtöä. Ruoka on niin tunnusomainen, että saksan- ja ranskankielisen Sveitsin välistä rajaa sanotaan leikillään Röstigrabeniksi, röstihaudaksi: sen molemmin puolin äänestetään eri tavalla ja puhutaan eri kieltä, ja perunakakku jäi rajan nimeksi.
+- [Sveitsi — maalehti / Historian hetki] Bernin patenttivirastossa istui vuonna 1905 kolmannen luokan tekninen asiantuntija, joka kirjoitti samana vuonna neljä tutkimusta ja muutti fysiikan.
+AIEMPI KYSYMYS: Kuka kuvasi emmentalilaista talonpoikaiselämää kirjoissaan?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Emmentalilaista talonpoikaiselämää kuvasi 1800-luvun alkupuolella pappi ja kirjailija [[Jeremias Gotthelf]]. Hänen romaaninsa tekivät laakson tunnetuksi kaukana kotikantonin, [[Bernin]] kantonin, ulkopuolella. Gotthelfin teoksissa seudun maatalot, perheet ja tavat ovat keskeisessä asemassa. Kirjailijan tarkkoja teoksia en ole varma luettelemaan. Sepä oli kiva kysymys kirjallisuudesta.
+KYSYMYS: Kerro lisää: Bernin
+
+### 334
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emmental (ruoka)
+Tietoruudun teksti: Emmental on kukkulainen laakso Bernin kantonissa, Emme- ja Ilfis-jokien varrella, ja sen tärkeimmät kylät ovat Burgdorf ja Langnau. Seutu elää pääasiassa maidontuotannosta, ja juuri täältä on kotoisin reikäinen Emmentaler-juusto, joka on levinnyt maailmalle sveitsiläisen juuston esikuvana. Pappi ja kirjailija Jeremias Gotthelf kuvasi 1800-luvun alkupuolella emmentalilaista talonpoikaiselämää romaaneissaan, ja hänen teoksensa tekivät laakson tunnetuksi kaukana kotikantonin ulkopuolella. Perinteiset emmentalilaiset maatalot tunnistaa niiden jyrkistä, lähes maahan asti ulottuvista kattokaarista.
+AIEMPI KYSYMYS: Mitkä ovat Emmentalin tärkeimmät kylät?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tään tiedän. Emmentalin tärkeimmät kylät ovat [[Burgdorf]] ja [[Langnau]]. Molemmat sijaitsevat kukkulaisessa laaksossa Bernin kantonissa, jonka asukkaat elävät pääasiassa maidontuotannosta. Burgdorf ja Langnau ovat siis laakson keskuksia, ja juuri täältä on kotoisin tunnettu reikäinen Emmentaler-juusto. Asukaslukuja en ole varma. Pulla puuttuu kyl listalta, mutta juusto kelpaa.
+KYSYMYS: Kerro lisää: Langnau
+
+### 335
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emmental (ruoka)
+Tietoruudun teksti: Emmental on kukkulainen laakso Bernin kantonissa, Emme- ja Ilfis-jokien varrella, ja sen tärkeimmät kylät ovat Burgdorf ja Langnau. Seutu elää pääasiassa maidontuotannosta, ja juuri täältä on kotoisin reikäinen Emmentaler-juusto, joka on levinnyt maailmalle sveitsiläisen juuston esikuvana. Pappi ja kirjailija Jeremias Gotthelf kuvasi 1800-luvun alkupuolella emmentalilaista talonpoikaiselämää romaaneissaan, ja hänen teoksensa tekivät laakson tunnetuksi kaukana kotikantonin ulkopuolella. Perinteiset emmentalilaiset maatalot tunnistaa niiden jyrkistä, lähes maahan asti ulottuvista kattokaarista.
+AIEMPI KYSYMYS: Missä kantonissa Emmental sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai tota. Emmental sijaitsee [[Bernin]] kantonissa Sveitsissä. Se on kukkulainen laakso, jonka tärkeimmät kylät ovat Burgdorf ja Langnau, ja seutu elää pääasiassa maidontuotannosta. Kantonin pääkaupunki on Bern, joka on samalla Sveitsin liittovaltion hallinnollinen keskus. Emmentalista on kotoisin reikäinen [[Emmentaler-juusto]], joka on levinnyt maailmalle. Nopea vastaus, ja silti ehdin ajatella pullaa.
+KYSYMYS: Kerro lisää: Emmentaler-juusto
+
+### 336
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lugano (kulttuuri)
+Tietoruudun teksti: Lugano on Ticinon kantonin suurin kaupunki ja italiankielisen Sveitsin merkittävin keskus, Luganonjärven rannalla. Se mainitaan markkinapaikkana jo vuodesta 984, ja Comon ja Milanon ruhtinaat kiistelivät siitä vuosisatoja ennen kuin kaupunki liittyi vanhaan Sveitsin valaliittoon vuonna 1513. Ticinon kantoni perustettiin vasta vuonna 1803, ja Lugano sai oman poliittisen kunnallishallintonsa samana vuonna. Kaupungin ympärillä kohoavat jyrkät vuoret, muun muassa San Salvatore, ja katujen kieli on italia, vaikka Sveitsi muuten on saksan- ja ranskankielinen.
+AIEMPI KYSYMYS: Minkä kahden mahtisuvun kanssa Lugano kiisteli ennen liittymistään Sveitsiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Luganosta kiistelivät vuosisatojen ajan [[Comon]] ja [[Milanon]] ruhtinaat, ennen kuin kaupunki liittyi vanhaan Sveitsin valaliittoon vuonna 1513. Kaupunki mainitaan markkinapaikkana jo vuodesta 984. Ruhtinassukujen tarkkoja nimiä en ole varma, joten jätän ne mainitsematta. Kiistelyn kohteena oli siis markkinapaikkana ja liikennepaikkana arvokas kaupunki Luganonjärven rannalla. Tarkka sukutarina jää sitten toiselle kyyhkylle.
+KYSYMYS: Kerro lisää: Comon
+
+### 337
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lugano (kulttuuri)
+Tietoruudun teksti: Lugano on Ticinon kantonin suurin kaupunki ja italiankielisen Sveitsin merkittävin keskus, Luganonjärven rannalla. Se mainitaan markkinapaikkana jo vuodesta 984, ja Comon ja Milanon ruhtinaat kiistelivät siitä vuosisatoja ennen kuin kaupunki liittyi vanhaan Sveitsin valaliittoon vuonna 1513. Ticinon kantoni perustettiin vasta vuonna 1803, ja Lugano sai oman poliittisen kunnallishallintonsa samana vuonna. Kaupungin ympärillä kohoavat jyrkät vuoret, muun muassa San Salvatore, ja katujen kieli on italia, vaikka Sveitsi muuten on saksan- ja ranskankielinen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mexico City — kohdekartta / Kohdekartta: Kaupunginteatteri] 1918 Teatteri rakennettiin 1918 Donceles-kadun numeroon 36 vanhan Teatro Xicoténcatlin paikalle, ja se nimettiin primadonna Esperanza Iriksen mukaan. Iris — oikealta nimeltään María Esperanza Bonfil — oli Tabascon osavaltiosta kotoisin oleva operettilaulaja, jonka ura kukoisti Mexico Cityssä, Havannassa ja Madridissa ja joka kiersi laajalti Amerikoissa. Tunnetuimpia rooleja olivat Iloinen leski, Luxemburgin kreivi ja La princesa del dólar; 1930-luvulla hän näytteli myös elokuvissa. Iris rahoitti teatteria itse edellisen kiertueensa tuotoilla. Arkkitehdit Capetillo Servín ja Federico Mariscal ottivat esikuvaksi Milanon La Scalan. Teatteri avattiin 25. toukokuuta 1918 kaksi päivää sen jälkeen…
+- [Bryssel — kohdekartta / Kohdekartta: Galeries Royales Saint-Hubert] 1846–1847 Galeries Royales Saint-Hubert on kolmen lasikattoisen kauppakäytävän kokonaisuus: Kuninkaan galleria, Kuningattaren galleria ja Prinssien galleria. Nuori hollantilainen arkkitehti Jean-Pierre Cluysenaar halusi pyyhkiä pois hämärien kujien sokkelon, jonne porvarit tuskin uskalsivat, ja korvata sen yli 200 metrin katetulla ostoskadulla. Idea syntyi 1836, kaupunki hyväksyi sen 1845, ja rakentaminen kesti kolmetoista kuukautta. Kuningas Leopold I poikineen avasi 213 metrin käytävän 20. kesäkuuta 1847. Tonttien lunastaminen oli kestänyt yhdeksän vuotta. Kerrotaan, että yksi talonomistaja kuoli halvaukseen ja että eräs parturi viilsi kurkkunsa, kun naapuritaloa purettiin. Viranomaisten …
+AIEMPI KYSYMYS: Minkä kahden mahtisuvun kanssa Lugano kiisteli ennen liittymistään Sveitsiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Luganosta kiistelivät vuosisatojen ajan [[Comon]] ja [[Milanon]] ruhtinaat, ennen kuin kaupunki liittyi vanhaan Sveitsin valaliittoon vuonna 1513. Kaupunki mainitaan markkinapaikkana jo vuodesta 984. Ruhtinassukujen tarkkoja nimiä en ole varma, joten jätän ne mainitsematta. Kiistelyn kohteena oli siis markkinapaikkana ja liikennepaikkana arvokas kaupunki Luganonjärven rannalla. Tarkka sukutarina jää sitten toiselle kyyhkylle.
+KYSYMYS: Kerro lisää: Milanon
+
+### 338
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lugano (kulttuuri)
+Tietoruudun teksti: Lugano on Ticinon kantonin suurin kaupunki ja italiankielisen Sveitsin merkittävin keskus, Luganonjärven rannalla. Se mainitaan markkinapaikkana jo vuodesta 984, ja Comon ja Milanon ruhtinaat kiistelivät siitä vuosisatoja ennen kuin kaupunki liittyi vanhaan Sveitsin valaliittoon vuonna 1513. Ticinon kantoni perustettiin vasta vuonna 1803, ja Lugano sai oman poliittisen kunnallishallintonsa samana vuonna. Kaupungin ympärillä kohoavat jyrkät vuoret, muun muassa San Salvatore, ja katujen kieli on italia, vaikka Sveitsi muuten on saksan- ja ranskankielinen.
+AIEMPI KYSYMYS: Minä vuonna Ticinon kantoni perustettiin?
+AIEMPI VASTAUS (Livia):
+No niin, vuosiluku on tässä tärkeä. Ticinon kantoni perustettiin vuonna 1803, ja samana vuonna [[Lugano]] sai oman poliittisen kunnallishallintonsa. Lugano on kantonin suurin kaupunki ja italiankielisen Sveitsin merkittävin keskus. Kaupunki oli liittynyt vanhaan [[Sveitsin valaliittoon]] jo vuonna 1513, joten kantonin perustaminen tuli vasta paljon myöhemmin. Hyvä muisti, vaikka sanonkin itse.
+KYSYMYS: Kerro lisää: Lugano
+
+### 339
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lugano (kulttuuri)
+Tietoruudun teksti: Lugano on Ticinon kantonin suurin kaupunki ja italiankielisen Sveitsin merkittävin keskus, Luganonjärven rannalla. Se mainitaan markkinapaikkana jo vuodesta 984, ja Comon ja Milanon ruhtinaat kiistelivät siitä vuosisatoja ennen kuin kaupunki liittyi vanhaan Sveitsin valaliittoon vuonna 1513. Ticinon kantoni perustettiin vasta vuonna 1803, ja Lugano sai oman poliittisen kunnallishallintonsa samana vuonna. Kaupungin ympärillä kohoavat jyrkät vuoret, muun muassa San Salvatore, ja katujen kieli on italia, vaikka Sveitsi muuten on saksan- ja ranskankielinen.
+AIEMPI KYSYMYS: Minä vuonna Ticinon kantoni perustettiin?
+AIEMPI VASTAUS (Livia):
+No niin, vuosiluku on tässä tärkeä. Ticinon kantoni perustettiin vuonna 1803, ja samana vuonna [[Lugano]] sai oman poliittisen kunnallishallintonsa. Lugano on kantonin suurin kaupunki ja italiankielisen Sveitsin merkittävin keskus. Kaupunki oli liittynyt vanhaan [[Sveitsin valaliittoon]] jo vuonna 1513, joten kantonin perustaminen tuli vasta paljon myöhemmin. Hyvä muisti, vaikka sanonkin itse.
+KYSYMYS: Kerro lisää: Sveitsin valaliittoon
+
+### 340
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lugano (kulttuuri)
+Tietoruudun teksti: Lugano on Ticinon kantonin suurin kaupunki ja italiankielisen Sveitsin merkittävin keskus, Luganonjärven rannalla. Se mainitaan markkinapaikkana jo vuodesta 984, ja Comon ja Milanon ruhtinaat kiistelivät siitä vuosisatoja ennen kuin kaupunki liittyi vanhaan Sveitsin valaliittoon vuonna 1513. Ticinon kantoni perustettiin vasta vuonna 1803, ja Lugano sai oman poliittisen kunnallishallintonsa samana vuonna. Kaupungin ympärillä kohoavat jyrkät vuoret, muun muassa San Salvatore, ja katujen kieli on italia, vaikka Sveitsi muuten on saksan- ja ranskankielinen.
+AIEMPI KYSYMYS: Mikä vuori kohoaa Luganon ympärillä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Luganon ympärillä kohoaa jyrkkiä vuoria, joista yksi on [[San Salvatore]]. Kaupunki sijaitsee [[Luganonjärven]] rannalla, ja vuoret ympäröivät sitä lähes joka puolelta. Vuoren korkeuden suhteen en ole varma luvusta, joten jätän sen kertomatta. Kaupungin ympäristö on siis jyrkkää ja maisemaltaan näyttävää. Siivillä sinne pääsis kyl nopeammin.
+KYSYMYS: Kerro lisää: San Salvatore
+
+### 341
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lugano (kulttuuri)
+Tietoruudun teksti: Lugano on Ticinon kantonin suurin kaupunki ja italiankielisen Sveitsin merkittävin keskus, Luganonjärven rannalla. Se mainitaan markkinapaikkana jo vuodesta 984, ja Comon ja Milanon ruhtinaat kiistelivät siitä vuosisatoja ennen kuin kaupunki liittyi vanhaan Sveitsin valaliittoon vuonna 1513. Ticinon kantoni perustettiin vasta vuonna 1803, ja Lugano sai oman poliittisen kunnallishallintonsa samana vuonna. Kaupungin ympärillä kohoavat jyrkät vuoret, muun muassa San Salvatore, ja katujen kieli on italia, vaikka Sveitsi muuten on saksan- ja ranskankielinen.
+AIEMPI KYSYMYS: Mikä vuori kohoaa Luganon ympärillä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Luganon ympärillä kohoaa jyrkkiä vuoria, joista yksi on [[San Salvatore]]. Kaupunki sijaitsee [[Luganonjärven]] rannalla, ja vuoret ympäröivät sitä lähes joka puolelta. Vuoren korkeuden suhteen en ole varma luvusta, joten jätän sen kertomatta. Kaupungin ympäristö on siis jyrkkää ja maisemaltaan näyttävää. Siivillä sinne pääsis kyl nopeammin.
+KYSYMYS: Kerro lisää: Luganonjärven
+
+### 342
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lugano (kulttuuri)
+Tietoruudun teksti: Lugano on Ticinon kantonin suurin kaupunki ja italiankielisen Sveitsin merkittävin keskus, Luganonjärven rannalla. Se mainitaan markkinapaikkana jo vuodesta 984, ja Comon ja Milanon ruhtinaat kiistelivät siitä vuosisatoja ennen kuin kaupunki liittyi vanhaan Sveitsin valaliittoon vuonna 1513. Ticinon kantoni perustettiin vasta vuonna 1803, ja Lugano sai oman poliittisen kunnallishallintonsa samana vuonna. Kaupungin ympärillä kohoavat jyrkät vuoret, muun muassa San Salvatore, ja katujen kieli on italia, vaikka Sveitsi muuten on saksan- ja ranskankielinen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Italia on nuorempi kuin luulisi] 1861 — Saapasmaa oli vuosisatoja tilkkutäkki kuningaskuntia, herttuakuntia ja kaupunkivaltioita, jotka sotivat keskenään ja puhuivat eri murteita. Yhtenäinen Italia syntyi vasta 1861, ja sen kokosi punapaitainen sissipäällikkö Giuseppe Garibaldi, joka valtasi tuhannen vapaaehtoisen voimin puoli niemimaata ja luovutti sen sitten kuninkaalle kädenpuristuksella. Kun valtio syntyi, vain harva osasi yhteistä italiaa — kieli opittiin vasta koulusta, radiosta ja televisiosta.
+AIEMPI KYSYMYS: Millä kielellä Luganossa puhutaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Luganossa puhutaan [[italiaa]], vaikka Sveitsi muuten on saksan- ja ranskankielinen. Lugano on Ticinon kantonin suurin kaupunki ja italiankielisen Sveitsin merkittävin keskus. Kieli selittyy alueen historialla: [[Comon]] ja Milanon ruhtinaat kiistelivät kaupungista vuosisatoja ennen kuin se liittyi Sveitsin valaliittoon. Katujen kieli on siis eri kuin suuressa osassa maata. Italiankielisessä kaupungissa olis kyl kiva kuulla pullakin nimeltä.
+KYSYMYS: Kerro lisää: italiaa
+
+### 343
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: St. Moritz (urheilu)
+Tietoruudun teksti: St. Moritz on korkealla Ylä-Engadinissa sijaitseva kylpyläkylä, lähes 1 800 metrin korkeudessa Graubündenin kantonissa. Sen mineraalilähteille on tehty pyhiinvaelluksia jo keskiajalta asti, ja 1500-luvulla myös lääkäri Paracelsus vietti siellä aikaa. Talvimatkailu koko Alpeilla sai alkunsa juuri täältä syyskuussa 1864, kun hotelli-isäntä Caspar Badrutt löi vetoa neljän brittiläisen kesävieraansa kanssa: jos he eivät pitäisi kylästä talvella, hän maksaisi heidän matkakulunsa, mutta jos pitäisivät, he saisivat jäädä hänen vierainaan niin pitkäksi aikaa kuin halusivat. Vieraat ihastuivat, ja St. Moritzista tuli Alppien ensimmäinen talvikohde.
+AIEMPI KYSYMYS: Minkä vedon Caspar Badrutt löi brittivieraidensa kanssa?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on hyvä tarina. Hotelli-isäntä löi vetoa neljän brittiläisen kesävieraansa kanssa syyskuussa 1864 siitä, viihtyisivätkö he [[St. Moritzissa]] talvella. Jos vieraat eivät pitäisi kylästä talvisin, hän maksaisi heidän matkakulunsa, mutta jos he pitäisivät siitä, he saisivat jäädä hänen vierainaan niin pitkäksi aikaa kuin halusivat. Vieraat ihastuivat, ja kylästä tuli [[Alppien]] ensimmäinen talvikohde. Isäntä ei hävinnyt, sen minä kyl sanon.
+KYSYMYS: Kerro lisää: St. Moritzissa
+
+### 344
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: St. Moritz (urheilu)
+Tietoruudun teksti: St. Moritz on korkealla Ylä-Engadinissa sijaitseva kylpyläkylä, lähes 1 800 metrin korkeudessa Graubündenin kantonissa. Sen mineraalilähteille on tehty pyhiinvaelluksia jo keskiajalta asti, ja 1500-luvulla myös lääkäri Paracelsus vietti siellä aikaa. Talvimatkailu koko Alpeilla sai alkunsa juuri täältä syyskuussa 1864, kun hotelli-isäntä Caspar Badrutt löi vetoa neljän brittiläisen kesävieraansa kanssa: jos he eivät pitäisi kylästä talvella, hän maksaisi heidän matkakulunsa, mutta jos pitäisivät, he saisivat jäädä hänen vierainaan niin pitkäksi aikaa kuin halusivat. Vieraat ihastuivat, ja St. Moritzista tuli Alppien ensimmäinen talvikohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Norsut yli Alppien] Toisessa puunilaissodassa (218–201 eaa.) Karthagon sotapäällikkö Hannibal Barkas marssitti armeijansa – mukana lukuisia sotanorsuja – Espanjasta Alppien yli Italian niemimaalle ja piti roomalaisia pelossa lähes viisitoista vuotta ilman että Rooma pystyi ajamaan häntä maastaan. Vasta kun Publius Cornelius Scipio hyökkäsi suoraan Pohjois-Afrikkaan ja pakotti Hannibalin palaamaan kotiaan puolustamaan, roomalaiset kukistivat hänet Zaman taistelussa vuonna 202 eaa. Tämä pysähdyttävän lähellä ollut voitto teki Hannibalista Rooman pelätyimmän vihollisen kautta aikojen, ja hänen kasvonsa toistuivat myöhemmin lukuisissa patsaissa ja rintakuvissa.
+AIEMPI KYSYMYS: Minkä vedon Caspar Badrutt löi brittivieraidensa kanssa?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on hyvä tarina. Hotelli-isäntä löi vetoa neljän brittiläisen kesävieraansa kanssa syyskuussa 1864 siitä, viihtyisivätkö he [[St. Moritzissa]] talvella. Jos vieraat eivät pitäisi kylästä talvisin, hän maksaisi heidän matkakulunsa, mutta jos he pitäisivät siitä, he saisivat jäädä hänen vierainaan niin pitkäksi aikaa kuin halusivat. Vieraat ihastuivat, ja kylästä tuli [[Alppien]] ensimmäinen talvikohde. Isäntä ei hävinnyt, sen minä kyl sanon.
+KYSYMYS: Kerro lisää: Alppien
+
+### 345
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: St. Moritz (urheilu)
+Tietoruudun teksti: St. Moritz on korkealla Ylä-Engadinissa sijaitseva kylpyläkylä, lähes 1 800 metrin korkeudessa Graubündenin kantonissa. Sen mineraalilähteille on tehty pyhiinvaelluksia jo keskiajalta asti, ja 1500-luvulla myös lääkäri Paracelsus vietti siellä aikaa. Talvimatkailu koko Alpeilla sai alkunsa juuri täältä syyskuussa 1864, kun hotelli-isäntä Caspar Badrutt löi vetoa neljän brittiläisen kesävieraansa kanssa: jos he eivät pitäisi kylästä talvella, hän maksaisi heidän matkakulunsa, mutta jos pitäisivät, he saisivat jäädä hänen vierainaan niin pitkäksi aikaa kuin halusivat. Vieraat ihastuivat, ja St. Moritzista tuli Alppien ensimmäinen talvikohde.
+AIEMPI KYSYMYS: Mihin vuosisataan St. Moritzin lähteille tehdyt pyhiinvaellukset juontavat?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tarkkaa vuosisataa en osaa sanoa varmasti, mutta tiedetään, että [[mineraalilähteille]] on tehty pyhiinvaelluksia jo keskiajalta asti. Myöhemmin, 1500-luvulla, myös lääkäri [[Paracelsus]] vietti kylässä aikaa, joten paikka oli tunnettu jo tuolloin. Kylä sijaitsee [[Ylä-Engadinissa]] Graubündenin kantonissa. Vanhat polut ovat kyl minun makuuni.
+KYSYMYS: Kerro lisää: mineraalilähteille
+
+### 346
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: St. Moritz (urheilu)
+Tietoruudun teksti: St. Moritz on korkealla Ylä-Engadinissa sijaitseva kylpyläkylä, lähes 1 800 metrin korkeudessa Graubündenin kantonissa. Sen mineraalilähteille on tehty pyhiinvaelluksia jo keskiajalta asti, ja 1500-luvulla myös lääkäri Paracelsus vietti siellä aikaa. Talvimatkailu koko Alpeilla sai alkunsa juuri täältä syyskuussa 1864, kun hotelli-isäntä Caspar Badrutt löi vetoa neljän brittiläisen kesävieraansa kanssa: jos he eivät pitäisi kylästä talvella, hän maksaisi heidän matkakulunsa, mutta jos pitäisivät, he saisivat jäädä hänen vierainaan niin pitkäksi aikaa kuin halusivat. Vieraat ihastuivat, ja St. Moritzista tuli Alppien ensimmäinen talvikohde.
+AIEMPI KYSYMYS: Mihin vuosisataan St. Moritzin lähteille tehdyt pyhiinvaellukset juontavat?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tarkkaa vuosisataa en osaa sanoa varmasti, mutta tiedetään, että [[mineraalilähteille]] on tehty pyhiinvaelluksia jo keskiajalta asti. Myöhemmin, 1500-luvulla, myös lääkäri [[Paracelsus]] vietti kylässä aikaa, joten paikka oli tunnettu jo tuolloin. Kylä sijaitsee [[Ylä-Engadinissa]] Graubündenin kantonissa. Vanhat polut ovat kyl minun makuuni.
+KYSYMYS: Kerro lisää: Paracelsus
+
+### 347
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: St. Moritz (urheilu)
+Tietoruudun teksti: St. Moritz on korkealla Ylä-Engadinissa sijaitseva kylpyläkylä, lähes 1 800 metrin korkeudessa Graubündenin kantonissa. Sen mineraalilähteille on tehty pyhiinvaelluksia jo keskiajalta asti, ja 1500-luvulla myös lääkäri Paracelsus vietti siellä aikaa. Talvimatkailu koko Alpeilla sai alkunsa juuri täältä syyskuussa 1864, kun hotelli-isäntä Caspar Badrutt löi vetoa neljän brittiläisen kesävieraansa kanssa: jos he eivät pitäisi kylästä talvella, hän maksaisi heidän matkakulunsa, mutta jos pitäisivät, he saisivat jäädä hänen vierainaan niin pitkäksi aikaa kuin halusivat. Vieraat ihastuivat, ja St. Moritzista tuli Alppien ensimmäinen talvikohde.
+AIEMPI KYSYMYS: Mihin vuosisataan St. Moritzin lähteille tehdyt pyhiinvaellukset juontavat?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tarkkaa vuosisataa en osaa sanoa varmasti, mutta tiedetään, että [[mineraalilähteille]] on tehty pyhiinvaelluksia jo keskiajalta asti. Myöhemmin, 1500-luvulla, myös lääkäri [[Paracelsus]] vietti kylässä aikaa, joten paikka oli tunnettu jo tuolloin. Kylä sijaitsee [[Ylä-Engadinissa]] Graubündenin kantonissa. Vanhat polut ovat kyl minun makuuni.
+KYSYMYS: Kerro lisää: Ylä-Engadinissa
+
+### 348
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: St. Moritz (urheilu)
+Tietoruudun teksti: St. Moritz on korkealla Ylä-Engadinissa sijaitseva kylpyläkylä, lähes 1 800 metrin korkeudessa Graubündenin kantonissa. Sen mineraalilähteille on tehty pyhiinvaelluksia jo keskiajalta asti, ja 1500-luvulla myös lääkäri Paracelsus vietti siellä aikaa. Talvimatkailu koko Alpeilla sai alkunsa juuri täältä syyskuussa 1864, kun hotelli-isäntä Caspar Badrutt löi vetoa neljän brittiläisen kesävieraansa kanssa: jos he eivät pitäisi kylästä talvella, hän maksaisi heidän matkakulunsa, mutta jos pitäisivät, he saisivat jäädä hänen vierainaan niin pitkäksi aikaa kuin halusivat. Vieraat ihastuivat, ja St. Moritzista tuli Alppien ensimmäinen talvikohde.
+AIEMPI KYSYMYS: Missä kantonissa St. Moritz sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai se. Helppo. St. Moritz sijaitsee Sveitsin [[Graubündenin]] kantonissa, korkealla [[Ylä-Engadinissa]], lähes 1 800 metrin korkeudessa. Se on kylpyläkylä, jonka [[mineraalilähteille]] on tehty pyhiinvaelluksia jo keskiajalta asti. Korkealta kaikki näyttää pieneltä, siit minä tiedän.
+KYSYMYS: Kerro lisää: Graubündenin
+
+### 349
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: St. Moritz (urheilu)
+Tietoruudun teksti: St. Moritz on korkealla Ylä-Engadinissa sijaitseva kylpyläkylä, lähes 1 800 metrin korkeudessa Graubündenin kantonissa. Sen mineraalilähteille on tehty pyhiinvaelluksia jo keskiajalta asti, ja 1500-luvulla myös lääkäri Paracelsus vietti siellä aikaa. Talvimatkailu koko Alpeilla sai alkunsa juuri täältä syyskuussa 1864, kun hotelli-isäntä Caspar Badrutt löi vetoa neljän brittiläisen kesävieraansa kanssa: jos he eivät pitäisi kylästä talvella, hän maksaisi heidän matkakulunsa, mutta jos pitäisivät, he saisivat jäädä hänen vierainaan niin pitkäksi aikaa kuin halusivat. Vieraat ihastuivat, ja St. Moritzista tuli Alppien ensimmäinen talvikohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Renessanssi syntyi kilpailusta] 1400-luku — 1400-luvun Firenzessä suvut ja killat kilpailivat siitä, kuka teettää kauneimman kirkon, patsaan tai kupolin. Kilpailusta syntyi renessanssi — "uudelleensyntyminen" — joka muutti koko Euroopan taiteen, tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli oli valmistuessaan 1436 maailman suurin muuraamalla tehty kupoli, eikä kukaan tiennyt varmasti, pysyisikö se pystyssä: se rakennettiin ilman tukitelineitä tavalla, jota insinöörit ihmettelevät yhä.
+- [Auckland — kohdekartta / Kohdekartta: Aucklandin kaupungintalo] 1909–1911 Kaupungintaloa suunniteltiin Aucklandiin jo 1872, vuosi ennen isoisän käyntiä. Paikaksi valittiin 1880 Greys Avenuen ja Queen Streetin kulma, joka lunastettiin omalla parlamenttilailla 1881, ja kun tontti osoittautui liian pieneksi, kaupunki osti naapurikiinteistöt 1883. Suunnittelukilpailu järjestettiin vasta 1908, ja sen voittivat melbournelaiset arkkitehdit JJ & EJ Clark. Peruskiven muurasi pormestari Arthur Myers 24. helmikuuta 1909, ja kenraalikuvernööri lordi Islington vihki talon 14. joulukuuta 1911. Hinta oli 126 000 puntaa. Julkisivun alaosa on tummaa melbournelaista basalttia ja yläosa vaaleaa Oamarun kalkkikiveä, ja kellotorni nousee 40 metriin. Viisikerroksinen italial…
+AIEMPI KYSYMYS: Kuka lääkäri vietti aikaa St. Moritzissa 1500-luvulla?
+AIEMPI VASTAUS (Livia):
+Katotaas. Lääkäri oli [[Paracelsus]], joka vietti 1500-luvulla aikaa kylässä. Kylän [[mineraalilähteille]] oli tehty pyhiinvaelluksia jo keskiajalta asti, joten paikka tunnettiin kylpylänä jo hänen aikanaan. Paracelsus oli tunnettu [[renessanssin]] ajan lääkäri ja luonnonfilosofi. Kyl lääkäri tietää, minne kannattaa mennä.
+KYSYMYS: Kerro lisää: renessanssin
+
+### 350
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: St. Moritz (urheilu)
+Tietoruudun teksti: St. Moritz on korkealla Ylä-Engadinissa sijaitseva kylpyläkylä, lähes 1 800 metrin korkeudessa Graubündenin kantonissa. Sen mineraalilähteille on tehty pyhiinvaelluksia jo keskiajalta asti, ja 1500-luvulla myös lääkäri Paracelsus vietti siellä aikaa. Talvimatkailu koko Alpeilla sai alkunsa juuri täältä syyskuussa 1864, kun hotelli-isäntä Caspar Badrutt löi vetoa neljän brittiläisen kesävieraansa kanssa: jos he eivät pitäisi kylästä talvella, hän maksaisi heidän matkakulunsa, mutta jos pitäisivät, he saisivat jäädä hänen vierainaan niin pitkäksi aikaa kuin halusivat. Vieraat ihastuivat, ja St. Moritzista tuli Alppien ensimmäinen talvikohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Townsville — kaupunkilehti / Kuiva tropiikki: Tropiikki, jossa talvi on sininen] Townsvillen ilmasto on trooppinen savanni, ja sen erikoisuus on talvi. Muualla Queenslandin itärannikon tropiikissa — esimerkiksi Cairnsissa — sataa myös talvella, koska rannikko kulkee pohjois—etelä-suunnassa ja kaakkoispasaati nousee sitä vasten. Townsvillen kohdalla rannikko kääntyy itä—länsisuuntaiseksi, eikä nostetta synny. Siksi talvikuukaudet ovat sinitaivaisia: lämpimät päivät, viileät yöt ja tasainen pasaati. Vuosisade on 1 095 millimetriä 61 sadepäivänä, ja lähes kaikki siitä tulee marras—huhtikuun kuudessa kuukaudessa. Syyskuun keskisade on 9,9 millimetriä.
+- [Winnipeg — kaupunkilehti / Talvi, tulva ja preeria] Winnipegissä sää tulee joka suunnasta ja koko voimallaan: talvi on pitkä ja ankara, kesä kuuma ja ukkoinen, ja joka kevät katsotaan, kuinka korkealle Punainen joki nousee.
+- [Suomi — maalehti / Luonto: Taivas joka syttyy vihreäksi] nykyään — Revontulet syntyvät, kun Auringosta virtaavat varatut hiukkaset törmäävät ilmakehän happi- ja typpiatomeihin ja saavat ne hehkumaan — happi loistaa vihreänä ja punaisena, typpi sinisenä ja violettina. Suomen Lappi sijaitsee juuri sillä leveysasteella, jolla revontulet näkyvät useimmin, koska maapallon magneettikenttä ohjaa hiukkaset kehämäiselle vyöhykkeelle napojen ympärille. Pilvettöminä, pimeinä talvi-iltoina valot voivat leimahtaa taivaalle verhoina, säteinä tai kiemuroina, jotka muuttavat muotoaan minuuteissa. Ilmiö tunnetaan nimellä aurora borealis, ja Lapin talvimatkailu ajoittuu pitkälti pimeän vuodenajan ympärille juuri revontulten vuoksi.
+AIEMPI KYSYMYS: Kuinka korkealla St. Moritz sijaitsee?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. St. Moritz sijaitsee lähes 1 800 metrin korkeudessa, [[Ylä-Engadinissa]] Sveitsin [[Graubündenin]] kantonissa. Se on kylpyläkylä, jossa [[talvimatkailu]] sai Alpeilla alkunsa syyskuussa 1864. Minusta se on kyl ihan mukava lentokorkeus.
+KYSYMYS: Kerro lisää: talvimatkailu
+
+### 351
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Scuol (sana)
+Tietoruudun teksti: Scuol on kylä Ala-Engadinissa Graubündenin kantonissa, ja sen virallinen kieli on retoromaani eli romantsi, latinasta polveutuva kieli, jota puhutaan enää tässä yhdessä sveitsiläiskantonissa. Kylän parantavia lähteitä on käytetty laajemmin vasta 1860-luvulta lähtien, ja kylpylämatkailu on juuri alkamassa. Romantsin kielelle on 1800-luvun puolivälissä syntynyt elvytysliike: vuonna 1860 kieli otettiin opetusaineeksi opettajaseminaariin, ja vuonna 1863 tehtiin ensimmäinen yritys perustaa yhteinen yhdistys kaikille romantsinkielisille alueille. Kieli jakautuu viiteen murteeseen, joiden puhujat eivät aina ymmärrä toisiaan, ja Scuolin ympäristössä puhuttua muotoa kutsutaan valladeriksi.
+AIEMPI KYSYMYS: Mikä kieli on Scuolin virallinen kieli?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Scuolin virallinen kieli on [[retoromaani]] eli [[romantsi]], latinasta polveutuva kieli. Sitä puhutaan enää tässä yhdessä sveitsiläiskantonissa, [[Graubündenin]] kantonissa. Latina elää, ja suku on tyytyväinen.
+KYSYMYS: Kerro lisää: retoromaani
+
+### 352
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Scuol (sana)
+Tietoruudun teksti: Scuol on kylä Ala-Engadinissa Graubündenin kantonissa, ja sen virallinen kieli on retoromaani eli romantsi, latinasta polveutuva kieli, jota puhutaan enää tässä yhdessä sveitsiläiskantonissa. Kylän parantavia lähteitä on käytetty laajemmin vasta 1860-luvulta lähtien, ja kylpylämatkailu on juuri alkamassa. Romantsin kielelle on 1800-luvun puolivälissä syntynyt elvytysliike: vuonna 1860 kieli otettiin opetusaineeksi opettajaseminaariin, ja vuonna 1863 tehtiin ensimmäinen yritys perustaa yhteinen yhdistys kaikille romantsinkielisille alueille. Kieli jakautuu viiteen murteeseen, joiden puhujat eivät aina ymmärrä toisiaan, ja Scuolin ympäristössä puhuttua muotoa kutsutaan valladeriksi.
+AIEMPI KYSYMYS: Mikä kieli on Scuolin virallinen kieli?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Scuolin virallinen kieli on [[retoromaani]] eli [[romantsi]], latinasta polveutuva kieli. Sitä puhutaan enää tässä yhdessä sveitsiläiskantonissa, [[Graubündenin]] kantonissa. Latina elää, ja suku on tyytyväinen.
+KYSYMYS: Kerro lisää: romantsi
+
+### 353
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Scuol (sana)
+Tietoruudun teksti: Scuol on kylä Ala-Engadinissa Graubündenin kantonissa, ja sen virallinen kieli on retoromaani eli romantsi, latinasta polveutuva kieli, jota puhutaan enää tässä yhdessä sveitsiläiskantonissa. Kylän parantavia lähteitä on käytetty laajemmin vasta 1860-luvulta lähtien, ja kylpylämatkailu on juuri alkamassa. Romantsin kielelle on 1800-luvun puolivälissä syntynyt elvytysliike: vuonna 1860 kieli otettiin opetusaineeksi opettajaseminaariin, ja vuonna 1863 tehtiin ensimmäinen yritys perustaa yhteinen yhdistys kaikille romantsinkielisille alueille. Kieli jakautuu viiteen murteeseen, joiden puhujat eivät aina ymmärrä toisiaan, ja Scuolin ympäristössä puhuttua muotoa kutsutaan valladeriksi.
+AIEMPI KYSYMYS: Mikä kieli on Scuolin virallinen kieli?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Scuolin virallinen kieli on [[retoromaani]] eli [[romantsi]], latinasta polveutuva kieli. Sitä puhutaan enää tässä yhdessä sveitsiläiskantonissa, [[Graubündenin]] kantonissa. Latina elää, ja suku on tyytyväinen.
+KYSYMYS: Kerro lisää: Graubündenin
+
+### 354
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Scuol (sana)
+Tietoruudun teksti: Scuol on kylä Ala-Engadinissa Graubündenin kantonissa, ja sen virallinen kieli on retoromaani eli romantsi, latinasta polveutuva kieli, jota puhutaan enää tässä yhdessä sveitsiläiskantonissa. Kylän parantavia lähteitä on käytetty laajemmin vasta 1860-luvulta lähtien, ja kylpylämatkailu on juuri alkamassa. Romantsin kielelle on 1800-luvun puolivälissä syntynyt elvytysliike: vuonna 1860 kieli otettiin opetusaineeksi opettajaseminaariin, ja vuonna 1863 tehtiin ensimmäinen yritys perustaa yhteinen yhdistys kaikille romantsinkielisille alueille. Kieli jakautuu viiteen murteeseen, joiden puhujat eivät aina ymmärrä toisiaan, ja Scuolin ympäristössä puhuttua muotoa kutsutaan valladeriksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Roomalainen kylpylä] Kylpylän lattiat ovat poissa, mutta niiden kannattimet ovat tallella: nurmella seisoo satoja tiilipinoja tasaisissa riveissä. Ne ovat hypokaustin pilareita. Pinojen päälle ladottiin tiililaatta, sen päälle betonikerros ja vasta ylimmäksi huoneen lattia, joten lattian ja maan väliin jäi yhtenäinen ontelo. Uunista tuleva kuuma ilma ja savu kiersivät pilareiden välissä ja nousivat seinien sisään muurattuja tiiliputkia pitkin katolle, joten lämpöä tuli sekä lattiasta että seinistä. Kylpylä rakennettiin 200-luvulla keisari Caracallan (hallitsi 198–217) aikana ja omistettiin lääketieteen jumalalle Asklepiokselle. Kolikkolöydöt ajoittivat rakentamisen ja osoittivat noin viidensadan vuoden käytön. …
+- [Sansibar — kohdekartta / Kohdekartta: Hamamnin kylpylä] 1870–1888 Sulttaani Barghash bin Said rakennutti kaupunkiin yleisen kylpylän vuosina 1870–1888. Se toimi kylpylänä vuoteen 1920 asti. Persialaiseksi sitä kutsutaan siksi, että rakentaminen tilattiin shiraziarkkitehdeilta. Sana hamamni tarkoittaa kylpyjen paikkaa, ja siitä on tullut myös koko korttelin nimi. Sisällä oli monimutkainen tilasarja: kuumia ja kylmiä altaita, käymälöitä, parranajotiloja ja ravintola. Kuuma vesi tuotiin maanalaisia akvedukteja pitkin. Sisäänpääsy oli maksullinen, joten säännöllisesti kylpylää käyttivät vain varakkaat sansibarilaiset. Kylpylä oli avoinna sekä miehille että naisille, mutta eri aikoina. Kylpylä ei ole enää toiminnassa, mutta se on avoinna kävijöille j…
+AIEMPI KYSYMYS: Milloin Scuolin parantavia lähteitä alettiin käyttää laajemmin?
+AIEMPI VASTAUS (Livia):
+No niin, katsotaas. Scuolin parantavia lähteitä on käytetty laajemmin vasta 1860-luvulta lähtien, ja [[kylpylämatkailu]] oli tuolloin vasta alkamassa. Kylä sijaitsee [[Ala-Engadinissa]] Graubündenin kantonissa. Aika tuore juttu, meikäläisten suvun rinnalla.
+KYSYMYS: Kerro lisää: kylpylämatkailu
+
+### 355
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Scuol (sana)
+Tietoruudun teksti: Scuol on kylä Ala-Engadinissa Graubündenin kantonissa, ja sen virallinen kieli on retoromaani eli romantsi, latinasta polveutuva kieli, jota puhutaan enää tässä yhdessä sveitsiläiskantonissa. Kylän parantavia lähteitä on käytetty laajemmin vasta 1860-luvulta lähtien, ja kylpylämatkailu on juuri alkamassa. Romantsin kielelle on 1800-luvun puolivälissä syntynyt elvytysliike: vuonna 1860 kieli otettiin opetusaineeksi opettajaseminaariin, ja vuonna 1863 tehtiin ensimmäinen yritys perustaa yhteinen yhdistys kaikille romantsinkielisille alueille. Kieli jakautuu viiteen murteeseen, joiden puhujat eivät aina ymmärrä toisiaan, ja Scuolin ympäristössä puhuttua muotoa kutsutaan valladeriksi.
+AIEMPI KYSYMYS: Milloin Scuolin parantavia lähteitä alettiin käyttää laajemmin?
+AIEMPI VASTAUS (Livia):
+No niin, katsotaas. Scuolin parantavia lähteitä on käytetty laajemmin vasta 1860-luvulta lähtien, ja [[kylpylämatkailu]] oli tuolloin vasta alkamassa. Kylä sijaitsee [[Ala-Engadinissa]] Graubündenin kantonissa. Aika tuore juttu, meikäläisten suvun rinnalla.
+KYSYMYS: Kerro lisää: Ala-Engadinissa
+
+### 356
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Scuol (sana)
+Tietoruudun teksti: Scuol on kylä Ala-Engadinissa Graubündenin kantonissa, ja sen virallinen kieli on retoromaani eli romantsi, latinasta polveutuva kieli, jota puhutaan enää tässä yhdessä sveitsiläiskantonissa. Kylän parantavia lähteitä on käytetty laajemmin vasta 1860-luvulta lähtien, ja kylpylämatkailu on juuri alkamassa. Romantsin kielelle on 1800-luvun puolivälissä syntynyt elvytysliike: vuonna 1860 kieli otettiin opetusaineeksi opettajaseminaariin, ja vuonna 1863 tehtiin ensimmäinen yritys perustaa yhteinen yhdistys kaikille romantsinkielisille alueille. Kieli jakautuu viiteen murteeseen, joiden puhujat eivät aina ymmärrä toisiaan, ja Scuolin ympäristössä puhuttua muotoa kutsutaan valladeriksi.
+AIEMPI KYSYMYS: Mikä on retoromaani eli romantsi?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys. Retoromaani eli romantsi on latinasta polveutuva kieli, jota puhutaan enää [[Graubündenin]] kantonissa Sveitsissä. Kieli jakautuu viiteen [[murteeseen]], joiden puhujat eivät aina ymmärrä toisiaan. Scuolin ympäristössä puhuttua muotoa kutsutaan [[valladeriksi]]. Roomalaista sukua, sanon minä, vaikka kukaan ei kuuntele.
+KYSYMYS: Kerro lisää: murteeseen
+
+### 357
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Scuol (sana)
+Tietoruudun teksti: Scuol on kylä Ala-Engadinissa Graubündenin kantonissa, ja sen virallinen kieli on retoromaani eli romantsi, latinasta polveutuva kieli, jota puhutaan enää tässä yhdessä sveitsiläiskantonissa. Kylän parantavia lähteitä on käytetty laajemmin vasta 1860-luvulta lähtien, ja kylpylämatkailu on juuri alkamassa. Romantsin kielelle on 1800-luvun puolivälissä syntynyt elvytysliike: vuonna 1860 kieli otettiin opetusaineeksi opettajaseminaariin, ja vuonna 1863 tehtiin ensimmäinen yritys perustaa yhteinen yhdistys kaikille romantsinkielisille alueille. Kieli jakautuu viiteen murteeseen, joiden puhujat eivät aina ymmärrä toisiaan, ja Scuolin ympäristössä puhuttua muotoa kutsutaan valladeriksi.
+AIEMPI KYSYMYS: Mikä on retoromaani eli romantsi?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys. Retoromaani eli romantsi on latinasta polveutuva kieli, jota puhutaan enää [[Graubündenin]] kantonissa Sveitsissä. Kieli jakautuu viiteen [[murteeseen]], joiden puhujat eivät aina ymmärrä toisiaan. Scuolin ympäristössä puhuttua muotoa kutsutaan [[valladeriksi]]. Roomalaista sukua, sanon minä, vaikka kukaan ei kuuntele.
+KYSYMYS: Kerro lisää: valladeriksi
+
+### 358
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Scuol (sana)
+Tietoruudun teksti: Scuol on kylä Ala-Engadinissa Graubündenin kantonissa, ja sen virallinen kieli on retoromaani eli romantsi, latinasta polveutuva kieli, jota puhutaan enää tässä yhdessä sveitsiläiskantonissa. Kylän parantavia lähteitä on käytetty laajemmin vasta 1860-luvulta lähtien, ja kylpylämatkailu on juuri alkamassa. Romantsin kielelle on 1800-luvun puolivälissä syntynyt elvytysliike: vuonna 1860 kieli otettiin opetusaineeksi opettajaseminaariin, ja vuonna 1863 tehtiin ensimmäinen yritys perustaa yhteinen yhdistys kaikille romantsinkielisille alueille. Kieli jakautuu viiteen murteeseen, joiden puhujat eivät aina ymmärrä toisiaan, ja Scuolin ympäristössä puhuttua muotoa kutsutaan valladeriksi.
+AIEMPI KYSYMYS: Kuinka monta murretta romantsilla on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Romantsilla on viisi murretta, ja niiden puhujat eivät aina ymmärrä toisiaan. Scuolin ympäristössä puhuttua muotoa kutsutaan [[valladeriksi]]. Kielelle syntyi 1800-luvun puolivälissä [[elvytysliike]], ja vuonna 1860 se otettiin opetusaineeksi opettajaseminaariin. Viis murretta, ja minä pärjään yhdellä.
+KYSYMYS: Kerro lisää: elvytysliike
+
+### 359
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aletschin jäätikkö (luonto · vuori)
+Tietoruudun teksti: Aletschin jäätikkö on Alppien suurin jäätikkö, noin 23 kilometriä pitkä ja lähes 82 neliökilometrin laajuinen, Berner Alpeilla Valais'n kantonissa. Se syntyy neljän pienemmän jäätikön yhtyessä Konkordiaplatzilla, jossa jää on paksuimmillaan yli 900 metriä, ja jatkaa sieltä kohti Rhônen laaksoa antaen alkunsa Massa-joelle. Jäätikköä reunustavat Alppien korkeimmat huiput, muun muassa Jungfrau ja Mönch pohjoisessa sekä Aletschhorn lännessä. Jäätikkö on jo vetäytymässä: vuodesta 1870 se on lyhentynyt yli kolme kilometriä.
+AIEMPI KYSYMYS: Kuinka monesta pienemmästä jäätiköstä Aletschin jäätikkö syntyy?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Aletschin jäätikkö syntyy neljän pienemmän jäätikön yhtyessä [[Konkordiaplatzilla]], jossa jää on paksuimmillaan yli 900 metriä. Sieltä jäätikkö jatkaa kohti [[Rhônen]] laaksoa. Se on [[Alppien]] suurin jäätikkö. Neljä yhdeksi, kuin lentue illalla katolla.
+KYSYMYS: Kerro lisää: Konkordiaplatzilla
+
+### 360
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aletschin jäätikkö (luonto · vuori)
+Tietoruudun teksti: Aletschin jäätikkö on Alppien suurin jäätikkö, noin 23 kilometriä pitkä ja lähes 82 neliökilometrin laajuinen, Berner Alpeilla Valais'n kantonissa. Se syntyy neljän pienemmän jäätikön yhtyessä Konkordiaplatzilla, jossa jää on paksuimmillaan yli 900 metriä, ja jatkaa sieltä kohti Rhônen laaksoa antaen alkunsa Massa-joelle. Jäätikköä reunustavat Alppien korkeimmat huiput, muun muassa Jungfrau ja Mönch pohjoisessa sekä Aletschhorn lännessä. Jäätikkö on jo vetäytymässä: vuodesta 1870 se on lyhentynyt yli kolme kilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Luonto: Hevonen vaihtaa väriä kasvaessaan] nykyään — Rhônen suistossa Camarguen suomailla elää oma hevosrotunsa, joka on aikuisena aina valkoinen. Varsat syntyvät mustina tai tummanruskeina, ja väri vaalenee vuosi vuodelta, kunnes turkki on kokonaan valkea. Hevoset ovat pieniä, säkäkorkeus on 135–150 senttiä, mutta ne kantavat aikuisen miehen. Kaviot ovat leveät ja kovat, mikä sopii upottavaan suohon. Niillä ratsastavat gardianit, paimenet, jotka kokoavat alueen mustia härkiä. Hevoset elävät laumoina ulkona ympäri vuoden.
+AIEMPI KYSYMYS: Kuinka monesta pienemmästä jäätiköstä Aletschin jäätikkö syntyy?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Aletschin jäätikkö syntyy neljän pienemmän jäätikön yhtyessä [[Konkordiaplatzilla]], jossa jää on paksuimmillaan yli 900 metriä. Sieltä jäätikkö jatkaa kohti [[Rhônen]] laaksoa. Se on [[Alppien]] suurin jäätikkö. Neljä yhdeksi, kuin lentue illalla katolla.
+KYSYMYS: Kerro lisää: Rhônen
+
+### 361
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aletschin jäätikkö (luonto · vuori)
+Tietoruudun teksti: Aletschin jäätikkö on Alppien suurin jäätikkö, noin 23 kilometriä pitkä ja lähes 82 neliökilometrin laajuinen, Berner Alpeilla Valais'n kantonissa. Se syntyy neljän pienemmän jäätikön yhtyessä Konkordiaplatzilla, jossa jää on paksuimmillaan yli 900 metriä, ja jatkaa sieltä kohti Rhônen laaksoa antaen alkunsa Massa-joelle. Jäätikköä reunustavat Alppien korkeimmat huiput, muun muassa Jungfrau ja Mönch pohjoisessa sekä Aletschhorn lännessä. Jäätikkö on jo vetäytymässä: vuodesta 1870 se on lyhentynyt yli kolme kilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Norsut yli Alppien] Toisessa puunilaissodassa (218–201 eaa.) Karthagon sotapäällikkö Hannibal Barkas marssitti armeijansa – mukana lukuisia sotanorsuja – Espanjasta Alppien yli Italian niemimaalle ja piti roomalaisia pelossa lähes viisitoista vuotta ilman että Rooma pystyi ajamaan häntä maastaan. Vasta kun Publius Cornelius Scipio hyökkäsi suoraan Pohjois-Afrikkaan ja pakotti Hannibalin palaamaan kotiaan puolustamaan, roomalaiset kukistivat hänet Zaman taistelussa vuonna 202 eaa. Tämä pysähdyttävän lähellä ollut voitto teki Hannibalista Rooman pelätyimmän vihollisen kautta aikojen, ja hänen kasvonsa toistuivat myöhemmin lukuisissa patsaissa ja rintakuvissa.
+AIEMPI KYSYMYS: Kuinka monesta pienemmästä jäätiköstä Aletschin jäätikkö syntyy?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Aletschin jäätikkö syntyy neljän pienemmän jäätikön yhtyessä [[Konkordiaplatzilla]], jossa jää on paksuimmillaan yli 900 metriä. Sieltä jäätikkö jatkaa kohti [[Rhônen]] laaksoa. Se on [[Alppien]] suurin jäätikkö. Neljä yhdeksi, kuin lentue illalla katolla.
+KYSYMYS: Kerro lisää: Alppien
+
+### 362
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aletschin jäätikkö (luonto · vuori)
+Tietoruudun teksti: Aletschin jäätikkö on Alppien suurin jäätikkö, noin 23 kilometriä pitkä ja lähes 82 neliökilometrin laajuinen, Berner Alpeilla Valais'n kantonissa. Se syntyy neljän pienemmän jäätikön yhtyessä Konkordiaplatzilla, jossa jää on paksuimmillaan yli 900 metriä, ja jatkaa sieltä kohti Rhônen laaksoa antaen alkunsa Massa-joelle. Jäätikköä reunustavat Alppien korkeimmat huiput, muun muassa Jungfrau ja Mönch pohjoisessa sekä Aletschhorn lännessä. Jäätikkö on jo vetäytymässä: vuodesta 1870 se on lyhentynyt yli kolme kilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kaupunkilehti / Historia: Kellotorni, joka näkyy joelle] Luostarin kellotorni rakennettiin vuosina 1731–1745 saksalaisen arkkitehti Johann Gottfried Schädelin suunnitelmien mukaan, ja se oli valmistuessaan maailman korkein vapaasti seisova kellotorni. Ristin kanssa se nousee 96,5 metrin korkeuteen ja sen kullattu kupoli näkyy kauas Dnipro-joelle. Koko luostarikompleksi, luolat ja maanpäälliset rakennukset yhdessä, on ollut Unescon maailmanperintökohde vuodesta 1990.
+AIEMPI KYSYMYS: Mikä joki saa alkunsa Aletschin jäätiköltä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Aletschin jäätikkö antaa alkunsa [[Massa-joelle]], joka virtaa kohti [[Rhônen]] laaksoa. Jäätikkö sijaitsee [[Berner Alpeilla]] Valais'n kantonissa. Pienet joet ovat joskus isojen alku, kuten tässä.
+KYSYMYS: Kerro lisää: Massa-joelle
+
+### 363
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aletschin jäätikkö (luonto · vuori)
+Tietoruudun teksti: Aletschin jäätikkö on Alppien suurin jäätikkö, noin 23 kilometriä pitkä ja lähes 82 neliökilometrin laajuinen, Berner Alpeilla Valais'n kantonissa. Se syntyy neljän pienemmän jäätikön yhtyessä Konkordiaplatzilla, jossa jää on paksuimmillaan yli 900 metriä, ja jatkaa sieltä kohti Rhônen laaksoa antaen alkunsa Massa-joelle. Jäätikköä reunustavat Alppien korkeimmat huiput, muun muassa Jungfrau ja Mönch pohjoisessa sekä Aletschhorn lännessä. Jäätikkö on jo vetäytymässä: vuodesta 1870 se on lyhentynyt yli kolme kilometriä.
+AIEMPI KYSYMYS: Mikä joki saa alkunsa Aletschin jäätiköltä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Aletschin jäätikkö antaa alkunsa [[Massa-joelle]], joka virtaa kohti [[Rhônen]] laaksoa. Jäätikkö sijaitsee [[Berner Alpeilla]] Valais'n kantonissa. Pienet joet ovat joskus isojen alku, kuten tässä.
+KYSYMYS: Kerro lisää: Berner Alpeilla
+
+### 364
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aletschin jäätikkö (luonto · vuori)
+Tietoruudun teksti: Aletschin jäätikkö on Alppien suurin jäätikkö, noin 23 kilometriä pitkä ja lähes 82 neliökilometrin laajuinen, Berner Alpeilla Valais'n kantonissa. Se syntyy neljän pienemmän jäätikön yhtyessä Konkordiaplatzilla, jossa jää on paksuimmillaan yli 900 metriä, ja jatkaa sieltä kohti Rhônen laaksoa antaen alkunsa Massa-joelle. Jäätikköä reunustavat Alppien korkeimmat huiput, muun muassa Jungfrau ja Mönch pohjoisessa sekä Aletschhorn lännessä. Jäätikkö on jo vetäytymässä: vuodesta 1870 se on lyhentynyt yli kolme kilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Vuoret: Jäätikkö, joka virtaa kuin joki] 2001 — Aletschin jäätikkö on Alppien suurin: noin kaksikymmentä kilometriä pitkä ja paksuimmalta kohdalta lähes tuhat metriä syvä jäämassa. Se ei ole paikallaan vaan valuu alaspäin muutamia satoja metrejä vuodessa — niin hitaasti, ettei sitä näe, mutta pinnan tummat juovat kertovat virtauksen suunnan kuin joen pyörteet. Unesco otti jäätikön ympäristöineen maailmanperintöluetteloon vuonna 2001. Jäätikkö on lyhentynyt viime vuosikymmeninä nopeasti.
+AIEMPI KYSYMYS: Mikä Konkordiaplatz on?
+AIEMPI VASTAUS (Livia):
+Kato, tää on hyvä paikka. Konkordiaplatz on kohta [[Berner Alpeilla]], jossa neljä pienempää jäätikköä yhtyy [[Aletschin jäätiköksi]]. Siellä jää on paksuimmillaan yli 900 metriä, ja sieltä jäätikkö jatkaa kohti [[Rhônen]] laaksoa. Jää kokoontuu sinne kuin kyyhkyt torille.
+KYSYMYS: Kerro lisää: Aletschin jäätiköksi
+
+### 365
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aletschin jäätikkö (luonto · vuori)
+Tietoruudun teksti: Aletschin jäätikkö on Alppien suurin jäätikkö, noin 23 kilometriä pitkä ja lähes 82 neliökilometrin laajuinen, Berner Alpeilla Valais'n kantonissa. Se syntyy neljän pienemmän jäätikön yhtyessä Konkordiaplatzilla, jossa jää on paksuimmillaan yli 900 metriä, ja jatkaa sieltä kohti Rhônen laaksoa antaen alkunsa Massa-joelle. Jäätikköä reunustavat Alppien korkeimmat huiput, muun muassa Jungfrau ja Mönch pohjoisessa sekä Aletschhorn lännessä. Jäätikkö on jo vetäytymässä: vuodesta 1870 se on lyhentynyt yli kolme kilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Arabiemiirikunnat — maalehti / Keidas: Kahvi kaadetaan kupin pohjalle] Arabialainen kahvi eli gahwa paahdetaan vaaleaksi ja maustetaan kardemummalla, joskus myös sahramilla. Se keitetään kupariseen tai teräksiseen kannuun, jota sanotaan dallaksi, ja kaadetaan pieniin korvattomiin kuppeihin vain pohjalle asti — jotta kuppi pysyy kädessä kuumana vain hetken ja jotta tarjoaja voi kaataa lisää. Vieras juo tavallisesti yhdestä kolmeen kuppia ja heiluttaa sitten kuppia kädessään, mikä tarkoittaa kiitos, riittää. Unesco lisäsi tavan aineettoman kulttuuriperinnön luetteloon vuonna 2015.
+AIEMPI KYSYMYS: Miten Aletschin jäätikkö on muuttunut vuoden 1870 jälkeen?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Jäätikkö on vetäytymässä: vuodesta 1870 se on lyhentynyt yli kolme kilometriä, ja viime vuosikymmeninä lyheneminen on ollut nopeaa. Silti se on yhä [[Alppien]] suurin jäätikkö, ja [[Unesco]] otti sen ympäristöineen [[maailmanperintöluetteloon]] vuonna 2001. Hyvä, että joku on pitänyt tarkkaa kirjaa.
+KYSYMYS: Kerro lisää: Unesco
+
+### 366
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aletschin jäätikkö (luonto · vuori)
+Tietoruudun teksti: Aletschin jäätikkö on Alppien suurin jäätikkö, noin 23 kilometriä pitkä ja lähes 82 neliökilometrin laajuinen, Berner Alpeilla Valais'n kantonissa. Se syntyy neljän pienemmän jäätikön yhtyessä Konkordiaplatzilla, jossa jää on paksuimmillaan yli 900 metriä, ja jatkaa sieltä kohti Rhônen laaksoa antaen alkunsa Massa-joelle. Jäätikköä reunustavat Alppien korkeimmat huiput, muun muassa Jungfrau ja Mönch pohjoisessa sekä Aletschhorn lännessä. Jäätikkö on jo vetäytymässä: vuodesta 1870 se on lyhentynyt yli kolme kilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Miten Aletschin jäätikkö on muuttunut vuoden 1870 jälkeen?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Jäätikkö on vetäytymässä: vuodesta 1870 se on lyhentynyt yli kolme kilometriä, ja viime vuosikymmeninä lyheneminen on ollut nopeaa. Silti se on yhä [[Alppien]] suurin jäätikkö, ja [[Unesco]] otti sen ympäristöineen [[maailmanperintöluetteloon]] vuonna 2001. Hyvä, että joku on pitänyt tarkkaa kirjaa.
+KYSYMYS: Kerro lisää: maailmanperintöluetteloon
+
+### 367
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grande Dixence -pato (tekniikka)
+Tietoruudun teksti: Grande Dixence on Sveitsin ja koko Euroopan korkein pato, 285 metriä korkea betoninen painovoimapato Val d'Hérémencen perukoilla Valais'n kantonissa. Se patoaa Dixence-joen Lac des Dix -tekojärveksi ja syöttää vettä neljälle voimalaitokselle, jotka riittävät sadoille tuhansille kotitalouksille. Pato ja sen tekojärvi rakennetaan vasta 1900-luvun puolivälissä, kun sodanjälkeinen teollisuus tarvitsee yhä enemmän sähköä; vuoteen 1873 mennessä laakso on yhä koskematon vuoristolaakso. Ensimmäinen, paljon pienempi Dixencen pato valmistuu vasta 1935, ja nykyinen jättipato vasta 1961.
+AIEMPI KYSYMYS: Missä kantonissa Grande Dixence sijaitsee?
+AIEMPI VASTAUS (Livia):
+No jopas. Grande Dixence sijaitsee Sveitsin [[Valais'n]] kantonissa, [[Val d'Hérémencen]] perukoilla. Se on 285 metriä korkea betoninen painovoimapato, jota pidetään Sveitsin ja Euroopan korkeimpana patona. Pato patoaa [[Dixence-joen]] Lac des Dix -tekojärveksi. Jättipato, ja minä vain pikkulintu sen vieressä.
+KYSYMYS: Kerro lisää: Valais'n
+
+### 368
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grande Dixence -pato (tekniikka)
+Tietoruudun teksti: Grande Dixence on Sveitsin ja koko Euroopan korkein pato, 285 metriä korkea betoninen painovoimapato Val d'Hérémencen perukoilla Valais'n kantonissa. Se patoaa Dixence-joen Lac des Dix -tekojärveksi ja syöttää vettä neljälle voimalaitokselle, jotka riittävät sadoille tuhansille kotitalouksille. Pato ja sen tekojärvi rakennetaan vasta 1900-luvun puolivälissä, kun sodanjälkeinen teollisuus tarvitsee yhä enemmän sähköä; vuoteen 1873 mennessä laakso on yhä koskematon vuoristolaakso. Ensimmäinen, paljon pienempi Dixencen pato valmistuu vasta 1935, ja nykyinen jättipato vasta 1961.
+AIEMPI KYSYMYS: Missä kantonissa Grande Dixence sijaitsee?
+AIEMPI VASTAUS (Livia):
+No jopas. Grande Dixence sijaitsee Sveitsin [[Valais'n]] kantonissa, [[Val d'Hérémencen]] perukoilla. Se on 285 metriä korkea betoninen painovoimapato, jota pidetään Sveitsin ja Euroopan korkeimpana patona. Pato patoaa [[Dixence-joen]] Lac des Dix -tekojärveksi. Jättipato, ja minä vain pikkulintu sen vieressä.
+KYSYMYS: Kerro lisää: Val d'Hérémencen
+
+### 369
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grande Dixence -pato (tekniikka)
+Tietoruudun teksti: Grande Dixence on Sveitsin ja koko Euroopan korkein pato, 285 metriä korkea betoninen painovoimapato Val d'Hérémencen perukoilla Valais'n kantonissa. Se patoaa Dixence-joen Lac des Dix -tekojärveksi ja syöttää vettä neljälle voimalaitokselle, jotka riittävät sadoille tuhansille kotitalouksille. Pato ja sen tekojärvi rakennetaan vasta 1900-luvun puolivälissä, kun sodanjälkeinen teollisuus tarvitsee yhä enemmän sähköä; vuoteen 1873 mennessä laakso on yhä koskematon vuoristolaakso. Ensimmäinen, paljon pienempi Dixencen pato valmistuu vasta 1935, ja nykyinen jättipato vasta 1961.
+AIEMPI KYSYMYS: Missä kantonissa Grande Dixence sijaitsee?
+AIEMPI VASTAUS (Livia):
+No jopas. Grande Dixence sijaitsee Sveitsin [[Valais'n]] kantonissa, [[Val d'Hérémencen]] perukoilla. Se on 285 metriä korkea betoninen painovoimapato, jota pidetään Sveitsin ja Euroopan korkeimpana patona. Pato patoaa [[Dixence-joen]] Lac des Dix -tekojärveksi. Jättipato, ja minä vain pikkulintu sen vieressä.
+KYSYMYS: Kerro lisää: Dixence-joen
+
+### 370
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grande Dixence -pato (tekniikka)
+Tietoruudun teksti: Grande Dixence on Sveitsin ja koko Euroopan korkein pato, 285 metriä korkea betoninen painovoimapato Val d'Hérémencen perukoilla Valais'n kantonissa. Se patoaa Dixence-joen Lac des Dix -tekojärveksi ja syöttää vettä neljälle voimalaitokselle, jotka riittävät sadoille tuhansille kotitalouksille. Pato ja sen tekojärvi rakennetaan vasta 1900-luvun puolivälissä, kun sodanjälkeinen teollisuus tarvitsee yhä enemmän sähköä; vuoteen 1873 mennessä laakso on yhä koskematon vuoristolaakso. Ensimmäinen, paljon pienempi Dixencen pato valmistuu vasta 1935, ja nykyinen jättipato vasta 1961.
+AIEMPI KYSYMYS: Mihin tarkoitukseen pato rakennetaan?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämän minä muistan. Pato rakennetaan sähköntuotantoa varten, sillä sodanjälkeinen teollisuus tarvitsi 1900-luvun puolivälissä yhä enemmän sähköä. Se syöttää vettä neljälle [[voimalaitokselle]]. Ensimmäinen, paljon pienempi [[Dixencen]] pato valmistui 1935 ja nykyinen jättipato vuonna 1961. Minä pärjään ilman sähköä, kunhan on tuulta.
+KYSYMYS: Kerro lisää: voimalaitokselle
+
+### 371
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grande Dixence -pato (tekniikka)
+Tietoruudun teksti: Grande Dixence on Sveitsin ja koko Euroopan korkein pato, 285 metriä korkea betoninen painovoimapato Val d'Hérémencen perukoilla Valais'n kantonissa. Se patoaa Dixence-joen Lac des Dix -tekojärveksi ja syöttää vettä neljälle voimalaitokselle, jotka riittävät sadoille tuhansille kotitalouksille. Pato ja sen tekojärvi rakennetaan vasta 1900-luvun puolivälissä, kun sodanjälkeinen teollisuus tarvitsee yhä enemmän sähköä; vuoteen 1873 mennessä laakso on yhä koskematon vuoristolaakso. Ensimmäinen, paljon pienempi Dixencen pato valmistuu vasta 1935, ja nykyinen jättipato vasta 1961.
+AIEMPI KYSYMYS: Mihin tarkoitukseen pato rakennetaan?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämän minä muistan. Pato rakennetaan sähköntuotantoa varten, sillä sodanjälkeinen teollisuus tarvitsi 1900-luvun puolivälissä yhä enemmän sähköä. Se syöttää vettä neljälle [[voimalaitokselle]]. Ensimmäinen, paljon pienempi [[Dixencen]] pato valmistui 1935 ja nykyinen jättipato vuonna 1961. Minä pärjään ilman sähköä, kunhan on tuulta.
+KYSYMYS: Kerro lisää: Dixencen
+
+### 372
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grande Dixence -pato (tekniikka)
+Tietoruudun teksti: Grande Dixence on Sveitsin ja koko Euroopan korkein pato, 285 metriä korkea betoninen painovoimapato Val d'Hérémencen perukoilla Valais'n kantonissa. Se patoaa Dixence-joen Lac des Dix -tekojärveksi ja syöttää vettä neljälle voimalaitokselle, jotka riittävät sadoille tuhansille kotitalouksille. Pato ja sen tekojärvi rakennetaan vasta 1900-luvun puolivälissä, kun sodanjälkeinen teollisuus tarvitsee yhä enemmän sähköä; vuoteen 1873 mennessä laakso on yhä koskematon vuoristolaakso. Ensimmäinen, paljon pienempi Dixencen pato valmistuu vasta 1935, ja nykyinen jättipato vasta 1961.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sana — kohdekartta / Kohdekartta: Talhan moskeija] 1619–1620 Qubbat Talha on yksi Sanaan vanhimmista moskeijoista, ja sen rakennutti osmanien käskynhaltija Hadji Mehmed Pasha vuosina 1619–1620 ensimmäisen osmanimiehityksen aikana. Minareetti tehtiin samaan aikaan. Vuosina 1831–1832 moskeija kunnostettiin osittain imaami al-Mahdi Abdallahin käskystä; siitä kertoo rukoussalin seinään hakattu kirjoitus. Talha on Al-Bakiriyyan pikkuveli. Se valmistui kaksikymmentäkolme vuotta myöhemmin ja lainasi osan edeltäjänsä muotokielestä, mutta jäi selvästi pienemmäksi: rukoussali on vaatimaton ja minareetti matala, ja juuri siksi rakennus istuu kapeiden kujien väliin luontevammin kuin iso esikuvansa. Kokonaisuuteen kuuluu rukoussalin ja minareetin lisäks…
+AIEMPI KYSYMYS: Kuinka korkea Grande Dixence on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Grande Dixence on 285 metriä korkea betoninen [[painovoimapato]], jota pidetään Sveitsin ja Euroopan korkeimpana patona. Se patoaa [[Dixence-joen]] Lac des Dix -tekojärveksi [[Valais'n]] kantonissa. Korkealle ylletty, mutta minä lennän silti yli.
+KYSYMYS: Kerro lisää: painovoimapato
+
+### 373
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grande Dixence -pato (tekniikka)
+Tietoruudun teksti: Grande Dixence on Sveitsin ja koko Euroopan korkein pato, 285 metriä korkea betoninen painovoimapato Val d'Hérémencen perukoilla Valais'n kantonissa. Se patoaa Dixence-joen Lac des Dix -tekojärveksi ja syöttää vettä neljälle voimalaitokselle, jotka riittävät sadoille tuhansille kotitalouksille. Pato ja sen tekojärvi rakennetaan vasta 1900-luvun puolivälissä, kun sodanjälkeinen teollisuus tarvitsee yhä enemmän sähköä; vuoteen 1873 mennessä laakso on yhä koskematon vuoristolaakso. Ensimmäinen, paljon pienempi Dixencen pato valmistuu vasta 1935, ja nykyinen jättipato vasta 1961.
+AIEMPI KYSYMYS: Minkä järven Grande Dixence muodostaa?
+AIEMPI VASTAUS (Livia):
+Just niin, tämä on helppo. Pato patoaa [[Dixence-joen]] Lac des Dix -nimiseksi [[tekojärveksi]], joka sijaitsee [[Val d'Hérémencen]] perukoilla. Järven vesi syötetään neljälle voimalaitokselle. Hyvä lintuallas, vaikkakin vähän kylmä.
+KYSYMYS: Kerro lisää: tekojärveksi
+
+### 374
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vevey (ruoka)
+Tietoruudun teksti: Vevey on pieni kaupunki Genevenjärven rannalla, ja siitä on tullut sveitsiläisen elintarviketeollisuuden syntysija. Henri Nestlé alkoi vuonna 1867 myydä Veveystä käsin kehittämäänsä äidinmaidonkorviketta, jonka reseptin hän oli keksinyt pelastaakseen kylän vauvoja. Samoihin aikoihin paikallinen makeistehtailija Daniel Peter yritti keksiä tavan valmistaa maitosuklaata, mutta maidon vedestä ei tahtonut päästä eroon ilman että suklaa homehtui. Nestlé neuvoi Peteriä, ja ratkaisu löytyi vasta vuosia myöhemmin, minkä jälkeen Peter yhdisti yrityksensä Nestlén kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kenia — maalehti / Ruoka: Maito, jota kypsytetään noessa] Kalenjinien mursik on hapanmaitoa, joka kypsytetään sotet-kalebassissa. Astia harjataan puhtaaksi käpypalmun oksasta tehdyllä sosiot-harjalla ja sivellään sisältä puuhiilellä, joka hehkutetaan itet-pensaan oksista. Hiili tiivistää huokoisen kuoren ilmatiiviiksi, estää pilaantumisen, antaa maidolle sinertävän sävyn ja mausteisen maun. Maito jätetään hapantumaan kolmesta viiteen vuorokautta ja säilyy kuukauden. Mursikia juodaan häiden myötäjäisneuvottelujen päätteeksi, ja kansainvälisistä kisoista palaava juoksija saa kulauksen jo lentokentällä.
+- [Kazakstan — maalehti / Ruoka: Maito, joka hapatettiin satulassa] Kumis on hapatettua tamman maitoa. Siinä on enemmän sokeria kuin lehmänmaidossa, joten käyminen tuottaa alkoholia 0,7–2,5 prosenttia. Lypsy vaatii taitoa: lypsäjä on toinen polvi maassa ja ämpäri toisen polven päällä, ja varsa pidetään koko ajan tamman kyljessä, koska muuten maito ei tule. Kausi kestää kesäkuun puolivälistä lokakuun alkuun, ja tamma antaa 1 000–1 200 litraa, josta puolet jää varsalle. Hapatusastia jätettiin jurtan katolle ja käänneltiin — tai sidottiin satulaan, jolloin päivän ratsastus hoiti sekoittamisen.
+- [Somalia — maalehti / Ruoka: Teehen maito vasta lopuksi] Aamun juoma on shaah tai qahwa, tee tai kahvi. Shaah keitetään mustasta teestä ja maustetaan inkiväärillä, kardemummalla ja kanelilla — mutta mustapippuria siihen ei panna, toisin kuin moneen muuhun maustettuun teehen. Maito lisätään vasta keittämisen jälkeen, ei sen aikana, ja silloin juoma on shaah cadeeys. Illalla ennen nukkumaanmenoa juodaan lasi kardemummalla maustettua maitoa. Lounaan janojuomia ovat balbeelmo eli greippi, raqey eli tamarindi ja isbarmuunto eli limonadi.
+AIEMPI KYSYMYS: Minkä ongelman Daniel Peter yritti ratkaista?
+AIEMPI VASTAUS (Livia):
+Hmm, tuo on hyvä. Paikallinen makeistehtailija Peter yritti keksiä tavan valmistaa [[maitosuklaata]], mutta maidon vedestä ei tahtonut päästä eroon ilman että suklaa homehtui. [[Henri Nestlé]] neuvoi häntä, ja ratkaisu löytyi vasta vuosia myöhemmin. Sen jälkeen Peter yhdisti yrityksensä [[Nestlén]] kanssa. Pulla olisi kyl ollut helpompi.
+KYSYMYS: Kerro lisää: maitosuklaata
+
+### 375
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vevey (ruoka)
+Tietoruudun teksti: Vevey on pieni kaupunki Genevenjärven rannalla, ja siitä on tullut sveitsiläisen elintarviketeollisuuden syntysija. Henri Nestlé alkoi vuonna 1867 myydä Veveystä käsin kehittämäänsä äidinmaidonkorviketta, jonka reseptin hän oli keksinyt pelastaakseen kylän vauvoja. Samoihin aikoihin paikallinen makeistehtailija Daniel Peter yritti keksiä tavan valmistaa maitosuklaata, mutta maidon vedestä ei tahtonut päästä eroon ilman että suklaa homehtui. Nestlé neuvoi Peteriä, ja ratkaisu löytyi vasta vuosia myöhemmin, minkä jälkeen Peter yhdisti yrityksensä Nestlén kanssa.
+AIEMPI KYSYMYS: Minkä ongelman Daniel Peter yritti ratkaista?
+AIEMPI VASTAUS (Livia):
+Hmm, tuo on hyvä. Paikallinen makeistehtailija Peter yritti keksiä tavan valmistaa [[maitosuklaata]], mutta maidon vedestä ei tahtonut päästä eroon ilman että suklaa homehtui. [[Henri Nestlé]] neuvoi häntä, ja ratkaisu löytyi vasta vuosia myöhemmin. Sen jälkeen Peter yhdisti yrityksensä [[Nestlén]] kanssa. Pulla olisi kyl ollut helpompi.
+KYSYMYS: Kerro lisää: Henri Nestlé
+
+### 376
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vevey (ruoka)
+Tietoruudun teksti: Vevey on pieni kaupunki Genevenjärven rannalla, ja siitä on tullut sveitsiläisen elintarviketeollisuuden syntysija. Henri Nestlé alkoi vuonna 1867 myydä Veveystä käsin kehittämäänsä äidinmaidonkorviketta, jonka reseptin hän oli keksinyt pelastaakseen kylän vauvoja. Samoihin aikoihin paikallinen makeistehtailija Daniel Peter yritti keksiä tavan valmistaa maitosuklaata, mutta maidon vedestä ei tahtonut päästä eroon ilman että suklaa homehtui. Nestlé neuvoi Peteriä, ja ratkaisu löytyi vasta vuosia myöhemmin, minkä jälkeen Peter yhdisti yrityksensä Nestlén kanssa.
+AIEMPI KYSYMYS: Minkä ongelman Daniel Peter yritti ratkaista?
+AIEMPI VASTAUS (Livia):
+Hmm, tuo on hyvä. Paikallinen makeistehtailija Peter yritti keksiä tavan valmistaa [[maitosuklaata]], mutta maidon vedestä ei tahtonut päästä eroon ilman että suklaa homehtui. [[Henri Nestlé]] neuvoi häntä, ja ratkaisu löytyi vasta vuosia myöhemmin. Sen jälkeen Peter yhdisti yrityksensä [[Nestlén]] kanssa. Pulla olisi kyl ollut helpompi.
+KYSYMYS: Kerro lisää: Nestlén
+
+### 377
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vevey (ruoka)
+Tietoruudun teksti: Vevey on pieni kaupunki Genevenjärven rannalla, ja siitä on tullut sveitsiläisen elintarviketeollisuuden syntysija. Henri Nestlé alkoi vuonna 1867 myydä Veveystä käsin kehittämäänsä äidinmaidonkorviketta, jonka reseptin hän oli keksinyt pelastaakseen kylän vauvoja. Samoihin aikoihin paikallinen makeistehtailija Daniel Peter yritti keksiä tavan valmistaa maitosuklaata, mutta maidon vedestä ei tahtonut päästä eroon ilman että suklaa homehtui. Nestlé neuvoi Peteriä, ja ratkaisu löytyi vasta vuosia myöhemmin, minkä jälkeen Peter yhdisti yrityksensä Nestlén kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Perintö kulkee äidin kautta] Akaanit ovat matrilineaalinen kansa: sukuun kuulutaan äidin kautta, ja sitä kautta periytyvät sekä omaisuus että oikeus päällikkyyteen. Suvut eli abusuat ovat kahdeksan — Oyoko, Bretuo, Agona, Asona, Asenie, Aduana, Ekuona ja Asakyiri — ja jokainen niistä hallitsee alueita, joiden perustajina niitä pidetään; Asanten kuningashuone on Oyoko. Käytännössä tämä tarkoittaa, että päällikön seuraaja ei ole hänen poikansa vaan hänen sisarensa poika. Suvun sisällä vuorottelevat haarat, joita kutsutaan keittiöiksi, ja kukin esittää vuorollaan oman ehdokkaansa.
+AIEMPI KYSYMYS: Mitä Henri Nestlé myi Veveystä käsin?
+AIEMPI VASTAUS (Livia):
+Ai se. Vuonna 1867 hän alkoi myydä itse kehittämäänsä [[äidinmaidonkorviketta]], jonka reseptin hän oli keksinyt pelastaakseen kylän vauvoja. Kaupunki sijaitsee [[Genevenjärven]] rannalla, ja siitä on tullut sveitsiläisen [[elintarviketeollisuuden]] syntysija. Kyl siinä on hyvä syy muistaa nimi.
+KYSYMYS: Kerro lisää: äidinmaidonkorviketta
+
+### 378
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vevey (ruoka)
+Tietoruudun teksti: Vevey on pieni kaupunki Genevenjärven rannalla, ja siitä on tullut sveitsiläisen elintarviketeollisuuden syntysija. Henri Nestlé alkoi vuonna 1867 myydä Veveystä käsin kehittämäänsä äidinmaidonkorviketta, jonka reseptin hän oli keksinyt pelastaakseen kylän vauvoja. Samoihin aikoihin paikallinen makeistehtailija Daniel Peter yritti keksiä tavan valmistaa maitosuklaata, mutta maidon vedestä ei tahtonut päästä eroon ilman että suklaa homehtui. Nestlé neuvoi Peteriä, ja ratkaisu löytyi vasta vuosia myöhemmin, minkä jälkeen Peter yhdisti yrityksensä Nestlén kanssa.
+AIEMPI KYSYMYS: Mitä Henri Nestlé myi Veveystä käsin?
+AIEMPI VASTAUS (Livia):
+Ai se. Vuonna 1867 hän alkoi myydä itse kehittämäänsä [[äidinmaidonkorviketta]], jonka reseptin hän oli keksinyt pelastaakseen kylän vauvoja. Kaupunki sijaitsee [[Genevenjärven]] rannalla, ja siitä on tullut sveitsiläisen [[elintarviketeollisuuden]] syntysija. Kyl siinä on hyvä syy muistaa nimi.
+KYSYMYS: Kerro lisää: Genevenjärven
+
+### 379
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vevey (ruoka)
+Tietoruudun teksti: Vevey on pieni kaupunki Genevenjärven rannalla, ja siitä on tullut sveitsiläisen elintarviketeollisuuden syntysija. Henri Nestlé alkoi vuonna 1867 myydä Veveystä käsin kehittämäänsä äidinmaidonkorviketta, jonka reseptin hän oli keksinyt pelastaakseen kylän vauvoja. Samoihin aikoihin paikallinen makeistehtailija Daniel Peter yritti keksiä tavan valmistaa maitosuklaata, mutta maidon vedestä ei tahtonut päästä eroon ilman että suklaa homehtui. Nestlé neuvoi Peteriä, ja ratkaisu löytyi vasta vuosia myöhemmin, minkä jälkeen Peter yhdisti yrityksensä Nestlén kanssa.
+AIEMPI KYSYMYS: Mitä Henri Nestlé myi Veveystä käsin?
+AIEMPI VASTAUS (Livia):
+Ai se. Vuonna 1867 hän alkoi myydä itse kehittämäänsä [[äidinmaidonkorviketta]], jonka reseptin hän oli keksinyt pelastaakseen kylän vauvoja. Kaupunki sijaitsee [[Genevenjärven]] rannalla, ja siitä on tullut sveitsiläisen [[elintarviketeollisuuden]] syntysija. Kyl siinä on hyvä syy muistaa nimi.
+KYSYMYS: Kerro lisää: elintarviketeollisuuden
+
+### 380
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vevey (ruoka)
+Tietoruudun teksti: Vevey on pieni kaupunki Genevenjärven rannalla, ja siitä on tullut sveitsiläisen elintarviketeollisuuden syntysija. Henri Nestlé alkoi vuonna 1867 myydä Veveystä käsin kehittämäänsä äidinmaidonkorviketta, jonka reseptin hän oli keksinyt pelastaakseen kylän vauvoja. Samoihin aikoihin paikallinen makeistehtailija Daniel Peter yritti keksiä tavan valmistaa maitosuklaata, mutta maidon vedestä ei tahtonut päästä eroon ilman että suklaa homehtui. Nestlé neuvoi Peteriä, ja ratkaisu löytyi vasta vuosia myöhemmin, minkä jälkeen Peter yhdisti yrityksensä Nestlén kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Appalakit — kaupunkilehti / Cumberlandin sola ja vuorten kansa: Daniel Boone raivaa Erämaantien] Vuonna 1775 Transylvania-yhtiö palkkasi metsästäjä ja erämies Daniel Boonen johtamaan miesjoukkoa, joka levensi Cumberlandin solan intiaanipolun kulkukelpoiseksi reitiksi siirtokuntalaisille. Reitti sai nimen Erämaantie, ja 1790-luvulle tultaessa sitä oli levennetty niin, että sitä pitkin pääsivät kulkemaan jo hevoskärrytkin. Aikalaismaalauksissa Boone kuvataan usein oppaana, joka johdattaa hevosen kyydissä matkaavia naisia ja aseistautuneita miehiä kapean, kivisen vuorisolan läpi kohti tuntematonta Kentuckya.
+- [Sveitsi — maalehti / Ruoka: Kone, joka teki suklaasta sileää] 1879 — Suklaa oli 1800-luvulla karkeaa ja rakeista. Vevey­läinen Daniel Peter keksi 1875 sekoittaa siihen maitojauhetta, ja neljä vuotta myöhemmin bernissä työskennellyt Rodolphe Lindt jätti sekoituskoneensa vahingossa käymään koko viikonlopuksi. Maanantaina massa oli muuttunut: se oli sileää ja suli suussa. Menetelmää sanotaan konssaukseksi, ja hyvää suklaata sekoitetaan yhä tunteja. Sveitsiläiset syövät suklaata enemmän henkeä kohti kuin minkään muun maan asukkaat.
+AIEMPI KYSYMYS: Miksi Henri Nestlé kehitti äidinmaidonkorvikkeen?
+AIEMPI VASTAUS (Livia):
+Odotas ny hetki. Nestlé keksi reseptin pelastaakseen kylän vauvoja. Hän alkoi myydä korviketta Veveystä käsin vuonna 1867, ja kaupungista tuli sveitsiläisen [[elintarviketeollisuuden]] syntysija. Myöhemmin hän neuvoi myös makeistehtailija [[Daniel Peteriä]] maitosuklaan kehittelyssä. Hieno syy aloittaa, sen minä sanon.
+KYSYMYS: Kerro lisää: Daniel Peteriä
+
+### 381
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vevey (ruoka)
+Tietoruudun teksti: Vevey on pieni kaupunki Genevenjärven rannalla, ja siitä on tullut sveitsiläisen elintarviketeollisuuden syntysija. Henri Nestlé alkoi vuonna 1867 myydä Veveystä käsin kehittämäänsä äidinmaidonkorviketta, jonka reseptin hän oli keksinyt pelastaakseen kylän vauvoja. Samoihin aikoihin paikallinen makeistehtailija Daniel Peter yritti keksiä tavan valmistaa maitosuklaata, mutta maidon vedestä ei tahtonut päästä eroon ilman että suklaa homehtui. Nestlé neuvoi Peteriä, ja ratkaisu löytyi vasta vuosia myöhemmin, minkä jälkeen Peter yhdisti yrityksensä Nestlén kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Ruoka: Kone, joka teki suklaasta sileää] 1879 — Suklaa oli 1800-luvulla karkeaa ja rakeista. Vevey­läinen Daniel Peter keksi 1875 sekoittaa siihen maitojauhetta, ja neljä vuotta myöhemmin bernissä työskennellyt Rodolphe Lindt jätti sekoituskoneensa vahingossa käymään koko viikonlopuksi. Maanantaina massa oli muuttunut: se oli sileää ja suli suussa. Menetelmää sanotaan konssaukseksi, ja hyvää suklaata sekoitetaan yhä tunteja. Sveitsiläiset syövät suklaata enemmän henkeä kohti kuin minkään muun maan asukkaat.
+AIEMPI KYSYMYS: Mitä konssaus on suklaanvalmistuksessa?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on makea aihe. Konssaus on menetelmä, jossa suklaamassaa sekoitetaan tunteja, ja se tekee suklaasta sileää ja suussa sulavaa. Keksintö liitetään sveitsiläiseen [[Rodolphe Lindtiin]], joka jätti sekoituskoneensa vahingossa käymään koko viikonlopuksi vuonna 1879. Aiemmin 1800-luvulla suklaa oli karkeaa ja rakeista, kunnes [[Daniel Peter]] oli keksinyt sekoittaa siihen maitojauhetta. Viikonloppu hukkaan, ja silti maailma sai parempaa suklaata.
+KYSYMYS: Kerro lisää: Rodolphe Lindtiin
+
+### 382
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vevey (ruoka)
+Tietoruudun teksti: Vevey on pieni kaupunki Genevenjärven rannalla, ja siitä on tullut sveitsiläisen elintarviketeollisuuden syntysija. Henri Nestlé alkoi vuonna 1867 myydä Veveystä käsin kehittämäänsä äidinmaidonkorviketta, jonka reseptin hän oli keksinyt pelastaakseen kylän vauvoja. Samoihin aikoihin paikallinen makeistehtailija Daniel Peter yritti keksiä tavan valmistaa maitosuklaata, mutta maidon vedestä ei tahtonut päästä eroon ilman että suklaa homehtui. Nestlé neuvoi Peteriä, ja ratkaisu löytyi vasta vuosia myöhemmin, minkä jälkeen Peter yhdisti yrityksensä Nestlén kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Ruoka: Kone, joka teki suklaasta sileää] 1879 — Suklaa oli 1800-luvulla karkeaa ja rakeista. Vevey­läinen Daniel Peter keksi 1875 sekoittaa siihen maitojauhetta, ja neljä vuotta myöhemmin bernissä työskennellyt Rodolphe Lindt jätti sekoituskoneensa vahingossa käymään koko viikonlopuksi. Maanantaina massa oli muuttunut: se oli sileää ja suli suussa. Menetelmää sanotaan konssaukseksi, ja hyvää suklaata sekoitetaan yhä tunteja. Sveitsiläiset syövät suklaata enemmän henkeä kohti kuin minkään muun maan asukkaat.
+AIEMPI KYSYMYS: Mitä konssaus on suklaanvalmistuksessa?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on makea aihe. Konssaus on menetelmä, jossa suklaamassaa sekoitetaan tunteja, ja se tekee suklaasta sileää ja suussa sulavaa. Keksintö liitetään sveitsiläiseen [[Rodolphe Lindtiin]], joka jätti sekoituskoneensa vahingossa käymään koko viikonlopuksi vuonna 1879. Aiemmin 1800-luvulla suklaa oli karkeaa ja rakeista, kunnes [[Daniel Peter]] oli keksinyt sekoittaa siihen maitojauhetta. Viikonloppu hukkaan, ja silti maailma sai parempaa suklaata.
+KYSYMYS: Kerro lisää: Daniel Peter

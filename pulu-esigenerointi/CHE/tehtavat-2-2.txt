@@ -1,0 +1,1336 @@
+### 81
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chillonin linna (historia)
+Tietoruudun teksti: Chillonin linna seisoo pienellä jyrkkäreunaisella kalkkikivisaarella Genevenjärvessä, Montreux’n ja Villeneuven välisellä kapealla rannalla. Sveitsiläisen kansatieteilijän Albert Samuel Gatschet’n mukaan nimi tulee valdolaismurteen sanasta, joka tarkoittaa litteää kiveä tai lavaa: vuodesta 1195 tunnettu Castrum Quilonis olisi siis "kalliolavalle rakennettu linna".
+
+Paikka on valittu tarkasti. Linna vartioi kulkua Vaud’n rivieran — reitin pohjoiseen Saksaan ja Ranskaan — ja Rhônen laakson välillä, joka on nopea tie Italiaan. Varuskunta pystyi siis valvomaan Italian-tietä sekä sotilaallisesti että kaupallisesti ja perimään tullia ohikulkijoilta.
+
+Neliömäinen päätorni rakennettiin saarelle 1000-luvulla valvomaan Burgundista Suuren Pyhän Bernhardin solaan johtavaa tietä. Vuoden 1150 asiakirja osoittaa linnan kuuluneen Savoijin suvulle, ja 1100-luvun puolivälistä se oli Savoijin kreivien kes…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Luonto: Hevonen vaihtaa väriä kasvaessaan] nykyään — Rhônen suistossa Camarguen suomailla elää oma hevosrotunsa, joka on aikuisena aina valkoinen. Varsat syntyvät mustina tai tummanruskeina, ja väri vaalenee vuosi vuodelta, kunnes turkki on kokonaan valkea. Hevoset ovat pieniä, säkäkorkeus on 135–150 senttiä, mutta ne kantavat aikuisen miehen. Kaviot ovat leveät ja kovat, mikä sopii upottavaan suohon. Niillä ratsastavat gardianit, paimenet, jotka kokoavat alueen mustia härkiä. Hevoset elävät laumoina ulkona ympäri vuoden.
+AIEMPI KYSYMYS: Miksi linna rakennettiin juuri tähän kohtaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Linna rakennettiin paikkaan, josta voitiin valvoa kulkua [[Vaud’n]] rivieran ja [[Rhônen]] laakson välillä. Rivieralta pääsi pohjoiseen Saksaan ja Ranskaan, ja Rhônen laaksosta oli nopea tie Italiaan. Varuskunta pystyi siten valvomaan Italian-tietä sekä sotilaallisesti että kaupallisesti ja perimään tullia ohikulkijoilta. Linna seisoo pienellä jyrkkäreunaisella kalkkikivisaarella [[Genevenjärvessä]]. Minä kyl perisin tullina vain pullaa.
+KYSYMYS: Kerro lisää: Rhônen
+
+### 82
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chillonin linna (historia)
+Tietoruudun teksti: Chillonin linna seisoo pienellä jyrkkäreunaisella kalkkikivisaarella Genevenjärvessä, Montreux’n ja Villeneuven välisellä kapealla rannalla. Sveitsiläisen kansatieteilijän Albert Samuel Gatschet’n mukaan nimi tulee valdolaismurteen sanasta, joka tarkoittaa litteää kiveä tai lavaa: vuodesta 1195 tunnettu Castrum Quilonis olisi siis "kalliolavalle rakennettu linna".
+
+Paikka on valittu tarkasti. Linna vartioi kulkua Vaud’n rivieran — reitin pohjoiseen Saksaan ja Ranskaan — ja Rhônen laakson välillä, joka on nopea tie Italiaan. Varuskunta pystyi siis valvomaan Italian-tietä sekä sotilaallisesti että kaupallisesti ja perimään tullia ohikulkijoilta.
+
+Neliömäinen päätorni rakennettiin saarelle 1000-luvulla valvomaan Burgundista Suuren Pyhän Bernhardin solaan johtavaa tietä. Vuoden 1150 asiakirja osoittaa linnan kuuluneen Savoijin suvulle, ja 1100-luvun puolivälistä se oli Savoijin kreivien kes…
+AIEMPI KYSYMYS: Miksi linna rakennettiin juuri tähän kohtaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Linna rakennettiin paikkaan, josta voitiin valvoa kulkua [[Vaud’n]] rivieran ja [[Rhônen]] laakson välillä. Rivieralta pääsi pohjoiseen Saksaan ja Ranskaan, ja Rhônen laaksosta oli nopea tie Italiaan. Varuskunta pystyi siten valvomaan Italian-tietä sekä sotilaallisesti että kaupallisesti ja perimään tullia ohikulkijoilta. Linna seisoo pienellä jyrkkäreunaisella kalkkikivisaarella [[Genevenjärvessä]]. Minä kyl perisin tullina vain pullaa.
+KYSYMYS: Kerro lisää: Genevenjärvessä
+
+### 83
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chillonin linna (historia)
+Tietoruudun teksti: Chillonin linna seisoo pienellä jyrkkäreunaisella kalkkikivisaarella Genevenjärvessä, Montreux’n ja Villeneuven välisellä kapealla rannalla. Sveitsiläisen kansatieteilijän Albert Samuel Gatschet’n mukaan nimi tulee valdolaismurteen sanasta, joka tarkoittaa litteää kiveä tai lavaa: vuodesta 1195 tunnettu Castrum Quilonis olisi siis "kalliolavalle rakennettu linna".
+
+Paikka on valittu tarkasti. Linna vartioi kulkua Vaud’n rivieran — reitin pohjoiseen Saksaan ja Ranskaan — ja Rhônen laakson välillä, joka on nopea tie Italiaan. Varuskunta pystyi siis valvomaan Italian-tietä sekä sotilaallisesti että kaupallisesti ja perimään tullia ohikulkijoilta.
+
+Neliömäinen päätorni rakennettiin saarelle 1000-luvulla valvomaan Burgundista Suuren Pyhän Bernhardin solaan johtavaa tietä. Vuoden 1150 asiakirja osoittaa linnan kuuluneen Savoijin suvulle, ja 1100-luvun puolivälistä se oli Savoijin kreivien kes…
+AIEMPI KYSYMYS: Mitä nimi Chillon tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Sveitsiläisen kansatieteilijän [[Albert Samuel Gatschet’n]] mukaan nimi tulee valdolaismurteen sanasta, joka tarkoittaa litteää kiveä tai lavaa. Linna tunnetaan jo vuodesta 1195 nimellä [[Castrum Quilonis]], joten nimi tarkoittaisi kalliolavalle rakennettua linnaa. Tämä on yksi selitys, ja en ole varma, onko sille kilpailevia. Latina on ainakin minun sukukieleni.
+KYSYMYS: Kerro lisää: Albert Samuel Gatschet’n
+
+### 84
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chillonin linna (historia)
+Tietoruudun teksti: Chillonin linna seisoo pienellä jyrkkäreunaisella kalkkikivisaarella Genevenjärvessä, Montreux’n ja Villeneuven välisellä kapealla rannalla. Sveitsiläisen kansatieteilijän Albert Samuel Gatschet’n mukaan nimi tulee valdolaismurteen sanasta, joka tarkoittaa litteää kiveä tai lavaa: vuodesta 1195 tunnettu Castrum Quilonis olisi siis "kalliolavalle rakennettu linna".
+
+Paikka on valittu tarkasti. Linna vartioi kulkua Vaud’n rivieran — reitin pohjoiseen Saksaan ja Ranskaan — ja Rhônen laakson välillä, joka on nopea tie Italiaan. Varuskunta pystyi siis valvomaan Italian-tietä sekä sotilaallisesti että kaupallisesti ja perimään tullia ohikulkijoilta.
+
+Neliömäinen päätorni rakennettiin saarelle 1000-luvulla valvomaan Burgundista Suuren Pyhän Bernhardin solaan johtavaa tietä. Vuoden 1150 asiakirja osoittaa linnan kuuluneen Savoijin suvulle, ja 1100-luvun puolivälistä se oli Savoijin kreivien kes…
+AIEMPI KYSYMYS: Mitä nimi Chillon tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Sveitsiläisen kansatieteilijän [[Albert Samuel Gatschet’n]] mukaan nimi tulee valdolaismurteen sanasta, joka tarkoittaa litteää kiveä tai lavaa. Linna tunnetaan jo vuodesta 1195 nimellä [[Castrum Quilonis]], joten nimi tarkoittaisi kalliolavalle rakennettua linnaa. Tämä on yksi selitys, ja en ole varma, onko sille kilpailevia. Latina on ainakin minun sukukieleni.
+KYSYMYS: Kerro lisää: Castrum Quilonis
+
+### 85
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chillonin linna (historia)
+Tietoruudun teksti: Chillonin linna seisoo pienellä jyrkkäreunaisella kalkkikivisaarella Genevenjärvessä, Montreux’n ja Villeneuven välisellä kapealla rannalla. Sveitsiläisen kansatieteilijän Albert Samuel Gatschet’n mukaan nimi tulee valdolaismurteen sanasta, joka tarkoittaa litteää kiveä tai lavaa: vuodesta 1195 tunnettu Castrum Quilonis olisi siis "kalliolavalle rakennettu linna".
+
+Paikka on valittu tarkasti. Linna vartioi kulkua Vaud’n rivieran — reitin pohjoiseen Saksaan ja Ranskaan — ja Rhônen laakson välillä, joka on nopea tie Italiaan. Varuskunta pystyi siis valvomaan Italian-tietä sekä sotilaallisesti että kaupallisesti ja perimään tullia ohikulkijoilta.
+
+Neliömäinen päätorni rakennettiin saarelle 1000-luvulla valvomaan Burgundista Suuren Pyhän Bernhardin solaan johtavaa tietä. Vuoden 1150 asiakirja osoittaa linnan kuuluneen Savoijin suvulle, ja 1100-luvun puolivälistä se oli Savoijin kreivien kes…
+AIEMPI KYSYMYS: Kenelle Chillonin linna kuului 1100-luvulla?
+AIEMPI VASTAUS (Livia):
+Ai se. Vuoden 1150 asiakirja osoittaa linnan kuuluneen [[Savoijin]] suvulle, ja suvun kreivit pitivät sitä hallussaan 1100-luvun puolivälistä alkaen. Linna seisoo [[Genevenjärven]] saarella tärkeän kulkureitin varrella, joten sen hallinta oli suvulle arvokasta. Onpas siin aikaa ehtinyt kulua.
+KYSYMYS: Kerro lisää: Savoijin
+
+### 86
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chillonin linna (historia)
+Tietoruudun teksti: Chillonin linna seisoo pienellä jyrkkäreunaisella kalkkikivisaarella Genevenjärvessä, Montreux’n ja Villeneuven välisellä kapealla rannalla. Sveitsiläisen kansatieteilijän Albert Samuel Gatschet’n mukaan nimi tulee valdolaismurteen sanasta, joka tarkoittaa litteää kiveä tai lavaa: vuodesta 1195 tunnettu Castrum Quilonis olisi siis "kalliolavalle rakennettu linna".
+
+Paikka on valittu tarkasti. Linna vartioi kulkua Vaud’n rivieran — reitin pohjoiseen Saksaan ja Ranskaan — ja Rhônen laakson välillä, joka on nopea tie Italiaan. Varuskunta pystyi siis valvomaan Italian-tietä sekä sotilaallisesti että kaupallisesti ja perimään tullia ohikulkijoilta.
+
+Neliömäinen päätorni rakennettiin saarelle 1000-luvulla valvomaan Burgundista Suuren Pyhän Bernhardin solaan johtavaa tietä. Vuoden 1150 asiakirja osoittaa linnan kuuluneen Savoijin suvulle, ja 1100-luvun puolivälistä se oli Savoijin kreivien kes…
+AIEMPI KYSYMYS: Kenelle Chillonin linna kuului 1100-luvulla?
+AIEMPI VASTAUS (Livia):
+Ai se. Vuoden 1150 asiakirja osoittaa linnan kuuluneen [[Savoijin]] suvulle, ja suvun kreivit pitivät sitä hallussaan 1100-luvun puolivälistä alkaen. Linna seisoo [[Genevenjärven]] saarella tärkeän kulkureitin varrella, joten sen hallinta oli suvulle arvokasta. Onpas siin aikaa ehtinyt kulua.
+KYSYMYS: Kerro lisää: Genevenjärven
+
+### 87
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chillonin linna (historia)
+Tietoruudun teksti: Chillonin linna seisoo pienellä jyrkkäreunaisella kalkkikivisaarella Genevenjärvessä, Montreux’n ja Villeneuven välisellä kapealla rannalla. Sveitsiläisen kansatieteilijän Albert Samuel Gatschet’n mukaan nimi tulee valdolaismurteen sanasta, joka tarkoittaa litteää kiveä tai lavaa: vuodesta 1195 tunnettu Castrum Quilonis olisi siis "kalliolavalle rakennettu linna".
+
+Paikka on valittu tarkasti. Linna vartioi kulkua Vaud’n rivieran — reitin pohjoiseen Saksaan ja Ranskaan — ja Rhônen laakson välillä, joka on nopea tie Italiaan. Varuskunta pystyi siis valvomaan Italian-tietä sekä sotilaallisesti että kaupallisesti ja perimään tullia ohikulkijoilta.
+
+Neliömäinen päätorni rakennettiin saarelle 1000-luvulla valvomaan Burgundista Suuren Pyhän Bernhardin solaan johtavaa tietä. Vuoden 1150 asiakirja osoittaa linnan kuuluneen Savoijin suvulle, ja 1100-luvun puolivälistä se oli Savoijin kreivien kes…
+AIEMPI KYSYMYS: Millaisella saarella Chillonin linna seisoo?
+AIEMPI VASTAUS (Livia):
+Mmm— Linna seisoo pienellä, jyrkkäreunaisella kalkkikivisaarella [[Genevenjärvessä]], [[Montreux’n]] ja [[Villeneuven]] välisellä kapealla rannalla. Kapea ranta jättää kulkijalle vain vähän tilaa, ja siksi paikka oli otollinen tien vartiointiin. Ylhäältä katsoen se näyttää vähän veteen pudonneelta kiveltä.
+KYSYMYS: Kerro lisää: Montreux’n
+
+### 88
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chillonin linna (historia)
+Tietoruudun teksti: Chillonin linna seisoo pienellä jyrkkäreunaisella kalkkikivisaarella Genevenjärvessä, Montreux’n ja Villeneuven välisellä kapealla rannalla. Sveitsiläisen kansatieteilijän Albert Samuel Gatschet’n mukaan nimi tulee valdolaismurteen sanasta, joka tarkoittaa litteää kiveä tai lavaa: vuodesta 1195 tunnettu Castrum Quilonis olisi siis "kalliolavalle rakennettu linna".
+
+Paikka on valittu tarkasti. Linna vartioi kulkua Vaud’n rivieran — reitin pohjoiseen Saksaan ja Ranskaan — ja Rhônen laakson välillä, joka on nopea tie Italiaan. Varuskunta pystyi siis valvomaan Italian-tietä sekä sotilaallisesti että kaupallisesti ja perimään tullia ohikulkijoilta.
+
+Neliömäinen päätorni rakennettiin saarelle 1000-luvulla valvomaan Burgundista Suuren Pyhän Bernhardin solaan johtavaa tietä. Vuoden 1150 asiakirja osoittaa linnan kuuluneen Savoijin suvulle, ja 1100-luvun puolivälistä se oli Savoijin kreivien kes…
+AIEMPI KYSYMYS: Millaisella saarella Chillonin linna seisoo?
+AIEMPI VASTAUS (Livia):
+Mmm— Linna seisoo pienellä, jyrkkäreunaisella kalkkikivisaarella [[Genevenjärvessä]], [[Montreux’n]] ja [[Villeneuven]] välisellä kapealla rannalla. Kapea ranta jättää kulkijalle vain vähän tilaa, ja siksi paikka oli otollinen tien vartiointiin. Ylhäältä katsoen se näyttää vähän veteen pudonneelta kiveltä.
+KYSYMYS: Kerro lisää: Villeneuven
+
+### 89
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chillonin linna (historia)
+Tietoruudun teksti: Chillonin linna seisoo pienellä jyrkkäreunaisella kalkkikivisaarella Genevenjärvessä, Montreux’n ja Villeneuven välisellä kapealla rannalla. Sveitsiläisen kansatieteilijän Albert Samuel Gatschet’n mukaan nimi tulee valdolaismurteen sanasta, joka tarkoittaa litteää kiveä tai lavaa: vuodesta 1195 tunnettu Castrum Quilonis olisi siis "kalliolavalle rakennettu linna".
+
+Paikka on valittu tarkasti. Linna vartioi kulkua Vaud’n rivieran — reitin pohjoiseen Saksaan ja Ranskaan — ja Rhônen laakson välillä, joka on nopea tie Italiaan. Varuskunta pystyi siis valvomaan Italian-tietä sekä sotilaallisesti että kaupallisesti ja perimään tullia ohikulkijoilta.
+
+Neliömäinen päätorni rakennettiin saarelle 1000-luvulla valvomaan Burgundista Suuren Pyhän Bernhardin solaan johtavaa tietä. Vuoden 1150 asiakirja osoittaa linnan kuuluneen Savoijin suvulle, ja 1100-luvun puolivälistä se oli Savoijin kreivien kes…
+AIEMPI KYSYMYS: Mitä linnan neliömäinen päätorni valvoi?
+AIEMPI VASTAUS (Livia):
+Katotaas. Neliömäinen päätorni rakennettiin saarelle 1000-luvulla valvomaan tietä, joka johti [[Burgundista]] [[Suuren Pyhän Bernhardin solaan]]. Linna vartioi myös kulkua Vaud’n rivieran ja [[Rhônen]] laakson välillä, joka oli nopea tie Italiaan. Kyl minä sen tien lentäisin yhdellä aamulla.
+KYSYMYS: Kerro lisää: Burgundista
+
+### 90
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chillonin linna (historia)
+Tietoruudun teksti: Chillonin linna seisoo pienellä jyrkkäreunaisella kalkkikivisaarella Genevenjärvessä, Montreux’n ja Villeneuven välisellä kapealla rannalla. Sveitsiläisen kansatieteilijän Albert Samuel Gatschet’n mukaan nimi tulee valdolaismurteen sanasta, joka tarkoittaa litteää kiveä tai lavaa: vuodesta 1195 tunnettu Castrum Quilonis olisi siis "kalliolavalle rakennettu linna".
+
+Paikka on valittu tarkasti. Linna vartioi kulkua Vaud’n rivieran — reitin pohjoiseen Saksaan ja Ranskaan — ja Rhônen laakson välillä, joka on nopea tie Italiaan. Varuskunta pystyi siis valvomaan Italian-tietä sekä sotilaallisesti että kaupallisesti ja perimään tullia ohikulkijoilta.
+
+Neliömäinen päätorni rakennettiin saarelle 1000-luvulla valvomaan Burgundista Suuren Pyhän Bernhardin solaan johtavaa tietä. Vuoden 1150 asiakirja osoittaa linnan kuuluneen Savoijin suvulle, ja 1100-luvun puolivälistä se oli Savoijin kreivien kes…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alpit — kaupunkilehti / Historia: Munkit, jotka kasvattivat pelastuskoiria] Pyhän Bernhardin luostarihospitsi perustettiin 1000-luvulla yli 2 400 metrin korkeuteen auttamaan matkalaisia, jotka ylittivät vaarallisen solan Sveitsin ja Italian välillä. 1600–1700-luvuilla munkit alkoivat kasvattaa vahvoja, paksuturkkisia koiria etsimään lumimyrskyihin eksyneitä matkalaisia — rotu tunnetaan nykyään Bernhardinkoirana. Kuuluisin koirista, Barry, pelasti perimätiedon mukaan yli neljäkymmentä ihmistä 1800-luvun alussa ennen kuolemaansa 1814. Hospitsi toimii yhä matkailijoiden yösijana solan yli, ja munkkien koirankasvatusperinne jatkuu läheisessä erillisessä kasvattamossa.
+AIEMPI KYSYMYS: Mitä linnan neliömäinen päätorni valvoi?
+AIEMPI VASTAUS (Livia):
+Katotaas. Neliömäinen päätorni rakennettiin saarelle 1000-luvulla valvomaan tietä, joka johti [[Burgundista]] [[Suuren Pyhän Bernhardin solaan]]. Linna vartioi myös kulkua Vaud’n rivieran ja [[Rhônen]] laakson välillä, joka oli nopea tie Italiaan. Kyl minä sen tien lentäisin yhdellä aamulla.
+KYSYMYS: Kerro lisää: Suuren Pyhän Bernhardin solaan
+
+### 91
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gotthardin tunneli (tekniikka)
+Tietoruudun teksti: Gotthardin tunneli on viisitoista kilometriä pitkä rautatietunneli, joka yhdistää Göschenenin ja Airolon Saint-Gotthardin vuorimassiivin läpi. Se oli ensimmäinen tunneli massiivin läpi ja kiersi vanhan Gotthardin solan. Kun se avattiin 1882, se oli maailman pisin tunneli.
+
+Varsinainen louhinta alkoi vuonna 1871 ja kesti kymmenen vuotta. Tunnelia kaivettiin molemmista päistä yhtä aikaa, mikä vaati tarkkaa maanmittausta. Työmaa oli ensimmäinen paikka, jossa vasta 1867 patentoitua dynamiittia käytettiin suuressa mitassa, ja urakoitsija Louis Favre ajoi läpi myös koneellisten poravaunujen käytön. Energia siirrettiin työmaalle paineilmana genevalaisen insinööri Colladonin ehdotuksesta, ja kalliopintaa jäähdytettiin vesisuihkuilla.
+
+Hinta oli kova. Yhdessä ainoassa onnettomuudessa kuoli noin 200 työmiestä, suurin osa paineilmaveturien alle; muita kuoli kivivyöryissä ja räjähdyksissä. Selvinne…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki] Gotthardin rautatietunnelin pohjois- ja eteläpuolen louhijat kohtasivat syvällä kalliossa 29. helmikuuta 1880 — insinööri Louis Favre ei elänyt näkemään sitä.
+AIEMPI KYSYMYS: Miksi Louis Favre ei nähnyt tunnelin valmistuvan?
+AIEMPI VASTAUS (Livia):
+Ai niin. [[Louis Favre]] johti Gotthardin rautatietunnelin louhintaa, mutta hän kuoli sydänkohtaukseen tunnelissa heinäkuussa 1879. Pohjoisesta [[Göschenenistä]] ja etelästä [[Airolosta]] louhitut käytävät kohtasivat vasta 29. helmikuuta 1880, kahdeksan kuukautta myöhemmin, ja tunneli avattiin vuonna 1882. Työolot olivat tuolloin aivan toiset kuin nykyään, ja tunnelin rakentaminen oli vaarallista työtä. Onneksi työ kuitenkin valmistui.
+KYSYMYS: Kerro lisää: Louis Favre
+
+### 92
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gotthardin tunneli (tekniikka)
+Tietoruudun teksti: Gotthardin tunneli on viisitoista kilometriä pitkä rautatietunneli, joka yhdistää Göschenenin ja Airolon Saint-Gotthardin vuorimassiivin läpi. Se oli ensimmäinen tunneli massiivin läpi ja kiersi vanhan Gotthardin solan. Kun se avattiin 1882, se oli maailman pisin tunneli.
+
+Varsinainen louhinta alkoi vuonna 1871 ja kesti kymmenen vuotta. Tunnelia kaivettiin molemmista päistä yhtä aikaa, mikä vaati tarkkaa maanmittausta. Työmaa oli ensimmäinen paikka, jossa vasta 1867 patentoitua dynamiittia käytettiin suuressa mitassa, ja urakoitsija Louis Favre ajoi läpi myös koneellisten poravaunujen käytön. Energia siirrettiin työmaalle paineilmana genevalaisen insinööri Colladonin ehdotuksesta, ja kalliopintaa jäähdytettiin vesisuihkuilla.
+
+Hinta oli kova. Yhdessä ainoassa onnettomuudessa kuoli noin 200 työmiestä, suurin osa paineilmaveturien alle; muita kuoli kivivyöryissä ja räjähdyksissä. Selvinne…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki: Gotthard 1880 — valokuva kulkee kalliossa] 29.2.1880 — Pieni valokuva kulkee käsistä käsiin viimeisen kivikerroksen läpi ennen kuin kukaan ehtii sanoa mitään. Se esittää Louis Favrea, insinööriä, joka johti Gotthardin rautatietunnelin louhintaa vuodesta 1872, mutta joka kuoli sydänkohtaukseen tunnelissa heinäkuussa 1879 — kahdeksan kuukautta ennen tätä hetkeä. Sunnuntaina 29. helmikuuta 1880 pohjoisesta Göschenenistä ja etelästä Airolosta louhitut käytävät kohtaavat vihdoin syvällä Gotthard-massiivin sisällä, lähes 1 700 metrin kiven alla, ja saksankielinen ja italiankielinen työryhmä puhkaisevat viimeisen ohuen kivimuurin toistensa väliltä. Ensimmäinen kättely tapahtuu reiän läpi, ennen kuin kukaan pääsee kokonaan toiselle puolelle…
+AIEMPI KYSYMYS: Miksi Louis Favre ei nähnyt tunnelin valmistuvan?
+AIEMPI VASTAUS (Livia):
+Ai niin. [[Louis Favre]] johti Gotthardin rautatietunnelin louhintaa, mutta hän kuoli sydänkohtaukseen tunnelissa heinäkuussa 1879. Pohjoisesta [[Göschenenistä]] ja etelästä [[Airolosta]] louhitut käytävät kohtasivat vasta 29. helmikuuta 1880, kahdeksan kuukautta myöhemmin, ja tunneli avattiin vuonna 1882. Työolot olivat tuolloin aivan toiset kuin nykyään, ja tunnelin rakentaminen oli vaarallista työtä. Onneksi työ kuitenkin valmistui.
+KYSYMYS: Kerro lisää: Göschenenistä
+
+### 93
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gotthardin tunneli (tekniikka)
+Tietoruudun teksti: Gotthardin tunneli on viisitoista kilometriä pitkä rautatietunneli, joka yhdistää Göschenenin ja Airolon Saint-Gotthardin vuorimassiivin läpi. Se oli ensimmäinen tunneli massiivin läpi ja kiersi vanhan Gotthardin solan. Kun se avattiin 1882, se oli maailman pisin tunneli.
+
+Varsinainen louhinta alkoi vuonna 1871 ja kesti kymmenen vuotta. Tunnelia kaivettiin molemmista päistä yhtä aikaa, mikä vaati tarkkaa maanmittausta. Työmaa oli ensimmäinen paikka, jossa vasta 1867 patentoitua dynamiittia käytettiin suuressa mitassa, ja urakoitsija Louis Favre ajoi läpi myös koneellisten poravaunujen käytön. Energia siirrettiin työmaalle paineilmana genevalaisen insinööri Colladonin ehdotuksesta, ja kalliopintaa jäähdytettiin vesisuihkuilla.
+
+Hinta oli kova. Yhdessä ainoassa onnettomuudessa kuoli noin 200 työmiestä, suurin osa paineilmaveturien alle; muita kuoli kivivyöryissä ja räjähdyksissä. Selvinne…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki: Gotthard 1880 — valokuva kulkee kalliossa] 29.2.1880 — Pieni valokuva kulkee käsistä käsiin viimeisen kivikerroksen läpi ennen kuin kukaan ehtii sanoa mitään. Se esittää Louis Favrea, insinööriä, joka johti Gotthardin rautatietunnelin louhintaa vuodesta 1872, mutta joka kuoli sydänkohtaukseen tunnelissa heinäkuussa 1879 — kahdeksan kuukautta ennen tätä hetkeä. Sunnuntaina 29. helmikuuta 1880 pohjoisesta Göschenenistä ja etelästä Airolosta louhitut käytävät kohtaavat vihdoin syvällä Gotthard-massiivin sisällä, lähes 1 700 metrin kiven alla, ja saksankielinen ja italiankielinen työryhmä puhkaisevat viimeisen ohuen kivimuurin toistensa väliltä. Ensimmäinen kättely tapahtuu reiän läpi, ennen kuin kukaan pääsee kokonaan toiselle puolelle…
+AIEMPI KYSYMYS: Miksi Louis Favre ei nähnyt tunnelin valmistuvan?
+AIEMPI VASTAUS (Livia):
+Ai niin. [[Louis Favre]] johti Gotthardin rautatietunnelin louhintaa, mutta hän kuoli sydänkohtaukseen tunnelissa heinäkuussa 1879. Pohjoisesta [[Göschenenistä]] ja etelästä [[Airolosta]] louhitut käytävät kohtasivat vasta 29. helmikuuta 1880, kahdeksan kuukautta myöhemmin, ja tunneli avattiin vuonna 1882. Työolot olivat tuolloin aivan toiset kuin nykyään, ja tunnelin rakentaminen oli vaarallista työtä. Onneksi työ kuitenkin valmistui.
+KYSYMYS: Kerro lisää: Airolosta
+
+### 94
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gotthardin tunneli (tekniikka)
+Tietoruudun teksti: Gotthardin tunneli on viisitoista kilometriä pitkä rautatietunneli, joka yhdistää Göschenenin ja Airolon Saint-Gotthardin vuorimassiivin läpi. Se oli ensimmäinen tunneli massiivin läpi ja kiersi vanhan Gotthardin solan. Kun se avattiin 1882, se oli maailman pisin tunneli.
+
+Varsinainen louhinta alkoi vuonna 1871 ja kesti kymmenen vuotta. Tunnelia kaivettiin molemmista päistä yhtä aikaa, mikä vaati tarkkaa maanmittausta. Työmaa oli ensimmäinen paikka, jossa vasta 1867 patentoitua dynamiittia käytettiin suuressa mitassa, ja urakoitsija Louis Favre ajoi läpi myös koneellisten poravaunujen käytön. Energia siirrettiin työmaalle paineilmana genevalaisen insinööri Colladonin ehdotuksesta, ja kalliopintaa jäähdytettiin vesisuihkuilla.
+
+Hinta oli kova. Yhdessä ainoassa onnettomuudessa kuoli noin 200 työmiestä, suurin osa paineilmaveturien alle; muita kuoli kivivyöryissä ja räjähdyksissä. Selvinne…
+AIEMPI KYSYMYS: Mikä uusi keksintö otettiin täällä ensi kertaa suureen käyttöön?
+AIEMPI VASTAUS (Livia):
+Selvä. [[Dynamiitti]] oli patentoitu vasta vuonna 1867, ja Gotthardin työmaa oli ensimmäinen paikka, jossa sitä käytettiin suuressa mitassa. Urakoitsija [[Louis Favre]] ajoi läpi myös koneellisten poravaunujen käytön, ja energia siirrettiin työmaalle [[paineilmana]]. Minä pidän niistä keksinnöistä kyl etäisyyttä.
+KYSYMYS: Kerro lisää: Dynamiitti
+
+### 95
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gotthardin tunneli (tekniikka)
+Tietoruudun teksti: Gotthardin tunneli on viisitoista kilometriä pitkä rautatietunneli, joka yhdistää Göschenenin ja Airolon Saint-Gotthardin vuorimassiivin läpi. Se oli ensimmäinen tunneli massiivin läpi ja kiersi vanhan Gotthardin solan. Kun se avattiin 1882, se oli maailman pisin tunneli.
+
+Varsinainen louhinta alkoi vuonna 1871 ja kesti kymmenen vuotta. Tunnelia kaivettiin molemmista päistä yhtä aikaa, mikä vaati tarkkaa maanmittausta. Työmaa oli ensimmäinen paikka, jossa vasta 1867 patentoitua dynamiittia käytettiin suuressa mitassa, ja urakoitsija Louis Favre ajoi läpi myös koneellisten poravaunujen käytön. Energia siirrettiin työmaalle paineilmana genevalaisen insinööri Colladonin ehdotuksesta, ja kalliopintaa jäähdytettiin vesisuihkuilla.
+
+Hinta oli kova. Yhdessä ainoassa onnettomuudessa kuoli noin 200 työmiestä, suurin osa paineilmaveturien alle; muita kuoli kivivyöryissä ja räjähdyksissä. Selvinne…
+AIEMPI KYSYMYS: Mikä uusi keksintö otettiin täällä ensi kertaa suureen käyttöön?
+AIEMPI VASTAUS (Livia):
+Selvä. [[Dynamiitti]] oli patentoitu vasta vuonna 1867, ja Gotthardin työmaa oli ensimmäinen paikka, jossa sitä käytettiin suuressa mitassa. Urakoitsija [[Louis Favre]] ajoi läpi myös koneellisten poravaunujen käytön, ja energia siirrettiin työmaalle [[paineilmana]]. Minä pidän niistä keksinnöistä kyl etäisyyttä.
+KYSYMYS: Kerro lisää: paineilmana
+
+### 96
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gotthardin tunneli (tekniikka)
+Tietoruudun teksti: Gotthardin tunneli on viisitoista kilometriä pitkä rautatietunneli, joka yhdistää Göschenenin ja Airolon Saint-Gotthardin vuorimassiivin läpi. Se oli ensimmäinen tunneli massiivin läpi ja kiersi vanhan Gotthardin solan. Kun se avattiin 1882, se oli maailman pisin tunneli.
+
+Varsinainen louhinta alkoi vuonna 1871 ja kesti kymmenen vuotta. Tunnelia kaivettiin molemmista päistä yhtä aikaa, mikä vaati tarkkaa maanmittausta. Työmaa oli ensimmäinen paikka, jossa vasta 1867 patentoitua dynamiittia käytettiin suuressa mitassa, ja urakoitsija Louis Favre ajoi läpi myös koneellisten poravaunujen käytön. Energia siirrettiin työmaalle paineilmana genevalaisen insinööri Colladonin ehdotuksesta, ja kalliopintaa jäähdytettiin vesisuihkuilla.
+
+Hinta oli kova. Yhdessä ainoassa onnettomuudessa kuoli noin 200 työmiestä, suurin osa paineilmaveturien alle; muita kuoli kivivyöryissä ja räjähdyksissä. Selvinne…
+AIEMPI KYSYMYS: Kuinka pitkä Gotthardin tunneli on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuohon minä osaan vastata. Tunnelin pituus on noin viisitoista kilometriä, ja se yhdistää [[Göschenenin]] ja [[Airolon]] [[Saint-Gotthardin]] vuorimassiivin läpi. Kun se avattiin vuonna 1882, se oli lähteiden mukaan maailman pisin tunneli. Rautatie kulki siis vuoren läpi eikä vanhaa solaa pitkin. Minä kyl lennän mieluummin vuoren yli.
+KYSYMYS: Kerro lisää: Göschenenin
+
+### 97
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gotthardin tunneli (tekniikka)
+Tietoruudun teksti: Gotthardin tunneli on viisitoista kilometriä pitkä rautatietunneli, joka yhdistää Göschenenin ja Airolon Saint-Gotthardin vuorimassiivin läpi. Se oli ensimmäinen tunneli massiivin läpi ja kiersi vanhan Gotthardin solan. Kun se avattiin 1882, se oli maailman pisin tunneli.
+
+Varsinainen louhinta alkoi vuonna 1871 ja kesti kymmenen vuotta. Tunnelia kaivettiin molemmista päistä yhtä aikaa, mikä vaati tarkkaa maanmittausta. Työmaa oli ensimmäinen paikka, jossa vasta 1867 patentoitua dynamiittia käytettiin suuressa mitassa, ja urakoitsija Louis Favre ajoi läpi myös koneellisten poravaunujen käytön. Energia siirrettiin työmaalle paineilmana genevalaisen insinööri Colladonin ehdotuksesta, ja kalliopintaa jäähdytettiin vesisuihkuilla.
+
+Hinta oli kova. Yhdessä ainoassa onnettomuudessa kuoli noin 200 työmiestä, suurin osa paineilmaveturien alle; muita kuoli kivivyöryissä ja räjähdyksissä. Selvinne…
+AIEMPI KYSYMYS: Kuinka pitkä Gotthardin tunneli on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuohon minä osaan vastata. Tunnelin pituus on noin viisitoista kilometriä, ja se yhdistää [[Göschenenin]] ja [[Airolon]] [[Saint-Gotthardin]] vuorimassiivin läpi. Kun se avattiin vuonna 1882, se oli lähteiden mukaan maailman pisin tunneli. Rautatie kulki siis vuoren läpi eikä vanhaa solaa pitkin. Minä kyl lennän mieluummin vuoren yli.
+KYSYMYS: Kerro lisää: Airolon
+
+### 98
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gotthardin tunneli (tekniikka)
+Tietoruudun teksti: Gotthardin tunneli on viisitoista kilometriä pitkä rautatietunneli, joka yhdistää Göschenenin ja Airolon Saint-Gotthardin vuorimassiivin läpi. Se oli ensimmäinen tunneli massiivin läpi ja kiersi vanhan Gotthardin solan. Kun se avattiin 1882, se oli maailman pisin tunneli.
+
+Varsinainen louhinta alkoi vuonna 1871 ja kesti kymmenen vuotta. Tunnelia kaivettiin molemmista päistä yhtä aikaa, mikä vaati tarkkaa maanmittausta. Työmaa oli ensimmäinen paikka, jossa vasta 1867 patentoitua dynamiittia käytettiin suuressa mitassa, ja urakoitsija Louis Favre ajoi läpi myös koneellisten poravaunujen käytön. Energia siirrettiin työmaalle paineilmana genevalaisen insinööri Colladonin ehdotuksesta, ja kalliopintaa jäähdytettiin vesisuihkuilla.
+
+Hinta oli kova. Yhdessä ainoassa onnettomuudessa kuoli noin 200 työmiestä, suurin osa paineilmaveturien alle; muita kuoli kivivyöryissä ja räjähdyksissä. Selvinne…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki: Gotthard 1880 — valokuva kulkee kalliossa] 29.2.1880 — Pieni valokuva kulkee käsistä käsiin viimeisen kivikerroksen läpi ennen kuin kukaan ehtii sanoa mitään. Se esittää Louis Favrea, insinööriä, joka johti Gotthardin rautatietunnelin louhintaa vuodesta 1872, mutta joka kuoli sydänkohtaukseen tunnelissa heinäkuussa 1879 — kahdeksan kuukautta ennen tätä hetkeä. Sunnuntaina 29. helmikuuta 1880 pohjoisesta Göschenenistä ja etelästä Airolosta louhitut käytävät kohtaavat vihdoin syvällä Gotthard-massiivin sisällä, lähes 1 700 metrin kiven alla, ja saksankielinen ja italiankielinen työryhmä puhkaisevat viimeisen ohuen kivimuurin toistensa väliltä. Ensimmäinen kättely tapahtuu reiän läpi, ennen kuin kukaan pääsee kokonaan toiselle puolelle…
+AIEMPI KYSYMYS: Kuinka pitkä Gotthardin tunneli on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuohon minä osaan vastata. Tunnelin pituus on noin viisitoista kilometriä, ja se yhdistää [[Göschenenin]] ja [[Airolon]] [[Saint-Gotthardin]] vuorimassiivin läpi. Kun se avattiin vuonna 1882, se oli lähteiden mukaan maailman pisin tunneli. Rautatie kulki siis vuoren läpi eikä vanhaa solaa pitkin. Minä kyl lennän mieluummin vuoren yli.
+KYSYMYS: Kerro lisää: Saint-Gotthardin
+
+### 99
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gotthardin tunneli (tekniikka)
+Tietoruudun teksti: Gotthardin tunneli on viisitoista kilometriä pitkä rautatietunneli, joka yhdistää Göschenenin ja Airolon Saint-Gotthardin vuorimassiivin läpi. Se oli ensimmäinen tunneli massiivin läpi ja kiersi vanhan Gotthardin solan. Kun se avattiin 1882, se oli maailman pisin tunneli.
+
+Varsinainen louhinta alkoi vuonna 1871 ja kesti kymmenen vuotta. Tunnelia kaivettiin molemmista päistä yhtä aikaa, mikä vaati tarkkaa maanmittausta. Työmaa oli ensimmäinen paikka, jossa vasta 1867 patentoitua dynamiittia käytettiin suuressa mitassa, ja urakoitsija Louis Favre ajoi läpi myös koneellisten poravaunujen käytön. Energia siirrettiin työmaalle paineilmana genevalaisen insinööri Colladonin ehdotuksesta, ja kalliopintaa jäähdytettiin vesisuihkuilla.
+
+Hinta oli kova. Yhdessä ainoassa onnettomuudessa kuoli noin 200 työmiestä, suurin osa paineilmaveturien alle; muita kuoli kivivyöryissä ja räjähdyksissä. Selvinne…
+AIEMPI KYSYMYS: Miten tunnelin kaksi päätä saatiin kohtaamaan?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tunnelia kaivettiin molemmista päistä yhtä aikaa, ja pienikin virhe suunnassa olisi johtanut siihen, että käytävät olisivat ohittaneet toisensa. Siksi työ vaati tarkkaa [[maanmittausta]]. Pohjoisesta [[Göschenenistä]] ja etelästä [[Airolosta]] louhitut käytävät kohtasivat lopulta 29. helmikuuta 1880 vuoren sisällä. Minä en tarvitse maanmittausta, kunhan näen katon.
+KYSYMYS: Kerro lisää: maanmittausta
+
+### 100
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gotthardin tunneli (tekniikka)
+Tietoruudun teksti: Gotthardin tunneli on viisitoista kilometriä pitkä rautatietunneli, joka yhdistää Göschenenin ja Airolon Saint-Gotthardin vuorimassiivin läpi. Se oli ensimmäinen tunneli massiivin läpi ja kiersi vanhan Gotthardin solan. Kun se avattiin 1882, se oli maailman pisin tunneli.
+
+Varsinainen louhinta alkoi vuonna 1871 ja kesti kymmenen vuotta. Tunnelia kaivettiin molemmista päistä yhtä aikaa, mikä vaati tarkkaa maanmittausta. Työmaa oli ensimmäinen paikka, jossa vasta 1867 patentoitua dynamiittia käytettiin suuressa mitassa, ja urakoitsija Louis Favre ajoi läpi myös koneellisten poravaunujen käytön. Energia siirrettiin työmaalle paineilmana genevalaisen insinööri Colladonin ehdotuksesta, ja kalliopintaa jäähdytettiin vesisuihkuilla.
+
+Hinta oli kova. Yhdessä ainoassa onnettomuudessa kuoli noin 200 työmiestä, suurin osa paineilmaveturien alle; muita kuoli kivivyöryissä ja räjähdyksissä. Selvinne…
+AIEMPI KYSYMYS: Miten tunnelityömaalle saatiin voimaa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä on tietoa. Energia siirrettiin työmaalle paineilmana genevalaisen insinöörin [[Colladonin]] ehdotuksesta, ja kalliopintaa jäähdytettiin vesisuihkuilla. Urakoitsija [[Louis Favre]] ajoi läpi myös koneellisten poravaunujen käytön. Ja minä kun luulin, että ilma on vain lentämistä varten.
+KYSYMYS: Kerro lisää: Colladonin
+
+### 101
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suuren Pyhän Bernhardin hospitaali (eläimet)
+Tietoruudun teksti: Suuren Pyhän Bernhardin hospitaali on matkalaisten majatalo Suuren Pyhän Bernhardin solassa 2 469 metrin korkeudessa Pennialpeilla, muutaman sadan metrin päässä Italian rajasta. Sitä on hoitanut sama sääntökuntaisten kanonikkien yhteisö perustamisesta asti.
+
+Ensimmäinen hospitaali rakennettiin 800-luvulla Bourg-Saint-Pierreen, mutta saraseenien ryöstöretket tuhosivat sen 900-luvun puolivälissä. Noin vuonna 1050 Aostan arkkidiakoni Bernhard Menthonilainen näki solassa jatkuvasti kauhistuneita ja hädänalaisia matkalaisia ja päätti tehdä lopun alueen rosvoudesta. Niin syntyi hospitaali, joka sai myöhemmin hänen nimensä.
+
+Bernhardilaiset koirat jalostettiin juuri täällä, todennäköisesti Valais’n perheiden lahjoittamista koirista 1660- ja 1670-luvuilla; ensimmäinen varma maininta rodusta on vuodelta 1709. Alun perin ne olivat vahtikoiria ja vasta myöhemmin pelastuskoiria: ne olivat kyllin va…
+AIEMPI KYSYMYS: Miksi juuri nämä koirat kelpasivat pelastustyöhön?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Bernhardilaiset]] koirat jalostettiin juuri tässä hospitaalissa, todennäköisesti [[Valais’n]] perheiden lahjoittamista koirista 1660- ja 1670-luvuilla. Ensimmäinen varma maininta rodusta on vuodelta 1709. Alun perin ne olivat vahtikoiria ja vasta myöhemmin [[pelastuskoiria]]. En ole varma, mitkä ominaisuudet ratkaisivat, mutta todennäköisesti koirien koko, voima ja kestävyys lumessa. Ja minä kun luulin, että vain kyyhky kantaa apua.
+KYSYMYS: Kerro lisää: Bernhardilaiset
+
+### 102
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suuren Pyhän Bernhardin hospitaali (eläimet)
+Tietoruudun teksti: Suuren Pyhän Bernhardin hospitaali on matkalaisten majatalo Suuren Pyhän Bernhardin solassa 2 469 metrin korkeudessa Pennialpeilla, muutaman sadan metrin päässä Italian rajasta. Sitä on hoitanut sama sääntökuntaisten kanonikkien yhteisö perustamisesta asti.
+
+Ensimmäinen hospitaali rakennettiin 800-luvulla Bourg-Saint-Pierreen, mutta saraseenien ryöstöretket tuhosivat sen 900-luvun puolivälissä. Noin vuonna 1050 Aostan arkkidiakoni Bernhard Menthonilainen näki solassa jatkuvasti kauhistuneita ja hädänalaisia matkalaisia ja päätti tehdä lopun alueen rosvoudesta. Niin syntyi hospitaali, joka sai myöhemmin hänen nimensä.
+
+Bernhardilaiset koirat jalostettiin juuri täällä, todennäköisesti Valais’n perheiden lahjoittamista koirista 1660- ja 1670-luvuilla; ensimmäinen varma maininta rodusta on vuodelta 1709. Alun perin ne olivat vahtikoiria ja vasta myöhemmin pelastuskoiria: ne olivat kyllin va…
+AIEMPI KYSYMYS: Miksi juuri nämä koirat kelpasivat pelastustyöhön?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Bernhardilaiset]] koirat jalostettiin juuri tässä hospitaalissa, todennäköisesti [[Valais’n]] perheiden lahjoittamista koirista 1660- ja 1670-luvuilla. Ensimmäinen varma maininta rodusta on vuodelta 1709. Alun perin ne olivat vahtikoiria ja vasta myöhemmin [[pelastuskoiria]]. En ole varma, mitkä ominaisuudet ratkaisivat, mutta todennäköisesti koirien koko, voima ja kestävyys lumessa. Ja minä kun luulin, että vain kyyhky kantaa apua.
+KYSYMYS: Kerro lisää: Valais’n
+
+### 103
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suuren Pyhän Bernhardin hospitaali (eläimet)
+Tietoruudun teksti: Suuren Pyhän Bernhardin hospitaali on matkalaisten majatalo Suuren Pyhän Bernhardin solassa 2 469 metrin korkeudessa Pennialpeilla, muutaman sadan metrin päässä Italian rajasta. Sitä on hoitanut sama sääntökuntaisten kanonikkien yhteisö perustamisesta asti.
+
+Ensimmäinen hospitaali rakennettiin 800-luvulla Bourg-Saint-Pierreen, mutta saraseenien ryöstöretket tuhosivat sen 900-luvun puolivälissä. Noin vuonna 1050 Aostan arkkidiakoni Bernhard Menthonilainen näki solassa jatkuvasti kauhistuneita ja hädänalaisia matkalaisia ja päätti tehdä lopun alueen rosvoudesta. Niin syntyi hospitaali, joka sai myöhemmin hänen nimensä.
+
+Bernhardilaiset koirat jalostettiin juuri täällä, todennäköisesti Valais’n perheiden lahjoittamista koirista 1660- ja 1670-luvuilla; ensimmäinen varma maininta rodusta on vuodelta 1709. Alun perin ne olivat vahtikoiria ja vasta myöhemmin pelastuskoiria: ne olivat kyllin va…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alpit — kaupunkilehti / Historia: Munkit, jotka kasvattivat pelastuskoiria] Pyhän Bernhardin luostarihospitsi perustettiin 1000-luvulla yli 2 400 metrin korkeuteen auttamaan matkalaisia, jotka ylittivät vaarallisen solan Sveitsin ja Italian välillä. 1600–1700-luvuilla munkit alkoivat kasvattaa vahvoja, paksuturkkisia koiria etsimään lumimyrskyihin eksyneitä matkalaisia — rotu tunnetaan nykyään Bernhardinkoirana. Kuuluisin koirista, Barry, pelasti perimätiedon mukaan yli neljäkymmentä ihmistä 1800-luvun alussa ennen kuolemaansa 1814. Hospitsi toimii yhä matkailijoiden yösijana solan yli, ja munkkien koirankasvatusperinne jatkuu läheisessä erillisessä kasvattamossa.
+AIEMPI KYSYMYS: Miksi juuri nämä koirat kelpasivat pelastustyöhön?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Bernhardilaiset]] koirat jalostettiin juuri tässä hospitaalissa, todennäköisesti [[Valais’n]] perheiden lahjoittamista koirista 1660- ja 1670-luvuilla. Ensimmäinen varma maininta rodusta on vuodelta 1709. Alun perin ne olivat vahtikoiria ja vasta myöhemmin [[pelastuskoiria]]. En ole varma, mitkä ominaisuudet ratkaisivat, mutta todennäköisesti koirien koko, voima ja kestävyys lumessa. Ja minä kun luulin, että vain kyyhky kantaa apua.
+KYSYMYS: Kerro lisää: pelastuskoiria
+
+### 104
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suuren Pyhän Bernhardin hospitaali (eläimet)
+Tietoruudun teksti: Suuren Pyhän Bernhardin hospitaali on matkalaisten majatalo Suuren Pyhän Bernhardin solassa 2 469 metrin korkeudessa Pennialpeilla, muutaman sadan metrin päässä Italian rajasta. Sitä on hoitanut sama sääntökuntaisten kanonikkien yhteisö perustamisesta asti.
+
+Ensimmäinen hospitaali rakennettiin 800-luvulla Bourg-Saint-Pierreen, mutta saraseenien ryöstöretket tuhosivat sen 900-luvun puolivälissä. Noin vuonna 1050 Aostan arkkidiakoni Bernhard Menthonilainen näki solassa jatkuvasti kauhistuneita ja hädänalaisia matkalaisia ja päätti tehdä lopun alueen rosvoudesta. Niin syntyi hospitaali, joka sai myöhemmin hänen nimensä.
+
+Bernhardilaiset koirat jalostettiin juuri täällä, todennäköisesti Valais’n perheiden lahjoittamista koirista 1660- ja 1670-luvuilla; ensimmäinen varma maininta rodusta on vuodelta 1709. Alun perin ne olivat vahtikoiria ja vasta myöhemmin pelastuskoiria: ne olivat kyllin va…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kano — kohdekartta / Kohdekartta: Kanon suurmoskeija] 1400-luku Kanon perjantaimoskeija on Nigerian vanhin moskeija. Se rakennettiin 1400-luvulla Muhammad Rumfalle, ja se oli savesta ja soro- eli tornityyppinen. Moskeija on kaupungin sydämessä. Rakennus on siirtynyt ja noussut uudelleen useasti. Muhammad Zaki siirsi sen uudelle paikalle 1582, ja Abdullahi Dan Dabo rakensi sen uudelleen 1800-luvun puolivälissä. Sokoton jihadin jälkeen emiiri Suleiman, jota pidettiin Kanon imaamina, johti perjantairukoukset itse; myöhemmät emiirit ovat antaneet tehtävän nimitetylle imaamille. Nykyinen talo on nuori mutta paikka vanha: moskeija tuhoutui 1950-luvulla ja rakennettiin uudelleen brittien tuella. Kaupunkilaiselle se on silti sama moskeija, jonka Rumfa…
+AIEMPI KYSYMYS: Onko konjakkitynnyri koiran kaulassa totta?
+AIEMPI VASTAUS (Livia):
+Ai se. Konjakkitynnyri koiran kaulassa on yleisen käsityksen mukaan myytti, joka levisi 1800-luvulla ja jonka kertojat ja taiteilijat tekivät tunnetuksi. En ole varma, onko jokin koira joskus kantanut mitään vastaavaa, mutta pelastustyön tunnuskuvaa se ei todellisuudessa ollut. Perinteen mukaan koirat löysivät hädässä olevia matkalaisia lumesta, ja [[kanonikot]] hoitivat heidät hospitaalissa [[Suuren Pyhän Bernhardin solassa]]. Kyl se tynnyri olisi minulle liian painava.
+KYSYMYS: Kerro lisää: kanonikot
+
+### 105
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suuren Pyhän Bernhardin hospitaali (eläimet)
+Tietoruudun teksti: Suuren Pyhän Bernhardin hospitaali on matkalaisten majatalo Suuren Pyhän Bernhardin solassa 2 469 metrin korkeudessa Pennialpeilla, muutaman sadan metrin päässä Italian rajasta. Sitä on hoitanut sama sääntökuntaisten kanonikkien yhteisö perustamisesta asti.
+
+Ensimmäinen hospitaali rakennettiin 800-luvulla Bourg-Saint-Pierreen, mutta saraseenien ryöstöretket tuhosivat sen 900-luvun puolivälissä. Noin vuonna 1050 Aostan arkkidiakoni Bernhard Menthonilainen näki solassa jatkuvasti kauhistuneita ja hädänalaisia matkalaisia ja päätti tehdä lopun alueen rosvoudesta. Niin syntyi hospitaali, joka sai myöhemmin hänen nimensä.
+
+Bernhardilaiset koirat jalostettiin juuri täällä, todennäköisesti Valais’n perheiden lahjoittamista koirista 1660- ja 1670-luvuilla; ensimmäinen varma maininta rodusta on vuodelta 1709. Alun perin ne olivat vahtikoiria ja vasta myöhemmin pelastuskoiria: ne olivat kyllin va…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alpit — kaupunkilehti / Historia: Munkit, jotka kasvattivat pelastuskoiria] Pyhän Bernhardin luostarihospitsi perustettiin 1000-luvulla yli 2 400 metrin korkeuteen auttamaan matkalaisia, jotka ylittivät vaarallisen solan Sveitsin ja Italian välillä. 1600–1700-luvuilla munkit alkoivat kasvattaa vahvoja, paksuturkkisia koiria etsimään lumimyrskyihin eksyneitä matkalaisia — rotu tunnetaan nykyään Bernhardinkoirana. Kuuluisin koirista, Barry, pelasti perimätiedon mukaan yli neljäkymmentä ihmistä 1800-luvun alussa ennen kuolemaansa 1814. Hospitsi toimii yhä matkailijoiden yösijana solan yli, ja munkkien koirankasvatusperinne jatkuu läheisessä erillisessä kasvattamossa.
+AIEMPI KYSYMYS: Onko konjakkitynnyri koiran kaulassa totta?
+AIEMPI VASTAUS (Livia):
+Ai se. Konjakkitynnyri koiran kaulassa on yleisen käsityksen mukaan myytti, joka levisi 1800-luvulla ja jonka kertojat ja taiteilijat tekivät tunnetuksi. En ole varma, onko jokin koira joskus kantanut mitään vastaavaa, mutta pelastustyön tunnuskuvaa se ei todellisuudessa ollut. Perinteen mukaan koirat löysivät hädässä olevia matkalaisia lumesta, ja [[kanonikot]] hoitivat heidät hospitaalissa [[Suuren Pyhän Bernhardin solassa]]. Kyl se tynnyri olisi minulle liian painava.
+KYSYMYS: Kerro lisää: Suuren Pyhän Bernhardin solassa
+
+### 106
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suuren Pyhän Bernhardin hospitaali (eläimet)
+Tietoruudun teksti: Suuren Pyhän Bernhardin hospitaali on matkalaisten majatalo Suuren Pyhän Bernhardin solassa 2 469 metrin korkeudessa Pennialpeilla, muutaman sadan metrin päässä Italian rajasta. Sitä on hoitanut sama sääntökuntaisten kanonikkien yhteisö perustamisesta asti.
+
+Ensimmäinen hospitaali rakennettiin 800-luvulla Bourg-Saint-Pierreen, mutta saraseenien ryöstöretket tuhosivat sen 900-luvun puolivälissä. Noin vuonna 1050 Aostan arkkidiakoni Bernhard Menthonilainen näki solassa jatkuvasti kauhistuneita ja hädänalaisia matkalaisia ja päätti tehdä lopun alueen rosvoudesta. Niin syntyi hospitaali, joka sai myöhemmin hänen nimensä.
+
+Bernhardilaiset koirat jalostettiin juuri täällä, todennäköisesti Valais’n perheiden lahjoittamista koirista 1660- ja 1670-luvuilla; ensimmäinen varma maininta rodusta on vuodelta 1709. Alun perin ne olivat vahtikoiria ja vasta myöhemmin pelastuskoiria: ne olivat kyllin va…
+AIEMPI KYSYMYS: Kuka perusti Suuren Pyhän Bernhardin hospitaalin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Hospitaalin perusti noin vuonna 1050 Aostan arkkidiakoni [[Bernhard Menthonilainen]], joka näki solassa jatkuvasti hädänalaisia matkalaisia ja päätti tehdä lopun alueen rosvoudesta. Hospitaali sai myöhemmin hänen nimensä. Aiempi hospitaali oli rakennettu 800-luvulla [[Bourg-Saint-Pierreen]], mutta [[saraseenien]] ryöstöretket tuhosivat sen 900-luvun puolivälissä. Ei paha, että koirakin sai nimen.
+KYSYMYS: Kerro lisää: Bernhard Menthonilainen
+
+### 107
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suuren Pyhän Bernhardin hospitaali (eläimet)
+Tietoruudun teksti: Suuren Pyhän Bernhardin hospitaali on matkalaisten majatalo Suuren Pyhän Bernhardin solassa 2 469 metrin korkeudessa Pennialpeilla, muutaman sadan metrin päässä Italian rajasta. Sitä on hoitanut sama sääntökuntaisten kanonikkien yhteisö perustamisesta asti.
+
+Ensimmäinen hospitaali rakennettiin 800-luvulla Bourg-Saint-Pierreen, mutta saraseenien ryöstöretket tuhosivat sen 900-luvun puolivälissä. Noin vuonna 1050 Aostan arkkidiakoni Bernhard Menthonilainen näki solassa jatkuvasti kauhistuneita ja hädänalaisia matkalaisia ja päätti tehdä lopun alueen rosvoudesta. Niin syntyi hospitaali, joka sai myöhemmin hänen nimensä.
+
+Bernhardilaiset koirat jalostettiin juuri täällä, todennäköisesti Valais’n perheiden lahjoittamista koirista 1660- ja 1670-luvuilla; ensimmäinen varma maininta rodusta on vuodelta 1709. Alun perin ne olivat vahtikoiria ja vasta myöhemmin pelastuskoiria: ne olivat kyllin va…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Kuka perusti Suuren Pyhän Bernhardin hospitaalin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Hospitaalin perusti noin vuonna 1050 Aostan arkkidiakoni [[Bernhard Menthonilainen]], joka näki solassa jatkuvasti hädänalaisia matkalaisia ja päätti tehdä lopun alueen rosvoudesta. Hospitaali sai myöhemmin hänen nimensä. Aiempi hospitaali oli rakennettu 800-luvulla [[Bourg-Saint-Pierreen]], mutta [[saraseenien]] ryöstöretket tuhosivat sen 900-luvun puolivälissä. Ei paha, että koirakin sai nimen.
+KYSYMYS: Kerro lisää: Bourg-Saint-Pierreen
+
+### 108
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suuren Pyhän Bernhardin hospitaali (eläimet)
+Tietoruudun teksti: Suuren Pyhän Bernhardin hospitaali on matkalaisten majatalo Suuren Pyhän Bernhardin solassa 2 469 metrin korkeudessa Pennialpeilla, muutaman sadan metrin päässä Italian rajasta. Sitä on hoitanut sama sääntökuntaisten kanonikkien yhteisö perustamisesta asti.
+
+Ensimmäinen hospitaali rakennettiin 800-luvulla Bourg-Saint-Pierreen, mutta saraseenien ryöstöretket tuhosivat sen 900-luvun puolivälissä. Noin vuonna 1050 Aostan arkkidiakoni Bernhard Menthonilainen näki solassa jatkuvasti kauhistuneita ja hädänalaisia matkalaisia ja päätti tehdä lopun alueen rosvoudesta. Niin syntyi hospitaali, joka sai myöhemmin hänen nimensä.
+
+Bernhardilaiset koirat jalostettiin juuri täällä, todennäköisesti Valais’n perheiden lahjoittamista koirista 1660- ja 1670-luvuilla; ensimmäinen varma maininta rodusta on vuodelta 1709. Alun perin ne olivat vahtikoiria ja vasta myöhemmin pelastuskoiria: ne olivat kyllin va…
+AIEMPI KYSYMYS: Kuka perusti Suuren Pyhän Bernhardin hospitaalin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Hospitaalin perusti noin vuonna 1050 Aostan arkkidiakoni [[Bernhard Menthonilainen]], joka näki solassa jatkuvasti hädänalaisia matkalaisia ja päätti tehdä lopun alueen rosvoudesta. Hospitaali sai myöhemmin hänen nimensä. Aiempi hospitaali oli rakennettu 800-luvulla [[Bourg-Saint-Pierreen]], mutta [[saraseenien]] ryöstöretket tuhosivat sen 900-luvun puolivälissä. Ei paha, että koirakin sai nimen.
+KYSYMYS: Kerro lisää: saraseenien
+
+### 109
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suuren Pyhän Bernhardin hospitaali (eläimet)
+Tietoruudun teksti: Suuren Pyhän Bernhardin hospitaali on matkalaisten majatalo Suuren Pyhän Bernhardin solassa 2 469 metrin korkeudessa Pennialpeilla, muutaman sadan metrin päässä Italian rajasta. Sitä on hoitanut sama sääntökuntaisten kanonikkien yhteisö perustamisesta asti.
+
+Ensimmäinen hospitaali rakennettiin 800-luvulla Bourg-Saint-Pierreen, mutta saraseenien ryöstöretket tuhosivat sen 900-luvun puolivälissä. Noin vuonna 1050 Aostan arkkidiakoni Bernhard Menthonilainen näki solassa jatkuvasti kauhistuneita ja hädänalaisia matkalaisia ja päätti tehdä lopun alueen rosvoudesta. Niin syntyi hospitaali, joka sai myöhemmin hänen nimensä.
+
+Bernhardilaiset koirat jalostettiin juuri täällä, todennäköisesti Valais’n perheiden lahjoittamista koirista 1660- ja 1670-luvuilla; ensimmäinen varma maininta rodusta on vuodelta 1709. Alun perin ne olivat vahtikoiria ja vasta myöhemmin pelastuskoiria: ne olivat kyllin va…
+AIEMPI KYSYMYS: Kuinka korkealla hospitaali sijaitsee?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: korkealla. Hospitaali sijaitsee Suuren Pyhän Bernhardin solassa 2 469 metrin korkeudessa [[Pennialpeilla]], muutaman sadan metrin päässä [[Italian]] rajasta. Se on matkalaisten majatalo, ja sola yhdistää pohjoisen ja Italian välisen reitin Alppien yli. Siellä lentäminen tuntuu jo ihan työltä.
+KYSYMYS: Kerro lisää: Pennialpeilla
+
+### 110
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suuren Pyhän Bernhardin hospitaali (eläimet)
+Tietoruudun teksti: Suuren Pyhän Bernhardin hospitaali on matkalaisten majatalo Suuren Pyhän Bernhardin solassa 2 469 metrin korkeudessa Pennialpeilla, muutaman sadan metrin päässä Italian rajasta. Sitä on hoitanut sama sääntökuntaisten kanonikkien yhteisö perustamisesta asti.
+
+Ensimmäinen hospitaali rakennettiin 800-luvulla Bourg-Saint-Pierreen, mutta saraseenien ryöstöretket tuhosivat sen 900-luvun puolivälissä. Noin vuonna 1050 Aostan arkkidiakoni Bernhard Menthonilainen näki solassa jatkuvasti kauhistuneita ja hädänalaisia matkalaisia ja päätti tehdä lopun alueen rosvoudesta. Niin syntyi hospitaali, joka sai myöhemmin hänen nimensä.
+
+Bernhardilaiset koirat jalostettiin juuri täällä, todennäköisesti Valais’n perheiden lahjoittamista koirista 1660- ja 1670-luvuilla; ensimmäinen varma maininta rodusta on vuodelta 1709. Alun perin ne olivat vahtikoiria ja vasta myöhemmin pelastuskoiria: ne olivat kyllin va…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Murzuk — kaupunkilehti / Murzuk: Italian lippu nousee, ja jälleen laskee] Italia miehitti ottomaanien luovuttaman Tripolitanian 1912 ja ulotti valtansa Fezzaniin ja Murzukiin vuoteen 1914 mennessä; vanha ottomaanilinnoitus sai uuden varuskunnan italialaisen siirtomaahallinnon alle. Toinen maailmansota toi Murzukiin vielä yhden käänteen: 11. tammikuuta 1941 brittiläisen Long Range Desert Groupin ja Tšadista tulleiden vapaan Ranskan joukkojen isku-osasto hyökkäsi kaupungin italialaiselle lentotukikohdalle. Vanhaan linnaan linnoittautunut pieni italialaisvaruskunta antautui hyökkääjille, jotka tuhosivat lentokoneet ja tukikohdan ennen vetäytymistään aavikon yli takaisin liittoutuneiden linjoille.
+- [Libya — maalehti / Luonto: Tuuli, joka värjää Italian sateen] Libyan aavikolta puhaltaa tuuli, jota sanotaan täällä qibliyyksi, qiblan suunnasta tulevaksi, ja Euroopassa sirokoksi. Se yltää Pohjois-Afrikassa ja Etelä-Euroopassa hirmumyrskyn nopeuksiin, ja satakilometriset puuskat ovat tavallisimpia keväällä ja syksyllä, huipussaan maaliskuussa ja marraskuussa. Matkalla Välimeren yli tuuli kerää kosteutta, ja Etelä-Italiassa sataa niin sanottua veresadetta: pisaroiden mukana tulee alas Libyan punainen hiekka. Kun sirokko osuu nousuveden kanssa yksiin, Venetsian laguuniin nousee acqua alta. Pöly hankaa koneita ja tunkeutuu talojen sisään.
+AIEMPI KYSYMYS: Kuinka korkealla hospitaali sijaitsee?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: korkealla. Hospitaali sijaitsee Suuren Pyhän Bernhardin solassa 2 469 metrin korkeudessa [[Pennialpeilla]], muutaman sadan metrin päässä [[Italian]] rajasta. Se on matkalaisten majatalo, ja sola yhdistää pohjoisen ja Italian välisen reitin Alppien yli. Siellä lentäminen tuntuu jo ihan työltä.
+KYSYMYS: Kerro lisää: Italian
+
+### 111
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suuren Pyhän Bernhardin hospitaali (eläimet)
+Tietoruudun teksti: Suuren Pyhän Bernhardin hospitaali on matkalaisten majatalo Suuren Pyhän Bernhardin solassa 2 469 metrin korkeudessa Pennialpeilla, muutaman sadan metrin päässä Italian rajasta. Sitä on hoitanut sama sääntökuntaisten kanonikkien yhteisö perustamisesta asti.
+
+Ensimmäinen hospitaali rakennettiin 800-luvulla Bourg-Saint-Pierreen, mutta saraseenien ryöstöretket tuhosivat sen 900-luvun puolivälissä. Noin vuonna 1050 Aostan arkkidiakoni Bernhard Menthonilainen näki solassa jatkuvasti kauhistuneita ja hädänalaisia matkalaisia ja päätti tehdä lopun alueen rosvoudesta. Niin syntyi hospitaali, joka sai myöhemmin hänen nimensä.
+
+Bernhardilaiset koirat jalostettiin juuri täällä, todennäköisesti Valais’n perheiden lahjoittamista koirista 1660- ja 1670-luvuilla; ensimmäinen varma maininta rodusta on vuodelta 1709. Alun perin ne olivat vahtikoiria ja vasta myöhemmin pelastuskoiria: ne olivat kyllin va…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kano — kohdekartta / Kohdekartta: Kanon suurmoskeija] 1400-luku Kanon perjantaimoskeija on Nigerian vanhin moskeija. Se rakennettiin 1400-luvulla Muhammad Rumfalle, ja se oli savesta ja soro- eli tornityyppinen. Moskeija on kaupungin sydämessä. Rakennus on siirtynyt ja noussut uudelleen useasti. Muhammad Zaki siirsi sen uudelle paikalle 1582, ja Abdullahi Dan Dabo rakensi sen uudelleen 1800-luvun puolivälissä. Sokoton jihadin jälkeen emiiri Suleiman, jota pidettiin Kanon imaamina, johti perjantairukoukset itse; myöhemmät emiirit ovat antaneet tehtävän nimitetylle imaamille. Nykyinen talo on nuori mutta paikka vanha: moskeija tuhoutui 1950-luvulla ja rakennettiin uudelleen brittien tuella. Kaupunkilaiselle se on silti sama moskeija, jonka Rumfa…
+AIEMPI KYSYMYS: Kuka on hoitanut hospitaalia perustamisesta asti?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Hospitaalia on hoitanut perustamisestaan asti sama sääntökuntaisten [[kanonikkien]] yhteisö. Kanonikit elävät yhteisönä yhteisen säännön mukaan, ja hospitaalin synty liittyy arkkidiakoni [[Bernhard Menthonilaisen]] haluun auttaa solan hädänalaisia matkalaisia. Pitkä vuoro, sanon minä.
+KYSYMYS: Kerro lisää: kanonikkien
+
+### 112
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suuren Pyhän Bernhardin hospitaali (eläimet)
+Tietoruudun teksti: Suuren Pyhän Bernhardin hospitaali on matkalaisten majatalo Suuren Pyhän Bernhardin solassa 2 469 metrin korkeudessa Pennialpeilla, muutaman sadan metrin päässä Italian rajasta. Sitä on hoitanut sama sääntökuntaisten kanonikkien yhteisö perustamisesta asti.
+
+Ensimmäinen hospitaali rakennettiin 800-luvulla Bourg-Saint-Pierreen, mutta saraseenien ryöstöretket tuhosivat sen 900-luvun puolivälissä. Noin vuonna 1050 Aostan arkkidiakoni Bernhard Menthonilainen näki solassa jatkuvasti kauhistuneita ja hädänalaisia matkalaisia ja päätti tehdä lopun alueen rosvoudesta. Niin syntyi hospitaali, joka sai myöhemmin hänen nimensä.
+
+Bernhardilaiset koirat jalostettiin juuri täällä, todennäköisesti Valais’n perheiden lahjoittamista koirista 1660- ja 1670-luvuilla; ensimmäinen varma maininta rodusta on vuodelta 1709. Alun perin ne olivat vahtikoiria ja vasta myöhemmin pelastuskoiria: ne olivat kyllin va…
+AIEMPI KYSYMYS: Kuka on hoitanut hospitaalia perustamisesta asti?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Hospitaalia on hoitanut perustamisestaan asti sama sääntökuntaisten [[kanonikkien]] yhteisö. Kanonikit elävät yhteisönä yhteisen säännön mukaan, ja hospitaalin synty liittyy arkkidiakoni [[Bernhard Menthonilaisen]] haluun auttaa solan hädänalaisia matkalaisia. Pitkä vuoro, sanon minä.
+KYSYMYS: Kerro lisää: Bernhard Menthonilaisen
+
+### 113
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zytglogge (tekniikka)
+Tietoruudun teksti: Zytglogge on keskiaikainen torni Bernin vanhassakaupungissa ja kaupungin vanhin muistomerkki. Kahdeksansadan vuoden aikana se on ollut vartiotorni, vankila, kellotorni, kaupunkielämän keskus ja muistomerkki.
+
+Torni rakennettiin noin 1218–1220 Bernin läntisten linnoitusten porttitorniksi, ja se oli silloin vain kuusitoista metriä korkea. Kun kaupunki kasvoi ja muurit siirtyivät kauemmas noin 1270–1275, tornia korotettiin seitsemällä metrillä, jotta se yhä näkisi talojen yli. Kun länsipuolustus laajeni jälleen 1344–1346, tornista tehtiin naisvankila.
+
+Vuoden 1405 suurpalossa torni paloi sisältä kokonaan. Vankisellit jätettiin pois, ja portin ylle asennettiin 1400-luvun alussa kello, luultavasti jo yksinkertainen astronominen kello ja soittokoneisto. Juuri tämä kello ja samana vuonna valettu suuri kirkonkello antoivat tornille nimen: Zytglogge tarkoittaa Bernin murteella aikakelloa. 1400-l…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kello, joka näyttää missä aurinko on] Vanhankaupungin raatihuoneen seinässä käy kello vuodelta 1410. Se on maailman vanhin astronominen kello, joka yhä toimii. Viisarit eivät kerro vain kellonaikaa: kultainen käsi näyttää auringon paikan taivaalla, toinen kuun, ja sininen kaari erottaa päivän yöstä. Joka tasatunti kaksitoista apostolia kulkee kellon yläpuolella olevien luukkujen ohi, ja niiden vieressä seisova luuranko kääntää tiimalasinsa ympäri.
+AIEMPI KYSYMYS: Mistä torni sai nimensä?
+AIEMPI VASTAUS (Livia):
+Kato, tän nimen selitys on onneksi aika suora. Zytglogge tarkoittaa Bernin murteella aikakelloa, ja nimi tulee kellosta, joka asennettiin portin ylle 1400-luvun alussa. Kello oli luultavasti jo yksinkertainen [[astronominen kello]] soittokoneistoineen, ja samoihin aikoihin valettu suuri kirkonkello vahvisti nimen. Aiemmin [[Zytglogge]] oli ollut [[Bernin]] länsipuolen porttitorni, joten nimi kertoo nimenomaan tornin uudesta tehtävästä kaupungin ajanmittarina. Ja minä muistin tämän ilman lunttia.
+KYSYMYS: Kerro lisää: astronominen kello
+
+### 114
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zytglogge (tekniikka)
+Tietoruudun teksti: Zytglogge on keskiaikainen torni Bernin vanhassakaupungissa ja kaupungin vanhin muistomerkki. Kahdeksansadan vuoden aikana se on ollut vartiotorni, vankila, kellotorni, kaupunkielämän keskus ja muistomerkki.
+
+Torni rakennettiin noin 1218–1220 Bernin läntisten linnoitusten porttitorniksi, ja se oli silloin vain kuusitoista metriä korkea. Kun kaupunki kasvoi ja muurit siirtyivät kauemmas noin 1270–1275, tornia korotettiin seitsemällä metrillä, jotta se yhä näkisi talojen yli. Kun länsipuolustus laajeni jälleen 1344–1346, tornista tehtiin naisvankila.
+
+Vuoden 1405 suurpalossa torni paloi sisältä kokonaan. Vankisellit jätettiin pois, ja portin ylle asennettiin 1400-luvun alussa kello, luultavasti jo yksinkertainen astronominen kello ja soittokoneisto. Juuri tämä kello ja samana vuonna valettu suuri kirkonkello antoivat tornille nimen: Zytglogge tarkoittaa Bernin murteella aikakelloa. 1400-l…
+AIEMPI KYSYMYS: Mistä torni sai nimensä?
+AIEMPI VASTAUS (Livia):
+Kato, tän nimen selitys on onneksi aika suora. Zytglogge tarkoittaa Bernin murteella aikakelloa, ja nimi tulee kellosta, joka asennettiin portin ylle 1400-luvun alussa. Kello oli luultavasti jo yksinkertainen [[astronominen kello]] soittokoneistoineen, ja samoihin aikoihin valettu suuri kirkonkello vahvisti nimen. Aiemmin [[Zytglogge]] oli ollut [[Bernin]] länsipuolen porttitorni, joten nimi kertoo nimenomaan tornin uudesta tehtävästä kaupungin ajanmittarina. Ja minä muistin tämän ilman lunttia.
+KYSYMYS: Kerro lisää: Zytglogge
+
+### 115
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zytglogge (tekniikka)
+Tietoruudun teksti: Zytglogge on keskiaikainen torni Bernin vanhassakaupungissa ja kaupungin vanhin muistomerkki. Kahdeksansadan vuoden aikana se on ollut vartiotorni, vankila, kellotorni, kaupunkielämän keskus ja muistomerkki.
+
+Torni rakennettiin noin 1218–1220 Bernin läntisten linnoitusten porttitorniksi, ja se oli silloin vain kuusitoista metriä korkea. Kun kaupunki kasvoi ja muurit siirtyivät kauemmas noin 1270–1275, tornia korotettiin seitsemällä metrillä, jotta se yhä näkisi talojen yli. Kun länsipuolustus laajeni jälleen 1344–1346, tornista tehtiin naisvankila.
+
+Vuoden 1405 suurpalossa torni paloi sisältä kokonaan. Vankisellit jätettiin pois, ja portin ylle asennettiin 1400-luvun alussa kello, luultavasti jo yksinkertainen astronominen kello ja soittokoneisto. Juuri tämä kello ja samana vuonna valettu suuri kirkonkello antoivat tornille nimen: Zytglogge tarkoittaa Bernin murteella aikakelloa. 1400-l…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki: Bern 1905 — patenttipino ja valonsäde] 1905 — Pöydän kulmalla kasvaa pino patenttihakemuksia, ja jokainen uusi tulokas työntää fysiikan muistiinpanot laatikon pohjalle. Bernin patenttiviraston kolmannen luokan tekninen asiantuntija Albert Einstein on 26-vuotias, ja hänen palkkansa elättää Mileva-vaimon ja pienen Hans Albertin. Iltaisin hän palaa kysymykseen, jota on kantanut teini-ikäisestä asti: miltä valo näyttäisi, jos sen voisi ajaa kiinni? Ajatella ääneen hän voi harvojen kanssa: ystävän ja työtoverin Michele Besson kanssa kotimatkalla, ja iltaisin muutaman tuttavan kesken, jotka kutsuvat itseään pilaillen Olympia-akatemiaksi. Virastoon hän päätyi siksi, ettei yksikään haettu opettajanpaikka auennut. Vuonna 1905 Einstein lä…
+- [Sveitsi — maalehti / Ruoka: Peruna paistetaan pannun kokoiseksi kakuksi] Aamiaisella — Rösti tehdään raastetusta perunasta, joka painetaan pannulle kakuksi ja paistetaan voissa kummaltakin puolelta rapeaksi. Alun perin se oli Bernin seudun maanviljelijöiden aamiaista, ja sitä syötiin ennen töihin lähtöä. Ruoka on niin tunnusomainen, että saksan- ja ranskankielisen Sveitsin välistä rajaa sanotaan leikillään Röstigrabeniksi, röstihaudaksi: sen molemmin puolin äänestetään eri tavalla ja puhutaan eri kieltä, ja perunakakku jäi rajan nimeksi.
+- [Sveitsi — maalehti / Historian hetki] Bernin patenttivirastossa istui vuonna 1905 kolmannen luokan tekninen asiantuntija, joka kirjoitti samana vuonna neljä tutkimusta ja muutti fysiikan.
+AIEMPI KYSYMYS: Mistä torni sai nimensä?
+AIEMPI VASTAUS (Livia):
+Kato, tän nimen selitys on onneksi aika suora. Zytglogge tarkoittaa Bernin murteella aikakelloa, ja nimi tulee kellosta, joka asennettiin portin ylle 1400-luvun alussa. Kello oli luultavasti jo yksinkertainen [[astronominen kello]] soittokoneistoineen, ja samoihin aikoihin valettu suuri kirkonkello vahvisti nimen. Aiemmin [[Zytglogge]] oli ollut [[Bernin]] länsipuolen porttitorni, joten nimi kertoo nimenomaan tornin uudesta tehtävästä kaupungin ajanmittarina. Ja minä muistin tämän ilman lunttia.
+KYSYMYS: Kerro lisää: Bernin
+
+### 116
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zytglogge (tekniikka)
+Tietoruudun teksti: Zytglogge on keskiaikainen torni Bernin vanhassakaupungissa ja kaupungin vanhin muistomerkki. Kahdeksansadan vuoden aikana se on ollut vartiotorni, vankila, kellotorni, kaupunkielämän keskus ja muistomerkki.
+
+Torni rakennettiin noin 1218–1220 Bernin läntisten linnoitusten porttitorniksi, ja se oli silloin vain kuusitoista metriä korkea. Kun kaupunki kasvoi ja muurit siirtyivät kauemmas noin 1270–1275, tornia korotettiin seitsemällä metrillä, jotta se yhä näkisi talojen yli. Kun länsipuolustus laajeni jälleen 1344–1346, tornista tehtiin naisvankila.
+
+Vuoden 1405 suurpalossa torni paloi sisältä kokonaan. Vankisellit jätettiin pois, ja portin ylle asennettiin 1400-luvun alussa kello, luultavasti jo yksinkertainen astronominen kello ja soittokoneisto. Juuri tämä kello ja samana vuonna valettu suuri kirkonkello antoivat tornille nimen: Zytglogge tarkoittaa Bernin murteella aikakelloa. 1400-l…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki: Bern 1905 — patenttipino ja valonsäde] 1905 — Pöydän kulmalla kasvaa pino patenttihakemuksia, ja jokainen uusi tulokas työntää fysiikan muistiinpanot laatikon pohjalle. Bernin patenttiviraston kolmannen luokan tekninen asiantuntija Albert Einstein on 26-vuotias, ja hänen palkkansa elättää Mileva-vaimon ja pienen Hans Albertin. Iltaisin hän palaa kysymykseen, jota on kantanut teini-ikäisestä asti: miltä valo näyttäisi, jos sen voisi ajaa kiinni? Ajatella ääneen hän voi harvojen kanssa: ystävän ja työtoverin Michele Besson kanssa kotimatkalla, ja iltaisin muutaman tuttavan kesken, jotka kutsuvat itseään pilaillen Olympia-akatemiaksi. Virastoon hän päätyi siksi, ettei yksikään haettu opettajanpaikka auennut. Vuonna 1905 Einstein lä…
+AIEMPI KYSYMYS: Mikä asema Bernillä on Sveitsissä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Bern on Sveitsin liittovaltion kaupunki eli niin sanottu Bundesstadt, jossa sijaitsevat liittohallitus ja parlamentti. Sveitsin perustuslaki ei nimeä mitään kaupunkia virallisesti pääkaupungiksi, joten Bernistä puhutaan usein tosiasiallisena pääkaupunkina. [[Bern]] sijaitsee Aare-joen mutkassa, ja sen keskiaikainen vanhakaupunki on tunnettu holvikaarikäytävistään. Maan suurin kaupunki ei ole Bern vaan [[Zürich]]. Tää on kyl hyvä tietovisan kysymys.
+KYSYMYS: Kerro lisää: Bern
+
+### 117
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zytglogge (tekniikka)
+Tietoruudun teksti: Zytglogge on keskiaikainen torni Bernin vanhassakaupungissa ja kaupungin vanhin muistomerkki. Kahdeksansadan vuoden aikana se on ollut vartiotorni, vankila, kellotorni, kaupunkielämän keskus ja muistomerkki.
+
+Torni rakennettiin noin 1218–1220 Bernin läntisten linnoitusten porttitorniksi, ja se oli silloin vain kuusitoista metriä korkea. Kun kaupunki kasvoi ja muurit siirtyivät kauemmas noin 1270–1275, tornia korotettiin seitsemällä metrillä, jotta se yhä näkisi talojen yli. Kun länsipuolustus laajeni jälleen 1344–1346, tornista tehtiin naisvankila.
+
+Vuoden 1405 suurpalossa torni paloi sisältä kokonaan. Vankisellit jätettiin pois, ja portin ylle asennettiin 1400-luvun alussa kello, luultavasti jo yksinkertainen astronominen kello ja soittokoneisto. Juuri tämä kello ja samana vuonna valettu suuri kirkonkello antoivat tornille nimen: Zytglogge tarkoittaa Bernin murteella aikakelloa. 1400-l…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki: Gotthard 1880 — valokuva kulkee kalliossa] 29.2.1880 — Pieni valokuva kulkee käsistä käsiin viimeisen kivikerroksen läpi ennen kuin kukaan ehtii sanoa mitään. Se esittää Louis Favrea, insinööriä, joka johti Gotthardin rautatietunnelin louhintaa vuodesta 1872, mutta joka kuoli sydänkohtaukseen tunnelissa heinäkuussa 1879 — kahdeksan kuukautta ennen tätä hetkeä. Sunnuntaina 29. helmikuuta 1880 pohjoisesta Göschenenistä ja etelästä Airolosta louhitut käytävät kohtaavat vihdoin syvällä Gotthard-massiivin sisällä, lähes 1 700 metrin kiven alla, ja saksankielinen ja italiankielinen työryhmä puhkaisevat viimeisen ohuen kivimuurin toistensa väliltä. Ensimmäinen kättely tapahtuu reiän läpi, ennen kuin kukaan pääsee kokonaan toiselle puolelle…
+AIEMPI KYSYMYS: Mikä asema Bernillä on Sveitsissä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Bern on Sveitsin liittovaltion kaupunki eli niin sanottu Bundesstadt, jossa sijaitsevat liittohallitus ja parlamentti. Sveitsin perustuslaki ei nimeä mitään kaupunkia virallisesti pääkaupungiksi, joten Bernistä puhutaan usein tosiasiallisena pääkaupunkina. [[Bern]] sijaitsee Aare-joen mutkassa, ja sen keskiaikainen vanhakaupunki on tunnettu holvikaarikäytävistään. Maan suurin kaupunki ei ole Bern vaan [[Zürich]]. Tää on kyl hyvä tietovisan kysymys.
+KYSYMYS: Kerro lisää: Zürich
+
+### 118
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zytglogge (tekniikka)
+Tietoruudun teksti: Zytglogge on keskiaikainen torni Bernin vanhassakaupungissa ja kaupungin vanhin muistomerkki. Kahdeksansadan vuoden aikana se on ollut vartiotorni, vankila, kellotorni, kaupunkielämän keskus ja muistomerkki.
+
+Torni rakennettiin noin 1218–1220 Bernin läntisten linnoitusten porttitorniksi, ja se oli silloin vain kuusitoista metriä korkea. Kun kaupunki kasvoi ja muurit siirtyivät kauemmas noin 1270–1275, tornia korotettiin seitsemällä metrillä, jotta se yhä näkisi talojen yli. Kun länsipuolustus laajeni jälleen 1344–1346, tornista tehtiin naisvankila.
+
+Vuoden 1405 suurpalossa torni paloi sisältä kokonaan. Vankisellit jätettiin pois, ja portin ylle asennettiin 1400-luvun alussa kello, luultavasti jo yksinkertainen astronominen kello ja soittokoneisto. Juuri tämä kello ja samana vuonna valettu suuri kirkonkello antoivat tornille nimen: Zytglogge tarkoittaa Bernin murteella aikakelloa. 1400-l…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Barcelona — kohdekartta / Kohdekartta: Boquerian kauppahalli] 1840–1853 Boquerian kauppahalli on yksi Euroopan vanhimmista ja vilkkaimmista toreista, ja sen juuret ulottuvat todella kauas: jo vuonna 1217 kaupunginportin lähellä myytiin lihaa samalla paikalla. Vuosisatojen kuluessa myyjiä tuli lisää, ja 1400-luvulla torilla myytiin erityisesti sikoja. Nykyinen katettu halli alkoi rakentua vuonna 1840, ja se avattiin virallisesti vuonna 1853. Myöhemmin halliin rakennettiin oma kalaosasto, ja vuonna 1914 koko markkinan päälle nostettiin näyttävä metallikatto, joka suojaa myyjiä ja ostajia edelleen tänäkin päivänä. Torin nimi Boqueria juontuu luultavasti katalaanin sanasta 'boc', joka tarkoittaa vuohta – ennen vanhaan siellä nimittäin myytiin paljon vuohe…
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Mitä astronominen kello näyttää kellonajan lisäksi?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä kysymys tuo. Astronominen kello näyttää kellonajan lisäksi taivaankappaleiden liikkeitä: tyypillisesti Auringon ja Kuun paikan, Kuun vaiheet ja usein myös eläinradan merkit. Joissakin kelloissa on lisäksi kalenteri, joka kertoo päivämäärän ja pyhäpäivät. Tällaiset kellot olivat keskiajalla ja myöhemminkin sekä mittareita että taidokkaita esityksiä kaupunkilaisille, ja monissa [[Euroopan]] kaupungeissa on yhä oma astronominen kellonsa, kuten [[Prahan]] kuuluisa raatihuoneen kello. Hyvä kello, vaikken itse kannakaan ranteessa mitään.
+KYSYMYS: Kerro lisää: Euroopan
+
+### 119
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zytglogge (tekniikka)
+Tietoruudun teksti: Zytglogge on keskiaikainen torni Bernin vanhassakaupungissa ja kaupungin vanhin muistomerkki. Kahdeksansadan vuoden aikana se on ollut vartiotorni, vankila, kellotorni, kaupunkielämän keskus ja muistomerkki.
+
+Torni rakennettiin noin 1218–1220 Bernin läntisten linnoitusten porttitorniksi, ja se oli silloin vain kuusitoista metriä korkea. Kun kaupunki kasvoi ja muurit siirtyivät kauemmas noin 1270–1275, tornia korotettiin seitsemällä metrillä, jotta se yhä näkisi talojen yli. Kun länsipuolustus laajeni jälleen 1344–1346, tornista tehtiin naisvankila.
+
+Vuoden 1405 suurpalossa torni paloi sisältä kokonaan. Vankisellit jätettiin pois, ja portin ylle asennettiin 1400-luvun alussa kello, luultavasti jo yksinkertainen astronominen kello ja soittokoneisto. Juuri tämä kello ja samana vuonna valettu suuri kirkonkello antoivat tornille nimen: Zytglogge tarkoittaa Bernin murteella aikakelloa. 1400-l…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Prahan linna] 870 Prahan linnan rakentaminen alkoi jo vuonna 870, kun kukkulalle pystytettiin ensimmäinen kivikirkko. Siitä lähtien linnaa on laajennettu ja rakennettu uudelleen yli tuhannen vuoden ajan, ja nykyään se on Guinnessin ennätystenkirjan mukaan maailman suurin muinainen linnakokonaisuus: aluetta on noin 70 000 neliömetriä, ja se on lähes 570 metriä pitkä. Linnassa on asunut Böömin kuninkaita ja Pyhän saksalais-roomalaisen keisarikunnan hallitsijoita, ja nykyisin se on Tšekin tasavallan presidentin virka-asunto. Linnan sisällä, salaisessa kammiossa, säilytetään myös Böömin kruununjalokiviä, joita pääsee katsomaan vain harvoin. Linnan pihalla on koettu myös dramaattisia hetkiä: natsi-Saksan mieh…
+- [Praha — kaupunkilehti / Tiede: Prahan hevoset] Przewalskin hevonen on mongolialainen villihevonen, jolla on 33 kromosomiparia siinä missä kesyhevosella on 32 — se ei siis ole karannut kesyhevonen vaan oma lajinsa. Toisen maailmansodan jälkeen niitä oli jäljellä vain kahdessa eläintarhassa, Münchenissä ja Prahassa, ja 1950-luvun lopulla koko maailman eläintarhoissa oli enää kaksitoista yksilöä. Vuonna 1959 Prahan eläintarhalle uskottiin lajin kansainvälisen kantakirjan pito. Luonnosta laji hävisi kokonaan, mutta 1990-luvulta lähtien hevosia on palautettu Mongolian aroille — osa niistä Tšekin ilmavoimien koneilla.
+AIEMPI KYSYMYS: Mitä astronominen kello näyttää kellonajan lisäksi?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä kysymys tuo. Astronominen kello näyttää kellonajan lisäksi taivaankappaleiden liikkeitä: tyypillisesti Auringon ja Kuun paikan, Kuun vaiheet ja usein myös eläinradan merkit. Joissakin kelloissa on lisäksi kalenteri, joka kertoo päivämäärän ja pyhäpäivät. Tällaiset kellot olivat keskiajalla ja myöhemminkin sekä mittareita että taidokkaita esityksiä kaupunkilaisille, ja monissa [[Euroopan]] kaupungeissa on yhä oma astronominen kellonsa, kuten [[Prahan]] kuuluisa raatihuoneen kello. Hyvä kello, vaikken itse kannakaan ranteessa mitään.
+KYSYMYS: Kerro lisää: Prahan
+
+### 120
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: La Chaux-de-Fonds (kauppa)
+Tietoruudun teksti: La Chaux-de-Fonds on kaupunki Neuchâtelin kantonissa Juravuorilla 992 metrin korkeudessa, muutaman kilometrin päässä Ranskan rajasta. Se perustettiin 1656, ja sen kasvu ja vauraus ovat kiinni kellonvalmistuksessa: kaupunki on Watch Valley -alueen tärkein kellosepänteollisuuden keskus.
+
+Syy on maaperässä. Korkeus ja veden puute — kallioperä on huokoista hiekkakiveä — tekevät maasta huonoa viljelyyn, ja kaupunki jäi elämään kellojen valmistuksesta ja viennistä. Kaavoitus ja rakennukset noudattavat kellosepän työn vaatimaa järjestystä: asuintalot ja verstaat lomittuvat rinnakkaisiksi nauhoiksi.
+
+Vuoden 1794 tulipalo tuhosi osan kaupungista, ja se rakennettiin uudelleen ruudukkokaavan mukaan — ainutlaatuisesti Sveitsin kaupunkien joukossa. Vain itäisin osa säästyi palolta, ja siellä kadut ovat yhä kapeita ja mutkaisia. Kaupungissa syntyivät muun muassa arkkitehti Le Corbusier, kirjailija Bl…
+AIEMPI KYSYMYS: Miksi kaupunki elää kellosepäntyöstä eikä maanviljelystä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. La Chaux-de-Fonds sijaitsee [[Juravuorilla]] noin 992 metrin korkeudessa, ja korkeus yhdessä veden puutteen kanssa tekee maasta huonoa viljelyyn. Kallioperä on huokoista, joten vesi valuu pois pinnalta, eikä peltoviljelystä voinut tulla seudun pääelinkeinoa. Asukkaat jäivät elämään kellojen valmistuksesta ja viennistä, ja kaupungista kasvoi [[Watch Valley]] -alueen tärkein kellosepänteollisuuden keskus. Kaavoituskin mukautui työhön: asuintalot ja verstaat lomittuvat rinnakkaisiksi nauhoiksi. Pienet kellot, isot tulot, sanoisin.
+KYSYMYS: Kerro lisää: Juravuorilla
+
+### 121
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: La Chaux-de-Fonds (kauppa)
+Tietoruudun teksti: La Chaux-de-Fonds on kaupunki Neuchâtelin kantonissa Juravuorilla 992 metrin korkeudessa, muutaman kilometrin päässä Ranskan rajasta. Se perustettiin 1656, ja sen kasvu ja vauraus ovat kiinni kellonvalmistuksessa: kaupunki on Watch Valley -alueen tärkein kellosepänteollisuuden keskus.
+
+Syy on maaperässä. Korkeus ja veden puute — kallioperä on huokoista hiekkakiveä — tekevät maasta huonoa viljelyyn, ja kaupunki jäi elämään kellojen valmistuksesta ja viennistä. Kaavoitus ja rakennukset noudattavat kellosepän työn vaatimaa järjestystä: asuintalot ja verstaat lomittuvat rinnakkaisiksi nauhoiksi.
+
+Vuoden 1794 tulipalo tuhosi osan kaupungista, ja se rakennettiin uudelleen ruudukkokaavan mukaan — ainutlaatuisesti Sveitsin kaupunkien joukossa. Vain itäisin osa säästyi palolta, ja siellä kadut ovat yhä kapeita ja mutkaisia. Kaupungissa syntyivät muun muassa arkkitehti Le Corbusier, kirjailija Bl…
+AIEMPI KYSYMYS: Miksi kaupunki elää kellosepäntyöstä eikä maanviljelystä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. La Chaux-de-Fonds sijaitsee [[Juravuorilla]] noin 992 metrin korkeudessa, ja korkeus yhdessä veden puutteen kanssa tekee maasta huonoa viljelyyn. Kallioperä on huokoista, joten vesi valuu pois pinnalta, eikä peltoviljelystä voinut tulla seudun pääelinkeinoa. Asukkaat jäivät elämään kellojen valmistuksesta ja viennistä, ja kaupungista kasvoi [[Watch Valley]] -alueen tärkein kellosepänteollisuuden keskus. Kaavoituskin mukautui työhön: asuintalot ja verstaat lomittuvat rinnakkaisiksi nauhoiksi. Pienet kellot, isot tulot, sanoisin.
+KYSYMYS: Kerro lisää: Watch Valley
+
+### 122
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: La Chaux-de-Fonds (kauppa)
+Tietoruudun teksti: La Chaux-de-Fonds on kaupunki Neuchâtelin kantonissa Juravuorilla 992 metrin korkeudessa, muutaman kilometrin päässä Ranskan rajasta. Se perustettiin 1656, ja sen kasvu ja vauraus ovat kiinni kellonvalmistuksessa: kaupunki on Watch Valley -alueen tärkein kellosepänteollisuuden keskus.
+
+Syy on maaperässä. Korkeus ja veden puute — kallioperä on huokoista hiekkakiveä — tekevät maasta huonoa viljelyyn, ja kaupunki jäi elämään kellojen valmistuksesta ja viennistä. Kaavoitus ja rakennukset noudattavat kellosepän työn vaatimaa järjestystä: asuintalot ja verstaat lomittuvat rinnakkaisiksi nauhoiksi.
+
+Vuoden 1794 tulipalo tuhosi osan kaupungista, ja se rakennettiin uudelleen ruudukkokaavan mukaan — ainutlaatuisesti Sveitsin kaupunkien joukossa. Vain itäisin osa säästyi palolta, ja siellä kadut ovat yhä kapeita ja mutkaisia. Kaupungissa syntyivät muun muassa arkkitehti Le Corbusier, kirjailija Bl…
+AIEMPI KYSYMYS: Miksi kadut kulkevat suorassa ruudukossa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tää on kiva yksityiskohta. Vuoden 1794 tulipalo tuhosi osan kaupungista, ja alue rakennettiin uudelleen ruudukkokaavan mukaan, mikä on Sveitsin kaupunkien joukossa ainutlaatuista. Vain itäisin osa säästyi palolta, ja siellä kadut ovat yhä kapeita ja mutkaisia, joten kaupungissa näkee vanhan ja uuden kaavoituksen vierekkäin. [[La Chaux-de-Fonds]] on myös [[Le Corbusier'n]] syntymäkaupunki. Ylhäältä katsoen ruudukko näyttää kyl tosi siistiltä.
+KYSYMYS: Kerro lisää: La Chaux-de-Fonds
+
+### 123
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: La Chaux-de-Fonds (kauppa)
+Tietoruudun teksti: La Chaux-de-Fonds on kaupunki Neuchâtelin kantonissa Juravuorilla 992 metrin korkeudessa, muutaman kilometrin päässä Ranskan rajasta. Se perustettiin 1656, ja sen kasvu ja vauraus ovat kiinni kellonvalmistuksessa: kaupunki on Watch Valley -alueen tärkein kellosepänteollisuuden keskus.
+
+Syy on maaperässä. Korkeus ja veden puute — kallioperä on huokoista hiekkakiveä — tekevät maasta huonoa viljelyyn, ja kaupunki jäi elämään kellojen valmistuksesta ja viennistä. Kaavoitus ja rakennukset noudattavat kellosepän työn vaatimaa järjestystä: asuintalot ja verstaat lomittuvat rinnakkaisiksi nauhoiksi.
+
+Vuoden 1794 tulipalo tuhosi osan kaupungista, ja se rakennettiin uudelleen ruudukkokaavan mukaan — ainutlaatuisesti Sveitsin kaupunkien joukossa. Vain itäisin osa säästyi palolta, ja siellä kadut ovat yhä kapeita ja mutkaisia. Kaupungissa syntyivät muun muassa arkkitehti Le Corbusier, kirjailija Bl…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bogotá — kohdekartta / Kohdekartta: Nykytaiteen museo] 1963 Museo avattiin yleisölle 1963, ja sen perusti taidekriitikko Marta Traba. Se on maan tärkeimpiä kulttuurilaitoksia, ja vuodesta 1969 vuoteen 2016 sitä johti Gloria Zea. Nykyinen nimi lyhennetään MAMBO, ja talo on keskellä kaupunkia Itäkukkuloiden juurella. Rakennuksen suunnitteli Rogelio Salmona 1985. Neljä kerrosta yhdistää keskusportaikko, joka tekee talosta kivien ja portaiden labyrintin; tilaa on 5 000 neliömetriä, ja sisällä ovat veistospiha, kirjasto, auditorio, elokuvasali ja ravintola. Ulkoasu on Salmonan omaa: paljasta tiiltä, ramppeja ja käytäviä, epätavallisia sisään- ja uloskäyntejä sekä suurten ikkunoiden ja kattoikkunoiden tuoma luonnonvalo keinovalon rinnalla. Salmona (1…
+- [Tokio — kohdekartta / Kohdekartta: Uenon puisto] 1873 Puisto avattiin 19. lokakuuta 1873, ja se oli Japanin ensimmäisiä julkisia puistoja. Maa oli ollut Kan'ei-ji-temppelin, ja kukkula siirtyi kaupungille joulukuussa 1868. Paikalle esitettiin lääkärikoulua ja sairaalaa, mutta hollantilainen lääkäri Bauduin vaati siihen puistoa. Tammikuussa 1873 Dajō-kan määräsi julkisten puistojen perustamisesta, ja samana vuonna avattiin Uenon lisäksi neljä muuta. Shinobazun lampi on 16 hehtaaria: laajoja lootuskasvustoja ja suota. Se on lintujen talvehtimispaikka — tukkasotka, haapana, jouhisorsa, punasotka, merimetso — ja keskisaarella on onnenjumalatar Benzaitenin pyhäkkö. Tyynenmeren sodan jälkeen lampi laskettiin kuivaksi ja pohjalla kasvatettiin vi…
+AIEMPI KYSYMYS: Miksi kadut kulkevat suorassa ruudukossa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tää on kiva yksityiskohta. Vuoden 1794 tulipalo tuhosi osan kaupungista, ja alue rakennettiin uudelleen ruudukkokaavan mukaan, mikä on Sveitsin kaupunkien joukossa ainutlaatuista. Vain itäisin osa säästyi palolta, ja siellä kadut ovat yhä kapeita ja mutkaisia, joten kaupungissa näkee vanhan ja uuden kaavoituksen vierekkäin. [[La Chaux-de-Fonds]] on myös [[Le Corbusier'n]] syntymäkaupunki. Ylhäältä katsoen ruudukko näyttää kyl tosi siistiltä.
+KYSYMYS: Kerro lisää: Le Corbusier'n
+
+### 124
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: La Chaux-de-Fonds (kauppa)
+Tietoruudun teksti: La Chaux-de-Fonds on kaupunki Neuchâtelin kantonissa Juravuorilla 992 metrin korkeudessa, muutaman kilometrin päässä Ranskan rajasta. Se perustettiin 1656, ja sen kasvu ja vauraus ovat kiinni kellonvalmistuksessa: kaupunki on Watch Valley -alueen tärkein kellosepänteollisuuden keskus.
+
+Syy on maaperässä. Korkeus ja veden puute — kallioperä on huokoista hiekkakiveä — tekevät maasta huonoa viljelyyn, ja kaupunki jäi elämään kellojen valmistuksesta ja viennistä. Kaavoitus ja rakennukset noudattavat kellosepän työn vaatimaa järjestystä: asuintalot ja verstaat lomittuvat rinnakkaisiksi nauhoiksi.
+
+Vuoden 1794 tulipalo tuhosi osan kaupungista, ja se rakennettiin uudelleen ruudukkokaavan mukaan — ainutlaatuisesti Sveitsin kaupunkien joukossa. Vain itäisin osa säästyi palolta, ja siellä kadut ovat yhä kapeita ja mutkaisia. Kaupungissa syntyivät muun muassa arkkitehti Le Corbusier, kirjailija Bl…
+AIEMPI KYSYMYS: Kuka oli Le Corbusier?
+AIEMPI VASTAUS (Livia):
+Hmm, tän miehen tunnen. Le Corbusier oli sveitsiläissyntyinen arkkitehti, joka syntyi vuonna 1887 [[La Chaux-de-Fondsissa]] ja vaikutti myöhemmin pääasiassa Ranskassa. Hän oli modernin arkkitehtuurin keskeisiä hahmoja, ja hänen ajatuksensa asumisesta, kaupunkisuunnittelusta ja betonirakentamisesta levisivät laajalle. Hänen oikea nimensä oli Charles-Édouard Jeanneret, ja Le Corbusier oli taiteilijanimi. Moni hänen rakennuksistaan kuuluu nykyään [[UNESCOn]] maailmanperintöön. Ei paha kyyhkyltä, vai mitä.
+KYSYMYS: Kerro lisää: La Chaux-de-Fondsissa
+
+### 125
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: La Chaux-de-Fonds (kauppa)
+Tietoruudun teksti: La Chaux-de-Fonds on kaupunki Neuchâtelin kantonissa Juravuorilla 992 metrin korkeudessa, muutaman kilometrin päässä Ranskan rajasta. Se perustettiin 1656, ja sen kasvu ja vauraus ovat kiinni kellonvalmistuksessa: kaupunki on Watch Valley -alueen tärkein kellosepänteollisuuden keskus.
+
+Syy on maaperässä. Korkeus ja veden puute — kallioperä on huokoista hiekkakiveä — tekevät maasta huonoa viljelyyn, ja kaupunki jäi elämään kellojen valmistuksesta ja viennistä. Kaavoitus ja rakennukset noudattavat kellosepän työn vaatimaa järjestystä: asuintalot ja verstaat lomittuvat rinnakkaisiksi nauhoiksi.
+
+Vuoden 1794 tulipalo tuhosi osan kaupungista, ja se rakennettiin uudelleen ruudukkokaavan mukaan — ainutlaatuisesti Sveitsin kaupunkien joukossa. Vain itäisin osa säästyi palolta, ja siellä kadut ovat yhä kapeita ja mutkaisia. Kaupungissa syntyivät muun muassa arkkitehti Le Corbusier, kirjailija Bl…
+AIEMPI KYSYMYS: Kuka oli Le Corbusier?
+AIEMPI VASTAUS (Livia):
+Hmm, tän miehen tunnen. Le Corbusier oli sveitsiläissyntyinen arkkitehti, joka syntyi vuonna 1887 [[La Chaux-de-Fondsissa]] ja vaikutti myöhemmin pääasiassa Ranskassa. Hän oli modernin arkkitehtuurin keskeisiä hahmoja, ja hänen ajatuksensa asumisesta, kaupunkisuunnittelusta ja betonirakentamisesta levisivät laajalle. Hänen oikea nimensä oli Charles-Édouard Jeanneret, ja Le Corbusier oli taiteilijanimi. Moni hänen rakennuksistaan kuuluu nykyään [[UNESCOn]] maailmanperintöön. Ei paha kyyhkyltä, vai mitä.
+KYSYMYS: Kerro lisää: UNESCOn
+
+### 126
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: La Chaux-de-Fonds (kauppa)
+Tietoruudun teksti: La Chaux-de-Fonds on kaupunki Neuchâtelin kantonissa Juravuorilla 992 metrin korkeudessa, muutaman kilometrin päässä Ranskan rajasta. Se perustettiin 1656, ja sen kasvu ja vauraus ovat kiinni kellonvalmistuksessa: kaupunki on Watch Valley -alueen tärkein kellosepänteollisuuden keskus.
+
+Syy on maaperässä. Korkeus ja veden puute — kallioperä on huokoista hiekkakiveä — tekevät maasta huonoa viljelyyn, ja kaupunki jäi elämään kellojen valmistuksesta ja viennistä. Kaavoitus ja rakennukset noudattavat kellosepän työn vaatimaa järjestystä: asuintalot ja verstaat lomittuvat rinnakkaisiksi nauhoiksi.
+
+Vuoden 1794 tulipalo tuhosi osan kaupungista, ja se rakennettiin uudelleen ruudukkokaavan mukaan — ainutlaatuisesti Sveitsin kaupunkien joukossa. Vain itäisin osa säästyi palolta, ja siellä kadut ovat yhä kapeita ja mutkaisia. Kaupungissa syntyivät muun muassa arkkitehti Le Corbusier, kirjailija Bl…
+AIEMPI KYSYMYS: Mistä Juravuorten nimi on peräisin?
+AIEMPI VASTAUS (Livia):
+Katotaas. Juravuoret ovat kalkkikivisiä vuoria Sveitsin ja Ranskan rajalla, ja niiden nimi on yleisesti kuvailtu kelttiläisperäiseksi: sen uskotaan viittaavan metsäiseen vuoristoon. En ole kuitenkaan aivan varma tarkasta etymologiasta. Varmaa on, että geologiassa jurakausi on nimetty näiden [[Juravuorten]] mukaan, koska seudun kalkkikerrostumat kuuluvat tunnetuimpiin kyseisen ajanjakson kerrostumiin. Sveitsissä [[Jura]] on myös kantonin nimi. Tää meni nyt vähän historiasta geologiaan.
+KYSYMYS: Kerro lisää: Juravuorten
+
+### 127
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: La Chaux-de-Fonds (kauppa)
+Tietoruudun teksti: La Chaux-de-Fonds on kaupunki Neuchâtelin kantonissa Juravuorilla 992 metrin korkeudessa, muutaman kilometrin päässä Ranskan rajasta. Se perustettiin 1656, ja sen kasvu ja vauraus ovat kiinni kellonvalmistuksessa: kaupunki on Watch Valley -alueen tärkein kellosepänteollisuuden keskus.
+
+Syy on maaperässä. Korkeus ja veden puute — kallioperä on huokoista hiekkakiveä — tekevät maasta huonoa viljelyyn, ja kaupunki jäi elämään kellojen valmistuksesta ja viennistä. Kaavoitus ja rakennukset noudattavat kellosepän työn vaatimaa järjestystä: asuintalot ja verstaat lomittuvat rinnakkaisiksi nauhoiksi.
+
+Vuoden 1794 tulipalo tuhosi osan kaupungista, ja se rakennettiin uudelleen ruudukkokaavan mukaan — ainutlaatuisesti Sveitsin kaupunkien joukossa. Vain itäisin osa säästyi palolta, ja siellä kadut ovat yhä kapeita ja mutkaisia. Kaupungissa syntyivät muun muassa arkkitehti Le Corbusier, kirjailija Bl…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuwait — kohdekartta / Kohdekartta: Al Hamra -torni] Tornin pohjakaava on pyöristetty neliö, josta on leikattu neljännes pois. Puuttuva neljännes ei ole joka kerroksessa samassa kohdassa: alhaalla se on lounaisnurkassa, ylhäällä kaakkoisnurkassa ja siirtyy kerros kerrokselta vähän. Siksi torni näyttää kiertyvän. Viillon reunoina on kaksi betoniseinää, jotka nousevat ytimen nurkista katolle asti ja kaartuvat ulospäin. Niiden väliin jäävä eteläsivu on lähes umpinainen kalkkikiviseinä; lasia on vain pohjoisessa, idässä ja lännessä. Muodon sanelee aurinko. Kuwait City on 29. leveyspiirillä, joten aurinko on keskipäivällä aina etelässä ja eteläjulkisivu saisi päivän kovimman säteilyn. Poistettu neljännes siirtää toimistokerrokset pois siltä puolel…
+AIEMPI KYSYMYS: Mistä Juravuorten nimi on peräisin?
+AIEMPI VASTAUS (Livia):
+Katotaas. Juravuoret ovat kalkkikivisiä vuoria Sveitsin ja Ranskan rajalla, ja niiden nimi on yleisesti kuvailtu kelttiläisperäiseksi: sen uskotaan viittaavan metsäiseen vuoristoon. En ole kuitenkaan aivan varma tarkasta etymologiasta. Varmaa on, että geologiassa jurakausi on nimetty näiden [[Juravuorten]] mukaan, koska seudun kalkkikerrostumat kuuluvat tunnetuimpiin kyseisen ajanjakson kerrostumiin. Sveitsissä [[Jura]] on myös kantonin nimi. Tää meni nyt vähän historiasta geologiaan.
+KYSYMYS: Kerro lisää: Jura
+
+### 128
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: La Chaux-de-Fonds (kauppa)
+Tietoruudun teksti: La Chaux-de-Fonds on kaupunki Neuchâtelin kantonissa Juravuorilla 992 metrin korkeudessa, muutaman kilometrin päässä Ranskan rajasta. Se perustettiin 1656, ja sen kasvu ja vauraus ovat kiinni kellonvalmistuksessa: kaupunki on Watch Valley -alueen tärkein kellosepänteollisuuden keskus.
+
+Syy on maaperässä. Korkeus ja veden puute — kallioperä on huokoista hiekkakiveä — tekevät maasta huonoa viljelyyn, ja kaupunki jäi elämään kellojen valmistuksesta ja viennistä. Kaavoitus ja rakennukset noudattavat kellosepän työn vaatimaa järjestystä: asuintalot ja verstaat lomittuvat rinnakkaisiksi nauhoiksi.
+
+Vuoden 1794 tulipalo tuhosi osan kaupungista, ja se rakennettiin uudelleen ruudukkokaavan mukaan — ainutlaatuisesti Sveitsin kaupunkien joukossa. Vain itäisin osa säästyi palolta, ja siellä kadut ovat yhä kapeita ja mutkaisia. Kaupungissa syntyivät muun muassa arkkitehti Le Corbusier, kirjailija Bl…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Menovinkit] Sveitsi on pieni maa, mutta sen verkkoon mahtuu paljon: 3 049 keskiaikaista kirjaa, viisi petatavua hiukkasfysiikkaa, 3,5 miljoonaa vanhaa valokuvaa, 10 000 kelloa ja Matterhorn sellaisena kuin se juuri nyt näyttää.
+- [Luxemburg — maalehti / Luonto: Pikku-Sveitsin kalliot] nykyään — Luxemburgin Pikku-Sveitsi eli Müllerthal on hiekkakivikallioiden ja tiheiden metsien seutu maan itäosassa. Se kattaa vain seitsemän prosenttia maasta, mutta siellä on rotkoja, luolia ja lukemattomia pieniä puroja. Korkein kohta on vain 414 metrissä. Alueen ainoa keskikokoinen asutus on Echternach, Luxemburgin vanhin säilynyt kaupunki. Kalliot houkuttivat kävijöitä jo 1800-luvulla: Berdorfin nuoriso kaiversi Hohllayn kallioseinään 1880 kiitoksen hallitukselle, joka avasi rotkot yleisön ulottuville.
+AIEMPI KYSYMYS: Miten mekaaninen kello toimii?
+AIEMPI VASTAUS (Livia):
+Joo, tän selitän ilomielin. Mekaanisen kellon voimanlähteenä on yleensä jousi tai paino, joka purkautuessaan pyörittää rattaistoa. Rattaisto välittää liikkeen osoittimille, mutta jotta voima ei purkautuisi kerralla, mukana on pidäke eli kaappausmekanismi. Se päästää rattaita liikkeelle pienin tasaisin askelin, ja tahdin määrää heiluri tai taskukelloissa ja rannekelloissa tasapainopyörä. [[Sveitsi]] on tunnettu kellojen valmistuksesta, ja esimerkiksi [[La Chaux-de-Fonds]] on yksi alan keskuksista. Nyt tikittää jo omassakin päässä.
+KYSYMYS: Kerro lisää: Sveitsi
+
+### 129
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gruyères (ruoka)
+Tietoruudun teksti: Gruyères on pikkukaupunki Gruyèren piirikunnassa Fribourgin kantonissa. Keskiaikainen kaupunki seisoo 82 metriä korkean kukkulan laella Saanen laakson ja Gruyèren järven yllä, ja se on antanut nimensä gruyère-juustolle.
+
+Kaupunki on 810 metrin korkeudessa, 4,5 kilometriä piirikunnan pääkaupungista Bullesta kaakkoon. Kukkula nousee yksinään Alppien pohjoispuolella, Moléson-vuoren juurella, siinä kohdassa jossa Saane jättää Fribourgin alpit.
+
+Pitäjän maasta 40,5 prosenttia on maatalouskäytössä ja puolet metsää. Maatalousmaasta vain 4,6 prosenttia on peltoa: 12,9 prosenttia on laidunta ja 22,9 prosenttia alppilaidunta. Juuri se suhde kertoo, mihin seudun elanto perustuu.
+AIEMPI KYSYMYS: Mistä gruyère-juusto sai nimensä?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tää on herkullinen kysymys. Gruyère-juusto on nimetty [[Gruyèresin]] mukaan, keskiaikaisen pikkukaupungin, joka seisoo kukkulan laella Fribourgin kantonissa. Seudun elanto on perustunut laidunmaahan ja karjatalouteen, joten juuston valmistus sopii maisemaan. Juustoa käytetään paljon sveitsiläisessä keittiössä, ja tunnetuin juustofonduen sekoitus on moitié-moitié: puolet [[gruyèrea]] ja puolet [[vacherinia]]. Pullan perään ikävöin silti enemmän kuin juuston.
+KYSYMYS: Kerro lisää: Gruyèresin
+
+### 130
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gruyères (ruoka)
+Tietoruudun teksti: Gruyères on pikkukaupunki Gruyèren piirikunnassa Fribourgin kantonissa. Keskiaikainen kaupunki seisoo 82 metriä korkean kukkulan laella Saanen laakson ja Gruyèren järven yllä, ja se on antanut nimensä gruyère-juustolle.
+
+Kaupunki on 810 metrin korkeudessa, 4,5 kilometriä piirikunnan pääkaupungista Bullesta kaakkoon. Kukkula nousee yksinään Alppien pohjoispuolella, Moléson-vuoren juurella, siinä kohdassa jossa Saane jättää Fribourgin alpit.
+
+Pitäjän maasta 40,5 prosenttia on maatalouskäytössä ja puolet metsää. Maatalousmaasta vain 4,6 prosenttia on peltoa: 12,9 prosenttia on laidunta ja 22,9 prosenttia alppilaidunta. Juuri se suhde kertoo, mihin seudun elanto perustuu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Ruoka: Kansallisruoka, joka piti keksiä] 1950-luku — Juustofondue oli 1900-luvun alussa tuttu vain muutamassa laaksossa. Sveitsin juustoliitto teki siitä kansallisruoan mainoskampanjalla, ja armeijan keittokirja levitti reseptin koko maahan 1950-luvulla. Tunnetuin sekoitus on moitié-moitié: puolet gruyèrea, puolet vacherinia. Pataan pudonnut leipä maksaa laulun.
+AIEMPI KYSYMYS: Mistä gruyère-juusto sai nimensä?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tää on herkullinen kysymys. Gruyère-juusto on nimetty [[Gruyèresin]] mukaan, keskiaikaisen pikkukaupungin, joka seisoo kukkulan laella Fribourgin kantonissa. Seudun elanto on perustunut laidunmaahan ja karjatalouteen, joten juuston valmistus sopii maisemaan. Juustoa käytetään paljon sveitsiläisessä keittiössä, ja tunnetuin juustofonduen sekoitus on moitié-moitié: puolet [[gruyèrea]] ja puolet [[vacherinia]]. Pullan perään ikävöin silti enemmän kuin juuston.
+KYSYMYS: Kerro lisää: gruyèrea
+
+### 131
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gruyères (ruoka)
+Tietoruudun teksti: Gruyères on pikkukaupunki Gruyèren piirikunnassa Fribourgin kantonissa. Keskiaikainen kaupunki seisoo 82 metriä korkean kukkulan laella Saanen laakson ja Gruyèren järven yllä, ja se on antanut nimensä gruyère-juustolle.
+
+Kaupunki on 810 metrin korkeudessa, 4,5 kilometriä piirikunnan pääkaupungista Bullesta kaakkoon. Kukkula nousee yksinään Alppien pohjoispuolella, Moléson-vuoren juurella, siinä kohdassa jossa Saane jättää Fribourgin alpit.
+
+Pitäjän maasta 40,5 prosenttia on maatalouskäytössä ja puolet metsää. Maatalousmaasta vain 4,6 prosenttia on peltoa: 12,9 prosenttia on laidunta ja 22,9 prosenttia alppilaidunta. Juuri se suhde kertoo, mihin seudun elanto perustuu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Ruoka: Kansallisruoka, joka piti keksiä] 1950-luku — Juustofondue oli 1900-luvun alussa tuttu vain muutamassa laaksossa. Sveitsin juustoliitto teki siitä kansallisruoan mainoskampanjalla, ja armeijan keittokirja levitti reseptin koko maahan 1950-luvulla. Tunnetuin sekoitus on moitié-moitié: puolet gruyèrea, puolet vacherinia. Pataan pudonnut leipä maksaa laulun.
+AIEMPI KYSYMYS: Mistä gruyère-juusto sai nimensä?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tää on herkullinen kysymys. Gruyère-juusto on nimetty [[Gruyèresin]] mukaan, keskiaikaisen pikkukaupungin, joka seisoo kukkulan laella Fribourgin kantonissa. Seudun elanto on perustunut laidunmaahan ja karjatalouteen, joten juuston valmistus sopii maisemaan. Juustoa käytetään paljon sveitsiläisessä keittiössä, ja tunnetuin juustofonduen sekoitus on moitié-moitié: puolet [[gruyèrea]] ja puolet [[vacherinia]]. Pullan perään ikävöin silti enemmän kuin juuston.
+KYSYMYS: Kerro lisää: vacherinia
+
+### 132
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gruyères (ruoka)
+Tietoruudun teksti: Gruyères on pikkukaupunki Gruyèren piirikunnassa Fribourgin kantonissa. Keskiaikainen kaupunki seisoo 82 metriä korkean kukkulan laella Saanen laakson ja Gruyèren järven yllä, ja se on antanut nimensä gruyère-juustolle.
+
+Kaupunki on 810 metrin korkeudessa, 4,5 kilometriä piirikunnan pääkaupungista Bullesta kaakkoon. Kukkula nousee yksinään Alppien pohjoispuolella, Moléson-vuoren juurella, siinä kohdassa jossa Saane jättää Fribourgin alpit.
+
+Pitäjän maasta 40,5 prosenttia on maatalouskäytössä ja puolet metsää. Maatalousmaasta vain 4,6 prosenttia on peltoa: 12,9 prosenttia on laidunta ja 22,9 prosenttia alppilaidunta. Juuri se suhde kertoo, mihin seudun elanto perustuu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bahr el Ghazal — kaupunkilehti / Karjapaimentolaisten maailma: Karja morsiamen hintana] Karja vaihtaa omistajaa myös avioliitossa: sulhasen suku maksaa morsiamen suvulle useita kymmeniä nautoja, mikä vahvistaa syntyvien lasten kuulumisen isän sukuun. Järjestelmä on niin vahva, että jos mies kuolee lapsettomana, hänen sukunsa voi silti maksaa karjaa naiselle, jonka lapset lasketaan juridisesti vainajan omiksi — niin kutsuttu haamuavioliitto. Dinkat ovat Etelä-Sudanin suurin kansanryhmä, noin 4,5 miljoonaa ihmistä eli reilut 40 prosenttia koko maan väestöstä, ja suurin osa heistä asuu edelleen juuri Bahr el Ghazalin ja Ylä-Niilin karjanhoitoalueilla.
+- [Boa Vista — kaupunkilehti / Boa Vista: Kulta ja timantit toivat asukkaita] Pitkään Boa Vistan ja koko seudun talous nojasi karjatalouteen, mutta 1900-luvulla alueelle virtasi uusia asukkaita kullan ja timanttien perässä. Garimpeiroiksi kutsutut itsenäiset kaivostyöläiset seuloivat jokien hiekkaa käsin ja yksinkertaisin välinein, ja monet heistä asettuivat lopulta pysyvästi kasvavaan kaupunkiin. Myöhemmin koneellinen kaivostoiminta kiellettiin, koska se aiheutti pahoja tuhoja joki- ja metsäalueille. Kaupungin keskustassa seisova patsas kumartuneesta kullankaivajasta muistuttaa yhä tästä Boa Vistan historian vaiheesta.
+AIEMPI KYSYMYS: Kuinka suuri osa pitäjän maasta on alppilaidunta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Pitäjän maasta 22,9 prosenttia on alppilaidunta, mikä on yli puolet kaikesta maatalouskäytössä olevasta maasta. Maatalouskäytössä on yhteensä 40,5 prosenttia pitäjän maasta, ja siitä peltoa on vain 4,6 prosenttia pitäjän maasta ja tavallista laidunta 12,9 prosenttia. Puolet pitäjästä on metsää. Luvut kertovat, että seudun elanto perustuu [[karjatalouteen]] eikä viljelyyn, ja se näkyy [[Gruyèresin]] juustoperinteessä. Tää oli nyt kyl numeroiden juhlaa.
+KYSYMYS: Kerro lisää: karjatalouteen
+
+### 133
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gruyères (ruoka)
+Tietoruudun teksti: Gruyères on pikkukaupunki Gruyèren piirikunnassa Fribourgin kantonissa. Keskiaikainen kaupunki seisoo 82 metriä korkean kukkulan laella Saanen laakson ja Gruyèren järven yllä, ja se on antanut nimensä gruyère-juustolle.
+
+Kaupunki on 810 metrin korkeudessa, 4,5 kilometriä piirikunnan pääkaupungista Bullesta kaakkoon. Kukkula nousee yksinään Alppien pohjoispuolella, Moléson-vuoren juurella, siinä kohdassa jossa Saane jättää Fribourgin alpit.
+
+Pitäjän maasta 40,5 prosenttia on maatalouskäytössä ja puolet metsää. Maatalousmaasta vain 4,6 prosenttia on peltoa: 12,9 prosenttia on laidunta ja 22,9 prosenttia alppilaidunta. Juuri se suhde kertoo, mihin seudun elanto perustuu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Ruoka: Kansallisruoka, joka piti keksiä] 1950-luku — Juustofondue oli 1900-luvun alussa tuttu vain muutamassa laaksossa. Sveitsin juustoliitto teki siitä kansallisruoan mainoskampanjalla, ja armeijan keittokirja levitti reseptin koko maahan 1950-luvulla. Tunnetuin sekoitus on moitié-moitié: puolet gruyèrea, puolet vacherinia. Pataan pudonnut leipä maksaa laulun.
+AIEMPI KYSYMYS: Mitä juustofondue on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Juustofondue on sveitsiläinen ruoka, jossa sulatettua juustoa lämmitetään yhteisessä padassa ja leipäpaloja kastetaan siihen pitkillä haarukoilla. Tunnetuin sekoitus on moitié-moitié, puolet [[gruyèrea]] ja puolet [[vacherinia]]. Juustofondue oli 1900-luvun alussa tuttu vain muutamassa laaksossa, mutta [[Sveitsin juustoliitto]] teki siitä kansallisruoan mainoskampanjalla, ja armeijan keittokirja levitti reseptin koko maahan 1950-luvulla. Vanha sääntö kuuluu, että pataan pudonnut leipä maksaa laulun. Minä en laula, mutta pulla olisi hyvä dippi.
+KYSYMYS: Kerro lisää: Sveitsin juustoliitto
+
+### 134
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gruyères (ruoka)
+Tietoruudun teksti: Gruyères on pikkukaupunki Gruyèren piirikunnassa Fribourgin kantonissa. Keskiaikainen kaupunki seisoo 82 metriä korkean kukkulan laella Saanen laakson ja Gruyèren järven yllä, ja se on antanut nimensä gruyère-juustolle.
+
+Kaupunki on 810 metrin korkeudessa, 4,5 kilometriä piirikunnan pääkaupungista Bullesta kaakkoon. Kukkula nousee yksinään Alppien pohjoispuolella, Moléson-vuoren juurella, siinä kohdassa jossa Saane jättää Fribourgin alpit.
+
+Pitäjän maasta 40,5 prosenttia on maatalouskäytössä ja puolet metsää. Maatalousmaasta vain 4,6 prosenttia on peltoa: 12,9 prosenttia on laidunta ja 22,9 prosenttia alppilaidunta. Juuri se suhde kertoo, mihin seudun elanto perustuu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Smaragdikaunotar] nykyään — Soča saa alkunsa Trenta-laaksossa Julian Alpeilla 876 metrin korkeudessa ja virtaa 138 kilometrin matkan Adrianmereen. Sen vesi on niin smaragdinvihreää, että jokea markkinoidaan nimellä Smaragdikaunotar, ja väri säilyy poikkeuksellisen pitkälle. Rannoilla syntyi myös runoutta: Simon Gregorčič kirjoitti joesta runon Soči, jota pidetään slovenialaisen kirjallisuuden mestariteoksena. Jokivarressa elää harvinaista marmoritaimenta, ja alueella kuvattiin osa vuoden 2008 Narnia-elokuvasta Prinssi Kaspian. Italiassa joki tunnetaan nimellä Isonzo.
+- [Italia — maalehti / Luonto: Alppikauris pelastui viime hetkellä] 1800-luvun puolivälissä alppikauriita oli jäljellä alle sata, kaikki yhdessä laaksossa Gran Paradison vuorilla — muualta Alpeilta ne oli metsästetty loppuun. Italian kuningas rauhoitti viimeisen lauman omaksi metsästysmaakseen, ja tästä ristiriidasta alkoi pelastus: alueesta tuli 1922 Italian ensimmäinen kansallispuisto. Nykyään Alpeilla kiipeilee taas yli 50 000 kaurista, ja jokainen polveutuu Gran Paradison lauman eläimistä. Sarvekas kiipeilijä on nykyään puiston tunnuksessa.
+AIEMPI KYSYMYS: Mitä alppilaidun tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin, selitän. Alppilaidun on korkealla vuoristossa sijaitseva laidunmaa, jonne karja viedään kesäksi syömään vuoristoruohoa, kun alempana olevat niityt jätetään heinän tekoon. Alppilaiduntamisella on pitkä perinne [[Alpeilla]], ja siihen liittyy usein myös juuston valmistus alppimajoilla. [[Gruyèresin]] seudulla alppilaitumia on lähes neljännes pitäjän pinta-alasta, ja juuri se selittää, miksi alueella on vahva juustoperinne. Vuoristoilma kuulostaa kyyhkystä kiinnostavammalta kuin karjan jäljet.
+KYSYMYS: Kerro lisää: Alpeilla
+
+### 135
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gruyères (ruoka)
+Tietoruudun teksti: Gruyères on pikkukaupunki Gruyèren piirikunnassa Fribourgin kantonissa. Keskiaikainen kaupunki seisoo 82 metriä korkean kukkulan laella Saanen laakson ja Gruyèren järven yllä, ja se on antanut nimensä gruyère-juustolle.
+
+Kaupunki on 810 metrin korkeudessa, 4,5 kilometriä piirikunnan pääkaupungista Bullesta kaakkoon. Kukkula nousee yksinään Alppien pohjoispuolella, Moléson-vuoren juurella, siinä kohdassa jossa Saane jättää Fribourgin alpit.
+
+Pitäjän maasta 40,5 prosenttia on maatalouskäytössä ja puolet metsää. Maatalousmaasta vain 4,6 prosenttia on peltoa: 12,9 prosenttia on laidunta ja 22,9 prosenttia alppilaidunta. Juuri se suhde kertoo, mihin seudun elanto perustuu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Vuoret] Sveitsissä vuori ei ole este vaan työmaa: sen ali porataan juna, sen päällä virtaa jäätä kuin hidasta jokea, ja sen sisään louhittiin asema kolmen kilometrin korkeuteen.
+AIEMPI KYSYMYS: Mitä kieltä Fribourgin kantonissa puhutaan?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä kysymys. Fribourgin kantoni on kaksikielinen: ranska ja saksa ovat sen virallisia kieliä. Ranskankieliset asuvat enimmäkseen kantonin eteläosassa, ja [[Gruyèresin]] seutu kuuluu ranskankieliseen alueeseen, kun taas saksankielisiä on enemmän pohjoisessa. [[Sveitsissä]] on yhteensä neljä kansalliskieltä: saksa, ranska, italia ja retoromaani. Kielialueen raja kulkee siis kantonin sisällä, ei kantonin rajalla. Ei ole helppoa olla kirjekyyhky tuollaisessa maassa.
+KYSYMYS: Kerro lisää: Sveitsissä
+
+### 136
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rütlin niitty (historia)
+Tietoruudun teksti: Rütli on vuoristoniitty Luzernin järven rannalla Seelisbergin kunnassa Urin kantonissa. Perinteisessä sveitsiläisessä historiankirjoituksessa se on Rütlischwurin paikka: valan, joka merkitsee alkuperäisen Sveitsin valaliiton syntyä. Niittyä pidetään kansallisena muistomerkkinä, ja sinne pääsee vain veneellä järveltä tai jalan Seelisbergistä.
+
+Symboliksi paikka nousi vasta 1700-luvun alussa kansallisromantiikan myötä. 1780-luvulla ehdotettiin vapaudenmuistomerkin pystyttämistä, mutta hanke ei toteutunut, ja Helvetian tasavallan aikana Rütlistä tuli konservatiivisten toisinajattelijoiden pyhiinvaelluskohde. Vuonna 1804 Friedrich Schiller julkaisi Wilhelm Tellin, joka dramatisoi Rütlin valan, ja 1820 Johann Krauer ja Franz Joseph Greith tekivät isänmaallisen Rütlilied-laulun.
+
+Vuonna 1859 niityn osti yleishyödyllinen seura Schweizerische Gemeinnützige Gesellschaft, koska paikalle aiottiin …
+AIEMPI KYSYMYS: Miksi niitystä tuli kansallinen symboli vasta 1700-luvulla?
+AIEMPI VASTAUS (Livia):
+Ai se, tästä on pitkä tarina. Rütlin niitty on perinteisessä sveitsiläisessä historiankirjoituksessa [[Rütlin valan]] paikka, mutta symboliksi se nousi vasta 1700-luvulla kansallisromantiikan myötä, kun kiinnostus kansallisiin muistoihin ja kansan tarinoihin kasvoi. 1780-luvulla ehdotettiin vapaudenmuistomerkkiä, vaikka hanke ei toteutunut. Vuonna 1804 [[Friedrich Schiller]] julkaisi näytelmän [[Wilhelm Tell]], joka dramatisoi valan, ja vuonna 1820 syntyi isänmaallinen Rütlilied-laulu. Historioitsijat suhtautuvat valan tarkkaan ajankohtaan ja kulkuun varauksella, ja minä myös. Siinä vasta symboli, jonka tarina on jälkikäteen tehty.
+KYSYMYS: Kerro lisää: Rütlin valan
+
+### 137
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rütlin niitty (historia)
+Tietoruudun teksti: Rütli on vuoristoniitty Luzernin järven rannalla Seelisbergin kunnassa Urin kantonissa. Perinteisessä sveitsiläisessä historiankirjoituksessa se on Rütlischwurin paikka: valan, joka merkitsee alkuperäisen Sveitsin valaliiton syntyä. Niittyä pidetään kansallisena muistomerkkinä, ja sinne pääsee vain veneellä järveltä tai jalan Seelisbergistä.
+
+Symboliksi paikka nousi vasta 1700-luvun alussa kansallisromantiikan myötä. 1780-luvulla ehdotettiin vapaudenmuistomerkin pystyttämistä, mutta hanke ei toteutunut, ja Helvetian tasavallan aikana Rütlistä tuli konservatiivisten toisinajattelijoiden pyhiinvaelluskohde. Vuonna 1804 Friedrich Schiller julkaisi Wilhelm Tellin, joka dramatisoi Rütlin valan, ja 1820 Johann Krauer ja Franz Joseph Greith tekivät isänmaallisen Rütlilied-laulun.
+
+Vuonna 1859 niityn osti yleishyödyllinen seura Schweizerische Gemeinnützige Gesellschaft, koska paikalle aiottiin …
+AIEMPI KYSYMYS: Miksi niitystä tuli kansallinen symboli vasta 1700-luvulla?
+AIEMPI VASTAUS (Livia):
+Ai se, tästä on pitkä tarina. Rütlin niitty on perinteisessä sveitsiläisessä historiankirjoituksessa [[Rütlin valan]] paikka, mutta symboliksi se nousi vasta 1700-luvulla kansallisromantiikan myötä, kun kiinnostus kansallisiin muistoihin ja kansan tarinoihin kasvoi. 1780-luvulla ehdotettiin vapaudenmuistomerkkiä, vaikka hanke ei toteutunut. Vuonna 1804 [[Friedrich Schiller]] julkaisi näytelmän [[Wilhelm Tell]], joka dramatisoi valan, ja vuonna 1820 syntyi isänmaallinen Rütlilied-laulu. Historioitsijat suhtautuvat valan tarkkaan ajankohtaan ja kulkuun varauksella, ja minä myös. Siinä vasta symboli, jonka tarina on jälkikäteen tehty.
+KYSYMYS: Kerro lisää: Friedrich Schiller
+
+### 138
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rütlin niitty (historia)
+Tietoruudun teksti: Rütli on vuoristoniitty Luzernin järven rannalla Seelisbergin kunnassa Urin kantonissa. Perinteisessä sveitsiläisessä historiankirjoituksessa se on Rütlischwurin paikka: valan, joka merkitsee alkuperäisen Sveitsin valaliiton syntyä. Niittyä pidetään kansallisena muistomerkkinä, ja sinne pääsee vain veneellä järveltä tai jalan Seelisbergistä.
+
+Symboliksi paikka nousi vasta 1700-luvun alussa kansallisromantiikan myötä. 1780-luvulla ehdotettiin vapaudenmuistomerkin pystyttämistä, mutta hanke ei toteutunut, ja Helvetian tasavallan aikana Rütlistä tuli konservatiivisten toisinajattelijoiden pyhiinvaelluskohde. Vuonna 1804 Friedrich Schiller julkaisi Wilhelm Tellin, joka dramatisoi Rütlin valan, ja 1820 Johann Krauer ja Franz Joseph Greith tekivät isänmaallisen Rütlilied-laulun.
+
+Vuonna 1859 niityn osti yleishyödyllinen seura Schweizerische Gemeinnützige Gesellschaft, koska paikalle aiottiin …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marokko — maalehti / Luonto: Metsä, joka kasvaa kahden kilometrin korkeudessa] Atlaksensetri on kotoperäinen Marokon Rifissä ja Atlasvuorissa sekä Algerian Tell-Atlaksessa. Se kasvaa 1 170–2 200 metrin korkeudessa, usein puhtaina metsinä. Marokossa on maailman suurin setripinta-ala, noin 163 000 hehtaaria, ja siitä 115 000 hehtaaria eli neljä viidesosaa on Keski-Atlaksessa. Metsä on kutistunut: vuoden 1927 tiedoissa pelkästään Keski-Atlaksessa oli yli 150 000 hehtaaria, ja Rifin metsistä on jäljellä enää kuudestoistaosa maan setrialasta. Algeriassa laji on taantunut 23 000 hehtaarista alle 15 000:een tulipalojen ja hakkuiden takia.
+AIEMPI KYSYMYS: Miksi niitystä tuli kansallinen symboli vasta 1700-luvulla?
+AIEMPI VASTAUS (Livia):
+Ai se, tästä on pitkä tarina. Rütlin niitty on perinteisessä sveitsiläisessä historiankirjoituksessa [[Rütlin valan]] paikka, mutta symboliksi se nousi vasta 1700-luvulla kansallisromantiikan myötä, kun kiinnostus kansallisiin muistoihin ja kansan tarinoihin kasvoi. 1780-luvulla ehdotettiin vapaudenmuistomerkkiä, vaikka hanke ei toteutunut. Vuonna 1804 [[Friedrich Schiller]] julkaisi näytelmän [[Wilhelm Tell]], joka dramatisoi valan, ja vuonna 1820 syntyi isänmaallinen Rütlilied-laulu. Historioitsijat suhtautuvat valan tarkkaan ajankohtaan ja kulkuun varauksella, ja minä myös. Siinä vasta symboli, jonka tarina on jälkikäteen tehty.
+KYSYMYS: Kerro lisää: Wilhelm Tell
+
+### 139
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rütlin niitty (historia)
+Tietoruudun teksti: Rütli on vuoristoniitty Luzernin järven rannalla Seelisbergin kunnassa Urin kantonissa. Perinteisessä sveitsiläisessä historiankirjoituksessa se on Rütlischwurin paikka: valan, joka merkitsee alkuperäisen Sveitsin valaliiton syntyä. Niittyä pidetään kansallisena muistomerkkinä, ja sinne pääsee vain veneellä järveltä tai jalan Seelisbergistä.
+
+Symboliksi paikka nousi vasta 1700-luvun alussa kansallisromantiikan myötä. 1780-luvulla ehdotettiin vapaudenmuistomerkin pystyttämistä, mutta hanke ei toteutunut, ja Helvetian tasavallan aikana Rütlistä tuli konservatiivisten toisinajattelijoiden pyhiinvaelluskohde. Vuonna 1804 Friedrich Schiller julkaisi Wilhelm Tellin, joka dramatisoi Rütlin valan, ja 1820 Johann Krauer ja Franz Joseph Greith tekivät isänmaallisen Rütlilied-laulun.
+
+Vuonna 1859 niityn osti yleishyödyllinen seura Schweizerische Gemeinnützige Gesellschaft, koska paikalle aiottiin …
+AIEMPI KYSYMYS: Mitä Rütlillä tapahtui heinäkuussa 1940?
+AIEMPI VASTAUS (Livia):
+Niin, tämä on vakavampaa. Heinäkuun 1940 lopulla Sveitsin armeijan ylipäällikkö [[Henri Guisan]] kokosi armeijan upseerit [[Rütlin niitylle]] ja kertoi heille Sveitsin puolustusaikeista Euroopan sodan keskellä. Tilaisuus liittyy puolustusstrategiaan, jossa vastarinta keskitettiin Alppien linnoitettuun sisäosaan. Valinta ei ollut sattumaa, sillä niitty oli jo vuosisatoja muistuttanut sveitsiläisiä alkuperäisestä valaliitosta, ja paikan symboliarvo oli suuri. Kokoontumisella haluttiin vahvistaa maan itsenäisyyden tahtoa vaikeana aikana. Tapahtumasta on nyt kulunut yli kahdeksankymmentä vuotta, ja Sveitsi on säilynyt itsenäisenä.
+KYSYMYS: Kerro lisää: Henri Guisan
+
+### 140
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rütlin niitty (historia)
+Tietoruudun teksti: Rütli on vuoristoniitty Luzernin järven rannalla Seelisbergin kunnassa Urin kantonissa. Perinteisessä sveitsiläisessä historiankirjoituksessa se on Rütlischwurin paikka: valan, joka merkitsee alkuperäisen Sveitsin valaliiton syntyä. Niittyä pidetään kansallisena muistomerkkinä, ja sinne pääsee vain veneellä järveltä tai jalan Seelisbergistä.
+
+Symboliksi paikka nousi vasta 1700-luvun alussa kansallisromantiikan myötä. 1780-luvulla ehdotettiin vapaudenmuistomerkin pystyttämistä, mutta hanke ei toteutunut, ja Helvetian tasavallan aikana Rütlistä tuli konservatiivisten toisinajattelijoiden pyhiinvaelluskohde. Vuonna 1804 Friedrich Schiller julkaisi Wilhelm Tellin, joka dramatisoi Rütlin valan, ja 1820 Johann Krauer ja Franz Joseph Greith tekivät isänmaallisen Rütlilied-laulun.
+
+Vuonna 1859 niityn osti yleishyödyllinen seura Schweizerische Gemeinnützige Gesellschaft, koska paikalle aiottiin …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Historia: Kuningas pakotettiin lain alle] 1215 — Kuningas Juhana oli hävinnyt sotia ja kiristänyt veroja niin, että paronit kyllästyivät. Kesäkuussa 1215 he pakottivat hänet Runnymeden niitylle allekirjoittamaan asiakirjan, joka sanoi jotain siihen asti kuulumatonta: myös kuningas on lain alainen. Magna Cartan tunnetuin kohta lupaa, ettei ketään vapaata miestä saa vangita ilman maan lain mukaista tuomiota. Juhana yritti mitätöidä sopimuksen heti, mutta ajatus jäi elämään — ja siitä kasvoi vähitellen ajatus siitä, että vallalla on rajat.
+AIEMPI KYSYMYS: Mitä Rütlillä tapahtui heinäkuussa 1940?
+AIEMPI VASTAUS (Livia):
+Niin, tämä on vakavampaa. Heinäkuun 1940 lopulla Sveitsin armeijan ylipäällikkö [[Henri Guisan]] kokosi armeijan upseerit [[Rütlin niitylle]] ja kertoi heille Sveitsin puolustusaikeista Euroopan sodan keskellä. Tilaisuus liittyy puolustusstrategiaan, jossa vastarinta keskitettiin Alppien linnoitettuun sisäosaan. Valinta ei ollut sattumaa, sillä niitty oli jo vuosisatoja muistuttanut sveitsiläisiä alkuperäisestä valaliitosta, ja paikan symboliarvo oli suuri. Kokoontumisella haluttiin vahvistaa maan itsenäisyyden tahtoa vaikeana aikana. Tapahtumasta on nyt kulunut yli kahdeksankymmentä vuotta, ja Sveitsi on säilynyt itsenäisenä.
+KYSYMYS: Kerro lisää: Rütlin niitylle
+
+### 141
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rütlin niitty (historia)
+Tietoruudun teksti: Rütli on vuoristoniitty Luzernin järven rannalla Seelisbergin kunnassa Urin kantonissa. Perinteisessä sveitsiläisessä historiankirjoituksessa se on Rütlischwurin paikka: valan, joka merkitsee alkuperäisen Sveitsin valaliiton syntyä. Niittyä pidetään kansallisena muistomerkkinä, ja sinne pääsee vain veneellä järveltä tai jalan Seelisbergistä.
+
+Symboliksi paikka nousi vasta 1700-luvun alussa kansallisromantiikan myötä. 1780-luvulla ehdotettiin vapaudenmuistomerkin pystyttämistä, mutta hanke ei toteutunut, ja Helvetian tasavallan aikana Rütlistä tuli konservatiivisten toisinajattelijoiden pyhiinvaelluskohde. Vuonna 1804 Friedrich Schiller julkaisi Wilhelm Tellin, joka dramatisoi Rütlin valan, ja 1820 Johann Krauer ja Franz Joseph Greith tekivät isänmaallisen Rütlilied-laulun.
+
+Vuonna 1859 niityn osti yleishyödyllinen seura Schweizerische Gemeinnützige Gesellschaft, koska paikalle aiottiin …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kaupunkilehti / Historian hetki: Kärntnertor 1824 — suosionosoitukset, joita ei kuule] 7.5.1824 — ”Kääntäkää hänet.” Kukaan ei tiedä, kuka sen sanoo, mutta Caroline Unger tekee sen. Wienin Kärntnertor-teatterissa on 7. toukokuuta 1824, ja yhdeksännen sinfonian viimeinen sointu on juuri vaiennut. Ludwig van Beethoven, 53, seisoo orkesterin edessä selin saliin ja lyö tahtia, sillä hän on lähes täysin kuuro eikä kuule, että teos on ohi. Kapellimestari Michael Umlauf on neuvonut soittajia seuraamaan häntä eikä säveltäjää; kaksi vuotta aiemmin hän näki Beethovenin Fidelio-harjoituksen romahtavan. Kaksikymmentävuotias alttolaulaja Unger ottaa säveltäjää hihasta ja kääntää hänet kohti yleisöä. Sali on jaloillaan: ihmiset heiluttavat hattuja ja nenäliinoja, jotta kuuro mies näkisi, m…
+- [Wien — kohdekartta / Kohdekartta: Yhdeksäs 1824] ”Kääntäkää hänet.” Kukaan ei tiedä, kuka sen sanoo, mutta Caroline Unger tekee sen. Wienin Kärntnertor-teatterissa on 7. toukokuuta 1824, ja yhdeksännen sinfonian viimeinen sointu on juuri vaiennut. Ludwig van Beethoven, 53, seisoo orkesterin edessä selin saliin ja lyö tahtia, sillä hän on lähes täysin kuuro eikä kuule, että teos on ohi. Kapellimestari Michael Umlauf on neuvonut soittajia seuraamaan häntä eikä säveltäjää; kaksi vuotta aiemmin hän näki Beethovenin Fidelio-harjoituksen romahtavan. Kaksikymmentävuotias alttolaulaja Unger ottaa säveltäjää hihasta ja kääntää hänet kohti yleisöä. Sali on jaloillaan: ihmiset heiluttavat hattuja ja nenäliinoja, jotta kuuro mies näkisi, mitä ei kuul…
+AIEMPI KYSYMYS: Kuka Wilhelm Tell oli?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Wilhelm Tell on sveitsiläinen kansansankari, taitava jousiampuja, jonka tarinan mukaan hänet pakotettiin ampumaan omenaa poikansa päästä ja joka sittemmin vastusti Habsburgien käskynhaltijaa. Historiantutkijat pitävät häntä yleensä legendaarisena hahmona, eikä hänen olemassaolostaan ole varmaa todistetta. Tarina levisi laajalle [[Friedrich Schillerin]] vuonna 1804 julkaisemasta näytelmästä, ja siitä tuli [[Sveitsin]] vapaustaistelun symboli. Gioachino Rossini sävelsi aiheesta oopperan. Tarkka ampuja, vaikka tarina taitaa olla vähän kaunisteltu.
+KYSYMYS: Kerro lisää: Friedrich Schillerin
+
+### 142
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rütlin niitty (historia)
+Tietoruudun teksti: Rütli on vuoristoniitty Luzernin järven rannalla Seelisbergin kunnassa Urin kantonissa. Perinteisessä sveitsiläisessä historiankirjoituksessa se on Rütlischwurin paikka: valan, joka merkitsee alkuperäisen Sveitsin valaliiton syntyä. Niittyä pidetään kansallisena muistomerkkinä, ja sinne pääsee vain veneellä järveltä tai jalan Seelisbergistä.
+
+Symboliksi paikka nousi vasta 1700-luvun alussa kansallisromantiikan myötä. 1780-luvulla ehdotettiin vapaudenmuistomerkin pystyttämistä, mutta hanke ei toteutunut, ja Helvetian tasavallan aikana Rütlistä tuli konservatiivisten toisinajattelijoiden pyhiinvaelluskohde. Vuonna 1804 Friedrich Schiller julkaisi Wilhelm Tellin, joka dramatisoi Rütlin valan, ja 1820 Johann Krauer ja Franz Joseph Greith tekivät isänmaallisen Rütlilied-laulun.
+
+Vuonna 1859 niityn osti yleishyödyllinen seura Schweizerische Gemeinnützige Gesellschaft, koska paikalle aiottiin …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Luonto: Pikku-Sveitsin kalliot] nykyään — Luxemburgin Pikku-Sveitsi eli Müllerthal on hiekkakivikallioiden ja tiheiden metsien seutu maan itäosassa. Se kattaa vain seitsemän prosenttia maasta, mutta siellä on rotkoja, luolia ja lukemattomia pieniä puroja. Korkein kohta on vain 414 metrissä. Alueen ainoa keskikokoinen asutus on Echternach, Luxemburgin vanhin säilynyt kaupunki. Kalliot houkuttivat kävijöitä jo 1800-luvulla: Berdorfin nuoriso kaiversi Hohllayn kallioseinään 1880 kiitoksen hallitukselle, joka avasi rotkot yleisön ulottuville.
+- [Sveitsi — maalehti / Historian hetki: Gotthard 1880 — valokuva kulkee kalliossa] 29.2.1880 — Pieni valokuva kulkee käsistä käsiin viimeisen kivikerroksen läpi ennen kuin kukaan ehtii sanoa mitään. Se esittää Louis Favrea, insinööriä, joka johti Gotthardin rautatietunnelin louhintaa vuodesta 1872, mutta joka kuoli sydänkohtaukseen tunnelissa heinäkuussa 1879 — kahdeksan kuukautta ennen tätä hetkeä. Sunnuntaina 29. helmikuuta 1880 pohjoisesta Göschenenistä ja etelästä Airolosta louhitut käytävät kohtaavat vihdoin syvällä Gotthard-massiivin sisällä, lähes 1 700 metrin kiven alla, ja saksankielinen ja italiankielinen työryhmä puhkaisevat viimeisen ohuen kivimuurin toistensa väliltä. Ensimmäinen kättely tapahtuu reiän läpi, ennen kuin kukaan pääsee kokonaan toiselle puolelle…
+AIEMPI KYSYMYS: Kuka Wilhelm Tell oli?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Wilhelm Tell on sveitsiläinen kansansankari, taitava jousiampuja, jonka tarinan mukaan hänet pakotettiin ampumaan omenaa poikansa päästä ja joka sittemmin vastusti Habsburgien käskynhaltijaa. Historiantutkijat pitävät häntä yleensä legendaarisena hahmona, eikä hänen olemassaolostaan ole varmaa todistetta. Tarina levisi laajalle [[Friedrich Schillerin]] vuonna 1804 julkaisemasta näytelmästä, ja siitä tuli [[Sveitsin]] vapaustaistelun symboli. Gioachino Rossini sävelsi aiheesta oopperan. Tarkka ampuja, vaikka tarina taitaa olla vähän kaunisteltu.
+KYSYMYS: Kerro lisää: Sveitsin
+
+### 143
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rütlin niitty (historia)
+Tietoruudun teksti: Rütli on vuoristoniitty Luzernin järven rannalla Seelisbergin kunnassa Urin kantonissa. Perinteisessä sveitsiläisessä historiankirjoituksessa se on Rütlischwurin paikka: valan, joka merkitsee alkuperäisen Sveitsin valaliiton syntyä. Niittyä pidetään kansallisena muistomerkkinä, ja sinne pääsee vain veneellä järveltä tai jalan Seelisbergistä.
+
+Symboliksi paikka nousi vasta 1700-luvun alussa kansallisromantiikan myötä. 1780-luvulla ehdotettiin vapaudenmuistomerkin pystyttämistä, mutta hanke ei toteutunut, ja Helvetian tasavallan aikana Rütlistä tuli konservatiivisten toisinajattelijoiden pyhiinvaelluskohde. Vuonna 1804 Friedrich Schiller julkaisi Wilhelm Tellin, joka dramatisoi Rütlin valan, ja 1820 Johann Krauer ja Franz Joseph Greith tekivät isänmaallisen Rütlilied-laulun.
+
+Vuonna 1859 niityn osti yleishyödyllinen seura Schweizerische Gemeinnützige Gesellschaft, koska paikalle aiottiin …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kapkaupunki — kaupunkilehti / Kapkaupunki: Paikka, jossa pilvet kokoontuvat] Alueella asui khoe- ja san-kansoja: itsenäisiä karjanviljelijöitä, ǁAmmaqua-kauppiaita eli vedenmiehiä, Sonqua-siimakalastajia ja sisämaan Ubiqua-paimenmetsästäjiä. Hallitseva ryhmä lahdella olivat !Uriǁʼaekua, ylängön väki. Antropologi Theophilus Hahn kirjasi paikan alkuperäisen nimen muotoon ǁHui ǃGais, "siellä missä pilvet kokoontuvat", ja vuoren nimi oli Huriǂ’oaxa, merestä nouseva vuori. ǁAmmaqua kävi lahdella kauppaa jo kauan ennen yhtiöitä: vuosina 1601–1608 he myivät neljälle laivalle 1 839 lammasta ja 149 nautaa, ja vuosina 1600–1652 lahteen pysähtyi vähintään 1 070 laivaa.
+AIEMPI KYSYMYS: Mikä on Luzernin järvi?
+AIEMPI VASTAUS (Livia):
+Joo, tän järven tunnen. Luzernin järvi on Keski-Sveitsissä sijaitseva vuoristojärvi, jonka rantoja ympäröivät jyrkät vuoret ja jonka muoto on rikkonainen, monen lahden ja haaran sarja. Sen saksankielinen nimi on Vierwaldstättersee eli Neljän metsäkantonin järvi, ja nimi viittaa kantoneihin [[Uri]], Schwyz, Unterwalden ja Luzern, jotka ympäröivät järveä. [[Rütlin niitty]] on sen rannalla Urin kantonissa, ja sinne pääsee veneellä järveltä. Järvellä liikennöi myös höyrylaivoja, mikä on mukava näky lintuperspektiivistä.
+KYSYMYS: Kerro lisää: Uri
+
+### 144
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rütlin niitty (historia)
+Tietoruudun teksti: Rütli on vuoristoniitty Luzernin järven rannalla Seelisbergin kunnassa Urin kantonissa. Perinteisessä sveitsiläisessä historiankirjoituksessa se on Rütlischwurin paikka: valan, joka merkitsee alkuperäisen Sveitsin valaliiton syntyä. Niittyä pidetään kansallisena muistomerkkinä, ja sinne pääsee vain veneellä järveltä tai jalan Seelisbergistä.
+
+Symboliksi paikka nousi vasta 1700-luvun alussa kansallisromantiikan myötä. 1780-luvulla ehdotettiin vapaudenmuistomerkin pystyttämistä, mutta hanke ei toteutunut, ja Helvetian tasavallan aikana Rütlistä tuli konservatiivisten toisinajattelijoiden pyhiinvaelluskohde. Vuonna 1804 Friedrich Schiller julkaisi Wilhelm Tellin, joka dramatisoi Rütlin valan, ja 1820 Johann Krauer ja Franz Joseph Greith tekivät isänmaallisen Rütlilied-laulun.
+
+Vuonna 1859 niityn osti yleishyödyllinen seura Schweizerische Gemeinnützige Gesellschaft, koska paikalle aiottiin …
+AIEMPI KYSYMYS: Mikä on Luzernin järvi?
+AIEMPI VASTAUS (Livia):
+Joo, tän järven tunnen. Luzernin järvi on Keski-Sveitsissä sijaitseva vuoristojärvi, jonka rantoja ympäröivät jyrkät vuoret ja jonka muoto on rikkonainen, monen lahden ja haaran sarja. Sen saksankielinen nimi on Vierwaldstättersee eli Neljän metsäkantonin järvi, ja nimi viittaa kantoneihin [[Uri]], Schwyz, Unterwalden ja Luzern, jotka ympäröivät järveä. [[Rütlin niitty]] on sen rannalla Urin kantonissa, ja sinne pääsee veneellä järveltä. Järvellä liikennöi myös höyrylaivoja, mikä on mukava näky lintuperspektiivistä.
+KYSYMYS: Kerro lisää: Rütlin niitty
+
+### 145
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Landwasserin viadukti (tekniikka)
+Tietoruudun teksti: Landwasserin viadukti on yksiraiteinen, kaartuva kalkkikivisilta Landwasser-joen yli Schmittenin ja Filisurin välillä Graubündenin kantonissa. Sen suunnitteli Alexander Acatos, ja Müller & Zeerleder rakensi sen vuosina 1901–1902 Rhätische Bahnille, joka omistaa ja liikennöi siltaa yhä. Silta on maailmanperintöluetteloon kuuluvan Albula-radan tunnusrakennelma: korkeutta on 65 metriä ja pituutta noin 140.
+
+Silmiinpistävin piirre on jyrkkä kaarre, jonka säde on sata metriä — pienin koko radalla. Kantavia kaaria on kuusi, kukin kaksikymmentä metriä leveä, ja ne lepäävät viiden korkean pilarin varassa; yhtäkään kaarta ei ole nostettu korkeaksi, vaan ne ovat tarkoituksella laakeita. Muurausta on noin 9 200 kuutiometriä, ja saumat on tehty dolomiittisella kalkkikivellä. Radan kaltevuus sillalla on kaksi prosenttia.
+
+Silta on osa Albula-radan osuutta Tiefencastelin ja Filisurin välillä, 63 kilo…
+AIEMPI KYSYMYS: Miksi kaarre on niin jyrkkä?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on insinöörin ratkaisu. Landwasserin viadukti on rakennettu vuoristokurun ylle, jossa rata täytyi sovittaa maastoon: siksi silta on kaareva ja kaarteen säde on sata metriä, pienin koko radalla. Kantavia kaaria on kuusi, ja ne lepäävät viiden korkean pilarin varassa. Radan kaltevuus sillalla on kaksi prosenttia, joten kaarteeseen ei tarvittu jyrkkää nousua. Silta on osa [[Albula-rataa]], jonka omistaa [[Rhätische Bahn]], ja se kuuluu maailmanperintöön. En ole varma, miksi insinööri ei valinnut suoraa linjaa, mutta kaarre toimii.
+KYSYMYS: Kerro lisää: Albula-rataa
+
+### 146
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Landwasserin viadukti (tekniikka)
+Tietoruudun teksti: Landwasserin viadukti on yksiraiteinen, kaartuva kalkkikivisilta Landwasser-joen yli Schmittenin ja Filisurin välillä Graubündenin kantonissa. Sen suunnitteli Alexander Acatos, ja Müller & Zeerleder rakensi sen vuosina 1901–1902 Rhätische Bahnille, joka omistaa ja liikennöi siltaa yhä. Silta on maailmanperintöluetteloon kuuluvan Albula-radan tunnusrakennelma: korkeutta on 65 metriä ja pituutta noin 140.
+
+Silmiinpistävin piirre on jyrkkä kaarre, jonka säde on sata metriä — pienin koko radalla. Kantavia kaaria on kuusi, kukin kaksikymmentä metriä leveä, ja ne lepäävät viiden korkean pilarin varassa; yhtäkään kaarta ei ole nostettu korkeaksi, vaan ne ovat tarkoituksella laakeita. Muurausta on noin 9 200 kuutiometriä, ja saumat on tehty dolomiittisella kalkkikivellä. Radan kaltevuus sillalla on kaksi prosenttia.
+
+Silta on osa Albula-radan osuutta Tiefencastelin ja Filisurin välillä, 63 kilo…
+AIEMPI KYSYMYS: Miksi kaarre on niin jyrkkä?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on insinöörin ratkaisu. Landwasserin viadukti on rakennettu vuoristokurun ylle, jossa rata täytyi sovittaa maastoon: siksi silta on kaareva ja kaarteen säde on sata metriä, pienin koko radalla. Kantavia kaaria on kuusi, ja ne lepäävät viiden korkean pilarin varassa. Radan kaltevuus sillalla on kaksi prosenttia, joten kaarteeseen ei tarvittu jyrkkää nousua. Silta on osa [[Albula-rataa]], jonka omistaa [[Rhätische Bahn]], ja se kuuluu maailmanperintöön. En ole varma, miksi insinööri ei valinnut suoraa linjaa, mutta kaarre toimii.
+KYSYMYS: Kerro lisää: Rhätische Bahn
+
+### 147
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Landwasserin viadukti (tekniikka)
+Tietoruudun teksti: Landwasserin viadukti on yksiraiteinen, kaartuva kalkkikivisilta Landwasser-joen yli Schmittenin ja Filisurin välillä Graubündenin kantonissa. Sen suunnitteli Alexander Acatos, ja Müller & Zeerleder rakensi sen vuosina 1901–1902 Rhätische Bahnille, joka omistaa ja liikennöi siltaa yhä. Silta on maailmanperintöluetteloon kuuluvan Albula-radan tunnusrakennelma: korkeutta on 65 metriä ja pituutta noin 140.
+
+Silmiinpistävin piirre on jyrkkä kaarre, jonka säde on sata metriä — pienin koko radalla. Kantavia kaaria on kuusi, kukin kaksikymmentä metriä leveä, ja ne lepäävät viiden korkean pilarin varassa; yhtäkään kaarta ei ole nostettu korkeaksi, vaan ne ovat tarkoituksella laakeita. Muurausta on noin 9 200 kuutiometriä, ja saumat on tehty dolomiittisella kalkkikivellä. Radan kaltevuus sillalla on kaksi prosenttia.
+
+Silta on osa Albula-radan osuutta Tiefencastelin ja Filisurin välillä, 63 kilo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Alegre — kohdekartta / Kohdekartta: Otávio Rochan viadukti] 1928–1932 Porto Alegren keskustan itä-, etelä- ja keskiosa olivat pitkään erillään toisistaan, koska niiden välissä oli kukkula, jota sanottiin nimellä morrinho. Kaupungin ensimmäinen yleiskaava esitti 1914 kadun, joka yhdistäisi ne, mutta työ hyväksyttiin vasta 1926, kun intendantti Otávio Rocha ja osavaltion johtaja Borges de Medeiros päättivät avata nykyisen Borges de Medeiros -kadun. Katua varten maata piti laskea, ja se katkaisi Duque de Caxias -kadun — sen jatkaminen vaati sillan. Insinöörien Manoel Barbosa Assumpção Itaquin ja Duilio Bernardin suunnitelma hyväksyttiin 1927, pakkolunastukset alkoivat seuraavana vuonna, urakan voitti Dyckerhoff & Widmann ja työ valmistui 1932. Rakenne …
+AIEMPI KYSYMYS: Mihin junat katoavat heti sillan jälkeen?
+AIEMPI VASTAUS (Livia):
+Katotaas. Heti sillan jälkeen rata jatkuu tunneliin, joka alkaa suoraan kallioseinämästä. Juna ylittää [[Landwasserin viaduktin]] ja katoaa Landwasserin tunneliin, joten näky on dramaattinen ja siksi silta on kuvatuimpia ratasiltoja [[Sveitsissä]]. Silta on osa [[Albula-rataa]] Tiefencastelin ja Filisurin välillä Graubündenin kantonissa, ja rata on liikenteessä yhä, sillä Rhätische Bahn omistaa ja liikennöi sitä. Tunnelin tarkkaa pituutta en muista. Kyyhkynä pysyn mieluummin tunnelin ulkopuolella.
+KYSYMYS: Kerro lisää: Landwasserin viaduktin
+
+### 148
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Landwasserin viadukti (tekniikka)
+Tietoruudun teksti: Landwasserin viadukti on yksiraiteinen, kaartuva kalkkikivisilta Landwasser-joen yli Schmittenin ja Filisurin välillä Graubündenin kantonissa. Sen suunnitteli Alexander Acatos, ja Müller & Zeerleder rakensi sen vuosina 1901–1902 Rhätische Bahnille, joka omistaa ja liikennöi siltaa yhä. Silta on maailmanperintöluetteloon kuuluvan Albula-radan tunnusrakennelma: korkeutta on 65 metriä ja pituutta noin 140.
+
+Silmiinpistävin piirre on jyrkkä kaarre, jonka säde on sata metriä — pienin koko radalla. Kantavia kaaria on kuusi, kukin kaksikymmentä metriä leveä, ja ne lepäävät viiden korkean pilarin varassa; yhtäkään kaarta ei ole nostettu korkeaksi, vaan ne ovat tarkoituksella laakeita. Muurausta on noin 9 200 kuutiometriä, ja saumat on tehty dolomiittisella kalkkikivellä. Radan kaltevuus sillalla on kaksi prosenttia.
+
+Silta on osa Albula-radan osuutta Tiefencastelin ja Filisurin välillä, 63 kilo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Vuoret] Sveitsissä vuori ei ole este vaan työmaa: sen ali porataan juna, sen päällä virtaa jäätä kuin hidasta jokea, ja sen sisään louhittiin asema kolmen kilometrin korkeuteen.
+AIEMPI KYSYMYS: Mihin junat katoavat heti sillan jälkeen?
+AIEMPI VASTAUS (Livia):
+Katotaas. Heti sillan jälkeen rata jatkuu tunneliin, joka alkaa suoraan kallioseinämästä. Juna ylittää [[Landwasserin viaduktin]] ja katoaa Landwasserin tunneliin, joten näky on dramaattinen ja siksi silta on kuvatuimpia ratasiltoja [[Sveitsissä]]. Silta on osa [[Albula-rataa]] Tiefencastelin ja Filisurin välillä Graubündenin kantonissa, ja rata on liikenteessä yhä, sillä Rhätische Bahn omistaa ja liikennöi sitä. Tunnelin tarkkaa pituutta en muista. Kyyhkynä pysyn mieluummin tunnelin ulkopuolella.
+KYSYMYS: Kerro lisää: Sveitsissä
+
+### 149
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Landwasserin viadukti (tekniikka)
+Tietoruudun teksti: Landwasserin viadukti on yksiraiteinen, kaartuva kalkkikivisilta Landwasser-joen yli Schmittenin ja Filisurin välillä Graubündenin kantonissa. Sen suunnitteli Alexander Acatos, ja Müller & Zeerleder rakensi sen vuosina 1901–1902 Rhätische Bahnille, joka omistaa ja liikennöi siltaa yhä. Silta on maailmanperintöluetteloon kuuluvan Albula-radan tunnusrakennelma: korkeutta on 65 metriä ja pituutta noin 140.
+
+Silmiinpistävin piirre on jyrkkä kaarre, jonka säde on sata metriä — pienin koko radalla. Kantavia kaaria on kuusi, kukin kaksikymmentä metriä leveä, ja ne lepäävät viiden korkean pilarin varassa; yhtäkään kaarta ei ole nostettu korkeaksi, vaan ne ovat tarkoituksella laakeita. Muurausta on noin 9 200 kuutiometriä, ja saumat on tehty dolomiittisella kalkkikivellä. Radan kaltevuus sillalla on kaksi prosenttia.
+
+Silta on osa Albula-radan osuutta Tiefencastelin ja Filisurin välillä, 63 kilo…
+AIEMPI KYSYMYS: Mikä on Rhätische Bahn?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Rhätische Bahn eli Retoromaaninen rautatie on Graubündenin kantonissa toimiva rautatieyhtiö, joka liikennöi kapearaiteisella metrin raideleveydellä. Yhtiö omistaa ja liikennöi [[Landwasserin viaduktia]] ja koko [[Albula-rataa]], joka kuuluu maailmanperintöluetteloon yhdessä Bernina-radan kanssa. Rata on kuuluisa jyrkistä kaarteistaan, tunneleistaan ja silloistaan, joilla se kiipeää Alppien läpi. Yhtiö kuljettaa matkustajia ja tavaraa vuoristolaaksoihin, joihin muuten olisi hankala päästä. Kyyhky olisi nopeampi, mutta ei mahtuisi samaan vaunuun.
+KYSYMYS: Kerro lisää: Landwasserin viaduktia
+
+### 150
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Landwasserin viadukti (tekniikka)
+Tietoruudun teksti: Landwasserin viadukti on yksiraiteinen, kaartuva kalkkikivisilta Landwasser-joen yli Schmittenin ja Filisurin välillä Graubündenin kantonissa. Sen suunnitteli Alexander Acatos, ja Müller & Zeerleder rakensi sen vuosina 1901–1902 Rhätische Bahnille, joka omistaa ja liikennöi siltaa yhä. Silta on maailmanperintöluetteloon kuuluvan Albula-radan tunnusrakennelma: korkeutta on 65 metriä ja pituutta noin 140.
+
+Silmiinpistävin piirre on jyrkkä kaarre, jonka säde on sata metriä — pienin koko radalla. Kantavia kaaria on kuusi, kukin kaksikymmentä metriä leveä, ja ne lepäävät viiden korkean pilarin varassa; yhtäkään kaarta ei ole nostettu korkeaksi, vaan ne ovat tarkoituksella laakeita. Muurausta on noin 9 200 kuutiometriä, ja saumat on tehty dolomiittisella kalkkikivellä. Radan kaltevuus sillalla on kaksi prosenttia.
+
+Silta on osa Albula-radan osuutta Tiefencastelin ja Filisurin välillä, 63 kilo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Smaragdikaunotar] nykyään — Soča saa alkunsa Trenta-laaksossa Julian Alpeilla 876 metrin korkeudessa ja virtaa 138 kilometrin matkan Adrianmereen. Sen vesi on niin smaragdinvihreää, että jokea markkinoidaan nimellä Smaragdikaunotar, ja väri säilyy poikkeuksellisen pitkälle. Rannoilla syntyi myös runoutta: Simon Gregorčič kirjoitti joesta runon Soči, jota pidetään slovenialaisen kirjallisuuden mestariteoksena. Jokivarressa elää harvinaista marmoritaimenta, ja alueella kuvattiin osa vuoden 2008 Narnia-elokuvasta Prinssi Kaspian. Italiassa joki tunnetaan nimellä Isonzo.
+- [Italia — maalehti / Luonto: Alppikauris pelastui viime hetkellä] 1800-luvun puolivälissä alppikauriita oli jäljellä alle sata, kaikki yhdessä laaksossa Gran Paradison vuorilla — muualta Alpeilta ne oli metsästetty loppuun. Italian kuningas rauhoitti viimeisen lauman omaksi metsästysmaakseen, ja tästä ristiriidasta alkoi pelastus: alueesta tuli 1922 Italian ensimmäinen kansallispuisto. Nykyään Alpeilla kiipeilee taas yli 50 000 kaurista, ja jokainen polveutuu Gran Paradison lauman eläimistä. Sarvekas kiipeilijä on nykyään puiston tunnuksessa.
+AIEMPI KYSYMYS: Mistä kalkkikivi syntyy?
+AIEMPI VASTAUS (Livia):
+Joo, tän tiedän. Kalkkikivi on sedimenttikivilaji, joka koostuu pääosin kalsiumkarbonaatista. Se syntyy yleensä merissä ja järvissä, joissa kalsiumkarbonaattia sisältävät eliöiden kuoret ja luurangot kerrostuvat pohjaan ja sementoituvat vuosimiljoonien kuluessa kiveksi. Osa kalkkikivestä saostuu myös suoraan vedestä. Kalkkikiveä on käytetty rakennusmateriaalina pitkään, ja sitä on käytetty myös [[Landwasserin viaduktin]] muurauksessa. [[Alpeilla]] ja [[Juravuorilla]] kalkkikivi on tavallista. Nyt on kivi kerrottu, ja nostan itseni kauas pilvien yläpuolelle.
+KYSYMYS: Kerro lisää: Alpeilla
+
+### 151
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Landwasserin viadukti (tekniikka)
+Tietoruudun teksti: Landwasserin viadukti on yksiraiteinen, kaartuva kalkkikivisilta Landwasser-joen yli Schmittenin ja Filisurin välillä Graubündenin kantonissa. Sen suunnitteli Alexander Acatos, ja Müller & Zeerleder rakensi sen vuosina 1901–1902 Rhätische Bahnille, joka omistaa ja liikennöi siltaa yhä. Silta on maailmanperintöluetteloon kuuluvan Albula-radan tunnusrakennelma: korkeutta on 65 metriä ja pituutta noin 140.
+
+Silmiinpistävin piirre on jyrkkä kaarre, jonka säde on sata metriä — pienin koko radalla. Kantavia kaaria on kuusi, kukin kaksikymmentä metriä leveä, ja ne lepäävät viiden korkean pilarin varassa; yhtäkään kaarta ei ole nostettu korkeaksi, vaan ne ovat tarkoituksella laakeita. Muurausta on noin 9 200 kuutiometriä, ja saumat on tehty dolomiittisella kalkkikivellä. Radan kaltevuus sillalla on kaksi prosenttia.
+
+Silta on osa Albula-radan osuutta Tiefencastelin ja Filisurin välillä, 63 kilo…
+AIEMPI KYSYMYS: Mistä kalkkikivi syntyy?
+AIEMPI VASTAUS (Livia):
+Joo, tän tiedän. Kalkkikivi on sedimenttikivilaji, joka koostuu pääosin kalsiumkarbonaatista. Se syntyy yleensä merissä ja järvissä, joissa kalsiumkarbonaattia sisältävät eliöiden kuoret ja luurangot kerrostuvat pohjaan ja sementoituvat vuosimiljoonien kuluessa kiveksi. Osa kalkkikivestä saostuu myös suoraan vedestä. Kalkkikiveä on käytetty rakennusmateriaalina pitkään, ja sitä on käytetty myös [[Landwasserin viaduktin]] muurauksessa. [[Alpeilla]] ja [[Juravuorilla]] kalkkikivi on tavallista. Nyt on kivi kerrottu, ja nostan itseni kauas pilvien yläpuolelle.
+KYSYMYS: Kerro lisää: Juravuorilla
+
+### 152
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Landwasserin viadukti (tekniikka)
+Tietoruudun teksti: Landwasserin viadukti on yksiraiteinen, kaartuva kalkkikivisilta Landwasser-joen yli Schmittenin ja Filisurin välillä Graubündenin kantonissa. Sen suunnitteli Alexander Acatos, ja Müller & Zeerleder rakensi sen vuosina 1901–1902 Rhätische Bahnille, joka omistaa ja liikennöi siltaa yhä. Silta on maailmanperintöluetteloon kuuluvan Albula-radan tunnusrakennelma: korkeutta on 65 metriä ja pituutta noin 140.
+
+Silmiinpistävin piirre on jyrkkä kaarre, jonka säde on sata metriä — pienin koko radalla. Kantavia kaaria on kuusi, kukin kaksikymmentä metriä leveä, ja ne lepäävät viiden korkean pilarin varassa; yhtäkään kaarta ei ole nostettu korkeaksi, vaan ne ovat tarkoituksella laakeita. Muurausta on noin 9 200 kuutiometriä, ja saumat on tehty dolomiittisella kalkkikivellä. Radan kaltevuus sillalla on kaksi prosenttia.
+
+Silta on osa Albula-radan osuutta Tiefencastelin ja Filisurin välillä, 63 kilo…
+AIEMPI KYSYMYS: Mitä kieliä Graubündenissa puhutaan?
+AIEMPI VASTAUS (Livia):
+Tuota niin, kiva kysymys. Graubünden on Sveitsin kantoneista ainoa kolmikielinen: siellä puhutaan saksaa, retoromaania ja italiaa. Saksa on yleisin kieli, [[retoromaani]] on yksi Sveitsin neljästä kansalliskielestä ja sitä puhutaan vain osassa kantonia, ja italiaa puhutaan eteläisissä laaksoissa. Retoromaanilla on useita murteita ja kirjakielen muotoja. [[Graubünden]] on lisäksi pinta-alaltaan Sveitsin suurin kantoni. Kolme kieltä on minulle vähän, kun yritän pitää yhdenkin hallussa.
+KYSYMYS: Kerro lisää: retoromaani
+
+### 153
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Landwasserin viadukti (tekniikka)
+Tietoruudun teksti: Landwasserin viadukti on yksiraiteinen, kaartuva kalkkikivisilta Landwasser-joen yli Schmittenin ja Filisurin välillä Graubündenin kantonissa. Sen suunnitteli Alexander Acatos, ja Müller & Zeerleder rakensi sen vuosina 1901–1902 Rhätische Bahnille, joka omistaa ja liikennöi siltaa yhä. Silta on maailmanperintöluetteloon kuuluvan Albula-radan tunnusrakennelma: korkeutta on 65 metriä ja pituutta noin 140.
+
+Silmiinpistävin piirre on jyrkkä kaarre, jonka säde on sata metriä — pienin koko radalla. Kantavia kaaria on kuusi, kukin kaksikymmentä metriä leveä, ja ne lepäävät viiden korkean pilarin varassa; yhtäkään kaarta ei ole nostettu korkeaksi, vaan ne ovat tarkoituksella laakeita. Muurausta on noin 9 200 kuutiometriä, ja saumat on tehty dolomiittisella kalkkikivellä. Radan kaltevuus sillalla on kaksi prosenttia.
+
+Silta on osa Albula-radan osuutta Tiefencastelin ja Filisurin välillä, 63 kilo…
+AIEMPI KYSYMYS: Mitä kieliä Graubündenissa puhutaan?
+AIEMPI VASTAUS (Livia):
+Tuota niin, kiva kysymys. Graubünden on Sveitsin kantoneista ainoa kolmikielinen: siellä puhutaan saksaa, retoromaania ja italiaa. Saksa on yleisin kieli, [[retoromaani]] on yksi Sveitsin neljästä kansalliskielestä ja sitä puhutaan vain osassa kantonia, ja italiaa puhutaan eteläisissä laaksoissa. Retoromaanilla on useita murteita ja kirjakielen muotoja. [[Graubünden]] on lisäksi pinta-alaltaan Sveitsin suurin kantoni. Kolme kieltä on minulle vähän, kun yritän pitää yhdenkin hallussa.
+KYSYMYS: Kerro lisää: Graubünden
+
+### 154
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reininputous (luonto · joki)
+Tietoruudun teksti: Reininputous on Ylä-Reinin vesiputous Sveitsissä ja Euroopan voimakkain. Se on Schaffhausenin ja Zürichin kantonien rajalla Neuhausen am Rheinfallin ja Laufen-Uhwiesenin välissä, noin kolme kilometriä Schaffhausenin kaupungista etelään ja aivan Saksan rajan tuntumassa.
+
+Putous on 150 metriä leveä ja 23 metriä korkea. Talvikuukausina keskimääräinen virtaama on 250 kuutiometriä sekunnissa ja kesällä 600. Suurin koskaan mitattu oli 1 250 kuutiometriä sekunnissa vuonna 1965 ja pienin 95 kuutiometriä vuonna 1921. Sveitsin korkein putous ei ole tämä vaan Mürrenbachin putous, 417 metriä.
+
+Putous syntyi viime jääkaudella noin 14 000–17 000 vuotta sitten, kun kulutusta kestävät kivilajit kavensivat uomaa. Joen reitti on vaihtunut monta kertaa: vielä noin 132 000 vuotta sitten Rein virtasi Schaffhausenista länteen Klettgaun laaksoon, ja vanha uoma täyttyi soralla. Würm-jäätiköitymisen aikana joki…
+AIEMPI KYSYMYS: Kuinka paljon virtaama vaihtelee vuoden mittaan?
+AIEMPI VASTAUS (Livia):
+Kato, tähän on ihan oikeita lukuja. [[Reininputouksen]] virtaama vaihtelee selvästi vuodenaikojen mukaan: talvikuukausina keskimääräinen virtaama on noin 250 kuutiometriä sekunnissa ja kesällä noin 600, eli kesällä vettä tulee yli kaksi kertaa enemmän. Ääriarvot ovat vielä kauempana toisistaan, sillä suurin mitattu virtaama oli 1 250 kuutiometriä sekunnissa vuonna 1965 ja pienin 95 kuutiometriä vuonna 1921. Putousta kutsutaan Euroopan voimakkaimmaksi [[Ylä-Reinin]] putoukseksi. Kesäisin siinä kyl riittää pärskettä.
+KYSYMYS: Kerro lisää: Reininputouksen
+
+### 155
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reininputous (luonto · joki)
+Tietoruudun teksti: Reininputous on Ylä-Reinin vesiputous Sveitsissä ja Euroopan voimakkain. Se on Schaffhausenin ja Zürichin kantonien rajalla Neuhausen am Rheinfallin ja Laufen-Uhwiesenin välissä, noin kolme kilometriä Schaffhausenin kaupungista etelään ja aivan Saksan rajan tuntumassa.
+
+Putous on 150 metriä leveä ja 23 metriä korkea. Talvikuukausina keskimääräinen virtaama on 250 kuutiometriä sekunnissa ja kesällä 600. Suurin koskaan mitattu oli 1 250 kuutiometriä sekunnissa vuonna 1965 ja pienin 95 kuutiometriä vuonna 1921. Sveitsin korkein putous ei ole tämä vaan Mürrenbachin putous, 417 metriä.
+
+Putous syntyi viime jääkaudella noin 14 000–17 000 vuotta sitten, kun kulutusta kestävät kivilajit kavensivat uomaa. Joen reitti on vaihtunut monta kertaa: vielä noin 132 000 vuotta sitten Rein virtasi Schaffhausenista länteen Klettgaun laaksoon, ja vanha uoma täyttyi soralla. Würm-jäätiköitymisen aikana joki…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kaupunkilehti / Marseille: Hymni sai nimensä matkalla] Rouget de Lisle sävelsi laulun Strasbourgissa yhden yön aikana 25.–26. huhtikuuta 1792, ja se sai nimekseen Reinin armeijan sotalaulu. Nuotti kulkeutui etelään, ja Marseillen vapaaehtoiset ottivat sen marssilaulukseen. Kun he saapuivat Pariisiin 30. heinäkuuta 1792, he lauloivat sitä koko matkan, ja pariisilaiset alkoivat sanoa sitä marseillelaisten lauluksi. Nimi jäi, vaikka kaupungilla ei ollut sävelmän synnyn kanssa mitään tekemistä.
+- [Saksa — maalehti / Kirjapaino] Reinin rannan kauppakaupungissa latojat asettivat 1450-luvulla kirjaimen kerrallaan peilikuvaksi riveille, ja ensimmäinen painettu Raamattu syntyi — velaksi, jonka rahoittaja peri pajan mukana.
+AIEMPI KYSYMYS: Kuinka paljon virtaama vaihtelee vuoden mittaan?
+AIEMPI VASTAUS (Livia):
+Kato, tähän on ihan oikeita lukuja. [[Reininputouksen]] virtaama vaihtelee selvästi vuodenaikojen mukaan: talvikuukausina keskimääräinen virtaama on noin 250 kuutiometriä sekunnissa ja kesällä noin 600, eli kesällä vettä tulee yli kaksi kertaa enemmän. Ääriarvot ovat vielä kauempana toisistaan, sillä suurin mitattu virtaama oli 1 250 kuutiometriä sekunnissa vuonna 1965 ja pienin 95 kuutiometriä vuonna 1921. Putousta kutsutaan Euroopan voimakkaimmaksi [[Ylä-Reinin]] putoukseksi. Kesäisin siinä kyl riittää pärskettä.
+KYSYMYS: Kerro lisää: Ylä-Reinin
+
+### 156
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reininputous (luonto · joki)
+Tietoruudun teksti: Reininputous on Ylä-Reinin vesiputous Sveitsissä ja Euroopan voimakkain. Se on Schaffhausenin ja Zürichin kantonien rajalla Neuhausen am Rheinfallin ja Laufen-Uhwiesenin välissä, noin kolme kilometriä Schaffhausenin kaupungista etelään ja aivan Saksan rajan tuntumassa.
+
+Putous on 150 metriä leveä ja 23 metriä korkea. Talvikuukausina keskimääräinen virtaama on 250 kuutiometriä sekunnissa ja kesällä 600. Suurin koskaan mitattu oli 1 250 kuutiometriä sekunnissa vuonna 1965 ja pienin 95 kuutiometriä vuonna 1921. Sveitsin korkein putous ei ole tämä vaan Mürrenbachin putous, 417 metriä.
+
+Putous syntyi viime jääkaudella noin 14 000–17 000 vuotta sitten, kun kulutusta kestävät kivilajit kavensivat uomaa. Joen reitti on vaihtunut monta kertaa: vielä noin 132 000 vuotta sitten Rein virtasi Schaffhausenista länteen Klettgaun laaksoon, ja vanha uoma täyttyi soralla. Würm-jäätiköitymisen aikana joki…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Whitehorse — kohdekartta / Kohdekartta: Beringia-keskus] 1997 Keskus avattiin 1997 Alaska Highwayn kilometrillä 1423 ja kertoo Beringiasta — 3 200 kilometrin levyisestä maa-alueesta, joka ulottui Siperian Kolyma-joelta Kanadan Mackenzie-joelle. Alue säilyi jääkaudella jäätiköitymättä, koska ilmasto oli kuiva ja lunta satoi vähän. Juuri siksi Beringia kiinnostaa arkeologeja ja paleontologeja: se oli eläinten ja ihmisten kulkureitti Aasian ja Amerikan välillä. Liikennettä oli molempiin suuntiin. Idän suuntaan tulivat mastodontit, mammutit, hirvieläimet, biisonit, lampaat ja myskihärät; länteen menivät hevoseläimet ja kamelit. Sanan Beringia keksi ruotsalainen kasvitieteilijä Eric Hultén vuonna 1937. Keskus on myös tutkimuslaitos. Sen aineistossa on…
+- [Norja — maalehti / Luonto: Meri nousi laakson pohjalle] 2005 — Vuono syntyi jääkaudella: paksu jäätikkö hioi laaksosta U-kirjaimen muotoisen uoman kalliota myöten, ja kun jää suli, meri työntyi tyhjään laaksoon sisämaahan asti. Siksi vuonon seinät nousevat pystysuorina suoraan vedestä ja vettä on alla satoja metrejä. Geirangervuono otettiin maailmanperintöluetteloon vuonna 2005. Rinteillä on vanhoja vuoritiloja, joihin päästiin ennen vain veneellä ja köysitikkaita pitkin — lasten kerrotaan olleen köydessä kiinni, jotta he eivät putoaisi.
+AIEMPI KYSYMYS: Miksi putouksen keskellä oleva kallio ei kulu?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Keskellä oleva kallio kuluu sekin, mutta erittäin hitaasti, koska alueen kivilajit kestävät kulutusta hyvin. Juuri kulutusta kestävät kivilajit kavensivat uomaa ja synnyttivät putouksen viime [[jääkaudella]], ja samaan kestävyyteen perustuu todennäköisesti myös kallion säilyminen virtaavan veden keskellä. Tarkasta kivilajista en ole varma, joten en halua väittää siitä enempää. Putouksen yläpuolella virtaa [[Rein]], joka on muuttanut reittiään monta kertaa, ja nykyinen uoma on näistä nuorimpia. Kallionkin kanssa pitää olla kärsivällinen, sen minä sanon.
+KYSYMYS: Kerro lisää: jääkaudella
+
+### 157
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reininputous (luonto · joki)
+Tietoruudun teksti: Reininputous on Ylä-Reinin vesiputous Sveitsissä ja Euroopan voimakkain. Se on Schaffhausenin ja Zürichin kantonien rajalla Neuhausen am Rheinfallin ja Laufen-Uhwiesenin välissä, noin kolme kilometriä Schaffhausenin kaupungista etelään ja aivan Saksan rajan tuntumassa.
+
+Putous on 150 metriä leveä ja 23 metriä korkea. Talvikuukausina keskimääräinen virtaama on 250 kuutiometriä sekunnissa ja kesällä 600. Suurin koskaan mitattu oli 1 250 kuutiometriä sekunnissa vuonna 1965 ja pienin 95 kuutiometriä vuonna 1921. Sveitsin korkein putous ei ole tämä vaan Mürrenbachin putous, 417 metriä.
+
+Putous syntyi viime jääkaudella noin 14 000–17 000 vuotta sitten, kun kulutusta kestävät kivilajit kavensivat uomaa. Joen reitti on vaihtunut monta kertaa: vielä noin 132 000 vuotta sitten Rein virtasi Schaffhausenista länteen Klettgaun laaksoon, ja vanha uoma täyttyi soralla. Würm-jäätiköitymisen aikana joki…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tallinna — kohdekartta / Kohdekartta: Olevisten kirkko] 1267 Olevisten kirkko on nimetty Norjan kuningas Olavin mukaan, joka oli merenkulkijoiden suojeluspyhimys. Kirkosta on maininta jo vuodelta 1267, jolloin sen perustivat alueelle asettuneet skandinaaviset kauppiaat. Kirkon torni puolestaan mainitaan asiakirjoissa ensimmäisen kerran vuonna 1364, ja vuosisatojen kuluessa kirkkoa laajennettiin useaan otteeseen goottilaiseen tyyliin. Torni on kokenut paljon: salamat ovat iskeneet siihen noin kymmenen kertaa, ja koko kirkko on palanut maan tasalle jopa kolme kertaa tunnetun historiansa aikana. Erään keskiaikaisen tarinan mukaan kirkon rakentaja kertoi tornin olevan 84 syltä korkea - jos hän tarkoitti Rein-joen seudun syltä, se tarkoittaisi lähes …
+- [Dili — kaupunkilehti / Vuorten ja meren välissä: Kolme suojelualuetta kaupungin sisällä] Dilin alueella on kolme suojeltua luonnon monimuotoisuuden aluetta. Cristo Rein suojelualue on vuoristossa, joka erottaa keskustan Heran kaupunginosasta idässä. Tasitolu on kaupungin länsilaidalla Liquiçán kunnan rajan tuntumassa ja kattaa sekä maata että rannikkovesiä; sitä kehitetään virkistysalueeksi ja pyhänä pidetyksi paikaksi. Behau kattaa suuren osan itäisen Dilin edustan merestä sekä rannikkoa Herassa ja siitä itään, ja se on ehdotuksista uusin — hallitus harkitsee sen korvaamista pienemmillä alueilla. BirdLife International on määrittänyt Cristo Rein alueen ja Tasitolun tärkeiksi lintualueiksi. Rakentaminen näille alueille on mahdollista valtion luvalla.
+AIEMPI KYSYMYS: Miksi putouksen keskellä oleva kallio ei kulu?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Keskellä oleva kallio kuluu sekin, mutta erittäin hitaasti, koska alueen kivilajit kestävät kulutusta hyvin. Juuri kulutusta kestävät kivilajit kavensivat uomaa ja synnyttivät putouksen viime [[jääkaudella]], ja samaan kestävyyteen perustuu todennäköisesti myös kallion säilyminen virtaavan veden keskellä. Tarkasta kivilajista en ole varma, joten en halua väittää siitä enempää. Putouksen yläpuolella virtaa [[Rein]], joka on muuttanut reittiään monta kertaa, ja nykyinen uoma on näistä nuorimpia. Kallionkin kanssa pitää olla kärsivällinen, sen minä sanon.
+KYSYMYS: Kerro lisää: Rein
+
+### 158
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reininputous (luonto · joki)
+Tietoruudun teksti: Reininputous on Ylä-Reinin vesiputous Sveitsissä ja Euroopan voimakkain. Se on Schaffhausenin ja Zürichin kantonien rajalla Neuhausen am Rheinfallin ja Laufen-Uhwiesenin välissä, noin kolme kilometriä Schaffhausenin kaupungista etelään ja aivan Saksan rajan tuntumassa.
+
+Putous on 150 metriä leveä ja 23 metriä korkea. Talvikuukausina keskimääräinen virtaama on 250 kuutiometriä sekunnissa ja kesällä 600. Suurin koskaan mitattu oli 1 250 kuutiometriä sekunnissa vuonna 1965 ja pienin 95 kuutiometriä vuonna 1921. Sveitsin korkein putous ei ole tämä vaan Mürrenbachin putous, 417 metriä.
+
+Putous syntyi viime jääkaudella noin 14 000–17 000 vuotta sitten, kun kulutusta kestävät kivilajit kavensivat uomaa. Joen reitti on vaihtunut monta kertaa: vielä noin 132 000 vuotta sitten Rein virtasi Schaffhausenista länteen Klettgaun laaksoon, ja vanha uoma täyttyi soralla. Würm-jäätiköitymisen aikana joki…
+AIEMPI KYSYMYS: Kuinka korkea Sveitsin korkein vesiputous on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Sveitsin korkein vesiputous on [[Mürrenbachin putous]], jonka korkeus on 417 metriä. Se on siis moninkertaisesti korkeampi kuin 23 metriä korkea [[Reininputous]], joka puolestaan vaikuttaa ennen kaikkea valtavalla vesimäärällään ja 150 metrin leveydellään.
+
+Minä arvostan putouksessa mieluummin voimaa kuin korkeutta. Putoaminen kun ei ole kyyhkyn lempipuuhaa.
+KYSYMYS: Kerro lisää: Mürrenbachin putous
+
+### 159
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reininputous (luonto · joki)
+Tietoruudun teksti: Reininputous on Ylä-Reinin vesiputous Sveitsissä ja Euroopan voimakkain. Se on Schaffhausenin ja Zürichin kantonien rajalla Neuhausen am Rheinfallin ja Laufen-Uhwiesenin välissä, noin kolme kilometriä Schaffhausenin kaupungista etelään ja aivan Saksan rajan tuntumassa.
+
+Putous on 150 metriä leveä ja 23 metriä korkea. Talvikuukausina keskimääräinen virtaama on 250 kuutiometriä sekunnissa ja kesällä 600. Suurin koskaan mitattu oli 1 250 kuutiometriä sekunnissa vuonna 1965 ja pienin 95 kuutiometriä vuonna 1921. Sveitsin korkein putous ei ole tämä vaan Mürrenbachin putous, 417 metriä.
+
+Putous syntyi viime jääkaudella noin 14 000–17 000 vuotta sitten, kun kulutusta kestävät kivilajit kavensivat uomaa. Joen reitti on vaihtunut monta kertaa: vielä noin 132 000 vuotta sitten Rein virtasi Schaffhausenista länteen Klettgaun laaksoon, ja vanha uoma täyttyi soralla. Würm-jäätiköitymisen aikana joki…
+AIEMPI KYSYMYS: Kuinka korkea Sveitsin korkein vesiputous on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Sveitsin korkein vesiputous on [[Mürrenbachin putous]], jonka korkeus on 417 metriä. Se on siis moninkertaisesti korkeampi kuin 23 metriä korkea [[Reininputous]], joka puolestaan vaikuttaa ennen kaikkea valtavalla vesimäärällään ja 150 metrin leveydellään.
+
+Minä arvostan putouksessa mieluummin voimaa kuin korkeutta. Putoaminen kun ei ole kyyhkyn lempipuuhaa.
+KYSYMYS: Kerro lisää: Reininputous
+
+### 160
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reininputous (luonto · joki)
+Tietoruudun teksti: Reininputous on Ylä-Reinin vesiputous Sveitsissä ja Euroopan voimakkain. Se on Schaffhausenin ja Zürichin kantonien rajalla Neuhausen am Rheinfallin ja Laufen-Uhwiesenin välissä, noin kolme kilometriä Schaffhausenin kaupungista etelään ja aivan Saksan rajan tuntumassa.
+
+Putous on 150 metriä leveä ja 23 metriä korkea. Talvikuukausina keskimääräinen virtaama on 250 kuutiometriä sekunnissa ja kesällä 600. Suurin koskaan mitattu oli 1 250 kuutiometriä sekunnissa vuonna 1965 ja pienin 95 kuutiometriä vuonna 1921. Sveitsin korkein putous ei ole tämä vaan Mürrenbachin putous, 417 metriä.
+
+Putous syntyi viime jääkaudella noin 14 000–17 000 vuotta sitten, kun kulutusta kestävät kivilajit kavensivat uomaa. Joen reitti on vaihtunut monta kertaa: vielä noin 132 000 vuotta sitten Rein virtasi Schaffhausenista länteen Klettgaun laaksoon, ja vanha uoma täyttyi soralla. Würm-jäätiköitymisen aikana joki…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vladivostok — kohdekartta / Kohdekartta: Arsenjevin museo] perustettu 1884 Kaukoidän ensimmäinen kotiseutumuseo sai alkunsa 18. huhtikuuta 1884, kun Amurinmaan tutkimusseuran säännöt vahvistettiin, ja ovet avautuivat yleisölle lokakuussa 1890. Vuonna 1945 museo nimettiin Vladimir Arsenjevin, Ussurinmaan tutkijan ja Dersu Uzalan kirjoittajan mukaan — hänen tarinansa on lehden taigasivulla. Kokoelmissa on seudun tutkijoiden, muun muassa Prževalskin, aineistoja, jääkauden fossiileja, 1100-luvun ylimyshauta ja Bohain valtakunnan hallitsijan peili; täytetyt tiikeri ja karhu ovat museon kuuluisin näky. Vuonna 2015 se oli Venäjän katsotuin aluemuseo, yli 421 000 kävijää, ja vuonna 2019 siitä tehtiin liittovaltion museo. Rakennus on tarina itsessään: kaupp…
+- [Whitehorse — kohdekartta / Kohdekartta: Beringia-keskus] 1997 Keskus avattiin 1997 Alaska Highwayn kilometrillä 1423 ja kertoo Beringiasta — 3 200 kilometrin levyisestä maa-alueesta, joka ulottui Siperian Kolyma-joelta Kanadan Mackenzie-joelle. Alue säilyi jääkaudella jäätiköitymättä, koska ilmasto oli kuiva ja lunta satoi vähän. Juuri siksi Beringia kiinnostaa arkeologeja ja paleontologeja: se oli eläinten ja ihmisten kulkureitti Aasian ja Amerikan välillä. Liikennettä oli molempiin suuntiin. Idän suuntaan tulivat mastodontit, mammutit, hirvieläimet, biisonit, lampaat ja myskihärät; länteen menivät hevoseläimet ja kamelit. Sanan Beringia keksi ruotsalainen kasvitieteilijä Eric Hultén vuonna 1937. Keskus on myös tutkimuslaitos. Sen aineistossa on…
+AIEMPI KYSYMYS: Milloin Reininputous syntyi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Putous syntyi viime [[jääkauden]] aikana noin 14 000–17 000 vuotta sitten, kun kulutusta kestävät kivilajit kavensivat joen uomaa. Reinin reitti on kuitenkin vaihtunut monta kertaa: noin 132 000 vuotta sitten joki virtasi [[Schaffhausenista]] länteen [[Klettgaun]] laaksoon, ja tuo vanha uoma täyttyi soralla. Nykyinen putous on siis nuori verrattuna joen pitkään historiaan. Ikää on, mut ei läheskään minun sukuni verran.
+KYSYMYS: Kerro lisää: jääkauden

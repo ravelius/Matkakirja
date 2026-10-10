@@ -1,0 +1,1010 @@
+### 241
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stanserhorn (luonto · vuori)
+Tietoruudun teksti: Stanserhorn on Nidwaldenin kantonissa Sveitsissä kohoava, 1 898 metriä korkea huippu. Huipulle nousi vuosina 1891–1893 rakennettu kolmiosainen sähkökäyttöinen köysirautatie. Nykyään huipulle pääsee myös CabriO-köysiradalla, joka avattiin 29. kesäkuuta 2012 ja jonka kaksikerroksisessa hytissä on avoin yläkansi. Hytti vie 60 matkustajaa, ja Kältistä huipulle matka kestää kuusi minuuttia. Huipulla on pyörivä ravintola vuodelta 2001 ja näköalataso vuodelta 2003. Selkeällä säällä maisemassa erottuu kymmenen järveä.
+AIEMPI KYSYMYS: Minä vuonna CabriO-köysirata avattiin?
+AIEMPI VASTAUS (Livia):
+No jopas, tän tiedän. CabriO-köysirata avattiin vuonna 2012, tarkemmin 29. kesäkuuta. Sen kaksikerroksisessa hytissä on avoin yläkansi, ja hytti kuljettaa 60 matkustajaa [[Kältistä]] [[Stanserhornin]] huipulle kuudessa minuutissa. Stanserhorn sijaitsee [[Nidwaldenin]] kantonissa. Avoin yläkansi kuulostaa kyyhkyn mielestä ihan oikealta ajatukselta.
+KYSYMYS: Kerro lisää: Kältistä
+
+### 242
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stanserhorn (luonto · vuori)
+Tietoruudun teksti: Stanserhorn on Nidwaldenin kantonissa Sveitsissä kohoava, 1 898 metriä korkea huippu. Huipulle nousi vuosina 1891–1893 rakennettu kolmiosainen sähkökäyttöinen köysirautatie. Nykyään huipulle pääsee myös CabriO-köysiradalla, joka avattiin 29. kesäkuuta 2012 ja jonka kaksikerroksisessa hytissä on avoin yläkansi. Hytti vie 60 matkustajaa, ja Kältistä huipulle matka kestää kuusi minuuttia. Huipulla on pyörivä ravintola vuodelta 2001 ja näköalataso vuodelta 2003. Selkeällä säällä maisemassa erottuu kymmenen järveä.
+AIEMPI KYSYMYS: Minä vuonna CabriO-köysirata avattiin?
+AIEMPI VASTAUS (Livia):
+No jopas, tän tiedän. CabriO-köysirata avattiin vuonna 2012, tarkemmin 29. kesäkuuta. Sen kaksikerroksisessa hytissä on avoin yläkansi, ja hytti kuljettaa 60 matkustajaa [[Kältistä]] [[Stanserhornin]] huipulle kuudessa minuutissa. Stanserhorn sijaitsee [[Nidwaldenin]] kantonissa. Avoin yläkansi kuulostaa kyyhkyn mielestä ihan oikealta ajatukselta.
+KYSYMYS: Kerro lisää: Stanserhornin
+
+### 243
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stanserhorn (luonto · vuori)
+Tietoruudun teksti: Stanserhorn on Nidwaldenin kantonissa Sveitsissä kohoava, 1 898 metriä korkea huippu. Huipulle nousi vuosina 1891–1893 rakennettu kolmiosainen sähkökäyttöinen köysirautatie. Nykyään huipulle pääsee myös CabriO-köysiradalla, joka avattiin 29. kesäkuuta 2012 ja jonka kaksikerroksisessa hytissä on avoin yläkansi. Hytti vie 60 matkustajaa, ja Kältistä huipulle matka kestää kuusi minuuttia. Huipulla on pyörivä ravintola vuodelta 2001 ja näköalataso vuodelta 2003. Selkeällä säällä maisemassa erottuu kymmenen järveä.
+AIEMPI KYSYMYS: Minä vuonna CabriO-köysirata avattiin?
+AIEMPI VASTAUS (Livia):
+No jopas, tän tiedän. CabriO-köysirata avattiin vuonna 2012, tarkemmin 29. kesäkuuta. Sen kaksikerroksisessa hytissä on avoin yläkansi, ja hytti kuljettaa 60 matkustajaa [[Kältistä]] [[Stanserhornin]] huipulle kuudessa minuutissa. Stanserhorn sijaitsee [[Nidwaldenin]] kantonissa. Avoin yläkansi kuulostaa kyyhkyn mielestä ihan oikealta ajatukselta.
+KYSYMYS: Kerro lisää: Nidwaldenin
+
+### 244
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stanserhorn (luonto · vuori)
+Tietoruudun teksti: Stanserhorn on Nidwaldenin kantonissa Sveitsissä kohoava, 1 898 metriä korkea huippu. Huipulle nousi vuosina 1891–1893 rakennettu kolmiosainen sähkökäyttöinen köysirautatie. Nykyään huipulle pääsee myös CabriO-köysiradalla, joka avattiin 29. kesäkuuta 2012 ja jonka kaksikerroksisessa hytissä on avoin yläkansi. Hytti vie 60 matkustajaa, ja Kältistä huipulle matka kestää kuusi minuuttia. Huipulla on pyörivä ravintola vuodelta 2001 ja näköalataso vuodelta 2003. Selkeällä säällä maisemassa erottuu kymmenen järveä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kumasi — kaupunkilehti / Metsä ja järvi] Kumasi seisoo sademetsävyöhykkeellä kahden sadekauden rytmissä, ja sen eteläpuolella on järvi, joka syntyi miljoona vuotta sitten taivaalta pudonneesta kivestä.
+AIEMPI KYSYMYS: Kuinka monta järveä huipulta näkyy selkeällä säällä?
+AIEMPI VASTAUS (Livia):
+Ai tota. Selkeällä säällä [[Stanserhornin]] huipulta erottuu kymmenen järveä, joihin kuuluu varmasti [[Neljän metsäkantonin järvi]]. En osaa luetella kaikkia kymmentä varmasti. Huippu on 1 898 metriä korkea, ja siellä on pyörivä ravintola vuodelta 2001 ja näköalataso vuodelta 2003.
+
+Kymmenen järveä yhdellä silmäyksellä on kyyhkylle työmaan paras puoli, sillä reitin suunnittelu on helppoa, kun kaikki vesi näkyy kerralla.
+KYSYMYS: Kerro lisää: Neljän metsäkantonin järvi
+
+### 245
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stanserhorn (luonto · vuori)
+Tietoruudun teksti: Stanserhorn on Nidwaldenin kantonissa Sveitsissä kohoava, 1 898 metriä korkea huippu. Huipulle nousi vuosina 1891–1893 rakennettu kolmiosainen sähkökäyttöinen köysirautatie. Nykyään huipulle pääsee myös CabriO-köysiradalla, joka avattiin 29. kesäkuuta 2012 ja jonka kaksikerroksisessa hytissä on avoin yläkansi. Hytti vie 60 matkustajaa, ja Kältistä huipulle matka kestää kuusi minuuttia. Huipulla on pyörivä ravintola vuodelta 2001 ja näköalataso vuodelta 2003. Selkeällä säällä maisemassa erottuu kymmenen järveä.
+AIEMPI KYSYMYS: Millainen oli Stanserhornin vanha köysirautatie?
+AIEMPI VASTAUS (Livia):
+Jaa, se vanha. Stanserhornin huipulle rakennettiin vuosina 1891–1893 kolmiosainen sähkökäyttöinen [[köysirautatie]]. Se palveli matkustajia jo kauan ennen nykyistä [[CabriO]]-köysirataa, joka avattiin vuonna 2012. Rata johtaa [[Nidwaldenin]] kantonissa kohoavalle huipulle, joka on 1 898 metriä korkea. Sähköä jo 1890-luvulla, ei paha.
+KYSYMYS: Kerro lisää: köysirautatie
+
+### 246
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stanserhorn (luonto · vuori)
+Tietoruudun teksti: Stanserhorn on Nidwaldenin kantonissa Sveitsissä kohoava, 1 898 metriä korkea huippu. Huipulle nousi vuosina 1891–1893 rakennettu kolmiosainen sähkökäyttöinen köysirautatie. Nykyään huipulle pääsee myös CabriO-köysiradalla, joka avattiin 29. kesäkuuta 2012 ja jonka kaksikerroksisessa hytissä on avoin yläkansi. Hytti vie 60 matkustajaa, ja Kältistä huipulle matka kestää kuusi minuuttia. Huipulla on pyörivä ravintola vuodelta 2001 ja näköalataso vuodelta 2003. Selkeällä säällä maisemassa erottuu kymmenen järveä.
+AIEMPI KYSYMYS: Millainen oli Stanserhornin vanha köysirautatie?
+AIEMPI VASTAUS (Livia):
+Jaa, se vanha. Stanserhornin huipulle rakennettiin vuosina 1891–1893 kolmiosainen sähkökäyttöinen [[köysirautatie]]. Se palveli matkustajia jo kauan ennen nykyistä [[CabriO]]-köysirataa, joka avattiin vuonna 2012. Rata johtaa [[Nidwaldenin]] kantonissa kohoavalle huipulle, joka on 1 898 metriä korkea. Sähköä jo 1890-luvulla, ei paha.
+KYSYMYS: Kerro lisää: CabriO
+
+### 247
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bernin Christoffelturm (historia)
+Tietoruudun teksti: Christoffelturm rakennettiin vuosina 1344–1346 Bernin kolmannen kaupunginmuurin portiksi. Kaupunginvaltuusto päätti vain neljän äänen erolla purkaa tornin rautatieaseman tieltä. Purku alkoi vuonna 1865.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki: Bern 1905 — patenttipino ja valonsäde] 1905 — Pöydän kulmalla kasvaa pino patenttihakemuksia, ja jokainen uusi tulokas työntää fysiikan muistiinpanot laatikon pohjalle. Bernin patenttiviraston kolmannen luokan tekninen asiantuntija Albert Einstein on 26-vuotias, ja hänen palkkansa elättää Mileva-vaimon ja pienen Hans Albertin. Iltaisin hän palaa kysymykseen, jota on kantanut teini-ikäisestä asti: miltä valo näyttäisi, jos sen voisi ajaa kiinni? Ajatella ääneen hän voi harvojen kanssa: ystävän ja työtoverin Michele Besson kanssa kotimatkalla, ja iltaisin muutaman tuttavan kesken, jotka kutsuvat itseään pilaillen Olympia-akatemiaksi. Virastoon hän päätyi siksi, ettei yksikään haettu opettajanpaikka auennut. Vuonna 1905 Einstein lä…
+- [Sveitsi — maalehti / Ruoka: Peruna paistetaan pannun kokoiseksi kakuksi] Aamiaisella — Rösti tehdään raastetusta perunasta, joka painetaan pannulle kakuksi ja paistetaan voissa kummaltakin puolelta rapeaksi. Alun perin se oli Bernin seudun maanviljelijöiden aamiaista, ja sitä syötiin ennen töihin lähtöä. Ruoka on niin tunnusomainen, että saksan- ja ranskankielisen Sveitsin välistä rajaa sanotaan leikillään Röstigrabeniksi, röstihaudaksi: sen molemmin puolin äänestetään eri tavalla ja puhutaan eri kieltä, ja perunakakku jäi rajan nimeksi.
+- [Sveitsi — maalehti / Historian hetki] Bernin patenttivirastossa istui vuonna 1905 kolmannen luokan tekninen asiantuntija, joka kirjoitti samana vuonna neljä tutkimusta ja muutti fysiikan.
+AIEMPI KYSYMYS: Miltä Bernin Christoffelturm näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Christoffelturm oli [[Bernin]] kolmannen kaupunginmuurin portti, joka rakennettiin vuosina 1344–1346. Tarkasta ulkoasusta minulla ei ole varmaa tietoa, mutta kyseessä oli korkea porttitorni osana kaupunginmuuria, ja nimi viittaa todennäköisesti pyhään [[Kristoforokseen]]. Torni purettiin rautatieaseman tieltä, ja purku alkoi vuonna 1865. Sen tarkemman kuvan jätän kyl piirtäjille.
+KYSYMYS: Kerro lisää: Bernin
+
+### 248
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bernin Christoffelturm (historia)
+Tietoruudun teksti: Christoffelturm rakennettiin vuosina 1344–1346 Bernin kolmannen kaupunginmuurin portiksi. Kaupunginvaltuusto päätti vain neljän äänen erolla purkaa tornin rautatieaseman tieltä. Purku alkoi vuonna 1865.
+AIEMPI KYSYMYS: Miltä Bernin Christoffelturm näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Christoffelturm oli [[Bernin]] kolmannen kaupunginmuurin portti, joka rakennettiin vuosina 1344–1346. Tarkasta ulkoasusta minulla ei ole varmaa tietoa, mutta kyseessä oli korkea porttitorni osana kaupunginmuuria, ja nimi viittaa todennäköisesti pyhään [[Kristoforokseen]]. Torni purettiin rautatieaseman tieltä, ja purku alkoi vuonna 1865. Sen tarkemman kuvan jätän kyl piirtäjille.
+KYSYMYS: Kerro lisää: Kristoforokseen
+
+### 249
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bernin Christoffelturm (historia)
+Tietoruudun teksti: Christoffelturm rakennettiin vuosina 1344–1346 Bernin kolmannen kaupunginmuurin portiksi. Kaupunginvaltuusto päätti vain neljän äänen erolla purkaa tornin rautatieaseman tieltä. Purku alkoi vuonna 1865.
+AIEMPI KYSYMYS: Miksi Bernin Christoffelturm katosi?
+AIEMPI VASTAUS (Livia):
+Just niin, tästä on tarina. Bernin kaupunginvaltuusto päätti purkaa tornin rautatieaseman tieltä, ja päätös syntyi vain neljän äänen erolla. Purku alkoi vuonna 1865. Torni oli rakennettu vuosina 1344–1346 [[Bernin]] kolmannen [[kaupunginmuurin]] portiksi.
+
+Neljän äänen ero on pienempi kuin yhden parven koko, ja silti se ratkaisi tornin kohtalon. Minä pidän vanhoista porteista, koska ne ovat hyviä istuinpaikkoja.
+KYSYMYS: Kerro lisää: kaupunginmuurin
+
+### 250
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bernin Christoffelturm (historia)
+Tietoruudun teksti: Christoffelturm rakennettiin vuosina 1344–1346 Bernin kolmannen kaupunginmuurin portiksi. Kaupunginvaltuusto päätti vain neljän äänen erolla purkaa tornin rautatieaseman tieltä. Purku alkoi vuonna 1865.
+AIEMPI KYSYMYS: Onko Bern Sveitsin pääkaupunki?
+AIEMPI VASTAUS (Livia):
+Joo, tän tunnen. Sveitsillä ei ole virallisesti nimettyä pääkaupunkia, mutta Bern on liittovaltion kaupunki eli [[Bundesstadt]], jossa hallitus ja parlamentti istuvat. Asema vakiintui vuonna 1848 liittovaltion perustamisen yhteydessä. Maan suurin kaupunki on [[Zürich]]. Pääkaupunki-sana on siis vähän liukas.
+KYSYMYS: Kerro lisää: Bundesstadt
+
+### 251
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bernin Christoffelturm (historia)
+Tietoruudun teksti: Christoffelturm rakennettiin vuosina 1344–1346 Bernin kolmannen kaupunginmuurin portiksi. Kaupunginvaltuusto päätti vain neljän äänen erolla purkaa tornin rautatieaseman tieltä. Purku alkoi vuonna 1865.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki: Gotthard 1880 — valokuva kulkee kalliossa] 29.2.1880 — Pieni valokuva kulkee käsistä käsiin viimeisen kivikerroksen läpi ennen kuin kukaan ehtii sanoa mitään. Se esittää Louis Favrea, insinööriä, joka johti Gotthardin rautatietunnelin louhintaa vuodesta 1872, mutta joka kuoli sydänkohtaukseen tunnelissa heinäkuussa 1879 — kahdeksan kuukautta ennen tätä hetkeä. Sunnuntaina 29. helmikuuta 1880 pohjoisesta Göschenenistä ja etelästä Airolosta louhitut käytävät kohtaavat vihdoin syvällä Gotthard-massiivin sisällä, lähes 1 700 metrin kiven alla, ja saksankielinen ja italiankielinen työryhmä puhkaisevat viimeisen ohuen kivimuurin toistensa väliltä. Ensimmäinen kättely tapahtuu reiän läpi, ennen kuin kukaan pääsee kokonaan toiselle puolelle…
+AIEMPI KYSYMYS: Onko Bern Sveitsin pääkaupunki?
+AIEMPI VASTAUS (Livia):
+Joo, tän tunnen. Sveitsillä ei ole virallisesti nimettyä pääkaupunkia, mutta Bern on liittovaltion kaupunki eli [[Bundesstadt]], jossa hallitus ja parlamentti istuvat. Asema vakiintui vuonna 1848 liittovaltion perustamisen yhteydessä. Maan suurin kaupunki on [[Zürich]]. Pääkaupunki-sana on siis vähän liukas.
+KYSYMYS: Kerro lisää: Zürich
+
+### 252
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bernin Christoffelturm (historia)
+Tietoruudun teksti: Christoffelturm rakennettiin vuosina 1344–1346 Bernin kolmannen kaupunginmuurin portiksi. Kaupunginvaltuusto päätti vain neljän äänen erolla purkaa tornin rautatieaseman tieltä. Purku alkoi vuonna 1865.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Ruoka: Peruna paistetaan pannun kokoiseksi kakuksi] Aamiaisella — Rösti tehdään raastetusta perunasta, joka painetaan pannulle kakuksi ja paistetaan voissa kummaltakin puolelta rapeaksi. Alun perin se oli Bernin seudun maanviljelijöiden aamiaista, ja sitä syötiin ennen töihin lähtöä. Ruoka on niin tunnusomainen, että saksan- ja ranskankielisen Sveitsin välistä rajaa sanotaan leikillään Röstigrabeniksi, röstihaudaksi: sen molemmin puolin äänestetään eri tavalla ja puhutaan eri kieltä, ja perunakakku jäi rajan nimeksi.
+AIEMPI KYSYMYS: Mitä Röstigraben tarkoittaa?
+AIEMPI VASTAUS (Livia):
+No niin, ruokapuoli. Röstigraben eli röstihauta on leikillinen nimi saksan- ja ranskankielisen Sveitsin väliselle kielirajalle. Nimi tulee [[röstistä]], raastetusta perunasta pannulle painetusta kakusta, joka oli alun perin [[Bernin]] seudun maanviljelijöiden aamiaista. Rajan molemmin puolin puhutaan eri kieltä ja äänestetään eri tavalla. Minä olisin kyl nimennyt rajan pullan mukaan.
+KYSYMYS: Kerro lisää: röstistä
+
+### 253
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bernin Christoffelturm (historia)
+Tietoruudun teksti: Christoffelturm rakennettiin vuosina 1344–1346 Bernin kolmannen kaupunginmuurin portiksi. Kaupunginvaltuusto päätti vain neljän äänen erolla purkaa tornin rautatieaseman tieltä. Purku alkoi vuonna 1865.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki] Bernin patenttivirastossa istui vuonna 1905 kolmannen luokan tekninen asiantuntija, joka kirjoitti samana vuonna neljä tutkimusta ja muutti fysiikan.
+AIEMPI KYSYMYS: Mitä Albert Einstein teki Bernissä vuonna 1905?
+AIEMPI VASTAUS (Livia):
+Ai, se patentti-ihminen. Albert Einstein työskenteli Bernin [[patenttivirastossa]] kolmannen luokan teknisenä asiantuntijana, ja vuonna 1905 hän oli 26-vuotias. Samana vuonna hän kirjoitti neljä tutkimusta, jotka muuttivat fysiikkaa. Ideoistaan hän keskusteli ystävänsä ja työtoverinsa [[Michele Besson]] kanssa sekä tuttavapiirissä, joka kutsui itseään leikillään [[Olympia-akatemiaksi]]. Virkamieheksi aika hyvä saldo.
+KYSYMYS: Kerro lisää: patenttivirastossa
+
+### 254
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bernin Christoffelturm (historia)
+Tietoruudun teksti: Christoffelturm rakennettiin vuosina 1344–1346 Bernin kolmannen kaupunginmuurin portiksi. Kaupunginvaltuusto päätti vain neljän äänen erolla purkaa tornin rautatieaseman tieltä. Purku alkoi vuonna 1865.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki: Bern 1905 — patenttipino ja valonsäde] 1905 — Pöydän kulmalla kasvaa pino patenttihakemuksia, ja jokainen uusi tulokas työntää fysiikan muistiinpanot laatikon pohjalle. Bernin patenttiviraston kolmannen luokan tekninen asiantuntija Albert Einstein on 26-vuotias, ja hänen palkkansa elättää Mileva-vaimon ja pienen Hans Albertin. Iltaisin hän palaa kysymykseen, jota on kantanut teini-ikäisestä asti: miltä valo näyttäisi, jos sen voisi ajaa kiinni? Ajatella ääneen hän voi harvojen kanssa: ystävän ja työtoverin Michele Besson kanssa kotimatkalla, ja iltaisin muutaman tuttavan kesken, jotka kutsuvat itseään pilaillen Olympia-akatemiaksi. Virastoon hän päätyi siksi, ettei yksikään haettu opettajanpaikka auennut. Vuonna 1905 Einstein lä…
+AIEMPI KYSYMYS: Mitä Albert Einstein teki Bernissä vuonna 1905?
+AIEMPI VASTAUS (Livia):
+Ai, se patentti-ihminen. Albert Einstein työskenteli Bernin [[patenttivirastossa]] kolmannen luokan teknisenä asiantuntijana, ja vuonna 1905 hän oli 26-vuotias. Samana vuonna hän kirjoitti neljä tutkimusta, jotka muuttivat fysiikkaa. Ideoistaan hän keskusteli ystävänsä ja työtoverinsa [[Michele Besson]] kanssa sekä tuttavapiirissä, joka kutsui itseään leikillään [[Olympia-akatemiaksi]]. Virkamieheksi aika hyvä saldo.
+KYSYMYS: Kerro lisää: Michele Besson
+
+### 255
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bernin Christoffelturm (historia)
+Tietoruudun teksti: Christoffelturm rakennettiin vuosina 1344–1346 Bernin kolmannen kaupunginmuurin portiksi. Kaupunginvaltuusto päätti vain neljän äänen erolla purkaa tornin rautatieaseman tieltä. Purku alkoi vuonna 1865.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki: Bern 1905 — patenttipino ja valonsäde] 1905 — Pöydän kulmalla kasvaa pino patenttihakemuksia, ja jokainen uusi tulokas työntää fysiikan muistiinpanot laatikon pohjalle. Bernin patenttiviraston kolmannen luokan tekninen asiantuntija Albert Einstein on 26-vuotias, ja hänen palkkansa elättää Mileva-vaimon ja pienen Hans Albertin. Iltaisin hän palaa kysymykseen, jota on kantanut teini-ikäisestä asti: miltä valo näyttäisi, jos sen voisi ajaa kiinni? Ajatella ääneen hän voi harvojen kanssa: ystävän ja työtoverin Michele Besson kanssa kotimatkalla, ja iltaisin muutaman tuttavan kesken, jotka kutsuvat itseään pilaillen Olympia-akatemiaksi. Virastoon hän päätyi siksi, ettei yksikään haettu opettajanpaikka auennut. Vuonna 1905 Einstein lä…
+AIEMPI KYSYMYS: Mitä Albert Einstein teki Bernissä vuonna 1905?
+AIEMPI VASTAUS (Livia):
+Ai, se patentti-ihminen. Albert Einstein työskenteli Bernin [[patenttivirastossa]] kolmannen luokan teknisenä asiantuntijana, ja vuonna 1905 hän oli 26-vuotias. Samana vuonna hän kirjoitti neljä tutkimusta, jotka muuttivat fysiikkaa. Ideoistaan hän keskusteli ystävänsä ja työtoverinsa [[Michele Besson]] kanssa sekä tuttavapiirissä, joka kutsui itseään leikillään [[Olympia-akatemiaksi]]. Virkamieheksi aika hyvä saldo.
+KYSYMYS: Kerro lisää: Olympia-akatemiaksi
+
+### 256
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geneven Porte Neuve (historia)
+Tietoruudun teksti: Porte Neuve rakennettiin 1740-luvulla Geneven läntiseksi pääportiksi. Kaupungin linnoitusvyöhyke purettiin 1850-luvulla laajenemisen tieltä, ja portti purettiin vuonna 1853. Sen paikalla on nykyinen Place Neuve.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Churchill — kaupunkilehti / Churchill: Linnoitus jota rakennettiin kymmenen vuotta] Vuodesta 1731 alkaen Hudson’s Bay Company korvasi vanhan hirsiaseman valtavalla kivilinnoituksella, jonka rakentaminen kesti kymmenisen vuotta. Neliönmuotoisen Prince of Wales Fortin sivut olivat 90 metriä pitkiä ja muurit lähes 6 metriä korkeita ja tyvestään 9 metriä paksuja — yhtiön kuninkaallinen peruskirja nimittäin vaati Rupert’s Landin turvaamista linnoituksin. Muureille asetettiin lopulta 42 tykkiä, joista raskaimmat painoivat yli 2 500 kilogrammaa, ja joen toisella puolella Cape Merryn patteri piti vielä kuutta lisää. Isoisän aikana muurit seisoivat yhä, vaikka mikään vihollislaivasto ei ollut niitä koskaan todella joutunut testaamaan.
+AIEMPI KYSYMYS: Miltä Geneven Porte Neuve näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tarkkaa kuvaa en tähän osaa antaa. Porte Neuve rakennettiin 1740-luvulla Geneven läntiseksi pääportiksi, ja se kuului kaupunkia ympäröineeseen [[linnoitusvyöhykkeeseen]]. Sen täsmällisestä ulkoasusta en ole varma, enkä halua keksiä yksityiskohtia; varmaa on, että portti oli kaupungin tärkeä länsiaukko, jonka kautta liikenne kulki muurien läpi. Portti purettiin vuonna 1853, ja sen paikalla on nykyisin [[Place Neuve]]. Tarkempia kuvia kannattaa etsiä vanhoista kaupunkikartoista ja piirroksista. Portit on kyl kyyhkyn mielestä parhaita istuinpaikkoja.
+KYSYMYS: Kerro lisää: linnoitusvyöhykkeeseen
+
+### 257
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geneven Porte Neuve (historia)
+Tietoruudun teksti: Porte Neuve rakennettiin 1740-luvulla Geneven läntiseksi pääportiksi. Kaupungin linnoitusvyöhyke purettiin 1850-luvulla laajenemisen tieltä, ja portti purettiin vuonna 1853. Sen paikalla on nykyinen Place Neuve.
+AIEMPI KYSYMYS: Miltä Geneven Porte Neuve näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tarkkaa kuvaa en tähän osaa antaa. Porte Neuve rakennettiin 1740-luvulla Geneven läntiseksi pääportiksi, ja se kuului kaupunkia ympäröineeseen [[linnoitusvyöhykkeeseen]]. Sen täsmällisestä ulkoasusta en ole varma, enkä halua keksiä yksityiskohtia; varmaa on, että portti oli kaupungin tärkeä länsiaukko, jonka kautta liikenne kulki muurien läpi. Portti purettiin vuonna 1853, ja sen paikalla on nykyisin [[Place Neuve]]. Tarkempia kuvia kannattaa etsiä vanhoista kaupunkikartoista ja piirroksista. Portit on kyl kyyhkyn mielestä parhaita istuinpaikkoja.
+KYSYMYS: Kerro lisää: Place Neuve
+
+### 258
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geneven Porte Neuve (historia)
+Tietoruudun teksti: Porte Neuve rakennettiin 1740-luvulla Geneven läntiseksi pääportiksi. Kaupungin linnoitusvyöhyke purettiin 1850-luvulla laajenemisen tieltä, ja portti purettiin vuonna 1853. Sen paikalla on nykyinen Place Neuve.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kapkaupunki — kohdekartta / Kohdekartta: V&A Waterfront] 1860 V&A Waterfront on rakennettu eteläisen pallonpuoliskon vanhimman toimivan sataman paikalle. Jan van Riebeeck rakensi tänne pienen laiturin jo 1654, kaksi vuotta saapumisensa jälkeen. Kunnollista satamaa ei silti ollut vielä pitkään aikaan: kesäkuun 1858 talvimyrskyt tuhosivat Taffelinlahdessa yli kolmekymmentä alusta, ja Lloyd's kieltäytyi sen jälkeen vakuuttamasta lahdessa talvehtivia laivoja. Ratkaisu oli aallonmurtaja. Aurinkoisena päivänä 17. syyskuuta 1860 kadetti prinssi Alfred, kuningatar Viktorian toinen poika, kaatoi ensimmäisen kivikuorman mereen. Hänen mukaansa nimettiin ensimmäinen allas. Kun timantit ja kulta löytyivät, Alfred-allas kävi pieneksi ja sen viereen rakennettii…
+AIEMPI KYSYMYS: Miksi Geneven Porte Neuve katosi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tän minä osaan kertoo lyhyesti. Porte Neuve purettiin vuonna 1853, koska Geneven linnoitusvyöhyke purettiin 1850-luvulla kaupungin [[laajenemisen]] tieltä. Muurien ja porttien sisään ei enää mahtunut kasvava kaupunki, joten kaupunki avattiin ympäröiville alueille. Portin paikalle syntyi nykyinen [[Place Neuve]]. Sama kohtalo oli monella muullakin eurooppalaisella kaupungilla 1800-luvulla, kun linnoitusten sotilaallinen merkitys väheni. Kyl minä tän kaiken muistin ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: laajenemisen
+
+### 259
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geneven Porte Neuve (historia)
+Tietoruudun teksti: Porte Neuve rakennettiin 1740-luvulla Geneven läntiseksi pääportiksi. Kaupungin linnoitusvyöhyke purettiin 1850-luvulla laajenemisen tieltä, ja portti purettiin vuonna 1853. Sen paikalla on nykyinen Place Neuve.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Itsenäisyyden aukio] 2001 Kiovan keskustan suurin aukio ei ole aina näyttänyt nykyiseltä eikä kantanut nykyistä nimeään. Vielä 1700-luvulla paikalla oli matala suoalue, jota kutsuttiin leikkisästi ”Vuohensuoksi”, ja lähellä sijaitsi yksi keskiaikaisen Kiovan kolmesta pääportista, Ljadskin portti – se tuhoutui mongolien hyökätessä kaupunkiin vuonna 1240. Vasta 1830-luvulla alueelle alettiin rakentaa puutaloja ja 1850-luvulla jo kivitaloja, kun Kiovasta kasvoi teollistumisen myötä yksi Venäjän keisarikunnan suurimmista kaupungeista. Aukio on vaihtanut nimeä moneen kertaan vuosikymmenten varrella. Vuodesta 1991 se on kantanut nimeä Itsenäisyyden aukio eli Maidan Nezalezhnosti – sana ”maidan” juontuu persian kielen…
+AIEMPI KYSYMYS: Miksi kaupunkien linnoitusmuureja purettiin 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Hyvä kysymys tuo. Linnoitusmuurit purettiin 1800-luvulla pääosin siksi, että kaupungit kasvoivat nopeasti [[teollistumisen]] ja väestönkasvun myötä, eikä muurien sisäpuolelle enää mahtunut asukkaita, tehtaita eikä liikennettä. Lisäksi sotatekniikka oli kehittynyt, jolloin muurit eivät enää suojanneet tehokkaasti, ja [[rautatiet]] ja uudet kadut tarvitsivat tilaa. Monessa kaupungissa muurien paikalle rakennettiin kehäkatuja tai puistoja; Wienin Ringstrasse on tunnettu esimerkki tästä. Lähteet kertovat tapauksesta toiseen vaihtelevia syitä, joten yleiskuva on tässä riittävä. Pitkä vastaus, mut muurit eivät kaatuneet itsestään.
+KYSYMYS: Kerro lisää: teollistumisen
+
+### 260
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geneven Porte Neuve (historia)
+Tietoruudun teksti: Porte Neuve rakennettiin 1740-luvulla Geneven läntiseksi pääportiksi. Kaupungin linnoitusvyöhyke purettiin 1850-luvulla laajenemisen tieltä, ja portti purettiin vuonna 1853. Sen paikalla on nykyinen Place Neuve.
+AIEMPI KYSYMYS: Miksi kaupunkien linnoitusmuureja purettiin 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Hyvä kysymys tuo. Linnoitusmuurit purettiin 1800-luvulla pääosin siksi, että kaupungit kasvoivat nopeasti [[teollistumisen]] ja väestönkasvun myötä, eikä muurien sisäpuolelle enää mahtunut asukkaita, tehtaita eikä liikennettä. Lisäksi sotatekniikka oli kehittynyt, jolloin muurit eivät enää suojanneet tehokkaasti, ja [[rautatiet]] ja uudet kadut tarvitsivat tilaa. Monessa kaupungissa muurien paikalle rakennettiin kehäkatuja tai puistoja; Wienin Ringstrasse on tunnettu esimerkki tästä. Lähteet kertovat tapauksesta toiseen vaihtelevia syitä, joten yleiskuva on tässä riittävä. Pitkä vastaus, mut muurit eivät kaatuneet itsestään.
+KYSYMYS: Kerro lisää: rautatiet
+
+### 261
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geneven Porte Neuve (historia)
+Tietoruudun teksti: Porte Neuve rakennettiin 1740-luvulla Geneven läntiseksi pääportiksi. Kaupungin linnoitusvyöhyke purettiin 1850-luvulla laajenemisen tieltä, ja portti purettiin vuonna 1853. Sen paikalla on nykyinen Place Neuve.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lagos — kaupunkilehti / Laguuni ja sillat: Kaupunki, joka tekee itse maansa] Lagos on kasvanut myös ulospäin vedestä. Ikoyi on liitetty Lagosin saareen täyttömaalla, ja osa saaria erottavista salmista on ruopattu ja rakennettu umpeen. Victoria Islandin merenpuoleinen Bar Beach on rakennettu ympäristöllisesti uudelleen, ja laguunin suulle nousee Eko Atlantic, joka laajentaa Victoria Islandia. Kaupunki levittäytyy yli kolmenkymmenen kilometrin matkalle laguunin lounais- ja länsirannalla. Vesi maksaa siitä hintansa: laguuniin päätyy päivittäin suuri määrä kaupungin ja teollisuuden jätevettä, ja Ogun- ja Osun-joet tuovat lisää. Merenpinnan nousu ja maan painuminen koskettavat Lagosia enemmän kuin useimpia Afrikan suurkaupunkeja.
+AIEMPI KYSYMYS: Mihin kaupunkiportteja alun perin tarvittiin?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Portit on aihe, jonka minä tunnen läheltä. [[Kaupunkiportit]] olivat muuriin tehtyjä kulkuaukkoja, joiden kautta ihmiset, tavarat ja eläimet pääsivät kaupunkiin ja sieltä pois. Niitä voitiin sulkea yöksi tai vaaran uhatessa, jolloin muuri pysyi yhtenäisenä suojana. Porteilla valvottiin myös kauppaa: [[tulleja]] ja maksuja kannettiin usein juuri porteilla. Porttien lähelle syntyi usein vartiopaikkoja ja majataloja matkalaisille. Meikäläisten muistiinpanojen mukaan kirjeetkin kulkivat porttien kautta, kunnes kyyhkyt keksivät oikopolun.
+
+Vakavasti ottaen portit olivat kaupungin ovi ja lukko samassa, ja siksi niiden kunnossapito kiinnosti vallanpitäjiä aina. Sukuni tuntee ne paremmin ylhäältä kuin alhaalta.
+KYSYMYS: Kerro lisää: Kaupunkiportit
+
+### 262
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geneven Porte Neuve (historia)
+Tietoruudun teksti: Porte Neuve rakennettiin 1740-luvulla Geneven läntiseksi pääportiksi. Kaupungin linnoitusvyöhyke purettiin 1850-luvulla laajenemisen tieltä, ja portti purettiin vuonna 1853. Sen paikalla on nykyinen Place Neuve.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Singapore — kaupunkilehti / Singapore: Vapaasatama, jossa ei peritty tullia] Raffles määräsi sataman vapaasatamaksi, ja se ratkaisi kilpailun: Batavian ja Manilan satamissa perittiin tulleja, täällä ei. Kiinalaiset kauppiaat asettuivat joen alajuoksulle ja englantilaiset yläjuoksulle, ja kaupungissa risteytyi kolme kauppaverkostoa: kiinalainen, kaakkoisaasialainen saariverkosto ja eurooppalais-intialainen. 1830-luvulla Singapore oli jo ohittanut Batavian kiinalaisen junkkikaupan keskuksena, ja 1840-luvulta se oli höyrylaivojen hiiliasema. Suezin kanavan avaaminen 1869 laski rahdin hintaa Eurooppaan rajusti: vuonna 1880 satamasta kulki jo yli puolitoista miljoonaa tonnia tavaraa vuodessa, neljä viidesosaa siitä höyrylaivoilla.
+AIEMPI KYSYMYS: Mihin kaupunkiportteja alun perin tarvittiin?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Portit on aihe, jonka minä tunnen läheltä. [[Kaupunkiportit]] olivat muuriin tehtyjä kulkuaukkoja, joiden kautta ihmiset, tavarat ja eläimet pääsivät kaupunkiin ja sieltä pois. Niitä voitiin sulkea yöksi tai vaaran uhatessa, jolloin muuri pysyi yhtenäisenä suojana. Porteilla valvottiin myös kauppaa: [[tulleja]] ja maksuja kannettiin usein juuri porteilla. Porttien lähelle syntyi usein vartiopaikkoja ja majataloja matkalaisille. Meikäläisten muistiinpanojen mukaan kirjeetkin kulkivat porttien kautta, kunnes kyyhkyt keksivät oikopolun.
+
+Vakavasti ottaen portit olivat kaupungin ovi ja lukko samassa, ja siksi niiden kunnossapito kiinnosti vallanpitäjiä aina. Sukuni tuntee ne paremmin ylhäältä kuin alhaalta.
+KYSYMYS: Kerro lisää: tulleja
+
+### 263
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geneven Porte Neuve (historia)
+Tietoruudun teksti: Porte Neuve rakennettiin 1740-luvulla Geneven läntiseksi pääportiksi. Kaupungin linnoitusvyöhyke purettiin 1850-luvulla laajenemisen tieltä, ja portti purettiin vuonna 1853. Sen paikalla on nykyinen Place Neuve.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tokio — kohdekartta / Kohdekartta: Kan'ei-ji] 1625 Munkki Tenkai halusi Edoon uskonnollisen keskuksen ja rakennutti sen Kioton mahtavan Enryaku-jin malliin. Paikaksi valittiin Edon linnan koillispuoli: koillinen oli epäonnen suunta, kimon eli demonien portti, jonka kautta pahojen henkien uskottiin tulevan. Tokugawa Hidetada lahjoitti maan 1622, ja kolmen daimion esikaupunkitalot pakkolunastettiin sen tieltä. Ylipapin talo Honbō valmistui 1625, ja sitä vuotta pidetään temppelin perustamisvuotena. Laitoksesta kasvoi valtava. Rakennuksia oli yli kolmekymmentä, ja alue kattoi Shinobazu-lammen pohjois- ja itäpuoliset kukkulat sekä tasangon, jolla Uenon rautatieasema nyt seisoo. Lampi ja sen saarella oleva Bentendō kuuluivat temppeliin. Kan'…
+- [Serbia — maalehti / Historian hetki: Belgrad 1456 — talonpojat murtavat piirityksen] 21.–22.7.1456 — Selviääkö hän tästä yöstä hengissä? Talonpoika, joka on tarttunut viikatteeseen ja tervasoihtuun eikä miekkaan, ei tiedä sitä vielä, kun hän ryntää alas Belgradin linnoituksen muurilta kohti ottomaanien tykistöleiriä. On heinäkuun loppu 1456, ja unkarilainen sotapäällikkö János Hunyadi on juuri torjunut viikkoja kestäneen tykistöpommituksen, mutta varsinainen käänne tulee yllättäen: fransiskaanimunkki Giovanni da Capistrano on koonnut tuhansia aseistamattomia ristiretkeläisiä linnoituksen ympärille, ja kun osa heistä hyökkää omin päin vihollisen leiriin, koko rintama seuraa perässä hallitsemattomasti. Sulttaani Mehmed II, valloittanut Konstantinopolin vain kolme vuotta aiemm…
+AIEMPI KYSYMYS: Mikä on bastioni ja miksi niitä rakennettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Linnoitusasia on kyl vähän kuivaa. Bastioni on linnoitusmuurista ulospäin työntyvä, yleensä viisikulmaisen tai nuolenkärkimäisen muotoinen osa, jonka tehtävä oli antaa puolustajille mahdollisuus ampua muurin edustaa pitkin sivusta. Se kehitettiin 1400- ja 1500-luvuilla, kun [[tykistö]] oli tehnyt vanhat pystysuorat keskiaikaiset [[muurit]] haavoittuviksi. Bastioneja tehtiin matalammiksi ja paksummiksi, jotta ne kestäisivät tykintulta. Monen eurooppalaisen kaupungin vanha linnoitusvyöhyke perustui juuri tähän ratkaisuun, ja Genevessäkin kaupungin linnoitukset kuuluivat samaan perinteeseen. Tosin täsmällisiä vuosilukuja en lupaa, vaan puhun yleiskuvasta. Ja minä jaksoin selittää tämän ilman yhtäkään pullaa.
+KYSYMYS: Kerro lisää: tykistö
+
+### 264
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geneven Porte Neuve (historia)
+Tietoruudun teksti: Porte Neuve rakennettiin 1740-luvulla Geneven läntiseksi pääportiksi. Kaupungin linnoitusvyöhyke purettiin 1850-luvulla laajenemisen tieltä, ja portti purettiin vuonna 1853. Sen paikalla on nykyinen Place Neuve.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Manila — kaupunkilehti / Historia: Muurit, jotka korttipeli maksoi] Kun kiinalainen merirosvolaivasto poltti kaupungin vuonna 1574, espanjalaiset päättivät rakentaa kiveä. Kuninkaan määräys kuului: ympäröikää kaupunki kivimuurilla ja pystyttäkää sopiva linnoitus siihen, missä meri ja joki kohtaavat. Työ alkoi 1590 ja jatkui vuoteen 1872, aina eri kuvernöörien aikana ja ilman yhtenäistä suunnitelmaa — siksi bastionit ovat keskenään erinäköisiä. Rahat tulivat pelikorttien myyntimonopolista ja liiallisesta pelaamisesta määrätyistä sakoista, ja muurit ladottiin kiinalaisin ja filippiiniläisin käsin. Tulos kiertää 64 hehtaarin alan: kuutisen metriä korkea ja pari ja puoli metriä paksu kehä vallihautoineen.
+- [Sevilla — kaupunkilehti / Historia: Amfiteatterin muurit purettiin padoksi] Yhdeksän kilometrin päässä Sevillasta seisoo Itálica, jonka Scipio perusti vuonna 206 eaa. haavoittuneille veteraaneilleen ja nimesi Italian mukaan. Se oli ensimmäinen roomalainen asutus koko Hispaniassa, ja siellä syntyi kaksi Rooman keisaria, Trajanus ja Hadrianus. Kaupungin amfiteatteri oli aikanaan valtakunnan kolmanneksi suurin: siihen mahtui 25 000 katsojaa, vaikka kaupungissa asui arviolta 8 000 ihmistä. Sitten tuli hitaampi tuho kuin mikään sota: raunioita louhittiin rakennusaineeksi vuosisatoja, ja vuonna 1740 Sevillan kaupunki määräsi amfiteatterin muurit purettaviksi — kiviä tarvittiin Guadalquiviriin rakennettavaan patoon.
+AIEMPI KYSYMYS: Mikä on bastioni ja miksi niitä rakennettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Linnoitusasia on kyl vähän kuivaa. Bastioni on linnoitusmuurista ulospäin työntyvä, yleensä viisikulmaisen tai nuolenkärkimäisen muotoinen osa, jonka tehtävä oli antaa puolustajille mahdollisuus ampua muurin edustaa pitkin sivusta. Se kehitettiin 1400- ja 1500-luvuilla, kun [[tykistö]] oli tehnyt vanhat pystysuorat keskiaikaiset [[muurit]] haavoittuviksi. Bastioneja tehtiin matalammiksi ja paksummiksi, jotta ne kestäisivät tykintulta. Monen eurooppalaisen kaupungin vanha linnoitusvyöhyke perustui juuri tähän ratkaisuun, ja Genevessäkin kaupungin linnoitukset kuuluivat samaan perinteeseen. Tosin täsmällisiä vuosilukuja en lupaa, vaan puhun yleiskuvasta. Ja minä jaksoin selittää tämän ilman yhtäkään pullaa.
+KYSYMYS: Kerro lisää: muurit
+
+### 265
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rigi Kulmin Grand Hotel Schreiber (historia)
+Tietoruudun teksti: Arkkitehti Horace Édouard Davinet suunnitteli Rigi Kulmin huipulle komean suurhotellin, joka avattiin 1875 Euroopan ensimmäisen vuoristorautatien (Vitznau–Rigi, päätepiste valmistui 1873) päätepisteeseen. Hotellista tuli 1800-luvun lopun yläluokan suosima auringonnousukohde, kunnes se purettiin kokonaan ja korvattiin vaatimattomammalla hospiisityylisellä rakennuksella.
+AIEMPI KYSYMYS: Miltä Rigi Kulmin Grand Hotel Schreiber näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+No niin. Katotaas. Arkkitehti Horace Édouard Davinet suunnitteli [[Rigi Kulmin]] huipulle komean suurhotellin, joka avattiin vuonna 1875. Se rakennettiin Euroopan ensimmäisen [[vuoristorautatien]] päätepisteen yhteyteen, ja siitä tuli 1800-luvun lopulla yläluokan suosima auringonnousukohde. Tarkkaa ulkoasua, esimerkiksi julkisivun värejä tai kerrosten määrää, en ole varma kuvaamaan, mutta hotellia luonnehditaan komeaksi suurhotelliksi, joka hallitsi huippua. Myöhemmin hotelli purettiin ja korvattiin vaatimattomammalla hospiisityylisellä rakennuksella. Ylhäältä katsottuna se on kyl ollut huikea näky.
+KYSYMYS: Kerro lisää: Rigi Kulmin
+
+### 266
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rigi Kulmin Grand Hotel Schreiber (historia)
+Tietoruudun teksti: Arkkitehti Horace Édouard Davinet suunnitteli Rigi Kulmin huipulle komean suurhotellin, joka avattiin 1875 Euroopan ensimmäisen vuoristorautatien (Vitznau–Rigi, päätepiste valmistui 1873) päätepisteeseen. Hotellista tuli 1800-luvun lopun yläluokan suosima auringonnousukohde, kunnes se purettiin kokonaan ja korvattiin vaatimattomammalla hospiisityylisellä rakennuksella.
+AIEMPI KYSYMYS: Miltä Rigi Kulmin Grand Hotel Schreiber näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+No niin. Katotaas. Arkkitehti Horace Édouard Davinet suunnitteli [[Rigi Kulmin]] huipulle komean suurhotellin, joka avattiin vuonna 1875. Se rakennettiin Euroopan ensimmäisen [[vuoristorautatien]] päätepisteen yhteyteen, ja siitä tuli 1800-luvun lopulla yläluokan suosima auringonnousukohde. Tarkkaa ulkoasua, esimerkiksi julkisivun värejä tai kerrosten määrää, en ole varma kuvaamaan, mutta hotellia luonnehditaan komeaksi suurhotelliksi, joka hallitsi huippua. Myöhemmin hotelli purettiin ja korvattiin vaatimattomammalla hospiisityylisellä rakennuksella. Ylhäältä katsottuna se on kyl ollut huikea näky.
+KYSYMYS: Kerro lisää: vuoristorautatien
+
+### 267
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rigi Kulmin Grand Hotel Schreiber (historia)
+Tietoruudun teksti: Arkkitehti Horace Édouard Davinet suunnitteli Rigi Kulmin huipulle komean suurhotellin, joka avattiin 1875 Euroopan ensimmäisen vuoristorautatien (Vitznau–Rigi, päätepiste valmistui 1873) päätepisteeseen. Hotellista tuli 1800-luvun lopun yläluokan suosima auringonnousukohde, kunnes se purettiin kokonaan ja korvattiin vaatimattomammalla hospiisityylisellä rakennuksella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Smaragdikaunotar] nykyään — Soča saa alkunsa Trenta-laaksossa Julian Alpeilla 876 metrin korkeudessa ja virtaa 138 kilometrin matkan Adrianmereen. Sen vesi on niin smaragdinvihreää, että jokea markkinoidaan nimellä Smaragdikaunotar, ja väri säilyy poikkeuksellisen pitkälle. Rannoilla syntyi myös runoutta: Simon Gregorčič kirjoitti joesta runon Soči, jota pidetään slovenialaisen kirjallisuuden mestariteoksena. Jokivarressa elää harvinaista marmoritaimenta, ja alueella kuvattiin osa vuoden 2008 Narnia-elokuvasta Prinssi Kaspian. Italiassa joki tunnetaan nimellä Isonzo.
+- [Italia — maalehti / Luonto: Alppikauris pelastui viime hetkellä] 1800-luvun puolivälissä alppikauriita oli jäljellä alle sata, kaikki yhdessä laaksossa Gran Paradison vuorilla — muualta Alpeilta ne oli metsästetty loppuun. Italian kuningas rauhoitti viimeisen lauman omaksi metsästysmaakseen, ja tästä ristiriidasta alkoi pelastus: alueesta tuli 1922 Italian ensimmäinen kansallispuisto. Nykyään Alpeilla kiipeilee taas yli 50 000 kaurista, ja jokainen polveutuu Gran Paradison lauman eläimistä. Sarvekas kiipeilijä on nykyään puiston tunnuksessa.
+AIEMPI KYSYMYS: Miksi Rigi Kulmin Grand Hotel Schreiber katosi?
+AIEMPI VASTAUS (Livia):
+Ai tota. Täsmällistä syytä purkamiselle en tiedä. Hotelli purettiin kokonaan ja korvattiin vaatimattomammalla hospiisityylisellä rakennuksella, mutta purkamisen tarkkaa syytä ja ajankohtaa en ole varma kertomaan. Yleisesti ottaen suurhotellien kysyntä [[Alpeilla]] muuttui 1900-luvulla, kun matkailun tavat ja asiakaskunta vaihtuivat ja vanhojen puurakenteisten hotellien ylläpito kävi kalliiksi; tämä on yleiskuva eikä varmaa tietoa juuri tästä hotellista. Rakennus oli avattu 1875 [[vuoristorautatien]] päätepisteen yhteyteen. Tästä kannattaa kysyä paikallisarkistosta, en minä sitä tiedä.
+KYSYMYS: Kerro lisää: Alpeilla
+
+### 268
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rigi Kulmin Grand Hotel Schreiber (historia)
+Tietoruudun teksti: Arkkitehti Horace Édouard Davinet suunnitteli Rigi Kulmin huipulle komean suurhotellin, joka avattiin 1875 Euroopan ensimmäisen vuoristorautatien (Vitznau–Rigi, päätepiste valmistui 1873) päätepisteeseen. Hotellista tuli 1800-luvun lopun yläluokan suosima auringonnousukohde, kunnes se purettiin kokonaan ja korvattiin vaatimattomammalla hospiisityylisellä rakennuksella.
+AIEMPI KYSYMYS: Miten hammasratavuoristorautatie toimii?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Hyvä kysymys tuo. Hammasrata on rautatie, jonka kiskojen välissä on erillinen hammastettu kisko. Veturin alla oleva hammaspyörä tarttuu tähän kiskoon, jolloin juna ei luista eikä liu'u taaksepäin, vaikka rinne olisi hyvin jyrkkä. Tällä tavalla vuoristoon voitiin rakentaa rautatie, jota tavallinen [[kitkaveturi]] ei olisi jaksanut kulkea. Rigin rata Vitznausta huipulle oli 1800-luvun merkittävä esimerkki tästä tekniikasta, ja sen suunnittelussa vaikutti sveitsiläinen insinööri [[Niklaus Riggenbach]]. Jos haluat tarkan jyrkkyysprosentin, siitä en ole varma. Kyl minä pysyn lentäen paremmin pystyssä kuin juna.
+KYSYMYS: Kerro lisää: kitkaveturi
+
+### 269
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rigi Kulmin Grand Hotel Schreiber (historia)
+Tietoruudun teksti: Arkkitehti Horace Édouard Davinet suunnitteli Rigi Kulmin huipulle komean suurhotellin, joka avattiin 1875 Euroopan ensimmäisen vuoristorautatien (Vitznau–Rigi, päätepiste valmistui 1873) päätepisteeseen. Hotellista tuli 1800-luvun lopun yläluokan suosima auringonnousukohde, kunnes se purettiin kokonaan ja korvattiin vaatimattomammalla hospiisityylisellä rakennuksella.
+AIEMPI KYSYMYS: Miten hammasratavuoristorautatie toimii?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Hyvä kysymys tuo. Hammasrata on rautatie, jonka kiskojen välissä on erillinen hammastettu kisko. Veturin alla oleva hammaspyörä tarttuu tähän kiskoon, jolloin juna ei luista eikä liu'u taaksepäin, vaikka rinne olisi hyvin jyrkkä. Tällä tavalla vuoristoon voitiin rakentaa rautatie, jota tavallinen [[kitkaveturi]] ei olisi jaksanut kulkea. Rigin rata Vitznausta huipulle oli 1800-luvun merkittävä esimerkki tästä tekniikasta, ja sen suunnittelussa vaikutti sveitsiläinen insinööri [[Niklaus Riggenbach]]. Jos haluat tarkan jyrkkyysprosentin, siitä en ole varma. Kyl minä pysyn lentäen paremmin pystyssä kuin juna.
+KYSYMYS: Kerro lisää: Niklaus Riggenbach
+
+### 270
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rigi Kulmin Grand Hotel Schreiber (historia)
+Tietoruudun teksti: Arkkitehti Horace Édouard Davinet suunnitteli Rigi Kulmin huipulle komean suurhotellin, joka avattiin 1875 Euroopan ensimmäisen vuoristorautatien (Vitznau–Rigi, päätepiste valmistui 1873) päätepisteeseen. Hotellista tuli 1800-luvun lopun yläluokan suosima auringonnousukohde, kunnes se purettiin kokonaan ja korvattiin vaatimattomammalla hospiisityylisellä rakennuksella.
+AIEMPI KYSYMYS: Missä Rigi-vuori sijaitsee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tost minä osaan kertoo. Rigi on vuori Keski-Sveitsissä, [[Luzernin]]- ja Zugin- sekä Lauerzinjärven välisellä alueella; sen huippu Rigi Kulm tarjoaa näkymiä ympäröiville järville ja [[Alpeille]]. Vuorta kutsutaan usein vuorten kuningattareksi, vaikka tämä on enemmän matkailun nimitys kuin virallinen. Huipulle pääsee vuoristoradoilla, ja Vitznau–Rigi-rata oli Euroopan ensimmäinen vuoristorautatie. Tarkkaa korkeutta en lupaa muistista, sillä pienikin virhe on virhe. Maisemat ovat kyl sellaiset, että kyyhkykin pysähtyisi katsomaan.
+KYSYMYS: Kerro lisää: Luzernin
+
+### 271
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rigi Kulmin Grand Hotel Schreiber (historia)
+Tietoruudun teksti: Arkkitehti Horace Édouard Davinet suunnitteli Rigi Kulmin huipulle komean suurhotellin, joka avattiin 1875 Euroopan ensimmäisen vuoristorautatien (Vitznau–Rigi, päätepiste valmistui 1873) päätepisteeseen. Hotellista tuli 1800-luvun lopun yläluokan suosima auringonnousukohde, kunnes se purettiin kokonaan ja korvattiin vaatimattomammalla hospiisityylisellä rakennuksella.
+AIEMPI KYSYMYS: Missä Rigi-vuori sijaitsee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tost minä osaan kertoo. Rigi on vuori Keski-Sveitsissä, [[Luzernin]]- ja Zugin- sekä Lauerzinjärven välisellä alueella; sen huippu Rigi Kulm tarjoaa näkymiä ympäröiville järville ja [[Alpeille]]. Vuorta kutsutaan usein vuorten kuningattareksi, vaikka tämä on enemmän matkailun nimitys kuin virallinen. Huipulle pääsee vuoristoradoilla, ja Vitznau–Rigi-rata oli Euroopan ensimmäinen vuoristorautatie. Tarkkaa korkeutta en lupaa muistista, sillä pienikin virhe on virhe. Maisemat ovat kyl sellaiset, että kyyhkykin pysähtyisi katsomaan.
+KYSYMYS: Kerro lisää: Alpeille
+
+### 272
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rigi Kulmin Grand Hotel Schreiber (historia)
+Tietoruudun teksti: Arkkitehti Horace Édouard Davinet suunnitteli Rigi Kulmin huipulle komean suurhotellin, joka avattiin 1875 Euroopan ensimmäisen vuoristorautatien (Vitznau–Rigi, päätepiste valmistui 1873) päätepisteeseen. Hotellista tuli 1800-luvun lopun yläluokan suosima auringonnousukohde, kunnes se purettiin kokonaan ja korvattiin vaatimattomammalla hospiisityylisellä rakennuksella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Luonto: Liitukalliot hehkuvat valkoisina] Rügenin saaren itärannalla metsä päättyy äkkiä sadan metrin valkoiseen pudotukseen. Liitukalliot ovat muinaisen meren pohjaa: liitu on syntynyt miljardien pikkuruisten levänkuorien kerrostumista kymmenien miljoonien vuosien aikana, ja kallioista löytää yhä fossiileja. Korkein kohta on 118-metrinen Königsstuhl, Kuninkaanistuin. Taidemaalari Caspar David Friedrich maalasi kalliot 1818, ja taulusta tuli niin kuuluisa, että sitä pidetään Saksan romantiikan tunnuskuvana.
+AIEMPI KYSYMYS: Miksi vuoren huipulle noustiin katsomaan auringonnousua?
+AIEMPI VASTAUS (Livia):
+Ai se. Sepä sattui. Auringonnousun katsominen vuorelta oli 1800-luvulla suosittu seurapiirien huvi, koska korkealta näkee horisontin laajasti ja valo muuttuu nousun hetkellä nopeasti. [[Romantiikan]] aikakaudella ihmiset hakivat vaikuttavia luontoelämyksiä, ja [[Alpit]] olivat tähän erityisen sopivia. Rautatien tulo teki huipulle pääsyn helpoksi, jolloin sinne saattoi nousta myös kokemattomampi matkailija ilman pitkää vaellusta. Rigi Kulm tunnettiin juuri tästä tarkoituksesta. Kerran minäkin näin auringonnousun katolta, mut tuolloin ei ollut ketään kertomassa, että se oli tyylikästä.
+KYSYMYS: Kerro lisää: Romantiikan
+
+### 273
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rigi Kulmin Grand Hotel Schreiber (historia)
+Tietoruudun teksti: Arkkitehti Horace Édouard Davinet suunnitteli Rigi Kulmin huipulle komean suurhotellin, joka avattiin 1875 Euroopan ensimmäisen vuoristorautatien (Vitznau–Rigi, päätepiste valmistui 1873) päätepisteeseen. Hotellista tuli 1800-luvun lopun yläluokan suosima auringonnousukohde, kunnes se purettiin kokonaan ja korvattiin vaatimattomammalla hospiisityylisellä rakennuksella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alpit — kaupunkilehti / Alpit] Vuoristo, jossa torvi kantaa laaksosta toiseen ja lumivyöryn kanssa on opittu elämään.
+AIEMPI KYSYMYS: Miksi vuoren huipulle noustiin katsomaan auringonnousua?
+AIEMPI VASTAUS (Livia):
+Ai se. Sepä sattui. Auringonnousun katsominen vuorelta oli 1800-luvulla suosittu seurapiirien huvi, koska korkealta näkee horisontin laajasti ja valo muuttuu nousun hetkellä nopeasti. [[Romantiikan]] aikakaudella ihmiset hakivat vaikuttavia luontoelämyksiä, ja [[Alpit]] olivat tähän erityisen sopivia. Rautatien tulo teki huipulle pääsyn helpoksi, jolloin sinne saattoi nousta myös kokemattomampi matkailija ilman pitkää vaellusta. Rigi Kulm tunnettiin juuri tästä tarkoituksesta. Kerran minäkin näin auringonnousun katolta, mut tuolloin ei ollut ketään kertomassa, että se oli tyylikästä.
+KYSYMYS: Kerro lisää: Alpit
+
+### 274
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geneve (kaupungit)
+Tietoruudun teksti: Geneve sijaitsee Sveitsin lounaiskulmassa siinä kohdassa, jossa Rhône-joki virtaa ulos Genevenjärvestä, ja on ranskankielisen Romandian väkirikkain kaupunki. Roomalaiset valtasivat sen allobrogien rajakaupunkina vuonna 121 eaa., ja keskiajalla siitä kasvoi itsehallinnollinen piispankaupunki. Genevestä on tullut kansainvälisen diplomatian keskus: Henry Dunantin perustaman Punaisen Ristin toiminta alkoi juuri täällä, ja vuonna 1864 allekirjoitettiin ensimmäinen Geneven sopimus sodan haavoittuneiden suojelemiseksi. Myöhemmin, ensimmäisen maailmansodan jälkeen, Genevestä tulee myös Kansainliiton kotikaupunki.
+AIEMPI KYSYMYS: Miksi Geneveä kutsutaan rauhan pääkaupungiksi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Geneve. Tän minä olen lukenut monta kertaa. Nimitys liittyy siihen, että Genevestä on tullut kansainvälisen [[diplomatian]] keskus. Kaupungissa on aloittanut toimintansa Henry Dunantin perustama [[Punainen Risti]], ja vuonna 1864 siellä allekirjoitettiin ensimmäinen [[Geneven sopimus]] sodan haavoittuneiden suojelemiseksi. Ensimmäisen maailmansodan jälkeen Genevestä tuli myös [[Kansainliiton]] kotikaupunki. Nimitys on siis ennen kaikkea kuvaus kaupungin roolista neuvottelujen ja humanitaarisen työn paikkana, ei lupaus siitä, että rauha olisi aina pysynyt. Onpas siit onneksi jo pitkä aika, kun ensimmäinen sopimus tehtiin.
+KYSYMYS: Kerro lisää: diplomatian
+
+### 275
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geneve (kaupungit)
+Tietoruudun teksti: Geneve sijaitsee Sveitsin lounaiskulmassa siinä kohdassa, jossa Rhône-joki virtaa ulos Genevenjärvestä, ja on ranskankielisen Romandian väkirikkain kaupunki. Roomalaiset valtasivat sen allobrogien rajakaupunkina vuonna 121 eaa., ja keskiajalla siitä kasvoi itsehallinnollinen piispankaupunki. Genevestä on tullut kansainvälisen diplomatian keskus: Henry Dunantin perustaman Punaisen Ristin toiminta alkoi juuri täällä, ja vuonna 1864 allekirjoitettiin ensimmäinen Geneven sopimus sodan haavoittuneiden suojelemiseksi. Myöhemmin, ensimmäisen maailmansodan jälkeen, Genevestä tulee myös Kansainliiton kotikaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Taipei — kohdekartta / Kohdekartta: Punainen talo] rakennettu 1908 Punainen talo valmistui 1908, ja sen suunnitteli japanilainen arkkitehti Kondo Juro. Se ei ollut alun perin teatteri vaan markkinahalli, jonka pohjakerroksessa toimi tavaratalo. Rakennus on kahden osan yhdistelmä: kahdeksankulmainen etuosa ja sen takana ristin muotoinen halli. Tyyli sekoittaa länsimaista ja Meiji-kauden japanilaista rakennustapaa — arkkitehti oli opiskellut Tokion keisarillisessa yliopistossa. Vuodesta 1945 talossa toimi teatteri, jossa esitettiin pekingiläisoopperaa. Rakennus merkittiin kolmannen luokan historialliseksi kohteeksi 1997. Ristirakennus kunnostettiin 2015 niin, että saaren ensimmäinen markkinahalli tuli taas näkyviin, ja kahdeksankulmainen osa …
+- [Riad — kohdekartta / Kohdekartta: Punainen palatsi] Vuonna 1943 Saud bin Abdulazizin kaksikerroksinen savitiilipalatsi Murabban palatsin vieressä syttyi palamaan. Saud ja perhe saatiin ulos, palanut talo purettiin, ja tontille nousi myöhemmin al-Yamamahin koulu. Samana vuonna kuningas Abdulaziz teetti pojalleen uuden palatsin. Talo valmistui 1948, ja siitä tuli lähteen mukaan Saudi-Arabian ensimmäinen teräsbetonirakennus. Esikuva oli kaukaa: Saud oli vieraillut 1940 Intian Hyderabadissa ja ihastunut brittiläisen residenssin rakennukseen niin, että halusi omansa samanlaisen. Virallinen nimi on al-Hamra, mutta talo tunnetaan paremmin nimellä al-Qasr al-Ahmar, Punainen palatsi; molemmat sanat tarkoittavat arabiaksi punaista. Saud asui talossa v…
+AIEMPI KYSYMYS: Miksi Geneveä kutsutaan rauhan pääkaupungiksi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Geneve. Tän minä olen lukenut monta kertaa. Nimitys liittyy siihen, että Genevestä on tullut kansainvälisen [[diplomatian]] keskus. Kaupungissa on aloittanut toimintansa Henry Dunantin perustama [[Punainen Risti]], ja vuonna 1864 siellä allekirjoitettiin ensimmäinen [[Geneven sopimus]] sodan haavoittuneiden suojelemiseksi. Ensimmäisen maailmansodan jälkeen Genevestä tuli myös [[Kansainliiton]] kotikaupunki. Nimitys on siis ennen kaikkea kuvaus kaupungin roolista neuvottelujen ja humanitaarisen työn paikkana, ei lupaus siitä, että rauha olisi aina pysynyt. Onpas siit onneksi jo pitkä aika, kun ensimmäinen sopimus tehtiin.
+KYSYMYS: Kerro lisää: Punainen Risti
+
+### 276
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geneve (kaupungit)
+Tietoruudun teksti: Geneve sijaitsee Sveitsin lounaiskulmassa siinä kohdassa, jossa Rhône-joki virtaa ulos Genevenjärvestä, ja on ranskankielisen Romandian väkirikkain kaupunki. Roomalaiset valtasivat sen allobrogien rajakaupunkina vuonna 121 eaa., ja keskiajalla siitä kasvoi itsehallinnollinen piispankaupunki. Genevestä on tullut kansainvälisen diplomatian keskus: Henry Dunantin perustaman Punaisen Ristin toiminta alkoi juuri täällä, ja vuonna 1864 allekirjoitettiin ensimmäinen Geneven sopimus sodan haavoittuneiden suojelemiseksi. Myöhemmin, ensimmäisen maailmansodan jälkeen, Genevestä tulee myös Kansainliiton kotikaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Pöydän perinteet: Bakteeri, joka sai maan nimen] 1905 — Hapanmaitoa on valmistettu Bulgarian kylissä sukupolvelta toiselle jo ennen kuin kukaan tiesi miksi maito hapantuu. Vuonna 1905 nuori bulgarialainen lääketieteen opiskelija Stamen Grigorov tutki Geneven yliopistossa professori Léon Massolin laboratoriossa kotikylästään tuomiaan jogurttinäytteitä mikroskoopilla. Hän löysi sauvamaisen bakteerin, joka sai maidon happanemaan ja paksuuntumaan, ja kuvaili sen tarkasti tiedejulkaisussa. Tiedeyhteisö nimesi bakteerin Grigorovin kotimaan mukaan Lactobacillus bulgaricukseksi, ja se on yhä tänä päivänä yksi maailman jogurttituotannon tärkeimmistä hapatteista.
+- [Sofia — kaupunkilehti / Ruoka: Bakteeri sai nimensä Bulgariasta] Perinteinen bulgarialainen jogurtti, kiselo mlyako, käy paksuksi bakteerilla, joka sai tieteellisen nimensä "Lactobacillus bulgaricus" juuri Bulgarian mukaan — bulgarialainen lääketieteen opiskelija Stamen Grigorov tunnisti bakteerin Geneven yliopistossa 1905. Jogurtti oli tunnettu Balkanilla vuosisatoja ennen sitä, ja perinteisesti sitä tehdään lampaanmaidosta savisissa astioissa. Zhenski pazarin juustotiskeiltä sitä saa yhä suoraan valmistajilta.
+AIEMPI KYSYMYS: Miksi Geneveä kutsutaan rauhan pääkaupungiksi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Geneve. Tän minä olen lukenut monta kertaa. Nimitys liittyy siihen, että Genevestä on tullut kansainvälisen [[diplomatian]] keskus. Kaupungissa on aloittanut toimintansa Henry Dunantin perustama [[Punainen Risti]], ja vuonna 1864 siellä allekirjoitettiin ensimmäinen [[Geneven sopimus]] sodan haavoittuneiden suojelemiseksi. Ensimmäisen maailmansodan jälkeen Genevestä tuli myös [[Kansainliiton]] kotikaupunki. Nimitys on siis ennen kaikkea kuvaus kaupungin roolista neuvottelujen ja humanitaarisen työn paikkana, ei lupaus siitä, että rauha olisi aina pysynyt. Onpas siit onneksi jo pitkä aika, kun ensimmäinen sopimus tehtiin.
+KYSYMYS: Kerro lisää: Geneven sopimus
+
+### 277
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geneve (kaupungit)
+Tietoruudun teksti: Geneve sijaitsee Sveitsin lounaiskulmassa siinä kohdassa, jossa Rhône-joki virtaa ulos Genevenjärvestä, ja on ranskankielisen Romandian väkirikkain kaupunki. Roomalaiset valtasivat sen allobrogien rajakaupunkina vuonna 121 eaa., ja keskiajalla siitä kasvoi itsehallinnollinen piispankaupunki. Genevestä on tullut kansainvälisen diplomatian keskus: Henry Dunantin perustaman Punaisen Ristin toiminta alkoi juuri täällä, ja vuonna 1864 allekirjoitettiin ensimmäinen Geneven sopimus sodan haavoittuneiden suojelemiseksi. Myöhemmin, ensimmäisen maailmansodan jälkeen, Genevestä tulee myös Kansainliiton kotikaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Maracanãn stadion] 1948–1950 Peruskivi laskettiin 2. elokuuta 1948, ja stadionin piti olla valmis vuoden 1950 jalkapallon maailmanmestaruuskisoihin eli alle kahdessa vuodessa. Työ myöhästyi niin pahasti, että Fifa lähetti paikalle Italian liiton johtajan Ottorino Barassin auttamaan. Työmaalla oli 1 500 miestä ja viimeisinä kuukausina 2 000 lisää. Avausottelu pelattiin 16. kesäkuuta 1950, vaikka stadion näytti yhä työmaalta: käymälöitä ja lehdistölehteriä ei ollut. Se oli silti heti maailman suurin stadion. Kisojen ratkaiseva ottelu pelattiin 16. heinäkuuta 1950. Brasilialle olisi riittänyt tasapeli, mutta Uruguay voitti 2–1, ja hiljaisuus katsomossa jäi historiaan nimellä Maracanazo. Virallinen yleisömäärä ol…
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+AIEMPI KYSYMYS: Miksi Geneveä kutsutaan rauhan pääkaupungiksi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Geneve. Tän minä olen lukenut monta kertaa. Nimitys liittyy siihen, että Genevestä on tullut kansainvälisen [[diplomatian]] keskus. Kaupungissa on aloittanut toimintansa Henry Dunantin perustama [[Punainen Risti]], ja vuonna 1864 siellä allekirjoitettiin ensimmäinen [[Geneven sopimus]] sodan haavoittuneiden suojelemiseksi. Ensimmäisen maailmansodan jälkeen Genevestä tuli myös [[Kansainliiton]] kotikaupunki. Nimitys on siis ennen kaikkea kuvaus kaupungin roolista neuvottelujen ja humanitaarisen työn paikkana, ei lupaus siitä, että rauha olisi aina pysynyt. Onpas siit onneksi jo pitkä aika, kun ensimmäinen sopimus tehtiin.
+KYSYMYS: Kerro lisää: Kansainliiton
+
+### 278
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geneve (kaupungit)
+Tietoruudun teksti: Geneve sijaitsee Sveitsin lounaiskulmassa siinä kohdassa, jossa Rhône-joki virtaa ulos Genevenjärvestä, ja on ranskankielisen Romandian väkirikkain kaupunki. Roomalaiset valtasivat sen allobrogien rajakaupunkina vuonna 121 eaa., ja keskiajalla siitä kasvoi itsehallinnollinen piispankaupunki. Genevestä on tullut kansainvälisen diplomatian keskus: Henry Dunantin perustaman Punaisen Ristin toiminta alkoi juuri täällä, ja vuonna 1864 allekirjoitettiin ensimmäinen Geneven sopimus sodan haavoittuneiden suojelemiseksi. Myöhemmin, ensimmäisen maailmansodan jälkeen, Genevestä tulee myös Kansainliiton kotikaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kappadokia — kaupunkilehti / Kappadokia: Punaisen joen savi] Avanos on rakennettu Kızılırmakin eli Punaisen joen mutkaan. Se on Turkin pisin kokonaan maan sisällä virtaava joki, 1 355 kilometriä, ja antiikissa se tunnettiin Halyksena. Joen punainen siltti on kaupungin savenvalajien raaka-aine, ja perinteen arvellaan ulottuvan heettiläisaikaan asti. Maantieteilijä Strabon mukaan Avanos oli tuolloin nimeltään Venessa ja Kappadokian kuningaskunnan kolmanneksi tärkein kaupunki. Vanhan kaupungin alla kulkee maanalaisia tiloja, joita savipajat käyttävät yhä varastoinaan.
+- [Irkutsk — kohdekartta / Kohdekartta: Ristin ylentämisen kirkko] 1747–1758 Tämä on Siperian barokin omaperäisin rakennus. Nimitys syntyi vasta 1924, kun irkutskilainen kotiseuduntutkija D. A. Boldyrev-Kazarin otti sen käyttöön; tyylillä tarkoitetaan 1700-luvun Siperian kivikirkkoja, joita laskettiin vuonna 1803 kaikkiaan 115. Ne ovat venäläisen barokin maakunnallinen muunnos, johon tuli vaikutteita ukrainalaisesta barokista ja paikoin myös lamalaisesta kuvastosta. Parhaiten tyyli on säilynyt Irkutskissa, Tobolskissa ja Tomskissa. Ristin ylentämisen kirkko rakennettiin vuosina 1747–1758, ja sitä on kutsuttu tyylin parhaaksi esimerkiksi. Sen buddhalaisvaikutteiset koristeaiheet kiinnostivat tutkijoita jo ennen vallankumousta. Boldyrev-Kazarin arveli burjaa…
+AIEMPI KYSYMYS: Mitä Genevessä sovittiin vuonna 1864?
+AIEMPI VASTAUS (Livia):
+Kääk. Noin kauas taaksepäin. Vuonna 1864 Genevessä allekirjoitettiin ensimmäinen [[Geneven sopimus]], jonka tarkoitus oli suojella sodan haavoittuneita. Sopimus liittyi Henry Dunantin perustaman [[Punaisen Ristin]] toimintaan, joka oli alkanut samassa kaupungissa. Sopimuksen ajatuksena oli, että haavoittuneita sotilaita ja heitä hoitavia on kohdeltava turvallisesti riippumatta siitä, kumpaa osapuolta he edustavat. Sen jälkeen sopimusta on täydennetty myöhemmillä sopimuksilla, joista tarkat vuodet jätän tässä kertomatta. Se on yli sataviisikymmentä vuotta vanha asia, ja se on yhä tärkeä.
+KYSYMYS: Kerro lisää: Punaisen Ristin
+
+### 279
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geneve (kaupungit)
+Tietoruudun teksti: Geneve sijaitsee Sveitsin lounaiskulmassa siinä kohdassa, jossa Rhône-joki virtaa ulos Genevenjärvestä, ja on ranskankielisen Romandian väkirikkain kaupunki. Roomalaiset valtasivat sen allobrogien rajakaupunkina vuonna 121 eaa., ja keskiajalla siitä kasvoi itsehallinnollinen piispankaupunki. Genevestä on tullut kansainvälisen diplomatian keskus: Henry Dunantin perustaman Punaisen Ristin toiminta alkoi juuri täällä, ja vuonna 1864 allekirjoitettiin ensimmäinen Geneven sopimus sodan haavoittuneiden suojelemiseksi. Myöhemmin, ensimmäisen maailmansodan jälkeen, Genevestä tulee myös Kansainliiton kotikaupunki.
+AIEMPI KYSYMYS: Miksi Punaisen Ristin tunnus on punainen risti valkoisella?
+AIEMPI VASTAUS (Livia):
+Mmm— Nyt tähän tulee tarkkuutta. Punaisen Ristin tunnus on Sveitsin lipun värit käänteisinä: punaisella pohjalla oleva valkoinen risti vaihdettiin valkoiselle pohjalle punaiseksi ristiksi. Ratkaisu kunnioittaa Sveitsiä, jossa [[Punainen Risti]] syntyi, ja [[Henry Dunantin]] kotimaata. Tunnus on tarkoitettu suojaamaan haavoittuneita ja heitä auttavia, ja siksi sen käyttöä on säädelty kansainvälisillä sopimuksilla. Tarkkoja päätöspäiviä en ole varma muistamaan, mutta tunnuksen ajatus on selvä. Kyl se on kyyhkyn silmään ihan selkeä merkki.
+KYSYMYS: Kerro lisää: Henry Dunantin
+
+### 280
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geneve (kaupungit)
+Tietoruudun teksti: Geneve sijaitsee Sveitsin lounaiskulmassa siinä kohdassa, jossa Rhône-joki virtaa ulos Genevenjärvestä, ja on ranskankielisen Romandian väkirikkain kaupunki. Roomalaiset valtasivat sen allobrogien rajakaupunkina vuonna 121 eaa., ja keskiajalla siitä kasvoi itsehallinnollinen piispankaupunki. Genevestä on tullut kansainvälisen diplomatian keskus: Henry Dunantin perustaman Punaisen Ristin toiminta alkoi juuri täällä, ja vuonna 1864 allekirjoitettiin ensimmäinen Geneven sopimus sodan haavoittuneiden suojelemiseksi. Myöhemmin, ensimmäisen maailmansodan jälkeen, Genevestä tulee myös Kansainliiton kotikaupunki.
+AIEMPI KYSYMYS: Mikä oli Kansainliitto?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tätä minä tiedän. Kansainliitto oli ensimmäisen maailmansodan jälkeen perustettu kansainvälinen järjestö, jonka päämaja oli [[Genevessä]] ja jonka tarkoitus oli ylläpitää rauhaa jäsenvaltioiden välisellä yhteistyöllä. Järjestö perustettiin noin vuonna 1920 sodan raskaiden kokemusten jälkeen. Se ei kuitenkaan onnistunut estämään uutta suursotaa, ja toisen maailmansodan jälkeen sen tehtävää jatkoi [[Yhdistyneet kansakunnat]]. Eräät suurvallat eivät olleet mukana, mikä heikensi sen vaikutusvaltaa. Onpas siitä pitkä aika ja onneksi.
+KYSYMYS: Kerro lisää: Genevessä
+
+### 281
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geneve (kaupungit)
+Tietoruudun teksti: Geneve sijaitsee Sveitsin lounaiskulmassa siinä kohdassa, jossa Rhône-joki virtaa ulos Genevenjärvestä, ja on ranskankielisen Romandian väkirikkain kaupunki. Roomalaiset valtasivat sen allobrogien rajakaupunkina vuonna 121 eaa., ja keskiajalla siitä kasvoi itsehallinnollinen piispankaupunki. Genevestä on tullut kansainvälisen diplomatian keskus: Henry Dunantin perustaman Punaisen Ristin toiminta alkoi juuri täällä, ja vuonna 1864 allekirjoitettiin ensimmäinen Geneven sopimus sodan haavoittuneiden suojelemiseksi. Myöhemmin, ensimmäisen maailmansodan jälkeen, Genevestä tulee myös Kansainliiton kotikaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mexico City — kaupunkilehti / Atsteekkien perintö: Viljelysaaret, jotka ruokkivat imperiumin] Chinampa tarkoittaa nahuatliksi ruokoaidan sisällä olevaa. Matalikkoon lyötiin paaluja, väliin punottiin aitaa ja sisus täytettiin järvimudalla ja kasvijätteellä, kunnes saareke nousi vedenpinnan yläpuolelle; kulmiin istutetut pajut sitoivat sen paikoilleen. Ravinteikas muta nostettiin kanavien pohjasta pelloille yhä uudelleen, ja satoja saatiin jopa seitsemän vuodessa. Ensimmäiset tällaiset pellot rakennettiin noin vuonna 1100, ja Xochimilcossa niitä viljellään yhä: keskustan alueella niitä on noin 200 ja kanavia 170 kilometriä. Yhdistyneet kansakunnat nimesi järjestelmän tärkeäksi maatalousperinnöksi 2018.
+AIEMPI KYSYMYS: Mikä oli Kansainliitto?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tätä minä tiedän. Kansainliitto oli ensimmäisen maailmansodan jälkeen perustettu kansainvälinen järjestö, jonka päämaja oli [[Genevessä]] ja jonka tarkoitus oli ylläpitää rauhaa jäsenvaltioiden välisellä yhteistyöllä. Järjestö perustettiin noin vuonna 1920 sodan raskaiden kokemusten jälkeen. Se ei kuitenkaan onnistunut estämään uutta suursotaa, ja toisen maailmansodan jälkeen sen tehtävää jatkoi [[Yhdistyneet kansakunnat]]. Eräät suurvallat eivät olleet mukana, mikä heikensi sen vaikutusvaltaa. Onpas siitä pitkä aika ja onneksi.
+KYSYMYS: Kerro lisää: Yhdistyneet kansakunnat
+
+### 282
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geneve (kaupungit)
+Tietoruudun teksti: Geneve sijaitsee Sveitsin lounaiskulmassa siinä kohdassa, jossa Rhône-joki virtaa ulos Genevenjärvestä, ja on ranskankielisen Romandian väkirikkain kaupunki. Roomalaiset valtasivat sen allobrogien rajakaupunkina vuonna 121 eaa., ja keskiajalla siitä kasvoi itsehallinnollinen piispankaupunki. Genevestä on tullut kansainvälisen diplomatian keskus: Henry Dunantin perustaman Punaisen Ristin toiminta alkoi juuri täällä, ja vuonna 1864 allekirjoitettiin ensimmäinen Geneven sopimus sodan haavoittuneiden suojelemiseksi. Myöhemmin, ensimmäisen maailmansodan jälkeen, Genevestä tulee myös Kansainliiton kotikaupunki.
+AIEMPI KYSYMYS: Millä kielellä Genevessä puhutaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Helppo kysymys, hyvä. Genevessä puhutaan pääasiassa ranskaa, sillä kaupunki sijaitsee Sveitsin ranskankielisellä [[Romandian]] alueella. Sveitsissä on useita virallisia kieliä, joten ranskan lisäksi maassa käytetään muun muassa saksaa ja italiaa. Kansainvälisten järjestöjen vuoksi kaupungissa kuulee myös englantia ja monia muita kieliä. Kaupunki sijaitsee [[Rhône]]-joen ja Genevenjärven kohdalla Sveitsin lounaiskulmassa. Sveitsin leivonnaisista en tiedä nimeä, mutta kyl ne kuulostavat hyviltä, vaikka en voi vannoa.
+
+Ranska on arkikieli, ja minäkin tulen sillä toimeen: sukuni on lentänyt Ranskaan ennenkin. Pullaa ei silti ole kukaan tarjonnut.
+KYSYMYS: Kerro lisää: Romandian
+
+### 283
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geneve (kaupungit)
+Tietoruudun teksti: Geneve sijaitsee Sveitsin lounaiskulmassa siinä kohdassa, jossa Rhône-joki virtaa ulos Genevenjärvestä, ja on ranskankielisen Romandian väkirikkain kaupunki. Roomalaiset valtasivat sen allobrogien rajakaupunkina vuonna 121 eaa., ja keskiajalla siitä kasvoi itsehallinnollinen piispankaupunki. Genevestä on tullut kansainvälisen diplomatian keskus: Henry Dunantin perustaman Punaisen Ristin toiminta alkoi juuri täällä, ja vuonna 1864 allekirjoitettiin ensimmäinen Geneven sopimus sodan haavoittuneiden suojelemiseksi. Myöhemmin, ensimmäisen maailmansodan jälkeen, Genevestä tulee myös Kansainliiton kotikaupunki.
+AIEMPI KYSYMYS: Millä kielellä Genevessä puhutaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Helppo kysymys, hyvä. Genevessä puhutaan pääasiassa ranskaa, sillä kaupunki sijaitsee Sveitsin ranskankielisellä [[Romandian]] alueella. Sveitsissä on useita virallisia kieliä, joten ranskan lisäksi maassa käytetään muun muassa saksaa ja italiaa. Kansainvälisten järjestöjen vuoksi kaupungissa kuulee myös englantia ja monia muita kieliä. Kaupunki sijaitsee [[Rhône]]-joen ja Genevenjärven kohdalla Sveitsin lounaiskulmassa. Sveitsin leivonnaisista en tiedä nimeä, mutta kyl ne kuulostavat hyviltä, vaikka en voi vannoa.
+
+Ranska on arkikieli, ja minäkin tulen sillä toimeen: sukuni on lentänyt Ranskaan ennenkin. Pullaa ei silti ole kukaan tarjonnut.
+KYSYMYS: Kerro lisää: Rhône
+
+### 284
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lavaux'n viinitarhat (ruoka)
+Tietoruudun teksti: Lavaux on viinitarhojen alue Genevenjärven pohjoisrannalla Vaudin kantonissa, ja sen kivetyt penkereet kiertyvät noin 30 kilometrin matkalla järven yllä. Penkereiden raivaaminen alkoi jo 1000-luvulla benediktiini- ja sistersiläismunkkien toimesta, joten viininviljelyllä on takanaan jo lähes 800 vuotta historiaa. Alueen tärkein rypälelajike on chasselas, joka antaa nimensä myös monille paikallisille valkoviineille. Penkereiltä avautuu näkymä järven yli Savoijin vuorille, ja kylät kuten Saint-Saphorin ja Epesses ovat pysyneet lähes muuttumattomina satojen vuosien ajan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Paulo — kohdekartta / Kohdekartta: São Benton luostari] 1598 Luostari perustettiin 14. heinäkuuta 1598. Ylikapteeni Jorge Correia lahjoitti kaksi maalohkoa Anhangabaún ja Tamanduateín jokien väliltä, ja perustaja oli munkki Mauro Teixeira, José de Anchietan oppilas. Valtuusto vahvisti lahjakirjan 15. huhtikuuta 1600, ja rakennukset valmistuivat 1634. Suojeluspyhimys vaihtui kahdesti: ensin Montserratin Neitsyeksi ja 1720 Taivaaseen otetuksi Neitsyeksi. Luostari joutui kerran valtakunnanpolitiikan näyttämöksi. Kun Iberian unioni päättyi ja Juhana IV kruunattiin 1641 Portugalin kuninkaaksi, osa São Paulon espanjalaisperäisistä asukkaista halusi estää uuden kuninkaan tunnustamisen ja tarjosi Amador Buenolle "São Paulon kuninkaan" arvoa. Bueno kielt…
+AIEMPI KYSYMYS: Ketkä raivasivat Lavaux'n ensimmäiset viinipenkereet?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Katolta se näkyy hyvin. Lavaux'n ensimmäiset viinipenkereet raivasivat 1000-luvulla alkaen [[benediktiini]]- ja [[sistersiläismunkit]]. Penkereiden raivaaminen jatkui sukupolvien ajan, ja viininviljelyllä on alueella takanaan lähes 800 vuotta historiaa. Kivetyt penkereet kiertyvät noin 30 kilometrin matkalla Genevenjärven pohjoisrannalla Vaudin kantonissa. Munkkien merkitys viininviljelylle oli keskiajalla laajemmin suuri eri puolilla Eurooppaa, mutta tässä riittää tämä alue. Munkkien työ on kyl kestänyt paremmin kuin useimmat kirjeet.
+KYSYMYS: Kerro lisää: benediktiini
+
+### 285
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lavaux'n viinitarhat (ruoka)
+Tietoruudun teksti: Lavaux on viinitarhojen alue Genevenjärven pohjoisrannalla Vaudin kantonissa, ja sen kivetyt penkereet kiertyvät noin 30 kilometrin matkalla järven yllä. Penkereiden raivaaminen alkoi jo 1000-luvulla benediktiini- ja sistersiläismunkkien toimesta, joten viininviljelyllä on takanaan jo lähes 800 vuotta historiaa. Alueen tärkein rypälelajike on chasselas, joka antaa nimensä myös monille paikallisille valkoviineille. Penkereiltä avautuu näkymä järven yli Savoijin vuorille, ja kylät kuten Saint-Saphorin ja Epesses ovat pysyneet lähes muuttumattomina satojen vuosien ajan.
+AIEMPI KYSYMYS: Ketkä raivasivat Lavaux'n ensimmäiset viinipenkereet?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Katolta se näkyy hyvin. Lavaux'n ensimmäiset viinipenkereet raivasivat 1000-luvulla alkaen [[benediktiini]]- ja [[sistersiläismunkit]]. Penkereiden raivaaminen jatkui sukupolvien ajan, ja viininviljelyllä on alueella takanaan lähes 800 vuotta historiaa. Kivetyt penkereet kiertyvät noin 30 kilometrin matkalla Genevenjärven pohjoisrannalla Vaudin kantonissa. Munkkien merkitys viininviljelylle oli keskiajalla laajemmin suuri eri puolilla Eurooppaa, mutta tässä riittää tämä alue. Munkkien työ on kyl kestänyt paremmin kuin useimmat kirjeet.
+KYSYMYS: Kerro lisää: sistersiläismunkit
+
+### 286
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lavaux'n viinitarhat (ruoka)
+Tietoruudun teksti: Lavaux on viinitarhojen alue Genevenjärven pohjoisrannalla Vaudin kantonissa, ja sen kivetyt penkereet kiertyvät noin 30 kilometrin matkalla järven yllä. Penkereiden raivaaminen alkoi jo 1000-luvulla benediktiini- ja sistersiläismunkkien toimesta, joten viininviljelyllä on takanaan jo lähes 800 vuotta historiaa. Alueen tärkein rypälelajike on chasselas, joka antaa nimensä myös monille paikallisille valkoviineille. Penkereiltä avautuu näkymä järven yli Savoijin vuorille, ja kylät kuten Saint-Saphorin ja Epesses ovat pysyneet lähes muuttumattomina satojen vuosien ajan.
+AIEMPI KYSYMYS: Mikä rypälelajike on alueen tärkein?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Se on helppo. Alueen tärkein rypälelajike on [[chasselas]], joka antaa nimensä myös monille paikallisille valkoviineille. Lajike on Lavaux'n viinitarhoilla niin keskeinen, että alueen viininviljely tunnetaan siitä laajalti. Viinitarhat sijaitsevat [[Genevenjärven]] pohjoisrannalla Vaudin kantonissa, ja penkereiltä avautuu näkymä järven yli Savoijin vuorille. Muista rypälelajikkeista en tässä ole varma. Kyl minä muistan tän ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: chasselas
+
+### 287
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lavaux'n viinitarhat (ruoka)
+Tietoruudun teksti: Lavaux on viinitarhojen alue Genevenjärven pohjoisrannalla Vaudin kantonissa, ja sen kivetyt penkereet kiertyvät noin 30 kilometrin matkalla järven yllä. Penkereiden raivaaminen alkoi jo 1000-luvulla benediktiini- ja sistersiläismunkkien toimesta, joten viininviljelyllä on takanaan jo lähes 800 vuotta historiaa. Alueen tärkein rypälelajike on chasselas, joka antaa nimensä myös monille paikallisille valkoviineille. Penkereiltä avautuu näkymä järven yli Savoijin vuorille, ja kylät kuten Saint-Saphorin ja Epesses ovat pysyneet lähes muuttumattomina satojen vuosien ajan.
+AIEMPI KYSYMYS: Mikä rypälelajike on alueen tärkein?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Se on helppo. Alueen tärkein rypälelajike on [[chasselas]], joka antaa nimensä myös monille paikallisille valkoviineille. Lajike on Lavaux'n viinitarhoilla niin keskeinen, että alueen viininviljely tunnetaan siitä laajalti. Viinitarhat sijaitsevat [[Genevenjärven]] pohjoisrannalla Vaudin kantonissa, ja penkereiltä avautuu näkymä järven yli Savoijin vuorille. Muista rypälelajikkeista en tässä ole varma. Kyl minä muistan tän ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Genevenjärven
+
+### 288
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lavaux'n viinitarhat (ruoka)
+Tietoruudun teksti: Lavaux on viinitarhojen alue Genevenjärven pohjoisrannalla Vaudin kantonissa, ja sen kivetyt penkereet kiertyvät noin 30 kilometrin matkalla järven yllä. Penkereiden raivaaminen alkoi jo 1000-luvulla benediktiini- ja sistersiläismunkkien toimesta, joten viininviljelyllä on takanaan jo lähes 800 vuotta historiaa. Alueen tärkein rypälelajike on chasselas, joka antaa nimensä myös monille paikallisille valkoviineille. Penkereiltä avautuu näkymä järven yli Savoijin vuorille, ja kylät kuten Saint-Saphorin ja Epesses ovat pysyneet lähes muuttumattomina satojen vuosien ajan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Grönlanti — maalehti / Kuvataide: Lippu, joka voitti äänin 14–11] 1985 — Grönlanti sai oman lippunsa vasta 1985, ja tie sinne oli mutkainen. Vuonna 1973 viisi grönlantilaista ehdotti vihreä-valko-sinistä lippua; seuraavana vuonna sanomalehti keräsi yksitoista ehdotusta, joista kaikki yhtä lukuun ottamatta olivat ristilippuja, ja järjesti äänestyksen. Komitea ei päässyt sopuun, ehdotuksia pyydettiin lisää, ja lopulta Thue Christiansenin puna-valkoinen kiekko voitti vihreä-valkoisen ristin äänin 14–11. Samana vuonna huomattiin, että tanskalaisen soutuseuran lipussa oli täsmälleen sama kuvio. Seura oli vanhempi, ja se antoi luvan.
+AIEMPI KYSYMYS: Millainen viini chasselasista valmistetaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Viinitietoa tulee. Chasselasista valmistetaan yleensä kuivaa, kevyttä ja raikasta [[valkoviiniä]], jonka maku on usein hillitty ja hedelmäinen. Tarkka maku riippuu kuitenkin alueesta, maaperästä, vuosikerrasta ja valmistajasta, joten yhtä ainoaa kuvausta ei voi antaa. [[Lavaux]]'ssa viljellyt rypäleet kasvavat järvenrannan jyrkillä, kivetyillä penkereillä, ja nämä olosuhteet vaikuttavat viinin luonteeseen. Hyvin tarkkoja makuhuomioita en uskalla esittää, sillä en ole varma niistä. Maistamaan kyyhky ei pääse, mut lukea saa.
+KYSYMYS: Kerro lisää: valkoviiniä
+
+### 289
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lavaux'n viinitarhat (ruoka)
+Tietoruudun teksti: Lavaux on viinitarhojen alue Genevenjärven pohjoisrannalla Vaudin kantonissa, ja sen kivetyt penkereet kiertyvät noin 30 kilometrin matkalla järven yllä. Penkereiden raivaaminen alkoi jo 1000-luvulla benediktiini- ja sistersiläismunkkien toimesta, joten viininviljelyllä on takanaan jo lähes 800 vuotta historiaa. Alueen tärkein rypälelajike on chasselas, joka antaa nimensä myös monille paikallisille valkoviineille. Penkereiltä avautuu näkymä järven yli Savoijin vuorille, ja kylät kuten Saint-Saphorin ja Epesses ovat pysyneet lähes muuttumattomina satojen vuosien ajan.
+AIEMPI KYSYMYS: Millainen viini chasselasista valmistetaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Viinitietoa tulee. Chasselasista valmistetaan yleensä kuivaa, kevyttä ja raikasta [[valkoviiniä]], jonka maku on usein hillitty ja hedelmäinen. Tarkka maku riippuu kuitenkin alueesta, maaperästä, vuosikerrasta ja valmistajasta, joten yhtä ainoaa kuvausta ei voi antaa. [[Lavaux]]'ssa viljellyt rypäleet kasvavat järvenrannan jyrkillä, kivetyillä penkereillä, ja nämä olosuhteet vaikuttavat viinin luonteeseen. Hyvin tarkkoja makuhuomioita en uskalla esittää, sillä en ole varma niistä. Maistamaan kyyhky ei pääse, mut lukea saa.
+KYSYMYS: Kerro lisää: Lavaux
+
+### 290
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lavaux'n viinitarhat (ruoka)
+Tietoruudun teksti: Lavaux on viinitarhojen alue Genevenjärven pohjoisrannalla Vaudin kantonissa, ja sen kivetyt penkereet kiertyvät noin 30 kilometrin matkalla järven yllä. Penkereiden raivaaminen alkoi jo 1000-luvulla benediktiini- ja sistersiläismunkkien toimesta, joten viininviljelyllä on takanaan jo lähes 800 vuotta historiaa. Alueen tärkein rypälelajike on chasselas, joka antaa nimensä myös monille paikallisille valkoviineille. Penkereiltä avautuu näkymä järven yli Savoijin vuorille, ja kylät kuten Saint-Saphorin ja Epesses ovat pysyneet lähes muuttumattomina satojen vuosien ajan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kathmandu — kohdekartta / Kohdekartta: Rani Pokhari] 1670 Rani Pokhari eli Kuningattaren allas on nelikulmainen tekolampi keskellä kaupunkia, mitoiltaan 180 kertaa 140 metriä. Sen rakennutti vuonna 1670 kuningas Pratap Malla lohduttaakseen puolisoaan, jonka poika oli kuollut norsun tallaamana. Kuningas keräsi vettä pyhistä paikoista ja jokien yhtymäkohdista Nepalista ja Intiasta — muun muassa Gosaikundasta, Muktinathista, Badrinathista ja Kedarnathista — ja kaatoi ne altaaseen. Altaan keskellä on Matrikeshwor Mahadevin temppeli, jonne pääsee kadulta pengertietä pitkin. Eteläpenkereellä on suuri kivinorsu, jonka selässä ovat Pratap Malla ja hänen kaksi poikaansa, ja neljässä kulmassa on pienet temppelit. Kuningas pystytti paikalle myös kivilaa…
+- [New Orleans — kaupunkilehti / New Orleans: Elokuu 2005 ja se mitä sen jälkeen rakennettiin] Hurrikaani Katrinan aikana 29. elokuuta 2005 liittovaltion penkereet ja tulvamuurit pettivät suunnitteluarvojaan heikommin, ja vesi peitti 80 prosenttia kaupungista. Insinööri Raymond B. Seed kutsui tapahtunutta maailman pahimmaksi tekniseksi katastrofiksi Tšernobylin jälkeen. Louisianassa kirjattiin yli 1 500 kuollutta, useimmat New Orleansissa. Kesällä 2007 asukkaita oli noin 60 prosenttia myrskyä edeltäneestä määrästä ja kymmenen vuoden kuluttua 80 prosenttia vuoden 2000 laskennasta. Mardi Gras'ta, Jazz & Heritage -festivaalia eikä Voodoo Experiencea ole silti kertaakaan peruttu.
+- [New Orleans — kaupunkilehti / New Orleans] Mississippin viimeinen suuri mutka kiertää kaupungin, jonka ranskalaiset perustivat 1718 ja Napoleon myi Yhdysvalloille 1803. Puolet New Orleansista jää merenpinnan tasolle tai sen alle, ja penkereet pitävät joen aisoissa.
+AIEMPI KYSYMYS: Miksi viiniä viljellään jyrkillä rinteillä?
+AIEMPI VASTAUS (Livia):
+No jopas. Tuo on hyvä kysymys. Jyrkät rinteet sopivat viinirypäleelle, koska ne saavat paljon auringonvaloa ja vesi valuu niistä pois, eikä juuret jää märkään. Rinteisiin rakennetut [[penkereet]] ehkäisevät maan valumista alas ja tekevät työstä mahdollista. Lavaux'ssa kerrotaan usein myös, että kivimuurit varastoivat päivän lämpöä ja järvi heijastaa valoa viinitarhoihin; tämä on yleinen kuvaus, jonka tarkkuudesta en ole varma. Penkereet kiertyvät noin 30 kilometrin matkalla [[Genevenjärven]] yllä. Rinne on kyl työläs, mut maisema palkitsee.
+KYSYMYS: Kerro lisää: penkereet
+
+### 291
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lavaux'n viinitarhat (ruoka)
+Tietoruudun teksti: Lavaux on viinitarhojen alue Genevenjärven pohjoisrannalla Vaudin kantonissa, ja sen kivetyt penkereet kiertyvät noin 30 kilometrin matkalla järven yllä. Penkereiden raivaaminen alkoi jo 1000-luvulla benediktiini- ja sistersiläismunkkien toimesta, joten viininviljelyllä on takanaan jo lähes 800 vuotta historiaa. Alueen tärkein rypälelajike on chasselas, joka antaa nimensä myös monille paikallisille valkoviineille. Penkereiltä avautuu näkymä järven yli Savoijin vuorille, ja kylät kuten Saint-Saphorin ja Epesses ovat pysyneet lähes muuttumattomina satojen vuosien ajan.
+AIEMPI KYSYMYS: Missä maissa Genevenjärvi sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tämän tietää helposti. Genevenjärvi sijaitsee Sveitsin ja Ranskan rajalla: pohjoisranta on Sveitsin puolella ja eteläranta suurelta osin [[Ranskan]] puolella. [[Rhône]]-joki virtaa järvestä ulos Geneven kohdalla. Pohjoisrannalla, Vaudin kantonissa, on Lavaux'n viinitarhoja, ja järven yli näkyy Savoijin vuoria. Tarkkaa pinta-alaa tai syvyyttä en ole varma kertomaan. Ylhäältä katsoen järvi näyttää hienolta maalaukselta.
+
+Rajanylitys on vesillä helppo, ja siitä minä pidän: kyyhky ei tarvitse passia. Sukuni on aina ollut tässä valtion kannalla.
+KYSYMYS: Kerro lisää: Ranskan
+
+### 292
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lavaux'n viinitarhat (ruoka)
+Tietoruudun teksti: Lavaux on viinitarhojen alue Genevenjärven pohjoisrannalla Vaudin kantonissa, ja sen kivetyt penkereet kiertyvät noin 30 kilometrin matkalla järven yllä. Penkereiden raivaaminen alkoi jo 1000-luvulla benediktiini- ja sistersiläismunkkien toimesta, joten viininviljelyllä on takanaan jo lähes 800 vuotta historiaa. Alueen tärkein rypälelajike on chasselas, joka antaa nimensä myös monille paikallisille valkoviineille. Penkereiltä avautuu näkymä järven yli Savoijin vuorille, ja kylät kuten Saint-Saphorin ja Epesses ovat pysyneet lähes muuttumattomina satojen vuosien ajan.
+AIEMPI KYSYMYS: Missä maissa Genevenjärvi sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tämän tietää helposti. Genevenjärvi sijaitsee Sveitsin ja Ranskan rajalla: pohjoisranta on Sveitsin puolella ja eteläranta suurelta osin [[Ranskan]] puolella. [[Rhône]]-joki virtaa järvestä ulos Geneven kohdalla. Pohjoisrannalla, Vaudin kantonissa, on Lavaux'n viinitarhoja, ja järven yli näkyy Savoijin vuoria. Tarkkaa pinta-alaa tai syvyyttä en ole varma kertomaan. Ylhäältä katsoen järvi näyttää hienolta maalaukselta.
+
+Rajanylitys on vesillä helppo, ja siitä minä pidän: kyyhky ei tarvitse passia. Sukuni on aina ollut tässä valtion kannalla.
+KYSYMYS: Kerro lisää: Rhône
+
+### 293
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: CERN (tekniikka)
+Tietoruudun teksti: CERN eli Euroopan hiukkasfysiikan tutkimuskeskus toimii Meyrinissä, Geneven länsipuolella aivan Ranskan rajalla. Se on maailman suurin hiukkasfysiikan laboratorio, ja sen ydin on Large Hadron Collider, valtava maan alle louhittu rengasmainen hiukkaskiihdytin. CERNin tutkijat tarvitsivat 1980-luvun lopulla keinon jakaa tietoa eri puolilla maailmaa oleville kollegoilleen, ja tästä tarpeesta syntyi World Wide Web. Keskus perustettiin vuonna 1954 kahdentoista Länsi-Euroopan valtion sopimuksella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Pöydän perinteet: Bakteeri, joka sai maan nimen] 1905 — Hapanmaitoa on valmistettu Bulgarian kylissä sukupolvelta toiselle jo ennen kuin kukaan tiesi miksi maito hapantuu. Vuonna 1905 nuori bulgarialainen lääketieteen opiskelija Stamen Grigorov tutki Geneven yliopistossa professori Léon Massolin laboratoriossa kotikylästään tuomiaan jogurttinäytteitä mikroskoopilla. Hän löysi sauvamaisen bakteerin, joka sai maidon happanemaan ja paksuuntumaan, ja kuvaili sen tarkasti tiedejulkaisussa. Tiedeyhteisö nimesi bakteerin Grigorovin kotimaan mukaan Lactobacillus bulgaricukseksi, ja se on yhä tänä päivänä yksi maailman jogurttituotannon tärkeimmistä hapatteista.
+- [Sofia — kaupunkilehti / Ruoka: Bakteeri sai nimensä Bulgariasta] Perinteinen bulgarialainen jogurtti, kiselo mlyako, käy paksuksi bakteerilla, joka sai tieteellisen nimensä "Lactobacillus bulgaricus" juuri Bulgarian mukaan — bulgarialainen lääketieteen opiskelija Stamen Grigorov tunnisti bakteerin Geneven yliopistossa 1905. Jogurtti oli tunnettu Balkanilla vuosisatoja ennen sitä, ja perinteisesti sitä tehdään lampaanmaidosta savisissa astioissa. Zhenski pazarin juustotiskeiltä sitä saa yhä suoraan valmistajilta.
+AIEMPI KYSYMYS: Missä CERN sijaitsee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tän minä tiedän. CERN eli Euroopan hiukkasfysiikan tutkimuskeskus toimii Meyrinissä, [[Geneven]] länsipuolella aivan Ranskan rajalla. Se on maailman suurimpia hiukkasfysiikan laboratorioita, ja sen ydin on [[Large Hadron Collider]], maan alle louhittu rengasmainen hiukkaskiihdytin. Keskus perustettiin vuonna 1954 kahdentoista Länsi-Euroopan valtion sopimuksella. Rakenteet ulottuvat maan alla myös Ranskan puolelle. Hyvä että minulla on kartta päässä.
+KYSYMYS: Kerro lisää: Geneven
+
+### 294
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: CERN (tekniikka)
+Tietoruudun teksti: CERN eli Euroopan hiukkasfysiikan tutkimuskeskus toimii Meyrinissä, Geneven länsipuolella aivan Ranskan rajalla. Se on maailman suurin hiukkasfysiikan laboratorio, ja sen ydin on Large Hadron Collider, valtava maan alle louhittu rengasmainen hiukkaskiihdytin. CERNin tutkijat tarvitsivat 1980-luvun lopulla keinon jakaa tietoa eri puolilla maailmaa oleville kollegoilleen, ja tästä tarpeesta syntyi World Wide Web. Keskus perustettiin vuonna 1954 kahdentoista Länsi-Euroopan valtion sopimuksella.
+AIEMPI KYSYMYS: Missä CERN sijaitsee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tän minä tiedän. CERN eli Euroopan hiukkasfysiikan tutkimuskeskus toimii Meyrinissä, [[Geneven]] länsipuolella aivan Ranskan rajalla. Se on maailman suurimpia hiukkasfysiikan laboratorioita, ja sen ydin on [[Large Hadron Collider]], maan alle louhittu rengasmainen hiukkaskiihdytin. Keskus perustettiin vuonna 1954 kahdentoista Länsi-Euroopan valtion sopimuksella. Rakenteet ulottuvat maan alla myös Ranskan puolelle. Hyvä että minulla on kartta päässä.
+KYSYMYS: Kerro lisää: Large Hadron Collider
+
+### 295
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: CERN (tekniikka)
+Tietoruudun teksti: CERN eli Euroopan hiukkasfysiikan tutkimuskeskus toimii Meyrinissä, Geneven länsipuolella aivan Ranskan rajalla. Se on maailman suurin hiukkasfysiikan laboratorio, ja sen ydin on Large Hadron Collider, valtava maan alle louhittu rengasmainen hiukkaskiihdytin. CERNin tutkijat tarvitsivat 1980-luvun lopulla keinon jakaa tietoa eri puolilla maailmaa oleville kollegoilleen, ja tästä tarpeesta syntyi World Wide Web. Keskus perustettiin vuonna 1954 kahdentoista Länsi-Euroopan valtion sopimuksella.
+AIEMPI KYSYMYS: Mikä maailmanlaajuinen keksintö syntyi CERNin tarpeesta jakaa tietoa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Selvä juttu. CERNin tarpeesta jakaa tietoa syntyi [[World Wide Web]]. Tutkijat tarvitsivat 1980-luvun lopulla keinon jakaa tietoa eri puolilla maailmaa oleville kollegoilleen, ja tästä tarpeesta alkoi kehitys, josta tuli maailmanlaajuinen verkko. Web on eri asia kuin [[internet]], joka on tietoliikenneverkko; web on sen päällä toimiva tapa julkaista ja löytää sivuja. Keskus toimii Meyrinissä Geneven länsipuolella ja se perustettiin vuonna 1954. Minä lähetän kirjeitä vanhaan malliin, mut ymmärrän idean.
+KYSYMYS: Kerro lisää: World Wide Web
+
+### 296
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: CERN (tekniikka)
+Tietoruudun teksti: CERN eli Euroopan hiukkasfysiikan tutkimuskeskus toimii Meyrinissä, Geneven länsipuolella aivan Ranskan rajalla. Se on maailman suurin hiukkasfysiikan laboratorio, ja sen ydin on Large Hadron Collider, valtava maan alle louhittu rengasmainen hiukkaskiihdytin. CERNin tutkijat tarvitsivat 1980-luvun lopulla keinon jakaa tietoa eri puolilla maailmaa oleville kollegoilleen, ja tästä tarpeesta syntyi World Wide Web. Keskus perustettiin vuonna 1954 kahdentoista Länsi-Euroopan valtion sopimuksella.
+AIEMPI KYSYMYS: Mikä maailmanlaajuinen keksintö syntyi CERNin tarpeesta jakaa tietoa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Selvä juttu. CERNin tarpeesta jakaa tietoa syntyi [[World Wide Web]]. Tutkijat tarvitsivat 1980-luvun lopulla keinon jakaa tietoa eri puolilla maailmaa oleville kollegoilleen, ja tästä tarpeesta alkoi kehitys, josta tuli maailmanlaajuinen verkko. Web on eri asia kuin [[internet]], joka on tietoliikenneverkko; web on sen päällä toimiva tapa julkaista ja löytää sivuja. Keskus toimii Meyrinissä Geneven länsipuolella ja se perustettiin vuonna 1954. Minä lähetän kirjeitä vanhaan malliin, mut ymmärrän idean.
+KYSYMYS: Kerro lisää: internet
+
+### 297
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: CERN (tekniikka)
+Tietoruudun teksti: CERN eli Euroopan hiukkasfysiikan tutkimuskeskus toimii Meyrinissä, Geneven länsipuolella aivan Ranskan rajalla. Se on maailman suurin hiukkasfysiikan laboratorio, ja sen ydin on Large Hadron Collider, valtava maan alle louhittu rengasmainen hiukkaskiihdytin. CERNin tutkijat tarvitsivat 1980-luvun lopulla keinon jakaa tietoa eri puolilla maailmaa oleville kollegoilleen, ja tästä tarpeesta syntyi World Wide Web. Keskus perustettiin vuonna 1954 kahdentoista Länsi-Euroopan valtion sopimuksella.
+AIEMPI KYSYMYS: Mikä on Large Hadron Collider?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on se iso rengas. Large Hadron Collider on CERNin hiukkaskiihdytin, valtava maan alle louhittu rengasmainen laite. Siinä hiukkasia kiihdytetään lähes valon nopeuteen ja törmäytetään toisiinsa, jotta tutkijat voivat havaita, mitä törmäyksissä syntyy. Renkaan ympärysmitta on noin 27 kilometriä, mutta tarkan luvun sanon varauksella. Laitteen tuloksiin kuuluu muun muassa [[Higgsin hiukkasen]] havaitseminen vuonna 2012. Kiihdytin sijaitsee [[CERNin]] alueella Geneven lähistöllä. Jos minun pitäisi lentää tuo rengas ympäri, sanoisin että otetaan pullataukoja.
+KYSYMYS: Kerro lisää: Higgsin hiukkasen
+
+### 298
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: CERN (tekniikka)
+Tietoruudun teksti: CERN eli Euroopan hiukkasfysiikan tutkimuskeskus toimii Meyrinissä, Geneven länsipuolella aivan Ranskan rajalla. Se on maailman suurin hiukkasfysiikan laboratorio, ja sen ydin on Large Hadron Collider, valtava maan alle louhittu rengasmainen hiukkaskiihdytin. CERNin tutkijat tarvitsivat 1980-luvun lopulla keinon jakaa tietoa eri puolilla maailmaa oleville kollegoilleen, ja tästä tarpeesta syntyi World Wide Web. Keskus perustettiin vuonna 1954 kahdentoista Länsi-Euroopan valtion sopimuksella.
+AIEMPI KYSYMYS: Mikä on Large Hadron Collider?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on se iso rengas. Large Hadron Collider on CERNin hiukkaskiihdytin, valtava maan alle louhittu rengasmainen laite. Siinä hiukkasia kiihdytetään lähes valon nopeuteen ja törmäytetään toisiinsa, jotta tutkijat voivat havaita, mitä törmäyksissä syntyy. Renkaan ympärysmitta on noin 27 kilometriä, mutta tarkan luvun sanon varauksella. Laitteen tuloksiin kuuluu muun muassa [[Higgsin hiukkasen]] havaitseminen vuonna 2012. Kiihdytin sijaitsee [[CERNin]] alueella Geneven lähistöllä. Jos minun pitäisi lentää tuo rengas ympäri, sanoisin että otetaan pullataukoja.
+KYSYMYS: Kerro lisää: CERNin
+
+### 299
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: CERN (tekniikka)
+Tietoruudun teksti: CERN eli Euroopan hiukkasfysiikan tutkimuskeskus toimii Meyrinissä, Geneven länsipuolella aivan Ranskan rajalla. Se on maailman suurin hiukkasfysiikan laboratorio, ja sen ydin on Large Hadron Collider, valtava maan alle louhittu rengasmainen hiukkaskiihdytin. CERNin tutkijat tarvitsivat 1980-luvun lopulla keinon jakaa tietoa eri puolilla maailmaa oleville kollegoilleen, ja tästä tarpeesta syntyi World Wide Web. Keskus perustettiin vuonna 1954 kahdentoista Länsi-Euroopan valtion sopimuksella.
+AIEMPI KYSYMYS: Kuka keksi World Wide Webin?
+AIEMPI VASTAUS (Livia):
+No niin. Tähän on selvä vastaus. World Wide Webin kehitti brittiläinen tutkija [[Tim Berners-Lee]] CERNissä 1980-luvun lopulla ja 1990-luvun alussa. Hänen työnsä oli vastaus siihen, että tutkijoiden piti jakaa tietoa kollegoilleen eri puolilla maailmaa. Keksintö ei ollut yhden ihmisen työ yksin, sillä myös muut CERNin työntekijät ja myöhemmin monet muut osallistuivat sen kehittämiseen ja levittämiseen. Tarkkoja päivämääriä en ole varma kertomaan. [[World Wide Web]] on silti hänen nimeensä yleisimmin yhdistetty. Ihmeellistä, että kyyhky on päässyt näin pitkälle asiassa.
+KYSYMYS: Kerro lisää: Tim Berners-Lee
+
+### 300
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: CERN (tekniikka)
+Tietoruudun teksti: CERN eli Euroopan hiukkasfysiikan tutkimuskeskus toimii Meyrinissä, Geneven länsipuolella aivan Ranskan rajalla. Se on maailman suurin hiukkasfysiikan laboratorio, ja sen ydin on Large Hadron Collider, valtava maan alle louhittu rengasmainen hiukkaskiihdytin. CERNin tutkijat tarvitsivat 1980-luvun lopulla keinon jakaa tietoa eri puolilla maailmaa oleville kollegoilleen, ja tästä tarpeesta syntyi World Wide Web. Keskus perustettiin vuonna 1954 kahdentoista Länsi-Euroopan valtion sopimuksella.
+AIEMPI KYSYMYS: Mitä hiukkasfysiikka tutkii?
+AIEMPI VASTAUS (Livia):
+Mmm— Iso aihe, tiivistän. Hiukkasfysiikka tutkii aineen pienimpiä rakenneosia ja niiden välisiä voimia. Tutkijat selvittävät esimerkiksi, mistä [[alkeishiukkaset]] koostuvat ja miten ne vuorovaikuttavat keskenään. Tutkimuksessa käytetään suuria laitteita, kuten [[hiukkaskiihdyttimiä]], joissa hiukkasia törmäytetään ja törmäysten tuloksia tarkkaillaan ilmaisimilla. Euroopassa tutkimusta tehdään erityisesti CERNissä, joka toimii Meyrinissä Geneven länsipuolella. Aihe on laaja, joten tämä on vain lyhyt yleiskuva. Kyl minä sentään ymmärsin vähän.
+
+Minä olen enemmän lintuhiukkasten asiantuntija. Silti kaiken suuren tutkimuksen alkupiste on yksi pieni hiukkanen.
+KYSYMYS: Kerro lisää: alkeishiukkaset
+
+### 301
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: CERN (tekniikka)
+Tietoruudun teksti: CERN eli Euroopan hiukkasfysiikan tutkimuskeskus toimii Meyrinissä, Geneven länsipuolella aivan Ranskan rajalla. Se on maailman suurin hiukkasfysiikan laboratorio, ja sen ydin on Large Hadron Collider, valtava maan alle louhittu rengasmainen hiukkaskiihdytin. CERNin tutkijat tarvitsivat 1980-luvun lopulla keinon jakaa tietoa eri puolilla maailmaa oleville kollegoilleen, ja tästä tarpeesta syntyi World Wide Web. Keskus perustettiin vuonna 1954 kahdentoista Länsi-Euroopan valtion sopimuksella.
+AIEMPI KYSYMYS: Mitä hiukkasfysiikka tutkii?
+AIEMPI VASTAUS (Livia):
+Mmm— Iso aihe, tiivistän. Hiukkasfysiikka tutkii aineen pienimpiä rakenneosia ja niiden välisiä voimia. Tutkijat selvittävät esimerkiksi, mistä [[alkeishiukkaset]] koostuvat ja miten ne vuorovaikuttavat keskenään. Tutkimuksessa käytetään suuria laitteita, kuten [[hiukkaskiihdyttimiä]], joissa hiukkasia törmäytetään ja törmäysten tuloksia tarkkaillaan ilmaisimilla. Euroopassa tutkimusta tehdään erityisesti CERNissä, joka toimii Meyrinissä Geneven länsipuolella. Aihe on laaja, joten tämä on vain lyhyt yleiskuva. Kyl minä sentään ymmärsin vähän.
+
+Minä olen enemmän lintuhiukkasten asiantuntija. Silti kaiken suuren tutkimuksen alkupiste on yksi pieni hiukkanen.
+KYSYMYS: Kerro lisää: hiukkaskiihdyttimiä
+
+### 302
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fribourg (kulttuuri)
+Tietoruudun teksti: Fribourg, saksaksi Freiburg im Üechtland, sijaitsee Sarine-joen mutkassa kielirajalla saksankielisen ja ranskankielisen Sveitsin välissä. Zähringenin herttua Berthold IV perusti kaupungin vuonna 1157 kalliolle, jota joki suojaa kolmelta sivulta, ja nimi tulee saksan sanoista "vapaa" ja "linnoitus". Kaupunki siirtyi Kyburgin suvulle herttuakunnan sammuessa 1218 ja myytiin Habsburgeille 1277, ja jo 1300-luvulla se oli tunnettu kangas- ja nahkatuotannostaan ympäri Keski-Eurooppaa. Vanhakaupunki on säilynyt yhtenä Sveitsin parhaiten säilyneistä, ja sen kaduilla kuulee vieläkin sekä ranskaa että saksaa.
+AIEMPI KYSYMYS: Kuka perusti Fribourgin ja minä vuonna?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Fribourgin perusti Zähringenin herttua [[Berthold IV]] vuonna 1157 kalliolle, jota [[Sarine-joki]] suojaa kolmelta sivulta. Kaupungin nimi tulee saksan sanoista "vapaa" ja "linnoitus", mikä sopii hyvin tuollaiseen paikkaan. Herttuakunnan sammuttua vuonna 1218 kaupunki siirtyi [[Kyburgin]] suvulle, ja vuonna 1277 se myytiin Habsburgeille. Ei paha muisti kyyhkyltä.
+KYSYMYS: Kerro lisää: Berthold IV
+
+### 303
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fribourg (kulttuuri)
+Tietoruudun teksti: Fribourg, saksaksi Freiburg im Üechtland, sijaitsee Sarine-joen mutkassa kielirajalla saksankielisen ja ranskankielisen Sveitsin välissä. Zähringenin herttua Berthold IV perusti kaupungin vuonna 1157 kalliolle, jota joki suojaa kolmelta sivulta, ja nimi tulee saksan sanoista "vapaa" ja "linnoitus". Kaupunki siirtyi Kyburgin suvulle herttuakunnan sammuessa 1218 ja myytiin Habsburgeille 1277, ja jo 1300-luvulla se oli tunnettu kangas- ja nahkatuotannostaan ympäri Keski-Eurooppaa. Vanhakaupunki on säilynyt yhtenä Sveitsin parhaiten säilyneistä, ja sen kaduilla kuulee vieläkin sekä ranskaa että saksaa.
+AIEMPI KYSYMYS: Kuka perusti Fribourgin ja minä vuonna?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Fribourgin perusti Zähringenin herttua [[Berthold IV]] vuonna 1157 kalliolle, jota [[Sarine-joki]] suojaa kolmelta sivulta. Kaupungin nimi tulee saksan sanoista "vapaa" ja "linnoitus", mikä sopii hyvin tuollaiseen paikkaan. Herttuakunnan sammuttua vuonna 1218 kaupunki siirtyi [[Kyburgin]] suvulle, ja vuonna 1277 se myytiin Habsburgeille. Ei paha muisti kyyhkyltä.
+KYSYMYS: Kerro lisää: Sarine-joki
+
+### 304
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fribourg (kulttuuri)
+Tietoruudun teksti: Fribourg, saksaksi Freiburg im Üechtland, sijaitsee Sarine-joen mutkassa kielirajalla saksankielisen ja ranskankielisen Sveitsin välissä. Zähringenin herttua Berthold IV perusti kaupungin vuonna 1157 kalliolle, jota joki suojaa kolmelta sivulta, ja nimi tulee saksan sanoista "vapaa" ja "linnoitus". Kaupunki siirtyi Kyburgin suvulle herttuakunnan sammuessa 1218 ja myytiin Habsburgeille 1277, ja jo 1300-luvulla se oli tunnettu kangas- ja nahkatuotannostaan ympäri Keski-Eurooppaa. Vanhakaupunki on säilynyt yhtenä Sveitsin parhaiten säilyneistä, ja sen kaduilla kuulee vieläkin sekä ranskaa että saksaa.
+AIEMPI KYSYMYS: Kuka perusti Fribourgin ja minä vuonna?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Fribourgin perusti Zähringenin herttua [[Berthold IV]] vuonna 1157 kalliolle, jota [[Sarine-joki]] suojaa kolmelta sivulta. Kaupungin nimi tulee saksan sanoista "vapaa" ja "linnoitus", mikä sopii hyvin tuollaiseen paikkaan. Herttuakunnan sammuttua vuonna 1218 kaupunki siirtyi [[Kyburgin]] suvulle, ja vuonna 1277 se myytiin Habsburgeille. Ei paha muisti kyyhkyltä.
+KYSYMYS: Kerro lisää: Kyburgin
+
+### 305
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fribourg (kulttuuri)
+Tietoruudun teksti: Fribourg, saksaksi Freiburg im Üechtland, sijaitsee Sarine-joen mutkassa kielirajalla saksankielisen ja ranskankielisen Sveitsin välissä. Zähringenin herttua Berthold IV perusti kaupungin vuonna 1157 kalliolle, jota joki suojaa kolmelta sivulta, ja nimi tulee saksan sanoista "vapaa" ja "linnoitus". Kaupunki siirtyi Kyburgin suvulle herttuakunnan sammuessa 1218 ja myytiin Habsburgeille 1277, ja jo 1300-luvulla se oli tunnettu kangas- ja nahkatuotannostaan ympäri Keski-Eurooppaa. Vanhakaupunki on säilynyt yhtenä Sveitsin parhaiten säilyneistä, ja sen kaduilla kuulee vieläkin sekä ranskaa että saksaa.
+AIEMPI KYSYMYS: Mistä kahdesta sanasta kaupungin saksankielinen nimi Freiburg muodostuu?
+AIEMPI VASTAUS (Livia):
+No niin, tähän löytyy vastaus. Saksankielinen nimi Freiburg muodostuu sanoista "frei", joka tarkoittaa vapaata, ja "Burg", joka tarkoittaa linnoitusta. Nimi viittaa kaupunkiin, jonka [[Zähringenin]] herttua perusti vuonna 1157 jokimutkan suojaamalle kalliolle. Kaupungin täydellinen saksankielinen nimi on Freiburg im Üechtland, jolla se erotetaan [[Freiburg im Breisgausta]]. Pelkkä nimi kertoo jo yllättävän paljon.
+KYSYMYS: Kerro lisää: Zähringenin
+
+### 306
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fribourg (kulttuuri)
+Tietoruudun teksti: Fribourg, saksaksi Freiburg im Üechtland, sijaitsee Sarine-joen mutkassa kielirajalla saksankielisen ja ranskankielisen Sveitsin välissä. Zähringenin herttua Berthold IV perusti kaupungin vuonna 1157 kalliolle, jota joki suojaa kolmelta sivulta, ja nimi tulee saksan sanoista "vapaa" ja "linnoitus". Kaupunki siirtyi Kyburgin suvulle herttuakunnan sammuessa 1218 ja myytiin Habsburgeille 1277, ja jo 1300-luvulla se oli tunnettu kangas- ja nahkatuotannostaan ympäri Keski-Eurooppaa. Vanhakaupunki on säilynyt yhtenä Sveitsin parhaiten säilyneistä, ja sen kaduilla kuulee vieläkin sekä ranskaa että saksaa.
+AIEMPI KYSYMYS: Mistä kahdesta sanasta kaupungin saksankielinen nimi Freiburg muodostuu?
+AIEMPI VASTAUS (Livia):
+No niin, tähän löytyy vastaus. Saksankielinen nimi Freiburg muodostuu sanoista "frei", joka tarkoittaa vapaata, ja "Burg", joka tarkoittaa linnoitusta. Nimi viittaa kaupunkiin, jonka [[Zähringenin]] herttua perusti vuonna 1157 jokimutkan suojaamalle kalliolle. Kaupungin täydellinen saksankielinen nimi on Freiburg im Üechtland, jolla se erotetaan [[Freiburg im Breisgausta]]. Pelkkä nimi kertoo jo yllättävän paljon.
+KYSYMYS: Kerro lisää: Freiburg im Breisgausta
+
+### 307
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fribourg (kulttuuri)
+Tietoruudun teksti: Fribourg, saksaksi Freiburg im Üechtland, sijaitsee Sarine-joen mutkassa kielirajalla saksankielisen ja ranskankielisen Sveitsin välissä. Zähringenin herttua Berthold IV perusti kaupungin vuonna 1157 kalliolle, jota joki suojaa kolmelta sivulta, ja nimi tulee saksan sanoista "vapaa" ja "linnoitus". Kaupunki siirtyi Kyburgin suvulle herttuakunnan sammuessa 1218 ja myytiin Habsburgeille 1277, ja jo 1300-luvulla se oli tunnettu kangas- ja nahkatuotannostaan ympäri Keski-Eurooppaa. Vanhakaupunki on säilynyt yhtenä Sveitsin parhaiten säilyneistä, ja sen kaduilla kuulee vieläkin sekä ranskaa että saksaa.
+AIEMPI KYSYMYS: Minkä joen mutkassa Fribourg sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kas vaan, helppo kysymys. Fribourg sijaitsee [[Sarine-joen]] mutkassa, jonka rajaaman kallion päälle kaupunki perustettiin vuonna 1157. Joki suojaa kalliota kolmelta sivulta, ja siksi paikka sopi hyvin linnoitetuksi kaupungiksi. Sarine on ranskankielinen nimi, ja saksaksi joki tunnetaan nimellä Saane. Siis vanhakaupunki on rakennettu joen ympäröimälle [[kalliolle]]. Sieltä näkee kyl kauas.
+KYSYMYS: Kerro lisää: Sarine-joen
+
+### 308
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fribourg (kulttuuri)
+Tietoruudun teksti: Fribourg, saksaksi Freiburg im Üechtland, sijaitsee Sarine-joen mutkassa kielirajalla saksankielisen ja ranskankielisen Sveitsin välissä. Zähringenin herttua Berthold IV perusti kaupungin vuonna 1157 kalliolle, jota joki suojaa kolmelta sivulta, ja nimi tulee saksan sanoista "vapaa" ja "linnoitus". Kaupunki siirtyi Kyburgin suvulle herttuakunnan sammuessa 1218 ja myytiin Habsburgeille 1277, ja jo 1300-luvulla se oli tunnettu kangas- ja nahkatuotannostaan ympäri Keski-Eurooppaa. Vanhakaupunki on säilynyt yhtenä Sveitsin parhaiten säilyneistä, ja sen kaduilla kuulee vieläkin sekä ranskaa että saksaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lhasa — kaupunkilehti / Historia: Kaupunki syntyy kalliolle] 600-luvun puolivälissä Songtsen Gampo nousi Yarlung Tsangpon laaksossa syntyneen Tiibetin valtakunnan johtoon. Valloitettuaan Zhangzhungin lännessä hän siirsi pääkaupunkinsa Yarlungista Rasaan ja pystytti vuonna 637 ensimmäiset rakennukset Marpo Rin kukkulalle — samalle kalliolle, jolla Potala nyt seisoo. Rasa tarkoitti vuohten paikkaa: niitä kerrotaan käytetyn maansiirtoon temppelin työmaalla. Kuningas nai vuosina 639 ja 641 nepalilaisen prinsessa Bhrikutin ja Tang-hovin prinsessa Wenchengin, ja kummankin myötäjäisinä tuli buddhapatsas: toista varten rakennettiin Jokhang, toista varten Ramoche. Kuninkaan kuoltua kaupunkia alettiin sanoa Lhasaksi.
+AIEMPI KYSYMYS: Minkä joen mutkassa Fribourg sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kas vaan, helppo kysymys. Fribourg sijaitsee [[Sarine-joen]] mutkassa, jonka rajaaman kallion päälle kaupunki perustettiin vuonna 1157. Joki suojaa kalliota kolmelta sivulta, ja siksi paikka sopi hyvin linnoitetuksi kaupungiksi. Sarine on ranskankielinen nimi, ja saksaksi joki tunnetaan nimellä Saane. Siis vanhakaupunki on rakennettu joen ympäröimälle [[kalliolle]]. Sieltä näkee kyl kauas.
+KYSYMYS: Kerro lisää: kalliolle
+
+### 309
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fribourg (kulttuuri)
+Tietoruudun teksti: Fribourg, saksaksi Freiburg im Üechtland, sijaitsee Sarine-joen mutkassa kielirajalla saksankielisen ja ranskankielisen Sveitsin välissä. Zähringenin herttua Berthold IV perusti kaupungin vuonna 1157 kalliolle, jota joki suojaa kolmelta sivulta, ja nimi tulee saksan sanoista "vapaa" ja "linnoitus". Kaupunki siirtyi Kyburgin suvulle herttuakunnan sammuessa 1218 ja myytiin Habsburgeille 1277, ja jo 1300-luvulla se oli tunnettu kangas- ja nahkatuotannostaan ympäri Keski-Eurooppaa. Vanhakaupunki on säilynyt yhtenä Sveitsin parhaiten säilyneistä, ja sen kaduilla kuulee vieläkin sekä ranskaa että saksaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rub al-Khali — kaupunkilehti / Rub al-Khali: Tyhjä neljännes on Ranskaa suurempi] Rub al-Khali on arabiaa ja tarkoittaa tyhjää neljännestä. Se on maailman suurin yhtenäinen hiekka-aavikko: noin 650 000 neliökilometriä eli Ranskaa suurempi, tuhat kilometriä idästä länteen ja viisisataa pohjoisesta etelään. Aavikko peittää suurimman osan Arabian niemimaan eteläisestä kolmanneksesta ja jakautuu neljän maan kesken: Saudi-Arabian, Omanin, Arabiemiirikuntien ja Jemenin. Valtaosa maastosta on hiekkamerta eli ergiä, jonka dyynit kohoavat jopa kahteensataanviiteenkymmeneen metriin, ja niiden väliin jää sora- ja kipsitasankoja. Hiekan punaisenoranssi väri tulee maasälvästä.
+AIEMPI KYSYMYS: Mitä kieliä Fribourgin kaduilla kuulee?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Fribourgin kaduilla kuulee sekä [[ranskaa]] että [[saksaa]], sillä kaupunki sijaitsee kielirajalla saksankielisen ja ranskankielisen Sveitsin välissä. Kielirajalla elävä kaupunki on tottunut vaihtamaan kieltä jopa kesken keskustelun. Vanhakaupunki on säilynyt yhtenä Sveitsin parhaiten säilyneistä, joten kielet kuuluvat keskiaikaisessa miljöössä. Täällä olis kyl hyvä oppia kaksi kieltä yhdellä kävelyllä.
+KYSYMYS: Kerro lisää: ranskaa
+
+### 310
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fribourg (kulttuuri)
+Tietoruudun teksti: Fribourg, saksaksi Freiburg im Üechtland, sijaitsee Sarine-joen mutkassa kielirajalla saksankielisen ja ranskankielisen Sveitsin välissä. Zähringenin herttua Berthold IV perusti kaupungin vuonna 1157 kalliolle, jota joki suojaa kolmelta sivulta, ja nimi tulee saksan sanoista "vapaa" ja "linnoitus". Kaupunki siirtyi Kyburgin suvulle herttuakunnan sammuessa 1218 ja myytiin Habsburgeille 1277, ja jo 1300-luvulla se oli tunnettu kangas- ja nahkatuotannostaan ympäri Keski-Eurooppaa. Vanhakaupunki on säilynyt yhtenä Sveitsin parhaiten säilyneistä, ja sen kaduilla kuulee vieläkin sekä ranskaa että saksaa.
+AIEMPI KYSYMYS: Mitä kieliä Fribourgin kaduilla kuulee?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Fribourgin kaduilla kuulee sekä [[ranskaa]] että [[saksaa]], sillä kaupunki sijaitsee kielirajalla saksankielisen ja ranskankielisen Sveitsin välissä. Kielirajalla elävä kaupunki on tottunut vaihtamaan kieltä jopa kesken keskustelun. Vanhakaupunki on säilynyt yhtenä Sveitsin parhaiten säilyneistä, joten kielet kuuluvat keskiaikaisessa miljöössä. Täällä olis kyl hyvä oppia kaksi kieltä yhdellä kävelyllä.
+KYSYMYS: Kerro lisää: saksaa
+
+### 311
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fribourg (kulttuuri)
+Tietoruudun teksti: Fribourg, saksaksi Freiburg im Üechtland, sijaitsee Sarine-joen mutkassa kielirajalla saksankielisen ja ranskankielisen Sveitsin välissä. Zähringenin herttua Berthold IV perusti kaupungin vuonna 1157 kalliolle, jota joki suojaa kolmelta sivulta, ja nimi tulee saksan sanoista "vapaa" ja "linnoitus". Kaupunki siirtyi Kyburgin suvulle herttuakunnan sammuessa 1218 ja myytiin Habsburgeille 1277, ja jo 1300-luvulla se oli tunnettu kangas- ja nahkatuotannostaan ympäri Keski-Eurooppaa. Vanhakaupunki on säilynyt yhtenä Sveitsin parhaiten säilyneistä, ja sen kaduilla kuulee vieläkin sekä ranskaa että saksaa.
+AIEMPI KYSYMYS: Mistä tuotteista Fribourg oli tunnettu 1300-luvulla?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Fribourg oli jo 1300-luvulla tunnettu [[kangas- ja nahkatuotannostaan]] ympäri Keski-Eurooppaa. Kaupunki oli tuolloin siirtynyt Kyburgin suvulta [[Habsburgeille]], ja käsityöläisten tuotteet liikkuivat laajalla alueella. Jokimutkan suojaama kalliokaupunki tarjosi sopivan paikan sekä työlle että kaupalle. Tarkempia tuotantolukuja en ole varma tietäväni, joten jätän ne mainitsematta. Hyvin muistin tuonkin.
+KYSYMYS: Kerro lisää: kangas- ja nahkatuotannostaan
+
+### 312
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fribourg (kulttuuri)
+Tietoruudun teksti: Fribourg, saksaksi Freiburg im Üechtland, sijaitsee Sarine-joen mutkassa kielirajalla saksankielisen ja ranskankielisen Sveitsin välissä. Zähringenin herttua Berthold IV perusti kaupungin vuonna 1157 kalliolle, jota joki suojaa kolmelta sivulta, ja nimi tulee saksan sanoista "vapaa" ja "linnoitus". Kaupunki siirtyi Kyburgin suvulle herttuakunnan sammuessa 1218 ja myytiin Habsburgeille 1277, ja jo 1300-luvulla se oli tunnettu kangas- ja nahkatuotannostaan ympäri Keski-Eurooppaa. Vanhakaupunki on säilynyt yhtenä Sveitsin parhaiten säilyneistä, ja sen kaduilla kuulee vieläkin sekä ranskaa että saksaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Sankarien aukio] 1896–1906 Unkarilaiset laskevat valtionsa alkavan vuodesta 896, jolloin heidän esi-isänsä asettuivat Karpaattien altaaseen. Tuhatvuotisjuhlaa varten Budapest rakensi kokonaisen kaupunginosan: Andrássy-katu jatkettiin, sen alle louhittiin Manner-Euroopan ensimmäinen metro, ja kadun päähän nousi aukio muistomerkkeineen. Työt alkoivat 1896, aukio sai nimensä 1900, ja muistomerkki vihittiin lopulta 1906. Suunnittelija oli arkkitehti Albert Schickedanz, joka piirsi myös aukiota reunustavat museot: Taidemuseon eli Szépművészeti Múzeumin, joka valmistui muistomerkin tavoin 1906, ja sitä vastapäätä seisovan Taidehallin eli Műcsarnokin, joka oli valmis jo 1896. Andrássy-katu aukioineen ja metroineen…
+AIEMPI KYSYMYS: Mistä tuotteista Fribourg oli tunnettu 1300-luvulla?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Fribourg oli jo 1300-luvulla tunnettu [[kangas- ja nahkatuotannostaan]] ympäri Keski-Eurooppaa. Kaupunki oli tuolloin siirtynyt Kyburgin suvulta [[Habsburgeille]], ja käsityöläisten tuotteet liikkuivat laajalla alueella. Jokimutkan suojaama kalliokaupunki tarjosi sopivan paikan sekä työlle että kaupalle. Tarkempia tuotantolukuja en ole varma tietäväni, joten jätän ne mainitsematta. Hyvin muistin tuonkin.
+KYSYMYS: Kerro lisää: Habsburgeille
+
+### 313
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zürich (kaupungit)
+Tietoruudun teksti: Zürich on Sveitsin suurin kaupunki ja Zürichin kantonin pääkaupunki, Zürichinjärven luoteiskärjessä. Roomalaiset perustivat paikalle tulliaseman nimeltä Turicum, ja keskiajalla kaupunki sai valtakunnanvälittömyyden erioikeuden Pyhän saksalais-roomalaisen keisarikunnan alaisuudessa. Vuonna 1519 Zürichistä tuli Huldrych Zwinglin johdolla yksi protestanttisen uskonpuhdistuksen tärkeimmistä keskuksista Euroopassa. Kaupungin halki virtaava Limmat-joki laskee Zürichinjärvestä, ja sen rannoilla sijaitsee torneineen vanhakaupunki.
+AIEMPI KYSYMYS: Mikä oli Zürichin roomalaisaikainen nimi?
+AIEMPI VASTAUS (Livia):
+Ai se. Zürichin roomalaisaikainen nimi oli [[Turicum]]. Roomalaiset perustivat paikalle tulliaseman, ja siitä kaupunki on kehittynyt Sveitsin suurimmaksi kaupungiksi. Nimi on säilynyt nykyisessä muodossa Zürich, vaikka sen ääntäminen on matkan varrella muuttunut. Zürich sijaitsee [[Zürichinjärven]] luoteiskärjessä, ja tulliasema sijaitsi siis jo silloin vilkkaalla paikalla. Latinaa, ja minä sentään osaan sitä.
+KYSYMYS: Kerro lisää: Turicum
+
+### 314
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zürich (kaupungit)
+Tietoruudun teksti: Zürich on Sveitsin suurin kaupunki ja Zürichin kantonin pääkaupunki, Zürichinjärven luoteiskärjessä. Roomalaiset perustivat paikalle tulliaseman nimeltä Turicum, ja keskiajalla kaupunki sai valtakunnanvälittömyyden erioikeuden Pyhän saksalais-roomalaisen keisarikunnan alaisuudessa. Vuonna 1519 Zürichistä tuli Huldrych Zwinglin johdolla yksi protestanttisen uskonpuhdistuksen tärkeimmistä keskuksista Euroopassa. Kaupungin halki virtaava Limmat-joki laskee Zürichinjärvestä, ja sen rannoilla sijaitsee torneineen vanhakaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki: Gotthard 1880 — valokuva kulkee kalliossa] 29.2.1880 — Pieni valokuva kulkee käsistä käsiin viimeisen kivikerroksen läpi ennen kuin kukaan ehtii sanoa mitään. Se esittää Louis Favrea, insinööriä, joka johti Gotthardin rautatietunnelin louhintaa vuodesta 1872, mutta joka kuoli sydänkohtaukseen tunnelissa heinäkuussa 1879 — kahdeksan kuukautta ennen tätä hetkeä. Sunnuntaina 29. helmikuuta 1880 pohjoisesta Göschenenistä ja etelästä Airolosta louhitut käytävät kohtaavat vihdoin syvällä Gotthard-massiivin sisällä, lähes 1 700 metrin kiven alla, ja saksankielinen ja italiankielinen työryhmä puhkaisevat viimeisen ohuen kivimuurin toistensa väliltä. Ensimmäinen kättely tapahtuu reiän läpi, ennen kuin kukaan pääsee kokonaan toiselle puolelle…
+AIEMPI KYSYMYS: Mikä oli Zürichin roomalaisaikainen nimi?
+AIEMPI VASTAUS (Livia):
+Ai se. Zürichin roomalaisaikainen nimi oli [[Turicum]]. Roomalaiset perustivat paikalle tulliaseman, ja siitä kaupunki on kehittynyt Sveitsin suurimmaksi kaupungiksi. Nimi on säilynyt nykyisessä muodossa Zürich, vaikka sen ääntäminen on matkan varrella muuttunut. Zürich sijaitsee [[Zürichinjärven]] luoteiskärjessä, ja tulliasema sijaitsi siis jo silloin vilkkaalla paikalla. Latinaa, ja minä sentään osaan sitä.
+KYSYMYS: Kerro lisää: Zürichinjärven
+
+### 315
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zürich (kaupungit)
+Tietoruudun teksti: Zürich on Sveitsin suurin kaupunki ja Zürichin kantonin pääkaupunki, Zürichinjärven luoteiskärjessä. Roomalaiset perustivat paikalle tulliaseman nimeltä Turicum, ja keskiajalla kaupunki sai valtakunnanvälittömyyden erioikeuden Pyhän saksalais-roomalaisen keisarikunnan alaisuudessa. Vuonna 1519 Zürichistä tuli Huldrych Zwinglin johdolla yksi protestanttisen uskonpuhdistuksen tärkeimmistä keskuksista Euroopassa. Kaupungin halki virtaava Limmat-joki laskee Zürichinjärvestä, ja sen rannoilla sijaitsee torneineen vanhakaupunki.
+AIEMPI KYSYMYS: Kuka johti Zürichin uskonpuhdistusta 1500-luvulla?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Zürichin uskonpuhdistusta johti [[Huldrych Zwingli]], jonka johdolla kaupungista tuli vuonna 1519 yksi protestanttisen [[uskonpuhdistuksen]] tärkeimmistä keskuksista Euroopassa. Zürich oli tuolloin valtakunnanvälitön kaupunki Pyhän saksalais-roomalaisen keisarikunnan alaisuudessa. Zwinglin vaikutus ulottui kaupungin ulkopuolelle muihin sveitsiläisiin kantoneihin. Vuosiluvuista olen kyl varma vain tuosta 1519.
+KYSYMYS: Kerro lisää: Huldrych Zwingli
+
+### 316
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zürich (kaupungit)
+Tietoruudun teksti: Zürich on Sveitsin suurin kaupunki ja Zürichin kantonin pääkaupunki, Zürichinjärven luoteiskärjessä. Roomalaiset perustivat paikalle tulliaseman nimeltä Turicum, ja keskiajalla kaupunki sai valtakunnanvälittömyyden erioikeuden Pyhän saksalais-roomalaisen keisarikunnan alaisuudessa. Vuonna 1519 Zürichistä tuli Huldrych Zwinglin johdolla yksi protestanttisen uskonpuhdistuksen tärkeimmistä keskuksista Euroopassa. Kaupungin halki virtaava Limmat-joki laskee Zürichinjärvestä, ja sen rannoilla sijaitsee torneineen vanhakaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kohdekartta / Kohdekartta: Riddarholmenin kirkko] 1835 Riddarholmenin kirkko on yksi Tukholman vanhimmista rakennuksista — se rakennettiin fransiskaanimunkkien luostariksi jo 1200-luvun lopulla. Uskonpuhdistuksen jälkeen munkit lähtivät, ja kirkosta tuli vähitellen kuninkaallisten hautakirkko. Melkein kaikki Ruotsin kuninkaat Kustaa II Aadolfista Kustaa V:een lepäävät kirkon holveissa, samoin kaksi keskiaikaista kuningasta. Vain kuningatar Kristiina on haudattu muualle, Roomaan. Alkuperäisen tornin huipun suunnitteli flaamilainen arkkitehti Willem Boy 1500-luvulla, mutta salama tuhosi sen 28. heinäkuuta 1835. Nykyinen valurautahuippu on rakennettu sen tilalle. Seurakunta lakkautettiin jo 1807, joten kirkkoa käytetään enää hautajaisiin ja m…
+AIEMPI KYSYMYS: Kuka johti Zürichin uskonpuhdistusta 1500-luvulla?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Zürichin uskonpuhdistusta johti [[Huldrych Zwingli]], jonka johdolla kaupungista tuli vuonna 1519 yksi protestanttisen [[uskonpuhdistuksen]] tärkeimmistä keskuksista Euroopassa. Zürich oli tuolloin valtakunnanvälitön kaupunki Pyhän saksalais-roomalaisen keisarikunnan alaisuudessa. Zwinglin vaikutus ulottui kaupungin ulkopuolelle muihin sveitsiläisiin kantoneihin. Vuosiluvuista olen kyl varma vain tuosta 1519.
+KYSYMYS: Kerro lisää: uskonpuhdistuksen
+
+### 317
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zürich (kaupungit)
+Tietoruudun teksti: Zürich on Sveitsin suurin kaupunki ja Zürichin kantonin pääkaupunki, Zürichinjärven luoteiskärjessä. Roomalaiset perustivat paikalle tulliaseman nimeltä Turicum, ja keskiajalla kaupunki sai valtakunnanvälittömyyden erioikeuden Pyhän saksalais-roomalaisen keisarikunnan alaisuudessa. Vuonna 1519 Zürichistä tuli Huldrych Zwinglin johdolla yksi protestanttisen uskonpuhdistuksen tärkeimmistä keskuksista Euroopassa. Kaupungin halki virtaava Limmat-joki laskee Zürichinjärvestä, ja sen rannoilla sijaitsee torneineen vanhakaupunki.
+AIEMPI KYSYMYS: Mikä joki virtaa Zürichin halki?
+AIEMPI VASTAUS (Livia):
+Kato, tämä on helppo. Zürichin halki virtaa [[Limmat-joki]], joka laskee Zürichinjärvestä. Joen rannoilla sijaitsee tornien täyttämä vanhakaupunki, jonka tunnistaa kauas. Zürich sijaitsee [[Zürichinjärven]] luoteiskärjessä, joten joki lähtee kaupungin kohdalta järvestä pohjoiseen. Mitä muuta jokirantakaupunki voisi toivoa kuin hyviä leivonnaisia, mutta niistä en tiedä Zürichin versiota.
+KYSYMYS: Kerro lisää: Limmat-joki
+
+### 318
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zürich (kaupungit)
+Tietoruudun teksti: Zürich on Sveitsin suurin kaupunki ja Zürichin kantonin pääkaupunki, Zürichinjärven luoteiskärjessä. Roomalaiset perustivat paikalle tulliaseman nimeltä Turicum, ja keskiajalla kaupunki sai valtakunnanvälittömyyden erioikeuden Pyhän saksalais-roomalaisen keisarikunnan alaisuudessa. Vuonna 1519 Zürichistä tuli Huldrych Zwinglin johdolla yksi protestanttisen uskonpuhdistuksen tärkeimmistä keskuksista Euroopassa. Kaupungin halki virtaava Limmat-joki laskee Zürichinjärvestä, ja sen rannoilla sijaitsee torneineen vanhakaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki: Gotthard 1880 — valokuva kulkee kalliossa] 29.2.1880 — Pieni valokuva kulkee käsistä käsiin viimeisen kivikerroksen läpi ennen kuin kukaan ehtii sanoa mitään. Se esittää Louis Favrea, insinööriä, joka johti Gotthardin rautatietunnelin louhintaa vuodesta 1872, mutta joka kuoli sydänkohtaukseen tunnelissa heinäkuussa 1879 — kahdeksan kuukautta ennen tätä hetkeä. Sunnuntaina 29. helmikuuta 1880 pohjoisesta Göschenenistä ja etelästä Airolosta louhitut käytävät kohtaavat vihdoin syvällä Gotthard-massiivin sisällä, lähes 1 700 metrin kiven alla, ja saksankielinen ja italiankielinen työryhmä puhkaisevat viimeisen ohuen kivimuurin toistensa väliltä. Ensimmäinen kättely tapahtuu reiän läpi, ennen kuin kukaan pääsee kokonaan toiselle puolelle…
+AIEMPI KYSYMYS: Mitä valtakunnanvälittömyys keskiajalla tarkoitti?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Valtakunnanvälittömyys tarkoitti keskiajalla sitä, että kaupunki oli suoraan keisarin alaisuudessa eikä minkään välissä olevan herran tai ruhtinaan alainen. [[Zürich]] sai tämän erioikeuden [[Pyhän saksalais-roomalaisen keisarikunnan]] aikana, ja se antoi kaupungille huomattavan itsenäisyyden omissa asioissaan. Käytännössä kaupunki hallitsi itseään, mutta kuului silti keisarikuntaan. Tarkkaa vuotta erioikeuden saamiselle en ole varma. Hirmuinen sana, mutta selvisin siitä.
+KYSYMYS: Kerro lisää: Zürich
+
+### 319
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zürich (kaupungit)
+Tietoruudun teksti: Zürich on Sveitsin suurin kaupunki ja Zürichin kantonin pääkaupunki, Zürichinjärven luoteiskärjessä. Roomalaiset perustivat paikalle tulliaseman nimeltä Turicum, ja keskiajalla kaupunki sai valtakunnanvälittömyyden erioikeuden Pyhän saksalais-roomalaisen keisarikunnan alaisuudessa. Vuonna 1519 Zürichistä tuli Huldrych Zwinglin johdolla yksi protestanttisen uskonpuhdistuksen tärkeimmistä keskuksista Euroopassa. Kaupungin halki virtaava Limmat-joki laskee Zürichinjärvestä, ja sen rannoilla sijaitsee torneineen vanhakaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Prahan linna] 870 Prahan linnan rakentaminen alkoi jo vuonna 870, kun kukkulalle pystytettiin ensimmäinen kivikirkko. Siitä lähtien linnaa on laajennettu ja rakennettu uudelleen yli tuhannen vuoden ajan, ja nykyään se on Guinnessin ennätystenkirjan mukaan maailman suurin muinainen linnakokonaisuus: aluetta on noin 70 000 neliömetriä, ja se on lähes 570 metriä pitkä. Linnassa on asunut Böömin kuninkaita ja Pyhän saksalais-roomalaisen keisarikunnan hallitsijoita, ja nykyisin se on Tšekin tasavallan presidentin virka-asunto. Linnan sisällä, salaisessa kammiossa, säilytetään myös Böömin kruununjalokiviä, joita pääsee katsomaan vain harvoin. Linnan pihalla on koettu myös dramaattisia hetkiä: natsi-Saksan mieh…
+AIEMPI KYSYMYS: Mitä valtakunnanvälittömyys keskiajalla tarkoitti?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Valtakunnanvälittömyys tarkoitti keskiajalla sitä, että kaupunki oli suoraan keisarin alaisuudessa eikä minkään välissä olevan herran tai ruhtinaan alainen. [[Zürich]] sai tämän erioikeuden [[Pyhän saksalais-roomalaisen keisarikunnan]] aikana, ja se antoi kaupungille huomattavan itsenäisyyden omissa asioissaan. Käytännössä kaupunki hallitsi itseään, mutta kuului silti keisarikuntaan. Tarkkaa vuotta erioikeuden saamiselle en ole varma. Hirmuinen sana, mutta selvisin siitä.
+KYSYMYS: Kerro lisää: Pyhän saksalais-roomalaisen keisarikunnan
+
+### 320
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zürich (kaupungit)
+Tietoruudun teksti: Zürich on Sveitsin suurin kaupunki ja Zürichin kantonin pääkaupunki, Zürichinjärven luoteiskärjessä. Roomalaiset perustivat paikalle tulliaseman nimeltä Turicum, ja keskiajalla kaupunki sai valtakunnanvälittömyyden erioikeuden Pyhän saksalais-roomalaisen keisarikunnan alaisuudessa. Vuonna 1519 Zürichistä tuli Huldrych Zwinglin johdolla yksi protestanttisen uskonpuhdistuksen tärkeimmistä keskuksista Euroopassa. Kaupungin halki virtaava Limmat-joki laskee Zürichinjärvestä, ja sen rannoilla sijaitsee torneineen vanhakaupunki.
+AIEMPI KYSYMYS: Missä järvessä Zürich sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai tota. Zürich sijaitsee [[Zürichinjärven]] luoteiskärjessä, siinä päässä järveä, josta [[Limmat]] lähtee virtaamaan. Järvi on suuri vesistö Sveitsin pohjoisosassa, ja kaupunki on kasvanut sen rannalle. Kaupunki on Sveitsin suurin ja samalla Zürichin kantonin pääkaupunki. Tarkkoja mittoja järvestä en ole varma. Ylhäältä katsottuna se näyttää kyl kauniilta.
+KYSYMYS: Kerro lisää: Limmat
