@@ -1,0 +1,198 @@
+================ KOHTA 26 (kohde:hahmotelma-silute) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šilutė (historia)
+Tietoruudun teksti: Šilutė on kaupunki Länsi-Liettuassa, ja se kuuluu Pikku-Liettuan (Klein-Litauen) etnografiseen alueeseen. Paikka sai alkunsa majatalosta, joka palveli Klaipėdan ja Tilsitin välillä kulkevia matkalaisia ja hevosia; saksankielinen nimi Heydekrug viittaa tähän nummen majataloon. Vuonna 1511 majatalon osti maineen ja kalastusoikeuksineen Georg Tallat, ja paikalle syntyi tunnettu kalamarkkina. Preussin kuningaskuntaan Šilutė kuului 1700-luvulta lähtien, ja 1800-luvun lopulla asukkaista osa oli liettuankielisiä ja monet elivät maataloudesta, kalastuksesta ja lauttauksesta. Vuosittaisilla markkinoilla myytiin kalaa aina Varsovaan ja Pietariin asti, sikoja Berliiniin sekä vihanneksia, karjaa ja hevosia.
+
+### 26.1
+KYSYMYS: Miksi Šilutėn saksalainen nimi Heydekrug viittaa majataloon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šilutė (historia)
+Tietoruudun teksti: Šilutė on kaupunki Länsi-Liettuassa, ja se kuuluu Pikku-Liettuan (Klein-Litauen) etnografiseen alueeseen. Paikka sai alkunsa majatalosta, joka palveli Klaipėdan ja Tilsitin välillä kulkevia matkalaisia ja hevosia; saksankielinen nimi Heydekrug viittaa tähän nummen majataloon. Vuonna 1511 majatalon osti maineen ja kalastusoikeuksineen Georg Tallat, ja paikalle syntyi tunnettu kalamarkkina. Preussin kuningaskuntaan Šilutė kuului 1700-luvulta lähtien, ja 1800-luvun lopulla asukkaista osa oli liettuankielisiä ja monet elivät maataloudesta, kalastuksesta ja lauttauksesta. Vuosittaisilla markkinoilla myytiin kalaa aina Varsovaan ja Pietariin asti, sikoja Berliiniin sekä vihanneksia, karjaa ja hevosia.
+
+### 26.2
+KYSYMYS: Miksi Šilutėssa pidettiin vuosittain suuria markkinoita, ja mitä niillä myytiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šilutė (historia)
+Tietoruudun teksti: Šilutė on kaupunki Länsi-Liettuassa, ja se kuuluu Pikku-Liettuan (Klein-Litauen) etnografiseen alueeseen. Paikka sai alkunsa majatalosta, joka palveli Klaipėdan ja Tilsitin välillä kulkevia matkalaisia ja hevosia; saksankielinen nimi Heydekrug viittaa tähän nummen majataloon. Vuonna 1511 majatalon osti maineen ja kalastusoikeuksineen Georg Tallat, ja paikalle syntyi tunnettu kalamarkkina. Preussin kuningaskuntaan Šilutė kuului 1700-luvulta lähtien, ja 1800-luvun lopulla asukkaista osa oli liettuankielisiä ja monet elivät maataloudesta, kalastuksesta ja lauttauksesta. Vuosittaisilla markkinoilla myytiin kalaa aina Varsovaan ja Pietariin asti, sikoja Berliiniin sekä vihanneksia, karjaa ja hevosia.
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-varniai) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varniai (kulttuuri)
+Tietoruudun teksti: Varniai on pikkukaupunki Länsi-Liettuassa Telšiain maakunnassa, ja keskiajalla sen nimi oli Medininkai, joka mainitaan ensimmäisen kerran vuonna 1320. Nykyinen nimi tulee kaupungin läpi virtaavasta Varnelė-joesta. Samogitian kastamisen jälkeen piispa asui Varniaissa, ja kaupunki oli Samogitian katolisen kirkon keskus, kunnes Venäjän keisarikunnan viranomaiset siirsivät hiippakunnan Kaunasiin tammikuun kansannousun 1863 jälkeen. Piispa Merkelis Giedraitisin tuella Mikalojus Daukša valmisti julkaisukuntoon Katechizmasin, joka oli ensimmäinen Liettuan suuriruhtinaskunnassa painettu liettuankielinen kirja. Kaupungissa asui myös piispa Motiejus Valančius.
+
+### 27.1
+KYSYMYS: Miksi Samogitian piispa asui juuri Varniaissa, ja miksi hiippakunnan keskus siirrettiin sieltä pois?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varniai (kulttuuri)
+Tietoruudun teksti: Varniai on pikkukaupunki Länsi-Liettuassa Telšiain maakunnassa, ja keskiajalla sen nimi oli Medininkai, joka mainitaan ensimmäisen kerran vuonna 1320. Nykyinen nimi tulee kaupungin läpi virtaavasta Varnelė-joesta. Samogitian kastamisen jälkeen piispa asui Varniaissa, ja kaupunki oli Samogitian katolisen kirkon keskus, kunnes Venäjän keisarikunnan viranomaiset siirsivät hiippakunnan Kaunasiin tammikuun kansannousun 1863 jälkeen. Piispa Merkelis Giedraitisin tuella Mikalojus Daukša valmisti julkaisukuntoon Katechizmasin, joka oli ensimmäinen Liettuan suuriruhtinaskunnassa painettu liettuankielinen kirja. Kaupungissa asui myös piispa Motiejus Valančius.
+
+### 27.2
+KYSYMYS: Miksi liettuankielisen kirjan painaminen oli merkittävä tapahtuma 1500-luvun Liettuassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varniai (kulttuuri)
+Tietoruudun teksti: Varniai on pikkukaupunki Länsi-Liettuassa Telšiain maakunnassa, ja keskiajalla sen nimi oli Medininkai, joka mainitaan ensimmäisen kerran vuonna 1320. Nykyinen nimi tulee kaupungin läpi virtaavasta Varnelė-joesta. Samogitian kastamisen jälkeen piispa asui Varniaissa, ja kaupunki oli Samogitian katolisen kirkon keskus, kunnes Venäjän keisarikunnan viranomaiset siirsivät hiippakunnan Kaunasiin tammikuun kansannousun 1863 jälkeen. Piispa Merkelis Giedraitisin tuella Mikalojus Daukša valmisti julkaisukuntoon Katechizmasin, joka oli ensimmäinen Liettuan suuriruhtinaskunnassa painettu liettuankielinen kirja. Kaupungissa asui myös piispa Motiejus Valančius.
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-panemune) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panemunė (historia)
+Tietoruudun teksti: Panemunėn linna on historiallinen linna Länsi-Liettuassa Nemunas-joen rannalla, tärkeän kulku- ja kauppareitin varrella. Ensimmäisen linnan uskotaan rakentaneen Saksalaisritarikunta vuonna 1313, mutta Liettuan suuriruhtinas Vytenis valtasi sen jo seuraavana vuonna. Nykyisen tiililinnan rakennutti unkarilaistaustainen puukauppias János Eperjes vuosina 1604–1610, ja sen suunnitteli hollantilainen arkkitehti Peter Nonhaardt. Tyylissä on renessanssin ja barokin piirteitä sekä myöhäisgoottia, ja linnaa pidetään todennäköisesti Liettuan aidoimpana säilyneenä asuinlinnana. Tsaarin viranomaiset takavarikoivat linnan omistajasuvulta marraskuun kansannousun jälkeen, ja rakennus rappeutui; nykyisin se on avoinna kävijöille ja siellä on museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Vanha ruhtinaanhovi] 1459 Vanha ruhtinaanhovi eli Curtea Veche oli aikoinaan Valakian ruhtinaiden linna Bukarestin keskustassa. Se rakennettiin vuonna 1459, ja seuraavien vuosisatojen aikana monet hallitsijat laajensivat ja kaunistivat sitä. Muun muassa ruhtinas Constantin Brâncoveanu lisäsi linnaan komean marmoriportaikon. Linna sijaitsi lähellä jokea, ja sen ympärille kasvoi kauppiaiden ja käsityöläisten kortteli, joka teki paikasta koko kaupungin taloudellisen keskuksen. Vuonna 1775 ruhtinaat muuttivat uuteen palatsiin, ja vanha hovi jätettiin rappeutumaan, kunnes se lopulta myytiin huutokaupalla vuonna 1798. Nykyään paikalla on vain raunioita: vanhoja kivimuureja ja holvikaaria, joita arkeologit ovat kaivan…
+- [Hanoi — kohdekartta / Kohdekartta: Long Biênin silta] 1899–1902 Long Biênin silta ylittää Punaisenjoen ja yhdistää Hoàn Kiếmin ja Long Biênin kaupunginosat. Se rakennettiin vuosina 1899–1902 pariisilaisen Daydé & Pillén piirustusten mukaan ja avattiin liikenteelle vuonna 1903. Nimi tulee Long Biênistä, joka on yksi kaupungin vanhimmista nimistä ja tarkoittaa toisiinsa kietoutuvia lohikäärmeitä. Ensimmäiset vuosikymmenensä silta kantoi kenraalikuvernöörin nimeä ja oli Paul Doumerin silta. Rakenne on terästä ja tyypiltään ulokepalkkisilta: yhdeksäntoista jännettä, leveyttä 13,5 metriä ja korkeutta 43,5 metriä. Pituudesta Wikipedia antaa kaksi lukua, infoboksin 2 290 metriä ja leipätekstin 2,4 kilometriä, mutta kummallakin luvulla se oli valmistu…
+
+### 28.1
+KYSYMYS: Miksi Nemunas-joen ranta oli linnalle niin strateginen paikka?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panemunė (historia)
+Tietoruudun teksti: Panemunėn linna on historiallinen linna Länsi-Liettuassa Nemunas-joen rannalla, tärkeän kulku- ja kauppareitin varrella. Ensimmäisen linnan uskotaan rakentaneen Saksalaisritarikunta vuonna 1313, mutta Liettuan suuriruhtinas Vytenis valtasi sen jo seuraavana vuonna. Nykyisen tiililinnan rakennutti unkarilaistaustainen puukauppias János Eperjes vuosina 1604–1610, ja sen suunnitteli hollantilainen arkkitehti Peter Nonhaardt. Tyylissä on renessanssin ja barokin piirteitä sekä myöhäisgoottia, ja linnaa pidetään todennäköisesti Liettuan aidoimpana säilyneenä asuinlinnana. Tsaarin viranomaiset takavarikoivat linnan omistajasuvulta marraskuun kansannousun jälkeen, ja rakennus rappeutui; nykyisin se on avoinna kävijöille ja siellä on museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Hanoi — kohdekartta / Kohdekartta: Long Biênin silta] 1899–1902 Long Biênin silta ylittää Punaisenjoen ja yhdistää Hoàn Kiếmin ja Long Biênin kaupunginosat. Se rakennettiin vuosina 1899–1902 pariisilaisen Daydé & Pillén piirustusten mukaan ja avattiin liikenteelle vuonna 1903. Nimi tulee Long Biênistä, joka on yksi kaupungin vanhimmista nimistä ja tarkoittaa toisiinsa kietoutuvia lohikäärmeitä. Ensimmäiset vuosikymmenensä silta kantoi kenraalikuvernöörin nimeä ja oli Paul Doumerin silta. Rakenne on terästä ja tyypiltään ulokepalkkisilta: yhdeksäntoista jännettä, leveyttä 13,5 metriä ja korkeutta 43,5 metriä. Pituudesta Wikipedia antaa kaksi lukua, infoboksin 2 290 metriä ja leipätekstin 2,4 kilometriä, mutta kummallakin luvulla se oli valmistu…
+
+### 28.2
+KYSYMYS: Miksi linna pääsi rappeutumaan 1800-luvulla, vaikka se oli ollut upea asuinlinna?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panemunė (historia)
+Tietoruudun teksti: Panemunėn linna on historiallinen linna Länsi-Liettuassa Nemunas-joen rannalla, tärkeän kulku- ja kauppareitin varrella. Ensimmäisen linnan uskotaan rakentaneen Saksalaisritarikunta vuonna 1313, mutta Liettuan suuriruhtinas Vytenis valtasi sen jo seuraavana vuonna. Nykyisen tiililinnan rakennutti unkarilaistaustainen puukauppias János Eperjes vuosina 1604–1610, ja sen suunnitteli hollantilainen arkkitehti Peter Nonhaardt. Tyylissä on renessanssin ja barokin piirteitä sekä myöhäisgoottia, ja linnaa pidetään todennäköisesti Liettuan aidoimpana säilyneenä asuinlinnana. Tsaarin viranomaiset takavarikoivat linnan omistajasuvulta marraskuun kansannousun jälkeen, ja rakennus rappeutui; nykyisin se on avoinna kävijöille ja siellä on museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Vanha ruhtinaanhovi] 1459 Vanha ruhtinaanhovi eli Curtea Veche oli aikoinaan Valakian ruhtinaiden linna Bukarestin keskustassa. Se rakennettiin vuonna 1459, ja seuraavien vuosisatojen aikana monet hallitsijat laajensivat ja kaunistivat sitä. Muun muassa ruhtinas Constantin Brâncoveanu lisäsi linnaan komean marmoriportaikon. Linna sijaitsi lähellä jokea, ja sen ympärille kasvoi kauppiaiden ja käsityöläisten kortteli, joka teki paikasta koko kaupungin taloudellisen keskuksen. Vuonna 1775 ruhtinaat muuttivat uuteen palatsiin, ja vanha hovi jätettiin rappeutumaan, kunnes se lopulta myytiin huutokaupalla vuonna 1798. Nykyään paikalla on vain raunioita: vanhoja kivimuureja ja holvikaaria, joita arkeologit ovat kaivan…
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-siluva) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šiluva (kulttuuri)
+Tietoruudun teksti: Šiluva on alle 700 asukkaan pikkukaupunki Samogitiassa ja Liettuan tärkeä katolinen pyhiinvaelluskohde. Se mainitaan ensimmäisen kerran vuonna 1457, kun aatelismies Petras Gedgaudas rakennutti sinne Neitsyt Marian syntymän kirkon. Reformaation aikana monet seudun asukkaista kääntyivät kalvinismiin ja kirkko suljettiin noin vuonna 1569; viimeinen kirkkoherra hautasi kirkon arvoesineet ja asiakirjat rautalaatikossa kirkon lähelle. Erään uskomuksen mukaan Neitsyt Maria ilmestyi paikalle lapsi sylissään, ja asiakirjat löytyivät pian sen jälkeen, joten katolilaiset saivat kirkon takaisin vuonna 1622. Nykyinen basilika valmistui vuonna 1786, ja Venäjän vallan aikana pyhiinvaellusjuhlat olivat myös paikka, jossa jaettiin Preussista salakuljetettuja liettuankielisiä kirjoja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montreal — kohdekartta / Kohdekartta: Pyhän Patrickin basilika] 1843–1847 Montrealin irlantilaiset kuuluivat aluksi samoihin seurakuntiin kuin ranskankieliset katolilaiset. Kun irlantilaisten määrä kasvoi vuoden 1817 tienoilta alkaen, heidät siirrettiin 1825 fransiskaanien kirkkoon, mutta vuonna 1841 heitä oli jo 6 500 eikä kirkko riittänyt. Tontti ostettiin, ja työ alkoi syyskuussa 1843 silloisen kaupungin laidalla, rinteessä, josta näkyi seurakuntalaisten koteihin Point St. Charlesissa, Goose Villagessa ja Griffintownissa. Peruskiviä laskettiin seitsemän. Ensimmäinen messu pidettiin Pyhän Patrickin päivänä 17. maaliskuuta 1847, ja kirkosta tuli Montrealin vanhin englanninkielinen katolinen kirkko. Uusgoottilaisen kirkon suunnittelivat P. L. Morin ja i…
+
+### 29.1
+KYSYMYS: Miksi katolilaiset menettivät Šiluvan kirkon 1500-luvulla, ja miten he saivat sen takaisin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šiluva (kulttuuri)
+Tietoruudun teksti: Šiluva on alle 700 asukkaan pikkukaupunki Samogitiassa ja Liettuan tärkeä katolinen pyhiinvaelluskohde. Se mainitaan ensimmäisen kerran vuonna 1457, kun aatelismies Petras Gedgaudas rakennutti sinne Neitsyt Marian syntymän kirkon. Reformaation aikana monet seudun asukkaista kääntyivät kalvinismiin ja kirkko suljettiin noin vuonna 1569; viimeinen kirkkoherra hautasi kirkon arvoesineet ja asiakirjat rautalaatikossa kirkon lähelle. Erään uskomuksen mukaan Neitsyt Maria ilmestyi paikalle lapsi sylissään, ja asiakirjat löytyivät pian sen jälkeen, joten katolilaiset saivat kirkon takaisin vuonna 1622. Nykyinen basilika valmistui vuonna 1786, ja Venäjän vallan aikana pyhiinvaellusjuhlat olivat myös paikka, jossa jaettiin Preussista salakuljetettuja liettuankielisiä kirjoja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montreal — kohdekartta / Kohdekartta: Pyhän Patrickin basilika] 1843–1847 Montrealin irlantilaiset kuuluivat aluksi samoihin seurakuntiin kuin ranskankieliset katolilaiset. Kun irlantilaisten määrä kasvoi vuoden 1817 tienoilta alkaen, heidät siirrettiin 1825 fransiskaanien kirkkoon, mutta vuonna 1841 heitä oli jo 6 500 eikä kirkko riittänyt. Tontti ostettiin, ja työ alkoi syyskuussa 1843 silloisen kaupungin laidalla, rinteessä, josta näkyi seurakuntalaisten koteihin Point St. Charlesissa, Goose Villagessa ja Griffintownissa. Peruskiviä laskettiin seitsemän. Ensimmäinen messu pidettiin Pyhän Patrickin päivänä 17. maaliskuuta 1847, ja kirkosta tuli Montrealin vanhin englanninkielinen katolinen kirkko. Uusgoottilaisen kirkon suunnittelivat P. L. Morin ja i…
+
+### 29.2
+KYSYMYS: Miksi Preussista salakuljetettuja liettuankielisiä kirjoja jaettiin juuri pyhiinvaelluspaikalla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šiluva (kulttuuri)
+Tietoruudun teksti: Šiluva on alle 700 asukkaan pikkukaupunki Samogitiassa ja Liettuan tärkeä katolinen pyhiinvaelluskohde. Se mainitaan ensimmäisen kerran vuonna 1457, kun aatelismies Petras Gedgaudas rakennutti sinne Neitsyt Marian syntymän kirkon. Reformaation aikana monet seudun asukkaista kääntyivät kalvinismiin ja kirkko suljettiin noin vuonna 1569; viimeinen kirkkoherra hautasi kirkon arvoesineet ja asiakirjat rautalaatikossa kirkon lähelle. Erään uskomuksen mukaan Neitsyt Maria ilmestyi paikalle lapsi sylissään, ja asiakirjat löytyivät pian sen jälkeen, joten katolilaiset saivat kirkon takaisin vuonna 1622. Nykyinen basilika valmistui vuonna 1786, ja Venäjän vallan aikana pyhiinvaellusjuhlat olivat myös paikka, jossa jaettiin Preussista salakuljetettuja liettuankielisiä kirjoja.
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-tytuvenai) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tytuvėnai (historia)
+Tietoruudun teksti: Tytuvėnai on kaupunki Kelmėn kunnassa Liettuassa, ja se tunnetaan bernardiiniluostaristaan. Paikka mainitaan ensimmäisen kerran 1300-luvun lopulla, jolloin Bridvaišis-järven yllä kohoavalla linnavuorella oli puulinna. Vuonna 1609 Liettuan suuri lipunkantaja Andrius Valavičius osti Tytuvėnain, ja hänen perheensä aloitti luostarin ja kirkon rakentamisen vanhan kirkon viereen; kompleksin pääosa valmistui vuonna 1633. Ruotsalaisten ja venäläisten joukkojen hyökkäykset ja pitkät sodat jättivät kaupungin autioksi vuoteen 1711 mennessä, mutta vuonna 1724 myönnetty markkinaoikeus auttoi sen toipumaan. Vuoden 1863 kansannousun jälkeen viranomaiset syyttivät paikallisia munkkeja kapinallisten auttamisesta ja sulkivat luostarin vuonna 1864.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salta — kohdekartta / Kohdekartta: San Bernardon luostari] 1600-luku Tämä on kaupungin vanhimpia rakennuksia. Se pystytettiin 1500-luvun lopulla tai 1600-luvun alussa; Gómez de los Ríos ja kuvernööri Alonso de la Rivera mainitsevat sen 1626. Alun perin se oli San Bernardon erakkomaja — pyhimys oli kaupungin ensimmäinen suojelija — ja 1586 sen viereen nousi sairaala nimeltä San Andrés. Vuoden 1692 maanjäristys, sama joka synnytti Milagro-hartauden, tuhosi rakennuksen. Uusi valmistui hitaasti ja saatiin käyttökuntoon vasta 1726. Sairaala sulki ovensa useaan kertaan ja avasi ne uudelleen 1787 ja 20. elokuuta 1805, jolloin se annettiin betlehemiläisveljien hoitoon. Vähitellen sairaala menetti merkityksensä, ja pappi Isidoro Fernández toi 1846 Chilestä …
+- [Fès — kaupunkilehti / Kirjat ja kirjoitus: Kirjapaino, joka takavarikoitiin satamassa] Arabiankielinen kirjapaino tuli Marokkoon oppineen ja tuomarin ar-Rudanin mukana. Hän osti sen Kairosta 1864 palatessaan pyhiinvaellukselta ja palkkasi mukaan egyptiläisen koneenkäyttäjän. Viranomaiset takavarikoivat koneen satamassa ja lähettivät sen Meknèsiin, jossa sulttaani Muhammad IV oleskeli, ja maan ensimmäinen arabiankielinen kirja painettiin siellä kesäkuussa 1865. Samana vuonna paino siirrettiin Fèsiin, jossa se toimi 1940-luvulle asti. Vuoteen 1908 mennessä kaupungissa oli vähintään neljä kirjapainoa.
+
+### 30.1
+KYSYMYS: Mitä Tytuvėnaille tapahtui 1600- ja 1700-lukujen sodissa, ja miten kaupunki toipui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tytuvėnai (historia)
+Tietoruudun teksti: Tytuvėnai on kaupunki Kelmėn kunnassa Liettuassa, ja se tunnetaan bernardiiniluostaristaan. Paikka mainitaan ensimmäisen kerran 1300-luvun lopulla, jolloin Bridvaišis-järven yllä kohoavalla linnavuorella oli puulinna. Vuonna 1609 Liettuan suuri lipunkantaja Andrius Valavičius osti Tytuvėnain, ja hänen perheensä aloitti luostarin ja kirkon rakentamisen vanhan kirkon viereen; kompleksin pääosa valmistui vuonna 1633. Ruotsalaisten ja venäläisten joukkojen hyökkäykset ja pitkät sodat jättivät kaupungin autioksi vuoteen 1711 mennessä, mutta vuonna 1724 myönnetty markkinaoikeus auttoi sen toipumaan. Vuoden 1863 kansannousun jälkeen viranomaiset syyttivät paikallisia munkkeja kapinallisten auttamisesta ja sulkivat luostarin vuonna 1864.
+
+### 30.2
+KYSYMYS: Miksi Venäjän viranomaiset sulkivat luostarin vuonna 1864?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tytuvėnai (historia)
+Tietoruudun teksti: Tytuvėnai on kaupunki Kelmėn kunnassa Liettuassa, ja se tunnetaan bernardiiniluostaristaan. Paikka mainitaan ensimmäisen kerran 1300-luvun lopulla, jolloin Bridvaišis-järven yllä kohoavalla linnavuorella oli puulinna. Vuonna 1609 Liettuan suuri lipunkantaja Andrius Valavičius osti Tytuvėnain, ja hänen perheensä aloitti luostarin ja kirkon rakentamisen vanhan kirkon viereen; kompleksin pääosa valmistui vuonna 1633. Ruotsalaisten ja venäläisten joukkojen hyökkäykset ja pitkät sodat jättivät kaupungin autioksi vuoteen 1711 mennessä, mutta vuonna 1724 myönnetty markkinaoikeus auttoi sen toipumaan. Vuoden 1863 kansannousun jälkeen viranomaiset syyttivät paikallisia munkkeja kapinallisten auttamisesta ja sulkivat luostarin vuonna 1864.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salta — kohdekartta / Kohdekartta: San Bernardon luostari] 1600-luku Tämä on kaupungin vanhimpia rakennuksia. Se pystytettiin 1500-luvun lopulla tai 1600-luvun alussa; Gómez de los Ríos ja kuvernööri Alonso de la Rivera mainitsevat sen 1626. Alun perin se oli San Bernardon erakkomaja — pyhimys oli kaupungin ensimmäinen suojelija — ja 1586 sen viereen nousi sairaala nimeltä San Andrés. Vuoden 1692 maanjäristys, sama joka synnytti Milagro-hartauden, tuhosi rakennuksen. Uusi valmistui hitaasti ja saatiin käyttökuntoon vasta 1726. Sairaala sulki ovensa useaan kertaan ja avasi ne uudelleen 1787 ja 20. elokuuta 1805, jolloin se annettiin betlehemiläisveljien hoitoon. Vähitellen sairaala menetti merkityksensä, ja pappi Isidoro Fernández toi 1846 Chilestä …
+- [Fès — kaupunkilehti / Kirjat ja kirjoitus: Kirjapaino, joka takavarikoitiin satamassa] Arabiankielinen kirjapaino tuli Marokkoon oppineen ja tuomarin ar-Rudanin mukana. Hän osti sen Kairosta 1864 palatessaan pyhiinvaellukselta ja palkkasi mukaan egyptiläisen koneenkäyttäjän. Viranomaiset takavarikoivat koneen satamassa ja lähettivät sen Meknèsiin, jossa sulttaani Muhammad IV oleskeli, ja maan ensimmäinen arabiankielinen kirja painettiin siellä kesäkuussa 1865. Samana vuonna paino siirrettiin Fèsiin, jossa se toimi 1940-luvulle asti. Vuoteen 1908 mennessä kaupungissa oli vähintään neljä kirjapainoa.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI

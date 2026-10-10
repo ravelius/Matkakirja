@@ -1,0 +1,318 @@
+================ KOHTA 6 (kohde:ristien-kukkula) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ristien kukkula (kulttuuri)
+Tietoruudun teksti: Ristien kukkula on pyhiinvaelluspaikka noin kahdentoista kilometrin päässä Šiauliaista pohjoiseen Pohjois-Liettuassa.
+
+Tavan tarkkaa alkuperää ei tiedetä, mutta ensimmäiset ristit uskotaan pystytetyn entiselle Jurgaičiain eli Domantain linnavuorelle vuoden 1831 kapinan jälkeen. Kun Puola ja Liettua olivat kapinoineet Venäjän valtaa vastaan 1831 ja 1863 eivätkä perheet löytäneet kaatuneiden kapinallisten ruumiita, he alkoivat pystyttää heille symbolisia ristejä entiselle linnavuorelle.
+
+Sukupolvien mittaan kukkulalle on tuotu ristien ja krusifiksien lisäksi Neitsyt Marian patsaita, liettualaisten isänmaanystävien veistoksia sekä tuhansia pieniä kuvia ja rukousnauhoja. Tarkkaa määrää ei tiedä kukaan: arvioiden mukaan ristejä oli noin 55 000 vuonna 1990 ja 100 000 vuonna 2006.
+
+Neuvostomiehityksen aikana 1944–1990 uskonnon harjoittamista vainottiin, ja kukkulasta tuli julkisen vastarinnan …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Tavat: Kukkula, jolle jokainen tuo ristin] 1961 — Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. Neuvostoaikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka tahansa saa tuoda omansa.
+- [Alankomaat — maalehti / Arki ja tavat: Paalu, jonka kyljessä on kolme ristiä] Nykyisin — Amsterdamin jalkakäytävillä seisoo tuhansia matalia punaruskeita paaluja. Ne estävät autoja nousemasta kävelytielle, ja jokaisen kyljessä on kolme vinoristiä — samat kuin kaupungin vaakunassa. Siksi niitä sanotaan amsterdammertjeiksi eli pikkuamsterdamilaisiksi. Paalu on 1,06 metriä pitkä, mutta siitä näkyy vain 75 senttiä; loppu on kivetyksen alla. Vuonna 1984 niitä laskettiin noin 100 000, vuonna 2003 enää alle 40 000.
+
+### 6.1
+KYSYMYS: Miksi ensimmäiset ristit pystytettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ristien kukkula (kulttuuri)
+Tietoruudun teksti: Ristien kukkula on pyhiinvaelluspaikka noin kahdentoista kilometrin päässä Šiauliaista pohjoiseen Pohjois-Liettuassa.
+
+Tavan tarkkaa alkuperää ei tiedetä, mutta ensimmäiset ristit uskotaan pystytetyn entiselle Jurgaičiain eli Domantain linnavuorelle vuoden 1831 kapinan jälkeen. Kun Puola ja Liettua olivat kapinoineet Venäjän valtaa vastaan 1831 ja 1863 eivätkä perheet löytäneet kaatuneiden kapinallisten ruumiita, he alkoivat pystyttää heille symbolisia ristejä entiselle linnavuorelle.
+
+Sukupolvien mittaan kukkulalle on tuotu ristien ja krusifiksien lisäksi Neitsyt Marian patsaita, liettualaisten isänmaanystävien veistoksia sekä tuhansia pieniä kuvia ja rukousnauhoja. Tarkkaa määrää ei tiedä kukaan: arvioiden mukaan ristejä oli noin 55 000 vuonna 1990 ja 100 000 vuonna 2006.
+
+Neuvostomiehityksen aikana 1944–1990 uskonnon harjoittamista vainottiin, ja kukkulasta tuli julkisen vastarinnan …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Tavat: Kukkula, jolle jokainen tuo ristin] 1961 — Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. Neuvostoaikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka tahansa saa tuoda omansa.
+
+### 6.2
+KYSYMYS: Kuinka monta ristiä kukkulalla arvioidaan olevan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ristien kukkula (kulttuuri)
+Tietoruudun teksti: Ristien kukkula on pyhiinvaelluspaikka noin kahdentoista kilometrin päässä Šiauliaista pohjoiseen Pohjois-Liettuassa.
+
+Tavan tarkkaa alkuperää ei tiedetä, mutta ensimmäiset ristit uskotaan pystytetyn entiselle Jurgaičiain eli Domantain linnavuorelle vuoden 1831 kapinan jälkeen. Kun Puola ja Liettua olivat kapinoineet Venäjän valtaa vastaan 1831 ja 1863 eivätkä perheet löytäneet kaatuneiden kapinallisten ruumiita, he alkoivat pystyttää heille symbolisia ristejä entiselle linnavuorelle.
+
+Sukupolvien mittaan kukkulalle on tuotu ristien ja krusifiksien lisäksi Neitsyt Marian patsaita, liettualaisten isänmaanystävien veistoksia sekä tuhansia pieniä kuvia ja rukousnauhoja. Tarkkaa määrää ei tiedä kukaan: arvioiden mukaan ristejä oli noin 55 000 vuonna 1990 ja 100 000 vuonna 2006.
+
+Neuvostomiehityksen aikana 1944–1990 uskonnon harjoittamista vainottiin, ja kukkulasta tuli julkisen vastarinnan …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Arki ja tavat: Paalu, jonka kyljessä on kolme ristiä] Nykyisin — Amsterdamin jalkakäytävillä seisoo tuhansia matalia punaruskeita paaluja. Ne estävät autoja nousemasta kävelytielle, ja jokaisen kyljessä on kolme vinoristiä — samat kuin kaupungin vaakunassa. Siksi niitä sanotaan amsterdammertjeiksi eli pikkuamsterdamilaisiksi. Paalu on 1,06 metriä pitkä, mutta siitä näkyy vain 75 senttiä; loppu on kivetyksen alla. Vuonna 1984 niitä laskettiin noin 100 000, vuonna 2003 enää alle 40 000.
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:kuurinkynnas) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuurinkynnäs (luonto · vuori)
+Tietoruudun teksti: Kuurinkynnäs on 98 kilometriä pitkä, ohut ja kaareva hiekkadyynikynnäs, joka erottaa Kuurinlahden Itämerestä. Se on maailmanperintökohde, jonka Liettua ja Venäjä jakavat: eteläosa kuuluu Venäjän Kaliningradin alueeseen ja pohjoinen 52 kilometrin osuus Liettuan Klaipėdan lääniin.
+
+Kynnäs ulottuu etelässä Sambian niemimaalta pohjoiseen kapealle salmelle, jonka toisella puolella on Klaipėdan satamakaupunki. Leveys vaihtelee 400 metristä Venäjän puolella 3 800 metriin Liettuassa Nidan pohjoispuolella.
+
+Kynnäs syntyi noin kolmannella vuosituhannella eaa. Perustana oli jäätikön jättämä moreeni, ja tuulet ja merivirrat toivat sen päälle niin paljon hiekkaa, että muodostelma nousi merenpinnan yläpuolelle ja pysyi siellä.
+
+Geologisesti kynnäs on lyhytikäinen rannikkomuoto. Sen olemassaolo riippuu hiekan kulkeutumisen ja kertymisen tasapainosta, ja todennäköisin kehityskulku on, että matala lahti…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ilha do Bananal — kaupunkilehti / Ilha do Bananal: Maailman suurin kilpikonnien pesimäranta] Araguaia-joen hiekkasärkät, myös Bananalin sisällä virtaavan Javaés-joen varrella, muodostavat yhden maailman suurimmista jättiläisten amazoninkilpikonnien (Podocnemis expansa) pesimäalueista. Naaraat kaivavat munapesänsä kuivan kauden paljastamille hiekkarannoille, ja tutkijat ovat havainneet, että pesäpaikan valinta ei ole sattumaa: rannan kaltevuus ja hiekkatason korkeus ratkaisevat, mihin kohtaan munat kaivetaan. Kilpikonnat jakavat rannat pienemmän Podocnemis unifilis -lajin kanssa, joka pesii samoilla särkillä ylempänä.
+- [Sevilla — kaupunkilehti / Musiikki: Festivaali, joka väittää olevansa maailman suurin] Sevilla isännöi joka toinen vuosi La Bienal -flamencofestivaalia, joka kestää lähes kuukauden ja jota järjestäjät kutsuvat maailman suurimmaksi flamencotapahtumaksi. Klassinen ja kansanomainen jakavat kaupungissa saman katon: María Luisan puiston laidalla seisova Teatro Lope de Vega rakennettiin vuoden 1929 Ibero-Amerikan-näyttelyn Sevillan paviljongiksi, siihen mahtui 1 100 katsojaa, ja sen ohjelmistossa vuorottelevat teatteri, tanssi, ooppera, jazz ja flamenco.
+
+### 7.1
+KYSYMYS: Mikä pitää kynnäksen olemassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuurinkynnäs (luonto · vuori)
+Tietoruudun teksti: Kuurinkynnäs on 98 kilometriä pitkä, ohut ja kaareva hiekkadyynikynnäs, joka erottaa Kuurinlahden Itämerestä. Se on maailmanperintökohde, jonka Liettua ja Venäjä jakavat: eteläosa kuuluu Venäjän Kaliningradin alueeseen ja pohjoinen 52 kilometrin osuus Liettuan Klaipėdan lääniin.
+
+Kynnäs ulottuu etelässä Sambian niemimaalta pohjoiseen kapealle salmelle, jonka toisella puolella on Klaipėdan satamakaupunki. Leveys vaihtelee 400 metristä Venäjän puolella 3 800 metriin Liettuassa Nidan pohjoispuolella.
+
+Kynnäs syntyi noin kolmannella vuosituhannella eaa. Perustana oli jäätikön jättämä moreeni, ja tuulet ja merivirrat toivat sen päälle niin paljon hiekkaa, että muodostelma nousi merenpinnan yläpuolelle ja pysyi siellä.
+
+Geologisesti kynnäs on lyhytikäinen rannikkomuoto. Sen olemassaolo riippuu hiekan kulkeutumisen ja kertymisen tasapainosta, ja todennäköisin kehityskulku on, että matala lahti…
+
+### 7.2
+KYSYMYS: Ketkä jakavat maailmanperintökohteen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuurinkynnäs (luonto · vuori)
+Tietoruudun teksti: Kuurinkynnäs on 98 kilometriä pitkä, ohut ja kaareva hiekkadyynikynnäs, joka erottaa Kuurinlahden Itämerestä. Se on maailmanperintökohde, jonka Liettua ja Venäjä jakavat: eteläosa kuuluu Venäjän Kaliningradin alueeseen ja pohjoinen 52 kilometrin osuus Liettuan Klaipėdan lääniin.
+
+Kynnäs ulottuu etelässä Sambian niemimaalta pohjoiseen kapealle salmelle, jonka toisella puolella on Klaipėdan satamakaupunki. Leveys vaihtelee 400 metristä Venäjän puolella 3 800 metriin Liettuassa Nidan pohjoispuolella.
+
+Kynnäs syntyi noin kolmannella vuosituhannella eaa. Perustana oli jäätikön jättämä moreeni, ja tuulet ja merivirrat toivat sen päälle niin paljon hiekkaa, että muodostelma nousi merenpinnan yläpuolelle ja pysyi siellä.
+
+Geologisesti kynnäs on lyhytikäinen rannikkomuoto. Sen olemassaolo riippuu hiekan kulkeutumisen ja kertymisen tasapainosta, ja todennäköisin kehityskulku on, että matala lahti…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ilha do Bananal — kaupunkilehti / Ilha do Bananal: Maailman suurin kilpikonnien pesimäranta] Araguaia-joen hiekkasärkät, myös Bananalin sisällä virtaavan Javaés-joen varrella, muodostavat yhden maailman suurimmista jättiläisten amazoninkilpikonnien (Podocnemis expansa) pesimäalueista. Naaraat kaivavat munapesänsä kuivan kauden paljastamille hiekkarannoille, ja tutkijat ovat havainneet, että pesäpaikan valinta ei ole sattumaa: rannan kaltevuus ja hiekkatason korkeus ratkaisevat, mihin kohtaan munat kaivetaan. Kilpikonnat jakavat rannat pienemmän Podocnemis unifilis -lajin kanssa, joka pesii samoilla särkillä ylempänä.
+- [Sevilla — kaupunkilehti / Musiikki: Festivaali, joka väittää olevansa maailman suurin] Sevilla isännöi joka toinen vuosi La Bienal -flamencofestivaalia, joka kestää lähes kuukauden ja jota järjestäjät kutsuvat maailman suurimmaksi flamencotapahtumaksi. Klassinen ja kansanomainen jakavat kaupungissa saman katon: María Luisan puiston laidalla seisova Teatro Lope de Vega rakennettiin vuoden 1929 Ibero-Amerikan-näyttelyn Sevillan paviljongiksi, siihen mahtui 1 100 katsojaa, ja sen ohjelmistossa vuorottelevat teatteri, tanssi, ooppera, jazz ja flamenco.
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:palangan-meripihkamuseo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Palangan meripihkamuseo (kulttuuri)
+Tietoruudun teksti: Palangan meripihkamuseo on Itämeren rannalla Palangassa ja on osa Liettuan kansallista taidemuseota. Se toimii kunnostetussa 1800-luvun Tiškevičiaiden palatsissa, jota ympäröi Palangan kasvitieteellinen puutarha.
+
+Kokoelmassa on noin 28 000 meripihkakappaletta. Niistä noin 15 000:ssa on sulkeumia: hyönteisiä, hämähäkkejä tai kasveja, jotka jäivät pihkaan sen kovettuessa. Esillä on noin 4 500 kappaletta, ja monet niistä ovat taide-esineitä ja koruja.
+
+Itämeren rannikko on ollut meripihkan lähde esihistoriasta asti. Palangassa oli meripihkaverstaita 1600-luvulta lähtien, ja 1700-luvun loppuun mennessä siitä oli tullut Venäjän keisarikunnan meripihkateollisuuden keskus. Ensimmäistä maailmansotaa edeltävinä vuosina Palangassa käsiteltiin noin kaksituhatta kiloa raakameripihkaa vuodessa.
+
+Feliks Tyszkiewicz rakennutti uusrenessanssipalatsin vuonna 1897 saksalaisen arkkitehdin Franz Heinrich …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kioto — kaupunkilehti / Historia: Palatsi, joka rakennettiin kahdeksan kertaa] Kioton keisarillinen palatsi oli keisarien koti vuodesta 1331 vuoteen 1869, mutta nykyiset rakennukset ovat nuoria: pelkästään Edo-kaudella palatsi rakennettiin tulipalojen jälkeen uudelleen kahdeksan kertaa, viimeksi vuoden 1854 palon jälkeen. Nykyinen versio valmistui 1855 keisari Kōmein pyynnöstä, ja siinä pyrittiin toistamaan Heian-ajan rakennustapa. Kun keisari Meiji muutti Tokioon 1869, palatsi jäi tyhjilleen — ja vuonna 1877 hän valitti sen rappiota ja määräsi rakennukset säilytettäviksi entisellään. Sekä Taishō että Shōwa kruunattiin täällä.
+- [Liettua — maalehti / Luonto: Kivi, joka kelluu suolavedessä] Myrskyn jälkeen — Meripihka ei ole kivi vaan havupuiden pihkaa, joka on kovettunut kymmeniä miljoonia vuosia sitten ja säilynyt merenpohjan hiekassa. Myrskyn jälkeen aallot heittävät sitä rannalle, ja kevyimmät palat kelluvat suolaisessa vedessä. Pihkaan on joskus jäänyt kiinni hyönteinen tai kasvinlehti, joka näkyy sisällä kuin ikkunan takana. Palangan museossa on pala nimeltä Meripihkan aurinko: se painaa noin kolme ja puoli kiloa.
+- [Tallinna — kaupunkilehti / Palatsi: Palatsi, joka rakennettiin sodan keskellä] Suuri Pohjan sota ei ollut vielä päättynyt, kun tsaari Pietari Suuri, jo varma valloittamiensa Itämeren alueiden pysyvyydestä, aloitti vuonna 1718 uuden kesäpalatsin rakentamisen Tallinnan liepeille. Italialainen arkkitehti Nicola Michetti suunnitteli barokkipalatsin, jonka rakennustyöt kestivät vuoteen 1725. Palatsi on yksi Pohjois-Euroopan komeimmista barokkirakennuksista, ja se nimettiin Kadriorgiksi, Katariinan laaksoksi, tsaarin vaimon Katariina I:n mukaan.
+
+### 8.1
+KYSYMYS: Mitä meripihkan sisältä löytyy?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Palangan meripihkamuseo (kulttuuri)
+Tietoruudun teksti: Palangan meripihkamuseo on Itämeren rannalla Palangassa ja on osa Liettuan kansallista taidemuseota. Se toimii kunnostetussa 1800-luvun Tiškevičiaiden palatsissa, jota ympäröi Palangan kasvitieteellinen puutarha.
+
+Kokoelmassa on noin 28 000 meripihkakappaletta. Niistä noin 15 000:ssa on sulkeumia: hyönteisiä, hämähäkkejä tai kasveja, jotka jäivät pihkaan sen kovettuessa. Esillä on noin 4 500 kappaletta, ja monet niistä ovat taide-esineitä ja koruja.
+
+Itämeren rannikko on ollut meripihkan lähde esihistoriasta asti. Palangassa oli meripihkaverstaita 1600-luvulta lähtien, ja 1700-luvun loppuun mennessä siitä oli tullut Venäjän keisarikunnan meripihkateollisuuden keskus. Ensimmäistä maailmansotaa edeltävinä vuosina Palangassa käsiteltiin noin kaksituhatta kiloa raakameripihkaa vuodessa.
+
+Feliks Tyszkiewicz rakennutti uusrenessanssipalatsin vuonna 1897 saksalaisen arkkitehdin Franz Heinrich …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Luonto: Kivi, joka kelluu suolavedessä] Myrskyn jälkeen — Meripihka ei ole kivi vaan havupuiden pihkaa, joka on kovettunut kymmeniä miljoonia vuosia sitten ja säilynyt merenpohjan hiekassa. Myrskyn jälkeen aallot heittävät sitä rannalle, ja kevyimmät palat kelluvat suolaisessa vedessä. Pihkaan on joskus jäänyt kiinni hyönteinen tai kasvinlehti, joka näkyy sisällä kuin ikkunan takana. Palangan museossa on pala nimeltä Meripihkan aurinko: se painaa noin kolme ja puoli kiloa.
+
+### 8.2
+KYSYMYS: Milloin palatsi rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Palangan meripihkamuseo (kulttuuri)
+Tietoruudun teksti: Palangan meripihkamuseo on Itämeren rannalla Palangassa ja on osa Liettuan kansallista taidemuseota. Se toimii kunnostetussa 1800-luvun Tiškevičiaiden palatsissa, jota ympäröi Palangan kasvitieteellinen puutarha.
+
+Kokoelmassa on noin 28 000 meripihkakappaletta. Niistä noin 15 000:ssa on sulkeumia: hyönteisiä, hämähäkkejä tai kasveja, jotka jäivät pihkaan sen kovettuessa. Esillä on noin 4 500 kappaletta, ja monet niistä ovat taide-esineitä ja koruja.
+
+Itämeren rannikko on ollut meripihkan lähde esihistoriasta asti. Palangassa oli meripihkaverstaita 1600-luvulta lähtien, ja 1700-luvun loppuun mennessä siitä oli tullut Venäjän keisarikunnan meripihkateollisuuden keskus. Ensimmäistä maailmansotaa edeltävinä vuosina Palangassa käsiteltiin noin kaksituhatta kiloa raakameripihkaa vuodessa.
+
+Feliks Tyszkiewicz rakennutti uusrenessanssipalatsin vuonna 1897 saksalaisen arkkitehdin Franz Heinrich …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kioto — kaupunkilehti / Historia: Palatsi, joka rakennettiin kahdeksan kertaa] Kioton keisarillinen palatsi oli keisarien koti vuodesta 1331 vuoteen 1869, mutta nykyiset rakennukset ovat nuoria: pelkästään Edo-kaudella palatsi rakennettiin tulipalojen jälkeen uudelleen kahdeksan kertaa, viimeksi vuoden 1854 palon jälkeen. Nykyinen versio valmistui 1855 keisari Kōmein pyynnöstä, ja siinä pyrittiin toistamaan Heian-ajan rakennustapa. Kun keisari Meiji muutti Tokioon 1869, palatsi jäi tyhjilleen — ja vuonna 1877 hän valitti sen rappiota ja määräsi rakennukset säilytettäviksi entisellään. Sekä Taishō että Shōwa kruunattiin täällä.
+- [Tallinna — kaupunkilehti / Palatsi: Palatsi, joka rakennettiin sodan keskellä] Suuri Pohjan sota ei ollut vielä päättynyt, kun tsaari Pietari Suuri, jo varma valloittamiensa Itämeren alueiden pysyvyydestä, aloitti vuonna 1718 uuden kesäpalatsin rakentamisen Tallinnan liepeille. Italialainen arkkitehti Nicola Michetti suunnitteli barokkipalatsin, jonka rakennustyöt kestivät vuoteen 1725. Palatsi on yksi Pohjois-Euroopan komeimmista barokkirakennuksista, ja se nimettiin Kadriorgiksi, Katariinan laaksoksi, tsaarin vaimon Katariina I:n mukaan.
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:rumsiskes) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rumšiškės (kulttuuri)
+Tietoruudun teksti: Rumšiškės on pieni liettualainen kaupunki kahdenkymmenen kilometrin päässä Kaunasista itään, Kaunasin tekojärven pohjoisrannalla. Se mainitaan ensi kerran vuonna 1382 saksalaisen ritarikunnan laatimassa reittiselostuksessa.
+
+Kaupungin eteläinen osa on nykyään tekojärven alla. Vanha Rumšiškės hukkui, kun Kaunasin vesivoimalaitos rakennettiin, mutta tärkeimmät rakennukset — pyhän Mikael Arkkienkelin kirkko, sen kellotapuli ja kappeli — siirrettiin uudelle paikalle vuonna 1958.
+
+Nykyään Rumšiškės tunnetaan ulkoilmamuseostaan, joka perustettiin 1966 ja avattiin yleisölle 1974. Se on Euroopan suurimpia laatuaan ja esittelee liettualaista maaseutuelämää aidoissa, muualta siirretyissä rakennuksissa.
+
+Museoalue on 175 hehtaaria, ja siellä on 140 rakennusta 1700- ja 1800-luvuilta sisustuksineen ja ympäristöineen. Kokoelmaan kuuluu yli 90 000 esinettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Paraguay — maalehti / Ruoka: Salaisuus, joka katosi karkotuksen mukana] 1650–1770 — Guaranit käyttivät yerba matea kauan ennen eurooppalaisia, ja kulutus keskittyi Amambayn ja Alto Paranán seuduille. Kun jesuiitat huomasivat kasvin kaupallisen arvon, he onnistuivat 1600-luvun puolivälissä kesyttämään sen ja perustivat viljelmiä reduktioihinsa — mikä sai villikantoja korjaavat paraguaylaiset raivon partaalle. Kun kunta karkotettiin 1770-luvulla, viljelmät rappeutuivat ja itämisen salaisuus katosi. Kasvi kesytettiin uudelleen vasta yli sata vuotta myöhemmin. Nykyisin Paraguayn osuus maailman tuotannosta on kymmenesosa.
+- [Nome — kaupunkilehti / Kultaryntäys: Kaupunki, joka nousi ja katosi] Nomen väkiluku romahti yhtä nopeasti kuin se nousi. Kesällä 1900 kaupungissa saattoi olla parikymmentä tuhatta ihmistä, mutta virallinen väestönlaskenta vuonna 1910 kirjasi enää 2 600 asukasta, ja vuoteen 1934 mennessä luku oli pudonnut alle 1 500:aan. Silti kultaa on nostettu Nomen alueelta yhteensä ainakin 3,6 miljoonaa troyunssia, ja nykyisin merenpohjasta imuruoppaavat kultalaivat jatkavat samaa perinnettä aivan kaupungin edustalla, yli sata vuotta ensimmäisen ryntäyksen jälkeen.
+- [Adelaide — kaupunkilehti / Saksalaisperintö: Nimi joka katosi sodan ajaksi] Ensimmäinen maailmansota muutti Etelä-Australian kartan: hallitus vaihtoi 1917 kymmenien paikkojen saksalaiset nimet, ja Hahndorfista tuli Ambleside läheisen rautatieaseman mukaan. Vanha nimi palautettiin vasta nimistölailla, joka tuli voimaan 12. joulukuuta 1935, ja Ambleside-nimen jälkiä näkyy kylässä yhä. Seurakunnat säilyivät koko ajan. St Michael’s on vuodelta 1839 ja on Australian vanhin luterilainen kirkko, jolla on yhä seurakunta alkuperäisellä paikallaan; St Paul’s syntyi 1846 pastorien Kavelin ja Fritzschen välirikosta.
+
+### 9.1
+KYSYMYS: Miksi vanha kaupunki katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rumšiškės (kulttuuri)
+Tietoruudun teksti: Rumšiškės on pieni liettualainen kaupunki kahdenkymmenen kilometrin päässä Kaunasista itään, Kaunasin tekojärven pohjoisrannalla. Se mainitaan ensi kerran vuonna 1382 saksalaisen ritarikunnan laatimassa reittiselostuksessa.
+
+Kaupungin eteläinen osa on nykyään tekojärven alla. Vanha Rumšiškės hukkui, kun Kaunasin vesivoimalaitos rakennettiin, mutta tärkeimmät rakennukset — pyhän Mikael Arkkienkelin kirkko, sen kellotapuli ja kappeli — siirrettiin uudelle paikalle vuonna 1958.
+
+Nykyään Rumšiškės tunnetaan ulkoilmamuseostaan, joka perustettiin 1966 ja avattiin yleisölle 1974. Se on Euroopan suurimpia laatuaan ja esittelee liettualaista maaseutuelämää aidoissa, muualta siirretyissä rakennuksissa.
+
+Museoalue on 175 hehtaaria, ja siellä on 140 rakennusta 1700- ja 1800-luvuilta sisustuksineen ja ympäristöineen. Kokoelmaan kuuluu yli 90 000 esinettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Paraguay — maalehti / Ruoka: Salaisuus, joka katosi karkotuksen mukana] 1650–1770 — Guaranit käyttivät yerba matea kauan ennen eurooppalaisia, ja kulutus keskittyi Amambayn ja Alto Paranán seuduille. Kun jesuiitat huomasivat kasvin kaupallisen arvon, he onnistuivat 1600-luvun puolivälissä kesyttämään sen ja perustivat viljelmiä reduktioihinsa — mikä sai villikantoja korjaavat paraguaylaiset raivon partaalle. Kun kunta karkotettiin 1770-luvulla, viljelmät rappeutuivat ja itämisen salaisuus katosi. Kasvi kesytettiin uudelleen vasta yli sata vuotta myöhemmin. Nykyisin Paraguayn osuus maailman tuotannosta on kymmenesosa.
+- [Nome — kaupunkilehti / Kultaryntäys: Kaupunki, joka nousi ja katosi] Nomen väkiluku romahti yhtä nopeasti kuin se nousi. Kesällä 1900 kaupungissa saattoi olla parikymmentä tuhatta ihmistä, mutta virallinen väestönlaskenta vuonna 1910 kirjasi enää 2 600 asukasta, ja vuoteen 1934 mennessä luku oli pudonnut alle 1 500:aan. Silti kultaa on nostettu Nomen alueelta yhteensä ainakin 3,6 miljoonaa troyunssia, ja nykyisin merenpohjasta imuruoppaavat kultalaivat jatkavat samaa perinnettä aivan kaupungin edustalla, yli sata vuotta ensimmäisen ryntäyksen jälkeen.
+- [Adelaide — kaupunkilehti / Saksalaisperintö: Nimi joka katosi sodan ajaksi] Ensimmäinen maailmansota muutti Etelä-Australian kartan: hallitus vaihtoi 1917 kymmenien paikkojen saksalaiset nimet, ja Hahndorfista tuli Ambleside läheisen rautatieaseman mukaan. Vanha nimi palautettiin vasta nimistölailla, joka tuli voimaan 12. joulukuuta 1935, ja Ambleside-nimen jälkiä näkyy kylässä yhä. Seurakunnat säilyivät koko ajan. St Michael’s on vuodelta 1839 ja on Australian vanhin luterilainen kirkko, jolla on yhä seurakunta alkuperäisellä paikallaan; St Paul’s syntyi 1846 pastorien Kavelin ja Fritzschen välirikosta.
+
+### 9.2
+KYSYMYS: Kuinka monta rakennusta museossa on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rumšiškės (kulttuuri)
+Tietoruudun teksti: Rumšiškės on pieni liettualainen kaupunki kahdenkymmenen kilometrin päässä Kaunasista itään, Kaunasin tekojärven pohjoisrannalla. Se mainitaan ensi kerran vuonna 1382 saksalaisen ritarikunnan laatimassa reittiselostuksessa.
+
+Kaupungin eteläinen osa on nykyään tekojärven alla. Vanha Rumšiškės hukkui, kun Kaunasin vesivoimalaitos rakennettiin, mutta tärkeimmät rakennukset — pyhän Mikael Arkkienkelin kirkko, sen kellotapuli ja kappeli — siirrettiin uudelle paikalle vuonna 1958.
+
+Nykyään Rumšiškės tunnetaan ulkoilmamuseostaan, joka perustettiin 1966 ja avattiin yleisölle 1974. Se on Euroopan suurimpia laatuaan ja esittelee liettualaista maaseutuelämää aidoissa, muualta siirretyissä rakennuksissa.
+
+Museoalue on 175 hehtaaria, ja siellä on 140 rakennusta 1700- ja 1800-luvuilta sisustuksineen ja ympäristöineen. Kokoelmaan kuuluu yli 90 000 esinettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Ateena: Viisi siskoa museossa, kuudes Lontoossa] Akropoliin Erekhtheion-temppelin eteläkuistia eivät kanna pylväät vaan kuusi marmorista neitoa, karyatidia. Yksikään ei ole toisensa kopio: kampaus, laskokset ja polven asento vaihtelevat. Lordi Elgin vei yhden 1800-luvun alussa Lontooseen, ja Akropoliin museossa seisoo nykyään viisi. Kuudennen jalusta on jätetty tyhjäksi. Vuosina 2011–2015 patsaat puhdistettiin laserilla mustasta noesta, ja museovieraat saivat seurata työtä suorana näytöltä.
+- [New York — kohdekartta / Kohdekartta: Amerikan luonnonhistoriallinen museo] 1869–1877 Ajatuksen museosta esitti 1861 luonnontutkija Albert S. Bickmore, joka opiskeli Louis Agassizin vertailevan eläintieteen museossa Cambridgessa. Hän pani merkille, että Euroopan luonnontieteelliset museot olivat väkirikkaissa kaupungeissa, ja kirjoitti New Yorkin olevan maan varakkain kaupunki ja siksi paras paikka. Vaatimukset voimistuivat, kun Barnumin American Museum paloi 1868, ja joulukuussa kahdeksantoista arvovaltaista newyorkilaista kirjoitti Central Parkin komissiolle kirjeen museon perustamisesta. Kuvernööri John Thompson Hoffman allekirjoitti perustamislain 6. huhtikuuta 1869. Museo avattiin 22. toukokuuta 1871 Central Parkin Arsenaalin kahdessa ylimmässä kerroksessa: hy…
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:grutas-puisto) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grūtasin puisto (kulttuuri)
+Tietoruudun teksti: Grūtasin puisto on sosialistisen realismin museo ja veistospuisto, jossa on neuvostoajan patsaita ja muita miehitysajan ideologisia jäänteitä. Epävirallisesti sitä kutsutaan Stalinin maailmaksi. Liikemies Viliumas Malinauskas perusti puiston 2001 Druskininkain lähelle, noin 130 kilometriä Vilnasta lounaaseen.
+
+Kun Liettua palautti itsenäisyytensä 1990, valtaosa neuvostopatsaista purettiin ja kasattiin eri paikkoihin. Malinauskas pyysi viranomaisilta patsaita omistukseensa, jotta hän voisi rakentaa niistä yksityisrahoitteisen museon.
+
+Puiston perustaminen oli kiistanalaista ja kohtasi huomattavaa vastustusta, eikä kaikkia alkuperäisiä ajatuksia hyväksytty — esimerkiksi vierailijoiden kuljettamista gulag-tyylisellä junalla. Osa alueen piirteistä jäljittelee silti neuvostoleirejä: puupolkuja, vartiotorneja ja piikkilanka-aitoja.
+
+Näyttelyssä on 86 patsasta 46 kuvanveistäjältä, ja se on jär…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nepal — maalehti / Kirjallisuus: Ensimmäinen nainen, joka sai Madan-palkinnon] 1937–1993 — Bishnu Kumari Waiba, kirjailijanimeltään Parijat, syntyi 1937 Darjeelingissa ja muutti Kathmanduun 1954. Ensimmäinen runo julkaistiin 1959, ja romaaneja tuli kymmenen. Niistä Shirishko Phool toi hänelle 1965 Madan Puraskarin ensimmäisenä naisena; englanniksi kirja tunnetaan nimellä The Blue Mimosa, ja se on luettavana Marylandin yliopiston kirjallisuuskurssilla. Parijat halvaantui 26-vuotiaana ja hänen sisarensa hoiti häntä suurimman osan elämästä. Hän johti 1966 Ralfa-liikettä ja perusti vangeille suunnatun avustustoiminnan.
+- [Halifax — kohdekartta / Kohdekartta: Julkinen puutarha] 1874 Halifax Public Gardens on viktoriaaninen puutarha, joka perustettiin muodollisesti 1867 — samana vuonna kuin Kanadan konfederaatio. Nykyinen puutarha syntyi 1874, kun kaksi vanhempaa aluetta yhdistettiin: Nova Scotia Horticultural Societyn 1837 istuttama puutarha ja sen viereen 1866 avattu julkinen puisto. Puutarhuriksi palkattiin 1872 Richard Power, ja hänen akselisymmetrinen suunnitelmansa ohjaa aluetta yhä. Powerin aikana tulivat soittolava, suihkulähteet, patsaat ja takorautaportit sekä tiheät kuviolliset kesäkukkaistutukset. Soittolavan suunnitteli arkkitehti Henry Busch. Kuudentoista eekkerin alueella on kolme suihkulähdettä, kaksi kivisiltaa ja kolme lampea. Puutarha nimettiin k…
+
+### 10.1
+KYSYMYS: Mistä patsaat tulivat puistoon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grūtasin puisto (kulttuuri)
+Tietoruudun teksti: Grūtasin puisto on sosialistisen realismin museo ja veistospuisto, jossa on neuvostoajan patsaita ja muita miehitysajan ideologisia jäänteitä. Epävirallisesti sitä kutsutaan Stalinin maailmaksi. Liikemies Viliumas Malinauskas perusti puiston 2001 Druskininkain lähelle, noin 130 kilometriä Vilnasta lounaaseen.
+
+Kun Liettua palautti itsenäisyytensä 1990, valtaosa neuvostopatsaista purettiin ja kasattiin eri paikkoihin. Malinauskas pyysi viranomaisilta patsaita omistukseensa, jotta hän voisi rakentaa niistä yksityisrahoitteisen museon.
+
+Puiston perustaminen oli kiistanalaista ja kohtasi huomattavaa vastustusta, eikä kaikkia alkuperäisiä ajatuksia hyväksytty — esimerkiksi vierailijoiden kuljettamista gulag-tyylisellä junalla. Osa alueen piirteistä jäljittelee silti neuvostoleirejä: puupolkuja, vartiotorneja ja piikkilanka-aitoja.
+
+Näyttelyssä on 86 patsasta 46 kuvanveistäjältä, ja se on jär…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Halifax — kohdekartta / Kohdekartta: Julkinen puutarha] 1874 Halifax Public Gardens on viktoriaaninen puutarha, joka perustettiin muodollisesti 1867 — samana vuonna kuin Kanadan konfederaatio. Nykyinen puutarha syntyi 1874, kun kaksi vanhempaa aluetta yhdistettiin: Nova Scotia Horticultural Societyn 1837 istuttama puutarha ja sen viereen 1866 avattu julkinen puisto. Puutarhuriksi palkattiin 1872 Richard Power, ja hänen akselisymmetrinen suunnitelmansa ohjaa aluetta yhä. Powerin aikana tulivat soittolava, suihkulähteet, patsaat ja takorautaportit sekä tiheät kuviolliset kesäkukkaistutukset. Soittolavan suunnitteli arkkitehti Henry Busch. Kuudentoista eekkerin alueella on kolme suihkulähdettä, kaksi kivisiltaa ja kolme lampea. Puutarha nimettiin k…
+
+### 10.2
+KYSYMYS: Minkä palkinnon puisto sai?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grūtasin puisto (kulttuuri)
+Tietoruudun teksti: Grūtasin puisto on sosialistisen realismin museo ja veistospuisto, jossa on neuvostoajan patsaita ja muita miehitysajan ideologisia jäänteitä. Epävirallisesti sitä kutsutaan Stalinin maailmaksi. Liikemies Viliumas Malinauskas perusti puiston 2001 Druskininkain lähelle, noin 130 kilometriä Vilnasta lounaaseen.
+
+Kun Liettua palautti itsenäisyytensä 1990, valtaosa neuvostopatsaista purettiin ja kasattiin eri paikkoihin. Malinauskas pyysi viranomaisilta patsaita omistukseensa, jotta hän voisi rakentaa niistä yksityisrahoitteisen museon.
+
+Puiston perustaminen oli kiistanalaista ja kohtasi huomattavaa vastustusta, eikä kaikkia alkuperäisiä ajatuksia hyväksytty — esimerkiksi vierailijoiden kuljettamista gulag-tyylisellä junalla. Osa alueen piirteistä jäljittelee silti neuvostoleirejä: puupolkuja, vartiotorneja ja piikkilanka-aitoja.
+
+Näyttelyssä on 86 patsasta 46 kuvanveistäjältä, ja se on jär…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nepal — maalehti / Kirjallisuus: Ensimmäinen nainen, joka sai Madan-palkinnon] 1937–1993 — Bishnu Kumari Waiba, kirjailijanimeltään Parijat, syntyi 1937 Darjeelingissa ja muutti Kathmanduun 1954. Ensimmäinen runo julkaistiin 1959, ja romaaneja tuli kymmenen. Niistä Shirishko Phool toi hänelle 1965 Madan Puraskarin ensimmäisenä naisena; englanniksi kirja tunnetaan nimellä The Blue Mimosa, ja se on luettavana Marylandin yliopiston kirjallisuuskurssilla. Parijat halvaantui 26-vuotiaana ja hänen sisarensa hoiti häntä suurimman osan elämästä. Hän johti 1966 Ralfa-liikettä ja perusti vangeille suunnatun avustustoiminnan.
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

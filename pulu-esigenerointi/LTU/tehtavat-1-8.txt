@@ -1,0 +1,248 @@
+================ KOHTA 36 (kohde:hahmotelma-trakai-niemekelinna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trakain niemekelinna (historia)
+Tietoruudun teksti: Suurruhtinas Kęstutis rakennutti Trakain niemekelinnan vuosina 1350–1377 puolustamaan aluetta Saksalaista ritarikuntaa vastaan; sen seitsemää tornia yhdisti kymmenmetrinen muuri. Melnon rauha vuonna 1422 vei linnalta puolustusmerkityksen, ja sen jälkeen suurruhtinaat käyttivät sitä asuinpaikkanaan — Sigismund Kęstutaitis murhattiin siellä vuonna 1440. 1500-luvulla linnaa käytettiin myös vankilana. Venäjän–Puolan sota vuosina 1654–1667 tuhosi linnan pahoin, eikä sitä koskaan jälleenrakennettu, toisin kuin läheistä Trakain saarilinnaa. Vuonna 1678 alue luovutettiin dominikaanimunkeille, jotka rakensivat sinne luostarin ja kirkon 1770-luvulla; jäljellä olevat muurit ja tornit ovat nykyään Trakain kansallispuiston suojelemia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: ANZAC-aukio] 1930 Ensimmäinen maailmansota verotti Australiaa raskaasti. Noin viiden miljoonan asukkaan maasta kaatui 60 000 sotilasta ja haavoittui 152 000; tappio-osuus 68,5 prosenttia oli liittoutuneiden korkein. Ajatus suuresta muistopuistosta keskelle kaupunkia esitettiin jo 1916. Alkuperäinen suunnitelma varasi koko korttelin Annin, Edwardin, Adelaiden ja Creekin katujen välissä, mutta neuvottelut kutistivat alueen; 1928 valtio ja liittovaltio luovuttivat maat ja lupasivat rakentaa reunoille yhtenäisen suunnitelman mukaiset talot. Muistokappelin suunnittelukilpailun voittivat 1928 sydneyläiset arkkitehdit Buchanan ja Cowper. Queenslandin kuvernööri sir John Goodwin vihki aukion ja kappelin aselepo…
+- [Dubrovnik — kohdekartta / Kohdekartta: Dubrovnikin katedraali] 1671–1713 Tarinan mukaan Englannin kuningas Rikhard Leijonamieli haaksirikkoutui lähellä Lokrumin saarta vuonna 1192 palatessaan ristiretkeltä. Pelastuttuaan hengissä hän lupasi rakentaa kirkon kiitokseksi - ja rahoitti osan Dubrovnikiin nousseesta ensimmäisestä kirkosta. Tuo vanha kirkko vaurioitui pahasti vuoden 1667 valtavassa maanjäristyksessä, joka mullisti koko kaupungin. Dubrovnikilaiset eivät kuitenkaan luovuttaneet: uuden katedraalin rakentaminen alkoi vuonna 1671 ja kesti peräti 42 vuotta, kunnes se valmistui vuonna 1713. Roomalainen arkkitehti Andrea Buffalini suunnitteli komean, kupolikattoisen rakennuksen, joka on 41 metriä pitkä. Katedraalin aarrekammiossa säilytetään 182 pyhä…
+
+### 36.1
+KYSYMYS: Kuka linnan rakennutti ja mihin sitä käytettiin sen jälkeen, kun se menetti puolustusmerkityksensä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trakain niemekelinna (historia)
+Tietoruudun teksti: Suurruhtinas Kęstutis rakennutti Trakain niemekelinnan vuosina 1350–1377 puolustamaan aluetta Saksalaista ritarikuntaa vastaan; sen seitsemää tornia yhdisti kymmenmetrinen muuri. Melnon rauha vuonna 1422 vei linnalta puolustusmerkityksen, ja sen jälkeen suurruhtinaat käyttivät sitä asuinpaikkanaan — Sigismund Kęstutaitis murhattiin siellä vuonna 1440. 1500-luvulla linnaa käytettiin myös vankilana. Venäjän–Puolan sota vuosina 1654–1667 tuhosi linnan pahoin, eikä sitä koskaan jälleenrakennettu, toisin kuin läheistä Trakain saarilinnaa. Vuonna 1678 alue luovutettiin dominikaanimunkeille, jotka rakensivat sinne luostarin ja kirkon 1770-luvulla; jäljellä olevat muurit ja tornit ovat nykyään Trakain kansallispuiston suojelemia.
+
+### 36.2
+KYSYMYS: Mikä sodista tuhosi linnan lopullisesti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trakain niemekelinna (historia)
+Tietoruudun teksti: Suurruhtinas Kęstutis rakennutti Trakain niemekelinnan vuosina 1350–1377 puolustamaan aluetta Saksalaista ritarikuntaa vastaan; sen seitsemää tornia yhdisti kymmenmetrinen muuri. Melnon rauha vuonna 1422 vei linnalta puolustusmerkityksen, ja sen jälkeen suurruhtinaat käyttivät sitä asuinpaikkanaan — Sigismund Kęstutaitis murhattiin siellä vuonna 1440. 1500-luvulla linnaa käytettiin myös vankilana. Venäjän–Puolan sota vuosina 1654–1667 tuhosi linnan pahoin, eikä sitä koskaan jälleenrakennettu, toisin kuin läheistä Trakain saarilinnaa. Vuonna 1678 alue luovutettiin dominikaanimunkeille, jotka rakensivat sinne luostarin ja kirkon 1770-luvulla; jäljellä olevat muurit ja tornit ovat nykyään Trakain kansallispuiston suojelemia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: ANZAC-aukio] 1930 Ensimmäinen maailmansota verotti Australiaa raskaasti. Noin viiden miljoonan asukkaan maasta kaatui 60 000 sotilasta ja haavoittui 152 000; tappio-osuus 68,5 prosenttia oli liittoutuneiden korkein. Ajatus suuresta muistopuistosta keskelle kaupunkia esitettiin jo 1916. Alkuperäinen suunnitelma varasi koko korttelin Annin, Edwardin, Adelaiden ja Creekin katujen välissä, mutta neuvottelut kutistivat alueen; 1928 valtio ja liittovaltio luovuttivat maat ja lupasivat rakentaa reunoille yhtenäisen suunnitelman mukaiset talot. Muistokappelin suunnittelukilpailun voittivat 1928 sydneyläiset arkkitehdit Buchanan ja Cowper. Queenslandin kuvernööri sir John Goodwin vihki aukion ja kappelin aselepo…
+- [Dubrovnik — kohdekartta / Kohdekartta: Dubrovnikin katedraali] 1671–1713 Tarinan mukaan Englannin kuningas Rikhard Leijonamieli haaksirikkoutui lähellä Lokrumin saarta vuonna 1192 palatessaan ristiretkeltä. Pelastuttuaan hengissä hän lupasi rakentaa kirkon kiitokseksi - ja rahoitti osan Dubrovnikiin nousseesta ensimmäisestä kirkosta. Tuo vanha kirkko vaurioitui pahasti vuoden 1667 valtavassa maanjäristyksessä, joka mullisti koko kaupungin. Dubrovnikilaiset eivät kuitenkaan luovuttaneet: uuden katedraalin rakentaminen alkoi vuonna 1671 ja kesti peräti 42 vuotta, kunnes se valmistui vuonna 1713. Roomalainen arkkitehti Andrea Buffalini suunnitteli komean, kupolikattoisen rakennuksen, joka on 41 metriä pitkä. Katedraalin aarrekammiossa säilytetään 182 pyhä…
+
+### 36.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+================ KOHTA 37 (nosto:kursiu-nerija) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Hiekkaniemi, jonka dyynit vaelsivat kylien yli — ja jonka metsä on istutettu käsin
+Tietoruudun teksti: Yhdeksänkymmentäkahdeksan kilometriä pitkä hiekkaniemi erottaa Kuurinlahden Itämerestä. Se on kapeimmillaan neljäsataa metriä ja leveimmillään Nidan pohjoispuolella lähes neljä kilometriä, ja se syntyi noin kolmannella vuosituhannella ennen ajanlaskua jäätikön jättämän moreeniharjanteen päälle, kun tuuli ja virtaukset kasasivat sen päälle hiekkaa. Pohjoinen viidenkymmenenkahden kilometrin osuus on Liettuaa ja loput Venäjää; maailmanperintökohde on molempien yhteinen, ja se otettiin luetteloon vuonna 2000.
+
+Niemen tarina on kuitenkin ihmisen tekemä. Kun metsät hävisivät 1600- ja 1700-luvuilla laidunnuksen, hakkuiden ja veneenrakennuksen takia, tuuli pääsi käsiksi hiekkaan: dyynit lähtivät liikkeelle ja hautasivat alleen kokonaisia kyliä. Preussin hallitus aloitti laajat istutukset vuonna 1825, ja sata vuotta mäntyä ja rantakauraa pysäytti vaelluksen — se metsä, joka niemellä nyt kasvaa, …
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Luonto: Dyyni vaeltaa ja hautaa kylän] 2000 — Kuurinkynnäs on lähes sadan kilometrin pituinen hiekkaniemi, joka erottaa matalan lahden merestä. Kapeimmillaan se on vain muutaman sadan metrin levyinen. Kun niemen metsät hakattiin 1600- ja 1700-luvuilla, tuuli pääsi liikuttamaan hiekkaa: dyynit alkoivat vaeltaa ja hautasivat alleen kokonaisia kyliä. Vaellus pysäytettiin istuttamalla mäntyä ja rantakauraa sata vuotta kestäneellä työllä. Unesco otti niemen maailmanperintöluetteloon vuonna 2000.
+- [Havaiji — kaupunkilehti / Havaiji: Kuningaskunnan kaataminen 1893] Kuningatar Liliʻuokalani nousi valtaistuimelle 1891 ja pyrki vuonna 1893 uuteen perustuslakiin, joka olisi palauttanut äänioikeuden köyhemmille havaijilaisille ja vahvistanut hallitsijan valtaa. Amerikkalaisten ja eurooppalaisten liikemiesten muodostama "turvallisuuskomitea" vastasi kaappauksella: Yhdysvaltain Havaijin-ministeri kutsui rantautumaan sotalaiva Bostonin merijalkaväen, ja tammikuun 17. päivänä 1893 kuningatar joutui aseiden uhalla luopumaan vallasta. Liliʻuokalani antautui protestoiden toivoen presidentti Grover Clevelandin palauttavan hänet valtaistuimelle, mutta kaappaajat julistivat sen sijaan Havaijin tasavallan Sanford Dolen johdolla.
+
+### 37.1
+KYSYMYS: Miten hiekkadyyni voi vaeltaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Hiekkaniemi, jonka dyynit vaelsivat kylien yli — ja jonka metsä on istutettu käsin
+Tietoruudun teksti: Yhdeksänkymmentäkahdeksan kilometriä pitkä hiekkaniemi erottaa Kuurinlahden Itämerestä. Se on kapeimmillaan neljäsataa metriä ja leveimmillään Nidan pohjoispuolella lähes neljä kilometriä, ja se syntyi noin kolmannella vuosituhannella ennen ajanlaskua jäätikön jättämän moreeniharjanteen päälle, kun tuuli ja virtaukset kasasivat sen päälle hiekkaa. Pohjoinen viidenkymmenenkahden kilometrin osuus on Liettuaa ja loput Venäjää; maailmanperintökohde on molempien yhteinen, ja se otettiin luetteloon vuonna 2000.
+
+Niemen tarina on kuitenkin ihmisen tekemä. Kun metsät hävisivät 1600- ja 1700-luvuilla laidunnuksen, hakkuiden ja veneenrakennuksen takia, tuuli pääsi käsiksi hiekkaan: dyynit lähtivät liikkeelle ja hautasivat alleen kokonaisia kyliä. Preussin hallitus aloitti laajat istutukset vuonna 1825, ja sata vuotta mäntyä ja rantakauraa pysäytti vaelluksen — se metsä, joka niemellä nyt kasvaa, …
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Luonto: Dyyni vaeltaa ja hautaa kylän] 2000 — Kuurinkynnäs on lähes sadan kilometrin pituinen hiekkaniemi, joka erottaa matalan lahden merestä. Kapeimmillaan se on vain muutaman sadan metrin levyinen. Kun niemen metsät hakattiin 1600- ja 1700-luvuilla, tuuli pääsi liikuttamaan hiekkaa: dyynit alkoivat vaeltaa ja hautasivat alleen kokonaisia kyliä. Vaellus pysäytettiin istuttamalla mäntyä ja rantakauraa sata vuotta kestäneellä työllä. Unesco otti niemen maailmanperintöluetteloon vuonna 2000.
+
+### 37.2
+KYSYMYS: Miksi metsän kaataminen liikutti hiekkaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Hiekkaniemi, jonka dyynit vaelsivat kylien yli — ja jonka metsä on istutettu käsin
+Tietoruudun teksti: Yhdeksänkymmentäkahdeksan kilometriä pitkä hiekkaniemi erottaa Kuurinlahden Itämerestä. Se on kapeimmillaan neljäsataa metriä ja leveimmillään Nidan pohjoispuolella lähes neljä kilometriä, ja se syntyi noin kolmannella vuosituhannella ennen ajanlaskua jäätikön jättämän moreeniharjanteen päälle, kun tuuli ja virtaukset kasasivat sen päälle hiekkaa. Pohjoinen viidenkymmenenkahden kilometrin osuus on Liettuaa ja loput Venäjää; maailmanperintökohde on molempien yhteinen, ja se otettiin luetteloon vuonna 2000.
+
+Niemen tarina on kuitenkin ihmisen tekemä. Kun metsät hävisivät 1600- ja 1700-luvuilla laidunnuksen, hakkuiden ja veneenrakennuksen takia, tuuli pääsi käsiksi hiekkaan: dyynit lähtivät liikkeelle ja hautasivat alleen kokonaisia kyliä. Preussin hallitus aloitti laajat istutukset vuonna 1825, ja sata vuotta mäntyä ja rantakauraa pysäytti vaelluksen — se metsä, joka niemellä nyt kasvaa, …
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havaiji — kaupunkilehti / Havaiji: Kuningaskunnan kaataminen 1893] Kuningatar Liliʻuokalani nousi valtaistuimelle 1891 ja pyrki vuonna 1893 uuteen perustuslakiin, joka olisi palauttanut äänioikeuden köyhemmille havaijilaisille ja vahvistanut hallitsijan valtaa. Amerikkalaisten ja eurooppalaisten liikemiesten muodostama "turvallisuuskomitea" vastasi kaappauksella: Yhdysvaltain Havaijin-ministeri kutsui rantautumaan sotalaiva Bostonin merijalkaväen, ja tammikuun 17. päivänä 1893 kuningatar joutui aseiden uhalla luopumaan vallasta. Liliʻuokalani antautui protestoiden toivoen presidentti Grover Clevelandin palauttavan hänet valtaistuimelle, mutta kaappaajat julistivat sen sijaan Havaijin tasavallan Sanford Dolen johdolla.
+- [Puola — maalehti / Historia: Mies joka pysäytti Auringon ja liikutti Maata] 1543 — Nikolaus Kopernikus opiskeli Krakovan yliopistossa ja työskenteli myöhemmin katolisena kirkonmiehenä Fromborkissa, mutta hänen elämäntyönsä oli tähtitiede. Vuonna 1543, juuri ennen kuolemaansa, hän julkaisi teoksen De revolutionibus orbium coelestium, jossa hän esitti Auringon eikä Maan olevan aurinkokunnan keskipiste. Ajatus ei ollut aivan uusi — antiikin kreikkalainen Aristarkhos Samoslainen oli esittänyt samankaltaisen mallin jo lähes kaksi vuosituhatta aiemmin — mutta Kopernikuksen teos käynnisti tieteellisen vallankumouksen, joka muutti lopullisesti käsityksen ihmisen paikasta maailmankaikkeudessa.
+
+### 37.3
+KYSYMYS: Voiko maanmuodon säilyttää istuttamalla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Hiekkaniemi, jonka dyynit vaelsivat kylien yli — ja jonka metsä on istutettu käsin
+Tietoruudun teksti: Yhdeksänkymmentäkahdeksan kilometriä pitkä hiekkaniemi erottaa Kuurinlahden Itämerestä. Se on kapeimmillaan neljäsataa metriä ja leveimmillään Nidan pohjoispuolella lähes neljä kilometriä, ja se syntyi noin kolmannella vuosituhannella ennen ajanlaskua jäätikön jättämän moreeniharjanteen päälle, kun tuuli ja virtaukset kasasivat sen päälle hiekkaa. Pohjoinen viidenkymmenenkahden kilometrin osuus on Liettuaa ja loput Venäjää; maailmanperintökohde on molempien yhteinen, ja se otettiin luetteloon vuonna 2000.
+
+Niemen tarina on kuitenkin ihmisen tekemä. Kun metsät hävisivät 1600- ja 1700-luvuilla laidunnuksen, hakkuiden ja veneenrakennuksen takia, tuuli pääsi käsiksi hiekkaan: dyynit lähtivät liikkeelle ja hautasivat alleen kokonaisia kyliä. Preussin hallitus aloitti laajat istutukset vuonna 1825, ja sata vuotta mäntyä ja rantakauraa pysäytti vaelluksen — se metsä, joka niemellä nyt kasvaa, …
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+### 37.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+================ KOHTA 38 (nosto:kryziu-kalnas) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kukkula, jolta ristit ajettiin pois kolmesti — ja jolle ne palasivat joka kerta yöllä
+Tietoruudun teksti: Noin kaksitoista kilometriä Šiauliaista pohjoiseen on matala kukkula, joka oli aikanaan linnavuori. Ensimmäisten ristien uskotaan tulleen sinne vuoden 1831 jälkeen: omaiset eivät löytäneet kaatuneitaan eivätkä voineet haudata heitä, joten he pystyttivät kukkulalle symbolisen ristin sen sijaan. Tapa jäi. Kukkulalle on sittemmin tuotu ristien lisäksi Neitsyt Marian patsaita, puuveistoksia ja tuhansia pieniä rukousnauhoja, ja tarkkaa lukua ei ole kenelläkään: arviot ovat noin viisikymmentäviisituhatta ristiä vuonna 1990 ja noin satatuhatta vuonna 2006.
+
+Neuvostoaikana kukkula raivattiin puskutraktoreilla kolme kertaa — pelin oma maalehti nimeää vuodet 1961, 1973 ja 1975, ja kansainväliset lähteet vahvistavat kerrat mutta eivät vuosilukuja. Teitä suljettiin ja kukkulaa vartioitiin. Joka kerta ristit ilmestyivät takaisin öiden aikana, ja siihen lopulta tyydyttiin. Liettualainen ristinveisto …
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Tavat: Kukkula, jolle jokainen tuo ristin] 1961 — Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. Neuvostoaikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka tahansa saa tuoda omansa.
+- [Uganda — maalehti / Ruoka: Kahvi, joka kasvoi täällä ennen ketään] Uganda on yksi harvoista maista, joissa kahvi on kotoperäistä: robusta kasvaa villinä Viktorianjärven ympäristön metsissä ja Kampalan seudulla. Arabica sen sijaan tuotiin Etiopiasta ja se on kotiutunut Elgon-vuoren rinteille. Kahvi on maan tärkein vientikasvi. Vuosituhannen vaihteessa käynnistettiin Kibalen villikahvihanke, jossa metsäkahvia yritettiin myydä varjossa kasvatetun kahvin tapaan erikoistuotteena niin, että tuotto rahoittaisi metsän suojelua. Kahvin viennin valvontaa varten perustettiin oma virasto 1991.
+- [Alankomaat — maalehti / Arki ja tavat: Paalu, jonka kyljessä on kolme ristiä] Nykyisin — Amsterdamin jalkakäytävillä seisoo tuhansia matalia punaruskeita paaluja. Ne estävät autoja nousemasta kävelytielle, ja jokaisen kyljessä on kolme vinoristiä — samat kuin kaupungin vaakunassa. Siksi niitä sanotaan amsterdammertjeiksi eli pikkuamsterdamilaisiksi. Paalu on 1,06 metriä pitkä, mutta siitä näkyy vain 75 senttiä; loppu on kivetyksen alla. Vuonna 1984 niitä laskettiin noin 100 000, vuonna 2003 enää alle 40 000.
+
+### 38.1
+KYSYMYS: Miksi kukkulalle vietiin ristejä eikä hautakiviä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kukkula, jolta ristit ajettiin pois kolmesti — ja jolle ne palasivat joka kerta yöllä
+Tietoruudun teksti: Noin kaksitoista kilometriä Šiauliaista pohjoiseen on matala kukkula, joka oli aikanaan linnavuori. Ensimmäisten ristien uskotaan tulleen sinne vuoden 1831 jälkeen: omaiset eivät löytäneet kaatuneitaan eivätkä voineet haudata heitä, joten he pystyttivät kukkulalle symbolisen ristin sen sijaan. Tapa jäi. Kukkulalle on sittemmin tuotu ristien lisäksi Neitsyt Marian patsaita, puuveistoksia ja tuhansia pieniä rukousnauhoja, ja tarkkaa lukua ei ole kenelläkään: arviot ovat noin viisikymmentäviisituhatta ristiä vuonna 1990 ja noin satatuhatta vuonna 2006.
+
+Neuvostoaikana kukkula raivattiin puskutraktoreilla kolme kertaa — pelin oma maalehti nimeää vuodet 1961, 1973 ja 1975, ja kansainväliset lähteet vahvistavat kerrat mutta eivät vuosilukuja. Teitä suljettiin ja kukkulaa vartioitiin. Joka kerta ristit ilmestyivät takaisin öiden aikana, ja siihen lopulta tyydyttiin. Liettualainen ristinveisto …
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Tavat: Kukkula, jolle jokainen tuo ristin] 1961 — Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. Neuvostoaikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka tahansa saa tuoda omansa.
+
+### 38.2
+KYSYMYS: Miten muistomerkki voi kasvaa ilman ketään, joka rakentaa sitä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kukkula, jolta ristit ajettiin pois kolmesti — ja jolle ne palasivat joka kerta yöllä
+Tietoruudun teksti: Noin kaksitoista kilometriä Šiauliaista pohjoiseen on matala kukkula, joka oli aikanaan linnavuori. Ensimmäisten ristien uskotaan tulleen sinne vuoden 1831 jälkeen: omaiset eivät löytäneet kaatuneitaan eivätkä voineet haudata heitä, joten he pystyttivät kukkulalle symbolisen ristin sen sijaan. Tapa jäi. Kukkulalle on sittemmin tuotu ristien lisäksi Neitsyt Marian patsaita, puuveistoksia ja tuhansia pieniä rukousnauhoja, ja tarkkaa lukua ei ole kenelläkään: arviot ovat noin viisikymmentäviisituhatta ristiä vuonna 1990 ja noin satatuhatta vuonna 2006.
+
+Neuvostoaikana kukkula raivattiin puskutraktoreilla kolme kertaa — pelin oma maalehti nimeää vuodet 1961, 1973 ja 1975, ja kansainväliset lähteet vahvistavat kerrat mutta eivät vuosilukuja. Teitä suljettiin ja kukkulaa vartioitiin. Joka kerta ristit ilmestyivät takaisin öiden aikana, ja siihen lopulta tyydyttiin. Liettualainen ristinveisto …
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uganda — maalehti / Ruoka: Kahvi, joka kasvoi täällä ennen ketään] Uganda on yksi harvoista maista, joissa kahvi on kotoperäistä: robusta kasvaa villinä Viktorianjärven ympäristön metsissä ja Kampalan seudulla. Arabica sen sijaan tuotiin Etiopiasta ja se on kotiutunut Elgon-vuoren rinteille. Kahvi on maan tärkein vientikasvi. Vuosituhannen vaihteessa käynnistettiin Kibalen villikahvihanke, jossa metsäkahvia yritettiin myydä varjossa kasvatetun kahvin tapaan erikoistuotteena niin, että tuotto rahoittaisi metsän suojelua. Kahvin viennin valvontaa varten perustettiin oma virasto 1991.
+
+### 38.3
+KYSYMYS: Kuinka monta ristiä kukkulalle mahtuu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kukkula, jolta ristit ajettiin pois kolmesti — ja jolle ne palasivat joka kerta yöllä
+Tietoruudun teksti: Noin kaksitoista kilometriä Šiauliaista pohjoiseen on matala kukkula, joka oli aikanaan linnavuori. Ensimmäisten ristien uskotaan tulleen sinne vuoden 1831 jälkeen: omaiset eivät löytäneet kaatuneitaan eivätkä voineet haudata heitä, joten he pystyttivät kukkulalle symbolisen ristin sen sijaan. Tapa jäi. Kukkulalle on sittemmin tuotu ristien lisäksi Neitsyt Marian patsaita, puuveistoksia ja tuhansia pieniä rukousnauhoja, ja tarkkaa lukua ei ole kenelläkään: arviot ovat noin viisikymmentäviisituhatta ristiä vuonna 1990 ja noin satatuhatta vuonna 2006.
+
+Neuvostoaikana kukkula raivattiin puskutraktoreilla kolme kertaa — pelin oma maalehti nimeää vuodet 1961, 1973 ja 1975, ja kansainväliset lähteet vahvistavat kerrat mutta eivät vuosilukuja. Teitä suljettiin ja kukkulaa vartioitiin. Joka kerta ristit ilmestyivät takaisin öiden aikana, ja siihen lopulta tyydyttiin. Liettualainen ristinveisto …
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Arki ja tavat: Paalu, jonka kyljessä on kolme ristiä] Nykyisin — Amsterdamin jalkakäytävillä seisoo tuhansia matalia punaruskeita paaluja. Ne estävät autoja nousemasta kävelytielle, ja jokaisen kyljessä on kolme vinoristiä — samat kuin kaupungin vaakunassa. Siksi niitä sanotaan amsterdammertjeiksi eli pikkuamsterdamilaisiksi. Paalu on 1,06 metriä pitkä, mutta siitä näkyy vain 75 senttiä; loppu on kivetyksen alla. Vuonna 1984 niitä laskettiin noin 100 000, vuonna 2003 enää alle 40 000.
+
+### 38.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+================ KOHTA 39 (nosto:trakai) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Saarilinna punaisesta tiilestä — raunio, joka koottiin takaisin viisisataa vuotta myöhemmin
+Tietoruudun teksti: Runsaan kahdenkymmenen kilometrin päässä Vilnasta on järvi, jonka saarella seisoo linna. Kivilinnan rakentaminen alkoi 1300-luvulla suuriruhtinas Kęstutisin käskystä, ja hän siirsi saarelle sekä asuinpaikkansa että aarrekammionsa — järvi oli muuri, jota ei tarvinnut muurata. Merkittävin rakennusvaihe päättyi 1409 hänen poikansa Vytautas Suuren aikana, ja siitä linna sai nykyisen hahmonsa: kuusikerroksisen, kolmenkymmenenviiden metrin korkuisen päätornin ja ruhtinaan salin, joka oli noin kymmenen metriä leveä ja kaksikymmentäyksi pitkä. Vytautas kuoli tässä linnassa vuonna 1430. Rakennusaine oli punainen goottilainen tiili, katolla oli lasitettuja tiiliä ja ikkunoissa lasimaalauksia, ja muurit paksuunnettiin myöhemmin kahteen ja puoleen metriin. Järven pinta oli silloin useita metrejä nykyistä korkeammalla, ja palatsi erotettiin muusta linnasta vallihaudalla, joka oli juuri niin leveä et…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kohdekartta / Kohdekartta: Ljubljanan linna] 1100-luku Linnavuorella on asuttu arkeologien mukaan yhtäjaksoisesti vuodesta 1200 eaa. Ensimmäinen linna oli luultavasti 1000-luvulla rakennettu puu- ja kivilinnoitus. Vanhin kirjallinen maininta on Udinen tuomiokirkon arkistossa säilytetyssä pergamentissa, luultavasti vuoden 1161 jälkipuoliskolta: siinä linna on nimeltään castrum Leibach. Vuonna 1256 se mainitaan Krainin hallitsijoiden tärkeimpänä linnana, ja 1278 se siirtyi Rudolf Habsburgille. Nykyisen ääriviivansa linna sai 1400-luvulla, kun se purettiin lähes kokonaan ja rakennettiin uudelleen muureineen, porttitorneineen ja nostosiltoineen; samaan aikaan valmistui Pyhän Yrjön kappeli. Erasmuksen tornissa pidettiin luultavasti ylhäisi…
+- [Praha — kohdekartta / Kohdekartta: Prahan linna] 870 Prahan linnan rakentaminen alkoi jo vuonna 870, kun kukkulalle pystytettiin ensimmäinen kivikirkko. Siitä lähtien linnaa on laajennettu ja rakennettu uudelleen yli tuhannen vuoden ajan, ja nykyään se on Guinnessin ennätystenkirjan mukaan maailman suurin muinainen linnakokonaisuus: aluetta on noin 70 000 neliömetriä, ja se on lähes 570 metriä pitkä. Linnassa on asunut Böömin kuninkaita ja Pyhän saksalais-roomalaisen keisarikunnan hallitsijoita, ja nykyisin se on Tšekin tasavallan presidentin virka-asunto. Linnan sisällä, salaisessa kammiossa, säilytetään myös Böömin kruununjalokiviä, joita pääsee katsomaan vain harvoin. Linnan pihalla on koettu myös dramaattisia hetkiä: natsi-Saksan mieh…
+
+### 39.1
+KYSYMYS: Miksi linna rakennettiin saarelle eikä rannalle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Saarilinna punaisesta tiilestä — raunio, joka koottiin takaisin viisisataa vuotta myöhemmin
+Tietoruudun teksti: Runsaan kahdenkymmenen kilometrin päässä Vilnasta on järvi, jonka saarella seisoo linna. Kivilinnan rakentaminen alkoi 1300-luvulla suuriruhtinas Kęstutisin käskystä, ja hän siirsi saarelle sekä asuinpaikkansa että aarrekammionsa — järvi oli muuri, jota ei tarvinnut muurata. Merkittävin rakennusvaihe päättyi 1409 hänen poikansa Vytautas Suuren aikana, ja siitä linna sai nykyisen hahmonsa: kuusikerroksisen, kolmenkymmenenviiden metrin korkuisen päätornin ja ruhtinaan salin, joka oli noin kymmenen metriä leveä ja kaksikymmentäyksi pitkä. Vytautas kuoli tässä linnassa vuonna 1430. Rakennusaine oli punainen goottilainen tiili, katolla oli lasitettuja tiiliä ja ikkunoissa lasimaalauksia, ja muurit paksuunnettiin myöhemmin kahteen ja puoleen metriin. Järven pinta oli silloin useita metrejä nykyistä korkeammalla, ja palatsi erotettiin muusta linnasta vallihaudalla, joka oli juuri niin leveä et…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jakutsk — kaupunkilehti / Jakutsk: Linnoitus siirrettiin joen toiselle rannalle] Kasakkapäällikkö Pjotr Beketov pystytti 25. syyskuuta 1632 Lenan oikealle rannalle hirsivarustuksen, jota sanottiin Lenan ostrogiksi. Vuosina 1642–1643 linnoitus siirrettiin vastarannalle Tuimaadan laaksoon Saisary-järven tuntumaan, ja siitä paikasta kasvoi nykyinen Jakutsk. Kaupungin aseman Jakutsk sai siirron myötä 1643, ja vuoden 1897 väenlaskussa asukkaita oli 6 535. Ostrogin porttitorni vuosilta 1685–1687 säilyi yli kolme vuosisataa ja tuhoutui tulipalossa 22. elokuuta 2002, muutamaa päivää ennen kaupungin 370-vuotisjuhlaa. Torni rakennettiin uudelleen vanhojen mittapiirustusten mukaan.
+- [Saint Helena — maalehti / Historia: Mies, joka jäi saarelle omasta tahdostaan] 1515–1545 — Portugalilainen aatelismies Fernão Lopes lähti 1510 Afonso de Albuquerquen mukana Goan valloitukseen ja jäi sinne varuskuntaan. Kun Albuquerque palasi lähes kahden vuoden kuluttua, osa miehistä oli siirtynyt vastapuolelle, ja Lopes silvottiin rangaistukseksi julkisella torilla. Hän purjehti 1515 kohti Portugalia kuninkaan armahdus taskussaan, mutta kun laiva pysähtyi Saint Helenalle vettä ja ruokaa hakemaan, hän jäi saarelle. Seuraava laiva tuli lähes vuoden kuluttua: miehistö löysi luolan ja olkivuoteen ja jätti korppuja, juustoa ja kirjeen, jossa pyydettiin ettei hän piiloutuisi. Lopes eli saarella yli kolmekymmentä vuotta.
+
+### 39.2
+KYSYMYS: Onko uudelleen rakennettu linna sama linna?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Saarilinna punaisesta tiilestä — raunio, joka koottiin takaisin viisisataa vuotta myöhemmin
+Tietoruudun teksti: Runsaan kahdenkymmenen kilometrin päässä Vilnasta on järvi, jonka saarella seisoo linna. Kivilinnan rakentaminen alkoi 1300-luvulla suuriruhtinas Kęstutisin käskystä, ja hän siirsi saarelle sekä asuinpaikkansa että aarrekammionsa — järvi oli muuri, jota ei tarvinnut muurata. Merkittävin rakennusvaihe päättyi 1409 hänen poikansa Vytautas Suuren aikana, ja siitä linna sai nykyisen hahmonsa: kuusikerroksisen, kolmenkymmenenviiden metrin korkuisen päätornin ja ruhtinaan salin, joka oli noin kymmenen metriä leveä ja kaksikymmentäyksi pitkä. Vytautas kuoli tässä linnassa vuonna 1430. Rakennusaine oli punainen goottilainen tiili, katolla oli lasitettuja tiiliä ja ikkunoissa lasimaalauksia, ja muurit paksuunnettiin myöhemmin kahteen ja puoleen metriin. Järven pinta oli silloin useita metrejä nykyistä korkeammalla, ja palatsi erotettiin muusta linnasta vallihaudalla, joka oli juuri niin leveä et…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kohdekartta / Kohdekartta: Ljubljanan linna] 1100-luku Linnavuorella on asuttu arkeologien mukaan yhtäjaksoisesti vuodesta 1200 eaa. Ensimmäinen linna oli luultavasti 1000-luvulla rakennettu puu- ja kivilinnoitus. Vanhin kirjallinen maininta on Udinen tuomiokirkon arkistossa säilytetyssä pergamentissa, luultavasti vuoden 1161 jälkipuoliskolta: siinä linna on nimeltään castrum Leibach. Vuonna 1256 se mainitaan Krainin hallitsijoiden tärkeimpänä linnana, ja 1278 se siirtyi Rudolf Habsburgille. Nykyisen ääriviivansa linna sai 1400-luvulla, kun se purettiin lähes kokonaan ja rakennettiin uudelleen muureineen, porttitorneineen ja nostosiltoineen; samaan aikaan valmistui Pyhän Yrjön kappeli. Erasmuksen tornissa pidettiin luultavasti ylhäisi…
+- [Praha — kohdekartta / Kohdekartta: Prahan linna] 870 Prahan linnan rakentaminen alkoi jo vuonna 870, kun kukkulalle pystytettiin ensimmäinen kivikirkko. Siitä lähtien linnaa on laajennettu ja rakennettu uudelleen yli tuhannen vuoden ajan, ja nykyään se on Guinnessin ennätystenkirjan mukaan maailman suurin muinainen linnakokonaisuus: aluetta on noin 70 000 neliömetriä, ja se on lähes 570 metriä pitkä. Linnassa on asunut Böömin kuninkaita ja Pyhän saksalais-roomalaisen keisarikunnan hallitsijoita, ja nykyisin se on Tšekin tasavallan presidentin virka-asunto. Linnan sisällä, salaisessa kammiossa, säilytetään myös Böömin kruununjalokiviä, joita pääsee katsomaan vain harvoin. Linnan pihalla on koettu myös dramaattisia hetkiä: natsi-Saksan mieh…
+
+### 39.3
+KYSYMYS: Miksi museo skannaa esineensä kolmiulotteisiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Saarilinna punaisesta tiilestä — raunio, joka koottiin takaisin viisisataa vuotta myöhemmin
+Tietoruudun teksti: Runsaan kahdenkymmenen kilometrin päässä Vilnasta on järvi, jonka saarella seisoo linna. Kivilinnan rakentaminen alkoi 1300-luvulla suuriruhtinas Kęstutisin käskystä, ja hän siirsi saarelle sekä asuinpaikkansa että aarrekammionsa — järvi oli muuri, jota ei tarvinnut muurata. Merkittävin rakennusvaihe päättyi 1409 hänen poikansa Vytautas Suuren aikana, ja siitä linna sai nykyisen hahmonsa: kuusikerroksisen, kolmenkymmenenviiden metrin korkuisen päätornin ja ruhtinaan salin, joka oli noin kymmenen metriä leveä ja kaksikymmentäyksi pitkä. Vytautas kuoli tässä linnassa vuonna 1430. Rakennusaine oli punainen goottilainen tiili, katolla oli lasitettuja tiiliä ja ikkunoissa lasimaalauksia, ja muurit paksuunnettiin myöhemmin kahteen ja puoleen metriin. Järven pinta oli silloin useita metrejä nykyistä korkeammalla, ja palatsi erotettiin muusta linnasta vallihaudalla, joka oli juuri niin leveä et…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+### 39.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI

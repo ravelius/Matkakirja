@@ -1,0 +1,174 @@
+================ KOHTA 31 (kohde:hahmotelma-alytus) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alytus (kulttuuri)
+Tietoruudun teksti: Alytus on Etelä-Liettuan kaupunki Nemunas-joen rannalla ja maan kuudenneksi suurin. Se on Dzūkijan historiallinen keskus, ja tiet yhdistävät sen muun muassa Vilnaan, Kaunasiin ja Grodnoon. Ensimmäinen maininta on vuodelta 1377, jolloin paikalla oli pieni puinen linnake Saksalaisen ritarikunnan rajalla. Kuningas Stefan Báthory antoi kaupungille kaupunkioikeudet vuonna 1581, ja päivää juhlitaan yhä Alytuksen päivänä. Kaupunki oli vuosisatoja jaettuna kahteen erilliseen osaan, joita kutsutaan yhä nimillä Alytus I ja Alytus II. Kaupungin vaakunassa on valkoinen ruusu, ja sama nimi on Liettuan suurimmalla jalankulkusillalla.
+
+### 31.1
+KYSYMYS: Miksi Alytus oli vuosisatoja jaettu kahteen erilliseen osaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alytus (kulttuuri)
+Tietoruudun teksti: Alytus on Etelä-Liettuan kaupunki Nemunas-joen rannalla ja maan kuudenneksi suurin. Se on Dzūkijan historiallinen keskus, ja tiet yhdistävät sen muun muassa Vilnaan, Kaunasiin ja Grodnoon. Ensimmäinen maininta on vuodelta 1377, jolloin paikalla oli pieni puinen linnake Saksalaisen ritarikunnan rajalla. Kuningas Stefan Báthory antoi kaupungille kaupunkioikeudet vuonna 1581, ja päivää juhlitaan yhä Alytuksen päivänä. Kaupunki oli vuosisatoja jaettuna kahteen erilliseen osaan, joita kutsutaan yhä nimillä Alytus I ja Alytus II. Kaupungin vaakunassa on valkoinen ruusu, ja sama nimi on Liettuan suurimmalla jalankulkusillalla.
+
+### 31.2
+KYSYMYS: Mitä linnake vartioi Alytuksen paikalla 1300-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alytus (kulttuuri)
+Tietoruudun teksti: Alytus on Etelä-Liettuan kaupunki Nemunas-joen rannalla ja maan kuudenneksi suurin. Se on Dzūkijan historiallinen keskus, ja tiet yhdistävät sen muun muassa Vilnaan, Kaunasiin ja Grodnoon. Ensimmäinen maininta on vuodelta 1377, jolloin paikalla oli pieni puinen linnake Saksalaisen ritarikunnan rajalla. Kuningas Stefan Báthory antoi kaupungille kaupunkioikeudet vuonna 1581, ja päivää juhlitaan yhä Alytuksen päivänä. Kaupunki oli vuosisatoja jaettuna kahteen erilliseen osaan, joita kutsutaan yhä nimillä Alytus I ja Alytus II. Kaupungin vaakunassa on valkoinen ruusu, ja sama nimi on Liettuan suurimmalla jalankulkusillalla.
+
+### 31.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+================ KOHTA 32 (kohde:hahmotelma-marijampole) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marijampolė (kulttuuri)
+Tietoruudun teksti: Marijampolė on Etelä-Liettuan kaupunki ja Suvalkijan historiallisen alueen kulttuurikeskus. Šešupė-joki jakaa sen kahteen osaan, joita yhdistää kuusi siltaa. Kaupungin nimi juontuu mariaanipatereista, joiden saapuminen vuonna 1751 vauhditti asutuksen kasvua. Vuoden 1868 palo tuhosi monta puutaloa, minkä jälkeen taloja rakennettiin kivestä. Koska Venäjä oli kieltänyt liettuankieliset kirjat, Preussin rajan läheisyys helpotti niiden salakuljetusta, ja kaupungista tuli liettualaisen kansallisen heräämisen keskus.
+
+### 32.1
+KYSYMYS: Miksi liettuankielisiä kirjoja salakuljetettiin 1800-luvulla juuri Marijampolen seudulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marijampolė (kulttuuri)
+Tietoruudun teksti: Marijampolė on Etelä-Liettuan kaupunki ja Suvalkijan historiallisen alueen kulttuurikeskus. Šešupė-joki jakaa sen kahteen osaan, joita yhdistää kuusi siltaa. Kaupungin nimi juontuu mariaanipatereista, joiden saapuminen vuonna 1751 vauhditti asutuksen kasvua. Vuoden 1868 palo tuhosi monta puutaloa, minkä jälkeen taloja rakennettiin kivestä. Koska Venäjä oli kieltänyt liettuankieliset kirjat, Preussin rajan läheisyys helpotti niiden salakuljetusta, ja kaupungista tuli liettualaisen kansallisen heräämisen keskus.
+
+### 32.2
+KYSYMYS: Miksi Marijampolen puutalot vaihtuivat 1800-luvulla kivitaloiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marijampolė (kulttuuri)
+Tietoruudun teksti: Marijampolė on Etelä-Liettuan kaupunki ja Suvalkijan historiallisen alueen kulttuurikeskus. Šešupė-joki jakaa sen kahteen osaan, joita yhdistää kuusi siltaa. Kaupungin nimi juontuu mariaanipatereista, joiden saapuminen vuonna 1751 vauhditti asutuksen kasvua. Vuoden 1868 palo tuhosi monta puutaloa, minkä jälkeen taloja rakennettiin kivestä. Koska Venäjä oli kieltänyt liettuankieliset kirjat, Preussin rajan läheisyys helpotti niiden salakuljetusta, ja kaupungista tuli liettualaisen kansallisen heräämisen keskus.
+
+### 32.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+================ KOHTA 33 (kohde:hahmotelma-vistytis) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vištytis (luonto · järvi)
+Tietoruudun teksti: Vištytis on pieni kaupunki Lounais-Liettuassa, Vištytis-järven koillisrannalla lähellä Venäjän Kaliningradin alueen rajaa. Suuriruhtinas Sigismund II Augustus myönsi paikalle kaupunkioikeudet ja vaakunan vuonna 1570, ja se oli alueen ensimmäinen kaupunki. 1800-luvulla tärkeä elinkeino oli harjojen valmistus. Kun rautatie Königsbergistä Venäjälle rakennettiin vuonna 1861 muutaman kilometrin päähän Kybartain kautta, kaupunki taantui nopeasti. Katurakenne ja torinaukio ovat säilyneet 1700-luvulta asti, ja lähistöllä on linnavuori sekä suuri Vištytis-kivi.
+
+### 33.1
+KYSYMYS: Miksi Vištytis alkoi taantua, vaikka rautatie rakennettiin vain muutaman kilometrin päähän?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vištytis (luonto · järvi)
+Tietoruudun teksti: Vištytis on pieni kaupunki Lounais-Liettuassa, Vištytis-järven koillisrannalla lähellä Venäjän Kaliningradin alueen rajaa. Suuriruhtinas Sigismund II Augustus myönsi paikalle kaupunkioikeudet ja vaakunan vuonna 1570, ja se oli alueen ensimmäinen kaupunki. 1800-luvulla tärkeä elinkeino oli harjojen valmistus. Kun rautatie Königsbergistä Venäjälle rakennettiin vuonna 1861 muutaman kilometrin päähän Kybartain kautta, kaupunki taantui nopeasti. Katurakenne ja torinaukio ovat säilyneet 1700-luvulta asti, ja lähistöllä on linnavuori sekä suuri Vištytis-kivi.
+
+### 33.2
+KYSYMYS: Mikä Vištytisin lähellä oleva suuri kivi on, ja miksi sitä on säilytetty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vištytis (luonto · järvi)
+Tietoruudun teksti: Vištytis on pieni kaupunki Lounais-Liettuassa, Vištytis-järven koillisrannalla lähellä Venäjän Kaliningradin alueen rajaa. Suuriruhtinas Sigismund II Augustus myönsi paikalle kaupunkioikeudet ja vaakunan vuonna 1570, ja se oli alueen ensimmäinen kaupunki. 1800-luvulla tärkeä elinkeino oli harjojen valmistus. Kun rautatie Königsbergistä Venäjälle rakennettiin vuonna 1861 muutaman kilometrin päähän Kybartain kautta, kaupunki taantui nopeasti. Katurakenne ja torinaukio ovat säilyneet 1700-luvulta asti, ja lähistöllä on linnavuori sekä suuri Vištytis-kivi.
+
+### 33.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+================ KOHTA 34 (kohde:hahmotelma-zarasai) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zarasai (luonto · järvi)
+Tietoruudun teksti: Zarasai on Koillis-Liettuan kaupunki, jota ympäröivät lukuisat järvet ja joet. Sen nimi juontuu seloonien kielen sanasta, joka tarkoittaa järveä. Virallinen perustamisvuosi on 1506, ja sijainti oli suuren kauppatien varrella Riiasta Pihkovaan. Vuoden 1834 tulipalo poltti lähes koko keskustan, ja vuonna 1837 se rakennettiin uudelleen uuden kaavan mukaan: keskellä on hevosenkengän muotoinen aukio, josta kadut säteilevät. Tarkoitus oli ehkäistä suuria tulipaloja, ja kaava on säilynyt lähes muuttumattomana. Tsaari Nikolai I vieraili kaupungissa vuonna 1836 ja nimesi sen poikansa mukaan Novoaleksandrovskiksi; nimi säilyi vuoteen 1918.
+
+### 34.1
+KYSYMYS: Miksi Zarasain keskusta rakennettiin vuonna 1837 hevosenkengän muotoiseksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zarasai (luonto · järvi)
+Tietoruudun teksti: Zarasai on Koillis-Liettuan kaupunki, jota ympäröivät lukuisat järvet ja joet. Sen nimi juontuu seloonien kielen sanasta, joka tarkoittaa järveä. Virallinen perustamisvuosi on 1506, ja sijainti oli suuren kauppatien varrella Riiasta Pihkovaan. Vuoden 1834 tulipalo poltti lähes koko keskustan, ja vuonna 1837 se rakennettiin uudelleen uuden kaavan mukaan: keskellä on hevosenkengän muotoinen aukio, josta kadut säteilevät. Tarkoitus oli ehkäistä suuria tulipaloja, ja kaava on säilynyt lähes muuttumattomana. Tsaari Nikolai I vieraili kaupungissa vuonna 1836 ja nimesi sen poikansa mukaan Novoaleksandrovskiksi; nimi säilyi vuoteen 1918.
+
+### 34.2
+KYSYMYS: Mikä kansa antoi Zarasaille nimen, joka viittaa järviin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zarasai (luonto · järvi)
+Tietoruudun teksti: Zarasai on Koillis-Liettuan kaupunki, jota ympäröivät lukuisat järvet ja joet. Sen nimi juontuu seloonien kielen sanasta, joka tarkoittaa järveä. Virallinen perustamisvuosi on 1506, ja sijainti oli suuren kauppatien varrella Riiasta Pihkovaan. Vuoden 1834 tulipalo poltti lähes koko keskustan, ja vuonna 1837 se rakennettiin uudelleen uuden kaavan mukaan: keskellä on hevosenkengän muotoinen aukio, josta kadut säteilevät. Tarkoitus oli ehkäistä suuria tulipaloja, ja kaava on säilynyt lähes muuttumattomana. Tsaari Nikolai I vieraili kaupungissa vuonna 1836 ja nimesi sen poikansa mukaan Novoaleksandrovskiksi; nimi säilyi vuoteen 1918.
+
+### 34.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+================ KOHTA 35 (kohde:hahmotelma-birstonas) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Birštonas (kulttuuri)
+Tietoruudun teksti: Birštonas on kylpyläkaupunki Nemunas-joen oikealla rannalla noin 30 kilometrin päässä Kaunasista. Paikka mainitaan ensi kertaa 1300-luvulla Saksalaisen ritarikunnan kronikoissa "suolaisen veden tilana". Liettuan suuriruhtinaat ja aatelisto viettivät siellä metsästysretkiä 1300–1500-luvuilla, ja kylpylä perustettiin vuonna 1846. Venäläisistä, puolalaisista ja liettualaisista kaupungeista tulleet vieraat hakivat sieltä hoitoa kivennäisvedellä ja parantavilla mutakääreillä. Nykyään kaupungissa on kolme suurta sanatoriota, ja se on Nemunas-mutkien alueellisen puiston keskus.
+
+### 35.1
+KYSYMYS: Mistä Birštonasin nimi mahdollisesti tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Birštonas (kulttuuri)
+Tietoruudun teksti: Birštonas on kylpyläkaupunki Nemunas-joen oikealla rannalla noin 30 kilometrin päässä Kaunasista. Paikka mainitaan ensi kertaa 1300-luvulla Saksalaisen ritarikunnan kronikoissa "suolaisen veden tilana". Liettuan suuriruhtinaat ja aatelisto viettivät siellä metsästysretkiä 1300–1500-luvuilla, ja kylpylä perustettiin vuonna 1846. Venäläisistä, puolalaisista ja liettualaisista kaupungeista tulleet vieraat hakivat sieltä hoitoa kivennäisvedellä ja parantavilla mutakääreillä. Nykyään kaupungissa on kolme suurta sanatoriota, ja se on Nemunas-mutkien alueellisen puiston keskus.
+
+### 35.2
+KYSYMYS: Miksi suuriruhtinaat matkustivat Birštonasiin jo 1300-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Birštonas (kulttuuri)
+Tietoruudun teksti: Birštonas on kylpyläkaupunki Nemunas-joen oikealla rannalla noin 30 kilometrin päässä Kaunasista. Paikka mainitaan ensi kertaa 1300-luvulla Saksalaisen ritarikunnan kronikoissa "suolaisen veden tilana". Liettuan suuriruhtinaat ja aatelisto viettivät siellä metsästysretkiä 1300–1500-luvuilla, ja kylpylä perustettiin vuonna 1846. Venäläisistä, puolalaisista ja liettualaisista kaupungeista tulleet vieraat hakivat sieltä hoitoa kivennäisvedellä ja parantavilla mutakääreillä. Nykyään kaupungissa on kolme suurta sanatoriota, ja se on Nemunas-mutkien alueellisen puiston keskus.
+
+### 35.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI

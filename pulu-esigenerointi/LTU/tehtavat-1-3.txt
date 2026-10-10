@@ -1,0 +1,262 @@
+================ KOHTA 11 (kohde:yhdeksas-fortti) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Yhdeksäs fortti (historia)
+Tietoruudun teksti: Yhdeksäs fortti on linnoitus Kaunasin pohjoisosassa. Se on osa Kaunasin linnoitusta, joka rakennettiin 1800-luvun lopulla: vuoteen 1890 mennessä kaupunkia ympäröi kahdeksan forttia ja yhdeksän tykkipatteria. Yhdeksännen fortin rakentaminen alkoi 1902 — järjestysnumerosta tuli sen nimi — ja se valmistui juuri ennen ensimmäistä maailmansotaa.
+
+Vuodesta 1924 fortti toimi Kaunasin vankilana. Neuvostomiehityksen aikana 1940–1941 NKVD piti siellä poliittisia vankeja odottamassa siirtoa gulagin pakkotyöleireille.
+
+Saksan miehityksen aikana fortista tuli joukkomurhan paikka. Sinne kuljetettiin ja siellä surmattiin 45 000–50 000 juutalaista, useimmat Kaunasista ja etenkin Kaunasin getosta; myös Ranskasta, Itävallasta ja Saksasta tuotiin ihmisiä teloitettaviksi. Vuoteen 1944 mennessä paikkaa kutsuttiin kuoleman fortiksi.
+
+Sotien jälkeen neuvostoviranomaiset käyttivät forttia jälleen muutaman vuod…
+
+### 11.1
+KYSYMYS: Mihin fortti alun perin rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Yhdeksäs fortti (historia)
+Tietoruudun teksti: Yhdeksäs fortti on linnoitus Kaunasin pohjoisosassa. Se on osa Kaunasin linnoitusta, joka rakennettiin 1800-luvun lopulla: vuoteen 1890 mennessä kaupunkia ympäröi kahdeksan forttia ja yhdeksän tykkipatteria. Yhdeksännen fortin rakentaminen alkoi 1902 — järjestysnumerosta tuli sen nimi — ja se valmistui juuri ennen ensimmäistä maailmansotaa.
+
+Vuodesta 1924 fortti toimi Kaunasin vankilana. Neuvostomiehityksen aikana 1940–1941 NKVD piti siellä poliittisia vankeja odottamassa siirtoa gulagin pakkotyöleireille.
+
+Saksan miehityksen aikana fortista tuli joukkomurhan paikka. Sinne kuljetettiin ja siellä surmattiin 45 000–50 000 juutalaista, useimmat Kaunasista ja etenkin Kaunasin getosta; myös Ranskasta, Itävallasta ja Saksasta tuotiin ihmisiä teloitettaviksi. Vuoteen 1944 mennessä paikkaa kutsuttiin kuoleman fortiksi.
+
+Sotien jälkeen neuvostoviranomaiset käyttivät forttia jälleen muutaman vuod…
+
+### 11.2
+KYSYMYS: Miksi sitä alettiin kutsua kuoleman fortiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Yhdeksäs fortti (historia)
+Tietoruudun teksti: Yhdeksäs fortti on linnoitus Kaunasin pohjoisosassa. Se on osa Kaunasin linnoitusta, joka rakennettiin 1800-luvun lopulla: vuoteen 1890 mennessä kaupunkia ympäröi kahdeksan forttia ja yhdeksän tykkipatteria. Yhdeksännen fortin rakentaminen alkoi 1902 — järjestysnumerosta tuli sen nimi — ja se valmistui juuri ennen ensimmäistä maailmansotaa.
+
+Vuodesta 1924 fortti toimi Kaunasin vankilana. Neuvostomiehityksen aikana 1940–1941 NKVD piti siellä poliittisia vankeja odottamassa siirtoa gulagin pakkotyöleireille.
+
+Saksan miehityksen aikana fortista tuli joukkomurhan paikka. Sinne kuljetettiin ja siellä surmattiin 45 000–50 000 juutalaista, useimmat Kaunasista ja etenkin Kaunasin getosta; myös Ranskasta, Itävallasta ja Saksasta tuotiin ihmisiä teloitettaviksi. Vuoteen 1944 mennessä paikkaa kutsuttiin kuoleman fortiksi.
+
+Sotien jälkeen neuvostoviranomaiset käyttivät forttia jälleen muutaman vuod…
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:klaipeda) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klaipėda (kaupungit)
+Tietoruudun teksti: Klaipėda on Liettuan kolmanneksi suurin kaupunki ja maan ainoa merkittävä merisatama. Se on myös Baltian maiden vilkkain satama, ja sen etu on yksinkertainen: satama ei jäädy talvella. Kaupunki on Akmena-Danė-joen suulla siinä kohdassa, jossa Kuurinlahti avautuu Itämerelle. Asukkaita on noin 161 000 (2025).
+
+Saksalainen ritarikunta rakensi paikalle linnoituksen nimeltä Memelburg vuonna 1252, ja nimi lyheni myöhemmin muotoon Memel. Kaupunkioikeudet Lyypekin mallin mukaan myönnettiin 1254 tai 1258, ja oikeudet saaneita kaupunkeja oli ritarikunnan valtiossa vain kolme.
+
+Ensimmäisen maailmansodan jälkeen alue irrotettiin Saksasta, ja vuoden 1923 Klaipėdan kapina toi sen Liettuan hallintaan. Saksa esitti uhkavaatimuksen 20. maaliskuuta 1939, ja Liettua luovutti alueen kahta päivää myöhemmin. Toisen maailmansodan lopussa kaupunki oli raunioina: kun neuvostojoukot saapuivat 28. tammikuuta 1945…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Halifax — kaupunkilehti / Satama, sumu ja myrskyt] Halifaxissa sää tulee mereltä ja kaupunki on rakennettu sen ehdoilla. Satama ei jäädy, kesä tulee myöhässä ja syksyllä hurrikaanien loppupää yltää tänne asti.
+- [Nome — kaupunkilehti / Nome: Meri, joka ei enää jäädy samalla tavalla] Nomen edustalla Beringinmeri jäätyy talvisin yhä ohuemmaksi ja myöhemmin kuin isoisän aikaan, ja koko Jäämeren jääpeite kutistuu vuosikymmen vuosikymmeneltä. Syyskuun 12. päivänä 2026 NASA ja Yhdysvaltain lumi- ja jäätietokeskus NSIDC mittasivat kesän jäljelle jättämäksi merijääksi 4,60 miljoonaa neliökilometriä eli 1,78 miljoonaa neliömailia — mittaushistorian kymmenenneksi vähiten, saman verran kuin vuosina 2008, 2010 ja 2025. Nomelle ohuempi jää tarkoittaa pidempää purjehduskautta mutta myös rajumpaa syysmyrskyjen kuluttamaa rantaviivaa.
+
+### 12.1
+KYSYMYS: Miksi satama ei jäädy?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klaipėda (kaupungit)
+Tietoruudun teksti: Klaipėda on Liettuan kolmanneksi suurin kaupunki ja maan ainoa merkittävä merisatama. Se on myös Baltian maiden vilkkain satama, ja sen etu on yksinkertainen: satama ei jäädy talvella. Kaupunki on Akmena-Danė-joen suulla siinä kohdassa, jossa Kuurinlahti avautuu Itämerelle. Asukkaita on noin 161 000 (2025).
+
+Saksalainen ritarikunta rakensi paikalle linnoituksen nimeltä Memelburg vuonna 1252, ja nimi lyheni myöhemmin muotoon Memel. Kaupunkioikeudet Lyypekin mallin mukaan myönnettiin 1254 tai 1258, ja oikeudet saaneita kaupunkeja oli ritarikunnan valtiossa vain kolme.
+
+Ensimmäisen maailmansodan jälkeen alue irrotettiin Saksasta, ja vuoden 1923 Klaipėdan kapina toi sen Liettuan hallintaan. Saksa esitti uhkavaatimuksen 20. maaliskuuta 1939, ja Liettua luovutti alueen kahta päivää myöhemmin. Toisen maailmansodan lopussa kaupunki oli raunioina: kun neuvostojoukot saapuivat 28. tammikuuta 1945…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Halifax — kaupunkilehti / Satama, sumu ja myrskyt] Halifaxissa sää tulee mereltä ja kaupunki on rakennettu sen ehdoilla. Satama ei jäädy, kesä tulee myöhässä ja syksyllä hurrikaanien loppupää yltää tänne asti.
+- [Nome — kaupunkilehti / Nome: Meri, joka ei enää jäädy samalla tavalla] Nomen edustalla Beringinmeri jäätyy talvisin yhä ohuemmaksi ja myöhemmin kuin isoisän aikaan, ja koko Jäämeren jääpeite kutistuu vuosikymmen vuosikymmeneltä. Syyskuun 12. päivänä 2026 NASA ja Yhdysvaltain lumi- ja jäätietokeskus NSIDC mittasivat kesän jäljelle jättämäksi merijääksi 4,60 miljoonaa neliökilometriä eli 1,78 miljoonaa neliömailia — mittaushistorian kymmenenneksi vähiten, saman verran kuin vuosina 2008, 2010 ja 2025. Nomelle ohuempi jää tarkoittaa pidempää purjehduskautta mutta myös rajumpaa syysmyrskyjen kuluttamaa rantaviivaa.
+
+### 12.2
+KYSYMYS: Mistä nimi Memel tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klaipėda (kaupungit)
+Tietoruudun teksti: Klaipėda on Liettuan kolmanneksi suurin kaupunki ja maan ainoa merkittävä merisatama. Se on myös Baltian maiden vilkkain satama, ja sen etu on yksinkertainen: satama ei jäädy talvella. Kaupunki on Akmena-Danė-joen suulla siinä kohdassa, jossa Kuurinlahti avautuu Itämerelle. Asukkaita on noin 161 000 (2025).
+
+Saksalainen ritarikunta rakensi paikalle linnoituksen nimeltä Memelburg vuonna 1252, ja nimi lyheni myöhemmin muotoon Memel. Kaupunkioikeudet Lyypekin mallin mukaan myönnettiin 1254 tai 1258, ja oikeudet saaneita kaupunkeja oli ritarikunnan valtiossa vain kolme.
+
+Ensimmäisen maailmansodan jälkeen alue irrotettiin Saksasta, ja vuoden 1923 Klaipėdan kapina toi sen Liettuan hallintaan. Saksa esitti uhkavaatimuksen 20. maaliskuuta 1939, ja Liettua luovutti alueen kahta päivää myöhemmin. Toisen maailmansodan lopussa kaupunki oli raunioina: kun neuvostojoukot saapuivat 28. tammikuuta 1945…
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:puntukas) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Puntukas (sana)
+Tietoruudun teksti: Puntukas on Liettuan toiseksi suurin siirtolohkare: 6,9 metriä pitkä, 6,7 leveä ja 5,7 syvä, painoltaan noin 446 tonnia. Se makaa Šventoji-joen vasemmalla rannalla noin viisi kilometriä Anykščiaista etelään. Kivi oli maan suurin siihen asti, kunnes Barstyčiain lohkare löytyi vuonna 1957.
+
+Kivilaji on rapakivigraniittia. Jäätikkö kuljetti lohkareen paikalleen viime jääkauden aikana, ja lähtöpaikka on todennäköisesti Suomi.
+
+Antanas Baranauskasin runoelma Anykščių šilelis kertoo kivestä tarinan: piru oli kantamassa sitä murskatakseen Anykščiain kirkon, mutta kukon kiekaisu ajoi sen takaisin maan alle, ja jäljelle jäi vain kivi.
+
+Vuonna 1943, Saksan miehityksen aikana, kuvanveistäjä Bronius Pundzius hakkasi kiveen salaa reliefin lentäjistä Steponas Dariuksesta ja Stasys Girėnasista. He olivat lentäneet Atlantin yli New Yorkista kohti Kaunasia 15. heinäkuuta 1933. Reliefi vaurioitui vuonna …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Menovinkit] Liettua on siirtänyt aarteensa ruudulle: yksi mies maalasi ja sävelsi samat unet, kirjaston holvit on maalattu täyteen kuvia, linnan esineitä saa pyörittää sormella ja lintujen pesille näkee suorana.
+
+### 13.1
+KYSYMYS: Mistä kivi on tullut Liettuaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Puntukas (sana)
+Tietoruudun teksti: Puntukas on Liettuan toiseksi suurin siirtolohkare: 6,9 metriä pitkä, 6,7 leveä ja 5,7 syvä, painoltaan noin 446 tonnia. Se makaa Šventoji-joen vasemmalla rannalla noin viisi kilometriä Anykščiaista etelään. Kivi oli maan suurin siihen asti, kunnes Barstyčiain lohkare löytyi vuonna 1957.
+
+Kivilaji on rapakivigraniittia. Jäätikkö kuljetti lohkareen paikalleen viime jääkauden aikana, ja lähtöpaikka on todennäköisesti Suomi.
+
+Antanas Baranauskasin runoelma Anykščių šilelis kertoo kivestä tarinan: piru oli kantamassa sitä murskatakseen Anykščiain kirkon, mutta kukon kiekaisu ajoi sen takaisin maan alle, ja jäljelle jäi vain kivi.
+
+Vuonna 1943, Saksan miehityksen aikana, kuvanveistäjä Bronius Pundzius hakkasi kiveen salaa reliefin lentäjistä Steponas Dariuksesta ja Stasys Girėnasista. He olivat lentäneet Atlantin yli New Yorkista kohti Kaunasia 15. heinäkuuta 1933. Reliefi vaurioitui vuonna …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Menovinkit] Liettua on siirtänyt aarteensa ruudulle: yksi mies maalasi ja sävelsi samat unet, kirjaston holvit on maalattu täyteen kuvia, linnan esineitä saa pyörittää sormella ja lintujen pesille näkee suorana.
+
+### 13.2
+KYSYMYS: Keitä olivat Darius ja Girėnas?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Puntukas (sana)
+Tietoruudun teksti: Puntukas on Liettuan toiseksi suurin siirtolohkare: 6,9 metriä pitkä, 6,7 leveä ja 5,7 syvä, painoltaan noin 446 tonnia. Se makaa Šventoji-joen vasemmalla rannalla noin viisi kilometriä Anykščiaista etelään. Kivi oli maan suurin siihen asti, kunnes Barstyčiain lohkare löytyi vuonna 1957.
+
+Kivilaji on rapakivigraniittia. Jäätikkö kuljetti lohkareen paikalleen viime jääkauden aikana, ja lähtöpaikka on todennäköisesti Suomi.
+
+Antanas Baranauskasin runoelma Anykščių šilelis kertoo kivestä tarinan: piru oli kantamassa sitä murskatakseen Anykščiain kirkon, mutta kukon kiekaisu ajoi sen takaisin maan alle, ja jäljelle jäi vain kivi.
+
+Vuonna 1943, Saksan miehityksen aikana, kuvanveistäjä Bronius Pundzius hakkasi kiveen salaa reliefin lentäjistä Steponas Dariuksesta ja Stasys Girėnasista. He olivat lentäneet Atlantin yli New Yorkista kohti Kaunasia 15. heinäkuuta 1933. Reliefi vaurioitui vuonna …
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:aukstaitija) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aukštaitijan puisto (luonto · järvi)
+Tietoruudun teksti: Aukštaitijan kansallispuisto perustettiin vuonna 1974, ja se on Liettuan viidestä kansallispuistosta vanhin. Se sijaitsee maan koillisosassa noin sadan kilometrin päässä Vilnasta pohjoiseen ja on pinta-alaltaan 410,56 neliökilometriä.
+
+Yli seitsemänkymmentä prosenttia puistosta on metsää, enimmäkseen mäntyä. Vanhimmat puut ovat noin kahdensadan vuoden ikäisiä.
+
+Vettä on paljon: puistossa on 126 järveä, yhteensä noin 59,3 neliökilometriä. Suurin niistä on Kretuonas, 8,29 neliökilometriä, ja alueella on myös Tauragnas, Liettuan syvin järvi, jonka syvyys on 60,5 metriä.
+
+Puisto kattaa alle prosentin Liettuan pinta-alasta, mutta siellä tavataan 59 prosenttia maan kasvilajeista. Liettuan punaisessa kirjassa suojeltuja lajeja on puistossa 64 kasvia, kahdeksan sienilajia ja 48 lintulajia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto: Suisto, jossa asuu 5500 lajia] 1991 — Tonavan suisto on Euroopan suurin säilynyt kosteikko, ja se levittäytyy yli 4100 neliökilometrille Romanian ja Ukrainan rajalla. Alueella elää yli 5500 kasvi- ja eläinlajia — enemmän kuin missään muualla Euroopassa — ja monimuotoisuudessa sen ohittavat maailmassa vain Australian Suuri valliriutta ja Galapagossaaret. Suistossa pesii yli 300 lintulajia, muun muassa suurin osa Euroopan pelikaaneista ja punakaulahanhista, ja vesissä ui lähes 90 kalalajia, joukossa sampia. Unesco otti suiston maailmanperintöluetteloon vuonna 1991, vuosi sen jälkeen kun siitä oli tehty biosfäärialue.
+- [Itä-Timor — maalehti / Musiikki: Neljä lajia, ei yhtään nuottia] Timorilainen esitysohjelmisto jakautuu neljään selvärajaiseen lajiin: tebe, tebedai, dansa ja cansaun. Kaikki lepäävät suullisen perinteen varassa ja ovat siirtyneet sukupolvelta toiselle ilman kirjoitettua nuottia. Musiikki ja tanssi eivät ole erillisiä taiteita vaan saman esityksen kaksi puolta, ja samaan kokonaisuuteen kuuluvat puku ja korut. Laulun sanat ovat tetumiksi tai portugaliksi, maan kahdella virallisella kielellä. Päälle on kertynyt uudempia kerroksia radiosta ja siirtolaisilta: rock, hiphop ja reggae kuuluvat Dilissä siinä missä muuallakin.
+
+### 14.1
+KYSYMYS: Kuinka syvä Tauragnas-järvi on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aukštaitijan puisto (luonto · järvi)
+Tietoruudun teksti: Aukštaitijan kansallispuisto perustettiin vuonna 1974, ja se on Liettuan viidestä kansallispuistosta vanhin. Se sijaitsee maan koillisosassa noin sadan kilometrin päässä Vilnasta pohjoiseen ja on pinta-alaltaan 410,56 neliökilometriä.
+
+Yli seitsemänkymmentä prosenttia puistosta on metsää, enimmäkseen mäntyä. Vanhimmat puut ovat noin kahdensadan vuoden ikäisiä.
+
+Vettä on paljon: puistossa on 126 järveä, yhteensä noin 59,3 neliökilometriä. Suurin niistä on Kretuonas, 8,29 neliökilometriä, ja alueella on myös Tauragnas, Liettuan syvin järvi, jonka syvyys on 60,5 metriä.
+
+Puisto kattaa alle prosentin Liettuan pinta-alasta, mutta siellä tavataan 59 prosenttia maan kasvilajeista. Liettuan punaisessa kirjassa suojeltuja lajeja on puistossa 64 kasvia, kahdeksan sienilajia ja 48 lintulajia.
+
+### 14.2
+KYSYMYS: Miksi puistossa kasvaa niin monta lajia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aukštaitijan puisto (luonto · järvi)
+Tietoruudun teksti: Aukštaitijan kansallispuisto perustettiin vuonna 1974, ja se on Liettuan viidestä kansallispuistosta vanhin. Se sijaitsee maan koillisosassa noin sadan kilometrin päässä Vilnasta pohjoiseen ja on pinta-alaltaan 410,56 neliökilometriä.
+
+Yli seitsemänkymmentä prosenttia puistosta on metsää, enimmäkseen mäntyä. Vanhimmat puut ovat noin kahdensadan vuoden ikäisiä.
+
+Vettä on paljon: puistossa on 126 järveä, yhteensä noin 59,3 neliökilometriä. Suurin niistä on Kretuonas, 8,29 neliökilometriä, ja alueella on myös Tauragnas, Liettuan syvin järvi, jonka syvyys on 60,5 metriä.
+
+Puisto kattaa alle prosentin Liettuan pinta-alasta, mutta siellä tavataan 59 prosenttia maan kasvilajeista. Liettuan punaisessa kirjassa suojeltuja lajeja on puistossa 64 kasvia, kahdeksan sienilajia ja 48 lintulajia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto: Suisto, jossa asuu 5500 lajia] 1991 — Tonavan suisto on Euroopan suurin säilynyt kosteikko, ja se levittäytyy yli 4100 neliökilometrille Romanian ja Ukrainan rajalla. Alueella elää yli 5500 kasvi- ja eläinlajia — enemmän kuin missään muualla Euroopassa — ja monimuotoisuudessa sen ohittavat maailmassa vain Australian Suuri valliriutta ja Galapagossaaret. Suistossa pesii yli 300 lintulajia, muun muassa suurin osa Euroopan pelikaaneista ja punakaulahanhista, ja vesissä ui lähes 90 kalalajia, joukossa sampia. Unesco otti suiston maailmanperintöluetteloon vuonna 1991, vuosi sen jälkeen kun siitä oli tehty biosfäärialue.
+- [Itä-Timor — maalehti / Musiikki: Neljä lajia, ei yhtään nuottia] Timorilainen esitysohjelmisto jakautuu neljään selvärajaiseen lajiin: tebe, tebedai, dansa ja cansaun. Kaikki lepäävät suullisen perinteen varassa ja ovat siirtyneet sukupolvelta toiselle ilman kirjoitettua nuottia. Musiikki ja tanssi eivät ole erillisiä taiteita vaan saman esityksen kaksi puolta, ja samaan kokonaisuuteen kuuluvat puku ja korut. Laulun sanat ovat tetumiksi tai portugaliksi, maan kahdella virallisella kielellä. Päälle on kertynyt uudempia kerroksia radiosta ja siirtolaisilta: rock, hiphop ja reggae kuuluvat Dilissä siinä missä muuallakin.
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:hahmotelma-vilnan-alalinna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vilnan alalinna (historia)
+Tietoruudun teksti: Vilnan alalinnan suurruhtinaiden palatsi oli Liettuan hallinnon keskus 1400-luvulta. Venäjän sota vaurioitti sitä pahoin 1655–1661, ja tsaarin viranomaiset purkivat rauniot 1801–1805. Nykyinen museopalatsi on uusi jäljennös.
+
+### 15.1
+KYSYMYS: Miltä Vilnan alalinna näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vilnan alalinna (historia)
+Tietoruudun teksti: Vilnan alalinnan suurruhtinaiden palatsi oli Liettuan hallinnon keskus 1400-luvulta. Venäjän sota vaurioitti sitä pahoin 1655–1661, ja tsaarin viranomaiset purkivat rauniot 1801–1805. Nykyinen museopalatsi on uusi jäljennös.
+
+### 15.2
+KYSYMYS: Miksi Vilnan alalinna katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vilnan alalinna (historia)
+Tietoruudun teksti: Vilnan alalinnan suurruhtinaiden palatsi oli Liettuan hallinnon keskus 1400-luvulta. Venäjän sota vaurioitti sitä pahoin 1655–1661, ja tsaarin viranomaiset purkivat rauniot 1801–1805. Nykyinen museopalatsi on uusi jäljennös.
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

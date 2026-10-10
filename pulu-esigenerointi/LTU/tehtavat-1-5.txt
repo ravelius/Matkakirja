@@ -1,0 +1,200 @@
+================ KOHTA 21 (kohde:hahmotelma-rokiskis) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rokiškis (historia)
+Tietoruudun teksti: Rokiškis on kaupunki Koillis-Liettuassa lähellä Latvian rajaa. Sen keskusta muotoutui 1700-luvun lopulla Tyzenhausin suvun hallinnon aikana: uusgoottilainen Pyhän Matteuksen kirkko ja kartano, jossa toimii nykyään alueen museo, ovat arvokkaita esimerkkejä 1800-luvun rakennustaiteesta. Legendan mukaan kaupungin nimi juontuu metsästäjä Rokaksi, joka ajoi jäniksiä (liettuaksi kiškis). Vuodesta 1873 Tyzenhausit rahoittivat musiikkikoulua, joka koulutti kirkkourkureita, ja samana vuonna valmistunut rautatien haaralinja sai kaupungin kasvamaan. Nykyään Rokiškis tunnetaan juustostaan, sillä Rokiškio sūris on yksi Liettuan suurimmista maitotuotteiden valmistajista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kenia — maalehti / Urheilu: Kaksi tuntia, jota ei laskettu ennätykseksi] 2019 — Eliud Kipchoge kasvoi Nandissa yksinhuoltajaäidin luona ja juoksi kolme kilometriä kouluun; valmentajansa Patrick Sangin hän tapasi 16-vuotiaana. Kahdeksantoistavuotiaana hän oli jo 5 000 metrin maailmanmestari. Wienin Praterissa 12. lokakuuta 2019 hän juoksi maratonin matkan aikaan 1.59.40 ensimmäisenä ihmisenä historiassa. Suoritus ei kelvannut ennätykseksi: kengät olivat erikoisvalmisteiset, jänikset vaihtuivat kesken matkan eikä kilpailu ollut avoin. Se ei estänyt sitä olemasta juoksuhistorian puhutuin tunti ja viisikymmentäyhdeksän minuuttia.
+
+### 21.1
+KYSYMYS: Miksi kaupunki alkoi kasvaa juuri rautatien haaralinjan valmistuttua?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rokiškis (historia)
+Tietoruudun teksti: Rokiškis on kaupunki Koillis-Liettuassa lähellä Latvian rajaa. Sen keskusta muotoutui 1700-luvun lopulla Tyzenhausin suvun hallinnon aikana: uusgoottilainen Pyhän Matteuksen kirkko ja kartano, jossa toimii nykyään alueen museo, ovat arvokkaita esimerkkejä 1800-luvun rakennustaiteesta. Legendan mukaan kaupungin nimi juontuu metsästäjä Rokaksi, joka ajoi jäniksiä (liettuaksi kiškis). Vuodesta 1873 Tyzenhausit rahoittivat musiikkikoulua, joka koulutti kirkkourkureita, ja samana vuonna valmistunut rautatien haaralinja sai kaupungin kasvamaan. Nykyään Rokiškis tunnetaan juustostaan, sillä Rokiškio sūris on yksi Liettuan suurimmista maitotuotteiden valmistajista.
+
+### 21.2
+KYSYMYS: Mitä metsästäjä Rokas ja jänikset kertovat kaupungin nimestä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rokiškis (historia)
+Tietoruudun teksti: Rokiškis on kaupunki Koillis-Liettuassa lähellä Latvian rajaa. Sen keskusta muotoutui 1700-luvun lopulla Tyzenhausin suvun hallinnon aikana: uusgoottilainen Pyhän Matteuksen kirkko ja kartano, jossa toimii nykyään alueen museo, ovat arvokkaita esimerkkejä 1800-luvun rakennustaiteesta. Legendan mukaan kaupungin nimi juontuu metsästäjä Rokaksi, joka ajoi jäniksiä (liettuaksi kiškis). Vuodesta 1873 Tyzenhausit rahoittivat musiikkikoulua, joka koulutti kirkkourkureita, ja samana vuonna valmistunut rautatien haaralinja sai kaupungin kasvamaan. Nykyään Rokiškis tunnetaan juustostaan, sillä Rokiškio sūris on yksi Liettuan suurimmista maitotuotteiden valmistajista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kenia — maalehti / Urheilu: Kaksi tuntia, jota ei laskettu ennätykseksi] 2019 — Eliud Kipchoge kasvoi Nandissa yksinhuoltajaäidin luona ja juoksi kolme kilometriä kouluun; valmentajansa Patrick Sangin hän tapasi 16-vuotiaana. Kahdeksantoistavuotiaana hän oli jo 5 000 metrin maailmanmestari. Wienin Praterissa 12. lokakuuta 2019 hän juoksi maratonin matkan aikaan 1.59.40 ensimmäisenä ihmisenä historiassa. Suoritus ei kelvannut ennätykseksi: kengät olivat erikoisvalmisteiset, jänikset vaihtuivat kesken matkan eikä kilpailu ollut avoin. Se ei estänyt sitä olemasta juoksuhistorian puhutuin tunti ja viisikymmentäyhdeksän minuuttia.
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:hahmotelma-pakruojis) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pakruojis (historia)
+Tietoruudun teksti: Pakruojin kartano on entinen asuinkartano kahden kilometrin päässä Pakruojis-kaupungista Kruoja-joen oikealla rannalla. Paikka mainitaan lähteissä ensimmäisen kerran vuonna 1531, ja vuodesta 1780 vuoteen 1940 sen omisti paroniperhe von der Ropp. Nykyiset rakennukset ovat pääosin 1800-luvun alkupuolelta ja edustavat myöhäistä klassismia: päärakennuksen julkisivussa on kuuden pylvään portiikki, ja sisällä on soikea peilisali. Joen yli kulkee vuonna 1821 rakennettu kaareva dolomiittisilta, joka toimii samalla patona ja muistuttaa roomalaisia akvedukteja. Kartano on kunnostettu, ja nykyään siellä toimii hotelli, ravintola ja matkailukohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kaupunkilehti / Rooma] Kaupunki, jonka areenan alla on kellari hisseineen, jonka aukiolla marmorinen norsu kantaa obeliskia ja jonka kuuluisimpaan lähteeseen vesi tulee yhä antiikin akveduktia pitkin.
+- [Sansibar — kohdekartta / Kohdekartta: Darajanin tori] 1904 Darajani on Kivikaupungin päätori. Sillä on kolme nimeä: virallinen Darajani, vanha Estella Market — kreivitär Estellan, Sansibarin pääministerin Lloyd Mathewsin sisaren mukaan — ja arkinen Marikiti Kuu, swahiliksi pääkauppapaikka. Torin päärakennuksen rakensi 1904 Bomanjee Maneckjee sulttaani Ali bin Hamudille. Sitä on myöhemmin laajennettu ja korjattu. Tori on Darajani Roadin varrella anglikaanisen katedraalin lähellä, eli aivan sillä kohdalla, jossa Kivikaupungin kujat alkavat väljetä. Darajani on ennen kaikkea ruokatori: merenherkkuja, lihaa, hedelmiä, viljaa ja mausteita. Sen lisäksi myydään melkein kaikkea muutakin, elektroniikasta vaatteisiin. Tori on myös liikenteen solmu — se …
+
+### 22.1
+KYSYMYS: Miksi kartanon silta muistuttaa roomalaista akveduktia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pakruojis (historia)
+Tietoruudun teksti: Pakruojin kartano on entinen asuinkartano kahden kilometrin päässä Pakruojis-kaupungista Kruoja-joen oikealla rannalla. Paikka mainitaan lähteissä ensimmäisen kerran vuonna 1531, ja vuodesta 1780 vuoteen 1940 sen omisti paroniperhe von der Ropp. Nykyiset rakennukset ovat pääosin 1800-luvun alkupuolelta ja edustavat myöhäistä klassismia: päärakennuksen julkisivussa on kuuden pylvään portiikki, ja sisällä on soikea peilisali. Joen yli kulkee vuonna 1821 rakennettu kaareva dolomiittisilta, joka toimii samalla patona ja muistuttaa roomalaisia akvedukteja. Kartano on kunnostettu, ja nykyään siellä toimii hotelli, ravintola ja matkailukohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kaupunkilehti / Rooma] Kaupunki, jonka areenan alla on kellari hisseineen, jonka aukiolla marmorinen norsu kantaa obeliskia ja jonka kuuluisimpaan lähteeseen vesi tulee yhä antiikin akveduktia pitkin.
+
+### 22.2
+KYSYMYS: Millaisia rakennuksia suureen kartanokokonaisuuteen kuului päärakennuksen lisäksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pakruojis (historia)
+Tietoruudun teksti: Pakruojin kartano on entinen asuinkartano kahden kilometrin päässä Pakruojis-kaupungista Kruoja-joen oikealla rannalla. Paikka mainitaan lähteissä ensimmäisen kerran vuonna 1531, ja vuodesta 1780 vuoteen 1940 sen omisti paroniperhe von der Ropp. Nykyiset rakennukset ovat pääosin 1800-luvun alkupuolelta ja edustavat myöhäistä klassismia: päärakennuksen julkisivussa on kuuden pylvään portiikki, ja sisällä on soikea peilisali. Joen yli kulkee vuonna 1821 rakennettu kaareva dolomiittisilta, joka toimii samalla patona ja muistuttaa roomalaisia akvedukteja. Kartano on kunnostettu, ja nykyään siellä toimii hotelli, ravintola ja matkailukohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sansibar — kohdekartta / Kohdekartta: Darajanin tori] 1904 Darajani on Kivikaupungin päätori. Sillä on kolme nimeä: virallinen Darajani, vanha Estella Market — kreivitär Estellan, Sansibarin pääministerin Lloyd Mathewsin sisaren mukaan — ja arkinen Marikiti Kuu, swahiliksi pääkauppapaikka. Torin päärakennuksen rakensi 1904 Bomanjee Maneckjee sulttaani Ali bin Hamudille. Sitä on myöhemmin laajennettu ja korjattu. Tori on Darajani Roadin varrella anglikaanisen katedraalin lähellä, eli aivan sillä kohdalla, jossa Kivikaupungin kujat alkavat väljetä. Darajani on ennen kaikkea ruokatori: merenherkkuja, lihaa, hedelmiä, viljaa ja mausteita. Sen lisäksi myydään melkein kaikkea muutakin, elektroniikasta vaatteisiin. Tori on myös liikenteen solmu — se …
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:hahmotelma-dzukija) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dzūkijan kansallispuisto (kulttuuri)
+Tietoruudun teksti: Dzūkijan kansallispuisto sijaitsee Etelä-Liettuassa, noin sadan kilometrin päässä Vilnasta lounaaseen ja Kaunasista etelään. Se perustettiin 23. huhtikuuta 1991 suojelemaan Dainavan maata, ja se on maan laajin suojeltu metsäalue: 584,5 neliökilometriä Nemunas-joen rannoilla. Maisemaa hallitsevat mäntyvaltaiset metsät, suot, järvet ja sisämaan dyynit, ja alueella on 30 jokea ja puroa. Puiston eteläpuolella on Čepkeliain suoalue, Liettuan suurin suo. Puiston hallintokeskus on Marcinkonysissa, ja alueella sijaitsee etnografinen Zervynosin kylä.
+
+### 23.1
+KYSYMYS: Miksi juuri tämä metsä- ja suoseutu haluttiin suojella kansallispuistona?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dzūkijan kansallispuisto (kulttuuri)
+Tietoruudun teksti: Dzūkijan kansallispuisto sijaitsee Etelä-Liettuassa, noin sadan kilometrin päässä Vilnasta lounaaseen ja Kaunasista etelään. Se perustettiin 23. huhtikuuta 1991 suojelemaan Dainavan maata, ja se on maan laajin suojeltu metsäalue: 584,5 neliökilometriä Nemunas-joen rannoilla. Maisemaa hallitsevat mäntyvaltaiset metsät, suot, järvet ja sisämaan dyynit, ja alueella on 30 jokea ja puroa. Puiston eteläpuolella on Čepkeliain suoalue, Liettuan suurin suo. Puiston hallintokeskus on Marcinkonysissa, ja alueella sijaitsee etnografinen Zervynosin kylä.
+
+### 23.2
+KYSYMYS: Miten sisämaan dyynit ovat päätyneet metsän keskelle kaukana merestä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dzūkijan kansallispuisto (kulttuuri)
+Tietoruudun teksti: Dzūkijan kansallispuisto sijaitsee Etelä-Liettuassa, noin sadan kilometrin päässä Vilnasta lounaaseen ja Kaunasista etelään. Se perustettiin 23. huhtikuuta 1991 suojelemaan Dainavan maata, ja se on maan laajin suojeltu metsäalue: 584,5 neliökilometriä Nemunas-joen rannoilla. Maisemaa hallitsevat mäntyvaltaiset metsät, suot, järvet ja sisämaan dyynit, ja alueella on 30 jokea ja puroa. Puiston eteläpuolella on Čepkeliain suoalue, Liettuan suurin suo. Puiston hallintokeskus on Marcinkonysissa, ja alueella sijaitsee etnografinen Zervynosin kylä.
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:hahmotelma-plateliai) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plateliai (luonto · järvi)
+Tietoruudun teksti: Plateliai on Samogitiassa sijaitseva kaupunki Plateliain järven länsirannalla; järvi on Samogitian suurin. Paikka mainitaan lähteissä ensimmäisen kerran vuonna 1450, ja nykyään siellä toimii Žemaitijan kansallispuiston hallinto. Kylän puukirkko rakennettiin vuonna 1744. Sofija Tyzenhauzaitė de Choiseul-Gouffier (1790–1878) kirjoitti ranskaksi ja oli historiallisen Liettuan ensimmäinen naiskirjailija. Kansantarun mukaan järvi lipui ennen kaukana lännessä, kunnes myrsky nosti sen pilveksi ja kantoi itään. Sanat "Plate lej", eli "sataa leveästi", olivat järven salasana: kun samogiittinainen sanoi ne ääneen, koko vesimassa vajosi kumpujen väliseen kuoppaan.
+
+### 24.1
+KYSYMYS: Miksi kansantarun mukaan järvi päätyi juuri Samogitian kumpujen väliseen kuoppaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plateliai (luonto · järvi)
+Tietoruudun teksti: Plateliai on Samogitiassa sijaitseva kaupunki Plateliain järven länsirannalla; järvi on Samogitian suurin. Paikka mainitaan lähteissä ensimmäisen kerran vuonna 1450, ja nykyään siellä toimii Žemaitijan kansallispuiston hallinto. Kylän puukirkko rakennettiin vuonna 1744. Sofija Tyzenhauzaitė de Choiseul-Gouffier (1790–1878) kirjoitti ranskaksi ja oli historiallisen Liettuan ensimmäinen naiskirjailija. Kansantarun mukaan järvi lipui ennen kaukana lännessä, kunnes myrsky nosti sen pilveksi ja kantoi itään. Sanat "Plate lej", eli "sataa leveästi", olivat järven salasana: kun samogiittinainen sanoi ne ääneen, koko vesimassa vajosi kumpujen väliseen kuoppaan.
+
+### 24.2
+KYSYMYS: Millaista oli olla naiskirjailija historiallisessa Liettuassa 1800-luvun alussa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plateliai (luonto · järvi)
+Tietoruudun teksti: Plateliai on Samogitiassa sijaitseva kaupunki Plateliain järven länsirannalla; järvi on Samogitian suurin. Paikka mainitaan lähteissä ensimmäisen kerran vuonna 1450, ja nykyään siellä toimii Žemaitijan kansallispuiston hallinto. Kylän puukirkko rakennettiin vuonna 1744. Sofija Tyzenhauzaitė de Choiseul-Gouffier (1790–1878) kirjoitti ranskaksi ja oli historiallisen Liettuan ensimmäinen naiskirjailija. Kansantarun mukaan järvi lipui ennen kaukana lännessä, kunnes myrsky nosti sen pilveksi ja kantoi itään. Sanat "Plate lej", eli "sataa leveästi", olivat järven salasana: kun samogiittinainen sanoi ne ääneen, koko vesimassa vajosi kumpujen väliseen kuoppaan.
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-rusne) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rusnė (luonto · saari)
+Tietoruudun teksti: Rusnė on rajakaupunki Nemunasin suistossa, samannimisellä saarella noin yhdeksän kilometriä Šilutėsta lounaaseen. Paikka mainitaan lähteissä ensimmäisen kerran 1300-luvulla, ja ensimmäinen kirkko rakennettiin vuonna 1419. Preussin herttua määräsi vuonna 1544 pidettäväksi jumalanpalveluksia liettuan ja kuurin kielillä, ja vuonna 1553 kylään perustettiin liettuankielinen seurakuntakoulu. Alue on tulva-altista, ja saarella aloitti 1810 toimintansa yksi Liettuan ensimmäisistä vedenmittausasemista. Venäjän rajan erottaa Skirvytė-joki, ja kaupunki on suosittu kalastajien ja lintuharrastajien kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yellowstone — kaupunkilehti / Geysirit ja erämaa: Grand Prismatic Spring — sateenkaaren lähde] Grand Prismatic Spring on Yhdysvaltain suurin ja maailman kolmanneksi suurin kuuma lähde: halkaisijaltaan noin 110 metriä ja syvimmiltä kohdiltaan noin 50 metriä syvä. Keskellä vesi on niin kuumaa ja steriiliä, ettei siellä elä juuri mitään — siksi keskiosa näyttää syvän siniseltä, kun pelkkä vesi imee itseensä muut värit paitsi sinisen. Reunoilla vesi jäähtyy, ja siellä viihtyvät lämpöä sietävät bakteerit ja arkeonit muodostavat mattoja, joiden klorofylli ja karotenoidipigmentit värjäävät renkaat keltaisiksi, oransseiksi ja punaisiksi. Värit vaihtuvat vuodenajan mukaan: kesällä reunat hehkuvat oranssinpunaisina, talvella ne tummuvat lähes vihreiksi.
+- [Chicago — kohdekartta / Kohdekartta: Hull House] 1889 Kiinteistömies Charles Jerald Hull rakennutti 1856 italialaistyylisen huvilan osoitteeseen 800 South Halsted Street. Kortteli oli silloin hienostoaluetta, mutta vuoteen 1889 mennessä se oli köyhtynyt, kun siirtolaisia oli muuttanut Near West Sidelle enemmän kuin alue kesti. Juuri silloin Jane Addams etsi paikkaa kokeilulleen. Hull oli antanut talon serkulleen Helen Culverille, ja Culver luovutti sen Addamsille kahdenkymmenenviiden vuoden vuokravapaalla sopimuksella. Addams ja Ellen Gates Starr perustivat Hull Housen 18. syyskuuta 1889 esikuvanaan Lontoon East Endin Toynbee Hall. Ajatus oli, että sivistyneet naiset muuttavat asumaan köyhään kaupunginosaan ja pitävät siellä samat kerhons…
+
+### 25.1
+KYSYMYS: Millaista elämää tulva-alttiilla suiston saarella eletään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rusnė (luonto · saari)
+Tietoruudun teksti: Rusnė on rajakaupunki Nemunasin suistossa, samannimisellä saarella noin yhdeksän kilometriä Šilutėsta lounaaseen. Paikka mainitaan lähteissä ensimmäisen kerran 1300-luvulla, ja ensimmäinen kirkko rakennettiin vuonna 1419. Preussin herttua määräsi vuonna 1544 pidettäväksi jumalanpalveluksia liettuan ja kuurin kielillä, ja vuonna 1553 kylään perustettiin liettuankielinen seurakuntakoulu. Alue on tulva-altista, ja saarella aloitti 1810 toimintansa yksi Liettuan ensimmäisistä vedenmittausasemista. Venäjän rajan erottaa Skirvytė-joki, ja kaupunki on suosittu kalastajien ja lintuharrastajien kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chicago — kohdekartta / Kohdekartta: Hull House] 1889 Kiinteistömies Charles Jerald Hull rakennutti 1856 italialaistyylisen huvilan osoitteeseen 800 South Halsted Street. Kortteli oli silloin hienostoaluetta, mutta vuoteen 1889 mennessä se oli köyhtynyt, kun siirtolaisia oli muuttanut Near West Sidelle enemmän kuin alue kesti. Juuri silloin Jane Addams etsi paikkaa kokeilulleen. Hull oli antanut talon serkulleen Helen Culverille, ja Culver luovutti sen Addamsille kahdenkymmenenviiden vuoden vuokravapaalla sopimuksella. Addams ja Ellen Gates Starr perustivat Hull Housen 18. syyskuuta 1889 esikuvanaan Lontoon East Endin Toynbee Hall. Ajatus oli, että sivistyneet naiset muuttavat asumaan köyhään kaupunginosaan ja pitävät siellä samat kerhons…
+
+### 25.2
+KYSYMYS: Miksi kalastajat ja lintuharrastajat viihtyvät juuri Nemunasin suistossa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rusnė (luonto · saari)
+Tietoruudun teksti: Rusnė on rajakaupunki Nemunasin suistossa, samannimisellä saarella noin yhdeksän kilometriä Šilutėsta lounaaseen. Paikka mainitaan lähteissä ensimmäisen kerran 1300-luvulla, ja ensimmäinen kirkko rakennettiin vuonna 1419. Preussin herttua määräsi vuonna 1544 pidettäväksi jumalanpalveluksia liettuan ja kuurin kielillä, ja vuonna 1553 kylään perustettiin liettuankielinen seurakuntakoulu. Alue on tulva-altista, ja saarella aloitti 1810 toimintansa yksi Liettuan ensimmäisistä vedenmittausasemista. Venäjän rajan erottaa Skirvytė-joki, ja kaupunki on suosittu kalastajien ja lintuharrastajien kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yellowstone — kaupunkilehti / Geysirit ja erämaa: Grand Prismatic Spring — sateenkaaren lähde] Grand Prismatic Spring on Yhdysvaltain suurin ja maailman kolmanneksi suurin kuuma lähde: halkaisijaltaan noin 110 metriä ja syvimmiltä kohdiltaan noin 50 metriä syvä. Keskellä vesi on niin kuumaa ja steriiliä, ettei siellä elä juuri mitään — siksi keskiosa näyttää syvän siniseltä, kun pelkkä vesi imee itseensä muut värit paitsi sinisen. Reunoilla vesi jäähtyy, ja siellä viihtyvät lämpöä sietävät bakteerit ja arkeonit muodostavat mattoja, joiden klorofylli ja karotenoidipigmentit värjäävät renkaat keltaisiksi, oransseiksi ja punaisiksi. Värit vaihtuvat vuodenajan mukaan: kesällä reunat hehkuvat oranssinpunaisina, talvella ne tummuvat lähes vihreiksi.
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

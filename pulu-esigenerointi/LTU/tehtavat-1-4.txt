@@ -1,0 +1,200 @@
+================ KOHTA 16 (kohde:hahmotelma-kedainiai) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kėdainiai (kulttuuri)
+Tietoruudun teksti: Kėdainiai on kaupunki Nevėžis-joen rannalla noin 45 kilometriä Kaunasista pohjoiseen. Se mainitaan ensimmäisen kerran vuonna 1372 Liivinmaan kronikassa ja sai kaupungin aseman vuonna 1590. Vuonna 1655 Radziwiłł-suvun kaksi jäsentä allekirjoitti kaupungin linnassa lyhytaikaisen sopimuksen Ruotsin kanssa; linnasta on jäljellä vähän, mutta kalvinistisen kirkon kryptaan on haudattu suvun jäseniä. Kaupunkiin muutti 1500- ja 1600-luvuilla skotlantilaisia protestantteja, joiden vaikutus säilyi 1800-luvun puoliväliin asti. Heidän kauppiastalonsa, niin sanotut skotlantilaiset talot, ympäröivät yhä toria, ja 1600-luvulta periytyvä vanha kaupunki on säilynyt hyvin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Historia: Linna joka selvisi joka sodasta] 1500-luvulta — Aatelismies Jurij Iljinitš aloitti linnan rakentamisen 1400-luvun lopulla tatarien ratsioiden ja naapuririitojen vuoksi. 1500-luvun jälkipuoliskolla linna siirtyi mahtisuku Radziwiłłeille, ja Mikołaj Kristof "Orpo" Radziwiłł laajensi sitä kolmikerroksisilla asuinsiivillä, uudisti torneja ja kaivatti vallihaudan. Vuosisatojen ajan linna koki hyökkäyksiä, tuhoja ja jälleenrakennuksia - viimeksi toisessa maailmansodassa, jolloin sen muurien sisään perustettiin juutalaisghetto. Pitkän kunnostuksen jälkeen Unesco lisäsi Mirin linnan maailmanperintöluetteloon vuonna 2000.
+- [Marseille — kaupunkilehti / Historia: Linnoitussaari, josta tuli maailmankuulu vankila] Kuningas Frans I rakennutti If-linnoituksen pienelle saarelle Marseillen edustalle 1520-luvulla puolustamaan satamaa mereltä tulevilta hyökkäyksiltä. Linnoitus ei koskaan joutunut puolustamaan kaupunkia sotilaallisesti, mutta siitä tuli sen sijaan pelätty vankila, jonne suljettiin sekä poliittisia vankeja että protestantteja. Linnoitus tuli maailmankuuluksi Alexandre Dumasin romaanista Monte-Criston kreivi (1844), jossa päähenkilö Edmond Dantès vangitaan sinne vuosikausiksi perättömän syytöksen takia ja pakenee lopulta meritse. Saarelle tehdään yhä laivakierroksia tarinan takia, vaikka Dantès on täysin kuvitteellinen hahmo.
+
+### 16.1
+KYSYMYS: Miksi skotlantilaisia protestantteja muutti Liettuan pikkukaupunkiin 1500- ja 1600-luvuilla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kėdainiai (kulttuuri)
+Tietoruudun teksti: Kėdainiai on kaupunki Nevėžis-joen rannalla noin 45 kilometriä Kaunasista pohjoiseen. Se mainitaan ensimmäisen kerran vuonna 1372 Liivinmaan kronikassa ja sai kaupungin aseman vuonna 1590. Vuonna 1655 Radziwiłł-suvun kaksi jäsentä allekirjoitti kaupungin linnassa lyhytaikaisen sopimuksen Ruotsin kanssa; linnasta on jäljellä vähän, mutta kalvinistisen kirkon kryptaan on haudattu suvun jäseniä. Kaupunkiin muutti 1500- ja 1600-luvuilla skotlantilaisia protestantteja, joiden vaikutus säilyi 1800-luvun puoliväliin asti. Heidän kauppiastalonsa, niin sanotut skotlantilaiset talot, ympäröivät yhä toria, ja 1600-luvulta periytyvä vanha kaupunki on säilynyt hyvin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kaupunkilehti / Historia: Linnoitussaari, josta tuli maailmankuulu vankila] Kuningas Frans I rakennutti If-linnoituksen pienelle saarelle Marseillen edustalle 1520-luvulla puolustamaan satamaa mereltä tulevilta hyökkäyksiltä. Linnoitus ei koskaan joutunut puolustamaan kaupunkia sotilaallisesti, mutta siitä tuli sen sijaan pelätty vankila, jonne suljettiin sekä poliittisia vankeja että protestantteja. Linnoitus tuli maailmankuuluksi Alexandre Dumasin romaanista Monte-Criston kreivi (1844), jossa päähenkilö Edmond Dantès vangitaan sinne vuosikausiksi perättömän syytöksen takia ja pakenee lopulta meritse. Saarelle tehdään yhä laivakierroksia tarinan takia, vaikka Dantès on täysin kuvitteellinen hahmo.
+
+### 16.2
+KYSYMYS: Miksi Radziwiłł-suvun linnassa allekirjoitettiin vuonna 1655 sopimus Ruotsin kanssa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kėdainiai (kulttuuri)
+Tietoruudun teksti: Kėdainiai on kaupunki Nevėžis-joen rannalla noin 45 kilometriä Kaunasista pohjoiseen. Se mainitaan ensimmäisen kerran vuonna 1372 Liivinmaan kronikassa ja sai kaupungin aseman vuonna 1590. Vuonna 1655 Radziwiłł-suvun kaksi jäsentä allekirjoitti kaupungin linnassa lyhytaikaisen sopimuksen Ruotsin kanssa; linnasta on jäljellä vähän, mutta kalvinistisen kirkon kryptaan on haudattu suvun jäseniä. Kaupunkiin muutti 1500- ja 1600-luvuilla skotlantilaisia protestantteja, joiden vaikutus säilyi 1800-luvun puoliväliin asti. Heidän kauppiastalonsa, niin sanotut skotlantilaiset talot, ympäröivät yhä toria, ja 1600-luvulta periytyvä vanha kaupunki on säilynyt hyvin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Historia: Linna joka selvisi joka sodasta] 1500-luvulta — Aatelismies Jurij Iljinitš aloitti linnan rakentamisen 1400-luvun lopulla tatarien ratsioiden ja naapuririitojen vuoksi. 1500-luvun jälkipuoliskolla linna siirtyi mahtisuku Radziwiłłeille, ja Mikołaj Kristof "Orpo" Radziwiłł laajensi sitä kolmikerroksisilla asuinsiivillä, uudisti torneja ja kaivatti vallihaudan. Vuosisatojen ajan linna koki hyökkäyksiä, tuhoja ja jälleenrakennuksia - viimeksi toisessa maailmansodassa, jolloin sen muurien sisään perustettiin juutalaisghetto. Pitkän kunnostuksen jälkeen Unesco lisäsi Mirin linnan maailmanperintöluetteloon vuonna 2000.
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:hahmotelma-birzai) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biržai (historia)
+Tietoruudun teksti: Biržai on pohjoisliettualainen kaupunki, joka tunnetaan uudelleenrakennetusta linnakartanostaan ja monista perinteisiä reseptejä noudattavista panimoista. Linnan rakentaminen alkoi vuonna 1586, ja sitä varten Agluona- ja Apaščia-jokien yhtymäkohtaan oli padottu jo 1575 Širvėna-järvi, Liettuan vanhin säilynyt tekojärvi. Linna oli tärkeä puolustuspaikka Ruotsin sotien aikana, tuhoutui useaan kertaan ja jäi raunioiksi vuodesta 1704 aina 1990-luvun kunnostukseen asti. Kaupunki liittyy vahvasti Radziwiłł-sukuun, ja siitä tuli Liettuan protestanttisen uskonpuhdistuksen kulttuurikeskus. Kaupungin pohjoisosassa on alueellinen luonnonpuisto, jossa on noin 9 000 karstiaukkoa; yksi niistä, 20 metriä syvä Karvės ola eli Lehmänluola, löytyi legendan mukaan, kun lehmä katosi maan alle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Denver — kaupunkilehti / Vuoret ja ohut ilma: Ohut ilma, kolmetuhatta tuntia aurinkoa] Denverin ilmasto on viileä puolikuiva: kosteus on yleisesti matala ja aurinkoa on noin 3 100 tuntia vuodessa. Korkeuden ja kuivuuden takia vuorokauden lämpötilavaihtelu on suuri läpi vuoden, ja sisämaan sijainti ylätasangolla tuo äkillisiä säänmuutoksia. Kaupungin virallinen sääasema on lentokentällä noin kolmenkymmenen kilometrin päässä keskustasta, ja siitä kiistellään: vuoden 2019 vertailussa lentokentän keskilämpötila oli 10,1 astetta ja keskustan 11,7 astetta.
+
+### 17.1
+KYSYMYS: Miksi Biržaihin padottiin ihmisten tekemä järvi jo 1500-luvun lopulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biržai (historia)
+Tietoruudun teksti: Biržai on pohjoisliettualainen kaupunki, joka tunnetaan uudelleenrakennetusta linnakartanostaan ja monista perinteisiä reseptejä noudattavista panimoista. Linnan rakentaminen alkoi vuonna 1586, ja sitä varten Agluona- ja Apaščia-jokien yhtymäkohtaan oli padottu jo 1575 Širvėna-järvi, Liettuan vanhin säilynyt tekojärvi. Linna oli tärkeä puolustuspaikka Ruotsin sotien aikana, tuhoutui useaan kertaan ja jäi raunioiksi vuodesta 1704 aina 1990-luvun kunnostukseen asti. Kaupunki liittyy vahvasti Radziwiłł-sukuun, ja siitä tuli Liettuan protestanttisen uskonpuhdistuksen kulttuurikeskus. Kaupungin pohjoisosassa on alueellinen luonnonpuisto, jossa on noin 9 000 karstiaukkoa; yksi niistä, 20 metriä syvä Karvės ola eli Lehmänluola, löytyi legendan mukaan, kun lehmä katosi maan alle.
+
+### 17.2
+KYSYMYS: Miksi Biržain seudulle on syntynyt tuhansia äkillisiä romahdusaukkoja maahan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biržai (historia)
+Tietoruudun teksti: Biržai on pohjoisliettualainen kaupunki, joka tunnetaan uudelleenrakennetusta linnakartanostaan ja monista perinteisiä reseptejä noudattavista panimoista. Linnan rakentaminen alkoi vuonna 1586, ja sitä varten Agluona- ja Apaščia-jokien yhtymäkohtaan oli padottu jo 1575 Širvėna-järvi, Liettuan vanhin säilynyt tekojärvi. Linna oli tärkeä puolustuspaikka Ruotsin sotien aikana, tuhoutui useaan kertaan ja jäi raunioiksi vuodesta 1704 aina 1990-luvun kunnostukseen asti. Kaupunki liittyy vahvasti Radziwiłł-sukuun, ja siitä tuli Liettuan protestanttisen uskonpuhdistuksen kulttuurikeskus. Kaupungin pohjoisosassa on alueellinen luonnonpuisto, jossa on noin 9 000 karstiaukkoa; yksi niistä, 20 metriä syvä Karvės ola eli Lehmänluola, löytyi legendan mukaan, kun lehmä katosi maan alle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Denver — kaupunkilehti / Vuoret ja ohut ilma: Ohut ilma, kolmetuhatta tuntia aurinkoa] Denverin ilmasto on viileä puolikuiva: kosteus on yleisesti matala ja aurinkoa on noin 3 100 tuntia vuodessa. Korkeuden ja kuivuuden takia vuorokauden lämpötilavaihtelu on suuri läpi vuoden, ja sisämaan sijainti ylätasangolla tuo äkillisiä säänmuutoksia. Kaupungin virallinen sääasema on lentokentällä noin kolmenkymmenen kilometrin päässä keskustasta, ja siitä kiistellään: vuoden 2019 vertailussa lentokentän keskilämpötila oli 10,1 astetta ja keskustan 11,7 astetta.
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:hahmotelma-telsiai) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Telšiai (kulttuuri)
+Tietoruudun teksti: Telšiai on Žemaitian alueen pääkaupunki, ja se on rakennettu seitsemän kukkulan päälle Mastis-järven rannalle. Kaupunki on saanut nimensä järveen laskevalta Telšė-purolta, ja nimi liittyy veteen. Ensimmäiset maininnat ovat vuodelta 1398, ja legendan mukaan kaupungin perusti ritari Džiugas. Vuoteen 1795 asti alue kuului Žemaitian ruhtinaskuntana Liettuan suuriruhtinaskuntaan, ja vuonna 1873 Telšiai siirrettiin Kovnon kuvernementtiin. Alka-museossa on yli 62 000 esinettä, ja ulkoilmamuseossa on kuusitoista aitoa 1800-luvun žemaitialaista talonpoikaistilan rakennusta. Karhu on Žemaitian vanha tunnuseläin, ja kaupungissa on 47 karhuveistosta.
+
+### 18.1
+KYSYMYS: Mistä sanasta Telšiain nimi johtuu, ja mitä se kertoo kaupungin sijainnista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Telšiai (kulttuuri)
+Tietoruudun teksti: Telšiai on Žemaitian alueen pääkaupunki, ja se on rakennettu seitsemän kukkulan päälle Mastis-järven rannalle. Kaupunki on saanut nimensä järveen laskevalta Telšė-purolta, ja nimi liittyy veteen. Ensimmäiset maininnat ovat vuodelta 1398, ja legendan mukaan kaupungin perusti ritari Džiugas. Vuoteen 1795 asti alue kuului Žemaitian ruhtinaskuntana Liettuan suuriruhtinaskuntaan, ja vuonna 1873 Telšiai siirrettiin Kovnon kuvernementtiin. Alka-museossa on yli 62 000 esinettä, ja ulkoilmamuseossa on kuusitoista aitoa 1800-luvun žemaitialaista talonpoikaistilan rakennusta. Karhu on Žemaitian vanha tunnuseläin, ja kaupungissa on 47 karhuveistosta.
+
+### 18.2
+KYSYMYS: Miksi karhusta tuli Žemaitian tunnussymboli, ja millaisia karhuja Telšiaista löytyy?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Telšiai (kulttuuri)
+Tietoruudun teksti: Telšiai on Žemaitian alueen pääkaupunki, ja se on rakennettu seitsemän kukkulan päälle Mastis-järven rannalle. Kaupunki on saanut nimensä järveen laskevalta Telšė-purolta, ja nimi liittyy veteen. Ensimmäiset maininnat ovat vuodelta 1398, ja legendan mukaan kaupungin perusti ritari Džiugas. Vuoteen 1795 asti alue kuului Žemaitian ruhtinaskuntana Liettuan suuriruhtinaskuntaan, ja vuonna 1873 Telšiai siirrettiin Kovnon kuvernementtiin. Alka-museossa on yli 62 000 esinettä, ja ulkoilmamuseossa on kuusitoista aitoa 1800-luvun žemaitialaista talonpoikaistilan rakennusta. Karhu on Žemaitian vanha tunnuseläin, ja kaupungissa on 47 karhuveistosta.
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:hahmotelma-plunge) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plungė (historia)
+Tietoruudun teksti: Plungė on Länsi-Liettuan kaupunki Žemaitian alueella, ja Babrungas-joki jakaa sen kahteen osaan. Kaupunki mainitaan kaupunkina ensimmäisen kerran vuonna 1567, ja Magdeburgin oikeudet se sai vuonna 1792. Vuosina 1806–1873 Plungė oli Platon Zubovin omistuksessa, minkä jälkeen se siirtyi Ogińskien suvulle, joka rakennutti kaupunkiin palatsin vuonna 1879. Kartanon puistossa toimii Žemaitian taidemuseo, ja siellä kasvaa luonnonmuistomerkiksi suojeltu Perkūnas-tammi. Kaupungin Lourdesin luolan jäljitelmä tehtiin vuonna 1905, ja se houkuttelee yhä kävijöitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Velho — kaupunkilehti / Perkeleen rautatie] Rio Madeiran koskien ohitse yritettiin vuosikymmeniä rakentaa rautatietä, joka vaati tuhansia ihmishenkiä ja sai liikanimen Perkeleen rata. Sen rippeet ja veturit lepäävät yhä Porto Velhon museossa ja sademetsän vallassa.
+- [Kanton — kohdekartta / Kohdekartta: Shamianin saari] konsessio 1859–1943 Shamian tarkoittaa hiekkapintaa. Särkkä oli ollut kaupungin ulkomaankaupan satama-aluetta Song-kaudelta Qing-kaudelle asti. Vuonna 1859 Britannia ja Ranska kaivoivat sen pohjoispuolelle keinotekoisen kanavan, ja särkästä tuli saari: 0,3 neliökilometriä, yhdeksänsataa metriä idästä länteen ja kolmesataa metriä pohjoisesta etelään. Alue jaettiin kahtia niin, että kolme viidesosaa kuului briteille ja kaksi viidesosaa ranskalaisille. Mantereelle pääsi kahta siltaa pitkin, ja ne suljettiin joka ilta kello kymmeneltä. Pohjoista kaarisiltaa, joka valmistui 1861 ja jota kutsuttiin Englannin sillaksi, vartioivat sikhipoliisit; itäistä ranskalaista siltaa vartioivat vietnamilaiset…
+
+### 19.1
+KYSYMYS: Mikä Perkūnas oli, ja miksi puistossa kasvava tammi on saanut hänen nimensä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plungė (historia)
+Tietoruudun teksti: Plungė on Länsi-Liettuan kaupunki Žemaitian alueella, ja Babrungas-joki jakaa sen kahteen osaan. Kaupunki mainitaan kaupunkina ensimmäisen kerran vuonna 1567, ja Magdeburgin oikeudet se sai vuonna 1792. Vuosina 1806–1873 Plungė oli Platon Zubovin omistuksessa, minkä jälkeen se siirtyi Ogińskien suvulle, joka rakennutti kaupunkiin palatsin vuonna 1879. Kartanon puistossa toimii Žemaitian taidemuseo, ja siellä kasvaa luonnonmuistomerkiksi suojeltu Perkūnas-tammi. Kaupungin Lourdesin luolan jäljitelmä tehtiin vuonna 1905, ja se houkuttelee yhä kävijöitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Velho — kaupunkilehti / Perkeleen rautatie] Rio Madeiran koskien ohitse yritettiin vuosikymmeniä rakentaa rautatietä, joka vaati tuhansia ihmishenkiä ja sai liikanimen Perkeleen rata. Sen rippeet ja veturit lepäävät yhä Porto Velhon museossa ja sademetsän vallassa.
+
+### 19.2
+KYSYMYS: Miksi Liettuan pikkukaupunkiin rakennettiin 1900-luvun alussa Lourdesin luolan jäljitelmä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plungė (historia)
+Tietoruudun teksti: Plungė on Länsi-Liettuan kaupunki Žemaitian alueella, ja Babrungas-joki jakaa sen kahteen osaan. Kaupunki mainitaan kaupunkina ensimmäisen kerran vuonna 1567, ja Magdeburgin oikeudet se sai vuonna 1792. Vuosina 1806–1873 Plungė oli Platon Zubovin omistuksessa, minkä jälkeen se siirtyi Ogińskien suvulle, joka rakennutti kaupunkiin palatsin vuonna 1879. Kartanon puistossa toimii Žemaitian taidemuseo, ja siellä kasvaa luonnonmuistomerkiksi suojeltu Perkūnas-tammi. Kaupungin Lourdesin luolan jäljitelmä tehtiin vuonna 1905, ja se houkuttelee yhä kävijöitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kanton — kohdekartta / Kohdekartta: Shamianin saari] konsessio 1859–1943 Shamian tarkoittaa hiekkapintaa. Särkkä oli ollut kaupungin ulkomaankaupan satama-aluetta Song-kaudelta Qing-kaudelle asti. Vuonna 1859 Britannia ja Ranska kaivoivat sen pohjoispuolelle keinotekoisen kanavan, ja särkästä tuli saari: 0,3 neliökilometriä, yhdeksänsataa metriä idästä länteen ja kolmesataa metriä pohjoisesta etelään. Alue jaettiin kahtia niin, että kolme viidesosaa kuului briteille ja kaksi viidesosaa ranskalaisille. Mantereelle pääsi kahta siltaa pitkin, ja ne suljettiin joka ilta kello kymmeneltä. Pohjoista kaarisiltaa, joka valmistui 1861 ja jota kutsuttiin Englannin sillaksi, vartioivat sikhipoliisit; itäistä ranskalaista siltaa vartioivat vietnamilaiset…
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:hahmotelma-zagare) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žagarė (kulttuuri)
+Tietoruudun teksti: Žagarė on pieni kaupunki Pohjois-Liettuassa lähellä Latvian rajaa. Semgallilaisten asutus Sagera mainitaan ensimmäisen kerran maaliskuussa 1254, ja 1200-luvulla paikalla oli semgallilaisten linnoitus. Kaupunki muodostui kahdesta pikkukaupungista, Vanhasta ja Uudesta Žagarėsta, joita Švėtė-joki jakaa; Uuden Žagarėn kivikirkko rakennettiin vuonna 1633 paikallisesta dolomiitista. Dmitri Naryškin osti pikkukaupungit vuonna 1857, ja kartanon uusklassinen palatsi on 1860-luvulta. Vuonna 1914 Žagarėssa asui 14 000 ihmistä ja se oli Liettuan seitsemänneksi suurin kaupunki, mutta nykyään asukkaita on noin 2 000. Kaupunki tunnetaan Žagarvyšnė-kirsikkalajikkeesta, ja kirsikkajuhlaa vietetään vuosittain vuodesta 2005.
+
+### 20.1
+KYSYMYS: Miksi Žagarė oli vielä 1900-luvun alussa Liettuan suurimpia kaupunkeja mutta on nykyään pieni?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žagarė (kulttuuri)
+Tietoruudun teksti: Žagarė on pieni kaupunki Pohjois-Liettuassa lähellä Latvian rajaa. Semgallilaisten asutus Sagera mainitaan ensimmäisen kerran maaliskuussa 1254, ja 1200-luvulla paikalla oli semgallilaisten linnoitus. Kaupunki muodostui kahdesta pikkukaupungista, Vanhasta ja Uudesta Žagarėsta, joita Švėtė-joki jakaa; Uuden Žagarėn kivikirkko rakennettiin vuonna 1633 paikallisesta dolomiitista. Dmitri Naryškin osti pikkukaupungit vuonna 1857, ja kartanon uusklassinen palatsi on 1860-luvulta. Vuonna 1914 Žagarėssa asui 14 000 ihmistä ja se oli Liettuan seitsemänneksi suurin kaupunki, mutta nykyään asukkaita on noin 2 000. Kaupunki tunnetaan Žagarvyšnė-kirsikkalajikkeesta, ja kirsikkajuhlaa vietetään vuosittain vuodesta 2005.
+
+### 20.2
+KYSYMYS: Mikä on Žagarvyšnė, ja miksi kaupungissa vietetään kirsikkajuhlaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žagarė (kulttuuri)
+Tietoruudun teksti: Žagarė on pieni kaupunki Pohjois-Liettuassa lähellä Latvian rajaa. Semgallilaisten asutus Sagera mainitaan ensimmäisen kerran maaliskuussa 1254, ja 1200-luvulla paikalla oli semgallilaisten linnoitus. Kaupunki muodostui kahdesta pikkukaupungista, Vanhasta ja Uudesta Žagarėsta, joita Švėtė-joki jakaa; Uuden Žagarėn kivikirkko rakennettiin vuonna 1633 paikallisesta dolomiitista. Dmitri Naryškin osti pikkukaupungit vuonna 1857, ja kartanon uusklassinen palatsi on 1860-luvulta. Vuonna 1914 Žagarėssa asui 14 000 ihmistä ja se oli Liettuan seitsemänneksi suurin kaupunki, mutta nykyään asukkaita on noin 2 000. Kaupunki tunnetaan Žagarvyšnė-kirsikkalajikkeesta, ja kirsikkajuhlaa vietetään vuosittain vuodesta 2005.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

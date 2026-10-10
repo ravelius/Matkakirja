@@ -1,0 +1,241 @@
+================ KOHTA 1 (kohde:aukstojas) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aukštojas (luonto · vuori)
+Tietoruudun teksti: Aukštojas on Liettuan korkein kohta. Se on Medininkain ylängöllä noin 24 kilometriä Vilnasta kaakkoon. Korkeus mitattiin vuonna 2004 Vilnan Gediminas-teknillisen yliopiston geodesian laitoksella GPS:n avulla, ja tulos oli 293,84 metriä — sitä ennen maan korkeimpana pidettiin viidensadan metrin päässä olevaa Juozapinėä, 292,7 metriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uruguay — maalehti / Luonto: Vuori, joka vaihtui kesken kaiken] 1973 — Uruguayn korkein kohta on Cerro Catedral, 513,66 metriä. Se on kukkula Maldonadon departementissa Sierra Carapén ketjussa, joka kuuluu maan halki kulkevaan Cuchilla Grandeen. Nimi tulee huipun kalliomuodoista, jotka muistuttavat kirkon torneja. Vielä vuonna 1973 maan korkeimpana pidettiin Cerro de las Ánimasia, jonka korkeus on 501 metriä — kunnes sotilaallisen karttalaitoksen tutkijat mittasivat Cerro Catedralin uudelleen ja huippu vaihtui. Molemmat jäävät alle Suomen Halticin.
+
+### 1.1
+KYSYMYS: Miksi maan korkein kohta vaihtui vasta 2004?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aukštojas (luonto · vuori)
+Tietoruudun teksti: Aukštojas on Liettuan korkein kohta. Se on Medininkain ylängöllä noin 24 kilometriä Vilnasta kaakkoon. Korkeus mitattiin vuonna 2004 Vilnan Gediminas-teknillisen yliopiston geodesian laitoksella GPS:n avulla, ja tulos oli 293,84 metriä — sitä ennen maan korkeimpana pidettiin viidensadan metrin päässä olevaa Juozapinėä, 292,7 metriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uruguay — maalehti / Luonto: Vuori, joka vaihtui kesken kaiken] 1973 — Uruguayn korkein kohta on Cerro Catedral, 513,66 metriä. Se on kukkula Maldonadon departementissa Sierra Carapén ketjussa, joka kuuluu maan halki kulkevaan Cuchilla Grandeen. Nimi tulee huipun kalliomuodoista, jotka muistuttavat kirkon torneja. Vielä vuonna 1973 maan korkeimpana pidettiin Cerro de las Ánimasia, jonka korkeus on 501 metriä — kunnes sotilaallisen karttalaitoksen tutkijat mittasivat Cerro Catedralin uudelleen ja huippu vaihtui. Molemmat jäävät alle Suomen Halticin.
+
+### 1.2
+KYSYMYS: Mikä Medininkain ylänkö on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aukštojas (luonto · vuori)
+Tietoruudun teksti: Aukštojas on Liettuan korkein kohta. Se on Medininkain ylängöllä noin 24 kilometriä Vilnasta kaakkoon. Korkeus mitattiin vuonna 2004 Vilnan Gediminas-teknillisen yliopiston geodesian laitoksella GPS:n avulla, ja tulos oli 293,84 metriä — sitä ennen maan korkeimpana pidettiin viidensadan metrin päässä olevaa Juozapinėä, 292,7 metriä.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:itameri~4) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Liettuan lyhyt rannikko on meripihkarantaa: meren etelärannan meripihkaesiintymät mainittiin kirjoissa jo 1100-luvulla. Klaipėdan telakat pitävät kaupungin yhä kiinni meren omassa elinkeinossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Luonto: Dyyni vaeltaa ja hautaa kylän] 2000 — Kuurinkynnäs on lähes sadan kilometrin pituinen hiekkaniemi, joka erottaa matalan lahden merestä. Kapeimmillaan se on vain muutaman sadan metrin levyinen. Kun niemen metsät hakattiin 1600- ja 1700-luvuilla, tuuli pääsi liikuttamaan hiekkaa: dyynit alkoivat vaeltaa ja hautasivat alleen kokonaisia kyliä. Vaellus pysäytettiin istuttamalla mäntyä ja rantakauraa sata vuotta kestäneellä työllä. Unesco otti niemen maailmanperintöluetteloon vuonna 2000.
+- [Tukholma — kaupunkilehti / Tukholma: Laiva, joka upposi ja nousi] Kuninkaan ylpeys, sotalaiva Vasa, lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628 — ja kaatui ensimmäiseen kunnon tuulenpuuskaan ehdittyään noin kilometrin. Laiva oli rakennettu liian kapeaksi ja korkeaksi, ja vesi ryntäsi sisään avoimista tykkiporteista. Vasa makasi sataman pohjamudassa 333 vuotta, kunnes se nostettiin 1961 lähes ehjänä: Itämeren vähäsuolainen vesi oli pitänyt laivamadot loitolla. Nykyään alus seisoo omassa museossaan yhä valtaosin alkuperäisenä puuna, ja Vasa-museo on koko Pohjolan suosituimpia museoita.
+- [Ruotsi — maalehti / Historia: Laiva, joka kaatui tuhannen metrin jälkeen] 1628 — Sotalaiva Vasa lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628. Se ehti purjehtia noin tuhat kolmesataa metriä, kun tuulenpuuska kallisti sen niin, että vesi syöksyi sisään avoimista tykkiluukuista. Kuningas oli vaatinut kaksi tykkikantta, eikä kapea runko kantanut niiden painoa. Itämeren vähäsuolaisessa vedessä ei elä laivamato, joka syö puun muissa merissä — siksi laiva säilyi mudassa. Vasa nostettiin 1961, ja siitä on alkuperäistä puuta yli 95 prosenttia.
+
+### 2.1
+KYSYMYS: Mikä Kuurinkynnäs on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Liettuan lyhyt rannikko on meripihkarantaa: meren etelärannan meripihkaesiintymät mainittiin kirjoissa jo 1100-luvulla. Klaipėdan telakat pitävät kaupungin yhä kiinni meren omassa elinkeinossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Luonto: Dyyni vaeltaa ja hautaa kylän] 2000 — Kuurinkynnäs on lähes sadan kilometrin pituinen hiekkaniemi, joka erottaa matalan lahden merestä. Kapeimmillaan se on vain muutaman sadan metrin levyinen. Kun niemen metsät hakattiin 1600- ja 1700-luvuilla, tuuli pääsi liikuttamaan hiekkaa: dyynit alkoivat vaeltaa ja hautasivat alleen kokonaisia kyliä. Vaellus pysäytettiin istuttamalla mäntyä ja rantakauraa sata vuotta kestäneellä työllä. Unesco otti niemen maailmanperintöluetteloon vuonna 2000.
+
+### 2.2
+KYSYMYS: Miksi Itämeren vesi on murtovettä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Liettuan lyhyt rannikko on meripihkarantaa: meren etelärannan meripihkaesiintymät mainittiin kirjoissa jo 1100-luvulla. Klaipėdan telakat pitävät kaupungin yhä kiinni meren omassa elinkeinossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kaupunkilehti / Tukholma: Laiva, joka upposi ja nousi] Kuninkaan ylpeys, sotalaiva Vasa, lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628 — ja kaatui ensimmäiseen kunnon tuulenpuuskaan ehdittyään noin kilometrin. Laiva oli rakennettu liian kapeaksi ja korkeaksi, ja vesi ryntäsi sisään avoimista tykkiporteista. Vasa makasi sataman pohjamudassa 333 vuotta, kunnes se nostettiin 1961 lähes ehjänä: Itämeren vähäsuolainen vesi oli pitänyt laivamadot loitolla. Nykyään alus seisoo omassa museossaan yhä valtaosin alkuperäisenä puuna, ja Vasa-museo on koko Pohjolan suosituimpia museoita.
+- [Ruotsi — maalehti / Historia: Laiva, joka kaatui tuhannen metrin jälkeen] 1628 — Sotalaiva Vasa lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628. Se ehti purjehtia noin tuhat kolmesataa metriä, kun tuulenpuuska kallisti sen niin, että vesi syöksyi sisään avoimista tykkiluukuista. Kuningas oli vaatinut kaksi tykkikantta, eikä kapea runko kantanut niiden painoa. Itämeren vähäsuolaisessa vedessä ei elä laivamato, joka syö puun muissa merissä — siksi laiva säilyi mudassa. Vasa nostettiin 1961, ja siitä on alkuperäistä puuta yli 95 prosenttia.
+- [Salomonsaaret — maalehti / Luonto: Atolli, joka nousi merestä] 1998 — Rennell on maailman suurin kohonnut koralliatolli: 86 kilometriä pitkä, 15 leveä ja 37 000 hehtaaria. Saaren eteläpäässä on Tegano-järvi, joka oli aikoinaan atollin laguuni; se on yhä merenpinnan tasolla, vesi on murtovettä ja järveä reunustavat kalliot ja pienet kalkkikivisaaret. Itä-Rennell otettiin maailmanperintöön 1998, ja hoitosuunnitelma kirjoitettiin yhdessä asukkaiden kanssa: neljä kylää ja noin 800 ihmistä jatkavat elämäänsä alueella tapaoikeuden mukaisella maallaan. Saarella on tavattu 50 lintulajia, joista 21 on kotoperäisiä, ja Tegano-järvessä elää oma merikäärmelaji.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:nemunas) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nemunas (luonto · joki)
+Tietoruudun teksti: Nemunas — valkovenäjäksi Nioman, puolaksi Niemen, saksaksi Memel — nousee Keski-Valko-Venäjältä ja virtaa Liettuan halki. Sen eteläinen haara muodostaa Venäjän Kaliningradin alueen pohjoisrajan, ja lopulta joki laskee Kuurinlahteen, joka on kapean salmen kautta yhteydessä Itämereen. Sen 937 kilometriä tekevät siitä yhden Itä-Euroopan suurista joista: se virtaa länteen Grodnoon, pohjoiseen Kaunasiin ja siitä taas länteen merelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Historia: Kolme päivää jäisellä joella] 26.-29.11.1812 — Napoleonin Grande Armée pakeni Moskovasta lokakuussa 1812 ja saapui marraskuun lopulla riutuneena Berezina-joelle lähelle Barysaŭia. Venäläisjoukot uhkasivat sulkea ansan joka suunnalta. Kenraali Éblén insinöörit, monet heistä hollantilaisia ponttoonisiltureita, seisoivat jääkylmässä vedessä vyötäisiä myöten ja rakensivat kaksi puusiltaa. Noin 60 000 sotilasta ehti ylittää 26.-29. marraskuuta, ennen kuin sillat poltettiin ja lähes 10 000 ihmistä jäi itärannalle vihollisen armoille. Tapahtumasta tuli ranskan kieleen sana "Bérézina", joka tarkoittaa täydellistä katastrofia.
+- [Iso-Britannia — maalehti / Luonto: Markkinat jäätyneellä joella] 1814 — Ennen Thames jäätyi. Vuosien 1400 ja 1831 välillä joki jähmettyi Lontoon kohdalla 24 talvena, ja jäälle nousi telttakylä: keilapelejä, veneenmuotoisia keinuja ja painokoneita, jotka myivät muistoksi jäällä painettuja säkeitä. Viimeiset markkinat alkoivat 1. helmikuuta 1814 ja kestivät neljä päivää, ja norsu talutettiin joen yli Blackfriarsin sillan alapuolelta. Sitten purettiin vanha Lontoon silta, jonka yhdeksäntoista pilaria olivat padonneet virran hitaaksi. Nyt joki juoksee liian nopeasti jäätyäkseen.
+
+### 3.1
+KYSYMYS: Miksi joella on niin monta nimeä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nemunas (luonto · joki)
+Tietoruudun teksti: Nemunas — valkovenäjäksi Nioman, puolaksi Niemen, saksaksi Memel — nousee Keski-Valko-Venäjältä ja virtaa Liettuan halki. Sen eteläinen haara muodostaa Venäjän Kaliningradin alueen pohjoisrajan, ja lopulta joki laskee Kuurinlahteen, joka on kapean salmen kautta yhteydessä Itämereen. Sen 937 kilometriä tekevät siitä yhden Itä-Euroopan suurista joista: se virtaa länteen Grodnoon, pohjoiseen Kaunasiin ja siitä taas länteen merelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Historia: Kolme päivää jäisellä joella] 26.-29.11.1812 — Napoleonin Grande Armée pakeni Moskovasta lokakuussa 1812 ja saapui marraskuun lopulla riutuneena Berezina-joelle lähelle Barysaŭia. Venäläisjoukot uhkasivat sulkea ansan joka suunnalta. Kenraali Éblén insinöörit, monet heistä hollantilaisia ponttoonisiltureita, seisoivat jääkylmässä vedessä vyötäisiä myöten ja rakensivat kaksi puusiltaa. Noin 60 000 sotilasta ehti ylittää 26.-29. marraskuuta, ennen kuin sillat poltettiin ja lähes 10 000 ihmistä jäi itärannalle vihollisen armoille. Tapahtumasta tuli ranskan kieleen sana "Bérézina", joka tarkoittaa täydellistä katastrofia.
+- [Iso-Britannia — maalehti / Luonto: Markkinat jäätyneellä joella] 1814 — Ennen Thames jäätyi. Vuosien 1400 ja 1831 välillä joki jähmettyi Lontoon kohdalla 24 talvena, ja jäälle nousi telttakylä: keilapelejä, veneenmuotoisia keinuja ja painokoneita, jotka myivät muistoksi jäällä painettuja säkeitä. Viimeiset markkinat alkoivat 1. helmikuuta 1814 ja kestivät neljä päivää, ja norsu talutettiin joen yli Blackfriarsin sillan alapuolelta. Sitten purettiin vanha Lontoon silta, jonka yhdeksäntoista pilaria olivat padonneet virran hitaaksi. Nyt joki juoksee liian nopeasti jäätyäkseen.
+
+### 3.2
+KYSYMYS: Mikä Kuurinlahti on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nemunas (luonto · joki)
+Tietoruudun teksti: Nemunas — valkovenäjäksi Nioman, puolaksi Niemen, saksaksi Memel — nousee Keski-Valko-Venäjältä ja virtaa Liettuan halki. Sen eteläinen haara muodostaa Venäjän Kaliningradin alueen pohjoisrajan, ja lopulta joki laskee Kuurinlahteen, joka on kapean salmen kautta yhteydessä Itämereen. Sen 937 kilometriä tekevät siitä yhden Itä-Euroopan suurista joista: se virtaa länteen Grodnoon, pohjoiseen Kaunasiin ja siitä taas länteen merelle.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:trakain-saarilinna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trakain saarilinna (historia)
+Tietoruudun teksti: Trakain saarilinna seisoo Galvė-järven saarella Trakaissa. Kivilinnan rakentaminen alkoi 1300-luvulla suuriruhtinas Kęstutisin käskystä, ja päätyöt saattoi valmiiksi noin 1409 hänen poikansa Vytautas Suuri, joka myös kuoli linnassa vuonna 1430. Trakai oli Liettuan suuriruhtinaskunnan tärkeimpiä keskuksia, ja linnalla oli suuri strateginen merkitys.
+
+Ensimmäisessä rakennusvaiheessa 1300-luvun jälkipuoliskolla linna nousi kolmesta järven saaresta suurimmalle. Kęstutis siirsi sinne pääasuinpaikkansa ja aarteistonsa. Saksalainen ritarikunta vaurioitti linnaa pahoin hyökkäyksessään vuonna 1377.
+
+Toisessa vaiheessa lisättiin kaksi siipeä ja eteläpuolelle kuusikerroksinen, 35 metriä korkea päätorni. Tornissa oli nostoportit, jotka erottivat palatsin muusta linnasta, sekä kappeli ja asuintiloja. Se yhdistettiin monikerroksiseen ruhtinaspalatsiin, jonka sisäpihaa kiersivät puiset parvekekäytävät…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Valtakunta ulottui mereltä merelle] 1430 — Liettuan suuriruhtinaskunta oli 1400-luvun alussa Euroopan suurin valtio. Suuriruhtinas Vytautas Suuri hallitsi aluetta, joka ulottui Itämereltä lähelle Mustaamerta ja kattoi nykyisen Valko-Venäjän, suuren osan Ukrainaa sekä palasia Puolaa, Latviaa ja Venäjää. Vuonna 1386 suuriruhtinas Jogaila meni naimisiin Puolan kuningattaren kanssa ja otti kasteen, ja maat liittyivät henkilöunioniin, joka näkyy tässä kartassa vierekkäisinä valtakuntina. Liettuasta tuli näin viimeinen pakanallinen valtio, joka kääntyi kristinuskoon Euroopassa.
+- [Luxemburg — maalehti / Rakennukset: Linna, jonka katto myytiin pala palalta] 1820–1990 — Kuningas Vilhelm I myi Viandenin linnan 1820 neuvosmies Wenzel Costerille 3 200 floriinilla. Coster alkoi purkaa linnaa: katon tiilet, seinäpaneelit, ovet ja ikkunat myytiin kappale kerrallaan, ja jäljelle jäi rauniot. Kansalaisten suuttumus oli niin suuri, että kuningas osti raunion takaisin 1827 hintaan 1 100 floriinia. Kunnostus eteni hitaasti: suurherttua Jean luovutti linnan valtiolle 1977, ja työt valmistuivat 1990. Linna seisoo kalliolla noin sata metriä Our-joen yläpuolella.
+
+### 4.1
+KYSYMYS: Kuka kuoli linnassa vuonna 1430?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trakain saarilinna (historia)
+Tietoruudun teksti: Trakain saarilinna seisoo Galvė-järven saarella Trakaissa. Kivilinnan rakentaminen alkoi 1300-luvulla suuriruhtinas Kęstutisin käskystä, ja päätyöt saattoi valmiiksi noin 1409 hänen poikansa Vytautas Suuri, joka myös kuoli linnassa vuonna 1430. Trakai oli Liettuan suuriruhtinaskunnan tärkeimpiä keskuksia, ja linnalla oli suuri strateginen merkitys.
+
+Ensimmäisessä rakennusvaiheessa 1300-luvun jälkipuoliskolla linna nousi kolmesta järven saaresta suurimmalle. Kęstutis siirsi sinne pääasuinpaikkansa ja aarteistonsa. Saksalainen ritarikunta vaurioitti linnaa pahoin hyökkäyksessään vuonna 1377.
+
+Toisessa vaiheessa lisättiin kaksi siipeä ja eteläpuolelle kuusikerroksinen, 35 metriä korkea päätorni. Tornissa oli nostoportit, jotka erottivat palatsin muusta linnasta, sekä kappeli ja asuintiloja. Se yhdistettiin monikerroksiseen ruhtinaspalatsiin, jonka sisäpihaa kiersivät puiset parvekekäytävät…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Valtakunta ulottui mereltä merelle] 1430 — Liettuan suuriruhtinaskunta oli 1400-luvun alussa Euroopan suurin valtio. Suuriruhtinas Vytautas Suuri hallitsi aluetta, joka ulottui Itämereltä lähelle Mustaamerta ja kattoi nykyisen Valko-Venäjän, suuren osan Ukrainaa sekä palasia Puolaa, Latviaa ja Venäjää. Vuonna 1386 suuriruhtinas Jogaila meni naimisiin Puolan kuningattaren kanssa ja otti kasteen, ja maat liittyivät henkilöunioniin, joka näkyy tässä kartassa vierekkäisinä valtakuntina. Liettuasta tuli näin viimeinen pakanallinen valtio, joka kääntyi kristinuskoon Euroopassa.
+
+### 4.2
+KYSYMYS: Miksi linnan kunnostus oli vaikeaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trakain saarilinna (historia)
+Tietoruudun teksti: Trakain saarilinna seisoo Galvė-järven saarella Trakaissa. Kivilinnan rakentaminen alkoi 1300-luvulla suuriruhtinas Kęstutisin käskystä, ja päätyöt saattoi valmiiksi noin 1409 hänen poikansa Vytautas Suuri, joka myös kuoli linnassa vuonna 1430. Trakai oli Liettuan suuriruhtinaskunnan tärkeimpiä keskuksia, ja linnalla oli suuri strateginen merkitys.
+
+Ensimmäisessä rakennusvaiheessa 1300-luvun jälkipuoliskolla linna nousi kolmesta järven saaresta suurimmalle. Kęstutis siirsi sinne pääasuinpaikkansa ja aarteistonsa. Saksalainen ritarikunta vaurioitti linnaa pahoin hyökkäyksessään vuonna 1377.
+
+Toisessa vaiheessa lisättiin kaksi siipeä ja eteläpuolelle kuusikerroksinen, 35 metriä korkea päätorni. Tornissa oli nostoportit, jotka erottivat palatsin muusta linnasta, sekä kappeli ja asuintiloja. Se yhdistettiin monikerroksiseen ruhtinaspalatsiin, jonka sisäpihaa kiersivät puiset parvekekäytävät…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Rakennukset: Linna, jonka katto myytiin pala palalta] 1820–1990 — Kuningas Vilhelm I myi Viandenin linnan 1820 neuvosmies Wenzel Costerille 3 200 floriinilla. Coster alkoi purkaa linnaa: katon tiilet, seinäpaneelit, ovet ja ikkunat myytiin kappale kerrallaan, ja jäljelle jäi rauniot. Kansalaisten suuttumus oli niin suuri, että kuningas osti raunion takaisin 1827 hintaan 1 100 floriinia. Kunnostus eteni hitaasti: suurherttua Jean luovutti linnan valtiolle 1977, ja työt valmistuivat 1990. Linna seisoo kalliolla noin sata metriä Our-joen yläpuolella.
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:kernave) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kernavė (historia)
+Tietoruudun teksti: Kernavė oli Liettuan suuriruhtinaskunnan keskiaikainen pääkaupunki ja on nykyään arkeologinen kohde, jossa asuu reilut kaksisataa ihmistä. Se sijaitsee Širvintosin kunnassa Neris-joen oikealla rannalla, 35 kilometriä Vilnasta.
+
+Kaupunki oli Liettuan ensimmäinen pääkaupunki ja valtiollisuuden ja pakanallisen itsenäisyyden symboli. Se mainitaan kirjallisissa lähteissä ensi kerran vuonna 1279, kun saksalainen ritarikunta piiritti sitä suuriruhtinas Traidenisin istuimena.
+
+Vuonna 1390 ritarit polttivat kaupungin ja sen rakennukset Pajautan laaksossa, myös linnan. Sen jälkeen kaupunkia ei rakennettu uudelleen, vaan jäljelle jääneet asukkaat muuttivat laaksosta kukkulan päälle. Rauniot peittyivät myöhemmin tulvakerroksen alle, joka muuttui märäksi turpeeksi ja säilytti jäänteet lähes koskemattomina — siksi paikkaa on kutsuttu Liettuan Troijaksi.
+
+Kernavėssa on vanhin tunnettu medgrinda: salai…
+
+### 5.1
+KYSYMYS: Miksi Kernavėä sanotaan Liettuan Troijaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kernavė (historia)
+Tietoruudun teksti: Kernavė oli Liettuan suuriruhtinaskunnan keskiaikainen pääkaupunki ja on nykyään arkeologinen kohde, jossa asuu reilut kaksisataa ihmistä. Se sijaitsee Širvintosin kunnassa Neris-joen oikealla rannalla, 35 kilometriä Vilnasta.
+
+Kaupunki oli Liettuan ensimmäinen pääkaupunki ja valtiollisuuden ja pakanallisen itsenäisyyden symboli. Se mainitaan kirjallisissa lähteissä ensi kerran vuonna 1279, kun saksalainen ritarikunta piiritti sitä suuriruhtinas Traidenisin istuimena.
+
+Vuonna 1390 ritarit polttivat kaupungin ja sen rakennukset Pajautan laaksossa, myös linnan. Sen jälkeen kaupunkia ei rakennettu uudelleen, vaan jäljelle jääneet asukkaat muuttivat laaksosta kukkulan päälle. Rauniot peittyivät myöhemmin tulvakerroksen alle, joka muuttui märäksi turpeeksi ja säilytti jäänteet lähes koskemattomina — siksi paikkaa on kutsuttu Liettuan Troijaksi.
+
+Kernavėssa on vanhin tunnettu medgrinda: salai…
+
+### 5.2
+KYSYMYS: Mikä medgrinda on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kernavė (historia)
+Tietoruudun teksti: Kernavė oli Liettuan suuriruhtinaskunnan keskiaikainen pääkaupunki ja on nykyään arkeologinen kohde, jossa asuu reilut kaksisataa ihmistä. Se sijaitsee Širvintosin kunnassa Neris-joen oikealla rannalla, 35 kilometriä Vilnasta.
+
+Kaupunki oli Liettuan ensimmäinen pääkaupunki ja valtiollisuuden ja pakanallisen itsenäisyyden symboli. Se mainitaan kirjallisissa lähteissä ensi kerran vuonna 1279, kun saksalainen ritarikunta piiritti sitä suuriruhtinas Traidenisin istuimena.
+
+Vuonna 1390 ritarit polttivat kaupungin ja sen rakennukset Pajautan laaksossa, myös linnan. Sen jälkeen kaupunkia ei rakennettu uudelleen, vaan jäljelle jääneet asukkaat muuttivat laaksosta kukkulan päälle. Rauniot peittyivät myöhemmin tulvakerroksen alle, joka muuttui märäksi turpeeksi ja säilytti jäänteet lähes koskemattomina — siksi paikkaa on kutsuttu Liettuan Troijaksi.
+
+Kernavėssa on vanhin tunnettu medgrinda: salai…
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
