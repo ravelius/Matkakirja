@@ -53,7 +53,7 @@ namespace Matkakirja.Natiivi
                 var r = contentRect;
                 if (r.width < 4 || r.height < 4) return;
                 var p = mgc.painter2D;
-                p.strokeColor = resolvedStyle.borderTopColor.a > 0 ? resolvedStyle.borderTopColor : new Color(70 / 255f, 51 / 255f, 31 / 255f, 0.32f);
+                p.strokeColor = resolvedStyle.borderTopColor.a > 0 ? resolvedStyle.borderTopColor : (Color)Tyylikirja.Kehys.MapInk32;
                 p.lineWidth = 1f;
                 p.lineCap = LineCap.Butt;
                 // --sketch-radius-alt: kulmat eri säteillä (vasen ylä, oikea ylä, oikea ala, vasen ala).
