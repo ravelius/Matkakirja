@@ -12124,3 +12124,27 @@ ND v3c (LS2 8a85f5207, parvis korjattu) on omistajan aamun kortin versio: peliku
 ## PULU 13 MAATA ÄMPÄRISSÄ (PT 10.10.2026 klo 04.2x) (10.10.2026 klo 04.25)
 
 HRV, FIN ja PRT ovat ämpärissä Sisältökirjurin korjausten ja pistokokeiden jälkeen (PRT 343358425 viety 03.58; maat.json 13 maata) → Pelikoodari lisää ne kultaisiin vertailuihin yhdellä ajolla (testihaara, juna 175). CZE valmistui pilvessä (eba78153c) → Sisältökirjuri. POL käynnistettiin 04.23 sovelluksesta (tee-pulu-ohje.sh + GUI); BGR ja DNK ovat vaiheessa 2. Seuraavat EST ja HUN.
+
+## ÄÄNIPORTTI JA POIKKEUKSET (Pelikoodari ja PT 10.10.2026 klo 04.5x–05.0x) (10.10.2026 klo 06.53)
+
+Pelikoodarin aaniportti.py (true peak ≤ 0 dBTP, tavoite −1 PCM:nä; lyhyiden kertaäänten kovuus lyhyen aikavälin mittarilla) ajettiin 90 pakettiin: pelissä hylättiin neljä. tyrma-vesipoika-1 korjattiin masterista (repliikit-lapi-v2, −2,3 dBTP), Pariisin nopea Lyria v1/v2 jää pysyvälle poikkeuslistalle omistajan 9.10. linjan mukaan (ei declip- eikä tasokorjauksia, ei PCM-masteria), ja metsasade on määräaikainen poikkeus, kunnes v3 tehdään Freesound-originaalista omistajan OAuthin jälkeen. Puheputket (10 kpl) saivat limitterin 0,79 (mp3 ≤ −1,7 dBTP). Portti pakolliseksi vie-paketti.sh:iin (Julkaisija), linja Raamattuun.
+
+## JUNA 174 LUKITTU KAHDESTI, TF 173 JA 174 OMISTAJAN KYLLÄLLÄ (Natiiviseppä, Siirtoseppä, NUI ja PT 10.10.2026 klo 04.5x–06.5x) (10.10.2026 klo 06.53)
+
+Muistiajo 174 iPadilla läpi (A v6h3 0,68 Gt, B 0,75 Gt, A v6hk3 0,75 Gt, ei jetsameja), lukitus 05.03. v46q:n 0° päivä ja hämärä OK 05.18: vika oli kuvan ajoitus, ei data. Löydös: esittely lataa tuotannon uusin.json:n, joten arkkien nimeen tulee ladatun paketin hash, ja 175:n esittely sidotaan kiinnitettyyn hashiin. NUI löysi junasta 173 regression (kirjainvali.py oli ajettu toiseen kertaan, NOSTOT-rivin harvennus 6,98 → 43,62) → 174 lukittiin uudelleen 06.14 (BUILD 174 c47bded2c, juna/b13 3ca7ab1ba, vain USS, muistiajo pätee), ja työkalu ohittaa jatkossa merkityt rivit (175). Omistaja vastasi aamun korttiin 06.5x "Kyllä, molemmat": TF 173 (iPad-kaatumisen korjaus) heti ja 174 perään.
+
+## NOTRE-DAME V3 JA KUNINKAANLINNA V6J PELIIN (omistaja 10.10.2026 klo 06.5x) (10.10.2026 klo 06.53)
+
+Kortti pelikuvilla (nyt | uusi | valokuva): Notre-Dame "Kyllä", Kuninkaanlinna "Vaihda" (lohenpunainen rappaus ja vaaleat hiekkakiviosat kuten valokuvissa). LS2 kokosi paketin v6k4 (omat-mallit-vienti-20261010i = v6k3 + ND v3d, jossa aukion sävy 168/160/150 sovitettu ympäristöön; portti 0; LOD0 GPU Pariisi 21,0 → 28,5 Mt, Tukholma 27,3 → 33,6 Mt). Julkaisija vei sen, ja uusin-4 vaihdetaan Natiivisepän iPad-A-ajon jälkeen (uusin-2/3 ennallaan, VANHOJA APPEJA EI RIKOTA). Hyväksytyt kuvat: _valmiit/hyvaksytyt-mallit/nd-v3-kl-v6j-20261010/.
+
+## KEHITYSKAUPUNKIEN DATA JA UUDET OMAT MALLIT (Karttaseppä, LS1, LS2, Pelikoodari, LR ja PT 10.10.2026 klo 04.3x–06.3x) (10.10.2026 klo 06.53)
+
+Karttaseppä: ikkunavalot OSM-rakennuksista (Pariisi 179 000, Tukholma 46 000; Black Marblen tilalle, LS1 ikkunavalot-175 kuitattu), maanpinta IGN LiDAR HD MNT 2 m Pariisiin (katuliikenne ei leiju puissa; Tukholman oikea korjaus vaatisi Geotorget-tunnuksen), pilvet METAR-havainnoista kaupunki × kausi (LS2 pilvet-174). Pelikoodarin 3D-pistepankki osoittautui päällekkäiseksi LS1:n ElavaKaupunki-järjestelmän kanssa (3D jo junasta 173) → vain kahvilan astiat ja pyörän kellot muunnelmiksi; OSM-nimeäminen Lähteisiin (PR #4318). LR:n omat mallit hyväksytty ehdoin (yksi mesh per LOD jaetulla materiaalilla, lod0 ≤ 250 k, lod1 ≤ 80–100 k, GPU mitattuna, portti 0, omistajan kortti pelikuvasta ennen osoitinta): Eiffel-torni (yöllä ei valaistusta, SUOJATUT VALAISTUKSET) ja Tukholman kaupungintalo (Östberg k. 1945). Olavinlinna v46t–v46v (Paksu bastioni pois, seinät 5 ja 7–11 tekoälypinnoin, kalliokaistat); 175:n arkissa kallio näkyi valkoisena = esittely-1499-koodin hämäräkynnys (korjaus 55e76a25b), ja syke rauhoittui kesken havainnon → pito havainnon ajan + 3 s.
+
+## MUISTI, MINIMILAITE JA KONE (Natiiviseppä, Julkaisija ja PT 10.10.2026 klo 04.4x–06.5x) (10.10.2026 klo 06.53)
+
+Pelin pohja ennen kaupunkia on iPadilla 2,4 Gt (huippu 4,5 Gt) → junaan 175 alle 12 Gt:n laitteille pallossa kaupungin RT-profiili (MSAA 2×, SSAO pois) ja napakalotti 2048²/ASTC (~+0,2 Gt). Minimilaiteselvitys docs/raportit/minimilaite-20261010.md (2–3 Gt:n laitteet eivät mahdu, 4 Gt:lla kaupunki ei mahdu; App Storessa ei RAM-suodatinta) → omistajan päätös myöhemmin, kun 4–6 Gt:n laite on mitattu. Levy 98,9 → 117 Gi (Julkaisija siirsi 15 Gt lokeja NAS:lle; lokikansioiden mtime oli 03.00, joten ikä luetaan nimestä). Swap lähes täynnä (25/26,6 Gt): macOS oli keskeyttänyt Epic Games Launcherin ja Soundlyn → suljettu, koska ne eivät olleet käytössä; kaksi simua ei sallittu, kun swap on yli 12 Gt.
+
+## PULU 18 MAATA JA AUTOMAATTI (PT, Sisältökirjuri ja Pelikoodari 10.10.2026 klo 06.5x) (10.10.2026 klo 06.53)
+
+Ämpärissä 18 maata (+ CZE, BGR, DNK, POL, EST yöllä). Pelikoodarin pulu-automaatti: uusi maa testiin yhdellä komennolla (pulu-kultaiset.py --kirjoita --haarat --testaa, tavuvertailu ämpäriin ja haaraan). Sisältökirjurilla HUN, CHE, GBR ja UKR; pilvessä LVA, LTU ja RUS; seuraavat NOR ja SVK.
