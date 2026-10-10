@@ -1,4 +1,4 @@
-# Linssiseppä 2 – luovutus 10.10.2026 päivä (~11.2x, konteksti 47 %, PT: nollausraja 50 %)
+# Linssiseppä 2 – luovutus 10.10.2026 päivä (päivitetty ~11.4x, konteksti 50 %)
 
 Rooli: Linssiseppä 2 (Opus, high): kaupunkinäkymän ilmakehä, valo, vesi, pilvet ja omat 3D-mallit (putki + ämpäri).
 Proto `/Users/Shared/Claude/proto-3d/Matkakirja-proto` (paikallinen git); oma worktree `wt/proto-linssiseppa2-muisti` (6.7-haarat).
@@ -6,31 +6,29 @@ Skriptit `proto-3d/_tyo/linssiseppa2/skriptit-20261009/`. Tarkistukset 6.7: `MAT
 ./Linssit-testit/unity-tarkistus.sh` + `./Linssit-testit/kaanna.sh`. Simu vain Julkaisijan SIMULAATTORI NYT -vuorolla (A26BC7D0, 173pbr2-appi
 `lokit/linssiseppa2-app-173pbr2`), ilmoita "simu vapaa".
 
-## KESKEN (tee ensin)
-1. **ND-parvis v3g (omistajan havainto PT 10.5x: "miksi tuo kivetys loppuu noin oudosti kesken parviksessa")**. Juurisyy: ND:n oma maa oli
-   rajattu 300 m:n lähdeaineistoon (±150 m), parvis ulottuu −183 m:iin. Karttaseppä teki 440 m:n aineiston `_tyo/karttaseppa/notre-dame-440/`.
-   Skriptit parametrisoitu (ND_DATA, ND_N; oletus vanha): `_valmiit/notre-dame-v1/aja_v3g.zsh` (alue.py → maa.py → parvis_v9.py 154,147,138 0,7 →
-   Blender notre_dame.py → aja_tekseli_v3g.zsh). LÖYTYI VANHA VIKA: maatekstuuri neliö, UV venytti maa.json-rajat → pohjoinen–etelä vinossa
-   (v3f/julkaistu v6k6 ~16 %, eteläiset nurmet ~40 m väärässä). Korjattu maa.py:hin (rajat neliöksi). v3f:n lähteet `notre-dame-v1/varmuus-v3f/`.
-   Paketti (korjattu) `_tyo/linssiseppa2/nd3/v6k7` = v6k6 + ND v3g + uusi leikkaus (127 pistettä) mallit.jsonissa, portti 0. Vino versio
-   `nd3/v6k7-vino` ja sen kuvat `lokit/linssiseppa2-nd3k-nd3g-vino` (älä käytä).
-   **Simuvuoro pyydetty Julkaisijalta (~8 min)**: `skriptit-20261009/vuoro-nd3g-eif1c.sh` (ND v3g e3/e6/e7 + Eiffel v1c). Sitten
-   `python3 -I skriptit-20261009/arkit-nd3g.py docs/raportit/kaappaukset/linssiseppa2-176-20261010 150 0 0` → nd-parvis-v3g.jpg (v3f | v3g) ja
-   nd-ylha-oikea-vs-peli.jpg (PT:n pyyntö: "Oikea ilmakuva 2018" | "Peli v3g", ortokuva Karttasepän IGN BD ORTHO 2018 -rajaus; säädä args
-   puolileveys_m dx dy jos rajaus ei osu). Tarkista: eteläiset nurmet paikallaan, SW-kulman läikät, parviksen sävy (ylhäältä vaalea/kerma vs.
-   oikea harmaa → tarvittaessa v3h tummempi/viileämpi). Arkit → commit → PT. Kuittauksella vienti Julkaisijalle (pohja v6k6 → v6k7).
-2. **Eiffel v1c** (LR 11.1x: maa 106/98/81 himmeä): paketti `nd3/v6hk3-eif1c`, kuvat samassa vuorossa; arkki: kopioi eiffel-v1b-rivi
-   arkit-176.py:stä (ennen = lokit/linssiseppa2-eif1-v6hk3), mittaa maa jalkojen välissä (tavoite ~115/110/104) → LR + PT.
-3. **ISS-kupolan 3D-koe** (omistajan kortti, PT 10.2x): Opus-agentti teki haaraa `linssiseppa2/cupola3d-koe` (juna-176:n päällä) taustalla;
-   jos tämä sessio nollataan ennen agentin raporttia, tarkista haara `git -C /Users/Shared/Claude/wt/proto-linssiseppa2-muisti log --oneline -3
-   linssiseppa2/cupola3d-koe` ja aja tarkistukset itse. Sisältö: CupolaTila (proseduraalinen kupoli, 1 pyöreä + 6 trapetsi-ikkunaa, overlay-kamera
-   kerroksella ~22, aurinko + maavalo cullingMaskilla), A/B `astro kyyti cupola tila`, `cupola-gi 0|1`, `cupola-ssr 0|1`; SSR ja Surface Cache GI
-   lisätään renderer-assettiin epäaktiivisina (strippaus) ja kytketään ajossa. Avoimet: toimivatko SSR/GI overlay-kameralla; GI-maailmaan ei saa
-   päätyä Cesium-laattoja. LS1 kuittasi, ettei päällekkäisiä muutoksia. Tulos PT:lle: pelikuvapari (nykyinen / koe, sama hetki ja kulma) + laiterivi
-   (fps nyt 45, muisti) simulaattorissa ja iPad Pro 12.9:llä Julkaisijan vuorolla. Junaan vasta omistajan hyväksynnän jälkeen.
-4. **Peking** (omistajan poikkeus "koekaupunki Peking", Raamattu ad5d1e48d): LR:n 24 laattaa `_tyo/linnanrakentaja/peking/glb/` + laatat.json
-   (portti 0), Karttasepän maa/vesi/kadut/yövalot `_tyo/karttaseppa/peking-20261010/ls2/` (vesiväri ~12.15). PT asettaa jonoon; LR odottaa
-   vertailua Googleen (korkeus, sävyt). Muoto sovittu: 24 kohdetta mallit.jsoniin, korkeus 37,9, leikkaus laatan suorakaide.
+## KESKEN (PT 11.1x järjestys: 1 parvis, 2 Peking, 3 ISS-kupola)
+1. **ND-parvis v3g VALMIS PT:llä** (356d4e33e: nd-parvis-v3g.jpg, nd-ylha-oikea-vs-peli.jpg). Juurisyy sauma = 300 m:n aineisto; Karttasepän
+   440 m:n aineisto `_tyo/karttaseppa/notre-dame-440/`, ketju `_valmiit/notre-dame-v1/aja_v3g.zsh` (ND_DATA/ND_N). Korjattu vanha UV-venymä
+   (maa.py: rajat neliöksi; v2–v6k6 venyi 16 %). Paketti `_tyo/linssiseppa2/nd3/v6k7` (= v6k6 + ND v3g + leikkaus 127 p.), portti 0.
+   AVOIN: parvis pelissä 197/185/169 vs oikea 145/149/144 → ehdotettu v3h: `python3 -I lahde/parvis_v9.py 112,116,116 0.7 maa_v9c.jpg`
+   (ND_DATA+ND_N env kuten aja_v3g.zsh, EI Blenderiä) + aja_tekseli (MAA_V8=maa_v9c.jpg, tekoaly-v3h) + nd3k-paketti POHJA=nd3/v6k6 +
+   leikkaus mallit.jsoniin (ks. aja_v3g / v6k7) + simuvuoro (`vuoro-nd3g.sh`-malli, KULMAT=nd3g) + arkki. PT päättää viennin (v6k7 vai v3h).
+   Vanha vino versio nd3/v6k7-vino ja lokit/...-nd3g-vino: älä käytä. v3f:n lähteet notre-dame-v1/varmuus-v3f/.
+2. **PEKING v1 peliin** (omistajan poikkeus "koekaupunki Peking", Raamattu ad5d1e48d): LR:n 24 laattaa `_tyo/linnanrakentaja/peking/glb/`
+   + laatat.json (origo, korkeus 37,9, leikkaus; portti 0) ja Karttasepän `_tyo/karttaseppa/peking-20261010/ls2/` (LUEMINUT: pohjakuva 1 m,
+   vesiverkko, kadut, yövalot, maa 4 m; vesiväri ~12.15) kaupunkitilaan. Ensimmäinen pari (Peking | Google-kaupunki samalla kellonajalla ja
+   kulmalla) PT:lle, EI omistajalle (LR tekee v2:ta). Selvitä ensin, miten kaupunkitila ottaa uuden kaupungin (CesiumOmatMallit/mallit.json,
+   vesi-indeksi, kadut/yövalot-muoto kuten Pariisi/Tukholma) ja tarvitaanko koodimuutos (6.7-haara + PT:n kuittaus).
+3. **ISS-kupolan 3D-koe**: Opus-agentti valmis, haara `linssiseppa2/cupola3d-koe` **73661e440** (juna-176:n päällä; unity 0, L 1306, K 453, P 449;
+   EI vielä laitteella). Uudet: Ydin/Iss/CupolaGeometria.cs (~2,6 k kolmiota), Unity/CupolaTila.cs, Resources/Cupola/*.mat, CupolaSyvyys.shader,
+   testit. RISKIT ennen käännöspyyntöä (käy diff läpi!): agentti lisäsi SSR- ja Surface Cache GI -ominaisuudet Ultra_Renderer.assetiin AKTIIVISINA
+   (strippaus) ja muutti Assets/Settings/DefaultVolumeProfile.asset (SSR mode Disabled, GI enabled 0) → vaikuttaa kaikkiin buildeihin; GI-
+   ominaisuus kytketään koodissa pois käynnistyksessä (muuten "zero GI" -passi nollaa Lit-ambientin). GI kirjaa kaikki MeshRendererit (myös
+   Cesium) vaikka maailmaan pääsee vain kerros 12 → CPU-kuorma. Overlay-kentän leveys automaattinen (cupola-kentta). A/B: `astro kyyti cupola
+   tila` (takaisin `cupola uusi`), `cupola-gi 0|1`, `cupola-ssr 0|1`, `cupola-varjot 0|1`, `cupola-valo 1.0`, `cupola-silma 0.55`,
+   `cupola-kentta auto|0|<°>`, `cupola-tila` (lokiin). Tulos PT:lle: pari (nykyinen / koe) + laiterivi (fps nyt 45, muisti) simu + iPad Pro 12.9.
+4. Kaupungintalo v2 (LR 11.2x) `_valmiit/stadshuset-v1/tekoaly-v1-tekseli/` (lyhty + kruunut, epäsäännölliset ikkunat, tiili 112/58/48):
+   PT:n mukaan Pekingin jälkeen; v6k5-paketti uusittava v2:lla (pohja nyt v6k6/v6k7), osoitin-176 odottaa.
 
 ## VALMISTA tänään (10.10. aamupäivä)
 - Junaan 176 (Natiiviseppä, runko 57187899e): omaaurinko 97d2d7a71, pilvet 43b37f198, vesivari 3a0def9e7 (kerroin 1), vesi-v6 fc08ac3db,
@@ -44,6 +42,6 @@ Skriptit `proto-3d/_tyo/linssiseppa2/skriptit-20261009/`. Tarkistukset 6.7: `MAT
 ## Aloitusviesti
 ```
 Olet Linssiseppä 2 (Opus, high). Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja docs/raportit/viesti-linssiseppa2-luovutus-20261010-paiva.md
-(haara linssiseppa2-tyo-20260928). Ensin KESKEN 1–2 (ND v3g + Eiffel v1c simuvuorolla → arkit PT:lle), sitten ISS-kupolan 3D-koe (KESKEN 3).
+(haara linssiseppa2-tyo-20260928). KESKEN-järjestys: PT:n päätös v3h/vienti, Peking (KESKEN 2), ISS-kupola (KESKEN 3).
 Viestit PT:lle vain valmis erä, jumi tai kysymys, ≤ 8 riviä.
 ```
