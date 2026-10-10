@@ -103,3 +103,12 @@ Edellinen: `viesti-linnanrakentaja-luovutus-20261009-yo.md`. Haara koodille: `li
   (tiili 150/76/60, LS2/PT: v3 oli oranssi; tekoaly-v3b-tekseli), **Concorde co v2** (vain obeliski, kulta valoisuustilassa, aukion muut osat
   yhdeksi meshiksi — alkuperäinen glb kaatui porttiin; concorde-v2/tekoaly-v2-tekseli) — kaikki portti 0, LS2:lla pelikuviin.
 - projisoi_tekseli.py tukee nyt nd/kl/rh/pp/co; tekoaly_koko.zsh `<malli> <tunniste> - pelkka-kohdistus`.
+
+## TEHTY 04.4x–05.0x
+
+- **Olavinlinnan v46t-syötteet Karttasepälle** (PT 04.4x): `olavinlinna-codex-ohje-v46t/seina7–11` (kuori_ohje.py SEINAT 7–11, kuori_merkinnat.py,
+  tekoaly_syotteet.py 1 Mpx + `tekoaly-pala` 25 px/m). Valinta: scratchpadin ranking.py (|Laplace| 15 px v46t-atlaksesta, 8 × 8 m ruudut,
+  leikkaukset ja laattapinnat pois). Seinä 5 (v46m) yhä heikoin 12,3 → v2 Karttasepän jonossa. Tulokset `olavinlinna_s<n>_v1.png` →
+  takaisin + kohdistus + kuori_projisoi.py (kuten s1–s5) → v46u.
+- **ND v3d** (`tekoaly-v3d`, `aja_tekseli_v3d.zsh`, MAA_V8=maa_v8b.jpg, parvis_v8.py 168,160,150 226): parviksen sävy Googlen ympäristöön;
+  EI vientiä ennen omistajan kyllä-vastausta (PT). LS2 tekee parin.
