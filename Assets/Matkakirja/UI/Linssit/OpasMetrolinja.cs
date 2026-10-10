@@ -40,6 +40,9 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static bool Korostus;
         public static string KorostusSelite;
+        /// <summary>Aseman nimi, jonka alarivi KorostusSelite on (KierrosTaulu): selite näkyy vain sen alla. Lähdön valmistelussa
+        /// nykyinen indeksi siirtyy jo seuraavaan (LS1 21.4x, todistus-kompassi-hyppy-180 k02: Louvren alla Notre-Damen alarivi).</summary>
+        public static string KorostusNimi;
         /// <summary>
         /// HISTORIAOSION OTSIKKO (Päätoimittaja 9.10.2026, juna 170; Pelikoodarin lentokerronta historia-v1 "otsikko"): lennon aikana soivan
         /// osion otsikko HistoriaNakyyS sekuntia osion alussa lähtö- ja tuloaseman välissä samalla selitteen pohjalla (asemat eivät suurene);
@@ -291,6 +294,7 @@ namespace Matkakirja.Natiivi
             float kt = korostusTaso * korostusTaso * (3f - 2f * korostusTaso);
             if (kohde >= 0 && kohde < n && kt > 0f) (korostusKoko, korostusRivit) = SovitaKorostus(asemat[kohde].Nimi, asemat[kohde].Rivi);
             bool seliteNakyy = kohde >= 0 && kohde < n && kohde == naytettyIndeksi && !string.IsNullOrEmpty(KorostusSelite) && !Testi
+                    && (SamaAsema(asemat[kohde].Nimi.text, KorostusNimi) || !asemat.Exists(a => SamaAsema(a.Nimi.text, KorostusNimi)))
                 || Testi && TestiSelite != null && kohde == naytettyIndeksi;
             seliteTaso = Mathf.MoveTowards(seliteTaso, seliteNakyy ? 1f : 0f, Time.unscaledDeltaTime / KorostusVaihto);
             if (Testi) seliteTaso = seliteNakyy ? 1f : 0f;   // testi (myös editorin asettelutesti, jossa aika ei kulje): heti
@@ -331,6 +335,10 @@ namespace Matkakirja.Natiivi
             if (t < 1f) AsetteleViiva();
             Alareuna = nakyy ? juuri.worldBound.yMax : 0f;
         }
+
+        /// <summary>Sama asema nimen perusteella; jos nimeä ei ole linjalla lainkaan (eri kirjoitusasu), selite näkyy nykyisen alla kuten ennen.</summary>
+        static bool SamaAsema(string asema, string nimi) =>
+            !string.IsNullOrEmpty(asema) && !string.IsNullOrEmpty(nimi) && string.Equals(asema.Trim(), nimi.Trim(), System.StringComparison.OrdinalIgnoreCase);
 
         /// <summary>Selite nykyisen aseman nimen alle (sama nimen pohja, apuri-koko, rivittyy); peitto selitetason mukaan.</summary>
         void PaivitaSelite(bool korostus, float kt)
