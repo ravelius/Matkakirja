@@ -39,6 +39,8 @@
 ## 4. Muut tämän päivän toimitukset
 
 - **KADUT (05.1x, LS1:lle):** `_tyo/karttaseppa/kadut-20261010/kadut-{pariisi(10 km),tukholma(15 km)}.json` (ajosuunnat, kaistat, nopeus, liittymät; oneway=-1 käännetty). Työkalu T7 `vesimaski/kadut.mjs`. Tukholman maanpinta: Lantmäteriet CC0, mutta vaatii Geotorget-tunnuksen (omistaja).
+- **Olavinlinna 05.4x:** s11 v2 (pienet kivet) → **v2t** = sävy 100/101/101 (LR mittasi atlaksen naapurit). Kallio s12, s14 ja s16 v1 → **v1s** = sävy 110/104/96 (savy2, kylläisyys 0,7). s13 ja s15 ei kalliota. LR: s5 v3b ja s7–s10 atlaksessa v46u.
+- **VESIVÄRI v2 (AJOSSA 05.3x →, ETA ~07.40, LS2:lle):** B11-pintaheijastus vähennetään pikseleittäin (LS2), BOA-offset päätetään veden B11:stä, 25 kuvaa/alue/kausi. Sameus = väli [SWIR-korjattu, BOA].
 - **VESIVÄRI (AJOSSA 05.16 →, LS2:lle):** T7 `vesimaski/vesivari.mjs` (S2 L2A Earth Search, SCL 6, Seine 4, Mälaren 3, Saltsjön 3 ikkunaa, 2019–2025), loki `vesivari/ajo.log`. Valmistuttua `python3 -I vesivari-kaudet.py vesivari/vesivari-raaka.json <_tyo/karttaseppa/vesivari-20261010/vesivari-kaudet.json>`, jossa kaksoiskappaleiden BOA-offset korjataan. Kd490 KD2 ei ole luotettava sameassa vedessä, joten käytetään sameus_fnu:ta. Vienti ilmakeha/… tai vesi/… sovitaan LS2:n kanssa.
 
 - **s5 v3/v3b (05.0x):** v3 (img2img 0,5) jäi yliteräväksi, joten **v3b suositeltu** (v1:n värit + v3:n luminanssin ylipäästö). LR valitsee.
