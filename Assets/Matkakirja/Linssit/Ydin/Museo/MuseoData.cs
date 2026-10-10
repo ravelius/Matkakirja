@@ -226,22 +226,36 @@ namespace Matkakirja.Linssit.Museo
 
             var t = MiniJson.Objekti(MiniJson.Jasenna(teoksetJson));
             foreach (var o in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(t, "teokset")))
-            {
-                var d = MiniJson.Objekti(o);
-                s.Teokset.Add(new Teos
-                {
-                    Id = MiniJson.Teksti(d, "id"), Otsikko = MiniJson.Teksti(d, "otsikko"), Alkuperainen = MiniJson.Teksti(d, "alkuperainen"),
-                    Taiteilija = MiniJson.Teksti(d, "taiteilija"), Vuosi = MiniJson.Teksti(d, "vuosi"), Tekniikka = MiniJson.Teksti(d, "tekniikka"),
-                    Lahde = MiniJson.Teksti(d, "lahde"), Lisenssi = MiniJson.Teksti(d, "lisenssi"), Iiif = MiniJson.Teksti(d, "iiif"), Kuva = MiniJson.Teksti(d, "kuva"),
-                    KorkeusCm = MiniJson.Luku(d, "korkeus_cm") ?? 50, LeveysCm = MiniJson.Luku(d, "leveys_cm") ?? 40,
-                    Kuvasuhde = MiniJson.Luku(d, "kuvasuhde") ?? 0, Grafiikka = MiniJson.Totuus(d, "grafiikka"),
-                    Kuvateksti = MiniJson.Teksti(d, "kuvateksti") is string kt && kt.Length > 0 ? kt : null, Havainnekuva = MiniJson.Totuus(d, "havainnekuva"),
-                    KuvaLeveys = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(d, "kuva_px")) is { Count: 2 } px ? Convert.ToInt32(px[0], CultureInfo.InvariantCulture) : 0,
-                    KuvaKorkeus = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(d, "kuva_px")) is { Count: 2 } py ? Convert.ToInt32(py[1], CultureInfo.InvariantCulture) : 0,
-                });
-            }
+                s.Teokset.Add(LueTeos(MiniJson.Objekti(o)));
             s.Ripusta();
             return s;
+        }
+
+        /// <summary>Teos teokset.json:sta. Yhteinen skeema Sisältökirjurin paketin kanssa (PT 10.1x): kentät kelpaavat kummassakin
+        /// muodossa (otsikko|nimi_fi, alkuperainen|nimi_en, taiteilija|tekija, korkeus_cm+leveys_cm|mitat_cm_kork_lev, lahde|museo,
+        /// lisenssi|teoksen_oikeustila, kuvateksti|kuvateksti_fi, kuva "polku"|kuva.seina.tiedosto). Paketin teoksen tunnus on
+        /// museon inventaarionumero (sali.json:n teos_ehdotus, esim. SK-C-5), muuten id.</summary>
+        public static Teos LueTeos(Dictionary<string, object> d)
+        {
+            string T(params string[] n) { foreach (var x in n) if (MiniJson.Teksti(d, x) is string v && v.Length > 0) return v; return null; }
+            var mitat = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(d, "mitat_cm_kork_lev"));
+            double M(int i) => Convert.ToDouble(mitat[i], CultureInfo.InvariantCulture);
+            var kuva = MiniJson.ObjektiTaiNull(MiniJson.Kentta(d, "kuva"));
+            var seina = kuva != null ? MiniJson.ObjektiTaiNull(MiniJson.Kentta(kuva, "seina")) : null;
+            var px = MiniJson.TaulukkoTaiTyhja(seina != null ? MiniJson.Kentta(seina, "px") : MiniJson.Kentta(d, "kuva_px"));
+            string id = T("inventaario", "id"), tekniikka = T("tekniikka");
+            return new Teos
+            {
+                Id = id, Otsikko = T("otsikko", "nimi_fi"), Alkuperainen = T("alkuperainen", "nimi_en"), Taiteilija = T("taiteilija", "tekija"),
+                Vuosi = T("vuosi"), Tekniikka = tekniikka, Lahde = T("lahde", "museo"), Lisenssi = T("lisenssi", "teoksen_oikeustila"), Iiif = T("iiif"),
+                Kuva = seina != null ? MiniJson.Teksti(seina, "tiedosto") : T("kuva"),
+                KorkeusCm = MiniJson.Luku(d, "korkeus_cm") ?? (mitat.Count == 2 ? M(0) : 50), LeveysCm = MiniJson.Luku(d, "leveys_cm") ?? (mitat.Count == 2 ? M(1) : 40),
+                Kuvasuhde = MiniJson.Luku(d, "kuvasuhde") ?? MiniJson.Luku(d, "kuvasuhde_leveys_per_korkeus") ?? 0,
+                Grafiikka = MiniJson.Kentta(d, "grafiikka") is bool g ? g : id != null && id.StartsWith("RP-P-", StringComparison.Ordinal),
+                Kuvateksti = T("kuvateksti", "kuvateksti_fi"), Havainnekuva = MiniJson.Totuus(d, "havainnekuva"),
+                KuvaLeveys = px.Count == 2 ? Convert.ToInt32(px[0], CultureInfo.InvariantCulture) : 0,
+                KuvaKorkeus = px.Count == 2 ? Convert.ToInt32(px[1], CultureInfo.InvariantCulture) : 0,
+            };
         }
 
         /// <summary>Teospaikan ehdotus → teos todellisessa koossa; liian iso pienennetään paikan rajoihin (kuvasuhde säilyy).</summary>

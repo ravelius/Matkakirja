@@ -40,6 +40,17 @@ namespace Matkakirja.Linssit.Testit
             foreach (var rp in s.Reitti) if (rp.Kohde != null) Oleta.Tosi(s.HaePaikka(rp.Kohde) != null || s.Veistospaikat.Contains(rp.Kohde), $"reitin kohde {rp.Kohde} on teos- tai veistospaikka");
         }
 
+        // Yhteinen skeema (PT 10.1x): Sisältökirjurin paketin teos sellaisenaan.
+        [Testi] static void SisaltokirjurinSkeema()
+        {
+            const string json = "{\"inventaario\":\"SK-C-5\",\"id\":\"rijks-sk-c-5\",\"nimi_fi\":\"Yövartio\",\"nimi_en\":\"The Night Watch\",\"tekija\":\"Rembrandt van Rijn\",\"vuosi\":\"1642\"," +
+                "\"tekniikka\":\"öljy kankaalle\",\"mitat_cm_kork_lev\":[379.5,453.5],\"museo\":\"Rijksmuseum, Amsterdam\",\"teoksen_oikeustila\":\"Public Domain Mark 1.0 (Rijksmuseum)\"," +
+                "\"kuvateksti_fi\":\"Rembrandtin suurikokoinen ryhmämuotokuva.\",\"kuvasuhde_leveys_per_korkeus\":1.195,\"kuva\":{\"seina\":{\"tiedosto\":\"kuvat/seina/rijks-sk-c-5.jpg\",\"px\":[2048,1666]}}}";
+            var t = Sali.LueTeos(Matkakirja.Peli.MiniJson.Objekti(Matkakirja.Peli.MiniJson.Jasenna(json)));
+            Oleta.Tosi(t.Id == "SK-C-5" && t.Otsikko == "Yövartio" && t.Taiteilija == "Rembrandt van Rijn" && t.KorkeusCm == 379.5 && t.LeveysCm == 453.5, "nimi, tekijä, mitat");
+            Oleta.Tosi(t.Kuva == "kuvat/seina/rijks-sk-c-5.jpg" && t.KuvaLeveys == 2048 && t.Kuvateksti.StartsWith("Rembrandtin") && !t.Havainnekuva && !t.Grafiikka, "kuva, kuvateksti, havainnekuva false");
+        }
+
         [Testi] static void HalliJaAukot()
         {
             var s = Alankomaat();
