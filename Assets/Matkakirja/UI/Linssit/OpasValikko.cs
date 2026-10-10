@@ -1211,7 +1211,9 @@ namespace Matkakirja.Natiivi
         void PuhuJaKirjoita()
         {
             if (kysyKuvakkeina) return;   // iPhone vaaka: otsikkorivillä (RakennaKysy)
-            Viiva();
+            // Erotin kysymysten ja toimintojen väliin vierityslistaan (Viiva() lisää valikkoon, jolloin se jäi listan alle
+            // tyhjäksi kaistaksi, UI-kuva-arkki 9.10.2026 u03/u05).
+            Rakenne.El("mk-linssivalikko__viiva", rivit, PickingMode.Ignore);
             Komento(Kieli.T("ui.opas.puhu-oppaalle"), Puhu, rivit);
             Komento(Kieli.T("ui.opas.kirjoita-oppaalle"), Kirjoita, rivit);
         }
