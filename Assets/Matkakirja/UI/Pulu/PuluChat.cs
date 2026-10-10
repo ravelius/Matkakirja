@@ -810,6 +810,24 @@ namespace Matkakirja.Natiivi
         {
             var v = Viesti("mk-chat__livia", TervehdysAlku + "<b>" + TervehdysYdin + "</b>" + TervehdysLoppu);
             v.enableRichText = true;
+            TekoalyMerkinta();
+        }
+
+        /// <summary>
+        /// "Vastaukset tuottaa tekoäly (Claude)" ja Ilmoita ongelmasta (Raamattu ALLE 18 KURATOITU: merkintä kaikille) keskustelun
+        /// alkuun chatin järjestelmärivinä (sama kuin "Näytän kartalla"); napautus avaa REAKTIOT-pohjan ilmoituslomakkeen tälle paikalle.
+        /// </summary>
+        void TekoalyMerkinta()
+        {
+            var l = Viesti("mk-chat__paikkarivi", Kieli.T("ui.pulu.tekoaly-merkinta") + " · <u>" + Kieli.T("ui.reaktiot.ilmoita-ongelmasta") + "</u>");
+            l.enableRichText = true;
+            l.pickingMode = PickingMode.Position;
+            l.tooltip = Kieli.T("ui.reaktiot.ilmoita-ongelmasta");
+            l.RegisterCallback<ClickEvent>(e =>
+            {
+                e.StopPropagation();
+                Reaktiot.IlmoitaOngelmasta("chat:" + (oppaalle ? "opas" : paikka ?? "kartta"), Kieli.T("ui.pulu.chat-otsikko"));
+            });
         }
 
         Label Viesti(string luokka, string teksti)
@@ -920,6 +938,7 @@ namespace Matkakirja.Natiivi
             oppaalle = paalla;
             tervehditty = paalla;
             AsetaOppaanJatkot(null);
+            if (paalla) TekoalyMerkinta();
         }
         bool oppaalle;
 
@@ -978,6 +997,10 @@ namespace Matkakirja.Natiivi
             if (kohta != null && kohta != valmisKohta) AsetaValmisKohta(kohta, maa, aihe, false);
             if (kysymys.Length > KysymysKatto) kysymys = kysymys.Substring(0, KysymysKatto);
             if (!Auki && !(oppaalle && Sieppaa != null)) Avaa(false);
+            // Ikäraja ennen live-tekoälyä (Raamattu ALLE 18 KURATOITU): valmis vastaus ei kysy; muuten kortti kerran ja sama kysymys
+            // jatkuu vastauksen jälkeen (oppaan sieppaus mukaan lukien).
+            bool valmis = valmisKohta != null && valmisPaketti?.Vastaa(valmisKohta, kysymys) != null;
+            if (!valmis && Ikaraja.KysyEnsin(() => Kysy(kysymys, jatko, puhe, aihe, kohta, maa))) return;
             if (oppaalle) AsetaOppaanJatkot(null);
             LopetaPuheVuoro();
             // Uusi kysymys: edellisen vastauksen luenta ylärivin lukijassa seis (uusi vastaus luetaan omana luentanaan).
