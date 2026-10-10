@@ -1,38 +1,13 @@
 {
  "lahde": "media.matkakirja.app .eleet.json + mp3, tarkistettu js/livia-puheeleet-lataus.js tarkistaLivianPilottiData",
  "yksikko": "ms äänen alusta",
- "haettu": "2026-09-23",
+ "haettu": "2026-10-10",
  "kaupungit": {
   "alpit": {
    "revision": "eu-hl-europe-20260913-r2-approved1",
    "tekstiSha256": "5c15ee5104983529668e0cc23184ee38474e767e21e2bc61726f3acbf102b513",
-   "tila": "ok",
-   "aani": {
-    "tavut": 219054,
-    "sha256": "36279c5fdd25de333a039e6fd53231e41ad6a47c6b5168e965f5b2ac6c306e6d"
-   },
-   "eleet": [
-    {
-     "id": "alpit.livia.c1",
-     "alku": 799,
-     "loppu": 4299
-    },
-    {
-     "id": "alpit.livia.c2",
-     "alku": 4299,
-     "loppu": 7899
-    },
-    {
-     "id": "alpit.livia.c3",
-     "alku": 7899,
-     "loppu": 11880
-    },
-    {
-     "id": "alpit.livia.c4",
-     "alku": 11880,
-     "loppu": 13460
-    }
-   ]
+   "tila": "puuttuu",
+   "http": 404
   },
   "amsterdam": {
    "revision": "eu-hl-europe-20260914-r2-approved",
@@ -115,28 +90,8 @@
   "islanti": {
    "revision": "eu-hl-europe-20260913-r2-approved1",
    "tekstiSha256": "edd43d46ddaa90ae568f83eb023e0e33679a03ee709c09de8fd6b146610ce336",
-   "tila": "ok",
-   "aani": {
-    "tavut": 194395,
-    "sha256": "c38b5bc0c4cb76799dc4f8620f9085f83daebdd37e1cd28e519ba1b66757b4fc"
-   },
-   "eleet": [
-    {
-     "id": "islanti.livia.c1",
-     "alku": 1139,
-     "loppu": 5480
-    },
-    {
-     "id": "islanti.livia.c2",
-     "alku": 5480,
-     "loppu": 11259
-    },
-    {
-     "id": "islanti.livia.c3",
-     "alku": 11259,
-     "loppu": 11899
-    }
-   ]
+   "tila": "puuttuu",
+   "http": 404
   },
   "istanbul": {
    "revision": "eu-hl-europe-20260914-r2-approved",
@@ -171,38 +126,8 @@
   "lappi": {
    "revision": "eu-hl-e4-20260913-r1-approved1",
    "tekstiSha256": "d4169d3f922d8e34e53b0e95ace9c87ee09b6b5b2327d3ecfb9a26079bde770b",
-   "tila": "ok",
-   "aani": {
-    "tavut": 238280,
-    "sha256": "ecd90862dd6fb7a7f0ef43deece72e8b5485e747dd5b891f8ad141b751555432"
-   },
-   "eleet": [
-    {
-     "id": "lappi.livia.c1",
-     "alku": 1220,
-     "loppu": 4039
-    },
-    {
-     "id": "lappi.livia.c2",
-     "alku": 4039,
-     "loppu": 6599
-    },
-    {
-     "id": "lappi.livia.c3",
-     "alku": 6599,
-     "loppu": 9939
-    },
-    {
-     "id": "lappi.livia.c4",
-     "alku": 9939,
-     "loppu": 13359
-    },
-    {
-     "id": "lappi.livia.c5",
-     "alku": 13359,
-     "loppu": 14639
-    }
-   ]
+   "tila": "puuttuu",
+   "http": 404
   },
   "lissabon": {
    "revision": "eu-hl-europe-20260914-r2-approved",
@@ -291,33 +216,8 @@
   "sisilia": {
    "revision": "eu-hl-europe-20260913-r2-approved1",
    "tekstiSha256": "ac331a83b4fcc669811a2f1c0ef75edbb32769cf76081771e675eb968783cd52",
-   "tila": "ok",
-   "aani": {
-    "tavut": 194395,
-    "sha256": "dde3d26ee4e027c1a14360bda340f7a10d7d12927cf49acbe051ea1ad081ac7f"
-   },
-   "eleet": [
-    {
-     "id": "sisilia.livia.c1",
-     "alku": 2240,
-     "loppu": 5440
-    },
-    {
-     "id": "sisilia.livia.c2",
-     "alku": 5440,
-     "loppu": 9179
-    },
-    {
-     "id": "sisilia.livia.c3",
-     "alku": 9179,
-     "loppu": 10800
-    },
-    {
-     "id": "sisilia.livia.c4",
-     "alku": 10800,
-     "loppu": 11859
-    }
-   ]
+   "tila": "puuttuu",
+   "http": 404
   },
   "sofia": {
    "revision": "eu-hl-europe-20260914-r2-approved",
@@ -340,38 +240,8 @@
   "tromssa": {
    "revision": "eu-hl-e4-20260913-r1-approved1",
    "tekstiSha256": "c17f172e0270f1272e2fc001bf0742fef5ee88b1c104b03a4d03a78e59e08b22",
-   "tila": "ok",
-   "aani": {
-    "tavut": 252491,
-    "sha256": "7e333565bdc57fd228287c5ad7f5d62fcaef9f978474a5971fb4b420bfbde10f"
-   },
-   "eleet": [
-    {
-     "id": "tromssa.livia.c1",
-     "alku": 1000,
-     "loppu": 2500
-    },
-    {
-     "id": "tromssa.livia.c2",
-     "alku": 2500,
-     "loppu": 8359
-    },
-    {
-     "id": "tromssa.livia.c3",
-     "alku": 8359,
-     "loppu": 10840
-    },
-    {
-     "id": "tromssa.livia.c4",
-     "alku": 10840,
-     "loppu": 13880
-    },
-    {
-     "id": "tromssa.livia.c5",
-     "alku": 13880,
-     "loppu": 15559
-    }
-   ]
+   "tila": "puuttuu",
+   "http": 404
   },
   "tukholma": {
    "revision": "eu-hl-europe-20260914-r2-approved",

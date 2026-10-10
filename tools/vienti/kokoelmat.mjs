@@ -749,7 +749,7 @@ function livianPuheKokoelma(hae) {
   const eleet = lueLivianEleet();
   return taulukko('js/livia-pilotti-cuet.js#LIVIAN_LUENTA_CUET',
     'Livian luentakommentit kaupungeittain: aani = mp3 ämpärissä, eleet = ratkaistut cue-ajat (.eleet.json aanen '
-      + 'vieressä), cuet = { id, ankkuri, esiintyma, tarkoitus, voimakkuus, ele, alku, loppu }, tekstiSha256 = '
+      + 'vieressä; null, kun eleetTila ei ole ok), cuet = { id, ankkuri, esiintyma, tarkoitus, voimakkuus, ele, alku, loppu }, tekstiSha256 = '
       + 'kommentin tekstin tiiviste, jota eleet vastaavat. ele = tekninen SVG-ele (js/livia-tilanteet.js '
       + 'livianPuheeleenTiedot). eleetTila: ok = alku/loppu (ms äänen alusta) on tarkistettu pelin validaattorilla '
       + 'ja aaniTavut/aaniSha256 kertovat, mihin mp3:een ne kuuluvat; puuttuu = ämpärissä ei eleitä (alku/loppu '
@@ -766,7 +766,8 @@ function livianPuheKokoelma(hae) {
       const ajat = new Map((haettu.tila === 'ok' ? haettu.eleet : []).map((e) => [e.id, e]));
       return {
         id: c.kaupunki, kaupunki: c.kaupunki, revision: c.revision, kentta: c.kentta, kupla: c.kupla,
-        tekstiSha256: c.tekstiSha256, aani, eleet: aani ? livianEleidenOsoite(aani) : null,
+        // PT 10.10.2026 (tarkistus C2): osoite vain, kun eleet on ämpärissä (ei 404-viittauksia).
+        tekstiSha256: c.tekstiSha256, aani, eleet: aani && haettu.tila === 'ok' ? livianEleidenOsoite(aani) : null,
         eleetTila: haettu.tila,
         aaniTavut: haettu.aani?.tavut ?? null, aaniSha256: haettu.aani?.sha256 ?? null,
         odottaa: odottaa.has(c.kaupunki),

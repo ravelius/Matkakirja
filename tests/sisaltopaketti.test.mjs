@@ -449,7 +449,10 @@ test('skeema 1.9: luentojen aikaleimat ja Livian puheen cuet', async () => {
   const ateena = livia.find((r) => r.id === 'ateena');
   const { livianAaniOsoite } = await import('../js/liviapuhe.js');
   assert.equal(ateena.aani, livianAaniOsoite('ateena', 2));
-  assert.match(ateena.eleet, /^https:\/\/media\.matkakirja\.app\/.+livia-ateena-3\.eleet\.json(\?.*)?$/);
+  // PT 10.10.2026 (tarkistus C2): eleiden osoite vain, kun ne ovat ämpärissä (eleetTila ok), muuten null (ei 404-viittausta).
+  if (ateena.eleetTila === 'ok') assert.match(ateena.eleet, /^https:\/\/media\.matkakirja\.app\/.+livia-ateena-3\.eleet\.json(\?.*)?$/);
+  else assert.equal(ateena.eleet, null);
+  for (const r of livia) assert.equal(r.eleet !== null, r.eleetTila === 'ok', r.id);
   assert.ok(ateena.cuet.length >= 3 && ateena.cuet.every((c) => c.ankkuri && c.tarkoitus));
 });
 
@@ -467,7 +470,8 @@ test('skeema 1.11: Livian cue-data (ele, validoidut ajat, repliikit)', async () 
       assert.ok(rivi.cuet.every((c) => c.alku === null && c.loppu === null), rivi.id);
     }
   }
-  assert.ok(livia.some((r) => r.eleetTila === 'ok'), 'ainakin yksi validoitu');
+  // 10.10.2026: kaikki 45 kaupunkia ovat v4-versioissa ilman kohdistusta (tools/vienti/livian-eleet.json: puuttuu 45).
+  assert.ok(livia.every((r) => ['ok', 'puuttuu', 'hylatty', 'vanhentunut', 'ei-haettu'].includes(r.eleetTila)));
   const luennat = JSON.parse(tiedostot.get('kokoelmat/luennat.json')).alkiot;
   for (const r of luennat.flatMap((l) => l.reaktiot ?? [])) {
     assert.equal(r.ele, livianLuentareaktionTiedot(r)?.ele ?? null, r.id);
