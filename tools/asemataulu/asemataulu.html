@@ -175,6 +175,21 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
 .kysymysnappi:focus-visible { outline: 2px solid var(--seepia); outline-offset: 2px; }
 .kysymyslista { margin: 0 0 4px; padding-left: 1.1em; font-size: 0.88rem; display: flex; flex-direction: column; gap: 3px; }
 .kysymyslista { padding-left: 2.4em; }
+/* Palkit (omistaja 10.10. 15.4x): viikko koko leveydellä, 5 h ja Päätoimittajan konteksti omina palkkeinaan samalla rivillä;
+   nimi ja arvo palkin yläpuolella, jotta kaksi palkkia mahtuu puhelimessakin rinnakkain. */
+.palkit { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 18px; }
+.palkki { display: flex; flex-direction: column; align-items: stretch; gap: 3px; min-width: 0; }
+.palkki.koko { grid-column: 1 / -1; }
+.palkki .paa { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0 8px; }
+.palkki .nimi { font-size: 0.78rem; }
+.palkki .ura { height: 12px; }
+.palkki .nimi .aika { text-transform: none; letter-spacing: 0; color: var(--himmea); font-variant-numeric: tabular-nums; }
+.palkki { justify-content: space-between; }
+.palkki .nimi.ei-versaali { text-transform: none; }
+@media (max-width: 479px) { .palkki:not(.koko) .paa { flex-direction: column; align-items: flex-start; gap: 0; } }
+/* Työlistan kohteet ja väkäsen sisältö sisennettyinä (omistaja 10.10. 15.4x) */
+#tyolista details.juna { margin-left: 0.8em; }
+#tyolista details.juna .runko { padding-left: 2.1em; }
 </style>
 
 <main class="wrap">
@@ -290,7 +305,6 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
   }
   function tilaSymboli(t) {
     t = String(t || '').toLowerCase();
-    if (/odottaa/.test(t)) return ['\u25CF', 'odottaa', 'odottaa sinua'];
     if (/jonossa/.test(t)) return ['\u25CB', 'jonossa', 'jonossa'];
     if (/kokeilu/.test(t)) return ['\u25C7', 'kokeilu', 'kokeilu'];
     if (/my\u00f6hemmin|pidossa/.test(t)) return ['\u25CB', 'jonossa', 'jonossa'];
@@ -336,21 +350,37 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
     var laatat = (m && m.laatat) || [];
     var pa = $('palkit');
     pa.replaceChildren();
-    laatat.filter(function (l) { return l.palkki; }).forEach(function (l) {
+    // Viikko koko leveydelle; 5 h ja Päätoimittajan konteksti (mittarit.pt_konteksti) rinnakkain. Rajat: käyttö 70/90 %, konteksti 55/65 % (oma nollaus).
+    var palkkiLaatat = laatat.filter(function (l) { return l.palkki; }).map(function (l) {
+      return { nimi: l.nimi, prosentti: l.prosentti, muutos: l.muutos, nollautuu: l.nollautuu, kulta: 70, punainen: 90 };
+    });
+    if (m && typeof m.pt_konteksti === 'number') palkkiLaatat.push({ nimi: 'Päätoimittaja', prosentti: m.pt_konteksti, kulta: 55, punainen: 65, otsikko: 'Päätoimittajan konteksti' });
+    palkkiLaatat.forEach(function (l, i) {
       var pr = Math.max(0, Math.min(100, Number(l.prosentti) || 0));
-      var rivi = luo('div', 'palkki');
-      rivi.setAttribute('role', 'meter');
-      rivi.setAttribute('aria-label', l.nimi);
-      rivi.setAttribute('aria-valuemin', '0');
-      rivi.setAttribute('aria-valuemax', '100');
-      rivi.setAttribute('aria-valuenow', String(pr));
+      var koko = i === 0 || (i === palkkiLaatat.length - 1 && i % 2 === 1);
+      var rivi = luo('div', 'palkki' + (koko ? ' koko' : ''));
+      var paa = luo('div', 'paa');
+      var arvo = luo('span', 'arvo', Math.round(pr) + ' %');
+      if (l.muutos) arvo.append(luo('span', 'muutos', ' (' + l.muutos + ')'));
+      var viisiH = /^5\s*t/i.test(String(l.nimi || ''));
+      var nimi = luo('span', 'nimi' + (viisiH ? ' ei-versaali' : ''), viisiH ? '5h' : l.nimi);
+      // Aika seuraavaan nollaukseen otsikon perässä (omistaja 10.10. 15.5x); laatan kenttä nollautuu = ISO-aika tai ms.
+      var jaljella = l.nollautuu ? new Date(l.nollautuu).getTime() - Date.now() : NaN;
+      if (jaljella > 0) {
+        var min = Math.ceil(jaljella / 60000), tt = Math.floor(min / 60);
+        nimi.append(luo('span', 'aika', ' (' + (tt ? tt + ' h ' : '') + (min % 60) + ' min)'));
+      }
+      paa.append(nimi, arvo);
       var ura = luo('div', 'ura');
-      var tayte = luo('div', 'tayte' + (pr >= 90 ? ' punainen' : pr >= 70 ? ' kulta' : ''));
+      ura.setAttribute('role', 'meter');
+      ura.setAttribute('aria-label', l.otsikko || l.nimi);
+      ura.setAttribute('aria-valuemin', '0');
+      ura.setAttribute('aria-valuemax', '100');
+      ura.setAttribute('aria-valuenow', String(pr));
+      var tayte = luo('div', 'tayte' + (pr >= l.punainen ? ' punainen' : pr >= l.kulta ? ' kulta' : ''));
       tayte.style.width = pr + '%';
       ura.append(tayte);
-      var arvo = luo('div', 'arvo', Math.round(pr) + ' %');
-      if (l.muutos) arvo.append(luo('span', 'muutos', ' (' + l.muutos + ')'));
-      rivi.append(luo('div', 'nimi', l.nimi), ura, arvo);
+      rivi.append(paa, ura);
       pa.append(rivi);
     });
 
@@ -390,15 +420,18 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
     var jarj = function (x) { var s = String(x.tila || 'lepo'); return s === 'kysyy' ? 0 : s === 'odottaa' ? 1 : s === 'työ' ? 2 : 3; };
     roolit.sort(function (a, b) { return jarj(a) - jarj(b); });
     var ruudukko = luo('div', 'roolit');
+    // "Työ käynnissä" korvataan tehtävän lyhyellä nimellä (Päätoimittajan tehtavat-dokumentti); muut tilatekstit (odottaa erää, levossa) sellaisinaan. Kellonaika piilossa (omistaja 10.10. 15.5x).
+    var tehtavat = (tila.tehtavat && tila.tehtavat.rivit) || {};
     roolit.forEach(function (x) {
       var malli = String(x.malli || (SONNET[x.nimi] ? 'Sonnet' : 'Opus')).toLowerCase();
       var s = String(x.tila || 'lepo');
       var kortti = luo('div', 'rooli ' + (s === 'kysyy' ? 'tila-kysyy' : s === 'työ' ? 'tila-tyo' : s === 'odottaa' ? 'tila-odottaa' : 'tila-lepo'));
       var paa = luo('div', 'r-paa');
       paa.append(luo('span', 'piste' + (malli.indexOf('sonnet') >= 0 ? ' sonnet' : '')), luo('span', '', x.nimi || ''));
-      if (x.aika) paa.append(luo('span', 'r-aika', x.aika));
       kortti.append(paa);
-      if (x.teksti) kortti.append(luo('div', 'r-teksti', x.teksti));
+      var tyossa = s === 'työ' || /työ käynnissä/i.test(String(x.teksti || ''));
+      var selite = (tyossa && tehtavat[x.nimi]) || x.teksti;
+      if (selite) kortti.append(luo('div', 'r-teksti', selite));
       ruudukko.append(kortti);
     });
     ro.append(ruudukko);
