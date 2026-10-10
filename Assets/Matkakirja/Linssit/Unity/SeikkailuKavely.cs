@@ -24,15 +24,11 @@ namespace Matkakirja.Natiivi
         static readonly List<GameObject> tormaykset = new List<GameObject>();
         static readonly int IdLeikkaus = Shader.PropertyToID("_KavelyLeikkaus"), IdKoko = Shader.PropertyToID("_KavelyLeikkausKoko"),
             IdN = Shader.PropertyToID("_KavelyLeikkausN");
-        public static bool Ladattu => Data != null && !Osittainen;
-        /// <summary>Esittelyn vuoden 1499 asu (Siirtoseppä 10.10., juna 175): vain data ja historian kävelyosat (ranta-1499, porttikäytävä) piirretty,
-        /// ei törmäyksiä eikä kävelypintoja; pelattava pala ja historia lataavat täyden (LisaaTila ohittaa jo piirretyt).</summary>
-        public static bool Osittainen { get; private set; }
+        public static bool Ladattu => Data != null;
 
         /// <summary>Lataa osat.json (osatUrl) ja merkit.json (merkitUrl, voi olla null), piirtää osat ja lisää törmäykset; glb-polut osat.jsonin
         /// kansiosta. url = peilikuvaus (ämpäri → peili).</summary>
-        public static IEnumerator Lataa(string osatUrl, string merkitUrl, Func<string, string> url, DioraamaRakennus r3d, Rakennus rakennus, Transform isa, Action<string> kirjaa, Action<Tila> valoAtlas = null,
-            ICollection<string> vainNakyvat = null)
+        public static IEnumerator Lataa(string osatUrl, string merkitUrl, Func<string, string> url, DioraamaRakennus r3d, Rakennus rakennus, Transform isa, Action<string> kirjaa, Action<Tila> valoAtlas = null)
         {
             Pura();
             string osat = null, merkit = null, juuri = osatUrl.Substring(0, osatUrl.LastIndexOf('/') + 1);
@@ -43,7 +39,6 @@ namespace Matkakirja.Natiivi
             int piirretty = 0, tormays = 0;
             foreach (var osa in d.Osat.Values)
             {
-                if (vainNakyvat != null && !vainNakyvat.Contains(osa.Id)) continue;
                 // Tila samalla nimellä (Linnanrakentaja v44c: keittio-g102 leivottuna) piirtää huoneen itse: kävelyosan seinät olisivat päällekkäin.
                 bool tilaPiirtaa = false;
                 if (rakennus?.Tilat != null) foreach (var t in rakennus.Tilat) if (string.Equals(t.Id, osa.Id, StringComparison.OrdinalIgnoreCase)) { tilaPiirtaa = true; break; }
@@ -60,7 +55,6 @@ namespace Matkakirja.Natiivi
                         if (kt.ValoVain) valoAtlas?.Invoke(kt);
                     }
                 }
-                if (vainNakyvat != null) continue;
                 if (!string.IsNullOrEmpty(osa.Tormays))
                 {
                     byte[] b = null; yield return DioraamaLevyvalimuisti.Hae(url(juuri + osa.Tormays), 120, t => b = t);
@@ -85,7 +79,7 @@ namespace Matkakirja.Natiivi
                     if (m != null) KavelyPinnat.Add(m);
                 }
             }
-            Data = d; Juuri = juuri; Osittainen = vainNakyvat != null;
+            Data = d; Juuri = juuri;
             kirjaa?.Invoke($"seikkailu: kävelygeometria {d.Osat.Count} osaa (piirretty {piirretty}, törmäyksiä {tormays}, kävelypintoja {KavelyPinnat.Count}), merkkejä {d.Merkit.Count}");
         }
 
@@ -230,7 +224,7 @@ namespace Matkakirja.Natiivi
             tormaykset.Clear();
             foreach (var m in KavelyPinnat) if (m != null) UnityEngine.Object.Destroy(m);
             KavelyPinnat.Clear();
-            Data = null; Osittainen = false;
+            Data = null;
             Leikkaukset(false);
         }
 
