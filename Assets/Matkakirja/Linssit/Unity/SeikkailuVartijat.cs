@@ -415,11 +415,21 @@ namespace Matkakirja.Natiivi
             SeikkailuAanet.Silmukka("varusteet", varusteet.HasValue, varusteet ?? Vector3.zero, 0.8f);
             // Sydän (kohta 3.4): vahvin vaara kaikista hahmoista; tempo 70 → 120 sävelkorkeutena, voimakkuus mukana. Kappelin sääntö ohjaa
             // samaa silmukkaa kappelissa, joten tämä koskee vain silloin, kun jokin vartija on vaarassa tai juuri lakkasi.
+            // Hälytyksessä tai jahdissa nopea syke (sydan-nopea-01) ristihäivytettynä (SykeSekoitus, PT 10.10., juna 175); puheen aikana −6 dB.
+            bool halytys = false, nakee = false;
+            foreach (var v in vartijat) { if (v.Aivot.Tila == VartijanTila.Halytys) halytys = true; if (v.Aivot.Nakee) nakee = true; }
+            // Pito (PT 10.10.): kokin 20 s:n hälytys päättyi, vaikka kokki näki yhä → nopea pysyy havainnon ajan ja rauhoittuu 3 s:n viiveellä.
+            nopeaPito = SykeSekoitus.Pito(nopeaPito, halytys, nakee, dt);
+            bool nopea = nopeaPito > 0;
+            nopeaOsuus = SykeSekoitus.Osuus(nopeaOsuus, nopea && sydan > 0, dt);
             if (p != null && (sydan > 0 || sydanPaalla))
             {
                 sydanPaalla = sydan > 0;
-                SeikkailuAanet.Silmukka("sydan", sydanPaalla, p.transform.position + Vector3.up * 1.2f, sydanPaalla ? 0.55f + 0.35f * (float)((sydan - 70) / 50) : 0f,
-                    sydanPaalla ? (float)(sydan / 70) : 1f);
+                var (vr, vn, sr, sn) = SykeSekoitus.Tasot(sydan, nopeaOsuus, SeikkailuRepliikit.Aktiivinen?.PuheSoi == true || KuunnelmaKaistale.SoiNyt);
+                var sp = p.transform.position + Vector3.up * 1.2f;
+                SeikkailuAanet.Silmukka("sydan", sydanPaalla && vr > 0.001, sp, sydanPaalla ? (float)vr : 0f, (float)sr);
+                SeikkailuAanet.Silmukka("sydan-nopea-01", sydanPaalla && vn > 0.001, sp, sydanPaalla ? (float)vn : 0f, (float)sn);
+                if (nopea != nopeaLoki) { nopeaLoki = nopea; kirjaa?.Invoke($"seikkailu: syke {(nopea ? "nopea (hälytys)" : "rauhallinen")}"); }
             }
         }
 
@@ -529,7 +539,7 @@ namespace Matkakirja.Natiivi
         readonly HashSet<string> henkilot = new HashSet<string>(StringComparer.Ordinal);
         static int Numero(string tunnus) { int vi = tunnus.LastIndexOf('-'); return vi > 0 && int.TryParse(tunnus.Substring(vi + 1), out int n) ? n : 0; }
         bool piiloPaljastui;
-        bool sydanPaalla;
+        bool sydanPaalla, nopeaLoki; double nopeaOsuus, nopeaPito;
 
         bool Nakolinja(Vector3 silmat, Vector3 rinta)
         {

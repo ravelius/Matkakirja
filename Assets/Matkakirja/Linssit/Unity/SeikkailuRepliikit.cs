@@ -124,6 +124,8 @@ namespace Matkakirja.Natiivi
             kirjaa?.Invoke($"seikkailu: repliikki {r.Tunnus} ({r.Hahmo}, {r.KestoS:F1} s)");
         }
 
+        /// <summary>Jokin repliikki soi nyt (SeikkailuVartijat: syke −6 dB puheen alle, PT 10.10.).</summary>
+        public bool PuheSoi { get { foreach (var a in puhujat.Values) if (a != null && a.isPlaying) return true; return false; } }
         readonly Dictionary<string, Transform> puhujaT = new Dictionary<string, Transform>(StringComparer.Ordinal);
 
         void LateUpdate()
