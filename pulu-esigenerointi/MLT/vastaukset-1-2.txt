@@ -88,7 +88,7 @@ Mitä lintuja saarella tavataan?
 
 ### 8.3
 KYSYMYS: Mikä on Sininen laguuni?
-Katotaas. Sininen laguuni on Cominon ja [[Cominotto]]-luodon välissä oleva kirkasvetinen lahti, jonka vesi hohtaa turkoosina. Lahti sijaitsee Maltan ja Gozon välisellä saarella, joka on lintujen suojelualue, ja saaren rannat ovat jyrkkiä ja täynnä luolia. Lahti on siis kuuluisa väristään eikä rakennuksistaan.
+Katotaas. Sininen laguuni on Cominon ja [[Cominotto]]-luodon välissä oleva kirkasvetinen lahti, jonka vesi hohtaa turkoosina. Lahti sijaitsee [[Maltan]] ja Gozon välisellä saarella, joka on lintujen suojelualue, ja saaren rannat ovat jyrkkiä ja täynnä luolia. Lahti on siis kuuluisa väristään eikä rakennuksistaan.
 
 Ylhäältä katsoen vesi näyttää niin kirkkaalta, että kala voisi luulla lentävänsä.
 JATKOT:
@@ -104,7 +104,7 @@ Miksi merirosvot suosivat Cominon luolia?
 
 ### 8.5
 KYSYMYS: Millaista kasvillisuutta Cominolla kasvaa?
-Hetkinen ny. Cominon maisema on [[karstimaisema]], jossa kasvaa kovalehtistä pensastoa. Santa Marian lahden dyyneillä kasvaa alkuperäistä kasvillisuutta, jota suojellaan. Saari on lintusuojelualue ja luonnonsuojelualue. Ei kovin lehtevä paikka, mutta lintu viihtyy siellä silti.
+Hetkinen ny. Cominon maisema on [[karstimaisema]], jossa kasvaa kovalehtistä pensastoa. [[Santa Marian lahden]] dyyneillä kasvaa alkuperäistä kasvillisuutta, jota suojellaan. Saari on lintusuojelualue ja luonnonsuojelualue. Ei kovin lehtevä paikka, mutta lintu viihtyy siellä silti.
 JATKOT:
 Mitä karstimaisema tarkoittaa?
 Miksi alkuperäinen kasvillisuus on tärkeää suojella?
@@ -118,7 +118,7 @@ Kuka Johanniittaritarikunta oli?
 
 ### 9.2
 KYSYMYS: Minä vuonna Dinglin seurakunta perustettiin?
-Ai se. Dinglin seurakunta perustettiin vuonna 1678. Nykyinen kylä kasvoi 1500-luvun alun jälkeen, kun pienen [[Ħal Tartarnin]] kylän asukkaat siirtyivät lähemmäs peltoja. Kylä on siis kasvanut vanhan kylän tilalle, ei sen viereen. Onpas siinä kylällä ikää.
+Ai se. [[Dinglin]] seurakunta perustettiin vuonna 1678. Nykyinen kylä kasvoi 1500-luvun alun jälkeen, kun pienen [[Ħal Tartarnin]] kylän asukkaat siirtyivät lähemmäs peltoja. Kylä on siis kasvanut vanhan kylän tilalle, ei sen viereen. Onpas siinä kylällä ikää.
 JATKOT:
 Miksi Ħal Tartarnin asukkaat muuttivat?
 Missä Dingli sijaitsee Maltalla?
@@ -162,7 +162,7 @@ Miten kirkko rakennettiin vanhan ympärille?
 
 ### 10.3
 KYSYMYS: Miten rotundan kupoli selvisi toisen maailmansodan pommista?
-Hetkinen ny. Toisen maailmansodan aikana pommi lävisti [[kupolin]] mutta ei räjähtänyt, joten kirkko säilyi. Malta kuului tuolloin Britannian vallan alle, ja sota ulottui saarelle asti. Tapahtumasta on yli kahdeksankymmentä vuotta, ja kirkko on yhä käytössä. Kirkko on sittemmin saanut seisoa rauhassa.
+Hetkinen ny. Toisen maailmansodan aikana pommi lävisti [[kupolin]] mutta ei räjähtänyt, joten kirkko säilyi. [[Malta]] kuului tuolloin Britannian vallan alle, ja sota ulottui saarelle asti. Tapahtumasta on yli kahdeksankymmentä vuotta, ja kirkko on yhä käytössä. Kirkko on sittemmin saanut seisoa rauhassa.
 JATKOT:
 Miten Malta kärsi toisen maailmansodan aikana?
 Millainen kirkon sisätila on?

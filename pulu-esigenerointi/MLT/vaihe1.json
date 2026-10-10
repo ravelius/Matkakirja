@@ -531,9 +531,10 @@
   "kohde": "kohde:hahmotelma-comino",
   "kysymys": "Mikä on Sininen laguuni?",
   "uusi": true,
-  "vastaus": "Katotaas. Sininen laguuni on Cominon ja [[Cominotto]]-luodon välissä oleva kirkasvetinen lahti, jonka vesi hohtaa turkoosina. Lahti sijaitsee Maltan ja Gozon välisellä saarella, joka on lintujen suojelualue, ja saaren rannat ovat jyrkkiä ja täynnä luolia. Lahti on siis kuuluisa väristään eikä rakennuksistaan.\n\nYlhäältä katsoen vesi näyttää niin kirkkaalta, että kala voisi luulla lentävänsä.",
+  "vastaus": "Katotaas. Sininen laguuni on Cominon ja [[Cominotto]]-luodon välissä oleva kirkasvetinen lahti, jonka vesi hohtaa turkoosina. Lahti sijaitsee [[Maltan]] ja Gozon välisellä saarella, joka on lintujen suojelualue, ja saaren rannat ovat jyrkkiä ja täynnä luolia. Lahti on siis kuuluisa väristään eikä rakennuksistaan.\n\nYlhäältä katsoen vesi näyttää niin kirkkaalta, että kala voisi luulla lentävänsä.",
   "linkit": [
-   "Cominotto"
+   "Cominotto",
+   "Maltan"
   ],
   "jatkot": [
    "Mikä saa veden hohtamaan turkoosina?",
@@ -558,9 +559,10 @@
   "kohde": "kohde:hahmotelma-comino",
   "kysymys": "Millaista kasvillisuutta Cominolla kasvaa?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Cominon maisema on [[karstimaisema]], jossa kasvaa kovalehtistä pensastoa. Santa Marian lahden dyyneillä kasvaa alkuperäistä kasvillisuutta, jota suojellaan. Saari on lintusuojelualue ja luonnonsuojelualue. Ei kovin lehtevä paikka, mutta lintu viihtyy siellä silti.",
+  "vastaus": "Hetkinen ny. Cominon maisema on [[karstimaisema]], jossa kasvaa kovalehtistä pensastoa. [[Santa Marian lahden]] dyyneillä kasvaa alkuperäistä kasvillisuutta, jota suojellaan. Saari on lintusuojelualue ja luonnonsuojelualue. Ei kovin lehtevä paikka, mutta lintu viihtyy siellä silti.",
   "linkit": [
-   "karstimaisema"
+   "karstimaisema",
+   "Santa Marian lahden"
   ],
   "jatkot": [
    "Mitä karstimaisema tarkoittaa?",
@@ -585,8 +587,9 @@
   "kohde": "kohde:hahmotelma-dingli",
   "kysymys": "Minä vuonna Dinglin seurakunta perustettiin?",
   "uusi": false,
-  "vastaus": "Ai se. Dinglin seurakunta perustettiin vuonna 1678. Nykyinen kylä kasvoi 1500-luvun alun jälkeen, kun pienen [[Ħal Tartarnin]] kylän asukkaat siirtyivät lähemmäs peltoja. Kylä on siis kasvanut vanhan kylän tilalle, ei sen viereen. Onpas siinä kylällä ikää.",
+  "vastaus": "Ai se. [[Dinglin]] seurakunta perustettiin vuonna 1678. Nykyinen kylä kasvoi 1500-luvun alun jälkeen, kun pienen [[Ħal Tartarnin]] kylän asukkaat siirtyivät lähemmäs peltoja. Kylä on siis kasvanut vanhan kylän tilalle, ei sen viereen. Onpas siinä kylällä ikää.",
   "linkit": [
+   "Dinglin",
    "Ħal Tartarnin"
   ],
   "jatkot": [
@@ -669,9 +672,10 @@
   "kohde": "kohde:hahmotelma-mosta",
   "kysymys": "Miten rotundan kupoli selvisi toisen maailmansodan pommista?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Toisen maailmansodan aikana pommi lävisti [[kupolin]] mutta ei räjähtänyt, joten kirkko säilyi. Malta kuului tuolloin Britannian vallan alle, ja sota ulottui saarelle asti. Tapahtumasta on yli kahdeksankymmentä vuotta, ja kirkko on yhä käytössä. Kirkko on sittemmin saanut seisoa rauhassa.",
+  "vastaus": "Hetkinen ny. Toisen maailmansodan aikana pommi lävisti [[kupolin]] mutta ei räjähtänyt, joten kirkko säilyi. [[Malta]] kuului tuolloin Britannian vallan alle, ja sota ulottui saarelle asti. Tapahtumasta on yli kahdeksankymmentä vuotta, ja kirkko on yhä käytössä. Kirkko on sittemmin saanut seisoa rauhassa.",
   "linkit": [
-   "kupolin"
+   "kupolin",
+   "Malta"
   ],
   "jatkot": [
    "Miten Malta kärsi toisen maailmansodan aikana?",
