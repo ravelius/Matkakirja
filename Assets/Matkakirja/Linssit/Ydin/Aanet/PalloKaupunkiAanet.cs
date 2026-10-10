@@ -30,6 +30,11 @@ namespace Matkakirja.Linssit.Aanet
 
         // ---- tunnukset ----
         public static readonly string[] Kirkonkello = Sarja("kirkonkello", 5), VeneOhi = Sarja("vene-ohi", 3);
+        /// <summary>KAUPUNKIEN PISTEÄÄNET (Pelikoodari 10.10.2026, PT junaan 175; aanet/kaupunki-pisteet-v1, mono, kuivimmat lähteet): kahvilan
+        /// astiat maitovaahdottimen rinnalle (KaupunkiAanet) ja kolme pyörän kelloa IhmisAanetin PyoranKellot-sarjaan. Omat tunnukset
+        /// (pisteet-…), koska pyoran-kello-01…03 on jo pallo-elava-v2:ssa.</summary>
+        public static readonly string[] KahvilaAstiat = Sarja("kahvila-astiat", 6), PyoranKelloPisteet = Sarja("pisteet-pyoran-kello", 3);
+        const string PisteJuuri = "https://media.matkakirja.app/aanet/kaupunki-pisteet-v1/";
         public const string SuihkuIso = "suihkulahde-iso", SuihkuPieni = "suihkulahde-pieni", KahvilaBaari = "kahvila-baari",
             KahvilaRauhallinen = "kahvila-rauhallinen", Maitovaahdotin = "kahvila-maitovaahdotin", ToriUlko = "tori-ulko",
             Kauppahalli = "vaki-kauppahalli", Kauppakeskus = "vaki-sisatila-kauppakeskus", SisatilaSorina = "vaki-sisatila-sorina", SatamaVesi = "satama-vesi";
@@ -37,7 +42,13 @@ namespace Matkakirja.Linssit.Aanet
         public static readonly Aani[] Erilliset =
         {
             new Aani { Tunnus = SatamaVesi, Polku = "https://media.matkakirja.app/aanet/sonniss-aanet-v4/satama-vesi.mp3", Silmukka = true, KestoS = 30, Ryhma = "maisema" },
+            Piste(KahvilaAstiat[0], "kahvila-astiat-01", "tehosteet"), Piste(KahvilaAstiat[1], "kahvila-astiat-02", "tehosteet"),
+            Piste(KahvilaAstiat[2], "kahvila-astiat-03", "tehosteet"), Piste(KahvilaAstiat[3], "kahvila-astiat-04", "tehosteet"),
+            Piste(KahvilaAstiat[4], "kahvila-astiat-05", "tehosteet"), Piste(KahvilaAstiat[5], "kahvila-astiat-06", "tehosteet"),
+            Piste(PyoranKelloPisteet[0], "pyoran-kello-01", "maisema"), Piste(PyoranKelloPisteet[1], "pyoran-kello-02", "maisema"),
+            Piste(PyoranKelloPisteet[2], "pyoran-kello-03", "maisema"),
         };
+        static Aani Piste(string tunnus, string tiedosto, string ryhma) => new Aani { Tunnus = tunnus, Polku = PisteJuuri + tiedosto + ".mp3", KestoS = 2, Ryhma = ryhma };
 
         static string[] Sarja(string alku, int n) { var a = new string[n]; for (int i = 0; i < n; i++) a[i] = $"{alku}-{i + 1:00}"; return a; }
 
@@ -49,6 +60,8 @@ namespace Matkakirja.Linssit.Aanet
             ("elava.kahvila-baari", "maisema", "Kahvilat: baari", new[] { KahvilaBaari }),
             ("elava.kahvila-rauhallinen", "maisema", "Kahvilat: rauhallinen", new[] { KahvilaRauhallinen }),
             ("elava.kahvila-maitovaahdotin", "tehosteet", "Kahvila: maitovaahdotin", new[] { Maitovaahdotin }),
+            ("elava.kahvila-astiat", "tehosteet", "Kahvila: astiat", KahvilaAstiat),
+            ("elava.pyoran-kello-lisa", "maisema", "Pyörän kello (lisä)", PyoranKelloPisteet),
             ("elava.tori-ulko", "maisema", "Tori ulkona", new[] { ToriUlko }),
             ("elava.kauppahalli", "maisema", "Kauppahalli", new[] { Kauppahalli }),
             ("elava.kauppakeskus", "maisema", "Kauppakeskus", new[] { Kauppakeskus }),
@@ -81,7 +94,7 @@ namespace Matkakirja.Linssit.Aanet
         }
 
         // ---- tasot (kertoimet maiseman Tasoon nähden; −23 LUFS -äänet) ----
-        public const double SatamaTaso = 0.5, KirkkoTaso = 0.8, SuihkuTaso = 0.5, KahvilaTaso = 0.35, MaitoTaso = 0.4, ToriTaso = 0.45, VeneTaso = 0.8;
+        public const double SatamaTaso = 0.5, KirkkoTaso = 0.8, SuihkuTaso = 0.5, KahvilaTaso = 0.35, MaitoTaso = 0.4, AstiaTaso = 0.3, ToriTaso = 0.45, VeneTaso = 0.8;
         /// <summary>Halli ulkoa kuultuna −12 dB (PT 9.10.).</summary>
         public static readonly double HalliTaso = 0.5 * Math.Pow(10, -12 / 20.0);
         /// <summary>Tori-ulko −6 dB, kun IHMISET soittaa sorinaa (ei päällekkäin liian kovaa).</summary>
