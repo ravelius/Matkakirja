@@ -1,0 +1,1153 @@
+### 161
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tunguskan räjähdys (historia)
+Tietoruudun teksti: Tunguskan räjähdys tapahtui Podkamennaja Tunguska -joen lähellä Siperiassa 30. kesäkuuta 1908 aamulla. Sen voimaksi on arvioitu 3–50 megatonnia TNT:tä, ja se kaatoi metsää 2 150 neliökilometrin alalta. Silminnäkijäkertomusten perusteella jopa kolme ihmistä saattoi kuolla.
+
+Syyksi katsotaan meteorin ilmaräjähdys: noin 50–60 metriä leveä kivinen asteroidi tuli itäkaakosta lähes 27 kilometrin sekuntinopeudella ja hajosi 5–10 kilometrin korkeudessa. Koska se ei osunut maahan, kraatteria ei jäänyt. Kyseessä on suurin tunnetun historian aikana tapahtunut törmäys maapallolla.
+
+Kello 7.14 paikallista aikaa evenkiläiset ja venäläiset uudisasukkaat Baikalin luoteispuolen kukkuloilla näkivät sinertävän valon, joka oli lähes yhtä kirkas kuin aurinko. Noin kymmenen minuuttia myöhemmin kuului tykkitulta muistuttava jyrinä, ja paineaalto kaatoi ihmisiä jaloiltaan ja rikkoi ikkunoita satojen kilometrie…
+AIEMPI KYSYMYS: Miten asteroidien törmäysvaaraa seurataan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Asteroideja seurataan [[teleskoopeilla]], jotka kartoittavat taivasta ja mittaavat Maan lähelle tulevien kappaleiden ratoja. Havaintojen perusteella lasketaan, voiko kappale osua Maahan tulevina vuosikymmeninä. Yksi merkittävä koe oli NASA:n [[DART]]-luotain, joka törmäsi tahallaan asteroidi [[Dimorphokseen]] vuonna 2022 ja muutti sen kiertorataa. Joku sentään vahtii taivasta, mikä on kyyhkylle iso helpotus.
+KYSYMYS: Kerro lisää: teleskoopeilla
+
+### 162
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tunguskan räjähdys (historia)
+Tietoruudun teksti: Tunguskan räjähdys tapahtui Podkamennaja Tunguska -joen lähellä Siperiassa 30. kesäkuuta 1908 aamulla. Sen voimaksi on arvioitu 3–50 megatonnia TNT:tä, ja se kaatoi metsää 2 150 neliökilometrin alalta. Silminnäkijäkertomusten perusteella jopa kolme ihmistä saattoi kuolla.
+
+Syyksi katsotaan meteorin ilmaräjähdys: noin 50–60 metriä leveä kivinen asteroidi tuli itäkaakosta lähes 27 kilometrin sekuntinopeudella ja hajosi 5–10 kilometrin korkeudessa. Koska se ei osunut maahan, kraatteria ei jäänyt. Kyseessä on suurin tunnetun historian aikana tapahtunut törmäys maapallolla.
+
+Kello 7.14 paikallista aikaa evenkiläiset ja venäläiset uudisasukkaat Baikalin luoteispuolen kukkuloilla näkivät sinertävän valon, joka oli lähes yhtä kirkas kuin aurinko. Noin kymmenen minuuttia myöhemmin kuului tykkitulta muistuttava jyrinä, ja paineaalto kaatoi ihmisiä jaloiltaan ja rikkoi ikkunoita satojen kilometrie…
+AIEMPI KYSYMYS: Miten asteroidien törmäysvaaraa seurataan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Asteroideja seurataan [[teleskoopeilla]], jotka kartoittavat taivasta ja mittaavat Maan lähelle tulevien kappaleiden ratoja. Havaintojen perusteella lasketaan, voiko kappale osua Maahan tulevina vuosikymmeninä. Yksi merkittävä koe oli NASA:n [[DART]]-luotain, joka törmäsi tahallaan asteroidi [[Dimorphokseen]] vuonna 2022 ja muutti sen kiertorataa. Joku sentään vahtii taivasta, mikä on kyyhkylle iso helpotus.
+KYSYMYS: Kerro lisää: DART
+
+### 163
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tunguskan räjähdys (historia)
+Tietoruudun teksti: Tunguskan räjähdys tapahtui Podkamennaja Tunguska -joen lähellä Siperiassa 30. kesäkuuta 1908 aamulla. Sen voimaksi on arvioitu 3–50 megatonnia TNT:tä, ja se kaatoi metsää 2 150 neliökilometrin alalta. Silminnäkijäkertomusten perusteella jopa kolme ihmistä saattoi kuolla.
+
+Syyksi katsotaan meteorin ilmaräjähdys: noin 50–60 metriä leveä kivinen asteroidi tuli itäkaakosta lähes 27 kilometrin sekuntinopeudella ja hajosi 5–10 kilometrin korkeudessa. Koska se ei osunut maahan, kraatteria ei jäänyt. Kyseessä on suurin tunnetun historian aikana tapahtunut törmäys maapallolla.
+
+Kello 7.14 paikallista aikaa evenkiläiset ja venäläiset uudisasukkaat Baikalin luoteispuolen kukkuloilla näkivät sinertävän valon, joka oli lähes yhtä kirkas kuin aurinko. Noin kymmenen minuuttia myöhemmin kuului tykkitulta muistuttava jyrinä, ja paineaalto kaatoi ihmisiä jaloiltaan ja rikkoi ikkunoita satojen kilometrie…
+AIEMPI KYSYMYS: Miten asteroidien törmäysvaaraa seurataan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Asteroideja seurataan [[teleskoopeilla]], jotka kartoittavat taivasta ja mittaavat Maan lähelle tulevien kappaleiden ratoja. Havaintojen perusteella lasketaan, voiko kappale osua Maahan tulevina vuosikymmeninä. Yksi merkittävä koe oli NASA:n [[DART]]-luotain, joka törmäsi tahallaan asteroidi [[Dimorphokseen]] vuonna 2022 ja muutti sen kiertorataa. Joku sentään vahtii taivasta, mikä on kyyhkylle iso helpotus.
+KYSYMYS: Kerro lisää: Dimorphokseen
+
+### 164
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tobolskin kreml (historia)
+Tietoruudun teksti: Tobolskin kreml on Siperian ainoa kivestä rakennettu kreml. Se seisoo Tobolskissa Tjumenin alueella. Kaupunki perustettiin 1587, ja Moskova kannusti rakentamaan sinne kivestä. Vuosina 1683–1686 Moskovasta ja Veliki Ustjugista lähetetyt muurarit pystyttivät kivisen Pyhän Sofian katedraalin, ja 1700-luvun alussa nousivat muurit ja tornit. Työtä valvoi Siperian metropoliitta Paavali.
+
+1600-luvun lopulla rakentamista jatkoi Semjon Remezov, kartografi ja Siperian ensimmäinen historioitsija. Hän rakennutti virastopalatsin vuosina 1699–1704 kukkulan eteläisen jyrkänteen päälle ja kauppahallit 1702–1706.
+
+Ruhtinas Gagarin, joka nimitettiin 1708 Siperian läänin ensimmäiseksi kuvernööriksi, halusi kremlistä monumentaalisen hallinto- ja kauppakeskuksen. Töissä käytettiin Tobolskiin karkotettuja ruotsalaisia sotavankeja. Kukkulan sortumisen estämiseksi Tobol-joen uomaa siirrettiin kaksi virstaa ete…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad-järvi — kaupunkilehti / Tšad-järvi: Kartta isoisän ajalta] Vuonna 1876 Lontoon kuninkaallinen maantieteellinen seura julkaisi kartan, joka perustui saksalaisen Gustav Nachtigalin 1870-luvun alun matkahavaintoihin Tšad-järven seudulla – samaan aikaan kun isoisä kirjoitti omaa matkapäiväkirjaansa. Kartografi Edward Weller piirsi Nachtigalin muistiinpanojen pohjalta järven rantaviivan, Kanemin ja Bornun alueet sekä Budduma-kansan asuttamat saaret. Kartassa näkyy myös Nachtigalin oma reitti pohjoisesta Tibestin vuoristosta järven rannalle asti. Tällaiset kartat olivat 1870-luvulla ainoa tapa hahmottaa Keski-Afrikan sisäosia eurooppalaisille, joille alue oli yhä suurelta osin valkoinen läiskä kartalla.
+AIEMPI KYSYMYS: Kuka oli Semjon Remezov?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä muistan jotain. Semjon Remezov oli [[kartografi]] ja Siperian ensimmäinen [[historioitsija]], joka jatkoi Tobolskin kremlin rakentamista 1600-luvun lopulla. Hän rakennutti virastopalatsin vuosina 1699–1704 kukkulan eteläisen jyrkänteen päälle ja kauppahallit vuosina 1702–1706. Hänet tunnetaan myös Siperian kartoistaan. Kartat ovat sellaista, mistä kyyhky on aina pitänyt.
+KYSYMYS: Kerro lisää: kartografi
+
+### 165
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tobolskin kreml (historia)
+Tietoruudun teksti: Tobolskin kreml on Siperian ainoa kivestä rakennettu kreml. Se seisoo Tobolskissa Tjumenin alueella. Kaupunki perustettiin 1587, ja Moskova kannusti rakentamaan sinne kivestä. Vuosina 1683–1686 Moskovasta ja Veliki Ustjugista lähetetyt muurarit pystyttivät kivisen Pyhän Sofian katedraalin, ja 1700-luvun alussa nousivat muurit ja tornit. Työtä valvoi Siperian metropoliitta Paavali.
+
+1600-luvun lopulla rakentamista jatkoi Semjon Remezov, kartografi ja Siperian ensimmäinen historioitsija. Hän rakennutti virastopalatsin vuosina 1699–1704 kukkulan eteläisen jyrkänteen päälle ja kauppahallit 1702–1706.
+
+Ruhtinas Gagarin, joka nimitettiin 1708 Siperian läänin ensimmäiseksi kuvernööriksi, halusi kremlistä monumentaalisen hallinto- ja kauppakeskuksen. Töissä käytettiin Tobolskiin karkotettuja ruotsalaisia sotavankeja. Kukkulan sortumisen estämiseksi Tobol-joen uomaa siirrettiin kaksi virstaa ete…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Alegre — kohdekartta / Kohdekartta: Rio Grande do Sulin taidemuseo] 1954 Osavaltion taidemuseo MARGS perustettiin asetuksella vuonna 1954 — ilman taloa ja ilman yhtäkään teosta. Kulttuuriasioista vastannut José Mariano de Freitas Beck pyysi työhön São Paulossa syntyneen taidemaalarin Ado Malagolin, joka oli juuri saapunut kaupunkiin opettamaan taideinstituuttiin. Malagoli kokosi ensin osavaltion virastoihin hajaantuneet maalaukset yhteen ja osti sitten lisää São Paulosta ja paikallisilta taiteilijoilta. Museo avattiin yleisölle 1955, ja sen ensimmäinen näyttelytila oli Theatro São Pedron lämpiö. Esillä oli noin 120 teosta. 1960-luvulla kokoelma muutti huoneistoon Salgado Filho -kadulle ja 1978 nykyiseen taloonsa. Osavaltion rahoitus loppui, kun Malagoli ero…
+AIEMPI KYSYMYS: Kuka oli Semjon Remezov?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä muistan jotain. Semjon Remezov oli [[kartografi]] ja Siperian ensimmäinen [[historioitsija]], joka jatkoi Tobolskin kremlin rakentamista 1600-luvun lopulla. Hän rakennutti virastopalatsin vuosina 1699–1704 kukkulan eteläisen jyrkänteen päälle ja kauppahallit vuosina 1702–1706. Hänet tunnetaan myös Siperian kartoistaan. Kartat ovat sellaista, mistä kyyhky on aina pitänyt.
+KYSYMYS: Kerro lisää: historioitsija
+
+### 166
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tobolskin kreml (historia)
+Tietoruudun teksti: Tobolskin kreml on Siperian ainoa kivestä rakennettu kreml. Se seisoo Tobolskissa Tjumenin alueella. Kaupunki perustettiin 1587, ja Moskova kannusti rakentamaan sinne kivestä. Vuosina 1683–1686 Moskovasta ja Veliki Ustjugista lähetetyt muurarit pystyttivät kivisen Pyhän Sofian katedraalin, ja 1700-luvun alussa nousivat muurit ja tornit. Työtä valvoi Siperian metropoliitta Paavali.
+
+1600-luvun lopulla rakentamista jatkoi Semjon Remezov, kartografi ja Siperian ensimmäinen historioitsija. Hän rakennutti virastopalatsin vuosina 1699–1704 kukkulan eteläisen jyrkänteen päälle ja kauppahallit 1702–1706.
+
+Ruhtinas Gagarin, joka nimitettiin 1708 Siperian läänin ensimmäiseksi kuvernööriksi, halusi kremlistä monumentaalisen hallinto- ja kauppakeskuksen. Töissä käytettiin Tobolskiin karkotettuja ruotsalaisia sotavankeja. Kukkulan sortumisen estämiseksi Tobol-joen uomaa siirrettiin kaksi virstaa ete…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+- [Tallinna — kaupunkilehti / Palatsi: Palatsi, joka rakennettiin sodan keskellä] Suuri Pohjan sota ei ollut vielä päättynyt, kun tsaari Pietari Suuri, jo varma valloittamiensa Itämeren alueiden pysyvyydestä, aloitti vuonna 1718 uuden kesäpalatsin rakentamisen Tallinnan liepeille. Italialainen arkkitehti Nicola Michetti suunnitteli barokkipalatsin, jonka rakennustyöt kestivät vuoteen 1725. Palatsi on yksi Pohjois-Euroopan komeimmista barokkirakennuksista, ja se nimettiin Kadriorgiksi, Katariinan laaksoksi, tsaarin vaimon Katariina I:n mukaan.
+AIEMPI KYSYMYS: Ketkä rakensivat kremliä pakkotyössä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kremlin rakentamiseen käytettiin 1700-luvun alussa Tobolskiin karkotettuja ruotsalaisia sotavankeja, joita oli joutunut Siperiaan [[Suuren Pohjan sodan]] aikana; monet heistä olivat peräisin [[Poltavan]] taistelusta vuonna 1709. Tämä oli yli kolmesataa vuotta sitten, ja sotavankien pakkotyö oli tuolloin yleinen käytäntö useissa maissa. Kremlin rakennuttamista ohjasi Siperian ensimmäinen kuvernööri, ruhtinas Gagarin, joka halusi siitä monumentaalisen hallinto- ja kauppakeskuksen. Onneksi ajat on muuttuneet.
+KYSYMYS: Kerro lisää: Suuren Pohjan sodan
+
+### 167
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tobolskin kreml (historia)
+Tietoruudun teksti: Tobolskin kreml on Siperian ainoa kivestä rakennettu kreml. Se seisoo Tobolskissa Tjumenin alueella. Kaupunki perustettiin 1587, ja Moskova kannusti rakentamaan sinne kivestä. Vuosina 1683–1686 Moskovasta ja Veliki Ustjugista lähetetyt muurarit pystyttivät kivisen Pyhän Sofian katedraalin, ja 1700-luvun alussa nousivat muurit ja tornit. Työtä valvoi Siperian metropoliitta Paavali.
+
+1600-luvun lopulla rakentamista jatkoi Semjon Remezov, kartografi ja Siperian ensimmäinen historioitsija. Hän rakennutti virastopalatsin vuosina 1699–1704 kukkulan eteläisen jyrkänteen päälle ja kauppahallit 1702–1706.
+
+Ruhtinas Gagarin, joka nimitettiin 1708 Siperian läänin ensimmäiseksi kuvernööriksi, halusi kremlistä monumentaalisen hallinto- ja kauppakeskuksen. Töissä käytettiin Tobolskiin karkotettuja ruotsalaisia sotavankeja. Kukkulan sortumisen estämiseksi Tobol-joen uomaa siirrettiin kaksi virstaa ete…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Colțean torni] Isoisäsi kiipesi Bukarestin korkeimpaan rakennukseen: Colțean torni kohosi arviolta 54 metriin ja oli kaupungin korkein yli vuosisadan ajan. Sen rakentamisessa vuosina 1709–1714 auttoivat Ruotsin kuninkaan Kaarle XII:n sotilaat, jotka olivat paenneet Valakiaan Poltavan tappion jälkeen; ruhtinas Constantin Brâncoveanu majoitti heidät. Sisäänkäynnin molemmin puolin oli maalattuna kaksi ruotsalaista sotilasta, jalkaväkimies ja ratsumies, kiväärit olalla — juuri ne, jotka isoisäsi näki. Tornissa oli myös kirjoitus ruotsalaisten muuraustöiden muistoksi; se on kadonnut. Vuoden 1802 maanjäristys pudotti tornin huipun ja kellon, ja kun torni 1888 purettiin kokonaan, sen 1 700 kilon kello vietiin Si…
+AIEMPI KYSYMYS: Ketkä rakensivat kremliä pakkotyössä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kremlin rakentamiseen käytettiin 1700-luvun alussa Tobolskiin karkotettuja ruotsalaisia sotavankeja, joita oli joutunut Siperiaan [[Suuren Pohjan sodan]] aikana; monet heistä olivat peräisin [[Poltavan]] taistelusta vuonna 1709. Tämä oli yli kolmesataa vuotta sitten, ja sotavankien pakkotyö oli tuolloin yleinen käytäntö useissa maissa. Kremlin rakennuttamista ohjasi Siperian ensimmäinen kuvernööri, ruhtinas Gagarin, joka halusi siitä monumentaalisen hallinto- ja kauppakeskuksen. Onneksi ajat on muuttuneet.
+KYSYMYS: Kerro lisää: Poltavan
+
+### 168
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tobolskin kreml (historia)
+Tietoruudun teksti: Tobolskin kreml on Siperian ainoa kivestä rakennettu kreml. Se seisoo Tobolskissa Tjumenin alueella. Kaupunki perustettiin 1587, ja Moskova kannusti rakentamaan sinne kivestä. Vuosina 1683–1686 Moskovasta ja Veliki Ustjugista lähetetyt muurarit pystyttivät kivisen Pyhän Sofian katedraalin, ja 1700-luvun alussa nousivat muurit ja tornit. Työtä valvoi Siperian metropoliitta Paavali.
+
+1600-luvun lopulla rakentamista jatkoi Semjon Remezov, kartografi ja Siperian ensimmäinen historioitsija. Hän rakennutti virastopalatsin vuosina 1699–1704 kukkulan eteläisen jyrkänteen päälle ja kauppahallit 1702–1706.
+
+Ruhtinas Gagarin, joka nimitettiin 1708 Siperian läänin ensimmäiseksi kuvernööriksi, halusi kremlistä monumentaalisen hallinto- ja kauppakeskuksen. Töissä käytettiin Tobolskiin karkotettuja ruotsalaisia sotavankeja. Kukkulan sortumisen estämiseksi Tobol-joen uomaa siirrettiin kaksi virstaa ete…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+AIEMPI KYSYMYS: Kuinka pitkä on virsta?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Virsta on vanha venäläinen pituusyksikkö, joka vastaa noin 1,07 kilometriä. Sitä käytettiin [[Venäjän keisarikunnan]] aikana matkojen mittana ennen [[metrijärjestelmän]] käyttöönottoa. Tobolskin kremlin rakennushistoriassa mainitaan, että Tobol-joen uomaa siirrettiin kaksi virstaa kukkulan sortumisen estämiseksi.
+
+Virsta on minusta täydellinen matka: sopivasti pitkä, ettei tarvitse vielä väsyä. Virsta oli sentään kauniimpi sana kuin kilometri.
+KYSYMYS: Kerro lisää: Venäjän keisarikunnan
+
+### 169
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tobolskin kreml (historia)
+Tietoruudun teksti: Tobolskin kreml on Siperian ainoa kivestä rakennettu kreml. Se seisoo Tobolskissa Tjumenin alueella. Kaupunki perustettiin 1587, ja Moskova kannusti rakentamaan sinne kivestä. Vuosina 1683–1686 Moskovasta ja Veliki Ustjugista lähetetyt muurarit pystyttivät kivisen Pyhän Sofian katedraalin, ja 1700-luvun alussa nousivat muurit ja tornit. Työtä valvoi Siperian metropoliitta Paavali.
+
+1600-luvun lopulla rakentamista jatkoi Semjon Remezov, kartografi ja Siperian ensimmäinen historioitsija. Hän rakennutti virastopalatsin vuosina 1699–1704 kukkulan eteläisen jyrkänteen päälle ja kauppahallit 1702–1706.
+
+Ruhtinas Gagarin, joka nimitettiin 1708 Siperian läänin ensimmäiseksi kuvernööriksi, halusi kremlistä monumentaalisen hallinto- ja kauppakeskuksen. Töissä käytettiin Tobolskiin karkotettuja ruotsalaisia sotavankeja. Kukkulan sortumisen estämiseksi Tobol-joen uomaa siirrettiin kaksi virstaa ete…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Luonto: Metri tuhannessa vuodessa] Vuosituhansia — Irlannin soissa kasvava rahkasammal ei maadu kunnolla, koska vesi on hapanta ja hapetonta. Kuolleet kasvit painuvat kerroksiksi, ja tuhannessa vuodessa syntyy noin metri turvetta. Turvetta on nostettu lämmitykseen vuosisatoja: se leikataan pitkällä terällä palasiksi, jotka pinotaan pystyyn kuivumaan tuuleen. Suo säilyttää myös sen, mikä sinne joutuu, ja soista on löytynyt puisia teitä, voita puuastioissa ja kirjoja. Nykyään nostoa rajoitetaan, koska suot sitovat hiiltä ja niitä on jäljellä vain murto-osa.
+AIEMPI KYSYMYS: Kuinka pitkä on virsta?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Virsta on vanha venäläinen pituusyksikkö, joka vastaa noin 1,07 kilometriä. Sitä käytettiin [[Venäjän keisarikunnan]] aikana matkojen mittana ennen [[metrijärjestelmän]] käyttöönottoa. Tobolskin kremlin rakennushistoriassa mainitaan, että Tobol-joen uomaa siirrettiin kaksi virstaa kukkulan sortumisen estämiseksi.
+
+Virsta on minusta täydellinen matka: sopivasti pitkä, ettei tarvitse vielä väsyä. Virsta oli sentään kauniimpi sana kuin kilometri.
+KYSYMYS: Kerro lisää: metrijärjestelmän
+
+### 170
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tobolskin kreml (historia)
+Tietoruudun teksti: Tobolskin kreml on Siperian ainoa kivestä rakennettu kreml. Se seisoo Tobolskissa Tjumenin alueella. Kaupunki perustettiin 1587, ja Moskova kannusti rakentamaan sinne kivestä. Vuosina 1683–1686 Moskovasta ja Veliki Ustjugista lähetetyt muurarit pystyttivät kivisen Pyhän Sofian katedraalin, ja 1700-luvun alussa nousivat muurit ja tornit. Työtä valvoi Siperian metropoliitta Paavali.
+
+1600-luvun lopulla rakentamista jatkoi Semjon Remezov, kartografi ja Siperian ensimmäinen historioitsija. Hän rakennutti virastopalatsin vuosina 1699–1704 kukkulan eteläisen jyrkänteen päälle ja kauppahallit 1702–1706.
+
+Ruhtinas Gagarin, joka nimitettiin 1708 Siperian läänin ensimmäiseksi kuvernööriksi, halusi kremlistä monumentaalisen hallinto- ja kauppakeskuksen. Töissä käytettiin Tobolskiin karkotettuja ruotsalaisia sotavankeja. Kukkulan sortumisen estämiseksi Tobol-joen uomaa siirrettiin kaksi virstaa ete…
+AIEMPI KYSYMYS: Kuka oli Jermak Timofejevitš?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Jermak Timofejevitš oli [[kasakkojen]] päällikkö, joka johti 1580-luvun alussa retkikuntaa Siperian khaanikuntaa vastaan. Retkikuntaa tukivat varakkaat kauppiaat, [[Stroganovit]], ja sitä pidetään Venäjän laajentumisen alkuna Siperiaan. Jermak kuoli vuonna 1585, ja Tobolsk perustettiin muutamaa vuotta myöhemmin, vuonna 1587. Ja tän kaiken minä muistan ilman karttaa.
+KYSYMYS: Kerro lisää: kasakkojen
+
+### 171
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tobolskin kreml (historia)
+Tietoruudun teksti: Tobolskin kreml on Siperian ainoa kivestä rakennettu kreml. Se seisoo Tobolskissa Tjumenin alueella. Kaupunki perustettiin 1587, ja Moskova kannusti rakentamaan sinne kivestä. Vuosina 1683–1686 Moskovasta ja Veliki Ustjugista lähetetyt muurarit pystyttivät kivisen Pyhän Sofian katedraalin, ja 1700-luvun alussa nousivat muurit ja tornit. Työtä valvoi Siperian metropoliitta Paavali.
+
+1600-luvun lopulla rakentamista jatkoi Semjon Remezov, kartografi ja Siperian ensimmäinen historioitsija. Hän rakennutti virastopalatsin vuosina 1699–1704 kukkulan eteläisen jyrkänteen päälle ja kauppahallit 1702–1706.
+
+Ruhtinas Gagarin, joka nimitettiin 1708 Siperian läänin ensimmäiseksi kuvernööriksi, halusi kremlistä monumentaalisen hallinto- ja kauppakeskuksen. Töissä käytettiin Tobolskiin karkotettuja ruotsalaisia sotavankeja. Kukkulan sortumisen estämiseksi Tobol-joen uomaa siirrettiin kaksi virstaa ete…
+AIEMPI KYSYMYS: Kuka oli Jermak Timofejevitš?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Jermak Timofejevitš oli [[kasakkojen]] päällikkö, joka johti 1580-luvun alussa retkikuntaa Siperian khaanikuntaa vastaan. Retkikuntaa tukivat varakkaat kauppiaat, [[Stroganovit]], ja sitä pidetään Venäjän laajentumisen alkuna Siperiaan. Jermak kuoli vuonna 1585, ja Tobolsk perustettiin muutamaa vuotta myöhemmin, vuonna 1587. Ja tän kaiken minä muistan ilman karttaa.
+KYSYMYS: Kerro lisää: Stroganovit
+
+### 172
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tobolskin kreml (historia)
+Tietoruudun teksti: Tobolskin kreml on Siperian ainoa kivestä rakennettu kreml. Se seisoo Tobolskissa Tjumenin alueella. Kaupunki perustettiin 1587, ja Moskova kannusti rakentamaan sinne kivestä. Vuosina 1683–1686 Moskovasta ja Veliki Ustjugista lähetetyt muurarit pystyttivät kivisen Pyhän Sofian katedraalin, ja 1700-luvun alussa nousivat muurit ja tornit. Työtä valvoi Siperian metropoliitta Paavali.
+
+1600-luvun lopulla rakentamista jatkoi Semjon Remezov, kartografi ja Siperian ensimmäinen historioitsija. Hän rakennutti virastopalatsin vuosina 1699–1704 kukkulan eteläisen jyrkänteen päälle ja kauppahallit 1702–1706.
+
+Ruhtinas Gagarin, joka nimitettiin 1708 Siperian läänin ensimmäiseksi kuvernööriksi, halusi kremlistä monumentaalisen hallinto- ja kauppakeskuksen. Töissä käytettiin Tobolskiin karkotettuja ruotsalaisia sotavankeja. Kukkulan sortumisen estämiseksi Tobol-joen uomaa siirrettiin kaksi virstaa ete…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Moskovan Kreml] 1485-1495 Linnoitus tällä paikalla on paljon vanhempi kuin luulisi: ensimmäisen linnan rakensi ruhtinas Juri Dolgorukin jo vuonna 1156, ja vuonna 1339 ruhtinas Iivana I Kalita vahvisti sitä tammisilla muureilla. Nykyiset punatiiliset muurit ja tornit, jotka yhä seisovat, rakennettiin vuosina 1485-1495 ruhtinas Iivana III:n käskystä. Iivana III kutsui työhön taitavia arkkitehtejä kaukaa Italiasta. Pietro Antonio Solari suunnitteli uudet muurit ja tornit, ja Marco Ruffo piirsi ruhtinaan uuden palatsin. Solarin nimi on kaiverrettu latinaksi yhä nähtävissä Spasskajan tornin porttien yläpuolella. Muuria on yhteensä 2235 metriä, ja se on paikoin 5-19 metriä korkea ja jopa 6,5 metriä paksu. Tornej…
+AIEMPI KYSYMYS: Mikä on Moskovan Kreml?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Moskovan Kreml on Venäjän pääkaupungin vanha linnoitus. Ensimmäisen linnan rakennutti ruhtinas [[Juri Dolgoruki]] vuonna 1156, ja ruhtinas Iivana I Kalita vahvisti sitä tammisilla muureilla vuonna 1339. Nykyiset punatiiliset muurit ja tornit rakennettiin vuosina 1485–1495, kun [[Iivana III]] kutsui työhön italialaisia arkkitehtejä. [[Pietro Antonio Solari]] suunnitteli muurit ja tornit, ja hänen nimensä on yhä nähtävissä latinaksi kaiverrettuna Spasskajan tornin porttien yläpuolella. Muuria on yhteensä 2235 metriä. Muurit on ylhäältä komea näky.
+KYSYMYS: Kerro lisää: Juri Dolgoruki
+
+### 173
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tobolskin kreml (historia)
+Tietoruudun teksti: Tobolskin kreml on Siperian ainoa kivestä rakennettu kreml. Se seisoo Tobolskissa Tjumenin alueella. Kaupunki perustettiin 1587, ja Moskova kannusti rakentamaan sinne kivestä. Vuosina 1683–1686 Moskovasta ja Veliki Ustjugista lähetetyt muurarit pystyttivät kivisen Pyhän Sofian katedraalin, ja 1700-luvun alussa nousivat muurit ja tornit. Työtä valvoi Siperian metropoliitta Paavali.
+
+1600-luvun lopulla rakentamista jatkoi Semjon Remezov, kartografi ja Siperian ensimmäinen historioitsija. Hän rakennutti virastopalatsin vuosina 1699–1704 kukkulan eteläisen jyrkänteen päälle ja kauppahallit 1702–1706.
+
+Ruhtinas Gagarin, joka nimitettiin 1708 Siperian läänin ensimmäiseksi kuvernööriksi, halusi kremlistä monumentaalisen hallinto- ja kauppakeskuksen. Töissä käytettiin Tobolskiin karkotettuja ruotsalaisia sotavankeja. Kukkulan sortumisen estämiseksi Tobol-joen uomaa siirrettiin kaksi virstaa ete…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Historia: Kaksi armeijaa tuijotti toisiaan yli joen] 1480 — Moskovan suuriruhtinas Iivana III lakkasi 1470-luvulla maksamasta veroa Kultaisen ordan perijälle, Suurelle ordalle, ja lokakuussa 1480 sen kaani Ahmat marssi joukkoineen Ugra-joen toiselle rannalle Moskovan armeijaa vastapäätä. Kuukauden ajan armeijat vain tuijottivat toisiaan joen yli: yksi kaanin ylityskokeilu torjuttiin venäläisten tuliaseilla, mutta suurempaa taistelua ei koskaan syttynyt. Ahmat odotti turhaan liettualaista apujoukkoa, ja kun pakkanen ja muonapula painoivat päälle, hän perääntyi 8. marraskuuta. Venäläinen historiankirjoitus on sen jälkeen pitänyt Ugran seisontaa kahden ja puolen vuosisadan mongolivallan päätepisteenä: enää yksikään ruhtinas ei tarvinnut kaanin l…
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+AIEMPI KYSYMYS: Mikä on Moskovan Kreml?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Moskovan Kreml on Venäjän pääkaupungin vanha linnoitus. Ensimmäisen linnan rakennutti ruhtinas [[Juri Dolgoruki]] vuonna 1156, ja ruhtinas Iivana I Kalita vahvisti sitä tammisilla muureilla vuonna 1339. Nykyiset punatiiliset muurit ja tornit rakennettiin vuosina 1485–1495, kun [[Iivana III]] kutsui työhön italialaisia arkkitehtejä. [[Pietro Antonio Solari]] suunnitteli muurit ja tornit, ja hänen nimensä on yhä nähtävissä latinaksi kaiverrettuna Spasskajan tornin porttien yläpuolella. Muuria on yhteensä 2235 metriä. Muurit on ylhäältä komea näky.
+KYSYMYS: Kerro lisää: Iivana III
+
+### 174
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tobolskin kreml (historia)
+Tietoruudun teksti: Tobolskin kreml on Siperian ainoa kivestä rakennettu kreml. Se seisoo Tobolskissa Tjumenin alueella. Kaupunki perustettiin 1587, ja Moskova kannusti rakentamaan sinne kivestä. Vuosina 1683–1686 Moskovasta ja Veliki Ustjugista lähetetyt muurarit pystyttivät kivisen Pyhän Sofian katedraalin, ja 1700-luvun alussa nousivat muurit ja tornit. Työtä valvoi Siperian metropoliitta Paavali.
+
+1600-luvun lopulla rakentamista jatkoi Semjon Remezov, kartografi ja Siperian ensimmäinen historioitsija. Hän rakennutti virastopalatsin vuosina 1699–1704 kukkulan eteläisen jyrkänteen päälle ja kauppahallit 1702–1706.
+
+Ruhtinas Gagarin, joka nimitettiin 1708 Siperian läänin ensimmäiseksi kuvernööriksi, halusi kremlistä monumentaalisen hallinto- ja kauppakeskuksen. Töissä käytettiin Tobolskiin karkotettuja ruotsalaisia sotavankeja. Kukkulan sortumisen estämiseksi Tobol-joen uomaa siirrettiin kaksi virstaa ete…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Moskovan Kreml] 1485-1495 Linnoitus tällä paikalla on paljon vanhempi kuin luulisi: ensimmäisen linnan rakensi ruhtinas Juri Dolgorukin jo vuonna 1156, ja vuonna 1339 ruhtinas Iivana I Kalita vahvisti sitä tammisilla muureilla. Nykyiset punatiiliset muurit ja tornit, jotka yhä seisovat, rakennettiin vuosina 1485-1495 ruhtinas Iivana III:n käskystä. Iivana III kutsui työhön taitavia arkkitehtejä kaukaa Italiasta. Pietro Antonio Solari suunnitteli uudet muurit ja tornit, ja Marco Ruffo piirsi ruhtinaan uuden palatsin. Solarin nimi on kaiverrettu latinaksi yhä nähtävissä Spasskajan tornin porttien yläpuolella. Muuria on yhteensä 2235 metriä, ja se on paikoin 5-19 metriä korkea ja jopa 6,5 metriä paksu. Tornej…
+AIEMPI KYSYMYS: Mikä on Moskovan Kreml?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Moskovan Kreml on Venäjän pääkaupungin vanha linnoitus. Ensimmäisen linnan rakennutti ruhtinas [[Juri Dolgoruki]] vuonna 1156, ja ruhtinas Iivana I Kalita vahvisti sitä tammisilla muureilla vuonna 1339. Nykyiset punatiiliset muurit ja tornit rakennettiin vuosina 1485–1495, kun [[Iivana III]] kutsui työhön italialaisia arkkitehtejä. [[Pietro Antonio Solari]] suunnitteli muurit ja tornit, ja hänen nimensä on yhä nähtävissä latinaksi kaiverrettuna Spasskajan tornin porttien yläpuolella. Muuria on yhteensä 2235 metriä. Muurit on ylhäältä komea näky.
+KYSYMYS: Kerro lisää: Pietro Antonio Solari
+
+### 175
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jasnaja Poljana (kulttuuri)
+Tietoruudun teksti: Jasnaja Poljana on kirjailijakotimuseo, Lev Tolstoin entinen koti kaksitoista kilometriä Tulasta lounaaseen ja kaksisataa kilometriä Moskovasta. Nimi tarkoittaa kirkasta aukiota. Tolstoi syntyi tässä talossa 9. syyskuuta 1828 ja kirjoitti siellä sekä Sodan ja rauhan että Anna Kareninan; hänet on haudattu lähistölle.
+
+Tila oli alun perin Kartsevin suvun omistuksessa. 1700-luvulla sen osti kenraalimajuri, ruhtinas Sergei Volkonski, ja se siirtyi hänen pojalleen Nikolaille, kirjailijan isoisälle. Nikolai aloitti päärakennuksen rakentamisen 1810 tilan korkeimmalle kohdalle, pystytti tallit, vaunuvajan, kylpyrakennuksen ja kaksi kasvihuonetta sekä istutti ranskalaisen puutarhan, englantilaisen maisemapuiston lampineen ja pitkät koivu- ja tammikujat.
+
+Tolstoi kutsui Jasnaja Poljanaa saavuttamattomaksi kirjalliseksi linnakkeekseen. Kesäkuussa 1921 tila kansallistettiin museoksi, ja sen ensimmä…
+AIEMPI KYSYMYS: Mitkä kaksi romaania kirjoitettiin täällä?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. [[Lev Tolstoi]] kirjoitti Jasnaja Poljanassa kaksi suurta romaaniaan, [[Sodan ja rauhan]] sekä [[Anna Kareninan]]. Hän oli syntynyt samassa talossa vuonna 1828, ja tila oli hänen kotinsa suuren osan elämää. Molemmat teokset syntyivät siis kirjailijan omalla kotitilalla 1800-luvun jälkipuoliskolla. Kaksi tiiliskiveä, ja minä kannan kyllä vain kirjeitä.
+KYSYMYS: Kerro lisää: Lev Tolstoi
+
+### 176
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jasnaja Poljana (kulttuuri)
+Tietoruudun teksti: Jasnaja Poljana on kirjailijakotimuseo, Lev Tolstoin entinen koti kaksitoista kilometriä Tulasta lounaaseen ja kaksisataa kilometriä Moskovasta. Nimi tarkoittaa kirkasta aukiota. Tolstoi syntyi tässä talossa 9. syyskuuta 1828 ja kirjoitti siellä sekä Sodan ja rauhan että Anna Kareninan; hänet on haudattu lähistölle.
+
+Tila oli alun perin Kartsevin suvun omistuksessa. 1700-luvulla sen osti kenraalimajuri, ruhtinas Sergei Volkonski, ja se siirtyi hänen pojalleen Nikolaille, kirjailijan isoisälle. Nikolai aloitti päärakennuksen rakentamisen 1810 tilan korkeimmalle kohdalle, pystytti tallit, vaunuvajan, kylpyrakennuksen ja kaksi kasvihuonetta sekä istutti ranskalaisen puutarhan, englantilaisen maisemapuiston lampineen ja pitkät koivu- ja tammikujat.
+
+Tolstoi kutsui Jasnaja Poljanaa saavuttamattomaksi kirjalliseksi linnakkeekseen. Kesäkuussa 1921 tila kansallistettiin museoksi, ja sen ensimmä…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+- [Turkki — maalehti / Historia: Kaksi suurvaltaa kirjoitti sodan loppuun] n. 1259 eaa — Hattusa oli heettiläisten pääkaupunki Keski-Anatoliassa. Sieltä johdettiin valtakuntaa, joka taisteli Egyptiä vastaan Kadeshissa ja teki taistelun jälkeen sopimuksen, jota pidetään maailman vanhimpana säilyneenä rauhansopimuksena. Erikoisinta on, että siitä on tallella molempien osapuolten oma versio: egyptiläinen hakattuna temppelin seinään ja heettiläinen poltettuun savitauluun. Savitaulu löytyi Hattusan raunioista vuonna 1906, ja se on kirjoitettu akkadiksi, ajan yleiskielellä. Suurennettu jäljennös sopimuksesta on esillä YK:n päämajassa New Yorkissa.
+AIEMPI KYSYMYS: Mitkä kaksi romaania kirjoitettiin täällä?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. [[Lev Tolstoi]] kirjoitti Jasnaja Poljanassa kaksi suurta romaaniaan, [[Sodan ja rauhan]] sekä [[Anna Kareninan]]. Hän oli syntynyt samassa talossa vuonna 1828, ja tila oli hänen kotinsa suuren osan elämää. Molemmat teokset syntyivät siis kirjailijan omalla kotitilalla 1800-luvun jälkipuoliskolla. Kaksi tiiliskiveä, ja minä kannan kyllä vain kirjeitä.
+KYSYMYS: Kerro lisää: Sodan ja rauhan
+
+### 177
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jasnaja Poljana (kulttuuri)
+Tietoruudun teksti: Jasnaja Poljana on kirjailijakotimuseo, Lev Tolstoin entinen koti kaksitoista kilometriä Tulasta lounaaseen ja kaksisataa kilometriä Moskovasta. Nimi tarkoittaa kirkasta aukiota. Tolstoi syntyi tässä talossa 9. syyskuuta 1828 ja kirjoitti siellä sekä Sodan ja rauhan että Anna Kareninan; hänet on haudattu lähistölle.
+
+Tila oli alun perin Kartsevin suvun omistuksessa. 1700-luvulla sen osti kenraalimajuri, ruhtinas Sergei Volkonski, ja se siirtyi hänen pojalleen Nikolaille, kirjailijan isoisälle. Nikolai aloitti päärakennuksen rakentamisen 1810 tilan korkeimmalle kohdalle, pystytti tallit, vaunuvajan, kylpyrakennuksen ja kaksi kasvihuonetta sekä istutti ranskalaisen puutarhan, englantilaisen maisemapuiston lampineen ja pitkät koivu- ja tammikujat.
+
+Tolstoi kutsui Jasnaja Poljanaa saavuttamattomaksi kirjalliseksi linnakkeekseen. Kesäkuussa 1921 tila kansallistettiin museoksi, ja sen ensimmä…
+AIEMPI KYSYMYS: Mitkä kaksi romaania kirjoitettiin täällä?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. [[Lev Tolstoi]] kirjoitti Jasnaja Poljanassa kaksi suurta romaaniaan, [[Sodan ja rauhan]] sekä [[Anna Kareninan]]. Hän oli syntynyt samassa talossa vuonna 1828, ja tila oli hänen kotinsa suuren osan elämää. Molemmat teokset syntyivät siis kirjailijan omalla kotitilalla 1800-luvun jälkipuoliskolla. Kaksi tiiliskiveä, ja minä kannan kyllä vain kirjeitä.
+KYSYMYS: Kerro lisää: Anna Kareninan
+
+### 178
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jasnaja Poljana (kulttuuri)
+Tietoruudun teksti: Jasnaja Poljana on kirjailijakotimuseo, Lev Tolstoin entinen koti kaksitoista kilometriä Tulasta lounaaseen ja kaksisataa kilometriä Moskovasta. Nimi tarkoittaa kirkasta aukiota. Tolstoi syntyi tässä talossa 9. syyskuuta 1828 ja kirjoitti siellä sekä Sodan ja rauhan että Anna Kareninan; hänet on haudattu lähistölle.
+
+Tila oli alun perin Kartsevin suvun omistuksessa. 1700-luvulla sen osti kenraalimajuri, ruhtinas Sergei Volkonski, ja se siirtyi hänen pojalleen Nikolaille, kirjailijan isoisälle. Nikolai aloitti päärakennuksen rakentamisen 1810 tilan korkeimmalle kohdalle, pystytti tallit, vaunuvajan, kylpyrakennuksen ja kaksi kasvihuonetta sekä istutti ranskalaisen puutarhan, englantilaisen maisemapuiston lampineen ja pitkät koivu- ja tammikujat.
+
+Tolstoi kutsui Jasnaja Poljanaa saavuttamattomaksi kirjalliseksi linnakkeekseen. Kesäkuussa 1921 tila kansallistettiin museoksi, ja sen ensimmä…
+AIEMPI KYSYMYS: Mitä Jasnaja Poljana tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tän nimen minä osaan. Jasnaja Poljana tarkoittaa venäjäksi kirkasta aukiota: sana jasnaja merkitsee kirkasta tai valoisaa, ja poljana on aukio tai metsäaukea. Nimi kuuluu paikalle, jossa [[Lev Tolstoi]] syntyi ja jossa hän vietti suuren osan elämästään [[Tulan]] lähellä. Kirkas aukio kuulostaa kyl hyvältä laskeutumispaikalta.
+KYSYMYS: Kerro lisää: Tulan
+
+### 179
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jasnaja Poljana (kulttuuri)
+Tietoruudun teksti: Jasnaja Poljana on kirjailijakotimuseo, Lev Tolstoin entinen koti kaksitoista kilometriä Tulasta lounaaseen ja kaksisataa kilometriä Moskovasta. Nimi tarkoittaa kirkasta aukiota. Tolstoi syntyi tässä talossa 9. syyskuuta 1828 ja kirjoitti siellä sekä Sodan ja rauhan että Anna Kareninan; hänet on haudattu lähistölle.
+
+Tila oli alun perin Kartsevin suvun omistuksessa. 1700-luvulla sen osti kenraalimajuri, ruhtinas Sergei Volkonski, ja se siirtyi hänen pojalleen Nikolaille, kirjailijan isoisälle. Nikolai aloitti päärakennuksen rakentamisen 1810 tilan korkeimmalle kohdalle, pystytti tallit, vaunuvajan, kylpyrakennuksen ja kaksi kasvihuonetta sekä istutti ranskalaisen puutarhan, englantilaisen maisemapuiston lampineen ja pitkät koivu- ja tammikujat.
+
+Tolstoi kutsui Jasnaja Poljanaa saavuttamattomaksi kirjalliseksi linnakkeekseen. Kesäkuussa 1921 tila kansallistettiin museoksi, ja sen ensimmä…
+AIEMPI KYSYMYS: Millainen koulu Tolstoilla oli Jasnaja Poljanassa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Lev Tolstoi]] perusti Jasnaja Poljanaan koulun talonpoikien lapsille 1850-luvun lopulla. Opetus oli poikkeuksellisen vapaamuotoista: lapsia ei pakotettu, ja Tolstoi uskoi oppimisen syntyvän kiinnostuksesta. Hän laati myöhemmin myös oman aapisensa, ja hänen nimeensä liitettiin vuosien mittaan oma aatesuuntansa, [[tolstoilaisuus]]. En ole varma kaikista yksityiskohdista, kuten oppilasmääristä tai lukujärjestyksestä. Vapaa koulu kuulostaa kyyhkylle sopivalta, kunhan ikkunalaudalla on murusia.
+KYSYMYS: Kerro lisää: tolstoilaisuus
+
+### 180
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jasnaja Poljana (kulttuuri)
+Tietoruudun teksti: Jasnaja Poljana on kirjailijakotimuseo, Lev Tolstoin entinen koti kaksitoista kilometriä Tulasta lounaaseen ja kaksisataa kilometriä Moskovasta. Nimi tarkoittaa kirkasta aukiota. Tolstoi syntyi tässä talossa 9. syyskuuta 1828 ja kirjoitti siellä sekä Sodan ja rauhan että Anna Kareninan; hänet on haudattu lähistölle.
+
+Tila oli alun perin Kartsevin suvun omistuksessa. 1700-luvulla sen osti kenraalimajuri, ruhtinas Sergei Volkonski, ja se siirtyi hänen pojalleen Nikolaille, kirjailijan isoisälle. Nikolai aloitti päärakennuksen rakentamisen 1810 tilan korkeimmalle kohdalle, pystytti tallit, vaunuvajan, kylpyrakennuksen ja kaksi kasvihuonetta sekä istutti ranskalaisen puutarhan, englantilaisen maisemapuiston lampineen ja pitkät koivu- ja tammikujat.
+
+Tolstoi kutsui Jasnaja Poljanaa saavuttamattomaksi kirjalliseksi linnakkeekseen. Kesäkuussa 1921 tila kansallistettiin museoksi, ja sen ensimmä…
+AIEMPI KYSYMYS: Missä Lev Tolstoi on haudattu?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on hiljaisempi aihe. Lev Tolstoi on haudattu Jasnaja Poljanan tilan metsään, lähelle kotitaloa. Hänen hautansa on tiettävästi tarkoituksellisen vaatimaton ruohoinen kumpu ilman ristiä, kivipaatta tai kirjoitusta. Tarinan mukaan paikka liittyy lapsuuden leikkiin, jossa hänen veljensä Nikolai väitti vihreään keppiin kätketyn salaisuuden kaikkien ihmisten onnesta. Tolstoi kuoli vuonna 1910 [[Astapovon]] rautatieasemalla, ja hänet haudattiin kotitilalleen [[Jasnaja Poljanan]] metsään. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Astapovon
+
+### 181
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jasnaja Poljana (kulttuuri)
+Tietoruudun teksti: Jasnaja Poljana on kirjailijakotimuseo, Lev Tolstoin entinen koti kaksitoista kilometriä Tulasta lounaaseen ja kaksisataa kilometriä Moskovasta. Nimi tarkoittaa kirkasta aukiota. Tolstoi syntyi tässä talossa 9. syyskuuta 1828 ja kirjoitti siellä sekä Sodan ja rauhan että Anna Kareninan; hänet on haudattu lähistölle.
+
+Tila oli alun perin Kartsevin suvun omistuksessa. 1700-luvulla sen osti kenraalimajuri, ruhtinas Sergei Volkonski, ja se siirtyi hänen pojalleen Nikolaille, kirjailijan isoisälle. Nikolai aloitti päärakennuksen rakentamisen 1810 tilan korkeimmalle kohdalle, pystytti tallit, vaunuvajan, kylpyrakennuksen ja kaksi kasvihuonetta sekä istutti ranskalaisen puutarhan, englantilaisen maisemapuiston lampineen ja pitkät koivu- ja tammikujat.
+
+Tolstoi kutsui Jasnaja Poljanaa saavuttamattomaksi kirjalliseksi linnakkeekseen. Kesäkuussa 1921 tila kansallistettiin museoksi, ja sen ensimmä…
+AIEMPI KYSYMYS: Missä Lev Tolstoi on haudattu?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on hiljaisempi aihe. Lev Tolstoi on haudattu Jasnaja Poljanan tilan metsään, lähelle kotitaloa. Hänen hautansa on tiettävästi tarkoituksellisen vaatimaton ruohoinen kumpu ilman ristiä, kivipaatta tai kirjoitusta. Tarinan mukaan paikka liittyy lapsuuden leikkiin, jossa hänen veljensä Nikolai väitti vihreään keppiin kätketyn salaisuuden kaikkien ihmisten onnesta. Tolstoi kuoli vuonna 1910 [[Astapovon]] rautatieasemalla, ja hänet haudattiin kotitilalleen [[Jasnaja Poljanan]] metsään. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Jasnaja Poljanan
+
+### 182
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jasnaja Poljana (kulttuuri)
+Tietoruudun teksti: Jasnaja Poljana on kirjailijakotimuseo, Lev Tolstoin entinen koti kaksitoista kilometriä Tulasta lounaaseen ja kaksisataa kilometriä Moskovasta. Nimi tarkoittaa kirkasta aukiota. Tolstoi syntyi tässä talossa 9. syyskuuta 1828 ja kirjoitti siellä sekä Sodan ja rauhan että Anna Kareninan; hänet on haudattu lähistölle.
+
+Tila oli alun perin Kartsevin suvun omistuksessa. 1700-luvulla sen osti kenraalimajuri, ruhtinas Sergei Volkonski, ja se siirtyi hänen pojalleen Nikolaille, kirjailijan isoisälle. Nikolai aloitti päärakennuksen rakentamisen 1810 tilan korkeimmalle kohdalle, pystytti tallit, vaunuvajan, kylpyrakennuksen ja kaksi kasvihuonetta sekä istutti ranskalaisen puutarhan, englantilaisen maisemapuiston lampineen ja pitkät koivu- ja tammikujat.
+
+Tolstoi kutsui Jasnaja Poljanaa saavuttamattomaksi kirjalliseksi linnakkeekseen. Kesäkuussa 1921 tila kansallistettiin museoksi, ja sen ensimmä…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irkutsk — kaupunkilehti / Irkutsk: Ruhtinas kaivoksesta ja talo Volkonskin kujalla] Sergei Volkonski oli ainoa palveluksessa ollut kenraali, joka osallistui joulukuun 1825 kapinaan. Hänet tuomittiin mestattavaksi, mutta tuomio lievennettiin kahdenkymmenen vuoden pakkotyöksi ja sitä seuraavaksi ikuiseksi karkotukseksi; pakkotyöaika lyhennettiin myöhemmin kymmeneen vuoteen. Työhön hänet lähetettiin Nertšinskin kaivoksille Baikalin taakse, ja Siperiassa hän vietti kolmekymmentä vuotta. Vaimo Maria Rajevskaja seurasi häntä ja jätti pienen poikansa isänsä huostaan. Volkonskin kujan puutalo rakennettiin 1838 Urikin kylään ja siirrettiin Irkutskiin 1847; se oli ruhtinaan koti vuoteen 1856, jolloin Aleksanteri II salli dekabristien palata.
+AIEMPI KYSYMYS: Kenen maita Jasnaja Poljana oli ennen Tolstoita?
+AIEMPI VASTAUS (Livia):
+Kas vaan, sukututkimusta. Tila oli alun perin Kartsevin suvun omistuksessa. 1700-luvulla sen osti kenraalimajuri, ruhtinas [[Sergei Volkonski]], ja se siirtyi hänen pojalleen Nikolaille, kirjailijan isoisälle. [[Nikolai Volkonski]] aloitti päärakennuksen rakentamisen vuonna 1810 tilan korkeimmalle kohdalle ja istutti ranskalaisen puutarhan sekä englantilaisen maisemapuiston lampineen ja pitkine koivu- ja tammikujineen. Kirjailijan äiti oli Nikolain tytär, joten tila periytyi Tolstoille suvun kautta.
+
+Isännät vaihtuivat, mutta koivukujat jäivät. Kyyhkyn silmin ne ovat tilan paras osa, koska puuhun saa laskeutua kysymättä lupaa.
+KYSYMYS: Kerro lisää: Sergei Volkonski
+
+### 183
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jasnaja Poljana (kulttuuri)
+Tietoruudun teksti: Jasnaja Poljana on kirjailijakotimuseo, Lev Tolstoin entinen koti kaksitoista kilometriä Tulasta lounaaseen ja kaksisataa kilometriä Moskovasta. Nimi tarkoittaa kirkasta aukiota. Tolstoi syntyi tässä talossa 9. syyskuuta 1828 ja kirjoitti siellä sekä Sodan ja rauhan että Anna Kareninan; hänet on haudattu lähistölle.
+
+Tila oli alun perin Kartsevin suvun omistuksessa. 1700-luvulla sen osti kenraalimajuri, ruhtinas Sergei Volkonski, ja se siirtyi hänen pojalleen Nikolaille, kirjailijan isoisälle. Nikolai aloitti päärakennuksen rakentamisen 1810 tilan korkeimmalle kohdalle, pystytti tallit, vaunuvajan, kylpyrakennuksen ja kaksi kasvihuonetta sekä istutti ranskalaisen puutarhan, englantilaisen maisemapuiston lampineen ja pitkät koivu- ja tammikujat.
+
+Tolstoi kutsui Jasnaja Poljanaa saavuttamattomaksi kirjalliseksi linnakkeekseen. Kesäkuussa 1921 tila kansallistettiin museoksi, ja sen ensimmä…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irkutsk — kaupunkilehti / Irkutsk: Ruhtinas kaivoksesta ja talo Volkonskin kujalla] Sergei Volkonski oli ainoa palveluksessa ollut kenraali, joka osallistui joulukuun 1825 kapinaan. Hänet tuomittiin mestattavaksi, mutta tuomio lievennettiin kahdenkymmenen vuoden pakkotyöksi ja sitä seuraavaksi ikuiseksi karkotukseksi; pakkotyöaika lyhennettiin myöhemmin kymmeneen vuoteen. Työhön hänet lähetettiin Nertšinskin kaivoksille Baikalin taakse, ja Siperiassa hän vietti kolmekymmentä vuotta. Vaimo Maria Rajevskaja seurasi häntä ja jätti pienen poikansa isänsä huostaan. Volkonskin kujan puutalo rakennettiin 1838 Urikin kylään ja siirrettiin Irkutskiin 1847; se oli ruhtinaan koti vuoteen 1856, jolloin Aleksanteri II salli dekabristien palata.
+AIEMPI KYSYMYS: Kenen maita Jasnaja Poljana oli ennen Tolstoita?
+AIEMPI VASTAUS (Livia):
+Kas vaan, sukututkimusta. Tila oli alun perin Kartsevin suvun omistuksessa. 1700-luvulla sen osti kenraalimajuri, ruhtinas [[Sergei Volkonski]], ja se siirtyi hänen pojalleen Nikolaille, kirjailijan isoisälle. [[Nikolai Volkonski]] aloitti päärakennuksen rakentamisen vuonna 1810 tilan korkeimmalle kohdalle ja istutti ranskalaisen puutarhan sekä englantilaisen maisemapuiston lampineen ja pitkine koivu- ja tammikujineen. Kirjailijan äiti oli Nikolain tytär, joten tila periytyi Tolstoille suvun kautta.
+
+Isännät vaihtuivat, mutta koivukujat jäivät. Kyyhkyn silmin ne ovat tilan paras osa, koska puuhun saa laskeutua kysymättä lupaa.
+KYSYMYS: Kerro lisää: Nikolai Volkonski
+
+### 184
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaliningradin tuomiokirkko (historia)
+Tietoruudun teksti: Kaliningradin tuomiokirkko seisoo Kneiphofin saarella Pregolja-joessa. Rakentaminen alkoi arviolta noin vuonna 1330, ja tiiligoottilainen kirkko valmistui pääosin vuoteen 1380 mennessä. Filosofi Immanuel Kantin hauta on kirkon kupeessa: hänen mausoleeminsa valmistui vuonna 1924 hänen syntymänsä 200-vuotisjuhlaksi. Brittiläiset pommitukset elokuussa 1944 tuhosivat kirkon katon ja tornin, ja kunnostus alkoi 1990-luvun alussa; uusi torni nostettiin paikalleen helikopterilla vuonna 1994. Nykyisin kirkossa on museo sekä luterilainen ja ortodoksinen kappeli, ja siellä pidetään konsertteja.
+AIEMPI KYSYMYS: Missä filosofi Immanuel Kant lepää?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Immanuel Kant lepää [[Kaliningradin tuomiokirkon]] kupeessa, [[Kneiphofin]] saarella Pregolja-joessa. Hänen hautansa on kirkon seinustalla olevassa mausoleumissa, joka valmistui vuonna 1924 hänen syntymänsä 200-vuotisjuhlaksi. Kaupunki kantoi Kantin aikana nimeä [[Königsberg]], ja hän vietti siellä lähes koko elämänsä. Ja kaiken tän minä muistin ilman karttaa.
+KYSYMYS: Kerro lisää: Kaliningradin tuomiokirkon
+
+### 185
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaliningradin tuomiokirkko (historia)
+Tietoruudun teksti: Kaliningradin tuomiokirkko seisoo Kneiphofin saarella Pregolja-joessa. Rakentaminen alkoi arviolta noin vuonna 1330, ja tiiligoottilainen kirkko valmistui pääosin vuoteen 1380 mennessä. Filosofi Immanuel Kantin hauta on kirkon kupeessa: hänen mausoleeminsa valmistui vuonna 1924 hänen syntymänsä 200-vuotisjuhlaksi. Brittiläiset pommitukset elokuussa 1944 tuhosivat kirkon katon ja tornin, ja kunnostus alkoi 1990-luvun alussa; uusi torni nostettiin paikalleen helikopterilla vuonna 1994. Nykyisin kirkossa on museo sekä luterilainen ja ortodoksinen kappeli, ja siellä pidetään konsertteja.
+AIEMPI KYSYMYS: Missä filosofi Immanuel Kant lepää?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Immanuel Kant lepää [[Kaliningradin tuomiokirkon]] kupeessa, [[Kneiphofin]] saarella Pregolja-joessa. Hänen hautansa on kirkon seinustalla olevassa mausoleumissa, joka valmistui vuonna 1924 hänen syntymänsä 200-vuotisjuhlaksi. Kaupunki kantoi Kantin aikana nimeä [[Königsberg]], ja hän vietti siellä lähes koko elämänsä. Ja kaiken tän minä muistin ilman karttaa.
+KYSYMYS: Kerro lisää: Kneiphofin
+
+### 186
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaliningradin tuomiokirkko (historia)
+Tietoruudun teksti: Kaliningradin tuomiokirkko seisoo Kneiphofin saarella Pregolja-joessa. Rakentaminen alkoi arviolta noin vuonna 1330, ja tiiligoottilainen kirkko valmistui pääosin vuoteen 1380 mennessä. Filosofi Immanuel Kantin hauta on kirkon kupeessa: hänen mausoleeminsa valmistui vuonna 1924 hänen syntymänsä 200-vuotisjuhlaksi. Brittiläiset pommitukset elokuussa 1944 tuhosivat kirkon katon ja tornin, ja kunnostus alkoi 1990-luvun alussa; uusi torni nostettiin paikalleen helikopterilla vuonna 1994. Nykyisin kirkossa on museo sekä luterilainen ja ortodoksinen kappeli, ja siellä pidetään konsertteja.
+AIEMPI KYSYMYS: Missä filosofi Immanuel Kant lepää?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Immanuel Kant lepää [[Kaliningradin tuomiokirkon]] kupeessa, [[Kneiphofin]] saarella Pregolja-joessa. Hänen hautansa on kirkon seinustalla olevassa mausoleumissa, joka valmistui vuonna 1924 hänen syntymänsä 200-vuotisjuhlaksi. Kaupunki kantoi Kantin aikana nimeä [[Königsberg]], ja hän vietti siellä lähes koko elämänsä. Ja kaiken tän minä muistin ilman karttaa.
+KYSYMYS: Kerro lisää: Königsberg
+
+### 187
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaliningradin tuomiokirkko (historia)
+Tietoruudun teksti: Kaliningradin tuomiokirkko seisoo Kneiphofin saarella Pregolja-joessa. Rakentaminen alkoi arviolta noin vuonna 1330, ja tiiligoottilainen kirkko valmistui pääosin vuoteen 1380 mennessä. Filosofi Immanuel Kantin hauta on kirkon kupeessa: hänen mausoleeminsa valmistui vuonna 1924 hänen syntymänsä 200-vuotisjuhlaksi. Brittiläiset pommitukset elokuussa 1944 tuhosivat kirkon katon ja tornin, ja kunnostus alkoi 1990-luvun alussa; uusi torni nostettiin paikalleen helikopterilla vuonna 1994. Nykyisin kirkossa on museo sekä luterilainen ja ortodoksinen kappeli, ja siellä pidetään konsertteja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Papua-Uusi-Guinea — maalehti / Kielet: Piano, helikopteri ja yksi sitkeä huhu] 1902–1969 — Kun tok pisinillä ei ole sanaa, puhuja kuvailee asian kiertäen: skru bilong lek on käden ruuvi eli polvi, gras bilong het pään ruoho eli hiukset, haus moni rahatalo eli pankki ja marasin bilong klinim tit hampaidenpuhdistuslääke eli hammastahna. Pianosta 1900-luvun alun kirjoittajat merkitsivät muistiin useita erilaisia kuvauksia, kuten ”iso laatikko, joka itkee kun sitä lyö”. Kielitieteilijät huomauttavat, että nämä ovat tilapäisiä selityksiä eivätkä sanoja. Kuuluisa väite, että helikopteri olisi tok pisiniksi Jeesuksen vatkain, on sen sijaan ulkomaalaisten keksintö.
+- [Angola — kaupunkilehti / Savanni ja sen joet: Jättiläissapeliantilooppi – kadonneeksi luultu kansallissymboli] Vain Angolassa luonnonvaraisena elävä jättiläissapeliantilooppi kuvattiin tieteelle vasta 1916, kun brittiläisen rautatieinsinöörin Frank Varianin löytämä näyte päätyi Lontooseen tutkittavaksi. Uroksen mustaa turkkia, valkoista poskijuovaa ja pitkiä kaarevia sarvia on kuvattu vuoden 1953 postimerkissä. Vuosikymmenten ajan lajista ei saatu varmoja havaintoja, ja monet pitivät sitä sukupuuttoon kuolleena elinympäristön tuhoutumisen vuoksi, kunnes riistakamerat kuvasivat naaraslauman Cangandalan kansallispuistossa 2004. Vuonna 2009 lantanäytteiden DNA johti sadan kilometrin päässä eläneen uroksen jäljille, ja se lennätettiin helikopterilla naaraiden luo.
+AIEMPI KYSYMYS: Miten kirkon uusi torni saatiin paikalleen vuonna 1994?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tornin uusiminen kuului [[Kaliningradin tuomiokirkon]] kunnostukseen, joka alkoi 1990-luvun alussa sen jälkeen, kun brittiläiset pommitukset elokuussa 1944 olivat tuhonneet kirkon katon ja tornin. Uusi torni nostettiin paikalleen [[helikopterilla]] vuonna 1994. En ole varma nostotyön yksityiskohdista, kuten siitä, nostettiinko torni kokonaisena vai osissa. Nykyisin [[Kneiphofin]] saarella seisovassa kirkossa toimii museo, ja siellä on luterilainen ja ortodoksinen kappeli sekä konsertteja.
+
+Helikopteri tekee ilmassa melkein saman kuin minä, mutta paljon äänekkäämmin. Tornia en olisi kyllä jaksanut nostaa.
+KYSYMYS: Kerro lisää: helikopterilla
+
+### 188
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaliningradin tuomiokirkko (historia)
+Tietoruudun teksti: Kaliningradin tuomiokirkko seisoo Kneiphofin saarella Pregolja-joessa. Rakentaminen alkoi arviolta noin vuonna 1330, ja tiiligoottilainen kirkko valmistui pääosin vuoteen 1380 mennessä. Filosofi Immanuel Kantin hauta on kirkon kupeessa: hänen mausoleeminsa valmistui vuonna 1924 hänen syntymänsä 200-vuotisjuhlaksi. Brittiläiset pommitukset elokuussa 1944 tuhosivat kirkon katon ja tornin, ja kunnostus alkoi 1990-luvun alussa; uusi torni nostettiin paikalleen helikopterilla vuonna 1994. Nykyisin kirkossa on museo sekä luterilainen ja ortodoksinen kappeli, ja siellä pidetään konsertteja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Afganistan — maalehti / Ruoka: Vieras ei istu ilman lasia] Teetä juodaan Afganistanissa kaiken aikaa ja erityisesti aterian jälkeen ja vieraiden kanssa; se on vieraanvaraisuuden ydin. Useimmat juovat vihreää teetä ilman sokeria, jotkut lisäävät kardemummaa, sahramia tai sokeripalan. Aamuisin ja juhlapäivinä keitetään sheer chai eli maitotee, ja Jalalabadin ja Kandaharin kaltaisissa kaupungeissa juodaan myös masala chaita. Juhlissa teen kanssa tarjotaan nuqlia, sokerikuorrutettuja valkoisia manteleita. Kesäisin lounaan kaveriksi tulee doogh, kylmä suolainen hapanmaitojuoma, jossa on minttua ja usein kurkkua — teen jälkeen maan juoduin juoma.
+- [Tallinna — kohdekartta / Kohdekartta: E-valtio] Viro oli vuonna 2005 maailman ensimmäinen maa, jossa sai äänestää vaaleissa internetissä. Äänestäjä tunnistautuu sirullisella henkilökortilla, joka on pakollinen jokaiselle virolaiselle viidestätoista ikävuodesta alkaen. Vuoden 2023 parlamenttivaaleissa yli puolet äänistä annettiin verkossa. Sama kortti ei ole vain äänestyskortti: sillä haetaan resepti apteekista, allekirjoitetaan sopimus ja perustetaan yritys. Ja sitten on vielä yksi kerros. Joulukuun ensimmäisenä päivänä 2014 alkoi e-residenttiohjelma, joka antaa saman sirukortin myös ulkomaalaiselle, joka ei asu maassa lainkaan — hän voi allekirjoittaa asiakirjoja ja perustaa yrityksen käymättä koskaan paikalla. Se on sama vanha hansa-aj…
+AIEMPI KYSYMYS: Mitä tiiligotiikka tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tiiligotiikka tarkoittaa gotiikan rakennustapaa, jossa kirkot, linnat ja kaupungintalot rakennettiin poltetusta tiilestä luonnonkiven sijaan. Tyyli levisi Itämeren eteläpuolisille seuduille, joilla hyvää rakennuskiveä oli vähän mutta savea runsaasti, ja sitä käytettiin erityisesti [[Hansa-kaupungeissa]] ja [[Saksalaisen ritarikunnan]] alueella. Tunnettuja esimerkkejä ovat [[Lyypekin]] Pyhän Marian kirkko ja Malborkin linna Puolassa, ja Kaliningradin tuomiokirkko kuuluu samaan perinteeseen.
+
+Ylhäältä katsottuna tiili erottuu jo kaukaa, ja aurinkoinen tiilikatto on kyyhkylle paras istuinpaikka. Murusia vain ei yleensä tipu.
+KYSYMYS: Kerro lisää: Hansa-kaupungeissa
+
+### 189
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaliningradin tuomiokirkko (historia)
+Tietoruudun teksti: Kaliningradin tuomiokirkko seisoo Kneiphofin saarella Pregolja-joessa. Rakentaminen alkoi arviolta noin vuonna 1330, ja tiiligoottilainen kirkko valmistui pääosin vuoteen 1380 mennessä. Filosofi Immanuel Kantin hauta on kirkon kupeessa: hänen mausoleeminsa valmistui vuonna 1924 hänen syntymänsä 200-vuotisjuhlaksi. Brittiläiset pommitukset elokuussa 1944 tuhosivat kirkon katon ja tornin, ja kunnostus alkoi 1990-luvun alussa; uusi torni nostettiin paikalleen helikopterilla vuonna 1994. Nykyisin kirkossa on museo sekä luterilainen ja ortodoksinen kappeli, ja siellä pidetään konsertteja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Plečnikin ja Secessionin Ljubljana: Ritarikunnan luostarista kesäteatteriksi] Križanken luostarin rakentamisen uskotaan alkaneen 1200-luvulla saksalaisen ritarikunnan käyttöön, ja sen barokkikirkko valmistui vuosina 1714–1715. Luostari toimi vuoteen 1945 asti, jolloin kompleksi kansallistettiin. Vuonna 1952 kaupunki pyysi Jože Plečnikia muuttamaan rappeutuneen luostarin Ljubljanan festivaalin näyttämöksi, ja työt valmistuivat 1956. Nykyään pihoilla järjestetään klassisen musiikin, jazzin ja rockin konsertteja, ja pääpihaa koristavat värikkäät sgraffitot.
+AIEMPI KYSYMYS: Mitä tiiligotiikka tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tiiligotiikka tarkoittaa gotiikan rakennustapaa, jossa kirkot, linnat ja kaupungintalot rakennettiin poltetusta tiilestä luonnonkiven sijaan. Tyyli levisi Itämeren eteläpuolisille seuduille, joilla hyvää rakennuskiveä oli vähän mutta savea runsaasti, ja sitä käytettiin erityisesti [[Hansa-kaupungeissa]] ja [[Saksalaisen ritarikunnan]] alueella. Tunnettuja esimerkkejä ovat [[Lyypekin]] Pyhän Marian kirkko ja Malborkin linna Puolassa, ja Kaliningradin tuomiokirkko kuuluu samaan perinteeseen.
+
+Ylhäältä katsottuna tiili erottuu jo kaukaa, ja aurinkoinen tiilikatto on kyyhkylle paras istuinpaikka. Murusia vain ei yleensä tipu.
+KYSYMYS: Kerro lisää: Saksalaisen ritarikunnan
+
+### 190
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaliningradin tuomiokirkko (historia)
+Tietoruudun teksti: Kaliningradin tuomiokirkko seisoo Kneiphofin saarella Pregolja-joessa. Rakentaminen alkoi arviolta noin vuonna 1330, ja tiiligoottilainen kirkko valmistui pääosin vuoteen 1380 mennessä. Filosofi Immanuel Kantin hauta on kirkon kupeessa: hänen mausoleeminsa valmistui vuonna 1924 hänen syntymänsä 200-vuotisjuhlaksi. Brittiläiset pommitukset elokuussa 1944 tuhosivat kirkon katon ja tornin, ja kunnostus alkoi 1990-luvun alussa; uusi torni nostettiin paikalleen helikopterilla vuonna 1994. Nykyisin kirkossa on museo sekä luterilainen ja ortodoksinen kappeli, ja siellä pidetään konsertteja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Ruoka] Virolainen ruokapöytä on tumma ja suolainen: hapan ruisleipä joka on jokaisen aterian pohja, makea marsipaani jonka synnystä kiistellään Lyypekin kanssa, kansalliskala pienessä leivässä ja joulun verinen makkara.
+AIEMPI KYSYMYS: Mitä tiiligotiikka tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tiiligotiikka tarkoittaa gotiikan rakennustapaa, jossa kirkot, linnat ja kaupungintalot rakennettiin poltetusta tiilestä luonnonkiven sijaan. Tyyli levisi Itämeren eteläpuolisille seuduille, joilla hyvää rakennuskiveä oli vähän mutta savea runsaasti, ja sitä käytettiin erityisesti [[Hansa-kaupungeissa]] ja [[Saksalaisen ritarikunnan]] alueella. Tunnettuja esimerkkejä ovat [[Lyypekin]] Pyhän Marian kirkko ja Malborkin linna Puolassa, ja Kaliningradin tuomiokirkko kuuluu samaan perinteeseen.
+
+Ylhäältä katsottuna tiili erottuu jo kaukaa, ja aurinkoinen tiilikatto on kyyhkylle paras istuinpaikka. Murusia vain ei yleensä tipu.
+KYSYMYS: Kerro lisää: Lyypekin
+
+### 191
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaliningradin tuomiokirkko (historia)
+Tietoruudun teksti: Kaliningradin tuomiokirkko seisoo Kneiphofin saarella Pregolja-joessa. Rakentaminen alkoi arviolta noin vuonna 1330, ja tiiligoottilainen kirkko valmistui pääosin vuoteen 1380 mennessä. Filosofi Immanuel Kantin hauta on kirkon kupeessa: hänen mausoleeminsa valmistui vuonna 1924 hänen syntymänsä 200-vuotisjuhlaksi. Brittiläiset pommitukset elokuussa 1944 tuhosivat kirkon katon ja tornin, ja kunnostus alkoi 1990-luvun alussa; uusi torni nostettiin paikalleen helikopterilla vuonna 1994. Nykyisin kirkossa on museo sekä luterilainen ja ortodoksinen kappeli, ja siellä pidetään konsertteja.
+AIEMPI KYSYMYS: Mihin Pregolja-joki laskee?
+AIEMPI VASTAUS (Livia):
+Kato, tän joen minä tunnen ylhäältä — Pregolja virtaa Kaliningradin läpi ja laskee [[Veikselinlahteen]], josta on yhteys [[Itämerelle]]. Kaupungin vanha ydin, [[Kneiphofin]] saari, sijaitsee joen haarojen välissä. Joki on ollut kaupungille tärkeä kulkuväylä, ja sen varrella ovat sijainneet satamat ja laiturit. Joet on kyyhkylle parhaita karttoja.
+KYSYMYS: Kerro lisää: Veikselinlahteen
+
+### 192
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaliningradin tuomiokirkko (historia)
+Tietoruudun teksti: Kaliningradin tuomiokirkko seisoo Kneiphofin saarella Pregolja-joessa. Rakentaminen alkoi arviolta noin vuonna 1330, ja tiiligoottilainen kirkko valmistui pääosin vuoteen 1380 mennessä. Filosofi Immanuel Kantin hauta on kirkon kupeessa: hänen mausoleeminsa valmistui vuonna 1924 hänen syntymänsä 200-vuotisjuhlaksi. Brittiläiset pommitukset elokuussa 1944 tuhosivat kirkon katon ja tornin, ja kunnostus alkoi 1990-luvun alussa; uusi torni nostettiin paikalleen helikopterilla vuonna 1994. Nykyisin kirkossa on museo sekä luterilainen ja ortodoksinen kappeli, ja siellä pidetään konsertteja.
+AIEMPI KYSYMYS: Mihin Pregolja-joki laskee?
+AIEMPI VASTAUS (Livia):
+Kato, tän joen minä tunnen ylhäältä — Pregolja virtaa Kaliningradin läpi ja laskee [[Veikselinlahteen]], josta on yhteys [[Itämerelle]]. Kaupungin vanha ydin, [[Kneiphofin]] saari, sijaitsee joen haarojen välissä. Joki on ollut kaupungille tärkeä kulkuväylä, ja sen varrella ovat sijainneet satamat ja laiturit. Joet on kyyhkylle parhaita karttoja.
+KYSYMYS: Kerro lisää: Itämerelle
+
+### 193
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaliningradin tuomiokirkko (historia)
+Tietoruudun teksti: Kaliningradin tuomiokirkko seisoo Kneiphofin saarella Pregolja-joessa. Rakentaminen alkoi arviolta noin vuonna 1330, ja tiiligoottilainen kirkko valmistui pääosin vuoteen 1380 mennessä. Filosofi Immanuel Kantin hauta on kirkon kupeessa: hänen mausoleeminsa valmistui vuonna 1924 hänen syntymänsä 200-vuotisjuhlaksi. Brittiläiset pommitukset elokuussa 1944 tuhosivat kirkon katon ja tornin, ja kunnostus alkoi 1990-luvun alussa; uusi torni nostettiin paikalleen helikopterilla vuonna 1994. Nykyisin kirkossa on museo sekä luterilainen ja ortodoksinen kappeli, ja siellä pidetään konsertteja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad-järvi — kaupunkilehti / Bornun valtakunta: Preussin lahjat sheikille] Preussin kuningas Wilhelm I lähetti tutkimusmatkailija Gustav Nachtigalin viemään lahjoja Bornun hallitsijalle kiitokseksi saksalaisille matkaajille osoitetusta vieraanvaraisuudesta. Nachtigal lähti Tripolista helmikuussa 1869 ja saapui Bornun pääkaupunkiin Kukawaan 6. kesäkuuta 1870, missä sheikki Umar otti hänet ystävällisesti vastaan. Hovin virkamies Ahmed ibn Brahim antoi Nachtigalille vanhoja asiakirjoja, joiden pohjalta tämä kokosi luettelon Bornun hallitsijoista vuosisatojen ajalta. Sheikin luvalla Nachtigal teki myöhemmin tutkimusmatkoja Kanemiin ja Bagirmiin ja osoitti Bahr-el-Ghazalin toimivan ajoittain järven laskujokena.
+- [Pietari — kaupunkilehti / Taide: Preussin kuninkaalta jääneet maalaukset päätyivät keisarinnalle] 1764 — Berliiniläinen kauppias Johann Ernst Gotzkowsky oli koonnut 225 maalauksen kokoelman Preussin kuningas Fredrik Suurelle, mutta seitsenvuotisen sodan jälkeen kuninkaan kassa oli tyhjä eikä hän voinut maksaa niistä. Vuonna 1764 Venäjän keisarinna Katariina Suuri osti koko kokoelman velan kuittaukseksi ja ripusti taulut yksityiseen siipirakennukseensa Talvipalatsin vieressä — rakennus sai nimen Eremitaasi, erakon asunto, koska sinne pääsivät vain harvat kutsutut. Tästä ostosta syntyi kokoelma, joka on nykyään yksi maailman suurimpia taidemuseoita.
+AIEMPI KYSYMYS: Mikä kaupunki Kaliningrad oli ennen nimenmuutosta?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kaliningrad tunnettiin aiemmin nimellä [[Königsberg]]. Kaupunki oli [[Itä-Preussin]] pääkaupunki ja kuului Saksalle, kunnes toisen maailmansodan jälkeen alue siirtyi Neuvostoliitolle, ja nimi muutettiin vuonna 1946 neuvostojohtaja [[Mihail Kalininin]] mukaan. Kaliningradin alue on nykyisin Venäjän erillisalue Puolan ja Liettuan välissä. Nimiä on vaihtunut, mutta joki on pysynyt samana.
+KYSYMYS: Kerro lisää: Itä-Preussin
+
+### 194
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaliningradin tuomiokirkko (historia)
+Tietoruudun teksti: Kaliningradin tuomiokirkko seisoo Kneiphofin saarella Pregolja-joessa. Rakentaminen alkoi arviolta noin vuonna 1330, ja tiiligoottilainen kirkko valmistui pääosin vuoteen 1380 mennessä. Filosofi Immanuel Kantin hauta on kirkon kupeessa: hänen mausoleeminsa valmistui vuonna 1924 hänen syntymänsä 200-vuotisjuhlaksi. Brittiläiset pommitukset elokuussa 1944 tuhosivat kirkon katon ja tornin, ja kunnostus alkoi 1990-luvun alussa; uusi torni nostettiin paikalleen helikopterilla vuonna 1994. Nykyisin kirkossa on museo sekä luterilainen ja ortodoksinen kappeli, ja siellä pidetään konsertteja.
+AIEMPI KYSYMYS: Mikä kaupunki Kaliningrad oli ennen nimenmuutosta?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kaliningrad tunnettiin aiemmin nimellä [[Königsberg]]. Kaupunki oli [[Itä-Preussin]] pääkaupunki ja kuului Saksalle, kunnes toisen maailmansodan jälkeen alue siirtyi Neuvostoliitolle, ja nimi muutettiin vuonna 1946 neuvostojohtaja [[Mihail Kalininin]] mukaan. Kaliningradin alue on nykyisin Venäjän erillisalue Puolan ja Liettuan välissä. Nimiä on vaihtunut, mutta joki on pysynyt samana.
+KYSYMYS: Kerro lisää: Mihail Kalininin
+
+### 195
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moskovan valkokivinen Kreml (historia)
+Tietoruudun teksti: Dmitri Donskoi rakennutti Moskovan Kremlin vahvan valkokivimuurin vuosina 1366–1368. Ivan III puratti sen ja rakennutti italialaisten arkkitehtien johdolla nykyiset punatiilimuurit vuosina 1485–1495.
+AIEMPI KYSYMYS: Miltä Moskovan valkokivinen Kreml näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Joo, vähän vaikea, mutta kerron. [[Dmitri Donskoi]] rakennutti Moskovan Kremlin ympärille valkokivimuurin vuosina 1366–1368, ja se korvasi aiemman tammimuurin. Valkoinen kalkkikivi erottui selvästi puurakennusten täyttämästä kaupungista, ja Moskovaa alettiin kutsua valkokiviseksi. Tarkkaa ulkoasua ei tunneta täysin, joten yksityiskohtia en uskalla lisätä. Muuri purettiin myöhemmin, kun [[Ivan III]] rakennutti tilalle nykyiset punatiilimuurit. Viisas Pöllö, joka parantelee siipeään, tietäisi tästä varmasti vielä enemmän.
+KYSYMYS: Kerro lisää: Dmitri Donskoi
+
+### 196
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moskovan valkokivinen Kreml (historia)
+Tietoruudun teksti: Dmitri Donskoi rakennutti Moskovan Kremlin vahvan valkokivimuurin vuosina 1366–1368. Ivan III puratti sen ja rakennutti italialaisten arkkitehtien johdolla nykyiset punatiilimuurit vuosina 1485–1495.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Toronto — kohdekartta / Kohdekartta: University College] 1859 College perustettiin 22. huhtikuuta 1853 Canada Westin eli nykyisen Ontarion provinssin omaksi, tunnustuksettomaksi opinahjoksi. Taustalla oli poliittinen käänne: Robert Baldwinin johtamat uudistusmieliset olivat 1849 ottaneet King's Collegen pois Englannin kirkolta ja nimenneet sen Toronton yliopistoksi. Frederick William Cumberland nimitettiin 1856 yliopiston arkkitehdiksi, ja hänen suunnittelemansa päärakennus valmistui 1859. Muurit ovat romaaniseen tapaan hyvin paksut; vain kolmannes julkisivusta on kiveä, loput hyvin vaaleaa keltaista tiiltä, joka poltettiin Yonge Streetin varren tiilitehtaalla. Neljäntenätoista helmikuuta 1890 talo paloi. Palvelijat valmistelivat vuosinäyttelyn v…
+- [Vancouver — kohdekartta / Kohdekartta: Orpheum-teatteri] 1927 Teatterin piirsi skotlantilaissyntyinen arkkitehti Marcus Priteca. Ensimmäiset esitykset nähtiin 7. marraskuuta 1927, ja seuraavana päivänä talo avattiin virallisesti varieteeteatterina. Se oli avautuessaan Kanadan suurin teatteri: kolmetuhatta paikkaa ja 1,25 miljoonan dollarin rakennuskustannukset. Ensimmäinen teatterinjohtaja oli William A. Barnes. Kun varieteen kulta-aika päättyi 1930-luvun alussa, Orpheumista tuli pääosin elokuvateatteri Famous Playersin omistuksessa; Ivan Ackery johti taloa vuodesta 1935 eläkkeelle jäämiseensä 1969. Vuonna 1973 Famous Players päätti purkaa sisätilat ja tehdä talosta monisalin. Siitä syntyi kansanliike "Save the Orpheum", ja jopa koomikko Jack Ben…
+AIEMPI KYSYMYS: Miltä Moskovan valkokivinen Kreml näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Joo, vähän vaikea, mutta kerron. [[Dmitri Donskoi]] rakennutti Moskovan Kremlin ympärille valkokivimuurin vuosina 1366–1368, ja se korvasi aiemman tammimuurin. Valkoinen kalkkikivi erottui selvästi puurakennusten täyttämästä kaupungista, ja Moskovaa alettiin kutsua valkokiviseksi. Tarkkaa ulkoasua ei tunneta täysin, joten yksityiskohtia en uskalla lisätä. Muuri purettiin myöhemmin, kun [[Ivan III]] rakennutti tilalle nykyiset punatiilimuurit. Viisas Pöllö, joka parantelee siipeään, tietäisi tästä varmasti vielä enemmän.
+KYSYMYS: Kerro lisää: Ivan III
+
+### 197
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moskovan valkokivinen Kreml (historia)
+Tietoruudun teksti: Dmitri Donskoi rakennutti Moskovan Kremlin vahvan valkokivimuurin vuosina 1366–1368. Ivan III puratti sen ja rakennutti italialaisten arkkitehtien johdolla nykyiset punatiilimuurit vuosina 1485–1495.
+AIEMPI KYSYMYS: Miksi Moskovan valkokivinen Kreml katosi?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on tuttu juttu. [[Dmitri Donskoin]] rakennuttama valkokivimuuri ei kadonnut itsestään vaan purettiin: [[Ivan III]] antoi purkaa sen ja rakennuttaa tilalle nykyiset punatiilimuurit vuosina 1485–1495 italialaisten arkkitehtien johdolla. Syyksi esitetään yleensä, että vanha muuri oli ikääntynyt ja että uusi linnoitus haluttiin tehdä aikansa tykkitulen kestäväksi ja Moskovan uuteen asemaan sopivaksi. En ole varma, missä määrin kumpikin syy painoi.
+
+Ylhäältä katsoen näkyy vain punainen tiili, ja valkoinen muuri elää enää tarinoissa. Silti sen nimi jäi Moskovalle.
+KYSYMYS: Kerro lisää: Dmitri Donskoin
+
+### 198
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moskovan valkokivinen Kreml (historia)
+Tietoruudun teksti: Dmitri Donskoi rakennutti Moskovan Kremlin vahvan valkokivimuurin vuosina 1366–1368. Ivan III puratti sen ja rakennutti italialaisten arkkitehtien johdolla nykyiset punatiilimuurit vuosina 1485–1495.
+AIEMPI KYSYMYS: Mistä sana Kreml tulee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Sana kreml tarkoittaa venäjän kielessä linnoitettua kaupungin ydintä, ja Venäjän vanhoissa kaupungeissa on useita kremlejä, esimerkiksi [[Novgorodissa]], [[Pihkovassa]] ja Kazanissa. Sanan tarkasta alkuperästä kielitieteilijät eivät ole täysin yhtä mieltä, enkä ole itse varma oikeasta selityksestä. Moskovan Kreml on näistä tunnetuin, ja siksi sana on alkanut tarkoittaa myös Venäjän valtionjohtoa. Kreml on se muuri, jonka päälle minä laskeudun mielelläni, jos vartijat sallivat.
+KYSYMYS: Kerro lisää: Novgorodissa
+
+### 199
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moskovan valkokivinen Kreml (historia)
+Tietoruudun teksti: Dmitri Donskoi rakennutti Moskovan Kremlin vahvan valkokivimuurin vuosina 1366–1368. Ivan III puratti sen ja rakennutti italialaisten arkkitehtien johdolla nykyiset punatiilimuurit vuosina 1485–1495.
+AIEMPI KYSYMYS: Mistä sana Kreml tulee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Sana kreml tarkoittaa venäjän kielessä linnoitettua kaupungin ydintä, ja Venäjän vanhoissa kaupungeissa on useita kremlejä, esimerkiksi [[Novgorodissa]], [[Pihkovassa]] ja Kazanissa. Sanan tarkasta alkuperästä kielitieteilijät eivät ole täysin yhtä mieltä, enkä ole itse varma oikeasta selityksestä. Moskovan Kreml on näistä tunnetuin, ja siksi sana on alkanut tarkoittaa myös Venäjän valtionjohtoa. Kreml on se muuri, jonka päälle minä laskeudun mielelläni, jos vartijat sallivat.
+KYSYMYS: Kerro lisää: Pihkovassa
+
+### 200
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moskovan valkokivinen Kreml (historia)
+Tietoruudun teksti: Dmitri Donskoi rakennutti Moskovan Kremlin vahvan valkokivimuurin vuosina 1366–1368. Ivan III puratti sen ja rakennutti italialaisten arkkitehtien johdolla nykyiset punatiilimuurit vuosina 1485–1495.
+AIEMPI KYSYMYS: Kuka oli Dmitri Donskoi?
+AIEMPI VASTAUS (Livia):
+Ai se. Hänet minä tunnen. Dmitri Donskoi oli Moskovan suuriruhtinas 1300-luvun jälkipuoliskolla ja tunnetaan Moskovan vallan vahvistajana. Hänen aikanaan Moskovan Kreml sai valkokivimuurin vuosina 1366–1368. Lisänimi Donskoi viittaa Don-jokeen, jonka seudulla käytiin [[Kulikovon taistelu]] vuonna 1380 [[Kultaisen ordan]] sotapäällikkö [[Mamain]] joukkoja vastaan; taistelua pidetään Venäjällä merkittävänä käännekohtana, vaikka Kultaisen ordan valta päättyi vasta myöhemmin. Monta asiaa ehti yhdelle ruhtinaalle.
+KYSYMYS: Kerro lisää: Kulikovon taistelu
+
+### 201
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moskovan valkokivinen Kreml (historia)
+Tietoruudun teksti: Dmitri Donskoi rakennutti Moskovan Kremlin vahvan valkokivimuurin vuosina 1366–1368. Ivan III puratti sen ja rakennutti italialaisten arkkitehtien johdolla nykyiset punatiilimuurit vuosina 1485–1495.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Historia: Kaksi armeijaa tuijotti toisiaan yli joen] 1480 — Moskovan suuriruhtinas Iivana III lakkasi 1470-luvulla maksamasta veroa Kultaisen ordan perijälle, Suurelle ordalle, ja lokakuussa 1480 sen kaani Ahmat marssi joukkoineen Ugra-joen toiselle rannalle Moskovan armeijaa vastapäätä. Kuukauden ajan armeijat vain tuijottivat toisiaan joen yli: yksi kaanin ylityskokeilu torjuttiin venäläisten tuliaseilla, mutta suurempaa taistelua ei koskaan syttynyt. Ahmat odotti turhaan liettualaista apujoukkoa, ja kun pakkanen ja muonapula painoivat päälle, hän perääntyi 8. marraskuuta. Venäläinen historiankirjoitus on sen jälkeen pitänyt Ugran seisontaa kahden ja puolen vuosisadan mongolivallan päätepisteenä: enää yksikään ruhtinas ei tarvinnut kaanin l…
+AIEMPI KYSYMYS: Kuka oli Dmitri Donskoi?
+AIEMPI VASTAUS (Livia):
+Ai se. Hänet minä tunnen. Dmitri Donskoi oli Moskovan suuriruhtinas 1300-luvun jälkipuoliskolla ja tunnetaan Moskovan vallan vahvistajana. Hänen aikanaan Moskovan Kreml sai valkokivimuurin vuosina 1366–1368. Lisänimi Donskoi viittaa Don-jokeen, jonka seudulla käytiin [[Kulikovon taistelu]] vuonna 1380 [[Kultaisen ordan]] sotapäällikkö [[Mamain]] joukkoja vastaan; taistelua pidetään Venäjällä merkittävänä käännekohtana, vaikka Kultaisen ordan valta päättyi vasta myöhemmin. Monta asiaa ehti yhdelle ruhtinaalle.
+KYSYMYS: Kerro lisää: Kultaisen ordan
+
+### 202
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moskovan valkokivinen Kreml (historia)
+Tietoruudun teksti: Dmitri Donskoi rakennutti Moskovan Kremlin vahvan valkokivimuurin vuosina 1366–1368. Ivan III puratti sen ja rakennutti italialaisten arkkitehtien johdolla nykyiset punatiilimuurit vuosina 1485–1495.
+AIEMPI KYSYMYS: Kuka oli Dmitri Donskoi?
+AIEMPI VASTAUS (Livia):
+Ai se. Hänet minä tunnen. Dmitri Donskoi oli Moskovan suuriruhtinas 1300-luvun jälkipuoliskolla ja tunnetaan Moskovan vallan vahvistajana. Hänen aikanaan Moskovan Kreml sai valkokivimuurin vuosina 1366–1368. Lisänimi Donskoi viittaa Don-jokeen, jonka seudulla käytiin [[Kulikovon taistelu]] vuonna 1380 [[Kultaisen ordan]] sotapäällikkö [[Mamain]] joukkoja vastaan; taistelua pidetään Venäjällä merkittävänä käännekohtana, vaikka Kultaisen ordan valta päättyi vasta myöhemmin. Monta asiaa ehti yhdelle ruhtinaalle.
+KYSYMYS: Kerro lisää: Mamain
+
+### 203
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moskovan valkokivinen Kreml (historia)
+Tietoruudun teksti: Dmitri Donskoi rakennutti Moskovan Kremlin vahvan valkokivimuurin vuosina 1366–1368. Ivan III puratti sen ja rakennutti italialaisten arkkitehtien johdolla nykyiset punatiilimuurit vuosina 1485–1495.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Moskovan Kreml] 1485-1495 Linnoitus tällä paikalla on paljon vanhempi kuin luulisi: ensimmäisen linnan rakensi ruhtinas Juri Dolgorukin jo vuonna 1156, ja vuonna 1339 ruhtinas Iivana I Kalita vahvisti sitä tammisilla muureilla. Nykyiset punatiiliset muurit ja tornit, jotka yhä seisovat, rakennettiin vuosina 1485-1495 ruhtinas Iivana III:n käskystä. Iivana III kutsui työhön taitavia arkkitehtejä kaukaa Italiasta. Pietro Antonio Solari suunnitteli uudet muurit ja tornit, ja Marco Ruffo piirsi ruhtinaan uuden palatsin. Solarin nimi on kaiverrettu latinaksi yhä nähtävissä Spasskajan tornin porttien yläpuolella. Muuria on yhteensä 2235 metriä, ja se on paikoin 5-19 metriä korkea ja jopa 6,5 metriä paksu. Tornej…
+AIEMPI KYSYMYS: Ketkä italialaiset arkkitehdit rakensivat Kremlin nykyiset muurit?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: [[Ivan III]] kutsui Moskovaan taitavia italialaisia arkkitehteja, joista tunnetuimpia olivat [[Pietro Antonio Solari]] ja [[Marco Ruffo]]. Solari suunnitteli Kremlin uudet muurit ja tornit, ja hänen nimensä on kaiverrettu latinaksi yhä nähtävissä [[Spasskajan tornin]] porttien yläpuolella. Ruffo piirsi ruhtinaan uuden palatsin. Tietojeni mukaan Moskovassa oli jo aiemmin työskennellyt myös [[Aristotele Fioravanti]], joka rakensi Uspenskin katedraalin Kremlin alueelle 1400-luvun lopulla. Italialaisilta saatiin muuria ja torneja, mutta minä olisin pyytänyt maritozzoa.
+KYSYMYS: Kerro lisää: Pietro Antonio Solari
+
+### 204
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moskovan valkokivinen Kreml (historia)
+Tietoruudun teksti: Dmitri Donskoi rakennutti Moskovan Kremlin vahvan valkokivimuurin vuosina 1366–1368. Ivan III puratti sen ja rakennutti italialaisten arkkitehtien johdolla nykyiset punatiilimuurit vuosina 1485–1495.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Moskovan Kreml] 1485-1495 Linnoitus tällä paikalla on paljon vanhempi kuin luulisi: ensimmäisen linnan rakensi ruhtinas Juri Dolgorukin jo vuonna 1156, ja vuonna 1339 ruhtinas Iivana I Kalita vahvisti sitä tammisilla muureilla. Nykyiset punatiiliset muurit ja tornit, jotka yhä seisovat, rakennettiin vuosina 1485-1495 ruhtinas Iivana III:n käskystä. Iivana III kutsui työhön taitavia arkkitehtejä kaukaa Italiasta. Pietro Antonio Solari suunnitteli uudet muurit ja tornit, ja Marco Ruffo piirsi ruhtinaan uuden palatsin. Solarin nimi on kaiverrettu latinaksi yhä nähtävissä Spasskajan tornin porttien yläpuolella. Muuria on yhteensä 2235 metriä, ja se on paikoin 5-19 metriä korkea ja jopa 6,5 metriä paksu. Tornej…
+AIEMPI KYSYMYS: Ketkä italialaiset arkkitehdit rakensivat Kremlin nykyiset muurit?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: [[Ivan III]] kutsui Moskovaan taitavia italialaisia arkkitehteja, joista tunnetuimpia olivat [[Pietro Antonio Solari]] ja [[Marco Ruffo]]. Solari suunnitteli Kremlin uudet muurit ja tornit, ja hänen nimensä on kaiverrettu latinaksi yhä nähtävissä [[Spasskajan tornin]] porttien yläpuolella. Ruffo piirsi ruhtinaan uuden palatsin. Tietojeni mukaan Moskovassa oli jo aiemmin työskennellyt myös [[Aristotele Fioravanti]], joka rakensi Uspenskin katedraalin Kremlin alueelle 1400-luvun lopulla. Italialaisilta saatiin muuria ja torneja, mutta minä olisin pyytänyt maritozzoa.
+KYSYMYS: Kerro lisää: Marco Ruffo
+
+### 205
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moskovan valkokivinen Kreml (historia)
+Tietoruudun teksti: Dmitri Donskoi rakennutti Moskovan Kremlin vahvan valkokivimuurin vuosina 1366–1368. Ivan III puratti sen ja rakennutti italialaisten arkkitehtien johdolla nykyiset punatiilimuurit vuosina 1485–1495.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Moskovan Kreml] 1485-1495 Linnoitus tällä paikalla on paljon vanhempi kuin luulisi: ensimmäisen linnan rakensi ruhtinas Juri Dolgorukin jo vuonna 1156, ja vuonna 1339 ruhtinas Iivana I Kalita vahvisti sitä tammisilla muureilla. Nykyiset punatiiliset muurit ja tornit, jotka yhä seisovat, rakennettiin vuosina 1485-1495 ruhtinas Iivana III:n käskystä. Iivana III kutsui työhön taitavia arkkitehtejä kaukaa Italiasta. Pietro Antonio Solari suunnitteli uudet muurit ja tornit, ja Marco Ruffo piirsi ruhtinaan uuden palatsin. Solarin nimi on kaiverrettu latinaksi yhä nähtävissä Spasskajan tornin porttien yläpuolella. Muuria on yhteensä 2235 metriä, ja se on paikoin 5-19 metriä korkea ja jopa 6,5 metriä paksu. Tornej…
+AIEMPI KYSYMYS: Ketkä italialaiset arkkitehdit rakensivat Kremlin nykyiset muurit?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: [[Ivan III]] kutsui Moskovaan taitavia italialaisia arkkitehteja, joista tunnetuimpia olivat [[Pietro Antonio Solari]] ja [[Marco Ruffo]]. Solari suunnitteli Kremlin uudet muurit ja tornit, ja hänen nimensä on kaiverrettu latinaksi yhä nähtävissä [[Spasskajan tornin]] porttien yläpuolella. Ruffo piirsi ruhtinaan uuden palatsin. Tietojeni mukaan Moskovassa oli jo aiemmin työskennellyt myös [[Aristotele Fioravanti]], joka rakensi Uspenskin katedraalin Kremlin alueelle 1400-luvun lopulla. Italialaisilta saatiin muuria ja torneja, mutta minä olisin pyytänyt maritozzoa.
+KYSYMYS: Kerro lisää: Spasskajan tornin
+
+### 206
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moskovan valkokivinen Kreml (historia)
+Tietoruudun teksti: Dmitri Donskoi rakennutti Moskovan Kremlin vahvan valkokivimuurin vuosina 1366–1368. Ivan III puratti sen ja rakennutti italialaisten arkkitehtien johdolla nykyiset punatiilimuurit vuosina 1485–1495.
+AIEMPI KYSYMYS: Ketkä italialaiset arkkitehdit rakensivat Kremlin nykyiset muurit?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: [[Ivan III]] kutsui Moskovaan taitavia italialaisia arkkitehteja, joista tunnetuimpia olivat [[Pietro Antonio Solari]] ja [[Marco Ruffo]]. Solari suunnitteli Kremlin uudet muurit ja tornit, ja hänen nimensä on kaiverrettu latinaksi yhä nähtävissä [[Spasskajan tornin]] porttien yläpuolella. Ruffo piirsi ruhtinaan uuden palatsin. Tietojeni mukaan Moskovassa oli jo aiemmin työskennellyt myös [[Aristotele Fioravanti]], joka rakensi Uspenskin katedraalin Kremlin alueelle 1400-luvun lopulla. Italialaisilta saatiin muuria ja torneja, mutta minä olisin pyytänyt maritozzoa.
+KYSYMYS: Kerro lisää: Aristotele Fioravanti
+
+### 207
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peterhof (historia)
+Tietoruudun teksti: Pietari Suuri perusti Peterhofin 1700-luvun alussa Ranskan-matkansa 1717 innoittamana, ja palatsista tuli hänen vastauksensa Ludvig XIV:n Versailles'lle. Nykyinen laajempi kokonaisuus syntyi keisarinna Elisabetin aikana 1740–50-luvuilla arkkitehti Bartolomeo Rastrellin suunnitelmien mukaan. Puiston kuuluisin nähtävyys on Suuri kaskadi, jonka kymmenet kultaiset patsaat ja suihkulähteet toimivat ilman ainuttakaan pumppua: ylätarhan luonnollisista lähteistä valuva vesi ja korkeusero riittävät yksin käyttövoimaksi. Peterhof sijaitsee Suomenlahden rannalla lähellä Pietaria, ja se kattaa nykyisin lähes 4 000 hehtaaria puistoja ja rakennuksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Pietari-Paavalin linnoitus] 1703–1733 Pietari Suuri perusti linnoituksen vuonna 1703 pienelle Jänissaarelle Nevajoen suulle – tästä paikasta koko Pietarin kaupunki sai alkunsa. Sveitsiläissyntyinen arkkitehti Domenico Trezzini suunnitteli tähdenmuotoiset muurit ja bastionit, ja saaren keskelle nousi Pietari-Paavalin katedraali, jonka 122,5 metriä korkeaa kellotornia kruunaa kultainen enkeli tuulen mukana kääntyvän viirin päällä. Saaren nimi juontuu vanhasta tarinasta: kun Pietari Suuri astui maihin, tulvavesi ajoi säikähtäneen jäniksen suoraan hänen saappaansa suojaan. Tapahtumaa muistaa nykyään pieni pronssinen jänispatsas sillan vieressä olevan pylvään päällä, ja pylvääseen on merkitty vanhojen tulvien korkeudet. Vu…
+- [Venäjä — maalehti / Historia: Tsaari perusti pääkaupungin suolle] 1703 — Suuressa Pohjan sodassa Ruotsia vastaan Pietari Suuri valtasi Nevajoen suistoalueen ja käski 27. toukokuuta 1703 perustaa linnoituksen pienelle Jänissaarelle suojaamaan uutta aluetta. Rakennustyöhön komennettiin kymmeniätuhansia talonpoikia ja sotavankeja kaivamaan maata paljain käsin suoperäisellä rannalla, ja moni heistä kuoli raskaissa oloissa. Linnoituksen ympärille nousi kaupunki, josta tuli vuonna 1712 Venäjän uusi pääkaupunki ja jota Pietari kutsui itse "ikkunaksi Eurooppaan". Pietari valvoi rakennustöitä usein itse paikan päällä eurooppalaiseen tapaan pukeutuneena, mikä hämmensi hoviväkeä tottuneempaa tsaarin perinteiseen asuun ja etäisyyteen.
+AIEMPI KYSYMYS: Miksi Peterhofia kutsutaan "Venäjän Versailles'ksi"?
+AIEMPI VASTAUS (Livia):
+Just niin, vertailu on vanha. [[Pietari Suuri]] perusti Peterhofin 1700-luvun alussa ja sai vaikutteita Ranskan-matkaltaan vuonna 1717. Hän halusi oman suurenmoisen palatsipuiston, ja Peterhofista tuli hänen vastauksensa Ludvig XIV:n [[Versailles'n palatsille]]. Samoin kuin Versailles'ssa, näyttävintä Peterhofissa ovat suihkulähteet ja laaja puisto [[Suomenlahden]] rannalla. Nimitys on lempinimi eikä virallinen. Pöllö on ollut poissa niin kauan, että ehtisi kiertää Versailles'n puistotkin.
+KYSYMYS: Kerro lisää: Pietari Suuri
+
+### 208
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peterhof (historia)
+Tietoruudun teksti: Pietari Suuri perusti Peterhofin 1700-luvun alussa Ranskan-matkansa 1717 innoittamana, ja palatsista tuli hänen vastauksensa Ludvig XIV:n Versailles'lle. Nykyinen laajempi kokonaisuus syntyi keisarinna Elisabetin aikana 1740–50-luvuilla arkkitehti Bartolomeo Rastrellin suunnitelmien mukaan. Puiston kuuluisin nähtävyys on Suuri kaskadi, jonka kymmenet kultaiset patsaat ja suihkulähteet toimivat ilman ainuttakaan pumppua: ylätarhan luonnollisista lähteistä valuva vesi ja korkeusero riittävät yksin käyttövoimaksi. Peterhof sijaitsee Suomenlahden rannalla lähellä Pietaria, ja se kattaa nykyisin lähes 4 000 hehtaaria puistoja ja rakennuksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+- [Pariisi — kohdekartta / Kohdekartta: Bastilji 1789] Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvottelut kestäv…
+AIEMPI KYSYMYS: Miksi Peterhofia kutsutaan "Venäjän Versailles'ksi"?
+AIEMPI VASTAUS (Livia):
+Just niin, vertailu on vanha. [[Pietari Suuri]] perusti Peterhofin 1700-luvun alussa ja sai vaikutteita Ranskan-matkaltaan vuonna 1717. Hän halusi oman suurenmoisen palatsipuiston, ja Peterhofista tuli hänen vastauksensa Ludvig XIV:n [[Versailles'n palatsille]]. Samoin kuin Versailles'ssa, näyttävintä Peterhofissa ovat suihkulähteet ja laaja puisto [[Suomenlahden]] rannalla. Nimitys on lempinimi eikä virallinen. Pöllö on ollut poissa niin kauan, että ehtisi kiertää Versailles'n puistotkin.
+KYSYMYS: Kerro lisää: Versailles'n palatsille
+
+### 209
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peterhof (historia)
+Tietoruudun teksti: Pietari Suuri perusti Peterhofin 1700-luvun alussa Ranskan-matkansa 1717 innoittamana, ja palatsista tuli hänen vastauksensa Ludvig XIV:n Versailles'lle. Nykyinen laajempi kokonaisuus syntyi keisarinna Elisabetin aikana 1740–50-luvuilla arkkitehti Bartolomeo Rastrellin suunnitelmien mukaan. Puiston kuuluisin nähtävyys on Suuri kaskadi, jonka kymmenet kultaiset patsaat ja suihkulähteet toimivat ilman ainuttakaan pumppua: ylätarhan luonnollisista lähteistä valuva vesi ja korkeusero riittävät yksin käyttövoimaksi. Peterhof sijaitsee Suomenlahden rannalla lähellä Pietaria, ja se kattaa nykyisin lähes 4 000 hehtaaria puistoja ja rakennuksia.
+AIEMPI KYSYMYS: Miksi Peterhofia kutsutaan "Venäjän Versailles'ksi"?
+AIEMPI VASTAUS (Livia):
+Just niin, vertailu on vanha. [[Pietari Suuri]] perusti Peterhofin 1700-luvun alussa ja sai vaikutteita Ranskan-matkaltaan vuonna 1717. Hän halusi oman suurenmoisen palatsipuiston, ja Peterhofista tuli hänen vastauksensa Ludvig XIV:n [[Versailles'n palatsille]]. Samoin kuin Versailles'ssa, näyttävintä Peterhofissa ovat suihkulähteet ja laaja puisto [[Suomenlahden]] rannalla. Nimitys on lempinimi eikä virallinen. Pöllö on ollut poissa niin kauan, että ehtisi kiertää Versailles'n puistotkin.
+KYSYMYS: Kerro lisää: Suomenlahden
+
+### 210
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peterhof (historia)
+Tietoruudun teksti: Pietari Suuri perusti Peterhofin 1700-luvun alussa Ranskan-matkansa 1717 innoittamana, ja palatsista tuli hänen vastauksensa Ludvig XIV:n Versailles'lle. Nykyinen laajempi kokonaisuus syntyi keisarinna Elisabetin aikana 1740–50-luvuilla arkkitehti Bartolomeo Rastrellin suunnitelmien mukaan. Puiston kuuluisin nähtävyys on Suuri kaskadi, jonka kymmenet kultaiset patsaat ja suihkulähteet toimivat ilman ainuttakaan pumppua: ylätarhan luonnollisista lähteistä valuva vesi ja korkeusero riittävät yksin käyttövoimaksi. Peterhof sijaitsee Suomenlahden rannalla lähellä Pietaria, ja se kattaa nykyisin lähes 4 000 hehtaaria puistoja ja rakennuksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kohdekartta / Kohdekartta: Pyhän Elisabetin tuomiokirkko] 1380–1508 Pyhän Elisabetin tuomiokirkko on Slovakian suurin kirkko ja yksi Euroopan itäisimmistä goottilaisista katedraaleista. Se on 60 metriä pitkä ja 36 metriä leveä, ja sinne mahtuu yli 5 000 ihmistä. Paikalla seisoi jo aiempi kirkko, joka paloi noin 1380. Uutta rakennettiin varakkaiden porvarien rahoilla ja keisari Sigismundin tuella, ja työ valmistui 1508. Kirkon pohjoisportaali on keskiaikaisessa perinteessä harvinainen, koska kirkkojen pohjoisseinässä ei yleensä ollut porttia. Se avautui kaupungin vilkkaimpaan kohtaan, torille ja raatihuoneelle, ja sitä kutsutaan Kultaiseksi portiksi, koska se oli keskiajalla kullattu. Sisällä on Euroopan vanhin säilynyt kaksihaarainen kierreportaik…
+- [Košice — kaupunkilehti / Rakennukset: Kirkko, johon mahtuu yli viisituhatta ihmistä] Pyhän Elisabetin tuomiokirkko on Slovakian suurin kirkko ja yksi Euroopan itäisimmistä goottilaisista katedraaleista. Se on 60 metriä pitkä ja 36 metriä leveä, pohjoinen torni kohoaa 59 metriin, ja kirkkoon mahtuu yli 5 000 ihmistä. Nykyinen kirkko alkoi nousta noin vuoden 1380 palon jälkeen aiemman, Elisabetille pyhitetyn kirkon paikalle, ja sen katsotaan valmistuneen vuonna 1508. Sisällä keskilaivaa leikkaa yhtä korkea ja leveä poikkilaiva, ja yhdessä ne muodostavat kreikkalaisen ristin.
+AIEMPI KYSYMYS: Miten Peterhofin Suuren kaskadin suihkulähteet saavat vetensä liikkeelle?
+AIEMPI VASTAUS (Livia):
+No jopas. Suuren kaskadin suihkulähteet toimivat ilman pumppuja. Vesi tulee ylätarhan luonnollisista lähteistä, ja puiston ylä- ja alaosan välinen korkeusero luo paineen, joka nostaa suihkut ilmaan. Käytännössä vesi virtaa painovoiman voimalla ylhäältä alas kanavia ja putkia pitkin kymmenien kultaisten patsaiden ja suihkulähteiden luo. Nykyinen laajempi kokonaisuus syntyi keisarinna [[Elisabetin]] aikana arkkitehti [[Bartolomeo Rastrellin]] suunnitelmien mukaan.
+
+Vesi hoitaa koko työn painovoimalla, ja minulle se on tuttua: alamäkeen lentäminen on aina helpointa. Ylämäkeen en lähde ilman syytä.
+KYSYMYS: Kerro lisää: Elisabetin
+
+### 211
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peterhof (historia)
+Tietoruudun teksti: Pietari Suuri perusti Peterhofin 1700-luvun alussa Ranskan-matkansa 1717 innoittamana, ja palatsista tuli hänen vastauksensa Ludvig XIV:n Versailles'lle. Nykyinen laajempi kokonaisuus syntyi keisarinna Elisabetin aikana 1740–50-luvuilla arkkitehti Bartolomeo Rastrellin suunnitelmien mukaan. Puiston kuuluisin nähtävyys on Suuri kaskadi, jonka kymmenet kultaiset patsaat ja suihkulähteet toimivat ilman ainuttakaan pumppua: ylätarhan luonnollisista lähteistä valuva vesi ja korkeusero riittävät yksin käyttövoimaksi. Peterhof sijaitsee Suomenlahden rannalla lähellä Pietaria, ja se kattaa nykyisin lähes 4 000 hehtaaria puistoja ja rakennuksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Andreaksen kirkko] 1747–1754 Andreaksen kirkko kohoaa jyrkällä mäellä Kiovan Podilin yläpuolella, ja sen taustalla on vanha legenda. Tarinan mukaan apostoli Andreas nousi tälle samalle kukkulalle jo lähes kaksituhatta vuotta sitten, pystytti sinne ristin ja ennusti paikalle nousevan suuren kaupungin, jossa olisi paljon kirkkoja. Juuri tähän pyhäksi uskottuun paikkaan rakennettiin vuosina 1747–1754 kirkko, joka on saanut nimensä apostolin käynnin muistoksi. Kirkon suunnitteli italialainen arkkitehti Bartolomeo Rastrelli, joka piirsi myös komeita palatseja Pietariin, ja rakennustyötä valvoi paikan päällä Ivan Mitšurin. Kirkko seisoo 15 metriä korkealla kivijalustalla, minkä ansiosta se näyttää melkein leijuvan …
+- [Pietari — kohdekartta / Kohdekartta: Talvipalatsi] 1754–1762 Keisarinna Anna tilasi upean talvipalatsin, ja italialainen arkkitehti Bartolomeo Rastrelli sai vihreä-valkoisen barokkilinnan valmiiksi vuonna 1762. Palatsissa on peräti 1500 huonetta, 1945 ikkunaa ja 117 porrasta, ja sen pääjulkisivu venyy 215 metrin pituudelta. Suurimpaan juhlasaliin mahtui seisomaan jopa 10 000 ihmistä, ja ruokapöytään voitiin kerralla kattaa tuhannelle vieraalle. Palatsi oli Venäjän hallitsijoiden koti lähes 150 vuoden ajan. Palvelijat pitivät jopa lehmää ullakolla, jotta keittiöön riitti tuoretta maitoa joka aamu! Katariina Suuri alkoi keräillä palatsin viereen niin paljon taideteoksia, että kokoelmasta kasvoi Eremitaasi – nykyään yksi maailman suurimmista t…
+AIEMPI KYSYMYS: Miten Peterhofin Suuren kaskadin suihkulähteet saavat vetensä liikkeelle?
+AIEMPI VASTAUS (Livia):
+No jopas. Suuren kaskadin suihkulähteet toimivat ilman pumppuja. Vesi tulee ylätarhan luonnollisista lähteistä, ja puiston ylä- ja alaosan välinen korkeusero luo paineen, joka nostaa suihkut ilmaan. Käytännössä vesi virtaa painovoiman voimalla ylhäältä alas kanavia ja putkia pitkin kymmenien kultaisten patsaiden ja suihkulähteiden luo. Nykyinen laajempi kokonaisuus syntyi keisarinna [[Elisabetin]] aikana arkkitehti [[Bartolomeo Rastrellin]] suunnitelmien mukaan.
+
+Vesi hoitaa koko työn painovoimalla, ja minulle se on tuttua: alamäkeen lentäminen on aina helpointa. Ylämäkeen en lähde ilman syytä.
+KYSYMYS: Kerro lisää: Bartolomeo Rastrellin
+
+### 212
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peterhof (historia)
+Tietoruudun teksti: Pietari Suuri perusti Peterhofin 1700-luvun alussa Ranskan-matkansa 1717 innoittamana, ja palatsista tuli hänen vastauksensa Ludvig XIV:n Versailles'lle. Nykyinen laajempi kokonaisuus syntyi keisarinna Elisabetin aikana 1740–50-luvuilla arkkitehti Bartolomeo Rastrellin suunnitelmien mukaan. Puiston kuuluisin nähtävyys on Suuri kaskadi, jonka kymmenet kultaiset patsaat ja suihkulähteet toimivat ilman ainuttakaan pumppua: ylätarhan luonnollisista lähteistä valuva vesi ja korkeusero riittävät yksin käyttövoimaksi. Peterhof sijaitsee Suomenlahden rannalla lähellä Pietaria, ja se kattaa nykyisin lähes 4 000 hehtaaria puistoja ja rakennuksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ulan Bator — kohdekartta / Kohdekartta: Bogd Khanin talvipalatsi] 1893–1903 Talvipalatsi oli osa laajempaa Vihreän palatsin kokonaisuutta, joka oli kahdeksannen Jebtsundamba Khutuktun eli Bogd Khanin asuinpaikka. Hallitsijalla oli neljä pääasuntoa, ja kaikki olivat Keski- ja Tuul-joen välisellä alueella: kesäpalatsi, Valkoinen palatsi, Pandelinin palatsi ja tämä. Osaa niistä käytettiin myös uskonnollisiin menoihin. Kolme muuta on kadonnut, ja talvipalatsi on ainoa jäljellä oleva. Alueella on kaikkiaan parikymmentä rakennusta. Portin nimi on Rauhan ja onnen portti, ja pihalla on jäähdytyspaviljonki sekä kuusi temppeliä, joissa on buddhalaista taidetta, kirjoituksia ja thangka-maalauksia; kahden temppelin nimet ovat Naidan ja Makhranz. Itse talvipalatsi on …
+- [Ulan Bator — kaupunkilehti / Ulan Bator: Talvipalatsi, joka jäi jäljelle] Talvipalatsi rakennettiin vuosina 1893–1903 maan ylimmän hengellisen johtajan, kahdeksannen Jebtsundamba Khutuktun, asunnoksi. Kun Qing-dynastia romahti, hänet julistettiin 29. joulukuuta 1911 Bogd Khaniksi ja itsenäisen Mongolian hallitsijaksi. Hallitsijalla oli neljä residenssiä, ja tämä on niistä ainoa jäljellä. Kokonaisuuteen kuuluu parikymmentä rakennusta, joista kuusi on temppeleitä, ja museon 8 600 esineen joukossa ovat valtaistuin, vuode, koristeltu juhlager ja parit saappaita, jotka Venäjän keisari Nikolai II lahjoitti.
+AIEMPI KYSYMYS: Kuka oli arkkitehti Bartolomeo Rastrelli?
+AIEMPI VASTAUS (Livia):
+Hmm, hänet minä muistan. Bartolomeo Rastrelli oli italialaistaustainen barokkiarkkitehti, joka teki uransa Venäjällä ja suunnitteli keisarinna [[Elisabetin]] ajan suurimpia palatseja. Tunnetuimpia töitä ovat [[Talvipalatsi]] Pietarissa sekä [[Katariinan palatsi]] Tsarskoje Selossa, ja Peterhofin laajempi kokonaisuus syntyi hänen suunnitelmiensa mukaan 1740–50-luvuilla. Hänen tyylilleen ovat ominaisia runsaat koristeet, kullattu pinta ja vahva väritys. Barokki on kyllä tyyli, joka ei pyydä anteeksi.
+KYSYMYS: Kerro lisää: Talvipalatsi
+
+### 213
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peterhof (historia)
+Tietoruudun teksti: Pietari Suuri perusti Peterhofin 1700-luvun alussa Ranskan-matkansa 1717 innoittamana, ja palatsista tuli hänen vastauksensa Ludvig XIV:n Versailles'lle. Nykyinen laajempi kokonaisuus syntyi keisarinna Elisabetin aikana 1740–50-luvuilla arkkitehti Bartolomeo Rastrellin suunnitelmien mukaan. Puiston kuuluisin nähtävyys on Suuri kaskadi, jonka kymmenet kultaiset patsaat ja suihkulähteet toimivat ilman ainuttakaan pumppua: ylätarhan luonnollisista lähteistä valuva vesi ja korkeusero riittävät yksin käyttövoimaksi. Peterhof sijaitsee Suomenlahden rannalla lähellä Pietaria, ja se kattaa nykyisin lähes 4 000 hehtaaria puistoja ja rakennuksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tallinna — kaupunkilehti / Palatsi: Palatsi, joka rakennettiin sodan keskellä] Suuri Pohjan sota ei ollut vielä päättynyt, kun tsaari Pietari Suuri, jo varma valloittamiensa Itämeren alueiden pysyvyydestä, aloitti vuonna 1718 uuden kesäpalatsin rakentamisen Tallinnan liepeille. Italialainen arkkitehti Nicola Michetti suunnitteli barokkipalatsin, jonka rakennustyöt kestivät vuoteen 1725. Palatsi on yksi Pohjois-Euroopan komeimmista barokkirakennuksista, ja se nimettiin Kadriorgiksi, Katariinan laaksoksi, tsaarin vaimon Katariina I:n mukaan.
+AIEMPI KYSYMYS: Kuka oli arkkitehti Bartolomeo Rastrelli?
+AIEMPI VASTAUS (Livia):
+Hmm, hänet minä muistan. Bartolomeo Rastrelli oli italialaistaustainen barokkiarkkitehti, joka teki uransa Venäjällä ja suunnitteli keisarinna [[Elisabetin]] ajan suurimpia palatseja. Tunnetuimpia töitä ovat [[Talvipalatsi]] Pietarissa sekä [[Katariinan palatsi]] Tsarskoje Selossa, ja Peterhofin laajempi kokonaisuus syntyi hänen suunnitelmiensa mukaan 1740–50-luvuilla. Hänen tyylilleen ovat ominaisia runsaat koristeet, kullattu pinta ja vahva väritys. Barokki on kyllä tyyli, joka ei pyydä anteeksi.
+KYSYMYS: Kerro lisää: Katariinan palatsi
+
+### 214
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peterhof (historia)
+Tietoruudun teksti: Pietari Suuri perusti Peterhofin 1700-luvun alussa Ranskan-matkansa 1717 innoittamana, ja palatsista tuli hänen vastauksensa Ludvig XIV:n Versailles'lle. Nykyinen laajempi kokonaisuus syntyi keisarinna Elisabetin aikana 1740–50-luvuilla arkkitehti Bartolomeo Rastrellin suunnitelmien mukaan. Puiston kuuluisin nähtävyys on Suuri kaskadi, jonka kymmenet kultaiset patsaat ja suihkulähteet toimivat ilman ainuttakaan pumppua: ylätarhan luonnollisista lähteistä valuva vesi ja korkeusero riittävät yksin käyttövoimaksi. Peterhof sijaitsee Suomenlahden rannalla lähellä Pietaria, ja se kattaa nykyisin lähes 4 000 hehtaaria puistoja ja rakennuksia.
+AIEMPI KYSYMYS: Milloin Peterhofin suihkulähteet ovat käynnissä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Peterhofin suihkulähteet toimivat lämpimänä vuodenaikana: tietojeni mukaan kausi alkaa keväällä ja päättyy syksyllä, ja talvella suihkut ovat pois käytöstä. Tarkat päivämäärät vaihtelevat vuosittain, joten niitä en lupaa, ja ajankohdan kannattaa tarkistaa puiston omasta tiedotuksesta. [[Suuren kaskadin]] kultaiset patsaat ja suihkut kuuluvat puiston tunnetuimpiin nähtävyyksiin, ja koko puisto sijaitsee [[Suomenlahden]] rannalla. Suihkut ovat ylhäältä katsottuna kuin kultaisia sulkia.
+KYSYMYS: Kerro lisää: Suuren kaskadin
+
+### 215
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peterhof (historia)
+Tietoruudun teksti: Pietari Suuri perusti Peterhofin 1700-luvun alussa Ranskan-matkansa 1717 innoittamana, ja palatsista tuli hänen vastauksensa Ludvig XIV:n Versailles'lle. Nykyinen laajempi kokonaisuus syntyi keisarinna Elisabetin aikana 1740–50-luvuilla arkkitehti Bartolomeo Rastrellin suunnitelmien mukaan. Puiston kuuluisin nähtävyys on Suuri kaskadi, jonka kymmenet kultaiset patsaat ja suihkulähteet toimivat ilman ainuttakaan pumppua: ylätarhan luonnollisista lähteistä valuva vesi ja korkeusero riittävät yksin käyttövoimaksi. Peterhof sijaitsee Suomenlahden rannalla lähellä Pietaria, ja se kattaa nykyisin lähes 4 000 hehtaaria puistoja ja rakennuksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Colțean torni] Isoisäsi kiipesi Bukarestin korkeimpaan rakennukseen: Colțean torni kohosi arviolta 54 metriin ja oli kaupungin korkein yli vuosisadan ajan. Sen rakentamisessa vuosina 1709–1714 auttoivat Ruotsin kuninkaan Kaarle XII:n sotilaat, jotka olivat paenneet Valakiaan Poltavan tappion jälkeen; ruhtinas Constantin Brâncoveanu majoitti heidät. Sisäänkäynnin molemmin puolin oli maalattuna kaksi ruotsalaista sotilasta, jalkaväkimies ja ratsumies, kiväärit olalla — juuri ne, jotka isoisäsi näki. Tornissa oli myös kirjoitus ruotsalaisten muuraustöiden muistoksi; se on kadonnut. Vuoden 1802 maanjäristys pudotti tornin huipun ja kellon, ja kun torni 1888 purettiin kokonaan, sen 1 700 kilon kello vietiin Si…
+AIEMPI KYSYMYS: Mikä on Peterhofin Samson-suihkulähde?
+AIEMPI VASTAUS (Livia):
+Ai tota. Se patsas on tuttu. Samson-suihkulähde on [[Suuren kaskadin]] keskipiste: patsaassa Samson repii leijonan leuat auki, ja vesi suihkuaa leijonan suusta korkealle. Se muistuttaa [[Poltavan taistelun]] voittoa vuonna 1709 [[Suuren Pohjan sodan]] aikana, ja leijonan yleensä selitetään viittaavan Ruotsin vaakunaan. Alkuperäinen patsas katosi toisen maailmansodan aikana, ja nykyinen on sen jälkeen tehty jäljennös. Onneksi kopio seisoo taas paikallaan.
+KYSYMYS: Kerro lisää: Poltavan taistelun
+
+### 216
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peterhof (historia)
+Tietoruudun teksti: Pietari Suuri perusti Peterhofin 1700-luvun alussa Ranskan-matkansa 1717 innoittamana, ja palatsista tuli hänen vastauksensa Ludvig XIV:n Versailles'lle. Nykyinen laajempi kokonaisuus syntyi keisarinna Elisabetin aikana 1740–50-luvuilla arkkitehti Bartolomeo Rastrellin suunnitelmien mukaan. Puiston kuuluisin nähtävyys on Suuri kaskadi, jonka kymmenet kultaiset patsaat ja suihkulähteet toimivat ilman ainuttakaan pumppua: ylätarhan luonnollisista lähteistä valuva vesi ja korkeusero riittävät yksin käyttövoimaksi. Peterhof sijaitsee Suomenlahden rannalla lähellä Pietaria, ja se kattaa nykyisin lähes 4 000 hehtaaria puistoja ja rakennuksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+- [Tallinna — kaupunkilehti / Palatsi: Palatsi, joka rakennettiin sodan keskellä] Suuri Pohjan sota ei ollut vielä päättynyt, kun tsaari Pietari Suuri, jo varma valloittamiensa Itämeren alueiden pysyvyydestä, aloitti vuonna 1718 uuden kesäpalatsin rakentamisen Tallinnan liepeille. Italialainen arkkitehti Nicola Michetti suunnitteli barokkipalatsin, jonka rakennustyöt kestivät vuoteen 1725. Palatsi on yksi Pohjois-Euroopan komeimmista barokkirakennuksista, ja se nimettiin Kadriorgiksi, Katariinan laaksoksi, tsaarin vaimon Katariina I:n mukaan.
+AIEMPI KYSYMYS: Mikä on Peterhofin Samson-suihkulähde?
+AIEMPI VASTAUS (Livia):
+Ai tota. Se patsas on tuttu. Samson-suihkulähde on [[Suuren kaskadin]] keskipiste: patsaassa Samson repii leijonan leuat auki, ja vesi suihkuaa leijonan suusta korkealle. Se muistuttaa [[Poltavan taistelun]] voittoa vuonna 1709 [[Suuren Pohjan sodan]] aikana, ja leijonan yleensä selitetään viittaavan Ruotsin vaakunaan. Alkuperäinen patsas katosi toisen maailmansodan aikana, ja nykyinen on sen jälkeen tehty jäljennös. Onneksi kopio seisoo taas paikallaan.
+KYSYMYS: Kerro lisää: Suuren Pohjan sodan
+
+### 217
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jekaterinburg (tekniikka)
+Tietoruudun teksti: Jekaterinburg perustettiin marraskuussa 1723 historioitsija Vasili Tatištševin ja saksalaissyntyisen insinööri Georg Wilhelm de Genninin johdolla Pietari Suuren käskystä, ja kaupunki sai nimensä keisarin puolisosta Jekaterinasta. Se rakennettiin metalliteollisuuden keskukseksi ja linnoitukseksi juuri Uralin harjanteelle, Euroopan ja Aasian rajalle. Vuosina 1820–1845 lähes 45 prosenttia koko maailman kullasta louhittiin Jekaterinburgin seudulta, ja kaupungin rahapaja löi suurimman osan Venäjän keisarikunnan kolikoista aina vuoteen 1876 asti. Siperian valtatie teki kaupungista Aasian portin jo 1760-luvulta lähtien, vuosikymmeniä ennen Trans-Siperian rautatietä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Pietari-Paavalin linnoitus] 1703–1733 Pietari Suuri perusti linnoituksen vuonna 1703 pienelle Jänissaarelle Nevajoen suulle – tästä paikasta koko Pietarin kaupunki sai alkunsa. Sveitsiläissyntyinen arkkitehti Domenico Trezzini suunnitteli tähdenmuotoiset muurit ja bastionit, ja saaren keskelle nousi Pietari-Paavalin katedraali, jonka 122,5 metriä korkeaa kellotornia kruunaa kultainen enkeli tuulen mukana kääntyvän viirin päällä. Saaren nimi juontuu vanhasta tarinasta: kun Pietari Suuri astui maihin, tulvavesi ajoi säikähtäneen jäniksen suoraan hänen saappaansa suojaan. Tapahtumaa muistaa nykyään pieni pronssinen jänispatsas sillan vieressä olevan pylvään päällä, ja pylvääseen on merkitty vanhojen tulvien korkeudet. Vu…
+- [Pietari — kaupunkilehti / Historian hetki: Pietari 1869 — tyhjät paikat, joihin uskalletaan luottaa] 6.3.1869 — Paperilapulla lukee alkuaineen nimi, atomipaino ja muutama ominaisuus, ja pöydällä on kuusikymmentäkolme sellaista lappua. Dmitri Mendelejev, 35, kirjoittaa Pietarin yliopistossa kemian oppikirjaa ja tarvitsee järjestyksen, jossa alkuaineet voisi esittää opiskelijoille. Hän lajittelee niitä painon mukaan ja huomaa, että ominaisuudet toistuvat säännöllisin välein. Myöhemmin hän kertoo nähneensä valmiin taulukon unessa ja kirjoittaneensa sen herättyään paperille; arkistossa on kuitenkin luonnoksia, joissa rivejä on siirretty ja yliviivattu. Taulukko painetaan ja lähetetään kemisteille, ja 6. maaliskuuta 1869 Venäjän kemian seura kuulee esitelmän alkuaineiden ominaisuuksien riippuvu…
+AIEMPI KYSYMYS: Miksi Jekaterinburg perustettiin juuri Uralin harjanteelle?
+AIEMPI VASTAUS (Livia):
+Kato, tästä minä tiedän vähän. Jekaterinburg perustettiin Uralille, koska seudulla oli malmia ja metsiä puuhiilen polttoon sekä jokivettä, joka antoi voiman rautaruukille. [[Pietari Suuren]] käskystä kaupunki rakennettiin metalliteollisuuden keskukseksi ja linnoitukseksi Euroopan ja Aasian rajalle. Perustamista johtivat historioitsija [[Vasili Tatištšev]] ja saksalaissyntyinen insinööri [[Georg Wilhelm de Gennin]]. Kaupungin ikä lasketaan 18. marraskuuta 1723, jolloin Iset-joen rannalla koeajettiin rautaruukin vasarapaja.
+
+Ylhäältä katsoen Euroopan ja Aasian raja ei näy mitenkään, ja se on mielestäni vähän pettymys. Pitäisi olla edes viiva.
+KYSYMYS: Kerro lisää: Pietari Suuren
+
+### 218
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jekaterinburg (tekniikka)
+Tietoruudun teksti: Jekaterinburg perustettiin marraskuussa 1723 historioitsija Vasili Tatištševin ja saksalaissyntyisen insinööri Georg Wilhelm de Genninin johdolla Pietari Suuren käskystä, ja kaupunki sai nimensä keisarin puolisosta Jekaterinasta. Se rakennettiin metalliteollisuuden keskukseksi ja linnoitukseksi juuri Uralin harjanteelle, Euroopan ja Aasian rajalle. Vuosina 1820–1845 lähes 45 prosenttia koko maailman kullasta louhittiin Jekaterinburgin seudulta, ja kaupungin rahapaja löi suurimman osan Venäjän keisarikunnan kolikoista aina vuoteen 1876 asti. Siperian valtatie teki kaupungista Aasian portin jo 1760-luvulta lähtien, vuosikymmeniä ennen Trans-Siperian rautatietä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kohdekartta / Kohdekartta: Historiallinen aukio] 1723 alkaen Tämä on se paikka, josta kaupunki alkoi. Vasili Tatištšev etsi vuonna 1721 Uralilta kohtaa, jossa olisi sekä malmia että metsää, ja valitsi Iset-joen rannan. Työ seisahtui, kun Berg-kollegio ei hyväksynyt hanketta, ja jatkui vasta 12. maaliskuuta 1723 Georg Wilhelm de Genninin johdolla. Järjestys oli tarkka: ensin padottiin joki, sitten rakennettiin ruukki, joka kävi padon voimalla. Vasarapajaa koeajettiin 18. marraskuuta 1723, ja siitä päivästä lasketaan kaupungin ikä. Ruukista kasvoi kokonainen tehdaskortteli padon molemmin puolin. Vuonna 1725 siellä alettiin lyödä kuparirahaa, ja myöhemmin alue tunnettiin mekaanisena tehtaana ja rahapajana. Sen muurit, portit ja osa halleista…
+- [Jekaterinburg — kaupunkilehti / Jekaterinburg: Pato tuli ensin, kaupunki vasta sen jälkeen] Vasili Tatištšev etsi vuonna 1721 Uralilta paikkaa, jossa olisi sekä malmia että metsää, ja valitsi Iset-joen rannan muutaman virstan päästä Uktusin ruukista. Berg-kollegio ei hyväksynyt hanketta, työ pysähtyi ja Tatištšev menetti Uralin vuoritoimen johdon; rakentaminen jatkui vasta 12. maaliskuuta 1723 Georg Wilhelm de Genninin johdolla. Ensin padottiin joki, vasta sitten nousi ruukki. Kesäkuun 8. päivänä de Gennin lähetti keisarin puolisolle Katariinalle tarjottimen, joka oli taottu ensimmäisestä kuparisulatuksesta, ja pyysi saada nimetä ruukin tämän mukaan. Vasarapajaa koeajettiin 18. marraskuuta 1723.
+AIEMPI KYSYMYS: Miksi Jekaterinburg perustettiin juuri Uralin harjanteelle?
+AIEMPI VASTAUS (Livia):
+Kato, tästä minä tiedän vähän. Jekaterinburg perustettiin Uralille, koska seudulla oli malmia ja metsiä puuhiilen polttoon sekä jokivettä, joka antoi voiman rautaruukille. [[Pietari Suuren]] käskystä kaupunki rakennettiin metalliteollisuuden keskukseksi ja linnoitukseksi Euroopan ja Aasian rajalle. Perustamista johtivat historioitsija [[Vasili Tatištšev]] ja saksalaissyntyinen insinööri [[Georg Wilhelm de Gennin]]. Kaupungin ikä lasketaan 18. marraskuuta 1723, jolloin Iset-joen rannalla koeajettiin rautaruukin vasarapaja.
+
+Ylhäältä katsoen Euroopan ja Aasian raja ei näy mitenkään, ja se on mielestäni vähän pettymys. Pitäisi olla edes viiva.
+KYSYMYS: Kerro lisää: Vasili Tatištšev
+
+### 219
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jekaterinburg (tekniikka)
+Tietoruudun teksti: Jekaterinburg perustettiin marraskuussa 1723 historioitsija Vasili Tatištševin ja saksalaissyntyisen insinööri Georg Wilhelm de Genninin johdolla Pietari Suuren käskystä, ja kaupunki sai nimensä keisarin puolisosta Jekaterinasta. Se rakennettiin metalliteollisuuden keskukseksi ja linnoitukseksi juuri Uralin harjanteelle, Euroopan ja Aasian rajalle. Vuosina 1820–1845 lähes 45 prosenttia koko maailman kullasta louhittiin Jekaterinburgin seudulta, ja kaupungin rahapaja löi suurimman osan Venäjän keisarikunnan kolikoista aina vuoteen 1876 asti. Siperian valtatie teki kaupungista Aasian portin jo 1760-luvulta lähtien, vuosikymmeniä ennen Trans-Siperian rautatietä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Jekaterinburg: Pato tuli ensin, kaupunki vasta sen jälkeen] Vasili Tatištšev etsi vuonna 1721 Uralilta paikkaa, jossa olisi sekä malmia että metsää, ja valitsi Iset-joen rannan muutaman virstan päästä Uktusin ruukista. Berg-kollegio ei hyväksynyt hanketta, työ pysähtyi ja Tatištšev menetti Uralin vuoritoimen johdon; rakentaminen jatkui vasta 12. maaliskuuta 1723 Georg Wilhelm de Genninin johdolla. Ensin padottiin joki, vasta sitten nousi ruukki. Kesäkuun 8. päivänä de Gennin lähetti keisarin puolisolle Katariinalle tarjottimen, joka oli taottu ensimmäisestä kuparisulatuksesta, ja pyysi saada nimetä ruukin tämän mukaan. Vasarapajaa koeajettiin 18. marraskuuta 1723.
+AIEMPI KYSYMYS: Miksi Jekaterinburg perustettiin juuri Uralin harjanteelle?
+AIEMPI VASTAUS (Livia):
+Kato, tästä minä tiedän vähän. Jekaterinburg perustettiin Uralille, koska seudulla oli malmia ja metsiä puuhiilen polttoon sekä jokivettä, joka antoi voiman rautaruukille. [[Pietari Suuren]] käskystä kaupunki rakennettiin metalliteollisuuden keskukseksi ja linnoitukseksi Euroopan ja Aasian rajalle. Perustamista johtivat historioitsija [[Vasili Tatištšev]] ja saksalaissyntyinen insinööri [[Georg Wilhelm de Gennin]]. Kaupungin ikä lasketaan 18. marraskuuta 1723, jolloin Iset-joen rannalla koeajettiin rautaruukin vasarapaja.
+
+Ylhäältä katsoen Euroopan ja Aasian raja ei näy mitenkään, ja se on mielestäni vähän pettymys. Pitäisi olla edes viiva.
+KYSYMYS: Kerro lisää: Georg Wilhelm de Gennin
+
+### 220
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jekaterinburg (tekniikka)
+Tietoruudun teksti: Jekaterinburg perustettiin marraskuussa 1723 historioitsija Vasili Tatištševin ja saksalaissyntyisen insinööri Georg Wilhelm de Genninin johdolla Pietari Suuren käskystä, ja kaupunki sai nimensä keisarin puolisosta Jekaterinasta. Se rakennettiin metalliteollisuuden keskukseksi ja linnoitukseksi juuri Uralin harjanteelle, Euroopan ja Aasian rajalle. Vuosina 1820–1845 lähes 45 prosenttia koko maailman kullasta louhittiin Jekaterinburgin seudulta, ja kaupungin rahapaja löi suurimman osan Venäjän keisarikunnan kolikoista aina vuoteen 1876 asti. Siperian valtatie teki kaupungista Aasian portin jo 1760-luvulta lähtien, vuosikymmeniä ennen Trans-Siperian rautatietä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+AIEMPI KYSYMYS: Mitä Jekaterinburgin rahapajassa valmistettiin 1870-luvulla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Jekaterinburgin rahapajassa lyötiin pääosin kuparirahaa, esimerkiksi pieniä kopeekan kolikoita. Lähteiden mukaan rahapaja löi merkittävän osan [[Venäjän keisarikunnan]] kolikoista, ja sen toiminta päättyi vuonna 1876, joten 1870-luku kuului sen viimeisiin vuosiin. Rahapaja oli osa ruukkikaupunkia, jonka [[Pietari Suuri]] oli perustanut. Kopeekkoja minä kantaisin mieluummin kuin kirjeitä, kunhan niillä saisi pullaa.
+KYSYMYS: Kerro lisää: Venäjän keisarikunnan
+
+### 221
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jekaterinburg (tekniikka)
+Tietoruudun teksti: Jekaterinburg perustettiin marraskuussa 1723 historioitsija Vasili Tatištševin ja saksalaissyntyisen insinööri Georg Wilhelm de Genninin johdolla Pietari Suuren käskystä, ja kaupunki sai nimensä keisarin puolisosta Jekaterinasta. Se rakennettiin metalliteollisuuden keskukseksi ja linnoitukseksi juuri Uralin harjanteelle, Euroopan ja Aasian rajalle. Vuosina 1820–1845 lähes 45 prosenttia koko maailman kullasta louhittiin Jekaterinburgin seudulta, ja kaupungin rahapaja löi suurimman osan Venäjän keisarikunnan kolikoista aina vuoteen 1876 asti. Siperian valtatie teki kaupungista Aasian portin jo 1760-luvulta lähtien, vuosikymmeniä ennen Trans-Siperian rautatietä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Pietari-Paavalin linnoitus] 1703–1733 Pietari Suuri perusti linnoituksen vuonna 1703 pienelle Jänissaarelle Nevajoen suulle – tästä paikasta koko Pietarin kaupunki sai alkunsa. Sveitsiläissyntyinen arkkitehti Domenico Trezzini suunnitteli tähdenmuotoiset muurit ja bastionit, ja saaren keskelle nousi Pietari-Paavalin katedraali, jonka 122,5 metriä korkeaa kellotornia kruunaa kultainen enkeli tuulen mukana kääntyvän viirin päällä. Saaren nimi juontuu vanhasta tarinasta: kun Pietari Suuri astui maihin, tulvavesi ajoi säikähtäneen jäniksen suoraan hänen saappaansa suojaan. Tapahtumaa muistaa nykyään pieni pronssinen jänispatsas sillan vieressä olevan pylvään päällä, ja pylvääseen on merkitty vanhojen tulvien korkeudet. Vu…
+- [Venäjä — maalehti / Historia: Tsaari perusti pääkaupungin suolle] 1703 — Suuressa Pohjan sodassa Ruotsia vastaan Pietari Suuri valtasi Nevajoen suistoalueen ja käski 27. toukokuuta 1703 perustaa linnoituksen pienelle Jänissaarelle suojaamaan uutta aluetta. Rakennustyöhön komennettiin kymmeniätuhansia talonpoikia ja sotavankeja kaivamaan maata paljain käsin suoperäisellä rannalla, ja moni heistä kuoli raskaissa oloissa. Linnoituksen ympärille nousi kaupunki, josta tuli vuonna 1712 Venäjän uusi pääkaupunki ja jota Pietari kutsui itse "ikkunaksi Eurooppaan". Pietari valvoi rakennustöitä usein itse paikan päällä eurooppalaiseen tapaan pukeutuneena, mikä hämmensi hoviväkeä tottuneempaa tsaarin perinteiseen asuun ja etäisyyteen.
+AIEMPI KYSYMYS: Mitä Jekaterinburgin rahapajassa valmistettiin 1870-luvulla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Jekaterinburgin rahapajassa lyötiin pääosin kuparirahaa, esimerkiksi pieniä kopeekan kolikoita. Lähteiden mukaan rahapaja löi merkittävän osan [[Venäjän keisarikunnan]] kolikoista, ja sen toiminta päättyi vuonna 1876, joten 1870-luku kuului sen viimeisiin vuosiin. Rahapaja oli osa ruukkikaupunkia, jonka [[Pietari Suuri]] oli perustanut. Kopeekkoja minä kantaisin mieluummin kuin kirjeitä, kunhan niillä saisi pullaa.
+KYSYMYS: Kerro lisää: Pietari Suuri
+
+### 222
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jekaterinburg (tekniikka)
+Tietoruudun teksti: Jekaterinburg perustettiin marraskuussa 1723 historioitsija Vasili Tatištševin ja saksalaissyntyisen insinööri Georg Wilhelm de Genninin johdolla Pietari Suuren käskystä, ja kaupunki sai nimensä keisarin puolisosta Jekaterinasta. Se rakennettiin metalliteollisuuden keskukseksi ja linnoitukseksi juuri Uralin harjanteelle, Euroopan ja Aasian rajalle. Vuosina 1820–1845 lähes 45 prosenttia koko maailman kullasta louhittiin Jekaterinburgin seudulta, ja kaupungin rahapaja löi suurimman osan Venäjän keisarikunnan kolikoista aina vuoteen 1876 asti. Siperian valtatie teki kaupungista Aasian portin jo 1760-luvulta lähtien, vuosikymmeniä ennen Trans-Siperian rautatietä.
+AIEMPI KYSYMYS: Missä Euroopan ja Aasian raja kulkee?
+AIEMPI VASTAUS (Livia):
+Mmm— rajaviivat, minun lempiaiheeni. Euroopan ja Aasian välillä ei ole yhtä virallista rajaa, vaan raja perustuu vakiintuneeseen sopimukseen. Venäjällä sen katsotaan yleisimmin kulkevan [[Uralvuoriston]] harjannetta pitkin ja jatkuvan Ural-jokea ja Kaspianmerta myöten kohti Kaukasusta, jossa rajan paikasta esitetään eri tulkintoja. Lännempänä raja kulkee [[Mustanmeren]] ja Bosporinsalmen kautta Välimerelle. Jekaterinburgin lähellä on tietääkseni rajan merkitsevä muistomerkki. Ylhäältä katsoen raja on ihan näkymätön — vuoret vain jatkuvat.
+KYSYMYS: Kerro lisää: Uralvuoriston
+
+### 223
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jekaterinburg (tekniikka)
+Tietoruudun teksti: Jekaterinburg perustettiin marraskuussa 1723 historioitsija Vasili Tatištševin ja saksalaissyntyisen insinööri Georg Wilhelm de Genninin johdolla Pietari Suuren käskystä, ja kaupunki sai nimensä keisarin puolisosta Jekaterinasta. Se rakennettiin metalliteollisuuden keskukseksi ja linnoitukseksi juuri Uralin harjanteelle, Euroopan ja Aasian rajalle. Vuosina 1820–1845 lähes 45 prosenttia koko maailman kullasta louhittiin Jekaterinburgin seudulta, ja kaupungin rahapaja löi suurimman osan Venäjän keisarikunnan kolikoista aina vuoteen 1876 asti. Siperian valtatie teki kaupungista Aasian portin jo 1760-luvulta lähtien, vuosikymmeniä ennen Trans-Siperian rautatietä.
+AIEMPI KYSYMYS: Missä Euroopan ja Aasian raja kulkee?
+AIEMPI VASTAUS (Livia):
+Mmm— rajaviivat, minun lempiaiheeni. Euroopan ja Aasian välillä ei ole yhtä virallista rajaa, vaan raja perustuu vakiintuneeseen sopimukseen. Venäjällä sen katsotaan yleisimmin kulkevan [[Uralvuoriston]] harjannetta pitkin ja jatkuvan Ural-jokea ja Kaspianmerta myöten kohti Kaukasusta, jossa rajan paikasta esitetään eri tulkintoja. Lännempänä raja kulkee [[Mustanmeren]] ja Bosporinsalmen kautta Välimerelle. Jekaterinburgin lähellä on tietääkseni rajan merkitsevä muistomerkki. Ylhäältä katsoen raja on ihan näkymätön — vuoret vain jatkuvat.
+KYSYMYS: Kerro lisää: Mustanmeren
+
+### 224
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jekaterinburg (tekniikka)
+Tietoruudun teksti: Jekaterinburg perustettiin marraskuussa 1723 historioitsija Vasili Tatištševin ja saksalaissyntyisen insinööri Georg Wilhelm de Genninin johdolla Pietari Suuren käskystä, ja kaupunki sai nimensä keisarin puolisosta Jekaterinasta. Se rakennettiin metalliteollisuuden keskukseksi ja linnoitukseksi juuri Uralin harjanteelle, Euroopan ja Aasian rajalle. Vuosina 1820–1845 lähes 45 prosenttia koko maailman kullasta louhittiin Jekaterinburgin seudulta, ja kaupungin rahapaja löi suurimman osan Venäjän keisarikunnan kolikoista aina vuoteen 1876 asti. Siperian valtatie teki kaupungista Aasian portin jo 1760-luvulta lähtien, vuosikymmeniä ennen Trans-Siperian rautatietä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Pietari-Paavalin linnoitus] 1703–1733 Pietari Suuri perusti linnoituksen vuonna 1703 pienelle Jänissaarelle Nevajoen suulle – tästä paikasta koko Pietarin kaupunki sai alkunsa. Sveitsiläissyntyinen arkkitehti Domenico Trezzini suunnitteli tähdenmuotoiset muurit ja bastionit, ja saaren keskelle nousi Pietari-Paavalin katedraali, jonka 122,5 metriä korkeaa kellotornia kruunaa kultainen enkeli tuulen mukana kääntyvän viirin päällä. Saaren nimi juontuu vanhasta tarinasta: kun Pietari Suuri astui maihin, tulvavesi ajoi säikähtäneen jäniksen suoraan hänen saappaansa suojaan. Tapahtumaa muistaa nykyään pieni pronssinen jänispatsas sillan vieressä olevan pylvään päällä, ja pylvääseen on merkitty vanhojen tulvien korkeudet. Vu…
+- [Kap Horn — kaupunkilehti / Kap Hornin kiertäjät: Kolme suurta niemeä, yksi sitkeä laiva] Merimiehiä, jotka olivat kiertäneet kaikki kolme suurta eteläistä niemeä – Kap Hornin, Toivonniemen ja Leeuwinin niemen – kunnioitettiin arvonimellä "kolmen niemen mies". Yksi sitkeimmistä Kap Hornin kiertäjistä oli purjelaiva Balclutha, joka kiersi niemen peräti 17 kertaa vain kolmentoista vuoden aikana, miehistönään ainoastaan noin 26 merimiestä. Tällaiset laivat ja niiden miehistöt tekivät Kap Hornista paitsi pelätyn myös kunnioitetun koettelemuksen, jonka läpäisseet saivat kantaa titteliään lopun elämäänsä.
+- [Moskova — kaupunkilehti / Moskova: Bolshoi tarkoittaa suurta] Bolshoi tarkoittaa venäjäksi suurta. Teatterin juuret ulottuvat vuoteen 1776, ja sen balettiryhmässä tanssii yli 200 tanssijaa — enemmän kuin missään muussa maailman balettiryhmässä. Nykyinen talo avattiin uudelleen lokakuussa 2011 kuusi vuotta kestäneen korjauksen jälkeen, jossa salin alkuperäinen akustiikka palautettiin. Teatterin julkisivu on painettu Venäjän sadan ruplan seteliin.
+AIEMPI KYSYMYS: Kuka oli insinööri Georg Wilhelm de Gennin?
+AIEMPI VASTAUS (Livia):
+No niin, insinöörit. Georg Wilhelm de Gennin oli saksalaissyntyinen insinööri, joka palveli [[Pietari Suurta]] venäläisten kaivos- ja metallitehtaiden rakentajana. Hänet tunnetaan Jekaterinburgin perustajana yhdessä historioitsija [[Vasili Tatištševin]] kanssa vuonna 1723, ja tietojeni mukaan hän oli työskennellyt aiemmin myös Karjalassa [[Äänisjärven]] seudulla. Tarkkoja vuosia hänen uransa vaiheista en ole varma. Insinöörit ja kyyhkyt ovat sukua: kumpikin vie asiat perille.
+KYSYMYS: Kerro lisää: Pietari Suurta
+
+### 225
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jekaterinburg (tekniikka)
+Tietoruudun teksti: Jekaterinburg perustettiin marraskuussa 1723 historioitsija Vasili Tatištševin ja saksalaissyntyisen insinööri Georg Wilhelm de Genninin johdolla Pietari Suuren käskystä, ja kaupunki sai nimensä keisarin puolisosta Jekaterinasta. Se rakennettiin metalliteollisuuden keskukseksi ja linnoitukseksi juuri Uralin harjanteelle, Euroopan ja Aasian rajalle. Vuosina 1820–1845 lähes 45 prosenttia koko maailman kullasta louhittiin Jekaterinburgin seudulta, ja kaupungin rahapaja löi suurimman osan Venäjän keisarikunnan kolikoista aina vuoteen 1876 asti. Siperian valtatie teki kaupungista Aasian portin jo 1760-luvulta lähtien, vuosikymmeniä ennen Trans-Siperian rautatietä.
+AIEMPI KYSYMYS: Kuka oli insinööri Georg Wilhelm de Gennin?
+AIEMPI VASTAUS (Livia):
+No niin, insinöörit. Georg Wilhelm de Gennin oli saksalaissyntyinen insinööri, joka palveli [[Pietari Suurta]] venäläisten kaivos- ja metallitehtaiden rakentajana. Hänet tunnetaan Jekaterinburgin perustajana yhdessä historioitsija [[Vasili Tatištševin]] kanssa vuonna 1723, ja tietojeni mukaan hän oli työskennellyt aiemmin myös Karjalassa [[Äänisjärven]] seudulla. Tarkkoja vuosia hänen uransa vaiheista en ole varma. Insinöörit ja kyyhkyt ovat sukua: kumpikin vie asiat perille.
+KYSYMYS: Kerro lisää: Vasili Tatištševin
+
+### 226
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jekaterinburg (tekniikka)
+Tietoruudun teksti: Jekaterinburg perustettiin marraskuussa 1723 historioitsija Vasili Tatištševin ja saksalaissyntyisen insinööri Georg Wilhelm de Genninin johdolla Pietari Suuren käskystä, ja kaupunki sai nimensä keisarin puolisosta Jekaterinasta. Se rakennettiin metalliteollisuuden keskukseksi ja linnoitukseksi juuri Uralin harjanteelle, Euroopan ja Aasian rajalle. Vuosina 1820–1845 lähes 45 prosenttia koko maailman kullasta louhittiin Jekaterinburgin seudulta, ja kaupungin rahapaja löi suurimman osan Venäjän keisarikunnan kolikoista aina vuoteen 1876 asti. Siperian valtatie teki kaupungista Aasian portin jo 1760-luvulta lähtien, vuosikymmeniä ennen Trans-Siperian rautatietä.
+AIEMPI KYSYMYS: Kuka oli insinööri Georg Wilhelm de Gennin?
+AIEMPI VASTAUS (Livia):
+No niin, insinöörit. Georg Wilhelm de Gennin oli saksalaissyntyinen insinööri, joka palveli [[Pietari Suurta]] venäläisten kaivos- ja metallitehtaiden rakentajana. Hänet tunnetaan Jekaterinburgin perustajana yhdessä historioitsija [[Vasili Tatištševin]] kanssa vuonna 1723, ja tietojeni mukaan hän oli työskennellyt aiemmin myös Karjalassa [[Äänisjärven]] seudulla. Tarkkoja vuosia hänen uransa vaiheista en ole varma. Insinöörit ja kyyhkyt ovat sukua: kumpikin vie asiat perille.
+KYSYMYS: Kerro lisää: Äänisjärven
+
+### 227
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jekaterinburg (tekniikka)
+Tietoruudun teksti: Jekaterinburg perustettiin marraskuussa 1723 historioitsija Vasili Tatištševin ja saksalaissyntyisen insinööri Georg Wilhelm de Genninin johdolla Pietari Suuren käskystä, ja kaupunki sai nimensä keisarin puolisosta Jekaterinasta. Se rakennettiin metalliteollisuuden keskukseksi ja linnoitukseksi juuri Uralin harjanteelle, Euroopan ja Aasian rajalle. Vuosina 1820–1845 lähes 45 prosenttia koko maailman kullasta louhittiin Jekaterinburgin seudulta, ja kaupungin rahapaja löi suurimman osan Venäjän keisarikunnan kolikoista aina vuoteen 1876 asti. Siperian valtatie teki kaupungista Aasian portin jo 1760-luvulta lähtien, vuosikymmeniä ennen Trans-Siperian rautatietä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Novosibirsk — kohdekartta / Kohdekartta: Taidemuseo] talo 1926, museo täällä 1982 Museo on nuorempi kuin talonsa. Novosibirskin aluetaidegalleria perustettiin vuonna 1958, ja se toimi aluksi tavallisen viisikerroksisen asuintalon ensimmäisessä kerroksessa Sverdlovin kadulla. Vuonna 1982 se muutti Punaisen valtakadun numeroon 5, taloon, joka oli valmistunut jo 1926. Talo on sekin Andrei Krjatškovin piirtämä, ja se on kiinnostava juuri siksi: sama arkkitehti teki vallankumousta edeltävän kauppatalon ja tämän 1920-luvun hallintorakennuksen. Muoto on muuttunut mutta käsiala ei ole kadonnut — pylväsjäsennys on yhä paikallaan, mutta koristeet ovat kadonneet ja pinta on karhea harmaa rappaus. Rakennus on suojeltu kulttuuriperintökohteena. Katolla se…
+- [Irkutsk — kohdekartta / Kohdekartta: Epifanian katedraali] kirkot 1706 ja 1718–1746 Tässä kohdassa kaupunki alkoi. Jakov Pohabov laski 6. heinäkuuta 1661 Angaran rantaan paalulinnoituksen, jossa kerättiin burjaateilta jasak-veroa turkiksina; nykyinen Kirovin aukio on juuri sen paikalla. Linnoituksesta kasvoi 1700-luvun alkuun mennessä puinen kaupunki, ja vuoden 1716 suurpalo tuhosi varustukset lähes kokonaan. Vuodessa ne rakennettiin uudelleen, nyt kivestä. Kaksi kirkkoa on jäljellä. Vapahtajan kirkon kivijalka laskettiin vuonna 1706 linnoituksen luoteisnurkkaan, ja se on ainoa säilynyt rakennus vanhan linnoituksen alueelta. Epifanian katedraali rakennettiin itämuurin taakse vuosina 1718–1746. Molemmat ovat Siperian vanhimpia kivirakennuksia, ja ne…
+AIEMPI KYSYMYS: Millä nimellä Jekaterinburg tunnettiin neuvostoaikana?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Neuvostoaikana kaupunki tunnettiin nimellä Sverdlovsk. Nimi vaihdettiin vuonna 1924 bolševikkijohtaja [[Jakov Sverdlovin]] mukaan, ja alkuperäinen nimi Jekaterinburg palautettiin vuonna 1991, [[Neuvostoliiton]] hajoamisen aikoihin. Vanha nimi elää yhä ympäröivän alueen nimessä. Kaksi nimeä yhdelle kaupungille, ja minulle riittää yksi pitkä.
+KYSYMYS: Kerro lisää: Jakov Sverdlovin
+
+### 228
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jekaterinburg (tekniikka)
+Tietoruudun teksti: Jekaterinburg perustettiin marraskuussa 1723 historioitsija Vasili Tatištševin ja saksalaissyntyisen insinööri Georg Wilhelm de Genninin johdolla Pietari Suuren käskystä, ja kaupunki sai nimensä keisarin puolisosta Jekaterinasta. Se rakennettiin metalliteollisuuden keskukseksi ja linnoitukseksi juuri Uralin harjanteelle, Euroopan ja Aasian rajalle. Vuosina 1820–1845 lähes 45 prosenttia koko maailman kullasta louhittiin Jekaterinburgin seudulta, ja kaupungin rahapaja löi suurimman osan Venäjän keisarikunnan kolikoista aina vuoteen 1876 asti. Siperian valtatie teki kaupungista Aasian portin jo 1760-luvulta lähtien, vuosikymmeniä ennen Trans-Siperian rautatietä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Tiede ja keksinnöt: Tetris syntyi hakasulkeista] 1984 — Aleksei Pažitnov teki Tetriksen kesäkuussa 1984 työpaikallaan Neuvostoliiton tiedeakatemian laskentakeskuksessa Moskovassa. Käytössä ollut Elektronika 60 -tietokone ei osannut piirtää kuvia, joten palikat koottiin hakasulkumerkeistä. Nimi tulee kreikan sanasta tetra eli neljä — jokaisessa palikassa on neljä ruutua — ja tenniksestä, Pažitnovin lempilajista. Peli levisi Moskovassa levykkeeltä toiselle ilmaiseksi, ja IBM-koneelle sitä oli kääntämässä 16-vuotias koululainen Vadim Gerasimov.
+AIEMPI KYSYMYS: Millä nimellä Jekaterinburg tunnettiin neuvostoaikana?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Neuvostoaikana kaupunki tunnettiin nimellä Sverdlovsk. Nimi vaihdettiin vuonna 1924 bolševikkijohtaja [[Jakov Sverdlovin]] mukaan, ja alkuperäinen nimi Jekaterinburg palautettiin vuonna 1991, [[Neuvostoliiton]] hajoamisen aikoihin. Vanha nimi elää yhä ympäröivän alueen nimessä. Kaksi nimeä yhdelle kaupungille, ja minulle riittää yksi pitkä.
+KYSYMYS: Kerro lisää: Neuvostoliiton
+
+### 229
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suzdal (kulttuuri)
+Tietoruudun teksti: Suzdal mainitaan lähteissä ensi kerran vuonna 1024, ja 1100-luvun alussa siitä tuli Rostov-Suzdalin ruhtinaskunnan pääkaupunki Vladimir Monomahin aikana; ruhtinas Juri Dolgoruki, myöhemmin Moskovan perustajaksi mainittu hallitsija, hallitsi täältä käsin. Kaupunki on nykyisin Kultaisen renkaan pienin jäsen, mutta se säästyi neuvostoajan teollistumiselta, joten 1200–1800-lukujen arkkitehtuuri on säilynyt lähes koskemattomana. Suzdalissa on yli 300 suojeltua muistomerkkiä, kolmisenkymmentä kirkkoa ja viisi luostaria pienellä alueella, ja Unesco listasi Vladimirin ja Suzdalin valkoiset muistomerkit maailmanperintöön 1992. Kaupungin ainutlaatuinen tunnelma on houkutellut yli 60 elokuvantekijää kuvauspaikaksi, muun muassa klassikon Andrei Rubljov.
+AIEMPI KYSYMYS: Miksi Suzdal on säilynyt niin hyvin verrattuna moniin muihin Venäjän kaupunkeihin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Katolta katsoen se näyttää pieneltä, mutta kirkkoja siellä riittää. Suzdal säilyi ennen kaikkea siksi, että se jäi neuvostoajan teollistumisen ulkopuolelle. Kun monet muut kaupungit muuttuivat tehtaiden ja uusien asuinalueiden ehdoilla, Suzdal pysyi pienenä, ja siksi sen 1200–1800-lukujen arkkitehtuuri on säilynyt lähes koskemattomana. Kaupunki oli jo 1100-luvun alussa [[Rostov-Suzdalin]] ruhtinaskunnan pääkaupunki, ja nykyisin se on [[Kultaisen renkaan]] pienin jäsen. Vladimirin ja Suzdalin valkoiset muistomerkit hyväksyttiin [[Unescon]] maailmanperintölistalle vuonna 1992. En ole varma, onko säilymiseen vaikuttanut jokin muukin tekijä. Pienuudessa on kyl voimaa.
+KYSYMYS: Kerro lisää: Rostov-Suzdalin
+
+### 230
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suzdal (kulttuuri)
+Tietoruudun teksti: Suzdal mainitaan lähteissä ensi kerran vuonna 1024, ja 1100-luvun alussa siitä tuli Rostov-Suzdalin ruhtinaskunnan pääkaupunki Vladimir Monomahin aikana; ruhtinas Juri Dolgoruki, myöhemmin Moskovan perustajaksi mainittu hallitsija, hallitsi täältä käsin. Kaupunki on nykyisin Kultaisen renkaan pienin jäsen, mutta se säästyi neuvostoajan teollistumiselta, joten 1200–1800-lukujen arkkitehtuuri on säilynyt lähes koskemattomana. Suzdalissa on yli 300 suojeltua muistomerkkiä, kolmisenkymmentä kirkkoa ja viisi luostaria pienellä alueella, ja Unesco listasi Vladimirin ja Suzdalin valkoiset muistomerkit maailmanperintöön 1992. Kaupungin ainutlaatuinen tunnelma on houkutellut yli 60 elokuvantekijää kuvauspaikaksi, muun muassa klassikon Andrei Rubljov.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Izmir — kaupunkilehti / Arki: Sämpylä sai nimensä muodostaan] Kumru on turkiksi kyyhkynen, ja voileipä on saanut nimensä muodostaan. Alkuperäinen kumru oli renkaan muotoinen ja kokonaan seesaminsiementen peitossa. Nykyinen versio syntyi İzmirissä 1900-luvun puolivälissä ja levisi nopeasti muualle. Väliin pannaan juustoa, tomaattia ja sucukia eli tulista makkaraa, ja osa myyjistä lisää suolakurkkua, tulista paprikaa, majoneesia ja ketsuppia. Leipä on pehmeää, ja osa leipomoista ja ravintoloista nostattaa taikinan kikhernejuurella. Kumrua myydään katuruokana.
+AIEMPI KYSYMYS: Miksi Suzdal on säilynyt niin hyvin verrattuna moniin muihin Venäjän kaupunkeihin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Katolta katsoen se näyttää pieneltä, mutta kirkkoja siellä riittää. Suzdal säilyi ennen kaikkea siksi, että se jäi neuvostoajan teollistumisen ulkopuolelle. Kun monet muut kaupungit muuttuivat tehtaiden ja uusien asuinalueiden ehdoilla, Suzdal pysyi pienenä, ja siksi sen 1200–1800-lukujen arkkitehtuuri on säilynyt lähes koskemattomana. Kaupunki oli jo 1100-luvun alussa [[Rostov-Suzdalin]] ruhtinaskunnan pääkaupunki, ja nykyisin se on [[Kultaisen renkaan]] pienin jäsen. Vladimirin ja Suzdalin valkoiset muistomerkit hyväksyttiin [[Unescon]] maailmanperintölistalle vuonna 1992. En ole varma, onko säilymiseen vaikuttanut jokin muukin tekijä. Pienuudessa on kyl voimaa.
+KYSYMYS: Kerro lisää: Kultaisen renkaan
+
+### 231
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suzdal (kulttuuri)
+Tietoruudun teksti: Suzdal mainitaan lähteissä ensi kerran vuonna 1024, ja 1100-luvun alussa siitä tuli Rostov-Suzdalin ruhtinaskunnan pääkaupunki Vladimir Monomahin aikana; ruhtinas Juri Dolgoruki, myöhemmin Moskovan perustajaksi mainittu hallitsija, hallitsi täältä käsin. Kaupunki on nykyisin Kultaisen renkaan pienin jäsen, mutta se säästyi neuvostoajan teollistumiselta, joten 1200–1800-lukujen arkkitehtuuri on säilynyt lähes koskemattomana. Suzdalissa on yli 300 suojeltua muistomerkkiä, kolmisenkymmentä kirkkoa ja viisi luostaria pienellä alueella, ja Unesco listasi Vladimirin ja Suzdalin valkoiset muistomerkit maailmanperintöön 1992. Kaupungin ainutlaatuinen tunnelma on houkutellut yli 60 elokuvantekijää kuvauspaikaksi, muun muassa klassikon Andrei Rubljov.
+AIEMPI KYSYMYS: Miksi Suzdal on säilynyt niin hyvin verrattuna moniin muihin Venäjän kaupunkeihin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Katolta katsoen se näyttää pieneltä, mutta kirkkoja siellä riittää. Suzdal säilyi ennen kaikkea siksi, että se jäi neuvostoajan teollistumisen ulkopuolelle. Kun monet muut kaupungit muuttuivat tehtaiden ja uusien asuinalueiden ehdoilla, Suzdal pysyi pienenä, ja siksi sen 1200–1800-lukujen arkkitehtuuri on säilynyt lähes koskemattomana. Kaupunki oli jo 1100-luvun alussa [[Rostov-Suzdalin]] ruhtinaskunnan pääkaupunki, ja nykyisin se on [[Kultaisen renkaan]] pienin jäsen. Vladimirin ja Suzdalin valkoiset muistomerkit hyväksyttiin [[Unescon]] maailmanperintölistalle vuonna 1992. En ole varma, onko säilymiseen vaikuttanut jokin muukin tekijä. Pienuudessa on kyl voimaa.
+KYSYMYS: Kerro lisää: Unescon
+
+### 232
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suzdal (kulttuuri)
+Tietoruudun teksti: Suzdal mainitaan lähteissä ensi kerran vuonna 1024, ja 1100-luvun alussa siitä tuli Rostov-Suzdalin ruhtinaskunnan pääkaupunki Vladimir Monomahin aikana; ruhtinas Juri Dolgoruki, myöhemmin Moskovan perustajaksi mainittu hallitsija, hallitsi täältä käsin. Kaupunki on nykyisin Kultaisen renkaan pienin jäsen, mutta se säästyi neuvostoajan teollistumiselta, joten 1200–1800-lukujen arkkitehtuuri on säilynyt lähes koskemattomana. Suzdalissa on yli 300 suojeltua muistomerkkiä, kolmisenkymmentä kirkkoa ja viisi luostaria pienellä alueella, ja Unesco listasi Vladimirin ja Suzdalin valkoiset muistomerkit maailmanperintöön 1992. Kaupungin ainutlaatuinen tunnelma on houkutellut yli 60 elokuvantekijää kuvauspaikaksi, muun muassa klassikon Andrei Rubljov.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+AIEMPI KYSYMYS: Mikä on Kultainen rengas?
+AIEMPI VASTAUS (Livia):
+Ai se. Aika kaunis lenkki ylhäältä. Kultainen rengas on perinteinen nimitys joukolle vanhoja venäläiskaupunkeja Moskovan koillispuolella, joiden kirkot, luostarit ja kremlit kertovat Venäjän varhaisesta historiasta. Siihen luetaan tavallisesti muun muassa [[Vladimir]], [[Sergijev Possad]], [[Jaroslavl]] ja [[Kostroma]] sekä pieni Suzdal, joka on joukon pienin jäsen. Kyse ei ole virallisesta rajauksesta, joten kaupunkien luettelo vaihtelee lähteestä toiseen, ja reitti on suosittu matkailukohde. Sormuksen mallia en tosin ylhäältä oikein tunnistanut.
+KYSYMYS: Kerro lisää: Vladimir
+
+### 233
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suzdal (kulttuuri)
+Tietoruudun teksti: Suzdal mainitaan lähteissä ensi kerran vuonna 1024, ja 1100-luvun alussa siitä tuli Rostov-Suzdalin ruhtinaskunnan pääkaupunki Vladimir Monomahin aikana; ruhtinas Juri Dolgoruki, myöhemmin Moskovan perustajaksi mainittu hallitsija, hallitsi täältä käsin. Kaupunki on nykyisin Kultaisen renkaan pienin jäsen, mutta se säästyi neuvostoajan teollistumiselta, joten 1200–1800-lukujen arkkitehtuuri on säilynyt lähes koskemattomana. Suzdalissa on yli 300 suojeltua muistomerkkiä, kolmisenkymmentä kirkkoa ja viisi luostaria pienellä alueella, ja Unesco listasi Vladimirin ja Suzdalin valkoiset muistomerkit maailmanperintöön 1992. Kaupungin ainutlaatuinen tunnelma on houkutellut yli 60 elokuvantekijää kuvauspaikaksi, muun muassa klassikon Andrei Rubljov.
+AIEMPI KYSYMYS: Mikä on Kultainen rengas?
+AIEMPI VASTAUS (Livia):
+Ai se. Aika kaunis lenkki ylhäältä. Kultainen rengas on perinteinen nimitys joukolle vanhoja venäläiskaupunkeja Moskovan koillispuolella, joiden kirkot, luostarit ja kremlit kertovat Venäjän varhaisesta historiasta. Siihen luetaan tavallisesti muun muassa [[Vladimir]], [[Sergijev Possad]], [[Jaroslavl]] ja [[Kostroma]] sekä pieni Suzdal, joka on joukon pienin jäsen. Kyse ei ole virallisesta rajauksesta, joten kaupunkien luettelo vaihtelee lähteestä toiseen, ja reitti on suosittu matkailukohde. Sormuksen mallia en tosin ylhäältä oikein tunnistanut.
+KYSYMYS: Kerro lisää: Sergijev Possad
+
+### 234
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suzdal (kulttuuri)
+Tietoruudun teksti: Suzdal mainitaan lähteissä ensi kerran vuonna 1024, ja 1100-luvun alussa siitä tuli Rostov-Suzdalin ruhtinaskunnan pääkaupunki Vladimir Monomahin aikana; ruhtinas Juri Dolgoruki, myöhemmin Moskovan perustajaksi mainittu hallitsija, hallitsi täältä käsin. Kaupunki on nykyisin Kultaisen renkaan pienin jäsen, mutta se säästyi neuvostoajan teollistumiselta, joten 1200–1800-lukujen arkkitehtuuri on säilynyt lähes koskemattomana. Suzdalissa on yli 300 suojeltua muistomerkkiä, kolmisenkymmentä kirkkoa ja viisi luostaria pienellä alueella, ja Unesco listasi Vladimirin ja Suzdalin valkoiset muistomerkit maailmanperintöön 1992. Kaupungin ainutlaatuinen tunnelma on houkutellut yli 60 elokuvantekijää kuvauspaikaksi, muun muassa klassikon Andrei Rubljov.
+AIEMPI KYSYMYS: Mikä on Kultainen rengas?
+AIEMPI VASTAUS (Livia):
+Ai se. Aika kaunis lenkki ylhäältä. Kultainen rengas on perinteinen nimitys joukolle vanhoja venäläiskaupunkeja Moskovan koillispuolella, joiden kirkot, luostarit ja kremlit kertovat Venäjän varhaisesta historiasta. Siihen luetaan tavallisesti muun muassa [[Vladimir]], [[Sergijev Possad]], [[Jaroslavl]] ja [[Kostroma]] sekä pieni Suzdal, joka on joukon pienin jäsen. Kyse ei ole virallisesta rajauksesta, joten kaupunkien luettelo vaihtelee lähteestä toiseen, ja reitti on suosittu matkailukohde. Sormuksen mallia en tosin ylhäältä oikein tunnistanut.
+KYSYMYS: Kerro lisää: Jaroslavl
+
+### 235
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suzdal (kulttuuri)
+Tietoruudun teksti: Suzdal mainitaan lähteissä ensi kerran vuonna 1024, ja 1100-luvun alussa siitä tuli Rostov-Suzdalin ruhtinaskunnan pääkaupunki Vladimir Monomahin aikana; ruhtinas Juri Dolgoruki, myöhemmin Moskovan perustajaksi mainittu hallitsija, hallitsi täältä käsin. Kaupunki on nykyisin Kultaisen renkaan pienin jäsen, mutta se säästyi neuvostoajan teollistumiselta, joten 1200–1800-lukujen arkkitehtuuri on säilynyt lähes koskemattomana. Suzdalissa on yli 300 suojeltua muistomerkkiä, kolmisenkymmentä kirkkoa ja viisi luostaria pienellä alueella, ja Unesco listasi Vladimirin ja Suzdalin valkoiset muistomerkit maailmanperintöön 1992. Kaupungin ainutlaatuinen tunnelma on houkutellut yli 60 elokuvantekijää kuvauspaikaksi, muun muassa klassikon Andrei Rubljov.
+AIEMPI KYSYMYS: Mikä on Kultainen rengas?
+AIEMPI VASTAUS (Livia):
+Ai se. Aika kaunis lenkki ylhäältä. Kultainen rengas on perinteinen nimitys joukolle vanhoja venäläiskaupunkeja Moskovan koillispuolella, joiden kirkot, luostarit ja kremlit kertovat Venäjän varhaisesta historiasta. Siihen luetaan tavallisesti muun muassa [[Vladimir]], [[Sergijev Possad]], [[Jaroslavl]] ja [[Kostroma]] sekä pieni Suzdal, joka on joukon pienin jäsen. Kyse ei ole virallisesta rajauksesta, joten kaupunkien luettelo vaihtelee lähteestä toiseen, ja reitti on suosittu matkailukohde. Sormuksen mallia en tosin ylhäältä oikein tunnistanut.
+KYSYMYS: Kerro lisää: Kostroma
+
+### 236
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suzdal (kulttuuri)
+Tietoruudun teksti: Suzdal mainitaan lähteissä ensi kerran vuonna 1024, ja 1100-luvun alussa siitä tuli Rostov-Suzdalin ruhtinaskunnan pääkaupunki Vladimir Monomahin aikana; ruhtinas Juri Dolgoruki, myöhemmin Moskovan perustajaksi mainittu hallitsija, hallitsi täältä käsin. Kaupunki on nykyisin Kultaisen renkaan pienin jäsen, mutta se säästyi neuvostoajan teollistumiselta, joten 1200–1800-lukujen arkkitehtuuri on säilynyt lähes koskemattomana. Suzdalissa on yli 300 suojeltua muistomerkkiä, kolmisenkymmentä kirkkoa ja viisi luostaria pienellä alueella, ja Unesco listasi Vladimirin ja Suzdalin valkoiset muistomerkit maailmanperintöön 1992. Kaupungin ainutlaatuinen tunnelma on houkutellut yli 60 elokuvantekijää kuvauspaikaksi, muun muassa klassikon Andrei Rubljov.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kaupunkilehti / Kiova: Seinät ovat täynnä tuhatvuotisia raapustuksia] Pyhän Sofian katedraali rakennettiin 1000-luvulla, ja sen seinistä on löydetty yli 7000 piirrosta ja tekstiä, jotka kävijät ovat raapineet kiveen 1000–1700-luvuilla. Yksi merkitsi muistiin Jaroslav Viisaan kuoleman, toinen maakaupan, ja ruhtinas Vladimir Monomah kirjoitti seinään oman nimensä. Tutkijat lukevat seiniä kuin ilmoitustaulua, jolle on kirjoitettu seitsemänsadan vuoden ajan.
+AIEMPI KYSYMYS: Kuka oli Juri Dolgoruki?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää nimi vaatii vähän ilmaa. Juri Dolgoruki oli 1100-luvun ruhtinas, joka hallitsi Rostov-Suzdalin aluetta Suzdalista käsin ja oli yksi Koillis-Venäjän varhaisista vallanpitäjistä. Hän oli [[Vladimir Monomahin]] poika, ja hänet muistetaan [[Moskovan]] perustajana: kaupunki mainitaan lähteissä ensi kerran 1100-luvun puolivälin tienoilla hänen aikanaan. Perustajaksi kutsuminen on kuitenkin pikemminkin perinteinen tulkinta kuin tarkasti tunnettu tapahtuma. Lähteiden mukaan hän hallitsi lyhyen aikaa myös [[Kiovaa]] elämänsä loppuvaiheessa. Ruhtinaita riittää, mutta kyyhkyjä on kirjattu historiaan vähemmän.
+KYSYMYS: Kerro lisää: Vladimir Monomahin
+
+### 237
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suzdal (kulttuuri)
+Tietoruudun teksti: Suzdal mainitaan lähteissä ensi kerran vuonna 1024, ja 1100-luvun alussa siitä tuli Rostov-Suzdalin ruhtinaskunnan pääkaupunki Vladimir Monomahin aikana; ruhtinas Juri Dolgoruki, myöhemmin Moskovan perustajaksi mainittu hallitsija, hallitsi täältä käsin. Kaupunki on nykyisin Kultaisen renkaan pienin jäsen, mutta se säästyi neuvostoajan teollistumiselta, joten 1200–1800-lukujen arkkitehtuuri on säilynyt lähes koskemattomana. Suzdalissa on yli 300 suojeltua muistomerkkiä, kolmisenkymmentä kirkkoa ja viisi luostaria pienellä alueella, ja Unesco listasi Vladimirin ja Suzdalin valkoiset muistomerkit maailmanperintöön 1992. Kaupungin ainutlaatuinen tunnelma on houkutellut yli 60 elokuvantekijää kuvauspaikaksi, muun muassa klassikon Andrei Rubljov.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Ruoka: Kokin resepti syntyi Moskovan hienoimmassa ravintolassa] 1860-luku — Ranskalais-belgialainen kokki Lucien Olivier loi 1860-luvulla Moskovan Hermitage-ravintolan tunnusruoan: majoneesilla sidotun salaatin, jossa oli pyytä, rapujen pyrstöjä, kaviaaria, kapriksia ja oliiveja. Olivier piti tarkan reseptin salassa eikä paljastanut sitä edes keittiöhenkilökunnalleen, ja vasta hänen kuolemansa jälkeen vuonna 1894 julkaistiin versio ohjeesta. Vallankumouksen jälkeen kalliit ja harvinaiset aineet vaihtuivat halvempiin: pyystä tuli kanaa tai keittomakkaraa, rapujen pyrstöistä keitettyjä kananmunia ja oliiveista suolakurkkua ja herneitä. Tästä yksinkertaistetusta versiosta tuli neuvostoajan uudenvuodenpöydän vakioruoka, jota ilman juhla ei ollut täydellinen.
+AIEMPI KYSYMYS: Kuka oli Juri Dolgoruki?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää nimi vaatii vähän ilmaa. Juri Dolgoruki oli 1100-luvun ruhtinas, joka hallitsi Rostov-Suzdalin aluetta Suzdalista käsin ja oli yksi Koillis-Venäjän varhaisista vallanpitäjistä. Hän oli [[Vladimir Monomahin]] poika, ja hänet muistetaan [[Moskovan]] perustajana: kaupunki mainitaan lähteissä ensi kerran 1100-luvun puolivälin tienoilla hänen aikanaan. Perustajaksi kutsuminen on kuitenkin pikemminkin perinteinen tulkinta kuin tarkasti tunnettu tapahtuma. Lähteiden mukaan hän hallitsi lyhyen aikaa myös [[Kiovaa]] elämänsä loppuvaiheessa. Ruhtinaita riittää, mutta kyyhkyjä on kirjattu historiaan vähemmän.
+KYSYMYS: Kerro lisää: Moskovan
+
+### 238
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suzdal (kulttuuri)
+Tietoruudun teksti: Suzdal mainitaan lähteissä ensi kerran vuonna 1024, ja 1100-luvun alussa siitä tuli Rostov-Suzdalin ruhtinaskunnan pääkaupunki Vladimir Monomahin aikana; ruhtinas Juri Dolgoruki, myöhemmin Moskovan perustajaksi mainittu hallitsija, hallitsi täältä käsin. Kaupunki on nykyisin Kultaisen renkaan pienin jäsen, mutta se säästyi neuvostoajan teollistumiselta, joten 1200–1800-lukujen arkkitehtuuri on säilynyt lähes koskemattomana. Suzdalissa on yli 300 suojeltua muistomerkkiä, kolmisenkymmentä kirkkoa ja viisi luostaria pienellä alueella, ja Unesco listasi Vladimirin ja Suzdalin valkoiset muistomerkit maailmanperintöön 1992. Kaupungin ainutlaatuinen tunnelma on houkutellut yli 60 elokuvantekijää kuvauspaikaksi, muun muassa klassikon Andrei Rubljov.
+AIEMPI KYSYMYS: Kuka oli Juri Dolgoruki?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää nimi vaatii vähän ilmaa. Juri Dolgoruki oli 1100-luvun ruhtinas, joka hallitsi Rostov-Suzdalin aluetta Suzdalista käsin ja oli yksi Koillis-Venäjän varhaisista vallanpitäjistä. Hän oli [[Vladimir Monomahin]] poika, ja hänet muistetaan [[Moskovan]] perustajana: kaupunki mainitaan lähteissä ensi kerran 1100-luvun puolivälin tienoilla hänen aikanaan. Perustajaksi kutsuminen on kuitenkin pikemminkin perinteinen tulkinta kuin tarkasti tunnettu tapahtuma. Lähteiden mukaan hän hallitsi lyhyen aikaa myös [[Kiovaa]] elämänsä loppuvaiheessa. Ruhtinaita riittää, mutta kyyhkyjä on kirjattu historiaan vähemmän.
+KYSYMYS: Kerro lisää: Kiovaa
+
+### 239
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suzdal (kulttuuri)
+Tietoruudun teksti: Suzdal mainitaan lähteissä ensi kerran vuonna 1024, ja 1100-luvun alussa siitä tuli Rostov-Suzdalin ruhtinaskunnan pääkaupunki Vladimir Monomahin aikana; ruhtinas Juri Dolgoruki, myöhemmin Moskovan perustajaksi mainittu hallitsija, hallitsi täältä käsin. Kaupunki on nykyisin Kultaisen renkaan pienin jäsen, mutta se säästyi neuvostoajan teollistumiselta, joten 1200–1800-lukujen arkkitehtuuri on säilynyt lähes koskemattomana. Suzdalissa on yli 300 suojeltua muistomerkkiä, kolmisenkymmentä kirkkoa ja viisi luostaria pienellä alueella, ja Unesco listasi Vladimirin ja Suzdalin valkoiset muistomerkit maailmanperintöön 1992. Kaupungin ainutlaatuinen tunnelma on houkutellut yli 60 elokuvantekijää kuvauspaikaksi, muun muassa klassikon Andrei Rubljov.
+AIEMPI KYSYMYS: Mistä Andrei Rubljov -elokuvassa kerrotaan?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on elokuva-aihe, joten istuudun kaiteelle. Elokuva on [[Andrei Tarkovskin]] ohjaama 1960-luvulla valmistunut kuvaus venäläisestä ikonimaalarista, joka eli Venäjällä 1300- ja 1400-lukujen vaihteessa. Se etenee jaksoina, joissa taiteilija kulkee levottomassa maassa, kohtaa väkivaltaa ja kysyy, mitä taiteella voi tehdä. Elokuva on pääosin mustavalkoinen, ja lopussa nähdään ikonien värejä. Rubljovin tunnetuin työ on [[Kolminaisuus-ikoni]], ja hänet yhdistetään Moskovan [[Andronikovin luostariin]].
+
+Tällaisia elokuvia katsellaan hiljaa kuin kyyhky kaiteella: ei hoppua, eikä tarvitse ymmärtää kaikkea heti.
+KYSYMYS: Kerro lisää: Andrei Tarkovskin
+
+### 240
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suzdal (kulttuuri)
+Tietoruudun teksti: Suzdal mainitaan lähteissä ensi kerran vuonna 1024, ja 1100-luvun alussa siitä tuli Rostov-Suzdalin ruhtinaskunnan pääkaupunki Vladimir Monomahin aikana; ruhtinas Juri Dolgoruki, myöhemmin Moskovan perustajaksi mainittu hallitsija, hallitsi täältä käsin. Kaupunki on nykyisin Kultaisen renkaan pienin jäsen, mutta se säästyi neuvostoajan teollistumiselta, joten 1200–1800-lukujen arkkitehtuuri on säilynyt lähes koskemattomana. Suzdalissa on yli 300 suojeltua muistomerkkiä, kolmisenkymmentä kirkkoa ja viisi luostaria pienellä alueella, ja Unesco listasi Vladimirin ja Suzdalin valkoiset muistomerkit maailmanperintöön 1992. Kaupungin ainutlaatuinen tunnelma on houkutellut yli 60 elokuvantekijää kuvauspaikaksi, muun muassa klassikon Andrei Rubljov.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Tretjakovin galleria] 1856-1893 Moskovalainen kauppias Pavel Tretjakov aloitti taidekokoelmansa vuonna 1856 ostamalla kaksi venäläistä maalausta. Vuosikymmenten aikana hän osti satoja teoksia lisää, kunnes kokoelmassa oli jo lähes 2000 taideteosta - yli 1300 maalausta, satoja piirustuksia ja muutama veistos. Elokuussa 1892 Tretjakov lahjoitti koko kokoelmansa Moskovan kaupungille, ja galleria avattiin yleisölle 15. elokuuta 1893. Nykyään museossa on esillä yli 130 000 teosta, muun muassa Andrei Rublevin kuuluisa ikoni Kolminaisuus. Museon satumaisen näköisen punatiilisen julkisivun suunnitteli taiteilija Viktor Vasnetsov vuosina 1902-1904, ja se muistuttaa suoraan venäläisestä kansantarinasta poimittua linnaa. T…
+AIEMPI KYSYMYS: Mistä Andrei Rubljov -elokuvassa kerrotaan?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on elokuva-aihe, joten istuudun kaiteelle. Elokuva on [[Andrei Tarkovskin]] ohjaama 1960-luvulla valmistunut kuvaus venäläisestä ikonimaalarista, joka eli Venäjällä 1300- ja 1400-lukujen vaihteessa. Se etenee jaksoina, joissa taiteilija kulkee levottomassa maassa, kohtaa väkivaltaa ja kysyy, mitä taiteella voi tehdä. Elokuva on pääosin mustavalkoinen, ja lopussa nähdään ikonien värejä. Rubljovin tunnetuin työ on [[Kolminaisuus-ikoni]], ja hänet yhdistetään Moskovan [[Andronikovin luostariin]].
+
+Tällaisia elokuvia katsellaan hiljaa kuin kyyhky kaiteella: ei hoppua, eikä tarvitse ymmärtää kaikkea heti.
+KYSYMYS: Kerro lisää: Kolminaisuus-ikoni

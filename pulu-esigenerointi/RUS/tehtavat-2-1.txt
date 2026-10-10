@@ -1,0 +1,1071 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbrus (luonto · vuori)
+Tietoruudun teksti: Elbrus on Venäjän ja Euroopan korkein vuori. Se on sammunut kerrostulivuori, joka kohoaa 5 642 metriin, ja samalla Euraasian korkein tulivuori sekä maailman kymmenenneksi hallitsevin huippu. Se sijaitsee Kabardi-Balkarian tasavallassa Etelä-Venäjällä ja on Kaukasuksen vuoriston korkein huippu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Teheran — kaupunkilehti / Arki ja ruokapöytä: Ateria syödään kahdessa vaiheessa] Abgusht tarkoittaa lihalientä. Sama ruoka tunnetaan nimellä dizi, ja nimi on lainattu astiasta: kivisavesta tehdystä ruukusta, jossa keitos tuodaan pöytään. Aineksina ovat lammas, kikherneet, valkoiset pavut, sipuli, peruna, tomaatti, kurkuma ja kuivattu lime. Kypsä keitos siivilöidään, ja ateria syödään kahdessa vaiheessa: ensin liemi, johon revitään leipää, sitten kiinteä osa survottuna. Survoksen nimi on gusht-e kubideh eli survottu liha, ja se syödään leivän, sipulin ja pikkelssien kanssa. Kaukasuksen ja Keski-Aasian piti on saman ruoan muunnelma.
+AIEMPI KYSYMYS: Onko Elbrus Euroopassa vai Aasiassa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on se vanha rajariita. Jos Euroopan ja Aasian raja vedetään [[Kaukasuksen]] pääharjannetta tai Kura- ja Aras-jokia pitkin, Elbrus kuuluu Eurooppaan; jos raja vedetään [[Kuma–Manytš-notkoa]] pitkin, vuori jää Aasian puolelle. Yleisimmin Elbrusta pidetään Euroopan korkeimpana vuorena, ja niin se esitetään myös useimmissa kartoissa ja luetteloissa. Maanosien rajat ovat sopimuksia, eivätkä ne noudata luonnon omia viivoja kovin tarkasti. Ylhäältä kyl näkee, ettei maassa oo mitään viivaa.
+KYSYMYS: Kerro lisää: Kaukasuksen
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbrus (luonto · vuori)
+Tietoruudun teksti: Elbrus on Venäjän ja Euroopan korkein vuori. Se on sammunut kerrostulivuori, joka kohoaa 5 642 metriin, ja samalla Euraasian korkein tulivuori sekä maailman kymmenenneksi hallitsevin huippu. Se sijaitsee Kabardi-Balkarian tasavallassa Etelä-Venäjällä ja on Kaukasuksen vuoriston korkein huippu.
+AIEMPI KYSYMYS: Onko Elbrus Euroopassa vai Aasiassa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on se vanha rajariita. Jos Euroopan ja Aasian raja vedetään [[Kaukasuksen]] pääharjannetta tai Kura- ja Aras-jokia pitkin, Elbrus kuuluu Eurooppaan; jos raja vedetään [[Kuma–Manytš-notkoa]] pitkin, vuori jää Aasian puolelle. Yleisimmin Elbrusta pidetään Euroopan korkeimpana vuorena, ja niin se esitetään myös useimmissa kartoissa ja luetteloissa. Maanosien rajat ovat sopimuksia, eivätkä ne noudata luonnon omia viivoja kovin tarkasti. Ylhäältä kyl näkee, ettei maassa oo mitään viivaa.
+KYSYMYS: Kerro lisää: Kuma–Manytš-notkoa
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbrus (luonto · vuori)
+Tietoruudun teksti: Elbrus on Venäjän ja Euroopan korkein vuori. Se on sammunut kerrostulivuori, joka kohoaa 5 642 metriin, ja samalla Euraasian korkein tulivuori sekä maailman kymmenenneksi hallitsevin huippu. Se sijaitsee Kabardi-Balkarian tasavallassa Etelä-Venäjällä ja on Kaukasuksen vuoriston korkein huippu.
+AIEMPI KYSYMYS: Milloin Elbrus viimeksi purkautui?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tarkkaa vuotta minä en tiedä. Lähteiden mukaan viimeiset purkaukset ajoittuvat noin parin tuhannen vuoden taakse, mutta arviot vaihtelevat, enkä ole varma ajoituksesta. Vuorta pidetään nykyisin sammuneena tai lepotilassa olevana [[kerrostulivuorena]], eikä historiallisella ajalla ole raportoitu varmoja purkauksia. Kaksihuippuinen muoto on peräisin [[tulivuoritoiminnasta]], joka rakensi sen kerros kerrokselta. Hyvä ettei ny sentään savua nouse.
+KYSYMYS: Kerro lisää: kerrostulivuorena
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbrus (luonto · vuori)
+Tietoruudun teksti: Elbrus on Venäjän ja Euroopan korkein vuori. Se on sammunut kerrostulivuori, joka kohoaa 5 642 metriin, ja samalla Euraasian korkein tulivuori sekä maailman kymmenenneksi hallitsevin huippu. Se sijaitsee Kabardi-Balkarian tasavallassa Etelä-Venäjällä ja on Kaukasuksen vuoriston korkein huippu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Luonto: Osorno-tulivuori] Llanquihuen järven yli kohoaa Osorno, 2652 metriä korkea ja lähes täydellisen symmetrinen jäätikköhuippuinen tulivuori, jota on verrattu Japanin Fuji-vuoreen. Osorno on purkautunut ainakin yksitoista kertaa vuosien 1575 ja 1869 välillä, ja viimeisin purkaus tapahtui juuri 1869 - vain neljä vuotta ennen kuin isoisä kulki samalla seudulla vuonna 1873. Luonnontutkija Charles Darwin näki vuonna 1835 Osornon purkautuvan Beagle-aluksen kannelta lähellä Ancudia ja pohti päiväkirjassaan, liittyvätkö kaukaiset tulivuoret toisiinsa maan alla. Yli sadan vuoden ajan Osorno on ollut hiljaa, ja nykyään sen rinteillä hiihdetään ja vaelletaan.
+- [Myanmar — maalehti / Luonto: Tulivuori, jolla on kolmekymmentäseitsemän asukasta] Popa on sammunut tulivuori keskisessä Myanmarissa noin viidenkymmenen kilometrin päässä Baganista, ja sitä on kutsuttu Burman Olympokseksi. Vuoren lounaispuolella kohoaa Taung Kalat, jyrkkäseinäinen laavatulppa, jonka laella on luostari; erakko U Khandi piti aikanaan kunnossa sinne johtavat 777 porrasta. Popa on maan tärkein natinpalvonnan keskus: pyhätössä ovat esillä kaikki 37 virallista nattia, mutta vain neljä niistä asuu vuorella. Kansanusko kieltää pukeutumasta punaiseen, mustaan tai vihreään ja tuomasta mukana lihaa, etenkään sianlihaa. Vuoren yli kahdensadan lähdettä tekevät siitä keitaan kuivalla keskitasangolla.
+AIEMPI KYSYMYS: Milloin Elbrus viimeksi purkautui?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tarkkaa vuotta minä en tiedä. Lähteiden mukaan viimeiset purkaukset ajoittuvat noin parin tuhannen vuoden taakse, mutta arviot vaihtelevat, enkä ole varma ajoituksesta. Vuorta pidetään nykyisin sammuneena tai lepotilassa olevana [[kerrostulivuorena]], eikä historiallisella ajalla ole raportoitu varmoja purkauksia. Kaksihuippuinen muoto on peräisin [[tulivuoritoiminnasta]], joka rakensi sen kerros kerrokselta. Hyvä ettei ny sentään savua nouse.
+KYSYMYS: Kerro lisää: tulivuoritoiminnasta
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbrus (luonto · vuori)
+Tietoruudun teksti: Elbrus on Venäjän ja Euroopan korkein vuori. Se on sammunut kerrostulivuori, joka kohoaa 5 642 metriin, ja samalla Euraasian korkein tulivuori sekä maailman kymmenenneksi hallitsevin huippu. Se sijaitsee Kabardi-Balkarian tasavallassa Etelä-Venäjällä ja on Kaukasuksen vuoriston korkein huippu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Pompeji pysähtyi kesken päivän] v. 79 — Kun Vesuvius purkautui vuonna 79, tuhka hautasi Pompejin kaupungin niin nopeasti, että leipomon leivät jäivät uuniin. Sen ansiosta roomalaisten arjesta tiedetään enemmän kuin mistään muualta: kadut vaunujen urineen, pikaruokalat tiskeineen ja seinien vaalimainokset ovat kaikki tallella. Kaivaukset alkoivat 1748 ja jatkuvat yhä — kolmasosa kaupungista on edelleen tuhkan alla. Kadun päässä häämöttää itse tulivuori, joka ei ole sammunut: se on vain tauolla.
+AIEMPI KYSYMYS: Mikä tekee kerrostulivuoresta erilaisen kuin kilpitulivuoresta?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kerrostulivuori rakentuu vuorotellen laavasta ja tuhkasta sekä muusta purkautuneesta aineesta, ja sen laava on jäykkää, joten kasa kohoaa jyrkäksi kartioksi. Kilpitulivuoren laava on juoksevaa, minkä vuoksi se leviää laajaksi ja loivarinteiseksi kilvenmuotoiseksi vuoreksi; sellaisia on esimerkiksi Islannissa. Kerrostulivuoret, kuten [[Vesuvius]] ja [[Etna]], purkautuvat usein räjähdysmäisemmin kuin kilpitulivuoret.
+
+Laavan juoksevuus ratkaisee melkein kaiken, sen minä olen oppinut katolta katsellen. Jäykkä laava jää kasaan, juokseva lähtee kävelylle.
+KYSYMYS: Kerro lisää: Vesuvius
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbrus (luonto · vuori)
+Tietoruudun teksti: Elbrus on Venäjän ja Euroopan korkein vuori. Se on sammunut kerrostulivuori, joka kohoaa 5 642 metriin, ja samalla Euraasian korkein tulivuori sekä maailman kymmenenneksi hallitsevin huippu. Se sijaitsee Kabardi-Balkarian tasavallassa Etelä-Venäjällä ja on Kaukasuksen vuoriston korkein huippu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Etna ei nuku koskaan] Sisilian Etna on Euroopan korkein ja ahkerin tulivuori: se purkautuu lähes joka vuosi, ja tuhkavana näkyy avaruudesta asti. Purkaukset ovat harvoin vaarallisia — laava valuu hitaasti ja ennustettavasti — ja rinteiden tuhkamaa on niin ravinteikasta, että sillä kasvatetaan viiniä, appelsiineja ja pistaaseja. Paikalliset elävät tulivuorensa kanssa kuin ison eläimen: sitä kunnioitetaan, kuunnellaan ja kiitetään sadosta.
+AIEMPI KYSYMYS: Mikä tekee kerrostulivuoresta erilaisen kuin kilpitulivuoresta?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kerrostulivuori rakentuu vuorotellen laavasta ja tuhkasta sekä muusta purkautuneesta aineesta, ja sen laava on jäykkää, joten kasa kohoaa jyrkäksi kartioksi. Kilpitulivuoren laava on juoksevaa, minkä vuoksi se leviää laajaksi ja loivarinteiseksi kilvenmuotoiseksi vuoreksi; sellaisia on esimerkiksi Islannissa. Kerrostulivuoret, kuten [[Vesuvius]] ja [[Etna]], purkautuvat usein räjähdysmäisemmin kuin kilpitulivuoret.
+
+Laavan juoksevuus ratkaisee melkein kaiken, sen minä olen oppinut katolta katsellen. Jäykkä laava jää kasaan, juokseva lähtee kävelylle.
+KYSYMYS: Kerro lisää: Etna
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbrus (luonto · vuori)
+Tietoruudun teksti: Elbrus on Venäjän ja Euroopan korkein vuori. Se on sammunut kerrostulivuori, joka kohoaa 5 642 metriin, ja samalla Euraasian korkein tulivuori sekä maailman kymmenenneksi hallitsevin huippu. Se sijaitsee Kabardi-Balkarian tasavallassa Etelä-Venäjällä ja on Kaukasuksen vuoriston korkein huippu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamtšatka — kaupunkilehti / Tulivuoret: Euraasian korkein toimiva tulivuori] Kljutševskaja sopka kohoaa 4 750 metriin: se on niemimaan korkein vuori ja Euraasian korkein toimiva tulivuori. Vuori purkautui kirjatusti ensi kerran 1697, eikä se ole sen jälkeen juuri levännyt. Ensimmäisen tunnetun nousun huipulle tekivät 1788 Daniel Gauss ja kaksi Billingsin retkikunnan miestä. Sen jälkeen huipulle ei kiivetty ennen vuotta 1931, ja tuolta retkikunnalta menehtyi useita miehiä laskeutumismatkalla lentäviin laavapalloihin.
+AIEMPI KYSYMYS: Miksi Kaukasuksella on tulivuoria?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Kaukasus on syntynyt, kun Arabian laatta on työntynyt vuosimiljoonien ajan kohti [[Euraasian laattaa]], ja törmäys on kohottanut vuoriston ja nostanut [[magmaa]] maankuoren halkeamien kautta pintaan. Elbrus ja muut alueen tulivuoret kuuluvat tähän nuoreen vuoristonmuodostukseen. Tulivuoritoiminnan tarkka tausta on tutkijoiden kesken yhä osin avoin kysymys, joten yksityiskohdista en ole varma. Kaukasuksen tulivuoret ovat nuoria vuoria vanhojen jättiläisten seurassa.
+KYSYMYS: Kerro lisää: Euraasian laattaa
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbrus (luonto · vuori)
+Tietoruudun teksti: Elbrus on Venäjän ja Euroopan korkein vuori. Se on sammunut kerrostulivuori, joka kohoaa 5 642 metriin, ja samalla Euraasian korkein tulivuori sekä maailman kymmenenneksi hallitsevin huippu. Se sijaitsee Kabardi-Balkarian tasavallassa Etelä-Venäjällä ja on Kaukasuksen vuoriston korkein huippu.
+AIEMPI KYSYMYS: Miksi Kaukasuksella on tulivuoria?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Kaukasus on syntynyt, kun Arabian laatta on työntynyt vuosimiljoonien ajan kohti [[Euraasian laattaa]], ja törmäys on kohottanut vuoriston ja nostanut [[magmaa]] maankuoren halkeamien kautta pintaan. Elbrus ja muut alueen tulivuoret kuuluvat tähän nuoreen vuoristonmuodostukseen. Tulivuoritoiminnan tarkka tausta on tutkijoiden kesken yhä osin avoin kysymys, joten yksityiskohdista en ole varma. Kaukasuksen tulivuoret ovat nuoria vuoria vanhojen jättiläisten seurassa.
+KYSYMYS: Kerro lisää: magmaa
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbrus (luonto · vuori)
+Tietoruudun teksti: Elbrus on Venäjän ja Euroopan korkein vuori. Se on sammunut kerrostulivuori, joka kohoaa 5 642 metriin, ja samalla Euraasian korkein tulivuori sekä maailman kymmenenneksi hallitsevin huippu. Se sijaitsee Kabardi-Balkarian tasavallassa Etelä-Venäjällä ja on Kaukasuksen vuoriston korkein huippu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+AIEMPI KYSYMYS: Mitä korkeanpaikantauti on?
+AIEMPI VASTAUS (Livia):
+Ai se. Korkeanpaikantauti on tila, joka kehittyy, kun nousee nopeasti korkealle ja [[ilmanpaine]] sekä siten hapen saanti keuhkoissa pienenee. Tyypillisiä oireita ovat päänsärky, pahoinvointi, väsymys ja unihäiriöt, ja ne alkavat usein noin 2 500 metrin korkeudessa. Vaikeimmillaan tauti voi aiheuttaa nestettä keuhkoihin tai aivoihin, ja tällöin ainoa tehokas hoito on laskeutua heti alemmas. Hyvä tapa ehkäistä sitä on nousta vähitellen ja antaa elimistön tottua, kuten [[Alpeilla]] ja muilla korkeilla vuorilla tehdään. Minä pysyn kyllä mieluummin kaiteella.
+KYSYMYS: Kerro lisää: ilmanpaine
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbrus (luonto · vuori)
+Tietoruudun teksti: Elbrus on Venäjän ja Euroopan korkein vuori. Se on sammunut kerrostulivuori, joka kohoaa 5 642 metriin, ja samalla Euraasian korkein tulivuori sekä maailman kymmenenneksi hallitsevin huippu. Se sijaitsee Kabardi-Balkarian tasavallassa Etelä-Venäjällä ja on Kaukasuksen vuoriston korkein huippu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Smaragdikaunotar] nykyään — Soča saa alkunsa Trenta-laaksossa Julian Alpeilla 876 metrin korkeudessa ja virtaa 138 kilometrin matkan Adrianmereen. Sen vesi on niin smaragdinvihreää, että jokea markkinoidaan nimellä Smaragdikaunotar, ja väri säilyy poikkeuksellisen pitkälle. Rannoilla syntyi myös runoutta: Simon Gregorčič kirjoitti joesta runon Soči, jota pidetään slovenialaisen kirjallisuuden mestariteoksena. Jokivarressa elää harvinaista marmoritaimenta, ja alueella kuvattiin osa vuoden 2008 Narnia-elokuvasta Prinssi Kaspian. Italiassa joki tunnetaan nimellä Isonzo.
+- [Italia — maalehti / Luonto: Alppikauris pelastui viime hetkellä] 1800-luvun puolivälissä alppikauriita oli jäljellä alle sata, kaikki yhdessä laaksossa Gran Paradison vuorilla — muualta Alpeilta ne oli metsästetty loppuun. Italian kuningas rauhoitti viimeisen lauman omaksi metsästysmaakseen, ja tästä ristiriidasta alkoi pelastus: alueesta tuli 1922 Italian ensimmäinen kansallispuisto. Nykyään Alpeilla kiipeilee taas yli 50 000 kaurista, ja jokainen polveutuu Gran Paradison lauman eläimistä. Sarvekas kiipeilijä on nykyään puiston tunnuksessa.
+AIEMPI KYSYMYS: Mitä korkeanpaikantauti on?
+AIEMPI VASTAUS (Livia):
+Ai se. Korkeanpaikantauti on tila, joka kehittyy, kun nousee nopeasti korkealle ja [[ilmanpaine]] sekä siten hapen saanti keuhkoissa pienenee. Tyypillisiä oireita ovat päänsärky, pahoinvointi, väsymys ja unihäiriöt, ja ne alkavat usein noin 2 500 metrin korkeudessa. Vaikeimmillaan tauti voi aiheuttaa nestettä keuhkoihin tai aivoihin, ja tällöin ainoa tehokas hoito on laskeutua heti alemmas. Hyvä tapa ehkäistä sitä on nousta vähitellen ja antaa elimistön tottua, kuten [[Alpeilla]] ja muilla korkeilla vuorilla tehdään. Minä pysyn kyllä mieluummin kaiteella.
+KYSYMYS: Kerro lisää: Alpeilla
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narodnaja (luonto · vuori)
+Tietoruudun teksti: Narodnajan huipulta sadevesi lähtee kahteen maanosaan. Vuori seisoo Uralin vedenjakajalla, joka on samalla Euroopan ja Aasian raja: Naroda-joki virtaa huipulta kaakkoon Obiin eli Siperiaan, ja Kosju luoteeseen Petšoraan eli Euroopan puolelle. Korkeutta on 1 894 metriä, mikä tekee siitä Uralin korkeimman huipun ja Euroopan-puoleisen Venäjän korkeimman kohdan Kaukasuksen ulkopuolella — ja koska ympärillä ei ole mitään sen veroista, sen suhteellinen korkeus on peräti 1 772 metriä. Komin kielellä vuori on Naroda-Iz, kansan vuori. Rinteillä on pieniä jäätiköitä ja tunturikangasta, laaksoissa harvaa lehtikuusi- ja koivumetsää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kohdekartta / Kohdekartta: Uralin valtionyliopisto] 1920 Yliopisto perustettiin 19. lokakuuta 1920, ja sen perustajiin kuului kirjailija Maksim Gorki; hänen mukaansa se nimettiin vuonna 1936. Se on Keski-Uralin toiseksi vanhin korkeakoulu — vanhin on vuoriopisto, jonka perustaminen liittyi suoraan alueen kaivoksiin. Tunnuslause on latinaksi Hominem unius libri timeo, pelkään yhden kirjan miestä, ja se on lainattu Tuomas Akvinolaiselta. Talo Leninin valtakadun varrella on kaupungin toisen suuren rakennuskauden jäljiltä: 1930–1950-luvulla palattiin uusklassismiin, ja julkiset rakennukset saivat pylväiköt ja symmetriset siivet. Yliopistossa toimii nykyään neljätoista laitosta ja yhdeksänkymmentäviisi oppituolia, ja opetusalat ulottuvat biologia…
+AIEMPI KYSYMYS: Miksi Narodnaja on kahdessa maanosassa?
+AIEMPI VASTAUS (Livia):
+No niin, tää on kiva tapaus. Narodnaja seisoo [[Uralin]] vedenjakajalla, ja Ural on perinteisesti katsottu Euroopan ja Aasian rajaksi. Huipulta Naroda-joki virtaa kaakkoon Obiin eli Siperiaan, kun taas Kosju-joki lähtee luoteeseen kohti [[Petšoraa]] eli Euroopan puolelle. Sadevesi siis jakautuu kahteen suuntaan, ja siksi vuoren sanotaan olevan rajalla, joka on sovittu maanosien välille vedenjakajaa seuraten. Raja on ihmisten piirtämä eikä jyrkkä seinä, mutta vedenjakajana se toimii hyvin selvänä viivana.
+
+Pisarat tekevät huipulla valinnan, ja ne eivät mieti sitä kauan. Minä kyllä katsoisin kartasta ensin, kumpi on lähempänä pullaa.
+KYSYMYS: Kerro lisää: Uralin
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narodnaja (luonto · vuori)
+Tietoruudun teksti: Narodnajan huipulta sadevesi lähtee kahteen maanosaan. Vuori seisoo Uralin vedenjakajalla, joka on samalla Euroopan ja Aasian raja: Naroda-joki virtaa huipulta kaakkoon Obiin eli Siperiaan, ja Kosju luoteeseen Petšoraan eli Euroopan puolelle. Korkeutta on 1 894 metriä, mikä tekee siitä Uralin korkeimman huipun ja Euroopan-puoleisen Venäjän korkeimman kohdan Kaukasuksen ulkopuolella — ja koska ympärillä ei ole mitään sen veroista, sen suhteellinen korkeus on peräti 1 772 metriä. Komin kielellä vuori on Naroda-Iz, kansan vuori. Rinteillä on pieniä jäätiköitä ja tunturikangasta, laaksoissa harvaa lehtikuusi- ja koivumetsää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Etelä-Sudan — maalehti / Tarinat ja uskomukset: Kolme oraakkelia, joilla oli eri hinta] Azandet käyttivät kolmea oraakkelia, ja niillä oli selvä arvojärjestys. Arvostetuin oli benge, myrkkyoraakkeli, jota vain miehet saivat käyttää ja jonka päätöstä ei kyseenalaistettu. Sitä halvempi ja kaikille avoin oli termiittioraakkeli, jonka vastausta naiset, miehet ja lapset saivat kysyä. Halvin ja epäluotettavimpana pidetty oli hankausoraakkeli, kahdesta puupalasta tehty väline, joka kulki mukana ja jolta saattoi kysyä missä ja milloin tahansa. Pitkään oraakkelit olivat myös oikeuslaitos: ne osoittivat, kuka oli aiheuttanut onnettomuuden.
+AIEMPI KYSYMYS: Miksi Narodnaja on kahdessa maanosassa?
+AIEMPI VASTAUS (Livia):
+No niin, tää on kiva tapaus. Narodnaja seisoo [[Uralin]] vedenjakajalla, ja Ural on perinteisesti katsottu Euroopan ja Aasian rajaksi. Huipulta Naroda-joki virtaa kaakkoon Obiin eli Siperiaan, kun taas Kosju-joki lähtee luoteeseen kohti [[Petšoraa]] eli Euroopan puolelle. Sadevesi siis jakautuu kahteen suuntaan, ja siksi vuoren sanotaan olevan rajalla, joka on sovittu maanosien välille vedenjakajaa seuraten. Raja on ihmisten piirtämä eikä jyrkkä seinä, mutta vedenjakajana se toimii hyvin selvänä viivana.
+
+Pisarat tekevät huipulla valinnan, ja ne eivät mieti sitä kauan. Minä kyllä katsoisin kartasta ensin, kumpi on lähempänä pullaa.
+KYSYMYS: Kerro lisää: Petšoraa
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narodnaja (luonto · vuori)
+Tietoruudun teksti: Narodnajan huipulta sadevesi lähtee kahteen maanosaan. Vuori seisoo Uralin vedenjakajalla, joka on samalla Euroopan ja Aasian raja: Naroda-joki virtaa huipulta kaakkoon Obiin eli Siperiaan, ja Kosju luoteeseen Petšoraan eli Euroopan puolelle. Korkeutta on 1 894 metriä, mikä tekee siitä Uralin korkeimman huipun ja Euroopan-puoleisen Venäjän korkeimman kohdan Kaukasuksen ulkopuolella — ja koska ympärillä ei ole mitään sen veroista, sen suhteellinen korkeus on peräti 1 772 metriä. Komin kielellä vuori on Naroda-Iz, kansan vuori. Rinteillä on pieniä jäätiköitä ja tunturikangasta, laaksoissa harvaa lehtikuusi- ja koivumetsää.
+AIEMPI KYSYMYS: Mitä komin nimi Naroda-Iz tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Naroda-Iz tarkoittaa komin kielellä kansan vuorta. Komit ovat [[suomalais-ugrilaisiin kieliin]] kuuluva kansa, joka asuu pääosin [[Komin tasavallassa]] Venäjän Euroopan-puoleisessa osassa, ja heidän kielensä on kaukaista sukua suomelle. Narodnaja-nimi on venäläistynyt muoto samasta ajatuksesta, sillä sekin viittaa kansaan. Kansan vuori on nimenä arvokas, ja se sopii huipulle, jolta vedet lähtevät kahteen maanosaan. Sukulaisia sieltä siis löytyy, ja se tuntuu aina hauskalta.
+KYSYMYS: Kerro lisää: suomalais-ugrilaisiin kieliin
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narodnaja (luonto · vuori)
+Tietoruudun teksti: Narodnajan huipulta sadevesi lähtee kahteen maanosaan. Vuori seisoo Uralin vedenjakajalla, joka on samalla Euroopan ja Aasian raja: Naroda-joki virtaa huipulta kaakkoon Obiin eli Siperiaan, ja Kosju luoteeseen Petšoraan eli Euroopan puolelle. Korkeutta on 1 894 metriä, mikä tekee siitä Uralin korkeimman huipun ja Euroopan-puoleisen Venäjän korkeimman kohdan Kaukasuksen ulkopuolella — ja koska ympärillä ei ole mitään sen veroista, sen suhteellinen korkeus on peräti 1 772 metriä. Komin kielellä vuori on Naroda-Iz, kansan vuori. Rinteillä on pieniä jäätiköitä ja tunturikangasta, laaksoissa harvaa lehtikuusi- ja koivumetsää.
+AIEMPI KYSYMYS: Mitä komin nimi Naroda-Iz tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Naroda-Iz tarkoittaa komin kielellä kansan vuorta. Komit ovat [[suomalais-ugrilaisiin kieliin]] kuuluva kansa, joka asuu pääosin [[Komin tasavallassa]] Venäjän Euroopan-puoleisessa osassa, ja heidän kielensä on kaukaista sukua suomelle. Narodnaja-nimi on venäläistynyt muoto samasta ajatuksesta, sillä sekin viittaa kansaan. Kansan vuori on nimenä arvokas, ja se sopii huipulle, jolta vedet lähtevät kahteen maanosaan. Sukulaisia sieltä siis löytyy, ja se tuntuu aina hauskalta.
+KYSYMYS: Kerro lisää: Komin tasavallassa
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narodnaja (luonto · vuori)
+Tietoruudun teksti: Narodnajan huipulta sadevesi lähtee kahteen maanosaan. Vuori seisoo Uralin vedenjakajalla, joka on samalla Euroopan ja Aasian raja: Naroda-joki virtaa huipulta kaakkoon Obiin eli Siperiaan, ja Kosju luoteeseen Petšoraan eli Euroopan puolelle. Korkeutta on 1 894 metriä, mikä tekee siitä Uralin korkeimman huipun ja Euroopan-puoleisen Venäjän korkeimman kohdan Kaukasuksen ulkopuolella — ja koska ympärillä ei ole mitään sen veroista, sen suhteellinen korkeus on peräti 1 772 metriä. Komin kielellä vuori on Naroda-Iz, kansan vuori. Rinteillä on pieniä jäätiköitä ja tunturikangasta, laaksoissa harvaa lehtikuusi- ja koivumetsää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jordania — maalehti / Vedet: Rotkossa kuljetaan vastavirtaan vedessä] Kuolleeseenmereen laskee idästä rotko, jonka pohjalla virtaa vettä ympäri vuoden. Wadi Mujibin suojelualue perustettiin vuonna 1987, ja Unesco nimesi sen biosfäärialueeksi 2011. Rotkon kapeinta kohtaa sanotaan Siqiksi, ja siellä retki tehdään vastavirtaan vedessä kahlaten: seinämät nousevat molemmin puolin lähes pystyinä, eikä kuivaa polkua ole. Jokea ruokkii seitsemän sivupuroa, ja valuma-alueen korkeusero on yli tuhat seitsemänsataa metriä — ylängöltä alas neljänsadan metrin syvyyteen merenpinnan alapuolelle.
+AIEMPI KYSYMYS: Mikä on vedenjakaja?
+AIEMPI VASTAUS (Livia):
+Tota, hyvä kysymys tuo. Vedenjakaja on maanpinnan korkea kohta tai harjanne, joka erottaa toisistaan kaksi eri suuntiin laskevaa [[valuma-alueen]] osaa. Sadevesi valuu vedenjakajan toisella puolella yhteen jokijärjestelmään ja toisella puolella toiseen, ja lopulta vedet voivat päätyä kokonaan eri meriin. Vedenjakaja ei välttämättä ole vuori, vaan se voi olla matalakin selänne tai jopa tasainen [[suo]]. Maailman vedenjakajat vaikuttavat siihen, mihin joet virtaavat ja miten alueita on historiassa jaettu. Pisarat eivät ainakaan eksy.
+KYSYMYS: Kerro lisää: valuma-alueen
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narodnaja (luonto · vuori)
+Tietoruudun teksti: Narodnajan huipulta sadevesi lähtee kahteen maanosaan. Vuori seisoo Uralin vedenjakajalla, joka on samalla Euroopan ja Aasian raja: Naroda-joki virtaa huipulta kaakkoon Obiin eli Siperiaan, ja Kosju luoteeseen Petšoraan eli Euroopan puolelle. Korkeutta on 1 894 metriä, mikä tekee siitä Uralin korkeimman huipun ja Euroopan-puoleisen Venäjän korkeimman kohdan Kaukasuksen ulkopuolella — ja koska ympärillä ei ole mitään sen veroista, sen suhteellinen korkeus on peräti 1 772 metriä. Komin kielellä vuori on Naroda-Iz, kansan vuori. Rinteillä on pieniä jäätiköitä ja tunturikangasta, laaksoissa harvaa lehtikuusi- ja koivumetsää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Arabiemiirikunnat — maalehti / Ranta ja rata: Metsä, joka kasvaa suolavedessä] Emiraattien matalilla rannoilla kasvaa mangrovemetsää. Harmaamangrove on ainoa puu, joka kestää täällä suolaista vettä: se erittää ylimääräisen suolan lehtiensä läpi, ja sen juuret työntävät mudasta ylös ohuita hengitysputkia, jotta puu saa happea vuoroveden alla. Mangrovikot ovat kalojen kutupaikkoja ja lintujen suojaa, ja ne pitävät rantaa kasassa myrskyssä. Maa on istuttanut niitä miljoonia lisää, ja Abu Dhabin rannalle on rakennettu puisia kävelysiltoja, joilta metsää voi katsella.
+AIEMPI KYSYMYS: Mikä on vedenjakaja?
+AIEMPI VASTAUS (Livia):
+Tota, hyvä kysymys tuo. Vedenjakaja on maanpinnan korkea kohta tai harjanne, joka erottaa toisistaan kaksi eri suuntiin laskevaa [[valuma-alueen]] osaa. Sadevesi valuu vedenjakajan toisella puolella yhteen jokijärjestelmään ja toisella puolella toiseen, ja lopulta vedet voivat päätyä kokonaan eri meriin. Vedenjakaja ei välttämättä ole vuori, vaan se voi olla matalakin selänne tai jopa tasainen [[suo]]. Maailman vedenjakajat vaikuttavat siihen, mihin joet virtaavat ja miten alueita on historiassa jaettu. Pisarat eivät ainakaan eksy.
+KYSYMYS: Kerro lisää: suo
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narodnaja (luonto · vuori)
+Tietoruudun teksti: Narodnajan huipulta sadevesi lähtee kahteen maanosaan. Vuori seisoo Uralin vedenjakajalla, joka on samalla Euroopan ja Aasian raja: Naroda-joki virtaa huipulta kaakkoon Obiin eli Siperiaan, ja Kosju luoteeseen Petšoraan eli Euroopan puolelle. Korkeutta on 1 894 metriä, mikä tekee siitä Uralin korkeimman huipun ja Euroopan-puoleisen Venäjän korkeimman kohdan Kaukasuksen ulkopuolella — ja koska ympärillä ei ole mitään sen veroista, sen suhteellinen korkeus on peräti 1 772 metriä. Komin kielellä vuori on Naroda-Iz, kansan vuori. Rinteillä on pieniä jäätiköitä ja tunturikangasta, laaksoissa harvaa lehtikuusi- ja koivumetsää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uluru — kaupunkilehti / Kivi ja väri: Pystyyn nostettu kerrostuma] Kun hiekkakivi oli kovettunut, se makasi alun perin vaakatasossa muun kerrostuman seassa. Noin 400–300 miljoonaa vuotta sitten alueen maankuori rutistui uudelleen mannerlaattojen liikkeissä, ja kerrokset kääntyivät lähes pystyyn — niin jyrkästi, että alkuperäiset vaakasuorat kerrosrajat näkyvät nykyään kallion kyljessä pystysuorina uurteina ylhäältä alas asti. Juuri nämä pystysuorat urat antavat Ulurulle sen tunnusomaisen ryppyisen ulkonäön kaukaa katsottuna. Samasta liikkeestä ja myöhemmästä rapautumisesta ovat syntyneet myös kallion suuret, kaarevat onkalot, joissa pehmeämpi kivi on kulunut ympäristöään nopeammin.
+- [Oman — maalehti / Vuoret: Merenpohja työntyi maan päälle] Omanin vuoristo ei ole tavallista mannerkalliota. Samailin ofioliitti on pala valtameren pohjaa ja sen alla ollutta vaippaa, joka työntyi mannerlaattojen liikkeessä kuivalle maalle noin sata miljoonaa vuotta sitten. Se on maailman laajimpia ja parhaiten paljastuneita: kalliota on satatuhatta neliökilometriä, ja siitä näkyy koko merenpohjan kerrossarja. Wadi Jizzissä pinta on täynnä tyynylaavaa — pyöreitä pötköjä, joita syntyy kun sula laava purkautuu veden alla ja jähmettyy heti ulkopinnalta. Geologit tulevat tänne katsomaan sitä, mitä muualla pitäisi porata merenpohjasta.
+AIEMPI KYSYMYS: Miksi Uralin vuoret ovat niin matalia?
+AIEMPI VASTAUS (Livia):
+Joo, tää on mielenkiintoinen. Ural on hyvin vanha vuoristo, joka syntyi [[mannerlaattojen]] törmätessä satojen miljoonien vuosien takaa, ja siitä lähtien [[eroosio]] on kuluttanut sitä. Vanhat vuoret ovat yleensä matalampia kuin nuoret, koska tuuli, vesi ja jää ovat ehtineet pyöristää huiput. Uralilla korkeimmat huiput ovat vain noin 1 900 metriä, kun nuoremmilla vuoristoilla huiput voivat nousta paljon korkeammalle. Vuoriston vanhuudesta kertoo myös se, että sen rinteet ovat melko loivia. Vanhat vuoret ovat siis kuin vanhat lintuparat: matalia mutta luotettavia.
+KYSYMYS: Kerro lisää: mannerlaattojen
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narodnaja (luonto · vuori)
+Tietoruudun teksti: Narodnajan huipulta sadevesi lähtee kahteen maanosaan. Vuori seisoo Uralin vedenjakajalla, joka on samalla Euroopan ja Aasian raja: Naroda-joki virtaa huipulta kaakkoon Obiin eli Siperiaan, ja Kosju luoteeseen Petšoraan eli Euroopan puolelle. Korkeutta on 1 894 metriä, mikä tekee siitä Uralin korkeimman huipun ja Euroopan-puoleisen Venäjän korkeimman kohdan Kaukasuksen ulkopuolella — ja koska ympärillä ei ole mitään sen veroista, sen suhteellinen korkeus on peräti 1 772 metriä. Komin kielellä vuori on Naroda-Iz, kansan vuori. Rinteillä on pieniä jäätiköitä ja tunturikangasta, laaksoissa harvaa lehtikuusi- ja koivumetsää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Odessa — kohdekartta / Kohdekartta: Potjomkin-portaat] Kun isoisäsi nousi rannasta kaupunkiin, portaikko oli kolmekymmentäkaksivuotias ja täysin tuntematon maailmalla. Se rakennettiin vuosina 1837–1841, ja sen teetti ruhtinas Mihail Vorontsov: virallisesti lahjaksi vaimolleen Elżbietalle, käytännössä myös siksi, että kaupungin varakkain väki asui törmän päällä ja pääsi satamaan vain kiemurtelevia polkuja ja karkeita puuportaita pitkin. Hinta oli kahdeksansataatuhatta ruplaa. Piirustukset teki Francesco Boffo kahden muun kanssa, ja työmaata valvoi englantilainen insinööri John Upton. Nimiä portaikolla oli isoisäsi aikaan kolme, eikä yksikään niistä ollut nykyinen: sitä sanottiin Bulevardin portaiksi, Richelieun portaiksi ja useimmiten yksinkerta…
+- [Grand Canyon — kaupunkilehti / Kivi, joki ja eliöt: Kivi joka on lähes kaksi miljardia vuotta vanha] Kanjonin pohjalla, siellä missä Coloradojoki on kaivautunut syvimmälle, paljastuu tummaa, juovikasta kiveä nimeltä Vishnu-liuske. Se syntyi noin 1 745 miljoonaa vuotta sitten valtavien paineiden ja kuumuuden muokatessa alkuperäistä laavaa ja sedimenttiä syvällä maankuoressa – kauan ennen monisoluista elämää. Kivilajin ja sitä 270 miljoonaa vuotta nuoremman reunakerroksen, Kaibab-kalkkikiven, väliin jää niin sanottu Suuri epäjatkuvuus: yli 500 miljoonan vuoden aukko kerrostumissa, sillä eroosio on kuluttanut välissä olleen kiviaineksen pois. Geologit kutsuvatkin kanjonia paikaksi, jossa voi kävellä läpi suuren osan maapallon historiaa.
+AIEMPI KYSYMYS: Miksi Uralin vuoret ovat niin matalia?
+AIEMPI VASTAUS (Livia):
+Joo, tää on mielenkiintoinen. Ural on hyvin vanha vuoristo, joka syntyi [[mannerlaattojen]] törmätessä satojen miljoonien vuosien takaa, ja siitä lähtien [[eroosio]] on kuluttanut sitä. Vanhat vuoret ovat yleensä matalampia kuin nuoret, koska tuuli, vesi ja jää ovat ehtineet pyöristää huiput. Uralilla korkeimmat huiput ovat vain noin 1 900 metriä, kun nuoremmilla vuoristoilla huiput voivat nousta paljon korkeammalle. Vuoriston vanhuudesta kertoo myös se, että sen rinteet ovat melko loivia. Vanhat vuoret ovat siis kuin vanhat lintuparat: matalia mutta luotettavia.
+KYSYMYS: Kerro lisää: eroosio
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narodnaja (luonto · vuori)
+Tietoruudun teksti: Narodnajan huipulta sadevesi lähtee kahteen maanosaan. Vuori seisoo Uralin vedenjakajalla, joka on samalla Euroopan ja Aasian raja: Naroda-joki virtaa huipulta kaakkoon Obiin eli Siperiaan, ja Kosju luoteeseen Petšoraan eli Euroopan puolelle. Korkeutta on 1 894 metriä, mikä tekee siitä Uralin korkeimman huipun ja Euroopan-puoleisen Venäjän korkeimman kohdan Kaukasuksen ulkopuolella — ja koska ympärillä ei ole mitään sen veroista, sen suhteellinen korkeus on peräti 1 772 metriä. Komin kielellä vuori on Naroda-Iz, kansan vuori. Rinteillä on pieniä jäätiköitä ja tunturikangasta, laaksoissa harvaa lehtikuusi- ja koivumetsää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vladivostok — kaupunkilehti / Ussurin taiga: Havupuu ja köynnös samassa metsässä] Ussurin sekametsä peittää noin 187 000 neliökilometriä Primorjen ja Habarovskin alueilla Amurin ja Ussurin varsilla sekä Sihote-Alinin molemmin puolin. Valtapuita ovat koreansembra ja mongoliantammi. Koreansembra kasvaa jopa viisikymmenmetriseksi, sen neulaset ovat viiden kimpuissa ja kävyt 9–14 senttimetriä pitkiä. Runkoja kiipeää kiinanlimppuköynnös, joka yltää tavallisesti 8–10 metriin ja kantaa hedelmiä, joita kutsutaan viiden maun marjoiksi. Aluetta pidetään Pohjois-Aasian lajirikkaimpana.
+AIEMPI KYSYMYS: Miksi lehtikuusi pudottaa neulasensa syksyllä?
+AIEMPI VASTAUS (Livia):
+Ai tota. Lehtikuusi on [[havupuu]], joka pudottaa neulasensa joka syksy, ja se on sopeutumista kylmään ja kuivaan talveen. Neulasista haihtuu talvella vettä, jota jäätynyt maa ei pysty korvaamaan, joten neulasten pudottaminen säästää puuta kuivumiselta ja lumen painolta. Lehtikuusi pärjää hyvin pohjoisessa, myös alueilla, joilla maa on osan vuotta pitkälle jäässä tai [[ikirouta]] on lähellä. Keväällä puu tuottaa uudet pehmeät neulaset, jotka ovat vaaleanvihreät. Hurja strategia puulta, sanon minä.
+KYSYMYS: Kerro lisää: havupuu
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narodnaja (luonto · vuori)
+Tietoruudun teksti: Narodnajan huipulta sadevesi lähtee kahteen maanosaan. Vuori seisoo Uralin vedenjakajalla, joka on samalla Euroopan ja Aasian raja: Naroda-joki virtaa huipulta kaakkoon Obiin eli Siperiaan, ja Kosju luoteeseen Petšoraan eli Euroopan puolelle. Korkeutta on 1 894 metriä, mikä tekee siitä Uralin korkeimman huipun ja Euroopan-puoleisen Venäjän korkeimman kohdan Kaukasuksen ulkopuolella — ja koska ympärillä ei ole mitään sen veroista, sen suhteellinen korkeus on peräti 1 772 metriä. Komin kielellä vuori on Naroda-Iz, kansan vuori. Rinteillä on pieniä jäätiköitä ja tunturikangasta, laaksoissa harvaa lehtikuusi- ja koivumetsää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jakutsk — kaupunkilehti / Ikirouta] Kaupungin alla maa on jäässä yli kahdensadan metrin syvyyteen, ja ikiroudasta nousee mammutinluuta. Ylävirtaan päin jokea reunustaa kymmenien kilometrien mittainen kalkkikivipylväiden rivistö.
+AIEMPI KYSYMYS: Miksi lehtikuusi pudottaa neulasensa syksyllä?
+AIEMPI VASTAUS (Livia):
+Ai tota. Lehtikuusi on [[havupuu]], joka pudottaa neulasensa joka syksy, ja se on sopeutumista kylmään ja kuivaan talveen. Neulasista haihtuu talvella vettä, jota jäätynyt maa ei pysty korvaamaan, joten neulasten pudottaminen säästää puuta kuivumiselta ja lumen painolta. Lehtikuusi pärjää hyvin pohjoisessa, myös alueilla, joilla maa on osan vuotta pitkälle jäässä tai [[ikirouta]] on lähellä. Keväällä puu tuottaa uudet pehmeät neulaset, jotka ovat vaaleanvihreät. Hurja strategia puulta, sanon minä.
+KYSYMYS: Kerro lisää: ikirouta
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Venäjän puolella Murmanskin satama pysyy sulana ympäri vuoden lämpimän Pohjois-Atlantin virran ansiosta, ja meren itäkulmalla Petšoran suistossa on oma nimensä: Petšoranmeri.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Fès — kohdekartta / Kohdekartta: Saffarinin medresa] 1271 Tämä on marinidien ensimmäinen medresa. Sulttaani Abu Ya'qub Yusuf rakennutti sen vuonna 1271, ja sen jälkeen dynastia rakensi niitä kuusi lisää vuoteen 1357 mennessä. Medresa seisoo Saffarinin aukiolla, joka on nimetty siellä työskentelevien kuparaseppien mukaan — aukiolla takominen kuuluu yhä, ja isot padat seisovat rivissä kadulla. Medresa oli laitoksena uusi tulokas. Se syntyi Koillis-Iranissa 1000-luvun alkuun mennessä ja levisi vähitellen länteen, mutta Marokossa se juurtui vasta marinidien aikana. Syy oli osin opillinen: edellisen dynastian oppi oli medresalle vieras. Marinideille medresat olivat myös politiikkaa. Niillä ostettiin Fèsin vaikutusvaltaisen ja itsepäisen uskonnolli…
+AIEMPI KYSYMYS: Kuka Willem Barentsz oli?
+AIEMPI VASTAUS (Livia):
+No jopas, tän aiheen minä tunnen. Willem Barentsz oli hollantilainen merenkulkija, joka johti 1590-luvulla retkiä pohjoiseen etsiessään meritietä Kiinaan [[Koillisväylää]] pitkin. Hänen kolmannella retkellään laiva juuttui jäihin [[Novaja Zemljan]] rannikolle vuosina 1596–97, ja seitsemäntoista miestä talvehti rakentamassaan majassa, jota kutsuttiin nimellä [[Behouden Huys]], Pelastunut talo. Tammikuussa 1597 miehet näkivät auringon kaksi viikkoa ennen aikataulua, mikä johtui ilmakehän kangastuksesta. Barentsz kuoli kesäkuussa kotimatkalla avoveneessä, ja kaksitoista miestä pääsi perille; hänen mukaansa on nimetty Barentsinmeri. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Koillisväylää
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Venäjän puolella Murmanskin satama pysyy sulana ympäri vuoden lämpimän Pohjois-Atlantin virran ansiosta, ja meren itäkulmalla Petšoran suistossa on oma nimensä: Petšoranmeri.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historia: Aurinko nousi kaksi viikkoa liian aikaisin] 1596–97 — Willem Barentszin laiva etsi pohjoista meritietä Kiinaan ja juuttui jäihin Novaja Zemljan rannikolle. Miehet purkivat laivasta puuta, keräsivät ajopuuta ja rakensivat majan, jota he kutsuivat nimellä Behouden Huys, Pelastunut talo. Seitsemäntoista miestä talvehti siellä napayössä. Tammikuun 24. päivänä 1597 he näkivät auringon kaksi viikkoa ennen kuin sen olisi pitänyt nousta — Barentsz ei uskonut silmiään. Kyse oli harvinaisesta ilmakehän kangastuksesta. Kesäkuussa lähdettiin kahdella avoveneellä kohti kotia. Barentsz kuoli viikko lähdön jälkeen; kaksitoista pääsi perille.
+AIEMPI KYSYMYS: Kuka Willem Barentsz oli?
+AIEMPI VASTAUS (Livia):
+No jopas, tän aiheen minä tunnen. Willem Barentsz oli hollantilainen merenkulkija, joka johti 1590-luvulla retkiä pohjoiseen etsiessään meritietä Kiinaan [[Koillisväylää]] pitkin. Hänen kolmannella retkellään laiva juuttui jäihin [[Novaja Zemljan]] rannikolle vuosina 1596–97, ja seitsemäntoista miestä talvehti rakentamassaan majassa, jota kutsuttiin nimellä [[Behouden Huys]], Pelastunut talo. Tammikuussa 1597 miehet näkivät auringon kaksi viikkoa ennen aikataulua, mikä johtui ilmakehän kangastuksesta. Barentsz kuoli kesäkuussa kotimatkalla avoveneessä, ja kaksitoista miestä pääsi perille; hänen mukaansa on nimetty Barentsinmeri. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Novaja Zemljan
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Venäjän puolella Murmanskin satama pysyy sulana ympäri vuoden lämpimän Pohjois-Atlantin virran ansiosta, ja meren itäkulmalla Petšoran suistossa on oma nimensä: Petšoranmeri.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historia: Aurinko nousi kaksi viikkoa liian aikaisin] 1596–97 — Willem Barentszin laiva etsi pohjoista meritietä Kiinaan ja juuttui jäihin Novaja Zemljan rannikolle. Miehet purkivat laivasta puuta, keräsivät ajopuuta ja rakensivat majan, jota he kutsuivat nimellä Behouden Huys, Pelastunut talo. Seitsemäntoista miestä talvehti siellä napayössä. Tammikuun 24. päivänä 1597 he näkivät auringon kaksi viikkoa ennen kuin sen olisi pitänyt nousta — Barentsz ei uskonut silmiään. Kyse oli harvinaisesta ilmakehän kangastuksesta. Kesäkuussa lähdettiin kahdella avoveneellä kohti kotia. Barentsz kuoli viikko lähdön jälkeen; kaksitoista pääsi perille.
+AIEMPI KYSYMYS: Kuka Willem Barentsz oli?
+AIEMPI VASTAUS (Livia):
+No jopas, tän aiheen minä tunnen. Willem Barentsz oli hollantilainen merenkulkija, joka johti 1590-luvulla retkiä pohjoiseen etsiessään meritietä Kiinaan [[Koillisväylää]] pitkin. Hänen kolmannella retkellään laiva juuttui jäihin [[Novaja Zemljan]] rannikolle vuosina 1596–97, ja seitsemäntoista miestä talvehti rakentamassaan majassa, jota kutsuttiin nimellä [[Behouden Huys]], Pelastunut talo. Tammikuussa 1597 miehet näkivät auringon kaksi viikkoa ennen aikataulua, mikä johtui ilmakehän kangastuksesta. Barentsz kuoli kesäkuussa kotimatkalla avoveneessä, ja kaksitoista miestä pääsi perille; hänen mukaansa on nimetty Barentsinmeri. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Behouden Huys
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Venäjän puolella Murmanskin satama pysyy sulana ympäri vuoden lämpimän Pohjois-Atlantin virran ansiosta, ja meren itäkulmalla Petšoran suistossa on oma nimensä: Petšoranmeri.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Oslo — kaupunkilehti / Historian hetki: Kristiania 1893 — laiva, jonka jää nostaa] 24.6.1893 — Milloin isä tulee takaisin? Sitä ei laiturilla osaa sanoa kukaan. 31-vuotias Fridtjof Nansen jättää rantaan Eva-vaimonsa ja muutaman kuukauden ikäisen Liv-tyttärensä eikä lupaa paluupäivää. Rantakadut ovat mustanaan väkeä, linnoitukselta ammutaan kunnialaukaukset, ja vuonolle liukuu alus, joka näyttää väärin rakennetulta. Fram on matala ja pyöreäpohjainen: Colin Archer suunnitteli sen niin, ettei jäällä ole mistään otetta, vaan ahtojää nostaa laivan ylös eikä murskaa sitä. Runko on kolmea puukerrosta paksu — kuudestakymmenestä seitsemäänkymmeneen senttiä, keulassa runsaan metrin — ja päällystetty greenheart-puulla. Kannella on kolmetoista miestä, ja suunnitelma on se, jota moni …
+- [Oslo — kohdekartta / Kohdekartta: Fram 1893] Milloin isä tulee takaisin? Sitä ei laiturilla osaa sanoa kukaan. 31-vuotias Fridtjof Nansen jättää rantaan Eva-vaimonsa ja muutaman kuukauden ikäisen Liv-tyttärensä eikä lupaa paluupäivää. Rantakadut ovat mustanaan väkeä, linnoitukselta ammutaan kunnialaukaukset, ja vuonolle liukuu alus, joka näyttää väärin rakennetulta. Fram on matala ja pyöreäpohjainen: Colin Archer suunnitteli sen niin, ettei jäällä ole mistään otetta, vaan ahtojää nostaa laivan ylös eikä murskaa sitä. Runko on kolmea puukerrosta paksu — kuudestakymmenestä seitsemäänkymmeneen senttiä, keulassa runsaan metrin — ja päällystetty greenheart-puulla. Kannella on kolmetoista miestä, ja suunnitelma on se, jota moni tutkija on j…
+AIEMPI KYSYMYS: Miksi Murmansk ei jäädy talvella?
+AIEMPI VASTAUS (Livia):
+Hetkinen, tää on hyvä. Murmanskin satama pysyy sulana ympäri vuoden, koska [[Pohjois-Atlantin virran]] lämmin vesi virtaa Norjan rannikkoa pitkin Barentsinmerelle asti ja lämmittää myös [[Kuolanlahden]] vettä. Vaikka kaupunki sijaitsee kaukana pohjoisessa napapiirin yläpuolella, satama pysyy käytössä talvellakin, ja se tekee siitä Venäjän tärkeimpiä pohjoisia satamia. Lämmin merivirta on sen salaisuus, ei suinkaan lempeä talvi.
+
+Minusta on aika jännää, että kylmä maa ja lämmin vesi voivat sopia samaan paikkaan. Minä pysyn mieluummin sisällä kuin katolla, kun tuuli tulee Barentsinmereltä.
+KYSYMYS: Kerro lisää: Pohjois-Atlantin virran
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Venäjän puolella Murmanskin satama pysyy sulana ympäri vuoden lämpimän Pohjois-Atlantin virran ansiosta, ja meren itäkulmalla Petšoran suistossa on oma nimensä: Petšoranmeri.
+AIEMPI KYSYMYS: Miksi Murmansk ei jäädy talvella?
+AIEMPI VASTAUS (Livia):
+Hetkinen, tää on hyvä. Murmanskin satama pysyy sulana ympäri vuoden, koska [[Pohjois-Atlantin virran]] lämmin vesi virtaa Norjan rannikkoa pitkin Barentsinmerelle asti ja lämmittää myös [[Kuolanlahden]] vettä. Vaikka kaupunki sijaitsee kaukana pohjoisessa napapiirin yläpuolella, satama pysyy käytössä talvellakin, ja se tekee siitä Venäjän tärkeimpiä pohjoisia satamia. Lämmin merivirta on sen salaisuus, ei suinkaan lempeä talvi.
+
+Minusta on aika jännää, että kylmä maa ja lämmin vesi voivat sopia samaan paikkaan. Minä pysyn mieluummin sisällä kuin katolla, kun tuuli tulee Barentsinmereltä.
+KYSYMYS: Kerro lisää: Kuolanlahden
+
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Venäjän puolella Murmanskin satama pysyy sulana ympäri vuoden lämpimän Pohjois-Atlantin virran ansiosta, ja meren itäkulmalla Petšoran suistossa on oma nimensä: Petšoranmeri.
+AIEMPI KYSYMYS: Mitä tarkoittaa meren atlantisoituminen?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Atlantisoitumisella tarkoitetaan sitä, että Atlantin lämmin ja suolainen vesi pääsee yhä laajemmalle pohjoiseen ja alkaa muuttaa arktisen meren oloja. Seurauksena [[merijää]] ohenee ja vetäytyy, vesi lämpenee ja myös merten eliöstö muuttuu, kun etelän lajit levittäytyvät pohjoisemmaksi. Ilmiön on havaittu olevan erityisen voimakas Barentsinmerellä, joka lämpenee nopeammin kuin muut arktiset alueet. Tutkijat seuraavat sitä tarkasti, koska muutokset vaikuttavat koko [[Jäämeren]] ilmastoon ja kalastukseen. Voi kun jäljessä olisi pelkkä kaunis nimi.
+KYSYMYS: Kerro lisää: merijää
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Venäjän puolella Murmanskin satama pysyy sulana ympäri vuoden lämpimän Pohjois-Atlantin virran ansiosta, ja meren itäkulmalla Petšoran suistossa on oma nimensä: Petšoranmeri.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tromssa — kaupunkilehti / Historia: Kaupunki, josta retkikunnat lähtivät napaa kohti] Tromssan sijainti syvän vuonon suojassa mutta silti lähellä avomerta teki siitä 1800-luvun lopulla luontevan viimeisen pysähdyspaikan napaseuduille suuntaaville retkikunnille — muun muassa Roald Amundsen ja Fridtjof Nansen varustautuivat ja rekrytoivat miehistöä Tromssassa ennen matkojaan Koillisväylälle ja Pohjoisnavan suunnalle. Kaupungin lempinimeksi vakiintui "Jäämeren Pariisi", osin ironisesti ja osin ylpeydestä sen kansainvälisestä merkityksestä napatutkimukselle. Nykyinen Polarmuseet toimii vanhassa tullirakennuksessa satamassa ja kertoo näiden retkikuntien historiasta.
+AIEMPI KYSYMYS: Mitä tarkoittaa meren atlantisoituminen?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Atlantisoitumisella tarkoitetaan sitä, että Atlantin lämmin ja suolainen vesi pääsee yhä laajemmalle pohjoiseen ja alkaa muuttaa arktisen meren oloja. Seurauksena [[merijää]] ohenee ja vetäytyy, vesi lämpenee ja myös merten eliöstö muuttuu, kun etelän lajit levittäytyvät pohjoisemmaksi. Ilmiön on havaittu olevan erityisen voimakas Barentsinmerellä, joka lämpenee nopeammin kuin muut arktiset alueet. Tutkijat seuraavat sitä tarkasti, koska muutokset vaikuttavat koko [[Jäämeren]] ilmastoon ja kalastukseen. Voi kun jäljessä olisi pelkkä kaunis nimi.
+KYSYMYS: Kerro lisää: Jäämeren
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Venäjän puolella Murmanskin satama pysyy sulana ympäri vuoden lämpimän Pohjois-Atlantin virran ansiosta, ja meren itäkulmalla Petšoran suistossa on oma nimensä: Petšoranmeri.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan tuomiokirkko] 1861 Tromssan tuomiokirkko on kokonaan puusta rakennettu keltainen kirkko, joka valmistui vuonna 1861 arkkitehti Christian Heinrich Groschin piirustusten mukaan. Se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu puusta - ja sen sisään mahtuu yli 600 kirkkovierasta! Paikalla on ollut kirkko jo satoja vuosia ennen tätäkin: kuningas Håkon IV rakennutti tänne kappelin jo vuonna 1252, ja sen jälkeen paikalla on ollut ainakin kaksi muuta kirkkoa ennen nykyistä rakennusta. Kellotorni valmistui vuotta myöhemmin, 1862, ja kirkkoa koristeltiin lisää vielä 1880-luvulla. Isoisän vieraillessa Tromssassa 1873 kirkko oli vasta reilut kymmenen vuotta vanha - täysin uusi nähtävyys pienessä pu…
+AIEMPI KYSYMYS: Miksi Norja ja Venäjä hoitavat kalastusta yhdessä?
+AIEMPI VASTAUS (Livia):
+Kato. Kalat eivät tunne valtioiden rajoja, joten turskakanta ui Norjan ja Venäjän vesien välillä, eikä kumpikaan maa voi hoitaa sitä yksin. Siksi [[Norja]] ja [[Venäjä]] perustivat vuonna 1976 yhteiskomission, joka sopii kalastuksen hoidosta ja kalastuskiintiöistä. Yhteistyö suojaa kalakantaa ylikalastukselta ja pitää sen elinvoimaisena molemmille valtioille. Kyseessä on esimerkki siitä, miten yhteisten luonnonvarojen hoito voi edellyttää yhteistyötä, vaikka valtioiden suhteet muuten vaihtelisivat. Hyvä diplomatia alkaa kalaverkosta, näin ainakin satamissa sanotaan.
+KYSYMYS: Kerro lisää: Norja
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Venäjän puolella Murmanskin satama pysyy sulana ympäri vuoden lämpimän Pohjois-Atlantin virran ansiosta, ja meren itäkulmalla Petšoran suistossa on oma nimensä: Petšoranmeri.
+AIEMPI KYSYMYS: Miksi Norja ja Venäjä hoitavat kalastusta yhdessä?
+AIEMPI VASTAUS (Livia):
+Kato. Kalat eivät tunne valtioiden rajoja, joten turskakanta ui Norjan ja Venäjän vesien välillä, eikä kumpikaan maa voi hoitaa sitä yksin. Siksi [[Norja]] ja [[Venäjä]] perustivat vuonna 1976 yhteiskomission, joka sopii kalastuksen hoidosta ja kalastuskiintiöistä. Yhteistyö suojaa kalakantaa ylikalastukselta ja pitää sen elinvoimaisena molemmille valtioille. Kyseessä on esimerkki siitä, miten yhteisten luonnonvarojen hoito voi edellyttää yhteistyötä, vaikka valtioiden suhteet muuten vaihtelisivat. Hyvä diplomatia alkaa kalaverkosta, näin ainakin satamissa sanotaan.
+KYSYMYS: Kerro lisää: Venäjä
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Venäjän puolella Murmanskin satama pysyy sulana ympäri vuoden lämpimän Pohjois-Atlantin virran ansiosta, ja meren itäkulmalla Petšoran suistossa on oma nimensä: Petšoranmeri.
+AIEMPI KYSYMYS: Miksi arktinen alue lämpenee muuta maailmaa nopeammin?
+AIEMPI VASTAUS (Livia):
+Mmm— tän tiedän. Arktinen alue lämpenee nopeammin, koska lumi ja jää heijastavat suurimman osan auringonvalosta takaisin avaruuteen, mutta kun jäätä sulaa, tumma merivesi imee enemmän lämpöä. Se sulattaa lisää jäätä, ja kierre vahvistaa itseään; ilmiötä kutsutaan [[arktiseksi vahvistumiseksi]]. Lisäksi lämmin ilma ja meriveden virtaukset tuovat pohjoiseen lisää lämpöä, ja alueen ilmakehä on ohut ja kylmä, joten pienikin lämpöenergian lisäys näkyy voimakkaasti. [[Barentsinmeri]] on erityisen nopeasti lämpenevä alue. Ylhäältä sen kyllä huomaa, kun jää ei enää ulotu entiseen paikkaan.
+KYSYMYS: Kerro lisää: arktiseksi vahvistumiseksi
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Venäjän puolella Murmanskin satama pysyy sulana ympäri vuoden lämpimän Pohjois-Atlantin virran ansiosta, ja meren itäkulmalla Petšoran suistossa on oma nimensä: Petšoranmeri.
+AIEMPI KYSYMYS: Miksi arktinen alue lämpenee muuta maailmaa nopeammin?
+AIEMPI VASTAUS (Livia):
+Mmm— tän tiedän. Arktinen alue lämpenee nopeammin, koska lumi ja jää heijastavat suurimman osan auringonvalosta takaisin avaruuteen, mutta kun jäätä sulaa, tumma merivesi imee enemmän lämpöä. Se sulattaa lisää jäätä, ja kierre vahvistaa itseään; ilmiötä kutsutaan [[arktiseksi vahvistumiseksi]]. Lisäksi lämmin ilma ja meriveden virtaukset tuovat pohjoiseen lisää lämpöä, ja alueen ilmakehä on ohut ja kylmä, joten pienikin lämpöenergian lisäys näkyy voimakkaasti. [[Barentsinmeri]] on erityisen nopeasti lämpenevä alue. Ylhäältä sen kyllä huomaa, kun jää ei enää ulotu entiseen paikkaan.
+KYSYMYS: Kerro lisää: Barentsinmeri
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jäämeri (meri)
+Tietoruudun teksti: Jäämeri on maailman viidestä valtamerestä pienin, matalin ja kylmin: pinta-alaa noin 14 060 000 neliökilometriä. Se ulottuu pohjoisnavan ympäriltä etelään noin 60. leveyspiirille ja sitä ympäröivät Euraasia ja Pohjois-Amerikka; rajat kulkevat maastonmuotoja pitkin, Tyynenmeren puolella Beringinsalmi ja Atlantin puolella Grönlanti–Skotlanti-harjanne. Suurimman osan vuodesta se on merijään peitossa. Osa tutkijoista kutsuu sitä Pohjoiseksi napamereksi tai jopa Atlantin suistoksi.
+AIEMPI KYSYMYS: Kuinka paksua Jäämeren jää on?
+AIEMPI VASTAUS (Livia):
+No niin, tuosta on monta lukua. Jäämeren jään paksuus vaihtelee paljon: ensimmäisen talven aikana syntynyt jää on usein noin metrin tai pari paksua, ja monivuotinen jää voi olla useita metrejä, jopa kolmesta neljään metriin, mutta tarkoista keskiarvoista en ole varma. Jäähän kasautuu paikoin paljon paksummiksi [[paineharjanteiksi]], kun lautat työntyvät toisiaan vasten. Viime vuosikymmeninä monivuotisen jään määrä on pienentynyt ja [[merijää]] on ohentunut, ja kesällä sitä sulaa yhä enemmän. Pitkä vastaus, mutta jäässä on paljon kerroksia.
+KYSYMYS: Kerro lisää: paineharjanteiksi
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jäämeri (meri)
+Tietoruudun teksti: Jäämeri on maailman viidestä valtamerestä pienin, matalin ja kylmin: pinta-alaa noin 14 060 000 neliökilometriä. Se ulottuu pohjoisnavan ympäriltä etelään noin 60. leveyspiirille ja sitä ympäröivät Euraasia ja Pohjois-Amerikka; rajat kulkevat maastonmuotoja pitkin, Tyynenmeren puolella Beringinsalmi ja Atlantin puolella Grönlanti–Skotlanti-harjanne. Suurimman osan vuodesta se on merijään peitossa. Osa tutkijoista kutsuu sitä Pohjoiseksi napamereksi tai jopa Atlantin suistoksi.
+AIEMPI KYSYMYS: Kuinka paksua Jäämeren jää on?
+AIEMPI VASTAUS (Livia):
+No niin, tuosta on monta lukua. Jäämeren jään paksuus vaihtelee paljon: ensimmäisen talven aikana syntynyt jää on usein noin metrin tai pari paksua, ja monivuotinen jää voi olla useita metrejä, jopa kolmesta neljään metriin, mutta tarkoista keskiarvoista en ole varma. Jäähän kasautuu paikoin paljon paksummiksi [[paineharjanteiksi]], kun lautat työntyvät toisiaan vasten. Viime vuosikymmeninä monivuotisen jään määrä on pienentynyt ja [[merijää]] on ohentunut, ja kesällä sitä sulaa yhä enemmän. Pitkä vastaus, mutta jäässä on paljon kerroksia.
+KYSYMYS: Kerro lisää: merijää
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jäämeri (meri)
+Tietoruudun teksti: Jäämeri on maailman viidestä valtamerestä pienin, matalin ja kylmin: pinta-alaa noin 14 060 000 neliökilometriä. Se ulottuu pohjoisnavan ympäriltä etelään noin 60. leveyspiirille ja sitä ympäröivät Euraasia ja Pohjois-Amerikka; rajat kulkevat maastonmuotoja pitkin, Tyynenmeren puolella Beringinsalmi ja Atlantin puolella Grönlanti–Skotlanti-harjanne. Suurimman osan vuodesta se on merijään peitossa. Osa tutkijoista kutsuu sitä Pohjoiseksi napamereksi tai jopa Atlantin suistoksi.
+AIEMPI KYSYMYS: Miksi jotkut kutsuvat sitä Atlantin suistoksi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Nimitys perustuu siihen, että Jäämereen virtaa suurin osa sen saamasta valtamerivedestä Atlantilta, [[Barentsinmeren]] ja Grönlannin sekä Huippuvuorten välisen väylän kautta, kun taas yhteys Tyyneen mereen on kapea ja matala. Atlantin vesi tuo mukanaan lämpöä ja suolaa, ja [[Pohjois-Atlantin virta]] vaikuttaa selvästi jään esiintymiseen. Tästä syystä osa tutkijoista pitää Jäämerta eräänlaisena Atlantin jatkeena eikä täysin itsenäisenä valtamerenä. Nimitys ei ole yleinen eikä kaikkien hyväksymä, joten kyse on yhdestä tavasta jäsentää kokonaisuutta. Ylhäältä katsoen vesi kyllä kulkee vain yhteen suuntaan, hyvin tyynesti.
+KYSYMYS: Kerro lisää: Barentsinmeren
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jäämeri (meri)
+Tietoruudun teksti: Jäämeri on maailman viidestä valtamerestä pienin, matalin ja kylmin: pinta-alaa noin 14 060 000 neliökilometriä. Se ulottuu pohjoisnavan ympäriltä etelään noin 60. leveyspiirille ja sitä ympäröivät Euraasia ja Pohjois-Amerikka; rajat kulkevat maastonmuotoja pitkin, Tyynenmeren puolella Beringinsalmi ja Atlantin puolella Grönlanti–Skotlanti-harjanne. Suurimman osan vuodesta se on merijään peitossa. Osa tutkijoista kutsuu sitä Pohjoiseksi napamereksi tai jopa Atlantin suistoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Orjarannikko — kaupunkilehti / Orjarannikko: Atlantin ranta, jonne kaikki tiet johtivat] Ouidah sijaitsee kapealla hiekkaharjulla Atlantin valtameren ja sisämaan laguunien välissä. Ranta on leveä ja lähes puuton, sillä avomereltä kohti rantaa kohoavat mahtavat, usein vaaralliset aallot ovat estäneet luonnollisen satama-altaan syntymisen koko rannikolle. Juuri tämä sama karu ranta toimi vuosisatoja sekä kalastajien arkena että sen viimeisenä maakaistaleena, jonka yli kuljettiin ennen merelle lähtöä. Nykyisin rannalla on hiljaista: muutama kalastajakylä, palmuja ja pieniä, valkoisiksi rapattuja majoja hiekalla.
+AIEMPI KYSYMYS: Miksi jotkut kutsuvat sitä Atlantin suistoksi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Nimitys perustuu siihen, että Jäämereen virtaa suurin osa sen saamasta valtamerivedestä Atlantilta, [[Barentsinmeren]] ja Grönlannin sekä Huippuvuorten välisen väylän kautta, kun taas yhteys Tyyneen mereen on kapea ja matala. Atlantin vesi tuo mukanaan lämpöä ja suolaa, ja [[Pohjois-Atlantin virta]] vaikuttaa selvästi jään esiintymiseen. Tästä syystä osa tutkijoista pitää Jäämerta eräänlaisena Atlantin jatkeena eikä täysin itsenäisenä valtamerenä. Nimitys ei ole yleinen eikä kaikkien hyväksymä, joten kyse on yhdestä tavasta jäsentää kokonaisuutta. Ylhäältä katsoen vesi kyllä kulkee vain yhteen suuntaan, hyvin tyynesti.
+KYSYMYS: Kerro lisää: Pohjois-Atlantin virta
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jäämeri (meri)
+Tietoruudun teksti: Jäämeri on maailman viidestä valtamerestä pienin, matalin ja kylmin: pinta-alaa noin 14 060 000 neliökilometriä. Se ulottuu pohjoisnavan ympäriltä etelään noin 60. leveyspiirille ja sitä ympäröivät Euraasia ja Pohjois-Amerikka; rajat kulkevat maastonmuotoja pitkin, Tyynenmeren puolella Beringinsalmi ja Atlantin puolella Grönlanti–Skotlanti-harjanne. Suurimman osan vuodesta se on merijään peitossa. Osa tutkijoista kutsuu sitä Pohjoiseksi napamereksi tai jopa Atlantin suistoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iqaluit — kaupunkilehti / Tundra ja vuorovesi: Puu, joka kasvaa pitkin maata] Iqaluit on puurajan pohjoispuolella, vaikka se on selvästi napapiirin eteläpuolella. Syy on meressä: kylmä Baffin Island Current pitää kesät niin viileinä, että puuraja kulkee Kanadan itäosassa yhtä etelässä kuin Pohjois-Labradorissa — talvet sen sijaan ovat suunnilleen samanlaisia kuin Yellowknifessa. Puita kaupungissa on silti muutama: etelään kääntyneitä tuotuja mustakuusia, joita lumikinos suojaa talvella. Pensaista tavallisin on arktinen paju, joka voi olla lähes kahdeksan metriä pitkä ja viisitoista senttiä korkea. Se kasvaa siihen suuntaan, johon kannattaa.
+- [Norja — maalehti / Luonto: Aurinko kiertää eikä laske] Kesäkuussa — Napapiirin pohjoispuolella aurinko ei kesällä laske lainkaan vaan kiertää taivaalla ympäri: Lofooteilla se pysyy ylhäällä lähes kaksi kuukautta. Keskiyön aurinko värjää talot ja vuoret oranssiksi kellon ympäri, ja kalastajat käyvät töissä yölläkin. Talvella sama asia toimii toisin päin — kaamos kestää saman verran, ja aurinko ei nouse ollenkaan. Silloin lumi ja meri heijastavat sinistä valoa, jota norjalaiset sanovat siniseksi hetkeksi.
+- [Tromssa — kaupunkilehti / Valo] Napapiirin pohjoispuolella valo ei tule ja mene päivittäin vaan vuodenajoittain — ja juuri siksi tästä kaupungista tuli paikka, jossa taivasta tutkitaan.
+- [Tromssa — kaupunkilehti / Tromssa] Kaupunki napapiirin pohjoispuolella: aurinko katoaa kahdeksi kuukaudeksi, ja pimeimpään aikaan tehtiin kellareissa musiikkia, joka kuultiin maailmalla.
+AIEMPI KYSYMYS: Mikä on napayö?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Napayö on ajanjakso, jolloin aurinko ei nouse horisontin yläpuolelle yhtään koko vuorokauden aikana. Sitä esiintyy [[napapiirin]] pohjoispuolella, joka sijaitsee noin 66,5 asteen leveysasteella. Mitä lähempänä napaa ollaan, sitä pidempi napayö on: napapiirillä se kestää vain vuorokauden, mutta aivan navalla aurinko on horisontin alapuolella noin puoli vuotta. Suomessa vastaavaa ilmiötä kutsutaan [[kaamokseksi]], ja sen jälkeen auringon palaaminen on merkittävä tapahtuma. Pitkä pimeä, mutta kyllä minä silti löydän perille.
+KYSYMYS: Kerro lisää: napapiirin
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jäämeri (meri)
+Tietoruudun teksti: Jäämeri on maailman viidestä valtamerestä pienin, matalin ja kylmin: pinta-alaa noin 14 060 000 neliökilometriä. Se ulottuu pohjoisnavan ympäriltä etelään noin 60. leveyspiirille ja sitä ympäröivät Euraasia ja Pohjois-Amerikka; rajat kulkevat maastonmuotoja pitkin, Tyynenmeren puolella Beringinsalmi ja Atlantin puolella Grönlanti–Skotlanti-harjanne. Suurimman osan vuodesta se on merijään peitossa. Osa tutkijoista kutsuu sitä Pohjoiseksi napamereksi tai jopa Atlantin suistoksi.
+AIEMPI KYSYMYS: Mikä on napayö?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Napayö on ajanjakso, jolloin aurinko ei nouse horisontin yläpuolelle yhtään koko vuorokauden aikana. Sitä esiintyy [[napapiirin]] pohjoispuolella, joka sijaitsee noin 66,5 asteen leveysasteella. Mitä lähempänä napaa ollaan, sitä pidempi napayö on: napapiirillä se kestää vain vuorokauden, mutta aivan navalla aurinko on horisontin alapuolella noin puoli vuotta. Suomessa vastaavaa ilmiötä kutsutaan [[kaamokseksi]], ja sen jälkeen auringon palaaminen on merkittävä tapahtuma. Pitkä pimeä, mutta kyllä minä silti löydän perille.
+KYSYMYS: Kerro lisää: kaamokseksi
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jäämeri (meri)
+Tietoruudun teksti: Jäämeri on maailman viidestä valtamerestä pienin, matalin ja kylmin: pinta-alaa noin 14 060 000 neliökilometriä. Se ulottuu pohjoisnavan ympäriltä etelään noin 60. leveyspiirille ja sitä ympäröivät Euraasia ja Pohjois-Amerikka; rajat kulkevat maastonmuotoja pitkin, Tyynenmeren puolella Beringinsalmi ja Atlantin puolella Grönlanti–Skotlanti-harjanne. Suurimman osan vuodesta se on merijään peitossa. Osa tutkijoista kutsuu sitä Pohjoiseksi napamereksi tai jopa Atlantin suistoksi.
+AIEMPI KYSYMYS: Miksi magneettinen pohjoisnapa ei ole maantieteellisellä navalla?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Maantieteellinen pohjoisnapa on piste, jonka läpi maapallon pyörimisakseli kulkee. Magneettinen napa taas määräytyy maapallon [[magneettikentän]] mukaan, ja kenttä syntyy sulan raudan liikkeestä maapallon ytimessä. Koska ydinneste liikkuu, magneettinen napa ei pysy paikallaan vaan siirtyy vuosittain jopa kymmeniä kilometrejä, eikä se siksi osu samaan kohtaan kuin maantieteellinen napa. [[Kompassin]] neula osoittaa magneettisen navan suuntaan, minkä vuoksi navigoinnissa on huomioitava ero. Kyyhkynä minä navigoin ihan itse, kiitos vain.
+KYSYMYS: Kerro lisää: magneettikentän
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jäämeri (meri)
+Tietoruudun teksti: Jäämeri on maailman viidestä valtamerestä pienin, matalin ja kylmin: pinta-alaa noin 14 060 000 neliökilometriä. Se ulottuu pohjoisnavan ympäriltä etelään noin 60. leveyspiirille ja sitä ympäröivät Euraasia ja Pohjois-Amerikka; rajat kulkevat maastonmuotoja pitkin, Tyynenmeren puolella Beringinsalmi ja Atlantin puolella Grönlanti–Skotlanti-harjanne. Suurimman osan vuodesta se on merijään peitossa. Osa tutkijoista kutsuu sitä Pohjoiseksi napamereksi tai jopa Atlantin suistoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Townsville — kaupunkilehti / Kuiva tropiikki] Townsville on tropiikissa mutta kuivalla kaistaleella, ja syy on rannikon suunnassa. Sama geologia, joka teki keskustan kalliosta 286-metrisen, nostaa merestä saaren, joka vei kapteeni Cookin kompassin.
+AIEMPI KYSYMYS: Miksi magneettinen pohjoisnapa ei ole maantieteellisellä navalla?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Maantieteellinen pohjoisnapa on piste, jonka läpi maapallon pyörimisakseli kulkee. Magneettinen napa taas määräytyy maapallon [[magneettikentän]] mukaan, ja kenttä syntyy sulan raudan liikkeestä maapallon ytimessä. Koska ydinneste liikkuu, magneettinen napa ei pysy paikallaan vaan siirtyy vuosittain jopa kymmeniä kilometrejä, eikä se siksi osu samaan kohtaan kuin maantieteellinen napa. [[Kompassin]] neula osoittaa magneettisen navan suuntaan, minkä vuoksi navigoinnissa on huomioitava ero. Kyyhkynä minä navigoin ihan itse, kiitos vain.
+KYSYMYS: Kerro lisää: Kompassin
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jäämeri (meri)
+Tietoruudun teksti: Jäämeri on maailman viidestä valtamerestä pienin, matalin ja kylmin: pinta-alaa noin 14 060 000 neliökilometriä. Se ulottuu pohjoisnavan ympäriltä etelään noin 60. leveyspiirille ja sitä ympäröivät Euraasia ja Pohjois-Amerikka; rajat kulkevat maastonmuotoja pitkin, Tyynenmeren puolella Beringinsalmi ja Atlantin puolella Grönlanti–Skotlanti-harjanne. Suurimman osan vuodesta se on merijään peitossa. Osa tutkijoista kutsuu sitä Pohjoiseksi napamereksi tai jopa Atlantin suistoksi.
+AIEMPI KYSYMYS: Miksi Jäämeri on muita valtameriä matalampi?
+AIEMPI VASTAUS (Livia):
+No jopas. Jäämeressä on poikkeuksellisen laajoja [[mannerjalustoja]], erityisesti Euraasian pohjoisrannikon edustalla, ja ne ovat verrattain matalaa merenpohjaa. Mannerjalustat ovat veden alle jääneitä mantereen reuna-alueita, ja niiden osuus Jäämeren pinta-alasta on suuri verrattuna muihin [[valtameriin]]. Keskellä on syvempiä altaita, mutta kokonaisuutena keskisyvyys jää pienemmäksi kuin muilla valtamerillä. Siksi Jäämeri on pienin ja matalin valtameristä. Ylhäältä sen kyllä huomaa, sillä jää peittää pohjan salaisuudet.
+KYSYMYS: Kerro lisää: mannerjalustoja
+
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jäämeri (meri)
+Tietoruudun teksti: Jäämeri on maailman viidestä valtamerestä pienin, matalin ja kylmin: pinta-alaa noin 14 060 000 neliökilometriä. Se ulottuu pohjoisnavan ympäriltä etelään noin 60. leveyspiirille ja sitä ympäröivät Euraasia ja Pohjois-Amerikka; rajat kulkevat maastonmuotoja pitkin, Tyynenmeren puolella Beringinsalmi ja Atlantin puolella Grönlanti–Skotlanti-harjanne. Suurimman osan vuodesta se on merijään peitossa. Osa tutkijoista kutsuu sitä Pohjoiseksi napamereksi tai jopa Atlantin suistoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madagaskar — kaupunkilehti / Madagaskar: Hopeapalatsi ja pääministerin valta] Todellinen valta oli 1870-luvun Madagaskarilla pääministerillä, ei kuningattarella. Rainilaiarivony johti hallitusta 31 vuoden ajan ja piti asemansa naimalla peräkkäin kolme hallitsevaa kuningatarta – ensin Rasoherinan, sitten Ranavalona II:n. Hän uudisti maata: pakollinen kouluopetus, englantilaiseen malliin nojaava lakikirja, uudistettu armeija ja oikeuslaitos. Vuonna 1873, samana vuonna kun isoisä matkusti saarella, hän tilasi itselleen Rova-kukkulan alarinteeseen upean Andafiavaratra-palatsin, jota englantilainen arkkitehti William Pool suunnitteli.
+AIEMPI KYSYMYS: Miksi Jäämeri on muita valtameriä matalampi?
+AIEMPI VASTAUS (Livia):
+No jopas. Jäämeressä on poikkeuksellisen laajoja [[mannerjalustoja]], erityisesti Euraasian pohjoisrannikon edustalla, ja ne ovat verrattain matalaa merenpohjaa. Mannerjalustat ovat veden alle jääneitä mantereen reuna-alueita, ja niiden osuus Jäämeren pinta-alasta on suuri verrattuna muihin [[valtameriin]]. Keskellä on syvempiä altaita, mutta kokonaisuutena keskisyvyys jää pienemmäksi kuin muilla valtamerillä. Siksi Jäämeri on pienin ja matalin valtameristä. Ylhäältä sen kyllä huomaa, sillä jää peittää pohjan salaisuudet.
+KYSYMYS: Kerro lisää: valtameriin
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ohotanmeri (meri)
+Tietoruudun teksti: Ohotanmeri on Luoteis-Tyynenmeren reunameri. Sitä rajaavat idässä Venäjän Kamtšatkan niemimaa, kaakossa Kuriilit, etelässä Japanin Hokkaido, lännessä Sahalinin saari sekä lännessä ja pohjoisessa Itä-Siperian rannikko. Koillisnurkassa on Šelihovinlahti. Meri on saanut nimensä Ohotskin satamasta, joka puolestaan on nimetty Ohota-joen mukaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Galápagos — kaupunkilehti / Galápagossaaret: Tulivuorista noussut saaristo] Galápagossaaret ovat syntyneet keskellä Tyyntämerta kuuman pisteen yllä, jossa maankuoren alla virtaava magma on työntänyt esiin tulivuoria miljoonien vuosien ajan. Espanjalainen piispa Tomás de Berlanga törmäsi saaristoon vahingossa vuonna 1535, kun hänen laivansa ajelehti tyynellä säällä Panamasta Peruun matkatessa. Kolme vuosisataa myöhemmin, vuonna 1835, saariston rannoille nousi nuori luonnontutkija Charles Darwin HMS Beaglelta. Hänen huomionsa saariston omalaatuisesta eläimistöstä kypsyi vuosikymmenten varrella teokseksi Lajien synty (1859) — isoisän matkavuosi 1873 sijoittuu vain 14 vuotta sen jälkeen.
+- [Havaiji — kaupunkilehti / Tulivuoret ja Pele: Kilauea – tulivuori joka ei pysähdy] Kilauea on yksi maailman aktiivisimmista tulivuorista ja Havaijin nuorin: sen laavakammio purkautuu maan pinnalle säännöllisesti, toisin kuin monilla muilla tulivuorilla. Vuosina 1983–2018 sen Puʻuʻōʻō-purkauskeskus pysyi käynnissä lähes yhtäjaksoisesti peräti 35 vuotta – yksi pisimpään kestäneistä tunnetuista purkauksista koko maailmassa – ja tuotti sinä aikana noin 4,4 kuutiokilometriä laavaa, joka peitti 144 neliökilometriä maata. Vuoden 2018 halkeamapurkauksessa laavasuihkut kohosivat kymmenien metrien korkeuteen ja tuhosivat satoja koteja itäisellä Havaijilla, ennen kuin toiminta hiljeni.
+AIEMPI KYSYMYS: Mitkä ovat Kuriilit?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kuriilit ovat tulivuorisaarten ketju, joka kaartuu Kamtšatkan niemimaan ja Hokkaidon välillä ja erottaa Ohotanmeren Tyynestä merestä; monet saarista ovat [[tulivuorista]] syntyneitä. Vuonna 1875 Pietarissa allekirjoitettiin sopimus, jossa Japani luopui osuudestaan Sahaliniin ja sai vastineeksi Kuriilit; sopimuksen allekirjoittivat muun muassa [[Aleksandr Gortšakov]] ja Enomoto Takeaki. Elokuussa 1945 saaret siirtyivät Neuvostoliitolle, ja ne ovat nykyisin Venäjän hallinnassa. Japani vaatii kuitenkin eteläisimpiä saaria itselleen, ja asia on yhä kiistanalainen, joten kantoja on kaksi eikä yhteistä näkemystä ole. Tällaista sopimuspingottelua minä olen seurannut [[Pietarissa]] ennenkin.
+KYSYMYS: Kerro lisää: tulivuorista
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ohotanmeri (meri)
+Tietoruudun teksti: Ohotanmeri on Luoteis-Tyynenmeren reunameri. Sitä rajaavat idässä Venäjän Kamtšatkan niemimaa, kaakossa Kuriilit, etelässä Japanin Hokkaido, lännessä Sahalinin saari sekä lännessä ja pohjoisessa Itä-Siperian rannikko. Koillisnurkassa on Šelihovinlahti. Meri on saanut nimensä Ohotskin satamasta, joka puolestaan on nimetty Ohota-joen mukaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sahalin — kaupunkilehti / Historia: Saari vaihdettiin saariketjuun] Vuoden 1855 Shimodan sopimus veti Venäjän ja Japanin rajan Iturupin ja Urupin väliin mutta jätti Sahalinin jakamatta. Pietarissa allekirjoitettiin 7. toukokuuta 1875 sopimus, jossa Japani luopui osuudestaan Sahaliniin ja sai vastineeksi Venäjän hallussa olleet Kuriilit; allekirjoittajina olivat Aleksandr Gortšakov ja Enomoto Takeaki. Portsmouthin rauhassa 1905 saaren 50. leveyspiirin eteläpuoli siirtyi Japanille, joka hallitsi sitä Karafuton prefektuurina. Pääkaupunki oli Toyohara, nykyinen Južno-Sahalinsk. Elokuussa 1945 koko saari siirtyi Neuvostoliitolle.
+AIEMPI KYSYMYS: Mitkä ovat Kuriilit?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kuriilit ovat tulivuorisaarten ketju, joka kaartuu Kamtšatkan niemimaan ja Hokkaidon välillä ja erottaa Ohotanmeren Tyynestä merestä; monet saarista ovat [[tulivuorista]] syntyneitä. Vuonna 1875 Pietarissa allekirjoitettiin sopimus, jossa Japani luopui osuudestaan Sahaliniin ja sai vastineeksi Kuriilit; sopimuksen allekirjoittivat muun muassa [[Aleksandr Gortšakov]] ja Enomoto Takeaki. Elokuussa 1945 saaret siirtyivät Neuvostoliitolle, ja ne ovat nykyisin Venäjän hallinnassa. Japani vaatii kuitenkin eteläisimpiä saaria itselleen, ja asia on yhä kiistanalainen, joten kantoja on kaksi eikä yhteistä näkemystä ole. Tällaista sopimuspingottelua minä olen seurannut [[Pietarissa]] ennenkin.
+KYSYMYS: Kerro lisää: Aleksandr Gortšakov
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ohotanmeri (meri)
+Tietoruudun teksti: Ohotanmeri on Luoteis-Tyynenmeren reunameri. Sitä rajaavat idässä Venäjän Kamtšatkan niemimaa, kaakossa Kuriilit, etelässä Japanin Hokkaido, lännessä Sahalinin saari sekä lännessä ja pohjoisessa Itä-Siperian rannikko. Koillisnurkassa on Šelihovinlahti. Meri on saanut nimensä Ohotskin satamasta, joka puolestaan on nimetty Ohota-joen mukaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Pietari-Paavalin linnoitus] 1703–1733 Pietari Suuri perusti linnoituksen vuonna 1703 pienelle Jänissaarelle Nevajoen suulle – tästä paikasta koko Pietarin kaupunki sai alkunsa. Sveitsiläissyntyinen arkkitehti Domenico Trezzini suunnitteli tähdenmuotoiset muurit ja bastionit, ja saaren keskelle nousi Pietari-Paavalin katedraali, jonka 122,5 metriä korkeaa kellotornia kruunaa kultainen enkeli tuulen mukana kääntyvän viirin päällä. Saaren nimi juontuu vanhasta tarinasta: kun Pietari Suuri astui maihin, tulvavesi ajoi säikähtäneen jäniksen suoraan hänen saappaansa suojaan. Tapahtumaa muistaa nykyään pieni pronssinen jänispatsas sillan vieressä olevan pylvään päällä, ja pylvääseen on merkitty vanhojen tulvien korkeudet. Vu…
+AIEMPI KYSYMYS: Mitkä ovat Kuriilit?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kuriilit ovat tulivuorisaarten ketju, joka kaartuu Kamtšatkan niemimaan ja Hokkaidon välillä ja erottaa Ohotanmeren Tyynestä merestä; monet saarista ovat [[tulivuorista]] syntyneitä. Vuonna 1875 Pietarissa allekirjoitettiin sopimus, jossa Japani luopui osuudestaan Sahaliniin ja sai vastineeksi Kuriilit; sopimuksen allekirjoittivat muun muassa [[Aleksandr Gortšakov]] ja Enomoto Takeaki. Elokuussa 1945 saaret siirtyivät Neuvostoliitolle, ja ne ovat nykyisin Venäjän hallinnassa. Japani vaatii kuitenkin eteläisimpiä saaria itselleen, ja asia on yhä kiistanalainen, joten kantoja on kaksi eikä yhteistä näkemystä ole. Tällaista sopimuspingottelua minä olen seurannut [[Pietarissa]] ennenkin.
+KYSYMYS: Kerro lisää: Pietarissa
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ohotanmeri (meri)
+Tietoruudun teksti: Ohotanmeri on Luoteis-Tyynenmeren reunameri. Sitä rajaavat idässä Venäjän Kamtšatkan niemimaa, kaakossa Kuriilit, etelässä Japanin Hokkaido, lännessä Sahalinin saari sekä lännessä ja pohjoisessa Itä-Siperian rannikko. Koillisnurkassa on Šelihovinlahti. Meri on saanut nimensä Ohotskin satamasta, joka puolestaan on nimetty Ohota-joen mukaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iqaluit — kaupunkilehti / Iqaluit: Vuosi 1873: lahti, joka ei ollutkaan salmi] Kaksisataa kahdeksankymmentä vuotta Frobisherin jälkeen amerikkalainen Charles Francis Hall talvehti valaanpyytäjän mukana Baffininsaarella. Paikalliset inuiitit kertoivat hänelle, missä Frobisherin kaivosyrityksen jäännökset olivat — tieto oli kulkenut suullisena perimätietona koko sen ajan. Oppaikseen Hall sai aviopari Ipirvikin ja Taqulittuqin, ja 1861 hänestä tuli ensimmäinen ei-alkuperäinen ihminen, joka tajusi, ettei Frobisherin salmi ole salmi vaan umpilahti. Kartta korjattiin. Hall itse kuoli marraskuussa 1871 Grönlannissa oudoissa oloissa, joten isoisän matkavuonna kartta oli kaksi vuotta vanha ja sen tekijä kaksi vuotta kuollut.
+AIEMPI KYSYMYS: Miksi Sahalin on niin pitkä ja kapea?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Sahalin on 948 kilometriä pitkä ja kapeimmillaan vain 26 kilometriä leveä kaistale, jonka erottaa mantereesta kapea [[salmi]]; salmen kapein kohta pohjoisessa on runsaat seitsemän kilometriä. Saaren muoto seuraa maankuoren rakennetta ja vuoristoharjanteiden suuntaa, ja siihen vaikuttavat [[laattatektoniikan]] voimat. Tarkasta geologisesta selityksestä en ole varma, joten tässä kannattaa luottaa asiantuntijoiden kirjoituksiin. Sahalin on Venäjän suurin saari, ja pitkä muoto tekee siitä erikoisen näköisen kartalla. Pitkä tarina, ja sentään yksi niemi.
+KYSYMYS: Kerro lisää: salmi
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ohotanmeri (meri)
+Tietoruudun teksti: Ohotanmeri on Luoteis-Tyynenmeren reunameri. Sitä rajaavat idässä Venäjän Kamtšatkan niemimaa, kaakossa Kuriilit, etelässä Japanin Hokkaido, lännessä Sahalinin saari sekä lännessä ja pohjoisessa Itä-Siperian rannikko. Koillisnurkassa on Šelihovinlahti. Meri on saanut nimensä Ohotskin satamasta, joka puolestaan on nimetty Ohota-joen mukaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+AIEMPI KYSYMYS: Miksi Sahalin on niin pitkä ja kapea?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Sahalin on 948 kilometriä pitkä ja kapeimmillaan vain 26 kilometriä leveä kaistale, jonka erottaa mantereesta kapea [[salmi]]; salmen kapein kohta pohjoisessa on runsaat seitsemän kilometriä. Saaren muoto seuraa maankuoren rakennetta ja vuoristoharjanteiden suuntaa, ja siihen vaikuttavat [[laattatektoniikan]] voimat. Tarkasta geologisesta selityksestä en ole varma, joten tässä kannattaa luottaa asiantuntijoiden kirjoituksiin. Sahalin on Venäjän suurin saari, ja pitkä muoto tekee siitä erikoisen näköisen kartalla. Pitkä tarina, ja sentään yksi niemi.
+KYSYMYS: Kerro lisää: laattatektoniikan
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ohotanmeri (meri)
+Tietoruudun teksti: Ohotanmeri on Luoteis-Tyynenmeren reunameri. Sitä rajaavat idässä Venäjän Kamtšatkan niemimaa, kaakossa Kuriilit, etelässä Japanin Hokkaido, lännessä Sahalinin saari sekä lännessä ja pohjoisessa Itä-Siperian rannikko. Koillisnurkassa on Šelihovinlahti. Meri on saanut nimensä Ohotskin satamasta, joka puolestaan on nimetty Ohota-joen mukaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Eläimet: Ainoa, joka oli täällä ensin] Jääkauden jälkeen — Naali on Islannin ainoa maanisäkäs, joka eli saarella jo ennen ihmisiä: se käveli sinne jääkauden lopulla merijäätä pitkin. Kaikki muut nelijalkaiset — hevoset, lampaat, hiiret, porot — ovat tulleet ihmisen mukana. Naalin turkki vaihtaa väriä vuodenajan mukaan: talvella se on valkoinen ja kesällä ruskeanharmaa. Turkki on nisäkkäiden lämpimimpiä, ja tassujen pohjat ovat karvaiset, joten jää ei liukastele eikä kylmä pure.
+AIEMPI KYSYMYS: Miksi Ohotanmeri jäätyy talvisin?
+AIEMPI VASTAUS (Livia):
+Kato. Ohotanmeri sijaitsee niin pohjoisessa ja niin lähellä kylmää mannerta, että talvella arktiset tuulet jäähdyttävät sen pintaa voimakkaasti, ja pohjoisosa jäätyy säännöllisesti. Lähteiden mukaan meri on yksi maailman eteläisimpiä merialueita, joilla esiintyy laajaa kausittaista [[merijäätä]]. Jäätä ajautuu myös eteläänpäin, ja [[ajojäätä]] on ajoittain nähty Hokkaidon rannikolla, mutta tarkoista määristä en ole varma. Jään ilmaantuminen vaikuttaa kalastukseen ja laivaliikenteeseen. Tosi kylmä paikka, ja pullan sulattaminen olisi täällä melkoinen urakka.
+KYSYMYS: Kerro lisää: merijäätä
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ohotanmeri (meri)
+Tietoruudun teksti: Ohotanmeri on Luoteis-Tyynenmeren reunameri. Sitä rajaavat idässä Venäjän Kamtšatkan niemimaa, kaakossa Kuriilit, etelässä Japanin Hokkaido, lännessä Sahalinin saari sekä lännessä ja pohjoisessa Itä-Siperian rannikko. Koillisnurkassa on Šelihovinlahti. Meri on saanut nimensä Ohotskin satamasta, joka puolestaan on nimetty Ohota-joen mukaan.
+AIEMPI KYSYMYS: Miksi Ohotanmeri jäätyy talvisin?
+AIEMPI VASTAUS (Livia):
+Kato. Ohotanmeri sijaitsee niin pohjoisessa ja niin lähellä kylmää mannerta, että talvella arktiset tuulet jäähdyttävät sen pintaa voimakkaasti, ja pohjoisosa jäätyy säännöllisesti. Lähteiden mukaan meri on yksi maailman eteläisimpiä merialueita, joilla esiintyy laajaa kausittaista [[merijäätä]]. Jäätä ajautuu myös eteläänpäin, ja [[ajojäätä]] on ajoittain nähty Hokkaidon rannikolla, mutta tarkoista määristä en ole varma. Jään ilmaantuminen vaikuttaa kalastukseen ja laivaliikenteeseen. Tosi kylmä paikka, ja pullan sulattaminen olisi täällä melkoinen urakka.
+KYSYMYS: Kerro lisää: ajojäätä
+
+### 49
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ohotanmeri (meri)
+Tietoruudun teksti: Ohotanmeri on Luoteis-Tyynenmeren reunameri. Sitä rajaavat idässä Venäjän Kamtšatkan niemimaa, kaakossa Kuriilit, etelässä Japanin Hokkaido, lännessä Sahalinin saari sekä lännessä ja pohjoisessa Itä-Siperian rannikko. Koillisnurkassa on Šelihovinlahti. Meri on saanut nimensä Ohotskin satamasta, joka puolestaan on nimetty Ohota-joen mukaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kohdekartta / Kohdekartta: Norrström] Se kohta, jossa makea vesi purkautuu suolaiseen, on kalalle portti. Norrström on virta, jota pitkin Mälarenin vesi syöksyy mereen aivan eduskuntatalon vierestä, ja siitä nostetaan joka vuosi satoja lohia ja meritaimenia: vuonna 2000 saatiin lohi, joka painoi lähes kaksikymmentäkaksi kiloa. Vedessä elää noin kolmekymmentä kalalajia, enemmän kuin missään muualla Tukholman seudun vesissä. Aina ei ollut näin. Kalat palasivat vasta 1970-luvulla aloitettujen istutusten myötä, ja vuonna 2024 vanha vuoden 1850 sulku muutettiin kalatieksi, jota myöten kalat pääsevät nousemaan järveen asti. Keskellä miljoonakaupunkia seisoo siis mies onki kädessä siinä samassa virrassa, jonka yli parlamentti katsoo i…
+- [Tukholma — kaupunkilehti / Kadut ja sulut: Lohi nousee eduskuntatalon vierestä] Norrström on virta, jota pitkin Mälarenin vesi syöksyy mereen aivan eduskuntatalon vierestä, ja siitä nostetaan joka vuosi satoja lohia ja meritaimenia: vuonna 2000 saatiin lohi, joka painoi lähes kaksikymmentäkaksi kiloa. Vedessä elää noin kolmekymmentä kalalajia, enemmän kuin missään muualla Tukholman seudun vesissä. Aina ei ollut näin. Kalat palasivat vasta 1970-luvulla aloitettujen istutusten myötä, ja vuonna 2024 vanha vuoden 1850 sulku muutettiin kalatieksi, jota myöten kalat pääsevät nousemaan järveen asti.
+AIEMPI KYSYMYS: Millaisia eläimiä Ohotanmerellä elää?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ohotanmeri on kalaisa ja ravinteikas merialue, jossa elää muun muassa [[lohia]], [[turskakaloja]] ja erilaisia rapulajeja, ja sen vesillä on kalastettu paljon. Alueella elää myös hylkeitä ja valaita, ja pesimälinnustoa on suurilla rannikkoalueilla. Runsas eliöstö johtuu osittain meren ravinteikkaista vesistä, jotka nousevat pintaan ja ruokkivat planktonia. Tarkoista lajiluetteloista en ole varma, mutta yleiskuva on selvä: meri on elävä ja tuottava. Kyyhkynä minä tosin tunnen paremmin rantojen jätteet ja leivänmurut.
+KYSYMYS: Kerro lisää: lohia
+
+### 50
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ohotanmeri (meri)
+Tietoruudun teksti: Ohotanmeri on Luoteis-Tyynenmeren reunameri. Sitä rajaavat idässä Venäjän Kamtšatkan niemimaa, kaakossa Kuriilit, etelässä Japanin Hokkaido, lännessä Sahalinin saari sekä lännessä ja pohjoisessa Itä-Siperian rannikko. Koillisnurkassa on Šelihovinlahti. Meri on saanut nimensä Ohotskin satamasta, joka puolestaan on nimetty Ohota-joen mukaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Arki: Turska, joka tulee itse käymään] Helmikuussa — Skrei on turska, joka ui joka talvi Barentsinmereltä Norjan rannikolle kutemaan. Osa syödään heti mølje-ateriana: kalaa, mätiä, maksaa ja perunaa. Osa ripustetaan telineille helmikuussa, kun maassa on vielä lunta ja kärpäset nukkuvat. Kolmessa kuukaudessa kalasta haihtuu noin 70 prosenttia vedestä, ja sen jälkeen se säilyy vuosia.
+AIEMPI KYSYMYS: Millaisia eläimiä Ohotanmerellä elää?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ohotanmeri on kalaisa ja ravinteikas merialue, jossa elää muun muassa [[lohia]], [[turskakaloja]] ja erilaisia rapulajeja, ja sen vesillä on kalastettu paljon. Alueella elää myös hylkeitä ja valaita, ja pesimälinnustoa on suurilla rannikkoalueilla. Runsas eliöstö johtuu osittain meren ravinteikkaista vesistä, jotka nousevat pintaan ja ruokkivat planktonia. Tarkoista lajiluetteloista en ole varma, mutta yleiskuva on selvä: meri on elävä ja tuottava. Kyyhkynä minä tosin tunnen paremmin rantojen jätteet ja leivänmurut.
+KYSYMYS: Kerro lisää: turskakaloja
+
+### 51
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ohotanmeri (meri)
+Tietoruudun teksti: Ohotanmeri on Luoteis-Tyynenmeren reunameri. Sitä rajaavat idässä Venäjän Kamtšatkan niemimaa, kaakossa Kuriilit, etelässä Japanin Hokkaido, lännessä Sahalinin saari sekä lännessä ja pohjoisessa Itä-Siperian rannikko. Koillisnurkassa on Šelihovinlahti. Meri on saanut nimensä Ohotskin satamasta, joka puolestaan on nimetty Ohota-joen mukaan.
+AIEMPI KYSYMYS: Mitä reunameri tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Reunameri on valtameren osa, joka on osittain mantereiden tai saarten rajaama mutta yhteydessä valtamereen. Se erotetaan sisämerestä, joka on lähes kokonaan maalla ympäröity, kuten Itämeri. Esimerkkejä reunameristä ovat [[Pohjanmeri]], joka kuuluu Atlantin yhteyteen, ja [[Barentsinmeri]], joka kuuluu Jäämereen. Reunameriä määrittävät sekä niiden sijainti että niiden vesien vaihto valtameren kanssa. Reunameren rannat ja saaret vaikuttavat voimakkaasti sen virtauksiin ja ilmastoon.
+
+Valtamerille tarvitaan reunat, jotta niistä voi sanoa jotain, muuten ne olisivat pelkkää kosteaa pitkästymistä. Minä kannan mieluummin viestiä kuin kartan reunaa.
+KYSYMYS: Kerro lisää: Pohjanmeri
+
+### 52
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ohotanmeri (meri)
+Tietoruudun teksti: Ohotanmeri on Luoteis-Tyynenmeren reunameri. Sitä rajaavat idässä Venäjän Kamtšatkan niemimaa, kaakossa Kuriilit, etelässä Japanin Hokkaido, lännessä Sahalinin saari sekä lännessä ja pohjoisessa Itä-Siperian rannikko. Koillisnurkassa on Šelihovinlahti. Meri on saanut nimensä Ohotskin satamasta, joka puolestaan on nimetty Ohota-joen mukaan.
+AIEMPI KYSYMYS: Mitä reunameri tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Reunameri on valtameren osa, joka on osittain mantereiden tai saarten rajaama mutta yhteydessä valtamereen. Se erotetaan sisämerestä, joka on lähes kokonaan maalla ympäröity, kuten Itämeri. Esimerkkejä reunameristä ovat [[Pohjanmeri]], joka kuuluu Atlantin yhteyteen, ja [[Barentsinmeri]], joka kuuluu Jäämereen. Reunameriä määrittävät sekä niiden sijainti että niiden vesien vaihto valtameren kanssa. Reunameren rannat ja saaret vaikuttavat voimakkaasti sen virtauksiin ja ilmastoon.
+
+Valtamerille tarvitaan reunat, jotta niistä voi sanoa jotain, muuten ne olisivat pelkkää kosteaa pitkästymistä. Minä kannan mieluummin viestiä kuin kartan reunaa.
+KYSYMYS: Kerro lisää: Barentsinmeri
+
+### 53
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beringinmeri (meri)
+Tietoruudun teksti: Beringinmeri on Pohjois-Tyynenmeren reunameri, ja yhdessä Beringinsalmen kanssa se muodostaa rajan maailman kahden suurimman mantereen, Euraasian ja Amerikan, välille. Sen pinta-ala on yli 2 000 000 neliökilometriä: idässä ja koillisessa on Alaska, lännessä Venäjän Kaukoitä ja Kamtšatka. Nimi tulee Tanskassa syntyneeltä venäläiseltä merenkulkijalta Vitus Beringiltä, joka vuonna 1728 purjehti ensimmäisenä eurooppalaisena sen halki Tyyneltämereltä pohjoiseen Jäämerelle.
+AIEMPI KYSYMYS: Kuka Vitus Bering oli?
+AIEMPI VASTAUS (Livia):
+Kato, tästä miehestä minä olen lukenut matkalla useammankin kirjeen. Vitus Bering syntyi Tanskassa [[Horsensin]] kaupungissa vuonna 1681 ja siirtyi nuorena Venäjän palvelukseen, jossa hänestä tuli laivaston upseeri. Hän johti [[Pietari Suuren]] määräyksestä Kamtšatkan retkikuntaa, ja sen aikana hän purjehti vuonna 1728 salmen läpi Tyyneltämereltä pohjoiseen. Myöhemmin hän johti vielä toista, laajempaa retkikuntaa, ja hänen aluksensa Pyhä apostoli Pietari sekä [[Aleksei Tširikovin]] alus Pyhä apostoli Paavali antoivat nimen Avatšanlahden satamalle. Bering kuoli talvella 1741 paluumatkalla autiolle saarelle, jota kutsutaan nykyään hänen nimellään. Ja minä luulin, että kyyhkyn reitit olivat pitkiä.
+KYSYMYS: Kerro lisää: Horsensin
+
+### 54
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beringinmeri (meri)
+Tietoruudun teksti: Beringinmeri on Pohjois-Tyynenmeren reunameri, ja yhdessä Beringinsalmen kanssa se muodostaa rajan maailman kahden suurimman mantereen, Euraasian ja Amerikan, välille. Sen pinta-ala on yli 2 000 000 neliökilometriä: idässä ja koillisessa on Alaska, lännessä Venäjän Kaukoitä ja Kamtšatka. Nimi tulee Tanskassa syntyneeltä venäläiseltä merenkulkijalta Vitus Beringiltä, joka vuonna 1728 purjehti ensimmäisenä eurooppalaisena sen halki Tyyneltämereltä pohjoiseen Jäämerelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Pietari-Paavalin linnoitus] 1703–1733 Pietari Suuri perusti linnoituksen vuonna 1703 pienelle Jänissaarelle Nevajoen suulle – tästä paikasta koko Pietarin kaupunki sai alkunsa. Sveitsiläissyntyinen arkkitehti Domenico Trezzini suunnitteli tähdenmuotoiset muurit ja bastionit, ja saaren keskelle nousi Pietari-Paavalin katedraali, jonka 122,5 metriä korkeaa kellotornia kruunaa kultainen enkeli tuulen mukana kääntyvän viirin päällä. Saaren nimi juontuu vanhasta tarinasta: kun Pietari Suuri astui maihin, tulvavesi ajoi säikähtäneen jäniksen suoraan hänen saappaansa suojaan. Tapahtumaa muistaa nykyään pieni pronssinen jänispatsas sillan vieressä olevan pylvään päällä, ja pylvääseen on merkitty vanhojen tulvien korkeudet. Vu…
+- [Pietari — kaupunkilehti / Historian hetki: Pietari 1869 — tyhjät paikat, joihin uskalletaan luottaa] 6.3.1869 — Paperilapulla lukee alkuaineen nimi, atomipaino ja muutama ominaisuus, ja pöydällä on kuusikymmentäkolme sellaista lappua. Dmitri Mendelejev, 35, kirjoittaa Pietarin yliopistossa kemian oppikirjaa ja tarvitsee järjestyksen, jossa alkuaineet voisi esittää opiskelijoille. Hän lajittelee niitä painon mukaan ja huomaa, että ominaisuudet toistuvat säännöllisin välein. Myöhemmin hän kertoo nähneensä valmiin taulukon unessa ja kirjoittaneensa sen herättyään paperille; arkistossa on kuitenkin luonnoksia, joissa rivejä on siirretty ja yliviivattu. Taulukko painetaan ja lähetetään kemisteille, ja 6. maaliskuuta 1869 Venäjän kemian seura kuulee esitelmän alkuaineiden ominaisuuksien riippuvu…
+AIEMPI KYSYMYS: Kuka Vitus Bering oli?
+AIEMPI VASTAUS (Livia):
+Kato, tästä miehestä minä olen lukenut matkalla useammankin kirjeen. Vitus Bering syntyi Tanskassa [[Horsensin]] kaupungissa vuonna 1681 ja siirtyi nuorena Venäjän palvelukseen, jossa hänestä tuli laivaston upseeri. Hän johti [[Pietari Suuren]] määräyksestä Kamtšatkan retkikuntaa, ja sen aikana hän purjehti vuonna 1728 salmen läpi Tyyneltämereltä pohjoiseen. Myöhemmin hän johti vielä toista, laajempaa retkikuntaa, ja hänen aluksensa Pyhä apostoli Pietari sekä [[Aleksei Tširikovin]] alus Pyhä apostoli Paavali antoivat nimen Avatšanlahden satamalle. Bering kuoli talvella 1741 paluumatkalla autiolle saarelle, jota kutsutaan nykyään hänen nimellään. Ja minä luulin, että kyyhkyn reitit olivat pitkiä.
+KYSYMYS: Kerro lisää: Pietari Suuren
+
+### 55
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beringinmeri (meri)
+Tietoruudun teksti: Beringinmeri on Pohjois-Tyynenmeren reunameri, ja yhdessä Beringinsalmen kanssa se muodostaa rajan maailman kahden suurimman mantereen, Euraasian ja Amerikan, välille. Sen pinta-ala on yli 2 000 000 neliökilometriä: idässä ja koillisessa on Alaska, lännessä Venäjän Kaukoitä ja Kamtšatka. Nimi tulee Tanskassa syntyneeltä venäläiseltä merenkulkijalta Vitus Beringiltä, joka vuonna 1728 purjehti ensimmäisenä eurooppalaisena sen halki Tyyneltämereltä pohjoiseen Jäämerelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamtšatka — kaupunkilehti / Kamtšatka: Kaksi pakettivenettä antoi satamalle nimen] Merenkulkija Ivan Jelagin lähti Vitus Beringin käskystä Ohotskista syksyllä 1739, talvehti Kamtšatkalla ja purjehti seuraavana keväänä Bolšeretskista niemimaan eteläkärjen ympäri Avatšanlahdelle 10. kesäkuuta 1740. Syyskuun 20. päivänä hän ilmoitti, että rantaan oli valmistunut yhteen liitetty asuinrakennus viisine huoneineen, kolme kasarmia ja kolme kaksikerroksista aittaa. Syyskuun lopulla lahdelle saapui Aleksei Tširikovin pakettivene Pyhä apostoli Paavali ja 6. lokakuuta Beringin Pyhä apostoli Pietari. Satama sai nimensä aluksilta, ja jälkimmäistä päivää — uutta lukua 17. lokakuuta — pidetään kaupungin perustamispäivänä.
+AIEMPI KYSYMYS: Kuka Vitus Bering oli?
+AIEMPI VASTAUS (Livia):
+Kato, tästä miehestä minä olen lukenut matkalla useammankin kirjeen. Vitus Bering syntyi Tanskassa [[Horsensin]] kaupungissa vuonna 1681 ja siirtyi nuorena Venäjän palvelukseen, jossa hänestä tuli laivaston upseeri. Hän johti [[Pietari Suuren]] määräyksestä Kamtšatkan retkikuntaa, ja sen aikana hän purjehti vuonna 1728 salmen läpi Tyyneltämereltä pohjoiseen. Myöhemmin hän johti vielä toista, laajempaa retkikuntaa, ja hänen aluksensa Pyhä apostoli Pietari sekä [[Aleksei Tširikovin]] alus Pyhä apostoli Paavali antoivat nimen Avatšanlahden satamalle. Bering kuoli talvella 1741 paluumatkalla autiolle saarelle, jota kutsutaan nykyään hänen nimellään. Ja minä luulin, että kyyhkyn reitit olivat pitkiä.
+KYSYMYS: Kerro lisää: Aleksei Tširikovin
+
+### 56
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beringinmeri (meri)
+Tietoruudun teksti: Beringinmeri on Pohjois-Tyynenmeren reunameri, ja yhdessä Beringinsalmen kanssa se muodostaa rajan maailman kahden suurimman mantereen, Euraasian ja Amerikan, välille. Sen pinta-ala on yli 2 000 000 neliökilometriä: idässä ja koillisessa on Alaska, lännessä Venäjän Kaukoitä ja Kamtšatka. Nimi tulee Tanskassa syntyneeltä venäläiseltä merenkulkijalta Vitus Beringiltä, joka vuonna 1728 purjehti ensimmäisenä eurooppalaisena sen halki Tyyneltämereltä pohjoiseen Jäämerelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamtšatka — kaupunkilehti / Tulivuoret: Euraasian korkein toimiva tulivuori] Kljutševskaja sopka kohoaa 4 750 metriin: se on niemimaan korkein vuori ja Euraasian korkein toimiva tulivuori. Vuori purkautui kirjatusti ensi kerran 1697, eikä se ole sen jälkeen juuri levännyt. Ensimmäisen tunnetun nousun huipulle tekivät 1788 Daniel Gauss ja kaksi Billingsin retkikunnan miestä. Sen jälkeen huipulle ei kiivetty ennen vuotta 1931, ja tuolta retkikunnalta menehtyi useita miehiä laskeutumismatkalla lentäviin laavapalloihin.
+AIEMPI KYSYMYS: Kuinka kapea Beringinsalmi on?
+AIEMPI VASTAUS (Livia):
+No niin, tämän minä tiedän, ja tulos on yllättävän pieni. Beringinsalmi on kapeimmillaan noin 80–85 kilometriä leveä, ja lähteet antavat hieman vaihtelevia lukuja. Salmi on myös matala, kapeimmassa kohdassa vain muutamia kymmeniä metrejä syvä. Sen keskellä on kaksi pientä Diomedesaarta, joiden välimatka on vain muutama kilometri ja joiden välistä kulkee Venäjän ja Yhdysvaltain raja. Salmi erottaa [[Euraasian]] ja Amerikan mantereet, ja [[jääkauden]] aikana sen paikalla oli kuivaa maata. Kyyhky ylittää sen iltapäivässä, jos tuuli sattuu oikealta.
+KYSYMYS: Kerro lisää: Euraasian
+
+### 57
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beringinmeri (meri)
+Tietoruudun teksti: Beringinmeri on Pohjois-Tyynenmeren reunameri, ja yhdessä Beringinsalmen kanssa se muodostaa rajan maailman kahden suurimman mantereen, Euraasian ja Amerikan, välille. Sen pinta-ala on yli 2 000 000 neliökilometriä: idässä ja koillisessa on Alaska, lännessä Venäjän Kaukoitä ja Kamtšatka. Nimi tulee Tanskassa syntyneeltä venäläiseltä merenkulkijalta Vitus Beringiltä, joka vuonna 1728 purjehti ensimmäisenä eurooppalaisena sen halki Tyyneltämereltä pohjoiseen Jäämerelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vladivostok — kohdekartta / Kohdekartta: Arsenjevin museo] perustettu 1884 Kaukoidän ensimmäinen kotiseutumuseo sai alkunsa 18. huhtikuuta 1884, kun Amurinmaan tutkimusseuran säännöt vahvistettiin, ja ovet avautuivat yleisölle lokakuussa 1890. Vuonna 1945 museo nimettiin Vladimir Arsenjevin, Ussurinmaan tutkijan ja Dersu Uzalan kirjoittajan mukaan — hänen tarinansa on lehden taigasivulla. Kokoelmissa on seudun tutkijoiden, muun muassa Prževalskin, aineistoja, jääkauden fossiileja, 1100-luvun ylimyshauta ja Bohain valtakunnan hallitsijan peili; täytetyt tiikeri ja karhu ovat museon kuuluisin näky. Vuonna 2015 se oli Venäjän katsotuin aluemuseo, yli 421 000 kävijää, ja vuonna 2019 siitä tehtiin liittovaltion museo. Rakennus on tarina itsessään: kaupp…
+- [Whitehorse — kohdekartta / Kohdekartta: Beringia-keskus] 1997 Keskus avattiin 1997 Alaska Highwayn kilometrillä 1423 ja kertoo Beringiasta — 3 200 kilometrin levyisestä maa-alueesta, joka ulottui Siperian Kolyma-joelta Kanadan Mackenzie-joelle. Alue säilyi jääkaudella jäätiköitymättä, koska ilmasto oli kuiva ja lunta satoi vähän. Juuri siksi Beringia kiinnostaa arkeologeja ja paleontologeja: se oli eläinten ja ihmisten kulkureitti Aasian ja Amerikan välillä. Liikennettä oli molempiin suuntiin. Idän suuntaan tulivat mastodontit, mammutit, hirvieläimet, biisonit, lampaat ja myskihärät; länteen menivät hevoseläimet ja kamelit. Sanan Beringia keksi ruotsalainen kasvitieteilijä Eric Hultén vuonna 1937. Keskus on myös tutkimuslaitos. Sen aineistossa on…
+AIEMPI KYSYMYS: Kuinka kapea Beringinsalmi on?
+AIEMPI VASTAUS (Livia):
+No niin, tämän minä tiedän, ja tulos on yllättävän pieni. Beringinsalmi on kapeimmillaan noin 80–85 kilometriä leveä, ja lähteet antavat hieman vaihtelevia lukuja. Salmi on myös matala, kapeimmassa kohdassa vain muutamia kymmeniä metrejä syvä. Sen keskellä on kaksi pientä Diomedesaarta, joiden välimatka on vain muutama kilometri ja joiden välistä kulkee Venäjän ja Yhdysvaltain raja. Salmi erottaa [[Euraasian]] ja Amerikan mantereet, ja [[jääkauden]] aikana sen paikalla oli kuivaa maata. Kyyhky ylittää sen iltapäivässä, jos tuuli sattuu oikealta.
+KYSYMYS: Kerro lisää: jääkauden
+
+### 58
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beringinmeri (meri)
+Tietoruudun teksti: Beringinmeri on Pohjois-Tyynenmeren reunameri, ja yhdessä Beringinsalmen kanssa se muodostaa rajan maailman kahden suurimman mantereen, Euraasian ja Amerikan, välille. Sen pinta-ala on yli 2 000 000 neliökilometriä: idässä ja koillisessa on Alaska, lännessä Venäjän Kaukoitä ja Kamtšatka. Nimi tulee Tanskassa syntyneeltä venäläiseltä merenkulkijalta Vitus Beringiltä, joka vuonna 1728 purjehti ensimmäisenä eurooppalaisena sen halki Tyyneltämereltä pohjoiseen Jäämerelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Taiwan — maalehti / Luonto: Peura katosi ja palasi] Formosanpeura tuli saarelle jääkausien aikana, kun matala merenpinta yhdisti Taiwanin mantereeseen. Sen paras elinalue oli juuri se länsirannikon alava tasanko, jolle ihmiset sittemmin rakensivat. Hollantilaisten kuutena vuosikymmenenä saarelta vietiin kahdesta neljään miljoonaa peurannahkaa, ja metsästys jatkui sen jälkeenkin. Viimeinen tiedossa oleva luonnonvarainen yksilö tapettiin 1969. Laji säilyi tarhoissa, ja 1984 aloitettiin palautus: Taipein eläintarhasta vietiin 22 peuraa Kentingin kansallispuistoon, aitauksissa odotettiin kymmenen vuotta ja 1994 ne päästettiin vapaaksi. Nyt niitä on yli tuhat.
+- [Serbia — maalehti / Tiede: Milankovićin tähtitorni Zvezdaralla] 1887 — Belgradin observatorio perustettiin 7. huhtikuuta 1887 Zvezdaran metsäalueelle, ja sen ensimmäinen johtaja oli Milan Nedeljković. Milutin Milanković johti laitosta kahdesti, vuosina 1925–1926 ja 1948–1951. Hän laski, miten Maan radan muoto, akselin kallistus ja prekessio muuttavat auringonsäteilyn saantia, ja tulokset selittävät jääkausien rytmiä. Pääteoksensa Kanon der Erdbestrahlung, 626 sivua, hän julkaisi saksaksi 1941. Observatorio julistettiin kulttuurimonumentiksi 2001, ja Vidojevican vuoren 1,4 metrin robottiteleskooppi kantaa Milankovićin nimeä.
+AIEMPI KYSYMYS: Mikä on Beringin maasilta?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Beringin maasilta eli Beringia oli laaja maa-alue, joka yhdisti Koillis-Aasian ja Pohjois-Amerikan [[jääkausien]] aikana. Kun suuri osa vedestä sitoutui jäätiköihin, [[merenpinnan]] taso laski ja Beringinmeren matala pohja sekä nykyisen salmen kohta paljastuivat kuivaksi maaksi. Kyse ei ollut kapeasta sillasta vaan satojen kilometrien levyisestä alueesta, jonka maisema muistutti [[tundran]] kaltaista avointa maata. Tutkijoiden mukaan sen kautta liikkuivat eläimet ja ihmiset mantereelta toiselle, mutta ajoituksesta ja reiteistä kiistellään yhä.
+
+Sellaisen sillan minä kyllä ottaisin: ei tarvitsisi lentää lainkaan, ja nyt se on merenpohjalla kalojen käytössä. Tämän tiedon sain suvulta, joka on lukenut monta karttaa.
+KYSYMYS: Kerro lisää: jääkausien
+
+### 59
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beringinmeri (meri)
+Tietoruudun teksti: Beringinmeri on Pohjois-Tyynenmeren reunameri, ja yhdessä Beringinsalmen kanssa se muodostaa rajan maailman kahden suurimman mantereen, Euraasian ja Amerikan, välille. Sen pinta-ala on yli 2 000 000 neliökilometriä: idässä ja koillisessa on Alaska, lännessä Venäjän Kaukoitä ja Kamtšatka. Nimi tulee Tanskassa syntyneeltä venäläiseltä merenkulkijalta Vitus Beringiltä, joka vuonna 1728 purjehti ensimmäisenä eurooppalaisena sen halki Tyyneltämereltä pohjoiseen Jäämerelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irkutsk — kaupunkilehti / Baikal: Pohja on merenpinnan alapuolella] Baikal on 636 kilometriä pitkä ja 79 kilometriä leveä, ja sen syvin kohta on 1 642 metriä. Vettä siinä on 23 615 kuutiokilometriä, enemmän kuin Pohjois-Amerikan Suurissa järvissä yhteensä. Pinta on 455 metriä merenpinnan yläpuolella, mutta pohja ulottuu 1 186 metriä merenpinnan alapuolelle, ja pohjan alla on vielä noin seitsemän kilometriä sedimenttiä. Talvella vesi on avoimilla selillä paikoin niin kirkasta, että näkyvyys yltää 30–40 metriin; kesällä se on 5–8 metriä. Jääkansi on 0,5–1,4 metriä paksu, ahtojäissä yli kaksi metriä.
+AIEMPI KYSYMYS: Mikä on Beringin maasilta?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Beringin maasilta eli Beringia oli laaja maa-alue, joka yhdisti Koillis-Aasian ja Pohjois-Amerikan [[jääkausien]] aikana. Kun suuri osa vedestä sitoutui jäätiköihin, [[merenpinnan]] taso laski ja Beringinmeren matala pohja sekä nykyisen salmen kohta paljastuivat kuivaksi maaksi. Kyse ei ollut kapeasta sillasta vaan satojen kilometrien levyisestä alueesta, jonka maisema muistutti [[tundran]] kaltaista avointa maata. Tutkijoiden mukaan sen kautta liikkuivat eläimet ja ihmiset mantereelta toiselle, mutta ajoituksesta ja reiteistä kiistellään yhä.
+
+Sellaisen sillan minä kyllä ottaisin: ei tarvitsisi lentää lainkaan, ja nyt se on merenpohjalla kalojen käytössä. Tämän tiedon sain suvulta, joka on lukenut monta karttaa.
+KYSYMYS: Kerro lisää: merenpinnan
+
+### 60
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beringinmeri (meri)
+Tietoruudun teksti: Beringinmeri on Pohjois-Tyynenmeren reunameri, ja yhdessä Beringinsalmen kanssa se muodostaa rajan maailman kahden suurimman mantereen, Euraasian ja Amerikan, välille. Sen pinta-ala on yli 2 000 000 neliökilometriä: idässä ja koillisessa on Alaska, lännessä Venäjän Kaukoitä ja Kamtšatka. Nimi tulee Tanskassa syntyneeltä venäläiseltä merenkulkijalta Vitus Beringiltä, joka vuonna 1728 purjehti ensimmäisenä eurooppalaisena sen halki Tyyneltämereltä pohjoiseen Jäämerelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iqaluit — kaupunkilehti / Tundra ja vuorovesi] Kaupungin edessä nousee ja laskee joka päivä seitsemästä yhteentoista metriä vettä, ja takana alkaa tundra, jolla korkein pensas yltää nilkkaan. Sää tekee täällä sen, mitä kartta ei kerro.
+- [Yellowknife — kaupunkilehti / Yellowknife: Sǫǫ̀mbak'è, paikka jossa raha on] Kaupunki ja sen vedet on nimetty dene-kansan mukaan, jota kutsuttiin kuparikansaksi: he tekivät työkalunsa Jäämeren rannikon kuparista ja kävivät niillä kauppaa. Oma nimi on T'atsaot'ine. Kauppareitit ulottuivat Hudsoninlahdelle asti, ja Samuel Hearne kohtasi heidät 1770-luvulla; he opastivat hänet tundran halki Jäämerelle etsimään sitä kuparia, josta työkalut tehtiin. Tłı̨chǫn kielellä kaupunki on Sǫǫ̀mbak'è, paikka jossa raha on. Yellowknives Dene First Nation perustettiin 1991, ja sen väkeä asuu kaupungissa sekä Dettahin ja Ndilǫn yhteisöissä; maaoikeuksista neuvotellaan Akaitcho-prosessissa.
+AIEMPI KYSYMYS: Mikä on Beringin maasilta?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Beringin maasilta eli Beringia oli laaja maa-alue, joka yhdisti Koillis-Aasian ja Pohjois-Amerikan [[jääkausien]] aikana. Kun suuri osa vedestä sitoutui jäätiköihin, [[merenpinnan]] taso laski ja Beringinmeren matala pohja sekä nykyisen salmen kohta paljastuivat kuivaksi maaksi. Kyse ei ollut kapeasta sillasta vaan satojen kilometrien levyisestä alueesta, jonka maisema muistutti [[tundran]] kaltaista avointa maata. Tutkijoiden mukaan sen kautta liikkuivat eläimet ja ihmiset mantereelta toiselle, mutta ajoituksesta ja reiteistä kiistellään yhä.
+
+Sellaisen sillan minä kyllä ottaisin: ei tarvitsisi lentää lainkaan, ja nyt se on merenpohjalla kalojen käytössä. Tämän tiedon sain suvulta, joka on lukenut monta karttaa.
+KYSYMYS: Kerro lisää: tundran
+
+### 61
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beringinmeri (meri)
+Tietoruudun teksti: Beringinmeri on Pohjois-Tyynenmeren reunameri, ja yhdessä Beringinsalmen kanssa se muodostaa rajan maailman kahden suurimman mantereen, Euraasian ja Amerikan, välille. Sen pinta-ala on yli 2 000 000 neliökilometriä: idässä ja koillisessa on Alaska, lännessä Venäjän Kaukoitä ja Kamtšatka. Nimi tulee Tanskassa syntyneeltä venäläiseltä merenkulkijalta Vitus Beringiltä, joka vuonna 1728 purjehti ensimmäisenä eurooppalaisena sen halki Tyyneltämereltä pohjoiseen Jäämerelle.
+AIEMPI KYSYMYS: Jäätyykö Beringinmeri talvella?
+AIEMPI VASTAUS (Livia):
+Ai tota. Beringinmeren pohjoisosa jäätyy talvella, ja [[merijää]] peittää silloin suuren osan sen pohjois- ja itäosista, kun taas syvä eteläosa pysyy yleensä avoimena. Syynä ovat korkea leveysaste ja laaja, matala [[mannerjalusta]], jolla vesi jäähtyy nopeasti. Jää alkaa muodostua syksyllä ja sulaa kevään ja alkukesän aikana, ja sen laajuus vaihtelee vuodesta toiseen. Minä pysyn kyl mieluummin eteläpuolella.
+KYSYMYS: Kerro lisää: merijää
+
+### 62
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beringinmeri (meri)
+Tietoruudun teksti: Beringinmeri on Pohjois-Tyynenmeren reunameri, ja yhdessä Beringinsalmen kanssa se muodostaa rajan maailman kahden suurimman mantereen, Euraasian ja Amerikan, välille. Sen pinta-ala on yli 2 000 000 neliökilometriä: idässä ja koillisessa on Alaska, lännessä Venäjän Kaukoitä ja Kamtšatka. Nimi tulee Tanskassa syntyneeltä venäläiseltä merenkulkijalta Vitus Beringiltä, joka vuonna 1728 purjehti ensimmäisenä eurooppalaisena sen halki Tyyneltämereltä pohjoiseen Jäämerelle.
+AIEMPI KYSYMYS: Jäätyykö Beringinmeri talvella?
+AIEMPI VASTAUS (Livia):
+Ai tota. Beringinmeren pohjoisosa jäätyy talvella, ja [[merijää]] peittää silloin suuren osan sen pohjois- ja itäosista, kun taas syvä eteläosa pysyy yleensä avoimena. Syynä ovat korkea leveysaste ja laaja, matala [[mannerjalusta]], jolla vesi jäähtyy nopeasti. Jää alkaa muodostua syksyllä ja sulaa kevään ja alkukesän aikana, ja sen laajuus vaihtelee vuodesta toiseen. Minä pysyn kyl mieluummin eteläpuolella.
+KYSYMYS: Kerro lisää: mannerjalusta
+
+### 63
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beringinmeri (meri)
+Tietoruudun teksti: Beringinmeri on Pohjois-Tyynenmeren reunameri, ja yhdessä Beringinsalmen kanssa se muodostaa rajan maailman kahden suurimman mantereen, Euraasian ja Amerikan, välille. Sen pinta-ala on yli 2 000 000 neliökilometriä: idässä ja koillisessa on Alaska, lännessä Venäjän Kaukoitä ja Kamtšatka. Nimi tulee Tanskassa syntyneeltä venäläiseltä merenkulkijalta Vitus Beringiltä, joka vuonna 1728 purjehti ensimmäisenä eurooppalaisena sen halki Tyyneltämereltä pohjoiseen Jäämerelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+- [Pariisi — kohdekartta / Kohdekartta: Bastilji 1789] Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvottelut kestäv…
+AIEMPI KYSYMYS: Missä päivämäärä vaihtuu Beringinsalmen kohdalla?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kansainvälinen [[päivämääräraja]] kulkee Tyynellämerellä suunnilleen 180. [[pituuspiirin]] mukaan, mutta Beringinsalmen seudulla se mutkittelee niin, että Venäjän Tšukotka jää rajan länsipuolelle ja Alaska itäpuolelle. Rajan eri puolilla kalenteripäivä on eri: länsipuolella on jo seuraava päivä. Salmen keskellä sijaitsevien Diomedesaarten välillä, jotka ovat vain muutaman kilometrin päässä toisistaan, ero on lähes vuorokausi, minkä vuoksi aarista käytetään leikillään nimityksiä eilisen ja huomisen saari. Raja on sopimuksenvarainen, ei luonnonlaki. Kyyhkyllä ei oo kalenteria, vain säätila.
+KYSYMYS: Kerro lisää: päivämääräraja
+
+### 64
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beringinmeri (meri)
+Tietoruudun teksti: Beringinmeri on Pohjois-Tyynenmeren reunameri, ja yhdessä Beringinsalmen kanssa se muodostaa rajan maailman kahden suurimman mantereen, Euraasian ja Amerikan, välille. Sen pinta-ala on yli 2 000 000 neliökilometriä: idässä ja koillisessa on Alaska, lännessä Venäjän Kaukoitä ja Kamtšatka. Nimi tulee Tanskassa syntyneeltä venäläiseltä merenkulkijalta Vitus Beringiltä, joka vuonna 1728 purjehti ensimmäisenä eurooppalaisena sen halki Tyyneltämereltä pohjoiseen Jäämerelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kaupunkilehti / Viesti valtameren yli: Puoli tuntia omaa aikaa] Newfoundlandin aikavyöhyke vähentää normaaliaikana kolme ja puoli tuntia maailmanajasta, ja se on Amerikoiden ainoa käytössä oleva puolen tunnin poikkeama. Kellonaika perustuu 52 asteen ja 30 minuutin läntisen pituuspiirin keskiaurinkoaikaan — lähes tarkalleen St. John’sin omaan pituuspiiriin. Vyöhyke on olemassa siksi, että saari oli erillinen dominio, kun aikavyöhykkeet luotiin, ja sai valita aikansa itse; hallintokomissio sääti asian lailla 1935. Vuonna 1963 maakunta yritti siirtyä Atlantin aikaan mutta perui hankkeen vastustuksen takia. Saari on puolitoista tuntia Keski-Kanadaa edellä ja puoli tuntia jäljessä Saint-Pierreä.
+AIEMPI KYSYMYS: Missä päivämäärä vaihtuu Beringinsalmen kohdalla?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kansainvälinen [[päivämääräraja]] kulkee Tyynellämerellä suunnilleen 180. [[pituuspiirin]] mukaan, mutta Beringinsalmen seudulla se mutkittelee niin, että Venäjän Tšukotka jää rajan länsipuolelle ja Alaska itäpuolelle. Rajan eri puolilla kalenteripäivä on eri: länsipuolella on jo seuraava päivä. Salmen keskellä sijaitsevien Diomedesaarten välillä, jotka ovat vain muutaman kilometrin päässä toisistaan, ero on lähes vuorokausi, minkä vuoksi aarista käytetään leikillään nimityksiä eilisen ja huomisen saari. Raja on sopimuksenvarainen, ei luonnonlaki. Kyyhkyllä ei oo kalenteria, vain säätila.
+KYSYMYS: Kerro lisää: pituuspiirin
+
+### 65
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volga (luonto · joki)
+Tietoruudun teksti: Volga on Euroopan pisin joki ja maailman pisin sisävaluma-alueen joki: 3 531 kilometriä ja valuma-alue 1 360 000 neliökilometriä. Se virtaa Keski-Venäjältä Etelä-Venäjälle ja laskee Kaspianmereen, ei valtamereen. Sitä pidetään yleisesti Venäjän kansallisjokena, ja sen varrelle syntyi noin vuonna 830 varhainen valtiomuodostelma Rusin kaganaatti.
+AIEMPI KYSYMYS: Miksi Volga ei laske mereen vaan järveen?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuohon liittyy nimenomaan nimien kummallisuus. [[Kaspianmeri]] ei ole yhteydessä valtamereen, joten Volgan vesi ei pääse sieltä pois muuten kuin [[haihtumisen]] kautta; sellaista aluetta kutsutaan [[sisävaluma-alueeksi]]. Kaspianmerta pidetään usein maailman suurimpana järvenä, vaikka nimessä on meri, ja vesi siinä on vain lievästi suolaista. Sen oikeudellinen asema on ollut rantavaltioiden kesken myös kiistanalainen: osa käsittelee sitä merenä, osa järvenä. Nimi oli ensin ja maantiede vasta perässä, sanoisin.
+KYSYMYS: Kerro lisää: Kaspianmeri
+
+### 66
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volga (luonto · joki)
+Tietoruudun teksti: Volga on Euroopan pisin joki ja maailman pisin sisävaluma-alueen joki: 3 531 kilometriä ja valuma-alue 1 360 000 neliökilometriä. Se virtaa Keski-Venäjältä Etelä-Venäjälle ja laskee Kaspianmereen, ei valtamereen. Sitä pidetään yleisesti Venäjän kansallisjokena, ja sen varrelle syntyi noin vuonna 830 varhainen valtiomuodostelma Rusin kaganaatti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+AIEMPI KYSYMYS: Miksi Volga ei laske mereen vaan järveen?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuohon liittyy nimenomaan nimien kummallisuus. [[Kaspianmeri]] ei ole yhteydessä valtamereen, joten Volgan vesi ei pääse sieltä pois muuten kuin [[haihtumisen]] kautta; sellaista aluetta kutsutaan [[sisävaluma-alueeksi]]. Kaspianmerta pidetään usein maailman suurimpana järvenä, vaikka nimessä on meri, ja vesi siinä on vain lievästi suolaista. Sen oikeudellinen asema on ollut rantavaltioiden kesken myös kiistanalainen: osa käsittelee sitä merenä, osa järvenä. Nimi oli ensin ja maantiede vasta perässä, sanoisin.
+KYSYMYS: Kerro lisää: haihtumisen
+
+### 67
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volga (luonto · joki)
+Tietoruudun teksti: Volga on Euroopan pisin joki ja maailman pisin sisävaluma-alueen joki: 3 531 kilometriä ja valuma-alue 1 360 000 neliökilometriä. Se virtaa Keski-Venäjältä Etelä-Venäjälle ja laskee Kaspianmereen, ei valtamereen. Sitä pidetään yleisesti Venäjän kansallisjokena, ja sen varrelle syntyi noin vuonna 830 varhainen valtiomuodostelma Rusin kaganaatti.
+AIEMPI KYSYMYS: Miksi Volga ei laske mereen vaan järveen?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuohon liittyy nimenomaan nimien kummallisuus. [[Kaspianmeri]] ei ole yhteydessä valtamereen, joten Volgan vesi ei pääse sieltä pois muuten kuin [[haihtumisen]] kautta; sellaista aluetta kutsutaan [[sisävaluma-alueeksi]]. Kaspianmerta pidetään usein maailman suurimpana järvenä, vaikka nimessä on meri, ja vesi siinä on vain lievästi suolaista. Sen oikeudellinen asema on ollut rantavaltioiden kesken myös kiistanalainen: osa käsittelee sitä merenä, osa järvenä. Nimi oli ensin ja maantiede vasta perässä, sanoisin.
+KYSYMYS: Kerro lisää: sisävaluma-alueeksi
+
+### 68
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volga (luonto · joki)
+Tietoruudun teksti: Volga on Euroopan pisin joki ja maailman pisin sisävaluma-alueen joki: 3 531 kilometriä ja valuma-alue 1 360 000 neliökilometriä. Se virtaa Keski-Venäjältä Etelä-Venäjälle ja laskee Kaspianmereen, ei valtamereen. Sitä pidetään yleisesti Venäjän kansallisjokena, ja sen varrelle syntyi noin vuonna 830 varhainen valtiomuodostelma Rusin kaganaatti.
+AIEMPI KYSYMYS: Mikä Rusin kaganaatti oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, mutta se on tutkijoille vaikea nippu. Rusin kaganaatilla tarkoitetaan varhaista, 800-luvun alkupuolella syntynyttä itäslaavilais-skandinaavista valtiomuodostelmaa, jonka hallitsijaa lähteet kutsuvat kaganiksi, kuten itäisessä Euroopassa oli totuttu tehdä turkkilaisten ja kasaarien keskuudessa. Tärkein varhainen maininta on Bertinin [[annaaleissa]] vuodelta 839: [[Ludvig Hurskaan]] hoviin saapui kansaa, jonka lähettiläät sanoivat itseään rusien edustajiksi ja jonka ruhtinasta kutsuttiin kaganiksi. Missä kaganaatin keskus tarkalleen sijaitsi, tutkijat eivät ole yksimielisiä, ja siksi tiedot jäävät osin epävarmoiksi. Kirje oli siis matkalla jo silloin.
+KYSYMYS: Kerro lisää: annaaleissa
+
+### 69
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volga (luonto · joki)
+Tietoruudun teksti: Volga on Euroopan pisin joki ja maailman pisin sisävaluma-alueen joki: 3 531 kilometriä ja valuma-alue 1 360 000 neliökilometriä. Se virtaa Keski-Venäjältä Etelä-Venäjälle ja laskee Kaspianmereen, ei valtamereen. Sitä pidetään yleisesti Venäjän kansallisjokena, ja sen varrelle syntyi noin vuonna 830 varhainen valtiomuodostelma Rusin kaganaatti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aleppo — kaupunkilehti / Aleppo: Kuningatar maksoi koulunsa myllyn tuotolla] Bab al-Maqamin portin lounaispuolelle, muurien ulkopuolelle, rakennettiin vuosina 1235–36 madrasa nimeltä al-Firdaws, Paratiisi. Sen teetti Dayfa Khatun, josta tuli myöhemmin Aleppon ajjubidien sijaishallitsija. Hän maksoi koulun omista varoistaan ja perusti sille waqfin eli hurskaan säätiön, jonka tuloina olivat Kafr Zaytan kylän tuotto ja kaksi kolmasosaa läheisen myllyn tuloista. Kouluun palkattiin koraaninlukijoita, lainoppineita ja sufeja. Rakennus on suorakaide, jonka kattona on yksitoista kupolia. Rukoussalin mihrab on ladottu suonikkaasta valkoisesta marmorista, punaisesta porfyyristä ja vihreästä dioriitista.
+AIEMPI KYSYMYS: Mikä Rusin kaganaatti oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, mutta se on tutkijoille vaikea nippu. Rusin kaganaatilla tarkoitetaan varhaista, 800-luvun alkupuolella syntynyttä itäslaavilais-skandinaavista valtiomuodostelmaa, jonka hallitsijaa lähteet kutsuvat kaganiksi, kuten itäisessä Euroopassa oli totuttu tehdä turkkilaisten ja kasaarien keskuudessa. Tärkein varhainen maininta on Bertinin [[annaaleissa]] vuodelta 839: [[Ludvig Hurskaan]] hoviin saapui kansaa, jonka lähettiläät sanoivat itseään rusien edustajiksi ja jonka ruhtinasta kutsuttiin kaganiksi. Missä kaganaatin keskus tarkalleen sijaitsi, tutkijat eivät ole yksimielisiä, ja siksi tiedot jäävät osin epävarmoiksi. Kirje oli siis matkalla jo silloin.
+KYSYMYS: Kerro lisää: Ludvig Hurskaan
+
+### 70
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volga (luonto · joki)
+Tietoruudun teksti: Volga on Euroopan pisin joki ja maailman pisin sisävaluma-alueen joki: 3 531 kilometriä ja valuma-alue 1 360 000 neliökilometriä. Se virtaa Keski-Venäjältä Etelä-Venäjälle ja laskee Kaspianmereen, ei valtamereen. Sitä pidetään yleisesti Venäjän kansallisjokena, ja sen varrelle syntyi noin vuonna 830 varhainen valtiomuodostelma Rusin kaganaatti.
+AIEMPI KYSYMYS: Mitkä kaupungit ovat Volgan varrella?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Volgan varrella sijaitsevat muun muassa [[Tver]], Jaroslavl, [[Nižni Novgorod]], [[Kazan]], Samara, Saratov, [[Volgograd]] ja [[Astrahan]]. Jokea pitkin on kulkenut vuosisatoja tärkeä kauppareitti Venäjän sisäosista etelään Kaspianmerelle, ja monet näistä kaupungeista ovat kasvaneet joen liikenteen ja kaupan varassa. Joen varrella kohtaavat myös eri kulttuurit: esimerkiksi Kazan on tataarien kulttuurin keskus ja Tatarstanin pääkaupunki.
+KYSYMYS: Kerro lisää: Tver
+
+### 71
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volga (luonto · joki)
+Tietoruudun teksti: Volga on Euroopan pisin joki ja maailman pisin sisävaluma-alueen joki: 3 531 kilometriä ja valuma-alue 1 360 000 neliökilometriä. Se virtaa Keski-Venäjältä Etelä-Venäjälle ja laskee Kaspianmereen, ei valtamereen. Sitä pidetään yleisesti Venäjän kansallisjokena, ja sen varrelle syntyi noin vuonna 830 varhainen valtiomuodostelma Rusin kaganaatti.
+AIEMPI KYSYMYS: Mitkä kaupungit ovat Volgan varrella?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Volgan varrella sijaitsevat muun muassa [[Tver]], Jaroslavl, [[Nižni Novgorod]], [[Kazan]], Samara, Saratov, [[Volgograd]] ja [[Astrahan]]. Jokea pitkin on kulkenut vuosisatoja tärkeä kauppareitti Venäjän sisäosista etelään Kaspianmerelle, ja monet näistä kaupungeista ovat kasvaneet joen liikenteen ja kaupan varassa. Joen varrella kohtaavat myös eri kulttuurit: esimerkiksi Kazan on tataarien kulttuurin keskus ja Tatarstanin pääkaupunki.
+KYSYMYS: Kerro lisää: Nižni Novgorod
+
+### 72
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volga (luonto · joki)
+Tietoruudun teksti: Volga on Euroopan pisin joki ja maailman pisin sisävaluma-alueen joki: 3 531 kilometriä ja valuma-alue 1 360 000 neliökilometriä. Se virtaa Keski-Venäjältä Etelä-Venäjälle ja laskee Kaspianmereen, ei valtamereen. Sitä pidetään yleisesti Venäjän kansallisjokena, ja sen varrelle syntyi noin vuonna 830 varhainen valtiomuodostelma Rusin kaganaatti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Kazanin katedraali] 1801–1811 Arkkitehti Andrei Voronihin sai tehtäväkseen suunnitella katedraalin, joka kunnioittaisi ihmeitä tekevää Kazanin Jumalanäidin ikonia. Ortodoksisessa kirkossa pääsisäänkäynnin tulisi olla lännessä, mutta tontti sijaitsi Nevski-bulevardin varrella pohjoisessa – niinpä Voronihin ratkaisi pulman rakentamalla sivulle mahtavan puolikaaren muotoisen pylväikön, jossa on 96 korinttilaista pylvästä neljässä rivissä. Katedraali valmistui vuonna 1811 ja kohoaa korkeimmillaan 71,6 metriin. Vuonna 1812 Napoleonin sotajoukot hyökkäsivät Venäjälle, ja voiton jälkeen katedraalista tuli sodan muistomerkki. Sotamarsalkka Mihail Kutuzov, joka johti Venäjän armeijaa Napoleonia vastaan, haudattiin kate…
+- [Uzbekistan — maalehti / Ruoka: Kattila, josta syö tuhat vierasta] Plov eli osh on maan kansallisruoka: lampaanlihaa, suikaloitua porkkanaa, sipulia ja pitkäjyväistä riisiä kazan-padassa avotulella. Pohjaksi tehdään zirvak, lihan ja kasvisten paistos, jonka päälle riisi ladotaan höyrystymään sekoittamatta — siksi jyvät pysyvät erillään. Juhliin padan tekee oshpaz, plov-mestari, jonka taito siirtyy mestarilta oppipojalle, ja yhdestä padasta voidaan tarjota jopa tuhannelle vieraalle. Häiden aamuna syödään nahor oshi, aamuplov, kello kuuden ja yhdeksän välillä, ja vanhimmat aloittavat ensin. Unesco otti plovin luetteloonsa 2016.
+AIEMPI KYSYMYS: Mitkä kaupungit ovat Volgan varrella?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Volgan varrella sijaitsevat muun muassa [[Tver]], Jaroslavl, [[Nižni Novgorod]], [[Kazan]], Samara, Saratov, [[Volgograd]] ja [[Astrahan]]. Jokea pitkin on kulkenut vuosisatoja tärkeä kauppareitti Venäjän sisäosista etelään Kaspianmerelle, ja monet näistä kaupungeista ovat kasvaneet joen liikenteen ja kaupan varassa. Joen varrella kohtaavat myös eri kulttuurit: esimerkiksi Kazan on tataarien kulttuurin keskus ja Tatarstanin pääkaupunki.
+KYSYMYS: Kerro lisää: Kazan
+
+### 73
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volga (luonto · joki)
+Tietoruudun teksti: Volga on Euroopan pisin joki ja maailman pisin sisävaluma-alueen joki: 3 531 kilometriä ja valuma-alue 1 360 000 neliökilometriä. Se virtaa Keski-Venäjältä Etelä-Venäjälle ja laskee Kaspianmereen, ei valtamereen. Sitä pidetään yleisesti Venäjän kansallisjokena, ja sen varrelle syntyi noin vuonna 830 varhainen valtiomuodostelma Rusin kaganaatti.
+AIEMPI KYSYMYS: Mitkä kaupungit ovat Volgan varrella?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Volgan varrella sijaitsevat muun muassa [[Tver]], Jaroslavl, [[Nižni Novgorod]], [[Kazan]], Samara, Saratov, [[Volgograd]] ja [[Astrahan]]. Jokea pitkin on kulkenut vuosisatoja tärkeä kauppareitti Venäjän sisäosista etelään Kaspianmerelle, ja monet näistä kaupungeista ovat kasvaneet joen liikenteen ja kaupan varassa. Joen varrella kohtaavat myös eri kulttuurit: esimerkiksi Kazan on tataarien kulttuurin keskus ja Tatarstanin pääkaupunki.
+KYSYMYS: Kerro lisää: Volgograd
+
+### 74
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volga (luonto · joki)
+Tietoruudun teksti: Volga on Euroopan pisin joki ja maailman pisin sisävaluma-alueen joki: 3 531 kilometriä ja valuma-alue 1 360 000 neliökilometriä. Se virtaa Keski-Venäjältä Etelä-Venäjälle ja laskee Kaspianmereen, ei valtamereen. Sitä pidetään yleisesti Venäjän kansallisjokena, ja sen varrelle syntyi noin vuonna 830 varhainen valtiomuodostelma Rusin kaganaatti.
+AIEMPI KYSYMYS: Mitkä kaupungit ovat Volgan varrella?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Volgan varrella sijaitsevat muun muassa [[Tver]], Jaroslavl, [[Nižni Novgorod]], [[Kazan]], Samara, Saratov, [[Volgograd]] ja [[Astrahan]]. Jokea pitkin on kulkenut vuosisatoja tärkeä kauppareitti Venäjän sisäosista etelään Kaspianmerelle, ja monet näistä kaupungeista ovat kasvaneet joen liikenteen ja kaupan varassa. Joen varrella kohtaavat myös eri kulttuurit: esimerkiksi Kazan on tataarien kulttuurin keskus ja Tatarstanin pääkaupunki.
+KYSYMYS: Kerro lisää: Astrahan
+
+### 75
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volga (luonto · joki)
+Tietoruudun teksti: Volga on Euroopan pisin joki ja maailman pisin sisävaluma-alueen joki: 3 531 kilometriä ja valuma-alue 1 360 000 neliökilometriä. Se virtaa Keski-Venäjältä Etelä-Venäjälle ja laskee Kaspianmereen, ei valtamereen. Sitä pidetään yleisesti Venäjän kansallisjokena, ja sen varrelle syntyi noin vuonna 830 varhainen valtiomuodostelma Rusin kaganaatti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Antofagasta — kaupunkilehti / Sumu ja aavikko: Kosteikot keskellä kuivuutta] Kaupungissa on vähän kasvillisuutta, mutta sen alueella on sarja kaupunkikosteikkoja, ja ne ovat aavikkokaupungin harvoja vihreitä kohtia. Niissä elää tai käy kotoperäisiä matelijoita ja niveljalkaisia, sirrejä ja nisäkkäistä kulpeokettu. Uhat ovat kaupungin omia: roskat, kulkukoirat, veden otto, vajojen rakentaminen ja vesiuomien kääntäminen. Kunta valmisteli tammikuussa 2024 niiden julistamista virallisiksi kaupunkikosteikoiksi. Kaupungin pohjoispuolelta, taajaman ulkopuolelta lentokentän kohdalta, kulkee Kauriin kääntöpiiri; siihen pystytettiin 21. joulukuuta 2000 arkkitehti Eleonora Romanin suunnittelema muistomerkki, joka merkitsee piirin paikan ja toimii aurinkokalenterina.
+AIEMPI KYSYMYS: Millainen on Volgan suisto?
+AIEMPI VASTAUS (Livia):
+Mmm— Volgan suisto Kaspianmeren rannalla on laaja ja haarautuva vesistö, jossa joki jakautuu lukuisiksi sivu-uomiksi ja pieniksi saariksi ennen kuin se päättyy mereen. Lähteiden mukaan se kuuluu Euroopan suurimpiin jokisuistoihin. Alue on tärkeä luonnonsuojelun kannalta, sillä sen [[kosteikot]] ovat muuttolintujen levähdyspaikkoja ja kalaston, esimerkiksi sampikalojen, elinympäristöä. Suiston keskuksena on [[Astrahanin]] kaupunki. Pöllö olisi kertonut tämän paremmin, mutta hän parantelee yhä siipeään.
+KYSYMYS: Kerro lisää: kosteikot
+
+### 76
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volga (luonto · joki)
+Tietoruudun teksti: Volga on Euroopan pisin joki ja maailman pisin sisävaluma-alueen joki: 3 531 kilometriä ja valuma-alue 1 360 000 neliökilometriä. Se virtaa Keski-Venäjältä Etelä-Venäjälle ja laskee Kaspianmereen, ei valtamereen. Sitä pidetään yleisesti Venäjän kansallisjokena, ja sen varrelle syntyi noin vuonna 830 varhainen valtiomuodostelma Rusin kaganaatti.
+AIEMPI KYSYMYS: Millainen on Volgan suisto?
+AIEMPI VASTAUS (Livia):
+Mmm— Volgan suisto Kaspianmeren rannalla on laaja ja haarautuva vesistö, jossa joki jakautuu lukuisiksi sivu-uomiksi ja pieniksi saariksi ennen kuin se päättyy mereen. Lähteiden mukaan se kuuluu Euroopan suurimpiin jokisuistoihin. Alue on tärkeä luonnonsuojelun kannalta, sillä sen [[kosteikot]] ovat muuttolintujen levähdyspaikkoja ja kalaston, esimerkiksi sampikalojen, elinympäristöä. Suiston keskuksena on [[Astrahanin]] kaupunki. Pöllö olisi kertonut tämän paremmin, mutta hän parantelee yhä siipeään.
+KYSYMYS: Kerro lisää: Astrahanin
+
+### 77
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volga (luonto · joki)
+Tietoruudun teksti: Volga on Euroopan pisin joki ja maailman pisin sisävaluma-alueen joki: 3 531 kilometriä ja valuma-alue 1 360 000 neliökilometriä. Se virtaa Keski-Venäjältä Etelä-Venäjälle ja laskee Kaspianmereen, ei valtamereen. Sitä pidetään yleisesti Venäjän kansallisjokena, ja sen varrelle syntyi noin vuonna 830 varhainen valtiomuodostelma Rusin kaganaatti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [BMU — maalehti / Rakennukset: Katto joka on myös vesisäiliö] nykyään — Bermudalla ei ole yhtään pysyvää jokea, järveä tai lähdettä, joten koko saariston juomavesi on aina tullut sateesta. Ratkaisuksi kehittyi omaleimainen arkkitehtuuri: talojen katot muurataan kalkkikivestä portaittain ja valkaistaan kalkkimaalilla, joka samalla puhdistaa valuvaa vettä. Portaat hidastavat veden virtausta rankkasateella ja ohjaavat sen kouruja pitkin maanalaiseen säiliöön talon alle. Laki on vaatinut kattopintaa keräämään sadevettä jo vuosikymmenten ajan, ja järjestelmä toimii ilman yhdyskuntien vesijohtoverkkoja syöttäviä tekojärviä. Kuivina kausina osa talouksista joutuu silti tilaamaan lisävettä tankkiautolla.
+AIEMPI KYSYMYS: Onko Volga padottu voimalaitoksia varten?
+AIEMPI VASTAUS (Livia):
+Ai se. Kyllä on: Volgalle on rakennettu Neuvostoliiton aikana ja sen jälkeen ketju padottuja [[tekojärviä]] ja vesivoimalaitoksia, joten joki on nykyään monin paikoin enemmän altaiden jono kuin vapaasti virtaava vesi. Tunnetuimpia altaita ovat esimerkiksi Rybinskin ja Kuibyshevin tekojärvet, mutta tarkkaa lukumäärää en ole varma. Padot tuottavat sähköä, säännöstelevät tulvia ja pitävät joen laivakulun mahdollisena. Ne ovat kuitenkin muuttaneet [[kalojen]] vaellusta ja suiston oloja.
+
+Ylhäältä katsottuna se näyttää helminauhalta, ja minä pidän siitä, vaikka insinöörit sanovat sen olevan vain sähköä. Kalat tosin ovat eri mieltä.
+KYSYMYS: Kerro lisää: tekojärviä
+
+### 78
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volga (luonto · joki)
+Tietoruudun teksti: Volga on Euroopan pisin joki ja maailman pisin sisävaluma-alueen joki: 3 531 kilometriä ja valuma-alue 1 360 000 neliökilometriä. Se virtaa Keski-Venäjältä Etelä-Venäjälle ja laskee Kaspianmereen, ei valtamereen. Sitä pidetään yleisesti Venäjän kansallisjokena, ja sen varrelle syntyi noin vuonna 830 varhainen valtiomuodostelma Rusin kaganaatti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Arabiemiirikunnat — maalehti / Ranta ja rata: Metsä, joka kasvaa suolavedessä] Emiraattien matalilla rannoilla kasvaa mangrovemetsää. Harmaamangrove on ainoa puu, joka kestää täällä suolaista vettä: se erittää ylimääräisen suolan lehtiensä läpi, ja sen juuret työntävät mudasta ylös ohuita hengitysputkia, jotta puu saa happea vuoroveden alla. Mangrovikot ovat kalojen kutupaikkoja ja lintujen suojaa, ja ne pitävät rantaa kasassa myrskyssä. Maa on istuttanut niitä miljoonia lisää, ja Abu Dhabin rannalle on rakennettu puisia kävelysiltoja, joilta metsää voi katsella.
+AIEMPI KYSYMYS: Onko Volga padottu voimalaitoksia varten?
+AIEMPI VASTAUS (Livia):
+Ai se. Kyllä on: Volgalle on rakennettu Neuvostoliiton aikana ja sen jälkeen ketju padottuja [[tekojärviä]] ja vesivoimalaitoksia, joten joki on nykyään monin paikoin enemmän altaiden jono kuin vapaasti virtaava vesi. Tunnetuimpia altaita ovat esimerkiksi Rybinskin ja Kuibyshevin tekojärvet, mutta tarkkaa lukumäärää en ole varma. Padot tuottavat sähköä, säännöstelevät tulvia ja pitävät joen laivakulun mahdollisena. Ne ovat kuitenkin muuttaneet [[kalojen]] vaellusta ja suiston oloja.
+
+Ylhäältä katsottuna se näyttää helminauhalta, ja minä pidän siitä, vaikka insinöörit sanovat sen olevan vain sähköä. Kalat tosin ovat eri mieltä.
+KYSYMYS: Kerro lisää: kalojen
+
+### 79
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ob (luonto · joki)
+Tietoruudun teksti: Ob on Länsi-Siperian suuri joki, ja yhdessä sivujokensa Irtyšin kanssa se muodostaa maailman seitsemänneksi pisimmän jokijärjestelmän: 5 410 kilometriä. Joki syntyy Bijan ja Katunin yhtymäkohdassa, ja molemmat saavat alkunsa Altain vuorilta. Se on läntisin kolmesta suuresta Siperian joesta, jotka laskevat Jäämereen.
+AIEMPI KYSYMYS: Mitkä ovat Siperian kolme suurta jokea?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Siperian kolme suurta jokea ovat Ob, Jenisei ja Lena, ja ne kaikki virtaavat pohjoiseen [[Jäämereen]]. Ob on läntisin, Jenisei kulkee Siperian keskiosien läpi ja Lena on itäisin. Jokaisella on valtava [[valuma-alue]], joka ulottuu pitkälle etelään vuoristoihin saakka, ja niiden vedet kuljettavat sulamisvesiä ja sateita tuhansien kilometrien matkan. Kyyhkynä minä lennän jokien yli, en niitä pitkin.
+KYSYMYS: Kerro lisää: Jäämereen
+
+### 80
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ob (luonto · joki)
+Tietoruudun teksti: Ob on Länsi-Siperian suuri joki, ja yhdessä sivujokensa Irtyšin kanssa se muodostaa maailman seitsemänneksi pisimmän jokijärjestelmän: 5 410 kilometriä. Joki syntyy Bijan ja Katunin yhtymäkohdassa, ja molemmat saavat alkunsa Altain vuorilta. Se on läntisin kolmesta suuresta Siperian joesta, jotka laskevat Jäämereen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dili — kaupunkilehti / Vuorten ja meren välissä: Tasainen maa loppuu yhdeksässä kilometrissä] Dili on Timorin pohjoisrannikolla pienellä tasaisen maan alueella, jota vuoret ympäröivät. Kaupungin ydin on alle sadan metrin korkeudessa. Kaupunkialue ulottuu neljään hallintopostiin — Cristo Rei, Dom Aleixo, Nain Feto ja Vera Cruz — ja niiden kahdeksantoista kaupunkimaisen sucon yhteispinta-ala on 17 862 hehtaaria. Siitä vain noin 37 prosenttia eli 6 698 hehtaaria on riittävän tasaista rakentamiseen, ja vuoteen 2014 mennessä siitä oli rakennettu neljännes. Comoro-joki virtaa kaupungin länsiosan läpi, ja sen valuma-alue ulottuu yhdeksän kilometrin päähän sisämaahan, missä vuoret ovat jo yhdeksänsataa metriä korkeita. Joen yli vie koko kaupungissa kaksi ajoneuvosiltaa.
+- [Anchorage — kaupunkilehti / Eläimet kaupungissa: Puro, jossa nousee kuningaslohi] Ship Creek virtaa Chugachin vuorilta Cook Inletiin, ja sen suulla ollut satama antoi kaupungille nimen. Sitä pidetään maailman ainoana kaupunkialueen kuningaslohijokena: purossa nousee vuosittain sekä kuningas- että hopealohta, ja rannalla järjestetään säännöllisesti lohikilpailuja muutaman korttelin päässä keskustan toimistotaloista. Valuma-alue on yli sata neliömailia, ja virtaamaa on mitattu vuodesta 1946: keskiarvo on 262 kuutiojalkaa sekunnissa, pienin mitattu vuorokausivirtaama 56 ja suurin 870. Vesi on talvella nollassa asteessa ja heinäkuussa jopa viidessätoista.
+AIEMPI KYSYMYS: Mitkä ovat Siperian kolme suurta jokea?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Siperian kolme suurta jokea ovat Ob, Jenisei ja Lena, ja ne kaikki virtaavat pohjoiseen [[Jäämereen]]. Ob on läntisin, Jenisei kulkee Siperian keskiosien läpi ja Lena on itäisin. Jokaisella on valtava [[valuma-alue]], joka ulottuu pitkälle etelään vuoristoihin saakka, ja niiden vedet kuljettavat sulamisvesiä ja sateita tuhansien kilometrien matkan. Kyyhkynä minä lennän jokien yli, en niitä pitkin.
+KYSYMYS: Kerro lisää: valuma-alue

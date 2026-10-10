@@ -1,0 +1,2642 @@
+[
+ {
+  "kohde": "kohde:elbrus",
+  "kysymys": "Onko Elbrus Euroopassa vai Aasiassa?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Tää on se vanha rajariita. Jos Euroopan ja Aasian raja vedetään [[Kaukasuksen]] pääharjannetta tai Kura- ja Aras-jokia pitkin, Elbrus kuuluu Eurooppaan; jos raja vedetään [[Kuma–Manytš-notkoa]] pitkin, vuori jää Aasian puolelle. Yleisimmin Elbrusta pidetään Euroopan korkeimpana vuorena, ja niin se esitetään myös useimmissa kartoissa ja luetteloissa. Maanosien rajat ovat sopimuksia, eivätkä ne noudata luonnon omia viivoja kovin tarkasti. Ylhäältä kyl näkee, ettei maassa oo mitään viivaa.",
+  "linkit": [
+   "Kaukasuksen",
+   "Kuma–Manytš-notkoa"
+  ],
+  "jatkot": [
+   "Miten Euroopan ja Aasian raja on päätetty?",
+   "Kuinka vaikea Elbrusin huipulle on kiivetä?"
+  ],
+  "paikka": {
+   "nimi": "Elbrus",
+   "lat": 43.35,
+   "lon": 42.45,
+   "tarkkuus": "alue"
+  }
+ },
+ {
+  "kohde": "kohde:elbrus",
+  "kysymys": "Milloin Elbrus viimeksi purkautui?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Tarkkaa vuotta minä en tiedä. Lähteiden mukaan viimeiset purkaukset ajoittuvat noin parin tuhannen vuoden taakse, mutta arviot vaihtelevat, enkä ole varma ajoituksesta. Vuorta pidetään nykyisin sammuneena tai lepotilassa olevana [[kerrostulivuorena]], eikä historiallisella ajalla ole raportoitu varmoja purkauksia. Kaksihuippuinen muoto on peräisin [[tulivuoritoiminnasta]], joka rakensi sen kerros kerrokselta. Hyvä ettei ny sentään savua nouse.",
+  "linkit": [
+   "kerrostulivuorena",
+   "tulivuoritoiminnasta"
+  ],
+  "jatkot": [
+   "Mikä on kerrostulivuori?",
+   "Miten tulivuori luokitellaan sammuneeksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:elbrus",
+  "kysymys": "Mikä tekee kerrostulivuoresta erilaisen kuin kilpitulivuoresta?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Kerrostulivuori rakentuu vuorotellen laavasta ja tuhkasta sekä muusta purkautuneesta aineesta, ja sen laava on jäykkää, joten kasa kohoaa jyrkäksi kartioksi. Kilpitulivuoren laava on juoksevaa, minkä vuoksi se leviää laajaksi ja loivarinteiseksi kilvenmuotoiseksi vuoreksi; sellaisia on esimerkiksi Islannissa. Kerrostulivuoret, kuten [[Vesuvius]] ja [[Etna]], purkautuvat usein räjähdysmäisemmin kuin kilpitulivuoret.\n\nLaavan juoksevuus ratkaisee melkein kaiken, sen minä olen oppinut katolta katsellen. Jäykkä laava jää kasaan, juokseva lähtee kävelylle.",
+  "linkit": [
+   "Vesuvius",
+   "Etna"
+  ],
+  "jatkot": [
+   "Miksi Vesuvius on vaarallinen?",
+   "Miten Etna eroaa muista Euroopan tulivuorista?"
+  ]
+ },
+ {
+  "kohde": "kohde:elbrus",
+  "kysymys": "Miksi Kaukasuksella on tulivuoria?",
+  "uusi": true,
+  "vastaus": "Sepä sattui. Kaukasus on syntynyt, kun Arabian laatta on työntynyt vuosimiljoonien ajan kohti [[Euraasian laattaa]], ja törmäys on kohottanut vuoriston ja nostanut [[magmaa]] maankuoren halkeamien kautta pintaan. Elbrus ja muut alueen tulivuoret kuuluvat tähän nuoreen vuoristonmuodostukseen. Tulivuoritoiminnan tarkka tausta on tutkijoiden kesken yhä osin avoin kysymys, joten yksityiskohdista en ole varma. Kaukasuksen tulivuoret ovat nuoria vuoria vanhojen jättiläisten seurassa.",
+  "linkit": [
+   "Euraasian laattaa",
+   "magmaa"
+  ],
+  "jatkot": [
+   "Miten vuoristot syntyvät mannerlaattojen törmätessä?",
+   "Mitä muita tulivuoria Kaukasuksella on?"
+  ]
+ },
+ {
+  "kohde": "kohde:elbrus",
+  "kysymys": "Mitä korkeanpaikantauti on?",
+  "uusi": true,
+  "vastaus": "Ai se. Korkeanpaikantauti on tila, joka kehittyy, kun nousee nopeasti korkealle ja [[ilmanpaine]] sekä siten hapen saanti keuhkoissa pienenee. Tyypillisiä oireita ovat päänsärky, pahoinvointi, väsymys ja unihäiriöt, ja ne alkavat usein noin 2 500 metrin korkeudessa. Vaikeimmillaan tauti voi aiheuttaa nestettä keuhkoihin tai aivoihin, ja tällöin ainoa tehokas hoito on laskeutua heti alemmas. Hyvä tapa ehkäistä sitä on nousta vähitellen ja antaa elimistön tottua, kuten [[Alpeilla]] ja muilla korkeilla vuorilla tehdään. Minä pysyn kyllä mieluummin kaiteella.",
+  "linkit": [
+   "ilmanpaine",
+   "Alpeilla"
+  ],
+  "jatkot": [
+   "Miten elimistö tottuu ohueen ilmaan?",
+   "Kuinka paljon ilmanpaine laskee korkeuden mukana?"
+  ]
+ },
+ {
+  "kohde": "kohde:narodnaja",
+  "kysymys": "Miksi Narodnaja on kahdessa maanosassa?",
+  "uusi": false,
+  "vastaus": "No niin, tää on kiva tapaus. Narodnaja seisoo [[Uralin]] vedenjakajalla, ja Ural on perinteisesti katsottu Euroopan ja Aasian rajaksi. Huipulta Naroda-joki virtaa kaakkoon Obiin eli Siperiaan, kun taas Kosju-joki lähtee luoteeseen kohti [[Petšoraa]] eli Euroopan puolelle. Sadevesi siis jakautuu kahteen suuntaan, ja siksi vuoren sanotaan olevan rajalla, joka on sovittu maanosien välille vedenjakajaa seuraten. Raja on ihmisten piirtämä eikä jyrkkä seinä, mutta vedenjakajana se toimii hyvin selvänä viivana.\n\nPisarat tekevät huipulla valinnan, ja ne eivät mieti sitä kauan. Minä kyllä katsoisin kartasta ensin, kumpi on lähempänä pullaa.",
+  "linkit": [
+   "Uralin",
+   "Petšoraa"
+  ],
+  "jatkot": [
+   "Mikä on vedenjakaja?",
+   "Missä Uralin vuoristo kulkee?"
+  ]
+ },
+ {
+  "kohde": "kohde:narodnaja",
+  "kysymys": "Mitä komin nimi Naroda-Iz tarkoittaa?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Naroda-Iz tarkoittaa komin kielellä kansan vuorta. Komit ovat [[suomalais-ugrilaisiin kieliin]] kuuluva kansa, joka asuu pääosin [[Komin tasavallassa]] Venäjän Euroopan-puoleisessa osassa, ja heidän kielensä on kaukaista sukua suomelle. Narodnaja-nimi on venäläistynyt muoto samasta ajatuksesta, sillä sekin viittaa kansaan. Kansan vuori on nimenä arvokas, ja se sopii huipulle, jolta vedet lähtevät kahteen maanosaan. Sukulaisia sieltä siis löytyy, ja se tuntuu aina hauskalta.",
+  "linkit": [
+   "suomalais-ugrilaisiin kieliin",
+   "Komin tasavallassa"
+  ],
+  "jatkot": [
+   "Millaisia kieliä suomalais-ugrilaiset kielet ovat?",
+   "Missä komit asuvat?"
+  ]
+ },
+ {
+  "kohde": "kohde:narodnaja",
+  "kysymys": "Mikä on vedenjakaja?",
+  "uusi": true,
+  "vastaus": "Tota, hyvä kysymys tuo. Vedenjakaja on maanpinnan korkea kohta tai harjanne, joka erottaa toisistaan kaksi eri suuntiin laskevaa [[valuma-alueen]] osaa. Sadevesi valuu vedenjakajan toisella puolella yhteen jokijärjestelmään ja toisella puolella toiseen, ja lopulta vedet voivat päätyä kokonaan eri meriin. Vedenjakaja ei välttämättä ole vuori, vaan se voi olla matalakin selänne tai jopa tasainen [[suo]]. Maailman vedenjakajat vaikuttavat siihen, mihin joet virtaavat ja miten alueita on historiassa jaettu. Pisarat eivät ainakaan eksy.",
+  "linkit": [
+   "valuma-alueen",
+   "suo"
+  ],
+  "jatkot": [
+   "Mitä valuma-alue tarkoittaa?",
+   "Mitkä ovat Euroopan suurimmat vedenjakajat?"
+  ]
+ },
+ {
+  "kohde": "kohde:narodnaja",
+  "kysymys": "Miksi Uralin vuoret ovat niin matalia?",
+  "uusi": true,
+  "vastaus": "Joo, tää on mielenkiintoinen. Ural on hyvin vanha vuoristo, joka syntyi [[mannerlaattojen]] törmätessä satojen miljoonien vuosien takaa, ja siitä lähtien [[eroosio]] on kuluttanut sitä. Vanhat vuoret ovat yleensä matalampia kuin nuoret, koska tuuli, vesi ja jää ovat ehtineet pyöristää huiput. Uralilla korkeimmat huiput ovat vain noin 1 900 metriä, kun nuoremmilla vuoristoilla huiput voivat nousta paljon korkeammalle. Vuoriston vanhuudesta kertoo myös se, että sen rinteet ovat melko loivia. Vanhat vuoret ovat siis kuin vanhat lintuparat: matalia mutta luotettavia.",
+  "linkit": [
+   "mannerlaattojen",
+   "eroosio"
+  ],
+  "jatkot": [
+   "Kuinka pitkä Uralin vuoristo on?",
+   "Miten eroosio muokkaa vuoria?"
+  ]
+ },
+ {
+  "kohde": "kohde:narodnaja",
+  "kysymys": "Miksi lehtikuusi pudottaa neulasensa syksyllä?",
+  "uusi": true,
+  "vastaus": "Ai tota. Lehtikuusi on [[havupuu]], joka pudottaa neulasensa joka syksy, ja se on sopeutumista kylmään ja kuivaan talveen. Neulasista haihtuu talvella vettä, jota jäätynyt maa ei pysty korvaamaan, joten neulasten pudottaminen säästää puuta kuivumiselta ja lumen painolta. Lehtikuusi pärjää hyvin pohjoisessa, myös alueilla, joilla maa on osan vuotta pitkälle jäässä tai [[ikirouta]] on lähellä. Keväällä puu tuottaa uudet pehmeät neulaset, jotka ovat vaaleanvihreät. Hurja strategia puulta, sanon minä.",
+  "linkit": [
+   "havupuu",
+   "ikirouta"
+  ],
+  "jatkot": [
+   "Mitä ikirouta tarkoittaa?",
+   "Mitkä puulajit kasvavat Uralin metsissä?"
+  ]
+ },
+ {
+  "kohde": "kohde:barentsinmeri~2",
+  "kysymys": "Kuka Willem Barentsz oli?",
+  "uusi": false,
+  "vastaus": "No jopas, tän aiheen minä tunnen. Willem Barentsz oli hollantilainen merenkulkija, joka johti 1590-luvulla retkiä pohjoiseen etsiessään meritietä Kiinaan [[Koillisväylää]] pitkin. Hänen kolmannella retkellään laiva juuttui jäihin [[Novaja Zemljan]] rannikolle vuosina 1596–97, ja seitsemäntoista miestä talvehti rakentamassaan majassa, jota kutsuttiin nimellä [[Behouden Huys]], Pelastunut talo. Tammikuussa 1597 miehet näkivät auringon kaksi viikkoa ennen aikataulua, mikä johtui ilmakehän kangastuksesta. Barentsz kuoli kesäkuussa kotimatkalla avoveneessä, ja kaksitoista miestä pääsi perille; hänen mukaansa on nimetty Barentsinmeri. Onneksi siitä on jo pitkä aika.",
+  "linkit": [
+   "Koillisväylää",
+   "Novaja Zemljan",
+   "Behouden Huys"
+  ],
+  "jatkot": [
+   "Mikä on Koillisväylä?",
+   "Miten ilmakehän kangastus syntyy?"
+  ]
+ },
+ {
+  "kohde": "kohde:barentsinmeri~2",
+  "kysymys": "Miksi Murmansk ei jäädy talvella?",
+  "uusi": false,
+  "vastaus": "Hetkinen, tää on hyvä. Murmanskin satama pysyy sulana ympäri vuoden, koska [[Pohjois-Atlantin virran]] lämmin vesi virtaa Norjan rannikkoa pitkin Barentsinmerelle asti ja lämmittää myös [[Kuolanlahden]] vettä. Vaikka kaupunki sijaitsee kaukana pohjoisessa napapiirin yläpuolella, satama pysyy käytössä talvellakin, ja se tekee siitä Venäjän tärkeimpiä pohjoisia satamia. Lämmin merivirta on sen salaisuus, ei suinkaan lempeä talvi.\n\nMinusta on aika jännää, että kylmä maa ja lämmin vesi voivat sopia samaan paikkaan. Minä pysyn mieluummin sisällä kuin katolla, kun tuuli tulee Barentsinmereltä.",
+  "linkit": [
+   "Pohjois-Atlantin virran",
+   "Kuolanlahden"
+  ],
+  "jatkot": [
+   "Mikä on Pohjois-Atlantin virta?",
+   "Kuinka kylmää Murmanskissa on talvella?"
+  ]
+ },
+ {
+  "kohde": "kohde:barentsinmeri~2",
+  "kysymys": "Mitä tarkoittaa meren atlantisoituminen?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Atlantisoitumisella tarkoitetaan sitä, että Atlantin lämmin ja suolainen vesi pääsee yhä laajemmalle pohjoiseen ja alkaa muuttaa arktisen meren oloja. Seurauksena [[merijää]] ohenee ja vetäytyy, vesi lämpenee ja myös merten eliöstö muuttuu, kun etelän lajit levittäytyvät pohjoisemmaksi. Ilmiön on havaittu olevan erityisen voimakas Barentsinmerellä, joka lämpenee nopeammin kuin muut arktiset alueet. Tutkijat seuraavat sitä tarkasti, koska muutokset vaikuttavat koko [[Jäämeren]] ilmastoon ja kalastukseen. Voi kun jäljessä olisi pelkkä kaunis nimi.",
+  "linkit": [
+   "merijää",
+   "Jäämeren"
+  ],
+  "jatkot": [
+   "Miksi Barentsinmeri lämpenee muita arktisia alueita nopeammin?",
+   "Miten eliölajit muuttuvat meren lämmetessä?"
+  ]
+ },
+ {
+  "kohde": "kohde:barentsinmeri~2",
+  "kysymys": "Miksi Norja ja Venäjä hoitavat kalastusta yhdessä?",
+  "uusi": true,
+  "vastaus": "Kato. Kalat eivät tunne valtioiden rajoja, joten turskakanta ui Norjan ja Venäjän vesien välillä, eikä kumpikaan maa voi hoitaa sitä yksin. Siksi [[Norja]] ja [[Venäjä]] perustivat vuonna 1976 yhteiskomission, joka sopii kalastuksen hoidosta ja kalastuskiintiöistä. Yhteistyö suojaa kalakantaa ylikalastukselta ja pitää sen elinvoimaisena molemmille valtioille. Kyseessä on esimerkki siitä, miten yhteisten luonnonvarojen hoito voi edellyttää yhteistyötä, vaikka valtioiden suhteet muuten vaihtelisivat. Hyvä diplomatia alkaa kalaverkosta, näin ainakin satamissa sanotaan.",
+  "linkit": [
+   "Norja",
+   "Venäjä"
+  ],
+  "jatkot": [
+   "Millaisia kiintiöitä kalastuksessa käytetään?",
+   "Miksi turskakanta on niin tärkeä Pohjois-Euroopalle?"
+  ]
+ },
+ {
+  "kohde": "kohde:barentsinmeri~2",
+  "kysymys": "Miksi arktinen alue lämpenee muuta maailmaa nopeammin?",
+  "uusi": true,
+  "vastaus": "Mmm— tän tiedän. Arktinen alue lämpenee nopeammin, koska lumi ja jää heijastavat suurimman osan auringonvalosta takaisin avaruuteen, mutta kun jäätä sulaa, tumma merivesi imee enemmän lämpöä. Se sulattaa lisää jäätä, ja kierre vahvistaa itseään; ilmiötä kutsutaan [[arktiseksi vahvistumiseksi]]. Lisäksi lämmin ilma ja meriveden virtaukset tuovat pohjoiseen lisää lämpöä, ja alueen ilmakehä on ohut ja kylmä, joten pienikin lämpöenergian lisäys näkyy voimakkaasti. [[Barentsinmeri]] on erityisen nopeasti lämpenevä alue. Ylhäältä sen kyllä huomaa, kun jää ei enää ulotu entiseen paikkaan.",
+  "linkit": [
+   "arktiseksi vahvistumiseksi",
+   "Barentsinmeri"
+  ],
+  "jatkot": [
+   "Miten merijään väheneminen vaikuttaa säähän?",
+   "Miten arktinen lämpeneminen näkyy Pohjoismaissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:jaameri",
+  "kysymys": "Kuinka paksua Jäämeren jää on?",
+  "uusi": false,
+  "vastaus": "No niin, tuosta on monta lukua. Jäämeren jään paksuus vaihtelee paljon: ensimmäisen talven aikana syntynyt jää on usein noin metrin tai pari paksua, ja monivuotinen jää voi olla useita metrejä, jopa kolmesta neljään metriin, mutta tarkoista keskiarvoista en ole varma. Jäähän kasautuu paikoin paljon paksummiksi [[paineharjanteiksi]], kun lautat työntyvät toisiaan vasten. Viime vuosikymmeninä monivuotisen jään määrä on pienentynyt ja [[merijää]] on ohentunut, ja kesällä sitä sulaa yhä enemmän. Pitkä vastaus, mutta jäässä on paljon kerroksia.",
+  "linkit": [
+   "paineharjanteiksi",
+   "merijää"
+  ],
+  "jatkot": [
+   "Miksi Jäämeren jää on vähentynyt?",
+   "Miten jään paksuutta mitataan?"
+  ]
+ },
+ {
+  "kohde": "kohde:jaameri",
+  "kysymys": "Miksi jotkut kutsuvat sitä Atlantin suistoksi?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Nimitys perustuu siihen, että Jäämereen virtaa suurin osa sen saamasta valtamerivedestä Atlantilta, [[Barentsinmeren]] ja Grönlannin sekä Huippuvuorten välisen väylän kautta, kun taas yhteys Tyyneen mereen on kapea ja matala. Atlantin vesi tuo mukanaan lämpöä ja suolaa, ja [[Pohjois-Atlantin virta]] vaikuttaa selvästi jään esiintymiseen. Tästä syystä osa tutkijoista pitää Jäämerta eräänlaisena Atlantin jatkeena eikä täysin itsenäisenä valtamerenä. Nimitys ei ole yleinen eikä kaikkien hyväksymä, joten kyse on yhdestä tavasta jäsentää kokonaisuutta. Ylhäältä katsoen vesi kyllä kulkee vain yhteen suuntaan, hyvin tyynesti.",
+  "linkit": [
+   "Barentsinmeren",
+   "Pohjois-Atlantin virta"
+  ],
+  "jatkot": [
+   "Mitä tarkoittaa Pohjoinen napameri?",
+   "Miksi Jäämeri on maailman valtameristä pienin?"
+  ]
+ },
+ {
+  "kohde": "kohde:jaameri",
+  "kysymys": "Mikä on napayö?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Napayö on ajanjakso, jolloin aurinko ei nouse horisontin yläpuolelle yhtään koko vuorokauden aikana. Sitä esiintyy [[napapiirin]] pohjoispuolella, joka sijaitsee noin 66,5 asteen leveysasteella. Mitä lähempänä napaa ollaan, sitä pidempi napayö on: napapiirillä se kestää vain vuorokauden, mutta aivan navalla aurinko on horisontin alapuolella noin puoli vuotta. Suomessa vastaavaa ilmiötä kutsutaan [[kaamokseksi]], ja sen jälkeen auringon palaaminen on merkittävä tapahtuma. Pitkä pimeä, mutta kyllä minä silti löydän perille.",
+  "linkit": [
+   "napapiirin",
+   "kaamokseksi"
+  ],
+  "jatkot": [
+   "Mitä on yötön yö tai kesäkuun yötön päivä?",
+   "Miten pitkä on kaamos Pohjois-Suomessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:jaameri",
+  "kysymys": "Miksi magneettinen pohjoisnapa ei ole maantieteellisellä navalla?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Maantieteellinen pohjoisnapa on piste, jonka läpi maapallon pyörimisakseli kulkee. Magneettinen napa taas määräytyy maapallon [[magneettikentän]] mukaan, ja kenttä syntyy sulan raudan liikkeestä maapallon ytimessä. Koska ydinneste liikkuu, magneettinen napa ei pysy paikallaan vaan siirtyy vuosittain jopa kymmeniä kilometrejä, eikä se siksi osu samaan kohtaan kuin maantieteellinen napa. [[Kompassin]] neula osoittaa magneettisen navan suuntaan, minkä vuoksi navigoinnissa on huomioitava ero. Kyyhkynä minä navigoin ihan itse, kiitos vain.",
+  "linkit": [
+   "magneettikentän",
+   "Kompassin"
+  ],
+  "jatkot": [
+   "Miten kyyhkyset ja linnut suunnistavat magneettikentän avulla?",
+   "Mitä tarkoittaa kompassin deklinaatio?"
+  ]
+ },
+ {
+  "kohde": "kohde:jaameri",
+  "kysymys": "Miksi Jäämeri on muita valtameriä matalampi?",
+  "uusi": true,
+  "vastaus": "No jopas. Jäämeressä on poikkeuksellisen laajoja [[mannerjalustoja]], erityisesti Euraasian pohjoisrannikon edustalla, ja ne ovat verrattain matalaa merenpohjaa. Mannerjalustat ovat veden alle jääneitä mantereen reuna-alueita, ja niiden osuus Jäämeren pinta-alasta on suuri verrattuna muihin [[valtameriin]]. Keskellä on syvempiä altaita, mutta kokonaisuutena keskisyvyys jää pienemmäksi kuin muilla valtamerillä. Siksi Jäämeri on pienin ja matalin valtameristä. Ylhäältä sen kyllä huomaa, sillä jää peittää pohjan salaisuudet.",
+  "linkit": [
+   "mannerjalustoja",
+   "valtameriin"
+  ],
+  "jatkot": [
+   "Mikä on mannerjalusta?",
+   "Miten Jäämeren pohjaa on tutkittu?"
+  ]
+ },
+ {
+  "kohde": "kohde:ohotanmeri",
+  "kysymys": "Mitkä ovat Kuriilit?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Kuriilit ovat tulivuorisaarten ketju, joka kaartuu Kamtšatkan niemimaan ja Hokkaidon välillä ja erottaa Ohotanmeren Tyynestä merestä; monet saarista ovat [[tulivuorista]] syntyneitä. Vuonna 1875 Pietarissa allekirjoitettiin sopimus, jossa Japani luopui osuudestaan Sahaliniin ja sai vastineeksi Kuriilit; sopimuksen allekirjoittivat muun muassa [[Aleksandr Gortšakov]] ja Enomoto Takeaki. Elokuussa 1945 saaret siirtyivät Neuvostoliitolle, ja ne ovat nykyisin Venäjän hallinnassa. Japani vaatii kuitenkin eteläisimpiä saaria itselleen, ja asia on yhä kiistanalainen, joten kantoja on kaksi eikä yhteistä näkemystä ole. Tällaista sopimuspingottelua minä olen seurannut [[Pietarissa]] ennenkin.",
+  "linkit": [
+   "tulivuorista",
+   "Aleksandr Gortšakov",
+   "Pietarissa"
+  ],
+  "jatkot": [
+   "Miksi Kuriilien eteläisistä saarista kiistellään?",
+   "Mitä Sahalinin saarelle tapahtui vuoden 1875 jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:ohotanmeri",
+  "kysymys": "Miksi Sahalin on niin pitkä ja kapea?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Sahalin on 948 kilometriä pitkä ja kapeimmillaan vain 26 kilometriä leveä kaistale, jonka erottaa mantereesta kapea [[salmi]]; salmen kapein kohta pohjoisessa on runsaat seitsemän kilometriä. Saaren muoto seuraa maankuoren rakennetta ja vuoristoharjanteiden suuntaa, ja siihen vaikuttavat [[laattatektoniikan]] voimat. Tarkasta geologisesta selityksestä en ole varma, joten tässä kannattaa luottaa asiantuntijoiden kirjoituksiin. Sahalin on Venäjän suurin saari, ja pitkä muoto tekee siitä erikoisen näköisen kartalla. Pitkä tarina, ja sentään yksi niemi.",
+  "linkit": [
+   "salmi",
+   "laattatektoniikan"
+  ],
+  "jatkot": [
+   "Mitä Sahalinin saarella on nähtävää?",
+   "Miten salmi voi muodostua mantereen ja saaren väliin?"
+  ]
+ },
+ {
+  "kohde": "kohde:ohotanmeri",
+  "kysymys": "Miksi Ohotanmeri jäätyy talvisin?",
+  "uusi": true,
+  "vastaus": "Kato. Ohotanmeri sijaitsee niin pohjoisessa ja niin lähellä kylmää mannerta, että talvella arktiset tuulet jäähdyttävät sen pintaa voimakkaasti, ja pohjoisosa jäätyy säännöllisesti. Lähteiden mukaan meri on yksi maailman eteläisimpiä merialueita, joilla esiintyy laajaa kausittaista [[merijäätä]]. Jäätä ajautuu myös eteläänpäin, ja [[ajojäätä]] on ajoittain nähty Hokkaidon rannikolla, mutta tarkoista määristä en ole varma. Jään ilmaantuminen vaikuttaa kalastukseen ja laivaliikenteeseen. Tosi kylmä paikka, ja pullan sulattaminen olisi täällä melkoinen urakka.",
+  "linkit": [
+   "merijäätä",
+   "ajojäätä"
+  ],
+  "jatkot": [
+   "Miten merijää vaikuttaa kalastukseen?",
+   "Mitä ajojää tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:ohotanmeri",
+  "kysymys": "Millaisia eläimiä Ohotanmerellä elää?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Ohotanmeri on kalaisa ja ravinteikas merialue, jossa elää muun muassa [[lohia]], [[turskakaloja]] ja erilaisia rapulajeja, ja sen vesillä on kalastettu paljon. Alueella elää myös hylkeitä ja valaita, ja pesimälinnustoa on suurilla rannikkoalueilla. Runsas eliöstö johtuu osittain meren ravinteikkaista vesistä, jotka nousevat pintaan ja ruokkivat planktonia. Tarkoista lajiluetteloista en ole varma, mutta yleiskuva on selvä: meri on elävä ja tuottava. Kyyhkynä minä tosin tunnen paremmin rantojen jätteet ja leivänmurut.",
+  "linkit": [
+   "lohia",
+   "turskakaloja"
+  ],
+  "jatkot": [
+   "Miksi Ohotanmeri on ravinteikas?",
+   "Miten kalastus vaikuttaa meren eliöihin?"
+  ]
+ },
+ {
+  "kohde": "kohde:ohotanmeri",
+  "kysymys": "Mitä reunameri tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Ai se. Reunameri on valtameren osa, joka on osittain mantereiden tai saarten rajaama mutta yhteydessä valtamereen. Se erotetaan sisämerestä, joka on lähes kokonaan maalla ympäröity, kuten Itämeri. Esimerkkejä reunameristä ovat [[Pohjanmeri]], joka kuuluu Atlantin yhteyteen, ja [[Barentsinmeri]], joka kuuluu Jäämereen. Reunameriä määrittävät sekä niiden sijainti että niiden vesien vaihto valtameren kanssa. Reunameren rannat ja saaret vaikuttavat voimakkaasti sen virtauksiin ja ilmastoon.\n\nValtamerille tarvitaan reunat, jotta niistä voi sanoa jotain, muuten ne olisivat pelkkää kosteaa pitkästymistä. Minä kannan mieluummin viestiä kuin kartan reunaa.",
+  "linkit": [
+   "Pohjanmeri",
+   "Barentsinmeri"
+  ],
+  "jatkot": [
+   "Mikä on sisämeri ja mikä reunameri?",
+   "Miten Pohjanmeri eroaa Itämerestä?"
+  ]
+ },
+ {
+  "kohde": "kohde:beringinmeri",
+  "kysymys": "Kuka Vitus Bering oli?",
+  "uusi": false,
+  "vastaus": "Kato, tästä miehestä minä olen lukenut matkalla useammankin kirjeen. Vitus Bering syntyi Tanskassa [[Horsensin]] kaupungissa vuonna 1681 ja siirtyi nuorena Venäjän palvelukseen, jossa hänestä tuli laivaston upseeri. Hän johti [[Pietari Suuren]] määräyksestä Kamtšatkan retkikuntaa, ja sen aikana hän purjehti vuonna 1728 salmen läpi Tyyneltämereltä pohjoiseen. Myöhemmin hän johti vielä toista, laajempaa retkikuntaa, ja hänen aluksensa Pyhä apostoli Pietari sekä [[Aleksei Tširikovin]] alus Pyhä apostoli Paavali antoivat nimen Avatšanlahden satamalle. Bering kuoli talvella 1741 paluumatkalla autiolle saarelle, jota kutsutaan nykyään hänen nimellään. Ja minä luulin, että kyyhkyn reitit olivat pitkiä.",
+  "linkit": [
+   "Horsensin",
+   "Pietari Suuren",
+   "Aleksei Tširikovin"
+  ],
+  "jatkot": [
+   "Mikä oli Suuri pohjoinen retkikunta?",
+   "Mitä Kamtšatkan retkikunnat tutkivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:beringinmeri",
+  "kysymys": "Kuinka kapea Beringinsalmi on?",
+  "uusi": false,
+  "vastaus": "No niin, tämän minä tiedän, ja tulos on yllättävän pieni. Beringinsalmi on kapeimmillaan noin 80–85 kilometriä leveä, ja lähteet antavat hieman vaihtelevia lukuja. Salmi on myös matala, kapeimmassa kohdassa vain muutamia kymmeniä metrejä syvä. Sen keskellä on kaksi pientä Diomedesaarta, joiden välimatka on vain muutama kilometri ja joiden välistä kulkee Venäjän ja Yhdysvaltain raja. Salmi erottaa [[Euraasian]] ja Amerikan mantereet, ja [[jääkauden]] aikana sen paikalla oli kuivaa maata. Kyyhky ylittää sen iltapäivässä, jos tuuli sattuu oikealta.",
+  "linkit": [
+   "Euraasian",
+   "jääkauden"
+  ],
+  "jatkot": [
+   "Voiko Beringinsalmen yli kävellä talvella?",
+   "Miksi jääkauden aikana merenpinta oli alempana?"
+  ]
+ },
+ {
+  "kohde": "kohde:beringinmeri",
+  "kysymys": "Mikä on Beringin maasilta?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Beringin maasilta eli Beringia oli laaja maa-alue, joka yhdisti Koillis-Aasian ja Pohjois-Amerikan [[jääkausien]] aikana. Kun suuri osa vedestä sitoutui jäätiköihin, [[merenpinnan]] taso laski ja Beringinmeren matala pohja sekä nykyisen salmen kohta paljastuivat kuivaksi maaksi. Kyse ei ollut kapeasta sillasta vaan satojen kilometrien levyisestä alueesta, jonka maisema muistutti [[tundran]] kaltaista avointa maata. Tutkijoiden mukaan sen kautta liikkuivat eläimet ja ihmiset mantereelta toiselle, mutta ajoituksesta ja reiteistä kiistellään yhä.\n\nSellaisen sillan minä kyllä ottaisin: ei tarvitsisi lentää lainkaan, ja nyt se on merenpohjalla kalojen käytössä. Tämän tiedon sain suvulta, joka on lukenut monta karttaa.",
+  "linkit": [
+   "jääkausien",
+   "merenpinnan",
+   "tundran"
+  ],
+  "jatkot": [
+   "Mitä eläimiä jääkauden Beringiassa eli?",
+   "Milloin viimeinen jääkausi päättyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:beringinmeri",
+  "kysymys": "Jäätyykö Beringinmeri talvella?",
+  "uusi": true,
+  "vastaus": "Ai tota. Beringinmeren pohjoisosa jäätyy talvella, ja [[merijää]] peittää silloin suuren osan sen pohjois- ja itäosista, kun taas syvä eteläosa pysyy yleensä avoimena. Syynä ovat korkea leveysaste ja laaja, matala [[mannerjalusta]], jolla vesi jäähtyy nopeasti. Jää alkaa muodostua syksyllä ja sulaa kevään ja alkukesän aikana, ja sen laajuus vaihtelee vuodesta toiseen. Minä pysyn kyl mieluummin eteläpuolella.",
+  "linkit": [
+   "merijää",
+   "mannerjalusta"
+  ],
+  "jatkot": [
+   "Millaisia eläimiä Beringinmerellä elää?",
+   "Miten merijää vaikuttaa kalastukseen?"
+  ]
+ },
+ {
+  "kohde": "kohde:beringinmeri",
+  "kysymys": "Missä päivämäärä vaihtuu Beringinsalmen kohdalla?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Kansainvälinen [[päivämääräraja]] kulkee Tyynellämerellä suunnilleen 180. [[pituuspiirin]] mukaan, mutta Beringinsalmen seudulla se mutkittelee niin, että Venäjän Tšukotka jää rajan länsipuolelle ja Alaska itäpuolelle. Rajan eri puolilla kalenteripäivä on eri: länsipuolella on jo seuraava päivä. Salmen keskellä sijaitsevien Diomedesaarten välillä, jotka ovat vain muutaman kilometrin päässä toisistaan, ero on lähes vuorokausi, minkä vuoksi aarista käytetään leikillään nimityksiä eilisen ja huomisen saari. Raja on sopimuksenvarainen, ei luonnonlaki. Kyyhkyllä ei oo kalenteria, vain säätila.",
+  "linkit": [
+   "päivämääräraja",
+   "pituuspiirin"
+  ],
+  "jatkot": [
+   "Miksi päivämääräraja ei ole suora viiva?",
+   "Miten aikavyöhykkeet on sovittu?"
+  ]
+ },
+ {
+  "kohde": "kohde:volga",
+  "kysymys": "Miksi Volga ei laske mereen vaan järveen?",
+  "uusi": false,
+  "vastaus": "Kas vaan, tuohon liittyy nimenomaan nimien kummallisuus. [[Kaspianmeri]] ei ole yhteydessä valtamereen, joten Volgan vesi ei pääse sieltä pois muuten kuin [[haihtumisen]] kautta; sellaista aluetta kutsutaan [[sisävaluma-alueeksi]]. Kaspianmerta pidetään usein maailman suurimpana järvenä, vaikka nimessä on meri, ja vesi siinä on vain lievästi suolaista. Sen oikeudellinen asema on ollut rantavaltioiden kesken myös kiistanalainen: osa käsittelee sitä merenä, osa järvenä. Nimi oli ensin ja maantiede vasta perässä, sanoisin.",
+  "linkit": [
+   "Kaspianmeri",
+   "haihtumisen",
+   "sisävaluma-alueeksi"
+  ],
+  "jatkot": [
+   "Mitkä maat ovat Kaspianmeren rannalla?",
+   "Miksi Kaspianmeren pinta on vaihdellut?"
+  ]
+ },
+ {
+  "kohde": "kohde:volga",
+  "kysymys": "Mikä Rusin kaganaatti oli?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän, mutta se on tutkijoille vaikea nippu. Rusin kaganaatilla tarkoitetaan varhaista, 800-luvun alkupuolella syntynyttä itäslaavilais-skandinaavista valtiomuodostelmaa, jonka hallitsijaa lähteet kutsuvat kaganiksi, kuten itäisessä Euroopassa oli totuttu tehdä turkkilaisten ja kasaarien keskuudessa. Tärkein varhainen maininta on Bertinin [[annaaleissa]] vuodelta 839: [[Ludvig Hurskaan]] hoviin saapui kansaa, jonka lähettiläät sanoivat itseään rusien edustajiksi ja jonka ruhtinasta kutsuttiin kaganiksi. Missä kaganaatin keskus tarkalleen sijaitsi, tutkijat eivät ole yksimielisiä, ja siksi tiedot jäävät osin epävarmoiksi. Kirje oli siis matkalla jo silloin.",
+  "linkit": [
+   "annaaleissa",
+   "Ludvig Hurskaan"
+  ],
+  "jatkot": [
+   "Keitä olivat varhaiset rusit?",
+   "Mistä Venäjän nimi on peräisin?"
+  ]
+ },
+ {
+  "kohde": "kohde:volga",
+  "kysymys": "Mitkä kaupungit ovat Volgan varrella?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Volgan varrella sijaitsevat muun muassa [[Tver]], Jaroslavl, [[Nižni Novgorod]], [[Kazan]], Samara, Saratov, [[Volgograd]] ja [[Astrahan]]. Jokea pitkin on kulkenut vuosisatoja tärkeä kauppareitti Venäjän sisäosista etelään Kaspianmerelle, ja monet näistä kaupungeista ovat kasvaneet joen liikenteen ja kaupan varassa. Joen varrella kohtaavat myös eri kulttuurit: esimerkiksi Kazan on tataarien kulttuurin keskus ja Tatarstanin pääkaupunki.",
+  "linkit": [
+   "Tver",
+   "Nižni Novgorod",
+   "Kazan",
+   "Volgograd",
+   "Astrahan"
+  ],
+  "jatkot": [
+   "Miten Volgaa on käytetty kuljetusreittinä?",
+   "Mikä Nižni Novgorodin vuosittainen markkina oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:volga",
+  "kysymys": "Millainen on Volgan suisto?",
+  "uusi": true,
+  "vastaus": "Mmm— Volgan suisto Kaspianmeren rannalla on laaja ja haarautuva vesistö, jossa joki jakautuu lukuisiksi sivu-uomiksi ja pieniksi saariksi ennen kuin se päättyy mereen. Lähteiden mukaan se kuuluu Euroopan suurimpiin jokisuistoihin. Alue on tärkeä luonnonsuojelun kannalta, sillä sen [[kosteikot]] ovat muuttolintujen levähdyspaikkoja ja kalaston, esimerkiksi sampikalojen, elinympäristöä. Suiston keskuksena on [[Astrahanin]] kaupunki. Pöllö olisi kertonut tämän paremmin, mutta hän parantelee yhä siipeään.",
+  "linkit": [
+   "kosteikot",
+   "Astrahanin"
+  ],
+  "jatkot": [
+   "Miksi sampikalat ovat uhanalaisia?",
+   "Mitä lintuja suistossa pesii?"
+  ]
+ },
+ {
+  "kohde": "kohde:volga",
+  "kysymys": "Onko Volga padottu voimalaitoksia varten?",
+  "uusi": true,
+  "vastaus": "Ai se. Kyllä on: Volgalle on rakennettu Neuvostoliiton aikana ja sen jälkeen ketju padottuja [[tekojärviä]] ja vesivoimalaitoksia, joten joki on nykyään monin paikoin enemmän altaiden jono kuin vapaasti virtaava vesi. Tunnetuimpia altaita ovat esimerkiksi Rybinskin ja Kuibyshevin tekojärvet, mutta tarkkaa lukumäärää en ole varma. Padot tuottavat sähköä, säännöstelevät tulvia ja pitävät joen laivakulun mahdollisena. Ne ovat kuitenkin muuttaneet [[kalojen]] vaellusta ja suiston oloja.\n\nYlhäältä katsottuna se näyttää helminauhalta, ja minä pidän siitä, vaikka insinöörit sanovat sen olevan vain sähköä. Kalat tosin ovat eri mieltä.",
+  "linkit": [
+   "tekojärviä",
+   "kalojen"
+  ],
+  "jatkot": [
+   "Miksi padot haittaavat sampikalojen vaellusta?",
+   "Miten Volgan tulvat ovat muuttuneet?"
+  ]
+ },
+ {
+  "kohde": "kohde:ob",
+  "kysymys": "Mitkä ovat Siperian kolme suurta jokea?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Siperian kolme suurta jokea ovat Ob, Jenisei ja Lena, ja ne kaikki virtaavat pohjoiseen [[Jäämereen]]. Ob on läntisin, Jenisei kulkee Siperian keskiosien läpi ja Lena on itäisin. Jokaisella on valtava [[valuma-alue]], joka ulottuu pitkälle etelään vuoristoihin saakka, ja niiden vedet kuljettavat sulamisvesiä ja sateita tuhansien kilometrien matkan. Kyyhkynä minä lennän jokien yli, en niitä pitkin.",
+  "linkit": [
+   "Jäämereen",
+   "valuma-alue"
+  ],
+  "jatkot": [
+   "Mistä Jenisei saa alkunsa?",
+   "Mitä Lenajoen varrella sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:ob",
+  "kysymys": "Miksi Siperian joet virtaavat pohjoiseen?",
+  "uusi": false,
+  "vastaus": "Kato, hyvä kysymys tuo. Joet virtaavat aina alamäkeen, ja Siperiassa maa viettää pääosin etelän vuorista pohjoiseen kohti Jäämeren matalaa rannikkoa: etelässä ovat Altain ja Sajanin vuoristot, pohjoisessa laaja tasanko ja meri. [[Vedenjakaja]] kulkee siis etelässä, ja sen pohjoispuolella vedet suuntaavat pohjoiseen, kun taas etelän joet laskevat muualle. Pohjoisvirtauksella on seurauksensa: keväällä sulaminen alkaa joen yläjuoksulla etelässä, kun alajuoksu on vielä jäässä, ja jään tukkimat joet aiheuttavat laajoja [[kevättulvia]]. Ja tämän kaiken minä sain mahtumaan yhteen kappaleeseen.",
+  "linkit": [
+   "Vedenjakaja",
+   "kevättulvia"
+  ],
+  "jatkot": [
+   "Miksi Ob tulvii keväisin laajoille alueille?",
+   "Missä Altain vuoristo sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:ob",
+  "kysymys": "Mikä Irtyš on ja mistä se virtaa?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Irtyš on Obin suurin [[sivujoki]], ja se on itsekin erittäin pitkä: se saa alkunsa Altain vuoriston itäisiltä rinteiltä, virtaa [[Kazakstanin]] läpi Venäjälle ja yhtyy Obiin Länsi-Siperiassa. Yhdessä ne muodostavat kaikkiaan 5 410 kilometrin mittaisen jokijärjestelmän, joka on maailman seitsemänneksi pisin. Joet kulkevat osittain laajoilla, matalilla tasangoilla, joilla vesi liikkuu hitaasti ja usein haarautuu moniksi uomiksi. Sivujoki pitkine matkoineen on siis suurempi kuin moni oma joki.",
+  "linkit": [
+   "sivujoki",
+   "Kazakstanin"
+  ],
+  "jatkot": [
+   "Miten Ob ja Irtyš yhtyvät?",
+   "Mitä Länsi-Siperian tasanko on?"
+  ]
+ },
+ {
+  "kohde": "kohde:ob",
+  "kysymys": "Mihin Ob-joki laskee?",
+  "uusi": true,
+  "vastaus": "No jopas. Ob laskee Jäämereen kuuluvaan Karanmereen pitkän ja kapean Obinlahden kautta. Lahti on pitkä [[jokisuisto]], johon joen vesi sekoittuu meriveteen, ja sen ympäristö on harvaan asuttua, suurelta osin [[ikiroutaa]] ja tundraa. Talvella lahti jäätyy, ja keväällä joen jäät lähtevät liikkeelle etelästä pohjoiseen. Joki on kulkenut pitkän matkan Altain vuorilta tänne asti.\n\nTuo on minun mielestäni kyllä vaikuttava matka: tuhansia kilometrejä pelkkää vettä ja metsää. Minä väsyisin ensimmäisen sadan jälkeen.",
+  "linkit": [
+   "jokisuisto",
+   "ikiroutaa"
+  ],
+  "jatkot": [
+   "Mikä Karanmeri on?",
+   "Miksi ikirouta sulaa nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:ob",
+  "kysymys": "Mitä Altain vuoret ovat?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Altai on laaja [[vuoristo]] Keski-Aasiassa, jossa Venäjän, Kazakstanin, Kiinan ja Mongolian alueet kohtaavat. Sen korkein huippu on Belukha, jonka korkeus on noin 4 500 metriä, ja sieltä alkaa moni tärkeä joki, muun muassa Ob-joen latvavedet Katun ja Bija. Vuoristossa on [[jäätiköitä]], järviä ja monipuolista kasvillisuutta, ja alue on tunnettu myös arkeologisista löydöistään. Minä pysyn alempana, ilma on siellä ohutta.",
+  "linkit": [
+   "vuoristo",
+   "jäätiköitä"
+  ],
+  "jatkot": [
+   "Mitä arkeologisia löytöjä Altailta on tehty?",
+   "Miten Katun ja Bija yhtyvät?"
+  ]
+ },
+ {
+  "kohde": "kohde:kizhin-pogosta",
+  "kysymys": "Kuinka monta kupolia Kirkastuksen kirkossa on?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: kaksikymmentäkaksi. Kirkastuksen kirkossa on 22 [[kupolia]], ja se on Kizhin pogostan kahdesta suuresta puukirkosta suurempi. Kupolit on rakennettu puusta ja nousevat porrastaen ylöspäin, ja ne muodostavat yhdessä kirkon tunnistettavan siluetin. Kirkon alttari laskettiin 6. kesäkuuta 1714, ja se on lämmittämätön kesäkirkko. Vieressä on [[Esirukouksen kirkko]], jossa kupoleita on yhdeksän. Pelkkä laskeminen väsyttää jo kyyhkyn.",
+  "linkit": [
+   "kupolia",
+   "Esirukouksen kirkko"
+  ],
+  "jatkot": [
+   "Miksi kirkossa on näin monta kupolia?",
+   "Mikä on Esirukouksen kirkko?"
+  ]
+ },
+ {
+  "kohde": "kohde:kizhin-pogosta",
+  "kysymys": "Mitä sana pogosta tarkoittaa?",
+  "uusi": false,
+  "vastaus": "Tost minä osaan kertoo. Pogosta on vanha venäläinen sana, joka tarkoittaa aidan sisään jäävää aluetta. Kizhin saarella tällä viitataan kirkkojen ja kellotapulin muodostamaan kokonaisuuteen, jota ympäröi [[puuaita]]. Kokonaisuus juontuu 1600-luvulle, ja se on ollut Unescon [[maailmanperintöluettelossa]] vuodesta 1990. Sana on siis aika arkinen, vaikka sen kuvaama paikka ei ole.\n\nSanan tiesin, mutta pidän siitä silti, että puun keskellä saarella aita on ollut suojana ennen kuin kukaan keksi aitaa matkamuistoksi. Minä en ole varma, kuinka vanha sana tarkalleen on.",
+  "linkit": [
+   "puuaita",
+   "maailmanperintöluettelossa"
+  ],
+  "jatkot": [
+   "Milloin Kizhi tuli Unescon luetteloon?",
+   "Kuka voi vierailla Kizhin saarella?"
+  ]
+ },
+ {
+  "kohde": "kohde:kizhin-pogosta",
+  "kysymys": "Miten kirkot rakennettiin ilman nauloja?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Kizhin kirkot on rakennettu hirsistä käyttäen [[salvostekniikkaa]]: hirret yhdistetään toisiinsa lovilla ja liitoksilla niin, että rakenne pysyy koossa oman painonsa ja muotonsa ansiosta. Rakennusten perusyksikkö on pyöreä mäntyhirsi, jonka halkaisija on noin kolmekymmentä senttiä ja pituus kolmesta viiteen metriä. Työkaluna käytettiin pääasiassa [[kirvestä]], ja tuhannet hirret tuotiin mantereelta saarelle. Kuvaus on tiivis, ja tarkat liitostekniikat vaihtelevat rakennuksesta toiseen. Minä en olisi jaksanut kantaa yhtäkään hirttä.",
+  "linkit": [
+   "salvostekniikkaa",
+   "kirvestä"
+  ],
+  "jatkot": [
+   "Miten puukirkot suojataan lahoamiselta?",
+   "Mitä muita puukirkkoja Venäjällä on?"
+  ]
+ },
+ {
+  "kohde": "kohde:kizhin-pogosta",
+  "kysymys": "Missä Kizhin saari sijaitsee?",
+  "uusi": true,
+  "vastaus": "Kas vaan, tämä on helppo. Kizhin saari sijaitsee Äänisjärven pohjoisosassa Karjalan tasavallassa Venäjällä, saaristossa, johon kuuluu lukuisia pieniä saaria. [[Äänisjärvi]] on Euroopan suurimpia järviä, ja sen rannalla sijaitsee tasavallan pääkaupunki [[Petroskoi]], josta saarelle pääsee vesiteitse. Saari on kapea ja pitkulainen, ja sen puukirkkojen siluetti erottuu kauas. Sieltä näkee pitkälle, joten minä lensin ohi.",
+  "linkit": [
+   "Äänisjärvi",
+   "Petroskoi"
+  ],
+  "jatkot": [
+   "Kuinka suuri Äänisjärvi on?",
+   "Miten Petroskoista pääsee Kizhiin?"
+  ],
+  "paikka": {
+   "nimi": "Kizhin saari",
+   "lat": 62.07,
+   "lon": 35.22,
+   "tarkkuus": "alue"
+  }
+ },
+ {
+  "kohde": "kohde:kizhin-pogosta",
+  "kysymys": "Millä Kizhin kirkkojen kupolit on päällystetty?",
+  "uusi": true,
+  "vastaus": "Katotaas. Kirkkojen kupolit on päällystetty [[haapalastuilla]], eli ohuilla haavasta tehdyillä laudoilla, jotka asetetaan limittäin kuin kalansuomut. [[Haapapuu]] harmaantuu ajan myötä hopeisenkiiltoiseksi, ja siksi kupolit vaikuttavat auringossa metallinhohtoisilta. Lastukatto suojaa rakennetta sateelta ja lumelta, ja uusin lastuja on vaihdettava aika ajoin. Kupoleita on kahdessa kirkossa yhteensä kolmekymmentäyksi, ja kaikki on päällystetty samalla tavalla. Viisas Pöllö olisi osannut kertoa pidemmän tarinan, mutta hänet kutsuttiin puhumaan johonkin.",
+  "linkit": [
+   "haapalastuilla",
+   "Haapapuu"
+  ],
+  "jatkot": [
+   "Kuinka usein haapalastut täytyy vaihtaa?",
+   "Miten Kizhin kirkkoja on korjattu?"
+  ]
+ },
+ {
+  "kohde": "kohde:solovetskin-luostari",
+  "kysymys": "Mikä oli Solovetskin kapina?",
+  "uusi": false,
+  "vastaus": "Kääk, tuo on raskas aihe. Solovetskin kapina oli 1600-luvun lopulla tapahtunut luostarin vastarinta tsaarin valtaa ja Venäjän ortodoksisen kirkon uudistusta vastaan. Patriarkka [[Nikonin]] aloittamat kirkonmenojen ja kirjojen uudistukset jakoivat kirkon, ja luostarin munkit liittyivät [[vanhauskoisiin]], jotka eivät niitä hyväksyneet. Vuosina 1668–1676 kestäneen vastarinnan aikana luostari oli piiritettynä, ja tsaari [[Aleksei Mihailovitš]] lähetti sinne joukkoja. Vastarinta päättyi vuonna 1676, kun luostari vallattiin. Tapahtumasta on nyt kulunut yli kolmesataa vuotta, ja kirkkojen välit ovat sittemmin muuttuneet, mutta kapina on jäänyt tärkeäksi osaksi vanhauskoisten muistia. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "Nikonin",
+   "vanhauskoisiin",
+   "Aleksei Mihailovitš"
+  ],
+  "jatkot": [
+   "Keitä vanhauskoiset olivat?",
+   "Mitä Nikonin kirkkouudistus muutti?"
+  ]
+ },
+ {
+  "kohde": "kohde:solovetskin-luostari",
+  "kysymys": "Mitä luostarissa tuotettiin?",
+  "uusi": false,
+  "vastaus": "Joo, tään minä muistan. Solovetskin luostari kasvoi kaupankäynnin varassa [[Vienanmeren]] alueen talouskeskukseksi, ja se tuotti [[suolaa]], jota keitettiin suolakeittimöissä: niitä oli 1660-luvulla 54. Lisäksi luostarilla oli ansapyyntiä, kalastusta, kiillelouhoksia, rautaruukkeja ja helmenkalastusta. Luostarissa eli 1600-luvulla noin 350 munkkia sekä 600–700 palvelijaa, käsityöläistä ja talonpoikaa, joten kyseessä oli oikea pieni yhteisö. Luostari oli myös [[rajalinnoitus]], jossa oli kymmeniä tykkejä. Suolaa riitti, mutta pullasta ei ole tietoa.",
+  "linkit": [
+   "Vienanmeren",
+   "suolaa",
+   "rajalinnoitus"
+  ],
+  "jatkot": [
+   "Miksi suola oli niin arvokasta?",
+   "Miten luostari puolustautui hyökkäyksiä vastaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:solovetskin-luostari",
+  "kysymys": "Mikä oli Solovetskin vankileiri?",
+  "uusi": true,
+  "vastaus": "Kääk, tuo on raskas asia. Solovetskin saarille perustettiin Neuvostoliiton aikana 1920-luvun alussa vankileiri, jonka kerrotaan olleen yksi Neuvostoliiton [[vankileirijärjestelmän]] alkupisteistä. Leirin alueena oli entinen luostari, ja sinne vietiin vankeja ympäri maata. Leiri lakkautettiin 1930-luvun lopulla, ja luostarin rakennukset palasivat kirkon käyttöön vasta 1990-luvulla, kun Neuvostoliitto oli hajonnut. Kohde on nykyään Unescon [[maailmanperintökohde]], ja leirin muisto on edelleen osa saaren tarinaa, joten siitä puhutaan asiallisesti ja tarkasti. Nämä ovat vuosilukuja, joista minä en ole täysin varma.",
+  "linkit": [
+   "vankileirijärjestelmän",
+   "maailmanperintökohde"
+  ],
+  "jatkot": [
+   "Milloin Neuvostoliitto hajosi?",
+   "Miten luostari on kunnostettu uudelleen?"
+  ]
+ },
+ {
+  "kohde": "kohde:solovetskin-luostari",
+  "kysymys": "Mikä Vienanmeri on?",
+  "uusi": true,
+  "vastaus": "Ai niin, tuo. Vienanmeri eli Valkoinen meri on Venäjän luoteisosassa sijaitseva matala merenlahti, joka on yhteydessä [[Barentsinmereen]] kapean salmen kautta. Sen rannalla sijaitsee muun muassa [[Arkangeli]], ja sen saaristoon kuuluvat Solovetskin saaret. Meri jäätyy talvella suureksi osaksi, ja sen rannikon asukkaat ovat eläneet kalastuksesta, suolanteosta ja merikaupasta jo vuosisatojen ajan. Nimi tulee valkoisesta jäästä ja lumesta, tai ainakin niin kerrotaan.\n\nLähimpänä meren yli on tullut lennettyä, mutta ei talvella; minä pidän kyllä enemmän lämpimästä. Tässä suvussa on aina ollut ajatus, että valkoinen on myös hyvä väri.",
+  "linkit": [
+   "Barentsinmereen",
+   "Arkangeli"
+  ],
+  "jatkot": [
+   "Milloin Vienanmeri jäätyy?",
+   "Mikä Arkangeli on?"
+  ]
+ },
+ {
+  "kohde": "kohde:solovetskin-luostari",
+  "kysymys": "Mitä igumeni tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Mmm— Igumeni on ortodoksisen [[luostarin]] johtaja, vastaava kuin läntisessä kirkossa apotti. Sana tulee kreikasta ja tarkoittaa johtajaa. Igumeni vastaa luostarin hengellisestä elämästä ja sen taloudesta, ja hänen alaisuudessaan munkit asuvat ja työskentelevät. Solovetskin luostarin tunnetuimpia igumeneita oli 1500-luvulla toiminut [[Filip Kolytšev]], jonka aikana luostarin tärkeimmät rakennukset valmistuivat. Johtajan virka oli siis kunnioitettu, ja vastuuta riitti.",
+  "linkit": [
+   "luostarin",
+   "Filip Kolytšev"
+  ],
+  "jatkot": [
+   "Mikä ero on munkilla ja nunnalla?",
+   "Miten ortodoksinen luostari on järjestetty?"
+  ]
+ },
+ {
+  "kohde": "kohde:kazanin-kreml",
+  "kysymys": "Kuka määräsi kremlin rakennettavaksi?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. [[Iivana Julma]] määräsi kremlin rakennettavaksi Kazanin khaanien entisen linnan raunioille. Työhön tsaari kutsui pihkovalaiset rakennusmestarit [[Postnik Jakovlevin]] ja [[Ivan Širjain]], jota kutsuttiin Barmaksi. Kohde on nykyisin [[Unescon]] maailmanperintökohde, ja se listattiin sinne vuonna 2000. Lyhyt vastaus, mut tuli kuitenkin sanottua kaikki.",
+  "linkit": [
+   "Iivana Julma",
+   "Postnik Jakovlevin",
+   "Ivan Širjain",
+   "Unescon"
+  ],
+  "jatkot": [
+   "Mikä Kazanin khaanikunta oli?",
+   "Mikä Marian ilmestyksen katedraali on?"
+  ]
+ },
+ {
+  "kohde": "kohde:kazanin-kreml",
+  "kysymys": "Mikä Söyembikän torni on?",
+  "uusi": false,
+  "vastaus": "Kato, tää on kyl tuttu kaiteelta. Söyembikän torni on Kazanin kremlin näkyvin maamerkki, vino torni, joka on todennäköisesti peräisin [[Pietari Suuren]] ajalta. Tunnettu tarina liittää sen [[Kazanin khaanikunnan]] viimeiseen kuningattareen, mutta tarina on perimätietoa eikä todettu tosiasia. Kremlin eteläpäätä hallitsee [[Spasskajan torni]], joka on samalla pääsisäänkäynti.\n\nVino torni on minusta ihan sympaattinen. Itse olen seissyt kaiteilla, jotka heiluvat, eikä kukaan ole tehnyt niistä maamerkkiä.",
+  "linkit": [
+   "Pietari Suuren",
+   "Kazanin khaanikunnan",
+   "Spasskajan torni"
+  ],
+  "jatkot": [
+   "Mikä Kazanin khaanikunta oli?",
+   "Mitä muuta Kazanin kremlin muurien sisällä on?"
+  ]
+ },
+ {
+  "kohde": "kohde:kazanin-kreml",
+  "kysymys": "Mitä apsis tarkoittaa kirkkoarkkitehtuurissa?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Apsis on kirkkorakennuksen päädyssä oleva puoliympyrän tai monikulmion muotoinen ulkonema, johon sijoitetaan yleensä [[alttari]]. Perinteisesti se on kirkon itäpäädyssä. Kazanin kremlin [[Marian ilmestyksen katedraalissa]] on viisi apsista ja kuusi pilaria, ja tällainen yhdistelmä on 1500-luvun venäläisistä kirkoista ainutlaatuinen. Kuusi pilaria ja viisi apsista, kyl minä tän jaksan ulkoa.",
+  "linkit": [
+   "alttari",
+   "Marian ilmestyksen katedraalissa"
+  ],
+  "jatkot": [
+   "Mikä on ortodoksisen kirkon ikonostaasi?",
+   "Mikä erottaa ortodoksisen ja katolisen kirkon?"
+  ]
+ },
+ {
+  "kohde": "kohde:kazanin-kreml",
+  "kysymys": "Mikä Tatarstan on?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Tatarstan on Venäjän federaation tasavalta [[Volgan]] alueella, ja sen pääkaupunki on [[Kazan]]. Alueen nimikkokansa ovat [[tataarit]], turkkilaista kieltä puhuva kansa, ja tataari on tasavallassa virallinen kieli venäjän rinnalla. Alueella on perinteisesti elänyt sekä muslimeja että ortodoksikristittyjä. Kazanissa on varmasti oma pullansa, en vaan tiedä sen nimee.",
+  "linkit": [
+   "Volgan",
+   "Kazan",
+   "tataarit"
+  ],
+  "jatkot": [
+   "Mihin kieliryhmään tataarin kieli kuuluu?",
+   "Miten Volga-joki on vaikuttanut Venäjän historiaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:kazanin-kreml",
+  "kysymys": "Mikä joki virtaa Kazanin kautta?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Kazan sijaitsee [[Volgan]] rannalla, ja kaupungin läpi virtaa pienempi [[Kazanka]]-joki, joka laskee Volgaan. Volga on Euroopan pisin joki ja Venäjän tärkeimpiä kulkuväyliä. Joki kulkee kyl suoremmin kuin minä.",
+  "linkit": [
+   "Volgan",
+   "Kazanka"
+  ],
+  "jatkot": [
+   "Mihin Volga-joki laskee?",
+   "Mitä kaupunkeja Volgan varrella on?"
+  ]
+ },
+ {
+  "kohde": "kohde:veliki-novgorod",
+  "kysymys": "Mikä Novgorodin tasavalta oli?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Novgorodin tasavalta oli keskiaikainen kaupunkivaltio, jonka keskuksena Novgorod toimi vuosina 1136–1478 ja joka hallitsi suurta osaa Venäjän pohjoisesta. Sen hallintoon kuului kaupunkilaisten [[veče]]-kansankokous, ja ruhtinaan valta oli sopimuksella rajattu. Tasavalta vaurastui kaupasta [[hansaliiton]] ja venäläiskaupunkien välillä, ja se liitettiin lopulta [[Moskovan]] suuriruhtinaskuntaan vuonna 1478. Sellaista menoa, jossa ei kuninkaita kumarrella, minä arvostan.",
+  "linkit": [
+   "veče",
+   "hansaliiton",
+   "Moskovan"
+  ],
+  "jatkot": [
+   "Mikä veče oli?",
+   "Miten Moskova liitti Novgorodin itseensä?"
+  ]
+ },
+ {
+  "kohde": "kohde:veliki-novgorod",
+  "kysymys": "Mikä oli hansan kontor?",
+  "uusi": false,
+  "vastaus": "No niin. Kontor oli hansakauppiaiden kauppa-asema ulkomailla, eli kauppiasyhteisön oma tukikohta vieraassa kaupungissa. Novgorodin kontor oli nimeltään Peterhof, ja se oli yksi [[hansaliiton]] suurista ulkomaisista kauppa-asemista; muita olivat muun muassa kontorit [[Bergenissä]], [[Lontoossa]] ja [[Brugessa]].\n\nKauppakirjeitä ne kontorit varmasti kirjoittivat, ja minä tiedän kyllä, kuinka paljon paperia sellainen touhu vaatii. Kyyhkynen olisi ollut nopeampi kuin laiva.",
+  "linkit": [
+   "hansaliiton",
+   "Bergenissä",
+   "Lontoossa",
+   "Brugessa"
+  ],
+  "jatkot": [
+   "Mikä hansaliitto oli?",
+   "Mitä hansakauppiaat Novgorodissa kauppasivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:veliki-novgorod",
+  "kysymys": "Mihin Volhov-joki laskee?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Volhov-joki virtaa [[Ilmenjärvestä]] pohjoiseen ja laskee [[Laatokkaan]]. Joki kulkee Novgorodin kaupungin kautta ja [[Staraja Ladogan]] ohi, ja se oli keskeinen osa keskiaikaista kauppareittiä Itämeren ja Venäjän sisäosien välillä. Minä lentäisin sen matkan suoraan, mut kauppiaat soutivat.",
+  "linkit": [
+   "Ilmenjärvestä",
+   "Laatokkaan",
+   "Staraja Ladogan"
+  ],
+  "jatkot": [
+   "Mikä Laatokka on?",
+   "Millaisia aluksia keskiajalla käytettiin jokikaupassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:veliki-novgorod",
+  "kysymys": "Mitä Unescon maailmanperintökohde tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Ai se. Unescon maailmanperintökohde on kulttuurin tai luonnon kannalta poikkeuksellisen arvokas kohde, joka on hyväksytty [[maailmanperintöluetteloon]] ja jonka suojelu on koko ihmiskunnan yhteinen asia. Luettelon perustana on vuonna 1972 hyväksytty [[maailmanperintösopimus]]. Novgorodin historialliset muistomerkit tulivat luetteloon vuonna 1992. Minun pesäpaikkani ei kyl ole luettelossa.",
+  "linkit": [
+   "maailmanperintöluetteloon",
+   "maailmanperintösopimus"
+  ],
+  "jatkot": [
+   "Kuka päättää kohteiden hyväksymisestä luetteloon?",
+   "Mitä tapahtuu, jos kohde on vaarassa tuhoutua?"
+  ]
+ },
+ {
+  "kohde": "kohde:veliki-novgorod",
+  "kysymys": "Mikä on Novgorodin Pyhän Sofian katedraali?",
+  "uusi": true,
+  "vastaus": "Mmm— nyt muistan. Pyhän Sofian katedraali on [[Novgorodin kremlin]] eli ydinlinnoituksen kirkko, ja se on rakennettu 1000-luvulla. Se on yksi Venäjän vanhimmista säilyneistä kivikirkoista. Katedraali oli [[Novgorodin tasavallan]] hengellinen keskus ja on yhä kaupungin tunnus. Samannimisiä Sofia-kirkkoja on myös [[Kiovassa]]. Kupolit on hyviä istumapaikkoja, sen sanon kokemuksesta.",
+  "linkit": [
+   "Novgorodin kremlin",
+   "Novgorodin tasavallan",
+   "Kiovassa"
+  ],
+  "jatkot": [
+   "Mitä Sofia-nimi kirkoissa tarkoittaa?",
+   "Millainen on Kiovan Pyhän Sofian katedraali?"
+  ]
+ },
+ {
+  "kohde": "kohde:kolan-syvareika",
+  "kysymys": "Kuinka syvälle reikä ylsi?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Kolan syväreikä SG-3 ylsi vuonna 1989 pystysuoraan 12 262 metrin syvyyteen, ja se on syvin ihmisen tekemä reikä maapallolla. Hanke oli [[Neuvostoliiton]] tiedehanke, jonka tavoitteena oli tunkeutua [[maankuoreen]] mahdollisimman syvälle. Reikä sijaitsee [[Kuolan niemimaalla]] lähellä Norjan rajaa.\n\nKaksitoista kilometriä alaspäin on minusta aivan käsittämätön matka. Minä lennän kyllä korkeammalle, mutta alaspäin en ole koskaan ollut kiinnostunut.",
+  "linkit": [
+   "Neuvostoliiton",
+   "maankuoreen",
+   "Kuolan niemimaalla"
+  ],
+  "jatkot": [
+   "Mitä Kolan reiästä lopulta opittiin?",
+   "Kuinka paksu maankuori on?"
+  ]
+ },
+ {
+  "kohde": "kohde:kolan-syvareika",
+  "kysymys": "Miksi kairaus keskeytettiin vuodeksi?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Lähteet eivät ole kaikilta osin yksimielisiä, mutta kairaus pysäytettiin vuonna 1983 noin vuodeksi tieteellisiä tutkimuksia varten, kun toinen reikä oli ohittanut 12 000 metriä. Usein mainitaan myös, että tauko ajoittui [[Moskovassa]] pidetyn kansainvälisen [[geologikongressin]] vuoteen 1984. En ole täysin varma tarkasta syystä. Vuoden tauko ei ole mitään minun lomiini verrattuna.",
+  "linkit": [
+   "Moskovassa",
+   "geologikongressin"
+  ],
+  "jatkot": [
+   "Miksi Kolan reiän poraus lopetettiin?",
+   "Miten syviä reikiä porataan?"
+  ]
+ },
+ {
+  "kohde": "kohde:kolan-syvareika",
+  "kysymys": "Miksi Kolan reiän poraus lopetettiin?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Pöllö parantelee siipeään, joten minä tuuraan. Syvimmällä lämpötila osoittautui odotettua korkeammaksi, lähteiden mukaan noin 180 asteeksi, ja kivi käyttäytyi syvällä niin, että poraaminen vaikeutui. Lisäksi [[Neuvostoliiton]] hajoamisen jälkeen hankkeen rahoitus loppui, ja poraus päättyi 1990-luvun alussa. Paikalla ei enää porata, ja syvyysennätys on jäänyt [[maankuoren]] historiaan. Jotkut reiät vaan eivät halua mennä syvemmälle.",
+  "linkit": [
+   "Neuvostoliiton",
+   "maankuoren"
+  ],
+  "jatkot": [
+   "Kuinka kuumaa maan sisällä on?",
+   "Mikä on maailman syvin kaivos?"
+  ]
+ },
+ {
+  "kohde": "kohde:kolan-syvareika",
+  "kysymys": "Kuinka paksu maankuori on?",
+  "uusi": true,
+  "vastaus": "Ai tota. Maankuori on Maan ohut uloin kerros. Mannerten alla se on tavallisesti noin 30–50 kilometriä paksu, merten alla vain noin 5–10 kilometriä. Kuoren alapuolella on [[vaippa]], josta kuori erottuu [[seismisten aaltojen]] nopeuden muutoksen perusteella, ja rajapintaa kutsutaan [[Mohorovičićin epäjatkuvuudeksi]]. Kolan syväreikä ylsi siis vain osan matkaa mannerkuoren läpi. Naarmu vaan, mut aika syvä sellainen.",
+  "linkit": [
+   "vaippa",
+   "seismisten aaltojen",
+   "Mohorovičićin epäjatkuvuudeksi"
+  ],
+  "jatkot": [
+   "Mistä Maan vaippa koostuu?",
+   "Miten seismiset aallot kertovat Maan sisäosista?"
+  ]
+ },
+ {
+  "kohde": "kohde:kolan-syvareika",
+  "kysymys": "Mikä Kuolan niemimaa on?",
+  "uusi": true,
+  "vastaus": "Katotaas. Kuolan niemimaa on Luoteis-Venäjällä sijaitseva niemimaa, jota rajaavat pohjoisessa [[Barentsinmeri]] ja idässä sekä etelässä [[Vienanmeri]]. Alueen suurin kaupunki on [[Murmansk]]. Siellä asuu perinteisesti [[saamelaisia]], ja siellä sijaitsee Hibiinien vuoristo. Kyl sinne asti lentää, jos on pakko.",
+  "linkit": [
+   "Barentsinmeri",
+   "Vienanmeri",
+   "Murmansk",
+   "saamelaisia"
+  ],
+  "jatkot": [
+   "Millainen ilmasto Kuolan niemimaalla on?",
+   "Keitä ovat Kuolan saamelaiset?"
+  ]
+ },
+ {
+  "kohde": "kohde:tunguskan-rajahdys",
+  "kysymys": "Miksi paikalta ei löydy kraatteria?",
+  "uusi": false,
+  "vastaus": "No jopas. Kraatteria ei jäänyt, koska kyseessä oli [[ilmaräjähdys]]: noin 50–60 metriä leveä kivinen [[asteroidi]] hajosi 5–10 kilometrin korkeudessa ennen kuin se ehti maahan. Räjähdyksen [[paineaalto]] kaatoi metsää, mutta törmäyskuoppaa ei syntynyt. Tapahtuma oli 30. kesäkuuta 1908, joten siitä on yli sata vuotta. Onneksi tuo oli aikoja sitten.",
+  "linkit": [
+   "ilmaräjähdys",
+   "asteroidi",
+   "paineaalto"
+  ],
+  "jatkot": [
+   "Mitä eroa on asteroidilla ja meteoriitilla?",
+   "Miten asteroidien törmäysvaaraa seurataan?"
+  ]
+ },
+ {
+  "kohde": "kohde:tunguskan-rajahdys",
+  "kysymys": "Kuinka laajalta alueelta metsä kaatui?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: metsää kaatui 2 150 neliökilometrin alalta. Räjähdyksen voimaksi on arvioitu 3–50 [[megatonnia]] TNT:tä, ja [[paineaalto]] kaatoi ihmisiä jaloiltaan ja rikkoi ikkunoita satojen kilometrien päässä. Alue oli harvaan asuttu, ja [[silminnäkijäkertomusten]] perusteella jopa kolme ihmistä saattoi kuolla. Tapahtuma ajoittuu 30. kesäkuuta 1908. Onpas siit onneksi jo pitkä aika.",
+  "linkit": [
+   "megatonnia",
+   "paineaalto",
+   "silminnäkijäkertomusten"
+  ],
+  "jatkot": [
+   "Mitä megatonni TNT:tä tarkoittaa?",
+   "Miksi arvio räjähdyksen voimasta vaihtelee niin paljon?"
+  ]
+ },
+ {
+  "kohde": "kohde:tunguskan-rajahdys",
+  "kysymys": "Mitä eroa on asteroidilla, meteorilla ja meteoriitilla?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Asteroidi on Auringon ympäri kiertävä kivinen tai metallinen kappale, joka on pienempi kuin planeetta. Kun avaruuden kappale tai sen palanen syöksyy [[ilmakehään]] ja hehkuu, ilmiötä kutsutaan meteoriksi eli [[tähdenlennoksi]]. Jos kappale tai sen osa päätyy maahan asti, sitä sanotaan [[meteoriitiksi]]. Minusta kaikki ne näyttää ylhäältä ihan samalta.",
+  "linkit": [
+   "ilmakehään",
+   "tähdenlennoksi",
+   "meteoriitiksi"
+  ],
+  "jatkot": [
+   "Mistä asteroidit ovat peräisin?",
+   "Kuinka usein meteoriitteja putoaa maahan?"
+  ]
+ },
+ {
+  "kohde": "kohde:tunguskan-rajahdys",
+  "kysymys": "Mitä megatonni TNT:tä tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Megatonni TNT:tä on räjähdysenergian yksikkö, joka vastaa miljoonan tonnin [[trinitrotolueenin]] räjähdyksessä vapautuvaa energiaa, eli noin 4,2 petajoulea. Se on tuhat [[kilotonnia]]. Räjähdysten voimaa verrataan tähän yksikköön, koska se antaa yhteisen mittapuun eri ilmiöille. Nämä luvut menee kyl yli kyyhkyn pään.",
+  "linkit": [
+   "trinitrotolueenin",
+   "kilotonnia"
+  ],
+  "jatkot": [
+   "Mitä TNT on?",
+   "Miten räjähdyksen energiaa mitataan?"
+  ]
+ },
+ {
+  "kohde": "kohde:tunguskan-rajahdys",
+  "kysymys": "Miten asteroidien törmäysvaaraa seurataan?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Asteroideja seurataan [[teleskoopeilla]], jotka kartoittavat taivasta ja mittaavat Maan lähelle tulevien kappaleiden ratoja. Havaintojen perusteella lasketaan, voiko kappale osua Maahan tulevina vuosikymmeninä. Yksi merkittävä koe oli NASA:n [[DART]]-luotain, joka törmäsi tahallaan asteroidi [[Dimorphokseen]] vuonna 2022 ja muutti sen kiertorataa. Joku sentään vahtii taivasta, mikä on kyyhkylle iso helpotus.",
+  "linkit": [
+   "teleskoopeilla",
+   "DART",
+   "Dimorphokseen"
+  ],
+  "jatkot": [
+   "Miten asteroidin rataa voi muuttaa?",
+   "Kuinka usein suuria asteroideja osuu Maahan?"
+  ]
+ },
+ {
+  "kohde": "kohde:tobolskin-kreml",
+  "kysymys": "Kuka oli Semjon Remezov?",
+  "uusi": false,
+  "vastaus": "Mmm— tost minä muistan jotain. Semjon Remezov oli [[kartografi]] ja Siperian ensimmäinen [[historioitsija]], joka jatkoi Tobolskin kremlin rakentamista 1600-luvun lopulla. Hän rakennutti virastopalatsin vuosina 1699–1704 kukkulan eteläisen jyrkänteen päälle ja kauppahallit vuosina 1702–1706. Hänet tunnetaan myös Siperian kartoistaan. Kartat ovat sellaista, mistä kyyhky on aina pitänyt.",
+  "linkit": [
+   "kartografi",
+   "historioitsija"
+  ],
+  "jatkot": [
+   "Miten Siperiaa kartoitettiin 1600-luvulla?",
+   "Mikä on kreml?"
+  ]
+ },
+ {
+  "kohde": "kohde:tobolskin-kreml",
+  "kysymys": "Ketkä rakensivat kremliä pakkotyössä?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Kremlin rakentamiseen käytettiin 1700-luvun alussa Tobolskiin karkotettuja ruotsalaisia sotavankeja, joita oli joutunut Siperiaan [[Suuren Pohjan sodan]] aikana; monet heistä olivat peräisin [[Poltavan]] taistelusta vuonna 1709. Tämä oli yli kolmesataa vuotta sitten, ja sotavankien pakkotyö oli tuolloin yleinen käytäntö useissa maissa. Kremlin rakennuttamista ohjasi Siperian ensimmäinen kuvernööri, ruhtinas Gagarin, joka halusi siitä monumentaalisen hallinto- ja kauppakeskuksen. Onneksi ajat on muuttuneet.",
+  "linkit": [
+   "Suuren Pohjan sodan",
+   "Poltavan"
+  ],
+  "jatkot": [
+   "Mikä oli Suuri Pohjan sota?",
+   "Mitä Poltavan taistelussa tapahtui?"
+  ]
+ },
+ {
+  "kohde": "kohde:tobolskin-kreml",
+  "kysymys": "Kuinka pitkä on virsta?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Virsta on vanha venäläinen pituusyksikkö, joka vastaa noin 1,07 kilometriä. Sitä käytettiin [[Venäjän keisarikunnan]] aikana matkojen mittana ennen [[metrijärjestelmän]] käyttöönottoa. Tobolskin kremlin rakennushistoriassa mainitaan, että Tobol-joen uomaa siirrettiin kaksi virstaa kukkulan sortumisen estämiseksi.\n\nVirsta on minusta täydellinen matka: sopivasti pitkä, ettei tarvitse vielä väsyä. Virsta oli sentään kauniimpi sana kuin kilometri.",
+  "linkit": [
+   "Venäjän keisarikunnan",
+   "metrijärjestelmän"
+  ],
+  "jatkot": [
+   "Mitä muita vanhoja pituusyksiköitä on ollut?",
+   "Milloin metrijärjestelmä otettiin käyttöön?"
+  ]
+ },
+ {
+  "kohde": "kohde:tobolskin-kreml",
+  "kysymys": "Kuka oli Jermak Timofejevitš?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Jermak Timofejevitš oli [[kasakkojen]] päällikkö, joka johti 1580-luvun alussa retkikuntaa Siperian khaanikuntaa vastaan. Retkikuntaa tukivat varakkaat kauppiaat, [[Stroganovit]], ja sitä pidetään Venäjän laajentumisen alkuna Siperiaan. Jermak kuoli vuonna 1585, ja Tobolsk perustettiin muutamaa vuotta myöhemmin, vuonna 1587. Ja tän kaiken minä muistan ilman karttaa.",
+  "linkit": [
+   "kasakkojen",
+   "Stroganovit"
+  ],
+  "jatkot": [
+   "Keitä kasakat olivat?",
+   "Miten Venäjä laajeni Siperiaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:tobolskin-kreml",
+  "kysymys": "Mikä on Moskovan Kreml?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Moskovan Kreml on Venäjän pääkaupungin vanha linnoitus. Ensimmäisen linnan rakennutti ruhtinas [[Juri Dolgoruki]] vuonna 1156, ja ruhtinas Iivana I Kalita vahvisti sitä tammisilla muureilla vuonna 1339. Nykyiset punatiiliset muurit ja tornit rakennettiin vuosina 1485–1495, kun [[Iivana III]] kutsui työhön italialaisia arkkitehtejä. [[Pietro Antonio Solari]] suunnitteli muurit ja tornit, ja hänen nimensä on yhä nähtävissä latinaksi kaiverrettuna Spasskajan tornin porttien yläpuolella. Muuria on yhteensä 2235 metriä. Muurit on ylhäältä komea näky.",
+  "linkit": [
+   "Juri Dolgoruki",
+   "Iivana III",
+   "Pietro Antonio Solari"
+  ],
+  "jatkot": [
+   "Keitä Moskovan Kremlissä on hallinnut?",
+   "Miksi Kremlin muurit ovat punatiiltä?"
+  ]
+ },
+ {
+  "kohde": "kohde:jasnaja-poljana",
+  "kysymys": "Mitkä kaksi romaania kirjoitettiin täällä?",
+  "uusi": false,
+  "vastaus": "No niin, tän minä tiedän. [[Lev Tolstoi]] kirjoitti Jasnaja Poljanassa kaksi suurta romaaniaan, [[Sodan ja rauhan]] sekä [[Anna Kareninan]]. Hän oli syntynyt samassa talossa vuonna 1828, ja tila oli hänen kotinsa suuren osan elämää. Molemmat teokset syntyivät siis kirjailijan omalla kotitilalla 1800-luvun jälkipuoliskolla. Kaksi tiiliskiveä, ja minä kannan kyllä vain kirjeitä.",
+  "linkit": [
+   "Lev Tolstoi",
+   "Sodan ja rauhan",
+   "Anna Kareninan"
+  ],
+  "jatkot": [
+   "Mistä Anna Karenina kertoo?",
+   "Milloin Lev Tolstoi syntyi ja milloin hän kuoli?"
+  ]
+ },
+ {
+  "kohde": "kohde:jasnaja-poljana",
+  "kysymys": "Mitä Jasnaja Poljana tarkoittaa?",
+  "uusi": false,
+  "vastaus": "Ai tota. Tän nimen minä osaan. Jasnaja Poljana tarkoittaa venäjäksi kirkasta aukiota: sana jasnaja merkitsee kirkasta tai valoisaa, ja poljana on aukio tai metsäaukea. Nimi kuuluu paikalle, jossa [[Lev Tolstoi]] syntyi ja jossa hän vietti suuren osan elämästään [[Tulan]] lähellä. Kirkas aukio kuulostaa kyl hyvältä laskeutumispaikalta.",
+  "linkit": [
+   "Lev Tolstoi",
+   "Tulan"
+  ],
+  "jatkot": [
+   "Millainen on Jasnaja Poljanan päärakennus?",
+   "Kuka omisti tilan ennen Tolstoita?"
+  ]
+ },
+ {
+  "kohde": "kohde:jasnaja-poljana",
+  "kysymys": "Millainen koulu Tolstoilla oli Jasnaja Poljanassa?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. [[Lev Tolstoi]] perusti Jasnaja Poljanaan koulun talonpoikien lapsille 1850-luvun lopulla. Opetus oli poikkeuksellisen vapaamuotoista: lapsia ei pakotettu, ja Tolstoi uskoi oppimisen syntyvän kiinnostuksesta. Hän laati myöhemmin myös oman aapisensa, ja hänen nimeensä liitettiin vuosien mittaan oma aatesuuntansa, [[tolstoilaisuus]]. En ole varma kaikista yksityiskohdista, kuten oppilasmääristä tai lukujärjestyksestä. Vapaa koulu kuulostaa kyyhkylle sopivalta, kunhan ikkunalaudalla on murusia.",
+  "linkit": [
+   "Lev Tolstoi",
+   "tolstoilaisuus"
+  ],
+  "jatkot": [
+   "Mitä tolstoilaisuus tarkoittaa?",
+   "Kuinka kaukana Jasnaja Poljana on Moskovasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:jasnaja-poljana",
+  "kysymys": "Missä Lev Tolstoi on haudattu?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Tää on hiljaisempi aihe. Lev Tolstoi on haudattu Jasnaja Poljanan tilan metsään, lähelle kotitaloa. Hänen hautansa on tiettävästi tarkoituksellisen vaatimaton ruohoinen kumpu ilman ristiä, kivipaatta tai kirjoitusta. Tarinan mukaan paikka liittyy lapsuuden leikkiin, jossa hänen veljensä Nikolai väitti vihreään keppiin kätketyn salaisuuden kaikkien ihmisten onnesta. Tolstoi kuoli vuonna 1910 [[Astapovon]] rautatieasemalla, ja hänet haudattiin kotitilalleen [[Jasnaja Poljanan]] metsään. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "Astapovon",
+   "Jasnaja Poljanan"
+  ],
+  "jatkot": [
+   "Miksi Tolstoi halusi yksinkertaisen haudan?",
+   "Miten Tolstoin elämä muuttui hänen myöhempinä vuosinaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:jasnaja-poljana",
+  "kysymys": "Kenen maita Jasnaja Poljana oli ennen Tolstoita?",
+  "uusi": true,
+  "vastaus": "Kas vaan, sukututkimusta. Tila oli alun perin Kartsevin suvun omistuksessa. 1700-luvulla sen osti kenraalimajuri, ruhtinas [[Sergei Volkonski]], ja se siirtyi hänen pojalleen Nikolaille, kirjailijan isoisälle. [[Nikolai Volkonski]] aloitti päärakennuksen rakentamisen vuonna 1810 tilan korkeimmalle kohdalle ja istutti ranskalaisen puutarhan sekä englantilaisen maisemapuiston lampineen ja pitkine koivu- ja tammikujineen. Kirjailijan äiti oli Nikolain tytär, joten tila periytyi Tolstoille suvun kautta.\n\nIsännät vaihtuivat, mutta koivukujat jäivät. Kyyhkyn silmin ne ovat tilan paras osa, koska puuhun saa laskeutua kysymättä lupaa.",
+  "linkit": [
+   "Sergei Volkonski",
+   "Nikolai Volkonski"
+  ],
+  "jatkot": [
+   "Millainen on englantilainen maisemapuisto?",
+   "Mitä muuta Jasnaja Poljanassa on nähtävää?"
+  ]
+ },
+ {
+  "kohde": "kohde:kaliningradin-tuomiokirkko",
+  "kysymys": "Missä filosofi Immanuel Kant lepää?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Immanuel Kant lepää [[Kaliningradin tuomiokirkon]] kupeessa, [[Kneiphofin]] saarella Pregolja-joessa. Hänen hautansa on kirkon seinustalla olevassa mausoleumissa, joka valmistui vuonna 1924 hänen syntymänsä 200-vuotisjuhlaksi. Kaupunki kantoi Kantin aikana nimeä [[Königsberg]], ja hän vietti siellä lähes koko elämänsä. Ja kaiken tän minä muistin ilman karttaa.",
+  "linkit": [
+   "Kaliningradin tuomiokirkon",
+   "Kneiphofin",
+   "Königsberg"
+  ],
+  "jatkot": [
+   "Mitä Immanuel Kant kirjoitti?",
+   "Millaista oli Kantin elämä Königsbergissä?"
+  ],
+  "paikka": {
+   "nimi": "Kaliningradin tuomiokirkko",
+   "lat": 54.71,
+   "lon": 20.51,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:kaliningradin-tuomiokirkko",
+  "kysymys": "Miten kirkon uusi torni saatiin paikalleen vuonna 1994?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Tornin uusiminen kuului [[Kaliningradin tuomiokirkon]] kunnostukseen, joka alkoi 1990-luvun alussa sen jälkeen, kun brittiläiset pommitukset elokuussa 1944 olivat tuhonneet kirkon katon ja tornin. Uusi torni nostettiin paikalleen [[helikopterilla]] vuonna 1994. En ole varma nostotyön yksityiskohdista, kuten siitä, nostettiinko torni kokonaisena vai osissa. Nykyisin [[Kneiphofin]] saarella seisovassa kirkossa toimii museo, ja siellä on luterilainen ja ortodoksinen kappeli sekä konsertteja.\n\nHelikopteri tekee ilmassa melkein saman kuin minä, mutta paljon äänekkäämmin. Tornia en olisi kyllä jaksanut nostaa.",
+  "linkit": [
+   "Kaliningradin tuomiokirkon",
+   "helikopterilla",
+   "Kneiphofin"
+  ],
+  "jatkot": [
+   "Milloin tuomiokirkon kunnostus alkoi?",
+   "Mitä kirkossa on nykyisin nähtävää?"
+  ]
+ },
+ {
+  "kohde": "kohde:kaliningradin-tuomiokirkko",
+  "kysymys": "Mitä tiiligotiikka tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: tiiligotiikka tarkoittaa gotiikan rakennustapaa, jossa kirkot, linnat ja kaupungintalot rakennettiin poltetusta tiilestä luonnonkiven sijaan. Tyyli levisi Itämeren eteläpuolisille seuduille, joilla hyvää rakennuskiveä oli vähän mutta savea runsaasti, ja sitä käytettiin erityisesti [[Hansa-kaupungeissa]] ja [[Saksalaisen ritarikunnan]] alueella. Tunnettuja esimerkkejä ovat [[Lyypekin]] Pyhän Marian kirkko ja Malborkin linna Puolassa, ja Kaliningradin tuomiokirkko kuuluu samaan perinteeseen.\n\nYlhäältä katsottuna tiili erottuu jo kaukaa, ja aurinkoinen tiilikatto on kyyhkylle paras istuinpaikka. Murusia vain ei yleensä tipu.",
+  "linkit": [
+   "Hansa-kaupungeissa",
+   "Saksalaisen ritarikunnan",
+   "Lyypekin"
+  ],
+  "jatkot": [
+   "Missä muualla on tiiligotiikan rakennuksia?",
+   "Mikä oli Hansa-liitto?"
+  ]
+ },
+ {
+  "kohde": "kohde:kaliningradin-tuomiokirkko",
+  "kysymys": "Mihin Pregolja-joki laskee?",
+  "uusi": true,
+  "vastaus": "Kato, tän joen minä tunnen ylhäältä — Pregolja virtaa Kaliningradin läpi ja laskee [[Veikselinlahteen]], josta on yhteys [[Itämerelle]]. Kaupungin vanha ydin, [[Kneiphofin]] saari, sijaitsee joen haarojen välissä. Joki on ollut kaupungille tärkeä kulkuväylä, ja sen varrella ovat sijainneet satamat ja laiturit. Joet on kyyhkylle parhaita karttoja.",
+  "linkit": [
+   "Veikselinlahteen",
+   "Itämerelle",
+   "Kneiphofin"
+  ],
+  "jatkot": [
+   "Missä Kaliningradin kaupunki sijaitsee?",
+   "Miltä Kneiphofin saari näyttää nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:kaliningradin-tuomiokirkko",
+  "kysymys": "Mikä kaupunki Kaliningrad oli ennen nimenmuutosta?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Kaliningrad tunnettiin aiemmin nimellä [[Königsberg]]. Kaupunki oli [[Itä-Preussin]] pääkaupunki ja kuului Saksalle, kunnes toisen maailmansodan jälkeen alue siirtyi Neuvostoliitolle, ja nimi muutettiin vuonna 1946 neuvostojohtaja [[Mihail Kalininin]] mukaan. Kaliningradin alue on nykyisin Venäjän erillisalue Puolan ja Liettuan välissä. Nimiä on vaihtunut, mutta joki on pysynyt samana.",
+  "linkit": [
+   "Königsberg",
+   "Itä-Preussin",
+   "Mihail Kalininin"
+  ],
+  "jatkot": [
+   "Miksi kaupunki sai uuden nimen?",
+   "Kuka oli Mihail Kalinin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-valkokivinen-kreml",
+  "kysymys": "Miltä Moskovan valkokivinen Kreml näytti loistoaikanaan?",
+  "uusi": false,
+  "vastaus": "Joo, vähän vaikea, mutta kerron. [[Dmitri Donskoi]] rakennutti Moskovan Kremlin ympärille valkokivimuurin vuosina 1366–1368, ja se korvasi aiemman tammimuurin. Valkoinen kalkkikivi erottui selvästi puurakennusten täyttämästä kaupungista, ja Moskovaa alettiin kutsua valkokiviseksi. Tarkkaa ulkoasua ei tunneta täysin, joten yksityiskohtia en uskalla lisätä. Muuri purettiin myöhemmin, kun [[Ivan III]] rakennutti tilalle nykyiset punatiilimuurit. Viisas Pöllö, joka parantelee siipeään, tietäisi tästä varmasti vielä enemmän.",
+  "linkit": [
+   "Dmitri Donskoi",
+   "Ivan III"
+  ],
+  "jatkot": [
+   "Mistä materiaalista valkokivi tehtiin?",
+   "Milloin punatiiliset muurit valmistuivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-valkokivinen-kreml",
+  "kysymys": "Miksi Moskovan valkokivinen Kreml katosi?",
+  "uusi": false,
+  "vastaus": "Mmm— tämä on tuttu juttu. [[Dmitri Donskoin]] rakennuttama valkokivimuuri ei kadonnut itsestään vaan purettiin: [[Ivan III]] antoi purkaa sen ja rakennuttaa tilalle nykyiset punatiilimuurit vuosina 1485–1495 italialaisten arkkitehtien johdolla. Syyksi esitetään yleensä, että vanha muuri oli ikääntynyt ja että uusi linnoitus haluttiin tehdä aikansa tykkitulen kestäväksi ja Moskovan uuteen asemaan sopivaksi. En ole varma, missä määrin kumpikin syy painoi.\n\nYlhäältä katsoen näkyy vain punainen tiili, ja valkoinen muuri elää enää tarinoissa. Silti sen nimi jäi Moskovalle.",
+  "linkit": [
+   "Dmitri Donskoin",
+   "Ivan III"
+  ],
+  "jatkot": [
+   "Kuka suunnitteli Kremlin nykyiset muurit?",
+   "Kuinka paksut Kremlin muurit ovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-valkokivinen-kreml",
+  "kysymys": "Mistä sana Kreml tulee?",
+  "uusi": true,
+  "vastaus": "Katotaas. Sana kreml tarkoittaa venäjän kielessä linnoitettua kaupungin ydintä, ja Venäjän vanhoissa kaupungeissa on useita kremlejä, esimerkiksi [[Novgorodissa]], [[Pihkovassa]] ja Kazanissa. Sanan tarkasta alkuperästä kielitieteilijät eivät ole täysin yhtä mieltä, enkä ole itse varma oikeasta selityksestä. Moskovan Kreml on näistä tunnetuin, ja siksi sana on alkanut tarkoittaa myös Venäjän valtionjohtoa. Kreml on se muuri, jonka päälle minä laskeudun mielelläni, jos vartijat sallivat.",
+  "linkit": [
+   "Novgorodissa",
+   "Pihkovassa"
+  ],
+  "jatkot": [
+   "Missä muualla Venäjällä on kremlejä?",
+   "Milloin Moskovan Kremlistä tuli Venäjän hallinnon keskus?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-valkokivinen-kreml",
+  "kysymys": "Kuka oli Dmitri Donskoi?",
+  "uusi": true,
+  "vastaus": "Ai se. Hänet minä tunnen. Dmitri Donskoi oli Moskovan suuriruhtinas 1300-luvun jälkipuoliskolla ja tunnetaan Moskovan vallan vahvistajana. Hänen aikanaan Moskovan Kreml sai valkokivimuurin vuosina 1366–1368. Lisänimi Donskoi viittaa Don-jokeen, jonka seudulla käytiin [[Kulikovon taistelu]] vuonna 1380 [[Kultaisen ordan]] sotapäällikkö [[Mamain]] joukkoja vastaan; taistelua pidetään Venäjällä merkittävänä käännekohtana, vaikka Kultaisen ordan valta päättyi vasta myöhemmin. Monta asiaa ehti yhdelle ruhtinaalle.",
+  "linkit": [
+   "Kulikovon taistelu",
+   "Kultaisen ordan",
+   "Mamain"
+  ],
+  "jatkot": [
+   "Mitä Kulikovon taistelussa tapahtui?",
+   "Mikä oli Kultainen ordu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-valkokivinen-kreml",
+  "kysymys": "Ketkä italialaiset arkkitehdit rakensivat Kremlin nykyiset muurit?",
+  "uusi": true,
+  "vastaus": "Sepä sattui: [[Ivan III]] kutsui Moskovaan taitavia italialaisia arkkitehteja, joista tunnetuimpia olivat [[Pietro Antonio Solari]] ja [[Marco Ruffo]]. Solari suunnitteli Kremlin uudet muurit ja tornit, ja hänen nimensä on kaiverrettu latinaksi yhä nähtävissä [[Spasskajan tornin]] porttien yläpuolella. Ruffo piirsi ruhtinaan uuden palatsin. Tietojeni mukaan Moskovassa oli jo aiemmin työskennellyt myös [[Aristotele Fioravanti]], joka rakensi Uspenskin katedraalin Kremlin alueelle 1400-luvun lopulla. Italialaisilta saatiin muuria ja torneja, mutta minä olisin pyytänyt maritozzoa.",
+  "linkit": [
+   "Ivan III",
+   "Pietro Antonio Solari",
+   "Marco Ruffo",
+   "Spasskajan tornin",
+   "Aristotele Fioravanti"
+  ],
+  "jatkot": [
+   "Mikä on Kremlin Spasskajan torni?",
+   "Miksi Ivan III halusi italialaisia arkkitehteja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-peterhof",
+  "kysymys": "Miksi Peterhofia kutsutaan \"Venäjän Versailles'ksi\"?",
+  "uusi": false,
+  "vastaus": "Just niin, vertailu on vanha. [[Pietari Suuri]] perusti Peterhofin 1700-luvun alussa ja sai vaikutteita Ranskan-matkaltaan vuonna 1717. Hän halusi oman suurenmoisen palatsipuiston, ja Peterhofista tuli hänen vastauksensa Ludvig XIV:n [[Versailles'n palatsille]]. Samoin kuin Versailles'ssa, näyttävintä Peterhofissa ovat suihkulähteet ja laaja puisto [[Suomenlahden]] rannalla. Nimitys on lempinimi eikä virallinen. Pöllö on ollut poissa niin kauan, että ehtisi kiertää Versailles'n puistotkin.",
+  "linkit": [
+   "Pietari Suuri",
+   "Versailles'n palatsille",
+   "Suomenlahden"
+  ],
+  "jatkot": [
+   "Mitä Pietari Suuri näki Ranskassa vuonna 1717?",
+   "Millainen paikka Versailles'n palatsi on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-peterhof",
+  "kysymys": "Miten Peterhofin Suuren kaskadin suihkulähteet saavat vetensä liikkeelle?",
+  "uusi": false,
+  "vastaus": "No jopas. Suuren kaskadin suihkulähteet toimivat ilman pumppuja. Vesi tulee ylätarhan luonnollisista lähteistä, ja puiston ylä- ja alaosan välinen korkeusero luo paineen, joka nostaa suihkut ilmaan. Käytännössä vesi virtaa painovoiman voimalla ylhäältä alas kanavia ja putkia pitkin kymmenien kultaisten patsaiden ja suihkulähteiden luo. Nykyinen laajempi kokonaisuus syntyi keisarinna [[Elisabetin]] aikana arkkitehti [[Bartolomeo Rastrellin]] suunnitelmien mukaan.\n\nVesi hoitaa koko työn painovoimalla, ja minulle se on tuttua: alamäkeen lentäminen on aina helpointa. Ylämäkeen en lähde ilman syytä.",
+  "linkit": [
+   "Elisabetin",
+   "Bartolomeo Rastrellin"
+  ],
+  "jatkot": [
+   "Kuinka suuri korkeusero Peterhofin puistossa on?",
+   "Millaisia patsaita Suuressa kaskadissa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-peterhof",
+  "kysymys": "Kuka oli arkkitehti Bartolomeo Rastrelli?",
+  "uusi": true,
+  "vastaus": "Hmm, hänet minä muistan. Bartolomeo Rastrelli oli italialaistaustainen barokkiarkkitehti, joka teki uransa Venäjällä ja suunnitteli keisarinna [[Elisabetin]] ajan suurimpia palatseja. Tunnetuimpia töitä ovat [[Talvipalatsi]] Pietarissa sekä [[Katariinan palatsi]] Tsarskoje Selossa, ja Peterhofin laajempi kokonaisuus syntyi hänen suunnitelmiensa mukaan 1740–50-luvuilla. Hänen tyylilleen ovat ominaisia runsaat koristeet, kullattu pinta ja vahva väritys. Barokki on kyllä tyyli, joka ei pyydä anteeksi.",
+  "linkit": [
+   "Elisabetin",
+   "Talvipalatsi",
+   "Katariinan palatsi"
+  ],
+  "jatkot": [
+   "Millainen tyyli barokki on?",
+   "Milloin Talvipalatsi valmistui?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-peterhof",
+  "kysymys": "Milloin Peterhofin suihkulähteet ovat käynnissä?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Peterhofin suihkulähteet toimivat lämpimänä vuodenaikana: tietojeni mukaan kausi alkaa keväällä ja päättyy syksyllä, ja talvella suihkut ovat pois käytöstä. Tarkat päivämäärät vaihtelevat vuosittain, joten niitä en lupaa, ja ajankohdan kannattaa tarkistaa puiston omasta tiedotuksesta. [[Suuren kaskadin]] kultaiset patsaat ja suihkut kuuluvat puiston tunnetuimpiin nähtävyyksiin, ja koko puisto sijaitsee [[Suomenlahden]] rannalla. Suihkut ovat ylhäältä katsottuna kuin kultaisia sulkia.",
+  "linkit": [
+   "Suuren kaskadin",
+   "Suomenlahden"
+  ],
+  "jatkot": [
+   "Mistä Peterhofin nimi tulee?",
+   "Miten Peterhofiin pääsee Pietarista?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-peterhof",
+  "kysymys": "Mikä on Peterhofin Samson-suihkulähde?",
+  "uusi": true,
+  "vastaus": "Ai tota. Se patsas on tuttu. Samson-suihkulähde on [[Suuren kaskadin]] keskipiste: patsaassa Samson repii leijonan leuat auki, ja vesi suihkuaa leijonan suusta korkealle. Se muistuttaa [[Poltavan taistelun]] voittoa vuonna 1709 [[Suuren Pohjan sodan]] aikana, ja leijonan yleensä selitetään viittaavan Ruotsin vaakunaan. Alkuperäinen patsas katosi toisen maailmansodan aikana, ja nykyinen on sen jälkeen tehty jäljennös. Onneksi kopio seisoo taas paikallaan.",
+  "linkit": [
+   "Suuren kaskadin",
+   "Poltavan taistelun",
+   "Suuren Pohjan sodan"
+  ],
+  "jatkot": [
+   "Mikä oli Poltavan taistelu?",
+   "Mitä Suuri Pohjan sota oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-jekaterinburg",
+  "kysymys": "Miksi Jekaterinburg perustettiin juuri Uralin harjanteelle?",
+  "uusi": false,
+  "vastaus": "Kato, tästä minä tiedän vähän. Jekaterinburg perustettiin Uralille, koska seudulla oli malmia ja metsiä puuhiilen polttoon sekä jokivettä, joka antoi voiman rautaruukille. [[Pietari Suuren]] käskystä kaupunki rakennettiin metalliteollisuuden keskukseksi ja linnoitukseksi Euroopan ja Aasian rajalle. Perustamista johtivat historioitsija [[Vasili Tatištšev]] ja saksalaissyntyinen insinööri [[Georg Wilhelm de Gennin]]. Kaupungin ikä lasketaan 18. marraskuuta 1723, jolloin Iset-joen rannalla koeajettiin rautaruukin vasarapaja.\n\nYlhäältä katsoen Euroopan ja Aasian raja ei näy mitenkään, ja se on mielestäni vähän pettymys. Pitäisi olla edes viiva.",
+  "linkit": [
+   "Pietari Suuren",
+   "Vasili Tatištšev",
+   "Georg Wilhelm de Gennin"
+  ],
+  "jatkot": [
+   "Mitä Jekaterinburgin ruukit valmistivat?",
+   "Mikä on Iset-joki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-jekaterinburg",
+  "kysymys": "Mitä Jekaterinburgin rahapajassa valmistettiin 1870-luvulla?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä muistan. Jekaterinburgin rahapajassa lyötiin pääosin kuparirahaa, esimerkiksi pieniä kopeekan kolikoita. Lähteiden mukaan rahapaja löi merkittävän osan [[Venäjän keisarikunnan]] kolikoista, ja sen toiminta päättyi vuonna 1876, joten 1870-luku kuului sen viimeisiin vuosiin. Rahapaja oli osa ruukkikaupunkia, jonka [[Pietari Suuri]] oli perustanut. Kopeekkoja minä kantaisin mieluummin kuin kirjeitä, kunhan niillä saisi pullaa.",
+  "linkit": [
+   "Venäjän keisarikunnan",
+   "Pietari Suuri"
+  ],
+  "jatkot": [
+   "Mitä rahapajan tunnus kolikossa tarkoittaa?",
+   "Milloin Venäjällä alettiin lyödä kuparirahaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-jekaterinburg",
+  "kysymys": "Missä Euroopan ja Aasian raja kulkee?",
+  "uusi": true,
+  "vastaus": "Mmm— rajaviivat, minun lempiaiheeni. Euroopan ja Aasian välillä ei ole yhtä virallista rajaa, vaan raja perustuu vakiintuneeseen sopimukseen. Venäjällä sen katsotaan yleisimmin kulkevan [[Uralvuoriston]] harjannetta pitkin ja jatkuvan Ural-jokea ja Kaspianmerta myöten kohti Kaukasusta, jossa rajan paikasta esitetään eri tulkintoja. Lännempänä raja kulkee [[Mustanmeren]] ja Bosporinsalmen kautta Välimerelle. Jekaterinburgin lähellä on tietääkseni rajan merkitsevä muistomerkki. Ylhäältä katsoen raja on ihan näkymätön — vuoret vain jatkuvat.",
+  "linkit": [
+   "Uralvuoriston",
+   "Mustanmeren"
+  ],
+  "jatkot": [
+   "Mikä kaupunki on Euroopan ja Aasian rajalla?",
+   "Miksi Ural-vuoristoa pidetään rajana?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-jekaterinburg",
+  "kysymys": "Kuka oli insinööri Georg Wilhelm de Gennin?",
+  "uusi": true,
+  "vastaus": "No niin, insinöörit. Georg Wilhelm de Gennin oli saksalaissyntyinen insinööri, joka palveli [[Pietari Suurta]] venäläisten kaivos- ja metallitehtaiden rakentajana. Hänet tunnetaan Jekaterinburgin perustajana yhdessä historioitsija [[Vasili Tatištševin]] kanssa vuonna 1723, ja tietojeni mukaan hän oli työskennellyt aiemmin myös Karjalassa [[Äänisjärven]] seudulla. Tarkkoja vuosia hänen uransa vaiheista en ole varma. Insinöörit ja kyyhkyt ovat sukua: kumpikin vie asiat perille.",
+  "linkit": [
+   "Pietari Suurta",
+   "Vasili Tatištševin",
+   "Äänisjärven"
+  ],
+  "jatkot": [
+   "Mitä Vasili Tatištšev kirjoitti?",
+   "Miten Pietari Suuri uudisti Venäjän teollisuutta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-jekaterinburg",
+  "kysymys": "Millä nimellä Jekaterinburg tunnettiin neuvostoaikana?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Neuvostoaikana kaupunki tunnettiin nimellä Sverdlovsk. Nimi vaihdettiin vuonna 1924 bolševikkijohtaja [[Jakov Sverdlovin]] mukaan, ja alkuperäinen nimi Jekaterinburg palautettiin vuonna 1991, [[Neuvostoliiton]] hajoamisen aikoihin. Vanha nimi elää yhä ympäröivän alueen nimessä. Kaksi nimeä yhdelle kaupungille, ja minulle riittää yksi pitkä.",
+  "linkit": [
+   "Jakov Sverdlovin",
+   "Neuvostoliiton"
+  ],
+  "jatkot": [
+   "Kuka oli Jakov Sverdlov?",
+   "Millainen kaupunki Jekaterinburg on nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-suzdal",
+  "kysymys": "Miksi Suzdal on säilynyt niin hyvin verrattuna moniin muihin Venäjän kaupunkeihin?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Katolta katsoen se näyttää pieneltä, mutta kirkkoja siellä riittää. Suzdal säilyi ennen kaikkea siksi, että se jäi neuvostoajan teollistumisen ulkopuolelle. Kun monet muut kaupungit muuttuivat tehtaiden ja uusien asuinalueiden ehdoilla, Suzdal pysyi pienenä, ja siksi sen 1200–1800-lukujen arkkitehtuuri on säilynyt lähes koskemattomana. Kaupunki oli jo 1100-luvun alussa [[Rostov-Suzdalin]] ruhtinaskunnan pääkaupunki, ja nykyisin se on [[Kultaisen renkaan]] pienin jäsen. Vladimirin ja Suzdalin valkoiset muistomerkit hyväksyttiin [[Unescon]] maailmanperintölistalle vuonna 1992. En ole varma, onko säilymiseen vaikuttanut jokin muukin tekijä. Pienuudessa on kyl voimaa.",
+  "linkit": [
+   "Rostov-Suzdalin",
+   "Kultaisen renkaan",
+   "Unescon"
+  ],
+  "jatkot": [
+   "Mitä Rostov-Suzdalin ruhtinaskunta oli?",
+   "Miten neuvostoajan teollistuminen muutti muita Venäjän kaupunkeja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-suzdal",
+  "kysymys": "Mikä on Kultainen rengas?",
+  "uusi": false,
+  "vastaus": "Ai se. Aika kaunis lenkki ylhäältä. Kultainen rengas on perinteinen nimitys joukolle vanhoja venäläiskaupunkeja Moskovan koillispuolella, joiden kirkot, luostarit ja kremlit kertovat Venäjän varhaisesta historiasta. Siihen luetaan tavallisesti muun muassa [[Vladimir]], [[Sergijev Possad]], [[Jaroslavl]] ja [[Kostroma]] sekä pieni Suzdal, joka on joukon pienin jäsen. Kyse ei ole virallisesta rajauksesta, joten kaupunkien luettelo vaihtelee lähteestä toiseen, ja reitti on suosittu matkailukohde. Sormuksen mallia en tosin ylhäältä oikein tunnistanut.",
+  "linkit": [
+   "Vladimir",
+   "Sergijev Possad",
+   "Jaroslavl",
+   "Kostroma"
+  ],
+  "jatkot": [
+   "Mikä erottaa Vladimirin muista Kultaisen renkaan kaupungeista?",
+   "Mitä Sergijev Possadin luostarissa on nähtävää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-suzdal",
+  "kysymys": "Kuka oli Juri Dolgoruki?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Tää nimi vaatii vähän ilmaa. Juri Dolgoruki oli 1100-luvun ruhtinas, joka hallitsi Rostov-Suzdalin aluetta Suzdalista käsin ja oli yksi Koillis-Venäjän varhaisista vallanpitäjistä. Hän oli [[Vladimir Monomahin]] poika, ja hänet muistetaan [[Moskovan]] perustajana: kaupunki mainitaan lähteissä ensi kerran 1100-luvun puolivälin tienoilla hänen aikanaan. Perustajaksi kutsuminen on kuitenkin pikemminkin perinteinen tulkinta kuin tarkasti tunnettu tapahtuma. Lähteiden mukaan hän hallitsi lyhyen aikaa myös [[Kiovaa]] elämänsä loppuvaiheessa. Ruhtinaita riittää, mutta kyyhkyjä on kirjattu historiaan vähemmän.",
+  "linkit": [
+   "Vladimir Monomahin",
+   "Moskovan",
+   "Kiovaa"
+  ],
+  "jatkot": [
+   "Milloin Moskova mainitaan lähteissä ensimmäisen kerran?",
+   "Mikä oli Kiovan Rusi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-suzdal",
+  "kysymys": "Mistä Andrei Rubljov -elokuvassa kerrotaan?",
+  "uusi": true,
+  "vastaus": "Mmm— tämä on elokuva-aihe, joten istuudun kaiteelle. Elokuva on [[Andrei Tarkovskin]] ohjaama 1960-luvulla valmistunut kuvaus venäläisestä ikonimaalarista, joka eli Venäjällä 1300- ja 1400-lukujen vaihteessa. Se etenee jaksoina, joissa taiteilija kulkee levottomassa maassa, kohtaa väkivaltaa ja kysyy, mitä taiteella voi tehdä. Elokuva on pääosin mustavalkoinen, ja lopussa nähdään ikonien värejä. Rubljovin tunnetuin työ on [[Kolminaisuus-ikoni]], ja hänet yhdistetään Moskovan [[Andronikovin luostariin]].\n\nTällaisia elokuvia katsellaan hiljaa kuin kyyhky kaiteella: ei hoppua, eikä tarvitse ymmärtää kaikkea heti.",
+  "linkit": [
+   "Andrei Tarkovskin",
+   "Kolminaisuus-ikoni",
+   "Andronikovin luostariin"
+  ],
+  "jatkot": [
+   "Mikä on Kolminaisuus-ikoni ja missä sitä säilytetään?",
+   "Mitä ikoni tarkoittaa ortodoksisessa kirkossa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-suzdal",
+  "kysymys": "Miksi Suzdalin muistomerkkejä sanotaan valkoisiksi?",
+  "uusi": true,
+  "vastaus": "Sepä sattui: tämä on kivi- eikä sulkakysymys. Valkoisella viitataan alueen keskiaikaisten rakennusten tavalliseen rakennusmateriaaliin, valkoiseen [[kalkkikiveen]], jota käytettiin muun muassa kirkkojen seinissä ja koristeissa. [[Vladimirin]] ja Suzdalin valkoiset muistomerkit ovat joukko 1100-luvulta ja sitä myöhemmältä ajalta peräisin olevia kirkkoja ja muita rakennuksia, jotka [[Unesco]] listasi maailmanperintökohteeksi vuonna 1992. Joukkoon luetaan myös Nerl-joen [[Pokrova-kirkko]], yksi alueen tunnetuimmista kirkoista. Kyyhky arvostaa kaikkea, mihin sopii laskeutua.",
+  "linkit": [
+   "kalkkikiveen",
+   "Vladimirin",
+   "Unesco",
+   "Pokrova-kirkko"
+  ],
+  "jatkot": [
+   "Mikä on Pokrova-kirkko Nerl-joella?",
+   "Miten valkoista kalkkikiveä käytettiin keskiajan rakentamisessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nizni-novgorod",
+  "kysymys": "Miksi Nižni Novgorodin messut perustettiin alun perin Kazanin lähelle?",
+  "uusi": false,
+  "vastaus": "Hetkinen. Messut eivät syntyneet Kazanin lähelle vaan [[Volgan]] varrelle, [[Makarjevin luostarin]] liepeille, ja ne perustettiin nimenomaan houkuttelemaan kauppaa pois [[Kazanin]] markkinoilta. [[Moskovan]] suurruhtinaat halusivat siirtää kaupan omalle alueelleen, ja Kazanin markkinat olivat lähteiden mukaan toimineet jo 1200-luvulta lähtien. Vuoden 1816 tulipalon jälkeen messut siirrettiin nykyiselle paikalleen Nižni Novgorodiin. Ihan perusteellisesti tuli tuo kartta oikaistua.",
+  "linkit": [
+   "Volgan",
+   "Makarjevin luostarin",
+   "Kazanin",
+   "Moskovan"
+  ],
+  "jatkot": [
+   "Mikä Makarjevin luostari oli?",
+   "Miten Kazanin markkinat toimivat keskiajalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nizni-novgorod",
+  "kysymys": "Kuinka suuri osa Venäjän vientituotannosta kulki messujen kautta parhaimmillaan?",
+  "uusi": false,
+  "vastaus": "Katotaas. Lähteiden mukaan jopa noin puolet koko Venäjän vientituotannosta kulki messujen kautta parhaimmillaan, 1900-luvun alussa. Silloin messualueella oli lähteiden mukaan noin 60 rakennusta ja peräti 2 500 kauppapaikkaa. Messujen juuret ulottuvat 1500-luvulle [[Makarjevin luostarin]] liepeille [[Volgan]] varrelle, ja parhaimmillaan [[Nižni Novgorodin]] messuille tuli kauppiaita aina Intiasta, Persiasta ja Keski-Aasiasta asti. Pöllö olisi osannut sanoa tämän yhdellä numerolla, mutta hän parantelee yhä siipeään.",
+  "linkit": [
+   "Makarjevin luostarin",
+   "Volgan",
+   "Nižni Novgorodin"
+  ],
+  "jatkot": [
+   "Mitä tavaroita messuilla myytiin?",
+   "Miten Volgan laivaliikenne vaikutti kauppaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nizni-novgorod",
+  "kysymys": "Miksi Volga on ollut Venäjälle niin tärkeä kauppareitti?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Tämä on joki, jonka ylitse olen lentänyt useammin kuin muistan. Volga on Euroopan pisin joki, ja se virtaa Keski-Venäjältä etelään kohti Kaspianmerta. Joki yhdistää Venäjän pohjoisia ja keskisiä alueita eteläisiin ja itäisiin, ja kauppatavarat kulkivat sitä pitkin vuosisatojen ajan aluksilla ja lautoilla, myöhemmin höyrylaivoilla. Sen varrella ovat esimerkiksi [[Nižni Novgorod]], [[Kazan]] ja [[Astrahan]], jotka ovat toimineet merkittävinä kauppakaupunkeina.\n\nJoki on ylhäältä katsottuna oikein hyvä tienviitta, eikä kyyhky eksy siinä helposti. Paitsi jos haistaa pullaa.",
+  "linkit": [
+   "Nižni Novgorod",
+   "Kazan",
+   "Astrahan"
+  ],
+  "jatkot": [
+   "Kuinka pitkä Volga on?",
+   "Mihin Volga laskee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nizni-novgorod",
+  "kysymys": "Missä Oka ja Volga kohtaavat toisensa?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Oka ja Volga kohtaavat [[Nižni Novgorodissa]], Venäjän Euroopan-puoleisessa osassa Moskovasta itään. Kaupunki on tunnettu juuri jokien yhtymäkohdasta, ja sen [[kremli]] kohoaa korkealla rantatörmällä virran yläpuolella. Yhtymäkohdat on aina kivoja kyyhkylle, eksyy vähemmän.",
+  "linkit": [
+   "Nižni Novgorodissa",
+   "kremli"
+  ],
+  "jatkot": [
+   "Millaisia jokiristeilyjä Volgalla on nykyään?",
+   "Miten Nižni Novgorodin kremli on rakennettu?"
+  ],
+  "paikka": {
+   "nimi": "Nižni Novgorod",
+   "lat": 56.33,
+   "lon": 44,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-nizni-novgorod",
+  "kysymys": "Mikä oli Nižni Novgorodin nimi neuvostoaikana?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: tämä oli kaupunki, jolla oli kerran toinen nimi. Neuvostoaikana kaupungin nimi oli Gorki kirjailija [[Maksim Gorkin]] mukaan, joka oli syntynyt kaupungissa. Nimi vaihdettiin 1930-luvulla, ja se palautettiin Nižni Novgorodiksi vuonna 1990, vähän ennen [[Neuvostoliiton]] hajoamista. Nimiä vaihdellaan, mutta kyyhky pysyy samana.",
+  "linkit": [
+   "Maksim Gorkin",
+   "Neuvostoliiton"
+  ],
+  "jatkot": [
+   "Mitkä muut Venäjän kaupungit ovat vaihtaneet nimeään?",
+   "Kuka oli Maksim Gorki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pelmenit",
+  "kysymys": "Mistä kielistä pelmenien nimi juontuu ja mitä se tarkoittaa?",
+  "uusi": false,
+  "vastaus": "Ai tota. Nimi on kyl yllättävän kotoisa. Sana pelmeni juontuu komin ja udmurtin kielten sanasta pel'n'an', joka tarkoittaa kirjaimellisesti leipäkorvaa. Nimi kuvaa ruokaa hyvin: ohuen taikinan sisään on käärittynä lihatäyte, ja valmis pyörykkä muistuttaa korvaa. [[Komin tasavalta]] ja [[Udmurtia]] pitävät yhä pelmenejä omana kansallisruokanaan, ja ruoka levisi [[venäläiseen keittiöön]], kun asutus laajeni Uralille ja Siperiaan. Leipäkorva, ihan nokkela nimi.",
+  "linkit": [
+   "Komin tasavalta",
+   "Udmurtia",
+   "venäläiseen keittiöön"
+  ],
+  "jatkot": [
+   "Mitä komin kieli on?",
+   "Missä Udmurtia sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pelmenit",
+  "kysymys": "Miksi siperialaiset pakastivat pelmenejä talveksi ulos?",
+  "uusi": false,
+  "vastaus": "Tuota niin, tähän on yksinkertainen vastaus. Talven pakkanen toimi luonnollisena pakastimena, joten pelmenejä voitiin valmistaa suuria määriä kerralla ja säilyttää ulkona jäätyneinä. Se oli käytännöllinen [[säilöntätapa]] seudulla, jossa talvi on pitkä. Metsästäjät ja matkalaiset kuljettivat pakastettuja pelmenejä mukanaan eväänä pitkillä matkoilla, ja ne olivat helppoja keittää nopeasti nuotiolla. Ruoka levisi myöhemmin [[venäläiseen keittiöön]], kun asutus laajeni Uralille ja Siperiaan. Minä en kyl kestäisi sitä pakkasta ulkona.",
+  "linkit": [
+   "säilöntätapa",
+   "venäläiseen keittiöön"
+  ],
+  "jatkot": [
+   "Miten pelmenit valmistetaan kotona?",
+   "Mitä muita ruokia Uralin seudulla perinteisesti syödään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pelmenit",
+  "kysymys": "Mitä eroa on pelmeneillä ja vareniki-nyyteillä?",
+  "uusi": true,
+  "vastaus": "Kato, nyytit on nyytti vaikka toisella nimellä. Pelmenit ovat tyypillisesti lihatäytteisiä, ohueen taikinaan käärittyjä nyyttejä, jotka keitetään vedessä. Varenikit ovat [[Ukrainan]] keittiön nyyttejä, joiden täytteenä on usein perunaa, juustoa, kaalia tai marjoja, joten ne ovat monesti lihattomia, ja niitä tarjotaan usein [[smetanan]] kanssa. Rajanveto vaihtelee kuitenkin alueittain, enkä ole varma kaikista paikallisista tavoista. Nyyttejä on moneen makuun.",
+  "linkit": [
+   "Ukrainan",
+   "smetanan"
+  ],
+  "jatkot": [
+   "Miten varenikit valmistetaan?",
+   "Mikä on pirogi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pelmenit",
+  "kysymys": "Kuka oli kokki Auguste Escoffier?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Tämä mies kuuluu keittiön suuriin nimiin. Auguste Escoffier oli ranskalainen kokki, joka eli 1800-luvun puolivälistä 1900-luvun alkupuoliskolle ja jota pidetään nykyaikaisen ravintolakeittiön uudistajana. Hän järjesti ammattikeittiön työn niin, että jokaisella työntekijällä on oma tehtävänsä, ja teki yhteistyötä hotellimies [[César Ritzin]] kanssa muun muassa Lontoon [[Savoy-hotellissa]]. Hänen keittokirjansa [[Le Guide culinaire]] ilmestyi vuonna 1903 ja on yhä alan perusteos, ja siihen hän otti mukaan myös pelmenit. Ranskalaista upeutta ja sitten nyyttejä, ihan kunnioitettavaa.",
+  "linkit": [
+   "César Ritzin",
+   "Savoy-hotellissa",
+   "Le Guide culinaire"
+  ],
+  "jatkot": [
+   "Mikä on brigade-järjestelmä keittiössä?",
+   "Kuka oli César Ritz?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pelmenit",
+  "kysymys": "Mitä pelmenien kanssa tavallisesti tarjotaan?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Pelmenit tarjoillaan tavallisesti kuumina keittovedestä nostettuina, ja mukana on usein [[smetanaa]], voita tai etikkaa. Maustamiseen käytetään mustapippuria sekä tuoreita yrttejä kuten [[tilliä]]. Joissakin perheissä lisukkeena on myös [[sinappia]], ja pelmenit voidaan syödä myös liemessä. Tavat vaihtelevat perheittäin ja alueittain.\n\nMinä tykkään siitä, että pelmenit tulevat suoraan lautaselle ilman ylimääräistä teatteria. Tosin kyyhky ei pitele haarukkaa kovin hyvin, joten ruokailu jää minulta lähinnä katselemiseksi.",
+  "linkit": [
+   "smetanaa",
+   "tilliä",
+   "sinappia"
+  ],
+  "jatkot": [
+   "Millaista on perinteinen venäläinen smetana?",
+   "Miten pelmenit keitetään oikein?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tsiolkovski",
+  "kysymys": "Miksi Tsiolkovski opiskeli lähes kokonaan itsenäisesti kirjoja lukemalla?",
+  "uusi": false,
+  "vastaus": "Mmm— lukeminen on kyl jaloa puuhaa. Tsiolkovski sairastui yhdeksänvuotiaana tulirokkoon, joka vei häneltä suurimman osan kuulosta. Kuulon heikkeneminen vaikeutti koulunkäyntiä, joten hän opiskeli lähes kokonaan itsenäisesti kirjoja lukemalla. Itseopiskelu osoittautui hedelmälliseksi, sillä hänestä tuli myöhemmin yksi nykyaikaisen [[rakettitekniikan]] ja [[avaruustekniikan]] uranuurtajista. Hän muutti vuonna 1892 [[Kalugaan]], jossa hän asui suurimman osan elämästään. Kirjat ovat kyl hyvä opettaja.",
+  "linkit": [
+   "rakettitekniikan",
+   "avaruustekniikan",
+   "Kalugaan"
+  ],
+  "jatkot": [
+   "Miksi tulirokko oli ennen vaarallinen?",
+   "Millaista elämä Kalugassa oli 1800-luvun lopulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tsiolkovski",
+  "kysymys": "Mihin vuoteen 1903 julkaistu Tsiolkovskin rakettiyhtälö johti?",
+  "uusi": false,
+  "vastaus": "No niin. Rakettiyhtälö johdettiin jo vuonna 1896, ja vuoden 1903 julkaisussa Tsiolkovski esitti, että monivaiheiset nesterakettimoottorit voisivat viedä aluksen kiertoradalle asti. Yhtälö kuvaa raketin nopeuden, polttoaineen kulutuksen ja massasuhteen yhteyttä, ja se on edelleen perustyökalu [[rakettitekniikassa]]. Sen avulla voitiin laskea, kuinka paljon polttoainetta tarvitaan tiettyyn nopeuteen, ja se loi perustaa [[avaruustekniikalle]]. Tsiolkovski lasketaan yhdessä [[Hermann Oberthin]] ja Robert Goddardin kanssa alan uranuurtajiksi, mutta en ole varma, miten suoraan yksittäiset myöhemmät raketit liittyivät juuri hänen töihinsä. Laskutaitoa kyyhkyltä ei onneksi vaadita.",
+  "linkit": [
+   "rakettitekniikassa",
+   "avaruustekniikalle",
+   "Hermann Oberthin"
+  ],
+  "jatkot": [
+   "Mitä rakettiyhtälö tarkoittaa käytännössä?",
+   "Mitä monivaiheinen raketti tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tsiolkovski",
+  "kysymys": "Mitä Hermann Oberth teki rakettitekniikan hyväksi?",
+  "uusi": true,
+  "vastaus": "Just niin, hyvä nimi. Hermann Oberth oli [[Transilvaniassa]] syntynyt saksalaista syntyperää oleva fyysikko ja rakettitekniikan uranuurtaja. Hän julkaisi 1920-luvulla teoksen raketeista avaruusmatkailun välineenä, ja se vaikutti vahvasti saksalaiseen rakettiharrastukseen. Hän vaikutti myös nuoreen insinööriin [[Wernher von Braunin]] tapaiseen sukupolveen, mutta tarkoista yksityiskohdista en ole varma. Pöllö tuntisi nämä tyypit paremmin, mutta hän on kutsuttu puhumaan jonnekin.",
+  "linkit": [
+   "Transilvaniassa",
+   "Wernher von Braunin"
+  ],
+  "jatkot": [
+   "Mikä oli Die Rakete zu den Planetenräumen?",
+   "Kuka oli Wernher von Braun?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tsiolkovski",
+  "kysymys": "Missä Kaluga sijaitsee?",
+  "uusi": true,
+  "vastaus": "Katotaas. Tän kaupungin minä löydän. Kaluga on kaupunki Venäjän Euroopan-puoleisessa osassa [[Moskovasta]] lounaaseen, [[Oka-joen]] varrella. Etäisyyttä Moskovaan on suunnilleen parisataa kilometriä. Kaupunki tunnetaan Tsiolkovskin pitkäaikaisena kotikaupunkina ja kotimuseosta, jossa hänen elämäänsä esitellään. Ylhäältä se näyttäisi tavalliselta kaupungilta, mutta ei se ole.",
+  "linkit": [
+   "Moskovasta",
+   "Oka-joen"
+  ],
+  "jatkot": [
+   "Mikä on Kalugan kotimuseo?",
+   "Mikä on Oka-joki?"
+  ],
+  "paikka": {
+   "nimi": "Kaluga",
+   "lat": 54.53,
+   "lon": 36.28,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-tsiolkovski",
+  "kysymys": "Mitä Tsiolkovski ajatteli avaruushissistä?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Tämä on korkealle tähtäävä aihe, ja sellaisia minä arvostan. Tsiolkovskin tiedetään kuvitelleen jättimäistä tornia, joka ulottuisi Maan pinnalta aina avaruuteen asti, ja ajatuksen sanotaan saaneen alkunsa [[Eiffel-tornin]] kaltaisista rakenteista. Idea on nykyisen avaruushissin käsitteen varhainen edeltäjä, jossa rakenne ulottuisi [[geostationaarisen radan]] korkeudelle. Käytännössä sellaista ei ole rakennettu, sillä tarvittavat materiaalit ovat edelleen tutkimuksen kohteena. En ole varma, miten tarkasti hän itse laski rakenteen yksityiskohdat.\n\nTorni avaruuteen kuulostaa kyyhkyn korvaan houkuttelevalta, koska pääsisi kerralla ylös ilman että siivet väsyvät. Mutta minä lentäisin silti mieluummin itse.",
+  "linkit": [
+   "Eiffel-tornin",
+   "geostationaarisen radan"
+  ],
+  "jatkot": [
+   "Miten avaruushissi toimisi teoriassa?",
+   "Mikä on geostationaarinen rata?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kaviaari",
+  "kysymys": "Mistä kalasta parhain kaviaari saadaan?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Tästä on kiistelty keittiöissä pitkään. Parhaana pidettyä kaviaaria saadaan sammen mädistä, ja arvostetuimmat lajikkeet ovat [[beluga]], [[ossetra]] ja [[sevruga]]. Belugan mäti on lajikkeista harvinaisinta ja kalleinta suurten, herneen kokoisten mätijyvien vuoksi, mutta makuasiat vaihtelevat. Arvostetuimmat sammet pyydystetään Kaspian- ja Mustaltamereltä, ja luonnonsammet ovat lähteiden mukaan nykyisin uhanalaisia, joten kauppaa rajoitetaan. Herneen kokoisia jyviä, ja kaikki ovat varmasti liian kalliita kyyhkylle.",
+  "linkit": [
+   "beluga",
+   "ossetra",
+   "sevruga"
+  ],
+  "jatkot": [
+   "Miksi sammet ovat uhanalaisia?",
+   "Mikä erottaa belugan ossetrasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kaviaari",
+  "kysymys": "Miksi juuri Astrahanista tuli Venäjän kaviaariteollisuuden keskus?",
+  "uusi": false,
+  "vastaus": "Mmm— tämä on joki- ja kalakysymys. Kun Venäjä valtasi koko [[Volgan]] sen suulle asti 1500-luvulla, Astrahanista tuli maan tärkein kalastus- ja jalostuskeskus. Sijainti jokisuistossa, jonne sammet tiettävästi nousevat kutemaan, teki paikasta luonnollisen kaviaarikaupan keskuksen, ja asema säilyi lähes neljäsataa vuotta. [[Astrahanin kremli]] kohoaa yhä Volgan rannalla kaupungin keskustassa, samalla seudulla, josta kaviaarikauppa on vuosisatoja käynyt. Jokisuisto näyttää ylhäältä ihan sormenjäljeltä.",
+  "linkit": [
+   "Volgan",
+   "Astrahanin kremli"
+  ],
+  "jatkot": [
+   "Miten kaviaaria on perinteisesti säilytetty?",
+   "Mikä on Astrahanin kremlin historia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kaviaari",
+  "kysymys": "Miksi kaviaarista on tullut niin kallista?",
+  "uusi": true,
+  "vastaus": "Kato, tähän vaikuttaa monta asiaa. Sammet kasvavat hitaasti, ja useimmat lajit tulevat sukukypsiksi vasta monen vuoden iässä, joten mädin tuotanto on luonnostaan hidasta. Luonnonkannat ovat taantuneet pitkälti liikakalastuksen ja elinympäristöjen muutosten vuoksi, mikä on johtanut kalastusrajoituksiin ja kaupan valvontaan. Kaikkein arvostetuin on [[belugan]] mäti, joka on harvinaisinta, ja nykyään osa kaviaarista tuotetaan [[kalanviljelyssä]]. Lopputuote on käsityötä, jossa suolaus ratkaisee paljon.\n\nMinä en maksaisi siitä mitään, kun en edes osaa syödä sitä: haluaisin ennemmin pullan. Mutta ymmärrän kyllä, miksi ihmiset pitävät sitä hienona.",
+  "linkit": [
+   "belugan",
+   "kalanviljelyssä"
+  ],
+  "jatkot": [
+   "Miten kaviaaria tuotetaan kalanviljelyssä?",
+   "Miten oikea kaviaari tunnistetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kaviaari",
+  "kysymys": "Mitä blinit ovat ja miksi niitä syödään laskiaisviikolla?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Blini on ohut lettu, joka esittää aurinkoa, ja se on laskiaisviikon ruoka. [[Maslenitsa]] on viikon mittainen juhla ennen ortodoksisen kirkon suurta paastoa, ja siihen kuuluu blinien syöminen. Täytteenä voi olla [[smetanaa]], hilloa, suolakalaa tai [[kaviaaria]], ja teevesi keitetään [[samovaarissa]]. Viikon lopuksi poltetaan oljista tehty nukke, joka kuvaa talvea, ja sunnuntaina on tapana pyytää anteeksi kaikilta, joita on vuoden mittaan loukannut. Aurinkoja lautaselle, kyl kelpaa.",
+  "linkit": [
+   "Maslenitsa",
+   "smetanaa",
+   "kaviaaria",
+   "samovaarissa"
+  ],
+  "jatkot": [
+   "Mitä muita laskiaisperinteitä on ortodoksisissa maissa?",
+   "Mikä on suuri paasto?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kaviaari",
+  "kysymys": "Mikä on Olivier-salaatti ja kuka sen keksi?",
+  "uusi": true,
+  "vastaus": "No jopas, sepä on tuttu pöytä. Olivier-salaatti on majoneesilla sidottu salaatti, jonka loi ranskalais-belgialainen kokki [[Lucien Olivier]] 1860-luvulla Moskovan [[Hermitage-ravintolaan]]. Alkuperäisessä versiossa oli pyytä, rapujen pyrstöjä, [[kaviaaria]], kapriksia ja oliiveja, ja Olivier piti tarkan reseptin salassa. Vallankumouksen jälkeen kalliit aineet vaihtuivat halvempiin: pyystä tuli kanaa tai keittomakkaraa, rapujen pyrstöistä keitettyjä kananmunia ja oliiveista suolakurkkua ja herneitä. Tästä versiosta tuli neuvostoajan [[uudenvuodenpöydän]] vakioruoka. Rapuja ja oliiveja, ihan liian hienoa kyyhkylle.",
+  "linkit": [
+   "Lucien Olivier",
+   "Hermitage-ravintolaan",
+   "kaviaaria",
+   "uudenvuodenpöydän"
+  ],
+  "jatkot": [
+   "Mitä muita ruokia uudenvuodenpöydässä on perinteisesti?",
+   "Mikä on Hermitage-ravintola Moskovassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mihailovskoje",
+  "kysymys": "Miksi Puškin joutui Mihailovskojeen vasten tahtoaan vuosina 1824–1826?",
+  "uusi": false,
+  "vastaus": "Kas vaan, tost saa hyvän tarinan. Puškinin karkotus johtui poliittisesta epäluulosta: viranomaiset pitivät runoilijaa epäilyttävänä ja halusivat hänet pois pääkaupunkien vaikutuspiiristä. Hänet lähetettiin vuosiksi 1824–1826 sukunsa kartanoon Pihkovan alueelle, kauas [[Pietarin]] ja [[Moskovan]] seurapiireistä. Karkotusvuosina hän kirjoitti suuren osan mestariteoksestaan [[Jevgeni Onegin]], joten pakotettu yksinäisyys oli kirjallisesti hedelmällistä aikaa. Kyl maaseudun hiljaisuus joskus kantaa hedelmää.",
+  "linkit": [
+   "Pietarin",
+   "Moskovan",
+   "Jevgeni Onegin"
+  ],
+  "jatkot": [
+   "Mitä Jevgeni Onegin kertoo?",
+   "Millainen Pihkovan alue on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mihailovskoje",
+  "kysymys": "Mitä mestariteosta hän kirjoitti siellä?",
+  "uusi": false,
+  "vastaus": "No niin, se on helppo. Puškin kirjoitti Mihailovskojen karkotusvuosina suuren osan [[säeromaanistaan]] [[Jevgeni Onegin]], jota pidetään yhtenä venäläisen kirjallisuuden keskeisistä teoksista. Teos on kirjoitettu runomuodossa, ja siinä seurataan aatelismiehen elämää ja hänen kohtaamisiaan venäläisessä yhteiskunnassa. Karkotuksen aikana syntyi lisäksi muuta tuotantoa, mutta tämä teos on se, jonka kautta tilan nimi on jäänyt historiaan. Ny minä muistin, että kirjoittaminen vaatii kyllä tilaa ja rauhaa.",
+  "linkit": [
+   "säeromaanistaan",
+   "Jevgeni Onegin"
+  ],
+  "jatkot": [
+   "Miksi Jevgeni Oneginia pidetään venäläisen kirjallisuuden klassikkona?",
+   "Missä Puškin eli karkotuksensa jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mihailovskoje",
+  "kysymys": "Kuka oli Abram Gannibal ja miten hän liittyi Puškiniin?",
+  "uusi": true,
+  "vastaus": "Joo, tost minä osaan kertoo. Abram Gannibal oli Aleksandr Puškinin äidin isoisä, ja hänelle lahjoitettiin Mihailovskojen maa vuonna 1742. Lähteiden mukaan hän oli Afrikasta lapsena Venäjälle tuotu mies, joka nousi tsaari [[Pietari Suuren]] hovissa korkeaan asemaan sotilaana ja [[insinöörinä]]; en ole varma kaikista hänen urallaan vaiheista. Puškin kirjoitti myöhemmin esi-isästään, ja hänen sukujuurensa ovat osa runoilijan tunnettua henkilöhistoriaa. Mihailovskoje oli siis suvun maata jo ennen runoilijan karkotusta.\n\nSukututkimus on kyllä kyyhkyn lempiharrastus, sillä meilläkin sukupuu on pitkä. Minä en vain ole koskaan kuullut yhdestäkään isoisästä, joka olisi saanut kokonaisen kartanon.",
+  "linkit": [
+   "Pietari Suuren",
+   "insinöörinä"
+  ],
+  "jatkot": [
+   "Millainen hovi Pietari Suurella oli?",
+   "Mitä Puškin kirjoitti esi-isästään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mihailovskoje",
+  "kysymys": "Milloin Mihailovskojesta tuli museo ja mitä sodassa tapahtui?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Valtio osti kartanon Puškinin pojalta Grigorilta vuonna 1899, ja vuodesta 1922 se on toiminut museona. [[Toisen maailmansodan]] aikana kartano ryöstettiin ja tuhoutui pahoin, mutta se kunnostettiin sodan jälkeen, joten nykyinen kartano on osittain jälleenrakennettu. Museona se säilyttää runoilijan karkotusajan muistoa, ja paikka on yhä merkittävä [[Puškinin]] muistopaikka. Onpas siitä onneksi jo pitkä aika.",
+  "linkit": [
+   "Toisen maailmansodan",
+   "Puškinin"
+  ],
+  "jatkot": [
+   "Miten tuhoutunut kartano rakennettiin uudelleen?",
+   "Mitä Mihailovskojen museossa voi nähdä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mihailovskoje",
+  "kysymys": "Kuka osti Mihailovskojen valtiolle ja milloin?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Valtio osti [[kartanon]] vuonna 1899 Puškinin pojalta Grigorilta, eli kauppa tehtiin yli sata vuotta sitten ja runoilijan kuolemasta oli kulunut jo kauan. Tiloja ei siis ostettu runoilijalta itseltään vaan hänen perillisensä käsistä. Ostoa seurasi vuosikymmenten kuluttua museon perustaminen vuonna 1922, ja sillä tiellä [[Mihailovskoje]] on pysynyt kulttuurikohteena. Ja tän kaiken minä muistin ilman muistiinpanoja.",
+  "linkit": [
+   "kartanon",
+   "Mihailovskoje"
+  ],
+  "jatkot": [
+   "Mitä muita Puškinin muistopaikkoja Venäjällä on?",
+   "Millaista Puškinin elämä oli karkotuksen jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-smolensk",
+  "kysymys": "Miksi Smolenskin muuri oli niin strategisesti tärkeä?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Smolensk sijaitsee ylä-[[Dneprin]] varrella kauppareitillä, joka yhdisti Länsi-Euroopan Moskovaan, ja kaupunkia hallitseva hallitsi samalla tätä reittiä. Siksi vahvat muurit ja lukuisat tornit olivat Länsi-Venäjän puolustuksessa keskeinen tekijä: kaupunki oli rajaseudun portti, jonka haltuunotosta kilpailtiin vuosisatoja. Kaupunki vaihtoi omistajaa liettualaisten, puolalaisten ja venäläisten välillä, ennen kuin se vakiintui osaksi [[Venäjää]]. Tää oli sellanen vastaus, jossa kartta puhuu enemmän kuin kyyhky.",
+  "linkit": [
+   "Dneprin",
+   "Venäjää"
+  ],
+  "jatkot": [
+   "Milloin Smolenskin kivikremli rakennettiin?",
+   "Miten kauppareitit vaikuttivat kaupunkien kasvuun?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-smolensk",
+  "kysymys": "Mitä Smolenskissa tapahtui elokuussa 1812?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Elokuussa 1812 Smolenskin luona käytiin [[Napoleon]]in suuren armeijan ja Venäjän joukkojen välinen suuri taistelu, ja ranskalaiset valtasivat kaupungin. Tappiot olivat suuret, ja eri lähteet antavat niistä eri lukuja, joten tarkkaa määrää en uskalla sanoa. Tapahtuma oli osa Napoleonin Venäjän sotaretkeä, ja sen on kuvannut myöhemmin [[Lev Tolstoi]] romaanissaan [[Sota ja rauha]]. Tapahtumasta on kulunut yli kaksisataa vuotta, ja kaupunki on rakennettu uudelleen ja elää yhä.",
+  "linkit": [
+   "Napoleon",
+   "Lev Tolstoi",
+   "Sota ja rauha"
+  ],
+  "jatkot": [
+   "Miten Napoleonin Venäjän sotaretki päättyi?",
+   "Mistä Tolstoin Sota ja rauha kertoo?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-smolensk",
+  "kysymys": "Mikä Smolenskin kivikremli on ja milloin se rakennettiin?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Smolenskin [[kivikremli]] rakennettiin 1500-luvun lopun ja 1600-luvun alun vaihteessa, ja tarkat vuodet vaihtelevat lähteittäin. Sen paksut muurit ja lukuisat tornit palvelivat Länsi-Venäjän puolustusta, ja ne suojasivat kaupunkia rajaseudulla, jossa sota oli arkea. Muuri kuuluu [[Smolenskin]] tunnetuimpiin nähtävyyksiin, ja siitä on säilynyt merkittäviä osia nykypäivään. Ylhäältä päin muurin kehä näyttää kyl komealta, vaikka en ole mittaillut sitä.",
+  "linkit": [
+   "kivikremli",
+   "Smolenskin"
+  ],
+  "jatkot": [
+   "Kuinka monta tornia muurissa oli?",
+   "Miten linnoitukset suojasivat keskiajan kaupunkeja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-smolensk",
+  "kysymys": "Kenen hallinnassa Smolensk oli keskiajalla ja myöhemmin?",
+  "uusi": true,
+  "vastaus": "Tuota niin, tost on pitkä juttu. Keskiajalla Smolensk oli oman ruhtinaskuntansa pääkaupunki, ja myöhemmin se siirtyi vuorotellen liettualaisten, puolalaisten ja venäläisten hallintaan. Syynä oli kaupungin sijainti kauppareitin varrella [[Dneprin]] yläjuoksulla, sillä lähialueen valtiot halusivat hallita tätä reittiä. Lopulta kaupunki vakiintui osaksi [[Venäjää]], ja tarkat vuodet vaihtelevat eri lähteissä. Voi kun kaikkien rajojen yli ei tarvitsisi lentää omin siivin, huokaan.",
+  "linkit": [
+   "Dneprin",
+   "Venäjää"
+  ],
+  "jatkot": [
+   "Millainen valtio keskiajan Liettua oli?",
+   "Miksi Smolenskista taisteltiin niin usein?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-smolensk",
+  "kysymys": "Miksi Smolenskia pidetään yhtenä Venäjän vanhimmista kaupungeista?",
+  "uusi": true,
+  "vastaus": "Ai tota. Smolensk mainitaan lähteissä ensimmäisen kerran vuonna 863, minkä vuoksi sitä pidetään yhtenä Venäjän vanhimmista kaupungeista. Kaupunki sijaitsee ylä-[[Dneprin]] varrella kauppareitillä, mikä selittää sen vanhan aseman, sillä reitit synnyttivät kaupunkeja ja vauraus kasvatti niitä. Keskiajalla siitä tuli oman [[ruhtinaskuntansa]] pääkaupunki, ja se on ollut mukana monissa Itä-Euroopan käänteissä. Ikää löytyy kaupungilta enemmän kuin kyyhkyn suvulla, melkein.",
+  "linkit": [
+   "Dneprin",
+   "ruhtinaskuntansa"
+  ],
+  "jatkot": [
+   "Mitä muita Venäjän vanhimpia kaupunkeja on?",
+   "Millaista kauppaa Dneprin reitillä käytiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rostov-veliki",
+  "kysymys": "Kuka rakennutti Rostovin komean kremlin ja miksi?",
+  "uusi": false,
+  "vastaus": "Kas vaan, hyvä kysymys. Rostovin kremlin rakennutti [[metropoliitta]] Iona Sysojevitš 1600-luvun lopulla omaksi hallintokeskuksekseen, ja tarkat rakennusvuodet vaihtelevat lähteittäin. Kyse ei siis ollut puolustuslinnoituksesta vaan kirkollisen vallanpitäjän hallinto- ja asuinkokonaisuudesta. Sitä pidetään yhtenä Venäjän kauneimmista kremleistä [[Moskovan]] kremlin ulkopuolella, ja se onkin yksi kaupungin tärkeimmistä nähtävyyksistä. Ylhäältä päin kokonaisuus on komea ja vähän vallanpitäjän näköinen.",
+  "linkit": [
+   "metropoliitta",
+   "Moskovan"
+  ],
+  "jatkot": [
+   "Mikä on metropoliitan tehtävä?",
+   "Mitä muuta Rostovin kremlissä on nähtävää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rostov-veliki",
+  "kysymys": "Kuinka painava sen suurin kello, Sysoi, on?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä muistan. Sysoi-kello painaa 32 000 kiloa, ja se valettiin vuonna 1688. Se riippuu Assumptionin [[katedraalin]] kellotapulissa yhdessä useiden muiden valtavien kellojen kanssa. Kellojen yhteissointi on [[Rostov Velikin]] tunnusmerkki. Kyl tää oli nopea vastaus, vaikka paino on kyyhkylle käsittämätön.",
+  "linkit": [
+   "katedraalin",
+   "Rostov Velikin"
+  ],
+  "jatkot": [
+   "Miten näin suuria kelloja valettiin?",
+   "Millaiselta Rostovin kellojen soitto kuulostaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rostov-veliki",
+  "kysymys": "Mikä on finift ja miksi Rostov on siitä tunnettu?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Finift on perinteinen venäläinen [[emalikäsityö]], jossa metallipinnalle sulatetaan värillistä lasimaista emalia, ja Rostov on tunnettu juuri tästä käsityöstä. Rostovin finift tunnetaan hienoista, pienistä maalatuista kuvista, jotka koristavat esimerkiksi rasioita ja koruja. Se on edelleen yksi kaupungin tunnetuimmista matkamuistoista [[Kultaisen renkaan]] kohteiden joukossa. Pienet värit ovat kyllä silmää hivelevä näky katolta, jos osaa katsoa.",
+  "linkit": [
+   "emalikäsityö",
+   "Kultaisen renkaan"
+  ],
+  "jatkot": [
+   "Miten emalityö tehdään vaihe vaiheelta?",
+   "Mitä muita käsitöitä Kultaisen renkaan kaupungeissa tehdään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rostov-veliki",
+  "kysymys": "Mikä on Kultainen rengas?",
+  "uusi": true,
+  "vastaus": "No niin, tost minä osaan kertoo. Kultainen rengas on Venäjällä [[Moskovan]] koillispuolella sijaitsevien vanhojen kaupunkien ketju, jonka kaupungit ovat tunnettuja historiallisista rakennuksistaan, luostareistaan ja kremleistään. Siihen kuuluu Rostov Velikin lisäksi muun muassa [[Sergiev Posad]] ja Kostroma, ja lisäksi reitillä on muita vanhoja kaupunkeja. Reitti on suosittu matkailukohde, jota pidetään Venäjän historian ja ortodoksisen kulttuurin esittelynä. Rengas kuulostaa pullalta, mutta valitettavasti sitä ei voi syödä.",
+  "linkit": [
+   "Moskovan",
+   "Sergiev Posad"
+  ],
+  "jatkot": [
+   "Mitä kaupunkeja Kultaiseen renkaaseen kuuluu?",
+   "Miksi reitti on nimeltään Kultainen rengas?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rostov-veliki",
+  "kysymys": "Milloin Rostov liitettiin Moskovaan ja mikä se oli ennen sitä?",
+  "uusi": true,
+  "vastaus": "Mmm— tää on selvä. Rostov Veliki oli keskiajalla oman [[ruhtinaskuntansa]] keskus, ja se liitettiin [[Moskovaan]] vuonna 1474. Kaupunki mainitaan lähteissä jo vuonna 862, joten se on yksi Venäjän vanhimmista. Liittäminen oli osa Moskovan vallan kasvua, jonka myötä pienet ruhtinaskunnat sulautuivat yhteen valtioon. Vanhat ruhtinaskunnat ovat kyl nykyisin enää kaupunkien vanhoja kuvia.",
+  "linkit": [
+   "ruhtinaskuntansa",
+   "Moskovaan"
+  ],
+  "jatkot": [
+   "Miten Moskova laajensi valtaansa keskiajalla?",
+   "Mitä ruhtinaskunta tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sergiev-posad",
+  "kysymys": "Kuka perusti Kolminaisuus-Sergein Lavran ja minä vuonna?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Kolminaisuus-Sergein Lavran perusti munkki [[Sergei Radonezhilainen]], joka rakensi perinteisen tiedon mukaan puisen Pyhän Kolminaisuuden kirkon Makovets-kukkulalle vuonna 1337. Vuosiluku vaihtelee eri lähteissä, joten tarkasta vuodesta en ole täysin varma. Luostarista tuli ajan myötä Venäjän tärkein ja arvostetuin, ja sen kirkossa säilytetään [[Andrei Rubljovin]] kuuluisaa Kolminaisuus-ikonia. Tämä oli sellanen vastaus, jonka kantamiseen ei tarvinnut kuin yksi kunnon muistikuva.",
+  "linkit": [
+   "Sergei Radonezhilainen",
+   "Andrei Rubljovin"
+  ],
+  "jatkot": [
+   "Millainen elämä luostarissa on?",
+   "Miksi Kolminaisuus-ikoni on niin kuuluisa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sergiev-posad",
+  "kysymys": "Miten luostari kesti pitkän piirityksen 1600-luvun alussa?",
+  "uusi": false,
+  "vastaus": "Nyt muistan:. Luostari kesti puolalais-liettualaisten piirityksen vuosina 1608–1610 pääosin vahvojen [[kivimuuriensa]] ansiosta, jotka oli rakennettu 1550-luvulla. Piiritys kesti noin 16 kuukautta, ja muurit sekä puolustajien sinnikkyys pitivät [[linnoitetun]] luostarin hallussa. Ajanjakso kuuluu Venäjän levottomaan 1600-luvun alkuun, ja luostarin kestävyys vahvisti sen asemaa kansakunnan tärkeänä pyhänä paikkana. Onpas siit aikaa, ja muurit pitävät yhä.",
+  "linkit": [
+   "kivimuuriensa",
+   "linnoitetun"
+  ],
+  "jatkot": [
+   "Mitä Venäjällä tapahtui 1600-luvun alussa?",
+   "Millaisia muureja luostarilinnoituksissa käytettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sergiev-posad",
+  "kysymys": "Kuka oli Sergei Radonezhilainen?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Sergei Radonezhilainen oli [[munkki]], joka perusti Kolminaisuus-luostarin Makovets-kukkulalle, ja häntä pidetään yhtenä venäläisen ortodoksisen kirkon tärkeimmistä hahmoista. Perimätiedon mukaan hän rakensi paikalle ensin puisen Pyhän Kolminaisuuden kirkon, josta kasvoi myöhemmin Venäjän tärkein luostari. Hänen elämäänsä liittyy paljon perinnetietoa, ja tarkkoja yksityiskohtia on vaikea erottaa legendasta, joten niissä en ole varma. Hänen nimensä on säilynyt kaupungin ja [[Sergiev Posadin]] luostarin kautta. Tätä nimeä ei ole helppo lausua, mutta kyyhky yrittää.",
+  "linkit": [
+   "munkki",
+   "Sergiev Posadin"
+  ],
+  "jatkot": [
+   "Miksi hänet muistetaan pyhimyksenä?",
+   "Miten luostari kehittyi hänen jälkeensä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sergiev-posad",
+  "kysymys": "Kuka maalasi Kolminaisuus-ikonin ja mikä se esittää?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Kolminaisuus-ikonin maalasi [[Andrei Rubljov]], joka oli venäläinen [[ikonimaalari]], ja ikoni on 1400-luvun alkupuolelta. Se esittää kolmea enkeliä pöydän ääressä, mikä viittaa Raamatun kertomukseen, jossa kolme vierasta vieraili Abrahamin luona, ja se tulkitaan Kolminaisuuden kuvaksi. Teos on yksi venäläisen ikonitaiteen tunnetuimmista, ja Kolminaisuus-Sergein Lavra on tunnettu sen yhteydestä. Ikonin tarkasta säilytyspaikasta en ole täysin varma. Ei paha kyyhkyltä taidehistoriassa.",
+  "linkit": [
+   "Andrei Rubljov",
+   "ikonimaalari"
+  ],
+  "jatkot": [
+   "Millaista Rubljovin tyyli oli?",
+   "Miten ikoneja maalataan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sergiev-posad",
+  "kysymys": "Kuinka korkea luostarin kellotorni on ja kuka sen tilasi?",
+  "uusi": true,
+  "vastaus": "Ai se. Luostarin [[kellotornin]] tilasi keisarinna Elisabet, ja se on noin 88 metriä korkea, joten se oli aikanaan yksi Venäjän korkeimmista rakennuksista. Lähteet antavat korkeudelle hieman vaihtelevia lukuja, joten pidän tuota arviona. Torni kuuluu [[luostarialueen]] tunnetuimpiin rakennuksiin ja näkyy kauas, kun alueelle lähestyy. Tornin laelta näkisi varmasti kauas, vaikka minä tykkään lentää sen ohi.",
+  "linkit": [
+   "kellotornin",
+   "luostarialueen"
+  ],
+  "jatkot": [
+   "Miten kellotornit toimivat luostareissa?",
+   "Missä kellotorni sijaitsee luostarin alueella?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ipatievin-luostari",
+  "kysymys": "Mikä merkittävä päätös tehtiin luostarissa 14. maaliskuuta 1613?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Luostarissa 14. maaliskuuta 1613 ilmoitettiin nuorelle Mihail Romanoville, että [[Zemski sobor]] -kokous oli valinnut hänet Venäjän uudeksi tsaariksi. Hän oleskeli tuolloin luostarissa, ja hetki käynnisti [[Romanovien]] noin 300 vuotta kestäneen hallituskauden. Valinta tehtiin levottomuuksien ajan jälkeen, kun maa tarvitsi hallitsijan, ja luostari on sen vuoksi merkittävä historiallinen paikka. Onpas siitä pitkä aika, mutta rakennukset ovat yhä pystyssä.",
+  "linkit": [
+   "Zemski sobor",
+   "Romanovien"
+  ],
+  "jatkot": [
+   "Mikä Zemski sobor oli?",
+   "Mikä oli levottomuuksien aika Venäjällä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ipatievin-luostari",
+  "kysymys": "Mikä arvokas aikakirja löytyi luostarin kirjastosta?",
+  "uusi": false,
+  "vastaus": "Tuota niin, tost voin kertoa. Luostarin kirjastosta löytyi Ipatievin aikakirja, joka sisältää keskeisiä 1300-luvun venäläisiä [[kronikoita]]. Historioitsija [[Nikolai Karamzin]] toi sen tunnetuksi, ja siitä on tullut tärkeä lähde Venäjän keskiajan tutkimukselle. Aikakirja on saanut nimensä luostarista, jossa se säilyi. Kyl tää oli sellanen aihe, josta lähteet vastaavat paremmin kuin kyyhky.",
+  "linkit": [
+   "kronikoita",
+   "Nikolai Karamzin"
+  ],
+  "jatkot": [
+   "Mitä kronikoista voi oppia keskiajasta?",
+   "Kuka oli Nikolai Karamzin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ipatievin-luostari",
+  "kysymys": "Kuka oli Mihail Romanov ja miten hänestä tuli tsaari?",
+  "uusi": true,
+  "vastaus": "No niin, tost minä osaan kertoo. Mihail Romanov oli nuori mies, jonka [[Zemski sobor]] -kokous valitsi vuonna 1613 Venäjän uudeksi tsaariksi, ja hänestä tuli [[Romanovien]] hallitsijasuvun ensimmäinen tsaari. Hänen valintansa tapahtui sekasorron jälkeen, ja uutinen ilmoitettiin hänelle Ipatievin luostarissa, jossa hän oleskeli. Suvun hallituskausi kesti noin 300 vuotta. Tarkat yksityiskohdat hänen valinnastaan ovat historiankirjoissa moninaisia, joten tässä pysyn pääpiirteissä. Tarina on pitkä, mutta kyyhky selvisi.",
+  "linkit": [
+   "Zemski sobor",
+   "Romanovien"
+  ],
+  "jatkot": [
+   "Miten Romanovien valtakausi päättyi?",
+   "Millainen hallitsija Mihail oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ipatievin-luostari",
+  "kysymys": "Kuka perusti Ipatievin luostarin ja kuka oli Tšet?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Ipatievin luostarin perusti noin vuonna 1330 tataarilähtöinen [[ruhtinas]] Tšet, joka kääntyi kristityksi ja sai nimen Zakarias. Luostari sijaitsee Kostroma-joen rannalla vastapäätä Kostroman kaupunkia. Tšetin kerrotaan olleen suvun kantaisä, ja tarkat yksityiskohdat hänen vaiheistaan ovat osin perimätietoa, joten niissä en ole varma. Suurin osa nykyisistä rakennuksista on 1500–1600-luvuilta, ja [[Ipatievin luostari]] on kaupungin tärkeimpiä nähtävyyksiä. Joen yli näkee kyllä kauas, ja kyyhky tykkää.",
+  "linkit": [
+   "ruhtinas",
+   "Ipatievin luostari"
+  ],
+  "jatkot": [
+   "Millaisia rakennuksia luostarissa on?",
+   "Mitä Kostromassa on nähtävää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ipatievin-luostari",
+  "kysymys": "Kuinka kauan Romanovit hallitsivat Mihailin jälkeen?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Romanovien suku hallitsi Venäjää noin 300 vuotta, aina vuoteen 1917 asti, ja alkoi Mihail Romanovin valinnasta vuonna 1613. Sinä aikana valtaistuimella nähtiin monia tunnettuja hallitsijoita, kuten [[Pietari Suuri]] ja [[Katariina Suuri]]. Hallitsijasuvun valtakausi päättyi vallankumouksiin vuonna 1917, jotka muuttivat maan valtiollisen järjestelmän. Aikaa on tosiaan kulunut yli sata vuotta, ja kyl luostarin kivet ovat sen nähneet.",
+  "linkit": [
+   "Pietari Suuri",
+   "Katariina Suuri"
+  ],
+  "jatkot": [
+   "Miten Pietari Suuri muutti Venäjää?",
+   "Mitä vuonna 1917 tapahtui Venäjällä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-laatokka",
+  "kysymys": "Miksi Laatokka on erikoinen Euroopan järvien joukossa?",
+  "uusi": false,
+  "vastaus": "Kato, siinä on järvi jos jokin. [[Laatokka]] on pinta-alaltaan lähes 17 900 neliökilometrin kokoisena Euroopassa kokonaan sijaitsevista järvistä suurin, ja se ulottuu Pietarin lähistöltä Karjalan tasavaltaan asti. Sen allas on muinainen hautavajoama ja poimulaakso, jota jääkauden liike syvensi, joten koillisosassa syvyys ylittää 200 metriä, vaikka keskisyvyys on vain noin 47 metriä. Järvessä on noin 660 saarta, ja suurimmalla niistä sijaitsee keskiaikainen [[Valamon luostari]], yksi Venäjän ortodoksisen kirkon merkittävimmistä pyhiinvaelluskohteista. Vedet kulkevat luoteeseen kohti Suomenlahtea, ja purkautumisväylä on [[Nevajoki]]. Ei kyl yhdellä lennolla ylitetä.",
+  "linkit": [
+   "Laatokka",
+   "Valamon luostari",
+   "Nevajoki"
+  ],
+  "jatkot": [
+   "Mikä on Euroopan toiseksi suurin järvi?",
+   "Miten Valamon luostari liittyy Suomeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-laatokka",
+  "kysymys": "Mikä saari luostareineen sijaitsee järven keskellä?",
+  "uusi": false,
+  "vastaus": "Ai tota, se on helppo. Kyseessä on [[Valamo]], Laatokan saariston suurin saari, jolla sijaitsee keskiaikainen [[Valamon luostari]], yksi Venäjän ortodoksisen kirkon merkittävimmistä pyhiinvaelluskohteista. Tarkkaan ottaen saari ei ole aivan järven keskellä vaan sen pohjoisosassa. Munkkiyhteisö siirtyi sotien aikana Suomeen, ja Heinävedellä toimii nykyään [[Uusi Valamo]]. Kauniin hiljainen paikka, kyl sinne kyyhkykin mielellään laskeutuisi.",
+  "linkit": [
+   "Valamo",
+   "Valamon luostari",
+   "Uusi Valamo"
+  ],
+  "jatkot": [
+   "Miksi munkit lähtivät Valamosta Suomeen?",
+   "Mitä Uusi Valamo on nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-laatokka",
+  "kysymys": "Mikä joki vie Laatokan vedet Suomenlahteen?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin, ei tarvii kauaa. Kyseessä on [[Nevajoki]], joka laskee Laatokasta luoteeseen kohti Suomenlahtea. Näin ollen [[Laatokka]] kuuluu Itämeren vesistöalueeseen, ja sen vedet päätyvät lopulta mereen Pietarin kautta. Lyhyt joki mut iso järvi, kyl se sellaista on.",
+  "linkit": [
+   "Nevajoki",
+   "Laatokka"
+  ],
+  "jatkot": [
+   "Mikä kaupunki sijaitsee Nevajoen suulla?",
+   "Mitkä muut joet laskevat Laatokkaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-laatokka",
+  "kysymys": "Kuinka syvä Laatokka on?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Järven keskisyvyys on vain noin 47 metriä, mutta koillisosassa syvyys ylittää 200 metriä. Ero johtuu allasta muovanneista voimista: Laatokan allas on muinainen [[hautavajoama]] ja poimulaakso, ja myöhemmin [[jääkausi]] syvensi sitä entisestään. Matala keskiarvo ja syvät kuopat kuuluvat siis samaan järveen.\n\nMinä katson tällaisia syvyyksiä aina ylhäältä, eikä pinnasta näe mitään. Sen verran kyyhky tietää, että vesi pitää omat salaisuutensa.",
+  "linkit": [
+   "hautavajoama",
+   "jääkausi"
+  ],
+  "jatkot": [
+   "Miten jääkausi muovasi Laatokan altaan?",
+   "Mitä hautavajoama tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-laatokka",
+  "kysymys": "Mikä järvi on Euroopan toiseksi suurin Laatokan jälkeen?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Pinta-alaltaan Euroopan toiseksi suurin järvi on [[Äänisjärvi]], joka sijaitsee Laatokan itäpuolella Venäjällä. Järven saarella seisoo tunnettu puinen [[Kižin kirkko]], jossa on kaksikymmentäkaksi kupolia. Pohjoisessa on siis vettä kahden järven verran, mikä ei kyl kyyhkyä haittaa.",
+  "linkit": [
+   "Äänisjärvi",
+   "Kižin kirkko"
+  ],
+  "jatkot": [
+   "Mikä on Euroopan kolmanneksi suurin järvi?",
+   "Mikä on Kižin saaren tunnetuin nähtävyys?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vologdan-voi",
+  "kysymys": "Kuka kehitti Vologdan voin valmistustavan ja mistä hän sai idean?",
+  "uusi": false,
+  "vastaus": "No niin, tämä on hyvä tarina. Valmistustavan kehitti [[Nikolai Vereštšagin]], ja käänteentekevä oli [[Pariisin maailmannäyttely]] vuonna 1867: siellä hän maistoi normandialaista voita ja alkoi sen jälkeen kehittää omaa versiotaan. Hänen menetelmässään kerma kuumennetaan tarkasti tietyssä lämpötilassa ennen kirnuamista, mikä antaa voille tunnusomaisen makean, pähkinäisen maun. Lopputulos voitti kultamitalin Pariisin näyttelyssä vuonna 1878. Voi hyvä voi, nyt tekis mieli briochea.",
+  "linkit": [
+   "Nikolai Vereštšagin",
+   "Pariisin maailmannäyttely"
+  ],
+  "jatkot": [
+   "Mitä Pariisin maailmannäyttely oli?",
+   "Miksi Normandian voi on niin kuuluisaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vologdan-voi",
+  "kysymys": "Miksi voita myytiin aluksi nimellä \"Pariisin voi\"?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Syy oli [[Ranska]]: idea valmistustapaan oli lähtöisin sieltä, joten voita myytiin aluksi Pariisin voina. Vasta vuonna 1939 se nimettiin uudelleen kotiseutunsa mukaan Vologdan voiksi. Nimi on nykyään suojattu, sillä Venäjä rajasi sen vuonna 2010 suojatuksi nimeksi, ja tällainen [[alkuperänimitys]] kuuluu vain aidosti Vologdan alueella valmistetulle voille. Pariisi vaan myy paremmin kuin Vologda, sen minä tiedän.",
+  "linkit": [
+   "Ranska",
+   "alkuperänimitys"
+  ],
+  "jatkot": [
+   "Miten aito Vologdan voi eroaa tavallisesta voista?",
+   "Mitä muita tuotteita on suojattu alkuperänimityksellä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vologdan-voi",
+  "kysymys": "Mitä tarkoittaa suojattu alkuperänimitys?",
+  "uusi": true,
+  "vastaus": "Ai se. Suojattu nimi sitoo tuotteen tiettyyn alueeseen: nimeä saa käyttää vain tuote, joka on valmistettu kyseisellä alueella sovittujen vaatimusten mukaan. Tällainen järjestelmä on käytössä esimerkiksi Euroopan unionissa, jossa [[Parmigiano Reggiano]] saa tulla vain tietyltä Pohjois-Italian alueelta. Venäjällä saman suojan sai vuonna 2010 [[Vologdan voi]], jonka nimi on varattu aidosti Vologdan alueella valmistetulle tuotteelle. Nimi on siis oikea todistus eikä pelkkä kyltti.",
+  "linkit": [
+   "Parmigiano Reggiano",
+   "Vologdan voi"
+  ],
+  "jatkot": [
+   "Mitä EU:n suojatut alkuperänimitykset ovat?",
+   "Mitkä muut tuotteet ovat suojattu nimellä Italiassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vologdan-voi",
+  "kysymys": "Missä Vologdan kaupunki sijaitsee?",
+  "uusi": true,
+  "vastaus": "Katotaas. Vologda sijaitsee Venäjän Euroopan-puoleisessa osassa, Moskovan pohjoispuolella ja Pietarin itäpuolella. Lähimmät suurkaupungit ovat [[Moskova]] ja [[Pietari]]: edellisestä kaupunki on pohjoiseen ja jälkimmäisestä itään. Kaupunki on Vologdan alueen hallinnollinen keskus. Ylhäältä katsottuna se on kyl aika pohjoisessa.",
+  "linkit": [
+   "Moskova",
+   "Pietari"
+  ],
+  "jatkot": [
+   "Mitä Vologdan alueella on nähtävää?",
+   "Miten Moskovasta pääsee Vologdaan?"
+  ],
+  "paikka": {
+   "nimi": "Vologda",
+   "lat": 59.22,
+   "lon": 39.89,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-vologdan-voi",
+  "kysymys": "Miten kerma muuttuu kirnuamalla voiksi?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Kirnuamisessa kermaa ravistellaan ja sekoitetaan voimakkaasti, jolloin kermassa pieninä palloina oleva [[maitorasva]] alkaa törmäillä ja pallojen kuoret rikkoutuvat. Rasva kokoontuu yhteen rakeiksi ja lopulta voiksi, ja jäljelle jäävä neste on [[kirnupiimä]]. Vologdan voin valmistuksessa kerma kuumennetaan vielä ennen kirnuamista, mikä muuttaa lopputuloksen makua. Teoriassa minä sen osaan, käytäntö jää ihmisille kyl.",
+  "linkit": [
+   "maitorasva",
+   "kirnupiimä"
+  ],
+  "jatkot": [
+   "Mitä kirnupiimä on?",
+   "Miten ghee eroaa tavallisesta voista?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-staraja-rjazan",
+  "kysymys": "Kuka oli Vanhan Rjazanin ruhtinas, joka sai surmansa kaupungin tuhoutuessa?",
+  "uusi": false,
+  "vastaus": "Ai tota, tämä on synkkä kohta historiassa. Ruhtinas oli [[Juri Igorevitš]]. Hän sai surmansa puolisonsa kanssa, kun Batu-kaanin mongolijoukot valtasivat kaupungin joulukuussa 1237 ja polttivat sen. Tapahtumasta on yli seitsemänsataa vuotta, ja tuhoutunut kaupunki tunnetaan nimellä [[Staraja Rjazan]]. Sitä ei koskaan rakennettu uudelleen: arkeologit ovat löytäneet paikalta joukkohautoja, ja nykyään siellä näkyy enää maavalleja. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "Juri Igorevitš",
+   "Staraja Rjazan"
+  ],
+  "jatkot": [
+   "Mitä Rjazanin ruhtinaskunnalle tapahtui sen jälkeen?",
+   "Mitä arkeologit ovat löytäneet Vanhan Rjazanin paikalta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-staraja-rjazan",
+  "kysymys": "Minne ruhtinaskunnan pääkaupunki siirrettiin tuhon jälkeen?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Pääkaupunki siirtyi pysyvästi kaupunkiin nimeltä [[Perejaslavl-Rjazanski]], joka nimettiin vasta vuonna 1778 uudelleen Rjazaniksi. Entisen pääkaupungin, [[Staraja Rjazan]], paikalla näkyy nykyään enää maavalleja, ja se on arkeologinen kaivauskohde. Ruhtinaskunnan elämä jatkui siis uudessa keskuksessa. Elämä jatku sentään uudessa paikassa.",
+  "linkit": [
+   "Perejaslavl-Rjazanski",
+   "Staraja Rjazan"
+  ],
+  "jatkot": [
+   "Milloin Perejaslavl-Rjazanski sai nimekseen Rjazan?",
+   "Mitä Vanhan Rjazanin paikalla on nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-staraja-rjazan",
+  "kysymys": "Missä Rjazan sijaitsee nykyään?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Nykyinen Rjazan sijaitsee Venäjän Euroopan-puoleisessa osassa, Moskovasta kaakkoon, ja kaupungin vierestä virtaa [[Okajoki]]. Vanha pääkaupunki [[Staraja Rjazan]] on noin 50 kilometrin päässä nykyisestä kaupungista itään. Nykyinen nimi vakiintui vuonna 1778, kun Perejaslavl-Rjazanski nimettiin uudelleen. Ylhäältä Oka kiemurtelee kyl ihan komeasti.",
+  "linkit": [
+   "Okajoki",
+   "Staraja Rjazan"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Rjazan on nykyään?",
+   "Mikä on Okajoen merkitys Venäjällä?"
+  ],
+  "paikka": {
+   "nimi": "Rjazan",
+   "lat": 54.63,
+   "lon": 39.74,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-staraja-rjazan",
+  "kysymys": "Mikä joki Oka on?",
+  "uusi": true,
+  "vastaus": "Nyt minä muistan, tämä on tuttu reitti. Oka on Euroopan-Venäjän suuri joki ja pääjoen, [[Volga]], merkittävä sivujoki; sen pituus on noin 1500 kilometriä. Joen rannalla sijaitsi Rjazanin ruhtinaskunnan alkuperäinen pääkaupunki, [[Staraja Rjazan]], ja nykyinen Rjazan sijaitsee sen varrella.\n\nJoet ovat kyyhkyn parhaat tiet. Minä seuraan niitä, koska ne eivät koskaan eksy, toisin kuin kartat.",
+  "linkit": [
+   "Volga",
+   "Staraja Rjazan"
+  ],
+  "jatkot": [
+   "Missä Oka yhtyy Volgaan?",
+   "Mikä Volga on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-staraja-rjazan",
+  "kysymys": "Kuka oli Batu-kaani?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Batu-kaani oli Tšingis-kaanin pojanpoika, joka johti mongolien länsiretkeä Venäjän ruhtinaskuntiin 1230-luvun lopulla. Lähteiden mukaan [[Rjazanin ruhtinaskunta]] oli ensimmäisiä, jotka kokivat hyökkäyksen, ja hänen joukkonsa tuhosivat Vanhan Rjazanin joulukuussa 1237. Myöhemmin hän perusti Volgan alueelle valtion, joka tunnetaan nimellä [[Kultainen ordu]]. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "Rjazanin ruhtinaskunta",
+   "Kultainen ordu"
+  ],
+  "jatkot": [
+   "Mikä Kultainen ordu oli?",
+   "Miten mongolit vaikuttivat Venäjän ruhtinaskuntiin?"
+  ]
+ },
+ {
+  "kohde": "nosto:kizin-kirkko",
+  "kysymys": "Miten hirsirakennus pysyy pystyssä ilman nauloja?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Hirsirunko pysyy koossa liitoksilla: hirret on veistetty kirveellä ja liitetty toisiinsa nurkissa tekniikalla, jota kutsutaan nimellä [[salvos]]. Jokaisen hirsikerroksen paino painaa liitoksia tiukemmin kiinni, ja alla on [[kivijalusta]], jonka päällä koko runko lepää. Väite, ettei kirkossa olisi lainkaan nauloja, on kuitenkin vain melkein totta, enkä ole varma kaikista yksityiskohdista, mutta runko itse on nauloitta.\n\nMinä olen nukkunut räystäillä, joten arvostan rakennusta, joka pysyy pystyssä pelkällä painollaan. Tuuli on kyl koetellut monta kattoa.",
+  "linkit": [
+   "salvos",
+   "kivijalusta"
+  ],
+  "jatkot": [
+   "Mitä salvos tarkoittaa rakennustekniikassa?",
+   "Miten puukirkkoja suojellaan palolta?"
+  ]
+ },
+ {
+  "kohde": "nosto:kizin-kirkko",
+  "kysymys": "Miksi kupolit katettiin juuri haavalla?",
+  "uusi": false,
+  "vastaus": "No jopas, tuo on hyvä huomio. Haapa halkeaa helposti ohuiksi paanuiksi, ja auringossa ja sateessa sen pinta harmaantuu hopeanhohtoiseksi. En ole varma, oliko juuri tämä rakentajien syy, mutta se on yleisin selitys. Kupolien peite tehdään pienistä puulaatoista, ja tällaista tekniikkaa kutsutaan nimellä [[paanutus]]. Tunnetuin esimerkki on [[Kižin kirkko]]. Hopeinen kupoli ilman hopeaa, kyl se on nokkela.",
+  "linkit": [
+   "paanutus",
+   "Kižin kirkko"
+  ],
+  "jatkot": [
+   "Miten paanukatto tehdään?",
+   "Miksi haapapaanu muuttuu harmaaksi?"
+  ]
+ },
+ {
+  "kohde": "nosto:kizin-kirkko",
+  "kysymys": "Miksi kirkko rakennettiin juuri saarelle?",
+  "uusi": false,
+  "vastaus": "Just niin, hyvä kysymys. Varmaa syytä en tunne. Tiedossa on, että kirkko rakennettiin salaman polttaman vanhemman kirkon paikalle, joten paikka oli jo pyhitetty. Saari sijaitsee järvellä nimeltä [[Äänisjärvi]], ja arvatenkin vesi oli aikoinaan tärkeä kulkuväylä, joten saarella toimi lähteiden mukaan seurakunnan keskus eli [[pogosta]]. Tost asiasta ei oo yhtään kirjettä.",
+  "linkit": [
+   "Äänisjärvi",
+   "pogosta"
+  ],
+  "jatkot": [
+   "Mikä on pogosta?",
+   "Millaista elämää Kižin saarella on ollut?"
+  ]
+ },
+ {
+  "kohde": "nosto:kizin-kirkko",
+  "kysymys": "Onko Kižin kirkko Unescon maailmanperintökohde?",
+  "uusi": true,
+  "vastaus": "Mmm— Kyllä, kirkkokokonaisuus eli [[Kižin pogosta]] kuuluu Unescon maailmanperintökohteisiin, ja lähteiden mukaan se otettiin luetteloon vuonna 1990. Päärakennuksen lisäksi kokonaisuuteen kuuluu muita puurakennuksia, muun muassa talvikäyttöön tarkoitettu kirkko. Saari on järvellä, jonka nimi on [[Äänisjärvi]]. Kyl puukirkko jaksaa kauan, jos sitä hoitaa.",
+  "linkit": [
+   "Kižin pogosta",
+   "Äänisjärvi"
+  ],
+  "jatkot": [
+   "Mitä muuta Kižin saarella on kirkon lisäksi?",
+   "Miten Kižin puurakennuksia säilytetään?"
+  ]
+ },
+ {
+  "kohde": "nosto:kizin-kirkko",
+  "kysymys": "Miksi venäläisissä kirkoissa on sipulikupoleita?",
+  "uusi": true,
+  "vastaus": "Annas ku katon. Yhtä varmaa selitystä ei ole. Ensimmäisten kirkkojen esikuva oli [[Bysantti]], ja [[sipulikupoli]] yleistyi Venäjällä vasta myöhemmin. Usein esitetään, että muoto muistuttaa kynttilän liekkiä tai että se auttaa lunta valumaan pois, mutta nämä ovat tulkintoja, joista tutkijat ovat eri mieltä. Kyl kupoli on kyyhkyllekin parempi tuntomerkki kuin litteä katto.",
+  "linkit": [
+   "Bysantti",
+   "sipulikupoli"
+  ],
+  "jatkot": [
+   "Millainen oli Bysantin kirkkoarkkitehtuuri?",
+   "Mitä ikonostaasi on ortodoksisessa kirkossa?"
+  ]
+ },
+ {
+  "kohde": "nosto:pietarhovin-suihkulahteet",
+  "kysymys": "Miten suihkulähde toimii ilman pumppua?",
+  "uusi": false,
+  "vastaus": "Kato, tämä on nokkela temppu. Voimana on [[painovoima]]: vesi tulee luonnonlähteistä ja kerätään altaisiin yläpuutarhaan, ja sieltä se saa laskeutua putkia pitkin alas. Korkeusero synnyttää paineen, ja vesi nousee suihkuna, kun se pyrkii takaisin korkeudelle, josta se on tullut. Esimerkkinä on [[Pietarhovi]], jossa [[Suuri kaskadi]] laskeutuu kuudentoista metrin törmää alas.\n\nIlmainen voima on minunkin lempivoimani: siipiä ei tarvitse räpyttää, kun antaa korkeuseron tehdä työn.",
+  "linkit": [
+   "painovoima",
+   "Pietarhovi",
+   "Suuri kaskadi"
+  ],
+  "jatkot": [
+   "Mistä Pietarhovin suihkulähteiden vesi tulee?",
+   "Kuinka korkealle Simson-suihkulähteen vesi nousee?"
+  ]
+ },
+ {
+  "kohde": "nosto:pietarhovin-suihkulahteet",
+  "kysymys": "Miksi Venäjän hovi halusi oman Versaillesin?",
+  "uusi": false,
+  "vastaus": "Ai tota. [[Pietari Suuri]] aloitti Pietarhovin vuonna 1709 vaatimattomasti maalaisasunnoksi meren rannalle, mutta vierailu Ranskan hovissa vuonna 1717 muutti mittakaavan lopullisesti. Tästä juontuu lisänimi Venäjän Versailles. Tarkkaa syytä en tiedä, mutta usein tulkitaan, että komea puistopalatsi oli keino näyttää Venäjä merenrantaisena eurooppalaisena suurvaltana. Puutarhat suunnitteli [[Jean-Baptiste Alexandre Le Blond]], joka oli aiemmin työskennellyt Versaillesin puutarhurin kanssa. Kyl hoviväkikin tykkää isoista puutarhoista, kuten kyyhky isoista aukioista.",
+  "linkit": [
+   "Pietari Suuri",
+   "Jean-Baptiste Alexandre Le Blond"
+  ],
+  "jatkot": [
+   "Milloin Pietari Suuri vieraili Ranskassa?",
+   "Mikä on Versaillesin palatsi?"
+  ]
+ },
+ {
+  "kohde": "nosto:pietarhovin-suihkulahteet",
+  "kysymys": "Mitä Simsonin ja leijonan aihe tarkoittaa?",
+  "uusi": false,
+  "vastaus": "Sepä sattui, tost minä tiedän jotain. Aihe viittaa Venäjän voittoon vuonna 1709, kun käytiin [[Poltavan taistelu]], osana sotaa nimeltä [[Suuri Pohjan sota]]. Perimätiedon mukaan voitto saavutettiin Simsonin muistopäivän aikaan, ja leijona viittaa Ruotsin vaakunaan: vastapuolena oli [[Ruotsi]]. Raamatullinen Simson, joka repii leijonan kidan auki, oli hovin tapa kertoa voitosta kuvakielellä. Vedellä on kerrottu kokonainen sotatarina, kyl se vaan on niin.",
+  "linkit": [
+   "Poltavan taistelu",
+   "Suuri Pohjan sota",
+   "Ruotsi"
+  ],
+  "jatkot": [
+   "Mikä oli Poltavan taistelu?",
+   "Mitä Suuri Pohjan sota oli?"
+  ]
+ },
+ {
+  "kohde": "nosto:pietarhovin-suihkulahteet",
+  "kysymys": "Kuka suunnitteli Pietarhovin puutarhat?",
+  "uusi": true,
+  "vastaus": "No jopas. Puutarhat suunnitteli [[Jean-Baptiste Alexandre Le Blond]], joka oli aiemmin työskennellyt Versaillesin puutarhurin kanssa. Kokonaisuuden laajensi myöhemmin vuosina 1747–1756 [[Francesco Bartolomeo Rastrelli]]. Pietari Suuri oli käynyt Ranskan hovissa vuonna 1717, ja vierailu muutti hankkeen mittakaavan. Ei paha lähtö kahdelle miehelle, kyl vaan.",
+  "linkit": [
+   "Jean-Baptiste Alexandre Le Blond",
+   "Francesco Bartolomeo Rastrelli"
+  ],
+  "jatkot": [
+   "Mitä muita rakennuksia Rastrelli suunnitteli?",
+   "Kuka oli Versaillesin puutarhasuunnittelija André Le Nôtre?"
+  ]
+ },
+ {
+  "kohde": "nosto:pietarhovin-suihkulahteet",
+  "kysymys": "Missä Pietarhovi sijaitsee?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Merenlahti, jonka rannalla puisto on, on [[Suomenlahti]]: Pietarhovi sijaitsee sen etelärannalla Pietarin länsipuolella. Lähin suurkaupunki on [[Pietari]], noin kolmenkymmenen kilometrin päässä itään. Puiston Suuri kaskadi laskeutuu kuudentoista metrin törmää kohti merta, ja rannasta on matkaa alle sata metriä. Merellä tuulee, siel lentää kyl hyvin.",
+  "linkit": [
+   "Suomenlahti",
+   "Pietari"
+  ],
+  "jatkot": [
+   "Miten Pietarhoviin pääsee Pietarista?",
+   "Mitä Pietarhovissa on nähtävää suihkulähteiden lisäksi?"
+  ],
+  "paikka": {
+   "nimi": "Pietarhovi",
+   "lat": 59.88,
+   "lon": 29.91,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "nosto:baikal",
+  "kysymys": "Miten järvestä voi tulla merta?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Tost minä tiedän yhtä ja toista. Kun maankuori venyy ja repeää, railo levenee ja pohja painuu yhä syvemmälle, ja juuri näin toimii [[Baikalin]] [[mannerrepeämä]]: se levenee yhä noin neljä millimetriä vuodessa. Jos tällainen repeämä kasvaisi riittävän pitkään ja siihen pääsisi merivettä, järven tilalle voisi aikanaan syntyä meri. Päätyykö Baikal koskaan siihen, en ole varma, ja aikaa siihen kuluisi joka tapauksessa hyvin pitkään, todennäköisesti miljoonia vuosia. Toistaiseksi Baikal on makean veden järvi. Ei tässä kyl kiire oo.",
+  "linkit": [
+   "Baikalin",
+   "mannerrepeämä"
+  ],
+  "jatkot": [
+   "Miten Baikal on syntynyt?",
+   "Mitä muita mannerrepeämiä maailmassa on?"
+  ]
+ },
+ {
+  "kohde": "nosto:baikal",
+  "kysymys": "Miksi Baikalin vesi on niin kirkasta?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Tää on just niitä asioita, joita katolta ihmettelee. Talvella Baikalin vesi on avoimilla selillä paikoin niin kirkasta, että näkyvyys yltää 30–40 metriin, kun kesällä se on vain 5–8 metriä. Kirkkauden uskotaan johtuvan siitä, että vesi on syvää, kylmää ja vähäravinteista, joten siinä on vähän sameutta aiheuttavia hiukkasia. Lisäksi pieni [[Epischura baikalensis]] -rapu suodattaa vettä syömällä [[planktonia]] ja levää, ja sen arvellaan auttavan veden puhtaana pysymisessä; en ole varma, kuinka suuri sen osuus on. Kesällä leväkasvu ja hiukkaset heikentävät näkyvyyttä. Ylhäältä katsottuna sen kyllä uskoisi.",
+  "linkit": [
+   "Epischura baikalensis",
+   "planktonia"
+  ],
+  "jatkot": [
+   "Kuinka paksu Baikalin jää on talvella?",
+   "Mitä eläimiä Baikalissa elää?"
+  ]
+ },
+ {
+  "kohde": "nosto:baikal",
+  "kysymys": "Miten hylje on päätynyt keskelle mannerta?",
+  "uusi": false,
+  "vastaus": "Ai se hylje. Se on oikeasti hieno juttu. Baikalissa elää [[Baikalinhylje]] eli nerpa, joka on harvinainen makean veden hylje ja tavataan luonnonvaraisena vain siellä. Sen alkuperästä ei ole täyttä varmuutta, enkä ole itsekään varma tarkasta tarinasta. Yleisimmin arvellaan, että sen esivanhemmat tulivat Jäämereltä jokia pitkin [[jääkausien]] aikana, jolloin vesistöjen yhteydet olivat nykyisestä poikkeavia, ja jäivät sitten pysyvästi järveen. Siellä niistä kehittyi oma lajinsa. Hylje keskellä mannerta hämmentää kyl minuakin.",
+  "linkit": [
+   "Baikalinhylje",
+   "jääkausien"
+  ],
+  "jatkot": [
+   "Miten hylje selviää järven jäässä talvella?",
+   "Onko Suomessa makean veden hylkeitä?"
+  ]
+ },
+ {
+  "kohde": "nosto:baikal",
+  "kysymys": "Mikä joki laskee Baikaliin ja mikä siitä virtaa pois?",
+  "uusi": true,
+  "vastaus": "Sepä sattui: tämän minä olen nähnyt ylhäältä. Suurin Baikaliin laskevista joista on [[Selenga]], joka tuo järveen suuren osan sen vedestä; en ole varma tarkasta osuudesta. Ainoa joki, joka virtaa Baikalista pois, on [[Angara]]. Se kulkee [[Irkutskin]] kautta ja yhtyy lopulta [[Jenisein]] vesiin, jotka jatkavat kohti Jäämerta. Baikalin vesi vaihtuu hitaasti, koska järvi on valtava verrattuna jokien tuomaan ja vievään veteen. Jokivartta on kiva seurata, kun on siivet.",
+  "linkit": [
+   "Selenga",
+   "Angara",
+   "Irkutskin",
+   "Jenisein"
+  ],
+  "jatkot": [
+   "Mihin Jenisei lopulta laskee?",
+   "Kuinka monta jokea Baikaliin laskee?"
+  ]
+ },
+ {
+  "kohde": "nosto:baikal",
+  "kysymys": "Kulkeeko Transsiperian rata Baikalin rannalla?",
+  "uusi": true,
+  "vastaus": "No niin, hyvä kysymys tuo. Moskovassa istuvalle se on aika läheinen asia. [[Transsiperian rata]] yhdistää [[Moskovan]] Siperiaan ja aina Vladivostokiin asti, ja kyllä, rata kulkee Baikalin eteläpuolella järven rantaa seuraten, Irkutskin suunnalla. Radan Baikalin ranta-osuus on rakennettu 1900-luvun alussa vaikean maaston läpi, ja siihen kuuluu paljon tunneleita; en ole varma tarkasta valmistumisvuodesta. Junamatka on pitkä, noin yhdeksän tuhatta kilometriä koko reitillä. Minä kyllä lentäisin lyhimmän linjan.",
+  "linkit": [
+   "Transsiperian rata",
+   "Moskovan"
+  ],
+  "jatkot": [
+   "Kauanko matka Moskovasta Vladivostokiin junalla kestää?",
+   "Mikä on Irkutskin merkitys Siperiassa?"
+  ]
+ }
+]

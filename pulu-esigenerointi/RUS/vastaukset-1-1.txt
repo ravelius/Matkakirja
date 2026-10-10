@@ -8,7 +8,7 @@ PAIKKA: Elbrus | 43.35 | 42.45 | alue
 
 ### 1.2
 KYSYMYS: Milloin Elbrus viimeksi purkautui?
-Annas ku mietin. Tarkkaa vuotta minä en tiedä. Lähteiden mukaan viimeiset purkaukset ajoittuvat noin parin tuhannen vuoden taakse, mutta arviot vaihtelevat, enkä ole varma ajoituksesta. Vuorta pidetään nykyisin sammuneena tai lepotilassa olevana [[kerrostulivuorena]], eikä historiallisella ajalla ole raportoitu varmoja purkauksia. Kaksihuippuinen muoto on peräisin tulivuoritoiminnasta, joka rakensi sen kerros kerrokselta. Hyvä ettei ny sentään savua nouse.
+Annas ku mietin. Tarkkaa vuotta minä en tiedä. Lähteiden mukaan viimeiset purkaukset ajoittuvat noin parin tuhannen vuoden taakse, mutta arviot vaihtelevat, enkä ole varma ajoituksesta. Vuorta pidetään nykyisin sammuneena tai lepotilassa olevana [[kerrostulivuorena]], eikä historiallisella ajalla ole raportoitu varmoja purkauksia. Kaksihuippuinen muoto on peräisin [[tulivuoritoiminnasta]], joka rakensi sen kerros kerrokselta. Hyvä ettei ny sentään savua nouse.
 JATKOT:
 Mikä on kerrostulivuori?
 Miten tulivuori luokitellaan sammuneeksi?
@@ -24,7 +24,7 @@ Miten Etna eroaa muista Euroopan tulivuorista?
 
 ### 1.4
 KYSYMYS: Miksi Kaukasuksella on tulivuoria?
-Sepä sattui. Kaukasus on syntynyt, kun Arabian laatta on työntynyt vuosimiljoonien ajan kohti [[Euraasian laattaa]], ja törmäys on kohottanut vuoriston ja nostanut magmaa maankuoren halkeamien kautta pintaan. Elbrus ja muut alueen tulivuoret kuuluvat tähän nuoreen vuoristonmuodostukseen. Tulivuoritoiminnan tarkka tausta on tutkijoiden kesken yhä osin avoin kysymys, joten yksityiskohdista en ole varma. Kaukasuksen tulivuoret ovat nuoria vuoria vanhojen jättiläisten seurassa.
+Sepä sattui. Kaukasus on syntynyt, kun Arabian laatta on työntynyt vuosimiljoonien ajan kohti [[Euraasian laattaa]], ja törmäys on kohottanut vuoriston ja nostanut [[magmaa]] maankuoren halkeamien kautta pintaan. Elbrus ja muut alueen tulivuoret kuuluvat tähän nuoreen vuoristonmuodostukseen. Tulivuoritoiminnan tarkka tausta on tutkijoiden kesken yhä osin avoin kysymys, joten yksityiskohdista en ole varma. Kaukasuksen tulivuoret ovat nuoria vuoria vanhojen jättiläisten seurassa.
 JATKOT:
 Miten vuoristot syntyvät mannerlaattojen törmätessä?
 Mitä muita tulivuoria Kaukasuksella on?
@@ -54,29 +54,28 @@ Missä komit asuvat?
 
 ### 2.3
 KYSYMYS: Mikä on vedenjakaja?
-Tota, hyvä kysymys tuo. Vedenjakaja on maanpinnan korkea kohta tai harjanne, joka erottaa toisistaan kaksi eri suuntiin laskevaa [[valuma-alueen]] osaa. Sadevesi valuu vedenjakajan toisella puolella yhteen jokijärjestelmään ja toisella puolella toiseen, ja lopulta vedet voivat päätyä kokonaan eri meriin. Vedenjakaja ei välttämättä ole vuori, vaan se voi olla matalakin selänne tai jopa tasainen suo. Maailman vedenjakajat vaikuttavat siihen, mihin joet virtaavat ja miten alueita on historiassa jaettu. Pisarat eivät ainakaan eksy.
+Tota, hyvä kysymys tuo. Vedenjakaja on maanpinnan korkea kohta tai harjanne, joka erottaa toisistaan kaksi eri suuntiin laskevaa [[valuma-alueen]] osaa. Sadevesi valuu vedenjakajan toisella puolella yhteen jokijärjestelmään ja toisella puolella toiseen, ja lopulta vedet voivat päätyä kokonaan eri meriin. Vedenjakaja ei välttämättä ole vuori, vaan se voi olla matalakin selänne tai jopa tasainen [[suo]]. Maailman vedenjakajat vaikuttavat siihen, mihin joet virtaavat ja miten alueita on historiassa jaettu. Pisarat eivät ainakaan eksy.
 JATKOT:
 Mitä valuma-alue tarkoittaa?
 Mitkä ovat Euroopan suurimmat vedenjakajat?
 
 ### 2.4
 KYSYMYS: Miksi Uralin vuoret ovat niin matalia?
-Joo, tää on mielenkiintoinen. Ural on hyvin vanha vuoristo, joka syntyi mannerlaattojen törmätessä satojen miljoonien vuosien takaa, ja siitä lähtien [[eroosio]] on kuluttanut sitä. Vanhat vuoret ovat yleensä matalampia kuin nuoret, koska tuuli, vesi ja jää ovat ehtineet pyöristää huiput. Uralilla korkeimmat huiput ovat vain noin 1 900 metriä, kun nuoremmilla vuoristoilla huiput voivat nousta paljon korkeammalle. Vuoriston vanhuudesta kertoo myös se, että sen rinteet ovat melko loivia. Vanhat vuoret ovat siis kuin vanhat lintuparat: matalia mutta luotettavia.
+Joo, tää on mielenkiintoinen. Ural on hyvin vanha vuoristo, joka syntyi [[mannerlaattojen]] törmätessä satojen miljoonien vuosien takaa, ja siitä lähtien [[eroosio]] on kuluttanut sitä. Vanhat vuoret ovat yleensä matalampia kuin nuoret, koska tuuli, vesi ja jää ovat ehtineet pyöristää huiput. Uralilla korkeimmat huiput ovat vain noin 1 900 metriä, kun nuoremmilla vuoristoilla huiput voivat nousta paljon korkeammalle. Vuoriston vanhuudesta kertoo myös se, että sen rinteet ovat melko loivia. Vanhat vuoret ovat siis kuin vanhat lintuparat: matalia mutta luotettavia.
 JATKOT:
 Kuinka pitkä Uralin vuoristo on?
 Miten eroosio muokkaa vuoria?
 
 ### 2.5
 KYSYMYS: Miksi lehtikuusi pudottaa neulasensa syksyllä?
-Ai tota. Lehtikuusi on havupuu, joka pudottaa neulasensa joka syksy, ja se on sopeutumista kylmään ja kuivaan talveen. Neulasista haihtuu talvella vettä, jota jäätynyt maa ei pysty korvaamaan, joten neulasten pudottaminen säästää puuta kuivumiselta ja lumen painolta. Lehtikuusi pärjää hyvin pohjoisessa, myös alueilla, joilla maa on osan vuotta pitkälle jäässä tai [[ikirouta]] on lähellä. Keväällä puu tuottaa uudet pehmeät neulaset, jotka ovat vaaleanvihreät. Hurja strategia puulta, sanon minä.
+Ai tota. Lehtikuusi on [[havupuu]], joka pudottaa neulasensa joka syksy, ja se on sopeutumista kylmään ja kuivaan talveen. Neulasista haihtuu talvella vettä, jota jäätynyt maa ei pysty korvaamaan, joten neulasten pudottaminen säästää puuta kuivumiselta ja lumen painolta. Lehtikuusi pärjää hyvin pohjoisessa, myös alueilla, joilla maa on osan vuotta pitkälle jäässä tai [[ikirouta]] on lähellä. Keväällä puu tuottaa uudet pehmeät neulaset, jotka ovat vaaleanvihreät. Hurja strategia puulta, sanon minä.
 JATKOT:
 Mitä ikirouta tarkoittaa?
 Mitkä puulajit kasvavat Uralin metsissä?
 
 ### 3.1
 KYSYMYS: Kuka Willem Barentsz oli?
-No jopas, tän aiheen minä tunnen. Willem Barentsz oli hollantilainen merenkulkija, joka johti 1590-luvulla retkiä pohjoiseen etsiessään meritietä Kiinaan [[Koillisväylää]] pitkin. Hänen kolmannella retkellään laiva juuttui jäihin [[Novaja Zemljan]] rannikolle vuosina 1596–97, ja seitsemäntoista miestä talvehti rakentamassaan majassa, jota kutsuttiin nimellä [[Behouden Huys]], Pelastunut talo. Tammikuussa 1597 miehet näkivät auringon kaksi viikkoa ennen aikataulua, mikä johtui ilmakehän kangastuksesta. Barentsz kuoli kesäkuussa kotimatkalla avoveneessä, ja kaksitoista miestä pääsi perille; hänen mukaansa on nimetty Barentsinmeri.
-Onneksi siitä on jo pitkä aika.
+No jopas, tän aiheen minä tunnen. Willem Barentsz oli hollantilainen merenkulkija, joka johti 1590-luvulla retkiä pohjoiseen etsiessään meritietä Kiinaan [[Koillisväylää]] pitkin. Hänen kolmannella retkellään laiva juuttui jäihin [[Novaja Zemljan]] rannikolle vuosina 1596–97, ja seitsemäntoista miestä talvehti rakentamassaan majassa, jota kutsuttiin nimellä [[Behouden Huys]], Pelastunut talo. Tammikuussa 1597 miehet näkivät auringon kaksi viikkoa ennen aikataulua, mikä johtui ilmakehän kangastuksesta. Barentsz kuoli kesäkuussa kotimatkalla avoveneessä, ja kaksitoista miestä pääsi perille; hänen mukaansa on nimetty Barentsinmeri. Onneksi siitä on jo pitkä aika.
 JATKOT:
 Mikä on Koillisväylä?
 Miten ilmakehän kangastus syntyy?
@@ -113,7 +112,7 @@ Miten arktinen lämpeneminen näkyy Pohjoismaissa?
 
 ### 4.1
 KYSYMYS: Kuinka paksua Jäämeren jää on?
-No niin, tuosta on monta lukua. Jäämeren jään paksuus vaihtelee paljon: ensimmäisen talven aikana syntynyt jää on usein noin metrin tai pari paksua, ja monivuotinen jää voi olla useita metrejä, jopa kolmesta neljään metriin, mutta tarkoista keskiarvoista en ole varma. Jäähän kasautuu paikoin paljon paksummiksi [[paineharjanteiksi]], kun lautat työntyvät toisiaan vasten. Viime vuosikymmeninä monivuotisen jään määrä on pienentynyt ja jää on ohentunut, ja kesällä sitä sulaa yhä enemmän. Pitkä vastaus, mutta jäässä on paljon kerroksia.
+No niin, tuosta on monta lukua. Jäämeren jään paksuus vaihtelee paljon: ensimmäisen talven aikana syntynyt jää on usein noin metrin tai pari paksua, ja monivuotinen jää voi olla useita metrejä, jopa kolmesta neljään metriin, mutta tarkoista keskiarvoista en ole varma. Jäähän kasautuu paikoin paljon paksummiksi [[paineharjanteiksi]], kun lautat työntyvät toisiaan vasten. Viime vuosikymmeninä monivuotisen jään määrä on pienentynyt ja [[merijää]] on ohentunut, ja kesällä sitä sulaa yhä enemmän. Pitkä vastaus, mutta jäässä on paljon kerroksia.
 JATKOT:
 Miksi Jäämeren jää on vähentynyt?
 Miten jään paksuutta mitataan?
@@ -141,7 +140,7 @@ Mitä tarkoittaa kompassin deklinaatio?
 
 ### 4.5
 KYSYMYS: Miksi Jäämeri on muita valtameriä matalampi?
-No jopas. Jäämeressä on poikkeuksellisen laajoja [[mannerjalustoja]], erityisesti Euraasian pohjoisrannikon edustalla, ja ne ovat verrattain matalaa merenpohjaa. Mannerjalustat ovat veden alle jääneitä mantereen reuna-alueita, ja niiden osuus Jäämeren pinta-alasta on suuri verrattuna muihin valtameriin. Keskellä on syvempiä altaita, mutta kokonaisuutena keskisyvyys jää pienemmäksi kuin muilla valtamerillä. Siksi Jäämeri on pienin ja matalin valtameristä. Ylhäältä sen kyllä huomaa, sillä jää peittää pohjan salaisuudet.
+No jopas. Jäämeressä on poikkeuksellisen laajoja [[mannerjalustoja]], erityisesti Euraasian pohjoisrannikon edustalla, ja ne ovat verrattain matalaa merenpohjaa. Mannerjalustat ovat veden alle jääneitä mantereen reuna-alueita, ja niiden osuus Jäämeren pinta-alasta on suuri verrattuna muihin [[valtameriin]]. Keskellä on syvempiä altaita, mutta kokonaisuutena keskisyvyys jää pienemmäksi kuin muilla valtamerillä. Siksi Jäämeri on pienin ja matalin valtameristä. Ylhäältä sen kyllä huomaa, sillä jää peittää pohjan salaisuudet.
 JATKOT:
 Mikä on mannerjalusta?
 Miten Jäämeren pohjaa on tutkittu?
@@ -155,7 +154,7 @@ Mitä Sahalinin saarelle tapahtui vuoden 1875 jälkeen?
 
 ### 5.2
 KYSYMYS: Miksi Sahalin on niin pitkä ja kapea?
-Selvä juttu. Sahalin on 948 kilometriä pitkä ja kapeimmillaan vain 26 kilometriä leveä kaistale, jonka erottaa mantereesta kapea salmi; salmen kapein kohta pohjoisessa on runsaat seitsemän kilometriä. Saaren muoto seuraa maankuoren rakennetta ja vuoristoharjanteiden suuntaa, ja siihen vaikuttavat [[laattatektoniikan]] voimat. Tarkasta geologisesta selityksestä en ole varma, joten tässä kannattaa luottaa asiantuntijoiden kirjoituksiin. Sahalin on Venäjän suurin saari, ja pitkä muoto tekee siitä erikoisen näköisen kartalla. Pitkä tarina, ja sentään yksi niemi.
+Selvä juttu. Sahalin on 948 kilometriä pitkä ja kapeimmillaan vain 26 kilometriä leveä kaistale, jonka erottaa mantereesta kapea [[salmi]]; salmen kapein kohta pohjoisessa on runsaat seitsemän kilometriä. Saaren muoto seuraa maankuoren rakennetta ja vuoristoharjanteiden suuntaa, ja siihen vaikuttavat [[laattatektoniikan]] voimat. Tarkasta geologisesta selityksestä en ole varma, joten tässä kannattaa luottaa asiantuntijoiden kirjoituksiin. Sahalin on Venäjän suurin saari, ja pitkä muoto tekee siitä erikoisen näköisen kartalla. Pitkä tarina, ja sentään yksi niemi.
 JATKOT:
 Mitä Sahalinin saarella on nähtävää?
 Miten salmi voi muodostua mantereen ja saaren väliin?

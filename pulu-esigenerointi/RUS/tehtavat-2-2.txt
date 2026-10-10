@@ -1,0 +1,1325 @@
+### 81
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ob (luonto · joki)
+Tietoruudun teksti: Ob on Länsi-Siperian suuri joki, ja yhdessä sivujokensa Irtyšin kanssa se muodostaa maailman seitsemänneksi pisimmän jokijärjestelmän: 5 410 kilometriä. Joki syntyy Bijan ja Katunin yhtymäkohdassa, ja molemmat saavat alkunsa Altain vuorilta. Se on läntisin kolmesta suuresta Siperian joesta, jotka laskevat Jäämereen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rub al-Khali — kaupunkilehti / Luonto: Järvien pohjat hiekan seassa] Aavikon keskivaiheilla on koholla olevia kovettuneita laikkuja, joissa on kalsiumkarbonaattia, kipsiä, liejusavea ja savea. Ne ovat matalien järvien pohjia. Järviä syntyi kahdesti, 6 000–5 000 ja 3 000–2 000 vuotta sitten, kun sadetta tuli monsuunin tapaan rajusti; useimmat kuivuivat parissa vuodessa, mutta lounaassa Mundafanin alueella vesi säilyi jopa kahdeksansataa vuotta, koska Tuwaiqin jyrkänteeltä valui lisää. Kerrostumista on löytynyt virtahevon, vesipuhvelin ja pitkäsarvisen naudan luita, etanoita ja makean veden simpukoita — ja piikivityökaluja, mutta ei yhtään ihmisen luuta.
+- [Sumatra — kaupunkilehti / Luonto: Metsä, joka kutistuu] Sumatra on menettänyt lähes puolet trooppisesta sademetsästään vuoden 1980 jälkeen, kun maata on raivattu viljelmiksi. Metsässä elää 201 nisäkäslajia, 580 lintulajia ja noin 300 makean veden kalalajia; yhdeksän nisäkäslajia esiintyy vain Sumatralla ja neljätoista lisää lähisaarilla Mentawaiden ryhmässä. Saarella on yli kymmenen kansallispuistoa, ja kolme niistä — Gunung Leuser, Kerinci Seblat ja Bukit Barisan Selatan — otettiin vuonna 2004 maailmanperintöön 25 000 neliökilometrin kokonaisuutena. Kohde on ollut vuodesta 2011 uhanalaisten listalla.
+AIEMPI KYSYMYS: Miksi Siperian joet virtaavat pohjoiseen?
+AIEMPI VASTAUS (Livia):
+Kato, hyvä kysymys tuo. Joet virtaavat aina alamäkeen, ja Siperiassa maa viettää pääosin etelän vuorista pohjoiseen kohti Jäämeren matalaa rannikkoa: etelässä ovat Altain ja Sajanin vuoristot, pohjoisessa laaja tasanko ja meri. [[Vedenjakaja]] kulkee siis etelässä, ja sen pohjoispuolella vedet suuntaavat pohjoiseen, kun taas etelän joet laskevat muualle. Pohjoisvirtauksella on seurauksensa: keväällä sulaminen alkaa joen yläjuoksulla etelässä, kun alajuoksu on vielä jäässä, ja jään tukkimat joet aiheuttavat laajoja [[kevättulvia]]. Ja tämän kaiken minä sain mahtumaan yhteen kappaleeseen.
+KYSYMYS: Kerro lisää: Vedenjakaja
+
+### 82
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ob (luonto · joki)
+Tietoruudun teksti: Ob on Länsi-Siperian suuri joki, ja yhdessä sivujokensa Irtyšin kanssa se muodostaa maailman seitsemänneksi pisimmän jokijärjestelmän: 5 410 kilometriä. Joki syntyy Bijan ja Katunin yhtymäkohdassa, ja molemmat saavat alkunsa Altain vuorilta. Se on läntisin kolmesta suuresta Siperian joesta, jotka laskevat Jäämereen.
+AIEMPI KYSYMYS: Miksi Siperian joet virtaavat pohjoiseen?
+AIEMPI VASTAUS (Livia):
+Kato, hyvä kysymys tuo. Joet virtaavat aina alamäkeen, ja Siperiassa maa viettää pääosin etelän vuorista pohjoiseen kohti Jäämeren matalaa rannikkoa: etelässä ovat Altain ja Sajanin vuoristot, pohjoisessa laaja tasanko ja meri. [[Vedenjakaja]] kulkee siis etelässä, ja sen pohjoispuolella vedet suuntaavat pohjoiseen, kun taas etelän joet laskevat muualle. Pohjoisvirtauksella on seurauksensa: keväällä sulaminen alkaa joen yläjuoksulla etelässä, kun alajuoksu on vielä jäässä, ja jään tukkimat joet aiheuttavat laajoja [[kevättulvia]]. Ja tämän kaiken minä sain mahtumaan yhteen kappaleeseen.
+KYSYMYS: Kerro lisää: kevättulvia
+
+### 83
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ob (luonto · joki)
+Tietoruudun teksti: Ob on Länsi-Siperian suuri joki, ja yhdessä sivujokensa Irtyšin kanssa se muodostaa maailman seitsemänneksi pisimmän jokijärjestelmän: 5 410 kilometriä. Joki syntyy Bijan ja Katunin yhtymäkohdassa, ja molemmat saavat alkunsa Altain vuorilta. Se on läntisin kolmesta suuresta Siperian joesta, jotka laskevat Jäämereen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alice Springs — kaupunkilehti / Alice Springs: Vuosi 1873: asema, jolla oli kaupungin nimi] John McDouall Stuart johti 1861–62 retkikunnan Keski-Australian halki myöhemmän Alice Springsin länsipuolelta ja avasi reitin mantereen etelästä pohjoiseen. Kymmenen vuotta myöhemmin tarvittiin asutus, kun yleislennätinlinjalle rakennettiin toistinasema; linja valmistui 1872 ja seurasi Stuartin reittiä. Asema sijoitettiin sen vesikuopan viereen, jota pidettiin pysyvänä muuten kuivassa Todd-joessa. W. W. Mills nimesi paikan Alice Springsiksi Etelä-Australian lennätinylitarkastajan sir Charles Toddin vaimon Alicen mukaan, ja Todd-joki sekä sen sivujoki Charles-joki nimettiin sir Charlesin mukaan. Läheinen asutus sai sen sijaan nimen Stuart, ja se nimettiin uudelleen Alice Springsiksi vasta 31…
+- [Tšad-järvi — kaupunkilehti / Tšad-järvi: Joki joka ruokkii järveä] Tšad-järveen ei laske vain yksi joki vaan kokonainen jokijärjestelmä: Chari-joki ja sen suurin sivujoki Logone tuovat yhdessä noin 95 prosenttia kaikesta järveen virtaavasta vedestä. Joet saavat alkunsa satojen kilometrien päässä eteläisemmän Afrikan sademetsistä ja savanneilta ja yhtyvät nykyisen N’Djamenan kohdalla ennen laskuaan järveen. Tšad-järvellä itsellään ei ole lainkaan pysyvää laskujokea, joten suurin osa siihen virtaavasta vedestä joko haihtuu polttavassa kuumuudessa tai imeytyy hiekkaan – ainoa poikkeus on ajoittainen Bahr-el-Ghazalin uoma, joka voi sateisimpina vuosina kuljettaa vettä koilliseen.
+AIEMPI KYSYMYS: Mikä Irtyš on ja mistä se virtaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Irtyš on Obin suurin [[sivujoki]], ja se on itsekin erittäin pitkä: se saa alkunsa Altain vuoriston itäisiltä rinteiltä, virtaa [[Kazakstanin]] läpi Venäjälle ja yhtyy Obiin Länsi-Siperiassa. Yhdessä ne muodostavat kaikkiaan 5 410 kilometrin mittaisen jokijärjestelmän, joka on maailman seitsemänneksi pisin. Joet kulkevat osittain laajoilla, matalilla tasangoilla, joilla vesi liikkuu hitaasti ja usein haarautuu moniksi uomiksi. Sivujoki pitkine matkoineen on siis suurempi kuin moni oma joki.
+KYSYMYS: Kerro lisää: sivujoki
+
+### 84
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ob (luonto · joki)
+Tietoruudun teksti: Ob on Länsi-Siperian suuri joki, ja yhdessä sivujokensa Irtyšin kanssa se muodostaa maailman seitsemänneksi pisimmän jokijärjestelmän: 5 410 kilometriä. Joki syntyy Bijan ja Katunin yhtymäkohdassa, ja molemmat saavat alkunsa Altain vuorilta. Se on läntisin kolmesta suuresta Siperian joesta, jotka laskevat Jäämereen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Astana — kohdekartta / Kohdekartta: Rauhan ja sovinnon palatsi] 2006 Pyramidi on 62 metriä korkea, ja sen pohja on 62 × 62 metriä. Se seisoo viisitoista metriä korkean, mullalla peitetyn jalustan päällä; alakerrat eivät siis ole kellaria, vaikka puiston maasto nousee niiden ympärille. Suunnittelija oli Foster and Partners ja rakentaja Sembol, ja hinta oli 8,74 miljardia tengeä. Talo valmistui 2006 pysyväksi paikaksi maailmanuskontojen johtajien kongressille, joka kokoontuu joka kolmas vuosi. Kyljet jakautuvat viiteen kolmiokerrokseen, joissa jokaisen kolmion sivu on kaksitoista metriä. Kolme alinta kerrosta on verhottu vaalealla graniitilla, kaksi ylintä lasimaalauksella. Lasityön teki brittiläinen Brian Clarke: huippuun on poltettu lentäviä kyyhkysiä, …
+- [Novosibirsk — kohdekartta / Kohdekartta: Novosibirsk-Glavnyi] asema 1893, nykyinen talo 1930-luku Asema on kaupunkia vanhempi. Kun Transsiperian radan silta Obin yli oli päätetty rakentaa, radan pysäkki sai nimekseen yksinkertaisesti Ob, ja se nimi pysyi aikatauluissa vuoteen 1909 asti — vaikka syntynyt taajama oli jo vuodesta 1895 Novonikolajevsk. Asema nimettiin kaupungin mukaan 1909 ja sai nykyisen nimensä 1926, kun kaupunki itse muuttui Novosibirskiksi. Nykyinen asemarakennus on Venäjän suurimpia: pelkkää päärakennusta on 30 000 neliömetriä. Sen keskellä on valtava holvikaari, jonka molemmin puolin siivet jatkuvat matalampina ja pylväikköjen jäsentäminä. Vieressä on erillinen lähiliikenteen asema kellotorneineen, ja niiden edessä avautuu Garin-Mih…
+AIEMPI KYSYMYS: Mikä Irtyš on ja mistä se virtaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Irtyš on Obin suurin [[sivujoki]], ja se on itsekin erittäin pitkä: se saa alkunsa Altain vuoriston itäisiltä rinteiltä, virtaa [[Kazakstanin]] läpi Venäjälle ja yhtyy Obiin Länsi-Siperiassa. Yhdessä ne muodostavat kaikkiaan 5 410 kilometrin mittaisen jokijärjestelmän, joka on maailman seitsemänneksi pisin. Joet kulkevat osittain laajoilla, matalilla tasangoilla, joilla vesi liikkuu hitaasti ja usein haarautuu moniksi uomiksi. Sivujoki pitkine matkoineen on siis suurempi kuin moni oma joki.
+KYSYMYS: Kerro lisää: Kazakstanin
+
+### 85
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ob (luonto · joki)
+Tietoruudun teksti: Ob on Länsi-Siperian suuri joki, ja yhdessä sivujokensa Irtyšin kanssa se muodostaa maailman seitsemänneksi pisimmän jokijärjestelmän: 5 410 kilometriä. Joki syntyy Bijan ja Katunin yhtymäkohdassa, ja molemmat saavat alkunsa Altain vuorilta. Se on läntisin kolmesta suuresta Siperian joesta, jotka laskevat Jäämereen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Borneo — kaupunkilehti / Borneo: Kullan maa, kamferttisaari, timanttisaari] Kiinalaisissa asiakirjoissa saari mainitaan jo vuonna 977 nimellä Bo-ni. Arvokkaimmiksi vientitavaroiksi luetellaan kultaa, kamferttia, kilpikonnankuorta, sarvinokkien nokkaluuta, mehiläisvahaa, rottinkia, mausteita ja syötäviä pääskynpesiä. Intialaiset kutsuivat saarta nimillä Suvarnabhumi eli kullan maa ja Karpuradvipa eli kamferttisaari, jaavalaiset nimellä Puradvipa eli timanttisaari. Sarawakin jokisuisto oli 500-luvulta noin vuoteen 1300 vilkas Intian ja Kiinan välisen kaupan keskus, ja pääskynpesiä kerätään yhä Gomantongin luolista Sabahissa.
+AIEMPI KYSYMYS: Mihin Ob-joki laskee?
+AIEMPI VASTAUS (Livia):
+No jopas. Ob laskee Jäämereen kuuluvaan Karanmereen pitkän ja kapean Obinlahden kautta. Lahti on pitkä [[jokisuisto]], johon joen vesi sekoittuu meriveteen, ja sen ympäristö on harvaan asuttua, suurelta osin [[ikiroutaa]] ja tundraa. Talvella lahti jäätyy, ja keväällä joen jäät lähtevät liikkeelle etelästä pohjoiseen. Joki on kulkenut pitkän matkan Altain vuorilta tänne asti.
+
+Tuo on minun mielestäni kyllä vaikuttava matka: tuhansia kilometrejä pelkkää vettä ja metsää. Minä väsyisin ensimmäisen sadan jälkeen.
+KYSYMYS: Kerro lisää: jokisuisto
+
+### 86
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ob (luonto · joki)
+Tietoruudun teksti: Ob on Länsi-Siperian suuri joki, ja yhdessä sivujokensa Irtyšin kanssa se muodostaa maailman seitsemänneksi pisimmän jokijärjestelmän: 5 410 kilometriä. Joki syntyy Bijan ja Katunin yhtymäkohdassa, ja molemmat saavat alkunsa Altain vuorilta. Se on läntisin kolmesta suuresta Siperian joesta, jotka laskevat Jäämereen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jakutsk — kaupunkilehti / Ikirouta] Kaupungin alla maa on jäässä yli kahdensadan metrin syvyyteen, ja ikiroudasta nousee mammutinluuta. Ylävirtaan päin jokea reunustaa kymmenien kilometrien mittainen kalkkikivipylväiden rivistö.
+AIEMPI KYSYMYS: Mihin Ob-joki laskee?
+AIEMPI VASTAUS (Livia):
+No jopas. Ob laskee Jäämereen kuuluvaan Karanmereen pitkän ja kapean Obinlahden kautta. Lahti on pitkä [[jokisuisto]], johon joen vesi sekoittuu meriveteen, ja sen ympäristö on harvaan asuttua, suurelta osin [[ikiroutaa]] ja tundraa. Talvella lahti jäätyy, ja keväällä joen jäät lähtevät liikkeelle etelästä pohjoiseen. Joki on kulkenut pitkän matkan Altain vuorilta tänne asti.
+
+Tuo on minun mielestäni kyllä vaikuttava matka: tuhansia kilometrejä pelkkää vettä ja metsää. Minä väsyisin ensimmäisen sadan jälkeen.
+KYSYMYS: Kerro lisää: ikiroutaa
+
+### 87
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ob (luonto · joki)
+Tietoruudun teksti: Ob on Länsi-Siperian suuri joki, ja yhdessä sivujokensa Irtyšin kanssa se muodostaa maailman seitsemänneksi pisimmän jokijärjestelmän: 5 410 kilometriä. Joki syntyy Bijan ja Katunin yhtymäkohdassa, ja molemmat saavat alkunsa Altain vuorilta. Se on läntisin kolmesta suuresta Siperian joesta, jotka laskevat Jäämereen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Mitä Altain vuoret ovat?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Altai on laaja [[vuoristo]] Keski-Aasiassa, jossa Venäjän, Kazakstanin, Kiinan ja Mongolian alueet kohtaavat. Sen korkein huippu on Belukha, jonka korkeus on noin 4 500 metriä, ja sieltä alkaa moni tärkeä joki, muun muassa Ob-joen latvavedet Katun ja Bija. Vuoristossa on [[jäätiköitä]], järviä ja monipuolista kasvillisuutta, ja alue on tunnettu myös arkeologisista löydöistään. Minä pysyn alempana, ilma on siellä ohutta.
+KYSYMYS: Kerro lisää: vuoristo
+
+### 88
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ob (luonto · joki)
+Tietoruudun teksti: Ob on Länsi-Siperian suuri joki, ja yhdessä sivujokensa Irtyšin kanssa se muodostaa maailman seitsemänneksi pisimmän jokijärjestelmän: 5 410 kilometriä. Joki syntyy Bijan ja Katunin yhtymäkohdassa, ja molemmat saavat alkunsa Altain vuorilta. Se on läntisin kolmesta suuresta Siperian joesta, jotka laskevat Jäämereen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chile — maalehti / Luonto: Jääkenttä, joka ruokkii kymmeniä jäätiköitä] Eteläinen Patagonian jääkenttä on maailman toiseksi suurin yhtenäinen jääkenttä napa-alueiden ulkopuolella: noin 350 kilometriä pitkä ja 16 480 neliökilometriä, josta 14 200 on Chilen puolella. Se ruokkii kymmeniä jäätiköitä, joista Pío XI on 1 265 neliökilometrillään eteläisen pallonpuoliskon suurin Antarktiksen ulkopuolella. Reunalla on Torres del Painen kansallispuisto, perustettu 1959. Nimi on tehuelchen kieltä ja tarkoittaa sinistä; kävijöitä on noin 252 000 vuodessa, ja heistä yli puolet tulee ulkomailta.
+AIEMPI KYSYMYS: Mitä Altain vuoret ovat?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Altai on laaja [[vuoristo]] Keski-Aasiassa, jossa Venäjän, Kazakstanin, Kiinan ja Mongolian alueet kohtaavat. Sen korkein huippu on Belukha, jonka korkeus on noin 4 500 metriä, ja sieltä alkaa moni tärkeä joki, muun muassa Ob-joen latvavedet Katun ja Bija. Vuoristossa on [[jäätiköitä]], järviä ja monipuolista kasvillisuutta, ja alue on tunnettu myös arkeologisista löydöistään. Minä pysyn alempana, ilma on siellä ohutta.
+KYSYMYS: Kerro lisää: jäätiköitä
+
+### 89
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kizhin pogosta (kulttuuri)
+Tietoruudun teksti: Kizhin pogosta on 1600-luvulle juontuva kokonaisuus Kizhin saarella Äänisellä Karjalan tasavallassa. Sana tarkoittaa aidan sisään jäävää aluetta, ja täällä sen sisällä ovat kaksi suurta puukirkkoa — 22-kupolinen Kirkastuksen kirkko ja 9-kupolinen Esirukouksen kirkko — sekä kellotapuli. Unesco otti kohteen maailmanperintöluetteloonsa 1990.
+
+Rakennusten perusyksikkö on pyöreä mäntyhirsi, halkaisijaltaan noin kolmekymmentä senttiä ja pituudeltaan kolmesta viiteen metriin. Koko pogosta rakennettiin ilman ainuttakaan naulaa, ja tuhannet hirret tuotiin mantereelta — aikanaan mittava kuljetusurakka.
+
+Kirkastuksen kirkon alttari laskettiin 6. kesäkuuta 1714. Se on lämmittämätön kesäkirkko, joka nousi salaman polttaman edeltäjänsä paikalle, eikä rakentajien nimiä tiedetä. Tarun mukaan pääkirvesmies käytti koko työhön yhtä kirvestä ja heitti sen valmistuttua järveen sanoen, ettei toista samanlais…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sana — kohdekartta / Kohdekartta: Talhan moskeija] 1619–1620 Qubbat Talha on yksi Sanaan vanhimmista moskeijoista, ja sen rakennutti osmanien käskynhaltija Hadji Mehmed Pasha vuosina 1619–1620 ensimmäisen osmanimiehityksen aikana. Minareetti tehtiin samaan aikaan. Vuosina 1831–1832 moskeija kunnostettiin osittain imaami al-Mahdi Abdallahin käskystä; siitä kertoo rukoussalin seinään hakattu kirjoitus. Talha on Al-Bakiriyyan pikkuveli. Se valmistui kaksikymmentäkolme vuotta myöhemmin ja lainasi osan edeltäjänsä muotokielestä, mutta jäi selvästi pienemmäksi: rukoussali on vaatimaton ja minareetti matala, ja juuri siksi rakennus istuu kapeiden kujien väliin luontevammin kuin iso esikuvansa. Kokonaisuuteen kuuluu rukoussalin ja minareetin lisäks…
+- [Rio de Janeiro — kaupunkilehti / Historia: Kupoli joka valmistui neljä vuotta myöhässä] Candelárian kirkon rakentaminen alkoi 1775, ja sen barokkijulkisivu vihittiin käyttöön jo 1811 kuningas João VI:n läsnä ollessa, vaikka kirkko oli sisältä yhä kesken. Keskikupu jäi vuosikymmeniksi valmistumatta: se saatiin lopulta pystyyn vasta 1877, neljä vuotta isoisän vierailun jälkeen. Kupolin kivet veistettiin valkoisesta portugalilaisesta lioz-kivestä Lissabonissa ja kuljetettiin laivalla Rioon. Isoisä näki siis kirkon vielä ilman kupolia — myöhemmin siitä tuli hetkeksi kaupungin korkein rakennelma.
+AIEMPI KYSYMYS: Kuinka monta kupolia Kirkastuksen kirkossa on?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: kaksikymmentäkaksi. Kirkastuksen kirkossa on 22 [[kupolia]], ja se on Kizhin pogostan kahdesta suuresta puukirkosta suurempi. Kupolit on rakennettu puusta ja nousevat porrastaen ylöspäin, ja ne muodostavat yhdessä kirkon tunnistettavan siluetin. Kirkon alttari laskettiin 6. kesäkuuta 1714, ja se on lämmittämätön kesäkirkko. Vieressä on [[Esirukouksen kirkko]], jossa kupoleita on yhdeksän. Pelkkä laskeminen väsyttää jo kyyhkyn.
+KYSYMYS: Kerro lisää: kupolia
+
+### 90
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kizhin pogosta (kulttuuri)
+Tietoruudun teksti: Kizhin pogosta on 1600-luvulle juontuva kokonaisuus Kizhin saarella Äänisellä Karjalan tasavallassa. Sana tarkoittaa aidan sisään jäävää aluetta, ja täällä sen sisällä ovat kaksi suurta puukirkkoa — 22-kupolinen Kirkastuksen kirkko ja 9-kupolinen Esirukouksen kirkko — sekä kellotapuli. Unesco otti kohteen maailmanperintöluetteloonsa 1990.
+
+Rakennusten perusyksikkö on pyöreä mäntyhirsi, halkaisijaltaan noin kolmekymmentä senttiä ja pituudeltaan kolmesta viiteen metriin. Koko pogosta rakennettiin ilman ainuttakaan naulaa, ja tuhannet hirret tuotiin mantereelta — aikanaan mittava kuljetusurakka.
+
+Kirkastuksen kirkon alttari laskettiin 6. kesäkuuta 1714. Se on lämmittämätön kesäkirkko, joka nousi salaman polttaman edeltäjänsä paikalle, eikä rakentajien nimiä tiedetä. Tarun mukaan pääkirvesmies käytti koko työhön yhtä kirvestä ja heitti sen valmistuttua järveen sanoen, ettei toista samanlais…
+AIEMPI KYSYMYS: Kuinka monta kupolia Kirkastuksen kirkossa on?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: kaksikymmentäkaksi. Kirkastuksen kirkossa on 22 [[kupolia]], ja se on Kizhin pogostan kahdesta suuresta puukirkosta suurempi. Kupolit on rakennettu puusta ja nousevat porrastaen ylöspäin, ja ne muodostavat yhdessä kirkon tunnistettavan siluetin. Kirkon alttari laskettiin 6. kesäkuuta 1714, ja se on lämmittämätön kesäkirkko. Vieressä on [[Esirukouksen kirkko]], jossa kupoleita on yhdeksän. Pelkkä laskeminen väsyttää jo kyyhkyn.
+KYSYMYS: Kerro lisää: Esirukouksen kirkko
+
+### 91
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kizhin pogosta (kulttuuri)
+Tietoruudun teksti: Kizhin pogosta on 1600-luvulle juontuva kokonaisuus Kizhin saarella Äänisellä Karjalan tasavallassa. Sana tarkoittaa aidan sisään jäävää aluetta, ja täällä sen sisällä ovat kaksi suurta puukirkkoa — 22-kupolinen Kirkastuksen kirkko ja 9-kupolinen Esirukouksen kirkko — sekä kellotapuli. Unesco otti kohteen maailmanperintöluetteloonsa 1990.
+
+Rakennusten perusyksikkö on pyöreä mäntyhirsi, halkaisijaltaan noin kolmekymmentä senttiä ja pituudeltaan kolmesta viiteen metriin. Koko pogosta rakennettiin ilman ainuttakaan naulaa, ja tuhannet hirret tuotiin mantereelta — aikanaan mittava kuljetusurakka.
+
+Kirkastuksen kirkon alttari laskettiin 6. kesäkuuta 1714. Se on lämmittämätön kesäkirkko, joka nousi salaman polttaman edeltäjänsä paikalle, eikä rakentajien nimiä tiedetä. Tarun mukaan pääkirvesmies käytti koko työhön yhtä kirvestä ja heitti sen valmistuttua järveen sanoen, ettei toista samanlais…
+AIEMPI KYSYMYS: Mitä sana pogosta tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Pogosta on vanha venäläinen sana, joka tarkoittaa aidan sisään jäävää aluetta. Kizhin saarella tällä viitataan kirkkojen ja kellotapulin muodostamaan kokonaisuuteen, jota ympäröi [[puuaita]]. Kokonaisuus juontuu 1600-luvulle, ja se on ollut Unescon [[maailmanperintöluettelossa]] vuodesta 1990. Sana on siis aika arkinen, vaikka sen kuvaama paikka ei ole.
+
+Sanan tiesin, mutta pidän siitä silti, että puun keskellä saarella aita on ollut suojana ennen kuin kukaan keksi aitaa matkamuistoksi. Minä en ole varma, kuinka vanha sana tarkalleen on.
+KYSYMYS: Kerro lisää: puuaita
+
+### 92
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kizhin pogosta (kulttuuri)
+Tietoruudun teksti: Kizhin pogosta on 1600-luvulle juontuva kokonaisuus Kizhin saarella Äänisellä Karjalan tasavallassa. Sana tarkoittaa aidan sisään jäävää aluetta, ja täällä sen sisällä ovat kaksi suurta puukirkkoa — 22-kupolinen Kirkastuksen kirkko ja 9-kupolinen Esirukouksen kirkko — sekä kellotapuli. Unesco otti kohteen maailmanperintöluetteloonsa 1990.
+
+Rakennusten perusyksikkö on pyöreä mäntyhirsi, halkaisijaltaan noin kolmekymmentä senttiä ja pituudeltaan kolmesta viiteen metriin. Koko pogosta rakennettiin ilman ainuttakaan naulaa, ja tuhannet hirret tuotiin mantereelta — aikanaan mittava kuljetusurakka.
+
+Kirkastuksen kirkon alttari laskettiin 6. kesäkuuta 1714. Se on lämmittämätön kesäkirkko, joka nousi salaman polttaman edeltäjänsä paikalle, eikä rakentajien nimiä tiedetä. Tarun mukaan pääkirvesmies käytti koko työhön yhtä kirvestä ja heitti sen valmistuttua järveen sanoen, ettei toista samanlais…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mitä sana pogosta tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Pogosta on vanha venäläinen sana, joka tarkoittaa aidan sisään jäävää aluetta. Kizhin saarella tällä viitataan kirkkojen ja kellotapulin muodostamaan kokonaisuuteen, jota ympäröi [[puuaita]]. Kokonaisuus juontuu 1600-luvulle, ja se on ollut Unescon [[maailmanperintöluettelossa]] vuodesta 1990. Sana on siis aika arkinen, vaikka sen kuvaama paikka ei ole.
+
+Sanan tiesin, mutta pidän siitä silti, että puun keskellä saarella aita on ollut suojana ennen kuin kukaan keksi aitaa matkamuistoksi. Minä en ole varma, kuinka vanha sana tarkalleen on.
+KYSYMYS: Kerro lisää: maailmanperintöluettelossa
+
+### 93
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kizhin pogosta (kulttuuri)
+Tietoruudun teksti: Kizhin pogosta on 1600-luvulle juontuva kokonaisuus Kizhin saarella Äänisellä Karjalan tasavallassa. Sana tarkoittaa aidan sisään jäävää aluetta, ja täällä sen sisällä ovat kaksi suurta puukirkkoa — 22-kupolinen Kirkastuksen kirkko ja 9-kupolinen Esirukouksen kirkko — sekä kellotapuli. Unesco otti kohteen maailmanperintöluetteloonsa 1990.
+
+Rakennusten perusyksikkö on pyöreä mäntyhirsi, halkaisijaltaan noin kolmekymmentä senttiä ja pituudeltaan kolmesta viiteen metriin. Koko pogosta rakennettiin ilman ainuttakaan naulaa, ja tuhannet hirret tuotiin mantereelta — aikanaan mittava kuljetusurakka.
+
+Kirkastuksen kirkon alttari laskettiin 6. kesäkuuta 1714. Se on lämmittämätön kesäkirkko, joka nousi salaman polttaman edeltäjänsä paikalle, eikä rakentajien nimiä tiedetä. Tarun mukaan pääkirvesmies käytti koko työhön yhtä kirvestä ja heitti sen valmistuttua järveen sanoen, ettei toista samanlais…
+AIEMPI KYSYMYS: Miten kirkot rakennettiin ilman nauloja?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kizhin kirkot on rakennettu hirsistä käyttäen [[salvostekniikkaa]]: hirret yhdistetään toisiinsa lovilla ja liitoksilla niin, että rakenne pysyy koossa oman painonsa ja muotonsa ansiosta. Rakennusten perusyksikkö on pyöreä mäntyhirsi, jonka halkaisija on noin kolmekymmentä senttiä ja pituus kolmesta viiteen metriä. Työkaluna käytettiin pääasiassa [[kirvestä]], ja tuhannet hirret tuotiin mantereelta saarelle. Kuvaus on tiivis, ja tarkat liitostekniikat vaihtelevat rakennuksesta toiseen. Minä en olisi jaksanut kantaa yhtäkään hirttä.
+KYSYMYS: Kerro lisää: salvostekniikkaa
+
+### 94
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kizhin pogosta (kulttuuri)
+Tietoruudun teksti: Kizhin pogosta on 1600-luvulle juontuva kokonaisuus Kizhin saarella Äänisellä Karjalan tasavallassa. Sana tarkoittaa aidan sisään jäävää aluetta, ja täällä sen sisällä ovat kaksi suurta puukirkkoa — 22-kupolinen Kirkastuksen kirkko ja 9-kupolinen Esirukouksen kirkko — sekä kellotapuli. Unesco otti kohteen maailmanperintöluetteloonsa 1990.
+
+Rakennusten perusyksikkö on pyöreä mäntyhirsi, halkaisijaltaan noin kolmekymmentä senttiä ja pituudeltaan kolmesta viiteen metriin. Koko pogosta rakennettiin ilman ainuttakaan naulaa, ja tuhannet hirret tuotiin mantereelta — aikanaan mittava kuljetusurakka.
+
+Kirkastuksen kirkon alttari laskettiin 6. kesäkuuta 1714. Se on lämmittämätön kesäkirkko, joka nousi salaman polttaman edeltäjänsä paikalle, eikä rakentajien nimiä tiedetä. Tarun mukaan pääkirvesmies käytti koko työhön yhtä kirvestä ja heitti sen valmistuttua järveen sanoen, ettei toista samanlais…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Etelä-Afrikka — maalehti / Musiikki: Kilpalaulanta, jossa voittaa hiljaisin] Isicathamiya on zulunkielinen mieskuorolaulu, ja nimi tulee verbistä -cathama, "astua varovasti". Se syntyi siirtotyöläisten asuntoloissa. Vanhempi tyyli mbube laulettiin täydellä äänellä, mutta isicathamiyassa tavoitteena on äänten sulautuminen ja tarkkaan harjoiteltu, varpaillaan liikkuva tanssi. Johannesburgissa ja Durbanissa kilpaillaan yhä lauantaiöisin: jopa kolmekymmentä kuoroa laulaa illan kahdeksasta aamun kahdeksaan. Joseph Shabalala perusti Ladysmith Black Mambazon 1960 ja opetti sille harmoniat, jotka oli kuullut toistuvassa unessa 1964. Nimen mambazo tarkoittaa kirvestä.
+AIEMPI KYSYMYS: Miten kirkot rakennettiin ilman nauloja?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kizhin kirkot on rakennettu hirsistä käyttäen [[salvostekniikkaa]]: hirret yhdistetään toisiinsa lovilla ja liitoksilla niin, että rakenne pysyy koossa oman painonsa ja muotonsa ansiosta. Rakennusten perusyksikkö on pyöreä mäntyhirsi, jonka halkaisija on noin kolmekymmentä senttiä ja pituus kolmesta viiteen metriä. Työkaluna käytettiin pääasiassa [[kirvestä]], ja tuhannet hirret tuotiin mantereelta saarelle. Kuvaus on tiivis, ja tarkat liitostekniikat vaihtelevat rakennuksesta toiseen. Minä en olisi jaksanut kantaa yhtäkään hirttä.
+KYSYMYS: Kerro lisää: kirvestä
+
+### 95
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kizhin pogosta (kulttuuri)
+Tietoruudun teksti: Kizhin pogosta on 1600-luvulle juontuva kokonaisuus Kizhin saarella Äänisellä Karjalan tasavallassa. Sana tarkoittaa aidan sisään jäävää aluetta, ja täällä sen sisällä ovat kaksi suurta puukirkkoa — 22-kupolinen Kirkastuksen kirkko ja 9-kupolinen Esirukouksen kirkko — sekä kellotapuli. Unesco otti kohteen maailmanperintöluetteloonsa 1990.
+
+Rakennusten perusyksikkö on pyöreä mäntyhirsi, halkaisijaltaan noin kolmekymmentä senttiä ja pituudeltaan kolmesta viiteen metriin. Koko pogosta rakennettiin ilman ainuttakaan naulaa, ja tuhannet hirret tuotiin mantereelta — aikanaan mittava kuljetusurakka.
+
+Kirkastuksen kirkon alttari laskettiin 6. kesäkuuta 1714. Se on lämmittämätön kesäkirkko, joka nousi salaman polttaman edeltäjänsä paikalle, eikä rakentajien nimiä tiedetä. Tarun mukaan pääkirvesmies käytti koko työhön yhtä kirvestä ja heitti sen valmistuttua järveen sanoen, ettei toista samanlais…
+AIEMPI KYSYMYS: Missä Kizhin saari sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tämä on helppo. Kizhin saari sijaitsee Äänisjärven pohjoisosassa Karjalan tasavallassa Venäjällä, saaristossa, johon kuuluu lukuisia pieniä saaria. [[Äänisjärvi]] on Euroopan suurimpia järviä, ja sen rannalla sijaitsee tasavallan pääkaupunki [[Petroskoi]], josta saarelle pääsee vesiteitse. Saari on kapea ja pitkulainen, ja sen puukirkkojen siluetti erottuu kauas. Sieltä näkee pitkälle, joten minä lensin ohi.
+KYSYMYS: Kerro lisää: Äänisjärvi
+
+### 96
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kizhin pogosta (kulttuuri)
+Tietoruudun teksti: Kizhin pogosta on 1600-luvulle juontuva kokonaisuus Kizhin saarella Äänisellä Karjalan tasavallassa. Sana tarkoittaa aidan sisään jäävää aluetta, ja täällä sen sisällä ovat kaksi suurta puukirkkoa — 22-kupolinen Kirkastuksen kirkko ja 9-kupolinen Esirukouksen kirkko — sekä kellotapuli. Unesco otti kohteen maailmanperintöluetteloonsa 1990.
+
+Rakennusten perusyksikkö on pyöreä mäntyhirsi, halkaisijaltaan noin kolmekymmentä senttiä ja pituudeltaan kolmesta viiteen metriin. Koko pogosta rakennettiin ilman ainuttakaan naulaa, ja tuhannet hirret tuotiin mantereelta — aikanaan mittava kuljetusurakka.
+
+Kirkastuksen kirkon alttari laskettiin 6. kesäkuuta 1714. Se on lämmittämätön kesäkirkko, joka nousi salaman polttaman edeltäjänsä paikalle, eikä rakentajien nimiä tiedetä. Tarun mukaan pääkirvesmies käytti koko työhön yhtä kirvestä ja heitti sen valmistuttua järveen sanoen, ettei toista samanlais…
+AIEMPI KYSYMYS: Missä Kizhin saari sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tämä on helppo. Kizhin saari sijaitsee Äänisjärven pohjoisosassa Karjalan tasavallassa Venäjällä, saaristossa, johon kuuluu lukuisia pieniä saaria. [[Äänisjärvi]] on Euroopan suurimpia järviä, ja sen rannalla sijaitsee tasavallan pääkaupunki [[Petroskoi]], josta saarelle pääsee vesiteitse. Saari on kapea ja pitkulainen, ja sen puukirkkojen siluetti erottuu kauas. Sieltä näkee pitkälle, joten minä lensin ohi.
+KYSYMYS: Kerro lisää: Petroskoi
+
+### 97
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kizhin pogosta (kulttuuri)
+Tietoruudun teksti: Kizhin pogosta on 1600-luvulle juontuva kokonaisuus Kizhin saarella Äänisellä Karjalan tasavallassa. Sana tarkoittaa aidan sisään jäävää aluetta, ja täällä sen sisällä ovat kaksi suurta puukirkkoa — 22-kupolinen Kirkastuksen kirkko ja 9-kupolinen Esirukouksen kirkko — sekä kellotapuli. Unesco otti kohteen maailmanperintöluetteloonsa 1990.
+
+Rakennusten perusyksikkö on pyöreä mäntyhirsi, halkaisijaltaan noin kolmekymmentä senttiä ja pituudeltaan kolmesta viiteen metriin. Koko pogosta rakennettiin ilman ainuttakaan naulaa, ja tuhannet hirret tuotiin mantereelta — aikanaan mittava kuljetusurakka.
+
+Kirkastuksen kirkon alttari laskettiin 6. kesäkuuta 1714. Se on lämmittämätön kesäkirkko, joka nousi salaman polttaman edeltäjänsä paikalle, eikä rakentajien nimiä tiedetä. Tarun mukaan pääkirvesmies käytti koko työhön yhtä kirvestä ja heitti sen valmistuttua järveen sanoen, ettei toista samanlais…
+AIEMPI KYSYMYS: Millä Kizhin kirkkojen kupolit on päällystetty?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kirkkojen kupolit on päällystetty [[haapalastuilla]], eli ohuilla haavasta tehdyillä laudoilla, jotka asetetaan limittäin kuin kalansuomut. [[Haapapuu]] harmaantuu ajan myötä hopeisenkiiltoiseksi, ja siksi kupolit vaikuttavat auringossa metallinhohtoisilta. Lastukatto suojaa rakennetta sateelta ja lumelta, ja uusin lastuja on vaihdettava aika ajoin. Kupoleita on kahdessa kirkossa yhteensä kolmekymmentäyksi, ja kaikki on päällystetty samalla tavalla. Viisas Pöllö olisi osannut kertoa pidemmän tarinan, mutta hänet kutsuttiin puhumaan johonkin.
+KYSYMYS: Kerro lisää: haapalastuilla
+
+### 98
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kizhin pogosta (kulttuuri)
+Tietoruudun teksti: Kizhin pogosta on 1600-luvulle juontuva kokonaisuus Kizhin saarella Äänisellä Karjalan tasavallassa. Sana tarkoittaa aidan sisään jäävää aluetta, ja täällä sen sisällä ovat kaksi suurta puukirkkoa — 22-kupolinen Kirkastuksen kirkko ja 9-kupolinen Esirukouksen kirkko — sekä kellotapuli. Unesco otti kohteen maailmanperintöluetteloonsa 1990.
+
+Rakennusten perusyksikkö on pyöreä mäntyhirsi, halkaisijaltaan noin kolmekymmentä senttiä ja pituudeltaan kolmesta viiteen metriin. Koko pogosta rakennettiin ilman ainuttakaan naulaa, ja tuhannet hirret tuotiin mantereelta — aikanaan mittava kuljetusurakka.
+
+Kirkastuksen kirkon alttari laskettiin 6. kesäkuuta 1714. Se on lämmittämätön kesäkirkko, joka nousi salaman polttaman edeltäjänsä paikalle, eikä rakentajien nimiä tiedetä. Tarun mukaan pääkirvesmies käytti koko työhön yhtä kirvestä ja heitti sen valmistuttua järveen sanoen, ettei toista samanlais…
+AIEMPI KYSYMYS: Millä Kizhin kirkkojen kupolit on päällystetty?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kirkkojen kupolit on päällystetty [[haapalastuilla]], eli ohuilla haavasta tehdyillä laudoilla, jotka asetetaan limittäin kuin kalansuomut. [[Haapapuu]] harmaantuu ajan myötä hopeisenkiiltoiseksi, ja siksi kupolit vaikuttavat auringossa metallinhohtoisilta. Lastukatto suojaa rakennetta sateelta ja lumelta, ja uusin lastuja on vaihdettava aika ajoin. Kupoleita on kahdessa kirkossa yhteensä kolmekymmentäyksi, ja kaikki on päällystetty samalla tavalla. Viisas Pöllö olisi osannut kertoa pidemmän tarinan, mutta hänet kutsuttiin puhumaan johonkin.
+KYSYMYS: Kerro lisää: Haapapuu
+
+### 99
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solovetskin luostari (historia)
+Tietoruudun teksti: Solovetskin luostari on linnoitettu luostari Solovetskin saarilla Vienanmerellä Pohjois-Venäjällä. Sen tärkeimmät rakennukset ovat 1500-luvulta, jolloin Filip Kolytšev toimi sen igumenina. Munkki Zosima perusti luostarin 1436; munkit German ja Savvati olivat asuneet saarella jo vuodesta 1429, ja heitä pidetään sen toisina perustajina.
+
+Luostari kasvoi kaupankäynnin varassa Vienanmeren alueen talous- ja politiikkakeskukseksi. Sillä oli suolakeittimöitä — 1660-luvulla 54 kappaletta — sekä ansapyyntiä, kalastusta, kiillelouhoksia, rautaruukkeja ja helmenkalastusta. 1600-luvulla siellä eli noin 350 munkkia ja 600–700 palvelijaa, käsityöläistä ja talonpoikaa.
+
+Luostari oli myös rajalinnoitus, jossa oli kymmeniä tykkejä ja vahva varuskunta; se torjui Liivinmaan ritarikunnan ja ruotsalaisten hyökkäykset 1571, 1582 ja 1611. 1650- ja 1660-luvuilla se oli vanhauskoisten tukikohta, ja vuosien 1668…
+AIEMPI KYSYMYS: Mikä oli Solovetskin kapina?
+AIEMPI VASTAUS (Livia):
+Kääk, tuo on raskas aihe. Solovetskin kapina oli 1600-luvun lopulla tapahtunut luostarin vastarinta tsaarin valtaa ja Venäjän ortodoksisen kirkon uudistusta vastaan. Patriarkka [[Nikonin]] aloittamat kirkonmenojen ja kirjojen uudistukset jakoivat kirkon, ja luostarin munkit liittyivät [[vanhauskoisiin]], jotka eivät niitä hyväksyneet. Vuosina 1668–1676 kestäneen vastarinnan aikana luostari oli piiritettynä, ja tsaari [[Aleksei Mihailovitš]] lähetti sinne joukkoja. Vastarinta päättyi vuonna 1676, kun luostari vallattiin. Tapahtumasta on nyt kulunut yli kolmesataa vuotta, ja kirkkojen välit ovat sittemmin muuttuneet, mutta kapina on jäänyt tärkeäksi osaksi vanhauskoisten muistia. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Nikonin
+
+### 100
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solovetskin luostari (historia)
+Tietoruudun teksti: Solovetskin luostari on linnoitettu luostari Solovetskin saarilla Vienanmerellä Pohjois-Venäjällä. Sen tärkeimmät rakennukset ovat 1500-luvulta, jolloin Filip Kolytšev toimi sen igumenina. Munkki Zosima perusti luostarin 1436; munkit German ja Savvati olivat asuneet saarella jo vuodesta 1429, ja heitä pidetään sen toisina perustajina.
+
+Luostari kasvoi kaupankäynnin varassa Vienanmeren alueen talous- ja politiikkakeskukseksi. Sillä oli suolakeittimöitä — 1660-luvulla 54 kappaletta — sekä ansapyyntiä, kalastusta, kiillelouhoksia, rautaruukkeja ja helmenkalastusta. 1600-luvulla siellä eli noin 350 munkkia ja 600–700 palvelijaa, käsityöläistä ja talonpoikaa.
+
+Luostari oli myös rajalinnoitus, jossa oli kymmeniä tykkejä ja vahva varuskunta; se torjui Liivinmaan ritarikunnan ja ruotsalaisten hyökkäykset 1571, 1582 ja 1611. 1650- ja 1660-luvuilla se oli vanhauskoisten tukikohta, ja vuosien 1668…
+AIEMPI KYSYMYS: Mikä oli Solovetskin kapina?
+AIEMPI VASTAUS (Livia):
+Kääk, tuo on raskas aihe. Solovetskin kapina oli 1600-luvun lopulla tapahtunut luostarin vastarinta tsaarin valtaa ja Venäjän ortodoksisen kirkon uudistusta vastaan. Patriarkka [[Nikonin]] aloittamat kirkonmenojen ja kirjojen uudistukset jakoivat kirkon, ja luostarin munkit liittyivät [[vanhauskoisiin]], jotka eivät niitä hyväksyneet. Vuosina 1668–1676 kestäneen vastarinnan aikana luostari oli piiritettynä, ja tsaari [[Aleksei Mihailovitš]] lähetti sinne joukkoja. Vastarinta päättyi vuonna 1676, kun luostari vallattiin. Tapahtumasta on nyt kulunut yli kolmesataa vuotta, ja kirkkojen välit ovat sittemmin muuttuneet, mutta kapina on jäänyt tärkeäksi osaksi vanhauskoisten muistia. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: vanhauskoisiin
+
+### 101
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solovetskin luostari (historia)
+Tietoruudun teksti: Solovetskin luostari on linnoitettu luostari Solovetskin saarilla Vienanmerellä Pohjois-Venäjällä. Sen tärkeimmät rakennukset ovat 1500-luvulta, jolloin Filip Kolytšev toimi sen igumenina. Munkki Zosima perusti luostarin 1436; munkit German ja Savvati olivat asuneet saarella jo vuodesta 1429, ja heitä pidetään sen toisina perustajina.
+
+Luostari kasvoi kaupankäynnin varassa Vienanmeren alueen talous- ja politiikkakeskukseksi. Sillä oli suolakeittimöitä — 1660-luvulla 54 kappaletta — sekä ansapyyntiä, kalastusta, kiillelouhoksia, rautaruukkeja ja helmenkalastusta. 1600-luvulla siellä eli noin 350 munkkia ja 600–700 palvelijaa, käsityöläistä ja talonpoikaa.
+
+Luostari oli myös rajalinnoitus, jossa oli kymmeniä tykkejä ja vahva varuskunta; se torjui Liivinmaan ritarikunnan ja ruotsalaisten hyökkäykset 1571, 1582 ja 1611. 1650- ja 1660-luvuilla se oli vanhauskoisten tukikohta, ja vuosien 1668…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Tiede ja keksinnöt: Tetris syntyi hakasulkeista] 1984 — Aleksei Pažitnov teki Tetriksen kesäkuussa 1984 työpaikallaan Neuvostoliiton tiedeakatemian laskentakeskuksessa Moskovassa. Käytössä ollut Elektronika 60 -tietokone ei osannut piirtää kuvia, joten palikat koottiin hakasulkumerkeistä. Nimi tulee kreikan sanasta tetra eli neljä — jokaisessa palikassa on neljä ruutua — ja tenniksestä, Pažitnovin lempilajista. Peli levisi Moskovassa levykkeeltä toiselle ilmaiseksi, ja IBM-koneelle sitä oli kääntämässä 16-vuotias koululainen Vadim Gerasimov.
+AIEMPI KYSYMYS: Mikä oli Solovetskin kapina?
+AIEMPI VASTAUS (Livia):
+Kääk, tuo on raskas aihe. Solovetskin kapina oli 1600-luvun lopulla tapahtunut luostarin vastarinta tsaarin valtaa ja Venäjän ortodoksisen kirkon uudistusta vastaan. Patriarkka [[Nikonin]] aloittamat kirkonmenojen ja kirjojen uudistukset jakoivat kirkon, ja luostarin munkit liittyivät [[vanhauskoisiin]], jotka eivät niitä hyväksyneet. Vuosina 1668–1676 kestäneen vastarinnan aikana luostari oli piiritettynä, ja tsaari [[Aleksei Mihailovitš]] lähetti sinne joukkoja. Vastarinta päättyi vuonna 1676, kun luostari vallattiin. Tapahtumasta on nyt kulunut yli kolmesataa vuotta, ja kirkkojen välit ovat sittemmin muuttuneet, mutta kapina on jäänyt tärkeäksi osaksi vanhauskoisten muistia. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Aleksei Mihailovitš
+
+### 102
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solovetskin luostari (historia)
+Tietoruudun teksti: Solovetskin luostari on linnoitettu luostari Solovetskin saarilla Vienanmerellä Pohjois-Venäjällä. Sen tärkeimmät rakennukset ovat 1500-luvulta, jolloin Filip Kolytšev toimi sen igumenina. Munkki Zosima perusti luostarin 1436; munkit German ja Savvati olivat asuneet saarella jo vuodesta 1429, ja heitä pidetään sen toisina perustajina.
+
+Luostari kasvoi kaupankäynnin varassa Vienanmeren alueen talous- ja politiikkakeskukseksi. Sillä oli suolakeittimöitä — 1660-luvulla 54 kappaletta — sekä ansapyyntiä, kalastusta, kiillelouhoksia, rautaruukkeja ja helmenkalastusta. 1600-luvulla siellä eli noin 350 munkkia ja 600–700 palvelijaa, käsityöläistä ja talonpoikaa.
+
+Luostari oli myös rajalinnoitus, jossa oli kymmeniä tykkejä ja vahva varuskunta; se torjui Liivinmaan ritarikunnan ja ruotsalaisten hyökkäykset 1571, 1582 ja 1611. 1650- ja 1660-luvuilla se oli vanhauskoisten tukikohta, ja vuosien 1668…
+AIEMPI KYSYMYS: Mitä luostarissa tuotettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tään minä muistan. Solovetskin luostari kasvoi kaupankäynnin varassa [[Vienanmeren]] alueen talouskeskukseksi, ja se tuotti [[suolaa]], jota keitettiin suolakeittimöissä: niitä oli 1660-luvulla 54. Lisäksi luostarilla oli ansapyyntiä, kalastusta, kiillelouhoksia, rautaruukkeja ja helmenkalastusta. Luostarissa eli 1600-luvulla noin 350 munkkia sekä 600–700 palvelijaa, käsityöläistä ja talonpoikaa, joten kyseessä oli oikea pieni yhteisö. Luostari oli myös [[rajalinnoitus]], jossa oli kymmeniä tykkejä. Suolaa riitti, mutta pullasta ei ole tietoa.
+KYSYMYS: Kerro lisää: Vienanmeren
+
+### 103
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solovetskin luostari (historia)
+Tietoruudun teksti: Solovetskin luostari on linnoitettu luostari Solovetskin saarilla Vienanmerellä Pohjois-Venäjällä. Sen tärkeimmät rakennukset ovat 1500-luvulta, jolloin Filip Kolytšev toimi sen igumenina. Munkki Zosima perusti luostarin 1436; munkit German ja Savvati olivat asuneet saarella jo vuodesta 1429, ja heitä pidetään sen toisina perustajina.
+
+Luostari kasvoi kaupankäynnin varassa Vienanmeren alueen talous- ja politiikkakeskukseksi. Sillä oli suolakeittimöitä — 1660-luvulla 54 kappaletta — sekä ansapyyntiä, kalastusta, kiillelouhoksia, rautaruukkeja ja helmenkalastusta. 1600-luvulla siellä eli noin 350 munkkia ja 600–700 palvelijaa, käsityöläistä ja talonpoikaa.
+
+Luostari oli myös rajalinnoitus, jossa oli kymmeniä tykkejä ja vahva varuskunta; se torjui Liivinmaan ritarikunnan ja ruotsalaisten hyökkäykset 1571, 1582 ja 1611. 1650- ja 1660-luvuilla se oli vanhauskoisten tukikohta, ja vuosien 1668…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sahara — kaupunkilehti / Sahara: Kultaa, suolaa ja karavaanireittejä] Ranskalainen tutkimusmatkailija Edouard Blanc piirsi vuonna 1889 kartan Saharan kauppareiteistä – samoista reiteistä, joita pitkin kamelikaravaanit olivat kulkeneet vuosisatoja. Pohjoiseen vietiin kultaa ja suolaa: Taghazan ja Bilman suolakaivoksista louhittu suola vaihdettiin Länsi-Afrikan kultaan ja muihin tavaroihin. Osa karavaaneista käsitti tuhansia kameleita, ja berberioppaat johtivat matkueen kaivolta toiselle. Reittien varrelle nousivat vauraat kaupungit kuten Timbuktu. Isoisän matkavuosina 1870-luvulla perinteinen karavaanikauppa oli jo hiipumassa, kun ranskalaiset laajensivat valtaansa ja rakensivat rautateitä rannikolle.
+- [Sahalin — kaupunkilehti / Sahalin: Kala kuivattiin ilman suolaa] Saarella on kolme alkuperäiskansaa. Nivkhit asuivat pohjoisessa, uiltat eli orokit keskiosassa ja ainut etelässä. Nivkhien vuosi rakentui kalan varaan: joista saatiin kyttyrä- ja koiralohta, taimenta, madetta ja haukea, mereltä navagaa, kampelaa ja tokkoja. Saalis säilöttiin jukolaksi, joka kuivattiin pakkasilmassa kokonaan ilman suolaa. Vanhin talvitalotyyppi oli ryv: pyöreä kuoppa, halkaisijaltaan noin 7,5 metriä, jonka seinät tuettiin pystypuilla ja katettiin maalla ja heinällä. Metsässä ja matkoilla kuljettiin koiravaljakolla.
+AIEMPI KYSYMYS: Mitä luostarissa tuotettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tään minä muistan. Solovetskin luostari kasvoi kaupankäynnin varassa [[Vienanmeren]] alueen talouskeskukseksi, ja se tuotti [[suolaa]], jota keitettiin suolakeittimöissä: niitä oli 1660-luvulla 54. Lisäksi luostarilla oli ansapyyntiä, kalastusta, kiillelouhoksia, rautaruukkeja ja helmenkalastusta. Luostarissa eli 1600-luvulla noin 350 munkkia sekä 600–700 palvelijaa, käsityöläistä ja talonpoikaa, joten kyseessä oli oikea pieni yhteisö. Luostari oli myös [[rajalinnoitus]], jossa oli kymmeniä tykkejä. Suolaa riitti, mutta pullasta ei ole tietoa.
+KYSYMYS: Kerro lisää: suolaa
+
+### 104
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solovetskin luostari (historia)
+Tietoruudun teksti: Solovetskin luostari on linnoitettu luostari Solovetskin saarilla Vienanmerellä Pohjois-Venäjällä. Sen tärkeimmät rakennukset ovat 1500-luvulta, jolloin Filip Kolytšev toimi sen igumenina. Munkki Zosima perusti luostarin 1436; munkit German ja Savvati olivat asuneet saarella jo vuodesta 1429, ja heitä pidetään sen toisina perustajina.
+
+Luostari kasvoi kaupankäynnin varassa Vienanmeren alueen talous- ja politiikkakeskukseksi. Sillä oli suolakeittimöitä — 1660-luvulla 54 kappaletta — sekä ansapyyntiä, kalastusta, kiillelouhoksia, rautaruukkeja ja helmenkalastusta. 1600-luvulla siellä eli noin 350 munkkia ja 600–700 palvelijaa, käsityöläistä ja talonpoikaa.
+
+Luostari oli myös rajalinnoitus, jossa oli kymmeniä tykkejä ja vahva varuskunta; se torjui Liivinmaan ritarikunnan ja ruotsalaisten hyökkäykset 1571, 1582 ja 1611. 1650- ja 1660-luvuilla se oli vanhauskoisten tukikohta, ja vuosien 1668…
+AIEMPI KYSYMYS: Mitä luostarissa tuotettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tään minä muistan. Solovetskin luostari kasvoi kaupankäynnin varassa [[Vienanmeren]] alueen talouskeskukseksi, ja se tuotti [[suolaa]], jota keitettiin suolakeittimöissä: niitä oli 1660-luvulla 54. Lisäksi luostarilla oli ansapyyntiä, kalastusta, kiillelouhoksia, rautaruukkeja ja helmenkalastusta. Luostarissa eli 1600-luvulla noin 350 munkkia sekä 600–700 palvelijaa, käsityöläistä ja talonpoikaa, joten kyseessä oli oikea pieni yhteisö. Luostari oli myös [[rajalinnoitus]], jossa oli kymmeniä tykkejä. Suolaa riitti, mutta pullasta ei ole tietoa.
+KYSYMYS: Kerro lisää: rajalinnoitus
+
+### 105
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solovetskin luostari (historia)
+Tietoruudun teksti: Solovetskin luostari on linnoitettu luostari Solovetskin saarilla Vienanmerellä Pohjois-Venäjällä. Sen tärkeimmät rakennukset ovat 1500-luvulta, jolloin Filip Kolytšev toimi sen igumenina. Munkki Zosima perusti luostarin 1436; munkit German ja Savvati olivat asuneet saarella jo vuodesta 1429, ja heitä pidetään sen toisina perustajina.
+
+Luostari kasvoi kaupankäynnin varassa Vienanmeren alueen talous- ja politiikkakeskukseksi. Sillä oli suolakeittimöitä — 1660-luvulla 54 kappaletta — sekä ansapyyntiä, kalastusta, kiillelouhoksia, rautaruukkeja ja helmenkalastusta. 1600-luvulla siellä eli noin 350 munkkia ja 600–700 palvelijaa, käsityöläistä ja talonpoikaa.
+
+Luostari oli myös rajalinnoitus, jossa oli kymmeniä tykkejä ja vahva varuskunta; se torjui Liivinmaan ritarikunnan ja ruotsalaisten hyökkäykset 1571, 1582 ja 1611. 1650- ja 1660-luvuilla se oli vanhauskoisten tukikohta, ja vuosien 1668…
+AIEMPI KYSYMYS: Mikä oli Solovetskin vankileiri?
+AIEMPI VASTAUS (Livia):
+Kääk, tuo on raskas asia. Solovetskin saarille perustettiin Neuvostoliiton aikana 1920-luvun alussa vankileiri, jonka kerrotaan olleen yksi Neuvostoliiton [[vankileirijärjestelmän]] alkupisteistä. Leirin alueena oli entinen luostari, ja sinne vietiin vankeja ympäri maata. Leiri lakkautettiin 1930-luvun lopulla, ja luostarin rakennukset palasivat kirkon käyttöön vasta 1990-luvulla, kun Neuvostoliitto oli hajonnut. Kohde on nykyään Unescon [[maailmanperintökohde]], ja leirin muisto on edelleen osa saaren tarinaa, joten siitä puhutaan asiallisesti ja tarkasti. Nämä ovat vuosilukuja, joista minä en ole täysin varma.
+KYSYMYS: Kerro lisää: vankileirijärjestelmän
+
+### 106
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solovetskin luostari (historia)
+Tietoruudun teksti: Solovetskin luostari on linnoitettu luostari Solovetskin saarilla Vienanmerellä Pohjois-Venäjällä. Sen tärkeimmät rakennukset ovat 1500-luvulta, jolloin Filip Kolytšev toimi sen igumenina. Munkki Zosima perusti luostarin 1436; munkit German ja Savvati olivat asuneet saarella jo vuodesta 1429, ja heitä pidetään sen toisina perustajina.
+
+Luostari kasvoi kaupankäynnin varassa Vienanmeren alueen talous- ja politiikkakeskukseksi. Sillä oli suolakeittimöitä — 1660-luvulla 54 kappaletta — sekä ansapyyntiä, kalastusta, kiillelouhoksia, rautaruukkeja ja helmenkalastusta. 1600-luvulla siellä eli noin 350 munkkia ja 600–700 palvelijaa, käsityöläistä ja talonpoikaa.
+
+Luostari oli myös rajalinnoitus, jossa oli kymmeniä tykkejä ja vahva varuskunta; se torjui Liivinmaan ritarikunnan ja ruotsalaisten hyökkäykset 1571, 1582 ja 1611. 1650- ja 1660-luvuilla se oli vanhauskoisten tukikohta, ja vuosien 1668…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mikä oli Solovetskin vankileiri?
+AIEMPI VASTAUS (Livia):
+Kääk, tuo on raskas asia. Solovetskin saarille perustettiin Neuvostoliiton aikana 1920-luvun alussa vankileiri, jonka kerrotaan olleen yksi Neuvostoliiton [[vankileirijärjestelmän]] alkupisteistä. Leirin alueena oli entinen luostari, ja sinne vietiin vankeja ympäri maata. Leiri lakkautettiin 1930-luvun lopulla, ja luostarin rakennukset palasivat kirkon käyttöön vasta 1990-luvulla, kun Neuvostoliitto oli hajonnut. Kohde on nykyään Unescon [[maailmanperintökohde]], ja leirin muisto on edelleen osa saaren tarinaa, joten siitä puhutaan asiallisesti ja tarkasti. Nämä ovat vuosilukuja, joista minä en ole täysin varma.
+KYSYMYS: Kerro lisää: maailmanperintökohde
+
+### 107
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solovetskin luostari (historia)
+Tietoruudun teksti: Solovetskin luostari on linnoitettu luostari Solovetskin saarilla Vienanmerellä Pohjois-Venäjällä. Sen tärkeimmät rakennukset ovat 1500-luvulta, jolloin Filip Kolytšev toimi sen igumenina. Munkki Zosima perusti luostarin 1436; munkit German ja Savvati olivat asuneet saarella jo vuodesta 1429, ja heitä pidetään sen toisina perustajina.
+
+Luostari kasvoi kaupankäynnin varassa Vienanmeren alueen talous- ja politiikkakeskukseksi. Sillä oli suolakeittimöitä — 1660-luvulla 54 kappaletta — sekä ansapyyntiä, kalastusta, kiillelouhoksia, rautaruukkeja ja helmenkalastusta. 1600-luvulla siellä eli noin 350 munkkia ja 600–700 palvelijaa, käsityöläistä ja talonpoikaa.
+
+Luostari oli myös rajalinnoitus, jossa oli kymmeniä tykkejä ja vahva varuskunta; se torjui Liivinmaan ritarikunnan ja ruotsalaisten hyökkäykset 1571, 1582 ja 1611. 1650- ja 1660-luvuilla se oli vanhauskoisten tukikohta, ja vuosien 1668…
+AIEMPI KYSYMYS: Mikä Vienanmeri on?
+AIEMPI VASTAUS (Livia):
+Ai niin, tuo. Vienanmeri eli Valkoinen meri on Venäjän luoteisosassa sijaitseva matala merenlahti, joka on yhteydessä [[Barentsinmereen]] kapean salmen kautta. Sen rannalla sijaitsee muun muassa [[Arkangeli]], ja sen saaristoon kuuluvat Solovetskin saaret. Meri jäätyy talvella suureksi osaksi, ja sen rannikon asukkaat ovat eläneet kalastuksesta, suolanteosta ja merikaupasta jo vuosisatojen ajan. Nimi tulee valkoisesta jäästä ja lumesta, tai ainakin niin kerrotaan.
+
+Lähimpänä meren yli on tullut lennettyä, mutta ei talvella; minä pidän kyllä enemmän lämpimästä. Tässä suvussa on aina ollut ajatus, että valkoinen on myös hyvä väri.
+KYSYMYS: Kerro lisää: Barentsinmereen
+
+### 108
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solovetskin luostari (historia)
+Tietoruudun teksti: Solovetskin luostari on linnoitettu luostari Solovetskin saarilla Vienanmerellä Pohjois-Venäjällä. Sen tärkeimmät rakennukset ovat 1500-luvulta, jolloin Filip Kolytšev toimi sen igumenina. Munkki Zosima perusti luostarin 1436; munkit German ja Savvati olivat asuneet saarella jo vuodesta 1429, ja heitä pidetään sen toisina perustajina.
+
+Luostari kasvoi kaupankäynnin varassa Vienanmeren alueen talous- ja politiikkakeskukseksi. Sillä oli suolakeittimöitä — 1660-luvulla 54 kappaletta — sekä ansapyyntiä, kalastusta, kiillelouhoksia, rautaruukkeja ja helmenkalastusta. 1600-luvulla siellä eli noin 350 munkkia ja 600–700 palvelijaa, käsityöläistä ja talonpoikaa.
+
+Luostari oli myös rajalinnoitus, jossa oli kymmeniä tykkejä ja vahva varuskunta; se torjui Liivinmaan ritarikunnan ja ruotsalaisten hyökkäykset 1571, 1582 ja 1611. 1650- ja 1660-luvuilla se oli vanhauskoisten tukikohta, ja vuosien 1668…
+AIEMPI KYSYMYS: Mikä Vienanmeri on?
+AIEMPI VASTAUS (Livia):
+Ai niin, tuo. Vienanmeri eli Valkoinen meri on Venäjän luoteisosassa sijaitseva matala merenlahti, joka on yhteydessä [[Barentsinmereen]] kapean salmen kautta. Sen rannalla sijaitsee muun muassa [[Arkangeli]], ja sen saaristoon kuuluvat Solovetskin saaret. Meri jäätyy talvella suureksi osaksi, ja sen rannikon asukkaat ovat eläneet kalastuksesta, suolanteosta ja merikaupasta jo vuosisatojen ajan. Nimi tulee valkoisesta jäästä ja lumesta, tai ainakin niin kerrotaan.
+
+Lähimpänä meren yli on tullut lennettyä, mutta ei talvella; minä pidän kyllä enemmän lämpimästä. Tässä suvussa on aina ollut ajatus, että valkoinen on myös hyvä väri.
+KYSYMYS: Kerro lisää: Arkangeli
+
+### 109
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solovetskin luostari (historia)
+Tietoruudun teksti: Solovetskin luostari on linnoitettu luostari Solovetskin saarilla Vienanmerellä Pohjois-Venäjällä. Sen tärkeimmät rakennukset ovat 1500-luvulta, jolloin Filip Kolytšev toimi sen igumenina. Munkki Zosima perusti luostarin 1436; munkit German ja Savvati olivat asuneet saarella jo vuodesta 1429, ja heitä pidetään sen toisina perustajina.
+
+Luostari kasvoi kaupankäynnin varassa Vienanmeren alueen talous- ja politiikkakeskukseksi. Sillä oli suolakeittimöitä — 1660-luvulla 54 kappaletta — sekä ansapyyntiä, kalastusta, kiillelouhoksia, rautaruukkeja ja helmenkalastusta. 1600-luvulla siellä eli noin 350 munkkia ja 600–700 palvelijaa, käsityöläistä ja talonpoikaa.
+
+Luostari oli myös rajalinnoitus, jossa oli kymmeniä tykkejä ja vahva varuskunta; se torjui Liivinmaan ritarikunnan ja ruotsalaisten hyökkäykset 1571, 1582 ja 1611. 1650- ja 1660-luvuilla se oli vanhauskoisten tukikohta, ja vuosien 1668…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lissabon — kaupunkilehti / Ruoka: Pastel de nata on luostarin resepti] Jerónimosin luostarin munkit paistoivat lehtitaikinakuppeja, joissa on munakermatäyte. Kun luostarit suljettiin 1834, resepti päätyi viereiselle sokerikaupalle, ja Pastéis de Belém on myynyt leivoksia vuodesta 1837. Kahvila kertoo paistavansa niitä yli 20 000 päivässä. Vain siellä ne saa nimittää pastéis de belém — muualla ne ovat pastel de nata.
+AIEMPI KYSYMYS: Mitä igumeni tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Mmm— Igumeni on ortodoksisen [[luostarin]] johtaja, vastaava kuin läntisessä kirkossa apotti. Sana tulee kreikasta ja tarkoittaa johtajaa. Igumeni vastaa luostarin hengellisestä elämästä ja sen taloudesta, ja hänen alaisuudessaan munkit asuvat ja työskentelevät. Solovetskin luostarin tunnetuimpia igumeneita oli 1500-luvulla toiminut [[Filip Kolytšev]], jonka aikana luostarin tärkeimmät rakennukset valmistuivat. Johtajan virka oli siis kunnioitettu, ja vastuuta riitti.
+KYSYMYS: Kerro lisää: luostarin
+
+### 110
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solovetskin luostari (historia)
+Tietoruudun teksti: Solovetskin luostari on linnoitettu luostari Solovetskin saarilla Vienanmerellä Pohjois-Venäjällä. Sen tärkeimmät rakennukset ovat 1500-luvulta, jolloin Filip Kolytšev toimi sen igumenina. Munkki Zosima perusti luostarin 1436; munkit German ja Savvati olivat asuneet saarella jo vuodesta 1429, ja heitä pidetään sen toisina perustajina.
+
+Luostari kasvoi kaupankäynnin varassa Vienanmeren alueen talous- ja politiikkakeskukseksi. Sillä oli suolakeittimöitä — 1660-luvulla 54 kappaletta — sekä ansapyyntiä, kalastusta, kiillelouhoksia, rautaruukkeja ja helmenkalastusta. 1600-luvulla siellä eli noin 350 munkkia ja 600–700 palvelijaa, käsityöläistä ja talonpoikaa.
+
+Luostari oli myös rajalinnoitus, jossa oli kymmeniä tykkejä ja vahva varuskunta; se torjui Liivinmaan ritarikunnan ja ruotsalaisten hyökkäykset 1571, 1582 ja 1611. 1650- ja 1660-luvuilla se oli vanhauskoisten tukikohta, ja vuosien 1668…
+AIEMPI KYSYMYS: Mitä igumeni tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Mmm— Igumeni on ortodoksisen [[luostarin]] johtaja, vastaava kuin läntisessä kirkossa apotti. Sana tulee kreikasta ja tarkoittaa johtajaa. Igumeni vastaa luostarin hengellisestä elämästä ja sen taloudesta, ja hänen alaisuudessaan munkit asuvat ja työskentelevät. Solovetskin luostarin tunnetuimpia igumeneita oli 1500-luvulla toiminut [[Filip Kolytšev]], jonka aikana luostarin tärkeimmät rakennukset valmistuivat. Johtajan virka oli siis kunnioitettu, ja vastuuta riitti.
+KYSYMYS: Kerro lisää: Filip Kolytšev
+
+### 111
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kazanin kreml (historia)
+Tietoruudun teksti: Kazanin kreml on Kazanin kaupungin vanha linnoitus Tatarstanissa. Iivana Julma määräsi sen rakennettavaksi Kazanin khaanien entisen linnan raunioille, ja Unesco listasi sen maailmanperintökohteeksi vuonna 2000. Tsaari kutsui työhön pihkovalaiset rakennusmestarit Postnik Jakovlevin ja Ivan Širjain, jota kutsuttiin Barmaksi.
+
+Vanhin rakennus on Marian ilmestyksen katedraali vuosilta 1554–1562. Se on ainoa 1500-luvun venäläinen kirkko, jossa on kuusi pilaria ja viisi apsista, ja se on rakennettu paikallisesta vaaleasta hiekkakivestä eikä tiilestä. Katedraalin viisikerroksinen kellotorni purettiin 1930.
+
+Näkyvin maamerkki on vino Söyembikän torni, joka on todennäköisesti Pietari Suuren ajalta; tunnettu tarina liittää sen Kazanin khaanikunnan viimeiseen kuningattareen. Kremlin eteläpäätä hallitsee Spasskajan torni, joka on samalla pääsisäänkäynti. Muurien sisällä ovat myös uudelleen rakennet…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+AIEMPI KYSYMYS: Kuka määräsi kremlin rakennettavaksi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Iivana Julma]] määräsi kremlin rakennettavaksi Kazanin khaanien entisen linnan raunioille. Työhön tsaari kutsui pihkovalaiset rakennusmestarit [[Postnik Jakovlevin]] ja [[Ivan Širjain]], jota kutsuttiin Barmaksi. Kohde on nykyisin [[Unescon]] maailmanperintökohde, ja se listattiin sinne vuonna 2000. Lyhyt vastaus, mut tuli kuitenkin sanottua kaikki.
+KYSYMYS: Kerro lisää: Iivana Julma
+
+### 112
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kazanin kreml (historia)
+Tietoruudun teksti: Kazanin kreml on Kazanin kaupungin vanha linnoitus Tatarstanissa. Iivana Julma määräsi sen rakennettavaksi Kazanin khaanien entisen linnan raunioille, ja Unesco listasi sen maailmanperintökohteeksi vuonna 2000. Tsaari kutsui työhön pihkovalaiset rakennusmestarit Postnik Jakovlevin ja Ivan Širjain, jota kutsuttiin Barmaksi.
+
+Vanhin rakennus on Marian ilmestyksen katedraali vuosilta 1554–1562. Se on ainoa 1500-luvun venäläinen kirkko, jossa on kuusi pilaria ja viisi apsista, ja se on rakennettu paikallisesta vaaleasta hiekkakivestä eikä tiilestä. Katedraalin viisikerroksinen kellotorni purettiin 1930.
+
+Näkyvin maamerkki on vino Söyembikän torni, joka on todennäköisesti Pietari Suuren ajalta; tunnettu tarina liittää sen Kazanin khaanikunnan viimeiseen kuningattareen. Kremlin eteläpäätä hallitsee Spasskajan torni, joka on samalla pääsisäänkäynti. Muurien sisällä ovat myös uudelleen rakennet…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Pyhän Vasilin katedraali] 1555-1561 Tsaari Iivana Julma käski rakentaa tämän katedraalin muistoksi Kazanin kaupungin valtauksesta vuonna 1552. Rakennustyöt kestivät yllättävän lyhyen ajan, vuodesta 1555 vuoteen 1561 - vain kuusi vuotta. Rakennuksen yhdeksän erimuotoista ja -väristä sipulikupolia tekevät siitä ainutlaatuisen: mitään täysin samanlaista ei ole rakennettu koskaan ennen tai jälkeen. Alun perin kirkko oli nimeltään Pyhän Kolminaisuuden kirkko, mutta vuonna 1588 sen kylkeen lisättiin kappeli pyhän hullun, Vasili Siunatun, haudan päälle. Vähitellen koko katedraali alkoi kantaa hänen nimeään. Katedraaliin liittyy vanha legenda, jonka mukaan Iivana Julma olisi sokaissut rakennuksen tekijät, Barman ja Postnik …
+AIEMPI KYSYMYS: Kuka määräsi kremlin rakennettavaksi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Iivana Julma]] määräsi kremlin rakennettavaksi Kazanin khaanien entisen linnan raunioille. Työhön tsaari kutsui pihkovalaiset rakennusmestarit [[Postnik Jakovlevin]] ja [[Ivan Širjain]], jota kutsuttiin Barmaksi. Kohde on nykyisin [[Unescon]] maailmanperintökohde, ja se listattiin sinne vuonna 2000. Lyhyt vastaus, mut tuli kuitenkin sanottua kaikki.
+KYSYMYS: Kerro lisää: Postnik Jakovlevin
+
+### 113
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kazanin kreml (historia)
+Tietoruudun teksti: Kazanin kreml on Kazanin kaupungin vanha linnoitus Tatarstanissa. Iivana Julma määräsi sen rakennettavaksi Kazanin khaanien entisen linnan raunioille, ja Unesco listasi sen maailmanperintökohteeksi vuonna 2000. Tsaari kutsui työhön pihkovalaiset rakennusmestarit Postnik Jakovlevin ja Ivan Širjain, jota kutsuttiin Barmaksi.
+
+Vanhin rakennus on Marian ilmestyksen katedraali vuosilta 1554–1562. Se on ainoa 1500-luvun venäläinen kirkko, jossa on kuusi pilaria ja viisi apsista, ja se on rakennettu paikallisesta vaaleasta hiekkakivestä eikä tiilestä. Katedraalin viisikerroksinen kellotorni purettiin 1930.
+
+Näkyvin maamerkki on vino Söyembikän torni, joka on todennäköisesti Pietari Suuren ajalta; tunnettu tarina liittää sen Kazanin khaanikunnan viimeiseen kuningattareen. Kremlin eteläpäätä hallitsee Spasskajan torni, joka on samalla pääsisäänkäynti. Muurien sisällä ovat myös uudelleen rakennet…
+AIEMPI KYSYMYS: Kuka määräsi kremlin rakennettavaksi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Iivana Julma]] määräsi kremlin rakennettavaksi Kazanin khaanien entisen linnan raunioille. Työhön tsaari kutsui pihkovalaiset rakennusmestarit [[Postnik Jakovlevin]] ja [[Ivan Širjain]], jota kutsuttiin Barmaksi. Kohde on nykyisin [[Unescon]] maailmanperintökohde, ja se listattiin sinne vuonna 2000. Lyhyt vastaus, mut tuli kuitenkin sanottua kaikki.
+KYSYMYS: Kerro lisää: Ivan Širjain
+
+### 114
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kazanin kreml (historia)
+Tietoruudun teksti: Kazanin kreml on Kazanin kaupungin vanha linnoitus Tatarstanissa. Iivana Julma määräsi sen rakennettavaksi Kazanin khaanien entisen linnan raunioille, ja Unesco listasi sen maailmanperintökohteeksi vuonna 2000. Tsaari kutsui työhön pihkovalaiset rakennusmestarit Postnik Jakovlevin ja Ivan Širjain, jota kutsuttiin Barmaksi.
+
+Vanhin rakennus on Marian ilmestyksen katedraali vuosilta 1554–1562. Se on ainoa 1500-luvun venäläinen kirkko, jossa on kuusi pilaria ja viisi apsista, ja se on rakennettu paikallisesta vaaleasta hiekkakivestä eikä tiilestä. Katedraalin viisikerroksinen kellotorni purettiin 1930.
+
+Näkyvin maamerkki on vino Söyembikän torni, joka on todennäköisesti Pietari Suuren ajalta; tunnettu tarina liittää sen Kazanin khaanikunnan viimeiseen kuningattareen. Kremlin eteläpäätä hallitsee Spasskajan torni, joka on samalla pääsisäänkäynti. Muurien sisällä ovat myös uudelleen rakennet…
+AIEMPI KYSYMYS: Kuka määräsi kremlin rakennettavaksi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Iivana Julma]] määräsi kremlin rakennettavaksi Kazanin khaanien entisen linnan raunioille. Työhön tsaari kutsui pihkovalaiset rakennusmestarit [[Postnik Jakovlevin]] ja [[Ivan Širjain]], jota kutsuttiin Barmaksi. Kohde on nykyisin [[Unescon]] maailmanperintökohde, ja se listattiin sinne vuonna 2000. Lyhyt vastaus, mut tuli kuitenkin sanottua kaikki.
+KYSYMYS: Kerro lisää: Unescon
+
+### 115
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kazanin kreml (historia)
+Tietoruudun teksti: Kazanin kreml on Kazanin kaupungin vanha linnoitus Tatarstanissa. Iivana Julma määräsi sen rakennettavaksi Kazanin khaanien entisen linnan raunioille, ja Unesco listasi sen maailmanperintökohteeksi vuonna 2000. Tsaari kutsui työhön pihkovalaiset rakennusmestarit Postnik Jakovlevin ja Ivan Širjain, jota kutsuttiin Barmaksi.
+
+Vanhin rakennus on Marian ilmestyksen katedraali vuosilta 1554–1562. Se on ainoa 1500-luvun venäläinen kirkko, jossa on kuusi pilaria ja viisi apsista, ja se on rakennettu paikallisesta vaaleasta hiekkakivestä eikä tiilestä. Katedraalin viisikerroksinen kellotorni purettiin 1930.
+
+Näkyvin maamerkki on vino Söyembikän torni, joka on todennäköisesti Pietari Suuren ajalta; tunnettu tarina liittää sen Kazanin khaanikunnan viimeiseen kuningattareen. Kremlin eteläpäätä hallitsee Spasskajan torni, joka on samalla pääsisäänkäynti. Muurien sisällä ovat myös uudelleen rakennet…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Pietari-Paavalin linnoitus] 1703–1733 Pietari Suuri perusti linnoituksen vuonna 1703 pienelle Jänissaarelle Nevajoen suulle – tästä paikasta koko Pietarin kaupunki sai alkunsa. Sveitsiläissyntyinen arkkitehti Domenico Trezzini suunnitteli tähdenmuotoiset muurit ja bastionit, ja saaren keskelle nousi Pietari-Paavalin katedraali, jonka 122,5 metriä korkeaa kellotornia kruunaa kultainen enkeli tuulen mukana kääntyvän viirin päällä. Saaren nimi juontuu vanhasta tarinasta: kun Pietari Suuri astui maihin, tulvavesi ajoi säikähtäneen jäniksen suoraan hänen saappaansa suojaan. Tapahtumaa muistaa nykyään pieni pronssinen jänispatsas sillan vieressä olevan pylvään päällä, ja pylvääseen on merkitty vanhojen tulvien korkeudet. Vu…
+- [Pietari — kaupunkilehti / Historian hetki: Pietari 1869 — tyhjät paikat, joihin uskalletaan luottaa] 6.3.1869 — Paperilapulla lukee alkuaineen nimi, atomipaino ja muutama ominaisuus, ja pöydällä on kuusikymmentäkolme sellaista lappua. Dmitri Mendelejev, 35, kirjoittaa Pietarin yliopistossa kemian oppikirjaa ja tarvitsee järjestyksen, jossa alkuaineet voisi esittää opiskelijoille. Hän lajittelee niitä painon mukaan ja huomaa, että ominaisuudet toistuvat säännöllisin välein. Myöhemmin hän kertoo nähneensä valmiin taulukon unessa ja kirjoittaneensa sen herättyään paperille; arkistossa on kuitenkin luonnoksia, joissa rivejä on siirretty ja yliviivattu. Taulukko painetaan ja lähetetään kemisteille, ja 6. maaliskuuta 1869 Venäjän kemian seura kuulee esitelmän alkuaineiden ominaisuuksien riippuvu…
+AIEMPI KYSYMYS: Mikä Söyembikän torni on?
+AIEMPI VASTAUS (Livia):
+Kato, tää on kyl tuttu kaiteelta. Söyembikän torni on Kazanin kremlin näkyvin maamerkki, vino torni, joka on todennäköisesti peräisin [[Pietari Suuren]] ajalta. Tunnettu tarina liittää sen [[Kazanin khaanikunnan]] viimeiseen kuningattareen, mutta tarina on perimätietoa eikä todettu tosiasia. Kremlin eteläpäätä hallitsee [[Spasskajan torni]], joka on samalla pääsisäänkäynti.
+
+Vino torni on minusta ihan sympaattinen. Itse olen seissyt kaiteilla, jotka heiluvat, eikä kukaan ole tehnyt niistä maamerkkiä.
+KYSYMYS: Kerro lisää: Pietari Suuren
+
+### 116
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kazanin kreml (historia)
+Tietoruudun teksti: Kazanin kreml on Kazanin kaupungin vanha linnoitus Tatarstanissa. Iivana Julma määräsi sen rakennettavaksi Kazanin khaanien entisen linnan raunioille, ja Unesco listasi sen maailmanperintökohteeksi vuonna 2000. Tsaari kutsui työhön pihkovalaiset rakennusmestarit Postnik Jakovlevin ja Ivan Širjain, jota kutsuttiin Barmaksi.
+
+Vanhin rakennus on Marian ilmestyksen katedraali vuosilta 1554–1562. Se on ainoa 1500-luvun venäläinen kirkko, jossa on kuusi pilaria ja viisi apsista, ja se on rakennettu paikallisesta vaaleasta hiekkakivestä eikä tiilestä. Katedraalin viisikerroksinen kellotorni purettiin 1930.
+
+Näkyvin maamerkki on vino Söyembikän torni, joka on todennäköisesti Pietari Suuren ajalta; tunnettu tarina liittää sen Kazanin khaanikunnan viimeiseen kuningattareen. Kremlin eteläpäätä hallitsee Spasskajan torni, joka on samalla pääsisäänkäynti. Muurien sisällä ovat myös uudelleen rakennet…
+AIEMPI KYSYMYS: Mikä Söyembikän torni on?
+AIEMPI VASTAUS (Livia):
+Kato, tää on kyl tuttu kaiteelta. Söyembikän torni on Kazanin kremlin näkyvin maamerkki, vino torni, joka on todennäköisesti peräisin [[Pietari Suuren]] ajalta. Tunnettu tarina liittää sen [[Kazanin khaanikunnan]] viimeiseen kuningattareen, mutta tarina on perimätietoa eikä todettu tosiasia. Kremlin eteläpäätä hallitsee [[Spasskajan torni]], joka on samalla pääsisäänkäynti.
+
+Vino torni on minusta ihan sympaattinen. Itse olen seissyt kaiteilla, jotka heiluvat, eikä kukaan ole tehnyt niistä maamerkkiä.
+KYSYMYS: Kerro lisää: Kazanin khaanikunnan
+
+### 117
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kazanin kreml (historia)
+Tietoruudun teksti: Kazanin kreml on Kazanin kaupungin vanha linnoitus Tatarstanissa. Iivana Julma määräsi sen rakennettavaksi Kazanin khaanien entisen linnan raunioille, ja Unesco listasi sen maailmanperintökohteeksi vuonna 2000. Tsaari kutsui työhön pihkovalaiset rakennusmestarit Postnik Jakovlevin ja Ivan Širjain, jota kutsuttiin Barmaksi.
+
+Vanhin rakennus on Marian ilmestyksen katedraali vuosilta 1554–1562. Se on ainoa 1500-luvun venäläinen kirkko, jossa on kuusi pilaria ja viisi apsista, ja se on rakennettu paikallisesta vaaleasta hiekkakivestä eikä tiilestä. Katedraalin viisikerroksinen kellotorni purettiin 1930.
+
+Näkyvin maamerkki on vino Söyembikän torni, joka on todennäköisesti Pietari Suuren ajalta; tunnettu tarina liittää sen Kazanin khaanikunnan viimeiseen kuningattareen. Kremlin eteläpäätä hallitsee Spasskajan torni, joka on samalla pääsisäänkäynti. Muurien sisällä ovat myös uudelleen rakennet…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Moskovan Kreml] 1485-1495 Linnoitus tällä paikalla on paljon vanhempi kuin luulisi: ensimmäisen linnan rakensi ruhtinas Juri Dolgorukin jo vuonna 1156, ja vuonna 1339 ruhtinas Iivana I Kalita vahvisti sitä tammisilla muureilla. Nykyiset punatiiliset muurit ja tornit, jotka yhä seisovat, rakennettiin vuosina 1485-1495 ruhtinas Iivana III:n käskystä. Iivana III kutsui työhön taitavia arkkitehtejä kaukaa Italiasta. Pietro Antonio Solari suunnitteli uudet muurit ja tornit, ja Marco Ruffo piirsi ruhtinaan uuden palatsin. Solarin nimi on kaiverrettu latinaksi yhä nähtävissä Spasskajan tornin porttien yläpuolella. Muuria on yhteensä 2235 metriä, ja se on paikoin 5-19 metriä korkea ja jopa 6,5 metriä paksu. Tornej…
+AIEMPI KYSYMYS: Mikä Söyembikän torni on?
+AIEMPI VASTAUS (Livia):
+Kato, tää on kyl tuttu kaiteelta. Söyembikän torni on Kazanin kremlin näkyvin maamerkki, vino torni, joka on todennäköisesti peräisin [[Pietari Suuren]] ajalta. Tunnettu tarina liittää sen [[Kazanin khaanikunnan]] viimeiseen kuningattareen, mutta tarina on perimätietoa eikä todettu tosiasia. Kremlin eteläpäätä hallitsee [[Spasskajan torni]], joka on samalla pääsisäänkäynti.
+
+Vino torni on minusta ihan sympaattinen. Itse olen seissyt kaiteilla, jotka heiluvat, eikä kukaan ole tehnyt niistä maamerkkiä.
+KYSYMYS: Kerro lisää: Spasskajan torni
+
+### 118
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kazanin kreml (historia)
+Tietoruudun teksti: Kazanin kreml on Kazanin kaupungin vanha linnoitus Tatarstanissa. Iivana Julma määräsi sen rakennettavaksi Kazanin khaanien entisen linnan raunioille, ja Unesco listasi sen maailmanperintökohteeksi vuonna 2000. Tsaari kutsui työhön pihkovalaiset rakennusmestarit Postnik Jakovlevin ja Ivan Širjain, jota kutsuttiin Barmaksi.
+
+Vanhin rakennus on Marian ilmestyksen katedraali vuosilta 1554–1562. Se on ainoa 1500-luvun venäläinen kirkko, jossa on kuusi pilaria ja viisi apsista, ja se on rakennettu paikallisesta vaaleasta hiekkakivestä eikä tiilestä. Katedraalin viisikerroksinen kellotorni purettiin 1930.
+
+Näkyvin maamerkki on vino Söyembikän torni, joka on todennäköisesti Pietari Suuren ajalta; tunnettu tarina liittää sen Kazanin khaanikunnan viimeiseen kuningattareen. Kremlin eteläpäätä hallitsee Spasskajan torni, joka on samalla pääsisäänkäynti. Muurien sisällä ovat myös uudelleen rakennet…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Taide: Alttari, johon veistettiin kaupunkilaisten kasvot] 1477 — Wit Stwosz veisti Mariankirkon alttarin vuosina 1477–1489: työtä riitti kahdeksitoista vuodeksi. Avattuna alttari on 13 metriä korkea ja 11 metriä leveä, ja hahmot ovat 2,7 metriä pitkiä — jokainen veistetty yhdestä lehmuksen rungosta. Kasvot Stwosz otti krakovalaisilta, ja hän teki työnsä niin tarkasti, että hahmoista erottuvat vääntyneet sormet, pullistuneet suonet ja ihotautien jäljet.
+- [Peking — kaupunkilehti / Historia: Taivaan alttari ja luku yhdeksän] Taivaan temppeli rakennettiin samaan aikaan Kielletyn kaupungin kanssa, 1406–1420, ja siellä keisari uhrasi vuosittain hyvän sadon puolesta. Pyöreän alttarin suunnittelussa toistuu keisarin luku yhdeksän: keskimmäistä marmorilaattaa ympäröi yhdeksän laatan rengas, sitten kahdeksantoista laatan rengas, ja niin edelleen yhdeksään renkaaseen asti — uloin on 9 × 9 laattaa. Sadonkorjuurukoushallissa neljä sisintä pilaria ovat vuodenajat, kaksitoista keskimmäistä kuukaudet ja kaksitoista uloimmaista perinteiset kiinalaiset tunnit.
+AIEMPI KYSYMYS: Mitä apsis tarkoittaa kirkkoarkkitehtuurissa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Apsis on kirkkorakennuksen päädyssä oleva puoliympyrän tai monikulmion muotoinen ulkonema, johon sijoitetaan yleensä [[alttari]]. Perinteisesti se on kirkon itäpäädyssä. Kazanin kremlin [[Marian ilmestyksen katedraalissa]] on viisi apsista ja kuusi pilaria, ja tällainen yhdistelmä on 1500-luvun venäläisistä kirkoista ainutlaatuinen. Kuusi pilaria ja viisi apsista, kyl minä tän jaksan ulkoa.
+KYSYMYS: Kerro lisää: alttari
+
+### 119
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kazanin kreml (historia)
+Tietoruudun teksti: Kazanin kreml on Kazanin kaupungin vanha linnoitus Tatarstanissa. Iivana Julma määräsi sen rakennettavaksi Kazanin khaanien entisen linnan raunioille, ja Unesco listasi sen maailmanperintökohteeksi vuonna 2000. Tsaari kutsui työhön pihkovalaiset rakennusmestarit Postnik Jakovlevin ja Ivan Širjain, jota kutsuttiin Barmaksi.
+
+Vanhin rakennus on Marian ilmestyksen katedraali vuosilta 1554–1562. Se on ainoa 1500-luvun venäläinen kirkko, jossa on kuusi pilaria ja viisi apsista, ja se on rakennettu paikallisesta vaaleasta hiekkakivestä eikä tiilestä. Katedraalin viisikerroksinen kellotorni purettiin 1930.
+
+Näkyvin maamerkki on vino Söyembikän torni, joka on todennäköisesti Pietari Suuren ajalta; tunnettu tarina liittää sen Kazanin khaanikunnan viimeiseen kuningattareen. Kremlin eteläpäätä hallitsee Spasskajan torni, joka on samalla pääsisäänkäynti. Muurien sisällä ovat myös uudelleen rakennet…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kohdekartta / Kohdekartta: Prešernin aukio] 1600-luku Prešernin aukio on Ljubljanan keskusaukio vanhan kaupungin sisäänkäynnin edessä: suppilomainen solmu, josta kadut lähtevät joka suuntaan. Etelään Tromostovje vie joen yli vanhaankaupunkiin ja kaupungintalolle, pohjoiseen Miklošičeva-katu kohti rautatieasemaa. Aukio sai perusmuotonsa 1600-luvulla, kun barokkinen Ilmestyksen fransiskaanikirkko rakennettiin, ja sitä kutsuttiin aluksi kirkon mukaan Marian aukioksi. Vasta 1800-luvulla risteys muutettiin aukioksi ja kivettiin. Wolfin ja Čopin kadun välissä seisova Hauptmannin talo rakennettiin juuri vuonna 1873, isoisän matkan vuonna. Muu aukio muuttui perusteellisesti vuoden 1895 maanjäristyksen jälkeen: Max Fabiani suunnitteli sen nel…
+AIEMPI KYSYMYS: Mitä apsis tarkoittaa kirkkoarkkitehtuurissa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Apsis on kirkkorakennuksen päädyssä oleva puoliympyrän tai monikulmion muotoinen ulkonema, johon sijoitetaan yleensä [[alttari]]. Perinteisesti se on kirkon itäpäädyssä. Kazanin kremlin [[Marian ilmestyksen katedraalissa]] on viisi apsista ja kuusi pilaria, ja tällainen yhdistelmä on 1500-luvun venäläisistä kirkoista ainutlaatuinen. Kuusi pilaria ja viisi apsista, kyl minä tän jaksan ulkoa.
+KYSYMYS: Kerro lisää: Marian ilmestyksen katedraalissa
+
+### 120
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kazanin kreml (historia)
+Tietoruudun teksti: Kazanin kreml on Kazanin kaupungin vanha linnoitus Tatarstanissa. Iivana Julma määräsi sen rakennettavaksi Kazanin khaanien entisen linnan raunioille, ja Unesco listasi sen maailmanperintökohteeksi vuonna 2000. Tsaari kutsui työhön pihkovalaiset rakennusmestarit Postnik Jakovlevin ja Ivan Širjain, jota kutsuttiin Barmaksi.
+
+Vanhin rakennus on Marian ilmestyksen katedraali vuosilta 1554–1562. Se on ainoa 1500-luvun venäläinen kirkko, jossa on kuusi pilaria ja viisi apsista, ja se on rakennettu paikallisesta vaaleasta hiekkakivestä eikä tiilestä. Katedraalin viisikerroksinen kellotorni purettiin 1930.
+
+Näkyvin maamerkki on vino Söyembikän torni, joka on todennäköisesti Pietari Suuren ajalta; tunnettu tarina liittää sen Kazanin khaanikunnan viimeiseen kuningattareen. Kremlin eteläpäätä hallitsee Spasskajan torni, joka on samalla pääsisäänkäynti. Muurien sisällä ovat myös uudelleen rakennet…
+AIEMPI KYSYMYS: Mikä Tatarstan on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tatarstan on Venäjän federaation tasavalta [[Volgan]] alueella, ja sen pääkaupunki on [[Kazan]]. Alueen nimikkokansa ovat [[tataarit]], turkkilaista kieltä puhuva kansa, ja tataari on tasavallassa virallinen kieli venäjän rinnalla. Alueella on perinteisesti elänyt sekä muslimeja että ortodoksikristittyjä. Kazanissa on varmasti oma pullansa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: Volgan
+
+### 121
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kazanin kreml (historia)
+Tietoruudun teksti: Kazanin kreml on Kazanin kaupungin vanha linnoitus Tatarstanissa. Iivana Julma määräsi sen rakennettavaksi Kazanin khaanien entisen linnan raunioille, ja Unesco listasi sen maailmanperintökohteeksi vuonna 2000. Tsaari kutsui työhön pihkovalaiset rakennusmestarit Postnik Jakovlevin ja Ivan Širjain, jota kutsuttiin Barmaksi.
+
+Vanhin rakennus on Marian ilmestyksen katedraali vuosilta 1554–1562. Se on ainoa 1500-luvun venäläinen kirkko, jossa on kuusi pilaria ja viisi apsista, ja se on rakennettu paikallisesta vaaleasta hiekkakivestä eikä tiilestä. Katedraalin viisikerroksinen kellotorni purettiin 1930.
+
+Näkyvin maamerkki on vino Söyembikän torni, joka on todennäköisesti Pietari Suuren ajalta; tunnettu tarina liittää sen Kazanin khaanikunnan viimeiseen kuningattareen. Kremlin eteläpäätä hallitsee Spasskajan torni, joka on samalla pääsisäänkäynti. Muurien sisällä ovat myös uudelleen rakennet…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Kazanin katedraali] 1801–1811 Arkkitehti Andrei Voronihin sai tehtäväkseen suunnitella katedraalin, joka kunnioittaisi ihmeitä tekevää Kazanin Jumalanäidin ikonia. Ortodoksisessa kirkossa pääsisäänkäynnin tulisi olla lännessä, mutta tontti sijaitsi Nevski-bulevardin varrella pohjoisessa – niinpä Voronihin ratkaisi pulman rakentamalla sivulle mahtavan puolikaaren muotoisen pylväikön, jossa on 96 korinttilaista pylvästä neljässä rivissä. Katedraali valmistui vuonna 1811 ja kohoaa korkeimmillaan 71,6 metriin. Vuonna 1812 Napoleonin sotajoukot hyökkäsivät Venäjälle, ja voiton jälkeen katedraalista tuli sodan muistomerkki. Sotamarsalkka Mihail Kutuzov, joka johti Venäjän armeijaa Napoleonia vastaan, haudattiin kate…
+- [Uzbekistan — maalehti / Ruoka: Kattila, josta syö tuhat vierasta] Plov eli osh on maan kansallisruoka: lampaanlihaa, suikaloitua porkkanaa, sipulia ja pitkäjyväistä riisiä kazan-padassa avotulella. Pohjaksi tehdään zirvak, lihan ja kasvisten paistos, jonka päälle riisi ladotaan höyrystymään sekoittamatta — siksi jyvät pysyvät erillään. Juhliin padan tekee oshpaz, plov-mestari, jonka taito siirtyy mestarilta oppipojalle, ja yhdestä padasta voidaan tarjota jopa tuhannelle vieraalle. Häiden aamuna syödään nahor oshi, aamuplov, kello kuuden ja yhdeksän välillä, ja vanhimmat aloittavat ensin. Unesco otti plovin luetteloonsa 2016.
+AIEMPI KYSYMYS: Mikä Tatarstan on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tatarstan on Venäjän federaation tasavalta [[Volgan]] alueella, ja sen pääkaupunki on [[Kazan]]. Alueen nimikkokansa ovat [[tataarit]], turkkilaista kieltä puhuva kansa, ja tataari on tasavallassa virallinen kieli venäjän rinnalla. Alueella on perinteisesti elänyt sekä muslimeja että ortodoksikristittyjä. Kazanissa on varmasti oma pullansa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: Kazan
+
+### 122
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kazanin kreml (historia)
+Tietoruudun teksti: Kazanin kreml on Kazanin kaupungin vanha linnoitus Tatarstanissa. Iivana Julma määräsi sen rakennettavaksi Kazanin khaanien entisen linnan raunioille, ja Unesco listasi sen maailmanperintökohteeksi vuonna 2000. Tsaari kutsui työhön pihkovalaiset rakennusmestarit Postnik Jakovlevin ja Ivan Širjain, jota kutsuttiin Barmaksi.
+
+Vanhin rakennus on Marian ilmestyksen katedraali vuosilta 1554–1562. Se on ainoa 1500-luvun venäläinen kirkko, jossa on kuusi pilaria ja viisi apsista, ja se on rakennettu paikallisesta vaaleasta hiekkakivestä eikä tiilestä. Katedraalin viisikerroksinen kellotorni purettiin 1930.
+
+Näkyvin maamerkki on vino Söyembikän torni, joka on todennäköisesti Pietari Suuren ajalta; tunnettu tarina liittää sen Kazanin khaanikunnan viimeiseen kuningattareen. Kremlin eteläpäätä hallitsee Spasskajan torni, joka on samalla pääsisäänkäynti. Muurien sisällä ovat myös uudelleen rakennet…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia] Prutin ja Dnestrin välissä oleva pieni maa on ollut kahlaamo, jota tataarit, ritarikunnat ja imperiumit ovat vuosisatoja vartioineet. Samoihin kalkkikivijyrkänteisiin on kaiverrettu sekä 1200-luvun luolaluostari että maailman suurimmat viinikellarit, ja vuonna 1918 maan oma kansanneuvosto äänesti sen liittymisestä Romaniaan.
+AIEMPI KYSYMYS: Mikä Tatarstan on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tatarstan on Venäjän federaation tasavalta [[Volgan]] alueella, ja sen pääkaupunki on [[Kazan]]. Alueen nimikkokansa ovat [[tataarit]], turkkilaista kieltä puhuva kansa, ja tataari on tasavallassa virallinen kieli venäjän rinnalla. Alueella on perinteisesti elänyt sekä muslimeja että ortodoksikristittyjä. Kazanissa on varmasti oma pullansa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: tataarit
+
+### 123
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kazanin kreml (historia)
+Tietoruudun teksti: Kazanin kreml on Kazanin kaupungin vanha linnoitus Tatarstanissa. Iivana Julma määräsi sen rakennettavaksi Kazanin khaanien entisen linnan raunioille, ja Unesco listasi sen maailmanperintökohteeksi vuonna 2000. Tsaari kutsui työhön pihkovalaiset rakennusmestarit Postnik Jakovlevin ja Ivan Širjain, jota kutsuttiin Barmaksi.
+
+Vanhin rakennus on Marian ilmestyksen katedraali vuosilta 1554–1562. Se on ainoa 1500-luvun venäläinen kirkko, jossa on kuusi pilaria ja viisi apsista, ja se on rakennettu paikallisesta vaaleasta hiekkakivestä eikä tiilestä. Katedraalin viisikerroksinen kellotorni purettiin 1930.
+
+Näkyvin maamerkki on vino Söyembikän torni, joka on todennäköisesti Pietari Suuren ajalta; tunnettu tarina liittää sen Kazanin khaanikunnan viimeiseen kuningattareen. Kremlin eteläpäätä hallitsee Spasskajan torni, joka on samalla pääsisäänkäynti. Muurien sisällä ovat myös uudelleen rakennet…
+AIEMPI KYSYMYS: Mikä joki virtaa Kazanin kautta?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kazan sijaitsee [[Volgan]] rannalla, ja kaupungin läpi virtaa pienempi [[Kazanka]]-joki, joka laskee Volgaan. Volga on Euroopan pisin joki ja Venäjän tärkeimpiä kulkuväyliä. Joki kulkee kyl suoremmin kuin minä.
+KYSYMYS: Kerro lisää: Kazanka
+
+### 124
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliki Novgorod (kaupungit)
+Tietoruudun teksti: Veliki Novgorod on Novgorodin alueen suurin kaupunki ja hallinnollinen keskus. Se sijaitsee Volhov-joen varrella kuusi kilometriä siitä, mistä joki lähtee Ilmenjärvestä, Moskovan ja Pietarin välisen valtatien varrella. Asukkaita on runsaat 224 000. Nimi tarkoittaa kirjaimellisesti suurta uuttakaupunkia.
+
+Novgorod on Venäjän vanhimpia kaupunkeja, ja se mainitaan lähteissä ensimmäisen kerran 800-luvulla. Vuosina 1136–1478 se oli Novgorodin tasavallan keskus, ja tasavalta hallitsi suurta osaa Venäjän pohjoisesta.
+
+Kaupunki toimi välittäjänä muiden venäläiskaupunkien ja Luoteis-Euroopan välillä ja vaurastui hansaliiton kaupassa; hansan päätoimipaikka eli kontor kaupungissa oli nimeltään Peterhof. Huipussaan 1300-luvulla Novgorod oli Euroopan suurimpia kaupunkeja. Nimen Veliki Novgorod kaupunki sai virallisesti vasta 1999, ja Unesco listasi sen maailmanperintökohteeksi 1992.
+AIEMPI KYSYMYS: Mikä Novgorodin tasavalta oli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Novgorodin tasavalta oli keskiaikainen kaupunkivaltio, jonka keskuksena Novgorod toimi vuosina 1136–1478 ja joka hallitsi suurta osaa Venäjän pohjoisesta. Sen hallintoon kuului kaupunkilaisten [[veče]]-kansankokous, ja ruhtinaan valta oli sopimuksella rajattu. Tasavalta vaurastui kaupasta [[hansaliiton]] ja venäläiskaupunkien välillä, ja se liitettiin lopulta [[Moskovan]] suuriruhtinaskuntaan vuonna 1478. Sellaista menoa, jossa ei kuninkaita kumarrella, minä arvostan.
+KYSYMYS: Kerro lisää: veče
+
+### 125
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliki Novgorod (kaupungit)
+Tietoruudun teksti: Veliki Novgorod on Novgorodin alueen suurin kaupunki ja hallinnollinen keskus. Se sijaitsee Volhov-joen varrella kuusi kilometriä siitä, mistä joki lähtee Ilmenjärvestä, Moskovan ja Pietarin välisen valtatien varrella. Asukkaita on runsaat 224 000. Nimi tarkoittaa kirjaimellisesti suurta uuttakaupunkia.
+
+Novgorod on Venäjän vanhimpia kaupunkeja, ja se mainitaan lähteissä ensimmäisen kerran 800-luvulla. Vuosina 1136–1478 se oli Novgorodin tasavallan keskus, ja tasavalta hallitsi suurta osaa Venäjän pohjoisesta.
+
+Kaupunki toimi välittäjänä muiden venäläiskaupunkien ja Luoteis-Euroopan välillä ja vaurastui hansaliiton kaupassa; hansan päätoimipaikka eli kontor kaupungissa oli nimeltään Peterhof. Huipussaan 1300-luvulla Novgorod oli Euroopan suurimpia kaupunkeja. Nimen Veliki Novgorod kaupunki sai virallisesti vasta 1999, ja Unesco listasi sen maailmanperintökohteeksi 1992.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Historia: Kolme taloa, kolme eri vuosisataa] 1490 — Mazā Pils -kadulla seisoo kolmen talon rivi, jota kutsutaan kolmeksi veljeksi. Vanhin, numero 17, rakennettiin noin vuonna 1490 kauppa- ja työtilaksi, ja sen porrasmaisessa päädyssä näkyy myöhäisgotiikkaa. Keskimmäinen talo sai nykyisen ulkoasunsa vuonna 1646, ja kapea, nuorin talo valmistui vasta 1600-luvun lopulla — niin rivissä seisoo kolme eri vuosisataa vierekkäin. Hansaliiton aikaan Riiassa maksettiin veroa kadunpuoleisen julkisivun leveyden mukaan, minkä vuoksi kauppiastalot rakennettiin kapeiksi ja syviksi. Nykyään taloissa toimii Latvian arkkitehtuurimuseo.
+- [Bergen — kaupunkilehti / Bergen: Varasto, joka palveli kahteen suuntaan] Hansaliiton kontori perustettiin Bryggenin rantaan noin vuonna 1350, ja kun kaupungista kasvoi kaupan keskus, laiturin talot siirtyivät vähitellen saksalaisten kauppiaiden haltuun. Varastot palvelivat kahteen suuntaan: niihin säilöttiin Pohjois-Norjasta tuotua kalaa vietäväksi eteenpäin ja Euroopasta tuotua viljaa jaettavaksi paikallisille. Vuoden 1702 palo tuhosi hansakauppiaiden rakennukset, ja nykyisistä taloista vain noin neljäsosa on rakennettu sen jälkeen — loput ovat sitäkin nuorempia. Osa kivikellareista on kuitenkin 1400-luvulta.
+AIEMPI KYSYMYS: Mikä Novgorodin tasavalta oli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Novgorodin tasavalta oli keskiaikainen kaupunkivaltio, jonka keskuksena Novgorod toimi vuosina 1136–1478 ja joka hallitsi suurta osaa Venäjän pohjoisesta. Sen hallintoon kuului kaupunkilaisten [[veče]]-kansankokous, ja ruhtinaan valta oli sopimuksella rajattu. Tasavalta vaurastui kaupasta [[hansaliiton]] ja venäläiskaupunkien välillä, ja se liitettiin lopulta [[Moskovan]] suuriruhtinaskuntaan vuonna 1478. Sellaista menoa, jossa ei kuninkaita kumarrella, minä arvostan.
+KYSYMYS: Kerro lisää: hansaliiton
+
+### 126
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliki Novgorod (kaupungit)
+Tietoruudun teksti: Veliki Novgorod on Novgorodin alueen suurin kaupunki ja hallinnollinen keskus. Se sijaitsee Volhov-joen varrella kuusi kilometriä siitä, mistä joki lähtee Ilmenjärvestä, Moskovan ja Pietarin välisen valtatien varrella. Asukkaita on runsaat 224 000. Nimi tarkoittaa kirjaimellisesti suurta uuttakaupunkia.
+
+Novgorod on Venäjän vanhimpia kaupunkeja, ja se mainitaan lähteissä ensimmäisen kerran 800-luvulla. Vuosina 1136–1478 se oli Novgorodin tasavallan keskus, ja tasavalta hallitsi suurta osaa Venäjän pohjoisesta.
+
+Kaupunki toimi välittäjänä muiden venäläiskaupunkien ja Luoteis-Euroopan välillä ja vaurastui hansaliiton kaupassa; hansan päätoimipaikka eli kontor kaupungissa oli nimeltään Peterhof. Huipussaan 1300-luvulla Novgorod oli Euroopan suurimpia kaupunkeja. Nimen Veliki Novgorod kaupunki sai virallisesti vasta 1999, ja Unesco listasi sen maailmanperintökohteeksi 1992.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Ruoka: Kokin resepti syntyi Moskovan hienoimmassa ravintolassa] 1860-luku — Ranskalais-belgialainen kokki Lucien Olivier loi 1860-luvulla Moskovan Hermitage-ravintolan tunnusruoan: majoneesilla sidotun salaatin, jossa oli pyytä, rapujen pyrstöjä, kaviaaria, kapriksia ja oliiveja. Olivier piti tarkan reseptin salassa eikä paljastanut sitä edes keittiöhenkilökunnalleen, ja vasta hänen kuolemansa jälkeen vuonna 1894 julkaistiin versio ohjeesta. Vallankumouksen jälkeen kalliit ja harvinaiset aineet vaihtuivat halvempiin: pyystä tuli kanaa tai keittomakkaraa, rapujen pyrstöistä keitettyjä kananmunia ja oliiveista suolakurkkua ja herneitä. Tästä yksinkertaistetusta versiosta tuli neuvostoajan uudenvuodenpöydän vakioruoka, jota ilman juhla ei ollut täydellinen.
+AIEMPI KYSYMYS: Mikä Novgorodin tasavalta oli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Novgorodin tasavalta oli keskiaikainen kaupunkivaltio, jonka keskuksena Novgorod toimi vuosina 1136–1478 ja joka hallitsi suurta osaa Venäjän pohjoisesta. Sen hallintoon kuului kaupunkilaisten [[veče]]-kansankokous, ja ruhtinaan valta oli sopimuksella rajattu. Tasavalta vaurastui kaupasta [[hansaliiton]] ja venäläiskaupunkien välillä, ja se liitettiin lopulta [[Moskovan]] suuriruhtinaskuntaan vuonna 1478. Sellaista menoa, jossa ei kuninkaita kumarrella, minä arvostan.
+KYSYMYS: Kerro lisää: Moskovan
+
+### 127
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliki Novgorod (kaupungit)
+Tietoruudun teksti: Veliki Novgorod on Novgorodin alueen suurin kaupunki ja hallinnollinen keskus. Se sijaitsee Volhov-joen varrella kuusi kilometriä siitä, mistä joki lähtee Ilmenjärvestä, Moskovan ja Pietarin välisen valtatien varrella. Asukkaita on runsaat 224 000. Nimi tarkoittaa kirjaimellisesti suurta uuttakaupunkia.
+
+Novgorod on Venäjän vanhimpia kaupunkeja, ja se mainitaan lähteissä ensimmäisen kerran 800-luvulla. Vuosina 1136–1478 se oli Novgorodin tasavallan keskus, ja tasavalta hallitsi suurta osaa Venäjän pohjoisesta.
+
+Kaupunki toimi välittäjänä muiden venäläiskaupunkien ja Luoteis-Euroopan välillä ja vaurastui hansaliiton kaupassa; hansan päätoimipaikka eli kontor kaupungissa oli nimeltään Peterhof. Huipussaan 1300-luvulla Novgorod oli Euroopan suurimpia kaupunkeja. Nimen Veliki Novgorod kaupunki sai virallisesti vasta 1999, ja Unesco listasi sen maailmanperintökohteeksi 1992.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Nykirken] 1621 Tämä osa Bergeniä kuului alun perin tuomiokirkon seurakuntaan, mutta vuoden 1608 kuninkaallinen asetus perusti Strandenille oman seurakunnan ja antoi asukkaille luvan rakentaa kirkon omalla kustannuksellaan. Vuoteen 1618 mennessä rahat oli kerätty ja tontti hankittu. Kirkko nousi arkkipiispan asuintalon raunioille — 1300-luvun kivitalon, joka oli palanut — ja piispa Nils Paaske vihki sen 18. syyskuuta 1621 Pyhän Kolminaisuuden kirkoksi. Koska Bergenissä oli jo useita satoja vuosia vanhoja kirkkoja, tätä alettiin kutsua uudeksi kirkoksi, ja lempinimi jäi. Nimi osoittautui osuvaksi. Ensimmäinen kirkko seisoi kaksi vuotta ja paloi alkuvuodesta 1623; se rakennettiin heti samanlaisena uudel…
+AIEMPI KYSYMYS: Mikä oli hansan kontor?
+AIEMPI VASTAUS (Livia):
+No niin. Kontor oli hansakauppiaiden kauppa-asema ulkomailla, eli kauppiasyhteisön oma tukikohta vieraassa kaupungissa. Novgorodin kontor oli nimeltään Peterhof, ja se oli yksi [[hansaliiton]] suurista ulkomaisista kauppa-asemista; muita olivat muun muassa kontorit [[Bergenissä]], [[Lontoossa]] ja [[Brugessa]].
+
+Kauppakirjeitä ne kontorit varmasti kirjoittivat, ja minä tiedän kyllä, kuinka paljon paperia sellainen touhu vaatii. Kyyhkynen olisi ollut nopeampi kuin laiva.
+KYSYMYS: Kerro lisää: Bergenissä
+
+### 128
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliki Novgorod (kaupungit)
+Tietoruudun teksti: Veliki Novgorod on Novgorodin alueen suurin kaupunki ja hallinnollinen keskus. Se sijaitsee Volhov-joen varrella kuusi kilometriä siitä, mistä joki lähtee Ilmenjärvestä, Moskovan ja Pietarin välisen valtatien varrella. Asukkaita on runsaat 224 000. Nimi tarkoittaa kirjaimellisesti suurta uuttakaupunkia.
+
+Novgorod on Venäjän vanhimpia kaupunkeja, ja se mainitaan lähteissä ensimmäisen kerran 800-luvulla. Vuosina 1136–1478 se oli Novgorodin tasavallan keskus, ja tasavalta hallitsi suurta osaa Venäjän pohjoisesta.
+
+Kaupunki toimi välittäjänä muiden venäläiskaupunkien ja Luoteis-Euroopan välillä ja vaurastui hansaliiton kaupassa; hansan päätoimipaikka eli kontor kaupungissa oli nimeltään Peterhof. Huipussaan 1300-luvulla Novgorod oli Euroopan suurimpia kaupunkeja. Nimen Veliki Novgorod kaupunki sai virallisesti vasta 1999, ja Unesco listasi sen maailmanperintökohteeksi 1992.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Galápagos — kaupunkilehti / Galápagossaaret: Peipposet jotka nimettiin Lontoossa] Darwin keräsi saaristosta lintunäytteitä tietämättä vielä niiden merkitystä — hän ei edes merkinnyt muistiin, miltä saarelta mikäkin peippolintu oli peräisin. Vasta Lontoossa vuonna 1837 lintutieteilijä John Gould tutki näytteet ja huomasi, ettei kyse ollut sekalaisesta joukosta lintuja vaan lähisukuisista lajeista, joiden nokan muoto vaihteli ravinnon mukaan siemensyöjästä hyönteissyöjään. Löytö oli yksi niistä paloista, joista Darwinin ajattelu vähitellen kasvoi kohti Lajien syntyä (1859). Isoisän matkavuonna 1873 teoria oli yhä tuore ja kiistanalainen keskustelunaihe Euroopassa.
+AIEMPI KYSYMYS: Mikä oli hansan kontor?
+AIEMPI VASTAUS (Livia):
+No niin. Kontor oli hansakauppiaiden kauppa-asema ulkomailla, eli kauppiasyhteisön oma tukikohta vieraassa kaupungissa. Novgorodin kontor oli nimeltään Peterhof, ja se oli yksi [[hansaliiton]] suurista ulkomaisista kauppa-asemista; muita olivat muun muassa kontorit [[Bergenissä]], [[Lontoossa]] ja [[Brugessa]].
+
+Kauppakirjeitä ne kontorit varmasti kirjoittivat, ja minä tiedän kyllä, kuinka paljon paperia sellainen touhu vaatii. Kyyhkynen olisi ollut nopeampi kuin laiva.
+KYSYMYS: Kerro lisää: Lontoossa
+
+### 129
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliki Novgorod (kaupungit)
+Tietoruudun teksti: Veliki Novgorod on Novgorodin alueen suurin kaupunki ja hallinnollinen keskus. Se sijaitsee Volhov-joen varrella kuusi kilometriä siitä, mistä joki lähtee Ilmenjärvestä, Moskovan ja Pietarin välisen valtatien varrella. Asukkaita on runsaat 224 000. Nimi tarkoittaa kirjaimellisesti suurta uuttakaupunkia.
+
+Novgorod on Venäjän vanhimpia kaupunkeja, ja se mainitaan lähteissä ensimmäisen kerran 800-luvulla. Vuosina 1136–1478 se oli Novgorodin tasavallan keskus, ja tasavalta hallitsi suurta osaa Venäjän pohjoisesta.
+
+Kaupunki toimi välittäjänä muiden venäläiskaupunkien ja Luoteis-Euroopan välillä ja vaurastui hansaliiton kaupassa; hansan päätoimipaikka eli kontor kaupungissa oli nimeltään Peterhof. Huipussaan 1300-luvulla Novgorod oli Euroopan suurimpia kaupunkeja. Nimen Veliki Novgorod kaupunki sai virallisesti vasta 1999, ja Unesco listasi sen maailmanperintökohteeksi 1992.
+AIEMPI KYSYMYS: Mikä oli hansan kontor?
+AIEMPI VASTAUS (Livia):
+No niin. Kontor oli hansakauppiaiden kauppa-asema ulkomailla, eli kauppiasyhteisön oma tukikohta vieraassa kaupungissa. Novgorodin kontor oli nimeltään Peterhof, ja se oli yksi [[hansaliiton]] suurista ulkomaisista kauppa-asemista; muita olivat muun muassa kontorit [[Bergenissä]], [[Lontoossa]] ja [[Brugessa]].
+
+Kauppakirjeitä ne kontorit varmasti kirjoittivat, ja minä tiedän kyllä, kuinka paljon paperia sellainen touhu vaatii. Kyyhkynen olisi ollut nopeampi kuin laiva.
+KYSYMYS: Kerro lisää: Brugessa
+
+### 130
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliki Novgorod (kaupungit)
+Tietoruudun teksti: Veliki Novgorod on Novgorodin alueen suurin kaupunki ja hallinnollinen keskus. Se sijaitsee Volhov-joen varrella kuusi kilometriä siitä, mistä joki lähtee Ilmenjärvestä, Moskovan ja Pietarin välisen valtatien varrella. Asukkaita on runsaat 224 000. Nimi tarkoittaa kirjaimellisesti suurta uuttakaupunkia.
+
+Novgorod on Venäjän vanhimpia kaupunkeja, ja se mainitaan lähteissä ensimmäisen kerran 800-luvulla. Vuosina 1136–1478 se oli Novgorodin tasavallan keskus, ja tasavalta hallitsi suurta osaa Venäjän pohjoisesta.
+
+Kaupunki toimi välittäjänä muiden venäläiskaupunkien ja Luoteis-Euroopan välillä ja vaurastui hansaliiton kaupassa; hansan päätoimipaikka eli kontor kaupungissa oli nimeltään Peterhof. Huipussaan 1300-luvulla Novgorod oli Euroopan suurimpia kaupunkeja. Nimen Veliki Novgorod kaupunki sai virallisesti vasta 1999, ja Unesco listasi sen maailmanperintökohteeksi 1992.
+AIEMPI KYSYMYS: Mihin Volhov-joki laskee?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Volhov-joki virtaa [[Ilmenjärvestä]] pohjoiseen ja laskee [[Laatokkaan]]. Joki kulkee Novgorodin kaupungin kautta ja [[Staraja Ladogan]] ohi, ja se oli keskeinen osa keskiaikaista kauppareittiä Itämeren ja Venäjän sisäosien välillä. Minä lentäisin sen matkan suoraan, mut kauppiaat soutivat.
+KYSYMYS: Kerro lisää: Ilmenjärvestä
+
+### 131
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliki Novgorod (kaupungit)
+Tietoruudun teksti: Veliki Novgorod on Novgorodin alueen suurin kaupunki ja hallinnollinen keskus. Se sijaitsee Volhov-joen varrella kuusi kilometriä siitä, mistä joki lähtee Ilmenjärvestä, Moskovan ja Pietarin välisen valtatien varrella. Asukkaita on runsaat 224 000. Nimi tarkoittaa kirjaimellisesti suurta uuttakaupunkia.
+
+Novgorod on Venäjän vanhimpia kaupunkeja, ja se mainitaan lähteissä ensimmäisen kerran 800-luvulla. Vuosina 1136–1478 se oli Novgorodin tasavallan keskus, ja tasavalta hallitsi suurta osaa Venäjän pohjoisesta.
+
+Kaupunki toimi välittäjänä muiden venäläiskaupunkien ja Luoteis-Euroopan välillä ja vaurastui hansaliiton kaupassa; hansan päätoimipaikka eli kontor kaupungissa oli nimeltään Peterhof. Huipussaan 1300-luvulla Novgorod oli Euroopan suurimpia kaupunkeja. Nimen Veliki Novgorod kaupunki sai virallisesti vasta 1999, ja Unesco listasi sen maailmanperintökohteeksi 1992.
+AIEMPI KYSYMYS: Mihin Volhov-joki laskee?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Volhov-joki virtaa [[Ilmenjärvestä]] pohjoiseen ja laskee [[Laatokkaan]]. Joki kulkee Novgorodin kaupungin kautta ja [[Staraja Ladogan]] ohi, ja se oli keskeinen osa keskiaikaista kauppareittiä Itämeren ja Venäjän sisäosien välillä. Minä lentäisin sen matkan suoraan, mut kauppiaat soutivat.
+KYSYMYS: Kerro lisää: Laatokkaan
+
+### 132
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliki Novgorod (kaupungit)
+Tietoruudun teksti: Veliki Novgorod on Novgorodin alueen suurin kaupunki ja hallinnollinen keskus. Se sijaitsee Volhov-joen varrella kuusi kilometriä siitä, mistä joki lähtee Ilmenjärvestä, Moskovan ja Pietarin välisen valtatien varrella. Asukkaita on runsaat 224 000. Nimi tarkoittaa kirjaimellisesti suurta uuttakaupunkia.
+
+Novgorod on Venäjän vanhimpia kaupunkeja, ja se mainitaan lähteissä ensimmäisen kerran 800-luvulla. Vuosina 1136–1478 se oli Novgorodin tasavallan keskus, ja tasavalta hallitsi suurta osaa Venäjän pohjoisesta.
+
+Kaupunki toimi välittäjänä muiden venäläiskaupunkien ja Luoteis-Euroopan välillä ja vaurastui hansaliiton kaupassa; hansan päätoimipaikka eli kontor kaupungissa oli nimeltään Peterhof. Huipussaan 1300-luvulla Novgorod oli Euroopan suurimpia kaupunkeja. Nimen Veliki Novgorod kaupunki sai virallisesti vasta 1999, ja Unesco listasi sen maailmanperintökohteeksi 1992.
+AIEMPI KYSYMYS: Mihin Volhov-joki laskee?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Volhov-joki virtaa [[Ilmenjärvestä]] pohjoiseen ja laskee [[Laatokkaan]]. Joki kulkee Novgorodin kaupungin kautta ja [[Staraja Ladogan]] ohi, ja se oli keskeinen osa keskiaikaista kauppareittiä Itämeren ja Venäjän sisäosien välillä. Minä lentäisin sen matkan suoraan, mut kauppiaat soutivat.
+KYSYMYS: Kerro lisää: Staraja Ladogan
+
+### 133
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliki Novgorod (kaupungit)
+Tietoruudun teksti: Veliki Novgorod on Novgorodin alueen suurin kaupunki ja hallinnollinen keskus. Se sijaitsee Volhov-joen varrella kuusi kilometriä siitä, mistä joki lähtee Ilmenjärvestä, Moskovan ja Pietarin välisen valtatien varrella. Asukkaita on runsaat 224 000. Nimi tarkoittaa kirjaimellisesti suurta uuttakaupunkia.
+
+Novgorod on Venäjän vanhimpia kaupunkeja, ja se mainitaan lähteissä ensimmäisen kerran 800-luvulla. Vuosina 1136–1478 se oli Novgorodin tasavallan keskus, ja tasavalta hallitsi suurta osaa Venäjän pohjoisesta.
+
+Kaupunki toimi välittäjänä muiden venäläiskaupunkien ja Luoteis-Euroopan välillä ja vaurastui hansaliiton kaupassa; hansan päätoimipaikka eli kontor kaupungissa oli nimeltään Peterhof. Huipussaan 1300-luvulla Novgorod oli Euroopan suurimpia kaupunkeja. Nimen Veliki Novgorod kaupunki sai virallisesti vasta 1999, ja Unesco listasi sen maailmanperintökohteeksi 1992.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mitä Unescon maailmanperintökohde tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Unescon maailmanperintökohde on kulttuurin tai luonnon kannalta poikkeuksellisen arvokas kohde, joka on hyväksytty [[maailmanperintöluetteloon]] ja jonka suojelu on koko ihmiskunnan yhteinen asia. Luettelon perustana on vuonna 1972 hyväksytty [[maailmanperintösopimus]]. Novgorodin historialliset muistomerkit tulivat luetteloon vuonna 1992. Minun pesäpaikkani ei kyl ole luettelossa.
+KYSYMYS: Kerro lisää: maailmanperintöluetteloon
+
+### 134
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliki Novgorod (kaupungit)
+Tietoruudun teksti: Veliki Novgorod on Novgorodin alueen suurin kaupunki ja hallinnollinen keskus. Se sijaitsee Volhov-joen varrella kuusi kilometriä siitä, mistä joki lähtee Ilmenjärvestä, Moskovan ja Pietarin välisen valtatien varrella. Asukkaita on runsaat 224 000. Nimi tarkoittaa kirjaimellisesti suurta uuttakaupunkia.
+
+Novgorod on Venäjän vanhimpia kaupunkeja, ja se mainitaan lähteissä ensimmäisen kerran 800-luvulla. Vuosina 1136–1478 se oli Novgorodin tasavallan keskus, ja tasavalta hallitsi suurta osaa Venäjän pohjoisesta.
+
+Kaupunki toimi välittäjänä muiden venäläiskaupunkien ja Luoteis-Euroopan välillä ja vaurastui hansaliiton kaupassa; hansan päätoimipaikka eli kontor kaupungissa oli nimeltään Peterhof. Huipussaan 1300-luvulla Novgorod oli Euroopan suurimpia kaupunkeja. Nimen Veliki Novgorod kaupunki sai virallisesti vasta 1999, ja Unesco listasi sen maailmanperintökohteeksi 1992.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mitä Unescon maailmanperintökohde tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Unescon maailmanperintökohde on kulttuurin tai luonnon kannalta poikkeuksellisen arvokas kohde, joka on hyväksytty [[maailmanperintöluetteloon]] ja jonka suojelu on koko ihmiskunnan yhteinen asia. Luettelon perustana on vuonna 1972 hyväksytty [[maailmanperintösopimus]]. Novgorodin historialliset muistomerkit tulivat luetteloon vuonna 1992. Minun pesäpaikkani ei kyl ole luettelossa.
+KYSYMYS: Kerro lisää: maailmanperintösopimus
+
+### 135
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliki Novgorod (kaupungit)
+Tietoruudun teksti: Veliki Novgorod on Novgorodin alueen suurin kaupunki ja hallinnollinen keskus. Se sijaitsee Volhov-joen varrella kuusi kilometriä siitä, mistä joki lähtee Ilmenjärvestä, Moskovan ja Pietarin välisen valtatien varrella. Asukkaita on runsaat 224 000. Nimi tarkoittaa kirjaimellisesti suurta uuttakaupunkia.
+
+Novgorod on Venäjän vanhimpia kaupunkeja, ja se mainitaan lähteissä ensimmäisen kerran 800-luvulla. Vuosina 1136–1478 se oli Novgorodin tasavallan keskus, ja tasavalta hallitsi suurta osaa Venäjän pohjoisesta.
+
+Kaupunki toimi välittäjänä muiden venäläiskaupunkien ja Luoteis-Euroopan välillä ja vaurastui hansaliiton kaupassa; hansan päätoimipaikka eli kontor kaupungissa oli nimeltään Peterhof. Huipussaan 1300-luvulla Novgorod oli Euroopan suurimpia kaupunkeja. Nimen Veliki Novgorod kaupunki sai virallisesti vasta 1999, ja Unesco listasi sen maailmanperintökohteeksi 1992.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Historia: Velhoruhtinaan kivikirkko] 1044-1066 — Polotskin ruhtinaskunta on yksi vanhimmista itäslaavilaisista valtioista, ja sen varhaishistoriaan kuuluu synkkä tarina: kun Vladimir Suuri surmasi ruhtinas Rogvolodin ja tämän pojat vuonna 978, hän otti väkisin vaimokseen Rogvolodin tyttären Rognedan. Sata vuotta myöhemmin heidän jälkeläisensä, "velhoruhtinas" Vseslav, rakennutti kaupunkiin Pyhän Sofian kirkon vuosina 1044-1066 - Kiovan ja Novgorodin Sofia-kirkkojen sisarrakennuksen, jossa kohosi alun perin seitsemän kupolia. Se on Valko-Venäjän vanhin kivirakennus, vaikka nykyinen barokkijulkisivu on 1700-luvulta.
+AIEMPI KYSYMYS: Mikä on Novgorodin Pyhän Sofian katedraali?
+AIEMPI VASTAUS (Livia):
+Mmm— nyt muistan. Pyhän Sofian katedraali on [[Novgorodin kremlin]] eli ydinlinnoituksen kirkko, ja se on rakennettu 1000-luvulla. Se on yksi Venäjän vanhimmista säilyneistä kivikirkoista. Katedraali oli [[Novgorodin tasavallan]] hengellinen keskus ja on yhä kaupungin tunnus. Samannimisiä Sofia-kirkkoja on myös [[Kiovassa]]. Kupolit on hyviä istumapaikkoja, sen sanon kokemuksesta.
+KYSYMYS: Kerro lisää: Novgorodin kremlin
+
+### 136
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliki Novgorod (kaupungit)
+Tietoruudun teksti: Veliki Novgorod on Novgorodin alueen suurin kaupunki ja hallinnollinen keskus. Se sijaitsee Volhov-joen varrella kuusi kilometriä siitä, mistä joki lähtee Ilmenjärvestä, Moskovan ja Pietarin välisen valtatien varrella. Asukkaita on runsaat 224 000. Nimi tarkoittaa kirjaimellisesti suurta uuttakaupunkia.
+
+Novgorod on Venäjän vanhimpia kaupunkeja, ja se mainitaan lähteissä ensimmäisen kerran 800-luvulla. Vuosina 1136–1478 se oli Novgorodin tasavallan keskus, ja tasavalta hallitsi suurta osaa Venäjän pohjoisesta.
+
+Kaupunki toimi välittäjänä muiden venäläiskaupunkien ja Luoteis-Euroopan välillä ja vaurastui hansaliiton kaupassa; hansan päätoimipaikka eli kontor kaupungissa oli nimeltään Peterhof. Huipussaan 1300-luvulla Novgorod oli Euroopan suurimpia kaupunkeja. Nimen Veliki Novgorod kaupunki sai virallisesti vasta 1999, ja Unesco listasi sen maailmanperintökohteeksi 1992.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Historia: Velhoruhtinaan kivikirkko] 1044-1066 — Polotskin ruhtinaskunta on yksi vanhimmista itäslaavilaisista valtioista, ja sen varhaishistoriaan kuuluu synkkä tarina: kun Vladimir Suuri surmasi ruhtinas Rogvolodin ja tämän pojat vuonna 978, hän otti väkisin vaimokseen Rogvolodin tyttären Rognedan. Sata vuotta myöhemmin heidän jälkeläisensä, "velhoruhtinas" Vseslav, rakennutti kaupunkiin Pyhän Sofian kirkon vuosina 1044-1066 - Kiovan ja Novgorodin Sofia-kirkkojen sisarrakennuksen, jossa kohosi alun perin seitsemän kupolia. Se on Valko-Venäjän vanhin kivirakennus, vaikka nykyinen barokkijulkisivu on 1700-luvulta.
+AIEMPI KYSYMYS: Mikä on Novgorodin Pyhän Sofian katedraali?
+AIEMPI VASTAUS (Livia):
+Mmm— nyt muistan. Pyhän Sofian katedraali on [[Novgorodin kremlin]] eli ydinlinnoituksen kirkko, ja se on rakennettu 1000-luvulla. Se on yksi Venäjän vanhimmista säilyneistä kivikirkoista. Katedraali oli [[Novgorodin tasavallan]] hengellinen keskus ja on yhä kaupungin tunnus. Samannimisiä Sofia-kirkkoja on myös [[Kiovassa]]. Kupolit on hyviä istumapaikkoja, sen sanon kokemuksesta.
+KYSYMYS: Kerro lisää: Novgorodin tasavallan
+
+### 137
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliki Novgorod (kaupungit)
+Tietoruudun teksti: Veliki Novgorod on Novgorodin alueen suurin kaupunki ja hallinnollinen keskus. Se sijaitsee Volhov-joen varrella kuusi kilometriä siitä, mistä joki lähtee Ilmenjärvestä, Moskovan ja Pietarin välisen valtatien varrella. Asukkaita on runsaat 224 000. Nimi tarkoittaa kirjaimellisesti suurta uuttakaupunkia.
+
+Novgorod on Venäjän vanhimpia kaupunkeja, ja se mainitaan lähteissä ensimmäisen kerran 800-luvulla. Vuosina 1136–1478 se oli Novgorodin tasavallan keskus, ja tasavalta hallitsi suurta osaa Venäjän pohjoisesta.
+
+Kaupunki toimi välittäjänä muiden venäläiskaupunkien ja Luoteis-Euroopan välillä ja vaurastui hansaliiton kaupassa; hansan päätoimipaikka eli kontor kaupungissa oli nimeltään Peterhof. Huipussaan 1300-luvulla Novgorod oli Euroopan suurimpia kaupunkeja. Nimen Veliki Novgorod kaupunki sai virallisesti vasta 1999, ja Unesco listasi sen maailmanperintökohteeksi 1992.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Kontraktovan aukio] 1817 Podilin kaupunginosassa Kiovassa on ollut vilkas kauppapaikka jo Kiovan-Venäjän ajoista lähtien, mutta Kontraktovan aukio sai nykyisen nimensä vasta vuonna 1817, kun sille valmistui Kontraktitalo eli sopimustalo. Taustalla oli vuosi 1798, jolloin Venäjän keisari Paavali I päätti siirtää suuret vuotuiset kauppamessut Dubnon kaupungista Kiovaan – ja pian aukiosta tuli koko seudun vilkkain kauppapaikka. 1820-luvulla aukiolla vaihtoi omistajaa niin viljasäkkejä kuin kokonaisia kartanoitakin, ja kauppiaat sopivat messuilla myös palvelusväen palkkaamisesta. Iltaisin aukiolla pidettiin balleja, konsertteja ja teatteriesityksiä. Aukion vanhin rakennus on Samson-suihkulähde vuosilta 1748–1749: …
+- [Kiova — kaupunkilehti / Musiikki: Neljä säveltä, joita soitetaan joka joulu] Kiovassa esitettiin 29. joulukuuta 1916 opiskelijakuoron joulukonsertissa kuoroteos Štšedryk. Mykola Leontovytš oli sovittanut sen vanhasta uudenvuodenlaulusta, jossa pääsky lentää taloon lupaamaan hyvää vuotta, ja sen alla toistuu koko ajan sama neljän sävelen kuvio. Ukrainalainen kuoro vei laulun New Yorkiin vuonna 1922, ja opettaja Peter Wilhousky kirjoitti sävelmään uudet englanninkieliset sanat kelloista. Niin syntyi Carol of the Bells, joka kuullaan myös Yksin kotona -elokuvassa.
+- [Kiova — kaupunkilehti / Musiikki] Kiovassa lauloivat sokeat kiertolaislaulajat — ja täällä kuultiin ensi kerran laulu, joka soi nykyään joka joulu ympäri maailmaa.
+AIEMPI KYSYMYS: Mikä on Novgorodin Pyhän Sofian katedraali?
+AIEMPI VASTAUS (Livia):
+Mmm— nyt muistan. Pyhän Sofian katedraali on [[Novgorodin kremlin]] eli ydinlinnoituksen kirkko, ja se on rakennettu 1000-luvulla. Se on yksi Venäjän vanhimmista säilyneistä kivikirkoista. Katedraali oli [[Novgorodin tasavallan]] hengellinen keskus ja on yhä kaupungin tunnus. Samannimisiä Sofia-kirkkoja on myös [[Kiovassa]]. Kupolit on hyviä istumapaikkoja, sen sanon kokemuksesta.
+KYSYMYS: Kerro lisää: Kiovassa
+
+### 138
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kolan syväreikä (tekniikka)
+Tietoruudun teksti: Kolan syväreikä SG-3 on syvin ihmisen tekemä reikä maapallolla: se ylsi vuonna 1989 pystysuoraan syvyyteen 12 262 metriä. Kyse oli neuvostoliittolaisesta tiedehankkeesta, jonka tavoite oli tunkeutua maankuoreen niin syvälle kuin mahdollista. Paikka on Kuolan niemimaalla Petšengan piirissä lähellä Norjan rajaa.
+
+Kairaus alkoi 24. toukokuuta 1970 tavallisella öljynporauslautalla Uralmaš-4E, jota oli hieman muunneltu 7 000 metriä varten. Vuonna 1974 paikalle pystytettiin uusi Uralmaš-15000, joka oli nimetty uuden tavoitteen — viidentoista kilometrin — mukaan. Reikiä porattiin kaikkiaan viisi, kukin halkaisijaltaan 23 senttiä.
+
+6. kesäkuuta 1979 hanke ohitti aiemman syvyysennätyksen, joka oli Oklahomassa porattu 9 583 metrin Bertha Rogers -reikä. Lokakuussa 1982 ensimmäinen reikä oli 11 662 metrissä. Kun toinen reikä ohitti 12 000 metriä vuonna 1983, kairaus pysäytettiin noin vuodeksi tiete…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Tiede ja keksinnöt: Tetris syntyi hakasulkeista] 1984 — Aleksei Pažitnov teki Tetriksen kesäkuussa 1984 työpaikallaan Neuvostoliiton tiedeakatemian laskentakeskuksessa Moskovassa. Käytössä ollut Elektronika 60 -tietokone ei osannut piirtää kuvia, joten palikat koottiin hakasulkumerkeistä. Nimi tulee kreikan sanasta tetra eli neljä — jokaisessa palikassa on neljä ruutua — ja tenniksestä, Pažitnovin lempilajista. Peli levisi Moskovassa levykkeeltä toiselle ilmaiseksi, ja IBM-koneelle sitä oli kääntämässä 16-vuotias koululainen Vadim Gerasimov.
+AIEMPI KYSYMYS: Kuinka syvälle reikä ylsi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kolan syväreikä SG-3 ylsi vuonna 1989 pystysuoraan 12 262 metrin syvyyteen, ja se on syvin ihmisen tekemä reikä maapallolla. Hanke oli [[Neuvostoliiton]] tiedehanke, jonka tavoitteena oli tunkeutua [[maankuoreen]] mahdollisimman syvälle. Reikä sijaitsee [[Kuolan niemimaalla]] lähellä Norjan rajaa.
+
+Kaksitoista kilometriä alaspäin on minusta aivan käsittämätön matka. Minä lennän kyllä korkeammalle, mutta alaspäin en ole koskaan ollut kiinnostunut.
+KYSYMYS: Kerro lisää: Neuvostoliiton
+
+### 139
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kolan syväreikä (tekniikka)
+Tietoruudun teksti: Kolan syväreikä SG-3 on syvin ihmisen tekemä reikä maapallolla: se ylsi vuonna 1989 pystysuoraan syvyyteen 12 262 metriä. Kyse oli neuvostoliittolaisesta tiedehankkeesta, jonka tavoite oli tunkeutua maankuoreen niin syvälle kuin mahdollista. Paikka on Kuolan niemimaalla Petšengan piirissä lähellä Norjan rajaa.
+
+Kairaus alkoi 24. toukokuuta 1970 tavallisella öljynporauslautalla Uralmaš-4E, jota oli hieman muunneltu 7 000 metriä varten. Vuonna 1974 paikalle pystytettiin uusi Uralmaš-15000, joka oli nimetty uuden tavoitteen — viidentoista kilometrin — mukaan. Reikiä porattiin kaikkiaan viisi, kukin halkaisijaltaan 23 senttiä.
+
+6. kesäkuuta 1979 hanke ohitti aiemman syvyysennätyksen, joka oli Oklahomassa porattu 9 583 metrin Bertha Rogers -reikä. Lokakuussa 1982 ensimmäinen reikä oli 11 662 metrissä. Kun toinen reikä ohitti 12 000 metriä vuonna 1983, kairaus pysäytettiin noin vuodeksi tiete…
+AIEMPI KYSYMYS: Kuinka syvälle reikä ylsi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kolan syväreikä SG-3 ylsi vuonna 1989 pystysuoraan 12 262 metrin syvyyteen, ja se on syvin ihmisen tekemä reikä maapallolla. Hanke oli [[Neuvostoliiton]] tiedehanke, jonka tavoitteena oli tunkeutua [[maankuoreen]] mahdollisimman syvälle. Reikä sijaitsee [[Kuolan niemimaalla]] lähellä Norjan rajaa.
+
+Kaksitoista kilometriä alaspäin on minusta aivan käsittämätön matka. Minä lennän kyllä korkeammalle, mutta alaspäin en ole koskaan ollut kiinnostunut.
+KYSYMYS: Kerro lisää: maankuoreen
+
+### 140
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kolan syväreikä (tekniikka)
+Tietoruudun teksti: Kolan syväreikä SG-3 on syvin ihmisen tekemä reikä maapallolla: se ylsi vuonna 1989 pystysuoraan syvyyteen 12 262 metriä. Kyse oli neuvostoliittolaisesta tiedehankkeesta, jonka tavoite oli tunkeutua maankuoreen niin syvälle kuin mahdollista. Paikka on Kuolan niemimaalla Petšengan piirissä lähellä Norjan rajaa.
+
+Kairaus alkoi 24. toukokuuta 1970 tavallisella öljynporauslautalla Uralmaš-4E, jota oli hieman muunneltu 7 000 metriä varten. Vuonna 1974 paikalle pystytettiin uusi Uralmaš-15000, joka oli nimetty uuden tavoitteen — viidentoista kilometrin — mukaan. Reikiä porattiin kaikkiaan viisi, kukin halkaisijaltaan 23 senttiä.
+
+6. kesäkuuta 1979 hanke ohitti aiemman syvyysennätyksen, joka oli Oklahomassa porattu 9 583 metrin Bertha Rogers -reikä. Lokakuussa 1982 ensimmäinen reikä oli 11 662 metrissä. Kun toinen reikä ohitti 12 000 metriä vuonna 1983, kairaus pysäytettiin noin vuodeksi tiete…
+AIEMPI KYSYMYS: Kuinka syvälle reikä ylsi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kolan syväreikä SG-3 ylsi vuonna 1989 pystysuoraan 12 262 metrin syvyyteen, ja se on syvin ihmisen tekemä reikä maapallolla. Hanke oli [[Neuvostoliiton]] tiedehanke, jonka tavoitteena oli tunkeutua [[maankuoreen]] mahdollisimman syvälle. Reikä sijaitsee [[Kuolan niemimaalla]] lähellä Norjan rajaa.
+
+Kaksitoista kilometriä alaspäin on minusta aivan käsittämätön matka. Minä lennän kyllä korkeammalle, mutta alaspäin en ole koskaan ollut kiinnostunut.
+KYSYMYS: Kerro lisää: Kuolan niemimaalla
+
+### 141
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kolan syväreikä (tekniikka)
+Tietoruudun teksti: Kolan syväreikä SG-3 on syvin ihmisen tekemä reikä maapallolla: se ylsi vuonna 1989 pystysuoraan syvyyteen 12 262 metriä. Kyse oli neuvostoliittolaisesta tiedehankkeesta, jonka tavoite oli tunkeutua maankuoreen niin syvälle kuin mahdollista. Paikka on Kuolan niemimaalla Petšengan piirissä lähellä Norjan rajaa.
+
+Kairaus alkoi 24. toukokuuta 1970 tavallisella öljynporauslautalla Uralmaš-4E, jota oli hieman muunneltu 7 000 metriä varten. Vuonna 1974 paikalle pystytettiin uusi Uralmaš-15000, joka oli nimetty uuden tavoitteen — viidentoista kilometrin — mukaan. Reikiä porattiin kaikkiaan viisi, kukin halkaisijaltaan 23 senttiä.
+
+6. kesäkuuta 1979 hanke ohitti aiemman syvyysennätyksen, joka oli Oklahomassa porattu 9 583 metrin Bertha Rogers -reikä. Lokakuussa 1982 ensimmäinen reikä oli 11 662 metrissä. Kun toinen reikä ohitti 12 000 metriä vuonna 1983, kairaus pysäytettiin noin vuodeksi tiete…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Tiede ja keksinnöt: Tetris syntyi hakasulkeista] 1984 — Aleksei Pažitnov teki Tetriksen kesäkuussa 1984 työpaikallaan Neuvostoliiton tiedeakatemian laskentakeskuksessa Moskovassa. Käytössä ollut Elektronika 60 -tietokone ei osannut piirtää kuvia, joten palikat koottiin hakasulkumerkeistä. Nimi tulee kreikan sanasta tetra eli neljä — jokaisessa palikassa on neljä ruutua — ja tenniksestä, Pažitnovin lempilajista. Peli levisi Moskovassa levykkeeltä toiselle ilmaiseksi, ja IBM-koneelle sitä oli kääntämässä 16-vuotias koululainen Vadim Gerasimov.
+AIEMPI KYSYMYS: Miksi kairaus keskeytettiin vuodeksi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Lähteet eivät ole kaikilta osin yksimielisiä, mutta kairaus pysäytettiin vuonna 1983 noin vuodeksi tieteellisiä tutkimuksia varten, kun toinen reikä oli ohittanut 12 000 metriä. Usein mainitaan myös, että tauko ajoittui [[Moskovassa]] pidetyn kansainvälisen [[geologikongressin]] vuoteen 1984. En ole täysin varma tarkasta syystä. Vuoden tauko ei ole mitään minun lomiini verrattuna.
+KYSYMYS: Kerro lisää: Moskovassa
+
+### 142
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kolan syväreikä (tekniikka)
+Tietoruudun teksti: Kolan syväreikä SG-3 on syvin ihmisen tekemä reikä maapallolla: se ylsi vuonna 1989 pystysuoraan syvyyteen 12 262 metriä. Kyse oli neuvostoliittolaisesta tiedehankkeesta, jonka tavoite oli tunkeutua maankuoreen niin syvälle kuin mahdollista. Paikka on Kuolan niemimaalla Petšengan piirissä lähellä Norjan rajaa.
+
+Kairaus alkoi 24. toukokuuta 1970 tavallisella öljynporauslautalla Uralmaš-4E, jota oli hieman muunneltu 7 000 metriä varten. Vuonna 1974 paikalle pystytettiin uusi Uralmaš-15000, joka oli nimetty uuden tavoitteen — viidentoista kilometrin — mukaan. Reikiä porattiin kaikkiaan viisi, kukin halkaisijaltaan 23 senttiä.
+
+6. kesäkuuta 1979 hanke ohitti aiemman syvyysennätyksen, joka oli Oklahomassa porattu 9 583 metrin Bertha Rogers -reikä. Lokakuussa 1982 ensimmäinen reikä oli 11 662 metrissä. Kun toinen reikä ohitti 12 000 metriä vuonna 1983, kairaus pysäytettiin noin vuodeksi tiete…
+AIEMPI KYSYMYS: Miksi kairaus keskeytettiin vuodeksi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Lähteet eivät ole kaikilta osin yksimielisiä, mutta kairaus pysäytettiin vuonna 1983 noin vuodeksi tieteellisiä tutkimuksia varten, kun toinen reikä oli ohittanut 12 000 metriä. Usein mainitaan myös, että tauko ajoittui [[Moskovassa]] pidetyn kansainvälisen [[geologikongressin]] vuoteen 1984. En ole täysin varma tarkasta syystä. Vuoden tauko ei ole mitään minun lomiini verrattuna.
+KYSYMYS: Kerro lisää: geologikongressin
+
+### 143
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kolan syväreikä (tekniikka)
+Tietoruudun teksti: Kolan syväreikä SG-3 on syvin ihmisen tekemä reikä maapallolla: se ylsi vuonna 1989 pystysuoraan syvyyteen 12 262 metriä. Kyse oli neuvostoliittolaisesta tiedehankkeesta, jonka tavoite oli tunkeutua maankuoreen niin syvälle kuin mahdollista. Paikka on Kuolan niemimaalla Petšengan piirissä lähellä Norjan rajaa.
+
+Kairaus alkoi 24. toukokuuta 1970 tavallisella öljynporauslautalla Uralmaš-4E, jota oli hieman muunneltu 7 000 metriä varten. Vuonna 1974 paikalle pystytettiin uusi Uralmaš-15000, joka oli nimetty uuden tavoitteen — viidentoista kilometrin — mukaan. Reikiä porattiin kaikkiaan viisi, kukin halkaisijaltaan 23 senttiä.
+
+6. kesäkuuta 1979 hanke ohitti aiemman syvyysennätyksen, joka oli Oklahomassa porattu 9 583 metrin Bertha Rogers -reikä. Lokakuussa 1982 ensimmäinen reikä oli 11 662 metrissä. Kun toinen reikä ohitti 12 000 metriä vuonna 1983, kairaus pysäytettiin noin vuodeksi tiete…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Petra — kohdekartta / Kohdekartta: Siq] Siq on kaupungin sisäänkäynti ja samalla sen vaikuttavin rakenne, vaikka kukaan ei rakentanut sitä. Rotko on runsaan kilometrin mittainen ja kapeimmillaan noin kolmen metrin levyinen, ja sen seinät kohoavat 91–182 metrin korkeuteen. Se päättyy Aarrekammion eteen. Toisin kuin esimerkiksi Antelope Canyonin kaltaiset rakokanjonit Siq ei ole veden kaivama. Se on luonnollinen siirros, jonka maankuoren liike halkaisi kahtia; vesi on vasta sen jälkeen hionut seinät sileiksi. Ero näkyy muodossa: seinät sopivat yhteen kuin murtuneen astian palat. Rotko oli nabatealaisille pyhä. Sen molemmilla seinillä on votiivikoloja, joissa on ollut baetyleiksi kutsuttuja kivikuvia. Kun tietä madallettiin vuonna 1…
+- [Galápagos — kaupunkilehti / Galápagossaaret: Tulivuorista noussut saaristo] Galápagossaaret ovat syntyneet keskellä Tyyntämerta kuuman pisteen yllä, jossa maankuoren alla virtaava magma on työntänyt esiin tulivuoria miljoonien vuosien ajan. Espanjalainen piispa Tomás de Berlanga törmäsi saaristoon vahingossa vuonna 1535, kun hänen laivansa ajelehti tyynellä säällä Panamasta Peruun matkatessa. Kolme vuosisataa myöhemmin, vuonna 1835, saariston rannoille nousi nuori luonnontutkija Charles Darwin HMS Beaglelta. Hänen huomionsa saariston omalaatuisesta eläimistöstä kypsyi vuosikymmenten varrella teokseksi Lajien synty (1859) — isoisän matkavuosi 1873 sijoittuu vain 14 vuotta sen jälkeen.
+AIEMPI KYSYMYS: Miksi Kolan reiän poraus lopetettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Pöllö parantelee siipeään, joten minä tuuraan. Syvimmällä lämpötila osoittautui odotettua korkeammaksi, lähteiden mukaan noin 180 asteeksi, ja kivi käyttäytyi syvällä niin, että poraaminen vaikeutui. Lisäksi [[Neuvostoliiton]] hajoamisen jälkeen hankkeen rahoitus loppui, ja poraus päättyi 1990-luvun alussa. Paikalla ei enää porata, ja syvyysennätys on jäänyt [[maankuoren]] historiaan. Jotkut reiät vaan eivät halua mennä syvemmälle.
+KYSYMYS: Kerro lisää: maankuoren
+
+### 144
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kolan syväreikä (tekniikka)
+Tietoruudun teksti: Kolan syväreikä SG-3 on syvin ihmisen tekemä reikä maapallolla: se ylsi vuonna 1989 pystysuoraan syvyyteen 12 262 metriä. Kyse oli neuvostoliittolaisesta tiedehankkeesta, jonka tavoite oli tunkeutua maankuoreen niin syvälle kuin mahdollista. Paikka on Kuolan niemimaalla Petšengan piirissä lähellä Norjan rajaa.
+
+Kairaus alkoi 24. toukokuuta 1970 tavallisella öljynporauslautalla Uralmaš-4E, jota oli hieman muunneltu 7 000 metriä varten. Vuonna 1974 paikalle pystytettiin uusi Uralmaš-15000, joka oli nimetty uuden tavoitteen — viidentoista kilometrin — mukaan. Reikiä porattiin kaikkiaan viisi, kukin halkaisijaltaan 23 senttiä.
+
+6. kesäkuuta 1979 hanke ohitti aiemman syvyysennätyksen, joka oli Oklahomassa porattu 9 583 metrin Bertha Rogers -reikä. Lokakuussa 1982 ensimmäinen reikä oli 11 662 metrissä. Kun toinen reikä ohitti 12 000 metriä vuonna 1983, kairaus pysäytettiin noin vuodeksi tiete…
+AIEMPI KYSYMYS: Kuinka paksu maankuori on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Maankuori on Maan ohut uloin kerros. Mannerten alla se on tavallisesti noin 30–50 kilometriä paksu, merten alla vain noin 5–10 kilometriä. Kuoren alapuolella on [[vaippa]], josta kuori erottuu [[seismisten aaltojen]] nopeuden muutoksen perusteella, ja rajapintaa kutsutaan [[Mohorovičićin epäjatkuvuudeksi]]. Kolan syväreikä ylsi siis vain osan matkaa mannerkuoren läpi. Naarmu vaan, mut aika syvä sellainen.
+KYSYMYS: Kerro lisää: vaippa
+
+### 145
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kolan syväreikä (tekniikka)
+Tietoruudun teksti: Kolan syväreikä SG-3 on syvin ihmisen tekemä reikä maapallolla: se ylsi vuonna 1989 pystysuoraan syvyyteen 12 262 metriä. Kyse oli neuvostoliittolaisesta tiedehankkeesta, jonka tavoite oli tunkeutua maankuoreen niin syvälle kuin mahdollista. Paikka on Kuolan niemimaalla Petšengan piirissä lähellä Norjan rajaa.
+
+Kairaus alkoi 24. toukokuuta 1970 tavallisella öljynporauslautalla Uralmaš-4E, jota oli hieman muunneltu 7 000 metriä varten. Vuonna 1974 paikalle pystytettiin uusi Uralmaš-15000, joka oli nimetty uuden tavoitteen — viidentoista kilometrin — mukaan. Reikiä porattiin kaikkiaan viisi, kukin halkaisijaltaan 23 senttiä.
+
+6. kesäkuuta 1979 hanke ohitti aiemman syvyysennätyksen, joka oli Oklahomassa porattu 9 583 metrin Bertha Rogers -reikä. Lokakuussa 1982 ensimmäinen reikä oli 11 662 metrissä. Kun toinen reikä ohitti 12 000 metriä vuonna 1983, kairaus pysäytettiin noin vuodeksi tiete…
+AIEMPI KYSYMYS: Kuinka paksu maankuori on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Maankuori on Maan ohut uloin kerros. Mannerten alla se on tavallisesti noin 30–50 kilometriä paksu, merten alla vain noin 5–10 kilometriä. Kuoren alapuolella on [[vaippa]], josta kuori erottuu [[seismisten aaltojen]] nopeuden muutoksen perusteella, ja rajapintaa kutsutaan [[Mohorovičićin epäjatkuvuudeksi]]. Kolan syväreikä ylsi siis vain osan matkaa mannerkuoren läpi. Naarmu vaan, mut aika syvä sellainen.
+KYSYMYS: Kerro lisää: seismisten aaltojen
+
+### 146
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kolan syväreikä (tekniikka)
+Tietoruudun teksti: Kolan syväreikä SG-3 on syvin ihmisen tekemä reikä maapallolla: se ylsi vuonna 1989 pystysuoraan syvyyteen 12 262 metriä. Kyse oli neuvostoliittolaisesta tiedehankkeesta, jonka tavoite oli tunkeutua maankuoreen niin syvälle kuin mahdollista. Paikka on Kuolan niemimaalla Petšengan piirissä lähellä Norjan rajaa.
+
+Kairaus alkoi 24. toukokuuta 1970 tavallisella öljynporauslautalla Uralmaš-4E, jota oli hieman muunneltu 7 000 metriä varten. Vuonna 1974 paikalle pystytettiin uusi Uralmaš-15000, joka oli nimetty uuden tavoitteen — viidentoista kilometrin — mukaan. Reikiä porattiin kaikkiaan viisi, kukin halkaisijaltaan 23 senttiä.
+
+6. kesäkuuta 1979 hanke ohitti aiemman syvyysennätyksen, joka oli Oklahomassa porattu 9 583 metrin Bertha Rogers -reikä. Lokakuussa 1982 ensimmäinen reikä oli 11 662 metrissä. Kun toinen reikä ohitti 12 000 metriä vuonna 1983, kairaus pysäytettiin noin vuodeksi tiete…
+AIEMPI KYSYMYS: Kuinka paksu maankuori on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Maankuori on Maan ohut uloin kerros. Mannerten alla se on tavallisesti noin 30–50 kilometriä paksu, merten alla vain noin 5–10 kilometriä. Kuoren alapuolella on [[vaippa]], josta kuori erottuu [[seismisten aaltojen]] nopeuden muutoksen perusteella, ja rajapintaa kutsutaan [[Mohorovičićin epäjatkuvuudeksi]]. Kolan syväreikä ylsi siis vain osan matkaa mannerkuoren läpi. Naarmu vaan, mut aika syvä sellainen.
+KYSYMYS: Kerro lisää: Mohorovičićin epäjatkuvuudeksi
+
+### 147
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kolan syväreikä (tekniikka)
+Tietoruudun teksti: Kolan syväreikä SG-3 on syvin ihmisen tekemä reikä maapallolla: se ylsi vuonna 1989 pystysuoraan syvyyteen 12 262 metriä. Kyse oli neuvostoliittolaisesta tiedehankkeesta, jonka tavoite oli tunkeutua maankuoreen niin syvälle kuin mahdollista. Paikka on Kuolan niemimaalla Petšengan piirissä lähellä Norjan rajaa.
+
+Kairaus alkoi 24. toukokuuta 1970 tavallisella öljynporauslautalla Uralmaš-4E, jota oli hieman muunneltu 7 000 metriä varten. Vuonna 1974 paikalle pystytettiin uusi Uralmaš-15000, joka oli nimetty uuden tavoitteen — viidentoista kilometrin — mukaan. Reikiä porattiin kaikkiaan viisi, kukin halkaisijaltaan 23 senttiä.
+
+6. kesäkuuta 1979 hanke ohitti aiemman syvyysennätyksen, joka oli Oklahomassa porattu 9 583 metrin Bertha Rogers -reikä. Lokakuussa 1982 ensimmäinen reikä oli 11 662 metrissä. Kun toinen reikä ohitti 12 000 metriä vuonna 1983, kairaus pysäytettiin noin vuodeksi tiete…
+AIEMPI KYSYMYS: Mikä Kuolan niemimaa on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kuolan niemimaa on Luoteis-Venäjällä sijaitseva niemimaa, jota rajaavat pohjoisessa [[Barentsinmeri]] ja idässä sekä etelässä [[Vienanmeri]]. Alueen suurin kaupunki on [[Murmansk]]. Siellä asuu perinteisesti [[saamelaisia]], ja siellä sijaitsee Hibiinien vuoristo. Kyl sinne asti lentää, jos on pakko.
+KYSYMYS: Kerro lisää: Barentsinmeri
+
+### 148
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kolan syväreikä (tekniikka)
+Tietoruudun teksti: Kolan syväreikä SG-3 on syvin ihmisen tekemä reikä maapallolla: se ylsi vuonna 1989 pystysuoraan syvyyteen 12 262 metriä. Kyse oli neuvostoliittolaisesta tiedehankkeesta, jonka tavoite oli tunkeutua maankuoreen niin syvälle kuin mahdollista. Paikka on Kuolan niemimaalla Petšengan piirissä lähellä Norjan rajaa.
+
+Kairaus alkoi 24. toukokuuta 1970 tavallisella öljynporauslautalla Uralmaš-4E, jota oli hieman muunneltu 7 000 metriä varten. Vuonna 1974 paikalle pystytettiin uusi Uralmaš-15000, joka oli nimetty uuden tavoitteen — viidentoista kilometrin — mukaan. Reikiä porattiin kaikkiaan viisi, kukin halkaisijaltaan 23 senttiä.
+
+6. kesäkuuta 1979 hanke ohitti aiemman syvyysennätyksen, joka oli Oklahomassa porattu 9 583 metrin Bertha Rogers -reikä. Lokakuussa 1982 ensimmäinen reikä oli 11 662 metrissä. Kun toinen reikä ohitti 12 000 metriä vuonna 1983, kairaus pysäytettiin noin vuodeksi tiete…
+AIEMPI KYSYMYS: Mikä Kuolan niemimaa on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kuolan niemimaa on Luoteis-Venäjällä sijaitseva niemimaa, jota rajaavat pohjoisessa [[Barentsinmeri]] ja idässä sekä etelässä [[Vienanmeri]]. Alueen suurin kaupunki on [[Murmansk]]. Siellä asuu perinteisesti [[saamelaisia]], ja siellä sijaitsee Hibiinien vuoristo. Kyl sinne asti lentää, jos on pakko.
+KYSYMYS: Kerro lisää: Vienanmeri
+
+### 149
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kolan syväreikä (tekniikka)
+Tietoruudun teksti: Kolan syväreikä SG-3 on syvin ihmisen tekemä reikä maapallolla: se ylsi vuonna 1989 pystysuoraan syvyyteen 12 262 metriä. Kyse oli neuvostoliittolaisesta tiedehankkeesta, jonka tavoite oli tunkeutua maankuoreen niin syvälle kuin mahdollista. Paikka on Kuolan niemimaalla Petšengan piirissä lähellä Norjan rajaa.
+
+Kairaus alkoi 24. toukokuuta 1970 tavallisella öljynporauslautalla Uralmaš-4E, jota oli hieman muunneltu 7 000 metriä varten. Vuonna 1974 paikalle pystytettiin uusi Uralmaš-15000, joka oli nimetty uuden tavoitteen — viidentoista kilometrin — mukaan. Reikiä porattiin kaikkiaan viisi, kukin halkaisijaltaan 23 senttiä.
+
+6. kesäkuuta 1979 hanke ohitti aiemman syvyysennätyksen, joka oli Oklahomassa porattu 9 583 metrin Bertha Rogers -reikä. Lokakuussa 1982 ensimmäinen reikä oli 11 662 metrissä. Kun toinen reikä ohitti 12 000 metriä vuonna 1983, kairaus pysäytettiin noin vuodeksi tiete…
+AIEMPI KYSYMYS: Mikä Kuolan niemimaa on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kuolan niemimaa on Luoteis-Venäjällä sijaitseva niemimaa, jota rajaavat pohjoisessa [[Barentsinmeri]] ja idässä sekä etelässä [[Vienanmeri]]. Alueen suurin kaupunki on [[Murmansk]]. Siellä asuu perinteisesti [[saamelaisia]], ja siellä sijaitsee Hibiinien vuoristo. Kyl sinne asti lentää, jos on pakko.
+KYSYMYS: Kerro lisää: Murmansk
+
+### 150
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kolan syväreikä (tekniikka)
+Tietoruudun teksti: Kolan syväreikä SG-3 on syvin ihmisen tekemä reikä maapallolla: se ylsi vuonna 1989 pystysuoraan syvyyteen 12 262 metriä. Kyse oli neuvostoliittolaisesta tiedehankkeesta, jonka tavoite oli tunkeutua maankuoreen niin syvälle kuin mahdollista. Paikka on Kuolan niemimaalla Petšengan piirissä lähellä Norjan rajaa.
+
+Kairaus alkoi 24. toukokuuta 1970 tavallisella öljynporauslautalla Uralmaš-4E, jota oli hieman muunneltu 7 000 metriä varten. Vuonna 1974 paikalle pystytettiin uusi Uralmaš-15000, joka oli nimetty uuden tavoitteen — viidentoista kilometrin — mukaan. Reikiä porattiin kaikkiaan viisi, kukin halkaisijaltaan 23 senttiä.
+
+6. kesäkuuta 1979 hanke ohitti aiemman syvyysennätyksen, joka oli Oklahomassa porattu 9 583 metrin Bertha Rogers -reikä. Lokakuussa 1982 ensimmäinen reikä oli 11 662 metrissä. Kun toinen reikä ohitti 12 000 metriä vuonna 1983, kairaus pysäytettiin noin vuodeksi tiete…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rovaniemi — kaupunkilehti / Saamelaiskulttuuri: Laulukilpailu, joka on käyty vuodesta 1971] Sámi Grand Prix on saamelaisen musiikin laulukilpailu, jota on järjestetty Kautokeinossa pääsiäisenä vuodesta 1971 lähtien. Suuri osa esityksistä pohjautuu joikuun, saamelaiseen perinnelauluun, jolla ei ole alkua eikä loppua tavallisessa mielessä — saamelaisen käsityksen mukaan ei "lauleta jostakin" vaan "joiataan joku tai jokin", ikään kuin laulu kantaisi kohteensa esiin. Kilpailu on kasvanut pieneksi pääsiäisfestivaaliksi, joka kokoaa saamelaisia eri puolilta Norjaa, Ruotsia, Suomea ja Venäjää samaan kaupunkiin joka kevät.
+AIEMPI KYSYMYS: Mikä Kuolan niemimaa on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kuolan niemimaa on Luoteis-Venäjällä sijaitseva niemimaa, jota rajaavat pohjoisessa [[Barentsinmeri]] ja idässä sekä etelässä [[Vienanmeri]]. Alueen suurin kaupunki on [[Murmansk]]. Siellä asuu perinteisesti [[saamelaisia]], ja siellä sijaitsee Hibiinien vuoristo. Kyl sinne asti lentää, jos on pakko.
+KYSYMYS: Kerro lisää: saamelaisia
+
+### 151
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tunguskan räjähdys (historia)
+Tietoruudun teksti: Tunguskan räjähdys tapahtui Podkamennaja Tunguska -joen lähellä Siperiassa 30. kesäkuuta 1908 aamulla. Sen voimaksi on arvioitu 3–50 megatonnia TNT:tä, ja se kaatoi metsää 2 150 neliökilometrin alalta. Silminnäkijäkertomusten perusteella jopa kolme ihmistä saattoi kuolla.
+
+Syyksi katsotaan meteorin ilmaräjähdys: noin 50–60 metriä leveä kivinen asteroidi tuli itäkaakosta lähes 27 kilometrin sekuntinopeudella ja hajosi 5–10 kilometrin korkeudessa. Koska se ei osunut maahan, kraatteria ei jäänyt. Kyseessä on suurin tunnetun historian aikana tapahtunut törmäys maapallolla.
+
+Kello 7.14 paikallista aikaa evenkiläiset ja venäläiset uudisasukkaat Baikalin luoteispuolen kukkuloilla näkivät sinertävän valon, joka oli lähes yhtä kirkas kuin aurinko. Noin kymmenen minuuttia myöhemmin kuului tykkitulta muistuttava jyrinä, ja paineaalto kaatoi ihmisiä jaloiltaan ja rikkoi ikkunoita satojen kilometrie…
+AIEMPI KYSYMYS: Miksi paikalta ei löydy kraatteria?
+AIEMPI VASTAUS (Livia):
+No jopas. Kraatteria ei jäänyt, koska kyseessä oli [[ilmaräjähdys]]: noin 50–60 metriä leveä kivinen [[asteroidi]] hajosi 5–10 kilometrin korkeudessa ennen kuin se ehti maahan. Räjähdyksen [[paineaalto]] kaatoi metsää, mutta törmäyskuoppaa ei syntynyt. Tapahtuma oli 30. kesäkuuta 1908, joten siitä on yli sata vuotta. Onneksi tuo oli aikoja sitten.
+KYSYMYS: Kerro lisää: ilmaräjähdys
+
+### 152
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tunguskan räjähdys (historia)
+Tietoruudun teksti: Tunguskan räjähdys tapahtui Podkamennaja Tunguska -joen lähellä Siperiassa 30. kesäkuuta 1908 aamulla. Sen voimaksi on arvioitu 3–50 megatonnia TNT:tä, ja se kaatoi metsää 2 150 neliökilometrin alalta. Silminnäkijäkertomusten perusteella jopa kolme ihmistä saattoi kuolla.
+
+Syyksi katsotaan meteorin ilmaräjähdys: noin 50–60 metriä leveä kivinen asteroidi tuli itäkaakosta lähes 27 kilometrin sekuntinopeudella ja hajosi 5–10 kilometrin korkeudessa. Koska se ei osunut maahan, kraatteria ei jäänyt. Kyseessä on suurin tunnetun historian aikana tapahtunut törmäys maapallolla.
+
+Kello 7.14 paikallista aikaa evenkiläiset ja venäläiset uudisasukkaat Baikalin luoteispuolen kukkuloilla näkivät sinertävän valon, joka oli lähes yhtä kirkas kuin aurinko. Noin kymmenen minuuttia myöhemmin kuului tykkitulta muistuttava jyrinä, ja paineaalto kaatoi ihmisiä jaloiltaan ja rikkoi ikkunoita satojen kilometrie…
+AIEMPI KYSYMYS: Miksi paikalta ei löydy kraatteria?
+AIEMPI VASTAUS (Livia):
+No jopas. Kraatteria ei jäänyt, koska kyseessä oli [[ilmaräjähdys]]: noin 50–60 metriä leveä kivinen [[asteroidi]] hajosi 5–10 kilometrin korkeudessa ennen kuin se ehti maahan. Räjähdyksen [[paineaalto]] kaatoi metsää, mutta törmäyskuoppaa ei syntynyt. Tapahtuma oli 30. kesäkuuta 1908, joten siitä on yli sata vuotta. Onneksi tuo oli aikoja sitten.
+KYSYMYS: Kerro lisää: asteroidi
+
+### 153
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tunguskan räjähdys (historia)
+Tietoruudun teksti: Tunguskan räjähdys tapahtui Podkamennaja Tunguska -joen lähellä Siperiassa 30. kesäkuuta 1908 aamulla. Sen voimaksi on arvioitu 3–50 megatonnia TNT:tä, ja se kaatoi metsää 2 150 neliökilometrin alalta. Silminnäkijäkertomusten perusteella jopa kolme ihmistä saattoi kuolla.
+
+Syyksi katsotaan meteorin ilmaräjähdys: noin 50–60 metriä leveä kivinen asteroidi tuli itäkaakosta lähes 27 kilometrin sekuntinopeudella ja hajosi 5–10 kilometrin korkeudessa. Koska se ei osunut maahan, kraatteria ei jäänyt. Kyseessä on suurin tunnetun historian aikana tapahtunut törmäys maapallolla.
+
+Kello 7.14 paikallista aikaa evenkiläiset ja venäläiset uudisasukkaat Baikalin luoteispuolen kukkuloilla näkivät sinertävän valon, joka oli lähes yhtä kirkas kuin aurinko. Noin kymmenen minuuttia myöhemmin kuului tykkitulta muistuttava jyrinä, ja paineaalto kaatoi ihmisiä jaloiltaan ja rikkoi ikkunoita satojen kilometrie…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sumatra — kaupunkilehti / Sumatra: Kovin ääni, joka on mitattu] Sumatran ja Jaavan välisessä Sundan salmessa purkautui elokuussa 1883 Krakatau. Päivän kolmas ja suurin räjähdys kello 10.02 kuului 3 110 kilometrin päähän Perthiin ja 4 800 kilometrin päähän Rodriguesin saarelle Intian valtamerellä: se on kovin ääni, joka on koskaan mitattu. Aallot nousivat Sumatran etelärannikolla 24 metriin. Paineaalto piirtyi barografeihin ympäri maailman ja kiersi maapallon kolme ja puoli kertaa. Tuhka jäi ilmakehään vuosiksi: illat paloivat punaisina, ja kun sään seuraajat kartoittivat tuhkan kulkeman virran, syntyi ensimmäinen havainto suihkuvirtauksesta.
+AIEMPI KYSYMYS: Miksi paikalta ei löydy kraatteria?
+AIEMPI VASTAUS (Livia):
+No jopas. Kraatteria ei jäänyt, koska kyseessä oli [[ilmaräjähdys]]: noin 50–60 metriä leveä kivinen [[asteroidi]] hajosi 5–10 kilometrin korkeudessa ennen kuin se ehti maahan. Räjähdyksen [[paineaalto]] kaatoi metsää, mutta törmäyskuoppaa ei syntynyt. Tapahtuma oli 30. kesäkuuta 1908, joten siitä on yli sata vuotta. Onneksi tuo oli aikoja sitten.
+KYSYMYS: Kerro lisää: paineaalto
+
+### 154
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tunguskan räjähdys (historia)
+Tietoruudun teksti: Tunguskan räjähdys tapahtui Podkamennaja Tunguska -joen lähellä Siperiassa 30. kesäkuuta 1908 aamulla. Sen voimaksi on arvioitu 3–50 megatonnia TNT:tä, ja se kaatoi metsää 2 150 neliökilometrin alalta. Silminnäkijäkertomusten perusteella jopa kolme ihmistä saattoi kuolla.
+
+Syyksi katsotaan meteorin ilmaräjähdys: noin 50–60 metriä leveä kivinen asteroidi tuli itäkaakosta lähes 27 kilometrin sekuntinopeudella ja hajosi 5–10 kilometrin korkeudessa. Koska se ei osunut maahan, kraatteria ei jäänyt. Kyseessä on suurin tunnetun historian aikana tapahtunut törmäys maapallolla.
+
+Kello 7.14 paikallista aikaa evenkiläiset ja venäläiset uudisasukkaat Baikalin luoteispuolen kukkuloilla näkivät sinertävän valon, joka oli lähes yhtä kirkas kuin aurinko. Noin kymmenen minuuttia myöhemmin kuului tykkitulta muistuttava jyrinä, ja paineaalto kaatoi ihmisiä jaloiltaan ja rikkoi ikkunoita satojen kilometrie…
+AIEMPI KYSYMYS: Kuinka laajalta alueelta metsä kaatui?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: metsää kaatui 2 150 neliökilometrin alalta. Räjähdyksen voimaksi on arvioitu 3–50 [[megatonnia]] TNT:tä, ja [[paineaalto]] kaatoi ihmisiä jaloiltaan ja rikkoi ikkunoita satojen kilometrien päässä. Alue oli harvaan asuttu, ja [[silminnäkijäkertomusten]] perusteella jopa kolme ihmistä saattoi kuolla. Tapahtuma ajoittuu 30. kesäkuuta 1908. Onpas siit onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: megatonnia
+
+### 155
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tunguskan räjähdys (historia)
+Tietoruudun teksti: Tunguskan räjähdys tapahtui Podkamennaja Tunguska -joen lähellä Siperiassa 30. kesäkuuta 1908 aamulla. Sen voimaksi on arvioitu 3–50 megatonnia TNT:tä, ja se kaatoi metsää 2 150 neliökilometrin alalta. Silminnäkijäkertomusten perusteella jopa kolme ihmistä saattoi kuolla.
+
+Syyksi katsotaan meteorin ilmaräjähdys: noin 50–60 metriä leveä kivinen asteroidi tuli itäkaakosta lähes 27 kilometrin sekuntinopeudella ja hajosi 5–10 kilometrin korkeudessa. Koska se ei osunut maahan, kraatteria ei jäänyt. Kyseessä on suurin tunnetun historian aikana tapahtunut törmäys maapallolla.
+
+Kello 7.14 paikallista aikaa evenkiläiset ja venäläiset uudisasukkaat Baikalin luoteispuolen kukkuloilla näkivät sinertävän valon, joka oli lähes yhtä kirkas kuin aurinko. Noin kymmenen minuuttia myöhemmin kuului tykkitulta muistuttava jyrinä, ja paineaalto kaatoi ihmisiä jaloiltaan ja rikkoi ikkunoita satojen kilometrie…
+AIEMPI KYSYMYS: Kuinka laajalta alueelta metsä kaatui?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: metsää kaatui 2 150 neliökilometrin alalta. Räjähdyksen voimaksi on arvioitu 3–50 [[megatonnia]] TNT:tä, ja [[paineaalto]] kaatoi ihmisiä jaloiltaan ja rikkoi ikkunoita satojen kilometrien päässä. Alue oli harvaan asuttu, ja [[silminnäkijäkertomusten]] perusteella jopa kolme ihmistä saattoi kuolla. Tapahtuma ajoittuu 30. kesäkuuta 1908. Onpas siit onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: silminnäkijäkertomusten
+
+### 156
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tunguskan räjähdys (historia)
+Tietoruudun teksti: Tunguskan räjähdys tapahtui Podkamennaja Tunguska -joen lähellä Siperiassa 30. kesäkuuta 1908 aamulla. Sen voimaksi on arvioitu 3–50 megatonnia TNT:tä, ja se kaatoi metsää 2 150 neliökilometrin alalta. Silminnäkijäkertomusten perusteella jopa kolme ihmistä saattoi kuolla.
+
+Syyksi katsotaan meteorin ilmaräjähdys: noin 50–60 metriä leveä kivinen asteroidi tuli itäkaakosta lähes 27 kilometrin sekuntinopeudella ja hajosi 5–10 kilometrin korkeudessa. Koska se ei osunut maahan, kraatteria ei jäänyt. Kyseessä on suurin tunnetun historian aikana tapahtunut törmäys maapallolla.
+
+Kello 7.14 paikallista aikaa evenkiläiset ja venäläiset uudisasukkaat Baikalin luoteispuolen kukkuloilla näkivät sinertävän valon, joka oli lähes yhtä kirkas kuin aurinko. Noin kymmenen minuuttia myöhemmin kuului tykkitulta muistuttava jyrinä, ja paineaalto kaatoi ihmisiä jaloiltaan ja rikkoi ikkunoita satojen kilometrie…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namibia — maalehti / Tiede: Viisi peiliä ylängöllä] 2002– — Khomasin ylängöllä Gamsbergin kupeessa seisoo viisi peiliä, jotka eivät katso tähtiä vaan hetken välähdystä. Kun gammasäde törmää ilmakehään, syntyy hiukkasryöppy, jonka heikko valo kuvataan maasta; kun useampi teleskooppi näkee saman ryöpyn eri kulmasta, säteen suunta voidaan laskea. Laitteisto sai nimekseen H.E.S.S. Victor Hessin mukaan, joka osoitti kosmisen säteilyn tulevan avaruudesta. Neljä lähes 12-metristä peiliä muodostaa 120 metrin neliön, ja keskelle nousi 2012 lisäksi 28-metrinen. Havainnot alkoivat 2002, ja 2016 ryhmä raportoi Linnunradan keskustan mustan aukon kiihdyttävän protoneja.
+- [Sumatra — kaupunkilehti / Sumatra: Kovin ääni, joka on mitattu] Sumatran ja Jaavan välisessä Sundan salmessa purkautui elokuussa 1883 Krakatau. Päivän kolmas ja suurin räjähdys kello 10.02 kuului 3 110 kilometrin päähän Perthiin ja 4 800 kilometrin päähän Rodriguesin saarelle Intian valtamerellä: se on kovin ääni, joka on koskaan mitattu. Aallot nousivat Sumatran etelärannikolla 24 metriin. Paineaalto piirtyi barografeihin ympäri maailman ja kiersi maapallon kolme ja puoli kertaa. Tuhka jäi ilmakehään vuosiksi: illat paloivat punaisina, ja kun sään seuraajat kartoittivat tuhkan kulkeman virran, syntyi ensimmäinen havainto suihkuvirtauksesta.
+AIEMPI KYSYMYS: Mitä eroa on asteroidilla, meteorilla ja meteoriitilla?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Asteroidi on Auringon ympäri kiertävä kivinen tai metallinen kappale, joka on pienempi kuin planeetta. Kun avaruuden kappale tai sen palanen syöksyy [[ilmakehään]] ja hehkuu, ilmiötä kutsutaan meteoriksi eli [[tähdenlennoksi]]. Jos kappale tai sen osa päätyy maahan asti, sitä sanotaan [[meteoriitiksi]]. Minusta kaikki ne näyttää ylhäältä ihan samalta.
+KYSYMYS: Kerro lisää: ilmakehään
+
+### 157
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tunguskan räjähdys (historia)
+Tietoruudun teksti: Tunguskan räjähdys tapahtui Podkamennaja Tunguska -joen lähellä Siperiassa 30. kesäkuuta 1908 aamulla. Sen voimaksi on arvioitu 3–50 megatonnia TNT:tä, ja se kaatoi metsää 2 150 neliökilometrin alalta. Silminnäkijäkertomusten perusteella jopa kolme ihmistä saattoi kuolla.
+
+Syyksi katsotaan meteorin ilmaräjähdys: noin 50–60 metriä leveä kivinen asteroidi tuli itäkaakosta lähes 27 kilometrin sekuntinopeudella ja hajosi 5–10 kilometrin korkeudessa. Koska se ei osunut maahan, kraatteria ei jäänyt. Kyseessä on suurin tunnetun historian aikana tapahtunut törmäys maapallolla.
+
+Kello 7.14 paikallista aikaa evenkiläiset ja venäläiset uudisasukkaat Baikalin luoteispuolen kukkuloilla näkivät sinertävän valon, joka oli lähes yhtä kirkas kuin aurinko. Noin kymmenen minuuttia myöhemmin kuului tykkitulta muistuttava jyrinä, ja paineaalto kaatoi ihmisiä jaloiltaan ja rikkoi ikkunoita satojen kilometrie…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Elmon linnake] 1552 (rakennus), 1565 (piiritys) Linnake rakennettiin 1552 vartioimaan kahden sataman, Grand Harbourin ja Marsamxettin, suuta samalta kapealta niemenkärjeltä, jolle Valletta myöhemmin nousi. Tähden muotoinen muuri oli aikanaan uutta linnoitustekniikkaa, mutta osmanien saapuessa 1565 moni piti sitä silti liian pienenä kestämään pitkää piiritystä. Se piti pintansa lähes kuukauden, 18. toukokuuta – 23. kesäkuuta, vaikka miehistö oli moninkertaisesti alivoimainen. Yöllä veneet toivat Birgusta lisää puolustajia ja veivät haavoittuneita pois, ja monet pahoin haavoittuneet ritarit kieltäytyivät poistumasta: he pyysivät kantaa itsensä tuoleilla muurille jatkaakseen taistelua istualtaan viimeiseen a…
+AIEMPI KYSYMYS: Mitä eroa on asteroidilla, meteorilla ja meteoriitilla?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Asteroidi on Auringon ympäri kiertävä kivinen tai metallinen kappale, joka on pienempi kuin planeetta. Kun avaruuden kappale tai sen palanen syöksyy [[ilmakehään]] ja hehkuu, ilmiötä kutsutaan meteoriksi eli [[tähdenlennoksi]]. Jos kappale tai sen osa päätyy maahan asti, sitä sanotaan [[meteoriitiksi]]. Minusta kaikki ne näyttää ylhäältä ihan samalta.
+KYSYMYS: Kerro lisää: tähdenlennoksi
+
+### 158
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tunguskan räjähdys (historia)
+Tietoruudun teksti: Tunguskan räjähdys tapahtui Podkamennaja Tunguska -joen lähellä Siperiassa 30. kesäkuuta 1908 aamulla. Sen voimaksi on arvioitu 3–50 megatonnia TNT:tä, ja se kaatoi metsää 2 150 neliökilometrin alalta. Silminnäkijäkertomusten perusteella jopa kolme ihmistä saattoi kuolla.
+
+Syyksi katsotaan meteorin ilmaräjähdys: noin 50–60 metriä leveä kivinen asteroidi tuli itäkaakosta lähes 27 kilometrin sekuntinopeudella ja hajosi 5–10 kilometrin korkeudessa. Koska se ei osunut maahan, kraatteria ei jäänyt. Kyseessä on suurin tunnetun historian aikana tapahtunut törmäys maapallolla.
+
+Kello 7.14 paikallista aikaa evenkiläiset ja venäläiset uudisasukkaat Baikalin luoteispuolen kukkuloilla näkivät sinertävän valon, joka oli lähes yhtä kirkas kuin aurinko. Noin kymmenen minuuttia myöhemmin kuului tykkitulta muistuttava jyrinä, ja paineaalto kaatoi ihmisiä jaloiltaan ja rikkoi ikkunoita satojen kilometrie…
+AIEMPI KYSYMYS: Mitä eroa on asteroidilla, meteorilla ja meteoriitilla?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Asteroidi on Auringon ympäri kiertävä kivinen tai metallinen kappale, joka on pienempi kuin planeetta. Kun avaruuden kappale tai sen palanen syöksyy [[ilmakehään]] ja hehkuu, ilmiötä kutsutaan meteoriksi eli [[tähdenlennoksi]]. Jos kappale tai sen osa päätyy maahan asti, sitä sanotaan [[meteoriitiksi]]. Minusta kaikki ne näyttää ylhäältä ihan samalta.
+KYSYMYS: Kerro lisää: meteoriitiksi
+
+### 159
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tunguskan räjähdys (historia)
+Tietoruudun teksti: Tunguskan räjähdys tapahtui Podkamennaja Tunguska -joen lähellä Siperiassa 30. kesäkuuta 1908 aamulla. Sen voimaksi on arvioitu 3–50 megatonnia TNT:tä, ja se kaatoi metsää 2 150 neliökilometrin alalta. Silminnäkijäkertomusten perusteella jopa kolme ihmistä saattoi kuolla.
+
+Syyksi katsotaan meteorin ilmaräjähdys: noin 50–60 metriä leveä kivinen asteroidi tuli itäkaakosta lähes 27 kilometrin sekuntinopeudella ja hajosi 5–10 kilometrin korkeudessa. Koska se ei osunut maahan, kraatteria ei jäänyt. Kyseessä on suurin tunnetun historian aikana tapahtunut törmäys maapallolla.
+
+Kello 7.14 paikallista aikaa evenkiläiset ja venäläiset uudisasukkaat Baikalin luoteispuolen kukkuloilla näkivät sinertävän valon, joka oli lähes yhtä kirkas kuin aurinko. Noin kymmenen minuuttia myöhemmin kuului tykkitulta muistuttava jyrinä, ja paineaalto kaatoi ihmisiä jaloiltaan ja rikkoi ikkunoita satojen kilometrie…
+AIEMPI KYSYMYS: Mitä megatonni TNT:tä tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Megatonni TNT:tä on räjähdysenergian yksikkö, joka vastaa miljoonan tonnin [[trinitrotolueenin]] räjähdyksessä vapautuvaa energiaa, eli noin 4,2 petajoulea. Se on tuhat [[kilotonnia]]. Räjähdysten voimaa verrataan tähän yksikköön, koska se antaa yhteisen mittapuun eri ilmiöille. Nämä luvut menee kyl yli kyyhkyn pään.
+KYSYMYS: Kerro lisää: trinitrotolueenin
+
+### 160
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tunguskan räjähdys (historia)
+Tietoruudun teksti: Tunguskan räjähdys tapahtui Podkamennaja Tunguska -joen lähellä Siperiassa 30. kesäkuuta 1908 aamulla. Sen voimaksi on arvioitu 3–50 megatonnia TNT:tä, ja se kaatoi metsää 2 150 neliökilometrin alalta. Silminnäkijäkertomusten perusteella jopa kolme ihmistä saattoi kuolla.
+
+Syyksi katsotaan meteorin ilmaräjähdys: noin 50–60 metriä leveä kivinen asteroidi tuli itäkaakosta lähes 27 kilometrin sekuntinopeudella ja hajosi 5–10 kilometrin korkeudessa. Koska se ei osunut maahan, kraatteria ei jäänyt. Kyseessä on suurin tunnetun historian aikana tapahtunut törmäys maapallolla.
+
+Kello 7.14 paikallista aikaa evenkiläiset ja venäläiset uudisasukkaat Baikalin luoteispuolen kukkuloilla näkivät sinertävän valon, joka oli lähes yhtä kirkas kuin aurinko. Noin kymmenen minuuttia myöhemmin kuului tykkitulta muistuttava jyrinä, ja paineaalto kaatoi ihmisiä jaloiltaan ja rikkoi ikkunoita satojen kilometrie…
+AIEMPI KYSYMYS: Mitä megatonni TNT:tä tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Megatonni TNT:tä on räjähdysenergian yksikkö, joka vastaa miljoonan tonnin [[trinitrotolueenin]] räjähdyksessä vapautuvaa energiaa, eli noin 4,2 petajoulea. Se on tuhat [[kilotonnia]]. Räjähdysten voimaa verrataan tähän yksikköön, koska se antaa yhteisen mittapuun eri ilmiöille. Nämä luvut menee kyl yli kyyhkyn pään.
+KYSYMYS: Kerro lisää: kilotonnia

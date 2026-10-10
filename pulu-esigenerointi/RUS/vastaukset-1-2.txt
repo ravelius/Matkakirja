@@ -1,6 +1,6 @@
 ### 6.1
 KYSYMYS: Kuka Vitus Bering oli?
-Kato, tästä miehestä minä olen lukenut matkalla useammankin kirjeen. Vitus Bering syntyi Tanskassa [[Horsensin]] kaupungissa vuonna 1681 ja siirtyi nuorena Venäjän palvelukseen, jossa hänestä tuli laivaston upseeri. Hän johti [[Pietari Suuren]] ohjeiden pohjalta Kamtšatkan retkikuntaa, ja sen aikana hän purjehti vuonna 1728 salmen läpi Tyyneltämereltä pohjoiseen. Myöhemmin hän johti vielä toista, laajempaa retkikuntaa, ja hänen aluksensa Pyhä apostoli Pietari sekä [[Aleksei Tširikovin]] alus Pyhä apostoli Paavali antoivat nimen Avatšanlahden satamalle. Bering kuoli talvella 1741 paluumatkalla autiolle saarelle, jota kutsutaan nykyään hänen nimellään. Ja minä luulin, että kyyhkyn reitit olivat pitkiä.
+Kato, tästä miehestä minä olen lukenut matkalla useammankin kirjeen. Vitus Bering syntyi Tanskassa [[Horsensin]] kaupungissa vuonna 1681 ja siirtyi nuorena Venäjän palvelukseen, jossa hänestä tuli laivaston upseeri. Hän johti [[Pietari Suuren]] määräyksestä Kamtšatkan retkikuntaa, ja sen aikana hän purjehti vuonna 1728 salmen läpi Tyyneltämereltä pohjoiseen. Myöhemmin hän johti vielä toista, laajempaa retkikuntaa, ja hänen aluksensa Pyhä apostoli Pietari sekä [[Aleksei Tširikovin]] alus Pyhä apostoli Paavali antoivat nimen Avatšanlahden satamalle. Bering kuoli talvella 1741 paluumatkalla autiolle saarelle, jota kutsutaan nykyään hänen nimellään. Ja minä luulin, että kyyhkyn reitit olivat pitkiä.
 JATKOT:
 Mikä oli Suuri pohjoinen retkikunta?
 Mitä Kamtšatkan retkikunnat tutkivat?
@@ -44,7 +44,7 @@ Miksi Kaspianmeren pinta on vaihdellut?
 
 ### 7.2
 KYSYMYS: Mikä Rusin kaganaatti oli?
-Joo, tän minä tiedän, mutta se on tutkijoille vaikea nippu. Rusin kaganaatilla tarkoitetaan varhaista, 800-luvun alkupuolella syntynyttä itäslaavilais-skandinaavista valtiomuodostelmaa, jonka hallitsijaa lähteet kutsuvat kaganiksi, kuten itäisessä Euroopassa oli totuttu tehdä turkkilaisten ja kasaarien keskuudessa. Tärkein varhainen maininta on Bertinin annaaleissa vuodelta 839: [[Ludvig Hurskaan]] hoviin saapui kansaa, jonka lähettiläät sanoivat itseään rusien edustajiksi ja jonka ruhtinasta kutsuttiin kaganiksi. Missä kaganaatin keskus tarkalleen sijaitsi, tutkijat eivät ole yksimielisiä, ja siksi tiedot jäävät osin epävarmoiksi. Kirje oli siis matkalla jo silloin.
+Joo, tän minä tiedän, mutta se on tutkijoille vaikea nippu. Rusin kaganaatilla tarkoitetaan varhaista, 800-luvun alkupuolella syntynyttä itäslaavilais-skandinaavista valtiomuodostelmaa, jonka hallitsijaa lähteet kutsuvat kaganiksi, kuten itäisessä Euroopassa oli totuttu tehdä turkkilaisten ja kasaarien keskuudessa. Tärkein varhainen maininta on Bertinin [[annaaleissa]] vuodelta 839: [[Ludvig Hurskaan]] hoviin saapui kansaa, jonka lähettiläät sanoivat itseään rusien edustajiksi ja jonka ruhtinasta kutsuttiin kaganiksi. Missä kaganaatin keskus tarkalleen sijaitsi, tutkijat eivät ole yksimielisiä, ja siksi tiedot jäävät osin epävarmoiksi. Kirje oli siis matkalla jo silloin.
 JATKOT:
 Keitä olivat varhaiset rusit?
 Mistä Venäjän nimi on peräisin?
@@ -58,7 +58,7 @@ Mikä Nižni Novgorodin vuosittainen markkina oli?
 
 ### 7.4
 KYSYMYS: Millainen on Volgan suisto?
-Mmm— Volgan suisto Kaspianmeren rannalla on laaja ja haarautuva vesistö, jossa joki jakautuu lukuisiksi sivu-uomiksi ja pieniksi saariksi ennen kuin se päättyy mereen. Lähteiden mukaan se kuuluu Euroopan suurimpiin jokisuistoihin. Alue on tärkeä luonnonsuojelun kannalta, sillä sen kosteikot ovat muuttolintujen levähdyspaikkoja ja kalaston, esimerkiksi sampikalojen, elinympäristöä. Suiston keskuksena on [[Astrahanin]] kaupunki. Pöllö olisi kertonut tämän paremmin, mutta hän parantelee yhä siipeään.
+Mmm— Volgan suisto Kaspianmeren rannalla on laaja ja haarautuva vesistö, jossa joki jakautuu lukuisiksi sivu-uomiksi ja pieniksi saariksi ennen kuin se päättyy mereen. Lähteiden mukaan se kuuluu Euroopan suurimpiin jokisuistoihin. Alue on tärkeä luonnonsuojelun kannalta, sillä sen [[kosteikot]] ovat muuttolintujen levähdyspaikkoja ja kalaston, esimerkiksi sampikalojen, elinympäristöä. Suiston keskuksena on [[Astrahanin]] kaupunki. Pöllö olisi kertonut tämän paremmin, mutta hän parantelee yhä siipeään.
 JATKOT:
 Miksi sampikalat ovat uhanalaisia?
 Mitä lintuja suistossa pesii?
@@ -88,7 +88,7 @@ Missä Altain vuoristo sijaitsee?
 
 ### 8.3
 KYSYMYS: Mikä Irtyš on ja mistä se virtaa?
-Odotas vähän. Irtyš on Obin suurin sivujoki, ja se on itsekin erittäin pitkä: se saa alkunsa Altain vuoriston itäisiltä rinteiltä, virtaa [[Kazakstanin]] läpi Venäjälle ja yhtyy Obiin Länsi-Siperiassa. Yhdessä ne muodostavat kaikkiaan 5 410 kilometrin mittaisen jokijärjestelmän, joka on maailman seitsemänneksi pisin. Joet kulkevat osittain laajoilla, matalilla tasangoilla, joilla vesi liikkuu hitaasti ja usein haarautuu moniksi uomiksi. Sivujoki pitkine matkoineen on siis suurempi kuin moni oma joki.
+Odotas vähän. Irtyš on Obin suurin [[sivujoki]], ja se on itsekin erittäin pitkä: se saa alkunsa Altain vuoriston itäisiltä rinteiltä, virtaa [[Kazakstanin]] läpi Venäjälle ja yhtyy Obiin Länsi-Siperiassa. Yhdessä ne muodostavat kaikkiaan 5 410 kilometrin mittaisen jokijärjestelmän, joka on maailman seitsemänneksi pisin. Joet kulkevat osittain laajoilla, matalilla tasangoilla, joilla vesi liikkuu hitaasti ja usein haarautuu moniksi uomiksi. Sivujoki pitkine matkoineen on siis suurempi kuin moni oma joki.
 JATKOT:
 Miten Ob ja Irtyš yhtyvät?
 Mitä Länsi-Siperian tasanko on?
@@ -104,14 +104,14 @@ Miksi ikirouta sulaa nykyään?
 
 ### 8.5
 KYSYMYS: Mitä Altain vuoret ovat?
-Joo, tän minä tiedän. Altai on laaja vuoristo Keski-Aasiassa, jossa Venäjän, Kazakstanin, Kiinan ja Mongolian alueet kohtaavat. Sen korkein huippu on Belukha, jonka korkeus on noin 4 500 metriä, ja sieltä alkaa moni tärkeä joki, muun muassa Ob-joen latvavedet Katun ja Bija. Vuoristossa on [[jäätiköitä]], järviä ja monipuolista kasvillisuutta, ja alue on tunnettu myös arkeologisista löydöistään. Minä pysyn alempana, ilma on siellä ohutta.
+Joo, tän minä tiedän. Altai on laaja [[vuoristo]] Keski-Aasiassa, jossa Venäjän, Kazakstanin, Kiinan ja Mongolian alueet kohtaavat. Sen korkein huippu on Belukha, jonka korkeus on noin 4 500 metriä, ja sieltä alkaa moni tärkeä joki, muun muassa Ob-joen latvavedet Katun ja Bija. Vuoristossa on [[jäätiköitä]], järviä ja monipuolista kasvillisuutta, ja alue on tunnettu myös arkeologisista löydöistään. Minä pysyn alempana, ilma on siellä ohutta.
 JATKOT:
 Mitä arkeologisia löytöjä Altailta on tehty?
 Miten Katun ja Bija yhtyvät?
 
 ### 9.1
 KYSYMYS: Kuinka monta kupolia Kirkastuksen kirkossa on?
-Nyt muistan: kaksikymmentäkaksi. Kirkastuksen kirkossa on 22 kupolia, ja se on Kizhin pogostan kahdesta suuresta puukirkosta suurempi. Kupolit on rakennettu puusta ja nousevat porrastaen ylöspäin, ja ne muodostavat yhdessä kirkon tunnistettavan siluetin. Kirkon alttari laskettiin 6. kesäkuuta 1714, ja se on lämmittämätön kesäkirkko. Vieressä on [[Esirukouksen kirkko]], jossa kupoleita on yhdeksän. Pelkkä laskeminen väsyttää jo kyyhkyn.
+Nyt muistan: kaksikymmentäkaksi. Kirkastuksen kirkossa on 22 [[kupolia]], ja se on Kizhin pogostan kahdesta suuresta puukirkosta suurempi. Kupolit on rakennettu puusta ja nousevat porrastaen ylöspäin, ja ne muodostavat yhdessä kirkon tunnistettavan siluetin. Kirkon alttari laskettiin 6. kesäkuuta 1714, ja se on lämmittämätön kesäkirkko. Vieressä on [[Esirukouksen kirkko]], jossa kupoleita on yhdeksän. Pelkkä laskeminen väsyttää jo kyyhkyn.
 JATKOT:
 Miksi kirkossa on näin monta kupolia?
 Mikä on Esirukouksen kirkko?
@@ -127,7 +127,7 @@ Kuka voi vierailla Kizhin saarella?
 
 ### 9.3
 KYSYMYS: Miten kirkot rakennettiin ilman nauloja?
-Hyvä kysymys tuo. Kizhin kirkot on rakennettu hirsistä käyttäen [[salvostekniikkaa]]: hirret yhdistetään toisiinsa lovilla ja liitoksilla niin, että rakenne pysyy koossa oman painonsa ja muotonsa ansiosta. Rakennusten perusyksikkö on pyöreä mäntyhirsi, jonka halkaisija on noin kolmekymmentä senttiä ja pituus kolmesta viiteen metriä. Työkaluna käytettiin pääasiassa kirvestä, ja tuhannet hirret tuotiin mantereelta saarelle. Kuvaus on tiivis, ja tarkat liitostekniikat vaihtelevat rakennuksesta toiseen. Minä en olisi jaksanut kantaa yhtäkään hirttä.
+Hyvä kysymys tuo. Kizhin kirkot on rakennettu hirsistä käyttäen [[salvostekniikkaa]]: hirret yhdistetään toisiinsa lovilla ja liitoksilla niin, että rakenne pysyy koossa oman painonsa ja muotonsa ansiosta. Rakennusten perusyksikkö on pyöreä mäntyhirsi, jonka halkaisija on noin kolmekymmentä senttiä ja pituus kolmesta viiteen metriä. Työkaluna käytettiin pääasiassa [[kirvestä]], ja tuhannet hirret tuotiin mantereelta saarelle. Kuvaus on tiivis, ja tarkat liitostekniikat vaihtelevat rakennuksesta toiseen. Minä en olisi jaksanut kantaa yhtäkään hirttä.
 JATKOT:
 Miten puukirkot suojataan lahoamiselta?
 Mitä muita puukirkkoja Venäjällä on?
@@ -142,7 +142,7 @@ PAIKKA: Kizhin saari | 62.07 | 35.22 | alue
 
 ### 9.5
 KYSYMYS: Millä Kizhin kirkkojen kupolit on päällystetty?
-Katotaas. Kirkkojen kupolit on päällystetty [[haapalastuilla]], eli ohuilla haavasta tehdyillä laudoilla, jotka asetetaan limittäin kuin kalansuomut. Haapapuu harmaantuu ajan myötä hopeisenkiiltoiseksi, ja siksi kupolit vaikuttavat auringossa metallinhohtoisilta. Lastukatto suojaa rakennetta sateelta ja lumelta, ja uusin lastuja on vaihdettava aika ajoin. Kupoleita on kahdessa kirkossa yhteensä kolmekymmentäyksi, ja kaikki on päällystetty samalla tavalla. Viisas Pöllö olisi osannut kertoa pidemmän tarinan, mutta hänet kutsuttiin puhumaan johonkin.
+Katotaas. Kirkkojen kupolit on päällystetty [[haapalastuilla]], eli ohuilla haavasta tehdyillä laudoilla, jotka asetetaan limittäin kuin kalansuomut. [[Haapapuu]] harmaantuu ajan myötä hopeisenkiiltoiseksi, ja siksi kupolit vaikuttavat auringossa metallinhohtoisilta. Lastukatto suojaa rakennetta sateelta ja lumelta, ja uusin lastuja on vaihdettava aika ajoin. Kupoleita on kahdessa kirkossa yhteensä kolmekymmentäyksi, ja kaikki on päällystetty samalla tavalla. Viisas Pöllö olisi osannut kertoa pidemmän tarinan, mutta hänet kutsuttiin puhumaan johonkin.
 JATKOT:
 Kuinka usein haapalastut täytyy vaihtaa?
 Miten Kizhin kirkkoja on korjattu?
@@ -156,7 +156,7 @@ Mitä Nikonin kirkkouudistus muutti?
 
 ### 10.2
 KYSYMYS: Mitä luostarissa tuotettiin?
-Joo, tään minä muistan. Solovetskin luostari kasvoi kaupankäynnin varassa Vienanmeren alueen talouskeskukseksi, ja se tuotti suolaa, jota keitettiin suolakeittimöissä: niitä oli 1660-luvulla 54. Lisäksi luostarilla oli ansapyyntiä, kalastusta, kiillelouhoksia, rautaruukkeja ja helmenkalastusta. Luostarissa eli 1600-luvulla noin 350 munkkia sekä 600–700 palvelijaa, käsityöläistä ja talonpoikaa, joten kyseessä oli oikea pieni yhteisö. Luostari oli myös rajalinnoitus, jossa oli kymmeniä tykkejä. Suolaa riitti, mutta pullasta ei ole tietoa.
+Joo, tään minä muistan. Solovetskin luostari kasvoi kaupankäynnin varassa [[Vienanmeren]] alueen talouskeskukseksi, ja se tuotti [[suolaa]], jota keitettiin suolakeittimöissä: niitä oli 1660-luvulla 54. Lisäksi luostarilla oli ansapyyntiä, kalastusta, kiillelouhoksia, rautaruukkeja ja helmenkalastusta. Luostarissa eli 1600-luvulla noin 350 munkkia sekä 600–700 palvelijaa, käsityöläistä ja talonpoikaa, joten kyseessä oli oikea pieni yhteisö. Luostari oli myös [[rajalinnoitus]], jossa oli kymmeniä tykkejä. Suolaa riitti, mutta pullasta ei ole tietoa.
 JATKOT:
 Miksi suola oli niin arvokasta?
 Miten luostari puolustautui hyökkäyksiä vastaan?
