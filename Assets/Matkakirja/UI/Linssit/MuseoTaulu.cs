@@ -262,7 +262,7 @@ namespace Matkakirja.Natiivi
                     kKapiteeli.text = $"{t.Taiteilija} · {t.Vuosi}";
                     kNimi.text = t.Otsikko;
                     Rivi(kAlkuperainen, t.Alkuperainen);
-                    Rivi(kTekniikka, string.IsNullOrEmpty(t.Tekniikka) ? t.Mitat : $"{Isolla(t.Tekniikka)}, {t.Mitat}");
+                    Rivi(kTekniikka, string.IsNullOrEmpty(t.Tekniikka) ? t.Mitat : t.Mitat == null ? Isolla(t.Tekniikka) : $"{Isolla(t.Tekniikka)}, {t.Mitat}");
                     Rivi(kKuvateksti, t.Kuvateksti);
                     // Havainnekuva kuten nostoissa (ui.nosto.havainnekuva) lähderivin perään.
                     string lahde = string.Join(" · ", new[] { t.Lahde, t.Lisenssi }.Where(x => !string.IsNullOrWhiteSpace(x)));

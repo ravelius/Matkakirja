@@ -18,7 +18,10 @@ namespace Matkakirja.Linssit.Testit
         {
             var s = Alankomaat();
             Oleta.Tosi(s.Osat.Count >= 13 && s.Teospaikat.Count >= 50 && s.Reitti.Count >= 10, $"osat {s.Osat.Count}, paikat {s.Teospaikat.Count}, reitti {s.Reitti.Count}");
-            Oleta.Tosi(s.Teokset.Count >= 10 && s.Teokset.Count <= 20, $"ensimmäinen pala 10–20 teosta: {s.Teokset.Count}");
+            // LS2 10.10. (PT 20.5x "ilman tyhjiä kohtia"): jokaisella teos_ehdotuksella on teos (ennen 20 ensimmäistä).
+            int ehdotuksia = 0; var ehd = new System.Collections.Generic.HashSet<string>();
+            foreach (var p in s.Teospaikat) if (p.Ehdotus != null && ehd.Add(p.Ehdotus)) ehdotuksia++;
+            Oleta.Sama(ehdotuksia, s.Teokset.Count, "kaikki sali.json:n teos_ehdotukset teoksina");
             Oleta.Tosi(s.Ripustukset.Count == s.Teokset.Count, $"jokainen teos seinällä: {s.Ripustukset.Count}/{s.Teokset.Count}");
             var yv = s.Ripustukset.Find(r => r.Teos.Id == "SK-C-5");
             Oleta.Tosi(yv != null && Math.Abs(yv.Leveys - 4.535) < 1e-6 && Math.Abs(yv.Korkeus - 3.795) < 1e-6 && !yv.Pienennetty, "Yövartio todellisessa koossa 453,5 × 379,5 cm");
@@ -28,15 +31,21 @@ namespace Matkakirja.Linssit.Testit
                 Oleta.Tosi(r.Teos.Grafiikka == r.Paikka.Grafiikka, $"{r.Teos.Id}: grafiikka grafiikkapaikalla ({r.Paikka.Sopii})");
                 Oleta.Tosi(s.Kehykset.ContainsKey(r.Paikka.Kehysprofiili), $"{r.Paikka.Id}: kehysprofiili {r.Paikka.Kehysprofiili}");
                 Oleta.Tosi(r.Paikka.Valo != null && r.Paikka.Valo.Lx >= 50 && r.Paikka.Valo.Kelvin >= 3000 && r.Paikka.Valo.Kelvin <= 3500, $"{r.Paikka.Id}: valokeila 3000–3500 K");
-                Oleta.Tosi(!string.IsNullOrEmpty(r.Teos.Otsikko) && !string.IsNullOrEmpty(r.Teos.Taiteilija) && r.Teos.Lisenssi.StartsWith("Public Domain"), $"{r.Teos.Id}: kortin tiedot ja PD");
+                Oleta.Tosi(!string.IsNullOrEmpty(r.Teos.Otsikko) && !string.IsNullOrEmpty(r.Teos.Taiteilija) && r.Teos.Lisenssi.StartsWith("Public Domain", StringComparison.OrdinalIgnoreCase), $"{r.Teos.Id}: kortin tiedot ja PD");
             }
             Oleta.Tosi(s.Teokset.Find(t => t.Id == "SK-A-2344").Mitat == "45,5 × 41 cm", "kortin mitat suomeksi");
             foreach (var t in s.Teokset)
             {
                 Oleta.Tosi(t.Kuvateksti != null && t.Kuvateksti.Length > 20 && !t.Havainnekuva, $"{t.Id}: kuvateksti (Sisältökirjuri), ei havainnekuva");
-                Oleta.Tosi(t.Kuva != null && t.Kuva.StartsWith("lahde/kuvat/seina/") && t.Paketti == "astc-v1/" + t.Id + "/" && Math.Max(t.KuvaLeveys, t.KuvaKorkeus) == 8192,
+                Oleta.Tosi(t.Kuva != null && (t.Kuva.StartsWith("lahde/kuvat/seina/") || t.Kuva.StartsWith("grafiikka/kuvat/seina/")) && t.Paketti == "astc-v1/" + t.Id + "/" && Math.Max(t.KuvaLeveys, t.KuvaKorkeus) == 8192,
                     $"{t.Id}: seinäkuva, ASTC-paketti ja lähde 8192 px");
-                Oleta.Tosi(Math.Abs((double)t.KuvaLeveys / t.KuvaKorkeus - t.LeveysCm / t.KorkeusCm) / (t.LeveysCm / t.KorkeusCm) < 0.07, $"{t.Id}: kuvan ja mittojen suhde ≤ 7 %");
+                if (t.MitatPuuttuu)
+                {
+                    var r = s.Ripustukset.Find(x => x.Teos == t);
+                    Oleta.Tosi(t.Mitat == null && r != null && Math.Abs(r.Leveys / r.Korkeus - t.Kuvasuhde) < 0.01
+                               && (Math.Abs(r.Korkeus - r.Paikka.MaxKorkeus) < 1e-6 || Math.Abs(r.Leveys - r.Paikka.MaxLeveys) < 1e-6), $"{t.Id}: mitaton teos paikan kokoon kuvasuhteella");
+                }
+                else Oleta.Tosi(Math.Abs((double)t.KuvaLeveys / t.KuvaKorkeus - t.LeveysCm / t.KorkeusCm) / (t.LeveysCm / t.KorkeusCm) < 0.07, $"{t.Id}: kuvan ja mittojen suhde ≤ 7 %");
             }
             foreach (var rp in s.Reitti) if (rp.Kohde != null) Oleta.Tosi(s.HaePaikka(rp.Kohde) != null || s.Veistospaikat.Contains(rp.Kohde), $"reitin kohde {rp.Kohde} on teos- tai veistospaikka");
         }

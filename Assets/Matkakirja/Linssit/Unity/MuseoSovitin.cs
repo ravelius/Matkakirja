@@ -133,6 +133,9 @@ namespace Matkakirja.Natiivi
             tekstuurit.Kirjaa = o.Kirjaa;
             tekstuurit.Paikka = id => id != null && rakennus != null && rakennus.Kuvapaikat.TryGetValue(id, out var kp) ? kp : null;
             tekstuurit.EiPakettia = JpgVaralle;
+            var kaikki = new List<string>();
+            foreach (var r in sali.Ripustukset) kaikki.Add(r.Teos.Id);
+            tekstuurit.Kaikki = kaikki;
             veistokset = nayttamo.gameObject.AddComponent<MuseoVeistokset>();
             veistokset.Juuri = KuvaJuuri != null && rakennus.Veistospaikat.Count > 0 ? KuvaJuuri + "astc-v1/patsaat/" : null;
             veistokset.Paikat = () => rakennus?.Veistospaikat;

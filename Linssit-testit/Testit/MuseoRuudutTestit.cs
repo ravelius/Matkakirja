@@ -137,5 +137,21 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama("c,d,e,f", string.Join(",", MuseoEsilataus.Seinat(j, 2)));
             Oleta.Sama("e,f", string.Join(",", MuseoEsilataus.Seinat(j, 4)));
         }
+
+        [Testi] static void SeinatKavelijanYmparilta()
+        {
+            long yksi = MuseoMuisti.SeinaTavut(new TeosPyramidi("x", 4000, 3000));
+            var e = new List<(string, double, long)>();
+            for (int i = 0; i < 40; i++) e.Add(("t" + i, 1.0 + i * 0.5, yksi));
+            e.Add(("kaukana", 30, yksi));
+            e.Add(("kierros", 25, yksi));
+            var v = SeinaValinta.Valitse(new[] { "kierros", null }, e);
+            Oleta.Sama("kierros", v[0], "pakollinen ensin, vaikka kaukana");
+            Oleta.Sama("t0", v[1], "sitten lähin");
+            Oleta.Tosi(!v.Contains("kaukana"), "yli 22 m ei");
+            long s = 0; foreach (var id in v) s += yksi;
+            Oleta.Tosi(s <= MuseoBudjetti.SeinatTavut, "budjetti pitää: " + s);
+            Oleta.Tosi(v.Count >= 25, "60 Mt:iin mahtuu ainakin 25 seinää: " + v.Count);
+        }
     }
 }

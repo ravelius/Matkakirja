@@ -233,4 +233,33 @@ namespace Matkakirja.Linssit.Museo
         }
         public const int AvausOdottaa = 4;
     }
+
+    /// <summary>Seinätasot kävelijän ympäriltä (LS2 10.10., PT 20.5x "kaikki salit ilman tyhjiä kohtia"): ennen vain kierroksen
+    /// pysähdysten teokset saivat oikean kuvan, ja kierroksen ulkopuoliset (komeroiden sivuseinät, grafiikkakabinetti, vapaa kulku)
+    /// jäivät paikkakuviksi. Pakolliset (nykyinen + kierroksen esilataus) ensin, sitten lähimmät Raja m:n sisältä budjettiin asti.</summary>
+    public static class SeinaValinta
+    {
+        public const double Raja = 22;
+        public static List<string> Valitse(IEnumerable<string> pakolliset, IList<(string id, double etaisyys, long tavut)> ehdokkaat,
+                                           long budjetti = MuseoBudjetti.SeinatTavut)
+        {
+            var tavut = new Dictionary<string, long>();
+            foreach (var e in ehdokkaat) tavut[e.id] = e.tavut;
+            var t = new List<string>(); long s = 0;
+            foreach (var id in pakolliset)
+            {
+                if (id == null || t.Contains(id)) continue;
+                t.Add(id); s += tavut.TryGetValue(id, out long b) ? b : 0;
+            }
+            var j = new List<(string id, double etaisyys, long tavut)>(ehdokkaat);
+            j.Sort((a, b) => a.etaisyys.CompareTo(b.etaisyys));
+            foreach (var e in j)
+            {
+                if (e.etaisyys > Raja) break;
+                if (t.Contains(e.id) || s + e.tavut > budjetti) continue;
+                s += e.tavut; t.Add(e.id);
+            }
+            return t;
+        }
+    }
 }

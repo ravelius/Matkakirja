@@ -1,6 +1,7 @@
 // TAIDEMUSEON TEOSKUVAT LAITTEELLA (Natiiviseppä 10.10.2026; PT 09.5x, suunnitelma luvut 5 ja 6.4; ydin Ydin/Museo/MuseoRuudut.cs,
 // paketit tyokalut/teos_astc.py). Ämpärireitti, ei Addressablesia: <Juuri>/<teos>/{teos.json, seina.astcm, yks/<z>/<x>_<y>.astc}.
-//  - Seinätaso: nykyinen + 3 seuraavaa pysähdystä (MuseoEsilataus), muut näkyvät paikkakuvina; budjetti (MuseoBudjetti) rajaa.
+//  - Seinätaso: nykyinen + 3 seuraavaa pysähdystä (MuseoEsilataus) ja kävelijän lähimmät teokset 22 m:n sisältä (SeinaValinta,
+//    LS2 10.10.: kierroksen ulkopuoliset jäivät paikkakuviksi), enintään SeiniaHaussa kerrallaan; budjetti (MuseoBudjetti) rajaa.
 //    4 Gt:n laitteilla ja vakavassa hädässä yksi mip pois (2048 → 1024 px).
 //  - Yksityiskohta: vain nykyiselle teokselle. Kamerasta lasketaan, montako näytön pikseliä teoksen leveys vie ja mikä osa näkyy
 //    (RuutuValinta) → puuttuvat ruudut ladataan keskeltä ulos, enintään 2 GPU-siirtoa kehyksessä. Ruutu on oma nelikulmio
@@ -37,6 +38,14 @@ namespace Matkakirja.Natiivi
         /// 2 s:ssa, kun levyvälimuistin ruudut jonottivat GPU-siirtoa 2/kehys).</summary>
         public int RuutujaMatkalla = 8;
         int ruutujaHaussa;
+        /// <summary>Kaikkien ripustettujen teosten tunnukset (MuseoSovitin); null = vain kierroksen teokset (vanha käytös).</summary>
+        public IList<string> Kaikki;
+        /// <summary>Seinätasoja yhtä aikaa haussa (lähimmät ensin; avauksessa ei 20 rinnakkaista latausta ja purkua samaan kehykseen).</summary>
+        public int SeiniaHaussa = 3;
+        readonly List<(string, double, long)> ehdokkaat = new List<(string, double, long)>();
+        readonly List<string> valinta = new List<string>();
+        float seuraavaValinta;
+        int seiniaHaussa;   // vain seinätasot (haussa-joukossa ovat myös ruutujen osoitteet)
 
         readonly Dictionary<string, TeosPyramidi> pyramidit = new Dictionary<string, TeosPyramidi>();
         readonly Dictionary<string, Texture2D> seinat = new Dictionary<string, Texture2D>();
@@ -65,10 +74,12 @@ namespace Matkakirja.Natiivi
         {
             if (Juuri == null || Paikka == null) return;
             MittaaHata();
-            tarvitaan.Clear();
-            foreach (var id in MuseoEsilataus.Seinat(jarjestys, kohta)) tarvitaan.Add(id);
-            if (teos != null) tarvitaan.Add(teos);
-            foreach (var id in tarvitaan) Seina(id);
+            if (teos != nykyinen || Time.unscaledTime >= seuraavaValinta) { seuraavaValinta = Time.unscaledTime + 0.5f; Valitse(kamera, teos, jarjestys, kohta); }
+            foreach (var id in valinta)
+            {
+                if (seiniaHaussa >= SeiniaHaussa) break;
+                Seina(id);
+            }
             KarsiSeinat();
             if (teos != nykyinen) { nykyinen = teos; varasto.Pyyda(Array.Empty<RuutuAvain>()); NaytaRuudut(); }
             if (teos != null && kamera != null && pyramidit.TryGetValue(teos, out var p) && p.OnYksityiskohtaa && Paikka(teos) is { } kp)
@@ -99,10 +110,34 @@ namespace Matkakirja.Natiivi
         }
 
         // --- Seinätaso ---------------------------------------------------------------------------------------------------------
+        void Valitse(Camera kamera, string teos, IList<string> jarjestys, int kohta)
+        {
+            var pakolliset = MuseoEsilataus.Seinat(jarjestys, kohta);
+            if (teos != null) pakolliset.Insert(0, teos);
+            ehdokkaat.Clear();
+            if (kamera != null && Kaikki != null)
+            {
+                var kp = kamera.transform.position;
+                foreach (var id in Kaikki)
+                {
+                    if (id == null || puuttuu.Contains(id) || !(Paikka(id) is { Isa: { } isa } p)) continue;
+                    long t = seinat.TryGetValue(id, out var k) ? MuseoMuisti.AstcTavut(k.width, k.height)
+                           : pyramidit.TryGetValue(id, out var py) ? MuseoMuisti.SeinaTavut(py, budjetti.SeinaOhita)
+                           : p.PxLeveys > 0 && p.PxKorkeus > 0 ? MuseoMuisti.SeinaTavut(new TeosPyramidi(id, p.PxLeveys, p.PxKorkeus), budjetti.SeinaOhita)
+                           : 2L << 20;
+                    ehdokkaat.Add((id, Vector3.Distance(kp, isa.position), t));
+                }
+            }
+            valinta.Clear();
+            valinta.AddRange(SeinaValinta.Valitse(pakolliset, ehdokkaat));
+            tarvitaan.Clear();
+            foreach (var id in valinta) tarvitaan.Add(id);
+        }
+
         void Seina(string id)
         {
             if (seinat.ContainsKey(id) || haussa.Contains(id) || puuttuu.Contains(id)) return;
-            haussa.Add(id);
+            haussa.Add(id); seiniaHaussa++;
             StartCoroutine(HaeSeina(id));
         }
 
@@ -119,7 +154,7 @@ namespace Matkakirja.Natiivi
                     pyramidit[id] = new TeosPyramidi(id, Convert.ToInt32(d["leveys"]), Convert.ToInt32(d["korkeus"]));
             }
             if (pyramidit.ContainsKey(id)) yield return Hae(Url(id) + "seina.astcm", b => data = b);
-            haussa.Remove(id);
+            haussa.Remove(id); seiniaHaussa--;
             string syy = data == null ? "lataus" : null;
             // iOS-simulaattorin GPU ei tue ASTC:tä (DioraamaAstc.AstcTuettu) → syy "laite ei tue", JPEG-vara (EiPakettia) kuten suunniteltu.
             var kuva = data != null ? DioraamaAstc.Lue(data, "Museo seinä " + id, out syy, TextureWrapMode.Clamp, budjetti.SeinaOhita) : null;
@@ -276,6 +311,7 @@ namespace Matkakirja.Natiivi
             foreach (var k in new List<int>(paikat.Keys)) VapautaPaikka(k);
             foreach (var s in seinat.Values) if (s != null) Destroy(s);
             seinat.Clear(); seinaJarjestys.Clear(); paikkakuvat.Clear(); pyramidit.Clear(); haussa.Clear(); puuttuu.Clear(); siirrot.Clear(); ruutujaHaussa = 0;
+            seiniaHaussa = 0; valinta.Clear(); ehdokkaat.Clear(); tarvitaan.Clear(); seuraavaValinta = 0;
             varasto = new RuutuVarasto(budjetti.RuutuPaikat); SeinaTavut = 0; nykyinen = null;
         }
 
