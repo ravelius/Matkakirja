@@ -657,12 +657,17 @@ namespace Matkakirja.Editori
         {
             linna ??= new LinnaValikko(UiKerros.Hae(), LinssiUi.RadioKerros);
             OpasValikko.Hae().Nayta(false);
-            bool naytetty = linna.Juuri.resolvedStyle.display != DisplayStyle.None && linna.Juuri.panel != null;
             linna.Nayta(true);
-            // Valikko sijoittuu ☰:n alle sen worldBoundista: juuri näytetyllä ☰:llä ei ole vielä asettelua (laitteella pelaaja
-            // näkee ☰:n ennen napautusta), joten avaus seuraavassa ruudussa.
-            if (naytetty) linna.Komento(mita);
-            else linna.Juuri.schedule.Execute(() => linna.Komento(mita)).StartingIn(200);
+            // Valikko sijoittuu ☰:n alle sen worldBoundista: avaus vasta, kun ☰:llä on asettelu (laitteella pelaaja näkee ☰:n ennen
+            // napautusta). Kiinteä 200 ms ei riittänyt osan linna ensimmäisessä näkymässä (ajo 06.44 iPad pysty: valikko kulmassa).
+            AvaaKunAseteltu(mita, 0);
+        }
+
+        static void AvaaKunAseteltu(string mita, int yritys)
+        {
+            var nappi = linna.TestiAvainnapit().First(n => n.Nimi == "linnan ☰").E;
+            if ((nappi != null && nappi.worldBound.width >= 1f && nappi.worldBound.height >= 1f) || yritys >= 30) linna.Komento(mita);
+            else linna.Juuri.schedule.Execute(() => AvaaKunAseteltu(mita, yritys + 1)).StartingIn(100);
         }
 
         static void SuljeLinna() { linna?.Komento("sulje"); linna?.Nayta(false); }
@@ -801,8 +806,9 @@ namespace Matkakirja.Editori
 
         /// <summary>
         /// PÄÄLLEKKÄIN (raportti, ei vika; Natiivi-UI 10.10.2026): näkymän uudet näkyvät tekstit ja napit, jotka peittävät toisiaan
-        /// vähintään 2 × 2 pt:n alalta. Tekstistä verrataan kirjainten aluetta (SisaltoLaatikko), napista koko kosketusalaa;
-        /// vanhempi–lapsi-parit ohitetaan. Enintään 6 riviä näkymää kohden.
+        /// vähintään 4 × 6 pt:n alalta (anfangi saa ulottua muutaman pisteen kappaleen yli). Tekstistä verrataan kirjainten aluetta
+        /// (SisaltoLaatikko), napista koko kosketusalaa; vanhempi–lapsi-parit ohitetaan, samoin parit, joissa ylempi on peittävän
+        /// kortin tai paneelin sisällä (aloituskortti pelilaudan päällä: alempi ei näy). Enintään 6 riviä näkymää kohden.
         /// </summary>
         static void Paallekkain(List<(VisualElement E, Rect B)> l, string nimi)
         {
@@ -814,10 +820,49 @@ namespace Matkakirja.Editori
                     var (b, rb) = l[j];
                     if (a.Contains(b) || b.Contains(a)) continue;
                     var y = Leikkaa(ra, rb);
-                    if (!(y.width >= 2f && y.height >= 2f)) continue;
+                    if (!(y.width >= 4f && y.height >= 6f)) continue;
+                    if (Peitetty(a, b, y)) continue;
                     if (++n <= 6) Kirjaa($"PÄÄLLEKKÄIN {Koot[kokoNro].Nimi}: {nimi}: \"{Lyhyt(a)}\" {Laatikko(ra)} × \"{Lyhyt(b)}\" {Laatikko(rb)}");
                 }
             if (n > 6) Kirjaa($"PÄÄLLEKKÄIN {Koot[kokoNro].Nimi}: {nimi}: {n - 6} muuta");
+        }
+
+        /// <summary>
+        /// Alempi ei näy: piirtojärjestyksessä ylemmän haarassa (yhteiseen esivanhempaan asti, eri kerroksissa juureen asti) on
+        /// läpinäkymätön säiliö (tausta-alfa ≥ 0,9 tai taustakuva), joka peittää päällekkäisen alueen. Ylempi itse ja napit eivät
+        /// laske (nappi tekstin päällä on vika, kortti laudan päällä ei).
+        /// </summary>
+        static bool Peitetty(VisualElement a, VisualElement b, Rect alue)
+        {
+            VisualElement ylempi;
+            VisualElement yhteinen = null;
+            for (var p = a.parent; p != null && yhteinen == null; p = p.parent) if (p.Contains(b)) yhteinen = p;
+            if (yhteinen != null)
+            {
+                VisualElement ca = a, cb = b;
+                while (ca.parent != yhteinen) ca = ca.parent;
+                while (cb.parent != yhteinen) cb = cb.parent;
+                ylempi = yhteinen.IndexOf(cb) > yhteinen.IndexOf(ca) ? b : a;
+            }
+            else ylempi = Kerros(b) > Kerros(a) ? b : a;
+            for (var p = ylempi.parent; p != null && p != yhteinen; p = p.parent)
+            {
+                if (p is Button) continue;
+                var st = p.resolvedStyle;
+                bool peittava = st.backgroundColor.a >= 0.9f || st.backgroundImage.texture != null || st.backgroundImage.sprite != null
+                    || st.backgroundImage.renderTexture != null || st.backgroundImage.vectorImage != null;
+                if (!peittava) continue;
+                var pb = p.worldBound;
+                if (pb.xMin <= alue.xMin + 0.5f && pb.yMin <= alue.yMin + 0.5f && pb.xMax >= alue.xMax - 0.5f && pb.yMax >= alue.yMax - 0.5f) return true;
+            }
+            return false;
+        }
+
+        static int Kerros(VisualElement e)
+        {
+            var juuri = e.panel?.visualTree;
+            foreach (var (k, j) in UiKerros.Hae().Juuret) if (j.panel?.visualTree == juuri) return k;
+            return 0;
         }
 
         /// <summary>Tekstin kirjainten alue maailmassa (-unity-text-align huomioiden); napin ja muun elementin worldBound.</summary>
@@ -838,7 +883,10 @@ namespace Matkakirja.Editori
 
         static string Lyhyt(VisualElement e)
         {
-            string t = e is TextElement te ? te.text : e.Q<TextElement>()?.text ?? e.tooltip ?? e.GetClasses().FirstOrDefault() ?? "-";
+            string t = e is TextElement te ? te.text : e.Q<TextElement>()?.text;
+            // Kuvakenappi ilman tekstiä: VoiceOver-nimi (tooltip) tai oma luokka.
+            if (string.IsNullOrWhiteSpace(t)) t = !string.IsNullOrEmpty(e.tooltip) ? "⟨" + e.tooltip + "⟩"
+                : "." + (e.GetClasses().FirstOrDefault(c => c.StartsWith("mk-")) ?? e.GetClasses().FirstOrDefault() ?? "-");
             t = (t ?? "-").Replace("\n", " ");
             return t.Length > 30 ? t.Substring(0, 30) + "…" : t;
         }
