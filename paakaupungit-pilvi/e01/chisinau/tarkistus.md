@@ -86,3 +86,14 @@ Yhteenveto: VÄÄRIN 8, EPÄVARMA 8. Kaikki muut rivit OK.
 | nostot/kuvat vs kuvat.md | kaikkien kuvien teksti sopii kuvat.md:n "mitä näkyy" -kuvaukseen ja kertoo kohteesta (katedraalin sisäkuvan K2 teksti koskee katedraalia yleisesti, K4 Hallituksen talon kuva sopii jälleenrakennusaiheeseen) | kuvat.md | OK |
 | nostot[].wiki, nahtavyydet.lahde | "Chișinău", "History of Chișinău", "Alexander Pushkin", "Stephen the Great Central Park" ovat olemassa en-Wikipediassa (Pushkin myös fi-ohjauksena) | tyokalu lahde | OK |
 | nykypolitiikka ja sota | ei nykysotaa, vaaleja, Transnistriaa tai poliittisia kiistoja; sota-aiheet historiallisia ja neutraaleja | koko sisalto.json | OK |
+
+## Korjattu
+
+- kaupunki.wiki: "Chișinău (Kišinjov)" -> "Chișinău" (löytyy en/fi-Wikipediasta, ei varattu).
+- kysymykset[4]: vaihtoehdot Cornești / Bălți ja Soroca / Orhei ja Rezina / Iași (Romania); oikea (Cornești) ei enää pisin.
+- Kuvatekstit ilman lähdeviittauksia: nostot[0].lyhyt, trolleybussikuva, Măzărache-kuva, kansikuvat[2].selite.
+- Măzărache: Râșcani-kirkon sijainti korjattu (Bîc-joen yläpuolinen kukkula); nimeämisväite poistettu selitteestä (nostot[0].selite).
+- Matkailijalle: "Virallinen kieli on romania"; valuutta -> "Hinnat ilmoitetaan Moldovan leissä (lei)"; kulkukoirat -> "kannattaa olla tarkkana"; vanhimmat rakennukset -> Măzărache vanhin kirkko, Ciuflea 1800-luvun puolivälin rakennus; torin kuvateksti ilman "tunnettu"-väitettä.
+- nostot[0].teksti: 1436 asiakirja pehmennetty (ruhtinaat Ilie ja Tapani, lahjoitus kirjattiin Vlaicullle; anakronistinen "Tapani III sedälleen" poistettu).
+- nostot[3].teksti: magnitudi "7,3–7,7" (lähteestä riippuen).
+- kaupunkilehti[1].johdanto: Puškin 1820-luvulla (ei "isoisän aikaan").

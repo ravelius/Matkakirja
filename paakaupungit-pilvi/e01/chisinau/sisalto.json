@@ -6,7 +6,7 @@
  "kaupunki": {
   "id": "chisinau",
   "name": "Kišinjov",
-  "wiki": "Chișinău (Kišinjov)",
+  "wiki": "Chișinău",
   "ambience": "kaupunki",
   "pallo": {
    "lat": 47.023,
@@ -78,9 +78,9 @@
    "q": "Minkä paikan suuntaan Chișinău sai rautatieyhteyden vuonna 1873?",
    "options": [
     "Cornești",
-    "Orhei",
-    "Bălți",
-    "Soroca"
+    "Bălți ja Soroca",
+    "Orhei ja Rezina",
+    "Iași (Romania)"
    ],
    "correct": 0,
    "level": 3,
@@ -122,17 +122,17 @@
     {
      "tiedosto": "Clădirea fostei Dume Orășenești. Astăzi Primăria și Consiliul Municipal Chișinău. Foto 4.jpg",
      "lyhyt": "Kaupungintalo valmistui vuonna 1901 alun perin kaupunginduumalle.",
-     "selite": "Italialaista goottia edustavan rakennuksen suunnitteli lähteiden mukaan arkkitehti Alexander Bernardazzi.",
+     "selite": "Italialaista goottia edustavan rakennuksen suunnitteli arkkitehti Alexander Bernardazzi.",
      "lahde": "Rodion Gavriloi, Wikimedia Commons (CC BY-SA 4.0)"
     }
    ],
    "nostot": [
     {
      "otsikko": "Kylä lähteen äärellä",
-     "teksti": "Chișinăun nimen alkuperä on epäselvä, mutta yleisin selitys yhdistää sen sanoihin chișla, lähde, ja nouă, uusi. Kylä nousi pienen lähteen ympärille, ja lähteen paikkaa merkitsee kivilohkare Măzărache-kirkon mäen juurella. Ensimmäinen asiakirjamaininta on vuodelta 1436, jolloin Moldavian ruhtinaat luovuttivat kyliä ja Tapani III kirjasi lahjoituksen sedälleen Vlaicullle, josta tuli Chișinău-kylän omistaja. Toinen maininta on vuodelta 1466. Kaupunki paloi Venäjän–Turkin sotien aikana 1739 ja 1788, ja 1800-luvun alussa asukkaita oli noin 7 000.",
+     "teksti": "Chișinăun nimen alkuperä on epäselvä, mutta yleisin selitys yhdistää sen sanoihin chișla, lähde, ja nouă, uusi. Kylä nousi pienen lähteen ympärille, ja lähteen paikkaa merkitsee kivilohkare Măzărache-kirkon mäen juurella. Ensimmäinen asiakirjamaininta on vuodelta 1436, jolloin Moldavian ruhtinaat Ilie ja Tapani luovuttivat kyliä ja lahjoitus kirjattiin Vlaicullle, josta tuli Chișinău-kylän omistaja. Toinen maininta on vuodelta 1466. Kaupunki paloi Venäjän–Turkin sotien aikana 1739 ja 1788, ja 1800-luvun alussa asukkaita oli noin 7 000.",
      "tiedosto": "MD.C.C - Măzărache church - aug 2020 - 05.jpg",
-     "lyhyt": "Măzărache-kirkko rakennettiin vuonna 1752, ja lähteen mukaan se on kaupungin vanhin.",
-     "selite": "Kirkko on saanut nimensä rakennuttajansa Vasile Măzărachen mukaan, ja se edustaa perinteistä moldavialaista kirkkoarkkitehtuuria.",
+     "lyhyt": "Măzărache-kirkko rakennettiin vuonna 1752, ja sitä pidetään kaupungin vanhimpana.",
+     "selite": "Kirkon rakennutti Vasile Măzărache, ja se edustaa perinteistä moldavialaista kirkkoarkkitehtuuria.",
      "lahde": "Gikü ( talk ), Wikimedia Commons (CC0)",
      "wiki": "Chișinău"
     },
@@ -156,7 +156,7 @@
     },
     {
      "otsikko": "Kaupunki, joka rakennettiin uudelleen",
-     "teksti": "Chișinău kärsi 1900-luvulla sekä sodasta että maanjäristyksistä. Marraskuun 10. päivän 1940 maanjäristyksen magnitudiksi arvioidaan lähteestä riippuen noin 7,3–7,4. Siinä kuoli 78 ihmistä ja 2 795 rakennusta vaurioitui, joista 172 tuhoutui. Vuosina 1947–1949 arkkitehti Aleksei Shchusev ryhmineen laati suunnitelman kaupungin asteittaiseen jälleenrakennukseen. Uusi maanjäristys 4.3.1977 vaurioitti rakennuksia, ja historiamuseon talo purettiin ja rakennettiin uudelleen vanhan julkisivun mukaan vuosina 1980–1987.",
+     "teksti": "Chișinău kärsi 1900-luvulla sekä sodasta että maanjäristyksistä. Marraskuun 10. päivän 1940 maanjäristyksen magnitudiksi arvioidaan lähteestä riippuen 7,3–7,7. Siinä kuoli 78 ihmistä ja 2 795 rakennusta vaurioitui, joista 172 tuhoutui. Vuosina 1947–1949 arkkitehti Aleksei Shchusev ryhmineen laati suunnitelman kaupungin asteittaiseen jälleenrakennukseen. Uusi maanjäristys 4.3.1977 vaurioitti rakennuksia, ja historiamuseon talo purettiin ja rakennettiin uudelleen vanhan julkisivun mukaan vuosina 1980–1987.",
      "tiedosto": "Edificio del Gobierno, Chisináu, Moldavia, 2023-11-03, DD 23.jpg",
      "lyhyt": "Sodan jälkeinen jälleenrakennus muutti Chișinăun keskustan ilmeen.",
      "selite": "Arkkitehti Aleksei Shchusev ryhmineen laati vuosina 1947–1949 suunnitelman kaupungin asteittaiseen jälleenrakennukseen.",
@@ -171,7 +171,7 @@
      "selite": "Kaaren kello painoi noin 6 400 kiloa ja oli paikallaan vuoteen 2011 asti.",
      "lahde": "Klearchos Kapoutsis from Santorini, Greece, Wikimedia Commons (CC BY 2.0)"
     },
-    "kappale": "Chișinăun historiallinen keskusta on pienikokoinen, ja katedraali, riemukaari ja keskuspuisto ovat lyhyen kävelymatkan päässä toisistaan. Lentoasemalta keskustaan pääsee trolleybussilla, ja kaupungissa liikennöivät myös bussit ja pikkubussit. Romania on virallinen kieli, mutta venäjää ymmärtää moni. Valea Morilorin ja Ruusulaakson puistot tarjoavat tilaa kävelyyn järvien ääressä. Lokakuun ensimmäisenä viikonloppuna vietetään kansallista viinipäivää ja viinifestivaalia.",
+    "kappale": "Chișinăun historiallinen keskusta on pienikokoinen, ja katedraali, riemukaari ja keskuspuisto ovat lyhyen kävelymatkan päässä toisistaan. Lentoasemalta keskustaan pääsee trolleybussilla, ja kaupungissa liikennöivät myös bussit ja pikkubussit. Virallinen kieli on romania, mutta venäjää ymmärtää moni. Valea Morilorin ja Ruusulaakson puistot tarjoavat tilaa kävelyyn järvien ääressä. Lokakuun ensimmäisenä viikonloppuna vietetään kansallista viinipäivää ja viinifestivaalia.",
     "artikkeli": {
      "nimi": "Matkailijan Chișinău",
      "taitto": "opas",
@@ -183,14 +183,14 @@
        "teksti": "Chișinău Eugen Doga International Airport (RMO) on noin 13 kilometrin päässä keskustasta kaakossa, ja se on lähteen mukaan Moldovan ainoa säännöllisen matkustajaliikenteen lentoasema. Lentoaseman koodi vaihtui KIV:stä RMO:ksi tammikuussa 2024. Keskustaan pääsee trolleybussilla 30, jonka pysäkki on saapumisaulan ulkopuolella, ja taksissa kannattaa pyytää mittari käyttöön. Linja-autoasemia on kolme: Gara Centrală, Gara de Nord ja Gara de Sud, ja Odessaan on noin viisi tuntia. Junayhteyksien tilanne vaihtelee, joten ajantasaiset yhteydet kannattaa tarkistaa. Kaupungissa liikennöivät trolleybussit, bussit ja pikkubussit eli rutiera.",
        "kuva": {
         "tiedosto": "Chișinău BKM-213 trolleybus on route 22 in 2021.jpg",
-        "lyhyt": "Chișinăussa on laaja trolleybussiverkko, jossa on lähteen mukaan 22 linjaa.",
+        "lyhyt": "Chișinăussa on laaja trolleybussiverkko, johon kuuluu 22 linjaa.",
         "selite": "Lentoasemalta keskustaan pääsee trolleybussilla 30.",
         "lahde": "Photobank MD from Chisinau, Moldova, Wikimedia Commons (CC0)"
        }
       },
       {
        "otsikko": "Nähtävää historiallisessa ytimessä",
-       "teksti": "Historiallinen ydin on kompakti: Kristuksen syntymän katedraali, riemukaari ja Tapani Suuren keskuspuisto sijaitsevat lähellä toisiaan. Puiston Klassikoiden puistokujalta löytyy kirjailijoiden rintakuvia. Măzărache-kirkko ja Ciuflea-luostari kuuluvat kaupungin vanhimpiin rakennuksiin. Kansallisen etnografia- ja luonnonhistoriamuseon mauri-tyylinen julkisivu kannattaa nähdä, ja sisällä esillä on Deinotherium-luuranko.",
+       "teksti": "Historiallinen ydin on kompakti: Kristuksen syntymän katedraali, riemukaari ja Tapani Suuren keskuspuisto sijaitsevat lähellä toisiaan. Puiston Klassikoiden puistokujalta löytyy kirjailijoiden rintakuvia. Măzărache-kirkkoa pidetään kaupungin vanhimpana kirkkona, ja Ciuflea-luostari on 1800-luvun puolivälin rakennus. Kansallisen etnografia- ja luonnonhistoriamuseon mauri-tyylinen julkisivu kannattaa nähdä, ja sisällä esillä on Deinotherium-luuranko.",
        "kuva": {
         "tiedosto": "Museo nacional de etnografía e historia natural, Chisináu, Moldavia, 2023-11-03, DD 57.jpg",
         "lyhyt": "Kansallinen etnografia- ja luonnonhistoriamuseo toimii mauri-tyylisessä rakennuksessa.",
@@ -213,7 +213,7 @@
        "teksti": "Keskustori eli Piața Centrală täyttää yli kaksi korttelia. Siellä on juustohalleja, joissa myydään brînza- ja caș-juustoja, ja sana oaie tarkoittaa lammasta. Kuumana myydään langosia, ja tiskeillä on marinoituja vihanneksia.",
        "kuva": {
         "tiedosto": "Basar von Chișinău.JPG",
-        "lyhyt": "Piața Centrală on kaupungin keskustori, jonka juustohalleista on tunnettu.",
+        "lyhyt": "Piața Centrală on kaupungin keskustori, jossa on juustohalleja ja marinoitujen ruokien tiskejä.",
         "selite": "Torilta löytyy myös kuumia langosleipiä ja marinoituja vihanneksia.",
         "lahde": "JøMa, Wikimedia Commons (CC BY-SA 3.0)"
        }
@@ -260,7 +260,7 @@
       "hyvaTietaa": [
        {
         "otsikko": "Kielet ja raha",
-        "teksti": "Virallinen kieli on romania, ja venäjää ymmärtää moni. Lähteen mukaan englantia puhuu noin 30 prosenttia maan asukkaista, nuoret useammin. Valuutta on Moldovan leu."
+        "teksti": "Virallinen kieli on romania, ja venäjää ymmärtää moni. Lähteen mukaan englantia puhuu noin 30 prosenttia maan asukkaista, nuoret useammin. Hinnat ilmoitetaan Moldovan leissä (lei)."
        },
        {
         "otsikko": "Liikenteessä",
@@ -268,7 +268,7 @@
        },
        {
         "otsikko": "Kulkukoirat",
-        "teksti": "Kulkukoirat voivat lähteen mukaan olla ongelma, joten ne kannattaa väistää rauhallisesti."
+        "teksti": "Kulkukoirat voivat lähteen mukaan olla ongelma, joten kävellessä kannattaa olla tarkkana."
        },
        {
         "otsikko": "Asiakirjat",
@@ -283,7 +283,7 @@
   {
    "id": "kirjallisuus",
    "nimi": "Kirjailijoiden Chișinău",
-   "johdanto": "Isoisän aikaan Chișinăussa oli asunut venäläinen runoilija, ja myöhemmin kaupunki sai kokonaisen kujan kirjailijoiden rintakuvia. Sivu kertoo, miten kirjallisuus jätti jälkensä kaupunkiin.",
+   "johdanto": "Chișinăussa oli 1820-luvulla asunut venäläinen runoilija, ja myöhemmin kaupunki sai kokonaisen kujan kirjailijoiden rintakuvia. Sivu kertoo, miten kirjallisuus jätti jälkensä kaupunkiin.",
    "tehtava": {
     "kysymys": "Minkä venäläisen runoilijan patsas pystytettiin Chișinăun puistoon vuonna 1885?",
     "vaihtoehdot": [
@@ -438,11 +438,11 @@
   },
   "Măzărache-kirkko": {
    "aika": "1752",
-   "teksti": "Măzărache-kirkko on lähteen mukaan Chișinăun vanhimmaksi katsottu kirkko. Vasile Măzărache rakennutti sen vuonna 1752, ja rakennus edustaa perinteistä moldavialaista kirkkoarkkitehtuuria 1400–1500-luvuilta. Lähteen mukaan kirkko nousi osmanien tuhoaman linnoituksen paikalle.\n\nMäen juurella oleva kivilohkare merkitsee kaupungin nimen antaneen lähteen paikkaa, sillä chisla noua tarkoittaa uutta lähdettä. Kaupunki paloi Venäjän–Turkin sotien aikana 1739 ja 1788, ja kirkko valmistui näiden paloja väliin.\n\nIsoisän matkavuonna 1873 kirkko oli seissyt jo 121 vuotta. Aivan lähellä on Râșcani-kirkko vuodelta 1777, jonka rakennutti bojaari Constantin Râșcanu.",
+   "teksti": "Măzărache-kirkko on lähteen mukaan Chișinăun vanhimmaksi katsottu kirkko. Vasile Măzărache rakennutti sen vuonna 1752, ja rakennus edustaa perinteistä moldavialaista kirkkoarkkitehtuuria 1400–1500-luvuilta. Lähteen mukaan kirkko nousi osmanien tuhoaman linnoituksen paikalle.\n\nMäen juurella oleva kivilohkare merkitsee kaupungin nimen antaneen lähteen paikkaa, sillä chisla noua tarkoittaa uutta lähdettä. Kaupunki paloi Venäjän–Turkin sotien aikana 1739 ja 1788, ja kirkko valmistui näiden paloja väliin.\n\nIsoisän matkavuonna 1873 kirkko oli seissyt jo 121 vuotta. Toinen vanha kirkko on Râșcani-kirkko vuodelta 1777, jonka rakennutti bojaari Constantin Râșcanu ja joka seisoo Bîc-joen yläpuolisella kukkulalla.",
    "kuvat": [
     {
      "tiedosto": "MD.C.C - Măzărache church - aug 2020 - 01.jpg",
-     "lyhyt": "Măzărache-kirkko on lähteen mukaan Chișinăun vanhimmaksi katsottu kirkko.",
+     "lyhyt": "Măzărache-kirkkoa pidetään Chișinăun vanhimpana kirkkona.",
      "selite": "Vasile Măzărache rakennutti kirkon vuonna 1752.",
      "lahde": "Gikü ( talk ), Wikimedia Commons (CC0)"
     }
