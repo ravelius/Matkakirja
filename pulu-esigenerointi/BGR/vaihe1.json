@@ -2607,5 +2607,385 @@
    "Miksi vanhat sillat tehtiin usein puusta?",
    "Miten vanhoja puusiltoja suojellaan nykyään?"
   ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pleven",
+  "kysymys": "Minä vuonna Osman Pasha antautui Plevnassa?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Osman Pasha antautui Plevnassa vuonna 1877, marraskuun lopulla. Antautuminen päätti kaupungin piirityksen, joka oli yksi [[Venäjän ja Turkin sodassa]] 1877–1878 käydyistä ratkaisevista taisteluista, ja [[osmanien]] sotapäällikön antautuminen muutti sodan kulkua. Onpas siit onneksi jo pitkä aika.",
+  "linkit": [
+   "Venäjän ja Turkin sodassa",
+   "osmanien"
+  ],
+  "jatkot": [
+   "Mitä Venäjän ja Turkin sodan jälkeen tapahtui Bulgarialle?",
+   "Missä Plevnan piirityksen muistoa vaalitaan nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pleven",
+  "kysymys": "Missä puistossa Plevenin panoraama on?",
+  "uusi": false,
+  "vastaus": "Katotaas. Plevenin panoraama on Skobelevin puistossa. Samaan puistoon on [[Plevnan piirityksen]] muistoksi rakennettu myös [[ossuaari]] ja [[mausoleumi]] kaatuneille venäläisille ja romanialaisille sotilaille. Puiston yllä on hyvä lentää hiljaa.",
+  "linkit": [
+   "Plevnan piirityksen",
+   "ossuaari",
+   "mausoleumi"
+  ],
+  "jatkot": [
+   "Keitä Plevnan piirityksessä oli osapuolina?",
+   "Mikä on ossuaari?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pleven",
+  "kysymys": "Kuka perusti Plevenissä vallankumouskomitean vuonna 1869?",
+  "uusi": true,
+  "vastaus": "Ai tota. Plevenin ensimmäisen vallankumouskomitean perusti vuonna 1869 [[Vasil Levski]]. Komitea kuului hänen kansalliseen verkostoonsa, jonka tavoitteena oli vapauttaa Bulgaria [[osmanien]] vallasta. Ei paha kyyhkyltä.",
+  "linkit": [
+   "Vasil Levski",
+   "osmanien"
+  ],
+  "jatkot": [
+   "Mitä Vasil Levskin vallankumouksellinen verkosto tavoitteli?",
+   "Miten Bulgarian vapaus lopulta saavutettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pleven",
+  "kysymys": "Milloin Plevenin ensimmäinen tyttökoulu avattiin?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Plevenin tyttökoulu avattiin vuonna 1840, ja sitä pidetään Bulgarian ensimmäisenä tyttökouluna. Poikakoulu seurasi vuotta myöhemmin, ja ensimmäinen maallinen koulu oli avattu jo vuonna 1825. [[Osmanien]] vallan aikana Pleven säilytti bulgarialaisen luonteensa, ja koulut olivat osa [[kansallista heräämistä]]. Koulun jälkeen olisi tehnyt hyvää kozunak, sanon vaan.",
+  "linkit": [
+   "Osmanien",
+   "kansallista heräämistä"
+  ],
+  "jatkot": [
+   "Mitä Bulgarian kansallinen herääminen tarkoitti?",
+   "Millaista koulunkäynti oli osmanien aikana?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pleven",
+  "kysymys": "Miksi Plevnan piiritys oli tärkeä Venäjän ja Turkin sodassa?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Plevnan piiritys oli yksi sodan ratkaisevista taisteluista. Kaupunkia piirittivät [[venäläiset]] ja [[romanialaiset]] joukot, ja piiritys päättyi marraskuun lopulla 1877, kun [[Osman Pasha]] antautui. Piiritys kesti kuukausia, ja se jätti jälkensä sekä kaupunkiin että sotaan. Nykyään siellä on rauhallista, ja hyvä niin.",
+  "linkit": [
+   "venäläiset",
+   "romanialaiset",
+   "Osman Pasha"
+  ],
+  "jatkot": [
+   "Mitä Bulgarialle tapahtui Plevnan jälkeen?",
+   "Millainen mies Osman Pasha oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nikopol",
+  "kysymys": "Minä vuonna Nikopolin ristiretken taistelu käytiin?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: vuosi 1396. Taistelu käytiin vuonna 1396, ja sitä pidetään keskiajan viimeisenä suurena ristiretkenä. Unkarin kuningas [[Sigismundin]] johtama kristillinen Euroopan armeija kärsi tappion [[Bayezid I:n]] joukoille, ja [[ottomaanien]] asema Balkanilla vahvistui. Onpas siit jo yli kuusisataa vuotta.",
+  "linkit": [
+   "Sigismundin",
+   "Bayezid I:n",
+   "ottomaanien"
+  ],
+  "jatkot": [
+   "Keitä Sigismundin ristiretkiarmeijaan kuului?",
+   "Mitä Bayezid I:lle tapahtui taistelun jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nikopol",
+  "kysymys": "Kuka oli Bulgarian viimeinen tsaari, joka puolusti Nikopolia?",
+  "uusi": false,
+  "vastaus": "Ai se. Nikopolin linnoitusta puolusti [[Ivan Shishman]], Toisen Bulgarian valtakunnan viimeinen tsaari. Hän piti linnoitusta, kunnes [[ottomaanit]] valtasivat sen noin vuonna 1395. Ei paha kyyhkyn muistille.",
+  "linkit": [
+   "Ivan Shishman",
+   "ottomaanit"
+  ],
+  "jatkot": [
+   "Mikä oli Toinen Bulgarian valtakunta?",
+   "Miten Bulgaria päätyi osmanien vallan alle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nikopol",
+  "kysymys": "Mitä nimi Nicopolis tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Nicopolis tarkoittaa voiton kaupunkia. Nikopol sijaitsee [[Tonavan]] oikealla rannalla jyrkkien liitukallioiden juurella, ja [[roomalaiset]] rakensivat paikalle 1. vuosisadalla linnakkeen osaksi Tonavan puolustusjärjestelmää. Kaunis nimi, ja kalliot ovat vielä kauniimmat ylhäältä.",
+  "linkit": [
+   "Tonavan",
+   "roomalaiset"
+  ],
+  "jatkot": [
+   "Mikä Tonavan puolustusjärjestelmä Rooman aikana oli?",
+   "Mistä Nikopol tunnetaan nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nikopol",
+  "kysymys": "Minkä joen rannalla Nikopol sijaitsee?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Nikopol sijaitsee [[Tonavan]] oikealla rannalla Pohjois-Bulgariassa, neljä kilometriä alavirtaan [[Osamin]] yhtymäkohdasta. Tonava muodostaa suuren osan Bulgarian pohjoisrajasta, ja vastarannalla on [[Romania]]. Tonavan yläpuolella on kyyhkyllä aina hyvä tuuli.",
+  "linkit": [
+   "Tonavan",
+   "Osamin",
+   "Romania"
+  ],
+  "jatkot": [
+   "Mitkä maat Tonava kulkee läpi?",
+   "Missä Tonavan suisto on?"
+  ],
+  "paikka": {
+   "nimi": "Nikopol",
+   "lat": 43.71,
+   "lon": 24.89,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-nikopol",
+  "kysymys": "Miten Nikopolin asema muuttui osmanien aikana?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Osmanien aikana Nikopol kehittyi tärkeäksi sotilaalliseksi ja hallinnolliseksi keskukseksi. Myöhemmin, 1600–1700-luvuilla, [[Pleven]] ohitti sen alueen keskuksena, ja [[venäläiset]] valtasivat kaupungin vuonna 1877 [[Venäjän ja Turkin sodan]] aikana. Kaupunkien suosio kulkee kuin tuuli, ylhäältä sen näkee.",
+  "linkit": [
+   "Pleven",
+   "venäläiset",
+   "Venäjän ja Turkin sodan"
+  ],
+  "jatkot": [
+   "Miksi Pleven nousi alueen keskukseksi?",
+   "Miten Venäjän ja Turkin sota päättyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vidin",
+  "kysymys": "Minkä kuninkaantyttären legendan mukaan Baba Vida on nimetty?",
+  "uusi": false,
+  "vastaus": "Sepä sattui: tämä on hyvä tarina. Legendan mukaan linnoituksen rakennutti kuninkaan vanhin tytär Vida, joka jäi naimattomaksi, ja nimi Baba Vida tarkoittaa mummo Vidaa. Linnoitus sijaitsee [[Vidinissä]] [[Tonavan]] rannalla, ja sen rakentamisen kerrotaan alkaneen 900-luvulla muinaisen roomalaisen [[Bononian]] linnakkeen paikalla. Mummo Vida ansaitsi kozunakin, vähintään.",
+  "linkit": [
+   "Vidinissä",
+   "Tonavan",
+   "Bononian"
+  ],
+  "jatkot": [
+   "Mikä Bononia oli roomalaisena kaupunkina?",
+   "Miten Baba Vida on säilynyt nykypäivään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vidin",
+  "kysymys": "Kuinka pitkän piirityksen linnoitus kesti Basileios II:n aikana?",
+  "uusi": false,
+  "vastaus": "No niin. Piiritys kesti kahdeksan kuukautta, ja sitä johti Bysantin keisari Basileios II. Lähteet kertovat lopputuloksesta eri tavoin: toisten mukaan linnoitus kesti piirityksen, toisten mukaan [[Vidinin]] linnoitus lopulta antautui ja päätyi [[Bysantin]] hallintaan. Kahdeksan kuukautta ilman pullaa, minä en kestäisi päivääkään.",
+  "linkit": [
+   "Vidinin",
+   "Bysantin"
+  ],
+  "jatkot": [
+   "Kuka oli Basileios II?",
+   "Miksi Tonavan linnoituksilla oli suuri merkitys?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vidin",
+  "kysymys": "Mihin Baba Vidaa käytettiin osmanien aikana?",
+  "uusi": true,
+  "vastaus": "Ai tota. Osmanien aikana linnoitusta käytettiin asevarastona ja vankilana. Sitä ei ole käytetty puolustukseen 1700-luvun lopun jälkeen, ja nykyään siellä on museo, joka palvelee [[Vidinin]] vierailijoita [[Tonavan]] rannalla. Vankilasta museoksi, kyl se on hyvä ura linnalle.",
+  "linkit": [
+   "Vidinin",
+   "Tonavan"
+  ],
+  "jatkot": [
+   "Mitä Baba Vidan museossa on esillä?",
+   "Missä muualla Bulgariassa on säilynyt keskiaikaisia linnoja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vidin",
+  "kysymys": "Kuka oli tsaari Ivan Stratsimir?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Ivan Stratsimir oli 1300-luvun jälkipuoliskon tsaari, jonka pääkaupunkina toimi Vidin. Hänen hallituskautensa ajoitetaan yleensä vuosiin 1356–1396, ja hänen aikanaan [[Vidinin tsaarikunnan]] keskus oli [[Baba Vidan]] linnoituksen suojissa. Pääkaupunki linnassa, ja kuitenkin minä asun kaiteella.",
+  "linkit": [
+   "Vidinin tsaarikunnan",
+   "Baba Vidan"
+  ],
+  "jatkot": [
+   "Mitä Vidinin tsaarikunnalle tapahtui 1300-luvun lopussa?",
+   "Miten Toinen Bulgarian valtakunta hajosi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vidin",
+  "kysymys": "Millainen rakenne Baba Vidassa on?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Baba Vidassa on kaksi sisäkkäistä suojamuuria ja noin yhdeksän tornia, joista kolme on säilynyt täyteen keskiaikaiseen korkeuteensa. Sitä pidetään Bulgarian ainoana kokonaan säilyneenä keskiaikaisena linnoituksena, ja se on [[Vidinissä]] [[Tonavan]] rannalla kaupungin tärkein maamerkki. Tornit ovat kyyhkyn lempipaikkoja, ihan rehellisesti.",
+  "linkit": [
+   "Vidinissä",
+   "Tonavan"
+  ],
+  "jatkot": [
+   "Miten Bulgarian muut keskiaikaiset linnoitukset ovat säilyneet?",
+   "Mistä Vidinin kaupunki tunnetaan linnan lisäksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-stara-zagora",
+  "kysymys": "Minä vuonna Stara Zagorasta löydettiin neoliittiset asuinrakennukset?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: vuosi 1968. Silloin kaupungista löydettiin 6. vuosituhannen puolivälistä eaa. peräisin olevia asuinrakennuksia, jotka ovat yksi Euroopan parhaiten säilyneistä ja rikkaimmista löydöistään laatuaan. Ne on muutettu museoksi, ja kaupunki sijaitsee [[Ylä-Traakian]] tasangolla lähellä [[Plovdivia]]. Vanhin kotini on kyllä paljon nuorempi.",
+  "linkit": [
+   "Ylä-Traakian",
+   "Plovdivia"
+  ],
+  "jatkot": [
+   "Millaista elämä oli uudella kivikaudella Balkanilla?",
+   "Mitä Stara Zagoran museossa voi nähdä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-stara-zagora",
+  "kysymys": "Millä nimellä roomalaiset kutsuivat kaupunkia?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Kaupunki tunnettiin nimellä [[Ulpia Augusta Traiana]], ja nimi viittaa keisari [[Trajanuksen]] sukunimeen. Rooman aikana kaupunki oli merkittävämpi kuin [[Philippopolis]], nykyinen Plovdiv. Pitkä nimi, mut lyhyt lento.",
+  "linkit": [
+   "Ulpia Augusta Traiana",
+   "Trajanuksen",
+   "Philippopolis"
+  ],
+  "jatkot": [
+   "Kuka oli keisari Trajanus?",
+   "Mikä roomalainen kaupunki Philippopolis nykyään on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-stara-zagora",
+  "kysymys": "Missä päin Bulgariaa Stara Zagora sijaitsee?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Stara Zagora sijaitsee [[Ylä-Traakian]] tasangolla lähellä [[Kazanlakia]], [[Plovdivia]] ja [[Slivenia]]. Se on Bulgarian viidenneksi suurin kaupunki. Kolmen kaupungin kupeessa, ihan hyvä kaiteen paikka.",
+  "linkit": [
+   "Ylä-Traakian",
+   "Kazanlakia",
+   "Plovdivia",
+   "Slivenia"
+  ],
+  "jatkot": [
+   "Mikä on Ylä-Traakian tasanko?",
+   "Millainen kaupunki Plovdiv on?"
+  ],
+  "paikka": {
+   "nimi": "Stara Zagora",
+   "lat": 42.43,
+   "lon": 25.64,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-stara-zagora",
+  "kysymys": "Mistä Stara Zagoran nimi tulee?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Nykyinen nimi on peräisin turkkilaisesta nimestä [[Eski Zagra]], vanha Zagra, joka vahvistettiin vuonna 1871. Bulgarian kielen sana stara tarkoittaa niin ikään vanhaa. Roomalaisaikana kaupunki tunnettiin nimellä [[Ulpia Augusta Traiana]]. Vanha kaupunki, uusi nimi, ja minä muistan molemmat.",
+  "linkit": [
+   "Eski Zagra",
+   "Ulpia Augusta Traiana"
+  ],
+  "jatkot": [
+   "Mitä turkin kielen sana eski tarkoittaa?",
+   "Milloin Bulgaria vapautui osmanien vallasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-stara-zagora",
+  "kysymys": "Mitä neoliittinen tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Mmm— Neoliittinen tarkoittaa [[uuden kivikauden]] aikaa, jolloin ihmiset siirtyivät metsästyksestä ja keräilystä [[maanviljelyyn]] ja karjanhoitoon ja asettuivat pysyviin asuinpaikkoihin. Kaudelle ovat tyypillisiä myös savenvalanta ja hiotut kivityökalut. [[Stara Zagoran]] asuinrakennukset ovat peräisin 6. vuosituhannen puolivälistä eaa. Maanviljely oli kyyhkyn kannalta hyvä keksintö, jyviä riitti.",
+  "linkit": [
+   "uuden kivikauden",
+   "maanviljelyyn",
+   "Stara Zagoran"
+  ],
+  "jatkot": [
+   "Miten maanviljely levisi Eurooppaan?",
+   "Mitä kuparikausi tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kyustendil",
+  "kysymys": "Millä nimellä kaupunkia kutsuttiin antiikissa?",
+  "uusi": false,
+  "vastaus": "No jopas. Antiikissa kaupunki tunnettiin nimellä [[Pautalia]], ja Rooman aikana se oli Dacia Mediterranean kolmanneksi suurin kaupunki. Sitä ennen paikalla oli traakialainen asutus, joka oli tunnettu [[Asklepioksen]] pyhäköstä. Latinaa lukenut kyyhky ilahtuu, kun nimi on tuttu.",
+  "linkit": [
+   "Pautalia",
+   "Asklepioksen"
+  ],
+  "jatkot": [
+   "Mikä Dacia Mediterranea oli?",
+   "Kuka oli Asklepios?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kyustendil",
+  "kysymys": "Kuinka monta kivennäislähdettä kaupungissa on?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Kyustendilissä on yli 40 kivennäislähdettä. Kaupunki on kansallinen kylpyläkaupunki 600 metrin korkeudessa [[Osogovon]] vuoren juurella, ja se tunnetaan [[balneologian]] ja hedelmänviljelyn keskuksena. Kuumat lähteet, kyyhkykin tykkäisi kylvystä.",
+  "linkit": [
+   "Osogovon",
+   "balneologian"
+  ],
+  "jatkot": [
+   "Mitä balneologia tarkoittaa?",
+   "Millaisia hedelmiä Kyustendilin seudulla viljellään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kyustendil",
+  "kysymys": "Missä päin Bulgariaa Kyustendil sijaitsee?",
+  "uusi": true,
+  "vastaus": "Ai se. Kyustendil sijaitsee Bulgarian äärilännessä Kyustendilin laakson eteläosassa, lähellä [[Serbian]] ja [[Pohjois-Makedonian]] rajoja. Matkaa [[Sofiasta]] lounaaseen on noin 90 kilometriä. Rajaseudulla kyyhky tuntee olonsa kotoisaksi.",
+  "linkit": [
+   "Serbian",
+   "Pohjois-Makedonian",
+   "Sofiasta"
+  ],
+  "jatkot": [
+   "Millaisia rajanaapureita Bulgarialla on?",
+   "Miten Sofiasta pääsee Kyustendiliin?"
+  ],
+  "paikka": {
+   "nimi": "Kyustendil",
+   "lat": 42.28,
+   "lon": 22.69,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-kyustendil",
+  "kysymys": "Millaisia roomalaisaikaisia löytöjä Kyustendilista on tehty?",
+  "uusi": true,
+  "vastaus": "Mmm— Roomalaisen [[Pautalian]] linnoitus oli yli 29 hehtaarin kokoinen. Alueelta on löydetty kylpylöitä, [[basilikoja]] ja [[lattiamosaiikkeja]], jotka kertovat kaupungin merkityksestä Rooman aikana. Roomalaiset osasivat kyllä kylpeä, sen tiedän suvun perimätietona.",
+  "linkit": [
+   "Pautalian",
+   "basilikoja",
+   "lattiamosaiikkeja"
+  ],
+  "jatkot": [
+   "Mitä basilika tarkoitti roomalaisessa rakennustaiteessa?",
+   "Miten roomalaiset kylpylät toimivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kyustendil",
+  "kysymys": "Mitä Kyustendilin seudulla tiedetään ennen roomalaisia?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Paikalle perustettiin [[traakialaisten]] asutus noin 400- tai 500-luvulla eaa., ja se oli tunnettu [[Asklepioksen]] pyhäköstä. Asklepios oli parantamisen jumala, mikä sopii hyvin yhteen seudun kivennäislähteiden kanssa. Jumalat parantavat, mutta pulla auttaa myös.",
+  "linkit": [
+   "traakialaisten",
+   "Asklepioksen"
+  ],
+  "jatkot": [
+   "Keitä traakialaiset olivat?",
+   "Miksi Asklepios oli tärkeä antiikin Kreikassa?"
+  ]
  }
 ]
