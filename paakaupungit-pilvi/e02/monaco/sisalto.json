@@ -1,0 +1,513 @@
+{
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "monaco",
+ "maa": "MCO",
+ "era": "e02",
+ "kaupunki": {
+  "id": "monaco",
+  "name": "Monaco",
+  "wiki": "Monaco (kaupunki)",
+  "ambience": "satama",
+  "pallo": {
+   "lat": 43.731,
+   "lon": 7.42
+  }
+ },
+ "artikkeli": {
+  "intro": "Monaco on Ranskan Rivieralla Välimeren rannalla sijaitseva kaupunkivaltio, jonka pinta-ala on 2,08 neliökilometriä ja jota Ranska ympäröi kolmelta sivulta. Se on lähteen mukaan **maailman toiseksi pienin valtio**, ja vuoden 2025 väestönlaskennassa siellä asui 38 857 ihmistä. Kaupunki nousee rinteeseen kallion ja sataman ympärille, ja sen perinteisiä kaupunginosia ovat Monaco-Ville, La Condamine, Fontvieille ja Monte Carlo.\n\nKallion linnoituksen otti 1297 haltuunsa François Grimaldi, joka pukeutui fransiskaanimunkiksi, ja **Grimaldin suku** on hallinnut Monacoa siitä lähtien. Isoisän matkavuonna 1873 ruhtinas Charles III hallitsi jo kutistunutta ruhtinaskuntaa, sillä Menton ja Roquebrune oli luovutettu Ranskalle 1861. Tuloveroa ei kerätty enää vuodesta 1869, ja kasino oli ollut toiminnassa vuodesta 1863.\n\nKasinon ympärille kasvoi **Monte Carlo**, jonka nimi tarkoittaa Charlesin vuorta. Nykyinen katedraali ja Valtamerimuseo kuuluvat myöhempään aikaan, sillä katedraalin rakennustyöt alkoivat 1875 ja museo vihittiin 1910. Monacon yleisilmettä leimaa yhä belle époque -tyyli.",
+  "teksti": "Monaco on ruhtinaskunta ja kaupunkivaltio, jossa valtio ja kaupunki ovat käytännössä sama alue. Maaraja Ranskan kanssa on 5,47 kilometriä ja rantaviiva 3,83 kilometriä, ja korkein kohta on 164,4 metrin korkeudessa merenpinnasta. Virallinen kieli on ranska, ja monégasque, ligurin kielen lajike, opetetaan kouluissa.\n\n== Kallio ja sen herrat ==\nKallion asutus ulottuu antiikkiin: fokaialaiset kreikkalaiset perustivat sinne 500-luvulla eaa. Monoikoksen siirtokunnan. Linnoitus rakennettiin keskiajalla, ja Grimaldit ostivat Monacon Aragonian kruunulta 1419. Ruhtinaan arvonimeä alkoi käyttää Honoré II vuodesta 1612, ja linnoituksesta kehittyi vähitellen palatsi, jota ruhtinassuku asuu yhä.\n\n== Kasinon kaupunginosa ==\nMonte Carlon kasino avautui nykyiselle paikalleen 1863, ja rautatie toi kävijät Monacoon 1868. Charles Garnier laajensi kasinoa 1878–79 ja suunnitteli sen yhteyteen oopperasalin. Valtamerimuseo, katedraali ja Jardin Exotique syntyivät vasta 1900-luvun alussa, ja ne kuuluvat nykyään Monacon tunnetuimpiin kohteisiin."
+ },
+ "kysymykset": [
+  {
+   "q": "Kenen mukaan Monte Carlo on nimetty?",
+   "options": [
+    "Ruhtinas Charles III",
+    "Ruhtinas Honoré II",
+    "Ruhtinas Albert I",
+    "Ruhtinas Louis I"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Nimi annettiin kasinon rakentamisen aikaan 1800-luvun puolivälin jälkeen.",
+   "fact": "Monte Carlon nimi tarkoittaa Charlesin vuorta, ja alue nimettiin ruhtinas Charles III:n mukaan.",
+   "source": "https://en.wikipedia.org/wiki/Monte_Carlo_Casino"
+  },
+  {
+   "q": "Mikä suku on hallinnut Monacoa vuodesta 1297?",
+   "options": [
+    "Grimaldi",
+    "Medici",
+    "Savoia",
+    "Habsburg"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Suvun jäsen otti linnoituksen haltuunsa epätavallisessa asussa.",
+   "fact": "François Grimaldi otti kallion linnoituksen 1297 pukeutuneena fransiskaanimunkiksi, ja suku on hallinnut Monacoa siitä lähtien.",
+   "source": "https://en.wikipedia.org/wiki/Monaco-Ville"
+  },
+  {
+   "q": "Minkä rakennuksen yhteyteen Monte Carlon oopperasali Salle Garnier rakennettiin?",
+   "options": [
+    "Monte Carlon kasinon",
+    "Ruhtinaanlinnan",
+    "Valtamerimuseon",
+    "Monacon katedraalin"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Sali valmistui 1870-luvun lopulla.",
+   "fact": "Salle Garnier rakennettiin kasinon yhteyteen, ja sen suunnitteli Pariisin oopperan arkkitehti Charles Garnier.",
+   "source": "https://en.wikipedia.org/wiki/Op%C3%A9ra_de_Monte-Carlo"
+  },
+  {
+   "q": "Minä vuonna Monaco voitti Eurovision laulukilpailun?",
+   "options": [
+    "1971",
+    "1965",
+    "1978",
+    "1984"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Voittokappale esitettiin ranskaksi.",
+   "fact": "Monaco voitti Eurovision laulukilpailun 1971 kappaleella Un banc, un arbre, une rue, jonka esitti Séverine.",
+   "source": "https://en.wikipedia.org/wiki/Monaco"
+  },
+  {
+   "q": "Montako kertaa pallo osui mustaan peräkkäin Monte Carlon kasinolla kesällä 1913?",
+   "options": [
+    "26",
+    "17",
+    "33",
+    "21"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Pelaajat uskoivat, että punainen tulisi pian vuorolleen.",
+   "fact": "Kesällä 1913 pallo osui mustaan 26 kertaa peräkkäin, ja pelaajat hävisivät miljoonia vastapelaamalla mustaa.",
+   "source": "https://en.wikipedia.org/wiki/Monte_Carlo_Casino"
+  }
+ ],
+ "tiedot": [
+  "Monte Carlon oopperasali Salle Garnier rakennettiin 8,5 kuukaudessa, ja siinä on 524 paikkaa.",
+  "Monacon ainoa rautatieasema on osittain maan alla, ja se avattiin 1999.",
+  "Monacossa on seitsemän julkista hissiä ja liukuporrasta, ja ne ovat maksuttomia."
+ ],
+ "valokuva": {
+  "tiedosto": "Monaco Rocher de Monaco Vue sur le Port Hercule 01.jpg",
+  "vuosi": "2021",
+  "lahde": "Zairon, Commons (CC BY-SA 4.0)",
+  "lyhyt": "Monaco-Villen kallio ja Port Hercule ovat Monacon vanhaa ydintä.",
+  "selite": "Monaco-Villen kallio on kaupunkivaltion vanhin kaupunginosa, ja sen vieressä on Port Hercule, jonka nimi viittaa antiikin Herkuleen palvontaan."
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "Monaco",
+   "johdanto": "Monaco on maailman toiseksi pienin valtio, ja sen mäkinen kaupunki mahtuu kallion, sataman ja rinteen alueelle. Grimaldien suku on hallinnut linnoitettua kalliota vuodesta 1297, ja 1800-luvulla sen rannalle nousi Monte Carlo.",
+   "kansikuvat": [
+    {
+     "tiedosto": "Hafen und Felsen von Monaco-La Turbie.jpg",
+     "lyhyt": "Monaco-Villen kallio ja Port Hercule muodostavat kaupunkivaltion historiallisen ytimen.",
+     "selite": "Monaco-Villen kallio on Monacon vanhin kaupunginosa, ja sen vieressä on Port Hercule -satama.",
+     "lahde": "Tobi 87, Wikimedia Commons (CC BY-SA 3.0)"
+    },
+    {
+     "tiedosto": "Monaco 02.jpg",
+     "lyhyt": "Monte Carlo on Monacon kaupunginosa, joka kasvoi kasinon ympärille 1800-luvulla.",
+     "selite": "Monte Carlon nimi tarkoittaa Charlesin vuorta, ja alue nimettiin ruhtinas Charles III:n mukaan.",
+     "lahde": "Spike, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    {
+     "tiedosto": "Monaco Place du Casino 2.jpg",
+     "lyhyt": "Place du Casino on Monte Carlon keskus, jonka laidalla ovat kasino, Hôtel de Paris ja Café de Paris.",
+     "selite": "Aukion ympärillä on myös Salle Garnier -oopperasali, ja alue kehittyi 1800-luvun jälkipuoliskolla.",
+     "lahde": "Zairon, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Munkki linnoituksen portilla",
+     "teksti": "Monacon kallio oli asuttu jo antiikissa, kun fokaialaiset kreikkalaiset Massaliasta perustivat sinne 500-luvulla eaa. Monoikoksen siirtokunnan. Keskiajalla kalliolle nousi genovalaisten linnoitus, ja 8. tammikuuta 1297 François Grimaldi, lempinimeltään Malizia, otti sen haltuunsa pukeutuneena fransiskaanimunkiksi. Tapahtuma näkyy yhä Monacon vaakunassa, jossa kaksi fransiskaania pitelee miekkoja. Grimaldin ote ei kestänyt: genovalaiset karkottivat hänet muutaman vuoden kuluttua, ja kiista jatkui vielä noin vuosisadan. Grimaldit ostivat Monacon Aragonian kruunulta 1419, ja Honoré II alkoi käyttää ruhtinaan arvonimeä 1612.",
+     "tiedosto": "Monaco from the bottom of the exotic garden.jpg",
+     "lyhyt": "Monaco-Villen kallio on ollut Grimaldien linnoitus vuodesta 1297.",
+     "selite": "Kalliolla sijaitseva Monaco-Ville on kaupunkivaltion vanhin kaupunginosa, ja sen ytimessä on ruhtinaan palatsi.",
+     "lahde": "Tangopaso, Wikimedia Commons (PD)",
+     "wiki": "Monaco-Ville"
+    },
+    {
+     "otsikko": "Luolista Monte Carloksi",
+     "teksti": "Ajatus kasinosta tuli ruhtinatar Carolinelta, ja tarkoituksena oli pelastaa Grimaldit velkaantumiselta. Ensimmäinen kasino avattiin 14. joulukuuta 1856 La Condamine -alueen Villa Bellevuessa. Nykyiselle paikalle Spélugues-alueelle, jonka nimi tarkoittaa luolia, rakennettiin vuodesta 1858, ja rakennus valmistui 1863. François Blanc otti toiminnan haltuunsa 50 vuoden toimiluvalla, ja alue sai nimekseen Monte Carlo ruhtinas Charlesin mukaan. Rautatie saapui 1868 ja toi kävijät. Isoisän matkavuonna 1873 englantilainen Joseph Jagger sai julkisuutta rikottuaan pankin: hän oli huomannut yhden rulettipyörän vinoutuman.",
+     "tiedosto": "Monte Carlo Casino, gardens, Monaco (Riviera)-LCCN2002707983.jpg",
+     "lyhyt": "Monte Carlon kasino rakennettiin Spélugues-alueelle, ja se valmistui 1863.",
+     "selite": "Kasinon ympärille kasvanut Monte Carlo sai nimensä ruhtinas Charles III:n mukaan.",
+     "lahde": "Photochrom Print Collection, Wikimedia Commons (PD)",
+     "wiki": "Monte Carlo"
+    },
+    {
+     "otsikko": "Kaksi kaupunkia pois, vero pois",
+     "teksti": "Menton ja Roquebrune liitettiin Grimaldien alueeseen 1346–1355, ja ne kasvattivat ruhtinaskunnan lähes kymmenkertaiseksi. Kaupunkien asukkaat kyllästyivät verotukseen ja julistautuivat vapaiksi kaupungeiksi 1848. Charles III luopui vaatimuksesta, ja Ranska maksoi hänelle 4 100 000 frangia. Ranskan ja Monacon sopimus 1861 vahvisti Monacon suvereniteetin, mutta ruhtinaskunnasta jäi jäljelle vain pieni osa entisestä alueesta. Isoisän matkavuonna 1873 Monaco oli siis jo nykyisen kokoinen. Vuodesta 1869 asukkailta ei ole kerätty tuloveroa, ja Monacosta tuli rikkaiden suosima paikka.",
+     "tiedosto": "Plan de Menton - btv1b53061965j.jpg",
+     "lyhyt": "Menton kuului Monacon ruhtinaille 1300-luvulta, kunnes Monaco luopui siitä 1861.",
+     "selite": "Menton on Ranskan Rivieran kaupunki, jonka Monacon ruhtinaat hankkivat 1300-luvulla ja jonka he menettivät 1800-luvun puolivälissä.",
+     "lahde": "tekijä ei ilmoitettu (Gallica), Wikimedia Commons (PD)",
+     "wiki": "Monaco"
+    },
+    {
+     "otsikko": "Linnoituksesta palatsiksi",
+     "teksti": "Ruhtinaanlinnan paikalle rakennettiin 1191 genovalaisten linnake, ja uusi linnoitus aloitettiin 1215: neljä tornia yhdistettiin muureilla. Grimaldit asuivat samassa rakennuksessa yli seitsemän vuosisataa, ja toisin kuin monet muut hallitsijasuvut he eivät voineet rakentaa uutta palatsia vaan lisäsivät siipiä ja torneja. Honoré II keräsi taidetta ja muutti linnoituksen palatsiksi. Ranskan vallankumouksen joukot ottivat palatsin 1793, ja siitä tuli sotilassairaala ja köyhäintalo. Ruhtinaskunta palautettiin 1814, ja Charles III kunnosti palatsin ja rakensi Pyhän Marian tornin uudelleen.",
+     "tiedosto": "Cannons and Prince's Palace of Monaco IMG 1188.jpg",
+     "lyhyt": "Ruhtinaanlinna on Monacon ruhtinaan virallinen asuinpaikka.",
+     "selite": "Palatsin ydin on vuonna 1215 aloitettu linnoitus, jota Grimaldit ovat laajentaneet vuosisatojen ajan.",
+     "lahde": "Alexander Migl, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Prince's Palace of Monaco"
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "Monaco-Ville u prosincu.jpg",
+     "lyhyt": "Monaco-Ville on Monacon vanhin kaupunginosa, jossa on lähes pelkästään kävelykatuja.",
+     "selite": "Kaupunginosan katukyltit ovat kaksikielisiä, sillä monégasque opetetaan kouluissa ja sillä on virallinen asema vanhassa kaupungissa.",
+     "lahde": "August Dominus, Wikimedia Commons (CC0)"
+    },
+    "kappale": "Monacoon saapuu helpoimmin Nizzan kautta: Nice Côte d'Azurin lentokentältä pääsee junalla tai helikopterilla. Monaco ei kuulu Schengen-alueeseen, mutta rajat Ranskan kanssa ovat avoimet. Maa on pieni ja mäkinen, ja kävely on lähteen mukaan paras tapa liikkua, apuna seitsemän julkista hissiä ja liukuporrasta. Vanhassa kaupungissa kalliolla on lähes pelkästään kävelykatuja, ja Monte Carlossa kasinon aukion ympärillä on belle époque -rakennuksia. Ruokailu on yleensä kallista, ja kannattaa kokeilla paikallista barbajuania.",
+    "artikkeli": {
+     "nimi": "Matkailijan Monaco",
+     "taitto": "opas",
+     "teksti": "Kävele kalliolta kasinolle ja anna pienen valtion vaihtuvien maisemien yllättää.",
+     "nosto": "Monacon kaikki tärkeimmät kohteet ovat kävelyetäisyydellä toisistaan, mutta rinteet ja portaat kannattaa varata jalkoihin. Julkiset hissit ja liukuportaat säästävät voimia.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "Lähin kansainvälinen lentokenttä on Nice Côte d'Azur Nizzassa. Sieltä Monacoon pääsee junalla, ja Monacossa on myös helikopterikenttä, josta kulkee helikopteriyhteys Nizzan lentokentälle; matka kestää noin kahdeksan minuuttia. Maan ainoa rautatieasema Monaco–Monte-Carlo avattiin 1999, ja se on osittain maan alla. Paikallisbussilla on viisi linjaa, ja sataman yli kulkee Bateau Bus. Seitsemän julkista hissiä ja liukuporrasta on maksuttomia.",
+       "kuva": {
+        "tiedosto": "Monaco train station.jpg",
+        "lyhyt": "Monaco–Monte-Carlon asema on maan ainoa rautatieasema, ja se avattiin 1999.",
+        "selite": "Asema on osittain maan alla, ja sieltä kulkee junia Ranskan puolelle ja joskus TGV Pariisiin.",
+        "lahde": "Tangopaso, Wikimedia Commons (PD)"
+       }
+      },
+      {
+       "otsikko": "Kallio ja palatsi",
+       "teksti": "Monaco-Villessä on lähes pelkästään kävelykatuja, ja vain paikalliset ajoneuvot saavat ajaa kalliolle. Bensiinimoottoripyörät on kielletty siellä kello 22 jälkeen. Ruhtinaanlinnan vartijoiden vahdinvaihto on päivittäin kello 11.55. Katedraali, Valtamerimuseo ja Saint-Martinin puutarhat ovat lähellä palatsia."
+      },
+      {
+       "otsikko": "Monte Carlo ja Larvotto",
+       "teksti": "Place du Casino -aukion lähellä ovat kasino, Hôtel de Paris, Café de Paris ja Salle Garnier. Monégasqueilta on pääsy pelisaleihin kielletty. Larvotto on Monte Carlon kaupunginosan julkinen ranta, jonne kävelee keskustasta.",
+       "kuva": {
+        "tiedosto": "Plage de Larvotto (Monaco) en novembre 2021 (3).jpg",
+        "lyhyt": "Larvotto on Monte Carlon kaupunginosan julkinen hiekkaranta.",
+        "selite": "Rannan takana rinteeseen nousevat korkeat talot, ja ranta on suosittu uimapaikka lämpiminä kuukausina.",
+        "lahde": "Benoît Prieur, Wikimedia Commons (CC0)"
+       }
+      },
+      {
+       "otsikko": "Mitä täällä syödään",
+       "teksti": "Monacon ruoka on Provencen ja Pohjois-Italian vaikutteiden muovaamaa. Kansallisruokana pidetty barbajuan on uppopaistettu täytetty leivonnainen, jonka täytteenä on esimerkiksi ricottaa, kurpitsaa tai pinaattia. Muita paikallisia makuja ovat socca, eli kikhernelettu, ja pissaladière, sipulin ja anjovisten täyttämä torttu. Ruokailu on yleensä kallista, ja hintoja voi säästää syömällä hieman rannasta poispäin."
+      },
+      {
+       "otsikko": "Milloin kannattaa tulla",
+       "teksti": "Kuukausinormaalien mukaan lämpimimmät kuukaudet ovat heinäkuu, 24,3 astetta, ja elokuu, 23,8 astetta, ja kylmin kuukausi on tammikuu, 8,1 astetta. Sateisin kuukausi on lokakuu, jolloin sataa 144 millimetriä, ja kuivimmat ovat huhtikuu ja heinäkuu, 29 millimetriä. Lähteen mukaan kesä on lämmin ja kuiva, talvi leuto ja sateinen, ja yli 30 asteen helteet ovat harvinaisia merituulen vuoksi. Monacon Grand Prix ajetaan toukokuun lopulla tai kesäkuun alussa.",
+       "kuva": {
+        "tiedosto": "Port Hercule (Monaco) en novembre 2021 (2).jpg",
+        "lyhyt": "Port Hercule on ollut satamapaikka antiikista asti, ja nykyinen satama valmistui 1926.",
+        "selite": "Satamassa voi ankkuroida jopa 700 alusta, ja Grand Prix -kierros kulkee sataman vierestä.",
+        "lahde": "Benoît Prieur, Wikimedia Commons (CC0)"
+       }
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       {
+        "mita": "Ruhtinaanlinna ja Monaco-Villen kävelykadut",
+        "tahdet": 3,
+        "selite": "Kalliolla on palatsi, katedraali ja kapeita katuja, jotka kannattaa kävellä rauhassa."
+       },
+       {
+        "mita": "Valtamerimuseo ja akvaario",
+        "tahdet": 3,
+        "selite": "Museo kohoaa jyrkän kallion reunalla, ja akvaariossa on lähteen mukaan 4 000 kalalajia."
+       },
+       {
+        "mita": "Place du Casino ja Belle Époque -rakennukset",
+        "tahdet": 3,
+        "selite": "Monte Carlon keskusaukion ympärillä ovat kasino, Hôtel de Paris ja Café de Paris."
+       },
+       {
+        "mita": "Port Hercule ja satamakävely",
+        "tahdet": 2,
+        "selite": "Satamassa on jopa 700 alusta, ja ympäri kulkee mukava kävelyreitti."
+       },
+       {
+        "mita": "Jardin Exotique",
+        "tahdet": 2,
+        "selite": "Rinteellä oleva kasvitarha esittelee sukkulentteja ja kulkee luolan ohi."
+       }
+      ],
+      "hyvaTietaa": [
+       {
+        "otsikko": "Pieni ja mäkinen",
+        "teksti": "Maa on pieni mutta rinteinen, ja hissit ja liukuportaat helpottavat liikkumista."
+       },
+       {
+        "otsikko": "Matkatavarat",
+        "teksti": "Asemalla ei ole matkatavaroiden säilytystä, joten pakkaa kevyesti."
+       },
+       {
+        "otsikko": "Kieli ja viisumi",
+        "teksti": "Virallinen kieli on ranska, mutta englantia käytetään. Monaco ei myönnä omia viisumeja vaan hyväksyy Schengen-viisumin."
+       },
+       {
+        "otsikko": "Jardin Exotique",
+        "teksti": "Puutarha on ollut kunnostuksen vuoksi suljettuna vuodesta 2020, joten tarkista ennen vierailua, onko se avoinna."
+       }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "tiede",
+   "nimi": "Meri, kallio ja todennäköisyys",
+   "johdanto": "Monacon ruhtinas Albert I teki merentutkimuksesta elämäntyönsä ja perusti kallion reunalle museon, jonka seinältä näkyy meri. Samalla kasinon nimi lähti kiertämään tilastotieteessä ja laskennassa.",
+   "tehtava": {
+    "kysymys": "Minkä Monacon rakennuksen mukaan satunnaisotantaan perustuva laskentatapa sai nimensä?",
+    "vaihtoehdot": [
+     "Monte Carlon kasino",
+     "Ruhtinaanlinna",
+     "Valtamerimuseo",
+     "Jardin Exotique"
+    ],
+    "oikea": 0,
+    "fakta": "Laskentatapa sai nimensä Monte Carlon kasinosta, jossa Stanisław Ulamin setä pelasi."
+   },
+   "nostot": [
+    {
+     "otsikko": "Ruhtinas ja tutkimusjahdit",
+     "teksti": "Albert I oli ruhtinas vuodesta 1889 kuolemaansa 1922 asti, ja hän omisti elämänsä merentutkimukselle. Oseanografian uransa hän aloitti 22-vuotiaana. Hänellä oli neljä tutkimusjahtia: Hirondelle, Princesse Alice, Princesse Alice II ja Hirondelle II. Azoreilla hän löysi 1896 Princess Alice Bankin. Hirondellen laboratoriossa tehdyt havainnot johtivat anafylaksian ymmärtämiseen, ja Charles Richet sai siitä lääketieteen Nobel-palkinnon 1913. Albert tuki myös arktisia ja antarktisia tutkimusmatkailijoita varoilla ja instrumenteilla ja perusti Pariisiin Ihmisen paleontologian instituutin.",
+     "tiedosto": "Résultats des campagnes scientifiques accomplies sur son yacht par Albert Ier - Fascicule XII (1898) planche 1 (cropped).jpg",
+     "lyhyt": "Albert I julkaisi jahdillaan tekemiensä tutkimusretkien tulokset laajoina raportteina.",
+     "selite": "Kuva on Albert I:n jahdillaan tekemiä tutkimusretkiä käsittelevästä raporttisarjasta vuodelta 1898.",
+     "lahde": "Jean Baptiste François René Koehler, Wikimedia Commons (PD)",
+     "wiki": "Albert I, Prince of Monaco"
+    },
+    {
+     "otsikko": "Museo kallion reunalla",
+     "teksti": "Valtamerimuseo vihittiin 1910, ja avajaisiin kutsuttiin johtavia merentutkijoita. Siellä syntyi ajatus Välimeren tiedekomissiosta, joka on edelleen olemassa. Barokkityylinen julkisivu kohoaa jyrkän kalliojyrkänteen yläpuolelle 85,04 metrin korkeuteen. Rakentaminen kesti 11 vuotta, ja kiveä käytettiin 100 000 tonnia La Turbien louhoksesta. Julkisivun friisiin kaiverrettiin 20 oseanografisen tutkimusaluksen nimeä, jotka Albert I valitsi itse. Jacques-Yves Cousteau johti museota 1957–1988, ja akvaariossa on lähteen mukaan 4 000 kalalajia.",
+     "tiedosto": "Musée Océanographique de Monaco cliff view.jpg",
+     "lyhyt": "Valtamerimuseo vihittiin 1910, ja sen julkisivu kohoaa kalliojyrkänteen reunalla.",
+     "selite": "Museon perusti ruhtinas Albert I, ja sen johtajana toimi 1957–1988 Jacques-Yves Cousteau.",
+     "lahde": "Uhooep, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Oceanographic Museum of Monaco"
+    },
+    {
+     "otsikko": "Luola kasvitarhan seinässä",
+     "teksti": "Jardin Exotique sijaitsee kalliolla Les Moneghettissa. Albert I osti observatorion kallion 1912, ja insinööri Louis Notari suunnitteli puutarhan, jonka rakennustyöt alkoivat 1913. Vuonna 1916 puutarhan itäosasta paljastui luola, jossa oli eläinten jäänteitä ja merkkejä varhaisesta asutuksesta. Puutarha avattiin 1931 ja vihittiin 7. helmikuuta 1933. Esihistoriallisen antropologian museo, jonka Albert I perusti 1901, siirrettiin puutarhaan 1959. Kokoelmassa on lähteen mukaan yli 1 000 lajia ja 6 000 lajiketta sukkulentteja.",
+     "tiedosto": "Jardin exotique de Monaco D190408 e.jpg",
+     "lyhyt": "Jardin Exotique on kalliolle rakennettu kasvitarha, jossa kasvaa pääosin sukkulentteja.",
+     "selite": "Puutarha avattiin 1931, ja sen rakennustyömaalta löytyi 1916 luola, jossa oli merkkejä varhaisesta asutuksesta.",
+     "lahde": "Tangopaso, Wikimedia Commons (PD)",
+     "wiki": "Jardin Exotique de Monaco"
+    },
+    {
+     "otsikko": "Kasinon nimi laskennassa",
+     "teksti": "Monte Carlo -menetelmät käyttävät toistuvaa satunnaisotantaa vaikeiden laskentatehtävien ratkaisemiseen. Ajatuksen kehitti matemaatikko Stanisław Ulam, ja nimen valitsi hänen kollegansa Nicholas Metropolis viitaten Monte Carlon kasinoon, jossa Ulamin setä pelasi. Menetelmää kehitettiin 1940-luvun lopulla Los Alamosin laboratoriossa, kun neutronien kulkua ei saatu ratkaistua tavallisella laskennalla. Ensimmäiset täysin automaattiset Monte Carlo -laskut ajettiin ENIAC-tietokoneella keväällä 1948. Nykyään menetelmää käytetään laajasti fysiikassa, kemiassa, biologiassa ja tilastotieteessä.",
+     "tiedosto": "Monte Carlo Casino north facade on the Place du Casino - Jean Gilletta - Leniaud 2003 p79.jpg",
+     "lyhyt": "Monte Carlon kasino antoi nimensä laskentamenetelmälle, jota käytetään tieteessä yhä.",
+     "selite": "Kasino rakennettiin Spélugues-alueelle ja valmistui 1863, ja sitä laajennettiin 1878–79 Charles Garnierin suunnitelmin.",
+     "lahde": "Jean Gilletta, Wikimedia Commons (PD)",
+     "wiki": "Monte Carlo method"
+    }
+   ]
+  }
+ ],
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "Monacon vanha kaupunki, ruhtinaanlinna ja katedraali ovat kalliolla, jonka vieressä on Port Hercule -satama. Satamasta itään rinne nousee Monte Carloon, jossa sijaitsevat kasino ja oopperasali.",
+  "rajat": {
+   "pohjoinen": 43.7421,
+   "etela": 43.7275,
+   "lansi": 7.4102,
+   "ita": 7.4326
+  },
+  "kohteet": [
+   {
+    "nimi": "Monte Carlon kasino",
+    "lat": 43.73944,
+    "lon": 7.42889
+   },
+   {
+    "nimi": "Salle Garnier",
+    "lat": 43.73889,
+    "lon": 7.42833
+   },
+   {
+    "nimi": "Port Hercule",
+    "tyyppi": "aukio",
+    "lat": 43.735,
+    "lon": 7.426
+   },
+   {
+    "nimi": "Jardin Exotique",
+    "tyyppi": "luonto",
+    "lat": 43.73222,
+    "lon": 7.41389
+   },
+   {
+    "nimi": "Valtamerimuseo",
+    "lat": 43.73083,
+    "lon": 7.42528
+   },
+   {
+    "nimi": "Ruhtinaanlinna",
+    "lat": 43.73142,
+    "lon": 7.42028
+   },
+   {
+    "nimi": "Monacon katedraali",
+    "lat": 43.73021,
+    "lon": 7.42266
+   }
+  ]
+ },
+ "nahtavyydet": {
+  "Monte Carlon kasino": {
+   "aika": "1863, laajennettu 1878–81",
+   "teksti": "Monte Carlon kasino on Place du Casino -aukion laidalla oleva pelikasino ja Monacon tunnetuimpia rakennuksia. Nykyiselle paikalle Spélugues-alueelle rakennettiin vuodesta 1858, ja rakennus valmistui 1863 arkkitehti Gobineau de la Bretonnerien suunnitelmin. Hôtel de Paris, saman arkkitehdin työ, valmistui jo 1862. François Blanc sai 50 vuoden toimiluvan, ja Société des Bains de Mer perustettiin 15 miljoonan frangin pääomalla.\n\nIsoisän matkavuonna 1873 kasino oli siis jo toiminnassa mutta vielä alkuperäisessä asussaan. Samana vuonna Joseph Jagger rikkoi pankin huomattuaan yhden rulettipyörän vinoutuman. Charles Garnier, Pariisin oopperan arkkitehti, laajensi kasinoa Jules Dutroun kanssa 1878–79, ja 1880–81 lisättiin Trente-et-Quarante-sali, jonka Garnierin osat ovat suureksi osaksi hävinneet.\n\nKasino on yhä Société des Bains de Mer -yhtiön käytössä. Monégasqueilta on pääsy pelisaleihin kielletty, ja sääntö oli ruhtinatar Carolinen aloite.",
+   "kuvat": [
+    {
+     "tiedosto": "Casino de Montecarlo, Mónaco, 2016-06-23, DD 05.jpg",
+     "lyhyt": "Monte Carlon kasino valmistui 1863 ja on Beaux-Arts-tyylinen.",
+     "selite": "Kasinoa laajensi 1878–79 Charles Garnier, Pariisin oopperan arkkitehti.",
+     "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Salle Garnier": {
+   "aika": "1879",
+   "teksti": "Salle Garnier on Monte Carlon oopperan sali kasinon yhteydessä. Sali rakennettiin kasinon yhteyteen, koska Monacossa oli 1870-luvulla vähän kulttuuritarjontaa. Pariisin oopperan arkkitehti Charles Garnier suunnitteli sen, ja se valmistui 8,5 kuukaudessa. Paikkoja on 524, kun Pariisin Palais Garnierissa niitä on noin 2 000.\n\nIsoisän matkavuonna 1873 salia ei vielä ollut. Avajaiset pidettiin 25. tammikuuta 1879, kun Sarah Bernhardt esiintyi nymfinä, ja ensimmäinen ooppera oli Robert Planquetten Le Chevalier Gaston 8. helmikuuta 1879.\n\nRaoul Gunsbourg johti oopperaa vuodesta 1892 kuuden vuosikymmenen ajan. Hector Berliozin La damnation de Faust ensiesitettiin salissa 1893, ja 1909 esitettiin Wagnerin Nibelungin sormus kokonaan ranskaksi. Salia muutettiin 1898–99 ja uudistettiin 2004–05.",
+   "kuvat": [
+    {
+     "tiedosto": "Opéra de Monte-Carlo (50326975807).jpg",
+     "lyhyt": "Salle Garnier on Monte Carlon oopperan sali, ja se avattiin 1879.",
+     "selite": "Sali rakennettiin kasinon yhteyteen Charles Garnierin suunnitelmin, ja siinä on 524 paikkaa.",
+     "lahde": "Jorge Láscar from Australia, Wikimedia Commons (CC BY 2.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Port Hercule": {
+   "aika": "antiikista, nykyinen satama 1926",
+   "teksti": "Port Hercule on Monacon syvänmeren satama, jonka pinta-ala on noin 16 hehtaaria. Nimi liittyy Herkuleeseen: kreikkalaiset siirtokuntalaiset perustivat Monoikoksen 500-luvulla eaa. Plinius vanhempi ja Tacitus mainitsevat sataman, ja Virgilius kuvaa Aeneiksessa linnoitettua kalliota, Monoecusta, meren rannalla.\n\nIsoisän matkavuonna 1873 satama oli nykyistä vanhempi, sillä nykyinen satama valmistui vasta 1926. Sitä uudistettiin 1970-luvulla, ja suomalainen Marinetek toimitti kolme uutta ponttonia vuoteen 2011 mennessä.\n\nSatamassa voi ankkuroida jopa 700 alusta. Vesi on tavallisilla laitureilla seitsemän metriä syvää ja ulkolaitureilla jopa 40 metriä. Satamasta kulkee myös Monacon Grand Prix -kierros.",
+   "kuvat": [
+    {
+     "tiedosto": "Monaco Port Hercule 02.jpg",
+     "lyhyt": "Port Hercule on Monacon syvänmeren satama, jossa voi ankkuroida jopa 700 alusta.",
+     "selite": "Nykyinen satama valmistui 1926, mutta paikka on ollut satamana antiikista asti.",
+     "lahde": "Zairon, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Jardin Exotique": {
+   "aika": "1913–1933",
+   "teksti": "Jardin Exotique on rinteeseen rakennettu kallioinen kasvitarha, jossa kasvaa pääosin sukkulentteja. Augustin Gastaud alkoi viljellä sukkulentteja Saint-Martinin puutarhassa 1895. Albert I osti observatorion kallion 1912 ja tilasi puutarhan Louis Notarilta. Rakennustyöt alkoivat 1913, puutarha avattiin 1931 ja vihittiin 7. helmikuuta 1933.\n\nIsoisän matkavuonna 1873 puutarhaa ei vielä ollut. Sukkulentteja oli tuotu Eurooppaan Meksikosta 1860-luvun lopulla, ja Monacossa niitä alettiin viljellä vasta 1895.\n\nVuonna 1916 puutarhan alueelta löytyi luola, jossa oli asumisen jälkiä. Esihistoriallisen antropologian museo siirtyi puutarhaan 1959. Kokoelmassa on lähteen mukaan yli 1 000 lajia ja 6 000 lajiketta, ja ensimmäinen johtaja Louis Vatrican toimi tehtävässä 1933–1969.",
+   "kuvat": [
+    {
+     "tiedosto": "Jardin exotique de Monaco D190408 g.jpg",
+     "lyhyt": "Jardin Exotique on Monacon kallioinen kasvitarha, jossa kasvaa pääosin sukkulentteja.",
+     "selite": "Puutarha rakennettiin Albert I:n tilauksesta 1913 alkaen, ja se avattiin yleisölle 1931.",
+     "lahde": "Tangopaso, Wikimedia Commons (PD)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Valtamerimuseo": {
+   "aika": "1899–1910",
+   "teksti": "Valtamerimuseo on Monacon merentutkimukseen keskittyvä museo, jonka ruhtinas Albert I vihki 1910. Barokkityylinen julkisivu kohoaa 85,04 metrin korkeuteen jyrkän kallion yläpuolelle. Rakentaminen kesti 11 vuotta, ja kiveä käytettiin 100 000 tonnia La Turbien louhoksesta. Julkisivun friisissä on 20 tutkimusaluksen nimeä.\n\nIsoisän matkavuonna 1873 museota ei vielä ollut, ja vielä 1898 sen rakentaminen oli juuri alkanut. Ensimmäisessä kerroksessa on A Sailor's Career -näyttely ja Hirondellen laboratorio. Laboratorion havainnoista syntyi anafylaksian tutkimus, josta Charles Richet sai Nobelin 1913.\n\nJacques-Yves Cousteau johti museota 1957–1988. Akvaariossa on lähteen mukaan 4 000 kalalajia ja yli 200 selkärangattomien heimoa. Museo juhli satavuotista taivaltaan maaliskuussa 2010 laajan kunnostuksen jälkeen.",
+   "kuvat": [
+    {
+     "tiedosto": "Musée Océanographique de Monaco 20150807.jpg",
+     "lyhyt": "Valtamerimuseo vihittiin 1910, ja sen perusti ruhtinas Albert I.",
+     "selite": "Museon julkisivun friisissä on 20 oseanografisen tutkimusaluksen nimeä.",
+     "lahde": "Suicasmo, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Ruhtinaanlinna": {
+   "aika": "1215 (linnoitus), 1500–1800-luvut",
+   "teksti": "Ruhtinaanlinna on Monacon ruhtinaan virallinen asuinpaikka kallion päällä. Paikalle rakennettiin 1191 genovalaisten linnake, ja 1215 aloitettu linnoitus, jossa oli neljä tornia ja muuri, muodostaa palatsin ytimen. Grimaldit ovat pitäneet linnoitusta hallussaan vuodesta 1297.\n\nIsoisän matkavuonna 1873 palatsi oli vielä kunnostusvaiheessa: ruhtinas Charles III kunnosti sitä muun muassa rakentamalla Pyhän Marian tornin uudelleen sekä uusimalla kappelin ja julkisivumaalaukset. Edellisen vuosisadan alussa, 1793, Ranskan vallankumouksen joukot olivat vallanneet palatsin, vanginneet ruhtinaan ja ryöstäneet rakennuksen.\n\nHonoré II:n arkkitehti Jacques Catone pehmensi ulkoasua, ja 1600-luvulla syntyi valtiohuoneiden jono. Herkuleen galleriassa ovat Orazio de Ferrarin maalaamat Herkuleen urotyöt, ja Peilien galleria on mallinnettu Versailles'n peilisalin mukaan.",
+   "kuvat": [
+    {
+     "tiedosto": "Exterior of the Prince's Palace (Monaco).jpg",
+     "lyhyt": "Ruhtinaanlinna on Monacon ruhtinaan virallinen asuinpaikka, ja sen ydin on 1215 aloitettu linnoitus.",
+     "selite": "Grimaldit ovat hallinneet linnoitusta vuodesta 1297, ja Charles III kunnosti sitä 1800-luvulla.",
+     "lahde": "Joseolgon, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Monacon katedraali": {
+   "aika": "1875–1903, vihitty 1911",
+   "teksti": "Monacon katedraali on Notre-Dame-Immaculée, ja sen valkoinen julkisivu on romaanis-bysanttilaista tyyliä. Nykyinen katedraali rakennettiin 1875–1903 ja vihittiin 11. kesäkuuta 1911. Paikalla oli aiemmin Pyhän Nikolauksen kirkko, Monacon ensimmäinen seurakuntakirkko vuodelta 1252.\n\nIsoisän matkavuonna 1873 nykyistä katedraalia ei vielä ollut: vanha Pyhän Nikolauksen katedraali purettiin vasta 1874, ja uuden rakennustyöt alkoivat 1875.\n\nKorkea-alttari ja piispantuoli on tehty valkoisesta Carrara-marmorista, ja retaabeli on noin vuodelta 1500. Katedraalissa ovat monien Grimaldien haudat, muun muassa Rainier III:n ja Gracen. Pyhä Devota on suojeluspyhimys, ja nelimanuaalinen urku vihittiin 1976.",
+   "kuvat": [
+    {
+     "tiedosto": "Cathedral of Our Lady Immaculate, Monaco (frontage).jpg",
+     "lyhyt": "Monacon katedraali rakennettiin 1875–1903, ja siellä ovat monien Grimaldien haudat.",
+     "selite": "Katedraalin paikalla oli aiemmin Pyhän Nikolauksen kirkko, joka purettiin 1874.",
+     "lahde": "Uhooep, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  }
+ },
+ "saatiedot": {
+  "lat": 43.73,
+  "lon": 7.42,
+  "keskilampo": [
+   8.1,
+   9,
+   10.5,
+   13.5,
+   18,
+   20.1,
+   24.3,
+   23.8,
+   20.8,
+   15.8,
+   13.1,
+   9.4
+  ],
+  "sade": [
+   39,
+   30,
+   57,
+   29,
+   58,
+   68,
+   29,
+   41,
+   82,
+   144,
+   40,
+   94
+  ],
+  "luonnehdinta": "Monacossa kuukauden keskilämpötila on alimmillaan tammikuussa, 8,1 astetta, ja korkeimmillaan heinäkuussa, 24,3 astetta. Sateisin kuukausi on lokakuu 144 millimetrillä, kun huhtikuussa ja heinäkuussa sataa vain 29 millimetriä. Vuoden sademäärä on näillä luvuilla yhteensä 711 millimetriä."
+ },
+ "ehdotukset": {
+  "lentoasema": "Nice Côte d'Azur (NCE)",
+  "huomiot": [
+   "N3: Plan de Menton -kartan Commons-tekijäkenttä on tyhjä (Gallica/BnF); lähderivi kopioitu kuvat.md:stä sanatarkasti ja vaatii käsintarkistuksen. Kartta on Mentonista, ei Monacosta; se on valittu vain nostoon, joka kertoo Mentonin menetyksestä, ja kuvateksti kertoo Mentonista.",
+   "Jardin Exotique on ollut suljettuna vuodesta 2020; avaustilanne lokakuussa 2026 tuntematon. Teksteissä ei väitetä aukioloa, oppaan hyvä tietää -rivi kehottaa tarkistamaan.",
+   "Tekstien kasinosuhde: Joseph Jagger -tapaus 1873 on lähteen [Monte Carlo Casino] ainoa 1873-tapahtuma, ei yhdistetä isoisään. Salle Garnier ja kasino ovat noin 70 m päässä toisistaan; kartalla numeroympyrät voivat peittyä, jolloin Salle Garnier pois.",
+   "Port Hercule on merkitty tyypillä aukio (vesialue), koska mallissa ei ole sopivampaa.",
+   "um.fi:n matkustustiedote ei ollut luettavissa (403); oppaassa ei viranomaisviittausta eikä turvallisuusväitteitä. Wikidatan P625 antoi 429, joten koordinaatit ovat Wikipedia-artikkelien.",
+   "Menton/Roquebrunen osuus (95 % / 80 %) on lähteissä ristiriitainen; teksteissä vain 'pieni osa entisestä alueesta'.",
+   "Salle Garnier -kuvan lähderivi on CC BY 2.0 (kuvat.md); tarkistin saattaa vaatia versiota."
+  ]
+ }
+}
