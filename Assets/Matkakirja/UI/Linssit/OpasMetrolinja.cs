@@ -151,7 +151,7 @@ namespace Matkakirja.Natiivi
             Debug.Log($"MATKAKIRJA opas: metrolinja → asema {paras} {nimi}: {(ok ? "siirtyy" : "ei siirtoa")}");
         }
 
-        /// <summary>Aseman valinta (OpasValikko kytkee LS1:n opas-siirtymään); true = siirto alkoi.</summary>
+        /// <summary>Aseman valinta (OpasValikko kytkee LS1:n kierroshyppyyn OpasSovitin.KierrosKohteeseen); true = siirto alkoi.</summary>
         public System.Func<int, bool> AsemaValittu;
 
         IReadOnlyList<string> Nimet()

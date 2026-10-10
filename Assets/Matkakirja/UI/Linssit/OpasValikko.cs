@@ -428,13 +428,9 @@ namespace Matkakirja.Natiivi
             kerros.JokaRuutu += PaivitaSaaVihje;
             // METROLINJA (omistaja 7.10. 10.2x): kierroksen eteneminen vasemmassa reunassa keskellä (OpasMetrolinja).
             metro = new OpasMetrolinja(Juuri);
-            // Aseman napautus (omistaja 10.10. 19.0x): kierroksen kohteeseen olemassa olevalla opas-siirtymällä (Liiku).
-            metro.AsemaValittu = i =>
-            {
-                var k = OpasSovitin.KierrosKohteet;
-                if (k == null || i < 0 || i >= k.Count) return false;
-                return OpasSovitin.Liiku(new Matkakirja.Linssit.Kierros.OpasTaky { Nimi = k[i].nimi, Lat = k[i].lat, Lon = k[i].lon });
-            };
+            // Aseman napautus (omistaja 10.10. 19.0x): kierroshyppy kohteeseen i (LS1 50204e0f2): lento, kerronta siellä ja kierros
+            // jatkuu siitä; metrolinja päivittyy KierrosLahtee-tapahtumasta.
+            metro.AsemaValittu = OpasSovitin.KierrosKohteeseen;
             kerros.JokaRuutu += PaivitaMetro;
             OpasSovitin.LatausKuvaVaihtui += LatausKuvaVaihtui;
             // Sallitut saapuvat oppaan avauksessa (aloitusvalikko jo auki): lista uudelleen, jotta rajaamaton ei jää näkyviin.
