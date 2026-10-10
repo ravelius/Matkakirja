@@ -122,7 +122,9 @@ Shader "Matkakirja/MuseoValaistu"
                 if (_Heijastus > 0 && _MuseoHeijastusMaara > 0 && n.y > 0.9)
                 {
                     float2 suv = GetNormalizedScreenSpaceUV(i.paikka);
-                    float3 r = SAMPLE_TEXTURE2D_LOD(_MuseoHeijastusKuva, sampler_MuseoHeijastusKuva, suv, _Karheus * _MuseoHeijastusMipit).rgb;
+                    // Sumeus karheus² · 2 mip-ketjusta (LS2:n A/B 10.10.: lineaarinen karheus sumensi parketin tunnistamattomaksi;
+                    // nyt marmori 0,3 → 18 %, parketti 0,45 → 40 %).
+                    float3 r = SAMPLE_TEXTURE2D_LOD(_MuseoHeijastusKuva, sampler_MuseoHeijastusKuva, suv, saturate(_Karheus * _Karheus * 2) * _MuseoHeijastusMipit).rgb;
                     float fr = 0.04 + 0.96 * pow(1 - saturate(dot(n, v)), 5);
                     c = lerp(c, r, saturate(_Heijastus * fr * _MuseoHeijastusMaara));
                 }
