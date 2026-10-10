@@ -422,7 +422,9 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
     pa.replaceChildren();
     // Viikko koko leveydelle; 5 h ja Päätoimittajan konteksti (mittarit.pt_konteksti) rinnakkain. Rajat: käyttö 70/90 %, konteksti 55/65 % (oma nollaus).
     var palkkiLaatat = laatat.filter(function (l) { return l.palkki; }).map(function (l) {
-      return { nimi: l.nimi, prosentti: l.prosentti, muutos: l.muutos, nollautuu: l.nollautuu, kulta: 70, punainen: 90 };
+      // 5 h -rivin muutosprosentti pois (omistaja 10.10. 22.5x); viikolle arvio jäljellä olevasta ja koko ajasta tällä tahdilla.
+      return { nimi: l.nimi, prosentti: l.prosentti, muutos: /^5\s*t/i.test(String(l.nimi || '')) ? null : l.muutos, nollautuu: l.nollautuu,
+        jaljella_h: l.jaljella_h, kokonais_h: l.kokonais_h, kulta: 70, punainen: 90 };
     });
     if (m && typeof m.pt_konteksti === 'number') palkkiLaatat.push({ nimi: 'Päätoimittaja', prosentti: m.pt_konteksti, kulta: 55, punainen: 65, otsikko: 'Päätoimittajan konteksti' });
     palkkiLaatat.forEach(function (l, i) {
@@ -439,6 +441,11 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
       if (jaljella > 0) {
         var min = Math.ceil(jaljella / 60000), tt = Math.floor(min / 60);
         nimi.append(luo('span', 'aika', ' (' + tt + ':' + String(min % 60).padStart(2, '0') + ')'));
+      }
+      // Viikon tahti (omistaja 10.10. 22.5x: "arvioitu jäljellä oleva käyttöaika sekä arvioitu kokonaisaika"): paivita.py laskee historiasta.
+      if (typeof l.jaljella_h === 'number' && typeof l.kokonais_h === 'number') {
+        var tunnit = function (h) { return h < 1 ? 'alle 1 h' : h < 48 ? '~' + Math.round(h) + ' h' : '~' + Math.round(h / 24) + ' vrk'; };
+        nimi.append(luo('span', 'aika', ' (jäljellä ' + tunnit(l.jaljella_h) + ', koko ' + tunnit(l.kokonais_h) + ')'));
       }
       paa.append(nimi, arvo);
       var ura = luo('div', 'ura');
