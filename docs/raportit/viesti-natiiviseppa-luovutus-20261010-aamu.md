@@ -30,6 +30,8 @@ tai devicectl device install app (bundle fi.matkakirja.peli.kehitys), sitten mui
   ennen TF 175:tä. Tarkista laite-sha.sh/laite-release.sh:n UNITY-rivi (6.7).
 - rsync 6.3-kopiosta T7:lle käynnistettiin ILMAN käännöslukkoa (Julkaisija toivoi lukon) → tarkista lokit/natiiviseppa-unity63-talteen.out;
   tarvittaessa aja uudelleen lukko varattuna (sovi väli Julkaisijan kanssa).
+- 07.5x Pelikoodari (PT kuittasi 175): pelikoodari/kaupunki-pisteet-175 d02226c68 (kahvilan astiat + pyörän kellot; Ydin + 2 riviä
+  ElavaKaupunki; LISÄÄ MUISTIA +0,3 Mt) → 175/6.7-runkoon (EI vielä mergetty). pulu-maat-23 078f8e8a4 on jo 175-rungossa.
 - TF 175 TÄNÄÄN 6.7:llä (omistaja): ehdot testit 6.7 + käännös + iPad Release-muistiajo läpi; muutosloki 175 (maininta Unity 6.7:stä
   pelaajan kielellä) PT:lle; LR:n kartiokuori vain jos ehtii.
 
