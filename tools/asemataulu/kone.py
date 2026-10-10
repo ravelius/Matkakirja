@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Asemataulun koneen kuorma: muistin ja prosessorin käyttö prosentteina (omistaja 10.10.2026 klo 16.5x).
+"""Asemataulun koneen kuorma: muistin ja prosessorin käyttö prosentteina (omistaja 10.10.2026 klo 16.3x).
 
 Ajo: python3 -I scratchpad/asemataulu/kone.py → tulostaa {"muisti": N, "prosessori": M}
 Muisti = 100 − memory_pressuren vapaa-%, prosessori = 100 − topin idle-% (toinen näyte, 1 s).

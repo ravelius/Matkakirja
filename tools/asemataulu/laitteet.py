@@ -2,7 +2,7 @@
 """Asemataulun laitteet: mitä iPadilla ja Blenderillä on juuri nyt ajossa ja kenen ajo se on.
 
 Ajo: python3 -I scratchpad/asemataulu/laitteet.py  → kirjoittaa scratchpad/asemataulu/laitteet.json
-(Postivahti kierroksellaan, Päätoimittaja vie artefaktiin; omistaja 10.10.2026 klo 16.5x).
+(Postivahti kierroksellaan, Päätoimittaja vie artefaktiin; omistaja 10.10.2026 klo 16.3x).
 Rooli päätellään prosessin vanhemmista: ensimmäinen Claude-prosessi ja sen työkansio (roolin checkout).
 """
 import json, os, re, subprocess, sys, time
