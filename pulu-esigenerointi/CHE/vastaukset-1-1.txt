@@ -1,0 +1,184 @@
+### 1.1
+KYSYMYS: Kuka Guillaume-Henri Dufour oli?
+Annas ku mietin. Tän miehen nimi kuuluu kyl Sveitsissä lähes kaikkialla. Guillaume-Henri Dufour (1787–1875) oli sveitsiläinen insinööri, upseeri ja kartoittaja. Hän johti Sveitsin virallisen kartaston laatimista, ja tuo [[Dufourin kartta]] valmistui 1800-luvun puolivälissä. Hän toimi myös armeijan kenraalina vuoden 1847 [[Sonderbundin sodassa]], joka päättyi nopeasti ja verrattain pienin tappioin. Lisäksi hän oli mukana perustamassa [[Punaista Ristiä]] Genevessä. Vuoren huippu nimettiin hänen mukaansa vielä hänen elinaikanaan. Ei paha muisti kyyhkyltä.
+JATKOT:
+Mitä Sonderbundin sodassa tapahtui?
+Miten Punainen Risti syntyi Genevessä?
+
+### 1.2
+KYSYMYS: Kuinka monta neljäntuhannen metrin huippua Monte Rosassa on?
+Hetkinen ny. Laskemista tää vaatii. Monte Rosan massiivissa on noin kymmenen yli neljäntuhannen metrin huippua, ja tarkka luku riippuu siitä, lasketaanko pienimmät kärjet omiksi huipuikseen. Dufourspitzen lisäksi tunnetuimpia ovat [[Nordend]], [[Zumsteinspitze]] ja [[Signalkuppe]], jotka kaikki ylittävät neljä tuhatta metriä. Osa huipuista sijaitsee Sveitsin ja Italian rajalla. Kyl se kymmenen riittää kyyhkylle.
+JATKOT:
+Miten Monte Rosalle nousee turvallisesti?
+Kuka nousi ensimmäisenä Monte Rosan huipulle?
+
+### 1.3
+KYSYMYS: Mitä vedenjakaja tarkoittaa ja minne Monte Rosan vedet virtaavat?
+Joo, tän minä tiedän, ylhäältä sen näkee selvästi. Vedenjakaja on maanpinnan korkea kohta, jonka eri puolille satanut vesi virtaa eri vesistöihin. Monte Rosan massiivissa vedet jakautuvat [[Rhônen]] ja [[Pon]] vesistöihin: Rhônen vedet kulkevat Sveitsin ja Ranskan halki [[Välimerelle]], ja Pon vedet virtaavat Pohjois-Italian halki [[Adrianmerelle]]. Sama sadepisara päätyy siis eri meriin sen mukaan, kummalle puolelle harjannetta se putoaa. Kyl se vaan on hienosti järjestetty.
+JATKOT:
+Mistä Po-joki saa alkunsa?
+Mihin mereen Rein laskee?
+
+### 1.4
+KYSYMYS: Miten Dufourspitzelle noustaan ja onko reitti vaativa?
+Mmm— hyvä kysymys tuo, vähän jalkoja kylmää. Tavallisin nousureitti lähtee [[Zermattista]], ja yöpymispaikkana käytetään yleensä [[Monte Rosa -majaa]]. Sieltä reitti kulkee [[jäätikön]] yli ja päättyy kallioiselle harjanteelle. Nousu on vaativa vuoristoretki, joka edellyttää jäätikkö- ja kiipeilytaitoja, kunnollista varustusta ja hyvää kuntoa, ja monet kiipeäjät käyttävät opasta. Sää ja olosuhteet vaikuttavat reitin vaikeuteen paljon. Minä pysyn mieluummin ilmassa, siellä ei tarvita köyttä.
+JATKOT:
+Mikä Gornergratin hammasratajuna on?
+Milloin Dufourspitzelle nousu on turvallisinta?
+
+### 1.5
+KYSYMYS: Mikä on Alppien korkein vuori ja missä se sijaitsee?
+Ai se. Kaikki kyyhkyt tietävät sen. Alppien korkein vuori on [[Mont Blanc]], jonka huippu kohoaa noin 4 806 metrin korkeuteen Ranskan ja Italian rajalla. Rajan tarkasta kulusta huipun läheisyydessä ranskalaiset ja italialaiset ovat olleet eri mieltä, joten lähteet voivat sijoittaa huipun eri tavoin. Vuoren juurella on ranskalainen [[Chamonixin]] laakso, josta kiipeäjät ja retkeilijät lähtevät liikkeelle. [[Dufourspitze]] on Alppien toiseksi korkein vuori.
+
+Minä olen katsonut sitä monta kertaa ylhäältä, eikä ero toiseksi korkeimpaan siivin juuri näy, mutta korkein on silti korkein.
+JATKOT:
+Milloin Mont Blancille noustiin ensimmäisen kerran?
+Millainen kaupunki Chamonix on?
+PAIKKA: Mont Blanc | 45.83 | 6.87 | alue
+
+### 2.1
+KYSYMYS: Kuka nousi Matterhornille ensimmäisenä?
+Tuota niin, siihen liittyy surullinen loppu. Matterhornin huipulle nousi ensimmäisenä englantilaisen [[Edward Whymperin]] johtama seitsemän hengen seurue 14. heinäkuuta 1865 Sveitsin puolelta [[Zermattista]] lähtien. Laskeutumisessa köysi katkesi, ja neljä seurueen jäsentä sai surmansa, kolme selvisi. Onnettomuus järkytti aikalaisia ja herätti keskustelua vuorikiipeilyn vaaroista. Noin kolme päivää myöhemmin italialainen [[Jean-Antoine Carrel]] kumppaneineen nousi huipulle Italian puolelta. Siitä on yli sata viisikymmentä vuotta, ja nykyään vuorella on vakiintuneet reitit, oppaat ja vuoristopelastus. Onneksi siitä on jo pitkä aika.
+JATKOT:
+Millaisia reittejä Matterhornille on nykyään?
+Miten vuorikiipeilyn turvallisuus on kehittynyt?
+
+### 2.2
+KYSYMYS: Miksi Matterhorn on niin tarkan pyramidin muotoinen?
+Annas ku mietin, miltä se ylhäältä näyttää. Matterhornin muoto on syntynyt pitkän ajan kuluessa, kun [[jäätiköt]] ovat [[jääkausien]] aikana kuluttaneet ja louhineet vuoren eri sivuilta syviä, kulhomaisia syvänteitä. Kun tällaisia jäätikön kaivertamia syvänteitä on useilla sivuilla lähellä toisiaan, niiden väliin jää terävä, jyrkkäseinäinen huippu. Matterhornin neljä seinämää kääntyvät suunnilleen eri ilmansuuntiin, minkä vuoksi vuori näyttää lähes symmetriseltä pyramidilta. Myös kallioperän rakenne vaikuttaa siihen, miten rapautuminen etenee, mutta en ole varma kaikista yksityiskohdista. Ei kyl pyramidi hullumpi muoto ole.
+JATKOT:
+Miten jäätiköt muokkaavat vuoria?
+Miksi Alppien jäätiköt sulavat nykyään?
+
+### 2.3
+KYSYMYS: Mitä Matterhornin nimi tarkoittaa?
+Tost minä osaan kertoo. Matterhorn on saksankielinen nimi, jonka alkuosa viittaa [[Mattertalin]] laaksoon ja loppuosa tarkoittaa huippua eli sarvea. Alkuosan uskotaan juontuvan sanasta, joka tarkoittaa niittyä, mutta en ole tästä aivan varma. Italiaksi vuori on [[Monte Cervino]] ja ranskaksi [[Cervin]]. Kolme nimeä yhdelle vuorelle, ja silti se pysyy paikallaan.
+JATKOT:
+Miksi Zermatt on autoton?
+Mikä on Monte Cervino Italian puolella?
+
+### 2.4
+KYSYMYS: Miksi Matterhornia pidetään niin usein valokuvatuimpana vuorena?
+Kas vaan, sitä on kyl tuijotettu. Matterhornin muoto on poikkeuksellisen tunnistettava: se kohoaa lähes yksinään symmetrisenä pyramidina ympäröivien vuorten yläpuolelle, ja sen huippu näkyy hyvin [[Zermattin]] kylästä. Näköalapaikoille on helppo päästä, esimerkiksi [[Gornergratilta]] ja [[Riffelsee-järven]] rannalta, jossa vuori heijastuu veteen tyynenä päivänä. Väite, että se olisi maailman valokuvatuin vuori, on kuitenkin pikemminkin vakiintunut luonnehdinta kuin mitattu tosiasia.
+
+Itse en ole saanut siitä yhtään kuvaa, vaikka olen poseerannut sen edessä oikein ahkerasti.
+JATKOT:
+Mikä Gornergratin hammasratajuna on?
+Mitä Zermattissa voi tehdä kesällä?
+
+### 2.5
+KYSYMYS: Mikä on Hörnli-harjanne ja miksi sitä käytetään?
+Annas ku katson ylhäältä. Hörnli-harjanne on Matterhornin koillisharjanne ja yleisin nousureitti Sveitsin puolelta. Reitti lähtee [[Hörnlihüttestä]], jonne pääsee [[Zermattista]] jalan, ja jatkuu kallioista harjannetta pitkin kohti huippua. Reitin varrella on myös pieni hätämaja, [[Solvay-hütte]]. Italian puolella nousu kulkee toista harjannetta pitkin. Minä kyllä kierrän koko jutun lentämällä.
+JATKOT:
+Mikä on Italian puolen Lion-harjanne?
+Milloin kiipeilykausi Matterhornilla on?
+
+### 3.1
+KYSYMYS: Mitkä ovat Eiger ja Mönch?
+Katotaas. Nuo kaksi ovat Jungfraun naapureita ja kuuluvat samaan kuuluisaan vuorimuuriin. Eiger on kolmikon matalin, noin 3 970 metriä korkea, ja sen jyrkkä [[Eigerin pohjoisseinämä]] on alpinistien keskuudessa tunnettu ja pelätty. Mönch on noin 4 107 metriä korkea ja sijaitsee Eigerin ja Jungfraun välissä. Näiden kahden vuoren sisällä kulkee [[Jungfraujochin]] rautatieasemalle johtava tunneli. Kolme vuorta, ja minä muistin kaikkien korkeudet.
+JATKOT:
+Miksi Eigerin pohjoisseinämä on niin kuuluisa?
+Missä Jungfraujochin asema sijaitsee?
+
+### 3.2
+KYSYMYS: Miten Jungfraulle päästään nykyään?
+No niin, junaahan kyyhky ei tarvitse. Huipulle itsessään pääsee vain vuoristokiipeilijöille tarkoitettuja reittejä, mutta lähes huipun tuntumaan nousee juna. Matka alkaa tyypillisesti [[Interlakenista]], josta kuljetaan [[Grindelwaldin]] tai Lauterbrunnenin kautta [[Kleine Scheideggin]] asemalle, ja sieltä jatketaan [[Jungfraujochin]] asemalle louhittua tunnelia pitkin. Asema on 3 454 metrin korkeudessa, ja tunneli kulkee Eigerin ja Mönchin sisällä. Huipulle asti nouseminen vaatii jäätikkökokemusta ja tavallisesti opasta. Minä ohitan koko asemarakennuksen siivin.
+JATKOT:
+Mitä Jungfraujochilla on nähtävää?
+Miten korkeus vaikuttaa ihmiseen vuoristossa?
+
+### 3.3
+KYSYMYS: Mistä Jungfrau-vuoren nimi on peräisin?
+Hetkinen ny, mukava kysymys. Jungfrau tarkoittaa saksaksi neitoa tai neitsyttä. Nimen alkuperästä on esitetty useita selityksiä, eikä yksiselitteistä vastausta ole. Yhden tulkinnan mukaan nimi viittaa lumen valkeuteen ja vuoren koskemattomaan olemukseen, toisen mukaan [[Interlakenin]] luostarin nunniin. Naapurivuori [[Mönch]] taas tarkoittaa munkkia, ja nimet sopivat yhteen. Minä olisin nimennyt sen Pulla-vuoreksi.
+JATKOT:
+Milloin Jungfraulle noustiin ensimmäisen kerran?
+Millainen kaupunki Interlaken on?
+
+### 3.4
+KYSYMYS: Miksi Alppien jäätiköt ovat vetäytymässä?
+Odotas vähän, tää vaatii tarkkuutta. Alppien jäätiköt ovat vetäytyneet 1800-luvun puolivälin jälkeen lähes koko ajan, ja vetäytyminen on viime vuosikymmeninä nopeutunut. Pääsyy on [[ilmaston lämpeneminen]]: kesät ovat lämpimämpiä, jolloin jäätä sulaa enemmän kuin talven lumi ehtii korvata. Jungfraun lähellä alkava [[Aletschjäätikkö]], Alppien pisin jäätikkö, on lyhentynyt ja ohentunut selvästi, vaikka se on yhä näyttävä. Toivottavasti jäätä riittää vielä pitkään.
+JATKOT:
+Mikä on Jungfrau-Aletsch-maailmanperintökohde?
+Kuinka jäätiköt muodostuvat?
+
+### 3.5
+KYSYMYS: Miksi korkealla vuoristossa on vaikeampi hengittää?
+Ai tota, kyyhky on tässä edukseen. Ilman happipitoisuus pysyy korkeuden kasvaessa suunnilleen samana, mutta [[ilmanpaine]] laskee, jolloin jokaisella hengenvedolla keuhkoihin tulee vähemmän happea. Jungfraujochin kaltaisella noin 3 500 metrin korkeudella tämä voi tuntua hengästymisenä ja päänsärkynä. Joillekin kehittyy [[vuoristotauti]], jonka oireita ovat pahoinvointi ja väsymys, ja paras ehkäisy on nousta rauhallisesti ja antaa keholle aikaa tottua. Minä kuulemma hengitän ohuessa ilmassa ihan hyvin.
+JATKOT:
+Mitkä ovat vuoristotaudin oireet?
+Miten keho tottuu korkeaan ilmanalaan?
+
+### 4.1
+KYSYMYS: Missä Reinin varsinainen lähde on?
+Ai tota, tästä riidellään kyl vieläkin. Rein syntyy kahdesta latvahaarasta, jotka yhtyvät Reichenaussa Churin läheisyydessä: Vorderrhein saa alkunsa [[Tomajärvestä]] Oberalppassin tuntumassa, ja Hinterrhein tulee [[Rheinwaldhornin]] jäätiköiltä. Perinteisesti Tomajärveä pidetään Reinin lähteenä, mutta tulkinnat vaihtelevat sen mukaan, kumpi haara katsotaan pääuomaksi. Joesta tulee jo lähteessä riita, ihan kuin kyyhkyistä.
+JATKOT:
+Kuinka pitkä Rein on?
+Mitkä kaupungit sijaitsevat Reinin varrella?
+PAIKKA: Tomajärvi | 46.62 | 8.67 | alue
+
+### 4.2
+KYSYMYS: Kuinka monen maan rajaa Rein muodostaa?
+Hetkinen ny, lasketaanpas rannat. Rein muodostaa osan viiden maan rajoista: Sveitsin ja [[Liechtensteinin]], Sveitsin ja Itävallan, Sveitsin ja Saksan sekä Ranskan ja Saksan välisistä rajoista, joten mukana ovat Sveitsi, Liechtenstein, Itävalta, Saksa ja Ranska. [[Bodenjärvestä]] alaspäin joki on Sveitsin ja Saksan rajana, ja [[Baselin]] jälkeen Ranskan ja Saksan rajana. Alankomaissa joki ei enää ole rajana vaan virtaa maan halki Pohjanmereen. Viisi maata yhdellä joella, ei paha kyyhkyn laskettavaksi.
+JATKOT:
+Mikä Rein on liikenneväylänä?
+Mitkä maat ympäröivät Bodenjärveä?
+
+### 4.3
+KYSYMYS: Mikä on Lorelei-kallio Reinin varrella?
+Tost minä osaan kertoo. Lorelei on jyrkkä kallio Reinin oikealla rannalla [[Sankt Goarshausenin]] kaupungin lähellä, kohdassa jossa jokiuoma on kapea ja virta vaarallinen laivoille. Kalliosta kerrotaan taru kauniista naisesta, jonka laulu houkutteli laivureita haaksirikkoon, ja tarua levitti erityisesti saksalaisen [[Heinrich Heinen]] 1800-luvun alun runo. Alue kuuluu Reinin keskiosan [[Unescon maailmanperintökohteeseen]]. Laulavista naisista en tiedä mitään, kyyhky vain kuhertaa.
+JATKOT:
+Mitä linnoja Reinin varrella on?
+Kuka Heinrich Heine oli?
+
+### 4.4
+KYSYMYS: Millainen merkitys Reinillä on rahtiliikenteelle?
+Mmm— hyvä kysymys tuo. Rein on yksi Euroopan vilkkaimmista sisävesiliikenteen väylistä: sitä pitkin kuljetetaan lastia muun muassa kemikaaleja, polttoaineita ja rakennusmateriaaleja. Joki yhdistää [[Rotterdamin]] meriaseman Saksan teollisuusalueisiin, ja [[Duisburgin]] satama on merkittävä sisävesisatama. Myös Sveitsi hyödyntää [[Baselin]] satamia, joiden kautta rahtia kulkee merelle.
+
+Minä kannan vain kirjeitä, ja sekin riittää hyvin, vaikka tuuli välillä käy vastaan.
+JATKOT:
+Mikä Rotterdamin satama on?
+Miten Rein on vaikuttanut Saksan teollisuuteen?
+
+### 4.5
+KYSYMYS: Miksi Kölnin tuomiokirkon rakentaminen kesti niin kauan?
+Kas vaan, sen minä muistan kyl ylhäältä katsottuna. Rakentaminen aloitettiin vuonna 1248, mutta työ keskeytyi keskiajan lopulla ja kirkko jäi pitkäksi aikaa keskeneräiseksi. Työ jatkui 1800-luvulla, kun alkuperäiset suunnitelmat oli löydetty, ja kirkko valmistui vuonna 1880. [[Reinin]] rannalla seisova kirkko edustaa [[gotiikan]] rakennustaidetta, ja se kuuluu [[maailmanperintöluetteloon]]. Siinä sai kyyhkysukupolvi jos toinenkin odottaa.
+JATKOT:
+Mikä on gotiikka rakennustyylinä?
+Mitä muuta Kölnissä on nähtävää?
+
+### 5.1
+KYSYMYS: Mikä Rhône-jäätikkö on?
+Katotaas. Rhône-jäätikkö on [[Valais'n]] kantonissa [[Furkapassin]] tuntumassa sijaitseva Alppien jäätikkö, josta Rhône-joki saa alkunsa. Jäätikkö on vetäytynyt voimakkaasti, ja osaa sen pinnasta peitetään kesäisin valkoisilla suojahuovilla sulamisen hidastamiseksi. Jäätikköön tehdään kävijöille avoin [[jääluola]]. Aika paljon pienemmältä se näyttää ylhäältä.
+JATKOT:
+Miten jäätikköä voi suojata sulamiselta?
+Mitä Furkan solassa on nähtävää?
+
+### 5.2
+KYSYMYS: Miksi Genevenjärvi on niin kirkas?
+No niin, tän kysymyksen kanssa pitää olla tarkka. Genevenjärvi on kirkas ennen kaikkea siksi, että se on suuri ja syvä järvi, jonka vesimäärä laimentaa epäpuhtauksia, ja siksi, että vesiensuojeluun on panostettu: [[jätevedenpuhdistus]] ja fosforia sisältävien aineiden rajoittaminen vähensivät rehevöitymistä 1900-luvun lopulla. [[Rhônen]] tuoma jäätikköjauhe samentaa vettä järven itäpäässä, joten kirkkaus vaihtelee paikan ja vuodenajan mukaan. Yksityiskohtaisista mittaustuloksista en ole varma. Kyl minä sitä kaiteelta ihailen.
+JATKOT:
+Kuinka syvä Genevenjärvi on?
+Mitkä kaupungit ovat Genevenjärven rannalla?
+
+### 5.3
+KYSYMYS: Millainen alue Rhônen suisto on luonnoltaan?
+Ai se, sinne minä lentäisin mielelläni. Rhônen suistoalue tunnetaan nimellä [[Camargue]]. Se on laaja kosteikkoalue [[Arles'n]] eteläpuolella, jossa on lampia, suolamaita ja ruovikkoa. Alue on tärkeä lintujen elinympäristö, ja siellä tavataan muun muassa [[flamingoja]]. Camarguelle ovat ominaisia myös valkoiset hevoset ja mustat härät, jotka laiduntavat puolivapaina. Pitkä lentomatka sinne, mutta kai se kannattaisi.
+JATKOT:
+Millaisia lintuja Camarguessa tavataan?
+Millainen kaupunki Arles on?
+
+### 5.4
+KYSYMYS: Miten Rhônea käytetään sähköntuotantoon?
+Selvä juttu. Rhônea hyödynnetään sähköntuotannossa monella tavalla. Ranskan puolella jokea on padottu useilla voimalaitoksilla, jotka tuottavat [[vesivoimaa]], ja joen varrella on useita [[ydinvoimaloita]], jotka käyttävät sen vettä jäähdytykseen. Myös Sveitsin Valais'ssa vuoristojokien vesiä käytetään laajasti vesivoimaan.
+
+Minä kuljen vain omilla siivillä, eikä lentämisestä synny sähkölaskua, vaikka välillä tekisi mieli valittaa.
+JATKOT:
+Miten ydinvoimala käyttää jokivettä jäähdytykseen?
+Kuinka suuri osa Ranskan sähköstä on ydinvoimaa?
+
+### 5.5
+KYSYMYS: Mitkä suuret kaupungit sijaitsevat Rhônen varrella?
+Mmm— lasketaanpas siipiä ja kaupunkeja. Rhône virtaa Genevenjärvestä [[Geneven]] kaupungin kautta Ranskaan, jossa sen varrella ovat muun muassa [[Lyon]], jossa Saône-joki yhtyy siihen, sekä [[Avignon]] ja [[Arles]]. Joki päättää matkansa Välimereen suiston kautta Arles'n eteläpuolella. Lyonissa kuulemma syödään hyvin.
+JATKOT:
+Miksi Lyon on tunnettu ruokakaupunki?
+Mitä Avignonin paavinlinna on?
