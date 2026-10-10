@@ -335,6 +335,7 @@ namespace Matkakirja.Natiivi
             finally
             {
                 SeikkailuKavely.VainVuosileikkaukset = false;
+                Shader.SetGlobalVector(IdMustaKorvaus, Vector4.zero);
                 DioraamaSovitin.KameraVapaa = kameraVapaa;
                 kirjaa?.Invoke($"seikkailu: historia päättyi ({Time.unscaledTime - alku:F1} s)");
                 if (ajossa == this) ajossa = null;
