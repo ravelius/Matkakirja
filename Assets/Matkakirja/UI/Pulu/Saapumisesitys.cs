@@ -98,7 +98,25 @@ namespace Matkakirja.Natiivi
             o.MatkaPerilla += Perilla;
             PeliOhjain.SaapumisluentoPois = UusiEsittely;
             // A7/C14 (löydökset 53–54): heitto, siirto, maailmahyppy ja Ohita vaientavat paikan puheen.
-            o.PaikanPuheVaiennettu += () => UiKerros.PaaSaikeessa(VaiennaPaikanPuhe);
+            // PT 10.10. 22.3x KIIRE (juna 180, pakka ja Ohita eivät näkyneet): maailmahyppy vaientaa lähtöpaikan puheen, mutta käsittely
+            // ajetaan pääsäikeessä vasta saapumisen jälkeen, jolloin uusi esittely (AloitaUusiEsittely, suoraan saapumisesta) oli jo
+            // alkanut ja vaiennus ohitti sen heti (loki: "nykyintro alkaa" → "nykyintro ohitettu"). Vaiennus koskee vain esittelyä,
+            // joka oli käynnissä tapahtuman hetkellä; Ohita (sama tapahtuma esittelyn aikana) toimii ennallaan.
+            o.PaikanPuheVaiennettu += () =>
+            {
+                int nro = esittelyNro;
+                UiKerros.PaaSaikeessa(() =>
+                {
+                    if (nro == esittelyNro) VaiennaPaikanPuhe();
+                    else
+                    {
+                        // Lähtöpaikan puhe ja kuplat silti pois (esittely soi musiikkikanavalla, ei puhekanavalla).
+                        Aanet.Pysayta(AaniKanava.Puhe);
+                        pulu.Kuplat.TyhjennaKaikki();
+                        UnityEngine.Debug.Log($"MATKAKIRJA ui saapuminen: vaiennus ennen esittelyä {introKaupunki}: esittely jatkuu");
+                    }
+                });
+            };
             o.TilaMuuttui += TarkistaAarre;
             // Aloituslento alkaa: kortti ja luentakuvat pois lennon tieltä (web renderFact aloituslentoKesken).
             o.AloituslentoAlkoi += _ => UiKerros.PaaSaikeessa(() => { kortti.Piilota(); kortti.Kuvat.Tyhjenna(false); });
@@ -420,11 +438,14 @@ namespace Matkakirja.Natiivi
             kortti.AsetaPikkukuvat(v.Luentakuvat.Concat(v.PuluKuvat));
             kortti.Kuvat.Tyhjenna(false);
             introSoitettu.Add(k);
+            esittelyNro++;
             UnityEngine.Debug.Log($"MATKAKIRJA ui saapuminen: {k} uusi esittely (kehittäjä {Asetukset.Kehittaja})");
             if (!NykyIntro(k)) LoppuiJatko(k);
         }
         IVisualElementScheduledItem introAjo;
         string introKaupunki;
+        /// <summary>Alkaneiden uusien esittelyjen määrä (PaikanPuheVaiennettu: vain tapahtumaa edeltänyt esittely vaiennetaan).</summary>
+        int esittelyNro;
 
         /// <summary>
         /// Nykyintron kuvat C1–C5 (KaupunkiIntro.Kuvasarja) saapumisesityksen pakkaan musiikin tahdissa: nopea kaupunkijakso
