@@ -32,6 +32,9 @@ import { miller, kaupungit, KOKO_MAAILMA } from './vanha-maailma.mjs';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..');
 const kuiva = process.argv.includes('--kuiva');
+// --korvaa=ISO,ISO: laudalla jo olevat maat generoidaan uudelleen ja rivi korvataan
+// paikallaan (Islanti 10.10.2026: vanhan laudan muoto oli väärässä paikassa ja koossa).
+const KORVAA = new Set((process.argv.find((a) => a.startsWith('--korvaa='))?.slice(9) ?? '').split(',').filter(Boolean));
 const LAHDE = process.env.NE_GEOJSON ?? join(JUURI, 'ne_50m_admin_0_countries.geojson');
 const luku = (n) => Number(n.toFixed(1));
 
@@ -83,6 +86,7 @@ const MAAT = {
   TJK: ['Tadžikistan', 'Tadžikistan', 'Flag of Tajikistan.svg'],
   TKM: ['Turkmenistan', 'Turkmenistan', 'Flag of Turkmenistan.svg'],
   // Eurooppa
+  ISL: ['Islanti', 'Islanti', 'Flag of Iceland.svg'],
   ALB: ['Albania', 'Albania', 'Flag of Albania.svg'],
   BEL: ['Belgia', 'Belgia', 'Flag of Belgium (civil).svg'],
   BLR: ['Valko-Venäjä', 'Valko-Venäjä', 'Flag of Belarus.svg'],
@@ -464,7 +468,7 @@ const uudet = {};
 let renkaita = 0;
 let pisteitaKaikkiaan = 0;
 for (const [iso, [nimi, wiki, lippu, asetukset = {}]] of Object.entries(MAAT)) {
-  if (nykyiset[iso]) { console.log(`${iso} on jo laudalla — ohitetaan`); continue; }
+  if (nykyiset[iso] && !KORVAA.has(iso)) { console.log(`${iso} on jo laudalla — ohitetaan`); continue; }
   const f = piirteet.get(iso);
   if (!f) throw new Error(`${iso} ei ole Natural Earthissa`);
   const minKoko = asetukset.minKoko ?? MIN_KOKO;
@@ -588,6 +592,12 @@ if (kuiva) process.exit(0);
 const polku = join(JUURI, 'js/packs/maailmankartta.js');
 let teksti = readFileSync(polku, 'utf8');
 let lisatty = 0;
+for (const iso of KORVAA) {
+  const osuma = teksti.match(new RegExp(`^ {2}"${iso}": .*$`, 'm'));
+  if (!osuma || !uudet[iso]) throw new Error(`${iso}: korvattavaa riviä tai uutta muotoa ei ole`);
+  teksti = teksti.replace(osuma[0], `  ${JSON.stringify(iso)}: ${JSON.stringify(uudet[iso])},`);
+  console.log(`${iso} korvattu`);
+}
 for (const [ankkuri, isot] of ANKKURIT) {
   for (const iso of isot) {
     if (!uudet[iso]) continue;
