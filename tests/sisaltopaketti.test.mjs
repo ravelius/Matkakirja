@@ -1330,16 +1330,22 @@ test('skeema 1.38: kaupunkien asukasluku Wikidatasta (Linssiseppä)', () => {
 
 test('skeema 1.39: karttavalojen webin ankkuri ja nimiön kylki (Natiivi-UI, löydös 50 C)', async () => {
   const { lukittuAnkkuri } = await import('../js/pallolauta/nostoankkurit.js');
+  const { karkaavaPiirtopiste } = await import('../tools/vienti/karttavalot.mjs');
   const valot = JSON.parse(tiedostot.get('kokoelmat/karttavalot.json')).alkiot;
-  let ankkureita = 0;
+  const maarajat = new Map(JSON.parse(tiedostot.get('kokoelmat/maarajat.json')).alkiot.map((m) => [m.id, m]));
+  let ankkureita = 0; let rajattuja = 0;
   for (const v of valot) {
     assert.ok('ankkuri' in v && 'puoli' in v, v.id);
     assert.ok(v.puoli === null || ['oikea', 'vasen', 'yla', 'ala'].includes(v.puoli), `${v.id}: ${v.puoli}`);
     if (v.lahde !== 'fokuskohde' && v.lahde !== 'takynosto' && v.lahde !== 'maalehtinosto') continue;
     const l = lukittuAnkkuri(`nosto:${v.tunnus}`, v.maa);
-    assert.deepEqual(v.ankkuri, l ? { lat: l.lat, lon: l.lng } : null, v.id);
+    const odotettu = l ? { lat: l.lat, lon: l.lng } : null;
+    // KARKAAVA NIMI (PT 10.10.2026): yli 25 km tai toiseen maahan karkaava ankkuri nollataan nimiön kanssa.
+    if (odotettu && v.ankkuri === null && v.nimio === null && karkaavaPiirtopiste({ ...v, ankkuri: odotettu }, maarajat)) { rajattuja += 1; continue; }
+    assert.deepEqual(v.ankkuri, odotettu, v.id);
     if (v.ankkuri) ankkureita += 1;
   }
+  assert.ok(rajattuja < 30, `rajattuja ankkureita ${rajattuja}`);
   assert.ok(ankkureita > 400, `ankkureita ${ankkureita}`);
   // Mittauksen esimerkki: Versailles on webissä omassa paikassaan, ei Pariisin kyljessä.
   const vers = valot.find((v) => v.maa === 'FRA' && v.tunnus === 'nosto-maalehti-peilisali');

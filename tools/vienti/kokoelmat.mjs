@@ -38,7 +38,7 @@ import { repliikit as livianRepliikit } from '../generoi-pulu.mjs';
 import { lueLivianEleet, eleidenTila } from './livian-eleet.mjs';
 import { lueRadiotarkistus } from './radiotarkistus.mjs';
 import { rikastaLehdet } from './lehdet.mjs';
-import { karttavaloKokoelma, rikastaKohdekartat, takynostoKokoelma } from './karttavalot.mjs';
+import { karttavaloKokoelma, rajaaKarkaavatNimet, rikastaKohdekartat, takynostoKokoelma } from './karttavalot.mjs';
 import { rikastaElavaKartta } from './elava-kartta.mjs';
 import { reitti1873Kokoelma } from './reitit1873.mjs';
 import { saapumisKokoelmat } from './saapumiset.mjs';
@@ -1074,6 +1074,8 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
   // Skeema 1.24: karttavalot = webin pallon nostokerroksen joukko (tools/vienti/karttavalot.mjs).
   const valot = karttavaloKokoelma(ns, hae, kokoelmat.kaupungit.alkiot, taulukko);
   kokoelmat.karttavalot = valot.kokoelma;
+  // PT 10.10.2026 (Karttasepän tarkistus A2): ladonnan karkaama nimi (> 25 km tai toinen maa) omaan pisteeseensä ilman nimeä.
+  rajaaKarkaavatNimet(kokoelmat.karttavalot.alkiot, kokoelmat.maarajat.alkiot);
   // Skeema 1.45 (Elävä kartta): kokoluokka ja maakunta valoille, salaisuus maakunnille (tools/vienti/elava-kartta.mjs).
   rikastaElavaKartta(kokoelmat, taulukko);
   rikastaNippu4(kokoelmat, ns);
