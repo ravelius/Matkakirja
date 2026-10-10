@@ -23,9 +23,8 @@ proto-3d/lokit/natiivi-ui-app-metro-181. Sisältö:
   OpasYksityiskohdat.Tekijarivi(k, ilmanKuvatekstia: true) = "Havainnekuva · tekoälyllä tuotettu". Lisäkuvien kokoruutusuurennos oli jo ilman tekstiä.
 Testit: tarkista.sh 0, Linssit 1354/1354.
 Todisteet: metrokyltin kuvapari VALMIS proto-3d/lokit/todistus-metrokyltti-pari-20261011.jpg (iPhone 12 s ja 27 s, iPad).
-PUUTTUU: kuvasuurennosten ennen/jälkeen. Skripti valmiina: scratchpad c1e20ce7…/scratchpad/kuva-ajot.sh (4 ajoa: iPhone ennen/jälkeen,
-iPad ennen/jälkeen, koordinaattinapautukset kuva-iph-ennen.txt / kuva-iph-jalkeen.txt / kuva-ipad.txt). Julkaisija jonotti sen
-Siirtosepän jälkeen: aja vasta SIMULAATTORI NYT -viestistä. Sitten kuvapari (pari2.py samassa scratchpadissa) + rivi PT:lle.
+KUVAPARI VALMIS: proto-3d/lokit/todistus-kippikuvat-pari-20261011.jpg (iPhone: reunan kuvat isommat, kertomuskuva isona ilman
+kuvatekstiä, tekijärivi jää); PT:lle lähetetty. iPadin jälkeen-ajo jäi jumiin kuormassa (pysäytetty); iPadilla koko ennallaan.
 PT 01.2x (samaan erään metro-kyltti-181:een, ennen kuittausta):
 (a) Lisää pariin ENNEN suurimmillaan: vanha korostus 44 pt näkyi vain noin 3 s saapumisesta (KierrosTaulu → OpasMetrolinja.Korostus),
     sitten 18 pt. Ajot osuivat 18 pt:n vaiheeseen. Kuvaa b3af6eca:lla hetki, jolloin korostus on päällä (esim. oleta-rivi KierrosTaulun
@@ -47,8 +46,7 @@ SEURAAVAKSI: käännös- ja simuvuoro Julkaisijalta → todistusajo Olavinlinnan
 ## Muuta
 - Taidemuseon UI-viat: pohja natiivi-ui/taidemuseo-ui (wt/proto-natiivi-ui-taidemuseo, LS2:n museo-180 83f21ac7f). LS2 muutti
   MuseoTaulu.AsetteleNimi (linssiseppa2/museo-180 0a85a7c72) → rebase sen päälle. Lista tulee LS2:lta läpipeluun jälkeen.
-- LEVY (PT): kun nykyiset vaiheet ovat valmiit, poista vanhojen sessioiden /private/tmp/claude-502/-Users-Shared-Claude-Matkakirja-natiivi-ui/*
-  (ei omaa nykyistä) ja vanhat appikopiot proto-3d/lokit/natiivi-ui-app-{poistu,poistu2,yhdistetty}-180. ÄLÄ poista pakka-180:aa
-  (LS1 käytti sitä) ennen tarkistusta, äläkä poistu3-180:aa ja metro-181:tä ennen kuva-ajoja. Kuittaus yhdellä rivillä PT:lle.
+- LEVY TEHTY 01.4x (92 → 97 Gi): vanhat tmp-sessiot ja appit poistu/poistu2/yhdistetty-180 poistettu. Jäljellä pakka-180 (LS1),
+  poistu3-180 (= TF 180 -koodi, ennen-vertailu) ja metro-181; poista ne, kun metro-erä on kuitattu.
 - A6 (ATA) ei tarvita (VAIN EUROOPPA), PT:lle kerrottu.
 - Mergetyt worktreet: proto-natiivi-ui-lataus-poistu ja proto-natiivi-ui-lahtokohde voi poistaa, kun junat 180 ja 181 ovat masterissa.
