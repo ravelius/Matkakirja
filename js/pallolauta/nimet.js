@@ -546,6 +546,11 @@ export function luoNimet({
   ui, merkit, asteet, ruudulla, kotelo, pack = null,
   /** GL-nimiöiden sovitin (js/pallolauta/glnimiot-sovitin.js) tai null. */
   glSovitin = null,
+  /**
+   * Laudan ulkopuoliset nimet omine asteineen (js/pallolauta/paakaupunkipisteet.js):
+   * sama ladontatietue kuin laudan kaupungeilla, lisäksi `lat`/`lon`.
+   */
+  lisakaupungit = [],
 }) {
   let kaupungit = null; // [{ c, lat, lng }] laudan ladontatietue + asteet
   let nimetyt = new Set();
@@ -575,6 +580,8 @@ export function luoNimet({
       const a = asteet(c);
       return a ? { c, lat: a.lat, lng: a.lon } : null;
     }).filter(Boolean);
+    // Pääkaupunkipisteillä on omat asteensa: laudan kautta kiertävä muunnos ei saa siirtää niitä.
+    for (const c of lisakaupungit) kaupungit.push({ c, lat: c.lat, lng: c.lon });
     return kaupungit;
   };
 
