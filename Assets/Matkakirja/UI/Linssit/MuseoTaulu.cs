@@ -118,14 +118,24 @@ namespace Matkakirja.Natiivi
             lukija = new KortinLukija(ylarivi, Kieli.T("ui.nosto.kuuntele-kortti"), saatimet: true, rajaus: () => kortti.worldBound);
             kNimi = Rakenne.Teksti("", "mk-kortti__otsikko", kortti.Sisus); kNimi.style.whiteSpace = WhiteSpace.Normal;
             Kirjasimet.Aseta(kNimi, Tyylikirja.Kirjain.Otsikko);
-            kAlkuperainen = Rakenne.Teksti("", "mk-kortti__teksti", kortti.Sisus); kAlkuperainen.style.whiteSpace = WhiteSpace.Normal;
+            // Pitkä otsikko iPhone pystyssä (LS1 10.10., Yövartio): kortin korkeusraja (Peitto.Max) kutisti kapiteelirivin otsikon alle.
+            // Kuten Mitä uutta (mk-tietoja__vieritys): kapiteeli ja otsikko pysyvät, vain tekstit joustavat ja vierivät.
+            ylarivi.style.flexShrink = 0;
+            kNimi.style.flexShrink = 0;
+            var vieritys = new ScrollView(ScrollViewMode.Vertical);
+            vieritys.AddToClassList("mk-tietoja__vieritys");
+            vieritys.style.minHeight = 0;
+            vieritys.verticalScrollerVisibility = ScrollerVisibility.Hidden;
+            vieritys.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
+            kortti.Sisus.Add(vieritys);
+            kAlkuperainen = Rakenne.Teksti("", "mk-kortti__teksti", vieritys); kAlkuperainen.style.whiteSpace = WhiteSpace.Normal;
             Kirjasimet.Aseta(kAlkuperainen, Tyylikirja.Kirjain.Apuri);
-            kTekniikka = Rakenne.Teksti("", "mk-kortti__teksti", kortti.Sisus); kTekniikka.style.whiteSpace = WhiteSpace.Normal;
+            kTekniikka = Rakenne.Teksti("", "mk-kortti__teksti", vieritys); kTekniikka.style.whiteSpace = WhiteSpace.Normal;
             Kirjasimet.Aseta(kTekniikka, Tyylikirja.Kirjain.Leipa);
-            kKuvateksti = Rakenne.Teksti("", "mk-kortti__teksti", kortti.Sisus); kKuvateksti.style.whiteSpace = WhiteSpace.Normal;
+            kKuvateksti = Rakenne.Teksti("", "mk-kortti__teksti", vieritys); kKuvateksti.style.whiteSpace = WhiteSpace.Normal;
             Kirjasimet.Aseta(kKuvateksti, Tyylikirja.Kirjain.Leipa);
             // Lähderivi konekirjoituksella kuten kysymyskortin kuvalähde (Kirjasin.Kone), ei omaa kokoa.
-            kLahde = Rakenne.Teksti("", "mk-kortti__teksti", kortti.Sisus); kLahde.style.whiteSpace = WhiteSpace.Normal;
+            kLahde = Rakenne.Teksti("", "mk-kortti__teksti", vieritys); kLahde.style.whiteSpace = WhiteSpace.Normal;
             Kirjasimet.Aseta(kLahde, Kirjasin.Kone);
             Nappaimisto.Rekisteroi("museo-esittely", 60, () => MuseoSovitin.EsittelyAuki, null, null, () => MuseoSovitin.Esittele(false));
 
