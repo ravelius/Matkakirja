@@ -44,7 +44,7 @@ Miten Ribe kehittyi viikinkiaikana?
 
 ### 7.2
 KYSYMYS: Mikä Burchardin tulva oli?
-Odotas vähän. Tämä on raskaampi aihe. Burchardin tulva oli [[Pohjanmeren]] rannikon tuhoisa myrskytulva vuonna 1634, ja Riben kaupungille se oli tuhoisin tulva. Tapahtuma sai nimensä pyhän Burchardin päivän mukaan, jonka aikoihin se iski; tarkasta päivämäärästä en ole varma. Siitä on noin neljäsataa vuotta, ja rannikkoa suojellaan nykyään padoin ja penkereitä. Tarkemmista vahingoista en ole varma, enkä halua arvailla.
+Odotas vähän. Tämä on raskaampi aihe. [[Burchardin tulva]] oli [[Pohjanmeren]] rannikon tuhoisa myrskytulva vuonna 1634, ja [[Riben]] kaupungille se oli tuhoisin tulva. Tapahtuma sai nimensä pyhän Burchardin päivän mukaan, jonka aikoihin se iski; tarkasta päivämäärästä en ole varma. Siitä on noin neljäsataa vuotta, ja rannikkoa suojellaan nykyään padoin ja penkereitä. Tarkemmista vahingoista en ole varma, enkä halua arvailla.
 Onpas siitä onneksi pitkä aika.
 JATKOT:
 Miten Tanskan länsirannikkoa suojellaan tulvilta?
@@ -76,7 +76,7 @@ PAIKKA: Ribe | 55.33 | 8.76 | kaupunki
 
 ### 8.1
 KYSYMYS: Mikä hautasi vanhan kirkon?
-Ai se. Kuulostaa kamalalta, mutta hiekka on hidas vihollinen. Kirkon hautasi lentohiekka. Pyhän Laurentiuksen kirkko rakennettiin kylän laitaan 1300-luvun lopulla, ja [[lentohiekka]] peitti sen ajan mittaan. Tilalle rakennettiin uusi Skagenin kirkko vuonna 1841. Ihmiset siis jättivät vanhan paikkansa ja siirtyivät uuteen. Ihan vain hiekkaa, ja silti kokonainen kirkko.
+Ai se. Kuulostaa kamalalta, mutta hiekka on hidas vihollinen. Kirkon hautasi lentohiekka. [[Pyhän Laurentiuksen kirkko]] rakennettiin kylän laitaan 1300-luvun lopulla, ja [[lentohiekka]] peitti sen ajan mittaan. Tilalle rakennettiin uusi [[Skagenin]] kirkko vuonna 1841. Ihmiset siis jättivät vanhan paikkansa ja siirtyivät uuteen. Ihan vain hiekkaa, ja silti kokonainen kirkko.
 JATKOT:
 Mikä on Råbjerg Mile?
 Milloin Skagenin kapearaiteinen rautatie avattiin?
@@ -92,7 +92,7 @@ Mitä Skagenin museossa voi nähdä?
 
 ### 8.3
 KYSYMYS: Milloin Skagenin nykyinen satama avattiin?
-Kas vaan, hyvä kysymys tuo. Nykyinen satama avattiin 20. marraskuuta 1907. Sitä ennen matkailu oli alkanut kasvaa, kun [[kapearaiteinen rautatie]] avattiin 1890. Skagenin asema on Tanskan pohjoisin rautatieasema, ja satama on maan tärkein kalasatama. Aikaa on kulunut yli sata vuotta, ja laiturilla sen kyllä huomaa. Vähän väsyttää tämä päivämäärien muistelu.
+Kas vaan, hyvä kysymys tuo. Nykyinen satama avattiin 20. marraskuuta 1907. Sitä ennen matkailu oli alkanut kasvaa, kun [[kapearaiteinen rautatie]] avattiin 1890. [[Skagenin]] asema on [[Tanskan]] pohjoisin rautatieasema, ja satama on maan tärkein kalasatama. Aikaa on kulunut yli sata vuotta, ja laiturilla sen kyllä huomaa. Vähän väsyttää tämä päivämäärien muistelu.
 JATKOT:
 Miten Skagenin kalastus on muuttunut?
 Miksi Skagenissa käy paljon matkailijoita?
@@ -113,7 +113,7 @@ Voiko Grenenille kävellä Skagenin keskustasta?
 
 ### 9.1
 KYSYMYS: Kuka maksoi linnan kunnostuksen tulipalon jälkeen?
-Joo, tän minä tiedän. Kunnostusta ei rahoittanut yksi mies yksin. Vuonna 1859 tulipalo tuhosi linnan, ja se rakennettiin uudelleen vanhojen piirustusten ja maalausten pohjalta. Huoneistot kunnostettiin täysin yleisön tuen sekä panimomies [[J. C. Jacobsenin]] rahojen turvin. Linna avattiin yleisölle kansallishistoriallisena museona vuonna 1882. Ja tän kaiken minä kannoin päässäni.
+Joo, tän minä tiedän. Kunnostusta ei rahoittanut yksi mies yksin. Vuonna 1859 tulipalo tuhosi linnan, ja se rakennettiin uudelleen vanhojen piirustusten ja maalausten pohjalta. Huoneistot kunnostettiin täysin yleisön tuen sekä panimomies [[J. C. Jacobsenin]] rahojen turvin. Linna avattiin yleisölle kansallishistoriallisena museona vuonna 1882. Linna on [[Hillerødissä]], ja Jacobsen perusti [[Carlsbergin]] panimon. Ja tän kaiken minä kannoin päässäni.
 JATKOT:
 Mitä linnan kappelista tiedetään?
 Mitä museossa on esillä?
@@ -134,7 +134,7 @@ Kuinka linna on säilynyt tulipalon jälkeen?
 
 ### 9.4
 KYSYMYS: Miten linna on rakennettu järveen?
-Hyvä kysymys tuo. Linna on kuin ylhäältä katsottuna taiteilijan piirros. Frederiksborgin linna seisoo kolmella pikkusaarella linnajärvessä. Kuningas Christian IV rakennutti sen asunnokseen 1600-luvun alussa, ja sitä pidetään yhtenä Skandinavian merkittävimmistä renessanssiasunnoista. Linnan vieressä on laaja [[barokkityylinen puutarha]]. Vesi tekee linnasta sekä kauniin että hyvin suojatun.
+Hyvä kysymys tuo. Linna on kuin ylhäältä katsottuna taiteilijan piirros. [[Frederiksborgin linna]] seisoo kolmella pikkusaarella linnajärvessä. Kuningas [[Christian IV]] rakennutti sen asunnokseen 1600-luvun alussa, ja sitä pidetään yhtenä Skandinavian merkittävimmistä renessanssiasunnoista. Linnan vieressä on laaja [[barokkityylinen puutarha]]. Vesi tekee linnasta sekä kauniin että hyvin suojatun.
 JATKOT:
 Miksi linnoja rakennettiin veden äärelle?
 Millainen barokkipuutarha on?
@@ -163,21 +163,21 @@ Kuinka Sjælland ja Fyn muuten eroavat?
 
 ### 10.3
 KYSYMYS: Kuinka pitkä Storebæltin yhteys on?
-Katotaas. Pituus on helppo sanoa. Yhteys on kahdeksantoista kilometriä pitkä kokonaisuus. [[Riippusillan]] päävälin pituus on 1,6 kilometriä, ja se on yksi maailman pisimmistä riippusilloista. Yhdessä Öresundin ja Pikkubeltin siltojen kanssa yhteys mahdollistaa ajamisen Manner-Euroopasta Ruotsiin Tanskan kautta. Lukuja oli enemmän kuin odotin.
+Katotaas. Pituus on helppo sanoa. Yhteys on kahdeksantoista kilometriä pitkä kokonaisuus. [[Riippusillan]] päävälin pituus on 1,6 kilometriä, ja se on yksi maailman pisimmistä riippusilloista. Yhdessä [[Öresundin]] ja [[Pikkubeltin]] siltojen kanssa yhteys mahdollistaa ajamisen Manner-Euroopasta Ruotsiin Tanskan kautta. Lukuja oli enemmän kuin odotin.
 JATKOT:
 Miten riippusilta eroaa palkkisillasta?
 Kuinka monta ihmistä sillan yli kulkee?
 
 ### 10.4
 KYSYMYS: Milloin Storebæltin yhteys valmistui?
-Nyt muistan: tässä oli pitkä odotus. Tanskan hallitus päätti rakentaa yhteyden vuonna 1986. Junaliikenne alkoi vuonna 1997 ja autoliikenne vuonna 1998. Kiinteästä yhteydestä ehdittiin väitellä yli viisikymmentä vuotta: ensimmäiset siltaluonnokset ovat 1850-luvulta ja [[valtionrautateiden]] suunnitelma vuodelta 1934. Viisikymmentä vuotta väittelyä, ja silti lopulta syntyi silta.
+Nyt muistan: tässä oli pitkä odotus. [[Tanskan]] hallitus päätti rakentaa yhteyden vuonna 1986. Junaliikenne alkoi vuonna 1997 ja autoliikenne vuonna 1998. Kiinteästä yhteydestä ehdittiin väitellä yli viisikymmentä vuotta: ensimmäiset siltaluonnokset ovat 1850-luvulta ja [[valtionrautateiden]] suunnitelma vuodelta 1934. Viisikymmentä vuotta väittelyä, ja silti lopulta syntyi silta.
 JATKOT:
 Miksi hanke viivästyi niin kauan?
 Mitä Öresundin silta yhdistää?
 
 ### 10.5
 KYSYMYS: Mitä Öresundin silta yhdistää?
-Tuota niin, tämä on osa isompaa kokonaisuutta. Öresundin silta yhdistää Tanskan ja Ruotsin: Kööpenhaminan seudun ja [[Malmön]] välillä sillä ylitetään salmi. Yhdessä Storebæltin ja Pikkubeltin siltojen kanssa se tekee mahdolliseksi ajaa Manner-Euroopasta Ruotsiin Tanskan kautta. Reitti kulkee siis yli kolmen salmen. Kolme salmea, ja kyyhkylle ne kaikki ovat vain samaa merta.
+Tuota niin, tämä on osa isompaa kokonaisuutta. [[Öresundin]] silta yhdistää Tanskan ja Ruotsin: [[Kööpenhaminan]] seudun ja [[Malmön]] välillä sillä ylitetään salmi. Yhdessä [[Storebæltin]] ja Pikkubeltin siltojen kanssa se tekee mahdolliseksi ajaa Manner-Euroopasta Ruotsiin Tanskan kautta. Reitti kulkee siis yli kolmen salmen. Kolme salmea, ja kyyhkylle ne kaikki ovat vain samaa merta.
 JATKOT:
 Milloin Öresundin silta avattiin?
 Miten Pikkubeltin silta eroaa Storebæltin sillasta?

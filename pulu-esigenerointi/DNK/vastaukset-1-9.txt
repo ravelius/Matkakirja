@@ -16,7 +16,7 @@ Mitä biomassa energialähteenä tarkoittaa?
 
 ### 41.3
 KYSYMYS: Miksi Samsøn keskiaikaisista linnoista on jäljellä vain kumpuja?
-Ai tota. Tost en ole ihan varma. Samsølle rakennettiin keskiajalla viisi linnoitusta, joista on jäljellä vain [[linnakumpuja]]. Monet Pohjolan varhaisista linnoista tehtiin maavalleista ja puurakenteista, ja kun puu lahosi tai rakennukset purettiin, maaperään jäi vain kohoumia. En ole varma, oliko juuri näillä viidellä linnalla tällainen rakenne tai mitä niille tarkalleen tapahtui, joten tämä on yleinen selitys eikä varma tieto. Kumpu on kuitenkin kumpu, ja kyl ne ylhäältä näkyvät.
+Ai tota. Tost en ole ihan varma. [[Samsølle]] rakennettiin keskiajalla viisi linnoitusta, joista on jäljellä vain [[linnakumpuja]]. Monet Pohjolan varhaisista linnoista tehtiin maavalleista ja puurakenteista, ja kun puu lahosi tai rakennukset purettiin, maaperään jäi vain kohoumia. En ole varma, oliko juuri näillä viidellä linnalla tällainen rakenne tai mitä niille tarkalleen tapahtui, joten tämä on yleinen selitys eikä varma tieto. Kumpu on kuitenkin kumpu, ja kyl ne ylhäältä näkyvät.
 JATKOT:
 Miten puinen linna eroaa kivilinnasta?
 Milloin Tanskassa alettiin rakentaa kivilinnoja?
@@ -65,7 +65,7 @@ Mitä luostarirakennuksille tapahtui lakkautuksen jälkeen?
 
 ### 42.5
 KYSYMYS: Missä Lolland sijaitsee ja miten sinne pääsee?
-Mmm— Lollandin minä olen nähnyt katolta. Lolland on Tanskan saari Itämeren rannalla Själlandin eteläpuolella, ja sen itäpuolella on sisarsaari Falster. Saarilta on lyhyt matka Saksan Fehmarnin saarelle, ja Fehmarnsbeltin yli on rakenteilla tunneli, mutta valmistumisajasta en ole varma, koska tietoni voi olla vanhentunutta. Lollandiin pääsee tieyhteyksiä pitkin Själlandilta Falsterin kautta. Maribo on saaren keskellä sijaitseva hallintokaupunki, ja kaupungin [[järvet]] ovat tunnettuja. Tää on ihan oikeaa maaseutua.
+Mmm— Lollandin minä olen nähnyt katolta. Lolland on Tanskan saari Itämeren rannalla Själlandin eteläpuolella, ja sen itäpuolella on sisarsaari [[Falster]]. Saarilta on lyhyt matka Saksan Fehmarnin saarelle, ja Fehmarnsbeltin yli on rakenteilla tunneli, mutta valmistumisajasta en ole varma, koska tietoni voi olla vanhentunutta. Lollandiin pääsee tieyhteyksiä pitkin Själlandilta Falsterin kautta. Maribo on saaren keskellä sijaitseva hallintokaupunki, ja kaupungin [[järvet]] ovat tunnettuja. Tää on ihan oikeaa maaseutua.
 JATKOT:
 Millä saarella Tanskan pääkaupunki sijaitsee?
 Millainen on Tanskan maaperä ja maatalous?
@@ -86,14 +86,14 @@ Mitä muuta Ebeltoftissa voi nähdä?
 
 ### 43.3
 KYSYMYS: Mikä Fregatten Jylland on?
-Joo, tän minä tiedän. Fregatten Jylland on puinen purjesotalaiva, joka on nykyään museona Ebeltoftissa. Se on yksi maailman pisimmistä säilyneistä puisista sotalaivoista. Laiva on 1800-luvun puolivälin tienoilta, mahdollisesti 1860-luvulta, mutta tarkkaa vuotta en ole varma. Aikansa fregatti oli sotalaivatyyppi, jolla oli purjeiden lisäksi sekä tykkejä että kone. Laiva on hyvä muistutus siitä, miten pitkälle puusta voi rakentaa. Merellä se on melkein kyyhkyn ainoa kilpailija.
+Joo, tän minä tiedän. [[Fregatten Jylland]] on puinen purjesotalaiva, joka on nykyään museona [[Ebeltoftissa]]. Se on yksi maailman pisimmistä säilyneistä puisista sotalaivoista. Laiva on 1800-luvun puolivälin tienoilta, mahdollisesti 1860-luvulta, mutta tarkkaa vuotta en ole varma. Aikansa fregatti oli sotalaivatyyppi, jolla oli purjeiden lisäksi sekä tykkejä että kone. Laiva on hyvä muistutus siitä, miten pitkälle puusta voi rakentaa. Merellä se on melkein kyyhkyn ainoa kilpailija.
 JATKOT:
 Mitä fregatti tarkoittaa laivatyyppinä?
 Miten puinen laiva säilytetään museossa?
 
 ### 43.4
 KYSYMYS: Mitä ristikkotalo tarkoittaa ja miten sellainen rakennetaan?
-Kato, tää on rakennuspuolen juttu. [[Ristikkotalo]] on talo, jonka runko tehdään puupalkeista. Palkit muodostavat näkyvän ristikon, ja välit täytetään esimerkiksi savella, saviseoksella tai tiilellä ja rapataan. Runko kantaa rakennuksen painon, ja täyte vain tiivistää seinän. Tämä rakennustapa on ollut yleinen monin paikoin Euroopassa, ja Tanskassa tällaisia taloja on säilynyt monissa vanhoissa kaupungeissa, myös Ebeltoftissa. Rakennustapa kestää hyvin, kun rungon puuta huolletaan.
+Kato, tää on rakennuspuolen juttu. [[Ristikkotalo]] on talo, jonka runko tehdään puupalkeista. Palkit muodostavat näkyvän ristikon, ja välit täytetään esimerkiksi savella, saviseoksella tai tiilellä ja rapataan. Runko kantaa rakennuksen painon, ja täyte vain tiivistää seinän. Tämä rakennustapa on ollut yleinen monin paikoin Euroopassa, ja Tanskassa tällaisia taloja on säilynyt monissa vanhoissa kaupungeissa, myös [[Ebeltoftissa]]. Rakennustapa kestää hyvin, kun rungon puuta huolletaan.
 
 Ristikkotalot näyttävät ylhäältä melkein piirretyiltä. Kyl minä aina yritän laskea niistä ruutuja, vaikka ne eivät pysy paikoillaan niin kuin minä toivon.
 JATKOT:
@@ -109,21 +109,21 @@ Miksi lasi on läpinäkyvää?
 
 ### 44.1
 KYSYMYS: Miksi kaupunki liitettiin Tanskaan, vaikka useimmat asukkaat äänestivät Saksan puolesta?
-Annas ku mietin. Tää on pitkä juttu, ja sovitaan että sävy pysyy rauhallisena. Ennen vuotta 1864 [[Tønder]] kuului Schleswigin herttuakuntaan, ja ensimmäisen maailmansodan jälkeen rajaa ratkaistiin kansanäänestyksillä vuonna 1920. Käsitykseni mukaan äänestys järjestettiin alueittain eikä kaupunki kerrallaan: pohjoinen äänestysalue äänesti enemmistöllä Tanskan puolesta, ja koko alue liitettiin Tanskaan, vaikka Tønderin kaupungissa noin 76 prosenttia äänesti Saksan puolesta. Tanskalaiset pitivät rajaa oikeudenmukaisena, kun taas moni saksalaismielinen piti tulosta kaupungin kannalta kohtuuttomana, ja molemmat kannat ovat vakiintuneita. Raja on pysynyt sen jälkeen paikallaan, ja alueella on molempia kieliä ja kulttuureja. Siitä on onneksi jo pitkä aika.
+Annas ku mietin. Tää on pitkä juttu, ja sovitaan että sävy pysyy rauhallisena. Ennen vuotta 1864 [[Tønder]] kuului [[Schleswigin]] herttuakuntaan, ja ensimmäisen maailmansodan jälkeen rajaa ratkaistiin kansanäänestyksillä vuonna 1920. Käsitykseni mukaan äänestys järjestettiin alueittain eikä kaupunki kerrallaan: pohjoinen äänestysalue äänesti enemmistöllä Tanskan puolesta, ja koko alue liitettiin Tanskaan, vaikka Tønderin kaupungissa noin 76 prosenttia äänesti Saksan puolesta. Tanskalaiset pitivät rajaa oikeudenmukaisena, kun taas moni saksalaismielinen piti tulosta kaupungin kannalta kohtuuttomana, ja molemmat kannat ovat vakiintuneita. Raja on pysynyt sen jälkeen paikallaan, ja alueella on molempia kieliä ja kulttuureja. Siitä on onneksi jo pitkä aika.
 JATKOT:
 Miten Schleswigin raja on vaikuttanut alueen ihmisiin?
 Mitä kansanäänestys 1920 tarkoitti Pohjois-Schleswigille?
 
 ### 44.2
 KYSYMYS: Miten pitsiteollisuus sai pienen kauppakaupungin kasvamaan nopeasti 1600- ja 1700-luvuilla?
-Nyt muistan: Tønder on pitsikaupunki. Keskustaa hallitsevat 1600-luvun lopun ja 1700-luvun alun talot, jolloin kaupunki kasvoi nopeasti pitsiteollisuuden ansiosta. Tønderin pitsi oli luultavasti nyplättyä [[pitsiä]], jossa lanka kierretään puolakeloilla kuvioksi, mutta en ole aivan varma tekniikasta. Kauppiaat ostivat pitsiä alueen työntekijöiltä ja myivät sitä kauas, ja kysyntä toi rahaa, työtä ja uusia taloja. Pitsi oli tuohon aikaan arvostettu koriste-esine, jota käytettiin esimerkiksi kauluksissa ja hihansuissa. Pienikin kaupunki voi siis kasvaa langasta, kun on tarpeeksi kärsivällisiä käsiä.
+Nyt muistan: [[Tønder]] on pitsikaupunki. Keskustaa hallitsevat 1600-luvun lopun ja 1700-luvun alun talot, jolloin kaupunki kasvoi nopeasti pitsiteollisuuden ansiosta. Tønderin pitsi oli luultavasti nyplättyä [[pitsiä]], jossa lanka kierretään puolakeloilla kuvioksi, mutta en ole aivan varma tekniikasta. Kauppiaat ostivat pitsiä alueen työntekijöiltä ja myivät sitä kauas, ja kysyntä toi rahaa, työtä ja uusia taloja. Pitsi oli tuohon aikaan arvostettu koriste-esine, jota käytettiin esimerkiksi kauluksissa ja hihansuissa. Pienikin kaupunki voi siis kasvaa langasta, kun on tarpeeksi kärsivällisiä käsiä.
 JATKOT:
 Miten nyplättyä pitsiä tehdään?
 Millaisia vaatteita Euroopan hoveissa käytettiin 1600-luvulla?
 
 ### 44.3
 KYSYMYS: Mitä tapahtui Schleswigin herttuakunnalle vuoden 1864 sodassa?
-Kääk. Tää on raskas aihe. Tanska kävi vuonna 1864 sotaa Preussia ja Itävaltaa vastaan, ja se hävisi. Rauhassa Tanska menetti Schleswigin ja Holsteinin herttuakunnat sekä Lauenburgin, ja Schleswig siirtyi aluksi Preussin ja Itävallan hallintaan ja myöhemmin Preussille. Tønder kuului siksi Saksan puolelle aina vuoteen 1920 asti. Sodan jälkeinen rajanveto on yksi Tanskan nykyhistorian suurista muutoksista, ja sen jäljet näkyvät alueen kielessä ja muistamisessa yhä. Siitä on onneksi pitkä aika.
+Kääk. Tää on raskas aihe. Tanska kävi vuonna 1864 sotaa Preussia ja Itävaltaa vastaan, ja se hävisi. Rauhassa Tanska menetti [[Schleswigin]] ja [[Holsteinin]] herttuakunnat sekä Lauenburgin, ja Schleswig siirtyi aluksi Preussin ja Itävallan hallintaan ja myöhemmin Preussille. Tønder kuului siksi Saksan puolelle aina vuoteen 1920 asti. Sodan jälkeinen rajanveto on yksi Tanskan nykyhistorian suurista muutoksista, ja sen jäljet näkyvät alueen kielessä ja muistamisessa yhä. Siitä on onneksi pitkä aika.
 JATKOT:
 Miksi Preussi ja Tanska kiistelivät Schleswigistä?
 Miten vuoden 1920 raja eroaa vuoden 1864 rajasta?
@@ -137,7 +137,7 @@ Mitkä kaupungit kuuluivat Hansaliittoon?
 
 ### 44.5
 KYSYMYS: Miksi Tanskan Vattimeren rannikolle rakennetaan penkereitä?
-Tuota niin. Vattimeren rannikko on matalaa, ja merenpinta voi nousta myrskyjen aikana yllättävän korkealle. Penkereet eli [[padot]] ja valleilla suojatut alueet pitävät meriveden loitolla maatalousmaasta ja asutuksesta, ja niiden taakse jäävää maata on voitu käyttää laiduntamiseen ja viljelyyn. Tønderin seudulla rannikon maisemaa on muokattu tällaisilla rakenteilla, ja 1550-luvulla länsipuolelle rakennetut penkereet katkaisivat kaupungin suoran yhteyden mereen. En ole varma, miten pitkälle koko alueen penkereet ulottuvat ajallisesti, mutta ilmiö on tunnettu Pohjanmeren rannikolla. Ihmisen tekemä rannikko on ylhäältä kyllä komeaa.
+Tuota niin. [[Vattimeren]] rannikko on matalaa, ja merenpinta voi nousta myrskyjen aikana yllättävän korkealle. Penkereet eli [[padot]] ja valleilla suojatut alueet pitävät meriveden loitolla maatalousmaasta ja asutuksesta, ja niiden taakse jäävää maata on voitu käyttää laiduntamiseen ja viljelyyn. Tønderin seudulla rannikon maisemaa on muokattu tällaisilla rakenteilla, ja 1550-luvulla länsipuolelle rakennetut penkereet katkaisivat kaupungin suoran yhteyden mereen. En ole varma, miten pitkälle koko alueen penkereet ulottuvat ajallisesti, mutta ilmiö on tunnettu Pohjanmeren rannikolla. Ihmisen tekemä rannikko on ylhäältä kyllä komeaa.
 JATKOT:
 Miten myrskyvuoksi syntyy?
 Mitä eläimiä Vattimeren alueella elää?
@@ -151,14 +151,14 @@ Mikä oli aatelisten asema keskiajan Euroopassa?
 
 ### 45.2
 KYSYMYS: Mitä Tanskan ensimmäinen perustuslaki vuonna 1282 oikeastaan tarkoitti kuninkaan vallalle?
-No jopas. Isoon kysymykseen vastaan varovasti. Kuningas Eerik V Klipping allekirjoitti vuonna 1282 asiakirjan, jota kutsutaan usein Tanskan ensimmäiseksi perustuslaiksi, vaikka se poikkesi nykyisestä perustuslaista paljon. Muistaakseni siinä kuningas sitoutui noudattamaan tiettyjä rajoja vallankäytössään: hän lupasi kutsua [[Danehofin]] koolle säännöllisesti ja kunnioittaa lakia esimerkiksi vangitsemisissa. Näin kuninkaan valtaa rajoitettiin sopimuksella ylimystön kanssa, mutta tarkkoja ehtoja en ole varma. Asiakirja on silti tärkeä esimerkki siitä, miten hallitsijan valtaa alettiin sitoa sääntöihin. Onpas vaikeaa ottaa kantaa tällaiseen.
+No jopas. Isoon kysymykseen vastaan varovasti. Kuningas [[Eerik V Klipping]] allekirjoitti vuonna 1282 asiakirjan, jota kutsutaan usein Tanskan ensimmäiseksi perustuslaiksi, vaikka se poikkesi nykyisestä perustuslaista paljon. Muistaakseni siinä kuningas sitoutui noudattamaan tiettyjä rajoja vallankäytössään: hän lupasi kutsua [[Danehofin]] koolle säännöllisesti ja kunnioittaa lakia esimerkiksi vangitsemisissa. Näin kuninkaan valtaa rajoitettiin sopimuksella ylimystön kanssa, mutta tarkkoja ehtoja en ole varma. Asiakirja on silti tärkeä esimerkki siitä, miten hallitsijan valtaa alettiin sitoa sääntöihin. Onpas vaikeaa ottaa kantaa tällaiseen.
 JATKOT:
 Miten kuninkaan valtaa on rajoitettu muissa maissa?
 Mitä tarkoittaa perustuslaki nykyaikana?
 
 ### 45.3
 KYSYMYS: Miksi keskiaikaisilla linnoilla oli vallihaudat?
-Selvä juttu. Vallihauta oli linnan puolustuksen ensimmäinen este. Se piti hyökkääjät loitolla muurista, vaikeutti piirityskoneiden ja tikkaiden tuomista lähelle seinää ja esti tunnelien kaivamisen muurin alle. Vesihauta oli erityisen tehokas, koska sen yli pääsi yleensä vain nostosillan kautta. [[Nyborgin linna]] oli perustamisaikanaan, noin vuonna 1170, vallihaudan ympäröimä neliönmuotoinen linna, jossa oli kulmatornit ja niiden välillä muuri. Linnan vallihauta kertoo, että linnan tärkein tehtävä oli suojella sen asukkaita ja valtaa. Hauskaa kyllä, kyyhky ei hautoja tarvitse.
+Selvä juttu. [[Vallihauta]] oli linnan puolustuksen ensimmäinen este. Se piti hyökkääjät loitolla muurista, vaikeutti piirityskoneiden ja tikkaiden tuomista lähelle seinää ja esti tunnelien kaivamisen muurin alle. Vesihauta oli erityisen tehokas, koska sen yli pääsi yleensä vain nostosillan kautta. [[Nyborgin linna]] oli perustamisaikanaan, noin vuonna 1170, vallihaudan ympäröimä neliönmuotoinen linna, jossa oli kulmatornit ja niiden välillä muuri. Linnan vallihauta kertoo, että linnan tärkein tehtävä oli suojella sen asukkaita ja valtaa. Hauskaa kyllä, kyyhky ei hautoja tarvitse.
 JATKOT:
 Miten linnaa piiritettiin keskiajalla?
 Mitä nostosilta oli ja miten se toimi?
@@ -172,7 +172,7 @@ Miten sota vaikutti Ruotsin asemaan Itämerellä?
 
 ### 45.5
 KYSYMYS: Miten Fyn on yhdistetty Jyllantiin ja Själlandiin?
-Kas vaan. Nyborg on oikea paikka tähän kysymykseen. Fyn on Tanskan saari Jyllannin ja Själlandin välissä, ja se on yhdistetty muihin osiin siltojen avulla. Suuren Beltin yli kulkee Fynin ja Själlandin välillä yhteys, joka valmistui 1990-luvun lopulla, ja Nyborg on sen Fynin puoleisessa päässä. Fynin ja Jyllannin välillä on Pienen Beltin sillat. Silloin ennen siltoja yhteys hoidettiin laivoilla ja lautoilla, ja talvella jää vaikeutti kulkua. Nyt autolla pääsee sujuvasti, ja minä lennän yhä omin siivin. Tarkat valmistumisvuodet en ole kaikkien siltojen osalta varma.
+Kas vaan. Nyborg on oikea paikka tähän kysymykseen. [[Fyn]] on Tanskan saari [[Jyllannin]] ja [[Själlandin]] välissä, ja se on yhdistetty muihin osiin siltojen avulla. Suuren Beltin yli kulkee Fynin ja Själlandin välillä yhteys, joka valmistui 1990-luvun lopulla, ja Nyborg on sen Fynin puoleisessa päässä. Fynin ja Jyllannin välillä on Pienen Beltin sillat. Silloin ennen siltoja yhteys hoidettiin laivoilla ja lautoilla, ja talvella jää vaikeutti kulkua. Nyt autolla pääsee sujuvasti, ja minä lennän yhä omin siivin. Tarkat valmistumisvuodet en ole kaikkien siltojen osalta varma.
 JATKOT:
 Miten pitkä silta voidaan rakentaa meren yli?
 Mikä on Fynin suurin kaupunki?

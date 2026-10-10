@@ -57,7 +57,7 @@ Miksi jättiläisten patsaat ovat kadonneet?
 
 ### 27.4
 KYSYMYS: Mitä Koldinghusissa voi nähdä nykyään?
-No jopas. Nykyään [[Koldinghus]] on restauroitu linna ja museo. Laaja kunnostus kesti vuodesta 1976 vuoteen 1993, ja se palkittiin Europa Nostra -palkinnolla. Linnassa on yhä esillä Jättiläistornin jäännöksenä Herkuleen patsas. Vuoden 1808 palon jälkeen raunioksi jääneen linnan päärakennukset on siis saatu jälleen käyttöön. Pullakahvilan olemassaolosta en ole varma, mutta toivoa sopii.
+No jopas. Nykyään [[Koldinghus]] on restauroitu linna ja museo. Laaja kunnostus kesti vuodesta 1976 vuoteen 1993, ja se palkittiin [[Europa Nostra]] -palkinnolla. Linnassa on yhä esillä Jättiläistornin jäännöksenä [[Herkuleen]] patsas. Vuoden 1808 palon jälkeen raunioksi jääneen linnan päärakennukset on siis saatu jälleen käyttöön. Pullakahvilan olemassaolosta en ole varma, mutta toivoa sopii.
 JATKOT:
 Miksi Koldinghusin kunnostus kesti niin kauan?
 Millaisia museoita Jyllannissa on linnoissa?
@@ -93,7 +93,7 @@ Mikä oli Dannevirke?
 
 ### 28.4
 KYSYMYS: Mikä on Dybbølin mylly?
-Tuota niin. [[Dybbølin]] mylly on Tanskan kansallissymboli, ja se liittyy läheisesti vuoden 1864 taisteluun. Alue on nykyään suojeltu muistomerkki- ja museoalue. Tarkkoja yksityiskohtia myllyn historiasta en ole varma kertomaan, joten ne kannattaa tarkistaa museon tiedoista. Muistomerkkialue on tärkeä paikka Tanskan historiassa. Myllyssä ei kai pullaa leivota, harmi.
+Tuota niin. [[Dybbølin]] mylly on [[Tanskan]] kansallissymboli, ja se liittyy läheisesti vuoden 1864 taisteluun. Alue on nykyään suojeltu muistomerkki- ja museoalue. Tarkkoja yksityiskohtia myllyn historiasta en ole varma kertomaan, joten ne kannattaa tarkistaa museon tiedoista. Muistomerkkialue on tärkeä paikka Tanskan historiassa. Myllyssä ei kai pullaa leivota, harmi.
 JATKOT:
 Millainen museoalue Dybbølissa on?
 Mitä muistomerkkejä alueella on?
@@ -115,14 +115,14 @@ Milloin Viborgista tuli piispanistuin?
 
 ### 29.2
 KYSYMYS: Mitä keskiaikaiselle kirkolle tapahtui vuoden 1726 jälkeen, ennen kuin se purettiin?
-Katotaas. Vuoden 1726 tulipalon jälkeen jäljelle jäivät vain paljaat seinät ja holvit. Rauniot koteloitiin barokkityyliseen rakennukseen, ja vuosina 1800–1814 kirkkoa käytettiin jopa viljavarastona. Sen jälkeen rakennus purettiin ja korvattiin tiilestä rakennetulla uudella kirkolla, joka vihittiin käyttöön 1876. [[Viborgin]] tuomiokirkon kohtalo on siis ollut vaihteleva. Viljavarastona, voi sentään, kyllä kyyhkynen siitä tykkäisi.
+Katotaas. Vuoden 1726 tulipalon jälkeen jäljelle jäivät vain paljaat seinät ja holvit. Rauniot koteloitiin barokkityyliseen rakennukseen, ja vuosina 1800–1814 kirkkoa käytettiin jopa [[viljavarastona]]. Sen jälkeen rakennus purettiin ja korvattiin tiilestä rakennetulla uudella kirkolla, joka vihittiin käyttöön 1876. [[Viborgin]] tuomiokirkon kohtalo on siis ollut vaihteleva. Viljavarastona, voi sentään, kyllä kyyhkynen siitä tykkäisi.
 JATKOT:
 Millainen on nykyisen kirkon julkisivu?
 Miksi kirkko purettiin?
 
 ### 29.3
 KYSYMYS: Mikä on Viborgin tuomiokirkon vanhin osa?
-Selvä juttu. Viborgin tuomiokirkon vanhin osa on krypta. Nykyinen kirkko on 1800-luvun työ, mutta kryptan juuret ovat keskiaikaisessa katedraalissa, jonka rakentaminen aloitettiin noin vuonna 1130. Kaupungissa on ollut [[piispanistuin]] vuodesta 1065. Kryptan tarkkaa ikää en ole varma, mutta se on osa vanhaa rakennusta. Alhaalla on siis vanhinta, ylhäällä uutta, aika hyvä jako.
+Selvä juttu. [[Viborgin]] tuomiokirkon vanhin osa on krypta. Nykyinen kirkko on 1800-luvun työ, mutta kryptan juuret ovat keskiaikaisessa katedraalissa, jonka rakentaminen aloitettiin noin vuonna 1130. Kaupungissa on ollut [[piispanistuin]] vuodesta 1065. Kryptan tarkkaa ikää en ole varma, mutta se on osa vanhaa rakennusta. Alhaalla on siis vanhinta, ylhäällä uutta, aika hyvä jako.
 JATKOT:
 Mikä on krypta?
 Miksi Viborgista tuli piispanistuin?
@@ -151,7 +151,7 @@ Mikä Heorot oli?
 
 ### 30.2
 KYSYMYS: Miksi Lejren asutusta pidetään pikemmin kauppa- ja uskontokeskuksena kuin sotilastukikohtana?
-Tuota niin. Syynä on se, että aseita löytyi vähän. Siksi [[Lejren]] asutus näyttää olleen pikemmin kauppa-, käsityö- ja uskonnollinen keskus kuin sotilastukikohta. Asutus, jossa oli vähintään 50–60 metrin pituisten hallien pylväänreikiä, ajoittuu noin vuosien 550 ja 1000 välille. Johtopäätös perustuu arkeologiseen löytöaineistoon, mutta tulkinnat voivat muuttua uusien kaivausten myötä. Ei sotaa, enemmän markkinoita, ihan mukava.
+Tuota niin. Syynä on se, että aseita löytyi vähän. Siksi [[Lejren]] asutus näyttää olleen pikemmin kauppa-, käsityö- ja uskonnollinen keskus kuin [[sotilastukikohta]]. Asutus, jossa oli vähintään 50–60 metrin pituisten hallien pylväänreikiä, ajoittuu noin vuosien 550 ja 1000 välille. Johtopäätös perustuu arkeologiseen löytöaineistoon, mutta tulkinnat voivat muuttua uusien kaivausten myötä. Ei sotaa, enemmän markkinoita, ihan mukava.
 JATKOT:
 Millaisia käsityötaitoja viikinkiaikana oli?
 Mitä uskonnollinen keskus tarkoittaa tässä yhteydessä?
