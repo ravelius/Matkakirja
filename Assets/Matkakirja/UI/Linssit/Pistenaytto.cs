@@ -36,7 +36,7 @@ namespace Matkakirja.Natiivi
         public const int MerkinLeveys = 5, MerkinKorkeus = 7, NopeusMs = 110;
         const float Jako = 10f, Sade = 3.6f, Reuna = 9f, SammunutPeitto = 0.13f;
         /// <summary>radio.js NAYTON_MUSTE (--radio-lcd-muste).</summary>
-        public static readonly Color Muste = new Color32(0xf2, 0xc0, 0x5e, 255);
+        public static readonly Color Muste = Tyylikirja.Erikois.Radiopaletti14; // #f2c05e
         static readonly Color Hehku = Tyylikirja.Kehys.Kulta;
 
         readonly int merkkeja, riveja, sarakkeita, pisterivit;
@@ -44,7 +44,7 @@ namespace Matkakirja.Natiivi
         readonly bool[,] tilat;
         readonly Rivi[] rivit;
         IVisualElementScheduledItem ajastin;
-        Color lasi = new Color32(0x22, 0x12, 0x04, 255);
+        Color lasi = Tyylikirja.Erikois.Radiopaletti5; // #221204
         bool himmea;
 
         sealed class Rivi { public List<byte> Puskuri = new List<byte>(); public int Siirtyma; public bool Vierii; public string Teksti = ""; }
