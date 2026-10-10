@@ -21,6 +21,7 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { PAAKAUPUNGIT } from './vienti/paakaupungit.mjs';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..');
 const KOHDE = join(JUURI, 'js/packs/paakaupungit.js');
@@ -48,6 +49,8 @@ const lahde = (a) => (a && typeof a === 'object' ? { arvo: a.arvo ?? null, vuosi
  * (tools/vienti/kokoelmat.mjs HALLINNON_PAIKAT, PT 10.10.2026).
  */
 const ASEMA = { PSE: 'hallinnon paikka' };
+// Pelin maatunnus poikkeaa ISO-koodista vain Etelä-Sudanissa (kartta-aineiston SDS).
+const PELIN_TUNNUS = { SSD: 'SDS' };
 const LAUDAN_KAUPUNKI_EI_PISTETTA = { ISR: 'jerusalem' };
 // "paakaupunki"-rivien maa-objektissa on vain tunnus, nimi ja genetiivi
 // (maa on jo laudalla omine tietoineen); perustiedot vain täysistä riveistä.
@@ -58,7 +61,7 @@ for (const polku of syotteet) {
   const data = JSON.parse(readFileSync(polku, 'utf8'));
   for (const { maa: m, paakaupunki: k, tyyppi } of data.alkiot) {
     if (tyyppi === 'kuvat') continue; // vain kuvamotiivit, kaupunki jo laudalla
-    const iso = m.iso3 ?? m.id;
+    const iso = PELIN_TUNNUS[m.iso3 ?? m.id] ?? m.iso3 ?? m.id;
     if (!maat[iso]) throw new Error(`${iso}: maata ei ole laudalla (countryShapes) — lisää ensin rajat (tools/maat-lisaa-maailmankartalle.mjs)`);
     if (taysiMaa(m)) perustiedot.set(iso, {
       virallinenNimi: m.virallinen_nimi_fi ?? null,
@@ -73,6 +76,9 @@ for (const polku of syotteet) {
       esittely: m.esittely_fi ?? null,
     });
     if (!k) continue;
+    // Pääkaupunki on jo laudan pysäkki (tools/vienti/paakaupungit.mjs): ei toista
+    // pistettä. Etelä-Afrikka: Kapkaupunki on laudalla, Pretoria jää pois.
+    if (PAAKAUPUNGIT[iso]) { console.log(`${iso}: pääkaupunki ${PAAKAUPUNGIT[iso]} on jo laudalla — ${k.nimi_fi} ohitetaan`); pisteet.delete(iso); continue; }
     const q = k.wikidata_q ?? null;
     const o = q ? opasQ.get(q) : null;
     const id = o?.id ? tunnus(o.id) : tunnus(k.nimi_fi);

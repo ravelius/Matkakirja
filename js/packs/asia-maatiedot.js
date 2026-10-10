@@ -1247,8 +1247,11 @@ export const ASIA_MAATIEDOT = {
   },
   // Kaikki maat -projekti (PT 10.10.2026): vain väkiluku ja pinta-ala
   // Sisältökirjurin faktoista (lahi-itae-kaukasus: Israelin CBS 2025,
-  // Maailmanpankki 2025, PCBS 2025; pinta-alat Wikidata). Ei sijoja.
+  // Maailmanpankki 2025, PCBS 2025; pinta-alat Wikidata; BRN ja MDV aasia:
+  // kansalliset tilastovirastot 2022–2025, pinta-ala Maailmanpankki 2024). Ei sijoja.
   ISR: { vakiluku: '10 milj.', pintaAla: '20 800 km²' },
   LBN: { vakiluku: '5,8 milj.', pintaAla: '10 500 km²' },
   PSE: { vakiluku: '5,6 milj.', pintaAla: '6 000 km²' },
+  BRN: { vakiluku: '459 000', pintaAla: '5 800 km²' },
+  MDV: { vakiluku: '515 000', pintaAla: '298 km²' },
 };

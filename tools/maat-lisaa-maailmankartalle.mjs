@@ -113,6 +113,40 @@ const MAAT = {
   // Lähi-itä (kaikki maat -projekti, omistaja PT:n kautta 10.10.2026). Bahrain
   // ja Gazan kaista ovat alle MIN_KOKOn, joten pienin rengas kuten Maltalla.
   // Palestiina on NE:ssä ADM0_A3 PSX / ISO_A3 PSE (_swe-näkökulma).
+  // Afrikka (kaikki maat -projekti, omistaja PT:n kautta 10.10.2026; nimet ja
+  // liput Sisältökirjurin faktoista). Saarivaltiot pienin rengas kuten Maltalla.
+  BDI: ['Burundi', 'Burundi', 'Flag of Burundi.svg'],
+  BEN: ['Benin', 'Benin', 'Flag of Benin.svg'],
+  BFA: ['Burkina Faso', 'Burkina Faso', 'Flag of Burkina Faso.svg'],
+  BWA: ['Botswana', 'Botswana', 'Flag of Botswana.svg'],
+  CAF: ['Keski-Afrikan tasavalta', 'Keski-Afrikan tasavalta', 'Flag of the Central African Republic.svg'],
+  CIV: ['Norsunluurannikko', 'Norsunluurannikko', 'Flag of Côte d\'Ivoire.svg'],
+  COG: ['Kongon tasavalta', 'Kongon tasavalta', 'Flag of the Republic of the Congo.svg'],
+  COM: ['Komorit', 'Komorit', 'Flag of the Comoros.svg', { minKoko: 0, sieto: 0.3 }],
+  CPV: ['Kap Verde', 'Kap Verde', 'Flag of Cape Verde.svg', { minKoko: 0, sieto: 0.3 }],
+  DJI: ['Djibouti', 'Djibouti', 'Flag of Djibouti.svg'],
+  ERI: ['Eritrea', 'Eritrea', 'Flag of Eritrea.svg'],
+  GAB: ['Gabon', 'Gabon', 'Flag of Gabon.svg'],
+  GIN: ['Guinea', 'Guinea', 'Flag of Guinea.svg'],
+  GMB: ['Gambia', 'Gambia', 'Flag of The Gambia.svg', { minKoko: 0 }],
+  GNB: ['Guinea-Bissau', 'Guinea-Bissau', 'Flag of Guinea-Bissau.svg'],
+  GNQ: ['Päiväntasaajan Guinea', 'Päiväntasaajan Guinea', 'Flag of Equatorial Guinea.svg'],
+  LSO: ['Lesotho', 'Lesotho', 'Flag of Lesotho.svg'],
+  MRT: ['Mauritania', 'Mauritania', 'Flag of Mauritania.svg'],
+  MUS: ['Mauritius', 'Mauritius', 'Flag of Mauritius.svg', { minKoko: 0, sieto: 0.3 }],
+  MWI: ['Malawi', 'Malawi', 'Flag of Malawi.svg'],
+  NER: ['Niger', 'Niger', 'Flag of Niger.svg'],
+  RWA: ['Ruanda', 'Ruanda', 'Flag of Rwanda.svg'],
+  STP: ['São Tomé ja Príncipe', 'São Tomé ja Príncipe', 'Flag of São Tomé and Príncipe.svg', { minKoko: 0, sieto: 0.3 }],
+  SWZ: ['Swazimaa', 'Swazimaa', 'Flag of Eswatini.svg'],
+  SYC: ['Seychellit', 'Seychellit', 'Flag of Seychelles.svg', { minKoko: 0, sieto: 0.1 }],
+  TGO: ['Togo', 'Togo', 'Flag of Togo.svg'],
+  ZMB: ['Sambia', 'Sambia', 'Flag of Zambia.svg'],
+  // Aasia (kaikki maat -projekti 10.10.2026): Brunei ja Malediivien atollit
+  // ovat pieniä renkaita; Malediivit myös MINIVALTIOT-poikkeukseen
+  // (generoi-maapolygonit, vienti/maarajat), koska saaret ovat alle MIN_KOKOn.
+  BRN: ['Brunei', 'Brunei', 'Flag of Brunei.svg', { minKoko: 0, sieto: 0.3 }],
+  MDV: ['Malediivit', 'Malediivit', 'Flag of Maldives.svg', { minKoko: 0, sieto: 0.1 }],
   BHR: ['Bahrain', 'Bahrain', 'Flag of Bahrain.svg', { minKoko: 0, sieto: 0.3 }],
   ISR: ['Israel', 'Israel', 'Flag of Israel.svg'],
   LBN: ['Libanon', 'Libanon', 'Flag of Lebanon.svg'],
@@ -167,6 +201,9 @@ const ANKKURIT = [
   ['CHN', ['HKG']],
   ['MYS', ['SGP']],
   ['IDN', ['TLS']],
+  ['ZWE', ['BDI', 'BEN', 'BFA', 'BWA', 'CAF', 'CIV', 'COG', 'COM', 'CPV', 'DJI', 'ERI', 'GAB', 'GIN', 'GMB', 'GNB', 'GNQ', 'LSO', 'MRT', 'MUS', 'MWI', 'NER', 'RWA', 'STP', 'SWZ', 'SYC', 'TGO', 'ZMB']],
+  ['SGP', ['BRN']],
+  ['LKA', ['MDV']],
   ['SYR', ['BHR', 'ISR', 'LBN', 'PSE']],
   ['TKM', ['ARG', 'BOL', 'BRA', 'CAN', 'CHL', 'COL', 'CUB', 'ECU', 'GRL', 'GTM', 'MEX', 'NIC', 'PAN', 'PER', 'PRY', 'URY', 'USA', 'VEN']],
   ['VEN', ['AUS', 'FJI', 'NZL', 'PNG', 'SLB', 'VUT']],

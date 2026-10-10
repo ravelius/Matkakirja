@@ -100,6 +100,7 @@ const MAAN_GENETIIVIT = {
   Itävalta: 'Itävallan',
   Kreikka: 'Kreikan',
   Kypros: 'Kyproksen',
+  Malediivit: 'Malediivien',
   Marokko: 'Marokon',
   'Papua-Uusi-Guinea': 'Papua-Uuden-Guinean',
   // Norfolkinsaari taipuu kuin saari (saari → saaren), ei kuin
@@ -114,6 +115,14 @@ const MAAN_GENETIIVIT = {
   'Uusi-Kaledonia': 'Uuden-Kaledonian',
   'Uusi-Seelanti': 'Uuden-Seelannin',
   Yhdysvallat: 'Yhdysvaltojen',
+  // Afrikka (kaikki maat 10.10.2026): monikot, astevaihtelu ja -us → -uksen.
+  'Keski-Afrikan tasavalta': 'Keski-Afrikan tasavallan',
+  Komorit: 'Komorien',
+  'Kongon tasavalta': 'Kongon tasavallan',
+  Norsunluurannikko: 'Norsunluurannikon',
+  Mauritius: 'Mauritiuksen',
+  'São Tomé ja Príncipe': 'São Tomén ja Príncipen',
+  Seychellit: 'Seychellien',
 };
 
 /**

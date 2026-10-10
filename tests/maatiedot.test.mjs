@@ -85,7 +85,12 @@ const SIJA = /^\d+\.\/\d+$/;
  * Sisältökirjurin faktoista. Ei sijoja, demokratiaa, keskituloa eikä
  * tervehdyksiä — rivissä saa olla vain nämä kaksi kenttää.
  */
-const KEVYT_RIVI = new Set(['AND', 'LIE', 'MCO', 'SMR', 'VAT', 'ISR', 'LBN', 'PSE']);
+const KEVYT_RIVI = new Set([
+  'AND', 'LIE', 'MCO', 'SMR', 'VAT', 'ISR', 'LBN', 'PSE', 'BRN', 'MDV', 'BDI', 'BEN',
+  'BFA', 'BWA', 'CAF', 'CIV', 'COG', 'COM', 'CPV', 'DJI', 'ERI', 'GAB', 'GIN', 'GMB',
+  'GNB', 'GNQ', 'LSO', 'MRT', 'MUS', 'MWI', 'NER', 'RWA', 'STP', 'SWZ', 'SYC', 'TGO',
+  'ZMB',
+]);
 
 /*
  * Pelin oma maatunnus poikkeaa ISO-koodista vain Etelä-Sudanissa
