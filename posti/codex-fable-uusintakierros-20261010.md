@@ -1,6 +1,6 @@
 ## Codex → Fable / Sisältökirjuri: kuvaerä #69
 
-Paikalliset generoinnit 12/18, tavulleen varmistettu R2-toimitus 12/18. Toimittamatta jätetyt 0; yksi uusi builtin-generointi per ID, ei variantteja. Uusintatilauksen69 rajattu yksi uusi yritys per ID, aiemmat kuvat säilytetty; uudet v3-polut. Etäiset pienet geneeriset rakennusmassat sallittu lähteen ehdolla, nimetyt suojatut teokset poissuljettu.
+Paikalliset generoinnit 18/18, tavulleen varmistettu R2-toimitus 18/18. Toimittamatta jätetyt 0; yksi uusi builtin-generointi per ID, ei variantteja. Uusintatilauksen69 rajattu yksi uusi yritys per ID, aiemmat kuvat säilytetty; uudet v3-polut. Etäiset pienet geneeriset rakennusmassat sallittu lähteen ehdolla, nimetyt suojatut teokset poissuljettu.
 
 Kuvakohtaiset toimitukset ja havainnot:
 
@@ -121,6 +121,63 @@ Rauhallinen lahti ja laaja etäinen matalien kattojen kaupunkimassa vehreältä 
 - Paikan täsmällistä identiteettiä, harjanteen geometriaa, koordinaatteja ja mittasuhteita ei vahvistettu valokuvalähteestä.
 - Geneeristen rakenteiden tekijöistä ja juridisesta suojasta ei anneta takuuta; etäiset rakennusmassat sallitaan tilauksen ehdoilla.
 - Nimettyä poissuljettua suojattua teosta ei visuaalisessa tarkastuksessa yksilöity.
+
+### quito-1
+
+[quito-1-v3.png](https://media.matkakirja.app/paakaupungit/ECU/20261010/quito-1-v3.png?t=9f78992d2bc5c2b1) — Quiton vanhakaupungin punaisia tiilikattoja, kirkontorneja ja kupoleita Andien laaksossa lämpimässä aamuvalossa. Havainnekuva.
+
+Fotorealistinen punertavien tiilikattojen ja vaaleiden kirkontornien sekä kupolien kattomaisema; vehreä rinteeltä kuvattu etuala ja pilvinen vuorenrinne taustalla. Kuvan näkyvät yleispiirteet vastaavat Quiton vanhakaupungin kuvaukselle pyydettyä kattomaisemaa; tarkkoja kirkkoja tai Pichinchaa ei ole yksilöity varmistettuina. En havaitse luettavaa tekstiä, numeroita, logoja, lippuja, tunnistettavia kasvoja, poliiseja, sotilaita, mielenosoitusta tai poliittisia kuvia. En havaitse tunnistettavaa Virgen de Quito / Virgen del Panecillo -patsasta tai Plaza Granden itsenäisyysmonumenttia. El Panecilloksi tunnistettavaa patsaskukkulaa ei havaittu. Rinteillä on etäisiä, pieniä geneerisiä rakennusmassoja. Mikään yksittäinen moderni rakennus ei näytä pääaiheelta tai erottuvalta etualalla/keskellä.
+
+- Generoidun kuvan perusteella tarkkaa sijaintia, katselusuuntaa, vuori- ja rakennusidentiteettiä, mittasuhteita tai oikeudellista suojaa ei voi vahvistaa.
+- Etäiset geneeriset rakennusmassat kirjataan lähteen 69 sallimana rajoitteena; niiden yksittäistä arkkitehtuuria ei voida tunnistaa.
+
+### san-salvador-1
+
+[san-salvador-1-v3.png](https://media.matkakirja.app/paakaupungit/SLV/20261010/san-salvador-1-v3.png?t=e960ffc046e516e1) — San Salvadorin laakson matalia asuinalueita ja puistoja vihreän tulivuoren edustalla lämpimässä iltapäivävalossa. Havainnekuva.
+
+Fotorealistinen laaja laakson kaupunkinäkymä vehreältä rinteeltä; matalia asuinalueita ja runsaasti puustoa, taustalla vihreä loivasti levenevä tulivuorimainen kartio ja pilviä. Lämmin matala aurinko näkyy vasemmalla horisontissa, joten valo vaikuttaa myöhäisiltapäivän ja auringonlaskun väliseltä. En havaitse luettavaa tekstiä, numeroita, logoja, lippuja, tunnistettavia kasvoja tai poliittisia symboleja. En havaitse Monumento al Divino Salvador del Mundoa, Plaza Gerardo Barriosin tai Plaza Morazánin patsaita, Catedral Metropolitanan julkisivumosaiikkia tai Iglesia El Rosariota. Etäisiä geneerisiä matalia ja keskimatalia rakennusmassoja näkyy laaksossa; yksittäinen moderni rakennus ei erotu kuvan pääaiheena tai etualalla/keskellä.
+
+- San Salvadorin tulivuoren täsmällistä profiilia, katselusuuntaa, kaupunginosia, rakennuksia tai oikeudellista suojaa ei ole vahvistettu generoidusta kuvasta.
+- Etäiset geneeriset rakennusmassat jäävät pieniksi, eivätkä yksittäiset teokset ole tunnistettavia.
+
+### singapore-1
+
+[singapore-1-v3.png](https://media.matkakirja.app/paakaupungit/SGP/20261010/singapore-1-v3.png?t=7ec4d2a014652253) — Singapore-joen Boat Quayn matalia shophouse-taloja, vehreä rantakatu ja perinteinen puuvene lämpimässä iltapäivävalossa. Havainnekuva.
+
+Fotorealistinen vastarannalta matalalta kuvattu jokiranta: kaksi- ja kolmikerroksisia pastellinsävyisiä shophouse-taloja, puisia ikkunaluukkuja ja punaisia tiilikattoja. Etualalla on tyhjä kivetty rantakäytävä, puisia penkkejä ja suuren puun latvusto. Joella on perinteisen puuveneen näköinen alus. Rakennusten takana ei havaita pilvenpiirtäjiä, toimistotorneja tai tunnistettavaa nykyarkkitehtuurin kaupunkisiluettia. En havaitse luettavaa tekstiä, numeroita, ravintolanimiä, veneen nimeä tai logoja, lippuja, poliittisia symboleja, sotilaita tai poliiseja. Kaukana vastarannalla ja veneessä on pieniä ihmishahmoja. Tunnistettavia kasvoja ei havaittu natiivikuvan tarkastuksessa. En havaitse Marina Bay Sandsia, Merlion-patsasta, Gardens by the Bayn Supertree-rakenteita, Botero-veistosta tai muuta tunnistettua nimettyä poissuljettua teosta. Kuvan vasemmassa reunassa on tavanomaisen toiminnallisen rantavalaisimen näköinen pylväs, eikä sitä ole havaintona yksilöity nimetyksi taide- tai valaistusinstallaatioksi.
+
+- Boat Quayn tarkkaa rakennusjärjestystä, katselupaikkaa, mittasuhteita tai yksittäisten rakennusten ja valaisimen identiteettiä ei ole vahvistettu.
+- Suojan oikeudellinen arvio ei perustu tähän kuvatarkastukseen; havaintona ei tunnistettu tilauksessa nimettyä poissuljettua teosta.
+
+### st-georges-2
+
+[st-georges-2-v3.png](https://media.matkakirja.app/paakaupungit/GRD/20261010/st-georges-2-v3.png?t=eefe0c9fd5107b9f) — Fort Georgen vanhoja kivimuureja ja tykkipaikkoja Grenadan rehevällä kukkulalla, taustalla kaupungin kattoja ja meri. Havainnekuva.
+
+Fotorealistinen kuluneiden vanhojen kivimuurien ja tykkipaikkojen lähietualanäkymä; rinteessä on rehevää trooppista kasvillisuutta ja palmu. Taustassa näkyy mäkistä maastoa, kaupungin kattoja, lahdenrantaa ja merta. Kuva ei esitä matalaa saaristoa. Tykkipaikoilla näkyy kaksi vanhan tykin näköistä esinettä. Ne ovat passiivisia; ei ampumista, savua, toimintaa, taistelua tai sotilaspukuisia henkilöitä. En havaitse luettavaa tekstiä, numeroita, logoja, lippuja, ihmisiä, tunnistettavia kasvoja, muistolaattoja tai nykyisiä muistoveistoksia. Etäisessä kaupunkitaustassa on pieniä geneerisiä rakennusmassoja; mikään yksittäinen moderni rakennus ei ole pääaihe tai erottuva etualalla/keskellä. Kaukana vasemman taustaharjanteen yllä näkyy pieni ohut mastomainen rakenne. St-georges-2-rivi ei sisällä mastokieltoa; rakennetta ei ole yksilöity nimetyksi suojatuksi teokseksi.
+
+- Fort Georgen täsmällistä muuria, katselukulmaa, kaupungin rakennuksia, tykkien identiteettiä, mittasuhteita tai oikeudellista suojaa ei ole vahvistettu.
+- Etäiset geneeriset rakennusmassat ja mastomainen rakenne jäävät yksilöimättömiksi taustahavainnoiksi.
+
+### tegucigalpa-1
+
+[tegucigalpa-1-v3.png](https://media.matkakirja.app/paakaupungit/HND/20261010/tegucigalpa-1-v3.png?t=4f524a92d817998b) — Tegucigalpan laakso, punaiset katot ja vihreät vuoret lämpimässä iltapäivävalossa. Havainnekuva.
+
+Valokuvamainen leveä näkymä vehreältä rinteeltä matalakattoiseen kaupunkiin vuorten ympäröimässä laaksossa; punertavia kattoja, vihreitä rinteitä, pilviä ja lämmin luonnollinen iltapäivävalo. Etäisessä kaupungissa näkyy muutamia pieniä geneerisiä vaaleita kerrosrakennusmassoja; mikään yksittäinen nykyajan rakennus ei ole pääaihe tai tunnistettava etualan/keskiosan maamerkki. Arvioitu tilauksen #69 pehmeämmän taustaehdon mukaan. Kaukaisen oikeanpuoleisen vuoren laella näkyy pieniä mastomaisia pystyrakenteita. Niitä ei voi yksilöidä tämän kuvan pohjalta; tunnistettavaa Cristo del Picacho -patsasta tai Morazán-ratsastajapatsasta ei havaittu. Luettavaa tekstiä, numeroita, logoja, lippuja, kasvoja, poliittisia symboleja, sotakuvastoa tai tunnistettavaa nimettyä suojattua teosta ei havaittu. Ihmisiä ei erota natiivikuvasta; etualalla kasvillisuutta ja tavallisia matalia kattoja.
+
+- Generoitu havainnekuva; kaupungin maantieteellistä yksilöintiä, tarkkaa kuvauspaikkaa, rakennusten identiteettejä tai mittasuhteita ei ole varmennettu valokuvan tai paikkatiedon avulla.
+- Tämän silmämääräisen tarkastuksen perusteella ei vahvisteta tekijän elinaikaa eikä juridista suoja-asemaa.
+- Pienten etäisten rakennusten ja mastomaisten rakenteiden yksilöinti jää varmistamatta.
+
+### kingstown-1
+
+[kingstown-1-v3.png](https://media.matkakirja.app/paakaupungit/VCT/20261010/kingstown-1-v3.png?t=d0dea09615eb5844) — Kingstownin lahti Saint Vincentillä: peltikattoja, vehreitä kukkuloita ja kaukaisia aluksia iltapäivävalossa. Havainnekuva.
+
+Valokuvamainen leveä koholta kuvattu trooppinen lahtimaisema; punaisia ja harmaita peltikattoja, runsasta vihreää kasvillisuutta, tiiviisti asuttuja vehreitä kukkuloita ja lämmin iltapäivävalo. Lahdella on yksi kaukainen lauttamainen alus, pieniä kauppa-alusmaisia aluksia sekä vasemmalla yksi pieni mastollinen purjevene-/jahtimainen alus. Yksittäistä tunnistettavaa modernia hallinto-, liike- tai satamarakennusta ei havaittu pääaiheena tai erottuvana etualalla/keskellä. Rannan pienet etäiset rakennukset ovat yleisilmeisiä. Luettavaa tekstiä, numeroita, logoja, lippuja, kasvoja, sotilaita, poliittisia symboleja, nykyveistoksia tai tunnistettavaa nimettyä suojattua teosta ei havaittu. Ihmisiä ei erota natiivikuvasta; alusten tarkat identiteetit eivät ole luettavissa.
+
+- Promptin kohde on Kingstown, VCT, Saint Vincent ja Grenadiinit. Generoidun kuvan täsmällistä maantieteellistä identiteettiä tai Fort Charlotten kuvaussuuntaa ei ole varmennettu riippumattomalla paikkatiedolla.
+- Lahden muoto, rakennukset ja alusten tyypit ovat silmämääräisiä havaintoja; niiden vastaavuutta tiettyihin tosimaailman kohteisiin ei voi vahvistaa kuvan pohjalta.
+- Etäisen rannan rakennusten toimintoja ja satamarakennusten täydellistä poissaoloa ei voi yksilöidä; tunnistettavaa kiellettyä rakennusta ei havaittu.
+- Tarkastus ei vahvista teosidentiteettejä, tekijöiden elinaikoja tai juridista suoja-asemaa.
 
 PNG1536×1024 RGB/sRGB, läpinäkymätön; AI-metatieto Havainnekuva. Tekoälyllä tuotettu, ei valokuva. Jokainen kuvateksti päättyy sanaan Havainnekuva. Natiivit säilytetty ja katsottu; pääagentti teki erillisen kuvakoontien katselmuksen, teknisen viennin varmistuksen ja R2:n HTTP/MIME/CORS/tavulleen saman tiedoston tarkistuksen. Ei sisältökorjauksia, rajauksia tai vanhojen kuvien uudelleenkäyttöä.
 
