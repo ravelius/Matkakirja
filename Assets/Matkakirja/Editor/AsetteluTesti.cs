@@ -32,6 +32,8 @@ namespace Matkakirja.Editori
             ("ipad-vaaka", "2420,1668,0,40,2420,1580,2,1"),
         };
 
+        static void SuljeMaakortti() { var k = UiNakymat.Hae().Kartuscha; k.Sulje(); k.Testaa(null, false); }
+
         static readonly string[] Kysymykset =
         {
             "Kerro lisää", "Miksi katedraalin kattotuolia kutsuttiin metsäksi?", "Mitä tornihuipun kultainen kukko kätkee sisäänsä?",
@@ -668,6 +670,9 @@ namespace Matkakirja.Editori
             ("ihmisen matkan valikko", () => Linssi("valikko matka"), () => { Linssi("matka pois"); SuljeLinssi(); }, 1.0),
             ("radio", () => Linssi("radio"), SuljeLinssi, 0.6),
             ("maan kyltti", () => Linssi("maa ITA"), SuljeLinssi, 0.6),
+            // Maakortti (kartuscha) auki pääkaupunkirivin kanssa (PT 10.10.): Ranska = PÄÄKAUPUNKI, Israel = HALLINNON PAIKKA.
+            ("maakortti Ranska", () => UiNakymat.Hae().Kartuscha.Testaa("FRA", true), SuljeMaakortti, 3.0),
+            ("maakortti Israel", () => UiNakymat.Hae().Kartuscha.Testaa("ISR", true), SuljeMaakortti, 3.0),
             ("linssin selite", () => Linssi("selite"), () => { Linssi("selite pois"); SuljeLinssi(); }, 0.6),
             // Linssin sovitinta vaativat näkymät editorin testikytkimillä (#if UNITY_EDITOR, PT 10.10.2026).
             ("ajattelijat", () => AjattelijatSovitin.TestiValinta(true), () => { AjattelijatSovitin.TestiValinta(false); SuljeKaikki(); }, 1.0),

@@ -467,6 +467,10 @@ namespace Matkakirja.Natiivi
             valtiomuotoRivi.style.display = DisplayStyle.None;
             foreach (var vanha in tilastot.Query(className: "mk-kartuscha__rivi").ToList()) vanha.RemoveFromHierarchy();
             vertailut.Clear();
+            // Pääkaupunki ensimmäisenä rivinä (PT 10.10., sama kuin web): "HALLINNON PAIKKA", kun asema on "hallinnon paikka"
+            // (ISR → Jerusalem, PSE → Ramallah); ilman tietoa ei riviä.
+            if (m.Paakaupunki != null)
+                Tilasto(Kieli.T(m.PaakaupunkiAsema == "hallinnon paikka" ? "ui.kartuscha.hallinnon-paikka" : "ui.kartuscha.paakaupunki"), m.Paakaupunki, null);
             if (m.OnTiedot)
             {
                 Tilasto(Kieli.T("ui.kartuscha.vakiluku"), m.Vakiluku, m.VakilukuSija);
@@ -474,7 +478,7 @@ namespace Matkakirja.Natiivi
                 Tilasto(Kieli.T("ui.kartuscha.demokratia"), m.Demokratia != null ? m.Demokratia + " · V-Dem" : null, m.DemokratiaSija);
                 Tilasto(Kieli.T("ui.kartuscha.keskitulo"), m.Keskitulo, m.KeskituloSija);
             }
-            tilastot.style.display = m.OnTiedot || m.Tervehdykset.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+            tilastot.style.display = m.OnTiedot || m.Tervehdykset.Count > 0 || m.Paakaupunki != null ? DisplayStyle.Flex : DisplayStyle.None;
 
             kielet.Clear();
             kielet.BringToFront(); // rivien jälkeen
