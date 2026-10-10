@@ -9,3 +9,9 @@
 - tarkista-valmis.mjs: 0 virhettä, 9 varoitusta (ulkomainen maininta tekstissä: Egypti, Kiina, Intia; luettu, ei linkkejä).
 - Faktojen pistokoetta (30 vastausta) ei ole tehty; muistinvaraiset PAIKKA-rivit (Salamis ×2, Famagusta, Apostolos Andreas, Polis, Palaipafos, Argos) kannattaa tarkistaa.
 - Paketti: pulu-esigenerointi/CYP/CYP.json (29 kohtaa); pulu-esigenerointi/maat.json päivitetty (vain CYP-rivi).
+
+## Pistokoe ja korjaukset (Sisältökirjuri 10.10.2026)
+
+- Pistokoe: 37 väitettä (2 Sonnet-agenttia, 2 lähdettä per väite): OIKEIN 17, EPÄTARKKA 19, VIRHE 1. 20 kohtaa korjattu sanatarkasti vaihe1.json/vaihe2.json-tiedostoihin (60 vastausta), paketti koottu uudelleen. Riippumaton tarkistus: kaikki korjaukset toteutuneet; löydetyt 2 jälkivirhettä korjattu.
+- Toistunut tyyppi: tarkat luvut ja vuodet, jotka ovat vain Wikipediassa (asukasluvut, rantojen/lajien määrät, perustamisvuodet) — muistinvarainen tarkka luku ilman kahta lähdettä; toiseksi syy-seuraus-selitykset (kivenryöstö, Leukollan taistelu).
+- HUOM: vastaukset-*.txt eivät sisällä korjauksia (lähde on nyt vaihe1.json/vaihe2.json); älä aja tarkista-era.mjs:ää CYP-kansioon, se ylikirjoittaisi korjaukset.

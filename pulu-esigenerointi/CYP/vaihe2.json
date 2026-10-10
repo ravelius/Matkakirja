@@ -161,7 +161,7 @@
   "kohde": "kohde:hahmotelma-kition",
   "kasite": "kivenryöstö",
   "kysymys": "Kerro lisää: kivenryöstö",
-  "vastaus": "Kivenryöstöllä tarkoitetaan vanhojen rakennusten kiven ja rakennusosien käyttämistä uusien rakennusten aineeksi. Se oli keskiajalla ja uudella ajalla tavallista kaikkialla Euroopassa: esimerkiksi [[Colosseumin]] marmoria ja kalkkikiveä kuljetettiin pois rakennuksen jäädessä käyttämättömäksi. Kitionin kohdalla sataman ja kaupunginmuurien kiveä käytettiin tiettävästi myöhemmin rakennusaineena Larnakan ja muiden rakennuskohteiden tarpeisiin. Tämä selittää, miksi antiikin Kitionista on jäljellä niin vähän näkyvää. Kaupungin muistot ovat lähinnä [[Larnakan]] nykyisten rakennusten alla ja arkeologisissa kaivauksissa.",
+  "vastaus": "Kivenryöstöllä tarkoitetaan vanhojen rakennusten kiven ja rakennusosien käyttämistä uusien rakennusten aineeksi. Se oli keskiajalla ja uudella ajalla tavallista kaikkialla Euroopassa: esimerkiksi [[Colosseumin]] marmoria ja kalkkikiveä kuljetettiin pois rakennuksen jäädessä käyttämättömäksi. Siksi monesta antiikin rakennuksesta on jäljellä vain perustuksia. Muinaisten kaupunkien jäänteet ovat usein myös uudempien rakennusten alla, kuten Kitionin jäänteet nykyisen [[Larnakan]] alla.",
   "linkit": [
    "Colosseumin",
    "Larnakan"
@@ -522,7 +522,7 @@
   "kohde": "kohde:hahmotelma-kormakitis",
   "kasite": "Kormakitisin",
   "kysymys": "Kerro lisää: Kormakitisin",
-  "vastaus": "Kormakitis on pieni kylä Kyproksen pohjoisrannikolla, ja se on maroniittiyhteisön tärkein jäljellä oleva keskus saaren pohjoisosassa. Kylä oli [[Denoresin]] suvun läänitys vuosina 1191-1489, ja tuolloin se oli yksi saaren rikkaimmista. Vuonna 1570 siellä oli 850 asukasta, mutta [[osmanien]] aikana väkiluku väheni ja vuonna 1841 siellä oli enää 200 asukasta. Kylän asukkaat ovat vaalineet perinteistä [[kyproksenmaroniittiarabiaa]]. Nykyisin kylässä asuu vain pieni määrä vakituisia asukkaita, mutta moni sukulainen vierailee siellä juhlapäivinä.",
+  "vastaus": "Kormakitis on pieni kylä Kyproksen pohjoisrannikolla, ja se on maroniittiyhteisön tärkein jäljellä oleva keskus saaren pohjoisosassa. Kylä oli [[Denoresin]] suvun läänitys vuosina 1191-1489, ja tuolloin se oli yksi saaren rikkaimmista. Kormakitisin asukasluku väheni [[osmanien]] aikana selvästi: kylästä on esitetty lukuja, joiden mukaan siinä oli 1500-luvun lopulla satoja asukkaita ja 1800-luvun alkupuolella enää noin kaksisataa, mutta nämä luvut ovat epävarmoja. Koko Kyproksen maroniittiyhteisö kutistui samaan aikaan: noin 8 000 maroniittia 23 kylässä vuonna 1572, mutta vain noin 150 kahdeksassa kylässä vuonna 1686. Kylän asukkaat ovat vaalineet perinteistä [[kyproksenmaroniittiarabiaa]]. Nykyisin kylässä asuu vain pieni määrä vakituisia asukkaita, mutta moni sukulainen vierailee siellä juhlapäivinä.",
   "linkit": [
    "Denoresin",
    "osmanien",
@@ -565,7 +565,7 @@
   "kohde": "kohde:hahmotelma-kormakitis",
   "kasite": "Johanneksenleipäpuun",
   "kysymys": "Kerro lisää: Johanneksenleipäpuun",
-  "vastaus": "Johanneksenleipäpuu on Välimeren seudulla viljelty ikivihreä puu, jonka paksut, tummanruskeat palot sisältävät makeaa hedelmälihaa. Puu kestää kuivuutta hyvin, mikä teki siitä sopivan kyproslaisiin oloihin. Palkoja on käytetty rehuna, ja niistä valmistetaan myös siirappia ja jauhoa. Kasvin siemenet olivat vanhastaan niin tasapainoisia, että niitä käytettiin painona jalokivien ja kullan punnitsemisessa, ja siitä on selitetty sana [[karaatin]] alkuperä. Nimi juontuu perinteestä, jonka mukaan [[Johannes Kastaja]] olisi syönyt erämaassa tämän puun palkoja. Kyproksella viljely vilkastui Limassolin seudulla 1850-luvulta, ja [[Limassolin]] satamasta palkoja vietiin ulkomaille.",
+  "vastaus": "Johanneksenleipäpuu on Välimeren seudulla viljelty ikivihreä puu, jonka paksut, tummanruskeat palot sisältävät makeaa hedelmälihaa. Puu kestää kuivuutta hyvin, mikä teki siitä sopivan kyproslaisiin oloihin. Palkoja on käytetty rehuna, ja niistä valmistetaan myös siirappia ja jauhoa. Kasvin siemenet olivat vanhastaan niin tasapainoisia, että niitä käytettiin painona jalokivien ja kullan punnitsemisessa, ja siitä on selitetty sana [[karaatin]] alkuperä. Nimi juontuu perinteestä, jonka mukaan [[Johannes Kastaja]] olisi syönyt erämaassa tämän puun palkoja. Kyproksella palkoja vietiin 1800- ja 1900-luvuilla ulkomaille [[Limassolin]] satamasta.",
   "linkit": [
    "karaatin",
    "Johannes Kastaja",
@@ -609,7 +609,7 @@
   "kohde": "kohde:hahmotelma-karpas",
   "kasite": "Karpaasin niemimaan",
   "kysymys": "Kerro lisää: Karpaasin niemimaan",
-  "vastaus": "Karpaasin niemimaa on pitkä, kapea niemimaa Kyproksen koillisosassa, jonka pinta-ala on 898 neliökilometriä. Se on selvästi harvemmin asuttu kuin muu saari, ja pääasiallinen asutuskeskus on [[Rizokarpason]] kylä. Niemimaalla on yli 46 hiekkarantaa, joiden rauhallisuus houkuttelee merikilpikonnia, ja siellä elää [[Karpaasin aasi]], jota pidetään saaren symbolina. Historiallisia kohteita ovat [[Kantaran linna]] vuoristossa sekä Agia Triaksen basilikan ja muinaisten kaupunkien rauniot. Elinkeinoina ovat maatalous ja kalastus, ja alue tunnetaan vesimelonistaan.",
+  "vastaus": "Karpaasin niemimaa on pitkä, kapea niemimaa Kyproksen koillisosassa, jonka pinta-ala on 898 neliökilometriä. Se on selvästi harvemmin asuttu kuin muu saari, ja pääasiallinen asutuskeskus on [[Rizokarpason]] kylä. Niemimaalla on kymmeniä pitkiä hiekkarantoja, joiden rauhallisuus houkuttelee merikilpikonnia, ja siellä elää [[Karpaasin aasi]], jota pidetään saaren symbolina. Historiallisia kohteita ovat [[Kantaran linna]] vuoristossa sekä Agia Triaksen basilikan ja muinaisten kaupunkien rauniot. Elinkeinoina ovat maatalous ja kalastus, ja alue tunnetaan vesimelonistaan.",
   "linkit": [
    "Rizokarpason",
    "Karpaasin aasi",
@@ -753,7 +753,7 @@
   "kohde": "kohde:hahmotelma-akamas",
   "kasite": "Kyproksen",
   "kysymys": "Kerro lisää: Kyproksen",
-  "vastaus": "Kyproksen luonto on rikas pienestä koostaan huolimatta. Saarella kasvaa noin 128 endeemistä kasvilajia, joista 39 tavataan [[Akamaksen]] niemellä. [[Troodoksen]] vuoristossa elää kyproksenmuflon, joka on saaren tunnetuin villieläin, ja Troodoksen vuoristossa kasvaa myös oma setrilajinsa. Rannikoiden hiekkarannoilla pesivät merikilpikonnat, ja sisämaassa on suolajärviä, joihin muuttolinnut pysähtyvät. Kyproksen erityisluonnon turvaamiseksi on perustettu useita suojelualueita ja kansallispuistoja. Vuosikymmenten maankäyttö ja turismi ovat kuitenkin kuormittaneet alueita.",
+  "vastaus": "Kyproksen luonto on rikas pienestä koostaan huolimatta. Saarella kasvaa noin 120 endeemistä kasvilajia, joista noin neljäkymmentä tavataan [[Akamaksen]] niemellä (lukujen tarkkuus vaihtelee lähteittäin). [[Troodoksen]] vuoristossa elää kyproksenmuflon, joka on saaren tunnetuin villieläin, ja Troodoksen vuoristossa kasvaa myös oma setrilajinsa. Rannikoiden hiekkarannoilla pesivät merikilpikonnat, ja sisämaassa on suolajärviä, joihin muuttolinnut pysähtyvät. Kyproksen erityisluonnon turvaamiseksi on perustettu useita suojelualueita ja kansallispuistoja. Vuosikymmenten maankäyttö ja turismi ovat kuitenkin kuormittaneet alueita.",
   "linkit": [
    "Akamaksen",
    "Troodoksen"
@@ -781,7 +781,7 @@
   "kohde": "kohde:hahmotelma-akamas",
   "kasite": "endeemisyysalueesta",
   "kysymys": "Kerro lisää: endeemisyysalueesta",
-  "vastaus": "Endeemisyysalue on alue, jolla on poikkeuksellisen paljon sellaisia lajeja, joita ei tavata muualla. Euroopan ympäristökeskus on tunnistanut Euroopasta 22 tällaista aluetta, joista Akamas on yksi. Muita esimerkkejä ovat [[Kreetan]] vuoret, [[Alppien]] korkeat alueet ja [[Korsikan]] ja Sardinian saaret. Alueita yhdistää usein eristyneisyys, maaston vaihtelu ja leuto ilmasto. Endeemisyysalueiden suojelu on tärkeää, koska niillä uhkaavat lajit eivät voi siirtyä muualle.",
+  "vastaus": "Endeemisyysalue on alue, jolla on poikkeuksellisen paljon sellaisia lajeja, joita ei tavata muualla. Euroopan ympäristökeskus on tunnistanut Euroopasta useita tällaisia alueita, joiden joukossa Akamas usein mainitaan. Muita esimerkkejä ovat [[Kreetan]] vuoret, [[Alppien]] korkeat alueet ja [[Korsikan]] ja Sardinian saaret. Alueita yhdistää usein eristyneisyys, maaston vaihtelu ja leuto ilmasto. Endeemisyysalueiden suojelu on tärkeää, koska niillä uhkaavat lajit eivät voi siirtyä muualle.",
   "linkit": [
    "Kreetan",
    "Alppien",
@@ -1144,7 +1144,7 @@
   "kohde": "kohde:hahmotelma-soli",
   "kasite": "Mesaorian",
   "kysymys": "Kerro lisää: Mesaorian",
-  "vastaus": "Mesaoria on Kyproksen suuri tasanko Kyrenian vuoriston ja Troodoksen välissä. Nimi tarkoittaa vuorten välistä. Tasanko on lähes puuton, ja sen maa on viljelyskäytössä: siellä kasvatetaan etenkin viljaa. [[Nikosian]] kaupunki sijaitsee sen keskellä. Saaren pisin joki [[Pedieos]], 98 kilometriä, virtaa tasangon halki Famagustan lahteen, mutta se on usein kuiva. Mesaorian kesät ovat kuumia, ja Nikosiassa mitattiin 4. syyskuuta 2020 koko Kyproksen korkein lämpötilalukema, 46,2 astetta. Talvella sadetta tulee vähän, ja kuivuus on tavallista.",
+  "vastaus": "Mesaoria on Kyproksen suuri tasanko Kyrenian vuoriston ja Troodoksen välissä. Nimi tarkoittaa vuorten välistä. Tasanko on lähes puuton, ja sen maa on viljelyskäytössä: siellä kasvatetaan etenkin viljaa. [[Nikosian]] kaupunki sijaitsee sen keskellä. Saaren pisin joki [[Pedieos]], 98 kilometriä, virtaa tasangon halki, mutta se on usein kuiva, ja suuri osa sen vedestä päätyy patoihin ja tekoaltaisiin ennen merta. Mesaorian kesät ovat kuumia, ja Nikosiassa mitattiin 4. syyskuuta 2020 koko Kyproksen korkein lämpötilalukema, 46,2 astetta. Talvella sadetta tulee vähän, ja kuivuus on tavallista.",
   "linkit": [
    "Nikosian",
    "Pedieos"
@@ -1521,7 +1521,7 @@
   "kohde": "kohde:hahmotelma-kantara",
   "kasite": "Bysantin",
   "kysymys": "Kerro lisää: Bysantin",
-  "vastaus": "Bysantti eli Itä-Rooman valtakunta oli Rooman valtakunnan itäinen jatke, joka säilyi vuoteen 1453. Sen pääkaupunki oli [[Konstantinopoli]], virallinen kieli oli kreikka ja uskonto kristinusko ortodoksisessa muodossaan. Bysantin kulttuurille tyypillisiä olivat kupolikirkot, mosaiikit ja ikonit, ja sen perinne elää yhä [[ortodoksisuudessa]]. Bysantti otti Kyproksen takaisin arabeilta vuonna 965, ja Bysantin vallan saarella päätti vuonna 1191 [[Rikhard Leijonasydän]], joka valloitti sen ristiretkelle matkatessaan. Kantaran linnassa näkyy bysanttilaisten ja frankkilaisten rakennuspiirteiden yhdistelmä.",
+  "vastaus": "Bysantti eli Itä-Rooman valtakunta oli Rooman valtakunnan itäinen jatke, joka säilyi vuoteen 1453. Sen pääkaupunki oli [[Konstantinopoli]], virallinen kieli oli kreikka ja uskonto kristinusko ortodoksisessa muodossaan. Bysantin kulttuurille tyypillisiä olivat kupolikirkot, mosaiikit ja ikonit, ja sen perinne elää yhä [[ortodoksisuudessa]]. Bysantti otti Kyproksen takaisin arabeilta 900-luvulla, ja Bysantin vallan saarella päätti vuonna 1191 [[Rikhard Leijonasydän]], joka valloitti sen ristiretkelle matkatessaan. Kantaran linnassa näkyy bysanttilaisten ja frankkilaisten rakennuspiirteiden yhdistelmä.",
   "linkit": [
    "Konstantinopoli",
    "ortodoksisuudessa",
@@ -1629,7 +1629,7 @@
   "kohde": "kohde:hahmotelma-kantara",
   "kasite": "Famagustan",
   "kysymys": "Kerro lisää: Famagustan",
-  "vastaus": "Famagusta on Kyproksen itärannikon kaupunki saaren syvimmän sataman äärellä. Se perustettiin noin vuonna 274 eaa. nimellä Arsinoe [[Salamiin]] lähelle. [[Lusignan-suvun]] vallan aikana kaupunki vaurastui kauppakeskukseksi, ja Akkonin kukistumisen 1291 jälkeen sinne virranneet pakolaiskauppiaat rakennuttivat niin paljon kirkkoja, että kaupunkia alettiin kutsua kirkkojen kaupungiksi. Vuosina 1570–1571 se oli viimeinen Venetsian tukikohta Kyproksella, joka vastusti osmaneja: 13 kuukauden piirityksen jälkeen antautunut komendantti [[Marco Antonio Bragadin]] teloitettiin. Osmanien vallan alla latinalaiset karkotettiin.",
+  "vastaus": "Famagusta on Kyproksen itärannikon kaupunki saaren syvimmän sataman äärellä. Se perustettiin noin vuonna 274 eaa. nimellä Arsinoe [[Salamiin]] lähelle. [[Lusignan-suvun]] vallan aikana kaupunki vaurastui kauppakeskukseksi, ja Akkonin kukistumisen 1291 jälkeen sinne virranneet pakolaiskauppiaat rakennuttivat niin paljon kirkkoja, että kaupunkia alettiin kutsua kirkkojen kaupungiksi. Vuosina 1570–1571 se oli viimeinen Venetsian tukikohta Kyproksella, joka vastusti osmaneja: lähes yksitoistakuukautisen piirityksen jälkeen antautunut komendantti [[Marco Antonio Bragadin]] tapettiin julmasti. Osmanien vallan alla latinalaiset karkotettiin.",
   "linkit": [
    "Salamiin",
    "Lusignan-suvun",
@@ -1751,7 +1751,7 @@
   "kohde": "kohde:hahmotelma-lapithos",
   "kasite": "osmanien",
   "kysymys": "Kerro lisää: osmanien",
-  "vastaus": "Osmanit olivat turkkilaista alkuperää oleva dynastia, jonka johtama Osmanien valtakunta syntyi Anatoliassa 1200-luvun lopulla. Valtakunta valloitti [[Konstantinopolin]] vuonna 1453 ja laajeni Balkanille ja Välimeren ympärille. Kyproksen se valtasi [[Venetsialta]] vuosina 1570–1571, ja [[Nikosia]] sekä Famagusta joutuivat sen haltuun. Osmanien hallinto kesti vuoteen 1878, jolloin saaren hallinto siirtyi Britannialle, vaikka saari pysyi muodollisesti Osmanien osana. Lapithoksen osa erotettiin Karavaksi vuonna 1780.",
+  "vastaus": "Osmanit olivat turkkilaista alkuperää oleva dynastia, jonka johtama Osmanien valtakunta syntyi Anatoliassa 1200-luvun lopulla. Valtakunta valloitti [[Konstantinopolin]] vuonna 1453 ja laajeni Balkanille ja Välimeren ympärille. Kyproksen se valtasi [[Venetsialta]] vuosina 1570–1571, ja [[Nikosia]] sekä Famagusta joutuivat sen haltuun. Osmanien hallinto kesti vuoteen 1878, jolloin saaren hallinto siirtyi Britannialle, vaikka saari pysyi muodollisesti Osmanien osana. Lapithoksen osa erotettiin Karavaksi 1700-luvun lopulla; usein mainitaan vuosi 1780, mutta ajoitus on epävarma.",
   "linkit": [
    "Konstantinopolin",
    "Venetsialta",
@@ -1766,7 +1766,7 @@
   "kohde": "kohde:hahmotelma-lapithos",
   "kasite": "Lusignanien",
   "kysymys": "Kerro lisää: Lusignanien",
-  "vastaus": "Lusignanit olivat ranskalainen aatelissuku [[Poitoun]] alueelta. Sukuun kuuluva [[Guy de Lusignan]] osti Kyproksen temppeliherroilta vuonna 1192, ja suku hallitsi saarta kuningaskuntana vuoteen 1489. Kuninkaat kruunattiin [[Nikosiassa]], ja Famagustassa heidät kruunattiin myös Jerusalemin kuninkaiksi. Lusignanien aikana saarelle rakennettiin goottilaista arkkitehtuuria, ja Lapithos oli tuolloin väkirikkaampi kuin Limassol, Famagusta tai Pafos.",
+  "vastaus": "Lusignanit olivat ranskalainen aatelissuku [[Poitoun]] alueelta. Sukuun kuuluva [[Guy de Lusignan]] osti Kyproksen temppeliherroilta vuonna 1192, ja suku hallitsi saarta kuningaskuntana vuoteen 1489. Kuninkaat kruunattiin [[Nikosiassa]], ja Famagustassa heidät kruunattiin myös Jerusalemin kuninkaiksi. Lusignanien aikana saarelle rakennettiin goottilaista arkkitehtuuria, ja Lapithos oli tuolloin yksi saaren väkirikkaimmista kaupungeista.",
   "linkit": [
    "Poitoun",
    "Guy de Lusignan",
@@ -1781,7 +1781,7 @@
   "kohde": "kohde:hahmotelma-lapithos",
   "kasite": "Limassol",
   "kysymys": "Kerro lisää: Limassol",
-  "vastaus": "Limassol on Kyproksen etelärannikon kaupunki ja yksi saaren tärkeimmistä satamista. Vuonna 1191 siellä vietettiin [[Rikhard Leijonasydämen]] häät Navarran Berengarian kanssa. Limassolin seutu tunnetaan viinistä: lähistöllä on [[Kolossin]] linna, ja alueella valmistetaan makeaa [[Commandaria]]-viiniä, jota pidetään yhtenä maailman vanhimmista yhä valmistettavista viineistä. Alueella viljeltiin myös [[johanneksenleipäpuun]] palkoja, joita kutsuttiin mustaksi kullaksi: viljely voimistui vuodesta 1854, ja palkoja vietiin Englantiin ja Ranskaan.",
+  "vastaus": "Limassol on Kyproksen etelärannikon kaupunki ja yksi saaren tärkeimmistä satamista. Vuonna 1191 siellä vietettiin [[Rikhard Leijonasydämen]] häät Navarran Berengarian kanssa. Limassolin seutu tunnetaan viinistä: lähistöllä on [[Kolossin]] linna, ja alueella valmistetaan makeaa [[Commandaria]]-viiniä, jota pidetään yhtenä maailman vanhimmista yhä valmistettavista viineistä. Alueella viljeltiin myös [[johanneksenleipäpuun]] palkoja, joita kutsuttiin mustaksi kullaksi: palkoja vietiin 1800- ja 1900-luvuilla Limassolin satamasta Englantiin ja Ranskaan.",
   "linkit": [
    "Rikhard Leijonasydämen",
    "Kolossin",
@@ -1843,7 +1843,7 @@
   "kohde": "kohde:hahmotelma-lapithos",
   "kasite": "Pentadaktylos-vuoren",
   "kysymys": "Kerro lisää: Pentadaktylos-vuoren",
-  "vastaus": "Pentadaktylos tarkoittaa kreikaksi viittä sormea, ja nimi viittaa [[Kyrenian vuorten]] harjanteen sormia muistuttaviin kallionhuippuihin. Kyproksella kerrotaan myös, että bysanttilainen sankari [[Digenis Akritas]] jätti vuoreen kätensä jäljen. Vuoren juurelle asukkaat siirsivät [[Lapithoksen]] kaupungin sen jälkeen, kun Bysantti oli ottanut saaren takaisin arabeilta vuonna 965. Uusi sijainti oli kauempana merestä kuin alkuperäinen kaupunki.",
+  "vastaus": "Pentadaktylos tarkoittaa kreikaksi viittä sormea, ja nimi viittaa [[Kyrenian vuorten]] harjanteen sormia muistuttaviin kallionhuippuihin. Kyproksella kerrotaan myös, että bysanttilainen sankari [[Digenis Akritas]] jätti vuoreen kätensä jäljen. Asukkaiden kerrotaan siirtäneen [[Lapithoksen]] kaupungin vuoren juurelle, kun Bysantti oli ottanut saaren takaisin arabeilta 900-luvulla. Uusi sijainti oli kauempana merestä kuin alkuperäinen kaupunki.",
   "linkit": [
    "Kyrenian vuorten",
    "Digenis Akritas",
@@ -1858,7 +1858,7 @@
   "kohde": "kohde:hahmotelma-lapithos",
   "kasite": "Bysantti",
   "kysymys": "Kerro lisää: Bysantti",
-  "vastaus": "Bysantti eli Itä-Rooman valtakunta oli Rooman valtakunnan itäinen jatke, joka kesti 300-luvulta vuoteen 1453. Sen pääkaupunki oli [[Konstantinopoli]], ja yleinen kieli oli kreikka. Keisari [[Justinianus I]] rakennutti Konstantinopoliin [[Hagia Sofian]] 500-luvulla. Bysantin ajan taide tunnetaan mosaiikeista ja ikoneista, ja sen perinne elää ortodoksisessa kirkossa. Kyprokselle Bysantti palasi vuonna 965, kun se otti saaren takaisin arabeilta; tuolloin Lapithoksen asukkaat siirsivät kaupunkinsa kauemmas merestä Pentadaktylos-vuoren juurelle.",
+  "vastaus": "Bysantti eli Itä-Rooman valtakunta oli Rooman valtakunnan itäinen jatke, joka kesti 300-luvulta vuoteen 1453. Sen pääkaupunki oli [[Konstantinopoli]], ja yleinen kieli oli kreikka. Keisari [[Justinianus I]] rakennutti Konstantinopoliin [[Hagia Sofian]] 500-luvulla. Bysantin ajan taide tunnetaan mosaiikeista ja ikoneista, ja sen perinne elää ortodoksisessa kirkossa. Kyprokselle Bysantti palasi 900-luvulla, kun se otti saaren takaisin arabeilta; perimätiedon mukaan Lapithoksen asukkaat siirsivät tuolloin kaupunkinsa kauemmas merestä Pentadaktylos-vuoren juurelle.",
   "linkit": [
    "Konstantinopoli",
    "Justinianus I",
@@ -2203,7 +2203,7 @@
   "kohde": "kohde:hahmotelma-kyrenia",
   "kasite": "Lusignanien",
   "kysymys": "Kerro lisää: Lusignanien",
-  "vastaus": "Lusignanit olivat [[Poitoun]] alueelta Ranskasta lähtenyt aatelissuku, joka hallitsi Kyprosta kuningaskuntana vuodesta 1192 vuoteen 1489. Sukuun kuuluva [[Guy de Lusignan]] oli Jerusalemin kuningas ennen kuin hän osti saaren temppeliherroilta. Lusignanien vallan aikana Kyrenian kaupunki ei koskaan antautunut, ja Kyrenian linna kuului vuorten linnoitusten verkostoon. Vuonna 1489 kuningatar [[Caterina Cornaro]] luovutti saaren Venetsialle, ja venetsialaiset laajensivat Kyrenian linnaa vuonna 1540 nykyiseen asuunsa.",
+  "vastaus": "Lusignanit olivat [[Poitoun]] alueelta Ranskasta lähtenyt aatelissuku, joka hallitsi Kyprosta kuningaskuntana vuodesta 1192 vuoteen 1489. Sukuun kuuluva [[Guy de Lusignan]] oli Jerusalemin kuningas ennen kuin hän osti saaren temppeliherroilta. Kyrenian linna kuului vuorten linnoitusten verkostoon ja kesti Lusignanien aikana pitkiäkin piirityksiä. Vuonna 1489 kuningatar [[Caterina Cornaro]] luovutti saaren Venetsialle, ja venetsialaiset laajensivat Kyrenian linnaa vuonna 1540 nykyiseen asuunsa.",
   "linkit": [
    "Poitoun",
    "Guy de Lusignan",
@@ -2218,7 +2218,7 @@
   "kohde": "kohde:hahmotelma-kyrenia",
   "kasite": "osmaneille",
   "kysymys": "Kerro lisää: osmaneille",
-  "vastaus": "Osmanien valtakunta valtasi Kyproksen Venetsialta vuosina 1570–1571. Valloitus alkoi vuonna 1570, ja [[Nikosia]] kaatui syyskuussa; sen jälkeen Kyrenia antautui pian. [[Famagusta]] kesti 13 kuukauden piirityksen ja antautui vasta vuonna 1571. Samana syksynä osmanien laivasto kärsi tappion [[Lepanton]] meritaistelussa. Osmanien hallinto Kyproksella kesti vuoteen 1878, jolloin saaren hallinto siirtyi Britannialle.",
+  "vastaus": "Osmanien valtakunta valtasi Kyproksen Venetsialta vuosina 1570–1571. Valloitus alkoi vuonna 1570, ja [[Nikosia]] kaatui syyskuussa; sen jälkeen Kyrenia antautui pian. [[Famagusta]] kesti lähes yksitoistakuukautisen piirityksen ja antautui vasta elokuussa 1571. Samana syksynä osmanien laivasto kärsi tappion [[Lepanton]] meritaistelussa. Osmanien hallinto Kyproksella kesti vuoteen 1878, jolloin saaren hallinto siirtyi Britannialle.",
   "linkit": [
    "Nikosia",
    "Famagusta",
@@ -2308,7 +2308,7 @@
   "kohde": "kohde:hahmotelma-kyrenia",
   "kasite": "Roomalaiset",
   "kysymys": "Kerro lisää: Roomalaiset",
-  "vastaus": "Roomalaiset olivat Rooman kaupungin ja sen valtakunnan asukkaita. Kyproksen he liittivät valtaansa noin vuonna 58 eaa. Roomalaisaikana saarelle rakennettiin teatterien, kylpylöiden ja [[akveduktien]] lisäksi teitä, ja Kyrenian linnan perustukset laskettiin 1. vuosisadalla. [[Pafoksen]] roomalaisaikaiset mosaiikit ovat Unescon maailmanperintökohde, ja [[Kourionin]] teatteri laajennettiin nykyiseen kokoonsa 100-luvulla jaa.",
+  "vastaus": "Roomalaiset olivat Rooman kaupungin ja sen valtakunnan asukkaita. Kyproksen he liittivät valtaansa noin vuonna 58 eaa. Roomalaisaikana saarelle rakennettiin teatterien, kylpylöiden ja [[akveduktien]] lisäksi teitä, ja Kyrenian linnan paikalta on löydetty roomalaisajan jälkiä, vaikka linnan varhaisin tunnettu vaihe ajoitetaan vasta bysanttilaisaikaan. [[Pafoksen]] roomalaisaikaiset mosaiikit ovat Unescon maailmanperintökohde, ja [[Kourionin]] teatteri laajennettiin nykyiseen kokoonsa 100-luvulla jaa.",
   "linkit": [
    "akveduktien",
    "Pafoksen",
@@ -2562,7 +2562,7 @@
   "kohde": "kohde:hahmotelma-lefkara",
   "kasite": "Limassolin",
   "kysymys": "Kerro lisää: Limassolin",
-  "vastaus": "Limassol on Kyproksen toiseksi suurin kaupunki ja tärkeä satamakaupunki saaren etelärannikolla. Seudun maataloudessa oli suuri merkitys [[johanneksenleipäpuulla]], jonka palkoja kutsuttiin mustaksi kullaksi; viljely voimistui vuodesta 1854, ja palkoja vietiin ennen kaikkea Englantiin ja Ranskaan. Troodoksen etelärinteillä kasvatetaan rypäleitä makeaan viiniin nimeltä [[Commandaria]]. Lähistöllä on myös keskiaikainen [[Kolossin linna]].",
+  "vastaus": "Limassol on Kyproksen toiseksi suurin kaupunki ja tärkeä satamakaupunki saaren etelärannikolla. Seudun maataloudessa oli suuri merkitys [[johanneksenleipäpuulla]], jonka palkoja kutsuttiin mustaksi kullaksi; palkoja vietiin 1800- ja 1900-luvuilla ennen kaikkea Englantiin ja Ranskaan. Troodoksen etelärinteillä kasvatetaan rypäleitä makeaan viiniin nimeltä [[Commandaria]]. Lähistöllä on myös keskiaikainen [[Kolossin linna]].",
   "linkit": [
    "johanneksenleipäpuulla",
    "Commandaria",
@@ -2667,7 +2667,7 @@
   "kohde": "kohde:hahmotelma-protaras",
   "kasite": "Protaras",
   "kysymys": "Kerro lisää: Protaras",
-  "vastaus": "Protaras on Kyproksen itärannikon lomakohde Paralimnin kunnan alueella. Antiikin aikana samalla paikalla oli pieni [[Leukollan]] kaupunkivaltio. Aluetta on kutsuttu tuulimyllyjen maaksi, ja sen tunnetuin ranta on kirkkaan turkoosi [[Fig Tree Bay]]. Nykyaikaiseksi lomakohteeksi Protaras kasvoi vasta naapurikylä [[Ayia Napan]] menestyksen myötä, ja se tunnetaan rauhallisempana, perheille ja kyproslaisille itselleen suunnattuna kohteena. Lähistöllä on myös [[Cape Greco]] -niemi.",
+  "vastaus": "Protaras on Kyproksen itärannikon lomakohde Paralimnin kunnan alueella. Antiikin [[Leukollan]] kaupunkivaltio sijaitsi nykyisen Protaraksen tienoilla. Aluetta on kutsuttu tuulimyllyjen maaksi, ja sen tunnetuin ranta on kirkkaan turkoosi [[Fig Tree Bay]]. Nykyaikaiseksi lomakohteeksi Protaras kasvoi vasta naapurikylä [[Ayia Napan]] menestyksen myötä, ja se tunnetaan rauhallisempana, perheille ja kyproslaisille itselleen suunnattuna kohteena. Lähistöllä on myös [[Cape Greco]] -niemi.",
   "linkit": [
    "Leukollan",
    "Fig Tree Bay",
@@ -2773,7 +2773,7 @@
   "kohde": "kohde:hahmotelma-protaras",
   "kasite": "Leukollan",
   "kysymys": "Kerro lisää: Leukollan",
-  "vastaus": "Leukolla oli antiikin aikainen pieni kaupunkivaltio Kyproksen itärannikolla, samalla paikalla, jossa nykyään on [[Protaras]]. Sen merkittävin piirre oli turvallinen satama, jossa [[Demetrios Poliorketes]] piileskeli vuonna 306 eaa. väijyen Ptolemaiosta. Tapahtumat liittyvät [[Aleksanteri Suuren]] seuraajien välisiin valtataisteluihin, joissa Kypros oli tärkeä merivoimien tukikohta. Kaupunkivaltion muista vaiheista ei tiedetä paljon, enkä ole varma sen tarkasta sijainnista.",
+  "vastaus": "Leukolla oli antiikin aikainen pieni kaupunkivaltio Kyproksen itärannikolla, seudulla, jossa nykyään on [[Protaras]]. Vuonna 306 eaa. [[Demetrios Poliorketes]] voitti Ptolemaioksen laivaston Salamiin meritaistelussa Kyproksen vesillä; taistelun tarkasta paikasta ei ole varmaa tietoa. Tapahtumat liittyvät [[Aleksanteri Suuren]] seuraajien välisiin valtataisteluihin, joissa Kypros oli tärkeä merivoimien tukikohta. Kaupunkivaltion muista vaiheista ei tiedetä paljon, mutta seudun mukaan se sijaitsi nykyisen Protaraksen tienoilla.",
   "linkit": [
    "Protaras",
    "Demetrios Poliorketes",
@@ -2848,7 +2848,7 @@
   "kohde": "kohde:hahmotelma-prodromos",
   "kasite": "Olympos-vuorella",
   "kysymys": "Kerro lisää: Olympos-vuorella",
-  "vastaus": "Olympos-vuori on Kyproksen korkein kohta, 1 952 metriä, ja se kohoaa [[Troodoksen]] vuoriston keskellä. Sen kreikkalainen kansannimi [[Chionistra]] tarkoittaa lumista, ja talvisin huippu saa kunnon lumipeitteen. Rinteillä sijaitsee Kyproksen talviurheilukeskus, jossa on kolme hiihtorinnettä. Vuorta ei pidä sekoittaa Kreikan [[Olymposvuoreen]], joka on 2 917 metrin korkeudessa ja jonka jumalten asuinpaikkana tunnetaan antiikin myyteistä.",
+  "vastaus": "Olympos-vuori on Kyproksen korkein kohta, 1 952 metriä, ja se kohoaa [[Troodoksen]] vuoriston keskellä. Sen kreikkalainen kansannimi [[Chionistra]] tarkoittaa lumista, ja talvisin huippu saa kunnon lumipeitteen. Rinteillä sijaitsee Kyproksen talviurheilukeskus, jossa on neljä hiihtohissiä ja useita lyhyitä rinteitä. Vuorta ei pidä sekoittaa Kreikan [[Olymposvuoreen]], joka on 2 917 metrin korkeudessa ja jonka jumalten asuinpaikkana tunnetaan antiikin myyteistä.",
   "linkit": [
    "Troodoksen",
    "Chionistra",
@@ -3086,7 +3086,7 @@
   "kohde": "kohde:pediaios",
   "kasite": "Famagustanlahdella",
   "kysymys": "Kerro lisää: Famagustanlahdella",
-  "vastaus": "Famagustanlahti on Kyproksen itärannikon laaja lahti, joka kuuluu [[Levantinmeren]] alueeseen. Sen rannalla on antiikin [[Salamis]]-kaupungin rauniot, ja lähellä sijaitsee [[Famagusta]], jonka satama on saaren syvin. Pediaíos laskee mereen lahden rannalla Salamiin lähellä. Lahden rannikko on ollut vilkkaan merenkulun ja kaupankäynnin aluetta jo antiikista asti.",
+  "vastaus": "Famagustanlahti on Kyproksen itärannikon laaja lahti, joka kuuluu [[Levantinmeren]] alueeseen. Sen rannalla on antiikin [[Salamis]]-kaupungin rauniot, ja lähellä sijaitsee [[Famagusta]], jonka satama on saaren syvin. Pediaíos laski ennen lahteen Salamiin lähellä, mutta nykyään suuri osa sen vedestä päätyy patoihin ja tekoaltaisiin ennen merta. Lahden rannikko on ollut vilkkaan merenkulun ja kaupankäynnin aluetta jo antiikista asti.",
   "linkit": [
    "Levantinmeren",
    "Salamis",
@@ -3131,14 +3131,13 @@
   "kohde": "kohde:levantinmeri",
   "kasite": "Levantinmeren",
   "kysymys": "Kerro lisää: Levantinmeren",
-  "vastaus": "Levantinmeri on Välimeren itäisin osa, ja siihen kuuluu Kyproksen ympäristö. Meri on lämmin ja suolainen, ja se on ravinteiden suhteen köyhä, minkä vuoksi vesi on usein kirkasta ja sinistä. Levantinmeren syvin kohta on 4 384 metriä ja sijaitsee [[Plinius-hautavajoamassa]] noin kahdeksankymmentä kilometriä [[Kreetan]] eteläpuolella. Meren pinta-ala on noin 320 000 neliökilometriä, ja sen suurin saari on Kypros. Suezin kanavan avautuminen vuonna 1869 avasi Punaisenmeren lajeille reitin tähän [[Välimeren]] osaan.",
+  "vastaus": "Levantinmeri on Välimeren itäisin osa, ja siihen kuuluu Kyproksen ympäristö. Meri on lämmin ja suolainen, ja se on ravinteiden suhteen köyhä, minkä vuoksi vesi on usein kirkasta ja sinistä. Meri on syvimmillään yli neljä kilometriä, mutta tarkka luku riippuu siitä, mihin meren raja vedetään. Meren pinta-ala on karkeasti 320 000 neliökilometriä, ja sen suurin saari on [[Kypros]]. Suezin kanavan avautuminen vuonna 1869 avasi Punaisenmeren lajeille reitin tähän [[Välimeren]] osaan.",
   "linkit": [
-   "Plinius-hautavajoamassa",
-   "Kreetan",
+   "Kypros",
    "Välimeren"
   ],
   "jatkot": [
-   "Miten Plinius-hautavajoama syntyi?",
+   "Miten Suezin kanava muutti Levantinmeren eliöstöä?",
    "Mikä on Välimeren syvin kohta?"
   ]
  },
@@ -3206,7 +3205,7 @@
   "kohde": "kohde:levantinmeri",
   "kasite": "Plinius-hautavajoamassa",
   "kysymys": "Kerro lisää: Plinius-hautavajoamassa",
-  "vastaus": "Plinius-hautavajoama on merenpohjan syvä kuilu [[Kreetan]] eteläpuolella, ja se kuuluu vyöhykkeeseen, jossa mannerlaattojen törmäys muokkaa merenpohjaa. Se on Levantinmeren syvin kohta, 4 384 metriä. Koko Välimeren syvin kohta on [[Joonianmerellä]], jossa meri on yli viisi kilometriä syvä. Alue on maanjäristysherkkää, mikä näkyy myös Kreetan historiassa.",
+  "vastaus": "Plinius-hautavajoama on merenpohjan syvä kuilu [[Kreetan]] eteläpuolella, ja se kuuluu vyöhykkeeseen, jossa mannerlaattojen törmäys muokkaa merenpohjaa. Se sijaitsee Välimeren itäosassa, ja syvimmän kohdan tarkka syvyys vaihtelee lähteittäin sen mukaan, mihin Levantinmeren raja vedetään. Koko Välimeren syvin kohta on [[Joonianmerellä]], jossa meri on yli viisi kilometriä syvä. Alue on maanjäristysherkkää, mikä näkyy myös Kreetan historiassa.",
   "linkit": [
    "Kreetan",
    "Joonianmerellä"
@@ -3385,7 +3384,7 @@
   "kohde": "kohde:paphoksenmosaiikit",
   "kasite": "Kazimierz Michałowski",
   "kysymys": "Kerro lisää: Kazimierz Michałowski",
-  "vastaus": "Kazimierz Michałowski (1901–1981) oli puolalainen arkeologi, joka työskenteli [[Varsovan yliopistossa]] ja tunnettiin ennen muuta antiikin Egyptin ja Nubian kaivauksistaan. Hän aloitti [[Nea Paphoksen]] kaivaukset kesäkuussa 1965, ja puolalainen retkikunta jatkaa työtä yhä. Heidän löytöihinsä kuuluu vuonna 1983 esiin tullut [[Aionin talo]].",
+  "vastaus": "Kazimierz Michałowski (1901–1981) oli puolalainen arkeologi, joka työskenteli [[Varsovan yliopistossa]] ja tunnettiin ennen muuta antiikin Egyptin ja Nubian kaivauksistaan. Hän aloitti Puolan kaivausryhmän työt kesäkuussa 1965 [[Nea Paphoksen]] kaivauspaikalla, ja ne jatkuvat yhä. Heidän löytöihinsä kuuluu vuonna 1983 esiin tullut [[Aionin talo]].",
   "linkit": [
    "Varsovan yliopistossa",
    "Nea Paphoksen",
@@ -3564,7 +3563,7 @@
   "kohde": "kohde:palaipafos",
   "kasite": "Palaipafoksen",
   "kysymys": "Kerro lisää: Palaipafoksen",
-  "vastaus": "Palaipafos eli Vanha Paphos sijaitsee nykyisen [[Kouklian]] kylän kohdalla kukkulalla noin kaksitoista kilometriä uudesta Paphoksen kaupungista kaakkoon. Paikka on ollut asuttu neoliittiselta ajalta, ja antiikissa siitä tuli tärkein [[Afroditen]] palvontapaikka, sillä jumalattaren myyttinen syntypaikka oli Kypros. [[Strabonin]] mukaan Nea Paphoksesta vanhaan kaupunkiin johtava tie täyttyi vuosittain pyhiinvaeltajista. Roomalainen historioitsija Tacitus kertoo nuoren [[Tituksen]] käyneen katsomassa pyhäkköä ja panneen merkille, ettei jumalattaresta ollut kuvaa lainkaan, vaan pyramidin muotoinen kivi. Paikka kuuluu nykyään Paphoksen muinaisjäännösten mukana Unescon maailmanperintökohteisiin.",
+  "vastaus": "Palaipafos eli Vanha Paphos sijaitsee nykyisen [[Kouklian]] kylän kohdalla noin 14-16 kilometriä uudesta Paphoksen kaupungista itään. Paikka on ollut asuttu neoliittiselta ajalta, ja antiikissa siitä tuli tärkein [[Afroditen]] palvontapaikka, sillä jumalattaren myyttinen syntypaikka oli Kypros. [[Strabonin]] mukaan Nea Paphoksesta vanhaan kaupunkiin johtava tie täyttyi vuosittain pyhiinvaeltajista. Roomalainen historioitsija Tacitus kertoo nuoren [[Tituksen]] käyneen katsomassa pyhäkköä ja panneen merkille, ettei jumalattaresta ollut kuvaa lainkaan, vaan pyramidin muotoinen kivi. Paikka kuuluu nykyään Paphoksen muinaisjäännösten mukana Unescon maailmanperintökohteisiin.",
   "linkit": [
    "Kouklian",
    "Afroditen",
@@ -3918,7 +3917,7 @@
   "kohde": "kohde:khirokitia",
   "kasite": "Paphoksen",
   "kysymys": "Kerro lisää: Paphoksen",
-  "vastaus": "Paphos on Kyproksen lounaisrannikon kaupunki ja alue. Nea Paphos eli Uusi Paphos perustettiin antiikissa, ja se oli saaren pääkaupunki hellenistisellä ja roomalaisella kaudella; vanha asutuskeskus [[Palaipafos]] sijaitsee noin kaksitoista kilometriä kaakkoon. Kaupungin tunnetuimpia nähtävyyksiä ovat roomalaisaikaiset [[mosaiikit]] ja kallioon hakatut [[Kuninkaiden haudat]]. Myös apostoli Paavalin kerrotaan vierailleen Paphoksessa. Paphoksen kohde liitettiin Unescon maailmanperintöluetteloon vuonna 1980, ja kaupunki toimi Euroopan [[kulttuuripääkaupunkina]] vuonna 2017.",
+  "vastaus": "Paphos on Kyproksen lounaisrannikon kaupunki ja alue. Nea Paphos eli Uusi Paphos perustettiin antiikissa, ja se oli saaren pääkaupunki hellenistisellä ja roomalaisella kaudella; vanha asutuskeskus [[Palaipafos]] sijaitsee noin 14-16 kilometriä itään. Kaupungin tunnetuimpia nähtävyyksiä ovat roomalaisaikaiset [[mosaiikit]] ja kallioon hakatut [[Kuninkaiden haudat]]. Myös apostoli Paavalin kerrotaan vierailleen Paphoksessa. Paphoksen kohde liitettiin Unescon maailmanperintöluetteloon vuonna 1980, ja kaupunki toimi Euroopan [[kulttuuripääkaupunkina]] vuonna 2017.",
   "linkit": [
    "Palaipafos",
    "mosaiikit",
@@ -4492,7 +4491,7 @@
   "kohde": "kohde:apostolosandreas",
   "kasite": "Isaakios Komnenos",
   "kysymys": "Kerro lisää: Isaakios Komnenos",
-  "vastaus": "Isaakios Komnenos oli bysanttilainen ylimys, joka otti Kyproksen valtaansa 1180-luvulla ja hallitsi saarta itsenäisenä hallitsijana. Vuonna 1191 [[Rikhard Leijonamieli]] valloitti saaren matkallaan [[kolmannelle ristiretkelle]]. Rikhardin joukot nousivat maihin Kyproksen etelärannikolla [[Limassolin]] tienoilla, ja Isaakios hävisi taistelun. Perimätiedon mukaan hän neuvotteli antautumisestaan Apostolos Andreaksen luostarista käsin, joka oli tuolloin linnoitettu.",
+  "vastaus": "Isaakios Komnenos oli bysanttilainen ylimys, joka otti Kyproksen valtaansa 1180-luvulla ja hallitsi saarta itsenäisenä hallitsijana. Vuonna 1191 [[Rikhard Leijonamieli]] valloitti saaren matkallaan [[kolmannelle ristiretkelle]]. Rikhardin joukot nousivat maihin Kyproksen etelärannikolla [[Limassolin]] tienoilla, ja Isaakios hävisi taistelun. Perimätiedon mukaan hän neuvotteli antautumisestaan Apostolos Andreaksen luostarin tienoilla, mutta lähteet eivät ole yksimielisiä paikasta (osa mainitsee Kantaran linnan).",
   "linkit": [
    "Rikhard Leijonamieli",
    "kolmannelle ristiretkelle",

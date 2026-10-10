@@ -3,7 +3,7 @@
   "kohde": "kohde:hahmotelma-salamis",
   "kysymys": "Miltä Antiikin Salamis näytti loistoaikanaan?",
   "uusi": false,
-  "vastaus": "Kato, tost minä osaan kertoo jotain, vaikken joka kiveä. Salamis oli antiikin [[Kyproksen]] suurin ja vaurain kaupunki, ja sen vauraus näkyy raunioissa vielä nykyäänkin: [[gymnasionin]] pylväskäytävät ja patsaat sekä teatteri kertovat kaupungista, jolla oli varaa komeisiin julkisiin rakennuksiin. Kaupunki oli rannikon satamakaupunki, joten kauppa ja merenkulku olivat sen elinehto. Tarkkaa kuvaa kaikista kaduista ja rakennuksista ei kuitenkaan ole, eikä minulla ole siitä varmaa tietoa. Rauniot ovat laajoja, ja niistä osa on roomalaisajalta. Kivet kertovat tästä paremmin ku kyyhky.",
+  "vastaus": "Kato, tost minä osaan kertoo jotain, vaikken joka kiveä. Salamis oli antiikin [[Kyproksen]] merkittävin kauppa- ja satamakaupunki, ja sen vauraus näkyy raunioissa vielä nykyäänkin: [[gymnasionin]] pylväskäytävät ja patsaat sekä teatteri kertovat kaupungista, jolla oli varaa komeisiin julkisiin rakennuksiin. Kauppa ja merenkulku olivat sen elinehto. Tarkkaa kuvaa kaikista kaduista ja rakennuksista ei kuitenkaan ole, eikä minulla ole siitä varmaa tietoa. Rauniot ovat laajoja, ja niistä osa on roomalaisajalta. Kivet kertovat tästä paremmin ku kyyhky.",
   "linkit": [
    "Kyproksen",
    "gymnasionin"
@@ -94,15 +94,14 @@
   "kohde": "kohde:hahmotelma-kition",
   "kysymys": "Miksi Antiikin Kition katosi?",
   "uusi": false,
-  "vastaus": "Selvä juttu, tässä on kaksi syytä. [[Maanjäristykset]] 300-luvulla vahingoittivat kaupunkia pahasti, ja sen jälkeen pitkään jatkunut [[kivenryöstö]], jossa vanhoja rakennuksia purettiin rakennusaineeksi, hävitti kaupungin lähes kokonaan. Nykyinen [[Larnaka]] kasvoi samalle alueelle, joten kaupungin jäänteet ovat suurelta osin sen alla. Satamakaupungin paikka pysyi siis asuttuna, vaikka antiikin Kition katosi. Ei siin kyl mitään mystistä ollu.",
+  "vastaus": "Selvä juttu, tässä on syy. [[Maanjäristykset]] 300-luvulla vahingoittivat kaupunkia pahasti, ja sen jälkeen satama liettyi ja asutus siirtyi etelämmäs rannikolle. Nykyinen [[Larnaka]] kasvoi samalle alueelle, joten kaupungin jäänteet ovat suurelta osin sen alla. Satamakaupungin paikka pysyi siis asuttuna, vaikka antiikin Kition katosi. Ei siin kyl mitään mystistä ollu.",
   "linkit": [
    "Maanjäristykset",
-   "kivenryöstö",
    "Larnaka"
   ],
   "jatkot": [
    "Mitä Kitionista on jäljellä Larnakassa?",
-   "Miksi vanhoja rakennuksia purettiin rakennusaineeksi?"
+   "Miksi Kitionin satama liettyi?"
   ]
  },
  {
@@ -230,7 +229,7 @@
   "kohde": "kohde:hahmotelma-kormakitis",
   "kysymys": "Kuinka monta perinteistä maroniittikylää Kyproksella on?",
   "uusi": false,
-  "vastaus": "Selvä juttu, tää on helppo. Kyproksella on neljä perinteistä [[maroniittikylää]]: Kormakitis, Asomatos, Agia Marina ja Karpaseia. Kylät kuuluvat saaren pitkään jatkuneeseen [[maroniittiyhteisöön]], joka on peräisin Libanonin suunnalta ja muotoutui useassa muuttoaallossa 700-luvulta alkaen. Kormakitis on näistä tunnetuin, koska sen asukkaat ovat säilyttäneet oman arabian muotonsa. Kolmen muun kylän tilanteesta en ole varma, sillä ne ovat muuttuneet vuosikymmenten aikana. Nopeaa laskentaa, ei paha.",
+  "vastaus": "Selvä juttu, tää on helppo. Kyproksella on neljä perinteistä [[maroniittikylää]]: Kormakitis, Asomatos, Agia Marina ja Karpaseia. Kylät kuuluvat saaren pitkään jatkuneeseen [[maroniittiyhteisöön]]. Maroniitteja saapui Kyprokselle keskiajalla useassa muuttoaallossa Libanonin suunnalta. Kormakitis on näistä tunnetuin, koska sen asukkaat ovat säilyttäneet oman arabian muotonsa. Kolmen muun kylän tilanteesta en ole varma, sillä ne ovat muuttuneet vuosikymmenten aikana. Nopeaa laskentaa, ei paha.",
   "linkit": [
    "maroniittikylää",
    "maroniittiyhteisöön"
@@ -242,9 +241,9 @@
  },
  {
   "kohde": "kohde:hahmotelma-kormakitis",
-  "kysymys": "Kuinka monta asukasta Kormakitisissa oli vuonna 1841?",
+  "kysymys": "Miten Kormakitisin asukasluku kehittyi osmanien aikana?",
   "uusi": false,
-  "vastaus": "Joo, tän luvun minä muistan. Vuonna 1841 Kormakitisissa oli enää 200 asukasta. Vuonna 1570 kylässä oli vielä 850 asukasta, mutta [[osmanien]] aikana asukasluku väheni. Pieni [[Kyproksen]] kylä menetti siis paljon väkeä, ja lasku oli huomattava: yli kolmen vuosisadan aikana kylän väkimäärä putosi noin neljännekseen. Syistä en ole varma yksityiskohtaisesti. Pienessä kylässä jokainen asukas on huomattava osuus. Se on vähän ku laskisi kyyhkyjä katolla.",
+  "vastaus": "Joo, tästä minä tiedän vähän, vaikken lukuja vannoisi. Kormakitisin asukasluku väheni [[osmanien]] aikana selvästi: kylästä on esitetty lukuja, joiden mukaan siinä oli 1500-luvun lopulla satoja asukkaita ja 1800-luvun alkupuolella enää noin kaksisataa, mutta nämä luvut ovat epävarmoja. Koko [[Kyproksen]] maroniittiyhteisö kutistui samaan aikaan: noin 8 000 maroniittia 23 kylässä vuonna 1572, mutta vain noin 150 kahdeksassa kylässä vuonna 1686. Pienessä kylässä jokainen asukas on huomattava osuus. Se on vähän ku laskisi kyyhkyjä katolla.",
   "linkit": [
    "osmanien",
    "Kyproksen"
@@ -258,7 +257,7 @@
   "kohde": "kohde:hahmotelma-kormakitis",
   "kysymys": "Keitä maroniitit ovat?",
   "uusi": true,
-  "vastaus": "Annas ku mietin, no niin. Maroniitit ovat [[maroniittikirkkoon]] kuuluvia kristittyjä, joiden juuret ovat Libanonin suunnalla. Maroniittikirkko on katolinen kirkko, joka tunnustaa paavin johtajuuden mutta noudattaa omaa itäistä liturgiaansa. Nimi tulee 400-luvun tienoilla eläneestä erakosta Marosta, mutta tarkat yksityiskohdat ovat historiantutkimuksen kiistelyä. [[Kyprokselle]] maroniitteja saapui useassa muuttoaallossa 700-luvulta alkaen. Pitkä selitys, mut tähän asti jaksoin.",
+  "vastaus": "Annas ku mietin, no niin. Maroniitit ovat [[maroniittikirkkoon]] kuuluvia kristittyjä, joiden juuret ovat Libanonin suunnalla. Maroniittikirkko on katolinen kirkko, joka tunnustaa paavin johtajuuden mutta noudattaa omaa itäistä liturgiaansa. Nimi tulee 400-luvun tienoilla eläneestä erakosta Marosta, mutta tarkat yksityiskohdat ovat historiantutkimuksen kiistelyä. [[Kyprokselle]] maroniitteja saapui keskiajalla useassa muuttoaallossa Libanonin suunnalta. Pitkä selitys, mut tähän asti jaksoin.",
   "linkit": [
    "maroniittikirkkoon",
    "Kyprokselle"
@@ -287,7 +286,7 @@
   "kohde": "kohde:hahmotelma-kormakitis",
   "kysymys": "Miksi johanneksenleipäpuun palkoja sanottiin mustaksi kullaksi?",
   "uusi": true,
-  "vastaus": "Mmm— tätä minä pohdin sopivasti. [[Johanneksenleipäpuun]] palkoja kutsuttiin Kyproksella mustaksi kullaksi, koska ne olivat arvokas vientituote. Puu kestää kuivuutta eikä vaadi kastelua, ja palkoja vietiin ennen kaikkea [[Englantiin]] ja [[Ranskaan]]. Viljely voimistui Limassolin seudulla vuodesta 1854, ja sato korjattiin elokuun lopusta alkaen noin kolmen viikon aikana: miehet pudottivat palot kepeillä ja naiset keräsivät ne koreihin. Paloista keitetään myös siirappia. Nimitys kertoo siis arvosta, ei väristä pelkästään. Pulla olisi ollut parempi aihe, mutta tämä kelpaa.",
+  "vastaus": "Mmm— tätä minä pohdin sopivasti. [[Johanneksenleipäpuun]] palkoja kutsuttiin Kyproksella mustaksi kullaksi, koska ne olivat arvokas vientituote. Puu kestää kuivuutta eikä vaadi kastelua, ja palkoja vietiin 1800- ja 1900-luvuilla Limassolin satamasta ennen kaikkea [[Englantiin]] ja [[Ranskaan]]. Sato korjataan loppukesällä: palot pudotetaan puusta kepeillä ja kerätään maasta. Paloista keitetään myös siirappia. Nimitys kertoo siis arvosta, ei väristä pelkästään. Pulla olisi ollut parempi aihe, mutta tämä kelpaa.",
   "linkit": [
    "Johanneksenleipäpuun",
    "Englantiin",
@@ -337,7 +336,7 @@
   "kohde": "kohde:hahmotelma-karpas",
   "kysymys": "Miksi merikilpikonnat pesivät Karpaasin rannoilla?",
   "uusi": true,
-  "vastaus": "Katotaas, tämä on kiinnostava. Karpaasin niemimaalla on yli 46 hiekkarantaa, ja ne ovat itäisen [[Välimeren]] tärkeimpiä [[merikilpikonnien]] pesimäalueita. Niemimaa on harvaan asuttu, joten rannat ovat suhteellisen rauhallisia, ja kilpikonnat kaivavat pesänsä hiekkaan. Tarkkoja syitä, miksi juuri nämä rannat kelpaavat, en tunne täysin, mutta rauhallisuus ja hiekan laatu ovat yleensä tärkeitä. Pesimäalueiden suojelu on tärkeää, koska merikilpikonnat ovat uhanalaisia. Hiljaista työtä, ja kyl sen minä ymmärrän.",
+  "vastaus": "Katotaas, tämä on kiinnostava. Karpaasin niemimaalla on kymmeniä pitkiä hiekkarantoja, ja ne ovat itäisen [[Välimeren]] tärkeimpiä [[merikilpikonnien]] pesimäalueita. Niemimaa on harvaan asuttu, joten rannat ovat suhteellisen rauhallisia, ja kilpikonnat kaivavat pesänsä hiekkaan. Tarkkoja syitä, miksi juuri nämä rannat kelpaavat, en tunne täysin, mutta rauhallisuus ja hiekan laatu ovat yleensä tärkeitä. Pesimäalueiden suojelu on tärkeää, koska merikilpikonnat ovat uhanalaisia. Hiljaista työtä, ja kyl sen minä ymmärrän.",
   "linkit": [
    "Välimeren",
    "merikilpikonnien"
@@ -392,13 +391,12 @@
  },
  {
   "kohde": "kohde:hahmotelma-akamas",
-  "kysymys": "Kuinka monta Kyproksen 128 endeemisestä kasvilajista Akamasilla kasvaa?",
+  "kysymys": "Kuinka suuri osa Kyproksen endeemisistä kasveista kasvaa Akamasilla?",
   "uusi": false,
-  "vastaus": "Hetkinen ny. Akamasilla kasvaa 39 Kyproksen 128 endeemisestä kasvilajista, eli noin kolmannes saaren omista lajeista. [[Endeeminen]] laji on laji, jota ei kasva luonnonvaraisena missään muualla. Niemi on yksi vain 22 Euroopan [[endeemisyysalueesta]], ja sen sydänalueen halki ei kulje teitä, mikä on auttanut lajiston säilymistä. [[Euroopan ympäristökeskus]] on tunnustanut alueen merkityksen. Aika paljon lukuja yhteen vastaukseen.",
+  "vastaus": "Hetkinen ny. Akamasilla kasvaa noin neljäkymmentä Kyproksen noin sadastakahdestakymmenestä endeemisestä kasvilajista, eli noin kolmannes saaren omista lajeista (lukujen tarkkuus vaihtelee lähteittäin). [[Endeeminen]] laji on laji, jota ei kasva luonnonvaraisena missään muualla. [[Akamaksen]] niemen sydänalueen halki ei kulje teitä, mikä on auttanut lajiston säilymistä. Aika paljon lukuja yhteen vastaukseen.",
   "linkit": [
    "Endeeminen",
-   "endeemisyysalueesta",
-   "Euroopan ympäristökeskus"
+   "Akamaksen"
   ],
   "jatkot": [
    "Miksi Akamaksen sydänalue on säilynyt tiettömänä?",
@@ -424,7 +422,7 @@
   "kohde": "kohde:hahmotelma-akamas",
   "kysymys": "Kuka oli Ptolemaios, joka kuvasi Akamaksen niemeä?",
   "uusi": true,
-  "vastaus": "Ai tota. Ptolemaios oli antiikin kreikkalainen tähtitieteilijä, matemaatikko ja maantieteilijä, joka työskenteli Aleksandriassa noin toisella vuosisadalla jKr. Hänen teoksensa [[Geographia]] kokosi tietoa tunnetun maailman paikoista ja niiden sijainneista, ja siinä käytettiin leveys- ja pituusasteita. Toinen tunnettu työ on [[Almagest]], joka esitteli maakeskisen maailmankuvan ja vaikutti tähtitieteeseen vuosisatojen ajan. Hän kuvasi myös [[Akamaksen]] tiheästi metsäiseksi niemeksi, jonka keskellä kohoaa vuoristo. Pitkä on perintö yhdelle miehelle.",
+  "vastaus": "Ai tota. Ptolemaios oli antiikin kreikkalainen tähtitieteilijä, matemaatikko ja maantieteilijä, joka työskenteli Aleksandriassa noin toisella vuosisadalla jKr. Hänen teoksensa [[Geographia]] kokosi tietoa tunnetun maailman paikoista ja niiden sijainneista, ja siinä käytettiin leveys- ja pituusasteita. Toinen tunnettu työ on [[Almagest]], joka esitteli maakeskisen maailmankuvan ja vaikutti tähtitieteeseen vuosisatojen ajan. Hänen Geographiassaan mainitaan myös [[Akamaksen]] niemi Kyproksen länsipäässä. Pitkä on perintö yhdelle miehelle.",
   "linkit": [
    "Geographia",
    "Almagest",
@@ -777,11 +775,10 @@
   "kohde": "kohde:hahmotelma-lapithos",
   "kysymys": "Minä vuonna osa Lapithoksesta erotettiin Karavaksi?",
   "uusi": false,
-  "vastaus": "Ai se. Osa Lapithoksesta erotettiin Karavaksi vuonna 1780, [[osmanien]] aikana. Aiemmin, [[Lusignanien]] vallan aikana, Lapithos oli ollut väkirikkaampi kuin [[Limassol]], Famagusta tai Pafos. Lyhyt ja napakka vastaus, just niin kuin kyyhkyn kuuluukin.",
+  "vastaus": "Ai se. Osa Lapithoksesta erotettiin omaksi kyläkseen, Karavaksi, 1700-luvun lopulla [[osmanien]] aikana; tarkkana vuotena mainitaan usein 1780, mutta ajoitus on epävarma. [[Lusignanien]] vallan aikana Lapithos oli yksi saaren väkirikkaimmista kaupungeista. Lyhyt vastaus, vaikka vuosi jääkin epävarmaksi.",
   "linkit": [
    "osmanien",
-   "Lusignanien",
-   "Limassol"
+   "Lusignanien"
   ],
   "jatkot": [
    "Keitä Lusignanit olivat?",
@@ -821,7 +818,7 @@
   "kohde": "kohde:hahmotelma-lapithos",
   "kysymys": "Minkä vuoren juurelle Lapithos siirrettiin?",
   "uusi": true,
-  "vastaus": "No niin, tämä on selvä. Asukkaat siirsivät kaupungin [[Pentadaktylos-vuoren]] juurelle, kun [[Bysantti]] oli ottanut saaren takaisin arabeilta vuonna 965. Uusi sijainti oli kauempana merestä kuin alkuperäinen kaupunki. Vuoren juurella olisi minunkin hyvä pitää taukoa.",
+  "vastaus": "No niin, kerrotaan näin. Asukkaiden kerrotaan siirtäneen kaupungin [[Pentadaktylos-vuoren]] juurelle, kun [[Bysantti]] oli ottanut saaren takaisin arabeilta 900-luvulla. Uusi sijainti oli kauempana merestä kuin alkuperäinen kaupunki. Vuoren juurella olisi minunkin hyvä pitää taukoa.",
   "linkit": [
    "Pentadaktylos-vuoren",
    "Bysantti"
@@ -985,7 +982,7 @@
   "kohde": "kohde:hahmotelma-kyrenia",
   "kysymys": "Minä vuonna venetsialaiset laajensivat Kyrenian linnaa nykyiseen asuunsa?",
   "uusi": false,
-  "vastaus": "Joo, linna. Venetsialaiset laajensivat Kyrenian linnaa nykyiseen asuunsa vuonna 1540, jolloin siihen tulivat paksut muurit ja tykkiaukot. [[Lusignanien]] vallan aikana kaupunki ei koskaan antautunut, mutta 1570-luvun alussa se antautui [[osmaneille]]. Tuollaisen linnan seinustalla olisi hyvä pitää taukoa.",
+  "vastaus": "Joo, linna. Venetsialaiset laajensivat Kyrenian linnaa nykyiseen asuunsa vuonna 1540, jolloin siihen tulivat paksut muurit ja tykkiaukot. Linna oli kestänyt [[Lusignanien]] aikana pitkiäkin piirityksiä, mutta 1570-luvun alussa kaupunki antautui [[osmaneille]]. Tuollaisen linnan seinustalla olisi hyvä pitää taukoa.",
   "linkit": [
    "Lusignanien",
    "osmaneille"
@@ -999,7 +996,7 @@
   "kohde": "kohde:hahmotelma-kyrenia",
   "kysymys": "Kenelle kaupunki antautui 1570-luvun alussa?",
   "uusi": false,
-  "vastaus": "Kas vaan. Kaupunki antautui 1570-luvun alussa [[osmaneille]]. Sitä ennen se ei ollut koskaan antautunut [[Lusignanien]] vallan aikana, ja venetsialaiset olivat laajentaneet linnaa vuonna 1540. Linna kesti pitkään, kyl sen kunniaksi voi nostaa hattua.",
+  "vastaus": "Kas vaan. Kaupunki antautui 1570-luvun alussa [[osmaneille]]. Linna oli kestänyt [[Lusignanien]] aikana pitkiäkin piirityksiä, ja venetsialaiset olivat laajentaneet sitä vuonna 1540. Linna kesti pitkään, kyl sen kunniaksi voi nostaa hattua.",
   "linkit": [
    "osmaneille",
    "Lusignanien"
@@ -1042,10 +1039,10 @@
   "kohde": "kohde:hahmotelma-kyrenia",
   "kysymys": "Miksi Kyrenian merkitys kasvoi 800-luvun jälkeen?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. Kaupungin merkitys kasvoi 800-luvun jälkeen, koska linna tarjosi sille turvaa. [[Roomalaiset]] olivat laskeneet linnan perustukset jo 1. vuosisadalla, ja [[venetsialaiset]] laajensivat linnaa myöhemmin vuonna 1540. Linnat tuovat turvaa, ja siksi minä pysyttelen katoilla.",
+  "vastaus": "Hyvä kysymys tuo. Kaupungin merkitys kasvoi 800-luvun jälkeen, koska linna tarjosi sille turvaa arabien hyökkäysten aikana. Linnan varhaisin tunnettu vaihe ajoitetaan yleensä bysanttilaisaikaan, 600-luvulle, ja [[venetsialaiset]] laajensivat linnaa myöhemmin vuonna 1540. [[Roomalaiset]] jättivät paikalle jälkiä, mutta roomalaista linnaa ei tunneta. Linnat tuovat turvaa, ja siksi minä pysyttelen katoilla.",
   "linkit": [
-   "Roomalaiset",
-   "venetsialaiset"
+   "venetsialaiset",
+   "Roomalaiset"
   ],
   "jatkot": [
    "Miksi rannikkokaupunkeja linnoitettiin?",
@@ -1054,9 +1051,9 @@
  },
  {
   "kohde": "kohde:hahmotelma-famagusta",
-  "kysymys": "Minkä kaupungin seuraajaksi Famagusta perustettiin?",
+  "kysymys": "Miten Famagusta sai alkunsa?",
   "uusi": false,
-  "vastaus": "Mmm— tämän tiedän. Famagusta perustettiin noin vuonna 274 eaa. nimellä [[Arsinoe]] sen jälkeen, kun maanjäristys oli tuhonnut läheisen [[Salamin]] kaupungin. Se syntyi siis Salamin seuraajaksi. Nimi vaihtui sittemmin, kyl nimet ne vaihtuu.",
+  "vastaus": "Mmm— tämän tiedän. Famagustan edeltäjä [[Arsinoe]] perustettiin noin vuonna 274 eaa. Egyptin Ptolemaios II:n aikana, ja se nimettiin hänen sisarensa mukaan. Se oli pitkään pieni kalastajakaupunki läheisen [[Salamin]] varjossa. Kun Salamis oli tuhoutunut 300-luvun maanjäristyksissä ja jäänyt lopulta autioksi 600-luvun arabi-iskujen jälkeen, asutus siirtyi Famagustan paikalle. Se syntyi siis vähitellen Salamin seuraajaksi. Nimi vaihtui sittemmin, kyl nimet ne vaihtuu.",
   "linkit": [
    "Arsinoe",
    "Salamin"
@@ -1098,7 +1095,7 @@
   "kohde": "kohde:hahmotelma-famagusta",
   "kysymys": "Mitä Famagustassa tapahtui vuosina 1570–1571?",
   "uusi": true,
-  "vastaus": "Hmm. Tämä on vakavampi asia. Vuosina 1570–1571 Famagusta oli [[Venetsian]] viimeinen Kyproksen tukikohta, joka vastusti [[osmaneja]]. Kolmentoista kuukauden piirityksen jälkeen kaupunki antautui, ja komendantti [[Marco Antonio Bragadin]] teloitettiin. Tapahtumista on yli neljäsataa vuotta, ja sen ajan sotatavat olivat toisenlaiset kuin nykyiset. Onpas siitä onneksi pitkä aika.",
+  "vastaus": "Hmm. Tämä on vakavampi asia. Vuosina 1570–1571 Famagusta oli [[Venetsian]] viimeinen Kyproksen tukikohta, joka vastusti [[osmaneja]]. Syyskuusta 1570 elokuuhun 1571 kestäneen, lähes yksitoistakuukautisen piirityksen jälkeen kaupunki antautui, ja komendantti [[Marco Antonio Bragadin]] tapettiin julmasti. Tapahtumista on yli neljäsataa vuotta, ja sen ajan sotatavat olivat toisenlaiset kuin nykyiset. Onpas siitä onneksi pitkä aika.",
   "linkit": [
    "Venetsian",
    "osmaneja",
@@ -1139,9 +1136,9 @@
  },
  {
   "kohde": "kohde:hahmotelma-lefkara",
-  "kysymys": "Minä vuonna kylään avattiin paikallinen pitsikoulu?",
+  "kysymys": "Milloin kylään avattiin paikallinen pitsikoulu?",
   "uusi": false,
-  "vastaus": "No niin, muistinpa sen. Pitsikoulu avattiin kylään vuonna 1889, ja se elvytti käsityön mainetta. Kylän naiset olivat kirjailleet pitsiä kapeilla kujilla jo vuosisatojen ajan, ja [[lefkaritika]] merkittiin myöhemmin [[Unescon]] aineettoman kulttuuriperinnön luetteloon vuonna 2009. Ei paha kyyhkyltä, muistaa vuosiluku.",
+  "vastaus": "No niin, tämä on vähän hämärän peitossa. Lähteiden mukaan kylään avattiin paikallinen pitsikoulu 1800-luvun lopulla, ja se elvytti käsityön mainetta. En ole varma tarkasta vuodesta, joten pidä lukua suuntaa-antavana. Kylän naiset olivat kirjailleet pitsiä kapeilla kujilla jo vuosisatojen ajan, ja [[lefkaritika]] merkittiin myöhemmin [[Unescon]] aineettoman kulttuuriperinnön luetteloon vuonna 2009. Tarkkaa vuosilukua en kyyhkynä uskalla vannoa.",
   "linkit": [
    "lefkaritika",
    "Unescon"
@@ -1196,9 +1193,9 @@
  },
  {
   "kohde": "kohde:hahmotelma-protaras",
-  "kysymys": "Ketä Demetrios Poliorketes väijyi Leukollan satamassa vuonna 306 eaa.?",
+  "kysymys": "Kenet Demetrios Poliorketes voitti Kyproksen vesillä vuonna 306 eaa.?",
   "uusi": false,
-  "vastaus": "Selvä juttu. Demetrios Poliorketes väijyi Leukollan turvallisessa satamassa Ptolemaiosta, joka oli yksi [[Aleksanteri Suuren]] seuraajista. Käydyssä taistelussa Ptolemaios kärsi tappion ja pakeni Egyptiin, ja Kypros jäi hetkeksi Demetrioksen haltuun. Leukollan kaupunkivaltio sijaitsi samalla paikalla, jossa nykyään on [[Protaras]]. Onpas siit onneksi pitkä aika.",
+  "vastaus": "Selvä juttu. Vuonna 306 eaa. Demetrios Poliorketes voitti Ptolemaioksen laivaston Salamiin meritaistelussa Kyproksen itärannikolla. Ptolemaios, yksi [[Aleksanteri Suuren]] seuraajista, pakeni Egyptiin, ja Kypros siirtyi Demetrioksen haltuun. Antiikin Leukollan kaupunkivaltio sijaitsi seudulla, jossa nykyään on [[Protaras]], mutta taistelun tarkasta paikasta en ole varma. Onpas siit onneksi pitkä aika.",
   "linkit": [
    "Aleksanteri Suuren",
    "Protaras"
@@ -1252,9 +1249,9 @@
  },
  {
   "kohde": "kohde:hahmotelma-protaras",
-  "kysymys": "Minne Ptolemaios pakeni Leukollan taistelun jälkeen?",
+  "kysymys": "Minne Ptolemaios pakeni Salamiin taistelun jälkeen?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Lähteiden mukaan Ptolemaios vetäytyi tappion jälkeen takaisin Egyptiin, ja [[Kypros]] jäi hetkeksi [[Demetrios Poliorketeen]] haltuun. Antiikin [[Leukollan]] kaupunkivaltio sijaitsi nykyisen Protaraksen tienoilla, mutta taistelun tarkasta paikasta en ole varma. Pitkä matka merellä, sen kyyhky tietää.",
+  "vastaus": "Hetkinen ny. Vuonna 306 eaa. Demetrios Poliorketes voitti Ptolemaioksen laivaston Salamiin meritaistelussa Kyproksen itärannikolla. Ptolemaios, yksi Aleksanteri Suuren seuraajista, pakeni Egyptiin, ja [[Kypros]] siirtyi [[Demetrios Poliorketeen]] haltuun. Antiikin [[Leukollan]] kaupunkivaltio sijaitsi nykyisen Protaraksen tienoilla, mutta taistelun tarkasta paikasta en ole varma. Pitkä matka merellä, sen kyyhky tietää.",
   "linkit": [
    "Kypros",
    "Demetrios Poliorketeen",
@@ -1312,7 +1309,7 @@
   "kohde": "kohde:hahmotelma-prodromos",
   "kysymys": "Missä Kyproksen talviurheilukeskus sijaitsee?",
   "uusi": true,
-  "vastaus": "No jopas. Kyproksen talviurheilukeskus sijaitsee läheisellä [[Olympos-vuorella]], jolla on kolme hiihtorinnettä. Vuori on lähellä Prodromosta, Kyproksen korkeinta kylää [[Troodoksen]] vuoriston rinteellä. Hiihtämään minä en lähtis, siivet jäätyis.",
+  "vastaus": "No jopas. Kyproksen talviurheilukeskus sijaitsee läheisellä [[Olympos-vuorella]], jolla on neljä hiihtohissiä ja useita lyhyitä rinteitä. Vuori on lähellä Prodromosta, Kyproksen korkeinta kylää [[Troodoksen]] vuoriston rinteellä. Hiihtämään minä en lähtis, siivet jäätyis.",
   "linkit": [
    "Olympos-vuorella",
    "Troodoksen"
@@ -1444,7 +1441,7 @@
   "kohde": "kohde:pediaios",
   "kysymys": "Mistä Pediaíos-joki saa alkunsa?",
   "uusi": true,
-  "vastaus": "Selvä juttu. Pediaíos saa alkunsa [[Troodoksen]] vuoriston Machairasin metsästä. Sieltä se virtaa koilliseen [[Mesaorian]] tasangon poikki ja kulkee pääkaupunki Nikosian läpi. Joki on pituudeltaan 98 kilometriä. Vuorilta mereen asti, kyl se on pitkä matka.",
+  "vastaus": "Selvä juttu. Pediaíos saa alkunsa [[Troodoksen]] vuoriston Machairasin metsästä. Sieltä se virtaa koilliseen [[Mesaorian]] tasangon poikki ja kulkee pääkaupunki Nikosian läpi. Joki on pituudeltaan 98 kilometriä. Vuorilta tasangolle asti, kyl se on pitkä matka.",
   "linkit": [
    "Troodoksen",
    "Mesaorian"
@@ -1458,7 +1455,7 @@
   "kohde": "kohde:pediaios",
   "kysymys": "Kuinka pitkä Kyproksen pisin joki on?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Kyproksen pisin joki, Pediaíos, on 98 kilometriä pitkä. Se virtaa koilliseen [[Mesaorian]] tasangon poikki ja kulkee pääkaupunki [[Nikosian]] läpi. Mereen joki laskee Famagustanlahdella. Ei paha, saarella on kuitenkin vähän tilaa.",
+  "vastaus": "Hetkinen ny. Kyproksen pisin joki, Pediaíos, on 98 kilometriä pitkä. Se virtaa koilliseen [[Mesaorian]] tasangon poikki ja kulkee pääkaupunki [[Nikosian]] läpi. Joki laski ennen mereen Famagustanlahdella, mutta nykyään suuri osa sen vedestä päätyy patoihin ja tekoaltaisiin ennen merta. Ei paha, saarella on kuitenkin vähän tilaa.",
   "linkit": [
    "Mesaorian",
    "Nikosian"
@@ -1472,7 +1469,7 @@
   "kohde": "kohde:pediaios",
   "kysymys": "Mihin Pediaíos laskee mereen?",
   "uusi": true,
-  "vastaus": "Mmm— tost minä osaan kertoo. Pediaíos laskee mereen [[Famagustanlahdella]], muinaisen [[Salamiin]] kaupungin raunioiden vieressä. Joki kulkee matkallaan [[Troodoksen]] vuoristosta Mesaorian tasangon poikki ja pääkaupunki Nikosian läpi. Joen suulla on siis yhä näkyvissä antiikin jäänteitä. Rauniot ovat melkein kuin vanha postireitti.",
+  "vastaus": "Mmm— tost minä osaan kertoo. Pediaíos on virtaamaltaan kausivaihteleva joki, joka laski ennen mereen [[Famagustanlahdella]], muinaisen [[Salamiin]] kaupungin raunioiden vieressä. Nykyään suuri osa sen vedestä päätyy patoihin ja tekoaltaisiin ennen merta. Joki kulkee matkallaan [[Troodoksen]] vuoristosta Mesaorian tasangon poikki ja pääkaupunki Nikosian läpi. Joen entisen suun tuntumassa on siis antiikin jäänteitä. Rauniot ovat melkein kuin vanha postireitti.",
   "linkit": [
    "Famagustanlahdella",
    "Salamiin",
@@ -1487,7 +1484,7 @@
   "kohde": "kohde:levantinmeri",
   "kysymys": "Mikä on lessepsiläinen vaellus?",
   "uusi": false,
-  "vastaus": "Ai tota. Tän minä osaan. Lessepsiläinen vaellus tarkoittaa Punaisenmeren kasvien ja eläinten siirtymistä Suezin kanavan kautta itäiseen Välimereen. Kanava valmistui vuonna 1869 ja yhdisti Välimeren Punaiseenmereen. Vuosikymmeniä esteenä olivat Katkerat järvet, joiden suolapitoisuus oli liian korkea, mutta kun se tasaantui kanavan veden kanssa, este katosi. Ilmiö on saanut nimensä kanavan pääinsinöörin [[Ferdinand de Lessepsin]] mukaan, ja sen vaikutukset näkyvät erityisesti [[Levantinmeren]] ja laajemmin [[Välimeren]] eliöstössä. Kalatkin pääsevät matkaan ilman siipiä.",
+  "vastaus": "Ai tota. Tän minä osaan. Lessepsiläinen vaellus tarkoittaa Punaisenmeren kasvien ja eläinten siirtymistä Suezin kanavan kautta itäiseen Välimereen. Kanava valmistui vuonna 1869 ja yhdisti Välimeren Punaiseenmereen. Vuosikymmeniä esteenä olivat Katkerat järvet, joiden suolapitoisuus oli liian korkea, mutta kun se tasaantui kanavan veden kanssa, este katosi. Ilmiö on saanut nimensä kanavahankkeen johtajan [[Ferdinand de Lessepsin]] mukaan, ja sen vaikutukset näkyvät erityisesti [[Levantinmeren]] ja laajemmin [[Välimeren]] eliöstössä. Kalatkin pääsevät matkaan ilman siipiä.",
   "linkit": [
    "Ferdinand de Lessepsin",
    "Levantinmeren",
@@ -1502,7 +1499,7 @@
   "kohde": "kohde:levantinmeri",
   "kysymys": "Miten Suezin kanava muutti Välimeren eliöstöä?",
   "uusi": false,
-  "vastaus": "Hyvä kysymys tuo. Suezin kanava valmistui vuonna 1869 ja yhdisti Välimeren Punaiseenmereen. Aiemmin kulkua olivat vuosikymmeniä estäneet Katkerat järvet, joiden suolapitoisuus oli liian korkea, mutta kun suolapitoisuus tasaantui kanavan veden kanssa, este katosi. Sen jälkeen Punaisenmeren kasvit ja eläimet alkoivat asuttaa itäistä [[Välimerta]]. Ilmiötä kutsutaan lessepsiläiseksi vaellukseksi kanavan pääinsinöörin [[Ferdinand de Lessepsin]] mukaan, ja muutos on kulkenut pääosin yhteen suuntaan, Punaiseltamereltä Välimerelle.\n\nMinä olen nähnyt ylhäältä monta satamaa, mutta pinnan alle en ylety. Silti tiedän, että meri on nyt toinen kuin isoisäsi aikana.",
+  "vastaus": "Hyvä kysymys tuo. Suezin kanava valmistui vuonna 1869 ja yhdisti Välimeren Punaiseenmereen. Aiemmin kulkua olivat vuosikymmeniä estäneet Katkerat järvet, joiden suolapitoisuus oli liian korkea, mutta kun suolapitoisuus tasaantui kanavan veden kanssa, este katosi. Sen jälkeen Punaisenmeren kasvit ja eläimet alkoivat asuttaa itäistä [[Välimerta]]. Ilmiötä kutsutaan lessepsiläiseksi vaellukseksi kanavahankkeen johtajan [[Ferdinand de Lessepsin]] mukaan, ja muutos on kulkenut pääosin yhteen suuntaan, Punaiseltamereltä Välimerelle.\n\nMinä olen nähnyt ylhäältä monta satamaa, mutta pinnan alle en ylety. Silti tiedän, että meri on nyt toinen kuin isoisäsi aikana.",
   "linkit": [
    "Välimerta",
    "Ferdinand de Lessepsin"
@@ -1530,7 +1527,7 @@
   "kohde": "kohde:levantinmeri",
   "kysymys": "Kuka oli Ferdinand de Lesseps?",
   "uusi": true,
-  "vastaus": "Kas vaan, tuttu nimi. Ferdinand de Lesseps oli ranskalainen diplomaatti ja kanavahankkeiden johtaja. Hän toimi Suezin kanavan pääinsinöörinä, ja kanava valmistui vuonna 1869. Hänen mukaansa on nimetty [[lessepsiläinen vaellus]], eli Punaisenmeren eliöiden leviäminen kanavan kautta itäiseen [[Välimereen]]. Aika harva saa oman ilmiön nimeensä, kyl se kelpaa.",
+  "vastaus": "Kas vaan, tuttu nimi. Ferdinand de Lesseps oli ranskalainen diplomaatti ja kanavahankkeiden johtaja. Hän hankki Suezin kanavalle toimiluvan, perusti kanavayhtiön ja johti hanketta, ja kanava valmistui vuonna 1869. Hänen mukaansa on nimetty [[lessepsiläinen vaellus]], eli Punaisenmeren eliöiden leviäminen kanavan kautta itäiseen [[Välimereen]]. Aika harva saa oman ilmiön nimeensä, kyl se kelpaa.",
   "linkit": [
    "lessepsiläinen vaellus",
    "Välimereen"
@@ -1544,15 +1541,14 @@
   "kohde": "kohde:levantinmeri",
   "kysymys": "Kuinka syvä Levantinmeri on?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. Levantinmeren syvin kohta on 4 384 metriä, ja se sijaitsee [[Plinius-hautavajoamassa]] noin kahdeksankymmentä kilometriä [[Kreetan]] eteläpuolella. Meri on Välimeren itäisin osa, ja sen pinta-ala on noin 320 000 neliökilometriä. Sen suurin saari on [[Kypros]]. Ylhäältä päin se näyttää kyllä vaan siniseltä.",
+  "vastaus": "Annas ku mietin. Levantinmeri on [[Välimeren]] itäisin osa. Se on syvimmillään yli neljä kilometriä, mutta tarkka luku riippuu siitä, mihin meren raja vedetään, enkä ole siitä varma. Meren pinta-ala on karkeasti 320 000 neliökilometriä, ja sen suurin saari on [[Kypros]]. Ylhäältä päin se näyttää kyllä vaan siniseltä.",
   "linkit": [
-   "Plinius-hautavajoamassa",
-   "Kreetan",
+   "Välimeren",
    "Kypros"
   ],
   "jatkot": [
-   "Mikä Plinius-hautavajoama on?",
-   "Millainen saari Kreeta on?"
+   "Mikä on Välimeren syvin kohta?",
+   "Millainen saari Kypros on?"
   ]
  },
  {
@@ -1567,7 +1563,7 @@
   ],
   "jatkot": [
    "Mitä mosaiikit esittävät Dionysoksen talossa?",
-   "Milloin Paphoksen kaivaukset alkoivat?"
+   "Milloin puolalaiset aloittivat kaivaukset Paphoksessa?"
   ]
  },
  {
@@ -1589,7 +1585,7 @@
   "kohde": "kohde:paphoksenmosaiikit",
   "kysymys": "Mitä Dionysoksen talon mosaiikeissa on kuvattu?",
   "uusi": true,
-  "vastaus": "Ai se, hieno paikka. Dionysoksen talo on peräisin 200-luvulta jaa., ja sen pinta-ala on noin 2 000 neliömetriä, josta mosaiikit peittävät neljänneksen. Kuvissa on metsästyskohtauksia, [[Apollon]] ja [[Dafnen]] takaa-ajo, [[Ganymedes]] ja kotka sekä neljä vuodenaikaa. Talo kuuluu Nea Paphoksen varakkaiden huviloiden joukkoon.\n\nNeljä vuodenaikaa lattiassa on minusta hyvä idea. Minä olen nähnyt ne kaikki ylhäältä, ja syksy on aina paras, koska silloin leivotaan.",
+  "vastaus": "Ai se, hieno paikka. Dionysoksen talo on rakennettu 100-luvun lopulla jaa., ja sen mosaiikit ovat pääosin 200-300-luvuilta. Talon pinta-ala on noin 2 000 neliömetriä, josta mosaiikit peittävät noin neljänneksen. Kuvissa on metsästyskohtauksia, [[Apollon]] ja [[Dafnen]] takaa-ajo, [[Ganymedes]] ja kotka sekä neljä vuodenaikaa. Talo kuuluu Nea Paphoksen varakkaiden huviloiden joukkoon.\n\nNeljä vuodenaikaa lattiassa on minusta hyvä idea. Minä olen nähnyt ne kaikki ylhäältä, ja syksy on aina paras, koska silloin leivotaan.",
   "linkit": [
    "Apollon",
    "Dafnen",
@@ -1602,9 +1598,9 @@
  },
  {
   "kohde": "kohde:paphoksenmosaiikit",
-  "kysymys": "Kuka aloitti Paphoksen kaivaukset?",
+  "kysymys": "Kuka aloitti puolalaisten kaivaukset Nea Paphoksessa?",
   "uusi": true,
-  "vastaus": "Nyt muistan: kaivaukset aloitti puolalainen arkeologi [[Kazimierz Michałowski]] kesäkuussa 1965. Ne jatkuvat yhä, ja Unesco liitti Paphoksen maailmanperintöluetteloonsa vuonna 1980. Vasta vuonna 1983 löytyi esimerkiksi [[Aionin talo]]. Yhä kaivetaan, siinä on kyl kärsivällisyyttä.",
+  "vastaus": "Nyt muistan: puolalainen arkeologi [[Kazimierz Michałowski]] aloitti Puolan kaivausryhmän työt Nea Paphoksessa kesäkuussa 1965, ja ne jatkuvat yhä. Dionysoksen talon oli tätä ennen kaivanut Kyproksen muinaismuistovirasto 1960-luvun alussa. Unesco liitti Paphoksen maailmanperintöluetteloonsa vuonna 1980. [[Aionin talo]] löytyi vasta vuonna 1983. Yhä kaivetaan, siinä on kyl kärsivällisyyttä.",
   "linkit": [
    "Kazimierz Michałowski",
    "Aionin talo"
@@ -1648,7 +1644,7 @@
   "kohde": "kohde:palaipafos",
   "kysymys": "Missä Afroditen tärkein pyhäkkö oli?",
   "uusi": false,
-  "vastaus": "Katotaas. Antiikin maailman tärkein Afroditen palvontapaikka oli [[Palaipafos]] eli Vanha Paphos, nykyinen Kouklia, Kyproksen lounaisosassa kukkulalla noin kaksitoista kilometriä uudesta Paphoksesta kaakkoon. [[Kypros]] oli jumalattaren myyttinen syntypaikka, ja [[Strabonin]] mukaan uudesta kaupungista vanhaan johtava tie täyttyi vuosittain pyhiinvaeltajista. Tuo tie olisi kyl ollut hyvä paikka tiputella leivänmuruja.",
+  "vastaus": "Katotaas. Antiikin maailman tärkein Afroditen palvontapaikka oli [[Palaipafos]] eli Vanha Paphos, nykyinen Kouklia, noin 14-16 kilometriä uudesta Paphoksesta itään Kyproksen lounaisosassa. [[Kypros]] oli jumalattaren myyttinen syntypaikka, ja [[Strabonin]] mukaan uudesta kaupungista vanhaan johtava tie täyttyi vuosittain pyhiinvaeltajista. Tuo tie olisi kyl ollut hyvä paikka tiputella leivänmuruja.",
   "linkit": [
    "Palaipafos",
    "Kypros",
@@ -2096,7 +2092,7 @@
   "kohde": "kohde:apostolosandreas",
   "kysymys": "Kuka neuvotteli täällä antautumisestaan?",
   "uusi": false,
-  "vastaus": "Selvä juttu. Luostarista käsin neuvotteli antautumisestaan [[Isaakios Komnenos]], joka oli hallinnut Kyprosta itsenäisenä hallitsijana. Neuvottelun toinen osapuoli oli [[Rikhard Leijonamielen]] johtama ristiretkiarmeija, joka valloitti saaren vuonna 1191. Luostari oli tuolloin 1100-luvulla linnoitettu paikka, ja nykyiset rakennukset ovat paljon myöhemmältä ajalta: pääkirkko on 1700-luvulta. Siitä on aikaa jo yli 800 vuotta, ja vieläkin tarina kulkee suusta suuhun.",
+  "vastaus": "Selvä juttu. Perimätiedon mukaan Kyprosta itsenäisenä hallitsijana hallinnut [[Isaakios Komnenos]] neuvotteli antautumisestaan täällä [[Rikhard Leijonamielen]] johtamien ristiretkeläisten kanssa vuonna 1191. Lähteet eivät ole yksimielisiä paikasta (osa mainitsee Kantaran linnan), eikä luostarista ole säilynyt tuolta ajalta rakenteita: nykyinen kirkko on 1800-luvulta. Siitä on aikaa jo yli 800 vuotta, ja vieläkin tarina kulkee suusta suuhun.",
   "linkit": [
    "Isaakios Komnenos",
    "Rikhard Leijonamielen"
