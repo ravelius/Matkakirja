@@ -32,7 +32,6 @@ PT local_593b89a1-2514-4d74-b956-2a73db862382, Siirtoseppä local_b50bb32e-18e2-
 ## 3. Odottaa
 - Freesound-lataaja käynnistetty uudelleen 09.46 (perl setsid, aja-originaalit.zsh), odottaa ~/.freesound-tokenia (OAuth). Aikakatkaisu
   ~12 h; käynnistä uudelleen samalla kaavalla, jos token puuttuu yhä.
-- Kuratoitu live PIDOSSA (aamun luovutus kohta 4); IP-suola tehty sitä ennen.
 - Siivous mergen jälkeen: wt/proto-pelikoodari-pisteet, wt/proto-pelikoodari-pulu, wt/proto-pelikoodari-mittaa (git -C proto worktree remove),
   wt/pelikoodari-ip-suola (tools/uusi-worktree.sh --poista).
 
