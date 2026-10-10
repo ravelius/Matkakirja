@@ -120,9 +120,8 @@ namespace Matkakirja.Natiivi
             vasen = new OpasTapit.Tappi(juuri, "mk-tappi mk-tappi--vasen", Ikonit.Viiva["kompassi"], v => Vasen = v);
             oikea = new OpasTapit.Tappi(juuri, "mk-tappi mk-tappi--oikea", Ikonit.Viiva["silma"], v => Oikea = v);
             vasen.Juuri.tooltip = Kieli.T("ui.seikkailu.liiku");
-            // Thiefin taso (Päätoimittaja 8.10.2026): tapit näkyvät vain kosketuksessa, levossa näkymättöminä paikallaan.
-            vasen.Juuri.AddToClassList("mk-tappi--vain-kosketus");
-            oikea.Juuri.AddToClassList("mk-tappi--vain-kosketus");
+            // TAPPI-pohja (omistajan kortit 5.10., PT 10.10.): himmeä levossa alakulmassa; 8.10:n "näkymätön levossa" poistettu
+            // (omistajan iPad TF 179: "ei tule ohjaimia"). Kosketus vasemmalle puoliskolle siirtää tapin kosketuskohtaan (kelluva).
             oikea.Juuri.tooltip = Kieli.T("ui.seikkailu.katso-ymparillesi");
             toimintoRivi = Ohjausnappi.Ryhma(juuri);
             toimintoRivi.style.top = StyleKeyword.Auto;
@@ -325,6 +324,9 @@ namespace Matkakirja.Natiivi
             bool oikeaNyt = nakyy && OikeaTappi;
             if (oikeaNyt != oikeaNakyy) { oikeaNakyy = oikeaNyt; oikea.Nayta(oikeaNyt); }
             bool nayta = TestiNakyy ?? (PelaajaAktiivinen() || MuseoKavely?.Invoke() == true);
+            // Pulu pysyy piilossa koko seikkailun (Raamattu: pelissä ei Pulun reunakuvaa): PeliOhjain.KaytossaMuuttui toi sen
+            // takaisin kesken pelin tapin päälle (iPad 179 -toisto 10.10.).
+            if (nakyy && nayta && PuluPiiloon) { var pp = Pulu.Hae(); if (pp.Nakyvissa) { pp.Nayta(false); puluPiilotettu = true; } }
             if (nayta == nakyy) return;
             nakyy = nayta;
             if (!nayta) PoistaTietokerros();   // seikkailu päättyi: tietokerroksen tarjous pois
