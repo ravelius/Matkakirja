@@ -51,6 +51,8 @@ namespace Matkakirja.Linssit.Museo
         /// <summary>Poikkileikkaus (cm): x = etäisyys teoksen reunasta ulospäin, y = korkeus seinästä; ulkoreuna → sisäreuna.</summary>
         public List<(double X, double Y)> Pisteet = new List<(double, double)>();
         public double LeveysCm { get { double m = 0; foreach (var p in Pisteet) m = Math.Max(m, p.X); return m; } }
+        /// <summary>Sisähuulen korkeus seinästä (cm, profiilin viimeinen piste): kangas jää tämän alle.</summary>
+        public double HuuliCm => Pisteet.Count > 0 ? Pisteet[Pisteet.Count - 1].Y : 1.5;
     }
 
     /// <summary>Tekstitaulu ilman tekstiä (liite C2.4 kohta 8): pieni vaalea laatta teoksen vieressä; napautus avaa kortin.</summary>

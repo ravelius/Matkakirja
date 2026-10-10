@@ -111,10 +111,12 @@ namespace Matkakirja.Natiivi
                 var mat = Materiaali("Teos " + r.Teos.Id, Color.white, 0.03f, 0.5f);
                 mat.mainTexture = Paikkakuva(r.Teos);
                 TeosMateriaalit[r.Teos.Id] = mat;
-                double syvyys = 0.02;   // kankaan pinta kehyksen huulen alla
-                Kappale("Kuva", Suorakaide(w, h, -syvyys - 0.002), mat, go.transform, true, kaannaZ: true);
-                if (paikka.Grafiikka) Kappale("Passepartout", Suorakaide(ulkoW, ulkoH, -syvyys), paspisMat, go.transform, true, kaannaZ: true);
-                if (s.Kehykset.TryGetValue(paikka.Kehysprofiili ?? s.Oletuskehys ?? "", out var prof))
+                s.Kehykset.TryGetValue(paikka.Kehysprofiili ?? s.Oletuskehys ?? "", out var prof);
+                // Kangas (tai paperi) 3 mm kehyksen sisähuulen alla; passepartout paperin takana.
+                double huuli = (prof?.HuuliCm ?? 1.5) / 100, kangas = Mathf.Max(0.001f, (float)(huuli - 0.003));
+                Kappale("Kuva", Suorakaide(w, h, kangas), mat, go.transform, true, kaannaZ: true);
+                if (paikka.Grafiikka) Kappale("Passepartout", Suorakaide(ulkoW, ulkoH, kangas - 0.0008), paspisMat, go.transform, true, kaannaZ: true);
+                if (prof != null)
                 {
                     var km = kehysMat.TryGetValue(prof.Materiaali ?? "musta", out var x) ? x : halliMat;
                     var kv = MuseoGeometria.Kehys(prof, ulkoW, ulkoH, (1, 1, 1));
@@ -138,11 +140,11 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        /// <summary>Suorakaide paikallisessa tasossa z (katsojaan päin −Z Unityssä kaannaZ:n jälkeen), uv 0–1.</summary>
-        static Verkko Suorakaide(double w, double h, double z)
+        /// <summary>Suorakaide <paramref name="ulos"/> metriä seinästä (kehyksen kehyksessä +Z ulos; Unityssä −Z kaannaZ:n jälkeen), uv 0–1.</summary>
+        static Verkko Suorakaide(double w, double h, double ulos)
         {
             var v = new Verkko();
-            v.Nelio(new V3(-w / 2, -h / 2, -z), new V3(w / 2, -h / 2, -z), new V3(w / 2, h / 2, -z), new V3(-w / 2, h / 2, -z), new V3(0, 0, 1), (1, 1, 1));
+            v.Nelio(new V3(-w / 2, -h / 2, ulos), new V3(w / 2, -h / 2, ulos), new V3(w / 2, h / 2, ulos), new V3(-w / 2, h / 2, ulos), new V3(0, 0, 1), (1, 1, 1));
             return v;
         }
 
