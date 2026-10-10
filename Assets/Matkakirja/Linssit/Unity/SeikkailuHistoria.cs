@@ -60,10 +60,11 @@ namespace Matkakirja.Natiivi
         /// <summary>Historian kertoja puhuu (loppumusiikin väistö).</summary>
         public static bool KertojaSoi => ajossa != null && ajossa.kertoja != null && ajossa.kertoja.isPlaying;
 
-        static string KertojaUrl(HistoriaVaihe v)
+        string KertojaUrl(HistoriaVaihe v)
         {
             string avain = v?.KertojaAvain ?? v?.Avain;
             if (avain == null) return null;
+            if (jana?.KertojaJuuri != null) return jana.KertojaJuuri + avain + ".mp3";   // esittely: Pelikoodarin vaihe-esittely-v1
             string sha = Kieli.T("olavinlinna.historia." + avain + ".kertoja.aani");   // puuttuva → avain itse (≠ 32 merkkiä)
             return sha.Length == 32 ? PuluChat.Palvelin + "/opas/aani/" + sha + ".mp3" : null;
         }
@@ -221,8 +222,11 @@ namespace Matkakirja.Natiivi
 
         public static void Lopeta() { if (ajossa != null) ajossa.lopeta = true; }
 
+        Historiajana jana;
+
         IEnumerator Aja(Transform kamera, Action<string> kirjaa, Historiajana h, bool jatkaKamerasta)
         {
+            jana = h;
             var cam = kamera.GetComponent<Camera>();
             float alkuFov = cam != null ? cam.fieldOfView : 60f;
             bool kameraVapaa = DioraamaSovitin.KameraVapaa;

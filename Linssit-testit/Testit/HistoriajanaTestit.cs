@@ -311,7 +311,17 @@ namespace Matkakirja.Linssit.Testit
         [Testi] static void EsittelynVaiheet()
         {
             var h = Historiajana.Esittely;
-            Oleta.Tosi(h.Kesto >= 65 && h.Kesto <= 85, $"kesto {h.Kesto:F0} s");
+            Oleta.Tosi(h.Kesto >= 80 && h.Kesto <= 95, $"kesto {h.Kesto:F0} s");
+            // Kertojan rivit (Pelikoodari vaihe-esittely-v1) mahtuvat ennen seuraavaa riviä: KertojaViiveS + kesto ≤ seuraavan rivin alku.
+            var kestot = new Dictionary<string, double> { ["esi-saimaa"] = 17.56, ["esi-1323"] = 15.52, ["vaihe-1475"] = 11.84, ["vaihe-nyky"] = 6.36 };
+            double edLoppu = 0;
+            for (int i = 0; i < h.Vaiheet.Count; i++)
+            {
+                var v = h.Vaiheet[i]; if (!v.Kertoja) continue;
+                Oleta.Tosi(h.VaiheenAlku(i) + 0.3 >= edLoppu, $"{v.KertojaAvain} ei ala edellisen päälle ({h.VaiheenAlku(i):F1} < {edLoppu:F1})");
+                edLoppu = h.VaiheenAlku(i) + Historiajana.KertojaViiveS + kestot[v.KertojaAvain];
+            }
+            Oleta.Tosi(edLoppu <= h.Kesto, $"viimeinen rivi päättyy ennen loppua ({edLoppu:F1} / {h.Kesto:F1})");
             Oleta.Sama("esittely", h.Nimi);
             foreach (var v in h.Vaiheet)
             {
