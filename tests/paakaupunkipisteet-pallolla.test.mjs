@@ -64,3 +64,15 @@ test('maat ilman laudan kaupunkia: pääkaupunki on ainoa tie maahan', () => {
   for (const iso of ['ALB', 'BLR', 'MDA', 'MKD', 'MNE', 'SRB']) assert.ok(aina.includes(iso), iso);
   assert.ok(!aina.includes('SVK') && !aina.includes('HRV'), 'pysäkkimaa noudattaa kohdemaan sääntöä');
 });
+
+test('erä 2 (#4349): Jerusalem ei saa pistettä, Ramallah on hallinnon paikka, Israelin kortti ilman pistettä', () => {
+  assert.ok(!pisteet.some((k) => /jerusalem/u.test(k.id)), 'Jerusalem on laudan kaupunki ilman maata');
+  assert.ok(!pisteet.some((k) => k.maa === 'ISR'), 'Israelilla ei pääkaupunkipistettä');
+  assert.ok(MAAILMANKARTTA.map.countryShapes.ISR, 'Israelin maakortti tarvitsee maan');
+  const ramallah = PAAKAUPUNKIPISTEET.find((p) => p.id === 'ramallah');
+  assert.equal(ramallah?.asema, 'hallinnon paikka');
+  assert.ok(pisteet.some((k) => k.id === `${PK_ETULIITE}ramallah` && k.maa === 'PSE'));
+  for (const id of ['jerevan', 'baku', 'tbilisi', 'manama', 'beirut', 'amman', 'abudhabi']) {
+    assert.ok(pisteet.some((k) => k.id === `${PK_ETULIITE}${id}`), id);
+  }
+});

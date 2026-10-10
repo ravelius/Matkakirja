@@ -275,10 +275,10 @@ const NIPUTTAMATTOMAT = new Set([
   // ainoa tuoja on js/pallolauta/nostot.js, ja pallolauta on
   // niputuksen ulkopuolella. SHELLissä paketti on.
   'js/packs/maastokohteet-ark.js',
-  // Pääkaupunkipisteet (skeema 1.60, 10.10.2026): natiivin ja viennin
-  // datapaketti, jota mikään selainmoduuli ei vielä tuo (webin piirto on
-  // Pelikoodarilla). SHELLissä paketti on. Palautetaan MODULES-listalle,
-  // kun webin ensimmäinen tuoja ilmestyy.
+  // Pääkaupunkipisteet (skeema 1.60, 10.10.2026): webissä paketin tuo vain
+  // pallolauta (js/pallolauta/paakaupunkipisteet.js, #4347), joka ei kuulu
+  // yhden tiedoston versioon; muuten natiivin ja viennin datapaketti.
+  // SHELLissä paketti on. MODULES-listalle vasta, jos niputettu moduuli tuo sen.
   'js/packs/paakaupungit.js',
   // Vedon seuranta (valikko poistettu 22.9.2026, "Poista kaikki
   // ylimääräiset vivut valikosta"): js/main.js:n staattinen tuonti
