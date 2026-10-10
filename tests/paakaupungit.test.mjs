@@ -58,7 +58,8 @@ test('Lähi-itä: uudet maat rajoineen, Ramallah hallinnon paikka, Jerusalem ilm
     assert.ok(MAIDEN_PERUSTIEDOT[iso], `${iso}: perustiedot puuttuvat`);
   }
   assert.equal(PAAKAUPUNKIPISTEET.find((p) => p.maa === 'PSE')?.asema, 'hallinnon paikka');
-  // Jerusalem on laudan kaupunki ilman maata: ei pistettä, ei pääkaupunkilinkkiä.
+  // Jerusalem on laudan kaupunki ilman maata: ei pistettä eikä PAAKAUPUNGIT-riviä;
+  // maakortti näyttää sen hallinnon paikkana (vienti, HALLINNON_PAIKAT).
   assert.ok(!PAAKAUPUNKIPISTEET.some((p) => p.maa === 'ISR'));
   assert.ok(!PAAKAUPUNGIT.ISR);
   assert.equal(MAAILMANKARTTA.map.cityCountry.jerusalem, undefined);

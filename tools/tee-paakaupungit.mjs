@@ -44,7 +44,8 @@ const lahde = (a) => (a && typeof a === 'object' ? { arvo: a.arvo ?? null, vuosi
 /*
  * Lähi-itä (PT 10.10.2026): Palestiinan Ramallah on "hallinnon paikka", ja
  * Jerusalem on laudan kaupunki ilman maata ja ilman kannanottoa — siitä ei
- * tehdä pistettä eikä Israelin pääkaupunkilinkkiä (maat.ISR.paakaupunki null).
+ * tehdä pistettä. Maakortti näyttää sen Israelin "hallinnon paikkana"
+ * (tools/vienti/kokoelmat.mjs HALLINNON_PAIKAT, PT 10.10.2026).
  */
 const ASEMA = { PSE: 'hallinnon paikka' };
 const LAUDAN_KAUPUNKI_EI_PISTETTA = { ISR: 'jerusalem' };
