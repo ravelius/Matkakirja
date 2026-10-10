@@ -5,6 +5,12 @@ Edellinen: viesti-natiiviseppa-luovutus-20261010-aamu.md (TILA-osiot 08.0x–11.
 Viestit: SendMessage-raja oli täynnä → varakanava mcp__ccd_session_mgmt__send_message (PT local_593b89a1…, Julkaisija local_22b29f10…,
 LS1 local_45a869de…, LS2 local_fc4fcc54…, NUI local_33ba1387…, Pelikoodari local_97810d35…, Sisältökirjuri local_256f6a15…).
 
+## PYSYVÄ TEHTÄVÄ: UNITY 6.7 -PÄIVITYSSEURANTA (PT 10.10. 19.5x, omistajan kysymys; siirrä jokaiseen luovutukseen)
+- Joka MAANANTAI: tarkista Unityn julkaisut (uusi 6000.7-beeta, lopullinen 6.7, korjausversio). Ilmoita PT:lle VAIN, jos meitä koskeva korjaus
+  (iOS/Metal, IL2CPP, muisti, URP, UI Toolkit, kaatumiset) tai lopullinen 6.7 on julkaistu.
+- Linja: pysytään 6000.7.0b4:ssä → vaihto kerralla lopulliseen 6.7:ään; sen jälkeen päivitys ~kuukausittain/tarpeen mukaan omassa haarassa
+  (käännös + automaattiset testit + iPad-muistiajo). App Store -julkaisu vain lopullisella versiolla; 6.3 LTS varalla (T7 unity63-talteen + K63-kääntäjäketju).
+
 ## TILA 19.3x — JUNA 180 KERTYY, MUISTIAJO YÖN JÄLKEEN
 - **JUNA 180 = natiiviseppa/juna-180 d6494497a** (BUILD 179 75fcc2b1b:n päällä; wt j175): Pelikoodari pulu-bih-lux-mlt e2b97a8a4, NUI pallo-koysi-sumuun
   e341491f7, LS2 peking-vesikerroin 2c2305012, Natiiviseppä todistusajo-kuittaus 80d418513, LS1 museo-varjot-180 9106d012f (lattiaheijastus + sali-v2).
