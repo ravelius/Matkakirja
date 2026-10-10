@@ -52,5 +52,18 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Tosi(KaupunkiPalloMitat.Nakyy("ITA", "GRC", true) && KaupunkiPalloMitat.Nakyy("GRC", "GRC", true), "maailmanäkymä: kaikki maat");
             Oleta.Tosi(KaupunkiPalloMitat.Nakyy("FIN", null, true), "maailmanäkymä: myös ilman pelaajan maata");
         }
+
+        /// <summary>Omistaja 10.10. 11.5x: kehittäjän maailmanäkymässä muiden kuin kohdemaan pallot paljon pienempinä.</summary>
+        [Testi]
+        static void MaailmanakymassaMuutMaatPienempina()
+        {
+            float k = KaupunkiPalloMitat.KokoKaukaPt;
+            Oleta.Tosi(KaupunkiPalloMitat.KokoMaassa(k, "GRC", "GRC", true) == k, "maailmanäkymä: kohdemaa ennallaan");
+            float muu = KaupunkiPalloMitat.KokoMaassa(k, "ITA", "GRC", true);
+            Oleta.Tosi(muu < k * 0.5f && Lahella(muu, k * KaupunkiPalloMitat.MuuMaaOsuus), $"maailmanäkymä: muu maa pieni {muu}");
+            Oleta.Tosi(KaupunkiPalloMitat.KokoMaassa(k, null, "GRC", true) < k, "maailmanäkymä: tuntematon maa pieni");
+            Oleta.Tosi(KaupunkiPalloMitat.KokoMaassa(k, "ITA", null, true) == k, "maailmanäkymä ilman kohdemaata: ennallaan");
+            Oleta.Tosi(KaupunkiPalloMitat.KokoMaassa(k, "ITA", "GRC", false) == k && KaupunkiPalloMitat.KokoMaassa(k, "GRC", "GRC", false) == k, "peli: ennallaan");
+        }
     }
 }
