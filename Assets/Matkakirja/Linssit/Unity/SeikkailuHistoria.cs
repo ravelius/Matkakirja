@@ -263,6 +263,8 @@ namespace Matkakirja.Natiivi
                 SeikkailuKavely.VainVuosileikkaukset = true;
                 Shader.SetGlobalVector(IdMustaKorvaus, MustaKorvaus);
                 PiilotaKavelyosat();
+                bool ranta = Historiajana.Ranta1499Nakyy(vuosi, DioraamaSovitin.Linssi?.Rakennus?.Ulkokuori?.Asu1499 == true);   // arvio 10 virhe 3 (vain v24-kuori)
+                foreach (var r in tasaisetRannat) if (r != null && r.enabled != ranta) r.enabled = ranta;
                 if (rakentuu)
                 {
                     double raja = h.RakennusKorkeus(t), r = SeikkailuNousu.LinnaSade * 1.3;
@@ -293,7 +295,7 @@ namespace Matkakirja.Natiivi
             Shader.SetGlobalVector(IdMustaKorvaus, Vector4.zero);
             foreach (var r in kavelyPiilossa) if (r != null) r.enabled = true;
             kavelyPiilossa.Clear();
-            foreach (var r in tasaisetRannat) if (r != null) r.SetPropertyBlock(null);
+            foreach (var r in tasaisetRannat) if (r != null) { r.SetPropertyBlock(null); r.enabled = true; }
             tasaisetRannat.Clear();
             if (kasvu) { SeikkailuKavely.AsetaHistoriaLeikkaukset(null); SeikkailuKavely.AsetaKasvu(null); }
             if (cam != null) cam.fieldOfView = alkuFov;

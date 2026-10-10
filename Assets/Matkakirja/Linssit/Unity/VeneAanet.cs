@@ -52,6 +52,7 @@ namespace Matkakirja.Natiivi
             a.spatialBlend = 1f; a.rolloffMode = AudioRolloffMode.Linear; a.minDistance = MinM * s; a.maxDistance = MaxM * s;
             a.loop = true; a.playOnAwake = false; a.dopplerLevel = 0f; a.pitch = Random.Range(0.92f, 1.08f); a.volume = 0f;
             a.priority = 200;
+            SaumatonSilmukka.Kiinnita(a);   // saumaton silmukka (juna 174)
             lahteet.Add((a, t));
             SteamAudioKoe.Rekisteroi(a);   // HRTF-koe (kehittäjäkytkin pallo.SteamAudio, oletus pois)
         }
@@ -59,11 +60,12 @@ namespace Matkakirja.Natiivi
         static IEnumerator Lataa(string t)
         {
             using var r = UnityWebRequestMultimedia.GetAudioClip(Juuri + t + ".mp3", AudioType.MPEG);
+            ((DownloadHandlerAudioClip)r.downloadHandler).compressed = true;   // 3 laivaa PCM:nä 11 Mt, pakattuina 1,6 Mt (juna 174, muisti)
             r.timeout = 30;
             yield return r.SendWebRequest();
-            ladataan.Remove(t);
-            klipit[t] = r.result == UnityWebRequest.Result.Success ? DownloadHandlerAudioClip.GetContent(r) : null;
-            if (klipit[t] != null) klipit[t].name = AaniId(t);
+            var c = r.result == UnityWebRequest.Result.Success ? DownloadHandlerAudioClip.GetContent(r) : null;
+            if (c != null) { c.name = AaniId(t); yield return SaumatonSilmukka.HaeTagi(r.url, c); }   // tagi ennen käyttöönottoa
+            ladataan.Remove(t); klipit[t] = c;
             if (klipit[t] == null) Debug.Log($"MATKAKIRJA kaupunki: laivan ääni {t} ei latautunut ({r.error})");
         }
 

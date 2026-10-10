@@ -632,6 +632,46 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
+        /// Lentomoottorin silmukka [alku, kelvollinen loppu] (Pelikoodari 9.10., juna 174): lopun MP3-täyte (hiljaisuus, iOS-FMOD ei
+        /// leikkaa sitä) jätetään pois, ja viimeinen sekunti ristihäivytetään tasatehoisesti alkua edeltävään sekuntiin, jolloin sauma
+        /// loppu → alku jatkuu äänitteessä saumattomasti (ennen: kova hyppy lopusta 40 s:n kohtaan + ~30 ms hiljaisuutta). Ei lisämuistia
+        /// klippiin; väliaikaisesti 1 s:n lisätaulukko.
+        /// </summary>
+        static AudioClip SilmukkaSiivu(AudioClip c, float alku)
+        {
+            try
+            {
+                if (c.loadState != AudioDataLoadState.Loaded && !c.LoadAudioData()) return null;
+                int k = c.channels, f = c.frequency, a = Mathf.Clamp(Mathf.RoundToInt(alku * f), 0, Mathf.Max(0, c.samples - 1));
+                int m = Mathf.Min(4096, c.samples - a); if (m <= 0 || k <= 0) return null;
+                var loppu = new float[m * k]; if (!c.GetData(loppu, c.samples - m)) return null;
+                int hiljaa = 0;
+                for (int i = m - 1; i >= 0; i--) { bool h = true; for (int j = 0; j < k; j++) if (Mathf.Abs(loppu[i * k + j]) > 1e-4f) { h = false; break; } if (!h) break; hiljaa++; }
+                int n = c.samples - hiljaa - a, F = Mathf.Min(f, a, n / 4);
+                if (n <= 0) return null;
+                var data = new float[n * k]; if (!c.GetData(data, a)) return null;
+                if (F > 0)
+                {
+                    var ennen = new float[F * k];
+                    if (c.GetData(ennen, a - F))
+                        for (int i = 0; i < F; i++)
+                        {
+                            float t = (i + 0.5f) / F, ulos = Mathf.Cos(t * Mathf.PI * 0.5f), sisaan = Mathf.Sin(t * Mathf.PI * 0.5f);
+                            for (int j = 0; j < k; j++) { int x = (n - F + i) * k + j; data[x] = data[x] * ulos + ennen[i * k + j] * sisaan; }
+                        }
+                }
+                var siivu = AudioClip.Create("siivu " + c.name, n, k, f, false);
+                siivu.SetData(data, 0);
+                return siivu;
+            }
+            catch (Exception e)
+            {
+                Debug.LogWarning("MATKAKIRJA ui ääni: lentosilmukkaa ei saatu (" + e.Message + ")");
+                return null;
+            }
+        }
+
+        /// <summary>
         /// Webin playSlice-käyrä seinäkelloajassa: 0,0001 → gain eksponentiaalisesti NousuS:ssa, pito,
         /// gain → 0,0001 eksponentiaalisesti LaskuS:ssa ennen kohtaa kesto (lasku alkaa aikaisintaan
         /// 20 ms:n kohdalla). Näyte i soi hetkellä i / taajuus / nopeus. Normalisoitu: gain AudioSource.volumeen.
@@ -743,7 +783,7 @@ namespace Matkakirja.Natiivi
                 lentoEsiladataan = false;
                 if (klippi == null || lento != null) return;
                 float alku = klippi.length > Tehostetaulu.Lento.PitkaAaniteS ? Tehostetaulu.Lento.SilmukkaAlkuS : 0f;
-                valmisSilmukka = alku > 0f ? Leikkaa(klippi, alku, klippi.length - alku, 1f, verho: false) : null;
+                valmisSilmukka = alku > 0f ? SilmukkaSiivu(klippi, alku) : null;
                 valmisLahde = klippi;
                 Debug.Log($"MATKAKIRJA ui ääni: lentomoottori esiladattu {(Time.realtimeSinceStartup - t0) * 1000:F0} ms (silmukka {(valmisSilmukka != null ? valmisSilmukka.length.ToString("F0") + " s" : "-")})");
             });
@@ -772,7 +812,7 @@ namespace Matkakirja.Natiivi
                 // Esiladattu silmukka kerran (EsilataaLento), muuten leikkaus nyt.
                 AudioClip silmukka = valmisSilmukka != null && valmisLahde == klippi ? valmisSilmukka : null;
                 valmisSilmukka = null; valmisLahde = null;
-                if (silmukka == null && alku > 0f) silmukka = Leikkaa(klippi, alku, klippi.length - alku, 1f, verho: false);
+                if (silmukka == null && alku > 0f) silmukka = SilmukkaSiivu(klippi, alku);
                 var s = Soitin(AaniKanava.Tehoste);
                 s.clip = silmukka != null ? silmukka : klippi;
                 s.loop = true;

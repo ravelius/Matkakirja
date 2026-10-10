@@ -199,6 +199,7 @@ namespace Matkakirja.Natiivi
             v.lahde.playOnAwake = false;
             v.lahde.loop = true;
             v.lahde.spatialBlend = 0;
+            SaumatonSilmukka.Kiinnita(v.lahde);   // pakattu ≥ 7,5 s: ristihäivytys, muuten kuten ennen (juna 174)
             // Esilataus: ensimmäinen viritys ei jää hiljaiseksi latauksen ajaksi.
             foreach (var u in v.osoitteet) v.StartCoroutine(v.Lataa(u));
             return v;
