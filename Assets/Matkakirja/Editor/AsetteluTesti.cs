@@ -784,7 +784,10 @@ namespace Matkakirja.Editori
             }
             else
             {
-                var m = t.MeasureTextSize(t.text, cr.width, VisualElement.MeasureMode.Exactly, 0f, VisualElement.MeasureMode.Undefined);
+                // Yhdelle riville mahtuva ohi: tasan sisältöleveydellä mitattu yksirivinen rivittyi kahdeksi (ajo 06.05: korkeus 2×).
+                var yksi = t.MeasureTextSize(t.text, 0f, VisualElement.MeasureMode.Undefined, 0f, VisualElement.MeasureMode.Undefined);
+                if (yksi.x <= cr.width + 1f) return;
+                var m = t.MeasureTextSize(t.text, cr.width + 0.5f, VisualElement.MeasureMode.Exactly, 0f, VisualElement.MeasureMode.Undefined);
                 if (m.y <= cr.height + 1f) return;
                 mita = $"korkeus {m.y:0} > {cr.height:0}";
             }
