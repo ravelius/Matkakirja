@@ -1,0 +1,530 @@
+[
+ {
+  "n": 1,
+  "kohta": "kohde:mirin-linna",
+  "kasite": "goottilaista",
+  "kysymys": "Kerro lisää: goottilaista"
+ },
+ {
+  "n": 2,
+  "kohta": "kohde:mirin-linna",
+  "kasite": "Radziwiłł",
+  "kysymys": "Kerro lisää: Radziwiłł"
+ },
+ {
+  "n": 3,
+  "kohta": "kohde:mirin-linna",
+  "kasite": "Unescon maailmanperintöluetteloon",
+  "kysymys": "Kerro lisää: Unescon maailmanperintöluetteloon"
+ },
+ {
+  "n": 4,
+  "kohta": "kohde:mirin-linna",
+  "kasite": "getton",
+  "kysymys": "Kerro lisää: getton"
+ },
+ {
+  "n": 5,
+  "kohta": "kohde:mirin-linna",
+  "kasite": "Neuvostoliittoon",
+  "kysymys": "Kerro lisää: Neuvostoliittoon"
+ },
+ {
+  "n": 6,
+  "kohta": "kohde:mirin-linna",
+  "kasite": "maailmanperintösopimus",
+  "kysymys": "Kerro lisää: maailmanperintösopimus"
+ },
+ {
+  "n": 7,
+  "kohta": "kohde:mirin-linna",
+  "kasite": "maailmanperintökomitea",
+  "kysymys": "Kerro lisää: maailmanperintökomitea"
+ },
+ {
+  "n": 8,
+  "kohta": "kohde:mirin-linna",
+  "kasite": "Pohjois-Ranskassa",
+  "kysymys": "Kerro lisää: Pohjois-Ranskassa"
+ },
+ {
+  "n": 9,
+  "kohta": "kohde:mirin-linna",
+  "kasite": "suippokaaret",
+  "kysymys": "Kerro lisää: suippokaaret"
+ },
+ {
+  "n": 10,
+  "kohta": "kohde:mirin-linna",
+  "kasite": "ristiholvit",
+  "kysymys": "Kerro lisää: ristiholvit"
+ },
+ {
+  "n": 11,
+  "kohta": "kohde:mirin-linna",
+  "kasite": "piiritystornien",
+  "kysymys": "Kerro lisää: piiritystornien"
+ },
+ {
+  "n": 12,
+  "kohta": "kohde:mirin-linna",
+  "kasite": "nostosillan",
+  "kysymys": "Kerro lisää: nostosillan"
+ },
+ {
+  "n": 13,
+  "kohta": "kohde:njasvizin-linna",
+  "kasite": "Mikołaj Krzysztof Sierotka Radziwiłł",
+  "kysymys": "Kerro lisää: Mikołaj Krzysztof Sierotka Radziwiłł"
+ },
+ {
+  "n": 14,
+  "kohta": "kohde:njasvizin-linna",
+  "kasite": "renessanssin",
+  "kysymys": "Kerro lisää: renessanssin"
+ },
+ {
+  "n": 15,
+  "kohta": "kohde:njasvizin-linna",
+  "kasite": "barokin",
+  "kysymys": "Kerro lisää: barokin"
+ },
+ {
+  "n": 16,
+  "kohta": "kohde:njasvizin-linna",
+  "kasite": "Ruotsin",
+  "kysymys": "Kerro lisää: Ruotsin"
+ },
+ {
+  "n": 17,
+  "kohta": "kohde:njasvizin-linna",
+  "kasite": "Puolan–Liettuan kansainyhteisön",
+  "kysymys": "Kerro lisää: Puolan–Liettuan kansainyhteisön"
+ },
+ {
+  "n": 18,
+  "kohta": "kohde:njasvizin-linna",
+  "kasite": "maisemapuisto",
+  "kysymys": "Kerro lisää: maisemapuisto"
+ },
+ {
+  "n": 19,
+  "kohta": "kohde:njasvizin-linna",
+  "kasite": "Englannissa",
+  "kysymys": "Kerro lisää: Englannissa"
+ },
+ {
+  "n": 20,
+  "kohta": "kohde:njasvizin-linna",
+  "kasite": "ranskalaisesta puutarhasta",
+  "kysymys": "Kerro lisää: ranskalaisesta puutarhasta"
+ },
+ {
+  "n": 21,
+  "kohta": "kohde:njasvizin-linna",
+  "kasite": "Krewon liitossa",
+  "kysymys": "Kerro lisää: Krewon liitossa"
+ },
+ {
+  "n": 22,
+  "kohta": "kohde:njasvizin-linna",
+  "kasite": "Lublinin unionissa",
+  "kysymys": "Kerro lisää: Lublinin unionissa"
+ },
+ {
+  "n": 23,
+  "kohta": "kohde:njasvizin-linna",
+  "kasite": "Radziwiłłit",
+  "kysymys": "Kerro lisää: Radziwiłłit"
+ },
+ {
+  "n": 24,
+  "kohta": "kohde:njasvizin-linna",
+  "kasite": "Venetsian peruskirjaa",
+  "kysymys": "Kerro lisää: Venetsian peruskirjaa"
+ },
+ {
+  "n": 25,
+  "kohta": "kohde:njasvizin-linna",
+  "kasite": "Njasvižin linnassa",
+  "kysymys": "Kerro lisää: Njasvižin linnassa"
+ },
+ {
+  "n": 26,
+  "kohta": "kohde:braslavin-jarvet",
+  "kasite": "Vitebskin",
+  "kysymys": "Kerro lisää: Vitebskin"
+ },
+ {
+  "n": 27,
+  "kohta": "kohde:braslavin-jarvet",
+  "kasite": "Drivjaty",
+  "kysymys": "Kerro lisää: Drivjaty"
+ },
+ {
+  "n": 28,
+  "kohta": "kohde:braslavin-jarvet",
+  "kasite": "Snudy",
+  "kysymys": "Kerro lisää: Snudy"
+ },
+ {
+  "n": 29,
+  "kohta": "kohde:braslavin-jarvet",
+  "kasite": "Strusta",
+  "kysymys": "Kerro lisää: Strusta"
+ },
+ {
+  "n": 30,
+  "kohta": "kohde:braslavin-jarvet",
+  "kasite": "Snudyn",
+  "kysymys": "Kerro lisää: Snudyn"
+ },
+ {
+  "n": 31,
+  "kohta": "kohde:braslavin-jarvet",
+  "kasite": "Strustan",
+  "kysymys": "Kerro lisää: Strustan"
+ },
+ {
+  "n": 32,
+  "kohta": "kohde:braslavin-jarvet",
+  "kasite": "mannerjäätikkö",
+  "kysymys": "Kerro lisää: mannerjäätikkö"
+ },
+ {
+  "n": 33,
+  "kohta": "kohde:braslavin-jarvet",
+  "kasite": "moreeniksi",
+  "kysymys": "Kerro lisää: moreeniksi"
+ },
+ {
+  "n": 34,
+  "kohta": "kohde:braslavin-jarvet",
+  "kasite": "sulamisvesiä",
+  "kysymys": "Kerro lisää: sulamisvesiä"
+ },
+ {
+  "n": 35,
+  "kohta": "kohde:braslavin-jarvet",
+  "kasite": "luonnon monimuotoisuuden",
+  "kysymys": "Kerro lisää: luonnon monimuotoisuuden"
+ },
+ {
+  "n": 36,
+  "kohta": "kohde:braslavin-jarvet",
+  "kasite": "IUCN",
+  "kysymys": "Kerro lisää: IUCN"
+ },
+ {
+  "n": 37,
+  "kohta": "kohde:braslavin-jarvet",
+  "kasite": "Braslavin järvien",
+  "kysymys": "Kerro lisää: Braslavin järvien"
+ },
+ {
+  "n": 38,
+  "kohta": "kohde:braslavin-jarvet",
+  "kasite": "muuttolinnuille",
+  "kysymys": "Kerro lisää: muuttolinnuille"
+ },
+ {
+  "n": 39,
+  "kohta": "kohde:braslavin-jarvet",
+  "kasite": "ekosysteemiä",
+  "kysymys": "Kerro lisää: ekosysteemiä"
+ },
+ {
+  "n": 40,
+  "kohta": "kohde:braslavin-jarvet",
+  "kasite": "Ramsarin sopimuksella",
+  "kysymys": "Kerro lisää: Ramsarin sopimuksella"
+ },
+ {
+  "n": 41,
+  "kohta": "kohde:brestin-linnoitus",
+  "kasite": "Karl Opperman",
+  "kysymys": "Kerro lisää: Karl Opperman"
+ },
+ {
+  "n": 42,
+  "kohta": "kohde:brestin-linnoitus",
+  "kasite": "Bug-joen",
+  "kysymys": "Kerro lisää: Bug-joen"
+ },
+ {
+  "n": 43,
+  "kohta": "kohde:brestin-linnoitus",
+  "kasite": "Venäjän keisarikuntaa",
+  "kysymys": "Kerro lisää: Venäjän keisarikuntaa"
+ },
+ {
+  "n": 44,
+  "kohta": "kohde:brestin-linnoitus",
+  "kasite": "Kobrin",
+  "kysymys": "Kerro lisää: Kobrin"
+ },
+ {
+  "n": 45,
+  "kohta": "kohde:brestin-linnoitus",
+  "kasite": "Terespol",
+  "kysymys": "Kerro lisää: Terespol"
+ },
+ {
+  "n": 46,
+  "kohta": "kohde:brestin-linnoitus",
+  "kasite": "Volyn",
+  "kysymys": "Kerro lisää: Volyn"
+ },
+ {
+  "n": 47,
+  "kohta": "kohde:brestin-linnoitus",
+  "kasite": "Brestin linnoituksessa",
+  "kysymys": "Kerro lisää: Brestin linnoituksessa"
+ },
+ {
+  "n": 48,
+  "kohta": "kohde:brestin-linnoitus",
+  "kasite": "vallihautoihin",
+  "kysymys": "Kerro lisää: vallihautoihin"
+ },
+ {
+  "n": 49,
+  "kohta": "kohde:brestin-linnoitus",
+  "kasite": "Muhavets-joen",
+  "kysymys": "Kerro lisää: Muhavets-joen"
+ },
+ {
+  "n": 50,
+  "kohta": "kohde:brestin-linnoitus",
+  "kasite": "Ukrainasta",
+  "kysymys": "Kerro lisää: Ukrainasta"
+ },
+ {
+  "n": 51,
+  "kohta": "kohde:brestin-linnoitus",
+  "kasite": "Narew-jokeen",
+  "kysymys": "Kerro lisää: Narew-jokeen"
+ },
+ {
+  "n": 52,
+  "kohta": "kohde:brestin-linnoitus",
+  "kasite": "Veikseliin",
+  "kysymys": "Kerro lisää: Veikseliin"
+ },
+ {
+  "n": 53,
+  "kohta": "kohde:polotskin-sofian-katedraali",
+  "kasite": "Polotskin",
+  "kysymys": "Kerro lisää: Polotskin"
+ },
+ {
+  "n": 54,
+  "kohta": "kohde:polotskin-sofian-katedraali",
+  "kasite": "Vseslav",
+  "kysymys": "Kerro lisää: Vseslav"
+ },
+ {
+  "n": 55,
+  "kohta": "kohde:polotskin-sofian-katedraali",
+  "kasite": "Vilnan barokin",
+  "kysymys": "Kerro lisää: Vilnan barokin"
+ },
+ {
+  "n": 56,
+  "kohta": "kohde:polotskin-sofian-katedraali",
+  "kasite": "konserttisalina",
+  "kysymys": "Kerro lisää: konserttisalina"
+ },
+ {
+  "n": 57,
+  "kohta": "kohde:polotskin-sofian-katedraali",
+  "kasite": "urut",
+  "kysymys": "Kerro lisää: urut"
+ },
+ {
+  "n": 58,
+  "kohta": "kohde:polotskin-sofian-katedraali",
+  "kasite": "pillien",
+  "kysymys": "Kerro lisää: pillien"
+ },
+ {
+  "n": 59,
+  "kohta": "kohde:polotskin-sofian-katedraali",
+  "kasite": "rekistereillä",
+  "kysymys": "Kerro lisää: rekistereillä"
+ },
+ {
+  "n": 60,
+  "kohta": "kohde:polotskin-sofian-katedraali",
+  "kasite": "palkeilla",
+  "kysymys": "Kerro lisää: palkeilla"
+ },
+ {
+  "n": 61,
+  "kohta": "kohde:polotskin-sofian-katedraali",
+  "kasite": "Italiassa",
+  "kysymys": "Kerro lisää: Italiassa"
+ },
+ {
+  "n": 62,
+  "kohta": "kohde:polotskin-sofian-katedraali",
+  "kasite": "Vilnan barokki",
+  "kysymys": "Kerro lisää: Vilnan barokki"
+ },
+ {
+  "n": 63,
+  "kohta": "kohde:polotskin-sofian-katedraali",
+  "kasite": "Liettuan suuriruhtinaskunnan",
+  "kysymys": "Kerro lisää: Liettuan suuriruhtinaskunnan"
+ },
+ {
+  "n": 64,
+  "kohta": "kohde:polotskin-sofian-katedraali",
+  "kasite": "kynttilöitä",
+  "kysymys": "Kerro lisää: kynttilöitä"
+ },
+ {
+  "n": 65,
+  "kohta": "kohde:polotskin-sofian-katedraali",
+  "kasite": "palokuntaa",
+  "kysymys": "Kerro lisää: palokuntaa"
+ },
+ {
+  "n": 66,
+  "kohta": "kohde:gomelin-palatsi",
+  "kasite": "Ivan Starov",
+  "kysymys": "Kerro lisää: Ivan Starov"
+ },
+ {
+  "n": 67,
+  "kohta": "kohde:gomelin-palatsi",
+  "kasite": "Pjotr Rumjantsev",
+  "kysymys": "Kerro lisää: Pjotr Rumjantsev"
+ },
+ {
+  "n": 68,
+  "kohta": "kohde:gomelin-palatsi",
+  "kasite": "Gomeliin",
+  "kysymys": "Kerro lisää: Gomeliin"
+ },
+ {
+  "n": 69,
+  "kohta": "kohde:gomelin-palatsi",
+  "kasite": "Kenttämarsalkka",
+  "kysymys": "Kerro lisää: Kenttämarsalkka"
+ },
+ {
+  "n": 70,
+  "kohta": "kohde:gomelin-palatsi",
+  "kasite": "Ivan Paskevitš",
+  "kysymys": "Kerro lisää: Ivan Paskevitš"
+ },
+ {
+  "n": 71,
+  "kohta": "kohde:gomelin-palatsi",
+  "kasite": "Dnepriin",
+  "kysymys": "Kerro lisää: Dnepriin"
+ },
+ {
+  "n": 72,
+  "kohta": "kohde:gomelin-palatsi",
+  "kasite": "Gomel",
+  "kysymys": "Kerro lisää: Gomel"
+ },
+ {
+  "n": 73,
+  "kohta": "kohde:gomelin-palatsi",
+  "kasite": "Uusklassismi",
+  "kysymys": "Kerro lisää: Uusklassismi"
+ },
+ {
+  "n": 74,
+  "kohta": "kohde:gomelin-palatsi",
+  "kasite": "Gomelin",
+  "kysymys": "Kerro lisää: Gomelin"
+ },
+ {
+  "n": 75,
+  "kohta": "kohde:gomelin-palatsi",
+  "kasite": "Valko-Venäjän",
+  "kysymys": "Kerro lisää: Valko-Venäjän"
+ },
+ {
+  "n": 76,
+  "kohta": "kohde:hahmotelma-vanha-minsk",
+  "kasite": "toista maailmansotaa",
+  "kysymys": "Kerro lisää: toista maailmansotaa"
+ },
+ {
+  "n": 77,
+  "kohta": "kohde:hahmotelma-vanha-minsk",
+  "kasite": "synagogia",
+  "kysymys": "Kerro lisää: synagogia"
+ },
+ {
+  "n": 78,
+  "kohta": "kohde:hahmotelma-vanha-minsk",
+  "kasite": "toisessa maailmansodassa",
+  "kysymys": "Kerro lisää: toisessa maailmansodassa"
+ },
+ {
+  "n": 79,
+  "kohta": "kohde:hahmotelma-vanha-minsk",
+  "kasite": "Luftwaffe",
+  "kysymys": "Kerro lisää: Luftwaffe"
+ },
+ {
+  "n": 80,
+  "kohta": "kohde:hahmotelma-vanha-minsk",
+  "kasite": "Neuvostoliiton",
+  "kysymys": "Kerro lisää: Neuvostoliiton"
+ },
+ {
+  "n": 81,
+  "kohta": "kohde:hahmotelma-vanha-minsk",
+  "kasite": "Ylä-kaupunki",
+  "kysymys": "Kerro lisää: Ylä-kaupunki"
+ },
+ {
+  "n": 82,
+  "kohta": "kohde:hahmotelma-vanha-minsk",
+  "kasite": "toisen maailmansodan",
+  "kysymys": "Kerro lisää: toisen maailmansodan"
+ },
+ {
+  "n": 83,
+  "kohta": "kohde:hahmotelma-vanha-minsk",
+  "kasite": "Berezinan biosfäärialue",
+  "kysymys": "Kerro lisää: Berezinan biosfäärialue"
+ },
+ {
+  "n": 84,
+  "kohta": "kohde:hahmotelma-vanha-minsk",
+  "kasite": "ruskeakarhu",
+  "kysymys": "Kerro lisää: ruskeakarhu"
+ },
+ {
+  "n": 85,
+  "kohta": "kohde:hahmotelma-vanha-minsk",
+  "kasite": "ilves",
+  "kysymys": "Kerro lisää: ilves"
+ },
+ {
+  "n": 86,
+  "kohta": "kohde:hahmotelma-vanha-minsk",
+  "kasite": "kalasääski",
+  "kysymys": "Kerro lisää: kalasääski"
+ },
+ {
+  "n": 87,
+  "kohta": "kohde:hahmotelma-vanha-minsk",
+  "kasite": "valkovenäjä",
+  "kysymys": "Kerro lisää: valkovenäjä"
+ },
+ {
+  "n": 88,
+  "kohta": "kohde:hahmotelma-vanha-minsk",
+  "kasite": "venäjä",
+  "kysymys": "Kerro lisää: venäjä"
+ }
+]

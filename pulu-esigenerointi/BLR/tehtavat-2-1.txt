@@ -1,0 +1,1053 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mirin linna (historia)
+Tietoruudun teksti: Mirin linnaa Grodnon alueella Valko-Venäjällä alettiin rakentaa 1500-luvun taitteen jälkeen herttua Juryj Ilinitšin toimesta. Goottilaisen linnan sisäpihaa ympäröi viisi tornia, ja pihan muoto on neliö, jonka sivu on 75 metriä. Vuonna 1568 linna siirtyi Radziwiłł-suvulle, joka rakennutti siihen renessanssityylisen asuinsiiven. Toisessa maailmansodassa saksalaiset perustivat linnaan getton paikallisille juutalaisille, ja vuosina 1944–1956 siellä oli asuntoja, mikä vaurioitti sisätiloja. Linna liitettiin Unescon maailmanperintöluetteloon joulukuussa 2000, ja se toimii nykyään museona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mumbai — kohdekartta / Kohdekartta: Chhatrapati Shivaji Maharaj Terminus] rakennettu 1878–1888 Asema rakennettiin vanhan Bori Bunderin tilalle Suuren Intian niemimaan rautatien pääkonttoriksi, ja se nimettiin Victoria Terminukseksi kuningatar Victorian hallitsijajuhlan muistoksi. Suunnittelija oli brittiläinen insinööriarkkitehti Frederick William Stevens, joka sai tehtävän piirtäjä Axel Haigin akvarellin ansiosta ja jolle maksettiin työstä 1 614 000 rupiaa. Työ alkoi toukokuussa 1878 ja rakennus valmistui 20. toukokuuta 1888 — kymmenen vuotta, pisin rakennusaika millekään sen ajan talolle kaupungissa. Tyyli on goottilaista uusrenessanssia, johon on sekoitettu romaanisia ja intialaisia aiheita. Keskellä kohoaa korkea kupoli, jonka huipulla seisoo Edistystä esittä…
+- [Dubrovnik — kohdekartta / Kohdekartta: Sponzan palatsi] 1516–1522 Sponzan palatsi rakennettiin vuosina 1516–1522 arkkitehti Paskoje Miličevićin suunnitelmien mukaan, ja se yhdistelee kahta tyyliä: osa rakennuksesta on goottilaista, osa renessanssia. Nimi 'Sponza' tulee latinan sanasta, joka tarkoittaa paikkaa, johon sadevesi kerääntyy - katoilta valuva vesi kerääntyi juuri tämän talon pihalle. Palatsissa toimi melkein kaikki, mitä kaupungin talouselämä tarvitsi: tulli, tavaravarasto, rahapaja, asevarasto ja pankki, kaikki saman katon alla! Sisäpihan holvikäytävässä kauppiaat punnitsivat tavaransa julkisesti niin, ettei kukaan voinut huijata - seinään oli hakattu latinankielinen muistutus rehellisyydestä. Kun valtava maanjäristys tuhosi suuren os…
+AIEMPI KYSYMYS: Kuinka monta tornia Mirin linnan pihaa ympäröi?
+AIEMPI VASTAUS (Livia):
+Kato, siit voi laskea helposti. Mirin linnan sisäpihaa ympäröi viisi tornia. Linna edustaa [[goottilaista]] rakennustyyliä, ja sen neliönmuotoisen sisäpihan sivu on 75 metriä. Rakentaminen alkoi noin 1400-luvun lopun ja 1500-luvun alun tienoilla, ja myöhemmin linna siirtyi [[Radziwiłł]]-suvulle, joka uudisti myös torneja. Nykyään linna kuuluu [[Unescon maailmanperintöluetteloon]]. Ei paha laskutaito kyyhkyltä.
+KYSYMYS: Kerro lisää: goottilaista
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mirin linna (historia)
+Tietoruudun teksti: Mirin linnaa Grodnon alueella Valko-Venäjällä alettiin rakentaa 1500-luvun taitteen jälkeen herttua Juryj Ilinitšin toimesta. Goottilaisen linnan sisäpihaa ympäröi viisi tornia, ja pihan muoto on neliö, jonka sivu on 75 metriä. Vuonna 1568 linna siirtyi Radziwiłł-suvulle, joka rakennutti siihen renessanssityylisen asuinsiiven. Toisessa maailmansodassa saksalaiset perustivat linnaan getton paikallisille juutalaisille, ja vuosina 1944–1956 siellä oli asuntoja, mikä vaurioitti sisätiloja. Linna liitettiin Unescon maailmanperintöluetteloon joulukuussa 2000, ja se toimii nykyään museona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Historia: Linna joka selvisi joka sodasta] 1500-luvulta — Aatelismies Jurij Iljinitš aloitti linnan rakentamisen 1400-luvun lopulla tatarien ratsioiden ja naapuririitojen vuoksi. 1500-luvun jälkipuoliskolla linna siirtyi mahtisuku Radziwiłłeille, ja Mikołaj Kristof "Orpo" Radziwiłł laajensi sitä kolmikerroksisilla asuinsiivillä, uudisti torneja ja kaivatti vallihaudan. Vuosisatojen ajan linna koki hyökkäyksiä, tuhoja ja jälleenrakennuksia - viimeksi toisessa maailmansodassa, jolloin sen muurien sisään perustettiin juutalaisghetto. Pitkän kunnostuksen jälkeen Unesco lisäsi Mirin linnan maailmanperintöluetteloon vuonna 2000.
+AIEMPI KYSYMYS: Kuinka monta tornia Mirin linnan pihaa ympäröi?
+AIEMPI VASTAUS (Livia):
+Kato, siit voi laskea helposti. Mirin linnan sisäpihaa ympäröi viisi tornia. Linna edustaa [[goottilaista]] rakennustyyliä, ja sen neliönmuotoisen sisäpihan sivu on 75 metriä. Rakentaminen alkoi noin 1400-luvun lopun ja 1500-luvun alun tienoilla, ja myöhemmin linna siirtyi [[Radziwiłł]]-suvulle, joka uudisti myös torneja. Nykyään linna kuuluu [[Unescon maailmanperintöluetteloon]]. Ei paha laskutaito kyyhkyltä.
+KYSYMYS: Kerro lisää: Radziwiłł
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mirin linna (historia)
+Tietoruudun teksti: Mirin linnaa Grodnon alueella Valko-Venäjällä alettiin rakentaa 1500-luvun taitteen jälkeen herttua Juryj Ilinitšin toimesta. Goottilaisen linnan sisäpihaa ympäröi viisi tornia, ja pihan muoto on neliö, jonka sivu on 75 metriä. Vuonna 1568 linna siirtyi Radziwiłł-suvulle, joka rakennutti siihen renessanssityylisen asuinsiiven. Toisessa maailmansodassa saksalaiset perustivat linnaan getton paikallisille juutalaisille, ja vuosina 1944–1956 siellä oli asuntoja, mikä vaurioitti sisätiloja. Linna liitettiin Unescon maailmanperintöluetteloon joulukuussa 2000, ja se toimii nykyään museona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Kuinka monta tornia Mirin linnan pihaa ympäröi?
+AIEMPI VASTAUS (Livia):
+Kato, siit voi laskea helposti. Mirin linnan sisäpihaa ympäröi viisi tornia. Linna edustaa [[goottilaista]] rakennustyyliä, ja sen neliönmuotoisen sisäpihan sivu on 75 metriä. Rakentaminen alkoi noin 1400-luvun lopun ja 1500-luvun alun tienoilla, ja myöhemmin linna siirtyi [[Radziwiłł]]-suvulle, joka uudisti myös torneja. Nykyään linna kuuluu [[Unescon maailmanperintöluetteloon]]. Ei paha laskutaito kyyhkyltä.
+KYSYMYS: Kerro lisää: Unescon maailmanperintöluetteloon
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mirin linna (historia)
+Tietoruudun teksti: Mirin linnaa Grodnon alueella Valko-Venäjällä alettiin rakentaa 1500-luvun taitteen jälkeen herttua Juryj Ilinitšin toimesta. Goottilaisen linnan sisäpihaa ympäröi viisi tornia, ja pihan muoto on neliö, jonka sivu on 75 metriä. Vuonna 1568 linna siirtyi Radziwiłł-suvulle, joka rakennutti siihen renessanssityylisen asuinsiiven. Toisessa maailmansodassa saksalaiset perustivat linnaan getton paikallisille juutalaisille, ja vuosina 1944–1956 siellä oli asuntoja, mikä vaurioitti sisätiloja. Linna liitettiin Unescon maailmanperintöluetteloon joulukuussa 2000, ja se toimii nykyään museona.
+AIEMPI KYSYMYS: Mihin linnaa käytettiin toisen maailmansodan aikana ja sen jälkeen?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tää on raskas aihe. Toisen maailmansodan aikana saksalaiset perustivat linnaan [[getton]] paikallisille juutalaisille. Sodan jälkeen, vuosina 1944–1956, linnassa oli asuntoja, mikä vaurioitti sisätiloja. Tuolloin alue kuului [[Neuvostoliittoon]], ja siitä on nyt yli kahdeksankymmentä vuotta. Nykyään linna on kunnostettu, ja se toimii museona sekä kuuluu Unescon maailmanperintöluetteloon. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: getton
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mirin linna (historia)
+Tietoruudun teksti: Mirin linnaa Grodnon alueella Valko-Venäjällä alettiin rakentaa 1500-luvun taitteen jälkeen herttua Juryj Ilinitšin toimesta. Goottilaisen linnan sisäpihaa ympäröi viisi tornia, ja pihan muoto on neliö, jonka sivu on 75 metriä. Vuonna 1568 linna siirtyi Radziwiłł-suvulle, joka rakennutti siihen renessanssityylisen asuinsiiven. Toisessa maailmansodassa saksalaiset perustivat linnaan getton paikallisille juutalaisille, ja vuosina 1944–1956 siellä oli asuntoja, mikä vaurioitti sisätiloja. Linna liitettiin Unescon maailmanperintöluetteloon joulukuussa 2000, ja se toimii nykyään museona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Neuvosto äänesti maan kohtalosta] 27.3.1918 — Maaliskuun 27. päivänä 1918 Sfatul Tării, Bessarabian kansanvaltainen neuvosto, kokoontui entisen poikien lyseon juhlasaliin Chișinăussa äänestämään maansa kohtalosta. 86 edustajaa äänesti liittymisen puolesta, 3 vastaan ja 36 pidättäytyi. Puheenjohtaja Ion Inculeț ja neuvosto liittivät Bessarabian Romaniaan sillä ehdolla, että maareformi ja alueellinen itsehallinto säilyisivät. Ehdot pyyhittiin pois vasta saman vuoden marraskuun lopulla, kun neuvosto äänesti Bucureștissa uudelleen ja julisti liittymisen ehdottomaksi. Rakennus tunnetaan nykyään Sfatul Tării -palatsina.
+AIEMPI KYSYMYS: Mihin linnaa käytettiin toisen maailmansodan aikana ja sen jälkeen?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tää on raskas aihe. Toisen maailmansodan aikana saksalaiset perustivat linnaan [[getton]] paikallisille juutalaisille. Sodan jälkeen, vuosina 1944–1956, linnassa oli asuntoja, mikä vaurioitti sisätiloja. Tuolloin alue kuului [[Neuvostoliittoon]], ja siitä on nyt yli kahdeksankymmentä vuotta. Nykyään linna on kunnostettu, ja se toimii museona sekä kuuluu Unescon maailmanperintöluetteloon. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Neuvostoliittoon
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mirin linna (historia)
+Tietoruudun teksti: Mirin linnaa Grodnon alueella Valko-Venäjällä alettiin rakentaa 1500-luvun taitteen jälkeen herttua Juryj Ilinitšin toimesta. Goottilaisen linnan sisäpihaa ympäröi viisi tornia, ja pihan muoto on neliö, jonka sivu on 75 metriä. Vuonna 1568 linna siirtyi Radziwiłł-suvulle, joka rakennutti siihen renessanssityylisen asuinsiiven. Toisessa maailmansodassa saksalaiset perustivat linnaan getton paikallisille juutalaisille, ja vuosina 1944–1956 siellä oli asuntoja, mikä vaurioitti sisätiloja. Linna liitettiin Unescon maailmanperintöluetteloon joulukuussa 2000, ja se toimii nykyään museona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mikä on Unescon maailmanperintöluettelo ja kuka sen laatii?
+AIEMPI VASTAUS (Livia):
+Ai se, tästä minä tiedän. Maailmanperintöluettelo on luettelo kohteista, joilla katsotaan olevan poikkeuksellista yleismaailmallista arvoa koko ihmiskunnalle. Sen perustana on vuonna 1972 hyväksytty [[maailmanperintösopimus]], ja kohteet hyväksyy Unescon [[maailmanperintökomitea]] ehdotusten perusteella. Luettelossa on sekä kulttuuri- että luontokohteita. Mirin linna liitettiin siihen vuonna 2000. Kunhan joku lisäis luetteloon vielä pullakahvilan.
+KYSYMYS: Kerro lisää: maailmanperintösopimus
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mirin linna (historia)
+Tietoruudun teksti: Mirin linnaa Grodnon alueella Valko-Venäjällä alettiin rakentaa 1500-luvun taitteen jälkeen herttua Juryj Ilinitšin toimesta. Goottilaisen linnan sisäpihaa ympäröi viisi tornia, ja pihan muoto on neliö, jonka sivu on 75 metriä. Vuonna 1568 linna siirtyi Radziwiłł-suvulle, joka rakennutti siihen renessanssityylisen asuinsiiven. Toisessa maailmansodassa saksalaiset perustivat linnaan getton paikallisille juutalaisille, ja vuosina 1944–1956 siellä oli asuntoja, mikä vaurioitti sisätiloja. Linna liitettiin Unescon maailmanperintöluetteloon joulukuussa 2000, ja se toimii nykyään museona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mikä on Unescon maailmanperintöluettelo ja kuka sen laatii?
+AIEMPI VASTAUS (Livia):
+Ai se, tästä minä tiedän. Maailmanperintöluettelo on luettelo kohteista, joilla katsotaan olevan poikkeuksellista yleismaailmallista arvoa koko ihmiskunnalle. Sen perustana on vuonna 1972 hyväksytty [[maailmanperintösopimus]], ja kohteet hyväksyy Unescon [[maailmanperintökomitea]] ehdotusten perusteella. Luettelossa on sekä kulttuuri- että luontokohteita. Mirin linna liitettiin siihen vuonna 2000. Kunhan joku lisäis luetteloon vielä pullakahvilan.
+KYSYMYS: Kerro lisää: maailmanperintökomitea
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mirin linna (historia)
+Tietoruudun teksti: Mirin linnaa Grodnon alueella Valko-Venäjällä alettiin rakentaa 1500-luvun taitteen jälkeen herttua Juryj Ilinitšin toimesta. Goottilaisen linnan sisäpihaa ympäröi viisi tornia, ja pihan muoto on neliö, jonka sivu on 75 metriä. Vuonna 1568 linna siirtyi Radziwiłł-suvulle, joka rakennutti siihen renessanssityylisen asuinsiiven. Toisessa maailmansodassa saksalaiset perustivat linnaan getton paikallisille juutalaisille, ja vuosina 1944–1956 siellä oli asuntoja, mikä vaurioitti sisätiloja. Linna liitettiin Unescon maailmanperintöluetteloon joulukuussa 2000, ja se toimii nykyään museona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Mitä tarkoittaa goottilainen rakennustyyli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Goottilainen rakennustyyli syntyi [[Pohjois-Ranskassa]] noin 1100-luvun puolivälissä ja levisi sieltä laajalle Eurooppaan. Sille ovat tunnusomaisia [[suippokaaret]], [[ristiholvit]] ja ulkoiset tukikaaret, jotka mahdollistivat korkeat seinät ja suuret ikkunat. Tyyliä käytettiin kirkkojen lisäksi myös linnoissa ja kaupunkien rakennuksissa. Ylhäältä katsoen tornit näyttävät kyl komeilta.
+KYSYMYS: Kerro lisää: Pohjois-Ranskassa
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mirin linna (historia)
+Tietoruudun teksti: Mirin linnaa Grodnon alueella Valko-Venäjällä alettiin rakentaa 1500-luvun taitteen jälkeen herttua Juryj Ilinitšin toimesta. Goottilaisen linnan sisäpihaa ympäröi viisi tornia, ja pihan muoto on neliö, jonka sivu on 75 metriä. Vuonna 1568 linna siirtyi Radziwiłł-suvulle, joka rakennutti siihen renessanssityylisen asuinsiiven. Toisessa maailmansodassa saksalaiset perustivat linnaan getton paikallisille juutalaisille, ja vuosina 1944–1956 siellä oli asuntoja, mikä vaurioitti sisätiloja. Linna liitettiin Unescon maailmanperintöluetteloon joulukuussa 2000, ja se toimii nykyään museona.
+AIEMPI KYSYMYS: Mitä tarkoittaa goottilainen rakennustyyli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Goottilainen rakennustyyli syntyi [[Pohjois-Ranskassa]] noin 1100-luvun puolivälissä ja levisi sieltä laajalle Eurooppaan. Sille ovat tunnusomaisia [[suippokaaret]], [[ristiholvit]] ja ulkoiset tukikaaret, jotka mahdollistivat korkeat seinät ja suuret ikkunat. Tyyliä käytettiin kirkkojen lisäksi myös linnoissa ja kaupunkien rakennuksissa. Ylhäältä katsoen tornit näyttävät kyl komeilta.
+KYSYMYS: Kerro lisää: suippokaaret
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mirin linna (historia)
+Tietoruudun teksti: Mirin linnaa Grodnon alueella Valko-Venäjällä alettiin rakentaa 1500-luvun taitteen jälkeen herttua Juryj Ilinitšin toimesta. Goottilaisen linnan sisäpihaa ympäröi viisi tornia, ja pihan muoto on neliö, jonka sivu on 75 metriä. Vuonna 1568 linna siirtyi Radziwiłł-suvulle, joka rakennutti siihen renessanssityylisen asuinsiiven. Toisessa maailmansodassa saksalaiset perustivat linnaan getton paikallisille juutalaisille, ja vuosina 1944–1956 siellä oli asuntoja, mikä vaurioitti sisätiloja. Linna liitettiin Unescon maailmanperintöluetteloon joulukuussa 2000, ja se toimii nykyään museona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Puerto Montt: Risti saaren laella] Kapean, vain muutaman sadan metrin levyisen salmen takana kohoaa Isla Tenglo, pieni saari jonka harjanteella seisoo valkoinen risti - kaupungin tunnetuimpia maamerkkejä, joka näkyy laajalle Reloncavín selälle. Saarella asuu enää harvoja kalastajaperheitä, sillä maaperä on niukkaa eikä sähköverkko yllä joka taloon. Vene kuljettaa matkan minuutissa, ja saarelaiset tunnetaan erityisesti curanto-perinteestään: samaa ruokaa kuin Angelmón torillakin, mutta täällä valmistettuna vanhalla tavalla kuumennettujen kivien päällä maakuopassa. Rannalla siintävät kaupungin kerrostalot muistuttavat, miten lähellä saari todellisuudessa on.
+- [Lalibela — kaupunkilehti / Kivi ja kuva: Risti, joka kävi Belgiassa] Lalibelan risti on suuri koristeltu kulkueristi ja yksi Etiopian arvokkaimmista perintöesineistä. Sitä säilytetään Biete Medhane Alemissa. Risti on arviolta 1100-luvulta, noin kuusikymmentä senttiä pitkä ja seitsemän kilon painoinen, ja se on tehty yhdestä metallikappaleesta — joko kullasta tai pronssista ja kullasta. Alaosaa kannattavat Aadamin kädet, aihe joka toistuu etiopialaisissa kulkueristeissä; juhlapäivinä ne verhotaan kirkkaanvärisin kankain. Pappi voi hangata uskovia rististillä siunatakseen heidät.
+- [Unkari — maalehti / Historia: Kruunu, jonka risti on vinossa] 1000 — Unkarin pyhä kruunu on kahdesta osasta: alempi vanne on tehty Bysantissa ja ylempi kaariosa lännessä, ja ne on liitetty yhteen. Kruunua kiertää rivi emalikuvia pyhimyksistä, ja reunasta riippuu ketjuja. Huipulla oleva risti on kallellaan, ja arvellaan että se vääntyi, kun kruunua tungettiin liian pieneen arkkuun. Sitä ei ole suoristettu. Kruunulla oli erikoinen asema: kuningasta ei pidetty oikeana kuninkaana, ellei häntä kruunattu juuri tällä esineellä.
+AIEMPI KYSYMYS: Mitä tarkoittaa goottilainen rakennustyyli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Goottilainen rakennustyyli syntyi [[Pohjois-Ranskassa]] noin 1100-luvun puolivälissä ja levisi sieltä laajalle Eurooppaan. Sille ovat tunnusomaisia [[suippokaaret]], [[ristiholvit]] ja ulkoiset tukikaaret, jotka mahdollistivat korkeat seinät ja suuret ikkunat. Tyyliä käytettiin kirkkojen lisäksi myös linnoissa ja kaupunkien rakennuksissa. Ylhäältä katsoen tornit näyttävät kyl komeilta.
+KYSYMYS: Kerro lisää: ristiholvit
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mirin linna (historia)
+Tietoruudun teksti: Mirin linnaa Grodnon alueella Valko-Venäjällä alettiin rakentaa 1500-luvun taitteen jälkeen herttua Juryj Ilinitšin toimesta. Goottilaisen linnan sisäpihaa ympäröi viisi tornia, ja pihan muoto on neliö, jonka sivu on 75 metriä. Vuonna 1568 linna siirtyi Radziwiłł-suvulle, joka rakennutti siihen renessanssityylisen asuinsiiven. Toisessa maailmansodassa saksalaiset perustivat linnaan getton paikallisille juutalaisille, ja vuosina 1944–1956 siellä oli asuntoja, mikä vaurioitti sisätiloja. Linna liitettiin Unescon maailmanperintöluetteloon joulukuussa 2000, ja se toimii nykyään museona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kaupunkilehti / Historia: Lähes neljän kuukauden piiritys] Sulttaani Suleiman Suuri lähetti vuonna 1565 valtavan laivaston ajamaan ritarit Maltalta. Piiritys kesti 18. toukokuuta – 8. syyskuuta, ja saarta puolusti noin 500 ritaria ja 6 000 jalkaväen sotilasta. Osmanit hyökkäsivät ensin Pyhän Elmon linnakkeeseen Sciberras-vuoren kärjessä, nykyisen Vallettan paikalla, ja sen valtaaminen 23. kesäkuuta maksoi heille ainakin 6 000 miestä. Birgu ja Senglea kestivät silti pommituksen, jossa aikalaiskertoja Francisco Balbin mukaan ammuttiin noin 130 000 tykinkuulaa. Voiton jälkeen Euroopasta virtasi Maltalle rahaa, ja suurmestari Jean de Valette rakensi Sciberras-vuorelle linnoitetun kaupungin, joka sai hänen nimensä.
+- [PRI — maalehti / Historia: Piiritys joka synnytti jättiläisen] 1634 — Vuonna 1625 hollantilainen amiraali Boudewijn Hendricksz piiritti San Juanin ja poltti suuren osan kaupungista, vaikka El Morron linnoitusta ei saatukaan valtaan. Piiritys paljasti aukon: kaupunki oli suojaton maan puolelta. Espanjan kruunu päätti rakentaa toisen linnakkeen, Castillo San Cristóbalin, jonka työt alkoivat vuonna 1634 ja jatkuivat runsaat sata vuotta, valmistuen 1790. Valmiina se oli suurin espanjalaisten koskaan Uuteen maailmaan rakentama linnoitus. Sen kuivat vallihaudat, tunnelit ja toisiinsa kytketyt bastionit tekivät siitä lähes valloittamattoman, eikä yksikään vihollinen onnistunut koskaan valtaamaan sitä väkisin.
+AIEMPI KYSYMYS: Mihin linnoissa tarvittiin vallihautoja?
+AIEMPI VASTAUS (Livia):
+No niin, siit minä tiedän jotain. Vallihauta hidasti hyökkääjiä, koska se esti pääsyn suoraan muurille ja vaikeutti [[piiritystornien]] ja tikkaiden käyttöä. Se myös vaikeutti muurien alle kaivettavia tunneleita. Vesitäytteinen vallihauta oli tehokkaampi kuin kuiva, mutta se vaati sopivan vesilähteen, eikä sellaista ollut joka paikassa. Vallihaudan yli kuljettiin yleensä [[nostosillan]] tai kiinteän sillan kautta.
+
+Minulle vallihauta on aina ollut yhdentekevä, koska lennän sen yli. Mutta myönnän, että vedellä täytetty hauta tekee linnasta ihan oikeasti uskottavan näköisen.
+KYSYMYS: Kerro lisää: piiritystornien
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mirin linna (historia)
+Tietoruudun teksti: Mirin linnaa Grodnon alueella Valko-Venäjällä alettiin rakentaa 1500-luvun taitteen jälkeen herttua Juryj Ilinitšin toimesta. Goottilaisen linnan sisäpihaa ympäröi viisi tornia, ja pihan muoto on neliö, jonka sivu on 75 metriä. Vuonna 1568 linna siirtyi Radziwiłł-suvulle, joka rakennutti siihen renessanssityylisen asuinsiiven. Toisessa maailmansodassa saksalaiset perustivat linnaan getton paikallisille juutalaisille, ja vuosina 1944–1956 siellä oli asuntoja, mikä vaurioitti sisätiloja. Linna liitettiin Unescon maailmanperintöluetteloon joulukuussa 2000, ja se toimii nykyään museona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Vanha London Bridge] Thamesin ylitse rakennettiin 1176 alkaen kivisilta, joka valmistui 1209. Sen aloitti pappi Peter de Colechurch, ja lopputulos oli noin 282 metriä pitkä: yhdeksäntoista pilaria ja yhdeksäntoista kaarta sekä nostosilta. Sillalla oli taloja alusta asti, koska niiden vuokrat maksoivat sillan kunnossapidon — 1300-luvun lopulla niitä oli 140, ja 1600-luvulla lähes kaikissa oli neljä tai viisi kerrosta. Jokainen talo oli myös kauppa, ja silta oli yksi Lontoon tärkeimmistä ostoskaduista. Vuosina 1577–1579 nostosillan torni korvattiin Nonsuch Housella, kaksoistalolla, joka oli aikanaan Lontoon toinen klassisin julkisivu. Talot purettiin 1758–1761 ja koko silta 1831.
+AIEMPI KYSYMYS: Mihin linnoissa tarvittiin vallihautoja?
+AIEMPI VASTAUS (Livia):
+No niin, siit minä tiedän jotain. Vallihauta hidasti hyökkääjiä, koska se esti pääsyn suoraan muurille ja vaikeutti [[piiritystornien]] ja tikkaiden käyttöä. Se myös vaikeutti muurien alle kaivettavia tunneleita. Vesitäytteinen vallihauta oli tehokkaampi kuin kuiva, mutta se vaati sopivan vesilähteen, eikä sellaista ollut joka paikassa. Vallihaudan yli kuljettiin yleensä [[nostosillan]] tai kiinteän sillan kautta.
+
+Minulle vallihauta on aina ollut yhdentekevä, koska lennän sen yli. Mutta myönnän, että vedellä täytetty hauta tekee linnasta ihan oikeasti uskottavan näköisen.
+KYSYMYS: Kerro lisää: nostosillan
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Njasvižin linna (historia)
+Tietoruudun teksti: Njasvižin linna Minskin alueella Valko-Venäjällä oli Radziwiłł-suvun asuinlinna. Suku sai alueen haltuunsa vuonna 1533, ja Mikołaj Krzysztof Sierotka Radziwiłł aloitti nykyisen renessanssi-barokkilinnan rakentamisen vuonna 1582; työ valmistui 1604. Neliönmuotoisen kolmikerroksisen rakennuksen kulmissa on neljä kahdeksankulmaista tornia. Ruotsin armeija ryösti linnan vuonna 1706 Pohjan suuressa sodassa. Laaja entisöinti tehtiin 2004–2012. UNESCO otti kohteen maailmanperintöluetteloon vuonna 2005; linnaa ympäröi englantilaistyylinen puisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Historia: Linna joka selvisi joka sodasta] 1500-luvulta — Aatelismies Jurij Iljinitš aloitti linnan rakentamisen 1400-luvun lopulla tatarien ratsioiden ja naapuririitojen vuoksi. 1500-luvun jälkipuoliskolla linna siirtyi mahtisuku Radziwiłłeille, ja Mikołaj Kristof "Orpo" Radziwiłł laajensi sitä kolmikerroksisilla asuinsiivillä, uudisti torneja ja kaivatti vallihaudan. Vuosisatojen ajan linna koki hyökkäyksiä, tuhoja ja jälleenrakennuksia - viimeksi toisessa maailmansodassa, jolloin sen muurien sisään perustettiin juutalaisghetto. Pitkän kunnostuksen jälkeen Unesco lisäsi Mirin linnan maailmanperintöluetteloon vuonna 2000.
+AIEMPI KYSYMYS: Kuka aloitti Njasvižin linnan rakentamisen vuonna 1582?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tän nimen minä osaan. Linnan rakentamisen aloitti vuonna 1582 [[Mikołaj Krzysztof Sierotka Radziwiłł]], joka kuului mahtavaan Radziwiłł-sukuun. Suku oli saanut alueen haltuunsa vuonna 1533, ja rakennustyöt valmistuivat vuonna 1604. Linna on [[renessanssin]] ja [[barokin]] tyylien yhdistelmä, ja sen kulmissa on neljä kahdeksankulmaista tornia. Pelkkä nimi vei puolet tilasta.
+KYSYMYS: Kerro lisää: Mikołaj Krzysztof Sierotka Radziwiłł
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Njasvižin linna (historia)
+Tietoruudun teksti: Njasvižin linna Minskin alueella Valko-Venäjällä oli Radziwiłł-suvun asuinlinna. Suku sai alueen haltuunsa vuonna 1533, ja Mikołaj Krzysztof Sierotka Radziwiłł aloitti nykyisen renessanssi-barokkilinnan rakentamisen vuonna 1582; työ valmistui 1604. Neliönmuotoisen kolmikerroksisen rakennuksen kulmissa on neljä kahdeksankulmaista tornia. Ruotsin armeija ryösti linnan vuonna 1706 Pohjan suuressa sodassa. Laaja entisöinti tehtiin 2004–2012. UNESCO otti kohteen maailmanperintöluetteloon vuonna 2005; linnaa ympäröi englantilaistyylinen puisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Renessanssi syntyi kilpailusta] 1400-luku — 1400-luvun Firenzessä suvut ja killat kilpailivat siitä, kuka teettää kauneimman kirkon, patsaan tai kupolin. Kilpailusta syntyi renessanssi — "uudelleensyntyminen" — joka muutti koko Euroopan taiteen, tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli oli valmistuessaan 1436 maailman suurin muuraamalla tehty kupoli, eikä kukaan tiennyt varmasti, pysyisikö se pystyssä: se rakennettiin ilman tukitelineitä tavalla, jota insinöörit ihmettelevät yhä.
+- [Auckland — kohdekartta / Kohdekartta: Aucklandin kaupungintalo] 1909–1911 Kaupungintaloa suunniteltiin Aucklandiin jo 1872, vuosi ennen isoisän käyntiä. Paikaksi valittiin 1880 Greys Avenuen ja Queen Streetin kulma, joka lunastettiin omalla parlamenttilailla 1881, ja kun tontti osoittautui liian pieneksi, kaupunki osti naapurikiinteistöt 1883. Suunnittelukilpailu järjestettiin vasta 1908, ja sen voittivat melbournelaiset arkkitehdit JJ & EJ Clark. Peruskiven muurasi pormestari Arthur Myers 24. helmikuuta 1909, ja kenraalikuvernööri lordi Islington vihki talon 14. joulukuuta 1911. Hinta oli 126 000 puntaa. Julkisivun alaosa on tummaa melbournelaista basalttia ja yläosa vaaleaa Oamarun kalkkikiveä, ja kellotorni nousee 40 metriin. Viisikerroksinen italial…
+AIEMPI KYSYMYS: Kuka aloitti Njasvižin linnan rakentamisen vuonna 1582?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tän nimen minä osaan. Linnan rakentamisen aloitti vuonna 1582 [[Mikołaj Krzysztof Sierotka Radziwiłł]], joka kuului mahtavaan Radziwiłł-sukuun. Suku oli saanut alueen haltuunsa vuonna 1533, ja rakennustyöt valmistuivat vuonna 1604. Linna on [[renessanssin]] ja [[barokin]] tyylien yhdistelmä, ja sen kulmissa on neljä kahdeksankulmaista tornia. Pelkkä nimi vei puolet tilasta.
+KYSYMYS: Kerro lisää: renessanssin
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Njasvižin linna (historia)
+Tietoruudun teksti: Njasvižin linna Minskin alueella Valko-Venäjällä oli Radziwiłł-suvun asuinlinna. Suku sai alueen haltuunsa vuonna 1533, ja Mikołaj Krzysztof Sierotka Radziwiłł aloitti nykyisen renessanssi-barokkilinnan rakentamisen vuonna 1582; työ valmistui 1604. Neliönmuotoisen kolmikerroksisen rakennuksen kulmissa on neljä kahdeksankulmaista tornia. Ruotsin armeija ryösti linnan vuonna 1706 Pohjan suuressa sodassa. Laaja entisöinti tehtiin 2004–2012. UNESCO otti kohteen maailmanperintöluetteloon vuonna 2005; linnaa ympäröi englantilaistyylinen puisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: El Sagrarion kirkko] 1617–1715 Sagrario tarkoittaa tabernaakkelia, ja tällaiset kirkot rakennettiin katedraalin kylkeen sen sakramenttikappeliksi — ja samalla ympäröivän kaupunginosan omaksi seurakuntakirkoksi. Malli on peräisin Sevillan katedraalista, ja sieltä espanjalaiset veivät sen kaikkialle Uuteen maailmaan. Quiton El Sagrario näyttää kokonsa ja taiteellisen painoarvonsa takia enemmän itsenäiseltä kirkolta kuin katedraalin sivukappelilta. Perustustyöt aloitettiin 1617 Pyhän Sakramentin veljeskunnan varoilla, ja ne olivat vaativat: kirkko seisoo holvirakenteella, joka sulkee vanhan Zanguñan rotkon. Perustukset ulottuvat eteläsivulla neljäntoista metrin ja pohjoissivulla kolmen metrin syvyyteen — rotko vie…
+- [Aleppo — kohdekartta / Kohdekartta: Beit Ajiqbash] 1757 Jdeideh tarkoittaa uutta kaupunkia. Kortteli kasvoi Aleppon pohjoisen muurin ulkopuolelle mamelukkien ajan lopulla, ja siitä tuli kristittyjen kauppiassukujen alue; armenialaiset kävivät täältä kauppaa Persiaan ja Intiaan. Beit Ajiqbash valmistui kujien keskelle vuonna 1757; rakennuttaja oli varakas kauppias Qarah Ali. Talo ei silti kanna hänen nimeään: kun suku muutti Alexandrettaan, sen osti mies nimeltä Ashiqbash. Itälaidan huoneet purettiin myöhemmin, kun talon eteen vedettiin katu. Talossa toimii kansanperinteen museo. Ydin on sisäpiha. Sitä kiertää kaksi kerrosta ikkunoita, ja aukkojen ylle on veistetty kiveen leveitä koristenauhoja ja pyöreitä ruusukkeita. Tyyli yhdistää mameluk…
+AIEMPI KYSYMYS: Kuka aloitti Njasvižin linnan rakentamisen vuonna 1582?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tän nimen minä osaan. Linnan rakentamisen aloitti vuonna 1582 [[Mikołaj Krzysztof Sierotka Radziwiłł]], joka kuului mahtavaan Radziwiłł-sukuun. Suku oli saanut alueen haltuunsa vuonna 1533, ja rakennustyöt valmistuivat vuonna 1604. Linna on [[renessanssin]] ja [[barokin]] tyylien yhdistelmä, ja sen kulmissa on neljä kahdeksankulmaista tornia. Pelkkä nimi vei puolet tilasta.
+KYSYMYS: Kerro lisää: barokin
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Njasvižin linna (historia)
+Tietoruudun teksti: Njasvižin linna Minskin alueella Valko-Venäjällä oli Radziwiłł-suvun asuinlinna. Suku sai alueen haltuunsa vuonna 1533, ja Mikołaj Krzysztof Sierotka Radziwiłł aloitti nykyisen renessanssi-barokkilinnan rakentamisen vuonna 1582; työ valmistui 1604. Neliönmuotoisen kolmikerroksisen rakennuksen kulmissa on neljä kahdeksankulmaista tornia. Ruotsin armeija ryösti linnan vuonna 1706 Pohjan suuressa sodassa. Laaja entisöinti tehtiin 2004–2012. UNESCO otti kohteen maailmanperintöluetteloon vuonna 2005; linnaa ympäröi englantilaistyylinen puisto.
+AIEMPI KYSYMYS: Mitä linnalle tapahtui Pohjan suuressa sodassa?
+AIEMPI VASTAUS (Livia):
+Hmm— tähän tarvii vähän taustaa. Ruotsin armeija ryösti linnan vuonna 1706 Pohjan suuren sodan aikana. Sota käytiin vuosina 1700–1721 pääasiassa [[Ruotsin]] ja sitä vastaan liittoutuneiden valtojen välillä, ja sen taistelut ulottuivat myös [[Puolan–Liettuan kansainyhteisön]] alueelle, johon linna tuolloin kuului. Linna on sittemmin entisöity laajasti vuosina 2004–2012. Siitä on onneksi jo yli kolmesataa vuotta.
+KYSYMYS: Kerro lisää: Ruotsin
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Njasvižin linna (historia)
+Tietoruudun teksti: Njasvižin linna Minskin alueella Valko-Venäjällä oli Radziwiłł-suvun asuinlinna. Suku sai alueen haltuunsa vuonna 1533, ja Mikołaj Krzysztof Sierotka Radziwiłł aloitti nykyisen renessanssi-barokkilinnan rakentamisen vuonna 1582; työ valmistui 1604. Neliönmuotoisen kolmikerroksisen rakennuksen kulmissa on neljä kahdeksankulmaista tornia. Ruotsin armeija ryösti linnan vuonna 1706 Pohjan suuressa sodassa. Laaja entisöinti tehtiin 2004–2012. UNESCO otti kohteen maailmanperintöluetteloon vuonna 2005; linnaa ympäröi englantilaistyylinen puisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Historia: Hetmani valitsi tsaarin liittolaisekseen] 1654 — Hetmani Bohdan Hmelnytskyi nousi 1648 kapinaan Puolan–Liettuan valtakuntaa vastaan, ja vuoteen 1654 mennessä kasakkahetmanaatti tarvitsi vahvan suojelijan. Tammikuussa 1654 kasakat vannoivat Perejaslavin kaupungissa uskollisuudenvalan Venäjän tsaari Aleksille, ja Moskovasta saapunut lähettiläs Vasili Buturlin vahvisti sopimuksen. Vastineeksi sotilaallisesta avusta hetmanaatti sai laajan itsehallinnon niin sanotuissa maaliskuun artikloissa. Sopimus sytytti Venäjän ja Puolan välisen sodan, ja sen todellisesta luonteesta – liitosta vai alistumisesta – kiistellään historioitsijoiden kesken yhä.
+- [Liettua — maalehti / Historia: Valtakunta ulottui mereltä merelle] 1430 — Liettuan suuriruhtinaskunta oli 1400-luvun alussa Euroopan suurin valtio. Suuriruhtinas Vytautas Suuri hallitsi aluetta, joka ulottui Itämereltä lähelle Mustaamerta ja kattoi nykyisen Valko-Venäjän, suuren osan Ukrainaa sekä palasia Puolaa, Latviaa ja Venäjää. Vuonna 1386 suuriruhtinas Jogaila meni naimisiin Puolan kuningattaren kanssa ja otti kasteen, ja maat liittyivät henkilöunioniin, joka näkyy tässä kartassa vierekkäisinä valtakuntina. Liettuasta tuli näin viimeinen pakanallinen valtio, joka kääntyi kristinuskoon Euroopassa.
+AIEMPI KYSYMYS: Mitä linnalle tapahtui Pohjan suuressa sodassa?
+AIEMPI VASTAUS (Livia):
+Hmm— tähän tarvii vähän taustaa. Ruotsin armeija ryösti linnan vuonna 1706 Pohjan suuren sodan aikana. Sota käytiin vuosina 1700–1721 pääasiassa [[Ruotsin]] ja sitä vastaan liittoutuneiden valtojen välillä, ja sen taistelut ulottuivat myös [[Puolan–Liettuan kansainyhteisön]] alueelle, johon linna tuolloin kuului. Linna on sittemmin entisöity laajasti vuosina 2004–2012. Siitä on onneksi jo yli kolmesataa vuotta.
+KYSYMYS: Kerro lisää: Puolan–Liettuan kansainyhteisön
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Njasvižin linna (historia)
+Tietoruudun teksti: Njasvižin linna Minskin alueella Valko-Venäjällä oli Radziwiłł-suvun asuinlinna. Suku sai alueen haltuunsa vuonna 1533, ja Mikołaj Krzysztof Sierotka Radziwiłł aloitti nykyisen renessanssi-barokkilinnan rakentamisen vuonna 1582; työ valmistui 1604. Neliönmuotoisen kolmikerroksisen rakennuksen kulmissa on neljä kahdeksankulmaista tornia. Ruotsin armeija ryösti linnan vuonna 1706 Pohjan suuressa sodassa. Laaja entisöinti tehtiin 2004–2012. UNESCO otti kohteen maailmanperintöluetteloon vuonna 2005; linnaa ympäröi englantilaistyylinen puisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Toscanan maisema on tehty käsin] Val d'Orcian aaltoilevat kukkulat sypressiriveineen näyttävät maalaukselta, ja tavallaan ne ovatkin: maisema on viljelty samaan asuun jo renessanssin aikana, ja aikakauden maalarit ottivat siitä mallin taulujensa taustoihin. Sypressit istutettiin teiden varsille opasteiksi ja tuulensuojaksi; vehnä ja viini vuorottelevat rinteillä. Koko laakso on Unescon maailmanperintökohde — ei koskemattomana luontona, vaan siksi että ihminen ja maisema muovasivat toisiaan satojen vuosien ajan.
+AIEMPI KYSYMYS: Mitä tarkoittaa englantilaistyylinen puisto?
+AIEMPI VASTAUS (Livia):
+Nyt muistan, ylhäältä ne erottuu hyvin. Englantilaistyylinen puisto eli [[maisemapuisto]] syntyi [[Englannissa]] 1700-luvulla, ja se muotoiltiin näyttämään luonnonmukaiselta. Tyypillisiä piirteitä ovat kaarevat polut, avoimet nurmialueet, puuryhmät ja lammet. Se poikkesi [[ranskalaisesta puutarhasta]], jossa kasvit ja polut järjestettiin tiukkaan geometriaan. Puistossa kelpais istua pullan kanssa.
+KYSYMYS: Kerro lisää: maisemapuisto
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Njasvižin linna (historia)
+Tietoruudun teksti: Njasvižin linna Minskin alueella Valko-Venäjällä oli Radziwiłł-suvun asuinlinna. Suku sai alueen haltuunsa vuonna 1533, ja Mikołaj Krzysztof Sierotka Radziwiłł aloitti nykyisen renessanssi-barokkilinnan rakentamisen vuonna 1582; työ valmistui 1604. Neliönmuotoisen kolmikerroksisen rakennuksen kulmissa on neljä kahdeksankulmaista tornia. Ruotsin armeija ryösti linnan vuonna 1706 Pohjan suuressa sodassa. Laaja entisöinti tehtiin 2004–2012. UNESCO otti kohteen maailmanperintöluetteloon vuonna 2005; linnaa ympäröi englantilaistyylinen puisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kohdekartta / Kohdekartta: Grace Cathedral] 1849–1964 Seurakunta perustettiin 1849 kultaryntäyksen vuosina. Sen kolmas kirkko rakennettiin California Streetin ja Stockton Streetin kulmaan ja vihittiin 3. toukokuuta 1868 — se on se Grace Church, jonka isoisä olisi voinut nähdä. Jäsenistöön kuului kaupungin varakkainta väkeä, muiden muassa rautatiemies Leland Stanford ja pankkiiri William Henry Crocker. Vuoden 1906 järistystä seurannut palo tuhosi kirkon, ja seurakunta sai väliaikaisen tilan 1907. Crockerin suku lahjoitti hiippakunnalle oman raunioituneen tonttinsa Nob Hillin laelta, ja peruskivi laskettiin 1910. Piirustukset teki englantilainen goottilaisen tyylin mestari George Frederick Bodley, joka kuoli 1907, ja työn saattoi loppu…
+- [Sydney — kohdekartta / Kohdekartta: Pyhän Andreaksen katedraali] 1837–1868 Macquarie suunnitteli Greenwayn kanssa katedraalia, joka olisi ollut 61 metriä joka suuntaan ja seissyt suurella aukiolla muiden julkisten talojen keskellä. Peruskivi laskettiin juhlallisesti 31. elokuuta 1819, mutta työ jäi perustuksiin: suunnitelma hylättiin ja paikkaa siirrettiin, jotta George Street saatiin kulkemaan suorana. Piispa William Grant Broughton laski uuden peruskiven 1837 James Humen paljon vaatimattomampien piirustusten mukaan, ja työ pysähtyi 1842 kuivuuteen ja lamaan, kun muurit olivat noin viiden metrin korkuiset. Samana vuonna 1842 Broughtonin luo saapui Edmund Blacket mukanaan Canterburyn arkkipiispan suosituskirje. Hänestä tuli siirtomaan arkkitehti 1849–185…
+AIEMPI KYSYMYS: Mitä tarkoittaa englantilaistyylinen puisto?
+AIEMPI VASTAUS (Livia):
+Nyt muistan, ylhäältä ne erottuu hyvin. Englantilaistyylinen puisto eli [[maisemapuisto]] syntyi [[Englannissa]] 1700-luvulla, ja se muotoiltiin näyttämään luonnonmukaiselta. Tyypillisiä piirteitä ovat kaarevat polut, avoimet nurmialueet, puuryhmät ja lammet. Se poikkesi [[ranskalaisesta puutarhasta]], jossa kasvit ja polut järjestettiin tiukkaan geometriaan. Puistossa kelpais istua pullan kanssa.
+KYSYMYS: Kerro lisää: Englannissa
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Njasvižin linna (historia)
+Tietoruudun teksti: Njasvižin linna Minskin alueella Valko-Venäjällä oli Radziwiłł-suvun asuinlinna. Suku sai alueen haltuunsa vuonna 1533, ja Mikołaj Krzysztof Sierotka Radziwiłł aloitti nykyisen renessanssi-barokkilinnan rakentamisen vuonna 1582; työ valmistui 1604. Neliönmuotoisen kolmikerroksisen rakennuksen kulmissa on neljä kahdeksankulmaista tornia. Ruotsin armeija ryösti linnan vuonna 1706 Pohjan suuressa sodassa. Laaja entisöinti tehtiin 2004–2012. UNESCO otti kohteen maailmanperintöluetteloon vuonna 2005; linnaa ympäröi englantilaistyylinen puisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Luís — kaupunkilehti / São Luís: Kaupunki jonka Ranska perusti] São Luís syntyi syyskuussa 1612, kun ranskalainen upseeri Daniel de la Touche, Sieur de la Ravardière, pystytti saarelle Fort Saint-Louis’n ja nimesi paikan kuningas Ludvig XIII:n mukaan. Ranskalaiset haaveilivat mantereen kokoisesta Ranskan Ekvaattorista, mutta unelma jäi lyhyeksi: portugalilaiset karkottivat heidät jo 1615, ja hollantilaiset hallitsivat kaupunkia vielä vuosina 1641–1644. Kun isoisä saapui satamaan 1873, hän astui ainoaan Brasilian osavaltion pääkaupunkiin, jonka Ranska on koskaan perustanut – kadunkulmien ranskalainen, hollantilainen ja portugalilainen kerrostuma näkyy yhä kivikaduilla ja vanhoissa kauppahuoneissa.
+AIEMPI KYSYMYS: Mitä tarkoittaa englantilaistyylinen puisto?
+AIEMPI VASTAUS (Livia):
+Nyt muistan, ylhäältä ne erottuu hyvin. Englantilaistyylinen puisto eli [[maisemapuisto]] syntyi [[Englannissa]] 1700-luvulla, ja se muotoiltiin näyttämään luonnonmukaiselta. Tyypillisiä piirteitä ovat kaarevat polut, avoimet nurmialueet, puuryhmät ja lammet. Se poikkesi [[ranskalaisesta puutarhasta]], jossa kasvit ja polut järjestettiin tiukkaan geometriaan. Puistossa kelpais istua pullan kanssa.
+KYSYMYS: Kerro lisää: ranskalaisesta puutarhasta
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Njasvižin linna (historia)
+Tietoruudun teksti: Njasvižin linna Minskin alueella Valko-Venäjällä oli Radziwiłł-suvun asuinlinna. Suku sai alueen haltuunsa vuonna 1533, ja Mikołaj Krzysztof Sierotka Radziwiłł aloitti nykyisen renessanssi-barokkilinnan rakentamisen vuonna 1582; työ valmistui 1604. Neliönmuotoisen kolmikerroksisen rakennuksen kulmissa on neljä kahdeksankulmaista tornia. Ruotsin armeija ryösti linnan vuonna 1706 Pohjan suuressa sodassa. Laaja entisöinti tehtiin 2004–2012. UNESCO otti kohteen maailmanperintöluetteloon vuonna 2005; linnaa ympäröi englantilaistyylinen puisto.
+AIEMPI KYSYMYS: Mikä oli Liettuan suuriruhtinaskunta?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Liettuan suuriruhtinaskunta oli keskiaikainen ja uuden ajan alun valtio, joka syntyi 1200-luvulla ja laajeni 1300–1400-luvuilla nykyisen Valko-Venäjän ja Ukrainan alueille. Liitto Puolan kanssa solmittiin vuonna 1385 [[Krewon liitossa]], ja vuonna 1569 [[Lublinin unionissa]] muodostui Puolan–Liettuan kansainyhteisö. Valtio lakkasi olemasta kansainyhteisön jakojen myötä vuoteen 1795 mennessä. [[Radziwiłłit]] kuuluivat sen vaikutusvaltaisimpiin aatelissukuihin.
+
+Meikäläisten muistiinpanojen mukaan sellaisten sukujen kirjeitä kannettiin pitkiä matkoja, ja kyyhkyjäkin oli varmasti mukana. Siitä minä olen vähän ylpeä, vaikka en ollut itse paikalla.
+KYSYMYS: Kerro lisää: Krewon liitossa
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Njasvižin linna (historia)
+Tietoruudun teksti: Njasvižin linna Minskin alueella Valko-Venäjällä oli Radziwiłł-suvun asuinlinna. Suku sai alueen haltuunsa vuonna 1533, ja Mikołaj Krzysztof Sierotka Radziwiłł aloitti nykyisen renessanssi-barokkilinnan rakentamisen vuonna 1582; työ valmistui 1604. Neliönmuotoisen kolmikerroksisen rakennuksen kulmissa on neljä kahdeksankulmaista tornia. Ruotsin armeija ryösti linnan vuonna 1706 Pohjan suuressa sodassa. Laaja entisöinti tehtiin 2004–2012. UNESCO otti kohteen maailmanperintöluetteloon vuonna 2005; linnaa ympäröi englantilaistyylinen puisto.
+AIEMPI KYSYMYS: Mikä oli Liettuan suuriruhtinaskunta?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Liettuan suuriruhtinaskunta oli keskiaikainen ja uuden ajan alun valtio, joka syntyi 1200-luvulla ja laajeni 1300–1400-luvuilla nykyisen Valko-Venäjän ja Ukrainan alueille. Liitto Puolan kanssa solmittiin vuonna 1385 [[Krewon liitossa]], ja vuonna 1569 [[Lublinin unionissa]] muodostui Puolan–Liettuan kansainyhteisö. Valtio lakkasi olemasta kansainyhteisön jakojen myötä vuoteen 1795 mennessä. [[Radziwiłłit]] kuuluivat sen vaikutusvaltaisimpiin aatelissukuihin.
+
+Meikäläisten muistiinpanojen mukaan sellaisten sukujen kirjeitä kannettiin pitkiä matkoja, ja kyyhkyjäkin oli varmasti mukana. Siitä minä olen vähän ylpeä, vaikka en ollut itse paikalla.
+KYSYMYS: Kerro lisää: Lublinin unionissa
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Njasvižin linna (historia)
+Tietoruudun teksti: Njasvižin linna Minskin alueella Valko-Venäjällä oli Radziwiłł-suvun asuinlinna. Suku sai alueen haltuunsa vuonna 1533, ja Mikołaj Krzysztof Sierotka Radziwiłł aloitti nykyisen renessanssi-barokkilinnan rakentamisen vuonna 1582; työ valmistui 1604. Neliönmuotoisen kolmikerroksisen rakennuksen kulmissa on neljä kahdeksankulmaista tornia. Ruotsin armeija ryösti linnan vuonna 1706 Pohjan suuressa sodassa. Laaja entisöinti tehtiin 2004–2012. UNESCO otti kohteen maailmanperintöluetteloon vuonna 2005; linnaa ympäröi englantilaistyylinen puisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Historia: Linna joka selvisi joka sodasta] 1500-luvulta — Aatelismies Jurij Iljinitš aloitti linnan rakentamisen 1400-luvun lopulla tatarien ratsioiden ja naapuririitojen vuoksi. 1500-luvun jälkipuoliskolla linna siirtyi mahtisuku Radziwiłłeille, ja Mikołaj Kristof "Orpo" Radziwiłł laajensi sitä kolmikerroksisilla asuinsiivillä, uudisti torneja ja kaivatti vallihaudan. Vuosisatojen ajan linna koki hyökkäyksiä, tuhoja ja jälleenrakennuksia - viimeksi toisessa maailmansodassa, jolloin sen muurien sisään perustettiin juutalaisghetto. Pitkän kunnostuksen jälkeen Unesco lisäsi Mirin linnan maailmanperintöluetteloon vuonna 2000.
+AIEMPI KYSYMYS: Mikä oli Liettuan suuriruhtinaskunta?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Liettuan suuriruhtinaskunta oli keskiaikainen ja uuden ajan alun valtio, joka syntyi 1200-luvulla ja laajeni 1300–1400-luvuilla nykyisen Valko-Venäjän ja Ukrainan alueille. Liitto Puolan kanssa solmittiin vuonna 1385 [[Krewon liitossa]], ja vuonna 1569 [[Lublinin unionissa]] muodostui Puolan–Liettuan kansainyhteisö. Valtio lakkasi olemasta kansainyhteisön jakojen myötä vuoteen 1795 mennessä. [[Radziwiłłit]] kuuluivat sen vaikutusvaltaisimpiin aatelissukuihin.
+
+Meikäläisten muistiinpanojen mukaan sellaisten sukujen kirjeitä kannettiin pitkiä matkoja, ja kyyhkyjäkin oli varmasti mukana. Siitä minä olen vähän ylpeä, vaikka en ollut itse paikalla.
+KYSYMYS: Kerro lisää: Radziwiłłit
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Njasvižin linna (historia)
+Tietoruudun teksti: Njasvižin linna Minskin alueella Valko-Venäjällä oli Radziwiłł-suvun asuinlinna. Suku sai alueen haltuunsa vuonna 1533, ja Mikołaj Krzysztof Sierotka Radziwiłł aloitti nykyisen renessanssi-barokkilinnan rakentamisen vuonna 1582; työ valmistui 1604. Neliönmuotoisen kolmikerroksisen rakennuksen kulmissa on neljä kahdeksankulmaista tornia. Ruotsin armeija ryösti linnan vuonna 1706 Pohjan suuressa sodassa. Laaja entisöinti tehtiin 2004–2012. UNESCO otti kohteen maailmanperintöluetteloon vuonna 2005; linnaa ympäröi englantilaistyylinen puisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Churchill — kaupunkilehti / Churchill: Linnoitus jota rakennettiin kymmenen vuotta] Vuodesta 1731 alkaen Hudson’s Bay Company korvasi vanhan hirsiaseman valtavalla kivilinnoituksella, jonka rakentaminen kesti kymmenisen vuotta. Neliönmuotoisen Prince of Wales Fortin sivut olivat 90 metriä pitkiä ja muurit lähes 6 metriä korkeita ja tyvestään 9 metriä paksuja — yhtiön kuninkaallinen peruskirja nimittäin vaati Rupert’s Landin turvaamista linnoituksin. Muureille asetettiin lopulta 42 tykkiä, joista raskaimmat painoivat yli 2 500 kilogrammaa, ja joen toisella puolella Cape Merryn patteri piti vielä kuutta lisää. Isoisän aikana muurit seisoivat yhä, vaikka mikään vihollislaivasto ei ollut niitä koskaan todella joutunut testaamaan.
+AIEMPI KYSYMYS: Miten rakennuksia entisöidään, jotta ne säilyvät alkuperäisinä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tost minä osaan kertoo. Entisöinti perustuu ensin tutkimukseen: rakennuksen vaiheet selvitetään arkistojen, piirrosten ja rakenteiden tutkimuksen avulla. Korjauksissa käytetään mahdollisuuksien mukaan alkuperäisiä tai samanlaisia materiaaleja ja perinteisiä työtapoja, ja uudet osat pyritään tekemään sellaisiksi, että ne voi erottaa vanhoista. Kansainvälisenä lähtökohtana pidetään vuonna 1964 laadittua [[Venetsian peruskirjaa]]. [[Njasvižin linnassa]] entisöinti kesti vuosina 2004–2012. Kyl sitä remonttia riitti.
+KYSYMYS: Kerro lisää: Venetsian peruskirjaa
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Njasvižin linna (historia)
+Tietoruudun teksti: Njasvižin linna Minskin alueella Valko-Venäjällä oli Radziwiłł-suvun asuinlinna. Suku sai alueen haltuunsa vuonna 1533, ja Mikołaj Krzysztof Sierotka Radziwiłł aloitti nykyisen renessanssi-barokkilinnan rakentamisen vuonna 1582; työ valmistui 1604. Neliönmuotoisen kolmikerroksisen rakennuksen kulmissa on neljä kahdeksankulmaista tornia. Ruotsin armeija ryösti linnan vuonna 1706 Pohjan suuressa sodassa. Laaja entisöinti tehtiin 2004–2012. UNESCO otti kohteen maailmanperintöluetteloon vuonna 2005; linnaa ympäröi englantilaistyylinen puisto.
+AIEMPI KYSYMYS: Miten rakennuksia entisöidään, jotta ne säilyvät alkuperäisinä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tost minä osaan kertoo. Entisöinti perustuu ensin tutkimukseen: rakennuksen vaiheet selvitetään arkistojen, piirrosten ja rakenteiden tutkimuksen avulla. Korjauksissa käytetään mahdollisuuksien mukaan alkuperäisiä tai samanlaisia materiaaleja ja perinteisiä työtapoja, ja uudet osat pyritään tekemään sellaisiksi, että ne voi erottaa vanhoista. Kansainvälisenä lähtökohtana pidetään vuonna 1964 laadittua [[Venetsian peruskirjaa]]. [[Njasvižin linnassa]] entisöinti kesti vuosina 2004–2012. Kyl sitä remonttia riitti.
+KYSYMYS: Kerro lisää: Njasvižin linnassa
+
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Braslavin järvet (luonto · järvi)
+Tietoruudun teksti: Braslavin järvet on Vitebskin alueen luoteisosassa, lähellä Liettuan rajaa sijaitseva kansallispuisto, joka perustettiin syyskuussa 1995. Puiston pinta-ala on noin 700 neliökilometriä, ja siihen kuuluu 30 toisiinsa yhteydessä olevaa järveä. Suurimmat niistä ovat Drivjaty, Snudy ja Strusta; Drivjaty on Valko-Venäjän viidenneksi suurin järvi. Puistossa on havu- ja lehtimetsiä sekä suoalueita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Luonto: Jelnjan suo, laaja suokompleksi] vuodesta 1968 — Jelnjan suo Vitebskin alueella on Valko-Venäjän laajin suokompleksi: sen pinta-ala on 253,01 neliökilometriä, ja sen arvioidaan olevan yli 9 000 vuotta vanha. Maisemansuojelualue Jelnja perustettiin 1968, ja se nimettiin Ramsar-kosteikoksi 21. lokakuuta 2002. Suolla kasvaa yli 405 kasvilajia, joista 13 on uhanalaisia, ja siellä elää noin 150 lintulajia. Noin 50 kurkiparia pesii alueella, ja suon ympärillä on moreeni- ja järvimaisemaa lukuisine järvineen. Suo on pysähdyspaikka pohjoisesta muuttaville linnuille, jotka talvehtivat muun muassa Israelissa ja Pohjois-Afrikassa.
+AIEMPI KYSYMYS: Kuinka monta järveä Braslavin puistoon kuuluu?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tähän on helppo vastata. Braslavin järvien kansallispuistoon kuuluu 30 toisiinsa yhteydessä olevaa järveä. Puisto sijaitsee [[Vitebskin]] alueen luoteisosassa lähellä Liettuan rajaa, ja se perustettiin syyskuussa 1995. Pinta-alaltaan se on noin 700 neliökilometriä, ja suurimpia järviä ovat [[Drivjaty]], [[Snudy]] ja [[Strusta]]. Kolmekymmentä järveä ja yksi kyyhky, tasapaino on vähän vinossa.
+KYSYMYS: Kerro lisää: Vitebskin
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Braslavin järvet (luonto · järvi)
+Tietoruudun teksti: Braslavin järvet on Vitebskin alueen luoteisosassa, lähellä Liettuan rajaa sijaitseva kansallispuisto, joka perustettiin syyskuussa 1995. Puiston pinta-ala on noin 700 neliökilometriä, ja siihen kuuluu 30 toisiinsa yhteydessä olevaa järveä. Suurimmat niistä ovat Drivjaty, Snudy ja Strusta; Drivjaty on Valko-Venäjän viidenneksi suurin järvi. Puistossa on havu- ja lehtimetsiä sekä suoalueita.
+AIEMPI KYSYMYS: Kuinka monta järveä Braslavin puistoon kuuluu?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tähän on helppo vastata. Braslavin järvien kansallispuistoon kuuluu 30 toisiinsa yhteydessä olevaa järveä. Puisto sijaitsee [[Vitebskin]] alueen luoteisosassa lähellä Liettuan rajaa, ja se perustettiin syyskuussa 1995. Pinta-alaltaan se on noin 700 neliökilometriä, ja suurimpia järviä ovat [[Drivjaty]], [[Snudy]] ja [[Strusta]]. Kolmekymmentä järveä ja yksi kyyhky, tasapaino on vähän vinossa.
+KYSYMYS: Kerro lisää: Drivjaty
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Braslavin järvet (luonto · järvi)
+Tietoruudun teksti: Braslavin järvet on Vitebskin alueen luoteisosassa, lähellä Liettuan rajaa sijaitseva kansallispuisto, joka perustettiin syyskuussa 1995. Puiston pinta-ala on noin 700 neliökilometriä, ja siihen kuuluu 30 toisiinsa yhteydessä olevaa järveä. Suurimmat niistä ovat Drivjaty, Snudy ja Strusta; Drivjaty on Valko-Venäjän viidenneksi suurin järvi. Puistossa on havu- ja lehtimetsiä sekä suoalueita.
+AIEMPI KYSYMYS: Kuinka monta järveä Braslavin puistoon kuuluu?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tähän on helppo vastata. Braslavin järvien kansallispuistoon kuuluu 30 toisiinsa yhteydessä olevaa järveä. Puisto sijaitsee [[Vitebskin]] alueen luoteisosassa lähellä Liettuan rajaa, ja se perustettiin syyskuussa 1995. Pinta-alaltaan se on noin 700 neliökilometriä, ja suurimpia järviä ovat [[Drivjaty]], [[Snudy]] ja [[Strusta]]. Kolmekymmentä järveä ja yksi kyyhky, tasapaino on vähän vinossa.
+KYSYMYS: Kerro lisää: Snudy
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Braslavin järvet (luonto · järvi)
+Tietoruudun teksti: Braslavin järvet on Vitebskin alueen luoteisosassa, lähellä Liettuan rajaa sijaitseva kansallispuisto, joka perustettiin syyskuussa 1995. Puiston pinta-ala on noin 700 neliökilometriä, ja siihen kuuluu 30 toisiinsa yhteydessä olevaa järveä. Suurimmat niistä ovat Drivjaty, Snudy ja Strusta; Drivjaty on Valko-Venäjän viidenneksi suurin järvi. Puistossa on havu- ja lehtimetsiä sekä suoalueita.
+AIEMPI KYSYMYS: Kuinka monta järveä Braslavin puistoon kuuluu?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tähän on helppo vastata. Braslavin järvien kansallispuistoon kuuluu 30 toisiinsa yhteydessä olevaa järveä. Puisto sijaitsee [[Vitebskin]] alueen luoteisosassa lähellä Liettuan rajaa, ja se perustettiin syyskuussa 1995. Pinta-alaltaan se on noin 700 neliökilometriä, ja suurimpia järviä ovat [[Drivjaty]], [[Snudy]] ja [[Strusta]]. Kolmekymmentä järveä ja yksi kyyhky, tasapaino on vähän vinossa.
+KYSYMYS: Kerro lisää: Strusta
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Braslavin järvet (luonto · järvi)
+Tietoruudun teksti: Braslavin järvet on Vitebskin alueen luoteisosassa, lähellä Liettuan rajaa sijaitseva kansallispuisto, joka perustettiin syyskuussa 1995. Puiston pinta-ala on noin 700 neliökilometriä, ja siihen kuuluu 30 toisiinsa yhteydessä olevaa järveä. Suurimmat niistä ovat Drivjaty, Snudy ja Strusta; Drivjaty on Valko-Venäjän viidenneksi suurin järvi. Puistossa on havu- ja lehtimetsiä sekä suoalueita.
+AIEMPI KYSYMYS: Mikä puiston järvistä on Valko-Venäjän viidenneksi suurin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Valko-Venäjän viidenneksi suurin järvi on Drivjaty. Se kuuluu Braslavin järvien puiston suurimpiin järviin yhdessä [[Snudyn]] ja [[Strustan]] kanssa. Puistoa ympäröivät havu- ja lehtimetsät sekä suoalueet, ja se perustettiin vuonna 1995. Nimi on semmonen, että kieli menee solmuun.
+KYSYMYS: Kerro lisää: Snudyn
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Braslavin järvet (luonto · järvi)
+Tietoruudun teksti: Braslavin järvet on Vitebskin alueen luoteisosassa, lähellä Liettuan rajaa sijaitseva kansallispuisto, joka perustettiin syyskuussa 1995. Puiston pinta-ala on noin 700 neliökilometriä, ja siihen kuuluu 30 toisiinsa yhteydessä olevaa järveä. Suurimmat niistä ovat Drivjaty, Snudy ja Strusta; Drivjaty on Valko-Venäjän viidenneksi suurin järvi. Puistossa on havu- ja lehtimetsiä sekä suoalueita.
+AIEMPI KYSYMYS: Mikä puiston järvistä on Valko-Venäjän viidenneksi suurin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Valko-Venäjän viidenneksi suurin järvi on Drivjaty. Se kuuluu Braslavin järvien puiston suurimpiin järviin yhdessä [[Snudyn]] ja [[Strustan]] kanssa. Puistoa ympäröivät havu- ja lehtimetsät sekä suoalueet, ja se perustettiin vuonna 1995. Nimi on semmonen, että kieli menee solmuun.
+KYSYMYS: Kerro lisää: Strustan
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Braslavin järvet (luonto · järvi)
+Tietoruudun teksti: Braslavin järvet on Vitebskin alueen luoteisosassa, lähellä Liettuan rajaa sijaitseva kansallispuisto, joka perustettiin syyskuussa 1995. Puiston pinta-ala on noin 700 neliökilometriä, ja siihen kuuluu 30 toisiinsa yhteydessä olevaa järveä. Suurimmat niistä ovat Drivjaty, Snudy ja Strusta; Drivjaty on Valko-Venäjän viidenneksi suurin järvi. Puistossa on havu- ja lehtimetsiä sekä suoalueita.
+AIEMPI KYSYMYS: Miten jääkausi synnytti järviä?
+AIEMPI VASTAUS (Livia):
+No niin, tähän tarvitaan vähän geologiaa. Jääkaudella [[mannerjäätikkö]] kulutti liikkuessaan maanpintaan syvänteitä ja kasasi sulaessaan kerrostumia, joita kutsutaan [[moreeniksi]]. Moreenikasaumat patosivat [[sulamisvesiä]], ja syvänteisiin kerääntyi vettä. Myös jäätikön jättämät suuret jäälohkareet sulivat hitaasti ja jättivät kuoppia, joihin syntyi pienempiä järviä. Viimeisin jääkausi päättyi Euroopassa noin 11 000–12 000 vuotta sitten, ja monet Pohjois- ja Itä-Euroopan järvet ovat sen perua. Geologia ei oo minun vahvin laji, mut hyvin meni.
+KYSYMYS: Kerro lisää: mannerjäätikkö
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Braslavin järvet (luonto · järvi)
+Tietoruudun teksti: Braslavin järvet on Vitebskin alueen luoteisosassa, lähellä Liettuan rajaa sijaitseva kansallispuisto, joka perustettiin syyskuussa 1995. Puiston pinta-ala on noin 700 neliökilometriä, ja siihen kuuluu 30 toisiinsa yhteydessä olevaa järveä. Suurimmat niistä ovat Drivjaty, Snudy ja Strusta; Drivjaty on Valko-Venäjän viidenneksi suurin järvi. Puistossa on havu- ja lehtimetsiä sekä suoalueita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Luonto: Jelnjan suo, laaja suokompleksi] vuodesta 1968 — Jelnjan suo Vitebskin alueella on Valko-Venäjän laajin suokompleksi: sen pinta-ala on 253,01 neliökilometriä, ja sen arvioidaan olevan yli 9 000 vuotta vanha. Maisemansuojelualue Jelnja perustettiin 1968, ja se nimettiin Ramsar-kosteikoksi 21. lokakuuta 2002. Suolla kasvaa yli 405 kasvilajia, joista 13 on uhanalaisia, ja siellä elää noin 150 lintulajia. Noin 50 kurkiparia pesii alueella, ja suon ympärillä on moreeni- ja järvimaisemaa lukuisine järvineen. Suo on pysähdyspaikka pohjoisesta muuttaville linnuille, jotka talvehtivat muun muassa Israelissa ja Pohjois-Afrikassa.
+AIEMPI KYSYMYS: Miten jääkausi synnytti järviä?
+AIEMPI VASTAUS (Livia):
+No niin, tähän tarvitaan vähän geologiaa. Jääkaudella [[mannerjäätikkö]] kulutti liikkuessaan maanpintaan syvänteitä ja kasasi sulaessaan kerrostumia, joita kutsutaan [[moreeniksi]]. Moreenikasaumat patosivat [[sulamisvesiä]], ja syvänteisiin kerääntyi vettä. Myös jäätikön jättämät suuret jäälohkareet sulivat hitaasti ja jättivät kuoppia, joihin syntyi pienempiä järviä. Viimeisin jääkausi päättyi Euroopassa noin 11 000–12 000 vuotta sitten, ja monet Pohjois- ja Itä-Euroopan järvet ovat sen perua. Geologia ei oo minun vahvin laji, mut hyvin meni.
+KYSYMYS: Kerro lisää: moreeniksi
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Braslavin järvet (luonto · järvi)
+Tietoruudun teksti: Braslavin järvet on Vitebskin alueen luoteisosassa, lähellä Liettuan rajaa sijaitseva kansallispuisto, joka perustettiin syyskuussa 1995. Puiston pinta-ala on noin 700 neliökilometriä, ja siihen kuuluu 30 toisiinsa yhteydessä olevaa järveä. Suurimmat niistä ovat Drivjaty, Snudy ja Strusta; Drivjaty on Valko-Venäjän viidenneksi suurin järvi. Puistossa on havu- ja lehtimetsiä sekä suoalueita.
+AIEMPI KYSYMYS: Miten jääkausi synnytti järviä?
+AIEMPI VASTAUS (Livia):
+No niin, tähän tarvitaan vähän geologiaa. Jääkaudella [[mannerjäätikkö]] kulutti liikkuessaan maanpintaan syvänteitä ja kasasi sulaessaan kerrostumia, joita kutsutaan [[moreeniksi]]. Moreenikasaumat patosivat [[sulamisvesiä]], ja syvänteisiin kerääntyi vettä. Myös jäätikön jättämät suuret jäälohkareet sulivat hitaasti ja jättivät kuoppia, joihin syntyi pienempiä järviä. Viimeisin jääkausi päättyi Euroopassa noin 11 000–12 000 vuotta sitten, ja monet Pohjois- ja Itä-Euroopan järvet ovat sen perua. Geologia ei oo minun vahvin laji, mut hyvin meni.
+KYSYMYS: Kerro lisää: sulamisvesiä
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Braslavin järvet (luonto · järvi)
+Tietoruudun teksti: Braslavin järvet on Vitebskin alueen luoteisosassa, lähellä Liettuan rajaa sijaitseva kansallispuisto, joka perustettiin syyskuussa 1995. Puiston pinta-ala on noin 700 neliökilometriä, ja siihen kuuluu 30 toisiinsa yhteydessä olevaa järveä. Suurimmat niistä ovat Drivjaty, Snudy ja Strusta; Drivjaty on Valko-Venäjän viidenneksi suurin järvi. Puistossa on havu- ja lehtimetsiä sekä suoalueita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dili — kaupunkilehti / Vuorten ja meren välissä: Kolme suojelualuetta kaupungin sisällä] Dilin alueella on kolme suojeltua luonnon monimuotoisuuden aluetta. Cristo Rein suojelualue on vuoristossa, joka erottaa keskustan Heran kaupunginosasta idässä. Tasitolu on kaupungin länsilaidalla Liquiçán kunnan rajan tuntumassa ja kattaa sekä maata että rannikkovesiä; sitä kehitetään virkistysalueeksi ja pyhänä pidetyksi paikaksi. Behau kattaa suuren osan itäisen Dilin edustan merestä sekä rannikkoa Herassa ja siitä itään, ja se on ehdotuksista uusin — hallitus harkitsee sen korvaamista pienemmillä alueilla. BirdLife International on määrittänyt Cristo Rein alueen ja Tasitolun tärkeiksi lintualueiksi. Rakentaminen näille alueille on mahdollista valtion luvalla.
+AIEMPI KYSYMYS: Mitä tarkoittaa kansallispuisto?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tää on tuttua. Kansallispuisto on suojeltu alue, jonka tarkoituksena on säilyttää [[luonnon monimuotoisuuden]] kannalta arvokasta luontoa ja samalla antaa ihmisille mahdollisuus tutustua siihen. Kansainvälinen luonnonsuojeluliitto [[IUCN]] pitää kansallispuistoa omana suojelualuetyyppinään, ja se on yleensä laaja ja melko luonnontilainen. Käytännön säännöt, kuten retkeilyn ja kalastuksen rajoitukset, vaihtelevat maittain ja puistoittain. [[Braslavin järvien]] puisto perustettiin vuonna 1995. Kyyhkylle kansallispuisto on lähinnä iso ruokapöytä.
+KYSYMYS: Kerro lisää: luonnon monimuotoisuuden
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Braslavin järvet (luonto · järvi)
+Tietoruudun teksti: Braslavin järvet on Vitebskin alueen luoteisosassa, lähellä Liettuan rajaa sijaitseva kansallispuisto, joka perustettiin syyskuussa 1995. Puiston pinta-ala on noin 700 neliökilometriä, ja siihen kuuluu 30 toisiinsa yhteydessä olevaa järveä. Suurimmat niistä ovat Drivjaty, Snudy ja Strusta; Drivjaty on Valko-Venäjän viidenneksi suurin järvi. Puistossa on havu- ja lehtimetsiä sekä suoalueita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Labrador — kaupunkilehti / Labradorinsorsa – lintu joka katosi: Viimeinen lintu ammutaan] Labradorinsorsan kanta romahti nopeasti vuosien 1850 ja 1870 välillä: munia kerättiin, höyhenkauppa verotti kantaa ja talvehtimisalueiden simpukkapenkit hupenivat. Viimeinen Kanadassa nähty yksilö havaittiin New Brunswickin Grand Mananissa vuonna 1874 – isoisän matkavuonna. Viimeinen tunnettu ja museoon säilötty näytekappale ammuttiin syksyllä 1875 Long Islandilla New Yorkissa, ja viimeinen väitetty havainto tehtiin vielä 1878 Elmirassa. Kansainvälinen luonnonsuojeluliitto IUCN pitää lajia sukupuuttoon kuolleena virallisesti vuodesta 1875 – ensimmäisenä pohjoisamerikkalaisena vesilintulajina, jonka ihminen hävitti.
+- [Dunedin — kaupunkilehti / Otagon niemimaa: Maailman harvinaisin pingviini vetäytyy] Hoiho eli keltasilmäpingviini on IUCN:n luokituksessa uhanalainen, ja Otagon niemimaalla sen kanta on romahtanut 75 prosenttia 1990-luvun puolivälistä. Kehityssuunta ennakoi lajin katoamista niemimaalta kokonaan 20–40 vuoden sisällä. Syitä on useita: meren lämpeneminen, 2000-luvun puolivälin tautiepidemia joka tappoi lintuja suoraan, sekä kalastuksen ja saastumisen vaikutukset, joiden osuutta tutkijat pitävät mahdollisesti yhtä suurena tai suurempana kuin ilmastonmuutoksen.
+AIEMPI KYSYMYS: Mitä tarkoittaa kansallispuisto?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tää on tuttua. Kansallispuisto on suojeltu alue, jonka tarkoituksena on säilyttää [[luonnon monimuotoisuuden]] kannalta arvokasta luontoa ja samalla antaa ihmisille mahdollisuus tutustua siihen. Kansainvälinen luonnonsuojeluliitto [[IUCN]] pitää kansallispuistoa omana suojelualuetyyppinään, ja se on yleensä laaja ja melko luonnontilainen. Käytännön säännöt, kuten retkeilyn ja kalastuksen rajoitukset, vaihtelevat maittain ja puistoittain. [[Braslavin järvien]] puisto perustettiin vuonna 1995. Kyyhkylle kansallispuisto on lähinnä iso ruokapöytä.
+KYSYMYS: Kerro lisää: IUCN
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Braslavin järvet (luonto · järvi)
+Tietoruudun teksti: Braslavin järvet on Vitebskin alueen luoteisosassa, lähellä Liettuan rajaa sijaitseva kansallispuisto, joka perustettiin syyskuussa 1995. Puiston pinta-ala on noin 700 neliökilometriä, ja siihen kuuluu 30 toisiinsa yhteydessä olevaa järveä. Suurimmat niistä ovat Drivjaty, Snudy ja Strusta; Drivjaty on Valko-Venäjän viidenneksi suurin järvi. Puistossa on havu- ja lehtimetsiä sekä suoalueita.
+AIEMPI KYSYMYS: Mitä tarkoittaa kansallispuisto?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tää on tuttua. Kansallispuisto on suojeltu alue, jonka tarkoituksena on säilyttää [[luonnon monimuotoisuuden]] kannalta arvokasta luontoa ja samalla antaa ihmisille mahdollisuus tutustua siihen. Kansainvälinen luonnonsuojeluliitto [[IUCN]] pitää kansallispuistoa omana suojelualuetyyppinään, ja se on yleensä laaja ja melko luonnontilainen. Käytännön säännöt, kuten retkeilyn ja kalastuksen rajoitukset, vaihtelevat maittain ja puistoittain. [[Braslavin järvien]] puisto perustettiin vuonna 1995. Kyyhkylle kansallispuisto on lähinnä iso ruokapöytä.
+KYSYMYS: Kerro lisää: Braslavin järvien
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Braslavin järvet (luonto · järvi)
+Tietoruudun teksti: Braslavin järvet on Vitebskin alueen luoteisosassa, lähellä Liettuan rajaa sijaitseva kansallispuisto, joka perustettiin syyskuussa 1995. Puiston pinta-ala on noin 700 neliökilometriä, ja siihen kuuluu 30 toisiinsa yhteydessä olevaa järveä. Suurimmat niistä ovat Drivjaty, Snudy ja Strusta; Drivjaty on Valko-Venäjän viidenneksi suurin järvi. Puistossa on havu- ja lehtimetsiä sekä suoalueita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kaupunkilehti / Puisto kaupungin rajalla: Muutto, joka päättyi kaupunkiin] Ennen kaupunkia laumat seurasivat sateita ja liikkuivat tasangoilla Kilimanjarolta Kenia-vuorelle. Muutto oli lähteen mukaan yhtä suuri kuin Serengetin muutto. Kun kaupunki kasvoi, puistosta tuli muuton pohjoisin raja. Gnuut ja seeprat käyttävät yhä Kitengelan käytävää: sadekaudella ne hajaantuvat Athi-Kapitin tasangoille ja kuivalla kaudella palaavat puistoon, jossa Mbagathi-joen padot pitävät veden saatavilla. Kitengelan entiset maasaiden ryhmätilat on yksityistetty, ja maanomistajat ovat perustaneet yhdistyksen, joka etsii riistaviranomaisen kanssa ratkaisuja sekä eläimille että ihmisille.
+AIEMPI KYSYMYS: Miksi kosteikot ovat tärkeitä linnuille?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä peruskysymys. Kosteikot eli suot, järvenrannat ja tulvaniityt tarjoavat linnuille ravintoa, kuten hyönteisiä, kaloja ja vesikasveja, sekä suojaisia pesimäpaikkoja. Monille [[muuttolinnuille]] ne ovat myös tärkeitä levähdyspaikkoja matkan varrella. Lisäksi kosteikot sitovat vettä ja puhdistavat sitä, mikä tukee koko alueen [[ekosysteemiä]]. Siksi niitä suojellaan kansainvälisellä [[Ramsarin sopimuksella]], joka solmittiin vuonna 1971.
+
+Minä en ole muuttolintu, mutta ymmärrän hyvin, miksi pitkän lennon jälkeen kaipaa paikkaa, jossa on ruokaa ja rauhaa. Mut kyllä pullakin kelpaisi.
+KYSYMYS: Kerro lisää: muuttolinnuille
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Braslavin järvet (luonto · järvi)
+Tietoruudun teksti: Braslavin järvet on Vitebskin alueen luoteisosassa, lähellä Liettuan rajaa sijaitseva kansallispuisto, joka perustettiin syyskuussa 1995. Puiston pinta-ala on noin 700 neliökilometriä, ja siihen kuuluu 30 toisiinsa yhteydessä olevaa järveä. Suurimmat niistä ovat Drivjaty, Snudy ja Strusta; Drivjaty on Valko-Venäjän viidenneksi suurin järvi. Puistossa on havu- ja lehtimetsiä sekä suoalueita.
+AIEMPI KYSYMYS: Miksi kosteikot ovat tärkeitä linnuille?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä peruskysymys. Kosteikot eli suot, järvenrannat ja tulvaniityt tarjoavat linnuille ravintoa, kuten hyönteisiä, kaloja ja vesikasveja, sekä suojaisia pesimäpaikkoja. Monille [[muuttolinnuille]] ne ovat myös tärkeitä levähdyspaikkoja matkan varrella. Lisäksi kosteikot sitovat vettä ja puhdistavat sitä, mikä tukee koko alueen [[ekosysteemiä]]. Siksi niitä suojellaan kansainvälisellä [[Ramsarin sopimuksella]], joka solmittiin vuonna 1971.
+
+Minä en ole muuttolintu, mutta ymmärrän hyvin, miksi pitkän lennon jälkeen kaipaa paikkaa, jossa on ruokaa ja rauhaa. Mut kyllä pullakin kelpaisi.
+KYSYMYS: Kerro lisää: ekosysteemiä
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Braslavin järvet (luonto · järvi)
+Tietoruudun teksti: Braslavin järvet on Vitebskin alueen luoteisosassa, lähellä Liettuan rajaa sijaitseva kansallispuisto, joka perustettiin syyskuussa 1995. Puiston pinta-ala on noin 700 neliökilometriä, ja siihen kuuluu 30 toisiinsa yhteydessä olevaa järveä. Suurimmat niistä ovat Drivjaty, Snudy ja Strusta; Drivjaty on Valko-Venäjän viidenneksi suurin järvi. Puistossa on havu- ja lehtimetsiä sekä suoalueita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Denver — kaupunkilehti / Denver: Maa, joka oli sopimuksella toisten] Seudulla asuivat apassit, utet, tšeijennit, comanchet ja arapahot. Arapahot kutsuvat itseään nimellä Hinono’eino, "meidän ihmisemme", ja tšeijennit nimellä Tsétsėhéstȧhese. Vuoden 1851 Fort Laramien sopimuksessa Yhdysvallat määritteli heidän alueekseen maat North Platte -joelta Arkansas-joelle — juuri sen, missä Denver on. Vuoden 1858 kultaryntäys toi siirtolaistulvan näiden maiden yli, ja Fort Wisen sopimuksessa 1861 luovutettiin yli yhdeksänkymmentä prosenttia niistä. Osa tšeijenneistä kiisti sopimuksen: sen oli allekirjoittanut pieni vähemmistö päälliköistä. Erimielisyys johti vuosien 1864–65 Coloradon sotaan ja Sand Creekin verilöylyyn.
+AIEMPI KYSYMYS: Miksi kosteikot ovat tärkeitä linnuille?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä peruskysymys. Kosteikot eli suot, järvenrannat ja tulvaniityt tarjoavat linnuille ravintoa, kuten hyönteisiä, kaloja ja vesikasveja, sekä suojaisia pesimäpaikkoja. Monille [[muuttolinnuille]] ne ovat myös tärkeitä levähdyspaikkoja matkan varrella. Lisäksi kosteikot sitovat vettä ja puhdistavat sitä, mikä tukee koko alueen [[ekosysteemiä]]. Siksi niitä suojellaan kansainvälisellä [[Ramsarin sopimuksella]], joka solmittiin vuonna 1971.
+
+Minä en ole muuttolintu, mutta ymmärrän hyvin, miksi pitkän lennon jälkeen kaipaa paikkaa, jossa on ruokaa ja rauhaa. Mut kyllä pullakin kelpaisi.
+KYSYMYS: Kerro lisää: Ramsarin sopimuksella
+
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brestin linnoitus (historia)
+Tietoruudun teksti: Brestin linnoitus on Bug-joen ja Muhavets-joen haarojen ympäröimä linnoituskompleksi Brestin kaupungissa Valko-Venäjällä. Rakennustyöt alkoivat vuonna 1833 Brestin vanhan ruhtinaslinnan tilalle, ja suunnittelijana oli sotainsinööri Karl Opperman. Keskussaarella sijaitsevaa citadellia ympäröi kolme linnoitettua saarta: Kobrin, Terespol ja Volyn. Punatiilinen kasarmirakennus käsitti 500 huonetta, ja sen kerrotaan majoittaneen 12 000 sotilasta. Alkuperäisestä neljästä portista näkyvissä ovat nykyään enää Kholmin ja Terespolin portit.
+AIEMPI KYSYMYS: Minä vuonna linnoituksen rakentaminen alkoi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Rakennustyöt alkoivat vuonna 1833. Linnoituksen paikalla oli aiemmin Brestin vanha ruhtinaslinna, ja suunnittelijana toimi sotainsinööri [[Karl Opperman]]. Alue sijaitsee [[Bug-joen]] ja Muhavetsin haarojen ympäröimänä, ja se oli tuolloin osa [[Venäjän keisarikuntaa]]. Vuosiluku tuli kerrasta, siitä saa kyyhky olla vähän ylpeä.
+KYSYMYS: Kerro lisää: Karl Opperman
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brestin linnoitus (historia)
+Tietoruudun teksti: Brestin linnoitus on Bug-joen ja Muhavets-joen haarojen ympäröimä linnoituskompleksi Brestin kaupungissa Valko-Venäjällä. Rakennustyöt alkoivat vuonna 1833 Brestin vanhan ruhtinaslinnan tilalle, ja suunnittelijana oli sotainsinööri Karl Opperman. Keskussaarella sijaitsevaa citadellia ympäröi kolme linnoitettua saarta: Kobrin, Terespol ja Volyn. Punatiilinen kasarmirakennus käsitti 500 huonetta, ja sen kerrotaan majoittaneen 12 000 sotilasta. Alkuperäisestä neljästä portista näkyvissä ovat nykyään enää Kholmin ja Terespolin portit.
+AIEMPI KYSYMYS: Minä vuonna linnoituksen rakentaminen alkoi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Rakennustyöt alkoivat vuonna 1833. Linnoituksen paikalla oli aiemmin Brestin vanha ruhtinaslinna, ja suunnittelijana toimi sotainsinööri [[Karl Opperman]]. Alue sijaitsee [[Bug-joen]] ja Muhavetsin haarojen ympäröimänä, ja se oli tuolloin osa [[Venäjän keisarikuntaa]]. Vuosiluku tuli kerrasta, siitä saa kyyhky olla vähän ylpeä.
+KYSYMYS: Kerro lisää: Bug-joen
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brestin linnoitus (historia)
+Tietoruudun teksti: Brestin linnoitus on Bug-joen ja Muhavets-joen haarojen ympäröimä linnoituskompleksi Brestin kaupungissa Valko-Venäjällä. Rakennustyöt alkoivat vuonna 1833 Brestin vanhan ruhtinaslinnan tilalle, ja suunnittelijana oli sotainsinööri Karl Opperman. Keskussaarella sijaitsevaa citadellia ympäröi kolme linnoitettua saarta: Kobrin, Terespol ja Volyn. Punatiilinen kasarmirakennus käsitti 500 huonetta, ja sen kerrotaan majoittaneen 12 000 sotilasta. Alkuperäisestä neljästä portista näkyvissä ovat nykyään enää Kholmin ja Terespolin portit.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+AIEMPI KYSYMYS: Minä vuonna linnoituksen rakentaminen alkoi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Rakennustyöt alkoivat vuonna 1833. Linnoituksen paikalla oli aiemmin Brestin vanha ruhtinaslinna, ja suunnittelijana toimi sotainsinööri [[Karl Opperman]]. Alue sijaitsee [[Bug-joen]] ja Muhavetsin haarojen ympäröimänä, ja se oli tuolloin osa [[Venäjän keisarikuntaa]]. Vuosiluku tuli kerrasta, siitä saa kyyhky olla vähän ylpeä.
+KYSYMYS: Kerro lisää: Venäjän keisarikuntaa
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brestin linnoitus (historia)
+Tietoruudun teksti: Brestin linnoitus on Bug-joen ja Muhavets-joen haarojen ympäröimä linnoituskompleksi Brestin kaupungissa Valko-Venäjällä. Rakennustyöt alkoivat vuonna 1833 Brestin vanhan ruhtinaslinnan tilalle, ja suunnittelijana oli sotainsinööri Karl Opperman. Keskussaarella sijaitsevaa citadellia ympäröi kolme linnoitettua saarta: Kobrin, Terespol ja Volyn. Punatiilinen kasarmirakennus käsitti 500 huonetta, ja sen kerrotaan majoittaneen 12 000 sotilasta. Alkuperäisestä neljästä portista näkyvissä ovat nykyään enää Kholmin ja Terespolin portit.
+AIEMPI KYSYMYS: Mitkä kolme linnoitettua saarta citadellia ympäröi?
+AIEMPI VASTAUS (Livia):
+Katotaas, nää pitää saada oikein. Keskussaarella sijaitsevaa citadellia ympäröivät kolme linnoitettua saarta: [[Kobrin]], [[Terespol]] ja [[Volyn]]. Koko linnoituskokonaisuutta ympäröivät Bug-joen ja Muhavets-joen haarat. Punatiilisessä kasarmirakennuksessa oli 500 huonetta. Kolme saarta, ja kaikki tuli oikein.
+KYSYMYS: Kerro lisää: Kobrin
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brestin linnoitus (historia)
+Tietoruudun teksti: Brestin linnoitus on Bug-joen ja Muhavets-joen haarojen ympäröimä linnoituskompleksi Brestin kaupungissa Valko-Venäjällä. Rakennustyöt alkoivat vuonna 1833 Brestin vanhan ruhtinaslinnan tilalle, ja suunnittelijana oli sotainsinööri Karl Opperman. Keskussaarella sijaitsevaa citadellia ympäröi kolme linnoitettua saarta: Kobrin, Terespol ja Volyn. Punatiilinen kasarmirakennus käsitti 500 huonetta, ja sen kerrotaan majoittaneen 12 000 sotilasta. Alkuperäisestä neljästä portista näkyvissä ovat nykyään enää Kholmin ja Terespolin portit.
+AIEMPI KYSYMYS: Mitkä kolme linnoitettua saarta citadellia ympäröi?
+AIEMPI VASTAUS (Livia):
+Katotaas, nää pitää saada oikein. Keskussaarella sijaitsevaa citadellia ympäröivät kolme linnoitettua saarta: [[Kobrin]], [[Terespol]] ja [[Volyn]]. Koko linnoituskokonaisuutta ympäröivät Bug-joen ja Muhavets-joen haarat. Punatiilisessä kasarmirakennuksessa oli 500 huonetta. Kolme saarta, ja kaikki tuli oikein.
+KYSYMYS: Kerro lisää: Terespol
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brestin linnoitus (historia)
+Tietoruudun teksti: Brestin linnoitus on Bug-joen ja Muhavets-joen haarojen ympäröimä linnoituskompleksi Brestin kaupungissa Valko-Venäjällä. Rakennustyöt alkoivat vuonna 1833 Brestin vanhan ruhtinaslinnan tilalle, ja suunnittelijana oli sotainsinööri Karl Opperman. Keskussaarella sijaitsevaa citadellia ympäröi kolme linnoitettua saarta: Kobrin, Terespol ja Volyn. Punatiilinen kasarmirakennus käsitti 500 huonetta, ja sen kerrotaan majoittaneen 12 000 sotilasta. Alkuperäisestä neljästä portista näkyvissä ovat nykyään enää Kholmin ja Terespolin portit.
+AIEMPI KYSYMYS: Mitkä kolme linnoitettua saarta citadellia ympäröi?
+AIEMPI VASTAUS (Livia):
+Katotaas, nää pitää saada oikein. Keskussaarella sijaitsevaa citadellia ympäröivät kolme linnoitettua saarta: [[Kobrin]], [[Terespol]] ja [[Volyn]]. Koko linnoituskokonaisuutta ympäröivät Bug-joen ja Muhavets-joen haarat. Punatiilisessä kasarmirakennuksessa oli 500 huonetta. Kolme saarta, ja kaikki tuli oikein.
+KYSYMYS: Kerro lisää: Volyn
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brestin linnoitus (historia)
+Tietoruudun teksti: Brestin linnoitus on Bug-joen ja Muhavets-joen haarojen ympäröimä linnoituskompleksi Brestin kaupungissa Valko-Venäjällä. Rakennustyöt alkoivat vuonna 1833 Brestin vanhan ruhtinaslinnan tilalle, ja suunnittelijana oli sotainsinööri Karl Opperman. Keskussaarella sijaitsevaa citadellia ympäröi kolme linnoitettua saarta: Kobrin, Terespol ja Volyn. Punatiilinen kasarmirakennus käsitti 500 huonetta, ja sen kerrotaan majoittaneen 12 000 sotilasta. Alkuperäisestä neljästä portista näkyvissä ovat nykyään enää Kholmin ja Terespolin portit.
+AIEMPI KYSYMYS: Mikä on citadelli?
+AIEMPI VASTAUS (Livia):
+Ai se. Sen sanan oon kuullu monta kertaa. Citadelli on linnoituksen tai kaupungin vahvimmin linnoitettu sisäosa. Sen tehtävänä oli toimia viimeisenä puolustuspaikkana, jos ulommat linnoitusrakenteet menetettiin. [[Brestin linnoituksessa]] citadelli sijaitsee keskussaarella, jota ympäröivät [[Bug-joen]] ja Muhavets-joen haarat. Citadellin sisällä oli varmaan hyvä leipomo, sitä minä ajattelen.
+KYSYMYS: Kerro lisää: Brestin linnoituksessa
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brestin linnoitus (historia)
+Tietoruudun teksti: Brestin linnoitus on Bug-joen ja Muhavets-joen haarojen ympäröimä linnoituskompleksi Brestin kaupungissa Valko-Venäjällä. Rakennustyöt alkoivat vuonna 1833 Brestin vanhan ruhtinaslinnan tilalle, ja suunnittelijana oli sotainsinööri Karl Opperman. Keskussaarella sijaitsevaa citadellia ympäröi kolme linnoitettua saarta: Kobrin, Terespol ja Volyn. Punatiilinen kasarmirakennus käsitti 500 huonetta, ja sen kerrotaan majoittaneen 12 000 sotilasta. Alkuperäisestä neljästä portista näkyvissä ovat nykyään enää Kholmin ja Terespolin portit.
+AIEMPI KYSYMYS: Miksi joki oli hyvä paikka linnoitukselle?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, ajattelen sitä ylhäältä. Joki ja sen haarat toimivat luonnollisena esteenä, jota hyökkääjän oli vaikea ylittää, ja ne voitiin tarvittaessa yhdistää linnoituksen [[vallihautoihin]]. Joet olivat myös tärkeitä kulkuväyliä, joten niiden risteyskohtien hallinta antoi mahdollisuuden valvoa liikennettä ja kauppaa. Brestin linnoitus rakennettiin juuri [[Bug-joen]] ja [[Muhavets-joen]] haarojen väliin. Ylhäältä joet näkyy kyl hyvin, ne on kuin hopeanauhoja.
+KYSYMYS: Kerro lisää: vallihautoihin
+
+### 49
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brestin linnoitus (historia)
+Tietoruudun teksti: Brestin linnoitus on Bug-joen ja Muhavets-joen haarojen ympäröimä linnoituskompleksi Brestin kaupungissa Valko-Venäjällä. Rakennustyöt alkoivat vuonna 1833 Brestin vanhan ruhtinaslinnan tilalle, ja suunnittelijana oli sotainsinööri Karl Opperman. Keskussaarella sijaitsevaa citadellia ympäröi kolme linnoitettua saarta: Kobrin, Terespol ja Volyn. Punatiilinen kasarmirakennus käsitti 500 huonetta, ja sen kerrotaan majoittaneen 12 000 sotilasta. Alkuperäisestä neljästä portista näkyvissä ovat nykyään enää Kholmin ja Terespolin portit.
+AIEMPI KYSYMYS: Miksi joki oli hyvä paikka linnoitukselle?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, ajattelen sitä ylhäältä. Joki ja sen haarat toimivat luonnollisena esteenä, jota hyökkääjän oli vaikea ylittää, ja ne voitiin tarvittaessa yhdistää linnoituksen [[vallihautoihin]]. Joet olivat myös tärkeitä kulkuväyliä, joten niiden risteyskohtien hallinta antoi mahdollisuuden valvoa liikennettä ja kauppaa. Brestin linnoitus rakennettiin juuri [[Bug-joen]] ja [[Muhavets-joen]] haarojen väliin. Ylhäältä joet näkyy kyl hyvin, ne on kuin hopeanauhoja.
+KYSYMYS: Kerro lisää: Muhavets-joen
+
+### 50
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brestin linnoitus (historia)
+Tietoruudun teksti: Brestin linnoitus on Bug-joen ja Muhavets-joen haarojen ympäröimä linnoituskompleksi Brestin kaupungissa Valko-Venäjällä. Rakennustyöt alkoivat vuonna 1833 Brestin vanhan ruhtinaslinnan tilalle, ja suunnittelijana oli sotainsinööri Karl Opperman. Keskussaarella sijaitsevaa citadellia ympäröi kolme linnoitettua saarta: Kobrin, Terespol ja Volyn. Punatiilinen kasarmirakennus käsitti 500 huonetta, ja sen kerrotaan majoittaneen 12 000 sotilasta. Alkuperäisestä neljästä portista näkyvissä ovat nykyään enää Kholmin ja Terespolin portit.
+AIEMPI KYSYMYS: Mihin Bug-joki virtaa ja minkä maiden rajaa se kulkee?
+AIEMPI VASTAUS (Livia):
+Kas vaan, joki on tuttu. Tässä tarkoitettu Länsi-Bug on Itä-Euroopan joki, joka saa alkunsa [[Ukrainasta]] ja kulkee pitkän matkaa Ukrainan ja Puolan sekä Puolan ja Valko-Venäjän rajana. Se laskee [[Narew-jokeen]], joka puolestaan yhtyy [[Veikseliin]]. Joen mukaan on kyl helppo lentää.
+KYSYMYS: Kerro lisää: Ukrainasta
+
+### 51
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brestin linnoitus (historia)
+Tietoruudun teksti: Brestin linnoitus on Bug-joen ja Muhavets-joen haarojen ympäröimä linnoituskompleksi Brestin kaupungissa Valko-Venäjällä. Rakennustyöt alkoivat vuonna 1833 Brestin vanhan ruhtinaslinnan tilalle, ja suunnittelijana oli sotainsinööri Karl Opperman. Keskussaarella sijaitsevaa citadellia ympäröi kolme linnoitettua saarta: Kobrin, Terespol ja Volyn. Punatiilinen kasarmirakennus käsitti 500 huonetta, ja sen kerrotaan majoittaneen 12 000 sotilasta. Alkuperäisestä neljästä portista näkyvissä ovat nykyään enää Kholmin ja Terespolin portit.
+AIEMPI KYSYMYS: Mihin Bug-joki virtaa ja minkä maiden rajaa se kulkee?
+AIEMPI VASTAUS (Livia):
+Kas vaan, joki on tuttu. Tässä tarkoitettu Länsi-Bug on Itä-Euroopan joki, joka saa alkunsa [[Ukrainasta]] ja kulkee pitkän matkaa Ukrainan ja Puolan sekä Puolan ja Valko-Venäjän rajana. Se laskee [[Narew-jokeen]], joka puolestaan yhtyy [[Veikseliin]]. Joen mukaan on kyl helppo lentää.
+KYSYMYS: Kerro lisää: Narew-jokeen
+
+### 52
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brestin linnoitus (historia)
+Tietoruudun teksti: Brestin linnoitus on Bug-joen ja Muhavets-joen haarojen ympäröimä linnoituskompleksi Brestin kaupungissa Valko-Venäjällä. Rakennustyöt alkoivat vuonna 1833 Brestin vanhan ruhtinaslinnan tilalle, ja suunnittelijana oli sotainsinööri Karl Opperman. Keskussaarella sijaitsevaa citadellia ympäröi kolme linnoitettua saarta: Kobrin, Terespol ja Volyn. Punatiilinen kasarmirakennus käsitti 500 huonetta, ja sen kerrotaan majoittaneen 12 000 sotilasta. Alkuperäisestä neljästä portista näkyvissä ovat nykyään enää Kholmin ja Terespolin portit.
+AIEMPI KYSYMYS: Mihin Bug-joki virtaa ja minkä maiden rajaa se kulkee?
+AIEMPI VASTAUS (Livia):
+Kas vaan, joki on tuttu. Tässä tarkoitettu Länsi-Bug on Itä-Euroopan joki, joka saa alkunsa [[Ukrainasta]] ja kulkee pitkän matkaa Ukrainan ja Puolan sekä Puolan ja Valko-Venäjän rajana. Se laskee [[Narew-jokeen]], joka puolestaan yhtyy [[Veikseliin]]. Joen mukaan on kyl helppo lentää.
+KYSYMYS: Kerro lisää: Veikseliin
+
+### 53
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Polotskin Pyhän Sofian katedraali (kulttuuri)
+Tietoruudun teksti: Pyhän Sofian katedraali kohoaa Polotskissa Valko-Venäjällä Polota- ja Länsi-Väinäjoen yhtymäkohdassa. Sen edeltäjän rakennutti ruhtinas Vseslav vuosina 1044–1066, ja siinä oli aluksi seitsemän kupolia, joiden määrä väheni viiteen vuoden 1447 tulipalon jälkeen. Vuosina 1738–1750 rakennus rakennettiin uudelleen Vilnan barokin tyyliin, ja työn urakoi varsovalainen muurari Błażej Kosiński. Kupoleita ei rakennettu uudelleen, mutta rakennukseen tuli tornit. Nykyään katedraali toimii Polotskin museoalueella konserttisalina, ja siellä on urut.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Historia: Velhoruhtinaan kivikirkko] 1044-1066 — Polotskin ruhtinaskunta on yksi vanhimmista itäslaavilaisista valtioista, ja sen varhaishistoriaan kuuluu synkkä tarina: kun Vladimir Suuri surmasi ruhtinas Rogvolodin ja tämän pojat vuonna 978, hän otti väkisin vaimokseen Rogvolodin tyttären Rognedan. Sata vuotta myöhemmin heidän jälkeläisensä, "velhoruhtinas" Vseslav, rakennutti kaupunkiin Pyhän Sofian kirkon vuosina 1044-1066 - Kiovan ja Novgorodin Sofia-kirkkojen sisarrakennuksen, jossa kohosi alun perin seitsemän kupolia. Se on Valko-Venäjän vanhin kivirakennus, vaikka nykyinen barokkijulkisivu on 1700-luvulta.
+AIEMPI KYSYMYS: Kuka rakennutti alkuperäisen katedraalin?
+AIEMPI VASTAUS (Livia):
+Sepä sattui, tää on mieluisia aiheita. Alkuperäisen katedraalin rakennutti [[Polotskin]] ruhtinas [[Vseslav]] vuosina 1044–1066. Rakennuksessa oli aluksi seitsemän kupolia, joiden määrä väheni viiteen vuoden 1447 tulipalon jälkeen. Nykyinen rakennus edustaa [[Vilnan barokin]] tyyliä ja valmistui uudelleenrakennuksessa vuosina 1738–1750. Lähes tuhat vuotta vanhaa asiaa, ja kyl se vielä muistissa pysyy.
+KYSYMYS: Kerro lisää: Polotskin
+
+### 54
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Polotskin Pyhän Sofian katedraali (kulttuuri)
+Tietoruudun teksti: Pyhän Sofian katedraali kohoaa Polotskissa Valko-Venäjällä Polota- ja Länsi-Väinäjoen yhtymäkohdassa. Sen edeltäjän rakennutti ruhtinas Vseslav vuosina 1044–1066, ja siinä oli aluksi seitsemän kupolia, joiden määrä väheni viiteen vuoden 1447 tulipalon jälkeen. Vuosina 1738–1750 rakennus rakennettiin uudelleen Vilnan barokin tyyliin, ja työn urakoi varsovalainen muurari Błażej Kosiński. Kupoleita ei rakennettu uudelleen, mutta rakennukseen tuli tornit. Nykyään katedraali toimii Polotskin museoalueella konserttisalina, ja siellä on urut.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Historia: Velhoruhtinaan kivikirkko] 1044-1066 — Polotskin ruhtinaskunta on yksi vanhimmista itäslaavilaisista valtioista, ja sen varhaishistoriaan kuuluu synkkä tarina: kun Vladimir Suuri surmasi ruhtinas Rogvolodin ja tämän pojat vuonna 978, hän otti väkisin vaimokseen Rogvolodin tyttären Rognedan. Sata vuotta myöhemmin heidän jälkeläisensä, "velhoruhtinas" Vseslav, rakennutti kaupunkiin Pyhän Sofian kirkon vuosina 1044-1066 - Kiovan ja Novgorodin Sofia-kirkkojen sisarrakennuksen, jossa kohosi alun perin seitsemän kupolia. Se on Valko-Venäjän vanhin kivirakennus, vaikka nykyinen barokkijulkisivu on 1700-luvulta.
+AIEMPI KYSYMYS: Kuka rakennutti alkuperäisen katedraalin?
+AIEMPI VASTAUS (Livia):
+Sepä sattui, tää on mieluisia aiheita. Alkuperäisen katedraalin rakennutti [[Polotskin]] ruhtinas [[Vseslav]] vuosina 1044–1066. Rakennuksessa oli aluksi seitsemän kupolia, joiden määrä väheni viiteen vuoden 1447 tulipalon jälkeen. Nykyinen rakennus edustaa [[Vilnan barokin]] tyyliä ja valmistui uudelleenrakennuksessa vuosina 1738–1750. Lähes tuhat vuotta vanhaa asiaa, ja kyl se vielä muistissa pysyy.
+KYSYMYS: Kerro lisää: Vseslav
+
+### 55
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Polotskin Pyhän Sofian katedraali (kulttuuri)
+Tietoruudun teksti: Pyhän Sofian katedraali kohoaa Polotskissa Valko-Venäjällä Polota- ja Länsi-Väinäjoen yhtymäkohdassa. Sen edeltäjän rakennutti ruhtinas Vseslav vuosina 1044–1066, ja siinä oli aluksi seitsemän kupolia, joiden määrä väheni viiteen vuoden 1447 tulipalon jälkeen. Vuosina 1738–1750 rakennus rakennettiin uudelleen Vilnan barokin tyyliin, ja työn urakoi varsovalainen muurari Błażej Kosiński. Kupoleita ei rakennettu uudelleen, mutta rakennukseen tuli tornit. Nykyään katedraali toimii Polotskin museoalueella konserttisalina, ja siellä on urut.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kohdekartta / Kohdekartta: Vilnan yliopisto] 1579 Vilnan yliopisto on yksi Itä-Euroopan vanhimmista yliopistoista: kuningas Stefan Batory perusti sen huhtikuun 1. päivänä 1579, ja paavi vahvisti sen viralliseksi yliopistoksi samana vuonna. Ensimmäisenä lukuvuonna opiskelijoita oli 160, mutta jo seitsemän vuotta myöhemmin heitä oli lähes 700. Yliopiston kirjasto perustettiin jo vuonna 1570, ja siellä on nykyään yli viisi miljoonaa kirjaa ja käsikirjoitusta. Pihapiiriin rakennettiin vuonna 1753 tähtitorni, joka oli tuolloin vasta neljäs koko Euroopassa – sieltä tähtitieteilijät tarkkailivat taivasta aikansa parhailla kaukoputkilla. Yliopiston tunnuslause 'Hinc itur ad astra' tarkoittaa 'täältä tie vie tähtiin', ja se sopii hyvin paikkaa…
+- [Vilna — kohdekartta / Kohdekartta: Vilnan tuomiokirkko] 1783 Vilnan tuomiokirkko näyttää ulkoa kreikkalaiselta temppeliltä pylväineen, mutta sen alla piileskelee yli 700 vuoden historia. Paikalla on seissyt kirkko jo 1200-luvulta lähtien, ja arkeologit ovat löytäneet maan alta jopa vanhan pakanatemppelin jäänteitä. Nykyinen valkoinen kirkko sai lopullisen muotonsa vuonna 1783, kun se rakennettiin uudelleen aiempien tulipalojen tuhottua edelliset kirkot. Katolla seisoo kolme kivipatsasta, ja keskimmäisen, Pyhän Helenan, käsissä kohoaa yhdeksän metriä korkea kultainen risti. Neuvostoaikana patsaat purettiin katolta vuonna 1950, koska uskonto ei silloin ollut suosiossa – ne nostettiin takaisin paikoilleen vasta vuonna 1997. Kirkon alla olevissa hol…
+AIEMPI KYSYMYS: Kuka rakennutti alkuperäisen katedraalin?
+AIEMPI VASTAUS (Livia):
+Sepä sattui, tää on mieluisia aiheita. Alkuperäisen katedraalin rakennutti [[Polotskin]] ruhtinas [[Vseslav]] vuosina 1044–1066. Rakennuksessa oli aluksi seitsemän kupolia, joiden määrä väheni viiteen vuoden 1447 tulipalon jälkeen. Nykyinen rakennus edustaa [[Vilnan barokin]] tyyliä ja valmistui uudelleenrakennuksessa vuosina 1738–1750. Lähes tuhat vuotta vanhaa asiaa, ja kyl se vielä muistissa pysyy.
+KYSYMYS: Kerro lisää: Vilnan barokin
+
+### 56
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Polotskin Pyhän Sofian katedraali (kulttuuri)
+Tietoruudun teksti: Pyhän Sofian katedraali kohoaa Polotskissa Valko-Venäjällä Polota- ja Länsi-Väinäjoen yhtymäkohdassa. Sen edeltäjän rakennutti ruhtinas Vseslav vuosina 1044–1066, ja siinä oli aluksi seitsemän kupolia, joiden määrä väheni viiteen vuoden 1447 tulipalon jälkeen. Vuosina 1738–1750 rakennus rakennettiin uudelleen Vilnan barokin tyyliin, ja työn urakoi varsovalainen muurari Błażej Kosiński. Kupoleita ei rakennettu uudelleen, mutta rakennukseen tuli tornit. Nykyään katedraali toimii Polotskin museoalueella konserttisalina, ja siellä on urut.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Barcelona — kaupunkilehti / Talot: Konserttisali, jossa ei sytytetä valoja] Barcelonalainen kuoro Orfeó Català rakensi itselleen konserttitalon vuosina 1905–1908. Arkkitehti Lluís Domènech i Montaner teki kahdesta seinästä lähes kokonaan lasia ja katosta valtavan lasi-ikkunan, jonka keskeltä riippuu alaspäin kupu kuin kultainen aurinko. Sali on Euroopan ainoa konserttisali, jossa päiväsaikaan ei tarvita lainkaan sähkövaloa. Lavan takaseinällä on kahdeksantoista mosaiikkineitoa, ja jokainen soittaa eri soitinta.
+- [Iso-Britannia — maalehti / Musiikki: Proms — konsertti, jossa seistään] Proms on kahdeksan viikon konserttisarja, joka on soinut joka kesä vuodesta 1895. Royal Albert Halliin mahtuu 5 272 istujaa, mutta halvimmat liput ovat lattialle: prommaajat seisovat orkesterin edessä koko illan. Jokainen konsertti lähetetään radiossa, joten sen kuulee ilmaiseksi missä tahansa.
+AIEMPI KYSYMYS: Millä tavalla rakennusta käytetään nykyään?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tää kuulostaa kivalta. Nykyään katedraali toimii Polotskin museoalueella [[konserttisalina]], ja siellä on [[urut]]. Rakennus on säilynyt monien vaiheiden läpi: tulipalo vuonna 1447 vähensi kupolit seitsemästä viiteen, ja 1700-luvun uudelleenrakennuksessa tyyliksi tuli Vilnan barokki. Rakennukseen tuli tuolloin myös tornit. Konsertin jälkeen kelpais kyl pullakahvit.
+KYSYMYS: Kerro lisää: konserttisalina
+
+### 57
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Polotskin Pyhän Sofian katedraali (kulttuuri)
+Tietoruudun teksti: Pyhän Sofian katedraali kohoaa Polotskissa Valko-Venäjällä Polota- ja Länsi-Väinäjoen yhtymäkohdassa. Sen edeltäjän rakennutti ruhtinas Vseslav vuosina 1044–1066, ja siinä oli aluksi seitsemän kupolia, joiden määrä väheni viiteen vuoden 1447 tulipalon jälkeen. Vuosina 1738–1750 rakennus rakennettiin uudelleen Vilnan barokin tyyliin, ja työn urakoi varsovalainen muurari Błażej Kosiński. Kupoleita ei rakennettu uudelleen, mutta rakennukseen tuli tornit. Nykyään katedraali toimii Polotskin museoalueella konserttisalina, ja siellä on urut.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kaupunkilehti / Uskonto: Sali, jossa urut soivat] Synagogan sisätila muistuttaa enemmän kirkkoa kuin perinteistä synagogaa: siinä on urut, ja se rakennettiin reformijuutalaisen liikkeen tarpeisiin, jossa musiikilla oli suurempi rooli jumalanpalveluksessa. Ferenc Liszt ja Camille Saint-Saëns ovat molemmat soittaneet sen uruilla. Naisten galleria kiertää salia yläkerrassa, tyylillä joka lainaa kristillisistä kirkoista tavallista enemmän kuin ajan muut synagogat.
+AIEMPI KYSYMYS: Millä tavalla rakennusta käytetään nykyään?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tää kuulostaa kivalta. Nykyään katedraali toimii Polotskin museoalueella [[konserttisalina]], ja siellä on [[urut]]. Rakennus on säilynyt monien vaiheiden läpi: tulipalo vuonna 1447 vähensi kupolit seitsemästä viiteen, ja 1700-luvun uudelleenrakennuksessa tyyliksi tuli Vilnan barokki. Rakennukseen tuli tuolloin myös tornit. Konsertin jälkeen kelpais kyl pullakahvit.
+KYSYMYS: Kerro lisää: urut
+
+### 58
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Polotskin Pyhän Sofian katedraali (kulttuuri)
+Tietoruudun teksti: Pyhän Sofian katedraali kohoaa Polotskissa Valko-Venäjällä Polota- ja Länsi-Väinäjoen yhtymäkohdassa. Sen edeltäjän rakennutti ruhtinas Vseslav vuosina 1044–1066, ja siinä oli aluksi seitsemän kupolia, joiden määrä väheni viiteen vuoden 1447 tulipalon jälkeen. Vuosina 1738–1750 rakennus rakennettiin uudelleen Vilnan barokin tyyliin, ja työn urakoi varsovalainen muurari Błażej Kosiński. Kupoleita ei rakennettu uudelleen, mutta rakennukseen tuli tornit. Nykyään katedraali toimii Polotskin museoalueella konserttisalina, ja siellä on urut.
+AIEMPI KYSYMYS: Miten urut tuottavat äänensä?
+AIEMPI VASTAUS (Livia):
+No niin, tää on mekaniikkaa. Urut ovat puhallinsoitin, jossa ilmaa puhalletaan [[pillien]] läpi. Soittaja valitsee koskettimilla, mitkä pillit soivat, ja [[rekistereillä]], minkä tyyppisiä pillejä käytetään. Ilma tuotetaan nykyään sähkökäyttöisellä puhaltimella, aiemmin käsikäyttöisillä [[palkeilla]]. Pitkät pillit tuottavat matalia ja lyhyet korkeita ääniä. Aika monta pilliä, ja yksi kyyhky vaan kuuntelee.
+KYSYMYS: Kerro lisää: pillien
+
+### 59
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Polotskin Pyhän Sofian katedraali (kulttuuri)
+Tietoruudun teksti: Pyhän Sofian katedraali kohoaa Polotskissa Valko-Venäjällä Polota- ja Länsi-Väinäjoen yhtymäkohdassa. Sen edeltäjän rakennutti ruhtinas Vseslav vuosina 1044–1066, ja siinä oli aluksi seitsemän kupolia, joiden määrä väheni viiteen vuoden 1447 tulipalon jälkeen. Vuosina 1738–1750 rakennus rakennettiin uudelleen Vilnan barokin tyyliin, ja työn urakoi varsovalainen muurari Błażej Kosiński. Kupoleita ei rakennettu uudelleen, mutta rakennukseen tuli tornit. Nykyään katedraali toimii Polotskin museoalueella konserttisalina, ja siellä on urut.
+AIEMPI KYSYMYS: Miten urut tuottavat äänensä?
+AIEMPI VASTAUS (Livia):
+No niin, tää on mekaniikkaa. Urut ovat puhallinsoitin, jossa ilmaa puhalletaan [[pillien]] läpi. Soittaja valitsee koskettimilla, mitkä pillit soivat, ja [[rekistereillä]], minkä tyyppisiä pillejä käytetään. Ilma tuotetaan nykyään sähkökäyttöisellä puhaltimella, aiemmin käsikäyttöisillä [[palkeilla]]. Pitkät pillit tuottavat matalia ja lyhyet korkeita ääniä. Aika monta pilliä, ja yksi kyyhky vaan kuuntelee.
+KYSYMYS: Kerro lisää: rekistereillä
+
+### 60
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Polotskin Pyhän Sofian katedraali (kulttuuri)
+Tietoruudun teksti: Pyhän Sofian katedraali kohoaa Polotskissa Valko-Venäjällä Polota- ja Länsi-Väinäjoen yhtymäkohdassa. Sen edeltäjän rakennutti ruhtinas Vseslav vuosina 1044–1066, ja siinä oli aluksi seitsemän kupolia, joiden määrä väheni viiteen vuoden 1447 tulipalon jälkeen. Vuosina 1738–1750 rakennus rakennettiin uudelleen Vilnan barokin tyyliin, ja työn urakoi varsovalainen muurari Błażej Kosiński. Kupoleita ei rakennettu uudelleen, mutta rakennukseen tuli tornit. Nykyään katedraali toimii Polotskin museoalueella konserttisalina, ja siellä on urut.
+AIEMPI KYSYMYS: Miten urut tuottavat äänensä?
+AIEMPI VASTAUS (Livia):
+No niin, tää on mekaniikkaa. Urut ovat puhallinsoitin, jossa ilmaa puhalletaan [[pillien]] läpi. Soittaja valitsee koskettimilla, mitkä pillit soivat, ja [[rekistereillä]], minkä tyyppisiä pillejä käytetään. Ilma tuotetaan nykyään sähkökäyttöisellä puhaltimella, aiemmin käsikäyttöisillä [[palkeilla]]. Pitkät pillit tuottavat matalia ja lyhyet korkeita ääniä. Aika monta pilliä, ja yksi kyyhky vaan kuuntelee.
+KYSYMYS: Kerro lisää: palkeilla
+
+### 61
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Polotskin Pyhän Sofian katedraali (kulttuuri)
+Tietoruudun teksti: Pyhän Sofian katedraali kohoaa Polotskissa Valko-Venäjällä Polota- ja Länsi-Väinäjoen yhtymäkohdassa. Sen edeltäjän rakennutti ruhtinas Vseslav vuosina 1044–1066, ja siinä oli aluksi seitsemän kupolia, joiden määrä väheni viiteen vuoden 1447 tulipalon jälkeen. Vuosina 1738–1750 rakennus rakennettiin uudelleen Vilnan barokin tyyliin, ja työn urakoi varsovalainen muurari Błażej Kosiński. Kupoleita ei rakennettu uudelleen, mutta rakennukseen tuli tornit. Nykyään katedraali toimii Polotskin museoalueella konserttisalina, ja siellä on urut.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Musiikki: Ooppera keksittiin Italiassa] Ooppera syntyi Firenzessä 1600-luvun taitteessa, kun joukko oppineita yritti herättää henkiin antiikin Kreikan näytelmät — ja loi vahingossa kokonaan uuden taiteenlajin. Milanon La Scala on sen kuuluisin näyttämö: kuusi kerrosta aitioita kultauksineen ja yleisö, joka ei anna virheitä anteeksi. Sanat, joilla musiikista puhutaan kaikkialla maailmassa, ovat italiaa: piano tarkoittaa hiljaa, forte lujaa ja allegro iloisesti.
+AIEMPI KYSYMYS: Mitä tarkoittaa barokki rakennustaiteessa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Barokki on tyyli, joka syntyi [[Italiassa]] noin 1600-luvun taitteessa ja levisi laajalle Eurooppaan. Se korostaa liikettä, dramatiikkaa ja runsasta koristelua, ja julkisivuissa on kaarevia muotoja, voimakkaita valon ja varjon vaikutelmia sekä runsaasti veistoksia. [[Vilnan barokki]] on tämän tyylin paikallinen muoto, joka tunnetaan [[Liettuan suuriruhtinaskunnan]] alueelta. Barokissa kaikki on liikaa, ja sitä minä kyl arvostan.
+KYSYMYS: Kerro lisää: Italiassa
+
+### 62
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Polotskin Pyhän Sofian katedraali (kulttuuri)
+Tietoruudun teksti: Pyhän Sofian katedraali kohoaa Polotskissa Valko-Venäjällä Polota- ja Länsi-Väinäjoen yhtymäkohdassa. Sen edeltäjän rakennutti ruhtinas Vseslav vuosina 1044–1066, ja siinä oli aluksi seitsemän kupolia, joiden määrä väheni viiteen vuoden 1447 tulipalon jälkeen. Vuosina 1738–1750 rakennus rakennettiin uudelleen Vilnan barokin tyyliin, ja työn urakoi varsovalainen muurari Błażej Kosiński. Kupoleita ei rakennettu uudelleen, mutta rakennukseen tuli tornit. Nykyään katedraali toimii Polotskin museoalueella konserttisalina, ja siellä on urut.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kohdekartta / Kohdekartta: Vilnan yliopisto] 1579 Vilnan yliopisto on yksi Itä-Euroopan vanhimmista yliopistoista: kuningas Stefan Batory perusti sen huhtikuun 1. päivänä 1579, ja paavi vahvisti sen viralliseksi yliopistoksi samana vuonna. Ensimmäisenä lukuvuonna opiskelijoita oli 160, mutta jo seitsemän vuotta myöhemmin heitä oli lähes 700. Yliopiston kirjasto perustettiin jo vuonna 1570, ja siellä on nykyään yli viisi miljoonaa kirjaa ja käsikirjoitusta. Pihapiiriin rakennettiin vuonna 1753 tähtitorni, joka oli tuolloin vasta neljäs koko Euroopassa – sieltä tähtitieteilijät tarkkailivat taivasta aikansa parhailla kaukoputkilla. Yliopiston tunnuslause 'Hinc itur ad astra' tarkoittaa 'täältä tie vie tähtiin', ja se sopii hyvin paikkaa…
+- [Vilna — kohdekartta / Kohdekartta: Vilnan tuomiokirkko] 1783 Vilnan tuomiokirkko näyttää ulkoa kreikkalaiselta temppeliltä pylväineen, mutta sen alla piileskelee yli 700 vuoden historia. Paikalla on seissyt kirkko jo 1200-luvulta lähtien, ja arkeologit ovat löytäneet maan alta jopa vanhan pakanatemppelin jäänteitä. Nykyinen valkoinen kirkko sai lopullisen muotonsa vuonna 1783, kun se rakennettiin uudelleen aiempien tulipalojen tuhottua edelliset kirkot. Katolla seisoo kolme kivipatsasta, ja keskimmäisen, Pyhän Helenan, käsissä kohoaa yhdeksän metriä korkea kultainen risti. Neuvostoaikana patsaat purettiin katolta vuonna 1950, koska uskonto ei silloin ollut suosiossa – ne nostettiin takaisin paikoilleen vasta vuonna 1997. Kirkon alla olevissa hol…
+AIEMPI KYSYMYS: Mitä tarkoittaa barokki rakennustaiteessa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Barokki on tyyli, joka syntyi [[Italiassa]] noin 1600-luvun taitteessa ja levisi laajalle Eurooppaan. Se korostaa liikettä, dramatiikkaa ja runsasta koristelua, ja julkisivuissa on kaarevia muotoja, voimakkaita valon ja varjon vaikutelmia sekä runsaasti veistoksia. [[Vilnan barokki]] on tämän tyylin paikallinen muoto, joka tunnetaan [[Liettuan suuriruhtinaskunnan]] alueelta. Barokissa kaikki on liikaa, ja sitä minä kyl arvostan.
+KYSYMYS: Kerro lisää: Vilnan barokki
+
+### 63
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Polotskin Pyhän Sofian katedraali (kulttuuri)
+Tietoruudun teksti: Pyhän Sofian katedraali kohoaa Polotskissa Valko-Venäjällä Polota- ja Länsi-Väinäjoen yhtymäkohdassa. Sen edeltäjän rakennutti ruhtinas Vseslav vuosina 1044–1066, ja siinä oli aluksi seitsemän kupolia, joiden määrä väheni viiteen vuoden 1447 tulipalon jälkeen. Vuosina 1738–1750 rakennus rakennettiin uudelleen Vilnan barokin tyyliin, ja työn urakoi varsovalainen muurari Błażej Kosiński. Kupoleita ei rakennettu uudelleen, mutta rakennukseen tuli tornit. Nykyään katedraali toimii Polotskin museoalueella konserttisalina, ja siellä on urut.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Ruoka: Keitto joka väriytyy pinkiksi] Kesällä — Šaltibarščiai on kylmä, kirkkaanpinkki keitto, joka tehdään keitetystä punajuuresta ja hapanmaitotuotteesta, useimmiten kefiiristä tai piimästä. Sitä tarjoillaan kesällä kylmänä, usein keitetyn munan, tillin ja lämpimien perunoiden kanssa. Keiton juuret ulottuvat Liettuan suuriruhtinaskunnan aikaan, jolloin ylimystön pöydässä kylmiin keittoihin lisättiin ylellisiä aineksia kuten rapua tai riistaa isännän varallisuuden osoitukseksi. Ajan myötä yksinkertaisempi versio levisi tavallisiin koteihin, ja siitä tuli koko maan rakastama kesäruoka.
+AIEMPI KYSYMYS: Mitä tarkoittaa barokki rakennustaiteessa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Barokki on tyyli, joka syntyi [[Italiassa]] noin 1600-luvun taitteessa ja levisi laajalle Eurooppaan. Se korostaa liikettä, dramatiikkaa ja runsasta koristelua, ja julkisivuissa on kaarevia muotoja, voimakkaita valon ja varjon vaikutelmia sekä runsaasti veistoksia. [[Vilnan barokki]] on tämän tyylin paikallinen muoto, joka tunnetaan [[Liettuan suuriruhtinaskunnan]] alueelta. Barokissa kaikki on liikaa, ja sitä minä kyl arvostan.
+KYSYMYS: Kerro lisää: Liettuan suuriruhtinaskunnan
+
+### 64
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Polotskin Pyhän Sofian katedraali (kulttuuri)
+Tietoruudun teksti: Pyhän Sofian katedraali kohoaa Polotskissa Valko-Venäjällä Polota- ja Länsi-Väinäjoen yhtymäkohdassa. Sen edeltäjän rakennutti ruhtinas Vseslav vuosina 1044–1066, ja siinä oli aluksi seitsemän kupolia, joiden määrä väheni viiteen vuoden 1447 tulipalon jälkeen. Vuosina 1738–1750 rakennus rakennettiin uudelleen Vilnan barokin tyyliin, ja työn urakoi varsovalainen muurari Błażej Kosiński. Kupoleita ei rakennettu uudelleen, mutta rakennukseen tuli tornit. Nykyään katedraali toimii Polotskin museoalueella konserttisalina, ja siellä on urut.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Paulo — kohdekartta / Kohdekartta: Mustien veljeskunnan kirkko] 1906 Mustien veljeskunnat syntyivät orjuuden aikana yhdessäolon, avunannon ja vastarinnan muodoksi. Ruusukon Neitsyen veljeskunta anoi Portugalin kuninkaalta Juhana V:ltä lupaa omaan kirkkoon 1721. Vastausta ei ole tallella, mutta rahankeruu alkoi: erakko Domingo de Melo Tavares kiersi 1725 Minas Geraisin keräämässä almuja. Kaupunginvaltuusto lahjoitti tontin 10. heinäkuuta 1728, ja kirkko valmistui 1737. Sitä ennen orjat, joita ei päästetty valkoisten kirkkoihin, olivat kokoontuneet pieneen kappeliin Anhangabaú-joen rannalla. Kirkossa katolinen ja bantulainen perinne sekoittuivat. Pyhää Benedictusta kutsuttiin nimellä Lingongo, pyhää Antoniusta nimellä Vereque ja Murheellista Neitsyttä nim…
+- [Punta Arenas — kohdekartta / Kohdekartta: Sara Braunin hautausmaa] 1894 Avenida Bulnesin varrella on neljän hehtaarin hautausmaa, jolla on kolme porttia. Se vihittiin 9. huhtikuuta 1894 kuvernööri Manuel Señoretin aikana ja korvasi vanhan hautausmaan, joka oli nykyisen Lautaron aukion paikalla. Maan lahjoitti Sara Braun, ja insinööri Fortunato Circutti suunnitteli portit ja muurit 1919. Alue täyttyi jo kauan sitten, ja sen tilalle on tullut uudempi hautausmaa pohjoisempana; vanha on säilyttänyt asemansa monumenttihautausmaana. CNN on listannut sen maailman kauneimpien hautausmaiden joukkoon, ja se on ollut Chilen kansallismonumentti vuodesta 2012. Käytävien varrella ovat kaupungin suurten sukujen kappelit: Menéndez-Behety, Braun Hamburger, Blanchard, Green…
+AIEMPI KYSYMYS: Miksi keskiajan kirkot paloivat niin usein?
+AIEMPI VASTAUS (Livia):
+No jopas, tää on mielenkiintoinen. Monissa keskiajan kirkoissa oli kiviset seinät mutta puinen kattorakenne, ja puu paloi helposti. Valaistuksena käytettiin [[kynttilöitä]] ja öljylamppuja, ja tulipalo saattoi syttyä myös salamaniskusta tai kaupunkia kohdanneesta suuresta tulipalosta. Palontorjunta oli vaatimatonta, koska ammattimaista [[palokuntaa]] ei ollut ja vesi haettiin käsin. Siksi monet kirkot jouduttiin rakentamaan uudelleen, kuten Polotskin Pyhän Sofian katedraali 1400-luvun tulipalon jälkeen. Pysyn kyl itse kaukana kynttilöistä.
+KYSYMYS: Kerro lisää: kynttilöitä
+
+### 65
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Polotskin Pyhän Sofian katedraali (kulttuuri)
+Tietoruudun teksti: Pyhän Sofian katedraali kohoaa Polotskissa Valko-Venäjällä Polota- ja Länsi-Väinäjoen yhtymäkohdassa. Sen edeltäjän rakennutti ruhtinas Vseslav vuosina 1044–1066, ja siinä oli aluksi seitsemän kupolia, joiden määrä väheni viiteen vuoden 1447 tulipalon jälkeen. Vuosina 1738–1750 rakennus rakennettiin uudelleen Vilnan barokin tyyliin, ja työn urakoi varsovalainen muurari Błażej Kosiński. Kupoleita ei rakennettu uudelleen, mutta rakennukseen tuli tornit. Nykyään katedraali toimii Polotskin museoalueella konserttisalina, ja siellä on urut.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kohdekartta / Kohdekartta: Coit Tower] 1849–1934 Telegraph Hill sai nimensä 1849, kun sen laelle rakennettiin kaksikerroksinen tähystysasema. Sieltä ilmoitettiin kaupunkilaisille optisella merkinantolaitteella, mitä laivoja oli tulossa satamaan; 1853 se korvattiin sähkölennättimellä, jonka myrsky tuhosi 1870. Isoisän matkan aikaan kukkulalla oli siis yhä lennättimen nimi mutta ei enää asemaa. Paikkaa on kuvattu koko lahden ja viiden ympäröivän piirikunnan parhaaksi näköalapaikaksi. Tornin maksoi Lillie Hitchcock Coit (1843–1929). Viisitoistavuotiaana hän näki Knickerbocker Engine Co. No. 5:n palokunnan jäävän vajaamiehiseksi hälytyksessä Telegraph Hillille, heitti koulukirjansa maahan ja auttoi ruiskun mäkeen huutaen muitakin si…
+- [Los Angeles — kohdekartta / Kohdekartta: Pääkirjasto] 1926 Bertram Goodhuen suunnittelema kirjastotalo rakennettiin 1924–1926, ja se avattiin yleisölle 6. heinäkuuta 1926. Goodhue haki vaikutteita muinaisesta Egyptistä ja Välimeren rakennusperinteestä: keskustornin huipulla on laatoitettu mosaiikkipyramidi, jonka sivuilla on aurinkoja ja jonka huipulla soihtua kannatteleva käsi esittää oppimisen valoa. Muualla talossa on sfinksejä, käärmeitä ja tähtitaivasmosaiikkeja sekä Lee Lawrien veistoksia. Sisällä on Dean Cornwellin neliosainen seinämaalaus Kalifornian historiasta, valmis noin 1933. Talo toimi huonosti. Lukusalien avohyllyillä oli vain kymmenisen prosenttia kokoelmasta, ja kaiken muun sai pyytämällä lipukkeella: virkailija haki kirjan si…
+AIEMPI KYSYMYS: Miksi keskiajan kirkot paloivat niin usein?
+AIEMPI VASTAUS (Livia):
+No jopas, tää on mielenkiintoinen. Monissa keskiajan kirkoissa oli kiviset seinät mutta puinen kattorakenne, ja puu paloi helposti. Valaistuksena käytettiin [[kynttilöitä]] ja öljylamppuja, ja tulipalo saattoi syttyä myös salamaniskusta tai kaupunkia kohdanneesta suuresta tulipalosta. Palontorjunta oli vaatimatonta, koska ammattimaista [[palokuntaa]] ei ollut ja vesi haettiin käsin. Siksi monet kirkot jouduttiin rakentamaan uudelleen, kuten Polotskin Pyhän Sofian katedraali 1400-luvun tulipalon jälkeen. Pysyn kyl itse kaukana kynttilöistä.
+KYSYMYS: Kerro lisää: palokuntaa
+
+### 66
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gomelin Rumjantsev-Paskevitš-palatsi (historia)
+Tietoruudun teksti: Rumjantsev-Paskevitš-palatsi sijaitsee Gomelissa Valko-Venäjällä Sozh-joen rannalla. Kenttämarsalkka Pjotr Rumjantsev rakennutti sen vuosina 1777–1796, ja uusklassisen alkuperäissuunnitelman laati Ivan Starov. Vuonna 1834 kruunu osti kiinteistön, ja se siirtyi kenttämarsalkka Ivan Paskevitšille, joka lisäsi palatsiin nelikerroksisen tornin ja kolmikerroksisen siiven. Palatsia ympäröivä puisto ulottuu noin 800 metrin matkalle joen varrella, ja sen alueella on Pietarin ja Paavalin kirkko, joka vihittiin käyttöön vuonna 1824. Nykyään rakennuksessa toimii museo.
+AIEMPI KYSYMYS: Kuka suunnitteli palatsin alkuperäisen uusklassisen version?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Palatsin alkuperäisen uusklassisen suunnitelman laati arkkitehti [[Ivan Starov]], ja rakennuksen teetti kenttämarsalkka [[Pjotr Rumjantsev]] 1700-luvun lopulla Sozh-joen rannalle [[Gomeliin]]. Uusklassismille ovat tyypillisiä selkeät, tasapainoiset muodot ja antiikin esikuvista lainatut yksityiskohdat, ja juuri sellaista tyyliä palatsin ensimmäinen versio edusti. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Ivan Starov
+
+### 67
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gomelin Rumjantsev-Paskevitš-palatsi (historia)
+Tietoruudun teksti: Rumjantsev-Paskevitš-palatsi sijaitsee Gomelissa Valko-Venäjällä Sozh-joen rannalla. Kenttämarsalkka Pjotr Rumjantsev rakennutti sen vuosina 1777–1796, ja uusklassisen alkuperäissuunnitelman laati Ivan Starov. Vuonna 1834 kruunu osti kiinteistön, ja se siirtyi kenttämarsalkka Ivan Paskevitšille, joka lisäsi palatsiin nelikerroksisen tornin ja kolmikerroksisen siiven. Palatsia ympäröivä puisto ulottuu noin 800 metrin matkalle joen varrella, ja sen alueella on Pietarin ja Paavalin kirkko, joka vihittiin käyttöön vuonna 1824. Nykyään rakennuksessa toimii museo.
+AIEMPI KYSYMYS: Kuka suunnitteli palatsin alkuperäisen uusklassisen version?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Palatsin alkuperäisen uusklassisen suunnitelman laati arkkitehti [[Ivan Starov]], ja rakennuksen teetti kenttämarsalkka [[Pjotr Rumjantsev]] 1700-luvun lopulla Sozh-joen rannalle [[Gomeliin]]. Uusklassismille ovat tyypillisiä selkeät, tasapainoiset muodot ja antiikin esikuvista lainatut yksityiskohdat, ja juuri sellaista tyyliä palatsin ensimmäinen versio edusti. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Pjotr Rumjantsev
+
+### 68
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gomelin Rumjantsev-Paskevitš-palatsi (historia)
+Tietoruudun teksti: Rumjantsev-Paskevitš-palatsi sijaitsee Gomelissa Valko-Venäjällä Sozh-joen rannalla. Kenttämarsalkka Pjotr Rumjantsev rakennutti sen vuosina 1777–1796, ja uusklassisen alkuperäissuunnitelman laati Ivan Starov. Vuonna 1834 kruunu osti kiinteistön, ja se siirtyi kenttämarsalkka Ivan Paskevitšille, joka lisäsi palatsiin nelikerroksisen tornin ja kolmikerroksisen siiven. Palatsia ympäröivä puisto ulottuu noin 800 metrin matkalle joen varrella, ja sen alueella on Pietarin ja Paavalin kirkko, joka vihittiin käyttöön vuonna 1824. Nykyään rakennuksessa toimii museo.
+AIEMPI KYSYMYS: Kuka suunnitteli palatsin alkuperäisen uusklassisen version?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Palatsin alkuperäisen uusklassisen suunnitelman laati arkkitehti [[Ivan Starov]], ja rakennuksen teetti kenttämarsalkka [[Pjotr Rumjantsev]] 1700-luvun lopulla Sozh-joen rannalle [[Gomeliin]]. Uusklassismille ovat tyypillisiä selkeät, tasapainoiset muodot ja antiikin esikuvista lainatut yksityiskohdat, ja juuri sellaista tyyliä palatsin ensimmäinen versio edusti. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Gomeliin
+
+### 69
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gomelin Rumjantsev-Paskevitš-palatsi (historia)
+Tietoruudun teksti: Rumjantsev-Paskevitš-palatsi sijaitsee Gomelissa Valko-Venäjällä Sozh-joen rannalla. Kenttämarsalkka Pjotr Rumjantsev rakennutti sen vuosina 1777–1796, ja uusklassisen alkuperäissuunnitelman laati Ivan Starov. Vuonna 1834 kruunu osti kiinteistön, ja se siirtyi kenttämarsalkka Ivan Paskevitšille, joka lisäsi palatsiin nelikerroksisen tornin ja kolmikerroksisen siiven. Palatsia ympäröivä puisto ulottuu noin 800 metrin matkalle joen varrella, ja sen alueella on Pietarin ja Paavalin kirkko, joka vihittiin käyttöön vuonna 1824. Nykyään rakennuksessa toimii museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Adelaide — kaupunkilehti / Historia: Kenttä joka avattiin isoisän matkan vuonna] Etelä-Australian krikettiliitto perustettiin 31. toukokuuta 1871, ja parlamentin laki salli sen vuokrata palan puistovyöhykettä North Adelaiden ja Torrens-joen välistä. Kenttä valmistui 31. elokuuta 1872: kaksitoista eekkeriä, jonka keskiosa tasoitettiin käsityönä ja kylvettiin koiruoholle. Virallinen avaus koitti vasta lauantaina 13. joulukuuta 1873, täsmälleen isoisän matkan vuonna. Avausottelussa Etelä-Australiassa syntyneiden joukkue kohtasi merentakaisten joukkueen noin 500 katsojan edessä, ja edellisenä päivänä nurmea oli ohennettu 2 000 lampaalla.
+- [Uusi-Seelanti — maalehti / Maorikulttuuri: Kenttä, jolla asiat sanotaan ääneen] Marae ātea on kokoustalon eli wharenuin edessä oleva avoin kenttä, ja arkikielessä marae tarkoittaa koko aluetta rakennuksineen. Jako ei ole sattumaa: kokoustalo kuuluu rauhan jumalalle Rongolle ja avoin kenttä Tūmatauengalle, jonka aluetta ovat sota ja riita — siksi juuri kentällä pidetään puheet, joissa asiat voivat kärjistyä. Vieras otetaan vastaan pōwhiri-seremonialla: naisten karanga-kutsu kantaa yli kentän, ja sitten puhutaan vuorotellen. Lähes jokaisella heimolla ja alaheimolla on oma marae, joka on monelle yhtä tärkeä kuin oma koti.
+AIEMPI KYSYMYS: Mitä Paskevitš lisäsi palatsiin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Kenttämarsalkka]] [[Ivan Paskevitš]] lisäsi palatsiin nelikerroksisen tornin ja kolmikerroksisen siiven, kun kiinteistö oli siirtynyt hänelle 1830-luvulla kruunun ostettua sen. Muutokset toivat rakennukseen ison osan siitä ilmeestä, jonka vuoksi palatsi tunnetaan nykyisin molempien omistajiensa nimillä. Tämän kaiken minä muistin ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Kenttämarsalkka
+
+### 70
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gomelin Rumjantsev-Paskevitš-palatsi (historia)
+Tietoruudun teksti: Rumjantsev-Paskevitš-palatsi sijaitsee Gomelissa Valko-Venäjällä Sozh-joen rannalla. Kenttämarsalkka Pjotr Rumjantsev rakennutti sen vuosina 1777–1796, ja uusklassisen alkuperäissuunnitelman laati Ivan Starov. Vuonna 1834 kruunu osti kiinteistön, ja se siirtyi kenttämarsalkka Ivan Paskevitšille, joka lisäsi palatsiin nelikerroksisen tornin ja kolmikerroksisen siiven. Palatsia ympäröivä puisto ulottuu noin 800 metrin matkalle joen varrella, ja sen alueella on Pietarin ja Paavalin kirkko, joka vihittiin käyttöön vuonna 1824. Nykyään rakennuksessa toimii museo.
+AIEMPI KYSYMYS: Mitä Paskevitš lisäsi palatsiin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Kenttämarsalkka]] [[Ivan Paskevitš]] lisäsi palatsiin nelikerroksisen tornin ja kolmikerroksisen siiven, kun kiinteistö oli siirtynyt hänelle 1830-luvulla kruunun ostettua sen. Muutokset toivat rakennukseen ison osan siitä ilmeestä, jonka vuoksi palatsi tunnetaan nykyisin molempien omistajiensa nimillä. Tämän kaiken minä muistin ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Ivan Paskevitš
+
+### 71
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gomelin Rumjantsev-Paskevitš-palatsi (historia)
+Tietoruudun teksti: Rumjantsev-Paskevitš-palatsi sijaitsee Gomelissa Valko-Venäjällä Sozh-joen rannalla. Kenttämarsalkka Pjotr Rumjantsev rakennutti sen vuosina 1777–1796, ja uusklassisen alkuperäissuunnitelman laati Ivan Starov. Vuonna 1834 kruunu osti kiinteistön, ja se siirtyi kenttämarsalkka Ivan Paskevitšille, joka lisäsi palatsiin nelikerroksisen tornin ja kolmikerroksisen siiven. Palatsia ympäröivä puisto ulottuu noin 800 metrin matkalle joen varrella, ja sen alueella on Pietarin ja Paavalin kirkko, joka vihittiin käyttöön vuonna 1824. Nykyään rakennuksessa toimii museo.
+AIEMPI KYSYMYS: Minne Sozh-joki virtaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Sozh on Dneprin sivujoki, joka saa alkunsa Venäjän puolelta ja virtaa Valko-Venäjän kautta [[Dnepriin]]. [[Gomel]] sijaitsee sen rannalla, ja joki on kaupungille tärkeä niin maisemallisesti kuin historiallisesti. Tarkkoja pituuslukuja en ole varma, joten jätän ne mainitsematta.
+
+Joet ovat kyyhkylle parasta navigointia: seuraat vettä ja tiedät, että jossain sen varrella on kaupunki. Sozhin varrella sellainen todella on.
+KYSYMYS: Kerro lisää: Dnepriin
+
+### 72
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gomelin Rumjantsev-Paskevitš-palatsi (historia)
+Tietoruudun teksti: Rumjantsev-Paskevitš-palatsi sijaitsee Gomelissa Valko-Venäjällä Sozh-joen rannalla. Kenttämarsalkka Pjotr Rumjantsev rakennutti sen vuosina 1777–1796, ja uusklassisen alkuperäissuunnitelman laati Ivan Starov. Vuonna 1834 kruunu osti kiinteistön, ja se siirtyi kenttämarsalkka Ivan Paskevitšille, joka lisäsi palatsiin nelikerroksisen tornin ja kolmikerroksisen siiven. Palatsia ympäröivä puisto ulottuu noin 800 metrin matkalle joen varrella, ja sen alueella on Pietarin ja Paavalin kirkko, joka vihittiin käyttöön vuonna 1824. Nykyään rakennuksessa toimii museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Luonto: Pripjatin tulvaniityt] vuodesta 1996 — Pripjat kulkee noin 500 kilometriä Valko-Venäjän halki Polesien suoalueella, jota kuvataan Euroopan suurimmaksi kosteikkoalueeksi. Joen tulva-alue on 4–15 kilometriä leveä, ja tulvat yltävät joskus jopa 30 kilometriin. Gomelin alueella osaa tulva-alueesta suojelee Pripjatin kansallispuisto, joka perustettiin 1996; suojelu oli alkanut jo vuonna 1969. Sen 634,58 neliökilometristä suuri osa on turvesoita, ja puistossa elää 51 nisäkäslajia, muun muassa hirvi, ilves ja villisika. Alue liitettiin Ramsar-kosteikkojen luetteloon 29. maaliskuuta 2013.
+AIEMPI KYSYMYS: Minne Sozh-joki virtaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Sozh on Dneprin sivujoki, joka saa alkunsa Venäjän puolelta ja virtaa Valko-Venäjän kautta [[Dnepriin]]. [[Gomel]] sijaitsee sen rannalla, ja joki on kaupungille tärkeä niin maisemallisesti kuin historiallisesti. Tarkkoja pituuslukuja en ole varma, joten jätän ne mainitsematta.
+
+Joet ovat kyyhkylle parasta navigointia: seuraat vettä ja tiedät, että jossain sen varrella on kaupunki. Sozhin varrella sellainen todella on.
+KYSYMYS: Kerro lisää: Gomel
+
+### 73
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gomelin Rumjantsev-Paskevitš-palatsi (historia)
+Tietoruudun teksti: Rumjantsev-Paskevitš-palatsi sijaitsee Gomelissa Valko-Venäjällä Sozh-joen rannalla. Kenttämarsalkka Pjotr Rumjantsev rakennutti sen vuosina 1777–1796, ja uusklassisen alkuperäissuunnitelman laati Ivan Starov. Vuonna 1834 kruunu osti kiinteistön, ja se siirtyi kenttämarsalkka Ivan Paskevitšille, joka lisäsi palatsiin nelikerroksisen tornin ja kolmikerroksisen siiven. Palatsia ympäröivä puisto ulottuu noin 800 metrin matkalle joen varrella, ja sen alueella on Pietarin ja Paavalin kirkko, joka vihittiin käyttöön vuonna 1824. Nykyään rakennuksessa toimii museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kohdekartta / Kohdekartta: Kharitonovin kartano] 1794–1824 Kartanon tilasi vuonna 1794 vanhauskoinen kauppias ja maanomistaja Lev Rastorgujev, ja päärakennus nousi Nousemuksen kukkulalle. Samaan aikaan rakennettiin viereen Nousemuksen kirkko. Tyyli on uusklassismi: pylväikkö, kolmiopääty ja holvikaarinen alakerta, siis sama kieli, jota Pietarissa puhuttiin — Uralin ruukinomistajat rakensivat itselleen pääkaupungin mukaan. Nykyisen nimensä talo sai vävystä. Pjotr Kharitonov peri sen vuonna 1824 ja palkkasi arkkitehti Mihail Malahovin yhdistämään rakennukset katetuilla käytävillä; puiston hän teetti englantilaiseen tapaan vapaamuotoiseksi. Samana vuonna talossa vieraili keisari Aleksanteri I. Kharitonov sai maaorjiensa kohtelusta virallisen…
+AIEMPI KYSYMYS: Mitä uusklassismi tarkoittaa rakennustaiteessa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Uusklassismi]] on 1700-luvun lopulla vahvistunut rakennustyyli, joka otti esikuvansa antiikin Kreikan ja Rooman arkkitehtuurista. Sille ovat ominaisia symmetria, selkeät mittasuhteet, pylväät ja otsikkorakennelmat sekä vähäeleinen koristelu verrattuna edeltäneeseen barokkiin. Tyyli levisi laajalti Euroopassa, ja sitä edustavia rakennuksia on myös Itä-Euroopassa, kuten [[Gomelin]] palatsi. Siinä meni taas tovi.
+KYSYMYS: Kerro lisää: Uusklassismi
+
+### 74
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gomelin Rumjantsev-Paskevitš-palatsi (historia)
+Tietoruudun teksti: Rumjantsev-Paskevitš-palatsi sijaitsee Gomelissa Valko-Venäjällä Sozh-joen rannalla. Kenttämarsalkka Pjotr Rumjantsev rakennutti sen vuosina 1777–1796, ja uusklassisen alkuperäissuunnitelman laati Ivan Starov. Vuonna 1834 kruunu osti kiinteistön, ja se siirtyi kenttämarsalkka Ivan Paskevitšille, joka lisäsi palatsiin nelikerroksisen tornin ja kolmikerroksisen siiven. Palatsia ympäröivä puisto ulottuu noin 800 metrin matkalle joen varrella, ja sen alueella on Pietarin ja Paavalin kirkko, joka vihittiin käyttöön vuonna 1824. Nykyään rakennuksessa toimii museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Luonto: Pripjatin tulvaniityt] vuodesta 1996 — Pripjat kulkee noin 500 kilometriä Valko-Venäjän halki Polesien suoalueella, jota kuvataan Euroopan suurimmaksi kosteikkoalueeksi. Joen tulva-alue on 4–15 kilometriä leveä, ja tulvat yltävät joskus jopa 30 kilometriin. Gomelin alueella osaa tulva-alueesta suojelee Pripjatin kansallispuisto, joka perustettiin 1996; suojelu oli alkanut jo vuonna 1969. Sen 634,58 neliökilometristä suuri osa on turvesoita, ja puistossa elää 51 nisäkäslajia, muun muassa hirvi, ilves ja villisika. Alue liitettiin Ramsar-kosteikkojen luetteloon 29. maaliskuuta 2013.
+AIEMPI KYSYMYS: Mitä uusklassismi tarkoittaa rakennustaiteessa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Uusklassismi]] on 1700-luvun lopulla vahvistunut rakennustyyli, joka otti esikuvansa antiikin Kreikan ja Rooman arkkitehtuurista. Sille ovat ominaisia symmetria, selkeät mittasuhteet, pylväät ja otsikkorakennelmat sekä vähäeleinen koristelu verrattuna edeltäneeseen barokkiin. Tyyli levisi laajalti Euroopassa, ja sitä edustavia rakennuksia on myös Itä-Euroopassa, kuten [[Gomelin]] palatsi. Siinä meni taas tovi.
+KYSYMYS: Kerro lisää: Gomelin
+
+### 75
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gomelin Rumjantsev-Paskevitš-palatsi (historia)
+Tietoruudun teksti: Rumjantsev-Paskevitš-palatsi sijaitsee Gomelissa Valko-Venäjällä Sozh-joen rannalla. Kenttämarsalkka Pjotr Rumjantsev rakennutti sen vuosina 1777–1796, ja uusklassisen alkuperäissuunnitelman laati Ivan Starov. Vuonna 1834 kruunu osti kiinteistön, ja se siirtyi kenttämarsalkka Ivan Paskevitšille, joka lisäsi palatsiin nelikerroksisen tornin ja kolmikerroksisen siiven. Palatsia ympäröivä puisto ulottuu noin 800 metrin matkalle joen varrella, ja sen alueella on Pietarin ja Paavalin kirkko, joka vihittiin käyttöön vuonna 1824. Nykyään rakennuksessa toimii museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Luonto: Jelnjan suo, laaja suokompleksi] vuodesta 1968 — Jelnjan suo Vitebskin alueella on Valko-Venäjän laajin suokompleksi: sen pinta-ala on 253,01 neliökilometriä, ja sen arvioidaan olevan yli 9 000 vuotta vanha. Maisemansuojelualue Jelnja perustettiin 1968, ja se nimettiin Ramsar-kosteikoksi 21. lokakuuta 2002. Suolla kasvaa yli 405 kasvilajia, joista 13 on uhanalaisia, ja siellä elää noin 150 lintulajia. Noin 50 kurkiparia pesii alueella, ja suon ympärillä on moreeni- ja järvimaisemaa lukuisine järvineen. Suo on pysähdyspaikka pohjoisesta muuttaville linnuille, jotka talvehtivat muun muassa Israelissa ja Pohjois-Afrikassa.
+- [Valko-Venäjä — maalehti / Luonto: Narach, maan suurin järvi] vuodesta 1999 — Narach on Valko-Venäjän suurin järvi: sen pinta-ala on 79,6 neliökilometriä ja pituus 12,8 kilometriä. Suurin syvyys on 24,8 metriä, keskisyvyys 8,9 metriä ja rantaviivaa kertyy 41 kilometriä. Järvi syntyi noin 11 000 vuotta sitten jääkauden jälkeen, ja sitä ympäröivät mäntymetsät. Vuonna 1999 sen ympärille perustettiin Narachin kansallispuisto, joka kattaa yli 87 000 hehtaaria. Puiston lintuja ovat esimerkiksi kaulushaikara, kalasääski ja kurki, ja rannoilla sekä saarekkeilla pesii kyhmyjoutsenia, kun taas järven kalastoon kuuluvat muun muassa ankerias, hauki ja made.
+AIEMPI KYSYMYS: Missä päin Valko-Venäjää Gomel sijaitsee?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Gomel]] sijaitsee Valko-Venäjän kaakkoisosassa Sozh-joen rannalla, melko lähellä maan rajaa Venäjän ja Ukrainan suuntaan, ja se on yksi maan merkittävimmistä kaupungeista. Alue kuuluu [[Valko-Venäjän]] eteläiseen osaan, ja kaupunki on ollut tärkeä jokiliikenteen ja kaupankäynnin paikka. Etäisyyksiä Minskiin en ole varma, joten en arvaa lukua.
+
+Ylhäältä katsottuna rajaseutu näyttää vain vihreältä laikulta, ja kyllä minä silti tiedän, kumpi puoli on kumpi. Pullaa en täältä löydä, mutta uskon, että jokin paikallinen versio on olemassa.
+KYSYMYS: Kerro lisää: Valko-Venäjän
+
+### 76
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Minsk (historia)
+Tietoruudun teksti: Ennen toista maailmansotaa Minsk oli tiivis, monikerroksinen itäeurooppalainen kaupunki kivikatuineen ja synagogineen. Saksan Luftwaffe pommitti kaupunkia 24.6.1941 kolmessa aallossa, ja sodan loppuun mennessä 80–90 % rakennuskannasta oli raunioina. Stalin määräsi kaupungin rakennettavaksi täysin uudelleen — vanhaa kaupunkia ei palautettu ennalleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Isfahan — kaupunkilehti / Isfahan: Kun toista tornia keinuttaa, toinenkin liikkuu] Monar Jonban tarkoittaa heiluvia minareetteja. Rakennus on hautarakennus askeetti Amu Abdullah Suqlan haudan päällä, ja hautaholvi tehtiin vuonna 1316 ilkhanidihallitsija Öljaitün käskystä. Minareetteja ei alun perin ollut lainkaan: safavidit lisäsivät ne, ja työn vei loppuun oppinut Baha al-Din al-Amili. Kumpikin minareetti on 17,5 metriä korkea ja päättyy siniseen sipulikupoliin. Nimi tulee siitä, että kun toista minareettia keinutetaan, myös toinen alkaa liikkua samaan tahtiin. Ylös vievät portaat, mutta niitä käyttää nykyään vain talon hoitaja, joka käy keinuttamassa minareetteja. Kohde merkittiin suojeltujen luetteloon 10. kesäkuuta 1942.
+AIEMPI KYSYMYS: Miltä Vanha Minsk näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Ai tota. Ennen [[toista maailmansotaa]] Minsk oli tiivis, monikerroksinen itäeurooppalainen kaupunki, jossa oli kivikatuja ja [[synagogia]]. Rakennukset seisoivat lähellä toisiaan ja kadut muodostivat tiheän verkon, jossa arkielämä, kauppa ja uskonnolliset yhteisöt kietoutuivat toisiinsa. Yksittäisten kortteleiden tarkkaa ulkonäköä en ole varma kuvaamaan, koska suuri osa vanhasta rakennuskannasta tuhoutui sodassa. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: toista maailmansotaa
+
+### 77
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Minsk (historia)
+Tietoruudun teksti: Ennen toista maailmansotaa Minsk oli tiivis, monikerroksinen itäeurooppalainen kaupunki kivikatuineen ja synagogineen. Saksan Luftwaffe pommitti kaupunkia 24.6.1941 kolmessa aallossa, ja sodan loppuun mennessä 80–90 % rakennuskannasta oli raunioina. Stalin määräsi kaupungin rakennettavaksi täysin uudelleen — vanhaa kaupunkia ei palautettu ennalleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Toronto — kohdekartta / Kohdekartta: Kensingtonin tori] 1880-luku Maan osti 1815 George Taylor Denison, joka oli palvellut miliisissä vuoden 1812 sodassa. Hänen tilansa ulottui Queen Street Westiltä Bloor Streetille, ja nykyistä Bellevue Square -puistoa hän käytti ratsuväkijoukkonsa harjoituskenttänä. Tila jaettiin tonteiksi 1850-luvulla, ja 1880-luvulla pienille tonteille rakennettiin taloja irlantilaisille ja skotlantilaisille siirtolaistyöläisille. Monet niistä ovat yhä pystyssä esimerkiksi Wales Avenuen varrella, ja toria lähimmissä taloissa on kadun puolella kauppa. 1900-luvun alussa alueelle muutti itäeurooppalaisia juutalaisia ja italialaisia siirtolaisia. He tulivat "Wardista", ahtaasta tulijoiden korttelistosta Yonge Streetin ja Univers…
+AIEMPI KYSYMYS: Miltä Vanha Minsk näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Ai tota. Ennen [[toista maailmansotaa]] Minsk oli tiivis, monikerroksinen itäeurooppalainen kaupunki, jossa oli kivikatuja ja [[synagogia]]. Rakennukset seisoivat lähellä toisiaan ja kadut muodostivat tiheän verkon, jossa arkielämä, kauppa ja uskonnolliset yhteisöt kietoutuivat toisiinsa. Yksittäisten kortteleiden tarkkaa ulkonäköä en ole varma kuvaamaan, koska suuri osa vanhasta rakennuskannasta tuhoutui sodassa. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: synagogia
+
+### 78
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Minsk (historia)
+Tietoruudun teksti: Ennen toista maailmansotaa Minsk oli tiivis, monikerroksinen itäeurooppalainen kaupunki kivikatuineen ja synagogineen. Saksan Luftwaffe pommitti kaupunkia 24.6.1941 kolmessa aallossa, ja sodan loppuun mennessä 80–90 % rakennuskannasta oli raunioina. Stalin määräsi kaupungin rakennettavaksi täysin uudelleen — vanhaa kaupunkia ei palautettu ennalleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Historia: Linna joka selvisi joka sodasta] 1500-luvulta — Aatelismies Jurij Iljinitš aloitti linnan rakentamisen 1400-luvun lopulla tatarien ratsioiden ja naapuririitojen vuoksi. 1500-luvun jälkipuoliskolla linna siirtyi mahtisuku Radziwiłłeille, ja Mikołaj Kristof "Orpo" Radziwiłł laajensi sitä kolmikerroksisilla asuinsiivillä, uudisti torneja ja kaivatti vallihaudan. Vuosisatojen ajan linna koki hyökkäyksiä, tuhoja ja jälleenrakennuksia - viimeksi toisessa maailmansodassa, jolloin sen muurien sisään perustettiin juutalaisghetto. Pitkän kunnostuksen jälkeen Unesco lisäsi Mirin linnan maailmanperintöluetteloon vuonna 2000.
+AIEMPI KYSYMYS: Miksi Vanha Minsk katosi?
+AIEMPI VASTAUS (Livia):
+Kääk. Vanha Minsk tuhoutui [[toisessa maailmansodassa]]: saksalainen [[Luftwaffe]] pommitti kaupunkia 24. kesäkuuta 1941 kolmessa aallossa, ja sodan loppuun mennessä 80–90 prosenttia rakennuskannasta oli raunioina. Sodan jälkeen kaupunki päätettiin rakentaa lähes kokonaan uudelleen, eikä vanhaa kaupunkia palautettu ennalleen, vaan tilalle nousi uusi, suunnitelmallinen [[Neuvostoliiton]] aikainen kaupunkikuva. Tapahtuma oli suuri menetys asukkaille, ja sen jäljet näkyvät kaupungissa yhä, vaikka siitä on kulunut jo yli kahdeksankymmentä vuotta.
+KYSYMYS: Kerro lisää: toisessa maailmansodassa
+
+### 79
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Minsk (historia)
+Tietoruudun teksti: Ennen toista maailmansotaa Minsk oli tiivis, monikerroksinen itäeurooppalainen kaupunki kivikatuineen ja synagogineen. Saksan Luftwaffe pommitti kaupunkia 24.6.1941 kolmessa aallossa, ja sodan loppuun mennessä 80–90 % rakennuskannasta oli raunioina. Stalin määräsi kaupungin rakennettavaksi täysin uudelleen — vanhaa kaupunkia ei palautettu ennalleen.
+AIEMPI KYSYMYS: Miksi Vanha Minsk katosi?
+AIEMPI VASTAUS (Livia):
+Kääk. Vanha Minsk tuhoutui [[toisessa maailmansodassa]]: saksalainen [[Luftwaffe]] pommitti kaupunkia 24. kesäkuuta 1941 kolmessa aallossa, ja sodan loppuun mennessä 80–90 prosenttia rakennuskannasta oli raunioina. Sodan jälkeen kaupunki päätettiin rakentaa lähes kokonaan uudelleen, eikä vanhaa kaupunkia palautettu ennalleen, vaan tilalle nousi uusi, suunnitelmallinen [[Neuvostoliiton]] aikainen kaupunkikuva. Tapahtuma oli suuri menetys asukkaille, ja sen jäljet näkyvät kaupungissa yhä, vaikka siitä on kulunut jo yli kahdeksankymmentä vuotta.
+KYSYMYS: Kerro lisää: Luftwaffe
+
+### 80
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Minsk (historia)
+Tietoruudun teksti: Ennen toista maailmansotaa Minsk oli tiivis, monikerroksinen itäeurooppalainen kaupunki kivikatuineen ja synagogineen. Saksan Luftwaffe pommitti kaupunkia 24.6.1941 kolmessa aallossa, ja sodan loppuun mennessä 80–90 % rakennuskannasta oli raunioina. Stalin määräsi kaupungin rakennettavaksi täysin uudelleen — vanhaa kaupunkia ei palautettu ennalleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Neuvosto äänesti maan kohtalosta] 27.3.1918 — Maaliskuun 27. päivänä 1918 Sfatul Tării, Bessarabian kansanvaltainen neuvosto, kokoontui entisen poikien lyseon juhlasaliin Chișinăussa äänestämään maansa kohtalosta. 86 edustajaa äänesti liittymisen puolesta, 3 vastaan ja 36 pidättäytyi. Puheenjohtaja Ion Inculeț ja neuvosto liittivät Bessarabian Romaniaan sillä ehdolla, että maareformi ja alueellinen itsehallinto säilyisivät. Ehdot pyyhittiin pois vasta saman vuoden marraskuun lopulla, kun neuvosto äänesti Bucureștissa uudelleen ja julisti liittymisen ehdottomaksi. Rakennus tunnetaan nykyään Sfatul Tării -palatsina.
+AIEMPI KYSYMYS: Miksi Vanha Minsk katosi?
+AIEMPI VASTAUS (Livia):
+Kääk. Vanha Minsk tuhoutui [[toisessa maailmansodassa]]: saksalainen [[Luftwaffe]] pommitti kaupunkia 24. kesäkuuta 1941 kolmessa aallossa, ja sodan loppuun mennessä 80–90 prosenttia rakennuskannasta oli raunioina. Sodan jälkeen kaupunki päätettiin rakentaa lähes kokonaan uudelleen, eikä vanhaa kaupunkia palautettu ennalleen, vaan tilalle nousi uusi, suunnitelmallinen [[Neuvostoliiton]] aikainen kaupunkikuva. Tapahtuma oli suuri menetys asukkaille, ja sen jäljet näkyvät kaupungissa yhä, vaikka siitä on kulunut jo yli kahdeksankymmentä vuotta.
+KYSYMYS: Kerro lisää: Neuvostoliiton

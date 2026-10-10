@@ -1,0 +1,109 @@
+### 81
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Minsk (historia)
+Tietoruudun teksti: Ennen toista maailmansotaa Minsk oli tiivis, monikerroksinen itäeurooppalainen kaupunki kivikatuineen ja synagogineen. Saksan Luftwaffe pommitti kaupunkia 24.6.1941 kolmessa aallossa, ja sodan loppuun mennessä 80–90 % rakennuskannasta oli raunioina. Stalin määräsi kaupungin rakennettavaksi täysin uudelleen — vanhaa kaupunkia ei palautettu ennalleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lagos — kaupunkilehti / Laguuni ja sillat: Kaupunki, joka tekee itse maansa] Lagos on kasvanut myös ulospäin vedestä. Ikoyi on liitetty Lagosin saareen täyttömaalla, ja osa saaria erottavista salmista on ruopattu ja rakennettu umpeen. Victoria Islandin merenpuoleinen Bar Beach on rakennettu ympäristöllisesti uudelleen, ja laguunin suulle nousee Eko Atlantic, joka laajentaa Victoria Islandia. Kaupunki levittäytyy yli kolmenkymmenen kilometrin matkalle laguunin lounais- ja länsirannalla. Vesi maksaa siitä hintansa: laguuniin päätyy päivittäin suuri määrä kaupungin ja teollisuuden jätevettä, ja Ogun- ja Osun-joet tuovat lisää. Merenpinnan nousu ja maan painuminen koskettavat Lagosia enemmän kuin useimpia Afrikan suurkaupunkeja.
+AIEMPI KYSYMYS: Mitä Minskin vanhasta kaupungista on jäljellä nykyään?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Pieni osa vanhasta kaupunkikuvasta on säilynyt tai rakennettu uudelleen, esimerkiksi [[Ylä-kaupunki]]n alue, jonka historiallisia rakennuksia on kunnostettu ja jälleenrakennettu 2000-luvun puolella. Tarkkaa luetteloa säilyneistä rakennuksista en ole varma, joten en lupaa yksittäisiä kohteita. Pääosa nykyisestä kaupungista on kuitenkin [[toisen maailmansodan]] jälkeistä rakentamista, ja vanhan kaupungin tunnelma elää lähinnä jäljelle jääneissä kortteleissa. Siinä tuli tarpeeksi katselua yhdelle päivälle.
+KYSYMYS: Kerro lisää: Ylä-kaupunki
+
+### 82
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Minsk (historia)
+Tietoruudun teksti: Ennen toista maailmansotaa Minsk oli tiivis, monikerroksinen itäeurooppalainen kaupunki kivikatuineen ja synagogineen. Saksan Luftwaffe pommitti kaupunkia 24.6.1941 kolmessa aallossa, ja sodan loppuun mennessä 80–90 % rakennuskannasta oli raunioina. Stalin määräsi kaupungin rakennettavaksi täysin uudelleen — vanhaa kaupunkia ei palautettu ennalleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Tretjakovin galleria] 1856-1893 Moskovalainen kauppias Pavel Tretjakov aloitti taidekokoelmansa vuonna 1856 ostamalla kaksi venäläistä maalausta. Vuosikymmenten aikana hän osti satoja teoksia lisää, kunnes kokoelmassa oli jo lähes 2000 taideteosta - yli 1300 maalausta, satoja piirustuksia ja muutama veistos. Elokuussa 1892 Tretjakov lahjoitti koko kokoelmansa Moskovan kaupungille, ja galleria avattiin yleisölle 15. elokuuta 1893. Nykyään museossa on esillä yli 130 000 teosta, muun muassa Andrei Rublevin kuuluisa ikoni Kolminaisuus. Museon satumaisen näköisen punatiilisen julkisivun suunnitteli taiteilija Viktor Vasnetsov vuosina 1902-1904, ja se muistuttaa suoraan venäläisestä kansantarinasta poimittua linnaa. T…
+AIEMPI KYSYMYS: Mitä Minskin vanhasta kaupungista on jäljellä nykyään?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Pieni osa vanhasta kaupunkikuvasta on säilynyt tai rakennettu uudelleen, esimerkiksi [[Ylä-kaupunki]]n alue, jonka historiallisia rakennuksia on kunnostettu ja jälleenrakennettu 2000-luvun puolella. Tarkkaa luetteloa säilyneistä rakennuksista en ole varma, joten en lupaa yksittäisiä kohteita. Pääosa nykyisestä kaupungista on kuitenkin [[toisen maailmansodan]] jälkeistä rakentamista, ja vanhan kaupungin tunnelma elää lähinnä jäljelle jääneissä kortteleissa. Siinä tuli tarpeeksi katselua yhdelle päivälle.
+KYSYMYS: Kerro lisää: toisen maailmansodan
+
+### 83
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Minsk (historia)
+Tietoruudun teksti: Ennen toista maailmansotaa Minsk oli tiivis, monikerroksinen itäeurooppalainen kaupunki kivikatuineen ja synagogineen. Saksan Luftwaffe pommitti kaupunkia 24.6.1941 kolmessa aallossa, ja sodan loppuun mennessä 80–90 % rakennuskannasta oli raunioina. Stalin määräsi kaupungin rakennettavaksi täysin uudelleen — vanhaa kaupunkia ei palautettu ennalleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Luonto: Berezinan biosfäärialue] vuodesta 1925 — Berezinan luonnonsuojelualue perustettiin 30. tammikuuta 1925 suojelemaan muun muassa majavia ja muuta riistaa, ja sillä on ollut biosfäärialueen asema vuodesta 1979. Alue sijaitsee noin 120 kilometriä Minskistä pohjoiseen, ja sen pinta-ala on 85 200 hehtaaria. Yli 60 prosenttia siitä on soita, ja Berezina-joki virtaa sen halki 100 kilometrin matkan. Alueella on tavattu 56 nisäkäs- ja 237 lintulajia sekä 813 putkilokasvilajia; joukossa ovat ruskeakarhu, hirvi, ilves, majava, saukko ja kalasääski. Ramsar-kosteikoksi alue nimettiin 2010.
+AIEMPI KYSYMYS: Mitä eläimiä Berezinan biosfäärialueella elää?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä osaan kertoo. [[Berezinan biosfäärialue]] sijaitsee noin 120 kilometriä Minskistä pohjoiseen, ja yli 60 prosenttia siitä on soita. Alueella on tavattu 56 nisäkäs- ja 237 lintulajia, joukossa [[ruskeakarhu]], hirvi, [[ilves]], majava, saukko ja [[kalasääski]]. Luonnonsuojelualue perustettiin vuonna 1925, ja biosfäärialueen aseman se sai vuonna 1979. Kyllä nuo suot ovat linnulle kiinnostavia, mutta minä pysyn mieluummin kaupungin kaiteilla.
+KYSYMYS: Kerro lisää: Berezinan biosfäärialue
+
+### 84
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Minsk (historia)
+Tietoruudun teksti: Ennen toista maailmansotaa Minsk oli tiivis, monikerroksinen itäeurooppalainen kaupunki kivikatuineen ja synagogineen. Saksan Luftwaffe pommitti kaupunkia 24.6.1941 kolmessa aallossa, ja sodan loppuun mennessä 80–90 % rakennuskannasta oli raunioina. Stalin määräsi kaupungin rakennettavaksi täysin uudelleen — vanhaa kaupunkia ei palautettu ennalleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Luonto: Berezinan biosfäärialue] vuodesta 1925 — Berezinan luonnonsuojelualue perustettiin 30. tammikuuta 1925 suojelemaan muun muassa majavia ja muuta riistaa, ja sillä on ollut biosfäärialueen asema vuodesta 1979. Alue sijaitsee noin 120 kilometriä Minskistä pohjoiseen, ja sen pinta-ala on 85 200 hehtaaria. Yli 60 prosenttia siitä on soita, ja Berezina-joki virtaa sen halki 100 kilometrin matkan. Alueella on tavattu 56 nisäkäs- ja 237 lintulajia sekä 813 putkilokasvilajia; joukossa ovat ruskeakarhu, hirvi, ilves, majava, saukko ja kalasääski. Ramsar-kosteikoksi alue nimettiin 2010.
+AIEMPI KYSYMYS: Mitä eläimiä Berezinan biosfäärialueella elää?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä osaan kertoo. [[Berezinan biosfäärialue]] sijaitsee noin 120 kilometriä Minskistä pohjoiseen, ja yli 60 prosenttia siitä on soita. Alueella on tavattu 56 nisäkäs- ja 237 lintulajia, joukossa [[ruskeakarhu]], hirvi, [[ilves]], majava, saukko ja [[kalasääski]]. Luonnonsuojelualue perustettiin vuonna 1925, ja biosfäärialueen aseman se sai vuonna 1979. Kyllä nuo suot ovat linnulle kiinnostavia, mutta minä pysyn mieluummin kaupungin kaiteilla.
+KYSYMYS: Kerro lisää: ruskeakarhu
+
+### 85
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Minsk (historia)
+Tietoruudun teksti: Ennen toista maailmansotaa Minsk oli tiivis, monikerroksinen itäeurooppalainen kaupunki kivikatuineen ja synagogineen. Saksan Luftwaffe pommitti kaupunkia 24.6.1941 kolmessa aallossa, ja sodan loppuun mennessä 80–90 % rakennuskannasta oli raunioina. Stalin määräsi kaupungin rakennettavaksi täysin uudelleen — vanhaa kaupunkia ei palautettu ennalleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Luonto: Pripjatin tulvaniityt] vuodesta 1996 — Pripjat kulkee noin 500 kilometriä Valko-Venäjän halki Polesien suoalueella, jota kuvataan Euroopan suurimmaksi kosteikkoalueeksi. Joen tulva-alue on 4–15 kilometriä leveä, ja tulvat yltävät joskus jopa 30 kilometriin. Gomelin alueella osaa tulva-alueesta suojelee Pripjatin kansallispuisto, joka perustettiin 1996; suojelu oli alkanut jo vuonna 1969. Sen 634,58 neliökilometristä suuri osa on turvesoita, ja puistossa elää 51 nisäkäslajia, muun muassa hirvi, ilves ja villisika. Alue liitettiin Ramsar-kosteikkojen luetteloon 29. maaliskuuta 2013.
+- [Valko-Venäjä — maalehti / Luonto: Berezinan biosfäärialue] vuodesta 1925 — Berezinan luonnonsuojelualue perustettiin 30. tammikuuta 1925 suojelemaan muun muassa majavia ja muuta riistaa, ja sillä on ollut biosfäärialueen asema vuodesta 1979. Alue sijaitsee noin 120 kilometriä Minskistä pohjoiseen, ja sen pinta-ala on 85 200 hehtaaria. Yli 60 prosenttia siitä on soita, ja Berezina-joki virtaa sen halki 100 kilometrin matkan. Alueella on tavattu 56 nisäkäs- ja 237 lintulajia sekä 813 putkilokasvilajia; joukossa ovat ruskeakarhu, hirvi, ilves, majava, saukko ja kalasääski. Ramsar-kosteikoksi alue nimettiin 2010.
+AIEMPI KYSYMYS: Mitä eläimiä Berezinan biosfäärialueella elää?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä osaan kertoo. [[Berezinan biosfäärialue]] sijaitsee noin 120 kilometriä Minskistä pohjoiseen, ja yli 60 prosenttia siitä on soita. Alueella on tavattu 56 nisäkäs- ja 237 lintulajia, joukossa [[ruskeakarhu]], hirvi, [[ilves]], majava, saukko ja [[kalasääski]]. Luonnonsuojelualue perustettiin vuonna 1925, ja biosfäärialueen aseman se sai vuonna 1979. Kyllä nuo suot ovat linnulle kiinnostavia, mutta minä pysyn mieluummin kaupungin kaiteilla.
+KYSYMYS: Kerro lisää: ilves
+
+### 86
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Minsk (historia)
+Tietoruudun teksti: Ennen toista maailmansotaa Minsk oli tiivis, monikerroksinen itäeurooppalainen kaupunki kivikatuineen ja synagogineen. Saksan Luftwaffe pommitti kaupunkia 24.6.1941 kolmessa aallossa, ja sodan loppuun mennessä 80–90 % rakennuskannasta oli raunioina. Stalin määräsi kaupungin rakennettavaksi täysin uudelleen — vanhaa kaupunkia ei palautettu ennalleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viktoria Nyanza — kaupunkilehti / Evoluution laboratorio: Kalasääski, järven ilmavartija] Viktorianjärven taivaalla kiertelee usein kalasääski, tumma ja valkorintainen petolintu, jonka kimeä huuto kantaa kauas veden yli. Se istuu mielellään rantapuiden latvoissa ja syöksyy äkkiä alaspäin havaitessaan kalan lähellä pintaa — terävät kynnet lävistävät saaliin, jota linnun karheat, piikikkäät varpaat pitävät tiukasti kiinni liukkaastakin pinnasta. Kalasääski on yksi Afrikan suurten järvien tunnetuimmista symboleista, ja sen kuva löytyy useiden alueen valtioiden vaakunoista ja seteleistä. Se pärjää hyvin myös nykyisessä, niiliahvenen muokkaamassa järvessä, sillä sekä ahven että jäljellä olevat kirjoahvenet kelpaavat sille ravinnoksi.
+AIEMPI KYSYMYS: Mitä eläimiä Berezinan biosfäärialueella elää?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä osaan kertoo. [[Berezinan biosfäärialue]] sijaitsee noin 120 kilometriä Minskistä pohjoiseen, ja yli 60 prosenttia siitä on soita. Alueella on tavattu 56 nisäkäs- ja 237 lintulajia, joukossa [[ruskeakarhu]], hirvi, [[ilves]], majava, saukko ja [[kalasääski]]. Luonnonsuojelualue perustettiin vuonna 1925, ja biosfäärialueen aseman se sai vuonna 1979. Kyllä nuo suot ovat linnulle kiinnostavia, mutta minä pysyn mieluummin kaupungin kaiteilla.
+KYSYMYS: Kerro lisää: kalasääski
+
+### 87
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Minsk (historia)
+Tietoruudun teksti: Ennen toista maailmansotaa Minsk oli tiivis, monikerroksinen itäeurooppalainen kaupunki kivikatuineen ja synagogineen. Saksan Luftwaffe pommitti kaupunkia 24.6.1941 kolmessa aallossa, ja sodan loppuun mennessä 80–90 % rakennuskannasta oli raunioina. Stalin määräsi kaupungin rakennettavaksi täysin uudelleen — vanhaa kaupunkia ei palautettu ennalleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Grönlanti — maalehti / Kuvataide: Lippu, joka voitti äänin 14–11] 1985 — Grönlanti sai oman lippunsa vasta 1985, ja tie sinne oli mutkainen. Vuonna 1973 viisi grönlantilaista ehdotti vihreä-valko-sinistä lippua; seuraavana vuonna sanomalehti keräsi yksitoista ehdotusta, joista kaikki yhtä lukuun ottamatta olivat ristilippuja, ja järjesti äänestyksen. Komitea ei päässyt sopuun, ehdotuksia pyydettiin lisää, ja lopulta Thue Christiansenin puna-valkoinen kiekko voitti vihreä-valkoisen ristin äänin 14–11. Samana vuonna huomattiin, että tanskalaisen soutuseuran lipussa oli täsmälleen sama kuvio. Seura oli vanhempi, ja se antoi luvan.
+AIEMPI KYSYMYS: Mitä kieliä Minskissä puhutaan?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Valko-Venäjällä on kaksi virallista kieltä, [[valkovenäjä]] ja [[venäjä]], ja Minskin arjessa kuulee nykyään eniten venäjää, vaikka valkovenäjä näkyy esimerkiksi katukylteissä ja virallisissa yhteyksissä. Tarkkoja puhujamääriä en ole varma, joten jätän ne pois. Molemmat kielet ovat itäslaavilaisia ja läheistä sukua keskenään, joten ne muistuttavat toisiaan sanastoltaan ja rakenteeltaan. Ja tämän minä sain sanottua yhdellä hengenvedolla.
+KYSYMYS: Kerro lisää: valkovenäjä
+
+### 88
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Minsk (historia)
+Tietoruudun teksti: Ennen toista maailmansotaa Minsk oli tiivis, monikerroksinen itäeurooppalainen kaupunki kivikatuineen ja synagogineen. Saksan Luftwaffe pommitti kaupunkia 24.6.1941 kolmessa aallossa, ja sodan loppuun mennessä 80–90 % rakennuskannasta oli raunioina. Stalin määräsi kaupungin rakennettavaksi täysin uudelleen — vanhaa kaupunkia ei palautettu ennalleen.
+AIEMPI KYSYMYS: Mitä kieliä Minskissä puhutaan?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Valko-Venäjällä on kaksi virallista kieltä, [[valkovenäjä]] ja [[venäjä]], ja Minskin arjessa kuulee nykyään eniten venäjää, vaikka valkovenäjä näkyy esimerkiksi katukylteissä ja virallisissa yhteyksissä. Tarkkoja puhujamääriä en ole varma, joten jätän ne pois. Molemmat kielet ovat itäslaavilaisia ja läheistä sukua keskenään, joten ne muistuttavat toisiaan sanastoltaan ja rakenteeltaan. Ja tämän minä sain sanottua yhdellä hengenvedolla.
+KYSYMYS: Kerro lisää: venäjä
