@@ -12575,3 +12575,7 @@ Omistaja 10.10.2026 klo 09.18 lähetti kuvan Hazin (@diegohaz) twiitistä ali-ag
 ## OMISTAJA 10.10. 17.0x: LAITTEISIIN UNITY, PILVIAJOT, SIMULAATTORIT, CODEX JA BLENDERIN PROSESSORI (10.10.2026 klo 16.38)
 
 10.10. 17.0x OMISTAJA (kortti Laitteet, monivalinta): "Unity-käännökset (suositus), Pilviajot (suositus), Simulaattorit, Codex-tilaukset" → laitteet.py laajennetaan (Opus-agentti) neljällä rivillä. OMISTAJA: "saisiko blenderiin jotenkin muutamalla palkilla kuinka paljon käyttää prosessoria. pystyykö edes näyttämään?" → kyllä: rivin kenttä prosessori = prosessien %cpu / ytimet (0–100), sivulla 5 pientä palkkia + prosentti nimen perässä (versio 34).
+
+## OMISTAJA 10.10. 17.2x: ASEMATAULU JAETTU MUILLE TILEILLE, TILINVAIHDOSSA SAMA OSOITE (10.10.2026 klo 16.41)
+
+10.10. 17.1x–17.2x OMISTAJA: "eikö tämä artefakti tallennu tällaisenaan siis minnekään?" → PT: artefakti on tallessa claude.ai:ssa tällä tilillä versiohistorioineen, mutta toinen tili ei voi muuttaa sitä → kortti "Kyllä, kerro miten (suositus)" → ohje: Share-valikosta muokkausoikeus muille tileille → omistaja: "tehty". RAAMATTU (ASEMATAULU): tilinvaihdossa sama osoite (read url → writer → julkaisu url-parametrilla + ArtifactData), kopio lähteestä vain ilman writer-oikeutta. Samalla TF 178 TestFlightissa iOS + Mac 16.40 (iOS 834278eb, Mac 82c7a246, BUILD 9e10d4d33).
