@@ -48,7 +48,7 @@
 - **VESI ALUENOSTO (03.1x, PT + LS2 e15f16e18):** `_tyo/karttaseppa/vesi-aluenosto-20261010/` (index-v6, tukholma5-*): Norrström yhteensä 2,0 m, Strömmen 1,5 m, smoothstep 120 m. LS2:n haara vesi-v6-174 c94c7c1b1 lukee v6:n. Kuvapari LS2:lta, ja vienti Julkaisijalle kuittauksen jälkeen (paketti tehdään silloin, LAHTEET pohjana v5).
 
 - **RIDDARHOLMEN (PT 01.xx: B, LR:n OK):** ohjauskuvat `proto-3d/_tyo/karttaseppa/ohje-riddarholmen/` (ortho_ohje.py-kopio + malli rh, `ortho_ohje.diff`; merkinnät ja syötteet LR:n työkaluilla muuttamattomina). Tekoälypinnat `tulokset/rh_<näkymä>_v1/v2.png`. **v2 suositeltu** (tumma tiili). Spiira otetaan spiira_v2:sta ja katot sekä kupolit katot_v2:sta, koska julkisivuissa ne jäivät väärän värisiksi. Projisoinnin rh-tapaus (projisoi_tekseli.py, tekoaly_koko.zsh) on LR:llä. Valmis 02.50, /free tehty.
-- **Olavinlinnan 5 pahinta kohtaa + 225°:n punatiili:** odottaa LR:n syötteitä (LR tekee ne v46p:n jälkeen). Ajo samalla `aja-olavinlinna.py`-linjalla.
+- **Olavinlinna s7–s11 v1 (04.50, LR:n v46t-syötteet) ja s5 v2:** `aja-olavinlinna.py` (s ≥ 7 = v46t, omat kehotteet). s5 v2 on yliterävä, joten LR:lle suositeltu v1 tai v3 (denoise 0,5). LR:n vastaus odottaa. 225°:n tiili kuuluu LR:n päätökseen.
 
 - **YÖVALOT (PT 10.10. 00.2x, LS1:lle):** `proto-3d/_tyo/karttaseppa/yovalot-20261010/` (LUEMINUT.md). OSM-PBF → katuvalot, valaistut tiet ja sillat, kohteet, kentät ja rantavalot (heijastukseen), maa_m omasta korkeusmallista. Työkalut T7 `vesimaski/yovalot.mjs` ja `yovalot-rikasta.py`. Valmis 00.30. KL-, ND- ja Olavinlinna-pintoja ei tehdä (PT), ja KL:n sävyt odottavat omistajaa (LS2 v6j).
 
