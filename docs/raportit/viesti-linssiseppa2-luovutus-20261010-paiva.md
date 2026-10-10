@@ -1,10 +1,18 @@
-# Linssiseppä 2 – luovutus 10.10.2026 päivä (päivitetty ~11.4x, konteksti 50 %)
+# Linssiseppä 2 – luovutus 10.10.2026 päivä (päivitetty ~11.4x, nollaus PT 11.3x)
 
 Rooli: Linssiseppä 2 (Opus, high): kaupunkinäkymän ilmakehä, valo, vesi, pilvet ja omat 3D-mallit (putki + ämpäri).
 Proto `/Users/Shared/Claude/proto-3d/Matkakirja-proto` (paikallinen git); oma worktree `wt/proto-linssiseppa2-muisti` (6.7-haarat).
 Skriptit `proto-3d/_tyo/linssiseppa2/skriptit-20261009/`. Tarkistukset 6.7: `MATKAKIRJA_KIRJASTOT=/Users/Shared/Claude/unity/kirjastot-6000.7.0b4
 ./Linssit-testit/unity-tarkistus.sh` + `./Linssit-testit/kaanna.sh`. Simu vain Julkaisijan SIMULAATTORI NYT -vuorolla (A26BC7D0, 173pbr2-appi
 `lokit/linssiseppa2-app-173pbr2`), ilmoita "simu vapaa".
+
+## PT:N JONO (11.3x, sitova järjestys)
+1) **ND v3h**: aukion sävy pelikuvassa oikean ilmakuvan mukaiseksi viileäksi harmaaksi (oikea ~145/149/144; v3g pelissä 197/185/169 → tekstuuri
+   ~112/116/116, KALIBROI mittaamalla pelikuvasta, ks. KESKEN 1). Vienti v3h + Eiffel v1c YHDESSÄ paketissa (pohja v6k6: ND v3h + eiffel v1c
+   `_valmiit/eiffel-v1/glb` + leikkaukset mallit.jsoniin), v3g jää viemättä. Pari v3g | v3h | oikea PT:lle (arkit-nd3g.py-malli).
+2) **Peking v1 peliin** (KESKEN 2), pari PT:lle.
+3) **ISS-kupolan koe 73661e440** (KESKEN 3): Ultra_Renderer.asset- ja DefaultVolumeProfile.asset-muutokset läpi ennen käännöspyyntöä.
+Worktreet: laivat171 ja talvi poistettu 11.3x (Postivahti); skriptit osoittavat nyt `wt/proto-linssiseppa2-muisti/tyokalut` (sama omat_mallit_ktx2.py).
 
 ## KESKEN (PT 11.1x järjestys: 1 parvis, 2 Peking, 3 ISS-kupola)
 1. **ND-parvis v3g VALMIS PT:llä** (356d4e33e: nd-parvis-v3g.jpg, nd-ylha-oikea-vs-peli.jpg). Juurisyy sauma = 300 m:n aineisto; Karttasepän
