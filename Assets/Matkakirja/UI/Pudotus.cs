@@ -20,6 +20,8 @@ namespace Matkakirja.Natiivi
         readonly Func<float> alareuna;
 
         public bool Auki { get; private set; }
+        /// <summary>Asettelutesti: pudotusvalikon paneeli.</summary>
+        public VisualElement TestiPaneeli => Paneeli;
 
         /// <summary>Kertaluonteinen yläreuna (pt) seuraavalle avaukselle, esim. oppaan ☰:n alle; null = yläpalkin alle.</summary>
         public float? YlaOhitus;

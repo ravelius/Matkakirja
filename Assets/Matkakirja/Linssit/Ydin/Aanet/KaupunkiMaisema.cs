@@ -28,6 +28,7 @@ namespace Matkakirja.Linssit.Aanet
 
         readonly Dictionary<string, string> yleiset = new Dictionary<string, string>();   // v1: tunnus → osoite
         PalloAanimaisema kaupungit = new PalloAanimaisema();                               // v2: sama muoto kuin pallo-aanimaisema-v1
+        string aanetJuuri;                                                                 // aanet/: kaupunkisilmukoiden kaupunkikohtaiset
 
         public static bool On(string kerros) => Array.IndexOf(Lahikerrokset, kerros) >= 0;
 
@@ -38,9 +39,9 @@ namespace Matkakirja.Linssit.Aanet
             KaupunkiAanimaisema.Lapset => 0.4, KaupunkiAanimaisema.Kahvila => 0.35, KaupunkiAanimaisema.Laituri => 0.7, _ => 0,
         };
 
-        public static KaupunkiMaisema Lue(string v1Json, string v1Juuri, string v2Json, string v2Juuri)
+        public static KaupunkiMaisema Lue(string v1Json, string v1Juuri, string v2Json, string v2Juuri, string aanetJuuri = null)
         {
-            var m = new KaupunkiMaisema();
+            var m = new KaupunkiMaisema { aanetJuuri = aanetJuuri };
             foreach (var o in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(v1Json)), "aanet")))
             {
                 var d = MiniJson.Objekti(o);
@@ -64,6 +65,8 @@ namespace Matkakirja.Linssit.Aanet
             if (!Kehityskaupungit.On(kaupunki) || !On(kerros)) return null;
             var a = Oma(kaupunki, kerros);
             if (a != null) return a.Silmukka ? a.Osoite : null;
+            string oma = aanetJuuri != null ? KaupunkiSilmukat.KaupunginPolku(kaupunki, kerros) : null;
+            if (oma != null) return aanetJuuri + oma;
             return V1.TryGetValue(kerros, out var t) && yleiset.TryGetValue(t, out var u) ? u : null;
         }
 

@@ -110,6 +110,7 @@ namespace Matkakirja.Natiivi
         public void Paivita(double t, bool vahennettyLiike, Camera kamera = null)
         {
             VarmistaUrpAsetus();
+            PaivitaKasvovalo(kamera);
 
             var rakennus = DioraamaSovitin.Linssi?.Rakennus;
             if (rakennus != null && rakennus != viimeisinRakennus) Valmistele(rakennus);
@@ -350,8 +351,44 @@ namespace Matkakirja.Natiivi
         /// <summary>Sulkiessa (DioraamaNayttamo.Tuhoa): valot pois ja KAIKKI alkuperäiset URP/RenderSettings-arvot
         /// takaisin -- myös kesken latauksen (alkuperaisetTallennettu on tosi jo ensimmäisestä Paivita-kutsusta,
         /// ennen kuin Rakennus on koskaan latautunut).</summary>
+        /// <summary>KASVOVALO (PT 9.10., juna 174: voudin kasvot hupun alla tummat puolilähikuvassa): yksi lisävalo samalla URP-
+        /// liukuhihnalla kuin tilan pistevalot, puhujan kasvojen ja kameran välissä vain keskustelun puolilähikuvan ajan. Leivotut
+        /// pinnat eivät käytä reaaliaikaisia lisävaloja, joten valo kirkastaa vain hahmoja; häivytys ~0,4 s, ei varjoja.</summary>
+        void PaivitaKasvovalo(Camera kamera)
+        {
+            bool paalla = kamera != null && DioraamaSovitin.Puolilahi && DioraamaHahmot3D.EleetPaalla && DioraamaHahmot3D.Puhuja != null
+                && DioraamaHahmot3D.PuhujanJuuri.HasValue && DioraamaSovitin.ViimeisinNakyma?.KohdeTila != null;
+            if (kasvoValo == null)
+            {
+                if (!paalla) return;
+                kasvoGo = new GameObject("Valo:kasvovalo") { layer = DioraamaNayttamo.Kerros };
+                kasvoGo.transform.SetParent(juuri, false);
+                kasvoValo = kasvoGo.AddComponent<Light>();
+                kasvoValo.type = LightType.Point;
+                kasvoValo.range = KasvovaloSade;
+                kasvoValo.color = LampunOletusVari;
+                kasvoValo.shadows = LightShadows.None;
+                kasvoValo.cullingMask = 1 << DioraamaNayttamo.Kerros;
+                kasvoValo.intensity = 0f;
+            }
+            if (paalla)
+            {
+                var kasvot = DioraamaHahmot3D.PuhujanJuuri.Value + Vector3.up * KasvovaloKorkeus;
+                var kohti = kamera.transform.position - kasvot;
+                kohti.y = 0f;
+                kasvoGo.transform.position = kasvot + (kohti.sqrMagnitude > 1e-4f ? kohti.normalized * KasvovaloEtaisyys : Vector3.zero) + Vector3.up * 0.2f;
+            }
+            kasvoValo.intensity = Mathf.MoveTowards(kasvoValo.intensity, paalla ? KasvovaloVoima : 0f, KasvovaloVoima / 0.4f * Time.unscaledDeltaTime);
+            kasvoValo.enabled = kasvoValo.intensity > 0.001f;
+        }
+        GameObject kasvoGo;
+        Light kasvoValo;
+        const float KasvovaloVoima = 0.8f, KasvovaloSade = 2.2f, KasvovaloKorkeus = 1.55f, KasvovaloEtaisyys = 1.0f;
+
         public void Tuhoa()
         {
+            if (kasvoGo != null) UnityEngine.Object.Destroy(kasvoGo);
+            kasvoGo = null; kasvoValo = null;
             foreach (var p in pisteValot) if (p.Go != null) UnityEngine.Object.Destroy(p.Go);
             pisteValot.Clear();
             if (aurinkoGo != null) UnityEngine.Object.Destroy(aurinkoGo);

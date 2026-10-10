@@ -174,7 +174,7 @@ namespace Matkakirja.Natiivi
             yield return r2.SendWebRequest();
             if (r1.result != UnityWebRequest.Result.Success || r2.result != UnityWebRequest.Result.Success)
             { Debug.Log($"MATKAKIRJA äänimaisema: kaupunkimaisema ei latautunut ({r1.responseCode}/{r2.responseCode})"); yield break; }
-            try { maisema = KaupunkiMaisema.Lue(r1.downloadHandler.text, MaisemaV1, r2.downloadHandler.text, MaisemaV2); Debug.Log("MATKAKIRJA äänimaisema: kaupunkimaisema v1+v2 ladattu"); }
+            try { maisema = KaupunkiMaisema.Lue(r1.downloadHandler.text, MaisemaV1, r2.downloadHandler.text, MaisemaV2, Juuri); Debug.Log("MATKAKIRJA äänimaisema: kaupunkimaisema v1+v2 ladattu"); }
             catch (Exception e) { Debug.Log("MATKAKIRJA äänimaisema: kaupunkimaisema virheellinen: " + e.Message); }
         }
 
@@ -460,6 +460,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Silmukka välimuistiin (ensimmäinen kerta) ja file://-suoratoistona soittoon (ei koko PCM:ää muistiin).</summary>
         static IEnumerator Lataa(string url, Action<AudioClip> valmis)
         {
+            url = Matkakirja.Linssit.Aanet.KaupunkiSilmukat.Osoite(url, Juuri);   // lyhyet silmukat → kaupunkisilmukat-v1 (juna 174)
             string tiedosto = Path.Combine(Application.temporaryCachePath, "aanimaisema", Hash(url) + Path.GetExtension(new Uri(url).AbsolutePath));
             if (!File.Exists(tiedosto))
             {

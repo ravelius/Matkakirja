@@ -40,6 +40,13 @@ namespace Matkakirja.Natiivi
         /// <summary>Kierroksen maamerkit (lat, lon, maan korkeus ellipsoidista, säde m); OpasSovitin asettaa kehityskaupungeissa.</summary>
         public static readonly List<(double lat, double lon, double maaM, double sadeM)> Maamerkit = new List<(double, double, double, double)>();
         public static float MaamerkkiVoima = 1.5f, Heijastus = 1f;
+        // v12 (Linssiseppä 10.10., PT: yövalot 174/175 ilman lisämuistia): Karttasepän OSM-lamput (katuvalot, valaistut tiet ja sillat,
+        // rantavalot) ja valaistut alueet (kentät, kohteet) vesimaskin vapaissa kanavissa (tyokalut/yovalot_lamput.py: G = lamppu, B = paikka
+        // solussa, A = alue). Sama RGBA32-tekstuuri → 0 Mt lisää. Maskin alueella lamput ovat oikeilla paikoillaan (ei solukon arvontaa)
+        // ja rantojen heijastukset tulevat lamppujen tiheydestä; muualla ennallaan. KaupunkiKuva-asetus "yolamput 0|1", "yoalueet" = voima.
+        public static bool OsmLamput = true;
+        public static float AlueVoima = 1f;
+        static bool vesiLamput;
         public const int MaamerkkejaMax = 8;
         public const float VesiSivuM = 12288f;
         static Texture2D vedet; static string vedetId; static (double lat, double lon)? vesiKeskus;
@@ -73,7 +80,8 @@ namespace Matkakirja.Natiivi
             IdIkkunat = Shader.PropertyToID("_IkkunaParam"), IdTiet = Shader.PropertyToID("_Tiet"), IdTieAlue = Shader.PropertyToID("_TieAlue"),
             IdKohde = Shader.PropertyToID("_KohdeP"), IdKohdeParam = Shader.PropertyToID("_KohdeParam"),
             IdVedet = Shader.PropertyToID("_Vedet"), IdVesiAlue = Shader.PropertyToID("_VesiAlue"), IdKamera = Shader.PropertyToID("_KameraP"),
-            IdMaamerkit = Shader.PropertyToID("_Maamerkit"), IdMaamerkkiParam = Shader.PropertyToID("_MaamerkkiParam");
+            IdMaamerkit = Shader.PropertyToID("_Maamerkit"), IdMaamerkkiParam = Shader.PropertyToID("_MaamerkkiParam"),
+            IdLamppuParam = Shader.PropertyToID("_LamppuParam");
         const int Koko = Matkakirja.Linssit.Kierros.KaupunkiYovalot.PxAste * Matkakirja.Linssit.Kierros.KaupunkiYovalot.Ruudukko;   // 720
 
         /// <summary>Kerran kehyksessä kaupunkinäkymässä. osuus 0–1 (hämärä → yö); isanta ajaa latauskorutiinit.</summary>
@@ -125,19 +133,23 @@ namespace Matkakirja.Natiivi
             {
                 vedetId = KaupunkiId ?? "";
                 if (vedet != null) { Object.Destroy(vedet); vedet = null; }
-                vesiKeskus = null;
+                vesiKeskus = null; vesiLamput = false;
                 var kk = Array.Find(Matkakirja.Linssit.Kehityskaupungit.Lista, x => x.Id == vedetId);
                 var ta = kk.Id != null ? Resources.Load<TextAsset>("Elava/vesi-" + vedetId + "-maski") : null;
                 if (ta != null)
                 {
-                    vedet = new Texture2D(2, 2, TextureFormat.RGBA32, true) { name = "Yövalot: vedet " + vedetId, wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Trilinear };
-                    if (vedet.LoadImage(ta.bytes, true)) vesiKeskus = (kk.Lat, kk.Lon); else { Object.Destroy(vedet); vedet = null; }
+                    vedet = new Texture2D(2, 2, TextureFormat.RGBA32, true, true) {   // v12: lineaarinen (B = lampun paikka, A = alue; ei sRGB-muunnosta)
+                         name = "Yövalot: vedet " + vedetId, wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Trilinear };
+                    // v12: RGBA-PNG (värityyppi 6, tavu 25) = OSM-lamput mukana; vanha RGB-maski (2) toistaa vettä G:ssä → ei lamppuja.
+                    vesiLamput = ta.bytes.Length > 25 && ta.bytes[25] == 6;
+                    if (vedet.LoadImage(ta.bytes, true)) vesiKeskus = (kk.Lat, kk.Lon); else { Object.Destroy(vedet); vedet = null; vesiLamput = false; }
                     Resources.UnloadAsset(ta);
-                    Debug.Log($"MATKAKIRJA kaupunki: yövalot: vesimaski {vedetId} {(vedet != null ? "ladattu" : "virheellinen")}");
+                    Debug.Log($"MATKAKIRJA kaupunki: yövalot: vesimaski {vedetId} {(vedet != null ? "ladattu" : "virheellinen")}{(vesiLamput ? " + OSM-lamput" : "")}");
                 }
             }
             materiaali.SetTexture(IdVedet, vedet != null ? vedet : Texture2D.blackTexture);
             materiaali.SetVector(IdVesiAlue, vesiKeskus is (double, double) vk ? new Vector4((float)vk.lat, (float)vk.lon, VesiSivuM, Heijastus) : Vector4.zero);
+            materiaali.SetVector(IdLamppuParam, new Vector4(vesiLamput && OsmLamput && vesiKeskus != null ? 1f : 0f, AlueVoima, 0f, 0f));
             var kp = georef.transform.worldToLocalMatrix.MultiplyPoint3x4(kamera.transform.position);
             materiaali.SetVector(IdKamera, new Vector4(kp.x, kp.y, kp.z, 0f));
             // v6: maamerkit paikalliseen ENU:hun (enintään 8; w = säde, 0 = tyhjä paikka).

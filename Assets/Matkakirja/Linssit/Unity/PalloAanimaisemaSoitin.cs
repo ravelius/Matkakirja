@@ -88,7 +88,7 @@ namespace Matkakirja.Natiivi
                 if (!klipit.TryGetValue(u, out var sc)) { if (ladataan.Add(u)) isanta.StartCoroutine(Lataa(u)); continue; }
                 if (sc == null) continue;
                 var ol = isanta.gameObject.AddComponent<AudioSource>(); ol.playOnAwake = false; ol.spatialBlend = 0; ol.loop = true; ol.clip = sc; ol.volume = 0f;
-                ol.time = Random.Range(0f, sc.length * 0.9f); ol.Play(); omat[u] = ol;
+                ol.time = Random.Range(0f, sc.length * 0.9f); SaumatonSilmukka.Kiinnita(ol); ol.Play(); omat[u] = ol;   // saumaton (juna 174)
             }
             if (!soi || !manifesti.Kaupungit.TryGetValue(kaupunki, out var l)) return;
             double nyt = Time.unscaledTimeAsDouble;
@@ -135,12 +135,17 @@ namespace Matkakirja.Natiivi
         IEnumerator Lataa(string osoite)
         {
             string polku = osoite;
-            using var r = UnityWebRequestMultimedia.GetAudioClip(osoite, AudioType.MPEG);
+            using var r = UnityWebRequestMultimedia.GetAudioClip(Matkakirja.Linssit.Aanet.KaupunkiSilmukat.Osoite(osoite, KaupunkiAanimaisemaSoitin.Juuri), AudioType.MPEG);   // kujerrus → kaupunkisilmukat-v1
+            // Pakattuna muistiin (juna 174, muisti): kaupunkisilmukat-v1:n 90 s kyyhkyt purettuna ~16 Mt, pakattuna ~2 Mt
+            // (vanha 30 s purettuna ~5 Mt). SaumatonSilmukka jatkaa pakatun silmukan hakuttomasti tagin mukaan.
+            ((DownloadHandlerAudioClip)r.downloadHandler).compressed = true;
             r.timeout = 30;
             yield return r.SendWebRequest();
-            ladataan.Remove(polku);
-            klipit[polku] = r.result == UnityWebRequest.Result.Success ? DownloadHandlerAudioClip.GetContent(r) : null;
-            if (klipit[polku] != null && osoitteenId.TryGetValue(polku, out var id)) klipit[polku].name = id;
+            var c = r.result == UnityWebRequest.Result.Success ? DownloadHandlerAudioClip.GetContent(r) : null;
+            if (c != null && osoitteenId.TryGetValue(polku, out var id)) c.name = id;
+            // Tagi ennen käyttöönottoa (pyynnön todellinen osoite, LS1:n kaupunkisilmukat-ohjaus), jotta silmukka alkaa saumattomana.
+            if (c != null) yield return SaumatonSilmukka.HaeTagi(r.url, c);
+            ladataan.Remove(polku); klipit[polku] = c;
         }
 
         public void Sulje()

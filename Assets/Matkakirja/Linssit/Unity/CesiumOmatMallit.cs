@@ -67,7 +67,12 @@ namespace Matkakirja.Linssit
 
         /// <summary>Googlen leikkaus: juurisyy (koko tileset katosi, materialKey "0") korjattu 72cc68be; päällä Gizan valmistuessa
         /// (omistaja 7.10. 08.4x), kun ennen/jälkeen-kuva on todennettu. Testi pois: Documents/omat-mallit/leikkaus-pois.</summary>
-        static bool Leikkaa => !File.Exists(Path.Combine(Application.persistentDataPath, "omat-mallit", "leikkaus-pois"));
+        static bool Leikkaa => LeikkausSallittu && !File.Exists(Path.Combine(Application.persistentDataPath, "omat-mallit", "leikkaus-pois"));
+        /// <summary>Diagnostiikka (juna 173 jetsam-mittaus 10.10.): asetus "leikkaus 0" = ei Googlen leikkausmaskia (rasterikerros SSE 0,5 /
+        /// 4096 px) omien mallien kohdalla.</summary>
+        public static bool LeikkausSallittu = true;
+        /// <summary>Asetus "leikkaustarkka 1": pienelläkin muistilla entinen tarkka maski (SSE 0,5, 4096 px) vertailuun.</summary>
+        public static bool LeikkausTarkka;
 
         /// <summary>uusin-2.json (9.10., juna 170): kaupunkien omat mallit (Riddarholmen, Concorde) vain buildeille, joissa ilmakehän
         /// laattavarjostimen leikkaus on oikein päin (fa5efa25c); vanhat buildit lukevat uusin.json:ia (vain Giza), muuten niissä
@@ -75,7 +80,11 @@ namespace Matkakirja.Linssit
         /// <summary>uusin-3.json (9.10., juna 173; PT/LR: uusi data vain sitä lukeville buildeille): mallit, jotka tarvitsevat
         /// OmaMallin PBR-kartat, kaupungin auringon ja alfaleikkauksen (ND v5+ korttipuut, COLOR_0-sävyerot). uusin-2 jää vanhoille
         /// (170–172, nyt v6b), joten niihin ei päädy dataa, jota niiden varjostin ei osaa piirtää.</summary>
-        public const string VerkkoOsoitin = "https://media.matkakirja.app/kartta/omat-mallit/uusin-3.json";
+        /// <summary>uusin-4.json (10.10., juna 174; PT: vanhoja appeja ei rikota): mallit, joiden tekstuurit ovat KTX2:ta
+        /// (KHR_texture_basisu, tyokalut/omat_mallit_ktx2.py; pysyvät pakattuina GPU:lle). Vain 174+ lukee sitä; jos sitä ei vielä ole
+        /// ämpärissä, haetaan uusin-3 (VaraOsoitin), joten mallit eivät katoa ennen vientiä. 173 ja vanhemmat lukevat uusin-3:a.</summary>
+        public const string VerkkoOsoitin = "https://media.matkakirja.app/kartta/omat-mallit/uusin-4.json";
+        public const string VaraOsoitin = "https://media.matkakirja.app/kartta/omat-mallit/uusin-3.json";
         static string verkkoJson, verkkoJuuri;
         static bool verkkoHaettu, verkkoHaussa;
         /// <summary>R2:n mallit.json saapui (avoin kaupunkinäkymä avaa lähellä olevat mallit).</summary>
@@ -86,19 +95,29 @@ namespace Matkakirja.Linssit
         static System.Collections.IEnumerator HaeVerkosta()
         {
             verkkoHaussa = true;
-            string osoitin = null;
-            using (var r = UnityEngine.Networking.UnityWebRequest.Get(VerkkoOsoitin + "?t=" + DateTime.UtcNow.Ticks / TimeSpan.TicksPerMinute))
+            string osoitin = null, pohja = null;
+            foreach (var o in new[] { VerkkoOsoitin, VaraOsoitin })
             {
+                using var r = UnityEngine.Networking.UnityWebRequest.Get(o + "?t=" + DateTime.UtcNow.Ticks / TimeSpan.TicksPerMinute);
                 r.timeout = 15;
                 yield return r.SendWebRequest();
                 if (r.result == UnityEngine.Networking.UnityWebRequest.Result.Success
                     && Matkakirja.Peli.MiniJson.Jasenna(r.downloadHandler.text) is Dictionary<string, object> d && d.TryGetValue("mallit", out var m))
-                    osoitin = m as string;
-                else Debug.Log($"MATKAKIRJA kaupunki: omat mallit: osoitin ei latautunut ({r.responseCode})");
+                { osoitin = m as string; pohja = o; break; }
+                Debug.Log($"MATKAKIRJA kaupunki: omat mallit: osoitin {o.Substring(o.LastIndexOf('/') + 1)} ei latautunut ({r.responseCode})");
             }
+            // DIAGNOSTIIKKA (Natiiviseppä 10.10., juna 173 jetsam): Documents/omat-mallit-osoitin.txt (esim. "v6h2/mallit.json") ohittaa
+            // ämpärin osoittimen, jotta korjattu data voidaan ajaa laitteella ennen osoitinvaihtoa. Tyhjä tiedosto = ei ohitusta.
+            try
+            {
+                var po = Path.Combine(Application.persistentDataPath, "omat-mallit-osoitin.txt");
+                string ohitus = File.Exists(po) ? File.ReadAllText(po).Trim() : null;
+                if (!string.IsNullOrEmpty(ohitus)) { Debug.Log($"MATKAKIRJA kaupunki: omat mallit: osoitin ohitettu (testi) {osoitin} → {ohitus}"); osoitin = ohitus; }
+            }
+            catch (Exception) { }
             if (!string.IsNullOrEmpty(osoitin) && !osoitin.Contains("..") && !osoitin.StartsWith("/"))
             {
-                string url = new Uri(new Uri(VerkkoOsoitin), osoitin).AbsoluteUri;
+                string url = new Uri(new Uri(pohja), osoitin).AbsoluteUri;
                 using var r = UnityEngine.Networking.UnityWebRequest.Get(url);
                 r.timeout = 15;
                 yield return r.SendWebRequest();
@@ -145,10 +164,14 @@ namespace Matkakirja.Linssit
         Cesium3DTileset googleViimeisin;
 
         /// <summary>Avaa lähellä olevat mallit (vanhat pois). vanhempi = Cesium-kaupungin juuri georeferenssin alla.</summary>
+        /// <summary>Diagnostiikka (Natiiviseppä 9.10., juna 173 jetsam-mittaus): asetus "omatmallit 0" = kaupunki ilman omia malleja.</summary>
+        public static bool Kaytossa = true;
+
         public void Avaa(Transform vanhempi, Cesium3DTileset googleTileset, double lat, double lon, int kerros)
         {
             Sulje();
             vanhempi0 = vanhempi; kerros0 = kerros; googleViimeisin = googleTileset; viimeLat = lat; viimeLon = lon;
+            if (!Kaytossa) { kirjaa?.Invoke("omat mallit: pois (asetus omatmallit 0)"); return; }
             var (json, juuriUrl, lahde) = Lue();
             if (json == null)
             {
@@ -173,6 +196,14 @@ namespace Matkakirja.Linssit
                 t.showCreditsOnScreen = false;   // oma tekijärivi Tekijat-kentästä
                 t.createPhysicsMeshes = false;
                 t.forbidHoles = true;
+                // PIENI MUISTI (juna 173, Natiiviseppä 10.10. iPad-mittaus): mallin kaikki LOD-tasot (lod2 + lod1 + lod0) olivat muistissa
+                // yhtä aikaa (preloadAncestors, forbidHoles, välimuisti 512 Mt) = korjatullakin datalla 575 Mt GPU:ta. Kevyt lataus: vain
+                // näkyvä taso + välimuisti 64 Mt (käyttämätön taso vapautuu), 2 latausta kerrallaan (kuvien purku ei kasaannu).
+                if (Matkakirja.Natiivi.KaupunkiKuva.PieniMuisti && Matkakirja.Natiivi.KaupunkiKuva.PieniLataus)
+                {
+                    t.preloadAncestors = false; t.forbidHoles = false;
+                    t.maximumCachedBytes = 64L << 20; t.maximumSimultaneousTileLoads = 2;
+                }
                 // Omat mallit tarkemmin kuin Googlen laatat (simu 9.10. 04.5x: Googlen SSE 16 piti 420 m:stä Notre-Damen karkeimmalla LOD2:lla,
                 // virhe 1,7 m → SSE ~15). Mallit ovat pieniä (LOD0 30–120 k), joten LOD0 jo noin 1 km:stä.
                 t.maximumScreenSpaceError = Mathf.Min(OmaSse, googleTileset != null ? googleTileset.maximumScreenSpaceError : 16f);
@@ -233,8 +264,12 @@ namespace Matkakirja.Linssit
                 leikkaus.excludeSelectedTiles = true;
                 // Simu 7.10. 09.33: kaukaa (1,4–5 km) maski rasteroitui karkean Google-tiilen kokoiselle tekstuurille, ja reikä paisui
                 // lähes kaksinkertaiseksi (lähellä tarkka). Hienompi maski: pienempi ruutuvirhe ja suurempi tekstuuri.
-                leikkaus.maximumScreenSpaceError = 0.5f;
-                leikkaus.maximumTextureSize = 4096;
+                // PIENI MUISTI (juna 173, Natiiviseppä 10.10. iPad-mittaus): SSE 0,5 / 4096 px -maski vei kierroksella ~0,3 Gt (rasterikerroksen
+                // tekstuurit Googlen laatoilla) ja laukaisi muistihädän → lataus seis. Pienellä muistilla Cesiumin oletustarkkuus (SSE 2,
+                // 1024 px): kaukaa reikä on karkeampi, lähellä tarkka. Asetus "leikkaustarkka 1" palauttaa entisen (vertailu).
+                bool kevytMaski = Matkakirja.Natiivi.KaupunkiKuva.PieniMuisti && !LeikkausTarkka;
+                leikkaus.maximumScreenSpaceError = kevytMaski ? 2f : 0.5f;
+                leikkaus.maximumTextureSize = kevytMaski ? 1024 : 4096;
             }
             var lista = new List<CesiumCartographicPolygon>();
             foreach (var m in mallit) if (m.polygoni != null) lista.Add(m.polygoni);

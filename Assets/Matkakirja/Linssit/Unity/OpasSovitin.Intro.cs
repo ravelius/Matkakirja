@@ -65,6 +65,13 @@ namespace Matkakirja.Natiivi
             esitysAlku = Time.unscaledTime; avausEnnenS = 0;
             opastusSiirretty = false; opastusUrl = null;
             if (Testi || !IntroPaalla || !KaupunkiIntro.OnIntro(kaupunkiId) || kaupunkitila == null) return false;
+            // Vähän muistia (juna 173, iPad Pro 13 jetsam): koko nykyintro ohitetaan, avaus kuten ilman introa (juna 172).
+            long vapaaAlussa = CesiumKaupunki.VapaaMuisti();
+            if (vapaaAlussa > 0 && vapaaAlussa / 1e9 < IntroOhitusRajaGt)
+            {
+                o.Kirjaa($"opas: intro {kaupunkiId} ohitettu: vapaa muisti {vapaaAlussa / 1e9:F2} Gt < {IntroOhitusRajaGt:F1} Gt (avaus kuten ennen)");
+                return false;
+            }
             introKaynnissa = true; introAvausVapaa = false; introOhitusPyynto = false;
             opastusSiirretty = !OpastusKuultu;
             o.StartCoroutine(EsitysIntro(kaupunkiId, ++introVersio));
@@ -82,20 +89,19 @@ namespace Matkakirja.Natiivi
             }
             o.Kirjaa($"opas: intro {kaupunkiId} alkaa: odotetaan musiikkia (enintään {KaupunkiIntro.MusiikkiOdotusS:F0} s)");
             NytRivi.Valmistele(kk.Lat, kk.Lon, kaupunkiId);
-            for (int i = 1; i <= KaupunkiIntro.Kuvia; i++)
-            {
-                int n = i;
-                Kuvat.Hae(KaupunkiIntro.KuvaUrl(n), t =>
-                {
-                    if (versio != introVersio || !introKaynnissa) return;
-                    if (t == null) { o.Kirjaa($"opas: intro kuva c{n} ei latautunut (otos 3D-avausnäkymänä)"); return; }
-                    introKuvat[n] = t; Kuvat.Kiinnita(t);
-                    o.Kirjaa($"opas: intro kuva c{n} valmis ({t.width}×{t.height})");
-                });
-            }
+            // MUISTIVARA (juna 173, iPad Pro 13: jetsam intron alussa, vapaa 0,44 Gt, kaupungin laatat 98 %): kuvat haetaan yksi
+            // kerrallaan (ei viittä purkua yhtä aikaa), ja vähällä muistilla Eiffel-otoksen laattoja ei esiladata intron alusta asti
+            // reittikameralla (PT 9.10.: laatat latautuvat vasta otoksen alkaessa).
+            long vapaa = CesiumKaupunki.VapaaMuisti();
+            // Pienen muistin laite (alle 12 Gt, KaupunkiKuva.PieniMuisti; iPad Pro 13 8 Gt, 173b-todennus 22.3x: vapaa 1,33 Gt ennen
+            // introa ja yli 1 Gt kului kahdessa sekunnissa, kun Trocadérolta lähes vaakasuoraan katsova Eiffel-näkymä alkoi latautua):
+            // ei Eiffel-esilatausta eikä Eiffel-otosta, otos näytetään 3D-avausnäkymänä. Muilla laitteilla vapaan muistin raja.
+            introEiffel = !KaupunkiKuva.PieniMuisti && (vapaa <= 0 || vapaa / 1e9 >= IntroEiffelRajaGt);
+            o.StartCoroutine(HaeIntroKuvat(versio));
             // Eiffel-otoksen laatat valmiiksi reittikameralla (PaivitaKamera → IntroReitti) otoksen loppuun asti.
             double eMaa = OmaMaaKehalla(KaupunkiIntro.EiffelLat, KaupunkiIntro.EiffelLon);
-            introEsilataus = KaupunkiIntro.EiffelKulma(0.5, eMaa);
+            introEsilataus = introEiffel ? KaupunkiIntro.EiffelKulma(0.5, eMaa) : (Kuvakulma?)null;
+            if (!introEiffel) o.Kirjaa($"opas: intro {kaupunkiId}: {(KaupunkiKuva.PieniMuisti ? "pieni muisti" : $"vapaa muisti {vapaa / 1e9:F2} Gt < {IntroEiffelRajaGt:F1}")} → Eiffel-esilataus ja -otos pois (3D-avausnäkymä)");
             // Avausnäkymän kierto koko intro + avaus (muuten 16 s:n kierto pysähtyisi ja avauksen ääni hyppäisi kulmaa taaksepäin).
             silmukka?.AsetaAvausKesto(KaupunkiIntro.AvausS + KaupunkiIntro.AvausArvioS + AvausLisaS);
             introKerros ??= new IntroKerros();
@@ -169,8 +175,13 @@ namespace Matkakirja.Natiivi
                 if (introKoriEnnen != null && c5Lukittu && t >= KaupunkiIntro.KoriPalaa(c5)) KoriTakaisin();
                 var tila = KaupunkiIntro.Tila(t, n => introKuvat[n] != null, c5Nyt);
                 if (!KaupunkiIntro.EiffelEsilataus(t)) introEsilataus = null;
-                introKamera = tila.Laji == IntroLaji.Eiffel ? KaupunkiIntro.EiffelKulma(KaupunkiIntro.EiffelOsuus(t), eMaa) : (Kuvakulma?)null;
+                introKamera = tila.Laji == IntroLaji.Eiffel && introEiffel ? KaupunkiIntro.EiffelKulma(KaupunkiIntro.EiffelOsuus(t), eMaa) : (Kuvakulma?)null;
                 introKerros.Aseta(tila, tila.Kuva > 0 ? introKuvat[tila.Kuva] : null);
+                if (tila.Kuva > introNakyvaKuva)
+                {
+                    introNakyvaKuva = tila.Kuva;
+                    for (int i = 1; i < tila.Kuva; i++) if (introKuvat[i] != null) { Kuvat.Poista(introKuvat[i]); introKuvat[i] = null; }
+                }
                 if (tila.Otos != otos)
                 {
                     otos = tila.Otos;
@@ -186,6 +197,34 @@ namespace Matkakirja.Natiivi
                 yield return null;
             }
             IntroLoppuu(versio, true, "valmis");
+        }
+
+        /// <summary>Eiffel-otoksen esilataus vain, kun vapaata muistia on vähintään tämän verran intron alussa (Gt; iPad-kaatuminen juna 173).</summary>
+        public const double IntroEiffelRajaGt = 1.3, IntroOhitusRajaGt = 0.8;   // Natiiviseppä: esilataus 0,3–0,7 Gt
+        bool introEiffel = true;
+
+        /// <summary>Introkuvat yksi kerrallaan ja enintään kaksi muistissa: kuva n haetaan vasta, kun kuva n − 1 on ruudulla
+        /// (introNakyvaKuva), ja aiemmat poistetaan myös välimuistista (Kuvat.Poista).</summary>
+        int introNakyvaKuva;
+        IEnumerator HaeIntroKuvat(int versio)
+        {
+            introNakyvaKuva = 0;
+            for (int n = 1; n <= KaupunkiIntro.Kuvia; n++)
+            {
+                while (n > introNakyvaKuva + 1 && versio == introVersio && introKaynnissa) yield return null;
+                if (versio != introVersio || !introKaynnissa) yield break;
+                bool valmis = false; int k = n;
+                Kuvat.Hae(KaupunkiIntro.KuvaUrl(k), t =>
+                {
+                    valmis = true;
+                    if (versio != introVersio || !introKaynnissa) return;
+                    if (t == null) { o.Kirjaa($"opas: intro kuva c{k} ei latautunut (otos 3D-avausnäkymänä)"); return; }
+                    introKuvat[k] = t; Kuvat.Kiinnita(t);
+                    o.Kirjaa($"opas: intro kuva c{k} valmis ({t.width}×{t.height})");
+                });
+                while (!valmis && versio == introVersio && introKaynnissa) yield return null;
+                if (versio != introVersio || !introKaynnissa) yield break;
+            }
         }
 
         /// <summary>Pallon korin tila ennen introa (null = ei piilotettu).</summary>
@@ -208,7 +247,7 @@ namespace Matkakirja.Natiivi
             introKamera = null; introEsilataus = null;
             KoriTakaisin();
             introKerros?.Pois();
-            for (int i = 0; i < introKuvat.Length; i++) { if (introKuvat[i] != null) Kuvat.Vapauta(introKuvat[i]); introKuvat[i] = null; }
+            for (int i = 0; i < introKuvat.Length; i++) { if (introKuvat[i] != null) Kuvat.Poista(introKuvat[i]); introKuvat[i] = null; }
             if (oli) o.Kirjaa($"opas: intro loppui ({syy})");
         }
 

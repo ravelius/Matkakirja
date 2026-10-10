@@ -343,6 +343,9 @@ namespace Matkakirja.Linssit.Dioraama
     public sealed class KasiKohde
     {
         public string Tyyppi = "tartu", Esine, Kasi = "r", Milloin = "aina";
+        /// <summary>Kannettavan esineen glb (`glb`, LR 9.10. rukouskirja) ja kehys (`kehys`): "kammen" = Siirto/Kierto kämmenen
+        /// kehyksessä (kämmen −Y, sormet +Z, origo käden luussa); tartu-rivi, jolla on Esine, on esineen omassa kehyksessä.</summary>
+        public string Glb, Kehys;
         public V3 Paikka, Siirto;
         public double[] Kierto;
         public double Paino = 1;
@@ -660,6 +663,10 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>Järven pinnan korkeus metreinä (`vesi`, oletus −7): fotogrammetriasta vesi on poistettu, ja natiivi
         /// piirtää järven pinnan "vesi" tälle korkeudelle.</summary>
         public double VesiY = -7;
+        /// <summary>Kuoren asu (`asu`, PT 9.10.): "1499" = vuoden 1499 kuori (v25, bastionien tilalla kallioranta); puuttuva = nykyasu (v24,
+        /// bastioneineen). Historia piilottaa ranta-1499:n myöhempien rakenteiden ajaksi vain nykyasuisella kuorella.</summary>
+        public string Asu;
+        public bool Asu1499 => Asu == "1499";
         /// <summary>Lähidetalji (menetelmä B, 30.9.2026; `detalji`); null = ei detaljia.</summary>
         public KuoriDetalji Detalji;
     }
@@ -957,6 +964,7 @@ namespace Matkakirja.Linssit.Dioraama
                     Kevyt = MiniJson.Teksti(kuori, "kevyt"),
                 };
             if (r.Ulkokuori != null && MiniJson.Luku(kuori, "vesi") is double vesiY) r.Ulkokuori.VesiY = vesiY;
+            if (r.Ulkokuori != null) r.Ulkokuori.Asu = MiniJson.Teksti(kuori, "asu");
             var detalji = MiniJson.ObjektiTaiNull(MiniJson.Kentta(kuori, "detalji"));
             if (r.Ulkokuori != null && detalji != null)
             {
@@ -1569,6 +1577,8 @@ namespace Matkakirja.Linssit.Dioraama
                 {
                     Tyyppi = MiniJson.Teksti(k, "tyyppi") ?? "tartu",
                     Esine = MiniJson.Teksti(k, "esine"),
+                    Glb = MiniJson.Teksti(k, "glb"),
+                    Kehys = MiniJson.Teksti(k, "kehys"),
                     Kasi = MiniJson.Teksti(k, "kasi") == "l" ? "l" : "r",
                     Milloin = MiniJson.Teksti(k, "milloin") ?? "aina",
                     Paino = Math.Clamp(MiniJson.Luku(k, "paino") ?? 1, 0, 1),

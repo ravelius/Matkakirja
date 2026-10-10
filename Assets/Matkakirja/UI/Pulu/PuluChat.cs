@@ -141,6 +141,9 @@ namespace Matkakirja.Natiivi
         (double Lat, double Lon, double Korkeus)? paluupaikka;
 
         public bool Auki { get; private set; }
+        /// <summary>Asettelutesti: chatin paneeli ja pinnaus (sama kuin pin-napin painallus).</summary>
+        public VisualElement TestiPaneeli => paneeli;
+        public void TestiPinnaa() => VaihdaPin();
 
         /// <summary>
         /// LINSSITILA (omistaja 30.9.2026 klo 23.5x, astronautin kamera: "pululla saisi olla myös tässä striimiluenta. tee
@@ -398,13 +401,19 @@ namespace Matkakirja.Natiivi
             st.left = pVasen;
             st.right = StyleKeyword.Auto;
             st.width = Mathf.Max(0f, pOikea - pVasen);
-            st.bottom = h - pAla;
+            // Pinnattuna ankkuri yläreunaan (asettelutesti 9.10.2026 23.11, Päätoimittaja): alareunasta ankkuroitu sisällön mittainen
+            // chat jäi varauksen pohjalle (iPhone pysty y 521 ennen ja jälkeen pinnauksen).
+            if (ylhaalla && !sivulla) { st.top = pYla; st.bottom = StyleKeyword.Auto; }
+            else { st.top = StyleKeyword.Null; st.bottom = h - pAla; }
             st.minHeight = 0f;
             st.maxHeight = korkeus;
             AsetaKorkeus();
         }
 
-        /// <summary>Linssitila: paneelin oikea reuna minipulun oikeaan reunaan, alareuna 8 pt minipulun yläpuolelle.</summary>
+        const float LinssiVahKorkeus = 160f;
+
+        /// <summary>Linssitila: paneelin oikea reuna minipulun oikeaan reunaan, alareuna 8 pt minipulun yläpuolelle; alle
+        /// LinssiVahKorkeus tilaa ankkurin yläpuolella → false (tavallinen asettelu).</summary>
         bool AsetteleLinssiin(Vector4 r)
         {
             var par = paneeli.parent;
@@ -412,11 +421,16 @@ namespace Matkakirja.Natiivi
             var koko = par?.layout ?? default;
             if (par == null || a.width <= 0 || float.IsNaN(koko.width) || koko.width <= 0) return false;
             var l = par.WorldToLocal(a);
-            float lev = Mathf.Min(360f, koko.width - 24f);
             float ala = l.yMin - 8f, yla = Mathf.Max(r.y + 12f, 12f);
+            // Yläreunan ankkuri (oppaan ☰ iPhonen vaakatilassa, asettelutesti 10.10.2026): yläpuolella ei tilaa, ylärivin kuvakkeet
+            // jäivät ruudun yli (y −14) → tavallinen chat-asettelu (Päätoimittaja 10.10.2026).
+            if (ala - yla < LinssiVahKorkeus) return false;
+            // Vaakasuunnassa turva-alueen sisään (sivujen sensorialueet iPhonen vaakatilassa), 12 pt reunasta.
+            float vasen = r.x + 12f, oikea = koko.width - r.z - 12f;
+            float lev = Mathf.Min(360f, Mathf.Max(0f, oikea - vasen));
             korkeus = Mathf.Max(0f, Mathf.Min(520f, ala - yla));
             var st = paneeli.style;
-            st.left = Mathf.Clamp(l.xMax - lev, 12f, Mathf.Max(12f, koko.width - lev - 12f));
+            st.left = Mathf.Clamp(l.xMax - lev, vasen, Mathf.Max(vasen, oikea - lev));
             st.right = StyleKeyword.Auto;
             st.width = lev;
             st.bottom = koko.height - ala;
@@ -1352,7 +1366,7 @@ namespace Matkakirja.Natiivi
             kupla.RegisterCallback<UnityEngine.UIElements.Experimental.PointerUpLinkTagEvent>(e =>
             {
                 if (string.IsNullOrEmpty(e.linkID) || kysyy) return;
-                Kysy(PuluValmiit.KerroLisaaAlku + e.linkID, true);
+                Kysy(PuluValmiit.KerroLisaaKysymys(e.linkID), true);
             });
         }
 

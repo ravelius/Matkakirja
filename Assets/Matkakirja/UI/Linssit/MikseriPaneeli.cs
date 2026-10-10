@@ -58,6 +58,8 @@ namespace Matkakirja.Natiivi
         bool vedetaan;
 
         public static MikseriPaneeli Viimeisin { get; private set; }
+        /// <summary>Asettelutesti: paneeli (säätimet ja napit).</summary>
+        public VisualElement TestiPaneeli => paneeli;
 
         /// <summary>Linnan valikko (omistaja 2.10. 14.44): säätönappi pois ruudulta, mikseri avataan valikon Äänet-näkymästä.</summary>
         public static bool LappuPiilossa;

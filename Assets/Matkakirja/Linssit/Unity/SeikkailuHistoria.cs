@@ -189,6 +189,9 @@ namespace Matkakirja.Natiivi
         static Vector4 MustaKorvaus => Hamara ? new Vector4(0.045f, 0.047f, 0.05f, 4f) : new Vector4(0.27f, 0.28f, 0.29f, 4f);
         /// <summary>Kuori hämäräkuvalla (DioraamaTunnelma.Hamara; DioraamaSovitin asettaa ennen Aloita-kutsua).</summary>
         public static bool Hamara;
+        /// <summary>Tyhjän saaren maa linnan alla koko historian ajan (arvio 10 virhe 1, PT 9.10.: lounaispuolen vedenväriset aukot
+        /// täyttyvät maalla); "poikki historia saari 0" palauttaa vanhan (saari vain ennen kuoren nousua).</summary>
+        public static bool SaariAlla = true;
         static Texture2D rantaSavy; static MaterialPropertyBlock rantaLohko;
         static void TasainenRanta(Renderer r)
         {
@@ -251,7 +254,7 @@ namespace Matkakirja.Natiivi
                 if (vaiheet != null)
                     foreach (var vm in vaiheet.Vaiheet)
                     {
-                        bool maa = vm.Malli.Vuodesta == null && h.MaaNakyy(t);   // tyhjä saari kunnes kuoren kallio on noussut (arvio 3)
+                        bool maa = vm.Malli.Vuodesta == null && (h.MaaNakyy(t) || SaariAlla && linnaNakyy);   // tyhjä saari kunnes kuoren kallio on noussut (arvio 3); koe: koko ajan
                         bool nakyy = maa || vm.Nakyy(vuosi);
                         if (vm.Go != null && vm.Go.activeSelf != nakyy) kirjaa?.Invoke($"seikkailu: historia vaihe {vm.Malli.Id} {(nakyy ? "näkyviin" : "pois")} ({vuosi:F0})");
                         if (maa) { if (vm.Go != null && !vm.Go.activeSelf) vm.Go.SetActive(true); } else vm.Nayta(vuosi);
@@ -260,6 +263,8 @@ namespace Matkakirja.Natiivi
                 SeikkailuKavely.VainVuosileikkaukset = true;
                 Shader.SetGlobalVector(IdMustaKorvaus, MustaKorvaus);
                 PiilotaKavelyosat();
+                bool ranta = Historiajana.Ranta1499Nakyy(vuosi, DioraamaSovitin.Linssi?.Rakennus?.Ulkokuori?.Asu1499 == true);   // arvio 10 virhe 3 (vain v24-kuori)
+                foreach (var r in tasaisetRannat) if (r != null && r.enabled != ranta) r.enabled = ranta;
                 if (rakentuu)
                 {
                     double raja = h.RakennusKorkeus(t), r = SeikkailuNousu.LinnaSade * 1.3;
@@ -290,7 +295,7 @@ namespace Matkakirja.Natiivi
             Shader.SetGlobalVector(IdMustaKorvaus, Vector4.zero);
             foreach (var r in kavelyPiilossa) if (r != null) r.enabled = true;
             kavelyPiilossa.Clear();
-            foreach (var r in tasaisetRannat) if (r != null) r.SetPropertyBlock(null);
+            foreach (var r in tasaisetRannat) if (r != null) { r.SetPropertyBlock(null); r.enabled = true; }
             tasaisetRannat.Clear();
             if (kasvu) { SeikkailuKavely.AsetaHistoriaLeikkaukset(null); SeikkailuKavely.AsetaKasvu(null); }
             if (cam != null) cam.fieldOfView = alkuFov;

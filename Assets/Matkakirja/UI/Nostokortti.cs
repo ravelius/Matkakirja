@@ -147,6 +147,8 @@ namespace Matkakirja.Natiivi
         readonly Dictionary<string, Action> napit = new Dictionary<string, Action>();
 
         public bool Auki { get; private set; }
+        /// <summary>Asettelutesti: lukunäkymän kortti.</summary>
+        public VisualElement TestiKortti => kortti;
 
         // MAAKUNTA NOSTOKORTTINA (omistaja 6.10. 13.0x, Päätoimittaja: vaihtoehto b): maakunta avautuu tähän korttiin valolla
         // "maakunta:ISO:tunnus". Pienenä kuva, koko ensimmäinen kappale nostotekstin koossa ja LISÄÄ; suurena samat napit kuin
@@ -860,7 +862,6 @@ namespace Matkakirja.Natiivi
 
             var jaljella = n.Laji == NostoLaji.Kohde ? n.Korostukset.Select(PuraKorostus).Where(x => x.HasValue).Select(x => x.Value).ToList()
                 : new List<(string Perus, string Nakyva)>();
-            string nimi = n.Otsikko;
             void Linkit(Label l)
             {
                 if (!l.text.Contains("<link=")) return;
@@ -870,7 +871,11 @@ namespace Matkakirja.Natiivi
                     if (string.IsNullOrEmpty(e.linkID)) return;
                     // Löydös 136: nosto jää taustalle, chat aukeaa sen päälle (UiNakymat.ChatinKerros).
                     lukija.Pysayta();
-                    UiNakymat.Hae()?.Chat.Kysy($"Kerro lisää: {e.linkID} (kohteessa {nimi})", aihe: PuluChat.NostonAihe(n));   // kieli: ei (Pulun kysymys, PuluValmiit.KerroLisaaAlku)
+                    // Sama muoto kuin chatin käsitelinkeissä ("Kerro lisää: <käsite>"), jotta valmis vastaus osuu (PuluValmiit.Vastaa,
+                    // Pelikoodari 10.10.2026: "(kohteessa X)"-pääte esti osuman); kohde kulkee aiheena (NostonAihe) live-vastaukseen,
+                    // kohta ja maa valmiisiin vastauksiin kuten kortin kysymyssiruissa.
+                    UiNakymat.Hae()?.Chat.Kysy(PuluValmiit.KerroLisaaKysymys(e.linkID), aihe: PuluChat.NostonAihe(n),
+                        kohta: PuluValmiitLataus.Kohta(n), maa: n.Iso);
                 });
             }
             var kappaleet = Kappaleet(n.Teksti).Select(k => Korosta(k, jaljella)).ToList();

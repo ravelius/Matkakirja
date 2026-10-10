@@ -394,11 +394,17 @@ namespace Matkakirja.Natiivi
             if (PelattavaPalaPyydetty && rakennus != null && nayttamo != null && cm != null && SeikkailuVene.Aktiivinen == null && SeikkailuPelaaja.Aktiivinen == null)
             {
                 PelattavaPalaPyydetty = false;
+                // Latausodotuksen aikana (nimiruutu) pala ei käynnisty, vaikka valinta on tehty (Siirtoseppä 9.10., junan 174
+                // äänitarkistus): nayttamo.Odota(true) piilottaa joka ruutu näyttämön uudet lapset, jolloin "Seikkailu äänet"
+                // -objektin manifestilataukset katkesivat hiljaa (ei tehosteita eikä Soundly-pankkia) ja veneyö alkoi nimiruudun takana.
+                if (SaapumisOdotus && (alkuValittu || PelattavaPalaJatka)) { PelattavaPalaPyydetty = true; goto palaOhi; }
                 // V6: jatko tallennuksesta vain pyynnöstä (Natiivi-UI "Jatka"); muuten aina alusta (veneyö).
                 var jatka = PelattavaPalaJatka ? SeikkailuTallentaja.LueTiedosto("olavinlinna", PelattavaPalaHash) : null;
                 // Alun valinta (PT 9.10., juna 171): "Pelaa: kesäyö 1499" / "Linnan historia" (Natiivi-UI:n OlavinlinnaAlku, suorat kutsut:
                 // puuttuva rajapinta kaataa käännöksen). Kerran valittu → seuraavalla kerralla suoraan peliin (OlavinlinnaAlku.Nahty).
+                // Valinta näkyy jo latauksen aikana; peli alkaa vasta, kun linna on ladattu.
                 if (jatka == null && !alkuValittu && AlunValinta()) { PelattavaPalaJatka = false; goto palaOhi; }
+                if (SaapumisOdotus) { alkuValittu = true; PelattavaPalaPyydetty = true; goto palaOhi; }
                 alkuValittu = false; pelattavaPala = true;
                 PelattavaPalaJatka = false;
                 SeikkailuTallentaja.Luo(nayttamo.transform, "olavinlinna", PelattavaPalaHash, jatka, o.Kirjaa);
@@ -505,8 +511,26 @@ namespace Matkakirja.Natiivi
             // Olavinlinna: kuoren leikkausikkuna kohdistetun tilan kohdalle (kasvaa kaarilennon jälkipuoliskolla).
             nayttamo.Ulkokuori?.PaivitaLeikkaus(rakennus, linssi.LeikkausHetkella(t), nayttamo.Kamera);
             syote.Paivita(rakennus, t);
-            aanet?.Paivita(rakennus, nakyma, t);
+            aanet?.Paivita(rakennus, nakyma, t, SeikkailuPelaaja.Aktiivinen != null, PelaajanHuone());
         }
+
+        /// <summary>Pelaajan huoneen tila äänimaisemalle (KavelyData.AaniTila; 4 kertaa sekunnissa, Siirtoseppä 10.10.); null = ei pelaajaa,
+        /// piha tai ulkoalue.</summary>
+        string PelaajanHuone()
+        {
+            var p = SeikkailuPelaaja.Aktiivinen; var d = SeikkailuKavely.Data;
+            if (p == null || d == null || rakennus == null) { pelaajanOsa = null; return pelaajanHuone = null; }
+            if (Time.unscaledTime < pelaajanHuoneAika) return pelaajanHuone;
+            pelaajanHuoneAika = Time.unscaledTime + 0.25f;
+            var pp = p.transform.position;
+            string osa = Matkakirja.Linssit.Seikkailu.Askelaani.Osa(d, pp.x, pp.y, -pp.z);
+            if (osa == pelaajanOsa) return pelaajanHuone;
+            pelaajanOsa = osa;
+            pelaajanHuone = d.AaniTila(osa, System.Linq.Enumerable.Select(rakennus.Tilat, x => x.Id));
+            o.Kirjaa($"seikkailu: äänimaisema {osa ?? "-"} → {pelaajanHuone ?? "linnan yleisäänet"}");
+            return pelaajanHuone;
+        }
+        string pelaajanHuone, pelaajanOsa; float pelaajanHuoneAika;
 
         public void Sulje()
         {
@@ -623,7 +647,14 @@ namespace Matkakirja.Natiivi
         /// JUUREEN eli uusin.json:n kansioon (AmpariJuuri), EI hash-kansioon (dioraama-rajapinnat-era2-20260929.md
         /// kohta 1 ja 2 "AANET": äänet asuvat ämpärissä polussa dioraama/<r>/aanet/v<versio>/). Peili-ajossa
         /// juuret ovat samat. Löydös 29.9. PEILI=pois-ajosta: paketinJuuri antoi 404 kaikille äänille.</summary>
-        public string AaniUrl(string tiedostoRelPolku) =>
+        public string AaniUrl(string tiedostoRelPolku) => AaniUrlSuora(LaatuKorvaaja(tiedostoRelPolku));
+
+        /// <summary>LAATUKORVAAJAT (Pelikoodari 9.10., aanet/laatu-korvaajat-v1, PT:n laatutarkistus): rakennus.json:n äänitiedosto →
+        /// korjattu ääni median juuresta (keittiön ambienssissa oli englanninkielistä puhetta; uusi: tulisijan rätinä ja sanaton sorina).</summary>
+        static string LaatuKorvaaja(string polku) =>
+            polku == "aanet/v1/keittio-ambienssi.mp3" ? "/aanet/silmukat-korjaukset-v2/keittio-ambienssi-03.mp3" : polku;   // -03: alle 600 kt → PCM-sauma
+
+        string AaniUrlSuora(string tiedostoRelPolku) =>
             string.IsNullOrEmpty(tiedostoRelPolku) ? null
             // "/…" = median juuresta (Pelikoodarin mikseristemit aanet/mikseri/v1/ ovat ämpärin juuressa, 30.9.2026),
             // "https://…" sellaisenaan; muuten rakennuksen juuresta kuten ennen.
@@ -836,6 +867,16 @@ namespace Matkakirja.Natiivi
             // Vakaa kääntymisviite hahmoille: lepokameran suunta (kanoninen (sin a, −cos a) → Unity (sin a, 0, cos a)).
             if (tila != null && lepo.Avain == "tila:" + tila) { double la = lepo.Perus.Atsimuutti * Math.PI / 180; DioraamaHahmot3D.LepoKameraSuunta = new Vector3((float)Math.Sin(la), 0f, (float)Math.Cos(la)); }
             else DioraamaHahmot3D.LepoKameraSuunta = null;
+            // VUORONVAIHTO KASVOJEN PUOLELTA (PT 9.10., juna 174: kamera siirtyi uuteen puhujaan ~1 s ennen kuin tämä kääntyi, selkäkuva):
+            // kamera pysyy edellisessä puhujassa, kunnes uuden puhujan kasvot ovat kameran puolella, enintään VuoroOdotusS.
+            string tuleva = puhuja;
+            if (tuleva == null) kameranPuhuja = null;
+            else if (tuleva != kameranPuhuja)
+            {
+                if (kameranPuhuja != null && SelinKameraan(tuleva) && Time.unscaledTime - vuoroOdotusAlku < VuoroOdotusS) puhuja = kameranPuhuja;
+                else kameranPuhuja = tuleva;
+            }
+            if (tuleva == kameranPuhuja) vuoroOdotusAlku = Time.unscaledTime;   // odotus alkaa vasta, kun tuleva puhuja vaihtuu
             if (puhuja == null || lepo.Jaljella > 0 || tila == null || lepo.Avain != "tila:" + tila || rakennus?.Tila(tila) is not Tila t) return lepo;
             Hahmo h = null;
             foreach (var x in t.Hahmot) if (x.Id == puhuja) { h = x; break; }
@@ -878,6 +919,21 @@ namespace Matkakirja.Natiivi
             double leveydesta = (vali + 1.6) / (2 * tanPuoli * RuudunSuhde * 0.8);
             double etaisyys = Math.Clamp(Math.Max(korkeudesta, leveydesta), p.Etaisyys * 0.3, p.Etaisyys * 0.88);
             return (lepo.Avain + "|" + puhuja, new Asento(kohde, p.Atsimuutti, p.Korkeus, etaisyys, p.Fov, p.Aukko, p.Kierto), 0.2, false);
+        }
+        string kameranPuhuja;
+        float vuoroOdotusAlku;
+        const float VuoroOdotusS = 2f, SelinAst = 100f;
+        /// <summary>Hahmon kasvot yli SelinAst lepokameran suunnasta (DioraamaHahmot3D.TilanHahmot, tämä kehys); tuntematon = ei selin.</summary>
+        static bool SelinKameraan(string id)
+        {
+            if (DioraamaHahmot3D.LepoKameraSuunta is not Vector3 kd) return false;
+            foreach (var th in DioraamaHahmot3D.TilanHahmot)
+                if (th.Id == id)
+                {
+                    var k = new Vector3(th.Kasvot.x, 0f, th.Kasvot.z);
+                    return k.sqrMagnitude > 1e-4f && Vector3.Angle(k, kd) > SelinAst;
+                }
+            return false;
         }
         /// <summary>
         /// PUOLILÄHIKUVA (Päätoimittaja 7.10. 03.0x, omistajan linja 6.10. "kamera puhujan mukaan, rauhallisesti", ~1 s blendi, ei
@@ -1254,6 +1310,10 @@ namespace Matkakirja.Natiivi
                     "kolikot-1", "kolikot-2", "kesayo-sirkat", "satama-vesi", "askel-puu");
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-lapi-v1/manifest.json");   // Pelikoodari 9.10. (maksuttomat): vesisanko, viitta, savipurkki, patapino, luuta, varusteet, yolinnut, koira
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-lapi-v2/manifest.json");   // generoidut (PT 9.10.): sytytys, hanska, kauha, nauris, tarjotin; puuttuva = hiljaa
+                // Soundly-pankki (Pelikoodari 9.10., erä 1b, 205 ääntä vuodelle 1499): pakattuna muistiin; korvaa varmat vastineet
+                // (SeikkailuAanet.Korvaavat) ja pelaajan askeleet kertaääninä (SeikkailuAanet.Askel); puuttuva = vanhat äänet.
+                SeikkailuAanet.LisaaPankki(MediaJuuri + "/aanet/olavinlinna-soundly-v2/manifest.json");   // v2 (Pelikoodari 10.10.): 25 alle 0,4 s:n kertaääntä normalisoitu (v1: +18…+24 dB perhettään kovempia)
+                SeikkailuAanet.LisaaPankki(MediaJuuri + "/aanet/laatu-korvaajat-v1/manifest.json", "sydan-silmukka-02", "sydan-nopea-01", "hiipiminen-10");   // Pelikoodari 9.10.
                 SeikkailuSade.Luo(nayttamo.transform);
             }
         }
@@ -1980,6 +2040,8 @@ namespace Matkakirja.Natiivi
             if (mita == "historia")
             {
                 if (arvo == "pois") { SeikkailuHistoria.Lopeta(); return; }
+                // "poikki historia saari 0|1" (arvio 10 virhe 1, oletus 1): tyhjän saaren maa näkyy linnan alla koko historian ajan.
+                if (arvo == "saari") { SeikkailuHistoria.SaariAlla = osat.Length > 3 && osat[3] == "1"; o.Kirjaa("poikki: historia saari " + (SeikkailuHistoria.SaariAlla ? "alla" : "vain alussa")); return; }
                 // Kuva-arkki 9.10. (virhe 1): tuotantopaketissa ei ole vaihemalleja eikä vuosia → pelattavan palan paketti ensin.
                 if (DioraamaLevyvalimuisti.TestiOsoitin != PelattavaPalaHash)
                 {
@@ -2296,6 +2358,13 @@ namespace Matkakirja.Natiivi
                 // uusi peli-/Sovitin-instanssi nollaa sen oletukseen, pois).
                 linssi.Leijunta = arvo == "1";
                 o.Kirjaa("poikki: drift " + (arvo == "1" ? "päällä" : "pois"));
+                return;
+            }
+            // "poikki kadet kierto 0|1": kämmenen kierto kadet[]-datasta (PT 9.10., juna 174).
+            if (mita == "kadet" && arvo == "kierto")
+            {
+                if (osat.Length > 3) DioraamaHahmot3D.KadetKierto = osat[3] != "0";
+                o.Kirjaa("poikki: kadet kierto " + (DioraamaHahmot3D.KadetKierto ? "päällä" : "pois"));
                 return;
             }
             if (mita == "hahmokorvaus")

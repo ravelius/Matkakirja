@@ -68,6 +68,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Testi (`ui opasvalikko metro`): Pariisin kohteet ilman kierrosta.</summary>
         public bool Testi;
+        /// <summary>Asettelutesti: linjan juuri.</summary>
+        public VisualElement TestiJuuri => juuri;
         public int TestiIndeksi = 2;
         static readonly string[] TestiNimet = { "Eiffel-torni", "Trocadéro", "Riemukaari", "Champs-Élysées", "Place de la Concorde",
             "Louvre", "Notre-Dame de Paris", "Sacré-Cœurin basilika Montmartren kukkulalla" };

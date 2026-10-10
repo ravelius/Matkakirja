@@ -65,6 +65,10 @@ namespace Matkakirja.Natiivi
         static readonly System.Random arpa = new System.Random();
 
         public bool Auki { get; private set; }
+        /// <summary>Asettelutesti: kortti, Jatka matkaa ja onko Jatka jo esillä.</summary>
+        public VisualElement TestiKortti => scene;
+        public VisualElement TestiJatka => jatka;
+        public bool TestiJatkaEsilla => kerros.ClassListContains("mk-jatka");
 
         /// <summary>Paljastus suljettiin (true = aarre, ei pöllö): laukku heilahtaa (web elavoitaLaukku).</summary>
         public event Action<bool> Suljettiin;
