@@ -5,6 +5,20 @@ proto-repo /Users/Shared/Claude/proto-3d/Matkakirja-proto. Edellinen luovutus: v
 **Istuntoviestit (SendMessage) olivat 10 viestin rajalla 00.46 alkaen** → kaikki sen jälkeen postissa
 docs/raportit/posti-natiiviseppa-20261010.md (lue kokonaan). Raportti: docs/raportit/muistimittaus-juna173-20261010.md.
 
+## TILA 10.10. 03.5x (uusin; Natiiviseppä Opus max, konteksti 51 %)
+- **JUNA 173 LUKITTU 03.41**: master **39bb69215** (BUILD 173), juna/b13 **85436c355**, simukäännös be06cd054, juna.log kirjattu. TF vasta
+  omistajan nyt-sanalla (PT:n aamukortti). Muutosloki Julkaisijalla. iPad-portti (v6h3, oikea osoitin): R20 A 0,66 Gt (85436c355),
+  R19 B 0,72 Gt, R18 A 0,64 Gt (vesiruutu introssa → korjattu 85436c355). Runko = 1ef5bd1dc + f (f4a053b81: hätä 0,8 esilataus pois /
+  0,5 seis) + LS1 intro 28897f103 (merge 7bf5fa99b) + pito 10 s (4dda1d462) + ei esilatausta intron aikana pienellä muistilla.
+  Työkalu: proto-3d/tyokalut/natiiviseppa-ajot/portti-yhteenveto.py <ajokansio> (min vapaa, hätä, PORTTI OK/EI).
+- **JUNA 174 RUNKO** natiiviseppa/juna-174 **4c2a34c8f** (wt/proto-natiiviseppa-j174, BUILD 173:n päällä): NUI 36630eedd d6bcb66f2 6c6c54687
+  5324d7b22 e0d51dfb6 de35270f8 5cb8ed79b; Pelikoodari 8ac72eada 3400163f1 1ffa074a1; LS1 b812d51b0 7bef9ef70 f755c8be4 d96f876e6; LS2 f6f775947;
+  Siirtoseppä b4efe8e32. L1284/P458/K453, unity 0, tarkista ok. PUUTTUU: Siirtosepän lopullinen juna174-v46q (⊇ ac0047bf0 + 0°-uusinta),
+  SHA tulee Siirtosepältä. Sitten muistiajo 174 iPadilla (Julkaisijan vuoro) ja muutosloki 174 PT:lle.
+- 172:n B-polku (PT kohta 7): jonossa juna-vahdin b13-käännöksen jälkeen (skratchpad b172.sh → lokit/natiiviseppa-b172-65db09ce5.out,
+  ajo r21-b172-v6b3-B). Tulos rivinä PT:lle.
+- Worktreet: j173, j174, unity67 (T7). Poistettu j172 m174 lt174 mt172 mt173 okmt ok173 ehd173 (haarat säilyvät).
+
 ## Tulos lyhyesti
 - Jetsam-raja iPad Pro 13 (00008103, 8 Gt) ~5,1 Gt. Juurisyy oli Notre-Damen glb: 90 puusolmua, ja Cesium luo jokaiselle oman
   tekstuurin = 557 Mt/LOD. Sama data kaatoi BUILD 172:n (R4). Datakorjaus v6h3/v6b3 (LS2) on ämpärissä, ja v6h3 on laitteella OK (R11).
