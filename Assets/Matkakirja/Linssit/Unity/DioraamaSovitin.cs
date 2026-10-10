@@ -1095,9 +1095,15 @@ namespace Matkakirja.Natiivi
             o.Kirjaa("seikkailu: esittelyn vaiheet päättyivät, kierros jatkuu");
         }
 
+        // Yksi historia kerrallaan (Siirtoseppä 10.10., PT 12.3x): kävelydatan latauksen aikana toinen pyyntö (☰-historia, esittelyn vaiheet)
+        // ohitetaan, muuten jälkimmäinen SeikkailuHistoria.Aloita lopettaa edellisen, jonka valmis sammuttaa leikkaukset jälkimmäisen alta.
+        bool historiaAlkaa;
         IEnumerator Historia(Action valmis, Historiajana jana = null, bool jatkaKamerasta = false)
         {
-            yield return VarmistaKavelyData();
+            if (historiaAlkaa || SeikkailuHistoria.Kaynnissa) { o.Kirjaa("seikkailu: historia jo käynnissä, pyyntö ohitettu"); valmis?.Invoke(); yield break; }
+            historiaAlkaa = true;
+            try { yield return VarmistaKavelyData(); }
+            finally { historiaAlkaa = false; }
             bool oli = SeikkailuKavely.LeikkauksetPaalla;
             if (!oli) SeikkailuKavely.Leikkaukset(true);
             // Vaihemallit (LR v45y): paketin blender-kansio kävelydatan polusta (blender/kavely/osat.json → blender/).
