@@ -48,3 +48,9 @@ test('kaupungista lähtiessä kappale häipyy (ei raitaa → pohja pois)', async
   const lahde = readFileSync(new URL('../js/ambience-stream.js', import.meta.url), 'utf8');
   assert.match(lahde, /const polku = pohjanPolku\(cityId, maa\);\s*\/\/[^\n]*\n\s*if \(!polku\) \{ stopPohjaMusiikki\(\); return; \}/);
 });
+
+test('aloituslento ilman musiikkia (PT 11.4x: vaskimarssi kuuluu sääntöön)', async () => {
+  const { readFileSync } = await import('node:fs');
+  const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+  assert.match(ui, /if \(!KARTTA_VAIN_KAUPUNKI && !this\.reducedMotion && !this\.radioPaalla\(\)\) \{\s*this\.soitaAarreMusiikki\(MATKAN_AIHEET\.aloituslento\);/);
+});
