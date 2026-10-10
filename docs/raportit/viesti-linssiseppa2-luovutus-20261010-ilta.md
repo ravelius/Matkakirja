@@ -17,8 +17,7 @@ skriptit `proto-3d/_tyo/linssiseppa2/skriptit-20261009/`, arkit `docs/raportit/k
    iPhone-simu: oma T7:lle (simusarja.sh) tai LS1:n D0D2CD1E vain LS1:n luvalla. Varjostinta ei ole vielä nähty: jos RenderToCubemap
    ei toimi URP:ssä (loki "lattiaheijastus … EI ONNISTUNUT"), vaihda 6 kasvoa Camera.Render + CopyTexture. Tulos: pari puhelin pysty
    + iPad vaaka → PT; sitten iPad Pro 13 Release -mittaus (muisti + fps) Natiivisepän kautta. SSR vain jos pari vaatii.
-2. **ND v6k14 VIENTI** (omistaja 17.4x hyväksyi v5b:n): pyydetty Julkaisijalta 18.0x (nd3/v6k14, LAHTEET.md tehty). Varmista
-   uusin-4 → v6k14. LR jatkaa v5c:llä → sama arkki (arkit-nd5b.py-malli, vuoro-nd5b.sh-malli; tekijärivi The wub CC BY-SA 4.0
+2. **ND v6k14 VIETY** (Julkaisija 18.0x: 41 tiedostoa, portti 0, uusin-4 → v6k14). LR jatkaa v5c:llä → sama arkki (arkit-nd5b.py-malli, vuoro-nd5b.sh-malli; tekijärivi The wub CC BY-SA 4.0
    lisättävä käsin mallit.jsoniin; mittaa-julkisivu.py tavoite L 150–160, mittaa-parvis.py lyijy).
 3. **PEKING-PARI ILMAKEHÄ PÄÄLLÄ** kun juna 179 käännetty (Natiiviseppä ilmoittaa; junassa ilmakeha-kaikkialla d3885f6d1 +
    peking-vesivari efc88563c): peking3/ktx + VESI peking1/vesi, vuoro-peking3v.sh-malli junan .app:lla, vs Google-kaupunki
