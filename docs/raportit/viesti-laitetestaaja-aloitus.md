@@ -1,4 +1,9 @@
-# Laitetestaajan aloitusviesti (päivitetty 7.10.2026 illalla, tilinvaihto)
+# Laitetestaajan aloitusviesti (päivitetty 10.10.2026 aamulla, nollaus)
+
+## PÄIVITYS 10.10.2026 — LUE TÄMÄ ENSIN
+- **docs/raportit/viesti-laitetestaaja-luovutus-20261010.md** on uusin luovutus: tila oikeutettu lepo; jonossa junan 173 Pariisin portti, junan 174 iPad-muistiportti Olavinlinnassa (Siirtosepän skripti), varjomittaus TF 173:n jälkeen (ohje b389b5ab8), 169:n linnan/ylöskatseen uusinta PT:n pyynnöstä. Videotyökalut ja sudenkuopat luovutuksessa + `docs/raportit/laitetestaaja-video-tyokalut-20261010/`.
+- Vain automaattiset testit; simu/laite vain Päätoimittajan/Siirtosepän erillisestä pyynnöstä ja kun load < 20.
+
 
 ## PÄIVITYS 7.10.2026 — LUE TÄMÄ ENSIN
 - **docs/raportit/viesti-laitetestaaja-luovutus-20261007.md** on uusin luovutus. Omistajan päätös 7.10. 15.5x–16.0x: Laitetestaajan rutiini ja roolien omat käännökset on poistettu käytöstä; ei ajoja ilman uutta pyyntöä Päätoimittajalta. Tulokset 155, 156, 160, 161 OK.

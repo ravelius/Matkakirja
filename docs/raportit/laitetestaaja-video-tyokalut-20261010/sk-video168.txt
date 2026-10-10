@@ -1,0 +1,61 @@
+# Juna 168 lyhyt video (Laitetestaaja): kaksi ylöskatsetta (Pariisi, Tukholma) + Olavinlinnan avaus (Pelit › Keskeneräiset). iPad 13 vaaka. Ei kuva-askelia videon aikana (jumittivat), vedot yksinkertaisina 3 peräkkäin.
+alku odota-tila Aloitus 40;uusi-peli 5 lontoo;odota-tila Kartta 40
+ui kierto vaaka
+odota 8
+tap 993 1297 0.1
+odota 3
+nakyy 8 LINSSIT -- välilehdet
+tap-teksti LINSSIT
+odota 2
+nakyy 8 Kuumailmapallo -- linssivalikko auki
+tap-teksti Kuumailmapallo
+nakyy 6 Aktivoi -- linssin kortti
+tap-teksti Aktivoi
+oleta 30 opas: auki -- opas aukesi (aloitusvalikko)
+nakyy 20 Eurooppa -- maanosat
+tap-teksti Eurooppa
+nakyy 6 Ranska -- Euroopan maat
+tap-teksti Ranska
+nakyy 6 Pariisi -- Ranskan kaupungit
+video-alku video168
+linssi kaappaa 420 video168
+odota 1
+linssi merkki
+odota 2
+tap-teksti Pariisi
+oleta 90 opas: siirtymä valmis -- siirtoruutu pois
+odota 25
+veto 688 850 688 150 0.3
+veto 688 850 688 150 0.3
+veto 688 850 688 150 0.3
+odota 8
+tap-teksti mk-ohjausnappi#-1
+nakyy 6 Vaihda kohde -- ☰ valikko
+tap-teksti Vaihda kohde
+odota 3
+veto 688 900 688 300 0.6
+odota 2
+nakyy 8 Eurooppa -- maanosat
+tap-teksti Eurooppa
+nakyy 6 Ruotsi -- maat
+tap-teksti Ruotsi
+nakyy 6 Tukholma -- kaupungit
+tap-teksti Tukholma
+oleta 120 opas: siirtymä valmis -- Tukholma siirtoruutu pois
+odota 25
+veto 688 850 688 150 0.3
+veto 688 850 688 150 0.3
+veto 688 850 688 150 0.3
+odota 8
+linssi linssi pois
+odota 4
+tap 993 1297 0.1
+odota 3
+nakyy 8 PELIT -- välilehdet
+tap-teksti PELIT
+odota 3
+tap-teksti Olavinlinna
+oleta 300 linnantupa valmis -- linna latautui
+odota 90
+video-loppu
+odota 30
