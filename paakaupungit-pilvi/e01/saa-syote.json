@@ -1,0 +1,42 @@
+[
+ {
+  "id": "zagreb",
+  "lat": 45.81,
+  "lon": 15.98
+ },
+ {
+  "id": "belgrad",
+  "lat": 44.82,
+  "lon": 20.46
+ },
+ {
+  "id": "tirana",
+  "lat": 41.33,
+  "lon": 19.82
+ },
+ {
+  "id": "skopje",
+  "lat": 42,
+  "lon": 21.43
+ },
+ {
+  "id": "podgorica",
+  "lat": 42.44,
+  "lon": 19.26
+ },
+ {
+  "id": "chisinau",
+  "lat": 47.02,
+  "lon": 28.84
+ },
+ {
+  "id": "minsk",
+  "lat": 53.9,
+  "lon": 27.56
+ },
+ {
+  "id": "bratislava",
+  "lat": 48.15,
+  "lon": 17.11
+ }
+]

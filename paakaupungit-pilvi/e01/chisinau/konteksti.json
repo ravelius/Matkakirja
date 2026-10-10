@@ -1,0 +1,127 @@
+{
+ "id": "chisinau",
+ "era": "e01",
+ "nimi": "Chișinău (Kišinjov)",
+ "nimiAlkukieli": "Chișinău (venäjäksi Кишинёв, Kišinjov)",
+ "maa": "MDA",
+ "maanNimi": "Moldova",
+ "asema": "pääkaupunki",
+ "lat": 47.023,
+ "lon": 28.835,
+ "wikidata": "Q21197",
+ "kevytSisalto": {
+  "kuvaus": "Chișinău on Moldovan pääkaupunki ja suurin kaupunki sekä maan talouden, hallinnon ja kulttuurin keskus. Se mainitaan ensimmäisen kerran vuonna 1436, ja 1800-luvulla Venäjän valtakunnan hallitsema Bessarabian alue sai siitä pääkaupunkinsa. Kaupunki sijaitsee maan keskiosassa Bîc-joen varrella.",
+  "tunnusrakennukset": [
+   "Kristuksen syntymän katedraali",
+   "Riemukaari",
+   "Tapani Suuren patsas",
+   "Valea Morilor -puisto"
+  ],
+  "asukkaat": {
+   "arvo": 720128,
+   "vuosi": 2024,
+   "lahde": "NBS Moldova (Kansallinen tilastotoimisto), väestölaskenta 8.4.2024, lopulliset tulokset: Chișinăun kunnan (mun. Chișinău) tavanomaisesti maassa asuva väestö (arvioitu, kattavuuskorjattu); liite Anexa_Caracteristici_Geografice_RPL2024_en.xlsx",
+   "linkki": "https://statistica.gov.md/files/files/serii_de_timp/recensamant_2024/date_finale/Anexa_Caracteristici_Geografice_RPL2024_en.xlsx"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Moldova on Itä-Euroopan sisämaavaltio Romanian ja Ukrainan välissä. Maa on kumpuilevaa viljelymaata, ja sen talous nojaa vahvasti maatalouteen ja viininviljelyyn. Moldova itsenäistyi Neuvostoliitosta vuonna 1991, ja Dnestrjoen itäpuolella sijaitseva Transnistria on ollut vuoden 1992 sodan jälkeen Moldovan keskushallinnon ulkopuolella. Maa sai EU:n ehdokasstatuksen vuonna 2022.",
+  "genetiivi": "Moldovan",
+  "kielet": [
+   {
+    "kieli": "romania (moldova)",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "venäjä",
+    "asema": "muu"
+   },
+   {
+    "kieli": "gagauzi",
+    "asema": "muu"
+   },
+   {
+    "kieli": "ukraina",
+    "asema": "muu"
+   },
+   {
+    "kieli": "bulgaria",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Moldovan leu",
+   "koodi": "MDL"
+  }
+ },
+ "maalehti": [
+  {
+   "id": "hetki-bessarabian-liittyminen-1918",
+   "nimi": "Historian hetki",
+   "nostot": [
+    "Chișinău 1918 — ääni sanoo kahdeksankymmentäkuusi"
+   ]
+  },
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Neuvosto äänesti maan kohtalosta",
+    "Luola kaiverrettiin kallioon",
+    "Muurari allekirjoitti työnsä",
+    "Görkingin viinit päätyivät kalkkiluolaan"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Maissipuuro, jota leikataan langalla",
+    "Plăcinte ja kiekuraksi käärity vertută",
+    "Purcarin tila ja Negru de Purcari",
+    "Viinitarhojen Moldova"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [
+  {
+   "id": "hetki:bessarabian-liittyminen-1918",
+   "nimi": "Chișinău 1918",
+   "lahde": "historianHetket",
+   "laji": "hetki",
+   "km": 1,
+   "teksti": "\"Kahdeksankymmentäkuusi puolesta.\" Ääni, joka lukee ääneskirjaimet Sfatul Țăriin istuntosalissa, ei korota sävyään, mutta sali hiljenee silti kokonaan. On 27. maaliskuuta 1918 vanhaa kalenteria (9. huhtikuuta uutta), ja Bessarabian kansane…"
+  },
+  {
+   "id": "kohde:cricovan-viinikellarit",
+   "nimi": "Cricovan viinikellarit",
+   "lahde": "fokuskohde",
+   "laji": "ruoka",
+   "km": 12,
+   "teksti": "Cricova on viinitehdas ja maanalainen kellarikaupunki Moldovassa, noin 15 kilometrin päässä Chișinăusta. Kalkkikiveä on louhittu alueen tunneleista jo 1400-luvulta, ja 1950-luvulla ne muutettiin viinikellareiksi. Nykyään käytäviä on noin 1…"
+  },
+  {
+   "id": "kohde:milestii-mici",
+   "nimi": "Mileștii Mici",
+   "lahde": "fokuskohde",
+   "laji": "ruoka",
+   "km": 14,
+   "teksti": "Mileștii Mici on viinikellari Ialovenin piirikunnassa Moldovassa, noin 18 kilometrin päässä pääkaupungista Chișinăusta. Maanalainen käytäväverkosto on Wikipedian mukaan 250 kilometriä pitkä, mutta siitä on käytössä vain 120 kilometriä. Gui…"
+  },
+  {
+   "id": "kohde:caprianan-luostari",
+   "nimi": "Căprianan luostari",
+   "lahde": "fokuskohde",
+   "laji": "kulttuuri",
+   "km": 27,
+   "teksti": "Căprianan luostari sijaitsee Strășenin piirissä Moldovassa, metsäisellä alueella, jota kutsuttiin aiemmin nimellä Codrii Lăpușnei. Luostari sai ensimmäisen merkittävän maininnan vuonna 1429, kun Aleksanteri Hyvä myönsi sille kuninkaallisen…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Chișinău (Kišinjov)",
+  "maanAvain": "Moldova",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

@@ -1,0 +1,91 @@
+{
+ "id": "tirana",
+ "era": "e01",
+ "nimi": "Tirana",
+ "nimiAlkukieli": "Tiranë",
+ "maa": "ALB",
+ "maanNimi": "Albania",
+ "asema": "pääkaupunki",
+ "lat": 41.328,
+ "lon": 19.818,
+ "wikidata": "Q19689",
+ "kevytSisalto": {
+  "kuvaus": "Tirana on Albanian pääkaupunki ja maan suurin kaupunki, jossa asuu noin kolmannes kansasta. Nykyinen kaupunki perustettiin 1600-luvun alussa, ja pääkaupungiksi se nimettiin vuonna 1920. Kaupunki sijaitsee Dajtin vuoren juurella, ja sen keskus on Skanderbeg-aukio.",
+  "tunnusrakennukset": [
+   "Skanderbeg-aukio",
+   "Et'hem Bey -moskeija",
+   "Kellotorni (Kulla e Sahatit)",
+   "Tiranan pyramidi"
+  ],
+  "asukkaat": {
+   "arvo": 598176,
+   "vuosi": 2023,
+   "lahde": "INSTAT, väestö- ja asuntolaskenta 2023 (18.9.2023), Tiranan kunta (bashkia Tiranë); Tiranë prefecture -raportin taulukko",
+   "linkki": "https://www.instat.gov.al/media/14323/cens-2023-tirana.pdf"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Albania on Balkanin niemimaan lounaisosassa Adrianmeren ja Joonianmeren rannalla sijaitseva valtio. Se rajoittuu Montenegroon, Kosovoon, Pohjois-Makedoniaan ja Kreikkaan. Maa on vuoristoinen, ja sen rannikolla on pitkiä hiekka- ja kivikkorantoja. Albania on Naton jäsen ja EU:n ehdokasmaa, ja sen virallinen kieli on albania.",
+  "genetiivi": "Albanian",
+  "kielet": [
+   {
+    "kieli": "albania",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "kreikka",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Albanian lek",
+   "koodi": "ALL"
+  }
+ },
+ "maalehti": [
+  {
+   "id": "hetki-vloren-itsenaisyys-1912",
+   "nimi": "Historian hetki",
+   "nostot": [
+    "Vlorë 1912 — lippu, joka ommeltiin yöllä"
+   ]
+  },
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Yön yli syntynyt lippu",
+    "Valkoinen kaupunki tuhannella ikkunalla",
+    "Kaupunki, jonka suot nielaisivat",
+    "Linna, jota sulttaani ei saanut"
+   ]
+  },
+  {
+   "id": "luonto",
+   "nimi": "Luonto",
+   "nostot": [
+    "Prespajärvi ja sen Maligradin saari",
+    "Karavastan laguuni ja pelikaanit",
+    "Llogaran sola Joonianmeren yllä",
+    "Karaburun ja Sazan meren rannalla"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [
+  {
+   "id": "kohde:krujen-linna",
+   "nimi": "Krujën linna",
+   "lahde": "fokuskohde",
+   "laji": "historia",
+   "km": 20,
+   "teksti": "Krujën linna kohoaa 557 metrin korkeudessa Albaniassa, ja Wikipedian mukaan se on rakennettu 400- tai 500-luvuilla. Gjergj Kastriot Skanderbeg johti täältä vastarintaa ottomaaneja vastaan vuodesta 1443. Linnaa piiritettiin muun muassa vuos…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Tirana",
+  "maanAvain": "Albania",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

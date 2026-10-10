@@ -1,0 +1,222 @@
+{
+ "id": "bratislava",
+ "era": "e01",
+ "nimi": "Bratislava",
+ "nimiAlkukieli": "Bratislava",
+ "maa": "SVK",
+ "maanNimi": "Slovakia",
+ "asema": "pääkaupunki",
+ "lat": 48.148,
+ "lon": 17.107,
+ "wikidata": "Q1780",
+ "kevytSisalto": {
+  "kuvaus": "Bratislava on Slovakian pääkaupunki ja maan suurin kaupunki. Se sijaitsee Tonavan rannalla maan lounaiskulmassa, lähellä Itävallan ja Unkarin rajaa. Kaupunki toimi Unkarin kuningaskunnan kruunajaispaikkana 1500-luvulta 1700-luvun lopulle, ja Slovakian pääkaupunki se on ollut vuodesta 1993.",
+  "tunnusrakennukset": [
+   "Bratislavan linna",
+   "Pyhän Martinin tuomiokirkko",
+   "Vanha raatihuone",
+   "Mikaelin portti"
+  ],
+  "asukkaat": {
+   "arvo": 480902,
+   "vuosi": "2025 (31.12.2025)",
+   "lahde": "ŠÚ SR DataCube om7102rr: Bratislavan kaupunki (Bratislavan piirit I-V yhteensä), väestö 31.12.2025",
+   "linkki": "https://data.statistics.sk/api/v2/dataset/om7102rr/SK_CAP/2025/IN010115/SPOLU?lang=en"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Slovakia on sisämaavaltio Keski-Euroopassa, ja sen pohjoisosaa hallitsevat Karpaattien vuoristot, joiden korkein huippu on Gerlachovský štít. Maa rajoittuu Tšekkiin, Puolaan, Ukrainaan, Unkariin ja Itävaltaan. Slovakia itsenäistyi 1.1.1993 Tšekkoslovakian hajottua rauhanomaisesti. Se kuuluu EU:hun ja Natoon vuodesta 2004, Schengen-alueeseen vuodesta 2007 ja euroalueeseen vuodesta 2009.",
+  "genetiivi": "Slovakian",
+  "kielet": [
+   {
+    "kieli": "slovakki",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "unkari",
+    "asema": "muu"
+   },
+   {
+    "kieli": "romani",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "euro",
+   "koodi": "EUR"
+  }
+ },
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Linna, joka paloi raunioksi",
+    "Kuka sytytti Spišin linnan?",
+    "Kreivi Orlokin kotilinna",
+    "Kaupunki hopeavuoren päällä"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Kansallisruoka köyhien keittiöstä",
+    "Juusto, jota kutsuttiin Liptaueriksi",
+    "Höyrytetty juusto ruusukkeena",
+    "Kellarit, jotka pelastivat viinit",
+    "Hapankaalikeitto joulupöytään"
+   ]
+  },
+  {
+   "id": "luonto",
+   "nimi": "Luonto",
+   "nostot": [
+    "Huippu, jolla oli monta nimeä",
+    "Huipulle köysiradalla",
+    "Luola, jonka läpi virtasi Styx",
+    "Jääluola, jonka jää on 26 metriä paksua"
+   ]
+  },
+  {
+   "id": "keksinnot",
+   "nimi": "Keksinnöt",
+   "nostot": [
+    "Shakkikone, jonka sisällä istui ihminen",
+    "Pappi, joka lähetti viestejä ilmassa",
+    "Sateenvarjo selässä",
+    "Professori, joka opetti turbiinit"
+   ]
+  },
+  {
+   "id": "rakennukset",
+   "nimi": "Rakennukset",
+   "nostot": [
+    "Kylä, jossa aika pysähtyi",
+    "Kirkko ilman nauloja",
+    "Kruunajaiskulkueen viimeinen portti",
+    "Sininen kirkko"
+   ]
+  }
+ ],
+ "lahiKaupungit": [
+  {
+   "id": "wien",
+   "nimi": "Wien",
+   "km": 55,
+   "lehti": [
+    {
+     "id": "kaupunki",
+     "nimi": "Wien",
+     "nostot": [
+      "Ratas, joka kulkee kävelyä hitaammin",
+      "Keisarin aamiaishuone eläintarhan keskellä"
+     ]
+    },
+    {
+     "id": "musiikki",
+     "nimi": "Musiikki",
+     "nostot": []
+    },
+    {
+     "id": "tiede",
+     "nimi": "Tiede ja tekniikka",
+     "nostot": []
+    },
+    {
+     "id": "luonto",
+     "nimi": "Eläimet kaupungissa",
+     "nostot": []
+    },
+    {
+     "id": "hetki-beethoven-yhdeksas-1824",
+     "nimi": "Historian hetki",
+     "nostot": [
+      "Kärntnertor 1824 — suosionosoitukset, joita ei kuule"
+     ]
+    },
+    {
+     "id": "hetki-mozart-wien-1786",
+     "nimi": "Historian hetki",
+     "nostot": [
+      "Burgtheater 1786 — palvelijat nolaavat isäntänsä"
+     ]
+    },
+    {
+     "id": "hetki-wienin-porssikrahi-1873",
+     "nimi": "Historian hetki",
+     "nostot": [
+      "Wien 1873 — kun huudot vaihtuvat hiljaisuudeksi"
+     ]
+    }
+   ],
+   "kohdekartta": [
+    "Raatihuone",
+    "Hofburg",
+    "Valtionooppera",
+    "Stephansdom",
+    "Belvedere",
+    "Jättiratas",
+    "Schönbrunn",
+    "Vuoristovesijohto",
+    "Klimtin maalaukset",
+    "Saliera",
+    "Yhdeksäs 1824",
+    "Figaro 1786",
+    "Pörssikrahi 1873",
+    "Rattaan kulmat",
+    "Lipizzanit",
+    "Taikahuilu",
+    "Tonava kaunoinen"
+   ]
+  }
+ ],
+ "lahiNostot": [
+  {
+   "id": "kohde:hahmotelma-vydrica-zuckermandel",
+   "nimi": "Vydrica–Zuckermandel",
+   "lahde": "fokuskohde",
+   "laji": "historia",
+   "km": 1,
+   "teksti": "Vydrica ja Zuckermandel muodostivat 1300-luvulta lähtien Bratislavan linnanmäen ja Tonavan välisen kaupunginosan. Kommunistihallinto purki lähes koko alueen vuosina 1967–1974 Uuden sillan liikenneväylien tieltä."
+  },
+  {
+   "id": "kohde:hahmotelma-bratislava",
+   "nimi": "Bratislava (Pozsony)",
+   "lahde": "fokuskohde",
+   "laji": "historia",
+   "km": 1,
+   "teksti": "Bratislava, unkariksi Pozsony ja saksaksi Pressburg, on Slovakian nykyinen pääkaupunki, Tonavan varrella lounaisessa Slovakiassa Pienten Karpaattien juurella. Se on Wienin vieressä: kaupungit ovat vain 50 kilometrin päässä toisistaan, mikä…"
+  },
+  {
+   "id": "kohde:hahmotelma-devin",
+   "nimi": "Devínin linna",
+   "lahde": "fokuskohde",
+   "laji": "historia",
+   "km": 10,
+   "teksti": "Devínin linna kohoaa jyrkällä kalliolla Bratislavan laidalla kohdassa, jossa Morava-joki laskee Tonavaan ja muodostaa samalla rajan Itävallan ja Slovakian välillä. Paikkaa on asutettu jo kivikaudelta lähtien, ja kalliolta on kaivettu esiin…"
+  },
+  {
+   "id": "kohde:carnuntum",
+   "nimi": "Carnuntum",
+   "lahde": "fokuskohde",
+   "laji": "kaupunki",
+   "km": 19,
+   "teksti": "Carnuntum oli roomalainen legioonalinnoitus ja Pannonian laivaston päämaja vuodesta 50 jaa. Ensimmäisen vuosisadan jälkeen siitä tuli Pannonia Superior -provinssin pääkaupunki, ja se kasvoi noin viidenkymmenentuhannen asukkaan suurkaupungi…"
+  },
+  {
+   "id": "kohde:hahmotelma-modra",
+   "nimi": "Modra",
+   "lahde": "fokuskohde",
+   "laji": "kulttuuri",
+   "km": 25,
+   "teksti": "Modra on kaupunki Pienten Karpaattien juurella nykyisellä Bratislavan alueella, yksi seudun tärkeimmistä viinikeskuksista ja tunnettu erityisesti sinivalkoisesta savitavarastaan. Ensimmäinen maininta kaupungista on vuodelta 1158, jolloin s…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Bratislava",
+  "maanAvain": "Slovakia",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

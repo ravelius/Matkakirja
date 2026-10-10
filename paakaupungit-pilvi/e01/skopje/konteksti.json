@@ -1,0 +1,107 @@
+{
+ "id": "skopje",
+ "era": "e01",
+ "nimi": "Skopje",
+ "nimiAlkukieli": "Скопје (Skopje); albaniaksi Shkup",
+ "maa": "MKD",
+ "maanNimi": "Pohjois-Makedonia",
+ "asema": "pääkaupunki",
+ "lat": 41.996,
+ "lon": 21.432,
+ "wikidata": "Q384",
+ "kevytSisalto": {
+  "kuvaus": "Skopje on Pohjois-Makedonian pääkaupunki ja suurin kaupunki, jossa asuu noin neljännes maan väestöstä. Se sijaitsee Vardar-joen varrella, ja kaupungin historia ulottuu antiikin Scupiin. Vuoden 1963 maanjäristys tuhosi suuren osan kaupunkia, ja jälleenrakennus muovasi sen nykyilmeen.",
+  "tunnusrakennukset": [
+   "Kivisilta",
+   "Skopjen linnoitus (Kale)",
+   "Vanha basaari (Čaršija)",
+   "Makedonia-aukio"
+  ],
+  "asukkaat": {
+   "arvo": 526502,
+   "vuosi": 2021,
+   "lahde": "Valtion tilastovirasto (SSO), väestölaskenta 2021 (5.-30.9.2021), Skopjen kaupunki (Grad Skopje, 10 kaupunginosakuntaa); tulokset julkisti SSO:n johtaja 30.3.2022 (META.mk/MIA-uutinen), sama luku citypopulation.de:ssä",
+   "linkki": "https://meta.mk/en/?p=599457"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Pohjois-Makedonia on Balkanin niemimaan sisämaavaltio, joka rajoittuu Kreikkaan, Albaniaan, Bulgariaan, Kosovoon ja Serbiaan. Maa on vuoristoinen, ja sen alueella on suuria järviä, kuten Ohridinjärvi ja Prespajärvi. Se itsenäistyi Jugoslaviasta vuonna 1991 ja sai nykyisen nimensä vuonna 2019. Maa sai EU:n ehdokasmaan aseman vuonna 2005 ja liittyi Natoon vuonna 2020, ja makedonian lisäksi albania on virallinen kieli.",
+  "genetiivi": "Pohjois-Makedonian",
+  "kielet": [
+   {
+    "kieli": "makedonia",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "albania",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "turkki",
+    "asema": "muu"
+   },
+   {
+    "kieli": "romani",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Pohjois-Makedonian denaari",
+   "koodi": "MKD"
+  }
+ },
+ "maalehti": [
+  {
+   "id": "hetki-krusevon-tasavalta-1903",
+   "nimi": "Historian hetki",
+   "nostot": [
+    "Kruševo 1903 — kymmenen päivän tasavalta"
+   ]
+  },
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Kymmenen päivän tasavalta",
+    "Balkanin Jerusalem",
+    "Linnoitus maanjäristysten raunioilla",
+    "Ratsastava soturi torilla"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Ajvar, syksyn punainen purkki",
+    "Tavče gravče, papuja padassa",
+    "Tikveš, Makedonian viinilaakso",
+    "Pastrmajlija, Štipin uunileipä"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [
+  {
+   "id": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
+   "nimi": "Skopjen vanha rautatieasema",
+   "lahde": "fokuskohde",
+   "laji": "historia",
+   "km": 1,
+   "teksti": "Skopjen keskusasema oli 1900-luvun puolivälissä Jugoslavian vilkkaimpia rautatieasemia, tyylikäs kivirakennus kellotorneineen. Maanjäristys iski kaupunkiin 26.7.1963 kello 5.17, tappaen yli tuhat ihmistä ja tuhoten suuren osan kaupungista;…"
+  },
+  {
+   "id": "kohde:matkan-kanjoni",
+   "nimi": "Matkan kanjoni",
+   "lahde": "fokuskohde",
+   "laji": "vuori",
+   "km": 13,
+   "teksti": "Matkan kanjoni on Skopjen länsipuolella Pohjois-Makedoniassa, ja sen läpi virtaa Treska-joki. Alue kattaa noin 5 000 hehtaaria, ja kanjonissa on kymmenen luolaa, joiden pituus vaihtelee 20 metristä 176 metriin. Vrelo-luola Treskan oikealla…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Skopje",
+  "maanAvain": "Pohjois-Makedonia",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

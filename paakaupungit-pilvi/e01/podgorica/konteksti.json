@@ -1,0 +1,154 @@
+{
+ "id": "podgorica",
+ "era": "e01",
+ "nimi": "Podgorica",
+ "nimiAlkukieli": "Podgorica / Подгорица",
+ "maa": "MNE",
+ "maanNimi": "Montenegro",
+ "asema": "pääkaupunki",
+ "lat": 42.441,
+ "lon": 19.263,
+ "wikidata": "Q23564",
+ "kevytSisalto": {
+  "kuvaus": "Podgorica on Montenegron pääkaupunki sekä maan suurin kaupunki ja hallinnon, talouden ja koulutuksen keskus. Se sijaitsee Moračan ja Ribnican yhtymäkohdassa, ja vuosina 1946-1992 sen nimi oli Titograd. Toisen maailmansodan pommitukset tuhosivat suuren osan vanhasta kaupungista, joten kaupunkikuva on pääosin sodanjälkeinen. Perinteinen kuninkaallinen pääkaupunki on Cetinje.",
+  "tunnusrakennukset": [
+   "Millennium-silta",
+   "Kristuksen ylösnousemuksen katedraali",
+   "Kellotorni (Sahat kula)",
+   "Stara Varoš (vanha kaupunki)"
+  ],
+  "asukkaat": {
+   "arvo": 179505,
+   "vuosi": 2023,
+   "lahde": "Monstat, väestölaskenta 2023, Podgorican pääkaupunkikunta (Glavni grad Podgorica)",
+   "linkki": "https://monstat.org/eng/novosti.php?id=4013"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Montenegro on Adrianmeren rannalla Balkanin niemimaan lounaisosassa sijaitseva pieni valtio. Sen rannikon takana kohoavat jyrkät vuoret, ja maan nimi tarkoittaa mustaa vuorta. Montenegro itsenäistyi Serbian ja Montenegron valtioliitosta vuonna 2006, sai EU:n ehdokasmaan aseman vuonna 2010 ja liittyi Natoon vuonna 2017. Maa otti euron käyttöön yksipuolisesti vuonna 2002 ilman euroalueen jäsenyyttä.",
+  "genetiivi": "Montenegron",
+  "kielet": [
+   {
+    "kieli": "montenegro",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "serbia",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "bosnia",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "albania",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "kroatia",
+    "asema": "kansallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "euro",
+   "koodi": "EUR"
+  }
+ },
+ "maalehti": [
+  {
+   "id": "hetki-obodin-kirjapaino-1494",
+   "nimi": "Historian hetki",
+   "nostot": [
+    "Obod 1494 — musteen viimeinen arkki"
+   ]
+  },
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Lyijykirjaimet Obodin kalliolla",
+    "Muuri joka kiipeää vuorelle",
+    "461 porrasta pilviin",
+    "Luostari joka kasvoi kalliosta"
+   ]
+  },
+  {
+   "id": "luonto",
+   "nimi": "Luonto",
+   "nostot": [
+    "Barnojärvi, vuoren silmä joka katoaa",
+    "Pelikaanien järvi, joka hengittää",
+    "Zla Kolata, Montenegron korkein huippu",
+    "Pešićan jäätikköjärvi Bjelasican rinteellä"
+   ]
+  }
+ ],
+ "lahiKaupungit": [
+  {
+   "id": "dubrovnik",
+   "nimi": "Dubrovnik",
+   "km": 97,
+   "lehti": [
+    {
+     "id": "kaupunki",
+     "nimi": "Dubrovnik",
+     "nostot": [
+      "Klapa lauletaan ilman soittimia",
+      "Euroopan vanhin apteekki",
+      "Suola teki kaupungista rikkaan"
+     ]
+    },
+    {
+     "id": "tasavalta",
+     "nimi": "Tasavalta",
+     "nostot": [
+      "Laivat joutuivat odottamaan kuukauden saarella",
+      "Vesi tuotiin kaupunkiin kaukaa lähteestä",
+      "Patsaan käsivarsi oli kaupungin mittanauha"
+     ]
+    },
+    {
+     "id": "muurit",
+     "nimi": "Muurit",
+     "nostot": [
+      "Melkein kaksi kilometriä kiveä",
+      "Torni, jonka rakennutti paavi",
+      "Katot korjattiin kranaattien jäljiltä"
+     ]
+    }
+   ],
+   "kohdekartta": [
+    "Minčetan torni",
+    "Pilen portti",
+    "Sponzan palatsi",
+    "Vanhasatama",
+    "Lovrijenacin linnake",
+    "Dubrovnikin katedraali"
+   ]
+  }
+ ],
+ "lahiNostot": [
+  {
+   "id": "hetki:obodin-kirjapaino-1494",
+   "nimi": "Obod 1494",
+   "lahde": "historianHetket",
+   "laji": "hetki",
+   "km": 21,
+   "teksti": "Munkki Makarijen sormet ovat mustat musteesta, kun hän nostaa viimeisen painetun arkin puristimesta ja tarkistaa kirjainrivit vielä kerran vasten ikkunasta lankeavaa valoa. On 4. tammikuuta 1494, ja Crnojevićien kirjapainossa Cetinjen seud…"
+  },
+  {
+   "id": "kohde:hahmotelma-zabljak-crnojevica",
+   "nimi": "Žabljak Crnojevića",
+   "lahde": "fokuskohde",
+   "laji": "historia",
+   "km": 22,
+   "teksti": "Žabljak Crnojevića oli Zetan ruhtinaskunnan linnoitettu pääkaupunki Skadarjärven rannalla, Stefan ja Ivan Crnojevićin hallintokeskus. Osmanit valtasivat sen Shkodran piirityksen yhteydessä 1478, ja pääkaupunki siirtyi lopulta Cetinjeen. Al…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Podgorica",
+  "maanAvain": "Montenegro",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

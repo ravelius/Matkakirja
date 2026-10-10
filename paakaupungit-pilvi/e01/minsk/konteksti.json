@@ -1,0 +1,91 @@
+{
+ "id": "minsk",
+ "era": "e01",
+ "nimi": "Minsk",
+ "nimiAlkukieli": "Мінск (valkovenäjä) / Минск (venäjä)",
+ "maa": "BLR",
+ "maanNimi": "Valko-Venäjä",
+ "asema": "pääkaupunki",
+ "lat": 53.901,
+ "lon": 27.559,
+ "wikidata": "Q2280",
+ "kevytSisalto": {
+  "kuvaus": "Minsk on Valko-Venäjän pääkaupunki ja ylivoimaisesti suurin kaupunki, jossa asuu noin viidennes maan väestöstä. Kaupunki mainitaan ensimmäisen kerran vuonna 1067, ja toisessa maailmansodassa se tuhoutui laajasti ja rakennettiin sen jälkeen uudelleen. Siellä on myös Itsenäisten valtioiden yhteisön (IVY) hallinnollinen keskus.",
+  "tunnusrakennukset": [
+   "Valko-Venäjän kansalliskirjasto",
+   "Pyhän Kolminaisuuden esikaupunki",
+   "Voitonaukio",
+   "Kyynelten saari"
+  ],
+  "asukkaat": {
+   "arvo": 1995091,
+   "vuosi": 2026,
+   "lahde": "Belstat, Minskin kaupungin väkiluku 1.1.2026 (kaupunki, ei Minskin lääni)",
+   "linkki": "https://www.belstat.gov.by/en/ofitsialnaya-statistika/ssrd-mvf_2/natsionalnaya-stranitsa-svodnyh-dannyh/population/population-of-the-republic-of-belarus-by-regions-as-of-1st-january/"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Valko-Venäjä on Itä-Euroopan sisämaavaltio, joka rajoittuu Venäjään, Ukrainaan, Puolaan, Liettuaan ja Latviaan. Maa on enimmäkseen tasaista ja metsäistä, ja sen alueella on runsaasti järviä ja laajoja soita. Virallisia kieliä ovat valkovenäjä ja venäjä. Muodollisesti maa on tasavalta, jossa Aljaksandr Lukašenka valittiin presidentiksi vuonna 1994, ja kansainväliset arvioijat, kuten Freedom House, luokittelevat sen autoritaariseksi.",
+  "genetiivi": "Valko-Venäjän",
+  "kielet": [
+   {
+    "kieli": "venäjä",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "valkovenäjä",
+    "asema": "virallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Valko-Venäjän rupla",
+   "koodi": "BYN"
+  }
+ },
+ "maalehti": [
+  {
+   "id": "hetki-berezinan-ylitys-1812",
+   "nimi": "Historian hetki",
+   "nostot": [
+    "Berezina 1812 — jäinen vesi polvien yli"
+   ]
+  },
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Kolme päivää jäisellä joella",
+    "Linna joka selvisi joka sodasta",
+    "Metsä joka pelasti biisonin",
+    "Velhoruhtinaan kivikirkko"
+   ]
+  },
+  {
+   "id": "luonto",
+   "nimi": "Luonto",
+   "nostot": [
+    "Narach, maan suurin järvi",
+    "Pripjatin tulvaniityt",
+    "Berezinan biosfäärialue",
+    "Jelnjan suo, laaja suokompleksi"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [
+  {
+   "id": "kohde:hahmotelma-vanha-minsk",
+   "nimi": "Vanha Minsk",
+   "lahde": "fokuskohde",
+   "laji": "historia",
+   "km": 0,
+   "teksti": "Ennen toista maailmansotaa Minsk oli tiivis, monikerroksinen itäeurooppalainen kaupunki kivikatuineen ja synagogineen. Saksan Luftwaffe pommitti kaupunkia 24.6.1941 kolmessa aallossa, ja sodan loppuun mennessä 80–90 % rakennuskannasta oli …"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Minsk",
+  "maanAvain": "Valko-Venäjä",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

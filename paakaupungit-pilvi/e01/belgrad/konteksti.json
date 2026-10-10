@@ -1,0 +1,111 @@
+{
+ "id": "belgrad",
+ "era": "e01",
+ "nimi": "Belgrad",
+ "nimiAlkukieli": "Београд (Beograd)",
+ "maa": "SRB",
+ "maanNimi": "Serbia",
+ "asema": "pääkaupunki",
+ "lat": 44.818,
+ "lon": 20.457,
+ "wikidata": "Q3711",
+ "kevytSisalto": {
+  "kuvaus": "Belgrad on Serbian pääkaupunki ja maan suurin kaupunki, joka sijaitsee Savan ja Tonavan yhtymäkohdassa. Paikalla on ollut asutusta jo antiikissa, ja sitä ovat hallinneet mm. roomalaiset, bysanttilaiset, unkarilaiset ja ottomaanit. Kaupunki oli Jugoslavian pääkaupunki ja on nyt Serbian poliittinen, taloudellinen ja kulttuurinen keskus.",
+  "tunnusrakennukset": [
+   "Belgradin linnoitus (Kalemegdan)",
+   "Pyhän Savan temppeli",
+   "Tasavallan aukio",
+   "Nikola Teslan museo"
+  ],
+  "asukkaat": {
+   "arvo": 1681405,
+   "vuosi": 2022,
+   "lahde": "Serbian tilastovirasto (SORS), väestölaskenta 30.9.2022, lopulliset tulokset (Beogradin alue = Grad Beograd), Statistical Pocketbook 2026",
+   "linkki": "https://publikacije.stat.gov.rs/G2026/pdfE/G202617019.pdf"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Serbia on Kaakkois-Euroopassa sijaitseva sisämaavaltio, jonka läpi virtaa Tonava. Pohjoisessa maa on tasaista Vojvodinan viljelyaluetta ja etelässä vuoristoista. Serbia on yksi Jugoslavian seuraajavaltioista, sai EU:n ehdokasmaan aseman vuonna 2012 ja julisti sotilaallisen puolueettomuutensa vuonna 2007. Kosovon asema on kiistanalainen: Kosovo julistautui itsenäiseksi vuonna 2008, mutta Serbia pitää sitä osana aluettaan.",
+  "genetiivi": "Serbian",
+  "kielet": [
+   {
+    "kieli": "serbia",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "unkari",
+    "asema": "muu"
+   },
+   {
+    "kieli": "bosnia",
+    "asema": "muu"
+   },
+   {
+    "kieli": "romani",
+    "asema": "muu"
+   },
+   {
+    "kieli": "albania",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Serbian dinaari",
+   "koodi": "RSD"
+  }
+ },
+ "maalehti": [
+  {
+   "id": "hetki-belgradin-piiritys-1456",
+   "nimi": "Historian hetki",
+   "nostot": [
+    "Belgrad 1456 — talonpojat murtavat piirityksen"
+   ]
+  },
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Linnoitus, joka pelastui mutta ei pelastanut",
+    "Kello, joka käy väärinpäin",
+    "Kuningas, josta tuli munkki",
+    "Kultapallo pimeässä huoneessa"
+   ]
+  },
+  {
+   "id": "tiede",
+   "nimi": "Tiede",
+   "nostot": [
+    "Teslan huvila Krunska-kadulla",
+    "Pupinin kylä Banatin tasangolla",
+    "Milankovićin tähtitorni Zvezdaralla",
+    "Cvijićin koti karstintutkijan työhuoneena"
+   ]
+  }
+ ],
+ "lahiKaupungit": [],
+ "lahiNostot": [
+  {
+   "id": "kohde:belgradin-linnoitus",
+   "nimi": "Belgradin linnoitus (Kalemegdan)",
+   "lahde": "fokuskohde",
+   "laji": "historia",
+   "km": 1,
+   "teksti": "Belgradin linnoitus eli Kalemegdan kohoaa 125,5 metriä korkealla harjanteella, jonka juurella Sava yhtyy Tonaviin. Alue on noin 66 hehtaarin laajuinen, ja siihen kuuluu Suuri ja Pieni Kalemegdanin puisto. Ottomaanit valloittivat linnoituks…"
+  },
+  {
+   "id": "hetki:belgradin-piiritys-1456",
+   "nimi": "Piiritys 1456",
+   "lahde": "historianHetket",
+   "laji": "hetki",
+   "km": 1,
+   "teksti": "Selviääkö hän tästä yöstä hengissä? Talonpoika, joka on tarttunut viikatteeseen ja tervasoihtuun eikä miekkaan, ei tiedä sitä vielä, kun hän ryntää alas Belgradin linnoituksen muurilta kohti ottomaanien tykistöleiriä. On heinäkuun loppu 14…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Belgrad",
+  "maanAvain": "Serbia",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

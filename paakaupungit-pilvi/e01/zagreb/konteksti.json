@@ -1,0 +1,185 @@
+{
+ "id": "zagreb",
+ "era": "e01",
+ "nimi": "Zagreb",
+ "nimiAlkukieli": "Zagreb (Grad Zagreb)",
+ "maa": "HRV",
+ "maanNimi": "Kroatia",
+ "asema": "pääkaupunki",
+ "lat": 45.813,
+ "lon": 15.977,
+ "wikidata": "Q1435",
+ "kevytSisalto": {
+  "kuvaus": "Zagreb on Kroatian pääkaupunki ja maan suurin kaupunki. Se kasvoi yhteen kahdesta kukkulan keskiaikaisesta asutuksesta, piispanistuin Kaptolista ja kuninkaallisesta vapaakaupungista Gradecista, jotka yhdistettiin 1800-luvun puolivälissä. Nykyään kaupunki on maan hallinnon, kulttuurin ja talouden keskus.",
+  "tunnusrakennukset": [
+   "Zagrebin tuomiokirkko",
+   "Pyhän Markuksen kirkko",
+   "Lotrščakin torni",
+   "Mirogojin hautausmaa"
+  ],
+  "asukkaat": {
+   "arvo": 777744,
+   "vuosi": "2025 (DZS:n arvio vuoden 2025 puolivälissä, Zagrebin kaupunki)",
+   "lahde": "Državni zavod za statistiku (DZS): Procjena stanovništva Republike Hrvatske u 2025.",
+   "linkki": "https://podaci.dzs.hr/media/ae2kgoad/stan-2026-3-1-procjena-stanovništva-republike-hrvatske-u-2025.pdf"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Kroatia on Keski- ja Kaakkois-Euroopan valtio, jonka pitkä rannikko ja tuhannet saaret ulottuvat Adrianmeren itärannalle. Maa rajoittuu pohjoisessa Sloveniaan ja Unkariin sekä idässä ja kaakossa Serbiaan, Bosnia ja Hertsegovinaan ja Montenegroon. Erikoinen muoto syntyy siitä, että sisämaa ja Dalmatian rannikko ovat kaareutuneet Bosnia ja Hertsegovinan ympärille. Kroatia on ollut itsenäinen vuodesta 1991, EU:n jäsen vuodesta 2013 ja euroalueella vuodesta 2023.",
+  "genetiivi": "Kroatian",
+  "kielet": [
+   {
+    "kieli": "kroatia",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "serbia",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "euro",
+   "koodi": "EUR"
+  }
+ },
+ "maalehti": [
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Palatsi, jonka sisään muutti kokonainen kaupunki",
+    "Muuri, jota ei koskaan murrettu",
+    "Areena, jossa soitetaan yhä"
+   ]
+  },
+  {
+   "id": "keksinnot",
+   "nimi": "Keksinnöt",
+   "nostot": [
+    "Piirros lentävästä miehestä",
+    "Kynä, jonka nimestä tuli sana",
+    "Portaat, joita soittaa meri"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Tuoksuva timantti Motovunin metsästä",
+    "Juusto joka maistuu tuulelta",
+    "Viini joka kasvaa pystysuoralla rinteellä",
+    "Lahti joka kasvattaa ostereita ja suolaa"
+   ]
+  },
+  {
+   "id": "luonto",
+   "nimi": "Luonto",
+   "nostot": [
+    "Järvet jotka rakentavat itse patonsa",
+    "Kosket jotka kohisevat kivikynnyksillä",
+    "Meri jossa on 89 saarta",
+    "Vuori joka halkeaa kahtia"
+   ]
+  },
+  {
+   "id": "menovinkit",
+   "nimi": "Menovinkit",
+   "nostot": []
+  }
+ ],
+ "lahiKaupungit": [
+  {
+   "id": "ljubljana",
+   "nimi": "Ljubljana",
+   "km": 117,
+   "lehti": [
+    {
+     "id": "kaupunki",
+     "nimi": "Ljubljana",
+     "nostot": [
+      "Linna, josta tuli vankila ja sitten kulttuurikeskus",
+      "Lohikäärme, joka vartioi siltaa ja vaakunaa",
+      "Puisto, joka syntyi Illyrian maakuntien aikana"
+     ]
+    },
+    {
+     "id": "historia",
+     "nimi": "Historia",
+     "nostot": [
+      "Emona: roomalainen kaupunki nykyisen keskustan alla",
+      "Mies, joka kirjoitti sloveniaksi ensimmäisenä painettuna",
+      "Ranskalaisten Illyria ja kongressi, jossa Laibach oli maailman keskus",
+      "Yksi yö, joka muutti kaupungin ilmeen"
+     ]
+    },
+    {
+     "id": "rakennukset",
+     "nimi": "Plečnikin ja Secessionin Ljubljana",
+     "nostot": [
+      "Kolmoissilta, jolle Plečnik lisäsi kaksi siltaa",
+      "Kirjasto, jonka puolesta opiskelijat osoittivat mieltään",
+      "Ritarikunnan luostarista kesäteatteriksi",
+      "Secession-katu ja Jugoslavian korkein talo"
+     ]
+    },
+    {
+     "id": "ruoka",
+     "nimi": "Ruoka ja juoma",
+     "nostot": [
+      "Tori Plečnikin kaarien alla"
+     ]
+    },
+    {
+     "id": "luonto",
+     "nimi": "Luonto",
+     "nostot": [
+      "Suosta kaivettiin esiin maailman vanhin pyörä",
+      "Turvetta kaivaessa löytyi kokonainen kivikausi"
+     ]
+    }
+   ],
+   "kohdekartta": [
+    "Tivoli-puisto",
+    "Križanke",
+    "Prešernin aukio",
+    "Tromostovje",
+    "Ljubljanan tuomiokirkko",
+    "Ljubljanan linna",
+    "Keskustori",
+    "Lohikäärmesilta"
+   ]
+  }
+ ],
+ "lahiNostot": [
+  {
+   "id": "kohde:zagreb",
+   "nimi": "Zagreb",
+   "lahde": "fokuskohde",
+   "laji": "kaupunki",
+   "km": 0,
+   "teksti": "Zagreb kasvoi kahdesta kukkulasta, jotka olivat vuosisatoja eri kaupunkeja: Gradec oli porvarien ja Kaptol piispan. Niiden välissä virtasi puro, ja sen yli vievä silta oli niin usein tappelupaikka, että kadun nimi on yhä Krvavi most, Verin…"
+  },
+  {
+   "id": "skandaali:zrinski-frankopan-salaliitto",
+   "nimi": "Zrinski-Frankopan",
+   "lahde": "skandaalit",
+   "laji": "skandaali",
+   "km": 0,
+   "teksti": "Vuoden 1664 Vasvárin rauha päätti Itävallan ja osmanien sodan ehdoilla, jotka olivat rajaseudulla nöyryyttäviä: Wien jätti suuren osan Unkaria ja Kroatiaa osmanien haltuun ja käänsi katseensa Länsi-Eurooppaan. Samaan aikaan hovi keskitti h…"
+  },
+  {
+   "id": "kohde:hahmotelma-samobor",
+   "nimi": "Samobor",
+   "lahde": "fokuskohde",
+   "laji": "kulttuuri",
+   "km": 20,
+   "teksti": "Samobor on kaupunki Zagrebin läänissä Zagrebin länsipuolella, Samoborin vuorten itärinteiden ja Žumberakin vuorten välissä Savan laaksossa. Se on ollut vapaa kuninkaallinen kaupunki vuodesta 1242 Béla IV:n lahjakirjan mukaan, ja Karlowitzi…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Zagreb",
+  "maanAvain": "Kroatia",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}
