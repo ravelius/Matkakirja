@@ -42,3 +42,7 @@ Taustalla EI omia ajoja (cron 440f4d6d katoaa nollauksessa).
 - Juna 180 = 420bc0af7 (sis. Pelikoodari 65975137e, PT kuittasi 20.0x). Lukitusportit: LS1 intro-luenta-180 87f1dd8a0 (KIIRE, korvaa 9cdc17616),
   Siirtosepän Olavinlinnan laiturin ohjainkorjaus (KIIRE), Pelikoodarin latausmusiikki + kippikorjaukset, dc53ccd54:n vesipohjan tarkistus,
   iPad-muistiajo yön uudelleenkäynnistyksen jälkeen (Julkaisijan NYT).
+
+## TILA 10.10. 20.28
+- Juna 180 = 8f8a93acb (+ LS1 intro-luenta-180 87f1dd8a0, PT kuittasi 20.3x; sis. 9cdc17616 + b5f8a9d8a). L1347/P456/K461, unity 0, tarkista ok; peilattu.
+- Odottaa: Siirtosepän laituri-KIIRE (tappi), dc53ccd54:n vesipohja, Pelikoodarin latausmusiikki (+ kippikorjaukset), yön iPad-muistiajo; ajoitus omistajalta.
