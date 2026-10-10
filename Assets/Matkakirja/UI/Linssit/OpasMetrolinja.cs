@@ -441,7 +441,9 @@ namespace Matkakirja.Natiivi
         public string Kuvaus()
         {
             var r = juuri.worldBound;
-            return $"metrolinja {(nakyy ? "näkyy" : "piilossa")}, {asemat.Count} asemaa, nykyinen {naytettyIndeksi}, @ {r.xMin:0},{r.yMin:0} {r.width:0}×{r.height:0}";
+            return $"metrolinja {(nakyy ? "näkyy" : "piilossa")}, {asemat.Count} asemaa, nykyinen {naytettyIndeksi}, @ {r.xMin:0},{r.yMin:0} {r.width:0}×{r.height:0}"
+                + (selite == null ? "" : $", selite \"{selite.text}\" kohde {kohde} asema {seliteAsema} taso {seliteTaso:0.00} testi {Testi}/{TestiSelite != null} "
+                    + $"{(selite.parent == null ? "irti" : "kiinni")} {selite.resolvedStyle.display} {selite.worldBound.width:0}×{selite.worldBound.height:0}");
         }
     }
 }

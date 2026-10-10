@@ -927,7 +927,7 @@ namespace Matkakirja.Editori
             {
                 var sl = OpasValikko.Hae()?.TestiMetro?.Query<Label>().Where(l => l.text.StartsWith("Pariisin voitonkaari")).First();
                 if (sl == null || !Nakyva(sl) || sl.worldBound.height < 10f)
-                    Virhe($"{nimi}: metrolinjan selite ei näy ({(sl == null ? "ei elementtiä" : Laatikko(sl.worldBound))})");
+                    Virhe($"{nimi}: metrolinjan selite ei näy ({(sl == null ? "ei elementtiä" : Laatikko(sl.worldBound))}; {OpasValikko.Hae()?.TestiMetrolinja?.Kuvaus()})");
                 else Kirjaa($"OK {nimi}: metrolinjan selite {Laatikko(sl.worldBound)}");
             }
             // Paneelin napit paneelin sisällä (9.10.2026 ajo #12: Äänentasojen väkänen valui paneelin ja ruudun ulkopuolelle).
