@@ -812,7 +812,7 @@
   "kohde": "kohde:eidsvoll",
   "kysymys": "Kuka pelasti talon konkurssin jälkeen?",
   "uusi": false,
-  "vastaus": "Annas ku mietin. Carsten Anker ajautui konkurssiin vuonna 1822, ja kartanon omistus siirtyi brittiläisille velkojille. Talon pelasti runoilija [[Henrik Wergelandin]] johtama yksityisten kansalaisten ryhmä, joka keräsi rahat ja osti rakennuksen puutarhoineen. Kauppa vahvistui vuonna 1851, ja ryhmä lahjoitti kiinteistön Norjan valtiolle. Siten [[Eidsvollsbygningen]] säilyi kansakunnan yhteisenä muistomerkkinä. Vuonna 2011 alkanut kunnostus palautti sen mahdollisimman tarkasti vuoden 1814 asuun. Kansalaiset kantoivat tämän kuin kirjeen, huolella.",
+  "vastaus": "Annas ku mietin. Carsten Anker ajautui konkurssiin vuonna 1822, ja kartanon omistus siirtyi brittiläisille velkojille. Talon pelasti runoilija [[Henrik Wergelandin]] johtama yksityisten kansalaisten ryhmä, joka keräsi rahat ja osti rakennuksen puutarhoineen vuonna 1837. Ryhmä lahjoitti kiinteistön Norjan valtiolle vuonna 1851. Siten [[Eidsvollsbygningen]] säilyi kansakunnan yhteisenä muistomerkkinä. Vuonna 2011 alkanut kunnostus palautti sen mahdollisimman tarkasti vuoden 1814 asuun. Kansalaiset kantoivat tämän kuin kirjeen, huolella.",
   "linkit": [
    "Henrik Wergelandin",
    "Eidsvollsbygningen"
@@ -869,11 +869,10 @@
   "kohde": "kohde:kjerag",
   "kysymys": "Miten iso kivi on juuttunut kahden kallion väliin?",
   "uusi": false,
-  "vastaus": "Hetkinen ny. Kyseessä on [[Kjeragbolten]], noin viiden kuutiometrin kokoinen kivenlohkare. Se on juuttunut kahden kallion väliin [[Kjerag]]-vuoren rinteellä. Kiven päälle voi kävellä ilman varusteita, vaikka alla on 241 metrin pudotus ja sen jälkeen vielä 735 metrin rinne [[Lysefjordiin]]. Kiven koko on siis suunnilleen pienen auton luokkaa, mutta sen asema tekee siitä erityisen. Katolta katsottuna kivi näyttäisi kyllä aika pieneltä.",
+  "vastaus": "Hetkinen ny. Kyseessä on [[Kjeragbolten]], noin viiden kuutiometrin kokoinen kivenlohkare. Se on juuttunut vuorenhalkeamaan [[Kjerag]]-vuoren rinteellä. Kiven päälle voi kävellä ilman varusteita, vaikka se on noin 984 metriä Lysefjordin yläpuolella ja alla on lähes pystysuora pudotus. Kiven koko on siis suunnilleen pienen auton luokkaa, mutta sen asema tekee siitä erityisen. Katolta katsottuna kivi näyttäisi kyllä aika pieneltä.",
   "linkit": [
    "Kjeragbolten",
-   "Kjerag",
-   "Lysefjordiin"
+   "Kjerag"
   ],
   "jatkot": [
    "Miten Kjeragboltenille päästään?",
@@ -2244,7 +2243,7 @@
   "kohde": "kohde:hahmotelma-dovrefjell",
   "kysymys": "Milloin ja miksi myskihärät tuotiin Dovrefjellille?",
   "uusi": false,
-  "vastaus": "Joo, tän minä tiedän. Myskihärkiä tuotiin Dovrefjellille vuonna 1947 laivalla Grönlannista. Laji oli elänyt Norjassa [[jääkauden]] aikaan mutta kadonnut sieltä tuhansia vuosia sitten, joten kyse oli lajin tuomisesta takaisin maahan. Nykyinen kanta polveutuu tuosta vuoden 1947 kuljetuksesta, ja se on Euroopan ainoa pysyvä myskihärkäkanta. Eläimet eivät ole varsinaisia härkiä vaan [[lampaiden]] ja [[vuohien]] sukulaisia, ja niiden [[alusvilla]] on maailman lämpimimpiä. Ihan kunnon laivamatka, ja minä valitan pitkistä lennoista.",
+  "vastaus": "Joo, tän minä tiedän. Myskihärkiä tuotiin Dovrefjellille ensimmäisen kerran vuonna 1932 Grönlannista, kymmenen eläintä. Laji oli elänyt Norjassa [[jääkauden]] aikaan mutta kadonnut sieltä tuhansia vuosia sitten, joten kyse oli lajin tuomisesta takaisin maahan. Tuo kanta tuhoutui toisen maailmansodan aikana, ja nykyinen kanta (noin 200–300 eläintä) polveutuu vuosina 1947–1953 tuoduista vasikoista. Se on Euroopan merkittävin myskihärkäkanta. Eläimet eivät ole varsinaisia härkiä vaan [[lampaiden]] ja [[vuohien]] sukulaisia, ja niiden [[alusvilla]] on maailman lämpimimpiä. Ihan kunnon laivamatka, ja minä valitan pitkistä lennoista.",
   "linkit": [
    "jääkauden",
    "lampaiden",
