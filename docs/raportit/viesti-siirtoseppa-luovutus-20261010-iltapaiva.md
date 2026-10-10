@@ -1,0 +1,52 @@
+# Siirtosepän luovutus 10.10.2026 iltapäivä (Opus 5.5, high; TILINVAIHTO 12.3x, konteksti 38 %)
+
+## ALOITUSVIESTI SEURAAJALLE
+
+Olet Siirtoseppä (Opus, high): johdat Olavinlinnan historiamoottoria (pelattava pala, esittely ja sen vaiheet, historia, linnan äänet ja vesi,
+LR:n pakettien kytkentä). Lue tämä, CLAUDE.md ja Raamatun Ydinajatus kohta 2. Testaus vain automaattisin; simuajot vain kuva-arkkeihin ja PT:n
+pyytämiin kaappauksiin Julkaisijan KÄÄNNÖS NYT / SIMULAATTORI NYT -vuorolla. Oma simu 8362879F-30B9-4625-9F42-57326EBC3439 (T7-sarja:
+`source /Users/Shared/Claude/proto-3d/tyokalut/simusarja.sh`). Ilmoita Julkaisijalle "lukko vapaa" / "simu vapaa".
+Proto-worktree /Users/Shared/Claude/wt/proto-siirtoseppa-kello (nyt haara siirtoseppa/historia-suoja, puhdas). Varmuuskopio natiivi-backup
+peili/proto/siirtoseppa-<haara> (push -f estetty → uusi nimi). Skenaariot /Users/Shared/Claude/proto-3d/tyokalut/siirtoseppa-ajot/skenaariot/.
+Unity 6.7 on päälinja. Ei uusia GetInstanceID-kutsuja (CS0619).
+
+**Taustalla ei ole käynnissä olevia ajoja** (ei käännöstä, ei todistusajoa; simu 8362879F sammutettu 12.29).
+
+**Ensimmäinen tehtävä (erä 2, PT hyväksynyt):** kun LR lähettää palatsirajan korjauksen (LR:n jonossa ND v4:n ja NL-sali v2:n jälkeen),
+kytke uusi paketti (PelattavaPala.Hash/Versio + kultaiset osat/merkit/rakennus/liekit ämpäristä
+`https://media.matkakirja.app/dioraama/olavinlinna/<hash>/rakennus.json` ja `blender/kavely/{osat,merkit}.json`; liekit eivät ole paketissa,
+kopioi edellinen kultainen nimellä), poista `Linssit-testit/Testit/OsaviipaleetTestit.cs`:n `OdottaaKorjausta`-rivit (testi kaatuu, kun viipale
+katoaa) ja tarkista, tarvitaanko `ThiefAjuri.cs`:n `RauhallinenYlitys { 69 }` vielä (kokeile ilman: OlavinlinnaMOsaTestit.KiinniTarkistuspisteeseenJaLoppuun
+ja PiiloonMenoTekeeTarkistuspisteen; PT: rajaa EI löysätä). Linssit + unity-tarkistus → SHA PT:lle. Uusi haara 1210b674e:n päälle.
+
+## JUNA 176 (build 177) — KUITATTU
+
+Kärki **siirtoseppa/historia-suoja 1210b674e** (PT kuittasi ehdolla Linssit läpi: 1300/1300). Ketju a4c6539e5 → 479702aac (esittely-vaiheet) →
+f0f3b7fe6 → 85cb145f6 → b49804af5 → 4ced0237b → 023c37675 (haara siirtoseppa/esittely-vaiheet-v46z) → 1210b674e. SHA:t on lähetetty Natiivisepälle.
+
+- f0f3b7fe6: v46z (LR) — pala 4e464f44e51710f8 v46z (kappeli-kavely rajat.min y 9,2 → 9,6), esittely b4cd41abc499dbde v46z-nyky,
+  LeikkauksiaMax 48. Thief-ajuri (PT vaihtoehto B): pisteestä 69 pisteeseen 70 lähdetään vasta, kun kukaan ei epäile (Huonesimulaatio.Vaara julkinen),
+  koska portaat-vartija tulee v46z:ssa pelaajan osaan jo y 8,5:ssä → kiinni 70 tarkistuspiste 1,4 m komerosta.
+- 85cb145f6: järven mitattu väri — Kyrönsalmen kesä (Karttaseppä vesivari-kaudet-olavinlinna.json, Sentinel-2) DioraamaYmparisto.AsetaVedenVari,
+  lineaarinen SetGlobalVector; "poikki vesi vari 0|1 [kerroin]". PT: kerroin 1.
+- b49804af5: kultaiset v46z-nyky + EsittelyVuosileikkauksetTestit (n1790-kartiot piilossa ennen 1790, kasvu 68 s / 90 s).
+- 4ced0237b: OsaviipaleetTestit (ei alle 0,5 m:n osaviipaleita reitillä); palatsi-viipale 0,42 m odottaa LR:ää sidottuna.
+- 023c37675: esittelyn vaiheet vain kerran (vaiheT-tarkistus).
+- 1210b674e: DioraamaSovitin.Historia yksi kerrallaan (historiaAlkaa + SeikkailuHistoria.Kaynnissa → pyyntö ohitetaan, valmis heti).
+
+Vaihearkki (PT hyväksyi): /Users/Shared/Claude/proto-3d/lokit/todistus-vaiheet-v46z-176-b-20261010-1224/kuva-arkki.png (käännös 648e2395f).
+Skenaario skenaariot/vaiheet-v46z-176.txt (odottaa automaattista käynnistystä; ÄLÄ käytä "poikki vaiheet nyt" saapumiskaaren aikana).
+
+## AUKI / MUILLE
+
+- LR:n jonossa: palatsirajan korjaus (x −19,4, y 8,4–8,6, z −11,25…−10,95), rannan vaaleat kivet (1499), ponttonisillan kelluvat palaset ennen 1975.
+- LS2:lle myöhemmin (PT): 1475- ja 1499-kuvissa saaren alla tumma heijastus ilman rannan vihreää reunaa.
+
+## OPITTUA
+
+- Juurisyy ennen kuin LR:ää pyydetään: v46y:n kiinni 70 -vika ei ollut komeron osa vaan vartijan Etsintä osarajan ylityksessä (Vaara → ei tarkistuspistettä).
+  Diagnoosi: väliaikainen DIAG-tulostus Huonesimulaatioon ja vertailu kultaisilla v46w vs. v46z (palauta tiedostot lopuksi).
+- Askelaani.Osa valitsee pienimmän tilavuuden laatikon (vaakavara 0,3 m, pystyvara 1 m) → ohuita viipaleita rajojen kulmiin.
+- Kaksi rinnakkaista historiaa: jälkimmäinen Aloita lopettaa edellisen, jonka valmis sammuttaa kävelyleikkaukset → kartiot näkyvät. Lokissa "historia alkaa" kahdesti.
+- proto-worktreet poistetaan proto-reposta (`git -C /Users/Shared/Claude/proto-3d/Matkakirja-proto worktree remove`); tools/uusi-worktree.sh --poista osoittaa web-repoon.
+- Käännöspalvelun .app kopioidaan heti omaan kansioon (proto-3d/lokit/siirtoseppa-app-<sha>/), seuraava käännös kirjoittaa Build-kansion yli.
