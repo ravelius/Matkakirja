@@ -10,7 +10,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Matkakirja.Linssit
+namespace Matkakirja.Linssit.Museo
 {
     /// <summary>Ruudun tunniste: teos, taso ja ruudun sarake/rivi (x vasemmalta, y ylhäältä).</summary>
     public readonly struct RuutuAvain : IEquatable<RuutuAvain>

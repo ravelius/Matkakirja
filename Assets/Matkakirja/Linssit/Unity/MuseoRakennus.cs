@@ -23,6 +23,8 @@ namespace Matkakirja.Natiivi
         readonly Shader varjostin;
         readonly List<Object> tuhottavat = new List<Object>();
         public readonly Dictionary<string, Material> TeosMateriaalit = new Dictionary<string, Material>();
+        /// <summary>Teoksen kuvan paikka MuseoTekstuureille (seinätaso materiaaliin, yksityiskohtaruudut kankaan eteen).</summary>
+        public readonly Dictionary<string, MuseoTekstuurit.Kuvapaikka> Kuvapaikat = new Dictionary<string, MuseoTekstuurit.Kuvapaikka>();
         public int Kolmioita { get; private set; }
 
         public MuseoRakennus(Transform isa)
@@ -115,6 +117,7 @@ namespace Matkakirja.Natiivi
                 // Kangas (tai paperi) 3 mm kehyksen sisähuulen alla; passepartout paperin takana.
                 double huuli = (prof?.HuuliCm ?? 1.5) / 100, kangas = Mathf.Max(0.001f, (float)(huuli - 0.003));
                 Kappale("Kuva", Suorakaide(w, h, kangas), mat, go.transform, true, kaannaZ: true);
+                Kuvapaikat[r.Teos.Id] = new MuseoTekstuurit.Kuvapaikka { Isa = go.transform, Materiaali = mat, Leveys = (float)w, Korkeus = (float)h, Z = -(float)kangas };
                 if (paikka.Grafiikka) Kappale("Passepartout", Suorakaide(ulkoW, ulkoH, kangas - 0.0008), paspisMat, go.transform, true, kaannaZ: true);
                 if (prof != null)
                 {
@@ -182,7 +185,7 @@ namespace Matkakirja.Natiivi
         public void Tuhoa()
         {
             foreach (var o in tuhottavat) if (o != null) Object.Destroy(o);
-            tuhottavat.Clear(); TeosMateriaalit.Clear();
+            tuhottavat.Clear(); TeosMateriaalit.Clear(); Kuvapaikat.Clear();
             if (juuri != null) Object.Destroy(juuri.gameObject);
         }
     }

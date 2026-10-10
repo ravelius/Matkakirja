@@ -7,6 +7,7 @@
 // Testikomennot (linssi-komento.txt): "linssi taidemuseo" avaa; "museo tila|kierros|vapaa|seuraava|edellinen|tauko 0|1|
 // siirry <n>|esittele [0|1]|liiku <eteen> <sivulle> <kääntö> <s>|katse <yaw> <pitch>|valotus <ev>".
 using System;
+using System.Collections.Generic;
 using System.Globalization;
 using Matkakirja.Linssit;
 using Matkakirja.Linssit.Museo;
@@ -39,6 +40,10 @@ namespace Matkakirja.Natiivi
         ILinssiYmparisto y;
         MuseoNayttamo nayttamo;
         MuseoRakennus rakennus;
+        MuseoTekstuurit tekstuurit;
+        readonly List<string> teosjarjestys = new List<string>();
+        /// <summary>Teosten ASTC-paketit (tyokalut/teos_astc.py; Natiiviseppä 10.10.): &lt;juuri&gt;&lt;teos&gt;/{teos.json, seina.astcm, yks/…}.</summary>
+        public static string KuvaJuuri = "https://media.matkakirja.app/taidemuseo/alankomaat/astc-v1/";
         Sali sali;
         public MuseoKierros Kierros { get; private set; }
         int naytettyVersio = -1;
@@ -83,6 +88,12 @@ namespace Matkakirja.Natiivi
             rakennus.Rakenna(sali);
             nayttamo.AsetaKeilat(sali);
             Kierros = new MuseoKierros(sali);
+            teosjarjestys.Clear();
+            foreach (int i in Kierros.Pysahdykset) teosjarjestys.Add(sali.HaeRipustus(sali.Reitti[i].Kohde)?.Teos.Id);
+            tekstuurit = nayttamo.gameObject.AddComponent<MuseoTekstuurit>();
+            tekstuurit.Juuri = KuvaJuuri;
+            tekstuurit.Kirjaa = o.Kirjaa;
+            tekstuurit.Paikka = id => id != null && rakennus != null && rakennus.Kuvapaikat.TryGetValue(id, out var kp) ? kp : null;
             SeikkailuTapit.MuseoKavely = () => Auki && Kierros != null && Kierros.Vaihe == MuseoVaihe.Vapaa;
             EsittelyAuki = false;
             o.Kirjaa($"museo: auki {sali.Nimi}: {sali.Osat.Count} osaa, {sali.Ripustukset.Count} teosta, {Kierros.Pysahdykset.Count} pysähdystä, " +
@@ -104,6 +115,7 @@ namespace Matkakirja.Natiivi
             }
             else Kierros.Paivita(dt);
             nayttamo.Paivita(sali, Kierros.Nykyinen, dt);
+            tekstuurit?.Paivita(nayttamo.Kamera, Kierros.NykyinenTeos?.Teos.Id, teosjarjestys, Kierros.Kohta);
             if (Kierros.Versio != naytettyVersio)
             {
                 naytettyVersio = Kierros.Versio;
@@ -126,6 +138,7 @@ namespace Matkakirja.Natiivi
             if (Aktiivinen == this) Aktiivinen = null;
             EsittelyAuki = false;
             SeikkailuTapit.MuseoKavely = null;
+            tekstuurit?.Vapauta(); tekstuurit = null;
             rakennus?.Tuhoa(); rakennus = null;
             nayttamo?.Tuhoa(); nayttamo = null;
             Kierros = null; sali = null; naytettyVersio = -1;

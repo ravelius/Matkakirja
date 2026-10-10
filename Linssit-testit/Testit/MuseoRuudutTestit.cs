@@ -1,5 +1,6 @@
 // Taidemuseon kuvapyramidi, ruutuvalinta, LRU-paikat ja muistibudjetti (PT 10.10.2026, suunnitelma luvut 5 ja 6.4).
 using System.Collections.Generic;
+using Matkakirja.Linssit.Museo;
 
 namespace Matkakirja.Linssit.Testit
 {
