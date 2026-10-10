@@ -1,0 +1,2780 @@
+[
+ {
+  "kohde": "kohde:gaizinkalns",
+  "kysymys": "Miksi tornia ei koskaan saatu valmiiksi?",
+  "uusi": false,
+  "vastaus": "Kato, tost minä tiedän vähän. Torni kyllä näkyi katolta asti. Tornihanke syntyi kilpailusta Viron korkeimman kohdan, [[Suur Munamäen]], kanssa, joka on kuusi metriä [[Gaiziņkalnsia]] korkeampi. Torni ylsi virolaisen ohi, mutta rakennustyö jäi kesken, rakennelma suljettiin turvallisuussyistä ja se purettiin joulukuussa 2012. Siitä, mikä tarkalleen esti työn loppuun saattamisen, en ole varma. Kilpailu ei kuitenkaan päättynyt tornin purkamiseen, sillä luonnollinen korkeusero säilyy. Ei paha kyyhkyltä.",
+  "linkit": [
+   "Suur Munamäen",
+   "Gaiziņkalnsia"
+  ],
+  "jatkot": [
+   "Kuinka korkea on Viron korkein kohta?",
+   "Miten Latvian korkein kohta syntyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:gaizinkalns",
+  "kysymys": "Millainen on Vidzemen ylänkö?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Tän minä näen aika hyvin ylhäältä. Vidzemen ylänkö on kumpuilevaa, metsäistä ja järvistä maisemaa Latvian koillisosassa, ja sen muodot ovat peräisin [[jääkauden]] jäätiköistä. Täällä sijaitsee Latvian korkein kohta, 312 metrin korkuinen [[Gaiziņkalns]], eli kyse on kukkulaisesta eikä vuoristoisesta alueesta. Alueen läpi virtaa [[Gauja]], jonka laaksossa on jyrkkiä hiekkakivirinteitä. Rajojen tarkasta kulusta en ole varma. Ei tässä mitään alppeja ole, mutta kyl se kuuluu Latvian kauneimpiin.",
+  "linkit": [
+   "jääkauden",
+   "Gaiziņkalns",
+   "Gauja"
+  ],
+  "jatkot": [
+   "Miten jääkausi muovasi Latvian maisemaa?",
+   "Millainen joki Gauja on?"
+  ]
+ },
+ {
+  "kohde": "kohde:gaizinkalns",
+  "kysymys": "Kuinka korkea Suur Munamägi on?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Tää on vertailuasia. Viron ja koko Baltian maiden korkein kohta, [[Suur Munamägi]], on 318 metriä merenpinnan yläpuolella, eli kuusi metriä korkeampi kuin Latvian [[Gaiziņkalns]]. Se sijaitsee Etelä-Virossa, ja huipulla on näkötorni, jolta avautuu laaja metsäinen maisema. Korkeus on vaatimaton verrattuna vuoristoihin, mutta alueen mittakaavassa se on merkittävä. Kuusi metriä on kyyhkyn silmin muuten ihan huomattava ero, jos on itse lentänyt ylämäen.",
+  "linkit": [
+   "Suur Munamägi",
+   "Gaiziņkalns"
+  ],
+  "jatkot": [
+   "Mitä Suur Munamäen huipulta näkee?",
+   "Miksi Baltian maat ovat niin tasaisia?"
+  ]
+ },
+ {
+  "kohde": "kohde:gaizinkalns",
+  "kysymys": "Miksi Latvia on niin tasainen maa?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Alta näkee heti. Latvian tasaisuus johtuu pääosin viimeisestä [[jääkaudesta]], jolloin mannerjäätikkö hioi maaperää ja jätti jälkeensä loivia moreenikumpuja, tasankoja ja suuria suoalueita. Maa on pääosin alavaa, ja korkein kohta, [[Gaiziņkalns]], yltää vain 312 metriin. Matalat alueet ovat tyypillisiä koko Baltian rannikolle ja sisämaalle. Alueen muodostumisen tarkoista vaiheista en ole kaikilta osin varma. Minulle tasainen on pelkkää etua, ei tarvitse nousta vastatuuleen.",
+  "linkit": [
+   "jääkaudesta",
+   "Gaiziņkalns"
+  ],
+  "jatkot": [
+   "Mikä on Latvian toiseksi korkein kohta?",
+   "Minkälaisia soita Latviassa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:gaizinkalns",
+  "kysymys": "Mihin kieliperheeseen latvian kieli kuuluu?",
+  "uusi": true,
+  "vastaus": "Ai tota. Hyvä kysymys tuo. Latvian kieli kuuluu indoeurooppalaiseen kieliperheeseen, ja sen lähin elävä sukulainen on [[liettua]]. Yhdessä ne muodostavat [[balttilaisten kielten]] ryhmän. Latvia ei ole sukua suomelle eikä virolle, vaikka maat ovat naapureita, sillä suomi ja viro kuuluvat uralilaisiin kieliin. Latvian kieleen on silti tullut vaikutteita liivin kielestä, joka on suomen sukua. Sukulaisuus ei aina seuraa karttaa, eikä se kyyhkyjenkään kohdalla.",
+  "linkit": [
+   "liettua",
+   "balttilaisten kielten"
+  ],
+  "jatkot": [
+   "Mikä on liivin kieli?",
+   "Miten liettuan ja latvian kieli eroavat toisistaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:itameri~5",
+  "kysymys": "Miksi Itämeren vesi on murtovettä?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Tän selitys on lähes kuin joen virtaus. Itämeri on murtovettä, koska se on lähes suljettu: yhteys valtamereen kulkee kapeiden ja matalien [[Tanskan salmien]] kautta, joten suolaista vettä pääsee sisään vain vähän. Samaan aikaan meren valuma-alueelta tulee paljon makeaa vettä jokien mukana, kuten [[Väinäjoesta]], ja haihdunta on kylmässä ilmastossa vähäistä. Tämän vuoksi vesi on selvästi vähäsuolaisempaa kuin valtamerissä ja pohjoisessa vielä vähäsuolaisempaa kuin etelässä. Vähäsuolaisuus säilyttää myös puuhylyt, kuten [[Vasan]]. No olipas tässä virtaa.",
+  "linkit": [
+   "Tanskan salmien",
+   "Väinäjoesta",
+   "Vasan"
+  ],
+  "jatkot": [
+   "Kuinka suolaista Itämeren vesi on?",
+   "Mitä kasveja ja eläimiä murtovedessä elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:itameri~5",
+  "kysymys": "Miksi Riianlahti on erillinen?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Tost voin kertoo järkevästi. Riianlahti on Itämeren sivumeri, joka on erottunut avomerestä lähes kokonaan: lahden suulla [[Saarenmaa]] ja Latvian puolella [[Kuurinmaan niemimaa]] rajaavat sen, ja yhteys avomereen kulkee [[Irbenin salmen]] kautta sekä pienempien salmien kautta pohjoisessa. Lahti on matala, ja siihen laskee useita jokia, joista tärkein on Väinäjoki, joten vesi on tavallista vähäsuolaisempaa. Nämä ovat syitä, miksi lahtea kohdellaan omana osa-alueenaan. Lahti on kyyhkyn mielestä kuin pieni oma merensä.",
+  "linkit": [
+   "Saarenmaa",
+   "Kuurinmaan niemimaa",
+   "Irbenin salmen"
+  ],
+  "jatkot": [
+   "Millainen salmi Irbenin salmi on?",
+   "Mitä jokia Riianlahteen laskee?"
+  ]
+ },
+ {
+  "kohde": "kohde:itameri~5",
+  "kysymys": "Kuinka suolaista Itämeren vesi on?",
+  "uusi": true,
+  "vastaus": "No niin, nyt luvut kehiin. Itämeren suolapitoisuus on vain murto-osa valtamerten pitoisuudesta: valtamerissä suolaa on noin kolme ja puoli prosenttia, kun [[Itämeren]] eteläosissa luku on noin prosentin luokkaa tai alle, ja pohjoisissa lahdissa, kuten Perämerellä, vielä selvästi vähemmän. Tarkat arvot vaihtelevat paikan ja syvyyden mukaan, ja lähteet antavat hieman erilaisia lukuja. Suolapitoisuus laskee pohjoiseen ja itään mentäessä, koska makeaa vettä tulee jokien mukana. Vähäsuolaisuus tekee mereen sopivan elinympäristön sekä merellisille että makean veden lajeille, ja tämä on yksi [[murtoveden]] erityispiirre. Vähän suolaa, paljon sanottavaa.",
+  "linkit": [
+   "Itämeren",
+   "murtoveden"
+  ],
+  "jatkot": [
+   "Miksi Itämeren pohjassa on happikatoa?",
+   "Miten Itämeri ja Pohjanmeri eroavat?"
+  ]
+ },
+ {
+  "kohde": "kohde:itameri~5",
+  "kysymys": "Mikä on Itämeren syvin kohta?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Mietin vain lukua. Itämeren syvin kohta on [[Landsortin syvänne]] Ruotsin itärannikon edustalla Tukholman saariston eteläpuolella, ja sen syvyydeksi ilmoitetaan lähteiden mukaan noin neljäsataa viisikymmentä metriä. Tarkka luku vaihtelee lähteestä riippuen. Itämeri on kuitenkin keskimäärin matala meri, ja sen keskisyvyys on vain muutamia kymmeniä metrejä, joten syvänteet ovat poikkeuksia. Ruotsin saaristo on [[Tukholman saaristo]] eli yksi alueen tunnetuimmista. Syvyys on sellaista, ettei kyyhky mene sinne edes pullan perässä.",
+  "linkit": [
+   "Landsortin syvänne",
+   "Tukholman saaristo"
+  ],
+  "jatkot": [
+   "Miksi Itämeri on keskimäärin matala?",
+   "Mikä on Tukholman saaristo?"
+  ]
+ },
+ {
+  "kohde": "kohde:itameri~5",
+  "kysymys": "Jäätyykö Itämeri talvisin?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Kylmäkysymys, minä pidän tästä. Itämeri jäätyy talvisin osittain, ja jääpeitteen laajuus vaihtelee vuodesta toiseen. Pohjoisimmat osat, kuten Perämeri ja suuri osa [[Suomenlahtea]], jäätyvät lähes joka talvi, kun taas eteläiset osat jäätyvät harvoin tai vain rannikoilta. Vähäsuolaisuus helpottaa jäätymistä, koska murtovesi jäätyy suolaisempaa vettä helpommin. Vahva jääpeite vaikuttaa laivaliikenteeseen, ja siksi alueella käytetään [[jäänmurtajia]]. Pitkät talvet ovat pelkkää pullan puutetta.",
+  "linkit": [
+   "Suomenlahtea",
+   "jäänmurtajia"
+  ],
+  "jatkot": [
+   "Miten jäänmurtajat toimivat?",
+   "Milloin Itämeri on jäätynyt kokonaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:vainajoki",
+  "kysymys": "Miksi joella on kolme eri nimeä?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Annas ku mietin. Kolme nimeä johtuu kielistä, joita joen varrella puhutaan, ja jokaisella kielellä on oma tapansa kutsua samaa jokea: suomessa se on Väinäjoki, latviassa [[Daugava]] ja venäjässä [[Länsi-Dvina]]. Etuliite \"Länsi\" erottaa joen toisesta Dvina-nimisestä joesta, joka virtaa Venäjällä Vienanmereen ja jonka nimi on Pohjois-Dvina. Valko-Venäjällä joesta käytetään vastaavaa omaa nimeään. Nimien kirjo kertoo joen pitkästä matkasta usean kansan halki. Minä pidän latvialaisesta nimestä, siinä on vauhtia.",
+  "linkit": [
+   "Daugava",
+   "Länsi-Dvina"
+  ],
+  "jatkot": [
+   "Mitä Pohjois-Dvina on?",
+   "Mitkä maat Väinäjoen varrella ovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:vainajoki",
+  "kysymys": "Missä Väinäjoen lähde on?",
+  "uusi": false,
+  "vastaus": "Ai se. Tuo on helppo. Väinäjoen lähde on [[Valdain kukkuloilla]] Venäjällä, aivan Volgan lähteen läheisyydessä. Lähde on siis Itä-Euroopan tasangon luoteisosassa, ja vaikka Volga kääntyy kohti kaakkoa, Väinäjoki kääntyy länteen. Joki virtaa ensin Venäjän halki, sitten Valko-Venäjän läpi ja lopulta Latviaan, missä se laskee [[Riianlahteen]]. Matkaa kertyy yhteensä noin tuhat kilometriä. Lähteen tarkkaa paikkaa en osaa sanoa kartalla. Kovin pitkä reissu, jonka minä kyllä lentäisin lyhyemmin.",
+  "linkit": [
+   "Valdain kukkuloilla",
+   "Riianlahteen"
+  ],
+  "jatkot": [
+   "Millainen joki Volga on?",
+   "Mitä Valdain kukkulat ovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:vainajoki",
+  "kysymys": "Mitkä kaupungit sijaitsevat Väinäjoen varrella?",
+  "uusi": true,
+  "vastaus": "Tost voin kertoo. Joen varrella on monta tunnettua kaupunkia. Valko-Venäjällä joen rannalla ovat [[Vitebsk]] ja [[Polotsk]], jotka ovat molemmat vanhoja kaupunkeja. Latviassa tärkeitä kaupunkeja ovat [[Daugavpils]], joka on maan toiseksi suurin kaupunki, ja pääkaupunki [[Riika]], joka sijaitsee lähellä joen suuta. Kaikkia joen varren kaupunkeja en luettele, koska niitä on niin paljon. Joki on ollut vuosisatojen ajan tärkeä kauppareitti. Kaupunkeja on siellä sen verran, ettei kyyhky ehdi laskea.",
+  "linkit": [
+   "Vitebsk",
+   "Polotsk",
+   "Daugavpils",
+   "Riika"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Polotsk on?",
+   "Mikä on Daugavpilsin historia?"
+  ]
+ },
+ {
+  "kohde": "kohde:vainajoki",
+  "kysymys": "Onko Väinäjoella voimalaitoksia?",
+  "uusi": true,
+  "vastaus": "Kato, sepä sattui. Tämä on hyvä kysymys energiasta. Väinäjoella on Latviassa kolme suurta [[vesivoimalaitosta]]: Pļaviņas, Ķegums ja Riian voimalaitos. Ne on rakennettu patoamaan jokea ja tuottavat merkittävän osan Latvian sähköstä. Patojen rakentamisen myötä joen luonnollinen virtaus ja ympäröivä maisema muuttuivat, ja osa joen alkuperäisistä koskista jäi vedenpinnan alle. Tarkkoja tuotantolukuja en ole varma. Jokainen pato on kuin iso porras, jonka yli kyyhky lentää ilman vaivaa.",
+  "linkit": [
+   "vesivoimalaitosta"
+  ],
+  "jatkot": [
+   "Miten vesivoimalaitos toimii?",
+   "Mitä kosket olivat ennen patoja?"
+  ]
+ },
+ {
+  "kohde": "kohde:vainajoki",
+  "kysymys": "Milloin Riika perustettiin?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Tähän on selvä vastaus. Riika perustettiin vuonna 1201, kun saksalainen piispa [[Albert von Buxhoeveden]] perusti kaupungin Väinäjoen suulle osana ristiretkeä, jolla alueen balttilaiset ja liiviläiset heimot käännytettiin kristinuskoon. Piispa perusti myös [[Miekkaveljien ritarikunnan]] suojelemaan uutta valtaansa. Kymmenen vuotta myöhemmin, vuonna 1211, aloitettiin [[Riian tuomiokirkon]] rakentaminen, ja siitä kasvoi Baltian suurin keskiaikainen kirkko. Kaupungin sijainti joen suulla teki siitä tärkeän kauppapaikan.\n\nRiika on kyllä mielestäni yksi niistä kaupungeista, joiden katoilta kannattaa katsoa ylös. Ja jos joku kysyy, myös pulla on siellä tosi hyvää, sen minä väitän.",
+  "linkit": [
+   "Albert von Buxhoeveden",
+   "Miekkaveljien ritarikunnan",
+   "Riian tuomiokirkon"
+  ],
+  "jatkot": [
+   "Millainen kirkko Riian tuomiokirkko on?",
+   "Keitä liiviläiset olivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:rundale",
+  "kysymys": "Kuka suunnitteli palatsin?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: tän minä tiedän. Palatsin suunnitteli italialaissyntyinen arkkitehti [[Bartolomeo Rastrelli]], joka työskenteli Venäjän keisarikunnan palveluksessa ja tunnetaan myös Pietarin Talvipalatsin suunnittelijana. Rakennuttaja oli Kuurinmaan herttua [[Ernst Johann von Biron]], joka osti Rundālen maat vuonna 1735, ja työ alkoi vuonna 1736. Rastrelli valvoi työn valmistumista vuonna 1768, ja runsaat stukkokoristeet teki [[Johann Michael Graff]]. Herttuan toinen suuri palatsi on [[Jelgavan palatsi]]. Kyyhky ei kyllä itse piirtäisi mitään näin mahtavaa, vaikka haluaisi.",
+  "linkit": [
+   "Bartolomeo Rastrelli",
+   "Ernst Johann von Biron",
+   "Johann Michael Graff",
+   "Jelgavan palatsi"
+  ],
+  "jatkot": [
+   "Millainen on Rastrellin tyyli?",
+   "Miksi rakennustyö keskeytyi vuonna 1740?"
+  ]
+ },
+ {
+  "kohde": "kohde:rundale",
+  "kysymys": "Mihin palatsia käytettiin vuonna 1812?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Tähän minä en ihan osaa vastata. Vuonna 1812 Napoleon hyökkäsi Venäjälle, ja Kuurinmaa oli tuolloin osa Venäjän keisarikuntaa, sillä [[Kuurinmaan herttuakunta]] oli liitetty siihen vuonna 1795. Alue oli sotaretken reunalla, ja sodan vaikutukset tuntuivat sen läpi liikkuneiden joukkojen vuoksi. Siitä, mihin Rundālen palatsia tuona vuonna tarkalleen käytettiin, en ole varma, enkä halua arvata. Sen sijaan tiedän, että palatsi on säilynyt nykypäiviin. Kyl joskus ois ihan hyvä, jos jokaisesta huoneesta olisi säilynyt kirje.",
+  "linkit": [
+   "Kuurinmaan herttuakunta"
+  ],
+  "jatkot": [
+   "Milloin Kuurinmaan herttuakunta liitettiin Venäjään?",
+   "Miten Rundālen palatsi on säilynyt?"
+  ]
+ },
+ {
+  "kohde": "kohde:rundale",
+  "kysymys": "Kuka oli herttua Biron?",
+  "uusi": true,
+  "vastaus": "No niin, tässäpä mielenkiintoinen herra. Ernst Johann von Biron oli [[Kuurinmaan herttua]], joka nousi vaikutusvaltaan Venäjän keisarinna [[Anna Ivanovnan]] suosikkina. Hän osti Rundālen maat vuonna 1735 kesäasuntoa varten, ja palatsin rakennustyö alkoi pian sen jälkeen. Vuonna 1740 hän menetti asemansa, ja palatsi jäi keskeneräisenä tyhjilleen aina vuoteen 1762 asti, jolloin Biron palasi maanpaosta. Sen jälkeen hän muutti valmistuneeseen palatsiin, joka valmistui vuonna 1768. Vaikutusvalta on kyyhkyn mielestä pitkä lento, ja laskeutuminen kova.",
+  "linkit": [
+   "Kuurinmaan herttua",
+   "Anna Ivanovnan"
+  ],
+  "jatkot": [
+   "Millainen valtakausi keisarinna Annalla oli?",
+   "Miksi Biron joutui maanpakoon?"
+  ]
+ },
+ {
+  "kohde": "kohde:rundale",
+  "kysymys": "Mikä oli Kuurinmaan herttuakunta?",
+  "uusi": true,
+  "vastaus": "Ai tota. Tämä on historiaa, josta minä pidän. Kuurinmaan ja Semgallian herttuakunta oli vuosina 1561–1795 olemassa ollut valtio nykyisen Latvian alueella, ja se oli [[Puolan–Liettuan]] ylivaltaan kuuluva lääni. Herttuakunnan pääkaupunki oli [[Jelgava]], ja sen herttuoille rakennettiin kaksi suurta barokkipalatsia, Jelgavan ja Rundālen. Herttuakunta liitettiin Venäjän keisarikuntaan vuonna 1795 Puolan–Liettuan jaon yhteydessä. Pieni valtio, mutta sillä oli oma laivastonsa ja siirtomaitakin. Siis tosi pieni, mut tosi vaikuttava.",
+  "linkit": [
+   "Puolan–Liettuan",
+   "Jelgava"
+  ],
+  "jatkot": [
+   "Miksi herttuakunnalla oli siirtomaita?",
+   "Millainen kaupunki Jelgava on?"
+  ]
+ },
+ {
+  "kohde": "kohde:rundale",
+  "kysymys": "Mitä barokki tarkoittaa arkkitehtuurissa?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Tost voin kertoo selkeästi. Barokki on 1600-luvulla Italiassa syntynyt ja 1700-luvulle jatkunut tyylisuunta, jonka tunnusmerkkejä ovat runsas koristelu, voimakkaat muodot, liike ja dramaattinen valon ja varjon vaihtelu. Rakennuksissa käytetään kaarevia pintoja, suuria portaikkoja ja runsaita [[stukkokoristeita]]. Tyyli sopi hallitsijoiden palatseihin, koska se korosti valtaa ja loistoa. Barokin jälkeen tuli kevyempi [[rokokoo]], jonka vaikutus näkyy monissa palatsien sisätiloissa. Vaikuttavaa, mutta pölyttämiseen tarvittaisiin kyyhkyparvi.",
+  "linkit": [
+   "stukkokoristeita",
+   "rokokoo"
+  ],
+  "jatkot": [
+   "Mikä on rokokoo?",
+   "Mitä muita barokkipalatseja Euroopassa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:cesis",
+  "kysymys": "Keitä olivat vendit?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Tähän kyllä tarvitaan varovaisuutta. Vendit olivat pieni heimo, joka asui nykyisen [[Cēsisin]] paikalla, ja syksyllä 1206 he kääntyivät kristinuskoon ja liittoutuivat ristiretkeläisten kanssa. Vuonna 1208 [[Kalpaveljien ritarikunnan]] ritarit asettuivat asumaan heidän linnavuorelleen ja korvasivat puiset varustukset kivimuurilla. Heimosta kerrotaan etenkin [[Henrik Liiviläisen kronikassa]], joka on keskeinen lähde alueen varhaisesta historiasta. Heidän tarkasta kielestään ja alkuperästään en ole varma, eikä tutkijoidenkaan käsitys ole yksimielinen. Pieni heimo, suuri linna.",
+  "linkit": [
+   "Cēsisin",
+   "Kalpaveljien ritarikunnan",
+   "Henrik Liiviläisen kronikassa"
+  ],
+  "jatkot": [
+   "Miten Henrik Liiviläisen kronikka syntyi?",
+   "Kuinka linna rakennettiin kivestä?"
+  ]
+ },
+ {
+  "kohde": "kohde:cesis",
+  "kysymys": "Mikä oli castellum?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Tämä on arkkitehtuurisana. Castellum tarkoittaa tässä yhteydessä neliömäistä linnatyyppiä, jossa neljä siipeä ympäröi sisäpihaa. Muoto tuotiin [[Preussista]], ja sen taustalla oli tarve linnoitetuille [[konventeille]], jotka olivat ritarikunnan yhteisen asumisen ja hallinnon keskuksia. Tällainen rakennus oli helppo puolustaa, ja sen pihalla voitiin pitää kokoontumisia ja varastoida tarvikkeita. Cēsisissä castellum-linna rakennettiin sen jälkeen, kun linna oli siirtynyt Saksalaisen ritarikunnan Liivinmaan haaralle vuonna 1237. Neliö on kyyhkyn kannalta hankala maihinlaskupaikka.",
+  "linkit": [
+   "Preussista",
+   "konventeille"
+  ],
+  "jatkot": [
+   "Mikä oli konventti?",
+   "Mikä oli Saksalainen ritarikunta?"
+  ]
+ },
+ {
+  "kohde": "kohde:cesis",
+  "kysymys": "Mikä oli Kalpaveljien ritarikunta?",
+  "uusi": true,
+  "vastaus": "Kato, nyt mennään keskiaikaan. Kalpaveljien ritarikunta oli Liivinmaalla toiminut sotilaallinen ritarikunta, jonka piispa [[Albert von Buxhoeveden]] perusti suojelemaan ristiretkien tuloksena syntynyttä valtaa. Ritarikunnan jäsenet olivat sekä sotilaita että munkkimaisen elämän noudattajia. Se rakensi linnoja, kuten Cēsisin, ja osallistui alueen valloitukseen. Ritarikunta sulautui [[Saksalaiseen ritarikuntaan]] 1230-luvun lopulla, ja sen jälkeen sen tilalle tuli Liivinmaan haara. Tarkat vuosiluvut vaihtelevat lähteittäin, joten en ole niistä aivan varma. Aika paljon veljiä, aika vähän kyyhkyjä.",
+  "linkit": [
+   "Albert von Buxhoeveden",
+   "Saksalaiseen ritarikuntaan"
+  ],
+  "jatkot": [
+   "Miksi ritarikunta sulautui Saksalaiseen ritarikuntaan?",
+   "Mikä oli Liivinmaan ristiretki?"
+  ]
+ },
+ {
+  "kohde": "kohde:cesis",
+  "kysymys": "Kuka kirjoitti Henrik Liiviläisen kronikan?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Nimi sanoo sen jo melkein. Kronikan kirjoitti [[Henrik Liiviläinen]], katolinen pappi, joka eli 1200-luvun alun Liivinmaalla ja osallistui itse alueen käännytystyöhön. Teos kertoo Liivinmaan ristiretkestä ja alueen heimoista sekä ritarikunnan ja piispan välisistä suhteista, ja se on keskeinen lähde alueen varhaisesta historiasta. Teos on kirjoitettu latinaksi, ja kronikassa mainitaan myös Cēsisin linna, jota kutsutaan siinä \"Liivinmaan pienimmäksi\". Kronikoitsija ja kyyhky ovat samaa sukua, molemmat vievät viestiä perille.",
+  "linkit": [
+   "Henrik Liiviläinen"
+  ],
+  "jatkot": [
+   "Miksi kronikka on tärkeä lähde?",
+   "Milloin Liivinmaan ristiretki alkoi?"
+  ]
+ },
+ {
+  "kohde": "kohde:cesis",
+  "kysymys": "Mikä on Liivinmaa?",
+  "uusi": true,
+  "vastaus": "No jopas, historiallinen aluekysymys. Liivinmaa on historiallinen alue, joka kattaa suuren osan nykyisen Latvian ja Viron alueesta Itämeren itärannalla. Nimi tulee [[liiviläisistä]], itämerensuomalaisesta kansasta, joka asui alueen rannikolla. Keskiajalla Liivinmaata hallitsi ritarikuntien ja piispojen muodostama valtio, ja myöhemmin alue joutui Puolan, Ruotsin ja Venäjän vallan alle. Rajojen tarkka kulku vaihteli eri aikoina. Nykyään nimi elää lähinnä historiankirjoissa ja alueen perinteessä. Minä pidän siitä, että vanha nimi on säilynyt, vaikka rajat eivät.",
+  "linkit": [
+   "liiviläisistä"
+  ],
+  "jatkot": [
+   "Keitä liiviläiset olivat?",
+   "Mitä Liivinmaalle tapahtui myöhemmin?"
+  ]
+ },
+ {
+  "kohde": "kohde:turaidan-ruusu",
+  "kysymys": "Mistä legenda sai alkunsa?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Tost minä osaan kertoo jotain. Turaidan ruusun tarina on 1800-luvulla kirjattu legenda, jonka tapahtumat sijoitetaan 1600-luvun alkuun. Kertomus liittyy [[Turaidan linnaan]] ja [[Siguldan]] seutuun [[Gaujan]] jokilaaksossa, ja sen keskeinen tapahtumapaikka on [[Gutmanin luola]]. Legendan synnystä ja sen historiallisesta pohjasta ei ole varmaa tietoa, ja tarinan yksityiskohdat vaihtelevat kertojan mukaan, joten tarkkaa alkuperää ei voida todeta. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "Turaidan linnaan",
+   "Siguldan",
+   "Gaujan",
+   "Gutmanin luola"
+  ],
+  "jatkot": [
+   "Mikä on Gaujan kansallispuisto?",
+   "Miten Turaidan linna on säilynyt?"
+  ]
+ },
+ {
+  "kohde": "kohde:turaidan-ruusu",
+  "kysymys": "Miksi vastavihityt käyvät haudalla?",
+  "uusi": false,
+  "vastaus": "Mmm— tost tarinasta osaan sanoo vähän. Käytäntö liittyy Maijan hautaan Turaidan kirkon luona, jonne hänen kerrotaan legendan mukaan haudatun. Perinteen mukaan [[Turaidassa]] vierailevat vastavihityt vievät haudalle kukkia kunnioittaakseen hänen uskollisuuttaan ja rakkauttaan sekä toivoakseen omalle liitolleen kestävyyttä. Tapa on osa seudun [[hääperinnettä]], mutta sen tarkasta alkuajasta ei ole varmaa tietoa, ja [[Turaidan kirkon]] ympäristö on säilynyt paikkana, jossa tarinaa muistetaan. Kaunis tapa, ja hiljainen.",
+  "linkit": [
+   "Turaidassa",
+   "hääperinnettä",
+   "Turaidan kirkon"
+  ],
+  "jatkot": [
+   "Miten häitä vietetään perinteisesti Latviassa?",
+   "Millainen paikka Turaidan museoalue on?"
+  ]
+ },
+ {
+  "kohde": "kohde:turaidan-ruusu",
+  "kysymys": "Kuka rakennutti Turaidan linnan?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Turaidan linnan rakennutti [[Riian piispa]] Albert 1200-luvun alussa, ja vuosiluku 1214 mainitaan usein. Punatiilinen linna kuului Riian piispojen valtaan, ja nykyinen rakennuskokonaisuus on osin entistetty. Linnan ympärillä toimii [[Turaidan museoalue]]. Punainen tiili näkyy ylhäältä hyvin.",
+  "linkit": [
+   "Riian piispa",
+   "Turaidan museoalue"
+  ],
+  "jatkot": [
+   "Mitä Turaidan museoalueella voi nähdä?",
+   "Mitä Riian piispat tekivät keskiajalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:turaidan-ruusu",
+  "kysymys": "Millainen paikka Gutmanin luola on?",
+  "uusi": true,
+  "vastaus": "Ai tota. Gutmanin luola on [[hiekkakivestä]] muodostunut luola [[Gaujan]] rannalla [[Siguldassa]]. Sen seinissä on vuosisatojen varrella veistettyjä kirjoituksia ja vaakunoita, ja luolan lähteen veden uskottiin perinteisesti parantavan. Nimen alkuperästä kerrotaan useita selityksiä, eikä niistä ole varmuutta. Luolat ovat kyyhkylle kotoisia, kunhan niissä on vähän valoa.",
+  "linkit": [
+   "hiekkakivestä",
+   "Gaujan",
+   "Siguldassa"
+  ],
+  "jatkot": [
+   "Miten hiekkakivi syntyy?",
+   "Mistä Sigulda tunnetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:turaidan-ruusu",
+  "kysymys": "Mitä muuta Siguldan seudulla on nähtävää?",
+  "uusi": true,
+  "vastaus": "Katotaas. Siguldan seudulla on [[Gaujan kansallispuiston]] maisemia, kuten jokilaakson jyrkät hiekkakivirinteet ja polkuverkosto. Kaupungissa ja sen ympäristössä on keskiaikaisten linnojen raunioita, kuten Siguldan ja [[Krimuldan]] linnat, sekä [[köysirata]] Gaujan laakson yli. Seutu tunnetaan myös talviurheilusta, sillä siellä on kelkkarata. Paljon nähtävää, ja kaikki näkyy ylhäältä hyvin.",
+  "linkit": [
+   "Gaujan kansallispuiston",
+   "Krimuldan",
+   "köysirata"
+  ],
+  "jatkot": [
+   "Millainen Krimuldan linna on?",
+   "Miten kelkkarataa käytetään urheilussa?"
+  ]
+ },
+ {
+  "kohde": "kohde:liepaja",
+  "kysymys": "Mistä kaupungin nimi tulee?",
+  "uusi": false,
+  "vastaus": "Ai se. Kaupungin nimi Liepāja tulee latvian sanasta liepa, joka tarkoittaa [[lehmusta]]. Vanha saksalainen nimi [[Libau]] juontunee Līva-joesta, joka virtasi aikoinaan kaupungin läpi mutta jota ei enää ole. Saksalainen ritarikunta perusti kaupungin 1263 nimellä Libau, ja sitä käytettiin vuoteen 1920 asti. Latviankielinen muoto Liepāja mainittiin ensimmäisen kerran 1649 [[Paul Einhornin]] teoksessa Historia Lettica. Joki hävis, mut nimi jäi.",
+  "linkit": [
+   "lehmusta",
+   "Libau",
+   "Paul Einhornin"
+  ],
+  "jatkot": [
+   "Mikä on Kuurinmaa?",
+   "Millainen merikylpyläkaupunki Liepāja oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:liepaja",
+  "kysymys": "Miksi kaupunkia sanotaan tuulen syntypaikaksi?",
+  "uusi": false,
+  "vastaus": "Sepä sattui: tuulesta minä tiedän yhtä ja toista. Liepāja sijaitsee avoimella [[Itämeren]] rannikolla, ja [[merituuli]] puhaltaa kaupunkiin usein voimakkaana. [[Latviassa]] kaupungin tuulisuus on tehnyt siitä tunnetun, ja sitä kutsutaan usein paikaksi, jossa tuuli syntyy. Lempinimen tarkasta alkuperästä ei ole varmaa tietoa, mutta sen taustalla pidetään rannikon tuulista ilmastoa.\n\nTuuli on minulle ammattitauti. Vastatuuleen lentäminen tuntuu joka siiven iskulla, ja myötätuuli on ainoa aito ystävä.",
+  "linkit": [
+   "Itämeren",
+   "merituuli",
+   "Latviassa"
+  ],
+  "jatkot": [
+   "Millainen Liepājan ilmasto on?",
+   "Miten tuuli vaikuttaa rannikon luontoon?"
+  ]
+ },
+ {
+  "kohde": "kohde:liepaja",
+  "kysymys": "Miksi Liepājan satama ei jäädy talvella?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: Liepājan satama on ympärivuotinen, koska se sijaitsee avoimella [[Itämeren]] rannikolla, jossa jäätä muodostuu harvoin ja vähän. [[Riianlahden]] perukoissa meri jäätyy helpommin, mutta [[Kuurinmaan]] länsirannikolla tilanne on toinen. Yhtä yksittäistä selitystä ei ole, ja ankarimpina talvina jäätä voi esiintyä tässäkin. Ylhäältä katsoen meri näyttää täällä aika sulalta.",
+  "linkit": [
+   "Itämeren",
+   "Riianlahden",
+   "Kuurinmaan"
+  ],
+  "jatkot": [
+   "Mikä on Riianlahti?",
+   "Milloin Itämeri jäätyy?"
+  ]
+ },
+ {
+  "kohde": "kohde:liepaja",
+  "kysymys": "Millainen paikka Karosta on?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Karosta on entinen sotilaskaupunki Liepājan pohjoisosassa, joka rakennettiin 1800-luvun lopulla Venäjän keisarikunnan laivastotukikohdaksi keisari [[Aleksanteri III]] aikana. [[Neuvostoliiton]] aikana alue oli suljettu sotilasalue, ja sen jälkeen osa rakennuksista on jäänyt tyhjilleen ja osa on otettu kulttuuri- ja matkailukäyttöön. Tarkat vaiheet vaihtelevat lähteittäin. Melkoinen paikka, mut ehkä parempi nähdä omin silmin.",
+  "linkit": [
+   "Aleksanteri III",
+   "Neuvostoliiton"
+  ],
+  "jatkot": [
+   "Mikä oli Venäjän keisarikunnan laivasto?",
+   "Mitä Neuvostoliiton sotilaskaupungit olivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:liepaja",
+  "kysymys": "Mikä on Kuurinmaa?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Kuurinmaa on Latvian länsiosassa sijaitseva historiallinen alue, jonka nimi tulee [[kuurien]], muinaisen baltialaisen heimon, mukaan. Latviaksi alue on Kurzeme. Keskiajalla alue oli osa Liivinmaan ritarikunnan ja Kuurinmaan piispan valtaa, 1500-luvulta vuoteen 1795 se kuului [[Kuurinmaan ja Semgallian herttuakuntaan]] ja sen jälkeen Venäjän keisarikunnan kuvernementtina vuoteen 1918. Alueen suurin kaupunki on Liepāja. Aika paljon historiaa yhteen maakuntaan.",
+  "linkit": [
+   "kuurien",
+   "Kuurinmaan ja Semgallian herttuakuntaan"
+  ],
+  "jatkot": [
+   "Keitä kuurit olivat?",
+   "Mikä oli Kuurinmaan ja Semgallian herttuakunta?"
+  ]
+ },
+ {
+  "kohde": "kohde:sabile",
+  "kysymys": "Mikä teki viinimäestä ennätyksellisen?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Sabilen viinimäki oli aikanaan maailman pohjoisin avoimen taivaan alla oleva viinitarha, ja se kirjattiin [[Guinnessin ennätystenkirjaan]]. Viininviljelyn perinteen kerrotaan ulottuvan 1500-luvulle, ja viiniä on tehty paikalla ensimmäisen kerran jo 1300-luvulla [[Liivinmaan]] aikaan. Mäki kunnostettiin kokonaan vuonna 1936 kaupunginjohtaja [[Osvalds Rezebergsin]] toimesta.\n\nPohjoisin viinitarha kuulostaa minusta rohkealta hankkeelta. Lintu tietää, että talvi tulee näillä leveyksillä aikaisin.",
+  "linkit": [
+   "Guinnessin ennätystenkirjaan",
+   "Liivinmaan",
+   "Osvalds Rezebergsin"
+  ],
+  "jatkot": [
+   "Mikä Sabilen linnavuori oli?",
+   "Miten rypäleet kestävät pohjoisen talvet?"
+  ]
+ },
+ {
+  "kohde": "kohde:sabile",
+  "kysymys": "Kuka kunnosti mäen vuonna 1936?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Mäen kunnosti kokonaan vuonna 1936 kaupunginjohtaja [[Osvalds Rezebergs]]. Sabile oli tuolloin ollut kaupunki vasta noin kaksikymmentä vuotta, sillä se sai [[kaupunkioikeudet]] 1917. Viinimäen perinteen kerrotaan ulottuvan paljon kauemmas, 1500-luvulle. Lyhyt vastaus, mut ei haittaa.",
+  "linkit": [
+   "Osvalds Rezebergs",
+   "kaupunkioikeudet"
+  ],
+  "jatkot": [
+   "Mikä Sabilen linnavuori oli?",
+   "Miten viinitarhaa hoidetaan pohjoisessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:sabile",
+  "kysymys": "Millainen joki Abava on?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Abava on Kuurinmaan joki, joka virtaa Sabilen ja [[Kandavan]] kautta [[Venta-jokeen]]. Sen laakso on syvä ja jyrkkärinteinen, ja alue on suojeltu luonnonpuistona nimellä [[Abavan muinaislaakso]]. Jokea kerrotaan suosituksi melontakohteeksi. Joet näyttävät ylhäältä kuin vaaleita lankoja.",
+  "linkit": [
+   "Kandavan",
+   "Venta-jokeen",
+   "Abavan muinaislaakso"
+  ],
+  "jatkot": [
+   "Mikä on Venta-joki?",
+   "Missä Kandava sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:sabile",
+  "kysymys": "Mikä Liivinmaan ritarikunta oli?",
+  "uusi": true,
+  "vastaus": "No niin, tästä saa pitkän vastauksen. Liivinmaan ritarikunta oli [[saksalaisen ritarikunnan]] haara, joka hallitsi suuria osia nykyisen Latvian ja Viron alueista keskiajalla. Se syntyi 1200-luvulla ja oli yksi alueen vallanpitäjistä piispojen ja kaupunkien rinnalla. Ritarikunta rakensi linnoja, myös Sabileen, ja sen valta päättyi 1500-luvulla [[Liivinmaan sodan]] seurauksena. Linnoja riitti, kyyhkyn pesäpaikoiksi asti.",
+  "linkit": [
+   "saksalaisen ritarikunnan",
+   "Liivinmaan sodan"
+  ],
+  "jatkot": [
+   "Mikä oli Liivinmaan sota?",
+   "Miten ritarikunnan linnat rakennettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:sabile",
+  "kysymys": "Millaista viiniä Latviassa yleensä tehdään?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Latviassa tehdään viiniä tavallisesti [[marjaviinejä]] ja [[hedelmäviinejä]], kuten omenasta, mustaherukasta ja karviaisesta, koska ilmasto ei sovellu rypäleenviljelyyn kuin harvoissa paikoissa. Sabile on poikkeus, sillä siellä rypäleitä viljeltiin avomaalla pohjoisen oloihin sopivilla lajikkeilla. Kotitalousviinien tekeminen on perinteinen tapa maaseudulla.\n\nViini ei ole kyyhkyn juoma, mutta mustaherukkaleivonnainen kuulostaisi hyvältä. Täällä on varmasti oma pullaversionsa, en vaan tiedä sen nimee.",
+  "linkit": [
+   "marjaviinejä",
+   "hedelmäviinejä"
+  ],
+  "jatkot": [
+   "Miten marjaviini valmistetaan?",
+   "Mitä Latviassa juodaan perinteisesti?"
+  ]
+ },
+ {
+  "kohde": "kohde:jelgava",
+  "kysymys": "Mitä nimi Mitau saattaa tarkoittaa?",
+  "uusi": false,
+  "vastaus": "No jopas. Mitaun alkuperä on epäselvä, ja sille esitetään kaksi selitystä. Nimi on voitu johtaa latvian sanoista mīt tai mainīt, jotka tarkoittavat vaihtamista tai kaupankäyntiä, jolloin se merkitsisi kauppapaikkaa. Toinen selitys on saksan ilmaus [[Mitte in der Aue]], joka viittaa paikkaan keskellä niittyä tai jokinotkoa. Nykyinen nimi Jelgava puolestaan uskotaan tulevan [[liivin kielen]] sanasta jālgab, joen varren kaupunki, ja Mitau oli virallinen nimi vuoteen 1917. Kaksi selitystä, ja kumpikin kuulostaa uskottavalta.",
+  "linkit": [
+   "Mitte in der Aue",
+   "liivin kielen"
+  ],
+  "jatkot": [
+   "Keitä liivit olivat?",
+   "Miksi Jelgavan nimi vaihtui vuonna 1917?"
+  ]
+ },
+ {
+  "kohde": "kohde:jelgava",
+  "kysymys": "Miksi kaupunki tulvii?",
+  "uusi": false,
+  "vastaus": "Just niin, vesi on täällä aina lähellä. Jelgava sijaitsee hedelmällisellä [[Semgallian]] tasangolla [[Lielupen]] oikealla rannalla vain 3,5 metriä merenpinnan yläpuolella. Alue on hyvin matala ja tasainen, joten joen vedenkorkeuden noustessa vesi leviää helposti tasangolle ja joskus kaupunkiin saakka. Tulvat ovat tunnettu piirre seudulla, ja tarkemmat syyt vaihtelevat vuodesta toiseen.\n\nKyyhkylle tulva on lähinnä näkymäkysymys. Katot pysyvät kuivina, ja vesi näyttää ylhäältä peilikuvalta.",
+  "linkit": [
+   "Semgallian",
+   "Lielupen"
+  ],
+  "jatkot": [
+   "Miten kaupungit suojautuvat tulvilta?",
+   "Mikä on Semgallia?"
+  ]
+ },
+ {
+  "kohde": "kohde:jelgava",
+  "kysymys": "Mikä Jelgavan palatsi on?",
+  "uusi": true,
+  "vastaus": "Kato, tästä saa pitkän vastauksen. Jelgavan palatsi on Kuurinmaan herttuoiden barokkipalatsi, jonka suunnitteli arkkitehti [[Rastrelli]] 1700-luvulla. Palatsi rakennettiin herttua [[Ernst Johann Bironin]] aikana, ja sen [[kryptassa]] on useita Kuurinmaan herttuoiden hautoja. Nykyisin rakennus on yliopiston käytössä. Barokkia en osaa arvostaa, mut kattolinjan huomaa.",
+  "linkit": [
+   "Rastrelli",
+   "Ernst Johann Bironin",
+   "kryptassa"
+  ],
+  "jatkot": [
+   "Millainen on barokkiarkkitehtuuri?",
+   "Mikä on Rundalen palatsi?"
+  ]
+ },
+ {
+  "kohde": "kohde:jelgava",
+  "kysymys": "Kuka oli Kuurinmaan ensimmäinen herttua?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: Kuurinmaan ja Semgallian herttuakunnan ensimmäinen herttua oli [[Gotthard Kettler]], viimeinen [[Liivinmaan ritarikunnan]] mestari. Liivinmaan sodan jälkeen 1500-luvun jälkipuoliskolla ritarikunnan alueet jaettiin, ja Kettler sai Kuurinmaan ja Semgallian hallittavakseen herttuana [[Puola-Liettuan]] kuninkaan alaisuudessa. Herttuakunta säilyi vuoteen 1795, ja sen pääkaupunkina oli Jelgava. Onpas ollu vuosia kerrottavana.",
+  "linkit": [
+   "Gotthard Kettler",
+   "Liivinmaan ritarikunnan",
+   "Puola-Liettuan"
+  ],
+  "jatkot": [
+   "Mikä oli Puola-Liettuan unioni?",
+   "Miksi herttuakunta päättyi vuonna 1795?"
+  ]
+ },
+ {
+  "kohde": "kohde:jelgava",
+  "kysymys": "Mihin Lielupe virtaa?",
+  "uusi": true,
+  "vastaus": "Mmm— tämän joen reitin minä tunnen ylhäältä. Lielupe virtaa [[Riianlahteen]]. Joki syntyy Liettuasta tulevien jokien yhtymäkohdassa lähellä [[Bauskan]] kaupunkia ja kulkee Jelgavan kautta kohti merta, ja sen suisto on lähellä [[Jūrmalan]] kylpyläkaupunkia. Jokia seuraamalla kyyhky löytää kotiin.",
+  "linkit": [
+   "Riianlahteen",
+   "Bauskan",
+   "Jūrmalan"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Jūrmala on?",
+   "Missä Bauska sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:daugavpilsin-linnoitus",
+  "kysymys": "Miksi linnoitus valmistui vasta 1878?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Linnoituksen rakentaminen alkoi 1810 keisari [[Aleksanteri I:n]] käskystä, ja sen oli määrä suojata Venäjän länsirajaa [[Napoleonin]] hyökkäykseltä. Kun ranskalaisjoukot hyökkäsivät linnoitukseen 1812, se oli vielä kesken. Töitä hidastivat hyökkäys, pitkät viivytykset, vakavat tulvat ja yleisesti hidas työtahti, minkä vuoksi linnoitus valmistui kokonaan vasta 1878.\n\nLähes seitsemänkymmentä vuotta rakentamista. Siihen verrattuna minun pisin lentoni on ollut pikkujuttu.",
+  "linkit": [
+   "Aleksanteri I:n",
+   "Napoleonin"
+  ],
+  "jatkot": [
+   "Miksi Napoleon hyökkäsi Venäjälle vuonna 1812?",
+   "Millainen on bastionilinnoitus?"
+  ]
+ },
+ {
+  "kohde": "kohde:daugavpilsin-linnoitus",
+  "kysymys": "Ketkä pysähtyivät linnoitukseen matkallaan Eurooppaan?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Linnoituksessa pysähtyi matkallaan [[Pietarista]] Eurooppaan muun muassa keisari [[Aleksanteri I]], ja myös keisari Nikolain kerrotaan käyneen paikalla. Reitti kulki Dinaburgin, nykyisen Daugavpilsin, kautta, ja linnoitus toimi monelle matkalaiselle lepopaikkana. Täydellistä luetteloa vierailijoista ei voida esittää varmuudella. Moni on kulkenut tuosta, ja minä mieluummin lennän yli.",
+  "linkit": [
+   "Pietarista",
+   "Aleksanteri I"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Pietari on?",
+   "Millaisia matkustusreittejä Euroopassa oli 1800-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:daugavpilsin-linnoitus",
+  "kysymys": "Mitä Daugavpilsin nimi tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Daugavpils muodostuu joen nimestä [[Daugavan]] ja latvian sanasta pils, joka tarkoittaa linnaa, eli nimi tarkoittaa Daugavan linnaa. Saksalaisessa muodossa kaupunki tunnettiin nimellä [[Dünaburg]] ja venäläisessä Dinaburgina, ja Venäjän keisarikunnan aikana nimenä oli 1800-luvun lopulta 1920-luvulle noin [[Dvinsk]]. Kolme nimeä yhdelle kaupungille, ja minä muistan ne kaikki.",
+  "linkit": [
+   "Daugavan",
+   "Dünaburg",
+   "Dvinsk"
+  ],
+  "jatkot": [
+   "Mikä Daugava-joki on?",
+   "Miksi kaupunkien nimet vaihtuvat?"
+  ]
+ },
+ {
+  "kohde": "kohde:daugavpilsin-linnoitus",
+  "kysymys": "Mitä linnoituksessa on nykyisin?",
+  "uusi": true,
+  "vastaus": "Ai tota. Nykyisin Daugavpilsin linnoitus on kulttuuri- ja matkailukohde Kaakkois-Latviassa [[Latgalen]] alueella. Sen entisissä sotilasrakennuksissa toimii muun muassa Mark Rothko -taidekeskus, jonka nimi viittaa kaupungissa syntyneeseen taidemaalariin, sekä galleria- ja työpajatiloja. Rakennuskokonaisuus on säilynyt poikkeuksellisen hyvin, sillä siihen ei ole tehty merkittäviä muutoksia. Linnoitus on nykyään rauhallisempi paikka kuin ennen.",
+  "linkit": [
+   "Latgalen"
+  ],
+  "jatkot": [
+   "Mikä on Latgale?",
+   "Kuka Mark Rothko oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:daugavpilsin-linnoitus",
+  "kysymys": "Mikä Daugava-joki on?",
+  "uusi": true,
+  "vastaus": "Katotaas. Daugava on Itä-Euroopan ja Baltian halki virtaava joki, joka saa alkunsa Venäjältä [[Valdain]] ylängöltä, kulkee [[Valko-Venäjän]] läpi ja laskee Latviassa [[Riianlahteen]]. Joen pituus on noin tuhat kilometriä. Venäjällä ja Valko-Venäjällä sitä kutsutaan Länsi-Dvinaksi, ja latvialaisille se on yksi maan tärkeimmistä joista, jonka varrella sijaitsevat sekä Daugavpils että [[Riika]]. Jokea seuraamalla minä löydän kotiin vaikka silmät kiinni.",
+  "linkit": [
+   "Valdain",
+   "Valko-Venäjän",
+   "Riianlahteen",
+   "Riika"
+  ],
+  "jatkot": [
+   "Mikä on Riian kaupunki?",
+   "Miksi joet ovat olleet tärkeitä kauppareitteinä?"
+  ]
+ },
+ {
+  "kohde": "kohde:engure",
+  "kysymys": "Miksi järven pinta-ala puolittui vuoden 1842 jälkeen?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Tän minä tiedän. Vuonna 1842 kaivettu [[Mērsragsin kanava]] laski järven vedenpintaa noin puolellatoista metrillä, ja se puolitti järven pinta-alan. Kun vesi aleni, jäljelle jäi nykyinen tasaisen matala järvi, jonka keskisyvyys on vain 0,4 metriä ja suurin syvyys 2,1 metriä. Kanava pitää yllä suoraa yhteyttä [[Riianlahteen]] ja tasaa sekä vedenkorkeutta että [[suolapitoisuutta]]. Ei paha kyyhkyltä.",
+  "linkit": [
+   "Mērsragsin kanava",
+   "Riianlahteen",
+   "suolapitoisuutta"
+  ],
+  "jatkot": [
+   "Miten matala rannikkojärvi muuttuu vuosisatojen kuluessa?",
+   "Mitä suolapitoisuus tarkoittaa järven eliöille?"
+  ]
+ },
+ {
+  "kohde": "kohde:engure",
+  "kysymys": "Miten järvi pysyy kirkasvetisenä?",
+  "uusi": false,
+  "vastaus": "Kato, siinä on viisas järjestelmä. Järvi pysyy kirkkaana kasvien ansiosta: laajat [[näkinpartaislevät]] sitovat itseensä [[fosforia]], joka on levien kasvua ruokkiva ravinne. Kun fosfori on sidottuna kasveihin, [[leväkukinnat]] jäävät syntymättä ja vesi säilyy kirkkaana. Siivekäs ei tähän tarvittu, ja kyl se vähän harmittaa.",
+  "linkit": [
+   "näkinpartaislevät",
+   "fosforia",
+   "leväkukinnat"
+  ],
+  "jatkot": [
+   "Miksi leväkukinnat sameuttavat järviä?",
+   "Millaisia kasveja näkinpartaislevät oikein ovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:engure",
+  "kysymys": "Kuinka vanha Engure-järvi on?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Engure syntyi noin 4 000 vuotta sitten [[Litorinameren]] jäänteenä. Sen tiedetään olevan Latvian rannikon laajin tällainen jäännevesistö. Järveä erottaa avomerestä pitkä hiekkainen [[Enguren niemi]], ja järvi sijaitsee [[Riianlahden]] tuntumassa Luoteis-Latviassa. Neljätuhatta vuotta, ja minä valitan jo yhdestä talvesta.",
+  "linkit": [
+   "Litorinameren",
+   "Enguren niemi",
+   "Riianlahden"
+  ],
+  "jatkot": [
+   "Mikä Litorinameri oli ja milloin se vallitsi?",
+   "Miten Itämeren rannikko on muuttunut jääkauden jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:engure",
+  "kysymys": "Kuinka syvä Engure-järvi on?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Järvi on poikkeuksellisen matala: sen keskisyvyys on vain 0,4 metriä ja suurin syvyys 2,1 metriä. Tämä johtuu siitä, että vuonna 1842 kaivettu [[Mērsragsin kanava]] laski vedenpintaa noin puolellatoista metrillä. Engure on silti Latvian kolmanneksi suurin [[järvi]] ja tärkeä vesilinnuille. Kyl siellä kyyhky kahlaisi.",
+  "linkit": [
+   "Mērsragsin kanava",
+   "järvi"
+  ],
+  "jatkot": [
+   "Miksi matala järvi lämpenee kesällä nopeasti?",
+   "Mitkä muut Latvian järvet ovat suuria?"
+  ]
+ },
+ {
+  "kohde": "kohde:engure",
+  "kysymys": "Kuinka monta lintulajia Enguren järvellä pesii?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Järvellä pesii yli 180 lajia, ja se on kansainvälisesti merkittävä [[vesilinnuille]]. Se on myös tärkeä levähdyspaikka [[muuttoreiteillä]], ja [[lintututkijoilla]] on järvellä kelluva tukikohta. Kirkas, matala vesi ja runsas kasvillisuus tekevät siitä houkuttelevan paikan linnuille. Siinä on sentään kollegoita kerrakseen.",
+  "linkit": [
+   "vesilinnuille",
+   "muuttoreiteillä",
+   "lintututkijoilla"
+  ],
+  "jatkot": [
+   "Miksi linnut muuttavat syksyisin etelään?",
+   "Miten lintujen muuttoa seurataan tutkimuksessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:ventas-rumba",
+  "kysymys": "Miksi putous perääntyy hitaasti ylävirtaan?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Putouksen tekee devonikautinen [[dolomiitti]], jonka alempi kerros rapautuu nopeammin kuin ylempi. Ylempi kerros jää roikkumaan, kunnes se lohkeaa jokeen, ja näin putous perääntyy hitaasti ylävirtaan. Koska virta on keskellä voimakkain, keskikohta vetäytyy reunoja nopeammin. Kiire ei oo kivellä.",
+  "linkit": [
+   "dolomiitti"
+  ],
+  "jatkot": [
+   "Mitä dolomiitti on ja miten se syntyy?",
+   "Mitkä muut vesiputoukset perääntyvät rapautumalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:ventas-rumba",
+  "kysymys": "Miten lohia pyydettiin ilmasta?",
+  "uusi": false,
+  "vastaus": "Tuota niin, tää menee vähän sumuiseksi. Perimätiedon mukaan Ventan putouksen yli hyppäävät vaelluskalat, kuten [[vimpa]], on pyydystetty verkoilla kesken hypyn, ja [[lohet]] nousevat jokea samoin. En ole varma pyynnin tarkoista tavoista enkä siitä, milloin se loppui. Tarkempaa tietoa kannattaa etsiä Kuldīgan paikallisista lähteistä. Lentävää kalaa minä en ole itse kokeillut.",
+  "linkit": [
+   "vimpa",
+   "lohet"
+  ],
+  "jatkot": [
+   "Miksi lohet ja vimmat nousevat jokia ylävirtaan?",
+   "Miten kalat pääsevät padon tai putouksen ohi?"
+  ]
+ },
+ {
+  "kohde": "kohde:ventas-rumba",
+  "kysymys": "Miksi Kuldīga syntyi juuri putouksen kohdalle?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Putous katkaisi keskiaikaisen [[Ventan]] sisävesireitin, ja kaupunki syntyi juuri tähän, reitin katkeamiskohtaan. Sisävesiliikenteessä tavarat ja kulkijat jouduttiin siirtämään putouksen ohi, mikä teki paikasta luontevan pysähdyspaikan. Minä ois lentänyt vaan yli.",
+  "linkit": [
+   "Ventan"
+  ],
+  "jatkot": [
+   "Miksi monet kaupungit syntyivät jokien koskien kohdalle?",
+   "Millä tavoin tavaroita kuljetettiin jokia pitkin keskiajalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:ventas-rumba",
+  "kysymys": "Kuka yritti räjäyttää putouksen?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Legendan mukaan Kuurinmaan herttua [[Jacob Kettler]] käski 1600-luvun puolivälissä räjäyttää putouksen, kun oikealle rannalle suunniteltu ohitusuoma oli osoittautunut liian hitaaksi työksi kovassa [[dolomiitissa]]. Ensimmäinen räjäytys vain irrotti suuria lohkareita ja siirsi reunaviivaa, ja kun paine halkoi läheisen palatsin seiniä, hanke jäi siihen. Herttua johti tuolloin [[Kuurinmaata]]. Putous voitti, ja hyvä niin.",
+  "linkit": [
+   "Jacob Kettler",
+   "dolomiitissa",
+   "Kuurinmaata"
+  ],
+  "jatkot": [
+   "Millainen valtio Kuurinmaan herttuakunta oli?",
+   "Miten kiveä räjäytettiin 1600-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:ventas-rumba",
+  "kysymys": "Kuinka leveä Ventas rumba on?",
+  "uusi": true,
+  "vastaus": "Sepä sattui: Ventas rumba on 249 metriä leveä, ja [[kevättulvien]] aikaan leveys voi nousta jopa 275 metriin. Putousta kutsutaan Euroopan leveimmäksi. Korkeutta sillä on veden korkeudesta riippuen vain 1,8–2,2 metriä, joten se on pikemminkin leveä kuin korkea. Se sijaitsee [[Venta-joessa]] Länsi-Latviassa. Leveä ja matala, ihan kuin pulla.",
+  "linkit": [
+   "kevättulvien",
+   "Venta-joessa"
+  ],
+  "jatkot": [
+   "Mistä Venta-joki saa alkunsa ja minne se laskee?",
+   "Mitkä ovat Euroopan korkeimpia vesiputouksia?"
+  ]
+ },
+ {
+  "kohde": "kohde:kolkan-niemi",
+  "kysymys": "Mikä salmi erottaa niemen Virosta?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Niemeä ympäröivä [[Irbensalmi]] on luonnollinen raja Viroon. Keskellä [[Riianlahtea]] on virolainen [[Ruhnun]] saari. Kolkan niemi on Riianlahden luoteisin piste. Rajat on helppoja, kun on siivet.",
+  "linkit": [
+   "Irbensalmi",
+   "Riianlahtea",
+   "Ruhnun"
+  ],
+  "jatkot": [
+   "Millainen merialue Riianlahti on?",
+   "Miksi Irbensalmi on tärkeä merenkululle?"
+  ]
+ },
+ {
+  "kohde": "kohde:kolkan-niemi",
+  "kysymys": "Miksi dyynit ovat säilyneet niin luonnontilaisina?",
+  "uusi": false,
+  "vastaus": "Ai tota. Todennäköisin syy on suojelu: Kolkan niemi kuuluu [[Slīteren kansallispuistoon]], ja lähellä sijaitsevat vanhat liiviläiskylät kuuluvat suojeltuun [[Liivinrannan]] alueeseen. Rantaa reunustaa metsäisten dyynien vyöhyke, jolla mänty kasvaa karulla ja vettä pidättämättömällä hiekalla, ja tuuli siirtää hiekkaa jatkuvasti. En ole varma, onko luonnontilaisuudelle muita syitä. Luonnon rauha sopii kyyhkylle, vaikka torin murut puuttuu.",
+  "linkit": [
+   "Slīteren kansallispuistoon",
+   "Liivinrannan"
+  ],
+  "jatkot": [
+   "Mitä kansallispuiston suojelu käytännössä tarkoittaa?",
+   "Miten dyynit muodostuvat ja miksi ne liikkuvat?"
+  ]
+ },
+ {
+  "kohde": "kohde:kolkan-niemi",
+  "kysymys": "Mitkä vanhat kylät ovat Kolkan niemen lähellä?",
+  "uusi": true,
+  "vastaus": "No niin, nyt mennään kylille. Niemen lähellä ovat [[Kolkan majakka]] ja Kolkan kylä, ja rantaa myöten jatkuu jono vanhoja [[liiviläiskyliä]]: Vaide, Saunags, Pitrags, Košrags ja Sīkrags. Ne kuuluvat suojeltuun [[Liivinrannan]] alueeseen. Ja kukaan ei kysynyt, onko niissä pullaa.",
+  "linkit": [
+   "Kolkan majakka",
+   "liiviläiskyliä",
+   "Liivinrannan"
+  ],
+  "jatkot": [
+   "Keitä liiviläiset ovat ja missä he asuvat?",
+   "Mikä on liivin kielen tilanne nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:kolkan-niemi",
+  "kysymys": "Mitä myrskyt tekevät niemen mäntymetsille?",
+  "uusi": true,
+  "vastaus": "Mmm— tuulesta minä tiedän. Tuuli siirtää hiekkaa jatkuvasti, ja kovissa myrskyissä dyynien [[mäntyjen]] runkoja on hautautunut yli 60 senttimetrin syvyyteen. Suuret hautautumisjaksot 1967–1969 ja tammikuussa 2005 näkyvät puiden [[vuosilustoissa]] kapeina tai kokonaan puuttuvina renkaina, kunnes kasvu on palautunut. Puut jaksaa, vaikka hiekka kasaantuu.",
+  "linkit": [
+   "mäntyjen",
+   "vuosilustoissa"
+  ],
+  "jatkot": [
+   "Miten vuosilustoista voi lukea menneitä myrskyjä?",
+   "Miten mänty selviää karulla hiekkamaalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:kolkan-niemi",
+  "kysymys": "Millä nimillä Kolkan niemi tunnetaan?",
+  "uusi": true,
+  "vastaus": "Katotaas. Latviaksi niemi on [[Kolkasrags]] ja liiviksi [[Kūolka nanā]]. Se on [[Kuurinmaan]] niemimaan kärki Itämeren rannalla Riianlahden suulla. Kolme kieltä, yksi niemi, ja minä muistin kaikki.",
+  "linkit": [
+   "Kolkasrags",
+   "Kūolka nanā",
+   "Kuurinmaan"
+  ],
+  "jatkot": [
+   "Mistä liivin kieli on peräisin?",
+   "Miksi niemillä on usein useita nimiä eri kielillä?"
+  ]
+ },
+ {
+  "kohde": "kohde:aglona",
+  "kysymys": "Kuka perusti kirkon ja luostarin?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: [[Dominikaanit]] perustivat kirkon ja luostarin Aglonaan vuonna 1700. Alkuperäinen puinen kirkko ja luostari purettiin 1760-luvulla, uuden rakentaminen alkoi 1768, ja kirkko vihittiin 1800. Nykyinen Taivaaseenottamisen basilika on Latvian tärkein katolinen kirkko, ja Aglona sijaitsee [[Latgalessa]]. Paljon vuosilukuja, mut ne meni nätisti perille.",
+  "linkit": [
+   "Dominikaanit",
+   "Latgalessa"
+  ],
+  "jatkot": [
+   "Millainen munkkikunta dominikaanit ovat?",
+   "Mikä erottaa Latgalen muusta Latviasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:aglona",
+  "kysymys": "Miksi elokuun 15. päivä on Aglonassa erityinen?",
+  "uusi": false,
+  "vastaus": "Just niin, tää on iso päivä. Elokuun 15. päivä on [[Neitsyt Marian taivaaseenottamisen]] päivä, ja silloin Aglonaan saapuu kymmeniätuhansia ihmisiä; sama koskee helluntaita. Paikan merkitys liittyy myös Aglonan Jumalanäidin [[ikoniin]], jota on kauan pidetty ihmeitätekevänä. Ikoni on 1600-luvulta, eikä sen tekijää tunneta. Kymmeniätuhansia ihmisiä, enkä minä löytäisi kaidepaikkaa.",
+  "linkit": [
+   "Neitsyt Marian taivaaseenottamisen",
+   "ikoniin"
+  ],
+  "jatkot": [
+   "Mitä taivaaseenottamisen juhla kirkossa tarkoittaa?",
+   "Mitä pyhiinvaellus on ja miksi ihmiset vaeltavat?"
+  ]
+ },
+ {
+  "kohde": "kohde:aglona",
+  "kysymys": "Kuinka vanha Aglonan ihmeitätekevä ikoni on?",
+  "uusi": true,
+  "vastaus": "Ai se. [[Aglonan Jumalanäidin ikoni]] on 1600-luvulta, joten se on yli kolmesataa vuotta vanha. Sen tekijää ei tunneta. Ikoni on siis vanhempi kuin nykyinen [[basilika]], jonka rakentaminen alkoi 1768. Sitä on kauan pidetty ihmeitätekevänä. Tuntematon tekijä, ja kyl se kiehtoo.",
+  "linkit": [
+   "Aglonan Jumalanäidin ikoni",
+   "basilika"
+  ],
+  "jatkot": [
+   "Miten ikoneita maalataan ja mitä ne esittävät?",
+   "Miten vanhojen maalausten ikää selvitetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:aglona",
+  "kysymys": "Mitkä järvet ympäröivät Aglonan kylää?",
+  "uusi": true,
+  "vastaus": "No jopas, kartta vaan eteen. Aglona seisoo kapealla kannaksella Cirišs- ja Egles-järvien välissä. Kylä on Latgalessa, neljäkymmentä kilometriä [[Daugavpilsista]] koilliseen. Lähistöllä ovat myös [[Uhrisaari]], Pirunjärvi ja [[Madelanun linnavuori]]. Kaksi järveä ja kannas, hyvä laskeutumispaikka.",
+  "linkit": [
+   "Daugavpilsista",
+   "Uhrisaari",
+   "Madelanun linnavuori"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Daugavpils on?",
+   "Mikä on linnavuori ja mihin sitä käytettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:aglona",
+  "kysymys": "Mitä basilica minor -arvo tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Vuonna 1980 kirkko täytti kaksisataa vuotta, ja paavi [[Johannes Paavali II]] antoi sille [[basilica minor]] -arvon. Basilica minor on katolisessa kirkossa kunnianimitys, jonka paavi voi myöntää erityisen tärkeäksi katsotulle kirkolle. Arvo kertoo kirkon merkityksestä, ei sen rakennustavasta. Kyl se arvo kirkolle sopii.",
+  "linkit": [
+   "Johannes Paavali II",
+   "basilica minor"
+  ],
+  "jatkot": [
+   "Mikä on ero basilica minorin ja basilica majorin välillä?",
+   "Keitä paavit ovat ja miten heidät valitaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:gluckin-raamattumuseo",
+  "kysymys": "Milloin Raamattu käännettiin ensi kerran latviaksi?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. [[Johann Ernst Glück]] sai ensimmäisen latvialaisen Raamatun käännöksen valmiiksi vuonna 1694. Käännös tehtiin kokonaisuudessaan [[Marienburgissa]], joka on nykyinen [[Alūksne]]. Samassa rakennuksessa toimii nykyään Glückin raamattumuseo. Yli kolmesataa vuotta sitten, ja minä muistin vuoden.",
+  "linkit": [
+   "Johann Ernst Glück",
+   "Marienburgissa",
+   "Alūksne"
+  ],
+  "jatkot": [
+   "Miten Raamattua on käännetty eri kielille?",
+   "Millainen kaupunki Alūksne on nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:gluckin-raamattumuseo",
+  "kysymys": "Kuka oli Glückin kasvattitytär?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Glückin kasvattitytär oli [[Marta Skowrońska]]. Hän meni naimisiin [[Pietari Suuren]] kanssa ja tunnetaan nimellä [[Katariina I]]. Vuosina 1725–1727 hän oli Venäjän keisarinna. Ei hassumpi ura kasvattitytölle.",
+  "linkit": [
+   "Marta Skowrońska",
+   "Pietari Suuren",
+   "Katariina I"
+  ],
+  "jatkot": [
+   "Millainen hallitsija Pietari Suuri oli?",
+   "Miten Katariina I nousi keisarinnaksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:gluckin-raamattumuseo",
+  "kysymys": "Missä Glück opiskeli?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Glück opiskeli [[Wittenbergissä]] ja [[Jenassa]] teologiaa, retoriikkaa, filosofiaa, geometriaa, historiaa, maantiedettä ja latinaa. Ennen yliopisto-opintoja hän kävi Altenburgin latinakoulun. Mikä lista opintoja, minä opin vain reitit.",
+  "linkit": [
+   "Wittenbergissä",
+   "Jenassa"
+  ],
+  "jatkot": [
+   "Miksi Wittenbergin yliopisto on tunnettu?",
+   "Mitä retoriikka tarkoittaa ja mihin sitä tarvitaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:gluckin-raamattumuseo",
+  "kysymys": "Milloin Glück perusti ensimmäiset latviankieliset koulut?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Glück perusti [[Liivinmaan]] ensimmäiset latviankieliset koulut vuonna 1683, yli kymmenen vuotta ennen kuin hänen Raamatunkäännöksensä valmistui 1694. Hän oli [[luterilainen teologi]], joka työskenteli nykyisen Latvian alueella. Koulut ensin, Raamattu sitten, aika järkevä järjestys.",
+  "linkit": [
+   "Liivinmaan",
+   "luterilainen teologi"
+  ],
+  "jatkot": [
+   "Mitä Liivinmaa tarkoitti historiassa?",
+   "Miten luterilaisuus levisi Itämeren alueelle?"
+  ]
+ },
+ {
+  "kohde": "kohde:gluckin-raamattumuseo",
+  "kysymys": "Missä Glück syntyi?",
+  "uusi": true,
+  "vastaus": "Mmm— Saksassa. Glück syntyi vuonna 1654 [[Wettinissä]] pappisperheeseen. Hän oli saksalainen kääntäjä ja teologi, joka työskenteli myöhemmin [[Liivinmaalla]] nykyisen Latvian alueella. Hän kuoli Moskovassa vuonna 1705. Saksasta Latviaan, aikamoinen lento.",
+  "linkit": [
+   "Wettinissä",
+   "Liivinmaalla"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Wettin on?",
+   "Miksi saksalaiset papit työskentelivät Liivinmaalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mustapaiden-talo",
+  "kysymys": "Miltä Riian Mustapäiden talo näytti loistoaikanaan?",
+  "uusi": false,
+  "vastaus": "Katotaas. Mustapäiden talo oli yksi [[Riian]] komeimmista rakennuksista. Se rakennettiin vuonna 1334 kauppiaiden kokous- ja juhlapaikaksi, ja vuosisatojen kuluessa sen julkisivuun lisättiin koristeellisia [[renessanssiyksityiskohtia]]. Rakennuksessa kokoontui 1400-luvulta lähtien [[veljeskunta]], johon kuului naimattomia ulkomaisia kauppiaita, ja juuri heidän mukaansa talo sai nimensä. Ei paha kyyhkyltä, kun ei ole edes päässyt sisään.",
+  "linkit": [
+   "Riian",
+   "renessanssiyksityiskohtia",
+   "veljeskunta"
+  ],
+  "jatkot": [
+   "Keitä mustapäät olivat ja miksi heitä kutsuttiin niin?",
+   "Mihin juhliin ja kokouksiin talo oli tarkoitettu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mustapaiden-talo",
+  "kysymys": "Miksi Riian Mustapäiden talo katosi?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Talo vaurioitui pahoin kesäkuussa 1941, kun sotatoimet osuivat Riiaan. Vuonna 1948 neuvostoviranomaiset räjäyttivät jäljelle jääneet rauniot kokonaan. Sodasta ja räjäytyksestä on nyt yli kahdeksankymmentä vuotta, ja Latvia oli tuolloin osa [[Neuvostoliittoa]], joten päätökset tehtiin Moskovan johtamassa järjestelmässä. Itsenäistymisen jälkeen talo rakennettiin vanhojen piirustusten pohjalta uudelleen, ja se vihittiin käyttöön vuonna 1999. Onpas siitä onneksi jo pitkä aika.",
+  "linkit": [
+   "Neuvostoliittoa"
+  ],
+  "jatkot": [
+   "Miten Riia kärsi toisessa maailmansodassa?",
+   "Miten talon jäljennös rakennettiin vanhojen piirustusten mukaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mustapaiden-talo",
+  "kysymys": "Keitä Riian mustapäät olivat?",
+  "uusi": true,
+  "vastaus": "Ai se. Mustapäät olivat kauppiaiden veljeskunta, johon kuului naimattomia ulkomaisia kauppiaita. Veljeskunta kokoontui [[Riian]] Mustapäiden talossa 1400-luvulta lähtien, ja talo toimi kauppiaiden kokous- ja juhlapaikkana. Nimen alkuperästä on useita selityksiä, enkä ole varma, mikä niistä on oikea. Ja tän kaiken minä muistin ilman muistiinpanoja.",
+  "linkit": [
+   "Riian"
+  ],
+  "jatkot": [
+   "Miksi veljeskunta otti jäsenikseen vain naimattomia kauppiaita?",
+   "Millaisia veljeskuntia keskiajan kauppakaupungeissa oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mustapaiden-talo",
+  "kysymys": "Millainen kauppakaupunki Riia oli keskiajalla?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Riia oli keskiajalla merkittävä satama- ja kauppakaupunki Itämeren rannalla, ja se kuului [[Hansaliittoon]]. Kauppiaat kuljettivat kaupunkiin ja sieltä pois muun muassa viljaa, vahaa ja turkiksia. Tarkkoja määriä tai vuosilukuja en ole varma muistavani oikein, joten jätän ne pois. Kaupunki sijaitsee [[Väinäjoen]] suulla, ja se helpotti kauppaa sisämaahan. Ylhäältä katsottuna vesi on aina ollut Riian kulta.",
+  "linkit": [
+   "Hansaliittoon",
+   "Väinäjoen"
+  ],
+  "jatkot": [
+   "Mikä Hansaliitto oli ja keitä siihen kuului?",
+   "Mitä Riian vanhakaupungista on säilynyt nykypäivään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mustapaiden-talo",
+  "kysymys": "Onko Riian vanhakaupunki maailmanperintökohde?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Kyllä on: Riian historiallinen keskusta on [[Unescon]] maailmanperintökohde. Vanhakaupunki tunnetaan keskiaikaisesta katuverkostaan ja kauppiastaloistaan, ja Mustapäiden talo kuuluu sen tunnetuimpiin nähtävyyksiin. Tarkkaa vuotta, jolloin kohde otettiin listalle, en ole varma, joten jätän sen mainitsematta. Kaupungin keskustassa on lisäksi runsaasti jugendtaloja, mutta niiden määrästä en anna lukua. Hyvin meni, vaikka kukaan ei kysynyt pullasta.",
+  "linkit": [
+   "Unescon"
+  ],
+  "jatkot": [
+   "Mitä muita maailmanperintökohteita Latviassa on?",
+   "Mikä on Unescon maailmanperintölista ja miten kohde pääsee sille?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ventspils",
+  "kysymys": "Minne Kuurinmaan herttuan laivasto Ventspilsistä aikoinaan lähti?",
+  "uusi": false,
+  "vastaus": "Ai tota. Kuurinmaan herttuakunnan aikana [[Ventspilsissä]] rakennettiin 44 sotalaivaa ja 79 kauppalaivaa, mutta laivaston tarkoista reiteistä minulla ei ole varmaa tietoa. Tiedän, että herttuakunta kävi kauppaa Itämerellä ja Länsi-Euroopan satamien kanssa. Herttua Jaakobin ajoilta tunnetaan myös siirtomaayritykset Länsi-Afrikassa ja Karibialla, mutta en ole varma, mitkä alukset niille matkoille lähtivät juuri Ventspilsistä. Jäätymätön satama teki liikenteestä mahdollista ympäri vuoden. Tämä oli kyllä kunnon laivastokysymys.",
+  "linkit": [
+   "Ventspilsissä"
+  ],
+  "jatkot": [
+   "Millainen valtio Kuurinmaan herttuakunta oli?",
+   "Miksi Ventspilsin satama pysyy sulana talvella?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ventspils",
+  "kysymys": "Miksi laivanrakennus ja kauppa elpyivät Ventspilsissä vasta noin vuonna 1850?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Kaupunki siirtyi vuonna 1795 Puolan kolmannen jaon jälkeen Venäjän keisarikunnalle, ja laivanrakennus ja kauppa nousivat uudelleen tärkeiksi vasta noin vuonna 1850. En ole varma tarkasta syystä, koska sitä ei tunneta minulle riittävän hyvin. Yleisesti 1800-luvun puolivälissä Itämeren satamien kauppa kasvoi höyrylaivojen ja kehittyvän liikenteen myötä, ja [[Venäjän]] sisämaan tuotteita tarvittiin ulkomaille. Kuurinmaan herttuakunnan päättyminen muutti kuitenkin alueen asemaa. Onpas ollu pitkä aikajana.",
+  "linkit": [
+   "Venäjän"
+  ],
+  "jatkot": [
+   "Miten Puolan jaot muuttivat Itämeren alueen rajoja?",
+   "Mitä Ventspilsin satama kuljettaa nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ventspils",
+  "kysymys": "Mikä Hansaliitto oli ja miten se toimi?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: Hansaliitto oli keskiajalla muodostunut pohjoisen Euroopan kauppakaupunkien ja kauppiaiden verkosto, jonka toiminta keskittyi Itämerelle ja Pohjanmerelle. Se suojeli jäsentensä kauppaa ja sovitti yhteisiä sääntöjä, ja siihen kuului muun muassa [[Lyypekki]]. Myös [[Ventspils]] oli tärkeä hansakaupunki, ja Riia kuului samaan verkostoon. Liittoa ei johtanut yksi hallitsija, vaan jäsenet sopivat asioista yhdessä. Liitto kutistui hiljalleen myöhempinä vuosisatoina, enkä kerro tarkkoja vuosia. Kyl se oli vaikuttava järjestely.",
+  "linkit": [
+   "Lyypekki",
+   "Ventspils"
+  ],
+  "jatkot": [
+   "Mitä tavaroita hansakaupunkien välillä kuljetettiin?",
+   "Mitkä muut Latvian kaupungit kuuluivat Hansaliittoon?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ventspils",
+  "kysymys": "Mitä jäätymätön satama tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Ai se. Jäätymätön satama tarkoittaa satamaa, jonka vesi ei yleensä jäädy talvella niin, että laivaliikenne pysähtyisi. Siksi alukset voivat käyttää sitä ympäri vuoden, mikä on pohjoisessa suuri etu. [[Ventspilsin]] satama kuuluu tähän ryhmään, ja se sijaitsee Itämeren rannalla Venta-joen suulla. En ole varma tarkasta syystä, miksi jää ei täällä pysäytä liikennettä, mutta avoin meri ja virtaukset vaikuttavat yleensä asiaan.\n\nSiivekkäälle jäätyvä satama on lähinnä suuri liukumäki. Ja sulat laiturit ovat kyllä parempia istuskella.",
+  "linkit": [
+   "Ventspilsin"
+  ],
+  "jatkot": [
+   "Miten jäänmurtajat pitävät talvisatamia auki?",
+   "Miksi Itämeri jäätyy talvella eri tavalla kuin valtameret?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ventspils",
+  "kysymys": "Millainen valtio Kuurinmaan herttuakunta oli?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Kuurinmaan herttuakunta oli pieni valtio nykyisen Latvian alueella, ja se oli Puola-Liettuan yhteisvaltion alainen. Herttuakunta oli olemassa 1500-luvun puolivälistä 1700-luvun lopulle, ja sen loppu tuli [[Puolan kolmannen jaon]] myötä vuonna 1795, jolloin alue siirtyi Venäjälle. Herttuakunnan aikana Ventspilsissä rakennettiin sotalaivoja ja kauppalaivoja, ja sen kauppa ulottui ulkomaille. Tarkkoja hallintoasioita en ole varma muistavani oikein. Pienikin valtio ehti siis näyttää kyynärpäänsä.",
+  "linkit": [
+   "Puolan kolmannen jaon"
+  ],
+  "jatkot": [
+   "Mitä Puolan jaot tarkoittivat Euroopan kartalle?",
+   "Miksi pieni herttuakunta pystyi rakentamaan laivaston?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-jurmala",
+  "kysymys": "Miksi rautatie sai Jūrmalan kasvamaan kylpyläkaupungiksi?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Lomanviettäjät alkoivat tulla rannalle jo 1700-luvun lopulla ja 1800-luvun alussa, aluksi varakkaat maanomistajat ja sitten venäläiset upseerit. Riian ja Tukumsin välinen [[rautatie]] valmistui vuonna 1877, ja se kasvatti kävijämääriä paljon, koska matka [[Riiasta]] rannalle muuttui helpommaksi ja nopeammaksi. Rautatie toi rannalle yhä uusia lomailijoita, ja tästä syntyi kylpyläkaupunki, jossa on yli 4000 puutaloa. Ajattelin, että tuo oli ihan hyvä selitys.",
+  "linkit": [
+   "rautatie",
+   "Riiasta"
+  ],
+  "jatkot": [
+   "Millaisia 1800-luvun kylpylät olivat ja mitä niissä tehtiin?",
+   "Millaisia puutaloja Jūrmalassa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-jurmala",
+  "kysymys": "Mitä meripihka on, ja miksi sitä löytyy Itämeren rannoilta?",
+  "uusi": false,
+  "vastaus": "Mmm— Meripihka on fossiilista puun pihkaa: muinaisten havupuumetsien pihka on kovettunut ja säilynyt kymmeniä miljoonia vuosia. Lähteiden mukaan [[Itämeren]] alueen meripihka on peräisin eoseenin ajan metsistä, mutta tarkkaa ikää en ole varma. Aallot ja virrat huuhtovat paloja rannalle erityisesti myrskyjen jälkeen, ja siksi [[Jūrmalan]] rannalta voi keväisin ja syksyisin löytää niitä. Meripihkaa on käytetty koruihin jo kauan sitten. Hyvin muistin, vaikka pulla jäi taas kysymättä.",
+  "linkit": [
+   "Itämeren",
+   "Jūrmalan"
+  ],
+  "jatkot": [
+   "Miten oikean meripihkan erottaa jäljitelmästä?",
+   "Mitä meripihkaa on käytetty koruina ja kauppatavarana?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-jurmala",
+  "kysymys": "Mikä Riianlahti on?",
+  "uusi": true,
+  "vastaus": "Hei, tän minä osaan. Riianlahti on Itämeren lahti, joka ulottuu Latvian ja Viron rannikkojen väliin. Se on suhteellisen matala, ja sen rannalla sijaitsevat muun muassa [[Riian]] kaupunki sekä [[Jūrmalan]] pitkä hiekkaranta. Lahden rannat ovat pääosin matalia ja hiekkaisia, joten loma-alueita on syntynyt etenkin Latvian puolelle. Lahden tarkkaa pinta-alaa en ole varma, joten en kerro lukua. Siivin katsottuna lahti on sievä kuin kuppi.",
+  "linkit": [
+   "Riian",
+   "Jūrmalan"
+  ],
+  "jatkot": [
+   "Mitä kaikkea Itämeressä elää?",
+   "Miksi Itämeri on murtovettä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-jurmala",
+  "kysymys": "Millaisia ovat Jūrmalan vanhat puutalot?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Jūrmalan tunnusomaisia piirteitä ovat 1800- ja 1900-luvuilta peräisin olevat [[puutalot]], joita on yli 4000. Ne ovat enimmäkseen lomahuviloita, jotka rakennettiin kylpylävieraille rannan lähelle mäntymetsän sekaan. Tyylit vaihtelevat, ja monissa on koristeellisia verannan ja kuistin yksityiskohtia, mutta tarkkoja arkkitehtuurityylejä en ole varma luetella oikein. Monet talot on säilytetty kaupungin ilmeen osana.\n\nMinä katselisin niitä mieluiten ikkunalaudalta, jolla on pullavati. Vanhat puutalot tuoksuvat ylhäältä katsottuna aina vähän hartsilta ja kesältä.",
+  "linkit": [
+   "puutalot"
+  ],
+  "jatkot": [
+   "Miksi puutaloja on säilynyt Jūrmalassa näin paljon?",
+   "Miten vanhoja puutaloja korjataan ja suojellaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-jurmala",
+  "kysymys": "Mitä nimi Jūrmala tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Nyt muistan:  nimi on peräisin latvian sanoista jūra, joka tarkoittaa merta, ja mala, joka tarkoittaa reunaa. Nimi tarkoittaa siis suunnilleen merenrantaa. Kaupunki koostuu ketjusta pieniä lomakohteita [[Riianlahden]] ja Lielupe-joen välisellä kannaksella, ja sen valkohiekkainen ranta on 33 kilometriä pitkä. Se sijaitsee noin 25 kilometrin päässä [[Riiasta]]. Täyteen nimi sopii hyvin, eikä siihen tarvita latinaa.",
+  "linkit": [
+   "Riianlahden",
+   "Riiasta"
+  ],
+  "jatkot": [
+   "Miten latvian kieli eroaa muista kielistä?",
+   "Miten Lielupe-joki on muokannut Jūrmalan maisemaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kemeri",
+  "kysymys": "Miksi Ķemerin lähdevedessä on rikkiä, ja miksi sitä pidettiin parantavana?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Ķemerin alueen luonnon [[rikkilähteet]] ovat syntyneet maaperän kerrostumista, mutta tarkkaa syntytapaa en ole varma selittämään oikein. Yleisesti rikkipitoinen vesi haisee mädälle munalle, koska siinä on rikkivetyä. Veden ja suomudan uskottiin parantavan, ja niitä on käytetty vuosisatojen ajan. Tämä johti 1800-luvulla useiden lomakohteiden, kylpylöiden ja parantoloiden syntyyn alueella, ja [[Ķemerin kansallispuisto]] suojelee nykyisin lähteitä ja mutia. Tämän pitkän vastauksen jälkeen sain varmasti ansaitun tauon.",
+  "linkit": [
+   "rikkilähteet",
+   "Ķemerin kansallispuisto"
+  ],
+  "jatkot": [
+   "Miten muta- ja kylpylähoidot ovat muuttuneet 1800-luvulta?",
+   "Millaiset olosuhteet Ķemerin suolla on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kemeri",
+  "kysymys": "Mitä kasveja kohosuolla voi kasvaa, vaikka ravinteita on vähän?",
+  "uusi": false,
+  "vastaus": "Mmm— Kohosuo on ravinneköyhä ympäristö, jossa kasvaa lajeja, jotka tulevat toimeen vähällä. Tyypillisiä ovat [[rahkasammalet]], jotka muodostavat suon pintakerroksen, sekä karpalo, hilla ja suopursu. Kihokki kerää ravintoa myös pienistä hyönteisistä. Ķemerin suolla kasvaa syötäviä marjoja, kuten karpaloita ja hillaa. Lajien tarkkaa esiintymistä Ķemerissä en ole varma, mutta kohosuon ravinneköyhyys on ominaista kaikille tällaisille soille. Mitään suosta en ole koskaan syönyt, enkä aio.",
+  "linkit": [
+   "rahkasammalet"
+  ],
+  "jatkot": [
+   "Miten kasvit selviävät suolla, jossa ravinteita on vähän?",
+   "Mitä kihokit ja muut lihansyöjäkasvit syövät?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kemeri",
+  "kysymys": "Miten turve syntyy suossa?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Turve syntyy, kun suon kuolleet kasvit eivät lahoa kokonaan, koska märässä ympäristössä happea on vähän. Kerros kasvaa vähitellen, ja Ķemerin suolla se tapahtuu noin millimetrin vuodessa. Metrin paksuinen kerros on siis noin tuhat vuotta vanha. [[Rahkasammal]] on kohosuon tärkeä turvetta muodostava kasvi, ja turve on perinteisesti ollut polttoainetta ja kasvualustaa. Tämä käy lyhyestä kasvunopeudesta hyvin ilmi.",
+  "linkit": [
+   "Rahkasammal"
+  ],
+  "jatkot": [
+   "Mihin turvetta käytetään nykyään?",
+   "Miten suo sitoo hiiltä ilmakehästä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kemeri",
+  "kysymys": "Mikä Litorinameri oli?",
+  "uusi": true,
+  "vastaus": "Just niin, tuo kuulostaa tutulta. Litorinameri oli Itämeren kehitysvaihe jääkauden jälkeen, jolloin meri oli nykyistä suolaisempi ja ulottui laajemmalle alueelle kuin nykyinen [[Itämeri]]. Ķemerin alueen järvet ovat sen entisiä laguuneja, joten ne muodostuivat meren vetäytyessä. Ajoituksesta tiedän vain, että kyse on tuhansien vuosien takaisista ajoista; tarkkoja lukuja en ole varma. Meren muodot ovat siis muuttuneet moneen kertaan.",
+  "linkit": [
+   "Itämeri"
+  ],
+  "jatkot": [
+   "Miksi Itämeren vedenpinta on vaihdellut jääkauden jälkeen?",
+   "Mistä Itämeri sai nykyisen muotonsa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kemeri",
+  "kysymys": "Millaisia pitkospolut ovat ja miksi niitä tarvitaan?",
+  "uusi": true,
+  "vastaus": "No jopas. Pitkospolut ovat suolle rakennettuja lankkupolkuja, joiden ansiosta kulkija pääsee suon yli kastumatta ja suota rikkomatta. Ķemerissä pitkospolkuja on kaksi, ja pidempi niistä on 3,4 kilometriä. Polku suojaa herkkää turvekasvustoa, sillä jokainen askel painaa pehmeää rahkasammalta. Suota tulee kunnioittaa, koska sen kasvi- ja turvekerros uusiutuu hitaasti. Siivin voisin ylittää suon vaikka ilman polkua.\n\nMinä pidän pitkospoluista, koska ne ovat kuin laiturit märällä maalla. Ja jos lankun päällä kävelee, ei tarvitse kantaa omaa sateenvarjoa.",
+  "linkit": [],
+  "jatkot": [
+   "Miten suolla pitää käyttäytyä kulkiessaan pitkospolkua?",
+   "Mitä eläimiä suolla elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-jaunpils",
+  "kysymys": "Mistä tiedetään, milloin keskiaikainen Jaunpilsin linna on oikeasti rakennettu?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Linna mainitaan kirjallisissa lähteissä ensimmäisen kerran vuonna 1411, joten se on rakennettu viimeistään silloin. Sen arvellaan rakennetun 1300-luvun jälkipuoliskolla tai aivan 1400-luvun alussa. Usein mainittu vuosi 1301 ei perustu asiakirjoihin, joten sitä ei voi pitää varmana. [[Jaunpilsin linna]] on [[Liivinmaan ritarikunnan]] rakennuttama, ja ajoitus perustuu pitkälti kirjallisiin mainintoihin ja arvioon rakennuksesta. Hyvin meni, eikä vuosilukua tarvinnut arvata.",
+  "linkit": [
+   "Jaunpilsin linna",
+   "Liivinmaan ritarikunnan"
+  ],
+  "jatkot": [
+   "Miten historiantutkijat ajoittavat keskiaikaisia rakennuksia?",
+   "Kuka Liivinmaan ritarikunta oli ja mitä se hallitsi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-jaunpils",
+  "kysymys": "Miksi Jaunpilsin linnaa ympäröivät ennen joka puolelta vesiesteet?",
+  "uusi": false,
+  "vastaus": "Ai tota. Tästä en ole varma Jaunpilsin kohdalla, joten en väitä tarkkoja yksityiskohtia. Yleisesti keskiaikaisia linnoja ympäröivät vesiesteet, kuten vallihauta tai lampi, koska ne vaikeuttivat hyökkääjien pääsyä muurien juureen ja tekivät piirityksestä hankalaa. [[Jaunpilsin linna]] on kenttäkivistä ja yläosistaan tiilestä muurattu, ja siinä on massiivinen pyöreä torni. Vesiesteet ovat voineet olla osa tätä puolustusta. Sellaista hyvää selitystä en kuitenkaan osaa antaa varmana.",
+  "linkit": [
+   "Jaunpilsin linna"
+  ],
+  "jatkot": [
+   "Miten keskiaikaisia linnoja puolustettiin ja vallattiin?",
+   "Miten vallihauta rakennettiin ja täytettiin vedellä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-jaunpils",
+  "kysymys": "Mikä oli Liivinmaan ritarikunta?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Liivinmaan ritarikunta oli keskiaikainen sotilaallinen ja uskonnollinen ritarikunta, joka hallitsi suuria alueita nykyisen Latvian ja Viron seudulla. Se oli yhteydessä [[Saksalaiseen ritarikuntaan]], ja se rakennutti alueelle useita linnoja, joihin kuuluu myös [[Jaunpilsin linna]]. Ritarikunnan tarkat vaiheet ja päättymisen vuoden jätän mainitsematta, koska en ole varma. Linnoissa asui komtuureja, jotka johtivat alueyksiköitä. Täytyy sanoa, että hyvin kyyhky luennoi.",
+  "linkit": [
+   "Saksalaiseen ritarikuntaan",
+   "Jaunpilsin linna"
+  ],
+  "jatkot": [
+   "Mitä komtuuri keskiaikaisessa ritarikunnassa teki?",
+   "Mikä oli Saksalainen ritarikunta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-jaunpils",
+  "kysymys": "Mikä on komtuuri?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Komtuuri oli ritarikunnan alueyksikön johtaja, jonka tehtäviin kuuluivat alueen hallinto ja puolustus. Hän asui yleensä linnassa, joka toimi hallinnon keskuksena. Jaunpilsin linna siirtyi vuonna 1576 Dobelen viimeiselle ritarikunnan komtuurille Matthias von der Reckelle, ja hänen sukunsa omisti sen 1900-luvun alkuun asti. Sana tulee [[Liivinmaan ritarikunnan]] aikaisesta hallintojärjestelmästä, mutta tarkkaa arvojärjestystä en ole varma. Titteleitä riitti, ja niiden muistaminen vei oman aikansa.",
+  "linkit": [
+   "Liivinmaan ritarikunnan"
+  ],
+  "jatkot": [
+   "Millaista elämää keskiaikaisessa linnassa vietettiin?",
+   "Miten ritarikunnat saivat hallintaansa maata?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-jaunpils",
+  "kysymys": "Missä Semgallia sijaitsee?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Semgallia on historiallinen alue nykyisen [[Latvian]] eteläosassa, ja siellä sijaitsee myös Jaunpilsin linna. Alue on saanut nimensä semgallilaisilta, joka oli muinainen itäbaltialainen heimo. Semgallia on tasaista viljelysmaata, mutta tarkkoja rajoja en ole varma selittämään oikein. Alueen historiaan kuuluvat sekä heimoyhteisöt että myöhemmät herttuakunnan ajat.\n\nMinusta Semgallia kuulostaa komealta nimeltä, vähän niin kuin sukuni olisi sieltä lähtöisin. Se ei ole, mutta kaunis nimi on silti kunnia.",
+  "linkit": [
+   "Latvian"
+  ],
+  "jatkot": [
+   "Keitä semgallilaiset olivat ja mitä heille tapahtui?",
+   "Mitä muita historiallisia alueita Latviassa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-slitere",
+  "kysymys": "Miksi Slīteren yli lentää keväisin ja syksyisin kymmeniä tuhansia lintuja tunnissa?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Slīteren yli kulkee [[Itämeren]] lintujen muuttoreitti, ja [[Kuurinmaan]] länsirannikko ohjaa kulkua. Muuttolinnut seuraavat usein rantaviivaa eivätkä mielellään ylitä avointa merta pidempää matkaa kuin on pakko, joten ne kerääntyvät niemen tuntumassa kapealle kaistalle, jossa [[Irben salmi]] päättyy. Keväällä linnut palaavat pesimäalueilleen ja syksyllä lähtevät talvehtimaan, ja juuri silloin liike on vilkkainta. Siksi yhden tunnin aikana on havaittu jopa 60 000 lintua. Kyl minä sentään yhden suunnan osaan.",
+  "linkit": [
+   "Itämeren",
+   "Kuurinmaan",
+   "Irben salmi"
+  ],
+  "jatkot": [
+   "Mitkä linnut muuttavat Itämeren yli?",
+   "Miten muuttolintuja lasketaan ja tarkkaillaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-slitere",
+  "kysymys": "Mikä oli Baltian jääjärvi, ja mitä sen rannalle jäi?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Baltian jääjärvi oli viimeisen jääkauden lopulla syntynyt sulamisvesien järvi, joka täytti Itämeren altaan ennen kuin yhteys valtamereen avautui. Mannerjäätikön vetäytyessä vesi kertyi jään ja maan väliin, ja järven ranta kulki muun muassa nykyisen Latvian alueella. Tuhansia vuosia sitten muodostunut muinainen ranta on säilynyt maastossa: Slīteren [[Zilie Kalni]] eli Siniset kukkulat ovat tämän rannan jäännös, jota nykyään peittävät lehtimetsät. Tarkat ajat vaihtelevat lähteiden mukaan, joten jätän vuosiluvut pois. Ja tämän kaiken minä muistin ilman karttaa.",
+  "linkit": [
+   "Zilie Kalni"
+  ],
+  "jatkot": [
+   "Miten Itämeri sai nykyisen muotonsa jääkauden jälkeen?",
+   "Mitä muita muinaisia rantoja Itämeren ympärillä näkyy?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-slitere",
+  "kysymys": "Miksi harmaahylkeet synnyttävät poikasensa Slīteren rannikolla?",
+  "uusi": true,
+  "vastaus": "Kato, hylkeitä. Harmaahylkeet poikivat Itämerellä yleensä talven lopulla jäällä tai, jos jäätä ei ole, rauhallisilla rannoilla ja luodoilla. Slīteren rannikko on suojeltua aluetta, jossa ihmisten liikkuminen on rajallista, ja se tarjoaa poikasille tarvittavan rauhan. Tällä rannikolla sijaitsevat harmaahylkeiden poikashoitoloista eteläisimmät koko maailmassa, ja [[Itämeren]] harmaahylkeet ovat sopeutuneet elämään kylmässä, osin jäätyvässä merialueessa. Poikaset syntyvät paksussa, vaaleassa karvassa ja ovat aluksi emonsa maidon varassa. Itse viihdyn kuivalla maalla, mutta kunnioitan niitä.",
+  "linkit": [
+   "Itämeren"
+  ],
+  "jatkot": [
+   "Kuinka suuri Itämeren harmaahyljekanta nykyään on?",
+   "Miksi Itämeren hylkeet olivat vaarassa kuolla sukupuuttoon?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-slitere",
+  "kysymys": "Mistä meripihka rannalle ilmestyy myrskyjen jälkeen?",
+  "uusi": true,
+  "vastaus": "No niin, tost minä osaan kertoo. Meripihka on fossiilistunutta puun pihkaa, jota erittivät muinaiset havumetsät kymmeniä miljoonia vuosia sitten alueella, joka sittemmin jäi [[Itämeren]] alle. Palaset ovat säilyneet merenpohjan sedimenteissä. Meripihka on kevyttä ja kelluu suolaisessa vedessä, joten voimakkaat myrskyt nostavat sitä pohjasta ja aallot tuovat sitä rantaan, usein rantatörmän ja rantaviivan lähelle jääneiden levämattojen joukkoon. [[Kuurinmaan]] rannikolla meripihkaa on löydetty ja kerätty vuosisatojen ajan, ja se on ollut arvostettu kauppatavara pitkään. Jos joku löytää kimpaleen, niin onnittelut, mutta pulla olisi parempi löytö.",
+  "linkit": [
+   "Itämeren",
+   "Kuurinmaan"
+  ],
+  "jatkot": [
+   "Miten aito meripihka erotetaan jäljitelmästä?",
+   "Mitä on Meripihkatie ja milloin sitä käytettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-slitere",
+  "kysymys": "Mitä Irben salmi yhdistää toisiinsa?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Irben salmi yhdistää [[Riianlahden]] Itämeren varsinaiseen osaan. Se sijaitsee Kuurinmaan niemimaan pohjoiskärjen ja [[Saarenmaan]] Sõrven niemimaan välissä, ja sen kautta kulkee suuri osa Riianlahden veden vaihdosta. Salmen yli kulkee laivaliikennettä ja se on lintujen muuttoreitin tärkeä kohta, sillä linnut seuraavat usein rannikon muotoja. Kapea kohta kokoaa muuttolinnut tiiviiksi virraksi, joten salmen läheisyys selittää osan Slīteren linnuston runsaudesta. Tarkkoja mittoja en ole varma, joten jätän ne pois. Yläilmoista salmi näyttää kauniilta, ja sen voi todeta kaikessa rauhassa.",
+  "linkit": [
+   "Riianlahden",
+   "Saarenmaan"
+  ],
+  "jatkot": [
+   "Miksi Riianlahden vesi on vähäsuolaisempaa kuin avomeren?",
+   "Mitä saaria Riianlahdella on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dundaga",
+  "kysymys": "Miksi Dundagan linnan ympärillä on vettä kolmella sivulla?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Vesi oli keskiajalla tehokas puolustuskeino: lampi ja kostea maa vaikeuttivat piirittäjien pääsyä muurien juurelle sekä rynnäkkövälineiden, kuten tikkaiden ja piiritystornien, käyttöä. [[Riian arkkihiippakunta]] rakennutti linnan 1200-luvun lopulla, ja rakentajat hyödynsivät paikan luonnollista ympäristöä, jolloin Dundagan lammikko suojasi kolmea sivua. Tämä vähensi tarvetta rakentaa raskaita ja kalliita puolustusrakenteita kaikille sivuille. Veden äärellä sijainti oli tavallista myös siksi, että vesi oli käytännössä aina saatavilla. Lammikko on yhä paikallaan, vaikka linna ei enää ole sotilaskäytössä. Hyvä paikka, jos lentäjältä kysytään.",
+  "linkit": [
+   "Riian arkkihiippakunta"
+  ],
+  "jatkot": [
+   "Miten keskiaikaisia linnoja piirittämällä valloitettiin?",
+   "Mikä oli Riian arkkihiippakunta ja kuinka kauan se kesti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dundaga",
+  "kysymys": "Miksi yhden aatelissuvun kartano kasvoi Kuurinmaan suurimmaksi yksityiseksi maatilaksi?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. En ole varma, miten Dundagan maat täsmälleen kertyivät suvulle, joten sanon vain sen, minkä tiedän. [[Osten-Sacken]]-suku oli [[baltiansaksalainen]] aatelissuku, ja Dundagan linna oli sen kartanoalueen keskus 1500-luvulta vuoteen 1918. Alueella baltiansaksalainen aatelisto omisti suuria maaomaisuuksia, joita talonpoikaisväestö viljeli, ja kartanolla oli 1800-luvulla viisitoista sivukartanoa, jotka kuuluivat sen alaisuuteen. Suuret maa-alueet ja niiden tuotto pitivät kartanon asemansa vahvana vuosisatojen ajan. Tarkemmasta syntyhistoriasta kannattaa kysyä paikalliselta historioitsijalta.",
+  "linkit": [
+   "Osten-Sacken",
+   "baltiansaksalainen"
+  ],
+  "jatkot": [
+   "Keitä baltiansaksalaiset olivat ja mistä he tulivat?",
+   "Mitä kartanon sivukartanot tekivät?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dundaga",
+  "kysymys": "Miksi linnan sisäpihalla oli kaivo?",
+  "uusi": true,
+  "vastaus": "Sepä sattui: kaivo on linnoilla yhtä tärkeä kuin muuri. Linnan sisäpihan kaivo takasi asukkaille juomaveden myös [[piirityksen]] aikana, jolloin ulkopuolelta ei päässyt hakemaan vettä lähteestä tai joesta. Ilman omaa vedenhankintaa puolustajat olisivat joutuneet antautumaan jo muutamassa päivässä, sillä ihminen tarvitsee vettä ruokaa nopeammin. Dundagan linnassa kaivo on säilynyt sisäpihalla, ja sen ympäristössä linnaa ympäröivä Dundagan lammikko on tuonut lisäksi suojaa. Kaivo oli myös arkinen välttämättömyys rauhan aikana, kun linnassa asuivat henkilökunta ja hevoset. Vesi on lentäjän ystävä.",
+  "linkit": [
+   "piirityksen"
+  ],
+  "jatkot": [
+   "Miten keskiaikaisen linnan vesihuolto muuten järjestettiin?",
+   "Miten kaivon syvyys ja vesi tutkittiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dundaga",
+  "kysymys": "Keitä baltiansaksalaiset olivat?",
+  "uusi": true,
+  "vastaus": "Ai se. Baltiansaksalaiset olivat saksankielinen väestöryhmä nykyisen Latvian ja Viron alueilla. Heidän juurensa ulottuvat 1200-luvun ristiretkiin ja [[Liivinmaan]] saksalaisten ritarikuntien aikaan, jolloin saksalaisia kauppiaita, papistoa ja aatelisia asettui alueelle. Vuosisatojen ajan he muodostivat monissa kaupungeissa kauppiaiden ja käsityöläisten sekä maaseudulla kartanonomistajien eliitin. Ensimmäisen maailmansodan jälkeen Latvian ja Viron itsenäistyessä maanomistus uudistettiin ja suuret kartanot siirtyivät pääosin valtiolle. Suuri osa baltiansaksalaisista muutti Saksaan 1930-luvun lopulla ja 1940-luvun alussa. Siinä on kokonainen kansanosa yhdessä kappaleessa.",
+  "linkit": [
+   "Liivinmaan"
+  ],
+  "jatkot": [
+   "Mitä maareformi tarkoitti Latvian itsenäistyessä?",
+   "Millainen oli elämä baltiansaksalaisessa kartanossa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dundaga",
+  "kysymys": "Mitä eroa on linnalla ja kartanolla?",
+  "uusi": true,
+  "vastaus": "Mmm— hyvä kysymys tuo. Linna on ennen kaikkea puolustettava rakennus, jonka tehtävä oli suojella ja hallita aluetta: paksut muurit, vallihauta tai muu vesieste ja torni kuuluivat siihen. Kartano taas on maatalouden ja asumisen keskus, jonka omistaja on aatelinen tai muu suurmaanomistaja ja jonka ympärillä on peltoja, metsiä ja talousrakennuksia. Dundagassa linna rakennettiin 1200-luvun lopulla [[Riian arkkihiippakunnan]] käyttöön, ja 1600-luvulla siitä tehtiin kartanon herrasrakennus. Rakennus säilyi, mutta sen tehtävä muuttui sotilaallisesta hallinnollis-taloudelliseksi. Sama kivi, uusi tehtävä, kuten kyyhkyllä.",
+  "linkit": [
+   "Riian arkkihiippakunnan"
+  ],
+  "jatkot": [
+   "Miten linnat muuttuivat kartanoiksi Euroopassa?",
+   "Millaisia kartanoita Latviassa on säilynyt?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-talsi",
+  "kysymys": "Miksi Talsia kutsutaan Kuurinmaan vihreäksi helmeksi?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Ylhäältä katsottuna kaupunki on tosiaan vehreä. Talsi on rakentunut yhdeksän kukkulan ja kahden järven ympärille, ja kaupungin lempinimi viittaa tähän vehreään kukkula- ja järvimaisemaan. Maasto on erityinen, koska kukkulat ja vesistöt jakavat kaupunkitilan luontevasti osiin ja puistot sekä puut näkyvät keskustassakin. Nimitys on enemmän kaupungin oma tapa kuvata itseään kuin virallinen asema. Talsi on osa [[Kuurinmaan]] historiaa jo [[kuurilaisten]] linnavuoren ajoilta, ja luonto on ollut paikan edellytys alusta asti. Täällä leipoisin mielelläni jotain.",
+  "linkit": [
+   "Kuurinmaan",
+   "kuurilaisten"
+  ],
+  "jatkot": [
+   "Millainen on Talsin kaupungin historia lyhyesti?",
+   "Mitä Talsissa voi nähdä matkailijana?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-talsi",
+  "kysymys": "Mitä tekemistä Talsin pastorilla oli Ludwig van Beethovenin kanssa?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: pastori Karl Ferdinand Amenda oli Beethovenin läheinen ystävä. Amenda oli kotoisin Kuurinmaalta, opiskeli teologiaa ja soitti viulua, ja hän tutustui säveltäjään [[Wienissä]] 1790-luvun lopulla. Ystävykset pitivät yhteyttä kirjein senkin jälkeen, kun Amenda oli palannut Kuurinmaalle. Beethoven lahjoitti hänelle erään [[jousikvartetin]] käsikirjoituksen, ja Amendan merkitys säveltäjän elämässä tunnetaan juuri näiden kirjeiden ja lahjan kautta. Amenda toimi pitkään Talsin pappina, ja Talsin kirkko liittyy näin Euroopan musiikkihistoriaan. Tarkat vuodet jätän tarkistettavaksi, koska en ole niistä täysin varma.",
+  "linkit": [
+   "Wienissä",
+   "jousikvartetin"
+  ],
+  "jatkot": [
+   "Millaista musiikkia Beethoven sävelsi Wienissä 1790-luvulla?",
+   "Miten Beethoven ja hänen ystävänsä pitivät yhteyttä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-talsi",
+  "kysymys": "Mikä on linnavuori ja miksi kuurilaiset rakensivat sellaisia?",
+  "uusi": true,
+  "vastaus": "Just niin, Pilskalns on juuri sellainen. Linnavuori on kukkulan päälle tai muuten luonnostaan suojaisaan paikkaan rakennettu linnoitettu asuinpaikka, jota ympäröi yleensä puinen tai maasta tehty vallirakenne. Se toimi turvapaikkana vihollisen uhatessa, mutta myös paikallisen vallan ja kaupan keskuksena. Kuurilaiset olivat balttilainen heimo, ja [[Kuurinmaan]] nimi tulee heidän nimestään. Talsin keskustan kukkulalla on ollut linnavuori vähintään 900-luvulta lähtien, ja myöhemmin samalle seudulle rakennettiin linna 1200-luvun lopulla. Kukkula on hyvä näköalapaikka, kun aikoo havaita saapuvat vieraat ajoissa. Ymmärrän asian täydellisesti.",
+  "linkit": [
+   "Kuurinmaan"
+  ],
+  "jatkot": [
+   "Mitä tiedetään kuurilaisten elämästä ja kielestä?",
+   "Kuinka linnavuoria kaivetaan ja tutkitaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-talsi",
+  "kysymys": "Miksi Kuurinmaa liitettiin Venäjään vuonna 1795?",
+  "uusi": true,
+  "vastaus": "No jopas. Vuonna 1795 oli Puola-Liettuan kolmas jako, ja sen yhteydessä [[Kuurinmaan ja Semgallian herttuakunta]] liitettiin Venäjän keisarikuntaan. Herttuakunta oli ollut [[Puola-Liettuan]] alainen läänitys, ja sen sisäiset riidat sekä naapurivaltioiden voimasuhteet tekivät sen asemasta hauraan. Liitoksen jälkeen paikallinen baltiansaksalainen aatelisto säilytti suuren osan etuoikeuksistaan, ja alue muuttui Venäjän keisarikunnan kuvernementiksi. Talsi oli osa tätä muutosta. Tapahtuma oli aikansa suurvaltapolitiikkaa, jossa pienet valtiot jäivät isompien väliin. Onpas siitä aikaa.",
+  "linkit": [
+   "Kuurinmaan ja Semgallian herttuakunta",
+   "Puola-Liettuan"
+  ],
+  "jatkot": [
+   "Mitä Puola-Liettuan jaot tarkoittivat?",
+   "Miten Kuurinmaa muuttui Venäjän vallan aikana?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-talsi",
+  "kysymys": "Miten kukkulat ja järvet ovat syntyneet Talsin ympärille?",
+  "uusi": true,
+  "vastaus": "Katotaas. Latvian maisema on pitkälti viimeisen jääkauden muovaama. Kun mannerjäätikkö vetäytyi, se jätti jälkeensä moreenia, soraa ja hiekkaa, jotka muodostivat kumpuilevia kukkuloita, ja jään sulaessa maastoon jäi pohjia, joihin vesi kerääntyi järviksi. Talsin yhdeksän kukkulaa ja kaksi järveä voivat selittyä tällaisella jääkauden jälkeisellä kehityksellä, mutta tarkkaa paikallista syntyhistoriaa en ole varma. Seudun maaperä on siis [[moreenia]] ja muita jäätikön tuomia aineksia, ja [[jääkauden]] vaikutus näkyy koko Pohjois-Euroopan maisemassa. Maisemaa ylhäältä katselee mielellään.",
+  "linkit": [
+   "moreenia",
+   "jääkauden"
+  ],
+  "jatkot": [
+   "Miten jääkausi muovasi Latvian ja Suomen maisemaa?",
+   "Mitä moreeni on ja mistä se koostuu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tukums",
+  "kysymys": "Miksi herttua Jaakobin aikana Tukumissa rakennettiin pato, jauhomylly ja kuparinvalimo?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Herttua Jaakobin aikana 1600-luvulla [[Kuurinmaan herttuakunnan]] taloutta kehitettiin ajan [[merkantilismin]] hengessä: tavoitteena oli valmistaa tuotteita itse ja myydä niitä myös ulkomaille. Pato tarvittiin siksi, että se nosti veden tasoa ja tuotti järven sekä vesivoimaa, jolla jauhomyllyn kivet saatiin pyörimään. Kuparinvalimo tuotti metalliesineitä, ja yhdessä nämä laitokset loivat työpaikkoja ja toivat kaupunkiin kauppiaita ja käsityöläisiä. Tukumin nopea talouskasvu liittyi näihin hankkeisiin. Tarkat ajankohdat ja tuotantomäärät en ole varma, joten niitä en esitä.",
+  "linkit": [
+   "Kuurinmaan herttuakunnan",
+   "merkantilismin"
+  ],
+  "jatkot": [
+   "Mitä merkantilismi oli ja miten se vaikutti Euroopassa?",
+   "Millainen herttua Jaakob oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tukums",
+  "kysymys": "Mitä rautatie muutti pienessä kuurinmaalaisessa kaupungissa?",
+  "uusi": false,
+  "vastaus": "Mmm— tää on hyvä. Riian ja Tukumin välinen rautatie avattiin vuonna 1877, ja sen jälkeen kaupungin kehitys nopeutui. Rautatie nopeutti tavaroiden ja ihmisten liikkumista, madalsi kuljetuskustannuksia ja toi kaupunkiin uusia asukkaita, kauppiaita ja yrittäjiä. Tukumista tuli tärkeä rautatiesolmukohta, jossa yhtyvät [[Riian]], [[Jelgavan]] ja [[Ventspilsin]] radat, ja se vahvisti sen asemaa alueen keskuksena. Katuvalaistus oli aloitettu vuonna 1875, joten kaupunki oli jo ennen rautatietä muuttumassa nykyaikaisemmaksi. Hevosvaunun aika alkoi väistyä.",
+  "linkit": [
+   "Riian",
+   "Jelgavan",
+   "Ventspilsin"
+  ],
+  "jatkot": [
+   "Miten rautatiet muuttivat Euroopan kaupunkeja 1800-luvulla?",
+   "Mitä Ventspilsissa on nähtävää nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tukums",
+  "kysymys": "Mikä Livonian ritarikunta oli?",
+  "uusi": true,
+  "vastaus": "Ai tota. Livonian ritarikunta oli [[Saksalaisen ritarikunnan]] haara Liivinmaalla, nykyisen Latvian ja Viron alueella. Se syntyi 1230-luvulla, kun Miekkaveljeskunta yhdistyi Saksalaiseen ritarikuntaan, ja siitä tuli alueen merkittävä sotilaallinen ja poliittinen valtiotekijä. Ritarikunta rakensi linnoja, hallitsi maita ja vastasi ristiretkien jatkamisesta. Tukumissa se hallitsi paikkaa vuodesta 1253, kuten tiedetään. Ritarikunnan valta päättyi [[Liivinsodan]] aikoihin 1500-luvulla, ja alue jakautui eri hallitsijoille. Linnat ovat jääneet kertomaan tästä ajasta. Tuonkin pystyin kertomaan ilman muistiinpanoja.",
+  "linkit": [
+   "Saksalaisen ritarikunnan",
+   "Liivinsodan"
+  ],
+  "jatkot": [
+   "Miten Liivinsota päättyi ja mitä sen jälkeen tapahtui?",
+   "Millaisia ritarikunnan linnoja Latviassa on säilynyt?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tukums",
+  "kysymys": "Mistä Kuurinmaa on saanut nimensä?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Kuurinmaa on saanut nimensä [[kuurilaisista]], balttilaisesta heimosta, joka asui alueella ennen ristiretkiä. Latviaksi alueen nimi on Kurzeme, ja se kattaa Latvian länsiosan. Alue oli 1500-luvulta 1700-luvun lopulle oma [[Kuurinmaan ja Semgallian herttuakunta]], ja sen jälkeen osa Venäjän keisarikuntaa. Nykyisin Kuurinmaa on yksi Latvian historiallisista maakunnista, ja muita ovat Vidzeme, Latgale ja Zemgale. Tukums sijaitsee Kuurinmaan itäosassa. Nimi on pysynyt, vaikka vallanpitäjät ovat vaihtuneet.",
+  "linkit": [
+   "kuurilaisista",
+   "Kuurinmaan ja Semgallian herttuakunta"
+  ],
+  "jatkot": [
+   "Mitä kuurilaiset tekivät ja millaista kauppaa he kävivät?",
+   "Mitkä ovat Latvian neljä historiallista maakuntaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tukums",
+  "kysymys": "Miksi rautatiesolmukohdat olivat 1800-luvulla tärkeitä?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Rautatiesolmukohta on paikka, jossa useita ratoja kohtaa, ja sen merkitys perustui siihen, että tavarat ja matkustajat vaihtoivat siellä junaa. Solmukohtiin kasvoi asemarakennuksia, varastoja, korjaamoja ja majataloja, ja niiden ympärille syntyi työpaikkoja sekä kauppaa. Kaupungit, joilla oli useita ratayhteyksiä, kasvoivat usein muita nopeammin, koska ne olivat helppoja saavuttaa ja niiden kautta kulki sekä raskasta tavaraa että ihmisiä. [[Höyryveturien]] aikakaudella Tukumsin kaltainen solmu yhdisti sisämaan ja rannikon. Minä olisin kantanut kirjeet nopeammin.",
+  "linkit": [
+   "Höyryveturien"
+  ],
+  "jatkot": [
+   "Miten höyryveturi toimii?",
+   "Miten rautatieverkko levisi Baltiassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-cesvaine",
+  "kysymys": "Miksi Cesvainen linna ja koko kylä hävitettiin Liivinsodan aikana?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Tämä on raskas aihe. Liivinsodan aikana vuonna 1577 Venäjän tsaari [[Iivana Julma]] määräsi Cesvainen linnan ja koko kylän hävitettäväksi, koska puolustajat eivät suostuneet antautumaan. Tuohon aikaan piiritetyn linnan kieltäytyminen antautumisesta saattoi johtaa rankaisuun, ja sodankäynnin säännöt olivat hyvin erilaiset kuin nykyään. Sota oli pitkä ja koski laajaa aluetta, ja monet linnat ja kylät kärsivät sen aikana. Kivilinna oli rakennettu 1400-luvun alussa, ja sen rauniot ovat jääneet muistoksi. Onpas siitä onneksi pitkä aika.",
+  "linkit": [
+   "Iivana Julma"
+  ],
+  "jatkot": [
+   "Mikä Liivinsota oli ja ketkä siihen osallistuivat?",
+   "Millaisia linnanrauniota Latviassa on nähtävillä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-cesvaine",
+  "kysymys": "Mikä oli Jersikan ruhtinaskunta, ja keitä latgalilaiset olivat?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Jersikan ruhtinaskunta oli Väinäjoen eli [[Daugavan]] varrella sijainnut keskiaikainen latgalilainen ruhtinaskunta ennen 1200-luvun ristiretkiä. Latgalilaiset olivat balttilainen heimo, ja heidän asuinalueensa oli nykyisen Latvian itäosassa. Ruhtinaskuntaa hallitsi [[Visvaldis Jersikalaisen]] kaltainen ruhtinas, ja vuonna 1209 hänen ja Riian piispa Albertin välinen sopimus mainitaan Cesvainen ensimmäisenä kirjallisena lähteenä. Latgalilaisten perintö elää edelleen Latgalen maakunnassa, jossa on oma kielimuotonsa. Tarkat rajat ja ajat vaihtelevat lähteiden mukaan, joten niitä en esitä. Kaikkea en kantanut mukana.",
+  "linkit": [
+   "Daugavan",
+   "Visvaldis Jersikalaisen"
+  ],
+  "jatkot": [
+   "Millainen oli Jersikan linna ja missä sen rauniot ovat?",
+   "Mitä Latgalen kielimuoto on ja kuka sitä puhuu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-cesvaine",
+  "kysymys": "Mitä Cesvainen palatsissa on nykyään?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Cesvainen palatsi valmistui vuonna 1896 keskiaikaisten linnojen raunioiden lähelle, aikana jolloin paroni von Wulfin suku oli kartanon omistaja. Muistaakseni palatsissa toimii nykyisin museo ja kulttuuritoimintaa, mutta en ole varma, mitä siellä on tarkalleen esillä. Palatsi edustaa 1800-luvun lopun kartanoarkkitehtuuria, joka rakennettiin edustavaksi ja perheen asumiseen. Vierailija voi käydä palatsissa ja nähdä samalla vanhojen linnojen rauniot, joten paikka kertoo kahdesta eri aikakaudesta. Aukioloajoista kannattaa kysyä paikan päältä. Tästä palatsista voi kyllä tulla pulla-ajatuksia.",
+  "linkit": [],
+  "jatkot": [
+   "Millaisia kartanopalatseja Latviassa on säilynyt 1800-luvulta?",
+   "Kuka oli paroni von Wulf?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-cesvaine",
+  "kysymys": "Kuka oli Riian piispa Albert?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: Albert von Buxhoeveden oli saksalaissyntyinen kirkonmies, joka nimitettiin Riian piispaksi vuoden 1199 tienoilla. Hän johti ristiretkiä Liivinmaalla ja perusti vuonna 1201 [[Riian]] kaupungin, joka tuli alueen keskukseksi. Lisäksi hänen aikanaan perustettiin [[Miekkaveljeskunta]], jonka tehtävä oli suojata ja laajentaa kristillistä valtaa alueella. Cesvainen ensimmäinen kirjallinen maininta liittyy hänen ja Visvaldis Jersikalaisen väliseen sopimukseen vuodelta 1209. Kuolemansa vuoteen asti hän vaikutti alueen kirkolliseen ja poliittiseen kehitykseen. Tarkat vuodet ovat lähteiden mukaan hieman vaihtelevia, joten pidän ne suuntaa antavina.",
+  "linkit": [
+   "Riian",
+   "Miekkaveljeskunta"
+  ],
+  "jatkot": [
+   "Mikä oli Miekkaveljeskunta ja mitä sille tapahtui?",
+   "Miten Riian kaupunki kehittyi keskiajalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-cesvaine",
+  "kysymys": "Mikä alue Vidzeme on Latviassa?",
+  "uusi": true,
+  "vastaus": "No niin, Vidzeme on tuttu. Vidzeme on Latvian historiallinen maakunta, joka sijaitsee maan pohjois- ja koillisosassa, ja sen nimi tarkoittaa kutakuinkin keskimaata. Sen alueella virtaa [[Gauja]], ja tunnetuimpia kaupunkeja ovat [[Cēsis]] ja Sigulda. Historiallisesti Vidzeme kuului [[Liivinmaan]] alueeseen, ja sitä hallitsivat eri aikoina ritarikunta, Puola-Liettua, Ruotsi ja Venäjä. Cesvaine sijaitsee Vidzemen alueella Latvian itäosassa, ja sen paikalla on ollut kartano sekä linnan rauniot. Maakunnan rajat ovat vaihdelleet eri aikoina, joten tarkat rajat jätän sivuun. Täällä olisi varmasti oma paikallinen versionsa pullasta, en vain tiedä sen nimeä.",
+  "linkit": [
+   "Gauja",
+   "Cēsis",
+   "Liivinmaan"
+  ],
+  "jatkot": [
+   "Mitä Gaujan kansallispuistossa voi nähdä?",
+   "Miten Vidzeme erosi muista Latvian maakunnista historiassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rezekne",
+  "kysymys": "Miksi rautatiet tekivät unisesta Rēzeknestä tärkeän kaupungin?",
+  "uusi": false,
+  "vastaus": "Kato, hyvä kysymys tuo. Ennen junia Rēzekne oli uninen maalaiskaupunki, ja sen asema muuttui 1800-luvulla, kun [[rautatiet]] tulivat alueelle. Rautatie teki kaupungista liikenteen solmukohdan, eli paikan, jossa matkustajat ja tavarat kulkivat kaupungin kautta eivätkä sen ohi. Samalla kaupunki kasvoi ja monimuotoistui: väestöstä noin 60 prosenttia oli tuolloin juutalaisia, ja kaupungissa oli monen uskontokunnan kirkkoja ja rukoushuoneita. Rēzekne oli vuodesta 1802 [[Vitebskin kuvernementin]] piirikeskus ja kuului siis Venäjän keisarikuntaan, ja sitä on kutsuttu [[Latgalen]] sydämeksi. Solmukohdissa on kyl aina eniten murujakin.",
+  "linkit": [
+   "rautatiet",
+   "Vitebskin kuvernementin",
+   "Latgalen"
+  ],
+  "jatkot": [
+   "Kuinka suuri osa Rēzeknen asukkaista oli juutalaisia?",
+   "Millainen on Jeesuksen Pyhän Sydämen katedraali?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rezekne",
+  "kysymys": "Miksi Rēzeknessä on ollut niin monen eri uskontokunnan pyhiä rakennuksia?",
+  "uusi": false,
+  "vastaus": "No niin, tähän minä osaan vastata. Syitä on useita, ja ne liittyvät kaupungin asemaan Latvian itäosassa. Rēzekne kuului vuodesta 1559 [[Puola-Liettuan]] valtakuntaan, jossa katolisuudella oli vahva asema, ja vuodesta 1772 [[Venäjän keisarikunnan]] osaksi, jossa ortodoksisuus oli virallinen kirkko. Rautatiet toivat 1800-luvulla kaupunkiin lisää väkeä ja kauppaa, ja väestöstä noin 60 prosenttia oli tuolloin juutalaisia. Näin kaupunkiin syntyi monen yhteisön kirkkoja ja rukoushuoneita rinnakkain, ja katolinen [[Jeesuksen Pyhän Sydämen katedraali]] rakennettiin vuosina 1893–1914. Tarkemmasta uskontokuntien jakaumasta en ole varma. Rajaseutu on aina ollut sellaista, että kaikki kulkevat sen läpi ja moni jää.",
+  "linkit": [
+   "Puola-Liettuan",
+   "Venäjän keisarikunnan",
+   "Jeesuksen Pyhän Sydämen katedraali"
+  ],
+  "jatkot": [
+   "Mikä on Latgale ja millainen sen historia on?",
+   "Miten Venäjän keisarikunta hallitsi Latvian itäosaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rezekne",
+  "kysymys": "Missä Rēzekne sijaitsee ja kuinka kaukana se on Riiasta?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Karttaa minä katson mieluiten ylhäältä, ja sieltä tämä näkyy hyvin. Rēzekne sijaitsee Latvian itäosassa, [[Latgalen]] alueella, noin 240 kilometriä [[Riiasta]] itään. Kaupunki on rakennettu seitsemälle kukkulalle, ja sitä kutsutaan Latgalen sydämeksi. Matka Riiasta on siis pitkä, kun se kuljetaan maitse, mutta alue on silti selvästi osa Latviaa. Kyyhkyltä se on yksi iltapäivä.",
+  "linkit": [
+   "Latgalen",
+   "Riiasta"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Riika on?",
+   "Mitä tarkoittaa linnavuori?"
+  ],
+  "paikka": {
+   "nimi": "Rēzekne",
+   "lat": 56.51,
+   "lon": 27.34,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-rezekne",
+  "kysymys": "Mikä alue Latgale on ja miksi Rēzekne on sen sydän?",
+  "uusi": true,
+  "vastaus": "Ai se. Joo, tän minä tiedän. Latgale on Latvian itäosan historiallinen alue, joka lasketaan yhdeksi maan perinteisistä alueista Kuurinmaan ja Liivinmaan rinnalla. Rēzekne on alueen suurimpia kaupunkeja, ja siksi sitä kutsutaan Latgalen sydämeksi; nimitys kertoo sen asemasta alueen keskuksena. Latgalessa puhutaan myös [[latgalen kieltä]], jota jotkut pitävät latvian murteena ja jotkut omana kielenään, ja molemmat kannat ovat vakiintuneita. Alueen historia on kulkenut osin eri teitä kuin muun Latvian: esimerkiksi Rēzekne kuului Puola-Liettualle ja myöhemmin Venäjän keisarikunnalle. Tarkasta aluejaosta ja sen vaiheista en ole kaikilta osin varma.\n\nKieliasioissa minä pysyn varovaisena, sillä kyyhkyilläkin on omat murteensa, eikä kukaan ole sopinut, onko hurina kieli. Mut kyllä me toisemme ymmärretään.",
+  "linkit": [
+   "latgalen kieltä"
+  ],
+  "jatkot": [
+   "Miten latgalen kieli eroaa latviasta?",
+   "Mitä Kuurinmaa ja Liivinmaa olivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rezekne",
+  "kysymys": "Milloin Rēzekne kuului Puola-Liettualle ja milloin Venäjälle?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Kaupungin omistajat ovat vaihtuneet useita kertoja, joten käydään ne järjestyksessä. Rēzekne kuului vuodesta 1559 alkaen [[Puola-Liettualle]], ja vuonna 1772 se siirtyi [[Venäjän keisarikunnalle]]. Kaupunkioikeudet se sai vuonna 1773, ja vuodesta 1802 se oli [[Vitebskin kuvernementin]] piirikeskus. Jo vuonna 1285 Livonian ritarikunta oli rakentanut paikalle kivilinnan itärajan vartioksi. Paljon lippuja yhdelle kukkulakaupungille, ei kyyhky ehtisi opetella värejä.",
+  "linkit": [
+   "Puola-Liettualle",
+   "Venäjän keisarikunnalle",
+   "Vitebskin kuvernementin"
+  ],
+  "jatkot": [
+   "Mikä oli Puola-Liettuan valtakunta?",
+   "Mitä Livonian ritarikunta oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kraslava",
+  "kysymys": "Miksi Krāslavasta tuli jesuiittojen katolisen liikkeen pohjoisin keskus?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän, vaikka Pöllö onkin ny taas jossain pitämässä esitelmää. [[Jesuiitat]] rakensivat Krāslavaan kirkon vuonna 1676, ja kaupungista tuli katolisen liikkeen pohjoisin keskus, koska se sijaitsi [[protestanttisten]] ja [[ortodoksisten]] alueiden rajalla. Jesuiitat olivat katolisen kirkon oppinut ritarikunta, joka tunnettiin muun muassa kouluistaan ja kirkoistaan, joten rajaseutu oli luonteva paikka vahvistaa katolista läsnäoloa. Kaupunki sijaitsee Väinäjoen varrella, jota pitkin kulki jo varhaisella keskiajalla tärkeä vesireitti. Syiden tarkemmasta painotuksesta en ole varma, ja historioitsijat saattavat painottaa niitä eri tavoin. Hyvin meni, vaikka sanonkin itse.",
+  "linkit": [
+   "Jesuiitat",
+   "protestanttisten",
+   "ortodoksisten"
+  ],
+  "jatkot": [
+   "Keitä jesuiitat olivat ja mitä he tekivät?",
+   "Miten protestantit ja katoliset erosivat toisistaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kraslava",
+  "kysymys": "Mitä tavaroita Krāslavan käsityöläiset tekivät ja minne niitä myytiin?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Torilla on aina paras katsoa, mitä ihmiset oikeasti tekevät. Krāslavan käsityöläiset valmistivat mattoja, samettia, silkkiä ja aseita. Tavaroita myytiin kaupungin markkinoilla, ja niitä vietiin myös [[Kuurinmaalle]], [[Puolaan]] ja [[Saksaan]]. Krāslava oli siis paikallinen tuotantokaupunki, jonka tuotteet kulkivat kauas oman seutunsa ulkopuolelle. Taustalla oli kreivi Platerin suku, joka määritti kaupungin taloutta ja kulttuuria lähes kaksi vuosisataa. Silkki olisi ollut painoltaan kyyhkylle sopivin kuljetettava.",
+  "linkit": [
+   "Kuurinmaalle",
+   "Puolaan",
+   "Saksaan"
+  ],
+  "jatkot": [
+   "Millaisia aseita keskiajalla ja uuden ajan alussa valmistettiin?",
+   "Miten silkkiä valmistetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kraslava",
+  "kysymys": "Missä Krāslava sijaitsee Väinäjoen varrella?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Katsotaan vähän ylhäältä. Krāslava on kaupunki Latvian kaakkoisosassa [[Väinäjoen]] eli Daugavan varrella, [[Daugavpilsin]] kaupungista ylävirtaan itään. Suurin osa kaupungista on joen oikealla rannalla. Latvian lain mukaan se kuuluu osittain Latgaleen ja osittain Selonian alueeseen. Joenmutka tekee siitä helpon maamerkin, jos sattuu lentämään ylhäältä.",
+  "linkit": [
+   "Väinäjoen",
+   "Daugavpilsin"
+  ],
+  "jatkot": [
+   "Mikä on Väinäjoki ja minne se virtaa?",
+   "Millainen kaupunki Daugavpils on?"
+  ],
+  "paikka": {
+   "nimi": "Krāslava",
+   "lat": 55.9,
+   "lon": 27.17,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-kraslava",
+  "kysymys": "Mikä oli Varjagien ja Bysantin välinen vesireitti?",
+  "uusi": true,
+  "vastaus": "Kas vaan, mukava kysymys. Reitti oli keskiajalla käytetty kauppa- ja kulkureitti, joka yhdisti pohjoisen Euroopan ja Bysantin valtakunnan jokia ja järviä pitkin. Varjagit olivat skandinaavisia kauppiaita ja sotureita, ja heidän kulkuaan itään on perinteisesti kuvattu nimityksellä reitti varjageista kreikkalaisiin. Reitin tärkeä osa oli [[Dnepriä]] pitkin kulkeva yhteys kohti [[Konstantinopolia]], ja Väinäjoki oli yksi alueen vesiteistä. Reitin tarkasta kulusta ja eri osien merkityksestä lähteet ovat osin eri mieltä.\n\nVesiteitä pitkin kulkeminen on minusta vähän epäreilua, sillä minä lennän suoraan. Mutta jokimiehelle täytyy nostaa hattua: soutaa nyt halki koko mantereen, kyl se on urakka.",
+  "linkit": [
+   "Dnepriä",
+   "Konstantinopolia"
+  ],
+  "jatkot": [
+   "Keitä varjagit olivat?",
+   "Mikä oli Bysantin valtakunta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kraslava",
+  "kysymys": "Kuka oli kreivi Plater, joka osti Krāslavan vuonna 1729?",
+  "uusi": true,
+  "vastaus": "Ai tota. Nimi on tuttu, vaikka tarkkoja elämäkertatietoja minulla ei ole. Kreivi Jan Ludwik Plater osti Krāslavan vuonna 1729, ja hänen sukunsa määritti kaupungin taloutta ja kulttuuria lähes kaksi vuosisataa. [[Plater-suku]] oli puolalais-liettualainen [[aatelissuku]], ja Krāslava kehittyi sen omistuksessa käsityön ja kaupan keskukseksi. Kaupungin käsityöläiset valmistivat mattoja, samettia, silkkiä ja aseita, joita myytiin markkinoilla ja viennissä. Henkilön tarkemmista vaiheista en ole varma, joten jätän ne kertomatta. Hyvä että edes suvun nimi pysyi mielessä.",
+  "linkit": [
+   "Plater-suku",
+   "aatelissuku"
+  ],
+  "jatkot": [
+   "Mikä on aatelissuku ja miten aateli eli?",
+   "Mitä Krāslavassa on nähtävää nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lubans",
+  "kysymys": "Miksi Lubānsin pinta-ala voi vaihdella kymmenistä neliökilometreistä lähes sataan?",
+  "uusi": false,
+  "vastaus": "Katotaas. Luvut ovat suuria, mutta selitys on yksinkertainen. Lubāns on matala järvi, ja sen pinta-ala riippuu vedenkorkeudesta: 90,75 metrin korkeudella se on 25 neliökilometriä ja 92,75 metrin korkeudella noin 100 neliökilometriä. Kun järvi on matala ja ympäristö tasaista, parin metrin muutos vedenkorkeudessa levittää veden laajalle alalle. Ennen säännöstelyä [[kevättulvat]] peittivät ympäristön niittyjä vuosittain, ja järvi sijaitsee [[Itä-Latvian alangon]] keskellä. Pinta-ala elää siis veden mukana. Onpas ollut numeroita, päätä huimaa.",
+  "linkit": [
+   "kevättulvat",
+   "Itä-Latvian alangon"
+  ],
+  "jatkot": [
+   "Mikä erottaa matalan järven syvästä?",
+   "Miksi kevättulvat syntyvät?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lubans",
+  "kysymys": "Miksi Latvian suurimman järven ympärillä on niin laajoja kosteikkoja?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Syy on maastossa ja vedessä. Lubāns sijaitsee [[Itä-Latvian alangon]] keskellä, matalan maaston alueella, ja se on matala järvi, jota ruokkivat muun muassa Rēzekne- ja Malta-joet. Vesi virtaa pois [[Aiviekste-jokea]] pitkin Väinäjokeen, ja ennen säännöstelyä [[kevättulvat]] peittivät ympäristön niittyjä joka vuosi. Tasaisella maalla tulvavesi leviää laajalle ja jää seisomaan, ja niin syntyy kosteikko. Vuoden 1926 tulvien jälkeen alueelle rakennettiin patoja ja ojia, mutta nykyään alue on suojeltu kosteikko. Tarkemmasta maaperän rakenteesta en ole varma. Kyyhkynä tykkään kuivista kaiteista, mutta kosteikot kyl kiinnostavat.",
+  "linkit": [
+   "Itä-Latvian alangon",
+   "Aiviekste-jokea",
+   "kevättulvat"
+  ],
+  "jatkot": [
+   "Mitä tarkoittaa kosteikko?",
+   "Miksi tulvia säännöstellään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lubans",
+  "kysymys": "Mitä tarkoittaa kosteikon suojelu ja miksi se on tärkeää linnuille?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Kosteikon suojelu tarkoittaa, että aluetta ei kuivateta, rakenneta tai muuten muuteta tavalla, joka hävittäisi sen luonnon. Lubāns on suojeltu kosteikko, ja se on tärkeä lintujen pesimä- ja muuttoalue. Kosteikot tarjoavat linnuille ravintoa, suojaisia pesäpaikkoja ja levähdyspaikkoja matkan varrelle, ja siksi ne ovat [[muuttolinnuille]] erityisen tärkeitä. Ne myös sitovat [[tulvavettä]], joten niistä on hyötyä myös ihmisille. Mitä lajeja Lubānsilla tarkalleen pesii, siitä en ole varma. Tää on kyl lintujen näkökulmasta tärkeä paikka.",
+  "linkit": [
+   "muuttolinnuille",
+   "tulvavettä"
+  ],
+  "jatkot": [
+   "Mitä muuttolinnut tekevät talvella?",
+   "Miten kosteikko puhdistaa vettä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lubans",
+  "kysymys": "Mikä on Aiviekste-joki ja minne se virtaa?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Aiviekste on joki, jonka kautta Lubānsin järven vesi virtaa pois. Se laskee [[Väinäjokeen]], joka kuljettaa veden kohti Riianlahtea. Jokea säännösteltiin vuosina 1929–1939, kun vuoden 1926 tulvien jälkeen alueelle rakennettiin patoja ja ojia. [[Lubānsista]] lähtevä vesi on siis kulkenut ihmisen hallitsemaa reittiä jo lähes sata vuotta. Joen pituudesta en ole varma, joten jätän luvun pois.\n\nJoki on minusta paras lentokartta: seuraa sitä, niin pääset jonnekin. Mut jos vedenkorkeus heittelee, karttakin heittelee mukana.",
+  "linkit": [
+   "Väinäjokeen",
+   "Lubānsista"
+  ],
+  "jatkot": [
+   "Mikä on Riianlahti?",
+   "Miten jokia säännöstellään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lubans",
+  "kysymys": "Mihin vuoden 1926 tulvat johtivat Lubānsin alueella?",
+  "uusi": true,
+  "vastaus": "No jopas, tähän löytyy suora vastaus. Vuoden 1926 tulvien jälkeen Lubānsin alueelle rakennettiin [[patoja]] ja ojia, jotta vedenkorkeutta voitiin hallita paremmin. Lisäksi [[Aiviekste-jokea]] säännösteltiin vuosina 1929–1939. Ennen säännöstelyä kevättulvat olivat peittäneet ympäristön niittyjä vuosittain, joten toimet muuttivat alueen vesitaloutta merkittävästi. Nykyään alue on kuitenkin suojeltu kosteikko, joka on tärkeä lintujen pesimä- ja muuttoalue. Tulvia ei ole kuulemma tullut ikävämpää ikävämpää kuin nämä.",
+  "linkit": [
+   "patoja",
+   "Aiviekste-jokea"
+  ],
+  "jatkot": [
+   "Miten padot toimivat?",
+   "Mikä on Väinäjoen rooli Latvian vesistöissä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ikskile",
+  "kysymys": "Miksi Ikšķilen kirkon rauniot ovat nykyään keskellä vesiallasta?",
+  "uusi": false,
+  "vastaus": "Kas vaan, mielenkiintoinen paikka. Syy on [[Riian vesivoimala]], joka rakennettiin Väinäjoelle 1970-luvulla. Padon takana joen pinta nousi ja syntyi allas, jonka alle jäivät Ikšķilen linna ja kartano. Ensimmäisen kivikirkon rauniot kuitenkin säilytettiin [[tekosaarella]], ja ne ovat sen vuoksi yhä olemassa. Kerran vuodessa, kun veden pinta on alhaalla, raunioille voi kävellä. Rauniot ovat Itä-Baltian vanhinta kivirakentamista. Hienoa, että edes osa säilyi.",
+  "linkit": [
+   "Riian vesivoimala",
+   "tekosaarella"
+  ],
+  "jatkot": [
+   "Miten vesivoimala tuottaa sähköä?",
+   "Milloin Ikšķilen linna rakennettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ikskile",
+  "kysymys": "Miksi Liivinmaan piispankeskus siirrettiin Ikšķilestä Riikaan?",
+  "uusi": false,
+  "vastaus": "Ai se. Tän minä muistan. Piispa [[Albert]] siirsi piispankeskuksen Riikaan vuonna 1201, koska Ikšķile oli liian kaukana [[Väinäjoen suulta]]. Joen suu oli tärkeä paikka, koska siellä yhtyivät meri- ja jokiliikenne, ja Riika sijaitsi paremmin kauppareittien varrella. Ikšķile oli ollut Liivinmaan katolisen piispakunnan ensimmäinen pääpaikka, jossa katolisuus alkoi levitä Latviassa. Siirron muista syistä en ole varma. Pitkä matka, mutta kyyhky ei kysy tienviittaa.",
+  "linkit": [
+   "Albert",
+   "Väinäjoen suulta"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Riika oli keskiajalla?",
+   "Miksi merireitti oli tärkeä kaupalle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ikskile",
+  "kysymys": "Missä Ikšķile sijaitsee suhteessa Riikaan?",
+  "uusi": true,
+  "vastaus": "Odotas vähän, katsotaan. Ikšķile on kaupunki [[Väinäjoen]] oikealla rannalla, noin 28 kilometrin päässä Riiasta. Se oli [[Liivinmaan]] katolisen piispakunnan ensimmäinen pääpaikka, ja siellä on Itä-Baltian vanhin kivirakennus. Matka Riiasta on lyhyt verrattuna moniin muihin Latvian kohteisiin, joten paikka on helppo yhdistää päiväretkeen. Tuolta matkalta ehtii nähdä paljon.",
+  "linkit": [
+   "Väinäjoen",
+   "Liivinmaan"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Riika on?",
+   "Miten Väinäjoki kulkee Latvian halki?"
+  ],
+  "paikka": {
+   "nimi": "Ikšķile",
+   "lat": 56.83,
+   "lon": 24.5,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-ikskile",
+  "kysymys": "Mikä oli Liivinmaan piispakunta ja miten se syntyi?",
+  "uusi": true,
+  "vastaus": "Mmm— no niin. Liivinmaan piispakunta oli katolisen kirkon hallinnollinen alue nykyisen Latvian suunnalla. Sen ensimmäinen pääpaikka oli Ikšķile. Gotlantilaiset kivenhakkaajat rakensivat paikalle vuonna 1185 linnan ja kappelin tai kirkon, ja piispa [[Meinhardin]] johdolla Ikšķilestä tuli keskus, josta katolisuus alkoi levitä Latviassa. Piispa Albert siirsi piispankeskuksen Riikaan vuonna 1201. [[Gotlantilaiset kivenhakkaajat]] olivat siis mukana jo ensimmäisessä rakennusvaiheessa. Piispakunnan tarkemmasta järjestäytymisestä en ole varma.\n\nGotlannin miehet tulivat tänne kivien kanssa meren yli, ja sen minä ymmärrän; kyllä lintukin tietää, miten raskasta kantaminen on. Mut minä kannan sentään vain kirjeitä.",
+  "linkit": [
+   "Meinhardin",
+   "Gotlantilaiset kivenhakkaajat"
+  ],
+  "jatkot": [
+   "Mikä on Gotlanti ja miksi se oli tärkeä?",
+   "Miten katolisuus levisi Itämeren alueella?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ikskile",
+  "kysymys": "Milloin Ikšķilen raunioille voi kävellä ja miksi?",
+  "uusi": true,
+  "vastaus": "Tuota niin, tähän on selkeä vastaus. Ikšķilen ensimmäisen kivikirkon rauniot sijaitsevat [[tekosaarella]], koska Riian vesivoimalan rakentaminen 1970-luvulla nosti Väinäjoen pintaa ja linna ja kartano jäivät altaan alle. Kerran vuodessa, kun veden pinta on alhaalla, raunioille voi kävellä. Tarkkaa päivämäärää en ole varma, joten se kannattaa tarkistaa paikallisista lähteistä ennen matkaa. Raunioiden ikä tekee paikasta erityisen: kyseessä on Itä-Baltian vanhin kivirakennus, joka juontaa juurensa [[Liivinmaan]] katolisen kirkon alkuaikoihin. Kävelylle tarvitaan siis hyvää tuuria ja vähän vettä. Minä saavun sinne lentäen.",
+  "linkit": [
+   "tekosaarella",
+   "Liivinmaan"
+  ],
+  "jatkot": [
+   "Miten tekosaari tehdään?",
+   "Missä vesivoimaloita rakennetaan Euroopassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-koknese",
+  "kysymys": "Miksi Koknesen linnan rauniot ovat nykyään osittain veden alla?",
+  "uusi": false,
+  "vastaus": "Sepä sattui. Syy on [[Pļaviņasin vesivoimala]], joka valmistui lähelle Koknesea vuonna 1966. Voimalan padon takia Väinäjoen pinta nousi, ja linnanrauniojen perustukset jäivät veden alle. Linna oli ehtinyt tuhoutua jo vuonna 1701 Suuren Pohjan sodan aikana, joten vedenpinnan nousu vaikutti jo raunioihin. [[Väinäjoki]] on Latvian tärkein vesistö, ja sen vesivoimalat ovat muuttaneet monen paikan ilmettä. Tarkasta nykyisestä vedenkorkeudesta en ole varma. Rauniot siis uivat — sanotaanko niin.",
+  "linkit": [
+   "Pļaviņasin vesivoimala",
+   "Väinäjoki"
+  ],
+  "jatkot": [
+   "Miten vesivoimala vaikuttaa joen luontoon?",
+   "Milloin Koknesen linna rakennettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-koknese",
+  "kysymys": "Mitä Hansaliitto oli, ja mitä hyötyä siitä oli Koknesen kaltaiselle kaupungille?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo, ja tämän hoitaisi yleensä Pöllö, joka on ny lähtenyt pitämään luentoa. Hansaliitto oli keskiajalla Pohjois-Euroopan ja [[Itämeren]] alueen kauppakaupunkien ja kauppiaiden verkosto. Sen tärkeä kaupunki oli [[Lyypekki]], ja liitto muodosti laajan kauppareittien ja yhteistyön järjestelmän. Jäsenyydestä oli hyötyä kaupungille, koska verkoston kautta tavarat ja tieto liikkuivat helpommin ja kauppiaat saivat tukea toisiltaan. Koknese kukoisti 1300-luvulla osana Hansaliiton verkostoa. Liiton tarkasta jäsenyydestä ja Koknesen asemasta en ole varma. Pitkä historiatunti, kyl minä sen jaksoin.",
+  "linkit": [
+   "Itämeren",
+   "Lyypekki"
+  ],
+  "jatkot": [
+   "Mitä tavaroita Hansaliiton kauppiaat kuljettivat?",
+   "Mikä oli Lyypekin rooli Itämeren kaupassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-koknese",
+  "kysymys": "Missä Koknese sijaitsee Väinäjoen varrella?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Katsotaan ylhäältä. Koknese on noin 3 000 asukkaan kaupunki [[Väinäjoen]] oikealla rannalla. Linna rakennettiin joen ja [[Pērse-joen]] yhtymäkohtaan, joten sijainti on ollut kulkureittien kannalta hyvä. Paikalla oli alun perin latgalilaisten ja selonialaisten asutus. Kun lähelle valmistui vuonna 1966 vesivoimala, linnanrauniot jäivät osittain veden alle. Joen mutkat ovat kyyhkylle hyvä maamerkki.",
+  "linkit": [
+   "Väinäjoen",
+   "Pērse-joen"
+  ],
+  "jatkot": [
+   "Mikä on Pērse-joki?",
+   "Mitä tarkoittaa jokien yhtymäkohta?"
+  ],
+  "paikka": {
+   "nimi": "Koknese",
+   "lat": 56.65,
+   "lon": 25.43,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-koknese",
+  "kysymys": "Mikä oli Suuri Pohjan sota ja miten se vaikutti Latviaan?",
+  "uusi": true,
+  "vastaus": "Kääk. Tämä on raskas aihe, joten kerron sen lyhyesti. Suuri Pohjan sota käytiin vuosina 1700–1721 pääasiassa [[Ruotsin]] ja [[Venäjän]] johtaman liittouman välillä, ja sen taistelukenttiin kuului myös Itämeren itäranta. Latvian alueelle sota toi tuhoa: esimerkiksi Koknesen linna tuhoutui vuonna 1701. Sodan päätyttyä [[Nystadin rauhan]] myötä alue siirtyi Ruotsin vallasta Venäjän hallintaan. Sodan vaikutusten tarkemmasta laajuudesta en ole varma. Se tapahtui yli kolmesataa vuotta sitten, ja onneksi siitä on pitkä aika.",
+  "linkit": [
+   "Ruotsin",
+   "Venäjän",
+   "Nystadin rauhan"
+  ],
+  "jatkot": [
+   "Mitä Nystadin rauha sovitti?",
+   "Miten Ruotsin valta vaikutti Baltiaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-koknese",
+  "kysymys": "Mitä kaupunkioikeudet tarkoittivat keskiajalla?",
+  "uusi": true,
+  "vastaus": "Tuota niin, hyvä kysymys. Kaupunkioikeudet olivat hallitsijan tai muun vallanpitäjän myöntämä asema, jonka myötä asutus sai kaupungin erityisoikeudet. Tyypillisesti niihin kuului oikeus pitää [[markkinoita]], harjoittaa kauppaa ja hoitaa osa omista asioistaan. Koknese sai kaupunkioikeudet vuonna 1277, ja se kukoisti 1300-luvulla osana [[Hansaliiton]] verkostoa. Oikeuksien tarkka sisältö vaihteli paikasta ja ajasta, joten yksityiskohdista Koknesen osalta en ole varma. Kauppa ja muurit kuuluvat yhteen, sanotaan.",
+  "linkit": [
+   "markkinoita",
+   "Hansaliiton"
+  ],
+  "jatkot": [
+   "Miten keskiaikainen kaupunki hallittiin?",
+   "Miksi markkinat olivat tärkeitä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-aizpute",
+  "kysymys": "Miksi Aizputen perustamisvuotena pidetään vuotta 1248?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Vuosiluvut jää kyyhkyllä helposti päähän. Vuonna 1248 [[Livonian ritarikunta]] rakennutti Aizputeen uuden linnan joen toiselle rannalle, ja juuri tätä vuotta pidetään kaupungin perustamisvuotena. Paikalla oli asutusta kuitenkin jo paljon aiemmin, sillä 800-luvulla siellä oli kuurilaisten [[Beida-linna]], jonka ympäristö kuului Bandavan alueen tiheimmin asuttuihin seutuihin. Perustamisvuosi merkitsee siis ritarikunnan linnan ympärille kasvaneen kaupungin alkua, ei paikan ensimmäistä asutusta. Myöhemmin, vuonna 1378, piispa myönsi kaupungille [[Magdeburgin oikeudet]]. Ja kaiken tän minä muistin ulkoa.",
+  "linkit": [
+   "Livonian ritarikunta",
+   "Beida-linna",
+   "Magdeburgin oikeudet"
+  ],
+  "jatkot": [
+   "Mikä Livonian ritarikunta oli?",
+   "Keitä kuurilaiset olivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-aizpute",
+  "kysymys": "Mitä ovat Magdeburgin oikeudet, ja mitä ne merkitsivät kaupungille?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Oikeudet on ollut tuttu aihe kirjeidenkin parissa. [[Magdeburgin oikeudet]] olivat saksalainen kaupunkioikeus, joka sai nimensä Magdeburgin kaupungista ja levisi keskiajalla laajalle Keski- ja Itä-Eurooppaan. Yleensä ne merkitsivät, että kaupunki sai oman tuomioistuimen ja neuvoston sekä oikeuden hoitaa omia asioitaan ja kauppaansa, ja kaupunkilaisten asema erosi selvemmin maaseudun väestön asemasta. Aizpute sai oikeudet piispalta vuonna 1378, mikä vahvisti sen asemaa kaupunkina. Yksityiskohdat vaihtelivat kaupungista toiseen, eikä minulla ole varmaa tietoa siitä, mitä ne tarkalleen olivat Aizputessa. Pitkä juridiikka, mut jaksoin.",
+  "linkit": [
+   "Magdeburgin oikeudet"
+  ],
+  "jatkot": [
+   "Mitkä muut kaupungit saivat Magdeburgin oikeudet?",
+   "Millainen oli keskiajan kaupunkineuvosto?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-aizpute",
+  "kysymys": "Mikä Livonian ritarikunta oli?",
+  "uusi": true,
+  "vastaus": "No niin, tämä on hyvä aihe. [[Livonian ritarikunta]] oli saksalainen sotilaallinen ritarikunta, joka hallitsi keskiajalla suurta osaa nykyisen Latvian ja Viron alueesta. Se oli haara [[Saksalaisen ritarikunnan]] suuresta järjestöstä, ja sen edeltäjänä toimi Liivinmaan miekkaveljien veljeskunta. Ritarikunta rakennutti seudulle linnoja, kuten Aizputen linnan vuonna 1248, ja kilpaili vallasta Riian hiippakunnan kanssa. Sen valta päättyi 1500-luvun puolivälin jälkeen [[Liivinmaan sodan]] aikoihin; tarkkoja vuosilukuja en ole täysin varma, joten sanon vain suunnilleen. Kyl linnat kestää kauemmin kuin kyyhkyn muisti.",
+  "linkit": [
+   "Livonian ritarikunta",
+   "Saksalaisen ritarikunnan",
+   "Liivinmaan sodan"
+  ],
+  "jatkot": [
+   "Mitä Liivinmaan sota oli?",
+   "Mikä ero oli ritarikunnalla ja hiippakunnalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-aizpute",
+  "kysymys": "Missä Kuurinmaa sijaitsee ja millainen alue se on?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Kuurinmaa eli latviaksi Kurzeme on historiallinen alue [[Länsi-Latviassa]], Itämeren rannalla. Alueen nimi tulee [[kuurilaisista]], balttilaisesta heimosta, joka asui seudulla jo varhain. Keskiajalla alue joutui Livonian ritarikunnan ja hiippakunnan vallan alle, ja myöhemmin siitä muodostui oma [[Kuurinmaan herttuakunta]], joka kesti 1700-luvun lopulle. Vuonna 1795 Kuurinmaa liitettiin Venäjään, ja Aizpute sai oman piirinsä hallintokeskuksen aseman. Rannikko ja metsät kuuluvat alueen luonteeseen, mutta tarkempia rajoja en uskalla luvata. Aika laaja alue yhdelle kyyhkyn katsaukselle.",
+  "linkit": [
+   "Länsi-Latviassa",
+   "kuurilaisista",
+   "Kuurinmaan herttuakunta"
+  ],
+  "jatkot": [
+   "Mikä oli Kuurinmaan herttuakunta?",
+   "Missä Liepāja sijaitsee ja millainen kaupunki se on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-aizpute",
+  "kysymys": "Keitä kuurilaiset olivat?",
+  "uusi": true,
+  "vastaus": "Kas vaan, hyvä kysymys. [[Kuurilaiset]] olivat balttilainen heimo, joka asui nykyisen Latvian länsiosassa Itämeren rannikolla. Heidät tunnettiin merenkävijöinä ja sotureina Viikinkiaikaan asti, ja heidän linnansa, kuten Aizputen Beida, kertovat asutuksen tiheydestä. Keskiajalla ritarikunta valloitti alueen, ja kuurilaiset sulautuivat vähitellen muihin ryhmiin, joista kehittyi latvialaisten kansa. Heidän nimensä elää yhä Kuurinmaassa sekä Kuurin kynnäksen nimessä Itämeren etelärannalla. Tarkkoja vuosia en ole varma, joten ne jäävät pois. Kyl heidän tarinansa vois täyttää kokonaisen lentomatkan.",
+  "linkit": [
+   "Kuurilaiset"
+  ],
+  "jatkot": [
+   "Mikä on Kuurin kynnäs?",
+   "Mitä balttilaiset heimot olivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-valmiera",
+  "kysymys": "Mitä hyötyä Hansaliiton jäsenyys toi Valmieralle?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Kauppa tuoksuu jo täältä asti. [[Hansaliitto]] oli pohjoiseurooppalaisten kauppakaupunkien liitto, ja Valmiera kuului siihen 1300-luvulta 1500-luvulle. Jäsenyys toi kaupunkiin runsaasti kauppaa ja liikennettä, sillä liiton verkosto avasi yhteydet muihin Itämeren kaupunkeihin ja niiden markkinoihin. Samalla Valmiera nousi merkittäväksi paikaksi, ja sen aikana kaupungissa pidettiin useita [[maapäiviä]], joissa Liivinmaan säädyt kokoontuivat päättämään yhteisistä asioista. Linnan varjossa kasvoi siis myös kauppakaupunki. Tarkkoja kauppatavaroita en tiedä varmasti, joten jätän ne arvaamatta. Nyt tekis mieli vähän kaupungin leipää.",
+  "linkit": [
+   "Hansaliitto",
+   "maapäiviä"
+  ],
+  "jatkot": [
+   "Mitä tavaroita Hansaliitto kuljetti Itämerellä?",
+   "Mitä Liivinmaan maapäivillä päätettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-valmiera",
+  "kysymys": "Mistä Valmieran nimi on peräisin?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Tässä en ole varma. Valmieran nimen alkuperästä on esitetty useita selityksiä, eikä minulla ole luotettavaa tietoa siitä, mikä niistä pitää paikkansa. Varmaa on, että kaupungin saksankielinen nimi on Wolmar ja että kaupunki mainitaan ensimmäisen kerran vuoden 1323 [[kronikassa]], kun [[Liivinmaan miekkaveljet]] olivat rakentaneet joen varteen linnan jo 1200-luvulla. Nimen taustaa kannattaa kysyä paikalliselta kielentutkijalta tai kaupungin museosta, koska arvattu selitys olisi huonompi kuin rehellinen tietämättömyys. Harmi, ois ollut kiva tietää.",
+  "linkit": [
+   "kronikassa",
+   "Liivinmaan miekkaveljet"
+  ],
+  "jatkot": [
+   "Mikä Gauja-joki on ja mihin se virtaa?",
+   "Keitä Liivinmaan miekkaveljet olivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-valmiera",
+  "kysymys": "Mitä lasikuitu on ja mihin sitä käytetään?",
+  "uusi": true,
+  "vastaus": "Ai se. Lasikuitu on tuttu Valmieran teollisuudesta. [[Lasikuitu]] on ohuista lasisäikeistä valmistettu materiaali, joka on kevyttä mutta kestävää. Sitä käytetään muun muassa eristeissä sekä komposiittirakenteissa, joissa lasikuitu vahvistaa muovia ja muodostaa lujan, kevyen aineen. Tällaisia rakenteita on esimerkiksi veneiden, putkien ja tuulivoimaloiden lapojen valmistuksessa. Kuidun ansiosta tuote kestää kulutusta ja kosteutta paremmin kuin moni perinteinen materiaali. Valmieran tärkeimpiä teollisuudenaloja ovat lasikuidun lisäksi elintarviketeollisuus. Ei lintu osaa kudoa, mut kyl se kutsuu kuitua kauniiksi.",
+  "linkit": [
+   "Lasikuitu"
+  ],
+  "jatkot": [
+   "Miten lasikuitua valmistetaan?",
+   "Mitä komposiittimateriaalit ovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-valmiera",
+  "kysymys": "Mikä Vidzeme on ja millainen alue se on?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. [[Vidzeme]] on historiallinen alue Latvian koillisosassa, ja sen toiseksi suurin kaupunki on Valmiera. Alueen läpi virtaa [[Gauja-joki]], jonka laakso on tunnettu jyrkistä hiekkakivirinteistä ja metsistä; sen ympärillä on suosittu kansallispuisto. Keskiajalla Vidzemeä hallitsivat Livonian ritarikunta ja Riian hiippakunta, ja seudulle rakennettiin useita linnoja. Aluetta kutsuttiin saksalaisaikoina Liivinmaaksi, vaikka tämän nimen merkitys ja rajat vaihtelivat vuosisatojen kuluessa. Tarkempia rajoja en ole varma, joten jätän ne mainitsematta. Kaunis seutu ylhäältäkin katsottuna.",
+  "linkit": [
+   "Vidzeme",
+   "Gauja-joki"
+  ],
+  "jatkot": [
+   "Mikä Gaujan kansallispuisto on?",
+   "Mitä Riian hiippakunta oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-valmiera",
+  "kysymys": "Mitä maapäivät olivat Liivinmaalla?",
+  "uusi": true,
+  "vastaus": "Katotaas. Maapäivät olivat keskiajan ja uuden ajan alun Liivinmaalla säätyjen kokouksia, joissa kokoontuivat yleensä aatelisten, papiston ja kaupunkien edustajat. Niissä käsiteltiin alueen yhteisiä asioita, kuten puolustusta, veroja ja lainsäädäntöä, ja ne olivat tapa sovittaa yhteen eri tahojen etuja. Valmierassa pidettiin useita maapäiviä [[Hansaliiton]] aikana, mikä kertoo kaupungin asemasta Liivinmaan keskuspaikkana. Täsmällisiä vuosia ja päätöksiä en ole varma, joten en nimeä niitä. Tällaisesta tulee mieleen kyyhkyjen parlamentti kaiteella, mut siinä ei päätetä mitään.",
+  "linkit": [
+   "Hansaliiton"
+  ],
+  "jatkot": [
+   "Keitä Liivinmaan säädyt olivat?",
+   "Miten Hansaliitto vaikutti Valmieran kehitykseen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lielvarde",
+  "kysymys": "Mitä symboleja Lielvārden vyön kuvioissa on, ja miksi ne kiinnostavat taiteilijoita?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. [[Lielvārden vyö]] on perinteinen kudottu vyö, jossa on 22 muinaista symbolia. Symbolit ovat geometrisia kuvioita, joita on tulkittu muun muassa auringon, kosmoksen, sään ja suojan merkeiksi; tarkkoja merkityksiä ei kuitenkaan tunneta varmasti, enkä halua luetella niitä arvaamalla. Kuviot ovat voimakkaita, selkeitä ja helposti toistettavia, minkä vuoksi ne sopivat taiteeseen, muotoiluun ja kansalliseen kuvastoon. Kuviointia on käytetty esimerkiksi Latvian [[seteleissä]]. Vyön muinaisuus ja tulkinnanvaraisuus lisäävät sen vetovoimaa, sillä jokainen katsoja voi lukea kuvioista oman tarinansa. Värejäkin kyl katsoisin pidempään.",
+  "linkit": [
+   "Lielvārden vyö",
+   "seteleissä"
+  ],
+  "jatkot": [
+   "Millaisia perinteisiä vöitä Latviassa kudotaan?",
+   "Kuka suunnitteli Latvian seteleitä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lielvarde",
+  "kysymys": "Mitä Henrikin Liivinmaan kronikka kertoo Lielvārden linnavuoresta?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. [[Henrikin Liivinmaan kronikka]] mainitsee Lielvārden paikalla olleen balttilaisen [[linnavuoren]] vuonna 1201. Linnavuori oli puolustettu asuinpaikka, jonka ympärillä seutu oli esihistoriallisena aikana liiviläisten ja balttien kohtaamisalue. Kronikka on tärkeä lähde Liivinmaan valloituksen ajalta, koska sen kirjoittaja oli itse mukana tapahtumissa. Myöhemmin, vuonna 1229, Riian hiippakunta rakennutti seudulle kivilinnan, jonka rauniot ovat yhä nähtävillä. Linnavuoresta tarkempia yksityiskohtia en ole varma, joten jätän ne pois. Siitä on kyl sata vuotta ja vähän päälle, mut kyyhky muistaa.",
+  "linkit": [
+   "Henrikin Liivinmaan kronikka",
+   "linnavuoren"
+  ],
+  "jatkot": [
+   "Kuka Henrik Liivinmaan kronikan kirjoitti?",
+   "Mitä linnavuori tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lielvarde",
+  "kysymys": "Kuka oli Andrejs Pumpurs ja mistä Lāčplēsis kertoo?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: [[Andrejs Pumpurs]] oli latvialainen runoilija, joka sai inspiraationsa Lielvārden seudusta ja kirjoitti 1800-luvun lopulla [[Lāčplēsis]]-eepoksen. Eepos kertoo sankarista, jonka nimi tarkoittaa karhunrepijää, ja se perustuu osin kansanperinteeseen sekä Pumpursin omaan runoilijan mielikuvitukseen. Sankari taistelee vihollisia vastaan ja puolustaa maataan, ja tarina on tullut tunnetuksi Latvian kansalliseepoksena. Teoksen tarkkaa vuotta ja yksityiskohtia en ole täysin varma, joten sanon vain suunnilleen. Aika vahva kaveri tuo karhunrepijä.",
+  "linkit": [
+   "Andrejs Pumpurs",
+   "Lāčplēsis"
+  ],
+  "jatkot": [
+   "Mikä on kansalliseepos?",
+   "Kuka oli runoilija Auseklis?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lielvarde",
+  "kysymys": "Mikä Riian hiippakunta oli?",
+  "uusi": true,
+  "vastaus": "Ai tota. [[Riian hiippakunta]] oli katolisen kirkon hallintoalue Liivinmaalla keskiajalla, ja sen perusti piispa Albert 1200-luvun alussa. Hiippakunta hallitsi osaa nykyisen Latvian alueesta, ja sen piispat toimivat sekä hengellisinä että maallisina johtajina. Se kilpaili vallasta Livonian ritarikunnan kanssa. Lielvārdessa hiippakunta rakennutti kivilinnan vuonna 1229. Myöhemmin Riian hiippakunta korotettiin arkkihiippakunnaksi, mutta tarkkaa vuotta en ole varma. Uskonpuhdistus ja Liivinmaan sota muuttivat tilanteen 1500-luvulla. Vahva vaikutus tuli ylhäältäkin katsottuna.",
+  "linkit": [
+   "Riian hiippakunta"
+  ],
+  "jatkot": [
+   "Kuka oli piispa Albert?",
+   "Milloin Riika perustettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lielvarde",
+  "kysymys": "Keitä liiviläiset ovat, ja onko heitä vielä olemassa?",
+  "uusi": true,
+  "vastaus": "Mmm— tää on kiva aihe. [[Liiviläiset]] ovat itämerensuomalainen kansa, jonka kieli on sukua suomelle ja virolle. Heitä asui keskiajalla nykyisen Latvian rannikolla ja Väinäjoen eli Daugavan suistossa, ja ajan mittaan he sulautuivat latvialaisiin. [[Liivin kieli]] on kuolemassa: viimeinen äidinkielenään puhunut ihminen kuoli 2010-luvulla, mutta joukko ihmisiä pitää yllä liiviläistä kulttuuria ja opettelee kieltä. Liiviläisten rannikko Kuurinmaan pohjoispäässä on suojeltu kulttuurialue. Tarkempia lukuja asukasmääristä en ole varma. Kyl pienelle kansalle löytyy suuri sydän.",
+  "linkit": [
+   "Liiviläiset",
+   "Liivin kieli"
+  ],
+  "jatkot": [
+   "Miten liivin kieli eroaa suomesta?",
+   "Mikä on Liiviläisrannikko?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-carnikava",
+  "kysymys": "Miksi nahkiainen on niin tärkeä Carnikavalle, että se on alueen vaakunassakin?",
+  "uusi": false,
+  "vastaus": "No jopas. Tämä on herkkua minunkin kaiteelleni. [[Nahkiainen]] on ollut Carnikavan pitkäaikainen erikoisuus, ja grillattuna se on paikallisen ruokaperinteen keskeinen osa. Sen kalastus ja valmistus ovat kuuluneet kylän arkeen, ja nahkiainen on alueen vaakunassa. Carnikavan nahkiaiselle on myönnetty [[EU:n suojattu maantieteellinen merkintä]], joka tunnustaa tuotteen sidoksen alueeseen. Kylä kasvoi kartanon ympärille kalastajakyläksi Gauja-joen suulle, mikä selittää kalan merkityksen. Tarkkoja lukuja saaliista en ole varma. Kyl se maistuis mulle, mut en ole koskaan uskaltanut.",
+  "linkit": [
+   "Nahkiainen",
+   "EU:n suojattu maantieteellinen merkintä"
+  ],
+  "jatkot": [
+   "Miten nahkiainen valmistetaan?",
+   "Missä muualla nahkiaista syödään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-carnikava",
+  "kysymys": "Mistä Carnikavan nimi voi olla peräisin?",
+  "uusi": false,
+  "vastaus": "Tuota niin. En ole varma. Carnikavan nimen alkuperästä ei ole minulla luotettavaa tietoa, eikä arvaaminen olisi hyvä idea. Varmaa on, että paikka mainitaan [[Henrikin Liivinmaan kronikassa]] jo vuonna 1211 liiviläisten joukkojen kokoontumispaikkana, joten nimi on todennäköisesti hyvin vanha. Alue kuului [[Gauja-joen]] suiston seutuun, jossa asui liiviläisiä, ja nimen taustalla voi olla vanhaa paikannimistöä; tästä en kuitenkaan voi sanoa varmaa. Paikallinen kielentutkija tai kotiseutumuseo osaisi vastata paremmin. Harmi, ois ollut komea tarina.",
+  "linkit": [
+   "Henrikin Liivinmaan kronikassa",
+   "Gauja-joen"
+  ],
+  "jatkot": [
+   "Mikä Gauja-joki on?",
+   "Keitä liiviläiset olivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-carnikava",
+  "kysymys": "Millainen kala nahkiainen on?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. [[Nahkiainen]] on pitkä, ankeriasmainen ja suomuton, leuaton kala, jonka suu on pyöreä ja imevä. Se on vanhaa kalamuotoa edustava laji: sillä ei ole leukoja eikä suomuja, ja sen kehittyminen alkaa jokiin laskeutuneena toukkana. Aikuisena lajit voivat elää jokien ja meren välillä, ja ne nousevat jokiin kutemaan. Nahkiaisten ravinto vaihtelee lajeittain, eivätkä kaikki lajit ime muiden kalojen verta. Suomessakin nahkiaista on syöty perinteisesti, esimerkiksi grillattuna. Tarkkaa lajia Carnikavassa en ole varma. Ei kauneuskilpailun voittaja, mut kyl se maistuu.",
+  "linkit": [
+   "Nahkiainen"
+  ],
+  "jatkot": [
+   "Miten nahkiainen kutee?",
+   "Mitä leuattomat kalat ovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-carnikava",
+  "kysymys": "Mitä EU:n suojattu maantieteellinen merkintä tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. [[Suojattu maantieteellinen merkintä]] on [[Euroopan unionin]] laatumerkki, jolla suojataan tuotteen nimeä, kun tuote liittyy tiettyyn alueeseen. Tuotteen jokin vaihe, esimerkiksi tuotanto tai valmistus, tapahtuu kyseisellä alueella, ja tuotteen maine tai ominaisuudet liittyvät alueeseen. Merkintä estää tuotteen nimen käyttämisen vääriin tuotteisiin. Carnikavan nahkiaisella on tällainen merkintä. Täsmällisiä vaatimuksia ei tässä kannata arvailla, joten jätän ne pois. Aika hieno titteli kalalle.",
+  "linkit": [
+   "Suojattu maantieteellinen merkintä",
+   "Euroopan unionin"
+  ],
+  "jatkot": [
+   "Mitä muita tuotteita EU suojaa nimillä?",
+   "Mikä on alkuperänimitys?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-carnikava",
+  "kysymys": "Missä Gauja-joki virtaa ja minne se laskee?",
+  "uusi": true,
+  "vastaus": "Kas vaan. [[Gauja]] on joki, joka virtaa Latvian koillisosassa Vidzemen alueella. Se kulkee muun muassa Valmieran kaupungin kautta, ja sen laaksossa on kansallispuisto, jossa on jyrkkiä rantakallioita ja metsiä. Joki laskee lopulta Riianlahteen Carnikavan kohdalla, joka sijaitsee noin 25 kilometriä Riiasta pohjoiseen. Gaujan suulla kylä kasvoi kalastajakyläksi, ja joen varrella on historiallisia linnoja. Joen pituutta en ole varma, joten jätän sen pois. Ylhäältä mutka näyttää aina mukavalta.",
+  "linkit": [
+   "Gauja"
+  ],
+  "jatkot": [
+   "Mikä Gaujan kansallispuisto on?",
+   "Millainen kaupunki Valmiera on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ainazi",
+  "kysymys": "Miksi Ainaži oli hyvä paikka laivanrakennukselle?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Ainaži sijaitsee Riianlahden rannalla, joten merelle pääsi suoraan, ja laivanrakennus kasvoi 1870-luvulla voimakkaasti. Rakennuspuuta tarjosivat [[Vidzemen]] ja [[Kuurinmaan]] mäntymetsät, ja satama oli lähellä raaka-ainetta. Alueen merenkulkuperinteeseen liittyi myös [[Ainažin merikoulu]], jonka Krišjānis Valdemārs rahoitti vuonna 1864; se koulutti nuoria virolaisia ja latvialaisia talonpoikia laivanpäälliköiksi maksutta. Vanha liiviläinen kalastajakylä oli siis kasvanut merenkulun keskukseksi. Tarkkoja laivamääriä en ole varma, joten niistä ei kannata luvata mitään. Merelle katsoessa tekis mieli lentää.",
+  "linkit": [
+   "Vidzemen",
+   "Kuurinmaan",
+   "Ainažin merikoulu"
+  ],
+  "jatkot": [
+   "Mikä Ainažin merikoulu oli?",
+   "Mikä on Riianlahti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ainazi",
+  "kysymys": "Mitä Ainažin nimi voi tarkoittaa?",
+  "uusi": false,
+  "vastaus": "Tuota niin. En ole varma. Ainažin nimen merkityksestä ei ole luotettavaa tietoa minulla, eikä arvaus olisi hyvä. Tiedän, että paikalla oli vanha liiviläinen kalastajakylä, joka mainitaan ensimmäisen kerran vuonna 1564, ja että kaupungin virolainen nimi on Heinaste. Nimen taustalla voi olla liiviläistä paikannimistöä, mutta se on pelkkä mahdollisuus, ei tieto. Paikallinen kielentutkija tai merikoulun museo voisi osata vastata. Harmi, ois ollut kiva selittää.",
+  "linkit": [],
+  "jatkot": [
+   "Keitä liiviläiset ovat?",
+   "Miten Ainaži on kehittynyt vuosien mittaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ainazi",
+  "kysymys": "Kuka oli Krišjānis Valdemārs?",
+  "uusi": true,
+  "vastaus": "No niin. Krišjānis Valdemārs eli 1800-luvulla ja oli latvialainen kirjailija, toimittaja ja kansallisen heräämisen johtohahmo, joka kuului [[nuorlatvialaisten]] liikkeeseen. Hän ajoi latvian kielen ja kulttuurin asemaa sekä merenkulun kehittämistä, koska piti sitä keinona nostaa talonpoikien asemaa. Vuonna 1864 hän rahoitti Ainažin merikoulun, joka koulutti nuoria talonpoikia laivanpäälliköiksi maksutta. Tarkkoja syntymä- ja kuolinvuosia en ole varma, joten jätän ne mainitsematta. Koulun ansiosta Ainaži tunnetaan yhä merenkulun historiassa. Isoja asioita yhdeltä ihmiseltä, mut tarina on tosi.",
+  "linkit": [
+   "nuorlatvialaisten"
+  ],
+  "jatkot": [
+   "Mikä oli nuorlatvialaisten liike?",
+   "Miten talonpojat pääsivät laivanpäälliköiksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ainazi",
+  "kysymys": "Mikä Riianlahti on ja missä se sijaitsee?",
+  "uusi": true,
+  "vastaus": "Katotaas. [[Riianlahti]] on Itämeren lahti, jonka rannoilla ovat Latvia ja Viro. Sen suuta rajaavat [[Saaremaa]] ja muut Viron saaret, ja siihen laskevat muun muassa Väinäjoki eli Daugava sekä Gauja. Lahti on suhteellisen matala ja sen suolaisuus on pienempi kuin valtameressä, ja talvella se voi jäätyä. Rannalla sijaitsevat Riika, Ainaži ja Carnikava. Tarkkoja syvyyksiä tai pinta-aloja en ole varma. Näkymä on ylhäältä mukavan harmaa, mut kyl se kuuluu kyyhkyn reviiriin.",
+  "linkit": [
+   "Riianlahti",
+   "Saaremaa"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Riika on?",
+   "Miksi Itämeren suolaisuus on pieni?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ainazi",
+  "kysymys": "Mitä eroa on kuunarilla ja briikillä?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. [[Kuunari]] on purjealus, jossa on kaksi tai useampi masto ja pääosin pitkittäispurjeet, jotka asettuvat aluksen suuntaisesti. [[Briikki]] taas on kaksimastoinen alus, jossa on pääosin poikittaispurjeet eli ristipurjeet. Pitkittäispurjeiden vuoksi kuunari kulkee yleensä hyvin tuulta vasten, kun taas ristipurjeet sopivat tuulen takana purjehtimiseen. Molempia tyyppejä rakennettiin ja käytettiin 1800-luvulla Itämerellä ja muualla. Yksityiskohdat vaihtelivat alusten mukaan, enkä ole varma, millaisia alukset olivat Ainažissa. Purjeet kyl kutkuttaa siipiä.",
+  "linkit": [
+   "Kuunari",
+   "Briikki"
+  ],
+  "jatkot": [
+   "Mitä ristipurjeet ovat?",
+   "Miten purjelaiva liikkuu vastatuuleen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pape",
+  "kysymys": "Miksi Papeen tuotiin Heck-nautoja, konikhevosia ja visenttejä?",
+  "uusi": false,
+  "vastaus": "Kas vaan, laiduntajia. Hyvä kysymys tuo. Papeen tuotiin vuonna 1999 [[Heck-nautoja]] ja [[konikhevosia]] sekä muutamaa vuotta myöhemmin [[visenttejä]], jotta alueelle saataisiin takaisin suurten kasvinsyöjien luontainen vaikutus. Laiduntavat eläimet syövät ja tallaavat ruohoa, pensaita ja vesakkoa, jolloin kosteikot ja niityt pysyvät avoimina eivätkä umpeudu metsäksi. Avoin ja vaihteleva maasto sopii monille linnuille ja kasveille, ja laiduntajat tekevät hoitotyön ilman koneita. Eläinlajit muistuttavat Euroopan luonnon alkuperäisiä suurnisäkkäitä: Heck-nautaa on jalostettu muistuttamaan sukupuuttoon kuollutta alkuhärkää, konik on puolalaista alkuperää oleva hevosrotu ja visentti on Euroopassa luontaisesti elänyt suurnisäkäs. Näiden ansiosta Papen nisäkaslajisto on nykyään lähes täydellinen. No olipas siin pitkä laidun.",
+  "linkit": [
+   "Heck-nautoja",
+   "konikhevosia",
+   "visenttejä"
+  ],
+  "jatkot": [
+   "Miksi visentti oli sukupuuton partaalla?",
+   "Mikä on alkuhärkä ja miksi Heck-nautaa jalostettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pape",
+  "kysymys": "Miksi Papen alue on tärkeä muuttolinnuille?",
+  "uusi": false,
+  "vastaus": "Mmm— tää on lähellä sydäntä, kun puhutaan siivekkäistä. Pape sijaitsee Latvian lounaisosassa [[Itämeren]] rannikon tuntumassa, ja alueen keskellä on [[Papen järvi]], matala ja laguunityyppinen vesistö, jota ympäröivät suot, soistuneet metsät ja dyynit. Tällainen vaihteleva kosteikkomaisema tarjoaa pesiville linnuille suojaisia pesimäpaikkoja ja muuttaville linnuille ravintoa sekä lepopaikan pitkän lennon aikana. Itämeren itärannikko on [[muuttolintujen]] käyttämää reittiä, ja Pape perustettiin luonnonpuistoksi vuonna 2003 nimenomaan pesivien ja muuttavien lintujen suojelemiseksi. Joka syksy alueella levähtää noin 50 000 lintua. Siel on kyl ruuhkaa syksyisin.",
+  "linkit": [
+   "Itämeren",
+   "Papen järvi",
+   "muuttolintujen"
+  ],
+  "jatkot": [
+   "Mitä tarkoittaa laguuni ja miten sellainen syntyy?",
+   "Miksi linnut muuttavat syksyisin etelään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pape",
+  "kysymys": "Mikä on dyyni ja miten se syntyy?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Dyyni on tuulen kasaama hiekkakumpu. Se syntyy, kun tuuli kuljettaa kuivaa hiekkaa rannalta sisämaahan päin ja hiekka pysähtyy esteen, esimerkiksi kasvin tai kiven taakse, ja alkaa kasautua. Kasvillisuus on tärkeä osa tapahtumaa, sillä juurakot ja varret sitovat hiekkaa ja antavat dyynille mahdollisuuden kasvaa korkeammaksi. Ajan mittaan dyynille voi alkaa kasvaa heinää, [[kanervaa]] ja lopulta puita, jolloin kumpu vakiintuu. Jos kasvillisuus katoaa, tuuli voi taas siirrellä hiekkaa ja dyyni vaeltaa. [[Papen luonnonpuiston]] dyynit ovat osa [[rannikkoluontoa]], jossa kosteat suot ja kuivat hiekkamaat vaihtelevat lähekkäin.\n\nDyynin harjalta näkee kauas, mutta tuuli yrittää viedä kyyhkyn mukanaan. Minä kokeilin kerran ja päädyin kolme kilometriä väärään suuntaan.",
+  "linkit": [
+   "kanervaa",
+   "Papen luonnonpuiston",
+   "rannikkoluontoa"
+  ],
+  "jatkot": [
+   "Miksi rannikon dyynejä suojellaan?",
+   "Mitkä eläimet viihtyvät dyyneillä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pape",
+  "kysymys": "Miten suo syntyy ja miksi soita suojellaan?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Tää on kosteikkoaiheista. Suo syntyy paikkaan, jossa maa on märkää niin pitkään, että kuolleet kasvit eivät ehdi hajota kokonaan. Vähähappisessa vedessä kasvijäte kerääntyy kerros kerrokselta [[turpeeksi]], ja tuhansien vuosien kuluessa syntyy paksu turvekerros. Soita suojellaan, koska ne ovat monien harvinaisten kasvien, hyönteisten ja lintujen elinympäristöjä ja koska ne tasaavat vesiä: suo sitoo sadevettä kuin sieni ja vapauttaa sen hitaasti. Turve sisältää myös suuren määrän [[hiiltä]], jota ojitettu ja kuivatettu suo päästää ilmaan. Papen alueella suot ja soistuneet metsät ovat osa luonnonpuiston kokonaisuutta. Märkä aihe, mut kyl se kuivasti meni.",
+  "linkit": [
+   "turpeeksi",
+   "hiiltä"
+  ],
+  "jatkot": [
+   "Miten ojitus muuttaa suon luontoa?",
+   "Mitä lintuja soilla pesii?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pape",
+  "kysymys": "Mikä Liepāja on ja missä se sijaitsee?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Liepāja on Latvian länsirannikon satamakaupunki Itämeren rannalla, noin viidentoista kilometrin päässä Papen luonnonpuistosta pohjoiseen. Se on yksi Latvian suurimmista kaupungeista, ja sillä on pitkä ja leveä hiekkaranta. Kaupunkia kutsutaan usein tuulten kaupungiksi, ja meri vaikuttaa sen ilmastoon. Kaupunginosa [[Karosta]] on entinen sotasatama, jossa on säilynyt laajoja sotilasrakennuksia. Tuulessa lentäminen on kyl sukuammattini.",
+  "linkit": [
+   "Karosta"
+  ],
+  "jatkot": [
+   "Mikä Karosta on ja miksi se on tunnettu?",
+   "Millainen ilmasto Latvian rannikolla on?"
+  ],
+  "paikka": {
+   "nimi": "Liepāja",
+   "lat": 56.51,
+   "lon": 21.01,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-bauska",
+  "kysymys": "Miksi linna rakennettiin juuri kahden joen yhtymäkohtaan?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Bauskan linna rakennettiin vuosina 1443–1450 [[Mūsan]] ja [[Mēmelen]] jokien yhtymäkohtaan kohoavalle niemekkeelle. Kahden joen välinen niemeke on yleensä helposti puolustettava, koska vesi suojaa sitä useammalta sivulta. Samalla paikka oli luonteva kohta valvoa liikennettä, sillä linna vartioi kauppareittiä Liettuasta Riikaan. Paikalla oli jo aiemmin ollut semigallialainen linnavuori, mikä kertoo, että paikka oli puolustettavaksi sopiva jo ennen ritarikuntaa. Linna vahvisti [[Liivinmaan ritarikunnan]] valtaa Semgallian alueella. Joki on kyyhkyllekin hyvä maamerkki.",
+  "linkit": [
+   "Mūsan",
+   "Mēmelen",
+   "Liivinmaan ritarikunnan"
+  ],
+  "jatkot": [
+   "Mikä oli Liivinmaan ritarikunta?",
+   "Miten keskiaikaisia linnoja puolustettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bauska",
+  "kysymys": "Mitä linnalle tapahtui Ison Pohjan sodassa?",
+  "uusi": false,
+  "vastaus": "No jopas. Kyllä rauniot kertovat omaa kieltään. Vuonna 1706 sodan aikana perääntyvät venäläisjoukot räjäyttivät sekä keskiaikaisen linnan että herttuoiden palatsin. Sota päättyi vasta vuonna 1721, ja Bauska kuului tuolloin [[Kuurinmaan ja Semgallian herttuakunnan]] alueeseen. Räjäytys jätti rakennukset raunioiksi, eikä niitä korjattu yli 150 vuoteen. [[Restaurointia]] on tehty 1990-luvulta alkaen, ja nykyään kunnostettu palatsiosa toimii museona, kun taas keskiaikaisesta linnasta on jäljellä vain rauniot. Onpas siit onneksi jo pitkä aika.",
+  "linkit": [
+   "Kuurinmaan ja Semgallian herttuakunnan",
+   "Restaurointia"
+  ],
+  "jatkot": [
+   "Mikä oli Kuurinmaan ja Semgallian herttuakunta?",
+   "Miten raunioita restauroidaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bauska",
+  "kysymys": "Keitä semgallit olivat?",
+  "uusi": true,
+  "vastaus": "Ai tota. Semgallit olivat [[balttilaisiin heimoihin]] kuuluva kansa, joka asui nykyisen Etelä-Latvian ja Pohjois-Liettuan alueilla. Heidän alueensa nimi on latviaksi [[Zemgale]], ja heimon nimi elää yhä alueen nimessä. Semgallit tunnettiin linnavuorista, joita ympäröivät puolustusvallit; Bauskan niemekkeellä oli sellainen ennen keskiaikaista linnaa. Heimo vastusti ristiretkiaikaisia valloittajia vuosikymmenien ajan, mutta joutui lopulta 1200-luvun lopulla [[Liivinmaan ritarikunnan]] vallan alle. Osa semgalleista siirtyi Liettuaan ja osa sulautui latvialaisiin.\n\nVanhat linnavuoret erottuvat maisemasta vieläkin, ja minä katson niitä aina vähän pidempään. Ne ovat kuin maan oma muistikirja.",
+  "linkit": [
+   "balttilaisiin heimoihin",
+   "Zemgale",
+   "Liivinmaan ritarikunnan"
+  ],
+  "jatkot": [
+   "Mitkä ovat balttilaiset kielet?",
+   "Mitä linnavuori tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bauska",
+  "kysymys": "Mitä tarkoittaa renessanssi arkkitehtuurissa?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Renessanssi tarkoittaa arkkitehtuurissa tyyliä, joka syntyi [[Firenzessä]] 1400-luvulla ja palasi [[antiikin]] Rooman ja Kreikan esikuviin. Tyylille ovat ominaisia symmetria, selkeät mittasuhteet, pylväät, pyöreät kaaret ja kupolit. Rakennuksen osat suunniteltiin suhteessa toisiinsa ja ihmisen mittakaavaan, eikä enää [[gotiikan]] korkeuteen pyrkivien holvien ja suippokaarien mukaan. Tyyli levisi Italiasta pohjoiseen vähitellen, ja Pohjois-Euroopassa se näkyi usein vanhojen linnojen uusina siipinä ja palatseina 1500-luvun lopulta alkaen. Roomalaiset sukulaiseni olisivat varmasti ylpeitä.",
+  "linkit": [
+   "Firenzessä",
+   "antiikin",
+   "gotiikan"
+  ],
+  "jatkot": [
+   "Mitä eroa on gotiikalla ja renessanssilla?",
+   "Mitkä ovat tunnetuimpia renessanssirakennuksia Euroopassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bauska",
+  "kysymys": "Miksi Riika oli keskiajalla tärkeä kauppakaupunki?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Riika perustettiin 1200-luvun alussa [[Väinäjoen]] suulle, ja paikka oli kaupankäynnille erinomainen: joki avasi reitin kauas sisämaahan ja joen suulla oli satama Itämerelle. Keskiajalla kaupunki kuului [[Hansaliittoon]], pohjoiseurooppalaisten kauppakaupunkien yhteenliittymään, ja sen kautta kulki sisämaan tuotteita merelle ja meren tuotteita sisämaahan. Samalla Riika oli myös [[Liivinmaan ritarikunnan]] ja kirkon tärkeä keskus. Satamissa on kyl aina parhaat leipomot.",
+  "linkit": [
+   "Väinäjoen",
+   "Hansaliittoon",
+   "Liivinmaan ritarikunnan"
+  ],
+  "jatkot": [
+   "Mikä oli Hansaliitto ja ketkä siihen kuuluivat?",
+   "Miksi Riian vanhakaupunki on maailmanperintökohde?"
+  ]
+ },
+ {
+  "kohde": "nosto:ventas-rumba",
+  "kysymys": "Miten kala voi hypätä vesiputouksen yli?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Kalat ovat aika taitavia akrobaatteja. [[Lohi]] ja monet muut vaelluskalat nousevat jokiin kutemaan, ja matkalla on usein koski tai pato. Kala kerää ensin vauhtia syvästä kuopasta putouksen alapuolella ja potkaisee itsensä pyrstön voimakkaalla lyönnillä vedestä ilmaan. Parin metrin korkuinen este on lohelle mahdollinen, vaikka useampi yritys voi vaatia aikansa. Kuldīgan [[Venta-joen]] putousta kutsutaan latviaksi nimellä [[Ventas rumba]], ja [[herttua Jaakobin]] ajalta kerrotaan, että kaupunki tunnettiin lohesta, joka pyydettiin ilmasta pajukoreihin. Hyppy on lihasvoimaa ja ajoitusta, ja veden nopeus ja syvyys ratkaisevat paljon. Minä lennän vain yli, mutta arvostan.",
+  "linkit": [
+   "Lohi",
+   "Venta-joen",
+   "Ventas rumba",
+   "herttua Jaakobin"
+  ],
+  "jatkot": [
+   "Miksi lohi palaa kutemaan syntymäjokeensa?",
+   "Miten kalaportaat auttavat kaloja ohittamaan padon?"
+  ]
+ },
+ {
+  "kohde": "nosto:ventas-rumba",
+  "kysymys": "Miksi juuri Kuldīgaan rakennettiin telakoita?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Herttua Jaakobin hallituskaudella 1642–1682 Kuldīgaan rakennettiin telakoita, salpietaritehdas ja tiilitehtaita, ja kaupunki oli [[Kuurinmaan herttuakunnan]] tärkeitä keskuksia. Herttua Jaakob pyrki kehittämään herttuakunnan taloutta ja kauppalaivastoa, joten telakoille oli tarvetta. Tarkkoja syitä paikan valintaan ei ole helppo todentaa, mutta Kuldīgassa oli sopivat edellytykset: [[Venta-joki]] toimi kulkureittinä kohti [[Itämerta]], ja ympäristössä oli runsaasti metsää rakennuspuuksi. Telakka kosken kupeessa kuulostaa kyl uskaliaalta.",
+  "linkit": [
+   "Kuurinmaan herttuakunnan",
+   "Venta-joki",
+   "Itämerta"
+  ],
+  "jatkot": [
+   "Mikä Kuurinmaan herttuakunta oli?",
+   "Mitä salpietari on ja mihin sitä käytettiin?"
+  ]
+ },
+ {
+  "kohde": "nosto:ventas-rumba",
+  "kysymys": "Miksi tiilisilta on yhä pystyssä sadanviidenkymmenen vuoden jälkeen?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Kuldīgan tiilinen [[kaarisilta]] [[Venta-joen]] yli on peräisin 1800-luvun lopulta, ja sen kestävyyden taustalla on useita tekijöitä. Kaarirakenne ohjaa kuorman tiilissä puristukseksi, jota tiili kestää erittäin hyvin. Tiili ja [[kalkkilaasti]] ovat kosteutta kestäviä materiaaleja, kun ne on valmistettu huolellisesti. Pitkä käyttöikä edellyttää kuitenkin myös kunnossapitoa. Perustusten ja muiden yksityiskohtien osalta en ole varma, mutta kaarisillan perusperiaate selittää paljon. Sata viisikymmentä vuotta on kyyhkylle ikuisuus.",
+  "linkit": [
+   "kaarisilta",
+   "Venta-joen",
+   "kalkkilaasti"
+  ],
+  "jatkot": [
+   "Miten tiilet valmistetaan ja miksi ne kestävät?",
+   "Miten kaarisilta rakennetaan?"
+  ]
+ },
+ {
+  "kohde": "nosto:ventas-rumba",
+  "kysymys": "Millainen kala vimpa on?",
+  "uusi": true,
+  "vastaus": "Kato, tuttu kala. Vimpa on karppikaloihin kuuluva, hopeanharmaa ja hieman litteä kala, jonka tuntee kuonon muodosta: kuono työntyy suun yli nokkamaisena. Sitä tavataan [[Itämeren]] rannikkovesissä ja joissa, ja kutuaikana vimpa nousee jokiin kutemaan, usein alkukesällä. Kalaa on pyydetty ruoaksi sekä tuoreena että savustettuna ja suolattuna. Vimpa on herkkä veden laadulle ja jokien padotuksille, sillä padot haittaavat vaelluskalojen nousua. Kutuajan pyyntirajoitukset suojaavat kantaa.\n\nMinulla on itselläni hyvä nokka, mutta vimpan nokka on rehellisesti sanottuna omaa luokkaansa.",
+  "linkit": [
+   "Itämeren"
+  ],
+  "jatkot": [
+   "Miksi vaelluskalat nousevat jokiin kutemaan?",
+   "Miten vimpaa valmistetaan ruoaksi?"
+  ]
+ },
+ {
+  "kohde": "nosto:ventas-rumba",
+  "kysymys": "Mikä on Latvian laulujuhla ja kuinka usein se järjestetään?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Latvian laulujuhla, latviaksi [[Dziesmu svētki]], on suuri kuoro- ja tanssijuhla, jossa tuhannet laulajat kokoontuvat yhdessä esiintymään. Ensimmäiset latvialaiset laulujuhlat pidettiin Riiassa vuonna 1873, ja perinne on pysynyt elossa yli sadan viidenkymmenen vuoden ajan. Juhlia järjestetään perinteisesti noin viiden vuoden välein, ja lisäksi nuorille on omat juhlansa. Nykyään pääpaikka on Riian [[Mežaparksin]] laulukenttä. Baltian laulu- ja tanssijuhlaperinne kuuluu [[UNESCOn]] aineettoman kulttuuriperinnön luetteloon, ja juhlilla on ollut tärkeä rooli latvialaisen identiteetin säilymisessä. Minä kuuntelen kyl mieluummin kaiteelta kuin lavalta.",
+  "linkit": [
+   "Dziesmu svētki",
+   "Mežaparksin",
+   "UNESCOn"
+  ],
+  "jatkot": [
+   "Mikä oli Baltian laulava vallankumous?",
+   "Miksi laulu on ollut latvialaisille niin tärkeää?"
+  ]
+ },
+ {
+  "kohde": "nosto:kolkasrags",
+  "kysymys": "Miksi aallot tulevat Kolkan kärjessä kahdesta suunnasta?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Kolkan niemi on Kuurinmaan niemimaan luoteiskärki, jonka toisella puolella on [[Itämeren]] avoin selkä ja toisella [[Riianlahden]] vesi. Aallot syntyvät tuulesta, ja tuulet puhaltavat eri suunnista, joten kummallakin puolella on omat aallokkonsa. Kun aallot lähestyvät niemeä, ne taittuvat ja kääntyvät matalikkoa kohti, ja niemen kärjen kohdalla kaksi aallokkoa kohtaavat toisensa, jolloin syntyy ristiaallokko. Veden alla jatkuva matalikko vaikuttaa asiaan, koska aallot taipuvat ja hidastuvat matalassa vedessä. Niemi sijaitsee [[Slīteren kansallispuistossa]], ja sen muoto muuttuu jatkuvasti, koska hiekka liikkuu. Ei kyl ihme, että meri näyttää siel levottomalta.",
+  "linkit": [
+   "Itämeren",
+   "Riianlahden",
+   "Slīteren kansallispuistossa"
+  ],
+  "jatkot": [
+   "Mikä on ristiaallokko ja miksi se on vaarallista?",
+   "Miten hiekka kulkeutuu rannikkoa pitkin?"
+  ]
+ },
+ {
+  "kohde": "nosto:kolkasrags",
+  "kysymys": "Mille kielille liivi on sukua?",
+  "uusi": false,
+  "vastaus": "Ai se. Liivi kuuluu [[uralilaisiin kieliin]], ja tarkemmin sanottuna [[itämerensuomalaisten kielten]] ryhmään, johon kuuluvat myös suomi, [[viron]] kieli, karjala ja muut lähikielet. Liivi on siis suomen ja viron sukukieli. Kielitieteessä sen tarkka asema sukupuussa on monimutkainen, mutta läheisimpänä sukulaisena pidetään usein viroa. Uralilaiseen kieliperheeseen kuuluu kauempana myös [[unkarin]] kieli. Liivi on elänyt vuosisatoja latvian vieressä ja lainannut siitä paljon sanastoa. Kielisuku on kaukainen, mut kürtőskalács on lähellä sydäntä.",
+  "linkit": [
+   "uralilaisiin kieliin",
+   "itämerensuomalaisten kielten",
+   "viron",
+   "unkarin"
+  ],
+  "jatkot": [
+   "Mitä kieliä uralilaiseen kieliperheeseen kuuluu?",
+   "Miksi suomi ja viro ymmärtävät toisiaan osittain?"
+  ]
+ },
+ {
+  "kohde": "nosto:kolkasrags",
+  "kysymys": "Voiko kielen elvyttää sen jälkeen, kun viimeinen puhuja on kuollut?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Kielen elvyttäminen on mahdollista, mutta se vaatii paljon työtä, koska kielen pitää saada uusia puhujia, jotka käyttävät sitä oikeasti. Euroopasta on esimerkkejä: [[kornin]] kieli Cornwallissa ja [[manxin]] kieli Mansaarella olivat lakanneet olemasta yhteisön arkikieliä, mutta harrastajat ja opettajat ovat elvyttäneet niitä, ja niitä opiskellaan ja puhutaan nykyisin uudelleen. [[Liivin]] kielen viimeinen äidinkielinen puhuja kuoli vuonna 2013, mutta kieltä opetetaan ja sitä opiskelevia on, ja liivinsukuiset yhteisöt Latviassa pitävät perinnettä elossa. Elvytetty kieli ei ole täsmälleen samanlainen kuin ennen: sanasto ja ääntäminen perustuvat usein kirjallisiin lähteisiin ja nauhoituksiin, ja kielen pysyvyys riippuu siitä, siirtyykö se lapsille. Toivoa siis on, vaikka tie on pitkä.",
+  "linkit": [
+   "kornin",
+   "manxin",
+   "Liivin"
+  ],
+  "jatkot": [
+   "Miten liivin kieltä opetetaan tänä päivänä?",
+   "Mitkä kielet ovat uhanalaisia Euroopassa?"
+  ]
+ },
+ {
+  "kohde": "nosto:kolkasrags",
+  "kysymys": "Miten merivirta kuljettaa hiekkaa pitkin rantaa?",
+  "uusi": true,
+  "vastaus": "Katotaas. Hiekan kulkeutuminen rannikkoa pitkin johtuu siitä, että aallot saapuvat rantaan harvoin täsmälleen suoraan. Kun aalto tulee vinosti, se työntää hiekkaa ylös rantaan samaan suuntaan kuin se itse etenee, mutta paluuvirtaus vetää hiekkaa takaisin suoraan alas rinnettä. Siten hiekkajyvät etenevät rannalla siksak-liikkeenä, ja pitkän ajan kuluessa suuret määrät hiekkaa siirtyvät rantaa pitkin. Niemen kaltaisissa paikoissa tämä kasaa [[hiekkasärkkiä]] ja kasvattaa niemeä, koska kulkeutuva hiekka pysähtyy kohtaan, jossa virta heikkenee. Ihmisen rakentamat [[aallonmurtajat]] ja laiturit katkaisevat kulkeutumisen, jolloin hiekka kasaantuu rakenteen toiselle puolelle ja toinen puoli alkaa kulua.\n\nYlhäältä katsottuna hiekkasärkät näyttävät piirretyiltä viivoilta, ja nyt tiedän, miksi ne muuttuvat.",
+  "linkit": [
+   "hiekkasärkkiä",
+   "aallonmurtajat"
+  ],
+  "jatkot": [
+   "Miten aallonmurtajat vaikuttavat rannan muotoon?",
+   "Miksi jotkin rannat kuluvat ja toiset kasvavat?"
+  ]
+ },
+ {
+  "kohde": "nosto:kolkasrags",
+  "kysymys": "Millä Liivinrannan asukkaat ovat perinteisesti eläneet?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Liivinrannan kylissä perinteinen elinkeino on ollut kalastus. Meri oli tärkeä ravinnonlähde: kalastajat pyydystivät kalaa [[Itämereltä]] ja [[Riianlahdelta]], ja kalaa suolattiin, savustettiin ja kuivattiin. Rannikkokylät elivät myös merenkulusta ja pienimuotoisesta maanviljelystä, vaikka hiekkamaa ei antanut suuria satoja. Nykyisin kalastus on vähentynyt, ja kylissä elinkeinot liittyvät usein matkailuun ja perinteen vaalimiseen. [[Liivinrannan]] suojelu ja kulttuuriperintö kiinnostavat vierailijoita. Kalaa kalaa, mut pullasta ei kukaan kysy.",
+  "linkit": [
+   "Itämereltä",
+   "Riianlahdelta",
+   "Liivinrannan"
+  ],
+  "jatkot": [
+   "Miten kalat savustetaan perinteisesti?",
+   "Miten liiviläiset pitävät perinteitään yllä nykyään?"
+  ]
+ }
+]
