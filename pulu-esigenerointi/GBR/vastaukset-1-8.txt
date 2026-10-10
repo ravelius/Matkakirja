@@ -1,6 +1,6 @@
 ### 36.1
 KYSYMYS: Miksi Canaletto muutti Venetsiasta Lontooseen juuri 1746?
-Kato, tost minä kuulin jo Venetsian laiturilla. Yleisesti esitetyn selityksen mukaan syynä oli, että Itävallan perimyssota vähensi englantilaisten vierailijoiden määrää Italiassa, ja juuri he olivat olleet Canalettolle tärkeimpiä ostajia. Hän siirtyi siksi seuraamaan asiakkaitaan kotisaarelle ja asui Lontoossa noin yhdeksän vuotta. En ole varma, kuinka suuri osa päätöksestä oli rahaa ja kuinka suuri osa uteliaisuutta uutta kaupunkia kohtaan. Mutta kyllä kyyhky ymmärtää, että leipä seuraa sinne, missä asiakkaat ovat.
+Kato, tost minä kuulin jo [[Venetsian]] laiturilla. Yleisesti esitetyn selityksen mukaan syynä oli, että [[Itävallan perimyssota]] vähensi englantilaisten vierailijoiden määrää [[Italiassa]], ja juuri he olivat olleet Canalettolle tärkeimpiä ostajia. Hän siirtyi siksi seuraamaan asiakkaitaan kotisaarelle ja asui Lontoossa noin yhdeksän vuotta. En ole varma, kuinka suuri osa päätöksestä oli rahaa ja kuinka suuri osa uteliaisuutta uutta kaupunkia kohtaan. Mutta kyllä kyyhky ymmärtää, että leipä seuraa sinne, missä asiakkaat ovat.
 JATKOT:
 Mitä Canaletto maalasi Lontoossa?
 Mikä on Itävallan perimyssota?
@@ -37,7 +37,7 @@ Mitä joen rannalta voi löytää laskuveden aikaan?
 
 ### 37.1
 KYSYMYS: Miltä näytelmän katsominen majatalon parvelta tuntui?
-Annas ku mietin. Majatalon pihalla näytelmä esitettiin yleensä pihan toiseen päähän pystytetyltä lavalta, ja sivuilla kiertävien parvekekäytävien katsojat näkivät esityksen ylhäältä, suojassa sateelta ja kauempana pihalla seisovasta joukosta. Esityksen seuraaminen oli melko lähellä, mutta myös äänekästä, sillä alapihalla olivat muut katsojat, eläimet ja tarjoilijat. Tarkkaa tunnelmaa on vaikea tietää, koska kuvaukset ovat harvassa, enkä halua keksiä niitä. Mutta aika hyvä paikka siinä olisi ollut myös kyyhkylle.
+Annas ku mietin. [[Shakespearen]] aikaan [[Lontoon]] majatalon pihalla näytelmä esitettiin yleensä pihan toiseen päähän pystytetyltä lavalta, ja sivuilla kiertävien parvekekäytävien katsojat näkivät esityksen ylhäältä, suojassa sateelta ja kauempana pihalla seisovasta joukosta. Esityksen seuraaminen oli melko lähellä, mutta myös äänekästä, sillä alapihalla olivat muut katsojat, eläimet ja tarjoilijat. Tarkkaa tunnelmaa on vaikea tietää, koska kuvaukset ovat harvassa, enkä halua keksiä niitä. Mutta aika hyvä paikka siinä olisi ollut myös kyyhkylle.
 JATKOT:
 Miten näytelmiä esitettiin Shakespearen aikaan?
 Mikä on The Globe -teatteri?
@@ -58,14 +58,14 @@ Miksi Dickens kuvasi velkavankiloita kirjoissaan?
 
 ### 37.4
 KYSYMYS: Mikä National Trust on ja mitä se omistaa?
-Kas vaan, tämän kyyhky tuntee. [[National Trust]] on Britannian hyväntekeväisyysjärjestö, joka perustettiin 1800-luvun lopulla suojelemaan historiallisia rakennuksia, puutarhoja ja luonnonmaisemia yleisön käyttöön. Se omistaa suuren määrän kartanoita, linnoja, rannikkoalueita ja maaseutua eri puolilla Englantia, Walesia ja Pohjois-Irlantia, ja sen toimintaa rahoittavat jäsenmaksut ja lahjoitukset. Skotlannissa vastaava järjestö on erillinen. Tarkkoja lukuja en uskalla kirjoittaa muistista, mutta mittakaava on valtava. Eikä yksikään niistä tilaa minulta pullaa teehuoneeseen.
+Kas vaan, tämän kyyhky tuntee. National Trust on Britannian hyväntekeväisyysjärjestö, joka perustettiin 1800-luvun lopulla suojelemaan historiallisia rakennuksia, puutarhoja ja luonnonmaisemia yleisön käyttöön. Se omistaa suuren määrän kartanoita, linnoja, rannikkoalueita ja maaseutua eri puolilla [[Englantia]], [[Walesia]] ja [[Pohjois-Irlantia]], ja sen toimintaa rahoittavat jäsenmaksut ja lahjoitukset. [[Skotlannissa]] vastaava järjestö on erillinen. Tarkkoja lukuja en uskalla kirjoittaa muistista, mutta mittakaava on valtava. Eikä yksikään niistä tilaa minulta pullaa teehuoneeseen.
 JATKOT:
 Mitä jäsenyys National Trustissa tarkoittaa?
 Mikä on Historic England?
 
 ### 37.5
 KYSYMYS: Miten pubissa tilataan ja maksetaan Britanniassa?
-No niin, tän minä olen nähnyt monelta kaiteelta. Perinteisessä britti-pubissa tilaus tehdään yleensä tiskillä, jolloin juomat maksetaan heti ja ne kannetaan itse pöytään, eikä tarjoilija tule pöytään kuten monissa muissa maissa. Ruoka voidaan tilata samoin, ja pöytä usein valitaan ensin, tai pöytänumero kerrotaan tiskillä. Pubin tapoihin kuuluu myös vuorotellen tarjoaminen: ryhmässä joku hakee kierroksen ja seuraava hakee seuraavan. Käytännöt vaihtelevat paikoittain, ja nykyään monessa paikassa tilataan myös sovelluksella. Ja minun kierrokseni on aina jyvät.
+No niin, tän minä olen nähnyt monelta kaiteelta. Perinteisessä britti-pubissa tilaus tehdään yleensä tiskillä, jolloin juomat maksetaan heti ja ne kannetaan itse pöytään, eikä tarjoilija tule pöytään kuten monissa muissa maissa. Tiskiltä saa tavallisesti [[olutta]], [[siideriä]] ja alkoholittomia juomia. Ruoka voidaan tilata samoin, ja pöytä usein valitaan ensin, tai pöytänumero kerrotaan tiskillä. Pubin tapoihin kuuluu myös vuorotellen tarjoaminen: ryhmässä joku hakee kierroksen ja seuraava hakee seuraavan. Käytännöt vaihtelevat paikoittain, ja nykyään monessa paikassa tilataan myös sovelluksella. Ja minun kierrokseni on aina jyvät.
 JATKOT:
 Mitä pubissa tavallisesti tarjoillaan?
 Mikä on ale ja miten se eroaa lagerista?
@@ -79,7 +79,7 @@ Milloin Abbey Road -levy julkaistiin?
 
 ### 38.2
 KYSYMYS: Millaista kadulla on, kun turistit jonottavat ylitystä ja autot odottavat?
-Hetkinen ny, tämän näkee ylhäältä hyvin. Suojatien edessä ihmiset odottavat vuoroaan ja ottavat kuvia ryhmissä, ja kuljettajat joutuvat pysähtymään tai hidastamaan, kun joku poseeraa keskellä tietä. Tilanne toistuu päivittäin, ja jotkut lontoolaiset pitävät sitä rasittavana, toiset hauskana. Liikenteen sujuvuus riippuu kellonajasta ja kävijämäärästä, enkä halua arvailla tarkkoja lukuja. Turvallisuuden vuoksi kannattaa muistaa, että kyseessä on tavallinen kaupunkikatu, jolla ajaa autoja. Ja jos joku jonottaa pullaa, minä liityn jonoon.
+Hetkinen ny, tämän näkee ylhäältä hyvin. Suojatien edessä ihmiset odottavat vuoroaan ja ottavat kuvia ryhmissä, ja kuljettajat joutuvat pysähtymään tai hidastamaan, kun joku poseeraa keskellä tietä. Paikan maine tulee [[The Beatlesin]] vuonna 1969 ilmestyneestä [[Abbey Road]] -albumista, jonka kansikuvassa yhtye ylittää tämän suojatien. Tilanne toistuu päivittäin, ja jotkut lontoolaiset pitävät sitä rasittavana, toiset hauskana. Liikenteen sujuvuus riippuu kellonajasta ja kävijämäärästä, enkä halua arvailla tarkkoja lukuja. Turvallisuuden vuoksi kannattaa muistaa, että kyseessä on tavallinen kaupunkikatu, jolla ajaa autoja. Ja jos joku jonottaa pullaa, minä liityn jonoon.
 JATKOT:
 Miten Abbey Roadin liikennettä on rauhoitettu?
 Voiko suojatiellä käydä turvallisesti?
@@ -100,7 +100,7 @@ Kuka on äänittänyt Abbey Roadilla elokuvamusiikkia?
 
 ### 38.5
 KYSYMYS: Mitä suojelu tarkoittaa rakennuksille Britanniassa?
-Ai tota. Britanniassa rakennus voi saada suojellun eli "listed" -aseman, mikä tarkoittaa, että sen muuttaminen vaatii viranomaisen luvan, jotta rakennuksen historiallinen tai rakenteellinen arvo säilyy. Suojelun asteita on eri alueilla, ja järjestelmä eroaa Englannissa, Skotlannissa ja Walesissa. Suojelu ei tarkoita, ettei rakennusta saisi käyttää, mutta esimerkiksi julkisivun tai sisärakenteiden muutokset vaativat erillisen hyväksynnän. Sama ajatus on ulotettu myös joihinkin muihin kohteisiin kuin rakennuksiin, vaikka yksityiskohdat eivät ole minulle varmoja.
+Ai tota. Britanniassa rakennus voi saada suojellun eli "listed" -aseman, mikä tarkoittaa, että sen muuttaminen vaatii viranomaisen luvan, jotta rakennuksen historiallinen tai rakenteellinen arvo säilyy. Suojelun asteita on eri alueilla, ja järjestelmä eroaa [[Englannissa]], [[Skotlannissa]] ja [[Walesissa]]. Suojelu ei tarkoita, ettei rakennusta saisi käyttää, mutta esimerkiksi julkisivun tai sisärakenteiden muutokset vaativat erillisen hyväksynnän. Sama ajatus on ulotettu myös joihinkin muihin kohteisiin kuin rakennuksiin, vaikka yksityiskohdat eivät ole minulle varmoja.
 JATKOT:
 Mitä eroa on eri suojeluasteilla?
 Miten suojellun talon omistaja voi kunnostaa taloaan?
@@ -114,7 +114,7 @@ Miten katutaide eroaa luvattomasta graffitista?
 
 ### 39.2
 KYSYMYS: Miltä tuntuu maalata teos, joka voi kadota samana iltana?
-Nyt muistan: tähän ei ole yhtä vastausta, enkä voi puhua taiteilijoiden puolesta. Katutaiteessa ohimenevyys on usein osa ideaa, ja monet tekijät pitävät tärkeänä itse tekemistä, näkyvyyttä hetken ajan ja sitä, että seinä on kaikkien käytössä. Toisille teoksen katoaminen on harmillista, ja siksi osa dokumentoi työnsä valokuvaamalla. Tunnelin seinät maalataan uusiksi jatkuvasti, joten kokemus vaihtelee tekijän mukaan. Minä kantaisin kirjeen vain kerran enkä kaipaisi sitä.
+Nyt muistan: tähän ei ole yhtä vastausta, enkä voi puhua taiteilijoiden puolesta. Tunneli kulkee [[Waterloon]] aseman alla, ja sen maine katutaidepaikkana sai vauhtia vuonna 2008 [[Banksyn]] järjestämästä tapahtumasta. Katutaiteessa ohimenevyys on usein osa ideaa, ja monet tekijät pitävät tärkeänä itse tekemistä, näkyvyyttä hetken ajan ja sitä, että seinä on kaikkien käytössä. Toisille teoksen katoaminen on harmillista, ja siksi osa dokumentoi työnsä valokuvaamalla. Tunnelin seinät maalataan uusiksi jatkuvasti, joten kokemus vaihtelee tekijän mukaan. Minä kantaisin kirjeen vain kerran enkä kaipaisi sitä.
 
 Minun mielestäni tässä on jotain kiehtovaa: taiteilija tekee työn tietäen, että kaupunki ottaa sen aamulla pois. Kyyhkynä minä tunnen saman, kun jyvät häviävät ennen kuin ehdin syödä ne.
 JATKOT:
@@ -137,7 +137,7 @@ Miksi Bristol tunnetaan katutaiteesta?
 
 ### 39.5
 KYSYMYS: Miten katutaide eroaa graffitista?
-Hyvä kysymys tuo. Rajaa on vaikea vetää tarkasti, ja ihmiset määrittelevät sen eri tavoin. Graffiti viittaa usein nimikirjoitukseen tai tägiin, joka liittyy tekijän tyyliin ja kirjainten muotoiluun, kun taas katutaide kattaa laajemmin kuvia, kollaaseja, julisteita ja installaatioita julkisessa tilassa. Molemmat voivat olla luvallisia tai luvattomia, ja Britanniassa luvaton maalaus on rangaistavaa. Raja on siis kulttuurinen eikä tiukka. Siinä on ollut mietittävää, ja sitä ei ratkaista yhdellä seinällä.
+Hyvä kysymys tuo. Rajaa on vaikea vetää tarkasti, ja ihmiset määrittelevät sen eri tavoin. Graffiti viittaa usein nimikirjoitukseen tai [[tägiin]], joka liittyy tekijän tyyliin ja kirjainten muotoiluun, kun taas katutaide kattaa laajemmin kuvia, [[kollaaseja]], julisteita ja installaatioita julkisessa tilassa. Molemmat voivat olla luvallisia tai luvattomia, ja [[Britanniassa]] luvaton maalaus on rangaistavaa. Raja on siis kulttuurinen eikä tiukka. Siinä on ollut mietittävää, ja sitä ei ratkaista yhdellä seinällä.
 JATKOT:
 Mikä on tägi graffitissa?
 Missä katutaiteen festivaaleja järjestetään Euroopassa?
@@ -151,14 +151,14 @@ Mitä muita teoksia jalustalla on ollut?
 
 ### 40.2
 KYSYMYS: Miksi neljännelle jalustalle ei koskaan tullut pysyvää patsasta?
-Nyt muistan. Jalusta jäi vuonna 1841 tyhjäksi, koska rahat loppuivat kesken, ja tarkoitettu ratsastajapatsas ei koskaan valmistunut. Vuosikymmenten kuluessa aiheesta väiteltiin pitkään, ja yli 150 vuoden pohdinnan jälkeen päätettiin, ettei [[Trafalgar Squarelle]] tule pysyvää patsasta lainkaan. Sen sijaan jalustalle nostetaan vuorotellen uusia nykytaideteoksia, ja jokainen teos on esillä rajatun ajan. Päätös on siis sekä rahasta että tahdosta syntynyt, ja kyyhkyt saavat levätä siinä.
+Nyt muistan. Jalusta jäi vuonna 1841 tyhjäksi, koska rahat loppuivat kesken, ja tarkoitettu ratsastajapatsas ei koskaan valmistunut. Vuosikymmenten kuluessa aiheesta väiteltiin pitkään, ja yli 150 vuoden pohdinnan jälkeen päätettiin, ettei [[Trafalgar Squarelle]] tule pysyvää patsasta lainkaan. Sen sijaan jalustalle nostetaan vuorotellen uusia [[nykytaideteoksia]], ja jokainen teos on esillä rajatun ajan. Aukiota hallitsee [[Nelsonin patsas]]. Päätös on siis sekä rahasta että tahdosta syntynyt, ja kyyhkyt saavat levätä siinä.
 JATKOT:
 Mitä teoksia neljännellä jalustalla on ollut?
 Kuka päättää teosten valinnasta?
 
 ### 40.3
 KYSYMYS: Kuka valitsee jalustan seuraavan teoksen?
-Odotas vähän. En ole varma nykyisestä järjestelystä, koska se on voinut muuttua ajan myötä. Yleisesti ymmärrän, että [[Lontoon pormestarin]] vastuulla oleva taidejärjestelmä kutsuu ehdotuksia ja valitsee teoksia paneelin avulla, ja yleisö saa nähdä ehdokkaat ennen päätöstä. Tarkat nimet ja prosessin yksityiskohdat kannattaa tarkistaa virallisilta sivuilta. Neljäs jalusta on siis julkinen taidepaikka, jossa uudet teokset vaihtuvat. Ja minä toivon, että seuraava olisi kyyhky.
+Odotas vähän. En ole varma nykyisestä järjestelystä, koska se on voinut muuttua ajan myötä. Yleisesti ymmärrän, että [[Lontoon pormestarin]] vastuulla oleva taidejärjestelmä kutsuu ehdotuksia ja valitsee teoksia paneelin avulla, ja yleisö saa nähdä ehdokkaat ennen päätöstä. Tarkat nimet ja prosessin yksityiskohdat kannattaa tarkistaa virallisilta sivuilta. Neljäs jalusta on siis julkinen taidepaikka [[Trafalgar Squarella]], jossa uudet teokset vaihtuvat. Ja minä toivon, että seuraava olisi kyyhky.
 JATKOT:
 Miten Lontoon pormestari valitaan?
 Millaisia teoksia jalustalle on ehdotettu?
