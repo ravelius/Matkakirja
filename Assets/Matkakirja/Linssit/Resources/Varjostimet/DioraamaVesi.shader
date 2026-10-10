@@ -24,6 +24,8 @@ Shader "Matkakirja/Linssit/DioraamaVesi"
             ZWrite On
             ZTest LEqual
             Cull Off
+            // Veneen sisus (DioraamaVesimaski merkitsee bitin 128): ei vettä rungon sisään keinunnassakaan (omistaja 10.10.).
+            Stencil { Ref 128 ReadMask 128 Comp NotEqual }
 
             HLSLPROGRAM
             #pragma vertex vert
