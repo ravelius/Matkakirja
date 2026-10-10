@@ -23,6 +23,8 @@ namespace Matkakirja.Natiivi
         public static Pinnaus Viimeisin { get; private set; }
         public static Kohde Nykyinen { get; private set; }
         public static bool Pienena { get; private set; }
+        /// <summary>Asettelutesti: pinnattu palkki.</summary>
+        public static VisualElement TestiPalkki => Viimeisin?.palkki;
         /// <summary>
         /// VÄISTÖ (Päätoimittaja 6.10. klo 00.5x, juna 147): ikkuna, joka väistää chattia (maakuntakortti), käyttää samaa palkkia
         /// ilman puheen pinnausta; palkissa vain otsikko (ei taukoa eikä edistymistä). Napautus palauttaa ikkunan.

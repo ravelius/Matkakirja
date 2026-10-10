@@ -511,8 +511,26 @@ namespace Matkakirja.Natiivi
             // Olavinlinna: kuoren leikkausikkuna kohdistetun tilan kohdalle (kasvaa kaarilennon jälkipuoliskolla).
             nayttamo.Ulkokuori?.PaivitaLeikkaus(rakennus, linssi.LeikkausHetkella(t), nayttamo.Kamera);
             syote.Paivita(rakennus, t);
-            aanet?.Paivita(rakennus, nakyma, t);
+            aanet?.Paivita(rakennus, nakyma, t, SeikkailuPelaaja.Aktiivinen != null, PelaajanHuone());
         }
+
+        /// <summary>Pelaajan huoneen tila äänimaisemalle (KavelyData.AaniTila; 4 kertaa sekunnissa, Siirtoseppä 10.10.); null = ei pelaajaa,
+        /// piha tai ulkoalue.</summary>
+        string PelaajanHuone()
+        {
+            var p = SeikkailuPelaaja.Aktiivinen; var d = SeikkailuKavely.Data;
+            if (p == null || d == null || rakennus == null) { pelaajanOsa = null; return pelaajanHuone = null; }
+            if (Time.unscaledTime < pelaajanHuoneAika) return pelaajanHuone;
+            pelaajanHuoneAika = Time.unscaledTime + 0.25f;
+            var pp = p.transform.position;
+            string osa = Matkakirja.Linssit.Seikkailu.Askelaani.Osa(d, pp.x, pp.y, -pp.z);
+            if (osa == pelaajanOsa) return pelaajanHuone;
+            pelaajanOsa = osa;
+            pelaajanHuone = d.AaniTila(osa, System.Linq.Enumerable.Select(rakennus.Tilat, x => x.Id));
+            o.Kirjaa($"seikkailu: äänimaisema {osa ?? "-"} → {pelaajanHuone ?? "linnan yleisäänet"}");
+            return pelaajanHuone;
+        }
+        string pelaajanHuone, pelaajanOsa; float pelaajanHuoneAika;
 
         public void Sulje()
         {
@@ -629,7 +647,14 @@ namespace Matkakirja.Natiivi
         /// JUUREEN eli uusin.json:n kansioon (AmpariJuuri), EI hash-kansioon (dioraama-rajapinnat-era2-20260929.md
         /// kohta 1 ja 2 "AANET": äänet asuvat ämpärissä polussa dioraama/<r>/aanet/v<versio>/). Peili-ajossa
         /// juuret ovat samat. Löydös 29.9. PEILI=pois-ajosta: paketinJuuri antoi 404 kaikille äänille.</summary>
-        public string AaniUrl(string tiedostoRelPolku) =>
+        public string AaniUrl(string tiedostoRelPolku) => AaniUrlSuora(LaatuKorvaaja(tiedostoRelPolku));
+
+        /// <summary>LAATUKORVAAJAT (Pelikoodari 9.10., aanet/laatu-korvaajat-v1, PT:n laatutarkistus): rakennus.json:n äänitiedosto →
+        /// korjattu ääni median juuresta (keittiön ambienssissa oli englanninkielistä puhetta; uusi: tulisijan rätinä ja sanaton sorina).</summary>
+        static string LaatuKorvaaja(string polku) =>
+            polku == "aanet/v1/keittio-ambienssi.mp3" ? "/aanet/silmukat-korjaukset-v2/keittio-ambienssi-03.mp3" : polku;   // -03: alle 600 kt → PCM-sauma
+
+        string AaniUrlSuora(string tiedostoRelPolku) =>
             string.IsNullOrEmpty(tiedostoRelPolku) ? null
             // "/…" = median juuresta (Pelikoodarin mikseristemit aanet/mikseri/v1/ ovat ämpärin juuressa, 30.9.2026),
             // "https://…" sellaisenaan; muuten rakennuksen juuresta kuten ennen.
@@ -1285,6 +1310,10 @@ namespace Matkakirja.Natiivi
                     "kolikot-1", "kolikot-2", "kesayo-sirkat", "satama-vesi", "askel-puu");
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-lapi-v1/manifest.json");   // Pelikoodari 9.10. (maksuttomat): vesisanko, viitta, savipurkki, patapino, luuta, varusteet, yolinnut, koira
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-lapi-v2/manifest.json");   // generoidut (PT 9.10.): sytytys, hanska, kauha, nauris, tarjotin; puuttuva = hiljaa
+                // Soundly-pankki (Pelikoodari 9.10., erä 1b, 205 ääntä vuodelle 1499): pakattuna muistiin; korvaa varmat vastineet
+                // (SeikkailuAanet.Korvaavat) ja pelaajan askeleet kertaääninä (SeikkailuAanet.Askel); puuttuva = vanhat äänet.
+                SeikkailuAanet.LisaaPankki(MediaJuuri + "/aanet/olavinlinna-soundly-v2/manifest.json");   // v2 (Pelikoodari 10.10.): 25 alle 0,4 s:n kertaääntä normalisoitu (v1: +18…+24 dB perhettään kovempia)
+                SeikkailuAanet.LisaaPankki(MediaJuuri + "/aanet/laatu-korvaajat-v1/manifest.json", "sydan-silmukka-02", "sydan-nopea-01", "hiipiminen-10");   // Pelikoodari 9.10.
                 SeikkailuSade.Luo(nayttamo.transform);
             }
         }
@@ -2329,6 +2358,13 @@ namespace Matkakirja.Natiivi
                 // uusi peli-/Sovitin-instanssi nollaa sen oletukseen, pois).
                 linssi.Leijunta = arvo == "1";
                 o.Kirjaa("poikki: drift " + (arvo == "1" ? "päällä" : "pois"));
+                return;
+            }
+            // "poikki kadet kierto 0|1": kämmenen kierto kadet[]-datasta (PT 9.10., juna 174).
+            if (mita == "kadet" && arvo == "kierto")
+            {
+                if (osat.Length > 3) DioraamaHahmot3D.KadetKierto = osat[3] != "0";
+                o.Kirjaa("poikki: kadet kierto " + (DioraamaHahmot3D.KadetKierto ? "päällä" : "pois"));
                 return;
             }
             if (mita == "hahmokorvaus")

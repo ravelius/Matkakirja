@@ -47,6 +47,10 @@ namespace Matkakirja.Linssit.Kierros
         /// "katse_suunta", astetta pohjoisesta, suunta johon kamera katsoo): korvaa lentosuunnan pysähdyksen kehyksessä (pallon
         /// kääntöraja pätee yhä). NaN = lentosuunnan mukaan kuten ennen.</summary>
         public double KatseSuunta = double.NaN;
+        /// <summary>Saapumiskaari katsesuuntaan (PT 9.10. akselikohteet Concorde, Champs-Élysées: "alku sivusta, loppu akselilla";
+        /// worker "katse_kaari", astetta): saapuminen näin monta astetta sivusta (lennon puolelta), ja pysähdyksen kaari päättyy
+        /// katsesuuntaan. 0 = saapuminen suoraan katsesuuntaan kuten ennen.</summary>
+        public double KatseKaari;
         /// <summary>Workerin kysymys (tyyppi "kysymys"): opas kysyy ääneen, vaihtoehdot chattiin; ei sijaintia.</summary>
         public bool Kysymys;
         public string[] Vaihtoehdot;
@@ -72,7 +76,7 @@ namespace Matkakirja.Linssit.Kierros
                 Id = S("id"), Nimi = S("nimi"), Alarivi = S("alarivi"), Teksti = S("teksti"), Aani = S("aani"), AaniPcm = S("aani_pcm"),
                 AaniAjat = S("aani_ajat"), AaniTaajuus = (int)D("aani_taajuus", 24000),
                 Lat = D("lat", double.NaN), Lon = D("lon", double.NaN), KokoM = D("koko_m", 60), KorkeusM = D("korkeus_m", 0), KestoS = D("kesto_s", 0),
-                KatseSuunta = D("katse_suunta", double.NaN),
+                KatseSuunta = D("katse_suunta", double.NaN), KatseKaari = Math.Max(0, Math.Min(45, D("katse_kaari", 0))),
             };
             if (j.TryGetValue("vaihtoehdot", out var pv) && pv is IList<object> pl)
             {
@@ -526,8 +530,13 @@ namespace Matkakirja.Linssit.Kierros
         /// </summary>
         /// <summary>Kehyksen tulosuunta: kohteen oma katsesuunta (OpasKohde.KatseSuunta − SivuKulma, jolloin kehyksen suuntima on
         /// juuri katsesuunta), muuten lentosuunta.</summary>
-        public static double KohteenTulo(OpasKohde k, double lentoTulo) =>
-            k != null && !double.IsNaN(k.KatseSuunta) ? KierrosLento.Kiedo(k.KatseSuunta - OpasKuvaus.SivuKulma) : lentoTulo;
+        public static double KohteenTulo(OpasKohde k, double lentoTulo)
+        {
+            if (k == null || double.IsNaN(k.KatseSuunta)) return lentoTulo;
+            // Saapumiskaari: sivu lennon puolelta (ei käännytä ensin poispäin ja takaisin).
+            double puoli = KierrosLento.Kiedo(lentoTulo + OpasKuvaus.SivuKulma - k.KatseSuunta) >= 0 ? 1 : -1;
+            return KierrosLento.Kiedo(k.KatseSuunta + puoli * k.KatseKaari - OpasKuvaus.SivuKulma);
+        }
 
         public static double PalloTulosuunta(double nykyinen, double lentosuunta, double kestoS)
         {

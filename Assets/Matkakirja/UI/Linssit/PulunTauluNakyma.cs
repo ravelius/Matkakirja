@@ -65,6 +65,8 @@ namespace Matkakirja.Natiivi
         Vaihto vaihto;
 
         public bool Auki { get; private set; }
+        /// <summary>Asettelutesti: "Minne katsotaan?" -taulun paneeli.</summary>
+        public VisualElement TestiPaneeli => paneeli;
         /// <summary>Tapahtumaloki testikomennolle (web loki: avaa:syy, sulje:syy, valitse, toimi, moodi:tulos).</summary>
         public IReadOnlyList<string> Loki => loki;
         public string Paikka => paikka;

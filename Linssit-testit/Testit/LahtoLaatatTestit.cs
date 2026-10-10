@@ -365,6 +365,17 @@ namespace Matkakirja.Linssit.Testit
         public static readonly (string, double, double, double, double) PConcorde = ("Concorden aukio", 48.8656, 2.3212, 360, 0), PEiffel = ("Eiffel-torni", 48.8583, 2.2945, 125, 330),
             PRiemu = ("Riemukaari", 48.8738, 2.2950, 50, 50), PChamps = ("Champs-Élysées", 48.8698, 2.3078, 1900, 0), PSacre = ("Sacré-Cœur", 48.8867, 2.3431, 85, 83), PBastille = ("Bastille", 48.8532, 2.3691, 100, 50);
 
+        // Akselikohteet (PT 9.10.: Concorde, Champs-Élysées): katse_kaari 12 → saapuminen 12° sivusta, pysähdyksen kaari päättyy akselille.
+        [Testi] static void KatseKaariAlkaaSivustaJaPaattyyAkselille()
+        {
+            var j = (Dictionary<string, object>)Matkakirja.Peli.MiniJson.Jasenna("{\"nimi\":\"C\",\"lat\":48.8656,\"lon\":2.3212,\"katse_suunta\":295,\"katse_kaari\":12}");
+            Oleta.Tosi(Math.Abs(OpasKohde.Lue(j).KatseKaari - 12) < 1e-9, "katse_kaari luetaan");
+            var k = new OpasKohde { KatseSuunta = 295, KatseKaari = 12 };
+            double vasen = OpasSilmukka.KohteenTulo(k, 250) + OpasKuvaus.SivuKulma, oikea = OpasSilmukka.KohteenTulo(k, 330) + OpasKuvaus.SivuKulma;
+            Oleta.Tosi(Math.Abs(KierrosLento.Kiedo(vasen - 283)) < 1e-6 && Math.Abs(KierrosLento.Kiedo(oikea - 307)) < 1e-6, $"sivu lennon puolelta: {vasen:F0}° / {oikea:F0}°");
+            Oleta.Tosi(Math.Abs(KierrosLento.Kiedo(OpasSilmukka.KohteenTulo(new OpasKohde { KatseSuunta = 295 }, 250) + OpasKuvaus.SivuKulma - 295)) < 1e-6, "ilman kaarta suoraan akselille");
+        }
+
         // PEHMEÄ JARRUTUS (PT 9.10., Pariisin kulma-arkki: Eiffelin lennolla jarrutus 63 vs kiihdytys 35 m/s², Riemukaari ja
         // Sacré-Cœur 115/102 m/s² kiihdytyksessä): pitkät pallolennot kaarenpituuden mukaan 7. asteen S-käyrällä. Ruuduittain 60 Hz
         // (ennen → jälkeen): Eiffel 35/63/27 → 47/39/17, Riemukaari 115/82/71 → 52/50/19, Sacré-Cœur 102/67/41 → 80/68/30

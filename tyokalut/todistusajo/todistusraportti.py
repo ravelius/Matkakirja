@@ -136,7 +136,9 @@ def raportti(L, era, versio, laite, udid, skenaario):
 
     # 4 kuvat: merkinnät suoraan kuvaan (tila · laite + suunta · versio), sitten arkki
     valmiit = []
-    for tunnus, selite in lue_tsv(f"{L}/kuvat.tsv"):
+    for rivi in lue_tsv(f"{L}/kuvat.tsv"):
+        tunnus, selite = rivi[0], rivi[1]
+        asento = rivi[2] if len(rivi) > 2 else "Portrait"
         raaka = f"{L}/kuvat/{tunnus}.raaka.png"
         ulos = f"{L}/kuvat/{tunnus}.png"
         if not os.path.exists(raaka) and os.path.exists(ulos):   # raportin uusinta: kuva on jo merkitty
@@ -150,6 +152,12 @@ def raportti(L, era, versio, laite, udid, skenaario):
             continue
         from PIL import Image
         w, h = Image.open(raaka).size
+        if asento.startswith("Landscape") and h > w:
+            # simctl: pystykehys, vaaka-UI kiertyneenä → oikein päin (LandscapeLeft: 90° vastapäivään, LandscapeRight: myötäpäivään)
+            os.makedirs(f"{L}/kuvat/raaka", exist_ok=True)
+            import shutil; shutil.copy(raaka, f"{L}/kuvat/raaka/{tunnus}.kiertamaton.png")
+            Image.open(raaka).rotate(90 if asento == "LandscapeLeft" else -90, expand=True).save(raaka)
+            w, h = h, w
         suunta = "pysty" if h >= w else "vaaka"
         merkitse(raaka, ulos, f"{selite} · {laite} {suunta} · {versio}")
         os.makedirs(f"{L}/kuvat/raaka", exist_ok=True)

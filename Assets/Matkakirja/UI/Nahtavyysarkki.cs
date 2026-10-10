@@ -141,6 +141,8 @@ namespace Matkakirja.Natiivi
             return false;
         }
 
+        const float NuoliYli = 20f;   // .mk-nahtavyys__nuoli--vasen/oikea: left/right −20px
+
         void Asettele()
         {
             var r = ui.Reunat(Kerros);
@@ -149,8 +151,15 @@ namespace Matkakirja.Natiivi
             bool puhelin = w < 700f;
             float leveys = opas && w >= 760f ? Mathf.Min(w * 0.84f, 840f)
                 : puhelin ? Mathf.Min(w * 0.9f, 640f) : Mathf.Min(w * 0.92f, 860f);
+            // Sivujen turva-alue (asettelutesti 9.10.2026 23.40, iPhone vaaka): arkki turva-alueen levyiseksi enintään ja keskelle
+            // sitä; iPadilla ja pystyssä reunat ovat 0, joten muutosta ei ole.
+            // ‹ › ovat puoliksi kortin reunan yli (.mk-nahtavyys__nuoli 20 pt), joten ne mahtuvat turva-alueelle vain, kun kortin
+            // reunoilla on 20 pt tilaa.
+            if (r.x > 0f || r.z > 0f) leveys = Mathf.Min(leveys, w - r.x - r.z - 2f * NuoliYli);
             arkki.style.width = leveys;
             arkkiLeveys = leveys;
+            peite.style.paddingLeft = r.x;
+            peite.style.paddingRight = r.z;
             peite.style.paddingTop = r.y + 22f;
             peite.style.paddingBottom = r.w + (puhelin ? 10f : 22f);
             peite.style.justifyContent = puhelin ? Justify.FlexEnd : Justify.Center;

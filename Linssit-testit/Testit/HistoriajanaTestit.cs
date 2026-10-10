@@ -27,6 +27,17 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(Historiajana.Lukittu, "vuodet Sisältökirjurin tarkistamia (PT:n ehto 1)");
         }
 
+        [Testi] static void Ranta1499VainEnnenMyohempiaRakenteita()
+        {
+            Oleta.Tosi(Historiajana.Ranta1499Nakyy(1499), "1499: ranta näkyy");
+            Oleta.Tosi(Historiajana.Ranta1499Nakyy(1744.9), "juuri ennen Kellobastionia näkyy");
+            Oleta.Tosi(!Historiajana.Ranta1499Nakyy(1745), "Kellobastioni 1745 alkaa: ranta pois");
+            Oleta.Tosi(!Historiajana.Ranta1499Nakyy(1976), "nykylinna: ranta pois");
+            var omat = new[] { new HistoriaOsa("x", 1600, 5) };
+            Oleta.Tosi(!Historiajana.Ranta1499Nakyy(1600, false, omat) && Historiajana.Ranta1499Nakyy(1599, false, omat), "osat datasta");
+            Oleta.Tosi(Historiajana.Ranta1499Nakyy(1976, kuori1499: true), "1499-kuori (v25): ranta aina näkyvissä");
+        }
+
         [Testi] static void VuosiEteneeVaiheittain()
         {
             var h = Historiajana.Olavinlinna;
