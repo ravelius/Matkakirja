@@ -690,8 +690,9 @@
   "kohde": "kohde:westerplatte",
   "kysymys": "Kuinka kauan puolustus kesti?",
   "uusi": false,
-  "vastaus": "Joo, sen kerron rauhassa. Puolalaisen varusväen puolustus kesti viikon. Toisen maailmansodan ensimmäiset laukaukset ammuttiin Westerplattella 1. syyskuuta 1939 kello 4.50, kun saksalainen taistelulaiva [[SMS Schleswig-Holstein]] alkoi tulittaa puolalaista ampumatarvikevarastoa. Viikon kestäneen piirityksen jälkeen varusväki antautui. Sopimuksen mukaan varusväen koko oli 88 sotilasta, eikä Puola saanut rakentaa linnoituksia. Onpas siitä onneksi pitkä aika.",
+  "vastaus": "Joo, sen kerron rauhassa. Puolalaisen varusväen puolustus kesti viikon. Westerplatte sijaitsee [[Itämeren]] rannalla Gdańskin edustalla. Toisen maailmansodan ensimmäiset laukaukset ammuttiin Westerplattella 1. syyskuuta 1939 kello 4.50, kun saksalainen taistelulaiva [[SMS Schleswig-Holstein]] alkoi tulittaa puolalaista ampumatarvikevarastoa. Viikon kestäneen piirityksen jälkeen varusväki antautui. Sopimuksen mukaan varusväen koko oli 88 sotilasta, eikä Puola saanut rakentaa linnoituksia. Onpas siitä onneksi pitkä aika.",
   "linkit": [
+   "Itämeren",
    "SMS Schleswig-Holstein"
   ],
   "jatkot": [
@@ -784,9 +785,10 @@
   "kohde": "kohde:gniezno",
   "kysymys": "Mitä tarkoittaa primas?",
   "uusi": true,
-  "vastaus": "Joo, tän minä tiedän. Kato, sana on vanha. [[Primas]] on katolisessa kirkossa maan tai kirkollisen alueen arvostetuin piispa, jolle kuuluu ensisijaisuus muihin piispoihin nähden. Puolassa tämä arvo kuuluu Gnieznon arkkipiispalle, ja arvonimi on enemmän kunniaa ja perinnettä kuin käytännön valtaa. Se tulee latinan sanasta, joka tarkoittaa ensimmäistä. Siinä oli ny lyhyt oppitunti.",
+  "vastaus": "Joo, tän minä tiedän. Kato, sana on vanha. [[Primas]] on katolisessa kirkossa maan tai kirkollisen alueen arvostetuin piispa, jolle kuuluu ensisijaisuus muihin piispoihin nähden. Puolassa tämä arvo kuuluu [[Gniezno]]n arkkipiispalle, ja arvonimi on enemmän kunniaa ja perinnettä kuin käytännön valtaa. Se tulee latinan sanasta, joka tarkoittaa ensimmäistä. Siinä oli ny lyhyt oppitunti.",
   "linkit": [
-   "Primas"
+   "Primas",
+   "Gniezno"
   ],
   "jatkot": [
    "Mitä eroa on piispalla ja arkkipiispalla?",
@@ -811,9 +813,10 @@
   "kohde": "kohde:gniezno",
   "kysymys": "Miksi valkoinen kotka on Puolan vaakunassa?",
   "uusi": true,
-  "vastaus": "Kas vaan. Tost minä tiedän jotain. Valkoinen kotka punaisella pohjalla on [[Puolan vaakuna]], jonka merkki on peräisin keskiajalta, ja sen alkuperä liitetään kahteen kertomukseen. Taru kertoo, että Lech näki Gnieznon kohdalla valkoisen kotkan pesänsä luona ja asettui sille paikalle; historiallisesti merkki liittyy Piast-suvun hallitsijoihin. Tarkkaa ensimmäistä käyttöä en ole varma, joten jätän vuoden sanomatta. Ylhäältä kotka näyttää aina vähän liian ylpeältä.",
+  "vastaus": "Kas vaan. Tost minä tiedän jotain. Valkoinen kotka punaisella pohjalla on [[Puolan vaakuna]], jonka merkki on peräisin keskiajalta, ja sen alkuperä liitetään kahteen kertomukseen. Taru kertoo, että Lech näki Gnieznon kohdalla [[valkoisen kotkan]] pesänsä luona ja asettui sille paikalle; historiallisesti merkki liittyy Piast-suvun hallitsijoihin. Tarkkaa ensimmäistä käyttöä en ole varma, joten jätän vuoden sanomatta. Ylhäältä kotka näyttää aina vähän liian ylpeältä.",
   "linkit": [
-   "Puolan vaakuna"
+   "Puolan vaakuna",
+   "valkoisen kotkan"
   ],
   "jatkot": [
    "Mitä Puolan lipun värit tarkoittavat?",
@@ -867,9 +870,10 @@
   "kohde": "kohde:elblaginkanava",
   "kysymys": "Mitä Oberländischer Kanal -nimi tarkoittaa?",
   "uusi": true,
-  "vastaus": "Joo, tän minä osaan. Katotaas. Nimi on saksaa, ja sanotaan kirjakielellä, että [[Oberländischer Kanal]] tarkoittaa Oberland-alueen kanavaa, eli Ylämaan kanavaa. Nimi viittaa alueeseen, jonka läpi kanava kulki Itä-Preussissa; tarkkaa rajausta en ole varma. Kanava avattiin tällä nimellä 29. lokakuuta 1860. Puolan nimeksi on sittemmin vakiintunut Kanał Elbląski. Kielten kanssa minä en koskaan sekoile.",
+  "vastaus": "Joo, tän minä osaan. Katotaas. Nimi on saksaa, ja sanotaan kirjakielellä, että [[Oberländischer Kanal]] tarkoittaa Oberland-alueen kanavaa, eli Ylämaan kanavaa. Nimi viittaa alueeseen, jonka läpi kanava kulki Itä-Preussissa; tarkkaa rajausta en ole varma. Kanava avattiin tällä nimellä 29. lokakuuta 1860. Puolan nimeksi on sittemmin vakiintunut Kanał Elbląski. Kanava sijaitsee nykyään [[Varmian ja Masurian voivodikunnassa]]. Kielten kanssa minä en koskaan sekoile.",
   "linkit": [
-   "Oberländischer Kanal"
+   "Oberländischer Kanal",
+   "Varmian ja Masurian voivodikunnassa"
   ],
   "jatkot": [
    "Mikä oli Itä-Preussi?",
@@ -924,9 +928,10 @@
   "kohde": "kohde:krzemionki",
   "kysymys": "Mikä on Grime's Graves?",
   "uusi": true,
-  "vastaus": "Kas vaan. Odotas vähän. [[Grime's Graves]] on Englannissa Norfolkissa sijaitseva neoliittinen piikivikaivosalue, joka lasketaan Euroopan merkittävimpiin esihistoriallisiin piikivikaivoksiin Krzemionkin ja Belgian Spiennesin rinnalla. Kaivoksia louhittiin kuiluilla ja käytävillä, ja nimen alkuperä on myöhempää perua. Tarkkoja vuosilukuja en ole varma muistavani. Aika kaukana Puolasta, mutta saman kiven perässä.",
+  "vastaus": "Kas vaan. Odotas vähän. [[Grime's Graves]] on Englannissa Norfolkissa sijaitseva neoliittinen piikivikaivosalue, joka lasketaan Euroopan merkittävimpiin esihistoriallisiin piikivikaivoksiin [[Krzemionkin]] ja Belgian Spiennesin rinnalla. Kaivoksia louhittiin kuiluilla ja käytävillä, ja nimen alkuperä on myöhempää perua. Tarkkoja vuosilukuja en ole varma muistavani. Aika kaukana Puolasta, mutta saman kiven perässä.",
   "linkit": [
-   "Grime's Graves"
+   "Grime's Graves",
+   "Krzemionkin"
   ],
   "jatkot": [
    "Missä Spiennesin piikivikaivokset sijaitsevat?",
@@ -1036,9 +1041,10 @@
   "kohde": "kohde:hahmotelma-biebrza",
   "kysymys": "Mitä eläimiä Biebrzan soilla elää?",
   "uusi": false,
-  "vastaus": "Annas ku mietin. Tost minä osaan kertoo. [[Biebrzan]] suot suojelevat laajoja, suhteellisen koskemattomia rämeitä, joissa elää harvinaisia kosteikkolintuja sekä hirviä ja majavia. Alue sijaitsee Koillis-Puolassa Biebrza-joen varrella, ja puisto on Puolan 23 kansallispuiston suurin. Kyl siel riittää katsottavaa.",
+  "vastaus": "Annas ku mietin. Tost minä osaan kertoo. [[Biebrzan]] [[suot]] suojelevat laajoja, suhteellisen koskemattomia rämeitä, joissa elää harvinaisia kosteikkolintuja sekä hirviä ja majavia. Alue sijaitsee Koillis-Puolassa Biebrza-joen varrella, ja puisto on Puolan 23 kansallispuiston suurin. Kyl siel riittää katsottavaa.",
   "linkit": [
-   "Biebrzan"
+   "Biebrzan",
+   "suot"
   ],
   "jatkot": [
    "Millaisia lintuja kosteikoilla pesii?",
@@ -1309,8 +1315,9 @@
   "kohde": "kohde:hahmotelma-wolin",
   "kysymys": "Miksi Itämeren vesi on murtovettä?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Mitäs tässä. Itämeri on lähes suljettu merialue, johon laskee paljon jokia. Jokien tuoma makea vesi laimentaa suolaista vettä, joka pääsee sisään vain kapeiden [[Tanskan salmien]] kautta. Siksi suolapitoisuus on selvästi alhaisempi kuin valtamerissä ja vaihtelee alueittain, ja vesi on murtovettä. Tästä johtuu, että Itämeressä elää sekä merellisiä että makean veden lajeja. Kyllä tämä on ylhäältäkin katsoen aika erikoinen allas.",
+  "vastaus": "Hetkinen ny. Mitäs tässä. Itämeri on lähes suljettu merialue, johon laskee paljon jokia. Jokien tuoma makea vesi laimentaa [[Itämeren]] suolaista vettä, joka pääsee sisään vain kapeiden [[Tanskan salmien]] kautta. Siksi suolapitoisuus on selvästi alhaisempi kuin valtamerissä ja vaihtelee alueittain, ja vesi on murtovettä. Tästä johtuu, että Itämeressä elää sekä merellisiä että makean veden lajeja. Kyllä tämä on ylhäältäkin katsoen aika erikoinen allas.",
   "linkit": [
+   "Itämeren",
    "Tanskan salmien"
   ],
   "jatkot": [
@@ -1555,9 +1562,10 @@
   "kohde": "kohde:hahmotelma-grunwald",
   "kysymys": "Millä toisella nimellä taistelua kutsutaan saksaksi?",
   "uusi": false,
-  "vastaus": "Ai se. Saksaksi taistelua kutsutaan Tannenbergin taisteluksi, ja suomeksi puhutaan myös ensimmäisestä Tannenbergin taistelusta. Nimi tulee Tannenbergin kylästä, joka on nykyisin puolaksi Stębark. Numero erottaa taistelun myöhemmästä, vuonna 1914 käydystä samannimisestä taistelusta [[ensimmäisessä maailmansodassa]]. Puolaksi taistelu on Grunwald ja liettuaksi Žalgiris. Onneksi siitä on jo pitkä aika.",
+  "vastaus": "Ai se. Saksaksi taistelua kutsutaan Tannenbergin taisteluksi, ja suomeksi puhutaan myös ensimmäisestä Tannenbergin taistelusta. Nimi tulee Tannenbergin kylästä, joka on nykyisin puolaksi Stębark. Numero erottaa taistelun myöhemmästä, vuonna 1914 käydystä samannimisestä taistelusta [[ensimmäisessä maailmansodassa]]. Puolaksi taistelu on Grunwald ja liettuaksi Žalgiris. Taistelussa Puolan kuningaskunta ja [[Liettuan]] suuriruhtinaskunta voittivat Saksalaisen ritarikunnan. Onneksi siitä on jo pitkä aika.",
   "linkit": [
-   "ensimmäisessä maailmansodassa"
+   "ensimmäisessä maailmansodassa",
+   "Liettuan"
   ],
   "jatkot": [
    "Miksi samaa paikkaa kutsutaan kolmella nimellä?",
@@ -1787,8 +1795,9 @@
   "kohde": "kohde:hahmotelma-legnica",
   "kysymys": "Mikä oli Mohin taistelu?",
   "uusi": true,
-  "vastaus": "Kas vaan. Mohin taistelu oli mongolien voitto unkarilaisista, ja se käytiin kaksi päivää Legnican taistelun jälkeen huhtikuussa 1241. Unkarin joukkoja johti kuningas [[Béla IV]]. Yhdessä nämä kaksi taistelua osoittivat, kuinka tehokasta mongolien liikkuva sotataito oli Keski-Euroopassa. Onneksi siitä on jo pitkä aika.",
+  "vastaus": "Kas vaan. Mohin taistelu oli [[mongoleja]] vastaan käyty taistelu, jonka unkarilaiset hävisivät; se käytiin kaksi päivää Legnican taistelun jälkeen huhtikuussa 1241. Unkarin joukkoja johti kuningas [[Béla IV]]. Yhdessä nämä kaksi taistelua osoittivat, kuinka tehokasta mongolien liikkuva sotataito oli Keski-Euroopassa. Onneksi siitä on jo pitkä aika.",
   "linkit": [
+   "mongoleja",
    "Béla IV"
   ],
   "jatkot": [
@@ -1985,9 +1994,10 @@
   "kohde": "kohde:hahmotelma-zakopane",
   "kysymys": "Minkä katujen risteyksessä Zakopanen keskusta on?",
   "uusi": false,
-  "vastaus": "Odotas vähän. Zakopanen keskusta on Krupówki- ja Kościuszko-katujen risteyksessä. Kaupunki sijaitsee laaksossa [[Tatra-vuorten]] ja Gubałówka-mäen välissä noin 800–1 100 metrin korkeudessa. Sijainti Tatran juurella on tehnyt siitä suositun vuoristokaupungin. Risteys, josta kaikki lähtee, no sellaisia minä arvostan.",
+  "vastaus": "Odotas vähän. Zakopanen keskusta on Krupówki- ja Kościuszko-katujen risteyksessä. Kaupunki sijaitsee laaksossa [[Tatra-vuorten]] ja Gubałówka-mäen välissä noin 800–1 100 metrin korkeudessa. Sijainti Tatran juurella on tehnyt siitä [[Podhalen]] alueen suositun vuoristokaupungin. Risteys, josta kaikki lähtee, no sellaisia minä arvostan.",
   "linkit": [
-   "Tatra-vuorten"
+   "Tatra-vuorten",
+   "Podhalen"
   ],
   "jatkot": [
    "Millainen mäki Gubałówka on?",
@@ -1998,8 +2008,9 @@
   "kohde": "kohde:hahmotelma-zakopane",
   "kysymys": "Missä maissa Tatra-vuoret sijaitsevat?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. Tatra-vuoret sijaitsevat Puolan ja Slovakian rajalla, ja ne kuuluvat [[Karpaattien]] vuoristoon. Ne ovat Karpaattien korkein osa, ja Zakopane on yksi tunnetuimmista kaupungeista niiden juurella. Rajan yli lentää vapaasti, passia ei kyyhkyltä kysytä.",
+  "vastaus": "Hyvä kysymys tuo. Tatra-vuoret sijaitsevat [[Puolan]] ja Slovakian rajalla, ja ne kuuluvat [[Karpaattien]] vuoristoon. Ne ovat Karpaattien korkein osa, ja Zakopane on yksi tunnetuimmista kaupungeista niiden juurella. Rajan yli lentää vapaasti, passia ei kyyhkyltä kysytä.",
   "linkit": [
+   "Puolan",
    "Karpaattien"
   ],
   "jatkot": [
@@ -2347,8 +2358,9 @@
   "kohde": "kohde:hahmotelma-ciechocinek",
   "kysymys": "Mihin sairauksiin paikallisten lähteiden hoitovaikutukset kohdistuvat?",
   "uusi": false,
-  "vastaus": "Annas ku mietin. Ciechocinekin suolalähteitä käytetään [[kylpylähoidoissa]], ja suolavesitornien ympäristön ilmaa hyödynnetään erityisesti hengitysteiden hoidossa. Muistini mukaan kylpylän hoidot kohdistuvat myös tuki- ja liikuntaelinten sekä verenkiertoelinten vaivoihin. En ole varma täydellisestä luettelosta, joten tarkat tiedot kannattaa tarkistaa kylpylän omista lähteistä. Lääkäri tietää tästä enemmän kuin kyyhky.",
+  "vastaus": "Annas ku mietin. Ciechocinek sijaitsee [[Veikselin]] varrella, ja sen suolalähteitä käytetään [[kylpylähoidoissa]], ja suolavesitornien ympäristön ilmaa hyödynnetään erityisesti hengitysteiden hoidossa. Muistini mukaan kylpylän hoidot kohdistuvat myös tuki- ja liikuntaelinten sekä verenkiertoelinten vaivoihin. En ole varma täydellisestä luettelosta, joten tarkat tiedot kannattaa tarkistaa kylpylän omista lähteistä. Lääkäri tietää tästä enemmän kuin kyyhky.",
   "linkit": [
+   "Veikselin",
    "kylpylähoidoissa"
   ],
   "jatkot": [
@@ -2590,8 +2602,9 @@
   "kohde": "kohde:hahmotelma-pszczyna",
   "kysymys": "Mihin valtioon Pless liitettiin vuonna 1742?",
   "uusi": true,
-  "vastaus": "Ai se. Vuonna 1742 Pless liitettiin Preussin kuningaskuntaan. Alue oli sitä ennen kuulunut muihin hallintoihin, ja liittäminen muutti sen asemaa [[Sleesian]] rajamaiden kartalla. Myöhemmin alueen mukana linnaa asuttivat saksalaiset von Pless -suvun jäsenet, ja 1870–1876 palatsin uudistusta johti ranskalainen arkkitehti. Rajat ovat siis siirtyneet useammin kuin kyyhky ehtii perään lentää, ja tarkat vuodet jätän sen takia vain tähän yhteen.",
+  "vastaus": "Ai se. Vuonna 1742 Pless liitettiin [[Preussin]] kuningaskuntaan. Alue oli sitä ennen kuulunut muihin hallintoihin, ja liittäminen muutti sen asemaa [[Sleesian]] rajamaiden kartalla. Myöhemmin alueen mukana linnaa asuttivat saksalaiset von Pless -suvun jäsenet, ja 1870–1876 palatsin uudistusta johti ranskalainen arkkitehti. Rajat ovat siis siirtyneet useammin kuin kyyhky ehtii perään lentää, ja tarkat vuodet jätän sen takia vain tähän yhteen.",
   "linkit": [
+   "Preussin",
    "Sleesian"
   ],
   "jatkot": [
@@ -2645,9 +2658,11 @@
   "kohde": "kohde:hahmotelma-lodz",
   "kysymys": "Minä vuonna Łódźin ja Koluszkin rautatie avattiin?",
   "uusi": true,
-  "vastaus": "Nyt muistan: vuonna 1865. Łódźin ja Koluszkin yhteys avattiin silloin, ja rautatie vauhditti kaupungin teollisuutta entisestään. Aiemmin kasvua oli edistänyt se, että tullimuuri poistettiin 1851, jolloin [[Łódźin]] tekstiilejä voitiin viedä vapaasti Venäjälle. Voimakkaimman teollistumisen aikaa olivat vuodet 1870–1890. Rautatiet kuuluvat niihin keksintöihin, joista kyyhky ei ole koskaan ollut täysin varma, onko ne kilpailija vai kollega.",
+  "vastaus": "Nyt muistan: vuonna 1865. Łódźin ja Koluszkin yhteys avattiin silloin, ja rautatie vauhditti kaupungin teollisuutta entisestään. Aiemmin kasvua oli edistänyt se, että tullimuuri poistettiin 1851, jolloin [[Łódźin]] tekstiilejä voitiin viedä vapaasti Venäjälle. Kaupungin tunnettuja tehtailijoita olivat [[Karl Wilhelm Scheibler]] ja [[Izrael Poznański]]. Voimakkaimman teollistumisen aikaa olivat vuodet 1870–1890. Rautatiet kuuluvat niihin keksintöihin, joista kyyhky ei ole koskaan ollut täysin varma, onko ne kilpailija vai kollega.",
   "linkit": [
-   "Łódźin"
+   "Łódźin",
+   "Karl Wilhelm Scheibler",
+   "Izrael Poznański"
   ],
   "jatkot": [
    "Miten rautatiet muuttivat kaupunkien kasvua Euroopassa?",
@@ -2672,9 +2687,11 @@
   "kohde": "kohde:hahmotelma-lodz",
   "kysymys": "Miksi Łódźin tekstiilivienti Venäjälle vapautui 1851?",
   "uusi": true,
-  "vastaus": "Ai tota. Vuonna 1851 Venäjän viranomaiset poistivat Kongressi-Puolalle asetetun tullimuurin. Sen ansiosta [[Łódź]] saattoi viedä tekstiilejään vapaasti Venäjälle, jossa kysyntä oli suurta. Tämä vauhditti kaupungin kasvua teollisuuskeskukseksi, jota rautatiet ja magnaattien rahoitus edistivät edelleen. Tulleista minulla ei ole kokemusta, kyyhky kun ylittää rajat ilman paperia.",
+  "vastaus": "Ai tota. Vuonna 1851 Venäjän viranomaiset poistivat Kongressi-Puolalle asetetun tullimuurin. Sen ansiosta [[Łódź]] saattoi viedä tekstiilejään vapaasti Venäjälle, jossa kysyntä oli suurta. Kaupungin tunnettuja tehtailijoita olivat [[Karl Wilhelm Scheibler]] ja [[Izrael Poznański]]. Tämä vauhditti kaupungin kasvua teollisuuskeskukseksi, jota rautatiet ja magnaattien rahoitus edistivät edelleen. Tulleista minulla ei ole kokemusta, kyyhky kun ylittää rajat ilman paperia.",
   "linkit": [
-   "Łódź"
+   "Łódź",
+   "Karl Wilhelm Scheibler",
+   "Izrael Poznański"
   ],
   "jatkot": [
    "Mikä oli Kongressi-Puola?",
@@ -2685,9 +2702,10 @@
   "kohde": "kohde:hahmotelma-bochnia",
   "kysymys": "Milloin Bochnian suolakaivos perustettiin?",
   "uusi": false,
-  "vastaus": "Tuota niin. [[Bochnian suolakaivos]] perustettiin vuonna 1248, sen jälkeen kun suolaa oli löydetty alueelta 1100- ja 1200-luvuilla. Siitä tuli osa kuninkaallista Krakovan suolayhtiötä, ja se on Puolan vanhin kaupallinen yritys. Kaivos lopetti suolan tuotannon vuonna 1990, mutta se on säilynyt matkailukohteena. Ei ihme, että suolaa riitti, mutta kuka sen jaksoi kantaa.",
+  "vastaus": "Tuota niin. [[Bochnian suolakaivos]] perustettiin vuonna 1248, sen jälkeen kun suolaa oli löydetty alueelta 1100- ja 1200-luvuilla. Siitä tuli osa kuninkaallista Krakovan suolayhtiötä, ja se on Puolan vanhin kaupallinen yritys. Kaivos kuuluu Unescon maailmanperintöön yhdessä [[Wieliczkan suolakaivoksen]] kanssa. Kaivos lopetti suolan tuotannon vuonna 1990, mutta se on säilynyt matkailukohteena. Ei ihme, että suolaa riitti, mutta kuka sen jaksoi kantaa.",
   "linkit": [
-   "Bochnian suolakaivos"
+   "Bochnian suolakaivos",
+   "Wieliczkan suolakaivoksen"
   ],
   "jatkot": [
    "Millaista suolan louhinta oli keskiajalla?",
@@ -2726,9 +2744,10 @@
   "kohde": "kohde:hahmotelma-bochnia",
   "kysymys": "Milloin Bochnian kaivos lopetti suolan tuotannon?",
   "uusi": true,
-  "vastaus": "Mmm— muistan tämän. Kaivos lopetti suolan tuotannon vuonna 1990, mutta se on säilynyt matkailukohteena. Maanalaisessa kaupungissa on kammioita, kuiluja ja käytäviä, ja suurin säilynyt kammio on muutettu sanatorioksi. [[Bochnian suolakaivos]] kuuluu Unescon maailmanperintöluetteloon Wieliczkan kohteen laajennuksena vuodesta 2013. Maan alla ei ole kyyhkyllä mitään tekemistä, ja siks se jääköön ihmisille.",
+  "vastaus": "Mmm— muistan tämän. Kaivos lopetti suolan tuotannon vuonna 1990, mutta se on säilynyt matkailukohteena. Maanalaisessa kaupungissa on kammioita, kuiluja ja käytäviä, ja suurin säilynyt kammio on muutettu sanatorioksi. [[Bochnian suolakaivos]] kuuluu Unescon maailmanperintöluetteloon [[Wieliczkan suolakaivoksen]] laajennuksena vuodesta 2013. Maan alla ei ole kyyhkyllä mitään tekemistä, ja siks se jääköön ihmisille.",
   "linkit": [
-   "Bochnian suolakaivos"
+   "Bochnian suolakaivos",
+   "Wieliczkan suolakaivoksen"
   ],
   "jatkot": [
    "Millainen on sanatorio kaivoksen sisällä?",
@@ -2923,9 +2942,10 @@
   "kohde": "kohde:hahmotelma-torun-zamek",
   "kysymys": "Miksi linnan käymälätorni rakennettiin puron päälle?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. Keskiaikaisissa linnoissa käymälätorni rakennettiin usein joen, puron tai vallihaudan päälle, jotta virtaava vesi vei jätteet pois ja ne pysyivät kaukana asuintiloista. Ritarikunnan linnoissa tällaista tornia kutsuttiin nimellä [[dansker]], ja sellainen on Toruńin linnasta jäljellä. Tornilla saattoi olla myös puolustuksellinen merkitys, mutta en ole varma, miten se toteutui juuri Toruńissa. Aika arkinen aihe, mutta hyödyllinen.",
+  "vastaus": "Annas ku mietin. Keskiaikaisissa linnoissa käymälätorni rakennettiin usein joen, puron tai vallihaudan päälle, jotta virtaava vesi vei jätteet pois ja ne pysyivät kaukana asuintiloista. Ritarikunnan linnoissa tällaista tornia kutsuttiin nimellä [[dansker]], ja sellainen on [[Toruńin]] linnasta jäljellä. Tornilla saattoi olla myös puolustuksellinen merkitys, mutta en ole varma, miten se toteutui juuri Toruńissa. Aika arkinen aihe, mutta hyödyllinen.",
   "linkit": [
-   "dansker"
+   "dansker",
+   "Toruńin"
   ],
   "jatkot": [
    "Miten keskiaikaisessa linnassa huolehdittiin juomavedestä?",
@@ -3139,9 +3159,10 @@
   "kohde": "nosto:torun-piparkakut",
   "kysymys": "Mitä leivontamuotti kertoo siitä, kenelle leivottiin?",
   "uusi": false,
-  "vastaus": "Kato ny. Yleisesti ottaen [[piparkakkumuotteihin]] veistettiin kuvia, jotka sopivat tilaisuuteen: pyhimyksiä ja hallitsijoita kirkkojuhliin, sydämiä ja pareja hääpöytään. Muotista voi siis päätellä, millaiseen juhlaan tai ostajaan kakku oli tarkoitettu, ja kuvat kertovat myös ajan makumaailmasta ja uskosta. Toruńin muottien tarkkoja aiheita en ole varma. Muotti on kyl se osa, jonka minä jättäisin syömättä.",
+  "vastaus": "Kato ny. Yleisesti ottaen [[piparkakkumuotteihin]] veistettiin kuvia, jotka sopivat tilaisuuteen: pyhimyksiä ja hallitsijoita kirkkojuhliin, sydämiä ja pareja hääpöytään. Muotista voi siis päätellä, millaiseen juhlaan tai ostajaan kakku oli tarkoitettu, ja kuvat kertovat myös ajan makumaailmasta ja uskosta. Toruńin muottien tarkkoja aiheita en ole varma. Toruń kuului keskiajalla [[Hansaliiton]] kaupunkeihin. Muotti on kyl se osa, jonka minä jättäisin syömättä.",
   "linkit": [
-   "piparkakkumuotteihin"
+   "piparkakkumuotteihin",
+   "Hansaliiton"
   ],
   "jatkot": [
    "Millaisesta puusta piparkakkumuotit yleensä veistettiin?",

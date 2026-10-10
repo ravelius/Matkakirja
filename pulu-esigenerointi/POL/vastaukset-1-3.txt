@@ -16,7 +16,7 @@ Mistä kolmen veljeksen tarun Rus ja Čech tunnetaan?
 
 ### 11.3
 KYSYMYS: Mitä tarkoittaa primas?
-Joo, tän minä tiedän. Kato, sana on vanha. [[Primas]] on katolisessa kirkossa maan tai kirkollisen alueen arvostetuin piispa, jolle kuuluu ensisijaisuus muihin piispoihin nähden. Puolassa tämä arvo kuuluu Gnieznon arkkipiispalle, ja arvonimi on enemmän kunniaa ja perinnettä kuin käytännön valtaa. Se tulee latinan sanasta, joka tarkoittaa ensimmäistä. Siinä oli ny lyhyt oppitunti.
+Joo, tän minä tiedän. Kato, sana on vanha. [[Primas]] on katolisessa kirkossa maan tai kirkollisen alueen arvostetuin piispa, jolle kuuluu ensisijaisuus muihin piispoihin nähden. Puolassa tämä arvo kuuluu [[Gniezno]]n arkkipiispalle, ja arvonimi on enemmän kunniaa ja perinnettä kuin käytännön valtaa. Se tulee latinan sanasta, joka tarkoittaa ensimmäistä. Siinä oli ny lyhyt oppitunti.
 JATKOT:
 Mitä eroa on piispalla ja arkkipiispalla?
 Mikä on arkkihiippakunta?
@@ -30,7 +30,7 @@ Miten Gniezno liittyy Mieszko I:een?
 
 ### 11.5
 KYSYMYS: Miksi valkoinen kotka on Puolan vaakunassa?
-Kas vaan. Tost minä tiedän jotain. Valkoinen kotka punaisella pohjalla on [[Puolan vaakuna]], jonka merkki on peräisin keskiajalta, ja sen alkuperä liitetään kahteen kertomukseen. Taru kertoo, että Lech näki Gnieznon kohdalla valkoisen kotkan pesänsä luona ja asettui sille paikalle; historiallisesti merkki liittyy Piast-suvun hallitsijoihin. Tarkkaa ensimmäistä käyttöä en ole varma, joten jätän vuoden sanomatta. Ylhäältä kotka näyttää aina vähän liian ylpeältä.
+Kas vaan. Tost minä tiedän jotain. Valkoinen kotka punaisella pohjalla on [[Puolan vaakuna]], jonka merkki on peräisin keskiajalta, ja sen alkuperä liitetään kahteen kertomukseen. Taru kertoo, että Lech näki Gnieznon kohdalla [[valkoisen kotkan]] pesänsä luona ja asettui sille paikalle; historiallisesti merkki liittyy Piast-suvun hallitsijoihin. Tarkkaa ensimmäistä käyttöä en ole varma, joten jätän vuoden sanomatta. Ylhäältä kotka näyttää aina vähän liian ylpeältä.
 JATKOT:
 Mitä Puolan lipun värit tarkoittavat?
 Mistä Puolan nimi tulee?
@@ -62,7 +62,7 @@ Mikä on Masurian järviseutu?
 
 ### 12.4
 KYSYMYS: Mitä Oberländischer Kanal -nimi tarkoittaa?
-Joo, tän minä osaan. Katotaas. Nimi on saksaa, ja sanotaan kirjakielellä, että [[Oberländischer Kanal]] tarkoittaa Oberland-alueen kanavaa, eli Ylämaan kanavaa. Nimi viittaa alueeseen, jonka läpi kanava kulki Itä-Preussissa; tarkkaa rajausta en ole varma. Kanava avattiin tällä nimellä 29. lokakuuta 1860. Puolan nimeksi on sittemmin vakiintunut Kanał Elbląski. Kielten kanssa minä en koskaan sekoile.
+Joo, tän minä osaan. Katotaas. Nimi on saksaa, ja sanotaan kirjakielellä, että [[Oberländischer Kanal]] tarkoittaa Oberland-alueen kanavaa, eli Ylämaan kanavaa. Nimi viittaa alueeseen, jonka läpi kanava kulki Itä-Preussissa; tarkkaa rajausta en ole varma. Kanava avattiin tällä nimellä 29. lokakuuta 1860. Puolan nimeksi on sittemmin vakiintunut Kanał Elbląski. Kanava sijaitsee nykyään [[Varmian ja Masurian voivodikunnassa]]. Kielten kanssa minä en koskaan sekoile.
 JATKOT:
 Mikä oli Itä-Preussi?
 Miksi Elblągin kaupungilla on myös saksalainen nimi?
@@ -92,7 +92,7 @@ Mihin piikivikirvestä käytettiin?
 
 ### 13.3
 KYSYMYS: Mikä on Grime's Graves?
-Kas vaan. Odotas vähän. [[Grime's Graves]] on Englannissa Norfolkissa sijaitseva neoliittinen piikivikaivosalue, joka lasketaan Euroopan merkittävimpiin esihistoriallisiin piikivikaivoksiin Krzemionkin ja Belgian Spiennesin rinnalla. Kaivoksia louhittiin kuiluilla ja käytävillä, ja nimen alkuperä on myöhempää perua. Tarkkoja vuosilukuja en ole varma muistavani. Aika kaukana Puolasta, mutta saman kiven perässä.
+Kas vaan. Odotas vähän. [[Grime's Graves]] on Englannissa Norfolkissa sijaitseva neoliittinen piikivikaivosalue, joka lasketaan Euroopan merkittävimpiin esihistoriallisiin piikivikaivoksiin [[Krzemionkin]] ja Belgian Spiennesin rinnalla. Kaivoksia louhittiin kuiluilla ja käytävillä, ja nimen alkuperä on myöhempää perua. Tarkkoja vuosilukuja en ole varma muistavani. Aika kaukana Puolasta, mutta saman kiven perässä.
 JATKOT:
 Missä Spiennesin piikivikaivokset sijaitsevat?
 Miksi piikivikaivoksia on suojeltu?
@@ -150,7 +150,7 @@ Mitkä kohteet Puolassa ovat maailmanperintöä?
 
 ### 15.1
 KYSYMYS: Mitä eläimiä Biebrzan soilla elää?
-Annas ku mietin. Tost minä osaan kertoo. [[Biebrzan]] suot suojelevat laajoja, suhteellisen koskemattomia rämeitä, joissa elää harvinaisia kosteikkolintuja sekä hirviä ja majavia. Alue sijaitsee Koillis-Puolassa Biebrza-joen varrella, ja puisto on Puolan 23 kansallispuiston suurin. Kyl siel riittää katsottavaa.
+Annas ku mietin. Tost minä osaan kertoo. [[Biebrzan]] [[suot]] suojelevat laajoja, suhteellisen koskemattomia rämeitä, joissa elää harvinaisia kosteikkolintuja sekä hirviä ja majavia. Alue sijaitsee Koillis-Puolassa Biebrza-joen varrella, ja puisto on Puolan 23 kansallispuiston suurin. Kyl siel riittää katsottavaa.
 JATKOT:
 Millaisia lintuja kosteikoilla pesii?
 Mitä tarkoittaa Ramsar-kosteikko?

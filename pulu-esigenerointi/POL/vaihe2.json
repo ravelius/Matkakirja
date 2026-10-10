@@ -3543,9 +3543,10 @@
   "kohde": "kohde:hahmotelma-frombork",
   "kasite": "Nikolaus Kopernikus",
   "kysymys": "Kerro lisää: Nikolaus Kopernikus",
-  "vastaus": "Nikolaus Kopernikus syntyi vuonna 1473 [[Toruńissa]], ja hänen setänsä Lucas Watzenrode toimi Warmian piispana. Hän opiskeli Krakovassa ja sen jälkeen Italiassa, muun muassa Bolognassa, jossa hän perehtyi kirkko-oikeuteen ja tähtitieteeseen. Palattuaan Warmiaan hän toimi tuomiokapitulin kanonikkona Fromborkissa. Tähtitiede oli hänelle sivutoimi, mutta siitä tuli hänen elämäntyönsä: hän laati vähitellen mallin, jossa Maa kiertää Aurinkoa, ja julkaisi sen kuolinvuotensa 1543 teoksessa. Hän hoiti myös lääkärin, hallinnon ja rahauudistusten tehtäviä, joten hän oli monipuolinen oppinut eikä pelkkä tähtien tarkkailija.",
+  "vastaus": "Nikolaus Kopernikus syntyi vuonna 1473 [[Toruńissa]], ja hänen setänsä Lucas Watzenrode toimi Warmian piispana. Hän opiskeli [[Krakovassa]] ja sen jälkeen Italiassa, muun muassa Bolognassa, jossa hän perehtyi kirkko-oikeuteen ja tähtitieteeseen. Palattuaan Warmiaan hän toimi tuomiokapitulin kanonikkona Fromborkissa. Tähtitiede oli hänelle sivutoimi, mutta siitä tuli hänen elämäntyönsä: hän laati vähitellen mallin, jossa Maa kiertää Aurinkoa, ja julkaisi sen kuolinvuotensa 1543 teoksessa. Hän hoiti myös lääkärin, hallinnon ja rahauudistusten tehtäviä, joten hän oli monipuolinen oppinut eikä pelkkä tähtien tarkkailija.",
   "linkit": [
-   "Toruńissa"
+   "Toruńissa",
+   "Krakovassa"
   ],
   "jatkot": [
    "Millainen oli Warmian piispanvaltakunta?",
@@ -3713,8 +3714,9 @@
   "kohde": "kohde:hahmotelma-frombork",
   "kasite": "Kopernikus-museon",
   "kysymys": "Kerro lisää: Kopernikus-museon",
-  "vastaus": "Kopernikus-museo toimii Fromborkin katedraalimäellä, tuomiokirkkoa ympäröivän muurin sisällä. Sen näyttelyt esittelevät Kopernikuksen elämää ja tähtitieteellistä työtä sekä aikansa tieteen välineitä, ja museon yhteyteen kuuluu myös planetaario. Katedraalimäellä on useita historiallisia rakennuksia, joista osa liittyy suoraan Kopernikuksen aikaiseen kanonikkoyhteisöön. En ole varma kaikista näyttelyn yksityiskohdista, joten tarkat avoinna-ajat ja kokoelmat kannattaa tarkistaa museon omilta sivuilta. Paikkaa pidetään yhtenä [[Warmian]] tärkeimmistä matkailukohteista.",
+  "vastaus": "Kopernikus-museo toimii [[Fromborkin]] katedraalimäellä, tuomiokirkkoa ympäröivän muurin sisällä. Sen näyttelyt esittelevät Kopernikuksen elämää ja tähtitieteellistä työtä sekä aikansa tieteen välineitä, ja museon yhteyteen kuuluu myös planetaario. Katedraalimäellä on useita historiallisia rakennuksia, joista osa liittyy suoraan Kopernikuksen aikaiseen kanonikkoyhteisöön. En ole varma kaikista näyttelyn yksityiskohdista, joten tarkat avoinna-ajat ja kokoelmat kannattaa tarkistaa museon omilta sivuilta. Paikkaa pidetään yhtenä [[Warmian]] tärkeimmistä matkailukohteista.",
   "linkit": [
+   "Fromborkin",
    "Warmian"
   ],
   "jatkot": [
@@ -3768,9 +3770,10 @@
   "kohde": "kohde:hahmotelma-biskupin",
   "kasite": "pronssikauden",
   "kysymys": "Kerro lisää: pronssikauden",
-  "vastaus": "Pronssikausi on esihistorian ajanjakso, jolloin työkalut ja aseet valmistettiin pronssista eli kuparin ja tinan seoksesta. Se sijoittuu kivikauden ja [[rautakauden]] väliin, mutta ajoitus vaihtelee alueittain: Keski-Euroopassa pronssikausi alkoi aiemmin kuin Pohjolassa ja päättyi myös aiemmin. Kaukokauppa oli tärkeää, koska tinaa ja kuparia löytyi vain tietyiltä alueilta. Pronssikaudella yleistyivät linnoitetut asutukset, joista Biskupin on esimerkki, ja yhteiskunnat jäsentyivät yhä selvemmin eliittiin ja tavallisiin asukkaisiin.",
+  "vastaus": "Pronssikausi on esihistorian ajanjakso, jolloin työkalut ja aseet valmistettiin pronssista eli kuparin ja tinan seoksesta. Se sijoittuu kivikauden ja [[rautakauden]] väliin, mutta ajoitus vaihtelee alueittain: [[Keski-Euroopassa]] pronssikausi alkoi aiemmin kuin Pohjolassa ja päättyi myös aiemmin. Kaukokauppa oli tärkeää, koska tinaa ja kuparia löytyi vain tietyiltä alueilta. Pronssikaudella yleistyivät linnoitetut asutukset, joista Biskupin on esimerkki, ja yhteiskunnat jäsentyivät yhä selvemmin eliittiin ja tavallisiin asukkaisiin.",
   "linkit": [
-   "rautakauden"
+   "rautakauden",
+   "Keski-Euroopassa"
   ],
   "jatkot": [
    "Milloin rautakausi alkoi Euroopassa?",
@@ -3796,8 +3799,9 @@
   "kohde": "kohde:hahmotelma-biskupin",
   "kasite": "Lusatian kulttuurin",
   "kysymys": "Kerro lisää: Lusatian kulttuurin",
-  "vastaus": "Lusatian kulttuuri oli pronssikauden lopun ja varhaisen rautakauden kulttuuri, joka levisi laajalle Keski-Eurooppaan nykyisen Puolan, Itä-Saksan ja Tšekin alueille. Nimi tulee Lusatian alueesta Saksan ja Puolan rajaseudulta, jossa kulttuurin löytöjä tehtiin ensimmäisenä. Kulttuurille oli tyypillistä vainajien polttohautaus: tuhka sijoitettiin saviuurnaan, ja niitä haudattiin laajoille [[uurnakenttäkalmistoille]]. Asukkaat harjoittivat maanviljelyä ja karjanhoitoa ja asuivat usein linnoitetuissa asutuksissa, joita Biskupin edustaa. Kulttuurin ajoitus vaihtelee lähteiden mukaan, joten tarkkoja vuosia en uskalla antaa.",
+  "vastaus": "Lusatian kulttuuri oli pronssikauden lopun ja varhaisen rautakauden kulttuuri, joka levisi laajalle Keski-Eurooppaan nykyisen [[Puolan]], Itä-Saksan ja Tšekin alueille. Nimi tulee Lusatian alueesta Saksan ja Puolan rajaseudulta, jossa kulttuurin löytöjä tehtiin ensimmäisenä. Kulttuurille oli tyypillistä vainajien polttohautaus: tuhka sijoitettiin saviuurnaan, ja niitä haudattiin laajoille [[uurnakenttäkalmistoille]]. Asukkaat harjoittivat maanviljelyä ja karjanhoitoa ja asuivat usein linnoitetuissa asutuksissa, joita Biskupin edustaa. Kulttuurin ajoitus vaihtelee lähteiden mukaan, joten tarkkoja vuosia en uskalla antaa.",
   "linkit": [
+   "Puolan",
    "uurnakenttäkalmistoille"
   ],
   "jatkot": [
@@ -3823,9 +3827,10 @@
   "kohde": "kohde:hahmotelma-biskupin",
   "kasite": "kaivaukset",
   "kysymys": "Kerro lisää: kaivaukset",
-  "vastaus": "Arkeologiset kaivaukset ovat järjestelmällinen tapa tutkia menneisyyttä maahan jääneiden jäänteiden avulla. Maa poistetaan kerroksittain, ja tutkijat kirjaavat kunkin löydön tarkan sijainnin sekä kerroksen, josta se löytyi. Menetelmä perustuu [[stratigrafiaan]]: alemmat kerrokset ovat yleensä vanhempia kuin ylemmät. Kaivaus on samalla paikan tuhoamista, koska kerrokset eivät palaa entiselleen, joten dokumentointi on olennaista. Biskupinissa kaivaukset alkoivat vuonna 1934, ja ne jatkuivat sodan jälkeen. Kosteassa maaperässä puu säilyi poikkeuksellisen hyvin, mikä teki paikasta arvokkaan tutkimuskohteen.",
+  "vastaus": "Arkeologiset kaivaukset ovat järjestelmällinen tapa tutkia menneisyyttä maahan jääneiden jäänteiden avulla. Maa poistetaan kerroksittain, ja tutkijat kirjaavat kunkin löydön tarkan sijainnin sekä kerroksen, josta se löytyi. Menetelmä perustuu [[stratigrafiaan]]: alemmat kerrokset ovat yleensä vanhempia kuin ylemmät. Kaivaus on samalla paikan tuhoamista, koska kerrokset eivät palaa entiselleen, joten dokumentointi on olennaista. [[Biskupinissa]] kaivaukset alkoivat vuonna 1934, ja ne jatkuivat sodan jälkeen. Kosteassa maaperässä puu säilyi poikkeuksellisen hyvin, mikä teki paikasta arvokkaan tutkimuskohteen.",
   "linkit": [
-   "stratigrafiaan"
+   "stratigrafiaan",
+   "Biskupinissa"
   ],
   "jatkot": [
    "Miten arkeologit dokumentoivat löytönsä?",
@@ -3878,9 +3883,10 @@
   "kohde": "kohde:hahmotelma-biskupin",
   "kasite": "dendrokronologiaksi",
   "kysymys": "Kerro lisää: dendrokronologiaksi",
-  "vastaus": "Dendrokronologia on menetelmä, jossa puun vuosirenkaiden leveyksiä vertaillaan ja yhdistetään pitkiin [[vuosirengassarjoihin]]. Kun uudemman puun kuvio sopii yhteen vanhemman puun kanssa, sarjaa voidaan jatkaa taaksepäin, ja näin saadaan ajoituksille tarkka asteikko. Parhaiten menetelmä toimii kuoren alle asti säilyneillä rungoilla, koska silloin voidaan päätellä, minä vuonna puu on kaadettu. Se on tärkeä apuväline arkeologiassa, ja tammen ja männyn rengassarjat ulottuvat Euroopassa tuhansien vuosien taakse. Menetelmä on tarkka, mutta vaatii hyvin säilyneen puun ja vertailuaineiston samalta alueelta.",
+  "vastaus": "Dendrokronologia on menetelmä, jossa puun vuosirenkaiden leveyksiä vertaillaan ja yhdistetään pitkiin [[vuosirengassarjoihin]]. Kun uudemman puun kuvio sopii yhteen vanhemman puun kanssa, sarjaa voidaan jatkaa taaksepäin, ja näin saadaan ajoituksille tarkka asteikko. Parhaiten menetelmä toimii kuoren alle asti säilyneillä rungoilla, koska silloin voidaan päätellä, minä vuonna puu on kaadettu. Se on tärkeä apuväline arkeologiassa, ja tammen ja männyn rengassarjat ulottuvat [[Euroopassa]] tuhansien vuosien taakse. Menetelmä on tarkka, mutta vaatii hyvin säilyneen puun ja vertailuaineiston samalta alueelta.",
   "linkit": [
-   "vuosirengassarjoihin"
+   "vuosirengassarjoihin",
+   "Euroopassa"
   ],
   "jatkot": [
    "Miten arkeologit ajoittavat esineitä muilla tavoilla?",
@@ -3976,8 +3982,9 @@
   "kohde": "kohde:hahmotelma-legnica",
   "kasite": "Béla IV",
   "kysymys": "Kerro lisää: Béla IV",
-  "vastaus": "Béla IV hallitsi Unkaria noin vuosina 1235–1270. Mohin taistelun jälkeen hän pakeni mongolien tieltä Adrianmeren rannikolle, ja Unkari kärsi hyökkäyksessä suuria tappioita. Kun mongolit vetäytyivät vuonna 1242, hän palasi ja ryhtyi jälleenrakentamaan maata: hän kannusti rakentamaan [[kivilinnoja]] ja kutsui maahan uudisasukkaita, minkä vuoksi häntä on joskus kutsuttu valtakunnan uudelleenperustajaksi. Hänen aikanaan Unkarin puolustusta uudistettiin, jotta seuraavaan hyökkäykseen oltaisiin valmiimpia.",
+  "vastaus": "Béla IV hallitsi Unkaria noin vuosina 1235–1270. Mohin taistelun jälkeen hän pakeni mongolien tieltä [[Adrianmeren]] rannikolle, ja Unkari kärsi hyökkäyksessä suuria tappioita. Kun mongolit vetäytyivät vuonna 1242, hän palasi ja ryhtyi jälleenrakentamaan maata: hän kannusti rakentamaan [[kivilinnoja]] ja kutsui maahan uudisasukkaita, minkä vuoksi häntä on joskus kutsuttu valtakunnan uudelleenperustajaksi. Hänen aikanaan Unkarin puolustusta uudistettiin, jotta seuraavaan hyökkäykseen oltaisiin valmiimpia.",
   "linkit": [
+   "Adrianmeren",
    "kivilinnoja"
   ],
   "jatkot": [
@@ -3989,8 +3996,9 @@
   "kohde": "kohde:hahmotelma-legnica",
   "kasite": "läänityksen",
   "kysymys": "Kerro lisää: läänityksen",
-  "vastaus": "Läänitys eli lääni oli maa-alue tai muu etuus, jonka hallitsija tai ylempi aatelinen antoi alemmalle miehelle vastineeksi palveluksesta. Läänityksen haltija sai tulot maastaan, ja hänen piti vastineeksi osallistua sotaretkille ja tukea herraansa. Ajan mittaan läänitykset muuttuivat usein perinnöllisiksi, jolloin keskusvalta heikkeni, koska läänin haltijat toimivat itsenäisesti. Ruotsin valtakunnassa läänityksiä annettiin 1500- ja 1600-luvuilla, ja myös Suomessa oli läänityksiä, joista [[lääniherrat]] keräsivät veroja kruunulle. Läänitysjärjestelmä oli keskiajan Euroopassa hyvin erilainen eri alueilla.",
+  "vastaus": "Läänitys eli lääni oli maa-alue tai muu etuus, jonka hallitsija tai ylempi aatelinen antoi alemmalle miehelle vastineeksi palveluksesta. Läänityksen haltija sai tulot maastaan, ja hänen piti vastineeksi osallistua sotaretkille ja tukea herraansa. Ajan mittaan läänitykset muuttuivat usein perinnöllisiksi, jolloin keskusvalta heikkeni, koska läänin haltijat toimivat itsenäisesti. [[Ruotsin]] valtakunnassa läänityksiä annettiin 1500- ja 1600-luvuilla, ja myös Suomessa oli läänityksiä, joista [[lääniherrat]] keräsivät veroja kruunulle. Läänitysjärjestelmä oli keskiajan Euroopassa hyvin erilainen eri alueilla.",
   "linkit": [
+   "Ruotsin",
    "lääniherrat"
   ],
   "jatkot": [
@@ -4002,9 +4010,10 @@
   "kohde": "kohde:hahmotelma-legnica",
   "kasite": "vasallille",
   "kysymys": "Kerro lisää: vasallille",
-  "vastaus": "Vasalli oli mies, joka oli saanut maata tai muuta etua herraltaan ja sitoutunut vastineeksi tämän palvelukseen. Suhde vahvistettiin seremonialla, jossa vasalli antoi [[uskollisuudenvalan]] ja polvistui herransa eteen. Vasallin velvollisuuksiin kuului ennen kaikkea sotapalvelus, usein ritarina, sekä neuvonanto herran hovissa. Vasalli saattoi itse olla herra omille vasalleilleen, joten verkosto oli monitasoinen. Herran velvollisuus oli puolestaan suojella vasalliaan. Käytäntö vaihteli maittain, ja ajan myötä suhteesta tuli yhä enemmän periytyvä ja maksuihin perustuva.",
+  "vastaus": "Vasalli oli mies, joka oli saanut maata tai muuta etua herraltaan ja sitoutunut vastineeksi tämän palvelukseen. Suhde vahvistettiin seremonialla, jossa vasalli antoi [[uskollisuudenvalan]] ja polvistui herransa eteen. Vasallin velvollisuuksiin kuului ennen kaikkea sotapalvelus, usein [[ritarina]], sekä neuvonanto herran hovissa. Vasalli saattoi itse olla herra omille vasalleilleen, joten verkosto oli monitasoinen. Herran velvollisuus oli puolestaan suojella vasalliaan. Käytäntö vaihteli maittain, ja ajan myötä suhteesta tuli yhä enemmän periytyvä ja maksuihin perustuva.",
   "linkit": [
-   "uskollisuudenvalan"
+   "uskollisuudenvalan",
+   "ritarina"
   ],
   "jatkot": [
    "Millainen oli uskollisuudenvala?",
@@ -4478,8 +4487,9 @@
   "kohde": "kohde:hahmotelma-kazimierz",
   "kasite": "renessanssiajan",
   "kysymys": "Kerro lisää: renessanssiajan",
-  "vastaus": "Renessanssi Puolassa tuli Italiasta, ja Puolan kulta-ajaksi kutsutaan 1500-lukua, jolloin kuninkaat [[Sigismund I Vanha]] ja hänen poikansa Sigismund II August hallitsivat. Kuninkaan hovi Krakovassa palkkasi italialaisia arkkitehteja, ja kuninkaan Wawelin linnaa uudistettiin renessanssityyliin. Wawelin katedraalin Sigismundin kappeli on yksi Alppien pohjoispuolen varhaisimpia renessanssirakennuksia. Kazimierz Dolnyssä renessanssi näkyy 1600-luvun alun kauppiastaloissa, joiden julkisivuilla on koristeellisia ullakkokoristeita. Italialainen vaikutus levisi sieltä kaupunkeihin, kirkkoihin ja kartanoihin.",
+  "vastaus": "Renessanssi Puolassa tuli [[Italiasta]], ja Puolan kulta-ajaksi kutsutaan 1500-lukua, jolloin kuninkaat [[Sigismund I Vanha]] ja hänen poikansa Sigismund II August hallitsivat. Kuninkaan hovi Krakovassa palkkasi italialaisia arkkitehteja, ja kuninkaan Wawelin linnaa uudistettiin renessanssityyliin. Wawelin katedraalin Sigismundin kappeli on yksi Alppien pohjoispuolen varhaisimpia renessanssirakennuksia. Kazimierz Dolnyssä renessanssi näkyy 1600-luvun alun kauppiastaloissa, joiden julkisivuilla on koristeellisia ullakkokoristeita. Italialainen vaikutus levisi sieltä kaupunkeihin, kirkkoihin ja kartanoihin.",
   "linkit": [
+   "Italiasta",
    "Sigismund I Vanha"
   ],
   "jatkot": [
@@ -4491,8 +4501,9 @@
   "kohde": "kohde:hahmotelma-kazimierz",
   "kasite": "viljakaupan",
   "kysymys": "Kerro lisää: viljakaupan",
-  "vastaus": "Viljakauppa muokkasi Puolan taloutta ja yhteiskuntaa. Vilja oli Itämeren seudun tärkeimpiä vientituotteita, ja kysyntä Länsi-Euroopassa nosti hintoja ja lisäsi tilojen tuotantoa. Tästä hyötyivät aatelisto ja kaupungit, jotka olivat Veikselin varrella. Kaupan taantumiseen vaikuttivat useat syyt: 1650-luvulla [[Ruotsin]] hyökkäys tuhosi laajoja alueita, ja Kansainyhteisön talous kärsi pitkään. Kazimierz Dolny menetti osan vaurautensa, mutta sen kauppiaiden rakentamat talot ja aitat jäivät paikoilleen. Tutkijat arvioivat taantuman syitä eri tavoin, joten yksiselitteistä vastausta ei ole.",
+  "vastaus": "Viljakauppa muokkasi Puolan taloutta ja yhteiskuntaa. Vilja oli [[Itämeren]] seudun tärkeimpiä vientituotteita, ja kysyntä Länsi-Euroopassa nosti hintoja ja lisäsi tilojen tuotantoa. Tästä hyötyivät aatelisto ja kaupungit, jotka olivat Veikselin varrella. Kaupan taantumiseen vaikuttivat useat syyt: 1650-luvulla [[Ruotsin]] hyökkäys tuhosi laajoja alueita, ja Kansainyhteisön talous kärsi pitkään. Kazimierz Dolny menetti osan vaurautensa, mutta sen kauppiaiden rakentamat talot ja aitat jäivät paikoilleen. Tutkijat arvioivat taantuman syitä eri tavoin, joten yksiselitteistä vastausta ei ole.",
   "linkit": [
+   "Itämeren",
    "Ruotsin"
   ],
   "jatkot": [
@@ -4563,8 +4574,9 @@
   "kohde": "kohde:hahmotelma-kazimierz",
   "kasite": "vojevodakunnan",
   "kysymys": "Kerro lisää: vojevodakunnan",
-  "vastaus": "Lublinin vojevodakunta on Itä-Puolan hallinnollinen alue, jonka keskus on Lublin. Se rajoittuu Ukrainaan ja Valko-Venäjään, joten sen itäraja on samalla Euroopan unionin ulkoraja. Alueeseen kuuluu myös Kazimierz Dolny, ja sen merkittävimpiä kaupunkeja ovat Lublinin lisäksi [[Zamość]]. Vojevodakunta on pääosin maatalousvaltainen, ja Lublinissa on useita yliopistoja, kuten vuonna 1918 perustettu katolinen yliopisto. Alue on myös historiallisesti tärkeä, sillä kaupungissa solmittiin Lublinin unioni.",
+  "vastaus": "Lublinin vojevodakunta on Itä-Puolan hallinnollinen alue, jonka keskus on Lublin. Se rajoittuu [[Ukrainaan]] ja Valko-Venäjään, joten sen itäraja on samalla Euroopan unionin ulkoraja. Alueeseen kuuluu myös Kazimierz Dolny, ja sen merkittävimpiä kaupunkeja ovat Lublinin lisäksi [[Zamość]]. Vojevodakunta on pääosin maatalousvaltainen, ja Lublinissa on useita yliopistoja, kuten vuonna 1918 perustettu katolinen yliopisto. Alue on myös historiallisesti tärkeä, sillä kaupungissa solmittiin Lublinin unioni.",
   "linkit": [
+   "Ukrainaan",
    "Zamość"
   ],
   "jatkot": [
@@ -4590,8 +4602,9 @@
   "kohde": "kohde:hahmotelma-kazimierz",
   "kasite": "Krakovassa",
   "kysymys": "Kerro lisää: Krakovassa",
-  "vastaus": "Krakovassa on Kazimierzin kaupunginosa, joka on saanut nimensä kuningas Kasimir III Suuren mukaan. Se perustettiin 1300-luvulla, ja siitä tuli sittemmin Krakovan juutalaisen kulttuurin keskus. Alueella on edelleen synagogia, kuten [[Vanha synagoga]], joka on peräisin keskiajalta, sekä kapeita katuja ja kahviloita. Sodan aikana alueen juutalaisväestö kärsi suuria tappioita, ja nykyisin Kazimierz on kulttuurikaupunginosa, jossa järjestetään juutalaisen kulttuurin festivaaleja. Se on helppo sekoittaa Kazimierz Dolnyyn, mutta ne ovat eri paikkoja.",
+  "vastaus": "Krakovassa on Kazimierzin kaupunginosa, joka on saanut nimensä kuningas [[Kasimir III Suuren]] mukaan. Se perustettiin 1300-luvulla, ja siitä tuli sittemmin Krakovan juutalaisen kulttuurin keskus. Alueella on edelleen synagogia, kuten [[Vanha synagoga]], joka on peräisin keskiajalta, sekä kapeita katuja ja kahviloita. Sodan aikana alueen juutalaisväestö kärsi suuria tappioita, ja nykyisin Kazimierz on kulttuurikaupunginosa, jossa järjestetään juutalaisen kulttuurin festivaaleja. Se on helppo sekoittaa Kazimierz Dolnyyn, mutta ne ovat eri paikkoja.",
   "linkit": [
+   "Kasimir III Suuren",
    "Vanha synagoga"
   ],
   "jatkot": [

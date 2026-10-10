@@ -44,7 +44,7 @@ Miten Puola ja Liettua liittyivät yhteen?
 
 ### 22.2
 KYSYMYS: Millä toisella nimellä taistelua kutsutaan saksaksi?
-Ai se. Saksaksi taistelua kutsutaan Tannenbergin taisteluksi, ja suomeksi puhutaan myös ensimmäisestä Tannenbergin taistelusta. Nimi tulee Tannenbergin kylästä, joka on nykyisin puolaksi Stębark. Numero erottaa taistelun myöhemmästä, vuonna 1914 käydystä samannimisestä taistelusta [[ensimmäisessä maailmansodassa]]. Puolaksi taistelu on Grunwald ja liettuaksi Žalgiris. Onneksi siitä on jo pitkä aika.
+Ai se. Saksaksi taistelua kutsutaan Tannenbergin taisteluksi, ja suomeksi puhutaan myös ensimmäisestä Tannenbergin taistelusta. Nimi tulee Tannenbergin kylästä, joka on nykyisin puolaksi Stębark. Numero erottaa taistelun myöhemmästä, vuonna 1914 käydystä samannimisestä taistelusta [[ensimmäisessä maailmansodassa]]. Puolaksi taistelu on Grunwald ja liettuaksi Žalgiris. Taistelussa Puolan kuningaskunta ja [[Liettuan]] suuriruhtinaskunta voittivat Saksalaisen ritarikunnan. Onneksi siitä on jo pitkä aika.
 JATKOT:
 Miksi samaa paikkaa kutsutaan kolmella nimellä?
 Mitä tapahtui Tannenbergin luona vuonna 1914?
@@ -160,7 +160,7 @@ Miksi tekaistu perääntyminen onnistui usein?
 
 ### 25.3
 KYSYMYS: Mikä oli Mohin taistelu?
-Kas vaan. Mohin taistelu oli mongolien voitto unkarilaisista, ja se käytiin kaksi päivää Legnican taistelun jälkeen huhtikuussa 1241. Unkarin joukkoja johti kuningas [[Béla IV]]. Yhdessä nämä kaksi taistelua osoittivat, kuinka tehokasta mongolien liikkuva sotataito oli Keski-Euroopassa. Onneksi siitä on jo pitkä aika.
+Kas vaan. Mohin taistelu oli [[mongoleja]] vastaan käyty taistelu, jonka unkarilaiset hävisivät; se käytiin kaksi päivää Legnican taistelun jälkeen huhtikuussa 1241. Unkarin joukkoja johti kuningas [[Béla IV]]. Yhdessä nämä kaksi taistelua osoittivat, kuinka tehokasta mongolien liikkuva sotataito oli Keski-Euroopassa. Onneksi siitä on jo pitkä aika.
 JATKOT:
 Mitä Unkarille tapahtui taistelun jälkeen?
 Miksi mongolit lopulta vetäytyivät Euroopasta?

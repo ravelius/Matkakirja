@@ -25,7 +25,7 @@ Miten Preussin kuningaskunta syntyi?
 
 ### 36.4
 KYSYMYS: Mihin valtioon Pless liitettiin vuonna 1742?
-Ai se. Vuonna 1742 Pless liitettiin Preussin kuningaskuntaan. Alue oli sitä ennen kuulunut muihin hallintoihin, ja liittäminen muutti sen asemaa [[Sleesian]] rajamaiden kartalla. Myöhemmin alueen mukana linnaa asuttivat saksalaiset von Pless -suvun jäsenet, ja 1870–1876 palatsin uudistusta johti ranskalainen arkkitehti. Rajat ovat siis siirtyneet useammin kuin kyyhky ehtii perään lentää, ja tarkat vuodet jätän sen takia vain tähän yhteen.
+Ai se. Vuonna 1742 Pless liitettiin [[Preussin]] kuningaskuntaan. Alue oli sitä ennen kuulunut muihin hallintoihin, ja liittäminen muutti sen asemaa [[Sleesian]] rajamaiden kartalla. Myöhemmin alueen mukana linnaa asuttivat saksalaiset von Pless -suvun jäsenet, ja 1870–1876 palatsin uudistusta johti ranskalainen arkkitehti. Rajat ovat siis siirtyneet useammin kuin kyyhky ehtii perään lentää, ja tarkat vuodet jätän sen takia vain tähän yhteen.
 JATKOT:
 Mikä oli Preussin kuningaskunta?
 Missä Pszczyna sijaitsee nykyään?
@@ -53,7 +53,7 @@ Mitä eklektinen tyyli tarkoittaa?
 
 ### 37.3
 KYSYMYS: Minä vuonna Łódźin ja Koluszkin rautatie avattiin?
-Nyt muistan: vuonna 1865. Łódźin ja Koluszkin yhteys avattiin silloin, ja rautatie vauhditti kaupungin teollisuutta entisestään. Aiemmin kasvua oli edistänyt se, että tullimuuri poistettiin 1851, jolloin [[Łódźin]] tekstiilejä voitiin viedä vapaasti Venäjälle. Voimakkaimman teollistumisen aikaa olivat vuodet 1870–1890. Rautatiet kuuluvat niihin keksintöihin, joista kyyhky ei ole koskaan ollut täysin varma, onko ne kilpailija vai kollega.
+Nyt muistan: vuonna 1865. Łódźin ja Koluszkin yhteys avattiin silloin, ja rautatie vauhditti kaupungin teollisuutta entisestään. Aiemmin kasvua oli edistänyt se, että tullimuuri poistettiin 1851, jolloin [[Łódźin]] tekstiilejä voitiin viedä vapaasti Venäjälle. Kaupungin tunnettuja tehtailijoita olivat [[Karl Wilhelm Scheibler]] ja [[Izrael Poznański]]. Voimakkaimman teollistumisen aikaa olivat vuodet 1870–1890. Rautatiet kuuluvat niihin keksintöihin, joista kyyhky ei ole koskaan ollut täysin varma, onko ne kilpailija vai kollega.
 JATKOT:
 Miten rautatiet muuttivat kaupunkien kasvua Euroopassa?
 Millainen kaupunki Łódź on nykyään?
@@ -67,14 +67,14 @@ Milloin Łódźin teollisuus kasvoi nopeimmin?
 
 ### 37.5
 KYSYMYS: Miksi Łódźin tekstiilivienti Venäjälle vapautui 1851?
-Ai tota. Vuonna 1851 Venäjän viranomaiset poistivat Kongressi-Puolalle asetetun tullimuurin. Sen ansiosta [[Łódź]] saattoi viedä tekstiilejään vapaasti Venäjälle, jossa kysyntä oli suurta. Tämä vauhditti kaupungin kasvua teollisuuskeskukseksi, jota rautatiet ja magnaattien rahoitus edistivät edelleen. Tulleista minulla ei ole kokemusta, kyyhky kun ylittää rajat ilman paperia.
+Ai tota. Vuonna 1851 Venäjän viranomaiset poistivat Kongressi-Puolalle asetetun tullimuurin. Sen ansiosta [[Łódź]] saattoi viedä tekstiilejään vapaasti Venäjälle, jossa kysyntä oli suurta. Kaupungin tunnettuja tehtailijoita olivat [[Karl Wilhelm Scheibler]] ja [[Izrael Poznański]]. Tämä vauhditti kaupungin kasvua teollisuuskeskukseksi, jota rautatiet ja magnaattien rahoitus edistivät edelleen. Tulleista minulla ei ole kokemusta, kyyhky kun ylittää rajat ilman paperia.
 JATKOT:
 Mikä oli Kongressi-Puola?
 Miten Łódź muuttui teollisuuden hiipuessa?
 
 ### 38.1
 KYSYMYS: Milloin Bochnian suolakaivos perustettiin?
-Tuota niin. [[Bochnian suolakaivos]] perustettiin vuonna 1248, sen jälkeen kun suolaa oli löydetty alueelta 1100- ja 1200-luvuilla. Siitä tuli osa kuninkaallista Krakovan suolayhtiötä, ja se on Puolan vanhin kaupallinen yritys. Kaivos lopetti suolan tuotannon vuonna 1990, mutta se on säilynyt matkailukohteena. Ei ihme, että suolaa riitti, mutta kuka sen jaksoi kantaa.
+Tuota niin. [[Bochnian suolakaivos]] perustettiin vuonna 1248, sen jälkeen kun suolaa oli löydetty alueelta 1100- ja 1200-luvuilla. Siitä tuli osa kuninkaallista Krakovan suolayhtiötä, ja se on Puolan vanhin kaupallinen yritys. Kaivos kuuluu Unescon maailmanperintöön yhdessä [[Wieliczkan suolakaivoksen]] kanssa. Kaivos lopetti suolan tuotannon vuonna 1990, mutta se on säilynyt matkailukohteena. Ei ihme, että suolaa riitti, mutta kuka sen jaksoi kantaa.
 JATKOT:
 Millaista suolan louhinta oli keskiajalla?
 Miltä Bochnian kaivos näyttää nykyään?
@@ -95,7 +95,7 @@ Mitä Krakovan suolayhtiö tuotti?
 
 ### 38.4
 KYSYMYS: Milloin Bochnian kaivos lopetti suolan tuotannon?
-Mmm— muistan tämän. Kaivos lopetti suolan tuotannon vuonna 1990, mutta se on säilynyt matkailukohteena. Maanalaisessa kaupungissa on kammioita, kuiluja ja käytäviä, ja suurin säilynyt kammio on muutettu sanatorioksi. [[Bochnian suolakaivos]] kuuluu Unescon maailmanperintöluetteloon Wieliczkan kohteen laajennuksena vuodesta 2013. Maan alla ei ole kyyhkyllä mitään tekemistä, ja siks se jääköön ihmisille.
+Mmm— muistan tämän. Kaivos lopetti suolan tuotannon vuonna 1990, mutta se on säilynyt matkailukohteena. Maanalaisessa kaupungissa on kammioita, kuiluja ja käytäviä, ja suurin säilynyt kammio on muutettu sanatorioksi. [[Bochnian suolakaivos]] kuuluu Unescon maailmanperintöluetteloon [[Wieliczkan suolakaivoksen]] laajennuksena vuodesta 2013. Maan alla ei ole kyyhkyllä mitään tekemistä, ja siks se jääköön ihmisille.
 JATKOT:
 Millainen on sanatorio kaivoksen sisällä?
 Miten Unescon maailmanperintökohde valitaan?
