@@ -26,7 +26,12 @@ Todisteet: metrokyltin kuvapari VALMIS proto-3d/lokit/todistus-metrokyltti-pari-
 PUUTTUU: kuvasuurennosten ennen/jälkeen. Skripti valmiina: scratchpad c1e20ce7…/scratchpad/kuva-ajot.sh (4 ajoa: iPhone ennen/jälkeen,
 iPad ennen/jälkeen, koordinaattinapautukset kuva-iph-ennen.txt / kuva-iph-jalkeen.txt / kuva-ipad.txt). Julkaisija jonotti sen
 Siirtosepän jälkeen: aja vasta SIMULAATTORI NYT -viestistä. Sitten kuvapari (pari2.py samassa scratchpadissa) + rivi PT:lle.
-Kuvien huomio: iPadin metrolinja on vasemmassa reunassa osin rajautunut ("Kaupunkikierros" leikkautuu) jo ennen-kuvissa → rivi PT:lle.
+PT 01.2x (samaan erään metro-kyltti-181:een, ennen kuittausta):
+(a) Lisää pariin ENNEN suurimmillaan: vanha korostus 44 pt näkyi vain noin 3 s saapumisesta (KierrosTaulu → OpasMetrolinja.Korostus),
+    sitten 18 pt. Ajot osuivat 18 pt:n vaiheeseen. Kuvaa b3af6eca:lla hetki, jolloin korostus on päällä (esim. oleta-rivi KierrosTaulun
+    korostuksen alkuun tai `ui opasvalikko metro` -testitila + korostus), ja vertaa JÄLKEEN 26 pt:iin.
+(b) Korjaa iPadin metrolinjan vasemman reunan rajautuminen ("Kaupunkikierros"-kyltti ja pisteet leikkautuvat ruudun reunaan,
+    todistus-metro2-ennen-ipad-20261011-0015 ja -jalkeen-ipad-0046): todennäköisesti OpasMetrolinjan juuren left/turva-alue iPadilla.
 
 ## KESKEN 2: Olavinlinna B2 + B4 (PT:n yösuunnitelma, /Users/Shared/Claude/Matkakirja-fable/scratchpad/olavinlinna-yosuunnitelma-20261011.md)
 Haara natiivi-ui/olavinlinna-181 **5d6742d58** (pohja siirtoseppa/botti-kavely 9c59fcf3b Siirtosepän pyynnöstä).
