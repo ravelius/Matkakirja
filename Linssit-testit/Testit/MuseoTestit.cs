@@ -253,15 +253,15 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void TeoskierrosKertojanTeoksilla()
         {
-            // PT 11.10. 00.4x: kierros pysähtyy jokaisella kertojan teoksella (33; salissa 31), kamera teoksen katseluasennossa,
+            // PT 11.10. 00.4x: kierros pysähtyy jokaisella kertojan teoksella (33, 00.5x kaikki seinällä), kamera teoksen katseluasennossa,
             // matka ei kulje seinien läpi (osasta toiseen oviaukoista) ja muut teokset jäävät seinille.
             var s = Alankomaat(); var lista = KierrosTeokset();
             Oleta.Sama(33, lista.Count, "kierros.json: 33 kertojan teosta");
             foreach (double ks in new[] { 2622.0 / 1206, 4.0 / 3 })
             {
                 var k = new MuseoKierros(s, lista);
-                Oleta.Tosi(k.Puuttuvat.Count == 2 && k.Puuttuvat.Contains("RP-P-OB-612") && k.Puuttuvat.Contains("RP-P-OB-616"), "salista puuttuvat: " + string.Join(", ", k.Puuttuvat));
-                Oleta.Sama(31, k.Pysahdykset.Count, "pysähdys jokaisella salin kertojan teoksella");
+                Oleta.Tosi(k.Puuttuvat.Count == 0, "salista puuttuvat: " + string.Join(", ", k.Puuttuvat));
+                Oleta.Sama(33, k.Pysahdykset.Count, "pysähdys jokaisella kertojan teoksella");
                 k.SovitaPysahdykset(ks);
                 var nahdyt = new System.Collections.Generic.List<string>(); int versio = k.Versio; var ed = k.Nykyinen.P; double maxNopeus = 0;
                 var seinassa = new System.Collections.Generic.List<string>();

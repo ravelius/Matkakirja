@@ -3285,6 +3285,96 @@
     "kelvin": 3300
    },
    "teos_ehdotus": "mauritshuis-670"
+  },
+  {
+   "id": "graf-i2",
+   "osa": "graf",
+   "seina": "+x",
+   "keskipiste": [
+    -5.4,
+    1.5,
+    6.3
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "max_leveys": 0.85,
+   "max_korkeus": 0.7,
+   "sopii": "grafiikka",
+   "kehysprofiili": "grafiikka",
+   "valokeila": {
+    "paikka": [
+     -7.045,
+     4.35,
+     6.3
+    ],
+    "suunta": [
+     0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 10.4,
+    "reunahaive": 0.35,
+    "lx": 50,
+    "kelvin": 3000
+   },
+   "teos_ehdotus": "RP-P-OB-612",
+   "paspis": {
+    "leveys_cm": 7,
+    "vari": [
+     236,
+     230,
+     214
+    ],
+    "lasi": true
+   }
+  },
+  {
+   "id": "graf-i1",
+   "osa": "graf",
+   "seina": "+x",
+   "keskipiste": [
+    -5.4,
+    1.5,
+    2.5
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "max_leveys": 0.85,
+   "max_korkeus": 0.7,
+   "sopii": "grafiikka",
+   "kehysprofiili": "grafiikka",
+   "valokeila": {
+    "paikka": [
+     -7.045,
+     4.35,
+     2.5
+    ],
+    "suunta": [
+     0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 10.4,
+    "reunahaive": 0.35,
+    "lx": 50,
+    "kelvin": 3000
+   },
+   "teos_ehdotus": "RP-P-OB-616",
+   "paspis": {
+    "leveys_cm": 7,
+    "vari": [
+     236,
+     230,
+     214
+    ],
+    "lasi": true
+   }
   }
  ],
  "tekstitaulut": [
@@ -4515,6 +4605,46 @@
     7.99,
     1.45,
     -76.35
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-graf-i2",
+   "teospaikka": "graf-i2",
+   "keskipiste": [
+    -5.41,
+    1.45,
+    5.6
+   ],
+   "normaali": [
+    -1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-graf-i1",
+   "teospaikka": "graf-i1",
+   "keskipiste": [
+    -5.41,
+    1.45,
+    3.2
    ],
    "normaali": [
     -1,

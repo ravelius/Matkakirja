@@ -1,9 +1,9 @@
 {
   "versio": 1,
-  "huomio": "Taidemuseon opastettu kierros (PT 11.10.2026 00.4x): pysähdys jokaisella teoksella, jolla on kertojan teksti (aanet/taidemuseo-kertoja-v2), tässä järjestyksessä huoneittain: grafiikkakabinetti aulasta, sitten m1, m2, m3, kabinettigalleria komeroineen ja Yövartio. Muut teokset näkyvät seinillä matkalla. RP-P-OB-612 ja RP-P-OB-616 eivät ole salissa (sali v2g), joten kierros ohittaa ne.",
+  "huomio": "Taidemuseon opastettu kierros (PT 11.10.2026 00.4x): pysähdys jokaisella teoksella, jolla on kertojan teksti (aanet/taidemuseo-kertoja-v2), tässä järjestyksessä huoneittain: grafiikkakabinetti aulasta, sitten m1, m2, m3, kabinettigalleria komeroineen ja Yövartio. Muut teokset näkyvät seinillä matkalla. Kabinetissa kierros kiertää oven seinältä (RP-P-OB-612) myötäpäivään takaisin oven toiselle puolelle (RP-P-OB-616; PT 11.10. 00.5x ripusti molemmat).",
   "pysahdykset": [
-    "RP-P-OB-849", "RP-F-AB12278-Z", "RP-F-AB12278-A", "RP-P-OB-832", "uva-amsterdam-kartta-1625",
-    "RP-F-00-565", "RP-F-K89497", "RP-F-K89483", "RP-P-OB-612", "RP-P-OB-616",
+    "RP-P-OB-612", "RP-P-OB-849", "RP-F-AB12278-Z", "RP-F-AB12278-A", "RP-P-OB-832",
+    "uva-amsterdam-kartta-1625", "RP-F-00-565", "RP-F-K89497", "RP-F-K89483", "RP-P-OB-616",
     "SK-C-251", "SK-A-1595", "SK-A-2860", "SK-A-2344", "SK-A-182",
     "RP-P-OB-550", "RP-P-OB-602", "RP-P-OB-444", "RP-P-1961-1117", "SK-A-4691", "RP-P-OB-810",
     "SK-A-354", "SK-A-199",

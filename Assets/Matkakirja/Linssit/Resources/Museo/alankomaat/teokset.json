@@ -1,7 +1,7 @@
 {
  "versio": 2,
  "maa": "alankomaat",
- "huomio": "LS2 10.10. (taidemuseon tekijä, PT 20.5x: kaikki salit ilman tyhjiä kohtia): Sisältökirjurin teokset.v2.json (58) + grafiikka/teokset.grafiikka.v2.1.json (13) suodatettuna sali.json:n kaikkiin 62 teos_ehdotukseen (LR:n sali v2g täytti viimeiset 11 paikkaa; ennen 20, LS1:n ensimmäinen pala). ASTC-paketit astc-v1/<id>/ kaikille (42 uutta teos_astc.py:llä). Polut suhteessa MuseoSovitin.KuvaJuuri = …/taidemuseo/alankomaat/. Mitat cm [korkeus, leveys]. id = museon inventaarionumero.",
+ "huomio": "LS2 10.10. (taidemuseon tekijä, PT 20.5x: kaikki salit ilman tyhjiä kohtia): Sisältökirjurin teokset.v2.json (58) + grafiikka/teokset.grafiikka.v2.1.json (13) suodatettuna sali.json:n kaikkiin 62 teos_ehdotukseen (LR:n sali v2g täytti viimeiset 11 paikkaa; ennen 20, LS1:n ensimmäinen pala). ASTC-paketit astc-v1/<id>/ kaikille (42 uutta teos_astc.py:llä). Polut suhteessa MuseoSovitin.KuvaJuuri = …/taidemuseo/alankomaat/. Mitat cm [korkeus, leveys]. id = museon inventaarionumero. LS2 11.10. 00.5x (PT: kaikki 13 grafiikan kertojateosta seinälle): RP-P-OB-612 ja RP-P-OB-616 grafiikkakabinetin oven seinälle (graf-i1, graf-i2), 64 teosta.",
  "teokset": [
   {
    "id": "SK-C-251",
@@ -2832,6 +2832,104 @@
      14550
     ],
     "commons_sha1": "863e60ca490e9e58214f2ecc5931d2d9b837f6d8"
+   }
+  },
+  {
+   "id": "RP-P-OB-612",
+   "id_lahde": "rijks-rp-p-ob-612",
+   "tyyppi": "grafiikka",
+   "siipi": "grafiikka-valokuvat",
+   "nimi_fi": "Kristus kansalle näytettynä (Ecce Homo, vaaka-asento)",
+   "nimi_en": "Christ presented to the people: oblong plate",
+   "tekija": "Rembrandt van Rijn",
+   "vuosi": "1655",
+   "materiaali": "kuivaneula plaattoonilla, painettu japaninpaperille",
+   "tekniikka": "kuivaneula plaattoonilla, painettu japaninpaperille",
+   "mitat_cm_kork_lev": [
+    36.0,
+    45.5
+   ],
+   "mitat_teksti": "korkeus 360 mm, leveys 455 mm",
+   "kuvasuhde_leveys_per_korkeus": 1.2697,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "RP-P-OB-612",
+   "museon_tietue": "https://id.rijksmuseum.nl/200124970",
+   "teoksen_oikeustila": "Public domain (Rembrandt k. 1669); Rijksmuseum: Public Domain Mark",
+   "lisenssi": "CC0",
+   "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:Christus_aan_het_volk_getoond_liggende_plaat,_RP-P-OB-612.jpg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Rembrandtin Ecce Homo: Pilatus esittelee Kristuksen kansalle. Kuivaneulatyö on painettu japaninpaperille.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/RP-P-OB-612/",
+    "px": [
+     8192,
+     6452
+    ],
+    "lahde": "grafiikka/kuvat/iso/rijks-rp-p-ob-612.jpg",
+    "seina_lahde": "grafiikka/kuvat/seina/rijks-rp-p-ob-612.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:Christus aan het volk getoond liggende plaat, RP-P-OB-612.jpg",
+    "tekija_kuvalle": "Rijksmuseum",
+    "alkuperainen_px": [
+     5500,
+     4332
+    ],
+    "commons_sha1": "86d2940d052639d5fe9d33f9e1d7498ae75e06a8"
+   }
+  },
+  {
+   "id": "RP-P-OB-616",
+   "id_lahde": "rijks-rp-p-ob-616",
+   "tyyppi": "grafiikka",
+   "siipi": "grafiikka-valokuvat",
+   "nimi_fi": "Kolme ristiä",
+   "nimi_en": "The Three Crosses",
+   "tekija": "Rembrandt van Rijn",
+   "vuosi": "1653",
+   "materiaali": "kuivaneula ja kaiverrus (burin) plaattoonilla",
+   "tekniikka": "kuivaneula ja kaiverrus (burin) plaattoonilla",
+   "mitat_cm_kork_lev": [
+    38.6,
+    45.2
+   ],
+   "mitat_teksti": "korkeus 386 mm, leveys 452 mm",
+   "kuvasuhde_leveys_per_korkeus": 1.1653,
+   "museo": "Rijksmuseum, Amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.36,
+   "lon": 4.8852,
+   "inventaario": "RP-P-OB-616",
+   "museon_tietue": "https://id.rijksmuseum.nl/200124983",
+   "teoksen_oikeustila": "Public domain (Rembrandt k. 1669); Rijksmuseum: Public Domain Mark",
+   "lisenssi": "CC0",
+   "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahde_url": "https://commons.wikimedia.org/wiki/File:De_drie_kruisen,_RP-P-OB-616.jpg",
+   "krediitti": "Rijksmuseum",
+   "kuvateksti_fi": "Kolme ristiä (1653): Rembrandtin dramaattisimpia etsauksia. Valon säteet putoavat Golgatalle ja kuivaneula luo syvät varjot.",
+   "huomio": "",
+   "kuva": {
+    "paketti": "astc-v1/RP-P-OB-616/",
+    "px": [
+     8192,
+     7030
+    ],
+    "lahde": "grafiikka/kuvat/iso/rijks-rp-p-ob-616.jpg",
+    "seina_lahde": "grafiikka/kuvat/seina/rijks-rp-p-ob-616.jpg"
+   },
+   "kuva_tiedot": {
+    "commons_tiedosto": "File:De drie kruisen, RP-P-OB-616.jpg",
+    "tekija_kuvalle": "Rijksmuseum",
+    "alkuperainen_px": [
+     5332,
+     4576
+    ],
+    "commons_sha1": "9526ae47374220e8d61e149ce8bbd1b899bf0ae0"
    }
   }
  ]
