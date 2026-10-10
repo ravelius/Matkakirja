@@ -72,7 +72,15 @@ namespace Matkakirja.Natiivi
             nyt = k; iso = false;
             teksti.text = OpasYksityiskohdat.KortinTeksti(k);
             lahde.text = OpasYksityiskohdat.Tekijarivi(k) ?? "";
-            Kuvat.Hae(k.Url, t =>
+            if (Testikuva != null) { Kiinnita(Testikuva, k, v); return; }
+            Kuvat.Hae(k.Url, t => Kiinnita(t, k, v));
+        }
+
+        /// <summary>Asettelutesti (editori ilman verkkoa): tämä kuva ladatun tilalle.</summary>
+        public static Texture2D Testikuva;
+
+        void Kiinnita(Texture2D t, OpasYksityiskohdat.Kuva k, int v)
+        {
             {
                 if (v != versio || nyt != k) return;
                 if (t == null) { Debug.Log("MATKAKIRJA opas: kuvanosto ei latautunut " + k.Url); Piilota(); return; }
@@ -95,7 +103,7 @@ namespace Matkakirja.Natiivi
                     kortti.style.opacity = este ? 0f : 1f;
                 }).ExecuteLater(16);
                 Debug.Log($"MATKAKIRJA opas: kuvanosto {k.Ankkuri ?? k.Url} ({t.width}×{t.height})");
-            });
+            }
         }
 
         /// <summary>Kuva pois (LS1:n ajoitus tai kohteen vaihto).</summary>

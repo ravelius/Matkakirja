@@ -293,6 +293,7 @@ namespace Matkakirja.Natiivi
             bool seliteNakyy = kohde >= 0 && kohde < n && kohde == naytettyIndeksi && !string.IsNullOrEmpty(KorostusSelite) && !Testi
                 || Testi && TestiSelite != null && kohde == naytettyIndeksi;
             seliteTaso = Mathf.MoveTowards(seliteTaso, seliteNakyy ? 1f : 0f, Time.unscaledDeltaTime / KorostusVaihto);
+            if (Testi) seliteTaso = seliteNakyy ? 1f : 0f;   // testi (myös editorin asettelutesti, jossa aika ei kulje): heti
             PaivitaSelite(seliteNakyy, seliteTaso * seliteTaso * (3f - 2f * seliteTaso));
             PaivitaHistoria();
             for (int k = 0; k < n; k++)

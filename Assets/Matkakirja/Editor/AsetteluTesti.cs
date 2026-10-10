@@ -718,11 +718,20 @@ namespace Matkakirja.Editori
                 {
                     var o = OpasValikko.Hae(); o.Komento("sulje"); o.Komento("esitys on"); o.Komento("metro 2");
                     o.Komento("metro selite Pariisin voitonkaari Champs-Élysées'n päässä, Napoleonin tilaama 1806");
+                    // Editorissa ei verkkoa: kertomuskuvaksi 4:3-testikuva paperin sävyllä.
+                    if (Matkakirja.Natiivi.OpasKuvanosto.Testikuva == null)
+                    {
+                        var tk = new Texture2D(4, 3);
+                        var px = new Color[12]; for (int i = 0; i < 12; i++) px[i] = Tyylikirja.Kehys.Kulta;
+                        tk.SetPixels(px); tk.Apply();
+                        Matkakirja.Natiivi.OpasKuvanosto.Testikuva = tk;
+                    }
                     o.Komento("kuvatesti"); o.Komento("kuvanosto");
                 },
                 () =>
                 {
                     var o = OpasValikko.Hae(); o.Komento("kuvanosto pois"); o.Komento("kuvatesti pois"); o.Komento("metro selite");
+                    Matkakirja.Natiivi.OpasKuvanosto.Testikuva = null;
                     o.Komento("metro auto"); o.Komento("esitys auto"); o.Komento("sulje");
                 }, 4.0),
             ("vapaa lento", () => { var o = OpasValikko.Hae(); o.Komento("sulje"); o.Komento("mika"); o.Komento("vapaalento"); },
