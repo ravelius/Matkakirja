@@ -88,6 +88,9 @@ namespace Matkakirja.Linssit.Testit
         public const double TarkistusPiiloM = 6;
         bool oliPiilossa, paljastui, riitaKaynnissa; double riitaAsti = 20, riitaAlkaa = -1; string pelaajanOsa;
         public string PelaajanOsa => pelaajanOsa;
+        KavelyMerkki tikkaatAla;
+        static List<KavelyMerkki> tikkaat;
+        static List<KavelyMerkki> Tikkaat { get { if (tikkaat == null) { tikkaat = new List<KavelyMerkki>(); foreach (var m in Data.Lajia("kiipeily")) if (m.Yla != null) tikkaat.Add(m); } return tikkaat; } }
 
         public static Huonesimulaatio Uusi()
         {
@@ -274,6 +277,17 @@ namespace Matkakirja.Linssit.Testit
                 if (pelaajanOsa != null && !Vaara()) { Tarkistus = (PX, PY, PZ); TarkistusSeuraava = Seuraava; }
                 pelaajanOsa = osa;
                 if (kiinniOsa != null && osa != kiinniOsa) { kiinniOsa = null; kiinniOsassa = 0; foreach (var x in Hahmot) x.Aivot.Helpotettu = false; }   // helpotus päättyy
+            }
+            // Tarkistuspiste tikkaiden yläpäähän (SeikkailuVartijat, PT 10.10.): kiipeily:-merkin alapäästä (≤ 1 m vaaka, 1,2 m pysty) yläpäähän
+            // noustessa (≥ 1,5 m) kenenkään epäilemättä; harja on samaa osaa kuin muurikäytävä.
+            foreach (var m in Tikkaat)
+            {
+                if (Etaisyys2(PX, PZ, m.X, m.Z) <= 1.0 && Math.Abs(PY - m.Y) <= 1.2) tikkaatAla = m;
+                else if (tikkaatAla == m && Etaisyys2(PX, PZ, m.Yla[0], m.Yla[2]) <= 1.0 && PY >= m.Yla[1] - 0.3 && m.Yla[1] - m.Y >= 1.5)
+                {
+                    tikkaatAla = null;
+                    if (!Vaara()) { Tarkistus = (PX, PY, PZ); TarkistusSeuraava = Seuraava; }
+                }
             }
             var aanet = new List<Aanilahde>(Jono); Jono.Clear();
             double sade = Askelaani.Sade(Askelaani.Pinta(d, PX, PY, PZ), Hiipii ? Liiketapa.Hiipiminen : Liiketapa.Kavely);

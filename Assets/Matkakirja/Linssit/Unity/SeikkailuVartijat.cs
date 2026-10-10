@@ -124,6 +124,7 @@ namespace Matkakirja.Natiivi
         Action<string> kirjaa;
         Vector3 tarkistus; SeikkailuPelaaja tarkistusPelaaja;
         string pelaajanOsa; float osaTarkistus, hehkuTarkistus; string kiinniOsa; int kiinniOsassa;
+        bool oliKiipeily; float kiipeilyAlkuY;
         /// <summary>Viimeisimmän tarkistuspisteen osa ja tapahtuma (V6 tallennus kuuntelee).</summary>
         public static string TarkistusOsa;
         public static event Action<string, Vector3> Tarkistuspiste;
@@ -268,6 +269,18 @@ namespace Matkakirja.Natiivi
                     if (kiinniOsa != null && osaNyt != kiinniOsa) { kiinniOsa = null; kiinniOsassa = 0; foreach (var x in vartijat) x.Aivot.Helpotettu = false; }   // helpotus päättyy huoneen vaihtuessa
                 }
             }
+            // Tarkistuspiste tikkaiden yläpäähän (PT 10.10., pelattavuusmalli 4.3 "tarkistuspiste huoneen alussa"): harja on samaa
+            // muurikaytava-osaa kuin muurikäytävä, joten osarajaa ei ylitetä; ylöspäin päättynyt kiipeily (≥ 1,5 m) kenenkään epäilemättä.
+            bool kiipeileeNyt = p != null && p.Kiipeilee;
+            if (kiipeileeNyt && !oliKiipeily) kiipeilyAlkuY = p.transform.position.y;
+            if (!kiipeileeNyt && oliKiipeily && p != null && p.transform.position.y > kiipeilyAlkuY + 1.5f && !Vaara(p.transform.position, 0f) && !p.Otteessa)
+            {
+                var pp3 = p.transform.position;
+                tarkistus = pp3; TarkistusOsa = Askelaani.Osa(SeikkailuKavely.Data, pp3.x, pp3.y, -pp3.z) ?? TarkistusOsa;
+                kirjaa?.Invoke($"seikkailu: tarkistuspiste tikkaiden yläpäässä ({pp3})");
+                Tarkistuspiste?.Invoke(TarkistusOsa, pp3);
+            }
+            oliKiipeily = kiipeileeNyt;
             var aanet = new List<Aanilahde>(jono); jono.Clear();
             if (p != null)
             {

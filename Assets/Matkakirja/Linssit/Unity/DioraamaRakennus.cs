@@ -240,6 +240,7 @@ namespace Matkakirja.Natiivi
                 kolmioita += kolmiot.Length / 3;
                 materiaalitJarjestyksessa[oi] = leivottu ? (osa.Pinta == "lippu" ? LippuMateriaali(tila.Id, leivottuMateriaali) : leivottuMateriaali)
                     : valoVain ? ValoKlooni(tila.Id, rakennus, osa.Pinta) : MateriaaliPinnalle(rakennus, osa.Pinta);
+                if (!leivottu) VaroitaPuuttuvaPinta(rakennus, tila.Id, osa.Pinta, kirjaa);
                 kv += n;
             }
 
@@ -317,6 +318,15 @@ namespace Matkakirja.Natiivi
             if (leivotut.TryGetValue(tilaId, out var m) && m != null) yield return m;
             foreach (var p in leivotutKloonit) if (p.Key.StartsWith(tilaId + "#", StringComparison.Ordinal) && p.Value != null) yield return p.Value;
         }
+
+        /// <summary>Mallin pintanimi, jota rakennus.jsonin pinnoissa ei ole (aliakset huomioiden), piirtyy hiljaa vaalealla oletusvärillä
+        /// (OletusVari, ei kuvaa): kirjataan kerran per pinta, jotta Linnanrakentaja näkee sen ajolokista (Siirtoseppä 10.10., rantakivet).</summary>
+        void VaroitaPuuttuvaPinta(Rakennus rakennus, string tilaId, string pinta, Action<string> kirjaa)
+        {
+            if (string.IsNullOrEmpty(pinta) || rakennus?.Pinnat == null || rakennus.Pinnat.ContainsKey(PintaAvain(rakennus, pinta))) return;
+            if (varoitetutPinnat.Add(pinta)) kirjaa?.Invoke($"poikki: {tilaId}: pinta '{pinta}' puuttuu rakennus.jsonin pinnoista (vaalea oletusväri)");
+        }
+        readonly HashSet<string> varoitetutPinnat = new HashSet<string>(StringComparer.Ordinal);
 
         static string PintaAvain(Rakennus rakennus, string pinta)
             => pinta != null && rakennus?.Pinnat != null && !rakennus.Pinnat.ContainsKey(pinta) && PintaAliakset.TryGetValue(pinta, out var a) ? a : pinta;
@@ -411,6 +421,7 @@ namespace Matkakirja.Natiivi
 
         public void Tyhjenna()
         {
+            varoitetutPinnat.Clear();
             foreach (var go in tilat.Values)
             {
                 if (go == null) continue;
