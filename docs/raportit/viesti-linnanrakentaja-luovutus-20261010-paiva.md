@@ -233,3 +233,6 @@ blender.json `linnanrakentaja-linna-v45e` (worktree `/Users/Shared/Claude/wt/lin
 ## SEURAAVAKSI (15.0x)
 1) LS2:n parit ND v4c ja Peking v3 → säätö. 2) PT:n hyväksyntä NL-sali v2b → vienti LS1:lle. 3) Olavinlinna-erä Siirtosepän arkista:
    rannan vaaleat kivet 1499 liian kirkkaat (v46w ja v46z-176-b), ponttonisillan leikkauksen ulkopuolelle jääneet tummat palaset ennen 1975.
+- (15.2x) NL-sali v2b HYVÄKSYTTY (PT) → LS1 (_valmiit/taidemuseo-alankomaat-v2b); v2c (Veistosaulan 4 veistoksen kuja, Leidenin kamera) → LS1
+  (_valmiit/taidemuseo-alankomaat-v2c, arkki 237c13af5). Työkansio _valmiit/taidemuseo-alankomaat-v2 (alankomaat-v2b.py = edellinen).
+- (15.2x) ND v4d → LS2 (lyijy 158/163/168; LS2:n ×0,82 hylkäsi portin). Portti vs peli katoissa ~20 %-yks. ero → kalibroi LS2:n v4d-mittauksella.
