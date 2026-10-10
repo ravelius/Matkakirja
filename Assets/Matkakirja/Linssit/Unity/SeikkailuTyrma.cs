@@ -58,7 +58,13 @@ namespace Matkakirja.Natiivi
             });
             // Kuunvalo ilmaraosta (valo:tyrma-rako): volumetrinen säde lattialle laatutason salliessa.
             if (M("valo:tyrma-rako") is KavelyMerkki mv) SeikkailuValot.Saede(go.transform, U(mv), (t.istuin - U(mv)) + Vector3.down * 0.5f, new Color(0.62f, 0.7f, 0.85f), 0.9f, 6f, 30f, DioraamaNayttamoKerros());
-            p.Siirra(t.istuin + Vector3.up * 0.05f); p.Tila.KameraYaw = p.Tila.HahmoYaw = t.katse; p.Tila.KameraPitch = 10;
+            // Herätessä katse huoneeseen (omistaja TF 180: kamera tuijotti seinää, merkin kierto_y osoittaa poispäin ovesta): oven ja
+            // pudotettavien avainten välisuuntaan (muunnelma 1), muuten ovelle; ovi ja olki samassa kuvassa.
+            Vector3 Suunta(Vector3 a) { var v = a - t.istuin; v.y = 0; return v.sqrMagnitude > 1e-4f ? v.normalized : Vector3.zero; }
+            var kohti = Suunta(t.ovi) + (t.ydin.Muunnelma == 1 ? Suunta(t.avaimet) : t.ydin.Muunnelma == 3 && t.ryomiOn ? Suunta(t.ryomi) : Vector3.zero);
+            if (kohti.sqrMagnitude > 1e-4f) t.katse = Mathf.Atan2(kohti.x, kohti.z) * Mathf.Rad2Deg;
+            p.Siirra(t.istuin + Vector3.up * 0.05f); p.Tila.KameraYaw = p.Tila.HahmoYaw = t.katse; p.Tila.KameraPitch = 4;
+            DioraamaTaulu.NaytaSeikkailunNimi(Kieli.T("ui.linna.tyrma"));   // tyrmän nimi kerran ~3 s (Raamattu NIMIKYLTIT HETKEN)
             SeikkailuNakyvyys.Himmennys = 0f;
             if (SeikkailuVihjeet.Aktiivinen != null) SeikkailuVihjeet.Aktiivinen.Ydin.Tyrmassa = true;
             SeikkailuRepliikit.SoitaTaiVara("tyrma-vartija-vienti-1", null, t.ovi + Vector3.up * 1.6f);   // vartija sulkee oven (repliikit-lapi-v1)

@@ -526,7 +526,10 @@ namespace Matkakirja.Natiivi
             nayttamo.Hahmot3D?.Paivita(rakennus, nakyma, t);
             // Olavinlinna: kuoren leikkausikkuna kohdistetun tilan kohdalle (kasvaa kaarilennon jälkipuoliskolla).
             nayttamo.Ulkokuori?.PaivitaLeikkaus(rakennus, linssi.LeikkausHetkella(t), nayttamo.Kamera);
-            syote.Paivita(rakennus, t);
+            // Pelattava pala (omistaja TF 180, 11.10. 00.2x: tyrmässä "eri linnan osien nimiä" ja musta tyhjä): pelaajan napautus kuuluu
+            // SeikkailuTapeille. Dioraaman syöte kohdisti linssin napautettuun huoneeseen (tyrmä on keittiön rajojen sisällä → "Keittiö"
+            // ja kuoren leikkausikkuna keittiön kohdalle), joten se ei lue kosketuksia pelaajan tai veneen aikana.
+            if (SeikkailuPelaaja.Aktiivinen == null && SeikkailuVene.Aktiivinen == null) syote.Paivita(rakennus, t);
             aanet?.Paivita(rakennus, nakyma, t, SeikkailuPelaaja.Aktiivinen != null, PelaajanHuone());
         }
 
