@@ -1,0 +1,214 @@
+================ KOHTA 6 (kohde:neretva) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neretva (luonto · joki)
+Tietoruudun teksti: Neretva on Dinaaristen Alppien suurin karstijoki: 225 kilometriä, josta 208 Bosnia ja Hertsegovinan puolella. Nimen arvellaan tulevan indoeurooppalaisesta juuresta ner, "sukeltaa" — sama juuri näkyy bosnian sanassa roniti. Joki on niin kylmää, että Mostarin sillalta hyppääminen vaatii harjoittelua, ja sen vesistössä elää poikkeuksellisen paljon kotoperäisiä kaloja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Järvi joka katoaa kesäksi] 1689 — Kun Cerknican järvi on täynnä, se on Slovenian suurin järvi, mutta kesällä sen vesi valuu maan alle, ja pohjaan kasvaa vehreä kasvillisuus. Syksyn sateiden jälkeen vesi nousee takaisin luolista niin nopeasti, että järvi voi tulvia ympäristöönsä. Joskus se on ollut kuivana yli vuoden, kuten vuosina 1834–35, ja kalat katoavat ja palaavat veden mukana. Vuonna 1689 Johann Weikhard von Valvasor kuvasi järveä ja toi karst-sanan eurooppalaisten tutkijoiden käyttöön kuvaamaan jokien maanalaista virtausta. Järvi on tärkeä lintualue, ja sen pinta-ala vaihtelee 28 ja 38 neliökilometrin välillä.
+
+### 6.1
+KYSYMYS: Miksi karstijoen vesi on niin kylmää?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neretva (luonto · joki)
+Tietoruudun teksti: Neretva on Dinaaristen Alppien suurin karstijoki: 225 kilometriä, josta 208 Bosnia ja Hertsegovinan puolella. Nimen arvellaan tulevan indoeurooppalaisesta juuresta ner, "sukeltaa" — sama juuri näkyy bosnian sanassa roniti. Joki on niin kylmää, että Mostarin sillalta hyppääminen vaatii harjoittelua, ja sen vesistössä elää poikkeuksellisen paljon kotoperäisiä kaloja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Järvi joka katoaa kesäksi] 1689 — Kun Cerknican järvi on täynnä, se on Slovenian suurin järvi, mutta kesällä sen vesi valuu maan alle, ja pohjaan kasvaa vehreä kasvillisuus. Syksyn sateiden jälkeen vesi nousee takaisin luolista niin nopeasti, että järvi voi tulvia ympäristöönsä. Joskus se on ollut kuivana yli vuoden, kuten vuosina 1834–35, ja kalat katoavat ja palaavat veden mukana. Vuonna 1689 Johann Weikhard von Valvasor kuvasi järveä ja toi karst-sanan eurooppalaisten tutkijoiden käyttöön kuvaamaan jokien maanalaista virtausta. Järvi on tärkeä lintualue, ja sen pinta-ala vaihtelee 28 ja 38 neliökilometrin välillä.
+
+### 6.2
+KYSYMYS: Mitä kaloja Neretvan vesistössä elää?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neretva (luonto · joki)
+Tietoruudun teksti: Neretva on Dinaaristen Alppien suurin karstijoki: 225 kilometriä, josta 208 Bosnia ja Hertsegovinan puolella. Nimen arvellaan tulevan indoeurooppalaisesta juuresta ner, "sukeltaa" — sama juuri näkyy bosnian sanassa roniti. Joki on niin kylmää, että Mostarin sillalta hyppääminen vaatii harjoittelua, ja sen vesistössä elää poikkeuksellisen paljon kotoperäisiä kaloja.
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:sutjeska) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sutjeskan kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Puiston sydämessä on Perućica, aarniometsä jota ei ole koskaan hakattu. Pyökit kasvavat siellä yli 60 metriä korkeiksi ja osa puista on 300 vuotta vanhoja. Puistossa on nähty karhuja, gemssejä, susia, villikissoja ja villivuohia, ja se on koti yli 300 lintulajille — muun muassa maakotkalle ja muuttohaukalle. Yllä kohoaa Maglić, maan korkein huippu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valparaíso — kohdekartta / Kohdekartta: Valparaíson yliopisto] 1981 Valparaíso oli 1800-luvulla San Franciscon eteläpuolen suurin Tyynenmeren satama ja siksi liike-elämän keskus, ja korkein opetus alkoi täällä kaupan tarpeista. Muodollinen oikeustieteen opetus alkoi 1878, ja vuoteen 1911 mennessä siitä oli kasvanut Chilen ensimmäinen alueellinen oikeustieteellinen korkeakoulu osana Chilen yliopistoa. Kaupunkiin syntyi 1920- ja 1930-luvuilla kaksi yksityistä yliopistoa, joista tulivat Federico Santa Marían teknillinen yliopisto ja katolinen yliopisto, samalla kun valtion korkeakouluopetus koottiin Chilen yliopiston alaisuuteen. Vuonna 1972 kaupungin julkinen yliopisto-opetus järjestettiin Chilen yliopiston toimipisteeksi, ja 12. helmikuuta 1981 se sai n…
+- [Cayenne — kaupunkilehti / Cayenne: Sademetsän portilla] Cayenne rakentui kapealle niemelle Amazonin sademetsän reunalle, ja kaupungin portilta alkoi heti aarniometsä täynnä lajeja, joita Euroopassa ei tunnettu lainkaan. Yksi näyttävimmistä asukkaista on Morpho menelaus -perhonen, jonka siivet ovat päältä metallisen siniset, mutta joka lepää päivisin ja öisin siivet suljettuina: silloin näkyy vain ruskea alapinta täynnä pöllön silmiä muistuttavia täpliä, jotka säikäyttävät lintuja ja muita saalistajia. Isoisän matkapäiväkirjassa sademetsän hyönteiset ja perhoset olivat yksi Cayennen suurimmista ihmeistä, aivan toisenlaisia kuin mikään kotimaassa.
+
+### 7.1
+KYSYMYS: Miten aarniometsä eroaa talousmetsästä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sutjeskan kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Puiston sydämessä on Perućica, aarniometsä jota ei ole koskaan hakattu. Pyökit kasvavat siellä yli 60 metriä korkeiksi ja osa puista on 300 vuotta vanhoja. Puistossa on nähty karhuja, gemssejä, susia, villikissoja ja villivuohia, ja se on koti yli 300 lintulajille — muun muassa maakotkalle ja muuttohaukalle. Yllä kohoaa Maglić, maan korkein huippu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valparaíso — kohdekartta / Kohdekartta: Valparaíson yliopisto] 1981 Valparaíso oli 1800-luvulla San Franciscon eteläpuolen suurin Tyynenmeren satama ja siksi liike-elämän keskus, ja korkein opetus alkoi täällä kaupan tarpeista. Muodollinen oikeustieteen opetus alkoi 1878, ja vuoteen 1911 mennessä siitä oli kasvanut Chilen ensimmäinen alueellinen oikeustieteellinen korkeakoulu osana Chilen yliopistoa. Kaupunkiin syntyi 1920- ja 1930-luvuilla kaksi yksityistä yliopistoa, joista tulivat Federico Santa Marían teknillinen yliopisto ja katolinen yliopisto, samalla kun valtion korkeakouluopetus koottiin Chilen yliopiston alaisuuteen. Vuonna 1972 kaupungin julkinen yliopisto-opetus järjestettiin Chilen yliopiston toimipisteeksi, ja 12. helmikuuta 1981 se sai n…
+- [Cayenne — kaupunkilehti / Cayenne: Sademetsän portilla] Cayenne rakentui kapealle niemelle Amazonin sademetsän reunalle, ja kaupungin portilta alkoi heti aarniometsä täynnä lajeja, joita Euroopassa ei tunnettu lainkaan. Yksi näyttävimmistä asukkaista on Morpho menelaus -perhonen, jonka siivet ovat päältä metallisen siniset, mutta joka lepää päivisin ja öisin siivet suljettuina: silloin näkyy vain ruskea alapinta täynnä pöllön silmiä muistuttavia täpliä, jotka säikäyttävät lintuja ja muita saalistajia. Isoisän matkapäiväkirjassa sademetsän hyönteiset ja perhoset olivat yksi Cayennen suurimmista ihmeistä, aivan toisenlaisia kuin mikään kotimaassa.
+
+### 7.2
+KYSYMYS: Millainen eläin on gemssi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sutjeskan kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Puiston sydämessä on Perućica, aarniometsä jota ei ole koskaan hakattu. Pyökit kasvavat siellä yli 60 metriä korkeiksi ja osa puista on 300 vuotta vanhoja. Puistossa on nähty karhuja, gemssejä, susia, villikissoja ja villivuohia, ja se on koti yli 300 lintulajille — muun muassa maakotkalle ja muuttohaukalle. Yllä kohoaa Maglić, maan korkein huippu.
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:travnik) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Travnik (kaupungit)
+Tietoruudun teksti: Travnik oli Bosnian kuvernöörien pääkaupunki vuosina 1699–1850 — täältä maata hallittiin puolitoista vuosisataa, ja siltä ajalta on jäänyt sen kulttuuriperintö. Kaupunki on Lašva-joen laaksossa 514 metrin korkeudessa, ja sen yllä kohoaa Vlašić, yksi maan korkeimmista vuorista (1 933 m). Vanhankaupungin keskellä, linnan alta, purskahtaa esiin suuri karstilähde Plava Voda.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Historia: Kirje joka on vanhin säilynyt suomalaisittain luettava teksti] 1189 — Bosnian ensimmäinen tunnettu hallitsija, ban Kulin, kirjoitutti 29. elokuuta 1189 kauppasopimuksen Dubrovnikin kaupungin kanssa: Dubrovnikin kauppiaat saivat liikkua ja käydä kauppaa Bosniassa vapaasti ja turvallisesti. Asiakirja on kirjoitettu bosančica-nimisellä kyrillisellä kirjaimistolla tavallisella puhekielellä, ei kirkkoslaavilla, minkä vuoksi sitä pidetään vanhimpana säilyneenä eteläslaavilaisen puhekielen valtiollisena asiakirjana. Alkuperäiskappaleesta on säilynyt keskiaikaisia jäljennöksiä, ja teksti tunnetaan kokonaisuudessaan niiden ansiosta. Kulinin aikaa pidetään Bosnian ensimmäisenä rauhan ja vaurauden kautena.
+- [Bosnia ja Hertsegovina — maalehti / Historia: Kuningas kruunattiin, ja linna jäi pääkaupungiksi] 1377 — Tvrtko I Kotromanić kruunattiin Bosnian kuninkaaksi vuonna 1377, ja hänen hallintoaikanaan Bosnian kuningaskunta laajeni suurimpaan koskaan ulottuvuuteensa. Kuninkaiden pääasiallinen linnoitus oli Bobovac keskisessä Bosniassa: sinne oli koottu valtakunnan kruununjalokivet ja kuninkaiden haudat, eikä sinne johtanut kunnollista tietä turvallisuussyistä. Bobovac kesti Ottomaanien piirityksiä vuosikymmeniä, kunnes se kavallettiin vihollisille vuonna 1463 — samana vuonna Bosnian viimeinen kuningas Stjepan Tomašević vangittiin ja teloitettiin Jajcessa, ja itsenäinen keskiaikainen Bosnia lakkasi olemasta.
+
+### 8.1
+KYSYMYS: Mitä Bosnian kuvernöörin työhön kuului?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Travnik (kaupungit)
+Tietoruudun teksti: Travnik oli Bosnian kuvernöörien pääkaupunki vuosina 1699–1850 — täältä maata hallittiin puolitoista vuosisataa, ja siltä ajalta on jäänyt sen kulttuuriperintö. Kaupunki on Lašva-joen laaksossa 514 metrin korkeudessa, ja sen yllä kohoaa Vlašić, yksi maan korkeimmista vuorista (1 933 m). Vanhankaupungin keskellä, linnan alta, purskahtaa esiin suuri karstilähde Plava Voda.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Historia: Kirje joka on vanhin säilynyt suomalaisittain luettava teksti] 1189 — Bosnian ensimmäinen tunnettu hallitsija, ban Kulin, kirjoitutti 29. elokuuta 1189 kauppasopimuksen Dubrovnikin kaupungin kanssa: Dubrovnikin kauppiaat saivat liikkua ja käydä kauppaa Bosniassa vapaasti ja turvallisesti. Asiakirja on kirjoitettu bosančica-nimisellä kyrillisellä kirjaimistolla tavallisella puhekielellä, ei kirkkoslaavilla, minkä vuoksi sitä pidetään vanhimpana säilyneenä eteläslaavilaisen puhekielen valtiollisena asiakirjana. Alkuperäiskappaleesta on säilynyt keskiaikaisia jäljennöksiä, ja teksti tunnetaan kokonaisuudessaan niiden ansiosta. Kulinin aikaa pidetään Bosnian ensimmäisenä rauhan ja vaurauden kautena.
+- [Bosnia ja Hertsegovina — maalehti / Historia: Kuningas kruunattiin, ja linna jäi pääkaupungiksi] 1377 — Tvrtko I Kotromanić kruunattiin Bosnian kuninkaaksi vuonna 1377, ja hänen hallintoaikanaan Bosnian kuningaskunta laajeni suurimpaan koskaan ulottuvuuteensa. Kuninkaiden pääasiallinen linnoitus oli Bobovac keskisessä Bosniassa: sinne oli koottu valtakunnan kruununjalokivet ja kuninkaiden haudat, eikä sinne johtanut kunnollista tietä turvallisuussyistä. Bobovac kesti Ottomaanien piirityksiä vuosikymmeniä, kunnes se kavallettiin vihollisille vuonna 1463 — samana vuonna Bosnian viimeinen kuningas Stjepan Tomašević vangittiin ja teloitettiin Jajcessa, ja itsenäinen keskiaikainen Bosnia lakkasi olemasta.
+
+### 8.2
+KYSYMYS: Miksi hallinto siirtyi lopulta pois Travnikista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Travnik (kaupungit)
+Tietoruudun teksti: Travnik oli Bosnian kuvernöörien pääkaupunki vuosina 1699–1850 — täältä maata hallittiin puolitoista vuosisataa, ja siltä ajalta on jäänyt sen kulttuuriperintö. Kaupunki on Lašva-joen laaksossa 514 metrin korkeudessa, ja sen yllä kohoaa Vlašić, yksi maan korkeimmista vuorista (1 933 m). Vanhankaupungin keskellä, linnan alta, purskahtaa esiin suuri karstilähde Plava Voda.
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:neum) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neum (kaupungit)
+Tietoruudun teksti: Bosnia ja Hertsegovinalla on merenrantaa 20 kilometriä, ja Neum on sen ainoa kaupunki — koko maan ainoa yhteys Adrianmerelle. Kaistale syntyi vuoden 1699 Karlowitzin rauhassa: Ragusan tasavalta luovutti kaksi puskurivyöhykettä ottomaaneille estääkseen kilpailijaansa Venetsiaa hyökkäämästä maitse. Kapea käytävä katkaisee yhä Kroatian rannikon kahtia, ja siitä tuli kansainvälinen raja 1991.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Luonto: Käytävä, jota on kuljettu sata vuotta] Lähteelle johtaa Suuri kuja, jonka varrelle istutettiin plataaneja ja hevoskastanjoita aina vuoteen 1894 asti — puita on nykyään yli seitsemänsataa. Samaa kujaa pitkin on kuljetettu vierailijoita hevosvetoisilla vaunuilla, fijakereilla, jo yli sata vuotta: matka Ilidžan kylpyläalueelta lähteelle tehtiin ratsailla jo Itävalta-Unkarin aikaan, ja perinne jatkuu yhä samalla reitillä.
+- [Firenze — kaupunkilehti / Kuvataide: Ruhtinaan oma käytävä] Kun Cosimo I muutti hovinsa joen eteläpuolelle Pitti-palatsiin, hän ei halunnut kulkea kaduilla kansan seassa. Giorgio Vasari rakennutti vuonna 1565 katetun käytävän, joka lähtee Palazzo Vecchiosta, kulkee Uffizin läpi, ylittää Arnon Ponte Vecchion kauppojen katon päällä ja päättyy Pitti-palatsiin. Matkaa on noin kilometri. Juuri tämän käytävän takia sillan teurastajat karkotettiin 1593: haju nousi ikkunoihin.
+
+### 9.1
+KYSYMYS: Mikä oli Ragusan tasavalta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neum (kaupungit)
+Tietoruudun teksti: Bosnia ja Hertsegovinalla on merenrantaa 20 kilometriä, ja Neum on sen ainoa kaupunki — koko maan ainoa yhteys Adrianmerelle. Kaistale syntyi vuoden 1699 Karlowitzin rauhassa: Ragusan tasavalta luovutti kaksi puskurivyöhykettä ottomaaneille estääkseen kilpailijaansa Venetsiaa hyökkäämästä maitse. Kapea käytävä katkaisee yhä Kroatian rannikon kahtia, ja siitä tuli kansainvälinen raja 1991.
+
+### 9.2
+KYSYMYS: Miten kapea käytävä toimii nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neum (kaupungit)
+Tietoruudun teksti: Bosnia ja Hertsegovinalla on merenrantaa 20 kilometriä, ja Neum on sen ainoa kaupunki — koko maan ainoa yhteys Adrianmerelle. Kaistale syntyi vuoden 1699 Karlowitzin rauhassa: Ragusan tasavalta luovutti kaksi puskurivyöhykettä ottomaaneille estääkseen kilpailijaansa Venetsiaa hyökkäämästä maitse. Kapea käytävä katkaisee yhä Kroatian rannikon kahtia, ja siitä tuli kansainvälinen raja 1991.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Luonto: Käytävä, jota on kuljettu sata vuotta] Lähteelle johtaa Suuri kuja, jonka varrelle istutettiin plataaneja ja hevoskastanjoita aina vuoteen 1894 asti — puita on nykyään yli seitsemänsataa. Samaa kujaa pitkin on kuljetettu vierailijoita hevosvetoisilla vaunuilla, fijakereilla, jo yli sata vuotta: matka Ilidžan kylpyläalueelta lähteelle tehtiin ratsailla jo Itävalta-Unkarin aikaan, ja perinne jatkuu yhä samalla reitillä.
+- [Firenze — kaupunkilehti / Kuvataide: Ruhtinaan oma käytävä] Kun Cosimo I muutti hovinsa joen eteläpuolelle Pitti-palatsiin, hän ei halunnut kulkea kaduilla kansan seassa. Giorgio Vasari rakennutti vuonna 1565 katetun käytävän, joka lähtee Palazzo Vecchiosta, kulkee Uffizin läpi, ylittää Arnon Ponte Vecchion kauppojen katon päällä ja päättyy Pitti-palatsiin. Matkaa on noin kilometri. Juuri tämän käytävän takia sillan teurastajat karkotettiin 1593: haju nousi ikkunoihin.
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:banjaluka) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Banja Luka (kaupungit)
+Tietoruudun teksti: Maan toiseksi suurin kaupunki Vrbas-joen varrella. Nimi mainitaan ensi kerran 6.2.1494, ja se tarkoittaa todennäköisesti "banin niittyä" — ei kylpylää, vaikka moni niin luulee. Kaupungin keskellä seisoo Kastel, jonka juuret ovat roomalaisessa linnakkeessa. 1800-luvulla tänne muutti sefardijuutalaisia ja trappistimunkkeja, joiden luostari antoi nimensä kokonaiselle kaupunginosalle — ja maailmalle trappistijuuston.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rub al-Khali — kaupunkilehti / Luonto: Dyynit eivät vaella] Aavikon länsireunalla on 12 658 neliökilometrin suojelualue Uruq Bani Ma'arid, joka otettiin 2023 maailmanperintöön Saudi-Arabian ensimmäisenä luontokohteena. Se näyttää tiivistettynä, mistä hiekkameri koostuu: korkeita hiekkadyynejä ja niiden välissä suola-altaita. Punaiset dyyniselänteet kulkevat rinnakkain jopa sadanviidenkymmenen metrin korkuisina, ja niiden väliin jää hiekka- tai sorapohjaisia käytäviä. Suola-altaat eli sabkhat selittävät oudon havainnon: dyynit eivät vaella. Pintahiekka lentää tuulessa, mutta muoto pysyy, koska altaista nousee kosteutta dyynin juureen.
+- [Slovakia — maalehti / Keksinnöt: Sateenvarjo selässä] 1914 — Štefan Banič syntyi 1870 Smolenican lähellä ja muutti Yhdysvaltoihin, jossa hän työskenteli hiilikaivoksessa Pennsylvaniassa. Nähtyään lentokoneen putoamisen 1912 hän rakensi sateenvarjon kaltaisen laskuvarjon, joka kiinnitettiin kantajan kehoon. Patentti myönnettiin 25. elokuuta 1914 numerolla 1 108 484. Hänen kerrotaan kokeilleen keksintöään Washingtonissa hyppäämällä ensin 15-kerroksisen talon katolta ja sitten lentokoneesta, mutta varmaa näyttöä ei ole. Myöhemmin hän palasi kotiseudulleen ja auttoi tutkimaan Drinan luolaa.
+- [Oman — maalehti / Luonto: Altaat pysyvät täynnä ympäri vuoden] Wadi Bani Khalid on Hajar-vuoriston laakso, jonka pohjalla on altaita, jotka eivät kuivu edes kesällä. Se on Omanissa harvinaista: useimmissa laaksoissa vesi juoksee vain sateen jälkeen. Täällä vesi tulee lähteistä kallion sisältä, joten se ei ole sateen varassa. Altaiden ympärillä kasvaa taatelipalmuja, ja rinteillä on kyliä, joiden pellot kastellaan samasta vedestä kanavia pitkin. Laakson yläpäässä on Muqalin luola, jonne kavutaan kapeaa polkua; sisällä on pimeää ja viileää, ja katosta tippuu vettä.
+
+### 10.1
+KYSYMYS: Kuka oli bani?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Banja Luka (kaupungit)
+Tietoruudun teksti: Maan toiseksi suurin kaupunki Vrbas-joen varrella. Nimi mainitaan ensi kerran 6.2.1494, ja se tarkoittaa todennäköisesti "banin niittyä" — ei kylpylää, vaikka moni niin luulee. Kaupungin keskellä seisoo Kastel, jonka juuret ovat roomalaisessa linnakkeessa. 1800-luvulla tänne muutti sefardijuutalaisia ja trappistimunkkeja, joiden luostari antoi nimensä kokonaiselle kaupunginosalle — ja maailmalle trappistijuuston.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rub al-Khali — kaupunkilehti / Luonto: Dyynit eivät vaella] Aavikon länsireunalla on 12 658 neliökilometrin suojelualue Uruq Bani Ma'arid, joka otettiin 2023 maailmanperintöön Saudi-Arabian ensimmäisenä luontokohteena. Se näyttää tiivistettynä, mistä hiekkameri koostuu: korkeita hiekkadyynejä ja niiden välissä suola-altaita. Punaiset dyyniselänteet kulkevat rinnakkain jopa sadanviidenkymmenen metrin korkuisina, ja niiden väliin jää hiekka- tai sorapohjaisia käytäviä. Suola-altaat eli sabkhat selittävät oudon havainnon: dyynit eivät vaella. Pintahiekka lentää tuulessa, mutta muoto pysyy, koska altaista nousee kosteutta dyynin juureen.
+- [Slovakia — maalehti / Keksinnöt: Sateenvarjo selässä] 1914 — Štefan Banič syntyi 1870 Smolenican lähellä ja muutti Yhdysvaltoihin, jossa hän työskenteli hiilikaivoksessa Pennsylvaniassa. Nähtyään lentokoneen putoamisen 1912 hän rakensi sateenvarjon kaltaisen laskuvarjon, joka kiinnitettiin kantajan kehoon. Patentti myönnettiin 25. elokuuta 1914 numerolla 1 108 484. Hänen kerrotaan kokeilleen keksintöään Washingtonissa hyppäämällä ensin 15-kerroksisen talon katolta ja sitten lentokoneesta, mutta varmaa näyttöä ei ole. Myöhemmin hän palasi kotiseudulleen ja auttoi tutkimaan Drinan luolaa.
+- [Oman — maalehti / Luonto: Altaat pysyvät täynnä ympäri vuoden] Wadi Bani Khalid on Hajar-vuoriston laakso, jonka pohjalla on altaita, jotka eivät kuivu edes kesällä. Se on Omanissa harvinaista: useimmissa laaksoissa vesi juoksee vain sateen jälkeen. Täällä vesi tulee lähteistä kallion sisältä, joten se ei ole sateen varassa. Altaiden ympärillä kasvaa taatelipalmuja, ja rinteillä on kyliä, joiden pellot kastellaan samasta vedestä kanavia pitkin. Laakson yläpäässä on Muqalin luola, jonne kavutaan kapeaa polkua; sisällä on pimeää ja viileää, ja katosta tippuu vettä.
+
+### 10.2
+KYSYMYS: Millaista trappistijuusto on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Banja Luka (kaupungit)
+Tietoruudun teksti: Maan toiseksi suurin kaupunki Vrbas-joen varrella. Nimi mainitaan ensi kerran 6.2.1494, ja se tarkoittaa todennäköisesti "banin niittyä" — ei kylpylää, vaikka moni niin luulee. Kaupungin keskellä seisoo Kastel, jonka juuret ovat roomalaisessa linnakkeessa. 1800-luvulla tänne muutti sefardijuutalaisia ja trappistimunkkeja, joiden luostari antoi nimensä kokonaiselle kaupunginosalle — ja maailmalle trappistijuuston.
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

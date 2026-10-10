@@ -1,0 +1,81 @@
+================ KOHTA 31 (kohde:hahmotelma-kozara) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kozaran kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Kozara on kansallispuisto Luoteis-Bosniassa Una-, Sava-, Sana- ja Vrbas-jokien välissä, ja Josip Broz Tito julisti sen suojelluksi valtionmetsäksi vuonna 1967. Alueen metsät olivat toisessa maailmansodassa vastarintaliikkeen näyttämönä, ja tapahtumien muistoksi pystytettiin vuonna 1972 muistomerkki sekä myöhemmin museo. Nykyään puisto tunnetaan ennen kaikkea luonnostaan ja ulkoilumahdollisuuksistaan: siellä järjestetään vuosittain Kozara Ultra Trail -maastojuoksutapahtuma ja kansainvälisen pyöräilyliiton kalenteriin kuuluva Kozara Grand Prix -maastopyöräilykilpailu, ja alueella on lukuisia vaellus- ja pyöräilyreittejä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Filippiinit — maalehti / Luonto: Silmät eivät liiku, mutta pää kääntyy] Filippiinientarsierin silmät ovat suhteessa ruumiin painoon nisäkkäiden suurimmat — niin suuret, etteivät ne mahdu liikkumaan kuopissaan. Sen sijaan niska kääntää pyöreän pään puoli kierrosta kumpaankin suuntaan. Eläin on yöeläin, joka nukkuu päivät tiheikössä lähellä maata ja saalistaa pimeällä sirkkoja ja heinäsirkkoja, molemmin käsin suuhun vieden. Suku sai nimen Carlito bohololaisen suojelijan Carlito Pizarrasin mukaan. Boholin saarella yksilöitä arvioidaan olevan enää noin seitsemänsataa.
+
+### 31.1
+KYSYMYS: Minä vuonna Kozaran kansallispuisto perustettiin ja kuka sen julisti suojelluksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kozaran kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Kozara on kansallispuisto Luoteis-Bosniassa Una-, Sava-, Sana- ja Vrbas-jokien välissä, ja Josip Broz Tito julisti sen suojelluksi valtionmetsäksi vuonna 1967. Alueen metsät olivat toisessa maailmansodassa vastarintaliikkeen näyttämönä, ja tapahtumien muistoksi pystytettiin vuonna 1972 muistomerkki sekä myöhemmin museo. Nykyään puisto tunnetaan ennen kaikkea luonnostaan ja ulkoilumahdollisuuksistaan: siellä järjestetään vuosittain Kozara Ultra Trail -maastojuoksutapahtuma ja kansainvälisen pyöräilyliiton kalenteriin kuuluva Kozara Grand Prix -maastopyöräilykilpailu, ja alueella on lukuisia vaellus- ja pyöräilyreittejä.
+
+### 31.2
+KYSYMYS: Mitä liikunnallista Kozarassa voi nykyään harrastaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kozaran kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Kozara on kansallispuisto Luoteis-Bosniassa Una-, Sava-, Sana- ja Vrbas-jokien välissä, ja Josip Broz Tito julisti sen suojelluksi valtionmetsäksi vuonna 1967. Alueen metsät olivat toisessa maailmansodassa vastarintaliikkeen näyttämönä, ja tapahtumien muistoksi pystytettiin vuonna 1972 muistomerkki sekä myöhemmin museo. Nykyään puisto tunnetaan ennen kaikkea luonnostaan ja ulkoilumahdollisuuksistaan: siellä järjestetään vuosittain Kozara Ultra Trail -maastojuoksutapahtuma ja kansainvälisen pyöräilyliiton kalenteriin kuuluva Kozara Grand Prix -maastopyöräilykilpailu, ja alueella on lukuisia vaellus- ja pyöräilyreittejä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Filippiinit — maalehti / Luonto: Silmät eivät liiku, mutta pää kääntyy] Filippiinientarsierin silmät ovat suhteessa ruumiin painoon nisäkkäiden suurimmat — niin suuret, etteivät ne mahdu liikkumaan kuopissaan. Sen sijaan niska kääntää pyöreän pään puoli kierrosta kumpaankin suuntaan. Eläin on yöeläin, joka nukkuu päivät tiheikössä lähellä maata ja saalistaa pimeällä sirkkoja ja heinäsirkkoja, molemmin käsin suuhun vieden. Suku sai nimen Carlito bohololaisen suojelijan Carlito Pizarrasin mukaan. Boholin saarella yksilöitä arvioidaan olevan enää noin seitsemänsataa.
+
+### 31.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+================ KOHTA 32 (kohde:hahmotelma-ostrozac) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ostrožacin linna (kulttuuri)
+Tietoruudun teksti: Ostrožacin linna kohoaa Cazinin liepeillä Luoteis-Bosniassa, ja sen juuret ulottuvat 1200-luvulle, jolloin se kuului kroatialaiselle Babonić-aatelissuvulle. Ottomaanit valtasivat linnan vuonna 1592. Nykyinen, satumainen ulkoasu tornikattoineen on paljon myöhempää perua: Bihaćin pormestari Lothar von Berks rakennutti linnan uudelleen vuosina 1900–1906 syntymäpäivälahjaksi habsburgilaissyntyiselle vaimolleen. Linnan pihalla toimii nykyään Ostrožacin kuvanveistäjäsiirtokunta, jonka yli viisikymmentä vuotta kestäneen perinteen aikana on syntynyt yli sata viisikymmentä bihaciittikivestä veistettyä monumentaaliveistosta — ainutlaatuinen ulkoilmapatsaspuisto Kaakkois-Euroopassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [NCL — maalehti / Kuvataide: Veistetty vartija kulttuurikeskuksessa] nykyään — Jean-Marie Tjibaoun kulttuurikeskuksen näyttelyissä ja ulkoalueilla seisoo useita puuveistoksia, joita kutsutaan usein toteemeiksi, vaikka termi ei ole täysin osuva kanakikulttuurille: veistokset ovat pikemminkin esi-isien tai suojelevien henkien kuvia kuin klaanitunnuksia länsimaisessa mielessä. Nykykanakiveistäjät jatkavat perinnettä yhdistäen perinteisiä aiheita — kasvoja, käsiä, eläinhahmoja — uusiin materiaaleihin ja mittakaavoihin. Keskus toimii sekä museona että työpajana, jossa nuoret taiteilijat oppivat veistämistä vanhemmilta mestareilta, ja monet keskuksessa esillä olevista teoksista on tehty juuri tätä tarkoitusta varten.
+
+### 32.1
+KYSYMYS: Kenelle Bihaćin pormestari Lothar von Berks rakennutti linnan uudelleen 1900-luvun alussa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ostrožacin linna (kulttuuri)
+Tietoruudun teksti: Ostrožacin linna kohoaa Cazinin liepeillä Luoteis-Bosniassa, ja sen juuret ulottuvat 1200-luvulle, jolloin se kuului kroatialaiselle Babonić-aatelissuvulle. Ottomaanit valtasivat linnan vuonna 1592. Nykyinen, satumainen ulkoasu tornikattoineen on paljon myöhempää perua: Bihaćin pormestari Lothar von Berks rakennutti linnan uudelleen vuosina 1900–1906 syntymäpäivälahjaksi habsburgilaissyntyiselle vaimolleen. Linnan pihalla toimii nykyään Ostrožacin kuvanveistäjäsiirtokunta, jonka yli viisikymmentä vuotta kestäneen perinteen aikana on syntynyt yli sata viisikymmentä bihaciittikivestä veistettyä monumentaaliveistosta — ainutlaatuinen ulkoilmapatsaspuisto Kaakkois-Euroopassa.
+
+### 32.2
+KYSYMYS: Mikä patsaspuisto linnan pihalla toimii ja mistä kivestä veistokset on tehty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ostrožacin linna (kulttuuri)
+Tietoruudun teksti: Ostrožacin linna kohoaa Cazinin liepeillä Luoteis-Bosniassa, ja sen juuret ulottuvat 1200-luvulle, jolloin se kuului kroatialaiselle Babonić-aatelissuvulle. Ottomaanit valtasivat linnan vuonna 1592. Nykyinen, satumainen ulkoasu tornikattoineen on paljon myöhempää perua: Bihaćin pormestari Lothar von Berks rakennutti linnan uudelleen vuosina 1900–1906 syntymäpäivälahjaksi habsburgilaissyntyiselle vaimolleen. Linnan pihalla toimii nykyään Ostrožacin kuvanveistäjäsiirtokunta, jonka yli viisikymmentä vuotta kestäneen perinteen aikana on syntynyt yli sata viisikymmentä bihaciittikivestä veistettyä monumentaaliveistosta — ainutlaatuinen ulkoilmapatsaspuisto Kaakkois-Euroopassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [NCL — maalehti / Kuvataide: Veistetty vartija kulttuurikeskuksessa] nykyään — Jean-Marie Tjibaoun kulttuurikeskuksen näyttelyissä ja ulkoalueilla seisoo useita puuveistoksia, joita kutsutaan usein toteemeiksi, vaikka termi ei ole täysin osuva kanakikulttuurille: veistokset ovat pikemminkin esi-isien tai suojelevien henkien kuvia kuin klaanitunnuksia länsimaisessa mielessä. Nykykanakiveistäjät jatkavat perinnettä yhdistäen perinteisiä aiheita — kasvoja, käsiä, eläinhahmoja — uusiin materiaaleihin ja mittakaavoihin. Keskus toimii sekä museona että työpajana, jossa nuoret taiteilijat oppivat veistämistä vanhemmilta mestareilta, ja monet keskuksessa esillä olevista teoksista on tehty juuri tätä tarkoitusta varten.
+
+### 32.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI

@@ -1,0 +1,210 @@
+================ KOHTA 1 (kohde:mostar) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mostar (kaupungit)
+Tietoruudun teksti: Kaupunki on saanut nimensä sillanvartijoista, mostari, jotka vartioivat Vanhaa siltaa ottomaanien aikaan. Sulttaani Suleiman Suuri tilasi sillan 1557, ja sen suunnitteli Mimar Hayruddin, Istanbulin suurmestarin Mimar Sinanin oppilas. Silta valmistui yhdeksän vuotta myöhemmin ja oli valmistuessaan maailman levein ihmiskätten tekemä kaari. Sitä ennen paikalla heilui puinen riippusilta, jonka yli kuljettiin ottomaanimaantieteilijän mukaan "kuolemanpelossa".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Damaskos — kaupunkilehti / Damaskos: Keittiö, majatalo ja moskeija samalla pihalla] Sulttaani Suleiman I:n käskystä joen rannalle rakennettiin vuosina 1554–1559 rakennusryhmä, jonka piirustukset laati hoviarkkitehti Mimar Sinan. Se toi ottomaanien rakennustyylin Damaskokseen: moskeijan päällä on ottomaanikupolit ja sen kulmilla kaksi ohutta minareettia, mutta seinien vaalean ja tumman kiven vuorottelu on paikallista työtä. Pihan lounaislaidalla on moskeija ja vastapäätä keittiörakennus eli imaret, jonka kummallakin sivulla on majoitussiipi. Itäpuolelle nousi vuosina 1566–1567 medrese. Ryhmästä tuli Mekkaan matkaavien pyhiinvaeltajien kokoontumispaikka: karavaani varustettiin täällä ennen lähtöä etelään.
+- [Ankara — kaupunkilehti / Ankara: Luostari ensin, moskeija sen viereen] Numan-niminen mies tapasi opettajansa uhrijuhlan aikaan ja otti nimen Bayram. Opettajan kuoltua vuonna 1412 hän palasi Ankaraan ja perusti Bayrami-veljeskunnan, jonka opetusta tultiin kuuntelemaan kauempaakin. Hacı Bayram Veli eli vuosina 1352–1430, ja hän rakensi dervissiluostarin sille paikalle, jossa nyt seisovat hänen hautansa ja moskeija. Moskeija valmistui 1427–28, kaksi vuotta ennen hänen kuolemaansa, seldžukkityyliin; arkkitehtia ei tiedetä. Käyttöalaa on alakerrassa 437 ja yläkerrassa 263 neliömetriä. 1500-luvulla Mimar Sinan teki rakennukseen kunnostustöitä, ja 1700-luvulla seiniin lisättiin Kütahyan laattoja.
+
+### 1.1
+KYSYMYS: Kuka oli Mimar Sinan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mostar (kaupungit)
+Tietoruudun teksti: Kaupunki on saanut nimensä sillanvartijoista, mostari, jotka vartioivat Vanhaa siltaa ottomaanien aikaan. Sulttaani Suleiman Suuri tilasi sillan 1557, ja sen suunnitteli Mimar Hayruddin, Istanbulin suurmestarin Mimar Sinanin oppilas. Silta valmistui yhdeksän vuotta myöhemmin ja oli valmistuessaan maailman levein ihmiskätten tekemä kaari. Sitä ennen paikalla heilui puinen riippusilta, jonka yli kuljettiin ottomaanimaantieteilijän mukaan "kuolemanpelossa".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Damaskos — kaupunkilehti / Damaskos: Keittiö, majatalo ja moskeija samalla pihalla] Sulttaani Suleiman I:n käskystä joen rannalle rakennettiin vuosina 1554–1559 rakennusryhmä, jonka piirustukset laati hoviarkkitehti Mimar Sinan. Se toi ottomaanien rakennustyylin Damaskokseen: moskeijan päällä on ottomaanikupolit ja sen kulmilla kaksi ohutta minareettia, mutta seinien vaalean ja tumman kiven vuorottelu on paikallista työtä. Pihan lounaislaidalla on moskeija ja vastapäätä keittiörakennus eli imaret, jonka kummallakin sivulla on majoitussiipi. Itäpuolelle nousi vuosina 1566–1567 medrese. Ryhmästä tuli Mekkaan matkaavien pyhiinvaeltajien kokoontumispaikka: karavaani varustettiin täällä ennen lähtöä etelään.
+- [Ankara — kaupunkilehti / Ankara: Luostari ensin, moskeija sen viereen] Numan-niminen mies tapasi opettajansa uhrijuhlan aikaan ja otti nimen Bayram. Opettajan kuoltua vuonna 1412 hän palasi Ankaraan ja perusti Bayrami-veljeskunnan, jonka opetusta tultiin kuuntelemaan kauempaakin. Hacı Bayram Veli eli vuosina 1352–1430, ja hän rakensi dervissiluostarin sille paikalle, jossa nyt seisovat hänen hautansa ja moskeija. Moskeija valmistui 1427–28, kaksi vuotta ennen hänen kuolemaansa, seldžukkityyliin; arkkitehtia ei tiedetä. Käyttöalaa on alakerrassa 437 ja yläkerrassa 263 neliömetriä. 1500-luvulla Mimar Sinan teki rakennukseen kunnostustöitä, ja 1700-luvulla seiniin lisättiin Kütahyan laattoja.
+
+### 1.2
+KYSYMYS: Mitä sillanvartijan työhön kuului?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mostar (kaupungit)
+Tietoruudun teksti: Kaupunki on saanut nimensä sillanvartijoista, mostari, jotka vartioivat Vanhaa siltaa ottomaanien aikaan. Sulttaani Suleiman Suuri tilasi sillan 1557, ja sen suunnitteli Mimar Hayruddin, Istanbulin suurmestarin Mimar Sinanin oppilas. Silta valmistui yhdeksän vuotta myöhemmin ja oli valmistuessaan maailman levein ihmiskätten tekemä kaari. Sitä ennen paikalla heilui puinen riippusilta, jonka yli kuljettiin ottomaanimaantieteilijän mukaan "kuolemanpelossa".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kohdekartta / Kohdekartta: Omeryen hamam] 1571 Kylpylän paikalla seisoi 1300-luvulla augustinolaisten Pyhän Marian kirkko, kivestä muurattu ja katettu pienillä kupoleilla. Nikosian piirityksessä 1570 tykkituli hajotti siitä suurimman osan. Vuonna 1571 Lala Mustafa Pasha rakennutti paikalle moskeijan kalifi Omarin muistoksi, ja kylpylä pystytettiin saman kokonaisuuden osaksi. Kirkosta on yhä jäljellä pääsisäänkäynnin ovi, joka on 1300-luvulta Lusignanien ajalta, ja koillissivulla erottuu jäänteitä myöhemmästä renessanssivaiheesta. Hamamissa kuljetaan aina samassa järjestyksessä: riisuutumis- ja vilvoittelutila, lämmin välihuone, kuuma huone. Kuuman huoneen keskellä on lämmitetty marmoripöytä, jolla maataan, ja nurkissa pieniä kupoli…
+- [Masqat — kohdekartta / Kohdekartta: Bait Al Zubair] Museo on Al Saidiyan kadun varrella vanhassa Maskatissa. Al Zubairin perhe rakennutti talon asuinkodikseen, ja siitä tehtiin yksityinen museo. Esineet ovat pääosin suvun omasta kokoelmasta: khanjar-tikareita, naisten hopeakoruja, pukuja, aseita ja kotitaloustavaraa. Pihalla on pienoismalli omanilaisesta kylämaisemasta linnakkeineen ja vesiuomineen. Khanjarissa on kolme osaa: kahva, lyhyt kaareva terä ja tuppi, joka taittuu jyrkästi J-kirjaimen muotoon. Hienoimpien tikareiden tuppi on kultaa tai hopeaa, paikallisten seppien töissä messinkiä tai kuparia. Kahva tehtiin ennen sarvesta tai norsunluusta, mutta kansainvälisen kaupan kiellon jälkeen aineena on puu, kamelinluu tai muovi; kahvan pää …
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:blagaj) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blagajin dervissiluostari (historia)
+Tietoruudun teksti: Buna-joki ei ala purosta vaan syöksyy valmiina esiin valtavasta luolasta pystysuoran kallioseinän alta. Se on yksi Euroopan suurimmista lähteistä: vettä tulee noin 30 kuutiometriä sekunnissa, ja se on poikkeuksellisen kylmää ja kirkasta. Kallion juureen, aivan lähteen viereen, rakennettiin dervissiluostari viimeistään noin vuonna 1520 — sen vierashuone ja mausoleumi ovat yhä pystyssä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Xi’an — kohdekartta / Kohdekartta: Yongning-portti] vahtitorni 1378 Yongning on muurin eteläportti ja sen pääportti. Sen ampuma-aukkoinen vahtitorni rakennettiin vuonna 1378, tuhoutui tulipalossa vuonna 1926 ja rakennettiin uudelleen syyskuussa 2014 sen jälkeen, kun vanhat piirustukset ja asiakirjat oli käyty huolellisesti läpi. Samalla tarkastettiin pohjois-, itä- ja länsiportin tornit, ja ne suojattiin teräksellä, puutyöllä ja vanhanmallisilla tiilillä muuria rikkomatta. Eteläportti poikkeaa muista myös kulkutieltään: muille suurille porteille noustaan ramppia pitkin, tänne tullaan muurin ulkopuolelta. Portin edessä on kaksinkertainen ansa — ulompi jousiampujien torni ja sen takana sisäpiha, jonka perällä on toinen portti. Muuri itse on mu…
+- [Manila — kohdekartta / Kohdekartta: Baluarte de San Diego] kaivettu esiin 1979–1982 Intramuroksen lounaiskulmassa on bastioni, jonka muoto on kuin pataässä. Kuvernööri Gómez Pérez Dasmariñas liitti vanhemman linnoituksen osaksi muurirengasta, ja väliseinät rakennettiin 1591–1594. Bastionin kärki työntyy ulospäin, jotta tykkimiehet näkisivät muurin viertä pitkin, ja juureen lisättiin myöhemmin puoliympyrän muotoiset ulokkeet — orillonit eli pikkukorvat — joista ässän muoto syntyi. Antonio de Morga kirjoitti vuonna 1609, että rakennelma oli vasta torni suuremman Nuestra Señora de Guía -linnoituksen sisällä. Sitä rakennutti jesuiittapappi Antonio Sedeño, ja siihen kuului sisäpiha, vesisäiliö, asuintiloja ja pajoja, mutta työ keskeytyi kerta toisensa j…
+
+### 2.1
+KYSYMYS: Keitä dervissit olivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blagajin dervissiluostari (historia)
+Tietoruudun teksti: Buna-joki ei ala purosta vaan syöksyy valmiina esiin valtavasta luolasta pystysuoran kallioseinän alta. Se on yksi Euroopan suurimmista lähteistä: vettä tulee noin 30 kuutiometriä sekunnissa, ja se on poikkeuksellisen kylmää ja kirkasta. Kallion juureen, aivan lähteen viereen, rakennettiin dervissiluostari viimeistään noin vuonna 1520 — sen vierashuone ja mausoleumi ovat yhä pystyssä.
+
+### 2.2
+KYSYMYS: Miksi luostari rakennettiin juuri kallion juureen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blagajin dervissiluostari (historia)
+Tietoruudun teksti: Buna-joki ei ala purosta vaan syöksyy valmiina esiin valtavasta luolasta pystysuoran kallioseinän alta. Se on yksi Euroopan suurimmista lähteistä: vettä tulee noin 30 kuutiometriä sekunnissa, ja se on poikkeuksellisen kylmää ja kirkasta. Kallion juureen, aivan lähteen viereen, rakennettiin dervissiluostari viimeistään noin vuonna 1520 — sen vierashuone ja mausoleumi ovat yhä pystyssä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Xi’an — kohdekartta / Kohdekartta: Yongning-portti] vahtitorni 1378 Yongning on muurin eteläportti ja sen pääportti. Sen ampuma-aukkoinen vahtitorni rakennettiin vuonna 1378, tuhoutui tulipalossa vuonna 1926 ja rakennettiin uudelleen syyskuussa 2014 sen jälkeen, kun vanhat piirustukset ja asiakirjat oli käyty huolellisesti läpi. Samalla tarkastettiin pohjois-, itä- ja länsiportin tornit, ja ne suojattiin teräksellä, puutyöllä ja vanhanmallisilla tiilillä muuria rikkomatta. Eteläportti poikkeaa muista myös kulkutieltään: muille suurille porteille noustaan ramppia pitkin, tänne tullaan muurin ulkopuolelta. Portin edessä on kaksinkertainen ansa — ulompi jousiampujien torni ja sen takana sisäpiha, jonka perällä on toinen portti. Muuri itse on mu…
+- [Manila — kohdekartta / Kohdekartta: Baluarte de San Diego] kaivettu esiin 1979–1982 Intramuroksen lounaiskulmassa on bastioni, jonka muoto on kuin pataässä. Kuvernööri Gómez Pérez Dasmariñas liitti vanhemman linnoituksen osaksi muurirengasta, ja väliseinät rakennettiin 1591–1594. Bastionin kärki työntyy ulospäin, jotta tykkimiehet näkisivät muurin viertä pitkin, ja juureen lisättiin myöhemmin puoliympyrän muotoiset ulokkeet — orillonit eli pikkukorvat — joista ässän muoto syntyi. Antonio de Morga kirjoitti vuonna 1609, että rakennelma oli vasta torni suuremman Nuestra Señora de Guía -linnoituksen sisällä. Sitä rakennutti jesuiittapappi Antonio Sedeño, ja siihen kuului sisäpiha, vesisäiliö, asuintiloja ja pajoja, mutta työ keskeytyi kerta toisensa j…
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:una) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Una-joki (luonto · joki)
+Tietoruudun teksti: Paikallisen tarinan mukaan joen nimesivät roomalaiset: nähtyään sen ensi kerran he sanoivat una — "ainoa", "yksi ainoa" — kuvaillakseen sen kauneutta. 212 kilometrin mittainen Una on täynnä koskia, putouksia ja karstilähteitä, ja sen yläjuoksu kuuluu Unan kansallispuistoon. Suurin putous on Štrbački buk. Joen varren tärkein kaupunki on Bihać.
+
+### 3.1
+KYSYMYS: Mihin Una lopulta laskee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Una-joki (luonto · joki)
+Tietoruudun teksti: Paikallisen tarinan mukaan joen nimesivät roomalaiset: nähtyään sen ensi kerran he sanoivat una — "ainoa", "yksi ainoa" — kuvaillakseen sen kauneutta. 212 kilometrin mittainen Una on täynnä koskia, putouksia ja karstilähteitä, ja sen yläjuoksu kuuluu Unan kansallispuistoon. Suurin putous on Štrbački buk. Joen varren tärkein kaupunki on Bihać.
+
+### 3.2
+KYSYMYS: Mitä Unan kansallispuistossa voi tehdä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Una-joki (luonto · joki)
+Tietoruudun teksti: Paikallisen tarinan mukaan joen nimesivät roomalaiset: nähtyään sen ensi kerran he sanoivat una — "ainoa", "yksi ainoa" — kuvaillakseen sen kauneutta. 212 kilometrin mittainen Una on täynnä koskia, putouksia ja karstilähteitä, ja sen yläjuoksu kuuluu Unan kansallispuistoon. Suurin putous on Štrbački buk. Joen varren tärkein kaupunki on Bihać.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:jajce) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jajce (kaupungit)
+Tietoruudun teksti: Jajce on kaupunki, jonka keskellä on vesiputous: Pliva-joki syöksyy Vrbasiin keskellä vanhaakaupunkia. Täällä oli itsenäisen Bosnian kuningaskunnan viimeinen pääkaupunki, ja täällä viimeinen kuningas Stjepan Tomašević otti vastaan kruununsa paavi Pius II:lta. Kaupungin alla on myös Mithras-temppeli 100-luvulta, yksi Euroopan parhaiten säilyneistä — se löytyi vahingossa, kun yksityistaloa rakennettiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Historia: Kuningas kruunattiin, ja linna jäi pääkaupungiksi] 1377 — Tvrtko I Kotromanić kruunattiin Bosnian kuninkaaksi vuonna 1377, ja hänen hallintoaikanaan Bosnian kuningaskunta laajeni suurimpaan koskaan ulottuvuuteensa. Kuninkaiden pääasiallinen linnoitus oli Bobovac keskisessä Bosniassa: sinne oli koottu valtakunnan kruununjalokivet ja kuninkaiden haudat, eikä sinne johtanut kunnollista tietä turvallisuussyistä. Bobovac kesti Ottomaanien piirityksiä vuosikymmeniä, kunnes se kavallettiin vihollisille vuonna 1463 — samana vuonna Bosnian viimeinen kuningas Stjepan Tomašević vangittiin ja teloitettiin Jajcessa, ja itsenäinen keskiaikainen Bosnia lakkasi olemasta.
+
+### 4.1
+KYSYMYS: Kuka oli Mithras?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jajce (kaupungit)
+Tietoruudun teksti: Jajce on kaupunki, jonka keskellä on vesiputous: Pliva-joki syöksyy Vrbasiin keskellä vanhaakaupunkia. Täällä oli itsenäisen Bosnian kuningaskunnan viimeinen pääkaupunki, ja täällä viimeinen kuningas Stjepan Tomašević otti vastaan kruununsa paavi Pius II:lta. Kaupungin alla on myös Mithras-temppeli 100-luvulta, yksi Euroopan parhaiten säilyneistä — se löytyi vahingossa, kun yksityistaloa rakennettiin.
+
+### 4.2
+KYSYMYS: Millainen valtakunta Bosnian kuningaskunta oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jajce (kaupungit)
+Tietoruudun teksti: Jajce on kaupunki, jonka keskellä on vesiputous: Pliva-joki syöksyy Vrbasiin keskellä vanhaakaupunkia. Täällä oli itsenäisen Bosnian kuningaskunnan viimeinen pääkaupunki, ja täällä viimeinen kuningas Stjepan Tomašević otti vastaan kruununsa paavi Pius II:lta. Kaupungin alla on myös Mithras-temppeli 100-luvulta, yksi Euroopan parhaiten säilyneistä — se löytyi vahingossa, kun yksityistaloa rakennettiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Historia: Kuningas kruunattiin, ja linna jäi pääkaupungiksi] 1377 — Tvrtko I Kotromanić kruunattiin Bosnian kuninkaaksi vuonna 1377, ja hänen hallintoaikanaan Bosnian kuningaskunta laajeni suurimpaan koskaan ulottuvuuteensa. Kuninkaiden pääasiallinen linnoitus oli Bobovac keskisessä Bosniassa: sinne oli koottu valtakunnan kruununjalokivet ja kuninkaiden haudat, eikä sinne johtanut kunnollista tietä turvallisuussyistä. Bobovac kesti Ottomaanien piirityksiä vuosikymmeniä, kunnes se kavallettiin vihollisille vuonna 1463 — samana vuonna Bosnian viimeinen kuningas Stjepan Tomašević vangittiin ja teloitettiin Jajcessa, ja itsenäinen keskiaikainen Bosnia lakkasi olemasta.
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:visegrad) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Višegrad (historia)
+Tietoruudun teksti: Drina-joen yli kaartuu yksitoista kivikaarta, yhteensä 179,5 metriä. Sillan tilasi suurvisiiri Mehmed-pasha Sokolović kotiseutunsa kunniaksi, ja sen suunnitteli sama Mimar Sinan, joka rakensi sulttaanin tärkeimmät rakennukset — työ valmistui 1577. Silta on Unescon maailmanperintökohde vuodesta 2007, ja se on koko maailmalle tuttu Ivo Andrićin romaanista Drinan silta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marrakech — kohdekartta / Kohdekartta: Bahian palatsi] 1900 Bahian palatsi syntyi kahdessa osassa ja kahden sukupolven aikana. Ensimmäisen osan rakennutti 1860-luvulla Si Musa, sulttaani Muhammad ibn Abd al-Rahmanin suurvisiiri; suuren riad-puutarhan sivuhuoneissa on piirtokirjoitus, joka ajoittaa ne vuosiin 1866–67. Si Musa polveutui makhzenia eli kuninkaallista hallintoa palvelleesta orjasuvusta, joka nousi maan korkeimpiin virkoihin. Poika Ba Ahmed varmisti 1894 nuoren Abdelazizin nousun valtaistuimelle ja sai palkaksi suurvisiirin viran. Koska sulttaani oli vasta kuusitoistavuotias, Ba Ahmed hallitsi käytännössä Marokkoa kuolemaansa asti 1900 — ja laajensi palatsia koko sen ajan, pala palalta sitä mukaa kuin maata vapautui ostettavaksi. Mar…
+- [Slovakia — maalehti / Keksinnöt: Sateenvarjo selässä] 1914 — Štefan Banič syntyi 1870 Smolenican lähellä ja muutti Yhdysvaltoihin, jossa hän työskenteli hiilikaivoksessa Pennsylvaniassa. Nähtyään lentokoneen putoamisen 1912 hän rakensi sateenvarjon kaltaisen laskuvarjon, joka kiinnitettiin kantajan kehoon. Patentti myönnettiin 25. elokuuta 1914 numerolla 1 108 484. Hänen kerrotaan kokeilleen keksintöään Washingtonissa hyppäämällä ensin 15-kerroksisen talon katolta ja sitten lentokoneesta, mutta varmaa näyttöä ei ole. Myöhemmin hän palasi kotiseudulleen ja auttoi tutkimaan Drinan luolaa.
+
+### 5.1
+KYSYMYS: Mistä romaani Drinan silta kertoo?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Višegrad (historia)
+Tietoruudun teksti: Drina-joen yli kaartuu yksitoista kivikaarta, yhteensä 179,5 metriä. Sillan tilasi suurvisiiri Mehmed-pasha Sokolović kotiseutunsa kunniaksi, ja sen suunnitteli sama Mimar Sinan, joka rakensi sulttaanin tärkeimmät rakennukset — työ valmistui 1577. Silta on Unescon maailmanperintökohde vuodesta 2007, ja se on koko maailmalle tuttu Ivo Andrićin romaanista Drinan silta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Keksinnöt: Sateenvarjo selässä] 1914 — Štefan Banič syntyi 1870 Smolenican lähellä ja muutti Yhdysvaltoihin, jossa hän työskenteli hiilikaivoksessa Pennsylvaniassa. Nähtyään lentokoneen putoamisen 1912 hän rakensi sateenvarjon kaltaisen laskuvarjon, joka kiinnitettiin kantajan kehoon. Patentti myönnettiin 25. elokuuta 1914 numerolla 1 108 484. Hänen kerrotaan kokeilleen keksintöään Washingtonissa hyppäämällä ensin 15-kerroksisen talon katolta ja sitten lentokoneesta, mutta varmaa näyttöä ei ole. Myöhemmin hän palasi kotiseudulleen ja auttoi tutkimaan Drinan luolaa.
+
+### 5.2
+KYSYMYS: Mitä suurvisiirin työhön kuului?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Višegrad (historia)
+Tietoruudun teksti: Drina-joen yli kaartuu yksitoista kivikaarta, yhteensä 179,5 metriä. Sillan tilasi suurvisiiri Mehmed-pasha Sokolović kotiseutunsa kunniaksi, ja sen suunnitteli sama Mimar Sinan, joka rakensi sulttaanin tärkeimmät rakennukset — työ valmistui 1577. Silta on Unescon maailmanperintökohde vuodesta 2007, ja se on koko maailmalle tuttu Ivo Andrićin romaanista Drinan silta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marrakech — kohdekartta / Kohdekartta: Bahian palatsi] 1900 Bahian palatsi syntyi kahdessa osassa ja kahden sukupolven aikana. Ensimmäisen osan rakennutti 1860-luvulla Si Musa, sulttaani Muhammad ibn Abd al-Rahmanin suurvisiiri; suuren riad-puutarhan sivuhuoneissa on piirtokirjoitus, joka ajoittaa ne vuosiin 1866–67. Si Musa polveutui makhzenia eli kuninkaallista hallintoa palvelleesta orjasuvusta, joka nousi maan korkeimpiin virkoihin. Poika Ba Ahmed varmisti 1894 nuoren Abdelazizin nousun valtaistuimelle ja sai palkaksi suurvisiirin viran. Koska sulttaani oli vasta kuusitoistavuotias, Ba Ahmed hallitsi käytännössä Marokkoa kuolemaansa asti 1900 — ja laajensi palatsia koko sen ajan, pala palalta sitä mukaa kuin maata vapautui ostettavaksi. Mar…
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

@@ -1,0 +1,239 @@
+================ KOHTA 16 (kohde:bobovac) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bobovac (historia)
+Tietoruudun teksti: Bobovac on keskiaikaisen linnan raunio Varešin lähellä Keski-Bosniassa. Linna rakennettiin Bosnian paanin Stjepan II:n hallituskaudella, ja ensimmäinen kirjallinen maininta siitä on vuodelta 1349.
+
+Se oli 1300- ja 1400-luvuilla Bosnian hallitsijoiden linnoitettu pääpaikka. Hallintoa hoidettiin myös Sutjeskan kuninkaankartanossa, mutta Bobovac oli niistä kahdesta se, jota pystyi puolustamaan.
+
+Kaivauksissa on erotettu kolme palatsia — suuri palatsi, ylempi palatsi ja sivupalatsi — kolmella eri terassitasolla. Rakennustyyli on goottilainen, ja osassa on romaanis-goottilaisia piirteitä. Mausoleumin viidestä haudasta on löytynyt yhdeksän vainajaa: kuninkaat Dabiša, Ostoja, Ostojić, Tvrtko II ja Tomaš sekä naisen luuranko, jonka arvellaan olevan Tvrtko II:n puoliso kuningatar Dorothea.
+
+Kuningas Stjepan Tomašević siirsi istuimensa Jajceen osmanien painostaessa, ja osmanit valtasivat Bobovaci…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kašgar — kohdekartta / Kohdekartta: Yusuf Khass Hajibin mausoleumi] runoilija kuoli 1077, mausoleumi 1865 Yusuf Khass Hajib syntyi noin vuonna 1019 Balasagunissa, kara-hanidien pääkaupungissa nykyisen Kirgisian alueella. Hän aloitti pääteoksensa Kutadgu Biligin kotikaupungissaan ja sai sen valmiiksi Kašgarissa vuosina 1069–1070. Kun hän luovutti sen Kašgarin ruhtinaalle, tämä antoi hänelle arvonimen khass hajib, suunnilleen ylikamariherra. Kutadgu Bilig eli ”onnea tuova tieto” on ensimmäinen islamilaisten turkkilaisten kielellä kirjoitettu teos. Se on hallitsijanpeili: neljä päähenkilöä edustavat kukin yhtä abstraktia periaatetta, ja runomitta on arabialainen mutaqarib, yksitoistatavuisia riimipareja — ensimmäinen kerta, kun sitä sovellettiin turkkilaiskiel…
+- [Kašgar — kaupunkilehti / Kašgar: Pyhäkkö, jossa lepää viisi sukupolvea] Kolmen ja puolen kilometrin päässä keskustasta koilliseen seisoo Afaq Khojan mausoleumi, alueen pyhin muslimikohde. Se rakennettiin noin vuonna 1640 keskiaasialaisen sufiopettajan Muhammad Yusufin haudaksi, ja hänen poikansa Afaq Khoja haudattiin sinne 1694. Kaakeloituun hautaan on aikojen kuluessa laskettu saman suvun viisi sukupolvea, kaikkiaan seitsemänkymmentäkaksi vainajaa. Keskellä on seitsemäntoista metriä leveä kupoli ja nurkissa neljä raidallista minareettia; haudat on peitetty värikkäillä silkeillä. Afaq Khoja hallitsi aikanaan Kašgarin lisäksi Khotania, Yarkandia, Korlaa, Kuchaa ja Aksua.
+
+### 16.1
+KYSYMYS: Ketä mausoleumiin haudattiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bobovac (historia)
+Tietoruudun teksti: Bobovac on keskiaikaisen linnan raunio Varešin lähellä Keski-Bosniassa. Linna rakennettiin Bosnian paanin Stjepan II:n hallituskaudella, ja ensimmäinen kirjallinen maininta siitä on vuodelta 1349.
+
+Se oli 1300- ja 1400-luvuilla Bosnian hallitsijoiden linnoitettu pääpaikka. Hallintoa hoidettiin myös Sutjeskan kuninkaankartanossa, mutta Bobovac oli niistä kahdesta se, jota pystyi puolustamaan.
+
+Kaivauksissa on erotettu kolme palatsia — suuri palatsi, ylempi palatsi ja sivupalatsi — kolmella eri terassitasolla. Rakennustyyli on goottilainen, ja osassa on romaanis-goottilaisia piirteitä. Mausoleumin viidestä haudasta on löytynyt yhdeksän vainajaa: kuninkaat Dabiša, Ostoja, Ostojić, Tvrtko II ja Tomaš sekä naisen luuranko, jonka arvellaan olevan Tvrtko II:n puoliso kuningatar Dorothea.
+
+Kuningas Stjepan Tomašević siirsi istuimensa Jajceen osmanien painostaessa, ja osmanit valtasivat Bobovaci…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kašgar — kohdekartta / Kohdekartta: Yusuf Khass Hajibin mausoleumi] runoilija kuoli 1077, mausoleumi 1865 Yusuf Khass Hajib syntyi noin vuonna 1019 Balasagunissa, kara-hanidien pääkaupungissa nykyisen Kirgisian alueella. Hän aloitti pääteoksensa Kutadgu Biligin kotikaupungissaan ja sai sen valmiiksi Kašgarissa vuosina 1069–1070. Kun hän luovutti sen Kašgarin ruhtinaalle, tämä antoi hänelle arvonimen khass hajib, suunnilleen ylikamariherra. Kutadgu Bilig eli ”onnea tuova tieto” on ensimmäinen islamilaisten turkkilaisten kielellä kirjoitettu teos. Se on hallitsijanpeili: neljä päähenkilöä edustavat kukin yhtä abstraktia periaatetta, ja runomitta on arabialainen mutaqarib, yksitoistatavuisia riimipareja — ensimmäinen kerta, kun sitä sovellettiin turkkilaiskiel…
+- [Kašgar — kaupunkilehti / Kašgar: Pyhäkkö, jossa lepää viisi sukupolvea] Kolmen ja puolen kilometrin päässä keskustasta koilliseen seisoo Afaq Khojan mausoleumi, alueen pyhin muslimikohde. Se rakennettiin noin vuonna 1640 keskiaasialaisen sufiopettajan Muhammad Yusufin haudaksi, ja hänen poikansa Afaq Khoja haudattiin sinne 1694. Kaakeloituun hautaan on aikojen kuluessa laskettu saman suvun viisi sukupolvea, kaikkiaan seitsemänkymmentäkaksi vainajaa. Keskellä on seitsemäntoista metriä leveä kupoli ja nurkissa neljä raidallista minareettia; haudat on peitetty värikkäillä silkeillä. Afaq Khoja hallitsi aikanaan Kašgarin lisäksi Khotania, Yarkandia, Korlaa, Kuchaa ja Aksua.
+
+### 16.2
+KYSYMYS: Miksi kuninkaan istuin siirtyi Jajceen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bobovac (historia)
+Tietoruudun teksti: Bobovac on keskiaikaisen linnan raunio Varešin lähellä Keski-Bosniassa. Linna rakennettiin Bosnian paanin Stjepan II:n hallituskaudella, ja ensimmäinen kirjallinen maininta siitä on vuodelta 1349.
+
+Se oli 1300- ja 1400-luvuilla Bosnian hallitsijoiden linnoitettu pääpaikka. Hallintoa hoidettiin myös Sutjeskan kuninkaankartanossa, mutta Bobovac oli niistä kahdesta se, jota pystyi puolustamaan.
+
+Kaivauksissa on erotettu kolme palatsia — suuri palatsi, ylempi palatsi ja sivupalatsi — kolmella eri terassitasolla. Rakennustyyli on goottilainen, ja osassa on romaanis-goottilaisia piirteitä. Mausoleumin viidestä haudasta on löytynyt yhdeksän vainajaa: kuninkaat Dabiša, Ostoja, Ostojić, Tvrtko II ja Tomaš sekä naisen luuranko, jonka arvellaan olevan Tvrtko II:n puoliso kuningatar Dorothea.
+
+Kuningas Stjepan Tomašević siirsi istuimensa Jajceen osmanien painostaessa, ja osmanit valtasivat Bobovaci…
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:hahmotelma-mile-kruunajaiskirkko) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Milen kruunajaiskirkko (historia)
+Tietoruudun teksti: Milen kirkko Arnautovićissa rakennettiin 1300-luvulla Bosnian kuninkaiden kruunajais- ja hautauskirkoksi. Tvrtko I kruunattiin siellä ensimmäiseksi Bosnian kuninkaaksi vuonna 1377. Kirkko raunioitui valtakunnan kukistumisen jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Addis Abeba — kohdekartta / Kohdekartta: Pyhän Yrjön katedraali] 1896 Kirkko on kahdeksankulmainen, mikä erottaa sen kaikesta muusta kaupungissa. Se rakennettiin vanhemman, 1400-luvulta peräisin olevan kirkon raunioille, ja nimi tulee siitä, että kirkon tabot eli arkku kannettiin Adwan taisteluun. Aikajana ajoittaa kirkon vuoteen 1896; nykyisen rakennuksen suunnitteli ja rakensi italialainen insinööri Sebastiano Castagna 1911. Molemmat luvut ovat oikein, koska ne kertovat eri asiasta. Katedraali seisoo Churchill Roadin pohjoispäässä ja on ollut kruunajaiskirkko: keisarinna Zewditu kruunattiin täällä 1917 ja keisari Haile Selassie 1930. Jälkimmäisen kruunajaisten takia kirkosta tuli myöhemmin myös rastafarien pyhiinvaelluskohde. Kirkon yhteydessä on museo…
+
+### 17.1
+KYSYMYS: Miltä Milen kruunajaiskirkko näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Milen kruunajaiskirkko (historia)
+Tietoruudun teksti: Milen kirkko Arnautovićissa rakennettiin 1300-luvulla Bosnian kuninkaiden kruunajais- ja hautauskirkoksi. Tvrtko I kruunattiin siellä ensimmäiseksi Bosnian kuninkaaksi vuonna 1377. Kirkko raunioitui valtakunnan kukistumisen jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Addis Abeba — kohdekartta / Kohdekartta: Pyhän Yrjön katedraali] 1896 Kirkko on kahdeksankulmainen, mikä erottaa sen kaikesta muusta kaupungissa. Se rakennettiin vanhemman, 1400-luvulta peräisin olevan kirkon raunioille, ja nimi tulee siitä, että kirkon tabot eli arkku kannettiin Adwan taisteluun. Aikajana ajoittaa kirkon vuoteen 1896; nykyisen rakennuksen suunnitteli ja rakensi italialainen insinööri Sebastiano Castagna 1911. Molemmat luvut ovat oikein, koska ne kertovat eri asiasta. Katedraali seisoo Churchill Roadin pohjoispäässä ja on ollut kruunajaiskirkko: keisarinna Zewditu kruunattiin täällä 1917 ja keisari Haile Selassie 1930. Jälkimmäisen kruunajaisten takia kirkosta tuli myöhemmin myös rastafarien pyhiinvaelluskohde. Kirkon yhteydessä on museo…
+
+### 17.2
+KYSYMYS: Miksi Milen kruunajaiskirkko katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Milen kruunajaiskirkko (historia)
+Tietoruudun teksti: Milen kirkko Arnautovićissa rakennettiin 1300-luvulla Bosnian kuninkaiden kruunajais- ja hautauskirkoksi. Tvrtko I kruunattiin siellä ensimmäiseksi Bosnian kuninkaaksi vuonna 1377. Kirkko raunioitui valtakunnan kukistumisen jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Addis Abeba — kohdekartta / Kohdekartta: Pyhän Yrjön katedraali] 1896 Kirkko on kahdeksankulmainen, mikä erottaa sen kaikesta muusta kaupungissa. Se rakennettiin vanhemman, 1400-luvulta peräisin olevan kirkon raunioille, ja nimi tulee siitä, että kirkon tabot eli arkku kannettiin Adwan taisteluun. Aikajana ajoittaa kirkon vuoteen 1896; nykyisen rakennuksen suunnitteli ja rakensi italialainen insinööri Sebastiano Castagna 1911. Molemmat luvut ovat oikein, koska ne kertovat eri asiasta. Katedraali seisoo Churchill Roadin pohjoispäässä ja on ollut kruunajaiskirkko: keisarinna Zewditu kruunattiin täällä 1917 ja keisari Haile Selassie 1930. Jälkimmäisen kruunajaisten takia kirkosta tuli myöhemmin myös rastafarien pyhiinvaelluskohde. Kirkon yhteydessä on museo…
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:hahmotelma-bobovacin-kuninkaanlinna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bobovacin kuninkaanlinna (historia)
+Tietoruudun teksti: Bobovac oli keskiajan Bosnian kuningaskunnan linnoitettu pääkaupunki 1300-luvun puolivälistä lähtien — siellä säilytettiin kruunua ja useita kuninkaita haudattiin sinne. Osmanit valtasivat ja hävittivät linnan kolmen päivän piirityksen jälkeen 21.5.1463, kun viimeinen kuningas Stjepan Tomašević oli juuri paennut Jajceen. Kivijalat ja muurinpohjat ovat yhä näkyvissä rinteellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Historia: Kuningas kruunattiin, ja linna jäi pääkaupungiksi] 1377 — Tvrtko I Kotromanić kruunattiin Bosnian kuninkaaksi vuonna 1377, ja hänen hallintoaikanaan Bosnian kuningaskunta laajeni suurimpaan koskaan ulottuvuuteensa. Kuninkaiden pääasiallinen linnoitus oli Bobovac keskisessä Bosniassa: sinne oli koottu valtakunnan kruununjalokivet ja kuninkaiden haudat, eikä sinne johtanut kunnollista tietä turvallisuussyistä. Bobovac kesti Ottomaanien piirityksiä vuosikymmeniä, kunnes se kavallettiin vihollisille vuonna 1463 — samana vuonna Bosnian viimeinen kuningas Stjepan Tomašević vangittiin ja teloitettiin Jajcessa, ja itsenäinen keskiaikainen Bosnia lakkasi olemasta.
+
+### 18.1
+KYSYMYS: Miltä Bobovacin kuninkaanlinna näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bobovacin kuninkaanlinna (historia)
+Tietoruudun teksti: Bobovac oli keskiajan Bosnian kuningaskunnan linnoitettu pääkaupunki 1300-luvun puolivälistä lähtien — siellä säilytettiin kruunua ja useita kuninkaita haudattiin sinne. Osmanit valtasivat ja hävittivät linnan kolmen päivän piirityksen jälkeen 21.5.1463, kun viimeinen kuningas Stjepan Tomašević oli juuri paennut Jajceen. Kivijalat ja muurinpohjat ovat yhä näkyvissä rinteellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Historia: Kuningas kruunattiin, ja linna jäi pääkaupungiksi] 1377 — Tvrtko I Kotromanić kruunattiin Bosnian kuninkaaksi vuonna 1377, ja hänen hallintoaikanaan Bosnian kuningaskunta laajeni suurimpaan koskaan ulottuvuuteensa. Kuninkaiden pääasiallinen linnoitus oli Bobovac keskisessä Bosniassa: sinne oli koottu valtakunnan kruununjalokivet ja kuninkaiden haudat, eikä sinne johtanut kunnollista tietä turvallisuussyistä. Bobovac kesti Ottomaanien piirityksiä vuosikymmeniä, kunnes se kavallettiin vihollisille vuonna 1463 — samana vuonna Bosnian viimeinen kuningas Stjepan Tomašević vangittiin ja teloitettiin Jajcessa, ja itsenäinen keskiaikainen Bosnia lakkasi olemasta.
+
+### 18.2
+KYSYMYS: Miksi Bobovacin kuninkaanlinna on nykyään raunioina?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bobovacin kuninkaanlinna (historia)
+Tietoruudun teksti: Bobovac oli keskiajan Bosnian kuningaskunnan linnoitettu pääkaupunki 1300-luvun puolivälistä lähtien — siellä säilytettiin kruunua ja useita kuninkaita haudattiin sinne. Osmanit valtasivat ja hävittivät linnan kolmen päivän piirityksen jälkeen 21.5.1463, kun viimeinen kuningas Stjepan Tomašević oli juuri paennut Jajceen. Kivijalat ja muurinpohjat ovat yhä näkyvissä rinteellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Historia: Kuningas kruunattiin, ja linna jäi pääkaupungiksi] 1377 — Tvrtko I Kotromanić kruunattiin Bosnian kuninkaaksi vuonna 1377, ja hänen hallintoaikanaan Bosnian kuningaskunta laajeni suurimpaan koskaan ulottuvuuteensa. Kuninkaiden pääasiallinen linnoitus oli Bobovac keskisessä Bosniassa: sinne oli koottu valtakunnan kruununjalokivet ja kuninkaiden haudat, eikä sinne johtanut kunnollista tietä turvallisuussyistä. Bobovac kesti Ottomaanien piirityksiä vuosikymmeniä, kunnes se kavallettiin vihollisille vuonna 1463 — samana vuonna Bosnian viimeinen kuningas Stjepan Tomašević vangittiin ja teloitettiin Jajcessa, ja itsenäinen keskiaikainen Bosnia lakkasi olemasta.
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:hahmotelma-sarajevo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sarajevo (kaupungit)
+Tietoruudun teksti: Sarajevo on Bosnia ja Hertsegovinan pääkaupunki Miljacka-joen varrella Dinaaristen vuorten keskellä, ja sitä on pitkän uskonnollisen ja kulttuurisen moninaisuutensa vuoksi kutsuttu Euroopan Jerusalemiksi: samassa kaupunginosassa on moskeija, katolinen kirkko, ortodoksikirkko ja synagoga. Ottomaanit perustivat kaupungin 1450-luvulla, ja sen ensimmäinen kuvernööri Isa-Beg Ishaković rakennutti moskeijan, katetun torin, hammamin ja karavaanimajatalon — nimi Sarajevo juontuu näistä rakennuksista, sanoista "saray" ja "evo". Kaupunki kasvoi nopeasti, ja 1660-luvulla se oli Istanbulin jälkeen Ottomaanien valtakunnan suurin kaupunki Balkanilla. Baščaršijan kauppatori on ollut kaupungin sydän jo perustamisesta asti, ja vuoteen 1850 mennessä Sarajevosta oli tullut koko Bosnian hallinnollinen keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Ruoka: Omena joka täytetään pähkinöillä] Ottomaanien kausi — Tufahija on bosnialainen jälkiruoka, jonka juuret ovat ottomaaniajan keittiössä: kokonainen omena kuoritaan ja haudutetaan sokeriliemessä neilikan ja sitruunan kanssa, kunnes se pehmenee mutta säilyttää muotonsa. Omenan sisus kovetetaan ja täytetään jauhetuilla saksanpähkinöillä, ja päälle lisätään kermavaahtoa. Nimi juontuu arabian ja turkin omenaa tarkoittavasta sanasta tuffah. Jälkiruokaa tarjoillaan yhä Sarajevon Baščaršijan vanhassa Morića Han -karavaanimajatalossa, joka on 1600-luvulta.
+- [Bosnia ja Hertsegovina — maalehti / Historia: Raitiovaunu joka kulkee yhä samoja kiskoja] 1885 — Itävalta-Unkari otti Bosnian hallintaansa 1878 ja alkoi nykyaikaistaa Sarajevoa nopeasti: hevosvetoinen raitiovaunu aloitti liikennöinnin jo 1885, ja se oli yksi tämän osan Eurooppaa varhaisimmista pysyvistä raitiotiejärjestelmistä. Rata kulki kaupungintalon eli Vijećnican ohi Miljacka-joen vartta, ja samalla kaudella kaupunkiin rakennettiin rautatieasemia, kouluja ja tehtaita. Raitiovaunuliikenne jatkuu Sarajevossa yhä, ja osa nykyisistäkin reiteistä kulkee samoja katuja kuin 1800-luvun hevosvaunu.
+
+### 19.1
+KYSYMYS: Mistä Sarajevon nimi juontuu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sarajevo (kaupungit)
+Tietoruudun teksti: Sarajevo on Bosnia ja Hertsegovinan pääkaupunki Miljacka-joen varrella Dinaaristen vuorten keskellä, ja sitä on pitkän uskonnollisen ja kulttuurisen moninaisuutensa vuoksi kutsuttu Euroopan Jerusalemiksi: samassa kaupunginosassa on moskeija, katolinen kirkko, ortodoksikirkko ja synagoga. Ottomaanit perustivat kaupungin 1450-luvulla, ja sen ensimmäinen kuvernööri Isa-Beg Ishaković rakennutti moskeijan, katetun torin, hammamin ja karavaanimajatalon — nimi Sarajevo juontuu näistä rakennuksista, sanoista "saray" ja "evo". Kaupunki kasvoi nopeasti, ja 1660-luvulla se oli Istanbulin jälkeen Ottomaanien valtakunnan suurin kaupunki Balkanilla. Baščaršijan kauppatori on ollut kaupungin sydän jo perustamisesta asti, ja vuoteen 1850 mennessä Sarajevosta oli tullut koko Bosnian hallinnollinen keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Ruoka: Omena joka täytetään pähkinöillä] Ottomaanien kausi — Tufahija on bosnialainen jälkiruoka, jonka juuret ovat ottomaaniajan keittiössä: kokonainen omena kuoritaan ja haudutetaan sokeriliemessä neilikan ja sitruunan kanssa, kunnes se pehmenee mutta säilyttää muotonsa. Omenan sisus kovetetaan ja täytetään jauhetuilla saksanpähkinöillä, ja päälle lisätään kermavaahtoa. Nimi juontuu arabian ja turkin omenaa tarkoittavasta sanasta tuffah. Jälkiruokaa tarjoillaan yhä Sarajevon Baščaršijan vanhassa Morića Han -karavaanimajatalossa, joka on 1600-luvulta.
+
+### 19.2
+KYSYMYS: Miksi Sarajevoa on kutsuttu Euroopan Jerusalemiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sarajevo (kaupungit)
+Tietoruudun teksti: Sarajevo on Bosnia ja Hertsegovinan pääkaupunki Miljacka-joen varrella Dinaaristen vuorten keskellä, ja sitä on pitkän uskonnollisen ja kulttuurisen moninaisuutensa vuoksi kutsuttu Euroopan Jerusalemiksi: samassa kaupunginosassa on moskeija, katolinen kirkko, ortodoksikirkko ja synagoga. Ottomaanit perustivat kaupungin 1450-luvulla, ja sen ensimmäinen kuvernööri Isa-Beg Ishaković rakennutti moskeijan, katetun torin, hammamin ja karavaanimajatalon — nimi Sarajevo juontuu näistä rakennuksista, sanoista "saray" ja "evo". Kaupunki kasvoi nopeasti, ja 1660-luvulla se oli Istanbulin jälkeen Ottomaanien valtakunnan suurin kaupunki Balkanilla. Baščaršijan kauppatori on ollut kaupungin sydän jo perustamisesta asti, ja vuoteen 1850 mennessä Sarajevosta oli tullut koko Bosnian hallinnollinen keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Historia: Raitiovaunu joka kulkee yhä samoja kiskoja] 1885 — Itävalta-Unkari otti Bosnian hallintaansa 1878 ja alkoi nykyaikaistaa Sarajevoa nopeasti: hevosvetoinen raitiovaunu aloitti liikennöinnin jo 1885, ja se oli yksi tämän osan Eurooppaa varhaisimmista pysyvistä raitiotiejärjestelmistä. Rata kulki kaupungintalon eli Vijećnican ohi Miljacka-joen vartta, ja samalla kaudella kaupunkiin rakennettiin rautatieasemia, kouluja ja tehtaita. Raitiovaunuliikenne jatkuu Sarajevossa yhä, ja osa nykyisistäkin reiteistä kulkee samoja katuja kuin 1800-luvun hevosvaunu.
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:hahmotelma-bjelasnica) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bjelašnica (luonto · vuori)
+Tietoruudun teksti: Bjelašnica on Dinaaristen vuorten huippu Sarajevon lounaispuolella, vain kahdenkymmenen minuutin matkan päässä kaupungista. Sen korkein kohta kohoaa 2 067 metriin, ja nimi tulee sanasta "bijel", valkoinen. Vuoren rinteillä hiihdettiin vuoden 1984 talviolympialaisten miesten alppihiihtolajit: amerikkalainen Bill Johnson yllätti kaikki voittamalla laskettelun ennustettuaan voittonsa etukäteen, kaksoset Phil ja Steve Mahre veivät pujottelun kulta- ja hopeamitalin, ja sveitsiläinen Max Julen voitti suurpujottelun jugoslavialaisen Jure Frankon jäädessä hopealle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Historia: Raitiovaunu joka kulkee yhä samoja kiskoja] 1885 — Itävalta-Unkari otti Bosnian hallintaansa 1878 ja alkoi nykyaikaistaa Sarajevoa nopeasti: hevosvetoinen raitiovaunu aloitti liikennöinnin jo 1885, ja se oli yksi tämän osan Eurooppaa varhaisimmista pysyvistä raitiotiejärjestelmistä. Rata kulki kaupungintalon eli Vijećnican ohi Miljacka-joen vartta, ja samalla kaudella kaupunkiin rakennettiin rautatieasemia, kouluja ja tehtaita. Raitiovaunuliikenne jatkuu Sarajevossa yhä, ja osa nykyisistäkin reiteistä kulkee samoja katuja kuin 1800-luvun hevosvaunu.
+- [Montenegro — maalehti / Luonto: Pešićan jäätikköjärvi Bjelasican rinteellä] jääkauden perua — Bjelasica on vuorijono Kolašinin lähellä, ja sen korkein huippu Crna Glava kohoaa 2 139 metriin. Jono rajautuu Lim- ja Tara-jokiin, ja siinä on kymmenen yli 2 000 metrin huippua ja kuusi jäätikköjärveä. Pešićan järvi on niistä toiseksi suurimpia: se on noin 290 metriä pitkä ja sijaitsee noin 1 800 metrin korkeudessa Crna Glavan juurella. Kesäisin rinteillä toimivat paimenten katunit eli vuoristomajat, joissa yöpyy nykyään myös retkeilijöitä. Bjelasica ja Durmitor ovat Montenegron vuoristomatkailun keskuksia, ja Kolašinin hiihtokeskus houkuttaa vuorelle myös talvella.
+
+### 20.1
+KYSYMYS: Mistä Bjelašnican nimi tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bjelašnica (luonto · vuori)
+Tietoruudun teksti: Bjelašnica on Dinaaristen vuorten huippu Sarajevon lounaispuolella, vain kahdenkymmenen minuutin matkan päässä kaupungista. Sen korkein kohta kohoaa 2 067 metriin, ja nimi tulee sanasta "bijel", valkoinen. Vuoren rinteillä hiihdettiin vuoden 1984 talviolympialaisten miesten alppihiihtolajit: amerikkalainen Bill Johnson yllätti kaikki voittamalla laskettelun ennustettuaan voittonsa etukäteen, kaksoset Phil ja Steve Mahre veivät pujottelun kulta- ja hopeamitalin, ja sveitsiläinen Max Julen voitti suurpujottelun jugoslavialaisen Jure Frankon jäädessä hopealle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Historia: Raitiovaunu joka kulkee yhä samoja kiskoja] 1885 — Itävalta-Unkari otti Bosnian hallintaansa 1878 ja alkoi nykyaikaistaa Sarajevoa nopeasti: hevosvetoinen raitiovaunu aloitti liikennöinnin jo 1885, ja se oli yksi tämän osan Eurooppaa varhaisimmista pysyvistä raitiotiejärjestelmistä. Rata kulki kaupungintalon eli Vijećnican ohi Miljacka-joen vartta, ja samalla kaudella kaupunkiin rakennettiin rautatieasemia, kouluja ja tehtaita. Raitiovaunuliikenne jatkuu Sarajevossa yhä, ja osa nykyisistäkin reiteistä kulkee samoja katuja kuin 1800-luvun hevosvaunu.
+
+### 20.2
+KYSYMYS: Ketkä voittivat kultaa Bjelašnican rinteillä vuoden 1984 olympialaisissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bjelašnica (luonto · vuori)
+Tietoruudun teksti: Bjelašnica on Dinaaristen vuorten huippu Sarajevon lounaispuolella, vain kahdenkymmenen minuutin matkan päässä kaupungista. Sen korkein kohta kohoaa 2 067 metriin, ja nimi tulee sanasta "bijel", valkoinen. Vuoren rinteillä hiihdettiin vuoden 1984 talviolympialaisten miesten alppihiihtolajit: amerikkalainen Bill Johnson yllätti kaikki voittamalla laskettelun ennustettuaan voittonsa etukäteen, kaksoset Phil ja Steve Mahre veivät pujottelun kulta- ja hopeamitalin, ja sveitsiläinen Max Julen voitti suurpujottelun jugoslavialaisen Jure Frankon jäädessä hopealle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Historia: Raitiovaunu joka kulkee yhä samoja kiskoja] 1885 — Itävalta-Unkari otti Bosnian hallintaansa 1878 ja alkoi nykyaikaistaa Sarajevoa nopeasti: hevosvetoinen raitiovaunu aloitti liikennöinnin jo 1885, ja se oli yksi tämän osan Eurooppaa varhaisimmista pysyvistä raitiotiejärjestelmistä. Rata kulki kaupungintalon eli Vijećnican ohi Miljacka-joen vartta, ja samalla kaudella kaupunkiin rakennettiin rautatieasemia, kouluja ja tehtaita. Raitiovaunuliikenne jatkuu Sarajevossa yhä, ja osa nykyisistäkin reiteistä kulkee samoja katuja kuin 1800-luvun hevosvaunu.
+- [Montenegro — maalehti / Luonto: Pešićan jäätikköjärvi Bjelasican rinteellä] jääkauden perua — Bjelasica on vuorijono Kolašinin lähellä, ja sen korkein huippu Crna Glava kohoaa 2 139 metriin. Jono rajautuu Lim- ja Tara-jokiin, ja siinä on kymmenen yli 2 000 metrin huippua ja kuusi jäätikköjärveä. Pešićan järvi on niistä toiseksi suurimpia: se on noin 290 metriä pitkä ja sijaitsee noin 1 800 metrin korkeudessa Crna Glavan juurella. Kesäisin rinteillä toimivat paimenten katunit eli vuoristomajat, joissa yöpyy nykyään myös retkeilijöitä. Bjelasica ja Durmitor ovat Montenegron vuoristomatkailun keskuksia, ja Kolašinin hiihtokeskus houkuttaa vuorelle myös talvella.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

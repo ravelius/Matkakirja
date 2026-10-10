@@ -1,0 +1,190 @@
+================ KOHTA 21 (kohde:hahmotelma-kravice) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kravicen putoukset (luonto · vuori)
+Tietoruudun teksti: Kravice on suuri tuffikivinen putoussarja Trebižat-joessa Hertsegovinan karstialueella, noin kymmenen kilometriä Ljubuškista etelään ja neljäkymmentä kilometriä Mostarista etelään. Putoukset ovat noin kaksikymmentäviisi metriä korkeat, ja niiden alla oleva allas on halkaisijaltaan noin sata kaksikymmentä metriä. Kesäisin putoukset ovat suosittu uinti- ja piknikpaikka, ja lähellä on pieni tippukivigrotta, vanha mylly ja purjelaiva. Putousten ympäristön omisti aikanaan Zaim-beg Selimić, tunnettu ljubuškilainen kunnanvaltuutettu, maanomistaja ja hyväntekijä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viktorian putoukset — kaupunkilehti / Viktorian putoukset: Silta joka toi radan putousten partaalle] Kaivosmiljonääri Cecil Rhodes halusi Kapkaupungista Kairoon kulkevan rautatien niin lähelle putouksia, että matkustajat tuntisivat sumun junan ikkunasta. Hänen toiveensa mukaisesti Zambezin ylittävä rautatiesilta rakennettiin Englannissa osina, kuljetettiin laivalla Afrikkaan ja koottiin paikan päällä suoraan putousten alapuolelle avautuvan rotkon yli. Silta valmistui vuonna 1905 ja oli tuolloin maailman korkein rautatiesilta: kaarisilta kohoaa 128 metriä joen yläpuolelle ja on 198 metriä pitkä. Rhodes ei koskaan nähnyt siltaa valmiina, sillä hän kuoli samana vuonna.
+- [Iguazú — kaupunkilehti / Iguazú: Suojeltu viidakko putousten ympärillä] Argentiina perusti Iguazún kansallispuiston vuonna 1934 ja Brasilia oman puolensa 1939 – putoukset olivat siihen mennessä tulleet tunnetuiksi maailmalla, ja niitä alettiin suojella sekä matkailukohteena että viimeisenä laajana palana atlantista sademetsää, joka oli muualla kutistunut nopeasti maanviljelyn tieltä. UNESCO listasi molemmat puistot maailmanperintökohteiksi 1984 ja 1986, perusteluna putousten ainutlaatuisuus ja runsas eliölajisto. Puistot kattavat yhteensä yli 2000 neliökilometriä metsää, jossa elää jaguaareja, tapiireja ja satoja lintulajeja – putoukset ovat vain äänekkäin osa paljon suurempaa suojelualuetta.
+
+### 21.1
+KYSYMYS: Mitä joen vettä Kravicen putoukset kuljettavat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kravicen putoukset (luonto · vuori)
+Tietoruudun teksti: Kravice on suuri tuffikivinen putoussarja Trebižat-joessa Hertsegovinan karstialueella, noin kymmenen kilometriä Ljubuškista etelään ja neljäkymmentä kilometriä Mostarista etelään. Putoukset ovat noin kaksikymmentäviisi metriä korkeat, ja niiden alla oleva allas on halkaisijaltaan noin sata kaksikymmentä metriä. Kesäisin putoukset ovat suosittu uinti- ja piknikpaikka, ja lähellä on pieni tippukivigrotta, vanha mylly ja purjelaiva. Putousten ympäristön omisti aikanaan Zaim-beg Selimić, tunnettu ljubuškilainen kunnanvaltuutettu, maanomistaja ja hyväntekijä.
+
+### 21.2
+KYSYMYS: Kuka omisti putousten ympäristön ja mitä hän teki paikkakunnalleen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kravicen putoukset (luonto · vuori)
+Tietoruudun teksti: Kravice on suuri tuffikivinen putoussarja Trebižat-joessa Hertsegovinan karstialueella, noin kymmenen kilometriä Ljubuškista etelään ja neljäkymmentä kilometriä Mostarista etelään. Putoukset ovat noin kaksikymmentäviisi metriä korkeat, ja niiden alla oleva allas on halkaisijaltaan noin sata kaksikymmentä metriä. Kesäisin putoukset ovat suosittu uinti- ja piknikpaikka, ja lähellä on pieni tippukivigrotta, vanha mylly ja purjelaiva. Putousten ympäristön omisti aikanaan Zaim-beg Selimić, tunnettu ljubuškilainen kunnanvaltuutettu, maanomistaja ja hyväntekijä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viktorian putoukset — kaupunkilehti / Viktorian putoukset: Silta joka toi radan putousten partaalle] Kaivosmiljonääri Cecil Rhodes halusi Kapkaupungista Kairoon kulkevan rautatien niin lähelle putouksia, että matkustajat tuntisivat sumun junan ikkunasta. Hänen toiveensa mukaisesti Zambezin ylittävä rautatiesilta rakennettiin Englannissa osina, kuljetettiin laivalla Afrikkaan ja koottiin paikan päällä suoraan putousten alapuolelle avautuvan rotkon yli. Silta valmistui vuonna 1905 ja oli tuolloin maailman korkein rautatiesilta: kaarisilta kohoaa 128 metriä joen yläpuolelle ja on 198 metriä pitkä. Rhodes ei koskaan nähnyt siltaa valmiina, sillä hän kuoli samana vuonna.
+- [Iguazú — kaupunkilehti / Iguazú: Suojeltu viidakko putousten ympärillä] Argentiina perusti Iguazún kansallispuiston vuonna 1934 ja Brasilia oman puolensa 1939 – putoukset olivat siihen mennessä tulleet tunnetuiksi maailmalla, ja niitä alettiin suojella sekä matkailukohteena että viimeisenä laajana palana atlantista sademetsää, joka oli muualla kutistunut nopeasti maanviljelyn tieltä. UNESCO listasi molemmat puistot maailmanperintökohteiksi 1984 ja 1986, perusteluna putousten ainutlaatuisuus ja runsas eliölajisto. Puistot kattavat yhteensä yli 2000 neliökilometriä metsää, jossa elää jaguaareja, tapiireja ja satoja lintulajeja – putoukset ovat vain äänekkäin osa paljon suurempaa suojelualuetta.
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:hahmotelma-tuzla) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tuzla (tekniikka)
+Tietoruudun teksti: Tuzla on Bosnia ja Hertsegovinan kolmanneksi suurin kaupunki, ja sen nimi tulee ottomaanien turkin sanasta tuzla, suolakaivos — kaupungin alla on laajat suolaesiintymät, joita on louhittu vuosisatoja verotulojen lähteeksi. Keskiajalla paikkaa kutsuttiin nimellä Soli, "suolat", ja jo 900-luvulla se tunnettiin Bysantin lähteissä linnoituksena nimeltä Salines. Nykyinen kaupunki juontuu vuodesta 1510, jolloin siitä tuli tärkeä ottomaanien varuskuntakaupunki. Kaupungin keskuspuistossa on Panonsko-järvi, Euroopan ainoa suolajärvi, jonka rannoilla käy vuosittain yli kolmesataaviisikymmentätuhatta kävijää.
+
+### 22.1
+KYSYMYS: Mistä Tuzlan nimi tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tuzla (tekniikka)
+Tietoruudun teksti: Tuzla on Bosnia ja Hertsegovinan kolmanneksi suurin kaupunki, ja sen nimi tulee ottomaanien turkin sanasta tuzla, suolakaivos — kaupungin alla on laajat suolaesiintymät, joita on louhittu vuosisatoja verotulojen lähteeksi. Keskiajalla paikkaa kutsuttiin nimellä Soli, "suolat", ja jo 900-luvulla se tunnettiin Bysantin lähteissä linnoituksena nimeltä Salines. Nykyinen kaupunki juontuu vuodesta 1510, jolloin siitä tuli tärkeä ottomaanien varuskuntakaupunki. Kaupungin keskuspuistossa on Panonsko-järvi, Euroopan ainoa suolajärvi, jonka rannoilla käy vuosittain yli kolmesataaviisikymmentätuhatta kävijää.
+
+### 22.2
+KYSYMYS: Mikä Panonsko-järvi on ja miksi se on Euroopassa ainutlaatuinen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tuzla (tekniikka)
+Tietoruudun teksti: Tuzla on Bosnia ja Hertsegovinan kolmanneksi suurin kaupunki, ja sen nimi tulee ottomaanien turkin sanasta tuzla, suolakaivos — kaupungin alla on laajat suolaesiintymät, joita on louhittu vuosisatoja verotulojen lähteeksi. Keskiajalla paikkaa kutsuttiin nimellä Soli, "suolat", ja jo 900-luvulla se tunnettiin Bysantin lähteissä linnoituksena nimeltä Salines. Nykyinen kaupunki juontuu vuodesta 1510, jolloin siitä tuli tärkeä ottomaanien varuskuntakaupunki. Kaupungin keskuspuistossa on Panonsko-järvi, Euroopan ainoa suolajärvi, jonka rannoilla käy vuosittain yli kolmesataaviisikymmentätuhatta kävijää.
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:hahmotelma-konjic) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konjic (tekniikka)
+Tietoruudun teksti: Konjic on yksi Bosnia ja Hertsegovinan vanhimmista jatkuvasti asutuista paikoista — seutu on ollut asuttu jo lähes neljätuhatta vuotta, vaikka kaupunki nykyisessä muodossaan syntyi vasta 1300-luvun lopulla. Ensimmäinen kirjallinen maininta on Dubrovnikin tasavallan asiakirjoissa vuodelta 1382. Ottomaanien ajalta on peräisin kaupungin tunnusmerkki, kivinen Stara Ćuprija -silta Neretvan yli, joka on päätynyt myös Konjicin omaan vaakunaan. Kaupunki tunnetaan yhä puunveistoperinteestään, Konjicin drvorezbarstvosta: käsin veistetyt huonekalut ja koristeesineet ovat osa paikallisyhteisön identiteettiä, ja Unesco lisäsi perinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2017.
+
+### 23.1
+KYSYMYS: Mikä on Konjicin puunveisto ja mihin sitä käytetään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konjic (tekniikka)
+Tietoruudun teksti: Konjic on yksi Bosnia ja Hertsegovinan vanhimmista jatkuvasti asutuista paikoista — seutu on ollut asuttu jo lähes neljätuhatta vuotta, vaikka kaupunki nykyisessä muodossaan syntyi vasta 1300-luvun lopulla. Ensimmäinen kirjallinen maininta on Dubrovnikin tasavallan asiakirjoissa vuodelta 1382. Ottomaanien ajalta on peräisin kaupungin tunnusmerkki, kivinen Stara Ćuprija -silta Neretvan yli, joka on päätynyt myös Konjicin omaan vaakunaan. Kaupunki tunnetaan yhä puunveistoperinteestään, Konjicin drvorezbarstvosta: käsin veistetyt huonekalut ja koristeesineet ovat osa paikallisyhteisön identiteettiä, ja Unesco lisäsi perinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2017.
+
+### 23.2
+KYSYMYS: Kuinka vanha Konjicin Stara Ćuprija -silta on ja mihin sen kuva on päätynyt?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konjic (tekniikka)
+Tietoruudun teksti: Konjic on yksi Bosnia ja Hertsegovinan vanhimmista jatkuvasti asutuista paikoista — seutu on ollut asuttu jo lähes neljätuhatta vuotta, vaikka kaupunki nykyisessä muodossaan syntyi vasta 1300-luvun lopulla. Ensimmäinen kirjallinen maininta on Dubrovnikin tasavallan asiakirjoissa vuodelta 1382. Ottomaanien ajalta on peräisin kaupungin tunnusmerkki, kivinen Stara Ćuprija -silta Neretvan yli, joka on päätynyt myös Konjicin omaan vaakunaan. Kaupunki tunnetaan yhä puunveistoperinteestään, Konjicin drvorezbarstvosta: käsin veistetyt huonekalut ja koristeesineet ovat osa paikallisyhteisön identiteettiä, ja Unesco lisäsi perinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2017.
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:hahmotelma-tvrdos) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tvrdošin luostari (ruoka)
+Tietoruudun teksti: Tvrdoš on serbi-ortodoksinen luostari Trebinjen lähellä Itä-Hertsegovinassa, perustettu 1400-luvun lopulla tai 1500-luvun alussa. Se toimi Hertsegovinan arkkipiispojen istuimena, kunnes Venetsian laivasto tuhosi sen vuonna 1694, ja nykyinen rakennus valmistui vasta vuonna 1924. Luostari tunnetaan nykyään erityisesti viininviljelystään: tärkeimmät rypälelajikkeet ovat Vranac ja Žilavka, ja sen viinikellarit — yksi niistä 1500-luvulta — ovat suosittu matkailukohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Peking — kohdekartta / Kohdekartta: Yonghe-temppeli] 1694, luostariksi 1744 Rakennus alkoi prinssin kotina. Kangxi-keisari antoi sen 1702 neljännelle pojalleen Yinzhenille, ja tämän tuleva seuraaja, Qianlong-keisari, syntyi talon itäsiivessä 1711. Kun Yinzhen nousi valtaistuimelle Yongzheng-keisarina, talosta tuli Harmonian ja rauhan palatsi — ja keisarin arvon merkiksi sen turkoosit tiilikatot vaihdettiin keltaisiin, jotka oli varattu vain keisarille. Vuonna 1744 Qianlong muutti palatsin tiibetinbuddhalaiseksi luostariksi. Siitä tuli Qing-kauden merkittävin buddhalainen temppeli, jonka rakennuksissa kiinalainen ja tiibetiläinen tyyli kulkevat rinnakkain ja jonne muutti munkkeja Mongoliasta ja Tiibetistä asti. Kuuluisin aarre on Kymmenentuhan…
+- [Mérida — kohdekartta / Kohdekartta: La Mejoradan puisto] 1870 Aukio on Calle 50:llä katujen 59 ja 57 välissä, entisen fransiskaaniluostarin edessä. Tänne laskettiin 1. huhtikuuta 1870 koko Yucatánin niemimaan ensimmäinen rautatiekisko. Puisto on saanut nimensä kirkosta ja luostarista, joita on siirtomaa-ajasta asti kutsuttu La Mejoradaksi; nimi tulee todennäköisesti Espanjan Mejoradasta, jonka samanaikaisen seurakuntakirkon piirustukset muistuttavat näitä. Kirkkoa alettiin rakentaa 1621 encomendero Diego Montalvo Garcían varoilla. Hän luovutti keskeneräisen rakennuksen fransiskaaneille, ja se valmistui 1640; nykyään se tunnetaan Nuestra Señora del Carmenin kirkkona. Luostari rakennettiin 1688–1694, ja se oli tarkoitettu niille sääntökunnan jäseni…
+
+### 24.1
+KYSYMYS: Mitkä rypälelajikkeet ovat Tvrdošin viinin tärkeimmät?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tvrdošin luostari (ruoka)
+Tietoruudun teksti: Tvrdoš on serbi-ortodoksinen luostari Trebinjen lähellä Itä-Hertsegovinassa, perustettu 1400-luvun lopulla tai 1500-luvun alussa. Se toimi Hertsegovinan arkkipiispojen istuimena, kunnes Venetsian laivasto tuhosi sen vuonna 1694, ja nykyinen rakennus valmistui vasta vuonna 1924. Luostari tunnetaan nykyään erityisesti viininviljelystään: tärkeimmät rypälelajikkeet ovat Vranac ja Žilavka, ja sen viinikellarit — yksi niistä 1500-luvulta — ovat suosittu matkailukohde.
+
+### 24.2
+KYSYMYS: Mitä luostarille tapahtui vuonna 1694?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tvrdošin luostari (ruoka)
+Tietoruudun teksti: Tvrdoš on serbi-ortodoksinen luostari Trebinjen lähellä Itä-Hertsegovinassa, perustettu 1400-luvun lopulla tai 1500-luvun alussa. Se toimi Hertsegovinan arkkipiispojen istuimena, kunnes Venetsian laivasto tuhosi sen vuonna 1694, ja nykyinen rakennus valmistui vasta vuonna 1924. Luostari tunnetaan nykyään erityisesti viininviljelystään: tärkeimmät rypälelajikkeet ovat Vranac ja Žilavka, ja sen viinikellarit — yksi niistä 1500-luvulta — ovat suosittu matkailukohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Peking — kohdekartta / Kohdekartta: Yonghe-temppeli] 1694, luostariksi 1744 Rakennus alkoi prinssin kotina. Kangxi-keisari antoi sen 1702 neljännelle pojalleen Yinzhenille, ja tämän tuleva seuraaja, Qianlong-keisari, syntyi talon itäsiivessä 1711. Kun Yinzhen nousi valtaistuimelle Yongzheng-keisarina, talosta tuli Harmonian ja rauhan palatsi — ja keisarin arvon merkiksi sen turkoosit tiilikatot vaihdettiin keltaisiin, jotka oli varattu vain keisarille. Vuonna 1744 Qianlong muutti palatsin tiibetinbuddhalaiseksi luostariksi. Siitä tuli Qing-kauden merkittävin buddhalainen temppeli, jonka rakennuksissa kiinalainen ja tiibetiläinen tyyli kulkevat rinnakkain ja jonne muutti munkkeja Mongoliasta ja Tiibetistä asti. Kuuluisin aarre on Kymmenentuhan…
+- [Mérida — kohdekartta / Kohdekartta: La Mejoradan puisto] 1870 Aukio on Calle 50:llä katujen 59 ja 57 välissä, entisen fransiskaaniluostarin edessä. Tänne laskettiin 1. huhtikuuta 1870 koko Yucatánin niemimaan ensimmäinen rautatiekisko. Puisto on saanut nimensä kirkosta ja luostarista, joita on siirtomaa-ajasta asti kutsuttu La Mejoradaksi; nimi tulee todennäköisesti Espanjan Mejoradasta, jonka samanaikaisen seurakuntakirkon piirustukset muistuttavat näitä. Kirkkoa alettiin rakentaa 1621 encomendero Diego Montalvo Garcían varoilla. Hän luovutti keskeneräisen rakennuksen fransiskaaneille, ja se valmistui 1640; nykyään se tunnetaan Nuestra Señora del Carmenin kirkkona. Luostari rakennettiin 1688–1694, ja se oli tarkoitettu niille sääntökunnan jäseni…
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-livno) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Livno (ruoka)
+Tietoruudun teksti: Livno on Länsi-Bosnian kaupunki Bistrica-joen varrella, Cincar-vuoren juurella, ja se juontaa juurensa aina vuoteen 892, johon sen perustaminen kirjataan herttua Mutimirin asiakirjassa. Ottomaanien aikaan kaupunkiin nousi 1570-luvulla Hajji Ahmed the Ducat Minterin moskeija, jonka suunnitteli arkkitehti Mimar Sinan ja jonka kellotorni valmistui noin 1659. Seudulla on 1800-luvulla alettu valmistaa livnonjuustoa eli Livanjski siriä, joka perustuu ranskalaiseen gruyère-juuston valmistustekniikkaan; alun perin juusto tehtiin lampaanmaidosta, nykyään useimmiten lampaan- ja lehmänmaidon seoksesta.
+
+### 25.1
+KYSYMYS: Mihin tekniikkaan livnonjuuston valmistus perustuu ja mistä maidosta se alun perin tehtiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Livno (ruoka)
+Tietoruudun teksti: Livno on Länsi-Bosnian kaupunki Bistrica-joen varrella, Cincar-vuoren juurella, ja se juontaa juurensa aina vuoteen 892, johon sen perustaminen kirjataan herttua Mutimirin asiakirjassa. Ottomaanien aikaan kaupunkiin nousi 1570-luvulla Hajji Ahmed the Ducat Minterin moskeija, jonka suunnitteli arkkitehti Mimar Sinan ja jonka kellotorni valmistui noin 1659. Seudulla on 1800-luvulla alettu valmistaa livnonjuustoa eli Livanjski siriä, joka perustuu ranskalaiseen gruyère-juuston valmistustekniikkaan; alun perin juusto tehtiin lampaanmaidosta, nykyään useimmiten lampaan- ja lehmänmaidon seoksesta.
+
+### 25.2
+KYSYMYS: Kuka suunnitteli Livnon moskeijan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Livno (ruoka)
+Tietoruudun teksti: Livno on Länsi-Bosnian kaupunki Bistrica-joen varrella, Cincar-vuoren juurella, ja se juontaa juurensa aina vuoteen 892, johon sen perustaminen kirjataan herttua Mutimirin asiakirjassa. Ottomaanien aikaan kaupunkiin nousi 1570-luvulla Hajji Ahmed the Ducat Minterin moskeija, jonka suunnitteli arkkitehti Mimar Sinan ja jonka kellotorni valmistui noin 1659. Seudulla on 1800-luvulla alettu valmistaa livnonjuustoa eli Livanjski siriä, joka perustuu ranskalaiseen gruyère-juuston valmistustekniikkaan; alun perin juusto tehtiin lampaanmaidosta, nykyään useimmiten lampaan- ja lehmänmaidon seoksesta.
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

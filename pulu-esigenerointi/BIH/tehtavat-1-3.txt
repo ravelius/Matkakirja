@@ -1,0 +1,217 @@
+================ KOHTA 11 (kohde:vjetrenica) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vjetrenican luola (luonto)
+Tietoruudun teksti: Maan suurin luola on samalla maailman lajirikkain luola: sieltä on löydetty yli kaksisataa lajia, joista noin 37 kuvattiin tieteelle ensimmäisen kerran juuri täällä. Nimi tarkoittaa tuuliluolaa — kesähelteellä suuaukosta puhaltaa kylmä viima keskelle kuivaa karstimaisemaa. Käytäviä on kartoitettu 7 014 metriä, ja geologit arvelevat luolan ulottuvan aina Adrianmerelle asti. Unescon maailmanperintökohde 2024.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kaupunkilehti / Krakova: Lohikäärme puhaltaa yhä tulta] Wawelin kukkulan juurella on luola ja sen suulla pronssinen lohikäärme, joka puhaltaa oikeaa tulta muutaman minuutin välein. Tarinan mukaan pedon kaatoi suutarinoppipoika, joka jätti luolan eteen rikillä täytetyn lampaan. Lohikäärme ahmi syötin, sai kauhean janon ja joi Veiksel-jokea niin kauan, että halkesi. Kuningas antoi pojalle palkinnoksi tyttärensä.
+- [Pariisi — kaupunkilehti / Historian hetki: Rue d'Ulm 1862 — liemi, joka pysyy kirkkaana] 1862 — Kalenterissa on kulunut jo viikkoja, ja pullo on yhä kirkas. Louis Pasteur nostaa sen valoa vasten École normale supérieuren laboratoriossa rue d'Ulmilla: keitetty lihaliemi, jonka joutsenkaulan muotoinen lasikaula päästää ilman sisään mutta pysäyttää pölyn mutkaansa. Naapuripullo, jonka kaulan hän katkaisi, on sameana ja haisee. Kysymys, jota Pasteur ratkoo, on vanha ja kiihkeä: syntyykö elämä itsestään mätänevästä aineesta? Rouenin museonjohtaja Félix Pouchet vakuuttaa, että ilma itsessään riittää synnyttämään sen. Tiedeakatemia on luvannut 2 500 frangin Alhumbert-palkinnon sille, joka ratkaisee kiistan kokeellisesti. Pasteur vie pullojaan vuorille ja avaa niitä ohuessa ilmassa, jo…
+
+### 11.1
+KYSYMYS: Miten luolaeläin tulee toimeen ilman valoa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vjetrenican luola (luonto)
+Tietoruudun teksti: Maan suurin luola on samalla maailman lajirikkain luola: sieltä on löydetty yli kaksisataa lajia, joista noin 37 kuvattiin tieteelle ensimmäisen kerran juuri täällä. Nimi tarkoittaa tuuliluolaa — kesähelteellä suuaukosta puhaltaa kylmä viima keskelle kuivaa karstimaisemaa. Käytäviä on kartoitettu 7 014 metriä, ja geologit arvelevat luolan ulottuvan aina Adrianmerelle asti. Unescon maailmanperintökohde 2024.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Rue d'Ulm 1862 — liemi, joka pysyy kirkkaana] 1862 — Kalenterissa on kulunut jo viikkoja, ja pullo on yhä kirkas. Louis Pasteur nostaa sen valoa vasten École normale supérieuren laboratoriossa rue d'Ulmilla: keitetty lihaliemi, jonka joutsenkaulan muotoinen lasikaula päästää ilman sisään mutta pysäyttää pölyn mutkaansa. Naapuripullo, jonka kaulan hän katkaisi, on sameana ja haisee. Kysymys, jota Pasteur ratkoo, on vanha ja kiihkeä: syntyykö elämä itsestään mätänevästä aineesta? Rouenin museonjohtaja Félix Pouchet vakuuttaa, että ilma itsessään riittää synnyttämään sen. Tiedeakatemia on luvannut 2 500 frangin Alhumbert-palkinnon sille, joka ratkaisee kiistan kokeellisesti. Pasteur vie pullojaan vuorille ja avaa niitä ohuessa ilmassa, jo…
+- [Pariisi — kohdekartta / Kohdekartta: Pasteur 1862] Kalenterissa on kulunut jo viikkoja, ja pullo on yhä kirkas. Louis Pasteur nostaa sen valoa vasten École normale supérieuren laboratoriossa rue d'Ulmilla: keitetty lihaliemi, jonka joutsenkaulan muotoinen lasikaula päästää ilman sisään mutta pysäyttää pölyn mutkaansa. Naapuripullo, jonka kaulan hän katkaisi, on sameana ja haisee. Kysymys, jota Pasteur ratkoo, on vanha ja kiihkeä: syntyykö elämä itsestään mätänevästä aineesta? Rouenin museonjohtaja Félix Pouchet vakuuttaa, että ilma itsessään riittää synnyttämään sen. Tiedeakatemia on luvannut 2 500 frangin Alhumbert-palkinnon sille, joka ratkaisee kiistan kokeellisesti. Pasteur vie pullojaan vuorille ja avaa niitä ohuessa ilmassa, jossa pöl…
+
+### 11.2
+KYSYMYS: Miksi luolan suusta puhaltaa kylmää?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vjetrenican luola (luonto)
+Tietoruudun teksti: Maan suurin luola on samalla maailman lajirikkain luola: sieltä on löydetty yli kaksisataa lajia, joista noin 37 kuvattiin tieteelle ensimmäisen kerran juuri täällä. Nimi tarkoittaa tuuliluolaa — kesähelteellä suuaukosta puhaltaa kylmä viima keskelle kuivaa karstimaisemaa. Käytäviä on kartoitettu 7 014 metriä, ja geologit arvelevat luolan ulottuvan aina Adrianmerelle asti. Unescon maailmanperintökohde 2024.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kaupunkilehti / Krakova: Lohikäärme puhaltaa yhä tulta] Wawelin kukkulan juurella on luola ja sen suulla pronssinen lohikäärme, joka puhaltaa oikeaa tulta muutaman minuutin välein. Tarinan mukaan pedon kaatoi suutarinoppipoika, joka jätti luolan eteen rikillä täytetyn lampaan. Lohikäärme ahmi syötin, sai kauhean janon ja joi Veiksel-jokea niin kauan, että halkesi. Kuningas antoi pojalle palkinnoksi tyttärensä.
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:hutovoblato) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hutovo Blato (eläimet)
+Tietoruudun teksti: Neretvan alajuoksun soilla lepää muuttomatkallaan yli 240 lintulajia, ja muuttoaikaan järven ympärille kerääntyy kymmeniätuhansia lintuja kerralla. Alue on Ramsar-kosteikko vuodesta 2001. Kosteikon läpi kulkeva Krupa-joki on Euroopassa ainutlaatuinen: se virtaa molempiin suuntiin — kun Neretvan vesi nousee, se työntää Krupan takaisin ylävirtaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Luonto: Koko järvi katoaa kesäksi] Larnakan suolajärvi on suurin neljän järven ryhmästä kaupungin laidalla. Vettä siinä on vain myöhäisestä syksystä alkukesään: sadetta tulee vähän, ja haihdunta hoitaa loput. Enimmilläänkin syvyys on noin metri, ja 60 prosentilla pinta-alasta alle 30 senttimetriä. Kun vesi vetäytyy, suolapitoisuus nousee moninkertaiseksi mereen verrattuna, ja kesällä pohja on paljas. Koko ravintoketju lepää kahden lajin varassa: yksisoluinen viherlevä ja sitä syövä suolalehtijalkainen Artemia salina, joka on flamingojen pääruokaa. Linnut saapuvat marraskuussa Turkin ja Iranin pesimäalueilta ja viipyvät helmikuun loppuun; määrä vaihtelee parista tuhannesta yli kymmeneen tuhanteen. Alue on Ramsar-kosteikko ja …
+- [Hongkong — maalehti / Luonto: Katkarapualtaat, joita hoidetaan lintujen takia] 1983– — Mai Pon kosteikko Yuen Longin lähellä reunustaa matalaa Deep Bayta, ja sisälahti on ollut Ramsar-kohde vuodesta 1995. WWF Hongkong on hoitanut aluetta vuodesta 1983, ja sisään pääsee vain luvalla. Lintulajeja on yli 350, ja muuttoaikaan alueella on ollut yli 55 000 lintua kerrallaan; talvehtijoista neljäsosa on koko maailman mustanaamalusikkanokkia, joita laskettiin 2012 vasta 2 693 ja 2022 jo 6 162. Alueella on 24 vanhaa katkarapuallasta eli gei waita, joita pidetään yhä yllä — ei enää katkaravun vaan lintujen ruoan takia. Nisäkäslajeja on 38, enemmän kuin missään muualla Hongkongissa.
+
+### 12.1
+KYSYMYS: Mikä Ramsar-kosteikko on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hutovo Blato (eläimet)
+Tietoruudun teksti: Neretvan alajuoksun soilla lepää muuttomatkallaan yli 240 lintulajia, ja muuttoaikaan järven ympärille kerääntyy kymmeniätuhansia lintuja kerralla. Alue on Ramsar-kosteikko vuodesta 2001. Kosteikon läpi kulkeva Krupa-joki on Euroopassa ainutlaatuinen: se virtaa molempiin suuntiin — kun Neretvan vesi nousee, se työntää Krupan takaisin ylävirtaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Luonto: Koko järvi katoaa kesäksi] Larnakan suolajärvi on suurin neljän järven ryhmästä kaupungin laidalla. Vettä siinä on vain myöhäisestä syksystä alkukesään: sadetta tulee vähän, ja haihdunta hoitaa loput. Enimmilläänkin syvyys on noin metri, ja 60 prosentilla pinta-alasta alle 30 senttimetriä. Kun vesi vetäytyy, suolapitoisuus nousee moninkertaiseksi mereen verrattuna, ja kesällä pohja on paljas. Koko ravintoketju lepää kahden lajin varassa: yksisoluinen viherlevä ja sitä syövä suolalehtijalkainen Artemia salina, joka on flamingojen pääruokaa. Linnut saapuvat marraskuussa Turkin ja Iranin pesimäalueilta ja viipyvät helmikuun loppuun; määrä vaihtelee parista tuhannesta yli kymmeneen tuhanteen. Alue on Ramsar-kosteikko ja …
+- [Hongkong — maalehti / Luonto: Katkarapualtaat, joita hoidetaan lintujen takia] 1983– — Mai Pon kosteikko Yuen Longin lähellä reunustaa matalaa Deep Bayta, ja sisälahti on ollut Ramsar-kohde vuodesta 1995. WWF Hongkong on hoitanut aluetta vuodesta 1983, ja sisään pääsee vain luvalla. Lintulajeja on yli 350, ja muuttoaikaan alueella on ollut yli 55 000 lintua kerrallaan; talvehtijoista neljäsosa on koko maailman mustanaamalusikkanokkia, joita laskettiin 2012 vasta 2 693 ja 2022 jo 6 162. Alueella on 24 vanhaa katkarapuallasta eli gei waita, joita pidetään yhä yllä — ei enää katkaravun vaan lintujen ruoan takia. Nisäkäslajeja on 38, enemmän kuin missään muualla Hongkongissa.
+
+### 12.2
+KYSYMYS: Mitä lintuja täällä levähtää?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hutovo Blato (eläimet)
+Tietoruudun teksti: Neretvan alajuoksun soilla lepää muuttomatkallaan yli 240 lintulajia, ja muuttoaikaan järven ympärille kerääntyy kymmeniätuhansia lintuja kerralla. Alue on Ramsar-kosteikko vuodesta 2001. Kosteikon läpi kulkeva Krupa-joki on Euroopassa ainutlaatuinen: se virtaa molempiin suuntiin — kun Neretvan vesi nousee, se työntää Krupan takaisin ylävirtaan.
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:maglic) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maglić (luonto · vuori)
+Tietoruudun teksti: Maglić on rajan ylittävä vuori Dinaridien alueella Bosnia ja Hertsegovinan sekä Montenegron rajalla. Sen korkein huippu on 2 388 metriä ja Montenegron puolella; kaksoishuippu 2 386 metrissä on Bosnia ja Hertsegovinan puolella ja siten maan korkein kohta — ja samalla se kahdesta huipusta, jolla käydään useammin. Vuori kulkee luoteesta kaakkoon.
+
+### 13.1
+KYSYMYS: Mitkä ovat Dinaridit?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maglić (luonto · vuori)
+Tietoruudun teksti: Maglić on rajan ylittävä vuori Dinaridien alueella Bosnia ja Hertsegovinan sekä Montenegron rajalla. Sen korkein huippu on 2 388 metriä ja Montenegron puolella; kaksoishuippu 2 386 metrissä on Bosnia ja Hertsegovinan puolella ja siten maan korkein kohta — ja samalla se kahdesta huipusta, jolla käydään useammin. Vuori kulkee luoteesta kaakkoon.
+
+### 13.2
+KYSYMYS: Miksi kaksoishuipuista käytetympi on matalampi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maglić (luonto · vuori)
+Tietoruudun teksti: Maglić on rajan ylittävä vuori Dinaridien alueella Bosnia ja Hertsegovinan sekä Montenegron rajalla. Sen korkein huippu on 2 388 metriä ja Montenegron puolella; kaksoishuippu 2 386 metrissä on Bosnia ja Hertsegovinan puolella ja siten maan korkein kohta — ja samalla se kahdesta huipusta, jolla käydään useammin. Vuori kulkee luoteesta kaakkoon.
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:adrianmeri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla, ja Bosnia ja Hertsegovina on niistä se, jolla rantaa on kaikkein vähiten — kapea kaistale Neumin kohdalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jordania — maalehti / Vedet: Maan kapein merenranta on korallien peitossa] Jordanian ainoa merenranta on Akabanlahdella, ja sitä on vain noin kaksikymmentäseitsemän kilometriä. Lyhyt ranta on silti tärkeä: Punaisenmeren pohjoiskärjessä vesi on lämmintä ja kirkasta, ja rannan tuntumassa kasvaa koralliriuttoja, joita voi katsella pelkillä uimalaseilla. Riutoilla elää satoja kalalajeja. Osa rannasta on merisuojelualuetta, jossa ankkurointi on kielletty, ettei ankkuri riko koralleja. Akaban satama on samalla maan ainoa portti merelle.
+
+### 14.1
+KYSYMYS: Miksi maan rannikko on niin lyhyt?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla, ja Bosnia ja Hertsegovina on niistä se, jolla rantaa on kaikkein vähiten — kapea kaistale Neumin kohdalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jordania — maalehti / Vedet: Maan kapein merenranta on korallien peitossa] Jordanian ainoa merenranta on Akabanlahdella, ja sitä on vain noin kaksikymmentäseitsemän kilometriä. Lyhyt ranta on silti tärkeä: Punaisenmeren pohjoiskärjessä vesi on lämmintä ja kirkasta, ja rannan tuntumassa kasvaa koralliriuttoja, joita voi katsella pelkillä uimalaseilla. Riutoilla elää satoja kalalajeja. Osa rannasta on merisuojelualuetta, jossa ankkurointi on kielletty, ettei ankkuri riko koralleja. Akaban satama on samalla maan ainoa portti merelle.
+
+### 14.2
+KYSYMYS: Mikä Otranton salmi on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla, ja Bosnia ja Hertsegovina on niistä se, jolla rantaa on kaikkein vähiten — kapea kaistale Neumin kohdalla.
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:blidinje) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blidinjen puisto (luonto)
+Tietoruudun teksti: Blidinje on karstiylänkö Dinaarisilla vuorilla Čvrsnican, Čabuljan ja Vranin välissä. Ylänkö on noin 513 neliökilometriä, se ulottuu 22 kilometriä pohjois-eteläsuunnassa ja 17 kilometriä itä-länsisuunnassa, ja korkeus vaihtelee 1 150 metristä 2 228 metriin.
+
+Luonnonpuisto perustettiin 30. huhtikuuta 1995, ja sen pinta-ala on 364 neliökilometriä.
+
+Ylängön keskellä on Blidinjen järvi 1 184 metrin korkeudessa. Sen pinta-ala ei ole vakio vaan vaihtelee vuodenajan mukaan kahden ja puolen ja kuuden neliökilometrin välillä.
+
+Dugo Poljen kalmistossa seisoo keskiaikaisia stećak-hautakiviä, ja ne kuuluvat Unescon maailmanperintöluetteloon otettuun stećak-kokonaisuuteen. Masna Lukan rinteillä kasvaa munikaa eli valkorunkoista Balkanin vuoristomäntyä, ja Čvrsnican rinteellä toimii Risovacin hiihtokeskus.
+
+### 15.1
+KYSYMYS: Mikä stećak on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blidinjen puisto (luonto)
+Tietoruudun teksti: Blidinje on karstiylänkö Dinaarisilla vuorilla Čvrsnican, Čabuljan ja Vranin välissä. Ylänkö on noin 513 neliökilometriä, se ulottuu 22 kilometriä pohjois-eteläsuunnassa ja 17 kilometriä itä-länsisuunnassa, ja korkeus vaihtelee 1 150 metristä 2 228 metriin.
+
+Luonnonpuisto perustettiin 30. huhtikuuta 1995, ja sen pinta-ala on 364 neliökilometriä.
+
+Ylängön keskellä on Blidinjen järvi 1 184 metrin korkeudessa. Sen pinta-ala ei ole vakio vaan vaihtelee vuodenajan mukaan kahden ja puolen ja kuuden neliökilometrin välillä.
+
+Dugo Poljen kalmistossa seisoo keskiaikaisia stećak-hautakiviä, ja ne kuuluvat Unescon maailmanperintöluetteloon otettuun stećak-kokonaisuuteen. Masna Lukan rinteillä kasvaa munikaa eli valkorunkoista Balkanin vuoristomäntyä, ja Čvrsnican rinteellä toimii Risovacin hiihtokeskus.
+
+### 15.2
+KYSYMYS: Miksi munika kasvaa juuri täällä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blidinjen puisto (luonto)
+Tietoruudun teksti: Blidinje on karstiylänkö Dinaarisilla vuorilla Čvrsnican, Čabuljan ja Vranin välissä. Ylänkö on noin 513 neliökilometriä, se ulottuu 22 kilometriä pohjois-eteläsuunnassa ja 17 kilometriä itä-länsisuunnassa, ja korkeus vaihtelee 1 150 metristä 2 228 metriin.
+
+Luonnonpuisto perustettiin 30. huhtikuuta 1995, ja sen pinta-ala on 364 neliökilometriä.
+
+Ylängön keskellä on Blidinjen järvi 1 184 metrin korkeudessa. Sen pinta-ala ei ole vakio vaan vaihtelee vuodenajan mukaan kahden ja puolen ja kuuden neliökilometrin välillä.
+
+Dugo Poljen kalmistossa seisoo keskiaikaisia stećak-hautakiviä, ja ne kuuluvat Unescon maailmanperintöluetteloon otettuun stećak-kokonaisuuteen. Masna Lukan rinteillä kasvaa munikaa eli valkorunkoista Balkanin vuoristomäntyä, ja Čvrsnican rinteellä toimii Risovacin hiihtokeskus.
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

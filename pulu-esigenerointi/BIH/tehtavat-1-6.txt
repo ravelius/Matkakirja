@@ -1,0 +1,188 @@
+================ KOHTA 26 (kohde:hahmotelma-prokosko) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prokoškon järvi (luonto · järvi)
+Tietoruudun teksti: Prokoškon järvi lepää Vranican vuoriston rinteellä Fojnican kunnassa, tuhannen kuudensadan seitsemänkymmenen metrin korkeudessa, ja sitä ympäröi Vranican korkein huippu Nadkrstac. Altaan uskotaan syntyneen soraisen maa-aineksen kasautumisesta riolittikallion päälle. Järven ainutlaatuisuus on siinä elävä bosnialainen alppitriton, harvinainen vuoristovesiliskon alalaji, joka säilyttää toukkamaisia piirteitään vielä aikuisenakin. Tutkijat löysivät järven merkityksen tieteelle 1890-luvulla: ornitologi Othmar Reiser kiinnitti huomion sen eliölajistoon vuonna 1891, ja herpetologi Franz Werner kuvasi tritonin vuonna 1902. Myöhemmin järveen istutettu kalifornianpurotaimen osoittautui virheeksi, sillä laji saalistaa tritonia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Galápagos — kaupunkilehti / Galápagossaaret: Piispan harhaan ajautunut laiva] Tomás de Berlanga oli matkalla Panamasta Peruun sovittelemaan riitaa, kun tuulet tyyntyivät ja virtaukset kuljettivat hänen laivansa harhaan reitiltä. Miehistö ajautui tuntemattomaan saaristoon, jossa ei ollut makeaa vettä: kaksi merimiestä ja kymmenen hevosta kuoli janoon ennen kuin retkikunta pääsi jatkamaan matkaa. Berlanga kirjoitti Espanjan kuninkaalle kuvauksen karusta paikasta, jonka kivikkoisilla rannoilla vaelsi jättiläiskilpikonnia ja oudon näköisiä liskoja. Raportti oli ensimmäinen kirjallinen maininta saaristosta — mutta yli kolme vuosisataa kului ennen kuin kukaan tutki sitä tieteellisesti.
+- [Norfolk — kaupunkilehti / Selviytyjät: Norfolkinmänty — ei mänty eikä mastopuu] Norfolkinmänty ei ole tieteellisesti mänty lainkaan, vaan araukaria-suvun havupuu, joka kasvaa luonnostaan vain Norfolkilla ja sen naapurisaarella Phillip Islandilla. Kapteeni Cook piti puiden suoria, jopa yli 60 metriä kohoavia runkoja täydellisinä laivaston mastoiksi, mutta kun ensimmäiset siirtokuntalaiset kokeilivat puuta 1788, se osoittautui liian oksaiseksi ja hauraaksi purjelaivan rakenteisiin. Puu jäi silti saaren tunnusmerkiksi: se komeilee yhä Norfolkin lipussa, ja sen luontainen levinneisyys on niin suppea, että laji on nykyisin luokiteltu silmälläpidettäväksi.
+
+### 26.1
+KYSYMYS: Mikä eläinlaji tekee Prokoškon järvestä tieteellisesti erityisen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prokoškon järvi (luonto · järvi)
+Tietoruudun teksti: Prokoškon järvi lepää Vranican vuoriston rinteellä Fojnican kunnassa, tuhannen kuudensadan seitsemänkymmenen metrin korkeudessa, ja sitä ympäröi Vranican korkein huippu Nadkrstac. Altaan uskotaan syntyneen soraisen maa-aineksen kasautumisesta riolittikallion päälle. Järven ainutlaatuisuus on siinä elävä bosnialainen alppitriton, harvinainen vuoristovesiliskon alalaji, joka säilyttää toukkamaisia piirteitään vielä aikuisenakin. Tutkijat löysivät järven merkityksen tieteelle 1890-luvulla: ornitologi Othmar Reiser kiinnitti huomion sen eliölajistoon vuonna 1891, ja herpetologi Franz Werner kuvasi tritonin vuonna 1902. Myöhemmin järveen istutettu kalifornianpurotaimen osoittautui virheeksi, sillä laji saalistaa tritonia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Galápagos — kaupunkilehti / Galápagossaaret: Piispan harhaan ajautunut laiva] Tomás de Berlanga oli matkalla Panamasta Peruun sovittelemaan riitaa, kun tuulet tyyntyivät ja virtaukset kuljettivat hänen laivansa harhaan reitiltä. Miehistö ajautui tuntemattomaan saaristoon, jossa ei ollut makeaa vettä: kaksi merimiestä ja kymmenen hevosta kuoli janoon ennen kuin retkikunta pääsi jatkamaan matkaa. Berlanga kirjoitti Espanjan kuninkaalle kuvauksen karusta paikasta, jonka kivikkoisilla rannoilla vaelsi jättiläiskilpikonnia ja oudon näköisiä liskoja. Raportti oli ensimmäinen kirjallinen maininta saaristosta — mutta yli kolme vuosisataa kului ennen kuin kukaan tutki sitä tieteellisesti.
+- [Norfolk — kaupunkilehti / Selviytyjät: Norfolkinmänty — ei mänty eikä mastopuu] Norfolkinmänty ei ole tieteellisesti mänty lainkaan, vaan araukaria-suvun havupuu, joka kasvaa luonnostaan vain Norfolkilla ja sen naapurisaarella Phillip Islandilla. Kapteeni Cook piti puiden suoria, jopa yli 60 metriä kohoavia runkoja täydellisinä laivaston mastoiksi, mutta kun ensimmäiset siirtokuntalaiset kokeilivat puuta 1788, se osoittautui liian oksaiseksi ja hauraaksi purjelaivan rakenteisiin. Puu jäi silti saaren tunnusmerkiksi: se komeilee yhä Norfolkin lipussa, ja sen luontainen levinneisyys on niin suppea, että laji on nykyisin luokiteltu silmälläpidettäväksi.
+
+### 26.2
+KYSYMYS: Miksi järveen istutettu kalifornianpurotaimen osoittautui virheeksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prokoškon järvi (luonto · järvi)
+Tietoruudun teksti: Prokoškon järvi lepää Vranican vuoriston rinteellä Fojnican kunnassa, tuhannen kuudensadan seitsemänkymmenen metrin korkeudessa, ja sitä ympäröi Vranican korkein huippu Nadkrstac. Altaan uskotaan syntyneen soraisen maa-aineksen kasautumisesta riolittikallion päälle. Järven ainutlaatuisuus on siinä elävä bosnialainen alppitriton, harvinainen vuoristovesiliskon alalaji, joka säilyttää toukkamaisia piirteitään vielä aikuisenakin. Tutkijat löysivät järven merkityksen tieteelle 1890-luvulla: ornitologi Othmar Reiser kiinnitti huomion sen eliölajistoon vuonna 1891, ja herpetologi Franz Werner kuvasi tritonin vuonna 1902. Myöhemmin järveen istutettu kalifornianpurotaimen osoittautui virheeksi, sillä laji saalistaa tritonia.
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-doboj) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dobojin linna (historia)
+Tietoruudun teksti: Doboj on kaupunki Bosna-joen varrella Pohjois-Bosniassa, ja sen yllä kohoava linna oli aikanaan Bosnian kuninkaallisen Kotromanić-suvun linnoitus. Ensimmäinen kivilinnoitus rakennettiin jo 1200-luvun alussa entisen roomalaisen leirin paikalle, ja sitä laajennettiin vuonna 1415, jolloin kaupunki mainitaan ensi kertaa kirjallisessa lähteessä. Ottomaanit laajensivat linnaa edelleen vuonna 1490 vallattuaan alueen. Nykyään Doboj on maan suurin rautatiesolmu ja Bosna-joen laakson tärkein liikennekeskus Banja Lukan ohella.
+
+### 27.1
+KYSYMYS: Kuka rakennutti Dobojin linnan ensimmäisen kivilinnoituksen ja milloin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dobojin linna (historia)
+Tietoruudun teksti: Doboj on kaupunki Bosna-joen varrella Pohjois-Bosniassa, ja sen yllä kohoava linna oli aikanaan Bosnian kuninkaallisen Kotromanić-suvun linnoitus. Ensimmäinen kivilinnoitus rakennettiin jo 1200-luvun alussa entisen roomalaisen leirin paikalle, ja sitä laajennettiin vuonna 1415, jolloin kaupunki mainitaan ensi kertaa kirjallisessa lähteessä. Ottomaanit laajensivat linnaa edelleen vuonna 1490 vallattuaan alueen. Nykyään Doboj on maan suurin rautatiesolmu ja Bosna-joen laakson tärkein liikennekeskus Banja Lukan ohella.
+
+### 27.2
+KYSYMYS: Miksi Doboj on nykyään maan tärkein rautatiesolmu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dobojin linna (historia)
+Tietoruudun teksti: Doboj on kaupunki Bosna-joen varrella Pohjois-Bosniassa, ja sen yllä kohoava linna oli aikanaan Bosnian kuninkaallisen Kotromanić-suvun linnoitus. Ensimmäinen kivilinnoitus rakennettiin jo 1200-luvun alussa entisen roomalaisen leirin paikalle, ja sitä laajennettiin vuonna 1415, jolloin kaupunki mainitaan ensi kertaa kirjallisessa lähteessä. Ottomaanit laajensivat linnaa edelleen vuonna 1490 vallattuaan alueen. Nykyään Doboj on maan suurin rautatiesolmu ja Bosna-joen laakson tärkein liikennekeskus Banja Lukan ohella.
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-gradacac) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gradačacin linnoitus (historia)
+Tietoruudun teksti: Gradačac on Koillis-Bosnian kaupunki, joka tunnetaan linnoituksestaan. Gradaščevićien kapteenisuku kehitti kaupunkia 1700-luvulta lähtien, ja suvun kuuluisin jäsen, Husein-kapetan Gradaščević eli Zmaj od Bosne — "Bosnian lohikäärme" — nousi vuonna 1831 lähes kaikkien Bosnian ottomaanikapteenien johtoon kansannousussa, jonka tavoitteena oli autonomia ja joka vastusti sulttaani Mahmud II:n Tanzimat-uudistuksia. Kansannousu kesti kolme vuotta ja kukistui lopulta 1835, minkä jälkeen kapteenikunnat lakkautettiin kokonaan. Linnoituksen kaksikymmentäkaksimetrinen vartiotorni on Husein-kapetanin oma rakennuttama vuodelta 1824, roomalaisten perustusten päälle nostettu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montevideo — kaupunkilehti / Montevideo: Niemi jota kaksi kruunua tavoitteli] Portugalilainen kenraalimajuri Manuel de Freitas da Fonseca pystytti marraskuussa 1723 varustuksen Montevideon lahden rannalle. Buenos Airesin kuvernööri Bruno Mauricio de Zabala karkotti portugalilaiset jo tammikuussa 1724 ja aloitti asuttamisen kuudella Buenos Airesista tulleella perheellä; pian perässä saapui kanariansaarelaisia. Vuoden 1724 väestölaskenta kirjasi yli sata galicialais- ja kanarialaisperhettä, yli tuhat pääosin guaraníkansaan kuuluvaa asukasta sekä orjuutettuja bantutaustaisia ihmisiä. Perustamisesta ei ole asiakirjaa: Zabalan päiväkirja mainitsee 24. joulukuuta 1726, ja omaksi kaupungikseen Buenos Airesista se erkani 1.1.1730.
+
+### 28.1
+KYSYMYS: Kuka oli Husein-kapetan Gradaščević ja mistä lisänimi "Bosnian lohikäärme" tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gradačacin linnoitus (historia)
+Tietoruudun teksti: Gradačac on Koillis-Bosnian kaupunki, joka tunnetaan linnoituksestaan. Gradaščevićien kapteenisuku kehitti kaupunkia 1700-luvulta lähtien, ja suvun kuuluisin jäsen, Husein-kapetan Gradaščević eli Zmaj od Bosne — "Bosnian lohikäärme" — nousi vuonna 1831 lähes kaikkien Bosnian ottomaanikapteenien johtoon kansannousussa, jonka tavoitteena oli autonomia ja joka vastusti sulttaani Mahmud II:n Tanzimat-uudistuksia. Kansannousu kesti kolme vuotta ja kukistui lopulta 1835, minkä jälkeen kapteenikunnat lakkautettiin kokonaan. Linnoituksen kaksikymmentäkaksimetrinen vartiotorni on Husein-kapetanin oma rakennuttama vuodelta 1824, roomalaisten perustusten päälle nostettu.
+
+### 28.2
+KYSYMYS: Mitä kapteeni tavoitteli vuoden 1831 kansannousussaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gradačacin linnoitus (historia)
+Tietoruudun teksti: Gradačac on Koillis-Bosnian kaupunki, joka tunnetaan linnoituksestaan. Gradaščevićien kapteenisuku kehitti kaupunkia 1700-luvulta lähtien, ja suvun kuuluisin jäsen, Husein-kapetan Gradaščević eli Zmaj od Bosne — "Bosnian lohikäärme" — nousi vuonna 1831 lähes kaikkien Bosnian ottomaanikapteenien johtoon kansannousussa, jonka tavoitteena oli autonomia ja joka vastusti sulttaani Mahmud II:n Tanzimat-uudistuksia. Kansannousu kesti kolme vuotta ja kukistui lopulta 1835, minkä jälkeen kapteenikunnat lakkautettiin kokonaan. Linnoituksen kaksikymmentäkaksimetrinen vartiotorni on Husein-kapetanin oma rakennuttama vuodelta 1824, roomalaisten perustusten päälle nostettu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montevideo — kaupunkilehti / Montevideo: Niemi jota kaksi kruunua tavoitteli] Portugalilainen kenraalimajuri Manuel de Freitas da Fonseca pystytti marraskuussa 1723 varustuksen Montevideon lahden rannalle. Buenos Airesin kuvernööri Bruno Mauricio de Zabala karkotti portugalilaiset jo tammikuussa 1724 ja aloitti asuttamisen kuudella Buenos Airesista tulleella perheellä; pian perässä saapui kanariansaarelaisia. Vuoden 1724 väestölaskenta kirjasi yli sata galicialais- ja kanarialaisperhettä, yli tuhat pääosin guaraníkansaan kuuluvaa asukasta sekä orjuutettuja bantutaustaisia ihmisiä. Perustamisesta ei ole asiakirjaa: Zabalan päiväkirja mainitsee 24. joulukuuta 1726, ja omaksi kaupungikseen Buenos Airesista se erkani 1.1.1730.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-kupres) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kupresin ylänkö (historia)
+Tietoruudun teksti: Kupres on tuhannen sadankahdenkymmenen ja tuhannen kahdensadanviidenkymmenen metrin korkeudella sijaitseva ylänkö Länsi-Bosniassa, jonka sijainti Dinaaristen vuorten sydämessä tuo sille keskimäärin viisikymmentäviisi lumipäivää vuodessa. Alueella asui esiroomalaisella kaudella illyrialainen Dalmatae-heimo yhdessä kelttien kanssa, kunnes keisari Augustuksen roomalaiset valloittivat seudun. Myöhemmin ylänkö on kuulunut vuorotellen Kroatian kuningaskuntaan, Bosnian kuningaskuntaan ja Ottomaanien valtakuntaan. Kupreška vrata -tunneli yhdistää ylängön Bugojnon suuntaan, ja nykyään alue tunnetaan myös talviurheilukeskuksistaan.
+
+### 29.1
+KYSYMYS: Mitkä kansat asuttivat Kupresin ylänköä ennen roomalaisia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kupresin ylänkö (historia)
+Tietoruudun teksti: Kupres on tuhannen sadankahdenkymmenen ja tuhannen kahdensadanviidenkymmenen metrin korkeudella sijaitseva ylänkö Länsi-Bosniassa, jonka sijainti Dinaaristen vuorten sydämessä tuo sille keskimäärin viisikymmentäviisi lumipäivää vuodessa. Alueella asui esiroomalaisella kaudella illyrialainen Dalmatae-heimo yhdessä kelttien kanssa, kunnes keisari Augustuksen roomalaiset valloittivat seudun. Myöhemmin ylänkö on kuulunut vuorotellen Kroatian kuningaskuntaan, Bosnian kuningaskuntaan ja Ottomaanien valtakuntaan. Kupreška vrata -tunneli yhdistää ylängön Bugojnon suuntaan, ja nykyään alue tunnetaan myös talviurheilukeskuksistaan.
+
+### 29.2
+KYSYMYS: Miksi Kupresilla sataa lunta niin usein?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kupresin ylänkö (historia)
+Tietoruudun teksti: Kupres on tuhannen sadankahdenkymmenen ja tuhannen kahdensadanviidenkymmenen metrin korkeudella sijaitseva ylänkö Länsi-Bosniassa, jonka sijainti Dinaaristen vuorten sydämessä tuo sille keskimäärin viisikymmentäviisi lumipäivää vuodessa. Alueella asui esiroomalaisella kaudella illyrialainen Dalmatae-heimo yhdessä kelttien kanssa, kunnes keisari Augustuksen roomalaiset valloittivat seudun. Myöhemmin ylänkö on kuulunut vuorotellen Kroatian kuningaskuntaan, Bosnian kuningaskuntaan ja Ottomaanien valtakuntaan. Kupreška vrata -tunneli yhdistää ylängön Bugojnon suuntaan, ja nykyään alue tunnetaan myös talviurheilukeskuksistaan.
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-daorson) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Daorson (historia)
+Tietoruudun teksti: Daorson oli illyrialaisen daorsi-heimon pääkaupunki Neretva-joen laaksossa, nykyisen Stolacin lähellä sijaitsevalla Ošanićin kukkulalla. Daorsit asuivat seudulla 300–50 eaa. ja olivat varhain yhteyksissä kreikkalaisiin kauppiaisiin, mikä hellenisoi kaupunkia jonkin verran. Rauhansopimuksen jälkeen Rooman kanssa vuosina 168–167 eaa. daorsit alkoivat lyödä omia rahojaan. Kaupungin akropoliin ympärillä on jykevä kyklooppimuuri, joka on koottu valtavista kivilohkareista samaan tapaan kuin Mykenen muurit Kreikassa. Kaivauksissa on löytynyt muun muassa pronssinen, mytologisin hahmoin koristeltu kypärä sekä rahapaja, jonka kolmestakymmenestäyhdeksästä kolikosta suurin osa esittää kuningas Ballaiosta.
+
+### 30.1
+KYSYMYS: Keitä olivat daorsit ja missä heidän pääkaupunkinsa Daorson sijaitsi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Daorson (historia)
+Tietoruudun teksti: Daorson oli illyrialaisen daorsi-heimon pääkaupunki Neretva-joen laaksossa, nykyisen Stolacin lähellä sijaitsevalla Ošanićin kukkulalla. Daorsit asuivat seudulla 300–50 eaa. ja olivat varhain yhteyksissä kreikkalaisiin kauppiaisiin, mikä hellenisoi kaupunkia jonkin verran. Rauhansopimuksen jälkeen Rooman kanssa vuosina 168–167 eaa. daorsit alkoivat lyödä omia rahojaan. Kaupungin akropoliin ympärillä on jykevä kyklooppimuuri, joka on koottu valtavista kivilohkareista samaan tapaan kuin Mykenen muurit Kreikassa. Kaivauksissa on löytynyt muun muassa pronssinen, mytologisin hahmoin koristeltu kypärä sekä rahapaja, jonka kolmestakymmenestäyhdeksästä kolikosta suurin osa esittää kuningas Ballaiosta.
+
+### 30.2
+KYSYMYS: Mitä Daorsonin rahapajasta löytyi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Daorson (historia)
+Tietoruudun teksti: Daorson oli illyrialaisen daorsi-heimon pääkaupunki Neretva-joen laaksossa, nykyisen Stolacin lähellä sijaitsevalla Ošanićin kukkulalla. Daorsit asuivat seudulla 300–50 eaa. ja olivat varhain yhteyksissä kreikkalaisiin kauppiaisiin, mikä hellenisoi kaupunkia jonkin verran. Rauhansopimuksen jälkeen Rooman kanssa vuosina 168–167 eaa. daorsit alkoivat lyödä omia rahojaan. Kaupungin akropoliin ympärillä on jykevä kyklooppimuuri, joka on koottu valtavista kivilohkareista samaan tapaan kuin Mykenen muurit Kreikassa. Kaivauksissa on löytynyt muun muassa pronssinen, mytologisin hahmoin koristeltu kypärä sekä rahapaja, jonka kolmestakymmenestäyhdeksästä kolikosta suurin osa esittää kuningas Ballaiosta.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
