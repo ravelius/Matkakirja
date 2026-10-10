@@ -52,7 +52,7 @@ namespace Matkakirja.Editori
         enum Vaihe { Aloita, OdotaPelia, Kysy, AvaaKysy, OdotaKysy, Napit, OdotaNapit, NytRivi, OdotaNytRivi, Pallo, OdotaPallo, Mikseri, OdotaMikseri, Chat, OdotaChat, Pin, OdotaPin, Palkki, OdotaPalkki, Nosto, OdotaNosto,
             Taulu, OdotaTaulu, Nakyma, OdotaNakyma, Linna, OdotaLinna, Loyto, OdotaLoyto,
             Tietokerros, AvaaTietokerros, OdotaTietokerros,
-            Lopeta, OdotaLoppua, Valmis }
+            Kuvaa, Lopeta, OdotaLoppua, Valmis }
 
         static int kokoNro, kehyksia;
         static LinnaValikko linna;
@@ -78,6 +78,87 @@ namespace Matkakirja.Editori
             "ihmisen matkan valikko", "radio", "maan kyltti", "linssin selite", "ajattelijat", "ISS-ohjaamo", "karttavalikko",
             "astronautin kuva", "minipulun kortti",
         };
+
+        /// <summary>
+        /// KUVA-ARKKI (Päätoimittaja 10.10.2026, vain PT:n tarkistukseen, ei omistajalle): ympäristömuuttujan näkymät
+        /// (pilkuin, "*" = kaikki) tallennetaan PNG:nä tulokset/asettelukuvat/&lt;koko&gt;-&lt;näkymä&gt;.png. Editori piirtää samat
+        /// USS-tyylit ja fontit laitteen kokoiseen tekstuuriin (UiKerros, UiRuutu.Testi); kerrokset yhdistetään järjestyksessä
+        /// neutraalin taustan päälle (pallo ei piirry tyhjässä kohtauksessa).
+        /// </summary>
+        public const string KuvatMuuttuja = "MATKAKIRJA_ASETTELU_KUVAT";
+
+        static bool Kuvattava(string nimi)
+        {
+            var k = Environment.GetEnvironmentVariable(KuvatMuuttuja);
+            if (string.IsNullOrEmpty(k)) return false;
+            return k == "*" || k.Split(',').Any(x => x.Trim() == nimi);
+        }
+
+        static List<UnityEngine.UIElements.UIDocument> Dokumentit() =>
+            UnityEngine.Object.FindObjectsByType<UIDocument>(FindObjectsSortMode.None)
+                .Where(d => d.isActiveAndEnabled && d.panelSettings != null && d.panelSettings.targetTexture != null)
+                .OrderBy(d => d.panelSettings.sortingOrder).ToList();
+
+        /// <summary>Paneelit piirtävät muuten edellisen ruudun päälle (UiKerros: clearColor = false): kuvaa varten tyhjennys.</summary>
+        static void TyhjennaKerrokset()
+        {
+            foreach (var d in Dokumentit())
+            {
+                d.panelSettings.clearColor = true;
+                d.panelSettings.colorClearValue = new Color(0f, 0f, 0f, 0f);
+                d.rootVisualElement.MarkDirtyRepaint();
+            }
+        }
+
+        static void PiirraUudelleen(VisualElement e)
+        {
+            e.MarkDirtyRepaint();
+            foreach (var c in e.Children()) PiirraUudelleen(c);
+        }
+
+        static void TallennaKuva(string nimi)
+        {
+            var dokut = Dokumentit();
+            if (dokut.Count == 0) { Kirjaa($"-- kuva {nimi}: ei kerroksia"); return; }
+            // Koko testattavasta laitteesta (alimman kerroksen tekstuuri ei aina ollut laitteen kokoinen: ajo 07.43, piirtyneitä 0).
+            int w = UiRuutu.Leveys, h = UiRuutu.Korkeus;
+            var ohitetut = new List<string>();
+            var tausta = new Color(0.33f, 0.37f, 0.42f, 1f);
+            var pikselit = Enumerable.Repeat(tausta, w * h).ToArray();
+            var luku = new Texture2D(w, h, TextureFormat.RGBA32, false, true);
+            var ennen = RenderTexture.active;
+            int piirtyneet = 0;
+            foreach (var d in dokut)
+            {
+                var rt = d.panelSettings.targetTexture;
+                if (rt.width != w || rt.height != h) { ohitetut.Add($"{d.panelSettings.sortingOrder}:{rt.width}×{rt.height}"); continue; }
+                if (d.rootVisualElement.resolvedStyle.display == DisplayStyle.None) continue;
+                RenderTexture.active = rt;
+                luku.ReadPixels(new Rect(0, 0, w, h), 0, 0, false);
+                luku.Apply(false);
+                var lahde = luku.GetPixels();
+                if (lahde.Any(c => c.a > 0f)) piirtyneet++;
+                // UITK piirtää esikerrotulla alfalla: tulos = lähde + kohde × (1 − alfa).
+                for (int i = 0; i < pikselit.Length; i++)
+                {
+                    var c = lahde[i];
+                    if (c.a <= 0f) continue;
+                    var k = pikselit[i];
+                    float j = 1f - c.a;
+                    pikselit[i] = new Color(c.r + k.r * j, c.g + k.g * j, c.b + k.b * j, 1f);
+                }
+            }
+            RenderTexture.active = ennen;
+            var kuva = new Texture2D(w, h, TextureFormat.RGB24, false, true);
+            kuva.SetPixels(pikselit);
+            kuva.Apply(false);
+            Directory.CreateDirectory("tulokset/asettelukuvat");
+            string tiedosto = $"tulokset/asettelukuvat/{Koot[kokoNro].Nimi}-{nimi.Replace(' ', '-')}.png";
+            File.WriteAllBytes(tiedosto, kuva.EncodeToPNG());
+            UnityEngine.Object.DestroyImmediate(luku);
+            UnityEngine.Object.DestroyImmediate(kuva);
+            Kirjaa($"-- kuva {tiedosto} (kerroksia {dokut.Count}, piirtyneitä {piirtyneet}{(ohitetut.Count > 0 ? ", eri kokoiset " + string.Join(" ", ohitetut) : "")})");
+        }
 
         static bool OsaanKuuluu(string nimi) => Osa.Length == 0 || LinnanNakymat.Contains(nimi) == (Osa == "linna");
 
@@ -314,6 +395,19 @@ namespace Matkakirja.Editori
                     // Sisältö latautuu paketeista (kuormitettu kone, ajo #14): odotetaan uusia näkyviä elementtejä enintään 20 s.
                     if (Kulunut < 20 && !NakyvatOhjaimet().Any(e => !ennen.Contains(e))) return;
                     TarkistaUudet(n.Nimi);
+                    if (Kuvattava(n.Nimi)) { TyhjennaKerrokset(); Siirry(Vaihe.Kuvaa); break; }
+                    try { n.Sulje(); } catch (Exception e) { Virhe($"{n.Nimi}: sulku kaatui {e.Message}"); }
+                    nakymaNro++;
+                    Siirry(Vaihe.Nakyma);
+                    break;
+                }
+                case Vaihe.Kuvaa:
+                {
+                    // Kerrokset piirtyvät tyhjennettyinä uudelleen (TyhjennaKerrokset), sitten kuva ja näkymä kiinni. Uudelleenpiirto
+                    // pakotetaan joka ruutu: muuttumaton paneeli vain tyhjensi tekstuurin (ajo 07.24: iPhone pysty ok, muut tyhjiä).
+                    if (kehyksia < 8) { foreach (var d in Dokumentit()) PiirraUudelleen(d.rootVisualElement); return; }
+                    var n = Nakymat[nakymaNro];
+                    try { TallennaKuva(n.Nimi); } catch (Exception e) { Kirjaa($"-- kuva {n.Nimi}: {e.GetType().Name}: {e.Message}"); }
                     try { n.Sulje(); } catch (Exception e) { Virhe($"{n.Nimi}: sulku kaatui {e.Message}"); }
                     nakymaNro++;
                     Siirry(Vaihe.Nakyma);
