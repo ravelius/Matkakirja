@@ -11,8 +11,8 @@ LS1 local_4b4b976c…, LS2 local_ee961a2d…, NUI local_e9fdc695…, Siirtosepp�
    `python3 /Users/Shared/Claude/proto-3d/lokit/natiiviseppa-skriptit/unity-julkaisut.py` (tyhjä = ei uutta; nähdyt 6000.7.0b1–b4).
 2. **JUNA 180** jatkuu (alla). Lukitus vasta kun muistiportti läpi + LS1 KIIRE + kippikorjaukset sisällä + PT käskee.
 
-## JUNA 180 = natiiviseppa/juna-180 bebcc323f (BUILD 179 75fcc2b1b:n päällä; wt j175; peilattu peili/proto/natiiviseppa/juna-180)
-Kuitatut: Pelikoodari pulu-balkan-blr 4a69112d3 (korvaa e2b97a8a4; Pulu 39 maata), NUI pallo-koysi-sumuun e341491f7 (latauskuvan köysi sumuun),
+## JUNA 180 = natiiviseppa/juna-180 420bc0af7 (BUILD 179 75fcc2b1b:n päällä; wt j175; peilattu peili/proto/natiiviseppa/juna-180)
+Kuitatut: Pelikoodari pulu-tur-blr2 65975137e (korvaa 4a69112d3 ja e2b97a8a4; Pulu 40 maata), NUI pallo-koysi-sumuun e341491f7 (latauskuvan köysi sumuun),
 LS2 peking-vesikerroin 2c2305012, Natiiviseppä todistusajo-kuittaus 80d418513, LS1 museo-varjot-180 9106d012f (lattiaheijastus + sali-v2; ämpärissä
 taidemuseo/alankomaat/sali-v2/), Siirtoseppä rantakivet-hamara 71c2080c9, kavely-monimesh dc53ccd54 (+7 097 kolmiota ≈ 0,7 Mt).
 Testit L1347/P456/K461, unity 0, tarkista ok. EI junaan: siirtoseppa/diag-kivet (DIAG).

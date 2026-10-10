@@ -8,7 +8,7 @@ Päätoimittaja: "PÄÄTOIMITTAJA (Opus, max)". Vertaisille SendMessage session 
 
 ## KÄRKI
 1. Unity-beetaseurannan cron + ajo (alla).
-2. Juna 180 = natiiviseppa/juna-180 bebcc323f: odottaa LS1 KIIRE 9cdc17616 + kippikorjaukset + kartan KIIRE; MUISTIAJO (museo lisää muistia) vasta
+2. Juna 180 = natiiviseppa/juna-180 420bc0af7: odottaa LS1 KIIRE 9cdc17616 + kippikorjaukset + kartan KIIRE; MUISTIAJO (museo lisää muistia) vasta
    yön uudelleenkäynnistyksen jälkeen Julkaisijan vuorolla; lukitus PT:n käskystä (kaava luovutuksessa).
 
 ## PYSYVÄ: UNITY-BEETASEURANTA (PT 10.10. 19.5x; kumoaa "pysytään b4:ssä")
