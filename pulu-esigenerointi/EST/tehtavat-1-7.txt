@@ -1,0 +1,200 @@
+================ KOHTA 31 (kohde:hahmotelma-alatskivi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alatskivin linna (historia)
+Tietoruudun teksti: Alatskivin linna on uusgoottilainen kartanolinna Tartumaalla, noin 40 kilometriä Tartosta pohjoiseen Alatskivi-järven korkealla rannalla. Kartano mainitaan ensimmäisen kerran vuonna 1601, ja Nolckenin suku peri sen 1870. Paroni Arved von Nolcken rakennutti linnan uudelleen vuosina 1876–1885 omien suunnitelmiensa mukaan Skotlannin Balmoral-linnan tyyliin, jossa hän oli käynyt vuonna 1875. Rakennus on epäsymmetrinen, ja siinä on torneja ja liuskekatto. Kartanossa oli 1800-luvulla 57 rakennusta, joista 41 on säilynyt, ja linnaa ympäröi 130 hehtaarin puisto. Ensimmäisessä kerroksessa on säveltäjä Eduard Tubinin museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sana — kaupunkilehti / Arki ja korttelit: Suolatorilla myydään kaikkea muuta] Vanhankaupungin tunnetuin kauppapaikka on Suq al-Milh eli suolatori. Nimi kertoo vain yhdestä tavarasta: samoilta kujilta ostetaan leipää, mausteita, rusinoita, puuvillaa, kuparia, saviastioita, hopeaesineitä ja vanhaa tavaraa. Tori on paikkana vanhempi kuin vanhankaupungin suuri moskeija, sillä moskeija rakennettiin 600-luvulla jo olemassa olleen torin viereen. Torit ovat ohjanneet koko kaupungin kasvua myöhemminkin, sillä uudet kaupunginosat ovat syntyneet niiden ympärille.
+- [Sana — kohdekartta / Kohdekartta: Suuri moskeija] perimätiedon mukaan noin 630 Al-Jami al-Kabir on kartan tärkein rakennus ja kenties koko islamilaisen maailman vanhimpia moskeijoita. Varhaisten islamilaisten lähteiden mukaan Muhammad käski rakentaa sen noin vuonna 630, ja sitä pidetään ensimmäisenä Mekan ja Medinan ulkopuolelle rakennettuna moskeijana. Ajoitus nojaa perimätietoon: sama artikkeli antaa tietolaatikossaan väljemmän arvion 600–700-luvuille. Kaivauslöydöt kuitenkin tukevat varhaista ikää, sillä seinistä on löytynyt rakennusosia sekä aksumilaisesta katedraalista että sabalaisesta Ghumdanin palatsista — moskeija on siis rakennettu vanhemman kaupungin kivistä. Sen jälkeen se on rakennettu uudelleen monta kertaa. Umaijadikalifi al…
+
+### 31.1
+KYSYMYS: Miksi baltiansaksalainen paroni rakennutti virolaiseen kartanoon linnan Skotlannin Balmoralin mallin mukaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alatskivin linna (historia)
+Tietoruudun teksti: Alatskivin linna on uusgoottilainen kartanolinna Tartumaalla, noin 40 kilometriä Tartosta pohjoiseen Alatskivi-järven korkealla rannalla. Kartano mainitaan ensimmäisen kerran vuonna 1601, ja Nolckenin suku peri sen 1870. Paroni Arved von Nolcken rakennutti linnan uudelleen vuosina 1876–1885 omien suunnitelmiensa mukaan Skotlannin Balmoral-linnan tyyliin, jossa hän oli käynyt vuonna 1875. Rakennus on epäsymmetrinen, ja siinä on torneja ja liuskekatto. Kartanossa oli 1800-luvulla 57 rakennusta, joista 41 on säilynyt, ja linnaa ympäröi 130 hehtaarin puisto. Ensimmäisessä kerroksessa on säveltäjä Eduard Tubinin museo.
+
+### 31.2
+KYSYMYS: Mitä kaikkea suuren kartanon alueella oli linnan lisäksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alatskivin linna (historia)
+Tietoruudun teksti: Alatskivin linna on uusgoottilainen kartanolinna Tartumaalla, noin 40 kilometriä Tartosta pohjoiseen Alatskivi-järven korkealla rannalla. Kartano mainitaan ensimmäisen kerran vuonna 1601, ja Nolckenin suku peri sen 1870. Paroni Arved von Nolcken rakennutti linnan uudelleen vuosina 1876–1885 omien suunnitelmiensa mukaan Skotlannin Balmoral-linnan tyyliin, jossa hän oli käynyt vuonna 1875. Rakennus on epäsymmetrinen, ja siinä on torneja ja liuskekatto. Kartanossa oli 1800-luvulla 57 rakennusta, joista 41 on säilynyt, ja linnaa ympäröi 130 hehtaarin puisto. Ensimmäisessä kerroksessa on säveltäjä Eduard Tubinin museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sana — kaupunkilehti / Arki ja korttelit: Suolatorilla myydään kaikkea muuta] Vanhankaupungin tunnetuin kauppapaikka on Suq al-Milh eli suolatori. Nimi kertoo vain yhdestä tavarasta: samoilta kujilta ostetaan leipää, mausteita, rusinoita, puuvillaa, kuparia, saviastioita, hopeaesineitä ja vanhaa tavaraa. Tori on paikkana vanhempi kuin vanhankaupungin suuri moskeija, sillä moskeija rakennettiin 600-luvulla jo olemassa olleen torin viereen. Torit ovat ohjanneet koko kaupungin kasvua myöhemminkin, sillä uudet kaupunginosat ovat syntyneet niiden ympärille.
+- [Sana — kohdekartta / Kohdekartta: Suuri moskeija] perimätiedon mukaan noin 630 Al-Jami al-Kabir on kartan tärkein rakennus ja kenties koko islamilaisen maailman vanhimpia moskeijoita. Varhaisten islamilaisten lähteiden mukaan Muhammad käski rakentaa sen noin vuonna 630, ja sitä pidetään ensimmäisenä Mekan ja Medinan ulkopuolelle rakennettuna moskeijana. Ajoitus nojaa perimätietoon: sama artikkeli antaa tietolaatikossaan väljemmän arvion 600–700-luvuille. Kaivauslöydöt kuitenkin tukevat varhaista ikää, sillä seinistä on löytynyt rakennusosia sekä aksumilaisesta katedraalista että sabalaisesta Ghumdanin palatsista — moskeija on siis rakennettu vanhemman kaupungin kivistä. Sen jälkeen se on rakennettu uudelleen monta kertaa. Umaijadikalifi al…
+
+### 31.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+================ KOHTA 32 (kohde:hahmotelma-kuremae) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuremäen Pühtitsan luostari (historia)
+Tietoruudun teksti: Pühtitsan eli Kuremäen luostari on venäläisortodoksinen naisluostari Itä-Virossa Ida-Virumaalla, Peipsijärven ja Suomenlahden välissä. Paikka tunnetaan nimellä Pühitsetud, siunattu, ja legendan mukaan kuremäkeläinen paimen näki lähteen luona jumalallisen ilmestyksen. Myöhemmin 1500-luvulla paikalliset löysivät valtavan tammen alta Jumalanäidin kuolonuneen kuvaavan ikonin, joka on yhä luostarin hallussa. Vuonna 1888 Venäjän ortodoksinen kirkko lähetti nunnan Kostroman Ipatjevin luostarista perustamaan luostaria, ja se perustettiin vuonna 1891. Pääkirkko rakennettiin Mihail Preobraženskin piirustusten mukaan venäläiseen herätystyyliin ja vihittiin 1910, ja luostarissa on kuusi kirkkoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Helsinki — kohdekartta / Kohdekartta: Kallion kirkko] 1908–1912 Kallion kirkko nousee jyrkän mäen päälle keskelle vanhaa työväen kaupunginosaa. Lars Sonck suunnitteli sen kansallisromantiikan hengessä: kantavat seinät muurattiin punatiilestä ja verhoiltiin karkeaksi jätetyllä suomalaisella graniitilla, jota louhittiin Uudenkaupungin seudulta. Peruskivi laskettiin 13. heinäkuuta 1908, ja kirkko vihittiin käyttöön 1. syyskuuta 1912. Torni on 65 metriä korkea ja ristin huippu 94 metriä merenpinnan yläpuolella. Kirkko sulkee 2,5 kilometrin pituisen suoran katulinjan, joka kulkee etelästä Unioninkatua ja Siltasaarenkatua pitkin suoraan kirkon ovelle. Torni on ollut muutakin kuin kellotapuli: itsenäistymisen aikoihin tolstoilaiset ottivat kirkon tuk…
+
+### 32.1
+KYSYMYS: Miksi paikkaa kutsutaan nimellä Pühitsetud eli siunattu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuremäen Pühtitsan luostari (historia)
+Tietoruudun teksti: Pühtitsan eli Kuremäen luostari on venäläisortodoksinen naisluostari Itä-Virossa Ida-Virumaalla, Peipsijärven ja Suomenlahden välissä. Paikka tunnetaan nimellä Pühitsetud, siunattu, ja legendan mukaan kuremäkeläinen paimen näki lähteen luona jumalallisen ilmestyksen. Myöhemmin 1500-luvulla paikalliset löysivät valtavan tammen alta Jumalanäidin kuolonuneen kuvaavan ikonin, joka on yhä luostarin hallussa. Vuonna 1888 Venäjän ortodoksinen kirkko lähetti nunnan Kostroman Ipatjevin luostarista perustamaan luostaria, ja se perustettiin vuonna 1891. Pääkirkko rakennettiin Mihail Preobraženskin piirustusten mukaan venäläiseen herätystyyliin ja vihittiin 1910, ja luostarissa on kuusi kirkkoa.
+
+### 32.2
+KYSYMYS: Miksi Kostroman luostarista lähetettiin nunna perustamaan luostaria Viroon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuremäen Pühtitsan luostari (historia)
+Tietoruudun teksti: Pühtitsan eli Kuremäen luostari on venäläisortodoksinen naisluostari Itä-Virossa Ida-Virumaalla, Peipsijärven ja Suomenlahden välissä. Paikka tunnetaan nimellä Pühitsetud, siunattu, ja legendan mukaan kuremäkeläinen paimen näki lähteen luona jumalallisen ilmestyksen. Myöhemmin 1500-luvulla paikalliset löysivät valtavan tammen alta Jumalanäidin kuolonuneen kuvaavan ikonin, joka on yhä luostarin hallussa. Vuonna 1888 Venäjän ortodoksinen kirkko lähetti nunnan Kostroman Ipatjevin luostarista perustamaan luostaria, ja se perustettiin vuonna 1891. Pääkirkko rakennettiin Mihail Preobraženskin piirustusten mukaan venäläiseen herätystyyliin ja vihittiin 1910, ja luostarissa on kuusi kirkkoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Helsinki — kohdekartta / Kohdekartta: Kallion kirkko] 1908–1912 Kallion kirkko nousee jyrkän mäen päälle keskelle vanhaa työväen kaupunginosaa. Lars Sonck suunnitteli sen kansallisromantiikan hengessä: kantavat seinät muurattiin punatiilestä ja verhoiltiin karkeaksi jätetyllä suomalaisella graniitilla, jota louhittiin Uudenkaupungin seudulta. Peruskivi laskettiin 13. heinäkuuta 1908, ja kirkko vihittiin käyttöön 1. syyskuuta 1912. Torni on 65 metriä korkea ja ristin huippu 94 metriä merenpinnan yläpuolella. Kirkko sulkee 2,5 kilometrin pituisen suoran katulinjan, joka kulkee etelästä Unioninkatua ja Siltasaarenkatua pitkin suoraan kirkon ovelle. Torni on ollut muutakin kuin kellotapuli: itsenäistymisen aikoihin tolstoilaiset ottivat kirkon tuk…
+
+### 32.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+================ KOHTA 33 (kohde:hahmotelma-keila-joa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keila-Joa (historia)
+Tietoruudun teksti: Keila-Joa on pieni taajama Pohjois-Virossa Harjumaalla, ja sen nimi tarkoittaa kirjaimellisesti Keilan putousta. Keila-joen Keilan putous on Viron kolmanneksi voimakkain vesiputous, ja paikalla on myös pieni vesivoimala. Putouksen äärellä on ollut kartano 1600-luvulta lähtien, ja saksaksi sitä kutsuttiin nimellä Schloss Fall. Nykyinen päärakennus rakennettiin vuosina 1831–1833 pietarilaisen arkkitehdin Andrei Stackenschneiderin piirustusten mukaan, ja se on yksi Viron varhaisimmista uusgoottilaisista rakennuksista. Kartano oli kreivi Alexander von Benckendorffin perheen, ja keisarillisen ajan vieraisiin kuuluivat muun muassa Venäjän keisarillinen perhe, sopraano Henriette Sontag ja säveltäjä Aleksei Lvov.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historia: Lippu, joka putosi taivaalta] 1219 — Tarun mukaan tanskalaiset olivat häviämässä taistelua Virossa 15. kesäkuuta 1219, kun taivaalta putosi punainen lippu valkoisine ristineen — ja voitto kääntyi. Dannebrog on vanhin yhä käytössä oleva kansallislippu, ja tanskalaiset käyttävät sitä toisin kuin moni muu: pieniä lippuja pistetään syntymäpäiväkakkuun, ripustetaan joulukuuseen ja viedään mukaan lentokentälle vastaanottamaan matkalaisia. Lippu ei ole juhlava harvinaisuus vaan arkinen ilon merkki.
+
+### 33.1
+KYSYMYS: Miksi pieni kylä on saanut nimensä Keilan putouksen mukaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keila-Joa (historia)
+Tietoruudun teksti: Keila-Joa on pieni taajama Pohjois-Virossa Harjumaalla, ja sen nimi tarkoittaa kirjaimellisesti Keilan putousta. Keila-joen Keilan putous on Viron kolmanneksi voimakkain vesiputous, ja paikalla on myös pieni vesivoimala. Putouksen äärellä on ollut kartano 1600-luvulta lähtien, ja saksaksi sitä kutsuttiin nimellä Schloss Fall. Nykyinen päärakennus rakennettiin vuosina 1831–1833 pietarilaisen arkkitehdin Andrei Stackenschneiderin piirustusten mukaan, ja se on yksi Viron varhaisimmista uusgoottilaisista rakennuksista. Kartano oli kreivi Alexander von Benckendorffin perheen, ja keisarillisen ajan vieraisiin kuuluivat muun muassa Venäjän keisarillinen perhe, sopraano Henriette Sontag ja säveltäjä Aleksei Lvov.
+
+### 33.2
+KYSYMYS: Mitä uusgoottilainen tyyli tarkoittaa ja miksi se oli 1830-luvulla uutta Virossa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keila-Joa (historia)
+Tietoruudun teksti: Keila-Joa on pieni taajama Pohjois-Virossa Harjumaalla, ja sen nimi tarkoittaa kirjaimellisesti Keilan putousta. Keila-joen Keilan putous on Viron kolmanneksi voimakkain vesiputous, ja paikalla on myös pieni vesivoimala. Putouksen äärellä on ollut kartano 1600-luvulta lähtien, ja saksaksi sitä kutsuttiin nimellä Schloss Fall. Nykyinen päärakennus rakennettiin vuosina 1831–1833 pietarilaisen arkkitehdin Andrei Stackenschneiderin piirustusten mukaan, ja se on yksi Viron varhaisimmista uusgoottilaisista rakennuksista. Kartano oli kreivi Alexander von Benckendorffin perheen, ja keisarillisen ajan vieraisiin kuuluivat muun muassa Venäjän keisarillinen perhe, sopraano Henriette Sontag ja säveltäjä Aleksei Lvov.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historia: Lippu, joka putosi taivaalta] 1219 — Tarun mukaan tanskalaiset olivat häviämässä taistelua Virossa 15. kesäkuuta 1219, kun taivaalta putosi punainen lippu valkoisine ristineen — ja voitto kääntyi. Dannebrog on vanhin yhä käytössä oleva kansallislippu, ja tanskalaiset käyttävät sitä toisin kuin moni muu: pieniä lippuja pistetään syntymäpäiväkakkuun, ripustetaan joulukuuseen ja viedään mukaan lentokentälle vastaanottamaan matkalaisia. Lippu ei ole juhlava harvinaisuus vaan arkinen ilon merkki.
+
+### 33.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+================ KOHTA 34 (kohde:hahmotelma-vasknarva) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vasknarva (historia)
+Tietoruudun teksti: Vasknarva on kylä Koillis-Virossa Peipsijärven pohjoisrannalla, Narva-joen alkulähteen vasemmalla rannalla, jossa joki muodostaa rajan Venäjän kanssa. Kylä syntyi 1300-luvulla Liivinmaan ritarikunnan linnan viereen, ja uusi linna rakennettiin paikalle vuosina 1427–1442 alueen hallintokeskukseksi. Ruotsin vallan aikana linnoitus rakennettiin uudelleen, ja se valvoi Narva-joen suuta ja rajaa Venäjään, mutta Venäjän ja Ruotsin sodassa 1610–1617 se tuhoutui kokonaan. Linnan kiviä käytettiin kalastajakylän uudelleenrakentamiseen, ja osa kolme metriä paksuista muureista on säilynyt. Yhden selityksen mukaan kylän nimi viittaa linnan kuparikattoon, ja nykyisistä asukkaista suurin osa on vanhauskoisia ortodokseja.
+
+### 34.1
+KYSYMYS: Miksi Vasknarvan nimeen liittyy vask eli kupari?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vasknarva (historia)
+Tietoruudun teksti: Vasknarva on kylä Koillis-Virossa Peipsijärven pohjoisrannalla, Narva-joen alkulähteen vasemmalla rannalla, jossa joki muodostaa rajan Venäjän kanssa. Kylä syntyi 1300-luvulla Liivinmaan ritarikunnan linnan viereen, ja uusi linna rakennettiin paikalle vuosina 1427–1442 alueen hallintokeskukseksi. Ruotsin vallan aikana linnoitus rakennettiin uudelleen, ja se valvoi Narva-joen suuta ja rajaa Venäjään, mutta Venäjän ja Ruotsin sodassa 1610–1617 se tuhoutui kokonaan. Linnan kiviä käytettiin kalastajakylän uudelleenrakentamiseen, ja osa kolme metriä paksuista muureista on säilynyt. Yhden selityksen mukaan kylän nimi viittaa linnan kuparikattoon, ja nykyisistä asukkaista suurin osa on vanhauskoisia ortodokseja.
+
+### 34.2
+KYSYMYS: Miksi Vasknarvan linna oli rajaseudulla niin tärkeä paikka?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vasknarva (historia)
+Tietoruudun teksti: Vasknarva on kylä Koillis-Virossa Peipsijärven pohjoisrannalla, Narva-joen alkulähteen vasemmalla rannalla, jossa joki muodostaa rajan Venäjän kanssa. Kylä syntyi 1300-luvulla Liivinmaan ritarikunnan linnan viereen, ja uusi linna rakennettiin paikalle vuosina 1427–1442 alueen hallintokeskukseksi. Ruotsin vallan aikana linnoitus rakennettiin uudelleen, ja se valvoi Narva-joen suuta ja rajaa Venäjään, mutta Venäjän ja Ruotsin sodassa 1610–1617 se tuhoutui kokonaan. Linnan kiviä käytettiin kalastajakylän uudelleenrakentamiseen, ja osa kolme metriä paksuista muureista on säilynyt. Yhden selityksen mukaan kylän nimi viittaa linnan kuparikattoon, ja nykyisistä asukkaista suurin osa on vanhauskoisia ortodokseja.
+
+### 34.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+================ KOHTA 35 (kohde:hahmotelma-setomaa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Setomaa (kulttuuri)
+Tietoruudun teksti: Setomaa on Peipsijärven eteläpuolinen alue, jossa asuvat setot, itämerensuomalainen alkuperäiskansa ja kielellinen vähemmistö. Setojen kieli on eteläviron muoto, ja he ovat perinteisesti kuuluneet ortodoksiseen kirkkoon, johon on sekoittunut piirteitä vanhemmasta kansanuskosta. Alueen historiallinen ja hengellinen keskus on ollut Petserin luostari. Setojen monikuoroinen laulutapa leelo merkittiin UNESCOn aineettoman kulttuuriperinnön luetteloon vuonna 2009. Nykyisin Setomaa on jaettu Viron ja Venäjän kesken, ja setot valitsevat vuosittaisessa Kuningaskunnan päivässä Pekon kuningaskunnalle seremoniallisen hoitajan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Vuoristovesijohto] Isoisäsi käynnin aikaan kaupungissa kaivettiin jo toista ihmettä, joka valmistui vasta lokakuussa. Wienin ensimmäinen vuoristovesijohto avattiin 24. lokakuuta 1873. Se on 95 kilometriä pitkä ja kulkee kokonaan painovoiman varassa Rax- ja Schneeberg-vuorten lähteiltä kaupunkiin — juuri siksi Wienin rakennusjärjestykset rajoittivat talojen korkeuden noin kahteenkymmeneenviiteen metriin: sitä korkeammalle vesi ei olisi noussut itsestään. Matkalla on 30 akveduktia ja muuta laaksonylitystä, ja ne kaikki ovat nykyään suojeltuja. Rahoituksesta sovittiin poikkeuksellisesti: urakoitsija Antonio Gabrielli tarjoutui itse, että hänen palkkiostaan vähennettäisiin yksi prosentti, kunnes kasaan tulisi 100…
+
+### 35.1
+KYSYMYS: Miksi setojen laulutapa leelo on niin erityinen, että UNESCO otti sen aineettoman kulttuuriperinnön luetteloonsa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Setomaa (kulttuuri)
+Tietoruudun teksti: Setomaa on Peipsijärven eteläpuolinen alue, jossa asuvat setot, itämerensuomalainen alkuperäiskansa ja kielellinen vähemmistö. Setojen kieli on eteläviron muoto, ja he ovat perinteisesti kuuluneet ortodoksiseen kirkkoon, johon on sekoittunut piirteitä vanhemmasta kansanuskosta. Alueen historiallinen ja hengellinen keskus on ollut Petserin luostari. Setojen monikuoroinen laulutapa leelo merkittiin UNESCOn aineettoman kulttuuriperinnön luetteloon vuonna 2009. Nykyisin Setomaa on jaettu Viron ja Venäjän kesken, ja setot valitsevat vuosittaisessa Kuningaskunnan päivässä Pekon kuningaskunnalle seremoniallisen hoitajan.
+
+### 35.2
+KYSYMYS: Mitä ihmettä on Setomaan "kuningaskunta", ja kuka on kuningas Peko?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Setomaa (kulttuuri)
+Tietoruudun teksti: Setomaa on Peipsijärven eteläpuolinen alue, jossa asuvat setot, itämerensuomalainen alkuperäiskansa ja kielellinen vähemmistö. Setojen kieli on eteläviron muoto, ja he ovat perinteisesti kuuluneet ortodoksiseen kirkkoon, johon on sekoittunut piirteitä vanhemmasta kansanuskosta. Alueen historiallinen ja hengellinen keskus on ollut Petserin luostari. Setojen monikuoroinen laulutapa leelo merkittiin UNESCOn aineettoman kulttuuriperinnön luetteloon vuonna 2009. Nykyisin Setomaa on jaettu Viron ja Venäjän kesken, ja setot valitsevat vuosittaisessa Kuningaskunnan päivässä Pekon kuningaskunnalle seremoniallisen hoitajan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Vuoristovesijohto] Isoisäsi käynnin aikaan kaupungissa kaivettiin jo toista ihmettä, joka valmistui vasta lokakuussa. Wienin ensimmäinen vuoristovesijohto avattiin 24. lokakuuta 1873. Se on 95 kilometriä pitkä ja kulkee kokonaan painovoiman varassa Rax- ja Schneeberg-vuorten lähteiltä kaupunkiin — juuri siksi Wienin rakennusjärjestykset rajoittivat talojen korkeuden noin kahteenkymmeneenviiteen metriin: sitä korkeammalle vesi ei olisi noussut itsestään. Matkalla on 30 akveduktia ja muuta laaksonylitystä, ja ne kaikki ovat nykyään suojeltuja. Rahoituksesta sovittiin poikkeuksellisesti: urakoitsija Antonio Gabrielli tarjoutui itse, että hänen palkkiostaan vähennettäisiin yksi prosentti, kunnes kasaan tulisi 100…
+
+### 35.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI

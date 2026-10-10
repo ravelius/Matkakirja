@@ -1,0 +1,194 @@
+================ KOHTA 16 (kohde:rakvere) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rakvere (historia)
+Tietoruudun teksti: Rakvere on Länsi-Virumaan pääkaupunki noin sadan kilometrin päässä Tallinnasta. Vanhin nimi on Tarvanpea, "uroshärän pää", ja se mainitaan ensimmäisen kerran vuonna 1226 Henrikin Liivinmaan kronikassa. Tanskalaiset kirjasivat paikan 1252 muotoon Wesenbergh, ja sillä nimellä kaupunki tunnettiin 1900-luvun alkuun asti; Novgorodin ensimmäinen kronikka puhuu vuonna 1268 Rakovorista. Samana vuonna, 18. helmikuuta, kaupungin lähellä käytiin Wesenbergin taistelu, jossa vastakkain olivat tanskalaiset ja saksalaiset ritarit paikallisine joukkoineen sekä Novgorodin ja Pihkvan voimat. Kuningas Erik VI Menved antoi Rakverelle Lyypekin oikeudet 12. kesäkuuta 1302. Kun kuningas myi Tanskan Viron Liivinmaan ritarikunnalle 1346, Vallimäen vanhan linnavuoren päälle nousi suuri kivilinna torneineen ja pihoineen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Wawelin linna] 1507–1536 Vistula-joen yllä kohoavalla kalkkikivikukkulalla sijaitseva Wawelin linna oli Puolan kuninkaiden koti ja kruunajaispaikka satojen vuosien ajan. Kuningas Kasimir Suuri rakennutti ensimmäisen kivilinnan 1300-luvulla, ja tulipalon jälkeen kuningas Sigismund I rakennutti sen uudelleen upeaksi renessanssilinnaksi vuosina 1507-1536. Linnan tornissa riippuu Sigismund-kello, joka painaa lähes 13 tonnia ja jota soittamaan tarvitaan 12 miestä - sitä kumautetaan vain aivan erityisinä hetkinä. Aarrekammiossa säilytetään muun muassa Szczerbiec-nimistä kruunajaismiekkaa, ja linnan alla piilee tunnettu lohikäärmeen luola. Linna on kokenut sekä loistoa että tuhoa: vuonna 1794 Preussi vei kruunun…
+- [Belgia — maalehti / Historia: Linna, joka pelotteli omia kaupunkilaisiaan] 1180 — Vuonna 1180 Flanderin kreivi Filip Elsassilainen rakennutti Gentin ytimeen kivilinnan, jonka tehtävä ei ollut vain torjua vihollisia. Se oli tarkoitettu myös muistuttamaan kaupungin itsepäisiä porvareita siitä, kuka on herra talossa. Kreivit asuivat linnassa vuoteen 1353 asti. Sen jälkeen siellä toimi oikeussali, vankila ja rahapaja, ja 1800-luvulla osa rakennuksista muutettiin puuvillatehtaaksi. Linna oli jo purkulistalla, kunnes kaupunki osti sen vähitellen ja aloitti vuonna 1893 laajan entisöinnin.
+
+### 16.1
+KYSYMYS: Mitä Tarvanpea tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rakvere (historia)
+Tietoruudun teksti: Rakvere on Länsi-Virumaan pääkaupunki noin sadan kilometrin päässä Tallinnasta. Vanhin nimi on Tarvanpea, "uroshärän pää", ja se mainitaan ensimmäisen kerran vuonna 1226 Henrikin Liivinmaan kronikassa. Tanskalaiset kirjasivat paikan 1252 muotoon Wesenbergh, ja sillä nimellä kaupunki tunnettiin 1900-luvun alkuun asti; Novgorodin ensimmäinen kronikka puhuu vuonna 1268 Rakovorista. Samana vuonna, 18. helmikuuta, kaupungin lähellä käytiin Wesenbergin taistelu, jossa vastakkain olivat tanskalaiset ja saksalaiset ritarit paikallisine joukkoineen sekä Novgorodin ja Pihkvan voimat. Kuningas Erik VI Menved antoi Rakverelle Lyypekin oikeudet 12. kesäkuuta 1302. Kun kuningas myi Tanskan Viron Liivinmaan ritarikunnalle 1346, Vallimäen vanhan linnavuoren päälle nousi suuri kivilinna torneineen ja pihoineen.
+
+### 16.2
+KYSYMYS: Kuka rakensi Vallimäen kivilinnan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rakvere (historia)
+Tietoruudun teksti: Rakvere on Länsi-Virumaan pääkaupunki noin sadan kilometrin päässä Tallinnasta. Vanhin nimi on Tarvanpea, "uroshärän pää", ja se mainitaan ensimmäisen kerran vuonna 1226 Henrikin Liivinmaan kronikassa. Tanskalaiset kirjasivat paikan 1252 muotoon Wesenbergh, ja sillä nimellä kaupunki tunnettiin 1900-luvun alkuun asti; Novgorodin ensimmäinen kronikka puhuu vuonna 1268 Rakovorista. Samana vuonna, 18. helmikuuta, kaupungin lähellä käytiin Wesenbergin taistelu, jossa vastakkain olivat tanskalaiset ja saksalaiset ritarit paikallisine joukkoineen sekä Novgorodin ja Pihkvan voimat. Kuningas Erik VI Menved antoi Rakverelle Lyypekin oikeudet 12. kesäkuuta 1302. Kun kuningas myi Tanskan Viron Liivinmaan ritarikunnalle 1346, Vallimäen vanhan linnavuoren päälle nousi suuri kivilinna torneineen ja pihoineen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Wawelin linna] 1507–1536 Vistula-joen yllä kohoavalla kalkkikivikukkulalla sijaitseva Wawelin linna oli Puolan kuninkaiden koti ja kruunajaispaikka satojen vuosien ajan. Kuningas Kasimir Suuri rakennutti ensimmäisen kivilinnan 1300-luvulla, ja tulipalon jälkeen kuningas Sigismund I rakennutti sen uudelleen upeaksi renessanssilinnaksi vuosina 1507-1536. Linnan tornissa riippuu Sigismund-kello, joka painaa lähes 13 tonnia ja jota soittamaan tarvitaan 12 miestä - sitä kumautetaan vain aivan erityisinä hetkinä. Aarrekammiossa säilytetään muun muassa Szczerbiec-nimistä kruunajaismiekkaa, ja linnan alla piilee tunnettu lohikäärmeen luola. Linna on kokenut sekä loistoa että tuhoa: vuonna 1794 Preussi vei kruunun…
+- [Belgia — maalehti / Historia: Linna, joka pelotteli omia kaupunkilaisiaan] 1180 — Vuonna 1180 Flanderin kreivi Filip Elsassilainen rakennutti Gentin ytimeen kivilinnan, jonka tehtävä ei ollut vain torjua vihollisia. Se oli tarkoitettu myös muistuttamaan kaupungin itsepäisiä porvareita siitä, kuka on herra talossa. Kreivit asuivat linnassa vuoteen 1353 asti. Sen jälkeen siellä toimi oikeussali, vankila ja rahapaja, ja 1800-luvulla osa rakennuksista muutettiin puuvillatehtaaksi. Linna oli jo purkulistalla, kunnes kaupunki osti sen vähitellen ja aloitti vuonna 1893 laajan entisöinnin.
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:ontika) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ontikan klintti (luonto · vuori)
+Tietoruudun teksti: Viron pohjoisrannikkoa reunustaa kalkkikivinen jyrkänne, jota kutsutaan Baltian klintiksi. Se on eroosion paljastama porras, joka ulottuu noin 1 200 kilometrin matkan Ruotsin Öölannista mannerjalustan ja Viron Osmussaaren ja Suur-Pakrin kautta Paldiskiin, sieltä Suomenlahden etelärantaa ja Nevaa myöten Laatokan eteläpuolelle, missä se katoaa nuorempien kerrostumien alle. Korkeimmillaan klintti on juuri Ontikassa Kohtlan kunnassa Ida-Virumaalla: 55,6 metriä merenpinnasta. Jyrkänteen halkovat lukuisat joet, ja moni niistä putoaa reunan yli — korkein putous on Valasten 25 metriä. Muoto ei ole valmis: klintti perääntyy yhä, ja Gotlannissa peräytymisvauhdiksi on 1900-luvulla mitattu 0,15–0,78 senttiä vuodessa. Viron rahassa klintti on ollut kahdesti, vuoden 1928 50 kroonin ja vuoden 1992 100 kroonin setelin kääntöpuolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Caracas — kaupunkilehti / Luonto] Caracasin yllä kohoava Ávila on vasta esimakua. Venezuelassa on maailman korkein vesiputous ja järvenselkä, jonka yllä salamoi lähes joka yö.
+
+### 17.1
+KYSYMYS: Kuinka pitkälle Baltian klintti ulottuu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ontikan klintti (luonto · vuori)
+Tietoruudun teksti: Viron pohjoisrannikkoa reunustaa kalkkikivinen jyrkänne, jota kutsutaan Baltian klintiksi. Se on eroosion paljastama porras, joka ulottuu noin 1 200 kilometrin matkan Ruotsin Öölannista mannerjalustan ja Viron Osmussaaren ja Suur-Pakrin kautta Paldiskiin, sieltä Suomenlahden etelärantaa ja Nevaa myöten Laatokan eteläpuolelle, missä se katoaa nuorempien kerrostumien alle. Korkeimmillaan klintti on juuri Ontikassa Kohtlan kunnassa Ida-Virumaalla: 55,6 metriä merenpinnasta. Jyrkänteen halkovat lukuisat joet, ja moni niistä putoaa reunan yli — korkein putous on Valasten 25 metriä. Muoto ei ole valmis: klintti perääntyy yhä, ja Gotlannissa peräytymisvauhdiksi on 1900-luvulla mitattu 0,15–0,78 senttiä vuodessa. Viron rahassa klintti on ollut kahdesti, vuoden 1928 50 kroonin ja vuoden 1992 100 kroonin setelin kääntöpuolella.
+
+### 17.2
+KYSYMYS: Mikä on Viron korkein vesiputous?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ontikan klintti (luonto · vuori)
+Tietoruudun teksti: Viron pohjoisrannikkoa reunustaa kalkkikivinen jyrkänne, jota kutsutaan Baltian klintiksi. Se on eroosion paljastama porras, joka ulottuu noin 1 200 kilometrin matkan Ruotsin Öölannista mannerjalustan ja Viron Osmussaaren ja Suur-Pakrin kautta Paldiskiin, sieltä Suomenlahden etelärantaa ja Nevaa myöten Laatokan eteläpuolelle, missä se katoaa nuorempien kerrostumien alle. Korkeimmillaan klintti on juuri Ontikassa Kohtlan kunnassa Ida-Virumaalla: 55,6 metriä merenpinnasta. Jyrkänteen halkovat lukuisat joet, ja moni niistä putoaa reunan yli — korkein putous on Valasten 25 metriä. Muoto ei ole valmis: klintti perääntyy yhä, ja Gotlannissa peräytymisvauhdiksi on 1900-luvulla mitattu 0,15–0,78 senttiä vuodessa. Viron rahassa klintti on ollut kahdesti, vuoden 1928 50 kroonin ja vuoden 1992 100 kroonin setelin kääntöpuolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Caracas — kaupunkilehti / Luonto] Caracasin yllä kohoava Ávila on vasta esimakua. Venezuelassa on maailman korkein vesiputous ja järvenselkä, jonka yllä salamoi lähes joka yö.
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:lahemaa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lahemaa (eläimet)
+Tietoruudun teksti: Lahemaa tarkoittaa lahtien maata, ja nimi on ansaittu: rannikolta työntyy mereen neljä niemeä — Juminda, Pärispea, Käsmu ja Vergi — ja niiden väliin jää neljä lahtea. Alue on 747 neliökilometriä, josta lähes 275 on merta, ja se on Viron suurin puisto ja yksi Euroopan suurimmista kansallispuistoista. Metsää on yli seitsemänkymmentä prosenttia, ja sen seassa on keidassoita, joista Laukasoon suojelualue on noin seitsemäntuhatta vuotta vanha. Puistossa elää villisikoja, saksanhirviä, susia, karhuja ja ilveksiä, ja kivinen rantaviiva on kurkien vuosittainen levähdyspaikka matkalla kohti Bosporia ja Egyptiä. Alueella on neljä kartanoa: Palmse, Vihula, Kolga ja barokkinen Sagadi. Puisto perustettiin vasta 1971, ja se oli koko silloisen Neuvostoliiton ensimmäinen kansallispuisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Papua-Uusi-Guinea — maalehti / Luonto] Uusi-Guinea on maailman toiseksi suurin saari, ja sen metsissä elää eläimiä, joita ei ole missään muualla: kengurut kiipeävät puuhun ja perhoset ovat linnun kokoisia.
+
+### 18.1
+KYSYMYS: Mistä Lahemaa on saanut nimensä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lahemaa (eläimet)
+Tietoruudun teksti: Lahemaa tarkoittaa lahtien maata, ja nimi on ansaittu: rannikolta työntyy mereen neljä niemeä — Juminda, Pärispea, Käsmu ja Vergi — ja niiden väliin jää neljä lahtea. Alue on 747 neliökilometriä, josta lähes 275 on merta, ja se on Viron suurin puisto ja yksi Euroopan suurimmista kansallispuistoista. Metsää on yli seitsemänkymmentä prosenttia, ja sen seassa on keidassoita, joista Laukasoon suojelualue on noin seitsemäntuhatta vuotta vanha. Puistossa elää villisikoja, saksanhirviä, susia, karhuja ja ilveksiä, ja kivinen rantaviiva on kurkien vuosittainen levähdyspaikka matkalla kohti Bosporia ja Egyptiä. Alueella on neljä kartanoa: Palmse, Vihula, Kolga ja barokkinen Sagadi. Puisto perustettiin vasta 1971, ja se oli koko silloisen Neuvostoliiton ensimmäinen kansallispuisto.
+
+### 18.2
+KYSYMYS: Mitä eläimiä metsissä elää?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lahemaa (eläimet)
+Tietoruudun teksti: Lahemaa tarkoittaa lahtien maata, ja nimi on ansaittu: rannikolta työntyy mereen neljä niemeä — Juminda, Pärispea, Käsmu ja Vergi — ja niiden väliin jää neljä lahtea. Alue on 747 neliökilometriä, josta lähes 275 on merta, ja se on Viron suurin puisto ja yksi Euroopan suurimmista kansallispuistoista. Metsää on yli seitsemänkymmentä prosenttia, ja sen seassa on keidassoita, joista Laukasoon suojelualue on noin seitsemäntuhatta vuotta vanha. Puistossa elää villisikoja, saksanhirviä, susia, karhuja ja ilveksiä, ja kivinen rantaviiva on kurkien vuosittainen levähdyspaikka matkalla kohti Bosporia ja Egyptiä. Alueella on neljä kartanoa: Palmse, Vihula, Kolga ja barokkinen Sagadi. Puisto perustettiin vasta 1971, ja se oli koko silloisen Neuvostoliiton ensimmäinen kansallispuisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Papua-Uusi-Guinea — maalehti / Luonto] Uusi-Guinea on maailman toiseksi suurin saari, ja sen metsissä elää eläimiä, joita ei ole missään muualla: kengurut kiipeävät puuhun ja perhoset ovat linnun kokoisia.
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:hahmotelma-narvan-vanhakaupunki) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narvan barokkinen vanhakaupunki (historia)
+Tietoruudun teksti: Narvan vanhakaupunki oli Pohjois-Euroopan parhaiten säilyneitä barokkikaupunkeja. Pommitukset tuhosivat sen maaliskuussa 1944, ja neuvostoviranomaiset purkivat jäljelle jääneet rauniot 1950-luvulla kerrostalojen tieltä.
+
+### 19.1
+KYSYMYS: Miltä Narvan barokkinen vanhakaupunki näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narvan barokkinen vanhakaupunki (historia)
+Tietoruudun teksti: Narvan vanhakaupunki oli Pohjois-Euroopan parhaiten säilyneitä barokkikaupunkeja. Pommitukset tuhosivat sen maaliskuussa 1944, ja neuvostoviranomaiset purkivat jäljelle jääneet rauniot 1950-luvulla kerrostalojen tieltä.
+
+### 19.2
+KYSYMYS: Miksi Narvan barokkinen vanhakaupunki katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narvan barokkinen vanhakaupunki (historia)
+Tietoruudun teksti: Narvan vanhakaupunki oli Pohjois-Euroopan parhaiten säilyneitä barokkikaupunkeja. Pommitukset tuhosivat sen maaliskuussa 1944, ja neuvostoviranomaiset purkivat jäljelle jääneet rauniot 1950-luvulla kerrostalojen tieltä.
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:hahmotelma-soomaa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Soomaan kansallispuisto (luonto · joki)
+Tietoruudun teksti: Soomaa tarkoittaa suomaata, ja nimi sopii: 390 neliökilometrin kansallispuisto Lounais-Virossa suojelee laajoja kohosoita, tulvaniittyjä ja rämemetsiä, joita halkovat Pärnun vesistöön kuuluvat joet. Tunnetuin soista on Kuresoo. Keväisin, yleensä maalis–huhtikuun vaihteessa, Sakalan ylängöltä valuva vesi nostaa joet yli äyräidensä ja peittää tiet. Tätä tulva-aikaa sanotaan Soomaalla viidenneksi vuodenajaksi, ja Riisan tulva-alue voi laajimmillaan olla 175 neliökilometrin kokoinen. Syrjäisyyden ansiosta alueella on säilynyt haabjaksi kutsuttujen koverrettujen kanoottien tekoperinne.
+
+### 20.1
+KYSYMYS: Miksi Soomaalla puhutaan viidennestä vuodenajasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Soomaan kansallispuisto (luonto · joki)
+Tietoruudun teksti: Soomaa tarkoittaa suomaata, ja nimi sopii: 390 neliökilometrin kansallispuisto Lounais-Virossa suojelee laajoja kohosoita, tulvaniittyjä ja rämemetsiä, joita halkovat Pärnun vesistöön kuuluvat joet. Tunnetuin soista on Kuresoo. Keväisin, yleensä maalis–huhtikuun vaihteessa, Sakalan ylängöltä valuva vesi nostaa joet yli äyräidensä ja peittää tiet. Tätä tulva-aikaa sanotaan Soomaalla viidenneksi vuodenajaksi, ja Riisan tulva-alue voi laajimmillaan olla 175 neliökilometrin kokoinen. Syrjäisyyden ansiosta alueella on säilynyt haabjaksi kutsuttujen koverrettujen kanoottien tekoperinne.
+
+### 20.2
+KYSYMYS: Miksi koverretun kanootin tekotaito on säilynyt juuri Soomaalla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Soomaan kansallispuisto (luonto · joki)
+Tietoruudun teksti: Soomaa tarkoittaa suomaata, ja nimi sopii: 390 neliökilometrin kansallispuisto Lounais-Virossa suojelee laajoja kohosoita, tulvaniittyjä ja rämemetsiä, joita halkovat Pärnun vesistöön kuuluvat joet. Tunnetuin soista on Kuresoo. Keväisin, yleensä maalis–huhtikuun vaihteessa, Sakalan ylängöltä valuva vesi nostaa joet yli äyräidensä ja peittää tiet. Tätä tulva-aikaa sanotaan Soomaalla viidenneksi vuodenajaksi, ja Riisan tulva-alue voi laajimmillaan olla 175 neliökilometrin kokoinen. Syrjäisyyden ansiosta alueella on säilynyt haabjaksi kutsuttujen koverrettujen kanoottien tekoperinne.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

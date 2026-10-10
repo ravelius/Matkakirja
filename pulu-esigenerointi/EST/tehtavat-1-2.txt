@@ -1,0 +1,283 @@
+================ KOHTA 6 (kohde:kuressaaren-linna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuressaaren linna (historia)
+Tietoruudun teksti: Kuressaaren piispanlinna seisoo Saarenmaalla Länsi-Virossa. Vanhin kirjallinen maininta on 1380-luvulta, kun Saksalainen ritarikunta aloitti sen rakentamisen Saare-Läänen piispoille. Saarenmaan asukkaat vastustivat käännytystä sitkeästi, ja linna kuului ristiretkeläisten laajempaan yritykseen saada saari haltuunsa. Alusta asti se oli piispan tukikohta ja yksi hiippakunnan tärkeimmistä linnoista aina Liivinmaan sotaan asti.
+
+Vuonna 1559 Tanska-Norja otti Saarenmaan ja linnan haltuunsa ja uudisti linnoitukset. Brömsebron rauhan jälkeen saari siirtyi Ruotsille, joka jatkoi uudistustyötä vuoteen 1706. Suuren Pohjan sodan jälkeen Saarenmaa ja linna tulivat osaksi Venäjän keisarikuntaa.
+
+Kun valtakunnan raja siirtyi vähitellen länteen, Kuressaare menetti sotilaallisen merkityksensä. Vuonna 1836, kun Ahvenanmaalle oli rakennettu Bomarsundin linnoitus, venäläinen varuskunta vetäytyi Kuressaares…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Japani — maalehti / Historia: Linnaa sanotaan valkohaikaraksi] 1609 — Himejin linna alkoi vuonna 1333 vaatimattomana varustuksena kukkulan laella. Nykyisen muotonsa se sai, kun Ikeda Terumasa rakensi paikan uudelleen vuosina 1601–1609 ja laajensi sen 83 rakennuksen verkostoksi. Ulkoseinät rapattiin valkoisella kalkkilaastilla, ja siitä tulee nimi Shirasagi-jō eli valkohaikaran linna: rakennuksen sanotaan muistuttavan lentoon nousevaa lintua. Päätornia käytettiin rauhan aikana varastona. Linna on säilynyt lähes seitsemänsataa vuotta koskemattomana, myös vuoden 1995 suuren Hanshinin maanjäristyksen läpi, ja se merkittiin maailmanperintöluetteloon vuonna 1993.
+- [Lissabon — kohdekartta / Kohdekartta: São Jorgen linna] 1147 São Jorgen linna kohoaa Lissabonin korkeimmalla kukkulalla, ja paikalla on linnoituksia ollut jo yli 2000 vuotta. Nykyinen linna sai nimensä ja merkityksensä vuonna 1147, kun kristityt joukot valtasivat sen maureilta pitkän piirityksen jälkeen. Legendan mukaan ritari nimeltä Martim Moniz uhrasi henkensä pitämällä linnan porttia auki omalla ruumiillaan, jotta kristittyjen sotilaat pääsivät sisään. Myöhemmin linnaa käytettiin sekä kuninkaiden palatsina että Portugalin tärkeimpien asiakirjojen arkistona. Vuoden 1755 maanjäristys vaurioitti linnaa pahoin, ja se kunnostettiin nykyiseen kuntoonsa vasta 1930-luvulla. Yhdestä torneista, "Odysseuksen tornista", löytyy erikoinen kamera obscura -…
+
+### 6.1
+KYSYMYS: Miksi linna rakennettiin juuri Saarenmaalle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuressaaren linna (historia)
+Tietoruudun teksti: Kuressaaren piispanlinna seisoo Saarenmaalla Länsi-Virossa. Vanhin kirjallinen maininta on 1380-luvulta, kun Saksalainen ritarikunta aloitti sen rakentamisen Saare-Läänen piispoille. Saarenmaan asukkaat vastustivat käännytystä sitkeästi, ja linna kuului ristiretkeläisten laajempaan yritykseen saada saari haltuunsa. Alusta asti se oli piispan tukikohta ja yksi hiippakunnan tärkeimmistä linnoista aina Liivinmaan sotaan asti.
+
+Vuonna 1559 Tanska-Norja otti Saarenmaan ja linnan haltuunsa ja uudisti linnoitukset. Brömsebron rauhan jälkeen saari siirtyi Ruotsille, joka jatkoi uudistustyötä vuoteen 1706. Suuren Pohjan sodan jälkeen Saarenmaa ja linna tulivat osaksi Venäjän keisarikuntaa.
+
+Kun valtakunnan raja siirtyi vähitellen länteen, Kuressaare menetti sotilaallisen merkityksensä. Vuonna 1836, kun Ahvenanmaalle oli rakennettu Bomarsundin linnoitus, venäläinen varuskunta vetäytyi Kuressaares…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kööpenhamina — kohdekartta / Kohdekartta: Rosenborgin linna] 1606–1633 Rosenborgin linna alkoi huvilana kaupungin ulkopuolella. Christian IV osti vuonna 1606 joukon tontteja silloisen Nørrevoldin takaa: sinne mahtui hänen lystilinnansa lisäksi puutarha ja kyökkimaa, joka ruokki hovia. Rakennus lähti liikkeelle vaatimattomana erakkomajana, mutta se laajeni 28 vuoden aikana neljässä vaiheessa ja seisoi 1633 valmiina sellaisena kuin se on yhä: hollantilaista renessanssia, punatiiltä ja hiekkakiveä, tornit patinoituneen vihreinä. Linna oli kuninkaan lempipaikka, ja se näkyi loppuun asti. Kuolemansairaana Frederiksborgissa Christian IV käski kuljettaa itsensä reellä Rosenborgiin päättääkseen päivänsä siellä. Hän kuoli linnassa helmikuussa 1648. Kuninkaanl…
+- [Tripoli — kohdekartta / Kohdekartta: Punainen linna] 1500-luku Linna seisoo vanhankaupungin kaakkoisnurkassa omalla kalliollaan. Pohja on epäsäännöllinen nelikulmio, jonka sivut ovat 115, 90, 130 ja 140 metriä, ja pinta-alaa on noin 13 000 neliömetriä; muurien sisällä on useita rakennuksia ja pihoja. Kaivauksissa on löytynyt roomalaisajan jäänteitä, joten paikka voi olla yhtä vanha kuin foinikialaisten Oea. Nykyiset rakenteet ovat pääosin 1500-luvulta. Aragonian kuningaskunta valtasi Tripolin vuonna 1510, ja vuodesta 1530 linnaa pitivät johanniittaritarit, kunnes ottomaanit ajoivat heidät pois 1551. Linnan kerrotaan saaneen punamullan värinsä juuri silloin, ja siitä tulee sen nimi. Ensimmäinen ottomaanien käskynhaltija Murad Agha muutti linna…
+
+### 6.2
+KYSYMYS: Mihin linnaa käytettiin 1800-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuressaaren linna (historia)
+Tietoruudun teksti: Kuressaaren piispanlinna seisoo Saarenmaalla Länsi-Virossa. Vanhin kirjallinen maininta on 1380-luvulta, kun Saksalainen ritarikunta aloitti sen rakentamisen Saare-Läänen piispoille. Saarenmaan asukkaat vastustivat käännytystä sitkeästi, ja linna kuului ristiretkeläisten laajempaan yritykseen saada saari haltuunsa. Alusta asti se oli piispan tukikohta ja yksi hiippakunnan tärkeimmistä linnoista aina Liivinmaan sotaan asti.
+
+Vuonna 1559 Tanska-Norja otti Saarenmaan ja linnan haltuunsa ja uudisti linnoitukset. Brömsebron rauhan jälkeen saari siirtyi Ruotsille, joka jatkoi uudistustyötä vuoteen 1706. Suuren Pohjan sodan jälkeen Saarenmaa ja linna tulivat osaksi Venäjän keisarikuntaa.
+
+Kun valtakunnan raja siirtyi vähitellen länteen, Kuressaare menetti sotilaallisen merkityksensä. Vuonna 1836, kun Ahvenanmaalle oli rakennettu Bomarsundin linnoitus, venäläinen varuskunta vetäytyi Kuressaares…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Japani — maalehti / Historia: Linnaa sanotaan valkohaikaraksi] 1609 — Himejin linna alkoi vuonna 1333 vaatimattomana varustuksena kukkulan laella. Nykyisen muotonsa se sai, kun Ikeda Terumasa rakensi paikan uudelleen vuosina 1601–1609 ja laajensi sen 83 rakennuksen verkostoksi. Ulkoseinät rapattiin valkoisella kalkkilaastilla, ja siitä tulee nimi Shirasagi-jō eli valkohaikaran linna: rakennuksen sanotaan muistuttavan lentoon nousevaa lintua. Päätornia käytettiin rauhan aikana varastona. Linna on säilynyt lähes seitsemänsataa vuotta koskemattomana, myös vuoden 1995 suuren Hanshinin maanjäristyksen läpi, ja se merkittiin maailmanperintöluetteloon vuonna 1993.
+- [Lissabon — kohdekartta / Kohdekartta: São Jorgen linna] 1147 São Jorgen linna kohoaa Lissabonin korkeimmalla kukkulalla, ja paikalla on linnoituksia ollut jo yli 2000 vuotta. Nykyinen linna sai nimensä ja merkityksensä vuonna 1147, kun kristityt joukot valtasivat sen maureilta pitkän piirityksen jälkeen. Legendan mukaan ritari nimeltä Martim Moniz uhrasi henkensä pitämällä linnan porttia auki omalla ruumiillaan, jotta kristittyjen sotilaat pääsivät sisään. Myöhemmin linnaa käytettiin sekä kuninkaiden palatsina että Portugalin tärkeimpien asiakirjojen arkistona. Vuoden 1755 maanjäristys vaurioitti linnaa pahoin, ja se kunnostettiin nykyiseen kuntoonsa vasta 1930-luvulla. Yhdestä torneista, "Odysseuksen tornista", löytyy erikoinen kamera obscura -…
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:kopu-tuletorn) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kõpun majakka (merenkulku)
+Tietoruudun teksti: Kõpun majakka Hiidenmaalla on yksi maailman vanhimmista majakoista: se on ollut yhtäjaksoisessa käytössä valmistumisestaan vuodesta 1531 asti. Se on poikkeuksellinen myös siksi, että se on kulkenut kaikki vaiheet keskiaikaisesta maamerkistä nykyaikaiseen sähkömajakkaan.
+
+Majakka merkitsee Hiiun matalikon ja varoittaa laivoja rantautumasta. Torni seisoo Hiidenmaan korkeimman kukkulan Tornimägin laella; rakennus itse on 37,7 metriä korkea, mutta valo on 103,6 metriä merenpinnan yläpuolella, mikä tekee siitä Itämeren korkeimmalla olevan rannikkovalon. Valo näkyy navigointiin asti 26 meripeninkulman päähän.
+
+Torni on neliömäinen prisma, jonka neljällä ilmansuunnalla on massiiviset tukipilarit. Kahdenkymmenenneljän metrin korkeuteen asti se on pelkkää kiveä: ulkopinta on sidottu kalkkilaastilla, mutta runko on ladottu ilman laastia. Kiveä on noin 5 000 kuutiometriä ja painoa 12 000 tonnia. A…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kapkaupunki — kaupunkilehti / Pöytävuori: Kiviröykkiö, joka oikaisi maapallon] Vuoren korkein kohta on 1 086 metriä, ja siellä on Sir Thomas Maclearin 1865 rakennuttama kiviröykkiö. Taustalla oli mittausvirhe: vuonna 1750 Nicolas Louis de Lacaille oli mitannut meridiaanikaaren Kapkaupungista pohjoiseen ja päätellyt, että maapallon kaarevuus on eteläisillä leveysasteilla pienempi kuin pohjoisilla — pallo olisi siis päärynän muotoinen. Vuonna 1820 Sir George Everest kävi paikalla ja ehdotti, että Pöytävuoren oma massa oli vetänyt luotilankaa vinoon. Kun se otettiin huomioon, kaarevuus osoittautui samaksi molemmilla pallonpuoliskoilla.
+- [Odessa — kohdekartta / Kohdekartta: Vorontsovin majakka] 1862–1955 Odessan satamansuulla seisoo punavalkoinen Vorontsovin majakka, joka kohoaa lähes 30 metrin korkeuteen – yhtä korkealle kuin kymmenkerroksinen talo. Nykyinen torni on jo kolmas samalla paikalla: ensin siellä oli puinen majakka 1800-luvun puolivälissä, sen jälkeen valurautainen torni, ja lopulta vuonna 1955 valmistui torni, joka seisoo paikalla vielä nykyäänkin. Majakan huipulla palava valo näkyy merelle yli 20 kilometrin päähän. Se vilkkuu aina samalla tunnuksellaan: kolme pitkää välähdystä, mikä on Morse-aakkosissa kirjain O – niin kuin Odessa. Sumuisina päivinä majakasta kuuluu myös kova sumutorvi, joka varoittaa laivoja karikoista. Majakka on nimetty ruhtinas Vorontsovin mukaan…
+
+### 7.1
+KYSYMYS: Miksi torni oli aluksi umpinainen kiviröykkiö?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kõpun majakka (merenkulku)
+Tietoruudun teksti: Kõpun majakka Hiidenmaalla on yksi maailman vanhimmista majakoista: se on ollut yhtäjaksoisessa käytössä valmistumisestaan vuodesta 1531 asti. Se on poikkeuksellinen myös siksi, että se on kulkenut kaikki vaiheet keskiaikaisesta maamerkistä nykyaikaiseen sähkömajakkaan.
+
+Majakka merkitsee Hiiun matalikon ja varoittaa laivoja rantautumasta. Torni seisoo Hiidenmaan korkeimman kukkulan Tornimägin laella; rakennus itse on 37,7 metriä korkea, mutta valo on 103,6 metriä merenpinnan yläpuolella, mikä tekee siitä Itämeren korkeimmalla olevan rannikkovalon. Valo näkyy navigointiin asti 26 meripeninkulman päähän.
+
+Torni on neliömäinen prisma, jonka neljällä ilmansuunnalla on massiiviset tukipilarit. Kahdenkymmenenneljän metrin korkeuteen asti se on pelkkää kiveä: ulkopinta on sidottu kalkkilaastilla, mutta runko on ladottu ilman laastia. Kiveä on noin 5 000 kuutiometriä ja painoa 12 000 tonnia. A…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kapkaupunki — kaupunkilehti / Pöytävuori: Kiviröykkiö, joka oikaisi maapallon] Vuoren korkein kohta on 1 086 metriä, ja siellä on Sir Thomas Maclearin 1865 rakennuttama kiviröykkiö. Taustalla oli mittausvirhe: vuonna 1750 Nicolas Louis de Lacaille oli mitannut meridiaanikaaren Kapkaupungista pohjoiseen ja päätellyt, että maapallon kaarevuus on eteläisillä leveysasteilla pienempi kuin pohjoisilla — pallo olisi siis päärynän muotoinen. Vuonna 1820 Sir George Everest kävi paikalla ja ehdotti, että Pöytävuoren oma massa oli vetänyt luotilankaa vinoon. Kun se otettiin huomioon, kaarevuus osoittautui samaksi molemmilla pallonpuoliskoilla.
+
+### 7.2
+KYSYMYS: Kuinka kaukaa majakan valo näkyy?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kõpun majakka (merenkulku)
+Tietoruudun teksti: Kõpun majakka Hiidenmaalla on yksi maailman vanhimmista majakoista: se on ollut yhtäjaksoisessa käytössä valmistumisestaan vuodesta 1531 asti. Se on poikkeuksellinen myös siksi, että se on kulkenut kaikki vaiheet keskiaikaisesta maamerkistä nykyaikaiseen sähkömajakkaan.
+
+Majakka merkitsee Hiiun matalikon ja varoittaa laivoja rantautumasta. Torni seisoo Hiidenmaan korkeimman kukkulan Tornimägin laella; rakennus itse on 37,7 metriä korkea, mutta valo on 103,6 metriä merenpinnan yläpuolella, mikä tekee siitä Itämeren korkeimmalla olevan rannikkovalon. Valo näkyy navigointiin asti 26 meripeninkulman päähän.
+
+Torni on neliömäinen prisma, jonka neljällä ilmansuunnalla on massiiviset tukipilarit. Kahdenkymmenenneljän metrin korkeuteen asti se on pelkkää kiveä: ulkopinta on sidottu kalkkilaastilla, mutta runko on ladottu ilman laastia. Kiveä on noin 5 000 kuutiometriä ja painoa 12 000 tonnia. A…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Odessa — kohdekartta / Kohdekartta: Vorontsovin majakka] 1862–1955 Odessan satamansuulla seisoo punavalkoinen Vorontsovin majakka, joka kohoaa lähes 30 metrin korkeuteen – yhtä korkealle kuin kymmenkerroksinen talo. Nykyinen torni on jo kolmas samalla paikalla: ensin siellä oli puinen majakka 1800-luvun puolivälissä, sen jälkeen valurautainen torni, ja lopulta vuonna 1955 valmistui torni, joka seisoo paikalla vielä nykyäänkin. Majakan huipulla palava valo näkyy merelle yli 20 kilometrin päähän. Se vilkkuu aina samalla tunnuksellaan: kolme pitkää välähdystä, mikä on Morse-aakkosissa kirjain O – niin kuin Odessa. Sumuisina päivinä majakasta kuuluu myös kova sumutorvi, joka varoittaa laivoja karikoista. Majakka on nimetty ruhtinas Vorontsovin mukaan…
+- [BMU — maalehti / Rakennukset: Valurautainen jättiläinen kukkulalla] 1846 — Bermudan riutat ulottuvat parhaimmillaan yli 25 kilometrin päähän rannikosta, ja 1800-luvun alussa ne veivät pohjaan kymmeniä laivoja. Ratkaisuksi Englannista tilattiin majakka, jonka osat valettiin Lambethissa Lontoossa ja laivattiin Bermudalle koottavaksi – teräs ei vielä ollut saatavilla, joten koko 34-metrinen runko tehtiin valuraudasta. Kuninkaalliset pioneerit pystyttivät majakan Gibbsin kukkulalle, ja se syttyi ensi kertaa 1. toukokuuta 1846. Se on yksi maailman vanhimmista säilyneistä valurautamajakoista, ja sen valo näkyy parhaimmillaan yli 60 kilometrin päähän merelle sekä ilma-aluksiin vielä kauempaa.
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:kihnu) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kihnu (kulttuuri)
+Tietoruudun teksti: Kihnu on virolainen saari Itämerellä, pinta-alaltaan 16,4 neliökilometriä. Se on Riianlahden suurin ja koko maan seitsemänneksi suurin saari, seitsemän kilometriä pitkä ja 3,3 kilometriä leveä; korkein kohta on 8,9 metriä merenpinnan yläpuolella. Saarella on neljä kylää.
+
+Koska saaren miehet ovat olleet usein merellä, naiset ovat pyörittäneet arkea ja heistä on tullut saaren kulttuuriperinnön vaalijoita: käsitöiden, tanssien, leikkien ja musiikin. Musiikki kulkee käsitöiden, kirkkojuhlien ja muiden juhlien mukana, ja vanhat runolaulut ovat yhä tärkeitä. Häätavat ovat kaikkein monimutkaisin ja kirkkain kihnulaisen kulttuurin ilmaus.
+
+Saari tunnetaan käsitöistään ja omaleimaisesta kansanpuvustaan, jota käytetään yhä arjessa: raidallinen hame kört, kuvioitu miesten neuletakki troi ja neulotut lapaset. Viron viittomakielessä saari viitotaan jäljittelemällä körtin pystyraitoja. Unesco julist…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sahalin — kaupunkilehti / Historia: Saari vaihdettiin saariketjuun] Vuoden 1855 Shimodan sopimus veti Venäjän ja Japanin rajan Iturupin ja Urupin väliin mutta jätti Sahalinin jakamatta. Pietarissa allekirjoitettiin 7. toukokuuta 1875 sopimus, jossa Japani luopui osuudestaan Sahaliniin ja sai vastineeksi Venäjän hallussa olleet Kuriilit; allekirjoittajina olivat Aleksandr Gortšakov ja Enomoto Takeaki. Portsmouthin rauhassa 1905 saaren 50. leveyspiirin eteläpuoli siirtyi Japanille, joka hallitsi sitä Karafuton prefektuurina. Pääkaupunki oli Toyohara, nykyinen Južno-Sahalinsk. Elokuussa 1945 koko saari siirtyi Neuvostoliitolle.
+
+### 8.1
+KYSYMYS: Miksi saaren perinteet ovat naisten hallussa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kihnu (kulttuuri)
+Tietoruudun teksti: Kihnu on virolainen saari Itämerellä, pinta-alaltaan 16,4 neliökilometriä. Se on Riianlahden suurin ja koko maan seitsemänneksi suurin saari, seitsemän kilometriä pitkä ja 3,3 kilometriä leveä; korkein kohta on 8,9 metriä merenpinnan yläpuolella. Saarella on neljä kylää.
+
+Koska saaren miehet ovat olleet usein merellä, naiset ovat pyörittäneet arkea ja heistä on tullut saaren kulttuuriperinnön vaalijoita: käsitöiden, tanssien, leikkien ja musiikin. Musiikki kulkee käsitöiden, kirkkojuhlien ja muiden juhlien mukana, ja vanhat runolaulut ovat yhä tärkeitä. Häätavat ovat kaikkein monimutkaisin ja kirkkain kihnulaisen kulttuurin ilmaus.
+
+Saari tunnetaan käsitöistään ja omaleimaisesta kansanpuvustaan, jota käytetään yhä arjessa: raidallinen hame kört, kuvioitu miesten neuletakki troi ja neulotut lapaset. Viron viittomakielessä saari viitotaan jäljittelemällä körtin pystyraitoja. Unesco julist…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sahalin — kaupunkilehti / Historia: Saari vaihdettiin saariketjuun] Vuoden 1855 Shimodan sopimus veti Venäjän ja Japanin rajan Iturupin ja Urupin väliin mutta jätti Sahalinin jakamatta. Pietarissa allekirjoitettiin 7. toukokuuta 1875 sopimus, jossa Japani luopui osuudestaan Sahaliniin ja sai vastineeksi Venäjän hallussa olleet Kuriilit; allekirjoittajina olivat Aleksandr Gortšakov ja Enomoto Takeaki. Portsmouthin rauhassa 1905 saaren 50. leveyspiirin eteläpuoli siirtyi Japanille, joka hallitsi sitä Karafuton prefektuurina. Pääkaupunki oli Toyohara, nykyinen Južno-Sahalinsk. Elokuussa 1945 koko saari siirtyi Neuvostoliitolle.
+
+### 8.2
+KYSYMYS: Mikä on kört?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kihnu (kulttuuri)
+Tietoruudun teksti: Kihnu on virolainen saari Itämerellä, pinta-alaltaan 16,4 neliökilometriä. Se on Riianlahden suurin ja koko maan seitsemänneksi suurin saari, seitsemän kilometriä pitkä ja 3,3 kilometriä leveä; korkein kohta on 8,9 metriä merenpinnan yläpuolella. Saarella on neljä kylää.
+
+Koska saaren miehet ovat olleet usein merellä, naiset ovat pyörittäneet arkea ja heistä on tullut saaren kulttuuriperinnön vaalijoita: käsitöiden, tanssien, leikkien ja musiikin. Musiikki kulkee käsitöiden, kirkkojuhlien ja muiden juhlien mukana, ja vanhat runolaulut ovat yhä tärkeitä. Häätavat ovat kaikkein monimutkaisin ja kirkkain kihnulaisen kulttuurin ilmaus.
+
+Saari tunnetaan käsitöistään ja omaleimaisesta kansanpuvustaan, jota käytetään yhä arjessa: raidallinen hame kört, kuvioitu miesten neuletakki troi ja neulotut lapaset. Viron viittomakielessä saari viitotaan jäljittelemällä körtin pystyraitoja. Unesco julist…
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:parnu) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pärnu (kauppa)
+Tietoruudun teksti: Pärnu on kaupunki Lounais-Virossa Pärnunlahden rannalla, 128 kilometriä Tallinnasta etelään. Lahti on Riianlahden poukama, ja kaupungin kohdalla Pärnujoki laskee mereen.
+
+Kaupunkeja oli oikeastaan kaksi. Vanhan Pärnun perusti Saare-Läänen piispa noin 1251, mutta se kärsi kilpailijansa puristuksessa ja tuhoutui lopulta noin 1600. Toisen kaupungin, Embeken, perusti Saksalainen ritarikunta, joka aloitti linnan rakentamisen lähistölle 1265. Juuri tästä jälkimmäisestä — saksalaisittain Pernausta — tuli Hansaliiton jäsen ja Liivinmaan tärkeä jäätön satama.
+
+Vallanpitäjä vaihtui monta kertaa. Puola-Liettua hallitsi kaupunkia 1560–1617, sitten Ruotsi, jonka Liivinmaahan se kuului. Vuonna 1699 Academia Gustavo-Carolina, Tartun yliopiston edeltäjä, siirrettiin Tartosta Pärnuun, ja se toimi täällä vuoteen 1710. Suuren Pohjan sodan jälkeen Ruotsi menetti Pärnun ja koko Liivinmaan Venäjälle, ja kaup…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Puku, josta näkee kotipitäjän] 1800-luku — Virolaisessa kansanpuvussa jokainen pitäjä erottuu omalla raidoituksellaan, väriyhdistelmällään ja koruillaan — tunteva silmä näkee heti kuvasta, oliko kantaja kotoisin Setumaalta, Muhusta vai Pärnun seudulta. Puvut ommeltiin käsin kotikutoisesta villakankaasta, ja niiden yksityiskohdat periytyivät äidiltä tyttärelle sukupolvien ajan. Kihnun saarella perinne on yhä elossa arjessa, ei vain juhlissa: naiset kutovat itse raidalliset hameensa ja neulovat värikkäät lapasensa samoilla kuvioilla kuin esiäitinsä. Unesco liitti Kihnun kulttuuriperinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2003.
+- [Bryssel — kohdekartta / Kohdekartta: Grand-Place] 1695–1699 Grand-Place on Brysselin keskusaukio, 68 kertaa 110 metriä ja kokonaan kivetty. Tori syntyi 1000-luvun lopulla kuivuneelle suolle Senne-joen sataman lähelle. Sen etelälaidalla seisoo vuosina 1401–1455 rakennettu goottilainen kaupungintalo, jonka 96-metrisen tornin huipulla kaupungin suojeluspyhimys Mikael surmaa lohikäärmettä. Vastapäätä on Kuninkaan talo, jota hollanniksi kutsutaan yhä Leipätaloksi paikalla ennen olleen leipätorin mukaan, vaikka yksikään kuningas ei ole siinä asunut. Elokuun 13. päivänä 1695 ranskalainen 70 000 miehen armeija alkoi pommittaa lähes puolustuskyvytöntä kaupunkia, ja suurin osa aukiosta paloi. Pystyyn jäi vain kaupungintalon kivikuori — ironista kyll…
+
+### 9.1
+KYSYMYS: Miksi Pärnun satama oli Liivinmaalle tärkeä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pärnu (kauppa)
+Tietoruudun teksti: Pärnu on kaupunki Lounais-Virossa Pärnunlahden rannalla, 128 kilometriä Tallinnasta etelään. Lahti on Riianlahden poukama, ja kaupungin kohdalla Pärnujoki laskee mereen.
+
+Kaupunkeja oli oikeastaan kaksi. Vanhan Pärnun perusti Saare-Läänen piispa noin 1251, mutta se kärsi kilpailijansa puristuksessa ja tuhoutui lopulta noin 1600. Toisen kaupungin, Embeken, perusti Saksalainen ritarikunta, joka aloitti linnan rakentamisen lähistölle 1265. Juuri tästä jälkimmäisestä — saksalaisittain Pernausta — tuli Hansaliiton jäsen ja Liivinmaan tärkeä jäätön satama.
+
+Vallanpitäjä vaihtui monta kertaa. Puola-Liettua hallitsi kaupunkia 1560–1617, sitten Ruotsi, jonka Liivinmaahan se kuului. Vuonna 1699 Academia Gustavo-Carolina, Tartun yliopiston edeltäjä, siirrettiin Tartosta Pärnuun, ja se toimi täällä vuoteen 1710. Suuren Pohjan sodan jälkeen Ruotsi menetti Pärnun ja koko Liivinmaan Venäjälle, ja kaup…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Puku, josta näkee kotipitäjän] 1800-luku — Virolaisessa kansanpuvussa jokainen pitäjä erottuu omalla raidoituksellaan, väriyhdistelmällään ja koruillaan — tunteva silmä näkee heti kuvasta, oliko kantaja kotoisin Setumaalta, Muhusta vai Pärnun seudulta. Puvut ommeltiin käsin kotikutoisesta villakankaasta, ja niiden yksityiskohdat periytyivät äidiltä tyttärelle sukupolvien ajan. Kihnun saarella perinne on yhä elossa arjessa, ei vain juhlissa: naiset kutovat itse raidalliset hameensa ja neulovat värikkäät lapasensa samoilla kuvioilla kuin esiäitinsä. Unesco liitti Kihnun kulttuuriperinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2003.
+
+### 9.2
+KYSYMYS: Mikä toimi kaupungissa vuosina 1699–1710?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pärnu (kauppa)
+Tietoruudun teksti: Pärnu on kaupunki Lounais-Virossa Pärnunlahden rannalla, 128 kilometriä Tallinnasta etelään. Lahti on Riianlahden poukama, ja kaupungin kohdalla Pärnujoki laskee mereen.
+
+Kaupunkeja oli oikeastaan kaksi. Vanhan Pärnun perusti Saare-Läänen piispa noin 1251, mutta se kärsi kilpailijansa puristuksessa ja tuhoutui lopulta noin 1600. Toisen kaupungin, Embeken, perusti Saksalainen ritarikunta, joka aloitti linnan rakentamisen lähistölle 1265. Juuri tästä jälkimmäisestä — saksalaisittain Pernausta — tuli Hansaliiton jäsen ja Liivinmaan tärkeä jäätön satama.
+
+Vallanpitäjä vaihtui monta kertaa. Puola-Liettua hallitsi kaupunkia 1560–1617, sitten Ruotsi, jonka Liivinmaahan se kuului. Vuonna 1699 Academia Gustavo-Carolina, Tartun yliopiston edeltäjä, siirrettiin Tartosta Pärnuun, ja se toimi täällä vuoteen 1710. Suuren Pohjan sodan jälkeen Ruotsi menetti Pärnun ja koko Liivinmaan Venäjälle, ja kaup…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kohdekartta / Kohdekartta: Grand-Place] 1695–1699 Grand-Place on Brysselin keskusaukio, 68 kertaa 110 metriä ja kokonaan kivetty. Tori syntyi 1000-luvun lopulla kuivuneelle suolle Senne-joen sataman lähelle. Sen etelälaidalla seisoo vuosina 1401–1455 rakennettu goottilainen kaupungintalo, jonka 96-metrisen tornin huipulla kaupungin suojeluspyhimys Mikael surmaa lohikäärmettä. Vastapäätä on Kuninkaan talo, jota hollanniksi kutsutaan yhä Leipätaloksi paikalla ennen olleen leipätorin mukaan, vaikka yksikään kuningas ei ole siinä asunut. Elokuun 13. päivänä 1695 ranskalainen 70 000 miehen armeija alkoi pommittaa lähes puolustuskyvytöntä kaupunkia, ja suurin osa aukiosta paloi. Pystyyn jäi vain kaupungintalon kivikuori — ironista kyll…
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:matsalu) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Matsalu (eläimet)
+Tietoruudun teksti: Matsalun kansallispuisto on 486 neliökilometrin suojelualue Länsi- ja Pärnunmaalla. Siihen kuuluvat Matsalunlahti, Kasarijoen suisto, Matsalun kylä ja ympäröivät alueet: tulvaniityt, rantaniityt, ruovikot, metsät ja yli viisikymmentä saarta lahden suulla.
+
+Matsalunlahti on yksi Euroopan tärkeimmistä kosteikkolintualueista, koska se sijaitsee Itä-Atlantin muuttoreitillä. Joka kevät lahden ohi kulkee yli kaksi miljoonaa vesilintua, joista noin 1,6 miljoonaa on alleja. Alue on koti monelle uhanalaiselle lajille: merikotka on korkeimmassa suojeluluokassa, ja lisäksi suojeltuja ovat 22 kasvilajia, juovakonna ja kymmenen nisäkäslajia.
+
+Lahti on matala, vähäsuolainen ja ravinteikas: kahdeksantoista kilometriä pitkä ja kuusi leveä, mutta keskisyvyydeltään vain puolitoista metriä. Rantaviivaa on noin 165 kilometriä. Kasarijoen suiston tulvaniitty, neljäkymmentä neliökilometriä, on yksi Euroopan …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Asunción — kaupunkilehti / Arki ja perintö: Lahti, joka on tärkeämpi linnuille kuin ihmisille] Asunciónin lahti kaupungin luoteispuolella ei näytä paljolta: matalaa vettä, kausittain tulvivaa ruovikkoa ja mutarantaa, jonka rantaviiva siirtyy Paraguayjoen vedenkorkeuden mukaan. Linnuille se on yksi mantereen tärkeimmistä pysähdyspaikoista. Alueelta on laskettu 258 lintulajia, joista seitsemän on maailmanlaajuisesti uhanalaisia ja 28 pesii Pohjois-Amerikassa ja muuttaa talveksi tänne. Yli kolme prosenttia koko maailman kanelisirriäiskannasta lepää lahdella muuttomatkallaan.
+- [Birdsville — kaupunkilehti / Birdsville: Joki, joka ei tiedä mihin virrata] Diamantina-joki ei kulje yhtä uomaa vaan haarautuu Birdsvillen kohdalla kymmeniksi mataliksi kanaviksi, jotka risteilevät leveänä sokkelona kohti Etelä-Australiaa. Suurimman osan vuodesta uomat ovat kuivia hiekkajuovia, mutta kun sadekauden tulva saapuu pohjoisesta viikkojen viiveellä, se voi levitä paikoin kolmenkymmenen kilometrin levyiseksi. Silloin alaville tulvatasangoille kerääntyy jopa neljäsataaviisikymmentätuhatta vesilintua, ja alue on siksi luokiteltu kansainvälisesti tärkeäksi lintualueeksi. Kuivina vuosina Thundapurtyn kaltaiset syvät altaat pitävät veden ja kalat hengissä seuraavaan tulvaan asti.
+
+### 10.1
+KYSYMYS: Kuinka monta vesilintua ohittaa lahden keväisin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Matsalu (eläimet)
+Tietoruudun teksti: Matsalun kansallispuisto on 486 neliökilometrin suojelualue Länsi- ja Pärnunmaalla. Siihen kuuluvat Matsalunlahti, Kasarijoen suisto, Matsalun kylä ja ympäröivät alueet: tulvaniityt, rantaniityt, ruovikot, metsät ja yli viisikymmentä saarta lahden suulla.
+
+Matsalunlahti on yksi Euroopan tärkeimmistä kosteikkolintualueista, koska se sijaitsee Itä-Atlantin muuttoreitillä. Joka kevät lahden ohi kulkee yli kaksi miljoonaa vesilintua, joista noin 1,6 miljoonaa on alleja. Alue on koti monelle uhanalaiselle lajille: merikotka on korkeimmassa suojeluluokassa, ja lisäksi suojeltuja ovat 22 kasvilajia, juovakonna ja kymmenen nisäkäslajia.
+
+Lahti on matala, vähäsuolainen ja ravinteikas: kahdeksantoista kilometriä pitkä ja kuusi leveä, mutta keskisyvyydeltään vain puolitoista metriä. Rantaviivaa on noin 165 kilometriä. Kasarijoen suiston tulvaniitty, neljäkymmentä neliökilometriä, on yksi Euroopan …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Birdsville — kaupunkilehti / Birdsville: Joki, joka ei tiedä mihin virrata] Diamantina-joki ei kulje yhtä uomaa vaan haarautuu Birdsvillen kohdalla kymmeniksi mataliksi kanaviksi, jotka risteilevät leveänä sokkelona kohti Etelä-Australiaa. Suurimman osan vuodesta uomat ovat kuivia hiekkajuovia, mutta kun sadekauden tulva saapuu pohjoisesta viikkojen viiveellä, se voi levitä paikoin kolmenkymmenen kilometrin levyiseksi. Silloin alaville tulvatasangoille kerääntyy jopa neljäsataaviisikymmentätuhatta vesilintua, ja alue on siksi luokiteltu kansainvälisesti tärkeäksi lintualueeksi. Kuivina vuosina Thundapurtyn kaltaiset syvät altaat pitävät veden ja kalat hengissä seuraavaan tulvaan asti.
+
+### 10.2
+KYSYMYS: Miksi juuri tämä lahti on linnuille tärkeä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Matsalu (eläimet)
+Tietoruudun teksti: Matsalun kansallispuisto on 486 neliökilometrin suojelualue Länsi- ja Pärnunmaalla. Siihen kuuluvat Matsalunlahti, Kasarijoen suisto, Matsalun kylä ja ympäröivät alueet: tulvaniityt, rantaniityt, ruovikot, metsät ja yli viisikymmentä saarta lahden suulla.
+
+Matsalunlahti on yksi Euroopan tärkeimmistä kosteikkolintualueista, koska se sijaitsee Itä-Atlantin muuttoreitillä. Joka kevät lahden ohi kulkee yli kaksi miljoonaa vesilintua, joista noin 1,6 miljoonaa on alleja. Alue on koti monelle uhanalaiselle lajille: merikotka on korkeimmassa suojeluluokassa, ja lisäksi suojeltuja ovat 22 kasvilajia, juovakonna ja kymmenen nisäkäslajia.
+
+Lahti on matala, vähäsuolainen ja ravinteikas: kahdeksantoista kilometriä pitkä ja kuusi leveä, mutta keskisyvyydeltään vain puolitoista metriä. Rantaviivaa on noin 165 kilometriä. Kasarijoen suiston tulvaniitty, neljäkymmentä neliökilometriä, on yksi Euroopan …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Asunción — kaupunkilehti / Arki ja perintö: Lahti, joka on tärkeämpi linnuille kuin ihmisille] Asunciónin lahti kaupungin luoteispuolella ei näytä paljolta: matalaa vettä, kausittain tulvivaa ruovikkoa ja mutarantaa, jonka rantaviiva siirtyy Paraguayjoen vedenkorkeuden mukaan. Linnuille se on yksi mantereen tärkeimmistä pysähdyspaikoista. Alueelta on laskettu 258 lintulajia, joista seitsemän on maailmanlaajuisesti uhanalaisia ja 28 pesii Pohjois-Amerikassa ja muuttaa talveksi tänne. Yli kolme prosenttia koko maailman kanelisirriäiskannasta lepää lahdella muuttomatkallaan.
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

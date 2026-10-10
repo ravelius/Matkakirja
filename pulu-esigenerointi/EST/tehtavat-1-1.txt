@@ -1,0 +1,235 @@
+================ KOHTA 1 (kohde:suurmunamagi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suur Munamägi (luonto · vuori)
+Tietoruudun teksti: Suur Munamägi on Viron ja koko Baltian korkein kohta, 318 metriä merenpinnasta. Se on Haanjan kylän lähellä Võrumaalla Viron kaakkoiskolkassa, aivan Latvian ja Venäjän rajojen tuntumassa. Nimi tarkoittaa suomeksi suurta munamäkeä, ja ympäröivä Haanjan ylänkö on loivasti kumpuilevaa.
+
+### 1.1
+KYSYMYS: Mitä nimi Suur Munamägi tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suur Munamägi (luonto · vuori)
+Tietoruudun teksti: Suur Munamägi on Viron ja koko Baltian korkein kohta, 318 metriä merenpinnasta. Se on Haanjan kylän lähellä Võrumaalla Viron kaakkoiskolkassa, aivan Latvian ja Venäjän rajojen tuntumassa. Nimi tarkoittaa suomeksi suurta munamäkeä, ja ympäröivä Haanjan ylänkö on loivasti kumpuilevaa.
+
+### 1.2
+KYSYMYS: Millainen on Haanjan ylänkö?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suur Munamägi (luonto · vuori)
+Tietoruudun teksti: Suur Munamägi on Viron ja koko Baltian korkein kohta, 318 metriä merenpinnasta. Se on Haanjan kylän lähellä Võrumaalla Viron kaakkoiskolkassa, aivan Latvian ja Venäjän rajojen tuntumassa. Nimi tarkoittaa suomeksi suurta munamäkeä, ja ympäröivä Haanjan ylänkö on loivasti kumpuilevaa.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:itameri~3) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Viron rannikko on kahden lahden välissä: pohjoisessa Suomenlahti, etelässä Riianlahti. Maan länsipuolinen matala saaristo kuuluu siihen noin 45 prosenttiin merestä, joka on tavallisenakin talvena jään peitossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Ruoka: Kansalliskala, joka mahtuu leivän päälle] 2007 — Räim eli itämeren silakka valittiin Viron kansalliskalaksi vuonna 2007 kansanäänestyksellä, joka herätti keskustelua jopa parlamentissa. Kyseessä on tavallista silakkaa pienempi Itämeren alalaji, jota on syöty rannikolla vuosisatoja: suolattuna, savustettuna, marinoituna ja etenkin kiluna eli mausteliemessä säilöttynä pikkukalana. Kiluvõileib eli kilulla ja munalla katettu ruisleipäviipale on yksi maan tunnetuimmista väliaterioista, ja sitä myydään kojuilta toreilla ympäri vuoden. Räimeä juhlitaan omalla päivällään, jolloin rannikkokaupungeissa järjestetään markkinoita ja kalastuskilpailuja.
+- [Viro — maalehti / Kulttuuri: Eepos, jonka sankari on jättiläinen] 1857–1861 — Kalevipoeg on Viron kansalliseepos, jonka lääkäri ja kansanrunouden kerääjä Friedrich Reinhold Kreutzwald kokosi kansantarinoista ja julkaisi jaksoina vuosina 1857–1861. Yli 19 000 säkeen mittainen runoelma kertoo jättiläiskuningas Kalevipojasta, joka kyntää, taistelee ja lopulta joutuu manalan portille kätensä juuttuessa kiveen. Teos syntyi samaan aikaan kuin Suomen Kalevala ja samasta kansallisen heräämisen hengestä, ja siitä tuli nopeasti koko kansan yhteinen tarina koulukirjoista taidemaalauksiin. Kalevipojan hahmo elää yhä: hänen nimeään kantavat niin jäätä murtava jäänmurtaja kuin lukuisat patsaat ja kadunnimet ympäri Viroa.
+
+### 2.1
+KYSYMYS: Miksi Itämeren vesi on murtovettä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Viron rannikko on kahden lahden välissä: pohjoisessa Suomenlahti, etelässä Riianlahti. Maan länsipuolinen matala saaristo kuuluu siihen noin 45 prosenttiin merestä, joka on tavallisenakin talvena jään peitossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Ruoka: Kansalliskala, joka mahtuu leivän päälle] 2007 — Räim eli itämeren silakka valittiin Viron kansalliskalaksi vuonna 2007 kansanäänestyksellä, joka herätti keskustelua jopa parlamentissa. Kyseessä on tavallista silakkaa pienempi Itämeren alalaji, jota on syöty rannikolla vuosisatoja: suolattuna, savustettuna, marinoituna ja etenkin kiluna eli mausteliemessä säilöttynä pikkukalana. Kiluvõileib eli kilulla ja munalla katettu ruisleipäviipale on yksi maan tunnetuimmista väliaterioista, ja sitä myydään kojuilta toreilla ympäri vuoden. Räimeä juhlitaan omalla päivällään, jolloin rannikkokaupungeissa järjestetään markkinoita ja kalastuskilpailuja.
+
+### 2.2
+KYSYMYS: Miksi Viron saaret ovat niin matalia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Viron rannikko on kahden lahden välissä: pohjoisessa Suomenlahti, etelässä Riianlahti. Maan länsipuolinen matala saaristo kuuluu siihen noin 45 prosenttiin merestä, joka on tavallisenakin talvena jään peitossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Eepos, jonka sankari on jättiläinen] 1857–1861 — Kalevipoeg on Viron kansalliseepos, jonka lääkäri ja kansanrunouden kerääjä Friedrich Reinhold Kreutzwald kokosi kansantarinoista ja julkaisi jaksoina vuosina 1857–1861. Yli 19 000 säkeen mittainen runoelma kertoo jättiläiskuningas Kalevipojasta, joka kyntää, taistelee ja lopulta joutuu manalan portille kätensä juuttuessa kiveen. Teos syntyi samaan aikaan kuin Suomen Kalevala ja samasta kansallisen heräämisen hengestä, ja siitä tuli nopeasti koko kansan yhteinen tarina koulukirjoista taidemaalauksiin. Kalevipojan hahmo elää yhä: hänen nimeään kantavat niin jäätä murtava jäänmurtaja kuin lukuisat patsaat ja kadunnimet ympäri Viroa.
+- [Viro — maalehti / Ruoka: Kansalliskala, joka mahtuu leivän päälle] 2007 — Räim eli itämeren silakka valittiin Viron kansalliskalaksi vuonna 2007 kansanäänestyksellä, joka herätti keskustelua jopa parlamentissa. Kyseessä on tavallista silakkaa pienempi Itämeren alalaji, jota on syöty rannikolla vuosisatoja: suolattuna, savustettuna, marinoituna ja etenkin kiluna eli mausteliemessä säilöttynä pikkukalana. Kiluvõileib eli kilulla ja munalla katettu ruisleipäviipale on yksi maan tunnetuimmista väliaterioista, ja sitä myydään kojuilta toreilla ympäri vuoden. Räimeä juhlitaan omalla päivällään, jolloin rannikkokaupungeissa järjestetään markkinoita ja kalastuskilpailuja.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:suomenlahti) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suomenlahti (meri)
+Tietoruudun teksti: Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Kaksi miljoonaa kättä yli kolmen maan] 1989 — Elokuun 23. päivänä 1989 noin kaksi miljoonaa ihmistä tarttui toisiaan käsistä ja muodosti yhtenäisen ketjun Tallinnasta Riian kautta Vilnaan — matkaa kertyi yli kuusisataa kilometriä. Baltian ketju järjestettiin täsmälleen viisikymmentä vuotta sen jälkeen, kun Neuvostoliitto ja natsi-Saksa olivat salaisessa sopimuksessa jakaneet Baltian maat keskenään. Rauhanomainen mielenilmaus vaati Viron, Latvian ja Liettuan miehitysten päättämistä, ja tapahtuma näkyi television välityksellä kaikkialla maailmassa. Kaksi vuotta myöhemmin kaikki kolme maata olivat jälleen itsenäisiä.
+
+### 3.1
+KYSYMYS: Miksi Tallinnasta tuli hansakaupunki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suomenlahti (meri)
+Tietoruudun teksti: Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Kaksi miljoonaa kättä yli kolmen maan] 1989 — Elokuun 23. päivänä 1989 noin kaksi miljoonaa ihmistä tarttui toisiaan käsistä ja muodosti yhtenäisen ketjun Tallinnasta Riian kautta Vilnaan — matkaa kertyi yli kuusisataa kilometriä. Baltian ketju järjestettiin täsmälleen viisikymmentä vuotta sen jälkeen, kun Neuvostoliitto ja natsi-Saksa olivat salaisessa sopimuksessa jakaneet Baltian maat keskenään. Rauhanomainen mielenilmaus vaati Viron, Latvian ja Liettuan miehitysten päättämistä, ja tapahtuma näkyi television välityksellä kaikkialla maailmassa. Kaksi vuotta myöhemmin kaikki kolme maata olivat jälleen itsenäisiä.
+
+### 3.2
+KYSYMYS: Kuinka syvä Suomenlahti on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suomenlahti (meri)
+Tietoruudun teksti: Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:tartu-ulikool) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tartun yliopisto (sana)
+Tietoruudun teksti: Tartun yliopisto on Viron kansallinen yliopisto sekä maan vanhin ja suurin. Ruotsin kuningas Kustaa II Aadolf allekirjoitti perustamiskirjan 30. kesäkuuta 1632 kesken Saksan-sotaretkeään, muutama kuukausi ennen kuolemaansa Lützenin taistelussa. Ensimmäinen kansleri oli vapaaherra Johan Skytte, Liivinmaan, Inkerin ja Karjalan kenraalikuvernööri.
+
+Yliopisto sai kaksi nimeä: Academia Dorpatensis sijaintinsa ja Academia Gustaviana perustajakuninkaansa mukaan. Se oli tuolloin Ruotsin valtakunnan kolmanneksi vanhin yliopisto Greifswaldin ja Uppsalan jälkeen ja Turun akatemiaa vanhempi. Edeltäjä oli jesuiittojen latinakoulu Gymnasium Dorpatense, jonka Puola-Liettuan kuningas Stefan Batory perusti 1583 ja joka toimi vuoteen 1601.
+
+Ensimmäiset ylioppilaat kirjoittautuivat 20.–21. huhtikuuta 1632, ja avajaiset pidettiin saman vuoden lokakuun 15. päivänä. Akatemiassa oli filosofian, oikeustieteen,…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+
+### 4.1
+KYSYMYS: Kuka perusti yliopiston ja milloin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tartun yliopisto (sana)
+Tietoruudun teksti: Tartun yliopisto on Viron kansallinen yliopisto sekä maan vanhin ja suurin. Ruotsin kuningas Kustaa II Aadolf allekirjoitti perustamiskirjan 30. kesäkuuta 1632 kesken Saksan-sotaretkeään, muutama kuukausi ennen kuolemaansa Lützenin taistelussa. Ensimmäinen kansleri oli vapaaherra Johan Skytte, Liivinmaan, Inkerin ja Karjalan kenraalikuvernööri.
+
+Yliopisto sai kaksi nimeä: Academia Dorpatensis sijaintinsa ja Academia Gustaviana perustajakuninkaansa mukaan. Se oli tuolloin Ruotsin valtakunnan kolmanneksi vanhin yliopisto Greifswaldin ja Uppsalan jälkeen ja Turun akatemiaa vanhempi. Edeltäjä oli jesuiittojen latinakoulu Gymnasium Dorpatense, jonka Puola-Liettuan kuningas Stefan Batory perusti 1583 ja joka toimi vuoteen 1601.
+
+Ensimmäiset ylioppilaat kirjoittautuivat 20.–21. huhtikuuta 1632, ja avajaiset pidettiin saman vuoden lokakuun 15. päivänä. Akatemiassa oli filosofian, oikeustieteen,…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+
+### 4.2
+KYSYMYS: Miksi yliopisto siirrettiin Tallinnaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tartun yliopisto (sana)
+Tietoruudun teksti: Tartun yliopisto on Viron kansallinen yliopisto sekä maan vanhin ja suurin. Ruotsin kuningas Kustaa II Aadolf allekirjoitti perustamiskirjan 30. kesäkuuta 1632 kesken Saksan-sotaretkeään, muutama kuukausi ennen kuolemaansa Lützenin taistelussa. Ensimmäinen kansleri oli vapaaherra Johan Skytte, Liivinmaan, Inkerin ja Karjalan kenraalikuvernööri.
+
+Yliopisto sai kaksi nimeä: Academia Dorpatensis sijaintinsa ja Academia Gustaviana perustajakuninkaansa mukaan. Se oli tuolloin Ruotsin valtakunnan kolmanneksi vanhin yliopisto Greifswaldin ja Uppsalan jälkeen ja Turun akatemiaa vanhempi. Edeltäjä oli jesuiittojen latinakoulu Gymnasium Dorpatense, jonka Puola-Liettuan kuningas Stefan Batory perusti 1583 ja joka toimi vuoteen 1601.
+
+Ensimmäiset ylioppilaat kirjoittautuivat 20.–21. huhtikuuta 1632, ja avajaiset pidettiin saman vuoden lokakuun 15. päivänä. Akatemiassa oli filosofian, oikeustieteen,…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:narvan-linnus) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narvan linnus (historia)
+Tietoruudun teksti: Narvan linnus eli Hermannin linna on keskiaikainen linna Koillis-Virossa. Se perustettiin noin vuonna 1256, kun alue kuului Tanskan valtakuntaan. Tanskalaiset olivat valloittaneet Pohjois-Viron 1200-luvulla ja pystyttivät aluksi puisen rajalinnoituksen kohtaan, jossa vanha tie ylitti Narvajoen. Sen suojassa asutus kasvoi Narvan kaupungiksi, joka sai Lyypekin kaupunkioikeudet 1300-luvun alkupuolella.
+
+Kun kahnaukset Novgorodin ja Pihkovan kanssa jatkuivat, tanskalaiset aloittivat 1300-luvun alussa kivilinnoituksen: pienen linnakkeen, jonka sivut olivat neljäkymmentä metriä ja jonka luoteiskulmassa seisoi nykyisen Hermannin tornin edeltäjä. Vuonna 1346 kuningas Valdemar IV myi Pohjois-Viron ja sen mukana Narvan Liivinmaan ritarikunnalle, joka rakensi linnasta konventtitalon omiin tarpeisiinsa.
+
+Hermannin tornin viimeisteli ritarikunta, ja syy oli vastarannalla: Moskovan Venäjä perusti 149…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+- [Colombo — kohdekartta / Kohdekartta: Fortin kellotorni] 1856–1857 Torni seisoo Chatham Streetin ja Janadhipathi Mawathan eli entisen Queen Streetin kulmassa. Se rakennettiin kellotorniksi 1856–57 ja valmistui 25. helmikuuta 1857; sen suunnitteli kuvernööri Henry George Wardin puoliso Emily Elizabeth Ward, ja työn teki yleisten töiden virasto John Flemming Churchillin valvonnassa. Kaksikymmentäyhdeksän metriä korkea rakennus oli valmistuessaan Colombon korkein. Kello oli vanhempi kuin torni. Kuvernööri Robert Brownrigg tilasi sen 1814 tuhannella kahdellasadalla punnalla, mutta säästösyistä se pantiin varastoon ja asennettiin vasta 1857. Koneiston teki lontoolainen Dent, sama paja joka oli valmistanut Westminsterin palatsin Big Benin 1852. Pääkell…
+
+### 5.1
+KYSYMYS: Miksi Hermannin torni rakennettiin valmiiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narvan linnus (historia)
+Tietoruudun teksti: Narvan linnus eli Hermannin linna on keskiaikainen linna Koillis-Virossa. Se perustettiin noin vuonna 1256, kun alue kuului Tanskan valtakuntaan. Tanskalaiset olivat valloittaneet Pohjois-Viron 1200-luvulla ja pystyttivät aluksi puisen rajalinnoituksen kohtaan, jossa vanha tie ylitti Narvajoen. Sen suojassa asutus kasvoi Narvan kaupungiksi, joka sai Lyypekin kaupunkioikeudet 1300-luvun alkupuolella.
+
+Kun kahnaukset Novgorodin ja Pihkovan kanssa jatkuivat, tanskalaiset aloittivat 1300-luvun alussa kivilinnoituksen: pienen linnakkeen, jonka sivut olivat neljäkymmentä metriä ja jonka luoteiskulmassa seisoi nykyisen Hermannin tornin edeltäjä. Vuonna 1346 kuningas Valdemar IV myi Pohjois-Viron ja sen mukana Narvan Liivinmaan ritarikunnalle, joka rakensi linnasta konventtitalon omiin tarpeisiinsa.
+
+Hermannin tornin viimeisteli ritarikunta, ja syy oli vastarannalla: Moskovan Venäjä perusti 149…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Colombo — kohdekartta / Kohdekartta: Fortin kellotorni] 1856–1857 Torni seisoo Chatham Streetin ja Janadhipathi Mawathan eli entisen Queen Streetin kulmassa. Se rakennettiin kellotorniksi 1856–57 ja valmistui 25. helmikuuta 1857; sen suunnitteli kuvernööri Henry George Wardin puoliso Emily Elizabeth Ward, ja työn teki yleisten töiden virasto John Flemming Churchillin valvonnassa. Kaksikymmentäyhdeksän metriä korkea rakennus oli valmistuessaan Colombon korkein. Kello oli vanhempi kuin torni. Kuvernööri Robert Brownrigg tilasi sen 1814 tuhannella kahdellasadalla punnalla, mutta säästösyistä se pantiin varastoon ja asennettiin vasta 1857. Koneiston teki lontoolainen Dent, sama paja joka oli valmistanut Westminsterin palatsin Big Benin 1852. Pääkell…
+- [New Orleans — kohdekartta / Kohdekartta: Hermann-Griman talo] 1831 Talo on Ranskan Korttelin varhaisimpia esimerkkejä amerikkalaisesta arkkitehtuurista. Samuel Hermann osti tontin St. Louis Streetiltä 1831 ja palkkasi rakentajaksi William Brandin, joka piirsi federal- eli yrjöläistyylisen talon — tyyli oli 1800-luvun alun New Orleansissa harvinainen. Julkisivu on symmetrinen ja keskellä kulkee leveä halli, mutta Brand lisäsi ilmastoon sopivat parvekkeet ja gallerian: sisällä ei ole käytäviä lainkaan, vaan huoneesta toiseen kuljetaan parvekkeiden kautta. Pihalla on Korttelin ainoa säilynyt hevostalli ja 1830-luvun avotulikeittiö. Talossa on asunut kaksi sukua. Samuel Hermann syntyi 1777 Rödelheimissa Saksassa, muutti Louisianaan 1804 ja teki työtä plan…
+
+### 5.2
+KYSYMYS: Kuka myi Narvan Liivinmaan ritarikunnalle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narvan linnus (historia)
+Tietoruudun teksti: Narvan linnus eli Hermannin linna on keskiaikainen linna Koillis-Virossa. Se perustettiin noin vuonna 1256, kun alue kuului Tanskan valtakuntaan. Tanskalaiset olivat valloittaneet Pohjois-Viron 1200-luvulla ja pystyttivät aluksi puisen rajalinnoituksen kohtaan, jossa vanha tie ylitti Narvajoen. Sen suojassa asutus kasvoi Narvan kaupungiksi, joka sai Lyypekin kaupunkioikeudet 1300-luvun alkupuolella.
+
+Kun kahnaukset Novgorodin ja Pihkovan kanssa jatkuivat, tanskalaiset aloittivat 1300-luvun alussa kivilinnoituksen: pienen linnakkeen, jonka sivut olivat neljäkymmentä metriä ja jonka luoteiskulmassa seisoi nykyisen Hermannin tornin edeltäjä. Vuonna 1346 kuningas Valdemar IV myi Pohjois-Viron ja sen mukana Narvan Liivinmaan ritarikunnalle, joka rakensi linnasta konventtitalon omiin tarpeisiinsa.
+
+Hermannin tornin viimeisteli ritarikunta, ja syy oli vastarannalla: Moskovan Venäjä perusti 149…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

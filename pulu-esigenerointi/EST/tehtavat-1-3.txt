@@ -1,0 +1,209 @@
+================ KOHTA 11 (kohde:struven-kaari) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Struven kaari (tekniikka)
+Tietoruudun teksti: Struven kaari on kolmiomittausten ketju, joka ulottuu Norjan Hammerfestista Mustallemerelle: kymmenen maan halki ja yli 2 820 kilometriä. Se tuotti ensimmäisen tarkan meridiaanikaaren mittauksen.
+
+Ketjun rakensi ja mittasi saksalaissyntyinen venäläinen tiedemies Friedrich Georg Wilhelm von Struve vuosina 1816–1855 selvittääkseen maapallon tarkan koon ja muodon. Silloin ketju kulki vain kolmen maan halki: Norjan, Ruotsin ja Venäjän keisarikunnan. Kaaren ensimmäinen piste on Tartossa observatoriolla, jossa Struve teki suuren osan tutkimuksistaan. Ketjussa on 258 päämittauskolmiota ja 265 mittauspistettä.
+
+Maastossa pisteet on merkitty vaatimattomasti: kallioon porattuina reikinä, rautaristeinä ja kivikasoina. Vuonna 2005 ketju otettiin maailmanperintöluetteloon geodesian merkityksensä ja kansainvälisen tieteellisen yhteistyön todistuskappaleena; luetteloon kuuluu 34 muistolaattaa tai obel…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Keksinnöt: Levyn keskireiän mitta otettiin kolikosta] 1979 — Philipsin laboratoriossa kehitettiin 1970-luvulla levy, jota luetaan laservalolla eikä neulalla. Prototyyppi näytettiin lehdistölle maaliskuussa 1979: se oli 11,5 senttiä leveä, ja keskireikä tehtiin kymmenen sentin kolikon kokoiseksi. Kehityspäällikkö kertoi myöhemmin laskeneensa kolikon pöydälle ja todenneensa, että siinä on mitta. Japanilainen kumppani Sony vaati levylle 74 minuutin soittoajan, ja siksi valmiista cd-levystä tuli 12 senttiä leveä. Tiedot ovat pieninä kuoppina kierteellä, joka suoraksi vedettynä on jopa 5,4 kilometriä pitkä.
+
+### 11.1
+KYSYMYS: Mitä Struven kaarella mitattiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Struven kaari (tekniikka)
+Tietoruudun teksti: Struven kaari on kolmiomittausten ketju, joka ulottuu Norjan Hammerfestista Mustallemerelle: kymmenen maan halki ja yli 2 820 kilometriä. Se tuotti ensimmäisen tarkan meridiaanikaaren mittauksen.
+
+Ketjun rakensi ja mittasi saksalaissyntyinen venäläinen tiedemies Friedrich Georg Wilhelm von Struve vuosina 1816–1855 selvittääkseen maapallon tarkan koon ja muodon. Silloin ketju kulki vain kolmen maan halki: Norjan, Ruotsin ja Venäjän keisarikunnan. Kaaren ensimmäinen piste on Tartossa observatoriolla, jossa Struve teki suuren osan tutkimuksistaan. Ketjussa on 258 päämittauskolmiota ja 265 mittauspistettä.
+
+Maastossa pisteet on merkitty vaatimattomasti: kallioon porattuina reikinä, rautaristeinä ja kivikasoina. Vuonna 2005 ketju otettiin maailmanperintöluetteloon geodesian merkityksensä ja kansainvälisen tieteellisen yhteistyön todistuskappaleena; luetteloon kuuluu 34 muistolaattaa tai obel…
+
+### 11.2
+KYSYMYS: Miten mittauspisteet on merkitty maastoon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Struven kaari (tekniikka)
+Tietoruudun teksti: Struven kaari on kolmiomittausten ketju, joka ulottuu Norjan Hammerfestista Mustallemerelle: kymmenen maan halki ja yli 2 820 kilometriä. Se tuotti ensimmäisen tarkan meridiaanikaaren mittauksen.
+
+Ketjun rakensi ja mittasi saksalaissyntyinen venäläinen tiedemies Friedrich Georg Wilhelm von Struve vuosina 1816–1855 selvittääkseen maapallon tarkan koon ja muodon. Silloin ketju kulki vain kolmen maan halki: Norjan, Ruotsin ja Venäjän keisarikunnan. Kaaren ensimmäinen piste on Tartossa observatoriolla, jossa Struve teki suuren osan tutkimuksistaan. Ketjussa on 258 päämittauskolmiota ja 265 mittauspistettä.
+
+Maastossa pisteet on merkitty vaatimattomasti: kallioon porattuina reikinä, rautaristeinä ja kivikasoina. Vuonna 2005 ketju otettiin maailmanperintöluetteloon geodesian merkityksensä ja kansainvälisen tieteellisen yhteistyön todistuskappaleena; luetteloon kuuluu 34 muistolaattaa tai obel…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Keksinnöt: Levyn keskireiän mitta otettiin kolikosta] 1979 — Philipsin laboratoriossa kehitettiin 1970-luvulla levy, jota luetaan laservalolla eikä neulalla. Prototyyppi näytettiin lehdistölle maaliskuussa 1979: se oli 11,5 senttiä leveä, ja keskireikä tehtiin kymmenen sentin kolikon kokoiseksi. Kehityspäällikkö kertoi myöhemmin laskeneensa kolikon pöydälle ja todenneensa, että siinä on mitta. Japanilainen kumppani Sony vaati levylle 74 minuutin soittoajan, ja siksi valmiista cd-levystä tuli 12 senttiä leveä. Tiedot ovat pieninä kuoppina kierteellä, joka suoraksi vedettynä on jopa 5,4 kilometriä pitkä.
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:peipsi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peipsijärvi (meri)
+Tietoruudun teksti: Peipsijärvi on Euroopan suurin rajajärvi: se makaa Viron ja Venäjän välisellä valtakunnanrajalla ja on koko maanosan viidenneksi suurin heti Laatokan, Äänisen, Vänernin ja Saimaan jälkeen. Pinta-alaa on 3 555 neliökilometriä, mutta keskisyvyys vain 7,1 metriä ja syvin kohta 15 — se on siis valtava mutta matala. Järvi on oikeastaan kolme: pohjoinen Peipsi (2 611 km²), eteläinen Pihkvan järvi (708 km²) ja niitä yhdistävä Lämmijärvi (236 km²). Siihen laskee noin kolmekymmentä jokea, joista suurimmat ovat Velikaja ja Emajoki, ja vedet lähtevät Narvajokea myöten Suomenlahteen. 5. huhtikuuta 1242 järven jäällä käytiin jäätaistelu Novgorodin tasavallan ja Saksalaisen ritarikunnan välillä. Venäjänkielinen nimi Tšudskoje ozero tarkoittaa "tšuudien järveä" — tšuudi oli vanha nimitys näillä mailla asuneille itämerensuomalaisille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aleppo — kohdekartta / Kohdekartta: Antiokian portti] Vanhankaupungin läntisen muurin keskellä seisoo portti, jonka nimi kertoo suunnan: tie vei Antiokiaan, antiikin Syyrian pääkaupunkiin. Kaksi kuusikulmaista bastionia nousee rinnakkain, ja niiden välinen kulkuväylä mutkittelee sen sijaan että menisi suoraan läpi. Aukko on oikeanpuoleisen tornin alla, puolustussyistä: sisään tulija ei pääse vauhtiin eikä näe eteensä. Kivi on valkoista, ja lohkareet ovat noin 0,8 kertaa 1,0 metriä. Bysantin aikana tämä oli kaupungin pääportti, ja sen jälkeen merkitys hiipui. Ajjubidien Aleppon emiiri an-Nasir Yusuf, Saladinin pojanpojanpoika, rakennutti portin uudelleen 1000-luvulta periytyvän perustuksen päälle. Vuosiluvut ovat epätarkkoja: portin kohdalla hä…
+
+### 12.1
+KYSYMYS: Mitä järven jäällä tapahtui vuonna 1242?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peipsijärvi (meri)
+Tietoruudun teksti: Peipsijärvi on Euroopan suurin rajajärvi: se makaa Viron ja Venäjän välisellä valtakunnanrajalla ja on koko maanosan viidenneksi suurin heti Laatokan, Äänisen, Vänernin ja Saimaan jälkeen. Pinta-alaa on 3 555 neliökilometriä, mutta keskisyvyys vain 7,1 metriä ja syvin kohta 15 — se on siis valtava mutta matala. Järvi on oikeastaan kolme: pohjoinen Peipsi (2 611 km²), eteläinen Pihkvan järvi (708 km²) ja niitä yhdistävä Lämmijärvi (236 km²). Siihen laskee noin kolmekymmentä jokea, joista suurimmat ovat Velikaja ja Emajoki, ja vedet lähtevät Narvajokea myöten Suomenlahteen. 5. huhtikuuta 1242 järven jäällä käytiin jäätaistelu Novgorodin tasavallan ja Saksalaisen ritarikunnan välillä. Venäjänkielinen nimi Tšudskoje ozero tarkoittaa "tšuudien järveä" — tšuudi oli vanha nimitys näillä mailla asuneille itämerensuomalaisille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aleppo — kohdekartta / Kohdekartta: Antiokian portti] Vanhankaupungin läntisen muurin keskellä seisoo portti, jonka nimi kertoo suunnan: tie vei Antiokiaan, antiikin Syyrian pääkaupunkiin. Kaksi kuusikulmaista bastionia nousee rinnakkain, ja niiden välinen kulkuväylä mutkittelee sen sijaan että menisi suoraan läpi. Aukko on oikeanpuoleisen tornin alla, puolustussyistä: sisään tulija ei pääse vauhtiin eikä näe eteensä. Kivi on valkoista, ja lohkareet ovat noin 0,8 kertaa 1,0 metriä. Bysantin aikana tämä oli kaupungin pääportti, ja sen jälkeen merkitys hiipui. Ajjubidien Aleppon emiiri an-Nasir Yusuf, Saladinin pojanpojanpoika, rakennutti portin uudelleen 1000-luvulta periytyvän perustuksen päälle. Vuosiluvut ovat epätarkkoja: portin kohdalla hä…
+
+### 12.2
+KYSYMYS: Mihin Peipsin vedet lopulta laskevat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peipsijärvi (meri)
+Tietoruudun teksti: Peipsijärvi on Euroopan suurin rajajärvi: se makaa Viron ja Venäjän välisellä valtakunnanrajalla ja on koko maanosan viidenneksi suurin heti Laatokan, Äänisen, Vänernin ja Saimaan jälkeen. Pinta-alaa on 3 555 neliökilometriä, mutta keskisyvyys vain 7,1 metriä ja syvin kohta 15 — se on siis valtava mutta matala. Järvi on oikeastaan kolme: pohjoinen Peipsi (2 611 km²), eteläinen Pihkvan järvi (708 km²) ja niitä yhdistävä Lämmijärvi (236 km²). Siihen laskee noin kolmekymmentä jokea, joista suurimmat ovat Velikaja ja Emajoki, ja vedet lähtevät Narvajokea myöten Suomenlahteen. 5. huhtikuuta 1242 järven jäällä käytiin jäätaistelu Novgorodin tasavallan ja Saksalaisen ritarikunnan välillä. Venäjänkielinen nimi Tšudskoje ozero tarkoittaa "tšuudien järveä" — tšuudi oli vanha nimitys näillä mailla asuneille itämerensuomalaisille.
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:emajogi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emajoki (luonto · joki)
+Tietoruudun teksti: Emajoki — nimi tarkoittaa äitijokea — virtaa Võrtsjärvestä Tarton halki Peipsijärveen. Pituutta on sata kilometriä, ja Tarton läpi sitä kulkee kymmenen. Se on Virossa toiseksi suurin virtaamaltaan ja ainoa koko matkaltaan purjehduskelpoinen joki. Yläjuoksulla joki mutkittelee laajojen soiden ja tulvamaiden halki niin, ettei sillä ole selvää tulvatasannetta lainkaan, ja alajuoksulla se kulkee Emajõe Suursoon läpi ennen kuin laskee Peipsiin Praagassa. Juuri jokilaakson soisuus teki siitä myös esteen: Pohjois- ja Etelä-Viron välillä oli vain harvoja kelvollisia ylityspaikkoja, ja paras niistä oli Tarton kohdalla — siksi kaupunki syntyi juuri siihen, maa- ja vesireittien risteykseen. Isoisäsi aikaan jokea käytettiin ahkerasti tavaraliikenteeseen: Tarttoon tuotiin polttopuuta, hirsiä, heinää ja kalaa, ja työn teki lodi, pieni jokiproomu tai purjealus, joka kesti myös Peipsin.
+
+### 13.1
+KYSYMYS: Miksi Tartto syntyi juuri tähän kohtaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emajoki (luonto · joki)
+Tietoruudun teksti: Emajoki — nimi tarkoittaa äitijokea — virtaa Võrtsjärvestä Tarton halki Peipsijärveen. Pituutta on sata kilometriä, ja Tarton läpi sitä kulkee kymmenen. Se on Virossa toiseksi suurin virtaamaltaan ja ainoa koko matkaltaan purjehduskelpoinen joki. Yläjuoksulla joki mutkittelee laajojen soiden ja tulvamaiden halki niin, ettei sillä ole selvää tulvatasannetta lainkaan, ja alajuoksulla se kulkee Emajõe Suursoon läpi ennen kuin laskee Peipsiin Praagassa. Juuri jokilaakson soisuus teki siitä myös esteen: Pohjois- ja Etelä-Viron välillä oli vain harvoja kelvollisia ylityspaikkoja, ja paras niistä oli Tarton kohdalla — siksi kaupunki syntyi juuri siihen, maa- ja vesireittien risteykseen. Isoisäsi aikaan jokea käytettiin ahkerasti tavaraliikenteeseen: Tarttoon tuotiin polttopuuta, hirsiä, heinää ja kalaa, ja työn teki lodi, pieni jokiproomu tai purjealus, joka kesti myös Peipsin.
+
+### 13.2
+KYSYMYS: Mikä lodi oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emajoki (luonto · joki)
+Tietoruudun teksti: Emajoki — nimi tarkoittaa äitijokea — virtaa Võrtsjärvestä Tarton halki Peipsijärveen. Pituutta on sata kilometriä, ja Tarton läpi sitä kulkee kymmenen. Se on Virossa toiseksi suurin virtaamaltaan ja ainoa koko matkaltaan purjehduskelpoinen joki. Yläjuoksulla joki mutkittelee laajojen soiden ja tulvamaiden halki niin, ettei sillä ole selvää tulvatasannetta lainkaan, ja alajuoksulla se kulkee Emajõe Suursoon läpi ennen kuin laskee Peipsiin Praagassa. Juuri jokilaakson soisuus teki siitä myös esteen: Pohjois- ja Etelä-Viron välillä oli vain harvoja kelvollisia ylityspaikkoja, ja paras niistä oli Tarton kohdalla — siksi kaupunki syntyi juuri siihen, maa- ja vesireittien risteykseen. Isoisäsi aikaan jokea käytettiin ahkerasti tavaraliikenteeseen: Tarttoon tuotiin polttopuuta, hirsiä, heinää ja kalaa, ja työn teki lodi, pieni jokiproomu tai purjealus, joka kesti myös Peipsin.
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:kaali) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaalin kraatterit (historia)
+Tietoruudun teksti: Kaalin kylässä Saarenmaalla on yhdeksän kraatteria, ja ne ovat meteoriitin tekemiä. Tuoreimpien arvioiden mukaan isku tapahtui pian vuosien 1530–1450 eaa. jälkeen — ajoitukset vaihtelevat tutkijasta toiseen tuhansia vuosia — ja se on yksi harvoista tunnetuista törmäyksistä, jotka ovat osuneet asuttuun seutuun. Ennen 1930-lukua syntytavasta oli monta selitystä, tulivuorenpurkauksesta karstiin, kunnes Ivan Reinvald osoitti meteoriittialkuperän tutkimuksillaan 1928, 1933 ja 1937. Kappale hajosi viiden ja kymmenen kilometrin korkeuden välillä. Suurin pala teki kraatterin, jonka halkaisija on 110 metriä ja syvyys 22; sen pohjalla on nyt Kaalin järvi. Kahdeksan pienempää kraatteria, halkaisijaltaan 12–40 metriä, ovat kilometrin säteellä. Iskun energia oli noin 80 terajoulea eli suunnilleen Hiroshiman pommin verran, ja metsä paloi kuuden kilometrin säteellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yellowstone — kaupunkilehti / Yellowstone: Valokuvaaja joka todisti ihmeen] Hayden palkkasi retkikuntaansa valokuvaaja William Henry Jacksonin, jonka tehtävänä oli vangita puiston geysirit ja kuumat lähteet kameralle. Työ oli raskasta: lasilevynegatiivit, kemikaalit ja pimiöteltta kulkivat muulien selässä, ja jokainen kuva piti kehittää paikan päällä tuoreeltaan, ennen kuin emulsio ehti kuivua. Jacksonin kuvat olivat ensimmäiset koskaan otetut valokuvat Yellowstonen ihmeistä, ja niitä käytettiin todisteena, kun kongressille esiteltiin lakiehdotusta puiston perustamisesta. Toisin kuin kertomuksia, valokuvia ei voinut leimata liioitteluksi — ne osoittivat mustavalkoisen kiistattomasti, että geysirit ja terassit olivat totta.
+- [Madagaskar — maalehti / Musiikki: Kaksisataayhdeksänkymmentä iskua minuutissa] 1950-luvulta — Salegy syntyi luoteisrannikolla Mahajangan ja Antsirananan seudulla 1950-luvulla, kun rituaaleissa soitettu antsa sai sähkökitarat. Tempo on noin 290 iskua minuutissa, ja soitinnuksessa ovat helisevä kitara, oikea tai syntetisoitu haitari, sähköbasso, rumpusetti, djembe ja helistimet. Keskellä kappaletta on aina folaka, "katkennut", lähes soitinvoittoinen jakso, jonka aikana laulajat ja yleisö taputtavat päällekkäisiä rytmejä. Eusèbe Jaojoby syntyi 1955 sakalavaperheeseen Sambavan lähellä ja lauloi Diego-Suarezissa 1970-luvun alusta yhtyeissä, jotka sekoittivat souliä ja funkia paikalliseen perinteeseen. Häntä sanotaan salegyn kuninkaaksi.
+
+### 14.1
+KYSYMYS: Kuka todisti kraatterin syntytavan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaalin kraatterit (historia)
+Tietoruudun teksti: Kaalin kylässä Saarenmaalla on yhdeksän kraatteria, ja ne ovat meteoriitin tekemiä. Tuoreimpien arvioiden mukaan isku tapahtui pian vuosien 1530–1450 eaa. jälkeen — ajoitukset vaihtelevat tutkijasta toiseen tuhansia vuosia — ja se on yksi harvoista tunnetuista törmäyksistä, jotka ovat osuneet asuttuun seutuun. Ennen 1930-lukua syntytavasta oli monta selitystä, tulivuorenpurkauksesta karstiin, kunnes Ivan Reinvald osoitti meteoriittialkuperän tutkimuksillaan 1928, 1933 ja 1937. Kappale hajosi viiden ja kymmenen kilometrin korkeuden välillä. Suurin pala teki kraatterin, jonka halkaisija on 110 metriä ja syvyys 22; sen pohjalla on nyt Kaalin järvi. Kahdeksan pienempää kraatteria, halkaisijaltaan 12–40 metriä, ovat kilometrin säteellä. Iskun energia oli noin 80 terajoulea eli suunnilleen Hiroshiman pommin verran, ja metsä paloi kuuden kilometrin säteellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yellowstone — kaupunkilehti / Yellowstone: Valokuvaaja joka todisti ihmeen] Hayden palkkasi retkikuntaansa valokuvaaja William Henry Jacksonin, jonka tehtävänä oli vangita puiston geysirit ja kuumat lähteet kameralle. Työ oli raskasta: lasilevynegatiivit, kemikaalit ja pimiöteltta kulkivat muulien selässä, ja jokainen kuva piti kehittää paikan päällä tuoreeltaan, ennen kuin emulsio ehti kuivua. Jacksonin kuvat olivat ensimmäiset koskaan otetut valokuvat Yellowstonen ihmeistä, ja niitä käytettiin todisteena, kun kongressille esiteltiin lakiehdotusta puiston perustamisesta. Toisin kuin kertomuksia, valokuvia ei voinut leimata liioitteluksi — ne osoittivat mustavalkoisen kiistattomasti, että geysirit ja terassit olivat totta.
+
+### 14.2
+KYSYMYS: Kuinka kova isku oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaalin kraatterit (historia)
+Tietoruudun teksti: Kaalin kylässä Saarenmaalla on yhdeksän kraatteria, ja ne ovat meteoriitin tekemiä. Tuoreimpien arvioiden mukaan isku tapahtui pian vuosien 1530–1450 eaa. jälkeen — ajoitukset vaihtelevat tutkijasta toiseen tuhansia vuosia — ja se on yksi harvoista tunnetuista törmäyksistä, jotka ovat osuneet asuttuun seutuun. Ennen 1930-lukua syntytavasta oli monta selitystä, tulivuorenpurkauksesta karstiin, kunnes Ivan Reinvald osoitti meteoriittialkuperän tutkimuksillaan 1928, 1933 ja 1937. Kappale hajosi viiden ja kymmenen kilometrin korkeuden välillä. Suurin pala teki kraatterin, jonka halkaisija on 110 metriä ja syvyys 22; sen pohjalla on nyt Kaalin järvi. Kahdeksan pienempää kraatteria, halkaisijaltaan 12–40 metriä, ovat kilometrin säteellä. Iskun energia oli noin 80 terajoulea eli suunnilleen Hiroshiman pommin verran, ja metsä paloi kuuden kilometrin säteellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madagaskar — maalehti / Musiikki: Kaksisataayhdeksänkymmentä iskua minuutissa] 1950-luvulta — Salegy syntyi luoteisrannikolla Mahajangan ja Antsirananan seudulla 1950-luvulla, kun rituaaleissa soitettu antsa sai sähkökitarat. Tempo on noin 290 iskua minuutissa, ja soitinnuksessa ovat helisevä kitara, oikea tai syntetisoitu haitari, sähköbasso, rumpusetti, djembe ja helistimet. Keskellä kappaletta on aina folaka, "katkennut", lähes soitinvoittoinen jakso, jonka aikana laulajat ja yleisö taputtavat päällekkäisiä rytmejä. Eusèbe Jaojoby syntyi 1955 sakalavaperheeseen Sambavan lähellä ja lauloi Diego-Suarezissa 1970-luvun alusta yhtyeissä, jotka sekoittivat souliä ja funkia paikalliseen perinteeseen. Häntä sanotaan salegyn kuninkaaksi.
+- [Uganda — maalehti / Tavat: Satoja iskuja, satoja merkityksiä] Bugandassa viestit kulkivat rummuilla. Rumpukielessä oli satoja eri iskukuvioita, ja jokaisella oli oma merkityksensä, joten tieto liikkui kuningaskunnan halki lähes hetkessä — nopeammin kuin kukaan olisi ehtinyt juosta. Jokaisella päälliköllä oli oma sotahuutonsa ja oma rumpukuvionsa, jolla hänet tunnistettiin. Rumpu ei siis ollut vain soitin vaan tunnus ja tiedotusväline yhtä aikaa, ja kuninkaalliset rummut olivat kuningaskunnan pyhimpiä esineitä.
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:haapsalu) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Haapsalu (kulttuuri)
+Tietoruudun teksti: Haapsalu on kylpyläkaupunki Viron länsirannikolla. Nimi tulee sanoista haab eli haapa ja salu, joka vanhassa merkityksessään tarkoitti metsäistä saarta. Ruotsiksi ja saksaksi kaupunki oli pitkään Hapsal, ja se oli 1200-luvulta 1900-luvun alkupuolelle asti rannikkoruotsalaisten keskuspaikka. Ensimmäinen maininta on vuodelta 1279, jolloin kaupunki sai oikeutensa ja siitä tuli Saare-Lääne piispakunnan pääpaikka seuraavaksi kolmeksi vuosisadaksi; piispanlinna on yhä pystyssä, ja sen kirkko on Viron suurin yksilaivainen. Foggin aikaan kaupunki eli kuitenkin aivan muusta. Sotilaslääkäri Carl Abraham Hunnius perusti vuonna 1825 ensimmäisen mutahoitolan, ja tieto parantavasta merimudasta levisi nopeasti Pietarin varakkaaseen väkeen ja muualle keisarikuntaan — hoidoissa kävi myös keisarillinen Romanovien perhe.
+
+### 15.1
+KYSYMYS: Kuka perusti mutakylpylän?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Haapsalu (kulttuuri)
+Tietoruudun teksti: Haapsalu on kylpyläkaupunki Viron länsirannikolla. Nimi tulee sanoista haab eli haapa ja salu, joka vanhassa merkityksessään tarkoitti metsäistä saarta. Ruotsiksi ja saksaksi kaupunki oli pitkään Hapsal, ja se oli 1200-luvulta 1900-luvun alkupuolelle asti rannikkoruotsalaisten keskuspaikka. Ensimmäinen maininta on vuodelta 1279, jolloin kaupunki sai oikeutensa ja siitä tuli Saare-Lääne piispakunnan pääpaikka seuraavaksi kolmeksi vuosisadaksi; piispanlinna on yhä pystyssä, ja sen kirkko on Viron suurin yksilaivainen. Foggin aikaan kaupunki eli kuitenkin aivan muusta. Sotilaslääkäri Carl Abraham Hunnius perusti vuonna 1825 ensimmäisen mutahoitolan, ja tieto parantavasta merimudasta levisi nopeasti Pietarin varakkaaseen väkeen ja muualle keisarikuntaan — hoidoissa kävi myös keisarillinen Romanovien perhe.
+
+### 15.2
+KYSYMYS: Mistä Haapsalun nimi tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Haapsalu (kulttuuri)
+Tietoruudun teksti: Haapsalu on kylpyläkaupunki Viron länsirannikolla. Nimi tulee sanoista haab eli haapa ja salu, joka vanhassa merkityksessään tarkoitti metsäistä saarta. Ruotsiksi ja saksaksi kaupunki oli pitkään Hapsal, ja se oli 1200-luvulta 1900-luvun alkupuolelle asti rannikkoruotsalaisten keskuspaikka. Ensimmäinen maininta on vuodelta 1279, jolloin kaupunki sai oikeutensa ja siitä tuli Saare-Lääne piispakunnan pääpaikka seuraavaksi kolmeksi vuosisadaksi; piispanlinna on yhä pystyssä, ja sen kirkko on Viron suurin yksilaivainen. Foggin aikaan kaupunki eli kuitenkin aivan muusta. Sotilaslääkäri Carl Abraham Hunnius perusti vuonna 1825 ensimmäisen mutahoitolan, ja tieto parantavasta merimudasta levisi nopeasti Pietarin varakkaaseen väkeen ja muualle keisarikuntaan — hoidoissa kävi myös keisarillinen Romanovien perhe.
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

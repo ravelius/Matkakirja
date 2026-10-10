@@ -1,0 +1,198 @@
+================ KOHTA 26 (kohde:hahmotelma-otepaa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Otepää (luonto · järvi)
+Tietoruudun teksti: Otepää on kaupunki Etelä-Virossa Otepään ylängöllä, jonka kumpuilevassa maastossa on lukuisia järviä, kuten Pühajärv. Nimi tarkoittaa etelävirossa "Otin päätä", ja ott on kiertoilmaus karhulle. Paikalla oli muinaislinnake, jonka saksalaiset ristiretkeläiset valloittivat vuonna 1224, ja piispa Hermann rakennutti sinne Viron ensimmäisen kivilinnan. Linnan raunioista on löydetty Euroopan vanhin säilynyt tuliase, jonka ajoitetaan vuoteen 1396 tai sitä aiemmaksi. Asutus sai nimen Nuustaku vuonna 1862, ja nykyisen nimensä se sai vasta 1922. Nuustakun kirkossa vihittiin vuonna 1884 lippu, josta tuli Viron kansallislippu.
+
+### 26.1
+KYSYMYS: Miksi Otepään linnan raunioista löytynyt tuliase on niin merkittävä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Otepää (luonto · järvi)
+Tietoruudun teksti: Otepää on kaupunki Etelä-Virossa Otepään ylängöllä, jonka kumpuilevassa maastossa on lukuisia järviä, kuten Pühajärv. Nimi tarkoittaa etelävirossa "Otin päätä", ja ott on kiertoilmaus karhulle. Paikalla oli muinaislinnake, jonka saksalaiset ristiretkeläiset valloittivat vuonna 1224, ja piispa Hermann rakennutti sinne Viron ensimmäisen kivilinnan. Linnan raunioista on löydetty Euroopan vanhin säilynyt tuliase, jonka ajoitetaan vuoteen 1396 tai sitä aiemmaksi. Asutus sai nimen Nuustaku vuonna 1862, ja nykyisen nimensä se sai vasta 1922. Nuustakun kirkossa vihittiin vuonna 1884 lippu, josta tuli Viron kansallislippu.
+
+### 26.2
+KYSYMYS: Miksi Otepäätä kutsutaan Viron talvipääkaupungiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Otepää (luonto · järvi)
+Tietoruudun teksti: Otepää on kaupunki Etelä-Virossa Otepään ylängöllä, jonka kumpuilevassa maastossa on lukuisia järviä, kuten Pühajärv. Nimi tarkoittaa etelävirossa "Otin päätä", ja ott on kiertoilmaus karhulle. Paikalla oli muinaislinnake, jonka saksalaiset ristiretkeläiset valloittivat vuonna 1224, ja piispa Hermann rakennutti sinne Viron ensimmäisen kivilinnan. Linnan raunioista on löydetty Euroopan vanhin säilynyt tuliase, jonka ajoitetaan vuoteen 1396 tai sitä aiemmaksi. Asutus sai nimen Nuustaku vuonna 1862, ja nykyisen nimensä se sai vasta 1922. Nuustakun kirkossa vihittiin vuonna 1884 lippu, josta tuli Viron kansallislippu.
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-viljandi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Viljandi (historia)
+Tietoruudun teksti: Viljandi on Etelä-Viron kaupunki Viljandi-järven luoteisrannalla Pärnun ja Tartun välissä. Paikan muinaislinnakkeen ensimmäinen kirjallinen maininta on vuodelta 1154, ja Kalparitarikunta valtasi linnakkeen vuonna 1223. Sen paikalle rakennettiin Viljandin (saksaksi Fellin) linna, joka oli yksi Baltian suurimmista ja ritarikunnan tärkeä tukikohta. Kaupunki liittyi 1300-luvulla Hansaliittoon, sillä se oli kauppiaiden pysähdyspaikka matkalla Venäjälle. Linna ja kaupunki tuhoutuivat sodissa, ja Viljandista tuli Katariina II:n uudistusten myötä piirikuntakaupunki vuonna 1783. Nykyään linnan raunioissa toimii perinnemusiikin keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Keksinnöt: Kuningas katsoi, kun kori nousi taivaalle] 1783 — Veljekset Joseph ja Étienne Montgolfier tekivät paperia Annonayn kaupungissa. Joseph huomasi, että tulen yllä kuivuva pyykki pullistui ylöspäin, ja veljekset alkoivat rakentaa kangaspalloja, jotka nousivat kuuman ilman varassa. Ennen kuin kukaan uskalsi nousta itse, oli kokeiltava eläimillä. 19. syyskuuta 1783 pallo nousi Versailles'n linnan pihalta kuninkaan ja väkijoukon edessä, ja korissa matkusti kolme eläintä: lammas, ankka ja kukko. Lento kesti kahdeksan minuuttia ja vei matkustajat kolmen kilometrin päähän. Kaikki selvisivät.
+- [Buenos Aires — kohdekartta / Kohdekartta: Santo Domingon luostari] 1751–1805 Dominikaanit olivat asuneet tontilla vuodesta 1606, mutta nykyisen kirkon rakentaminen alkoi vasta 1751 arkkitehti Antonio Masellan piirustusten mukaan — saman miehen, joka aloitti kaksi vuotta myöhemmin myös katedraalin rakentamisen. Peruskivi laskettiin 29. kesäkuuta, ja työ eteni nykien, koska suunnittelija ja sääntökunta olivat eri mieltä. Vuosina 1762–1779 hanketta rahoitti ja johti Juan de Lezica y Torrezuri. Keskeneräinen kirkko vihittiin 17. lokakuuta 1783 ja torni valmistui seuraavana vuonna; luostarin rakentaminen alkoi 1792 ja päättyi 1805. Kesäkuun 27. päivänä 1806 kenraali William Beresfordin brittijoukot valtasivat Buenos Airesin. Heinäkuun 1. päivänä kapteeni Santia…
+
+### 27.1
+KYSYMYS: Millaiset sodat jättivät Viljandin suuren linnan raunioiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Viljandi (historia)
+Tietoruudun teksti: Viljandi on Etelä-Viron kaupunki Viljandi-järven luoteisrannalla Pärnun ja Tartun välissä. Paikan muinaislinnakkeen ensimmäinen kirjallinen maininta on vuodelta 1154, ja Kalparitarikunta valtasi linnakkeen vuonna 1223. Sen paikalle rakennettiin Viljandin (saksaksi Fellin) linna, joka oli yksi Baltian suurimmista ja ritarikunnan tärkeä tukikohta. Kaupunki liittyi 1300-luvulla Hansaliittoon, sillä se oli kauppiaiden pysähdyspaikka matkalla Venäjälle. Linna ja kaupunki tuhoutuivat sodissa, ja Viljandista tuli Katariina II:n uudistusten myötä piirikuntakaupunki vuonna 1783. Nykyään linnan raunioissa toimii perinnemusiikin keskus.
+
+### 27.2
+KYSYMYS: Miksi Viljandi oli pitkään ilman kaupunkioikeuksia, ja mikä muuttui vuonna 1783?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Viljandi (historia)
+Tietoruudun teksti: Viljandi on Etelä-Viron kaupunki Viljandi-järven luoteisrannalla Pärnun ja Tartun välissä. Paikan muinaislinnakkeen ensimmäinen kirjallinen maininta on vuodelta 1154, ja Kalparitarikunta valtasi linnakkeen vuonna 1223. Sen paikalle rakennettiin Viljandin (saksaksi Fellin) linna, joka oli yksi Baltian suurimmista ja ritarikunnan tärkeä tukikohta. Kaupunki liittyi 1300-luvulla Hansaliittoon, sillä se oli kauppiaiden pysähdyspaikka matkalla Venäjälle. Linna ja kaupunki tuhoutuivat sodissa, ja Viljandista tuli Katariina II:n uudistusten myötä piirikuntakaupunki vuonna 1783. Nykyään linnan raunioissa toimii perinnemusiikin keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Keksinnöt: Kuningas katsoi, kun kori nousi taivaalle] 1783 — Veljekset Joseph ja Étienne Montgolfier tekivät paperia Annonayn kaupungissa. Joseph huomasi, että tulen yllä kuivuva pyykki pullistui ylöspäin, ja veljekset alkoivat rakentaa kangaspalloja, jotka nousivat kuuman ilman varassa. Ennen kuin kukaan uskalsi nousta itse, oli kokeiltava eläimillä. 19. syyskuuta 1783 pallo nousi Versailles'n linnan pihalta kuninkaan ja väkijoukon edessä, ja korissa matkusti kolme eläintä: lammas, ankka ja kukko. Lento kesti kahdeksan minuuttia ja vei matkustajat kolmen kilometrin päähän. Kaikki selvisivät.
+- [Buenos Aires — kohdekartta / Kohdekartta: Santo Domingon luostari] 1751–1805 Dominikaanit olivat asuneet tontilla vuodesta 1606, mutta nykyisen kirkon rakentaminen alkoi vasta 1751 arkkitehti Antonio Masellan piirustusten mukaan — saman miehen, joka aloitti kaksi vuotta myöhemmin myös katedraalin rakentamisen. Peruskivi laskettiin 29. kesäkuuta, ja työ eteni nykien, koska suunnittelija ja sääntökunta olivat eri mieltä. Vuosina 1762–1779 hanketta rahoitti ja johti Juan de Lezica y Torrezuri. Keskeneräinen kirkko vihittiin 17. lokakuuta 1783 ja torni valmistui seuraavana vuonna; luostarin rakentaminen alkoi 1792 ja päättyi 1805. Kesäkuun 27. päivänä 1806 kenraali William Beresfordin brittijoukot valtasivat Buenos Airesin. Heinäkuun 1. päivänä kapteeni Santia…
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-paldiski) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paldiski (historia)
+Tietoruudun teksti: Paldiski on rannikkokaupunki Luoteis-Virossa Pakrin niemimaalla Suomenlahden rannalla. Alueen ensimmäinen tunnettu nimi oli ruotsalainen Rågervik, "ruissaarten lahti". Pietari Suuri päätti vuonna 1715 rakentaa lahden rannalle uuden sotalaivastosataman, ja työt aloitettiin seremonialla 1718; suunnitelmaan kuuluivat linnoitus, aallonmurtaja ja majakka. Työt hidastuivat keisarin kuoleman jälkeen ja pysähtyivät 1730-luvun alkuun mennessä, ja Katariina Suuri antoi satamalle vuonna 1762 nimen Baltiiski Port, "Itämeren satama". Kaupunki sai kaupunkioikeudet 1783. Vuonna 1870 valmistui rautatie Pietarista Tallinnan kautta Paldiskiin, jotta sataman jäätömyyttä voitiin hyödyntää tavaroiden kuljetuksessa Pietariin. Nykyään satamista lähtee lauttoja Ruotsiin.
+
+### 28.1
+KYSYMYS: Miksi Paldiskin linnoitus ja satama jäivät kesken Pietari Suuren kuoleman jälkeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paldiski (historia)
+Tietoruudun teksti: Paldiski on rannikkokaupunki Luoteis-Virossa Pakrin niemimaalla Suomenlahden rannalla. Alueen ensimmäinen tunnettu nimi oli ruotsalainen Rågervik, "ruissaarten lahti". Pietari Suuri päätti vuonna 1715 rakentaa lahden rannalle uuden sotalaivastosataman, ja työt aloitettiin seremonialla 1718; suunnitelmaan kuuluivat linnoitus, aallonmurtaja ja majakka. Työt hidastuivat keisarin kuoleman jälkeen ja pysähtyivät 1730-luvun alkuun mennessä, ja Katariina Suuri antoi satamalle vuonna 1762 nimen Baltiiski Port, "Itämeren satama". Kaupunki sai kaupunkioikeudet 1783. Vuonna 1870 valmistui rautatie Pietarista Tallinnan kautta Paldiskiin, jotta sataman jäätömyyttä voitiin hyödyntää tavaroiden kuljetuksessa Pietariin. Nykyään satamista lähtee lauttoja Ruotsiin.
+
+### 28.2
+KYSYMYS: Miksi Pietari Suuri valitsi uuden sotasatamansa paikaksi juuri Rågervikin lahden?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paldiski (historia)
+Tietoruudun teksti: Paldiski on rannikkokaupunki Luoteis-Virossa Pakrin niemimaalla Suomenlahden rannalla. Alueen ensimmäinen tunnettu nimi oli ruotsalainen Rågervik, "ruissaarten lahti". Pietari Suuri päätti vuonna 1715 rakentaa lahden rannalle uuden sotalaivastosataman, ja työt aloitettiin seremonialla 1718; suunnitelmaan kuuluivat linnoitus, aallonmurtaja ja majakka. Työt hidastuivat keisarin kuoleman jälkeen ja pysähtyivät 1730-luvun alkuun mennessä, ja Katariina Suuri antoi satamalle vuonna 1762 nimen Baltiiski Port, "Itämeren satama". Kaupunki sai kaupunkioikeudet 1783. Vuonna 1870 valmistui rautatie Pietarista Tallinnan kautta Paldiskiin, jotta sataman jäätömyyttä voitiin hyödyntää tavaroiden kuljetuksessa Pietariin. Nykyään satamista lähtee lauttoja Ruotsiin.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-padise) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Padisen luostari (historia)
+Tietoruudun teksti: Padisen luostari oli kistersiläisluostari Harjumaalla Pohjois-Virossa. Sen munkit menettivät aiemman luostarinsa Dünamündessä Latviassa, kun Saksalainen ritarikunta otti sen haltuunsa vuonna 1305, ja he asettuivat Padiseen vuonna 1310 Tanskan kuninkaan luvalla. Kivirakennusten työt alkoivat vasta 1317, ja luostarista tuli 1400-luvulla yksi Viron tärkeimmistä hengellisistä keskuksista, jolla oli maita myös Etelä-Suomessa. Liivinmaan sodassa ritarikunnan mestari Gotthard Kettler lakkautti luostarin vuonna 1559 ja muutti sen linnoitukseksi peläten ruotsalaisten valtaavan sen. Vuodesta 1622 alue oli Ramm-suvun hallussa; suku rakensi luostarin tiloihin barokkikartanon, joka paloi salaman iskusta 1766. Rauniot avattiin uudelleen museona vuonna 2020 kunnostuksen jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Castel Sant’Angelo] 135–139 Linna ei ollut alkujaan linna lainkaan, vaan valtava hauta. Keisari Hadrianus rakennutti sen itselleen ja perheelleen mausoleumiksi vuosina 135–139 — hänen vaimonsa Sabina ja ottopoikansa Lucius Aelius haudattiin sinne ensimmäisinä. Vuosisatoja myöhemmin paavit muuttivat rakennuksen linnoitukseksi, ja siitä rakennettiin suoraan Pietarinkirkolle johtava salainen katettu käytävä, Passetto di Borgo, jota pitkin paavi pääsi tarvittaessa pakenemaan vaaran uhatessa. Linnan huipulla seisoo pronssinen enkelipatsas. Legendan mukaan arkkienkeli Mikael ilmestyi katolle, tuppesi miekkansa ja lopetti näin kauhean ruttoepidemian. Ensimmäinen enkelipatsas nousi katolle 1536, ja nykyinen pronssiver…
+- [Helsinki — kohdekartta / Kohdekartta: Kallion kirkko] 1908–1912 Kallion kirkko nousee jyrkän mäen päälle keskelle vanhaa työväen kaupunginosaa. Lars Sonck suunnitteli sen kansallisromantiikan hengessä: kantavat seinät muurattiin punatiilestä ja verhoiltiin karkeaksi jätetyllä suomalaisella graniitilla, jota louhittiin Uudenkaupungin seudulta. Peruskivi laskettiin 13. heinäkuuta 1908, ja kirkko vihittiin käyttöön 1. syyskuuta 1912. Torni on 65 metriä korkea ja ristin huippu 94 metriä merenpinnan yläpuolella. Kirkko sulkee 2,5 kilometrin pituisen suoran katulinjan, joka kulkee etelästä Unioninkatua ja Siltasaarenkatua pitkin suoraan kirkon ovelle. Torni on ollut muutakin kuin kellotapuli: itsenäistymisen aikoihin tolstoilaiset ottivat kirkon tuk…
+
+### 29.1
+KYSYMYS: Miksi Padisen luostari muutettiin linnoitukseksi vuonna 1559?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Padisen luostari (historia)
+Tietoruudun teksti: Padisen luostari oli kistersiläisluostari Harjumaalla Pohjois-Virossa. Sen munkit menettivät aiemman luostarinsa Dünamündessä Latviassa, kun Saksalainen ritarikunta otti sen haltuunsa vuonna 1305, ja he asettuivat Padiseen vuonna 1310 Tanskan kuninkaan luvalla. Kivirakennusten työt alkoivat vasta 1317, ja luostarista tuli 1400-luvulla yksi Viron tärkeimmistä hengellisistä keskuksista, jolla oli maita myös Etelä-Suomessa. Liivinmaan sodassa ritarikunnan mestari Gotthard Kettler lakkautti luostarin vuonna 1559 ja muutti sen linnoitukseksi peläten ruotsalaisten valtaavan sen. Vuodesta 1622 alue oli Ramm-suvun hallussa; suku rakensi luostarin tiloihin barokkikartanon, joka paloi salaman iskusta 1766. Rauniot avattiin uudelleen museona vuonna 2020 kunnostuksen jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Castel Sant’Angelo] 135–139 Linna ei ollut alkujaan linna lainkaan, vaan valtava hauta. Keisari Hadrianus rakennutti sen itselleen ja perheelleen mausoleumiksi vuosina 135–139 — hänen vaimonsa Sabina ja ottopoikansa Lucius Aelius haudattiin sinne ensimmäisinä. Vuosisatoja myöhemmin paavit muuttivat rakennuksen linnoitukseksi, ja siitä rakennettiin suoraan Pietarinkirkolle johtava salainen katettu käytävä, Passetto di Borgo, jota pitkin paavi pääsi tarvittaessa pakenemaan vaaran uhatessa. Linnan huipulla seisoo pronssinen enkelipatsas. Legendan mukaan arkkienkeli Mikael ilmestyi katolle, tuppesi miekkansa ja lopetti näin kauhean ruttoepidemian. Ensimmäinen enkelipatsas nousi katolle 1536, ja nykyinen pronssiver…
+
+### 29.2
+KYSYMYS: Miksi Padisen munkit muuttivat Latviasta Viroon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Padisen luostari (historia)
+Tietoruudun teksti: Padisen luostari oli kistersiläisluostari Harjumaalla Pohjois-Virossa. Sen munkit menettivät aiemman luostarinsa Dünamündessä Latviassa, kun Saksalainen ritarikunta otti sen haltuunsa vuonna 1305, ja he asettuivat Padiseen vuonna 1310 Tanskan kuninkaan luvalla. Kivirakennusten työt alkoivat vasta 1317, ja luostarista tuli 1400-luvulla yksi Viron tärkeimmistä hengellisistä keskuksista, jolla oli maita myös Etelä-Suomessa. Liivinmaan sodassa ritarikunnan mestari Gotthard Kettler lakkautti luostarin vuonna 1559 ja muutti sen linnoitukseksi peläten ruotsalaisten valtaavan sen. Vuodesta 1622 alue oli Ramm-suvun hallussa; suku rakensi luostarin tiloihin barokkikartanon, joka paloi salaman iskusta 1766. Rauniot avattiin uudelleen museona vuonna 2020 kunnostuksen jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Helsinki — kohdekartta / Kohdekartta: Kallion kirkko] 1908–1912 Kallion kirkko nousee jyrkän mäen päälle keskelle vanhaa työväen kaupunginosaa. Lars Sonck suunnitteli sen kansallisromantiikan hengessä: kantavat seinät muurattiin punatiilestä ja verhoiltiin karkeaksi jätetyllä suomalaisella graniitilla, jota louhittiin Uudenkaupungin seudulta. Peruskivi laskettiin 13. heinäkuuta 1908, ja kirkko vihittiin käyttöön 1. syyskuuta 1912. Torni on 65 metriä korkea ja ristin huippu 94 metriä merenpinnan yläpuolella. Kirkko sulkee 2,5 kilometrin pituisen suoran katulinjan, joka kulkee etelästä Unioninkatua ja Siltasaarenkatua pitkin suoraan kirkon ovelle. Torni on ollut muutakin kuin kellotapuli: itsenäistymisen aikoihin tolstoilaiset ottivat kirkon tuk…
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-koluvere) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koluveren linna (historia)
+Tietoruudun teksti: Koluveren linna sijaitsee Länsi-Virossa Läänemaalla, ja paikalla on ollut linnoitus jo 1200-luvulta. Vuonna 1439 se siirtyi Saare-Läänen piispalle ja oli yksi hänen pääasunnoistaan. Linna on rakennettu tekosaarelle, joka syntyi Liivi-joen padotun osan keskelle, ja sen korkea nelikulmainen torni on luultavasti peräisin 1200-luvun alusta, joten se on yksi Viron vanhimmista linnantorneista. Tuliaseiden yleistyttyä linnaan lisättiin 1500-luvulla suuri pyöreä tykkitorni. Kun linna menetti sotilaallisen merkityksensä, siitä tehtiin mukava aatelisasunto: sisätilat sisustettiin 1770 tienoilla rokokoo-tyyliin ja 1800-luvulla uusgoottilaisiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kaupunkilehti / Linnoitukset: Vaakunan kolme linnaa] Havannan vaakunassa on kolme linnaa: Real Fuerza, Morro ja Punta, kaupunkia puolustanut kolmikko. Keskellä oleva avain kertoo, että Havanna oli portti Uuteen maailmaan, ja kilpeä kannattelevat tammenoksa ja laakeriseppele – edellinen voimana, jälkimmäinen kunniana ja maineena. Nuorin kolmesta on Punta: vartiomiehiä asetettiin paikalle 1559, mutta muurien rakentaminen alkoi vasta 1590 ja edistyi hitaasti. Vuoden 1595 hirmumyrsky repi liian ohuet muurit niin pahoin, että ne tehtiin uudestaan paksummiksi, ja 1602 mennessä työ oli niin myöhässä, että linnasta tehtiin pelkkä tykkitorni.
+
+### 30.1
+KYSYMYS: Miksi Koluveren linna on rakennettu tekosaarelle joen keskelle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koluveren linna (historia)
+Tietoruudun teksti: Koluveren linna sijaitsee Länsi-Virossa Läänemaalla, ja paikalla on ollut linnoitus jo 1200-luvulta. Vuonna 1439 se siirtyi Saare-Läänen piispalle ja oli yksi hänen pääasunnoistaan. Linna on rakennettu tekosaarelle, joka syntyi Liivi-joen padotun osan keskelle, ja sen korkea nelikulmainen torni on luultavasti peräisin 1200-luvun alusta, joten se on yksi Viron vanhimmista linnantorneista. Tuliaseiden yleistyttyä linnaan lisättiin 1500-luvulla suuri pyöreä tykkitorni. Kun linna menetti sotilaallisen merkityksensä, siitä tehtiin mukava aatelisasunto: sisätilat sisustettiin 1770 tienoilla rokokoo-tyyliin ja 1800-luvulla uusgoottilaisiksi.
+
+### 30.2
+KYSYMYS: Miksi linnaan lisättiin 1500-luvulla suuri pyöreä tykkitorni vanhan tornin viereen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koluveren linna (historia)
+Tietoruudun teksti: Koluveren linna sijaitsee Länsi-Virossa Läänemaalla, ja paikalla on ollut linnoitus jo 1200-luvulta. Vuonna 1439 se siirtyi Saare-Läänen piispalle ja oli yksi hänen pääasunnoistaan. Linna on rakennettu tekosaarelle, joka syntyi Liivi-joen padotun osan keskelle, ja sen korkea nelikulmainen torni on luultavasti peräisin 1200-luvun alusta, joten se on yksi Viron vanhimmista linnantorneista. Tuliaseiden yleistyttyä linnaan lisättiin 1500-luvulla suuri pyöreä tykkitorni. Kun linna menetti sotilaallisen merkityksensä, siitä tehtiin mukava aatelisasunto: sisätilat sisustettiin 1770 tienoilla rokokoo-tyyliin ja 1800-luvulla uusgoottilaisiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kaupunkilehti / Linnoitukset: Vaakunan kolme linnaa] Havannan vaakunassa on kolme linnaa: Real Fuerza, Morro ja Punta, kaupunkia puolustanut kolmikko. Keskellä oleva avain kertoo, että Havanna oli portti Uuteen maailmaan, ja kilpeä kannattelevat tammenoksa ja laakeriseppele – edellinen voimana, jälkimmäinen kunniana ja maineena. Nuorin kolmesta on Punta: vartiomiehiä asetettiin paikalle 1559, mutta muurien rakentaminen alkoi vasta 1590 ja edistyi hitaasti. Vuoden 1595 hirmumyrsky repi liian ohuet muurit niin pahoin, että ne tehtiin uudestaan paksummiksi, ja 1602 mennessä työ oli niin myöhässä, että linnasta tehtiin pelkkä tykkitorni.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI

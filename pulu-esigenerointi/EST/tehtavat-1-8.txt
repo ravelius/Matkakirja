@@ -1,0 +1,201 @@
+================ KOHTA 36 (kohde:hahmotelma-voru) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võru (kulttuuri)
+Tietoruudun teksti: Võru on kaupunki Kaakkois-Virossa Tamula-järven rannalla, ja se on Võrumaan maakunnan keskus. Kaupunki perustettiin 21. elokuuta 1784 keisarinna Katariina II:n pyynnöstä uuden piirikunnan keskukseksi, ja vuodesta 1797 lähtien se on ollut ympäristön hallintokeskus. Lääkäri Friedrich Reinhold Kreutzwald asui ja työskenteli Võrussa vuosina 1833–1877, ja täällä hän kirjoitti Viron kansalliseepoksen Kalevipoegin. Kaupungin nimi on võron kielellä Võro, ja siellä toimivat Kreutzwaldin muistomuseo sekä Võro-instituutti. Võrun kansanperinnefestivaali on järjestetty joka heinäkuu vuodesta 1995.
+
+### 36.1
+KYSYMYS: Miksi vironkielinen kansalliseepos syntyi juuri pienessä Võrun kaupungissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võru (kulttuuri)
+Tietoruudun teksti: Võru on kaupunki Kaakkois-Virossa Tamula-järven rannalla, ja se on Võrumaan maakunnan keskus. Kaupunki perustettiin 21. elokuuta 1784 keisarinna Katariina II:n pyynnöstä uuden piirikunnan keskukseksi, ja vuodesta 1797 lähtien se on ollut ympäristön hallintokeskus. Lääkäri Friedrich Reinhold Kreutzwald asui ja työskenteli Võrussa vuosina 1833–1877, ja täällä hän kirjoitti Viron kansalliseepoksen Kalevipoegin. Kaupungin nimi on võron kielellä Võro, ja siellä toimivat Kreutzwaldin muistomuseo sekä Võro-instituutti. Võrun kansanperinnefestivaali on järjestetty joka heinäkuu vuodesta 1995.
+
+### 36.2
+KYSYMYS: Miksi Võru perustettiin vasta vuonna 1784, ja kenen käskystä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võru (kulttuuri)
+Tietoruudun teksti: Võru on kaupunki Kaakkois-Virossa Tamula-järven rannalla, ja se on Võrumaan maakunnan keskus. Kaupunki perustettiin 21. elokuuta 1784 keisarinna Katariina II:n pyynnöstä uuden piirikunnan keskukseksi, ja vuodesta 1797 lähtien se on ollut ympäristön hallintokeskus. Lääkäri Friedrich Reinhold Kreutzwald asui ja työskenteli Võrussa vuosina 1833–1877, ja täällä hän kirjoitti Viron kansalliseepoksen Kalevipoegin. Kaupungin nimi on võron kielellä Võro, ja siellä toimivat Kreutzwaldin muistomuseo sekä Võro-instituutti. Võrun kansanperinnefestivaali on järjestetty joka heinäkuu vuodesta 1995.
+
+### 36.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+================ KOHTA 37 (kohde:hahmotelma-suure-jaani) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suure-Jaani (kulttuuri)
+Tietoruudun teksti: Suure-Jaani on pikkukaupunki Viljandimaan pohjoisosassa, noin 25 kilometriä Viljandista pohjoiseen. Se kasvoi Suuren Johanneksen evankeliumin kirkon ympärille; kirkko on rakennettu ennen vuotta 1300, se paloi Pohjan sodassa vuonna 1703, ja sen korjaus valmistui vasta vuonna 1767. Nimi tarkoittaa suunnilleen "Suuren Juhanan" paikkaa, ja se vakiintui koko asutukselle vasta 1880-luvulla. 1800-luvun kansallisen heräämisen aikana pitäjä oli kulttuurin ja sivistyksen keskus koulumestari ja muusikko Joosep Kappin ansiosta, ja sieltä oli kotoisin myös Viron ensimmäinen ammattimaalari Johann Köler. Nykyään Suure-Jaanissa järjestetään kesäisin klassisen musiikin festivaali, joka on omistettu säveltäjäsuku Kappien muistolle.
+
+### 37.1
+KYSYMYS: Miksi pieni Suure-Jaani tunnetaan musiikista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suure-Jaani (kulttuuri)
+Tietoruudun teksti: Suure-Jaani on pikkukaupunki Viljandimaan pohjoisosassa, noin 25 kilometriä Viljandista pohjoiseen. Se kasvoi Suuren Johanneksen evankeliumin kirkon ympärille; kirkko on rakennettu ennen vuotta 1300, se paloi Pohjan sodassa vuonna 1703, ja sen korjaus valmistui vasta vuonna 1767. Nimi tarkoittaa suunnilleen "Suuren Juhanan" paikkaa, ja se vakiintui koko asutukselle vasta 1880-luvulla. 1800-luvun kansallisen heräämisen aikana pitäjä oli kulttuurin ja sivistyksen keskus koulumestari ja muusikko Joosep Kappin ansiosta, ja sieltä oli kotoisin myös Viron ensimmäinen ammattimaalari Johann Köler. Nykyään Suure-Jaanissa järjestetään kesäisin klassisen musiikin festivaali, joka on omistettu säveltäjäsuku Kappien muistolle.
+
+### 37.2
+KYSYMYS: Mistä nimi Suure-Jaani tulee, ja miksi se vakiintui koko asutukselle vasta 1880-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suure-Jaani (kulttuuri)
+Tietoruudun teksti: Suure-Jaani on pikkukaupunki Viljandimaan pohjoisosassa, noin 25 kilometriä Viljandista pohjoiseen. Se kasvoi Suuren Johanneksen evankeliumin kirkon ympärille; kirkko on rakennettu ennen vuotta 1300, se paloi Pohjan sodassa vuonna 1703, ja sen korjaus valmistui vasta vuonna 1767. Nimi tarkoittaa suunnilleen "Suuren Juhanan" paikkaa, ja se vakiintui koko asutukselle vasta 1880-luvulla. 1800-luvun kansallisen heräämisen aikana pitäjä oli kulttuurin ja sivistyksen keskus koulumestari ja muusikko Joosep Kappin ansiosta, ja sieltä oli kotoisin myös Viron ensimmäinen ammattimaalari Johann Köler. Nykyään Suure-Jaanissa järjestetään kesäisin klassisen musiikin festivaali, joka on omistettu säveltäjäsuku Kappien muistolle.
+
+### 37.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+================ KOHTA 38 (kohde:hahmotelma-vormsi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vormsi (kulttuuri)
+Tietoruudun teksti: Vormsi on Viron neljänneksi suurin saari, pinta-alaltaan noin 92 neliökilometriä, ja se sijaitsee Itämerellä Hiidenmaan itäpuolella Länsi-Viron saaristossa. Saaren asiakirjoin todettu historia ulottuu 1200-luvulle, ja suurimman osan ajasta siellä ovat asuneet rannikkoruotsalaiset. Ruotsinkielinen nimi Ormsö tarkoittaa "Ormin saarta" tai "käärmesaarta", ja siitä ovat johdettuja sekä viron- että saksankielinen nimi. Asukasluku nousi noin 3000:een ennen toista maailmansotaa, jolloin lähes kaikki saaren väestö evakuoitiin tai pakeni Ruotsiin. Nykyisin saarella asuu noin 400 rekisteröityä asukasta, Hullo on hallinnollinen keskus ja Sviby pääsatama.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Toronto — kohdekartta / Kohdekartta: Kensingtonin tori] 1880-luku Maan osti 1815 George Taylor Denison, joka oli palvellut miliisissä vuoden 1812 sodassa. Hänen tilansa ulottui Queen Street Westiltä Bloor Streetille, ja nykyistä Bellevue Square -puistoa hän käytti ratsuväkijoukkonsa harjoituskenttänä. Tila jaettiin tonteiksi 1850-luvulla, ja 1880-luvulla pienille tonteille rakennettiin taloja irlantilaisille ja skotlantilaisille siirtolaistyöläisille. Monet niistä ovat yhä pystyssä esimerkiksi Wales Avenuen varrella, ja toria lähimmissä taloissa on kadun puolella kauppa. 1900-luvun alussa alueelle muutti itäeurooppalaisia juutalaisia ja italialaisia siirtolaisia. He tulivat "Wardista", ahtaasta tulijoiden korttelistosta Yonge Streetin ja Univers…
+- [Samarkand — kohdekartta / Kohdekartta: Bibi-Khanymin moskeija] 1399–1404 Moskeija oli valmistuessaan yksi islamilaisen maailman suurimmista. Ulkomuurien rajaama alue on 167 metriä pitkä ja 109 metriä leveä, ja se on suunnattu koilliseen–lounaaseen rukoussuunnan mukaan. Sisäänkäynnin portaali on 35 metriä korkea, ja pihan vastakkaisella puolella kohoaa noin 40 metrin korkuinen kupoli. Kupolit rakennettiin kaksinkertaisina: sisäkupoli mitoitettiin salin mittasuhteiden mukaan ja ulkokupoli näkyvyyden mukaan, ja niiden väliin jäi tyhjä tila. Piha oli tarkoitettu kaupungin koko miespuoliselle väestölle yhtä aikaa. Timur antoi moskeijalle vaimonsa Saray Mulk Khanumin nimen, vaikka rakennuttaja oli tosiasiassa vaimo itse. Palatessaan sotaretkeltä vuonna 1404 …
+
+### 38.1
+KYSYMYS: Miksi Vormsin saarella asui vuosisatoja ruotsinkielisiä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vormsi (kulttuuri)
+Tietoruudun teksti: Vormsi on Viron neljänneksi suurin saari, pinta-alaltaan noin 92 neliökilometriä, ja se sijaitsee Itämerellä Hiidenmaan itäpuolella Länsi-Viron saaristossa. Saaren asiakirjoin todettu historia ulottuu 1200-luvulle, ja suurimman osan ajasta siellä ovat asuneet rannikkoruotsalaiset. Ruotsinkielinen nimi Ormsö tarkoittaa "Ormin saarta" tai "käärmesaarta", ja siitä ovat johdettuja sekä viron- että saksankielinen nimi. Asukasluku nousi noin 3000:een ennen toista maailmansotaa, jolloin lähes kaikki saaren väestö evakuoitiin tai pakeni Ruotsiin. Nykyisin saarella asuu noin 400 rekisteröityä asukasta, Hullo on hallinnollinen keskus ja Sviby pääsatama.
+
+### 38.2
+KYSYMYS: Mitä tapahtui saaren ruotsinkieliselle väestölle toisen maailmansodan lopulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vormsi (kulttuuri)
+Tietoruudun teksti: Vormsi on Viron neljänneksi suurin saari, pinta-alaltaan noin 92 neliökilometriä, ja se sijaitsee Itämerellä Hiidenmaan itäpuolella Länsi-Viron saaristossa. Saaren asiakirjoin todettu historia ulottuu 1200-luvulle, ja suurimman osan ajasta siellä ovat asuneet rannikkoruotsalaiset. Ruotsinkielinen nimi Ormsö tarkoittaa "Ormin saarta" tai "käärmesaarta", ja siitä ovat johdettuja sekä viron- että saksankielinen nimi. Asukasluku nousi noin 3000:een ennen toista maailmansotaa, jolloin lähes kaikki saaren väestö evakuoitiin tai pakeni Ruotsiin. Nykyisin saarella asuu noin 400 rekisteröityä asukasta, Hullo on hallinnollinen keskus ja Sviby pääsatama.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Toronto — kohdekartta / Kohdekartta: Kensingtonin tori] 1880-luku Maan osti 1815 George Taylor Denison, joka oli palvellut miliisissä vuoden 1812 sodassa. Hänen tilansa ulottui Queen Street Westiltä Bloor Streetille, ja nykyistä Bellevue Square -puistoa hän käytti ratsuväkijoukkonsa harjoituskenttänä. Tila jaettiin tonteiksi 1850-luvulla, ja 1880-luvulla pienille tonteille rakennettiin taloja irlantilaisille ja skotlantilaisille siirtolaistyöläisille. Monet niistä ovat yhä pystyssä esimerkiksi Wales Avenuen varrella, ja toria lähimmissä taloissa on kadun puolella kauppa. 1900-luvun alussa alueelle muutti itäeurooppalaisia juutalaisia ja italialaisia siirtolaisia. He tulivat "Wardista", ahtaasta tulijoiden korttelistosta Yonge Streetin ja Univers…
+- [Samarkand — kohdekartta / Kohdekartta: Bibi-Khanymin moskeija] 1399–1404 Moskeija oli valmistuessaan yksi islamilaisen maailman suurimmista. Ulkomuurien rajaama alue on 167 metriä pitkä ja 109 metriä leveä, ja se on suunnattu koilliseen–lounaaseen rukoussuunnan mukaan. Sisäänkäynnin portaali on 35 metriä korkea, ja pihan vastakkaisella puolella kohoaa noin 40 metrin korkuinen kupoli. Kupolit rakennettiin kaksinkertaisina: sisäkupoli mitoitettiin salin mittasuhteiden mukaan ja ulkokupoli näkyvyyden mukaan, ja niiden väliin jäi tyhjä tila. Piha oli tarkoitettu kaupungin koko miespuoliselle väestölle yhtä aikaa. Timur antoi moskeijalle vaimonsa Saray Mulk Khanumin nimen, vaikka rakennuttaja oli tosiasiassa vaimo itse. Palatessaan sotaretkeltä vuonna 1404 …
+
+### 38.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+================ KOHTA 39 (kohde:hahmotelma-poltsamaa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Põltsamaa (kulttuuri)
+Tietoruudun teksti: Põltsamaa on kaupunki Keski-Virossa Põltsamaa-joen varrella, ja sen tunnetuin nähtävyys on 1200-luvulla aloitettu linnus. Ensimmäiset merkinnät paikasta ovat vuodelta 1234. Vuosina 1570–1578 Põltsamaa oli Liivinmaan kuningaskunnan pääkaupunki, jossa hallitsi herttua Magnus. 1700-luvun jälkipuoliskolla siitä tuli Pohjois-Liivinmaan valistusliikkeen keskus: lähelle perustettiin ensimmäinen yksityinen kirjapaino Venäjän keisarikunnassa, ja vuonna 1766 siellä alettiin julkaista ensimmäistä vironkielistä aikakauslehteä nimeltä Lühhike öppetus. 1800-luvun jälkipuoliskolla paikka oli kansallisen heräämisen keskuksia, ja toisessa maailmansodassa noin 75 prosenttia kaupungin rakennuksista tuhoutui.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: Madrasin ylin oikeus] perustettu 1862, rakennus 1892 Madrasin ylin oikeus perustettiin 26. kesäkuuta 1862 yhtenä kolmesta Britannian kruunun peruskirjalla perustetusta ylimmästä oikeudesta. Se korvasi Madrasin korkeimman oikeuden, joka oli hoitanut kaupungin lainkäyttöä vuodesta 1817, ja on yhä yksi Intian vanhimmista tuomioistuimista. Ensimmäiset kolmekymmentä vuotta se toimi Periametissa väliaikaisissa tiloissa. Uuden oikeuskorttelin rakentaminen George Towniin alkoi lokakuussa 1888, ja rakennus vihittiin käyttöön 12. heinäkuuta 1892. Sen suunnitteli indo-saraseeniseen tyyliin J. W. Brassington, ja työtä jatkoi Henry Irwin. Alkuperäisessä suunnitelmassa saleja oli yksitoista: kuusi ylimmälle oikeudelle, neljä …
+- [Yhdysvallat — maalehti / Ruoka: Mies, joka istutti taimitarhoja rajaseudulle] 1871 — John Chapman, tunnetumpi nimellä Johnny Appleseed, kulki vuosikymmeniä Pennsylvaniasta Ohioon ja Indianaan ja levitti omenapuita rajaseudun uudisasukkaille. Legenda kertoo hänen sirotelleen siemeniä umpimähkään, mutta todellisuudessa hän perusti aidattuja taimitarhoja, jätti ne naapurin hoitoon myytäväksi osuuksilla ja palasi hoitamaan niitä parin vuoden välein. Puut kasvatettiin siemenestä eikä varttamalla. Chapman kuoli 1845, mutta koko kansan tuntema hahmo hänestä tuli vasta marraskuussa 1871, kun Harper's-aikakauslehti julkaisi hänestä pitkän jutun.
+
+### 39.1
+KYSYMYS: Miksi Põltsamaasta tuli 1500-luvulla hetkeksi kuningaskunnan pääkaupunki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Põltsamaa (kulttuuri)
+Tietoruudun teksti: Põltsamaa on kaupunki Keski-Virossa Põltsamaa-joen varrella, ja sen tunnetuin nähtävyys on 1200-luvulla aloitettu linnus. Ensimmäiset merkinnät paikasta ovat vuodelta 1234. Vuosina 1570–1578 Põltsamaa oli Liivinmaan kuningaskunnan pääkaupunki, jossa hallitsi herttua Magnus. 1700-luvun jälkipuoliskolla siitä tuli Pohjois-Liivinmaan valistusliikkeen keskus: lähelle perustettiin ensimmäinen yksityinen kirjapaino Venäjän keisarikunnassa, ja vuonna 1766 siellä alettiin julkaista ensimmäistä vironkielistä aikakauslehteä nimeltä Lühhike öppetus. 1800-luvun jälkipuoliskolla paikka oli kansallisen heräämisen keskuksia, ja toisessa maailmansodassa noin 75 prosenttia kaupungin rakennuksista tuhoutui.
+
+### 39.2
+KYSYMYS: Miten ensimmäinen vironkielinen aikakauslehti syntyi pienellä paikkakunnalla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Põltsamaa (kulttuuri)
+Tietoruudun teksti: Põltsamaa on kaupunki Keski-Virossa Põltsamaa-joen varrella, ja sen tunnetuin nähtävyys on 1200-luvulla aloitettu linnus. Ensimmäiset merkinnät paikasta ovat vuodelta 1234. Vuosina 1570–1578 Põltsamaa oli Liivinmaan kuningaskunnan pääkaupunki, jossa hallitsi herttua Magnus. 1700-luvun jälkipuoliskolla siitä tuli Pohjois-Liivinmaan valistusliikkeen keskus: lähelle perustettiin ensimmäinen yksityinen kirjapaino Venäjän keisarikunnassa, ja vuonna 1766 siellä alettiin julkaista ensimmäistä vironkielistä aikakauslehteä nimeltä Lühhike öppetus. 1800-luvun jälkipuoliskolla paikka oli kansallisen heräämisen keskuksia, ja toisessa maailmansodassa noin 75 prosenttia kaupungin rakennuksista tuhoutui.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: Madrasin ylin oikeus] perustettu 1862, rakennus 1892 Madrasin ylin oikeus perustettiin 26. kesäkuuta 1862 yhtenä kolmesta Britannian kruunun peruskirjalla perustetusta ylimmästä oikeudesta. Se korvasi Madrasin korkeimman oikeuden, joka oli hoitanut kaupungin lainkäyttöä vuodesta 1817, ja on yhä yksi Intian vanhimmista tuomioistuimista. Ensimmäiset kolmekymmentä vuotta se toimi Periametissa väliaikaisissa tiloissa. Uuden oikeuskorttelin rakentaminen George Towniin alkoi lokakuussa 1888, ja rakennus vihittiin käyttöön 12. heinäkuuta 1892. Sen suunnitteli indo-saraseeniseen tyyliin J. W. Brassington, ja työtä jatkoi Henry Irwin. Alkuperäisessä suunnitelmassa saleja oli yksitoista: kuusi ylimmälle oikeudelle, neljä …
+- [Yhdysvallat — maalehti / Ruoka: Mies, joka istutti taimitarhoja rajaseudulle] 1871 — John Chapman, tunnetumpi nimellä Johnny Appleseed, kulki vuosikymmeniä Pennsylvaniasta Ohioon ja Indianaan ja levitti omenapuita rajaseudun uudisasukkaille. Legenda kertoo hänen sirotelleen siemeniä umpimähkään, mutta todellisuudessa hän perusti aidattuja taimitarhoja, jätti ne naapurin hoitoon myytäväksi osuuksilla ja palasi hoitamaan niitä parin vuoden välein. Puut kasvatettiin siemenestä eikä varttamalla. Chapman kuoli 1845, mutta koko kansan tuntema hahmo hänestä tuli vasta marraskuussa 1871, kun Harper's-aikakauslehti julkaisi hänestä pitkän jutun.
+
+### 39.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+================ KOHTA 40 (kohde:hahmotelma-sindi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sindi (tekniikka)
+Tietoruudun teksti: Sindi on nykyään pieni kaupunki Pärnun joen vasemmalla rannalla, noin 14 kilometrin päässä Pärnusta. Asutus syntyi vuonna 1833 kartanon maille perustetun tekstiilitehtaan ympärille. Tehtaan perusti riikalainen kauppias ja teollisuudenharjoittaja Johann Christoph Wöhrmann, ja siitä tuli yksi Liivinmaan ja Viron kuvernementtien suurimmista. Tehdas rakennettiin joen rannalle, työläisten talot sen itäpuolelle ja työnjohtajien talot etelään, ja vuoteen 1841 mennessä alueelle oli valmistunut 57 taloa. Joessa oli pitkään betoninen pato, joka esti kaloja nousemasta joen yläjuoksulle; se purettiin vuosina 2018–2020 ja korvattiin luonnonmukaisella koskella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Colombo — kaupunkilehti / Colombo: Kun kahvi kuoli, tee syntyi] Skotlantilainen James Taylor saapui saarelle 1852 ja istutti 1867 Loolecondera-tilalle Kandyn lähelle teetä yhdeksäntoista eekkerin alalle. Kahvi oli tuolloin yhä saaren tärkein vientikasvi, ja sen ala oli suurimmillaan vasta 1870: yli 111 000 hehtaaria. Sitten tuli kahviruoste, Hemileia vastatrix. Teeartikkeli ajoittaa tuhon vuoteen 1869, kahviartikkeli sanoo kahvin kukoistaneen vielä 1869 ja romahtaneen pian sen jälkeen. Viljelijät kääntyivät teehen, jolle keskiylängön viileys, kosteus ja sade sopivat. Taylor rakensi 1872 kunnollisen tehtaan ja lähetti 1875 ensimmäisen lastin Lontoon teehuutokauppaan.
+- [Asunción — kohdekartta / Kohdekartta: Kansallinen taidemuseo] 1909 Paraguayn kansallinen taidemuseo syntyi yhden miehen kokoelmasta. Juan Silvano Godoi (1850–1926) oli varakkaan poliittisen suvun jäsen, ja maan levottomat olot pakottivat hänet toistuvasti maanpakoon. Matkoillaan hän osti taidetta: kokoelmassa on töitä Courbet’lta, Murillolta ja Tintorettolta, ja painopiste on 1800-luvun lopun maalauksessa. Godoista tuli Paraguayn ensimmäinen museoiden ja arkistojen pääjohtaja. Valtio toivoi 1900-luvun alussa, että kaikki hänen teoksensa koottaisiin yhteen laitokseen. Museo Godoy perustettiin 1909 ja Godoi johti sitä kuolemaansa asti; vuonna 1939 valtio vahvisti sen kansalliseksi taidemuseoksi. Nykyään esillä on yli 650 teosta — maalauksia, veistoksia,…
+
+### 40.1
+KYSYMYS: Miksi kokonainen asutus syntyi juuri yhden tehtaan ympärille?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sindi (tekniikka)
+Tietoruudun teksti: Sindi on nykyään pieni kaupunki Pärnun joen vasemmalla rannalla, noin 14 kilometrin päässä Pärnusta. Asutus syntyi vuonna 1833 kartanon maille perustetun tekstiilitehtaan ympärille. Tehtaan perusti riikalainen kauppias ja teollisuudenharjoittaja Johann Christoph Wöhrmann, ja siitä tuli yksi Liivinmaan ja Viron kuvernementtien suurimmista. Tehdas rakennettiin joen rannalle, työläisten talot sen itäpuolelle ja työnjohtajien talot etelään, ja vuoteen 1841 mennessä alueelle oli valmistunut 57 taloa. Joessa oli pitkään betoninen pato, joka esti kaloja nousemasta joen yläjuoksulle; se purettiin vuosina 2018–2020 ja korvattiin luonnonmukaisella koskella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Colombo — kaupunkilehti / Colombo: Kun kahvi kuoli, tee syntyi] Skotlantilainen James Taylor saapui saarelle 1852 ja istutti 1867 Loolecondera-tilalle Kandyn lähelle teetä yhdeksäntoista eekkerin alalle. Kahvi oli tuolloin yhä saaren tärkein vientikasvi, ja sen ala oli suurimmillaan vasta 1870: yli 111 000 hehtaaria. Sitten tuli kahviruoste, Hemileia vastatrix. Teeartikkeli ajoittaa tuhon vuoteen 1869, kahviartikkeli sanoo kahvin kukoistaneen vielä 1869 ja romahtaneen pian sen jälkeen. Viljelijät kääntyivät teehen, jolle keskiylängön viileys, kosteus ja sade sopivat. Taylor rakensi 1872 kunnollisen tehtaan ja lähetti 1875 ensimmäisen lastin Lontoon teehuutokauppaan.
+
+### 40.2
+KYSYMYS: Miksi pato haittasi kalojen nousua joessa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sindi (tekniikka)
+Tietoruudun teksti: Sindi on nykyään pieni kaupunki Pärnun joen vasemmalla rannalla, noin 14 kilometrin päässä Pärnusta. Asutus syntyi vuonna 1833 kartanon maille perustetun tekstiilitehtaan ympärille. Tehtaan perusti riikalainen kauppias ja teollisuudenharjoittaja Johann Christoph Wöhrmann, ja siitä tuli yksi Liivinmaan ja Viron kuvernementtien suurimmista. Tehdas rakennettiin joen rannalle, työläisten talot sen itäpuolelle ja työnjohtajien talot etelään, ja vuoteen 1841 mennessä alueelle oli valmistunut 57 taloa. Joessa oli pitkään betoninen pato, joka esti kaloja nousemasta joen yläjuoksulle; se purettiin vuosina 2018–2020 ja korvattiin luonnonmukaisella koskella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Asunción — kohdekartta / Kohdekartta: Kansallinen taidemuseo] 1909 Paraguayn kansallinen taidemuseo syntyi yhden miehen kokoelmasta. Juan Silvano Godoi (1850–1926) oli varakkaan poliittisen suvun jäsen, ja maan levottomat olot pakottivat hänet toistuvasti maanpakoon. Matkoillaan hän osti taidetta: kokoelmassa on töitä Courbet’lta, Murillolta ja Tintorettolta, ja painopiste on 1800-luvun lopun maalauksessa. Godoista tuli Paraguayn ensimmäinen museoiden ja arkistojen pääjohtaja. Valtio toivoi 1900-luvun alussa, että kaikki hänen teoksensa koottaisiin yhteen laitokseen. Museo Godoy perustettiin 1909 ja Godoi johti sitä kuolemaansa asti; vuonna 1939 valtio vahvisti sen kansalliseksi taidemuseoksi. Nykyään esillä on yli 650 teosta — maalauksia, veistoksia,…
+- [Port Vila — kaupunkilehti / Port Vila: Kunta, joka julistautui itsenäiseksi] Uusilla Hebrideillä ei ollut 1880-luvulla toimivaa hallintoa, ja se turhautti asukkaita. Ranskalaisia haittasi erityisesti se, että Ranskan laki tunnusti vain siviilivihkimisen ja lähin viranomainen oli Uudessa-Kaledoniassa. Franceville — nykyinen Port Vila — julistautui 9. elokuuta 1889 itsenäiseksi kunnaksi ja valitsi johtajakseen Ferdinand-Albert Chevillardin. Asukkaita oli noin viisisataa. Yhteisö oli yksi ensimmäisistä tunnetun historian itsehallinnoista, jotka toteuttivat yleisen äänioikeuden sukupuoleen ja rotuun katsomatta. Kesäkuuhun 1890 mennessä kunta oli hajonnut, mutta vuoden 1905 kartassa nimi Franceville luki yhä Port Vilan rinnalla.
+
+### 40.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI

@@ -1,0 +1,198 @@
+================ KOHTA 21 (kohde:hahmotelma-vilsandi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vilsandin kansallispuisto (luonto · saari)
+Tietoruudun teksti: Vilsandin kansallispuisto on merellinen suojelualue Saarenmaan länsirannikolla Virossa. Se kattaa osan Vilsandin saaresta, noin sata pienempää saarta ja luotoa sekä Saarenmaan länsiosan rannikkoa Harilaidin niemimaa mukaan lukien; Vilsandi on puiston ainoa asuttu saari. Puisto on kasvanut vuonna 1910 perustetusta lintujen suojelualueesta, ja sitä pidetään Baltian vanhimpana suojelualueena. Alueella on havaittu yli 250 lintulajia, ja yleisin pesijä on haahka. Muuttolinnut, kuten valkoposkihanhet, pysähtyvät alueen vesillä levähtämään, ja kolmannes Viron suojelluista kasvilajeista kasvaa puistossa. Metsästys on siellä kokonaan kielletty.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namib — kaupunkilehti / Aavikon selviytyjät: Afrikan suurin suojelualue] Namib-Naukluft on Afrikan suurin luonnonsuojelualue, lähes 50 000 neliökilometriä – suurempi kuin Sveitsi. Puisto ulottuu punaisista Sossusvlein dyyneistä pohjoisemmas kivikkoisille soratasangoille ja Naukluft-vuorten rotkoihin, joissa kausivedet ovat kaivertaneet syviä kanjoneita kovaan kalkkikiveen. Yhdellä suojelualueella yhdistyvät näin aavikon täysin erilaiset maisematyypit: liikkuva hiekkameri, paljas kivierämaa ja vuoristo, joissa jokaisessa elää omat, tiukasti sopeutuneet lajinsa. Alueen laajuus ja moni-ilmeisyys ovat yksi syy siihen, miksi Namibia pystyy suojelemaan näin suuren osan maailman ainoasta aidosti aavikkoon sopeutuneesta eliöstöstä.
+- [Namibia — maalehti / Tiede: Suojelualue, jonka aarre on pimeys] 1984–2012 — Namibiassa on yli kolmesataa aurinkoista päivää vuodessa, ja sama kuiva ja pilvetön ilma tekee öistä poikkeuksellisen pimeitä, kun lähin kaupunki on kaukana. J. A. Brückner perusti 1984 aavikon laidalle yksityisen suojelualueen, joka on kasvanut yli 2 150 neliökilometriin ja jolla on sadan kilometrin yhteinen raja Namib-Naukluftin kansallispuiston kanssa; alue elää vähän kuormittavan matkailun maksuilla. Vuonna 2012 International Dark-Sky Association julisti NamibRandin kansainväliseksi pimeän taivaan suojelualueeksi — suojelukohde ei ole eläin eikä kasvi vaan yötaivas.
+
+### 21.1
+KYSYMYS: Miksi Vilsandin saaristo on niin tärkeä muuttolinnuille?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vilsandin kansallispuisto (luonto · saari)
+Tietoruudun teksti: Vilsandin kansallispuisto on merellinen suojelualue Saarenmaan länsirannikolla Virossa. Se kattaa osan Vilsandin saaresta, noin sata pienempää saarta ja luotoa sekä Saarenmaan länsiosan rannikkoa Harilaidin niemimaa mukaan lukien; Vilsandi on puiston ainoa asuttu saari. Puisto on kasvanut vuonna 1910 perustetusta lintujen suojelualueesta, ja sitä pidetään Baltian vanhimpana suojelualueena. Alueella on havaittu yli 250 lintulajia, ja yleisin pesijä on haahka. Muuttolinnut, kuten valkoposkihanhet, pysähtyvät alueen vesillä levähtämään, ja kolmannes Viron suojelluista kasvilajeista kasvaa puistossa. Metsästys on siellä kokonaan kielletty.
+
+### 21.2
+KYSYMYS: Miksi alueen suojelu aloitettiin jo vuonna 1910 lintujen suojelualueena?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vilsandin kansallispuisto (luonto · saari)
+Tietoruudun teksti: Vilsandin kansallispuisto on merellinen suojelualue Saarenmaan länsirannikolla Virossa. Se kattaa osan Vilsandin saaresta, noin sata pienempää saarta ja luotoa sekä Saarenmaan länsiosan rannikkoa Harilaidin niemimaa mukaan lukien; Vilsandi on puiston ainoa asuttu saari. Puisto on kasvanut vuonna 1910 perustetusta lintujen suojelualueesta, ja sitä pidetään Baltian vanhimpana suojelualueena. Alueella on havaittu yli 250 lintulajia, ja yleisin pesijä on haahka. Muuttolinnut, kuten valkoposkihanhet, pysähtyvät alueen vesillä levähtämään, ja kolmannes Viron suojelluista kasvilajeista kasvaa puistossa. Metsästys on siellä kokonaan kielletty.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namib — kaupunkilehti / Aavikon selviytyjät: Afrikan suurin suojelualue] Namib-Naukluft on Afrikan suurin luonnonsuojelualue, lähes 50 000 neliökilometriä – suurempi kuin Sveitsi. Puisto ulottuu punaisista Sossusvlein dyyneistä pohjoisemmas kivikkoisille soratasangoille ja Naukluft-vuorten rotkoihin, joissa kausivedet ovat kaivertaneet syviä kanjoneita kovaan kalkkikiveen. Yhdellä suojelualueella yhdistyvät näin aavikon täysin erilaiset maisematyypit: liikkuva hiekkameri, paljas kivierämaa ja vuoristo, joissa jokaisessa elää omat, tiukasti sopeutuneet lajinsa. Alueen laajuus ja moni-ilmeisyys ovat yksi syy siihen, miksi Namibia pystyy suojelemaan näin suuren osan maailman ainoasta aidosti aavikkoon sopeutuneesta eliöstöstä.
+- [Namibia — maalehti / Tiede: Suojelualue, jonka aarre on pimeys] 1984–2012 — Namibiassa on yli kolmesataa aurinkoista päivää vuodessa, ja sama kuiva ja pilvetön ilma tekee öistä poikkeuksellisen pimeitä, kun lähin kaupunki on kaukana. J. A. Brückner perusti 1984 aavikon laidalle yksityisen suojelualueen, joka on kasvanut yli 2 150 neliökilometriin ja jolla on sadan kilometrin yhteinen raja Namib-Naukluftin kansallispuiston kanssa; alue elää vähän kuormittavan matkailun maksuilla. Vuonna 2012 International Dark-Sky Association julisti NamibRandin kansainväliseksi pimeän taivaan suojelualueeksi — suojelukohde ei ole eläin eikä kasvi vaan yötaivas.
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:hahmotelma-endla) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Endlan luonnonsuojelualue (luonto · järvi)
+Tietoruudun teksti: Endlan luonnonsuojelualue on Keski-Virossa Pandiveren ylängön eteläosassa. Se suojelee makean veden järjestelmää, johon kuuluu soita, rämeitä, lähteitä ja puroja, ja alueella on tärkeä osa Põltsamaa-joen vesien uusiutumisessa. Alueella on monia jäännejärviä, joista suurin on Endla Sinijärv, ja soiden turvekerros voi olla jopa kahdeksan metriä paksu. Suojelu alkoi 1980-luvulla, ja valtiollinen luonnonsuojelualue perustettiin vuonna 1985. Alueella pesii noin 180 lintulajia ja kasveja on löydetty noin 450, muun muassa useita uhanalaisia kämmekkälajeja. Vierailijoille on näkötorneja ja luontopolkuja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Luonto: Suon yli kuljetaan lankkuja pitkin] Aamuisin — Ķemerin kansallispuistossa on keidassuo, jonka yli on rakennettu kilometrien mittainen lankkupolku. Suon pinnalla on tummia lampareita ja matalia mäntyjä, ja aamulla usva makaa veden päällä niin, että maisema näyttää toiselta planeetalta. Turve kasvaa hitaasti: noin millimetrin vuodessa, joten metrin paksuinen kerros on tuhat vuotta vanha. Suoveden ja mudan takia alueella on myös kylpylä, jonne tultiin jo tsaarin aikaan hoitoihin.
+
+### 22.1
+KYSYMYS: Miksi suot ja lähteet ovat tärkeitä Põltsamaa-joen vesille?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Endlan luonnonsuojelualue (luonto · järvi)
+Tietoruudun teksti: Endlan luonnonsuojelualue on Keski-Virossa Pandiveren ylängön eteläosassa. Se suojelee makean veden järjestelmää, johon kuuluu soita, rämeitä, lähteitä ja puroja, ja alueella on tärkeä osa Põltsamaa-joen vesien uusiutumisessa. Alueella on monia jäännejärviä, joista suurin on Endla Sinijärv, ja soiden turvekerros voi olla jopa kahdeksan metriä paksu. Suojelu alkoi 1980-luvulla, ja valtiollinen luonnonsuojelualue perustettiin vuonna 1985. Alueella pesii noin 180 lintulajia ja kasveja on löydetty noin 450, muun muassa useita uhanalaisia kämmekkälajeja. Vierailijoille on näkötorneja ja luontopolkuja.
+
+### 22.2
+KYSYMYS: Mitä suon paksu turvekerros kertoo alueen historiasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Endlan luonnonsuojelualue (luonto · järvi)
+Tietoruudun teksti: Endlan luonnonsuojelualue on Keski-Virossa Pandiveren ylängön eteläosassa. Se suojelee makean veden järjestelmää, johon kuuluu soita, rämeitä, lähteitä ja puroja, ja alueella on tärkeä osa Põltsamaa-joen vesien uusiutumisessa. Alueella on monia jäännejärviä, joista suurin on Endla Sinijärv, ja soiden turvekerros voi olla jopa kahdeksan metriä paksu. Suojelu alkoi 1980-luvulla, ja valtiollinen luonnonsuojelualue perustettiin vuonna 1985. Alueella pesii noin 180 lintulajia ja kasveja on löydetty noin 450, muun muassa useita uhanalaisia kämmekkälajeja. Vierailijoille on näkötorneja ja luontopolkuja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Luonto: Suon yli kuljetaan lankkuja pitkin] Aamuisin — Ķemerin kansallispuistossa on keidassuo, jonka yli on rakennettu kilometrien mittainen lankkupolku. Suon pinnalla on tummia lampareita ja matalia mäntyjä, ja aamulla usva makaa veden päällä niin, että maisema näyttää toiselta planeetalta. Turve kasvaa hitaasti: noin millimetrin vuodessa, joten metrin paksuinen kerros on tuhat vuotta vanha. Suoveden ja mudan takia alueella on myös kylpylä, jonne tultiin jo tsaarin aikaan hoitoihin.
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:hahmotelma-taevaskoja) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taevaskoja (luonto · joki)
+Tietoruudun teksti: Taevaskoja on kylä Kaakkois-Virossa Põlvan kunnassa, ja se tunnetaan Ahja-joen rannoilla kohoavista devonikautisista hiekkakivipaljastumista. Kylä on saanut nimensä Ahja-joen ikivanhan jokilaakson hiekkakivikallioista, joita kutsutaan taevaskodiksi. Jokilaakson maisemansuojelualueella sijaitsevat Suur Taevaskoda ja Väike Taevaskoda ovat Etelä-Viron vierailluimpia matkailukohteita. Kylän pohjoisosa kuului aiemmin Ahjan kartanolle ja eteläosa Vana-Koiolan kartanolle, ja Ahjan kartanon vuoden 1873 metsäkartalla mainitaan paikannimi Taiwaskodda pallo. Nykyinen kylä syntyi vasta 1930-luvulla Tartto–Petseri-rautatien rakentamisen jälkeen.
+
+### 23.1
+KYSYMYS: Miksi Ahja-joen rannoilla kohoaa korkeita punertavia hiekkakivikallioita?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taevaskoja (luonto · joki)
+Tietoruudun teksti: Taevaskoja on kylä Kaakkois-Virossa Põlvan kunnassa, ja se tunnetaan Ahja-joen rannoilla kohoavista devonikautisista hiekkakivipaljastumista. Kylä on saanut nimensä Ahja-joen ikivanhan jokilaakson hiekkakivikallioista, joita kutsutaan taevaskodiksi. Jokilaakson maisemansuojelualueella sijaitsevat Suur Taevaskoda ja Väike Taevaskoda ovat Etelä-Viron vierailluimpia matkailukohteita. Kylän pohjoisosa kuului aiemmin Ahjan kartanolle ja eteläosa Vana-Koiolan kartanolle, ja Ahjan kartanon vuoden 1873 metsäkartalla mainitaan paikannimi Taiwaskodda pallo. Nykyinen kylä syntyi vasta 1930-luvulla Tartto–Petseri-rautatien rakentamisen jälkeen.
+
+### 23.2
+KYSYMYS: Mikä sai Taevaskojan kylän syntymään vasta 1930-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taevaskoja (luonto · joki)
+Tietoruudun teksti: Taevaskoja on kylä Kaakkois-Virossa Põlvan kunnassa, ja se tunnetaan Ahja-joen rannoilla kohoavista devonikautisista hiekkakivipaljastumista. Kylä on saanut nimensä Ahja-joen ikivanhan jokilaakson hiekkakivikallioista, joita kutsutaan taevaskodiksi. Jokilaakson maisemansuojelualueella sijaitsevat Suur Taevaskoda ja Väike Taevaskoda ovat Etelä-Viron vierailluimpia matkailukohteita. Kylän pohjoisosa kuului aiemmin Ahjan kartanolle ja eteläosa Vana-Koiolan kartanolle, ja Ahjan kartanon vuoden 1873 metsäkartalla mainitaan paikannimi Taiwaskodda pallo. Nykyinen kylä syntyi vasta 1930-luvulla Tartto–Petseri-rautatien rakentamisen jälkeen.
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:hahmotelma-vortsjarv) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võrtsjärv (luonto · järvi)
+Tietoruudun teksti: Võrtsjärv on Etelä-Viron matala järvi, jonka pinta-ala on 270 neliökilometriä. Se on Viron toiseksi suurin järvi Peipsijärven jälkeen ja suurin kokonaan Viron rajojen sisällä oleva. Veden korkeus vaihtelee vuosittain keskimäärin 1,4 metriä, mikä on noin puolet järven keskisyvyydestä, ja järvi on jään peitossa suunnilleen marraskuusta huhtikuuhun. Järvestä laskee Emajõgi-joki Peipsijärveen. Itärannalla Tammen kylän lähellä olevista jyrkänteistä on löytynyt devonikautisten kalojen fossiileja, ja järven rannoilla pesii ja levähtää runsaasti lintuja.
+
+### 24.1
+KYSYMYS: Miksi Võrtsjärven vedenpinta nousee ja laskee joka vuosi näin paljon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võrtsjärv (luonto · järvi)
+Tietoruudun teksti: Võrtsjärv on Etelä-Viron matala järvi, jonka pinta-ala on 270 neliökilometriä. Se on Viron toiseksi suurin järvi Peipsijärven jälkeen ja suurin kokonaan Viron rajojen sisällä oleva. Veden korkeus vaihtelee vuosittain keskimäärin 1,4 metriä, mikä on noin puolet järven keskisyvyydestä, ja järvi on jään peitossa suunnilleen marraskuusta huhtikuuhun. Järvestä laskee Emajõgi-joki Peipsijärveen. Itärannalla Tammen kylän lähellä olevista jyrkänteistä on löytynyt devonikautisten kalojen fossiileja, ja järven rannoilla pesii ja levähtää runsaasti lintuja.
+
+### 24.2
+KYSYMYS: Miten devonikauden kalojen fossiileja päätyi järven rannan jyrkänteisiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võrtsjärv (luonto · järvi)
+Tietoruudun teksti: Võrtsjärv on Etelä-Viron matala järvi, jonka pinta-ala on 270 neliökilometriä. Se on Viron toiseksi suurin järvi Peipsijärven jälkeen ja suurin kokonaan Viron rajojen sisällä oleva. Veden korkeus vaihtelee vuosittain keskimäärin 1,4 metriä, mikä on noin puolet järven keskisyvyydestä, ja järvi on jään peitossa suunnilleen marraskuusta huhtikuuhun. Järvestä laskee Emajõgi-joki Peipsijärveen. Itärannalla Tammen kylän lähellä olevista jyrkänteistä on löytynyt devonikautisten kalojen fossiileja, ja järven rannoilla pesii ja levähtää runsaasti lintuja.
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-muhu) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Muhu (luonto · saari)
+Tietoruudun teksti: Muhu on Viron kolmanneksi suurin saari, ja sen pinta-ala on 208 neliökilometriä. Suuri väin erottaa sen mantereesta ja Pieni väin Saarenmaasta, ja saksaksi saarta kutsutaan nimillä Mohn ja Moon. Vuonna 1227 Liivinmaan Kalparitarikunnan joukot ylittivät jäätä pitkin Saarenmaalle, ja viimeiset pakanalliset virolaiset antautuivat Muhussa Mona-nimisessä pyöreässä linnakkeessa, jonka valleja on yhä jäljellä. Saaren länsikärjessä on Koguvan kylä, jossa on vuosisatoja vanhoja rakennuksia ja Muhun museo; kylässä syntyi kirjailija Juhan Smuul. Muhu tunnetaan myös toimivista perinteisistä tuulimyllyistään ja neulotuista sukistaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Puku, josta näkee kotipitäjän] 1800-luku — Virolaisessa kansanpuvussa jokainen pitäjä erottuu omalla raidoituksellaan, väriyhdistelmällään ja koruillaan — tunteva silmä näkee heti kuvasta, oliko kantaja kotoisin Setumaalta, Muhusta vai Pärnun seudulta. Puvut ommeltiin käsin kotikutoisesta villakankaasta, ja niiden yksityiskohdat periytyivät äidiltä tyttärelle sukupolvien ajan. Kihnun saarella perinne on yhä elossa arjessa, ei vain juhlissa: naiset kutovat itse raidalliset hameensa ja neulovat värikkäät lapasensa samoilla kuvioilla kuin esiäitinsä. Unesco liitti Kihnun kulttuuriperinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2003.
+- [Valletta — kaupunkilehti / Historia] Lähes neljän kuukauden piiritys, ritarien antautuminen Napoleonille ja kaksi vuotta pommituksia: kolme vaihetta, joissa pieni saari oli Välimeren taistelujen keskipisteessä.
+
+### 25.1
+KYSYMYS: Miksi Muhun Mona-linnakkeen antautuminen päätti Viron ristiretken?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Muhu (luonto · saari)
+Tietoruudun teksti: Muhu on Viron kolmanneksi suurin saari, ja sen pinta-ala on 208 neliökilometriä. Suuri väin erottaa sen mantereesta ja Pieni väin Saarenmaasta, ja saksaksi saarta kutsutaan nimillä Mohn ja Moon. Vuonna 1227 Liivinmaan Kalparitarikunnan joukot ylittivät jäätä pitkin Saarenmaalle, ja viimeiset pakanalliset virolaiset antautuivat Muhussa Mona-nimisessä pyöreässä linnakkeessa, jonka valleja on yhä jäljellä. Saaren länsikärjessä on Koguvan kylä, jossa on vuosisatoja vanhoja rakennuksia ja Muhun museo; kylässä syntyi kirjailija Juhan Smuul. Muhu tunnetaan myös toimivista perinteisistä tuulimyllyistään ja neulotuista sukistaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kaupunkilehti / Historia] Lähes neljän kuukauden piiritys, ritarien antautuminen Napoleonille ja kaksi vuotta pommituksia: kolme vaihetta, joissa pieni saari oli Välimeren taistelujen keskipisteessä.
+
+### 25.2
+KYSYMYS: Miten Muhusta pääsi Saarenmaalle ja mantereelle ennen kuin Väinatamm-pengertie valmistui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Muhu (luonto · saari)
+Tietoruudun teksti: Muhu on Viron kolmanneksi suurin saari, ja sen pinta-ala on 208 neliökilometriä. Suuri väin erottaa sen mantereesta ja Pieni väin Saarenmaasta, ja saksaksi saarta kutsutaan nimillä Mohn ja Moon. Vuonna 1227 Liivinmaan Kalparitarikunnan joukot ylittivät jäätä pitkin Saarenmaalle, ja viimeiset pakanalliset virolaiset antautuivat Muhussa Mona-nimisessä pyöreässä linnakkeessa, jonka valleja on yhä jäljellä. Saaren länsikärjessä on Koguvan kylä, jossa on vuosisatoja vanhoja rakennuksia ja Muhun museo; kylässä syntyi kirjailija Juhan Smuul. Muhu tunnetaan myös toimivista perinteisistä tuulimyllyistään ja neulotuista sukistaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Puku, josta näkee kotipitäjän] 1800-luku — Virolaisessa kansanpuvussa jokainen pitäjä erottuu omalla raidoituksellaan, väriyhdistelmällään ja koruillaan — tunteva silmä näkee heti kuvasta, oliko kantaja kotoisin Setumaalta, Muhusta vai Pärnun seudulta. Puvut ommeltiin käsin kotikutoisesta villakankaasta, ja niiden yksityiskohdat periytyivät äidiltä tyttärelle sukupolvien ajan. Kihnun saarella perinne on yhä elossa arjessa, ei vain juhlissa: naiset kutovat itse raidalliset hameensa ja neulovat värikkäät lapasensa samoilla kuvioilla kuin esiäitinsä. Unesco liitti Kihnun kulttuuriperinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2003.
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

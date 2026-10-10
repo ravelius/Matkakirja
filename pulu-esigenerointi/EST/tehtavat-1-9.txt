@@ -1,0 +1,242 @@
+================ KOHTA 41 (kohde:hahmotelma-kunda) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kunda (tekniikka)
+Tietoruudun teksti: Kunda on Suomenlahden rannalla Pohjois-Virossa sijaitseva kaupunki, joka tunnetaan sementtitehtaastaan, satamastaan ja arkeologisesta perinnöstään. Kundan lähistöltä on löydetty Viron vanhimpiin kuuluvia esihistoriallisia metsästäjä-kalastajayhteisöjä noin vuodelta 6500 eaa., ja niiden mukaan on nimetty Kundan kulttuuri. Paikka mainitaan kirjallisissa lähteissä ensi kerran vuonna 1241 kylänä ja vuonna 1443 kartanona. Nykyinen kaupunki kasvoi kartanon omistajan John Karl Girard de Soucantonin vuonna 1870 perustaman sementtitehtaan ympärille. Satamalle oli myönnetty rakennuslupa jo vuonna 1805, ja tullipiste avattiin siellä 1812.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aden — kaupunkilehti / Meri ja satama: Kellotorni sataman rannassa] Sataman rannalle rakennettiin kellotorni, joka muistuttaa etäisesti Lontoon Elizabeth-tornia; siitä nimi Big Ben Aden. Tornin tekivät brittiläiset insinöörit yhdessä paikallisten työmiesten kanssa, ja se valmistui vuonna 1890. Korkeutta on 22 metriä ja leveyttä 1,5 metriä, pohjakaava on suorakaide, ja rakennusaineena on musta kivi ja sementti. Katto on tasasivuisen kolmion muotoinen ja päällystetty punaisella tiilellä. Sisällä nousee rautaportaikko, ja torni katsoo merelle Tawahin yli. Craterissa on siitä pienempi jäljennös Arwan kadun varrella. Kello pysäytettiin kunnostusta varten vuonna 1986.
+
+### 41.1
+KYSYMYS: Miksi sementtitehdas rakennettiin juuri meren rannalle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kunda (tekniikka)
+Tietoruudun teksti: Kunda on Suomenlahden rannalla Pohjois-Virossa sijaitseva kaupunki, joka tunnetaan sementtitehtaastaan, satamastaan ja arkeologisesta perinnöstään. Kundan lähistöltä on löydetty Viron vanhimpiin kuuluvia esihistoriallisia metsästäjä-kalastajayhteisöjä noin vuodelta 6500 eaa., ja niiden mukaan on nimetty Kundan kulttuuri. Paikka mainitaan kirjallisissa lähteissä ensi kerran vuonna 1241 kylänä ja vuonna 1443 kartanona. Nykyinen kaupunki kasvoi kartanon omistajan John Karl Girard de Soucantonin vuonna 1870 perustaman sementtitehtaan ympärille. Satamalle oli myönnetty rakennuslupa jo vuonna 1805, ja tullipiste avattiin siellä 1812.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aden — kaupunkilehti / Meri ja satama: Kellotorni sataman rannassa] Sataman rannalle rakennettiin kellotorni, joka muistuttaa etäisesti Lontoon Elizabeth-tornia; siitä nimi Big Ben Aden. Tornin tekivät brittiläiset insinöörit yhdessä paikallisten työmiesten kanssa, ja se valmistui vuonna 1890. Korkeutta on 22 metriä ja leveyttä 1,5 metriä, pohjakaava on suorakaide, ja rakennusaineena on musta kivi ja sementti. Katto on tasasivuisen kolmion muotoinen ja päällystetty punaisella tiilellä. Sisällä nousee rautaportaikko, ja torni katsoo merelle Tawahin yli. Craterissa on siitä pienempi jäljennös Arwan kadun varrella. Kello pysäytettiin kunnostusta varten vuonna 1986.
+
+### 41.2
+KYSYMYS: Mitä ihmiset elivät täällä noin 6500 eaa. ja mistä se tiedetään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kunda (tekniikka)
+Tietoruudun teksti: Kunda on Suomenlahden rannalla Pohjois-Virossa sijaitseva kaupunki, joka tunnetaan sementtitehtaastaan, satamastaan ja arkeologisesta perinnöstään. Kundan lähistöltä on löydetty Viron vanhimpiin kuuluvia esihistoriallisia metsästäjä-kalastajayhteisöjä noin vuodelta 6500 eaa., ja niiden mukaan on nimetty Kundan kulttuuri. Paikka mainitaan kirjallisissa lähteissä ensi kerran vuonna 1241 kylänä ja vuonna 1443 kartanona. Nykyinen kaupunki kasvoi kartanon omistajan John Karl Girard de Soucantonin vuonna 1870 perustaman sementtitehtaan ympärille. Satamalle oli myönnetty rakennuslupa jo vuonna 1805, ja tullipiste avattiin siellä 1812.
+
+### 41.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+================ KOHTA 42 (kohde:hahmotelma-rapina) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Räpina (tekniikka)
+Tietoruudun teksti: Räpina on kaupunki Põlvan maakunnassa Võhandu-joen alajuoksun varrella. Sen vanhin kaupallinen yritys on paperitehdas, joka avattiin vuonna 1734 ja joka toimii Räpinassa edelleen. Tehtaan lisäksi kaupungissa toimivat muun muassa puutarhakoulu ja lukio, ja kaupungissa on myös Pyhän Sakariaan ja Elisabetin kirkko. Asukkaita Räpinassa oli vuonna 1881 vain 709, mutta vuonna 1922 jo 2100. Räpina sai taajaman aseman vuonna 1945 ja kaupunkioikeudet vuonna 1993. Vuonna 2002 kaupunki ja maalaiskunta yhdistettiin Räpinan kunnaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Taskut jotka täytetään millä tahansa] nykyään — Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.
+- [Angola — maalehti / Historia: Arvonimi, josta tuli maan nimi] 1535–1671 — Angolan nimi ei ole koskaan tarkoittanut maata. Kwanzan ja Lucalan jokien välisellä ylängöllä oli Ndongon kuningaskunta, jonka hallitsijan arvonimi oli ngola, ja portugalilaiset alkoivat kutsua koko seutua sen mukaan: Reino de Angola esiintyy jo Paulo Dias de Novaisin vuoden 1571 valtakirjassa, ja Kongon kuninkaan arvonimien joukossa Angola oli mainittu jo 1535. Ndongo oli tarkkaan järjestetty valtio. Pääkaupungissa kabasassa asui tiheimmillään 50 000 ihmistä, alueita hallitsivat sobat, ja kuninkaan tärkein neuvonantaja tendala valittiin yleensä orjuutettujen joukosta.
+
+### 42.1
+KYSYMYS: Miksi paperitehtaat rakennettiin yleensä jokien varrelle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Räpina (tekniikka)
+Tietoruudun teksti: Räpina on kaupunki Põlvan maakunnassa Võhandu-joen alajuoksun varrella. Sen vanhin kaupallinen yritys on paperitehdas, joka avattiin vuonna 1734 ja joka toimii Räpinassa edelleen. Tehtaan lisäksi kaupungissa toimivat muun muassa puutarhakoulu ja lukio, ja kaupungissa on myös Pyhän Sakariaan ja Elisabetin kirkko. Asukkaita Räpinassa oli vuonna 1881 vain 709, mutta vuonna 1922 jo 2100. Räpina sai taajaman aseman vuonna 1945 ja kaupunkioikeudet vuonna 1993. Vuonna 2002 kaupunki ja maalaiskunta yhdistettiin Räpinan kunnaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Angola — maalehti / Historia: Arvonimi, josta tuli maan nimi] 1535–1671 — Angolan nimi ei ole koskaan tarkoittanut maata. Kwanzan ja Lucalan jokien välisellä ylängöllä oli Ndongon kuningaskunta, jonka hallitsijan arvonimi oli ngola, ja portugalilaiset alkoivat kutsua koko seutua sen mukaan: Reino de Angola esiintyy jo Paulo Dias de Novaisin vuoden 1571 valtakirjassa, ja Kongon kuninkaan arvonimien joukossa Angola oli mainittu jo 1535. Ndongo oli tarkkaan järjestetty valtio. Pääkaupungissa kabasassa asui tiheimmillään 50 000 ihmistä, alueita hallitsivat sobat, ja kuninkaan tärkein neuvonantaja tendala valittiin yleensä orjuutettujen joukosta.
+
+### 42.2
+KYSYMYS: Millä tavalla paperia valmistettiin ennen nykyaikaisia koneita?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Räpina (tekniikka)
+Tietoruudun teksti: Räpina on kaupunki Põlvan maakunnassa Võhandu-joen alajuoksun varrella. Sen vanhin kaupallinen yritys on paperitehdas, joka avattiin vuonna 1734 ja joka toimii Räpinassa edelleen. Tehtaan lisäksi kaupungissa toimivat muun muassa puutarhakoulu ja lukio, ja kaupungissa on myös Pyhän Sakariaan ja Elisabetin kirkko. Asukkaita Räpinassa oli vuonna 1881 vain 709, mutta vuonna 1922 jo 2100. Räpina sai taajaman aseman vuonna 1945 ja kaupunkioikeudet vuonna 1993. Vuonna 2002 kaupunki ja maalaiskunta yhdistettiin Räpinan kunnaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Taskut jotka täytetään millä tahansa] nykyään — Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.
+
+### 42.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+================ KOHTA 43 (kohde:hahmotelma-kardla) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kärdla (tekniikka)
+Tietoruudun teksti: Kärdla on Hiidenmaan ainoa kaupunki ja Hiiun maakunnan pääkaupunki. Se sijaitsee saaren koillisrannalla Tareste-lahden äärellä, ja sen kaakkoispuolella on 455 miljoonaa vuotta vanha Kärdlan meteoriittikraatteri. Kärdla mainitaan ensi kertaa vuonna 1564 ruotsalaisten asuttamana kylänä. Sen kasvuun vaikutti erityisesti vuonna 1830 perustettu kangastehdas, ja satama rakennettiin vuonna 1849. Kirkko valmistui vuonna 1863 pääasiassa lahjoitusvaroin. Ruotsinkielinen nimi Kärrdal tarkoittaa suolaaksoa, sillä kaupunki sijaitsee matalassa laaksossa. Kärdla sai kaupunkioikeudet vuonna 1938.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irkutsk — kaupunkilehti / Baikal: Pohja on merenpinnan alapuolella] Baikal on 636 kilometriä pitkä ja 79 kilometriä leveä, ja sen syvin kohta on 1 642 metriä. Vettä siinä on 23 615 kuutiokilometriä, enemmän kuin Pohjois-Amerikan Suurissa järvissä yhteensä. Pinta on 455 metriä merenpinnan yläpuolella, mutta pohja ulottuu 1 186 metriä merenpinnan alapuolelle, ja pohjan alla on vielä noin seitsemän kilometriä sedimenttiä. Talvella vesi on avoimilla selillä paikoin niin kirkasta, että näkyvyys yltää 30–40 metriin; kesällä se on 5–8 metriä. Jääkansi on 0,5–1,4 metriä paksu, ahtojäissä yli kaksi metriä.
+- [Lontoo — kohdekartta / Kohdekartta: Liukumäkiveistos] Stratfordin olympiapuistossa seisoo 114,5 metriä korkea punainen teräsvyyhti, Britannian suurin julkinen taideteos. Sen suunnittelivat kuvanveistäjä Anish Kapoor ja insinööri Cecil Balmond vuoden 2012 olympialaisia varten. Ylhäällä on kaksi näköalatasannetta, ja alas pääsee 455 porrasta pitkin. Vuonna 2016 veistokseen kiedottiin toinen taideteos: Carsten Höllerin 178 metriä pitkä liukumäki, maailman pisin tunneliliukumäki. Matka alas kiertyy kaksitoista kertaa ja kestää noin 40 sekuntia.
+
+### 43.1
+KYSYMYS: Mistä ruotsalaiset päätyivät Hiidenmaalle jo 1500-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kärdla (tekniikka)
+Tietoruudun teksti: Kärdla on Hiidenmaan ainoa kaupunki ja Hiiun maakunnan pääkaupunki. Se sijaitsee saaren koillisrannalla Tareste-lahden äärellä, ja sen kaakkoispuolella on 455 miljoonaa vuotta vanha Kärdlan meteoriittikraatteri. Kärdla mainitaan ensi kertaa vuonna 1564 ruotsalaisten asuttamana kylänä. Sen kasvuun vaikutti erityisesti vuonna 1830 perustettu kangastehdas, ja satama rakennettiin vuonna 1849. Kirkko valmistui vuonna 1863 pääasiassa lahjoitusvaroin. Ruotsinkielinen nimi Kärrdal tarkoittaa suolaaksoa, sillä kaupunki sijaitsee matalassa laaksossa. Kärdla sai kaupunkioikeudet vuonna 1938.
+
+### 43.2
+KYSYMYS: Miksi 455 miljoonaa vuotta vanha kraatteri ei näy maisemassa selvästi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kärdla (tekniikka)
+Tietoruudun teksti: Kärdla on Hiidenmaan ainoa kaupunki ja Hiiun maakunnan pääkaupunki. Se sijaitsee saaren koillisrannalla Tareste-lahden äärellä, ja sen kaakkoispuolella on 455 miljoonaa vuotta vanha Kärdlan meteoriittikraatteri. Kärdla mainitaan ensi kertaa vuonna 1564 ruotsalaisten asuttamana kylänä. Sen kasvuun vaikutti erityisesti vuonna 1830 perustettu kangastehdas, ja satama rakennettiin vuonna 1849. Kirkko valmistui vuonna 1863 pääasiassa lahjoitusvaroin. Ruotsinkielinen nimi Kärrdal tarkoittaa suolaaksoa, sillä kaupunki sijaitsee matalassa laaksossa. Kärdla sai kaupunkioikeudet vuonna 1938.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irkutsk — kaupunkilehti / Baikal: Pohja on merenpinnan alapuolella] Baikal on 636 kilometriä pitkä ja 79 kilometriä leveä, ja sen syvin kohta on 1 642 metriä. Vettä siinä on 23 615 kuutiokilometriä, enemmän kuin Pohjois-Amerikan Suurissa järvissä yhteensä. Pinta on 455 metriä merenpinnan yläpuolella, mutta pohja ulottuu 1 186 metriä merenpinnan alapuolelle, ja pohjan alla on vielä noin seitsemän kilometriä sedimenttiä. Talvella vesi on avoimilla selillä paikoin niin kirkasta, että näkyvyys yltää 30–40 metriin; kesällä se on 5–8 metriä. Jääkansi on 0,5–1,4 metriä paksu, ahtojäissä yli kaksi metriä.
+- [Lontoo — kohdekartta / Kohdekartta: Liukumäkiveistos] Stratfordin olympiapuistossa seisoo 114,5 metriä korkea punainen teräsvyyhti, Britannian suurin julkinen taideteos. Sen suunnittelivat kuvanveistäjä Anish Kapoor ja insinööri Cecil Balmond vuoden 2012 olympialaisia varten. Ylhäällä on kaksi näköalatasannetta, ja alas pääsee 455 porrasta pitkin. Vuonna 2016 veistokseen kiedottiin toinen taideteos: Carsten Höllerin 178 metriä pitkä liukumäki, maailman pisin tunneliliukumäki. Matka alas kiertyy kaksitoista kertaa ja kestää noin 40 sekuntia.
+
+### 43.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+================ KOHTA 44 (kohde:hahmotelma-dominikaaniluostari) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tallinnan dominikaaniluostari (historia)
+Tietoruudun teksti: Dominikaaniveljien luostari toimi Tallinnan vanhassakaupungissa ainakin vuodesta 1246 lähtien, ja koko keskiajan ajan se oli kaupungin tärkein oppineisuuden keskus. Munkit harjoittivat myös kauppaa: he kävivät kalakauppaa ja pitivät panimoa, joka valmisti useita oluttyyppejä. Uskonpuhdistuksen myllerryksessä vuonna 1524 protestanttinen väkijoukko teki luostarin kirkkoon kuvainraastonta, ja tuho levisi pian muihinkin luostarin osiin. Suuri osa alkuperäisistä rakennuksista on kadonnut, mutta jäänteitä, kuten hienosti veistetty portaali, on säilynyt näkyvissä Katariina käik -käytävällä, joka kulkee kirkon entisen eteläisen sivulaivan muurin vierellä ja yhdistää kaksi vanhankaupungin katua.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: The Mansions] 1889 Kuuden rivitalon rivi George Streetin harjanteella on kolmen queenslandilaisen poliitikon sijoitus: pääministeri Boyd Dunlop Morehead, valtiovarainministeri William Pattison ja Clermontin edustaja John Stevenson ostivat tontin elokuussa 1888. He palkkasivat arkkitehti George Henry Male Addisonin, ja RE Burton rakensi rivin 11 700 punnalla vuonna 1889. Talo on punatiiltä, jonka vaaleat yksityiskohdat ovat Uudesta-Seelannista tuotua Oamarun kalkkikiveä — samaa kiveä kuin George Streetin puoleisen räystäslistan päällä istuvat kaksi kivistä kissaa. Rivitalot olivat siirtomaa-ajan Queenslandissa harvinaisia, sillä vuoden 1885 laki kielsi liian pienet tontit: vähimmäiskoko oli kuusitoista ne…
+
+### 44.1
+KYSYMYS: Mille vuosisadoille luostarin maine oppineisuuden keskuksena ajoittui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tallinnan dominikaaniluostari (historia)
+Tietoruudun teksti: Dominikaaniveljien luostari toimi Tallinnan vanhassakaupungissa ainakin vuodesta 1246 lähtien, ja koko keskiajan ajan se oli kaupungin tärkein oppineisuuden keskus. Munkit harjoittivat myös kauppaa: he kävivät kalakauppaa ja pitivät panimoa, joka valmisti useita oluttyyppejä. Uskonpuhdistuksen myllerryksessä vuonna 1524 protestanttinen väkijoukko teki luostarin kirkkoon kuvainraastonta, ja tuho levisi pian muihinkin luostarin osiin. Suuri osa alkuperäisistä rakennuksista on kadonnut, mutta jäänteitä, kuten hienosti veistetty portaali, on säilynyt näkyvissä Katariina käik -käytävällä, joka kulkee kirkon entisen eteläisen sivulaivan muurin vierellä ja yhdistää kaksi vanhankaupungin katua.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: The Mansions] 1889 Kuuden rivitalon rivi George Streetin harjanteella on kolmen queenslandilaisen poliitikon sijoitus: pääministeri Boyd Dunlop Morehead, valtiovarainministeri William Pattison ja Clermontin edustaja John Stevenson ostivat tontin elokuussa 1888. He palkkasivat arkkitehti George Henry Male Addisonin, ja RE Burton rakensi rivin 11 700 punnalla vuonna 1889. Talo on punatiiltä, jonka vaaleat yksityiskohdat ovat Uudesta-Seelannista tuotua Oamarun kalkkikiveä — samaa kiveä kuin George Streetin puoleisen räystäslistan päällä istuvat kaksi kivistä kissaa. Rivitalot olivat siirtomaa-ajan Queenslandissa harvinaisia, sillä vuoden 1885 laki kielsi liian pienet tontit: vähimmäiskoko oli kuusitoista ne…
+
+### 44.2
+KYSYMYS: Mikä kuvainraastona tunnettu tapahtuma tuhosi kirkon sisustuksen 1524?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tallinnan dominikaaniluostari (historia)
+Tietoruudun teksti: Dominikaaniveljien luostari toimi Tallinnan vanhassakaupungissa ainakin vuodesta 1246 lähtien, ja koko keskiajan ajan se oli kaupungin tärkein oppineisuuden keskus. Munkit harjoittivat myös kauppaa: he kävivät kalakauppaa ja pitivät panimoa, joka valmisti useita oluttyyppejä. Uskonpuhdistuksen myllerryksessä vuonna 1524 protestanttinen väkijoukko teki luostarin kirkkoon kuvainraastonta, ja tuho levisi pian muihinkin luostarin osiin. Suuri osa alkuperäisistä rakennuksista on kadonnut, mutta jäänteitä, kuten hienosti veistetty portaali, on säilynyt näkyvissä Katariina käik -käytävällä, joka kulkee kirkon entisen eteläisen sivulaivan muurin vierellä ja yhdistää kaksi vanhankaupungin katua.
+
+### 44.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+================ KOHTA 45 (nosto:kaali) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tallinna
+Maa, jossa pelaaja on: Viro
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Taivaalta tuli kivi asutun kylän päälle, ja kesti kaksisataa vuotta ennen kuin kukaan uskoi sen
+Tietoruudun teksti: Saarenmaan Kaalissa on kuoppa, joka on täynnä vettä. Se on 110 metriä leveä ja 22 metriä syvä, ja sen ympärillä on kahdeksan pienempää, halkaisijaltaan kahdestatoista neljäänkymmeneen metriin — kaikki kilometrin säteellä. Ne syntyivät samana hetkenä. Meteori hajosi viiden ja kymmenen kilometrin korkeudella ja putosi palasina, ja törmäysenergia oli noin kahdeksankymmentä terajoulea eli suunnilleen sitä luokkaa kuin Hiroshiman pommi. Metsä paloi kuuden kilometrin säteellä.
+
+Poikkeuksellista ei ole kraatteri vaan yleisö. Useimmat törmäykset osuvat aavikolle, merelle tai jäätikölle; tämä osui alueelle, jolla asuttiin. Joku näki sen, ja jotkut selvisivät. Ajankohdan arviot vaihtelevat tuhansia vuosia, joten sitä ei kannata sanoa vuosilukuna — mutta paikka on ollut pitkään pyhä, ja kraatterin ympäriltä on kaivettu merkkejä siitä, että sinne tultiin. Tiede tuli perässä hitaasti: vielä 1900-luv…
+Isoisän matkakirjamerkintä: Revalin torin apteekissa kysyin, auttaisiko marsipaani sydänsuruihin, jos ei vielä tiedä ketä kaipaa. Apteekkari leikkasi suuremman palan. Söin lääkkeeni satamaan mennessä. Vaiva jäi; hoitoon olin poikkeuksellisen tyytyväinen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havaiji — kaupunkilehti / Tulivuoret ja Pele: Mark Twain kraatterin reunalla] Kesäkuussa 1866 nuori sanomalehtimies Samuel Clemens – myöhemmin tunnettu nimellä Mark Twain – matkusti Kilauealle ja majoittui kraatterin reunalla sijainneeseen Volcano House -majataloon, jota hän kehui siistiksi ja mukavaksi. Hän sattui paikalle juuri, kun tulivuori oli poikkeuksellisen aktiivinen, ja kuvaili myöhemmin näkemäänsä sanoin "helvetin ja sen enkelien näky". Twain kirjoitti matkastaan yhteensä 25 kirjettä Sacramento Union -lehteen, ja kokemukset Havaijilla päätyivät vuosia myöhemmin myös osaksi hänen Roughing It -teostaan. Kirjeet olivat monelle amerikkalaiselle ensimmäinen kosketus saarten tulivuoriin.
+- [Rub al-Khali — kaupunkilehti / Rub al-Khali: Raudan paikka] Philby etsi samaa kadonnutta kaupunkia ja löysi jotain aivan muuta. Beduiinit puhuivat paikasta nimeltä Al Hadida, raudan paikka, jossa oli kerran nähty kamelin kokoinen rautamöhkäle. Kuukauden matkan jälkeen — osa kameleista kuoli tiellä — Philby seisoi 2. helmikuuta 1932 puolen neliökilometrin alalla, joka oli täynnä valkoista hiekkakiveä, mustaa lasia ja rautaa. Hän luuli sitä tulivuoreksi, mutta Lontoossa British Museumin tutkija tunnisti näytteistä meteoriitin törmäyspaikan. Kraattereista suurin on 116 metriä leveä. Aramcon nostoryhmä punnitsi lokakuussa 1966 suurimman talteen saadun kappaleen: 2 045 kiloa.
+
+### 45.1
+KYSYMYS: Miksi Kaalin kraatteri on poikkeuksellinen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tallinna
+Maa, jossa pelaaja on: Viro
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Taivaalta tuli kivi asutun kylän päälle, ja kesti kaksisataa vuotta ennen kuin kukaan uskoi sen
+Tietoruudun teksti: Saarenmaan Kaalissa on kuoppa, joka on täynnä vettä. Se on 110 metriä leveä ja 22 metriä syvä, ja sen ympärillä on kahdeksan pienempää, halkaisijaltaan kahdestatoista neljäänkymmeneen metriin — kaikki kilometrin säteellä. Ne syntyivät samana hetkenä. Meteori hajosi viiden ja kymmenen kilometrin korkeudella ja putosi palasina, ja törmäysenergia oli noin kahdeksankymmentä terajoulea eli suunnilleen sitä luokkaa kuin Hiroshiman pommi. Metsä paloi kuuden kilometrin säteellä.
+
+Poikkeuksellista ei ole kraatteri vaan yleisö. Useimmat törmäykset osuvat aavikolle, merelle tai jäätikölle; tämä osui alueelle, jolla asuttiin. Joku näki sen, ja jotkut selvisivät. Ajankohdan arviot vaihtelevat tuhansia vuosia, joten sitä ei kannata sanoa vuosilukuna — mutta paikka on ollut pitkään pyhä, ja kraatterin ympäriltä on kaivettu merkkejä siitä, että sinne tultiin. Tiede tuli perässä hitaasti: vielä 1900-luv…
+Isoisän matkakirjamerkintä: Revalin torin apteekissa kysyin, auttaisiko marsipaani sydänsuruihin, jos ei vielä tiedä ketä kaipaa. Apteekkari leikkasi suuremman palan. Söin lääkkeeni satamaan mennessä. Vaiva jäi; hoitoon olin poikkeuksellisen tyytyväinen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Metsästäjän pata joka paranee odottaessa] nykyään — Bigos eli metsästäjän pata on hidas muhennos, jossa erilaiset lihat haudutetaan yhdessä hapankaalin ja tuoreen kaalin kanssa. Ruokaan lisätään usein makkaraa, sieniä, luumuja ja viiniä, ja mausteet vaihtelevat perheittäin. Bigosin erikoisuus on, että se paranee uudelleenlämmittäessä: monet väittävät parhaan bigosin olevan se, joka on saanut seistä ja maustua useita päiviä, jopa viikon. Ruoka levisi alkuperäisestä Puolasta laajalle koko Puolan–Liettuan unionin alueelle.
+
+### 45.2
+KYSYMYS: Miten meteoriitin törmäys voidaan tunnistaa jälkeenpäin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tallinna
+Maa, jossa pelaaja on: Viro
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Taivaalta tuli kivi asutun kylän päälle, ja kesti kaksisataa vuotta ennen kuin kukaan uskoi sen
+Tietoruudun teksti: Saarenmaan Kaalissa on kuoppa, joka on täynnä vettä. Se on 110 metriä leveä ja 22 metriä syvä, ja sen ympärillä on kahdeksan pienempää, halkaisijaltaan kahdestatoista neljäänkymmeneen metriin — kaikki kilometrin säteellä. Ne syntyivät samana hetkenä. Meteori hajosi viiden ja kymmenen kilometrin korkeudella ja putosi palasina, ja törmäysenergia oli noin kahdeksankymmentä terajoulea eli suunnilleen sitä luokkaa kuin Hiroshiman pommi. Metsä paloi kuuden kilometrin säteellä.
+
+Poikkeuksellista ei ole kraatteri vaan yleisö. Useimmat törmäykset osuvat aavikolle, merelle tai jäätikölle; tämä osui alueelle, jolla asuttiin. Joku näki sen, ja jotkut selvisivät. Ajankohdan arviot vaihtelevat tuhansia vuosia, joten sitä ei kannata sanoa vuosilukuna — mutta paikka on ollut pitkään pyhä, ja kraatterin ympäriltä on kaivettu merkkejä siitä, että sinne tultiin. Tiede tuli perässä hitaasti: vielä 1900-luv…
+Isoisän matkakirjamerkintä: Revalin torin apteekissa kysyin, auttaisiko marsipaani sydänsuruihin, jos ei vielä tiedä ketä kaipaa. Apteekkari leikkasi suuremman palan. Söin lääkkeeni satamaan mennessä. Vaiva jäi; hoitoon olin poikkeuksellisen tyytyväinen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rub al-Khali — kaupunkilehti / Rub al-Khali: Raudan paikka] Philby etsi samaa kadonnutta kaupunkia ja löysi jotain aivan muuta. Beduiinit puhuivat paikasta nimeltä Al Hadida, raudan paikka, jossa oli kerran nähty kamelin kokoinen rautamöhkäle. Kuukauden matkan jälkeen — osa kameleista kuoli tiellä — Philby seisoi 2. helmikuuta 1932 puolen neliökilometrin alalla, joka oli täynnä valkoista hiekkakiveä, mustaa lasia ja rautaa. Hän luuli sitä tulivuoreksi, mutta Lontoossa British Museumin tutkija tunnisti näytteistä meteoriitin törmäyspaikan. Kraattereista suurin on 116 metriä leveä. Aramcon nostoryhmä punnitsi lokakuussa 1966 suurimman talteen saadun kappaleen: 2 045 kiloa.
+- [Meksiko — maalehti / Luonto: Kaivo, jonka kehä piirtää kraatterin] Cenote tulee jukateekkimayan sanasta tsʼonoʼot, paikka jossa on pohjavettä. Kun kalkkikivikatto romahtaa, alta paljastuu pohjavesi, ja Yucatánin niemimaalla tällaisia kaivoja on arviolta kymmenentuhatta. Mayoille ne olivat vedenottopaikkoja ja joskus uhripaikkoja. Kartalla ne paljastavat myös jotain paljon vanhempaa: tavallista tiheämpi cenotejono muodostaa kaaren, joka seuraa Chicxulubin törmäyskraatterin reunaa — 66 miljoonaa vuotta sitten iskeytyneen meteoriitin jälkeä.
+
+### 45.3
+KYSYMYS: Miksi kraatterin ikää ei tiedetä tarkasti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tallinna
+Maa, jossa pelaaja on: Viro
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Taivaalta tuli kivi asutun kylän päälle, ja kesti kaksisataa vuotta ennen kuin kukaan uskoi sen
+Tietoruudun teksti: Saarenmaan Kaalissa on kuoppa, joka on täynnä vettä. Se on 110 metriä leveä ja 22 metriä syvä, ja sen ympärillä on kahdeksan pienempää, halkaisijaltaan kahdestatoista neljäänkymmeneen metriin — kaikki kilometrin säteellä. Ne syntyivät samana hetkenä. Meteori hajosi viiden ja kymmenen kilometrin korkeudella ja putosi palasina, ja törmäysenergia oli noin kahdeksankymmentä terajoulea eli suunnilleen sitä luokkaa kuin Hiroshiman pommi. Metsä paloi kuuden kilometrin säteellä.
+
+Poikkeuksellista ei ole kraatteri vaan yleisö. Useimmat törmäykset osuvat aavikolle, merelle tai jäätikölle; tämä osui alueelle, jolla asuttiin. Joku näki sen, ja jotkut selvisivät. Ajankohdan arviot vaihtelevat tuhansia vuosia, joten sitä ei kannata sanoa vuosilukuna — mutta paikka on ollut pitkään pyhä, ja kraatterin ympäriltä on kaivettu merkkejä siitä, että sinne tultiin. Tiede tuli perässä hitaasti: vielä 1900-luv…
+Isoisän matkakirjamerkintä: Revalin torin apteekissa kysyin, auttaisiko marsipaani sydänsuruihin, jos ei vielä tiedä ketä kaipaa. Apteekkari leikkasi suuremman palan. Söin lääkkeeni satamaan mennessä. Vaiva jäi; hoitoon olin poikkeuksellisen tyytyväinen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havaiji — kaupunkilehti / Tulivuoret ja Pele: Mark Twain kraatterin reunalla] Kesäkuussa 1866 nuori sanomalehtimies Samuel Clemens – myöhemmin tunnettu nimellä Mark Twain – matkusti Kilauealle ja majoittui kraatterin reunalla sijainneeseen Volcano House -majataloon, jota hän kehui siistiksi ja mukavaksi. Hän sattui paikalle juuri, kun tulivuori oli poikkeuksellisen aktiivinen, ja kuvaili myöhemmin näkemäänsä sanoin "helvetin ja sen enkelien näky". Twain kirjoitti matkastaan yhteensä 25 kirjettä Sacramento Union -lehteen, ja kokemukset Havaijilla päätyivät vuosia myöhemmin myös osaksi hänen Roughing It -teostaan. Kirjeet olivat monelle amerikkalaiselle ensimmäinen kosketus saarten tulivuoriin.
+
+### 45.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
