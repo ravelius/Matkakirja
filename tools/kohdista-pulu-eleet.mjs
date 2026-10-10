@@ -45,6 +45,7 @@ import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
 import { AANI_JUURI } from '../js/media.js';
 import { laskeSha256, tekstinSha256 } from '../js/luentareaktiot.js';
 import { LIVIAN_LUENTAKAUPUNGIT, livianLuentatyo } from '../js/livia-pilotti-cuet.js';
+import { livianAaniOsoite } from '../js/liviapuhe.js';
 import { tarkistaLivianPilottiData } from '../js/livia-puheeleet-lataus.js';
 import {
   PAKOTETUN_OSOITE, jaksonJasennys, normalisoiAlignment, sovitaMerkit,
@@ -89,19 +90,24 @@ export function ankkurinOsumat(teksti, ankkuri) {
   return paikat;
 }
 
-/** Sama näkyvä kommentti, jonka peli antaa city-3-soittimelle. */
-export function livianKohdistustyo(kaupunki, kuittirivi = null) {
+/**
+ * Sama näkyvä kommentti, jonka peli antaa city-3-soittimelle.
+ * pelin = true (--pelin, PT 10.10.2026): kohteena PELIN NYT SOITTAMA mp3 (livianAaniOsoite, v4-versiot …/tasoitettu/),
+ * ja eleet sen viereen (js/livia-puheeleet-lataus.js livianEleidenOsoite), koska validaattori vertaa soivan mp3:n tavuja.
+ */
+export function livianKohdistustyo(kaupunki, kuittirivi = null, pelin = false) {
   const sopimus = livianLuentatyo(kaupunki);
   if (!sopimus) return null;
   const raaka = FOKUSVIRRAT[kaupunki]?.pollo?.kommentti;
   const kuplat = Array.isArray(raaka) ? raaka : [raaka];
   const teksti = String(kuplat[0] ?? '').trim();
-  const aaniOsoite = kuittirivi
+  const pelinAani = pelin ? String(livianAaniOsoite(kaupunki, 2) ?? '').replace(/\?.*$/, '') : null;
+  const aaniOsoite = pelinAani || (kuittirivi
     ? `${AANI_JUURI}${kuittirivi.finalObjectKey}`
-    : `${AANI_JUURI}aanet/pulu/${sopimus.aaniNimi}`;
-  const r2Kohde = kuittirivi
+    : `${AANI_JUURI}aanet/pulu/${sopimus.aaniNimi}`);
+  const r2Kohde = pelinAani ? pelinAani.slice(AANI_JUURI.length).replace(/\.mp3$/, '.eleet.json') : (kuittirivi
     ? kuittirivi.finalObjectKey.replace(/\.mp3$/, '.eleet.json')
-    : sopimus.r2Kohde;
+    : sopimus.r2Kohde);
   return { ...sopimus, teksti, aaniOsoite, r2Kohde, kuittiAani: kuittirivi?.finalArtifact ?? null };
 }
 
@@ -437,13 +443,17 @@ function vieR2(polku, kohde) {
 
 export function lueLiput(argv) {
   const liput = {
-    kuiva: false, vie: false, kaupungit: [], kuitti: null, elava: false,
+    kuiva: false, vie: false, kaupungit: [], kuitti: null, elava: false, pelin: false, ulos: null,
   };
   for (let i = 0; i < argv.length; i += 1) {
     const pala = argv[i];
     if (pala === '--kuiva') liput.kuiva = true;
     else if (pala === '--vie') liput.vie = true;
     else if (pala === '--elava') liput.elava = true;
+    // --pelin: pelin soittama v4-mp3 elävänä (kattavuus- ja kestovartijat); --ulos <kansio>: data <kansio>/<ämpäripolku>
+    // (vientipaketti Julkaisijalle) eikä repon assets/aikaleimat-kopiota.
+    else if (pala === '--pelin') { liput.pelin = true; liput.elava = true; }
+    else if (pala === '--ulos') liput.ulos = String(argv[++i] ?? '');
     else if (pala === '--kaupungit') liput.kaupungit.push(...String(argv[++i] ?? '').split(/[\s,]+/).filter(Boolean));
     else if (pala === '--kuitti') {
       const arvo = argv[++i];
@@ -472,7 +482,7 @@ async function main() {
   let virheita = 0;
   const tyot = [];
   for (const kaupunki of kaupungit) {
-    const tyo = livianKohdistustyo(kaupunki, kuitit.get(kaupunki));
+    const tyo = livianKohdistustyo(kaupunki, kuitit.get(kaupunki), liput.pelin);
     if (!tyo) { console.error(`${kaupunki}: ei kuulu jäädytettyyn Livia-luentaerään`); virheita += 1; continue; }
     if (liput.kuitti && !kuitit.has(kaupunki)) {
       console.error(`${kaupunki}: ei ole annetussa tuotantokuitissa`); virheita += 1; continue;
@@ -507,7 +517,7 @@ async function main() {
         throw new Error('versionoidun mp3:n tavumäärä tai SHA-256 ei vastaa tuotantokuittia');
       }
       const vastaus = await haeKohdistus(aanidata, tyo.teksti, avain);
-      const polku = join(JUURI, tyo.kohde);
+      const polku = liput.ulos ? join(resolve(liput.ulos), tyo.r2Kohde) : join(JUURI, tyo.kohde);
       if (liput.elava) {
         const { data, kattavuus, puuttuvat } = await kokoaEledataElavana(tyo, aanidata, vastaus);
         mkdirSync(dirname(polku), { recursive: true });
