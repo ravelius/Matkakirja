@@ -8,6 +8,10 @@
 //  TUNTILYÖNNIT (Soundly-erä 1, PT 9.10.): tasatunnilla lähin kirkko (alle KirkkoLahinM, kamera matalalla) lyö N kertaa (1–12)
 //    kirkon omalla kellolla (kello-lyonti-a…d kirkon siemenestä) ja omalla välillä 2,5–3 s, edellisen soidessa; taso etäisyydestä
 //    joka iskulla. Korvaa KaupunkiAanimaisemaSoittimen 2D-lyönnit, kun Soundly-kellot ovat ladattuina (ElavaKaupunki.OmatLyonnit).
+//  SOUNDLY v2 (juna 182, PalloSoundly2Aanet): tasatunnilla, jos tunnin lyöntimäärä vastaa tornikello-tunti-äänitettä
+//    (TuntiLyonteja: 11, 9, 4), soi koko sarja (30 s) N lyönnin sijaan ja heiluvat kellot sen jälkeen; puolella tunnilla yksi
+//    tornikello-lyonti kirkon omalla kellolla (PuoliLyonti, ei kuluta satunnaislukuja). Heiluviin kelloihin kirkonkello-soitto-01…05
+//    (HeiluvatKellot). Saatavilla suodattaa lataamattomat pois (null = kaikki): ilman v2:ta kaikki kuten ennen.
 //  SUIHKULÄHTEET: enintään SuihkujaEnintaan lähintä alle SuihkuM:n soivat silmukkana pisteessä (iso/pieni pisteen siemenestä);
 //    valinnan vaihtuessa häivytys SuihkuHaivytysS lineaarisesti sisään ja ulos (ei hyppyä).
 //  SATAMAT (Pelikoodari 9.10., sonniss-aanet-v4/satama-vesi, kivikkorannan liplatus): vesiliikenteen edestakaisten reittien päät
@@ -50,7 +54,14 @@ namespace Matkakirja.Linssit.Elava
         const int Baari = 0, Rauhallinen = 1, Tori = 2, Halli = 3, Keskus = 4;
 
         /// <summary>Kerta-ääni; Lyonti = tuntilyönnin järjestysnumero 1…N (0 = ei lyönti).</summary>
-        public sealed class Kerta { public string Tunnus; public double X, Y, Z, Taso, EtaisyysM; public bool Tasatunti; public int Lyonti; }
+        public sealed class Kerta { public string Tunnus; public double X, Y, Z, Taso, EtaisyysM; public bool Tasatunti, Puolitunti; public int Lyonti; }
+        /// <summary>Heiluvat kellot: kirkonkello-01…05 (pallo-kaupunki-v1) ja kirkonkello-soitto-01…05 (Soundly v2).</summary>
+        public static readonly string[] HeiluvatKellot = Yhdista(PalloKaupunkiAanet.Kirkonkello, PalloSoundly2Aanet.KirkonkelloSoitto);
+        static string[] Yhdista(string[] a, string[] b) { var c = new string[a.Length + b.Length]; a.CopyTo(c, 0); b.CopyTo(c, a.Length); return c; }
+        /// <summary>Onko klippi saatavilla (Unity: ladattu); null = kaikki. Heiluvista kelloista suodattaa (tyhjä → alkuperäinen);
+        /// tuntisarja ja puolen tunnin lyönti soivat vain saatavilla olevina.</summary>
+        public Predicate<string> Saatavilla;
+        bool Saa(string t) => t != null && (Saatavilla == null || Saatavilla(t));
         /// <summary>Silmukkapiste (suihkulähde tai laituri): Y = vesipinta paketista (laituri) tai NaN (maa haetaan soittaessa).</summary>
         public sealed class Suihku { public int Piste; public string Tunnus; public double X, Y = double.NaN, Z, Osuus, Taso; }
 
@@ -75,8 +86,8 @@ namespace Matkakirja.Linssit.Elava
         HakuRuudukko kirkkoR, suihkuR, kahvilaR, toriR, halliR, laituriR;
         double seuraavaKello = double.NaN, tasaKello = double.NaN, seuraavaMaito = double.NaN, seuraavaAstia = double.NaN, nytS;
         string edAstia;
-        int edTunti = -1; string edKello;
-        readonly Queue<(double T, int N, double X, double Z, string Tunnus)> lyonnit = new Queue<(double, int, double, double, string)>();
+        int edTunti = -1, edPuoli = -1; string edKello; bool pakkoPuoli;
+        readonly Queue<(double T, int N, double X, double Z, string Tunnus, double Perus)> lyonnit = new Queue<(double, int, double, double, string, double)>();
         /// <summary>Viimeisin tuntilyönti: kirkko, kello ja väli (diagnoosi).</summary>
         public string ViimeLyonti { get; private set; }
         readonly List<int> hae = new List<int>(), pois = new List<int>();
@@ -149,7 +160,7 @@ namespace Matkakirja.Linssit.Elava
         public static double LyontienJalkeenS(int tunti, double vali = 3.0) => (Lyonteja(tunti) - 1) * vali + LyontiSoiS;
 
         /// <summary>Testi- ja kuuntelukomento: seuraava kirkonkello, maitovaahdotin tai astia heti, kun ehdot täyttyvät.</summary>
-        public void Pakota(string mita) { if (mita == "kello") seuraavaKello = double.NegativeInfinity; else if (mita == "maito") seuraavaMaito = double.NegativeInfinity; else if (mita == "astia") seuraavaAstia = double.NegativeInfinity; }
+        public void Pakota(string mita) { if (mita == "kello") seuraavaKello = double.NegativeInfinity; else if (mita == "maito") seuraavaMaito = double.NegativeInfinity; else if (mita == "astia") seuraavaAstia = double.NegativeInfinity; else if (mita == "puoli") pakkoPuoli = true; }
 
         /// <summary>Joka kehys: kamera paketin ENU:ssa (vaaka), korkeus maasta (NaN = ei tiedossa → vain häivytykset), paikallinen
         /// tunti 0–24 (NaN = ei kelloa → ei tasatunnin kelloja), soiko IHMISTEN sorina juuri nyt.</summary>
@@ -167,29 +178,50 @@ namespace Matkakirja.Linssit.Elava
             LahinKirkkoM = kirkko >= 0 ? dk : double.NaN;
             if (!double.IsNaN(tunti))
             {
-                int h = (int)Math.Floor(tunti);
-                if (edTunti >= 0 && h != edTunti)
+                int h = (int)Math.Floor(tunti), puoli = (int)Math.Floor(tunti * 2);
+                bool tuntiVaihtui = edTunti >= 0 && h != edTunti;
+                if (tuntiVaihtui)
                 {
                     double vali = 3.0;
+                    string sarja = PalloSoundly2Aanet.TuntiSarja(Lyonteja(h));
                     if (matala && kirkko >= 0)
                     {
                         var (lx, lz) = Kirkot[kirkko];
                         vali = PalloSoundlyAanet.LyontiVali(lx, lz, siemen);
                         string kello = PalloSoundlyAanet.KirkonKello(lx, lz, siemen);
                         lyonnit.Clear();
-                        for (int i = 0; i < Lyonteja(h); i++) lyonnit.Enqueue((nyt + i * vali, i + 1, lx, lz, kello));
-                        ViimeLyonti = $"klo {h}: {Lyonteja(h)} × {kello} {vali:F2} s välein, kirkko ({lx:F0}, {lz:F0})";
+                        if (Saa(sarja))
+                        {
+                            // Soundly v2: tornikellon koko tuntisarja, kun sen lyöntimäärä on tämän tunnin (muuten väärä määrä).
+                            lyonnit.Enqueue((nyt, 1, lx, lz, sarja, PalloSoundly2Aanet.TuntiTaso));
+                            ViimeLyonti = $"klo {h}: {sarja} ({Lyonteja(h)} lyöntiä), kirkko ({lx:F0}, {lz:F0})";
+                        }
+                        else
+                        {
+                            for (int i = 0; i < Lyonteja(h); i++) lyonnit.Enqueue((nyt + i * vali, i + 1, lx, lz, kello, PalloSoundlyAanet.LyontiTaso));
+                            ViimeLyonti = $"klo {h}: {Lyonteja(h)} × {kello} {vali:F2} s välein, kirkko ({lx:F0}, {lz:F0})";
+                        }
                     }
-                    tasaKello = nyt + LyontienJalkeenS(h, vali);
+                    tasaKello = nyt + (Saa(sarja) ? PalloSoundly2Aanet.TuntiKestoS : LyontienJalkeenS(h, vali));
                 }
-                edTunti = h;
+                // Puoli tuntia: yksi lyönti lähimmästä kirkosta (ei samassa kehyksessä tunnin vaihtumisen kanssa, esim. opas tunti -hyppy).
+                bool puoliNyt = pakkoPuoli || (edPuoli >= 0 && puoli != edPuoli && (puoli & 1) == 1 && !tuntiVaihtui);
+                if (puoliNyt && tiedossa && matala && kirkko >= 0)
+                {
+                    pakkoPuoli = false;
+                    var (lx, lz) = Kirkot[kirkko];
+                    string lyonti = PalloSoundly2Aanet.PuoliLyonti(lx, lz, siemen);
+                    double d3 = Math.Sqrt(dk * dk + k2), taso = PalloSoundly2Aanet.PuoliTaso * PalloElavaAanet.Etaisyystaso(d3, KirkkoTaysiM, KirkkoHiljaM);
+                    if (Saa(lyonti) && taso > 0) Kerrat.Add(new Kerta { Tunnus = lyonti, X = lx, Y = KelloKorkeusM, Z = lz, EtaisyysM = d3, Taso = taso, Puolitunti = true });
+                }
+                edTunti = h; edPuoli = puoli;
             }
             while (lyonnit.Count > 0 && lyonnit.Peek().T <= nyt)
             {
                 var l = lyonnit.Dequeue();
                 if (!tiedossa) continue;
                 double dx = l.X - kx, dz = l.Z - kz, d3 = Math.Sqrt(dx * dx + dz * dz + k2);
-                double taso = PalloSoundlyAanet.LyontiTaso * PalloElavaAanet.Etaisyystaso(d3, KirkkoTaysiM, KirkkoHiljaM);
+                double taso = l.Perus * PalloElavaAanet.Etaisyystaso(d3, KirkkoTaysiM, KirkkoHiljaM);
                 if (taso > 0) Kerrat.Add(new Kerta { Tunnus = l.Tunnus, X = l.X, Y = KelloKorkeusM, Z = l.Z, EtaisyysM = d3, Taso = taso, Lyonti = l.N, Tasatunti = true });
             }
             if (!double.IsNaN(tasaKello) && nyt > tasaKello + 60) tasaKello = double.NaN;   // kerran: ehdot eivät täyttyneet minuutissa
@@ -200,10 +232,12 @@ namespace Matkakirja.Linssit.Elava
                 {
                     if (tasa) { tasaKello = double.NaN; seuraavaKello = Math.Max(seuraavaKello, nyt + KelloValiMinS); }
                     else seuraavaKello = nyt + KelloValiMinS + (KelloValiMaxS - KelloValiMinS) * rnd.NextDouble();
-                    edKello = ElavaValinta.Vaihtoehto(PalloKaupunkiAanet.Kirkonkello, rnd, edKello);
+                    var sarja = HeiluvatKellot;
+                    if (Saatavilla != null) { var s = Array.FindAll(sarja, x => Saatavilla(x)); if (s.Length > 0) sarja = s; }
+                    edKello = ElavaValinta.Vaihtoehto(sarja, rnd, edKello);
                     double d3 = Math.Sqrt(dk * dk + k2);
                     var (x, z) = Kirkot[kirkko];
-                    Kerrat.Add(new Kerta { Tunnus = edKello, X = x, Y = KelloKorkeusM, Z = z, EtaisyysM = d3, Tasatunti = tasa,   // heiluvat kellot
+                    Kerrat.Add(new Kerta { Tunnus = edKello, X = x, Y = KelloKorkeusM, Z = z, EtaisyysM = d3, Tasatunti = tasa,   // heiluvat kellot tai soitto
                         Taso = PalloKaupunkiAanet.KirkkoTaso * PalloElavaAanet.Etaisyystaso(d3, KirkkoTaysiM, KirkkoHiljaM) });
                 }
             }
