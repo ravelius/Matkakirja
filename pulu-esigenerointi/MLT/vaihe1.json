@@ -709,5 +709,719 @@
    "Mitä uusklassismi tarkoittaa?",
    "Miksi kirkko rakennettiin vanhan ympärille?"
   ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hypogeum",
+  "kysymys": "Minä vuonna hypogeum löydettiin?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Hypogeum löydettiin vuonna 1902, kun työmiehet louhivat vesisäiliötä [[Paolassa]] uutta asuinaluetta varten ja puhkaisivat vahingossa maanalaisen tilan katon. Alta paljastui kolmikerroksinen, pehmeään kalkkikiveen veistetty rakennelma, jota oli käytetty pyhäkkönä ja hautakammiona. Kaivauksia johti aluksi [[Manuel Magri]] vuodesta 1903, ja myöhemmin työtä jatkoi [[Themistocles Zammit]]. Onneksi se löytyi.",
+  "linkit": [
+   "Paolassa",
+   "Manuel Magri",
+   "Themistocles Zammit"
+  ],
+  "jatkot": [
+   "Mihin tarkoitukseen hypogeum rakennettiin?",
+   "Kuka johti hypogeumin kaivauksia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hypogeum",
+  "kysymys": "Kuinka monta kävijää päivässä hypogeumiin nykyään päästetään?",
+  "uusi": false,
+  "vastaus": "No niin, tähän on selvä luku. Hypogeumiin päästetään nykyään vain 80 kävijää päivässä, ja pääsyä säätelee [[Heritage Malta]], joka valvoo myös tilan mikroilmastoa tarkasti. Rajoituksen tarkoitus on suojella herkkää, pehmeään [[kalkkikiveen]] veistettyä rakennetta ja sen vanhoja punaokramaalauksia. Käytännössä sisäänpääsy kannattaa varata hyvissä ajoin. Pitkä on matka, mut hiljaa mennään.",
+  "linkit": [
+   "Heritage Malta",
+   "kalkkikiveen"
+  ],
+  "jatkot": [
+   "Miksi hypogeumin mikroilmastoa säädellään tarkasti?",
+   "Millaisia maalauksia hypogeumin katossa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hypogeum",
+  "kysymys": "Kuka johti hypogeumin ensimmäisiä kaivauksia?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Hypogeumin kaivauksia johti aluksi [[Manuel Magri]] vuodesta 1903, eli noin vuosi löydön jälkeen. Hänen jälkeensä työn otti vastuulleen [[Themistocles Zammit]], joka julkaisi raporttinsa vuodesta 1910 alkaen. Löytö oli tapahtunut vuonna 1902 työmiesten louhiessa sisternejä uudelle asuinalueelle. Siinä kaksi nimeä, jotka kannattaa muistaa.",
+  "linkit": [
+   "Manuel Magri",
+   "Themistocles Zammit"
+  ],
+  "jatkot": [
+   "Milloin hypogeum avattiin kävijöille?",
+   "Miten työmiehet löysivät hypogeumin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hypogeum",
+  "kysymys": "Mihin tarkoitukseen hypogeum rakennettiin?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Hypogeum on [[neoliittinen]] maanalainen rakenne, jota pidetään sekä pyhäkkönä että hautausmaana. Sen [[Saflieni-kausi]] ajoittuu noin vuosiin 3300–3000 eaa., ja arkeologit ovat dokumentoineet siitä yli 7 000 ihmisen jäännökset. Kattoon on maalattu punaokralla kierteitä ja pilkkuja, ja yhden kammion kolo saattoi vahvistaa laulun ja rummutuksen kaikua muihin huoneisiin. Rakentajien ajatuksista tiedetään vähemmän kuin haluaisi.",
+  "linkit": [
+   "neoliittinen",
+   "Saflieni-kausi"
+  ],
+  "jatkot": [
+   "Millaista elämä oli Maltan temppelirakentajien aikaan?",
+   "Miten kammion kaiku toimii?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hypogeum",
+  "kysymys": "Miksi hypogeumin mikroilmastoa säädellään tarkasti?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Hypogeum on pehmeään [[kalkkikiveen]] veistetty ja tuhansia vuosia vanha, joten kosteuden, lämpötilan ja ilman koostumuksen muutokset voivat vahingoittaa sitä. Kävijöiden määrää rajoitetaan, ja nykyään sisään päästetään vain 80 kävijää päivässä [[Heritage Maltan]] toimesta. Tarkkoja mittauksia tai syitä en ole varma, mutta hengitys ja kosteus ovat tällaisissa maanalaisissa tiloissa yleinen huoli, ja katon [[punaokramaalaukset]] ovat erityisen herkkiä. Hiljaa saa kulkea.",
+  "linkit": [
+   "kalkkikiveen",
+   "Heritage Maltan",
+   "punaokramaalaukset"
+  ],
+  "jatkot": [
+   "Millaisia maalauksia hypogeumin katossa on?",
+   "Kuinka paljon jäännöksiä hypogeumista on löydetty?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ta-pinu",
+  "kysymys": "Mitä Ta’ Pinu tarkoittaa?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Nimi Ta’ Pinu tarkoittaa Pinun tai Filipin kappelia. Aiemmin kappeli tunnettiin Gentilen kappelina, mutta vuonna 1598 [[Pinu Gauci]] tuli sen hoitajaksi, ja nimi muuttui hänen mukaansa. Pyhäkkö sijaitsee noin 700 metrin päässä [[Għarbin]] kylästä Maltan sisarsaarella [[Gozolla]]. Pienestä nimestä tuli iso.",
+  "linkit": [
+   "Pinu Gauci",
+   "Għarbin",
+   "Gozolla"
+  ],
+  "jatkot": [
+   "Mitä tapahtui, kun kappeli määrättiin purettavaksi?",
+   "Mitä Karmni Grima kuuli vuonna 1883?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ta-pinu",
+  "kysymys": "Minä vuonna uuden kirkon rakentaminen aloitettiin?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Uuden kirkon rakentaminen aloitettiin 30. toukokuuta 1920. Rakennus nousi paikalle, jossa oli jo vuosisatoja seissyt pieni kappeli, jonka Neitsyt Marialle liitettiin ihmeitä 1880-luvulta alkaen. Pyhäkkö on nykyisin [[roomalaiskatolinen]] basilika [[Għarbin]] kylän lähellä. Tarkka päivä oli helppo muistaa.",
+  "linkit": [
+   "roomalaiskatolinen",
+   "Għarbin"
+  ],
+  "jatkot": [
+   "Kuka maalasi pääalttarin taivaaseenottamisen?",
+   "Mitä Karmni Grima kuuli vuonna 1883?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ta-pinu",
+  "kysymys": "Kuka maalasi pääalttarin taivaaseenottamisen?",
+  "uusi": true,
+  "vastaus": "Ai tota. Pääalttarin maalauksen Neitsyt Marian taivaaseenottamisesta teki [[Amadeo Perugino]] vuonna 1619. Maalaus kuuluu pyhäkön vanhaan kappeliin, jonka alkuperä on tuntematon. Kappeli tunnettiin aiemmin Gentilen kappelina, ja vuonna 1598 sen hoitajaksi tullut [[Pinu Gauci]] antoi sille nykyisen nimen. Taidetta on kyllä ollut ihan hyvä katsella ylhäältä.",
+  "linkit": [
+   "Amadeo Perugino",
+   "Pinu Gauci"
+  ],
+  "jatkot": [
+   "Mitä Ta’ Pinu tarkoittaa?",
+   "Minä vuonna uuden kirkon rakentaminen aloitettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ta-pinu",
+  "kysymys": "Mitä tapahtui, kun kappeli määrättiin purettavaksi?",
+  "uusi": true,
+  "vastaus": "Joo, tää on hyvä tarina. Vuonna 1575 apostolinen visitaattori [[Pietro Dusina]] piti kappelin kuntoa niin huonona, että määräsi sen suljettavaksi ja purettavaksi. Ensimmäisessä iskussa työmiehen käsi kuitenkin murtui, ja tapausta pidettiin merkkinä. Kappeli säilyi [[Gozolla]], ja siitä tuli saaren ainoa, joka jäi pystyyn. Pitkä tarina, mut lyhyt käsi.",
+  "linkit": [
+   "Pietro Dusina",
+   "Gozolla"
+  ],
+  "jatkot": [
+   "Kuka oli Pinu Gauci?",
+   "Milloin kappeliin liitettiin ensimmäiset ihmeet?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ta-pinu",
+  "kysymys": "Mitä Karmni Grima kuuli vuonna 1883?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: [[Karmni Grima]] kuuli vuonna 1883 kappelin ohi kulkiessaan äänen, joka pyysi häntä lausumaan kolme [[Ave Mariaa]]. Seuraavina vuosina kappelin Neitsyt Marialle liitettiin ihmeitä, ja ne lisäsivät paikan merkitystä pyhiinvaelluskohteena. Uuden kirkon rakentaminen aloitettiin lopulta 30. toukokuuta 1920. Äänet ovat kyllä minun alaani, mut en kuule tuollaisia.",
+  "linkit": [
+   "Karmni Grima",
+   "Ave Mariaa"
+  ],
+  "jatkot": [
+   "Minä vuonna uuden kirkon rakentaminen aloitettiin?",
+   "Mitä tapahtui, kun kappeli määrättiin purettavaksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-birgu",
+  "kysymys": "Minä vuosina Birgu oli Maltan käytännön pääkaupunki?",
+  "uusi": false,
+  "vastaus": "Tuota niin, tän luvun muistan. Birgu oli [[Johanniittaritarikunnan]] tukikohta ja käytännössä Maltan pääkaupunki vuosina 1530–1571. Ritarikunta oli menettänyt [[Rodoksen]] osmaneille ja saanut Maltan uudeksi kodikseen, ja se valitsi Birgun, koska Mdina oli sisämaassa eikä sopinut sen merisotilaallisiin tarpeisiin. Birgu on tunnettu myös osastaan [[Maltan suuressa piirityksessä]] vuonna 1565. Ei paha, kun muistin vuodetkin.",
+  "linkit": [
+   "Johanniittaritarikunnan",
+   "Rodoksen",
+   "Maltan suuressa piirityksessä"
+  ],
+  "jatkot": [
+   "Miksi Mdinaa kutsutaan Hiljaiseksi kaupungiksi?",
+   "Mikä Fort Saint Angelo on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-birgu",
+  "kysymys": "Millä nimellä kaupunkia kutsutaan italiaksi?",
+  "uusi": false,
+  "vastaus": "No jopas. Italiaksi Birgua kutsutaan nimellä Vittoriosa, joka tarkoittaa Voitokasta kaupunkia. Se on vanha linnoitettu kaupunki [[Grand Harbourin]] eteläpuolella niemellä, jonka kärjessä on [[Fort Saint Angelo]] ja tyvellä [[Cospicua]]. Nimi liittyy kaupungin rooliin Maltan suuressa piirityksessä vuonna 1565. Kaupungilla on siis kaksi nimeä, kuten monella hyvällä paikalla.",
+  "linkit": [
+   "Grand Harbourin",
+   "Fort Saint Angelo",
+   "Cospicua"
+  ],
+  "jatkot": [
+   "Miksi ritarikunta valitsi Birgun pääkaupungikseen?",
+   "Mikä Fort Saint Angelo on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-birgu",
+  "kysymys": "Mistä Johanniittaritarikunta tuli Maltalle?",
+  "uusi": true,
+  "vastaus": "Kato, hyvä kysymys. Johanniittaritarikunta tuli Maltalle [[Rodokselta]], jonka se oli menettänyt [[osmaneille]]. Maltasta tuli ritarikunnan uusi koti, ja se asettui aluksi Birguun, jossa sen tukikohta toimi vuosina 1530–1571. Valinta perustui siihen, että Birgu oli merenrannalla, toisin kuin sisämaassa sijaitseva [[Mdina]]. Rodoksen ikävä tuskin jäi kuitenkaan helposti pois mielestä.",
+  "linkit": [
+   "Rodokselta",
+   "osmaneille",
+   "Mdina"
+  ],
+  "jatkot": [
+   "Miksi Birgu sopi ritarikunnan tarpeisiin paremmin kuin Mdina?",
+   "Milloin ritarikunta menetti Rodoksen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-birgu",
+  "kysymys": "Miksi ritarikunta valitsi Birgun pääkaupungikseen?",
+  "uusi": true,
+  "vastaus": "Katotaas. Ritarikunta valitsi Birgun, koska [[Mdina]] oli sisämaassa eikä sopinut sen merisotilaallisiin tarpeisiin. Birgu sijaitsee [[Grand Harbourin]] eteläpuolella niemellä, ja sen kärjessä on [[Fort Saint Angelo]]. Ritarikunta oli juuri menettänyt Rodoksen osmaneille, joten satamaa hallitseva tukikohta oli sille tärkeä. Hiljaiseksi jäänyt Mdina ei varmaan pahastunut.",
+  "linkit": [
+   "Mdina",
+   "Grand Harbourin",
+   "Fort Saint Angelo"
+  ],
+  "jatkot": [
+   "Miksi Mdinaa kutsutaan Hiljaiseksi kaupungiksi?",
+   "Missä Grand Harbour sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-birgu",
+  "kysymys": "Mitä Mdinalle tapahtui ritarikunnan tulon jälkeen?",
+  "uusi": true,
+  "vastaus": "Ai se. Mdina oli Maltan pääkaupunki antiikista keskiajalle, kunnes [[Pyhän Johanneksen ritarikunta]] asettui vuonna 1530 Birguun. Sen jälkeen kaupunki ei enää kasvanut muurien ulkopuolelle, ja sitä alettiin kutsua [[Hiljaiseksi kaupungiksi]]. Vuonna 2024 muurien sisällä asui vain 242 ihmistä, ja omaisuus siirtyy yhä sukupolvelta toiselle. [[Foinikialaiset]] perustivat asutuksen noin 700-luvulla eaa. Hiljaisuus on kyllä minun makuuni.",
+  "linkit": [
+   "Pyhän Johanneksen ritarikunta",
+   "Hiljaiseksi kaupungiksi",
+   "Foinikialaiset"
+  ],
+  "jatkot": [
+   "Mistä nimi Mdina tulee?",
+   "Mikä nimi Mdinalla oli roomalaisaikana?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fort-manoel",
+  "kysymys": "Kenen mukaan Fort Manoel on nimetty?",
+  "uusi": false,
+  "vastaus": "Hmm, tän minä tiedän. Fort Manoel on nimetty [[Johanniittaritarikunnan]] suurmestarin [[António Manoel de Vilhenan]] mukaan, jonka aikana linnoitus rakennettiin 1700-luvulla. Hänen mukaansa on nimetty myös saari, jolla linnoitus sijaitsee Marsamxettin satamassa. De Vilhena tilasi vuonna 1731 myös [[Vallettan]] julkisen teatterin ja maksoi sen itse. Mies piti selvästi nimistään kiinni.",
+  "linkit": [
+   "Johanniittaritarikunnan",
+   "António Manoel de Vilhenan",
+   "Vallettan"
+  ],
+  "jatkot": [
+   "Millainen linnoitus Fort Manoel on?",
+   "Milloin Vallettan teatterin ensimmäinen näytelmä esitettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fort-manoel",
+  "kysymys": "Minä vuonna britit ottivat linnoituksen haltuunsa?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Britit ottivat linnoituksen käyttöönsä vuonna 1800 ranskalaismiehityksen jälkeen. He pitivät sitä varuskuntanaan vuoteen 1964 asti. Fort Manoel sijaitsee [[Manoel-saarella]] [[Marsamxettin]] satamassa, ja se rakennettiin alun perin Johanniittaritarikunnan aikana 1700-luvulla. Aikamoinen varuskunta-aika, ja minä kun en kestä kuin hetken yhdellä kaiteella.",
+  "linkit": [
+   "Manoel-saarella",
+   "Marsamxettin"
+  ],
+  "jatkot": [
+   "Kuinka kauan britit käyttivät linnoitusta varuskuntanaan?",
+   "Kenen mukaan Fort Manoel on nimetty?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fort-manoel",
+  "kysymys": "Mikä on tähtilinnoitus?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Tähtilinnoitus on linnoitus, jonka muurit muodostavat teräviä kulmia, joita kutsutaan [[bastioneiksi]], ja joka näyttää ylhäältä katsottuna tähdeltä. Muodon etuna on, että puolustajat voivat ampua muurin viereen yrittäviä hyökkääjiä myös sivulta. Fort Manoel on tällainen tähtimäinen linnoitus, jonka rakensi 1700-luvulla [[Johanniittaritarikunta]]. Se yhdistää barokkiarkkitehtuurin käytännöllisyyteen. Ylhäältä tähti näkyy kyllä parhaiten.",
+  "linkit": [
+   "bastioneiksi",
+   "Johanniittaritarikunta"
+  ],
+  "jatkot": [
+   "Millainen linnoitus Fort Manoel on?",
+   "Mitä Marsamxettin satama on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fort-manoel",
+  "kysymys": "Kuka oli suurmestari António Manoel de Vilhena?",
+  "uusi": true,
+  "vastaus": "Tuota niin, hyvä kysymys. António Manoel de Vilhena oli [[Johanniittaritarikunnan]] suurmestari, jonka aikana Fort Manoel rakennettiin 1700-luvulla. Hänen mukaansa on nimetty sekä linnoitus että saari, jolla se sijaitsee. Vuonna 1731 hän tilasi [[Vallettaan]] julkisen teatterin ja maksoi sen itse, ja ensimmäinen näytelmä [[Merope]] esitettiin 9. tammikuuta 1732. Muita tietoja hänestä en ole varma muistamaan. Mies siis rakensi sekä linnoituksen että huvit.",
+  "linkit": [
+   "Johanniittaritarikunnan",
+   "Vallettaan",
+   "Merope"
+  ],
+  "jatkot": [
+   "Millainen on Vallettan teatteri?",
+   "Millainen linnoitus Fort Manoel on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fort-manoel",
+  "kysymys": "Kuinka kauan britit käyttivät linnoitusta varuskuntanaan?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Britit ottivat linnoituksen käyttöönsä vuonna 1800 ja pitivät sitä varuskuntanaan vuoteen 1964 asti, eli noin 164 vuotta. Ennen heitä linnoitusta oli hallinnut ranskalaismiehitys, ja sen oli rakentanut 1700-luvulla [[Johanniittaritarikunta]]. Linnoitus sijaitsee [[Manoel-saarella]] [[Marsamxettin]] satamassa. Sadas kuudeskymmenes vuosi on pitkä aika yhdelle kaiteelle.",
+  "linkit": [
+   "Johanniittaritarikunta",
+   "Manoel-saarella",
+   "Marsamxettin"
+  ],
+  "jatkot": [
+   "Minä vuonna britit ottivat linnoituksen haltuunsa?",
+   "Kenen mukaan Fort Manoel on nimetty?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-popeye-village",
+  "kysymys": "Mitä elokuvaa varten kylä alun perin rakennettiin?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Kylä pystytettiin [[Popeye-elokuvan]] kuvauksia varten, ja elokuva ilmestyi vuonna 1980. Kuvauspaikka sijaitsee Ankkurilahdella lähellä [[Mellieħaa]], ja kylän toinen nimi on Sweethaven Village. Kuvausten jälkeen puurakennuksista tehtiin yleisölle avoin ulkoilmamuseo ja rantapuisto. Hyvä lavaste, kun se jaksoi tähän päivään.",
+  "linkit": [
+   "Popeye-elokuvan",
+   "Mellieħaa"
+  ],
+  "jatkot": [
+   "Ketkä elokuvan tuottivat?",
+   "Mitä kylälle tehtiin kuvausten jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-popeye-village",
+  "kysymys": "Ketkä olivat elokuvan pääosien näyttelijät?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Elokuvan pääosissa olivat [[Robin Williams]] ja [[Shelley Duvall]]. Popeye-elokuva ilmestyi vuonna 1980, ja sen tuottivat Paramount Pictures ja Walt Disney Productions. Elokuvaa varten rakennettu kylä toimii nykyään ulkoilmamuseona Ankkurilahdella lähellä Mellieħaa. Hyvä pari, ja minä en nähnyt kuin katolta.",
+  "linkit": [
+   "Robin Williams",
+   "Shelley Duvall"
+  ],
+  "jatkot": [
+   "Millä toisella nimellä kylä tunnetaan?",
+   "Mitä kylälle tehtiin kuvausten jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-popeye-village",
+  "kysymys": "Ketkä tuottivat Popeye-elokuvan?",
+  "uusi": true,
+  "vastaus": "Ai tota. Popeye-elokuvan tuottivat Paramount Pictures ja [[Walt Disney Productions]]. Elokuva ilmestyi vuonna 1980, ja sitä varten rakennettiin puukylä Ankkurilahdelle lähellä [[Mellieħaa]]. Pääosissa olivat Robin Williams ja Shelley Duvall. Kaksi isoa yhtiötä yhtä kylää varten, ei paha.",
+  "linkit": [
+   "Walt Disney Productions",
+   "Mellieħaa"
+  ],
+  "jatkot": [
+   "Ketkä olivat elokuvan pääosien näyttelijät?",
+   "Mitä elokuvaa varten kylä alun perin rakennettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-popeye-village",
+  "kysymys": "Mitä kylälle tehtiin kuvausten jälkeen?",
+  "uusi": true,
+  "vastaus": "No niin. Kuvausten jälkeen rapistuneen näköisistä puurakennuksista tehtiin yleisölle avoin ulkoilmamuseo ja rantapuisto. Kylä pystytettiin alun perin vuonna 1980 ilmestynyttä [[Popeye-elokuvaa]] varten [[Ankkurilahdelle]] lähellä [[Mellieħaa]]. Se tunnetaan nykyään sekä Popeye Villagena että Sweethaven Villagena. Lavasteesta tuli matkailukohde, mikä on kyllä kyyhkyn mielestä hieno loppu.",
+  "linkit": [
+   "Popeye-elokuvaa",
+   "Ankkurilahdelle",
+   "Mellieħaa"
+  ],
+  "jatkot": [
+   "Millä toisella nimellä kylä tunnetaan?",
+   "Mitä elokuvaa varten kylä alun perin rakennettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-popeye-village",
+  "kysymys": "Millä toisella nimellä kylä tunnetaan?",
+  "uusi": true,
+  "vastaus": "Mmm— Popeye Village tunnetaan myös nimellä Sweethaven Village. Nimi tulee kylän alkuperästä elokuvalavasteena, ja kylä pystytettiin vuonna 1980 ilmestyneen [[Popeye-elokuvan]] kuvauksia varten [[Ankkurilahdelle]] lähellä [[Mellieħaa]]. Nykyään se on yleisölle avoin ulkoilmamuseo ja rantapuisto. Nimiä on kaksi, ja molemmat kuulostavat ihan sopivilta.",
+  "linkit": [
+   "Popeye-elokuvan",
+   "Ankkurilahdelle",
+   "Mellieħaa"
+  ],
+  "jatkot": [
+   "Ketkä elokuvan tuottivat?",
+   "Mitä kylälle tehtiin kuvausten jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mellieha",
+  "kysymys": "Mistä Mellieħan nimi juontuu?",
+  "uusi": false,
+  "vastaus": "Ai tota, tän minä tiedän. Nimi juontuu seemiläisestä sanajuuresta, joka tarkoittaa suolaa. Todennäköisimmin se viittaa alueella sijainneisiin [[foinikialaisten]] ja roomalaisten aikaisiin [[suolapatoihin]], joissa merivettä haihdutettiin suolaksi. Kylä sijaitsee [[Maltan]] pohjoisosassa, ja nimi kertoo, että suolaa on seudulla otettu merestä hyvin kauan. Suolaa en kyllä itse kaipaa, mut ois siinä pullalle sopiva pari.",
+  "linkit": [
+   "foinikialaisten",
+   "suolapatoihin",
+   "Maltan"
+  ],
+  "jatkot": [
+   "Miten suolaa on tehty merivedestä aikojen kuluessa?",
+   "Keitä foinikialaiset olivat ja miksi he purjehtivat Maltalle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mellieha",
+  "kysymys": "Minä vuonna pyhäkkökirkon luola vihittiin kirkoksi perimätiedon mukaan?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Perimätiedon mukaan luola vihittiin kirkoksi vuonna 409. Samassa perimätiedossa kerrotaan, että apostoli Paavalin matkakumppani [[Luukas]] olisi maalannut [[Neitsyt Marian]] kuvan luolan kallioseinään, ja luolasta tuli myöhemmin Neitsyt Marian pyhäkkökirkko. Kyse on siis kertomuksesta, jota ei ole syytä esittää tarkistettuna tosiasiana, vaikka vuosiluku onkin perinteessä vakiintunut. Pyhäkkö on yhä Mellieħan tunnetuimpia nähtävyyksiä. Tällaiset luvut pysyvät päässä, vaikka lentäisi kuinka korkealla.",
+  "linkit": [
+   "Luukas",
+   "Neitsyt Marian"
+  ],
+  "jatkot": [
+   "Mitä tarkoittaa perimätieto ja miten se eroaa historiankirjoituksesta?",
+   "Miten luolia on käytetty kirkkoina Välimeren alueella?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mellieha",
+  "kysymys": "Milloin Pyhän Agatan torni valmistui ja mitä varten?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Pyhän Agatan torni oli ensimmäinen Mellieħan linnoitus, ja se valmistui vuonna 1649. Pohjoisrannikon linnoittaminen oli alkanut jo 1600-luvun alussa, koska rannikko oli alttiina [[korsaarien]] hyökkäyksille, jotka olivat aiemmin ajaneet kylän asukkaat pois. Torni rakennettiin siis rannikon vartiopaikaksi ja puolustukseksi. Tornit ja linnakkeet olivat osa [[Maltan]] rannikon puolustusta, jota johti [[Johanniittaritarikunta]]. Linnoituksista olisi kyllä helpompi puhua, jos ne olisivat lentäneet.",
+  "linkit": [
+   "korsaarien",
+   "Maltan",
+   "Johanniittaritarikunta"
+  ],
+  "jatkot": [
+   "Miten rannikkotornit puolustivat Maltaa korsaareilta?",
+   "Mikä oli Johanniittaritarikunta ja miksi se hallitsi Maltaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mellieha",
+  "kysymys": "Miksi Mellieħa autioitui myöhäiskeskiajalla?",
+  "uusi": true,
+  "vastaus": "Joo, tähän on selvä vastaus. Kylä autioitui 1400- ja 1500-lukujen taitteessa, koska [[korsaarit]] hyökkäsivät Maltan rannikolle toistuvasti ja asukkaat joutuivat jättämään alueen. Asutus ei palannut ennen 1500-luvun loppua. Mellieħa oli kuitenkin ollut yksi [[Maltan]] kymmenestä ensimmäisestä seurakunnasta, joten autioituminen katkaisi vanhan ja tärkeän yhteisön elämän pitkäksi aikaa. Onpas siitä onneksi pitkä aika.",
+  "linkit": [
+   "korsaarit",
+   "Maltan"
+  ],
+  "jatkot": [
+   "Keitä korsaarit olivat ja miten he toimivat Välimerellä?",
+   "Miksi Malta oli niin alttiina merirosvoille?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mellieha",
+  "kysymys": "Kuka oli apostoli Paavalin matkakumppani Luukas?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Luukas oli varhaiskristillisen perinteen mukaan apostoli [[Paavalin]] matkakumppani ja lääkäri. Hänen katsotaan perinteisesti kirjoittaneen [[Luukkaan evankeliumin]] ja [[Apostolien teot]], joissa kerrotaan muun muassa Paavalin haaksirikosta Maltalla. Perimätiedon mukaan hän maalasi myös Neitsyt Marian kuvan Mellieħan luolaan, mutta sitä en pysty vahvistamaan. Tutkijat ovat eri mieltä siitä, kuka evankeliumin tarkalleen kirjoitti, joten tarkempaa en uskalla väittää. Kyllä minä silti muistan tämän, vaikka en kirjoita päiväkirjaa.",
+  "linkit": [
+   "Paavalin",
+   "Luukkaan evankeliumin",
+   "Apostolien teot"
+  ],
+  "jatkot": [
+   "Miten Paavalin haaksirikko Maltalla kerrotaan Apostolien teoissa?",
+   "Mitä eroa on evankeliumeilla ja Apostolien teoilla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-marsaskala",
+  "kysymys": "Mitä marsa tarkoittaa arabiaksi?",
+  "uusi": false,
+  "vastaus": "Kato, tää on helppo. Arabian sana marsa tarkoittaa satamaa. Marsaskalan nimessä se on yhdistetty sanaan skala, joka juontuu todennäköisesti sisilialaisia kalastajia tarkoittavasta sanasta, joten nimi kertoo kaupungin kalastajasatamasta. Sanan marsa tapaa muuallakin [[Maltan]] paikannimistä, mikä muistuttaa saarten pitkästä [[arabialaisesta]] vaikutuksesta kieleen. Satamasta puheen ollen, laiturilla kelpaisi kyllä pieni murunen.",
+  "linkit": [
+   "Maltan",
+   "arabialaisesta"
+  ],
+  "jatkot": [
+   "Miten arabian kieli vaikutti maltan kieleen?",
+   "Mitä muita paikannimiä Maltalla on arabian pohjalta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-marsaskala",
+  "kysymys": "Minä vuonna kaupungin seurakuntakirkko valmistui?",
+  "uusi": false,
+  "vastaus": "No niin, katsotaas. Nykyinen Pyhälle Annalle omistettu seurakuntakirkko valmistui vuonna 1953, joten se on kaupungin historiassa verrattain nuori rakennus. Kaupunki oli alun perin kalastajakylä, joka on kasvanut matkailukohteeksi ja pysyväksi asuinpaikaksi, ja seurakuntakirkko kuvastaa tätä kasvua. Kaupungin juhlaa vietetään heinäkuun lopussa. Nuori kirkko, vanha satama, ja minä siinä välissä.",
+  "linkit": [],
+  "jatkot": [
+   "Kuka Pyhä Anna oli kirkon perimätiedon mukaan?",
+   "Miten juhlia vietetään maltalaisissa kylissä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-marsaskala",
+  "kysymys": "Miksi Marsaskalaa kutsutaan myös Wied il-Għajniksi?",
+  "uusi": true,
+  "vastaus": "Sepä sattui: tähän on hyvä selitys. Lahden pohjukkaan laskeutui ennen kaksi [[laaksoa]], joiden makean veden [[lähde]] virtasi sisimpään lahteen. Nimi viittaa tähän laaksoon ja lähteeseen, ja maltaksi kaupunkia kutsutaan yhä myös sillä nimellä. Makea vesi oli saarella arvokasta, joten lähde oli kalastajakylälle tärkeä. Hyvä että joku muistaa nimetä paikat vedenkin mukaan.",
+  "linkit": [
+   "laaksoa",
+   "lähde"
+  ],
+  "jatkot": [
+   "Mistä Maltalla on perinteisesti saatu makeaa vettä?",
+   "Miten kalastus on muuttunut Maltalla viime vuosikymmeninä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-marsaskala",
+  "kysymys": "Mikä on kaupungin seurakuntakirkon suojeluspyhimys?",
+  "uusi": true,
+  "vastaus": "Ai se, tuo on helppo. Kirkko on omistettu [[Pyhälle Annalle]], ja se valmistui vuonna 1953. Kaupungin juhlaa vietetään heinäkuun lopussa, mikä sopii yhteen [[katolisen]] perinteen kanssa, jossa Pyhän Annan muistopäivä on heinäkuussa. Perinteessä Anna on [[Neitsyt Marian]] äiti. Maltalaiset kylät viettävät juhliaan näyttävästi, ja kyläjuhla on tärkeä osa paikallista yhteisöä. Juhlissa on aina jotain tarjolla, ja minä olen aina paikalla.",
+  "linkit": [
+   "Pyhälle Annalle",
+   "katolisen",
+   "Neitsyt Marian"
+  ],
+  "jatkot": [
+   "Millaisia kyläjuhlia Maltalla vietetään?",
+   "Mitä katolinen kirkko opettaa Pyhästä Annasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-marsaskala",
+  "kysymys": "Millainen kaupunki Marsaskala on nykyään?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Marsaskala on rantakaupunki [[Maltan]] eteläosassa. Se oli alun perin [[kalastajakylä]], mutta se on kasvanut suosituksi matkailukohteeksi ja pysyväksi asuinpaikaksi, jossa asuu ihmisiä ympäri vuoden. Kaupungin juhlaa vietetään heinäkuun lopussa, ja sen satama ja rantakatu ovat tärkeä osa arkea. Ylhäältä katsoen se näyttää hyvin rauhalliselta rantakylältä, vaikka siellä kai sentään tapahtuu joskus jotain.",
+  "linkit": [
+   "Maltan",
+   "kalastajakylä"
+  ],
+  "jatkot": [
+   "Miten matkailu on muuttanut Maltan rantakaupunkeja?",
+   "Millaista kalastus on perinteisesti ollut Maltalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-verdala-palace",
+  "kysymys": "Minkä suurmestarin mukaan palatsi on nimetty?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Palatsi on nimetty suurmestari Hugues Loubenx de Verdallen mukaan, jonka aikana vuonna 1586 metsästysmaja laajennettiin palatsiksi. Hän johti [[Johanniittaritarikuntaa]], jonka suurmestarit hallitsivat Maltaa. Paikalla oli aiemmin suurmestari Jean Parisot de la Valetten rakennuttama majatalo-, tarkemmin metsästysmaja, [[Boschetton]] riistamaalla, ja nykyisin rakennus on Maltan presidentin kesäasunto. Suurmestareita oli niin monta, että minulla meni hetki päästä perille.",
+  "linkit": [
+   "Johanniittaritarikuntaa",
+   "Boschetton"
+  ],
+  "jatkot": [
+   "Mitä suurmestarin tehtävään kuului Johanniittaritarikunnassa?",
+   "Mikä on Buskettin puutarha ja mitä siellä kasvaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-verdala-palace",
+  "kysymys": "Mitä rakennusta paikalla oli ennen palatsia?",
+  "uusi": false,
+  "vastaus": "Kas vaan, tähän on suora vastaus. Paikalla oli ennen palatsia metsästysmaja, jonka suurmestari Jean Parisot de la Valette rakennutti 1550–1560-luvuilla [[Boschetton]] riistamaalle. Maja laajennettiin palatsiksi vuonna 1586 suurmestari Verdallen aikana, ja palatsi sai nimensä hänen mukaansa. Myöhemmin rakennusta koristeltiin lisää, ja nykyään se on Maltan presidentin kesäasunto. Metsästysmajasta palatsiksi, siinä on kyllä urakehitystä, jota kyyhky ei saavuta.",
+  "linkit": [
+   "Boschetton"
+  ],
+  "jatkot": [
+   "Millaista metsästys oli johanniittojen aikana Maltalla?",
+   "Mitä presidentti tekee palatsissa kesäisin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-verdala-palace",
+  "kysymys": "Mihin käyttöön Verdalan palatsi on nykyään?",
+  "uusi": true,
+  "vastaus": "Mmm— no niin. Palatsi toimii nykyään Maltan presidentin virallisena kesäasuntona. Se kohoaa [[Buskettin]] puutarhojen keskellä Siġġiewin kunnan alueella. Brittiaikana sitä käytettiin Maltan kuvernöörin residenssinä, ja nykyinen käyttö jatkaa rakennuksen vanhaa virallista asemaa. Maltan tasavallan [[presidentti]] on valtionpäämies, ja palatsi on hänen kesäpaikkansa. Kesäasunto kuulostaa minun korvaani kovin hyvältä ajatukselta.",
+  "linkit": [
+   "Buskettin",
+   "presidentti"
+  ],
+  "jatkot": [
+   "Mikä on Maltan presidentin asema valtiossa?",
+   "Mitä Buskettin puutarhat ovat ja miten ne tunnetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-verdala-palace",
+  "kysymys": "Mikä asema palatsilla oli brittiaikana?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Brittiaikana palatsi toimi Maltan kuvernöörin residenssinä San Anton -palatsin ohella. Siellä majoittui myös brittihallitsijoita ja muuta ylhäisöä, joten rakennus oli tärkeä paikka vallan edustuksessa. Maltalla [[britit]] pitivät hallintoa kauan, ja kuvernööri edusti Britannian kruunua saarella. Nykyään palatsin käyttö on rauhallisempaa. Kuvernöörin elämä ei kuulosta kyyhkyn elämältä, mutta pidempi vierailu voisi onnistua.",
+  "linkit": [
+   "britit"
+  ],
+  "jatkot": [
+   "Miten Malta päätyi brittien hallintaan?",
+   "Mikä on San Anton -palatsi ja kuka siellä asuu nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-verdala-palace",
+  "kysymys": "Ketkä suurmestarit koristelivat palatsia myöhemmin?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: tähän löytyy nimet. Rakennusta koristeltiin lisää 1600- ja 1700-luvuilla suurmestari [[Giovanni Paolo Lascarisin]] ja [[António Manoel de Vilhenan]] kausina. Molemmat johtivat [[Johanniittaritarikuntaa]], ja heidän aikanaan palatsia kaunistettiin vuosisatojen kuluessa. Alkuperäinen palatsi oli rakennettu vuonna 1586 suurmestari Verdallen aikana. Nimet ovat pitkiä, ja muistin ne silti, kuten aina.",
+  "linkit": [
+   "Giovanni Paolo Lascarisin",
+   "António Manoel de Vilhenan",
+   "Johanniittaritarikuntaa"
+  ],
+  "jatkot": [
+   "Millaisia rakennushankkeita Vilhena teetti Maltalla?",
+   "Millaista oli Lascarisin aika suurmestarina?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ghar-dalam",
+  "kysymys": "Minä vuonna Arturo Issel teki ensimmäiset tieteelliset kaivaukset luolassa?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Italialainen paleontologi Arturo Issel teki ensimmäiset tieteelliset kaivaukset vuonna 1865. Lisäkaivauksia teki John H. Cooke vuonna 1892, ja osa löydöistä lähetettiin vertailukokoelmaksi Lontoon [[British Museumiin]]. Luolan kerrostumista on löytynyt eläinten luita pleistoseeni- ja holoseenikaudelta, mikä tekee paikasta tutkijoille arvokkaan. Vuosiluvut pysyvät päässä, kun on opetellut ne oikein.",
+  "linkit": [
+   "British Museumiin"
+  ],
+  "jatkot": [
+   "Mitä paleontologi tutkii ja miten työ etenee?",
+   "Mitä pleistoseeni tarkoittaa geologiassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ghar-dalam",
+  "kysymys": "Millaisten eläinten luita luolasta on löydetty?",
+  "uusi": false,
+  "vastaus": "No jopas, vähän joutuu kaivamaan muistista. Luolan kerrostumista on löydetty pleistoseeni- ja holoseenikautisten eläinten luita, muun muassa kääpiönorsuja, virtahepoja, jättiläisjoutsenia, peuroja ja karhuja. Luola on [[Għar Dalamin]] luolaputki Birżebbuġan liepeillä, ja sitä pidetään yhtenä [[Maltan]] tärkeimmistä muinaismuistoista. Luolan nimi on annettu myös Maltan esihistorian varhaiselle vaiheelle. Jättiläisjoutsen on kyllä kiinnostava, ja minä pysyn silti pienemmässä koossa.",
+  "linkit": [
+   "Għar Dalamin",
+   "Maltan"
+  ],
+  "jatkot": [
+   "Miten kääpiönorsut päätyivät Maltalle?",
+   "Mitä holoseeni-kausi tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ghar-dalam",
+  "kysymys": "Kuinka pitkä Għar Dalamin luolaputki on?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Luolaputki on 144 metriä pitkä, ja se sijaitsee Birżebbuġan liepeillä [[Maltalla]]. Luolan kerrostumista on löydetty eläinten luita, ja paikka on antanut nimensä myös [[Għar Dalam -vaiheelle]], joka on Maltan esihistorian varhainen jakso. Sitä pidetään yhtenä saarten tärkeimmistä muinaismuistoista. Sadankolmenkymmenen metrin luola ei minulle kauhean pitkä ole, kun lentää.",
+  "linkit": [
+   "Maltalla",
+   "Għar Dalam -vaiheelle"
+  ],
+  "jatkot": [
+   "Miten luolia muodostuu kalkkikiveen?",
+   "Mitä tiedetään Maltan esihistoriasta ennen temppeleitä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ghar-dalam",
+  "kysymys": "Miksi luolasta on löytynyt kääpiönorsujen luita?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Pienikokoiset norsut ovat tunnettu ilmiö eristyneillä saarilla, sillä rajallinen ravinto ajaa suuria eläimiä pienenemään. Għar Dalamin luolasta on löydetty pleistoseenikauden eläinten luita, muun muassa kääpiönorsuja, virtahepoja ja jättiläisjoutsenia. Tarkkaa selitystä siitä, miten eläimet Maltalle tulivat, en ole varma, enkä halua arvailla. Kääpiönorsu kuulostaa minusta sympaattiselta, ja lentäminen olisi sille silti hankalaa.",
+  "linkit": [],
+  "jatkot": [
+   "Miten eläimet muuttuvat pienemmiksi eristetyillä saarilla?",
+   "Mitä muita kääpiöeläimiä saarilta tunnetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ghar-dalam",
+  "kysymys": "Mihin osa luolan löydöistä lähetettiin?",
+  "uusi": true,
+  "vastaus": "Ai tota. Osa löydöistä lähetettiin vertailukokoelmaksi Lontoon [[British Museumiin]]. Ensimmäiset tieteelliset kaivaukset teki italialainen paleontologi [[Arturo Issel]] vuonna 1865, ja lisäkaivauksia teki John H. Cooke vuonna 1892. Vertailukokoelma auttaa tutkijoita tunnistamaan ja vertaamaan eri paikoista löytyneitä luita. Löytöjä kuljetettiin siis pitkän matkan, ja minäkin tunnen kuljetuksen.",
+  "linkit": [
+   "British Museumiin",
+   "Arturo Issel"
+  ],
+  "jatkot": [
+   "Miten museot säilyttävät vanhoja luulöytöjä?",
+   "Mikä British Museum on ja mitä siellä on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kalkara",
+  "kysymys": "Mistä latinan sanasta Kalkaran nimi juontuu?",
+  "uusi": false,
+  "vastaus": "Kato, tää menee näin. Kalkaran nimi juontuu latinan kalkkia tarkoittavasta sanasta calce. Alueella uskotaan olleen kalkinpolttouuni jo roomalaisajalta, mikä selittää nimen. Kalkkia käytettiin rakentamisessa, ja [[Maltan]] rakennukset ovat pitkälti kalkkikiveä. Kylä syntyi pienenä kalastajayhteisönä [[Kalkaran puron]] ympärille. Kalkki on ihan kelpo aihe, vaikka minä olisin kysynyt jotain pehmeämpää.",
+  "linkit": [
+   "Maltan",
+   "Kalkaran puron"
+  ],
+  "jatkot": [
+   "Miten kalkkia poltettiin ja mihin sitä käytettiin?",
+   "Mikä on Maltan kalkkikivi ja miksi se on tärkeää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kalkara",
+  "kysymys": "Mitkä kylät rajaavat Kalkaraa?",
+  "uusi": false,
+  "vastaus": "Ai se, minä tiedän. Kalkaran naapureina ovat [[Birgu]], [[Żabbar]] ja [[Xgħajra]]. Kylä sijaitsee [[Maltan]] satama-alueella Kalkaran puron ympärillä. Se syntyi pienenä kalastajayhteisönä, ja jotkut historioitsijat arvelevat sen olleen yksi saaren ensimmäisistä asutuista paikoista. Kolme naapuria riittää minulle hyvin, kunhan jokaisessa on leipomo.",
+  "linkit": [
+   "Birgu",
+   "Żabbar",
+   "Xgħajra",
+   "Maltan"
+  ],
+  "jatkot": [
+   "Millainen paikka Birgu on ja mistä se tunnetaan?",
+   "Mitä Żabbarissa on nähtävää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kalkara",
+  "kysymys": "Mitä tarkoittaa hypogeumi?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: tämä on kiehtova sana. Hypogeumi tarkoittaa maanalaista rakennetta, yleensä hautakammiota tai kalliosta louhittua tilaa, ja sana tulee kreikasta merkityksessä \"maan alla\". Kalkaran Santa Duminkan kedolta on löydetty varhaiskristillisiä hypogeumeja, jotka viittaavat siihen, että [[kristinusko]] saapui alueelle mahdollisesti jo varhain. [[Maltalla]] tunnetaan myös esihistoriallinen [[Ħal Saflienin]] hypogeumi, mutta en ole varma sen tarkoista vaiheista. Maan alle en kyllä lentäisi.",
+  "linkit": [
+   "kristinusko",
+   "Maltalla",
+   "Ħal Saflienin"
+  ],
+  "jatkot": [
+   "Miten varhaiset kristityt hautasivat vainajansa Maltalla?",
+   "Mikä on Ħal Saflienin hypogeumi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kalkara",
+  "kysymys": "Millainen yhteisö Kalkara oli alun perin?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Kalkara syntyi pienenä kalastajayhteisönä suojaisan [[Kalkaran puron]] ympärille. Jotkut historioitsijat arvelevat sen olleen yksi [[Maltan]] ensimmäisistä asutuista paikoista, koska [[Grand Harbourin]] poukamat tarjosivat suojan pitkän merimatkan jälkeen. Alueella uskotaan olleen kalkinpolttouuni jo roomalaisajalta, ja varhaiskristillisiä hypogeumeja on löytynyt läheltä. Tuo on vain arvelu, mutta järkevä sellainen. Kalastajat ovat kyllä aina olleet minun suosikkejani.",
+  "linkit": [
+   "Kalkaran puron",
+   "Maltan",
+   "Grand Harbourin"
+  ],
+  "jatkot": [
+   "Miten Maltan kalastajat työskentelivät ennen moottoriveneitä?",
+   "Miksi Grand Harbourin poukamat ovat hyviä satamia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kalkara",
+  "kysymys": "Mikä Grand Harbour on?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Grand Harbour on [[Maltan]] suuri luonnonsatama, jota ympäröivät [[Valletta]] ja muita kaupunkeja, kuten [[Birgu]]. Sen poukamat ovat tarjonneet suojaa merimatkalta saapuville jo kauan, ja Kalkaran kylä sijaitsee tämän satama-alueen tuntumassa. Satama on ollut saaren historiassa keskeinen. Tarkkoja mittoja en ole varma, joten jätän ne pois. Satamien katseleminen ylhäältä on parasta, mitä tiedän.",
+  "linkit": [
+   "Maltan",
+   "Valletta",
+   "Birgu"
+  ],
+  "jatkot": [
+   "Miten Grand Harbour on vaikuttanut Maltan historiaan?",
+   "Mitä Birgu tunnetaan ennen Vallettan rakentamista?"
+  ]
  }
 ]
