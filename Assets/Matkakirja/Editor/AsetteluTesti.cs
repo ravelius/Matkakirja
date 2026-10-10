@@ -903,6 +903,10 @@ namespace Matkakirja.Editori
                     var island = new Rect(koko.width * 0.5f - 63f, 0f, 126f, 48f);
                     if (!b.Overlaps(island) && b.xMin >= 0f && b.yMin >= 0f && b.xMax <= koko.width) { ok++; continue; }
                 }
+                // Metrolinja (myös Kaupunkikierros-kyltti) tarkoituksella turva-alueen reunan yli Islandin viereen (OpasValikko.PaivitaMetro,
+                // TarkistaPallo): ehto on ruudulla pysyminen.
+                var mj = OpasValikko.Hae()?.TestiMetro;
+                if (mj != null && (e == mj || mj.Contains(e)) && b.xMin >= 0f && b.yMin >= 0f && b.xMax <= koko.width && b.yMax <= koko.height) { ok++; continue; }
                 if (++viat <= 6)
                     Virhe($"{nimi}: {(e is Button ? "nappi" : "teksti")} \"{Lyhyt(e)}\" {Laatikko(b)} ei ole kokonaan turva-alueella {Laatikko(turva)}");
             }
