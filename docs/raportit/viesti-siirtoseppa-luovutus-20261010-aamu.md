@@ -19,9 +19,9 @@ todistus-huoneaanet3-*), lähetä SHA Natiivisepälle ja rivi PT:lle; muuten pyy
   ("äänimaisema soi kappeli:" ilman massa:-rivejä; skenaario huoneaanet.txt). Käännös cd5e3a727 (app-kopio scratchpad/app). Puhtaana →
   SHA ac0047bf0 Natiivisepälle ja rivi PT:lle (kuittaus voimassa ilman uutta kierrosta).
 
-## JUNA 174: ac0047bf0 LÄHETETTY Natiivisepälle 10.10. 04.4x (PT). Avoin: v46q:n 0°-kuvat (päivä + hämärä) osoittimella 4c01…, skenaario scratchpad v46q-0.txt → rivi PT:lle.
+## JUNA 174: ac0047bf0 LÄHETETTY Natiivisepälle 10.10. 04.4x (PT). v46q 0° OK 05.18 (todistus-v46q-0-20261010-0515) → VIE-ehto täytetty.
 
-## JUNA 175 (ei vielä kuitattu): `siirtoseppa/esittely-1499` 651c2d352 (tarvitsee uuden käännöksen; e1badd974 vanha)
+## JUNA 175 (ei vielä kuitattu): `siirtoseppa/esittely-1499` b99fb5dae (v46u dcc0591e7f6a55ac, PT 05.3x). Käännös 308f4b021 (= 651c2d352, v46t) app175:ssä; arkki v46u:lla osoittimella (scratchpad v46u-kuvat.txt, 12 kuvaa) + syke.txt → PT. Lopullinen käännös b99fb5dae:stä.
 
 1. 600086317 Esittelyn vuoden 1499 asu: kun ulkokuori.asu = "1499", saapumisen jälkeen kävelydata osittain (vain ranta-1499 ja
    porttikäytävä; SeikkailuKavely.Lataa vainNakyvat, Osittainen) ja SeikkailuHistoria.Esittely1499(true): vuosileikkaukset kuten historia
