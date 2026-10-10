@@ -101,3 +101,23 @@ test('Amerikat: 18 uutta maata rajoineen ja pääkaupunkeineen (10.10.2026)', ()
   // Bolivia: La Paz on hallituksen paikka, perustuslain pääkaupunki on Sucre.
   assert.equal(PAAKAUPUNKIPISTEET.find((p) => p.maa === 'BOL')?.asema, 'hallinnon paikka');
 });
+
+test('Oseania: 8 uutta maata rajoineen ja pääkaupunkeineen; kaikilla laudan mailla on pääkaupunki (10.10.2026)', () => {
+  for (const iso of ['FSM', 'KIR', 'MHL', 'NRU', 'PLW', 'TON', 'TUV', 'WSM']) {
+    assert.ok(maat[iso]?.renkaat?.length, `${iso}: rajat puuttuvat`);
+    assert.ok(MAIDEN_PERUSTIEDOT[iso], `${iso}: perustiedot puuttuvat`);
+  }
+  // Kiribatin nimi on Tarawalla (nimiPiste), ei NE:n Linesaarilla.
+  assert.ok(Math.abs(maat.KIR.keskus[0] - 11599) < 30, `KIR keskus ${maat.KIR.keskus}`);
+  // Kaikki maat -projektin tavoite: jokaisella laudan maalla pääkaupunki joko
+  // laudan kaupunkina, kevyenä pisteenä tai Israelin hallinnon paikkana.
+  // Odottaa: Hongkong ja Saint Helena eivät ole valtioita (ei pääkaupunkia).
+  // Islannin, Tunisian ja Sri Lankan laudan kohteet (maata edustava solmu,
+  // Karthago, Colombo) eivät ole pääkaupunkeja (tools/vienti/paakaupungit.mjs),
+  // ja puuttuvien lista 10.10. laski ne laudalla oleviksi — Reykjavík, Tunis ja
+  // Sri Jayawardenepura Kotte tilattu Sisältökirjurilta. Lista saa vain lyhentyä.
+  const ODOTTAA = new Set(['HKG', 'SHN', 'ISL', 'TUN', 'LKA']);
+  const pisteMaat = new Set(PAAKAUPUNKIPISTEET.map((p) => p.maa));
+  const ilman = Object.keys(maat).filter((iso) => !PAAKAUPUNGIT[iso] && !pisteMaat.has(iso) && iso !== 'ISR' && !ODOTTAA.has(iso));
+  assert.deepEqual(ilman, [], `maita ilman pääkaupunkia: ${ilman.join(', ')}`);
+});

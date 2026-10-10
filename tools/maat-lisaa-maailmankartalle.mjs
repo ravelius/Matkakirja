@@ -62,6 +62,8 @@ const SIETO = 1.2;        // harvennuksen sallima poikkeama lautayksikköinä
  *   sade     pisin sallittu etäisyys keskuksesta lautayksikköinä —
  *            Saint Helenan kortti näyttää saaren, ei koko Atlanttia
  *            (NE:n SHN sisältää myös Ascensionin)
+ *   nimiPiste  [lon, lat] nimen paikaksi NE:n LABEL_X/Y:n sijaan — Kiribatin
+ *            LABEL on Linesaarilla, pääkaupunki Tarawa 3 000 km lännempänä
  *   lisaksi  NE:n erilliset alueet, jotka kuuluvat maan muotoon,
  *            koska laudan kaupunki on siellä: San Juan on Puerto
  *            Ricossa (NE:ssä oma piirre PRI, suvereniteetti US1) ja
@@ -113,6 +115,18 @@ const MAAT = {
   // Lähi-itä (kaikki maat -projekti, omistaja PT:n kautta 10.10.2026). Bahrain
   // ja Gazan kaista ovat alle MIN_KOKOn, joten pienin rengas kuten Maltalla.
   // Palestiina on NE:ssä ADM0_A3 PSX / ISO_A3 PSE (_swe-näkökulma).
+  // Oseania (kaikki maat -projekti, omistaja PT:n kautta 10.10.2026; nimet ja
+  // liput Sisältökirjurin faktoista). Atollivaltiot pienin rengas; Nauru,
+  // Tuvalu ja Marshallinsaaret myös MINIVALTIOT-poikkeukseen. Tonga ylittää
+  // sauman (175°W): renkaat siirtyvät keskuksen kierrokselle.
+  FSM: ['Mikronesia', 'Mikronesian liittovaltio', 'Flag of the Federated States of Micronesia.svg', { minKoko: 0, sieto: 0.3 }],
+  KIR: ['Kiribati', 'Kiribati', 'Flag of Kiribati.svg', { minKoko: 0, sieto: 0.3, nimiPiste: [172.97, 1.33] }],
+  MHL: ['Marshallinsaaret', 'Marshallinsaaret', 'Flag of the Marshall Islands.svg', { minKoko: 0, sieto: 0.1 }],
+  NRU: ['Nauru', 'Nauru', 'Flag of Nauru.svg', { minKoko: 0, sieto: 0.05 }],
+  PLW: ['Palau', 'Palau', 'Flag of Palau.svg', { minKoko: 0, sieto: 0.3 }],
+  TON: ['Tonga', 'Tonga', 'Flag of Tonga.svg', { minKoko: 0, sieto: 0.3 }],
+  TUV: ['Tuvalu', 'Tuvalu', 'Flag of Tuvalu.svg', { minKoko: 0, sieto: 0.05 }],
+  WSM: ['Samoa', 'Samoa', 'Flag of Samoa.svg', { minKoko: 0, sieto: 0.3 }],
   // Amerikat (kaikki maat -projekti, omistaja PT:n kautta 10.10.2026; nimet ja
   // liput Sisältökirjurin faktoista). Karibian saarivaltiot pienin rengas.
   ATG: ['Antigua ja Barbuda', 'Antigua ja Barbuda', 'Flag of Antigua and Barbuda.svg', { minKoko: 0, sieto: 0.3 }],
@@ -227,6 +241,7 @@ const ANKKURIT = [
   ['SYR', ['BHR', 'ISR', 'LBN', 'PSE']],
   ['TKM', ['ARG', 'BOL', 'BRA', 'CAN', 'CHL', 'COL', 'CUB', 'ECU', 'GRL', 'GTM', 'MEX', 'NIC', 'PAN', 'PER', 'PRY', 'URY', 'USA', 'VEN']],
   ['VEN', ['AUS', 'FJI', 'NZL', 'PNG', 'SLB', 'VUT']],
+  ['VUT', ['FSM', 'KIR', 'MHL', 'NRU', 'PLW', 'TON', 'TUV', 'WSM']],
   ['VEN', ['ATG', 'BHS', 'BLZ', 'BRB', 'CRI', 'DMA', 'DOM', 'GRD', 'GUY', 'HND', 'HTI', 'JAM', 'KNA', 'LCA', 'SLV', 'SUR', 'TTO', 'VCT']],
 ];
 
@@ -460,7 +475,8 @@ for (const [iso, [nimi, wiki, lippu, asetukset = {}]] of Object.entries(MAAT)) {
    * kartografin asettama ja parempi kuin laskettu keskipiste. Se
    * lasketaan ENNEN renkaita, koska renkaat keskitetään sen ympärille.
    */
-  let keskus = Number.isFinite(f.properties.LABEL_X) && Number.isFinite(f.properties.LABEL_Y)
+  let keskus = asetukset.nimiPiste ? viivaLaudalle([asetukset.nimiPiste])[0]
+    : Number.isFinite(f.properties.LABEL_X) && Number.isFinite(f.properties.LABEL_Y)
     ? viivaLaudalle([[f.properties.LABEL_X, f.properties.LABEL_Y]])[0]
     : null;
 

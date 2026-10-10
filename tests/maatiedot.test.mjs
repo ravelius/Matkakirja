@@ -90,7 +90,8 @@ const KEVYT_RIVI = new Set([
   'BFA', 'BWA', 'CAF', 'CIV', 'COG', 'COM', 'CPV', 'DJI', 'ERI', 'GAB', 'GIN', 'GMB',
   'GNB', 'GNQ', 'LSO', 'MRT', 'MUS', 'MWI', 'NER', 'RWA', 'STP', 'SWZ', 'SYC', 'TGO',
   'ZMB', 'ATG', 'BHS', 'BLZ', 'BRB', 'CRI', 'DMA', 'DOM', 'GRD', 'HND', 'HTI', 'JAM',
-  'KNA', 'LCA', 'SLV', 'TTO', 'VCT', 'GUY', 'SUR',
+  'KNA', 'LCA', 'SLV', 'TTO', 'VCT', 'GUY', 'SUR', 'FSM', 'KIR', 'MHL', 'NRU', 'PLW',
+  'TON', 'TUV', 'WSM',
 ]);
 
 /*
