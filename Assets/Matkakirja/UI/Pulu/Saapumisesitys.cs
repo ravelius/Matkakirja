@@ -96,6 +96,7 @@ namespace Matkakirja.Natiivi
             o.LuentoAlkoi += (k, _) => Alkoi(k);
             o.LuentoLoppui += Loppui;
             o.MatkaPerilla += Perilla;
+            PeliOhjain.SaapumisluentoPois = UusiEsittely;
             // A7/C14 (löydökset 53–54): heitto, siirto, maailmahyppy ja Ohita vaientavat paikan puheen.
             o.PaikanPuheVaiennettu += () => UiKerros.PaaSaikeessa(VaiennaPaikanPuhe);
             o.TilaMuuttui += TarkistaAarre;
@@ -187,6 +188,8 @@ namespace Matkakirja.Natiivi
                 if (m == null && (m = Matkakirjamerkinnat.Fokus(v)) != null) fokus = true;
                 m ??= Matkakirjamerkinnat.Saapuminen(k) ?? Matkakirjamerkinnat.Havainto(k);
                 if (m == null) return;
+                // Uusi esittely (omistaja 20.0x): ennen "sama merkintä jo kortissa" -paluuta, jottei uudelleenkäynti jää ilman sitä.
+                if (fokus && EsittelySaa(k)) { AloitaUusiEsittely(k, v, m); return; }
                 // Sama merkintä jo kortissa (web factKey): ei kirjoiteta uudelleen.
                 if (kortti.Avain == m.Avain && kortti.Nakyy) return;
                 luentoOdotus?.Pause();
@@ -389,8 +392,33 @@ namespace Matkakirja.Natiivi
             kortti.Kuvat.Tyhjenna(true);
         }
 
-        /// <summary>Pariisin nykyintro saapumisesityksen jatkona (oletus päällä).</summary>
+        /// <summary>Pariisin nykyintro saapumisesityksenä (oletus päällä).</summary>
         public static bool IntroSaapuessa = true;
+
+        /// <summary>
+        /// UUSI ESITTELY KORVAA VANHAN (omistaja 10.10. 20.0x, kortti; PT junaan 180): intron kaupungissa (Pariisi) saavuttaessa VAIN
+        /// nykyintro (C1–C5 modernin musiikin tahdissa, Ohita), ei isoisän kolmen kuvan luentaa (PeliOhjain.SaapumisluentoPois).
+        /// Omistaja: "se uusi esittely saisi tulla aina, vaikka olisi aiemmin jo käynyt kaupungissa ainakin nyt kun testaan peliä" →
+        /// kehittäjätilassa (Asetukset.Kehittaja) joka saapumisella, myös kaupunkiklikkauksella (maailmahyppy); pelaajilla kerran
+        /// istunnossa kuten ennen. Aiemmin esittely jäi välillä kokonaan pois: se käynnistyi vain luennan Loppui-tapahtumasta
+        /// (kehittäjän hypyssä luento oli jo kuultu → ei Loppuita), sama merkintä kortissa palasi ennen sitä, ja kerran-istunnossa-raja.
+        /// </summary>
+        public static bool UusiEsittely(string k) => IntroSaapuessa && k != null && KaupunkiIntro.OnIntro(k);
+        bool EsittelySaa(string k) => UusiEsittely(k) && ohjain != null && (Asetukset.Kehittaja || !introSoitettu.Contains(k));
+
+        void AloitaUusiEsittely(string k, Saapumisvirta v, Merkinta m)
+        {
+            luentoOdotus?.Pause();
+            vaihto?.Pause();
+            kaupunki = k;
+            luentoAlkanut.Add(k);
+            kortti.Nayta(m);
+            kortti.AsetaPikkukuvat(v.Luentakuvat.Concat(v.PuluKuvat));
+            kortti.Kuvat.Tyhjenna(false);
+            introSoitettu.Add(k);
+            UnityEngine.Debug.Log($"MATKAKIRJA ui saapuminen: {k} uusi esittely (kehittäjä {Asetukset.Kehittaja})");
+            if (!NykyIntro(k)) LoppuiJatko(k);
+        }
         IVisualElementScheduledItem introAjo;
         string introKaupunki;
 
