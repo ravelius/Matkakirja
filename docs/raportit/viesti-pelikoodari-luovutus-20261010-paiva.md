@@ -18,14 +18,25 @@ PT local_593b89a1-2514-4d74-b956-2a73db862382, Siirtoseppä local_b50bb32e-18e2-
   uusiin polkuihin aanet/iss-v1/ (SHA256SUMS viimeisenä) ja kytkentä (CupolaAani, OhjaamonAanet, KavelyAanet). Huom: iss-tarranauha
   peli-TP −0,8 dBTP → hiljennä ennen vientiä. Soundly-lähteet NAS soundly/eraiss1 (tyolista.tsv iss1-rivit, tehty.txt).
 
-## 2. Odottaa
+## 2. SEURAAVA ERÄ: workerin kuratoitu live (Raamattu ALLE 18 KURATOITU, PT 10.3x)
+- NUI valmis: natiivi-ui/ikakysely-176 4c05f443e (Ikaraja.Kuratoitu/Aikuinen/Muuttui; kortti ennen 1. live-kysymystä; testikomento
+  ui ikaraja kysy|aikuinen|kuratoitu|nollaa). Sovittu NUI:n kanssa: OTSAKE `x-matkakirja-aikuinen: 1|0` (1 = aikuinen), NUI lisää sen
+  PuluChatin live-pyyntöihin itse.
+- Sinun osuutesi: tools/pollo/worker.js: otsake 1 → live kuten nyt; 0 tai puuttuu → kuratoitu: oma kehote (vain pelin paikat ja aiheet,
+  ikätasolle sopiva; pohja alaikäisosio + JAETTU_TURVAPROFIILI) + kysymys- ja vastaussuodatus + seuranta ilman henkilötietoja, SAMA
+  vastausmuoto (vanhat appit eivät rikkoudu); merkintä "Vastaukset tuottaa tekoäly (Claude)"; /opas/seuraava alle 18:lle alaikäisprofiililla.
+  Luonnos ja PT:n vastaukset proto-3d/_tyo/kuratoitu-live-luonnos-20261010.txt. Järjestys: worker vaihe 1 (kuratoitu otsakkeella 0) →
+  natiivi/web otsake (176) → puuttuvan otsakkeen kuratointi päälle vasta TF-todennuksen jälkeen. Kehittäjäkoodi ohittaa kuten nyt.
+  Testit npm test, PR → SHA PT:lle ja NUI:lle.
+
+## 3. Odottaa
 - Freesound-lataaja käynnistetty uudelleen 09.46 (perl setsid, aja-originaalit.zsh), odottaa ~/.freesound-tokenia (OAuth). Aikakatkaisu
   ~12 h; käynnistä uudelleen samalla kaavalla, jos token puuttuu yhä.
 - Kuratoitu live PIDOSSA (aamun luovutus kohta 4); IP-suola tehty sitä ennen.
 - Siivous mergen jälkeen: wt/proto-pelikoodari-pisteet, wt/proto-pelikoodari-pulu, wt/proto-pelikoodari-mittaa (git -C proto worktree remove),
   wt/pelikoodari-ip-suola (tools/uusi-worktree.sh --poista).
 
-## 3. Opit
+## 4. Opit
 - loudnorm putoaa dynaamiseen tilaan, kun huippuvara ei riitä, ja jättää tason alle; stereon mittaus + mono-tallennus = −3 dB.
   Käytä mono-PCM → mitattu LUFS → vahvistus + alimiter (kasittele.py).
 - Soundly-haku tuo sokeasti N ensimmäistä: tarkista nimet ennen käsittelyä (rautatieasemat "space station interior" -haulla).
