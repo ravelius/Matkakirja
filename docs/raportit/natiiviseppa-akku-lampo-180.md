@@ -38,3 +38,17 @@ Lämpö ei laskenut 9,5 minuutissa 30 fps:llä takaisin normaaliksi. Peli siis p
 
 Suositus: 1 + 2 ensin (pieni muutos, suurin vaikutus lämpöön), sitten 3. 4 ja 5 vasta mittauksen jälkeen. Varmistus: sama 15 min ajo ennen/jälkeen
 ja akkuprosentti johdotta (omistajan paikalla ollessa).
+
+## Uusintamittaus juna 181 (säästökatot 1–3, 11.10.2026 klo 00.21–00.38; 5eb15ef80, sama 15 min ajo, lähtö viileänä)
+| Vaihe | TF 180 | Juna 181 |
+|---|---|---|
+| Kartta levossa | silmukka 30,4 Hz, piirto 4,9 fps, GPU 13 % | silmukka **12,8 Hz** (−58 %), piirto 4,5 fps, GPU 12 %; normaali |
+| Pariisin pallo | 59 fps, GPU ~100 %, **kuuma 2 min 10 s:ssa** | **40 fps, GPU 59 %**, kuuma vasta **4 min 50 s:ssa** |
+| Olavinlinna | 30 fps, GPU 52 %, kuuma | 30 fps, GPU 51 %, kuuma (jäi Pariisista) |
+
+- Lämmin-sääntö (kohta 2) ei lauennut: iPad Pro 13 hyppäsi molemmissa ajoissa suoraan nominal (0) → serious (2), eikä fair (1) näkynyt
+  5 s:n näytteissä. Sääntö on silti voimassa laitteille, joilla fair-tila näkyy (iPhone).
+- Pallo 40 fps siirsi kuumaksi menon 2 min 10 s → 4 min 50 s, mutta 5 minuutin yhtäjaksoinen pallo kuumentaa iPadin yhä. Johdossa ja täynnä
+  (lataus Full) laite on lämpimämpi kuin akulla, joten johdoton ajo voi näyttää paremmalta.
+- Seuraava askel (ei toteutettu, PT päättää): pallon katto 30 fps (GPU ~45 %) tai kohta 4 (renderScale 0,8 pallossa), ja johdoton akkuajo tiistaina.
+- Loki: /Users/Shared/Claude/proto-3d/lokit/natiiviseppa-akku181-20261011-0020 (akku-tulos.md).
