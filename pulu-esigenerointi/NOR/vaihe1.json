@@ -1433,5 +1433,365 @@
    "Milloin kristinusko levisi Norjaan?",
    "Miksi puukirkot paloivat helposti?"
   ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-klippfisk",
+  "kysymys": "Mistä nimi klippfisk juontuu, ja miten se liittyy kalan kuivaustapaan?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Nimi viittaa kallioihin, sillä perinteisesti suolattu turska levitettiin kuivumaan ulkoilmaan rannikon paljaille kallioille ja kiville. Suomeksi tuote on siksi kalliokala. Nykyään kuivaus tehdään enimmäkseen sisätiloissa sähkölämmittimillä, mutta Länsi- ja Pohjois-Norjassa kalaa kuivataan yhä ulkona vientiin [[Etelä-Eurooppaan]]. Ennen kuin nimi klippfisk vakiintui, Norjassa kalaa kutsuttiin terranova-kalaksi Newfoundlandin mukaan. Tärkein valmistuskaupunki on ollut [[Kristiansund]], jonka satamasta [[purjelaivat]] ovat kuljettaneet kalaa maailmalle. Kalliolla kuivuva kala on kyl lintujenkin mielestä kiinnostava näky.",
+  "linkit": [
+   "Etelä-Eurooppaan",
+   "Kristiansund",
+   "purjelaivat"
+  ],
+  "jatkot": [
+   "Miksi turska sopii hyvin kuivattavaksi?",
+   "Mihin maihin klippfiskiä viedään nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-klippfisk",
+  "kysymys": "Miksi suolakalasta tuli tärkeä ruoka nimenomaan katolisissa maissa?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Syy on paastossa: katolisessa perinteessä lihaa vältettiin paastopäivinä, mutta kala kelpasi ruoaksi, joten kalalle oli jatkuva kysyntä. Suolattu ja kuivattu kala säilyi pitkään ilman jäähdytystä, ja sitä pystyttiin kuljettamaan kauas rannikolta sisämaahan. Suolaaminen yleistyi 1600-luvulla, kun halpaa suolaa alkoi tulla saataville [[Etelä-Euroopasta]], ja siitä tuli perusruokaa [[paastopäivinä]]. Näin [[Norjan]] rannikon kuivattu turska sai pysyvät ostajat katolisista maista. Paasto ei oo kyyhkyn lempiasia, ellei sen päätteeksi tule pullaa.",
+  "linkit": [
+   "Etelä-Euroopasta",
+   "paastopäivinä",
+   "Norjan"
+  ],
+  "jatkot": [
+   "Mitä paastopäivinä katolisessa perinteessä syötiin?",
+   "Miten suola säilöö kalan pilaantumiselta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-klippfisk",
+  "kysymys": "Miksi turska sopii erityisen hyvin kuivattavaksi?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Turska on vähärasvaista valkolihaista kalaa, ja se on kuivattavaksi otollinen juuri siksi. Rasva härskiintyy helposti, joten rasvainen kala säilyy kuivattuna huonommin kuin vähärasvainen. Kuivaus poistaa kalasta veden, jolloin bakteerien on vaikea lisääntyä, ja [[suolaus]] tehostaa säilymistä entisestään. Lisäksi [[Norjan]] rannikon viileä ja tuulinen ilma sopii kuivaukseen hyvin. Lopputuloksena on kova, kevyt tuote, joka kestää pitkiä kuljetuksia ja jonka voi myöhemmin liottaa takaisin pehmeäksi. Kalaa kuivataan, pullaa ei, ja se on kyl vähän epäreilua.",
+  "linkit": [
+   "suolaus",
+   "Norjan"
+  ],
+  "jatkot": [
+   "Miten kuivattu kala saadaan takaisin pehmeäksi?",
+   "Mitä muita kaloja kuivataan Pohjois-Euroopassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-klippfisk",
+  "kysymys": "Mihin maihin klippfiskiä viedään nykyään?",
+  "uusi": true,
+  "vastaus": "Kas vaan, hyvä kysymys. Klippfiskiä viedään etenkin Etelä-Euroopan maihin, joissa suolattu ja kuivattu turska on perinteinen ruoka-aine. [[Portugalissa]] suolattua turskaa kutsutaan nimellä [[bacalhau]], ja norjalainen kuivattu kala on sen tärkeä raaka-aine. Samankaltaisia ruokia tunnetaan myös [[Espanjassa]] ja Italiassa. Vienti on vanhaa perua, sillä jo purjelaivat kuljettivat kalaa Kristiansundin satamasta etelään. Pullasta ei tähän kyllä riitä sanottavaa, mut kala on selvästi matkustanut paremmin kuin minä.",
+  "linkit": [
+   "Portugalissa",
+   "bacalhau",
+   "Espanjassa"
+  ],
+  "jatkot": [
+   "Miten bacalhau valmistetaan Portugalissa?",
+   "Miksi Norjassa kalaa kuivataan juuri ulkona?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-klippfisk",
+  "kysymys": "Miten kuivattu kala valmistetaan syötäväksi ennen ruokaa?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Kuivattu ja suolattu kala on kovaa kuin lauta, joten se liotetaan ensin kylmässä vedessä. Liotus kestää yleensä vähintään vuorokauden ja usein pidempään, ja vesi vaihdetaan väliajoin, jotta suola liukenee pois ja kala pehmenee. Sen jälkeen kalaa voi keittää, paistaa tai kypsentää uunissa, ja [[Etelä-Euroopassa]] siitä tehdään esimerkiksi [[muhennoksia]] ja uuniruokia. Liotusaika riippuu kalan paksuudesta ja halutusta suolaisuudesta. Vuorokausi liotusta, kyl minä kärsivällisyyden tunnen, kun odotan pullaa.",
+  "linkit": [
+   "Etelä-Euroopassa",
+   "muhennoksia"
+  ],
+  "jatkot": [
+   "Miksi liotusvettä pitää vaihtaa useaan kertaan?",
+   "Millaisia ruokia kuivatusta turskasta tehdään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-brunost",
+  "kysymys": "Miksi Anne Hovin keksimä juusto ei ole tarkkaan ottaen juustoa lainkaan?",
+  "uusi": false,
+  "vastaus": "Ai tota, hyvä pointti. Tavallinen juusto valmistetaan juoksuttamalla maito, jolloin kiinteä juustomassa erottuu nesteestä. Brunost tehdään sen sijaan [[herasta]], joka jää juustonvalmistuksesta yli, ja sitä keitetään tuntikausia, kunnes [[maitosokeri]] ruskistuu ja massa muuttuu makeaksi. Anne Hov lisäsi heraan vuonna 1863 kermaa, ja siitä syntyi rasvainen ja kiinteä massa, joka muistuttaa juustoa mutta on tekotavaltaan lähempänä keitettyä maitotuotetta. Norjassa se kuuluu silti [[Gudbrandsdalenissa]] syntyneeseen myöhäisjuustojen perheeseen. Pulla on ainakin pullaa, mut tuo ruskea möykky on ihan oma lukunsa.",
+  "linkit": [
+   "herasta",
+   "maitosokeri",
+   "Gudbrandsdalenissa"
+  ],
+  "jatkot": [
+   "Mitä muuta herasta voidaan valmistaa?",
+   "Miten brunostia syödään Norjassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-brunost",
+  "kysymys": "Miten juuston vienti Christianiaan alkoi, ja kuka sen aloitti?",
+  "uusi": false,
+  "vastaus": "No niin. Vienti alkoi, kun Anne Hov muutti Nord-Fronin Rusthågå-tilalle ja alkoi lisätä seokseen myös vuohenmaitoa saadakseen voimakkaamman gudbrandsdalsost-juuston. Paikallinen kauppias [[Ole Kongsli]] alkoi viedä tuotetta [[Christianiaan]] asti, joka on nykyisen [[Oslon]] aiempi nimi. Keksintö oli tärkeä [[Gudbrandsdalenin]] laaksolle, jonka talous oli kärsinyt viljan ja voin hintojen laskusta. Tarkkaa vientivuotta en ole varma, joten jätän sen sanomatta. Kyyhky ois ollu nopeampi, mut kyl kauppiaan kärryt veivät enemmän.",
+  "linkit": [
+   "Ole Kongsli",
+   "Christianiaan",
+   "Oslon",
+   "Gudbrandsdalenin"
+  ],
+  "jatkot": [
+   "Miksi viljan ja voin hinnat laskivat 1800-luvulla?",
+   "Mitä Christiania-nimelle tapahtui myöhemmin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-brunost",
+  "kysymys": "Mistä brunostin ruskea väri ja makea maku tulevat?",
+  "uusi": true,
+  "vastaus": "Sepä sattui. Väri ja maku syntyvät [[maitosokerista]] eli [[laktoosista]], joka ruskistuu ja karamellisoituu, kun heraa keitetään tuntikausia. Pitkän keiton aikana vesi haihtuu ja jäljelle jää tiivistynyt, makea ja kellanruskea massa. Brunost ei siis ole makea siksi, että siihen olisi lisätty makeutta, vaan siksi, että maidon oma sokeri muuttuu kuumennuksessa. Kerma tekee massasta kiinteää ja rasvaista, ja 1863 on vuosi, jota pidetään nykyisen brunostin syntyvuotena. Makea juusto kuulostaa kyyhkyn korvaan melkein pullalta.",
+  "linkit": [
+   "maitosokerista",
+   "laktoosista"
+  ],
+  "jatkot": [
+   "Mikä on karamellisoituminen ja miten se tapahtuu?",
+   "Mihin ruokiin brunost sopii?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-brunost",
+  "kysymys": "Milloin juustohöylä keksittiin ja mihin sitä käytetään?",
+  "uusi": true,
+  "vastaus": "Mmm— juustohöylä, hyvä aihe. Juustohöylä on norjalainen keksintö vuodelta 1925. Sillä leikataan juustosta ohuita ja tasaisia siivuja, esimerkiksi leivän päälle. Työkalu sopii erityisen hyvin kiinteälle [[brunostille]], jota on vaikea viipaloida veitsellä ohueksi. [[Norjassa]] juusto leikataan perinteisesti juuri höylällä, ja ohut siivu on makeassa juustossa tarkoituksenmukainen, koska maku on voimakas. Höylä on pieni väline, mutta sen vaikutus näkyy jokaisessa norjalaisessa aamiaispöydässä. Tällaista keksintöä ei kyyhkyn siivellä tehdä, ja se on kyl harmi.",
+  "linkit": [
+   "brunostille",
+   "Norjassa"
+  ],
+  "jatkot": [
+   "Miten norjalainen aamiainen yleensä koostuu?",
+   "Millaisia muita keittiövälineitä Norjassa on keksitty?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-brunost",
+  "kysymys": "Miten vuohenmaito muuttaa brunostin makua?",
+  "uusi": true,
+  "vastaus": "Ai se. Anne Hov lisäsi seokseen [[vuohenmaitoa]] saadakseen aikaan voimakkaamman juuston, jota alettiin kutsua [[gudbrandsdalsostiksi]]. Vuohenmaito tuo makuun vahvemman ja terävämmän sävyn kuin pelkkä lehmänmaito ja kerma. Perusbrunost, jonka Hov alun perin kehitti kermaa lisäämällä, on mietompi ja rasvaisempi. Muutos tehtiin [[Nord-Fronin]] Rusthågå-tilalla, ja se laajensi tuotteen valikoimaa niin, että kauppias pystyi viemään juustoa kauas. Erilaisia makuja on siis jo pitkään ollut tarjolla. Kyl minä pullassakin arvostan vaihtelua.",
+  "linkit": [
+   "vuohenmaitoa",
+   "gudbrandsdalsostiksi",
+   "Nord-Fronin"
+  ],
+  "jatkot": [
+   "Miksi vuohenmaito maistuu erilaiselta kuin lehmänmaito?",
+   "Mikä on gudbrandsdalsostin ja brunostin ero?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ekofisk",
+  "kysymys": "Mikä aiheutti Ekofisk Bravo -laitan öljyvuodon vuonna 1977?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Huhtikuussa 1977 Ekofisk Bravo -lautalla tapahtui lähteiden mukaan [[Pohjanmeren]] suurin öljyvuoto, ja syynä oli väärin asennettu pohjaventtiili. Kenttä sijaitsee noin 320 kilometriä lounaaseen [[Stavangerista]], joten apu oli haettava kaukaa merelle. Vuodon tukkimiseen osallistui amerikkalainen sammutusasiantuntija Red Adair. Vuoto saatiin tukittua, ja tapaus muistetaan öljyteollisuuden turvallisuuden historiassa varoittavana esimerkkinä. Onneksi siitä on jo pitkä aika.",
+  "linkit": [
+   "Pohjanmeren",
+   "Stavangerista"
+  ],
+  "jatkot": [
+   "Miten öljyvuotoja torjutaan merellä nykyään?",
+   "Kuka oli Red Adair?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ekofisk",
+  "kysymys": "Miksi Ekofiskin öljylautat piti nostaa kuusi metriä ylemmäs 1980-luvulla?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: 1980-luvulla huomattiin, että öljyntuotanto sai kalkkikivipohjaisen kentän vajoamaan odottamattoman paljon. Kun merenpohja vajosi, lautat olisivat jääneet liian lähelle merenpintaa, joten rakenteet oli nostettava turvallisemmalle korkeudelle. Elokuussa 1987 viisi toisiinsa liitettyä lauttaa nostettiin samanaikaisesti kuusi metriä ylemmäs [[hydraulisylintereillä]]. Operaatio kirjattiin [[Guinnessin ennätyskirjaan]] suurimpana nostoprojektina, ja tuotannon arvioidaan jatkuvan vielä vuosikymmeniä. Kuusi metriä ylös on kyyhkyn mittapuulla melkein pilvenpiirtäjä.",
+  "linkit": [
+   "hydraulisylintereillä",
+   "Guinnessin ennätyskirjaan"
+  ],
+  "jatkot": [
+   "Miten merenpohja voi vajota öljyn tuotannon takia?",
+   "Kuinka kauan Ekofiskin tuotanto jatkuu vielä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ekofisk",
+  "kysymys": "Miksi Norja sijoitti öljytulot rahastoon eikä käyttänyt heti?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Norja oli 1960-luvulla Euroopan köyhempiä maita, ja kun [[Ekofiskin]] öljy löytyi joulun alla 1969, maa teki poikkeuksellisen päätöksen. Tulot eivät menneet suoraan käyttöön vaan [[rahastoon]], jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi yksi maailman suurimmista valtiollisista sijoitusrahastoista. Perusteena on se, että öljy on rajallinen luonnonvara, joten tulot kannattaa sijoittaa niin, että hyöty säilyy öljyn loppumisen jälkeenkin. Säästäminen ei oo kyyhkyn vahvuus, murut häviää heti.",
+  "linkit": [
+   "Ekofiskin",
+   "rahastoon"
+  ],
+  "jatkot": [
+   "Mihin Norjan valtion sijoitusrahasto sijoittaa varojaan?",
+   "Miten Norja valmistautuu öljyn loppumiseen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ekofisk",
+  "kysymys": "Kuka oli Red Adair?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Red Adair oli yhdysvaltalainen öljykaivojen sammutusasiantuntija, joka tuli tunnetuksi kaivopalojen ja hallitsemattomien vuotojen vaarallisesta torjunnasta. Hänet kutsuttiin vuonna 1977 apuun [[Ekofisk Bravo]] -lautalle, kun [[Pohjanmeren]] öljyvuotoa yritettiin tukkia. Hänen työstään kerrotaan saaneen innoituksen myös elokuvan Hellfighters. Hänen nimensä on jäänyt öljyteollisuudessa tarkoittamaan riskialttiiden tilanteiden hallintaa. Jos jokin vuotaa, soita Adairille, tai kyyhkylle, jos kyse on vain kirjeestä.",
+  "linkit": [
+   "Ekofisk Bravo",
+   "Pohjanmeren"
+  ],
+  "jatkot": [
+   "Miten öljykaivojen tulipaloja sammutetaan?",
+   "Miten Ekofisk Bravon vuoto lopulta saatiin tukittua?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ekofisk",
+  "kysymys": "Miten raakaöljy on syntynyt Pohjanmeren pohjaan?",
+  "uusi": true,
+  "vastaus": "Katotaas. Raakaöljy syntyy miljoonien vuosien kuluessa, kun merieliöiden jäänteet hautautuvat merenpohjan sedimentteihin ja paine sekä lämpö muuttavat niitä. Syntynyt öljy nousee huokoisiin kivilajeihin, ja se jää loukkuun tiiviin peittävän kerroksen alle. Ekofiskin kentällä öljyä on [[kalkkikivessä]], ja kenttä löytyi vuonna 1969. Löytö oli ensimmäinen [[Pohjanmeren]] öljylöytö, ja tuotanto suoraan tankkereihin alkoi vuonna 1971. Miljoonia vuosia, ja minä valitan, jos kirje myöhästyy kolme päivää.",
+  "linkit": [
+   "kalkkikivessä",
+   "Pohjanmeren"
+  ],
+  "jatkot": [
+   "Miten öljykenttiä etsitään merenpohjasta?",
+   "Mikä on kalkkikivi ja miten se syntyy?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trollstigen",
+  "kysymys": "Kuka avasi Trollstigenin virallisesti, ja minä vuonna?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Kuningas [[Haakon VII]] avasi tien virallisesti 31. heinäkuuta 1936, kahdeksan vuoden rakennustyön jälkeen. Tie kulkee maantien 63 osana [[Åndalsnesin]] ja [[Valldalin]] välillä ja nousee noin 850 metrin korkeuteen yhdellätoista jyrkällä hiuspinnemutkalla. Keskimääräinen nousuprosentti on noin 10. Nykyään tietä käyttää vilkkaimpina kesäpäivinä noin 2 500 ajoneuvoa vuorokaudessa. Kahdeksan vuotta rakennettiin, mut kyyhky ylittää sen hetkessä.",
+  "linkit": [
+   "Haakon VII",
+   "Åndalsnesin",
+   "Valldalin"
+  ],
+  "jatkot": [
+   "Millainen kuningas Haakon VII oli?",
+   "Mitä muita vuoristoteitä Norjassa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trollstigen",
+  "kysymys": "Miksi Trollstigen on suljettuna talvisin?",
+  "uusi": false,
+  "vastaus": "Ai tota. Tie kulkee vuoristossa noin 850 metrin korkeuteen, ja talvisin lumi peittää sen, joten tie on suljettu. Jyrkät [[hiuspinnemutkat]] ja runsas lumi tekevät ajamisesta vuoristoteillä talvella vaikeaa ja vaarallista. Tie sijaitsee [[Møre og Romsdalin]] läänissä, ja se aukeaa uudelleen, kun lumi on sulanut ja tie on aurattu. Kesällä tien käyttäjiä on paljon, ja vilkkaimpina päivinä ajoneuvoja on noin 2 500 vuorokaudessa. Talvella tie nukkuu, ja minä lennän yli kuin ei mitään.",
+  "linkit": [
+   "hiuspinnemutkat",
+   "Møre og Romsdalin"
+  ],
+  "jatkot": [
+   "Milloin Trollstigen yleensä aukeaa keväällä?",
+   "Miten vuoristoteitä aurataan lumisessa Norjassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trollstigen",
+  "kysymys": "Mikä on hiuspinnemutka ja miksi sitä sanotaan niin?",
+  "uusi": true,
+  "vastaus": "Kas vaan, sanatarkka kysymys. Hiuspinnemutka on erittäin jyrkkä, lähes täyskäännöksen tekevä mutka, jonka muoto muistuttaa U-kirjaimen tavoin taitettua [[hiuspinniä]]. Mutkia käytetään [[vuoristoteillä]] nousun tasaamiseen, sillä tie ei voi nousta suoraan rinnettä ylös. [[Trollstigenilla]] mutkia on yksitoista, ja niiden ansiosta tie nousee noin 850 metrin korkeuteen. Mutkien välillä tien kaltevuus pysyy ajettavana. Kyyhky ei tarvitse mutkia, mut kyl ne näyttävät ylhäältä hienoilta.",
+  "linkit": [
+   "hiuspinniä",
+   "vuoristoteillä",
+   "Trollstigenilla"
+  ],
+  "jatkot": [
+   "Miten vuoristotie suunnitellaan niin, että se nousee tasaisesti?",
+   "Mitkä ovat Euroopan kuuluisimpia hiuspinnemutkia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trollstigen",
+  "kysymys": "Mitä solan huipulta näkee?",
+  "uusi": true,
+  "vastaus": "No jopas. Solan huipulla on tasanne, jolta avautuu näkymä [[Stigfossenin]] vesiputoukseen, joka putoaa 320 metriä. Tasanne on noin 700 metrin korkeudessa, ja se on yksi tien suosituimmista pysähdyspaikoista. Tie yhdistää [[Åndalsnesin]] ja Valldalin, ja huipulta näkyy sekä mutkitteleva tie että ympäröivät vuoret. Vilkkaimpina kesäpäivinä paikalla on paljon kulkijoita. Kyl ylhäältä näkee kauas, ja siinä kyyhky on asiantuntija.",
+  "linkit": [
+   "Stigfossenin",
+   "Åndalsnesin"
+  ],
+  "jatkot": [
+   "Miten vesiputous syntyy vuoristossa?",
+   "Milloin Norjassa on paras aika vierailla vuoristoteillä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trollstigen",
+  "kysymys": "Mitä Trollstigen-nimi tarkoittaa suomeksi?",
+  "uusi": true,
+  "vastaus": "Hmm, nimessä on kaksi osaa. Troll tarkoittaa peikkoa ja stigen polkua tai portaita, joten nimi tarkoittaa suunnilleen peikon polkua tai peikkojen portaita. Nimen sanotaan viittaavan norjalaiseen [[kansanperinteeseen]], jossa [[peikot]] asuvat vuorilla ja luonnonmuodostumat saavat usein tarinoita. Jyrkkä ja mutkainen tie sopii nimeen hyvin, sillä se nousee rinnettä kuin portaat. Pulla ei tähän liity, mut peikoista tulee mieleen ainakin kokonaisia leivinuuneja.",
+  "linkit": [
+   "kansanperinteeseen",
+   "peikot"
+  ],
+  "jatkot": [
+   "Millaisia ovat peikot norjalaisessa kansantarustossa?",
+   "Mitä muita paikannimiä Norjassa liittyy peikkoihin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hardangervidda",
+  "kysymys": "Miksi Hardangervidda oli kivikaudella metsäisempi kuin nykyään?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Syynä oli ilmasto: noin 9 000–5 000 vuotta sitten oli nykyistä lämpimämpää, joten [[puurajan]] taso oli korkeammalla ja suuri osa tasangosta oli metsäistä. Tästä muistuttavat suohon säilyneet [[männynrungot]] nykyisen puurajan yläpuolella. Nykyään ylänkö on puuton ja karu tunturikangas, jolla kasvillisuus on matalaa. Ilmaston muutos vuosituhansien kuluessa on siis muokannut maisemaa, vaikka vuoret itse ovat pysyneet paikallaan. [[Kivikaudella]] siellä olisi ollut hyvä pesäpaikka, mut ei kai kyyhkyjä silloin ollut tuolla.",
+  "linkit": [
+   "puurajan",
+   "männynrungot",
+   "Kivikaudella"
+  ],
+  "jatkot": [
+   "Mikä on puuraja ja mikä sen määrää?",
+   "Miten ilmasto on muuttunut Pohjois-Euroopassa jääkauden jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hardangervidda",
+  "kysymys": "Miten villipeurat käyttävät tasangon itä- ja länsiosia vuodenajan mukaan?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Villipeurat vaeltavat vuodenaikojen mukaan: talvella ne ovat tasangon itäisillä [[talvilaitumilla]], ja vasomisaika vietetään läntisillä, rehevämmillä alueilla. Hardangervidda on yksi Euroopan suurimmista [[villipeuralaumoista]] laiduntamispaikoista, ja vuonna 1996 laumassa oli noin 15 000 eläintä, joten nykyinen määrä voi olla toinen. Vaellus seuraa ravinnon saatavuutta, sillä lännessä kasvillisuus on runsaampaa kuin idässä. Eläimet liikkuvat siis tasangolla luonnon omaa kalenteria seuraten. Vaeltaminen on kyyhkyllekin tuttua, mut minä kuljen kirjeen perässä.",
+  "linkit": [
+   "talvilaitumilla",
+   "villipeuralaumoista"
+  ],
+  "jatkot": [
+   "Miksi poro vaeltaa vuodenaikojen mukaan?",
+   "Kuinka suuri Hardangerviddan peurakanta on nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hardangervidda",
+  "kysymys": "Mikä on puuraja ja mikä sen määrää?",
+  "uusi": true,
+  "vastaus": "Tuota noin. Puuraja on korkeus tai leveysaste, jonka yläpuolella metsä ei enää kasva. Sen määrää ennen kaikkea [[kasvukausi]]: kun kesä on liian lyhyt ja viileä, puut eivät ehdi kasvattaa ja kypsyttää uutta kasvustoa. Myös tuuli, lumen määrä ja maaperä vaikuttavat siihen, missä metsä loppuu. Sen yläpuolella alkaa [[tunturikangas]], jollainen on Hardangerviddallakin. Keskimäärin 1 100 metrin korkeudessa tasangolla puita ei juuri ole. Raja on pitkä, mut minä ylitän sen ilman passia.",
+  "linkit": [
+   "kasvukausi",
+   "tunturikangas"
+  ],
+  "jatkot": [
+   "Miten ilmaston lämpeneminen vaikuttaa puurajaan?",
+   "Millaiset kasvit selviävät tunturikankaalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hardangervidda",
+  "kysymys": "Onko villipeura sama laji kuin poro?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Villipeura ja poro kuuluvat samaan lajiin, jonka tieteellinen nimi on [[Rangifer tarandus]]. Lajista tunnetaan useita [[alalajeja]], ja kesytetyt porot ovat ihmisen tekemän jalostuksen ja pitkän yhteiselon tulos, kun taas villipeurat elävät luonnossa ilman paimennusta. Hardangerviddan peurat ovat villejä, ja ne vaeltavat vuodenaikojen mukaan laitumilta toisille. Tarkat alalajiluokitukset vaihtelevat lähteittäin, enkä ole niistä aivan varma. Latinankielinen nimi on meillä molemmilla, ja se on aina todiste.",
+  "linkit": [
+   "Rangifer tarandus",
+   "alalajeja"
+  ],
+  "jatkot": [
+   "Miten porot ja villipeurat eroavat toisistaan ulkonäöltään?",
+   "Miksi peuralauma vaeltaa pitkiä matkoja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hardangervidda",
+  "kysymys": "Miten jäätikkö syntyy ja miksi se liikkuu?",
+  "uusi": true,
+  "vastaus": "Ai se. Jäätikkö syntyy, kun lunta kertyy enemmän kuin ehtii sulaa. Vuosien kuluessa uusi lumi painaa vanhaa, ja lumi tiivistyy ensin [[firniksi]] ja lopulta jääksi. Kun jäämassa on tarpeeksi paksu, sen oma paino saa sen virtaamaan hitaasti alas rinnettä. Sama ilmiö on tapahtunut [[Hardangerjøkulenilla]], jäätiköllä, joka sijaitsee Hardangerviddan tasangolla. Liike on hidasta, mutta pitkän ajan kuluessa se muokkaa laaksoja ja kallioita. Jäätikkö on vuoden kuluessa yhtä hidas kuin minä, kun odotan pullaa.",
+  "linkit": [
+   "firniksi",
+   "Hardangerjøkulenilla"
+  ],
+  "jatkot": [
+   "Miten jäätiköt muokkaavat maisemaa?",
+   "Miksi monet jäätiköt ovat pienentyneet viime vuosikymmeninä?"
+  ]
  }
 ]
