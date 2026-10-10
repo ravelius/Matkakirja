@@ -9,7 +9,7 @@
 //   Puuttuu(kanava)    HTTP-virhe, purkuvirhe tai latausvahti (§2.7)
 //   AarreLoppui()      aarreaihe soi loppuun
 //
-// KANAVAT: Pohja, Maisema, Visa, Siirtyma ja Aarre, kullakin kaksi AudioSourcea (A/B): uusi soitin
+// KANAVAT: Pohja, Maisema, Visa, Siirtyma, Aarre ja Lataus, kullakin kaksi AudioSourcea (A/B): uusi soitin
 // nousee, kun edellinen vielä häipyy (pohjan vaihto 1500 ms, maiseman vaihto 1800 ms ja silmukka
 // 2600 ms, siirtymälajin vaihto, visan uudelleenavaus). Jos molemmat ovat käytössä, hiljaisin
 // häipyvä katkaistaan.
@@ -32,6 +32,11 @@
 // muuten purettuna ja jaettuna saman osoitteen soittimien kesken (viitelaskuri). Soitin omistaa
 // klippinsä ja tuhoaa ne, kun viimeinen soitin vapautuu, joten Aanet-palvelun LRU (24 klippiä) ei voi
 // tuhota soivaa raitaa eikä purettuja musiikkiklippejä kerry muistiin.
+//
+// LATAUSMUSIIKKI (omistaja 10.10.2026; AaniTila.Lataus): Lataus-kanavan lähteet ohittavat kuuntelijan tason
+// (ignoreListenerVolume), koska kuumailmapallon latausruutu vaimentaa muut äänet kuuntelijan tasolla (AaniVaimennus); taso
+// kerrotaan kuuntelijan perustasolla (AaniVaimennus.Perustaso), joten testien "hiljaa" ja äänikaappaus koskevat sitäkin.
+// Koukut: Latausmusiikki(url, voima), LatausmusiikkiKaupunki(kaupunki) ja LatausmusiikkiOhi(avautui).
 //
 // TAUSTALLE (§2.8): OnApplicationPause(true) → kaikki soivat Pause() ja rampit jäädytetään, sitten
 // AaniTila.TaustalleSiirto(true). Paluussa kone kertoo, mitkä jatkavat (UnPause) ja mitkä loppuvat.
@@ -69,7 +74,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Pelin tilasta AaniTilan tapahtumiksi (PeliOhjain.Aanet.cs).</summary>
         public Aanikoukut Koukut { get; private set; }
 
-        const int Kanavia = 5, LahteitaKanavalla = 2;
+        const int Kanavia = 6, LahteitaKanavalla = 2;
 
         // =====================================================================
         // NATIIVI-UI:N JA LINSSIEN KOUKUT (§3 *UI*): yksi rivi per koukku, turvallinen ennen käynnistystä.
@@ -164,6 +169,19 @@ namespace Matkakirja.Natiivi
             if (!mik.Rekisteroity(tunnus)) mik.Rekisteroi(kon, "maisema", tunnus, kon == "iss" ? "Astronautin humina" : tunnus, tunnus);
             s.Tila.LinssiTausta(t.Url, t.Voima * mik.AaniKerroin(kon, tunnus), t.NousuMs);
         }
+
+        /// <summary>
+        /// LATAUSMUSIIKKI (omistaja 10.10.2026: "pelien ja linssien (jotka vaativat latausruudun) latausruudulla voisi kuulua
+        /// musiikkia"): latausruutu aukeaa raidalla url (silmukka, taso voima × musiikkiväylä). Näkymä kutsuu latauksen alussa ja
+        /// LatausmusiikkiOhi lopussa; sama raita uudelleen ei ala alusta.
+        /// </summary>
+        public static void Latausmusiikki(string url, double voima) => Instanssi?.Tila.Lataus(url, voima);
+
+        /// <summary>Kuumailmapallon latausruutu: kaupungin oma kappale kuten kartalla (AaniTila.LatausKaupunki).</summary>
+        public static void LatausmusiikkiKaupunki(string kaupunki) => Instanssi?.Tila.LatausKaupunki(kaupunki);
+
+        /// <summary>Latausruutu sulkeutuu: avautui = näkymä aukesi (ristihäivytys), muuten ohitus tai poistuminen (nopea häivytys).</summary>
+        public static void LatausmusiikkiOhi(bool avautui) => Instanssi?.Tila.LatausOhi(avautui);
 
         /// <summary>Linssin raidan himmennys (kellon pysäytys 0,5; jatko 1).</summary>
         public static void LinssiHimmennys(double kerroin) => Instanssi?.Tila.Himmennys(kerroin);
@@ -317,6 +335,8 @@ namespace Matkakirja.Natiivi
                     a.spatialBlend = 0f;
                     a.volume = maisema ? 1f : 0f;
                     a.priority = maisema ? 96 : 64;
+                    // Latausmusiikki soi kuuntelijan vaimennuksen ohi (AaniVaimennus, pallon latausruutu); taso AsetaTasossa.
+                    a.ignoreListenerVolume = (Kanava)k == Kanava.Lataus;
                     lahteet[k, i] = a;
                     if (maisema) kompressorit[k, i] = go.AddComponent<MaisemaKompressori>();
                 }
@@ -509,6 +529,8 @@ namespace Matkakirja.Natiivi
             // soittohetken kontekstissa; taso × äänen kerroin (ryhmätaso tulee jo Tausta-voimasta AaniTilan kautta).
             // Linssin taustaääni (LinssiTaustat) on myös Maisema-kanavalla, mutta sillä on linssin oma tunnus ja kerroin (LS2) → ohi.
             if (l.Kanava == Kanava.Maisema && taso > 0 && !string.IsNullOrEmpty(l.Url) && !OnLinssiTausta(l.Url)) taso *= MaisemaKerroin(l);
+            // Latausmusiikki ohittaa kuuntelijan tason (ignoreListenerVolume): kuuntelijan perustaso ilman latausruudun vaimennusta.
+            if (l.Kanava == Kanava.Lataus) taso *= AaniVaimennus.Perustaso;
             if (l.Komp != null) { l.A.volume = 1f; l.Komp.Taso = (float)taso; }
             else l.A.volume = (float)Math.Min(1.0, taso);
         }

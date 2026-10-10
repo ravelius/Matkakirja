@@ -873,6 +873,12 @@ namespace Matkakirja.Natiivi
                 OpasSovitin.VapautaPalloTekstuuri();
                 return;
             }
+            // LATAUSMUSIIKKI (omistaja 10.10.2026: "pelien ja linssien (jotka vaativat latausruudun) latausruudulla voisi kuulua
+            // musiikkia"; Päätoimittaja: kuumailmapallossa kaupungin oma kappale, sama kuin kartalla): heti kun ruutu on pallon
+            // latausruutu (kuvan saapumista ei odoteta), nousee pehmeästi; sama kaupunki uudelleen (kierto, kuvan saapuminen) ei ala
+            // alusta. Loppu SiirtymaValmis (ristihäivytys kierroksen ääniin) ja SiirtymaPeru (Poistu: nopea häivytys). Häipyvä ruutu
+            // (SiirtymaValmiin jälkeiset 1,2 s: kierto tai myöhästynyt kuva) ei käynnistä musiikkia uudelleen.
+            if (!siirtyma.ClassListContains("mk-astroavaus--haipyy")) Aanisoitin.LatausmusiikkiKaupunki(OpasSovitin.KaupunkitilaId);
             // Teksti ja palkki kuvan tummaan alaosaan (pallo jää keskelle näkyviin). Leveä vaakaruutu (iPhone 2,2:1) näyttää 4:3-rajauksesta
             // vain kaistan: kohdistus 35 %:iin pitää pallon kokonaan ruudulla ja tekstin tummassa osassa (simu 14.13: 50 % leikkasi pallon).
             siirtyma.style.justifyContent = Justify.FlexEnd;
@@ -1088,6 +1094,7 @@ namespace Matkakirja.Natiivi
             siirtymaKierros?.Pause();
             siirtymaPalkki.Arvo = 1f;
             AaniVaimennus.Aseta(false, "kierros alkaa");
+            Aanisoitin.LatausmusiikkiOhi(true);   // latausmusiikki ristiin kierroksen omaan ääneen (kuuntelija palaa samalla)
             siirtyma.AddToClassList("mk-astroavaus--haipyy");
             siirtyma.schedule.Execute(() => siirtyma.style.opacity = 0f).ExecuteLater(16);
             // Kertalaskuri (NUI 7.10. 15.4x): häivytyksen jälkeen piiloon aina, ellei uusi siirtymä alkanut välissä (peiton tarkistus
@@ -1111,6 +1118,7 @@ namespace Matkakirja.Natiivi
             siirtyma.style.display = DisplayStyle.None;
             AsetaPalloKuva(false);
             AaniVaimennus.Aseta(false, "siirtymä peruttu");
+            Aanisoitin.LatausmusiikkiOhi(false);   // Poistu tai opas suljettu kesken latauksen: nopea häivytys
             testiEdistyminen = null;
             KrediititTiivis.CesiumNakyviin = false;
             Debug.Log("MATKAKIRJA opas: siirtymä peruttu (opas suljettu)");

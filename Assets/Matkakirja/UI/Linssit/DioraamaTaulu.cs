@@ -573,7 +573,13 @@ namespace Matkakirja.Natiivi
                 nimiruutu.RemoveFromClassList("mk-astroavaus--haipyy");
                 nimiruutu.style.opacity = 1f;
                 nimiruutu.style.display = DisplayStyle.Flex;
-                if (OnOlavinlinna(nimi)) AsetaLinnaKuva();
+                if (OnOlavinlinna(nimi))
+                {
+                    AsetaLinnaKuva();
+                    // LATAUSMUSIIKKI (omistaja 10.10.2026: "olavin linnassa voi soittaa sen lopetusmusiikin toistaiseksi"): pelin
+                    // lopetusmusiikki (SeikkailuLoppumusiikki.Url) latausruudun ajan; vain latauskuvallinen linna saa musiikin.
+                    Aanisoitin.Latausmusiikki(SeikkailuLoppumusiikki.Url, Matkakirja.Peli.AaniVakiot.LatausLinnaVoima);
+                }
             }
             if (odotus)
             {
@@ -591,6 +597,8 @@ namespace Matkakirja.Natiivi
             {
                 nimiruutuAuki = false;
                 if (latauspalkki.Nakyy) latauspalkki.Arvo = 1f;   // valmis: täyttö loppuun nimiruudun häipyessä
+                // Linna aukesi → ristihäivytys linnan omiin ääniin; linssi suljettu kesken tai latausvirhe → nopea häivytys.
+                Aanisoitin.LatausmusiikkiOhi(DioraamaSovitin.Linssi != null && DioraamaSovitin.LatausVirhe == null);
                 Debug.Log($"MATKAKIRJA linssit: nimiruutu: häivytys {Time.unscaledTime - nimiruutuAlku:F1} s avauksesta");
                 nimiruutu.AddToClassList("mk-astroavaus--haipyy");
                 nimiruutu.style.opacity = 0f;

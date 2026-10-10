@@ -82,6 +82,19 @@ namespace Matkakirja.Peli
 
         /// <summary>Säätimen (musiikki, tausta) muutos soivaan raitaan.</summary>
         public static int SaadinMs => Asetus.Kokonais("aanet.SaadinMs", 200);
+
+        // --- latausmusiikki (omistaja 10.10.2026, AaniTila.Lataus) ---
+        /// <summary>Pehmeä nousu latausruudun alussa.</summary>
+        public static int LatausNousuMs => Asetus.Kokonais("aanet.LatausNousuMs", 2000);
+        /// <summary>Ristihäivytys näkymän omaan ääneen, kun näkymä aukeaa (samaa luokkaa kuin maiseman ja pohjan häivytys).</summary>
+        public static int LatausRistiMs => Asetus.Kokonais("aanet.LatausRistiMs", 1800);
+        /// <summary>Ohitus tai poistuminen kesken latauksen: nopea häivytys (sama kuin linssin taustaäänen lasku).</summary>
+        public static int LatausPoisMs => Asetus.Kokonais("aanet.LatausPoisMs", 600);
+        /// <summary>
+        /// Olavinlinnan latausmusiikin voima: oletusliu'ulla (35 → MusiikinKerroin 0,58) 0,6 × 0,58 ≈ 0,35 = sama taso kuin
+        /// loppumusiikki linnassa (SeikkailuLoppumusiikki: mikserin musiikki 0,35); liuku skaalaa kuten muuta musiikkia.
+        /// </summary>
+        public static double LatausLinnaVoima => Asetus.Luku("aanet.LatausLinnaVoima", 0.6);
     }
 
     /// <summary>Siirtymä- tai linssiraita (siirtymamusiikki.js RAIDAT).</summary>
