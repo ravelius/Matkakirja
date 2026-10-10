@@ -313,8 +313,8 @@ export const LAHTEET = [
         lisenssi: 'Public domain (Yhdysvaltain liittovaltion virasto)',
       },
       {
-        nimi: 'Kaupunkien keskustakartat',
-        tekija: '© OpenStreetMap-tekijät',
+        nimi: 'Kaupunkien keskustakartat ja kaupunkien äänipisteet (suihkulähteet, kirkonkellot, laiturit, kahvilat)',
+        tekija: '© OpenStreetMap-tekijät (© OpenStreetMap contributors)',
         lisenssi: 'ODbL (Open Database License)',
       },
       {
