@@ -1,0 +1,526 @@
+{
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "chisinau",
+ "maa": "MDA",
+ "era": "e01",
+ "kaupunki": {
+  "id": "chisinau",
+  "name": "Kišinjov",
+  "wiki": "Chișinău (Kišinjov)",
+  "ambience": "kaupunki",
+  "pallo": {
+   "lat": 47.023,
+   "lon": 28.835
+  }
+ },
+ "artikkeli": {
+  "intro": "Chișinău eli suomeksi Kišinjov on Moldovan pääkaupunki ja suurin kaupunki, ja se sijaitsee maan keskiosassa Bîc-joen varrella. Kaupunki mainitaan ensimmäisen kerran **vuonna 1436** luostarikylänä Moldavian ruhtinaskunnassa. Nimen uskotaan tulevan sanoista chișla ja nouă, uusi lähde, sillä kylä nousi pienen lähteen ympärille.\n\nVuonna 1812 Moldavian itäpuoli siirtyi Venäjän keisarikunnalle ja sai nimen Bessarabia, ja Chișinăusta tuli sen **keskus**. Isoisän matkavuonna 1873 kaupunki oli Venäjän keisarikunnan kaupunki, jonka leveät kadut ja puistot oli suunniteltu jo 1800-luvun alussa. Katedraali ja riemukaari seisoivat silloin jo paikoillaan, ja rautatie oli tullut kaupunkiin vuonna 1871.\n\nNykyään Chișinăun kunnassa asuu **720 128** ihmistä (2024), ja kaupunki on maan teollisuus- ja kauppakeskus sekä suurin liikenteen solmukohta. Sota ja maanjäristykset muuttivat keskustaa paljon 1900-luvulla, mutta 1800-luvun puistot ja kirkot ovat yhä sen ytimessä.",
+  "teksti": "Chișinăun nimen alkuperä on epäselvä. Yleisin selitys yhdistää sen sanoihin chișla, lähde, ja nouă, uusi, sillä kylä nousi pienen lähteen ympärille Pușkin- ja Albișoara-katujen kulmaan. Kaupunki mainitaan ensimmäisen kerran vuonna 1436, ja se paloi Venäjän–Turkin sotien aikana kahdesti, 1739 ja 1788. Venäjäksi nimi on Kišinjov, unkariksi Kisjenő ja saksaksi Kischinau.\n\nVuoden 1812 jälkeen Chișinău kasvoi nopeasti Bessarabian hallintokeskuksena. Asukasluku nousi vuosina 1812–1818 noin 7 000:sta 18 000:een, ja kaupungin asema virallistettiin 1818. Keskuspuisto perustettiin samana vuonna, katedraali rakennettiin 1830–1836 ja riemukaari valmistui noin vuonna 1840. Lähteen mukaan kaupunki oli vuonna 1856 Venäjän keisarikunnan viidenneksi suurin.\n\nNykyinen Chișinău on rakentunut uudelleen useaan kertaan. Toisen maailmansodan vauriot ja maanjäristykset veivät monta rakennusta, ja 1940-luvun lopulla laadittiin suunnitelma kaupungin asteittaiseen jälleenrakennukseen. Silti keskustassa on yhä 1700- ja 1800-lukujen kirkkoja, puistoja ja julkisia rakennuksia."
+ },
+ "kysymykset": [
+  {
+   "q": "Minkä joen varrella Chișinău sijaitsee?",
+   "options": [
+    "Bîc",
+    "Prut",
+    "Dnestr",
+    "Tonava"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Kaupunki on noin yhtä kaukana Romanian ja Ukrainan rajoista.",
+   "fact": "Chișinău sijaitsee maan keskiosassa Bîc-joen varrella, joka laskee Dnestriin.",
+   "source": "https://en.wikipedia.org/wiki/Chișinău"
+  },
+  {
+   "q": "Minä vuonna Chișinău mainitaan ensimmäisen kerran?",
+   "options": [
+    "1436",
+    "1389",
+    "1502",
+    "1578"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Maininta koskee luostarikylää Moldavian ruhtinaskunnassa.",
+   "fact": "Kaupunki mainitaan ensimmäisen kerran vuonna 1436 luostarikylänä.",
+   "source": "https://en.wikipedia.org/wiki/Chișinău"
+  },
+  {
+   "q": "Minkä tapahtuman muistoksi Chișinăun riemukaari rakennettiin?",
+   "options": [
+    "Venäjän voittoa Turkista vuosina 1828–1829",
+    "Bessarabian liittymistä Venäjään vuonna 1812",
+    "Napoleonin sotien päättymistä vuonna 1815",
+    "Kaupungin ensimmäistä mainintaa vuonna 1436"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Kaari valmistui 1800-luvun alkupuoliskolla.",
+   "fact": "Riemukaari rakennettiin muistoksi Venäjän voitosta Venäjän–Turkin sodassa 1828–1829.",
+   "source": "https://en.wikipedia.org/wiki/Triumphal_Arch,_Chișinău"
+  },
+  {
+   "q": "Mikä on Chișinăun lentoaseman IATA-koodi vuodesta 2024?",
+   "options": [
+    "RMO",
+    "CHS",
+    "MDA",
+    "KSH"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Koodi vaihtui tammikuussa 2024.",
+   "fact": "Lentoaseman koodi vaihtui KIV:stä RMO:ksi 18.1.2024. Lentoasema on noin 13 kilometrin päässä keskustasta kaakkoon.",
+   "source": "https://en.wikipedia.org/wiki/Chișinău_International_Airport"
+  },
+  {
+   "q": "Minkä paikan suuntaan Chișinău sai rautatieyhteyden vuonna 1873?",
+   "options": [
+    "Cornești",
+    "Orhei",
+    "Bălți",
+    "Soroca"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Ensimmäinen rata kaupungista avattiin jo 1871.",
+   "fact": "Rata Tiraspoliin avattiin 28.8.1871, vuonna 1873 yhteys ulottui Cornești'hin ja 1.6.1875 Iașiin Unghenin kautta.",
+   "source": "https://en.wikipedia.org/wiki/Chișinău"
+  }
+ ],
+ "tiedot": [
+  "Tapani Suuren keskuspuiston mulperit ja akaasiat ovat lähteen mukaan 130–180-vuotiaita.",
+  "Riemukaaren kello valettiin osmanilta vallattujen tykkien kuparista, ja se painoi noin 6 400 kiloa.",
+  "Chișinăun nimen uskotaan tulevan sanoista uusi lähde, ja lähteen paikkaa merkitsee kivi Măzărache-kirkon mäen juurella."
+ ],
+ "valokuva": {
+  "tiedosto": "Arco del triunfo, Chisináu, Moldavia, 2023-11-03, DD 27.jpg",
+  "vuosi": "2023",
+  "lahde": "Diego Delso, Commons (CC BY-SA 4.0)",
+  "lyhyt": "Riemukaari valmistui noin vuonna 1840 muistoksi Venäjän voitosta Turkin sodassa.",
+  "selite": "Arkkitehti Luka Zaushkevichin suunnittelema kaari on 13 metriä korkea ja kaksikerroksinen."
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "Chișinău",
+   "johdanto": "Chișinău kasvoi lähteen ääreen rakennetusta luostarikylästä Bessarabian keskukseksi. Isoisän matkavuonna 1873 se oli Venäjän keisarikunnan kaupunki, jonka leveät kadut ja puistot oli suunniteltu jo 1800-luvun alussa.",
+   "kansikuvat": [
+    {
+     "tiedosto": "Arcul de Triumf din Chișinău și clădirea Guvernului 01 - February - 2019 17.16.24 55.jpg",
+     "lyhyt": "Riemukaari on osa 1800-luvun alussa suunniteltua keskustan akselia.",
+     "selite": "Katedraali ja riemukaari muodostavat Chișinăun historiallisen ytimen akselin, ja kaari valmistui noin vuonna 1840.",
+     "lahde": "Pelin Oleg, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    {
+     "tiedosto": "Nativity Cathedral, Chișinău.jpg",
+     "lyhyt": "Kristuksen syntymän katedraali valmistui vuonna 1836 arkkitehti Avraam Melnikovin johdolla.",
+     "selite": "Uusklassinen kirkko rakennettiin vuosina 1830–1836, ja sen julkisivussa on kuusi doorilaista pylvästä.",
+     "lahde": "Pudelek, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    {
+     "tiedosto": "Clădirea fostei Dume Orășenești. Astăzi Primăria și Consiliul Municipal Chișinău. Foto 4.jpg",
+     "lyhyt": "Kaupungintalo valmistui vuonna 1901 alun perin kaupunginduumalle.",
+     "selite": "Italialaista goottia edustavan rakennuksen suunnitteli lähteiden mukaan arkkitehti Alexander Bernardazzi.",
+     "lahde": "Rodion Gavriloi, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Kylä lähteen äärellä",
+     "teksti": "Chișinăun nimen alkuperä on epäselvä, mutta yleisin selitys yhdistää sen sanoihin chișla, lähde, ja nouă, uusi. Kylä nousi pienen lähteen ympärille, ja lähteen paikkaa merkitsee kivilohkare Măzărache-kirkon mäen juurella. Ensimmäinen asiakirjamaininta on vuodelta 1436, jolloin Moldavian ruhtinaat luovuttivat kyliä ja Tapani III kirjasi lahjoituksen sedälleen Vlaicullle, josta tuli Chișinău-kylän omistaja. Toinen maininta on vuodelta 1466. Kaupunki paloi Venäjän–Turkin sotien aikana 1739 ja 1788, ja 1800-luvun alussa asukkaita oli noin 7 000.",
+     "tiedosto": "MD.C.C - Măzărache church - aug 2020 - 05.jpg",
+     "lyhyt": "Măzărache-kirkko rakennettiin vuonna 1752, ja lähteen mukaan se on kaupungin vanhin.",
+     "selite": "Kirkko on saanut nimensä rakennuttajansa Vasile Măzărachen mukaan, ja se edustaa perinteistä moldavialaista kirkkoarkkitehtuuria.",
+     "lahde": "Gikü ( talk ), Wikimedia Commons (CC0)",
+     "wiki": "Chișinău"
+    },
+    {
+     "otsikko": "Bessarabian keskus",
+     "teksti": "Venäjän–Turkin sodan 1806–1812 jälkeen Moldavian itäpuoli siirtyi Venäjälle ja sai nimen Bessarabia, ja Chișinău tuli sen keskukseksi vuonna 1812. Kaupungin asema virallistettiin 1818, ja asukasluku nousi vuosina 1812–1818 noin 7 000:sta 18 000:een. Keskuspuisto perustettiin samana vuonna. Katedraali rakennettiin 1830–1836 arkkitehti Avraam Melnikovin johdolla, ja riemukaari valmistui noin vuonna 1840. Lähteen mukaan Chișinău oli vuonna 1856 Venäjän keisarikunnan viidenneksi suurin kaupunki Pietarin, Moskovan, Odessan ja Riian jälkeen.",
+     "tiedosto": "Catedral de la Natividad, Chisináu, Moldavia, 2023-11-03, DD 36-38 HDR.jpg",
+     "lyhyt": "Katedraalin kellotorni purettiin vuonna 1962 ja rakennettiin uudelleen vuonna 1997.",
+     "selite": "Neuvostoaikana rakennus toimi näyttelykeskuksena, ja uskonnollinen käyttö palasi vuonna 1989.",
+     "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "History of Chișinău"
+    },
+    {
+     "otsikko": "Rautatie tulee",
+     "teksti": "Isoisän matkavuonna 1873 kaupunki oli jo saanut rautatien. Yhteys Tiraspoliin avattiin 28.8.1871, vuonna 1873 rata ulottui Cornești'hin ja 1.6.1875 Chișinăusta pääsi Unghenin kautta Iașiin. Rata avattiin valmistautumaan Venäjän–Turkin sotaan 1877–1878, ja kaupunki toimi sen aikana pääkokoontumisalueena. Pormestari Carol Schmidt johti kaupunkia 1877–1903, ja häntä muistetaan kaupungin uudistajana. Asukasluku oli 92 000 vuonna 1862 ja 125 787 vuonna 1900. Kaupungintalo valmistui vasta 1901.",
+     "tiedosto": "Chisinau Railstation 2.JPG",
+     "lyhyt": "Keskusrautatieasemalla on kansainvälinen pääte.",
+     "selite": "Ensimmäinen rata kaupungista avattiin vuonna 1871, ja yhteys Iașiin valmistui vuonna 1875.",
+     "lahde": "Simiprof, Wikimedia Commons (CC BY-SA 3.0)",
+     "wiki": "Chișinău"
+    },
+    {
+     "otsikko": "Kaupunki, joka rakennettiin uudelleen",
+     "teksti": "Chișinău kärsi 1900-luvulla sekä sodasta että maanjäristyksistä. Marraskuun 10. päivän 1940 maanjäristyksen magnitudiksi arvioidaan lähteestä riippuen noin 7,3–7,4. Siinä kuoli 78 ihmistä ja 2 795 rakennusta vaurioitui, joista 172 tuhoutui. Vuosina 1947–1949 arkkitehti Aleksei Shchusev ryhmineen laati suunnitelman kaupungin asteittaiseen jälleenrakennukseen. Uusi maanjäristys 4.3.1977 vaurioitti rakennuksia, ja historiamuseon talo purettiin ja rakennettiin uudelleen vanhan julkisivun mukaan vuosina 1980–1987.",
+     "tiedosto": "Edificio del Gobierno, Chisináu, Moldavia, 2023-11-03, DD 23.jpg",
+     "lyhyt": "Sodan jälkeinen jälleenrakennus muutti Chișinăun keskustan ilmeen.",
+     "selite": "Arkkitehti Aleksei Shchusev ryhmineen laati vuosina 1947–1949 suunnitelman kaupungin asteittaiseen jälleenrakennukseen.",
+     "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "History of Chișinău"
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "Triumphal arch, Chisinau (2474743970).jpg",
+     "lyhyt": "Riemukaari on noin 13 metriä korkea ja kaksikerroksinen.",
+     "selite": "Kaaren kello painoi noin 6 400 kiloa ja oli paikallaan vuoteen 2011 asti.",
+     "lahde": "Klearchos Kapoutsis from Santorini, Greece, Wikimedia Commons (CC BY 2.0)"
+    },
+    "kappale": "Chișinăun historiallinen keskusta on pienikokoinen, ja katedraali, riemukaari ja keskuspuisto ovat lyhyen kävelymatkan päässä toisistaan. Lentoasemalta keskustaan pääsee trolleybussilla, ja kaupungissa liikennöivät myös bussit ja pikkubussit. Romania on virallinen kieli, mutta venäjää ymmärtää moni. Valea Morilorin ja Ruusulaakson puistot tarjoavat tilaa kävelyyn järvien ääressä. Lokakuun ensimmäisenä viikonloppuna vietetään kansallista viinipäivää ja viinifestivaalia.",
+    "artikkeli": {
+     "nimi": "Matkailijan Chișinău",
+     "taitto": "opas",
+     "teksti": "Kaupunki, jossa puistot, järvet ja vanhat kirkot mahtuvat samalle päivälle.",
+     "nosto": "Chișinău on helppo kävellä, ja historiallisen ytimen nähtävyydet ovat lähellä toisiaan. Kaupungin vihreät alueet ulottuvat keskustasta järvipuistoihin asti.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "Chișinău Eugen Doga International Airport (RMO) on noin 13 kilometrin päässä keskustasta kaakossa, ja se on lähteen mukaan Moldovan ainoa säännöllisen matkustajaliikenteen lentoasema. Lentoaseman koodi vaihtui KIV:stä RMO:ksi tammikuussa 2024. Keskustaan pääsee trolleybussilla 30, jonka pysäkki on saapumisaulan ulkopuolella, ja taksissa kannattaa pyytää mittari käyttöön. Linja-autoasemia on kolme: Gara Centrală, Gara de Nord ja Gara de Sud, ja Odessaan on noin viisi tuntia. Junayhteyksien tilanne vaihtelee, joten ajantasaiset yhteydet kannattaa tarkistaa. Kaupungissa liikennöivät trolleybussit, bussit ja pikkubussit eli rutiera.",
+       "kuva": {
+        "tiedosto": "Chișinău BKM-213 trolleybus on route 22 in 2021.jpg",
+        "lyhyt": "Chișinăussa on laaja trolleybussiverkko, jossa on lähteen mukaan 22 linjaa.",
+        "selite": "Lentoasemalta keskustaan pääsee trolleybussilla 30.",
+        "lahde": "Photobank MD from Chisinau, Moldova, Wikimedia Commons (CC0)"
+       }
+      },
+      {
+       "otsikko": "Nähtävää historiallisessa ytimessä",
+       "teksti": "Historiallinen ydin on kompakti: Kristuksen syntymän katedraali, riemukaari ja Tapani Suuren keskuspuisto sijaitsevat lähellä toisiaan. Puiston Klassikoiden puistokujalta löytyy kirjailijoiden rintakuvia. Măzărache-kirkko ja Ciuflea-luostari kuuluvat kaupungin vanhimpiin rakennuksiin. Kansallisen etnografia- ja luonnonhistoriamuseon mauri-tyylinen julkisivu kannattaa nähdä, ja sisällä esillä on Deinotherium-luuranko.",
+       "kuva": {
+        "tiedosto": "Museo nacional de etnografía e historia natural, Chisináu, Moldavia, 2023-11-03, DD 57.jpg",
+        "lyhyt": "Kansallinen etnografia- ja luonnonhistoriamuseo toimii mauri-tyylisessä rakennuksessa.",
+        "selite": "Museon kokoelmiin kuuluu Deinotherium-luuranko.",
+        "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)"
+       }
+      },
+      {
+       "otsikko": "Puistot ja vesi",
+       "teksti": "Valea Morilor on iso puisto järven ympärillä, ja järveä kiertää 2,5 kilometrin juoksu- ja pyöräilyreitti. Ruusulaakso on yhdeksän hehtaarin puisto, jossa on kolme järveä ja polkuveneitä. Myös kasvitieteellinen puutarha on lähteen mukaan kaupungin suurin puisto.",
+       "kuva": {
+        "tiedosto": "Parque Valea Morilor, Chisináu, Moldavia, 2023-11-03, DD 61.jpg",
+        "lyhyt": "Valea Morilorin puisto on yksi kaupungin suosituista kävelypuistoista.",
+        "selite": "Järveä kiertää noin 2,5 kilometrin juoksu- ja pyöräilyreitti.",
+        "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)"
+       }
+      },
+      {
+       "otsikko": "Mitä täällä syödään",
+       "teksti": "Keskustori eli Piața Centrală täyttää yli kaksi korttelia. Siellä on juustohalleja, joissa myydään brînza- ja caș-juustoja, ja sana oaie tarkoittaa lammasta. Kuumana myydään langosia, ja tiskeillä on marinoituja vihanneksia.",
+       "kuva": {
+        "tiedosto": "Basar von Chișinău.JPG",
+        "lyhyt": "Piața Centrală on kaupungin keskustori, jonka juustohalleista on tunnettu.",
+        "selite": "Torilta löytyy myös kuumia langosleipiä ja marinoituja vihanneksia.",
+        "lahde": "JøMa, Wikimedia Commons (CC BY-SA 3.0)"
+       }
+      },
+      {
+       "otsikko": "Milloin kannattaa tulla",
+       "teksti": "Chișinăun ilmasto on kuuma-kesäinen mannerilmasto, ja talvella on pakkasta mutta harvoin alle −10 astetta. Mallinnettujen kuukausinormaalien mukaan keskilämpötila on tammikuussa −2,3 ja elokuussa 23,5 astetta. Toukokuun keskilämpö on 14,8 ja syyskuun 17,4 astetta, ja kesäkuu on sateisin kuukausi (86 millimetriä). Lokakuun ensimmäisenä viikonloppuna vietetään kansallista viinipäivää ja viinifestivaalia.",
+       "kuva": {
+        "tiedosto": "Entrance to Rose Valley Park, Chisinau.jpg",
+        "lyhyt": "Ruusulaakso on yhdeksän hehtaarin puisto, jossa on kolme järveä.",
+        "selite": "Puistossa voi vuokrata polkuveneitä.",
+        "lahde": "Iurie Nistor, Wikimedia Commons (CC0)"
+       }
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       {
+        "mita": "Katedraalipuisto, katedraali ja riemukaari",
+        "tahdet": 3,
+        "selite": "Kaupungin historiallinen ydin on helppo kiertää kävellen."
+       },
+       {
+        "mita": "Tapani Suuren keskuspuisto ja Klassikoiden puistokuja",
+        "tahdet": 3,
+        "selite": "Vanhat puut ja kirjailijoiden rintakuvat tekevät puistosta kävelyretken arvoisen."
+       },
+       {
+        "mita": "Valea Morilorin järvikierros",
+        "tahdet": 2,
+        "selite": "Järven ympäri kulkee noin 2,5 kilometrin reitti."
+       },
+       {
+        "mita": "Etnografia- ja luonnonhistoriamuseo",
+        "tahdet": 2,
+        "selite": "Mauri-tyylinen julkisivu ja Deinotherium-luuranko ovat museon tunnetuimpia nähtävyyksiä."
+       },
+       {
+        "mita": "Keskustori ja juustohallit",
+        "tahdet": 2,
+        "selite": "Piața Centrală on paikka tutustua paikallisiin juustoihin ja marinoituihin vihanneksiin."
+       }
+      ],
+      "hyvaTietaa": [
+       {
+        "otsikko": "Kielet ja raha",
+        "teksti": "Virallinen kieli on romania, ja venäjää ymmärtää moni. Lähteen mukaan englantia puhuu noin 30 prosenttia maan asukkaista, nuoret useammin. Valuutta on Moldovan leu."
+       },
+       {
+        "otsikko": "Liikenteessä",
+        "teksti": "Jalankulkijan kannattaa varoa liikennettä. Katuvalot ovat harvassa, joten pieni taskulamppu ja saapuminen päivänvalossa auttavat."
+       },
+       {
+        "otsikko": "Kulkukoirat",
+        "teksti": "Kulkukoirat voivat lähteen mukaan olla ongelma, joten ne kannattaa väistää rauhallisesti."
+       },
+       {
+        "otsikko": "Asiakirjat",
+        "teksti": "Passin kopio kannattaa pitää mukana."
+       }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "kirjallisuus",
+   "nimi": "Kirjailijoiden Chișinău",
+   "johdanto": "Isoisän aikaan Chișinăussa oli asunut venäläinen runoilija, ja myöhemmin kaupunki sai kokonaisen kujan kirjailijoiden rintakuvia. Sivu kertoo, miten kirjallisuus jätti jälkensä kaupunkiin.",
+   "tehtava": {
+    "kysymys": "Minkä venäläisen runoilijan patsas pystytettiin Chișinăun puistoon vuonna 1885?",
+    "vaihtoehdot": [
+     "Aleksandr Puškin",
+     "Mihail Lermontov",
+     "Fjodor Tjutšev",
+     "Afanasi Fet"
+    ],
+    "oikea": 0,
+    "fakta": "Kaupunkilaiset rahoittivat Alexander Opekushinin suunnitteleman patsaan, joka on lähteen mukaan kaupungin vanhin säilynyt muistomerkki."
+   },
+   "nostot": [
+    {
+     "otsikko": "Runoilija maanpaossa",
+     "teksti": "Venäläinen runoilija Aleksandr Puškin asui Chișinăussa maanpaossa Aleksanteri I:n vallan aikana vuosina 1820–1823, ja hänen asuintalonsa on nykyään museo osoitteessa Anton Pann 19. Tapani Suuren keskuspuistossa seisoo hänen patsaansa, jonka suunnitteli Alexander Opekushin ja joka pystytettiin vuonna 1885. Lähteen mukaan Chișinău oli Moskovan jälkeen toinen kaupunki, jossa oli Puškinin patsas. Kaupunkilaiset rahoittivat muistomerkin, ja hinnaksi kerrotaan tuhat kultarupla. Sodan jälkeen patsas siirrettiin kirjallisuuden klassikoiden puistokujalle, ja sen entiselle paikalle tuli elokuvateatteri Rodina.",
+     "tiedosto": "Monument to Alexander Pushkin in the Ștefan cel Mare Central Park of Chișinău.jpg",
+     "lyhyt": "Puškinin patsas pystytettiin vuonna 1885 kaupunkilaisten keräämillä varoilla.",
+     "selite": "Alexander Opekushinin suunnittelema muistomerkki siirrettiin sodan jälkeen Klassikoiden puistokujalle.",
+     "lahde": "Tomasz Bladyniec, Wikimedia Commons (CC BY 4.0)",
+     "wiki": "Alexander Pushkin"
+    },
+    {
+     "otsikko": "Klassikoiden puistokuja",
+     "teksti": "Klassikoiden puistokuja avattiin vuonna 1958 Tapani Suuren keskuspuistossa. Kujan varrella on pronssisia rintakuvia punaisilla kiillotetuilla graniittijalustoilla, ja sisäänkäyntiä vartioivat marmoriset leijonat, joiden tekijä ei ole tiedossa. Rintakuvien joukossa ovat muun muassa Mihai Eminescu, Ion Creangă, Vasile Alecsandri, Mircea Eliade, Dimitrie Cantemir, Lucian Blaga, Alexei Mateevici ja Constantin Negruzzi. Puisto on lähteen mukaan Moldovan vanhin, noin seitsemän hehtaaria, ja siellä kasvaa 50 puulajia.",
+     "tiedosto": "Alley of Classics Chisinau Moldova Nov 2012.jpg",
+     "lyhyt": "Klassikoiden puistokuja avattiin vuonna 1958 Tapani Suuren keskuspuistossa.",
+     "selite": "Kujan varrella on pronssisia rintakuvia romanialaisen kirjallisuuden suurista nimistä.",
+     "lahde": "Ukas, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Stephen the Great Central Park"
+    },
+    {
+     "otsikko": "Sanomalehdet ja kirjailijayhdistykset",
+     "teksti": "Romaniankielinen lehdistö sai Chișinăussa alkunsa 1900-luvun alussa: Basarabia oli ensimmäinen romaniankielinen sanomalehti Bessarabian kuvernementissa, ja sitä ilmestyi vuosina 1906–1907. Cuvânt moldovenesc perustettiin kesäkuussa 1914 ja Viața Basarabiei vuonna 1932. Ensimmäinen romanialaisten kirjailijoiden yhdistys perustettiin kaupunkiin 1920, ja sen jäseniin kuuluivat muun muassa Mihail Sadoveanu, Ștefan Ciobanu ja Tudor Pamfile. Radio Basarabia aloitti lähetykset 8.10.1939.",
+     "tiedosto": "Teatro Nacional Mihai Eminescu, Chisináu, Moldavia, 2023-11-03, DD 18.jpg",
+     "lyhyt": "Mihai Eminescu -teatteri on nimetty runoilijan mukaan.",
+     "selite": "Eminescun rintakuva on myös Klassikoiden puistokujalla Tapani Suuren keskuspuistossa.",
+     "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "History of Chișinău"
+    },
+    {
+     "otsikko": "Kaupungissa syntyneitä kirjoittajia",
+     "teksti": "Chișinăussa on syntynyt useita kirjoittajia. Runoilija Olga Vrabie (1902–1928) ja kirjailija Ana Lupan (1922–1998) olivat kaupungin lapsia, samoin kirjailija George Meniuc, kirjailija Petre Luscalov (1927–2004) sekä kirjallisuushistorioitsija ja kääntäjä Tatiana Nicolescu. Kaupungissa toimii myös kansalliskirjasto, ja Mihai Eminescu -teatteri kuuluu sen kulttuurikohteisiin. Chișinăuhun on kuulunut myös romaniankielisen kirjallisen elämän yhdistyksiä: Bessarabian kirjailija- ja toimittajayhdistys muotoutui vuonna 1940. Näin kaupunki on ollut sekä lukemisen paikka että kirjoittajien syntymäkaupunki.",
+     "tiedosto": "Biblioteca Nationala Vasile Alecsandri, Chisinau, Republica Moldova Vasile Alecsandri National Library, Chisinau, Republic of Moldova (51171201087).jpg",
+     "lyhyt": "Kansalliskirjasto sijaitsee Chișinăussa ja on nimetty Vasile Alecsandrin mukaan.",
+     "selite": "Alecsandri on myös Klassikoiden puistokujan runoilijoita.",
+     "lahde": "Photobank MD from Chisinau, Moldova, Wikimedia Commons (CC0)",
+     "wiki": "Chișinău"
+    }
+   ]
+  }
+ ],
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "Chișinăun historiallinen ydin on 1800-luvun suunnitelman mukainen: katedraali ja riemukaari muodostavat akselin, keskuspuisto perustettiin vuonna 1818 ja vanhin kirkko on vuodelta 1752. Kohteet ovat kävellen ulottuvilla, Ciuflea itäisimpänä.",
+  "rajat": {
+   "pohjoinen": 47.0288,
+   "etela": 47.0099,
+   "lansi": 28.8241,
+   "ita": 28.8508
+  },
+  "kohteet": [
+   {
+    "nimi": "Kristuksen syntymän katedraali",
+    "lat": 47.02606,
+    "lon": 28.83453
+   },
+   {
+    "nimi": "Riemukaari",
+    "lat": 47.02472,
+    "lon": 28.8325
+   },
+   {
+    "nimi": "Tapani Suuren keskuspuisto",
+    "tyyppi": "luonto",
+    "lat": 47.025,
+    "lon": 28.828
+   },
+   {
+    "nimi": "Kaupungintalo",
+    "lat": 47.023,
+    "lon": 28.8343
+   },
+   {
+    "nimi": "Măzărache-kirkko",
+    "lat": 47.02083,
+    "lon": 28.83028
+   },
+   {
+    "nimi": "Ciuflea-luostari",
+    "lat": 47.01263,
+    "lon": 28.84691
+   },
+   {
+    "nimi": "Kansallinen historiamuseo",
+    "lat": 47.0225,
+    "lon": 28.82806
+   }
+  ]
+ },
+ "nahtavyydet": {
+  "Kristuksen syntymän katedraali": {
+   "aika": "1830–1836",
+   "teksti": "Kristuksen syntymän katedraali on uusklassinen kirkko Chișinăun keskustassa. Sen rakennuttivat Uuden Venäjän kuvernööri Mihail Voroncov ja metropoliitta Gavril Bănulescu-Bodoni, ja rakennustyö kesti 26.5.1830–13.10.1836. Suunnittelija oli arkkitehti Abram eli Avraam Melnikov, ja julkisivussa on kuusi doorilaista pylvästä. Vastaava kirkko on rakennettu Bolhradiin.\n\nIsoisän matkavuonna 1873 katedraali oli ollut valmiina yli 35 vuotta, joten se kuului jo kaupungin vakiintuneeseen kuvaan. Toisessa maailmansodassa rakennusta pommitettiin, ja sen kellotorni purettiin Neuvostoaikana vuonna 1962. Torni rakennettiin uudelleen 1997.\n\nNeuvostoaikana kirkko toimi näyttelykeskuksena, ja uskonnollinen käyttö palasi vuonna 1989. Kunnostus kesti vuoteen 1996, ja nykyinen sinkkikupoli ja risti ovat vuodelta 1997. Moldovan pankki löi vuonna 2016 katedraalin 180-vuotismuistokolikon.",
+   "kuvat": [
+    {
+     "tiedosto": "Nativity Cathedral, Chișinău 02.jpg",
+     "lyhyt": "Katedraalin rakennuttivat kuvernööri Voroncov ja metropoliitta Bănulescu-Bodoni.",
+     "selite": "Nykyinen sinkkikupoli ja risti ovat vuodelta 1997.",
+     "lahde": "Tomasz Bladyniec, Wikimedia Commons (CC BY 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Riemukaari": {
+   "aika": "noin 1840",
+   "teksti": "Riemukaari on 13 metriä korkea, kaksikerroksinen rakennelma, jonka pohja on neliömäinen ja pylväänpäät korinttilaisia. Arkkitehti Luka Zaushkevich suunnitteli sen muistoksi Venäjän voitosta Venäjän–Turkin sodassa 1828–1829. Valmistumisvuodeksi lähteet antavat 1840 tai 1841, joten kirjoitetaan noin 1840.\n\nKaaren sisällä oli noin 6 400 kilon kello, joka pysyi paikallaan vuoteen 2011 asti. Se valettiin osmanilta vallattujen tykkien kuparista ja oli alun perin tarkoitettu katedraalin kellotorniin, mutta osoittautui liian suureksi. Ensimmäinen kello tuli Odessasta vuonna 1842, tuuli repi kellotaulun irti 1849, ja uusi mekanismi hankittiin Itävallasta vasta 1881.\n\nIsoisän matkavuonna 1873 kaari seisoi siis jo paikallaan, ja sen kello kävi vielä vanhalla koneistolla. Kaari vaurioitui pommituksissa 1941 ja kunnostettiin täysin 1973. Kellotaulu on valaistu yöllä, mutta kello ei lyö tunteja.",
+   "kuvat": [
+    {
+     "tiedosto": "Triumphal arch, Chișinău 03.jpg",
+     "lyhyt": "Riemukaari on kaksikerroksinen ja 13 metriä korkea.",
+     "selite": "Arkkitehti Luka Zaushkevichin suunnittelema kaari valmistui noin vuonna 1840.",
+     "lahde": "Tomasz Bladyniec, Wikimedia Commons (CC BY 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Tapani Suuren keskuspuisto": {
+   "aika": "1818",
+   "teksti": "Tapani Suuren keskuspuisto perustettiin vuonna 1818 venäläisten sotilasinsinöörien toimesta, ja lähteen mukaan se on Moldovan vanhin puisto. Puisto on noin seitsemän hehtaarin kokoinen, siellä kasvaa 50 puulajia, ja mulperit ja akaasiat ovat 130–180-vuotiaita. Arkkitehti Bogdan Eitner loi nykyiset käytävät ja istutti satoja akaasioita ja lehmuksia sekä kukkapenkkejä.\n\nPuiston aita oli alun perin pajusta. Vuonna 1863 arkkitehti Bernardazzin ehdotuksesta tilalle hankittiin Odessasta valurautaaita, jossa oli 460 ketjua ja joka painoi 5 400 kiloa. Isoisän matkavuonna 1873 puisto oli siis ollut olemassa yli 50 vuotta, mutta Tapani Suuren patsas ei vielä seissyt sisäänkäynnillä. Patsas valmistui 1927 ja paljastettiin 29.4.1928, ja sen tekijä oli Alexandru Plămădeală.\n\nPuistossa on kävellyt 1820-luvun alussa runoilija Aleksandr Puškin. Klassikoiden puistokuja avattiin vuonna 1958, ja nykyisin puistossa on neljä suihkulähdettä. Sen lempinimi on Rakastavaisten puisto.",
+   "kuvat": [
+    {
+     "tiedosto": "Ștefan cel Mare Central Park 2021 01.jpg",
+     "lyhyt": "Tapani Suuren keskuspuisto perustettiin vuonna 1818 venäläisten sotilasinsinöörien toimesta.",
+     "selite": "Puiston mulperit ja akaasiat ovat 130–180-vuotiaita.",
+     "lahde": "Tomasz Bladyniec, Wikimedia Commons (CC BY 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Kaupungintalo": {
+   "aika": "1901",
+   "teksti": "Kaupungintalo on italialaista goottia edustava rakennus, joka valmistui vuonna 1901 alun perin kaupunginduumalle. Lähteiden mukaan sen suunnitteli arkkitehti Alexander Bernardazzi, joka suunnitteli myös Pyhän Teodora de la Sihlan kirkon vuonna 1895.\n\nDuuma ja pormestarin virka perustettiin Chișinăuhun jo vuonna 1817, ja ensimmäinen pormestari oli kapteeni Anghel Nour vuosina 1817–1821. Pormestari Carol Schmidt johti kaupunkia 1877–1903, ja häntä muistetaan yhä kaupungin uudistajana. Isoisän matkavuonna 1873 nykyistä kaupungintaloa ei vielä ollut. Vuonna 1837 kaupunginduuman päämajaksi rakennettiin talo, josta tuli 1842 poikien lukio, ja se seisoi nykyisen historiamuseon paikalla.\n\nToisessa maailmansodassa kaupungintalo tuhoutui lähes kokonaan. Rakennus jälleenrakennettiin sodan jälkeen säilyneiden kuvien ja rakennussuunnitelmien pohjalta.",
+   "kuvat": [
+    {
+     "tiedosto": "Ayuntamiento, Chisináu, Moldavia, 2023-11-03, DD 22.jpg",
+     "lyhyt": "Kaupungintalo rakennettiin alun perin kaupunginduumalle vuonna 1901.",
+     "selite": "Italialaista goottia edustava rakennus jälleenrakennettiin sodan jälkeen säilyneiden kuvien ja suunnitelmien pohjalta.",
+     "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Măzărache-kirkko": {
+   "aika": "1752",
+   "teksti": "Măzărache-kirkko on lähteen mukaan Chișinăun vanhimmaksi katsottu kirkko. Vasile Măzărache rakennutti sen vuonna 1752, ja rakennus edustaa perinteistä moldavialaista kirkkoarkkitehtuuria 1400–1500-luvuilta. Lähteen mukaan kirkko nousi osmanien tuhoaman linnoituksen paikalle.\n\nMäen juurella oleva kivilohkare merkitsee kaupungin nimen antaneen lähteen paikkaa, sillä chisla noua tarkoittaa uutta lähdettä. Kaupunki paloi Venäjän–Turkin sotien aikana 1739 ja 1788, ja kirkko valmistui näiden paloja väliin.\n\nIsoisän matkavuonna 1873 kirkko oli seissyt jo 121 vuotta. Aivan lähellä on Râșcani-kirkko vuodelta 1777, jonka rakennutti bojaari Constantin Râșcanu.",
+   "kuvat": [
+    {
+     "tiedosto": "MD.C.C - Măzărache church - aug 2020 - 01.jpg",
+     "lyhyt": "Măzărache-kirkko on lähteen mukaan Chișinăun vanhimmaksi katsottu kirkko.",
+     "selite": "Vasile Măzărache rakennutti kirkon vuonna 1752.",
+     "lahde": "Gikü ( talk ), Wikimedia Commons (CC0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Ciuflea-luostari": {
+   "aika": "1854–1858",
+   "teksti": "Ciuflea-luostari on omistettu Pyhälle Teodor Amaseialaiselle. Sen rahoitti Anastase Ciufli veljensä Teodor Ciuflin testamentin mukaan. Veljekset olivat aromunikauppiaita, jotka muuttivat Makedoniasta Bessarabiaan vuonna 1821.\n\nRakennuslupa saatiin 1854, ja kirkko vihittiin 6.6.1858. Teodorin jäännökset ovat eteläsiivessä, ja Anastase liittyi hänen viereensä noin 11 vuotta myöhemmin. Lähteissä hänen kuolinvuotensa on 1869 tai 1870.\n\nIsoisän matkavuonna 1873 kirkko oli ollut valmiina 15 vuotta. Vuonna 1962 katedraalin sulkemisen vuoksi kirkon johto muutti Ciufleaan, josta tuli katedraali. Luostariksi se muuttui vuonna 2002.",
+   "kuvat": [
+    {
+     "tiedosto": "Ciuflea Monastery, Chișinău.jpg",
+     "lyhyt": "Ciuflea-luostari on omistettu Pyhälle Teodor Amaseialaiselle.",
+     "selite": "Aromunikauppiasveljekset Ciuflit rahoittivat kirkon, joka vihittiin 6.6.1858.",
+     "lahde": "Pudelek, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Kansallinen historiamuseo": {
+   "aika": "1837 ja 1980–1987",
+   "teksti": "Moldovan kansallinen arkeologia- ja historiamuseo toimii talossa, jonka julkisivu perustuu vuonna 1837 valmistuneeseen rakennukseen. Alkuperäinen talo tehtiin kaupunginduuman päämajaksi, ja vuonna 1842 siitä tuli poikien lukio numero 1. Isoisän matkavuonna 1873 rakennus oli siis lukio, ei museo.\n\nVuoden 1977 maanjäristys vahingoitti rakennusta niin pahoin, ettei sitä voitu korjata. Se purettiin, ja uusi rakennus tehtiin vuosina 1980–1987 vanhan julkisivun mukaan eklektiseen tyyliin.\n\nMuseo perustettiin 21.12.1983. Pihassa on Kapitolinuksen naaraasuden kopio, ja osoite on 31 Augusti 1989 -katu 121A.",
+   "kuvat": [
+    {
+     "tiedosto": "Museum of History (AP4L0086 1PS) (28922487610).jpg",
+     "lyhyt": "Historiamuseon rakennus nousi vuosina 1980–1987 vanhan julkisivun mukaan.",
+     "selite": "Alkuperäinen vuonna 1837 valmistunut rakennus purettiin maanjäristysvaurioiden jälkeen.",
+     "lahde": "Alexandru Panoiu from Bucharest, Romania, Wikimedia Commons (CC BY 2.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  }
+ },
+ "saatiedot": {
+  "lat": 47.02,
+  "lon": 28.84,
+  "keskilampo": [
+   -2.3,
+   0.3,
+   5.1,
+   10.4,
+   14.8,
+   20.1,
+   22.7,
+   23.5,
+   17.4,
+   12.4,
+   5.5,
+   1.3
+  ],
+  "sade": [
+   14,
+   22,
+   47,
+   26,
+   70,
+   86,
+   28,
+   30,
+   47,
+   41,
+   22,
+   32
+  ],
+  "luonnehdinta": "Mallinnettujen kuukausinormaalien mukaan Chișinăun kylmin kuukausi on tammikuu, jolloin keskilämpötila on −2,3 astetta, ja lämpimin elokuu 23,5 asteella. Sadetta kertyy eniten kesäkuussa (86 millimetriä) ja toukokuussa (70 millimetriä) ja vähiten tammikuussa (14 millimetriä)."
+ },
+ "ehdotukset": {
+  "lentoasema": "Chișinău Eugen Doga International Airport (RMO)",
+  "huomiot": [
+   "Katedraalipuisto jätetty pois kartalta: faktapohjassa vain WV:n lyhyet maininnat ja koordinaatti 47.02591/28.83430 (20 m katedraalista), ei riittävästi faktoja 700 merkin juttuun. Kohde palautetaan, jos löytyy lisälähteitä.",
+   "Kohde-ehdotus: Suuren kansalliskokouksen aukio (aukio-tyyppi), nykymuoto 1951 ja laajennus 1987–1988 lähteen mukaan, mutta Wikidatassa ei koordinaatteja; Päätoimittajan hyväksyttävä koordinaatti muualta.",
+   "Kohde-ehdotus: Pyhän Teodora de la Sihlan kirkko (1895, Bernardazzi); artikkelia ei luettu, koordinaatit puuttuvat.",
+   "Kohde-ehdotus: Râșcani-kirkko (1777); maininta vain History of Chișinău -artikkelissa, koordinaatit puuttuvat.",
+   "Kohde-ehdotus: Valea Morilor -puisto ja Ruusulaakso (luonto); lähteenä vain Wikivoyage, en-Wikipedia-artikkelia ei löytynyt, koordinaatit puuttuvat.",
+   "Kohde-ehdotus: Kansallinen etnografia- ja luonnonhistoriamuseo (mauri-tyylinen julkisivu) sekä kasvitieteellinen puutarha; en-Wikipedia-artikkeli ja koordinaatit puuttuvat.",
+   "Ristiriita 'Bessarabian keskus vuodesta 1873' ratkaistu käyttämällä vain vuotta 1812. Riemukaaren valmistumisvuosi 1840 (EN) tai 1841 (WV): kirjoitettu noin 1840. Ciufli kuoli 1869 tai 1870: kirjoitettu molemmat.",
+   "Kuvat: ennen–nyt-paria ei löytynyt. Bazaar-kuva (Basar von Chișinău) on heikoin ja matkailijalle-kuva on vuodelta 2008; vaihdettava, jos parempi löytyy. Katedraalipuiston kuva (Vi_Ko 2025) jäi käyttämättä.",
+   "um.fi-matkustustiedotetta ei haettu; oppaan Transnistria-mainintaa ei otettu mukaan."
+  ]
+ }
+}
