@@ -1,6 +1,6 @@
 ### 26.1
 KYSYMYS: Mikä teki Žičen luostarista poikkeuksellisen tärkeän koko kartusiaanien veljeskunnalle?
-Kato, tän minä tiedän. Žičen luostari perustettiin vuosina 1155–1165 ensimmäiseksi [[kartusiaaniluostariksi]] saksankielisellä alueella ja samalla ensimmäiseksi Ranskan ja Italian ulkopuolella. Vielä suurempi merkitys tuli [[suuren skisman]] aikana, jolloin koko veljeskunnan [[ylipriorin]] istuin siirtyi Žičeen lähes kahdeksikymmeneksi vuodeksi, vuosina 1391–1410. Kolme Žičen prioria toimi tänä aikana peräkkäin koko veljeskunnan ylipriorina, joten pienestä laaksoluostarista tuli kartusiaanien johtopaikka. Aika iso rooli yhdelle kapealle laaksolle, sanon minä.
+Kato, tän minä tiedän. Žičen luostari perustettiin vuosina 1155–1165 ensimmäiseksi [[kartusiaaniluostariksi]] saksankielisellä alueella ja samalla ensimmäiseksi Ranskan ja Italian ulkopuolella. Vielä suurempi merkitys tuli [[suuren skisman]] aikana, jolloin Rooman paavia tukeneiden kartusiaaniluostarien [[ylipriorin]] istuin oli Žičessä vuosina 1391–1410; Avignonin puolella oli oma ylipriori Grande Chartreusessa, ja ordun yhtenäisyys palautui vuonna 1410. Kolme Žičen prioria toimi tänä aikana peräkkäin Rooman puolen ylipriorina, joten pienestä laaksoluostarista tuli tämän osan johtopaikka. Aika iso rooli yhdelle kapealle laaksolle, sanon minä.
 JATKOT:
 Mikä on ylipriori ja mitä hän tekee?
 Miksi kartusiaanit rakentavat luostarinsa syrjäisiin paikkoihin?
@@ -30,7 +30,7 @@ Miten Steiermark on jakautunut Itävallan ja Slovenian kesken?
 
 ### 26.5
 KYSYMYS: Mikä oli suuri skisma, joka siirsi ylipriorin istuimen Žičeen?
-Hyvä kysymys tuo. Suuri läntinen skisma oli kirkon jakautuminen, joka alkoi vuonna 1378, kun [[Rooman]] ja [[Avignonin]] paavit kilpailivat siitä, kumpi oli oikea paavi; myöhemmin vaatijoita tuli kolmaskin. Kilpailu jakoi kirkon, ruhtinaat ja myös luostariveljeskunnat eri leireihin, ja se päättyi vuonna 1417 [[Konstanzin kirkolliskokouksessa]]. Kartusiaanien ylipriorin istuin oli Žičessä vuosina 1391–1410, eli juuri tämän erimielisyyden aikana. En ole varma, miksi valinta osui juuri Žičeen. Siinä oli kyyhkylle kerrakseen sotkua, joka sopii kirjeiden kantajalle huonosti.
+Hyvä kysymys tuo. Suuri läntinen skisma oli kirkon jakautuminen, joka alkoi vuonna 1378, kun [[Rooman]] ja [[Avignonin]] paavit kilpailivat siitä, kumpi oli oikea paavi; myöhemmin vaatijoita tuli kolmaskin. Kilpailu jakoi kirkon, ruhtinaat ja myös luostariveljeskunnat eri leireihin, ja se päättyi vuonna 1417 [[Konstanzin kirkolliskokouksessa]]. Rooman paavia tukeneiden kartusiaaniluostarien ylipriorin istuin oli Žičessä vuosina 1391–1410, eli juuri tämän erimielisyyden aikana; Avignonin puolella oli oma ylipriori Grande Chartreusessa, ja ordun yhtenäisyys palautui vuonna 1410. En ole varma, miksi valinta osui juuri Žičeen. Siinä oli kyyhkylle kerrakseen sotkua, joka sopii kirjeiden kantajalle huonosti.
 JATKOT:
 Miten Konstanzin kirkolliskokous ratkaisi skisman?
 Miksi paavit asuivat jossain vaiheessa Avignonissa?
@@ -44,7 +44,7 @@ Keitä langobardit olivat?
 
 ### 27.2
 KYSYMYS: Miten Triesten vapaasatama-asema vuonna 1719 vaikutti Koperin kauppaan?
-Joo, tän minä tiedän. Kun Trieste julistettiin vapaasatamaksi vuonna 1719, [[Habsburgien]] hallitsija [[keisari Kaarle VI]] nosti sen Adrianmeren kaupankäynnin keskukseksi, ja Koper menetti kauppamonopolinsa. Vapaasatamassa tavaroita pystyttiin käsittelemään edullisemmin ja kaupankäyntiä kevennettiin, joten kauppiaat suuntasivat sinne, eikä Koper koskaan saanut asemaansa takaisin. Kaupunki oli ollut aiemmin [[Venetsian]] Istrian pääkaupunki, mutta sen taloudellinen painoarvo väheni tästä lähtien. Satamakaupungit kilpailevat yhä, näin ylhäältä katsottuna.
+Joo, tän minä tiedän. Kun Trieste julistettiin vapaasatamaksi vuonna 1719, [[Habsburgien]] hallitsija [[keisari Kaarle VI]] nosti sen Adrianmeren kaupankäynnin keskukseksi, ja Koper menetti kauppamonopolinsa. Vapaasatamassa tavaroita pystyttiin käsittelemään edullisemmin ja kaupankäyntiä kevennettiin, joten kauppiaat suuntasivat sinne, eikä Koper koskaan saanut asemaansa takaisin. Kaupunki oli ollut aiemmin [[Venetsian]] Istrian hallinnon keskus, mutta sen taloudellinen painoarvo väheni tästä lähtien. Satamakaupungit kilpailevat yhä, näin ylhäältä katsottuna.
 JATKOT:
 Mikä on vapaasatama ja miksi sellaisia perustettiin?
 Miten Trieste kehittyi 1700-luvulla?
@@ -60,7 +60,7 @@ Millaisia ovat Sečovljen suola-altaat?
 
 ### 27.4
 KYSYMYS: Mikä oli Venetsian tasavalta ja miten se hallitsi Istriaa?
-Ai se. Venetsian tasavalta oli keskiajalta alkanut merivaltio, joka hallitsi kauppaa Adrianmerellä ja Itäisellä Välimerellä ja otti haltuunsa myös useita Istrian rannikkokaupunkeja. Kaupungit säilyttivät omaa hallintoaan, mutta Venetsian lähettämä [[podestà]] johti niitä tasavallan nimissä, ja Koper nousi koko Venetsian Istrian pääkaupungiksi liityttyään tasavaltaan vuonna 1278. Tasavallan valta päättyi vuonna 1797 [[Napoleonin]] aikaan, ja Koper siirtyi Itävallan haltuun vuonna 1813 kuten aiempi teksti kertoo. Venetsiasta jäi meille Istriaan paljon rakennuksia, ja kyllä sen näkee katolta asti.
+Ai se. Venetsian tasavalta oli keskiajalta alkanut merivaltio, joka hallitsi kauppaa Adrianmerellä ja Itäisellä Välimerellä ja otti haltuunsa myös useita Istrian rannikkokaupunkeja. Kaupungit säilyttivät omaa hallintoaan, mutta Venetsian lähettämä [[podestà]] johti niitä tasavallan nimissä, ja Koper liittyi tasavallan alaisuuteen 1270-luvun lopulla (1278–1279); Venetsian vallan alla siitä kasvoi vähitellen koko Venetsian Istrian hallinnon keskus. Tasavallan valta päättyi vuonna 1797 [[Napoleonin]] aikaan, ja Itävalta sai kaupungin Campo Formion rauhassa 1797; syyskuussa 1813 itävaltalaiset vain palasivat Napoleonin ajan jälkeen. Venetsiasta jäi meille Istriaan paljon rakennuksia, ja kyllä sen näkee katolta asti.
 JATKOT:
 Mitä Napoleon teki Venetsian tasavallalle?
 Mikä on Istria ja kuka sitä nykyään hallitsee?

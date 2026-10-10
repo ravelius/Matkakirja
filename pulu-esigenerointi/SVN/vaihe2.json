@@ -4648,7 +4648,7 @@
   "kohde": "kohde:hahmotelma-zice",
   "kasite": "suuren skisman",
   "kysymys": "Kerro lisää: suuren skisman",
-  "vastaus": "Suuri skisma eli läntinen skisma oli katolisen kirkon jakautumisen aika vuosina 1378–1417, jolloin kirkolla oli kerralla kaksi ja lopulta kolme paavia. Toinen paavi asui Roomassa ja toinen [[Avignonissa]] Ranskassa, ja Euroopan hallitsijat ja kirkkoyhteisöt asettuivat tukemaan eri osapuolia. Myös kartusiaanien veljeskunta jakautui, ja tämän vuoksi veljeskunnan johto siirtyi Žičeen, kuten luostarin historiassa kerrotaan; yksityiskohdista en ole varma. Skisma päättyi [[Konstanzin kirkolliskokouksessa]], joka valitsi vuonna 1417 uuden paavin, [[Martti V:n]].",
+  "vastaus": "Suuri skisma eli läntinen skisma oli katolisen kirkon jakautumisen aika vuosina 1378–1417, jolloin kirkolla oli kerralla kaksi ja lopulta kolme paavia. Toinen paavi asui Roomassa ja toinen [[Avignonissa]] Ranskassa, ja Euroopan hallitsijat ja kirkkoyhteisöt asettuivat tukemaan eri osapuolia. Myös kartusiaanien veljeskunta jakautui: Rooman paavia tukeneiden luostarien ylipriorin istuin oli Žičessä vuosina 1391–1410, kun taas Avignonin puolella oli oma ylipriori Grande Chartreusessa; ordun yhtenäisyys palautui vuonna 1410. Yksityiskohdista en ole varma. Skisma päättyi [[Konstanzin kirkolliskokouksessa]], joka valitsi vuonna 1417 uuden paavin, [[Martti V:n]].",
   "linkit": [
    "Avignonissa",
    "Konstanzin kirkolliskokouksessa",
@@ -4663,7 +4663,7 @@
   "kohde": "kohde:hahmotelma-zice",
   "kasite": "ylipriorin",
   "kysymys": "Kerro lisää: ylipriorin",
-  "vastaus": "Ylipriori on kartusiaanien koko veljeskunnan johtaja. Kartusiaaneilla ei ole apottia, vaan yksittäistä luostaria johtaa priori ja koko veljeskuntaa ylipriori; perinteisesti tehtävä kuuluu [[Grande Chartreusen]] priorille. Veljeskunnan asioista päättää [[yleiskapituli]], johon osallistuvat luostarien johtajat. Žičen luostarissa ylipriorin istuin oli vuosina 1391–1410 eli lähes kahden vuosikymmenen ajan, ja kolme Žičen prioria toimi tänä aikana peräkkäin koko veljeskunnan ylipriorina. Tämä oli [[Žičen]] luostarille poikkeuksellinen asema, joka liittyi suuren skisman aikaiseen veljeskunnan jakautumiseen.",
+  "vastaus": "Ylipriori on kartusiaanien koko veljeskunnan johtaja. Kartusiaaneilla ei ole apottia, vaan yksittäistä luostaria johtaa priori ja koko veljeskuntaa ylipriori; perinteisesti tehtävä kuuluu [[Grande Chartreusen]] priorille. Veljeskunnan asioista päättää [[yleiskapituli]], johon osallistuvat luostarien johtajat. Žičen luostarissa oli vuosina 1391–1410 eli lähes kahden vuosikymmenen ajan Rooman paavia tukeneiden luostarien ylipriorin istuin, ja kolme Žičen prioria toimi tänä aikana peräkkäin Rooman puolen ylipriorina; Avignonin puolella oli oma ylipriori Grande Chartreusessa, ja ordun yhtenäisyys palautui vuonna 1410. Tämä oli [[Žičen]] luostarille poikkeuksellinen asema, joka liittyi suuren skisman aikaiseen veljeskunnan jakautumiseen.",
   "linkit": [
    "Grande Chartreusen",
    "yleiskapituli",
@@ -4859,11 +4859,10 @@
   "kohde": "kohde:hahmotelma-koper",
   "kasite": "Aegida",
   "kysymys": "Kerro lisää: Aegida",
-  "vastaus": "Aegida on Koperin varhaisin tunnettu nimi, ja sitä käytettiin roomalaisaikana, kun kaupunki sijaitsi saarella Istrian rannikon edustalla. Nimen alkuperästä esitetään useita selityksiä, enkä ole varma, mikä niistä on oikea. Saari liitettiin myöhemmin mantereeseen, mutta tarkkaa ajankohtaa en tunne. Myöhemmin kaupunki tunnettiin nimellä [[Justinopolis]], ja Venetsian vallan aikana sitä kutsuttiin nimellä [[Capodistria]], joka viittaa koko [[Istrian]] pääkaupunkiin. Nykyinen Koper on slovenialainen muoto kaupungin vanhasta nimestä.",
+  "vastaus": "Aegida on Koperin varhaisin tunnettu nimi, ja sitä käytettiin roomalaisaikana, kun kaupunki sijaitsi saarella Istrian rannikon edustalla. Nimen alkuperästä esitetään useita selityksiä, enkä ole varma, mikä niistä on oikea. Saari liitettiin myöhemmin mantereeseen, mutta tarkkaa ajankohtaa en tunne. Myöhemmin kaupunki tunnettiin nimellä [[Justinopolis]], ja Venetsian vallan aikana sitä kutsuttiin nimellä [[Capodistria]], joka viittaa Istrian hallinnon keskukseen. Nykyinen Koper on slovenialainen muoto kaupungin vanhasta nimestä.",
   "linkit": [
    "Justinopolis",
-   "Capodistria",
-   "Istrian"
+   "Capodistria"
   ],
   "jatkot": [
    "Mistä Capodistria-nimi tulee?",
@@ -4916,7 +4915,7 @@
   "kohde": "kohde:hahmotelma-koper",
   "kasite": "Venetsian",
   "kysymys": "Kerro lisää: Venetsian",
-  "vastaus": "Venetsian tasavalta oli merellinen kauppavaltio, joka syntyi laguunin saarille ja jonka perimätiedon mukaan perustaminen ajoittuu 400-luvulle. Sen johtajaa kutsuttiin nimellä [[dogeksi]], ja hänet valitsi aatelisto monimutkaisella vaalitavalla. Tasavalta hallitsi kauppaa Adrianmerellä ja itäisellä Välimerellä ja otti haltuunsa useita Istrian ja Dalmatian rannikkokaupunkeja, joiden joukossa Koper nousi Istrian pääkaupungiksi. Tasavallan vallan päätti vuonna 1797 [[Napoleonin]] joukkojen valloitus, ja Venetsian alueet siirtyivät sen jälkeen Itävallan ja Ranskan vaikutuspiiriin. Venetsia kuului 1300-luvulla Välimeren merkittävimpiin kauppakeskuksiin.",
+  "vastaus": "Venetsian tasavalta oli merellinen kauppavaltio, joka syntyi laguunin saarille ja jonka perimätiedon mukaan perustaminen ajoittuu 400-luvulle. Sen johtajaa kutsuttiin nimellä [[dogeksi]], ja hänet valitsi aatelisto monimutkaisella vaalitavalla. Tasavalta hallitsi kauppaa Adrianmerellä ja itäisellä Välimerellä ja otti haltuunsa useita Istrian ja Dalmatian rannikkokaupunkeja, joiden joukossa Koperista kasvoi vähitellen Venetsian Istrian hallinnon keskus. Tasavallan vallan päätti vuonna 1797 [[Napoleonin]] joukkojen valloitus, ja Venetsian alueet siirtyivät sen jälkeen Itävallan ja Ranskan vaikutuspiiriin. Venetsia kuului 1300-luvulla Välimeren merkittävimpiin kauppakeskuksiin.",
   "linkit": [
    "dogeksi",
    "Napoleonin"
@@ -4930,7 +4929,7 @@
   "kohde": "kohde:hahmotelma-koper",
   "kasite": "Koper",
   "kysymys": "Kerro lisää: Koper",
-  "vastaus": "Koper on Slovenian rannikkokaupunki Istrian pohjoisosassa, ja sen historia ulottuu roomalaisajan saarikaupunkiin nimeltä Aegida. Vuoden 568 jälkeen kaupunki tunnettiin nimellä Justinopolis, ja se liittyi Venetsian tasavaltaan vuonna 1278 ja kasvoi koko Venetsian Istrian pääkaupungiksi nimellä [[Capodistria]]. Parhaimmillaan siellä asui yli 10 000 ihmistä, ennen kuin 1500-luvun ruttoaallot verottivat väestöä rajusti. Kun [[Triesten]] vapaasatama perustettiin vuonna 1719, Koper menetti kauppamonopolinsa. Napoleonin sotien jälkeen kaupunki siirtyi Itävallalle vuonna 1813, ja nykyään siellä toimii Slovenian merkittävä satama.",
+  "vastaus": "Koper on Slovenian rannikkokaupunki Istrian pohjoisosassa, ja sen historia ulottuu roomalaisajan saarikaupunkiin nimeltä Aegida. Vuoden 568 jälkeen kaupunki tunnettiin nimellä Justinopolis, ja se liittyi Venetsian tasavallan alaisuuteen 1270-luvun lopulla (1278–1279), ja Venetsian vallan alla siitä kasvoi vähitellen koko Venetsian Istrian hallinnon keskus nimellä [[Capodistria]]. Parhaimmillaan siellä asui yli 10 000 ihmistä, ennen kuin 1500-luvun ruttoaallot verottivat väestöä rajusti. Kun [[Triesten]] vapaasatama perustettiin vuonna 1719, Koper menetti kauppamonopolinsa. Itävalta sai kaupungin Campo Formion rauhassa 1797, ja syyskuussa 1813 itävaltalaiset vain palasivat Napoleonin ajan jälkeen; nykyään siellä toimii Slovenian merkittävä satama.",
   "linkit": [
    "Capodistria",
    "Triesten"
@@ -4987,7 +4986,7 @@
   "kohde": "kohde:hahmotelma-koper",
   "kasite": "Napoleonin",
   "kysymys": "Kerro lisää: Napoleonin",
-  "vastaus": "Napoleon Bonaparte syntyi vuonna 1769 [[Korsikalla]] ja nousi Ranskan vallankumouksen jälkeen kenraalista keisariksi vuonna 1804. Hänen sotansa muuttivat Euroopan rajoja: Venetsian tasavalta lakkasi vuonna 1797, ja Slovenian alueelle muodostettiin vuosiksi 1809–1813 [[Illyrian maakunnat]], joiden pääkaupunki oli Ljubljana. Itävalta sai alueen takaisin vuonna 1813, ja Koper siirtyi samalla Itävallan haltuun. Napoleonin valtakausi päättyi vuonna 1815 [[Waterloon]] taisteluun, ja hän kuoli vuonna 1821 kaukaisella Etelä-Atlantin saarella maanpaossa.",
+  "vastaus": "Napoleon Bonaparte syntyi vuonna 1769 [[Korsikalla]] ja nousi Ranskan vallankumouksen jälkeen kenraalista keisariksi vuonna 1804. Hänen sotansa muuttivat Euroopan rajoja: Venetsian tasavalta lakkasi vuonna 1797, ja Slovenian alueelle muodostettiin vuosiksi 1809–1813 [[Illyrian maakunnat]], joiden pääkaupunki oli Ljubljana. Itävalta sai alueen takaisin vuonna 1813; Koper oli kuulunut Itävallalle jo Campo Formion rauhasta 1797 alkaen, ja itävaltalaiset vain palasivat sinne Napoleonin ajan jälkeen. Napoleonin valtakausi päättyi vuonna 1815 [[Waterloon]] taisteluun, ja hän kuoli vuonna 1821 kaukaisella Etelä-Atlantin saarella maanpaossa.",
   "linkit": [
    "Korsikalla",
    "Illyrian maakunnat",
