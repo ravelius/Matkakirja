@@ -3,41 +3,10 @@
   "taskNumber": 68,
   "requestedImages": 60,
   "generationLimit": 60,
-  "generationCalls": 10,
-  "generationRequestsIssued": 10,
-  "imageCount": 0,
+  "generationCalls": 31,
+  "generationRequestsIssued": 31,
+  "imageCount": 29,
   "pendingIds": [
-    "san-marino-1",
-    "vatikaani-1",
-    "minsk-1",
-    "bratislava-1",
-    "riika-1",
-    "riika-2",
-    "varsova-1",
-    "varsova-2",
-    "kiova-2",
-    "jerevan-2",
-    "kuwait-2",
-    "doha-1",
-    "ankara-2",
-    "ouagadougou-2",
-    "bangui-2",
-    "djibouti-2",
-    "ciudad-de-la-paz-1",
-    "asmara-1",
-    "asmara-2",
-    "niamey-2",
-    "sao-tome-2",
-    "yaounde-2",
-    "ndjamena-2",
-    "kinshasa-2",
-    "accra-2",
-    "antananarivo-2",
-    "bamako-2",
-    "maputo-2",
-    "mogadishu-2",
-    "harare-2",
-    "nairobi-2",
     "thimphu-2",
     "phnom-penh-1",
     "phnom-penh-2",
@@ -295,10 +264,1090 @@
   "editorAcceptance": false,
   "gameIntegrated": false,
   "published": false,
-  "updatedAt": "2026-10-10T11:35:43.009496+00:00",
+  "updatedAt": "2026-10-10T11:46:04.792920+00:00",
   "publicImageDataOnly": true,
-  "assets": [],
-  "omittedItems": [],
+  "assets": [
+    {
+      "id": "san-marino-1",
+      "city": "San Marino",
+      "ISO3": "SMR",
+      "n": 1,
+      "type": "A",
+      "filename": "san-marino-1-v2.png",
+      "r2Key": "paakaupungit/SMR/20261010/san-marino-1-v2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Kalliojyrkänne, viinitarhat ja Romagnan tasanko Adrianmeren suuntaan San Marinon maisemassa. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "25abbbc54aa17e01cef41085734c2fd2e88965a0e903f0074b56a49c43145237",
+      "bytes": 2924061,
+      "url": "https://media.matkakirja.app/paakaupungit/SMR/20261010/san-marino-1-v2.png?t=25abbbc54aa17e01",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/SMR/20261010/san-marino-1-v2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Jyrkkä kasvillisuuden peittämä kalkkikivikallio vasemmalla, laaja viljelys- ja viinitarhamaisema, pieniä etäisiä kattoryhmiä sekä sininen meri horisontissa. Ei havaittavia Guaitan, Cestan tai Montalen torneja, kaupungin muureja, erottuvaa nykyarkkitehtuuria, veistoksia, tekstiä, numeroita, logoja, lippuja tai ihmiskasvoja. Kameravalokuvan kaltainen luonnonvalo ja materiaalit; ei havaittavaa CGI- tai maalausilmettä.",
+      "limits": [
+        "Kuva on tekoälyllä tuotettu; Monte Titanon yksilöinti, todellinen kuvakulma ja maaston täsmällinen geometria ovat varmistamatta.",
+        "Etäisiä pieniä kattoryhmiä näkyy tilaussubjektin mukaisesti. Niiden rakennuskohtaisia identiteettejä tai ikää ei voi todentaa; erottuvaa nykyarkkitehtuuria ei havaittu.",
+        "Oikeudellista suojattomuutta ei voi vahvistaa generoidusta kuvasta."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "vatikaani-1",
+      "city": "Vatikaanivaltio",
+      "ISO3": "VAT",
+      "n": 1,
+      "type": "A",
+      "filename": "vatikaani-1-v2.png",
+      "r2Key": "paakaupungit/VAT/20261010/vatikaani-1-v2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Pietarinkirkon kupoli ja basilikan takaosa pinjojen ja terrakottakattojen yllä. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "b900f4e215ad3a733d962a49e0b442ae6e0ba492402e8e7576e40a09cdee8aa0",
+      "bytes": 2938349,
+      "url": "https://media.matkakirja.app/paakaupungit/VAT/20261010/vatikaani-1-v2.png?t=b900f4e215ad3a73",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/VAT/20261010/vatikaani-1-v2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Suuri vaalea historialliselta näyttävä kupoli, basilikan sivumaiset julkisivut, pienempiä kupoleita, terrakottakattoisia rakennuksia ja pinjoja lämpimässä valossa. Via della Conciliazionen katulinjaa tai valaisinpylväitä ei näy. Ei havaittavaa luettavaa tekstiä, numeroita, logoja, lippuja tai ihmiskasvoja. Basilikan rakennusgeometria ja katselusuunta ovat generoidussa näkymässä epävarmoja. Useita ympäröiviä erillisiä rakennuksia näkyy. Etualan punaruskeissa taloissa ja oikean alaosan vaaleassa suorakulmaisessa siivessä näkyy kaltevia terrakottakattoja ja historialliselta näyttäviä julkisivuja. En havaitsenut selvästi nykyaikaista rakennuspiirrettä; niiden iän epävarmuus ei itsessään todista nykyarkkitehtuuria.",
+      "limits": [
+        "Pietarinkirkon tarkkaa takaosan identiteettiä, Gianicolo-/puutarhakuvakulmaa ja rakennusgeometriaa ei ole varmennettu.",
+        "Etualan ja taustan rakennusten identiteetit sekä ikä ovat varmistamatta. Ne näyttävät pääosin vanhalta terrakottakattoiselta kaupunkirakentamiselta, joka kuuluu tilaussubjektiin; tätä epävarmuutta ei tulkita havaittuna nykyarkkitehtuurina.",
+        "Oikeudellista suojattomuutta ei voi vahvistaa generoidusta kuvasta.",
+        "Pääagentin natiivikatselmuksessa näkyvät terrakottakatot ovat historialliselta näyttäviä; selvästi modernia rakennuspiirrettä ei havaittu. Geometria ja katselusuunta jäävät varmistamatta."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "minsk-1",
+      "city": "Minsk",
+      "ISO3": "BLR",
+      "n": 1,
+      "type": "A",
+      "filename": "minsk-1-v2.png",
+      "r2Key": "paakaupungit/BLR/20261010/minsk-1-v2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Svislač-joen rauhallinen mutka, vihreät rantapenkereet ja pieni hiekkaranta. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "344b60870d6da172c0a185e0d770c36ef2f01b5974bdc56b3bc435367f2bc1d4",
+      "bytes": 3155034,
+      "url": "https://media.matkakirja.app/paakaupungit/BLR/20261010/minsk-1-v2.png?t=344b60870d6da172",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/BLR/20261010/minsk-1-v2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Tyyni joen mutka, vehreät luonnonmukaiset rantapenkereet, suuri vanha puu ja pieni hiekkaranta etualalla. Puiden yläpuolella korkeintaan hyvin pieniä epäselviä kattosävyjä; yhtään yksilöitävää rakennusta ei erotu. Ei havaittavaa Trinity Suburbia, Kyynelten saarta, siltoja, muistomerkkejä, veistoksia, luettavaa tekstiä, numeroita, logoja, lippuja, sotilas-/puoluesymboleja tai kasvoja. Luonnollisen kameravalokuvan kaltainen valo, vesi ja kasvillisuus.",
+      "limits": [
+        "Svislač-joen ja Minskin tarkkaa sijainti-identiteettiä tai maaston mittasuhteita ei ole varmennettu.",
+        "Etäinen kattolinja on lähes täysin puiden peittämä eikä sitä voi yksilöidä.",
+        "Oikeudellista suojattomuutta ei voi vahvistaa generoidusta kuvasta."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "bratislava-1",
+      "city": "Bratislava",
+      "ISO3": "SVK",
+      "n": 1,
+      "type": "A",
+      "filename": "bratislava-1.png",
+      "r2Key": "paakaupungit/SVK/20261010/bratislava-1.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Devínin linnan harmaat rauniot ja Neitsyttorni jokien yhtymäkohdan kallioniemellä. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "807fcb779822cb886a1ffd22f285f5f93449116f436c38dd9341a42ca52ba841",
+      "bytes": 2732794,
+      "url": "https://media.matkakirja.app/paakaupungit/SVK/20261010/bratislava-1.png?t=807fcb779822cb88",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/SVK/20261010/bratislava-1.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Harmaat raunioituneet muurit kallioisella jokiniemellä, vasemmalla kapean kallion erillinen pieni torni sekä leveä joki ja vehreät joenvarsimetsät. Korkealta viistosta kuvattu kiviraunioiden ja jokien yleismaisema vastaa tilauksen näkyviä yleispiirteitä. Ei havaittavaa Bratislavan linnan nelitornista rekonstruoitua rakennusta, SNP/UFO-siltaa, muita siltoja, uusia rakennuksia, nykyveistoksia, luettavaa tekstiä, numeroita, logoja, lippuja tai kasvoja. Raunioiden sisällä näkyy pieni kapea kivinen kulku-/porrasmainen kohta; kuvasta sen ikää ei voi määritellä, eikä se näytä erilliseltä modernilta rakennukselta.",
+      "limits": [
+        "Devínin ja Neitsyttornin täsmällistä rakennusidentiteettiä, muurin geometrian oikeellisuutta ja todellista Tonavan/Moravan yhtymäkohtaa ei ole varmennettu.",
+        "Rauniot ovat historialliselta näyttäviä; yksittäisten kivirakenteiden ajoitus ja entisöintihistoria eivät selviä kuvasta. Näkyvää erillistä nykyarkkitehtuuria ei havaittu.",
+        "Oikeudellista suojattomuutta ei voi vahvistaa generoidusta kuvasta."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "riika-1",
+      "city": "Riika",
+      "ISO3": "LVA",
+      "n": 1,
+      "type": "A",
+      "filename": "riika-1-v2.png",
+      "r2Key": "paakaupungit/LVA/20261010/riika-1-v2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Riian tuomiokirkon katto ja torni vanhankaupungin kattolinjojen keskellä. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "09ff601c229bf0c038fe084a15c12cfa64a01aac87eb9c015c3c6a0ed91cd1df",
+      "bytes": 2948763,
+      "url": "https://media.matkakirja.app/paakaupungit/LVA/20261010/riika-1-v2.png?t=09ff601c229bf0c0",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/LVA/20261010/riika-1-v2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Punatiilinen suuri kirkkorakennus, tumma metallikatto ja osittain näkyvä barokkityylinen tornin kupumainen alaosa läheisten terrakottakattojen keskellä. Tornin ylimmän lanterni-/huippuosan yläreuna leikkautuu pois kuvan ylärajasta; torni ei näy kokonaan. Ei havaittavaa toista Pyhän Pietarin kirkon tornia, Mustapäiden taloa, raatihuonetta, Tiedeakatemian tornia tai Kansalliskirjaston modernia rakennusta. Ei havaittavia nykyveistoksia, kylttejä, tekstiä, numeroita, logoja, lippuja tai ihmiskasvoja. Näkyvät naapuritalot näyttävät vanhoilta rappaus-/tiilipintaisilta kattotaloilta; erottuvaa nykyarkkitehtuuria ei havaittu.",
+      "limits": [
+        "Riian tuomiokirkon täsmällinen identiteetti, tornin geometria ja naapurirakennusten ajoitus ovat varmistamatta.",
+        "Tornin yläosan rajautuminen on todellinen sommittelupoikkeama, eikä sitä korjattu tai generoitu uudelleen.",
+        "Oikeudellista suojattomuutta ei voi vahvistaa generoidusta kuvasta.",
+        "Tornin yläosa jää kuvarajan ulkopuolelle; tätä sommittelupoikkeamaa ei korjattu paikallisesti."
+      ],
+      "hardVisualConstraintsObservedPass": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "riika-2",
+      "city": "Riika",
+      "ISO3": "LVA",
+      "n": 2,
+      "type": "B",
+      "filename": "riika-2.png",
+      "r2Key": "paakaupungit/LVA/20261010/riika-2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Riian Alberta ielan Jugend-julkisivujen naamio- ja kukkaornamentteja. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "1732f15fdb3d7b3b0023fef41e1a05653180ca985d18257bb6ce76c1334e6145",
+      "bytes": 2662056,
+      "url": "https://media.matkakirja.app/paakaupungit/LVA/20261010/riika-2.png?t=1732f15fdb3d7b3b",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/LVA/20261010/riika-2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Kadulta viistosti ylöspäin näkyviä sinivalkoisia Jugend-julkisivuja, suuret kiviset ihmispää-/naamiokoristeet, kasvi- ja kukkareliefit, ornamentaaliset pilasterit ja parvekkeet. Julkisivujen kiviset kasvokoristeet ovat tilauksen nimenomaisesti pyytämiä arkkitehtonisia ornamentteja; eläviä ihmisiä tai tunnistettavia ihmiskasvoja ei näy. Kuvan alareuna jää pääosin kaupallisten katutason kylttien yläpuolelle; luettavaa tekstiä, talonumeroita, logoja, lippuja tai mainoksia ei havaittu. Julkisivut näyttävät historialliselta Jugend-arkkitehtuurilta, eikä näkyvää modernia julkisivua havaittu. Kuvassa on osin toistuvia julkisivuteemoja, joiden osoitteita ei voi yksilöidä.",
+      "limits": [
+        "Alberta iela 2a/4/6/8/13 -rakennusten tarkkoja identiteettejä, osoitteita tai Eizenšteinin suunnittelijakohdistusta ei voida varmentaa generoidusta kuvasta.",
+        "Alberta iela 11:tä tai muuta nimettyä kiellettyä rakennusta ei tunnistettu näkyvästä kuvasta; tästä ei anneta oikeudellista tai rakennusidentiteetin takuuta.",
+        "Julkisivujen toistuva koristelu voi olla generatiivista synteesiä, joten kuva vastaa motiivin yleispiirteitä eikä ole dokumentaarinen rakennusinventointi.",
+        "Oikeudellista suojattomuutta ei voi vahvistaa generoidusta kuvasta."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "varsova-1",
+      "city": "Varsova",
+      "ISO3": "POL",
+      "n": 1,
+      "type": "A",
+      "filename": "varsova-1-v2.png",
+      "r2Key": "paakaupungit/POL/20261010/varsova-1-v2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Veikselin leveä uoma, hiekkasärkät ja vihreät joenvarsimetsät Varsovan kohdalla. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "f314707811c52e9e86c9c93cb85927ed002c38267339ffcd34bd80e5154aa456",
+      "bytes": 2519511,
+      "url": "https://media.matkakirja.app/paakaupungit/POL/20261010/varsova-1-v2.png?t=f314707811c52e9e",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/POL/20261010/varsova-1-v2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Leveä joki, laajoja vaaleita hiekkasärkkiä, luonnonmukaisia rantapenkereitä ja vehreitä joenvarsimetsiä molemmin puolin. Kuvan horisontissa on vain hyvin etäinen pienikokoinen kaupunkisiluetti. Yhtään nimettyä rakennusta tai Kulttuuri- ja tiedepalatsin muotoa ei tunnistettu; siltoja ei näy. Kaupunkisiluetissa näkyy pieniä yksilöimättömiä suorakulmaisia kattomassoja; etäinen kattolinja kuuluu tilaussubjektiin, eikä näkyvästä koosta voi päätellä rakennusidentiteettiä tai ikää. Ei havaittavaa rekonstruoidun vanhankaupungin yksilöitävää rakennusta, veistosta, luettavaa tekstiä, numeroita, logoja, lippuja, tunnistettavia kasvoja tai sotakuvastoa. Kameravalokuvan kaltainen valo ja jokiluonnon materiaalit.",
+      "limits": [
+        "Veikselin ja Varsovan tarkkaa sijainti-identiteettiä, kuvakulmaa tai jokiuoman geometriaa ei ole varmennettu.",
+        "Etäisen kaupunkisiluetin rakennuksia ei voi yksilöidä; näkyvien kattomassojen ikää tai suunnittelijoita ei ole varmennettu. Ei havaittua tunnistettavaa nykyarkkitehtuurin nimikohdetta.",
+        "Oikeudellista suojattomuutta ei voi vahvistaa generoidusta kuvasta."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "varsova-2",
+      "city": "Varsova",
+      "ISO3": "POL",
+      "n": 2,
+      "type": "B",
+      "filename": "varsova-2-v2.png",
+      "r2Key": "paakaupungit/POL/20261010/varsova-2-v2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Wilanówin keltainen barokkipalatsi ja symmetrinen puutarha kesäisessä iltapäivävalossa. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "0ae6eb32a5af8fca84fb226a4c62782266d92715183b0f102591442075e7a97d",
+      "bytes": 2760888,
+      "url": "https://media.matkakirja.app/paakaupungit/POL/20261010/varsova-2-v2.png?t=0ae6eb32a5af8fca",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/POL/20261010/varsova-2-v2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Keltaisen barokkipalatsin pääjulkisivu, kaksi vihertävää tornikattoa, kattoveistoskoristeita ja symmetrisiä pensasparterreja näkyvät luonnonvalossa. Vasemmalla on hyvin pieniä kaukaisia kävijöitä; tunnistettavia kasvoja ei näy. Ei havaittuja kylttejä, opasteita, logoja, lippuja, sotakuvastoa, nykyisiä lisärakennuksia tai erillisiä puutarhainstallaatioita. Tornien kellotauluissa näkyy pieniä kullanvärisiä tuntimerkkejä ja numeromaisia kuvioita; tiukka ei-numeroita-ehto ei läpäise varmuudella. Kuninkaanlinnaa tai Zygmuntin pylvästä ei ole havaittu. Kattokoristeet kuuluvat näkyvästi palatsin barokkityyppiseen julkisivuun, mutta niiden yksilöintiä tai ajoitusta ei ole varmistettu.",
+      "limits": [
+        "Tekoälyllä tuotettu havainnekuva: tarkkaa kohdeidentiteettiä, rakennusgeometriaa, kuvakulman todellista mahdollista sijaintia tai mittasuhteita ei ole varmennettu.",
+        "Tekijyyttä tai oikeudellista suojatilannetta ei voi varmistaa kuvapikseleistä; tarkastus koskee näkyviä kuvapiirteitä.",
+        "Kellotaulun merkkejä ei pidä kuitata varmasti numerottomiksi. Kattokoristeiden tarkkaa teosidentiteettiä ei väitetä."
+      ],
+      "hardVisualConstraintsObservedPass": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "jerevan-2",
+      "city": "Jerevan",
+      "ISO3": "ARM",
+      "n": 2,
+      "type": "B",
+      "filename": "jerevan-2-v2.png",
+      "r2Key": "paakaupungit/ARM/20261010/jerevan-2-v2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Kivimuurien ympäröimä luostari viinitarhojen yllä ja lumihuippuinen vuori taustalla. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "a9bb466a1393e5e984efbbf482658d7ada1630652fe1cbe15e66da6a12e45493",
+      "bytes": 2624456,
+      "url": "https://media.matkakirja.app/paakaupungit/ARM/20261010/jerevan-2-v2.png?t=a9bb466a1393e5e9",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/ARM/20261010/jerevan-2-v2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Vaaleanruskea pieni kivikirkko ja linnoitusmaiset muurit matalalla kukkulalla, etualalla viinitarha ja taustalla suuri lumihuippuinen vuori; luonnonvaloinen kameravalokuvan kaltainen näkymä. Muurilla näkyy muutama hyvin pieni kaukainen hahmo, ilman tunnistettavia kasvoja. Ei havaittuja luettavia tekstejä, kylttejä, logoja, lippuja, ajoneuvoja, pysäköintialuetta, matkamuistokojuja, vierailuportaita tai valaistuslaitteita. Ei havaittua rajavartiolaitosta, piikkilankaa, sotilaita tai uskonnollista seremoniaa. Viinitarhan puutolpat ja tukilangat ovat näkyviä viljelyselementtejä.",
+      "limits": [
+        "Tarkkaa paikkaa, rakennus- tai rauniogeometriaa, historiallista aitoutta, vuoren identiteettiä ja mittasuhteita ei ole varmennettu.",
+        "Tarkastus koskee näkyviä yleispiirteitä; teosidentiteettiä tai oikeudellista suojatilannetta ei väitetä faktavarmaksi."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "kuwait-2",
+      "city": "Kuwait (kaupunki)",
+      "ISO3": "KWT",
+      "n": 2,
+      "type": "B",
+      "filename": "kuwait-2-v2.png",
+      "r2Key": "paakaupungit/KWT/20261010/kuwait-2-v2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Matalia kalkkikiviraunioita hiekkaisella rannikkotasangolla tyynen meren äärellä. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "304cbd91f8369849eb35cb03eb2b419b023c4f6da60c8fdcba539c2ac210920d",
+      "bytes": 2995195,
+      "url": "https://media.matkakirja.app/paakaupungit/KWT/20261010/kuwait-2-v2.png?t=304cbd91f8369849",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/KWT/20261010/kuwait-2-v2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Matalat katkenneet kalkkikivimuurit, kivijalat ja lohkareet hiekkaisella tasangolla; taustalla tyyni siniturkoosi meri ja matala horisontti. Matala lämmin valo ja pitkät varjot. Ei havaittuja ihmisiä, luettavia opastauluja, logoja, lippuja, suojakatoksia, aitoja, nykyaikaisia asuintaloja, rakennustyömaata tai sotakuvastoa. Vasemmalla kaukaisen horisontin kohdalla noin x229/y235 näkyy pari hyvin pientä tummaa pystymäistä muotoa. Ne eivät yksilöidy; en väitä niitä rakennuksiksi, pylväiksi tai taideteoksiksi. Niiden luonnollisuutta tai nykyrakenteen mahdollisuutta ei voi vahvistaa tästä kuvasta.",
+      "limits": [
+        "Tarkkaa paikkaa, rakennus- tai rauniogeometriaa, historiallista aitoutta, vuoren identiteettiä ja mittasuhteita ei ole varmennettu.",
+        "Tarkastus koskee näkyviä yleispiirteitä; teosidentiteettiä tai oikeudellista suojatilannetta ei väitetä faktavarmaksi.",
+        "Failakan ja Ikaroksen todellista rauniokohdetta tai raunioiden sijoittelua ei ole varmennettu.",
+        "Horisontin pienten pystymuotojen luonne jää epävarmaksi; tiukan tilausehdon vuoksi ne on ohjattu pääagentin tarkastukseen.",
+        "Pääagentin natiivikatselmuksessa horisontin kaksi hyvin pientä pystymuotoa eivät yksilöidy arkkitehtuuriksi, teokseksi tai kyltiksi. Ne kirjataan tulkintarajaksi, eivät positiiviseksi suojatun nykyarkkitehtuurin havainnoksi. Näytetoimitus; sisältöhyväksyntä avoin."
+      ],
+      "hardVisualConstraintsObservedPass": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "doha-1",
+      "city": "Doha",
+      "ISO3": "QAT",
+      "n": 1,
+      "type": "A",
+      "filename": "doha-1-v2.png",
+      "r2Key": "paakaupungit/QAT/20261010/doha-1-v2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Vaaleat hiekkadyynit ja suolakkotasanteet tyynen turkoosin merenlahden ympärillä. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "7947323204c2c378a603b241d518dab902d581986e61c5e43fe457e70e078e99",
+      "bytes": 2179392,
+      "url": "https://media.matkakirja.app/paakaupungit/QAT/20261010/doha-1-v2.png?t=7947323204c2c378",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/QAT/20261010/doha-1-v2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Vaaleat hiekkadyynit laskeutuvat laajalle tyynelle turkoosinsiniselle merenlahdelle, rannalla matalia suolakkotasanteita ja kirkas taivas. Matala luonnonvalo korostaa harjanteita. Ei havaittuja rakennuksia, pilvenpiirtäjiä, ihmisiä, kylttejä, logoja, lippuja, ajoneuvoja, leirejä, aitoja tai opasteita. Rannassa näkyy luonnollisen oloisia vesikanavia ja rantaviivoja; selkeitä renkaanjälkiä ei havaittu.",
+      "limits": [
+        "Khor Al Adaidin tarkkaa maantieteellistä paikkaa, rantaviivaa, dyynien geometriaa tai mittasuhteita ei ole varmennettu.",
+        "Veden murtovesiluonnetta ei voi varmistaa kuvasta. Tarkastus koskee näkyviä luonnonmaiseman yleispiirteitä, ei juridista varmuutta."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "ankara-2",
+      "city": "Ankara",
+      "ISO3": "TUR",
+      "n": 2,
+      "type": "B",
+      "filename": "ankara-2-v2.png",
+      "r2Key": "paakaupungit/TUR/20261010/ankara-2-v2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Vanha kivipylväs ja suuri linnunpesä sinistä taivasta vasten. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "770efd6cda204898b6d0a981216b918d67ff9ff00223b2407295b6723434ad7c",
+      "bytes": 1948640,
+      "url": "https://media.matkakirja.app/paakaupungit/TUR/20261010/ankara-2-v2.png?t=770efd6cda204898",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/TUR/20261010/ankara-2-v2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Vanha segmenttimäinen kivipylväs ja koristekapiteeli kuvattu matalalta viistosti sinistä taivasta vasten; päällä suuri risupesä ja lintu. Edustalla kivetty piha. Alhaalla näkyy kolme hyvin pientä kaukaista ihmishahmoa; kasvoja ei voi tunnistaa. Ei havaittuja ympäröiviä rakennuksia, Hacı Bayram -moskeijaa, Valtion virastorakennusta, nykyveistoksia, muistomerkkejä, valaistuslaitteita, tekstejä, logoja, lippuja, sotilaita tai poliittisia symboleja.",
+      "limits": [
+        "Pylvään tarkkaa tunnistamista Julianuksen pylvääksi ei ole varmennettu. Shaftin segmenttien, jalustan, kapiteelin tai mittasuhteiden historiallista paikkansapitävyyttä ei väitetä.",
+        "Noin 15 metrin korkeutta, pihan todellista geometriaa, teosidentiteettiä tai oikeudellista suojatilannetta ei voi varmistaa kuvapikseleistä."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "ouagadougou-2",
+      "city": "Ouagadougou",
+      "ISO3": "BFA",
+      "n": 2,
+      "type": "B",
+      "filename": "ouagadougou-2-v2.png",
+      "r2Key": "paakaupungit/BFA/20261010/ouagadougou-2-v2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Loropénin kivimuuriraunioita kuivassa savannissa iltapäivän valossa. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "555cd426ca19426b9163532b0cadb1f8b4e1ff087b04c284169d85044f348ff9",
+      "bytes": 3206939,
+      "url": "https://media.matkakirja.app/paakaupungit/BFA/20261010/ouagadougou-2-v2.png?t=555cd426ca19426b",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/BFA/20261010/ouagadougou-2-v2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Karkeita ruskeita kivimuurijäänteitä, suorakaiteinen oviaukko, matalampia osin sortuneita muureja, kuivaa ruohoa ja harvaa pensaspuustoa. Matalalta muurin vierestä kuvattu leveä näkymä, lämmin sivuvalo ja sininen taivas. Ei näkyvää tekstiä, numeroita, kylttejä, logoja, lippuja, kasvoja, sotilaita, poliittisia symboleja, vierailijarakennuksia tai valaistuslaitteita. Hylätty katedraalimotiivi tai nimetty moderni teos ei ole kuvassa havaittavissa.",
+      "limits": [
+        "Kuva vastaa kuvauksen yleisiä näkyviä piirteitä; Loropénin raunioiden tarkkaa rakennetta, muurin korkeutta, mittasuhteita tai sijaintia ei ole varmennettu vertailulähteestä.",
+        "Näkymässä oikean reunan muuri on selvästi korkeampi kuin sortuneet matalat muurijäänteet; arkeologinen yksityiskohtatarkkuus ei ole varmistettu.",
+        "Kuvan perusteella ei tehdä oikeudellista suoja-arviota."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "bangui-2",
+      "city": "Bangui",
+      "ISO3": "CAF",
+      "n": 2,
+      "type": "B",
+      "filename": "bangui-2-v2.png",
+      "r2Key": "paakaupungit/CAF/20261010/bangui-2-v2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Boalin putoukset Mbali-joella trooppisen metsän ympäröiminä. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "365ee8e22f340885760c43622a9c6a7fccd6f4fffea8be5a5b90de181bc0e959",
+      "bytes": 2724091,
+      "url": "https://media.matkakirja.app/paakaupungit/CAF/20261010/bangui-2-v2.png?t=365ee8e22f340885",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/CAF/20261010/bangui-2-v2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Leveä vaahtoava putous ruskeiden kallioiden yli metsän ympäröimään syvänteeseen, vesihöyryä ja aamun sivuvalo. Rinteen reunalta hieman koholta kuvattu leveä luontonäkymä. Ei näkyvää tekstiä, numeroita, logoja, lippuja, kasvoja, sotilaita, poliittisia symboleja, patoja, voimalaitoksia, rakennuksia, siltoja tai kylttejä. Hylätty katedraalimotiivi tai nimetty moderni teos ei ole kuvassa havaittavissa.",
+      "limits": [
+        "Kuva vastaa tilauksen putous- ja metsämaiseman yleispiirteitä; Boalin putousten tarkkaa topografiaa, korkeutta, virtaamaa, mittasuhteita tai kamerapaikkaa ei ole varmennettu.",
+        "Kuvan perusteella ei tehdä oikeudellista suoja-arviota."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "djibouti-2",
+      "city": "Djibouti",
+      "ISO3": "DJI",
+      "n": 2,
+      "type": "B",
+      "filename": "djibouti-2-v2.png",
+      "r2Key": "paakaupungit/DJI/20261010/djibouti-2-v2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Assal-järven suolarantaa ja vulkaanista maisemaa aamuvalossa. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "5a19e957317d5981ea402d55034547e638cda7808d523ebb72be34466cf4de94",
+      "bytes": 2730575,
+      "url": "https://media.matkakirja.app/paakaupungit/DJI/20261010/djibouti-2-v2.png?t=5a19e957317d5981",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/DJI/20261010/djibouti-2-v2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Turkoosi järvi, valkoinen suolakuori, mustia laavakiviä ja ruskeita paljaita vuoriharjanteita, kirkas sininen taivas. Matala rantakuvakulma ja luonnonvaloinen yksittäinen valokuvamainen näkymä. Ei havaittavaa tekstiä, numeroita, kylttejä, logoja, lippuja, kasvoja, sotilaita, rakennuksia, suolankeräyskoneita tai ajoneuvoja. Hylätty Place du 27 Juin -motiivi tai nimetty moderni teos ei ole kuvassa havaittavissa.",
+      "limits": [
+        "Kuva vastaa Assal-järven tilaussanallisia yleispiirteitä, mutta tarkkaa rantaa, vuoriharjanteiden muotoa, kamerapaikkaa ja suolakiteiden mittasuhteita ei ole varmennettu.",
+        "Aamuvalon tarkkaa kellonaikaa ei voi todistaa kuvasta.",
+        "Kuvan perusteella ei tehdä oikeudellista suoja-arviota."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "ciudad-de-la-paz-1",
+      "city": "Ciudad de la Paz",
+      "ISO3": "GNQ",
+      "n": 1,
+      "type": "A",
+      "filename": "ciudad-de-la-paz-1-v2.png",
+      "r2Key": "paakaupungit/GNQ/20261010/ciudad-de-la-paz-1-v2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Monte Alénin sademetsäylänköä ja graniittikupuja aamun sumussa. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "d83be8626cba764e10715b8f8ba7738037e8604a3901267d051e0c57dbfc1171",
+      "bytes": 2518471,
+      "url": "https://media.matkakirja.app/paakaupungit/GNQ/20261010/ciudad-de-la-paz-1-v2.png?t=d83be8626cba764e",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/GNQ/20261010/ciudad-de-la-paz-1-v2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Tiheä vihreä metsälatvusto, suuret paljaat harmaat kalliokummut, sumua laaksoissa ja pilviä harjanteiden yllä. Leveä harjanteelta kuvattu aamun luonnonmaisema, ei havaittavia ihmisiä tai eläimiä. Ei havaittavaa tekstiä, numeroita, kylttejä, logoja, lippuja, rakennuksia, teitä, siltoja, kävijärakenteita tai kaupunkia horisontissa. Hylätty uusi pääkaupunki- ja hallintorakennusmotiivi tai nimetty moderni teos ei ole kuvassa havaittavissa.",
+      "limits": [
+        "Kuva vastaa tilauksen sademetsäylängön, graniittikumpujen ja sumun yleispiirteitä; Monte Alénin tarkkaa topografiaa, kalliokumpujen muotoa ja mittasuhteita tai kamerapaikkaa ei ole varmennettu.",
+        "Kuvan perusteella ei tehdä oikeudellista suoja-arviota."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "asmara-1",
+      "city": "Asmara",
+      "ISO3": "ERI",
+      "n": 1,
+      "type": "A",
+      "filename": "asmara-1-v2.png",
+      "r2Key": "paakaupungit/ERI/20261010/asmara-1-v2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Eritrean ylängön jyrkkiä rinteitä ja sumuisia laaksoja. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "69355595a056039c78ebab73eca10b30d8523b763d36781fa37942190702c852",
+      "bytes": 2352414,
+      "url": "https://media.matkakirja.app/paakaupungit/ERI/20261010/asmara-1-v2.png?t=69355595a056039c",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/ERI/20261010/asmara-1-v2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Jyrkkiä vihreitä rinteitä ja kalliojyrkänteitä, terassimaisia tasoja ja akaasioita, laaksoissa sumua ja kaukana sinertäviä harjanteita. Leveä harjanteenreunalta kuvattu luonnonmaisema kirkkaan taivaan alla. Ei havaittavaa tekstiä, numeroita, kylttejä, logoja, lippuja, kasvoja, sotilaita, tankkeja, ajoneuvoja, teitä lähikuvassa, muistomerkkejä tai nykyrakennuksia. Hylätty Harnet Avenue -katukuva tai nimetty moderni teos ei ole kuvassa havaittavissa.",
+      "limits": [
+        "Kuva vastaa Eritrean ylängön tilaussanallisia yleispiirteitä; tarkan harjanteen, terassien, laaksojen ja kamerapaikan maantieteellistä vastaavuutta ei ole varmennettu.",
+        "Alkuperäisen view_image original -näyttö palautui pienenä esikatseluna; sama muuttamaton natiivi 1536x1024-tiedosto katsottiin myös high-näytössä kokonaisena.",
+        "Kuvan perusteella ei tehdä oikeudellista suoja-arviota."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "asmara-2",
+      "city": "Asmara",
+      "ISO3": "ERI",
+      "n": 2,
+      "type": "B",
+      "filename": "asmara-2.png",
+      "r2Key": "paakaupungit/ERI/20261010/asmara-2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Qohaiton muinaisia kiviperustuksia Eritrean ylängöllä. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "367458fb64b23dee2d5bfc0487c033e8933652cb24db56b50ee921465a5e49ed",
+      "bytes": 2768781,
+      "url": "https://media.matkakirja.app/paakaupungit/ERI/20261010/asmara-2.png?t=367458fb64b23dee",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/ERI/20261010/asmara-2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Kiviperustuksia, matalia muurijäänteitä, kivipaasia ja kuivaa ruohoa; osa paaseista on pystyssä ja vasemmalla on näkyvä korkea pylväs. Taustalla jyrkkä reunajyrkänne ja laakso, iltapäivän lämmin sivuvalo, matala raunioiden vieressä oleva kuvakulma. Ei havaittavaa tekstiä, numeroita, kylttejä, logoja, lippuja, kasvoja, sotilaita, suojakatoksia tai modernia lähirakentamista. Kaukana kuvan vasemman/yläkeskisen ylänköreunan horisontissa on pieniä laatikkomaisia tummia muotoja. Niitä ei voida varmasti tunnistaa kiviksi tai rakennuksiksi tässä natiivinäkymässä. Hylätty Fiat Tagliero -huoltoasema tai muu nimeltä tunnistettu suojattu teos ei ole kuvassa havaittavissa.",
+      "limits": [
+        "Qohaiton tarkkaa rauniogeometriaa, pylväiden muotoa, mittasuhteita, topografiaa tai kamerapaikkaa ei ole varmennettu.",
+        "Kaukaisten laatikkomaisten muotojen identiteetti ja ikä varmistamatta; kylärakennusten poissulkua ei voida varmasti vahvistaa.",
+        "Nimettyä suojattua teosta ei tunnistettu; tästä ei seuraa juridista varmuutta.",
+        "Pääagentti kirjaa kaukaiset laatikkomaiset muodot varmistamattomana havaintona; ne eivät yksilöidy nimetyksi suojatuksi teokseksi. Kuva toimitetaan vain sisältöarvioon, poissulun läpäisyä ei kuitata."
+      ],
+      "hardVisualConstraintsObservedPass": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "niamey-2",
+      "city": "Niamey",
+      "ISO3": "NER",
+      "n": 2,
+      "type": "B",
+      "filename": "niamey-2-v2.png",
+      "r2Key": "paakaupungit/NER/20261010/niamey-2-v2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Kourén kirahveja kuivalla savannilla Niameyn lähistöllä aamun pehmeässä valossa. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "a7201630c3805bdd28fbe37440b6d9a9ddffbdd8e739efa94ff738bf35e95985",
+      "bytes": 2382639,
+      "url": "https://media.matkakirja.app/paakaupungit/NER/20261010/niamey-2-v2.png?t=a7201630c3805bdd",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/NER/20261010/niamey-2-v2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Kolme kirahvia eri etäisyyksillä kuivassa ruohikossa, akaasian kaltaisia latvuksia ja suuri puu etualalla, pehmeä lämmin aamun valo ja ilmassa utua. Kolme pientä kävijää kaukana selin; tunnistettavia kasvoja ei näy. Rakennuksia, kävijäkeskuksia, opasteita, ajoneuvoja, lippuja, sotilaita, poliiseja, tekstiä, numeroita, logoja tai vesileimoja ei havaittu.",
+      "limits": [
+        "Kourén tarkan sijainnin tai Länsi-Afrikan kirahvin alalajin, puulajien ja paikallisten mittasuhteiden varmistaminen ei onnistu generoidun kuvan perusteella.",
+        "Horisontin ja kasvillisuuden pienet yksityiskohdat eivät yksilöi rakennuksia tai taideteoksia. Tässä kuvassa ei havaittu arkkitehtonista kohdetta."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "sao-tome-2",
+      "city": "São Tomé",
+      "ISO3": "STP",
+      "n": 2,
+      "type": "B",
+      "filename": "sao-tome-2-v2.png",
+      "r2Key": "paakaupungit/STP/20261010/sao-tome-2-v2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "São Tomén pohjoisrannikon Praia Lagoa Azulin kaltainen turkoosi lahti, palmuranta ja tumma tulivuorikivi aamun valossa. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "bdfa33de3829af6218f0c8fe83a8f810f20804a21b72cae6fa794d35604128e0",
+      "bytes": 2943495,
+      "url": "https://media.matkakirja.app/paakaupungit/STP/20261010/sao-tome-2-v2.png?t=bdfa33de3829af62",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/STP/20261010/sao-tome-2-v2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Turkoosi lahti, kaareva hiekkaranta, tummia rantakiviä, kookospalmun kaltaisia palmuja ja metsäinen rinne veden äärellä. Kaksi pientä kalastajahahmoa puisessa kanootissa kaukana; kasvoja ei voi yksilöidä. Rakennuksia, majoitus- tai ravintolarakenteita, kylttejä, luettavaa tekstiä, numeroita, logoja, lippuja, sotilaita, poliittisia symboleja tai vesileimoja ei havaittu.",
+      "limits": [
+        "Praia Lagoa Azulin tarkkaa sijaintia, rantamuotoa, kasvilajeja tai kiviaineksen tulivuorista alkuperää ei ole varmennettu kuvasta.",
+        "Kalastajien tarkkaa katselusuuntaa ei voi varmistaa näin pienistä sivuttaisista hahmoista; tunnistettavia kasvoja ei havaittu."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "yaounde-2",
+      "city": "Yaoundé",
+      "ISO3": "CMR",
+      "n": 2,
+      "type": "B",
+      "filename": "yaounde-2-v2.png",
+      "r2Key": "paakaupungit/CMR/20261010/yaounde-2-v2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Metsäinen rinne ja kapea luontopolku Mont Fébén ympäristön hengessä, näkymä utuiseen laaksoon. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "3305baac700c2411fa97e7c783e340f2ddfc38cbe8b7dad3f3368122c0e74533",
+      "bytes": 3163083,
+      "url": "https://media.matkakirja.app/paakaupungit/CMR/20261010/yaounde-2-v2.png?t=3305baac700c2411",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/CMR/20261010/yaounde-2-v2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Kapea mutkitteleva maapolku suuren puun vieressä, tiheää vehreää trooppisen metsän kaltaista kasvillisuutta; taustalla metsäisiä kukkuloita ja utuinen laakso. Valonsäteitä lehvästön läpi; yksi pieni kävelijä selin polulla, ei tunnistettavia kasvoja. Rakennuksia, luostaria, muistomerkkejä, veistoksia, opasteita, lippuja, sotilaita, tekstejä, numeroita, logoja tai vesileimoja ei havaittu.",
+      "limits": [
+        "Mont Fébén tarkkaa topografiaa, polun sijaintia tai puulajeja ei voi varmistaa generoidusta kuvasta.",
+        "Utuinen laakso sisältää pieniä sävylaikkuja; ne eivät yksilöi rakennuksia. Havaintotarkastuksessa ei näkyvää arkkitehtuuria."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "ndjamena-2",
+      "city": "N'Djamena",
+      "ISO3": "TCD",
+      "n": 2,
+      "type": "B",
+      "filename": "ndjamena-2-v2.png",
+      "r2Key": "paakaupungit/TCD/20261010/ndjamena-2-v2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Kuivaa Sahelin savannia ja pieni kamelikaravaani N'Djamenan lähistön iltamaiseman hengessä. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "60f8187fe2b73bcf2a7da69b2fad46f4329b7618cb2bd3274714d1477b7b6b73",
+      "bytes": 2267246,
+      "url": "https://media.matkakirja.app/paakaupungit/TCD/20261010/ndjamena-2-v2.png?t=60f8187fe2b73bcf",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/TCD/20261010/ndjamena-2-v2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Hiekkainen polku, kuivaa ruohikkoa ja akaasian kaltaisia harvalatvuksisia puita; avoin horisontti ja kultainen pölyinen auringonlasku. Kolme kamelia ja yksi pieni ajaja kaukana, ei tunnistettavia kasvoja. Rakennuksia, ajoneuvoja, tienvarren rakennelmia, mainostauluja, kylttejä, luettavaa tekstiä, numeroita, logoja, lippuja, sotilaita, poliittisia symboleja tai vesileimoja ei havaittu.",
+      "limits": [
+        "Sahelin tai N'Djamenan tarkan sijainnin yksilöinti sekä puu- ja eläinlajien biologinen varmennus ei onnistu pelkästä havainnekuvasta.",
+        "Ajajan tarkkaa katselusuuntaa ei voi varmistaa pienestä siluetista; kasvoja ei yksilöidy."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "kinshasa-2",
+      "city": "Kinshasa",
+      "ISO3": "COD",
+      "n": 2,
+      "type": "B",
+      "filename": "kinshasa-2-v2.png",
+      "r2Key": "paakaupungit/COD/20261010/kinshasa-2-v2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Oksalla istuva bonobo kosteassa sademetsässä Kinshasan lähistön luonnon hengessä. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "772b8418e0eca22f6fa537c51a938dfdfc5a81845ea866b4f7dfa57776085ead",
+      "bytes": 2888356,
+      "url": "https://media.matkakirja.app/paakaupungit/COD/20261010/kinshasa-2-v2.png?t=772b8418e0eca22f",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/COD/20261010/kinshasa-2-v2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Tiheää kostealta näyttävää metsää, korkeita runkoja, köynnöksiä ja lehtiä; sumua ja vinoja valonsäteitä lehvästön läpi. Yksi tumma ihmisapina istuu luonnollisella puunoksalla, näkökulma alhaalta metsästä. Ihmisiä, rakennuksia, aitoja, häkkejä, suojelukeskuksen rakenteita, opasteita, tekstiä, numeroita, logoja, lippuja tai vesileimoja ei havaittu.",
+      "limits": [
+        "Kinshasan tarkan sijainnin ja kasvillisuuden lajiston varmennus ei onnistu generoidusta kuvasta.",
+        "Bonobo oli tilattu laji, mutta ihmisapinan tarkkaa lajinmääritystä ei ole varmennettu; lajituntomerkit eivät tässä valaistuksessa erotu luotettavasti."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "accra-2",
+      "city": "Accra",
+      "ISO3": "GHA",
+      "n": 2,
+      "type": "B",
+      "filename": "accra-2-v2.png",
+      "r2Key": "paakaupungit/GHA/20261010/accra-2-v2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Ussher Fortin vanhojen rantamuurien hengessä esitetty linnoitus ja puisia kalastuskanootteja Atlantin rannalla. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "a3af7099daef29d2c317f29e027380a1361b8646473aa62b2f8da01b7a17db6c",
+      "bytes": 2549210,
+      "url": "https://media.matkakirja.app/paakaupungit/GHA/20261010/accra-2-v2.png?t=a3af7099daef29d2",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/GHA/20261010/accra-2-v2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Paksuja valkoisia ja okransävyisiä kuluneita rantamuureja ja bastioneja, edessä värikkäitä mutta tekstittömiä puisia kanootteja ja hiekkarantaa; taustalla vihertävänsininen meri. Linnoituksen vasemmalla muurilla näkyy pieni kupolikatteinen muuritorni tai tähystysuloke. Se ei sisällä havaittavaa majakan lasista valohuonetta, eikä sitä voi yksilöidä Jamestownin majakaksi. Yksi hyvin pieni kaukainen hahmo muurien juurella; tunnistettavia kasvoja ei havaittu. Luettavia kylttejä, numeroita, logoja, lippuja, vartijoita, sotilaita, graffiteja, muraaleja, uusia betonirakennuksia, nykyisiä korkeita rakennuksia, veistoksia, muistomerkkejä tai vesileimoja ei havaittu.",
+      "limits": [
+        "Ussher Fortin tarkkaa rakennusidentiteettiä ja muotojen vastaavuutta ei ole varmennettu generoidusta kuvasta; kuvaa ei voi käyttää rakennusdokumentaationa.",
+        "Muuritornin historiallista kohdeidentiteettiä tai suunnittelijaa ei ole selvitetty; kuvassa sitä ei havaittu moderniksi rakennelmaksi. Nimeltä suojattua teosta tai nykyarkkitehtuuria ei päätellä tästä epävarmasta yksityiskohdasta.",
+        "Visuaalinen havainto ei vahvista tekijänoikeudellista statusta."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "antananarivo-2",
+      "city": "Antananarivo",
+      "ISO3": "MDG",
+      "n": 2,
+      "type": "B",
+      "filename": "antananarivo-2-v2.png",
+      "r2Key": "paakaupungit/MDG/20261010/antananarivo-2-v2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Rengashäntämakeja puun oksalla Tsimbazaza-puiston trooppisessa ympäristössä Antananarivossa. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "858f3388eb0fdc8a7c08b0e53188b705c2b1b4c05869b19c39937769594626e3",
+      "bytes": 2983189,
+      "url": "https://media.matkakirja.app/paakaupungit/MDG/20261010/antananarivo-2-v2.png?t=858f3388eb0fdc8a",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/MDG/20261010/antananarivo-2-v2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Yksi rengashäntämakiin sopiva harmaa lemuri istuu oksalla; raidallinen häntä ja eläimen kasvot näkyvät. Matalalta ylöspäin suuntautuva kuvakulma, baobabeihin sopivia paksurunkoisia puita ja palmuja taustalla. Luonnollinen aamuvalo ja realistiset puu-, lehti- ja turkkitekstuurit. Ei näkyviä rakennuksia, museota, häkkejä, aitoja, veistoksia, muistomerkkejä, lippuja, tekstiä, numeroita, logoja, vesileimaa tai ihmisiä.",
+      "limits": [
+        "Tsimbazaza-puiston täsmällistä sijaintia, puulajeja tai eläinyksilöä ei voi varmistaa generoidusta kuvasta.",
+        "Nimettyä suojattua teosta tai nykyarkkitehtuuria ei havaittu; havainto ei ole oikeudellinen selvitys.",
+        "Kuvassa on yksi rengashäntämaki, vaikka tilaus kuvaa makit monikossa. Tämä on todellinen aihepoikkeama; kuvaa ei generoitu uudelleen."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "bamako-2",
+      "city": "Bamako",
+      "ISO3": "MLI",
+      "n": 2,
+      "type": "B",
+      "filename": "bamako-2-v2.png",
+      "r2Key": "paakaupungit/MLI/20261010/bamako-2-v2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Puisia pinasse-veneitä ja jokirannan arkea Nigerjoella Bamakossa. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "c6590b18060e6f6d644a4a76935364d0faee58b9209ca1b6449232c8b539cb0c",
+      "bytes": 2220042,
+      "url": "https://media.matkakirja.app/paakaupungit/MLI/20261010/bamako-2-v2.png?t=c6590b18060e6f6d",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/MLI/20261010/bamako-2-v2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Useita pitkiä perinteiseen pinasse-venetyyppiin sopivia puisia veneitä rannassa ja joella. Pieniä etäällä olevia työskenteleviä ihmishahmoja hiekkakasojen ja veneiden ympärillä; ei tunnistettavia kasvoja. Vastarannalla matalaa viheraluetta ja puita, pehmeä aamuvalo ja ohut sumu. Ei näkyviä siltoja, rakennuksia, muita kiinteitä rakennelmia, patsaita, muistomerkkejä, lippuja, tekstiä, numeroita, logoja, vesileimaa tai sotilaita.",
+      "limits": [
+        "Bamakon täsmällistä rantapaikkaa, Nigerjoen yksilöintiä tai veneiden teknistä tyyppiä ei voi varmistaa pelkästä generoidusta kuvasta.",
+        "Nimettyä suojattua teosta tai nykyarkkitehtuuria ei havaittu; havainto ei ole oikeudellinen selvitys."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "maputo-2",
+      "city": "Maputo",
+      "ISO3": "MOZ",
+      "n": 2,
+      "type": "B",
+      "filename": "maputo-2-v2.png",
+      "r2Key": "paakaupungit/MOZ/20261010/maputo-2-v2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Vaaleaa hiekkarantaa ja vuorovesilammikoita Maputonlahdella Costa do Solin suunnalla. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "524e688ebeec73076ff054613dbae481b592b5a5fb2b55c2d5204a21ae6110ed",
+      "bytes": 2270999,
+      "url": "https://media.matkakirja.app/paakaupungit/MOZ/20261010/maputo-2-v2.png?t=524e688ebeec7307",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/MOZ/20261010/maputo-2-v2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Leveä vaalea hiekkaranta ja etualan matalia vuorovesilammikoita, tyyni lahti horisontissa. Kasuariinapuihin sopivia hieno-oksaisia rantapuita kuvan vasemmassa reunassa. Muutamia perinteisiä puisia kalastusveneitä kaukana vedessä; osassa veneisiin kuuluva masto ja yksinkertaisia takiloita. Kaksi erittäin pientä ihmishahmoa kaukana rantaviivalla, ei kasvoja tai lähikuvia. Ei näkyviä rakennuksia, ravintoloita, ranta-asutusta, ajoneuvoja, Catemben riippusiltaa, patsaita, muistomerkkejä, lippuja, tekstiä, numeroita, logoja tai vesileimaa.",
+      "limits": [
+        "Costa do Solin tai Maputonlahden täsmällistä sijaintia, puulajia ja veneiden alkuperää ei voi varmistaa generoidusta kuvasta.",
+        "Veneiden toiminnalliset mastot kuuluvat tilattuun venemotiiviin; mitään rantaan kiinteästi rakennettua mastoa tai muuta rakennelmaa ei havaittu.",
+        "Nimettyä suojattua teosta tai nykyarkkitehtuuria ei havaittu; havainto ei ole oikeudellinen selvitys."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "mogadishu-2",
+      "city": "Mogadishu",
+      "ISO3": "SOM",
+      "n": 2,
+      "type": "B",
+      "filename": "mogadishu-2-v2.png",
+      "r2Key": "paakaupungit/SOM/20261010/mogadishu-2-v2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Valkoisia hiekkadyynejä ja Intian valtameri Mogadishun etelärannikolla. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "7fa54de15dfa9ea89ff099ccde26b714c991d707e25ea9e828bc3c5c99dbb479",
+      "bytes": 2606715,
+      "url": "https://media.matkakirja.app/paakaupungit/SOM/20261010/mogadishu-2-v2.png?t=7fa54de15dfa9ea8",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/SOM/20261010/mogadishu-2-v2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Vaaleita aaltoilevia hiekkadyynejä ja matalaa rantakasvillisuutta etualalla. Turkoosi meri ja pieniä murtuvia aaltoja taustalla, aamuvaloon sopiva lämmin valo ja pitkät varjot. Kaksi hyvin pientä ihmishahmoa kaukana rantaviivalla, ei näkyviä kasvoja. Ei näkyviä rakennuksia, moskeijoita, rakennelmia, sotilaita, aseita, ajoneuvoja, raunioita, veistoksia, muistomerkkejä, lippuja, tekstiä, numeroita, logoja tai vesileimaa.",
+      "limits": [
+        "Mogadishun etelärannikon tarkkaa kohtaa tai Intian valtamerta ei voi yksilöidä varmasti generoidusta kuvasta.",
+        "Nimettyä suojattua teosta tai nykyarkkitehtuuria ei havaittu; havainto ei ole oikeudellinen selvitys."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    },
+    {
+      "id": "harare-2",
+      "city": "Harare",
+      "ISO3": "ZWE",
+      "n": 2,
+      "type": "B",
+      "filename": "harare-2-v2.png",
+      "r2Key": "paakaupungit/ZWE/20261010/harare-2-v2.png",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "caption": "Epworthin tasapainoilevia graniittikiviä Hararen laitamien savannilla. Havainnekuva.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "sha256": "81f443cb9ce7fa3c62fb78a25fb8d81d627681bcffe0f1e73dbe64231ef5694e",
+      "bytes": 2889724,
+      "url": "https://media.matkakirja.app/paakaupungit/ZWE/20261010/harare-2-v2.png?t=81f443cb9ce7fa3c",
+      "canonicalUrl": "https://media.matkakirja.app/paakaupungit/ZWE/20261010/harare-2-v2.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "rootVisualObservations": "Suuret pyöristetyt, luontaisilta rapautuneilta graniittilohkareilta näyttävät kivet toistensa päällä. Kuivaa savannikasvillisuutta, harvoja puita ja lämmintä kirkasta aamuvaloa, matalahko kuvakulma. Kivissä ei näkyvää ihmisen tekemää veistosta, myytävää taidekäsityötä tai muistomerkkiä. Ei näkyviä rakennuksia, asutusta, tienvarsikojuja, muita rakennelmia, ihmisiä, lippuja, tekstiä, numeroita, logoja tai vesileimaa.",
+      "limits": [
+        "Epworthin täsmällistä kivimuodostelmaa, lohkareiden oikeita mittasuhteita ja puiden msasa-lajia ei voi varmistaa generoidusta kuvasta.",
+        "Nimettyä suojattua teosta tai nykyarkkitehtuuria ei havaittu; havainto ei ole oikeudellinen selvitys."
+      ],
+      "hardVisualConstraintsObservedPass": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "omittedItems": [
+    {
+      "id": "kiova-2",
+      "reason": "Kaukaisen oikean horisontin erottuvat suorakulmaiset rakennusmassat jäävät epävarmaksi nykyarkkitehtuuriksi; korjaustilauksen tiukka sääntö edellyttää kuvan jättämistä toimittamatta.",
+      "generationCalls": 1,
+      "R2deliveryConfirmed": false
+    },
+    {
+      "id": "nairobi-2",
+      "reason": "Näkyvä jyrkkä kallioharjanne poikkeaa tilauksen pehmeästi aaltoilevista Ngongin kukkuloista. Yksi sallittu vaihtogenerointi säilytetty paikallisesti; ei R2-toimitusta tai uusintaa.",
+      "generationCalls": 1,
+      "R2deliveryConfirmed": false
+    }
+  ],
   "correctionItems": [
     {
       "id": "san-marino-1",
@@ -315,7 +1364,7 @@
       "oldR2Key": "paakaupungit/SMR/20261010/san-marino-1.png",
       "oldPublicUrl": "https://media.matkakirja.app/paakaupungit/SMR/20261010/san-marino-1.png?t=f614c58cf23c3dbb",
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "vatikaani-1",
@@ -332,7 +1381,7 @@
       "oldR2Key": "paakaupungit/VAT/20261010/vatikaani-1.png",
       "oldPublicUrl": "https://media.matkakirja.app/paakaupungit/VAT/20261010/vatikaani-1.png?t=93e702d8cc45c8b2",
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "minsk-1",
@@ -349,7 +1398,7 @@
       "oldR2Key": "paakaupungit/BLR/20261010/minsk-1.png",
       "oldPublicUrl": "https://media.matkakirja.app/paakaupungit/BLR/20261010/minsk-1.png?t=bb80d37d989e0f2e",
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "bratislava-1",
@@ -366,7 +1415,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "riika-1",
@@ -383,7 +1432,7 @@
       "oldR2Key": "paakaupungit/LVA/20261010/riika-1.png",
       "oldPublicUrl": "https://media.matkakirja.app/paakaupungit/LVA/20261010/riika-1.png?t=3665d8d8ae1b120e",
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "riika-2",
@@ -400,7 +1449,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "varsova-1",
@@ -417,7 +1466,7 @@
       "oldR2Key": "paakaupungit/POL/20261010/varsova-1.png",
       "oldPublicUrl": "https://media.matkakirja.app/paakaupungit/POL/20261010/varsova-1.png?t=7cb1e9a2821bd9e8",
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "varsova-2",
@@ -434,7 +1483,7 @@
       "oldR2Key": "paakaupungit/POL/20261010/varsova-2.png",
       "oldPublicUrl": "https://media.matkakirja.app/paakaupungit/POL/20261010/varsova-2.png?t=32e851d27e2f3a07",
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "kiova-2",
@@ -451,7 +1500,7 @@
       "oldR2Key": "paakaupungit/UKR/20261010/kiova-2.png",
       "oldPublicUrl": "https://media.matkakirja.app/paakaupungit/UKR/20261010/kiova-2.png?t=d3c5fe2ce17cd735",
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "withheld-after-root-review"
     },
     {
       "id": "jerevan-2",
@@ -468,7 +1517,7 @@
       "oldR2Key": "paakaupungit/ARM/20261010/jerevan-2.png",
       "oldPublicUrl": "https://media.matkakirja.app/paakaupungit/ARM/20261010/jerevan-2.png?t=8d6bb4bc30704861",
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "kuwait-2",
@@ -485,7 +1534,7 @@
       "oldR2Key": "paakaupungit/KWT/20261010/kuwait-2.png",
       "oldPublicUrl": "https://media.matkakirja.app/paakaupungit/KWT/20261010/kuwait-2.png?t=3939d012a8ca9583",
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "doha-1",
@@ -502,7 +1551,7 @@
       "oldR2Key": "paakaupungit/QAT/20261010/doha-1.png",
       "oldPublicUrl": "https://media.matkakirja.app/paakaupungit/QAT/20261010/doha-1.png?t=7650719d76d309c7",
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "ankara-2",
@@ -519,7 +1568,7 @@
       "oldR2Key": "paakaupungit/TUR/20261010/ankara-2.png",
       "oldPublicUrl": "https://media.matkakirja.app/paakaupungit/TUR/20261010/ankara-2.png?t=02ca70fbed675749",
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "ouagadougou-2",
@@ -536,7 +1585,7 @@
       "oldR2Key": "paakaupungit/BFA/20261010/ouagadougou-2.png",
       "oldPublicUrl": "https://media.matkakirja.app/paakaupungit/BFA/20261010/ouagadougou-2.png?t=3e5f015ffcebee07",
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "bangui-2",
@@ -553,7 +1602,7 @@
       "oldR2Key": "paakaupungit/CAF/20261010/bangui-2.png",
       "oldPublicUrl": "https://media.matkakirja.app/paakaupungit/CAF/20261010/bangui-2.png?t=6da66f7f92d97c29",
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "djibouti-2",
@@ -570,7 +1619,7 @@
       "oldR2Key": "paakaupungit/DJI/20261010/djibouti-2.png",
       "oldPublicUrl": "https://media.matkakirja.app/paakaupungit/DJI/20261010/djibouti-2.png?t=76e1aa799b0606d3",
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "ciudad-de-la-paz-1",
@@ -587,7 +1636,7 @@
       "oldR2Key": "paakaupungit/GNQ/20261010/ciudad-de-la-paz-1.png",
       "oldPublicUrl": "https://media.matkakirja.app/paakaupungit/GNQ/20261010/ciudad-de-la-paz-1.png?t=3f478ca3ebf57452",
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "asmara-1",
@@ -604,7 +1653,7 @@
       "oldR2Key": "paakaupungit/ERI/20261010/asmara-1.png",
       "oldPublicUrl": "https://media.matkakirja.app/paakaupungit/ERI/20261010/asmara-1.png?t=d24da5d15f444048",
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "asmara-2",
@@ -621,7 +1670,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "niamey-2",
@@ -638,7 +1687,7 @@
       "oldR2Key": "paakaupungit/NER/20261010/niamey-2.png",
       "oldPublicUrl": "https://media.matkakirja.app/paakaupungit/NER/20261010/niamey-2.png?t=83fb1cf6a81814a9",
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "sao-tome-2",
@@ -655,7 +1704,7 @@
       "oldR2Key": "paakaupungit/STP/20261010/sao-tome-2.png",
       "oldPublicUrl": "https://media.matkakirja.app/paakaupungit/STP/20261010/sao-tome-2.png?t=d1613a7f47aad408",
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "yaounde-2",
@@ -672,7 +1721,7 @@
       "oldR2Key": "paakaupungit/CMR/20261010/yaounde-2.png",
       "oldPublicUrl": "https://media.matkakirja.app/paakaupungit/CMR/20261010/yaounde-2.png?t=83d84ce12ac0cd00",
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "ndjamena-2",
@@ -689,7 +1738,7 @@
       "oldR2Key": "paakaupungit/TCD/20261010/ndjamena-2.png",
       "oldPublicUrl": "https://media.matkakirja.app/paakaupungit/TCD/20261010/ndjamena-2.png?t=3d3a35c250aa8e7a",
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "kinshasa-2",
@@ -706,7 +1755,7 @@
       "oldR2Key": "paakaupungit/COD/20261010/kinshasa-2.png",
       "oldPublicUrl": "https://media.matkakirja.app/paakaupungit/COD/20261010/kinshasa-2.png?t=01e0189ac59b8461",
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "accra-2",
@@ -723,7 +1772,7 @@
       "oldR2Key": "paakaupungit/GHA/20261010/accra-2.png",
       "oldPublicUrl": "https://media.matkakirja.app/paakaupungit/GHA/20261010/accra-2.png?t=1f239ec37097b13c",
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "antananarivo-2",
@@ -740,7 +1789,7 @@
       "oldR2Key": "paakaupungit/MDG/20261010/antananarivo-2.png",
       "oldPublicUrl": "https://media.matkakirja.app/paakaupungit/MDG/20261010/antananarivo-2.png?t=942f59fd9cb2acd6",
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "bamako-2",
@@ -757,7 +1806,7 @@
       "oldR2Key": "paakaupungit/MLI/20261010/bamako-2.png",
       "oldPublicUrl": "https://media.matkakirja.app/paakaupungit/MLI/20261010/bamako-2.png?t=9628f992f7f28932",
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "maputo-2",
@@ -774,7 +1823,7 @@
       "oldR2Key": "paakaupungit/MOZ/20261010/maputo-2.png",
       "oldPublicUrl": "https://media.matkakirja.app/paakaupungit/MOZ/20261010/maputo-2.png?t=fdfd641cb47bdf27",
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "mogadishu-2",
@@ -791,7 +1840,7 @@
       "oldR2Key": "paakaupungit/SOM/20261010/mogadishu-2.png",
       "oldPublicUrl": "https://media.matkakirja.app/paakaupungit/SOM/20261010/mogadishu-2.png?t=4e6fd921755d6ca9",
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "harare-2",
@@ -808,7 +1857,7 @@
       "oldR2Key": "paakaupungit/ZWE/20261010/harare-2.png",
       "oldPublicUrl": "https://media.matkakirja.app/paakaupungit/ZWE/20261010/harare-2.png?t=a9fc641e186a78e4",
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "R2-byte-verified"
     },
     {
       "id": "nairobi-2",
@@ -825,7 +1874,7 @@
       "oldR2Key": null,
       "oldPublicUrl": null,
       "productionOwner": "correction68",
-      "state": "replacement-generation-pending"
+      "state": "withheld-after-root-review"
     },
     {
       "id": "thimphu-2",
