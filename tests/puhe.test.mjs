@@ -96,14 +96,14 @@ test('puheTuettu on Nodessa false eikä kaadu', () => {
   assert.equal(puheTuettu(), false);
 });
 
-test('puheen laskuriavaimet eivät sekoitu pöllön avaimiin', () => {
+test('puheen laskuriavaimet eivät sekoitu pöllön avaimiin', async () => {
   const nyt = new Date('2026-08-14T12:00:00Z');
-  assert.notEqual(puhePaivaAvain('1.2.3.4', nyt), paivaAvain('1.2.3.4', nyt));
+  assert.notEqual((await puhePaivaAvain('1.2.3.4', nyt)), (await paivaAvain('1.2.3.4', nyt)));
   assert.notEqual(puheKuukausiAvain(nyt), kuukausiAvain(nyt));
-  assert.match(puhePaivaAvain('1.2.3.4', nyt), /^puhe:p:2026-08-14:/);
+  assert.match((await puhePaivaAvain('1.2.3.4', nyt)), /^puhe:p:2026-08-14:/);
   assert.equal(puheKuukausiAvain(nyt), 'puhe:k:2026-08');
   // Raakaa IP-osoitetta ei saa näkyä avaimessa.
-  assert.ok(!puhePaivaAvain('1.2.3.4', nyt).includes('1.2.3.4'));
+  assert.ok(!(await puhePaivaAvain('1.2.3.4', nyt)).includes('1.2.3.4'));
 });
 
 test('puherajat: kuukausikatto voittaa päiväkaton ja nollaraja on pois päältä', () => {

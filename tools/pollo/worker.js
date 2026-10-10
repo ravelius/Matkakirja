@@ -1520,7 +1520,7 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
   // kustannusvahti kasvaa kaikilla, harvana (kasvataHarvaLaskuri).
   const kv = env.POLLO_KV ?? null;
   const nyt = new Date();
-  const pAvain = puhePaivaAvain(pyynto.headers.get('cf-connecting-ip'), nyt);
+  const pAvain = await puhePaivaAvain(pyynto.headers.get('cf-connecting-ip'), nyt, env.IP_SUOLA);
   const kAvain = puheKuukausiAvain(nyt);
   const kehittaja = kehittajaOhitus(pyynto, env);
   const raja = kehittaja ? { ok: true } : tarkistaPuheRajat({
@@ -2208,7 +2208,7 @@ async function hoidaKuva(pyynto, env, kors, runko) {
   // erottelua ei tarvita — turvaraja koskee kokonaiskäyttöä.
   const kv = env.POLLO_KV ?? null;
   const raja = Number(env.KUVA_PAIVARAJA || KUVA_PAIVARAJA_OLETUS);
-  const laskuriAvain = `kuva:${paivaAvain('kehittaja')}`;
+  const laskuriAvain = `kuva:${await paivaAvain('kehittaja')}`;
   if (kv) {
     const kaytetty = await lueLaskuri(kv, laskuriAvain);
     if (kaytetty >= raja) {
@@ -2580,7 +2580,7 @@ async function hoidaSahke(pyynto, env, kors, runko) {
   // mallikutsu, eikä sitä saa voida ajaa rajattomasti lomakkeen ohi.
   const kv = env.POLLO_KV ?? null;
   const nyt = new Date();
-  const pAvain = paivaAvain(pyynto.headers.get('cf-connecting-ip'), nyt);
+  const pAvain = await paivaAvain(pyynto.headers.get('cf-connecting-ip'), nyt, env.IP_SUOLA);
   const kAvain = kuukausiAvain(nyt);
   const raja = kehittajaOhitus(pyynto, env) ? { ok: true } : tarkistaRajat({
     paiva: testitunnusOhitus(pyynto, env) ? 0 : await lueLaskuri(kv, pAvain),
@@ -3320,7 +3320,7 @@ async function oppaanRajatYlittyvat(pyynto, env, kors, ctx) {
   }
   if (kehittajaOhitus(pyynto, env) || testitunnus) return null;
   const kv = env.POLLO_KV ?? null;
-  const avain = opasPaivaAvain(ip);
+  const avain = await opasPaivaAvain(ip, new Date(), env.IP_SUOLA);
   if (Math.max(await lueHarvaLaskuri(kv, avain), muisti.get(avain) ?? 0) >= lueLuku(env.OPAS_PAIVARAJA, OPAS_PAIVARAJA_OLETUS)) {
     return vastaa({ virhe: 'paivaraja', viesti: 'Opas lepää tänään. Jatketaan huomenna.' }, { status: 429, ...kors });
   }
@@ -3471,7 +3471,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   const kehittaja = kehittajaOhitus(pyynto, env);
   const kv = env.POLLO_KV ?? null;
   if (!kehittaja && !testitunnus) {
-    const avain = opasPaivaAvain(ip);
+    const avain = await opasPaivaAvain(ip, new Date(), env.IP_SUOLA);
     const kaytetty = Math.max(await lueHarvaLaskuri(kv, avain), muisti.get(avain) ?? 0);
     if (kaytetty >= lueLuku(env.OPAS_PAIVARAJA, OPAS_PAIVARAJA_OLETUS)) {
       return vastaa({ virhe: 'paivaraja', viesti: 'Opas lepää tänään. Jatketaan huomenna.' }, { status: 429, ...kors });
@@ -3887,7 +3887,7 @@ export default {
     // --- käyttörajat -------------------------------------------------
     const kv = env.POLLO_KV ?? null;
     const nyt = new Date();
-    const pAvain = paivaAvain(pyynto.headers.get('cf-connecting-ip'), nyt);
+    const pAvain = await paivaAvain(pyynto.headers.get('cf-connecting-ip'), nyt, env.IP_SUOLA);
     const kAvain = kuukausiAvain(nyt);
     const kehittaja = kehittajaOhitus(pyynto, env);
     const raja = kehittaja ? { ok: true } : tarkistaRajat({

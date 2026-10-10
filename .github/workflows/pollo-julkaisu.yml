@@ -376,6 +376,20 @@ jobs:
           fi
           printf '%s' "$POLLO_AANILUPA" | "$WRANGLER" secret put POLLO_AANILUPA --config "$POLLO_ASETUS"
 
+      # IP-suola (#4326, PT 10.10.2026): käyttörajojen IP-tiiviste on HMAC-SHA-256(suola, ip). Satunnainen arvo, jota ei
+      # tarvitse tietää; vaihto nollaa IP-kohtaiset päivälaskurit kerran. Ilman salaisuutta worker käyttää suolaamatonta FNV-1a:ta.
+      - name: Aseta IP-suola workerin salaisuudeksi (jos on)
+        env:
+          POLLO_IP_SUOLA: ${{ secrets.POLLO_IP_SUOLA }}
+        run: |
+          set -euo pipefail
+          set +x
+          if [ -z "${POLLO_IP_SUOLA:-}" ]; then
+            echo "::warning title=IP-suola puuttuu::POLLO_IP_SUOLA ei ole asetettu — IP-tiiviste jää suolaamattomaksi."
+            exit 0
+          fi
+          printf '%s' "$POLLO_IP_SUOLA" | "$WRANGLER" secret put IP_SUOLA --config "$POLLO_ASETUS"
+
       - name: Aseta Cesium ion -tunnus workerin salaisuudeksi (jos on)
         env:
           CESIUM_ION_TOKEN: ${{ secrets.CESIUM_ION_TOKEN }}
