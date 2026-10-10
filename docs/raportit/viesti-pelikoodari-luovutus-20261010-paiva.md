@@ -52,6 +52,15 @@ PT local_593b89a1-2514-4d74-b956-2a73db862382, Siirtoseppä local_b50bb32e-18e2-
 - Museon Soundly-haku ILLALLA näytön ollessa vapaa → käsittely → manifesti LS1:lle.
 - ISS-erä 1 valmis valintaan: huiput korjattu (RAJA=0.75, kasittele.py), ääniportti 40/0.
 
+## 2d. Musiikkisääntö ja Peking (PT 11.1x / 11.4x)
+- KARTALLA VAIN KAUPUNGIN OMA KAPPALE: web PR #4342 (f11c2e8a1, wt/pelikoodari-kartta-musiikki), natiivi proto
+  pelikoodari/kartta-vain-kaupunki d6a8e0139 (juna-176:n päälle, natiivi-backup, Natiivisepällä), kaanna.sh 453/453, kultainen jälki
+  samaksi. Kytkin KARTTA_VAIN_KAUPUNKI / AaniTaulut.KarttaVainKaupunki; vanhat ketjutestit kytkin pois. Kysytty PT:ltä: aloituslennon
+  vaskimarssi (06) jäi ennalleen.
+- Kaupunkikappaleiden suunnitelma proto-3d/_tyo/kaupunkikappaleet-20261010/SUUNNITELMA.md (44 uutta, 0,08 $/kpl ≈ 3,50 $, 1. erä 16) → PT:n kortti.
+- Peking kokeilukohteeksi PR #4343 (8618f8101, wt/pelikoodari-peking-kokeilu); ilmoita LS2:lle, kun worker julkaistu.
+- Julkaisijalle lähetetty järjestys: #4337, #4343, #4342; #4341 vasta #4337:n workerjulkaisun jälkeen.
+
 ## 3. Odottaa
 - Freesound-lataaja käynnistetty uudelleen 09.46 (perl setsid, aja-originaalit.zsh), odottaa ~/.freesound-tokenia (OAuth). Aikakatkaisu
   ~12 h; käynnistä uudelleen samalla kaavalla, jos token puuttuu yhä.
