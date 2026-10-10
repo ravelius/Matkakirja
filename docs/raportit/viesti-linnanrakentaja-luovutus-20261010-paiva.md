@@ -106,3 +106,6 @@ blender.json `linnanrakentaja-linna-v45e` (worktree `/Users/Shared/Claude/wt/lin
    (`grep -n "KIELLETTY KAUPUNKI" js/tyohuone-raamattu.js`); PT:n ehdot kuten Eiffel (toistuvat osat yhtenä meshinä, jaettu materiaali).
 2) LS1:n palaute NL-salista (valotaso, muisti) → säätö. 3) NL v2 patsaiden tultua. 4) LS2:n parit Eiffel v1b + Préfecture v1b → säätö → PT.
 5) Siirtoseppä/PT: kiinni 70 (portaat-vartija) — vain jos PT antaa LR:lle.
+- (10.1x) Sisältökirjuri: patsaiden metatiedot `proto-3d/_tyo/sisaltokirjuri/taidemuseo-alankomaat-20261010/patsaat/` (16 CC BY -mallia meta/ + esikatselu/,
+  RMO Leiden rmo_leiden_lista.json 50 mallia, 44 CC0). GLB-lataus vaatii kirjautuneen Sketchfab-tilin (API 401) → PT/omistaja; LR ei luo tiliä
+  eikä kirjaudu. Kun mallit tulevat: lisenssisivu + tekijä talteen (CC BY -krediitti näytölle) → NL v2.
