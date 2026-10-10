@@ -65,3 +65,21 @@ Rivit, joilla tulos on OK, on koottu ryhmiin lopussa. Ensin kaikki VÄÄRIN ja E
 | wiki-otsikot | Skopje, Scupi, Stone Bridge (Skopje), History of Skopje, Old Bazaar, Skopje, National Gallery (North Macedonia), 1963 Skopje earthquake: kaikki löytyvät en-Wikipediasta. Korvikkeet "Skopje" (Nerezi) ja "1963 Skopje earthquake" (museo) toimivat, mutta omat artikkelit löytyvät, ks. EPÄVARMA | lahde en | OK |
 | 1873-väitteet | Kivisilta, Kale, Vanha basaari, Mustafa-pasan moskeija (381 v), Kuršumli An (yli 300 v), Makedonia-aukio ei vielä olemassa, rautatie samana vuonna: kaikki johdettavissa lähteiden vuosiluvuista; ei keksittyjä isoisän tekemisiä (Daut-pasan hamam ks. EPÄVARMA) | edellä mainitut | OK |
 | nykypolitiikka ja sota | Ei nykysotaa, vaaleja eikä nykyrikollisuutta. Kale-artikkelin 2011 välikohtaus ja Skopje 2014 -kiistat jätetty pois. Historia neutraalisti (1944 räjähteet, 1689 tulipalo ilman yksityiskohtia). | koko sisalto.json | OK |
+
+## Korjattu
+
+- Kysymykset: Q4 vaihtoehto "Skopje–Tirana" -> "Skopje–Podgorica" (oikea ei pisin); Q3 "15" -> "120" (oikea ei tasapisin); Q2 source -> en.wikipedia.org/wiki/Skopje.
+- Ilmastolause ilman "En-Wikipedian mukaan" -metatekstiä.
+- Kuvatekstit (Daut-pasan hamam, Vanha basaari, Makedonia-aukio kahdessa kohdassa, kansikuvat 0 ja 2) kirjoitettu kohteesta kertoviksi, ei kuvan sisällöstä; Makedonia-aukion superlatiivi pois kuvateksteistä, tekstiin "Lähteen mukaan".
+- tiedot[1]: Pyhän Pelastuksen kirkko, "lähteen mukaan", syy lähteen mukaisesti.
+- Kale: puhallinsoittimia ja savikoristeita (ei "neoliittisia"); kolikkolöytö "lähteen mukaan ... löytö".
+- Kivisilta: räjähteet jätettiin käyttämättä kaupungin vaikutusvaltaisten asukkaiden pyynnöstä.
+- Taloussana ajoitettu 1900-luvun alkuun (+ rautatyö); bezisten-väite lähteiden mukaan / Gazi Ishak Beyn tai Isa Beyn aikana.
+- Daut-pasan hamam: 1873-päätelmä koskee hamamin ikää, Čifte Hamam erikseen.
+- Kafeana- ja viiniväite poistettu, tilalla "Vanhassa basaarissa on paljon kahviloita ja ravintoloita." (kaksi kohtaa).
+- Kielet: makedonia, Čairin ja Sarajin kunnissa myös albania; otsikko "Kaupungin kielet".
+- Tehtävän fakta: Tigers-arkkitehtiryhmä ja 1966 kilpailu.
+- Nerezin nosto: "1500-luvun maanjäristys vaurioitti kirkkoa."; wiki -> Church of St. Panteleimon, Gorno Nerezi.
+- Museon nosto: wiki -> Museum of Contemporary Art (Skopje).
+- Aladža-nosto: fajanssi- ja 1689-väite poistettu, nimen selitys lähteestä, lisätty basaaria koskevia varmistettuja faktoja; lyhyt/selite uusittu.
+- Kuvia ei vaihdettu.
