@@ -22,7 +22,7 @@ namespace Matkakirja.Editori
     public static class AsetteluTesti
     {
         /// <summary>Laitekoot: nimi, pikselit, turva-alue (origo vasen alakulma kuten Screen.safeArea), pikseliä pisteessä, tabletti.</summary>
-        static readonly (string Nimi, string Arvo)[] Koot =
+        static readonly (string Nimi, string Arvo)[] KaikkiKoot =
         {
             // iPhone 17 Pro 402 × 874 pt @3: Dynamic Island 62 pt, kotipalkki 34 pt (vaakana sivuilla 62 pt, alhaalla 21 pt).
             ("iphone-pysty", "1206,2622,0,102,1206,2334,3,0"),
@@ -30,7 +30,29 @@ namespace Matkakirja.Editori
             // iPad Pro 11" 834 × 1210 pt @2: statuspalkki 24 pt, kotipalkki 20 pt.
             ("ipad-pysty", "1668,2420,0,40,1668,2332,2,1"),
             ("ipad-vaaka", "2420,1668,0,40,2420,1580,2,1"),
+            // Natiivi Mac (PT 10.10.: omistaja testaa Mac-appia, näyttö 2560 × 1440): ikkunan sisältö pisteinä, ei turva-aluetta;
+            // koko näyttö @1 (asettelu pisteinä sama kuin @2, kevyempi tekstuuri), ikkunat @2 (Retina). Viimeinen kenttä = Mac.
+            ("mac-2560x1440", "2560,1440,0,0,2560,1440,1,1,1"),
+            ("mac-1440x900", "2880,1800,0,0,2880,1800,2,1,1"),
+            ("mac-1280x800", "2560,1600,0,0,2560,1600,2,1,1"),
         };
+
+        /// <summary>MATKAKIRJA_ASETTELU_KOOT="mac" (tai "iphone,ipad"): vain nimen alulla valitut koot pyynnön järjestyksessä (sama koko
+        /// voi toistua: "iphone-pysty,iphone-pysty"); tyhjä = kaikki (alustetaan KaikkiKoot-taulun jälkeen).</summary>
+        static readonly (string Nimi, string Arvo)[] Koot = Suodata(KaikkiKoot, "MATKAKIRJA_ASETTELU_KOOT", k => k.Nimi);
+
+        /// <summary>MATKAKIRJA_ASETTELU_NAKYMAT="maakortti" (nimen alut pilkuin): vain nämä isot näkymät, ilman Kysy-, nosto- ja
+        /// HUD-vaiheita (nopea toisto); tyhjä = kaikki.</summary>
+        static readonly string[] NakymaSuodatin = (Environment.GetEnvironmentVariable("MATKAKIRJA_ASETTELU_NAKYMAT") ?? "")
+            .Split(',').Select(a => a.Trim()).Where(a => a.Length > 0).ToArray();
+
+        static T[] Suodata<T>(T[] kaikki, string muuttuja, Func<T, string> nimi)
+        {
+            var v = (Environment.GetEnvironmentVariable(muuttuja) ?? "").Split(',').Select(a => a.Trim()).Where(a => a.Length > 0).ToArray();
+            return v.Length == 0 ? kaikki : v.SelectMany(a => kaikki.Where(k => nimi(k).StartsWith(a, StringComparison.Ordinal))).ToArray();
+        }
+
+        static void SuljeMaakortti() { var k = UiNakymat.Hae().Kartuscha; k.Sulje(); k.Testaa(null, false); }
 
         static readonly string[] Kysymykset =
         {
@@ -160,7 +182,9 @@ namespace Matkakirja.Editori
             Kirjaa($"-- kuva {tiedosto} (kerroksia {dokut.Count}, piirtyneitä {piirtyneet}{(ohitetut.Count > 0 ? ", eri kokoiset " + string.Join(" ", ohitetut) : "")})");
         }
 
-        static bool OsaanKuuluu(string nimi) => Osa.Length == 0 || LinnanNakymat.Contains(nimi) == (Osa == "linna");
+        static bool OsaanKuuluu(string nimi) =>
+            (NakymaSuodatin.Length == 0 || NakymaSuodatin.Any(a => nimi.StartsWith(a, StringComparison.Ordinal)))
+            && (Osa.Length == 0 || LinnanNakymat.Contains(nimi) == (Osa == "linna"));
 
         public static void Aja()
         {
@@ -231,7 +255,7 @@ namespace Matkakirja.Editori
                     {
                         // Linnan osa alkaa suoraan isoista näkymistä (vain LinnanNakymat), sitten linnan HUD.
                         nakymaNro = 0;
-                        Siirry(Osa == "linna" ? Vaihe.Nakyma : Vaihe.Kysy);
+                        Siirry(Osa == "linna" || NakymaSuodatin.Length > 0 ? Vaihe.Nakyma : Vaihe.Kysy);
                     }
                     else if (Kulunut > 120) { Virhe("Play-tila ei käynnistynyt 120 s:ssa"); Siirry(Vaihe.Lopeta); }
                     break;
@@ -668,6 +692,9 @@ namespace Matkakirja.Editori
             ("ihmisen matkan valikko", () => Linssi("valikko matka"), () => { Linssi("matka pois"); SuljeLinssi(); }, 1.0),
             ("radio", () => Linssi("radio"), SuljeLinssi, 0.6),
             ("maan kyltti", () => Linssi("maa ITA"), SuljeLinssi, 0.6),
+            // Maakortti (kartuscha) auki pääkaupunkirivin kanssa (PT 10.10.): Ranska = PÄÄKAUPUNKI, Israel = HALLINNON PAIKKA.
+            ("maakortti Ranska", () => UiNakymat.Hae().Kartuscha.Testaa("FRA", true), SuljeMaakortti, 3.0),
+            ("maakortti Israel", () => UiNakymat.Hae().Kartuscha.Testaa("ISR", true), SuljeMaakortti, 3.0),
             ("linssin selite", () => Linssi("selite"), () => { Linssi("selite pois"); SuljeLinssi(); }, 0.6),
             // Linssin sovitinta vaativat näkymät editorin testikytkimillä (#if UNITY_EDITOR, PT 10.10.2026).
             ("ajattelijat", () => AjattelijatSovitin.TestiValinta(true), () => { AjattelijatSovitin.TestiValinta(false); SuljeKaikki(); }, 1.0),

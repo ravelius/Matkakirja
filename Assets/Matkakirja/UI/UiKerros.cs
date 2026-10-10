@@ -246,6 +246,7 @@ namespace Matkakirja.Natiivi
         {
             get
             {
+                if (UiRuutu.Testi is UiRuutu.Koko tk) return tk.Mac;   // asettelutesti (vain editorissa)
 #if UNITY_STANDALONE_OSX && !UNITY_EDITOR
                 return true;
 #else

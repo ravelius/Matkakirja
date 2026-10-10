@@ -41,7 +41,7 @@ namespace Matkakirja.Natiivi
         float viimeVeto = -10f;
 
         /// <summary>Tunnistimet asennettu (Mac tai pakotettu testi).</summary>
-        public static bool Kaytossa => instanssi != null && instanssi.kaytossa;
+        public static bool Kaytossa => (instanssi != null && instanssi.kaytossa) || (UiRuutu.Testi?.Mac ?? false);   // asettelutestin Mac-koko
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         static void Luo()
