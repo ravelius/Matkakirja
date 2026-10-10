@@ -42,6 +42,7 @@ namespace Matkakirja.Natiivi
             if (string.IsNullOrEmpty(kaupunki)) return;
             EsilataaPuheet(kaupunki, Taso.SeuraavaRuutu);
             EsilataaEsitysMusiikki(kaupunki);
+            Fokusvirrat.Lataa(null); // trailerin päätös tarvitsee virrat (TraileriTarjolla); jo luettu = ei mitään
             try { SaapuminenTiedossa?.Invoke(kaupunki); } catch (Exception e) { Debug.LogException(e); }
         }
 

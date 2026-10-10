@@ -317,5 +317,33 @@ namespace Matkakirja.Peli.Testit
             }
             finally { if (Directory.Exists(kansio)) Directory.Delete(kansio, true); }
         }
+
+        // --- SAAPUMISTRAILERIN PÄÄTÖS (PT 11.10.: Pariisin traileri puuttui, kun fokusvirrat eivät olleet vielä muistissa) ---
+
+        [Testi] static void TraileriOdottaaLataamattomiaVirtoja()
+        {
+            // Simu 01.09 ja 02.01: maailmahyppy ennen fokusvirtojen lukua → teksti puuttui → traileri ohitettiin hiljaa.
+            var syy = TraileriPaatos.Syy(kaytossa: true, naytetty: false, virratValmiit: false, teksti: false);
+            Oleta.Sama(TraileriSyy.VirratLataamatta, syy);
+            Oleta.Tosi(TraileriPaatos.Odota(syy), "odotetaan virtoja");
+            Oleta.Sama("virrat lataamatta", TraileriPaatos.Teksti(syy));
+            Oleta.Tosi(TraileriPaatos.VirtaOdotusS > 0 && TraileriPaatos.VirtaOdotusS <= 1.5f, "odotus enintään 1,5 s");
+            Oleta.Sama(TraileriSyy.Tarjolla, TraileriPaatos.Syy(true, false, true, true), "virrat valmiit, teksti → traileri");
+            Oleta.Sama(TraileriSyy.EiTekstia, TraileriPaatos.Syy(true, false, true, false), "valmiit ilman tekstiä → ei traileria, ei odotusta");
+            Oleta.Tosi(!TraileriPaatos.Odota(TraileriSyy.EiTekstia));
+        }
+
+        [Testi] static void TraileriOhitusJaJatkoHiljaaEivatOdota()
+        {
+            // Jatko hiljaa ja jo nähty merkitään näytetyksi: ei odotusta, vaikka virrat puuttuisivat.
+            Oleta.Sama(TraileriSyy.Naytetty, TraileriPaatos.Syy(true, true, false, false));
+            Oleta.Tosi(!TraileriPaatos.Odota(TraileriSyy.Naytetty), "näytetty ei odota");
+            Oleta.Sama(TraileriSyy.EiKaytossa, TraileriPaatos.Syy(false, false, false, false));
+            Oleta.Tosi(!TraileriPaatos.Odota(TraileriSyy.EiKaytossa), "ei käytössä ei odota");
+            Oleta.Sama(TraileriSyy.Naytetty, TraileriPaatos.Syy(true, true, true, true), "näytetty voittaa tekstin");
+            Oleta.Sama("näytetty", TraileriPaatos.Teksti(TraileriSyy.Naytetty));
+            Oleta.Sama("ei käytössä", TraileriPaatos.Teksti(TraileriSyy.EiKaytossa));
+            Oleta.Sama("ei tekstiä", TraileriPaatos.Teksti(TraileriSyy.EiTekstia));
+        }
     }
 }
