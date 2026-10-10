@@ -46,7 +46,7 @@ Miksi kaupunkia on sanottu myös valkoiseksi kaupungiksi?
 
 ### 2.2
 KYSYMYS: Kuinka monta kirkkoa Beratin linnassa oli aikoinaan?
-Hyvä kysymys tuo. Linnan sisällä oli aikoinaan noin 20 kirkkoa ja yksi moskeija, ja useimmat kirkoista olivat 1200-luvulta. Linnan muureja vahvistettiin 400-luvulla [[Bysantin]] keisari [[Theodosios II:n]] aikana, ja niitä rakennettiin uudelleen 500- ja 1200-luvuilla. Luku on likimääräinen. Ei paha laskentaa kyyhkyltä.
+Hyvä kysymys tuo. Linnan sisällä oli aikoinaan useita kymmeniä kirkkoja ja kappeleita, enimmäkseen 1200-luvulta. Linnan muureja vahvistettiin 400-luvulla [[Bysantin]] keisari [[Theodosios II:n]] aikana, ja niitä rakennettiin uudelleen 500- ja 1200-luvuilla. Ei paha laskentaa kyyhkyltä.
 JATKOT:
 Mitä linnan sisällä on nykyisin jäljellä?
 Millainen oli keisari Theodosios II:n aika?
@@ -60,7 +60,7 @@ Miten Osum-joki kulkee Beratin läpi?
 
 ### 2.4
 KYSYMYS: Kuka perusti Beratin ja millä nimellä se tunnettiin alussa?
-Annas ku mietin. Makedonialainen kenraali [[Kassandros]] perusti kaupungin vuonna 314 eaa. nimellä [[Antipatreia]] isänsä Antipatroksen kunniaksi vanhan illyrialaisasutuksen paikalle. Bysantin aikaan kaupunki tunnettiin nimellä Pulcheriopolis, ja keskiajan slaavilainen nimi Beligrad tarkoittaa valkoista kaupunkia. Osmanit valtasivat kaupungin vuonna 1417.
+Annas ku mietin. Berat on yksi Albanian vanhimmista kaupungeista; antiikin [[Antipatreia]]-kaupungin kerrotaan perustaneen Makedonian [[Kassandros]] ja nimenneen sen isänsä Antipatroksen mukaan, mutta perustamisvuosi ja perustaja ovat epävarmoja. Varhaisbysantin aikana kaupunki tunnettiin nimellä Pulcheriopolis ja keskiajalla slaavilaisella nimellä Beligrad, valkoinen kaupunki. Osmanien valtaan se joutui 1400-luvun alussa, yleensä ilmoitetun mukaan vuonna 1417.
 
 Kaupunki on vaihtanut nimeä useammin kuin minä pesäpaikkaa, mutta valkoisena se on pysynyt.
 JATKOT:
@@ -69,7 +69,7 @@ Mitä tiedetään Kassandroksen elämästä?
 
 ### 2.5
 KYSYMYS: Milloin osmanit valtasivat Beratin?
-Mmm— Osmanit valtasivat Beratin vuonna 1417, ja kaupunki pysyi osmanien hallinnassa vuosisatoja. Nykyisen vanhankaupungin rinnetalot ovat peräisin [[ottomaanikaudelta]], ja niiden suuret ikkunat ovat antaneet kaupungille sen tunnetun lempinimen. Ennen osmaneja alue oli ollut [[Bysantin]] vallan alla. Onpas siitä pitkä aika.
+Mmm— Osmanit valtasivat Beratin 1400-luvun alussa, yleensä ilmoitetun mukaan vuonna 1417, ja kaupunki pysyi osmanien hallinnassa vuosisatoja. Nykyisen vanhankaupungin rinnetalot ovat peräisin [[ottomaanikaudelta]], ja niiden suuret ikkunat ovat antaneet kaupungille sen tunnetun lempinimen. Ennen osmaneja alue oli ollut [[Bysantin]] vallan alla. Onpas siitä pitkä aika.
 JATKOT:
 Miten osmanit levittäytyivät Balkanille 1400-luvulla?
 Miten Berat muuttui ottomaanien aikana?
@@ -97,7 +97,7 @@ Missä muualla Euroopassa on U-muotoisia laaksoja?
 
 ### 3.4
 KYSYMYS: Mitä eläimiä Valbonan kansallispuistossa elää?
-No jopas, tästä tykkään. Puistossa elää [[ruskeakarhuja]], [[susia]], [[ilveksiä]] ja [[gemssejä]]. Metsät peittävät puiston pinta-alasta 89 prosenttia, mikä tarjoaa eläimille laajan elinympäristön.
+No jopas, tästä tykkään. Puistossa elää [[ruskeakarhuja]], [[susia]], [[ilveksiä]] ja [[gemssejä]]. Metsät peittävät suurimman osan puiston pinta-alasta, mikä tarjoaa eläimille laajan elinympäristön.
 
 Karhut ja sudet jäävät minusta kauas, mutta ilvestä ihailen siivin, sillä se kulkee kuin ei painaisi mitään.
 JATKOT:
@@ -106,7 +106,7 @@ Kuinka paljon ruskeakarhuja Euroopassa elää?
 
 ### 3.5
 KYSYMYS: Milloin Valbonan kansallispuisto perustettiin ja kuinka iso se on?
-Katotaas. Kansallispuisto perustettiin tammikuussa 1996, ja sen pinta-ala on 80 neliökilometriä. Puisto sijaitsee [[Kukësin]] alueella Pohjois-Albaniassa, ja laaksossa on neljä kylää, joista [[Valbonë]] on yksi. Aika pieni alue, mutta täynnä asiaa.
+Katotaas. Valbonan laakson kansallispuisto perustettiin tammikuussa 1996, ja sen pinta-ala oli noin 80 neliökilometriä; puisto on suurelta osin metsää, ja siellä elää muun muassa ruskeakarhuja ja susia. Vuonna 2022 se yhdistettiin Thethin puiston kanssa Albanian Alppien kansallispuistoksi. Puisto sijaitsee [[Kukësin]] alueella Pohjois-Albaniassa, ja laaksossa on neljä kylää, joista [[Valbonë]] on yksi. Aika pieni alue, mutta täynnä asiaa.
 JATKOT:
 Mitä Valbonën kylässä tehdään?
 Mitä kansallispuiston perustaminen tarkoittaa?
@@ -164,14 +164,14 @@ Millainen hallitsija sulttaani Mehmed II oli?
 
 ### 5.3
 KYSYMYS: Mikä museo Krujën linnan alueella on?
-Nyt muistan: alueella on [[Skanderbegin kansallismuseo]], jonka arkkitehdit Pranvera Masha ja Pirro Vaso rakensivat 1980-luvun alussa. Lisäksi linnan alueella on [[etnografinen museo]]. Museoita kahdet, ja kyyhkyllä vain yhdet siivet.
+Nyt muistan: linnan alueella on [[Skanderbegin kansallismuseo]], joka avattiin vuonna 1982, sekä [[etnografinen museo]]. Museoita kahdet, ja kyyhkyllä vain yhdet siivet.
 JATKOT:
 Mitä etnografisessa museossa on esillä?
 Millainen oli Albanian kulttuurielämä 1980-luvulla?
 
 ### 5.4
 KYSYMYS: Onko Krujën linna kuvattu Albanian rahassa?
-Ai tota, tähän on helppo vastata. Kyllä, linna on kuvattu Albanian 1000 ja 5000 [[lekin]] seteleissä. Lek on Albanian rahayksikkö, ja linna liittyy vahvasti [[Skanderbegin]] johtamaan vastarintaan. Minä kantaisin kyllä mieluummin kirjeitä kuin seteleitä.
+Ai tota, tähän on helppo vastata. Kyllä, Krujën linna on kuvattu Albanian 5000 [[lekin]] setelin kääntöpuolella. Lek on Albanian rahayksikkö, ja linna liittyy vahvasti [[Skanderbegin]] johtamaan vastarintaan. Minä kantaisin kyllä mieluummin kirjeitä kuin seteleitä.
 JATKOT:
 Mitä muuta Albanian seteleissä on kuvattu?
 Miten lek-raha otettiin käyttöön?

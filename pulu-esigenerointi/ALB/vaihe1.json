@@ -90,7 +90,7 @@
   "kohde": "kohde:beratin-vanhakaupunki",
   "kysymys": "Kuinka monta kirkkoa Beratin linnassa oli aikoinaan?",
   "uusi": false,
-  "vastaus": "Hyvä kysymys tuo. Linnan sisällä oli aikoinaan noin 20 kirkkoa ja yksi moskeija, ja useimmat kirkoista olivat 1200-luvulta. Linnan muureja vahvistettiin 400-luvulla [[Bysantin]] keisari [[Theodosios II:n]] aikana, ja niitä rakennettiin uudelleen 500- ja 1200-luvuilla. Luku on likimääräinen. Ei paha laskentaa kyyhkyltä.",
+  "vastaus": "Hyvä kysymys tuo. Linnan sisällä oli aikoinaan useita kymmeniä kirkkoja ja kappeleita, enimmäkseen 1200-luvulta. Linnan muureja vahvistettiin 400-luvulla [[Bysantin]] keisari [[Theodosios II:n]] aikana, ja niitä rakennettiin uudelleen 500- ja 1200-luvuilla. Ei paha laskentaa kyyhkyltä.",
   "linkit": [
    "Bysantin",
    "Theodosios II:n"
@@ -120,10 +120,10 @@
   "kohde": "kohde:beratin-vanhakaupunki",
   "kysymys": "Kuka perusti Beratin ja millä nimellä se tunnettiin alussa?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. Makedonialainen kenraali [[Kassandros]] perusti kaupungin vuonna 314 eaa. nimellä [[Antipatreia]] isänsä Antipatroksen kunniaksi vanhan illyrialaisasutuksen paikalle. Bysantin aikaan kaupunki tunnettiin nimellä Pulcheriopolis, ja keskiajan slaavilainen nimi Beligrad tarkoittaa valkoista kaupunkia. Osmanit valtasivat kaupungin vuonna 1417.\n\nKaupunki on vaihtanut nimeä useammin kuin minä pesäpaikkaa, mutta valkoisena se on pysynyt.",
+  "vastaus": "Annas ku mietin. Berat on yksi Albanian vanhimmista kaupungeista; antiikin [[Antipatreia]]-kaupungin kerrotaan perustaneen Makedonian [[Kassandros]] ja nimenneen sen isänsä Antipatroksen mukaan, mutta perustamisvuosi ja perustaja ovat epävarmoja. Varhaisbysantin aikana kaupunki tunnettiin nimellä Pulcheriopolis ja keskiajalla slaavilaisella nimellä Beligrad, valkoinen kaupunki. Osmanien valtaan se joutui 1400-luvun alussa, yleensä ilmoitetun mukaan vuonna 1417.\n\nKaupunki on vaihtanut nimeä useammin kuin minä pesäpaikkaa, mutta valkoisena se on pysynyt.",
   "linkit": [
-   "Kassandros",
-   "Antipatreia"
+   "Antipatreia",
+   "Kassandros"
   ],
   "jatkot": [
    "Keitä illyrialaiset olivat?",
@@ -134,7 +134,7 @@
   "kohde": "kohde:beratin-vanhakaupunki",
   "kysymys": "Milloin osmanit valtasivat Beratin?",
   "uusi": true,
-  "vastaus": "Mmm— Osmanit valtasivat Beratin vuonna 1417, ja kaupunki pysyi osmanien hallinnassa vuosisatoja. Nykyisen vanhankaupungin rinnetalot ovat peräisin [[ottomaanikaudelta]], ja niiden suuret ikkunat ovat antaneet kaupungille sen tunnetun lempinimen. Ennen osmaneja alue oli ollut [[Bysantin]] vallan alla. Onpas siitä pitkä aika.",
+  "vastaus": "Mmm— Osmanit valtasivat Beratin 1400-luvun alussa, yleensä ilmoitetun mukaan vuonna 1417, ja kaupunki pysyi osmanien hallinnassa vuosisatoja. Nykyisen vanhankaupungin rinnetalot ovat peräisin [[ottomaanikaudelta]], ja niiden suuret ikkunat ovat antaneet kaupungille sen tunnetun lempinimen. Ennen osmaneja alue oli ollut [[Bysantin]] vallan alla. Onpas siitä pitkä aika.",
   "linkit": [
    "ottomaanikaudelta",
    "Bysantin"
@@ -190,7 +190,7 @@
   "kohde": "kohde:valbonan-laakso",
   "kysymys": "Mitä eläimiä Valbonan kansallispuistossa elää?",
   "uusi": true,
-  "vastaus": "No jopas, tästä tykkään. Puistossa elää [[ruskeakarhuja]], [[susia]], [[ilveksiä]] ja [[gemssejä]]. Metsät peittävät puiston pinta-alasta 89 prosenttia, mikä tarjoaa eläimille laajan elinympäristön.\n\nKarhut ja sudet jäävät minusta kauas, mutta ilvestä ihailen siivin, sillä se kulkee kuin ei painaisi mitään.",
+  "vastaus": "No jopas, tästä tykkään. Puistossa elää [[ruskeakarhuja]], [[susia]], [[ilveksiä]] ja [[gemssejä]]. Metsät peittävät suurimman osan puiston pinta-alasta, mikä tarjoaa eläimille laajan elinympäristön.\n\nKarhut ja sudet jäävät minusta kauas, mutta ilvestä ihailen siivin, sillä se kulkee kuin ei painaisi mitään.",
   "linkit": [
    "ruskeakarhuja",
    "susia",
@@ -206,7 +206,7 @@
   "kohde": "kohde:valbonan-laakso",
   "kysymys": "Milloin Valbonan kansallispuisto perustettiin ja kuinka iso se on?",
   "uusi": true,
-  "vastaus": "Katotaas. Kansallispuisto perustettiin tammikuussa 1996, ja sen pinta-ala on 80 neliökilometriä. Puisto sijaitsee [[Kukësin]] alueella Pohjois-Albaniassa, ja laaksossa on neljä kylää, joista [[Valbonë]] on yksi. Aika pieni alue, mutta täynnä asiaa.",
+  "vastaus": "Katotaas. Valbonan laakson kansallispuisto perustettiin tammikuussa 1996, ja sen pinta-ala oli noin 80 neliökilometriä; puisto on suurelta osin metsää, ja siellä elää muun muassa ruskeakarhuja ja susia. Vuonna 2022 se yhdistettiin Thethin puiston kanssa Albanian Alppien kansallispuistoksi. Puisto sijaitsee [[Kukësin]] alueella Pohjois-Albaniassa, ja laaksossa on neljä kylää, joista [[Valbonë]] on yksi. Aika pieni alue, mutta täynnä asiaa.",
   "linkit": [
    "Kukësin",
    "Valbonë"
@@ -319,7 +319,7 @@
   "kohde": "kohde:krujen-linna",
   "kysymys": "Mikä museo Krujën linnan alueella on?",
   "uusi": true,
-  "vastaus": "Nyt muistan: alueella on [[Skanderbegin kansallismuseo]], jonka arkkitehdit Pranvera Masha ja Pirro Vaso rakensivat 1980-luvun alussa. Lisäksi linnan alueella on [[etnografinen museo]]. Museoita kahdet, ja kyyhkyllä vain yhdet siivet.",
+  "vastaus": "Nyt muistan: linnan alueella on [[Skanderbegin kansallismuseo]], joka avattiin vuonna 1982, sekä [[etnografinen museo]]. Museoita kahdet, ja kyyhkyllä vain yhdet siivet.",
   "linkit": [
    "Skanderbegin kansallismuseo",
    "etnografinen museo"
@@ -333,7 +333,7 @@
   "kohde": "kohde:krujen-linna",
   "kysymys": "Onko Krujën linna kuvattu Albanian rahassa?",
   "uusi": true,
-  "vastaus": "Ai tota, tähän on helppo vastata. Kyllä, linna on kuvattu Albanian 1000 ja 5000 [[lekin]] seteleissä. Lek on Albanian rahayksikkö, ja linna liittyy vahvasti [[Skanderbegin]] johtamaan vastarintaan. Minä kantaisin kyllä mieluummin kirjeitä kuin seteleitä.",
+  "vastaus": "Ai tota, tähän on helppo vastata. Kyllä, Krujën linna on kuvattu Albanian 5000 [[lekin]] setelin kääntöpuolella. Lek on Albanian rahayksikkö, ja linna liittyy vahvasti [[Skanderbegin]] johtamaan vastarintaan. Minä kantaisin kyllä mieluummin kirjeitä kuin seteleitä.",
   "linkit": [
    "lekin",
    "Skanderbegin"
@@ -433,12 +433,11 @@
   "kohde": "kohde:hahmotelma-butrint",
   "kysymys": "Miltä Butrint näytti loistoaikanaan?",
   "uusi": false,
-  "vastaus": "Kato, kaupunkia kannattaa kuvitella satamana. Butrint oli kauppasatamakaupunki, jonka [[Korfun]] kreikkalaiset perustivat kauppa-asutukseksi viimeistään 600-luvulla eaa. Rooman-kaudella siitä kasvoi vaurastuva kaupunki, jolla oli oma teatteri, [[kylpylät]], [[foorumi]] ja [[vesijohto]]. Bysantin aikana siitä tuli piispanistuin.\n\nYlhäältä katsoen vesijohto olisi tehnyt minuun vaikutuksen, sillä juomavesi on kyyhkyllekin tärkeää. Toivon silti, että siellä oli myös leipomo, vaikka en voi sitä todistaa.",
+  "vastaus": "Kato, kaupunkia kannattaa kuvitella satamana. Butrint oli kauppasatamakaupunki: alun perin chaonialaisten asuttama paikka, joka oli [[Korfun]] vaikutuspiirissä, kasvoi Rooman aikana vaurastuvaksi kaupungiksi, jolla oli [[vesijohto]] ja [[foorumi]], ja siitä tuli Bysantin aikana piispanistuin.\n\nYlhäältä katsoen vesijohto olisi tehnyt minuun vaikutuksen, sillä juomavesi on kyyhkyllekin tärkeää. Toivon silti, että siellä oli myös leipomo, vaikka en voi sitä todistaa.",
   "linkit": [
    "Korfun",
-   "kylpylät",
-   "foorumi",
-   "vesijohto"
+   "vesijohto",
+   "foorumi"
   ],
   "jatkot": [
    "Mikä oli roomalaisen foorumin tehtävä kaupungissa?",
@@ -449,7 +448,7 @@
   "kohde": "kohde:hahmotelma-butrint",
   "kysymys": "Miksi Butrint on nykyään raunioina?",
   "uusi": false,
-  "vastaus": "Nyt muistan: Butrintin ympäristö alkoi soistua venetsialaiskauden jälkeen, ja keskiajan lopulla kaupunki hylättiin kokonaan. Raunioita peitti vuosisatojen ajan [[malariasuo]]. Italialainen arkeologi [[Luigi Maria Ugolini]] alkoi kaivaa kaupunkia esiin vuonna 1928, ja Unesco liitti kohteen maailmanperintöluetteloon vuonna 1992. Onneksi se on saatu takaisin päivänvaloon.",
+  "vastaus": "Nyt muistan: Myöhäiskeskiajalla ympäristö soistui ja kaupunki autioitui. Raunioita peitti vuosisatojen ajan [[malariasuo]]. Italialainen arkeologi [[Luigi Maria Ugolini]] aloitti kaivaukset 1928, ja Unesco liitti kohteen maailmanperintöluetteloon 1992. Onneksi se on saatu takaisin päivänvaloon.",
   "linkit": [
    "malariasuo",
    "Luigi Maria Ugolini"
