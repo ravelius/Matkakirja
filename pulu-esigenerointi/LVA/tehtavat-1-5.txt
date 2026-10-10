@@ -1,0 +1,194 @@
+================ KOHTA 21 (kohde:hahmotelma-slitere) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slītere (meri)
+Tietoruudun teksti: Slītere on Latvian pienin kansallispuisto, joka sijaitsee Kuurinmaan länsirannikolla Kolkan niemen tuntumassa, missä Irben salmi päättyy. Virallisesti puisto perustettiin vuonna 2000, mutta se pohjautuu Slīteren luonnonsuojelualueeseen, joka on yksi Baltian vanhimmista. Tunnetuimpia piirteitä ovat Zilie Kalni eli "Siniset kukkulat", jotka olivat tuhansia vuosia sitten Baltian jääjärven muinaista rantaa, sekä lehtimetsät, dyynit ja niiden väliset suot. Puisto sijaitsee Itämeren lintujen muuttoreitin varrella, ja sen yli on havaittu jopa 60 000 lintua tunnissa. Rannikolla on lisäksi harmaahylkeiden eteläisimmät poikashoitolat maailmassa, ja myrskyjen jälkeen rannalta voi löytää meripihkaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Campo Grande — kaupunkilehti / Campo Grande: Terena - cerradon maanviljelijät] Terena-kansa on asuttanut nykyisen Mato Grosso do Sulin alueita, erityisesti Aquidauanan ja Mirandan seutuja, kauan ennen minkään kaupungin perustamista. He puhuvat arawakkilaiseen kieliperheeseen kuuluvaa terenaa ja ovat perinteisesti viljelleet maniokkia, riisiä, maissia ja papuja kylien verkostossa. Vuosina 1864-1870 käydyssä Paraguayn sodassa Terenat taistelivat Brasilian liittolaisina - sota päättyi vain kolme vuotta ennen isoisän matkaa. Sodan jälkeen monet Terenat menettivät maitaan karjatilallisille, jotka ottivat haltuunsa vailla virallista omistuskirjaa olleet alueet.
+- [Novosibirsk — kaupunkilehti / Novosibirsk: Ainoa kohta, jossa joki on putkessa] Radan piti alun perin kulkea Kolyvanin ja Tomskin kautta, mutta siellä Ob tulvii keväisin leveälle. Retkikuntaa johtanut Nikolai Garin-Mihailovski perusteli toista paikkaa näin: sadankuudenkymmenen virstan matkalla tämä on ainoa kohta, jossa joki on talonpoikien sanoin putkessa, sillä molemmat rannat ja uoma ovat kalliota. Kolyvanissa joki leviää tulvalla kahdentoista virstan levyiseksi, tässä vain neljänsadan sylen. Elokuussa 1891 Bolšoje Krivoštšokovon kylässä pidettiin maastokokous, jossa ylityspaikka lyötiin lukkoon. Osa tutkijoista antaa kunnian retkikunnan kenttäinsinöörille Vikenti Roetskille.
+
+### 21.1
+KYSYMYS: Miksi Slīteren yli lentää keväisin ja syksyisin kymmeniä tuhansia lintuja tunnissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slītere (meri)
+Tietoruudun teksti: Slītere on Latvian pienin kansallispuisto, joka sijaitsee Kuurinmaan länsirannikolla Kolkan niemen tuntumassa, missä Irben salmi päättyy. Virallisesti puisto perustettiin vuonna 2000, mutta se pohjautuu Slīteren luonnonsuojelualueeseen, joka on yksi Baltian vanhimmista. Tunnetuimpia piirteitä ovat Zilie Kalni eli "Siniset kukkulat", jotka olivat tuhansia vuosia sitten Baltian jääjärven muinaista rantaa, sekä lehtimetsät, dyynit ja niiden väliset suot. Puisto sijaitsee Itämeren lintujen muuttoreitin varrella, ja sen yli on havaittu jopa 60 000 lintua tunnissa. Rannikolla on lisäksi harmaahylkeiden eteläisimmät poikashoitolat maailmassa, ja myrskyjen jälkeen rannalta voi löytää meripihkaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Campo Grande — kaupunkilehti / Campo Grande: Terena - cerradon maanviljelijät] Terena-kansa on asuttanut nykyisen Mato Grosso do Sulin alueita, erityisesti Aquidauanan ja Mirandan seutuja, kauan ennen minkään kaupungin perustamista. He puhuvat arawakkilaiseen kieliperheeseen kuuluvaa terenaa ja ovat perinteisesti viljelleet maniokkia, riisiä, maissia ja papuja kylien verkostossa. Vuosina 1864-1870 käydyssä Paraguayn sodassa Terenat taistelivat Brasilian liittolaisina - sota päättyi vain kolme vuotta ennen isoisän matkaa. Sodan jälkeen monet Terenat menettivät maitaan karjatilallisille, jotka ottivat haltuunsa vailla virallista omistuskirjaa olleet alueet.
+- [Novosibirsk — kaupunkilehti / Novosibirsk: Ainoa kohta, jossa joki on putkessa] Radan piti alun perin kulkea Kolyvanin ja Tomskin kautta, mutta siellä Ob tulvii keväisin leveälle. Retkikuntaa johtanut Nikolai Garin-Mihailovski perusteli toista paikkaa näin: sadankuudenkymmenen virstan matkalla tämä on ainoa kohta, jossa joki on talonpoikien sanoin putkessa, sillä molemmat rannat ja uoma ovat kalliota. Kolyvanissa joki leviää tulvalla kahdentoista virstan levyiseksi, tässä vain neljänsadan sylen. Elokuussa 1891 Bolšoje Krivoštšokovon kylässä pidettiin maastokokous, jossa ylityspaikka lyötiin lukkoon. Osa tutkijoista antaa kunnian retkikunnan kenttäinsinöörille Vikenti Roetskille.
+
+### 21.2
+KYSYMYS: Mikä oli Baltian jääjärvi, ja mitä sen rannalle jäi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slītere (meri)
+Tietoruudun teksti: Slītere on Latvian pienin kansallispuisto, joka sijaitsee Kuurinmaan länsirannikolla Kolkan niemen tuntumassa, missä Irben salmi päättyy. Virallisesti puisto perustettiin vuonna 2000, mutta se pohjautuu Slīteren luonnonsuojelualueeseen, joka on yksi Baltian vanhimmista. Tunnetuimpia piirteitä ovat Zilie Kalni eli "Siniset kukkulat", jotka olivat tuhansia vuosia sitten Baltian jääjärven muinaista rantaa, sekä lehtimetsät, dyynit ja niiden väliset suot. Puisto sijaitsee Itämeren lintujen muuttoreitin varrella, ja sen yli on havaittu jopa 60 000 lintua tunnissa. Rannikolla on lisäksi harmaahylkeiden eteläisimmät poikashoitolat maailmassa, ja myrskyjen jälkeen rannalta voi löytää meripihkaa.
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:hahmotelma-dundaga) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dundagan linna (historia)
+Tietoruudun teksti: Dundaga on kylä Kuurinmaalla Latvian länsiosassa, nykyisin Talsin kunnan alueella. Sen tunnetuin nähtävyys on Dundagan linna, jonka Riian arkkihiippakunta rakennutti 1200-luvun lopulla. Linna on nelikulmainen, noin 48 x 69 metrin kokoinen, ja sitä ympäröi kolmelta puolelta Dundagan lammikko; sisäpihalla on yhä vanha kaivo. Linnaa muutettiin monta kertaa, ja 1600-luvulla siitä tehtiin kartanon herrasrakennus. 1500-luvulta vuoteen 1918 linna oli Kuurinmaan suurimman yksityisen kartanoalueen keskus, ja se kuului baltiansaksalaiselle Osten-Sacken-aatelissuvulle. Kartanon alaisuudessa oli 1800-luvulla viisitoista sivukartanoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dublin — kaupunkilehti / Luonto: Villit peurat, jotka asuivat puistossa ennen puistoa] 1660-luku — Phoenix Park perustettiin 1660-luvulla Irlannin käskynhaltijan Ormondin herttuan yksityiseksi metsästyspuistoksi, ja hän toi silloin puistoon kuusipeuroja riistaksi. Puisto avattiin yleisölle vuonna 1747, mutta peurat jäivät paikalleen, ja niiden jälkeläiset vaeltavat 707 hehtaarin puistossa yhä vapaina — lauma on nykyään noin 600 eläintä. Isoisän matkan aikaan puisto on ollut julkinen jo yli sata vuotta, ja peurat ovat sille yhtä ominaisia kuin silloinkin.
+
+### 22.1
+KYSYMYS: Miksi Dundagan linnan ympärillä on vettä kolmella sivulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dundagan linna (historia)
+Tietoruudun teksti: Dundaga on kylä Kuurinmaalla Latvian länsiosassa, nykyisin Talsin kunnan alueella. Sen tunnetuin nähtävyys on Dundagan linna, jonka Riian arkkihiippakunta rakennutti 1200-luvun lopulla. Linna on nelikulmainen, noin 48 x 69 metrin kokoinen, ja sitä ympäröi kolmelta puolelta Dundagan lammikko; sisäpihalla on yhä vanha kaivo. Linnaa muutettiin monta kertaa, ja 1600-luvulla siitä tehtiin kartanon herrasrakennus. 1500-luvulta vuoteen 1918 linna oli Kuurinmaan suurimman yksityisen kartanoalueen keskus, ja se kuului baltiansaksalaiselle Osten-Sacken-aatelissuvulle. Kartanon alaisuudessa oli 1800-luvulla viisitoista sivukartanoa.
+
+### 22.2
+KYSYMYS: Miksi yhden aatelissuvun kartano kasvoi Kuurinmaan suurimmaksi yksityiseksi maatilaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dundagan linna (historia)
+Tietoruudun teksti: Dundaga on kylä Kuurinmaalla Latvian länsiosassa, nykyisin Talsin kunnan alueella. Sen tunnetuin nähtävyys on Dundagan linna, jonka Riian arkkihiippakunta rakennutti 1200-luvun lopulla. Linna on nelikulmainen, noin 48 x 69 metrin kokoinen, ja sitä ympäröi kolmelta puolelta Dundagan lammikko; sisäpihalla on yhä vanha kaivo. Linnaa muutettiin monta kertaa, ja 1600-luvulla siitä tehtiin kartanon herrasrakennus. 1500-luvulta vuoteen 1918 linna oli Kuurinmaan suurimman yksityisen kartanoalueen keskus, ja se kuului baltiansaksalaiselle Osten-Sacken-aatelissuvulle. Kartanon alaisuudessa oli 1800-luvulla viisitoista sivukartanoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dublin — kaupunkilehti / Luonto: Villit peurat, jotka asuivat puistossa ennen puistoa] 1660-luku — Phoenix Park perustettiin 1660-luvulla Irlannin käskynhaltijan Ormondin herttuan yksityiseksi metsästyspuistoksi, ja hän toi silloin puistoon kuusipeuroja riistaksi. Puisto avattiin yleisölle vuonna 1747, mutta peurat jäivät paikalleen, ja niiden jälkeläiset vaeltavat 707 hehtaarin puistossa yhä vapaina — lauma on nykyään noin 600 eläintä. Isoisän matkan aikaan puisto on ollut julkinen jo yli sata vuotta, ja peurat ovat sille yhtä ominaisia kuin silloinkin.
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:hahmotelma-talsi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Talsi (kulttuuri)
+Tietoruudun teksti: Talsi on Kuurinmaan kaupunki Latvian länsiosassa, ja sitä kutsutaan Kuurinmaan vihreäksi helmeksi. Se on rakentunut yhdeksän kukkulan ja kahden järven ympärille. Keskustan Pilskalns-kukkulalla on ollut kuurilaisten linnavuori vähintään 900-luvulta lähtien. Talsi mainitaan kirjallisissa lähteissä ensimmäisen kerran vuonna 1231, ja 1200-luvun lopulla paikalle rakennettiin linna. Nykyinen pääkirkko vihittiin käyttöön 1567, ja se on kaupungin vanhin kivirakennus. Kirkossa toimi pitkään pastori Karl Ferdinand Amenda, Ludwig van Beethovenin läheinen ystävä. Talsi liitettiin osaksi Venäjän keisarikuntaa vuonna 1795 Kuurinmaan mukana.
+
+### 23.1
+KYSYMYS: Miksi Talsia kutsutaan Kuurinmaan vihreäksi helmeksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Talsi (kulttuuri)
+Tietoruudun teksti: Talsi on Kuurinmaan kaupunki Latvian länsiosassa, ja sitä kutsutaan Kuurinmaan vihreäksi helmeksi. Se on rakentunut yhdeksän kukkulan ja kahden järven ympärille. Keskustan Pilskalns-kukkulalla on ollut kuurilaisten linnavuori vähintään 900-luvulta lähtien. Talsi mainitaan kirjallisissa lähteissä ensimmäisen kerran vuonna 1231, ja 1200-luvun lopulla paikalle rakennettiin linna. Nykyinen pääkirkko vihittiin käyttöön 1567, ja se on kaupungin vanhin kivirakennus. Kirkossa toimi pitkään pastori Karl Ferdinand Amenda, Ludwig van Beethovenin läheinen ystävä. Talsi liitettiin osaksi Venäjän keisarikuntaa vuonna 1795 Kuurinmaan mukana.
+
+### 23.2
+KYSYMYS: Mitä tekemistä Talsin pastorilla oli Ludwig van Beethovenin kanssa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Talsi (kulttuuri)
+Tietoruudun teksti: Talsi on Kuurinmaan kaupunki Latvian länsiosassa, ja sitä kutsutaan Kuurinmaan vihreäksi helmeksi. Se on rakentunut yhdeksän kukkulan ja kahden järven ympärille. Keskustan Pilskalns-kukkulalla on ollut kuurilaisten linnavuori vähintään 900-luvulta lähtien. Talsi mainitaan kirjallisissa lähteissä ensimmäisen kerran vuonna 1231, ja 1200-luvun lopulla paikalle rakennettiin linna. Nykyinen pääkirkko vihittiin käyttöön 1567, ja se on kaupungin vanhin kivirakennus. Kirkossa toimi pitkään pastori Karl Ferdinand Amenda, Ludwig van Beethovenin läheinen ystävä. Talsi liitettiin osaksi Venäjän keisarikuntaa vuonna 1795 Kuurinmaan mukana.
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:hahmotelma-tukums) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tukums (historia)
+Tietoruudun teksti: Tukums on Kuurinmaan itäosan kaupunki Latviassa. Siellä asuu yli 16 000 ihmistä, ja se on tärkeä rautatiesolmukohta, jossa yhtyvät Riian, Jelgavan ja Ventspilsin radat. Livonian ritarikunta hallitsi paikkaa vuodesta 1253, ja 1200-luvun lopulla Slocene-joen rannalle rakennettiin muurattu linna. Sen ympärille asettui saksalaisia kauppiaita ja käsityöläisiä. Herttua Jaakobin aikana 1600-luvulla kaupungissa koettiin nopea talouskasvu, ja sinne rakennettiin pato, järvi, jauhomylly ja kuparinvalimo. Kuurinmaa liitettiin Venäjän keisarikuntaan 1795, ja Tukumista tuli alueellinen keskus. Katujen valaistus aloitettiin vuonna 1875, ja Riian ja Tukumin välinen rautatie avattiin 1877, minkä jälkeen kehitys nopeutui.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Buenos Aires — kohdekartta / Kohdekartta: Buenos Airesin katedraali] 1753–1863 Juan de Garay varasi kaupungin pääkirkolle vuonna 1580 saman korttelin neljänneksen, jolla katedraali yhä seisoo. Ensimmäiset kirkot olivat savitiilestä ja puusta, ja ne kaatuivat toinen toisensa jälkeen: yksi purettiin 1605 vanhana ja sopimattomana, seuraavan katto uhkasi sortua 1616 ja rakennus romahti, koska se oli tehty lahosta pajupuusta. Uusi kirkko valmistui 1618, mutta se oli edellistä pienempi. Kolmen laivan kirkko saatiin valmiiksi 1671, ja sen torni ja katto putosivat 1680-luvun alussa. Toukokuun 23. päivän yönä 1752 kirkon keskilaiva romahti jälleen. Nykyisen rakennuksen aloitti 1753 italialainen arkkitehti Antonio Masella. Hänen kupolissaan havaittiin halkeamia, se jo…
+
+### 24.1
+KYSYMYS: Miksi herttua Jaakobin aikana Tukumissa rakennettiin pato, jauhomylly ja kuparinvalimo?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tukums (historia)
+Tietoruudun teksti: Tukums on Kuurinmaan itäosan kaupunki Latviassa. Siellä asuu yli 16 000 ihmistä, ja se on tärkeä rautatiesolmukohta, jossa yhtyvät Riian, Jelgavan ja Ventspilsin radat. Livonian ritarikunta hallitsi paikkaa vuodesta 1253, ja 1200-luvun lopulla Slocene-joen rannalle rakennettiin muurattu linna. Sen ympärille asettui saksalaisia kauppiaita ja käsityöläisiä. Herttua Jaakobin aikana 1600-luvulla kaupungissa koettiin nopea talouskasvu, ja sinne rakennettiin pato, järvi, jauhomylly ja kuparinvalimo. Kuurinmaa liitettiin Venäjän keisarikuntaan 1795, ja Tukumista tuli alueellinen keskus. Katujen valaistus aloitettiin vuonna 1875, ja Riian ja Tukumin välinen rautatie avattiin 1877, minkä jälkeen kehitys nopeutui.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Buenos Aires — kohdekartta / Kohdekartta: Buenos Airesin katedraali] 1753–1863 Juan de Garay varasi kaupungin pääkirkolle vuonna 1580 saman korttelin neljänneksen, jolla katedraali yhä seisoo. Ensimmäiset kirkot olivat savitiilestä ja puusta, ja ne kaatuivat toinen toisensa jälkeen: yksi purettiin 1605 vanhana ja sopimattomana, seuraavan katto uhkasi sortua 1616 ja rakennus romahti, koska se oli tehty lahosta pajupuusta. Uusi kirkko valmistui 1618, mutta se oli edellistä pienempi. Kolmen laivan kirkko saatiin valmiiksi 1671, ja sen torni ja katto putosivat 1680-luvun alussa. Toukokuun 23. päivän yönä 1752 kirkon keskilaiva romahti jälleen. Nykyisen rakennuksen aloitti 1753 italialainen arkkitehti Antonio Masella. Hänen kupolissaan havaittiin halkeamia, se jo…
+
+### 24.2
+KYSYMYS: Mitä rautatie muutti pienessä kuurinmaalaisessa kaupungissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tukums (historia)
+Tietoruudun teksti: Tukums on Kuurinmaan itäosan kaupunki Latviassa. Siellä asuu yli 16 000 ihmistä, ja se on tärkeä rautatiesolmukohta, jossa yhtyvät Riian, Jelgavan ja Ventspilsin radat. Livonian ritarikunta hallitsi paikkaa vuodesta 1253, ja 1200-luvun lopulla Slocene-joen rannalle rakennettiin muurattu linna. Sen ympärille asettui saksalaisia kauppiaita ja käsityöläisiä. Herttua Jaakobin aikana 1600-luvulla kaupungissa koettiin nopea talouskasvu, ja sinne rakennettiin pato, järvi, jauhomylly ja kuparinvalimo. Kuurinmaa liitettiin Venäjän keisarikuntaan 1795, ja Tukumista tuli alueellinen keskus. Katujen valaistus aloitettiin vuonna 1875, ja Riian ja Tukumin välinen rautatie avattiin 1877, minkä jälkeen kehitys nopeutui.
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-cesvaine) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cesvainen kartano (historia)
+Tietoruudun teksti: Cesvaine on kaupunki Vidzemen alueella Latvian itäosassa. Ennen 1200-luvun ristiretkiä alue kuului Jersikan ruhtinaskuntaan, ja siellä asui muinaisia latgalilaisia. Paikka mainitaan kirjallisissa lähteissä ensimmäisen kerran vuonna 1209 Riian piispa Albertin ja Visvaldis Jersikalaisen välisessä sopimuksessa. Kivilinna rakennettiin 1400-luvun alussa, mutta Liivinsodan aikana vuonna 1577 Venäjän tsaari Iivana Julma määräsi linnan ja koko kylän hävitettäväksi, kun puolustajat eivät suostuneet antautumaan. Vuonna 1815 paroni von Wulf osti asutuksen ja sen lähimaat, ja Cesvainesta tuli kartanon keskus. Nopea kehitys alkoi 1800-luvun jälkipuoliskolla. Nykyinen Cesvainen palatsi valmistui vuonna 1896 keskiaikaisten linnojen raunioiden lähelle.
+
+### 25.1
+KYSYMYS: Miksi Cesvainen linna ja koko kylä hävitettiin Liivinsodan aikana?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cesvainen kartano (historia)
+Tietoruudun teksti: Cesvaine on kaupunki Vidzemen alueella Latvian itäosassa. Ennen 1200-luvun ristiretkiä alue kuului Jersikan ruhtinaskuntaan, ja siellä asui muinaisia latgalilaisia. Paikka mainitaan kirjallisissa lähteissä ensimmäisen kerran vuonna 1209 Riian piispa Albertin ja Visvaldis Jersikalaisen välisessä sopimuksessa. Kivilinna rakennettiin 1400-luvun alussa, mutta Liivinsodan aikana vuonna 1577 Venäjän tsaari Iivana Julma määräsi linnan ja koko kylän hävitettäväksi, kun puolustajat eivät suostuneet antautumaan. Vuonna 1815 paroni von Wulf osti asutuksen ja sen lähimaat, ja Cesvainesta tuli kartanon keskus. Nopea kehitys alkoi 1800-luvun jälkipuoliskolla. Nykyinen Cesvainen palatsi valmistui vuonna 1896 keskiaikaisten linnojen raunioiden lähelle.
+
+### 25.2
+KYSYMYS: Mikä oli Jersikan ruhtinaskunta, ja keitä latgalilaiset olivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cesvainen kartano (historia)
+Tietoruudun teksti: Cesvaine on kaupunki Vidzemen alueella Latvian itäosassa. Ennen 1200-luvun ristiretkiä alue kuului Jersikan ruhtinaskuntaan, ja siellä asui muinaisia latgalilaisia. Paikka mainitaan kirjallisissa lähteissä ensimmäisen kerran vuonna 1209 Riian piispa Albertin ja Visvaldis Jersikalaisen välisessä sopimuksessa. Kivilinna rakennettiin 1400-luvun alussa, mutta Liivinsodan aikana vuonna 1577 Venäjän tsaari Iivana Julma määräsi linnan ja koko kylän hävitettäväksi, kun puolustajat eivät suostuneet antautumaan. Vuonna 1815 paroni von Wulf osti asutuksen ja sen lähimaat, ja Cesvainesta tuli kartanon keskus. Nopea kehitys alkoi 1800-luvun jälkipuoliskolla. Nykyinen Cesvainen palatsi valmistui vuonna 1896 keskiaikaisten linnojen raunioiden lähelle.
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

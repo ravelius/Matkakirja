@@ -1,0 +1,278 @@
+================ KOHTA 11 (kohde:engure) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Enguren luontopuisto (eläimet)
+Tietoruudun teksti: Engure on matala rannikkojärvi Riianlahden tuntumassa Luoteis-Latviassa ja maan kolmanneksi suurin järvi. Se syntyi noin 4 000 vuotta sitten Litorinameren jäänteenä ja on Latvian rannikon suurin tällainen jäännevesistö. Järveä erottaa avomerestä pitkä hiekkainen Enguren niemi.
+
+Vuonna 1842 kaivettu Mērsragsin kanava laski järven vedenpintaa noin puolellatoista metrillä ja puolitti sen pinta-alan. Siitä syntyi nykyinen tasaisen matala järvi: keskisyvyys on vain 0,4 metriä ja suurin syvyys 2,1 metriä. Kanava pitää yllä suoraa yhteyttä Riianlahteen ja tasaa sekä vedenkorkeutta että suolapitoisuutta.
+
+Vesi pysyy kirkkaana kasvien ansiosta: laajat näkinpartaislevät sitovat fosforia itseensä ja estävät leväkukinnat. Järvi on kansainvälisesti merkittävä vesilinnuille — siellä pesii yli 180 lajia, ja se on tärkeä levähdyspaikka muuttoreiteillä. Järvellä on myös lintututkijoiden kelluva tukikoht…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Rue d'Ulm 1862 — liemi, joka pysyy kirkkaana] 1862 — Kalenterissa on kulunut jo viikkoja, ja pullo on yhä kirkas. Louis Pasteur nostaa sen valoa vasten École normale supérieuren laboratoriossa rue d'Ulmilla: keitetty lihaliemi, jonka joutsenkaulan muotoinen lasikaula päästää ilman sisään mutta pysäyttää pölyn mutkaansa. Naapuripullo, jonka kaulan hän katkaisi, on sameana ja haisee. Kysymys, jota Pasteur ratkoo, on vanha ja kiihkeä: syntyykö elämä itsestään mätänevästä aineesta? Rouenin museonjohtaja Félix Pouchet vakuuttaa, että ilma itsessään riittää synnyttämään sen. Tiedeakatemia on luvannut 2 500 frangin Alhumbert-palkinnon sille, joka ratkaisee kiistan kokeellisesti. Pasteur vie pullojaan vuorille ja avaa niitä ohuessa ilmassa, jo…
+- [Brisbane — kaupunkilehti / Brisbane: Siirtola, joka muutti heti perustamisensa jälkeen] Matthew Flinders kartoitti osia Moreton Baystä 1799, ja John Oxley löysi joen 1823 haaksirikkoutuneiden merimiesten avulla ja suositteli seutua rangaistussiirtolaksi. Ensimmäinen tukikohta perustettiin Redcliffeen 1824, mutta jo kahdeksan kuukauden jälkeen koko joukko — vangit, sotilaat, hallintoväki ja perheet — siirtyi joen mutkaan North Quaylle nykyisen keskustan kohdalle. Kapteeni Patrick Loganin komennossa asema sai maineen yhtenä Uuden Etelä-Walesin ankarimmista. Siirtola suljettiin 1842 ja alue avattiin vapaalle asutukselle; vasta siitä alkoi kaupungin kasvu.
+
+### 11.1
+KYSYMYS: Miksi järven pinta-ala puolittui vuoden 1842 jälkeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Enguren luontopuisto (eläimet)
+Tietoruudun teksti: Engure on matala rannikkojärvi Riianlahden tuntumassa Luoteis-Latviassa ja maan kolmanneksi suurin järvi. Se syntyi noin 4 000 vuotta sitten Litorinameren jäänteenä ja on Latvian rannikon suurin tällainen jäännevesistö. Järveä erottaa avomerestä pitkä hiekkainen Enguren niemi.
+
+Vuonna 1842 kaivettu Mērsragsin kanava laski järven vedenpintaa noin puolellatoista metrillä ja puolitti sen pinta-alan. Siitä syntyi nykyinen tasaisen matala järvi: keskisyvyys on vain 0,4 metriä ja suurin syvyys 2,1 metriä. Kanava pitää yllä suoraa yhteyttä Riianlahteen ja tasaa sekä vedenkorkeutta että suolapitoisuutta.
+
+Vesi pysyy kirkkaana kasvien ansiosta: laajat näkinpartaislevät sitovat fosforia itseensä ja estävät leväkukinnat. Järvi on kansainvälisesti merkittävä vesilinnuille — siellä pesii yli 180 lajia, ja se on tärkeä levähdyspaikka muuttoreiteillä. Järvellä on myös lintututkijoiden kelluva tukikoht…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kaupunkilehti / Brisbane: Siirtola, joka muutti heti perustamisensa jälkeen] Matthew Flinders kartoitti osia Moreton Baystä 1799, ja John Oxley löysi joen 1823 haaksirikkoutuneiden merimiesten avulla ja suositteli seutua rangaistussiirtolaksi. Ensimmäinen tukikohta perustettiin Redcliffeen 1824, mutta jo kahdeksan kuukauden jälkeen koko joukko — vangit, sotilaat, hallintoväki ja perheet — siirtyi joen mutkaan North Quaylle nykyisen keskustan kohdalle. Kapteeni Patrick Loganin komennossa asema sai maineen yhtenä Uuden Etelä-Walesin ankarimmista. Siirtola suljettiin 1842 ja alue avattiin vapaalle asutukselle; vasta siitä alkoi kaupungin kasvu.
+- [Pietari — kohdekartta / Kohdekartta: Fabergé-museo] Ensin ajoitus, ettei tule väärinkäsitystä: isoisäsi ei voinut nähdä yhtäkään munaa. Ensimmäinen valmistui pääsiäiseksi 1885, kaksitoista vuotta hänen käyntinsä jälkeen. Liike oli kyllä olemassa: Gustav Fabergé perusti sen tähän kaupunkiin 1842, ja poika Carl otti sen haltuunsa 1872 — merkintää edeltävänä vuonna. Silloin siellä ei tehty keisarille lahjoja vaan luetteloitiin, korjattiin ja entisöitiin palatsin taidekokoelman esineitä. Sitten Aleksanteri III tilasi vaimolleen pääsiäislahjan, ja siitä tuli tapa. Ensimmäinen muna oli ulkoa kuusi ja puoli senttiä valkoista emalia. Se aukesi, ja sisällä oli kultainen keltuainen; keltuainen aukesi, ja sisällä istui kultainen kana; kanan sisällä oli…
+
+### 11.2
+KYSYMYS: Miten järvi pysyy kirkasvetisenä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Enguren luontopuisto (eläimet)
+Tietoruudun teksti: Engure on matala rannikkojärvi Riianlahden tuntumassa Luoteis-Latviassa ja maan kolmanneksi suurin järvi. Se syntyi noin 4 000 vuotta sitten Litorinameren jäänteenä ja on Latvian rannikon suurin tällainen jäännevesistö. Järveä erottaa avomerestä pitkä hiekkainen Enguren niemi.
+
+Vuonna 1842 kaivettu Mērsragsin kanava laski järven vedenpintaa noin puolellatoista metrillä ja puolitti sen pinta-alan. Siitä syntyi nykyinen tasaisen matala järvi: keskisyvyys on vain 0,4 metriä ja suurin syvyys 2,1 metriä. Kanava pitää yllä suoraa yhteyttä Riianlahteen ja tasaa sekä vedenkorkeutta että suolapitoisuutta.
+
+Vesi pysyy kirkkaana kasvien ansiosta: laajat näkinpartaislevät sitovat fosforia itseensä ja estävät leväkukinnat. Järvi on kansainvälisesti merkittävä vesilinnuille — siellä pesii yli 180 lajia, ja se on tärkeä levähdyspaikka muuttoreiteillä. Järvellä on myös lintututkijoiden kelluva tukikoht…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Rue d'Ulm 1862 — liemi, joka pysyy kirkkaana] 1862 — Kalenterissa on kulunut jo viikkoja, ja pullo on yhä kirkas. Louis Pasteur nostaa sen valoa vasten École normale supérieuren laboratoriossa rue d'Ulmilla: keitetty lihaliemi, jonka joutsenkaulan muotoinen lasikaula päästää ilman sisään mutta pysäyttää pölyn mutkaansa. Naapuripullo, jonka kaulan hän katkaisi, on sameana ja haisee. Kysymys, jota Pasteur ratkoo, on vanha ja kiihkeä: syntyykö elämä itsestään mätänevästä aineesta? Rouenin museonjohtaja Félix Pouchet vakuuttaa, että ilma itsessään riittää synnyttämään sen. Tiedeakatemia on luvannut 2 500 frangin Alhumbert-palkinnon sille, joka ratkaisee kiistan kokeellisesti. Pasteur vie pullojaan vuorille ja avaa niitä ohuessa ilmassa, jo…
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:ventas-rumba) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ventas rumba (ruoka)
+Tietoruudun teksti: Ventas rumba on Venta-joen vesiputous Kuldīgassa Länsi-Latviassa ja Euroopan levein: 249 metriä, kevättulvien aikaan jopa 275. Korkeutta sillä on veden korkeudesta riippuen vain 1,8–2,2 metriä. Putouksen tekee devonikautinen dolomiitti, jonka alempi kerros rapautuu nopeammin kuin ylempi: ylempi jää roikkumaan, kunnes lohkeaa jokeen. Siksi putous perääntyy hitaasti ylävirtaan, ja koska virta on keskellä voimakkain, keskikohta vetäytyy reunoja nopeammin.
+
+Kaupunki syntyi juuri tähän, koska putous katkaisi keskiaikaisen Ventan sisävesireitin. Kuurinmaan herttua Jacob Kettler yritti 1600-luvun puolivälissä kaivattaa ohitusuoman oikealle rannalle, mutta dolomiitti oli liian kovaa ja työ liian hidasta. Legendan mukaan herttua käski sitten räjäyttää putouksen: ensimmäinen räjäytys vain irrotti suuria lohkareita ja siirsi reunaviivaa, ja kun paine halkoi läheisen palatsin seiniä, hanke jäi siih…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New Orleans — kaupunkilehti / Historia: Höyrylaiva joka avasi joen ylävirtaan] Ennen höyryä Mississippiä pystyi kulkemaan käytännössä vain myötävirtaan; ylävirtaan noustiin soutamalla tai hinaamalla rannalta. Sen muutti laiva nimeltä New Orleans, joen ensimmäinen höyrylaiva, joka lähti Pittsburghista lokakuussa 1811. Matkalla se selvisi vahingoittumattomana New Madridin maanjäristyssarjasta ja saapui perille 10. tammikuuta 1812. Pian se aloitti säännölliset vuorot Natcheziin. Vuoteen 1860 mennessä joen kauppa oli tehnyt New Orleansista maan kolmanneksi suurimman tuontisataman lastimäärällä mitattuna ja nostanut sen asukaskohtaisen tulotason maan toiseksi korkeimmaksi.
+- [Tukholma — kohdekartta / Kohdekartta: Norrström] Se kohta, jossa makea vesi purkautuu suolaiseen, on kalalle portti. Norrström on virta, jota pitkin Mälarenin vesi syöksyy mereen aivan eduskuntatalon vierestä, ja siitä nostetaan joka vuosi satoja lohia ja meritaimenia: vuonna 2000 saatiin lohi, joka painoi lähes kaksikymmentäkaksi kiloa. Vedessä elää noin kolmekymmentä kalalajia, enemmän kuin missään muualla Tukholman seudun vesissä. Aina ei ollut näin. Kalat palasivat vasta 1970-luvulla aloitettujen istutusten myötä, ja vuonna 2024 vanha vuoden 1850 sulku muutettiin kalatieksi, jota myöten kalat pääsevät nousemaan järveen asti. Keskellä miljoonakaupunkia seisoo siis mies onki kädessä siinä samassa virrassa, jonka yli parlamentti katsoo i…
+
+### 12.1
+KYSYMYS: Miksi putous perääntyy hitaasti ylävirtaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ventas rumba (ruoka)
+Tietoruudun teksti: Ventas rumba on Venta-joen vesiputous Kuldīgassa Länsi-Latviassa ja Euroopan levein: 249 metriä, kevättulvien aikaan jopa 275. Korkeutta sillä on veden korkeudesta riippuen vain 1,8–2,2 metriä. Putouksen tekee devonikautinen dolomiitti, jonka alempi kerros rapautuu nopeammin kuin ylempi: ylempi jää roikkumaan, kunnes lohkeaa jokeen. Siksi putous perääntyy hitaasti ylävirtaan, ja koska virta on keskellä voimakkain, keskikohta vetäytyy reunoja nopeammin.
+
+Kaupunki syntyi juuri tähän, koska putous katkaisi keskiaikaisen Ventan sisävesireitin. Kuurinmaan herttua Jacob Kettler yritti 1600-luvun puolivälissä kaivattaa ohitusuoman oikealle rannalle, mutta dolomiitti oli liian kovaa ja työ liian hidasta. Legendan mukaan herttua käski sitten räjäyttää putouksen: ensimmäinen räjäytys vain irrotti suuria lohkareita ja siirsi reunaviivaa, ja kun paine halkoi läheisen palatsin seiniä, hanke jäi siih…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New Orleans — kaupunkilehti / Historia: Höyrylaiva joka avasi joen ylävirtaan] Ennen höyryä Mississippiä pystyi kulkemaan käytännössä vain myötävirtaan; ylävirtaan noustiin soutamalla tai hinaamalla rannalta. Sen muutti laiva nimeltä New Orleans, joen ensimmäinen höyrylaiva, joka lähti Pittsburghista lokakuussa 1811. Matkalla se selvisi vahingoittumattomana New Madridin maanjäristyssarjasta ja saapui perille 10. tammikuuta 1812. Pian se aloitti säännölliset vuorot Natcheziin. Vuoteen 1860 mennessä joen kauppa oli tehnyt New Orleansista maan kolmanneksi suurimman tuontisataman lastimäärällä mitattuna ja nostanut sen asukaskohtaisen tulotason maan toiseksi korkeimmaksi.
+
+### 12.2
+KYSYMYS: Miten lohia pyydettiin ilmasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ventas rumba (ruoka)
+Tietoruudun teksti: Ventas rumba on Venta-joen vesiputous Kuldīgassa Länsi-Latviassa ja Euroopan levein: 249 metriä, kevättulvien aikaan jopa 275. Korkeutta sillä on veden korkeudesta riippuen vain 1,8–2,2 metriä. Putouksen tekee devonikautinen dolomiitti, jonka alempi kerros rapautuu nopeammin kuin ylempi: ylempi jää roikkumaan, kunnes lohkeaa jokeen. Siksi putous perääntyy hitaasti ylävirtaan, ja koska virta on keskellä voimakkain, keskikohta vetäytyy reunoja nopeammin.
+
+Kaupunki syntyi juuri tähän, koska putous katkaisi keskiaikaisen Ventan sisävesireitin. Kuurinmaan herttua Jacob Kettler yritti 1600-luvun puolivälissä kaivattaa ohitusuoman oikealle rannalle, mutta dolomiitti oli liian kovaa ja työ liian hidasta. Legendan mukaan herttua käski sitten räjäyttää putouksen: ensimmäinen räjäytys vain irrotti suuria lohkareita ja siirsi reunaviivaa, ja kun paine halkoi läheisen palatsin seiniä, hanke jäi siih…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kohdekartta / Kohdekartta: Norrström] Se kohta, jossa makea vesi purkautuu suolaiseen, on kalalle portti. Norrström on virta, jota pitkin Mälarenin vesi syöksyy mereen aivan eduskuntatalon vierestä, ja siitä nostetaan joka vuosi satoja lohia ja meritaimenia: vuonna 2000 saatiin lohi, joka painoi lähes kaksikymmentäkaksi kiloa. Vedessä elää noin kolmekymmentä kalalajia, enemmän kuin missään muualla Tukholman seudun vesissä. Aina ei ollut näin. Kalat palasivat vasta 1970-luvulla aloitettujen istutusten myötä, ja vuonna 2024 vanha vuoden 1850 sulku muutettiin kalatieksi, jota myöten kalat pääsevät nousemaan järveen asti. Keskellä miljoonakaupunkia seisoo siis mies onki kädessä siinä samassa virrassa, jonka yli parlamentti katsoo i…
+- [Tukholma — kaupunkilehti / Kadut ja sulut: Lohi nousee eduskuntatalon vierestä] Norrström on virta, jota pitkin Mälarenin vesi syöksyy mereen aivan eduskuntatalon vierestä, ja siitä nostetaan joka vuosi satoja lohia ja meritaimenia: vuonna 2000 saatiin lohi, joka painoi lähes kaksikymmentäkaksi kiloa. Vedessä elää noin kolmekymmentä kalalajia, enemmän kuin missään muualla Tukholman seudun vesissä. Aina ei ollut näin. Kalat palasivat vasta 1970-luvulla aloitettujen istutusten myötä, ja vuonna 2024 vanha vuoden 1850 sulku muutettiin kalatieksi, jota myöten kalat pääsevät nousemaan järveen asti.
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:kolkan-niemi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kolkan niemi (merenkulku)
+Tietoruudun teksti: Kolkan niemi, latviaksi Kolkasrags ja liiviksi Kūolka nanā, on Kuurinmaan niemimaan kärki Itämeren rannalla Riianlahden suulla. Sitä ympäröi Irbensalmi, joka on luonnollinen raja Viroon; itäpuolella keskellä lahtea on virolainen Ruhnun saari. Niemi on Riianlahden luoteisin piste. Lähellä ovat Kolkan majakka ja Kolkan kylä, ja rantaa myöten jatkuu jono vanhoja liiviläiskyliä — Vaide, Saunags, Pitrags, Košrags ja Sīkrags — jotka kuuluvat suojeltuun Liivinrannan alueeseen.
+
+Niemi on osa Slīteren kansallispuistoa. Rantaa reunustaa metsäisten dyynien vyöhyke, jolla mänty kasvaa karulla ja vettä pidättämättömällä hiekalla. Tuuli siirtää hiekkaa jatkuvasti, ja kovissa myrskyissä puiden runkoja on hautautunut yli 60 senttimetrin syvyyteen. Suuret hautautumisjaksot 1967–1969 ja tammikuussa 2005 näkyvät puiden vuosilustoissa kapeina tai kokonaan puuttuvina renkaina, kunnes kasvu on palautunut enn…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namib — kaupunkilehti / Namib: Sossusvlein punaiset dyynit] Namibin eteläosassa Sossusvleissa hiekka on värjäytynyt punaruskeaksi vuosimiljoonien varrella hapettuneen raudan ansiosta – mitä vanhempi dyyni, sitä punaisempi sen pinta. Alueen dyynit kuuluvat maailman korkeimpiin: Big Daddy kohoaa noin 325 metriin, mikä tekee alueesta toiseksi korkeimman dyynialueen maailmassa heti Kiinan Badain Jaranin jälkeen. Suositumpi Dune 45 on vaatimattomampi, noin 80 metriä korkea, mutta sen hiekka on peräti viisi miljoonaa vuotta vanhaa. Auringonnousun valo osuu dyynien harjanteisiin niin, että toinen rinne hehkuu oranssinpunaisena ja toinen jää syvään varjoon – näky joka houkuttelee valokuvaajia paikalle jo pimeän aikaan.
+- [Rub al-Khali — kaupunkilehti / Luonto: Dyynit eivät vaella] Aavikon länsireunalla on 12 658 neliökilometrin suojelualue Uruq Bani Ma'arid, joka otettiin 2023 maailmanperintöön Saudi-Arabian ensimmäisenä luontokohteena. Se näyttää tiivistettynä, mistä hiekkameri koostuu: korkeita hiekkadyynejä ja niiden välissä suola-altaita. Punaiset dyyniselänteet kulkevat rinnakkain jopa sadanviidenkymmenen metrin korkuisina, ja niiden väliin jää hiekka- tai sorapohjaisia käytäviä. Suola-altaat eli sabkhat selittävät oudon havainnon: dyynit eivät vaella. Pintahiekka lentää tuulessa, mutta muoto pysyy, koska altaista nousee kosteutta dyynin juureen.
+
+### 13.1
+KYSYMYS: Mikä salmi erottaa niemen Virosta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kolkan niemi (merenkulku)
+Tietoruudun teksti: Kolkan niemi, latviaksi Kolkasrags ja liiviksi Kūolka nanā, on Kuurinmaan niemimaan kärki Itämeren rannalla Riianlahden suulla. Sitä ympäröi Irbensalmi, joka on luonnollinen raja Viroon; itäpuolella keskellä lahtea on virolainen Ruhnun saari. Niemi on Riianlahden luoteisin piste. Lähellä ovat Kolkan majakka ja Kolkan kylä, ja rantaa myöten jatkuu jono vanhoja liiviläiskyliä — Vaide, Saunags, Pitrags, Košrags ja Sīkrags — jotka kuuluvat suojeltuun Liivinrannan alueeseen.
+
+Niemi on osa Slīteren kansallispuistoa. Rantaa reunustaa metsäisten dyynien vyöhyke, jolla mänty kasvaa karulla ja vettä pidättämättömällä hiekalla. Tuuli siirtää hiekkaa jatkuvasti, ja kovissa myrskyissä puiden runkoja on hautautunut yli 60 senttimetrin syvyyteen. Suuret hautautumisjaksot 1967–1969 ja tammikuussa 2005 näkyvät puiden vuosilustoissa kapeina tai kokonaan puuttuvina renkaina, kunnes kasvu on palautunut enn…
+
+### 13.2
+KYSYMYS: Miksi dyynit ovat säilyneet niin luonnontilaisina?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kolkan niemi (merenkulku)
+Tietoruudun teksti: Kolkan niemi, latviaksi Kolkasrags ja liiviksi Kūolka nanā, on Kuurinmaan niemimaan kärki Itämeren rannalla Riianlahden suulla. Sitä ympäröi Irbensalmi, joka on luonnollinen raja Viroon; itäpuolella keskellä lahtea on virolainen Ruhnun saari. Niemi on Riianlahden luoteisin piste. Lähellä ovat Kolkan majakka ja Kolkan kylä, ja rantaa myöten jatkuu jono vanhoja liiviläiskyliä — Vaide, Saunags, Pitrags, Košrags ja Sīkrags — jotka kuuluvat suojeltuun Liivinrannan alueeseen.
+
+Niemi on osa Slīteren kansallispuistoa. Rantaa reunustaa metsäisten dyynien vyöhyke, jolla mänty kasvaa karulla ja vettä pidättämättömällä hiekalla. Tuuli siirtää hiekkaa jatkuvasti, ja kovissa myrskyissä puiden runkoja on hautautunut yli 60 senttimetrin syvyyteen. Suuret hautautumisjaksot 1967–1969 ja tammikuussa 2005 näkyvät puiden vuosilustoissa kapeina tai kokonaan puuttuvina renkaina, kunnes kasvu on palautunut enn…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namib — kaupunkilehti / Namib: Sossusvlein punaiset dyynit] Namibin eteläosassa Sossusvleissa hiekka on värjäytynyt punaruskeaksi vuosimiljoonien varrella hapettuneen raudan ansiosta – mitä vanhempi dyyni, sitä punaisempi sen pinta. Alueen dyynit kuuluvat maailman korkeimpiin: Big Daddy kohoaa noin 325 metriin, mikä tekee alueesta toiseksi korkeimman dyynialueen maailmassa heti Kiinan Badain Jaranin jälkeen. Suositumpi Dune 45 on vaatimattomampi, noin 80 metriä korkea, mutta sen hiekka on peräti viisi miljoonaa vuotta vanhaa. Auringonnousun valo osuu dyynien harjanteisiin niin, että toinen rinne hehkuu oranssinpunaisena ja toinen jää syvään varjoon – näky joka houkuttelee valokuvaajia paikalle jo pimeän aikaan.
+- [Rub al-Khali — kaupunkilehti / Luonto: Dyynit eivät vaella] Aavikon länsireunalla on 12 658 neliökilometrin suojelualue Uruq Bani Ma'arid, joka otettiin 2023 maailmanperintöön Saudi-Arabian ensimmäisenä luontokohteena. Se näyttää tiivistettynä, mistä hiekkameri koostuu: korkeita hiekkadyynejä ja niiden välissä suola-altaita. Punaiset dyyniselänteet kulkevat rinnakkain jopa sadanviidenkymmenen metrin korkuisina, ja niiden väliin jää hiekka- tai sorapohjaisia käytäviä. Suola-altaat eli sabkhat selittävät oudon havainnon: dyynit eivät vaella. Pintahiekka lentää tuulessa, mutta muoto pysyy, koska altaista nousee kosteutta dyynin juureen.
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:aglona) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aglonan basilika (kulttuuri)
+Tietoruudun teksti: Aglona on kylä Latgalessa, neljäkymmentä kilometriä Daugavpilsista koilliseen. Se seisoo kapealla kannaksella Cirišs- ja Egles-järvien välissä, ja nykyinen kylä on syntynyt kolmen asutuksen — Aglonan, Somersetan ja Jaunciemsin — yhdistyessä. Lähistöllä ovat Uhrisaari, Pirunjärvi ja Madelanun linnavuori.
+
+Dominikaanit perustivat kirkon ja luostarin vuonna 1700. Alkuperäinen puinen kirkko ja luostari purettiin 1760-luvulla, uuden rakentaminen alkoi 1768, ja kirkko vihittiin 1800. Taivaaseenottamisen basilika on Latvian tärkein katolinen kirkko.
+
+Neitsyt Marian taivaaseenottamisen päivänä 15. elokuuta ja helluntaina paikalle saapuu kymmeniätuhansia ihmisiä. Aglonan Jumalanäidin ikonia on kauan pidetty ihmeitätekevänä; se on 1600-luvulta, eikä sen tekijää tunneta.
+
+Vuonna 1980 kirkko täytti kaksisataa vuotta, ja paavi Johannes Paavali II antoi sille basilica minor -arvon. Vuonna 1986 siellä…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lissabon — kaupunkilehti / Ruoka: Pastel de nata on luostarin resepti] Jerónimosin luostarin munkit paistoivat lehtitaikinakuppeja, joissa on munakermatäyte. Kun luostarit suljettiin 1834, resepti päätyi viereiselle sokerikaupalle, ja Pastéis de Belém on myynyt leivoksia vuodesta 1837. Kahvila kertoo paistavansa niitä yli 20 000 päivässä. Vain siellä ne saa nimittää pastéis de belém — muualla ne ovat pastel de nata.
+- [São Paulo — kohdekartta / Kohdekartta: São Benton luostari] 1598 Luostari perustettiin 14. heinäkuuta 1598. Ylikapteeni Jorge Correia lahjoitti kaksi maalohkoa Anhangabaún ja Tamanduateín jokien väliltä, ja perustaja oli munkki Mauro Teixeira, José de Anchietan oppilas. Valtuusto vahvisti lahjakirjan 15. huhtikuuta 1600, ja rakennukset valmistuivat 1634. Suojeluspyhimys vaihtui kahdesti: ensin Montserratin Neitsyeksi ja 1720 Taivaaseen otetuksi Neitsyeksi. Luostari joutui kerran valtakunnanpolitiikan näyttämöksi. Kun Iberian unioni päättyi ja Juhana IV kruunattiin 1641 Portugalin kuninkaaksi, osa São Paulon espanjalaisperäisistä asukkaista halusi estää uuden kuninkaan tunnustamisen ja tarjosi Amador Buenolle "São Paulon kuninkaan" arvoa. Bueno kielt…
+
+### 14.1
+KYSYMYS: Kuka perusti kirkon ja luostarin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aglonan basilika (kulttuuri)
+Tietoruudun teksti: Aglona on kylä Latgalessa, neljäkymmentä kilometriä Daugavpilsista koilliseen. Se seisoo kapealla kannaksella Cirišs- ja Egles-järvien välissä, ja nykyinen kylä on syntynyt kolmen asutuksen — Aglonan, Somersetan ja Jaunciemsin — yhdistyessä. Lähistöllä ovat Uhrisaari, Pirunjärvi ja Madelanun linnavuori.
+
+Dominikaanit perustivat kirkon ja luostarin vuonna 1700. Alkuperäinen puinen kirkko ja luostari purettiin 1760-luvulla, uuden rakentaminen alkoi 1768, ja kirkko vihittiin 1800. Taivaaseenottamisen basilika on Latvian tärkein katolinen kirkko.
+
+Neitsyt Marian taivaaseenottamisen päivänä 15. elokuuta ja helluntaina paikalle saapuu kymmeniätuhansia ihmisiä. Aglonan Jumalanäidin ikonia on kauan pidetty ihmeitätekevänä; se on 1600-luvulta, eikä sen tekijää tunneta.
+
+Vuonna 1980 kirkko täytti kaksisataa vuotta, ja paavi Johannes Paavali II antoi sille basilica minor -arvon. Vuonna 1986 siellä…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lissabon — kaupunkilehti / Ruoka: Pastel de nata on luostarin resepti] Jerónimosin luostarin munkit paistoivat lehtitaikinakuppeja, joissa on munakermatäyte. Kun luostarit suljettiin 1834, resepti päätyi viereiselle sokerikaupalle, ja Pastéis de Belém on myynyt leivoksia vuodesta 1837. Kahvila kertoo paistavansa niitä yli 20 000 päivässä. Vain siellä ne saa nimittää pastéis de belém — muualla ne ovat pastel de nata.
+- [São Paulo — kohdekartta / Kohdekartta: São Benton luostari] 1598 Luostari perustettiin 14. heinäkuuta 1598. Ylikapteeni Jorge Correia lahjoitti kaksi maalohkoa Anhangabaún ja Tamanduateín jokien väliltä, ja perustaja oli munkki Mauro Teixeira, José de Anchietan oppilas. Valtuusto vahvisti lahjakirjan 15. huhtikuuta 1600, ja rakennukset valmistuivat 1634. Suojeluspyhimys vaihtui kahdesti: ensin Montserratin Neitsyeksi ja 1720 Taivaaseen otetuksi Neitsyeksi. Luostari joutui kerran valtakunnanpolitiikan näyttämöksi. Kun Iberian unioni päättyi ja Juhana IV kruunattiin 1641 Portugalin kuninkaaksi, osa São Paulon espanjalaisperäisistä asukkaista halusi estää uuden kuninkaan tunnustamisen ja tarjosi Amador Buenolle "São Paulon kuninkaan" arvoa. Bueno kielt…
+
+### 14.2
+KYSYMYS: Miksi elokuun 15. päivä on Aglonassa erityinen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aglonan basilika (kulttuuri)
+Tietoruudun teksti: Aglona on kylä Latgalessa, neljäkymmentä kilometriä Daugavpilsista koilliseen. Se seisoo kapealla kannaksella Cirišs- ja Egles-järvien välissä, ja nykyinen kylä on syntynyt kolmen asutuksen — Aglonan, Somersetan ja Jaunciemsin — yhdistyessä. Lähistöllä ovat Uhrisaari, Pirunjärvi ja Madelanun linnavuori.
+
+Dominikaanit perustivat kirkon ja luostarin vuonna 1700. Alkuperäinen puinen kirkko ja luostari purettiin 1760-luvulla, uuden rakentaminen alkoi 1768, ja kirkko vihittiin 1800. Taivaaseenottamisen basilika on Latvian tärkein katolinen kirkko.
+
+Neitsyt Marian taivaaseenottamisen päivänä 15. elokuuta ja helluntaina paikalle saapuu kymmeniätuhansia ihmisiä. Aglonan Jumalanäidin ikonia on kauan pidetty ihmeitätekevänä; se on 1600-luvulta, eikä sen tekijää tunneta.
+
+Vuonna 1980 kirkko täytti kaksisataa vuotta, ja paavi Johannes Paavali II antoi sille basilica minor -arvon. Vuonna 1986 siellä…
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:gluckin-raamattumuseo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glückin raamattumuseo (sana)
+Tietoruudun teksti: Johann Ernst Glück (1654–1705) oli saksalainen kääntäjä ja luterilainen teologi, joka työskenteli Liivinmaalla nykyisen Latvian alueella. Hän syntyi Wettinissä pappisperheeseen, kävi Altenburgin latinakoulun ja opiskeli Wittenbergissä ja Jenassa teologiaa, retoriikkaa, filosofiaa, geometriaa, historiaa, maantiedettä ja latinaa.
+
+Glück käänsi ensimmäisenä Raamatun latviaksi ja sai työn valmiiksi vuonna 1694. Käännös tehtiin kokonaisuudessaan Marienburgissa, joka on nykyinen Alūksne, ja samassa rakennuksessa toimii nyt Ernst Glückin raamattumuseo. Vuonna 1683 hän perusti Liivinmaan ensimmäiset latviankieliset koulut.
+
+Glückillä oli neljä tytärtä ja poika, Ernst Gottlieb Glück, sekä kasvattitytär Marta Skowrońska. Marta meni naimisiin Pietari Suuren kanssa, ja hänet tunnetaan Katariina I:nä: vuosina 1725–1727 hän oli Venäjän keisarinna. Glück itse kuoli Moskovassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Tiede: Kirjoja alkoi valmistua sadoittain] Ennen Johannes Gutenbergia kirja syntyi niin, että munkki kopioi sen käsin — yhteen kirjaan meni kuukausia. Mainzilainen kultaseppä valoi 1450-luvulla jokaisen kirjaimen omaksi metallipalakseen, jotka voitiin latoa sanoiksi, painaa arkille ja käyttää uudelleen. Ensimmäinen suurtyö oli Raamattu, jota painettiin noin 180 kappaletta — jokaisesta tuli käsin kopioitua halvempi ja siistimpi. Puolessa vuosisadassa Euroopassa oli painettu jo miljoonia kirjoja, ja tieto lähti leviämään vauhdilla, jota kukaan ei enää pysäyttänyt.
+- [Saksa — maalehti / Kirjapaino] Reinin rannan kauppakaupungissa latojat asettivat 1450-luvulla kirjaimen kerrallaan peilikuvaksi riveille, ja ensimmäinen painettu Raamattu syntyi — velaksi, jonka rahoittaja peri pajan mukana.
+- [Latvia — maalehti / Menovinkit] Latvia on pannut verkkoon yllättävän paljon: kaksi miljoonaa museoesinettä, sanomalehdet vuodesta 1822, ensimmäisten laulujuhlien jäljet vuodelta 1873 ja kolmetoista kameraa lintujen pesissä.
+- [Chennai — kohdekartta / Kohdekartta: Government Museum] 1851, nykyisellä paikalla 1854 Museo perustettiin 1851 College Roadille Nungambakkamiin ja siirtyi 1854 Pantheonin alueelle Egmoreen. Alue on vanhempi kuin museo: elokuussa 1778 kuvernööri myönsi neljäkymmentäkolme eekkeriä eräälle virkamiehelle, joka luovutti maat 1793 kahdenkymmenenneljän hengen toimikunnalle, joka järjesti kaupungin julkiset huvit. Päätalo ja puutarha myytiin 1821 armenialaiselle kauppiaalle E. S. Mooratille, joka myi ne takaisin hallitukselle 1830. Rakennuksia laajennettiin 1864–1890. Vanhan museorakennuksen ytimessä ovat Pantheonin ainoat säilyneet osat, jotka tunnistaa pohjoispuolen leveistä portaista. Kokoelmassa on 1,7 miljoonaa esinettä, muun muassa yksi Euroopan u…
+
+### 15.1
+KYSYMYS: Milloin Raamattu käännettiin ensi kerran latviaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glückin raamattumuseo (sana)
+Tietoruudun teksti: Johann Ernst Glück (1654–1705) oli saksalainen kääntäjä ja luterilainen teologi, joka työskenteli Liivinmaalla nykyisen Latvian alueella. Hän syntyi Wettinissä pappisperheeseen, kävi Altenburgin latinakoulun ja opiskeli Wittenbergissä ja Jenassa teologiaa, retoriikkaa, filosofiaa, geometriaa, historiaa, maantiedettä ja latinaa.
+
+Glück käänsi ensimmäisenä Raamatun latviaksi ja sai työn valmiiksi vuonna 1694. Käännös tehtiin kokonaisuudessaan Marienburgissa, joka on nykyinen Alūksne, ja samassa rakennuksessa toimii nyt Ernst Glückin raamattumuseo. Vuonna 1683 hän perusti Liivinmaan ensimmäiset latviankieliset koulut.
+
+Glückillä oli neljä tytärtä ja poika, Ernst Gottlieb Glück, sekä kasvattitytär Marta Skowrońska. Marta meni naimisiin Pietari Suuren kanssa, ja hänet tunnetaan Katariina I:nä: vuosina 1725–1727 hän oli Venäjän keisarinna. Glück itse kuoli Moskovassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Tiede: Kirjoja alkoi valmistua sadoittain] Ennen Johannes Gutenbergia kirja syntyi niin, että munkki kopioi sen käsin — yhteen kirjaan meni kuukausia. Mainzilainen kultaseppä valoi 1450-luvulla jokaisen kirjaimen omaksi metallipalakseen, jotka voitiin latoa sanoiksi, painaa arkille ja käyttää uudelleen. Ensimmäinen suurtyö oli Raamattu, jota painettiin noin 180 kappaletta — jokaisesta tuli käsin kopioitua halvempi ja siistimpi. Puolessa vuosisadassa Euroopassa oli painettu jo miljoonia kirjoja, ja tieto lähti leviämään vauhdilla, jota kukaan ei enää pysäyttänyt.
+- [Saksa — maalehti / Kirjapaino] Reinin rannan kauppakaupungissa latojat asettivat 1450-luvulla kirjaimen kerrallaan peilikuvaksi riveille, ja ensimmäinen painettu Raamattu syntyi — velaksi, jonka rahoittaja peri pajan mukana.
+- [Latvia — maalehti / Menovinkit] Latvia on pannut verkkoon yllättävän paljon: kaksi miljoonaa museoesinettä, sanomalehdet vuodesta 1822, ensimmäisten laulujuhlien jäljet vuodelta 1873 ja kolmetoista kameraa lintujen pesissä.
+- [Chennai — kohdekartta / Kohdekartta: Government Museum] 1851, nykyisellä paikalla 1854 Museo perustettiin 1851 College Roadille Nungambakkamiin ja siirtyi 1854 Pantheonin alueelle Egmoreen. Alue on vanhempi kuin museo: elokuussa 1778 kuvernööri myönsi neljäkymmentäkolme eekkeriä eräälle virkamiehelle, joka luovutti maat 1793 kahdenkymmenenneljän hengen toimikunnalle, joka järjesti kaupungin julkiset huvit. Päätalo ja puutarha myytiin 1821 armenialaiselle kauppiaalle E. S. Mooratille, joka myi ne takaisin hallitukselle 1830. Rakennuksia laajennettiin 1864–1890. Vanhan museorakennuksen ytimessä ovat Pantheonin ainoat säilyneet osat, jotka tunnistaa pohjoispuolen leveistä portaista. Kokoelmassa on 1,7 miljoonaa esinettä, muun muassa yksi Euroopan u…
+
+### 15.2
+KYSYMYS: Kuka oli Glückin kasvattitytär?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glückin raamattumuseo (sana)
+Tietoruudun teksti: Johann Ernst Glück (1654–1705) oli saksalainen kääntäjä ja luterilainen teologi, joka työskenteli Liivinmaalla nykyisen Latvian alueella. Hän syntyi Wettinissä pappisperheeseen, kävi Altenburgin latinakoulun ja opiskeli Wittenbergissä ja Jenassa teologiaa, retoriikkaa, filosofiaa, geometriaa, historiaa, maantiedettä ja latinaa.
+
+Glück käänsi ensimmäisenä Raamatun latviaksi ja sai työn valmiiksi vuonna 1694. Käännös tehtiin kokonaisuudessaan Marienburgissa, joka on nykyinen Alūksne, ja samassa rakennuksessa toimii nyt Ernst Glückin raamattumuseo. Vuonna 1683 hän perusti Liivinmaan ensimmäiset latviankieliset koulut.
+
+Glückillä oli neljä tytärtä ja poika, Ernst Gottlieb Glück, sekä kasvattitytär Marta Skowrońska. Marta meni naimisiin Pietari Suuren kanssa, ja hänet tunnetaan Katariina I:nä: vuosina 1725–1727 hän oli Venäjän keisarinna. Glück itse kuoli Moskovassa.
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

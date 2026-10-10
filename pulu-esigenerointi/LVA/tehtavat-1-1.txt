@@ -1,0 +1,230 @@
+================ KOHTA 1 (kohde:gaizinkalns) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gaiziņkalns (luonto · vuori)
+Tietoruudun teksti: Gaiziņkalns on 312 metriä merenpinnasta ja Latvian korkein kohta. Se on Vidzemen ylängöllä lyhyen matkan päässä Madonan kaupungista länteen. Naapurimaan Viron korkein kohta Suur Munamägi on kuusi metriä korkeampi, ja kilpailu siitä johti tornihankkeeseen: torni ylsi virolaisen ohi, mutta se jäi kesken, suljettiin turvallisuussyistä ja purettiin joulukuussa 2012.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Granada — kohdekartta / Kohdekartta: Granadan katedraali] 1523–1704 Kun Granada oli vallattu takaisin kristityille vuonna 1492, kaupungin suurimman moskeijan paikalle alettiin vuosikymmeniä myöhemmin rakentaa valtava katedraali. Perustustyöt aloitti arkkitehti Enrique Egas vuonna 1518, mutta varsinainen rakentaminen pääsi vauhtiin vasta vuonna 1523 - ja kesti siitä peräti 181 vuotta, aina jouluaattoon 1704 asti, jolloin viimeiset kivet muurattiin paikoilleen. Vuonna 1529 työt otti vastuulleen Diego de Siloé, joka muutti suunnitelman renessanssityyliin ja lisäsi kirkkoon viisi holvikäytävää sekä epätavallisen pyöreän pääkappelin. Katedraalin sisällä soi kaksi 1700-luvulla rakennettua urkua, jotka näyttävät koristeiltaan lähes identtisiltä mutta kuu…
+
+### 1.1
+KYSYMYS: Miksi tornia ei koskaan saatu valmiiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gaiziņkalns (luonto · vuori)
+Tietoruudun teksti: Gaiziņkalns on 312 metriä merenpinnasta ja Latvian korkein kohta. Se on Vidzemen ylängöllä lyhyen matkan päässä Madonan kaupungista länteen. Naapurimaan Viron korkein kohta Suur Munamägi on kuusi metriä korkeampi, ja kilpailu siitä johti tornihankkeeseen: torni ylsi virolaisen ohi, mutta se jäi kesken, suljettiin turvallisuussyistä ja purettiin joulukuussa 2012.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Granada — kohdekartta / Kohdekartta: Granadan katedraali] 1523–1704 Kun Granada oli vallattu takaisin kristityille vuonna 1492, kaupungin suurimman moskeijan paikalle alettiin vuosikymmeniä myöhemmin rakentaa valtava katedraali. Perustustyöt aloitti arkkitehti Enrique Egas vuonna 1518, mutta varsinainen rakentaminen pääsi vauhtiin vasta vuonna 1523 - ja kesti siitä peräti 181 vuotta, aina jouluaattoon 1704 asti, jolloin viimeiset kivet muurattiin paikoilleen. Vuonna 1529 työt otti vastuulleen Diego de Siloé, joka muutti suunnitelman renessanssityyliin ja lisäsi kirkkoon viisi holvikäytävää sekä epätavallisen pyöreän pääkappelin. Katedraalin sisällä soi kaksi 1700-luvulla rakennettua urkua, jotka näyttävät koristeiltaan lähes identtisiltä mutta kuu…
+
+### 1.2
+KYSYMYS: Millainen on Vidzemen ylänkö?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gaiziņkalns (luonto · vuori)
+Tietoruudun teksti: Gaiziņkalns on 312 metriä merenpinnasta ja Latvian korkein kohta. Se on Vidzemen ylängöllä lyhyen matkan päässä Madonan kaupungista länteen. Naapurimaan Viron korkein kohta Suur Munamägi on kuusi metriä korkeampi, ja kilpailu siitä johti tornihankkeeseen: torni ylsi virolaisen ohi, mutta se jäi kesken, suljettiin turvallisuussyistä ja purettiin joulukuussa 2012.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:itameri~5) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Latvian rannikkoa reunustaa Riianlahti, meren oma sivumeri, ja siihen laskee Väinäjoki — yksi niistä suurista joista, jotka pitävät meren veden vähäsuolaisena. Riian, Ventspilsin ja Liepājan telakat ovat Itämeren suurimpia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kaupunkilehti / Tukholma: Laiva, joka upposi ja nousi] Kuninkaan ylpeys, sotalaiva Vasa, lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628 — ja kaatui ensimmäiseen kunnon tuulenpuuskaan ehdittyään noin kilometrin. Laiva oli rakennettu liian kapeaksi ja korkeaksi, ja vesi ryntäsi sisään avoimista tykkiporteista. Vasa makasi sataman pohjamudassa 333 vuotta, kunnes se nostettiin 1961 lähes ehjänä: Itämeren vähäsuolainen vesi oli pitänyt laivamadot loitolla. Nykyään alus seisoo omassa museossaan yhä valtaosin alkuperäisenä puuna, ja Vasa-museo on koko Pohjolan suosituimpia museoita.
+- [Ruotsi — maalehti / Historia: Laiva, joka kaatui tuhannen metrin jälkeen] 1628 — Sotalaiva Vasa lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628. Se ehti purjehtia noin tuhat kolmesataa metriä, kun tuulenpuuska kallisti sen niin, että vesi syöksyi sisään avoimista tykkiluukuista. Kuningas oli vaatinut kaksi tykkikantta, eikä kapea runko kantanut niiden painoa. Itämeren vähäsuolaisessa vedessä ei elä laivamato, joka syö puun muissa merissä — siksi laiva säilyi mudassa. Vasa nostettiin 1961, ja siitä on alkuperäistä puuta yli 95 prosenttia.
+- [Salomonsaaret — maalehti / Luonto: Atolli, joka nousi merestä] 1998 — Rennell on maailman suurin kohonnut koralliatolli: 86 kilometriä pitkä, 15 leveä ja 37 000 hehtaaria. Saaren eteläpäässä on Tegano-järvi, joka oli aikoinaan atollin laguuni; se on yhä merenpinnan tasolla, vesi on murtovettä ja järveä reunustavat kalliot ja pienet kalkkikivisaaret. Itä-Rennell otettiin maailmanperintöön 1998, ja hoitosuunnitelma kirjoitettiin yhdessä asukkaiden kanssa: neljä kylää ja noin 800 ihmistä jatkavat elämäänsä alueella tapaoikeuden mukaisella maallaan. Saarella on tavattu 50 lintulajia, joista 21 on kotoperäisiä, ja Tegano-järvessä elää oma merikäärmelaji.
+
+### 2.1
+KYSYMYS: Miksi Itämeren vesi on murtovettä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Latvian rannikkoa reunustaa Riianlahti, meren oma sivumeri, ja siihen laskee Väinäjoki — yksi niistä suurista joista, jotka pitävät meren veden vähäsuolaisena. Riian, Ventspilsin ja Liepājan telakat ovat Itämeren suurimpia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kaupunkilehti / Tukholma: Laiva, joka upposi ja nousi] Kuninkaan ylpeys, sotalaiva Vasa, lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628 — ja kaatui ensimmäiseen kunnon tuulenpuuskaan ehdittyään noin kilometrin. Laiva oli rakennettu liian kapeaksi ja korkeaksi, ja vesi ryntäsi sisään avoimista tykkiporteista. Vasa makasi sataman pohjamudassa 333 vuotta, kunnes se nostettiin 1961 lähes ehjänä: Itämeren vähäsuolainen vesi oli pitänyt laivamadot loitolla. Nykyään alus seisoo omassa museossaan yhä valtaosin alkuperäisenä puuna, ja Vasa-museo on koko Pohjolan suosituimpia museoita.
+- [Ruotsi — maalehti / Historia: Laiva, joka kaatui tuhannen metrin jälkeen] 1628 — Sotalaiva Vasa lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628. Se ehti purjehtia noin tuhat kolmesataa metriä, kun tuulenpuuska kallisti sen niin, että vesi syöksyi sisään avoimista tykkiluukuista. Kuningas oli vaatinut kaksi tykkikantta, eikä kapea runko kantanut niiden painoa. Itämeren vähäsuolaisessa vedessä ei elä laivamato, joka syö puun muissa merissä — siksi laiva säilyi mudassa. Vasa nostettiin 1961, ja siitä on alkuperäistä puuta yli 95 prosenttia.
+- [Salomonsaaret — maalehti / Luonto: Atolli, joka nousi merestä] 1998 — Rennell on maailman suurin kohonnut koralliatolli: 86 kilometriä pitkä, 15 leveä ja 37 000 hehtaaria. Saaren eteläpäässä on Tegano-järvi, joka oli aikoinaan atollin laguuni; se on yhä merenpinnan tasolla, vesi on murtovettä ja järveä reunustavat kalliot ja pienet kalkkikivisaaret. Itä-Rennell otettiin maailmanperintöön 1998, ja hoitosuunnitelma kirjoitettiin yhdessä asukkaiden kanssa: neljä kylää ja noin 800 ihmistä jatkavat elämäänsä alueella tapaoikeuden mukaisella maallaan. Saarella on tavattu 50 lintulajia, joista 21 on kotoperäisiä, ja Tegano-järvessä elää oma merikäärmelaji.
+
+### 2.2
+KYSYMYS: Miksi Riianlahti on erillinen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Latvian rannikkoa reunustaa Riianlahti, meren oma sivumeri, ja siihen laskee Väinäjoki — yksi niistä suurista joista, jotka pitävät meren veden vähäsuolaisena. Riian, Ventspilsin ja Liepājan telakat ovat Itämeren suurimpia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kohdekartta / Kohdekartta: Riian tuomiokirkko] 1211 Riian tuomiokirkko on Baltian maiden suurin keskiaikainen kirkko. Sen ensimmäinen kivi muurattiin jo vuonna 1211 piispa Albertin toimesta, lähelle Väinäjoen rantaa. Tiilistä muurattu punertava kirkko näkyy kauas, ja sen tornin huipulla pyörii viiri, jota riikalaiset ovat vuosisatoja käyttäneet tuulen – ja tarinoiden mukaan onnenkin – tarkkailuun. Kirkon sisällä soi yksi Euroopan suurimmista urkuista: yli 6700 pilliä käsittävä soitin valmistui vuonna 1883, ja sitä soitettiin ensi kertaa tammikuussa 1884. Urkuja voi soittaa neljällä eri näppäimistöllä yhtä aikaa. Neuvostoaikana kirkossa ei saanut pitää jumalanpalveluksia viiteenkymmeneen vuoteen – tilassa toimi sen sijaan konserttisali j…
+- [Riika — kaupunkilehti / Vanhakaupunki: Kolme veljestä kolmelta vuosisadalta] Mazā Pils -kadulla seisoo vierekkäin kolme kapeaa taloa, joita sanotaan Kolmeksi veljekseksi. Ne ovat Riian vanhin säilynyt asuintalojen ryhmä. Valkoinen veli on rakennettu 1400-luvun lopulla, keltaisen julkisivussa lukee vuosiluku 1646, ja kolmas valmistui vasta 1700-luvun alussa. Kaikkien päätyseinä on kadulle päin, kuten Itämeren kauppakaupungeissa oli tapana. Talot korjattiin 1950-luvulla, ja nykyään niissä toimii arkkitehtuurimuseo.
+- [Riika — kaupunkilehti / Riika: Torikatot olivat ilmalaivojen halleja] Riian keskustorin viisi hallia rakennettiin 1924–1930 saksalaisten zeppelin-ilmalaivojen hallien teräsrungoista. Rungot tuotiin Vaiņodesta ja pystytettiin joen rantaan. Toria on 72 300 neliömetriä ja myyntipisteitä yli 3 000 — se on yhä Euroopan suurimpia.
+- [Riika — kaupunkilehti / Vanhakaupunki] Riian vanhassakaupungissa kannattaa katsoa ylös. Julkisivut ja katonharjat kertovat, ketkä talon rakensivat ja kenen kanssa he olivat riidoissa.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:vainajoki) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Väinäjoki (luonto · joki)
+Tietoruudun teksti: Väinäjoki, jota kutsutaan myös Länsi-Dvinaksi ja latviaksi Daugavaksi, nousee Valdain kukkuloilta Venäjältä ja virtaa Valko-Venäjän ja Latvian halki Itämeren Riianlahteen. Pituutta sillä on 1 020 kilometriä, josta 352 kilometriä Latviassa ja 325 Venäjällä. Sen lähde on aivan Volgan lähteen naapurissa, mutta se kääntyy länteen ja piirtää matkallaan Pohjois-Valko-Venäjän halki suuren etelään taipuvan kaaren.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Historia: Kolme päivää jäisellä joella] 26.-29.11.1812 — Napoleonin Grande Armée pakeni Moskovasta lokakuussa 1812 ja saapui marraskuun lopulla riutuneena Berezina-joelle lähelle Barysaŭia. Venäläisjoukot uhkasivat sulkea ansan joka suunnalta. Kenraali Éblén insinöörit, monet heistä hollantilaisia ponttoonisiltureita, seisoivat jääkylmässä vedessä vyötäisiä myöten ja rakensivat kaksi puusiltaa. Noin 60 000 sotilasta ehti ylittää 26.-29. marraskuuta, ennen kuin sillat poltettiin ja lähes 10 000 ihmistä jäi itärannalle vihollisen armoille. Tapahtumasta tuli ranskan kieleen sana "Bérézina", joka tarkoittaa täydellistä katastrofia.
+- [Latvia — maalehti / Historia: Piispa perusti kaupungin joen suulle] 1201 — Saksalainen piispa Albert von Buxhoeveden perusti Riian vuonna 1201 Väinäjoen suulle osana ristiretkeä, jolla alueen balttilaiset ja liiviläiset heimot käännytettiin kristinuskoon. Albert perusti myös Miekkaveljien ritarikunnan suojelemaan uutta valtaansa. Kymmenen vuotta kaupungin perustamisen jälkeen, vuonna 1211, alettiin rakentaa Riian tuomiokirkkoa piispan vallan symboliksi, ja siitä kasvoi Baltian suurin keskiaikainen kirkkorakennus. Kirkkoa on laajennettu vuosisatojen kuluessa, joten sen sisätiloissa näkyy sekä varhaista goottia että myöhempiä tyylikausia.
+
+### 3.1
+KYSYMYS: Miksi joella on kolme eri nimeä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Väinäjoki (luonto · joki)
+Tietoruudun teksti: Väinäjoki, jota kutsutaan myös Länsi-Dvinaksi ja latviaksi Daugavaksi, nousee Valdain kukkuloilta Venäjältä ja virtaa Valko-Venäjän ja Latvian halki Itämeren Riianlahteen. Pituutta sillä on 1 020 kilometriä, josta 352 kilometriä Latviassa ja 325 Venäjällä. Sen lähde on aivan Volgan lähteen naapurissa, mutta se kääntyy länteen ja piirtää matkallaan Pohjois-Valko-Venäjän halki suuren etelään taipuvan kaaren.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Historia: Kolme päivää jäisellä joella] 26.-29.11.1812 — Napoleonin Grande Armée pakeni Moskovasta lokakuussa 1812 ja saapui marraskuun lopulla riutuneena Berezina-joelle lähelle Barysaŭia. Venäläisjoukot uhkasivat sulkea ansan joka suunnalta. Kenraali Éblén insinöörit, monet heistä hollantilaisia ponttoonisiltureita, seisoivat jääkylmässä vedessä vyötäisiä myöten ja rakensivat kaksi puusiltaa. Noin 60 000 sotilasta ehti ylittää 26.-29. marraskuuta, ennen kuin sillat poltettiin ja lähes 10 000 ihmistä jäi itärannalle vihollisen armoille. Tapahtumasta tuli ranskan kieleen sana "Bérézina", joka tarkoittaa täydellistä katastrofia.
+
+### 3.2
+KYSYMYS: Missä Väinäjoen lähde on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Väinäjoki (luonto · joki)
+Tietoruudun teksti: Väinäjoki, jota kutsutaan myös Länsi-Dvinaksi ja latviaksi Daugavaksi, nousee Valdain kukkuloilta Venäjältä ja virtaa Valko-Venäjän ja Latvian halki Itämeren Riianlahteen. Pituutta sillä on 1 020 kilometriä, josta 352 kilometriä Latviassa ja 325 Venäjällä. Sen lähde on aivan Volgan lähteen naapurissa, mutta se kääntyy länteen ja piirtää matkallaan Pohjois-Valko-Venäjän halki suuren etelään taipuvan kaaren.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Historia: Piispa perusti kaupungin joen suulle] 1201 — Saksalainen piispa Albert von Buxhoeveden perusti Riian vuonna 1201 Väinäjoen suulle osana ristiretkeä, jolla alueen balttilaiset ja liiviläiset heimot käännytettiin kristinuskoon. Albert perusti myös Miekkaveljien ritarikunnan suojelemaan uutta valtaansa. Kymmenen vuotta kaupungin perustamisen jälkeen, vuonna 1211, alettiin rakentaa Riian tuomiokirkkoa piispan vallan symboliksi, ja siitä kasvoi Baltian suurin keskiaikainen kirkkorakennus. Kirkkoa on laajennettu vuosisatojen kuluessa, joten sen sisätiloissa näkyy sekä varhaista goottia että myöhempiä tyylikausia.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:rundale) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rundālen palatsi (kulttuuri)
+Tietoruudun teksti: Rundālen palatsi on toinen kahdesta suuresta barokkipalatsista, jotka rakennettiin Kuurinmaan herttuoille nykyisen Latvian alueelle; toinen on Jelgavan palatsi. Se seisoo Semgalliassa, kaksitoista kilometriä Bauskasta länteen, ja se rakennettiin kahdessa jaksossa: 1736–1740 ja 1764–1768.
+
+Herttua Ernst Johann von Biron osti Rundālen maat vanhoine keskiaikaisine linnoineen vuonna 1735 kesäasuntoa varten. Vanha linna purettiin, ja Bartolomeo Rastrellin piirustusten mukainen rakennustyö alkoi 1736. Se eteni hitaasti, koska osa aineksista ja työvoimasta siirrettiin Jelgavan palatsille, joka oli herttualle tärkeämpi. Kun Biron menetti asemansa 1740, palatsi jäi keskeneräisenä tyhjilleen — aina vuoteen 1762, jolloin hän palasi maanpaosta. Rastrellin valvonnassa työ saatiin valmiiksi 1768, ja Johann Michael Graff teki taloon runsaat stukkokoristeet. Biron muutti palatsiin heti ja vietti siellä…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Petra — kaupunkilehti / Petra: Länsi löysi kaupungin vasta 1812] Petran sijainti oli lännessä tuntematon keskiajalta aina vuoteen 1812, jolloin sveitsiläinen Johann Ludwig Burckhardt tuli katsomaan, mitä beduiinit tarkoittivat kuolleella kaupungilla. Hän puhui sujuvaa arabiaa ja oli matkalla tutkimaan Niger-jokea, kun kuuli tarinat raunioista, joiden lähellä on profeetta Aaronin hauta. Kaksikymmentäseitsemän vuotta myöhemmin skotlantilainen David Roberts piirsi paikan, ja hänen litografiansa veivät Petran eurooppalaisiin olohuoneisiin. Vuonna 1845 John William Burgon voitti runollaan Oxfordin Newdigate-palkinnon ja antoi kaupungille nimen, joka on jäänyt: ruusunpunainen kaupunki, puoliksi yhtä vanha kuin aika.
+- [Valko-Venäjä — maalehti / Historian hetki: Berezina 1812 — jäinen vesi polvien yli] 26.–28.11.1812 — Pontonöörin jalat eivät enää tunne mitään polvien alapuolella, mutta hän pysyy pystyssä jäisessä virrassa, koska hirsipukki, jota hän kannattelee, painaa liikaa pudotettavaksi. Kenraali Jean-Baptiste Éblé on käskenyt insinöörijoukkonsa rakentaa kaksi puista siltaa Berezina-joen yli Studziankan kahluupaikalla 25.–26. marraskuuta 1812, jotta Napoleonin Venäjältä perääntyvä armeija pääsisi yli ennen kuin kolme venäläisarmeijaa sulkee ansan. Miehet seisovat jääkylmässä vedessä tuntikausia rakentaen paaluja ja hirsiä, ja moni heistä kuolee kylmyyteen päivien kuluessa työn jälkeen. Kolmen päivän aikana, 26.–28. marraskuuta, kymmeniätuhansia sotilaita ja siviilejä tunkeutuu kahdel…
+
+### 4.1
+KYSYMYS: Kuka suunnitteli palatsin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rundālen palatsi (kulttuuri)
+Tietoruudun teksti: Rundālen palatsi on toinen kahdesta suuresta barokkipalatsista, jotka rakennettiin Kuurinmaan herttuoille nykyisen Latvian alueelle; toinen on Jelgavan palatsi. Se seisoo Semgalliassa, kaksitoista kilometriä Bauskasta länteen, ja se rakennettiin kahdessa jaksossa: 1736–1740 ja 1764–1768.
+
+Herttua Ernst Johann von Biron osti Rundālen maat vanhoine keskiaikaisine linnoineen vuonna 1735 kesäasuntoa varten. Vanha linna purettiin, ja Bartolomeo Rastrellin piirustusten mukainen rakennustyö alkoi 1736. Se eteni hitaasti, koska osa aineksista ja työvoimasta siirrettiin Jelgavan palatsille, joka oli herttualle tärkeämpi. Kun Biron menetti asemansa 1740, palatsi jäi keskeneräisenä tyhjilleen — aina vuoteen 1762, jolloin hän palasi maanpaosta. Rastrellin valvonnassa työ saatiin valmiiksi 1768, ja Johann Michael Graff teki taloon runsaat stukkokoristeet. Biron muutti palatsiin heti ja vietti siellä…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tallinna — kaupunkilehti / Palatsi: Tsaari asui pienessä mökissä palatsin vieressä] Pietari Suuri seurasi palatsinsa rakennustöitä henkilökohtaisesti ja asui sitä varten pienessä puumökissä aivan rakennustyömaan vieressä — tsaari ei koskaan itse asunut valmiissa palatsissa, koska kuoli vuonna 1725, samana vuonna kun rakennustyöt saatiin päätökseen. Mökki on säilynyt ja toimii nykyään museona, joka kertoo Pietarin ajasta Tallinnassa.
+- [Teheran — kohdekartta / Kohdekartta: Golestanin palatsi] 1865 Naser al-Din Shah halusi pääkaupunkiinsa talon, joka kilpailisi Isfahanin Ali Qapun kanssa: korkean rakennuksen, jonka katolta hän näkisi koko Teheranin. Työ alkoi hänen käskystään 1865 ja valmistui kahdessa vuodessa. Shams-ol-Emareh eli auringon rakennus on 35 metriä korkea, siinä on viisi kerrosta ja kaksi samanmuotoista tornia. Se oli valmistuessaan Teheranin korkein rakennus. Suunnittelijana mainitaan Moayer ol-Mamalek ja arkkitehtina Ali Mohammed Kashi. Kuistin alla kulkee kaakelipaneeli, jossa seisoo rivi tummiin takkeihin ja päähineisiin puettuja hahmoja. Se oli myös ensimmäinen talo kaupungissa, jonka rakenteissa käytettiin metallia: ylempien kerrosten pylväät ovat kaikki valur…
+
+### 4.2
+KYSYMYS: Mihin palatsia käytettiin vuonna 1812?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rundālen palatsi (kulttuuri)
+Tietoruudun teksti: Rundālen palatsi on toinen kahdesta suuresta barokkipalatsista, jotka rakennettiin Kuurinmaan herttuoille nykyisen Latvian alueelle; toinen on Jelgavan palatsi. Se seisoo Semgalliassa, kaksitoista kilometriä Bauskasta länteen, ja se rakennettiin kahdessa jaksossa: 1736–1740 ja 1764–1768.
+
+Herttua Ernst Johann von Biron osti Rundālen maat vanhoine keskiaikaisine linnoineen vuonna 1735 kesäasuntoa varten. Vanha linna purettiin, ja Bartolomeo Rastrellin piirustusten mukainen rakennustyö alkoi 1736. Se eteni hitaasti, koska osa aineksista ja työvoimasta siirrettiin Jelgavan palatsille, joka oli herttualle tärkeämpi. Kun Biron menetti asemansa 1740, palatsi jäi keskeneräisenä tyhjilleen — aina vuoteen 1762, jolloin hän palasi maanpaosta. Rastrellin valvonnassa työ saatiin valmiiksi 1768, ja Johann Michael Graff teki taloon runsaat stukkokoristeet. Biron muutti palatsiin heti ja vietti siellä…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Petra — kaupunkilehti / Petra: Länsi löysi kaupungin vasta 1812] Petran sijainti oli lännessä tuntematon keskiajalta aina vuoteen 1812, jolloin sveitsiläinen Johann Ludwig Burckhardt tuli katsomaan, mitä beduiinit tarkoittivat kuolleella kaupungilla. Hän puhui sujuvaa arabiaa ja oli matkalla tutkimaan Niger-jokea, kun kuuli tarinat raunioista, joiden lähellä on profeetta Aaronin hauta. Kaksikymmentäseitsemän vuotta myöhemmin skotlantilainen David Roberts piirsi paikan, ja hänen litografiansa veivät Petran eurooppalaisiin olohuoneisiin. Vuonna 1845 John William Burgon voitti runollaan Oxfordin Newdigate-palkinnon ja antoi kaupungille nimen, joka on jäänyt: ruusunpunainen kaupunki, puoliksi yhtä vanha kuin aika.
+- [Valko-Venäjä — maalehti / Historian hetki: Berezina 1812 — jäinen vesi polvien yli] 26.–28.11.1812 — Pontonöörin jalat eivät enää tunne mitään polvien alapuolella, mutta hän pysyy pystyssä jäisessä virrassa, koska hirsipukki, jota hän kannattelee, painaa liikaa pudotettavaksi. Kenraali Jean-Baptiste Éblé on käskenyt insinöörijoukkonsa rakentaa kaksi puista siltaa Berezina-joen yli Studziankan kahluupaikalla 25.–26. marraskuuta 1812, jotta Napoleonin Venäjältä perääntyvä armeija pääsisi yli ennen kuin kolme venäläisarmeijaa sulkee ansan. Miehet seisovat jääkylmässä vedessä tuntikausia rakentaen paaluja ja hirsiä, ja moni heistä kuolee kylmyyteen päivien kuluessa työn jälkeen. Kolmen päivän aikana, 26.–28. marraskuuta, kymmeniätuhansia sotilaita ja siviilejä tunkeutuu kahdel…
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:cesis) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cēsisin linna (historia)
+Tietoruudun teksti: Cēsisin linna on Latvian parhaiten säilyneitä keskiaikaisia linnoja. Sen perustukset laski Kalpaveljien ritarikunta kahdeksansataa vuotta sitten. Syksyllä 1206 vendit — pieni heimo nykyisen Cēsisin paikalla — kääntyivät kristinuskoon ja liittoutuivat ristiretkeläisten kanssa, ja vuonna 1208 ritarit asettuivat asumaan heidän linnavuorelleen ja korvasivat puiset varustukset kivimuurilla. Vaikka Henrik Liiviläisen kronikka kutsuu linnaa "Liivinmaan pienimmäksi", se kesti toistuvat piiritykset.
+
+Uuden kivilinnan rakentaminen alkoi vanhan linnavuoren viereen 1213 tai 1214. Vuonna 1237 linna siirtyi Saksalaisen ritarikunnan Liivinmaan haaralle, ja seurasi suuri uudisrakennus: vanhat varustukset korvattiin neliömäisellä castellum-linnalla, jonka neljä siipeä ympäröivät sisäpihaa. Muoto oli tuotu Preussista, ja sen taustalla oli tarve linnoitetuille konventeille — helposti puolustettaville ja m…
+
+### 5.1
+KYSYMYS: Keitä olivat vendit?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cēsisin linna (historia)
+Tietoruudun teksti: Cēsisin linna on Latvian parhaiten säilyneitä keskiaikaisia linnoja. Sen perustukset laski Kalpaveljien ritarikunta kahdeksansataa vuotta sitten. Syksyllä 1206 vendit — pieni heimo nykyisen Cēsisin paikalla — kääntyivät kristinuskoon ja liittoutuivat ristiretkeläisten kanssa, ja vuonna 1208 ritarit asettuivat asumaan heidän linnavuorelleen ja korvasivat puiset varustukset kivimuurilla. Vaikka Henrik Liiviläisen kronikka kutsuu linnaa "Liivinmaan pienimmäksi", se kesti toistuvat piiritykset.
+
+Uuden kivilinnan rakentaminen alkoi vanhan linnavuoren viereen 1213 tai 1214. Vuonna 1237 linna siirtyi Saksalaisen ritarikunnan Liivinmaan haaralle, ja seurasi suuri uudisrakennus: vanhat varustukset korvattiin neliömäisellä castellum-linnalla, jonka neljä siipeä ympäröivät sisäpihaa. Muoto oli tuotu Preussista, ja sen taustalla oli tarve linnoitetuille konventeille — helposti puolustettaville ja m…
+
+### 5.2
+KYSYMYS: Mikä oli castellum?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cēsisin linna (historia)
+Tietoruudun teksti: Cēsisin linna on Latvian parhaiten säilyneitä keskiaikaisia linnoja. Sen perustukset laski Kalpaveljien ritarikunta kahdeksansataa vuotta sitten. Syksyllä 1206 vendit — pieni heimo nykyisen Cēsisin paikalla — kääntyivät kristinuskoon ja liittoutuivat ristiretkeläisten kanssa, ja vuonna 1208 ritarit asettuivat asumaan heidän linnavuorelleen ja korvasivat puiset varustukset kivimuurilla. Vaikka Henrik Liiviläisen kronikka kutsuu linnaa "Liivinmaan pienimmäksi", se kesti toistuvat piiritykset.
+
+Uuden kivilinnan rakentaminen alkoi vanhan linnavuoren viereen 1213 tai 1214. Vuonna 1237 linna siirtyi Saksalaisen ritarikunnan Liivinmaan haaralle, ja seurasi suuri uudisrakennus: vanhat varustukset korvattiin neliömäisellä castellum-linnalla, jonka neljä siipeä ympäröivät sisäpihaa. Muoto oli tuotu Preussista, ja sen taustalla oli tarve linnoitetuille konventeille — helposti puolustettaville ja m…
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

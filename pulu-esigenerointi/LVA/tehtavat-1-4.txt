@@ -1,0 +1,196 @@
+================ KOHTA 16 (kohde:hahmotelma-mustapaiden-talo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riian Mustapäiden talo (historia)
+Tietoruudun teksti: Mustapäiden talo oli Riian kauppiaiden kokoontumispaikka vuodesta 1334. Rakennus paloi tykistötulessa vuonna 1941, ja jäljelle jääneet rauniot räjäytettiin 1948. Nykyinen talo on vuosina 1996–1999 rakennettu jäljennös.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Historia: Talo joka räjäytettiin ja rakennettiin uudelleen] 1334 — Mustapäiden talo rakennettiin vuonna 1334 Riian kauppiaiden kokous- ja juhlapaikaksi, ja 1400-luvulta lähtien siellä kokoontui mustapäiksi kutsuttu naimattomien ulkomaisten kauppiaiden veljeskunta. Vuosisatojen aikana julkisivuun lisättiin koristeellisia renessanssiyksityiskohtia, ja talosta tuli yksi Riian komeimmista rakennuksista. Kesäkuussa 1941 sotatoimet vaurioittivat taloa pahoin, ja vuonna 1948 neuvostoviranomaiset räjäyttivät rauniot kokonaan — menneisyyttä ei haluttu muistaa. Itsenäistymisen jälkeen talo rakennettiin vanhojen piirustusten pohjalta uudelleen, ja se vihittiin käyttöön vuonna 1999, kaupungin 800-vuotisjuhliin.
+
+### 16.1
+KYSYMYS: Miltä Riian Mustapäiden talo näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riian Mustapäiden talo (historia)
+Tietoruudun teksti: Mustapäiden talo oli Riian kauppiaiden kokoontumispaikka vuodesta 1334. Rakennus paloi tykistötulessa vuonna 1941, ja jäljelle jääneet rauniot räjäytettiin 1948. Nykyinen talo on vuosina 1996–1999 rakennettu jäljennös.
+
+### 16.2
+KYSYMYS: Miksi Riian Mustapäiden talo katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riian Mustapäiden talo (historia)
+Tietoruudun teksti: Mustapäiden talo oli Riian kauppiaiden kokoontumispaikka vuodesta 1334. Rakennus paloi tykistötulessa vuonna 1941, ja jäljelle jääneet rauniot räjäytettiin 1948. Nykyinen talo on vuosina 1996–1999 rakennettu jäljennös.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Historia: Talo joka räjäytettiin ja rakennettiin uudelleen] 1334 — Mustapäiden talo rakennettiin vuonna 1334 Riian kauppiaiden kokous- ja juhlapaikaksi, ja 1400-luvulta lähtien siellä kokoontui mustapäiksi kutsuttu naimattomien ulkomaisten kauppiaiden veljeskunta. Vuosisatojen aikana julkisivuun lisättiin koristeellisia renessanssiyksityiskohtia, ja talosta tuli yksi Riian komeimmista rakennuksista. Kesäkuussa 1941 sotatoimet vaurioittivat taloa pahoin, ja vuonna 1948 neuvostoviranomaiset räjäyttivät rauniot kokonaan — menneisyyttä ei haluttu muistaa. Itsenäistymisen jälkeen talo rakennettiin vanhojen piirustusten pohjalta uudelleen, ja se vihittiin käyttöön vuonna 1999, kaupungin 800-vuotisjuhliin.
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:hahmotelma-ventspils) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ventspils (historia)
+Tietoruudun teksti: Ventspils on Kuurinmaalla Latvian luoteisosassa sijaitseva kaupunki, joka ulottuu Venta-joen suulle Itämeren rannalle ja jonka satama on jäätymätön. Nimi tarkoittaa kirjaimellisesti "linnaa Venta-joella", ja se viittaa Liivinmaan ritarikunnan linnaan, jonka ympärille kaupunki kasvoi. Kaupunkioikeudet se sai vuonna 1314, ja siitä tuli tärkeä Hansaliiton kauppakaupunki. Kuurinmaan herttuakunnan aikana Ventspilsissä rakennettiin 44 sotalaivaa ja 79 kauppalaivaa. Puolan kolmannen jaon jälkeen vuonna 1795 kaupunki siirtyi Venäjän keisarikunnalle, mutta laivanrakennus ja kauppa nousivat uudelleen tärkeiksi vasta noin vuonna 1850.
+
+### 17.1
+KYSYMYS: Minne Kuurinmaan herttuan laivasto Ventspilsistä aikoinaan lähti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ventspils (historia)
+Tietoruudun teksti: Ventspils on Kuurinmaalla Latvian luoteisosassa sijaitseva kaupunki, joka ulottuu Venta-joen suulle Itämeren rannalle ja jonka satama on jäätymätön. Nimi tarkoittaa kirjaimellisesti "linnaa Venta-joella", ja se viittaa Liivinmaan ritarikunnan linnaan, jonka ympärille kaupunki kasvoi. Kaupunkioikeudet se sai vuonna 1314, ja siitä tuli tärkeä Hansaliiton kauppakaupunki. Kuurinmaan herttuakunnan aikana Ventspilsissä rakennettiin 44 sotalaivaa ja 79 kauppalaivaa. Puolan kolmannen jaon jälkeen vuonna 1795 kaupunki siirtyi Venäjän keisarikunnalle, mutta laivanrakennus ja kauppa nousivat uudelleen tärkeiksi vasta noin vuonna 1850.
+
+### 17.2
+KYSYMYS: Miksi laivanrakennus ja kauppa elpyivät Ventspilsissä vasta noin vuonna 1850?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ventspils (historia)
+Tietoruudun teksti: Ventspils on Kuurinmaalla Latvian luoteisosassa sijaitseva kaupunki, joka ulottuu Venta-joen suulle Itämeren rannalle ja jonka satama on jäätymätön. Nimi tarkoittaa kirjaimellisesti "linnaa Venta-joella", ja se viittaa Liivinmaan ritarikunnan linnaan, jonka ympärille kaupunki kasvoi. Kaupunkioikeudet se sai vuonna 1314, ja siitä tuli tärkeä Hansaliiton kauppakaupunki. Kuurinmaan herttuakunnan aikana Ventspilsissä rakennettiin 44 sotalaivaa ja 79 kauppalaivaa. Puolan kolmannen jaon jälkeen vuonna 1795 kaupunki siirtyi Venäjän keisarikunnalle, mutta laivanrakennus ja kauppa nousivat uudelleen tärkeiksi vasta noin vuonna 1850.
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:hahmotelma-jurmala) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jūrmala (kulttuuri)
+Tietoruudun teksti: Jūrmala on kylpyläkaupunki Riian Lahden ja Lielupe-joen välisellä kannaksella noin 25 kilometrin päässä Riiasta. Nimi tulee latvian sanoista jūra ("meri") ja mala ("reuna"), joten se tarkoittaa suunnilleen "merenrantaa". Kaupunki koostuu ketjusta pieniä lomakohteita, ja sen valkohiekkainen ranta on 33 kilometriä pitkä; keväisin ja syksyisin rannalta voi löytää meripihkan paloja. Lomanviettäjät alkoivat tulla rannalle 1700-luvun lopulla ja 1800-luvun alussa: ensin varakkaat maanomistajat ja sitten venäläiset upseerit, ja Riian ja Tukumsin välinen rautatie vuonna 1877 kasvatti kävijämääriä paljon. Kaupungin tunnusomaisia piirteitä ovat 1800- ja 1900-luvuilta peräisin olevat puutalot, joita on yli 4000.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [FLK — maalehti / Luonto: Nopein sukeltaja pesii kivikasalla] nykyään — Valkokulmapingviini eli gentoopingviini on maailman nopein uiva lintu: se voi sukeltaessaan yltää yli 30 kilometrin tuntinopeuteen, kun se ajaa takaa kalaa ja mustekalaa lähivesillä. Falklandinsaaret ovat lajille yksi maailman tärkeimmistä pesimäalueista, ja yhdyskuntia löytyy kymmeniltä rannoilta, muun muassa Berthan rannalta ja Sea Lion Islandilta. Pari rakentaa pesän pienistä kivistä ja ruohosta, ja naaras munii kaksi munaa; puuttuvat kivet on tapana varastaa naapuripesästä heti tilaisuuden tullen. Toisin kuin monet sukulaisensa, valkokulmapingviini ei vaella kauas pesimäalueeltaan talvellakaan.
+- [Latvia — maalehti / Luonto: Ranta jatkuu kolmekymmentä kilometriä] Kesällä — Jūrmala on Riianlahden rannalla oleva kaupunki, joka on käytännössä yhtä pitkää hiekkarantaa: valkoista, matalaa ja niin loivaa, että vesi ulottuu kauas polviin asti. Rannan takana kasvaa mäntymetsä, ja metsän seassa on puisia huviloita 1800-luvun lopulta, jolloin paikasta tuli kylpyläkaupunki. Ranta on niin leveä, että tuuli kasaa siitä hiekkavalleja, ja talvella meri jäätyy paikoin rantaviivaan asti.
+
+### 18.1
+KYSYMYS: Miksi rautatie sai Jūrmalan kasvamaan kylpyläkaupungiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jūrmala (kulttuuri)
+Tietoruudun teksti: Jūrmala on kylpyläkaupunki Riian Lahden ja Lielupe-joen välisellä kannaksella noin 25 kilometrin päässä Riiasta. Nimi tulee latvian sanoista jūra ("meri") ja mala ("reuna"), joten se tarkoittaa suunnilleen "merenrantaa". Kaupunki koostuu ketjusta pieniä lomakohteita, ja sen valkohiekkainen ranta on 33 kilometriä pitkä; keväisin ja syksyisin rannalta voi löytää meripihkan paloja. Lomanviettäjät alkoivat tulla rannalle 1700-luvun lopulla ja 1800-luvun alussa: ensin varakkaat maanomistajat ja sitten venäläiset upseerit, ja Riian ja Tukumsin välinen rautatie vuonna 1877 kasvatti kävijämääriä paljon. Kaupungin tunnusomaisia piirteitä ovat 1800- ja 1900-luvuilta peräisin olevat puutalot, joita on yli 4000.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Luonto: Ranta jatkuu kolmekymmentä kilometriä] Kesällä — Jūrmala on Riianlahden rannalla oleva kaupunki, joka on käytännössä yhtä pitkää hiekkarantaa: valkoista, matalaa ja niin loivaa, että vesi ulottuu kauas polviin asti. Rannan takana kasvaa mäntymetsä, ja metsän seassa on puisia huviloita 1800-luvun lopulta, jolloin paikasta tuli kylpyläkaupunki. Ranta on niin leveä, että tuuli kasaa siitä hiekkavalleja, ja talvella meri jäätyy paikoin rantaviivaan asti.
+
+### 18.2
+KYSYMYS: Mitä meripihka on, ja miksi sitä löytyy Itämeren rannoilta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jūrmala (kulttuuri)
+Tietoruudun teksti: Jūrmala on kylpyläkaupunki Riian Lahden ja Lielupe-joen välisellä kannaksella noin 25 kilometrin päässä Riiasta. Nimi tulee latvian sanoista jūra ("meri") ja mala ("reuna"), joten se tarkoittaa suunnilleen "merenrantaa". Kaupunki koostuu ketjusta pieniä lomakohteita, ja sen valkohiekkainen ranta on 33 kilometriä pitkä; keväisin ja syksyisin rannalta voi löytää meripihkan paloja. Lomanviettäjät alkoivat tulla rannalle 1700-luvun lopulla ja 1800-luvun alussa: ensin varakkaat maanomistajat ja sitten venäläiset upseerit, ja Riian ja Tukumsin välinen rautatie vuonna 1877 kasvatti kävijämääriä paljon. Kaupungin tunnusomaisia piirteitä ovat 1800- ja 1900-luvuilta peräisin olevat puutalot, joita on yli 4000.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [FLK — maalehti / Luonto: Nopein sukeltaja pesii kivikasalla] nykyään — Valkokulmapingviini eli gentoopingviini on maailman nopein uiva lintu: se voi sukeltaessaan yltää yli 30 kilometrin tuntinopeuteen, kun se ajaa takaa kalaa ja mustekalaa lähivesillä. Falklandinsaaret ovat lajille yksi maailman tärkeimmistä pesimäalueista, ja yhdyskuntia löytyy kymmeniltä rannoilta, muun muassa Berthan rannalta ja Sea Lion Islandilta. Pari rakentaa pesän pienistä kivistä ja ruohosta, ja naaras munii kaksi munaa; puuttuvat kivet on tapana varastaa naapuripesästä heti tilaisuuden tullen. Toisin kuin monet sukulaisensa, valkokulmapingviini ei vaella kauas pesimäalueeltaan talvellakaan.
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:hahmotelma-kemeri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ķemeri (historia)
+Tietoruudun teksti: Ķemerin kansallispuisto sijaitsee Jūrmalan länsipuolella, ja se perustettiin vuonna 1997. Puisto on 381,65 neliökilometrillään Latvian kolmanneksi suurin: sitä peittävät enimmäkseen metsät ja suot, joista merkittävin on Suuri Ķemerin suo. Alueella on myös järviä, jotka ovat Litorinameren entisiä laguuneja. Puisto suojelee luonnon rikkilähteitä ja parantaviksi katsottuja mutia, joita on käytetty vuosisatojen ajan ja jotka synnyttivät 1800-luvulla useita lomakohteita, kylpylöitä ja parantoloita. Suolla kasvaa syötäviä marjoja, kuten karpaloita ja hillaa, ja siellä on pitkospolut, joista pidempi on 3,4 kilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Luonto: Suon yli kuljetaan lankkuja pitkin] Aamuisin — Ķemerin kansallispuistossa on keidassuo, jonka yli on rakennettu kilometrien mittainen lankkupolku. Suon pinnalla on tummia lampareita ja matalia mäntyjä, ja aamulla usva makaa veden päällä niin, että maisema näyttää toiselta planeetalta. Turve kasvaa hitaasti: noin millimetrin vuodessa, joten metrin paksuinen kerros on tuhat vuotta vanha. Suoveden ja mudan takia alueella on myös kylpylä, jonne tultiin jo tsaarin aikaan hoitoihin.
+
+### 19.1
+KYSYMYS: Miksi Ķemerin lähdevedessä on rikkiä, ja miksi sitä pidettiin parantavana?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ķemeri (historia)
+Tietoruudun teksti: Ķemerin kansallispuisto sijaitsee Jūrmalan länsipuolella, ja se perustettiin vuonna 1997. Puisto on 381,65 neliökilometrillään Latvian kolmanneksi suurin: sitä peittävät enimmäkseen metsät ja suot, joista merkittävin on Suuri Ķemerin suo. Alueella on myös järviä, jotka ovat Litorinameren entisiä laguuneja. Puisto suojelee luonnon rikkilähteitä ja parantaviksi katsottuja mutia, joita on käytetty vuosisatojen ajan ja jotka synnyttivät 1800-luvulla useita lomakohteita, kylpylöitä ja parantoloita. Suolla kasvaa syötäviä marjoja, kuten karpaloita ja hillaa, ja siellä on pitkospolut, joista pidempi on 3,4 kilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Luonto: Suon yli kuljetaan lankkuja pitkin] Aamuisin — Ķemerin kansallispuistossa on keidassuo, jonka yli on rakennettu kilometrien mittainen lankkupolku. Suon pinnalla on tummia lampareita ja matalia mäntyjä, ja aamulla usva makaa veden päällä niin, että maisema näyttää toiselta planeetalta. Turve kasvaa hitaasti: noin millimetrin vuodessa, joten metrin paksuinen kerros on tuhat vuotta vanha. Suoveden ja mudan takia alueella on myös kylpylä, jonne tultiin jo tsaarin aikaan hoitoihin.
+
+### 19.2
+KYSYMYS: Mitä kasveja kohosuolla voi kasvaa, vaikka ravinteita on vähän?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ķemeri (historia)
+Tietoruudun teksti: Ķemerin kansallispuisto sijaitsee Jūrmalan länsipuolella, ja se perustettiin vuonna 1997. Puisto on 381,65 neliökilometrillään Latvian kolmanneksi suurin: sitä peittävät enimmäkseen metsät ja suot, joista merkittävin on Suuri Ķemerin suo. Alueella on myös järviä, jotka ovat Litorinameren entisiä laguuneja. Puisto suojelee luonnon rikkilähteitä ja parantaviksi katsottuja mutia, joita on käytetty vuosisatojen ajan ja jotka synnyttivät 1800-luvulla useita lomakohteita, kylpylöitä ja parantoloita. Suolla kasvaa syötäviä marjoja, kuten karpaloita ja hillaa, ja siellä on pitkospolut, joista pidempi on 3,4 kilometriä.
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:hahmotelma-jaunpils) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jaunpilsin linna (historia)
+Tietoruudun teksti: Jaunpilsin linna eli saksaksi Neuenburg on Liivinmaan ritarikunnan rakennuttama keskiaikainen linna Semgallian alueella Latviassa. Se mainitaan kirjallisissa lähteissä ensimmäisen kerran vuonna 1411, ja se on luultavasti rakennettu 1300-luvun jälkipuoliskolla tai aivan 1400-luvun alussa; usein mainittu vuosi 1301 ei perustu asiakirjoihin. Kenttäkivistä ja yläosistaan tiilestä muurattu linna muodostaa epäsäännöllisen nelikulmion (41 × 30 metriä), ja 1400-luvulla sen kulmaan lisättiin massiivinen pyöreä torni. Vuonna 1576 linna siirtyi Dobelen viimeiselle ritarikunnan komtuurille Matthias von der Reckelle, ja hänen sukunsa omisti sen 1900-luvun alkuun asti. Yhdessä linnan saleista on Madonna ja lapsi -reliefi, jonka on usein luultu 1500-luvun työksi, mutta joka on todennäköisesti 1800-luvulta.
+
+### 20.1
+KYSYMYS: Mistä tiedetään, milloin keskiaikainen Jaunpilsin linna on oikeasti rakennettu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jaunpilsin linna (historia)
+Tietoruudun teksti: Jaunpilsin linna eli saksaksi Neuenburg on Liivinmaan ritarikunnan rakennuttama keskiaikainen linna Semgallian alueella Latviassa. Se mainitaan kirjallisissa lähteissä ensimmäisen kerran vuonna 1411, ja se on luultavasti rakennettu 1300-luvun jälkipuoliskolla tai aivan 1400-luvun alussa; usein mainittu vuosi 1301 ei perustu asiakirjoihin. Kenttäkivistä ja yläosistaan tiilestä muurattu linna muodostaa epäsäännöllisen nelikulmion (41 × 30 metriä), ja 1400-luvulla sen kulmaan lisättiin massiivinen pyöreä torni. Vuonna 1576 linna siirtyi Dobelen viimeiselle ritarikunnan komtuurille Matthias von der Reckelle, ja hänen sukunsa omisti sen 1900-luvun alkuun asti. Yhdessä linnan saleista on Madonna ja lapsi -reliefi, jonka on usein luultu 1500-luvun työksi, mutta joka on todennäköisesti 1800-luvulta.
+
+### 20.2
+KYSYMYS: Miksi Jaunpilsin linnaa ympäröivät ennen joka puolelta vesiesteet?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jaunpilsin linna (historia)
+Tietoruudun teksti: Jaunpilsin linna eli saksaksi Neuenburg on Liivinmaan ritarikunnan rakennuttama keskiaikainen linna Semgallian alueella Latviassa. Se mainitaan kirjallisissa lähteissä ensimmäisen kerran vuonna 1411, ja se on luultavasti rakennettu 1300-luvun jälkipuoliskolla tai aivan 1400-luvun alussa; usein mainittu vuosi 1301 ei perustu asiakirjoihin. Kenttäkivistä ja yläosistaan tiilestä muurattu linna muodostaa epäsäännöllisen nelikulmion (41 × 30 metriä), ja 1400-luvulla sen kulmaan lisättiin massiivinen pyöreä torni. Vuonna 1576 linna siirtyi Dobelen viimeiselle ritarikunnan komtuurille Matthias von der Reckelle, ja hänen sukunsa omisti sen 1900-luvun alkuun asti. Yhdessä linnan saleista on Madonna ja lapsi -reliefi, jonka on usein luultu 1500-luvun työksi, mutta joka on todennäköisesti 1800-luvulta.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

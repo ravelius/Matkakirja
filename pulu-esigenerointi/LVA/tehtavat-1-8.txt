@@ -1,0 +1,217 @@
+================ KOHTA 36 (kohde:hahmotelma-pape) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pape (eläimet)
+Tietoruudun teksti: Pape on luonnonpuisto Latvian lounaisosassa, noin 15 kilometriä Liepājasta etelään. Yli 5 700 hehtaarin alue koostuu pääosin soista, soistuneista metsistä ja dyyneistä Papen järven ympärillä; matala, laguunityyppinen järvi on tärkeä suojelukohde. Alue perustettiin luonnonpuistoksi vuonna 2003 suojelemaan pesiviä ja muuttavia lintuja, ja joka syksy siellä levähtää noin 50 000 lintua. Papeen tuotiin vuonna 1999 Heck-nautoja ja konikhevosia sekä muutamaa vuotta myöhemmin visenttejä, ja niin alueen nisäkaslajisto on nykyään lähes täydellinen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Entisellä merenpohjalla laiduntaa hevoslauma] 1968 — Flevolandin maakunta on kokonaan tehtyä maata: se pumpattiin kuiviin entisen Zuiderzeen pohjalta vuosina 1950–1968. Yhden polderin nurkkaan jäi kosteikko, jota ei ehditty rakentaa, ja siitä tuli Oostvaardersplassen. Sinne päästettiin 1983 kolmekymmentäkaksi heck-nautaa ja seuraavana vuonna kaksikymmentä konik-hevosta pitämään maisemaa avoimena; vuonna 1992 tulivat saksanhirvet. Vuonna 2006 alueelle asettui pesimään merikotka — paikkaan, joka oli neljäkymmentä vuotta aiemmin ollut meren pohjaa.
+
+### 36.1
+KYSYMYS: Miksi Papeen tuotiin Heck-nautoja, konikhevosia ja visenttejä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pape (eläimet)
+Tietoruudun teksti: Pape on luonnonpuisto Latvian lounaisosassa, noin 15 kilometriä Liepājasta etelään. Yli 5 700 hehtaarin alue koostuu pääosin soista, soistuneista metsistä ja dyyneistä Papen järven ympärillä; matala, laguunityyppinen järvi on tärkeä suojelukohde. Alue perustettiin luonnonpuistoksi vuonna 2003 suojelemaan pesiviä ja muuttavia lintuja, ja joka syksy siellä levähtää noin 50 000 lintua. Papeen tuotiin vuonna 1999 Heck-nautoja ja konikhevosia sekä muutamaa vuotta myöhemmin visenttejä, ja niin alueen nisäkaslajisto on nykyään lähes täydellinen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Entisellä merenpohjalla laiduntaa hevoslauma] 1968 — Flevolandin maakunta on kokonaan tehtyä maata: se pumpattiin kuiviin entisen Zuiderzeen pohjalta vuosina 1950–1968. Yhden polderin nurkkaan jäi kosteikko, jota ei ehditty rakentaa, ja siitä tuli Oostvaardersplassen. Sinne päästettiin 1983 kolmekymmentäkaksi heck-nautaa ja seuraavana vuonna kaksikymmentä konik-hevosta pitämään maisemaa avoimena; vuonna 1992 tulivat saksanhirvet. Vuonna 2006 alueelle asettui pesimään merikotka — paikkaan, joka oli neljäkymmentä vuotta aiemmin ollut meren pohjaa.
+
+### 36.2
+KYSYMYS: Miksi Papen alue on tärkeä muuttolinnuille?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pape (eläimet)
+Tietoruudun teksti: Pape on luonnonpuisto Latvian lounaisosassa, noin 15 kilometriä Liepājasta etelään. Yli 5 700 hehtaarin alue koostuu pääosin soista, soistuneista metsistä ja dyyneistä Papen järven ympärillä; matala, laguunityyppinen järvi on tärkeä suojelukohde. Alue perustettiin luonnonpuistoksi vuonna 2003 suojelemaan pesiviä ja muuttavia lintuja, ja joka syksy siellä levähtää noin 50 000 lintua. Papeen tuotiin vuonna 1999 Heck-nautoja ja konikhevosia sekä muutamaa vuotta myöhemmin visenttejä, ja niin alueen nisäkaslajisto on nykyään lähes täydellinen.
+
+### 36.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+================ KOHTA 37 (kohde:hahmotelma-bauska) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bauskan linna (historia)
+Tietoruudun teksti: Liivinmaan ritarikunta rakensi Bauskan linnan vuosina 1443–1450 Mūsan ja Mēmelen jokien yhtymäkohtaan kohoavalle niemekkeelle, jonka paikalla oli aiemmin semigallialainen linnavuori. Linna vahvisti ritarikunnan valtaa Semgallian alueella ja vartioi kauppareittiä Liettuasta Riikaan. Ritarikunnan hajottua 1500-luvun puolivälissä linnasta tuli Kuurinmaan ja Semgallian herttuakunnan yksi pääasunnoista, ja siihen lisättiin 1590-luvulla uusi renessanssisiipi kahdine massiivisine pyöreine torneineen. Ison Pohjan sodan aikana vuonna 1706 perääntyvät venäläisjoukot räjäyttivät sekä vanhan linnan että palatsin, ja rauniot jäivät korjaamatta yli 150 vuodeksi. Vasta 1990-luvulta alkaen niitä on osittain restauroitu, ja nykyään kunnostettu palatsiosa toimii museona, kun taas keskiaikaisesta linnasta on jäljellä vain rauniot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kaupunkilehti / Vilna] Liettuan pääkaupunki kasvoi kahden joen yhtymäkohtaan kukkuloiden väliin. Vanhassakaupungissa on kapeita kujia, satakunta kirkkoa ja yksi omaksi tasavallakseen julistautunut kortteli.
+- [Lhasa — kaupunkilehti / Historia: Ison pelin viimeinen näytös] Joulukuussa 1903 brittiläisen Intian joukot ylittivät Tiibetin rajan eversti Francis Younghusbandin johdolla: yli kolmetuhatta sotilasta ja seitsemäntuhatta kantajaa ja huoltoväkeä. Syynä oli Intian varakuninkaan lordi Curzonin pelko siitä, että Venäjä oli saamassa jalansijaa Tiibetissä burjaattilaisen lamaneuvonantajan Agvan Dorzhievin kautta. Huonosti varustetut tiibetiläisjoukot eivät kyenneet pysäyttämään retkikuntaa, ja se saapui Lhasaan 3. elokuuta 1904 — kolmastoista dalai-lama oli jo lähtenyt Urgaan eli nykyiseen Ulan Batoriin. Lhasan sopimus allekirjoitettiin Potalassa 7. syyskuuta, ja retkikunta lähti paluumatkalle saman kuun lopulla.
+- [Venäjä — maalehti / Historia: Tsaari perusti pääkaupungin suolle] 1703 — Suuressa Pohjan sodassa Ruotsia vastaan Pietari Suuri valtasi Nevajoen suistoalueen ja käski 27. toukokuuta 1703 perustaa linnoituksen pienelle Jänissaarelle suojaamaan uutta aluetta. Rakennustyöhön komennettiin kymmeniätuhansia talonpoikia ja sotavankeja kaivamaan maata paljain käsin suoperäisellä rannalla, ja moni heistä kuoli raskaissa oloissa. Linnoituksen ympärille nousi kaupunki, josta tuli vuonna 1712 Venäjän uusi pääkaupunki ja jota Pietari kutsui itse "ikkunaksi Eurooppaan". Pietari valvoi rakennustöitä usein itse paikan päällä eurooppalaiseen tapaan pukeutuneena, mikä hämmensi hoviväkeä tottuneempaa tsaarin perinteiseen asuun ja etäisyyteen.
+
+### 37.1
+KYSYMYS: Miksi linna rakennettiin juuri kahden joen yhtymäkohtaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bauskan linna (historia)
+Tietoruudun teksti: Liivinmaan ritarikunta rakensi Bauskan linnan vuosina 1443–1450 Mūsan ja Mēmelen jokien yhtymäkohtaan kohoavalle niemekkeelle, jonka paikalla oli aiemmin semigallialainen linnavuori. Linna vahvisti ritarikunnan valtaa Semgallian alueella ja vartioi kauppareittiä Liettuasta Riikaan. Ritarikunnan hajottua 1500-luvun puolivälissä linnasta tuli Kuurinmaan ja Semgallian herttuakunnan yksi pääasunnoista, ja siihen lisättiin 1590-luvulla uusi renessanssisiipi kahdine massiivisine pyöreine torneineen. Ison Pohjan sodan aikana vuonna 1706 perääntyvät venäläisjoukot räjäyttivät sekä vanhan linnan että palatsin, ja rauniot jäivät korjaamatta yli 150 vuodeksi. Vasta 1990-luvulta alkaen niitä on osittain restauroitu, ja nykyään kunnostettu palatsiosa toimii museona, kun taas keskiaikaisesta linnasta on jäljellä vain rauniot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kaupunkilehti / Vilna] Liettuan pääkaupunki kasvoi kahden joen yhtymäkohtaan kukkuloiden väliin. Vanhassakaupungissa on kapeita kujia, satakunta kirkkoa ja yksi omaksi tasavallakseen julistautunut kortteli.
+
+### 37.2
+KYSYMYS: Mitä linnalle tapahtui Ison Pohjan sodassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bauskan linna (historia)
+Tietoruudun teksti: Liivinmaan ritarikunta rakensi Bauskan linnan vuosina 1443–1450 Mūsan ja Mēmelen jokien yhtymäkohtaan kohoavalle niemekkeelle, jonka paikalla oli aiemmin semigallialainen linnavuori. Linna vahvisti ritarikunnan valtaa Semgallian alueella ja vartioi kauppareittiä Liettuasta Riikaan. Ritarikunnan hajottua 1500-luvun puolivälissä linnasta tuli Kuurinmaan ja Semgallian herttuakunnan yksi pääasunnoista, ja siihen lisättiin 1590-luvulla uusi renessanssisiipi kahdine massiivisine pyöreine torneineen. Ison Pohjan sodan aikana vuonna 1706 perääntyvät venäläisjoukot räjäyttivät sekä vanhan linnan että palatsin, ja rauniot jäivät korjaamatta yli 150 vuodeksi. Vasta 1990-luvulta alkaen niitä on osittain restauroitu, ja nykyään kunnostettu palatsiosa toimii museona, kun taas keskiaikaisesta linnasta on jäljellä vain rauniot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lhasa — kaupunkilehti / Historia: Ison pelin viimeinen näytös] Joulukuussa 1903 brittiläisen Intian joukot ylittivät Tiibetin rajan eversti Francis Younghusbandin johdolla: yli kolmetuhatta sotilasta ja seitsemäntuhatta kantajaa ja huoltoväkeä. Syynä oli Intian varakuninkaan lordi Curzonin pelko siitä, että Venäjä oli saamassa jalansijaa Tiibetissä burjaattilaisen lamaneuvonantajan Agvan Dorzhievin kautta. Huonosti varustetut tiibetiläisjoukot eivät kyenneet pysäyttämään retkikuntaa, ja se saapui Lhasaan 3. elokuuta 1904 — kolmastoista dalai-lama oli jo lähtenyt Urgaan eli nykyiseen Ulan Batoriin. Lhasan sopimus allekirjoitettiin Potalassa 7. syyskuuta, ja retkikunta lähti paluumatkalle saman kuun lopulla.
+- [Venäjä — maalehti / Historia: Tsaari perusti pääkaupungin suolle] 1703 — Suuressa Pohjan sodassa Ruotsia vastaan Pietari Suuri valtasi Nevajoen suistoalueen ja käski 27. toukokuuta 1703 perustaa linnoituksen pienelle Jänissaarelle suojaamaan uutta aluetta. Rakennustyöhön komennettiin kymmeniätuhansia talonpoikia ja sotavankeja kaivamaan maata paljain käsin suoperäisellä rannalla, ja moni heistä kuoli raskaissa oloissa. Linnoituksen ympärille nousi kaupunki, josta tuli vuonna 1712 Venäjän uusi pääkaupunki ja jota Pietari kutsui itse "ikkunaksi Eurooppaan". Pietari valvoi rakennustöitä usein itse paikan päällä eurooppalaiseen tapaan pukeutuneena, mikä hämmensi hoviväkeä tottuneempaa tsaarin perinteiseen asuun ja etäisyyteen.
+
+### 37.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+================ KOHTA 38 (nosto:ventas-rumba) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan levein vesiputous on kahden metrin korkuinen — ja siitä pyydettiin lohta ilmasta
+Tietoruudun teksti: Kuldīgassa Venta-joki valuu kallioportaan yli koko leveydeltään. Putousta sanotaan Euroopan leveimmäksi, ja leveys riippuu siitä, mitä mitataan: lähteet antavat virtaavalle osalle runsaat sata metriä ja koko kynnykselle noin kaksisataaviisikymmentä, tulva-aikaan lähes kolmesataa. Korkeutta on kaikkiaan kaksi metriä. Se on juuri sopiva este: kutuaikaan kalat yrittävät sen yli hypäten, ja Kuldīga tunnettiin kaupunkina, jossa lohi pyydetään ilmasta. Herttua Jaakobin ajalta kerrotaan, että kallioon hakattiin patoja ja putouksen juurelle asetettiin toista sataa suurta pajukoria: se, joka ei jaksanut yli, tuli alas koriin. Sammet katosivat joesta vuoteen 1892 mennessä, ja nykyään pyydetään enimmäkseen vimpaa, kutuaikana rajoituksin.
+
+Kaupunki itse on samaa tarinaa. Herttua Jaakobin hallituskaudella 1642–1682 Kuldīgaan rakennettiin telakoita, salpietaritehdas ja tiilitehtaita — samat telakat, …
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New Orleans — kaupunkilehti / Historia: Ranskalainen nimi, espanjalainen tiili] Ranskan aikakauden puiset talot paloivat kahdessa suurpalossa 1788 ja 1794, jotka yhdessä tuhosivat 80 prosenttia kaupungin rakennuksista. Jälkimmäisen jälkeen Espanjan hallinto sääti palomääräykset, jotka kielsivät puujulkisivut, ja Vieux Carré nousi uudelleen tiilestä ja stukista. Siksi lähes koko säilynyt 1700-luvun arkkitehtuuri on espanjalaiskaudelta, vaikka aluetta kutsutaan yhä Ranskan Kortteliksi. Koristeelliset valurautaparvekkeet ovat vielä nuorempia: ensimmäiset kaksikerroksiset valmistuivat Pontalba-taloihin 1849–1851 ja loivat muodin, jota muut alkoivat seurata.
+
+### 38.1
+KYSYMYS: Miten kala voi hypätä vesiputouksen yli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan levein vesiputous on kahden metrin korkuinen — ja siitä pyydettiin lohta ilmasta
+Tietoruudun teksti: Kuldīgassa Venta-joki valuu kallioportaan yli koko leveydeltään. Putousta sanotaan Euroopan leveimmäksi, ja leveys riippuu siitä, mitä mitataan: lähteet antavat virtaavalle osalle runsaat sata metriä ja koko kynnykselle noin kaksisataaviisikymmentä, tulva-aikaan lähes kolmesataa. Korkeutta on kaikkiaan kaksi metriä. Se on juuri sopiva este: kutuaikaan kalat yrittävät sen yli hypäten, ja Kuldīga tunnettiin kaupunkina, jossa lohi pyydetään ilmasta. Herttua Jaakobin ajalta kerrotaan, että kallioon hakattiin patoja ja putouksen juurelle asetettiin toista sataa suurta pajukoria: se, joka ei jaksanut yli, tuli alas koriin. Sammet katosivat joesta vuoteen 1892 mennessä, ja nykyään pyydetään enimmäkseen vimpaa, kutuaikana rajoituksin.
+
+Kaupunki itse on samaa tarinaa. Herttua Jaakobin hallituskaudella 1642–1682 Kuldīgaan rakennettiin telakoita, salpietaritehdas ja tiilitehtaita — samat telakat, …
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+### 38.2
+KYSYMYS: Miksi juuri Kuldīgaan rakennettiin telakoita?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan levein vesiputous on kahden metrin korkuinen — ja siitä pyydettiin lohta ilmasta
+Tietoruudun teksti: Kuldīgassa Venta-joki valuu kallioportaan yli koko leveydeltään. Putousta sanotaan Euroopan leveimmäksi, ja leveys riippuu siitä, mitä mitataan: lähteet antavat virtaavalle osalle runsaat sata metriä ja koko kynnykselle noin kaksisataaviisikymmentä, tulva-aikaan lähes kolmesataa. Korkeutta on kaikkiaan kaksi metriä. Se on juuri sopiva este: kutuaikaan kalat yrittävät sen yli hypäten, ja Kuldīga tunnettiin kaupunkina, jossa lohi pyydetään ilmasta. Herttua Jaakobin ajalta kerrotaan, että kallioon hakattiin patoja ja putouksen juurelle asetettiin toista sataa suurta pajukoria: se, joka ei jaksanut yli, tuli alas koriin. Sammet katosivat joesta vuoteen 1892 mennessä, ja nykyään pyydetään enimmäkseen vimpaa, kutuaikana rajoituksin.
+
+Kaupunki itse on samaa tarinaa. Herttua Jaakobin hallituskaudella 1642–1682 Kuldīgaan rakennettiin telakoita, salpietaritehdas ja tiilitehtaita — samat telakat, …
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+### 38.3
+KYSYMYS: Miksi tiilisilta on yhä pystyssä sadanviidenkymmenen vuoden jälkeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan levein vesiputous on kahden metrin korkuinen — ja siitä pyydettiin lohta ilmasta
+Tietoruudun teksti: Kuldīgassa Venta-joki valuu kallioportaan yli koko leveydeltään. Putousta sanotaan Euroopan leveimmäksi, ja leveys riippuu siitä, mitä mitataan: lähteet antavat virtaavalle osalle runsaat sata metriä ja koko kynnykselle noin kaksisataaviisikymmentä, tulva-aikaan lähes kolmesataa. Korkeutta on kaikkiaan kaksi metriä. Se on juuri sopiva este: kutuaikaan kalat yrittävät sen yli hypäten, ja Kuldīga tunnettiin kaupunkina, jossa lohi pyydetään ilmasta. Herttua Jaakobin ajalta kerrotaan, että kallioon hakattiin patoja ja putouksen juurelle asetettiin toista sataa suurta pajukoria: se, joka ei jaksanut yli, tuli alas koriin. Sammet katosivat joesta vuoteen 1892 mennessä, ja nykyään pyydetään enimmäkseen vimpaa, kutuaikana rajoituksin.
+
+Kaupunki itse on samaa tarinaa. Herttua Jaakobin hallituskaudella 1642–1682 Kuldīgaan rakennettiin telakoita, salpietaritehdas ja tiilitehtaita — samat telakat, …
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New Orleans — kaupunkilehti / Historia: Ranskalainen nimi, espanjalainen tiili] Ranskan aikakauden puiset talot paloivat kahdessa suurpalossa 1788 ja 1794, jotka yhdessä tuhosivat 80 prosenttia kaupungin rakennuksista. Jälkimmäisen jälkeen Espanjan hallinto sääti palomääräykset, jotka kielsivät puujulkisivut, ja Vieux Carré nousi uudelleen tiilestä ja stukista. Siksi lähes koko säilynyt 1700-luvun arkkitehtuuri on espanjalaiskaudelta, vaikka aluetta kutsutaan yhä Ranskan Kortteliksi. Koristeelliset valurautaparvekkeet ovat vielä nuorempia: ensimmäiset kaksikerroksiset valmistuivat Pontalba-taloihin 1849–1851 ja loivat muodin, jota muut alkoivat seurata.
+
+### 38.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+================ KOHTA 39 (nosto:kolkasrags) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Niemi, jossa kaksi merta lyö vastakkain — ja kieli, jolla oli lopulta enää yksi puhuja
+Tietoruudun teksti: Kuurinmaan niemimaan luoteiskärjessä, Slīteren kansallispuistossa, on hiekkaniemi, jonka toisella puolella on Itämeri ja toisella Riianlahti. Aallot tulevat kahdesta suunnasta ja lyövät vastakkain kärjen kohdalla, ja veden alla niemi jatkuu matalikkona pitkälle ulapalle. Hiekka on liikkeessä: sitä kulkeutuu niemeä kohti vuodessa seitsemän–kahdeksansataatuhatta kuutiometriä, mutta noin yhdeksän kymmenesosaa kasautuu heti niemen pohjoispuolelle ja vain viisikymmentätuhatta kuutiota jatkaa lahden puolelle. Kärki siis rakentaa itseään koko ajan, mutta hitaammin kuin näyttää. Rantatasanko jatkuu noin seitsemänkymmentä kilometriä rannikkoa pitkin ja on paikoin kymmenen kilometriä leveä.
+
+Rannalla on kylärivi, jonka nimet eivät ole latviaa: Vaide, Saunags, Pitrags, Košrags, Sīkrags. Ne kuuluvat suojeltuun Liivinrantaan, ja niissä puhuttiin liiviä — uralilaista kieltä, itämerensuomalaisten kiel…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri: Laji jonka nimi tarkoittaa kaihoa] Ottomaanien kausi – nykyaika — Sevdalinka on bosnialainen kaupunkilainen kansanlaulun laji, joka syntyi Ottomaanien vallan aikana ja yhdistää ottomaani-, sefardijuutalaista ja slaavilaista musiikkiperinnettä. Nimi juontuu sanasta sevdah, joka tulee arabian sydäntä ja mustaa sappea tarkoittavasta käsitteestä ja viittaa syvään, usein onnettomaan rakkauden kaihoon. Perinteisesti laulua säesti saz, pitkä­kaulainen luuttu, myöhemmin haitari. Nykyisin lajia elvyttää muun muassa muusikko Damir Imamović, tunnetun sevdalinka-laulaja Zaim Imamovićin pojanpoika, joka on esiintynyt lajilla kansainvälisillä musiikkifestivaaleilla.
+
+### 39.1
+KYSYMYS: Miksi aallot tulevat Kolkan kärjessä kahdesta suunnasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Niemi, jossa kaksi merta lyö vastakkain — ja kieli, jolla oli lopulta enää yksi puhuja
+Tietoruudun teksti: Kuurinmaan niemimaan luoteiskärjessä, Slīteren kansallispuistossa, on hiekkaniemi, jonka toisella puolella on Itämeri ja toisella Riianlahti. Aallot tulevat kahdesta suunnasta ja lyövät vastakkain kärjen kohdalla, ja veden alla niemi jatkuu matalikkona pitkälle ulapalle. Hiekka on liikkeessä: sitä kulkeutuu niemeä kohti vuodessa seitsemän–kahdeksansataatuhatta kuutiometriä, mutta noin yhdeksän kymmenesosaa kasautuu heti niemen pohjoispuolelle ja vain viisikymmentätuhatta kuutiota jatkaa lahden puolelle. Kärki siis rakentaa itseään koko ajan, mutta hitaammin kuin näyttää. Rantatasanko jatkuu noin seitsemänkymmentä kilometriä rannikkoa pitkin ja on paikoin kymmenen kilometriä leveä.
+
+Rannalla on kylärivi, jonka nimet eivät ole latviaa: Vaide, Saunags, Pitrags, Košrags, Sīkrags. Ne kuuluvat suojeltuun Liivinrantaan, ja niissä puhuttiin liiviä — uralilaista kieltä, itämerensuomalaisten kiel…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+### 39.2
+KYSYMYS: Mille kielille liivi on sukua?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Niemi, jossa kaksi merta lyö vastakkain — ja kieli, jolla oli lopulta enää yksi puhuja
+Tietoruudun teksti: Kuurinmaan niemimaan luoteiskärjessä, Slīteren kansallispuistossa, on hiekkaniemi, jonka toisella puolella on Itämeri ja toisella Riianlahti. Aallot tulevat kahdesta suunnasta ja lyövät vastakkain kärjen kohdalla, ja veden alla niemi jatkuu matalikkona pitkälle ulapalle. Hiekka on liikkeessä: sitä kulkeutuu niemeä kohti vuodessa seitsemän–kahdeksansataatuhatta kuutiometriä, mutta noin yhdeksän kymmenesosaa kasautuu heti niemen pohjoispuolelle ja vain viisikymmentätuhatta kuutiota jatkaa lahden puolelle. Kärki siis rakentaa itseään koko ajan, mutta hitaammin kuin näyttää. Rantatasanko jatkuu noin seitsemänkymmentä kilometriä rannikkoa pitkin ja on paikoin kymmenen kilometriä leveä.
+
+Rannalla on kylärivi, jonka nimet eivät ole latviaa: Vaide, Saunags, Pitrags, Košrags, Sīkrags. Ne kuuluvat suojeltuun Liivinrantaan, ja niissä puhuttiin liiviä — uralilaista kieltä, itämerensuomalaisten kiel…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+### 39.3
+KYSYMYS: Voiko kielen elvyttää sen jälkeen, kun viimeinen puhuja on kuollut?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Niemi, jossa kaksi merta lyö vastakkain — ja kieli, jolla oli lopulta enää yksi puhuja
+Tietoruudun teksti: Kuurinmaan niemimaan luoteiskärjessä, Slīteren kansallispuistossa, on hiekkaniemi, jonka toisella puolella on Itämeri ja toisella Riianlahti. Aallot tulevat kahdesta suunnasta ja lyövät vastakkain kärjen kohdalla, ja veden alla niemi jatkuu matalikkona pitkälle ulapalle. Hiekka on liikkeessä: sitä kulkeutuu niemeä kohti vuodessa seitsemän–kahdeksansataatuhatta kuutiometriä, mutta noin yhdeksän kymmenesosaa kasautuu heti niemen pohjoispuolelle ja vain viisikymmentätuhatta kuutiota jatkaa lahden puolelle. Kärki siis rakentaa itseään koko ajan, mutta hitaammin kuin näyttää. Rantatasanko jatkuu noin seitsemänkymmentä kilometriä rannikkoa pitkin ja on paikoin kymmenen kilometriä leveä.
+
+Rannalla on kylärivi, jonka nimet eivät ole latviaa: Vaide, Saunags, Pitrags, Košrags, Sīkrags. Ne kuuluvat suojeltuun Liivinrantaan, ja niissä puhuttiin liiviä — uralilaista kieltä, itämerensuomalaisten kiel…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri: Laji jonka nimi tarkoittaa kaihoa] Ottomaanien kausi – nykyaika — Sevdalinka on bosnialainen kaupunkilainen kansanlaulun laji, joka syntyi Ottomaanien vallan aikana ja yhdistää ottomaani-, sefardijuutalaista ja slaavilaista musiikkiperinnettä. Nimi juontuu sanasta sevdah, joka tulee arabian sydäntä ja mustaa sappea tarkoittavasta käsitteestä ja viittaa syvään, usein onnettomaan rakkauden kaihoon. Perinteisesti laulua säesti saz, pitkä­kaulainen luuttu, myöhemmin haitari. Nykyisin lajia elvyttää muun muassa muusikko Damir Imamović, tunnetun sevdalinka-laulaja Zaim Imamovićin pojanpoika, joka on esiintynyt lajilla kansainvälisillä musiikkifestivaaleilla.
+
+### 39.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI

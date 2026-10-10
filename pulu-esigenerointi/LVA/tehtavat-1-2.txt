@@ -1,0 +1,276 @@
+================ KOHTA 6 (kohde:turaidan-ruusu) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turaidan ruusu (sana)
+Tietoruudun teksti: Turaidan ruusu on 1800-luvun legenda Maija-nimisestä nuoresta naisesta. Kertomuksen mukaan linnan kirjuri löysi vuoden 1601 taistelun jälkeen Turaidan linnan juurelta vauvan kuolleen äitinsä sylistä, otti tytön omakseen ja antoi hänelle nimen Maija. Tytöstä kasvoi niin kaunis, että häntä kutsuttiin Turaidan ruusuksi. Hän rakastui Viktoriin, Siguldan linnan puutarhuriin joen toisella puolen, ja syksyllä 1620 pari valmistautui häihin.
+
+Vähän ennen häitä Maija sai kirjeen, jossa Viktor pyysi häntä tapaamaan Gutmanin luolaan, heidän tavalliseen tapaamispaikkaansa. Luolassa odottikin puolalainen sotilas Adam Jakubowski, joka aikoi pakottaa hänet vaimokseen. Maija lupasi antaa miehelle taikahuivinsa, jonka sanottiin suojaavan kantajaansa kaikilta vammoilta, jos tämä päästäisi hänet menemään — ja suostutteli miehen koettelemaan huivin voimaa hänen itsensä päällä. Isku tappoi Maijan, ja niin hä…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saint Helena — maalehti / Tiede: Saari, jolla ympäristöajattelu sai alkunsa] 1775–1833 — Kun Johann Reinhold ja Georg Forster nousivat maihin Cookin Resolutionilta vuonna 1775, he odottivat näkevänsä, miten luonto muokkaa ihmistä. He näkivät päinvastaista: kasvillisuuden hakkuu oli tuonut tulvat ja kilpikonnakanta oli tapettu lähes olemattomiin. Saari oli riittävän pieni ja riittävän eristynyt, jotta ihmisen jälki näkyi kerralla kokonaan, ja siitä seurasi yksi maailman ensimmäisistä metsänsuojelulaeista. Vuosien 1791 ja 1833 välillä saarella kokeiltiin järjestelmällisesti suojelua, metsittämistä ja jopa sateen lisäämistä keinotekoisesti — kokeita, joista ympäristöajattelun juuret johdetaan.
+- [Izmir — kaupunkilehti / İzmir: Puisto sai alkunsa Moskovan-matkasta] Apulaispormestari Suat Yurtkoru esitti pormestari Behçet Uzille, että İzmir tarvitsee Moskovan Gorki-puiston kaltaisen alueen. Kaupunginvaltuusto hyväksyi esityksen 14. toukokuuta 1934. Uz matkusti Moskovaan 1935, ja kaksi arkkitehtia laati suunnitelman. Perustus laskettiin 1. tammikuuta 1936, ja Kültürpark avattiin yleisölle 1. syyskuuta 1936. Alaa oli 360 000 neliömetriä, ja vuonna 1939 se kasvoi 420 000:een. Puistoon nousi laskuvarjotorni 1937 ja eläintarha 1938; eläimet siirrettiin muualle 2008. Nykyään siellä pidetään İzmirin kansainväliset messut ja kirjamessut.
+
+### 6.1
+KYSYMYS: Mistä legenda sai alkunsa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turaidan ruusu (sana)
+Tietoruudun teksti: Turaidan ruusu on 1800-luvun legenda Maija-nimisestä nuoresta naisesta. Kertomuksen mukaan linnan kirjuri löysi vuoden 1601 taistelun jälkeen Turaidan linnan juurelta vauvan kuolleen äitinsä sylistä, otti tytön omakseen ja antoi hänelle nimen Maija. Tytöstä kasvoi niin kaunis, että häntä kutsuttiin Turaidan ruusuksi. Hän rakastui Viktoriin, Siguldan linnan puutarhuriin joen toisella puolen, ja syksyllä 1620 pari valmistautui häihin.
+
+Vähän ennen häitä Maija sai kirjeen, jossa Viktor pyysi häntä tapaamaan Gutmanin luolaan, heidän tavalliseen tapaamispaikkaansa. Luolassa odottikin puolalainen sotilas Adam Jakubowski, joka aikoi pakottaa hänet vaimokseen. Maija lupasi antaa miehelle taikahuivinsa, jonka sanottiin suojaavan kantajaansa kaikilta vammoilta, jos tämä päästäisi hänet menemään — ja suostutteli miehen koettelemaan huivin voimaa hänen itsensä päällä. Isku tappoi Maijan, ja niin hä…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saint Helena — maalehti / Tiede: Saari, jolla ympäristöajattelu sai alkunsa] 1775–1833 — Kun Johann Reinhold ja Georg Forster nousivat maihin Cookin Resolutionilta vuonna 1775, he odottivat näkevänsä, miten luonto muokkaa ihmistä. He näkivät päinvastaista: kasvillisuuden hakkuu oli tuonut tulvat ja kilpikonnakanta oli tapettu lähes olemattomiin. Saari oli riittävän pieni ja riittävän eristynyt, jotta ihmisen jälki näkyi kerralla kokonaan, ja siitä seurasi yksi maailman ensimmäisistä metsänsuojelulaeista. Vuosien 1791 ja 1833 välillä saarella kokeiltiin järjestelmällisesti suojelua, metsittämistä ja jopa sateen lisäämistä keinotekoisesti — kokeita, joista ympäristöajattelun juuret johdetaan.
+- [Izmir — kaupunkilehti / İzmir: Puisto sai alkunsa Moskovan-matkasta] Apulaispormestari Suat Yurtkoru esitti pormestari Behçet Uzille, että İzmir tarvitsee Moskovan Gorki-puiston kaltaisen alueen. Kaupunginvaltuusto hyväksyi esityksen 14. toukokuuta 1934. Uz matkusti Moskovaan 1935, ja kaksi arkkitehtia laati suunnitelman. Perustus laskettiin 1. tammikuuta 1936, ja Kültürpark avattiin yleisölle 1. syyskuuta 1936. Alaa oli 360 000 neliömetriä, ja vuonna 1939 se kasvoi 420 000:een. Puistoon nousi laskuvarjotorni 1937 ja eläintarha 1938; eläimet siirrettiin muualle 2008. Nykyään siellä pidetään İzmirin kansainväliset messut ja kirjamessut.
+
+### 6.2
+KYSYMYS: Miksi vastavihityt käyvät haudalla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turaidan ruusu (sana)
+Tietoruudun teksti: Turaidan ruusu on 1800-luvun legenda Maija-nimisestä nuoresta naisesta. Kertomuksen mukaan linnan kirjuri löysi vuoden 1601 taistelun jälkeen Turaidan linnan juurelta vauvan kuolleen äitinsä sylistä, otti tytön omakseen ja antoi hänelle nimen Maija. Tytöstä kasvoi niin kaunis, että häntä kutsuttiin Turaidan ruusuksi. Hän rakastui Viktoriin, Siguldan linnan puutarhuriin joen toisella puolen, ja syksyllä 1620 pari valmistautui häihin.
+
+Vähän ennen häitä Maija sai kirjeen, jossa Viktor pyysi häntä tapaamaan Gutmanin luolaan, heidän tavalliseen tapaamispaikkaansa. Luolassa odottikin puolalainen sotilas Adam Jakubowski, joka aikoi pakottaa hänet vaimokseen. Maija lupasi antaa miehelle taikahuivinsa, jonka sanottiin suojaavan kantajaansa kaikilta vammoilta, jos tämä päästäisi hänet menemään — ja suostutteli miehen koettelemaan huivin voimaa hänen itsensä päällä. Isku tappoi Maijan, ja niin hä…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Riemukaari] 1806–1836 Keisari Napoleon käski rakentaa valtavan riemukaaren vuonna 1806 juhlistamaan Austerlitzin taistelun voittoa. Kaari on lähes 50 metriä korkea, ja sen pintoihin on kaiverrettu 158 taistelun ja 660 sotapäällikön nimet. Napoleon ei koskaan nähnyt valmista kaarta, sillä se saatiin valmiiksi vasta vuonna 1836. Kaaren alla lepää Tuntemattoman sotilaan hauta, jonne haudattiin vuonna 1920 nimetön ranskalaissotilas muistoksi kaikista sodissa kadonneista. Haudalla palaa ikuinen liekki, joka sytytetään uudelleen joka ilta. Vuonna 1919 lentäjä Charles Godefroy lensi kaksitasokoneellaan kaaren läpi — uskomaton temppu, sillä aukko on vain reilut 14 metriä leveä.
+- [Ateena — kaupunkilehti / Arki ja tavat: Evzonit ja tupsukengät] Tuntemattoman sotilaan haudalla vartioivat evzonit kävelevät hitaasti kuin unessa, ja jalka nousee jokaisella askelella suoraksi eteen. Sunnuntaisin ja juhlapäivinä heillä on yllään valkoinen foustanella-hame, jonka 30 metriin kangasta on laskostettu 400 laskosta — kerrotaan, että yksi jokaista ottomaanivallan vuotta kohti. Punaiset tsarouhia-kengät painavat parina noin kolme kiloa, ja pohjissa on kymmeniä nauloja.
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:liepaja) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Liepāja (merenkulku)
+Tietoruudun teksti: Liepāja on kaupunki Länsi-Latviassa Itämeren rannalla, Kuurinmaan suurin ja koko maan kolmanneksi suurin Riian ja Daugavpilsin jälkeen. Sen tärkein ominaisuus on satama, joka ei jäädy talvellakaan.
+
+Nimi tulee latvian sanasta liepa, lehmus. Vanha nimi Libau juontunee Līva-joesta, joka virtasi aikoinaan kaupungin läpi mutta jota ei enää ole. Vanhin kirjallinen maininta Līvan kylästä on Kuurinmaan piispan ja Liivinmaan ritarikunnan mestarin välisessä sopimuksessa 4. huhtikuuta 1253. Saksalainen ritarikunta perusti paikalle 1263 kaupungin nimeltä Libau, ja sitä nimeä käytettiin vuoteen 1920; latviankielinen Liepāja mainittiin ensimmäisen kerran 1649 Paul Einhornin teoksessa Historia Lettica.
+
+1800-luvulla ja 1900-luvun alussa Liepāja oli suosittu merikylpylä- ja matkailukaupunki, jossa oli hieno puisto, monta kaunista puutarhaa ja teatteri. Koko Latviassa se tunnetaan kaupunkina, jossa tuu…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mumbai — kaupunkilehti / Historia: Nimi, joka palasi] Kaupungin nimi tulee Mumbadevistä, koli-kalastajien suojelusjumalattaresta, ja marathin sanasta aai eli äiti. Portugalilainen kirjoittaja Gaspar Correia merkitsi vuoden 1512 jälkeen muistiin muodon Bombaim, ja 1500- ja 1600-luvun asiakirjoissa nimi esiintyy toistakymmentä kertaa eri asussa. Englantilaiset muokkasivat portugalilaisen nimen muotoon Bombay, ja siitä syntyi sitkeä selitys, jonka mukaan se tarkoittaisi hyvää lahtea. Ranskalainen matkaaja Louis Rousselet, joka kävi kaupungissa 1863 ja 1868, kirjoitti 1877 sen olevan väärä: jumalattarella on saarella oma temppelinsä. Englanninkielinen virallinen nimi vaihdettiin Mumbaiksi marraskuussa 1995.
+- [Iquitos — kaupunkilehti / Iquitos: Yhdeksän lähetysasemaa ja yksi nimi] 1730—1767 — Kaupungin nimi tulee kansasta, jota espanjalaiset kutsuivat iquitoiksi. He asuivat Pastazan, Tigren, Nanayn ja Curarayn varsilla ja siirtyivät myöhemmin Amazonin ja Itayan seudulle. Vuosina 1638—1769 kansat koottiin jesuiittojen lähetysasemille, ja noin 130 vuoden aikana siellä työskenteli 161 lähetyssaarnaajaa: 63 kreolia, 43 espanjalaista, 32 saksalaista ja hollantilaista, 20 italialaista ja kolme muuta. Isä José Bahamonde käytti 37 vuotta yhdeksän Iquitos-aseman perustamiseen; niistä yksi oli San Pablo de los Napeanos vuodelta 1757. Kaarle III karkotti jesuiitat 20. elokuuta 1767, ja asemista jäi jäljelle kourallinen kauppakyliä.
+
+### 7.1
+KYSYMYS: Mistä kaupungin nimi tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Liepāja (merenkulku)
+Tietoruudun teksti: Liepāja on kaupunki Länsi-Latviassa Itämeren rannalla, Kuurinmaan suurin ja koko maan kolmanneksi suurin Riian ja Daugavpilsin jälkeen. Sen tärkein ominaisuus on satama, joka ei jäädy talvellakaan.
+
+Nimi tulee latvian sanasta liepa, lehmus. Vanha nimi Libau juontunee Līva-joesta, joka virtasi aikoinaan kaupungin läpi mutta jota ei enää ole. Vanhin kirjallinen maininta Līvan kylästä on Kuurinmaan piispan ja Liivinmaan ritarikunnan mestarin välisessä sopimuksessa 4. huhtikuuta 1253. Saksalainen ritarikunta perusti paikalle 1263 kaupungin nimeltä Libau, ja sitä nimeä käytettiin vuoteen 1920; latviankielinen Liepāja mainittiin ensimmäisen kerran 1649 Paul Einhornin teoksessa Historia Lettica.
+
+1800-luvulla ja 1900-luvun alussa Liepāja oli suosittu merikylpylä- ja matkailukaupunki, jossa oli hieno puisto, monta kaunista puutarhaa ja teatteri. Koko Latviassa se tunnetaan kaupunkina, jossa tuu…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mumbai — kaupunkilehti / Historia: Nimi, joka palasi] Kaupungin nimi tulee Mumbadevistä, koli-kalastajien suojelusjumalattaresta, ja marathin sanasta aai eli äiti. Portugalilainen kirjoittaja Gaspar Correia merkitsi vuoden 1512 jälkeen muistiin muodon Bombaim, ja 1500- ja 1600-luvun asiakirjoissa nimi esiintyy toistakymmentä kertaa eri asussa. Englantilaiset muokkasivat portugalilaisen nimen muotoon Bombay, ja siitä syntyi sitkeä selitys, jonka mukaan se tarkoittaisi hyvää lahtea. Ranskalainen matkaaja Louis Rousselet, joka kävi kaupungissa 1863 ja 1868, kirjoitti 1877 sen olevan väärä: jumalattarella on saarella oma temppelinsä. Englanninkielinen virallinen nimi vaihdettiin Mumbaiksi marraskuussa 1995.
+- [Iquitos — kaupunkilehti / Iquitos: Yhdeksän lähetysasemaa ja yksi nimi] 1730—1767 — Kaupungin nimi tulee kansasta, jota espanjalaiset kutsuivat iquitoiksi. He asuivat Pastazan, Tigren, Nanayn ja Curarayn varsilla ja siirtyivät myöhemmin Amazonin ja Itayan seudulle. Vuosina 1638—1769 kansat koottiin jesuiittojen lähetysasemille, ja noin 130 vuoden aikana siellä työskenteli 161 lähetyssaarnaajaa: 63 kreolia, 43 espanjalaista, 32 saksalaista ja hollantilaista, 20 italialaista ja kolme muuta. Isä José Bahamonde käytti 37 vuotta yhdeksän Iquitos-aseman perustamiseen; niistä yksi oli San Pablo de los Napeanos vuodelta 1757. Kaarle III karkotti jesuiitat 20. elokuuta 1767, ja asemista jäi jäljelle kourallinen kauppakyliä.
+
+### 7.2
+KYSYMYS: Miksi kaupunkia sanotaan tuulen syntypaikaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Liepāja (merenkulku)
+Tietoruudun teksti: Liepāja on kaupunki Länsi-Latviassa Itämeren rannalla, Kuurinmaan suurin ja koko maan kolmanneksi suurin Riian ja Daugavpilsin jälkeen. Sen tärkein ominaisuus on satama, joka ei jäädy talvellakaan.
+
+Nimi tulee latvian sanasta liepa, lehmus. Vanha nimi Libau juontunee Līva-joesta, joka virtasi aikoinaan kaupungin läpi mutta jota ei enää ole. Vanhin kirjallinen maininta Līvan kylästä on Kuurinmaan piispan ja Liivinmaan ritarikunnan mestarin välisessä sopimuksessa 4. huhtikuuta 1253. Saksalainen ritarikunta perusti paikalle 1263 kaupungin nimeltä Libau, ja sitä nimeä käytettiin vuoteen 1920; latviankielinen Liepāja mainittiin ensimmäisen kerran 1649 Paul Einhornin teoksessa Historia Lettica.
+
+1800-luvulla ja 1900-luvun alussa Liepāja oli suosittu merikylpylä- ja matkailukaupunki, jossa oli hieno puisto, monta kaunista puutarhaa ja teatteri. Koko Latviassa se tunnetaan kaupunkina, jossa tuu…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [PRI — maalehti / Ruoka: Kolme kuukautta kokeiluja baaritiskillä] 1954 — Vuonna 1954 Caribe Hiltonin baarimikko Ramón "Monchito" Marrero alkoi kokeilla juomaa, joka yhdistäisi rommin, kookoskerman ja ananasmehun jäämurskan kanssa. Kolmen kuukauden hionnan jälkeen hän oli tyytyväinen: juoma tuntui vangitsevan koko Puerto Ricon maun yhteen lasiin, ja hän nimesi sen piña coladaksi, siivilöidyksi ananakseksi. Marrero tarjoili omaa versiotaan hotellin baarissa peräti 35 vuoden ajan. Puerto Rico julisti piña coladan saaren viralliseksi juomaksi vuonna 1978. Juoman alkuperää on toisinaan kiistelty, mutta vuonna 2004 saaren kuvernööri vahvisti virallisesti sekä Marreron keksijäksi että Caribe Hiltonin juoman syntypaikaksi.
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:sabile) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sabile (ruoka)
+Tietoruudun teksti: Sabile on pikkukaupunki Talsin kunnassa Kuurinmaalla. Se mainitaan kronikoissa ensimmäisen kerran 1253, ja 1300-luvulta 1500-luvulle paikalla oli Liivinmaan ritarikunnan linna ja sen viereinen kylä. Kaupungiksi Sabile tuli vasta 1917.
+
+Kaupungin viinimäki oli aikanaan maailman pohjoisin avoimen taivaan alla oleva viinitarha, ja se kirjattiin Guinnessin ennätystenkirjaan. Viininviljelyn perinne ulottuu 1500-luvulle, ja ensimmäisen kerran viiniä tehtiin täällä jo 1300-luvulla Liivinmaan aikaan. Mäki kunnostettiin kokonaan vuonna 1936 kaupunginjohtaja Osvalds Rezebergsin toimesta.
+
+Sabilen linnavuori, joka oli seudun keskus 900-luvulta 1200-luvulle, kohoaa kaupungin ja Abava-joen laakson yllä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kaupunkilehti / Historia: Neitsyt, joka vahtii merenkulkijoita mäen laelta] Notre-Dame de la Garde -basilika kohoaa Marseillen korkeimmalla kalliolla, 149 metrin korkeudessa, ja sen kultainen Neitsyt Maria -patsas näkyy kauas merelle. Nykyinen basilika valmistui 1864, mutta paikalla on ollut pyhiinvaelluskohde jo 1200-luvulta, kun kukkulalle rakennettiin ensimmäinen pieni kappeli. Merenkulkijat ovat perinteisesti pitäneet basilikaa suojelijanaan ja jättäneet sinne kiitoslahjoja onnistuneista matkoista — kirkon seinillä riippuu yhä satoja pienoislaivoja ja muistolaattoja pelastuneista haaksirikoista. Marseillelaiset kutsuvat patsasta hellästi "La Bonne Mère", hyväksi äidiksi.
+- [Bulgaria — maalehti / Kalliot ja kruunut: Kuningashauta mäen uumenissa] 300-luku eaa. — Koillis-Bulgariassa Sveshtarin kylän lähellä avattiin 1982 kummun sisältä traakialaisten kuningashauta 300-luvulta ennen ajanlaskun alkua. Hautakammion seiniä kannattaa kymmenen naishahmoista veistettyä pylvästä, joiden kädet on nostettu ylös ikään kuin kantamaan kattoa — kuvien uskotaan esittävän jumalattaria. Seinillä on myös alkuperäisiä maalauksia, ja koko rakennelma on säilynyt poikkeuksellisen hyvin kummun suojassa vuosituhansien ajan. Hauta liitettiin Unescon maailmanperintöluetteloon 1985 ainutlaatuisen arkkitehtuurinsa ansiosta.
+
+### 8.1
+KYSYMYS: Mikä teki viinimäestä ennätyksellisen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sabile (ruoka)
+Tietoruudun teksti: Sabile on pikkukaupunki Talsin kunnassa Kuurinmaalla. Se mainitaan kronikoissa ensimmäisen kerran 1253, ja 1300-luvulta 1500-luvulle paikalla oli Liivinmaan ritarikunnan linna ja sen viereinen kylä. Kaupungiksi Sabile tuli vasta 1917.
+
+Kaupungin viinimäki oli aikanaan maailman pohjoisin avoimen taivaan alla oleva viinitarha, ja se kirjattiin Guinnessin ennätystenkirjaan. Viininviljelyn perinne ulottuu 1500-luvulle, ja ensimmäisen kerran viiniä tehtiin täällä jo 1300-luvulla Liivinmaan aikaan. Mäki kunnostettiin kokonaan vuonna 1936 kaupunginjohtaja Osvalds Rezebergsin toimesta.
+
+Sabilen linnavuori, joka oli seudun keskus 900-luvulta 1200-luvulle, kohoaa kaupungin ja Abava-joen laakson yllä.
+
+### 8.2
+KYSYMYS: Kuka kunnosti mäen vuonna 1936?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sabile (ruoka)
+Tietoruudun teksti: Sabile on pikkukaupunki Talsin kunnassa Kuurinmaalla. Se mainitaan kronikoissa ensimmäisen kerran 1253, ja 1300-luvulta 1500-luvulle paikalla oli Liivinmaan ritarikunnan linna ja sen viereinen kylä. Kaupungiksi Sabile tuli vasta 1917.
+
+Kaupungin viinimäki oli aikanaan maailman pohjoisin avoimen taivaan alla oleva viinitarha, ja se kirjattiin Guinnessin ennätystenkirjaan. Viininviljelyn perinne ulottuu 1500-luvulle, ja ensimmäisen kerran viiniä tehtiin täällä jo 1300-luvulla Liivinmaan aikaan. Mäki kunnostettiin kokonaan vuonna 1936 kaupunginjohtaja Osvalds Rezebergsin toimesta.
+
+Sabilen linnavuori, joka oli seudun keskus 900-luvulta 1200-luvulle, kohoaa kaupungin ja Abava-joen laakson yllä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kaupunkilehti / Historia: Neitsyt, joka vahtii merenkulkijoita mäen laelta] Notre-Dame de la Garde -basilika kohoaa Marseillen korkeimmalla kalliolla, 149 metrin korkeudessa, ja sen kultainen Neitsyt Maria -patsas näkyy kauas merelle. Nykyinen basilika valmistui 1864, mutta paikalla on ollut pyhiinvaelluskohde jo 1200-luvulta, kun kukkulalle rakennettiin ensimmäinen pieni kappeli. Merenkulkijat ovat perinteisesti pitäneet basilikaa suojelijanaan ja jättäneet sinne kiitoslahjoja onnistuneista matkoista — kirkon seinillä riippuu yhä satoja pienoislaivoja ja muistolaattoja pelastuneista haaksirikoista. Marseillelaiset kutsuvat patsasta hellästi "La Bonne Mère", hyväksi äidiksi.
+- [Bulgaria — maalehti / Kalliot ja kruunut: Kuningashauta mäen uumenissa] 300-luku eaa. — Koillis-Bulgariassa Sveshtarin kylän lähellä avattiin 1982 kummun sisältä traakialaisten kuningashauta 300-luvulta ennen ajanlaskun alkua. Hautakammion seiniä kannattaa kymmenen naishahmoista veistettyä pylvästä, joiden kädet on nostettu ylös ikään kuin kantamaan kattoa — kuvien uskotaan esittävän jumalattaria. Seinillä on myös alkuperäisiä maalauksia, ja koko rakennelma on säilynyt poikkeuksellisen hyvin kummun suojassa vuosituhansien ajan. Hauta liitettiin Unescon maailmanperintöluetteloon 1985 ainutlaatuisen arkkitehtuurinsa ansiosta.
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:jelgava) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jelgava (kauppa)
+Tietoruudun teksti: Jelgava on kaupunki Keski-Latviassa noin 41 kilometriä Riiasta lounaaseen ja Semgallian suurin kaupunki. Se oli yhdistyneen Kuurinmaan ja Semgallian herttuakunnan pääkaupunki vuosina 1578–1795 ja sen jälkeen Kuurinmaan kuvernementin hallintokeskus vuoteen 1918.
+
+Kaupunki on hedelmällisellä tasangolla Lielupen oikealla rannalla vain 3,5 metriä merenpinnan yläpuolella, ja korkean veden aikaan tasanko ja joskus kaupunkikin tulvivat. Jelgava on rautateiden solmukohta: yli kuusi rataa yhdistää täällä Riian Liettuaan sekä Itä- ja Länsi-Latviaan ja Liettuan Itämerelle.
+
+Vuoteen 1917 asti kaupungin virallinen nimi oli Mitau. Nimen Jelgava uskotaan tulevan liivin sanasta jālgab, joen varren kaupunki. Mitaun alkuperä on epäselvä: se on voitu johtaa latvian sanoista mīt tai mainīt, vaihtaa tai käydä kauppaa, jolloin nimi tarkoittaisi kauppapaikkaa — tai saksan ilmauksesta Mitte in der Aue, keskell…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Houston — kaupunkilehti / Öljy ja avaruus] Houstonin alla on suolakupoleja, jotka vangitsivat öljyn, ja Houstonissa on ohjaamo, josta kuulennot johdettiin. Maa vajoaa ja vesi tulvii — kaupunki on rakennettu insinöörityön varaan.
+
+### 9.1
+KYSYMYS: Mitä nimi Mitau saattaa tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jelgava (kauppa)
+Tietoruudun teksti: Jelgava on kaupunki Keski-Latviassa noin 41 kilometriä Riiasta lounaaseen ja Semgallian suurin kaupunki. Se oli yhdistyneen Kuurinmaan ja Semgallian herttuakunnan pääkaupunki vuosina 1578–1795 ja sen jälkeen Kuurinmaan kuvernementin hallintokeskus vuoteen 1918.
+
+Kaupunki on hedelmällisellä tasangolla Lielupen oikealla rannalla vain 3,5 metriä merenpinnan yläpuolella, ja korkean veden aikaan tasanko ja joskus kaupunkikin tulvivat. Jelgava on rautateiden solmukohta: yli kuusi rataa yhdistää täällä Riian Liettuaan sekä Itä- ja Länsi-Latviaan ja Liettuan Itämerelle.
+
+Vuoteen 1917 asti kaupungin virallinen nimi oli Mitau. Nimen Jelgava uskotaan tulevan liivin sanasta jālgab, joen varren kaupunki. Mitaun alkuperä on epäselvä: se on voitu johtaa latvian sanoista mīt tai mainīt, vaihtaa tai käydä kauppaa, jolloin nimi tarkoittaisi kauppapaikkaa — tai saksan ilmauksesta Mitte in der Aue, keskell…
+
+### 9.2
+KYSYMYS: Miksi kaupunki tulvii?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jelgava (kauppa)
+Tietoruudun teksti: Jelgava on kaupunki Keski-Latviassa noin 41 kilometriä Riiasta lounaaseen ja Semgallian suurin kaupunki. Se oli yhdistyneen Kuurinmaan ja Semgallian herttuakunnan pääkaupunki vuosina 1578–1795 ja sen jälkeen Kuurinmaan kuvernementin hallintokeskus vuoteen 1918.
+
+Kaupunki on hedelmällisellä tasangolla Lielupen oikealla rannalla vain 3,5 metriä merenpinnan yläpuolella, ja korkean veden aikaan tasanko ja joskus kaupunkikin tulvivat. Jelgava on rautateiden solmukohta: yli kuusi rataa yhdistää täällä Riian Liettuaan sekä Itä- ja Länsi-Latviaan ja Liettuan Itämerelle.
+
+Vuoteen 1917 asti kaupungin virallinen nimi oli Mitau. Nimen Jelgava uskotaan tulevan liivin sanasta jālgab, joen varren kaupunki. Mitaun alkuperä on epäselvä: se on voitu johtaa latvian sanoista mīt tai mainīt, vaihtaa tai käydä kauppaa, jolloin nimi tarkoittaisi kauppapaikkaa — tai saksan ilmauksesta Mitte in der Aue, keskell…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Houston — kaupunkilehti / Öljy ja avaruus] Houstonin alla on suolakupoleja, jotka vangitsivat öljyn, ja Houstonissa on ohjaamo, josta kuulennot johdettiin. Maa vajoaa ja vesi tulvii — kaupunki on rakennettu insinöörityön varaan.
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:daugavpilsin-linnoitus) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Daugavpilsin linnoitus (tekniikka)
+Tietoruudun teksti: Daugavpilsin linnoitus on 1800-luvun alun linnoitus Kaakkois-Latviassa. Se on Pohjois-Euroopan ainoa lajinsa varhainen 1800-luvun sotilaslinnoitus, joka on säilynyt ilman merkittäviä muutoksia.
+
+Rakentaminen alkoi 1810 keisari Aleksanteri I:n käskystä, kun jännitys ennen Napoleonin hyökkäystä kiristyi. Noin kymmenentuhatta työmiestä rakensi sitä kahdessa vuorossa. Kun ranskalainen 24 000 miehen osasto hyökkäsi linnoitukseen 1812, se oli yhä kesken ja sitä puolusti 3 300 miestä ja 200 tykkiä. Hyökkäys, pitkät viivytykset, vakavat tulvat ja hidas työ venyttivät urakkaa niin, että linnoitus valmistui kokonaan vasta 1878.
+
+Linnoitus oli pitkään Venäjän keisarikunnan länsirajan puolustustukikohta. Pietarista Eurooppaan johtanut suora reitti kulki Dinaburgin — kaupungin silloisen nimen — kautta, ja linnoitus oli lepopaikka monelle matkalaiselle: siellä pysähtyivät keisarit Aleksanteri I, Niko…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kaupunkilehti / Historian hetki: Nikosia 1878 — puolikuu laskee, risti nousee] 12.7.1878 — Kaupustelija keskeyttää työnsä, kun väkijoukko kääntyy katsomaan uutta lippua Nikosiassa. On 12. heinäkuuta 1878: saaren hallinto siirtyy Britannialle, ja Union Jack nostetaan vara-amiraali Lord John Hayn läsnä ollessa. Hänen laivastostaan kaupunkiin saapuu merijalkaväkeä ja merimiehiä, mutta uusi hallinto on vasta alkutekijöissään. Britannia ja Osmanien valtakunta olivat sopineet Kyproksen hallinnasta kesäkuussa vastineeksi Britannian tuesta Venäjän uhkaa vastaan. Saari pysyy muodollisesti osmanien valtakunnan osana, vaikka käytännön valta vaihtuu. Ensimmäinen korkea komissaari Garnet Wolseley saapuu Nikosiaan vasta 31. heinäkuuta ja ryhtyy kokoamaan hallintoa. Torin kauppiaall…
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+
+### 10.1
+KYSYMYS: Miksi linnoitus valmistui vasta 1878?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Daugavpilsin linnoitus (tekniikka)
+Tietoruudun teksti: Daugavpilsin linnoitus on 1800-luvun alun linnoitus Kaakkois-Latviassa. Se on Pohjois-Euroopan ainoa lajinsa varhainen 1800-luvun sotilaslinnoitus, joka on säilynyt ilman merkittäviä muutoksia.
+
+Rakentaminen alkoi 1810 keisari Aleksanteri I:n käskystä, kun jännitys ennen Napoleonin hyökkäystä kiristyi. Noin kymmenentuhatta työmiestä rakensi sitä kahdessa vuorossa. Kun ranskalainen 24 000 miehen osasto hyökkäsi linnoitukseen 1812, se oli yhä kesken ja sitä puolusti 3 300 miestä ja 200 tykkiä. Hyökkäys, pitkät viivytykset, vakavat tulvat ja hidas työ venyttivät urakkaa niin, että linnoitus valmistui kokonaan vasta 1878.
+
+Linnoitus oli pitkään Venäjän keisarikunnan länsirajan puolustustukikohta. Pietarista Eurooppaan johtanut suora reitti kulki Dinaburgin — kaupungin silloisen nimen — kautta, ja linnoitus oli lepopaikka monelle matkalaiselle: siellä pysähtyivät keisarit Aleksanteri I, Niko…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kaupunkilehti / Historian hetki: Nikosia 1878 — puolikuu laskee, risti nousee] 12.7.1878 — Kaupustelija keskeyttää työnsä, kun väkijoukko kääntyy katsomaan uutta lippua Nikosiassa. On 12. heinäkuuta 1878: saaren hallinto siirtyy Britannialle, ja Union Jack nostetaan vara-amiraali Lord John Hayn läsnä ollessa. Hänen laivastostaan kaupunkiin saapuu merijalkaväkeä ja merimiehiä, mutta uusi hallinto on vasta alkutekijöissään. Britannia ja Osmanien valtakunta olivat sopineet Kyproksen hallinnasta kesäkuussa vastineeksi Britannian tuesta Venäjän uhkaa vastaan. Saari pysyy muodollisesti osmanien valtakunnan osana, vaikka käytännön valta vaihtuu. Ensimmäinen korkea komissaari Garnet Wolseley saapuu Nikosiaan vasta 31. heinäkuuta ja ryhtyy kokoamaan hallintoa. Torin kauppiaall…
+
+### 10.2
+KYSYMYS: Ketkä pysähtyivät linnoitukseen matkallaan Eurooppaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Daugavpilsin linnoitus (tekniikka)
+Tietoruudun teksti: Daugavpilsin linnoitus on 1800-luvun alun linnoitus Kaakkois-Latviassa. Se on Pohjois-Euroopan ainoa lajinsa varhainen 1800-luvun sotilaslinnoitus, joka on säilynyt ilman merkittäviä muutoksia.
+
+Rakentaminen alkoi 1810 keisari Aleksanteri I:n käskystä, kun jännitys ennen Napoleonin hyökkäystä kiristyi. Noin kymmenentuhatta työmiestä rakensi sitä kahdessa vuorossa. Kun ranskalainen 24 000 miehen osasto hyökkäsi linnoitukseen 1812, se oli yhä kesken ja sitä puolusti 3 300 miestä ja 200 tykkiä. Hyökkäys, pitkät viivytykset, vakavat tulvat ja hidas työ venyttivät urakkaa niin, että linnoitus valmistui kokonaan vasta 1878.
+
+Linnoitus oli pitkään Venäjän keisarikunnan länsirajan puolustustukikohta. Pietarista Eurooppaan johtanut suora reitti kulki Dinaburgin — kaupungin silloisen nimen — kautta, ja linnoitus oli lepopaikka monelle matkalaiselle: siellä pysähtyivät keisarit Aleksanteri I, Niko…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+- [Pariisi — kohdekartta / Kohdekartta: Bastilji 1789] Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvottelut kestäv…
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

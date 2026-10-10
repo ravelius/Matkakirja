@@ -1,0 +1,191 @@
+================ KOHTA 26 (kohde:hahmotelma-rezekne) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rēzekne (kulttuuri)
+Tietoruudun teksti: Rēzekne on Latgalen alueen kaupunki Latvian itäosassa, ja sitä kutsutaan Latgalen sydämeksi. Se on rakennettu seitsemälle kukkulalle noin 240 kilometriä Riiasta itään. Paikalla oli latgalilainen linnavuori, ja vuonna 1285 Livonian ritarikunta rakensi sinne kivilinnan itärajan vartioksi. Kaupunki kuului 1559 alkaen Puola-Liettualle ja siirtyi Venäjän keisarikunnalle vuonna 1772; kaupunkioikeudet se sai 1773, ja vuodesta 1802 se oli Vitebskin kuvernementin piirikeskus. 1800-luvulla rautatiet muuttivat unisen maalaiskaupungin tärkeäksi liikenteen solmukohdaksi. Väestöstä noin 60 prosenttia oli tuolloin juutalaisia, ja kaupungissa oli monen uskontokunnan kirkkoja ja rukoushuoneita. Katolinen Jeesuksen Pyhän Sydämen katedraali rakennettiin vuosina 1893–1914.
+
+### 26.1
+KYSYMYS: Miksi rautatiet tekivät unisesta Rēzeknestä tärkeän kaupungin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rēzekne (kulttuuri)
+Tietoruudun teksti: Rēzekne on Latgalen alueen kaupunki Latvian itäosassa, ja sitä kutsutaan Latgalen sydämeksi. Se on rakennettu seitsemälle kukkulalle noin 240 kilometriä Riiasta itään. Paikalla oli latgalilainen linnavuori, ja vuonna 1285 Livonian ritarikunta rakensi sinne kivilinnan itärajan vartioksi. Kaupunki kuului 1559 alkaen Puola-Liettualle ja siirtyi Venäjän keisarikunnalle vuonna 1772; kaupunkioikeudet se sai 1773, ja vuodesta 1802 se oli Vitebskin kuvernementin piirikeskus. 1800-luvulla rautatiet muuttivat unisen maalaiskaupungin tärkeäksi liikenteen solmukohdaksi. Väestöstä noin 60 prosenttia oli tuolloin juutalaisia, ja kaupungissa oli monen uskontokunnan kirkkoja ja rukoushuoneita. Katolinen Jeesuksen Pyhän Sydämen katedraali rakennettiin vuosina 1893–1914.
+
+### 26.2
+KYSYMYS: Miksi Rēzeknessä on ollut niin monen eri uskontokunnan pyhiä rakennuksia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rēzekne (kulttuuri)
+Tietoruudun teksti: Rēzekne on Latgalen alueen kaupunki Latvian itäosassa, ja sitä kutsutaan Latgalen sydämeksi. Se on rakennettu seitsemälle kukkulalle noin 240 kilometriä Riiasta itään. Paikalla oli latgalilainen linnavuori, ja vuonna 1285 Livonian ritarikunta rakensi sinne kivilinnan itärajan vartioksi. Kaupunki kuului 1559 alkaen Puola-Liettualle ja siirtyi Venäjän keisarikunnalle vuonna 1772; kaupunkioikeudet se sai 1773, ja vuodesta 1802 se oli Vitebskin kuvernementin piirikeskus. 1800-luvulla rautatiet muuttivat unisen maalaiskaupungin tärkeäksi liikenteen solmukohdaksi. Väestöstä noin 60 prosenttia oli tuolloin juutalaisia, ja kaupungissa oli monen uskontokunnan kirkkoja ja rukoushuoneita. Katolinen Jeesuksen Pyhän Sydämen katedraali rakennettiin vuosina 1893–1914.
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-kraslava) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krāslava (historia)
+Tietoruudun teksti: Krāslava on kaupunki Latvian kaakkoisosassa Väinäjoen (Daugavan) varrella, Daugavpilsin kaupungista ylävirtaan itään. Suurin osa kaupungista on joen oikealla rannalla, ja Latvian lain mukaan se kuuluu osittain Latgaleen ja osittain Selonian alueeseen. Paikalla oli jo varhaisella keskiajalla tärkeä linnavuori Varjagien ja Bysantin välisen vesireitin varrella. Jesuiitat rakensivat kaupunkiin kirkon vuonna 1676, ja siitä tuli katolisen liikkeen pohjoisin keskus protestanttisten ja ortodoksisten alueiden rajalla. Kreivi Jan Ludwik Plater osti kaupungin vuonna 1729, ja hänen sukunsa määritti sen taloutta ja kulttuuria lähes kaksi vuosisataa. Käsityöläiset tekivät mattoja, samettia, silkkiä ja aseita, joita myytiin kaupungin markkinoilla ja vietiin Kuurinmaalle, Puolaan ja Saksaan.
+
+### 27.1
+KYSYMYS: Miksi Krāslavasta tuli jesuiittojen katolisen liikkeen pohjoisin keskus?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krāslava (historia)
+Tietoruudun teksti: Krāslava on kaupunki Latvian kaakkoisosassa Väinäjoen (Daugavan) varrella, Daugavpilsin kaupungista ylävirtaan itään. Suurin osa kaupungista on joen oikealla rannalla, ja Latvian lain mukaan se kuuluu osittain Latgaleen ja osittain Selonian alueeseen. Paikalla oli jo varhaisella keskiajalla tärkeä linnavuori Varjagien ja Bysantin välisen vesireitin varrella. Jesuiitat rakensivat kaupunkiin kirkon vuonna 1676, ja siitä tuli katolisen liikkeen pohjoisin keskus protestanttisten ja ortodoksisten alueiden rajalla. Kreivi Jan Ludwik Plater osti kaupungin vuonna 1729, ja hänen sukunsa määritti sen taloutta ja kulttuuria lähes kaksi vuosisataa. Käsityöläiset tekivät mattoja, samettia, silkkiä ja aseita, joita myytiin kaupungin markkinoilla ja vietiin Kuurinmaalle, Puolaan ja Saksaan.
+
+### 27.2
+KYSYMYS: Mitä tavaroita Krāslavan käsityöläiset tekivät ja minne niitä myytiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krāslava (historia)
+Tietoruudun teksti: Krāslava on kaupunki Latvian kaakkoisosassa Väinäjoen (Daugavan) varrella, Daugavpilsin kaupungista ylävirtaan itään. Suurin osa kaupungista on joen oikealla rannalla, ja Latvian lain mukaan se kuuluu osittain Latgaleen ja osittain Selonian alueeseen. Paikalla oli jo varhaisella keskiajalla tärkeä linnavuori Varjagien ja Bysantin välisen vesireitin varrella. Jesuiitat rakensivat kaupunkiin kirkon vuonna 1676, ja siitä tuli katolisen liikkeen pohjoisin keskus protestanttisten ja ortodoksisten alueiden rajalla. Kreivi Jan Ludwik Plater osti kaupungin vuonna 1729, ja hänen sukunsa määritti sen taloutta ja kulttuuria lähes kaksi vuosisataa. Käsityöläiset tekivät mattoja, samettia, silkkiä ja aseita, joita myytiin kaupungin markkinoilla ja vietiin Kuurinmaalle, Puolaan ja Saksaan.
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-lubans) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lubāns (luonto · järvi)
+Tietoruudun teksti: Lubāns on Latvian suurin järvi, ja se sijaitsee Itä-Latvian alangon keskellä. Se on matala järvi, jota ruokkivat muun muassa Rēzekne- ja Malta-joet; vesi virtaa pois Aiviekste-jokea pitkin Väinäjokeen. Järven pinta-ala riippuu vedenkorkeudesta: 90,75 metrin korkeudella se on 25 neliökilometriä ja 92,75 metrin korkeudella noin 100 neliökilometriä. Ennen säännöstelyä kevättulvat peittivät ympäristön niittyjä vuosittain, ja vuoden 1926 tulvien jälkeen alueelle rakennettiin patoja ja ojia; Aiviekste-jokea säännösteltiin 1929–1939. Nykyään alue on suojeltu kosteikko, joka on tärkeä lintujen pesimä- ja muuttoalue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Ruoka: Herneet jotka pitää maistaa joulun aikaan] Joulu — Harmaat herneet silavan kanssa kuuluvat Latvian jouluaterialle lähes pakollisena: kuivatut, isot ja harmaansävyiset herneet liotetaan ja keitetään, minkä jälkeen ne sekoitetaan paistettuun silavaan ja sipuliin. Perinteen mukaan jokaisen pöydässä istuvan tulee maistaa edes kourallinen, sillä pyöreiden herneiden uskotaan vievän mukanaan tulevan vuoden kyyneleet. Ruoalla on pitkä historia: herneet, ohra ja pavut olivat maaseudun perusruokaa satoja vuosia ennen kuin peruna yleistyi 1800-luvulla. Nykyään harmaita herneitä tarjoillaan myös ravintoloissa hienostuneempina versioina, pekonin ja retiisin kanssa.
+- [Latvia — maalehti / Historia: Nainen joka nostaa kolme tähteä] 1935 — Riian vapaudenpatsas paljastettiin vuonna 1935 muistoksi vuosien 1918–1920 itsenäisyyssodassa kaatuneille, ja se rahoitettiin kokonaan kansalaisten lahjoituksilla. Patsaan huipulla seisova naishahmo, jota kutsutaan lempinimellä Milda, kohottaa käsissään kolme kultaista tähteä — ne kuvaavat Latvian kolmea historiallista aluetta, Kuurinmaata, Liivinmaata ja Latgalea. Neuvostomiehityksen aikana patsasta ei purettu, mutta sen juurelle kukkien vieminen oli vaarallista ja saattoi johtaa kuulusteluihin. Jalustan reliefeissä on kolmetoista hahmoa, jotka kuvaavat työtä, perhettä ja vapaustaistelua.
+
+### 28.1
+KYSYMYS: Miksi Lubānsin pinta-ala voi vaihdella kymmenistä neliökilometreistä lähes sataan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lubāns (luonto · järvi)
+Tietoruudun teksti: Lubāns on Latvian suurin järvi, ja se sijaitsee Itä-Latvian alangon keskellä. Se on matala järvi, jota ruokkivat muun muassa Rēzekne- ja Malta-joet; vesi virtaa pois Aiviekste-jokea pitkin Väinäjokeen. Järven pinta-ala riippuu vedenkorkeudesta: 90,75 metrin korkeudella se on 25 neliökilometriä ja 92,75 metrin korkeudella noin 100 neliökilometriä. Ennen säännöstelyä kevättulvat peittivät ympäristön niittyjä vuosittain, ja vuoden 1926 tulvien jälkeen alueelle rakennettiin patoja ja ojia; Aiviekste-jokea säännösteltiin 1929–1939. Nykyään alue on suojeltu kosteikko, joka on tärkeä lintujen pesimä- ja muuttoalue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Indonesia — maalehti / Musiikki: Pariisissa 1889 kuultiin jotain aivan uutta] 1889 — Gamelan on pronssisoittimien orkesteri: gongeja, rumpuja ja metallilaattoja, joita lyödään nuijilla. Paras pronssi seostetaan kymmenestä osasta kuparia ja kolmesta osasta tinaa. Vireitä on kaksi, viisisävelinen slendro ja seitsensävelinen pelog, ja jokainen orkesteri viritetään omaksi kokonaisuudekseen — soittimia ei vaihdella orkesterista toiseen. Kun Pariisin maailmannäyttelyssä 1889 soitti keskijaavalainen gamelan, kuulijoiden joukossa olivat Claude Debussy ja Erik Satie. Unesco merkitsi gamelanin luetteloonsa joulukuussa 2021.
+
+### 28.2
+KYSYMYS: Miksi Latvian suurimman järven ympärillä on niin laajoja kosteikkoja?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lubāns (luonto · järvi)
+Tietoruudun teksti: Lubāns on Latvian suurin järvi, ja se sijaitsee Itä-Latvian alangon keskellä. Se on matala järvi, jota ruokkivat muun muassa Rēzekne- ja Malta-joet; vesi virtaa pois Aiviekste-jokea pitkin Väinäjokeen. Järven pinta-ala riippuu vedenkorkeudesta: 90,75 metrin korkeudella se on 25 neliökilometriä ja 92,75 metrin korkeudella noin 100 neliökilometriä. Ennen säännöstelyä kevättulvat peittivät ympäristön niittyjä vuosittain, ja vuoden 1926 tulvien jälkeen alueelle rakennettiin patoja ja ojia; Aiviekste-jokea säännösteltiin 1929–1939. Nykyään alue on suojeltu kosteikko, joka on tärkeä lintujen pesimä- ja muuttoalue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Ruoka: Herneet jotka pitää maistaa joulun aikaan] Joulu — Harmaat herneet silavan kanssa kuuluvat Latvian jouluaterialle lähes pakollisena: kuivatut, isot ja harmaansävyiset herneet liotetaan ja keitetään, minkä jälkeen ne sekoitetaan paistettuun silavaan ja sipuliin. Perinteen mukaan jokaisen pöydässä istuvan tulee maistaa edes kourallinen, sillä pyöreiden herneiden uskotaan vievän mukanaan tulevan vuoden kyyneleet. Ruoalla on pitkä historia: herneet, ohra ja pavut olivat maaseudun perusruokaa satoja vuosia ennen kuin peruna yleistyi 1800-luvulla. Nykyään harmaita herneitä tarjoillaan myös ravintoloissa hienostuneempina versioina, pekonin ja retiisin kanssa.
+- [Latvia — maalehti / Historia: Nainen joka nostaa kolme tähteä] 1935 — Riian vapaudenpatsas paljastettiin vuonna 1935 muistoksi vuosien 1918–1920 itsenäisyyssodassa kaatuneille, ja se rahoitettiin kokonaan kansalaisten lahjoituksilla. Patsaan huipulla seisova naishahmo, jota kutsutaan lempinimellä Milda, kohottaa käsissään kolme kultaista tähteä — ne kuvaavat Latvian kolmea historiallista aluetta, Kuurinmaata, Liivinmaata ja Latgalea. Neuvostomiehityksen aikana patsasta ei purettu, mutta sen juurelle kukkien vieminen oli vaarallista ja saattoi johtaa kuulusteluihin. Jalustan reliefeissä on kolmetoista hahmoa, jotka kuvaavat työtä, perhettä ja vapaustaistelua.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-ikskile) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ikšķile (historia)
+Tietoruudun teksti: Ikšķile on kaupunki Väinäjoen oikealla rannalla, noin 28 kilometrin päässä Riiasta. Se oli Liivinmaan katolisen piispakunnan ensimmäinen pääpaikka, ja siellä on Itä-Baltian vanhin kivirakennus. Gotlantilaiset kivenhakkaajat rakensivat paikalle vuonna 1185 linnan ja kappelin tai kirkon, ja piispa Meinhardin johdolla Ikšķilestä tuli keskus, josta katolisuus alkoi levitä Latviassa. Piispa Albert siirsi piispankeskuksen Riikaan vuonna 1201, koska Ikšķile oli liian kaukana Väinäjoen suulta. Kun joelle rakennettiin 1970-luvulla Riian vesivoimala, linna ja kartano jäivät altaan alle, mutta ensimmäisen kivikirkon rauniot säilytettiin tekosaarella. Kerran vuodessa, kun veden pinta on alhaalla, raunioille voi kävellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+
+### 29.1
+KYSYMYS: Miksi Ikšķilen kirkon rauniot ovat nykyään keskellä vesiallasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ikšķile (historia)
+Tietoruudun teksti: Ikšķile on kaupunki Väinäjoen oikealla rannalla, noin 28 kilometrin päässä Riiasta. Se oli Liivinmaan katolisen piispakunnan ensimmäinen pääpaikka, ja siellä on Itä-Baltian vanhin kivirakennus. Gotlantilaiset kivenhakkaajat rakensivat paikalle vuonna 1185 linnan ja kappelin tai kirkon, ja piispa Meinhardin johdolla Ikšķilestä tuli keskus, josta katolisuus alkoi levitä Latviassa. Piispa Albert siirsi piispankeskuksen Riikaan vuonna 1201, koska Ikšķile oli liian kaukana Väinäjoen suulta. Kun joelle rakennettiin 1970-luvulla Riian vesivoimala, linna ja kartano jäivät altaan alle, mutta ensimmäisen kivikirkon rauniot säilytettiin tekosaarella. Kerran vuodessa, kun veden pinta on alhaalla, raunioille voi kävellä.
+
+### 29.2
+KYSYMYS: Miksi Liivinmaan piispankeskus siirrettiin Ikšķilestä Riikaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ikšķile (historia)
+Tietoruudun teksti: Ikšķile on kaupunki Väinäjoen oikealla rannalla, noin 28 kilometrin päässä Riiasta. Se oli Liivinmaan katolisen piispakunnan ensimmäinen pääpaikka, ja siellä on Itä-Baltian vanhin kivirakennus. Gotlantilaiset kivenhakkaajat rakensivat paikalle vuonna 1185 linnan ja kappelin tai kirkon, ja piispa Meinhardin johdolla Ikšķilestä tuli keskus, josta katolisuus alkoi levitä Latviassa. Piispa Albert siirsi piispankeskuksen Riikaan vuonna 1201, koska Ikšķile oli liian kaukana Väinäjoen suulta. Kun joelle rakennettiin 1970-luvulla Riian vesivoimala, linna ja kartano jäivät altaan alle, mutta ensimmäisen kivikirkon rauniot säilytettiin tekosaarella. Kerran vuodessa, kun veden pinta on alhaalla, raunioille voi kävellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-koknese) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koknese (historia)
+Tietoruudun teksti: Koknese on noin 3 000 asukkaan kaupunki Väinäjoen oikealla rannalla. Paikalla oli alun perin latgalilaisten ja selonialaisten asutus, ja 1200-luvun alussa Riian piispa Albert rakennutti sinne kivilinnan Väinäjoen ja Pērse-joen yhtymäkohtaan. Kaupunki sai kaupunkioikeudet vuonna 1277 ja kukoisti 1300-luvulla osana kauppiaiden Hansaliiton verkostoa. Linnasta kiisteltiin sodissa vuosisatoja, ja se tuhoutui vuonna 1701 Suuren Pohjan sodan aikana. Rautatie kulki Koknesen kautta viimeistään 1861, mikä teki paikasta suositun virkistysalueen. Kun lähelle valmistui vuonna 1966 Pļaviņasin vesivoimala, linnanrauniojen perustukset jäivät veden alle.
+
+### 30.1
+KYSYMYS: Miksi Koknesen linnan rauniot ovat nykyään osittain veden alla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koknese (historia)
+Tietoruudun teksti: Koknese on noin 3 000 asukkaan kaupunki Väinäjoen oikealla rannalla. Paikalla oli alun perin latgalilaisten ja selonialaisten asutus, ja 1200-luvun alussa Riian piispa Albert rakennutti sinne kivilinnan Väinäjoen ja Pērse-joen yhtymäkohtaan. Kaupunki sai kaupunkioikeudet vuonna 1277 ja kukoisti 1300-luvulla osana kauppiaiden Hansaliiton verkostoa. Linnasta kiisteltiin sodissa vuosisatoja, ja se tuhoutui vuonna 1701 Suuren Pohjan sodan aikana. Rautatie kulki Koknesen kautta viimeistään 1861, mikä teki paikasta suositun virkistysalueen. Kun lähelle valmistui vuonna 1966 Pļaviņasin vesivoimala, linnanrauniojen perustukset jäivät veden alle.
+
+### 30.2
+KYSYMYS: Mitä Hansaliitto oli, ja mitä hyötyä siitä oli Koknesen kaltaiselle kaupungille?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koknese (historia)
+Tietoruudun teksti: Koknese on noin 3 000 asukkaan kaupunki Väinäjoen oikealla rannalla. Paikalla oli alun perin latgalilaisten ja selonialaisten asutus, ja 1200-luvun alussa Riian piispa Albert rakennutti sinne kivilinnan Väinäjoen ja Pērse-joen yhtymäkohtaan. Kaupunki sai kaupunkioikeudet vuonna 1277 ja kukoisti 1300-luvulla osana kauppiaiden Hansaliiton verkostoa. Linnasta kiisteltiin sodissa vuosisatoja, ja se tuhoutui vuonna 1701 Suuren Pohjan sodan aikana. Rautatie kulki Koknesen kautta viimeistään 1861, mikä teki paikasta suositun virkistysalueen. Kun lähelle valmistui vuonna 1966 Pļaviņasin vesivoimala, linnanrauniojen perustukset jäivät veden alle.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
