@@ -232,7 +232,7 @@ namespace Matkakirja.Natiivi
             catch (Exception) { }
             foreach (var ts in kaikki)
             {
-                if (ts == null || !seuratut.Add(ts.GetInstanceID())) continue;
+                if (ts == null || !seuratut.Add(ts.GetHashCode())) continue;
                 string ryhma = RyhmanNimi(ts);
                 if (ryhma == "G") { google = ts; avausT = Ms; }
                 var tsMuisti = ts;
@@ -246,7 +246,7 @@ namespace Matkakirja.Natiivi
 
         void Luotu(string ryhma, GameObject go)
         {
-            if (go == null || !tunnetut.Add(go.GetInstanceID())) return;
+            if (go == null || !tunnetut.Add(go.GetHashCode())) return;
             if (!ryhmat.TryGetValue(ryhma, out var r)) ryhmat[ryhma] = r = new Ryhma();
             var (m, tx) = Arvioi(go);
             laatat.Add(new Laatta { Go = go, Ryhma = ryhma, Mesh = m, Tex = tx });
@@ -272,7 +272,7 @@ namespace Matkakirja.Natiivi
                         {
                             if (n.IndexOf("overlay", StringComparison.OrdinalIgnoreCase) < 0) continue;
                             var t = mat.GetTexture(n);
-                            if (t == null || !tassa.Add(t.GetInstanceID())) continue;
+                            if (t == null || !tassa.Add(t.GetHashCode())) continue;
                             b += Koko(t);
                         }
                     }
@@ -296,8 +296,8 @@ namespace Matkakirja.Natiivi
                         foreach (var id in idt)
                         {
                             var t = mat.GetTexture(id); if (t == null) continue;
-                            if ((t.hideFlags & HideFlags.HideAndDontSave) != HideFlags.HideAndDontSave) { muut.Add(t.GetInstanceID()); continue; }
-                            viitteet++; yks[t.GetInstanceID()] = t;
+                            if ((t.hideFlags & HideFlags.HideAndDontSave) != HideFlags.HideAndDontSave) { muut.Add(t.GetHashCode()); continue; }
+                            viitteet++; yks[t.GetHashCode()] = t;
                         }
                     }
                 }
@@ -333,7 +333,7 @@ namespace Matkakirja.Natiivi
                         foreach (var id in idt)
                         {
                             var t = mat.GetTexture(id);
-                            if (t == null || (t.hideFlags & HideFlags.HideAndDontSave) != HideFlags.HideAndDontSave || !tassa.Add(t.GetInstanceID())) continue;
+                            if (t == null || (t.hideFlags & HideFlags.HideAndDontSave) != HideFlags.HideAndDontSave || !tassa.Add(t.GetHashCode())) continue;
                             tx += Koko(t);
                         }
                     }

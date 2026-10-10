@@ -60,11 +60,11 @@ namespace Matkakirja.Natiivi
                 var m = r != null ? r.sharedMaterial : null;
                 if (m == null || !m.HasTexture(IdPerusvari) || !(m.GetTexture(IdPerusvari) is Texture2D src)) continue;
                 // Vain Cesiumin luomat (sama ehto kuin sen free()): HideAndDontSave ja lukukelvoton; ei omia kopioita uudelleen.
-                if ((src.hideFlags & HideFlags.HideAndDontSave) != HideFlags.HideAndDontSave || src.isReadable || alkuperaiset.ContainsKey(src.GetInstanceID())) continue;
+                if ((src.hideFlags & HideFlags.HideAndDontSave) != HideFlags.HideAndDontSave || src.isReadable || alkuperaiset.ContainsKey(src.GetHashCode())) continue;
                 var k = Pienenna(src, taso);
                 if (k == null) { ohitettu++; continue; }
                 m.SetTexture(IdPerusvari, k);
-                alkuperaiset[k.GetInstanceID()] = Tavut(src);
+                alkuperaiset[k.GetHashCode()] = Tavut(src);
                 Object.Destroy(src);   // CopyTexture on jo komentojonossa ennen tuhoa (kehyksen lopussa)
                 luotu++;
             }
@@ -116,7 +116,7 @@ namespace Matkakirja.Natiivi
             {
                 var m = r != null ? r.sharedMaterial : null;
                 if (m == null || !m.HasTexture(IdPerusvari) || !(m.GetTexture(IdPerusvari) is Texture2D tx)) continue;
-                int id = tx.GetInstanceID();
+                int id = tx.GetHashCode();
                 if (nahty.ContainsKey(id)) continue;
                 long b = Tavut(tx);
                 kpl++; nyt += b;
