@@ -121,3 +121,11 @@ Edellinen: `viesti-linnanrakentaja-luovutus-20261009-yo.md`. Haara koodille: `li
   yövalaistusta, osoitinta ei vaihdeta ennen omistajan korttia. Väri arvio (106/86/70 → 128/106/86) → säätö LS2:n pelikuvasta.
 - **Olavinlinna v46u** (atlas-v46u/: aja_v46u.zsh, aja_v46u_s5.zsh, kokoa_v46u.zsh): s5 v3b + s7–s10 kuoreen; kuori_savytys.py `--neutraali`,
   min-kulma 0,6; s11 pois. HUOM aja_tornit.zsh lähtee v46p-talteen-atlaksesta → aja v46u-skriptit sen jälkeen.
+
+## TEHTY 05.3x–06.2x
+
+- **Olavinlinna v46v** (paketti cb8c8110742e5cba, blender fcd02e01b928b7bd, v45e 6186da589; Siirtoseppä junaan 175 v46u:n tilalle):
+  `atlas-v46u/aja_v46v.zsh` (JONO: nro kansio tulos kulmaraja [valokuva-alue]; R = atlas-v46u/kt → T7-tulokset, polussa välilyönti!)
+  + `kokoa_v46v.zsh`. s5 = v1 + 0,4 × (v3b − v1) (atlas-v46u/tulokset/olavinlinna_s5_v3c.png), tornit kulmaraja 0,8; s11 v2t, torni
+  `--valokuva 0.79,0,1,1`; kalliokaistat s12/14/16 v1s (kuori_ohje.py SEINAT 12–16; s13/s15 eivät ole kalliota). Ennen/jälkeen v46v/.
+- Seuraavat kalliot: ranking_kallio.py (scratchpad-malli: ranking.py + z −6,8…2,5) → (−11,8 −27,7), (−3,4 28,2) jne.
