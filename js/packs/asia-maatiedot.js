@@ -1245,4 +1245,10 @@ export const ASIA_MAATIEDOT = {
       { teksti: 'Здравствуйте', kieli: 'venäjä', lippu: 'Flag of Russia.svg', osuus: '10 %' },
     ],
   },
+  // Kaikki maat -projekti (PT 10.10.2026): vain väkiluku ja pinta-ala
+  // Sisältökirjurin faktoista (lahi-itae-kaukasus: Israelin CBS 2025,
+  // Maailmanpankki 2025, PCBS 2025; pinta-alat Wikidata). Ei sijoja.
+  ISR: { vakiluku: '10 milj.', pintaAla: '20 800 km²' },
+  LBN: { vakiluku: '5,8 milj.', pintaAla: '10 500 km²' },
+  PSE: { vakiluku: '5,6 milj.', pintaAla: '6 000 km²' },
 };
