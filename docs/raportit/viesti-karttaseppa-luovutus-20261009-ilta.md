@@ -38,6 +38,7 @@
 
 ## 4. Muut tämän päivän toimitukset
 
+- **KORKEUS v1 ÄMPÄRISSÄ 04.40:** kartta/korkeus/v1/maa-pariisi{.json,-lahi.png} (4 m, LS1:n koodi maa-dtm-175). Tukholma odottaa PT:n päätöstä.
 - **MAANPINTA (04.4x, LS1:lle):** `_tyo/karttaseppa/maa-20261010/` (LUEMINUT.md): Pariisi IGN MNT 2 m (+ kauko), Tukholma GLO ilman rakennuksia (pieni hyöty, Lantmäteriet tunnuksen jälkeen). Työkalu T7 `vesimaski/korkeus-maa.mjs`. pp v1 ja co v2 on projisoitu (LR, portti 0) ja ovat LS2:lla.
 
 - **YÖVALOT VAIHE 2 (04.3x, LS1:lle):** `yovalot-20261010/yovalot-ikkunat-<id>.png` (LS1:n muoto: 1536², 8 m/px, R = osuus, G = K) + `yovalot-rakennukset-<id>.json`. Työkalut T7 `vesimaski/rakennusvalot.mjs` ja `.py`. LUEMINUT.md, vaihe 2.
