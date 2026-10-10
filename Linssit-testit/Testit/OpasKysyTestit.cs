@@ -303,6 +303,28 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama("T2", p[^1].t, "T2 pyydetään uudelleen");
         }
 
+        // PT 19.0x (juna 180): metrolinjan aseman napautus → kierroksen kohde i, kierros jatkuu siitä.
+        [Testi] static void KierrosHyppaaKohteeseen()
+        {
+            var (s, p, puhe, _) = KierroksellaT1Puhuu();
+            Oleta.Sama(0, s.KierrosNykyinen, "alussa T1");
+            Oleta.Tosi(!s.KierrosKohteeseen(0) && !s.KierrosKohteeseen(7), "nykyinen tai jonon ulkopuolella: ei hyppyä");
+            Oleta.Tosi(s.KierrosKohteeseen(2) && s.Vaihe == OpasVaihe.Lentaa && s.KierrosKaynnissa, "hyppy T3:een lentää");
+            Oleta.Sama("T3", p[^1].t, "T3 pyydetään");
+            Oleta.Tosi(s.KierrosTieto == (3, 3), $"kierrostieto {s.KierrosTieto}");
+            s.Vastaus(p[^1].n, K("T3", 55.6814, 12.5758));
+            for (int i = 0; i < 600 && !(s.Nykyinen?.Id == "T3" && s.Vaihe == OpasVaihe.Puhuu); i++) s.Paivita(0.1, _ => 5);
+            Oleta.Tosi(s.Nykyinen?.Id == "T3", $"T3 puhuu ({s.Nykyinen?.Id})");   // viimeinen: esihaku päätti kierroksen
+            Oleta.Tosi(s.KierrosKohteeseen(1) && s.KierrosKaynnissa, "viimeiseltä takaisin T2:een, kierros jatkuu");
+            Oleta.Sama("T2", p[^1].t, "T2 pyydetään");
+            s.Vastaus(p[^1].n, K("T2", 55.6753, 12.5703));
+            for (int i = 0; i < 600 && !(s.Nykyinen?.Id == "T2" && s.Vaihe == OpasVaihe.Puhuu); i++) s.Paivita(0.1, _ => 5);
+            Oleta.Tosi(s.Nykyinen?.Id == "T2" && s.KierrosNykyinen == 1, "T2 puhuu");
+            s.AaniLoppui();
+            for (int i = 0; i < 40 && p[^1].t != "T3"; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Sama("T3", p[^1].t, "kierros jatkuu T2:sta seuraavaan (T3)");
+        }
+
         [Testi] static void KaupunkitilanJatkoOdottaaVastauksenLoppuun()
         {
             // TF 166 (omistaja 8.10. 18.0x): kierros keskeytetty kysymykseen, opas odottanut 4 s, vastaus juuri Esita → ei jatkoa.
