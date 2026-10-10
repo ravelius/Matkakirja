@@ -687,6 +687,15 @@ namespace Matkakirja.Natiivi
             siirtymaNimi = Rakenne.Teksti("", "mk-ajattelija__nimi", siirtymaTeksti);
             siirtymaNimi.pickingMode = PickingMode.Ignore; siirtymaNimi.style.unityTextAlign = TextAnchor.MiddleCenter; Kirjasimet.Aseta(siirtymaNimi, Kirjasin.Lcd);
             siirtymaPalkki = new Latauspalkki(siirtymaTeksti);
+            // POISTU (omistaja TF 176, PT 12.2x: "lisää latausruutuun POISTU-nappi … kuten Myllyn Poistu"): sama nappirivi ja nappi kuin
+            // Myllyssä; sulkee linssin, jolloin siirtymäkierros purkaa ruudun (SiirtymaPeru) ja lataus keskeytyy, ja peli palaa kartalle.
+            var poistuRivi = Rakenne.El("mk-kortti__napit", siirtymaTeksti, PickingMode.Ignore);
+            Kirjasimet.Aseta(Rakenne.Nappi(Kieli.T("ui.pelit.poistu"), "mk-nappi--toiminto", () =>
+            {
+                Debug.Log("MATKAKIRJA opas: siirtymä — Poistu");
+                SiirtymaPeru();
+                UiNakymat.Hae()?.Linssit?.SuljeLinssi();
+            }, poistuRivi), Kirjasin.Kone);
             // Cesium ion -logo vasemmassa alakulmassa latauksen ajan (omistaja 6.10. 12.2x): Cesiumin oma kuva muuttamattomana,
             // samassa koossa ja paikassa kuin krediiteissä (musta ruutu peittää Cesiumin krediittikerroksen).
             siirtymaIon = Rakenne.El(null, siirtyma, PickingMode.Ignore);
@@ -881,6 +890,7 @@ namespace Matkakirja.Natiivi
             }
             SovitaPalloKuva(t);
             palloNimi = n; palloKuvaNyt = t;
+            AsetaPalloAlaosa();
             siirtymaTeksti.style.scale = UiKerros.Tabletti ? new Scale(new Vector3(IpadIsonnus, IpadIsonnus, 1f)) : (StyleScale)StyleKeyword.Null;
             // Kierron rajausvaihto (kuva jo näkyvissä) vaihtaa suoraan ilman häivytystä mustasta.
             bool myohassa = !palloNakyy && siirtyma.resolvedStyle.opacity > 0.5f && Time.realtimeSinceStartup - siirtymaAlku > 0.3f;
@@ -926,14 +936,22 @@ namespace Matkakirja.Natiivi
         {
             (new[] { new Vector2(0.4732f, 0.4657f), new Vector2(0.5423f, 0.4657f), new Vector2(0.4922f, 0.4705f), new Vector2(0.5233f, 0.4713f) },
              new[] { new Vector2(0.4888f, 0.5455f), new Vector2(0.5302f, 0.5455f), new Vector2(0.4870f, 0.5486f), new Vector2(0.5302f, 0.5486f) },
-             new Vector2(0.5069f, 0.3301f), new Vector2(0.5095f, 0.5467f), new Vector2(0.5095f, 0.5590f), new Vector2(0.5186f, 0.7913f)),
+             new Vector2(0.5069f, 0.3301f), new Vector2(0.5095f, 0.5467f), new Vector2(0.5095f, 0.5590f), new Vector2(0.3400f, 0.7150f)),
             (new[] { new Vector2(0.4840f, 0.4657f), new Vector2(0.5266f, 0.4657f), new Vector2(0.4957f, 0.4705f), new Vector2(0.5149f, 0.4713f) },
              new[] { new Vector2(0.4936f, 0.5455f), new Vector2(0.5191f, 0.5455f), new Vector2(0.4926f, 0.5486f), new Vector2(0.5191f, 0.5486f) },
-             new Vector2(0.5048f, 0.3301f), new Vector2(0.5064f, 0.5467f), new Vector2(0.5064f, 0.5590f), new Vector2(0.5120f, 0.7913f)),
+             new Vector2(0.5048f, 0.3301f), new Vector2(0.5064f, 0.5467f), new Vector2(0.5064f, 0.5590f), new Vector2(0.4020f, 0.7150f)),
             (new[] { new Vector2(0.4880f, 0.3415f), new Vector2(0.5199f, 0.3415f), new Vector2(0.4968f, 0.3479f), new Vector2(0.5112f, 0.3489f) },
              new[] { new Vector2(0.4952f, 0.4479f), new Vector2(0.5144f, 0.4479f), new Vector2(0.4944f, 0.4521f), new Vector2(0.5144f, 0.4521f) },
-             new Vector2(0.5036f, 0.1606f), new Vector2(0.5048f, 0.4495f), new Vector2(0.5048f, 0.4660f), new Vector2(0.5090f, 0.7759f)),
+             new Vector2(0.5036f, 0.1606f), new Vector2(0.5048f, 0.4495f), new Vector2(0.5048f, 0.4660f), new Vector2(0.4320f, 0.6650f)),
         };
+        /// <summary>
+        /// OMISTAJA TF 176 (10.10.2026, PT 12.2x): "poista etuala, jossa köyden kiinnityspiste maassa näkyy" ja köysi vinosti kuten
+        /// alkuperäisessä still-kuvassa (oli suora pystyviiva). Tausta-maaankkuri on pikselilleen sama kuin still pallon ja maa-ankkurin
+        /// ulkopuolella; saumasta alas näytetään stillin tumma alaosa (Latauskuva.AsetaAlaosa), joten valaistu maa ja kiinnityspiste
+        /// katoavat. Saumat rajauksittain mitattu (erotus 0 rivit: iPhone ja iPad pysty 0,715–0,76, iPad vaaka 0,665–0,73). Maa-piste on
+        /// kohta, jossa stillin köysi häipyy usvaan (stillistä mitattu: iPhone 0,35/0,705, iPad pysty 0,41/0,705, vaaka 0,44/0,65).
+        /// </summary>
+        static readonly float[] PalloSauma = { 0.73f, 0.73f, 0.69f };
         Latauskuva palloKerrokset;
         readonly Texture2D[] palloKerrosKuvat = new Texture2D[3];
         int palloKerrosRajaus = -1, palloKerrosKerta;
@@ -970,11 +988,12 @@ namespace Matkakirja.Natiivi
             palloKerrokset.Aseta(palloKerrosKuvat[0], new[]
             {
                 new Latauskuva.Kerros { Kuva = palloKerrosKuvat[1], Paikka = new Rect(0, 0, 1, 1), Kaanto = p.KoriKaanto,
-                    Liike = new Matkakirja.Linssit.LatausLiike.Profiili { KulmaAste = 0.5, NousuPt = 2, JaksoS = 7.5, Vaihe = -0.6 } },
+                    Liike = new Matkakirja.Linssit.LatausLiike.Profiili { KulmaAste = 0.6, NousuPt = 3, JaksoS = 7, Vaihe = -0.6 } },
                 new Latauskuva.Kerros { Kuva = palloKerrosKuvat[2], Paikka = new Rect(0, 0, 1, 1), Kaanto = p.KupuKaanto,
-                    Liike = new Matkakirja.Linssit.LatausLiike.Profiili { KulmaAste = 0.6, NousuPt = 3, JaksoS = 7.5 } },
+                    Liike = new Matkakirja.Linssit.LatausLiike.Profiili { KulmaAste = 0.75, NousuPt = 4, JaksoS = 7 } },
             }, koydet);
             palloKerroksetNakyy = true;
+            AsetaPalloAlaosa();
             SovitaPalloKerrokset();
             bool myohassa = siirtyma.resolvedStyle.opacity > 0.5f && Time.realtimeSinceStartup - siirtymaAlku > 0.3f;
             palloKerrokset.Nayta(true, myohassa);
@@ -982,6 +1001,14 @@ namespace Matkakirja.Natiivi
             siirtymaKuva.schedule.Execute(() => { if (palloKerroksetNakyy) { palloLiike?.Pause(); siirtymaKuva.style.visibility = Visibility.Hidden; } })
                 .StartingIn(myohassa ? Tyylikirja.Kesto.Avaus + 50 : 0);
             Debug.Log($"MATKAKIRJA opas: pallon kerroksellinen latauskuva {PalloKerrosRajaus[r]}");
+        }
+
+        /// <summary>Stillin alaosa kerrosten taustan päälle (sama rajaus); still voi saapua kerrosten jälkeen, jolloin kutsutaan uudelleen.</summary>
+        void AsetaPalloAlaosa()
+        {
+            if (!palloKerroksetNakyy || palloKerrosRajaus < 0) return;
+            bool sama = palloKuvaNyt != null && palloNimi != null && palloNimi.Contains("-" + PalloKerrosRajaus[palloKerrosRajaus] + ".");
+            palloKerrokset.AsetaAlaosa(sama ? palloKuvaNyt : null, PalloSauma[palloKerrosRajaus]);
         }
 
         void SovitaPalloKerrokset()
@@ -1012,6 +1039,7 @@ namespace Matkakirja.Natiivi
                 palloLiike = siirtymaKuva.schedule.Execute(() =>
                 {
                     if (!palloNakyy) return;
+                    if (UiKerros.Olemassa) UiKerros.Hae().MerkitseMuutos();   // liike piirtyy (omistaja TF 176, ks. Latauskuva)
                     Latauskuva.AsetaRajaus(siirtymaKuva, Matkakirja.Linssit.LatausLiike.Lahentyminen(Time.unscaledTime - palloLiikeAlku, 0, 0));
                 }).Every(Latauskuva.PaivitysMs);
             else palloLiike.Resume();
