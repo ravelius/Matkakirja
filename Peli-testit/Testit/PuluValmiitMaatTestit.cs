@@ -3,7 +3,7 @@
 // Linkit tarkistetaan kuten PuluChat näyttää ne (Kasitelinkit: KasiteKuvio, aihe ennen |-merkkiä, enintään 12 per vastaus,
 // napautus kysyy "Kerro lisää: <aihe>" samassa kohdassa). Kohteet: Kultaiset/pulu-kohdat.tsv = ajantasaisen sisältöpaketin (versio otsikossa)
 // karttavalot (kohde:<id>) ja täkynostot (nosto:<id>) maineen, koska nostokortti hakee paketin nosto.Iso-maan mukaan.
-// Uusi maa: python3 -I pulu-kultaiset.py (raportti) ja --kirjoita (kultaiset), sitten testirivi ja HakemistoKaikkiMaat. ./kaanna.sh PuluValmiitMaat
+// Uusi maa: python3 -I pulu-kultaiset.py --kirjoita (kultaiset, kohdelista ja pulu-odotukset.tsv) ja ./kaanna.sh PuluValmiitMaat.
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -95,30 +95,28 @@ namespace Matkakirja.Peli.Testit
                 $"jatkot {jatkoja} (valmiiseen kysymykseen {jatkoValmiiseen}, muut livenä)");
         }
 
-        [Testi] static void RanskanPaketti() => Maa("FRA", 59, 295, 654);
-        [Testi] static void KreikanPaketti() => Maa("GRC", 78, 390, 930);
-        [Testi] static void SaksanPaketti() => Maa("DEU", 65, 325, 796);
-        [Testi] static void ItalianPaketti() => Maa("ITA", 63, 315, 763);
-        [Testi] static void RomanianPaketti() => Maa("ROU", 56, 280, 657);
-        [Testi] static void EspanjanPaketti() => Maa("ESP", 56, 280, 599);
-        [Testi] static void ItavallanPaketti() => Maa("AUT", 53, 265, 586);
-        [Testi] static void IrlanninPaketti() => Maa("IRL", 52, 260, 639);
-        [Testi] static void RuotsinPaketti() => Maa("SWE", 51, 255, 628);
-        [Testi] static void PortugalinPaketti() => Maa("PRT", 49, 245, 598);
-        [Testi] static void SuomenPaketti() => Maa("FIN", 49, 245, 550);
-        [Testi] static void KroatianPaketti() => Maa("HRV", 48, 240, 544);
-        [Testi] static void TsekinPaketti() => Maa("CZE", 47, 235, 452);
-        [Testi] static void BulgarianPaketti() => Maa("BGR", 48, 240, 539);
-        [Testi] static void TanskanPaketti() => Maa("DNK", 46, 230, 458);
-        [Testi] static void AlankomaidenPaketti() => Maa("NLD", 54, 270, 620);
+        // ODOTUKSET (Pelikoodari 10.10., PT: uusi maa ilman käsityötä): Kultaiset/pulu-odotukset.tsv = maa, kohtia, kysymysvastauksia,
+        // Kerro lisää -vastauksia; pulu-kultaiset.py --kirjoita päivittää sen ämpärin hakemiston mukaan. Testi käy läpi kaikki rivit,
+        // joten uusi maa tulee mukaan ilman koodimuutosta; luvut ovat silti kiinni (paketin muutos näkyy tiedoston diffissä).
+        static List<(string Maa, int Kohtia, int Kysymyksia, int Lisaa)> Odotukset() => Lue("pulu-odotukset.tsv").Split('\n')
+            .Where(r => r.Length > 0 && r[0] != '#').Select(r => r.Split('\t'))
+            .Select(r => (r[0], int.Parse(r[1]), int.Parse(r[2]), int.Parse(r[3].Trim()))).ToList();
 
-        // Ämpärin hakemisto: kaikki maat, ja versio = paketin luontiaika minuutteina (UTC), joten laite hakee juuri tämän paketin.
+        [Testi] static void KaikkiMaat()
+        {
+            var o = Odotukset();
+            Oleta.Tosi(o.Count >= 16, "odotuksia " + o.Count);
+            foreach (var (maa, kohtia, kysymyksia, lisaa) in o) Maa(maa, kohtia, kysymyksia, lisaa);
+        }
+
+        // Ämpärin hakemisto: samat maat kuin odotuksissa, ja versio = paketin luontiaika minuutteina (UTC), joten laite hakee juuri tämän.
         [Testi] static void HakemistoKaikkiMaat()
         {
             var h = PuluValmiit.LueHakemisto(Lue("pulu-maat.json"));
             Oleta.Tosi(h != null, "hakemisto");
-            Oleta.Sama("AUT,BGR,CZE,DEU,DNK,ESP,FIN,FRA,GRC,HRV,IRL,ITA,NLD,PRT,ROU,SWE", string.Join(",", h.Keys.OrderBy(x => x, System.StringComparer.Ordinal)));
-            foreach (string maa in new[] { "GRC", "DEU", "ITA", "FRA", "ROU", "ESP", "NLD", "AUT", "IRL", "SWE", "PRT", "FIN", "HRV", "CZE", "BGR", "DNK" })
+            var o = Odotukset().Select(x => x.Maa).OrderBy(x => x, System.StringComparer.Ordinal).ToList();
+            Oleta.Sama(string.Join(",", o), string.Join(",", h.Keys.OrderBy(x => x, System.StringComparer.Ordinal)), "hakemisto = odotukset");
+            foreach (string maa in o)
             {
                 var juuri = (Dictionary<string, object>)MiniJson.Jasenna(Lue("pulu-" + maa.ToLowerInvariant() + ".json"));
                 string luotu = MiniJson.Teksti(juuri, "luotu");
