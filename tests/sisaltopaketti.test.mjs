@@ -1547,8 +1547,20 @@ test('skeema 1.51: natiivin pallon Z10 offline-välit = Karttasepän poltettu jo
       }
     }
   }
-  // Kaikki paitsi maattomien kaupunkien (Jerusalem) laatat ovat jonkin maan offline-alueessa.
-  assert.ok(kaikki.size >= lista.size - 40, `${kaikki.size}/${lista.size}`);
+  /*
+   * Kaikki paitsi maattomien kaupunkien (Jerusalem) laatat ovat jonkin maan offline-alueessa.
+   * SIIRRETYT PISTEET (10.10.2026, kartan kokonaistarkistus A1): Alpit ja Borneo
+   * siirtyivät oikean maan sisään, mutta 27.9. sarja on poltettu vanhojen pisteiden
+   * ympärille. Niiden laatikoiden laatat, joita mikään maa ei enää kata, eivät ole
+   * vika vaan seuraavan polton siivottavaa; uusien pisteiden ympärillä Z10 puuttuu
+   * siihen asti (väli rajataan poltettuun joukkoon, joten 404:ää ei synny).
+   */
+  const { kaupunkienLaatat } = await import('../tools/tee-pallolaatat.mjs');
+  const vanhat = new Set([...kaupunkienLaatat([{ lat: 47.666, lon: 7.334 }, { lat: 1.551, lon: 110.3 }], 10, 10)]
+    .map((k) => k.slice(3)));
+  const odotettu = [...lista].filter((k) => kaikki.has(k) || !vanhat.has(k)).length;
+  assert.ok(lista.size - odotettu <= 120, `vanhoista pisteistä jäi ${lista.size - odotettu} laattaa`);
+  assert.ok(kaikki.size >= odotettu - 40, `${kaikki.size}/${odotettu}`);
 });
 
 test('skeema 1.52: mediaKuvat — omat tiedostot offline-lataukseen omassa avaimessa, pienennettyinä, katto maata kohden', async () => {
