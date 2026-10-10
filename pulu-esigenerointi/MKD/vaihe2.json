@@ -1,0 +1,959 @@
+[
+ {
+  "kohde": "kohde:ohridinjarvi",
+  "kasite": "Prespajärveltä",
+  "kysymys": "Kerro lisää: Prespajärveltä",
+  "vastaus": "Prespajärvi eli Suuri Prespajärvi on vuoristojärvi, joka sijaitsee Pohjois-Makedonian, Albanian ja Kreikan rajalla noin 850 metrin korkeudessa. Sen vesi purkautuu karstikallion maanalaisten kanavien kautta lähteinä Ohridinjärveen, joka on huomattavasti alempana. Albanian puolella järven rannat kuuluvat [[Prespan kansallispuistoon]], ja järven pienellä [[Maligradin saarella]] on keskiaikainen kirkko. Näiden kahden järven yhteys tekee koko alueesta luonnontieteellisesti poikkeuksellisen arvokkaan.",
+  "linkit": [
+   "Prespan kansallispuistoon",
+   "Maligradin saarella"
+  ],
+  "jatkot": [
+   "Miten karstikivi päästää veden kulkemaan maan alla?",
+   "Mitä lintuja Prespajärven alueella elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:ohridinjarvi",
+  "kasite": "endeemisiä",
+  "kysymys": "Kerro lisää: endeemisiä",
+  "vastaus": "Endeeminen laji tarkoittaa lajia, jota tavataan luonnossa vain tietyllä rajatulla alueella eikä missään muualla. [[Ohridinjärvessä]] tällaisia lajeja on yli 200. Järven pitkä ikä, noin 3–5 miljoonaa vuotta, ja sen eristynyt sijainti vuorten ympäröimänä ovat antaneet eliöille aikaa kehittyä omiksi muodoikseen. Ilmiö on tyypillinen [[vanhoille järville]] ja saarille, joissa eliökannat ovat jääneet erilleen muista.",
+  "linkit": [
+   "Ohridinjärvessä",
+   "vanhoille järville"
+  ],
+  "jatkot": [
+   "Miten uusi laji syntyy, kun eliöt jäävät eristyksiin?",
+   "Mitä muita endeemisiä lajeja Euroopassa elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:ohridinjarvi",
+  "kasite": "endeemistä",
+  "kysymys": "Kerro lisää: endeemistä",
+  "vastaus": "Endeeminen tarkoittaa, että laji esiintyy luonnonvaraisena vain yhdellä rajatulla alueella, esimerkiksi yhdessä järvessä, saarella tai vuoristossa. [[Ohridinjärven]] yli 200 endeemistä lajia ovat kehittyneet järven pitkän erillisyyden aikana. Järven luonnonarvot ovat osa syytä siihen, että se on [[Unescon]] maailmanperintökohde. Endeemisyys tekee lajeista myös haavoittuvia, sillä jos elinympäristö muuttuu, lajilla ei ole muuta paikkaa, jonne siirtyä.",
+  "linkit": [
+   "Ohridinjärven",
+   "Unescon"
+  ],
+  "jatkot": [
+   "Miksi endeemiset lajit ovat erityisen alttiita uhille?",
+   "Millaisia vanhoja järviä Euroopassa on Ohridinjärven lisäksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:ohridinjarvi",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon",
+  "vastaus": "Unesco on Yhdistyneiden kansakuntien kasvatus-, tiede- ja kulttuurijärjestö, joka perustettiin vuonna 1945 ja jonka pääkonttori on Pariisissa. Se ylläpitää maailmanperintöluetteloa, johon otetaan kohteita, joilla katsotaan olevan koko ihmiskunnalle poikkeuksellista kulttuurista tai luonnonarvoa. Luettelon perustana on vuonna 1972 hyväksytty [[maailmanperintösopimus]]. [[Ohridinjärvi]] merkittiin luetteloon vuonna 1979, ja Albanian puoli liitettiin siihen vuonna 2019, joten suojelu kattaa nykyään järven molemmat rannat.",
+  "linkit": [
+   "maailmanperintösopimus",
+   "Ohridinjärvi"
+  ],
+  "jatkot": [
+   "Milloin ensimmäiset kohteet merkittiin maailmanperintöluetteloon?",
+   "Miten kohde voidaan poistaa maailmanperintöluettelosta?"
+  ]
+ },
+ {
+  "kohde": "kohde:ohridinjarvi",
+  "kasite": "karstikanavien",
+  "kysymys": "Kerro lisää: karstikanavien",
+  "vastaus": "Karsti on kalkkikivestä muodostunut maasto, jossa sade- ja pohjavesi liuottavat kiveä hitaasti ja avaavat siihen rakoja, luolia ja maanalaisia kanavia. Siksi karstialueella vesi katoaa usein maan alle ja nousee jossakin muualla lähteenä. [[Prespajärven]] ja Ohridinjärven välillä vesi kulkee juuri näin: Prespan vesi purkautuu maanalaisia reittejä pitkin Ohridinjärven lähteisiin. Sana karsti juontuu Slovenian ja Italian rajaseudulla sijaitsevan [[Krasin ylängön]] nimestä.",
+  "linkit": [
+   "Prespajärven",
+   "Krasin ylängön"
+  ],
+  "jatkot": [
+   "Miten luolat ja dolinit syntyvät karstialueella?",
+   "Mitkä Euroopan alueet ovat tunnettuja karstimaisemistaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:ohridinjarvi",
+  "kasite": "Ohrid",
+  "kysymys": "Kerro lisää: Ohrid",
+  "vastaus": "Ohrid on Pohjois-Makedonian kaupunki Ohridinjärven rannalla. Se oli 800-luvun lopulla [[Kliment Ohridilaisen]] koulun ansiosta yksi Euroopan tärkeimmistä slaavilaisen kirjallisuuden ja [[kyrillisen kirjaimiston]] keskuksista. Keskiajalla kaupungissa kerrotaan olleen 365 kirkkoa, yksi jokaiselle päivälle, mutta luku on liioittelua. Kuuluisin jäljellä olevista on kalliolle Kaneon niemelle rakennettu [[Pyhän Johanneksen kirkko]] 1200-luvulta. Kaupunki ja järvi merkittiin [[Unescon]] maailmanperintöluetteloon vuonna 1979.",
+  "linkit": [
+   "Kliment Ohridilaisen",
+   "kyrillisen kirjaimiston",
+   "Pyhän Johanneksen kirkko",
+   "Unescon"
+  ],
+  "jatkot": [
+   "Kuka oli Kliment Ohridilainen ja mitä hän opetti?",
+   "Miten kyrillinen kirjaimisto syntyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:ohridinjarvi",
+  "kasite": "Struga",
+  "kysymys": "Kerro lisää: Struga",
+  "vastaus": "Struga on Pohjois-Makedonian kaupunki Ohridinjärven pohjoisrannalla. Sen kohdalla [[Musta Drin]] -joki lähtee järvestä ja virtaa Albaniaan, josta se päätyy lopulta [[Adrianmereen]]. Kaupunki tunnetaan kansainvälisestä runousfestivaalista, [[Strugan runousilloista]], jota pidetään vuosittain loppukesällä. Kaupungissa ja sen ympäristössä asuu sekä makedonialaisia että albaaneja.",
+  "linkit": [
+   "Musta Drin",
+   "Adrianmereen",
+   "Strugan runousilloista"
+  ],
+  "jatkot": [
+   "Mitä Strugan runousillat ovat?",
+   "Mihin Musta Drin virtaa Strugan jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:ohridinjarvi",
+  "kasite": "Pogradec",
+  "kysymys": "Kerro lisää: Pogradec",
+  "vastaus": "Pogradec on Albanian kaupunki Ohridinjärven lounaisrannalla, lähellä Pohjois-Makedonian rajaa. Se on alueen tärkein Albanian puoleinen rantakaupunki ja suosittu kesäkohde. Albanian puoli liitettiin järven maailmanperintökohteeseen vuonna 2019, joten myös Pogradecin ympäristön rannat kuuluvat [[Unescon]] suojelun piiriin. Lähistöllä [[Linin niemellä]] on varhaiskristillisen basilikan lattiamosaiikkeja.",
+  "linkit": [
+   "Unescon",
+   "Linin niemellä"
+  ],
+  "jatkot": [
+   "Mitä Linin niemen mosaiikit esittävät?",
+   "Mikä on Albanian puolen osuus Ohridinjärven pinta-alasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:ohridinjarvi",
+  "kasite": "Unesco",
+  "kysymys": "Kerro lisää: Unesco",
+  "vastaus": "Unesco on Yhdistyneiden kansakuntien kasvatus-, tiede- ja kulttuurijärjestö, joka perustettiin vuonna 1945. Sen tunnetuin tehtävä on [[maailmanperintöluettelo]], jossa kohteet jaetaan kulttuurikohteisiin, luontokohteisiin ja molempia arvoja yhdistäviin sekakohteisiin. Ohridin alueella on tunnustettu sekä järven luonto että kaupungin kulttuuriperintö. Unesco vaalii myös [[aineetonta kulttuuriperintöä]], kuten perinteitä, käsityötaitoja ja suullista kerrontaa. Ohridin kohde merkittiin luetteloon vuonna 1979 ja Albanian puoli lisättiin vuonna 2019.",
+  "linkit": [
+   "maailmanperintöluettelo",
+   "aineetonta kulttuuriperintöä"
+  ],
+  "jatkot": [
+   "Mitkä ovat Unescon maailmanperintökohteiden valintakriteerit?",
+   "Mitä muita tehtäviä Unescolla on maailmanperinnön lisäksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:ohridinjarvi",
+  "kasite": "maailmanperintökohteeksi",
+  "kysymys": "Kerro lisää: maailmanperintökohteeksi",
+  "vastaus": "Maailmanperintökohde on paikka, jonka Unescon [[maailmanperintökomitea]] on hyväksynyt maailmanperintöluetteloon, koska sillä katsotaan olevan poikkeuksellinen yleismaailmallinen arvo koko ihmiskunnalle. Perusta on vuonna 1972 hyväksytty [[maailmanperintösopimus]], ja luettelossa on nykyään yli tuhat kohdetta eri puolilla maailmaa. Kohteen on täytettävä vähintään yksi valintakriteereistä, ja sen suojelusta vastaa ensisijaisesti sijaintivaltio. Ohridin alueella tämä tarkoittaa, että [[Pohjois-Makedonia]] ja Albania vastaavat järven ja vanhankaupungin suojelusta.",
+  "linkit": [
+   "maailmanperintökomitea",
+   "maailmanperintösopimus",
+   "Pohjois-Makedonia"
+  ],
+  "jatkot": [
+   "Montako maailmanperintökohdetta Euroopassa on?",
+   "Mitä tapahtuu, jos kohteen arvo vaarantuu?"
+  ]
+ },
+ {
+  "kohde": "kohde:matkan-kanjoni",
+  "kasite": "Vrelo-luola",
+  "kysymys": "Kerro lisää: Vrelo-luola",
+  "vastaus": "Vrelo-luola sijaitsee [[Matkan kanjonissa]] Treska-joen oikealla rannalla. Se oli mukana [[New7Wonders of Nature]] -kilpailun 77 ehdokkaan joukossa, ja sen uskotaan olevan yksi Euroopan syvimmistä luolista. Nimi Vrelo tarkoittaa useissa eteläslaavilaisissa kielissä lähdettä. Kanjonissa on yhteensä kymmenen luolaa, joiden pituus vaihtelee 20 metristä 176 metriin.",
+  "linkit": [
+   "Matkan kanjonissa",
+   "New7Wonders of Nature"
+  ],
+  "jatkot": [
+   "Miten luolat tutkitaan turvallisesti?",
+   "Mikä New7Wonders of Nature -kilpailu oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:matkan-kanjoni",
+  "kasite": "Treskan",
+  "kysymys": "Kerro lisää: Treskan",
+  "vastaus": "Treska on Pohjois-Makedonian länsiosassa virtaava joki, joka laskee Skopjen lähellä [[Vardar]]-jokeen. Matkan kanjonissa se on uurtanut jyrkät kalliorinteet, joiden varrella on kymmenen luolaa ja kolme luostaria. Jokea on padottu, ja kanjonissa vaelletaan ja melotaan. Kanjonin rinteillä sijaitseva [[Pyhän Andreaksen luostari]] perustettiin noin vuonna 1388.",
+  "linkit": [
+   "Vardar",
+   "Pyhän Andreaksen luostari"
+  ],
+  "jatkot": [
+   "Mikä on Matkan tekojärvi?",
+   "Mihin Vardar-joki laskee?"
+  ]
+ },
+ {
+  "kohde": "kohde:matkan-kanjoni",
+  "kasite": "luostaria",
+  "kysymys": "Kerro lisää: luostaria",
+  "vastaus": "Matkan kanjonin rinteillä on kolme luostaria, joista tunnetaan Pyhän Andreaksen luostari, jonka perustamisajaksi mainitaan noin vuosi 1388. Luostarit ovat kristillisen perinteen jäänteitä alueella, joka kuuluu [[ortodoksisen kirkon]] vanhaan vaikutuspiiriin. Kanjoni sijaitsee [[Skopjen]] länsipuolella, ja nykyään sen rauhallisilla rinteillä vaelletaan ja joella melotaan.",
+  "linkit": [
+   "ortodoksisen kirkon",
+   "Skopjen"
+  ],
+  "jatkot": [
+   "Millaista ortodoksinen luostarielämä oli keskiajalla?",
+   "Mitä muita luostareita Pohjois-Makedoniassa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:matkan-kanjoni",
+  "kasite": "Skopjen",
+  "kysymys": "Kerro lisää: Skopjen",
+  "vastaus": "Skopje on Pohjois-Makedonian pääkaupunki, ja se sijaitsee [[Vardar]]-joen varrella. Roomalaiset perustivat joen mutkaan [[Scupin]] kaupungin, jonka maanjäristys tuhosi lähes kokonaan vuonna 518. Keisari Justinianus I käski rakentaa läheiselle kukkulalle uuden linnoituksen, nykyisen [[Kalen]], osin raunioituneen kaupungin kivistä. Kaupunkia koetteli uusi suuri maanjäristys vuonna 1963. Nykyään pääaukiolla on vuonna 2011 paljastettu pronssipatsas Ratsastava soturi, joka kuuluu [[Skopje 2014]] -hankkeeseen.",
+  "linkit": [
+   "Vardar",
+   "Scupin",
+   "Kalen",
+   "Skopje 2014"
+  ],
+  "jatkot": [
+   "Milloin Scupi perustettiin?",
+   "Mikä on Skopjen Kale-linnoitus?"
+  ]
+ },
+ {
+  "kohde": "kohde:matkan-kanjoni",
+  "kasite": "Treska-joki",
+  "kysymys": "Kerro lisää: Treska-joki",
+  "vastaus": "Treska-joki virtaa Pohjois-Makedonian länsiosassa ja laskee Skopjen kupeessa [[Vardar]]-jokeen. Sen uurtamassa [[Matkan kanjonissa]] on noin 5 000 hehtaarin alue, jolla on kymmenen luolaa ja kolme luostaria. Kanjonia käytetään vaellukseen ja melontaan, ja joen alajuoksu on padottu [[tekojärveksi]]. Kanjoni on suosittu retkikohde, koska se sijaitsee lähellä pääkaupunkia.",
+  "linkit": [
+   "Vardar",
+   "Matkan kanjonissa",
+   "tekojärveksi"
+  ],
+  "jatkot": [
+   "Mihin Treska-joki on padottu?",
+   "Millainen on Matkan kanjonin kasvillisuus?"
+  ]
+ },
+ {
+  "kohde": "kohde:matkan-kanjoni",
+  "kasite": "luolaa",
+  "kysymys": "Kerro lisää: luolaa",
+  "vastaus": "Luola on kallioon syntynyt onkalo, jonka sisään ihminen voi päästä. Monet luolat syntyvät siten, että vesi liuottaa pitkän ajan kuluessa [[kalkkikiveä]]. Matkan kanjonissa on kymmenen luolaa, joiden pituus vaihtelee 20 metristä 176 metriin. Tunnetuin on [[Vrelo-luola]] Treskan oikealla rannalla, jonka uskotaan olevan yksi Euroopan syvimmistä. Luolissa liikkuminen vaatii kuitenkin tuntemusta ja asianmukaisia varusteita.",
+  "linkit": [
+   "kalkkikiveä",
+   "Vrelo-luola"
+  ],
+  "jatkot": [
+   "Miten luolia suojellaan kävijöiden vahingoilta?",
+   "Millaisia eläimiä Pohjois-Makedonian luolissa elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:matkan-kanjoni",
+  "kasite": "Vrelo-luolan",
+  "kysymys": "Kerro lisää: Vrelo-luolan",
+  "vastaus": "Vrelo-luola on yksi Matkan kanjonin kymmenestä luolasta, ja se sijaitsee [[Treskan]] oikealla rannalla. Se oli mukana [[New7Wonders of Nature]] -kilpailun 77 ehdokkaan joukossa. Luolan uskotaan olevan yksi Euroopan syvimmistä, mutta en ole varma sen tarkasta syvyydestä, joten lukua ei kannata pitää varmana. Nimi Vrelo tarkoittaa lähdettä, ja luola sijaitsee [[Matkan kanjonin]] vesistöjen läheisyydessä.",
+  "linkit": [
+   "Treskan",
+   "New7Wonders of Nature",
+   "Matkan kanjonin"
+  ],
+  "jatkot": [
+   "Miten vedenalaista luolaa tutkitaan?",
+   "Mitä tarkoittaa, että luola on karstiluola?"
+  ]
+ },
+ {
+  "kohde": "kohde:stobi",
+  "kasite": "Erigon",
+  "kysymys": "Kerro lisää: Erigon",
+  "vastaus": "Erigon on antiikin ajan nimi joelle, jota nykyään kutsutaan Crna-joeksi eli Mustaksi joeksi. Se virtaa Pohjois-Makedoniassa [[Pelagonian]] tasangon halki ja yhtyy [[Axios]]-jokeen eli Vardariin Stobin raunioiden lähellä. Antiikin kaupunki [[Stobi]] syntyi juuri tähän joenhaarojen yhtymäkohtaan, jossa kohtasivat tärkeät kulkureitit.",
+  "linkit": [
+   "Pelagonian",
+   "Axios",
+   "Stobi"
+  ],
+  "jatkot": [
+   "Missä Crna-joki saa alkunsa?",
+   "Mikä on Pelagonian tasanko?"
+  ]
+ },
+ {
+  "kohde": "kohde:stobi",
+  "kasite": "Axios",
+  "kysymys": "Kerro lisää: Axios",
+  "vastaus": "Axios on joen kreikkalainen nimi, ja Pohjois-Makedoniassa sitä kutsutaan Vardariksi. Joki virtaa Pohjois-Makedonian läpi [[Skopjen]] halki ja jatkuu Kreikan puolelle, missä se laskee [[Thermaikoksenlahteen]] [[Thessalonikin]] lähellä. Stobin kohdalla siihen yhtyy Erigon eli Crna. Joki on vuosisatoja ollut tärkeä kulkuväylä Balkanin sisäosien ja Egeanmeren välillä.",
+  "linkit": [
+   "Skopjen",
+   "Thermaikoksenlahteen",
+   "Thessalonikin"
+  ],
+  "jatkot": [
+   "Mitä Vardarin laaksossa kasvatetaan?",
+   "Miksi Thessaloniki on historiallisesti tärkeä satamakaupunki?"
+  ]
+ },
+ {
+  "kohde": "kohde:stobi",
+  "kasite": "Gradskon",
+  "kysymys": "Kerro lisää: Gradskon",
+  "vastaus": "Gradsko on Pohjois-Makedonian keskiosassa sijaitseva pieni taajama ja kunta, lähellä [[Vardar]]-joen ja Crna-joen yhtymäkohtaa. Antiikin [[Stobin]] rauniot sijaitsevat sen lähellä, joten paikka tunnetaan erityisesti arkeologisen kohteensa vuoksi. Stobi oli tärkeällä kulkureitillä Vardarin laaksossa, ja sen asemaa vahvisti joenhaarojen yhtymäkohta.",
+  "linkit": [
+   "Vardar",
+   "Stobin"
+  ],
+  "jatkot": [
+   "Mitä Stobin raunioilla voi nähdä?",
+   "Millaisia viinejä Pohjois-Makedoniassa valmistetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:stobi",
+  "kasite": "basilika",
+  "kysymys": "Kerro lisää: basilika",
+  "vastaus": "Basilika on pitkänomainen rakennustyyppi, jossa on [[keskilaiva]] ja sen sivuilla matalammat sivulaivat. Roomalaisessa antiikissa basilikat olivat julkisia kokoontumis- ja oikeudenkäyntitiloja, ja varhaiset kristityt omaksuivat saman rakennusmuodon kirkkoihinsa. Stobissa kristillinen basilika rakennettiin [[synagogan]] tilalle, ja kaupungin piispanbasilikan [[riikinkukkomosaiikki]] on kuvattu Pohjois-Makedonian 10 denarin setelissä.",
+  "linkit": [
+   "keskilaiva",
+   "synagogan",
+   "riikinkukkomosaiikki"
+  ],
+  "jatkot": [
+   "Miten basilikan pohjapiirros eroaa nykykirkoista?",
+   "Mitä narteksi tarkoittaa kirkkorakennuksessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:stobi",
+  "kasite": "synagogan",
+  "kysymys": "Kerro lisää: synagogan",
+  "vastaus": "Synagoga on juutalaisten rukous- ja kokoontumispaikka, jossa luetaan [[Toraa]] ja jossa yhteisö opiskelee ja viettää juhliaan. Juutalaisyhteisöjä asui antiikin aikana laajalti [[Rooman valtakunnan]] kaupungeissa. Stobin synagogan tilalle rakennettiin myöhemmin kristillinen basilika, mikä kertoo kaupungin monikulttuurisuudesta ja siitä, miten uskonnolliset yhteisöt vaihtuivat paikalla vuosisatojen mittaan.",
+  "linkit": [
+   "Toraa",
+   "Rooman valtakunnan"
+  ],
+  "jatkot": [
+   "Mitä Tooran lukeminen synagogassa tarkoittaa?",
+   "Miten juutalaisyhteisö levisi Rooman valtakuntaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:stobi",
+  "kasite": "Rooman",
+  "kysymys": "Kerro lisää: Rooman",
+  "vastaus": "Rooma laajensi valtaansa [[Makedoniaan]] 100-luvulla eaa., ja alueesta tuli Rooman provinssi vuonna 146 eaa. Stobin kaltaiset kaupungit saivat vähitellen erilaisia oikeudellisia asemia; [[municipium]] oli kaupunki, jolla oli oma itsehallinto ja jonka asukkailla oli Rooman kansalaisoikeuksia. Myöhemmin Rooman valtakunta jakautui itään ja länteen, ja Stobi kuului itäiseen, [[Bysanttiin]] kehittyvään osaan.",
+  "linkit": [
+   "Makedoniaan",
+   "municipium",
+   "Bysanttiin"
+  ],
+  "jatkot": [
+   "Miten Rooman tasavalta muuttui keisarikunnaksi?",
+   "Milloin Rooman valtakunta jakautui itään ja länteen?"
+  ]
+ },
+ {
+  "kohde": "kohde:stobi",
+  "kasite": "municipiumin",
+  "kysymys": "Kerro lisää: municipiumin",
+  "vastaus": "Municipium oli roomalainen kaupunki, jolla oli oma itsehallinto mutta joka kuului Rooman valtaan. Asukkaat saivat usein [[Rooman kansalaisoikeudet]] joko kokonaan tai osittain, ja kaupunki hallitsi itseään omien virkamiestensä ja neuvostonsa avulla. Stobi sai tämän aseman vuonna 69 eaa., ja myöhemmin siitä tuli [[Macedonia Salutaris]] -provinssin pääkaupunki.",
+  "linkit": [
+   "Rooman kansalaisoikeudet",
+   "Macedonia Salutaris"
+  ],
+  "jatkot": [
+   "Mitä eroa municipiumilla ja colonialla oli?",
+   "Mitä Rooman kansalaisuus antoi sen haltijalle?"
+  ]
+ },
+ {
+  "kohde": "kohde:stobi",
+  "kasite": "Macedonia Salutaris",
+  "kysymys": "Kerro lisää: Macedonia Salutaris",
+  "vastaus": "Macedonia Salutaris oli myöhäisantiikin roomalainen provinssi, joka muodostui, kun Makedonian alue jaettiin hallinnollisesti useaksi provinssiksi. Sen pääkaupunki oli [[Stobi]]. Provinssista käytetään myös nimeä Macedonia Secunda eli toinen Makedonia. Tarkasta perustamisajasta en ole varma; se sijoittuu noin 300-luvun lopulle tai 400-luvulle. Latinan sana salutaris tarkoittaa terveellistä tai pelastavaa, ja provinssi kuului [[Rooman valtakunnan]] itäiseen osaan.",
+  "linkit": [
+   "Stobi",
+   "Rooman valtakunnan"
+  ],
+  "jatkot": [
+   "Miten roomalaisia provinsseja hallittiin?",
+   "Mitä Stobissa on nähtävää nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:stobi",
+  "kasite": "maanjäristys",
+  "kysymys": "Kerro lisää: maanjäristys",
+  "vastaus": "Maanjäristys on maankuoren äkillinen tärähdys, jossa kallioperään kertynyt jännitys purkautuu. [[Balkanin]] niemimaa on seismisesti aktiivinen alue, koska [[mannerlaattojen]] liikkeet kohdistavat kallioperään jännitystä. Vuonna 518 voimakas maanjäristys tuhosi läheisen Scupin lähes kokonaan ja koetteli myös Stobia. Tapahtumasta on yli tuhat viisisataa vuotta, ja nykyään paikka on arkeologinen kohde. Myös Skopjea koetteli vuonna 1963 suuri maanjäristys, jonka jäljet ovat yhä osa kaupungin muistia.",
+  "linkit": [
+   "Balkanin",
+   "mannerlaattojen"
+  ],
+  "jatkot": [
+   "Voiko maanjäristyksiä ennustaa?",
+   "Miten rakennukset suunnitellaan kestämään maanjäristyksiä?"
+  ]
+ },
+ {
+  "kohde": "kohde:stobi",
+  "kasite": "ostrogoottien",
+  "kysymys": "Kerro lisää: ostrogoottien",
+  "vastaus": "Ostrogootit olivat germaaninen kansa, joka muodosti yhdessä [[visigoottien]] kanssa gootti-heimojen kaksi päähaaraa. Heistä osa asui 400-luvun lopulla Rooman itäisen valtakunnan Balkanin alueilla ja ryösti kaupunkeja, joiden joukossa oli Stobi vuonna 479. Heidän johtajansa [[Theodorik Suuri]] johti kansansa lopulta Italiaan, jossa he perustivat oman valtakunnansa. Se kukistui 500-luvun puolivälissä itäroomalaisten sotien jälkeen.",
+  "linkit": [
+   "visigoottien",
+   "Theodorik Suuri"
+  ],
+  "jatkot": [
+   "Kuka oli Theodorik Suuri?",
+   "Miten ostrogoottien valtakunta Italiassa päättyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:stobi",
+  "kasite": "piispanbasilikan",
+  "kysymys": "Kerro lisää: piispanbasilikan",
+  "vastaus": "Piispanbasilika oli piispan johtaman kristillisen seurakunnan pääkirkko kaupungissa. Stobissa piispanbasilikan lattiaa koristi [[riikinkukkomosaiikki]], joka on kuvattu Pohjois-Makedonian 10 denarin setelissä. Riikinkukko oli [[varhaiskristillisessä]] taiteessa kuolemattomuuden ja ylösnousemuksen symboli, ja siksi se oli suosittu aihe kirkkojen koristelussa. Rakennus kertoo, että Stobi oli kristillisen elämän keskus Rooman valtakunnan myöhäisvaiheessa.",
+  "linkit": [
+   "riikinkukkomosaiikki",
+   "varhaiskristillisessä"
+  ],
+  "jatkot": [
+   "Mitä piispa teki varhaiskristillisessä seurakunnassa?",
+   "Miten mosaiikit valmistettiin antiikissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:stobi",
+  "kasite": "riikinkukkomosaiikki",
+  "kysymys": "Kerro lisää: riikinkukkomosaiikki",
+  "vastaus": "Mosaiikki on kuva, joka koostuu pienistä kivi- tai lasipaloista eli [[tesseroista]], jotka on upotettu laastiin. Stobin riikinkukkomosaiikki koristi [[piispanbasilikan]] lattiaa, ja se on kuvattu Pohjois-Makedonian 10 [[denarin]] setelissä. Riikinkukko oli varhaiskristillisessä kuvastossa kuolemattomuuden ja ylösnousemuksen symboli, ja siksi se oli suosittu aihe kirkkojen koristelussa.",
+  "linkit": [
+   "tesseroista",
+   "piispanbasilikan",
+   "denarin"
+  ],
+  "jatkot": [
+   "Miten antiikin mosaiikit on säilytetty nykypäiviin?",
+   "Mitä muita symboleja varhaiskristillisessä taiteessa käytettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:stobi",
+  "kasite": "denarin",
+  "kysymys": "Kerro lisää: denarin",
+  "vastaus": "Denari on Pohjois-Makedonian rahayksikkö. Se otettiin käyttöön vuonna 1992 maan itsenäistymisen jälkeen, ja sen koodi on MKD. Nimi juontuu roomalaisesta [[denariuksesta]], antiikin hopearahasta, kuten monien muidenkin Balkanin maiden rahayksiköiden nimet, joissa esiintyy sanan dinaari muoto. Setelin aiheena on muun muassa [[Stobin]] riikinkukkomosaiikki.",
+  "linkit": [
+   "denariuksesta",
+   "Stobin"
+  ],
+  "jatkot": [
+   "Mikä oli roomalainen denarius?",
+   "Mitkä muut Balkanin maat käyttävät dinaaria rahanaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:herakleia-lynkestis",
+  "kasite": "Filippos II",
+  "kysymys": "Kerro lisää: Filippos II",
+  "vastaus": "Filippos II hallitsi Makedoniaa vuosina 359–336 eaa. Hän vahvisti valtakuntansa armeijaa ja liitti Makedoniaan lisää alueita. Vuonna 338 eaa. hän voitti Kreikan kaupunkivaltioiden liittouman [[Khaironeian taistelussa]] ja sai johtoaseman Kreikassa. Filippos murhattiin vuonna 336 eaa., ja valtaan nousi hänen poikansa [[Aleksanteri Suuri]]. Herakleia Lynkestis perustettiin 300-luvun eaa. puolivälissä, hänen hallintonsa aikana.",
+  "linkit": [
+   "Khaironeian taistelussa",
+   "Aleksanteri Suuri"
+  ],
+  "jatkot": [
+   "Miten Filippos II uudisti Makedonian armeijaa?",
+   "Mikä oli Khaironeian taistelu?"
+  ]
+ },
+ {
+  "kohde": "kohde:herakleia-lynkestis",
+  "kasite": "Heraklesin",
+  "kysymys": "Kerro lisää: Heraklesin",
+  "vastaus": "Herakles oli kreikkalaisen mytologian sankari, [[Zeuksen]] ja kuolevaisen Alkmenen poika. Hänet tunnetaan [[kahdestatoista urotyöstä]], joihin kuului muun muassa Nemean leijonan voittaminen. Roomalaiset kutsuivat häntä Herkuleeksi. Makedonian kuninkaat pitivät Heraklesta esi-isänään, ja Herakles-nimi oli antiikissa suosittu kaupunkien nimissä.",
+  "linkit": [
+   "Zeuksen",
+   "kahdestatoista urotyöstä"
+  ],
+  "jatkot": [
+   "Mitkä olivat Heraklesin kaksitoista urotyötä?",
+   "Miksi Makedonian kuninkaat pitivät Heraklesta esi-isänään?"
+  ]
+ },
+ {
+  "kohde": "kohde:herakleia-lynkestis",
+  "kasite": "Bitolan",
+  "kysymys": "Kerro lisää: Bitolan",
+  "vastaus": "Bitola on Pohjois-Makedonian eteläosassa, lähellä Kreikan rajaa [[Pelagonian]] tasangon reunalla sijaitseva kaupunki. Se kuului pitkään [[Ottomaanien valtakuntaan]], ja tuolloin sitä kutsuttiin nimellä Manastir. Kaupunki oli tärkeä hallinto- ja kauppakeskus, ja sitä on kutsuttu konsulien kaupungiksi, koska siellä oli useiden maiden konsulaatteja. Lähistöllä kohoaa [[Pelister]]-vuori, joka kuuluu kansallispuistoon. Herakleia Lynkestiksen rauniot ovat noin kaksi kilometriä keskustasta etelään.",
+  "linkit": [
+   "Pelagonian",
+   "Ottomaanien valtakuntaan",
+   "Pelister"
+  ],
+  "jatkot": [
+   "Mikä on Širok Sokak?",
+   "Mitä Pelisterin kansallispuistossa voi nähdä?"
+  ]
+ },
+ {
+  "kohde": "kohde:herakleia-lynkestis",
+  "kasite": "Via Egnatian",
+  "kysymys": "Kerro lisää: Via Egnatian",
+  "vastaus": "Via Egnatia oli roomalainen valtatie, joka kulki Adrianmeren rannikolta [[Dyrrhachionista]] eli nykyisen Albanian Durrësin kohdalta [[Bysantioniin]]. Sen rakennutti 100-luvulla eaa. [[Gnaeus Egnatius]], jonka mukaan tie on nimetty. Tien pituus oli yli tuhat kilometriä, ja se oli sekä sotilaallinen että kaupallinen valtaväylä. Reitti kulki Pohjois-Makedonian läpi muun muassa Herakleia Lynkestiksen ja Ohridin kautta.",
+  "linkit": [
+   "Dyrrhachionista",
+   "Bysantioniin",
+   "Gnaeus Egnatius"
+  ],
+  "jatkot": [
+   "Kuka oli Gnaeus Egnatius?",
+   "Miten roomalaiset tiet rakennettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:herakleia-lynkestis",
+  "kasite": "Bysantionin",
+  "kysymys": "Kerro lisää: Bysantionin",
+  "vastaus": "Bysantion oli antiikin kreikkalainen kaupunki Bosporinsalmen länsirannalla. Perimätiedon mukaan [[Bosporinsalmen]] rannalle sen perustivat megaralaiset siirtolaiset 600-luvulla eaa. Keisari [[Konstantinus Suuri]] teki kaupungista vuonna 330 Rooman valtakunnan uuden pääkaupungin ja nimesi sen uudelleen [[Konstantinopoliksi]]. Nykyään kaupunki on Istanbul. Kaupungin nimestä juontuu myös itäisen Rooman valtakunnan nimi Bysantti.",
+  "linkit": [
+   "Bosporinsalmen",
+   "Konstantinus Suuri",
+   "Konstantinopoliksi"
+  ],
+  "jatkot": [
+   "Miksi Konstantinopolista tuli keisarikunnan pääkaupunki?",
+   "Milloin ottomaanit valloittivat Konstantinopolin?"
+  ]
+ },
+ {
+  "kohde": "kohde:herakleia-lynkestis",
+  "kasite": "Adrianmeren",
+  "kysymys": "Kerro lisää: Adrianmeren",
+  "vastaus": "Adrianmeri on Välimeren osa Italian ja Balkanin niemimaan välissä. Sen rannikon jakavat Italia, Slovenia, Kroatia, Bosnia ja Hertsegovina, Montenegro ja Albania. Meri on pohjoisosastaan matala ja syvenee etelää kohti. [[Via Egnatian]] läntinen pääte oli Adrianmeren rannalla. Pohjoisessa Slovenian Piranin lähellä sijaitsevilla [[Sečovljen suola-altailla]] on tuotettu suolaa perinteisin menetelmin jo 1200-luvulta lähtien.",
+  "linkit": [
+   "Via Egnatian",
+   "Sečovljen suola-altailla"
+  ],
+  "jatkot": [
+   "Miten Sečovljen suola-altaissa suola tuotetaan?",
+   "Mitä lintuja Adrianmeren rannikolla pesii?"
+  ]
+ },
+ {
+  "kohde": "kohde:herakleia-lynkestis",
+  "kasite": "teatteri",
+  "kysymys": "Kerro lisää: teatteri",
+  "vastaus": "Antiikin teatteri oli ulkoilmarakennus, jossa puoliympyrän muotoinen [[katsomo]] rakennettiin yleensä rinteeseen näyttämön ja pyöreän orkesterialueen ympärille. Herakleia Lynkestiksen teatteri ajoitetaan yleensä roomalaiseen aikaan, mutta tarkasta rakennusajasta en ole varma. Roomalaisaikana teattereissa esitettiin näytelmiä, ja ne toimivat myös yleisinä kokoontumispaikkoina. Teatteri sijaitsee noin kaksi kilometriä [[Bitolan]] keskustasta etelään.",
+  "linkit": [
+   "katsomo",
+   "Bitolan"
+  ],
+  "jatkot": [
+   "Miten antiikin teatterin akustiikka toimi?",
+   "Millaisia näytelmiä antiikissa esitettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:herakleia-lynkestis",
+  "kasite": "basilika",
+  "kysymys": "Kerro lisää: basilika",
+  "vastaus": "Basilika on pitkänomainen rakennustyyppi, jonka varhaiset kristityt omaksuivat kirkkorakennuksiksi. Herakleia Lynkestiksessä on pieni ja suuri basilika, jotka ovat [[varhaiskristillisen]] ajan kirkkorakennuksia. Suuren basilikan [[narteksin]] lattiamosaiikki on 500-luvulta. Nartex on kirkon sisäänkäyntitila, esikartano pääsalin edessä. Kaupunki autioitui vähitellen vuoden 518 maanjäristyksen ja noin vuoden 585 [[slaavien]] hyökkäysten jälkeen.",
+  "linkit": [
+   "varhaiskristillisen",
+   "narteksin",
+   "slaavien"
+  ],
+  "jatkot": [
+   "Mitä narteksi tarkoittaa kirkossa?",
+   "Miten varhaiskristilliset kirkot erosivat nykykirkoista?"
+  ]
+ },
+ {
+  "kohde": "kohde:herakleia-lynkestis",
+  "kasite": "lattiamosaiikki",
+  "kysymys": "Kerro lisää: lattiamosaiikki",
+  "vastaus": "Lattiamosaiikki on kuva, joka on koottu lattiaan pienistä kivi- tai lasipaloista. [[Herakleia Lynkestiksessä]] suuren basilikan [[narteksin]] lattiamosaiikki on 500-luvulta. Varhaiskristillisissä kirkoissa mosaiikkien aiheina olivat usein kasvit, eläimet ja symbolit, ja värit saatiin eri kivilajeista. Mosaiikit ovat säilyneet vuosisatoja, koska ne on tehty kestävistä materiaaleista.",
+  "linkit": [
+   "Herakleia Lynkestiksessä",
+   "narteksin"
+  ],
+  "jatkot": [
+   "Miten lattiamosaiikki valmistettiin?",
+   "Mitä aiheita varhaiskristillisissä mosaiikeissa esiintyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:herakleia-lynkestis",
+  "kasite": "maanjäristyksen",
+  "kysymys": "Kerro lisää: maanjäristyksen",
+  "vastaus": "Vuoden 518 maanjäristys oli myöhäisantiikin suuri luonnonkatastrofi, joka tuhosi Skopjen edeltäjän [[Scupin]] lähes kokonaan. Myös Stobia ja Herakleia Lynkestistä koeteltiin, ja jälkimmäinen autioitui vähitellen järistyksen ja noin vuoden 585 slaavien hyökkäysten jälkeen. Keisari [[Justinianus I]] käski rakentaa läheiselle kukkulalle uuden linnoituksen osin raunioituneen kaupungin kivistä. Tapahtumasta on kulunut yli tuhat viisisataa vuotta, ja nykyään paikat ovat arkeologisia kohteita.",
+  "linkit": [
+   "Scupin",
+   "Justinianus I"
+  ],
+  "jatkot": [
+   "Millainen oli Justinianus I:n hallitus?",
+   "Miten Kale-linnoitus rakennettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:herakleia-lynkestis",
+  "kasite": "slaavien",
+  "kysymys": "Kerro lisää: slaavien",
+  "vastaus": "Slaavit ovat indoeurooppalaiseen kielikuntaan kuuluvia kansoja, joiden kielet ovat läheistä sukua keskenään. Slaavilaisheimot levittäytyivät [[Balkanille]] 500- ja 600-luvuilla, ja ne asettuivat vähitellen alueelle, jolla bysanttilaisten valta heikkeni. Pohjois-Makedonian nykyiset asukkaat puhuvat eteläslaavilaista kieltä, [[makedoniaa]]. Slaavien vaikutus näkyy myös siinä, että Ohridista tuli 800-luvulla slaavilaisen kirjallisuuden keskus.",
+  "linkit": [
+   "Balkanille",
+   "makedoniaa"
+  ],
+  "jatkot": [
+   "Milloin slaavit asettuivat Balkanille?",
+   "Millainen kieli makedonia on?"
+  ]
+ },
+ {
+  "kohde": "kohde:mavrovon-jarvi",
+  "kasite": "tekojärvi",
+  "kysymys": "Kerro lisää: tekojärvi",
+  "vastaus": "Tekojärvi on ihmisen padottu tai kaivettu järvi, joka syntyy yleensä, kun joki tai puro padotaan. Mavrovon järvi on tällainen tekojärvi: sen pinta-ala on 1 370 hehtaaria, pituus noin 10 kilometriä ja suurin syvyys 50 metriä. Tekojärviä rakennetaan useimmiten [[vesivoiman]] tuottamiseen, vesivarastoksi tai tulvasuojeluun, ja Mavrovon järvelle on tunnusomaista rannalla puoliksi veden peitossa seisova [[Pyhän Nikolain kirkko]].",
+  "linkit": [
+   "vesivoiman",
+   "Pyhän Nikolain kirkko"
+  ],
+  "jatkot": [
+   "Miten vesivoimala toimii?",
+   "Mitä muita tekojärviä Euroopassa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:mavrovon-jarvi",
+  "kasite": "Šar-vuoret",
+  "kysymys": "Kerro lisää: Šar-vuoret",
+  "vastaus": "Šar-vuoret sijaitsevat Pohjois-Makedonian ja [[Kosovon]] rajaseudulla, ja niiden rinteet kohoavat Mavrovon järven pohjoispuolella. Mavrovon alueen vuorten huiput ylittävät 2 500 metriä. Vuoristo tunnetaan laajoista laidunmaista ja talvihiihtokohteista, joista yksi on [[Popova Šapka]]. Vuoriston mukaan on nimetty myös [[šarplaninac]]-karjanvartijakoira.",
+  "linkit": [
+   "Kosovon",
+   "Popova Šapka",
+   "šarplaninac"
+  ],
+  "jatkot": [
+   "Mikä on šarplaninac-koira?",
+   "Millaisia kasveja ja eläimiä Šar-vuorilla elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:mavrovon-jarvi",
+  "kasite": "Pyhän Nikolain kirkko",
+  "kysymys": "Kerro lisää: Pyhän Nikolain kirkko",
+  "vastaus": "Pyhän Nikolain kirkko on Mavrovon järven rannan tunnetuin nähtävyys. Se seisoo tekojärvessä vain puoliksi veden peitossa, ja siksi siitä on tullut kuvauksellinen näkymä. Kirkko on omistettu [[Pyhälle Nikolaukselle]], joka on ortodoksisessa kristillisyydessä suosittu pyhimys ja merenkulkijoiden suojelija. Kirkko sijaitsee [[Mavrovon järven]] rannalla kansallispuiston alueella.",
+  "linkit": [
+   "Pyhälle Nikolaukselle",
+   "Mavrovon järven"
+  ],
+  "jatkot": [
+   "Kuka oli Pyhä Nikolaus?",
+   "Mikä on ortodoksinen kirkko?"
+  ]
+ },
+ {
+  "kohde": "kohde:mavrovon-jarvi",
+  "kasite": "Mavrovon kansallispuistoon",
+  "kysymys": "Kerro lisää: Mavrovon kansallispuistoon",
+  "vastaus": "Mavrovon kansallispuisto on yksi Pohjois-Makedonian kolmesta kansallispuistosta; muut kaksi ovat [[Pelister]] ja [[Galičica]]. Alue on kuulunut puistoon vuodesta 1952, ja sen alueella ovat Mavrovon järvi sekä osia Šar-vuorista ja Bistran vuorista. Puiston metsät ja vuoristoniityt ovat monien eläinlajien elinympäristöä. Alueella elää muun muassa uhanalainen [[Balkanin ilves]].",
+  "linkit": [
+   "Pelister",
+   "Galičica",
+   "Balkanin ilves"
+  ],
+  "jatkot": [
+   "Millainen eläin Balkanin ilves on?",
+   "Mitkä ovat Pelisterin ja Galičican kansallispuistot?"
+  ]
+ },
+ {
+  "kohde": "kohde:mavrovon-jarvi",
+  "kasite": "Skopjesta",
+  "kysymys": "Kerro lisää: Skopjesta",
+  "vastaus": "Skopje on Pohjois-Makedonian pääkaupunki. Sen historia ulottuu roomalaiseen [[Scupiin]], jonka maanjäristys tuhosi lähes kokonaan vuonna 518, ja kaupunkia koetteli uusi suuri maanjäristys vuonna 1963. Pääaukiolle nousi syyskuussa 2011 lähes 25 metriä korkea pronssipatsas, joka kuuluu [[Skopje 2014]] -hankkeeseen. Patsas ristittiin virallisesti vain Ratsastavaksi soturiksi, koska Kreikka piti Aleksanteri Suuren nimen käyttöä oman historiansa omimisena, ja nimikiista ratkesi vasta [[Prespan sopimuksella]] vuonna 2018.",
+  "linkit": [
+   "Scupiin",
+   "Skopje 2014",
+   "Prespan sopimuksella"
+  ],
+  "jatkot": [
+   "Mikä oli Skopje 2014 -hanke?",
+   "Mikä on Skopjen vanha basaari?"
+  ]
+ },
+ {
+  "kohde": "kohde:mavrovon-jarvi",
+  "kasite": "Bistran vuoret",
+  "kysymys": "Kerro lisää: Bistran vuoret",
+  "vastaus": "Bistran vuoret ovat Pohjois-Makedonian länsiosassa sijaitseva vuoristo Mavrovon järven eteläpuolella. Ne kuuluvat [[Mavrovon kansallispuiston]] alueeseen, ja yhdessä [[Šar-vuorten]] kanssa ne ympäröivät järveä. Alueen huiput ovat korkeita, talvisin rinteet ovat lumen peitossa, ja Mavrovon alueella on hiihtokeskus.",
+  "linkit": [
+   "Mavrovon kansallispuiston",
+   "Šar-vuorten"
+  ],
+  "jatkot": [
+   "Millaisia hiihtomahdollisuuksia Mavrovossa on?",
+   "Miten vuoret ovat syntyneet Balkanilla?"
+  ]
+ },
+ {
+  "kohde": "kohde:mavrovon-jarvi",
+  "kasite": "taimenia",
+  "kysymys": "Kerro lisää: taimenia",
+  "vastaus": "Taimen on lohikalojen heimoon kuuluva kala, jota tavataan puroissa, joissa ja järvissä. Se viihtyy kylmässä, happirikkaassa ja kirkkaassa vedessä, minkä vuoksi vuoristojärvet ja -joet sopivat sille hyvin. Taimen on suosittu kalastuskohde, ja Mavrovon järvellä sitä kalastetaan kesäisin. Ohridinjärvessä elää oma [[Ohridin taimen]], joka on [[endeeminen]] laji eli sitä ei tavata muualla.",
+  "linkit": [
+   "Ohridin taimen",
+   "endeeminen"
+  ],
+  "jatkot": [
+   "Millä tavoin taimenia kalastetaan?",
+   "Miten Ohridin taimen eroaa tavallisesta taimenesta?"
+  ]
+ },
+ {
+  "kohde": "kohde:kokinon-observatorio",
+  "kasite": "Tatićev Kamen",
+  "kysymys": "Kerro lisää: Tatićev Kamen",
+  "vastaus": "Tatićev Kamen on Pohjois-Makedonian koillisosassa sijaitseva huippu, jonka laella on [[Kokinon]] pronssikautinen kalliokohde. Kohde on 1 010–1 030 metrin korkeudessa noin 30 kilometrin päässä [[Kumanovosta]]. Kalliossa on kaksi tasannetta, ja alemmalla on neljä kiviistuinta. Paikan löydöt ulottuvat 1800-luvulta eaa. 600-luvulle eaa., ja kohteen tulkinta aurinko-observatorioksi on kiistanalainen.",
+  "linkit": [
+   "Kokinon",
+   "Kumanovosta"
+  ],
+  "jatkot": [
+   "Miten aurinko-observatorio toimii?",
+   "Mitä muita pronssikauden kohteita Balkanilla on?"
+  ]
+ },
+ {
+  "kohde": "kohde:kokinon-observatorio",
+  "kasite": "Pohjois-Makedoniassa",
+  "kysymys": "Kerro lisää: Pohjois-Makedoniassa",
+  "vastaus": "Pohjois-Makedonia on Balkanin niemimaan sisämaavaltio, jonka pääkaupunki on [[Skopje]]. Sen naapurimaita ovat Kosovo, Serbia, Bulgaria, Kreikka ja Albania. Maa itsenäistyi [[Jugoslaviasta]] vuonna 1991, ja nykyinen nimi vahvistettiin Prespan sopimuksella 2018, joka ratkaisi yli 20 vuotta kestäneen nimikiistan Kreikan kanssa. Maan tunnetuimpiin kohteisiin kuuluvat [[Ohridinjärvi]] ja antiikin [[Stobi]].",
+  "linkit": [
+   "Skopje",
+   "Jugoslaviasta",
+   "Ohridinjärvi",
+   "Stobi"
+  ],
+  "jatkot": [
+   "Mikä oli Kruševon tasavalta?",
+   "Miten Pohjois-Makedonia itsenäistyi Jugoslaviasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:kokinon-observatorio",
+  "kasite": "pronssikautiseksi",
+  "kysymys": "Kerro lisää: pronssikautiseksi",
+  "vastaus": "Pronssikausi on esihistorian ajanjakso, jolloin työkalut ja aseet valmistettiin pääasiassa pronssista, joka on [[kuparin]] ja [[tinan]] seos. Ajoitus vaihtelee alueittain: Kaakkois-Euroopassa se alkoi aiemmin kuin Pohjois-Euroopassa. Kokinon löydöt ulottuvat 1800-luvulta eaa. 600-luvulle eaa., ja kohde luokitellaan tämän aikakauden paikaksi. Pronssikauden jälkeen seurasi [[rautakausi]].",
+  "linkit": [
+   "kuparin",
+   "tinan",
+   "rautakausi"
+  ],
+  "jatkot": [
+   "Milloin rautakausi alkoi Euroopassa?",
+   "Mistä tina saatiin pronssikaudella?"
+  ]
+ },
+ {
+  "kohde": "kohde:kokinon-observatorio",
+  "kasite": "Kokinon",
+  "kysymys": "Kerro lisää: Kokinon",
+  "vastaus": "Kokino on pronssikautinen kalliokohde [[Tatićev Kamen]] -huipulla noin 30 kilometrin päässä [[Kumanovosta]]. Löydöt ulottuvat 1800-luvulta eaa. 600-luvulle eaa. Kohde tulkitaan aurinko-observatorioksi, mutta asiantuntijoiden mukaan tähtäyspisteitä ja merkkejä on niin paljon, että suuntaukset voivat olla sattumaa. Tällaisten kohteiden tulkinta kuuluu [[arkeoastronomian]] alaan, joka tutkii, miten menneet kulttuurit seurasivat taivaan ilmiöitä.",
+  "linkit": [
+   "Tatićev Kamen",
+   "Kumanovosta",
+   "arkeoastronomian"
+  ],
+  "jatkot": [
+   "Mitä arkeoastronomia tutkii?",
+   "Onko Euroopassa muita pronssikauden observatorioita?"
+  ]
+ },
+ {
+  "kohde": "kohde:kokinon-observatorio",
+  "kasite": "aurinko-observatoriona",
+  "kysymys": "Kerro lisää: aurinko-observatoriona",
+  "vastaus": "Aurinko-observatorio on paikka tai rakenne, jossa auringon nousu- ja laskukohtia seurataan horisontissa kiinteiden merkkien avulla. Näin voitiin määrittää [[päivänseisaukset]] ja [[päiväntasaukset]] ja sitä kautta vuodenkierto, jota kalenterit ja maanviljely tarvitsivat. Tunnettu eurooppalainen esimerkki on englantilainen [[Stonehenge]]. Kokinossa tulkinta on kiistanalainen, koska merkkejä on paljon ja suuntaukset voivat olla sattumaa.",
+  "linkit": [
+   "päivänseisaukset",
+   "päiväntasaukset",
+   "Stonehenge"
+  ],
+  "jatkot": [
+   "Miten Stonehenge liittyy päivänseisauksiin?",
+   "Mikä on Gosecken kehä?"
+  ]
+ },
+ {
+  "kohde": "kohde:kokinon-observatorio",
+  "kasite": "Kumanovosta",
+  "kysymys": "Kerro lisää: Kumanovosta",
+  "vastaus": "Kumanovo on kaupunki Pohjois-Makedonian koillisosassa, [[Serbian]] rajan lähellä ja Skopjen koillispuolella. Se on yksi maan suurimmista kaupungeista. Kumanovon seudulla käytiin lokakuussa 1912 [[Kumanovon taistelu]] [[ensimmäisessä Balkanin sodassa]], jossa serbialaiset joukot löivät ottomaanien armeijan. Kaupungin läheisyydessä, noin 30 kilometrin päässä, sijaitsee Kokinon pronssikautinen kohde.",
+  "linkit": [
+   "Serbian",
+   "Kumanovon taistelu",
+   "ensimmäisessä Balkanin sodassa"
+  ],
+  "jatkot": [
+   "Mikä oli ensimmäinen Balkanin sota?",
+   "Mitä Kumanovon seudulla on nähtävää?"
+  ]
+ },
+ {
+  "kohde": "kohde:kokinon-observatorio",
+  "kasite": "Euroopan",
+  "kysymys": "Kerro lisää: Euroopan",
+  "vastaus": "Eurooppa on maanosa, joka muodostaa Aasian kanssa yhtenäisen mantereen; sen pinta-ala on noin kymmenen miljoonaa neliökilometriä. Etelässä Euroopan rajana on [[Välimeri]], ja itärajan vetämiseen käytetään perinteisesti useita maantieteellisiä rajalinjoja. Pohjois-Makedonia sijaitsee [[Kaakkois-Euroopassa]]. Pronssikaudella Euroopassa kulki laajoja kauppareittejä, joilla liikkuivat muun muassa tina, kupari ja [[meripihka]].",
+  "linkit": [
+   "Välimeri",
+   "Kaakkois-Euroopassa",
+   "meripihka"
+  ],
+  "jatkot": [
+   "Mitkä maat sijaitsevat Balkanin niemimaalla?",
+   "Miten pronssikauden kauppareitit kulkivat Euroopassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:kokinon-observatorio",
+  "kasite": "päivänseisaukset",
+  "kysymys": "Kerro lisää: päivänseisaukset",
+  "vastaus": "Päivänseisaus on hetki, jolloin Aurinko saavuttaa taivaalla pohjoisimman tai eteläisimmän kohtansa. Kesäpäivänseisaus on pohjoisella pallonpuoliskolla noin 21. kesäkuuta, jolloin päivä on vuoden pisin, ja talvipäivänseisaus noin 21. joulukuuta, jolloin päivä on lyhin. Ilmiö johtuu siitä, että [[maapallon akseli]] on kallellaan noin 23,4 astetta. Päivänseisausten aikoina auringon nousu- ja laskupaikat horisontissa ovat ääripisteissään, ja siksi niitä voitiin seurata kiinteiden merkkien avulla. Eurooppalaisessa perinteessä päivänseisaus on tunnettu juhlapäivä, kuten [[juhannus]].",
+  "linkit": [
+   "maapallon akseli",
+   "juhannus"
+  ],
+  "jatkot": [
+   "Miten päiväntasaus eroaa päivänseisauksesta?",
+   "Miten juhannusta vietetään eri puolilla Euroopassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
+  "kasite": "Jugoslavian",
+  "kysymys": "Kerro lisää: Jugoslavian",
+  "vastaus": "Jugoslavia oli Balkanin valtio, jonka edeltäjä, serbien, kroaattien ja slovenien kuningaskunta, perustettiin vuonna 1918. Toisen maailmansodan jälkeen maasta tuli sosialistinen liittotasavalta [[Josip Broz Titon]] johdolla, ja siihen kuului kuusi tasavaltaa: [[Slovenia]], Kroatia, Bosnia ja Hertsegovina, Serbia, Montenegro ja Makedonia. Valtio hajosi 1990-luvun alussa, ja Makedonia itsenäistyi vuonna 1991. Skopje oli Makedonian tasavallan pääkaupunki.",
+  "linkit": [
+   "Josip Broz Titon",
+   "Slovenia"
+  ],
+  "jatkot": [
+   "Miksi Jugoslavia hajosi?",
+   "Kuka oli Josip Broz Tito?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
+  "kasite": "Skopjen maanjäristys",
+  "kysymys": "Kerro lisää: Skopjen maanjäristys",
+  "vastaus": "Skopjeen iski 26. heinäkuuta 1963 kello 5.17 voimakas maanjäristys, joka tappoi yli tuhat ihmistä ja tuhosi suuren osan kaupungista. Tapahtumasta on kulunut yli kuusikymmentä vuotta. Tuolloin Skopje kuului [[Jugoslaviaan]], ja jälleenrakennukseen saatiin apua monista maista. Vanhan [[rautatieaseman]] kello pysähtyi järistyksen hetkeen, ja osittain sortunut rakennus on säilytetty muistona. Nykyään siinä toimii kaupunginmuseo.",
+  "linkit": [
+   "Jugoslaviaan",
+   "rautatieaseman"
+  ],
+  "jatkot": [
+   "Miten Skopjen jälleenrakennus eteni maanjäristyksen jälkeen?",
+   "Mitä Skopjen kaupunginmuseossa on esillä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
+  "kasite": "Skopjeen",
+  "kysymys": "Kerro lisää: Skopjeen",
+  "vastaus": "Skopje on Pohjois-Makedonian pääkaupunki ja maan suurin kaupunki. Se sijaitsee [[Vardar]]-joen laaksossa. Kaupungin juuret ovat roomalaisessa [[Scupissa]], jonka paikalle nousi myöhemmin bysanttilainen, slaavilainen ja ottomaanien kaupunki. Maanjäristykset ovat muovanneet sen historiaa vuosina 518 ja 1963. Pääaukiolla seisoo vuonna 2011 paljastettu pronssipatsas Ratsastava soturi, joka kuuluu [[Skopje 2014]] -hankkeeseen.",
+  "linkit": [
+   "Vardar",
+   "Scupissa",
+   "Skopje 2014"
+  ],
+  "jatkot": [
+   "Mikä on Skopjen vanha basaarialue?",
+   "Mitä Skopjen Kale-linnoituksesta tiedetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
+  "kasite": "maanjäristys",
+  "kysymys": "Kerro lisää: maanjäristys",
+  "vastaus": "Maanjäristys on maankuoren äkillistä tärinää, joka syntyy, kun kallioperän jännitys purkautuu murtumassa eli [[siirroksessa]]. Suurin osa järistyksistä keskittyy [[mannerlaattojen]] reuna-alueille. Balkanin niemimaa kuuluu seismisesti aktiivisiin alueisiin, ja Skopjea ovat koetelleet suuret järistykset vuosina 518 ja 1963. Järistyksen voimakkuutta mitataan [[magnitudiasteikolla]], ja vaikutuksiin vaikuttavat muun muassa rakennusten laatu ja maaperä. Nykyään alueella rakennetaan järistyksiä kestäviä rakennuksia.",
+  "linkit": [
+   "siirroksessa",
+   "mannerlaattojen",
+   "magnitudiasteikolla"
+  ],
+  "jatkot": [
+   "Mitä magnitudi tarkoittaa?",
+   "Miten Balkanin seisminen aktiivisuus selittyy?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
+  "kasite": "maanjäristyksen",
+  "kysymys": "Kerro lisää: maanjäristyksen",
+  "vastaus": "Vuoden 1963 maanjäristyksen jälkeen Skopjen jälleenrakennus oli suuri kansainvälinen hanke. Apua tuli useista maista ja [[Yhdistyneiden kansakuntien]] kautta, ja kaupungille laadittiin uusi asemakaava, jossa lähteiden mukaan oli mukana japanilainen arkkitehti Kenzo Tange; en ole varma hänen osuutensa tarkoista yksityiskohdista. Kaupunkia on joskus kutsuttu kansainvälisen solidaarisuuden kaupungiksi. Vanha [[rautatieasema]] jätettiin osittain muistoksi tuhosta, ja se toimii nykyään kaupunginmuseona.",
+  "linkit": [
+   "Yhdistyneiden kansakuntien",
+   "rautatieasema"
+  ],
+  "jatkot": [
+   "Mitä Yhdistyneet kansakunnat teki Skopjen jälleenrakennuksessa?",
+   "Miten Skopjen keskusta on muuttunut sen jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
+  "kasite": "Skopjen",
+  "kysymys": "Kerro lisää: Skopjen",
+  "vastaus": "Skopje on Pohjois-Makedonian pääkaupunki, ja se on jakautunut Vardar-joen kahden puolen. Joen yli kulkee ottomaanien ajalta peräisin oleva [[Kivisilta]], jonka pohjoispuolella on vanha basaarialue [[Čaršija]]. Skopjessa syntyi vuonna 1910 Äiti Teresa. Pääaukiolla kohoaa vuonna 2011 paljastettu pronssipatsas, jonka virallinen nimi on Ratsastava soturi. Kreikka piti Aleksanteri Suuren nimen käyttöä oman historiansa omimisena, ja nimikiista ratkesi vasta [[Prespan sopimuksella]] vuonna 2018.",
+  "linkit": [
+   "Kivisilta",
+   "Čaršija",
+   "Prespan sopimuksella"
+  ],
+  "jatkot": [
+   "Mikä on Skopjen Kivisilta?",
+   "Mikä on Čaršija?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
+  "kasite": "Pohjois-Makedonia",
+  "kysymys": "Kerro lisää: Pohjois-Makedonia",
+  "vastaus": "Pohjois-Makedonia on Balkanin sisämaavaltio, jossa antiikin rauniot, bysanttilaiset kirkot ja ottomaanien ajan perintö kerrostuvat samalle maaperälle. Maa itsenäistyi Jugoslaviasta vuonna 1991, ja nimeksi vahvistettiin Pohjois-Makedonia Prespan sopimuksella 2018. Vuonna 1903 syttyneen [[Ilinden-kapinan]] yhteydessä perustettiin lyhytikäinen [[Kruševon tasavalta]], joka kesti noin kymmenen päivää. Maan tunnetuimpia viinialueita on [[Tikveš]] Vardar-joen laaksossa, jossa viiniä kerrotaan valmistetun yli 2 500 vuotta; paikallisia lajikkeita ovat punaviineistä vranec ja kratošija sekä valkoisista smederevka.",
+  "linkit": [
+   "Ilinden-kapinan",
+   "Kruševon tasavalta",
+   "Tikveš"
+  ],
+  "jatkot": [
+   "Mitä Ilinden-kapina oli?",
+   "Millaisia viinejä Tikvešissä valmistetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
+  "kasite": "Aleksanteri Suuren",
+  "kysymys": "Kerro lisää: Aleksanteri Suuren",
+  "vastaus": "Aleksanteri III eli Aleksanteri Suuri syntyi vuonna 356 eaa. [[Pellassa]] Makedoniassa ja nousi kuninkaaksi isänsä Filippos II:n murhan jälkeen vuonna 336 eaa. Hänen opettajanaan oli filosofi [[Aristoteles]]. Hän johti makedonialaisen armeijan Persian valtakunnan valloitukseen ja kuoli vuonna 323 eaa. noin 32-vuotiaana. Hänen nimensä on ollut kiistan kohde: Kreikka katsoi, että Makedonia-nimen ja Aleksanterin käyttö oli sen historian omimista, mikä näkyi myös [[Skopjen]] pääaukion patsaan virallisessa nimessä.",
+  "linkit": [
+   "Pellassa",
+   "Aristoteles",
+   "Skopjen"
+  ],
+  "jatkot": [
+   "Mitä Aristoteles opetti Aleksanterille?",
+   "Miten Aleksanterin valtakunta jakautui hänen kuoltuaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
+  "kasite": "Vardar",
+  "kysymys": "Kerro lisää: Vardar",
+  "vastaus": "Vardar on Pohjois-Makedonian pisin joki ja Balkanin merkittävimpiä vesistöjä. Se saa alkunsa maan länsiosasta [[Šar-vuorten]] juurelta, virtaa Skopjen halki ja jatkuu Kreikkaan, missä sitä kutsutaan nimellä Axios ja missä se laskee [[Thermaikoksenlahteen]]. Vardarin laakso on ollut vuosisatoja tärkeä liikenneväylä. Sen varrella on [[Tikvešin]] viinialue, jossa viinitarhat ulottuvat joen laaksosta kumpuileville rinteille.",
+  "linkit": [
+   "Šar-vuorten",
+   "Thermaikoksenlahteen",
+   "Tikvešin"
+  ],
+  "jatkot": [
+   "Mikä on Tikvešin viinialue?",
+   "Mihin Vardar-joki lopulta laskee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
+  "kasite": "Kale",
+  "kysymys": "Kerro lisää: Kale",
+  "vastaus": "Kale on Skopjen linnoitus Vardar-joen yläpuolella kohoavalla kukkulalla. Keisari [[Justinianus I]] käski rakentaa sen 500-luvulla maanjäristyksen tuhoaman [[Scupin]] kaupungin läheisyyteen, osin raunioituneen kaupungin kivistä. Muureja on sittemmin rakennettu uudelleen bysanttilaisten, slaavien ja osmanien aikana, ja ne kestivät myös Skopjen vuoden 1963 maanjäristyksen. Kaivauksissa linnoituksen alta on paljastunut Scupin asukkaiden taloja. Nimi Kale tarkoittaa turkin kielessä linnoitusta.",
+  "linkit": [
+   "Justinianus I",
+   "Scupin"
+  ],
+  "jatkot": [
+   "Mikä oli Scupi?",
+   "Mitä Skopjen Kalen linnoituksessa voi nähdä nykyään?"
+  ]
+ }
+]
