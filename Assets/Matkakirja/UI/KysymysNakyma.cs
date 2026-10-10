@@ -845,7 +845,7 @@ namespace Matkakirja.Natiivi
         public sealed class Tiimalasi : VisualElement
         {
             static readonly Color Puu = Kuviot.Vari("#8a6534");
-            static readonly Color Muste = Kuviot.Vari("#46331f");
+            static readonly Color Muste = (Color)Tyylikirja.Kehys.MapInk;
             static readonly Color Hiekka = Kuviot.Vari("#c08a3e", 0.92f);
             static readonly Color Virta = Kuviot.Vari("#b07f38", 0.75f);
             static readonly Color Punainen = Kuviot.Vari("#a83c2c", 0.92f);

@@ -409,7 +409,7 @@ namespace Matkakirja.Natiivi
             if (t.SeuraavaRaja == null) return;
             var palkki = Rakenne.El("mk-laukku__palkki", matka, PickingMode.Ignore);
             var tayte = Rakenne.El("mk-laukku__palkkitayte", palkki, PickingMode.Ignore);
-            Rakenne.Tausta(tayte, Kuviot.Vaaka("tietaja-palkki", Kuviot.Vari("#8a6114"), Kuviot.Vari("#d9a13b")));
+            Rakenne.Tausta(tayte, Kuviot.Vaaka("tietaja-palkki", (Color)Tyylikirja.Kehys.AccentDark, (Color)Tyylikirja.Kehys.Accent));
             tayte.style.width = Length.Percent(Mathf.Clamp01((float)t.Osuus) * 100f);
             Rakenne.Teksti(Kieli.T("ui.laukku.seuraava-taso", t.SeuraavaRaja, t.SeuraavaNimi), "mk-laukku__seuraava", matka);
         }

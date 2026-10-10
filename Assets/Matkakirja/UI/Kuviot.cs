@@ -31,8 +31,8 @@ namespace Matkakirja.Natiivi
         }
 
         public static Texture2D Ylapalkki => Pysty("ylapalkki", Vari("#3a2a1c"), Vari("#251b12"));
-        public static Texture2D Kulta => Pysty("kulta", Vari("#eab84e"), Vari("#d09024"));
-        public static Texture2D KultaPainettu => Pysty("kulta-painettu", Vari("#f3c661"), Vari("#d9a13b"));
+        public static Texture2D Kulta => Pysty("kulta", (Color)Tyylikirja.Kehys.Kulta, Vari("#d09024"));
+        public static Texture2D KultaPainettu => Pysty("kulta-painettu", Vari("#f3c661"), (Color)Tyylikirja.Kehys.Accent);
         public static Texture2D Ilmoitus => Pysty("ilmoitus", Vari("#2e2114", 0.96f), Vari("#1e150c", 0.96f));
 
         /// <summary>Vaakasuora kahden värin liukuväri (vasemmalta oikealle).</summary>
@@ -201,14 +201,14 @@ namespace Matkakirja.Natiivi
         /// ja alfalla 0,2 × kohina; multiply-sekoitus = pohja × (1 − α + α × väri). 140 × 140 laatta toistuu
         /// (AsetaArkki), joten rae on pikselin kokoista kuten webissä eikä veny arkin mukana.
         /// </summary>
-        public static Texture2D Arkkipaperi => Paperi("arkkipaperi", Vari("#f5f0e2"), kerto: true);
+        public static Texture2D Arkkipaperi => Paperi("arkkipaperi", (Color)Tyylikirja.Paperi.Pinta, kerto: true);
 
         /// <summary>
         /// Aloitusverhon ja saapumisen välikortin arkki (web .aloitusverho: background-color --paper #efdcb4 ja
         /// --paper-noise ilman sekoitustilaa): sama rae kuin arkkipaperissa, mutta tavallisena päällepiirtona
         /// (pohja × (1 − α) + väri × α).
         /// </summary>
-        public static Texture2D Verhopaperi => Paperi("verhopaperi", Vari("#efdcb4"), kerto: false);
+        public static Texture2D Verhopaperi => Paperi("verhopaperi", (Color)Tyylikirja.Kehys.Paper, kerto: false);
 
         static Texture2D Paperi(string nimi, Color pohja, bool kerto)
         {
@@ -248,10 +248,10 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Arkkipaperi toistuvana 140 × 140 -laattana (web background-image toistuu luonnollisessa koossaan).</summary>
-        public static void AsetaArkki(VisualElement e) => AsetaLaatta(e, Vari("#f5f0e2"), Arkkipaperi);
+        public static void AsetaArkki(VisualElement e) => AsetaLaatta(e, (Color)Tyylikirja.Paperi.Pinta, Arkkipaperi);
 
         /// <summary>Verhopaperi (web .aloitusverho) toistuvana 140 × 140 -laattana.</summary>
-        public static void AsetaVerho(VisualElement e) => AsetaLaatta(e, Vari("#efdcb4"), Verhopaperi);
+        public static void AsetaVerho(VisualElement e) => AsetaLaatta(e, (Color)Tyylikirja.Kehys.Paper, Verhopaperi);
 
         static void AsetaLaatta(VisualElement e, Color pohja, Texture2D laatta)
         {
