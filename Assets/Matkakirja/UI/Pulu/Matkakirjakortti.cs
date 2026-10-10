@@ -249,8 +249,8 @@ namespace Matkakirja.Natiivi
         /// Web puhelinTila (max-width 699 / max-height 520 CSS-pikseliä): iPhone kyllä, iPad ei. Tabletti tunnistetaan
         /// kuten pisteskaalassa (UiKerros.Tabletti), koska simulaattorin deviceModel ei ala "iPad".
         /// </summary>
-        static bool Puhelin => Application.platform == RuntimePlatform.IPhonePlayer
-            ? !UiKerros.Tabletti : Screen.width < Screen.height;
+        static bool Puhelin => Application.platform == RuntimePlatform.IPhonePlayer || UiRuutu.Testi != null
+            ? !UiKerros.Tabletti : UiRuutu.Leveys < UiRuutu.Korkeus;
 
         /// <summary>Puhelimessa merkintä alkaa lappuna, paitsi kertojan luennan aikana: omistaja 30.9.2026 (TF 1.0.68,
         /// Päätoimittaja): "otetaan isoisän matkakirja näkyviin automaattisesti luennan ajan" — kumoaa 15.9.:n linjan
