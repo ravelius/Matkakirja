@@ -367,7 +367,7 @@ namespace Matkakirja.Natiivi
     /// </summary>
     public sealed class MuseoKertoja
     {
-        public static string Juuri = "https://media.matkakirja.app/aanet/taidemuseo-kertoja-v1/";
+        public static string Juuri = "https://media.matkakirja.app/aanet/taidemuseo-kertoja-v2/";   // v2: tempo 1,10× (Pelikoodari 11.10.)
         readonly Dictionary<string, (string Url, double Kesto)> aanet = new Dictionary<string, (string, double)>();
         public string Soiva { get; private set; }
         public int Maara => aanet.Count;
