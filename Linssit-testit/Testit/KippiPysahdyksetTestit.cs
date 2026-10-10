@@ -150,8 +150,13 @@ namespace Matkakirja.Linssit.Testit
                     Console.WriteLine($"        {k.Id} {k.Nimi}: pienin v {(y.Count > 0 ? y.Min(n => n.V) : 0):F2} m/s, pienin kulma {(y.Count > 0 ? y.Min(n => n.Kulma) : 0):F2} °/s");
                 }
                 Oleta.Tosi(a.Saapui.Count == a.Reitti.Length, $"{p}: kaikki pysähdykset ({a.Saapui.Count}/{a.Reitti.Length}; {a.Loki})");
-                // Kierroksen pysähdykset (myös 1. kohteen laskeutuminen); avauskehyksen kierto ennen kierrosta ei kuulu kippiin.
-                foreach (var x in lista) if (x.Kohde != null) viat.Add($"{p} {x.Kohde} {x.Alku:F1} s {x.Kesto:F1} s ({x.Vaihe})");
+                // Kaikki: avaus ja opastus (kohde -, simu 984010db6: 20 s paikallaan), 1. lento ja kierroksen pysähdykset; tumma siirtoruutu ei.
+                foreach (var x in lista) viat.Add($"{p} {x.Kohde ?? "avaus"} {x.Alku:F1} s {x.Kesto:F1} s ({x.Vaihe})");
+                // Avaus ei seiso (PT 11.10.): avauksen ja opastuksen aikana kuva kääntyy koko ajan ≥ 1 °/s, ja 1. lento jatkaa liikettä.
+                var avaus = a.N.Where(n => n.Kohde == null && (n.Vaihe == "odotus" || n.Vaihe == "lento")).ToList();
+                double avausMin = avaus.Count > 0 ? avaus.Min(n => Math.Max(n.Kulma, n.V / Math.Max(1e-6, OpasNopeusloki.SeisOsuus * mn))) : 0;
+                Console.WriteLine($"        avaus {avaus.Count} näytettä, pienin kulma {(avaus.Count > 0 ? avaus.Min(n => n.Kulma) : 0):F2} °/s, pienin v {(avaus.Count > 0 ? avaus.Min(n => n.V) : 0):F2} m/s");
+                if (avaus.Count < 50 || avausMin < 1) viat.Add($"{p} avaus: liike alle rajan ({avausMin:F2})");
             }
             Oleta.Tosi(viat.Count == 0, "seisahduksia: " + string.Join("; ", viat));
         }
@@ -180,7 +185,7 @@ namespace Matkakirja.Linssit.Testit
                         edVaihe = s.Vaihe; edEt = s.Asento.EtaisyysM;
                         if (log.Paivita(t, s.Asento, s.Nykyinen?.Id, OpasNopeusloki.Vaihe(s)) is OpasNopeusloki.Nayte x) n.Add(x);
                     });
-                    double mn = OpasNopeusloki.Matkanopeus(n); mnMin = Math.Min(mnMin, mn);
+                    double mn = Math.Min(OpasNopeusloki.Matkanopeus(n), KaupunkiRajaMaxMS / OpasNopeusloki.SeisOsuus); mnMin = Math.Min(mnMin, mn);
                     foreach (var x in OpasNopeusloki.Seisahdukset(n, mn))
                     {
                         if (x.Kohde == null) continue;
@@ -341,5 +346,59 @@ namespace Matkakirja.Linssit.Testit
             var e = L(new Dictionary<string, object> { ["id"] = "Q243", ["nimi"] = "Eiffel-torni", ["lat"] = 48.858296, ["lon"] = 2.294479, ["koko_m"] = 125.0 });
             Oleta.Tosi(double.IsNaN(e.KatseSuunta) && !e.KatseLoppu && e.LaskuOsuus == 1, "muut kohteet ilman oletusta");
         }
-    }
+    
+        /// <summary>
+        /// SAAPUMISESSA EI KUOPPAA (simu 984010db6, PT 11.10.: Concorde ja Champs-Élysées hidastuivat 1,5 m/s:iin ja kuva kääntyi
+        /// &lt; 1 °/s 1,6–2,6 s ennen kierron kiihtymistä): jokaisella saapumisella (lento → kierto) kuva kääntyy ≥ SaapumisKulmaMin
+        /// koko ikkunan −2 … +3 s, tai silmä liikkuu ≥ 10 % lentojen mediaanista. Pariisi (molemmat profiilit): ei yli SaapumisKuoppaMaxS;
+        /// 37 kaupunkia: ei yli SeisMinS. Hetkellinen kuoppa (≤ 0,5 s / ≤ 1 s) jää: lennon oma kääntö ja kierto ovat saapuessa aina
+        /// vastakkaiset (kääntöraja vie kehyksen sivuun, kierto jatkaa silmää poispäin tulosuunnan takaa), joten kuvan kääntönopeus
+        /// vaihtaa etumerkkiä lennon viimeisellä sekunnilla; tulostetaan.
+        /// </summary>
+        public const double SaapumisKulmaMin = 1.0, SaapumisKuoppaMaxS = 0.5;
+        /// <summary>37 kaupungin seisahdusraja enintään (m/s, Pariisin taso ~10 % × 51 m/s): Tukholman pitkien lentojen mediaani nosti
+        /// rajan yli kierron oman nopeuden (lähtö Riddarholmenilta 8,3 m/s ei ole seisahdus).</summary>
+        public const double KaupunkiRajaMaxMS = 5.0;
+        static List<string> SaapumisKuopat(List<OpasNopeusloki.Nayte> n, string nimi, double maxS, ISet<string> ohita = null)
+        {
+            var viat = new List<string>();
+            double raja = Math.Min(KaupunkiRajaMaxMS, OpasNopeusloki.SeisOsuus * OpasNopeusloki.Matkanopeus(n));
+            for (int i = 1; i < n.Count; i++)
+            {
+                if (n[i - 1].Vaihe != "lento" || n[i].Vaihe == "lento" || n[i].Kohde == null || n[i].Vaihe == "siirto" || (ohita?.Contains(n[i].Kohde) ?? false)) continue;
+                double t0 = n[i].T, minK = double.MaxValue, minT = 0, kesto = 0, pisin = 0;
+                foreach (var x in n)
+                {
+                    if (x.T < t0 - 2 || x.T > t0 + 3) continue;
+                    bool kuoppa = x.V < raja && x.Kulma < SaapumisKulmaMin;
+                    kesto = kuoppa ? kesto + OpasNopeusloki.ValiS : 0; pisin = Math.Max(pisin, kesto);
+                    if (x.V < raja && x.Kulma < minK) { minK = x.Kulma; minT = x.T - t0; }
+                }
+                if (pisin > maxS + 1e-6) viat.Add($"{nimi} {n[i].Kohde} @ {t0:F1} s: kulma {minK:F2} °/s ({minT:+0.0;-0.0} s), alle {SaapumisKulmaMin} °/s {pisin:F1} s");
+                else if (minK < SaapumisKulmaMin) Console.WriteLine($"      (hetkellinen {nimi} {n[i].Kohde} @ {t0:F1} s: kulma {minK:F2} °/s, {pisin:F1} s)");
+            }
+            return viat;
+        }
+
+        [Testi] static void SaapumisessaEiKuoppaa()
+        {
+            var viat = new List<string>();
+            foreach (var p in new[] { Profiili.Normaali, Profiili.Odotus }) viat.AddRange(SaapumisKuopat(Aja(p).N, $"Pariisi {p}", SaapumisKuoppaMaxS));
+            foreach (var c in PalloKaupungitTestit.Lue())
+                foreach (bool hidas in new[] { false, true })
+                {
+                    var n = new List<OpasNopeusloki.Nayte>(); var log = new OpasNopeusloki(); var korkealta = new HashSet<string>(); double edEt = 0; var edV = OpasVaihe.Alku;
+                    PalloKaupungitTestit.Aja(c, hidas, kehys: (s, t) =>
+                    {
+                        if (s.Vaihe == OpasVaihe.Lentaa && edV != OpasVaihe.Lentaa && edEt >= OpasSilmukka.AvausKorkeaM && s.Nykyinen?.Id != null) korkealta.Add(s.Nykyinen.Id);
+                        if (s.Nykyinen?.Id != null && s.Nykyinen.Id == c.Kohteet[0].Id) korkealta.Add(s.Nykyinen.Id);
+                        edV = s.Vaihe; edEt = s.Asento.EtaisyysM;
+                        if (log.Paivita(t, s.Asento, s.Nykyinen?.Id, OpasNopeusloki.Vaihe(s)) is OpasNopeusloki.Nayte x) n.Add(x);
+                    });
+                    viat.AddRange(SaapumisKuopat(n, $"{c.Nimi} {(hidas ? "Hidas" : "Nopea")}", OpasNopeusloki.SeisMinS, korkealta));
+                }
+            foreach (var v in viat) Console.WriteLine("      KUOPPA " + v);
+            Oleta.Tosi(viat.Count == 0, $"{viat.Count} saapumisessa kuoppa: {string.Join("; ", viat.Take(8))}");
+        }
+}
 }

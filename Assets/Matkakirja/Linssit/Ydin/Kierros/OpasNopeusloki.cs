@@ -5,8 +5,8 @@
 // v = silmän nopeus (3D, m/s), kulma = katsesuunnan kääntymisnopeus (°/s; suuntima ja kallistus yhdessä, eli kuvan pyöriminen),
 // vaihe lento | kierto | odotus | lataus | siirto (tumma siirtoruutu ei ole seisahdus).
 // SEISAHDUS (PT 11.10.): sekä v < SeisOsuus × matkanopeus että kulma < SeisKulmaAstS yhtäjaksoisesti yli SeisMinS. Matkanopeus on
-// pysähdysten kierron tyypillinen silmänopeus (kierto-vaiheen näytteiden mediaani), eli pallo "seisoo", kun se liikkuu alle
-// kymmenesosalla tavallisesta kiertovauhdista eikä kuva käänny.
+// lentojen silmänopeuden mediaani (kuten simuajon analyysi), eli pallo "seisoo", kun se liikkuu alle kymmenesosalla lentovauhdista
+// eikä kuva käänny (kierto ≥ 1 °/s on liikettä).
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -80,11 +80,12 @@ namespace Matkakirja.Linssit.Kierros
             return s.PuheSoi ? "kierto" : "odotus";
         }
 
-        /// <summary>Matkanopeus: kierto-vaiheen näytteiden silmänopeuden mediaani (m/s); ei kiertoa → kaikkien mediaani.</summary>
+        /// <summary>Matkanopeus: lento-vaiheen näytteiden silmänopeuden mediaani (m/s; sama kuin simuajon analyysi
+        /// proto-3d/tyokalut/linssiseppa-ajot/mittaa-kippi-nopeus.py, Pariisissa ~50 m/s → raja ~5 m/s); ei lentoja → kaikkien mediaani.</summary>
         public static double Matkanopeus(IReadOnlyList<Nayte> n)
         {
             var l = new List<double>();
-            foreach (var x in n) if (x.Vaihe == "kierto") l.Add(x.V);
+            foreach (var x in n) if (x.Vaihe == "lento") l.Add(x.V);
             if (l.Count == 0) foreach (var x in n) l.Add(x.V);
             if (l.Count == 0) return 0;
             l.Sort();
