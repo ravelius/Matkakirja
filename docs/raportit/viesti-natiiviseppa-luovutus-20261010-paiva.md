@@ -5,6 +5,15 @@ Edellinen: viesti-natiiviseppa-luovutus-20261010-aamu.md (TILA-osiot 08.0x–11.
 Viestit: SendMessage-raja oli täynnä → varakanava mcp__ccd_session_mgmt__send_message (PT local_593b89a1…, Julkaisija local_22b29f10…,
 LS1 local_45a869de…, LS2 local_fc4fcc54…, NUI local_33ba1387…, Pelikoodari local_97810d35…, Sisältökirjuri local_256f6a15…).
 
+## TILA 13.2x
+- **JUNA 176 RUNKO = 2900f8e39** (9bf070143 + NUI saapumisarkki 72cbff04b, latauskuva bf820d7fa, ikaraja 4b36cb4ca + LS1 pallo-esittely d8808a222 (WIP-otsikko);
+  K454/P456/L1307, tarkista ok). ODOTTAA: Siirtosepän historia-NRE-korjaus + LS1 KIIRE 2 (pallon kohdemerkit + kehittäjänäkymän kaupunkivalinta) → lukitus → TF iOS + Mac.
+- **MUISTIAJO 177 LÄPI** (c830407bf Release, iPad Pro 13): Pariisi A 0,76 / B 0,74 Gt, Olavinlinna 0,57 Gt (175: 0,74), ei jetsameja. Lokit proto-3d/lokit/
+  natiiviseppa-muistitarkka-20261010-12{54,59}-r2{8,9}-177-*, natiiviseppa-ab177. Skriptit scratchpad 28d76ecf…/{laite177,muisti177,ketju177}.sh.
+- LÖYDÖS: SeikkailuHistoria.Aja NRE (kamera.position, rivi 257), kun linna suljetaan esittelyhistorian aikana → siivous ei aja, ajossa jää
+  (1210b674e ohittaa kaikki myöhemmät historiat). Ehdotettu Siirtosepälle: silmukan alkuun if (kamera == null) break;.
+- Taustalla EI omia ajoja (13.2x).
+
 ## PÄIVITYS 12.3x–12.4x (uusi sessio)
 - **Unity 6.3 T7:llä** (12.34): /Volumes/T7 4TB/koodaus/unity63-talteen/6000.3.24f1, symlinkki /Users/Shared/Claude/unity/6000.3.24f1, unity-polku.sh käännetty
   (varmuuskopio .ennen-unity63-t7-20261010). /Applications/Unity/Hub/Editor/6000.3.24f1 sisältää NYT VAIN K63-kääntäjäketjun (NetCoreRuntime +
