@@ -775,8 +775,9 @@ namespace Matkakirja.Natiivi
             var sa = UiRuutu.Turva;
             float vali = Mathf.Max(sa.xMin, sa.yMin) * sk + KrediititTiivis.TyhjaSivuPt;
             AsetaIon(siirtymaIon, vali, vali);
-            // Poistu oikeaan alakulmaan samalle riville: alareuna kuten logon, oikea reuna turva-alueen sisään.
-            float oikea = Mathf.Max(Screen.width - sa.xMax, sa.yMin) * sk + KrediititTiivis.TyhjaSivuPt;
+            // Poistu oikeaan alakulmaan samalle riville: alareuna kuten logon, oikea reuna turva-alueen sisään reunan lähelle
+            // (simu 22.52: logon 44 pt:n sivuväli toi napin iPhonella 16 pt:n päähän latauspalkista).
+            float oikea = (Screen.width - sa.xMax) * sk + KrediititTiivis.TyhjaSivuPt;
             poistuRivi.style.right = oikea; poistuRivi.style.bottom = vali;
             Debug.Log($"MATKAKIRJA opas: siirtymän ion-logo {vali:0} pt vasemmasta ja alhaalta (paneeli {pw:0}, turva {sa.xMin:0}/{sa.yMin:0} px)");
         }
