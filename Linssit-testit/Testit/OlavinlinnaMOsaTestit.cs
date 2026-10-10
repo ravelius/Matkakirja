@@ -215,6 +215,19 @@ namespace Matkakirja.Linssit.Testit
             }
         }
 
+        /// <summary>Avainesine tekee tarkistuspisteen (pelattavuusmalli 4.3 T6c, SeikkailuVartijat.EsineTarkistuspiste), kun kukaan ei epäile
+        /// tai etsi pelaajaa; Thief-reitillä avaimet otetaan kulhon harhautuksen aikana, kun linnaväki etsii pelaajan kohtaa → ei pistettä.</summary>
+        [Testi] static void AvaimetTekevatTarkistuspisteen()
+        {
+            const int Avaimet = 56;   // reitti:pelaaja-57 voudin pöytä
+            var etsii = Tila(Avaimet); etsii.Kaytetyt.Remove("otettu:avainrengas"); int ennen = etsii.TarkistusSeuraava; etsii.Toiminnot();
+            Oleta.Tosi(etsii.TarkistusSeuraava == ennen, $"etsinnän aikana ei tarkistuspistettä ({etsii.TarkistusSeuraava + 1})");
+            var rauha = Tila(Avaimet); rauha.Kaytetyt.Remove("otettu:avainrengas"); rauha.Seuraava = Avaimet;
+            foreach (var h in rauha.Hahmot) h.Aivot.Nollaa(h.X, h.Z);
+            rauha.Toiminnot();
+            Oleta.Tosi(rauha.TarkistusSeuraava == Avaimet && rauha.Tarkistus.X == rauha.PX && rauha.Tarkistus.Z == rauha.PZ, $"avaimet → tarkistuspiste 57 ({rauha.TarkistusSeuraava + 1})");
+        }
+
         /// <summary>Piiloon meno tekee tarkistuspisteen (SeikkailuVartijat, Siirtoseppä juna 167): muuriportailla (69, tarkistus vielä
         /// Tott-kammiossa 66) ampuma-aukkokomeroon samassa osassa kukaan ei epäile → tarkistuspiste komeroon, kiinni → komeroon.</summary>
         [Testi] static void PiiloonMenoTekeeTarkistuspisteen()

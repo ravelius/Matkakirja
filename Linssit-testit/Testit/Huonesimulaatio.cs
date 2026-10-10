@@ -231,13 +231,30 @@ namespace Matkakirja.Linssit.Testit
         /// <summary>Toiminto pelaajan kohdalla: tarjotin pöydältä, eväät torkkuvalle (kynttilä jää käteen), naamio naulakosta.</summary>
         public void Toiminnot()
         {
-            if (!Naamio) foreach (var m in Data.Lajia("naulakko")) if (Etaisyys2(PX, PZ, m.X, m.Z) <= PoimintaM && Math.Abs(PY - m.Y) < 2) Naamio = true;
+            if (!Naamio) foreach (var m in Data.Lajia("naulakko")) if (Etaisyys2(PX, PZ, m.X, m.Z) <= PoimintaM && Math.Abs(PY - m.Y) < 2) { Naamio = true; EsineTarkistus(); }
+            // Avainesineet (pelattavuusmalli 4.3 T6c avaimet, T8a köysi; SeikkailuVartijat.EsineTarkistuspiste): tarkistuspiste otettaessa.
+            foreach (var m in Data.Lajia("esine"))
+                if ((m.Tunnus == "avainrengas" || m.Tunnus == "koysikieppi") && !Kaytetyt.Contains("otettu:" + m.Tunnus)
+                    && Etaisyys2(PX, PZ, m.X, m.Z) <= PoimintaM + 0.5 && Math.Abs(PY - m.Y) < 1.5) { Kaytetyt.Add("otettu:" + m.Tunnus); EsineTarkistus(); }
             if (!Tarjotin && !Annettu)
                 foreach (var m in Data.Lajia("esine")) if (m.Kannettava && m.Tunnus == "tarjotin" && Etaisyys2(PX, PZ, m.X, m.Z) <= PoimintaM && Math.Abs(PY - m.Y) < 1.5) Tarjotin = true;
             if (Tarjotin)
                 foreach (var h in Hahmot)
                     if (h.Aivot.Profiili == VartijaProfiili.Torkku && !h.Aivot.Syo && h.Aivot.Tila != VartijanTila.Halytys && h.Aivot.Tila != VartijanTila.Kiinni
                         && Etaisyys3(h.X, h.Y, h.Z, PX, PY, PZ) < AnnaM) { h.Aivot.Torkkuu = true; h.Aivot.Syo = true; Tarjotin = false; Annettu = true; Kynttila = true; }
+        }
+
+        /// <summary>Tarkistuspiste avainesineestä (T6b naamio, T6c avaimet, T8a köysi), kun kukaan ei epäile.</summary>
+        /// Ehto kuten SeikkailuVartijat.EpaileePelaajaa: harhautuksen tutkiminen muualla sallitaan (avaimet voudin kiistan aikana).
+        void EsineTarkistus()
+        {
+            foreach (var h in Hahmot)
+            {
+                if (!h.Aktiivinen) continue; var t = h.Aivot.Tila;
+                if (h.Aivot.Mittari >= 0.15 || t == VartijanTila.Epaily || t == VartijanTila.Halytys || t == VartijanTila.Kiinni) return;
+                if ((t == VartijanTila.Etsinta || t == VartijanTila.Etsii) && Etaisyys2(h.Aivot.EpailyX, h.Aivot.EpailyZ, PX, PZ) < 3) return;
+            }
+            Tarkistus = (PX, PY, PZ); TarkistusSeuraava = Seuraava;
         }
 
         /// <summary>Heitettävät ja kaadettavat pelaajan ulottuvilla (≤ 1,2 m), joita ei ole käytetty.</summary>

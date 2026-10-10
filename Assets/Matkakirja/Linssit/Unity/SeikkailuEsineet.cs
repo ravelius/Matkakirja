@@ -292,6 +292,7 @@ namespace Matkakirja.Natiivi
             puetut.Add(e.Id);
             kirjaa?.Invoke($"seikkailu: puettu {e.Id}{(Naamio ? " → naamio (palvelija)" : "")}");
             SeikkailuTallentaja.Aktiivinen?.Tallenna("m: puettu " + e.Id);
+            if (Naamio) SeikkailuVartijat.EsineTarkistuspiste("naamio");   // T6b (pelattavuusmalli 4.3); kieli: ei (lokin tunniste)
         }
 
         public static IEnumerator Lataa(KavelyData d, string juuri, Func<string, string> url, Transform isa, Action<string> kirjaa)
@@ -933,6 +934,7 @@ namespace Matkakirja.Natiivi
                 SeikkailuAanet.SoitaTaiVara("avainnippu", "hopea-kilahdus", e.Go.transform.position, 0.7f);
                 kirjaa?.Invoke("seikkailu: avainrengas laukkuun");
                 SeikkailuTallentaja.Aktiivinen?.Tallenna("m: avainrengas");
+                SeikkailuVartijat.EsineTarkistuspiste("avaimet");   // T6c; kieli: ei (lokin tunniste)
                 return;
             }
             kadessa = e; e.Heitetty = false; e.Kuului = false;
@@ -946,7 +948,7 @@ namespace Matkakirja.Natiivi
                 e.Go.transform.localPosition = p.KahvaKiinni ? Vector3.zero : SeikkailuPelaaja.Ensimmainen ? new Vector3(0.02f, -0.05f, 0.05f) : new Vector3(0.03f, -0.1f, 0f);
             }));
             kirjaa?.Invoke($"seikkailu: poimittu {e.Id}");
-            if (e.Id == Koysikieppi) SeikkailuAanet.SoitaTaiVara("koysi-otto", null, e.Go.transform.position, 0.8f);
+            if (e.Id == Koysikieppi) { SeikkailuAanet.SoitaTaiVara("koysi-otto", null, e.Go.transform.position, 0.8f); SeikkailuVartijat.EsineTarkistuspiste("köysi"); }   // T8a; kieli: ei (lokin tunniste)
             if (e.Laji == Laji.Nostettava) Nostettiin?.Invoke(e.Id);
         }
 
