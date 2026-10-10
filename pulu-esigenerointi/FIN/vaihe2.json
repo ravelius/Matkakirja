@@ -7130,5 +7130,1009 @@
    "Mistä Suomen itäraja kulkee?",
    "Mikä on Parppeinvaaran runokylä?"
   ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ilomantsi",
+  "kasite": "Kansanlaulajat",
+  "kysymys": "Kerro lisää: Kansanlaulajat",
+  "vastaus": "Kansanlaulajat olivat tavallisia kyläläisiä, jotka osasivat ulkoa pitkiä lauluja ja välittivät ne eteenpäin kuulemalla ja toistamalla. Karjalassa perinteinen runolaulu noudatti [[kalevalamittaa]], ja juuri tällaisilta laulajilta [[Elias Lönnrot]] keräsi aineistoa, josta syntyi [[Kalevala]]. Ilomantsin runolaulun perintöä vaalii nykyään [[Parppeinvaaran]] runokylä. Mateli Kuivalattaren omista esityksistä en ole varma, joten en lisää niistä mitään.",
+  "linkit": [
+   "kalevalamittaa",
+   "Elias Lönnrot",
+   "Kalevala",
+   "Parppeinvaaran"
+  ],
+  "jatkot": [
+   "Mitä kalevalamitta tarkoittaa?",
+   "Kuka Elias Lönnrot oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fiskars",
+  "kasite": "Pohjankurun",
+  "kysymys": "Kerro lisää: Pohjankurun",
+  "vastaus": "Pohjankuru oli satama, jonne Fiskarsin ruukin tuotteet kuljetettiin kapearaiteista rautatietä pitkin vuosina 1891–1952. Satama sijaitsi [[Raaseporin]] alueella Etelä-Suomessa, ja sieltä tavara pääsi laivoilla edelleen markkinoille. Rautatie palveli [[Fiskarsin]] ruukkiyhteisöä, kunnes liikenne siirtyi muille kulkuneuvoille. Sataman tarkemmasta historiasta en ole varma, joten jätän sen kertomatta.",
+  "linkit": [
+   "Raaseporin",
+   "Fiskarsin"
+  ],
+  "jatkot": [
+   "Mikä on Raasepori?",
+   "Miten ruukkien tuotteet kulkivat ennen rautateitä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fiskars",
+  "kasite": "Fiskarsin",
+  "kysymys": "Kerro lisää: Fiskarsin",
+  "vastaus": "Fiskars on kylä Raaseporin kaupungin Pohjan alueella Etelä-Suomessa. Kylä kasvoi rautaruukin ympärille, jonka saksalaissyntyinen [[Petter Thorwöste]] perusti vuonna 1649, ja ruukissa valmistettiin myös kuparia. Vuonna 1822 ruukin osti [[John Jacob von Julin]], jonka aikana kylään syntyi monipuolista konepaja- ja käsityötoimintaa. Nykyään alle tuhannen asukkaan kylä on suosittu matkailukohde, jossa asuu ja työskentelee taiteilijoita ja käsityöläisiä.",
+  "linkit": [
+   "Petter Thorwöste",
+   "John Jacob von Julin"
+  ],
+  "jatkot": [
+   "Kuka Petter Thorwöste oli?",
+   "Miten Fiskarsin ruukkiyhteisö eli 1800-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fiskars",
+  "kasite": "saksista",
+  "kysymys": "Kerro lisää: saksista",
+  "vastaus": "Sakset ovat Fiskarsin tunnetuimpia tuotteita, ja kylän tehtaissa niitä on valmistettu arjen tarvekaluna jo pitkään. Yhtiö tunnetaan nykyään erityisesti [[oranssivartisista saksista]], mutta tarkkaa vuotta niiden synnylle en ole varma. Ruukin perustajista keskeinen oli [[John Jacob von Julin]], jonka aikana tuotanto monipuolistui. Saksat ovat esimerkki siitä, miten ruukin rautataito siirtyi käyttöesineisiin.",
+  "linkit": [
+   "oranssivartisista saksista",
+   "John Jacob von Julin"
+  ],
+  "jatkot": [
+   "Miten sakset valmistetaan?",
+   "Mitä muuta Fiskarsin yhtiö valmistaa nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fiskars",
+  "kasite": "puukoista",
+  "kysymys": "Kerro lisää: puukoista",
+  "vastaus": "Puukko on suomalainen perinteinen veitsi, jota käytettiin ennen kaikkea työkaluna metsässä, kotona ja kalastuksessa. Puukon valmistuksesta tunnetaan erityisesti [[Kauhavan]] seutu, jossa puukkoseppien perinne on ollut vahva [[Etelä-Pohjanmaalla]]. Fiskarsin ruukissa puukot kuuluivat arjen tarvekalujen joukkoon. Tarkkoja tietoja Fiskarsin puukkomallien historiasta en ole varma.",
+  "linkit": [
+   "Kauhavan",
+   "Etelä-Pohjanmaalla"
+  ],
+  "jatkot": [
+   "Mistä puukon eri osat on tehty?",
+   "Miksi puukko on suomalaisille tärkeä esine?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fiskars",
+  "kasite": "auroihin",
+  "kysymys": "Kerro lisää: auroihin",
+  "vastaus": "Aura on maanviljelyn työkalu, jolla pelto käännetään ja muokataan ennen kylvöä. Perinteinen puuaura sai vähitellen rinnalleen ruukeissa valmistetun rautaisen auran, ja ruukit tarjosivat siihen tarvittavaa metallia. Fiskarsin tuotteisiin kuului auroja, jotka palvelivat suomalaista [[maataloutta]] ja [[kyntämistä]]. Tarkkoja malleja ja myyntilukuja en ole varma, joten jätän ne mainitsematta.",
+  "linkit": [
+   "maataloutta",
+   "kyntämistä"
+  ],
+  "jatkot": [
+   "Miten kyntäminen muutti viljelyä?",
+   "Mistä rautaa saatiin 1800-luvun Suomessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fiskars",
+  "kasite": "rautaruukin",
+  "kysymys": "Kerro lisää: rautaruukin",
+  "vastaus": "Rautaruukki oli laitos, jossa malmista valmistettiin rautaa ja jossa rauta usein myös jalostettiin tuotteiksi. Tarvittiin [[puuhiiltä]], rautamalmia ja [[vesivoimaa]], ja siksi ruukit sijoittuivat metsien ja vesistöjen äärelle. Fiskarsin ruukki perustettiin vuonna 1649 Ruotsin valtakunnan aikana, jolloin raudalla oli suuri merkitys viennissä. Ruukki oli työpaikka ja samalla kokonainen yhteisö, jonka ympärille kasvoi kylä.",
+  "linkit": [
+   "puuhiiltä",
+   "vesivoimaa"
+  ],
+  "jatkot": [
+   "Miten rautaa valmistettiin ruukeissa?",
+   "Mitä puuhiili on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fiskars",
+  "kasite": "Ruotsin",
+  "kysymys": "Kerro lisää: Ruotsin",
+  "vastaus": "Ruotsi oli Suomen emämaa keskiajalta vuoteen 1809, ja Suomi oli osa Ruotsin valtakuntaa kuuluen sen hallintoon, lakeihin ja kirkkoon. Suomen sodassa 1808–1809 Ruotsi hävisi, ja Suomi liitettiin [[Haminan rauhassa]] Venäjän yhteyteen autonomiseksi [[suuriruhtinaskunnaksi]]. Ruotsin vaikutus näkyy edelleen kielessä, laeissa ja paikannimissä. Ruotsi on nykyäänkin yksi Suomen kahdesta kansalliskielestä.",
+  "linkit": [
+   "Haminan rauhassa",
+   "suuriruhtinaskunnaksi"
+  ],
+  "jatkot": [
+   "Mitä Haminan rauhassa sovittiin?",
+   "Miten Suomen suuriruhtinaskunta hallittiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fiskars",
+  "kasite": "taiteilijoita",
+  "kysymys": "Kerro lisää: taiteilijoita",
+  "vastaus": "Fiskars on kehittynyt teollisuuskylästä taide- ja käsityökyläksi, jossa asuu ja työskentelee nykyään taiteilijoita, muotoilijoita ja käsityöläisiä. Vanhat [[ruukin]] rakennukset ovat saaneet uuden käyttötarkoituksen työtiloina, ateljeina ja myymälöinä. Kylässä on kuvataiteen ja muotoilun tapahtumia, mutta niiden tarkkoja ajankohtia en ole varma. Kylä sijaitsee [[Raaseporin]] kaupungin alueella.",
+  "linkit": [
+   "ruukin",
+   "Raaseporin"
+  ],
+  "jatkot": [
+   "Miksi vanhat tehdasrakennukset sopivat taiteilijoille?",
+   "Mitä muuta Raaseporissa on nähtävää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fiskars",
+  "kasite": "käsityöläisiä",
+  "kysymys": "Kerro lisää: käsityöläisiä",
+  "vastaus": "Käsityöläisten työ on perustunut käsin tekemiseen, osaamiseen ja materiaalin tuntemukseen, esimerkiksi puun, metallin, lasin ja kankaan käsittelyyn. [[Ruukkiyhteisössä]] käsityötaitoa tarvittiin jo aiemmin, sillä pajoissa työskenteli seppiä ja muita ammattilaisia. Nykyään [[Fiskarsin]] käsityöläiset tekevät uutta vanhojen tehdastilojen jatkoksi ja jatkavat näin yhteisön pitkää perinnettä. Yksittäisten yrittäjien nimiä en ole varma, joten niitä en luettele.",
+  "linkit": [
+   "Ruukkiyhteisössä",
+   "Fiskarsin"
+  ],
+  "jatkot": [
+   "Mitä taitoja seppä tarvitsi?",
+   "Miten käsityö eroaa tehdastuotannosta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fiskars",
+  "kasite": "Fiskarsin ruukin",
+  "kysymys": "Kerro lisää: Fiskarsin ruukin",
+  "vastaus": "Fiskarsin ruukki perustettiin vuonna 1649, ja sen perusti saksalaissyntyinen [[Petter Thorwöste]]. Ruukissa valmistettiin rautaa ja kuparia, ja sen ympärille kasvoi kokonainen kyläyhteisö. Vuonna 1822 ruukin osti [[John Jacob von Julin]], joka kehitti toimintaa edelleen, ja tuotteet kuljetettiin myöhemmin [[Pohjankurun]] satamaan kapearaiteista rautatietä pitkin. Nykyään ruukin entiset tilat palvelevat taidetta, käsityötä ja matkailua.",
+  "linkit": [
+   "Petter Thorwöste",
+   "John Jacob von Julin",
+   "Pohjankurun"
+  ],
+  "jatkot": [
+   "Mitä ruukin kuparilla tehtiin?",
+   "Millainen oli ruukin työläisten arki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fiskars",
+  "kasite": "työpaja",
+  "kysymys": "Kerro lisää: työpaja",
+  "vastaus": "Työpaja tarkoittaa tilaa, jossa tehdään käsin tai koneilla esineitä, ja Fiskarsiin perustettiin vuonna 1836 Suomen ensimmäinen työpaja. Perustaminen tapahtui [[John Jacob von Julinin]] aikana, ja se vahvisti ruukin roolia teollisuuden ja käsityön keskuksena. Työpajasta syntyi [[Fiskarsin]] ruukkiyhteisön ammattitaitoa, jota hyödynnettiin sittemmin monissa tuotteissa. Työpajan tarkkaa toimintaa en ole varma, joten en lisää arvauksia.",
+  "linkit": [
+   "John Jacob von Julinin",
+   "Fiskarsin"
+  ],
+  "jatkot": [
+   "Mitä tarkoittaa konepaja?",
+   "Miten ruukkien työ muuttui 1800-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-noormarkku",
+  "kasite": "Antti Ahlström",
+  "kysymys": "Kerro lisää: Antti Ahlström",
+  "vastaus": "Antti Ahlström oli suomalainen liikemies, jonka nimeä kantaa Ahlström-yhtiö. Hän osti Noormarkusta vuonna 1870 sahan, rautaruukin ja kartanon, ja liiketoiminta lähti nopeaan kasvuun. Ahlströmin yritystoiminnan jatkajaksi nousi myöhemmin [[Walter Ahlström]], ja yritys tunnetaan nimellä [[A. Ahlström Osakeyhtiö]]. Hän kehitti myös [[Noormarkun]] kylää rakentamalla tieverkkoa ja perustamalla koulun. Hänen elämänsä muista vaiheista en ole varma.",
+  "linkit": [
+   "Walter Ahlström",
+   "A. Ahlström Osakeyhtiö",
+   "Noormarkun"
+  ],
+  "jatkot": [
+   "Millaisia yrityksiä Ahlströmillä oli?",
+   "Miksi Noormarkku on yhä tärkeä teollisuushistorialle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-noormarkku",
+  "kasite": "rautaruukin",
+  "kysymys": "Kerro lisää: rautaruukin",
+  "vastaus": "Noormarkun rautaruukki oli osa Antti Ahlströmin vuonna 1870 tekemää ostosta, johon kuuluivat myös saha ja kartano. Ruukki tuotti rautaa, ja sen ympärille kasvoi [[Noormarkun]] ruukkiyhteisö. Ruukin puistoalueella on paljon kulttuurihistoriallisesti arvokkaita rakennuksia, ja se on Noormarkun suosituin nähtävyys. Nykyisin alueen omistaa [[A. Ahlström Osakeyhtiö]]. Ruukin toiminnan tarkkoja vaiheita en ole varma.",
+  "linkit": [
+   "Noormarkun",
+   "A. Ahlström Osakeyhtiö"
+  ],
+  "jatkot": [
+   "Mitä ruukissa valmistettiin?",
+   "Miten ruukkialue on säilynyt nykyaikaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-noormarkku",
+  "kasite": "kartanon",
+  "kysymys": "Kerro lisää: kartanon",
+  "vastaus": "Kartano on suuri maatila tai asuinrakennus, joka oli maanomistajan keskus ja usein koko seudun talouden ydin. Antti Ahlström osti Noormarkusta vuonna 1870 sahan, rautaruukin ja kartanon, ja ne yhdessä muodostivat yhtiön perustan. Alueella on Ahlström-suvun kartanoita, kuten [[Isotalo]] ja [[Havulinna]], mutta niiden tarkasta historiasta en ole varma. Lähistöllä sijaitsee myös [[Villa Mairea]].",
+  "linkit": [
+   "Isotalo",
+   "Havulinna",
+   "Villa Mairea"
+  ],
+  "jatkot": [
+   "Millainen oli kartanon rooli ruukkialueella?",
+   "Mikä on Villa Mairea?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-noormarkku",
+  "kasite": "ruotsi",
+  "kysymys": "Kerro lisää: ruotsi",
+  "vastaus": "Ruotsi on Suomen toinen kansalliskieli suomen rinnalla. Ruotsin vallan aikana siitä tuli hallinnon, oikeuslaitoksen ja sivistyneistön kieli, ja Suomen kuuluminen [[Ruotsin]] valtakuntaan jätti syvän jäljen kieleen ja kulttuuriin. Ruotsinkielisiä asuu nykyäänkin erityisesti rannikolla, ja heitä kutsutaan [[suomenruotsalaisiksi]]. Heidän tarkasta määrästään en ole varma.",
+  "linkit": [
+   "Ruotsin",
+   "suomenruotsalaisiksi"
+  ],
+  "jatkot": [
+   "Missä päin Suomea puhutaan ruotsia?",
+   "Miten Suomen kaksikielisyys on syntynyt?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-noormarkku",
+  "kasite": "suomen kielen",
+  "kysymys": "Kerro lisää: suomen kielen",
+  "vastaus": "Suomen kielen aseman kohentumiseen vaikuttivat 1800-luvulla kansallinen herääminen ja [[J. V. Snellmanin]] aatteet. Tärkeä vaihe oli vuoden 1863 [[kielireskripti]], jolla Venäjän keisari [[Aleksanteri II]] määräsi suomen vähitellen virkakieleksi ruotsin rinnalle. Kehitys tapahtui hitaasti, ja kouluissa suomenkielinen opetus laajeni vähitellen. Tarkkoja päivämääriä muista muutoksista en ole varma.",
+  "linkit": [
+   "J. V. Snellmanin",
+   "kielireskripti",
+   "Aleksanteri II"
+  ],
+  "jatkot": [
+   "Kuka J. V. Snellman oli?",
+   "Miten suomenkielinen kirjallisuus syntyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-noormarkku",
+  "kasite": "Porin",
+  "kysymys": "Kerro lisää: Porin",
+  "vastaus": "Pori on kaupunki Satakunnassa [[Kokemäenjoen]] suulla lähellä Pohjanlahden rannikkoa, ja se on maakunnan keskus. Kaupunki tunnetaan kesäisestä [[Pori Jazz]] -festivaalista. Pori oli aiemmin tärkeä merikauppakaupunki, ja sen asema liittyi jokeen ja satamaan. Sen tarkasta perustamisajankohdasta en ole varma, vaikka se sijoitetaan yleensä 1500-luvulle. [[Noormarkku]] on nykyisin osa Porin kaupunkia.",
+  "linkit": [
+   "Kokemäenjoen",
+   "Pori Jazz",
+   "Noormarkku"
+  ],
+  "jatkot": [
+   "Mitä Pori Jazz -festivaali on?",
+   "Miten Kokemäenjoki vaikutti Porin kehitykseen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-noormarkku",
+  "kasite": "kuntaliitos",
+  "kysymys": "Kerro lisää: kuntaliitos",
+  "vastaus": "Kuntaliitos tarkoittaa kahden tai useamman kunnan yhdistämistä yhdeksi kunnaksi. Liitoksen jälkeen yhdistyneen kunnan hallinto, palvelut ja talous hoidetaan yhdessä. Suomessa kuntaliitoksia tehtiin erityisesti 2000-luvun lopussa, kun kuntarakennetta pyrittiin vahvistamaan [[PARAS-hankkeen]] kaltaisilla uudistuksilla; tarkkoja vuosia en ole varma. Esimerkiksi [[Noormarkku]] liitettiin vuoden 2010 alussa [[Poriin]].",
+  "linkit": [
+   "PARAS-hankkeen",
+   "Noormarkku",
+   "Poriin"
+  ],
+  "jatkot": [
+   "Miksi kuntia yhdistetään?",
+   "Mitä kuntien tehtäviin kuuluu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-noormarkku",
+  "kasite": "Alvar Aallon",
+  "kysymys": "Kerro lisää: Alvar Aallon",
+  "vastaus": "Alvar Aalto oli suomalainen arkkitehti ja muotoilija, joka eli vuosina 1898–1976. Hän suunnitteli [[Villa Mairean]] lisäksi muun muassa [[Finlandia-talon]] ja [[Paimion parantolan]], ja häntä pidetään modernin arkkitehtuurin tunnetuimpana suomalaisena edustajana. Aalto suunnitteli myös huonekaluja ja esineitä, joista osa on yhä tuotannossa. Hänen tuotantonsa tarkkaa laajuutta en ole varma.",
+  "linkit": [
+   "Villa Mairean",
+   "Finlandia-talon",
+   "Paimion parantolan"
+  ],
+  "jatkot": [
+   "Mikä tekee Alvar Aallon tyylistä erityisen?",
+   "Mikä Paimion parantola oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-noormarkku",
+  "kasite": "Villa Mairea",
+  "kysymys": "Kerro lisää: Villa Mairea",
+  "vastaus": "Villa Mairea on Alvar Aallon suunnittelema huvila Noormarkussa. Se rakennettiin Harry ja [[Maire Gullichsenin]] kodiksi 1930-luvun lopulla, ja Maire Gullichsen kuului Ahlström-suvun piiriin. Huvilan suunnitteli [[Alvar Aalto]], ja se tunnetaan modernin arkkitehtuurin merkkiteoksena, jossa yhdistyvät puu, kivi ja luonto. Maire Gullichsen oli myös mukana perustamassa [[Artek]]-yhtiötä. Huvilan sisätiloista en ole varma kaikkia yksityiskohtia, joten jätän ne kertomatta.",
+  "linkit": [
+   "Maire Gullichsenin",
+   "Alvar Aalto",
+   "Artek"
+  ],
+  "jatkot": [
+   "Millainen oli Maire Gullichsen?",
+   "Mikä Artek on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-noormarkku",
+  "kasite": "tieverkko",
+  "kysymys": "Kerro lisää: tieverkko",
+  "vastaus": "Tieverkko tarkoittaa teiden muodostamaa järjestelmää, joka yhdistää paikkoja toisiinsa. Ennen rautateitä ja kuorma-autoja tavarat kulkivat hevosilla ja kärryillä, joten teiden kunto ratkaisi, kuinka sujuvasti raaka-aineet ja tuotteet liikkuivat. Talvella käytettiin usein reki- ja jäätietä. [[Antti Ahlström]] rakennutti [[Noormarkun]] kylän kehittämiseksi tieverkkoa, mikä helpotti teollisen toiminnan pyörittämistä. Tarkkoja teitä en ole varma, joten niitä en nimeä.",
+  "linkit": [
+   "Antti Ahlström",
+   "Noormarkun"
+  ],
+  "jatkot": [
+   "Miten tavara kulki ennen rautateitä?",
+   "Miksi jäätiet olivat talvella tärkeitä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-noormarkku",
+  "kasite": "tieverkkoa",
+  "kysymys": "Kerro lisää: tieverkkoa",
+  "vastaus": "Suomessa teiden rakentamisesta ja ylläpidosta vastasi ennen pitkään paikallinen yhteisö, ja tienpito perustui usein tiekuntiin ja talonpoikien velvollisuuksiin; tarkoista säännöistä en ole varma. Teollisessa yhteisössä hyvä tieverkko oli erityisen tärkeä, koska ruukkien ja sahojen kuormat olivat raskaita. Noormarkussa [[Antti Ahlström]] rakennutti tieverkkoa, mikä tuki yhtiön liiketoimintaa. Tiet yhdistivät [[ruukin]] ja kylän muuhun maailmaan.",
+  "linkit": [
+   "Antti Ahlström",
+   "ruukin"
+  ],
+  "jatkot": [
+   "Mitä tiekunta tarkoittaa?",
+   "Miten rautatiet muuttivat kuljetuksia Suomessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-varkaus",
+  "kasite": "vesivoiman",
+  "kysymys": "Kerro lisää: vesivoiman",
+  "vastaus": "Vesivoima tarkoittaa virtaavan veden energiaa, jota hyödynnetään koneiden käyttövoimaksi tai sähkön tuottamiseen. Kosket ja putoukset olivat vanhastaan arvokkaita paikkoja, koska niistä saatiin voimaa myllyille, sahoille ja pajoille. Varkaudessa vesivoima tuki teollisuutta, ja kaupungin sijainti [[Saimaan]] salmilla toi mukanaan myös vesiliikenteen etuja. Reittiä parannettiin [[Taipaleen kanavalla]], joka yhdisti Leppävirran reitin Saimaan vesiin. Varkauden voimalaitosten tarkkoja tietoja en ole varma.",
+  "linkit": [
+   "Saimaan",
+   "Taipaleen kanavalla"
+  ],
+  "jatkot": [
+   "Miten vesivoimalaitos toimii?",
+   "Miksi kosket olivat tärkeitä teollisuudelle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-varkaus",
+  "kasite": "Saimaan",
+  "kysymys": "Kerro lisää: Saimaan",
+  "vastaus": "Saimaa on Suomen kaakkoisosassa sijaitseva laaja järviallas, joka on yksi maan suurimmista vesistöistä. Se tunnetaan sokkeloisesta rannikostaan ja lukuisista saarista, ja siellä elää vain täällä esiintyvä [[saimaannorppa]]. Varkaudessa Saimaan kaksi osaa yhdistyvät salmilla. Saimaalta pääsee vesitse Suomenlahdelle [[Saimaan kanavan]] kautta. Tarkkoja pinta-aloja en ole varma.",
+  "linkit": [
+   "saimaannorppa",
+   "Saimaan kanavan"
+  ],
+  "jatkot": [
+   "Miksi saimaannorppa on uhanalainen?",
+   "Mihin Saimaan kanava yhdistää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-varkaus",
+  "kasite": "Taipaleen kanavan",
+  "kysymys": "Kerro lisää: Taipaleen kanavan",
+  "vastaus": "Taipaleen kanava oli Suomessa ensimmäinen rakennettu sulkukanava, ja se yhdisti [[Leppävirran]] reitin [[Saimaan]] vesiteihin. Sulkukanavassa alukset nostetaan tai lasketaan sulun kautta kahden vesialueen välisen korkeuseron yli. Kanava helpotti Varkauden teollisuuden ja laivaliikenteen yhteyksiä. Kanavan rakentamisvuotta ja mittoja en ole varma, joten niitä en kerro.",
+  "linkit": [
+   "Leppävirran",
+   "Saimaan"
+  ],
+  "jatkot": [
+   "Miten sulkukanava toimii?",
+   "Miksi kanavia rakennettiin Suomeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-varkaus",
+  "kasite": "Leppävirran",
+  "kysymys": "Kerro lisää: Leppävirran",
+  "vastaus": "Leppävirta on Pohjois-Savossa sijaitseva kunta [[Varkauden]] naapurissa. Leppävirran reitti tarkoitti vesistökulkua, jota pitkin kuljettiin järvien ja salmien kautta, ja Taipaleen kanava yhdisti sen [[Saimaan]] vesiteihin. Alue kuuluu Savon järviseutuun, jossa vesistöt ovat vanhastaan olleet tärkeitä kulkureittejä. Tarkkoja kuntatietoja en ole varma.",
+  "linkit": [
+   "Varkauden",
+   "Saimaan"
+  ],
+  "jatkot": [
+   "Miksi vesistöt olivat tärkeitä kulkureittejä?",
+   "Millainen on Savon maakunta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-varkaus",
+  "kasite": "salmea",
+  "kysymys": "Kerro lisää: salmea",
+  "vastaus": "Salmi on kapea vesiväylä, joka yhdistää kaksi vesialuetta toisiinsa. Vanhassa suomessa sana varkaus tarkoitti salmea, ja nimi sopii [[Varkauteen]], joka sijaitsee [[Saimaan]] kahden osan välisillä salmilla. Salmissa vesi virtaa usein kovempaa ja alueet ovat vanhastaan olleet tärkeitä kulkureittejä. Nimi liittyy siis maantieteeseen, ei rikokseen. Sen tarkkaa kielihistoriaa en ole varma.",
+  "linkit": [
+   "Varkauteen",
+   "Saimaan"
+  ],
+  "jatkot": [
+   "Mistä muista paikannimistä tunnistaa vanhoja sanoja?",
+   "Miksi salmet ovat tärkeitä vesiliikenteelle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-varkaus",
+  "kasite": "Antti Ahlströmin",
+  "kysymys": "Kerro lisää: Antti Ahlströmin",
+  "vastaus": "Antti Ahlström osti Noormarkusta vuonna 1870 sahan, rautaruukin ja kartanon, ja siitä lähti yhtiön kasvu. Hänen poikansa [[Walter Ahlström]] jatkoi toimintaa ja laajensi sitä muun muassa Varkauteen, jossa hän halusi rakentaa tehtaiden ympärille kokonaisen teollisuuskaupungin. Ahlström kehitti [[Noormarkun]] kylää tieverkon ja koulun avulla. Suvun myöhemmistä vaiheista en ole varma kaikkia yksityiskohtia.",
+  "linkit": [
+   "Walter Ahlström",
+   "Noormarkun"
+  ],
+  "jatkot": [
+   "Miten Ahlström-yhtiö kasvoi?",
+   "Mitä Walter Ahlström teki Varkaudessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-varkaus",
+  "kasite": "A. Ahlström Osakeyhtiölle",
+  "kysymys": "Kerro lisää: A. Ahlström Osakeyhtiölle",
+  "vastaus": "A. Ahlström Osakeyhtiö on suomalainen teollisuusyhtiö, joka sai alkunsa Antti Ahlströmin liiketoiminnasta Noormarkussa. Yhtiön toimintaan kuuluivat saha, rautaruukki ja myöhemmin paperi- ja konepajateollisuus. Aikanaan sen omistukseen kuului myös lasitehtaita, kuten [[Iittala]] ja [[Karhulan]] lasitehdas, mutta omistusjärjestelyistä en ole varma tarkemmin. Yhtiö siirtyi Varkauden ruukin omistajaksi 1900-luvun alussa.",
+  "linkit": [
+   "Iittala",
+   "Karhulan"
+  ],
+  "jatkot": [
+   "Mitä Iittalan lasitehdas valmistaa?",
+   "Miten Ahlström muuttui suvun yhtiöstä yritykseksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-varkaus",
+  "kasite": "Kauppala",
+  "kysymys": "Kerro lisää: Kauppala",
+  "vastaus": "Kauppala oli Suomessa kuntamuoto, joka sijoittui maalaiskunnan ja kaupungin välille. Se oli tiheästi asuttu kauppa- tai teollisuustaajama, jolla ei ollut kaupungin oikeuksia. [[Varkaus]] oli kauppala vuodesta 1929 ja sai kaupunkioikeudet vuonna 1962. Kauppalat poistuivat 1970-luvun [[kuntalain]] uudistuksessa, kun kaikista kunnista tuli kuntia; tarkkaa vuotta en ole varma.",
+  "linkit": [
+   "Varkaus",
+   "kuntalain"
+  ],
+  "jatkot": [
+   "Mitä eroa kaupungilla ja kunnalla on nyt?",
+   "Millaisia kauppaloita Suomessa oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-varkaus",
+  "kasite": "maalaiskunnan",
+  "kysymys": "Kerro lisää: maalaiskunnan",
+  "vastaus": "Maalaiskunta oli Suomessa kunta, jonka väestö asui pääosin haja-asutusalueilla ja kylissä. Se erosi kaupungista siten, että se ei ollut kaupunkioikeuksilla varustettu kauppa- ja käsityökeskus. Kauppalat sijoittuivat näiden kahden välille. Nimitykset poistuivat [[kuntalain]] uudistuksessa 1970-luvulla, jolloin kaikista tuli yksinkertaisesti kuntia; tarkkaa vuotta en ole varma. Esimerkiksi [[Varkauden]] kaltaiset teollisuuspaikat kasvoivat usein maalaiskunnan keskelle.",
+  "linkit": [
+   "kuntalain",
+   "Varkauden"
+  ],
+  "jatkot": [
+   "Miten maalaiskunta ja kaupunki erosivat toisistaan?",
+   "Miksi teollisuuspaikat kasvoivat kaupungeiksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kemi",
+  "kasite": "Kemijoen",
+  "kysymys": "Kerro lisää: Kemijoen",
+  "vastaus": "Kemijoki on Suomen pisin joki. Se saa alkunsa Lapin tunturialueelta, virtaa [[Rovaniemen]] kautta ja laskee Perämeren pohjukkaan Kemin kohdalla. Jokea on voimakkaasti valjastettu vesivoimaksi, ja se on vaikuttanut Lapin elinkeinoihin ja uittoon. Joen tarkkaa pituutta en ole varma, mutta kyseessä on pitkä joki, joka yhdistää [[Lapin]] sisämaan Pohjanlahteen. Kemijoen suulla kaupunki sai luontevan sataman, joka oli yhteydessä [[Perämereen]].",
+  "linkit": [
+   "Rovaniemen",
+   "Lapin",
+   "Perämereen"
+  ],
+  "jatkot": [
+   "Miksi Kemijoella uitettiin puuta?",
+   "Miten Kemijoen voimalaitokset vaikuttivat kaloihin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kemi",
+  "kasite": "Aleksanteri II:n",
+  "kysymys": "Kerro lisää: Aleksanteri II:n",
+  "vastaus": "Aleksanteri II oli Venäjän keisari ja Suomen suuriruhtinas vuosina 1855–1881. Hänen aikanaan Suomessa tehtiin merkittäviä uudistuksia: hän kutsui koolle Suomen [[valtiopäivät]] vuonna 1863 ja antoi [[kielireskriptin]], joka vahvisti suomen kielen asemaa. Hänen nimissään perustettiin myös uusia kaupunkeja, kuten Kemi. Hänen muista yksityiskohdistaan en ole varma. Aleksanteri II:ta muistetaan Suomessa uudistajana.",
+  "linkit": [
+   "valtiopäivät",
+   "kielireskriptin"
+  ],
+  "jatkot": [
+   "Miksi vuoden 1863 valtiopäivät olivat tärkeät?",
+   "Miten Suomen suuriruhtinaskunta muuttui hänen aikanaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kemi",
+  "kasite": "Perämerellä",
+  "kysymys": "Kerro lisää: Perämerellä",
+  "vastaus": "Perämeri on Pohjanlahden pohjoisin osa, ja se on matala ja vähäsuolainen. Siksi se jäätyy talvisin helpommin kuin etelän merialueet, ja jääpeite voi säilyä pitkään. Perämeren rannikolla sijaitsevat muun muassa [[Oulu]], [[Kemi]] ja [[Tornio]]. [[Merenkurkku]] erottaa sen Selkämerestä. Alueella maankohoaminen on nopeaa, eli maa nousee vähitellen merestä. Tarkkoja lukuja en ole varma.",
+  "linkit": [
+   "Oulu",
+   "Kemi",
+   "Tornio",
+   "Merenkurkku"
+  ],
+  "jatkot": [
+   "Miksi Perämeri on vähäsuolainen?",
+   "Mitä maankohoaminen tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kemi",
+  "kasite": "Urhon",
+  "kysymys": "Kerro lisää: Urhon",
+  "vastaus": "Urho on suomalainen jäänmurtaja, joka otettiin käyttöön vuonna 1975. Jäänmurtajat pitävät talvella väyliä auki, jotta kauppalaivat pääsevät satamiin, ja Suomessa talvimerenkulku on ollut tärkeää, koska merenrannan satamat jäätyvät. Urho palveli etenkin [[Perämeren]] ja muiden jäisten merialueiden väylillä. Aluksen tarkkoja teknisiä tietoja en ole varma. [[Kemin]] satamalle jäänmurtaja oli vuosisadan merkittävä apu.",
+  "linkit": [
+   "Perämeren",
+   "Kemin"
+  ],
+  "jatkot": [
+   "Miten jäänmurtajat saattavat laivoja?",
+   "Miksi Suomen satamat jäätyvät talvella?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kemi",
+  "kasite": "Kemissä",
+  "kysymys": "Kerro lisää: Kemissä",
+  "vastaus": "Kemi on kaupunki Perämeren rannalla Kemijoen suulla. Kaupunki tunnetaan talvisin lumilinnasta ja matkailusta, ja jäänmurtajaristeilyjä on tarjonnut jäänmurtaja [[Sampo]]. Kaupungin teollisuus on perustunut saha- ja paperiteollisuuteen, ja sen sijainti [[Kemijoen]] suulla on ollut tärkeä. Kemi perustettiin vuonna 1869 keisarin asetuksella. Matkailukohteiden tarkkoja aukioloaikoja en ole varma.",
+  "linkit": [
+   "Sampo",
+   "Kemijoen"
+  ],
+  "jatkot": [
+   "Mitä jäänmurtajaristeily tarkoittaa?",
+   "Miten lumilinna rakennetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kemi",
+  "kasite": "sataman",
+  "kysymys": "Kerro lisää: sataman",
+  "vastaus": "Satama on paikka, jossa alukset ottavat ja jättävät lastia ja matkustajia. Kemin satama sijaitsee [[Ajoksessa]], ja siitä on yhteys [[Perämerelle]]; tarkasta sijainnista en ole aivan varma. Kemin satamalle on ollut tärkeää syvä väylä ja kaupungin paperi- ja sahateollisuus, joiden tuotteita lähti laivoilla maailmalle. Talvella satamassa tarvitaan jäänmurtajien apua.",
+  "linkit": [
+   "Ajoksessa",
+   "Perämerelle"
+  ],
+  "jatkot": [
+   "Mitä satamassa tehdään talvella?",
+   "Miksi syväväylä on tärkeä satamalle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kemi",
+  "kasite": "Kemin",
+  "kysymys": "Kerro lisää: Kemin",
+  "vastaus": "Kemi on kaupunki Lapin maakunnassa Perämeren rannalla Kemijoen suulla. Se kuuluu Meri-Lapin seutuun ja sijaitsee lähellä [[Tornion]] kaupunkia, josta on yhteys Ruotsin puolelle. Kemin perusti keisarin asetus vuonna 1869. Kaupunki on kasvanut meren ja joen varaan, ja sen teollisuus on perustunut metsään. Nykyisin se tunnetaan myös [[Lapin]] kävijöille tärkeänä talvikohteena.",
+  "linkit": [
+   "Tornion",
+   "Lapin"
+  ],
+  "jatkot": [
+   "Miten Kemi ja Tornio liittyvät toisiinsa?",
+   "Mitä Meri-Lappi tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kemi",
+  "kasite": "katuverkon",
+  "kysymys": "Kerro lisää: katuverkon",
+  "vastaus": "Katuverkko on kaupungin kaduista muodostuva järjestelmä, jonka suunnittelu ratkaisee, miten kaupunki kehittyy. Uudet kaupungit suunniteltiin usein ruutukaavaan, jossa kadut kulkevat suorassa kulmassa toisiinsa nähden. Tällainen kaava teki tonttien jaosta selkeää ja kaupungin laajentamisesta helppoa; [[Helsingin]] keskustan kaava on tunnettu esimerkki, jonka suunnitteli [[C. L. Engel]]. Kemin katuverkon yksityiskohdista en ole varma.",
+  "linkit": [
+   "Helsingin",
+   "C. L. Engel"
+  ],
+  "jatkot": [
+   "Mikä on ruutukaava?",
+   "Kuka Carl Ludvig Engel oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kemi",
+  "kasite": "Urho",
+  "kysymys": "Kerro lisää: Urho",
+  "vastaus": "Urho kuului samaan jäänmurtajasarjaan [[Sisun]] kanssa, ja kaksikon rakentaminen sijoittuu 1970-luvun puoliväliin; tarkempia vuosia en ole varma. Näillä aluksilla oli suuri merkitys Suomen talvimerenkululle, koska ne pystyivät avaamaan väylän paksuun jäähän. Ne palvelivat etenkin [[Perämeren]] ja [[Kemin]] kaltaisten satamien liikennettä. Aluksen tarkkoja mittoja en ole varma, joten jätän ne mainitsematta.",
+  "linkit": [
+   "Sisun",
+   "Perämeren",
+   "Kemin"
+  ],
+  "jatkot": [
+   "Miten talvimerenkulku järjestetään Suomessa?",
+   "Mitä Sisu-jäänmurtaja on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kemi",
+  "kasite": "Perämeren",
+  "kysymys": "Kerro lisää: Perämeren",
+  "vastaus": "Perämeri on matala ja vähäsuolainen Pohjanlahden pohjoisosa. Sen rannikolla sijaitsevat muun muassa [[Oulu]], [[Tornio]] ja Ruotsin puolella Haaparanta. Talvella meri jäätyy, ja jäänmurtajat pitävät väylät auki. Alue on osa maankohoamisrannikkoa, jossa maa nousee vähitellen merestä, joten rantaviivat siirtyvät ajan myötä. Tarkkoja syvyyksiä ja pinta-aloja en ole varma. Kemijoen suulla [[Kemi]] hyötyi meren läheisyydestä.",
+  "linkit": [
+   "Oulu",
+   "Tornio",
+   "Kemi"
+  ],
+  "jatkot": [
+   "Miksi Perämeri on vähäsuolainen?",
+   "Mitä jäänmurtajat tekevät talvella?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nokia",
+  "kasite": "soopelia",
+  "kysymys": "Kerro lisää: soopelia",
+  "vastaus": "Soopeli on näätäeläimiin kuuluva pieni petoeläin, jonka arvokas turkki on tehnyt siitä suosittua riistaa. Nokian nimen yleisimmän selityksen mukaan paikannimi juontuu vanhasta soopelia tarkoittaneesta sanasta, mutta selitys on teoria, ei varma tieto. Sanalla on ollut yhteys myös tummaan turkiseläimeen, kuten [[näätään]]. Nimen muista mahdollisista alkuperistä en ole varma. [[Nokian]] vaakunassa ei kuitenkaan ole kyyhkyä, eikä sen tarvitsekaan.",
+  "linkit": [
+   "näätään",
+   "Nokian"
+  ],
+  "jatkot": [
+   "Millaisia eläimiä näätäeläimet ovat?",
+   "Miten paikannimet saavat alkunsa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nokia",
+  "kasite": "Nokianvirran",
+  "kysymys": "Kerro lisää: Nokianvirran",
+  "vastaus": "Nokianvirta on [[Kokemäenjoen]] vesistöön kuuluva virta Nokian kaupungin kohdalla. Se virtaa Pirkanmaalla lähellä [[Pyhäjärveä]] ja yhdistyy lopulta länteen suuntautuvaan jokireittiin. Nokianvirran rannalle perustettiin puuhiomo vuonna 1868, ja virran vesivoima tarjosi tehtaalle energiaa. Virran tarkkaa reittiä en ole varma. Virran ranta on siis yksi Nokian historian alkupaikoista.",
+  "linkit": [
+   "Kokemäenjoen",
+   "Pyhäjärveä"
+  ],
+  "jatkot": [
+   "Mistä Kokemäenjoki saa alkunsa?",
+   "Miksi tehtaat rakennettiin virtaavan veden äärelle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nokia",
+  "kasite": "Pirkanmaalla",
+  "kysymys": "Kerro lisää: Pirkanmaalla",
+  "vastaus": "Pirkanmaa on maakunta Etelä-Suomessa Hämeen ja Satakunnan välissä, ja sen keskus on [[Tampere]]. Alueen luonnon muodostavat järvet ja harjut, ja suuret vesistöt kuten [[Näsijärvi]] ja Pyhäjärvi ovat luoneet kaupunkimaiset ympäristöt Tampereen kupeeseen. Maakunta tunnetaan myös teollisuushistoriastaan. Alueen nimi liittyy keskiaikaisiin pirkkalaisiin eli kauppiaisiin, mutta nimen tarkasta alkuperästä en ole varma.",
+  "linkit": [
+   "Tampere",
+   "Näsijärvi"
+  ],
+  "jatkot": [
+   "Keitä pirkkalaiset olivat?",
+   "Miksi Tampere on teollisuuskaupunki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nokia",
+  "kasite": "Fredrik Idestam",
+  "kysymys": "Kerro lisää: Fredrik Idestam",
+  "vastaus": "Fredrik Idestam oli kaivosinsinööri, joka perusti puuhiomon Nokianvirran rannalle vuonna 1868 ja käynnisti sillä Nokian teollisen historian. Hänen yrityksensä nimettiin vuonna 1871 Nokia Aktiebolagiksi, ja yhtiön perustamiseen osallistui myös [[Leo Mechelin]]. Idestam oli aiemmin perustanut ensimmäisen hiomonsa [[Tampereelle]]. Hänen elämänsä muista vaiheista en ole varma.",
+  "linkit": [
+   "Leo Mechelin",
+   "Tampereelle"
+  ],
+  "jatkot": [
+   "Kuka Leo Mechelin oli?",
+   "Miten puuhiomo toimii?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nokia",
+  "kasite": "Nokia Aktiebolagiksi",
+  "kysymys": "Kerro lisää: Nokia Aktiebolagiksi",
+  "vastaus": "Nokia Aktiebolag oli vuonna 1871 perustettu yhtiö, joka valmisti puuhioketta ja paperia Nokianvirran rannalla. Yhtiö kasvoi vuosikymmenten aikana ja yhdistyi myöhemmin muiden suomalaisten yritysten kanssa. Vuonna 1967 sen kanssa yhdistyivät muun muassa [[Suomen Gummitehdas]] ja [[Suomen Kaapelitehdas]], ja siitä syntyi Nokia-konserni. Matkapuhelinliiketoiminta alkoi vasta 1960-luvulta eteenpäin, eikä puhelimia koskaan valmistettu Nokian kaupungissa.",
+  "linkit": [
+   "Suomen Gummitehdas",
+   "Suomen Kaapelitehdas"
+  ],
+  "jatkot": [
+   "Mitä Suomen Kaapelitehdas teki?",
+   "Miten Nokia siirtyi matkapuhelimiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nokia",
+  "kasite": "Ruotsin",
+  "kysymys": "Kerro lisää: Ruotsin",
+  "vastaus": "Ruotsin kuningaskunta oli Suomen emämaa nuijasodan aikaan. Kapinan taustalla olivat valtataistelu kuningas [[Sigismundin]] ja herttua Kaarlen välillä sekä talonpoikien raskaat rasitukset, ja Suomessa sotaväen ylläpito painoi erityisesti. Talonpoikien johtajiin kuului [[Jaakko Ilkka]]; yksityiskohdista en ole varma. Suomi kuului Ruotsiin vuoteen 1809, jolloin se liitettiin Venäjään. Valtionhallinto oli keskitetty Tukholmaan.",
+  "linkit": [
+   "Sigismundin",
+   "Jaakko Ilkka"
+  ],
+  "jatkot": [
+   "Miksi nuijasota alkoi?",
+   "Miten Suomi irtosi Ruotsista?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nokia",
+  "kasite": "Nokian kartanon",
+  "kysymys": "Kerro lisää: Nokian kartanon",
+  "vastaus": "Nokian kartano oli yksi nuijasodan merkittävistä taistelupaikoista, ja sen ympärillä käytiin lähteiden mukaan vuosina 1596–1597 yksi sodan suurimmista taisteluista. Kapinallisten talonpoikien ja [[Klaus Flemingin]] johtamien joukkojen kohtaaminen ratkaisi osan sodan kulusta, mutta taistelun tarkoista yksityiskohdista en ole varma. [[Nuijasodan]] jälkeen talonpoikien asema pysyi vaikeana. Nokian kartano on yksi seudun vanhimmista tunnetuista paikoista.",
+  "linkit": [
+   "Klaus Flemingin",
+   "Nuijasodan"
+  ],
+  "jatkot": [
+   "Kuka Klaus Fleming oli?",
+   "Miten nuijasota päättyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nokia",
+  "kasite": "sanomalehtipaperin",
+  "kysymys": "Kerro lisää: sanomalehtipaperin",
+  "vastaus": "Sanomalehtipaperi on edullista paperia, joka valmistetaan pääosin mekaanisesta massasta eli puuhiokkeesta. Se on kevyttä ja nopeasti kellastuvaa, mutta riittävää päivittäiseen lukemiseen. Sitä valmistettiin Suomessa laajasti, ja [[paperiteollisuuden]] kasvu perustui metsiin ja vesivoimaan. [[Nokian]] puuhiomo oli tällaisen teollisuuden alkua, ja myöhemmin tarvittiin myös kemiallista [[sellua]]. Tuotantomääristä en ole varma.",
+  "linkit": [
+   "paperiteollisuuden",
+   "Nokian",
+   "sellua"
+  ],
+  "jatkot": [
+   "Miten selluloosaa valmistetaan puusta?",
+   "Miksi sanomalehtipaperi kellastuu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nokia",
+  "kasite": "Nokian",
+  "kysymys": "Kerro lisää: Nokian",
+  "vastaus": "Nokian kaupunki on Pirkanmaalla Nokianvirran rannalla, noin 15 kilometrin päässä Tampereelta länteen. Nimi tuli maailmalle yhtiön kautta, vaikka matkapuhelimia ei koskaan valmistettu itse kaupungissa. Heinäkuun 1. päivänä 1991 [[Harri Holkeri]] soitti Tampereen apulaispormestarille [[GSM]]-verkossa puhelun, jota pidettiin vuosikymmeniä maailman ensimmäisenä GSM-puheluna. Vuonna 2021 [[Pekka Lonka]] kertoi soittaneensa testipuhelun jo pari tuntia aiemmin. Lähteiden mukaan [[Nokia 1100]] on myydyin matkapuhelinmalli.",
+  "linkit": [
+   "Harri Holkeri",
+   "GSM",
+   "Pekka Lonka",
+   "Nokia 1100"
+  ],
+  "jatkot": [
+   "Mikä GSM on?",
+   "Miten Nokia 1100 erosi muista puhelimista?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nokia",
+  "kasite": "näätäeläimiin",
+  "kysymys": "Kerro lisää: näätäeläimiin",
+  "vastaus": "Näätäeläimet ovat petoeläinten heimo, johon kuuluvat muun muassa [[näätä]], [[saukko]], [[ahma]] ja [[kärppä]]. Niille on tyypillistä ketterä, pitkänomainen vartalo ja usein arvokas turkki. Soopeli kuuluu samaan heimoon ja elää havumetsissä. Monet näätäeläimet ovat öisiä saalistajia, ja ne syövät pienempiä eläimiä. Joidenkin lajien tarkasta levinneisyydestä en ole varma.",
+  "linkit": [
+   "näätä",
+   "saukko",
+   "ahma",
+   "kärppä"
+  ],
+  "jatkot": [
+   "Mikä on ahman elinympäristö?",
+   "Miten saukko elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vanha-vaasa-kirkko",
+  "kasite": "Vaasan suurpalo",
+  "kysymys": "Kerro lisää: Vaasan suurpalo",
+  "vastaus": "Vaasan suurpalo syttyi 3. elokuuta 1852 ja tuhosi lähes koko puisen kaupungin. Palon jälkeen kaupunki rakennettiin uudelleen uuteen paikkaan noin seitsemän kilometrin päähän, ja asemakaavan suunnitteli [[Carl Axel Setterberg]]; tarkoista yksityiskohdista en ole varma. Uuteen kaupunkiin tehtiin leveitä katuja, mikä hidasti tulen leviämistä. Tuho oli kaupunkilaisille raskas, mutta uusi kaupunki rakennettiin. Vanha kirkko jäi [[Mustasaareen]] muistomerkiksi.",
+  "linkit": [
+   "Carl Axel Setterberg",
+   "Mustasaareen"
+  ],
+  "jatkot": [
+   "Miksi leveät kadut estävät paloja?",
+   "Mitä muita suuria kaupunkipaloja Suomessa on ollut?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vanha-vaasa-kirkko",
+  "kasite": "Mustasaareen",
+  "kysymys": "Kerro lisää: Mustasaareen",
+  "vastaus": "Mustasaari on Vaasan naapurikunta, jonka alueella sijaitsee Vanhan Vaasan kirkon raunio. Alue oli keskiajalla kylä, jonka keskukseen Pyhän Marian kirkko rakennettiin 1500-luvun alkupuolella. Ennen [[Vaasan]] perustamista vuonna 1606 Mustasaari oli seudun keskus. Sen läheisyydessä on [[Merenkurkun saaristo]], joka on tunnettu luontokohde. Alueen tarkasta historiasta en ole varma, vaikka se on ollut merkittävä Pohjanmaan rannikolla.",
+  "linkit": [
+   "Vaasan",
+   "Merenkurkun saaristo"
+  ],
+  "jatkot": [
+   "Mikä Merenkurkun saaristo on?",
+   "Miksi Vaasa perustettiin vuonna 1606?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vanha-vaasa-kirkko",
+  "kasite": "Museoviraston",
+  "kysymys": "Kerro lisää: Museoviraston",
+  "vastaus": "Museovirasto on Suomen valtion asiantuntijavirasto, joka vastaa kulttuuriperinnön suojelusta ja tutkimuksesta. Se hoitaa muun muassa [[rakennusperinnön]] suojelua, arkeologiaa ja museoalaa. [[Vanhan Vaasan]] kirkon rauniomuureja se on entisöinyt viimeksi vuosina 2007–2016. Viraston tarkasta organisaatiosta ja nimen vaiheista en ole varma. Museoviraston työ auttaa pitämään vanhat rakennukset ja rauniot kunnossa tuleville sukupolville.",
+  "linkit": [
+   "rakennusperinnön",
+   "Vanhan Vaasan"
+  ],
+  "jatkot": [
+   "Miten rakennuksia entisöidään?",
+   "Mitä arkeologi tekee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vanha-vaasa-kirkko",
+  "kasite": "rauniomuurit",
+  "kysymys": "Kerro lisää: rauniomuurit",
+  "vastaus": "Rauniomuurit ovat rakennuksen jäännökset, jotka jäävät pystyyn, kun katto ja sisustus ovat tuhoutuneet. [[Vanhan Vaasan]] Pyhän Marian kirkon paksut kivimuurit säilyivät [[Vaasan suurpalon]] jälkeen, vaikka puinen kaupunki tuhoutui. Muurit jätettiin muistomerkiksi, eikä kirkkoa koskaan kunnostettu käyttöön. Niitä on entisöity useaan otteeseen 1910-luvulta lähtien, jotta ne eivät rapistuisi. Muurien tarkoista mitoista en ole varma.",
+  "linkit": [
+   "Vanhan Vaasan",
+   "Vaasan suurpalon"
+  ],
+  "jatkot": [
+   "Miksi kivi kestää tulipalon paremmin kuin puu?",
+   "Miten raunioita suojellaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vanha-vaasa-kirkko",
+  "kasite": "Vanhan Vaasan",
+  "kysymys": "Kerro lisää: Vanhan Vaasan",
+  "vastaus": "Vanha Vaasa tarkoittaa Vaasan kaupungin alkuperäistä paikkaa, joka sijaitsi nykyisessä Mustasaaressa. Kaupunki perustettiin vuonna 1606, ja sen perusti Ruotsin kuningas [[Kaarle IX]]. Nimi liittyy Vaasa-sukuun; tarkasta nimen syntytarinasta en ole varma. Vanha keskusta tuhoutui [[Vaasan suurpalossa]] 1852, ja kaupunki siirrettiin uuteen paikkaan. Pyhän Marian kirkon rauniot muistuttavat vanhasta kaupungista.",
+  "linkit": [
+   "Kaarle IX",
+   "Vaasan suurpalossa"
+  ],
+  "jatkot": [
+   "Kuka Kaarle IX oli?",
+   "Miksi kaupunki siirrettiin palon jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vanha-vaasa-kirkko",
+  "kasite": "Mustasaaren",
+  "kysymys": "Kerro lisää: Mustasaaren",
+  "vastaus": "Mustasaari on kunta Vaasan vieressä Pohjanmaan rannikolla. Siellä on ruotsinkielisiä ja suomenkielisiä asukkaita, ja ruotsinkielinen väestö on huomattava osa asukkaista. Mustasaaren läheisyydessä sijaitsee [[Merenkurkun saariston]] maailmanperintökohde. Vanhan Vaasan kirkon rauniot sijaitsevat sen alueella. Tarkkoja asukaslukuja en ole varma. [[Vaasaan]] Mustasaari on kiinteästi sidoksissa.",
+  "linkit": [
+   "Merenkurkun saariston",
+   "Vaasaan"
+  ],
+  "jatkot": [
+   "Mikä Merenkurkun saaristo on?",
+   "Miksi Pohjanmaan rannikolla puhutaan ruotsia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vanha-vaasa-kirkko",
+  "kasite": "muinaisjäännöksiä",
+  "kysymys": "Kerro lisää: muinaisjäännöksiä",
+  "vastaus": "Muinaisjäännökset ovat ihmisen jättämiä vanhoja rakenteita ja jälkiä, kuten hautapaikkoja, asuinpaikkoja ja linnoituksia. Suomessa ne ovat [[muinaismuistolain]] nojalla rauhoitettuja, ja niiden tutkimus ja suojelu kuuluvat Museovirastolle. Tavallisia suomalaisia muinaisjäännöksiä ovat esimerkiksi [[kiviröykkiöt]] ja vanhat kirkonraunioit, kuten Vanhan Vaasan kirkko. Niitä ei saa vahingoittaa eikä muuttaa ilman lupaa. Tarkkoja sääntöjä en ole varma.",
+  "linkit": [
+   "muinaismuistolain",
+   "kiviröykkiöt"
+  ],
+  "jatkot": [
+   "Mitä muinaismuistolaki kieltää?",
+   "Mikä on kiviröykkiö?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vanha-vaasa-kirkko",
+  "kasite": "tulisijat",
+  "kysymys": "Kerro lisää: tulisijat",
+  "vastaus": "Tulisija on lämmityslaite tai tulenpitopaikka, kuten uuni, takka tai liesi. [[Puukaupungeissa]] tulisijat ja savupiiput olivat tavallisia syttymislähteitä, sillä kipinät pääsivät helposti puuhun. Esimerkiksi [[Turun palo]] vuonna 1827 tuhosi suuren osan kaupunkia. Palojen jälkeen kaupunkeihin tehtiin kaavoja ja rakennusmääräyksiä, jotka rajoittivat tulipalon leviämistä. Määräysten yksityiskohdista en ole varma, mutta puuhun liittyvä riski oli suuri.",
+  "linkit": [
+   "Puukaupungeissa",
+   "Turun palo"
+  ],
+  "jatkot": [
+   "Miten Turun palo vaikutti kaupungin kehitykseen?",
+   "Mitä palomuuri tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vanha-vaasa-kirkko",
+  "kasite": "Vaasan",
+  "kysymys": "Kerro lisää: Vaasan",
+  "vastaus": "Vaasa on rannikkokaupunki Pohjanmaalla, ja se perustettiin vuonna 1606. Vanha kaupunki tuhoutui Vaasan suurpalossa 1852, ja uusi kaupunki rakennettiin noin seitsemän kilometrin päähän. Uuden kaupungin suunnitteli [[Carl Axel Setterberg]]; tarkoista yksityiskohdista en ole varma. Kaupunki on myös tärkeä satamakaupunki lähellä [[Merenkurkkua]]. Nimi liittyy Ruotsin Vaasa-sukuun, johon kuului kuningas [[Kaarle IX]].",
+  "linkit": [
+   "Carl Axel Setterberg",
+   "Merenkurkkua",
+   "Kaarle IX"
+  ],
+  "jatkot": [
+   "Millainen on Merenkurkku?",
+   "Mitä Vaasassa on nykyään nähtävää?"
+  ]
+ },
+ {
+  "kohde": "nosto:tervakauppa",
+  "kasite": "tervahaudassa",
+  "kysymys": "Kerro lisää: tervahaudassa",
+  "vastaus": "Tervahauta on rinteeseen kaivettu kuoppa, johon pinotaan pihkaisia männyn kantoja ja juuria. Pino peitetään turpeella ja sytytetään, jolloin puu palaa vähähappisessa tilassa ja terva valuu hautaa pitkin tynnyriin. Polttaminen kesti useita päiviä; tarkkaa aikaa en ole varma. Terva oli tärkeä vientituote, ja sen kauppa keskittyi [[Oulun]] ja [[Kainuun]] seudulle. Hautojen jäänteitä näkyy yhä Suomen metsissä.",
+  "linkit": [
+   "Oulun",
+   "Kainuun"
+  ],
+  "jatkot": [
+   "Miten tervaa poltettiin kantojen avulla?",
+   "Miksi Oulu oli tervakaupungin keskus?"
+  ]
+ },
+ {
+  "kohde": "nosto:tervakauppa",
+  "kasite": "köysistöä",
+  "kysymys": "Kerro lisää: köysistöä",
+  "vastaus": "Köysistö tarkoittaa purjelaivan köysiä, joilla purjeet ja mastot pidettiin paikoillaan. Köydet oli tehty usein [[hampusta]], ja niitä tervattiin, jotta ne kestäisivät kosteutta ja suolaista merivettä. Tervaus hidasti lahoamista, ja ilman sitä [[purjelaivojen]] köysistöt olisivat rappeutuneet nopeasti. Tarkoista köysityypeistä en ole varma. Terva oli siis laivojen huollon tärkeä tarvike.",
+  "linkit": [
+   "hampusta",
+   "purjelaivojen"
+  ],
+  "jatkot": [
+   "Miten purjelaiva liikkuu tuulella?",
+   "Mistä hamppu on tehty?"
+  ]
+ },
+ {
+  "kohde": "nosto:tervakauppa",
+  "kasite": "tervaveneillä",
+  "kysymys": "Kerro lisää: tervaveneillä",
+  "vastaus": "Tervavene oli matala, pitkä joki- ja järvialus, jolla tervatynnyreitä kuljetettiin kohti satamaa. Tunnetuin reitti oli [[Oulujoki]], jota pitkin tynnyrit laskettiin sisämaasta Ouluun; tarkoista reiteistä en ole varma. Veneillä oli osattava ohjata koskia, ja tehtävässä tarvittiin kokeneita soutajia. Kuljetuksen päässä odotti [[Oulun]] kaupunki, jonka satamassa tervan kauppa kävi.",
+  "linkit": [
+   "Oulujoki",
+   "Oulun"
+  ],
+  "jatkot": [
+   "Miten koskia laskettiin tervaveneellä?",
+   "Miksi Oulu oli tärkeä tervasatama?"
+  ]
+ },
+ {
+  "kohde": "nosto:tervakauppa",
+  "kasite": "Tukholmaan",
+  "kysymys": "Kerro lisää: Tukholmaan",
+  "vastaus": "Tukholma on Ruotsin pääkaupunki, ja se oli myös Ruotsin valtakunnan keskus, johon Suomen tervakauppa oli pitkään sidottu. Tervakauppaa hoiti aikoinaan [[Tervakompania]], jolla oli yksinoikeus tuontiin; tarkkoja vuosia en ole varma. Suomalaiset tervantekijät eivät siis voineet myydä tervaansa vapaasti ulkomaille. Monopoli kumottiin vuonna 1765. [[Ruotsin]] valtakunnan talous perustui osin raaka-aineiden viennille.",
+  "linkit": [
+   "Tervakompania",
+   "Ruotsin"
+  ],
+  "jatkot": [
+   "Mitä Tervakompania oli?",
+   "Miten Tukholma kehittyi pääkaupungiksi?"
+  ]
+ },
+ {
+  "kohde": "nosto:tervakauppa",
+  "kasite": "puuveneiden",
+  "kysymys": "Kerro lisää: puuveneiden",
+  "vastaus": "Puuvene on perinteinen alus, jonka rakenne on tehty puusta, ja se vaatii säännöllistä suojausta. Suomessa vanhoja puuveneitä hoidetaan edelleen tervaamalla, koska terva suojaa puuta kosteudelta. Perinteinen veneenrakennus ja [[tervaaminen]] ovat osa Pohjoismaiden merellistä kulttuuria, jota on nostettu esiin myös [[UNESCOn]] aineettoman perinteen yhteydessä; tarkoista nimityksistä en ole varma. Terva on siis yhä käytössä.",
+  "linkit": [
+   "tervaaminen",
+   "UNESCOn"
+  ],
+  "jatkot": [
+   "Miten puuvene tervataan?",
+   "Mitä UNESCO tekee kulttuuriperinnön hyväksi?"
+  ]
+ },
+ {
+  "kohde": "nosto:tervakauppa",
+  "kasite": "tervasaippuassa",
+  "kysymys": "Kerro lisää: tervasaippuassa",
+  "vastaus": "Tervasaippua on saippua, joka sisältää tervaa, ja se tunnetaan voimakkaasta savuisesta tuoksustaan. Tervaa valmistetaan [[männyn pihkaa]] polttamalla, ja siitä tehdään nykyäänkin muun muassa saippuaa ja hoitotuotteita. Tervan tuoksu liittyy suomalaiseen saunaperinteeseen. Tervan makua käytetään myös makeisissa, kuten [[Tervaleijona]]-pastilleissa. Valmistajien tarkoista nimistä en ole varma.",
+  "linkit": [
+   "männyn pihkaa",
+   "Tervaleijona"
+  ],
+  "jatkot": [
+   "Miten terva tehdään männystä?",
+   "Miksi tervalla on tuoksu?"
+  ]
+ },
+ {
+  "kohde": "nosto:tervakauppa",
+  "kasite": "Anders Chydeniuksen",
+  "kysymys": "Kerro lisää: Anders Chydeniuksen",
+  "vastaus": "Anders Chydenius oli pappi ja valtiopäivämies, joka edisti vapaata kauppaa ja yksilön oikeuksia Ruotsin valtakunnassa. Hän vaikutti vuoden 1765 valtiopäivillä, jolloin hän julkaisi vapaakauppaa puolustavan kirjoituksen. Chydenius oli mukana myös [[painovapausasetuksen]] valmistelussa; yksityiskohdista en ole varma. Hänet yhdistetään [[Kokkolan]] seutuun. Chydeniuksen ajatukset olivat aikansa edellä.",
+  "linkit": [
+   "painovapausasetuksen",
+   "Kokkolan"
+  ],
+  "jatkot": [
+   "Mitä painovapaus tarkoittaa?",
+   "Miksi Chydenius kannatti vapaata kauppaa?"
+  ]
+ },
+ {
+  "kohde": "nosto:tervakauppa",
+  "kasite": "vapaakauppaa",
+  "kysymys": "Kerro lisää: vapaakauppaa",
+  "vastaus": "Vapaakauppa tarkoittaa kauppaa, jota valtio ei rajoita tulleilla tai yksinoikeuksilla. Sen vastakohtana oli [[merkantilismi]], jossa valtio pyrki suojelemaan omaa kauppaansa ja rajoitti ulkomaista kilpailua. Ruotsin valtakunnassa [[tapulikaupunkijärjestelmä]] sääteli kauppaa, ja sen purkamista ajoi muun muassa [[Anders Chydenius]]. Vapaakaupan vaikutuksista tarkkoja lukuja en ole varma. Monopolin kumoamisen jälkeen kauppa vilkastui rannikon kaupungeissa.",
+  "linkit": [
+   "merkantilismi",
+   "tapulikaupunkijärjestelmä",
+   "Anders Chydenius"
+  ],
+  "jatkot": [
+   "Mitä merkantilismi tarkoitti?",
+   "Mitkä olivat tapulikaupunkeja?"
+  ]
+ },
+ {
+  "kohde": "nosto:tervakauppa",
+  "kasite": "Pohjanmaan",
+  "kysymys": "Kerro lisää: Pohjanmaan",
+  "vastaus": "Pohjanmaa on Suomen länsirannikon maakunta, ja sen rannikolla sijaitsi tervakaupan kannalta tärkeitä kaupunkeja, kuten [[Oulu]], [[Kokkola]], [[Raahe]] ja [[Vaasa]]. Alueen sisämaasta tervaa kuljetettiin jokia pitkin rannikolle, ja satamissa kauppaporvarit rikastuivat. Pohjanmaan rajoista ja historiallisista jaotteluista en ole varma, sillä maakuntarajat ovat muuttuneet. Sen rannikolla on matalaa maankohoamisrannikkoa. Alue on historiallisesti ollut yksi tärkeimmistä tervan tuotantoalueista.",
+  "linkit": [
+   "Oulu",
+   "Kokkola",
+   "Raahe",
+   "Vaasa"
+  ],
+  "jatkot": [
+   "Miksi Pohjanmaalla poltettiin paljon tervaa?",
+   "Mitä tervaporvarit rakensivat kaupunkeihin?"
+  ]
  }
 ]
