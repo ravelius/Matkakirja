@@ -78,3 +78,9 @@ Taustalla EI omia ajoja (cron 440f4d6d katoaa nollauksessa).
 ## TILA 10.10. 23.22
 - iOS TF 180: Julkaisija käynnisti 23.1x (ajo 38082932130). Mac 180 KÄÄNNETTY 04c2af36 23.22 (fi.matkakirja.peli 1.1 (180)), kopio lokit/natiiviseppa-mac-tf-180-04c2af36,
   Julkaisija käynnistää Mac TF:n. Simu-.app lokit/juna-1.1.180-04c2af36 (vahti 23.14). TF 180 valmis → rivi PT:lle, sitten akku- ja lämpömittaus.
+
+## TILA 11.10. 00.10
+- TF 180 iOS VALID 3886f332 + Mac VALID c8e8fccb. Akku- ja lämpömittaus TF 180 tehty: docs/raportit/natiiviseppa-akku-lampo-180.md.
+- Omistaja 00.0x: säästökatot 1–3 → natiiviseppa/kuvataajuus-181 ccf9df4f5 (KuvataajuusPaatos: pallokierros + lämmin 40/30 fps, kartan lepo 10 Hz).
+- JUNA 181 = natiiviseppa/juna-181 5eb15ef80 (BUILD 180 04c2af364 + Pelikoodari 04d98a0b9, NUI 5a57b42b5, LS1 eca61364a, kuvataajuus ccf9df4f5); K466/P473/L1354, unity 0, tarkista ok; peilattu.
+  Uusintamittaus (sama 15 min) ennen lukitusta: scratchpad akku181.sh odottaa Julkaisijan NYT:iä. Tulossa: LS1 esityksen ajoitus (KIIRE) + pallokompassi, LR v47f, LS2 saliääni.
