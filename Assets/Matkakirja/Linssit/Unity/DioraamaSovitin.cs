@@ -1082,6 +1082,9 @@ namespace Matkakirja.Natiivi
         /// vaiheiden jälkeen samasta kohdasta. Ei pelattavan palan, veneen tai historian aikana; ⏭ Ohita ja Esc lopettavat kuten historiassa.</summary>
         IEnumerator EsittelynVaiheet()
         {
+            // Kaksi rinnakkaista (saapumiskaaren loppu + "poikki vaiheet nyt", vaihearkki 10.10. 12.05): toinen Aloita lopetti ensimmäisen,
+            // jonka valmis-takaisinkutsu sammutti kävelyleikkaukset toisen alta (kartiot ja bastionit näkyivät 1499). vaiheT asetetaan heti.
+            if (vaiheT.HasValue) { o.Kirjaa("seikkailu: esittelyn vaiheet jo käynnissä"); yield break; }
             if (!HistoriaKaytettavissa || pelattavaPala || PelattavaPalaPyydetty || SeikkailuPelaaja.Aktiivinen != null || SeikkailuVene.Aktiivinen != null)
             { o.Kirjaa("seikkailu: esittelyn vaiheet ohitettu (ei käytettävissä)"); yield break; }
             vaiheT = YdinAika;
