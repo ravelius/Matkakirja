@@ -1,0 +1,479 @@
+### 161
+Asteroidien havaitseminen perustuu pääosin teleskooppeihin, jotka kuvaavat samoja taivaan alueita toistuvasti ja etsivät tähtien taustaa vasten liikkuvia pisteitä. Uusi löytö ilmoitetaan kansainväliselle keskukselle, ja muut observatoriot tekevät jatkohavaintoja, joiden avulla kappaleen rata voidaan laskea yhä tarkemmin. Joskus havaintoja täydennetään [[tutkahavainnoilla]], jotka mittaavat etäisyyttä ja nopeutta hyvin tarkasti. Törmäysriskin vakavuutta kuvataan [[Torinon asteikolla]], jonka arvot ovat nollasta kymmeneen, ja valtaosa löydöistä sijoittuu asteikon alimpaan luokkaan. Myös [[ESA]] seuraa Maan lähelle tulevia kappaleita Euroopassa.
+JATKOT:
+Mitä Torinon asteikko tarkoittaa?
+Kuinka usein suuret asteroidit osuvat Maahan?
+
+### 162
+DART oli NASA:n koeluotain, jonka tarkoitus oli selvittää, voiko vaarallisen asteroidin rataa muuttaa törmäämällä siihen. Luotain laukaistiin marraskuussa 2021 ja osui kohteeseensa syyskuussa 2022. Kohde oli [[Dimorphos]], pieni kuu, joka kiertää suurempaa asteroidia nimeltä [[Didymos]]. Törmäys lyhensi Dimorphoksen kiertoaikaa noin 32 minuuttia, mikä oli selvästi enemmän kuin ennalta asetettu vähimmäistavoite. Tuloksia tarkentaa Euroopan avaruusjärjestön [[Hera]]-luotain, joka on matkalla tutkimaan törmäyspaikkaa lähempää.
+JATKOT:
+Mitä Hera-luotain tutkii?
+Voisiko asteroidin ohjata pois Maan kohdalta?
+
+### 163
+Dimorphos on pieni asteroidi, joka kiertää suurempaa kumppaniaan [[Didymos]]ta eli on sen kuu. Se on halkaisijaltaan noin 160 metriä, kun taas Didymos on noin 780 metriä leveä. Ennen [[DART]]-luotaimen törmäystä Dimorphos kiersi Didymosta noin 11 tunnissa ja 55 minuutissa, ja törmäyksen jälkeen kiertoaika oli lyhentynyt noin 32 minuuttia. Havaintojen perusteella Dimorphos on todennäköisesti irtonaisten kivenpalojen kasauma eikä yhtenäinen kivenjärkäle, mutta tämä tarkentuu vasta jatkotutkimuksissa. Euroopan avaruusjärjestön [[Hera]]-luotain tutkii kohdetta törmäyksen jälkeen.
+JATKOT:
+Mitä tarkoittaa, että asteroidi on kivikasa?
+Miten Hera-luotain mittaa Dimorphoksen massaa?
+
+### 164
+Kartografi on henkilö, joka suunnittelee ja piirtää karttoja. Hänen työnsä yhdistää maastomittauksia, vanhempia lähteitä ja päätöksiä siitä, mitä kartalle otetaan mukaan ja miten se esitetään. Ennen satelliittikuvia kartat perustuivat matkaajien kertomuksiin ja kulmien ja matkojen mittaamiseen, ja virheitä siksi sattui. Semjon Remezov kuului tähän perinteeseen, ja hänen tunnetuin työnsä on Siperian karttoja sisältävä piirroskirja, joka on valmistunut noin vuonna 1701. Euroopassa tunnetuimpia kartografeja oli flaamilainen [[Gerardus Mercator]], jonka vuonna 1569 julkaisema maailmankartta perustui [[karttaprojektioon]], joka säilyttää suunnat oikeina ja soveltuu siksi merenkulkuun.
+JATKOT:
+Miksi Mercatorin kartta vääristää pinta-aloja?
+Miten kartat tehdään nykyään satelliittikuvista?
+
+### 165
+Historioitsija on tutkija, joka selvittää menneisyyttä kirjallisten ja esineellisten lähteiden avulla ja pyrkii arvioimaan, kuinka luotettavia ne ovat. Tätä kutsutaan [[lähdekritiikiksi]]: sama tapahtuma voi näyttää erilaiselta voittajan, häviäjän ja sivusta seuraajan kertomana. Antiikin kreikkalaista [[Herodotosta]] pidetään perinteisesti historiankirjoituksen isänä. Venäjällä keskiajan tapahtumia kirjattiin [[kronikoihin]], ja Semjon Remezovin nimiin liitetään Siperian vaiheita käsittelevä historiateos. Siperian ensimmäisenä historioitsijana häntä on kuitenkin pidetty yleisesti, vaikka tarkka työnjako hänen ja hänen avustajiensa välillä ei ole kaikilta osin selvä.
+JATKOT:
+Mitä lähdekritiikki käytännössä tarkoittaa?
+Miksi Herodotosta kutsutaan historian isäksi?
+
+### 166
+Suuri Pohjan sota käytiin vuosina 1700–1721, ja sen pääosapuolet olivat Ruotsi sekä Venäjän, Tanskan ja Saksin ja Puolan muodostama liittouma. Venäjää johti [[Pietari Suuri]] ja Ruotsia [[Kaarle XII]]. Sodan käännekohta oli Poltavan taistelu vuonna 1709, jossa Ruotsin armeija kärsi ratkaisevan tappion. Sota päättyi vuonna 1721 [[Uudenkaupungin rauhaan]], jossa Venäjä sai haltuunsa muun muassa Viron ja Liivinmaan, ja Ruotsin suurvalta-aika päättyi. Suomessa sodan loppuvaihetta kutsutaan [[isovihaksi]], jolloin maa oli venäläismiehityksen alla. Tobolskin kremlin rakentajina työskennelleet ruotsalaiset sotavangit olivat tämän sodan seurausta.
+JATKOT:
+Mitä isoviha tarkoitti Suomessa?
+Mitä Uudenkaupungin rauhassa sovittiin?
+
+### 167
+Poltavan taistelu käytiin 8. heinäkuuta 1709 nykyisen Ukrainan alueella, ja siinä Pietari Suuren johtama venäläisarmeija voitti ruotsalaiset [[Kaarle XII]]:n johdolla. Taistelu oli Suuren Pohjan sodan käännekohta: Ruotsin kenttäarmeija menetti vahvuutensa, ja suuri osa ruotsalaisista joutui vangiksi muutamaa päivää myöhemmin. Kaarle XII pakeni [[Ottomaanien valtakuntaan]], missä hän oleskeli vuosia. Osa ruotsalaisista päätyi Venäjän vangeiksi, ja heitä lähetettiin Siperiaan asti. Joidenkin ruotsalaisten sotilaiden kerrotaan paenneen Valakiaan, missä he auttoivat [[Colțean tornin]] rakentamisessa Bukarestissa.
+JATKOT:
+Miksi Kaarle XII pakeni Ottomaanien valtakuntaan?
+Miten Poltavan tappio muutti Ruotsin asemaa?
+
+### 168
+Venäjän keisarikunta syntyi, kun [[Pietari Suuri]] otti keisarin arvonimen vuonna 1721 Suuren Pohjan sodan päätyttyä. Valtakunta kesti vuoteen 1917, jolloin vallankumous päätti tsaarinvallan ja viimeinen keisari Nikolai II luopui kruunusta. Pääkaupunki oli suurimman osan ajasta Pietari. Keisarikunta laajeni eri aikoina länteen, etelään ja itään, ja siihen kuului pitkään myös Suomi [[suuriruhtinaskuntana]] vuodesta 1809. [[Katariina Suuri]] hallitsi vuosina 1762–1796, ja hänen aikanaan rakennettiin muun muassa Siperian valtatie sekä myönnettiin kaupunkioikeuksia Jekaterinburgille. Vuoden 1917 [[helmikuun vallankumous]] päätti monarkian.
+JATKOT:
+Miten Suomi kuului Venäjän keisarikuntaan?
+Mitä Katariina Suuri teki Venäjän hyväksi?
+
+### 169
+Metrijärjestelmä syntyi Ranskassa vallankumouksen aikaan 1790-luvulla. Metri määriteltiin alun perin kymmenmiljoonasosaksi matkasta pohjoisnavalta päiväntasaajalle Pariisin kautta kulkevaa pituuspiiriä pitkin. Kansainvälistä käyttöä vakiinnutti vuoden 1875 [[metrisopimus]], ja nykyään metri määritellään valon nopeuden avulla. Venäjällä metrijärjestelmä otettiin käyttöön vasta 1900-luvun alussa, ja se vakiintui lopullisesti Neuvostoliiton aikana. Aiemmin käytössä oli muun muassa virsta, sylen ja arssin kaltaisia yksiköitä, joiden pituuksiin kuuluu usein epävarmuutta. Järjestelmää ajoi tiettävästi myös kemisti [[Dmitri Mendelejev]], joka työskenteli mittausasioiden parissa. Järjestelmä on kymmenjärjestelmään perustuva ja yhdenmukainen: yksiköt muodostetaan etuliitteillä.
+JATKOT:
+Miten metri määritellään nykyään valon nopeuden avulla?
+Mitä muita pituusyksiköitä Venäjällä käytettiin ennen metriä?
+
+### 170
+Kasakat olivat vapaita sotilasyhteisöjä, jotka muodostuivat Itä-Euroopan arojen rajaseuduille, erityisesti Dnepr- ja Don-jokien alueille. Sana tulee turkkilaisesta kielestä ja viittaa tavallisesti vapaaseen tai seikkailevaan ihmiseen. Ukrainassa [[Zaporožjen sitš]] oli kasakkojen linnoitettu keskus, ja vuonna 1648 alkanutta kasakkakapinaa johti [[Bohdan Hmelnytskyi]]. Venäjällä kasakat tekivät asepalvelusta tsaarille vastineeksi maasta ja erioikeuksista, ja Jermakin retki oli esimerkki heidän roolistaan laajentumisessa itään. Kasakkaperinteet vaihtelivat alueittain, eikä heitä voi kuvata yhdellä tavalla. Don-joen kasakat ja Dneprin kasakat kehittyivät erillisiksi yhteisöiksi.
+JATKOT:
+Mikä oli Hmelnytskyin kansannousu?
+Miten kasakat erosivat toisistaan Ukrainassa ja Venäjällä?
+
+### 171
+Stroganovit olivat vaikutusvaltainen venäläinen kauppiassuku, joka vaurastui suolantuotannolla ja kaupalla Pohjois-Venäjällä. Suvulle myönnettiin 1500-luvulla laajoja maa-alueita Uralin länsipuolella, ja he rahoittivat Jermakin retkikunnan, joka avasi tien Siperiaan. Tsaari [[Iivana Julma]] oli heidän tärkeä suojelijansa, vaikka suhteet vaihtelivat. Myöhemmin suku nousi aatelistoon ja tuli tunnetuksi taiteen suojelijana: Pietarissa seisoo yhä [[Stroganovin palatsi]]. Tunnettu ruokalaji stroganoff on saanut nimensä tiettävästi suvun mukaan, mutta ruoan syntytarinasta ei ole varmuutta. Stroganovit vaikuttivat pitkään Venäjän taloudessa ja kulttuurissa.
+JATKOT:
+Mistä stroganoff on saanut nimensä?
+Miten Siperian valloitus edistyi Jermakin jälkeen?
+
+### 172
+Juri Dolgoruki oli 1100-luvun ruhtinas, [[Vladimir Monomah]]in poika, joka hallitsi Rostov-Suzdalin ruhtinaskuntaa ja ja joka toimi myös [[Kiovan]] ruhtinaana. Hänen lisänimensä Dolgoruki tarkoittaa pitkäkätistä. Moskovan perustajana häntä pidetään perinteisesti: kaupungin vanhin kronikkamaininta on vuodelta 1147, kun hän tapasi liittolaisensa siellä. Hänen kerrotaan rakennuttaneen Kremlin ensimmäisen linnan vuonna 1156. Moskovassa on hänelle omistettu ratsastajapatsas Tverskajan kadun varrella, ja kaupunki juhlii syntymäpäiväänsä vuoden 1147 pohjalta.
+JATKOT:
+Mitä Moskovan ensimmäinen kronikkamaininta kertoo?
+Millainen oli Kiovan Rusin ruhtinaskunta?
+
+### 173
+Iivana III hallitsi Moskovan suuriruhtinaana vuosina 1462–1505, ja häntä kutsutaan usein Venäjän maiden kokoajaksi. Hän liitti Moskovaan muun muassa [[Novgorodin]] vuonna 1478, ja vuonna 1480 tapahtunut [[Ugra-joen seisonta]] merkitsi käytännössä Kultaisen ordan ylivallan päättymistä. Hän meni naimisiin Bysantin viimeisen keisarin veljentyttären [[Sofia Palaiologina]]n kanssa vuonna 1472, ja hovi sai tämän myötä uusia vaikutteita. Iivana kutsui Italiasta taitavia rakentajia, kuten [[Aristotele Fioravanti]]n, joka rakensi Kremlin Uspenskin katedraalin. Hänen aikanaan valtakunnan alue kasvoi moninkertaiseksi, ja hallinto keskitettiin.
+JATKOT:
+Mitä Ugra-joen seisonnassa tapahtui?
+Miten Novgorod liitettiin Moskovaan?
+
+### 174
+Pietro Antonio Solari oli milanolainen arkkitehti, joka muutti Moskovaan 1400-luvun lopulla Iivana III:n kutsusta ja kuoli siellä vuonna 1493. Hän suunnitteli Kremlin punatiilimuuria ja torneja, ja hänen nimensä on kaiverrettu Spasskajan tornin portin yläpuolelle. Yhdessä [[Marco Ruffon]] kanssa hän rakensi Kremlin [[Granovitaja palatan]], juhlavan vastaanottosalin. Solarin työ yhdisti italialaisen linnoitusrakentamisen venäläisiin vaatimuksiin, ja tuloksena oli Moskovalle ominainen tornien rivi. [[Milanon]] linnoitusperinne näkyy muurien pääskynpyrstökoristeissa.
+JATKOT:
+Miksi Kremlin muurin harjassa on pääskynpyrstökoriste?
+Mitä muuta Marco Ruffo rakensi Moskovassa?
+
+### 175
+Lev Tolstoi (1828–1910) oli yksi maailmankirjallisuuden merkittävimmistä kirjailijoista. Hän syntyi ruhtinaallisessa aatelissuvussa, palveli nuorena sotilaana ja kirjoitti myöhemmin suurromaaniensa lisäksi novelleja, kuten [[Ivan Iljitšin kuoleman]]. Vuonna 1899 ilmestyi romaani [[Ylösnousemus]]. Elämänsä loppupuolella hän kääntyi moraalikysymysten ja uskonnollisten pohdintojen puoleen, ja tästä syntyi [[tolstoilaisuus]]. Hänen kritiikkinsä kirkkoa kohtaan johti siihen, että [[Pyhä synodi]] erotti hänet kirkosta vuonna 1901. Tolstoi kirjoitti paljon myös talonpoikien oloista ja koulutuksesta.
+JATKOT:
+Mistä Ylösnousemus kertoo?
+Miksi kirkko erotti Tolstoin?
+
+### 176
+Sota ja rauha ilmestyi vuosina 1865–1869, ja se kuvaa venäläistä yhteiskuntaa [[Napoleonin]] sotien aikana, erityisesti vuosina 1805–1812. Kirjan keskiössä ovat useat aatelissuvut ja heidän elämänsä rauhan ja sodan keskellä, ja tunnettuja henkilöitä ovat Pierre Bezuhov, Natasha Rostova ja Andrei Bolkonski. Tapahtumiin kuuluu myös Ranskan hyökkäys Venäjälle vuonna 1812 ja [[Borodinon taistelu]]. Tolstoi yhdisti fiktiivisen kerronnan historiallisiin pohdintoihin siitä, kuinka paljon yksittäinen johtaja todella vaikuttaa tapahtumiin. Teoksen sanotaan ammentaneen myös Tolstoin oman suvun vaiheista, ja Bolkonskien hahmoissa kuuluu [[Volkonskien]] suvun kaiku.
+JATKOT:
+Mitä Borodinon taistelussa tapahtui?
+Miksi Napoleonin Venäjän-sotaretki epäonnistui?
+
+### 177
+Anna Karenina ilmestyi jatkokertomuksena vuosina 1873–1877, ja se kertoo pietarilaisen aatelisnaisen Annan avioliitosta ja rakkaudesta upseeri [[Aleksei Vronski]]in. Rinnakkaista tarinaa kuljettaa maanomistaja [[Konstantin Levin]], jonka pohdinnat maaelämästä, avioliitosta ja elämän tarkoituksesta heijastavat osin Tolstoin omia ajatuksia. Romaanin tunnettu aloituslause toteaa, että kaikki onnelliset perheet muistuttavat toisiaan mutta jokainen onneton perhe on onneton omalla tavallaan. Teos kuvaa seurapiirien sääntöjä, naisen asemaa ja yhteiskunnan kaksoismoraalia 1800-luvun [[Pietarin]] ja Moskovan piireissä.
+JATKOT:
+Miten naisen asema erosi Venäjällä 1800-luvulla?
+Miksi Levin on Tolstoin omakuva?
+
+### 178
+Tula on kaupunki noin kahdensadan kilometrin päässä Moskovasta etelään, ja se on Tulan alueen hallinnollinen keskus. Se tunnetaan vanhastaan asetuotannosta: Pietari Suuri perusti sinne asetehtaan vuonna 1712. Lisäksi kaupungista ovat kotoisin [[samovaarit]], venäläiset teenkeittimet, sekä leimatut [[pryanikit]] eli mausteiset piparkakut. Kaupungin keskustassa kohoaa 1500-luvun alussa rakennettu [[Tulan kreml]], joka suojasi Moskovan eteläistä rajaa. Jasnaja Poljanan tila sijaitsee kaupungista noin kaksitoista kilometriä lounaaseen.
+JATKOT:
+Miten venäläinen samovaari toimii?
+Miksi Tula oli tärkeä linnoituskaupunki?
+
+### 179
+Tolstoilaisuus on Lev Tolstoin elämänsä loppupuolella muotoilema moraalinen ja uskonnollinen opetus. Sen ytimessä on väkivallaton vastarinta: pahaa ei tule vastustaa väkivallalla, ja tämän ajatuksen Tolstoi perusti Vuorisaarnaan. Hän hylkäsi kirkon ja valtion auktoriteetin, kannatti yksinkertaista elämää ja omin käsin tehtyä työtä, ja monet seuraajat söivät kasvisruokaa. Pääteoksia on [[Jumalan valtakunta on sinussa]], joka ilmestyi vuonna 1894. Aatteella oli seuraajia eri maissa, muun muassa Suomessa, jossa kirjailija [[Arvid Järnefelt]] omaksui sen elämäntavakseen. Tolstoin ajatukset vaikuttivat myöhemmin laajemminkin [[väkivallattomuuden]] perinteeseen.
+JATKOT:
+Mitä Vuorisaarna tarkoittaa?
+Miten Arvid Järnefelt eli tolstoilaisena?
+
+### 180
+Lev Tolstoi lähti kotoaan lokakuun lopussa 1910 ja sairastui matkalla keuhkokuumeeseen. Juna pysähtyi Astapovon asemalla, jonne hän jäi asemapäällikön taloon. Hän kuoli siellä 20. marraskuuta 1910 nykyisen ajanlaskun mukaan, eli 7. marraskuuta [[juliaanisen kalenterin]] mukaan, joka oli tuolloin Venäjällä käytössä. Hänen vaimonsa [[Sofia Tolstaja]] pääsi saapumaan paikalle vasta lopussa. Asema sai myöhemmin Tolstoin nimen, ja nykyisin paikka kuuluu [[Lipetskin alueeseen]]. Uutinen kuolemasta levisi nopeasti, ja hautajaisiin Jasnaja Poljanassa osallistui suuri joukko ihmisiä.
+JATKOT:
+Miksi Tolstoi lähti kotoaan viimeisellä matkallaan?
+Mitä Venäjän juliaaninen kalenteri tarkoitti?
+
+### 181
+Jasnaja Poljana on Tulan lähellä sijaitseva kartanotila, joka toimi Lev Tolstoin kotina suurimman osan hänen elämästään. Nykyään tila on museo, ja sen alueeseen kuuluu päärakennus, puutarha, maisemapuisto lampineen sekä pitkät koivukujat. Tilan omisti aiemmin [[Volkonskien]] suku, ja Tolstoi peri sen äitinsä kautta. Toisen maailmansodan aikana saksalaiset miehittivät alueen hetkeksi, mutta museo on sittemmin kunnostettu. Tolstoi on haudattu tilan metsään ilman ristiä tai kivipaatta. Vierailijat voivat kävellä tilan puistoissa ja nähdä kirjailijan työhuoneen sekä [[Lev Tolstoin]] muita esineitä.
+JATKOT:
+Millainen on Tolstoin hauta Jasnaja Poljanan metsässä?
+Miten Tolstoin työhuone on säilytetty?
+
+### 182
+Tilan osti 1700-luvulla kenraalimajuri, ruhtinas Sergei Volkonski, joka oli kirjailijan äidinpuoleinen isoisoisä. Hän ei ole sama henkilö kuin myöhempi dekabristi Sergei Volkonski, joka kuului samaan laajaan ruhtinassukuun mutta eli seuraavalla vuosisadalla. Dekabristi osallistui joulukuun 1825 kapinaan, jonka seurauksena hänet tuomittiin ensin kuolemaan. Tuomio lievennettiin pakkotyöksi ja karkotukseksi Siperiaan, jonne hänen vaimonsa [[Maria Volkonskaja]] seurasi häntä. Hän sai palata vasta Aleksanteri II:n armahduksen jälkeen. Jasnaja Poljanan Sergei kuului sen sijaan sotilasuralla edenneeseen aatelistoon, ja hänen poikansa [[Nikolai Volkonski]] rakensi tilan päärakennuksen.
+JATKOT:
+Mikä oli dekabristien kapina vuonna 1825?
+Miksi dekabristien vaimot seurasivat heitä Siperiaan?
+
+### 183
+Nikolai Volkonski oli Lev Tolstoin äidinpuoleinen isoisä, kenraali ja ruhtinas, joka vetäytyi Jasnaja Poljanaan sotilasuransa jälkeen. Hän aloitti päärakennuksen rakentamisen vuonna 1810, istutti puutarhan ja puiston sekä rakennutti talli- ja talousrakennuksia. Hänen kuolinvuodekseen mainitaan yleensä 1821, mutta en ole siitä täysin varma. Hänen tyttärensä oli Tolstoin äiti, joka kuoli, kun Tolstoi oli vielä pieni. Nikolain uskotaan olleen esikuva vanhalle ruhtinas Bolkonskille romaanissa [[Sota ja rauha]]. Hän kuului aikansa [[Katariina Suuren]] ajan aatelistoon.
+JATKOT:
+Millainen hahmo ruhtinas Bolkonski on Sodassa ja rauhassa?
+Miten Tolstoin lapsuus kului Jasnaja Poljanassa?
+
+### 184
+Kaliningradin tuomiokirkon rakentaminen alkoi arviolta noin vuonna 1330, ja tiiligoottilainen kirkko valmistui pääosin vuoteen 1380 mennessä. Se rakennettiin keskiajalla, jolloin alue kuului [[Saksalaisen ritarikunnan]] vaikutuspiiriin, ja se on tyypillinen esimerkki [[tiiligotiikasta]]. Kirkon kupeessa lepää [[Immanuel Kant]], jonka mausoleumi valmistui vuonna 1924. Brittiläiset pommitukset elokuussa 1944 tuhosivat katon ja tornin, ja kirkko seisoi sen jälkeen pitkään raunioina. Kunnostus alkoi 1990-luvun alussa. Nykyisin kirkossa toimii museo, siellä on luterilainen ja ortodoksinen kappeli, ja siellä järjestetään konsertteja.
+JATKOT:
+Miten kirkko kunnostettiin sodan jälkeen?
+Millainen oli Kantin elämä Königsbergissä?
+
+### 185
+Kneiphof on saari Pregolja-joessa, ja se oli keskiajalla oma kaupunkinsa, joka yhdistettiin muihin Königsbergin osiin noin vuonna 1724. Saari on tunnettu matemaatikoille: sen ympärillä sijainneet sillat inspiroivat [[Königsbergin siltaongelmaa]], jonka [[Leonhard Euler]] ratkaisi vuonna 1736 osoittamalla, ettei kaikkia siltoja voi ylittää täsmälleen kerran. Ratkaisu on pidetty [[graafiteorian]] alkuna. Saaren vanha asuinalue tuhoutui toisessa maailmansodassa, ja nykyään saaren valtaa puisto ja tuomiokirkko.
+JATKOT:
+Mitä Königsbergin siltaongelma tarkoittaa?
+Mitä graafiteoria on?
+
+### 186
+Königsberg tarkoittaa kuninkaan vuorta. Kaupungin perustivat Saksalaisen ritarikunnan ritarit 1250-luvulla, ja nimen sanotaan viittaavan Böömin kuninkaaseen [[Ottokar II]]:een, joka oli ritarikunnan tukija. Kaupungista tuli Preussin herttuakunnan keskus, ja siellä toimi vuodesta 1544 [[Albertus-yliopisto]]. Preussin kuningas kruunattiin Königsbergissä vuonna 1701. Kaupungissa syntyi muun muassa kirjailija [[E. T. A. Hoffmann]], ja siellä vaikutti Immanuel Kant. Toisen maailmansodan lopussa kaupunki joutui Neuvostoliiton haltuun, saksalainen väestö siirrettiin pois, ja nimi muutettiin vuonna 1946 Kaliningradiksi.
+JATKOT:
+Mitä Albertus-yliopistossa opetettiin?
+Miten Preussista tuli kuningaskunta?
+
+### 187
+Helikopteri on ilma-alus, jonka nostovoima syntyy pyörivästä roottorista. Se voi nousta ja laskeutua pystysuoraan sekä leijua paikallaan, joten sitä käytetään paikoissa, joihin kuorma-auto tai nosturi ei pääse. Raskaiden helikopterien avulla on nostettu paikalleen muun muassa torneja ja antenneja. Venäläinen [[Mil Mi-26]] on yksi maailman suurimmista ja tehokkaimmista tuotantohelikoptereista. En tiedä, minkä tyyppinen helikopteri nosti Kaliningradin tuomiokirkon tornin vuonna 1994. Ajatus pystysuoraan nousevasta koneesta on vanha: [[Leonardo da Vinci]] piirsi 1400-luvun lopulla ilmaruuvin, joka muistutti tämän päivän roottoria.
+JATKOT:
+Miten helikopterin roottori pitää sen ilmassa?
+Millaisia kuormia raskaat helikopterit nostavat?
+
+### 188
+Hansa-kaupungit olivat Pohjois-Saksan ja Itämeren alueen kauppakaupunkeja, jotka muodostivat keskiajalla kauppaliiton, [[Hansaliiton]]. Johtavana kaupunkina pidettiin [[Lyypekin]] kaupunkia. Hansa kuljetti viljaa, puutavaraa, turkiksia, vahaa, suolaa ja silakkaa, ja sillä oli kauppakonttoreita muun muassa [[Novgorodissa]], Brugessa ja Lontoossa. Myös Tallinna, Riika ja Visby olivat tärkeitä jäsenkaupunkeja. Hansan kukoistusaika ajoittuu 1200-luvulta 1400-luvulle, ja sen merkitys väheni vähitellen 1500- ja 1600-luvuilla. Königsbergin kaupungit liittyivät myös Hansaan.
+JATKOT:
+Miten Hansaliittoa johdettiin?
+Mikä oli Hansan kauppakonttori Novgorodissa?
+
+### 189
+Saksalainen ritarikunta syntyi ristiretkien aikaan 1100-luvun lopulla sairaanhoitajaveljeskunnaksi, ja siitä kehittyi sotilaallinen ritarikunta. Puolalainen ruhtinas kutsui sen 1200-luvulla Preussin alueelle, ja ritarit valloittivat sen ja perustivat linnoja sekä kaupunkeja, muun muassa Königsbergin. Ritarikunnan pääpaikka oli 1300-luvun alusta [[Malborkin]] linna. Sen valta murtui vuonna 1410 [[Grunwaldin taistelussa]], jossa Puola ja Liettua voittivat ritarikunnan joukot. Ritarikunnan Preussin osa muuttui vuonna 1525 maalliseksi [[Preussin herttuakunnaksi]]. Livoniassa toimi oma haaransa, [[Liivinmaan ritarikunta]].
+JATKOT:
+Mitä Grunwaldin taistelussa tapahtui?
+Millainen linna Malbork on?
+
+### 190
+Lyypekki on Pohjois-Saksan Itämeren rannikon vanha kauppakaupunki, jota kutsuttiin Hansan kuningattareksi. Se johti [[Hansaliittoa]] ja kävi kauppaa suolalla, viljalla ja kalalla. Kaupungin vanha osa on tunnettu tiilestä rakennetuista kirkoista, ja sen symboli on tiilinen [[Holstentor]]-porttitorni. Lyypekki on tunnettu myös [[marsipaanista]], josta Viro ja Lyypekki kiistelevät keskenään. Kirjailija [[Thomas Mann]] syntyi Lyypekissä vuonna 1875, ja vanhakaupunki on merkitty Unescon maailmanperintökohteeksi.
+JATKOT:
+Miten Hansaliitto hajosi?
+Mistä marsipaani on kotoisin?
+
+### 191
+Veikselinlahti on Itämeren matala rannikkolaguuni Puolan ja Venäjän rajalla. Sen erottaa merestä kapea hiekkakynnäs, ja yhteys mereen kulkee salmen kautta Venäjän puolella lähellä Baltijskin kaupunkia. Lahden vesi on murtovettä, koska siihen virtaa jokivesiä ja merivesi pääsee sisään vain kapeasta salmesta. Lahden Puolan puolella sijaitsee [[Frombork]], jossa astronomi [[Kopernikus]] työskenteli. Lahden nimi tulee [[Veikselin]] joesta, jonka suisto sijaitsee lähistöllä.
+JATKOT:
+Miten Kopernikus todisti Maan kiertävän Aurinkoa?
+Miksi laguunin vesi on murtovettä?
+
+### 192
+Itämeri on lähes suljettu sivumeri Pohjois-Euroopassa, ja sen yhteys Atlantin valtamereen kulkee kapeiden [[Tanskan salmien]] kautta. Sen keskisyvyys on noin 55 metriä, joten se on hyvin matala. Veden vaihtuminen on hidasta, ja siksi meri on murtovesialtaana. Rannikkovaltioita on yhdeksän: Suomi, Venäjä, Viro, Latvia, Liettua, Puola, Saksa, Tanska ja Ruotsi. Merellä on kaksi suurta lahtea, [[Suomenlahti]] ja [[Pohjanlahti]]. Meren suurimpia ongelmia on [[rehevöityminen]], joka johtuu ravinteiden kulkeutumisesta mereen ja aiheuttaa levä- ja happikatoja.
+JATKOT:
+Miksi Itämeri on murtovettä?
+Mitä rehevöityminen aiheuttaa Itämerellä?
+
+### 193
+Itä-Preussi oli Preussin ja myöhemmin Saksan itäisin maakunta, jonka pääkaupunki oli Königsberg. Ensimmäisen maailmansodan jälkeen Versailles'n rauhassa syntyi [[Puolan käytävä]], joka erotti maakunnan muusta Saksasta. Maakunta oli tunnettu maataloudestaan ja [[Trakehner-hevosistaan]] sekä [[meripihkasta]], jota on kerätty Itämeren rannoilta. Toisen maailmansodan jälkeen alue jaettiin Neuvostoliiton ja Puolan kesken, ja saksalainen väestö siirrettiin pois. Pohjoinen osa on nykyinen Kaliningradin alue.
+JATKOT:
+Miksi Puolan käytävä oli niin kiistelty?
+Mistä meripihka syntyy?
+
+### 194
+Mihail Kalinin (1875–1946) oli neuvostopoliitikko, joka toimi Neuvostoliiton nimellisenä valtionpäämiehenä, Ylimmän neuvoston puheenjohtajiston puheenjohtajana, vuosina 1938–1946. Hän oli talonpoikaissukuinen ja kotoisin [[Tverin]] seudulta. Kalinin kuului pitkään [[Josif Stalin]]in lähipiiriin ja oli Politbyroon jäsen. Hän kuoli kesäkuussa 1946, ja Königsberg nimettiin hänen mukaansa Kaliningradiksi saman vuoden heinäkuussa. Tver oli nimeltään Kalinin vuosina 1931–1990. Kaliningradin nimeä on ehdotettu muutettavaksi, mutta se on säilynyt.
+JATKOT:
+Mikä Politbyroo oli Neuvostoliitossa?
+Miksi Tver sai Kalininin nimen?
+
+### 195
+Dmitri Donskoi oli Moskovan suuriruhtinas, joka syntyi vuonna 1350 ja hallitsi vuosina 1359–1389. Hänestä tuli ruhtinas yhdeksänvuotiaana, ja hänen aikanaan Moskova vahvistui Venäjän ruhtinaskuntien johtajaksi. Hän voitti [[Kulikovon taistelun]] vuonna 1380, minkä vuoksi hänelle annettiin lisänimi Donskoi. Vuonna 1382 Kultaisen ordan kaani Tohtamõš valtasi ja ryösti Moskovan, ja kaupunki joutui maksamaan veroa. Ortodoksinen kirkko on julistanut hänet pyhimykseksi. Perimätiedon mukaan häntä tuki [[Sergei Radonežilainen]]. Dmitri rakennutti myös Kremlin valkokivimuurin.
+JATKOT:
+Kuka oli Sergei Radonežilainen?
+Miksi Moskova joutui maksamaan veroa Kultaiselle ordalle?
+
+### 196
+Ivan III hallitsi Moskovan suuriruhtinaana vuosina 1462–1505 ja on tunnettu Venäjän maiden kokoajana. Hän liitti Moskovaan [[Novgorodin]] vuonna 1478 ja Tverin vuonna 1485, ja vuonna 1480 [[Ugra-joen seisonta]] päätti käytännössä Kultaisen ordan ylivallan. Hän meni naimisiin Bysantin keisarisuvun [[Sofia Palaiologina]]n kanssa, ja Moskovan hovi omaksui bysanttilaisia tapoja ja kaksipäisen kotkan vaakunaksi. Ivan III kutsui Italiasta rakentajia ja laati vuonna 1497 lakikirjan. Hänen nimensä on tänä päivänä kiinteästi sidoksissa Kremlin punatiilimuureihin.
+JATKOT:
+Mitä Ugra-joen seisonnassa tapahtui?
+Miksi kaksipäinen kotka on Venäjän vaakunassa?
+
+### 197
+Dmitri Donskoi syntyi vuonna 1350, ja hänestä tuli Moskovan suuriruhtinas jo yhdeksänvuotiaana vuonna 1359. Hän vahvisti [[Moskovan suuriruhtinaskunnan]] asemaa muihin ruhtinaskuntiin nähden ja rakennutti Kremliin valkokivimuurin vuosina 1366–1368. Vuoden 1380 [[Kulikovon taistelu]] toi hänelle lisänimen. Kaksi vuotta myöhemmin kaani Tohtamõš valtasi Moskovan, ja kaupunki joutui jälleen maksamaan veroa. Dmitri kuoli vuonna 1389, ja Venäjän ortodoksinen kirkko kunnioittaa häntä pyhimyksenä.
+JATKOT:
+Miksi Kulikovon taistelua pidetään tärkeänä?
+Miten Moskova kasvoi ruhtinaskuntien johtajaksi?
+
+### 198
+Novgorod eli Veliki Novgorod on yksi Venäjän vanhimmista kaupungeista, ja kronikoiden mukaan se mainitaan ensimmäisen kerran 800-luvulla. Keskiajalla siitä kasvoi itsenäinen kauppakaupunki, jota hallitsi kansankokous eli [[veče]], ja se kävi kauppaa Hansan kanssa. Kaupungin kreml, Detinets, sisältää 1000-luvun [[Pyhän Sofian katedraalin]]. Novgorod tunnetaan myös [[koivuntuohikirjeistä]], joita on löydetty maasta vuodesta 1951 alkaen ja jotka kertovat tavallisten ihmisten arjesta. Ruhtinas [[Aleksanteri Nevski]] hallitsi kaupunkia 1200-luvulla, ja Ivan III liitti sen Moskovaan vuonna 1478.
+JATKOT:
+Mitä koivuntuohikirjeissä lukee?
+Miten Novgorodia hallittiin ennen Moskovan valtaa?
+
+### 199
+Pihkova on yksi Venäjän vanhimmista kaupungeista, ja kronikoissa se mainitaan jo 900-luvulla. Kaupungin sydän on kivinen kreml, jonka keskellä seisoo Pyhän Kolminaisuuden katedraali. Keskiajalla Pihkovalla oli oma kansankokous ja se oli itsenäinen kaupunkivaltio, kunnes Moskova liitti sen itseensä vuonna 1510. Lähellä sijaitsevat [[Peipsijärvi]], jonka jäällä käytiin vuonna 1242 [[Jäätaistelu]], sekä [[Petserin luostari]] lähellä Viron rajaa. Pihkova on ollut myös tärkeä rajalinnoitus lännen suunnalla.
+JATKOT:
+Mitä Jäätaistelussa tapahtui?
+Millainen luostari Petserin luostari on?
+
+### 200
+Kulikovon taistelu käytiin 8. syyskuuta 1380 Don-joen lähellä Kulikovon kentällä, ja siinä Dmitri Donskoin johtamat venäläisruhtinaat voittivat Mamain joukot. Taistelu oli [[Kultaisen ordan]] ylivallalle merkittävä isku, mutta ei sen loppu: vuonna 1382 Moskova joutui uuden kaanin hyökkäyksen kohteeksi, ja veronmaksu jatkui. Perimätiedon mukaan [[Sergei Radonežilainen]] lähetti taistelun alla Dmitrin avuksi kaksi munkkia, muun muassa [[Peresvetin]]. Kulikovon kenttä on nykyisin museoalue Tulan alueella. Taistelu on Venäjällä tärkeä kansallinen muistotapahtuma.
+JATKOT:
+Kuka oli munkki Peresvet?
+Miksi Moskova joutui maksamaan veroa vielä Kulikovon jälkeen?
+
+### 201
+Kultainen orda oli mongolivaltakunnan länsiosa, joka syntyi 1200-luvun puolivälissä Venäjän ruhtinaskuntien valloituksen jälkeen. Sen pääkaupunki oli Volgan varrella, ja se vaati Venäjän ruhtinailta veroa. Valtakunta omaksui islamin 1300-luvun alkupuolella, ja 1400-luvulla se hajosi useiksi kaanikunniksi, kuten [[Kazanin kaanikuntaan]]. Venäläisessä historiankirjoituksessa [[Ugra-joen seisonta]] vuonna 1480 on pitkään merkinnyt ordan vallan päättymistä, kun Moskova lakkasi maksamasta veroa. Orda ehti hallita Venäjän ruhtinaskuntia noin kahden ja puolen vuosisadan ajan.
+JATKOT:
+Miksi Kultainen orda hajosi?
+Miten ordan veronkanto toimi?
+
+### 202
+Mamai oli Kultaisen ordan sotapäällikkö, joka 1370-luvulla hallitsi ordan länsiosaa. Hän ei itse ollut kaanin sukua, joten hän käytti valtaa nimellisten kaanien kautta. [[Dmitri Donskoi]] voitti hänen joukkonsa Vožan joella vuonna 1378 ja [[Kulikovon taistelussa]] 1380. Taistelun jälkeen Mamai pakeni etelään, ja hänen sanotaan kuolleen samana vuonna, mutta kuolinolosuhteista lähteet kertovat eri tavoin. Mamain joukkoihin tiedetään kuuluneen myös palkkasotilaita, ja perimätiedon mukaan niitä olisi ollut [[genovalaisia]] Mustanmeren rannalta.
+JATKOT:
+Miksi Mamai hävisi Kulikovon taistelun?
+Mitä genovalaiset tekivät Mustallamerellä?
+
+### 203
+Pietro Antonio Solari oli milanolainen arkkitehti, joka saapui Moskovaan Ivan III:n kutsusta 1400-luvun lopulla ja kuoli siellä vuonna 1493. Hän suunnitteli Kremlin uusia muureja ja torneja, ja hänen nimensä on kaiverrettu latinaksi Spasskajan tornin porttien yläpuolelle. Yhdessä [[Marco Ruffon]] kanssa hänet yhdistetään myös Kremlin [[Granovitaja palatan]] rakentamiseen. Solarin työ yhdisti italialaiset linnoitusperinteet venäläisiin tarpeisiin. Hänen kotikaupunkinsa [[Milano]] oli aikansa tärkeä linnoitus- ja rakennuskeskus.
+JATKOT:
+Millainen on Granovitaja palata?
+Millaisia linnoituksia Milanossa rakennettiin?
+
+### 204
+Marco Ruffo oli italialainen arkkitehti, jonka venäläiset tunsivat nimellä Mark Fryazin. Hän työskenteli Moskovassa Ivan III:n palveluksessa 1400-luvun lopulla ja 1500-luvun alussa. Hänen kerrotaan piirtäneen ruhtinaan uuden palatsin, ja yhdessä [[Pietro Antonio Solarin]] kanssa hänet yhdistetään [[Granovitaja palatan]] rakentamiseen. Hänen nimiinsä liitetään myös muita Kremlin torneja, mutta tarkat työnjaot ovat osin epävarmoja. Ruffo oli yksi niistä italialaisista, jotka toivat renessanssirakentamisen vaikutteita Moskovaan.
+JATKOT:
+Millainen on Kremlin Granovitaja palata sisältä?
+Mitä renessanssi tarkoittaa arkkitehtuurissa?
+
+### 205
+Spasskajan torni on Kremlin tärkeimpiä torneja, ja se avautuu [[Punaiselle torille]]. Pietro Antonio Solari rakensi sen vuonna 1491, ja hänen nimensä on kaiverrettu latinaksi sen porttien yläpuolelle. Tornia kutsuttiin aiemmin Frolovin torniksi, ja nykyisen nimensä se sai 1600-luvulla Vapahtajan ikonin mukaan. Tornin kello, kuranttikello, tunnetaan Venäjän tunnetuimpana kellona. Nykyisen torniosan rakensivat 1600-luvulla venäläiset mestarit ja englantilainen [[Christopher Galloway]]. Tornin huipulla on punainen tähti, joka nostettiin sinne Neuvostoliiton aikana.
+JATKOT:
+Miten Kremlin kuranttikello toimii?
+Miksi Kremlin tornin huipulla on punainen tähti?
+
+### 206
+Aristotele Fioravanti oli bolognalainen insinööri ja arkkitehti, jonka Ivan III kutsui Moskovaan vuonna 1475. Hän rakensi Kremlin [[Uspenskin katedraalin]] vuosina 1475–1479 aiemman, sortuneen rakennuksen paikalle. Katedraalin esikuvana käytettiin Vladimirin vanhaa Uspenskin kirkkoa, mutta Fioravanti toi mukanaan italialaisia rakennustekniikoita, kuten kestävämpää muuraustyötä. Hänen kerrotaan työskennelleen aiemmin [[Bolognassa]], missä hän siirsi torneja, mutta yksityiskohdat ovat osin legendanomaisia. Hän kuoli 1400-luvun lopulla.
+JATKOT:
+Millainen on Uspenskin katedraali Kremlissä?
+Kuinka torneja on siirretty ehjinä paikasta toiseen?
+
+### 207
+Pietari Suuri (1672–1725) oli Venäjän tsaari ja ensimmäinen keisari. Hän matkusti nuorena Länsi-Eurooppaan [[Suuren lähetystön]] mukana vuosina 1697–1698, tutustui laivanrakennukseen ja palasi uudistamaan armeijaa, hallintoa ja laivastoa. Hän voitti [[Suuren Pohjan sodan]] Ruotsia vastaan ja perusti vuonna 1703 Pietarin, josta tuli pääkaupunki vuonna 1712. Keisarin arvonimen hän otti vuonna 1721. Hänen puolisonsa [[Katariina I]] seurasi häntä valtaistuimelle.
+JATKOT:
+Mitä Pietari Suuri oppi Länsi-Euroopassa?
+Miten Pietari rakennettiin suolle?
+
+### 208
+Versailles'n palatsi sijaitsee Pariisin lähellä Ranskassa. Se oli alun perin Ludvig XIII:n metsästyslinna, jonka [[Ludvig XIV]] laajensi 1600-luvun jälkipuoliskolla kuninkaan asuinpaikaksi, ja hovi muutti sinne vuonna 1682. Puutarhan suunnitteli [[André Le Nôtre]]. Palatsin tunnetuimpiin tiloihin kuuluu [[Peilisali]]. Siellä allekirjoitettiin vuonna 1919 [[Versailles'n rauhansopimus]]. Palatsi on Unescon maailmanperintökohde, ja sen näyttävyys toimi esikuvana monille Euroopan hoveille, myös Peterhofille.
+JATKOT:
+Miksi Ludvig XIV muutti hovin Versailles'iin?
+Mitä Versailles'n rauhansopimuksessa sovittiin?
+
+### 209
+Suomenlahti on Itämeren itäinen lahti, joka ulottuu Suomen etelärannikon ja Viron pohjoisrannikon välissä aina Pietarin edustalle asti. Lahden pituus on noin 400 kilometriä. Sen rannikkovaltiot ovat Suomi, Venäjä ja Viro. Lahden itäpäässä [[Nevan]] suisto avautuu Pietarin kohdalla, ja Kotlin saarella sijaitsee [[Kronstadt]]. Lahti on suhteellisen matala ja murtovetinen, ja talvella se jäätyy osittain. Se on vilkas laivaväylä, jolla liikennöivät muun muassa Tallinnan ja Helsingin väliset lautat.
+JATKOT:
+Miksi Suomenlahti jäätyy talvella?
+Mikä on Kronstadtin merkitys Pietarille?
+
+### 210
+Elisabet (Jelizaveta Petrovna) hallitsi Venäjää vuosina 1741–1762. Hän oli Pietari Suuren tytär ja nousi valtaan vallankaappauksella marraskuussa 1741. Hänen aikanaan Venäjällä rakennettiin runsaasti barokkipalatseja, ja hänen suojeluksessaan perustettiin vuonna 1755 [[Moskovan yliopisto]], jonka syntyyn vaikutti [[Mihail Lomonosov]]. Hänen kerrotaan käytännössä lopettaneen kuolemantuomioiden täytäntöönpanon. Hän osallistui [[seitsenvuotiseen sotaan]] Preussia vastaan. Hän kuoli vuoden 1762 alussa.
+JATKOT:
+Mitä Mihail Lomonosov teki?
+Miksi Venäjä osallistui seitsenvuotiseen sotaan?
+
+### 211
+Bartolomeo Rastrelli (1700–1771) oli Pariisissa syntynyt, italialaisperheestä lähtöisin oleva barokkiarkkitehti. Hän työskenteli Venäjällä nuoresta iästä alkaen ja suunnitteli keisarinna Elisabetin ajan suuria palatseja. Hänen töitään ovat Pietarin [[Talvipalatsi]], [[Stroganovin palatsi]] ja [[Smolnyin katedraali]] sekä Kiovan [[Andreaksen kirkko]]. Hän suunnitteli myös Latvian [[Rundalen palatsin]]. Hänen tyylilleen ovat ominaisia runsaat koristeet ja värikkäät julkisivut. Katariina Suuren noustessa valtaan Rastrellin asema heikkeni.
+JATKOT:
+Millainen on Rundalen palatsi Latviassa?
+Mikä on barokkiarkkitehtuurin ominaispiirre?
+
+### 212
+Talvipalatsi on Pietarin Palatsiaukion varrella sijaitseva barokkipalatsi, jonka Bartolomeo Rastrelli suunnitteli ja joka valmistui vuonna 1762. Se oli Venäjän keisarien talvisin käyttämä asuinpaikka. Vuonna 1837 palatsissa syttyi tulipalo, joka tuhosi suuren osan sen sisätiloista, mutta ne kunnostettiin muutamassa vuodessa. Vuoden 1917 [[lokakuun vallankumouksen]] aikana palatsi oli Venäjän väliaikaisen hallituksen kokoontumispaikka, ja sen valtaus on tunnettu tapahtuma. Nykyisin palatsi kuuluu [[Eremitaasi]]-museoon.
+JATKOT:
+Mikä Eremitaasi on?
+Mitä lokakuun vallankumouksessa tapahtui?
+
+### 213
+Katariinan palatsi sijaitsee Tsarskoje Selossa, Pietarin eteläpuolella. Se nimettiin Katariina I:n mukaan, ja Elisabetin aikana Bartolomeo Rastrelli rakensi sen uudelleen 1750-luvulla barokkityyliin. Palatsin sisätiloihin kuului [[Meripihkahuone]], jonka seinät oli koristeltu meripihkalaatoilla. Saksalaiset veivät huoneen toisen maailmansodan aikana, ja uusi, jäljennös valmistui vuonna 2003 Pietarin 300-vuotisjuhlaksi. Sodan jälkeen palatsi kunnostettiin. Lähistöllä sijaitsee koulu, jossa [[Aleksanteri Pushkin]] opiskeli.
+JATKOT:
+Mitä meripihkahuoneelle tapahtui sodan aikana?
+Millainen oli Pushkinin elämä?
+
+### 214
+Suuri kaskadi on Peterhofin puiston tunnetuin nähtävyys. Se laskeutuu Suuren palatsin alapuolella olevaa rinnettä kohti merta, ja sen kultaiset patsaat ja suihkulähteet ovat sen näyttävintä antia. Keskellä on [[Samson-suihkulähde]], joka asennettiin 1730-luvulla. Vesi virtaa painovoiman avulla yläpuolisista lähteistä ja altaista, joten pumppuja ei tarvita. Toisen maailmansodan aikana kaskadi vaurioitui pahoin, ja patsaita on palautettu jäljennöksinä. Kaskadin vesi laskee kanavaa pitkin [[Suomenlahteen]], ja puisto syntyi [[Pietari Suuren]] aloitteesta.
+JATKOT:
+Miksi Samson-patsas pystytettiin Peterhofiin?
+Miten kaskadin patsaat kunnostettiin sodan jälkeen?
+
+### 215
+Poltavan taistelu käytiin 8. heinäkuuta 1709 Ukrainassa, ja siinä Pietari Suuren joukot voittivat Kaarle XII:n johtaman Ruotsin armeijan. Ruotsin kuningas oli haavoittunut jalkaan ennen taistelua, joten joukkoja johti muu komentaja. Ukrainalainen hetmani [[Ivan Mazepa]] oli liittoutunut ruotsalaisten kanssa, ja hänkin pakeni taistelun jälkeen. Ruotsalaiset antautuivat muutaman päivän kuluttua [[Perevolotšnassa]], ja Kaarle XII pakeni Ottomaanien valtakuntaan. Tappio päätti Ruotsin suurvalta-ajan käytännössä, ja Venäjästä tuli Itämeren alueen merkittävä valta.
+JATKOT:
+Kuka oli Ivan Mazepa?
+Miksi Kaarle XII jäi Ottomaanien valtakuntaan?
+
+### 216
+Suuri Pohjan sota käytiin vuosina 1700–1721 Itämeren herruudesta. Se alkoi Venäjän, Tanskan ja Saksin liittoumalla Ruotsia vastaan, ja ruotsalaiset voittivat aluksi [[Narvan taistelun]] vuonna 1700. Käänne tuli Poltavan taistelussa vuonna 1709, ja Venäjä voitti myös merellä muun muassa [[Gangutin taistelussa]] vuonna 1714. Pietari Suuri perusti sodan aikana uuden kaupungin, Pietarin, ja aloitti vuonna 1718 Tallinnan lähellä [[Kadriorgin palatsin]] rakentamisen. Sota päättyi Uudenkaupungin rauhaan vuonna 1721.
+JATKOT:
+Mitä Narvan taistelussa tapahtui?
+Millainen palatsi Kadriorg on Tallinnassa?
+
+### 217
+Pietari Suuri (1672–1725) oli Venäjän tsaari ja ensimmäinen keisari, joka uudisti valtakuntaa länsimaisten mallien mukaan. Hänen aikanaan Uralin kaivos- ja metalliteollisuutta kehitettiin voimakkaasti, koska armeija tarvitsi aseita ja rautaa Suuren Pohjan sodassa. Teollisuuden perustajiin kuului [[Demidovien]] suku, ja Pietari käski perustaa Jekaterinburgin vuonna 1723. Kaupunki nimettiin hänen puolisonsa Katariinan mukaan. Pietari Suuri perusti myös Pietarin vuonna 1703, ja hänen elämänsä alkupuolella hän matkusti [[Suuren lähetystön]] mukana Länsi-Eurooppaan.
+JATKOT:
+Keitä Demidovit olivat?
+Miten Uralin teollisuus kehittyi Pietarin jälkeen?
+
+### 218
+Vasili Tatištšev (1686–1750) oli venäläinen valtiomies, historioitsija ja maantieteilijä. Hän osallistui nuorena Suuren Pohjan sotaan, ja Pietari Suuri uskoi hänelle tehtäviä Uralin kaivosten parissa. Hän valitsi Jekaterinburgin paikan ja aloitti sen suunnittelun, mutta hanke pysähtyi, kun hallinto ei sitä hyväksynyt, ja rakentaminen jatkui vasta [[Georg Wilhelm de Gennin]]in johdolla vuonna 1723. Tatištšev kirjoitti Venäjän historian, jota pidetään sen aikakauden merkittävänä yleisesityksenä. Hän oli mukana myös [[Permin]] kaupungin perustamisessa.
+JATKOT:
+Mitä Tatištševin Venäjän historia sisältää?
+Miten Perm perustettiin?
+
+### 219
+Georg Wilhelm de Gennin oli saksalaissyntyinen kaivos- ja metalli-insinööri, joka siirtyi Venäjän palvelukseen 1700-luvun alussa. Hän työskenteli ensin [[Äänisjärven]] seudun ruukeilla, joiden yhteyteen kasvoi myöhemmin [[Petroskoin]] kaupunki, ja siirtyi sitten Uralille, missä hän johti Jekaterinburgin rakentamista vuodesta 1723. Lähteiden mukaan hän lähetti keisarin puolisolle Katariinalle tarjottimen, joka oli taottu ruukin ensimmäisestä kuparisulatuksesta, ja pyysi saada nimetä ruukin tämän mukaan. De Gennin laati myös kuvauksen [[Uralin]] ja Siperian tehtaista. Tarkat vuosiluvut hänen elämästään ovat minulle epävarmoja.
+JATKOT:
+Mikä on Petroskoin historia?
+Mitä Uralin tehtaat valmistivat 1700-luvulla?
+
+### 220
+Venäjän keisarikunta kesti vuodesta 1721 vuoteen 1917, ja sen aikana valtakunta laajeni Itämerelta Tyynellemerelle asti. Keisarikuntaan kuuluivat muun muassa Suomi, Baltian maakunnat ja suuri osa Puolaa. Maaorjuus lakkautettiin vuonna 1861 [[Aleksanteri II]]:n aikana, ja 1800-luvun lopulla maahan rakennettiin rautateitä, muun muassa [[Trans-Siperian rautatie]]. Jekaterinburg oli osa keisarikunnan teollisuusaluetta: sen kautta kulki Siperian valtatie vuodesta 1763, ja se sai vuorikaupungin aseman vuonna 1807. Vuonna 1905 maata ravisteli [[vuoden 1905 vallankumous]], joka johti ensimmäisen kansanedustuslaitoksen perustamiseen.
+JATKOT:
+Miksi maaorjuus lakkautettiin Venäjällä?
+Miten Trans-Siperian rautatie rakennettiin?
+
+### 221
+Pietari Suuri (1672–1725) hallitsi Venäjää ensin yhdessä velihalvinsa kanssa ja vuodesta 1696 yksin. Hän matkusti nuorena [[Suuren lähetystön]] mukana Länsi-Eurooppaan, tutustui laivanrakennukseen ja palasi uudistamaan valtakuntaa. Vuonna 1703 hän perusti Nevan suulle [[Pietari-Paavalin linnoituksen]], jonka ympärille kasvoi Pietari, ja kaupungista tuli pääkaupunki vuonna 1712. Rakennustyössä kuoli paljon ihmisiä raskaissa oloissa. Pietari kutsui kaupunkia ikkunaksi Eurooppaan. Hän voitti [[Suuren Pohjan sodan]] ja otti keisarin arvonimen vuonna 1721, ja hänen puolisonsa [[Katariina I]] seurasi häntä valtaistuimella.
+JATKOT:
+Millaista elämä oli Pietarin rakennustyömaalla?
+Miksi Pietari Suuri matkusti Länsi-Eurooppaan?
+
+### 222
+Uralvuoristo on pohjoisesta etelään noin 2 500 kilometriä pitkä vuorijono, joka ulottuu Jäämeren rannikolta Kazakstanin rajoille. Se on hyvin vanha vuoristo, jonka synty ajoittuu satojen miljoonien vuosien taakse, ja siksi se on kulunut matalaksi. Korkein huippu [[Narodnaja-vuori]] on noin 1 900 metriä korkea. Vuoristo on rikas malmeista, kuparista, raudasta ja jalokivistä, ja se on ollut Venäjän teollisuuden tärkeä raaka-ainelähde. Alueelta tunnetaan myös [[malakiitti]], vihreä koristekivi. Vuoriston harjannetta pidetään yleisimmin Euroopan ja Aasian rajana, ja [[Ural-joki]] jatkaa rajaa etelässä.
+JATKOT:
+Mistä Euroopan ja Aasian raja on peräisin?
+Miten Uralin malmit vaikuttivat Venäjän teollisuuteen?
+
+### 223
+Musta meri on Euroopan, Kaukasuksen ja Anatolian välinen sisämeri, joka yhdistyy Välimereen [[Bosporinsalmen]] ja Dardanellien kautta. Sen suurin syvyys on noin 2 200 metriä, ja syvissä osissa vesi on hapetonta ja sisältää rikkivetyä, joten elämä keskittyy ylempiin vesikerroksiin. Mereen laskevat muun muassa [[Tonava]], [[Dnepr]] ja Dnestr, ja rannikkovaltioita ovat Turkki, Bulgaria, Romania, Ukraina, Venäjä ja Georgia. Antiikin kreikkalaiset perustivat rannoille siirtokuntia, ja nykyisin merellä sijaitsee muun muassa satamakaupunki [[Odessa]].
+JATKOT:
+Miksi Mustan meren syvä vesi on hapetonta?
+Millaisia kreikkalaisia siirtokuntia Mustalla merellä oli?
+
+### 224
+Pietari Suuri uudisti Venäjän hallintoa ja kirkkoa: hän perusti vuonna 1711 senaatin ja korvasi patriarkan virkaa vuonna 1721 [[Pyhän synodin]] johdolla. Vuonna 1722 hän otti käyttöön virkaportaikon, jossa virka-ura perustui ansioihin eikä pelkkään sukuun. Hänen aikanaan perustettiin myös [[Pietarin tiedeakatemia]], jonka toiminta alkoi pian hänen kuolemansa jälkeen. Uralin kaivosteollisuus kasvoi nopeasti, koska armeija ja laivasto tarvitsivat rautaa ja aseita. Vuoden 1700 alusta Venäjällä alettiin laskea uutta vuotta tammikuun ensimmäisestä päivästä.
+JATKOT:
+Mitä Pyhä synodi teki?
+Miten Venäjän laivasto syntyi Pietari Suuren aikana?
+
+### 225
+Vasili Tatištšev (1686–1750) oli venäläinen valtiomies ja historioitsija, joka palveli [[Pietari Suurta]] sotilaana ja virkamiehenä. Hän johti Uralin kaivostoimintaa ja valitsi Jekaterinburgin paikan Iset-joen rannalta. [[Berg-kollegio]] ei kuitenkaan hyväksynyt hanketta, joten työ keskeytyi ja hän menetti Uralin kaivosten johdon, ja rakentaminen jatkui vasta de Genninin johdolla. Tatištšev vieraili myös [[Tukholmassa]] tutustumassa Ruotsin kaivosteollisuuteen. Hänen pääteoksensa on Venäjän historia, jota pidetään ensimmäisenä laajana yleisesityksenä aiheesta. Hän käytti lähteinään myös kronikoita, jotka eivät ole säilyneet tähän päivään.
+JATKOT:
+Mikä Berg-kollegio oli?
+Mitä kronikat kertovat varhaisesta Venäjästä?
+
+### 226
+Äänisjärvi on Euroopan toiseksi suurin järvi Laatokan jälkeen, ja se sijaitsee Karjalan tasavallassa Venäjällä. Länsirannalla sijaitsee [[Petroskoi]], joka kasvoi Pietari Suuren aikaisen ruukin ympärille. Järven keskiosassa on [[Kižin saari]], jonka puinen kirkkoryhmä on Unescon maailmanperintökohde. Järvi on yhteydessä [[Laatokkaan]] Syväri-joen kautta, ja sen rannoilta on löydetty kallioon piirrettyjä pyyntikuvia. Georg Wilhelm de Gennin työskenteli aiemmin järven seudun ruukeilla.
+JATKOT:
+Millainen on Kižin saaren puukirkko?
+Mitä Syväri-joki yhdistää?
+
+### 227
+Jakov Sverdlov (1885–1919) oli bolševikkijohtaja, joka toimi vuoden 1917 vallankumouksen jälkeen Koko Venäjän keskusjohtokunnan puheenjohtajana eli nimellisenä valtionpäämiehenä. Hän oli puolueen organisaatiotyön keskeinen hahmo ja toimi aiemmin Uralilla, minkä vuoksi Jekaterinburg sai hänen nimensä vuonna 1924. Hän kuoli sairauteen maaliskuussa 1919. Jekaterinburgissa teloitettiin heinäkuussa 1918 [[Nikolai II]]:n perhe. Siinä, kuinka suuri osa päätöksestä tehtiin Moskovassa ja kuinka suuri Uralilla, historiantutkijat ovat olleet eri mieltä. Alue tunnetaan edelleen [[Sverdlovskin alueena]].
+JATKOT:
+Mitä Nikolai II:n perheelle tapahtui?
+Miksi kaupunkien nimiä vaihdettiin Neuvostoliitossa?
+
+### 228
+Neuvostoliitto perustettiin joulukuussa 1922, ja siihen kuuluivat aluksi Venäjä, Ukraina, Valko-Venäjä ja Taka-Kaukasia. Valtion johtajina olivat muun muassa Lenin ja [[Josif Stalin]]. Neuvostoliitto oli toisen maailmansodan voittajavaltioita ja toinen osapuoli [[kylmässä sodassa]]. Viimeinen johtaja [[Mihail Gorbatšov]] aloitti 1980-luvulla uudistusohjelman, jonka nimi oli [[perestroika]]. Neuvostoliitto lakkasi olemasta joulukuussa 1991, ja sen tilalle tuli viisitoista itsenäistä valtiota. Jekaterinburg oli Neuvostoliiton aikana Sverdlovsk ja teollisuuden keskus, jonka tehtaat työllistivät sodan aikana monia evakuoituja.
+JATKOT:
+Miksi Neuvostoliitto hajosi vuonna 1991?
+Mitä perestroika tarkoitti?
+
+### 229
+Rostov-Suzdal oli keskiaikainen ruhtinaskunta Koillis-Venäjällä, Moskovan koillispuolella. Sen ruhtinaat olivat Kiovan hallitsijasuvun jäseniä, ja ensimmäisenä keskuksena toimi Rostov ja myöhemmin Suzdal. [[Andrei Bogoljubski]] siirsi hallinnon keskuksen vuoden 1157 tienoilla [[Vladimirin]] kaupunkiin, jolloin ruhtinaskunta tunnettiin Vladimir-Suzdalin nimellä. Juri Dolgoruki hallitsi aluetta ennen häntä. Mongolit valtasivat alueen 1230-luvun lopulla, ja myöhemmin sen perintöä jatkoi [[Moskovan suuriruhtinaskunta]]. Alueen valkokivikirkot kuuluvat Unescon maailmanperintöön.
+JATKOT:
+Millaisia valkokivikirkkoja Vladimirissa on?
+Kuka oli Andrei Bogoljubski?
+
+### 230
+Kultainen rengas on matkailureitti ja perinteinen nimitys vanhoille venäläiskaupungeille Moskovan koillispuolella. Nimi vakiintui 1960-luvulla, ja reitin kaupungit kertovat Venäjän varhaisesta historiasta kirkkojensa, luostareidensa ja kremliensä kautta. Siihen kuuluu usein myös [[Pereslavl-Zalesski]], [[Rostov Veliki]] ja [[Uglitš]], sekä [[Troitsa-Sergijevin lavra]] Sergijev Possadissa. Kaupunkien luettelo vaihtelee lähteestä toiseen, koska rajaus ei ole virallinen. Suzdal ja Vladimir kuuluvat reitin tunnetuimpiin kohteisiin.
+JATKOT:
+Mitä Rostovin kremlissä voi nähdä?
+Miten Troitsa-Sergijevin lavra syntyi?
+
+### 231
+Unesco on Yhdistyneiden kansakuntien kasvatus-, tiede- ja kulttuurijärjestö, joka perustettiin vuonna 1945 ja jonka päämaja on [[Pariisissa]]. Järjestön tehtäviin kuuluu koulutuksen, tieteen ja kulttuurin edistäminen eri maiden välillä. Tunnetuin tehtävä on vuoden 1972 sopimukseen perustuva [[maailmanperintöluettelo]], johon hyväksytään kulttuuri- ja luontokohteita, joilla katsotaan olevan poikkeuksellinen yleismaailmallinen arvo. Luettelossa on yli tuhat kohdetta. Vladimirin ja Suzdalin valkoiset muistomerkit hyväksyttiin luetteloon vuonna 1992.
+JATKOT:
+Millä perusteilla kohde hyväksytään maailmanperintöön?
+Mitä maailmanperintökohteita Venäjällä on?
+
+### 232
+Vladimir on kaupunki Kljazma-joen varrella, noin sadan kahdeksankymmenen kilometrin päässä Moskovasta itään. Perimätiedon mukaan sen perusti vuonna 1108 ruhtinas [[Vladimir Monomah]], josta kaupunki sai nimensä, ei Kiovan kastaneesta Vladimir Suuresta. Vuoden 1157 jälkeen siitä tuli [[Andrei Bogoljubski]]n johdolla Koillis-Venäjän ruhtinaskunnan keskus. Kaupungin tunnetuimpia rakennuksia ovat Uspenskin katedraali ja [[Kultaiset portit]], jotka ovat osa Unescon maailmanperintökohdetta. Mongolit valtasivat kaupungin vuonna 1238.
+JATKOT:
+Millainen on Vladimirin Uspenskin katedraali?
+Miten Moskova otti Vladimirin ruhtinaan aseman?
+
+### 233
+Sergijev Possad on kaupunki noin seitsemänkymmenen kilometrin päässä Moskovasta koilliseen, ja se on tunnettu [[Troitsa-Sergijevin lavrasta]], Venäjän ortodoksisen kirkon tärkeästä luostarista. Luostarin perusti noin vuonna 1337 [[Sergei Radonežilainen]], jota pidetään yhtenä Venäjän tärkeimmistä pyhimyksistä. Kaupunki oli vuosina 1930–1991 nimeltään Zagorsk. Luostari kuuluu Unescon maailmanperintöön. Kaupungin leluperinteen yhteydessä mainitaan usein [[matrjoška]]-nuket, mutta niiden tarkka syntypaikka on kiistanalainen.
+JATKOT:
+Kuka oli Sergei Radonežilainen?
+Mikä on matrjoška-nuken historia?
+
+### 234
+Jaroslavl on kaupunki Volgan rannalla, noin kolmensadan kilometrin päässä Moskovasta koilliseen. Perimätiedon mukaan sen perusti noin vuonna 1010 ruhtinas [[Jaroslav Viisas]], ja kaupunki juhli tuhatvuotispäiväänsä vuonna 2010. Historiallinen keskusta on merkitty Unescon maailmanperintöön. Kaupungin tunnetuimpia nähtävyyksiä on 1600-luvun [[Elian profeetan kirkko]], jonka seinämaalaukset ovat huomattavia. Kaupungin vaakunassa on karhu. Jaroslavl on kasvanut [[Volgan]] kauppakaupungiksi, ja sen rantapuisto on suosittu kävelyreitti.
+JATKOT:
+Miksi karhu on Jaroslavlin vaakunassa?
+Millaisia kauppoja Volgan varrella käytiin?
+
+### 235
+Kostroma on kaupunki Volgan rannalla Moskovan koillispuolella, ja perimätiedon mukaan sen perusti 1100-luvulla Juri Dolgoruki. Kaupungin tunnetuin paikka on [[Ipatjevin luostari]], jossa Mihail Romanovia kehotettiin vuonna 1613 ryhtymään tsaariksi, ja tästä alkoi [[Romanovien]] hallitsijasuku. Kostroma oli tunnettu pellavan viljelystä ja kankaista, ja alueelta on peräisin kostroman karjarotu. Nykyisin Kostromaa mainostetaan Lumitytön kotikaupunkina. Kaupunki on osa Kultaista rengasta.
+JATKOT:
+Miksi Romanovit valittiin tsaarin sukuun?
+Mitä Ipatjevin luostari on?
+
+### 236
+Vladimir Monomah (1053–1125) oli Kiovan suuriruhtinas vuosina 1113–1125. Hänen äitinsä oli bysanttilaista sukua, ja lisänimi Monomah viittaa tähän yhteyteen. Perimätiedon mukaan hän perusti Vladimirin kaupungin vuonna 1108. Hän tunnetaan opetuskirjoituksesta, jonka hän kirjoitti pojilleen ja jossa neuvotaan hallitsemaan oikeudenmukaisesti. Hänen aikaansa pidetään Kiovan Rusin viimeisenä yhtenäisenä kautena, ja hänen poikansa [[Mstislav Suuri]] jatkoi hallintoa. [[Monomahin lakki]], Venäjän tsaarien seremoniakruunu, on nimetty hänen mukaansa, vaikka yhteys häneen on legendaarinen.
+JATKOT:
+Mitä Monomahin opetuskirjoitus sisältää?
+Miten Kiovan Rus hajosi?
+
+### 237
+Moskova on Venäjän pääkaupunki, ja sen ensimmäinen kronikkamaininta on vuodelta 1147. Keskiajalla siitä kasvoi Moskovan suuriruhtinaskunnan keskus, ja sen sydän on Kreml ja sen vieressä [[Punainen tori]]. Torin laidalla seisoo 1500-luvun puolivälissä rakennettu [[Vasili Autuaan katedraali]]. Moskova menetti pääkaupungin aseman Pietarille 1700-luvun alussa, ja bolševikit siirsivät pääkaupungin takaisin Moskovaan vuonna 1918. Kaupungin metro avattiin vuonna 1935. Moskovan ruokaperinnettä edustaa muun muassa [[Olivier-salaatti]], joka syntyi 1860-luvulla Hermitage-ravintolassa.
+JATKOT:
+Miten Olivier-salaatti valmistetaan?
+Miksi Moskovasta tuli pääkaupunki uudestaan vuonna 1918?
+
+### 238
+Kiova on Ukrainan pääkaupunki Dneprin rannalla, ja se oli keskiajalla [[Kiovan Rusin]] keskus. Ruhtinas Vladimir Suuri kastoi kaupungin asukkaat vuonna 988. Kaupungin vanhoja nähtävyyksiä ovat 1000-luvulla rakennettu [[Pyhän Sofian katedraali]], jonka seiniltä on löydetty tuhansia vanhoja piirroksia ja tekstejä, sekä [[Kiovan luolaluostari]]. Mongolit valtasivat kaupungin 1240. Kiovassa seisoo myös Bartolomeo Rastrellin suunnittelema Andreaksen kirkko jyrkän mäen päällä. Kaupungin nimi perustuu legendaan Kyi-nimisestä perustajasta.
+JATKOT:
+Mitä Kiovan Rus oli?
+Mikä Kiovan luolaluostari on?
+
+### 239
+Andrei Tarkovski (1932–1986) oli neuvostoliittolainen elokuvaohjaaja, jonka teoksia pidetään elokuvataiteen merkittävimpinä. Hänen elokuviaan ovat muun muassa Ivanin lapsuus, Andrei Rubljov, [[Solaris]] ja [[Stalker]]. Andrei Rubljov valmistui vuonna 1966, mutta se sai Neuvostoliitossa täyden levityksen vasta vuonna 1971. Tarkovski lähti Neuvostoliitosta 1980-luvun alussa ja teki viimeiset elokuvansa Italiassa ja Ruotsissa, muun muassa [[Uhrin]]. Hän kuoli Pariisissa joulukuussa 1986. Hänen isänsä Arseni oli runoilija.
+JATKOT:
+Miksi Andrei Rubljov oli Neuvostoliitossa kiistelty?
+Mistä Solaris kertoo?
+
+### 240
+Kolminaisuus-ikoni on Andrei Rubljovin maalaama ikoni, jonka arvioidaan syntyneen 1400-luvun alussa. Se esittää kolme enkeliä pöydän ääressä ja perustuu Vanhan testamentin kertomukseen, jossa kolme vierasta saapuu Abrahamin luo. Kuvan hahmot muodostavat ympyrämäisen sommitelman, ja teosta pidetään venäläisen ikonitaiteen tunnetuimpana. Ikoni maalattiin tiettävästi [[Sergei Radonežilainen]] kunniaksi Troitsa-Sergijevin luostariin, ja nykyisin sitä säilytetään [[Tretjakovin galleriassa]] Moskovassa. Tarkkaa maalausvuotta ei tunneta varmasti.
+JATKOT:
+Kuka oli ikonimaalari Andrei Rubljov?
+Mitä Vanhan testamentin Abraham-kertomus sisältää?
