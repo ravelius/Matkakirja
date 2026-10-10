@@ -41,6 +41,18 @@ const tunnus = (nimi) => nimi.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCa
 const arvo = (a) => (a && typeof a === 'object' ? a.arvo ?? null : a ?? null);
 const lahde = (a) => (a && typeof a === 'object' ? { arvo: a.arvo ?? null, vuosi: a.vuosi ?? null, lahde: a.lahde ?? null, linkki: a.linkki ?? null } : null);
 
+/*
+ * Lähi-itä (PT 10.10.2026): Palestiinan Ramallah on "hallinnon paikka", ja
+ * Jerusalem on laudan kaupunki ilman maata ja ilman kannanottoa — siitä ei
+ * tehdä pistettä. Maakortti näyttää sen Israelin "hallinnon paikkana"
+ * (tools/vienti/kokoelmat.mjs HALLINNON_PAIKAT, PT 10.10.2026).
+ */
+const ASEMA = { PSE: 'hallinnon paikka' };
+const LAUDAN_KAUPUNKI_EI_PISTETTA = { ISR: 'jerusalem' };
+// "paakaupunki"-rivien maa-objektissa on vain tunnus, nimi ja genetiivi
+// (maa on jo laudalla omine tietoineen); perustiedot vain täysistä riveistä.
+const taysiMaa = (m) => Boolean(m.virallinen_nimi_fi || m.esittely_fi);
+
 let lisatty = 0;
 for (const polku of syotteet) {
   const data = JSON.parse(readFileSync(polku, 'utf8'));
@@ -48,7 +60,7 @@ for (const polku of syotteet) {
     if (tyyppi === 'kuvat') continue; // vain kuvamotiivit, kaupunki jo laudalla
     const iso = m.iso3 ?? m.id;
     if (!maat[iso]) throw new Error(`${iso}: maata ei ole laudalla (countryShapes) — lisää ensin rajat (tools/maat-lisaa-maailmankartalle.mjs)`);
-    perustiedot.set(iso, {
+    if (taysiMaa(m)) perustiedot.set(iso, {
       virallinenNimi: m.virallinen_nimi_fi ?? null,
       virallinenNimiAlkukieli: m.virallinen_nimi_alkukieli ?? null,
       valtiomuoto: m.valtiomuoto ?? null,
@@ -64,13 +76,14 @@ for (const polku of syotteet) {
     const q = k.wikidata_q ?? null;
     const o = q ? opasQ.get(q) : null;
     const id = o?.id ? tunnus(o.id) : tunnus(k.nimi_fi);
+    if (LAUDAN_KAUPUNKI_EI_PISTETTA[iso] === id) { pisteet.delete(iso); continue; }
     if (laudanKaupungit.has(id)) throw new Error(`${iso}: pääkaupungin id ${id} on jo laudan kaupunki — se on pysäkki, ei pistettä`);
     const lat = k.sijainti?.lat ?? o?.lat; const lon = k.sijainti?.lon ?? o?.lon;
     if (!Number.isFinite(lat) || !Number.isFinite(lon)) throw new Error(`${iso}: pääkaupungilta puuttuu sijainti`);
     pisteet.set(iso, {
       id, nimi: k.nimi_fi, nimiAlkukieli: k.nimi_alkukieli ?? null, maa: iso, lat: Number(lat.toFixed(4)), lon: Number(lon.toFixed(4)),
       wikidata: q ?? o?.q ?? null,
-      asema: k.asema ?? 'pääkaupunki',
+      asema: ASEMA[iso] ?? k.asema ?? 'pääkaupunki',
       asukkaat: lahde(k.asukasluku),
       kuvaus: k.kuvaus_fi ?? null,
       tunnusrakennukset: k.tunnusrakennukset ?? [],

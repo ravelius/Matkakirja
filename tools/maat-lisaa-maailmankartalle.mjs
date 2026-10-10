@@ -110,6 +110,13 @@ const MAAT = {
   SGP: ['Singapore', 'Singapore', 'Flag of Singapore.svg', { minKoko: 0, sieto: 0.3 }],
   SHN: ['Saint Helena', 'Saint Helena', 'Flag of Saint Helena.svg', { minKoko: 0, sieto: 0.3, sade: 200 }],
   TLS: ['Itä-Timor', 'Itä-Timor', 'Flag of East Timor.svg'],
+  // Lähi-itä (kaikki maat -projekti, omistaja PT:n kautta 10.10.2026). Bahrain
+  // ja Gazan kaista ovat alle MIN_KOKOn, joten pienin rengas kuten Maltalla.
+  // Palestiina on NE:ssä ADM0_A3 PSX / ISO_A3 PSE (_swe-näkökulma).
+  BHR: ['Bahrain', 'Bahrain', 'Flag of Bahrain.svg', { minKoko: 0, sieto: 0.3 }],
+  ISR: ['Israel', 'Israel', 'Flag of Israel.svg'],
+  LBN: ['Libanon', 'Libanon', 'Flag of Lebanon.svg'],
+  PSE: ['Palestiina', 'Palestiinan valtio', 'Flag of Palestine.svg', { minKoko: 0, sieto: 0.3 }],
   // Amerikat
   ARG: ['Argentiina', 'Argentiina', 'Flag of Argentina.svg', { sieto: 2 }],
   BOL: ['Bolivia', 'Bolivia', 'Flag of Bolivia.svg'],
@@ -160,6 +167,7 @@ const ANKKURIT = [
   ['CHN', ['HKG']],
   ['MYS', ['SGP']],
   ['IDN', ['TLS']],
+  ['SYR', ['BHR', 'ISR', 'LBN', 'PSE']],
   ['TKM', ['ARG', 'BOL', 'BRA', 'CAN', 'CHL', 'COL', 'CUB', 'ECU', 'GRL', 'GTM', 'MEX', 'NIC', 'PAN', 'PER', 'PRY', 'URY', 'USA', 'VEN']],
   ['VEN', ['AUS', 'FJI', 'NZL', 'PNG', 'SLB', 'VUT']],
 ];
@@ -372,6 +380,11 @@ const piirteet = new Map();
 for (const f of data.features) {
   const iso = f.properties.ADM0_A3 || f.properties.ISO_A3;
   if (iso && !piirteet.has(iso)) piirteet.set(iso, f);
+}
+// Toinen kierros ISO_A3:lla: Palestiina on ADM0_A3:ssa PSX mutta pelissä PSE.
+for (const f of data.features) {
+  const iso = f.properties.ISO_A3;
+  if (iso && iso !== '-99' && !piirteet.has(iso)) piirteet.set(iso, f);
 }
 
 const uudet = {};

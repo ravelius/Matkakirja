@@ -51,3 +51,16 @@ test('Euroopan minivaltiot ja niiden pääkaupungit ovat mukana (omistaja 10.10.
     assert.ok(MAIDEN_PERUSTIEDOT[iso], `${iso}: perustiedot puuttuvat`);
   }
 });
+
+test('Lähi-itä: uudet maat rajoineen, Ramallah hallinnon paikka, Jerusalem ilman kannanottoa (PT 10.10.2026)', () => {
+  for (const iso of ['BHR', 'ISR', 'LBN', 'PSE']) {
+    assert.ok(maat[iso]?.renkaat?.length, `${iso}: rajat puuttuvat`);
+    assert.ok(MAIDEN_PERUSTIEDOT[iso], `${iso}: perustiedot puuttuvat`);
+  }
+  assert.equal(PAAKAUPUNKIPISTEET.find((p) => p.maa === 'PSE')?.asema, 'hallinnon paikka');
+  // Jerusalem on laudan kaupunki ilman maata: ei pistettä eikä PAAKAUPUNGIT-riviä;
+  // maakortti näyttää sen hallinnon paikkana (vienti, HALLINNON_PAIKAT).
+  assert.ok(!PAAKAUPUNKIPISTEET.some((p) => p.maa === 'ISR'));
+  assert.ok(!PAAKAUPUNGIT.ISR);
+  assert.equal(MAAILMANKARTTA.map.cityCountry.jerusalem, undefined);
+});

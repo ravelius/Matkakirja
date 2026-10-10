@@ -817,8 +817,16 @@ function maaKokoelma(ns, hae) {
   const tiedot = MAATIEDOT.maailmankartta ?? {};
   const { PAAKAUPUNKIPISTEET, MAIDEN_PERUSTIEDOT } = hae('js/packs/paakaupungit.js');
   const pisteet = new Map(PAAKAUPUNKIPISTEET.map((p) => [p.maa, p]));
-  const paakaupunki = (iso) => (PAAKAUPUNGIT[iso] ? { id: PAAKAUPUNGIT[iso], kokoelma: 'kaupungit' }
-    : pisteet.has(iso) ? { id: pisteet.get(iso).id, kokoelma: 'paakaupungit' } : null);
+  /*
+   * Israel (PT 10.10.2026): Jerusalem on laudan kaupunki ilman maata eikä
+   * pääkaupunki-kiistaan oteta kantaa; maakortti näyttää sen "hallinnon
+   * paikkana" (hallitus ja parlamentti) symmetrisesti Palestiinan Ramallahin
+   * kanssa. asema kertoo kortille otsikon: "pääkaupunki" tai "hallinnon paikka".
+   */
+  const HALLINNON_PAIKAT = { ISR: 'jerusalem' };
+  const paakaupunki = (iso) => (PAAKAUPUNGIT[iso] ? { id: PAAKAUPUNGIT[iso], kokoelma: 'kaupungit', asema: 'pääkaupunki' }
+    : HALLINNON_PAIKAT[iso] ? { id: HALLINNON_PAIKAT[iso], kokoelma: 'kaupungit', asema: 'hallinnon paikka' }
+    : pisteet.has(iso) ? { id: pisteet.get(iso).id, kokoelma: 'paakaupungit', asema: pisteet.get(iso).asema } : null);
   const rivit = Object.entries(P.map.countryShapes).map(([iso, maa]) => {
     const lippu = maa.lippu ? ratkaiseMedia(maa.lippu, 'lippu-commons') : null;
     const nimet = FOKUS_MAANIMET[iso] ?? {};
@@ -839,7 +847,8 @@ function maaKokoelma(ns, hae) {
       + 'keskitulo {arvo, sija}, tervehdykset [{teksti, kieli, osuus, lippu}]) tai null, maalehti = maalehdet-id, '
       + 'aiheet = maalehden aiheet järjestyksessä. Skeema 1.60: perustiedot (js/packs/paakaupungit.js MAIDEN_PERUSTIEDOT: '
       + 'virallinenNimi, valtiomuoto, vakiluku {arvo, vuosi, lahde, linkki}, pintaAlaKm2, kielet, valuutta, rajanaapurit, '
-      + 'genetiivi, esittely 3–5 lausetta) tai null; paakaupunki { id, kokoelma: "kaupungit" | "paakaupungit" } tai null.',
+      + 'genetiivi, esittely 3–5 lausetta) tai null; paakaupunki { id, kokoelma: "kaupungit" | "paakaupungit", asema: "pääkaupunki" | "hallinnon paikka" } tai null '
+      + '(Israelilla Jerusalem hallinnon paikkana, ei kannanottoa pääkaupunkikiistaan).',
     { maalehti: 'maalehdet' }, rivit);
 }
 

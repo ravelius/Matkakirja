@@ -999,4 +999,12 @@ export const EUROPE_MAATIEDOT = {
       { teksti: 'Jó napot', kieli: 'unkari (Vojvodina)', lippu: 'Flag of Hungary.svg', osuus: '3 %' },
     ],
   },
+  // Minivaltiot (kaikki maat -projekti, PT 10.10.2026; Natiivi-UI:n pyyntö):
+  // vain väkiluku ja pinta-ala Sisältökirjurin faktoista (eurooppa-14-maafaktat:
+  // kansalliset tilastovirastot 2024–2026). Ei sijoja eikä vertailupalkkia.
+  AND: { vakiluku: '90 000', pintaAla: '468 km²' },
+  LIE: { vakiluku: '41 000', pintaAla: '160 km²' },
+  MCO: { vakiluku: '39 000', pintaAla: '2 km²' },
+  SMR: { vakiluku: '34 000', pintaAla: '61 km²' },
+  VAT: { vakiluku: '882', pintaAla: '0,44 km²' },
 };
