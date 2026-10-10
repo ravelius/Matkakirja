@@ -613,11 +613,17 @@ namespace Matkakirja.Editori
                 () => UiNakymat.Hae().Linssit.Valitsin.Sulje(), 0.8),
             ("pillerin aarteet", () => { UiNakymat.Hae().Valikko.Sulje(); UiNakymat.Hae().Linssit.Valitsin.TestaaNakyma("aarteet", -1); },
                 () => UiNakymat.Hae().Linssit.Valitsin.Sulje(), 0.8),
-            // Saapumisen näkymät (Natiivi-UI 10.10.2026) kuten `ui saapumiskortti`, `ui traileri lontoo` ja `ui luento ateena`
+            // Saapumisen näkymät (Natiivi-UI 10.10.2026) kuten `ui saapumiskortti`, `ui traileri firenze` ja `ui luento ateena`
             // (ääneton testikomento: fokusmerkintä ja luentakuvat).
             ("saapumiskortti", () => UiNakymat.Hae().Saapumiskortti.Nayta("ATEENA · PÄIVÄ 1/80", () => { }, () => { }),
                 () => UiNakymat.Hae().Saapumiskortti.Peru(), 1.5),
-            ("traileri", () => UiNakymat.Hae().Traileri.Nayta("lontoo", null, () => { }), () => UiNakymat.Hae().Traileri.Ohita(), 2.0),
+            // Trailerin kuvat tulevat kaupungin lehdestä (UiSisalto.LataaLehti; Firenzen lehti on jo ladattu kaupunkilehdessä);
+            // ilman kuvia traileri ei ala (ajo 05.43: Ateena).
+            ("traileri", () =>
+                {
+                    UiSisalto.LataaLehti("firenze");
+                    UiKerros.Hae().Juuri(UiKerros.Valikot).schedule.Execute(() => UiNakymat.Hae().Traileri.Nayta("firenze", null, () => { })).StartingIn(800);
+                }, () => UiNakymat.Hae().Traileri.Ohita(), 2.5),
             ("luento", () => UiNakymat.Hae().Saapuminen.Alkoi("ateena", pakota: true),
                 () => { var u = UiNakymat.Hae(); u.Saapuminen.Loppui("ateena"); u.Matkakirja.Piilota(); SuljeKaikki(); }, 3.0),
         };
