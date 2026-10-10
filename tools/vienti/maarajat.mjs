@@ -49,6 +49,37 @@ export function harvenna(pisteet, tol = MAARAJOJEN_TOLERANSSI) {
   return pisteet.filter((_, k) => pidetaan[k]);
 }
 
+/*
+ * SISÄKKÄISET RENKAAT POIS (A5, Natiiviseppä 10.10.2026): natiivi täyttää
+ * renkaat even-odd-säännöllä (MaaOsuma, maamaski), joten mantereen
+ * harvennetun rannikon sisään jäävä pikkusaari olisi reikä maassa. Rengas
+ * pudotetaan, jos vähintään puolet sen näytepisteistä (kärjet, sivujen
+ * keskipisteet ja keskipiste) on saman maan suuremman renkaan sisällä.
+ * Webin tummennus täyttää nonzero-säännöllä, joten maapolygonit.json pitää
+ * renkaat. Mitattu: sisäkkäisiä 79 → 32 (loput osittaisia, alle puolet).
+ */
+const ala = (r) => { let a = 0; for (let i = 0; i < r.length - 1; i++) a += r[i][0] * r[i + 1][1] - r[i + 1][0] * r[i][1]; return Math.abs(a / 2); };
+function sisalla([x, y], r) {
+  let s = false;
+  for (let i = 0, j = r.length - 1; i < r.length; j = i++) {
+    const [xi, yi] = r[i]; const [xj, yj] = r[j];
+    if ((yi > y) !== (yj > y) && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) s = !s;
+  }
+  return s;
+}
+export function sisakkaisetPois(renkaat) {
+  const tiedot = renkaat.map((r) => ({ a: ala(r), b: laatikko([r]) }));
+  return renkaat.filter((r, i) => {
+    const { a, b } = tiedot[i];
+    const n = r.length - 1;
+    const naytteet = [...r.slice(0, n), ...r.slice(0, n).map((p, k) => [(p[0] + r[k + 1][0]) / 2, (p[1] + r[k + 1][1]) / 2]),
+      [r.slice(0, n).reduce((s, p) => s + p[0], 0) / n, r.slice(0, n).reduce((s, p) => s + p[1], 0) / n]];
+    return !tiedot.some((t, j) => j !== i && t.a > a
+      && t.b[0] <= b[2] && t.b[2] >= b[0] && t.b[1] <= b[3] && t.b[3] >= b[1]
+      && naytteet.filter((p) => sisalla(p, renkaat[j])).length * 2 >= naytteet.length);
+  });
+}
+
 const pyorista = (v) => Math.round(v * 1000) / 1000;
 
 const laatikko = (renkaat) => {
@@ -64,11 +95,13 @@ export function maarajaRivit(polku) {
   return Object.keys(data.maat).sort().map((iso) => {
     // Minivaltiot (10.10.2026): 0,05°:n harvennus litistäisi Vatikaanin ja
     // Monacon alle neljän pisteen ja ne putoaisivat; niille toleranssi
-    // kymmenesosa renkaan koosta. Muut maat ennallaan.
-    const tol = (r) => (MINIVALTIOT.has(iso) ? Math.min(MAARAJOJEN_TOLERANSSI, laajuus(r) / 10) : MAARAJOJEN_TOLERANSSI);
-    const kaikki = maanRenkaatAsteina(data, iso, asteet)
+    // kymmenesosa renkaan koosta. Pienet saaret (A5, PT 10.10.2026): sama
+    // vika kaikissa maissa, joten muille neljäsosa renkaan koosta (vaikuttaa
+    // vain alle 0,2°:n renkaisiin; maarajat 1,076 → 1,158 Mt).
+    const tol = (r) => Math.min(MAARAJOJEN_TOLERANSSI, laajuus(r) / (MINIVALTIOT.has(iso) ? 10 : 4));
+    const kaikki = sisakkaisetPois(maanRenkaatAsteina(data, iso, asteet)
       .map((r) => harvenna(r, tol(r)).map(([lon, lat]) => [pyorista(lon), pyorista(lat)]))
-      .filter((r) => r.length >= 4);
+      .filter((r) => r.length >= 4));
     // Skeema 1.34 (Fable 24.9.2026): web piirtää pallon maat nyt Natural Earth 10m
     // -aineistosta (#3078, Huippuvuoret Norjalle), joten rajausta ei enää tehdä:
     // renkaat = kaikki admin-0-renkaat. muutRenkaat (tyhjä) ja kokoBbox säilyvät.

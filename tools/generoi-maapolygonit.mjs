@@ -199,6 +199,17 @@ const PROJEKTIO = { tyyppi: 'miller', leveys: LEVEYS, lon0: -175, pohjoinen: 76 
 const TOLERANSSI = 0.2;
 /** Tätä pienemmät saaret pudotetaan (rajauslaatikon suurempi sivu). */
 const MIN_KOKO = 3;
+/*
+ * PIENET SAARET (kartan kokonaistarkistus A5, PT 10.10.2026): MIN_KOKO
+ * pudotti 2–10 km:n saaret (Kihnu, Heimaey, Stromboli, Bandasaaret,
+ * Fidžin ja Salomonsaarten kohteet), joten niiden karttavalot jäivät
+ * maarajojen ulkopuolelle. PIENI_KOKO…MIN_KOKO-saaret pidetään, ja jos
+ * yksinkertaistus litistää ne säleeksi, tilalle tulee MINIVALTIOIDEN
+ * vinoneliö. assets/data/maapolygonit.json:iin nämä renkaat LISÄTTIIN
+ * vanhojen perään (631 rengasta, +1 %); muut renkaat ovat tavulleen
+ * ennallaan, koska koko uudelleenajo siirtäisi 43 maan rannikkoa.
+ */
+const PIENI_KOKO = 0.6;
 /** Talletustarkkuus: kymmenesosa lautayksikköä eli noin 330 metriä. */
 const TARKKUUS = 10;
 
@@ -710,12 +721,14 @@ for (const iso of pelimaat) {
     const kehä = ommel.rengas;
     const laudalla = puraRengas(kehä, projektio);
     const mini = MINIVALTIOT.has(iso);
-    if (!mini && koko(laudalla) < MIN_KOKO) { pudonneet++; continue; }
+    const kk = koko(laudalla);
+    if (!mini && kk < PIENI_KOKO) { pudonneet++; continue; }
+    const pieni = !mini && kk < MIN_KOKO;
     let kevyt = yksinkertaista(laudalla, mini ? MINI_TOLERANSSI : TOLERANSSI)
       // Talletustarkkuuteen JO TÄSSÄ: kiertosuunta ja pinta-ala
       // katsotaan samoista luvuista, jotka tiedostoon menevät.
       .map(([x, y]) => [Math.round(x * TARKKUUS) / TARKKUUS, Math.round(y * TARKKUUS) / TARKKUUS]);
-    if (mini && (kevyt.length < 4 || Math.abs(pinta(kevyt)) < 0.05)) {
+    if ((mini || pieni) && (kevyt.length < 4 || Math.abs(pinta(kevyt)) < 0.05)) {
       const kx = laudalla.reduce((t, [x]) => t + x, 0) / laudalla.length;
       const ky = laudalla.reduce((t, [, y]) => t + y, 0) / laudalla.length;
       const r = (v) => Math.round(v * TARKKUUS) / TARKKUUS;
@@ -729,7 +742,7 @@ for (const iso of pelimaat) {
      * kiertosuunta on pyöristyksen arpaa (mitattu 21.9.2026: USA, 6
      * kärkeä, ala −0,09 yksikköä²). Se putoaa kuten sirpaleet.
      */
-    if (!mini && Math.abs(pinta(kevyt)) < 1) { pudonneet++; continue; }
+    if (!mini && !pieni && Math.abs(pinta(kevyt)) < 1) { pudonneet++; continue; }
     renkaat.push(koodaa(suunnista(kevyt)));
     renkaita++;
     pisteita += kevyt.length;
