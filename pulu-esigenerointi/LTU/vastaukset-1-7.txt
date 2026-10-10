@@ -38,13 +38,13 @@ Mikä oli Liettuan kansallinen herääminen?
 Miksi Venäjä kielsi liettuankieliset kirjat?
 ### 32.2
 KYSYMYS: Miksi Marijampolen puutalot vaihtuivat 1800-luvulla kivitaloiksi?
-Odotas vähän. Syynä oli vuoden 1868 palo, joka tuhosi monta kaupungin puutaloa. Puurakennukset syttyvät helposti ja tuli leviää niissä nopeasti, joten palon jälkeen taloja alettiin rakentaa kivestä, koska se on paljon paloturvallisempaa. Kaupunki rakennettiin siis osittain uudelleen paloturvallisemmaksi. Sama ajatus ohjasi muuallakin: palosta opittiin, ja kivi tuli puun tilalle.
+Odotas vähän. Syynä oli vuoden 1868 [[kaupunkipalo]], joka tuhosi monta [[Marijampolen]] puutaloa. Puurakennukset syttyvät helposti ja tuli leviää niissä nopeasti, joten palon jälkeen taloja alettiin rakentaa kivestä, koska se on paljon paloturvallisempaa. Kaupunki rakennettiin siis osittain uudelleen paloturvallisemmaksi. Sama ajatus ohjasi muuallakin: palosta opittiin, ja kivi tuli puun tilalle.
 JATKOT:
 Miksi kivitalot ovat paloturvallisempia kuin puutalot?
 Mitä muita suuria kaupunkipaloja Euroopassa on ollut?
 ### 32.3
 KYSYMYS: Mistä Šešupė-joki virtaa ja mihin se päätyy?
-Ai se. Šešupė on Nemunas-joen sivujoki, ja se virtaa Liettuan lounaisosassa muun muassa [[Marijampolen]] kautta. Joen alajuoksulla se muodostaa osan Liettuan ja Venäjän Kaliningradin alueen välistä rajaa, ja lopulta se yhtyy Nemunas-jokeen. Marijampolessa joki jakaa kaupungin kahteen osaan, joita yhdistävät sillat. Siltoja on kuusi, ja ne ovat minusta kauniita ylhäältä katsottuna.
+Ai se. Šešupė on [[Nemunas-joen]] sivujoki, ja se virtaa Liettuan lounaisosassa muun muassa [[Marijampolen]] kautta. Joen alajuoksulla se muodostaa osan Liettuan ja Venäjän Kaliningradin alueen välistä rajaa, ja lopulta se yhtyy Nemunas-jokeen. Marijampolessa joki jakaa kaupungin kahteen osaan, joita yhdistävät sillat. Siltoja on kuusi, ja ne ovat minusta kauniita ylhäältä katsottuna.
 JATKOT:
 Mistä Šešupė-joen nimi tulee?
 Mitä sivujoki tarkoittaa?
@@ -62,13 +62,13 @@ Mitkä ovat kolme Baltian maata?
 Mikä Kaliningradin alue on?
 ### 33.1
 KYSYMYS: Miksi Vištytis alkoi taantua, vaikka rautatie rakennettiin vain muutaman kilometrin päähän?
-No jopas. Kaupunki jäi rautatien ulkopuolelle: kun rautatie Königsbergistä Venäjälle rakennettiin vuonna 1861 [[Kybartain]] kautta, kaupan ja liikenteen painopiste siirtyi sinne. Muutama kilometri on junan aikakaudella merkittävä matka, koska tavarat ja ihmiset kulkivat sinne, missä juna pysähtyi. Vištytis ei enää ollut tärkeä kauppapaikka, ja kaupunki taantui nopeasti, vaikka sen katurakenne säilyi.
+No jopas. Kaupunki jäi rautatien ulkopuolelle: kun rautatie [[Königsbergistä]] Venäjälle rakennettiin vuonna 1861 [[Kybartain]] kautta, kaupan ja liikenteen painopiste siirtyi sinne. Muutama kilometri on junan aikakaudella merkittävä matka, koska tavarat ja ihmiset kulkivat sinne, missä juna pysähtyi. Vištytis ei enää ollut tärkeä kauppapaikka, ja kaupunki taantui nopeasti, vaikka sen katurakenne säilyi.
 JATKOT:
 Mikä Kybartai on?
 Miten rautatiet muuttivat kaupunkien asemaa Euroopassa?
 ### 33.2
 KYSYMYS: Mikä Vištytisin lähellä oleva suuri kivi on, ja miksi sitä on säilytetty?
-Hmm, tuota niin. [[Vištytis-kivi]] on suuri siirtolohkare, siis jääkauden mannerjäätikön kuljettama kivi. Täsmällisiä mittoja en muista, joten jätän ne pois, enkä myöskään ole varma, minkä virallisen suojelun piirissä se on. Tällaiset suuret kivet ovat usein luonnonmuistomerkkejä, ja niihin liittyy paikallisia tarinoita ja perinteitä. Kiven vieressä kulkee järven ranta, ja ylhäältä katsottuna maisema on kaunis.
+Hmm, tuota niin. [[Vištytis-kivi]] on suuri [[siirtolohkare]], siis jääkauden mannerjäätikön kuljettama kivi. Täsmällisiä mittoja en muista, joten jätän ne pois, enkä myöskään ole varma, minkä virallisen suojelun piirissä se on. Tällaiset suuret kivet ovat usein luonnonmuistomerkkejä, ja niihin liittyy paikallisia tarinoita ja perinteitä. Kiven vieressä kulkee järven ranta, ja ylhäältä katsottuna maisema on kaunis.
 JATKOT:
 Mikä on siirtolohkare?
 Miten jääkausi muovasi Liettuan maisemaa?
@@ -80,19 +80,19 @@ Miksi Königsbergin nimi vaihtui?
 Mitä eksklaavi tarkoittaa?
 ### 33.4
 KYSYMYS: Miten jääkausi muovasi Liettuan järvimaisemaa?
-Odotas vähän. Jääkauden aikana mannerjäätikkö peitti suuren osan Pohjois-Eurooppaa, ja sen sulaessa se jätti jälkeensä moreenia, harjuja, kumpuja ja painanteita. Painanteisiin muodostui järviä, ja Liettuassa niitä on runsaasti, erityisesti koillisessa ja kaakossa. Jäätikkö kuljetti mukanaan myös suuria kiviä, joita kutsutaan siirtolohkareiksi. Tämän kaiken oli pakko olla hidasta puuhaa, kun ajattelee, miten monta vuotta siihen meni.
+Odotas vähän. [[Jääkauden]] aikana [[mannerjäätikkö]] peitti suuren osan Pohjois-Eurooppaa, ja sen sulaessa se jätti jälkeensä [[moreenia]], harjuja, kumpuja ja painanteita. Painanteisiin muodostui järviä, ja Liettuassa niitä on runsaasti, erityisesti koillisessa ja kaakossa. Jäätikkö kuljetti mukanaan myös suuria kiviä, joita kutsutaan siirtolohkareiksi. Tämän kaiken oli pakko olla hidasta puuhaa, kun ajattelee, miten monta vuotta siihen meni.
 JATKOT:
 Mikä on moreeni?
 Miten järvi syntyy jäätikön sulaessa?
 ### 33.5
 KYSYMYS: Mitä tarkoittaa siirtolohkare?
-Ai tota. [[Siirtolohkare]] on kivi, jonka mannerjäätikkö on kuljettanut pitkän matkan ja jättänyt sulaessaan paikkaan, jonka kallioperästä se ei ole peräisin. Siksi se eroaa ympäröivästä maaperästä. Siirtolohkareita on paljon esimerkiksi Suomessa ja Baltiassa. Tutkijat voivat selvittää kiven kallioperän perusteella, mistä suunnasta jäätikkö sen toi. Jotkut ovat valtavia, ja minä kyllä kunnioitan sellaista matkaa.
+Ai tota. [[Siirtolohkare]] on kivi, jonka mannerjäätikkö on kuljettanut pitkän matkan ja jättänyt sulaessaan paikkaan, jonka kallioperästä se ei ole peräisin. Siksi se eroaa ympäröivästä maaperästä. Siirtolohkareita on paljon esimerkiksi [[Suomessa]] ja [[Baltiassa]]. Tutkijat voivat selvittää kiven kallioperän perusteella, mistä suunnasta jäätikkö sen toi. Jotkut ovat valtavia, ja minä kyllä kunnioitan sellaista matkaa.
 JATKOT:
 Miten tutkijat selvittävät kiven alkuperän?
 Missä Suomessa on suuria siirtolohkareita?
 ### 34.1
 KYSYMYS: Miksi Zarasain keskusta rakennettiin vuonna 1837 hevosenkengän muotoiseksi?
-No niin, tää on hyvä tarina. Vuoden 1834 tulipalo poltti lähes koko keskustan, ja kaupunki rakennettiin uudelleen vuonna 1837 uuden kaavan mukaan, jossa on hevosenkengän muotoinen aukio ja siitä säteilevät kadut. Tarkoituksena oli ehkäistä suuria tulipaloja, ja kaava on säilynyt lähes muuttumattomana. Säteittäiset kadut ja aukio antavat tulelle vähemmän helppoja reittejä kuin tiheä kujien verkko, ja [[Zarasain]] kaupunkikaava on edelleen tunnistettavissa.
+No niin, tää on hyvä tarina. Vuoden 1834 [[tulipalo]] poltti lähes koko keskustan, ja kaupunki rakennettiin uudelleen vuonna 1837 uuden kaavan mukaan, jossa on hevosenkengän muotoinen aukio ja siitä säteilevät kadut. Tarkoituksena oli ehkäistä suuria tulipaloja, ja kaava on säilynyt lähes muuttumattomana. Säteittäiset kadut ja aukio antavat tulelle vähemmän helppoja reittejä kuin tiheä kujien verkko, ja [[Zarasain]] kaupunkikaava on edelleen tunnistettavissa.
 
 Ylhäältä se hevosenkenkä näyttää melkein siltä kuin joku olisi piirtänyt sen tarkoituksella. Se kyllä oli piirretty, mutta pidän siitä silti.
 JATKOT:
@@ -100,7 +100,7 @@ Millainen kaupunkikaava on säteittäinen?
 Mitä Zarasain ympäristössä on nähtävää?
 ### 34.2
 KYSYMYS: Mikä kansa antoi Zarasaille nimen, joka viittaa järviin?
-Joo, tän minä tiedän. Nimi juontuu [[seloonien]] kielen sanasta, joka tarkoittaa järveä. Seloonit olivat balttilainen heimo, joka asui nykyisen Liettuan ja Latvian alueilla, ja heidän kielensä on kuollut sukupuuttoon. Zarasai on nimensä veroinen, sillä kaupunkia ympäröivät lukuisat järvet ja joet. Nimi on siis säilynyt vanhan kielen jäänteenä.
+Joo, tän minä tiedän. Nimi juontuu [[seloonien]] kielen sanasta, joka tarkoittaa järveä. Seloonit olivat balttilainen heimo, joka asui nykyisen [[Liettuan]] ja [[Latvian]] alueilla, ja heidän kielensä on kuollut sukupuuttoon. Zarasai on nimensä veroinen, sillä kaupunkia ympäröivät lukuisat järvet ja joet. Nimi on siis säilynyt vanhan kielen jäänteenä.
 JATKOT:
 Keitä seloonit olivat?
 Mitä muita balttilaisia heimoja on ollut?
@@ -118,7 +118,7 @@ Mikä Hansaliitto oli?
 Mitä jugend tarkoittaa arkkitehtuurissa?
 ### 34.5
 KYSYMYS: Milloin Liettua julisti itsenäisyytensä ensimmäisen kerran?
-Hetkinen ny. Liettua julisti itsenäisyytensä 16. helmikuuta 1918 Vilnassa, kun ensimmäinen maailmansota oli vielä käynnissä ja Venäjän keisarikunta oli romahtanut. Itsenäisyys kesti toiseen maailmansotaan asti, ja [[Neuvostoliitto]] liitti maan itseensä vuonna 1940. Liettua palautti itsenäisyytensä 11. maaliskuuta 1990, ja se oli ensimmäinen neuvostotasavalta, joka teki niin. Onpas siit pitkä aika.
+Hetkinen ny. Liettua julisti itsenäisyytensä 16. helmikuuta 1918 [[Vilnassa]], kun ensimmäinen maailmansota oli vielä käynnissä ja [[Venäjän keisarikunta]] oli romahtanut. Itsenäisyys kesti toiseen maailmansotaan asti, ja [[Neuvostoliitto]] liitti maan itseensä vuonna 1940. Liettua palautti itsenäisyytensä 11. maaliskuuta 1990, ja se oli ensimmäinen neuvostotasavalta, joka teki niin. Onpas siit pitkä aika.
 JATKOT:
 Milloin Liettua liittyi Euroopan unioniin?
 Miten Baltian maat ovat kehittyneet itsenäistymisen jälkeen?
@@ -130,13 +130,13 @@ Mikä on kivennäisvesi?
 Mikä Saksalainen ritarikunta oli?
 ### 35.2
 KYSYMYS: Miksi suuriruhtinaat matkustivat Birštonasiin jo 1300-luvulla?
-Selvä juttu. Birštonas oli Liettuan suuriruhtinaille ja aatelistolle metsästysretkien kohde 1300–1500-luvuilla, koska seudun metsät ja Nemunas-joen ympäristö tarjosivat hyvän riistamaan. Paikka tunnettiin myös "suolaisen veden tilana", mikä viittaa kivennäisvesiin. Kylpyläkäyttö alkoi kuitenkin vasta vuonna 1846, ja sitä ennen tärkeämpää oli metsästys. Metsät ovat nytkin paikalla, vaikka ruhtinaat ovat poissa.
+Selvä juttu. [[Birštonas]] oli Liettuan suuriruhtinaille ja aatelistolle metsästysretkien kohde 1300–1500-luvuilla, koska seudun metsät ja [[Nemunas-joen]] ympäristö tarjosivat hyvän riistamaan. Paikka tunnettiin myös "suolaisen veden tilana", mikä viittaa [[kivennäisvesiin]]. Kylpyläkäyttö alkoi kuitenkin vasta vuonna 1846, ja sitä ennen tärkeämpää oli metsästys. Metsät ovat nytkin paikalla, vaikka ruhtinaat ovat poissa.
 JATKOT:
 Millaista metsästys oli keskiajan Liettuassa?
 Milloin Birštonasin kylpylä perustettiin?
 ### 35.3
 KYSYMYS: Mikä Kaunas on ja missä se sijaitsee?
-No jopas. [[Kaunas]] on Liettuan toiseksi suurin kaupunki, ja se sijaitsee maan keskiosassa Nemunas- ja Neris-jokien yhtymäkohdassa. Kaupunki oli Liettuan väliaikainen pääkaupunki kahden maailmansodan välisenä aikana, kun Vilna kuului Puolalle. Kaupunki tunnetaan muun muassa vanhastakaupungistaan ja modernistisesta arkkitehtuuristaan. Birštonas on siitä noin 30 kilometrin päässä. Ihan hyvin muistin kaiken tämän.
+No jopas. [[Kaunas]] on Liettuan toiseksi suurin kaupunki, ja se sijaitsee maan keskiosassa Nemunas- ja Neris-jokien yhtymäkohdassa. Kaupunki oli Liettuan väliaikainen pääkaupunki kahden maailmansodan välisenä aikana, kun [[Vilna]] kuului Puolalle. Kaupunki tunnetaan muun muassa vanhastakaupungistaan ja modernistisesta arkkitehtuuristaan. [[Birštonas]] on siitä noin 30 kilometrin päässä. Ihan hyvin muistin kaiken tämän.
 JATKOT:
 Miksi Kaunas oli väliaikainen pääkaupunki?
 Mitä modernistinen arkkitehtuuri tarkoittaa?
@@ -148,7 +148,7 @@ Mitä Grunwaldin taistelussa tapahtui?
 Millainen oli Liettuan suuriruhtinaskunta?
 ### 35.5
 KYSYMYS: Mikä on kivennäisvesi?
-Ai se. [[Kivennäisvesi]] on vettä, joka sisältää luonnostaan liuenneita mineraaleja, kuten kalsiumia, magnesiumia ja natriumia, koska se on kulkenut maa- tai kallioperän läpi. Sitä on käytetty juomana ja kylpyhoidoissa pitkään, ja monet kylpyläkaupungit ovat syntyneet kivennäislähteiden ympärille. Hoitovaikutuksista on esitetty paljon väitteitä, mutta niiden todistusvoima vaihtelee. Birštonaskin on tällainen kaupunki. Vesi on vesi, mutta kyllä minä tykkään jokaisesta lähteestä.
+Ai se. [[Kivennäisvesi]] on vettä, joka sisältää luonnostaan liuenneita mineraaleja, kuten kalsiumia, magnesiumia ja natriumia, koska se on kulkenut maa- tai kallioperän läpi. Sitä on käytetty juomana ja kylpyhoidoissa pitkään, ja monet kylpyläkaupungit ovat syntyneet kivennäislähteiden ympärille. Hoitovaikutuksista on esitetty paljon väitteitä, mutta niiden todistusvoima vaihtelee. [[Birštonaskin]] on tällainen kaupunki. Vesi on vesi, mutta kyllä minä tykkään jokaisesta lähteestä.
 JATKOT:
 Mitä kylpylähoidot ovat?
 Mitkä kylpyläkaupungit ovat tunnettuja Euroopassa?

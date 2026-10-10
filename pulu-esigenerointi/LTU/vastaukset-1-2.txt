@@ -12,7 +12,7 @@ Kuka saa tuoda kukkulalle oman ristin?
 Milloin kukkulaa raivattiin neuvostoaikana?
 ### 6.3
 KYSYMYS: Kävikö paavi Ristien kukkulalla?
-Ai tota. Hyvä kysymys tuo. Kyllä kävi: paavi [[Johannes Paavali II]] vieraili kukkulalla vuonna 1993, siis vain muutama vuosi sen jälkeen, kun Liettua oli palauttanut itsenäisyytensä ja [[Neuvostoliiton]] aikainen uskonnonvaino oli päättynyt. Vierailu oli kukkulalle ja sen vaalijoille tärkeä hetki, sillä paikka oli vuosikymmeniä ollut sekä uskon että vastarinnan symboli. En ole varma vierailun tarkoista yksityiskohdista, kuten päivästä tai ohjelmasta. Siinä riitti kyyhkyllekin pohdittavaa.
+Ai tota. Hyvä kysymys tuo. Kyllä kävi: paavi [[Johannes Paavali II]] vieraili kukkulalla lähteiden mukaan pian sen jälkeen, kun Liettua oli palauttanut itsenäisyytensä ja [[Neuvostoliiton]] aikainen uskonnonvaino oli päättynyt. Vierailu oli kukkulalle ja sen vaalijoille tärkeä hetki, sillä paikka oli vuosikymmeniä ollut sekä uskon että vastarinnan symboli. En ole varma vierailun tarkoista yksityiskohdista, kuten päivästä tai ohjelmasta. Siinä riitti kyyhkyllekin pohdittavaa.
 JATKOT:
 Milloin Liettua palautti itsenäisyytensä?
 Millainen paikka Šiauliai on?
@@ -131,11 +131,11 @@ JATKOT:
 Kuinka monta patsasta puistossa on?
 Miksi puiston perustaminen oli kiistanalaista?
 ### 10.2
-KYSYMYS: Minkä palkinnon puisto sai?
-Odotas vähän. Annas ku mietin. Palkinnosta minulla ei ole tietoa, enkä halua arvailla sellaista, mitä en tiedä. Tiedän kuitenkin, että [[Viliumas Malinauskas]] perusti puiston vuonna 2001 [[Druskininkain]] lähelle, noin 130 kilometriä Vilnasta lounaaseen. Puiston perustaminen oli kiistanalaista ja kohtasi huomattavaa vastustusta, mikä kertoo, että paikka herättää keskustelua. Tätä en vain osaa kyyhkynä kertoa.
+KYSYMYS: Miksi puistossa on vartiotorneja ja piikkilanka-aitoja?
+Hetkinen ny. Alueen piirteet jäljittelevät osin [[neuvostoleirejä]]: puupolkuja, vartiotorneja ja piikkilanka-aitoja. Tarkoitus on antaa vierailijalle aavistus siitä, millaista elämä [[Neuvostoliiton]] miehityksen aikana saattoi olla. Puiston perusti vuonna 2001 liikemies [[Viliumas Malinauskas]] [[Druskininkain]] lähelle. Kaikkia hänen alkuperäisiä ajatuksiaan ei kuitenkaan hyväksytty, esimerkiksi vierailijoiden kuljettamista gulag-tyylisellä junalla. Rakennelmat ovat siis muistutus, eivät oikea vankila.
 JATKOT:
-Miksi puiston perustaminen oli kiistanalaista?
-Milloin puisto avattiin yleisölle?
+Mitä gulag-leirit olivat?
+Millainen paikka Druskininkai on?
 ### 10.3
 KYSYMYS: Kuinka monta patsasta puistossa on?
 Kato, tän minä muistan. Grūtasin puiston näyttelyssä on 86 patsasta 46 kuvanveistäjältä. Puisto on [[sosialistisen realismin]] museo ja veistospuisto, jossa on neuvostoajan patsaita ja muita miehitysajan ideologisia jäänteitä. Epävirallisesti sitä kutsutaan [[Stalinin]] maailmaksi. Siinä on aika monta patsasta yhdelle puistolle.

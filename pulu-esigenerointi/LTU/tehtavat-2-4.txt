@@ -1,0 +1,998 @@
+### 241
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dzūkijan kansallispuisto (kulttuuri)
+Tietoruudun teksti: Dzūkijan kansallispuisto sijaitsee Etelä-Liettuassa, noin sadan kilometrin päässä Vilnasta lounaaseen ja Kaunasista etelään. Se perustettiin 23. huhtikuuta 1991 suojelemaan Dainavan maata, ja se on maan laajin suojeltu metsäalue: 584,5 neliökilometriä Nemunas-joen rannoilla. Maisemaa hallitsevat mäntyvaltaiset metsät, suot, järvet ja sisämaan dyynit, ja alueella on 30 jokea ja puroa. Puiston eteläpuolella on Čepkeliain suoalue, Liettuan suurin suo. Puiston hallintokeskus on Marcinkonysissa, ja alueella sijaitsee etnografinen Zervynosin kylä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historia: Kaupunki, jonka suot nielaisivat] 600-luku eaa. – 1928 — Korkyran (nykyisen Korfun) kreikkalaiset perustivat Butrintiin kauppa-asutuksen viimeistään 600-luvulla eaa., ja siitä kasvoi vaurastuva Rooman-kauden kaupunki, jolla oli oma teatteri, kylpylät ja vesijohto. Bysantin aikana kaupungista tuli piispanistuin, ja lyhyen venetsialaiskauden jälkeen ympäristö alkoi soistua. Keskiajan lopulla Butrint hylättiin kokonaan, ja raunioita peitti vuosisatojen ajan malariasuo. Italialainen arkeologi Luigi Maria Ugolini alkoi kaivaa kaupunkia esiin 1928, ja työ paljasti kerroksia kreikkalaisesta, roomalaisesta ja bysanttilaisesta ajasta päällekkäin. Unesco liitti Butrintin maailmanperintöluetteloon 1992.
+- [Irak — maalehti / Suot] Tigris ja Eufrat päättyvät samaan paikkaan: laajaan kosteikkoon Basran pohjoispuolella. Siellä ruoko on rakennusaine, vesipuhveli kotieläin ja vene ainoa tie naapuriin.
+AIEMPI KYSYMYS: Miksi suot ovat tärkeitä ilmastolle?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Suot]] ovat tärkeitä, koska niissä kuolleet kasvit eivät lahoa täysin vaan kerääntyvät hitaasti [[turpeeksi]]: vesi täyttää suon maaperän, happea on vähän ja hajoaminen hidastuu, joten hiili jää pitkäksi aikaa varastoon. Kun suo ojitetaan tai turve kaivetaan, varastoitunutta hiiltä vapautuu ilmakehään hiilidioksidina. Suot tasaavat myös veden virtausta ja tarjoavat elinympäristön monille lajeille, kuten kahlaajille, kurjille ja kasveille, joita muualla ei juuri tapaa. Sulkeutuminen vedenalle on varmaan pelottavaa, mutta suolle se sopii.
+KYSYMYS: Kerro lisää: Suot
+
+### 242
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dzūkijan kansallispuisto (kulttuuri)
+Tietoruudun teksti: Dzūkijan kansallispuisto sijaitsee Etelä-Liettuassa, noin sadan kilometrin päässä Vilnasta lounaaseen ja Kaunasista etelään. Se perustettiin 23. huhtikuuta 1991 suojelemaan Dainavan maata, ja se on maan laajin suojeltu metsäalue: 584,5 neliökilometriä Nemunas-joen rannoilla. Maisemaa hallitsevat mäntyvaltaiset metsät, suot, järvet ja sisämaan dyynit, ja alueella on 30 jokea ja puroa. Puiston eteläpuolella on Čepkeliain suoalue, Liettuan suurin suo. Puiston hallintokeskus on Marcinkonysissa, ja alueella sijaitsee etnografinen Zervynosin kylä.
+AIEMPI KYSYMYS: Miksi suot ovat tärkeitä ilmastolle?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Suot]] ovat tärkeitä, koska niissä kuolleet kasvit eivät lahoa täysin vaan kerääntyvät hitaasti [[turpeeksi]]: vesi täyttää suon maaperän, happea on vähän ja hajoaminen hidastuu, joten hiili jää pitkäksi aikaa varastoon. Kun suo ojitetaan tai turve kaivetaan, varastoitunutta hiiltä vapautuu ilmakehään hiilidioksidina. Suot tasaavat myös veden virtausta ja tarjoavat elinympäristön monille lajeille, kuten kahlaajille, kurjille ja kasveille, joita muualla ei juuri tapaa. Sulkeutuminen vedenalle on varmaan pelottavaa, mutta suolle se sopii.
+KYSYMYS: Kerro lisää: turpeeksi
+
+### 243
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dzūkijan kansallispuisto (kulttuuri)
+Tietoruudun teksti: Dzūkijan kansallispuisto sijaitsee Etelä-Liettuassa, noin sadan kilometrin päässä Vilnasta lounaaseen ja Kaunasista etelään. Se perustettiin 23. huhtikuuta 1991 suojelemaan Dainavan maata, ja se on maan laajin suojeltu metsäalue: 584,5 neliökilometriä Nemunas-joen rannoilla. Maisemaa hallitsevat mäntyvaltaiset metsät, suot, järvet ja sisämaan dyynit, ja alueella on 30 jokea ja puroa. Puiston eteläpuolella on Čepkeliain suoalue, Liettuan suurin suo. Puiston hallintokeskus on Marcinkonysissa, ja alueella sijaitsee etnografinen Zervynosin kylä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sumatra — kaupunkilehti / Luonto: Metsä, joka kutistuu] Sumatra on menettänyt lähes puolet trooppisesta sademetsästään vuoden 1980 jälkeen, kun maata on raivattu viljelmiksi. Metsässä elää 201 nisäkäslajia, 580 lintulajia ja noin 300 makean veden kalalajia; yhdeksän nisäkäslajia esiintyy vain Sumatralla ja neljätoista lisää lähisaarilla Mentawaiden ryhmässä. Saarella on yli kymmenen kansallispuistoa, ja kolme niistä — Gunung Leuser, Kerinci Seblat ja Bukit Barisan Selatan — otettiin vuonna 2004 maailmanperintöön 25 000 neliökilometrin kokonaisuutena. Kohde on ollut vuodesta 2011 uhanalaisten listalla.
+- [Arabiemiirikunnat — maalehti / Ranta ja rata: Metsä, joka kasvaa suolavedessä] Emiraattien matalilla rannoilla kasvaa mangrovemetsää. Harmaamangrove on ainoa puu, joka kestää täällä suolaista vettä: se erittää ylimääräisen suolan lehtiensä läpi, ja sen juuret työntävät mudasta ylös ohuita hengitysputkia, jotta puu saa happea vuoroveden alla. Mangrovikot ovat kalojen kutupaikkoja ja lintujen suojaa, ja ne pitävät rantaa kasassa myrskyssä. Maa on istuttanut niitä miljoonia lisää, ja Abu Dhabin rannalle on rakennettu puisia kävelysiltoja, joilta metsää voi katsella.
+- [Saint Helena — maalehti / Luonto: Suuri metsä istutetaan takaisin] Saaren yli kulki ennen laaja metsä, Great Wood, joka ulottui Deadwoodin tasangolta Prosperous Bayn tasangolle. Puut kaadettiin polttopuuksi, viinanpolttoon ja nahan parkitsemiseen, ja vuohet söivät taimet: vuonna 1710 raportoitiin, ettei metsästä ollut jäljellä yhtään pystyssä olevaa puuta. Rotat ja vuohet olivat siihen mennessä lisääntyneet vitsauksen mitoin, ja vuonna 1731 säädettiin asetus vuohikannan vähentämiseksi. Vuodesta 2000 saaren koillisosaan on istutettu Millennium Forestia, jonka tarkoitus on kasvattaa Great Wood takaisin kotoperäisistä lajeista.
+AIEMPI KYSYMYS: Miksi mänty viihtyy hiekkamaalla?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Metsämänty]] pärjää karuilla ja kuivilla mailla, koska sillä on tehokas juuristo, joka ulottuu syvälle hiekkaan vettä etsimään, ja koska se tarvitsee vähän ravinteita. Hiekkamaa läpäisee veden nopeasti, ja vain harva puulaji sietää sitä, joten mänty ei kohtaa kilpailua kuusen ja lehtipuiden kaltaisten ravinteita vaativien lajien kanssa. Mänty on myös valoa vaativa pioneeripuu, joka valtaa avoimen hiekkamaan ensimmäisenä. Tällaisia metsiä on laajasti [[Pohjois-Euroopassa]]. Mäntyä pitäisi kunnioittaa enemmän, mutta suvun mukaan ne ovat vähän tylsiä istua.
+KYSYMYS: Kerro lisää: Metsämänty
+
+### 244
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dzūkijan kansallispuisto (kulttuuri)
+Tietoruudun teksti: Dzūkijan kansallispuisto sijaitsee Etelä-Liettuassa, noin sadan kilometrin päässä Vilnasta lounaaseen ja Kaunasista etelään. Se perustettiin 23. huhtikuuta 1991 suojelemaan Dainavan maata, ja se on maan laajin suojeltu metsäalue: 584,5 neliökilometriä Nemunas-joen rannoilla. Maisemaa hallitsevat mäntyvaltaiset metsät, suot, järvet ja sisämaan dyynit, ja alueella on 30 jokea ja puroa. Puiston eteläpuolella on Čepkeliain suoalue, Liettuan suurin suo. Puiston hallintokeskus on Marcinkonysissa, ja alueella sijaitsee etnografinen Zervynosin kylä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Enemmän lintuja kuin Euroopassa ja Pohjois-Amerikassa] Kolumbia on yksi maailman seitsemästätoista megadiversistä maasta, ja sillä on maailman suurin lajitiheys pinta-alaa kohti sekä eniten kotoperäisiä lajeja. Noin kymmenen prosenttia maapallon lajeista elää siellä. Lintulajeja on yli 1 900 — enemmän kuin Euroopassa ja Pohjois-Amerikassa yhteensä ja 18 prosenttia koko maailman lintulajeista. Maa on ensimmäinen myös orkidealajien ja kotoperäisten perhosten määrässä, ja siellä on 32 maabiomia ja 314 ekosysteemityyppiä.
+AIEMPI KYSYMYS: Miksi mänty viihtyy hiekkamaalla?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Metsämänty]] pärjää karuilla ja kuivilla mailla, koska sillä on tehokas juuristo, joka ulottuu syvälle hiekkaan vettä etsimään, ja koska se tarvitsee vähän ravinteita. Hiekkamaa läpäisee veden nopeasti, ja vain harva puulaji sietää sitä, joten mänty ei kohtaa kilpailua kuusen ja lehtipuiden kaltaisten ravinteita vaativien lajien kanssa. Mänty on myös valoa vaativa pioneeripuu, joka valtaa avoimen hiekkamaan ensimmäisenä. Tällaisia metsiä on laajasti [[Pohjois-Euroopassa]]. Mäntyä pitäisi kunnioittaa enemmän, mutta suvun mukaan ne ovat vähän tylsiä istua.
+KYSYMYS: Kerro lisää: Pohjois-Euroopassa
+
+### 245
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dzūkijan kansallispuisto (kulttuuri)
+Tietoruudun teksti: Dzūkijan kansallispuisto sijaitsee Etelä-Liettuassa, noin sadan kilometrin päässä Vilnasta lounaaseen ja Kaunasista etelään. Se perustettiin 23. huhtikuuta 1991 suojelemaan Dainavan maata, ja se on maan laajin suojeltu metsäalue: 584,5 neliökilometriä Nemunas-joen rannoilla. Maisemaa hallitsevat mäntyvaltaiset metsät, suot, järvet ja sisämaan dyynit, ja alueella on 30 jokea ja puroa. Puiston eteläpuolella on Čepkeliain suoalue, Liettuan suurin suo. Puiston hallintokeskus on Marcinkonysissa, ja alueella sijaitsee etnografinen Zervynosin kylä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Tavat: Kukkula, jolle jokainen tuo ristin] 1961 — Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. Neuvostoaikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka tahansa saa tuoda omansa.
+AIEMPI KYSYMYS: Mikä ero on kansallispuistolla ja luonnonpuistolla?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Kansallispuisto]] on suojelualue, jonka tarkoituksena on säilyttää luonnon tai maiseman arvokkaita piirteitä ja jossa on yleensä myös tarkoitus sallia vierailijoiden retkeily ja luontoharrastus, kunhan luonto ei kärsi. [[Luonnonpuisto]] eli tiukempi luonnonsuojelualue on yleensä rajattu pääosin tutkimukseen ja luonnon koskemattomuuteen, ja sinne kulku voi olla rajoitettua tai kokonaan kielletty. Tarkat määritelmät ja nimet vaihtelevat maittain, joten käytännön säännöt kannattaa tarkistaa paikan päällä. Eli kyllä kyyhkykin saa mennä kansallispuistoon, mutta ei kaikkialle.
+KYSYMYS: Kerro lisää: Kansallispuisto
+
+### 246
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dzūkijan kansallispuisto (kulttuuri)
+Tietoruudun teksti: Dzūkijan kansallispuisto sijaitsee Etelä-Liettuassa, noin sadan kilometrin päässä Vilnasta lounaaseen ja Kaunasista etelään. Se perustettiin 23. huhtikuuta 1991 suojelemaan Dainavan maata, ja se on maan laajin suojeltu metsäalue: 584,5 neliökilometriä Nemunas-joen rannoilla. Maisemaa hallitsevat mäntyvaltaiset metsät, suot, järvet ja sisämaan dyynit, ja alueella on 30 jokea ja puroa. Puiston eteläpuolella on Čepkeliain suoalue, Liettuan suurin suo. Puiston hallintokeskus on Marcinkonysissa, ja alueella sijaitsee etnografinen Zervynosin kylä.
+AIEMPI KYSYMYS: Mikä ero on kansallispuistolla ja luonnonpuistolla?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Kansallispuisto]] on suojelualue, jonka tarkoituksena on säilyttää luonnon tai maiseman arvokkaita piirteitä ja jossa on yleensä myös tarkoitus sallia vierailijoiden retkeily ja luontoharrastus, kunhan luonto ei kärsi. [[Luonnonpuisto]] eli tiukempi luonnonsuojelualue on yleensä rajattu pääosin tutkimukseen ja luonnon koskemattomuuteen, ja sinne kulku voi olla rajoitettua tai kokonaan kielletty. Tarkat määritelmät ja nimet vaihtelevat maittain, joten käytännön säännöt kannattaa tarkistaa paikan päällä. Eli kyllä kyyhkykin saa mennä kansallispuistoon, mutta ei kaikkialle.
+KYSYMYS: Kerro lisää: Luonnonpuisto
+
+### 247
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plateliai (luonto · järvi)
+Tietoruudun teksti: Plateliai on Samogitiassa sijaitseva kaupunki Plateliain järven länsirannalla; järvi on Samogitian suurin. Paikka mainitaan lähteissä ensimmäisen kerran vuonna 1450, ja nykyään siellä toimii Žemaitijan kansallispuiston hallinto. Kylän puukirkko rakennettiin vuonna 1744. Sofija Tyzenhauzaitė de Choiseul-Gouffier (1790–1878) kirjoitti ranskaksi ja oli historiallisen Liettuan ensimmäinen naiskirjailija. Kansantarun mukaan järvi lipui ennen kaukana lännessä, kunnes myrsky nosti sen pilveksi ja kantoi itään. Sanat "Plate lej", eli "sataa leveästi", olivat järven salasana: kun samogiittinainen sanoi ne ääneen, koko vesimassa vajosi kumpujen väliseen kuoppaan.
+AIEMPI KYSYMYS: Miksi kansantarun mukaan järvi päätyi juuri Samogitian kumpujen väliseen kuoppaan?
+AIEMPI VASTAUS (Livia):
+Kääk, tuo on vanha tarina. Taru ei tietääkseni anna erillistä syytä sille, miksi juuri tämä kuoppa valittiin; se selittää ennemmin, miten [[Plateliain]] järvi on syntynyt. Sen mukaan järvi lipui ennen kaukana lännessä, kunnes myrsky nosti sen pilveksi ja kantoi itään, ja kun [[samogiittinainen]] lausui sanat "Plate lej", eli "sataa leveästi", koko vesimassa vajosi kumpujen väliseen kuoppaan. Kansantaruille on tyypillistä, että ne selittävät maiseman muodon, eli tässä tapauksessa sen, miksi järvi sijaitsee kumpuilevassa maastossa. Pilvi vei järven, ja sellainen minusta kuulostaa uskottavalta.
+KYSYMYS: Kerro lisää: Plateliain
+
+### 248
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plateliai (luonto · järvi)
+Tietoruudun teksti: Plateliai on Samogitiassa sijaitseva kaupunki Plateliain järven länsirannalla; järvi on Samogitian suurin. Paikka mainitaan lähteissä ensimmäisen kerran vuonna 1450, ja nykyään siellä toimii Žemaitijan kansallispuiston hallinto. Kylän puukirkko rakennettiin vuonna 1744. Sofija Tyzenhauzaitė de Choiseul-Gouffier (1790–1878) kirjoitti ranskaksi ja oli historiallisen Liettuan ensimmäinen naiskirjailija. Kansantarun mukaan järvi lipui ennen kaukana lännessä, kunnes myrsky nosti sen pilveksi ja kantoi itään. Sanat "Plate lej", eli "sataa leveästi", olivat järven salasana: kun samogiittinainen sanoi ne ääneen, koko vesimassa vajosi kumpujen väliseen kuoppaan.
+AIEMPI KYSYMYS: Miksi kansantarun mukaan järvi päätyi juuri Samogitian kumpujen väliseen kuoppaan?
+AIEMPI VASTAUS (Livia):
+Kääk, tuo on vanha tarina. Taru ei tietääkseni anna erillistä syytä sille, miksi juuri tämä kuoppa valittiin; se selittää ennemmin, miten [[Plateliain]] järvi on syntynyt. Sen mukaan järvi lipui ennen kaukana lännessä, kunnes myrsky nosti sen pilveksi ja kantoi itään, ja kun [[samogiittinainen]] lausui sanat "Plate lej", eli "sataa leveästi", koko vesimassa vajosi kumpujen väliseen kuoppaan. Kansantaruille on tyypillistä, että ne selittävät maiseman muodon, eli tässä tapauksessa sen, miksi järvi sijaitsee kumpuilevassa maastossa. Pilvi vei järven, ja sellainen minusta kuulostaa uskottavalta.
+KYSYMYS: Kerro lisää: samogiittinainen
+
+### 249
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plateliai (luonto · järvi)
+Tietoruudun teksti: Plateliai on Samogitiassa sijaitseva kaupunki Plateliain järven länsirannalla; järvi on Samogitian suurin. Paikka mainitaan lähteissä ensimmäisen kerran vuonna 1450, ja nykyään siellä toimii Žemaitijan kansallispuiston hallinto. Kylän puukirkko rakennettiin vuonna 1744. Sofija Tyzenhauzaitė de Choiseul-Gouffier (1790–1878) kirjoitti ranskaksi ja oli historiallisen Liettuan ensimmäinen naiskirjailija. Kansantarun mukaan järvi lipui ennen kaukana lännessä, kunnes myrsky nosti sen pilveksi ja kantoi itään. Sanat "Plate lej", eli "sataa leveästi", olivat järven salasana: kun samogiittinainen sanoi ne ääneen, koko vesimassa vajosi kumpujen väliseen kuoppaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [GUF — maalehti / Historia: Kuoleman siirtokunta Kouroussa] 1763 — Menetettyään Kanadan Ranska halusi uuden siirtomaan, ja ministeri Choiseul suunnitteli Kouroun seudusta eurooppalaisten siirtokunnan ilman orjatyövoimaa. Vuonna 1763 sinne kuljetettiin kiireesti yli 13 000 siirtolaista, joukossa myös Britannian Kanadasta karkottamia akadialaisia. Suurin osa saapui sadekautena, jolloin majoiksi kelpasivat vain teltat ja hökkelit, ja varastot mätänivät kosteudessa. Keltakuume, punatauti ja malaria levisivät ahtaissa leireissä nopeasti, ja hankkeesta tuli katastrofi: yli 9 000 siirtolaista kuoli parissa vuodessa. Kourousta tuli pitkäksi aikaa varoittava esimerkki huonosti valmistellusta siirtomaasta.
+AIEMPI KYSYMYS: Millaista oli olla naiskirjailija historiallisessa Liettuassa 1800-luvun alussa?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. [[Sofija Tyzenhauzaitė de Choiseul-Gouffier]] (1790–1878) kirjoitti ranskaksi, mikä oli aikakauden sivistyneistön ja aateliston yleinen kirjakieli. Yleisesti 1800-luvun alun Euroopassa [[naisten koulutus]] oli rajallista ja kirjailijana toimiminen oli epätavallista: naiset saivat usein opetusta kotona, heidän odotettiin keskittyvän perheeseen ja kotiin, ja julkaiseminen oli harvoille mahdollista. En tunne hänen elämänsä yksityiskohtia, joten tarkempaa kuvaa hänen kokemuksistaan en uskalla antaa. Hän oli kuitenkin ilmeisesti poikkeuksellinen, ja sehän on aika kova saavutus.
+KYSYMYS: Kerro lisää: Sofija Tyzenhauzaitė de Choiseul-Gouffier
+
+### 250
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plateliai (luonto · järvi)
+Tietoruudun teksti: Plateliai on Samogitiassa sijaitseva kaupunki Plateliain järven länsirannalla; järvi on Samogitian suurin. Paikka mainitaan lähteissä ensimmäisen kerran vuonna 1450, ja nykyään siellä toimii Žemaitijan kansallispuiston hallinto. Kylän puukirkko rakennettiin vuonna 1744. Sofija Tyzenhauzaitė de Choiseul-Gouffier (1790–1878) kirjoitti ranskaksi ja oli historiallisen Liettuan ensimmäinen naiskirjailija. Kansantarun mukaan järvi lipui ennen kaukana lännessä, kunnes myrsky nosti sen pilveksi ja kantoi itään. Sanat "Plate lej", eli "sataa leveästi", olivat järven salasana: kun samogiittinainen sanoi ne ääneen, koko vesimassa vajosi kumpujen väliseen kuoppaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alice Springs — kohdekartta / Kohdekartta: Australian naisten museo] 1993 Australian naisten museo, aiemmalta nimeltään National Pioneer Women’s Hall of Fame, kertoo naisten paikasta Australian historiassa. Sen perusti 1993 Molly Clark Old Andadon karjatilalta. Vuoteen 2001 mennessä ensimmäiset tilat kävivät ahtaiksi, ja museolle tarjottiin uudeksi paikaksi suojeltua vanhaa vankilaa kaupungin perintökorttelissa. Museo avattiin uudessa paikassaan 2007, ja avaajana oli naisasioista vastaava ministeri Marion Scrymgour, ensimmäinen Pohjoisterritorion parlamenttiin valittu alkuperäiskansaan kuuluva nainen. Nimi muutettiin Australian naisten museoksi 2019, ja seuraavana vuonna aloitettiin piha-alueen kunnostus ja uusien näyttelyiden suunnittelu. Pysyviä näyttelyit…
+- [Libya — maalehti / Musiikki: Naisten laulut, jotka alkoivat ministerin paluusta] 1919– — Zamzamat on naisten lauluperinne, joka liitetään Tripoliin ja jonka synty ajoitetaan vuoteen 1919: sillä juhlittiin erään ministerin paluuta. Laulaja Kamila al-Makhla ja hänen sokea sisarensa säilyttivät lauluja, joita mestarit olivat esittäneet kaupungin kokoontumispaikoissa, muun muassa Khouja-hotellissa. Esiintyjät ovat yksinomaan naisia: kuoro laulaa duff-kehärumpujen säestyksellä ja sepittää säkeet paikan päällä morsiamen hyveistä ja sulhasen ansioista, ja liverrys ja taputus jatkuvat, kunnes sulhasen väki saapuu. Tunnettuja nimiä ovat Aisha al-Fizika, Mama Nissa ja Khadija al-Funsha, jota kutsutaan Libyan ruusuksi.
+AIEMPI KYSYMYS: Millaista oli olla naiskirjailija historiallisessa Liettuassa 1800-luvun alussa?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. [[Sofija Tyzenhauzaitė de Choiseul-Gouffier]] (1790–1878) kirjoitti ranskaksi, mikä oli aikakauden sivistyneistön ja aateliston yleinen kirjakieli. Yleisesti 1800-luvun alun Euroopassa [[naisten koulutus]] oli rajallista ja kirjailijana toimiminen oli epätavallista: naiset saivat usein opetusta kotona, heidän odotettiin keskittyvän perheeseen ja kotiin, ja julkaiseminen oli harvoille mahdollista. En tunne hänen elämänsä yksityiskohtia, joten tarkempaa kuvaa hänen kokemuksistaan en uskalla antaa. Hän oli kuitenkin ilmeisesti poikkeuksellinen, ja sehän on aika kova saavutus.
+KYSYMYS: Kerro lisää: naisten koulutus
+
+### 251
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plateliai (luonto · järvi)
+Tietoruudun teksti: Plateliai on Samogitiassa sijaitseva kaupunki Plateliain järven länsirannalla; järvi on Samogitian suurin. Paikka mainitaan lähteissä ensimmäisen kerran vuonna 1450, ja nykyään siellä toimii Žemaitijan kansallispuiston hallinto. Kylän puukirkko rakennettiin vuonna 1744. Sofija Tyzenhauzaitė de Choiseul-Gouffier (1790–1878) kirjoitti ranskaksi ja oli historiallisen Liettuan ensimmäinen naiskirjailija. Kansantarun mukaan järvi lipui ennen kaukana lännessä, kunnes myrsky nosti sen pilveksi ja kantoi itään. Sanat "Plate lej", eli "sataa leveästi", olivat järven salasana: kun samogiittinainen sanoi ne ääneen, koko vesimassa vajosi kumpujen väliseen kuoppaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Järvet jotka rakentavat itse patonsa] 1979 — Plitvicen 16 järveä on kytketty toisiinsa vesiputouksilla ja luonnollisilla travertiinipadoilla — kalkkikivipitoisesta vedestä sakkautuvasta kivestä, jota sammal ja levät sitovat vuosisatojen kuluessa yhä paksummaksi kerrokseksi. Padot kasvavat ja muuttavat muotoaan koko ajan, joten järvien reitti ei ole koskaan täysin sama kahtena vuosikymmenenä. Vesi vaihtaa väriään turkoosista vihreään sen mukaan, kuinka paljon mineraaleja, planktonia ja auringonvaloa siihen osuu. Plitvice on Kroatian vanhin ja suurin kansallispuisto, ja Unesco otti sen maailmanperintöluetteloon jo vuonna 1979.
+AIEMPI KYSYMYS: Miksi Liettuassa on niin paljon järviä?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Liettuan [[järvet]] ovat pääosin [[jääkauden]] perintöä: mannerjäätikkö kuopi maahan syvänteitä, jätti jäätikön sulaessa moreenikumpuja ja jäälohkareita, ja sulaessaan nämä muodostivat pienempiä ja suurempia vesialtaita. Tämä näkyy etenkin maan itäosassa ja pohjoisessa. En ole varma, miten yksittäiset järvet, kuten Plateliain järvi, ovat tarkalleen syntyneet. Tarkkaa järvien määrää en tiedä. Maisema on ylhäältä lasimaista, ja ainakin laskin sen niin.
+KYSYMYS: Kerro lisää: järvet
+
+### 252
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plateliai (luonto · järvi)
+Tietoruudun teksti: Plateliai on Samogitiassa sijaitseva kaupunki Plateliain järven länsirannalla; järvi on Samogitian suurin. Paikka mainitaan lähteissä ensimmäisen kerran vuonna 1450, ja nykyään siellä toimii Žemaitijan kansallispuiston hallinto. Kylän puukirkko rakennettiin vuonna 1744. Sofija Tyzenhauzaitė de Choiseul-Gouffier (1790–1878) kirjoitti ranskaksi ja oli historiallisen Liettuan ensimmäinen naiskirjailija. Kansantarun mukaan järvi lipui ennen kaukana lännessä, kunnes myrsky nosti sen pilveksi ja kantoi itään. Sanat "Plate lej", eli "sataa leveästi", olivat järven salasana: kun samogiittinainen sanoi ne ääneen, koko vesimassa vajosi kumpujen väliseen kuoppaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vladivostok — kohdekartta / Kohdekartta: Arsenjevin museo] perustettu 1884 Kaukoidän ensimmäinen kotiseutumuseo sai alkunsa 18. huhtikuuta 1884, kun Amurinmaan tutkimusseuran säännöt vahvistettiin, ja ovet avautuivat yleisölle lokakuussa 1890. Vuonna 1945 museo nimettiin Vladimir Arsenjevin, Ussurinmaan tutkijan ja Dersu Uzalan kirjoittajan mukaan — hänen tarinansa on lehden taigasivulla. Kokoelmissa on seudun tutkijoiden, muun muassa Prževalskin, aineistoja, jääkauden fossiileja, 1100-luvun ylimyshauta ja Bohain valtakunnan hallitsijan peili; täytetyt tiikeri ja karhu ovat museon kuuluisin näky. Vuonna 2015 se oli Venäjän katsotuin aluemuseo, yli 421 000 kävijää, ja vuonna 2019 siitä tehtiin liittovaltion museo. Rakennus on tarina itsessään: kaupp…
+- [Whitehorse — kohdekartta / Kohdekartta: Beringia-keskus] 1997 Keskus avattiin 1997 Alaska Highwayn kilometrillä 1423 ja kertoo Beringiasta — 3 200 kilometrin levyisestä maa-alueesta, joka ulottui Siperian Kolyma-joelta Kanadan Mackenzie-joelle. Alue säilyi jääkaudella jäätiköitymättä, koska ilmasto oli kuiva ja lunta satoi vähän. Juuri siksi Beringia kiinnostaa arkeologeja ja paleontologeja: se oli eläinten ja ihmisten kulkureitti Aasian ja Amerikan välillä. Liikennettä oli molempiin suuntiin. Idän suuntaan tulivat mastodontit, mammutit, hirvieläimet, biisonit, lampaat ja myskihärät; länteen menivät hevoseläimet ja kamelit. Sanan Beringia keksi ruotsalainen kasvitieteilijä Eric Hultén vuonna 1937. Keskus on myös tutkimuslaitos. Sen aineistossa on…
+AIEMPI KYSYMYS: Miksi Liettuassa on niin paljon järviä?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Liettuan [[järvet]] ovat pääosin [[jääkauden]] perintöä: mannerjäätikkö kuopi maahan syvänteitä, jätti jäätikön sulaessa moreenikumpuja ja jäälohkareita, ja sulaessaan nämä muodostivat pienempiä ja suurempia vesialtaita. Tämä näkyy etenkin maan itäosassa ja pohjoisessa. En ole varma, miten yksittäiset järvet, kuten Plateliain järvi, ovat tarkalleen syntyneet. Tarkkaa järvien määrää en tiedä. Maisema on ylhäältä lasimaista, ja ainakin laskin sen niin.
+KYSYMYS: Kerro lisää: jääkauden
+
+### 253
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plateliai (luonto · järvi)
+Tietoruudun teksti: Plateliai on Samogitiassa sijaitseva kaupunki Plateliain järven länsirannalla; järvi on Samogitian suurin. Paikka mainitaan lähteissä ensimmäisen kerran vuonna 1450, ja nykyään siellä toimii Žemaitijan kansallispuiston hallinto. Kylän puukirkko rakennettiin vuonna 1744. Sofija Tyzenhauzaitė de Choiseul-Gouffier (1790–1878) kirjoitti ranskaksi ja oli historiallisen Liettuan ensimmäinen naiskirjailija. Kansantarun mukaan järvi lipui ennen kaukana lännessä, kunnes myrsky nosti sen pilveksi ja kantoi itään. Sanat "Plate lej", eli "sataa leveästi", olivat järven salasana: kun samogiittinainen sanoi ne ääneen, koko vesimassa vajosi kumpujen väliseen kuoppaan.
+AIEMPI KYSYMYS: Mitä Samogitia-nimi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on mukavaa. Samogitia on latinalaistettu muoto Liettuan luoteisosan historiallisen maakunnan nimestä [[Žemaitija]], joka tulee liettuan sanasta žemas, eli "matala". Nimi tarkoittaa siis suunnilleen "alamaata", ja se erottaa alueen Liettuan itäisestä ylämaasta, vaikka maasto ei ole sen enempää tasaista kuin ylängöt. Alueen asukkaita kutsutaan [[samogiiteiksi]], ja heillä on oma kielimuotonsa, jota pidetään liettuan murteena tai erillisenä kielenä sen mukaan, keneltä kysytään. Minä pysyn mieluummin ilmassa kuin matalassa.
+KYSYMYS: Kerro lisää: Žemaitija
+
+### 254
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plateliai (luonto · järvi)
+Tietoruudun teksti: Plateliai on Samogitiassa sijaitseva kaupunki Plateliain järven länsirannalla; järvi on Samogitian suurin. Paikka mainitaan lähteissä ensimmäisen kerran vuonna 1450, ja nykyään siellä toimii Žemaitijan kansallispuiston hallinto. Kylän puukirkko rakennettiin vuonna 1744. Sofija Tyzenhauzaitė de Choiseul-Gouffier (1790–1878) kirjoitti ranskaksi ja oli historiallisen Liettuan ensimmäinen naiskirjailija. Kansantarun mukaan järvi lipui ennen kaukana lännessä, kunnes myrsky nosti sen pilveksi ja kantoi itään. Sanat "Plate lej", eli "sataa leveästi", olivat järven salasana: kun samogiittinainen sanoi ne ääneen, koko vesimassa vajosi kumpujen väliseen kuoppaan.
+AIEMPI KYSYMYS: Mitä Samogitia-nimi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on mukavaa. Samogitia on latinalaistettu muoto Liettuan luoteisosan historiallisen maakunnan nimestä [[Žemaitija]], joka tulee liettuan sanasta žemas, eli "matala". Nimi tarkoittaa siis suunnilleen "alamaata", ja se erottaa alueen Liettuan itäisestä ylämaasta, vaikka maasto ei ole sen enempää tasaista kuin ylängöt. Alueen asukkaita kutsutaan [[samogiiteiksi]], ja heillä on oma kielimuotonsa, jota pidetään liettuan murteena tai erillisenä kielenä sen mukaan, keneltä kysytään. Minä pysyn mieluummin ilmassa kuin matalassa.
+KYSYMYS: Kerro lisää: samogiiteiksi
+
+### 255
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plateliai (luonto · järvi)
+Tietoruudun teksti: Plateliai on Samogitiassa sijaitseva kaupunki Plateliain järven länsirannalla; järvi on Samogitian suurin. Paikka mainitaan lähteissä ensimmäisen kerran vuonna 1450, ja nykyään siellä toimii Žemaitijan kansallispuiston hallinto. Kylän puukirkko rakennettiin vuonna 1744. Sofija Tyzenhauzaitė de Choiseul-Gouffier (1790–1878) kirjoitti ranskaksi ja oli historiallisen Liettuan ensimmäinen naiskirjailija. Kansantarun mukaan järvi lipui ennen kaukana lännessä, kunnes myrsky nosti sen pilveksi ja kantoi itään. Sanat "Plate lej", eli "sataa leveästi", olivat järven salasana: kun samogiittinainen sanoi ne ääneen, koko vesimassa vajosi kumpujen väliseen kuoppaan.
+AIEMPI KYSYMYS: Kuinka puukirkko voi kestää yli kaksisataa vuotta?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Puukirkko kestää satoja vuosia, kun siitä pidetään huolta: perustukset nostetaan irti maasta kivi- tai muuta perustusta vasten, jotta kosteus ei imeydy hirsiin, katto pidetään tiiviinä, ja puu käsitellään [[tervalla]] tai maalilla. Rungoista käytetään usein hitaasti kasvanutta tiivistä puuta, ja heikentyneet osat vaihdetaan vähitellen uusiin. Suurin uhka on tuli, ja suuri osa vanhoista puukirkoista onkin tuhoutunut palossa eikä lahoamalla. [[Plateliain]] puukirkko on rakennettu vuonna 1744, eli se on ainakin selvinnyt pitkään. Ihailtavaa, kun miettii, että kyyhkyn pesä kestää vain kauden.
+KYSYMYS: Kerro lisää: tervalla
+
+### 256
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rusnė (luonto · saari)
+Tietoruudun teksti: Rusnė on rajakaupunki Nemunasin suistossa, samannimisellä saarella noin yhdeksän kilometriä Šilutėsta lounaaseen. Paikka mainitaan lähteissä ensimmäisen kerran 1300-luvulla, ja ensimmäinen kirkko rakennettiin vuonna 1419. Preussin herttua määräsi vuonna 1544 pidettäväksi jumalanpalveluksia liettuan ja kuurin kielillä, ja vuonna 1553 kylään perustettiin liettuankielinen seurakuntakoulu. Alue on tulva-altista, ja saarella aloitti 1810 toimintansa yksi Liettuan ensimmäisistä vedenmittausasemista. Venäjän rajan erottaa Skirvytė-joki, ja kaupunki on suosittu kalastajien ja lintuharrastajien kohde.
+AIEMPI KYSYMYS: Millaista elämää tulva-alttiilla suiston saarella eletään?
+AIEMPI VASTAUS (Livia):
+Mmm— tuo on hyvä kysymys. Rusnėn alue on tulva-altis, ja tämän kaltaisessa [[Nemunasin]] suistossa vedenkorkeus vaihtelee vuodenajan mukaan: etenkin kevättulvat voivat nostaa vettä niin, että tiet ja pihat jäävät veden alle, ja asukkaat ovat oppineet mukautumaan siihen. Kaupunki on kalastajien ja lintuharrastajien suosima kohde, joten kalastus ja luontomatkailu ovat luontevia elinkeinoja, ja saarella toimi jo vuonna 1810 yksi Liettuan ensimmäisistä [[vedenmittausasemista]]. Tarkkaa arkea nykyisin en voi kuvata. Kyyhky ei pelkää vettä, kunhan siipi pysyy kuivana.
+KYSYMYS: Kerro lisää: Nemunasin
+
+### 257
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rusnė (luonto · saari)
+Tietoruudun teksti: Rusnė on rajakaupunki Nemunasin suistossa, samannimisellä saarella noin yhdeksän kilometriä Šilutėsta lounaaseen. Paikka mainitaan lähteissä ensimmäisen kerran 1300-luvulla, ja ensimmäinen kirkko rakennettiin vuonna 1419. Preussin herttua määräsi vuonna 1544 pidettäväksi jumalanpalveluksia liettuan ja kuurin kielillä, ja vuonna 1553 kylään perustettiin liettuankielinen seurakuntakoulu. Alue on tulva-altista, ja saarella aloitti 1810 toimintansa yksi Liettuan ensimmäisistä vedenmittausasemista. Venäjän rajan erottaa Skirvytė-joki, ja kaupunki on suosittu kalastajien ja lintuharrastajien kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Tavat: Kukkula, jolle jokainen tuo ristin] 1961 — Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. Neuvostoaikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka tahansa saa tuoda omansa.
+AIEMPI KYSYMYS: Millaista elämää tulva-alttiilla suiston saarella eletään?
+AIEMPI VASTAUS (Livia):
+Mmm— tuo on hyvä kysymys. Rusnėn alue on tulva-altis, ja tämän kaltaisessa [[Nemunasin]] suistossa vedenkorkeus vaihtelee vuodenajan mukaan: etenkin kevättulvat voivat nostaa vettä niin, että tiet ja pihat jäävät veden alle, ja asukkaat ovat oppineet mukautumaan siihen. Kaupunki on kalastajien ja lintuharrastajien suosima kohde, joten kalastus ja luontomatkailu ovat luontevia elinkeinoja, ja saarella toimi jo vuonna 1810 yksi Liettuan ensimmäisistä [[vedenmittausasemista]]. Tarkkaa arkea nykyisin en voi kuvata. Kyyhky ei pelkää vettä, kunhan siipi pysyy kuivana.
+KYSYMYS: Kerro lisää: vedenmittausasemista
+
+### 258
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rusnė (luonto · saari)
+Tietoruudun teksti: Rusnė on rajakaupunki Nemunasin suistossa, samannimisellä saarella noin yhdeksän kilometriä Šilutėsta lounaaseen. Paikka mainitaan lähteissä ensimmäisen kerran 1300-luvulla, ja ensimmäinen kirkko rakennettiin vuonna 1419. Preussin herttua määräsi vuonna 1544 pidettäväksi jumalanpalveluksia liettuan ja kuurin kielillä, ja vuonna 1553 kylään perustettiin liettuankielinen seurakuntakoulu. Alue on tulva-altista, ja saarella aloitti 1810 toimintansa yksi Liettuan ensimmäisistä vedenmittausasemista. Venäjän rajan erottaa Skirvytė-joki, ja kaupunki on suosittu kalastajien ja lintuharrastajien kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto: Suisto, jossa asuu 5500 lajia] 1991 — Tonavan suisto on Euroopan suurin säilynyt kosteikko, ja se levittäytyy yli 4100 neliökilometrille Romanian ja Ukrainan rajalla. Alueella elää yli 5500 kasvi- ja eläinlajia — enemmän kuin missään muualla Euroopassa — ja monimuotoisuudessa sen ohittavat maailmassa vain Australian Suuri valliriutta ja Galapagossaaret. Suistossa pesii yli 300 lintulajia, muun muassa suurin osa Euroopan pelikaaneista ja punakaulahanhista, ja vesissä ui lähes 90 kalalajia, joukossa sampia. Unesco otti suiston maailmanperintöluetteloon vuonna 1991, vuosi sen jälkeen kun siitä oli tehty biosfäärialue.
+AIEMPI KYSYMYS: Miksi kalastajat ja lintuharrastajat viihtyvät juuri Nemunasin suistossa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Joen [[suisto]] on tyypillisesti kosteikkoa, jossa joki jakautuu haaroihin ja virtaus hidastuu, ja sellainen ympäristö tarjoaa kaloille ruokaa ja suojaa sekä linnuille pesimä- ja levähdyspaikkoja. [[Nemunas]] laskee Itämeren suuntaan, ja suistoalueet ovat yleensä lintujen muuttoreittien varrella, mikä vetää harrastajia paikalle. Rusnė sijaitsee juuri suistossa, joten sekä kalastus että lintujen tarkkailu ovat luontevia. Tarkkoja lajeja en osaa luetella, mutta reitti on varmasti vilkas.
+
+Suisto on minusta aika mukava paikka, sillä sieltä näkee kalan ja kyyhkyn, ja vain toinen niistä lentää. Kala on siitä erikoinen, mutta pidän sitä silti kunnioitettavana.
+KYSYMYS: Kerro lisää: suisto
+
+### 259
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rusnė (luonto · saari)
+Tietoruudun teksti: Rusnė on rajakaupunki Nemunasin suistossa, samannimisellä saarella noin yhdeksän kilometriä Šilutėsta lounaaseen. Paikka mainitaan lähteissä ensimmäisen kerran 1300-luvulla, ja ensimmäinen kirkko rakennettiin vuonna 1419. Preussin herttua määräsi vuonna 1544 pidettäväksi jumalanpalveluksia liettuan ja kuurin kielillä, ja vuonna 1553 kylään perustettiin liettuankielinen seurakuntakoulu. Alue on tulva-altista, ja saarella aloitti 1810 toimintansa yksi Liettuan ensimmäisistä vedenmittausasemista. Venäjän rajan erottaa Skirvytė-joki, ja kaupunki on suosittu kalastajien ja lintuharrastajien kohde.
+AIEMPI KYSYMYS: Miksi kalastajat ja lintuharrastajat viihtyvät juuri Nemunasin suistossa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Joen [[suisto]] on tyypillisesti kosteikkoa, jossa joki jakautuu haaroihin ja virtaus hidastuu, ja sellainen ympäristö tarjoaa kaloille ruokaa ja suojaa sekä linnuille pesimä- ja levähdyspaikkoja. [[Nemunas]] laskee Itämeren suuntaan, ja suistoalueet ovat yleensä lintujen muuttoreittien varrella, mikä vetää harrastajia paikalle. Rusnė sijaitsee juuri suistossa, joten sekä kalastus että lintujen tarkkailu ovat luontevia. Tarkkoja lajeja en osaa luetella, mutta reitti on varmasti vilkas.
+
+Suisto on minusta aika mukava paikka, sillä sieltä näkee kalan ja kyyhkyn, ja vain toinen niistä lentää. Kala on siitä erikoinen, mutta pidän sitä silti kunnioitettavana.
+KYSYMYS: Kerro lisää: Nemunas
+
+### 260
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rusnė (luonto · saari)
+Tietoruudun teksti: Rusnė on rajakaupunki Nemunasin suistossa, samannimisellä saarella noin yhdeksän kilometriä Šilutėsta lounaaseen. Paikka mainitaan lähteissä ensimmäisen kerran 1300-luvulla, ja ensimmäinen kirkko rakennettiin vuonna 1419. Preussin herttua määräsi vuonna 1544 pidettäväksi jumalanpalveluksia liettuan ja kuurin kielillä, ja vuonna 1553 kylään perustettiin liettuankielinen seurakuntakoulu. Alue on tulva-altista, ja saarella aloitti 1810 toimintansa yksi Liettuan ensimmäisistä vedenmittausasemista. Venäjän rajan erottaa Skirvytė-joki, ja kaupunki on suosittu kalastajien ja lintuharrastajien kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Uskonpuhdistus] Elben rannan yliopistokaupungista lähti lokakuussa 1517 kohtelias kirje arkkipiispalle, ja sen liitteenä olleet 95 latinankielistä väitettä levisivät painettuina nopeammin kuin kukaan osasi odottaa.
+AIEMPI KYSYMYS: Miksi uskonpuhdistus toi kansankielen kirkkoihin?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Uskonpuhdistus]] 1500-luvulla korosti, että jokaisen uskovan piti voida ymmärtää Raamatun sanoma ja jumalanpalvelus omalla kielellään, ei vain latinaksi. Siksi kirkoissa alettiin saarnata ja laulaa kansankielellä, Raamattua käännettiin, ja kansankielinen opetus levisi kouluihin ja kirjoihin. Tämän vaikutus näkyy myös [[Preussissa]], jossa liettuan ja kuurin kielellä pidetyt jumalanpalvelukset saivat tukea herttuan määräyksellä vuonna 1544. Kyllä kyyhkykin ymmärtää sen, että kirjeen pitää olla luettavissa.
+KYSYMYS: Kerro lisää: Uskonpuhdistus
+
+### 261
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rusnė (luonto · saari)
+Tietoruudun teksti: Rusnė on rajakaupunki Nemunasin suistossa, samannimisellä saarella noin yhdeksän kilometriä Šilutėsta lounaaseen. Paikka mainitaan lähteissä ensimmäisen kerran 1300-luvulla, ja ensimmäinen kirkko rakennettiin vuonna 1419. Preussin herttua määräsi vuonna 1544 pidettäväksi jumalanpalveluksia liettuan ja kuurin kielillä, ja vuonna 1553 kylään perustettiin liettuankielinen seurakuntakoulu. Alue on tulva-altista, ja saarella aloitti 1810 toimintansa yksi Liettuan ensimmäisistä vedenmittausasemista. Venäjän rajan erottaa Skirvytė-joki, ja kaupunki on suosittu kalastajien ja lintuharrastajien kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Kirjat kannettiin rajan yli selässä] 1864 — Vuonna 1864 Venäjän keisarikunta kielsi liettuan kielen painamisen latinalaisilla kirjaimilla. Kirjoja alettiin painaa rajan takana Itä-Preussissa ja aina Amerikassa asti, ja niitä kuljetettiin salaa takaisin. Kantajia sanottiin liettuaksi knygnešiai, kirjankantajat. He kulkivat öisin metsäpolkuja säkit selässä, ja kiinni jäänyt sai sakot, vankilan tai karkotuksen Siperiaan. Kirjoja kannettiin neljäkymmentä vuotta, kunnes kielto kumottiin vuonna 1904.
+AIEMPI KYSYMYS: Miksi uskonpuhdistus toi kansankielen kirkkoihin?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Uskonpuhdistus]] 1500-luvulla korosti, että jokaisen uskovan piti voida ymmärtää Raamatun sanoma ja jumalanpalvelus omalla kielellään, ei vain latinaksi. Siksi kirkoissa alettiin saarnata ja laulaa kansankielellä, Raamattua käännettiin, ja kansankielinen opetus levisi kouluihin ja kirjoihin. Tämän vaikutus näkyy myös [[Preussissa]], jossa liettuan ja kuurin kielellä pidetyt jumalanpalvelukset saivat tukea herttuan määräyksellä vuonna 1544. Kyllä kyyhkykin ymmärtää sen, että kirjeen pitää olla luettavissa.
+KYSYMYS: Kerro lisää: Preussissa
+
+### 262
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rusnė (luonto · saari)
+Tietoruudun teksti: Rusnė on rajakaupunki Nemunasin suistossa, samannimisellä saarella noin yhdeksän kilometriä Šilutėsta lounaaseen. Paikka mainitaan lähteissä ensimmäisen kerran 1300-luvulla, ja ensimmäinen kirkko rakennettiin vuonna 1419. Preussin herttua määräsi vuonna 1544 pidettäväksi jumalanpalveluksia liettuan ja kuurin kielillä, ja vuonna 1553 kylään perustettiin liettuankielinen seurakuntakoulu. Alue on tulva-altista, ja saarella aloitti 1810 toimintansa yksi Liettuan ensimmäisistä vedenmittausasemista. Venäjän rajan erottaa Skirvytė-joki, ja kaupunki on suosittu kalastajien ja lintuharrastajien kohde.
+AIEMPI KYSYMYS: Miten vedenkorkeutta mitattiin ennen sähköisiä antureita?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Vedenkorkeutta mitattiin yleensä asteikolla varustetulla paalulla tai laudalla, jonka päältä havainnoitsija luki vedenpinnan korkeuden säännöllisesti ja kirjasi sen muistiin. Myöhemmin käyttöön tulivat [[kellukkeella]] toimivat mittarit, joissa veden mukana liikkuva kelluke siirsi liikkeen kirjoittavaan laitteeseen, ja meren vedenkorkeutta mittaavat [[mareografit]] tallensivat käyrää paperille. Sähköiset anturit syrjäyttivät nämä myöhemmin. Mittaukset kertovat vedenkorkeuden pitkän ajan kehityksestä, ja siksi vanhat havaintosarjat ovat tutkijoille arvokkaita. Havainnoitsijan työ lienee ollut kylmää ja märkää.
+KYSYMYS: Kerro lisää: kellukkeella
+
+### 263
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rusnė (luonto · saari)
+Tietoruudun teksti: Rusnė on rajakaupunki Nemunasin suistossa, samannimisellä saarella noin yhdeksän kilometriä Šilutėsta lounaaseen. Paikka mainitaan lähteissä ensimmäisen kerran 1300-luvulla, ja ensimmäinen kirkko rakennettiin vuonna 1419. Preussin herttua määräsi vuonna 1544 pidettäväksi jumalanpalveluksia liettuan ja kuurin kielillä, ja vuonna 1553 kylään perustettiin liettuankielinen seurakuntakoulu. Alue on tulva-altista, ja saarella aloitti 1810 toimintansa yksi Liettuan ensimmäisistä vedenmittausasemista. Venäjän rajan erottaa Skirvytė-joki, ja kaupunki on suosittu kalastajien ja lintuharrastajien kohde.
+AIEMPI KYSYMYS: Miten vedenkorkeutta mitattiin ennen sähköisiä antureita?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Vedenkorkeutta mitattiin yleensä asteikolla varustetulla paalulla tai laudalla, jonka päältä havainnoitsija luki vedenpinnan korkeuden säännöllisesti ja kirjasi sen muistiin. Myöhemmin käyttöön tulivat [[kellukkeella]] toimivat mittarit, joissa veden mukana liikkuva kelluke siirsi liikkeen kirjoittavaan laitteeseen, ja meren vedenkorkeutta mittaavat [[mareografit]] tallensivat käyrää paperille. Sähköiset anturit syrjäyttivät nämä myöhemmin. Mittaukset kertovat vedenkorkeuden pitkän ajan kehityksestä, ja siksi vanhat havaintosarjat ovat tutkijoille arvokkaita. Havainnoitsijan työ lienee ollut kylmää ja märkää.
+KYSYMYS: Kerro lisää: mareografit
+
+### 264
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rusnė (luonto · saari)
+Tietoruudun teksti: Rusnė on rajakaupunki Nemunasin suistossa, samannimisellä saarella noin yhdeksän kilometriä Šilutėsta lounaaseen. Paikka mainitaan lähteissä ensimmäisen kerran 1300-luvulla, ja ensimmäinen kirkko rakennettiin vuonna 1419. Preussin herttua määräsi vuonna 1544 pidettäväksi jumalanpalveluksia liettuan ja kuurin kielillä, ja vuonna 1553 kylään perustettiin liettuankielinen seurakuntakoulu. Alue on tulva-altista, ja saarella aloitti 1810 toimintansa yksi Liettuan ensimmäisistä vedenmittausasemista. Venäjän rajan erottaa Skirvytė-joki, ja kaupunki on suosittu kalastajien ja lintuharrastajien kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Mikaelin luostari] 1108–1113 Pyhän Mikaelin kultakupolinen luostari perustettiin Kiovan-Venäjän ruhtinas Svjatopolk II:n toimesta vuosina 1108–1113 arkkienkeli Mikaelin kunniaksi. Sen pääkirkon kupoli kullattiin ehkä ensimmäisenä koko Kiovan-Venäjällä, ja juuri siitä koko luostari sai lempinimensä ”kultakupolinen”. Vuonna 1108 luostariin tuotiin myös Konstantinopolista pyhän Barbaran pyhäinjäännökset, ja niistä tuli niin suosittu pyhiinvaellusaarre, että 1870-luvulla luostarissa kävi vuosittain jopa 100 000 vierailijaa. 1700-luvulla kirkkoa laajennettiin ukrainalaiseen barokkityyliin, ja alkuperäisestä yhdestä kupolista tuli lopulta seitsemän kupolin kokonaisuus. Sisäseiniltä löytyi myös upeita 1100-luvun bys…
+- [Ukraina — maalehti / Historia: Tasavalta eli neljä vuotta ennen kuin se hävisi] 1918 — Historioitsija Mychailo Hruševskyin johtama Keskusrada julisti Ukrainan autonomiaksi kesäkuussa 1917 ja täysin itsenäiseksi kansantasavallaksi 22. tammikuuta 1918, kun Venäjällä riehui vallankumous. Nuori tasavalta ehti saada oman lipun, vaakunan – kultaisen kolmikärjen eli tryzubin – ja kansallislaulun, joka on Ukrainan hymni yhä tänään. Se kuitenkin joutui heti sotaan bolševikkeja vastaan, ja vuoteen 1921 mennessä Puna-armeija oli vallannut sen alueet. Hallitus jatkoi maanpaossa aina vuoteen 1992, jolloin se luovutti valtuutensa itsenäistyneelle Ukrainalle.
+AIEMPI KYSYMYS: Mistä Nemunas-joki saa alkunsa ja minne se laskee?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nemunas saa alkunsa [[Valko-Venäjällä]], virtaa sieltä Liettuan halki ja laskee Kuurinlahteen, joka on Itämerestä erillään oleva laguuni, ja siitä edelleen [[Itämereen]]. Joen alajuoksulla on laaja suisto, jonka keskeisiä paikkoja on Rusnė, ja joen osa muodostaa lisäksi rajan Liettuan ja Venäjän välillä. Tarkkaa pituutta en kirjoita tähän, sillä lähteissä se on annettu hieman eri tavoin. Hyvä, että navigointi onnistuu, vaikka kartat ovat vähän vanhoja.
+KYSYMYS: Kerro lisää: Valko-Venäjällä
+
+### 265
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rusnė (luonto · saari)
+Tietoruudun teksti: Rusnė on rajakaupunki Nemunasin suistossa, samannimisellä saarella noin yhdeksän kilometriä Šilutėsta lounaaseen. Paikka mainitaan lähteissä ensimmäisen kerran 1300-luvulla, ja ensimmäinen kirkko rakennettiin vuonna 1419. Preussin herttua määräsi vuonna 1544 pidettäväksi jumalanpalveluksia liettuan ja kuurin kielillä, ja vuonna 1553 kylään perustettiin liettuankielinen seurakuntakoulu. Alue on tulva-altista, ja saarella aloitti 1810 toimintansa yksi Liettuan ensimmäisistä vedenmittausasemista. Venäjän rajan erottaa Skirvytė-joki, ja kaupunki on suosittu kalastajien ja lintuharrastajien kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kaupunkilehti / Kadut ja sulut: Polhem sai sulkutyön 83-vuotiaana] Mälaren on järvi, jonka pinta on merenpintaa korkeammalla, ja Tukholma seisoo juuri siinä kohdassa, jossa vesi purkautuu Itämereen. Ennen sulkuja veneet piti sauvoa ja hinata virran läpi maksua vastaan, ja moni ajoi matalikolle. Ensimmäisen sulun rakensivat hollantilaiset mestarit kuningatar Kristiinan aikaan, ja se valmistui 1642. Kun siitä tuli liian pieni, työ annettiin 1744 Christopher Polhemille, joka oli silloin 83-vuotias. Hän kuoli kesken hankkeen, ja poika Gabriel sai sulun valmiiksi 1755.
+AIEMPI KYSYMYS: Mistä Nemunas-joki saa alkunsa ja minne se laskee?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nemunas saa alkunsa [[Valko-Venäjällä]], virtaa sieltä Liettuan halki ja laskee Kuurinlahteen, joka on Itämerestä erillään oleva laguuni, ja siitä edelleen [[Itämereen]]. Joen alajuoksulla on laaja suisto, jonka keskeisiä paikkoja on Rusnė, ja joen osa muodostaa lisäksi rajan Liettuan ja Venäjän välillä. Tarkkaa pituutta en kirjoita tähän, sillä lähteissä se on annettu hieman eri tavoin. Hyvä, että navigointi onnistuu, vaikka kartat ovat vähän vanhoja.
+KYSYMYS: Kerro lisää: Itämereen
+
+### 266
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šilutė (historia)
+Tietoruudun teksti: Šilutė on kaupunki Länsi-Liettuassa, ja se kuuluu Pikku-Liettuan (Klein-Litauen) etnografiseen alueeseen. Paikka sai alkunsa majatalosta, joka palveli Klaipėdan ja Tilsitin välillä kulkevia matkalaisia ja hevosia; saksankielinen nimi Heydekrug viittaa tähän nummen majataloon. Vuonna 1511 majatalon osti maineen ja kalastusoikeuksineen Georg Tallat, ja paikalle syntyi tunnettu kalamarkkina. Preussin kuningaskuntaan Šilutė kuului 1700-luvulta lähtien, ja 1800-luvun lopulla asukkaista osa oli liettuankielisiä ja monet elivät maataloudesta, kalastuksesta ja lauttauksesta. Vuosittaisilla markkinoilla myytiin kalaa aina Varsovaan ja Pietariin asti, sikoja Berliiniin sekä vihanneksia, karjaa ja hevosia.
+AIEMPI KYSYMYS: Miksi Šilutėn saksalainen nimi Heydekrug viittaa majataloon?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tän minä osaan. Saksan sana Heyde tarkoittaa nummea tai kangasmaata ja Krug majataloa tai kapakkaa, joten Heydekrug tarkoittaa suunnilleen nummen majataloa. Nimi kertoo paikan alkuperästä, sillä kaupunki sai alkunsa majatalosta, joka palveli [[Klaipėdan]] ja [[Tilsitin]] välillä kulkevia matkalaisia ja hevosia. Šilutė kuuluu [[Pikku-Liettuan]] alueeseen, jossa saksan ja liettuan kielet kohtasivat. Kyl minä majatalon tunnistan, kun sellaisen näen.
+KYSYMYS: Kerro lisää: Klaipėdan
+
+### 267
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šilutė (historia)
+Tietoruudun teksti: Šilutė on kaupunki Länsi-Liettuassa, ja se kuuluu Pikku-Liettuan (Klein-Litauen) etnografiseen alueeseen. Paikka sai alkunsa majatalosta, joka palveli Klaipėdan ja Tilsitin välillä kulkevia matkalaisia ja hevosia; saksankielinen nimi Heydekrug viittaa tähän nummen majataloon. Vuonna 1511 majatalon osti maineen ja kalastusoikeuksineen Georg Tallat, ja paikalle syntyi tunnettu kalamarkkina. Preussin kuningaskuntaan Šilutė kuului 1700-luvulta lähtien, ja 1800-luvun lopulla asukkaista osa oli liettuankielisiä ja monet elivät maataloudesta, kalastuksesta ja lauttauksesta. Vuosittaisilla markkinoilla myytiin kalaa aina Varsovaan ja Pietariin asti, sikoja Berliiniin sekä vihanneksia, karjaa ja hevosia.
+AIEMPI KYSYMYS: Miksi Šilutėn saksalainen nimi Heydekrug viittaa majataloon?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tän minä osaan. Saksan sana Heyde tarkoittaa nummea tai kangasmaata ja Krug majataloa tai kapakkaa, joten Heydekrug tarkoittaa suunnilleen nummen majataloa. Nimi kertoo paikan alkuperästä, sillä kaupunki sai alkunsa majatalosta, joka palveli [[Klaipėdan]] ja [[Tilsitin]] välillä kulkevia matkalaisia ja hevosia. Šilutė kuuluu [[Pikku-Liettuan]] alueeseen, jossa saksan ja liettuan kielet kohtasivat. Kyl minä majatalon tunnistan, kun sellaisen näen.
+KYSYMYS: Kerro lisää: Tilsitin
+
+### 268
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šilutė (historia)
+Tietoruudun teksti: Šilutė on kaupunki Länsi-Liettuassa, ja se kuuluu Pikku-Liettuan (Klein-Litauen) etnografiseen alueeseen. Paikka sai alkunsa majatalosta, joka palveli Klaipėdan ja Tilsitin välillä kulkevia matkalaisia ja hevosia; saksankielinen nimi Heydekrug viittaa tähän nummen majataloon. Vuonna 1511 majatalon osti maineen ja kalastusoikeuksineen Georg Tallat, ja paikalle syntyi tunnettu kalamarkkina. Preussin kuningaskuntaan Šilutė kuului 1700-luvulta lähtien, ja 1800-luvun lopulla asukkaista osa oli liettuankielisiä ja monet elivät maataloudesta, kalastuksesta ja lauttauksesta. Vuosittaisilla markkinoilla myytiin kalaa aina Varsovaan ja Pietariin asti, sikoja Berliiniin sekä vihanneksia, karjaa ja hevosia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Kaksi miljoonaa kättä yli kolmen maan] 1989 — Elokuun 23. päivänä 1989 noin kaksi miljoonaa ihmistä tarttui toisiaan käsistä ja muodosti yhtenäisen ketjun Tallinnasta Riian kautta Vilnaan — matkaa kertyi yli kuusisataa kilometriä. Baltian ketju järjestettiin täsmälleen viisikymmentä vuotta sen jälkeen, kun Neuvostoliitto ja natsi-Saksa olivat salaisessa sopimuksessa jakaneet Baltian maat keskenään. Rauhanomainen mielenilmaus vaati Viron, Latvian ja Liettuan miehitysten päättämistä, ja tapahtuma näkyi television välityksellä kaikkialla maailmassa. Kaksi vuotta myöhemmin kaikki kolme maata olivat jälleen itsenäisiä.
+- [Liettua — maalehti / Historia: Rautasusi näytti unessa kaupungin paikan] 1323 — Tarinan mukaan suuriruhtinas Gediminas nukahti metsästysretken jälkeen Vilnian ja Neriksen jokien yhtymäkohdassa ja näki unta rautaisesta sudesta, joka ulvoi kukkulalla sadan suden äänellä. Ylipappi Lizdeika tulkitsi unen: kukkulalle nousisi pääkaupunki, jonka maine kaikuisi yhtä kauas kuin suden ulvonta. Gediminas perusti kaupungin paikalle perinteisesti vuonna 1323 ja kutsui sinne kauppiaita ja käsityöläisiä ympäri Eurooppaa. Tuomiokirkkoaukiolla seisova patsas muistuttaa perustajasta, ja rautasudesta on tullut yksi Liettuan tunnetuimmista tunnuksista.
+AIEMPI KYSYMYS: Miksi Šilutėn saksalainen nimi Heydekrug viittaa majataloon?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tän minä osaan. Saksan sana Heyde tarkoittaa nummea tai kangasmaata ja Krug majataloa tai kapakkaa, joten Heydekrug tarkoittaa suunnilleen nummen majataloa. Nimi kertoo paikan alkuperästä, sillä kaupunki sai alkunsa majatalosta, joka palveli [[Klaipėdan]] ja [[Tilsitin]] välillä kulkevia matkalaisia ja hevosia. Šilutė kuuluu [[Pikku-Liettuan]] alueeseen, jossa saksan ja liettuan kielet kohtasivat. Kyl minä majatalon tunnistan, kun sellaisen näen.
+KYSYMYS: Kerro lisää: Pikku-Liettuan
+
+### 269
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šilutė (historia)
+Tietoruudun teksti: Šilutė on kaupunki Länsi-Liettuassa, ja se kuuluu Pikku-Liettuan (Klein-Litauen) etnografiseen alueeseen. Paikka sai alkunsa majatalosta, joka palveli Klaipėdan ja Tilsitin välillä kulkevia matkalaisia ja hevosia; saksankielinen nimi Heydekrug viittaa tähän nummen majataloon. Vuonna 1511 majatalon osti maineen ja kalastusoikeuksineen Georg Tallat, ja paikalle syntyi tunnettu kalamarkkina. Preussin kuningaskuntaan Šilutė kuului 1700-luvulta lähtien, ja 1800-luvun lopulla asukkaista osa oli liettuankielisiä ja monet elivät maataloudesta, kalastuksesta ja lauttauksesta. Vuosittaisilla markkinoilla myytiin kalaa aina Varsovaan ja Pietariin asti, sikoja Berliiniin sekä vihanneksia, karjaa ja hevosia.
+AIEMPI KYSYMYS: Miksi Šilutėssa pidettiin vuosittain suuria markkinoita, ja mitä niillä myytiin?
+AIEMPI VASTAUS (Livia):
+No niin, kauppaa riittää. Markkinat olivat luonteva jatko paikan historialle: [[Šilutė]] syntyi matkalaisten ja hevosten majatalon ympärille kulkureitin varrelle, ja jo 1500-luvun alussa siellä oli tunnettu kalamarkkina. Vuosittaisilla [[markkinoilla]] myytiin kalaa aina Varsovaan ja Pietariin asti, sikoja Berliiniin sekä vihanneksia, karjaa ja hevosia. Alueella elettiin 1800-luvun lopulla pitkälti maataloudesta, kalastuksesta ja lauttauksesta, joten tuotteita riitti kaupattavaksi. Hevoset olivat minusta aina markkinoiden parasta antia, vaikka eivät ne lentäneet.
+KYSYMYS: Kerro lisää: Šilutė
+
+### 270
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šilutė (historia)
+Tietoruudun teksti: Šilutė on kaupunki Länsi-Liettuassa, ja se kuuluu Pikku-Liettuan (Klein-Litauen) etnografiseen alueeseen. Paikka sai alkunsa majatalosta, joka palveli Klaipėdan ja Tilsitin välillä kulkevia matkalaisia ja hevosia; saksankielinen nimi Heydekrug viittaa tähän nummen majataloon. Vuonna 1511 majatalon osti maineen ja kalastusoikeuksineen Georg Tallat, ja paikalle syntyi tunnettu kalamarkkina. Preussin kuningaskuntaan Šilutė kuului 1700-luvulta lähtien, ja 1800-luvun lopulla asukkaista osa oli liettuankielisiä ja monet elivät maataloudesta, kalastuksesta ja lauttauksesta. Vuosittaisilla markkinoilla myytiin kalaa aina Varsovaan ja Pietariin asti, sikoja Berliiniin sekä vihanneksia, karjaa ja hevosia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Firenze — kohdekartta / Kohdekartta: Porcellino] Kultaseppien sillalta on muutaman minuutin kävely kauppahallin holvien alle, jossa istuu pronssinen villisika kitansa auki. Firenzeläiset sanovat sitä porsaaksi, vaikka se ei ole porsas. Pietro Tacca valoi sen vähän ennen vuotta 1634, ja mallina oli marmoripatsas, joka oli itsekin kopio — roomalainen jäljennös hellenistisestä alkuperäisestä. Se marmori löytyi Roomasta, Medicit toivat sen Firenzeen 1500-luvun puolivälissä, ja jo silloin sitä sanottiin Kalydonian villisiaksi, tarujen pedoksi. Pronssi oli tarkoitettu Bobolin puutarhaan, mutta se päätyi kauppahallin kulmaan, ensin apteekin eteen — apteekki sai siitä nimekseen Villisian apteekki — ja myöhemmin sivummalle, jotta markkinoilla maht…
+- [Perth — kohdekartta / Kohdekartta: London Court] 1937 Nelikerroksinen kauppakuja Hay Streetin ja St Georges Terracen välissä näyttää Tudorin ajalta, mutta se on vuodelta 1937. Rakennuttaja oli kultarahoittaja Claude de Bernales, joka osti tontin helmikuussa 1935 75 000 punnalla entiseltä pormestarilta Thomas Molloylta — samalta mieheltä, joka oli rakennuttanut His Majesty’s -teatterin. Paikalla oli siihen asti ollut kujaverkosto nimeltä Gun Alley. Piirustukset teki melbournelainen arkkitehti Bernard Evans, työ alkoi elokuussa 1936 ja kesti alle vuoden. Hinta oli 80 000 puntaa. Hay Streetin päädyssä on suuri kello, joka lyö neljännestunnein, ja jokaisella lyönnillä linnanportista tulee neljä koneellista ritaria turnajaisiin. St Georges Ter…
+AIEMPI KYSYMYS: Miksi Šilutėssa pidettiin vuosittain suuria markkinoita, ja mitä niillä myytiin?
+AIEMPI VASTAUS (Livia):
+No niin, kauppaa riittää. Markkinat olivat luonteva jatko paikan historialle: [[Šilutė]] syntyi matkalaisten ja hevosten majatalon ympärille kulkureitin varrelle, ja jo 1500-luvun alussa siellä oli tunnettu kalamarkkina. Vuosittaisilla [[markkinoilla]] myytiin kalaa aina Varsovaan ja Pietariin asti, sikoja Berliiniin sekä vihanneksia, karjaa ja hevosia. Alueella elettiin 1800-luvun lopulla pitkälti maataloudesta, kalastuksesta ja lauttauksesta, joten tuotteita riitti kaupattavaksi. Hevoset olivat minusta aina markkinoiden parasta antia, vaikka eivät ne lentäneet.
+KYSYMYS: Kerro lisää: markkinoilla
+
+### 271
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šilutė (historia)
+Tietoruudun teksti: Šilutė on kaupunki Länsi-Liettuassa, ja se kuuluu Pikku-Liettuan (Klein-Litauen) etnografiseen alueeseen. Paikka sai alkunsa majatalosta, joka palveli Klaipėdan ja Tilsitin välillä kulkevia matkalaisia ja hevosia; saksankielinen nimi Heydekrug viittaa tähän nummen majataloon. Vuonna 1511 majatalon osti maineen ja kalastusoikeuksineen Georg Tallat, ja paikalle syntyi tunnettu kalamarkkina. Preussin kuningaskuntaan Šilutė kuului 1700-luvulta lähtien, ja 1800-luvun lopulla asukkaista osa oli liettuankielisiä ja monet elivät maataloudesta, kalastuksesta ja lauttauksesta. Vuosittaisilla markkinoilla myytiin kalaa aina Varsovaan ja Pietariin asti, sikoja Berliiniin sekä vihanneksia, karjaa ja hevosia.
+AIEMPI KYSYMYS: Mitä Pikku-Liettua tarkoittaa ja missä se sijaitsi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Pikku-Liettua oli historiallinen alue Itä-Preussin pohjoisosassa, [[Nemunas-joen]] alajuoksun ja [[Klaipėdan]] seudulla, jossa asui liettuankielistä, enimmäkseen luterilaista väestöä Preussin vallan alla. Nimi erottaa sen Suur-Liettuasta, joka oli Liettuan suuriruhtinaskunnan ydinaluetta. Alueen liettuankielinen kulttuuri oli tärkeä liettuan kirjakielen kehitykselle. En tosin ole varma kaikista rajoista, sillä ne vaihtelivat eri aikoina. Eipä tuo ollut helppo selittää ilman karttaa.
+KYSYMYS: Kerro lisää: Nemunas-joen
+
+### 272
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šilutė (historia)
+Tietoruudun teksti: Šilutė on kaupunki Länsi-Liettuassa, ja se kuuluu Pikku-Liettuan (Klein-Litauen) etnografiseen alueeseen. Paikka sai alkunsa majatalosta, joka palveli Klaipėdan ja Tilsitin välillä kulkevia matkalaisia ja hevosia; saksankielinen nimi Heydekrug viittaa tähän nummen majataloon. Vuonna 1511 majatalon osti maineen ja kalastusoikeuksineen Georg Tallat, ja paikalle syntyi tunnettu kalamarkkina. Preussin kuningaskuntaan Šilutė kuului 1700-luvulta lähtien, ja 1800-luvun lopulla asukkaista osa oli liettuankielisiä ja monet elivät maataloudesta, kalastuksesta ja lauttauksesta. Vuosittaisilla markkinoilla myytiin kalaa aina Varsovaan ja Pietariin asti, sikoja Berliiniin sekä vihanneksia, karjaa ja hevosia.
+AIEMPI KYSYMYS: Mikä Klaipėda on ja miksi sen satama on tärkeä?
+AIEMPI VASTAUS (Livia):
+Kato, satamakaupunki. Klaipėda on Liettuan merkittävä satamakaupunki Itämeren rannalla. Kaupungin saksalainen nimi on Memel, ja se on aikanaan kasvanut [[Saksalaisritarikunnan]] linnan ympärille keskiajalla. Satama on tärkeä, koska se on Liettuan päämeriyhteys ja merkittävä kauppa- ja kuljetussatama, jonka kautta Liettuan ulkomaankauppaa kulkee. Kaupunki kuuluu historiallisesti [[Pikku-Liettuan]] alueeseen. Merenrantakaupungit minä aina löydän ylhäältä helposti.
+KYSYMYS: Kerro lisää: Saksalaisritarikunnan
+
+### 273
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šilutė (historia)
+Tietoruudun teksti: Šilutė on kaupunki Länsi-Liettuassa, ja se kuuluu Pikku-Liettuan (Klein-Litauen) etnografiseen alueeseen. Paikka sai alkunsa majatalosta, joka palveli Klaipėdan ja Tilsitin välillä kulkevia matkalaisia ja hevosia; saksankielinen nimi Heydekrug viittaa tähän nummen majataloon. Vuonna 1511 majatalon osti maineen ja kalastusoikeuksineen Georg Tallat, ja paikalle syntyi tunnettu kalamarkkina. Preussin kuningaskuntaan Šilutė kuului 1700-luvulta lähtien, ja 1800-luvun lopulla asukkaista osa oli liettuankielisiä ja monet elivät maataloudesta, kalastuksesta ja lauttauksesta. Vuosittaisilla markkinoilla myytiin kalaa aina Varsovaan ja Pietariin asti, sikoja Berliiniin sekä vihanneksia, karjaa ja hevosia.
+AIEMPI KYSYMYS: Mikä Tilsit on nykyisin ja mikä rauha siellä solmittiin?
+AIEMPI VASTAUS (Livia):
+Ai se. Tilsit on nykyisin nimeltään Sovetsk, ja se sijaitsee Venäjän Kaliningradin alueella Nemunas-joen, venäjäksi Njemanin, rannalla. Kaupungissa solmittiin vuonna 1807 [[Tilsitin rauha]], jolla [[Napoleon]] sopi rauhasta Venäjän ja Preussin kanssa Napoleonin sotien aikana. Šilutėn alueella Tilsit oli tuttu paikka jo paljon aiemmin, sillä matkalaiset kulkivat sen ja Klaipėdan väliä. En ole varma kaikista rauhan ehdoista, mutta Preussi menetti sen myötä paljon alueitaan. Pitkä matka ja lyhyt vastaus, sanoisin.
+KYSYMYS: Kerro lisää: Tilsitin rauha
+
+### 274
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šilutė (historia)
+Tietoruudun teksti: Šilutė on kaupunki Länsi-Liettuassa, ja se kuuluu Pikku-Liettuan (Klein-Litauen) etnografiseen alueeseen. Paikka sai alkunsa majatalosta, joka palveli Klaipėdan ja Tilsitin välillä kulkevia matkalaisia ja hevosia; saksankielinen nimi Heydekrug viittaa tähän nummen majataloon. Vuonna 1511 majatalon osti maineen ja kalastusoikeuksineen Georg Tallat, ja paikalle syntyi tunnettu kalamarkkina. Preussin kuningaskuntaan Šilutė kuului 1700-luvulta lähtien, ja 1800-luvun lopulla asukkaista osa oli liettuankielisiä ja monet elivät maataloudesta, kalastuksesta ja lauttauksesta. Vuosittaisilla markkinoilla myytiin kalaa aina Varsovaan ja Pietariin asti, sikoja Berliiniin sekä vihanneksia, karjaa ja hevosia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. Helena — kaupunkilehti / St. Helena: Napoleon-kadun siirtomaatalo] Konsulaatti-niminen hotelli Jamestownin pääkadulla, jonka nimi onkin osuvasti Napoleon Street, on 1700-luvun puolivälin rakennus rautaisine parvekkeineen. Se edustaa Itä-Intian kauppakomppanian ajan georgiaanista rakennustyyliä, joka antaa koko kaupungille tunnusomaisen ilmeensä ja joka on säilynyt lähes muuttumattomana isoisän 1873 vierailusta lähtien. Sisällä ja parvekkeella vierailijoita tervehtii täysikokoinen Napoleonin hahmoa esittävä patsas univormussaan – muistutus siitä, että keisarin varjo on yhä läsnä kaikkialla saaren arjessa.
+AIEMPI KYSYMYS: Mikä Tilsit on nykyisin ja mikä rauha siellä solmittiin?
+AIEMPI VASTAUS (Livia):
+Ai se. Tilsit on nykyisin nimeltään Sovetsk, ja se sijaitsee Venäjän Kaliningradin alueella Nemunas-joen, venäjäksi Njemanin, rannalla. Kaupungissa solmittiin vuonna 1807 [[Tilsitin rauha]], jolla [[Napoleon]] sopi rauhasta Venäjän ja Preussin kanssa Napoleonin sotien aikana. Šilutėn alueella Tilsit oli tuttu paikka jo paljon aiemmin, sillä matkalaiset kulkivat sen ja Klaipėdan väliä. En ole varma kaikista rauhan ehdoista, mutta Preussi menetti sen myötä paljon alueitaan. Pitkä matka ja lyhyt vastaus, sanoisin.
+KYSYMYS: Kerro lisää: Napoleon
+
+### 275
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varniai (kulttuuri)
+Tietoruudun teksti: Varniai on pikkukaupunki Länsi-Liettuassa Telšiain maakunnassa, ja keskiajalla sen nimi oli Medininkai, joka mainitaan ensimmäisen kerran vuonna 1320. Nykyinen nimi tulee kaupungin läpi virtaavasta Varnelė-joesta. Samogitian kastamisen jälkeen piispa asui Varniaissa, ja kaupunki oli Samogitian katolisen kirkon keskus, kunnes Venäjän keisarikunnan viranomaiset siirsivät hiippakunnan Kaunasiin tammikuun kansannousun 1863 jälkeen. Piispa Merkelis Giedraitisin tuella Mikalojus Daukša valmisti julkaisukuntoon Katechizmasin, joka oli ensimmäinen Liettuan suuriruhtinaskunnassa painettu liettuankielinen kirja. Kaupungissa asui myös piispa Motiejus Valančius.
+AIEMPI KYSYMYS: Miksi Samogitian piispa asui juuri Varniaissa, ja miksi hiippakunnan keskus siirrettiin sieltä pois?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tähän on selvä vastaus. Samogitian kastamisen jälkeen piispa asui Varniaissa, ja kaupungista tuli [[Samogitian]] katolisen kirkon keskus. Syytä siihen, miksi valinta osui juuri Varniaihin, en ole varma, mutta paikka oli seudun hiippakunnan keskus vuosisatojen ajan. Hiippakunnan keskus siirrettiin Kaunasiin sen jälkeen, kun Venäjän keisarikunnan viranomaiset olivat tukahduttaneet vuoden 1863 [[tammikuun kansannousun]]; siirto oli osa Venäjän vallan otetta katolisesta kirkosta. Varniain tunnetuimpiin piispoihin kuului [[Motiejus Valančius]]. Onpa siitä kauan aikaa.
+KYSYMYS: Kerro lisää: Samogitian
+
+### 276
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varniai (kulttuuri)
+Tietoruudun teksti: Varniai on pikkukaupunki Länsi-Liettuassa Telšiain maakunnassa, ja keskiajalla sen nimi oli Medininkai, joka mainitaan ensimmäisen kerran vuonna 1320. Nykyinen nimi tulee kaupungin läpi virtaavasta Varnelė-joesta. Samogitian kastamisen jälkeen piispa asui Varniaissa, ja kaupunki oli Samogitian katolisen kirkon keskus, kunnes Venäjän keisarikunnan viranomaiset siirsivät hiippakunnan Kaunasiin tammikuun kansannousun 1863 jälkeen. Piispa Merkelis Giedraitisin tuella Mikalojus Daukša valmisti julkaisukuntoon Katechizmasin, joka oli ensimmäinen Liettuan suuriruhtinaskunnassa painettu liettuankielinen kirja. Kaupungissa asui myös piispa Motiejus Valančius.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kaupunkilehti / Historia: Tammikuun joki joka ei ollut joki] Portugalilaiset purjehtivat Guanabaran lahdelle 1. tammikuuta 1502 ja luulivat sitä joen suuksi — siitä nimi Rio de Janeiro, "tammikuun joki". Ranskalaiset siirtolaiset ehtivät perustaa lahden saarelle oman siirtokuntansa 1555, ja portugalilaiset karkottivat heidät vasta vuosien sotimisen jälkeen 1567. Estácio de Sá perusti varsinaisen kaupungin 1. maaliskuuta 1565 ja nimesi sen São Sebastião do Rio de Janeiroksi silloisen kuninkaan suojeluspyhimyksen mukaan.
+AIEMPI KYSYMYS: Miksi Samogitian piispa asui juuri Varniaissa, ja miksi hiippakunnan keskus siirrettiin sieltä pois?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tähän on selvä vastaus. Samogitian kastamisen jälkeen piispa asui Varniaissa, ja kaupungista tuli [[Samogitian]] katolisen kirkon keskus. Syytä siihen, miksi valinta osui juuri Varniaihin, en ole varma, mutta paikka oli seudun hiippakunnan keskus vuosisatojen ajan. Hiippakunnan keskus siirrettiin Kaunasiin sen jälkeen, kun Venäjän keisarikunnan viranomaiset olivat tukahduttaneet vuoden 1863 [[tammikuun kansannousun]]; siirto oli osa Venäjän vallan otetta katolisesta kirkosta. Varniain tunnetuimpiin piispoihin kuului [[Motiejus Valančius]]. Onpa siitä kauan aikaa.
+KYSYMYS: Kerro lisää: tammikuun kansannousun
+
+### 277
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varniai (kulttuuri)
+Tietoruudun teksti: Varniai on pikkukaupunki Länsi-Liettuassa Telšiain maakunnassa, ja keskiajalla sen nimi oli Medininkai, joka mainitaan ensimmäisen kerran vuonna 1320. Nykyinen nimi tulee kaupungin läpi virtaavasta Varnelė-joesta. Samogitian kastamisen jälkeen piispa asui Varniaissa, ja kaupunki oli Samogitian katolisen kirkon keskus, kunnes Venäjän keisarikunnan viranomaiset siirsivät hiippakunnan Kaunasiin tammikuun kansannousun 1863 jälkeen. Piispa Merkelis Giedraitisin tuella Mikalojus Daukša valmisti julkaisukuntoon Katechizmasin, joka oli ensimmäinen Liettuan suuriruhtinaskunnassa painettu liettuankielinen kirja. Kaupungissa asui myös piispa Motiejus Valančius.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Kaksikymmentä nimeä vapautti maan] 1918 — Ensimmäisen maailmansodan lopulla, Venäjän ja Saksan miehitysten välissä, Liettuan neuvosto kokoontui Vilnan Pilies-kadun talossa ja allekirjoitti 16. helmikuuta 1918 itsenäisyysjulistuksen. Sen allekirjoitti kaksikymmentä jäsentä, puheenjohtajanaan lääkäri Jonas Basanavičius, ja se julisti demokraattisen Liettuan valtion, jonka pääkaupunki olisi Vilna. Talo tunnetaan nykyään Signatarų-talona. Alkuperäinen asiakirja katosi Kaunasista neuvostomiehityksen alla 1940 ja löytyi vasta 2017 Saksan ulkoministeriön arkistosta Berliinistä.
+AIEMPI KYSYMYS: Miksi Samogitian piispa asui juuri Varniaissa, ja miksi hiippakunnan keskus siirrettiin sieltä pois?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tähän on selvä vastaus. Samogitian kastamisen jälkeen piispa asui Varniaissa, ja kaupungista tuli [[Samogitian]] katolisen kirkon keskus. Syytä siihen, miksi valinta osui juuri Varniaihin, en ole varma, mutta paikka oli seudun hiippakunnan keskus vuosisatojen ajan. Hiippakunnan keskus siirrettiin Kaunasiin sen jälkeen, kun Venäjän keisarikunnan viranomaiset olivat tukahduttaneet vuoden 1863 [[tammikuun kansannousun]]; siirto oli osa Venäjän vallan otetta katolisesta kirkosta. Varniain tunnetuimpiin piispoihin kuului [[Motiejus Valančius]]. Onpa siitä kauan aikaa.
+KYSYMYS: Kerro lisää: Motiejus Valančius
+
+### 278
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varniai (kulttuuri)
+Tietoruudun teksti: Varniai on pikkukaupunki Länsi-Liettuassa Telšiain maakunnassa, ja keskiajalla sen nimi oli Medininkai, joka mainitaan ensimmäisen kerran vuonna 1320. Nykyinen nimi tulee kaupungin läpi virtaavasta Varnelė-joesta. Samogitian kastamisen jälkeen piispa asui Varniaissa, ja kaupunki oli Samogitian katolisen kirkon keskus, kunnes Venäjän keisarikunnan viranomaiset siirsivät hiippakunnan Kaunasiin tammikuun kansannousun 1863 jälkeen. Piispa Merkelis Giedraitisin tuella Mikalojus Daukša valmisti julkaisukuntoon Katechizmasin, joka oli ensimmäinen Liettuan suuriruhtinaskunnassa painettu liettuankielinen kirja. Kaupungissa asui myös piispa Motiejus Valančius.
+AIEMPI KYSYMYS: Miksi liettuankielisen kirjan painaminen oli merkittävä tapahtuma 1500-luvun Liettuassa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Liettuan suuriruhtinaskunnassa kirjallisina kielinä käytettiin tuolloin muita kieliä, ja liettuankielinen teksti oli harvinaista. [[Katechizmas]], jonka [[Mikalojus Daukša]] valmisti julkaisukuntoon Samogitian piispa Merkelis Giedraitisin tuella, oli ensimmäinen suuriruhtinaskunnassa painettu liettuankielinen kirja. Kirjan merkitys oli siinä, että liettuaa alettiin käyttää painettuna ja kirkon opetuksessa, mikä tuki kielen asemaa ja kirjakielen kehitystä. Painetun kirjan ansiosta sanoma tavoitti suuremman joukon lukijoita kuin käsin kopioidut tekstit. Kirjapainon voima on minusta aina ollut ihan pöyristyttävä.
+KYSYMYS: Kerro lisää: Katechizmas
+
+### 279
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varniai (kulttuuri)
+Tietoruudun teksti: Varniai on pikkukaupunki Länsi-Liettuassa Telšiain maakunnassa, ja keskiajalla sen nimi oli Medininkai, joka mainitaan ensimmäisen kerran vuonna 1320. Nykyinen nimi tulee kaupungin läpi virtaavasta Varnelė-joesta. Samogitian kastamisen jälkeen piispa asui Varniaissa, ja kaupunki oli Samogitian katolisen kirkon keskus, kunnes Venäjän keisarikunnan viranomaiset siirsivät hiippakunnan Kaunasiin tammikuun kansannousun 1863 jälkeen. Piispa Merkelis Giedraitisin tuella Mikalojus Daukša valmisti julkaisukuntoon Katechizmasin, joka oli ensimmäinen Liettuan suuriruhtinaskunnassa painettu liettuankielinen kirja. Kaupungissa asui myös piispa Motiejus Valančius.
+AIEMPI KYSYMYS: Miksi liettuankielisen kirjan painaminen oli merkittävä tapahtuma 1500-luvun Liettuassa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Liettuan suuriruhtinaskunnassa kirjallisina kielinä käytettiin tuolloin muita kieliä, ja liettuankielinen teksti oli harvinaista. [[Katechizmas]], jonka [[Mikalojus Daukša]] valmisti julkaisukuntoon Samogitian piispa Merkelis Giedraitisin tuella, oli ensimmäinen suuriruhtinaskunnassa painettu liettuankielinen kirja. Kirjan merkitys oli siinä, että liettuaa alettiin käyttää painettuna ja kirkon opetuksessa, mikä tuki kielen asemaa ja kirjakielen kehitystä. Painetun kirjan ansiosta sanoma tavoitti suuremman joukon lukijoita kuin käsin kopioidut tekstit. Kirjapainon voima on minusta aina ollut ihan pöyristyttävä.
+KYSYMYS: Kerro lisää: Mikalojus Daukša
+
+### 280
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varniai (kulttuuri)
+Tietoruudun teksti: Varniai on pikkukaupunki Länsi-Liettuassa Telšiain maakunnassa, ja keskiajalla sen nimi oli Medininkai, joka mainitaan ensimmäisen kerran vuonna 1320. Nykyinen nimi tulee kaupungin läpi virtaavasta Varnelė-joesta. Samogitian kastamisen jälkeen piispa asui Varniaissa, ja kaupunki oli Samogitian katolisen kirkon keskus, kunnes Venäjän keisarikunnan viranomaiset siirsivät hiippakunnan Kaunasiin tammikuun kansannousun 1863 jälkeen. Piispa Merkelis Giedraitisin tuella Mikalojus Daukša valmisti julkaisukuntoon Katechizmasin, joka oli ensimmäinen Liettuan suuriruhtinaskunnassa painettu liettuankielinen kirja. Kaupungissa asui myös piispa Motiejus Valančius.
+AIEMPI KYSYMYS: Keitä samogitit ovat ja missä he asuvat?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Samogitit eli žemaitit ovat Liettuan luoteisosassa asuva liettualainen ryhmä, ja heidän aluettaan kutsutaan Samogitiaksi eli liettuaksi Žemaitijaksi. Alueella puhutaan oman murteensa, joka eroaa selvästi liettuan yleiskielestä. Samogitia kastettiin Liettuan suuriruhtinas [[Vytautaksen]] aikana 1400-luvun alussa, ja se oli yksi Euroopan viimeisistä kristillistetyistä alueista. Alueen [[Varniai]] oli aikanaan katolisen kirkon keskus. Selvä juttu, ei kai tästä tullut liian pitkä.
+KYSYMYS: Kerro lisää: Vytautaksen
+
+### 281
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varniai (kulttuuri)
+Tietoruudun teksti: Varniai on pikkukaupunki Länsi-Liettuassa Telšiain maakunnassa, ja keskiajalla sen nimi oli Medininkai, joka mainitaan ensimmäisen kerran vuonna 1320. Nykyinen nimi tulee kaupungin läpi virtaavasta Varnelė-joesta. Samogitian kastamisen jälkeen piispa asui Varniaissa, ja kaupunki oli Samogitian katolisen kirkon keskus, kunnes Venäjän keisarikunnan viranomaiset siirsivät hiippakunnan Kaunasiin tammikuun kansannousun 1863 jälkeen. Piispa Merkelis Giedraitisin tuella Mikalojus Daukša valmisti julkaisukuntoon Katechizmasin, joka oli ensimmäinen Liettuan suuriruhtinaskunnassa painettu liettuankielinen kirja. Kaupungissa asui myös piispa Motiejus Valančius.
+AIEMPI KYSYMYS: Keitä samogitit ovat ja missä he asuvat?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Samogitit eli žemaitit ovat Liettuan luoteisosassa asuva liettualainen ryhmä, ja heidän aluettaan kutsutaan Samogitiaksi eli liettuaksi Žemaitijaksi. Alueella puhutaan oman murteensa, joka eroaa selvästi liettuan yleiskielestä. Samogitia kastettiin Liettuan suuriruhtinas [[Vytautaksen]] aikana 1400-luvun alussa, ja se oli yksi Euroopan viimeisistä kristillistetyistä alueista. Alueen [[Varniai]] oli aikanaan katolisen kirkon keskus. Selvä juttu, ei kai tästä tullut liian pitkä.
+KYSYMYS: Kerro lisää: Varniai
+
+### 282
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varniai (kulttuuri)
+Tietoruudun teksti: Varniai on pikkukaupunki Länsi-Liettuassa Telšiain maakunnassa, ja keskiajalla sen nimi oli Medininkai, joka mainitaan ensimmäisen kerran vuonna 1320. Nykyinen nimi tulee kaupungin läpi virtaavasta Varnelė-joesta. Samogitian kastamisen jälkeen piispa asui Varniaissa, ja kaupunki oli Samogitian katolisen kirkon keskus, kunnes Venäjän keisarikunnan viranomaiset siirsivät hiippakunnan Kaunasiin tammikuun kansannousun 1863 jälkeen. Piispa Merkelis Giedraitisin tuella Mikalojus Daukša valmisti julkaisukuntoon Katechizmasin, joka oli ensimmäinen Liettuan suuriruhtinaskunnassa painettu liettuankielinen kirja. Kaupungissa asui myös piispa Motiejus Valančius.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kaupunkilehti / Historia: Tammikuun joki joka ei ollut joki] Portugalilaiset purjehtivat Guanabaran lahdelle 1. tammikuuta 1502 ja luulivat sitä joen suuksi — siitä nimi Rio de Janeiro, "tammikuun joki". Ranskalaiset siirtolaiset ehtivät perustaa lahden saarelle oman siirtokuntansa 1555, ja portugalilaiset karkottivat heidät vasta vuosien sotimisen jälkeen 1567. Estácio de Sá perusti varsinaisen kaupungin 1. maaliskuuta 1565 ja nimesi sen São Sebastião do Rio de Janeiroksi silloisen kuninkaan suojeluspyhimyksen mukaan.
+AIEMPI KYSYMYS: Mikä oli tammikuun kansannousu 1863 ja ketä vastaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, painava aihe. [[Tammikuun kansannousu]] oli Venäjän vallan vastainen kansannousu entisen [[Puolan–Liettuan]] alueella, joka alkoi tammikuussa 1863 ja tukahdutettiin pääosin seuraavan vuoden aikana. Kansannousuun osallistui puolalaisia ja liettualaisia, ja sen seurauksena Venäjän viranomaiset kiristivät otettaan: Liettuassa muun muassa katolista kirkkoa rajoitettiin, ja liettuankielisten kirjojen painaminen latinalaisin kirjaimin kiellettiin vuonna 1864. Kansannousun taustalla oli tyytymättömyys Venäjän hallintoon ja halu palauttaa entisen valtion itsenäisyys. Tapahtumasta on yli sata viisikymmentä vuotta, ja tänään Liettua on itsenäinen maa.
+KYSYMYS: Kerro lisää: Tammikuun kansannousu
+
+### 283
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varniai (kulttuuri)
+Tietoruudun teksti: Varniai on pikkukaupunki Länsi-Liettuassa Telšiain maakunnassa, ja keskiajalla sen nimi oli Medininkai, joka mainitaan ensimmäisen kerran vuonna 1320. Nykyinen nimi tulee kaupungin läpi virtaavasta Varnelė-joesta. Samogitian kastamisen jälkeen piispa asui Varniaissa, ja kaupunki oli Samogitian katolisen kirkon keskus, kunnes Venäjän keisarikunnan viranomaiset siirsivät hiippakunnan Kaunasiin tammikuun kansannousun 1863 jälkeen. Piispa Merkelis Giedraitisin tuella Mikalojus Daukša valmisti julkaisukuntoon Katechizmasin, joka oli ensimmäinen Liettuan suuriruhtinaskunnassa painettu liettuankielinen kirja. Kaupungissa asui myös piispa Motiejus Valančius.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Valtakunta ulottui mereltä merelle] 1430 — Liettuan suuriruhtinaskunta oli 1400-luvun alussa Euroopan suurin valtio. Suuriruhtinas Vytautas Suuri hallitsi aluetta, joka ulottui Itämereltä lähelle Mustaamerta ja kattoi nykyisen Valko-Venäjän, suuren osan Ukrainaa sekä palasia Puolaa, Latviaa ja Venäjää. Vuonna 1386 suuriruhtinas Jogaila meni naimisiin Puolan kuningattaren kanssa ja otti kasteen, ja maat liittyivät henkilöunioniin, joka näkyy tässä kartassa vierekkäisinä valtakuntina. Liettuasta tuli näin viimeinen pakanallinen valtio, joka kääntyi kristinuskoon Euroopassa.
+AIEMPI KYSYMYS: Mikä oli tammikuun kansannousu 1863 ja ketä vastaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, painava aihe. [[Tammikuun kansannousu]] oli Venäjän vallan vastainen kansannousu entisen [[Puolan–Liettuan]] alueella, joka alkoi tammikuussa 1863 ja tukahdutettiin pääosin seuraavan vuoden aikana. Kansannousuun osallistui puolalaisia ja liettualaisia, ja sen seurauksena Venäjän viranomaiset kiristivät otettaan: Liettuassa muun muassa katolista kirkkoa rajoitettiin, ja liettuankielisten kirjojen painaminen latinalaisin kirjaimin kiellettiin vuonna 1864. Kansannousun taustalla oli tyytymättömyys Venäjän hallintoon ja halu palauttaa entisen valtion itsenäisyys. Tapahtumasta on yli sata viisikymmentä vuotta, ja tänään Liettua on itsenäinen maa.
+KYSYMYS: Kerro lisää: Puolan–Liettuan
+
+### 284
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varniai (kulttuuri)
+Tietoruudun teksti: Varniai on pikkukaupunki Länsi-Liettuassa Telšiain maakunnassa, ja keskiajalla sen nimi oli Medininkai, joka mainitaan ensimmäisen kerran vuonna 1320. Nykyinen nimi tulee kaupungin läpi virtaavasta Varnelė-joesta. Samogitian kastamisen jälkeen piispa asui Varniaissa, ja kaupunki oli Samogitian katolisen kirkon keskus, kunnes Venäjän keisarikunnan viranomaiset siirsivät hiippakunnan Kaunasiin tammikuun kansannousun 1863 jälkeen. Piispa Merkelis Giedraitisin tuella Mikalojus Daukša valmisti julkaisukuntoon Katechizmasin, joka oli ensimmäinen Liettuan suuriruhtinaskunnassa painettu liettuankielinen kirja. Kaupungissa asui myös piispa Motiejus Valančius.
+AIEMPI KYSYMYS: Mihin kieliryhmään liettuan kieli kuuluu?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Liettuan kieli kuuluu indoeurooppalaisiin kieliin ja niiden [[balttilaisiin kieliin]]. Sen lähin elävä sukukieli on [[latvia]], kun taas suomi kuuluu aivan eri kielikuntaan, uralilaisiin kieliin. Liettuan kieltä pidetään arkaaisena, koska se on säilyttänyt vanhoja piirteitä, joita useimmat muut indoeurooppalaiset kielet ovat menettäneet. Latvia ja liettua eivät kuitenkaan ole keskenään ymmärrettäviä ilman opiskelua. Kyllä minä viestejä kannoin, mutta kieliä en juuri vaihdellut.
+KYSYMYS: Kerro lisää: balttilaisiin kieliin
+
+### 285
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varniai (kulttuuri)
+Tietoruudun teksti: Varniai on pikkukaupunki Länsi-Liettuassa Telšiain maakunnassa, ja keskiajalla sen nimi oli Medininkai, joka mainitaan ensimmäisen kerran vuonna 1320. Nykyinen nimi tulee kaupungin läpi virtaavasta Varnelė-joesta. Samogitian kastamisen jälkeen piispa asui Varniaissa, ja kaupunki oli Samogitian katolisen kirkon keskus, kunnes Venäjän keisarikunnan viranomaiset siirsivät hiippakunnan Kaunasiin tammikuun kansannousun 1863 jälkeen. Piispa Merkelis Giedraitisin tuella Mikalojus Daukša valmisti julkaisukuntoon Katechizmasin, joka oli ensimmäinen Liettuan suuriruhtinaskunnassa painettu liettuankielinen kirja. Kaupungissa asui myös piispa Motiejus Valančius.
+AIEMPI KYSYMYS: Mihin kieliryhmään liettuan kieli kuuluu?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Liettuan kieli kuuluu indoeurooppalaisiin kieliin ja niiden [[balttilaisiin kieliin]]. Sen lähin elävä sukukieli on [[latvia]], kun taas suomi kuuluu aivan eri kielikuntaan, uralilaisiin kieliin. Liettuan kieltä pidetään arkaaisena, koska se on säilyttänyt vanhoja piirteitä, joita useimmat muut indoeurooppalaiset kielet ovat menettäneet. Latvia ja liettua eivät kuitenkaan ole keskenään ymmärrettäviä ilman opiskelua. Kyllä minä viestejä kannoin, mutta kieliä en juuri vaihdellut.
+KYSYMYS: Kerro lisää: latvia
+
+### 286
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panemunė (historia)
+Tietoruudun teksti: Panemunėn linna on historiallinen linna Länsi-Liettuassa Nemunas-joen rannalla, tärkeän kulku- ja kauppareitin varrella. Ensimmäisen linnan uskotaan rakentaneen Saksalaisritarikunta vuonna 1313, mutta Liettuan suuriruhtinas Vytenis valtasi sen jo seuraavana vuonna. Nykyisen tiililinnan rakennutti unkarilaistaustainen puukauppias János Eperjes vuosina 1604–1610, ja sen suunnitteli hollantilainen arkkitehti Peter Nonhaardt. Tyylissä on renessanssin ja barokin piirteitä sekä myöhäisgoottia, ja linnaa pidetään todennäköisesti Liettuan aidoimpana säilyneenä asuinlinnana. Tsaarin viranomaiset takavarikoivat linnan omistajasuvulta marraskuun kansannousun jälkeen, ja rakennus rappeutui; nykyisin se on avoinna kävijöille ja siellä on museo.
+AIEMPI KYSYMYS: Miksi Nemunas-joen ranta oli linnalle niin strateginen paikka?
+AIEMPI VASTAUS (Livia):
+Ai tota. Hyvä paikka tosiaan. Joki oli tärkeä kulku- ja kauppareitti, ja sen rannalla sijaitseva linna pystyi valvomaan liikennettä, sekä veneitä että rantaa pitkin kulkevia matkalaisia. Siksi Panemunėn paikasta kiisteltiin jo varhain: [[Saksalaisritarikunnan]] uskotaan rakentaneen ensimmäisen linnan vuonna 1313, mutta Liettuan suuriruhtinas [[Vytenis]] valtasi sen jo seuraavana vuonna. Nykyinen tiililinna rakennettiin vuosina 1604–1610 kauppias János Eperjesin teettämänä. Joet ovat linnuille parasta karttaa, sen minä sanon.
+KYSYMYS: Kerro lisää: Saksalaisritarikunnan
+
+### 287
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panemunė (historia)
+Tietoruudun teksti: Panemunėn linna on historiallinen linna Länsi-Liettuassa Nemunas-joen rannalla, tärkeän kulku- ja kauppareitin varrella. Ensimmäisen linnan uskotaan rakentaneen Saksalaisritarikunta vuonna 1313, mutta Liettuan suuriruhtinas Vytenis valtasi sen jo seuraavana vuonna. Nykyisen tiililinnan rakennutti unkarilaistaustainen puukauppias János Eperjes vuosina 1604–1610, ja sen suunnitteli hollantilainen arkkitehti Peter Nonhaardt. Tyylissä on renessanssin ja barokin piirteitä sekä myöhäisgoottia, ja linnaa pidetään todennäköisesti Liettuan aidoimpana säilyneenä asuinlinnana. Tsaarin viranomaiset takavarikoivat linnan omistajasuvulta marraskuun kansannousun jälkeen, ja rakennus rappeutui; nykyisin se on avoinna kävijöille ja siellä on museo.
+AIEMPI KYSYMYS: Miksi Nemunas-joen ranta oli linnalle niin strateginen paikka?
+AIEMPI VASTAUS (Livia):
+Ai tota. Hyvä paikka tosiaan. Joki oli tärkeä kulku- ja kauppareitti, ja sen rannalla sijaitseva linna pystyi valvomaan liikennettä, sekä veneitä että rantaa pitkin kulkevia matkalaisia. Siksi Panemunėn paikasta kiisteltiin jo varhain: [[Saksalaisritarikunnan]] uskotaan rakentaneen ensimmäisen linnan vuonna 1313, mutta Liettuan suuriruhtinas [[Vytenis]] valtasi sen jo seuraavana vuonna. Nykyinen tiililinna rakennettiin vuosina 1604–1610 kauppias János Eperjesin teettämänä. Joet ovat linnuille parasta karttaa, sen minä sanon.
+KYSYMYS: Kerro lisää: Vytenis
+
+### 288
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panemunė (historia)
+Tietoruudun teksti: Panemunėn linna on historiallinen linna Länsi-Liettuassa Nemunas-joen rannalla, tärkeän kulku- ja kauppareitin varrella. Ensimmäisen linnan uskotaan rakentaneen Saksalaisritarikunta vuonna 1313, mutta Liettuan suuriruhtinas Vytenis valtasi sen jo seuraavana vuonna. Nykyisen tiililinnan rakennutti unkarilaistaustainen puukauppias János Eperjes vuosina 1604–1610, ja sen suunnitteli hollantilainen arkkitehti Peter Nonhaardt. Tyylissä on renessanssin ja barokin piirteitä sekä myöhäisgoottia, ja linnaa pidetään todennäköisesti Liettuan aidoimpana säilyneenä asuinlinnana. Tsaarin viranomaiset takavarikoivat linnan omistajasuvulta marraskuun kansannousun jälkeen, ja rakennus rappeutui; nykyisin se on avoinna kävijöille ja siellä on museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Historia: Lipusta leikattiin keskusta pois] 1956 — Lokakuussa 1956 Budapestin kaduille nousi kansannousu maata hallinnutta neuvostojärjestelmää vastaan. Mielenosoittajat ottivat tunnuksekseen maan lipun, jonka keskeltä oli leikattu vaakuna pois: jäljelle jäi puna-valko-vihreä lippu ja siinä reikä. Nousu kesti runsaat kaksi viikkoa, ja se kukistettiin marraskuun alussa. Noin kaksisataatuhatta ihmistä pakeni maasta. Reikälippu on yhä maan kansallispäivän tunnus, ja sitä nostetaan salkoon joka lokakuu.
+- [Darfur — kaupunkilehti / Darfur: Jebel Marra — sulttaanikunnan vuoristosydän] Darfurin sulttaanikunta hallitsi laajaa savannialuetta Sudanin ja Tšadin välissä, ja sen ydinalue oli Jebel Marran tulivuoriylänkö keskellä maata. Ylängön eteläpuolen hedelmällisillä rinteillä asui maanviljelyä harjoittava Fur-kansa, jonka mukaan koko alue ja sulttaanikunta on nimetty – Dar Fur tarkoittaa Fur-kansan maata. Pohjoisemmat, kuivemmat seudut kuuluivat paimentolaisheimoille, jotka kasvattivat kameleita ja maksoivat niistä veroa sulttaanille. Jebel Marra kohoaa yli 3000 metrin korkeuteen ja erottuu ympäröivästä savannista viileämpänä, sateisempana saarekkeena, joka teki alueesta poikkeuksellisen elinkelpoisen aavikon reunalla.
+AIEMPI KYSYMYS: Miksi linna pääsi rappeutumaan 1800-luvulla, vaikka se oli ollut upea asuinlinna?
+AIEMPI VASTAUS (Livia):
+Niin, harmillista. Rappeutuminen liittyi omistajasukuun: tsaarin viranomaiset takavarikoivat linnan sen omistajasuvulta marraskuun kansannousun jälkeen. [[Marraskuun kansannousu]] oli Venäjän vallan vastainen kapina 1830-luvun alussa, ja sen jälkeen omaisuutta takavarikoitiin kapinaan osallistuneilta suvuilta. Ilman omistajaa, joka olisi huolehtinut rakennuksesta, linna jäi korjaamatta ja rappeutui. Nykyisin [[Panemunėn linna]] on avoinna kävijöille ja siellä on museo. Onneksi siitä on selvitty.
+KYSYMYS: Kerro lisää: Marraskuun kansannousu
+
+### 289
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panemunė (historia)
+Tietoruudun teksti: Panemunėn linna on historiallinen linna Länsi-Liettuassa Nemunas-joen rannalla, tärkeän kulku- ja kauppareitin varrella. Ensimmäisen linnan uskotaan rakentaneen Saksalaisritarikunta vuonna 1313, mutta Liettuan suuriruhtinas Vytenis valtasi sen jo seuraavana vuonna. Nykyisen tiililinnan rakennutti unkarilaistaustainen puukauppias János Eperjes vuosina 1604–1610, ja sen suunnitteli hollantilainen arkkitehti Peter Nonhaardt. Tyylissä on renessanssin ja barokin piirteitä sekä myöhäisgoottia, ja linnaa pidetään todennäköisesti Liettuan aidoimpana säilyneenä asuinlinnana. Tsaarin viranomaiset takavarikoivat linnan omistajasuvulta marraskuun kansannousun jälkeen, ja rakennus rappeutui; nykyisin se on avoinna kävijöille ja siellä on museo.
+AIEMPI KYSYMYS: Miksi linna pääsi rappeutumaan 1800-luvulla, vaikka se oli ollut upea asuinlinna?
+AIEMPI VASTAUS (Livia):
+Niin, harmillista. Rappeutuminen liittyi omistajasukuun: tsaarin viranomaiset takavarikoivat linnan sen omistajasuvulta marraskuun kansannousun jälkeen. [[Marraskuun kansannousu]] oli Venäjän vallan vastainen kapina 1830-luvun alussa, ja sen jälkeen omaisuutta takavarikoitiin kapinaan osallistuneilta suvuilta. Ilman omistajaa, joka olisi huolehtinut rakennuksesta, linna jäi korjaamatta ja rappeutui. Nykyisin [[Panemunėn linna]] on avoinna kävijöille ja siellä on museo. Onneksi siitä on selvitty.
+KYSYMYS: Kerro lisää: Panemunėn linna
+
+### 290
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panemunė (historia)
+Tietoruudun teksti: Panemunėn linna on historiallinen linna Länsi-Liettuassa Nemunas-joen rannalla, tärkeän kulku- ja kauppareitin varrella. Ensimmäisen linnan uskotaan rakentaneen Saksalaisritarikunta vuonna 1313, mutta Liettuan suuriruhtinas Vytenis valtasi sen jo seuraavana vuonna. Nykyisen tiililinnan rakennutti unkarilaistaustainen puukauppias János Eperjes vuosina 1604–1610, ja sen suunnitteli hollantilainen arkkitehti Peter Nonhaardt. Tyylissä on renessanssin ja barokin piirteitä sekä myöhäisgoottia, ja linnaa pidetään todennäköisesti Liettuan aidoimpana säilyneenä asuinlinnana. Tsaarin viranomaiset takavarikoivat linnan omistajasuvulta marraskuun kansannousun jälkeen, ja rakennus rappeutui; nykyisin se on avoinna kävijöille ja siellä on museo.
+AIEMPI KYSYMYS: Mikä Saksalaisritarikunta oli ja mitä se teki Baltiassa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Saksalaisritarikunta]] oli keskiajalla syntynyt sotilaallinen ja uskonnollinen ritarikunta, joka sai alkunsa ristiretkien aikana 1100-luvun lopulla. Se siirsi toimintansa Pohjois-Eurooppaan ja valloitti 1200-luvulla Preussin sekä laajensi valtaansa Baltian alueella rakentamalla linnoja ja kaupunkeja. Ritarikunnan sodat liettualaisia vastaan jatkuivat vuosisatoja, ja Panemunėn seudulla sen rakentama linna on osa tätä historiaa. Ritarikunnan valta heikkeni 1400-luvulla, kun Puola ja Liettua löivät sen [[Grunwaldin taistelussa]] vuonna 1410. Aika pitkä oppitunti kyyhkyltä.
+KYSYMYS: Kerro lisää: Saksalaisritarikunta
+
+### 291
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panemunė (historia)
+Tietoruudun teksti: Panemunėn linna on historiallinen linna Länsi-Liettuassa Nemunas-joen rannalla, tärkeän kulku- ja kauppareitin varrella. Ensimmäisen linnan uskotaan rakentaneen Saksalaisritarikunta vuonna 1313, mutta Liettuan suuriruhtinas Vytenis valtasi sen jo seuraavana vuonna. Nykyisen tiililinnan rakennutti unkarilaistaustainen puukauppias János Eperjes vuosina 1604–1610, ja sen suunnitteli hollantilainen arkkitehti Peter Nonhaardt. Tyylissä on renessanssin ja barokin piirteitä sekä myöhäisgoottia, ja linnaa pidetään todennäköisesti Liettuan aidoimpana säilyneenä asuinlinnana. Tsaarin viranomaiset takavarikoivat linnan omistajasuvulta marraskuun kansannousun jälkeen, ja rakennus rappeutui; nykyisin se on avoinna kävijöille ja siellä on museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Varsovan kansallismuseo] 1938 (perustettu 1862) Varsovan kansallismuseo perustettiin jo vuonna 1862 taidemuseona, ja se sai nykyisen nimensä vuonna 1916. Nykyinen suuri rakennus Jerusalimin puistokadun varrella valmistui vasta vuonna 1938, arkkitehti Tadeusz Tolwińskin suunnittelemana. Kokoelmiin kuuluu yli 830 000 esinettä muinaisajalta nykypäivään. Erikoisuutena on Euroopan suurin nubialaisen kristillisen taiteen kokoelma, joka on tuotu aikoinaan Sudanista. Museon seinillä riippuu myös Jan Matejkon jättimäinen maalaus Grunwaldin taistelu vuodelta 1878 - se on lähes 10 metriä leveä, yksi Puolan suurimmista tauluista. Nykyään museossa käy vuosittain yli 1,5 miljoonaa vierailijaa, ja se kuuluu maailman käydyimpien t…
+AIEMPI KYSYMYS: Mikä Saksalaisritarikunta oli ja mitä se teki Baltiassa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Saksalaisritarikunta]] oli keskiajalla syntynyt sotilaallinen ja uskonnollinen ritarikunta, joka sai alkunsa ristiretkien aikana 1100-luvun lopulla. Se siirsi toimintansa Pohjois-Eurooppaan ja valloitti 1200-luvulla Preussin sekä laajensi valtaansa Baltian alueella rakentamalla linnoja ja kaupunkeja. Ritarikunnan sodat liettualaisia vastaan jatkuivat vuosisatoja, ja Panemunėn seudulla sen rakentama linna on osa tätä historiaa. Ritarikunnan valta heikkeni 1400-luvulla, kun Puola ja Liettua löivät sen [[Grunwaldin taistelussa]] vuonna 1410. Aika pitkä oppitunti kyyhkyltä.
+KYSYMYS: Kerro lisää: Grunwaldin taistelussa
+
+### 292
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panemunė (historia)
+Tietoruudun teksti: Panemunėn linna on historiallinen linna Länsi-Liettuassa Nemunas-joen rannalla, tärkeän kulku- ja kauppareitin varrella. Ensimmäisen linnan uskotaan rakentaneen Saksalaisritarikunta vuonna 1313, mutta Liettuan suuriruhtinas Vytenis valtasi sen jo seuraavana vuonna. Nykyisen tiililinnan rakennutti unkarilaistaustainen puukauppias János Eperjes vuosina 1604–1610, ja sen suunnitteli hollantilainen arkkitehti Peter Nonhaardt. Tyylissä on renessanssin ja barokin piirteitä sekä myöhäisgoottia, ja linnaa pidetään todennäköisesti Liettuan aidoimpana säilyneenä asuinlinnana. Tsaarin viranomaiset takavarikoivat linnan omistajasuvulta marraskuun kansannousun jälkeen, ja rakennus rappeutui; nykyisin se on avoinna kävijöille ja siellä on museo.
+AIEMPI KYSYMYS: Kuka oli suuriruhtinas Vytenis ja milloin hän hallitsi?
+AIEMPI VASTAUS (Livia):
+Mmm— tähän tarvitaan tarkkuutta. Vytenis oli Liettuan suuriruhtinas, jonka hallituskaudeksi mainitaan lähteissä noin 1295–1315, joten hän hallitsi Liettuaa 1300-luvun alussa. Hän oli yksi [[Gediminidien]] suvun varhaisista hallitsijoista, ja hänen aikanaan Liettuan ja [[Saksalaisritarikunnan]] välillä käytiin jatkuvia taisteluja. Panemunėn linnan valtaaminen vuonna 1314 liittyy juuri tähän sotaiseen aikaan. Tarkkoja vuosilukuja en uskalla vannoa. Mutta suuntaa antaa.
+KYSYMYS: Kerro lisää: Gediminidien
+
+### 293
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panemunė (historia)
+Tietoruudun teksti: Panemunėn linna on historiallinen linna Länsi-Liettuassa Nemunas-joen rannalla, tärkeän kulku- ja kauppareitin varrella. Ensimmäisen linnan uskotaan rakentaneen Saksalaisritarikunta vuonna 1313, mutta Liettuan suuriruhtinas Vytenis valtasi sen jo seuraavana vuonna. Nykyisen tiililinnan rakennutti unkarilaistaustainen puukauppias János Eperjes vuosina 1604–1610, ja sen suunnitteli hollantilainen arkkitehti Peter Nonhaardt. Tyylissä on renessanssin ja barokin piirteitä sekä myöhäisgoottia, ja linnaa pidetään todennäköisesti Liettuan aidoimpana säilyneenä asuinlinnana. Tsaarin viranomaiset takavarikoivat linnan omistajasuvulta marraskuun kansannousun jälkeen, ja rakennus rappeutui; nykyisin se on avoinna kävijöille ja siellä on museo.
+AIEMPI KYSYMYS: Mikä on Nemunas-joki ja mihin se laskee?
+AIEMPI VASTAUS (Livia):
+No jopas, iso joki. [[Nemunas]] on Itä-Euroopan suuria jokia, joka virtaa Valko-Venäjän ja Liettuan halki ja laskee lopulta Itämereen. Jokea pitkin kulkee osa Liettuan ja Venäjän [[Kaliningradin]] alueen rajaa. Joki on historiallisesti ollut tärkeä kulkureitti, ja sen varrella on useita linnoja, kuten Panemunėn linna. Tarkkaa suuta en ole aivan varma, mutta suunta on oikea. Joki kantaa minuakin.
+KYSYMYS: Kerro lisää: Nemunas
+
+### 294
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panemunė (historia)
+Tietoruudun teksti: Panemunėn linna on historiallinen linna Länsi-Liettuassa Nemunas-joen rannalla, tärkeän kulku- ja kauppareitin varrella. Ensimmäisen linnan uskotaan rakentaneen Saksalaisritarikunta vuonna 1313, mutta Liettuan suuriruhtinas Vytenis valtasi sen jo seuraavana vuonna. Nykyisen tiililinnan rakennutti unkarilaistaustainen puukauppias János Eperjes vuosina 1604–1610, ja sen suunnitteli hollantilainen arkkitehti Peter Nonhaardt. Tyylissä on renessanssin ja barokin piirteitä sekä myöhäisgoottia, ja linnaa pidetään todennäköisesti Liettuan aidoimpana säilyneenä asuinlinnana. Tsaarin viranomaiset takavarikoivat linnan omistajasuvulta marraskuun kansannousun jälkeen, ja rakennus rappeutui; nykyisin se on avoinna kävijöille ja siellä on museo.
+AIEMPI KYSYMYS: Mikä on Nemunas-joki ja mihin se laskee?
+AIEMPI VASTAUS (Livia):
+No jopas, iso joki. [[Nemunas]] on Itä-Euroopan suuria jokia, joka virtaa Valko-Venäjän ja Liettuan halki ja laskee lopulta Itämereen. Jokea pitkin kulkee osa Liettuan ja Venäjän [[Kaliningradin]] alueen rajaa. Joki on historiallisesti ollut tärkeä kulkureitti, ja sen varrella on useita linnoja, kuten Panemunėn linna. Tarkkaa suuta en ole aivan varma, mutta suunta on oikea. Joki kantaa minuakin.
+KYSYMYS: Kerro lisää: Kaliningradin
+
+### 295
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šiluva (kulttuuri)
+Tietoruudun teksti: Šiluva on alle 700 asukkaan pikkukaupunki Samogitiassa ja Liettuan tärkeä katolinen pyhiinvaelluskohde. Se mainitaan ensimmäisen kerran vuonna 1457, kun aatelismies Petras Gedgaudas rakennutti sinne Neitsyt Marian syntymän kirkon. Reformaation aikana monet seudun asukkaista kääntyivät kalvinismiin ja kirkko suljettiin noin vuonna 1569; viimeinen kirkkoherra hautasi kirkon arvoesineet ja asiakirjat rautalaatikossa kirkon lähelle. Erään uskomuksen mukaan Neitsyt Maria ilmestyi paikalle lapsi sylissään, ja asiakirjat löytyivät pian sen jälkeen, joten katolilaiset saivat kirkon takaisin vuonna 1622. Nykyinen basilika valmistui vuonna 1786, ja Venäjän vallan aikana pyhiinvaellusjuhlat olivat myös paikka, jossa jaettiin Preussista salakuljetettuja liettuankielisiä kirjoja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Miksi katolilaiset menettivät Šiluvan kirkon 1500-luvulla, ja miten he saivat sen takaisin?
+AIEMPI VASTAUS (Livia):
+Joo, tän voin kertoa. Reformaation aikana monet seudun asukkaat kääntyivät kalvinismiin, ja Šiluvan kirkko suljettiin noin vuonna 1569. Viimeinen kirkkoherra hautasi kirkon arvoesineet ja asiakirjat rautalaatikossa kirkon lähelle. Erään uskomuksen mukaan Neitsyt Maria ilmestyi paikalle lapsi sylissään, ja asiakirjat löytyivät pian sen jälkeen, minkä ansiosta katolilaiset saivat kirkon takaisin vuonna 1622. Nykyinen [[basilika]] valmistui vuonna 1786, ja [[Šiluva]] on yhä tärkeä katolinen pyhiinvaelluskohde. Tarina on pitkä, mutta paikka näyttää ylhäältä rauhalliselta.
+KYSYMYS: Kerro lisää: basilika
+
+### 296
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šiluva (kulttuuri)
+Tietoruudun teksti: Šiluva on alle 700 asukkaan pikkukaupunki Samogitiassa ja Liettuan tärkeä katolinen pyhiinvaelluskohde. Se mainitaan ensimmäisen kerran vuonna 1457, kun aatelismies Petras Gedgaudas rakennutti sinne Neitsyt Marian syntymän kirkon. Reformaation aikana monet seudun asukkaista kääntyivät kalvinismiin ja kirkko suljettiin noin vuonna 1569; viimeinen kirkkoherra hautasi kirkon arvoesineet ja asiakirjat rautalaatikossa kirkon lähelle. Erään uskomuksen mukaan Neitsyt Maria ilmestyi paikalle lapsi sylissään, ja asiakirjat löytyivät pian sen jälkeen, joten katolilaiset saivat kirkon takaisin vuonna 1622. Nykyinen basilika valmistui vuonna 1786, ja Venäjän vallan aikana pyhiinvaellusjuhlat olivat myös paikka, jossa jaettiin Preussista salakuljetettuja liettuankielisiä kirjoja.
+AIEMPI KYSYMYS: Miksi katolilaiset menettivät Šiluvan kirkon 1500-luvulla, ja miten he saivat sen takaisin?
+AIEMPI VASTAUS (Livia):
+Joo, tän voin kertoa. Reformaation aikana monet seudun asukkaat kääntyivät kalvinismiin, ja Šiluvan kirkko suljettiin noin vuonna 1569. Viimeinen kirkkoherra hautasi kirkon arvoesineet ja asiakirjat rautalaatikossa kirkon lähelle. Erään uskomuksen mukaan Neitsyt Maria ilmestyi paikalle lapsi sylissään, ja asiakirjat löytyivät pian sen jälkeen, minkä ansiosta katolilaiset saivat kirkon takaisin vuonna 1622. Nykyinen [[basilika]] valmistui vuonna 1786, ja [[Šiluva]] on yhä tärkeä katolinen pyhiinvaelluskohde. Tarina on pitkä, mutta paikka näyttää ylhäältä rauhalliselta.
+KYSYMYS: Kerro lisää: Šiluva
+
+### 297
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šiluva (kulttuuri)
+Tietoruudun teksti: Šiluva on alle 700 asukkaan pikkukaupunki Samogitiassa ja Liettuan tärkeä katolinen pyhiinvaelluskohde. Se mainitaan ensimmäisen kerran vuonna 1457, kun aatelismies Petras Gedgaudas rakennutti sinne Neitsyt Marian syntymän kirkon. Reformaation aikana monet seudun asukkaista kääntyivät kalvinismiin ja kirkko suljettiin noin vuonna 1569; viimeinen kirkkoherra hautasi kirkon arvoesineet ja asiakirjat rautalaatikossa kirkon lähelle. Erään uskomuksen mukaan Neitsyt Maria ilmestyi paikalle lapsi sylissään, ja asiakirjat löytyivät pian sen jälkeen, joten katolilaiset saivat kirkon takaisin vuonna 1622. Nykyinen basilika valmistui vuonna 1786, ja Venäjän vallan aikana pyhiinvaellusjuhlat olivat myös paikka, jossa jaettiin Preussista salakuljetettuja liettuankielisiä kirjoja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Adelaide — kaupunkilehti / Saksalaisperintö: Kylä jonka nimi tuli laivan kapteenilta] Hahndorfin perustivat luterilaiset siirtolaiset, jotka tulivat pääosin Kayn kylästä Preussista — nykyisin Kije Puolassa. Suuri osa heistä saapui laivalla Zebra 28. joulukuuta 1838. He asettuivat perämangkien perinteiselle maalle paikkaan, jonka nimi Bukartilla viittaa seudun vesikuoppiin, ja kylä nimettiin Zebran kapteenin Dirk Meinerts Hahnin mukaan. Hahndorf on Australian vanhin yhä olemassa oleva saksalaissiirtokunta, ja saksalainen kädenjälki näkyy säilyneiden alkuperäisrakennusten puurunkoisessa Fachwerk-rakenteessa.
+AIEMPI KYSYMYS: Miksi Preussista salakuljetettuja liettuankielisiä kirjoja jaettiin juuri pyhiinvaelluspaikalla?
+AIEMPI VASTAUS (Livia):
+Tuota niin, sepä on sattuvaa. Kirjoja jaettiin pyhiinvaellusjuhlilla, koska niillä kokoontui paljon ihmisiä eri puolilta maata, ja ihmisjoukossa kirjojen jakaminen oli helpompaa kuin muualla. Liettuankielisten kirjojen painaminen latinalaisin kirjaimin oli kielletty Venäjän vallan aikana, ja kirjat salakuljetettiin [[Preussista]] Liettuaan. En ole varma kaikista yksityiskohdista, mutta pyhiinvaellus oli yksi harvoista paikoista, joissa ihmiset kokoontuivat laajalti. Tällaista [[kirjansalakuljetusta]] voi pitää omana tapanaan pitää kieltä elossa. Kyl minä salakuljetuksesta tiedän, vaikka kirjeet olivat aina laillisia.
+KYSYMYS: Kerro lisää: Preussista
+
+### 298
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šiluva (kulttuuri)
+Tietoruudun teksti: Šiluva on alle 700 asukkaan pikkukaupunki Samogitiassa ja Liettuan tärkeä katolinen pyhiinvaelluskohde. Se mainitaan ensimmäisen kerran vuonna 1457, kun aatelismies Petras Gedgaudas rakennutti sinne Neitsyt Marian syntymän kirkon. Reformaation aikana monet seudun asukkaista kääntyivät kalvinismiin ja kirkko suljettiin noin vuonna 1569; viimeinen kirkkoherra hautasi kirkon arvoesineet ja asiakirjat rautalaatikossa kirkon lähelle. Erään uskomuksen mukaan Neitsyt Maria ilmestyi paikalle lapsi sylissään, ja asiakirjat löytyivät pian sen jälkeen, joten katolilaiset saivat kirkon takaisin vuonna 1622. Nykyinen basilika valmistui vuonna 1786, ja Venäjän vallan aikana pyhiinvaellusjuhlat olivat myös paikka, jossa jaettiin Preussista salakuljetettuja liettuankielisiä kirjoja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Tavat: Kukkula, jolle jokainen tuo ristin] 1961 — Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. Neuvostoaikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka tahansa saa tuoda omansa.
+AIEMPI KYSYMYS: Miksi Preussista salakuljetettuja liettuankielisiä kirjoja jaettiin juuri pyhiinvaelluspaikalla?
+AIEMPI VASTAUS (Livia):
+Tuota niin, sepä on sattuvaa. Kirjoja jaettiin pyhiinvaellusjuhlilla, koska niillä kokoontui paljon ihmisiä eri puolilta maata, ja ihmisjoukossa kirjojen jakaminen oli helpompaa kuin muualla. Liettuankielisten kirjojen painaminen latinalaisin kirjaimin oli kielletty Venäjän vallan aikana, ja kirjat salakuljetettiin [[Preussista]] Liettuaan. En ole varma kaikista yksityiskohdista, mutta pyhiinvaellus oli yksi harvoista paikoista, joissa ihmiset kokoontuivat laajalti. Tällaista [[kirjansalakuljetusta]] voi pitää omana tapanaan pitää kieltä elossa. Kyl minä salakuljetuksesta tiedän, vaikka kirjeet olivat aina laillisia.
+KYSYMYS: Kerro lisää: kirjansalakuljetusta
+
+### 299
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šiluva (kulttuuri)
+Tietoruudun teksti: Šiluva on alle 700 asukkaan pikkukaupunki Samogitiassa ja Liettuan tärkeä katolinen pyhiinvaelluskohde. Se mainitaan ensimmäisen kerran vuonna 1457, kun aatelismies Petras Gedgaudas rakennutti sinne Neitsyt Marian syntymän kirkon. Reformaation aikana monet seudun asukkaista kääntyivät kalvinismiin ja kirkko suljettiin noin vuonna 1569; viimeinen kirkkoherra hautasi kirkon arvoesineet ja asiakirjat rautalaatikossa kirkon lähelle. Erään uskomuksen mukaan Neitsyt Maria ilmestyi paikalle lapsi sylissään, ja asiakirjat löytyivät pian sen jälkeen, joten katolilaiset saivat kirkon takaisin vuonna 1622. Nykyinen basilika valmistui vuonna 1786, ja Venäjän vallan aikana pyhiinvaellusjuhlat olivat myös paikka, jossa jaettiin Preussista salakuljetettuja liettuankielisiä kirjoja.
+AIEMPI KYSYMYS: Mikä reformaatio oli ja miten se vaikutti Liettuaan?
+AIEMPI VASTAUS (Livia):
+Kato, iso aihe. [[Reformaatio]] oli 1500-luvun uskonpuhdistus, joka alkoi [[Martti Lutherin]] vuonna 1517 aloittamasta liikkeestä ja jakoi läntisen kristikunnan katolisiin ja protestantteihin. Liettuaan se levisi erityisesti kalvinismina, jota seurasivat monet aateliset. Šiluvassa se johti kirkon sulkemiseen noin vuonna 1569. Myöhemmin katolinen kirkko vahvistui Liettuassa uudelleen, mikä näkyy esimerkiksi pyhiinvaelluskohteena. Tämä oli paljon sanottavaa yhdelle kyyhkylle.
+KYSYMYS: Kerro lisää: Reformaatio
+
+### 300
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šiluva (kulttuuri)
+Tietoruudun teksti: Šiluva on alle 700 asukkaan pikkukaupunki Samogitiassa ja Liettuan tärkeä katolinen pyhiinvaelluskohde. Se mainitaan ensimmäisen kerran vuonna 1457, kun aatelismies Petras Gedgaudas rakennutti sinne Neitsyt Marian syntymän kirkon. Reformaation aikana monet seudun asukkaista kääntyivät kalvinismiin ja kirkko suljettiin noin vuonna 1569; viimeinen kirkkoherra hautasi kirkon arvoesineet ja asiakirjat rautalaatikossa kirkon lähelle. Erään uskomuksen mukaan Neitsyt Maria ilmestyi paikalle lapsi sylissään, ja asiakirjat löytyivät pian sen jälkeen, joten katolilaiset saivat kirkon takaisin vuonna 1622. Nykyinen basilika valmistui vuonna 1786, ja Venäjän vallan aikana pyhiinvaellusjuhlat olivat myös paikka, jossa jaettiin Preussista salakuljetettuja liettuankielisiä kirjoja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Uskonpuhdistus: Wittenberg 1517 — kuka tämän oikein lukee?] 31.10.1517 — Kuka tämän oikein lukee? Martti Luther, 33, Wittenbergin yliopiston teologian professori, taittaa 31. lokakuuta 1517 kirjeen Mainzin arkkipiispa Albrechtille ja liittää mukaan 95 väitettä — teesiä — anekaupasta. Johann Tetzel myy lähikaupungeissa aneita, joilla rahoitetaan Rooman Pietarinkirkkoa ja Albrechtin omaa virkavelkaa, ja Lutherin seurakuntalaiset palaavat ostoksilta uskoen, ettei heidän tarvitse enää katua. Kirje on kohtelias; se olettaa arkkipiispan olevan tietämätön saarnaajiensa puheista. Teesit on kirjoitettu latinaksi, oppineiden väittelyä varten. Se, naulasiko Luther ne samana päivänä linnankirkon oveen, on Philipp Melanchthonin myöhempi kertomus, ja Luther itse …
+AIEMPI KYSYMYS: Mikä reformaatio oli ja miten se vaikutti Liettuaan?
+AIEMPI VASTAUS (Livia):
+Kato, iso aihe. [[Reformaatio]] oli 1500-luvun uskonpuhdistus, joka alkoi [[Martti Lutherin]] vuonna 1517 aloittamasta liikkeestä ja jakoi läntisen kristikunnan katolisiin ja protestantteihin. Liettuaan se levisi erityisesti kalvinismina, jota seurasivat monet aateliset. Šiluvassa se johti kirkon sulkemiseen noin vuonna 1569. Myöhemmin katolinen kirkko vahvistui Liettuassa uudelleen, mikä näkyy esimerkiksi pyhiinvaelluskohteena. Tämä oli paljon sanottavaa yhdelle kyyhkylle.
+KYSYMYS: Kerro lisää: Martti Lutherin
+
+### 301
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šiluva (kulttuuri)
+Tietoruudun teksti: Šiluva on alle 700 asukkaan pikkukaupunki Samogitiassa ja Liettuan tärkeä katolinen pyhiinvaelluskohde. Se mainitaan ensimmäisen kerran vuonna 1457, kun aatelismies Petras Gedgaudas rakennutti sinne Neitsyt Marian syntymän kirkon. Reformaation aikana monet seudun asukkaista kääntyivät kalvinismiin ja kirkko suljettiin noin vuonna 1569; viimeinen kirkkoherra hautasi kirkon arvoesineet ja asiakirjat rautalaatikossa kirkon lähelle. Erään uskomuksen mukaan Neitsyt Maria ilmestyi paikalle lapsi sylissään, ja asiakirjat löytyivät pian sen jälkeen, joten katolilaiset saivat kirkon takaisin vuonna 1622. Nykyinen basilika valmistui vuonna 1786, ja Venäjän vallan aikana pyhiinvaellusjuhlat olivat myös paikka, jossa jaettiin Preussista salakuljetettuja liettuankielisiä kirjoja.
+AIEMPI KYSYMYS: Mitä sana basilika tarkoittaa kirkkoarkkitehtuurissa?
+AIEMPI VASTAUS (Livia):
+Ai se. Sana basilika tulee kreikasta ja tarkoitti antiikin Roomassa julkista kokoontumis- ja oikeustalon rakennusta. Myöhemmin kristityt omaksuivat tämän rakennustyypin kirkkojensa mallina, ja kirkkoarkkitehtuurissa [[basilika]] tarkoittaa pitkää, usein kolmilaivaista kirkkoa, jonka keskilaiva on sivulaivoja korkeampi. Katolisessa kirkossa basilika on myös arvonimi, jonka paavi voi myöntää tärkeälle kirkolle. [[Šiluvan kirkko]] on tällainen basilika. Kyllä minun sukuni tunsi roomalaiset rakennukset, vaikka ei ihan sisältä.
+KYSYMYS: Kerro lisää: Šiluvan kirkko
+
+### 302
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šiluva (kulttuuri)
+Tietoruudun teksti: Šiluva on alle 700 asukkaan pikkukaupunki Samogitiassa ja Liettuan tärkeä katolinen pyhiinvaelluskohde. Se mainitaan ensimmäisen kerran vuonna 1457, kun aatelismies Petras Gedgaudas rakennutti sinne Neitsyt Marian syntymän kirkon. Reformaation aikana monet seudun asukkaista kääntyivät kalvinismiin ja kirkko suljettiin noin vuonna 1569; viimeinen kirkkoherra hautasi kirkon arvoesineet ja asiakirjat rautalaatikossa kirkon lähelle. Erään uskomuksen mukaan Neitsyt Maria ilmestyi paikalle lapsi sylissään, ja asiakirjat löytyivät pian sen jälkeen, joten katolilaiset saivat kirkon takaisin vuonna 1622. Nykyinen basilika valmistui vuonna 1786, ja Venäjän vallan aikana pyhiinvaellusjuhlat olivat myös paikka, jossa jaettiin Preussista salakuljetettuja liettuankielisiä kirjoja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+AIEMPI KYSYMYS: Miten Liettua joutui Venäjän vallan alle 1700-luvun lopulla?
+AIEMPI VASTAUS (Livia):
+No niin, raskasta historiaa. Puolan–Liettuan yhteisvaltio jaettiin 1700-luvun lopulla naapurivaltioiden kesken kolmessa jaossa, joista viimeinen tapahtui vuonna 1795. Tuolloin suurin osa Liettuan alueesta joutui [[Venäjän keisarikunnan]] alle, ja osa siirtyi Preussille. Yhteisvaltion häviäminen tarkoitti, että Liettua menetti oman valtionsa aina ensimmäisen maailmansodan jälkeiseen aikaan asti. [[Puolan jaot]] ovat siis syy siihen, miksi 1800-luvun Liettuassa vallitsi Venäjän valta. Onpa siitä pitkä aika.
+KYSYMYS: Kerro lisää: Venäjän keisarikunnan
+
+### 303
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šiluva (kulttuuri)
+Tietoruudun teksti: Šiluva on alle 700 asukkaan pikkukaupunki Samogitiassa ja Liettuan tärkeä katolinen pyhiinvaelluskohde. Se mainitaan ensimmäisen kerran vuonna 1457, kun aatelismies Petras Gedgaudas rakennutti sinne Neitsyt Marian syntymän kirkon. Reformaation aikana monet seudun asukkaista kääntyivät kalvinismiin ja kirkko suljettiin noin vuonna 1569; viimeinen kirkkoherra hautasi kirkon arvoesineet ja asiakirjat rautalaatikossa kirkon lähelle. Erään uskomuksen mukaan Neitsyt Maria ilmestyi paikalle lapsi sylissään, ja asiakirjat löytyivät pian sen jälkeen, joten katolilaiset saivat kirkon takaisin vuonna 1622. Nykyinen basilika valmistui vuonna 1786, ja Venäjän vallan aikana pyhiinvaellusjuhlat olivat myös paikka, jossa jaettiin Preussista salakuljetettuja liettuankielisiä kirjoja.
+AIEMPI KYSYMYS: Miten Liettua joutui Venäjän vallan alle 1700-luvun lopulla?
+AIEMPI VASTAUS (Livia):
+No niin, raskasta historiaa. Puolan–Liettuan yhteisvaltio jaettiin 1700-luvun lopulla naapurivaltioiden kesken kolmessa jaossa, joista viimeinen tapahtui vuonna 1795. Tuolloin suurin osa Liettuan alueesta joutui [[Venäjän keisarikunnan]] alle, ja osa siirtyi Preussille. Yhteisvaltion häviäminen tarkoitti, että Liettua menetti oman valtionsa aina ensimmäisen maailmansodan jälkeiseen aikaan asti. [[Puolan jaot]] ovat siis syy siihen, miksi 1800-luvun Liettuassa vallitsi Venäjän valta. Onpa siitä pitkä aika.
+KYSYMYS: Kerro lisää: Puolan jaot
+
+### 304
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tytuvėnai (historia)
+Tietoruudun teksti: Tytuvėnai on kaupunki Kelmėn kunnassa Liettuassa, ja se tunnetaan bernardiiniluostaristaan. Paikka mainitaan ensimmäisen kerran 1300-luvun lopulla, jolloin Bridvaišis-järven yllä kohoavalla linnavuorella oli puulinna. Vuonna 1609 Liettuan suuri lipunkantaja Andrius Valavičius osti Tytuvėnain, ja hänen perheensä aloitti luostarin ja kirkon rakentamisen vanhan kirkon viereen; kompleksin pääosa valmistui vuonna 1633. Ruotsalaisten ja venäläisten joukkojen hyökkäykset ja pitkät sodat jättivät kaupungin autioksi vuoteen 1711 mennessä, mutta vuonna 1724 myönnetty markkinaoikeus auttoi sen toipumaan. Vuoden 1863 kansannousun jälkeen viranomaiset syyttivät paikallisia munkkeja kapinallisten auttamisesta ja sulkivat luostarin vuonna 1864.
+AIEMPI KYSYMYS: Mitä Tytuvėnaille tapahtui 1600- ja 1700-lukujen sodissa, ja miten kaupunki toipui?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Tytuvėnain]] luostarikompleksin pääosa valmistui vuonna 1633, mutta ruotsalaisten ja venäläisten joukkojen hyökkäykset ja pitkät sodat jättivät kaupungin autioksi vuoteen 1711 mennessä. Toipuminen alkoi, kun kaupunki sai vuonna 1724 markkinaoikeuden, joka auttoi elinkeinoelämää elpymään. [[Bernardiiniluostari]] on säilynyt kaupungin tunnetuimpana nähtävyytenä. Kaupungin kohtalo oli tavallinen monille [[Liettuan]] kaupungeille tuona aikana, mutta en tunne kaikkia yksityiskohtia. Hyvä, että toipui.
+KYSYMYS: Kerro lisää: Tytuvėnain
+
+### 305
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tytuvėnai (historia)
+Tietoruudun teksti: Tytuvėnai on kaupunki Kelmėn kunnassa Liettuassa, ja se tunnetaan bernardiiniluostaristaan. Paikka mainitaan ensimmäisen kerran 1300-luvun lopulla, jolloin Bridvaišis-järven yllä kohoavalla linnavuorella oli puulinna. Vuonna 1609 Liettuan suuri lipunkantaja Andrius Valavičius osti Tytuvėnain, ja hänen perheensä aloitti luostarin ja kirkon rakentamisen vanhan kirkon viereen; kompleksin pääosa valmistui vuonna 1633. Ruotsalaisten ja venäläisten joukkojen hyökkäykset ja pitkät sodat jättivät kaupungin autioksi vuoteen 1711 mennessä, mutta vuonna 1724 myönnetty markkinaoikeus auttoi sen toipumaan. Vuoden 1863 kansannousun jälkeen viranomaiset syyttivät paikallisia munkkeja kapinallisten auttamisesta ja sulkivat luostarin vuonna 1864.
+AIEMPI KYSYMYS: Mitä Tytuvėnaille tapahtui 1600- ja 1700-lukujen sodissa, ja miten kaupunki toipui?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Tytuvėnain]] luostarikompleksin pääosa valmistui vuonna 1633, mutta ruotsalaisten ja venäläisten joukkojen hyökkäykset ja pitkät sodat jättivät kaupungin autioksi vuoteen 1711 mennessä. Toipuminen alkoi, kun kaupunki sai vuonna 1724 markkinaoikeuden, joka auttoi elinkeinoelämää elpymään. [[Bernardiiniluostari]] on säilynyt kaupungin tunnetuimpana nähtävyytenä. Kaupungin kohtalo oli tavallinen monille [[Liettuan]] kaupungeille tuona aikana, mutta en tunne kaikkia yksityiskohtia. Hyvä, että toipui.
+KYSYMYS: Kerro lisää: Bernardiiniluostari
+
+### 306
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tytuvėnai (historia)
+Tietoruudun teksti: Tytuvėnai on kaupunki Kelmėn kunnassa Liettuassa, ja se tunnetaan bernardiiniluostaristaan. Paikka mainitaan ensimmäisen kerran 1300-luvun lopulla, jolloin Bridvaišis-järven yllä kohoavalla linnavuorella oli puulinna. Vuonna 1609 Liettuan suuri lipunkantaja Andrius Valavičius osti Tytuvėnain, ja hänen perheensä aloitti luostarin ja kirkon rakentamisen vanhan kirkon viereen; kompleksin pääosa valmistui vuonna 1633. Ruotsalaisten ja venäläisten joukkojen hyökkäykset ja pitkät sodat jättivät kaupungin autioksi vuoteen 1711 mennessä, mutta vuonna 1724 myönnetty markkinaoikeus auttoi sen toipumaan. Vuoden 1863 kansannousun jälkeen viranomaiset syyttivät paikallisia munkkeja kapinallisten auttamisesta ja sulkivat luostarin vuonna 1864.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Kaksi miljoonaa kättä yli kolmen maan] 1989 — Elokuun 23. päivänä 1989 noin kaksi miljoonaa ihmistä tarttui toisiaan käsistä ja muodosti yhtenäisen ketjun Tallinnasta Riian kautta Vilnaan — matkaa kertyi yli kuusisataa kilometriä. Baltian ketju järjestettiin täsmälleen viisikymmentä vuotta sen jälkeen, kun Neuvostoliitto ja natsi-Saksa olivat salaisessa sopimuksessa jakaneet Baltian maat keskenään. Rauhanomainen mielenilmaus vaati Viron, Latvian ja Liettuan miehitysten päättämistä, ja tapahtuma näkyi television välityksellä kaikkialla maailmassa. Kaksi vuotta myöhemmin kaikki kolme maata olivat jälleen itsenäisiä.
+- [Liettua — maalehti / Historia: Rautasusi näytti unessa kaupungin paikan] 1323 — Tarinan mukaan suuriruhtinas Gediminas nukahti metsästysretken jälkeen Vilnian ja Neriksen jokien yhtymäkohdassa ja näki unta rautaisesta sudesta, joka ulvoi kukkulalla sadan suden äänellä. Ylipappi Lizdeika tulkitsi unen: kukkulalle nousisi pääkaupunki, jonka maine kaikuisi yhtä kauas kuin suden ulvonta. Gediminas perusti kaupungin paikalle perinteisesti vuonna 1323 ja kutsui sinne kauppiaita ja käsityöläisiä ympäri Eurooppaa. Tuomiokirkkoaukiolla seisova patsas muistuttaa perustajasta, ja rautasudesta on tullut yksi Liettuan tunnetuimmista tunnuksista.
+AIEMPI KYSYMYS: Mitä Tytuvėnaille tapahtui 1600- ja 1700-lukujen sodissa, ja miten kaupunki toipui?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Tytuvėnain]] luostarikompleksin pääosa valmistui vuonna 1633, mutta ruotsalaisten ja venäläisten joukkojen hyökkäykset ja pitkät sodat jättivät kaupungin autioksi vuoteen 1711 mennessä. Toipuminen alkoi, kun kaupunki sai vuonna 1724 markkinaoikeuden, joka auttoi elinkeinoelämää elpymään. [[Bernardiiniluostari]] on säilynyt kaupungin tunnetuimpana nähtävyytenä. Kaupungin kohtalo oli tavallinen monille [[Liettuan]] kaupungeille tuona aikana, mutta en tunne kaikkia yksityiskohtia. Hyvä, että toipui.
+KYSYMYS: Kerro lisää: Liettuan
+
+### 307
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tytuvėnai (historia)
+Tietoruudun teksti: Tytuvėnai on kaupunki Kelmėn kunnassa Liettuassa, ja se tunnetaan bernardiiniluostaristaan. Paikka mainitaan ensimmäisen kerran 1300-luvun lopulla, jolloin Bridvaišis-järven yllä kohoavalla linnavuorella oli puulinna. Vuonna 1609 Liettuan suuri lipunkantaja Andrius Valavičius osti Tytuvėnain, ja hänen perheensä aloitti luostarin ja kirkon rakentamisen vanhan kirkon viereen; kompleksin pääosa valmistui vuonna 1633. Ruotsalaisten ja venäläisten joukkojen hyökkäykset ja pitkät sodat jättivät kaupungin autioksi vuoteen 1711 mennessä, mutta vuonna 1724 myönnetty markkinaoikeus auttoi sen toipumaan. Vuoden 1863 kansannousun jälkeen viranomaiset syyttivät paikallisia munkkeja kapinallisten auttamisesta ja sulkivat luostarin vuonna 1864.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kaupunkilehti / Historia: Tammikuun joki joka ei ollut joki] Portugalilaiset purjehtivat Guanabaran lahdelle 1. tammikuuta 1502 ja luulivat sitä joen suuksi — siitä nimi Rio de Janeiro, "tammikuun joki". Ranskalaiset siirtolaiset ehtivät perustaa lahden saarelle oman siirtokuntansa 1555, ja portugalilaiset karkottivat heidät vasta vuosien sotimisen jälkeen 1567. Estácio de Sá perusti varsinaisen kaupungin 1. maaliskuuta 1565 ja nimesi sen São Sebastião do Rio de Janeiroksi silloisen kuninkaan suojeluspyhimyksen mukaan.
+AIEMPI KYSYMYS: Miksi Venäjän viranomaiset sulkivat luostarin vuonna 1864?
+AIEMPI VASTAUS (Livia):
+Ai tota. Painava aihe. Vuoden 1863 kansannousun jälkeen viranomaiset syyttivät paikallisia munkkeja kapinallisten auttamisesta ja sulkivat luostarin vuonna 1864. [[Tammikuun kansannousu]] oli Venäjän vallan vastainen kapina, ja sen jälkeen Venäjän viranomaiset sulkivat monia katolisia luostareita Liettuassa ja entisen Puolan–Liettuan alueella. [[Tytuvėnain]] luostari ja sen kirkko ovat säilyneet, ja ne ovat nykyisin tunnettu matkailukohde. Tapahtumista on kulunut yli sata viisikymmentä vuotta.
+KYSYMYS: Kerro lisää: Tammikuun kansannousu
+
+### 308
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tytuvėnai (historia)
+Tietoruudun teksti: Tytuvėnai on kaupunki Kelmėn kunnassa Liettuassa, ja se tunnetaan bernardiiniluostaristaan. Paikka mainitaan ensimmäisen kerran 1300-luvun lopulla, jolloin Bridvaišis-järven yllä kohoavalla linnavuorella oli puulinna. Vuonna 1609 Liettuan suuri lipunkantaja Andrius Valavičius osti Tytuvėnain, ja hänen perheensä aloitti luostarin ja kirkon rakentamisen vanhan kirkon viereen; kompleksin pääosa valmistui vuonna 1633. Ruotsalaisten ja venäläisten joukkojen hyökkäykset ja pitkät sodat jättivät kaupungin autioksi vuoteen 1711 mennessä, mutta vuonna 1724 myönnetty markkinaoikeus auttoi sen toipumaan. Vuoden 1863 kansannousun jälkeen viranomaiset syyttivät paikallisia munkkeja kapinallisten auttamisesta ja sulkivat luostarin vuonna 1864.
+AIEMPI KYSYMYS: Keitä bernardiinit ovat ja mistä ne ovat saaneet nimensä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Bernardiinit]] ovat [[fransiskaanien]] liikkeeseen kuuluva munkkikunta, joka on saanut nimensä Sienan Bernardinosta, 1400-luvun saarnaajasta ja pyhimyksestä. Puolassa ja Liettuassa fransiskaaniveljiä kutsuttiin yleisesti bernardiineiksi. Veljet elivät yksinkertaista elämää, saarnasivat ja ylläpitivät luostareita. [[Tytuvėnain]] luostari on yksi Liettuan tunnetuista bernardiiniluostareista. Nimi tuli Italiasta, ja se on tavallaan lähes sukulaisemme maasta.
+KYSYMYS: Kerro lisää: Bernardiinit
+
+### 309
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tytuvėnai (historia)
+Tietoruudun teksti: Tytuvėnai on kaupunki Kelmėn kunnassa Liettuassa, ja se tunnetaan bernardiiniluostaristaan. Paikka mainitaan ensimmäisen kerran 1300-luvun lopulla, jolloin Bridvaišis-järven yllä kohoavalla linnavuorella oli puulinna. Vuonna 1609 Liettuan suuri lipunkantaja Andrius Valavičius osti Tytuvėnain, ja hänen perheensä aloitti luostarin ja kirkon rakentamisen vanhan kirkon viereen; kompleksin pääosa valmistui vuonna 1633. Ruotsalaisten ja venäläisten joukkojen hyökkäykset ja pitkät sodat jättivät kaupungin autioksi vuoteen 1711 mennessä, mutta vuonna 1724 myönnetty markkinaoikeus auttoi sen toipumaan. Vuoden 1863 kansannousun jälkeen viranomaiset syyttivät paikallisia munkkeja kapinallisten auttamisesta ja sulkivat luostarin vuonna 1864.
+AIEMPI KYSYMYS: Keitä bernardiinit ovat ja mistä ne ovat saaneet nimensä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Bernardiinit]] ovat [[fransiskaanien]] liikkeeseen kuuluva munkkikunta, joka on saanut nimensä Sienan Bernardinosta, 1400-luvun saarnaajasta ja pyhimyksestä. Puolassa ja Liettuassa fransiskaaniveljiä kutsuttiin yleisesti bernardiineiksi. Veljet elivät yksinkertaista elämää, saarnasivat ja ylläpitivät luostareita. [[Tytuvėnain]] luostari on yksi Liettuan tunnetuista bernardiiniluostareista. Nimi tuli Italiasta, ja se on tavallaan lähes sukulaisemme maasta.
+KYSYMYS: Kerro lisää: fransiskaanien
+
+### 310
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tytuvėnai (historia)
+Tietoruudun teksti: Tytuvėnai on kaupunki Kelmėn kunnassa Liettuassa, ja se tunnetaan bernardiiniluostaristaan. Paikka mainitaan ensimmäisen kerran 1300-luvun lopulla, jolloin Bridvaišis-järven yllä kohoavalla linnavuorella oli puulinna. Vuonna 1609 Liettuan suuri lipunkantaja Andrius Valavičius osti Tytuvėnain, ja hänen perheensä aloitti luostarin ja kirkon rakentamisen vanhan kirkon viereen; kompleksin pääosa valmistui vuonna 1633. Ruotsalaisten ja venäläisten joukkojen hyökkäykset ja pitkät sodat jättivät kaupungin autioksi vuoteen 1711 mennessä, mutta vuonna 1724 myönnetty markkinaoikeus auttoi sen toipumaan. Vuoden 1863 kansannousun jälkeen viranomaiset syyttivät paikallisia munkkeja kapinallisten auttamisesta ja sulkivat luostarin vuonna 1864.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Valtakunta ulottui mereltä merelle] 1430 — Liettuan suuriruhtinaskunta oli 1400-luvun alussa Euroopan suurin valtio. Suuriruhtinas Vytautas Suuri hallitsi aluetta, joka ulottui Itämereltä lähelle Mustaamerta ja kattoi nykyisen Valko-Venäjän, suuren osan Ukrainaa sekä palasia Puolaa, Latviaa ja Venäjää. Vuonna 1386 suuriruhtinas Jogaila meni naimisiin Puolan kuningattaren kanssa ja otti kasteen, ja maat liittyivät henkilöunioniin, joka näkyy tässä kartassa vierekkäisinä valtakuntina. Liettuasta tuli näin viimeinen pakanallinen valtio, joka kääntyi kristinuskoon Euroopassa.
+AIEMPI KYSYMYS: Mikä oli Lublinin unioni ja mitä se muutti Liettuassa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Lublinin unioni oli vuonna 1569 solmittu sopimus, jolla [[Puolan kuningaskunta]] ja [[Liettuan suuriruhtinaskunta]] yhdistettiin yhteisvaltioksi, jota johti yhteinen hallitsija ja valtiopäivät. Liettua säilytti oman hallintonsa, lakinsa ja armeijansa, mutta liitto sitoi maat tiiviisti yhteen vuosisadoiksi. Unioni vaikutti myös Liettuan aatelistoon ja kulttuuriin, sillä puolan kielen ja kulttuurin vaikutus lisääntyi. [[Lublinin unioni]] hajosi vasta, kun yhteisvaltio jaettiin 1700-luvun lopulla. Sopimus oli pitkä, mutta kerroin sen lyhyesti.
+KYSYMYS: Kerro lisää: Puolan kuningaskunta
+
+### 311
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tytuvėnai (historia)
+Tietoruudun teksti: Tytuvėnai on kaupunki Kelmėn kunnassa Liettuassa, ja se tunnetaan bernardiiniluostaristaan. Paikka mainitaan ensimmäisen kerran 1300-luvun lopulla, jolloin Bridvaišis-järven yllä kohoavalla linnavuorella oli puulinna. Vuonna 1609 Liettuan suuri lipunkantaja Andrius Valavičius osti Tytuvėnain, ja hänen perheensä aloitti luostarin ja kirkon rakentamisen vanhan kirkon viereen; kompleksin pääosa valmistui vuonna 1633. Ruotsalaisten ja venäläisten joukkojen hyökkäykset ja pitkät sodat jättivät kaupungin autioksi vuoteen 1711 mennessä, mutta vuonna 1724 myönnetty markkinaoikeus auttoi sen toipumaan. Vuoden 1863 kansannousun jälkeen viranomaiset syyttivät paikallisia munkkeja kapinallisten auttamisesta ja sulkivat luostarin vuonna 1864.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Valtakunta ulottui mereltä merelle] 1430 — Liettuan suuriruhtinaskunta oli 1400-luvun alussa Euroopan suurin valtio. Suuriruhtinas Vytautas Suuri hallitsi aluetta, joka ulottui Itämereltä lähelle Mustaamerta ja kattoi nykyisen Valko-Venäjän, suuren osan Ukrainaa sekä palasia Puolaa, Latviaa ja Venäjää. Vuonna 1386 suuriruhtinas Jogaila meni naimisiin Puolan kuningattaren kanssa ja otti kasteen, ja maat liittyivät henkilöunioniin, joka näkyy tässä kartassa vierekkäisinä valtakuntina. Liettuasta tuli näin viimeinen pakanallinen valtio, joka kääntyi kristinuskoon Euroopassa.
+AIEMPI KYSYMYS: Mikä oli Lublinin unioni ja mitä se muutti Liettuassa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Lublinin unioni oli vuonna 1569 solmittu sopimus, jolla [[Puolan kuningaskunta]] ja [[Liettuan suuriruhtinaskunta]] yhdistettiin yhteisvaltioksi, jota johti yhteinen hallitsija ja valtiopäivät. Liettua säilytti oman hallintonsa, lakinsa ja armeijansa, mutta liitto sitoi maat tiiviisti yhteen vuosisadoiksi. Unioni vaikutti myös Liettuan aatelistoon ja kulttuuriin, sillä puolan kielen ja kulttuurin vaikutus lisääntyi. [[Lublinin unioni]] hajosi vasta, kun yhteisvaltio jaettiin 1700-luvun lopulla. Sopimus oli pitkä, mutta kerroin sen lyhyesti.
+KYSYMYS: Kerro lisää: Liettuan suuriruhtinaskunta
+
+### 312
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tytuvėnai (historia)
+Tietoruudun teksti: Tytuvėnai on kaupunki Kelmėn kunnassa Liettuassa, ja se tunnetaan bernardiiniluostaristaan. Paikka mainitaan ensimmäisen kerran 1300-luvun lopulla, jolloin Bridvaišis-järven yllä kohoavalla linnavuorella oli puulinna. Vuonna 1609 Liettuan suuri lipunkantaja Andrius Valavičius osti Tytuvėnain, ja hänen perheensä aloitti luostarin ja kirkon rakentamisen vanhan kirkon viereen; kompleksin pääosa valmistui vuonna 1633. Ruotsalaisten ja venäläisten joukkojen hyökkäykset ja pitkät sodat jättivät kaupungin autioksi vuoteen 1711 mennessä, mutta vuonna 1724 myönnetty markkinaoikeus auttoi sen toipumaan. Vuoden 1863 kansannousun jälkeen viranomaiset syyttivät paikallisia munkkeja kapinallisten auttamisesta ja sulkivat luostarin vuonna 1864.
+AIEMPI KYSYMYS: Mikä oli Lublinin unioni ja mitä se muutti Liettuassa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Lublinin unioni oli vuonna 1569 solmittu sopimus, jolla [[Puolan kuningaskunta]] ja [[Liettuan suuriruhtinaskunta]] yhdistettiin yhteisvaltioksi, jota johti yhteinen hallitsija ja valtiopäivät. Liettua säilytti oman hallintonsa, lakinsa ja armeijansa, mutta liitto sitoi maat tiiviisti yhteen vuosisadoiksi. Unioni vaikutti myös Liettuan aatelistoon ja kulttuuriin, sillä puolan kielen ja kulttuurin vaikutus lisääntyi. [[Lublinin unioni]] hajosi vasta, kun yhteisvaltio jaettiin 1700-luvun lopulla. Sopimus oli pitkä, mutta kerroin sen lyhyesti.
+KYSYMYS: Kerro lisää: Lublinin unioni
+
+### 313
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tytuvėnai (historia)
+Tietoruudun teksti: Tytuvėnai on kaupunki Kelmėn kunnassa Liettuassa, ja se tunnetaan bernardiiniluostaristaan. Paikka mainitaan ensimmäisen kerran 1300-luvun lopulla, jolloin Bridvaišis-järven yllä kohoavalla linnavuorella oli puulinna. Vuonna 1609 Liettuan suuri lipunkantaja Andrius Valavičius osti Tytuvėnain, ja hänen perheensä aloitti luostarin ja kirkon rakentamisen vanhan kirkon viereen; kompleksin pääosa valmistui vuonna 1633. Ruotsalaisten ja venäläisten joukkojen hyökkäykset ja pitkät sodat jättivät kaupungin autioksi vuoteen 1711 mennessä, mutta vuonna 1724 myönnetty markkinaoikeus auttoi sen toipumaan. Vuoden 1863 kansannousun jälkeen viranomaiset syyttivät paikallisia munkkeja kapinallisten auttamisesta ja sulkivat luostarin vuonna 1864.
+AIEMPI KYSYMYS: Mikä on markkinaoikeus ja miksi se oli kaupungille tärkeä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Markkinaoikeus]] oli hallitsijan tai maanomistajan myöntämä lupa pitää kaupungissa säännöllisiä markkinoita. Se oli kaupungille tärkeä, koska markkinapäivät toivat paikalle kauppiaita ja ostajia ympäri seutua, mikä vilkastutti kauppaa ja toi tuloja kaupungille. [[Tytuvėnai]] sai markkinaoikeuden vuonna 1724, ja se auttoi kaupunkia toipumaan sotien jäljiltä. Markkinat olivat myös tapa vaihtaa uutisia, mikä on viestinviejälle aina mieleen. Torilla kannattaa käydä, siellä leivonnaisiakin on varmasti.
+KYSYMYS: Kerro lisää: Markkinaoikeus
+
+### 314
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tytuvėnai (historia)
+Tietoruudun teksti: Tytuvėnai on kaupunki Kelmėn kunnassa Liettuassa, ja se tunnetaan bernardiiniluostaristaan. Paikka mainitaan ensimmäisen kerran 1300-luvun lopulla, jolloin Bridvaišis-järven yllä kohoavalla linnavuorella oli puulinna. Vuonna 1609 Liettuan suuri lipunkantaja Andrius Valavičius osti Tytuvėnain, ja hänen perheensä aloitti luostarin ja kirkon rakentamisen vanhan kirkon viereen; kompleksin pääosa valmistui vuonna 1633. Ruotsalaisten ja venäläisten joukkojen hyökkäykset ja pitkät sodat jättivät kaupungin autioksi vuoteen 1711 mennessä, mutta vuonna 1724 myönnetty markkinaoikeus auttoi sen toipumaan. Vuoden 1863 kansannousun jälkeen viranomaiset syyttivät paikallisia munkkeja kapinallisten auttamisesta ja sulkivat luostarin vuonna 1864.
+AIEMPI KYSYMYS: Mikä on markkinaoikeus ja miksi se oli kaupungille tärkeä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Markkinaoikeus]] oli hallitsijan tai maanomistajan myöntämä lupa pitää kaupungissa säännöllisiä markkinoita. Se oli kaupungille tärkeä, koska markkinapäivät toivat paikalle kauppiaita ja ostajia ympäri seutua, mikä vilkastutti kauppaa ja toi tuloja kaupungille. [[Tytuvėnai]] sai markkinaoikeuden vuonna 1724, ja se auttoi kaupunkia toipumaan sotien jäljiltä. Markkinat olivat myös tapa vaihtaa uutisia, mikä on viestinviejälle aina mieleen. Torilla kannattaa käydä, siellä leivonnaisiakin on varmasti.
+KYSYMYS: Kerro lisää: Tytuvėnai
+
+### 315
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alytus (kulttuuri)
+Tietoruudun teksti: Alytus on Etelä-Liettuan kaupunki Nemunas-joen rannalla ja maan kuudenneksi suurin. Se on Dzūkijan historiallinen keskus, ja tiet yhdistävät sen muun muassa Vilnaan, Kaunasiin ja Grodnoon. Ensimmäinen maininta on vuodelta 1377, jolloin paikalla oli pieni puinen linnake Saksalaisen ritarikunnan rajalla. Kuningas Stefan Báthory antoi kaupungille kaupunkioikeudet vuonna 1581, ja päivää juhlitaan yhä Alytuksen päivänä. Kaupunki oli vuosisatoja jaettuna kahteen erilliseen osaan, joita kutsutaan yhä nimillä Alytus I ja Alytus II. Kaupungin vaakunassa on valkoinen ruusu, ja sama nimi on Liettuan suurimmalla jalankulkusillalla.
+AIEMPI KYSYMYS: Miksi Alytus oli vuosisatoja jaettu kahteen erilliseen osaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tarkkaa syytä jaolle en ole varma, joten sanon sen suoraan: Alytuksen kaksi osaa tunnetaan yhä nimillä Alytus I ja Alytus II, ja kaupunki sijaitsee [[Nemunas]]-joen rannalla, mikä on luontevin selitys kahdelle erilliselle asutukselle. Todennäköisesti osat kehittyivät pitkään omina yksikköinään, mutta tätä en pysty varmistamaan. Varmaa on, että kuningas [[Stefan Báthory]] antoi kaupungille kaupunkioikeudet vuonna 1581. Mieluummin myönnän ton kuin keksin tarinan.
+KYSYMYS: Kerro lisää: Nemunas
+
+### 316
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alytus (kulttuuri)
+Tietoruudun teksti: Alytus on Etelä-Liettuan kaupunki Nemunas-joen rannalla ja maan kuudenneksi suurin. Se on Dzūkijan historiallinen keskus, ja tiet yhdistävät sen muun muassa Vilnaan, Kaunasiin ja Grodnoon. Ensimmäinen maininta on vuodelta 1377, jolloin paikalla oli pieni puinen linnake Saksalaisen ritarikunnan rajalla. Kuningas Stefan Báthory antoi kaupungille kaupunkioikeudet vuonna 1581, ja päivää juhlitaan yhä Alytuksen päivänä. Kaupunki oli vuosisatoja jaettuna kahteen erilliseen osaan, joita kutsutaan yhä nimillä Alytus I ja Alytus II. Kaupungin vaakunassa on valkoinen ruusu, ja sama nimi on Liettuan suurimmalla jalankulkusillalla.
+AIEMPI KYSYMYS: Miksi Alytus oli vuosisatoja jaettu kahteen erilliseen osaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tarkkaa syytä jaolle en ole varma, joten sanon sen suoraan: Alytuksen kaksi osaa tunnetaan yhä nimillä Alytus I ja Alytus II, ja kaupunki sijaitsee [[Nemunas]]-joen rannalla, mikä on luontevin selitys kahdelle erilliselle asutukselle. Todennäköisesti osat kehittyivät pitkään omina yksikköinään, mutta tätä en pysty varmistamaan. Varmaa on, että kuningas [[Stefan Báthory]] antoi kaupungille kaupunkioikeudet vuonna 1581. Mieluummin myönnän ton kuin keksin tarinan.
+KYSYMYS: Kerro lisää: Stefan Báthory
+
+### 317
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alytus (kulttuuri)
+Tietoruudun teksti: Alytus on Etelä-Liettuan kaupunki Nemunas-joen rannalla ja maan kuudenneksi suurin. Se on Dzūkijan historiallinen keskus, ja tiet yhdistävät sen muun muassa Vilnaan, Kaunasiin ja Grodnoon. Ensimmäinen maininta on vuodelta 1377, jolloin paikalla oli pieni puinen linnake Saksalaisen ritarikunnan rajalla. Kuningas Stefan Báthory antoi kaupungille kaupunkioikeudet vuonna 1581, ja päivää juhlitaan yhä Alytuksen päivänä. Kaupunki oli vuosisatoja jaettuna kahteen erilliseen osaan, joita kutsutaan yhä nimillä Alytus I ja Alytus II. Kaupungin vaakunassa on valkoinen ruusu, ja sama nimi on Liettuan suurimmalla jalankulkusillalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Elmon linnake] 1552 (rakennus), 1565 (piiritys) Linnake rakennettiin 1552 vartioimaan kahden sataman, Grand Harbourin ja Marsamxettin, suuta samalta kapealta niemenkärjeltä, jolle Valletta myöhemmin nousi. Tähden muotoinen muuri oli aikanaan uutta linnoitustekniikkaa, mutta osmanien saapuessa 1565 moni piti sitä silti liian pienenä kestämään pitkää piiritystä. Se piti pintansa lähes kuukauden, 18. toukokuuta – 23. kesäkuuta, vaikka miehistö oli moninkertaisesti alivoimainen. Yöllä veneet toivat Birgusta lisää puolustajia ja veivät haavoittuneita pois, ja monet pahoin haavoittuneet ritarit kieltäytyivät poistumasta: he pyysivät kantaa itsensä tuoleilla muurille jatkaakseen taistelua istualtaan viimeiseen a…
+AIEMPI KYSYMYS: Mitä linnake vartioi Alytuksen paikalla 1300-luvulla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Alytuksen paikalla 1300-luvulla ollut pieni puinen [[linnake]] sijaitsi [[Saksalaisen ritarikunnan]] rajalla, joten sen tehtävänä oli todennäköisesti vartioida rajaa ja suojata seutua ritarikunnan sotaretkiltä. Paikka mainitaan ensimmäisen kerran vuonna 1377. Linnake oli puinen ja pieni, ei siis suuri kivilinna, vaan rajaseudun vartiopaikka.
+KYSYMYS: Kerro lisää: linnake
+
+### 318
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alytus (kulttuuri)
+Tietoruudun teksti: Alytus on Etelä-Liettuan kaupunki Nemunas-joen rannalla ja maan kuudenneksi suurin. Se on Dzūkijan historiallinen keskus, ja tiet yhdistävät sen muun muassa Vilnaan, Kaunasiin ja Grodnoon. Ensimmäinen maininta on vuodelta 1377, jolloin paikalla oli pieni puinen linnake Saksalaisen ritarikunnan rajalla. Kuningas Stefan Báthory antoi kaupungille kaupunkioikeudet vuonna 1581, ja päivää juhlitaan yhä Alytuksen päivänä. Kaupunki oli vuosisatoja jaettuna kahteen erilliseen osaan, joita kutsutaan yhä nimillä Alytus I ja Alytus II. Kaupungin vaakunassa on valkoinen ruusu, ja sama nimi on Liettuan suurimmalla jalankulkusillalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Plečnikin ja Secessionin Ljubljana: Ritarikunnan luostarista kesäteatteriksi] Križanken luostarin rakentamisen uskotaan alkaneen 1200-luvulla saksalaisen ritarikunnan käyttöön, ja sen barokkikirkko valmistui vuosina 1714–1715. Luostari toimi vuoteen 1945 asti, jolloin kompleksi kansallistettiin. Vuonna 1952 kaupunki pyysi Jože Plečnikia muuttamaan rappeutuneen luostarin Ljubljanan festivaalin näyttämöksi, ja työt valmistuivat 1956. Nykyään pihoilla järjestetään klassisen musiikin, jazzin ja rockin konsertteja, ja pääpihaa koristavat värikkäät sgraffitot.
+AIEMPI KYSYMYS: Mitä linnake vartioi Alytuksen paikalla 1300-luvulla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Alytuksen paikalla 1300-luvulla ollut pieni puinen [[linnake]] sijaitsi [[Saksalaisen ritarikunnan]] rajalla, joten sen tehtävänä oli todennäköisesti vartioida rajaa ja suojata seutua ritarikunnan sotaretkiltä. Paikka mainitaan ensimmäisen kerran vuonna 1377. Linnake oli puinen ja pieni, ei siis suuri kivilinna, vaan rajaseudun vartiopaikka.
+KYSYMYS: Kerro lisää: Saksalaisen ritarikunnan
+
+### 319
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alytus (kulttuuri)
+Tietoruudun teksti: Alytus on Etelä-Liettuan kaupunki Nemunas-joen rannalla ja maan kuudenneksi suurin. Se on Dzūkijan historiallinen keskus, ja tiet yhdistävät sen muun muassa Vilnaan, Kaunasiin ja Grodnoon. Ensimmäinen maininta on vuodelta 1377, jolloin paikalla oli pieni puinen linnake Saksalaisen ritarikunnan rajalla. Kuningas Stefan Báthory antoi kaupungille kaupunkioikeudet vuonna 1581, ja päivää juhlitaan yhä Alytuksen päivänä. Kaupunki oli vuosisatoja jaettuna kahteen erilliseen osaan, joita kutsutaan yhä nimillä Alytus I ja Alytus II. Kaupungin vaakunassa on valkoinen ruusu, ja sama nimi on Liettuan suurimmalla jalankulkusillalla.
+AIEMPI KYSYMYS: Mikä on Nemunas-joki ja mihin se laskee?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Nemunas on Liettuan tärkein joki, ja se virtaa Valko-Venäjältä Liettuan halki ja muodostaa osan Liettuan ja Venäjän Kaliningradin alueen rajasta. Se laskee Itämeren [[Kuurinkielekkeen laguuniin]], joka on erotettu avomerestä pitkällä hiekkaniemellä. Joen varrella sijaitsevat muun muassa Alytus, [[Kaunas]] ja Birštonas. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Kuurinkielekkeen laguuniin
+
+### 320
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alytus (kulttuuri)
+Tietoruudun teksti: Alytus on Etelä-Liettuan kaupunki Nemunas-joen rannalla ja maan kuudenneksi suurin. Se on Dzūkijan historiallinen keskus, ja tiet yhdistävät sen muun muassa Vilnaan, Kaunasiin ja Grodnoon. Ensimmäinen maininta on vuodelta 1377, jolloin paikalla oli pieni puinen linnake Saksalaisen ritarikunnan rajalla. Kuningas Stefan Báthory antoi kaupungille kaupunkioikeudet vuonna 1581, ja päivää juhlitaan yhä Alytuksen päivänä. Kaupunki oli vuosisatoja jaettuna kahteen erilliseen osaan, joita kutsutaan yhä nimillä Alytus I ja Alytus II. Kaupungin vaakunassa on valkoinen ruusu, ja sama nimi on Liettuan suurimmalla jalankulkusillalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Kaksikymmentä nimeä vapautti maan] 1918 — Ensimmäisen maailmansodan lopulla, Venäjän ja Saksan miehitysten välissä, Liettuan neuvosto kokoontui Vilnan Pilies-kadun talossa ja allekirjoitti 16. helmikuuta 1918 itsenäisyysjulistuksen. Sen allekirjoitti kaksikymmentä jäsentä, puheenjohtajanaan lääkäri Jonas Basanavičius, ja se julisti demokraattisen Liettuan valtion, jonka pääkaupunki olisi Vilna. Talo tunnetaan nykyään Signatarų-talona. Alkuperäinen asiakirja katosi Kaunasista neuvostomiehityksen alla 1940 ja löytyi vasta 2017 Saksan ulkoministeriön arkistosta Berliinistä.
+AIEMPI KYSYMYS: Mikä on Nemunas-joki ja mihin se laskee?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Nemunas on Liettuan tärkein joki, ja se virtaa Valko-Venäjältä Liettuan halki ja muodostaa osan Liettuan ja Venäjän Kaliningradin alueen rajasta. Se laskee Itämeren [[Kuurinkielekkeen laguuniin]], joka on erotettu avomerestä pitkällä hiekkaniemellä. Joen varrella sijaitsevat muun muassa Alytus, [[Kaunas]] ja Birštonas. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Kaunas

@@ -412,7 +412,7 @@
   "kohde": "kohde:ristien-kukkula",
   "kysymys": "Kävikö paavi Ristien kukkulalla?",
   "uusi": true,
-  "vastaus": "Ai tota. Hyvä kysymys tuo. Kyllä kävi: paavi [[Johannes Paavali II]] vieraili kukkulalla vuonna 1993, siis vain muutama vuosi sen jälkeen, kun Liettua oli palauttanut itsenäisyytensä ja [[Neuvostoliiton]] aikainen uskonnonvaino oli päättynyt. Vierailu oli kukkulalle ja sen vaalijoille tärkeä hetki, sillä paikka oli vuosikymmeniä ollut sekä uskon että vastarinnan symboli. En ole varma vierailun tarkoista yksityiskohdista, kuten päivästä tai ohjelmasta. Siinä riitti kyyhkyllekin pohdittavaa.",
+  "vastaus": "Ai tota. Hyvä kysymys tuo. Kyllä kävi: paavi [[Johannes Paavali II]] vieraili kukkulalla lähteiden mukaan pian sen jälkeen, kun Liettua oli palauttanut itsenäisyytensä ja [[Neuvostoliiton]] aikainen uskonnonvaino oli päättynyt. Vierailu oli kukkulalle ja sen vaalijoille tärkeä hetki, sillä paikka oli vuosikymmeniä ollut sekä uskon että vastarinnan symboli. En ole varma vierailun tarkoista yksityiskohdista, kuten päivästä tai ohjelmasta. Siinä riitti kyyhkyllekin pohdittavaa.",
   "linkit": [
    "Johannes Paavali II",
    "Neuvostoliiton"
@@ -684,14 +684,16 @@
   "kohde": "kohde:grutas-puisto",
   "kysymys": "Minkä palkinnon puisto sai?",
   "uusi": false,
-  "vastaus": "Odotas vähän. Annas ku mietin. Palkinnosta minulla ei ole tietoa, enkä halua arvailla sellaista, mitä en tiedä. Tiedän kuitenkin, että [[Viliumas Malinauskas]] perusti puiston vuonna 2001 [[Druskininkain]] lähelle, noin 130 kilometriä Vilnasta lounaaseen. Puiston perustaminen oli kiistanalaista ja kohtasi huomattavaa vastustusta, mikä kertoo, että paikka herättää keskustelua. Tätä en vain osaa kyyhkynä kertoa.",
+  "vastaus": "Hetkinen ny. Alueen piirteet jäljittelevät osin [[neuvostoleirejä]]: puupolkuja, vartiotorneja ja piikkilanka-aitoja. Tarkoitus on antaa vierailijalle aavistus siitä, millaista elämä [[Neuvostoliiton]] miehityksen aikana saattoi olla. Puiston perusti vuonna 2001 liikemies [[Viliumas Malinauskas]] [[Druskininkain]] lähelle. Kaikkia hänen alkuperäisiä ajatuksiaan ei kuitenkaan hyväksytty, esimerkiksi vierailijoiden kuljettamista gulag-tyylisellä junalla. Rakennelmat ovat siis muistutus, eivät oikea vankila.",
   "linkit": [
+   "neuvostoleirejä",
+   "Neuvostoliiton",
    "Viliumas Malinauskas",
    "Druskininkain"
   ],
   "jatkot": [
-   "Miksi puiston perustaminen oli kiistanalaista?",
-   "Milloin puisto avattiin yleisölle?"
+   "Mitä gulag-leirit olivat?",
+   "Millainen paikka Druskininkai on?"
   ]
  },
  {
@@ -2095,9 +2097,11 @@
   "kohde": "kohde:hahmotelma-tytuvenai",
   "kysymys": "Mitä Tytuvėnaille tapahtui 1600- ja 1700-lukujen sodissa, ja miten kaupunki toipui?",
   "uusi": false,
-  "vastaus": "Annas ku mietin. Tytuvėnain luostarikompleksin pääosa valmistui vuonna 1633, mutta ruotsalaisten ja venäläisten joukkojen hyökkäykset ja pitkät sodat jättivät kaupungin autioksi vuoteen 1711 mennessä. Toipuminen alkoi, kun kaupunki sai vuonna 1724 markkinaoikeuden, joka auttoi elinkeinoelämää elpymään. [[Bernardiiniluostari]] on säilynyt kaupungin tunnetuimpana nähtävyytenä. Kaupungin kohtalo oli tavallinen monille Liettuan kaupungeille tuona aikana, mutta en tunne kaikkia yksityiskohtia. Hyvä, että toipui.",
+  "vastaus": "Annas ku mietin. [[Tytuvėnain]] luostarikompleksin pääosa valmistui vuonna 1633, mutta ruotsalaisten ja venäläisten joukkojen hyökkäykset ja pitkät sodat jättivät kaupungin autioksi vuoteen 1711 mennessä. Toipuminen alkoi, kun kaupunki sai vuonna 1724 markkinaoikeuden, joka auttoi elinkeinoelämää elpymään. [[Bernardiiniluostari]] on säilynyt kaupungin tunnetuimpana nähtävyytenä. Kaupungin kohtalo oli tavallinen monille [[Liettuan]] kaupungeille tuona aikana, mutta en tunne kaikkia yksityiskohtia. Hyvä, että toipui.",
   "linkit": [
-   "Bernardiiniluostari"
+   "Tytuvėnain",
+   "Bernardiiniluostari",
+   "Liettuan"
   ],
   "jatkot": [
    "Mikä oli Liettuan ja Ruotsin välinen sota 1600-luvulla?",
@@ -2108,9 +2112,10 @@
   "kohde": "kohde:hahmotelma-tytuvenai",
   "kysymys": "Miksi Venäjän viranomaiset sulkivat luostarin vuonna 1864?",
   "uusi": false,
-  "vastaus": "Ai tota. Painava aihe. Vuoden 1863 kansannousun jälkeen viranomaiset syyttivät paikallisia munkkeja kapinallisten auttamisesta ja sulkivat luostarin vuonna 1864. [[Tammikuun kansannousu]] oli Venäjän vallan vastainen kapina, ja sen jälkeen Venäjän viranomaiset sulkivat monia katolisia luostareita Liettuassa ja entisen Puolan–Liettuan alueella. Tytuvėnain luostari ja sen kirkko ovat säilyneet, ja ne ovat nykyisin tunnettu matkailukohde. Tapahtumista on kulunut yli sata viisikymmentä vuotta.",
+  "vastaus": "Ai tota. Painava aihe. Vuoden 1863 kansannousun jälkeen viranomaiset syyttivät paikallisia munkkeja kapinallisten auttamisesta ja sulkivat luostarin vuonna 1864. [[Tammikuun kansannousu]] oli Venäjän vallan vastainen kapina, ja sen jälkeen Venäjän viranomaiset sulkivat monia katolisia luostareita Liettuassa ja entisen Puolan–Liettuan alueella. [[Tytuvėnain]] luostari ja sen kirkko ovat säilyneet, ja ne ovat nykyisin tunnettu matkailukohde. Tapahtumista on kulunut yli sata viisikymmentä vuotta.",
   "linkit": [
-   "Tammikuun kansannousu"
+   "Tammikuun kansannousu",
+   "Tytuvėnain"
   ],
   "jatkot": [
    "Mitä muita luostareita Venäjän viranomaiset sulkivat Liettuassa?",
@@ -2121,9 +2126,11 @@
   "kohde": "kohde:hahmotelma-tytuvenai",
   "kysymys": "Keitä bernardiinit ovat ja mistä ne ovat saaneet nimensä?",
   "uusi": true,
-  "vastaus": "Joo, tän minä tiedän. [[Bernardiinit]] ovat fransiskaanien liikkeeseen kuuluva munkkikunta, joka on saanut nimensä Sienan Bernardinosta, 1400-luvun saarnaajasta ja pyhimyksestä. Puolassa ja Liettuassa fransiskaaniveljiä kutsuttiin yleisesti bernardiineiksi. Veljet elivät yksinkertaista elämää, saarnasivat ja ylläpitivät luostareita. Tytuvėnain luostari on yksi Liettuan tunnetuista bernardiiniluostareista. Nimi tuli Italiasta, ja se on tavallaan lähes sukulaisemme maasta.",
+  "vastaus": "Joo, tän minä tiedän. [[Bernardiinit]] ovat [[fransiskaanien]] liikkeeseen kuuluva munkkikunta, joka on saanut nimensä Sienan Bernardinosta, 1400-luvun saarnaajasta ja pyhimyksestä. Puolassa ja Liettuassa fransiskaaniveljiä kutsuttiin yleisesti bernardiineiksi. Veljet elivät yksinkertaista elämää, saarnasivat ja ylläpitivät luostareita. [[Tytuvėnain]] luostari on yksi Liettuan tunnetuista bernardiiniluostareista. Nimi tuli Italiasta, ja se on tavallaan lähes sukulaisemme maasta.",
   "linkit": [
-   "Bernardiinit"
+   "Bernardiinit",
+   "fransiskaanien",
+   "Tytuvėnain"
   ],
   "jatkot": [
    "Kuka oli Sienan Bernardino?",
@@ -2134,8 +2141,10 @@
   "kohde": "kohde:hahmotelma-tytuvenai",
   "kysymys": "Mikä oli Lublinin unioni ja mitä se muutti Liettuassa?",
   "uusi": true,
-  "vastaus": "Odotas vähän. Lublinin unioni oli vuonna 1569 solmittu sopimus, jolla Puolan kuningaskunta ja Liettuan suuriruhtinaskunta yhdistettiin yhteisvaltioksi, jota johti yhteinen hallitsija ja valtiopäivät. Liettua säilytti oman hallintonsa, lakinsa ja armeijansa, mutta liitto sitoi maat tiiviisti yhteen vuosisadoiksi. Unioni vaikutti myös Liettuan aatelistoon ja kulttuuriin, sillä puolan kielen ja kulttuurin vaikutus lisääntyi. [[Lublinin unioni]] hajosi vasta, kun yhteisvaltio jaettiin 1700-luvun lopulla. Sopimus oli pitkä, mutta kerroin sen lyhyesti.",
+  "vastaus": "Odotas vähän. Lublinin unioni oli vuonna 1569 solmittu sopimus, jolla [[Puolan kuningaskunta]] ja [[Liettuan suuriruhtinaskunta]] yhdistettiin yhteisvaltioksi, jota johti yhteinen hallitsija ja valtiopäivät. Liettua säilytti oman hallintonsa, lakinsa ja armeijansa, mutta liitto sitoi maat tiiviisti yhteen vuosisadoiksi. Unioni vaikutti myös Liettuan aatelistoon ja kulttuuriin, sillä puolan kielen ja kulttuurin vaikutus lisääntyi. [[Lublinin unioni]] hajosi vasta, kun yhteisvaltio jaettiin 1700-luvun lopulla. Sopimus oli pitkä, mutta kerroin sen lyhyesti.",
   "linkit": [
+   "Puolan kuningaskunta",
+   "Liettuan suuriruhtinaskunta",
    "Lublinin unioni"
   ],
   "jatkot": [
@@ -2147,9 +2156,10 @@
   "kohde": "kohde:hahmotelma-tytuvenai",
   "kysymys": "Mikä on markkinaoikeus ja miksi se oli kaupungille tärkeä?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. [[Markkinaoikeus]] oli hallitsijan tai maanomistajan myöntämä lupa pitää kaupungissa säännöllisiä markkinoita. Se oli kaupungille tärkeä, koska markkinapäivät toivat paikalle kauppiaita ja ostajia ympäri seutua, mikä vilkastutti kauppaa ja toi tuloja kaupungille. Tytuvėnai sai markkinaoikeuden vuonna 1724, ja se auttoi kaupunkia toipumaan sotien jäljiltä. Markkinat olivat myös tapa vaihtaa uutisia, mikä on viestinviejälle aina mieleen. Torilla kannattaa käydä, siellä leivonnaisiakin on varmasti.",
+  "vastaus": "Hetkinen ny. [[Markkinaoikeus]] oli hallitsijan tai maanomistajan myöntämä lupa pitää kaupungissa säännöllisiä markkinoita. Se oli kaupungille tärkeä, koska markkinapäivät toivat paikalle kauppiaita ja ostajia ympäri seutua, mikä vilkastutti kauppaa ja toi tuloja kaupungille. [[Tytuvėnai]] sai markkinaoikeuden vuonna 1724, ja se auttoi kaupunkia toipumaan sotien jäljiltä. Markkinat olivat myös tapa vaihtaa uutisia, mikä on viestinviejälle aina mieleen. Torilla kannattaa käydä, siellä leivonnaisiakin on varmasti.",
   "linkit": [
-   "Markkinaoikeus"
+   "Markkinaoikeus",
+   "Tytuvėnai"
   ],
   "jatkot": [
    "Mitä markkinat tarkoittivat kyläläisille ennen kauppoja?",
@@ -2244,8 +2254,11 @@
   "kohde": "kohde:hahmotelma-marijampole",
   "kysymys": "Miksi Marijampolen puutalot vaihtuivat 1800-luvulla kivitaloiksi?",
   "uusi": false,
-  "vastaus": "Odotas vähän. Syynä oli vuoden 1868 palo, joka tuhosi monta kaupungin puutaloa. Puurakennukset syttyvät helposti ja tuli leviää niissä nopeasti, joten palon jälkeen taloja alettiin rakentaa kivestä, koska se on paljon paloturvallisempaa. Kaupunki rakennettiin siis osittain uudelleen paloturvallisemmaksi. Sama ajatus ohjasi muuallakin: palosta opittiin, ja kivi tuli puun tilalle.",
-  "linkit": [],
+  "vastaus": "Odotas vähän. Syynä oli vuoden 1868 [[kaupunkipalo]], joka tuhosi monta [[Marijampolen]] puutaloa. Puurakennukset syttyvät helposti ja tuli leviää niissä nopeasti, joten palon jälkeen taloja alettiin rakentaa kivestä, koska se on paljon paloturvallisempaa. Kaupunki rakennettiin siis osittain uudelleen paloturvallisemmaksi. Sama ajatus ohjasi muuallakin: palosta opittiin, ja kivi tuli puun tilalle.",
+  "linkit": [
+   "kaupunkipalo",
+   "Marijampolen"
+  ],
   "jatkot": [
    "Miksi kivitalot ovat paloturvallisempia kuin puutalot?",
    "Mitä muita suuria kaupunkipaloja Euroopassa on ollut?"
@@ -2255,8 +2268,9 @@
   "kohde": "kohde:hahmotelma-marijampole",
   "kysymys": "Mistä Šešupė-joki virtaa ja mihin se päätyy?",
   "uusi": true,
-  "vastaus": "Ai se. Šešupė on Nemunas-joen sivujoki, ja se virtaa Liettuan lounaisosassa muun muassa [[Marijampolen]] kautta. Joen alajuoksulla se muodostaa osan Liettuan ja Venäjän Kaliningradin alueen välistä rajaa, ja lopulta se yhtyy Nemunas-jokeen. Marijampolessa joki jakaa kaupungin kahteen osaan, joita yhdistävät sillat. Siltoja on kuusi, ja ne ovat minusta kauniita ylhäältä katsottuna.",
+  "vastaus": "Ai se. Šešupė on [[Nemunas-joen]] sivujoki, ja se virtaa Liettuan lounaisosassa muun muassa [[Marijampolen]] kautta. Joen alajuoksulla se muodostaa osan Liettuan ja Venäjän Kaliningradin alueen välistä rajaa, ja lopulta se yhtyy Nemunas-jokeen. Marijampolessa joki jakaa kaupungin kahteen osaan, joita yhdistävät sillat. Siltoja on kuusi, ja ne ovat minusta kauniita ylhäältä katsottuna.",
   "linkit": [
+   "Nemunas-joen",
    "Marijampolen"
   ],
   "jatkot": [
@@ -2297,8 +2311,9 @@
   "kohde": "kohde:hahmotelma-vistytis",
   "kysymys": "Miksi Vištytis alkoi taantua, vaikka rautatie rakennettiin vain muutaman kilometrin päähän?",
   "uusi": false,
-  "vastaus": "No jopas. Kaupunki jäi rautatien ulkopuolelle: kun rautatie Königsbergistä Venäjälle rakennettiin vuonna 1861 [[Kybartain]] kautta, kaupan ja liikenteen painopiste siirtyi sinne. Muutama kilometri on junan aikakaudella merkittävä matka, koska tavarat ja ihmiset kulkivat sinne, missä juna pysähtyi. Vištytis ei enää ollut tärkeä kauppapaikka, ja kaupunki taantui nopeasti, vaikka sen katurakenne säilyi.",
+  "vastaus": "No jopas. Kaupunki jäi rautatien ulkopuolelle: kun rautatie [[Königsbergistä]] Venäjälle rakennettiin vuonna 1861 [[Kybartain]] kautta, kaupan ja liikenteen painopiste siirtyi sinne. Muutama kilometri on junan aikakaudella merkittävä matka, koska tavarat ja ihmiset kulkivat sinne, missä juna pysähtyi. Vištytis ei enää ollut tärkeä kauppapaikka, ja kaupunki taantui nopeasti, vaikka sen katurakenne säilyi.",
   "linkit": [
+   "Königsbergistä",
    "Kybartain"
   ],
   "jatkot": [
@@ -2310,9 +2325,10 @@
   "kohde": "kohde:hahmotelma-vistytis",
   "kysymys": "Mikä Vištytisin lähellä oleva suuri kivi on, ja miksi sitä on säilytetty?",
   "uusi": false,
-  "vastaus": "Hmm, tuota niin. [[Vištytis-kivi]] on suuri siirtolohkare, siis jääkauden mannerjäätikön kuljettama kivi. Täsmällisiä mittoja en muista, joten jätän ne pois, enkä myöskään ole varma, minkä virallisen suojelun piirissä se on. Tällaiset suuret kivet ovat usein luonnonmuistomerkkejä, ja niihin liittyy paikallisia tarinoita ja perinteitä. Kiven vieressä kulkee järven ranta, ja ylhäältä katsottuna maisema on kaunis.",
+  "vastaus": "Hmm, tuota niin. [[Vištytis-kivi]] on suuri [[siirtolohkare]], siis jääkauden mannerjäätikön kuljettama kivi. Täsmällisiä mittoja en muista, joten jätän ne pois, enkä myöskään ole varma, minkä virallisen suojelun piirissä se on. Tällaiset suuret kivet ovat usein luonnonmuistomerkkejä, ja niihin liittyy paikallisia tarinoita ja perinteitä. Kiven vieressä kulkee järven ranta, ja ylhäältä katsottuna maisema on kaunis.",
   "linkit": [
-   "Vištytis-kivi"
+   "Vištytis-kivi",
+   "siirtolohkare"
   ],
   "jatkot": [
    "Mikä on siirtolohkare?",
@@ -2337,8 +2353,12 @@
   "kohde": "kohde:hahmotelma-vistytis",
   "kysymys": "Miten jääkausi muovasi Liettuan järvimaisemaa?",
   "uusi": true,
-  "vastaus": "Odotas vähän. Jääkauden aikana mannerjäätikkö peitti suuren osan Pohjois-Eurooppaa, ja sen sulaessa se jätti jälkeensä moreenia, harjuja, kumpuja ja painanteita. Painanteisiin muodostui järviä, ja Liettuassa niitä on runsaasti, erityisesti koillisessa ja kaakossa. Jäätikkö kuljetti mukanaan myös suuria kiviä, joita kutsutaan siirtolohkareiksi. Tämän kaiken oli pakko olla hidasta puuhaa, kun ajattelee, miten monta vuotta siihen meni.",
-  "linkit": [],
+  "vastaus": "Odotas vähän. [[Jääkauden]] aikana [[mannerjäätikkö]] peitti suuren osan Pohjois-Eurooppaa, ja sen sulaessa se jätti jälkeensä [[moreenia]], harjuja, kumpuja ja painanteita. Painanteisiin muodostui järviä, ja Liettuassa niitä on runsaasti, erityisesti koillisessa ja kaakossa. Jäätikkö kuljetti mukanaan myös suuria kiviä, joita kutsutaan siirtolohkareiksi. Tämän kaiken oli pakko olla hidasta puuhaa, kun ajattelee, miten monta vuotta siihen meni.",
+  "linkit": [
+   "Jääkauden",
+   "mannerjäätikkö",
+   "moreenia"
+  ],
   "jatkot": [
    "Mikä on moreeni?",
    "Miten järvi syntyy jäätikön sulaessa?"
@@ -2348,9 +2368,11 @@
   "kohde": "kohde:hahmotelma-vistytis",
   "kysymys": "Mitä tarkoittaa siirtolohkare?",
   "uusi": true,
-  "vastaus": "Ai tota. [[Siirtolohkare]] on kivi, jonka mannerjäätikkö on kuljettanut pitkän matkan ja jättänyt sulaessaan paikkaan, jonka kallioperästä se ei ole peräisin. Siksi se eroaa ympäröivästä maaperästä. Siirtolohkareita on paljon esimerkiksi Suomessa ja Baltiassa. Tutkijat voivat selvittää kiven kallioperän perusteella, mistä suunnasta jäätikkö sen toi. Jotkut ovat valtavia, ja minä kyllä kunnioitan sellaista matkaa.",
+  "vastaus": "Ai tota. [[Siirtolohkare]] on kivi, jonka mannerjäätikkö on kuljettanut pitkän matkan ja jättänyt sulaessaan paikkaan, jonka kallioperästä se ei ole peräisin. Siksi se eroaa ympäröivästä maaperästä. Siirtolohkareita on paljon esimerkiksi [[Suomessa]] ja [[Baltiassa]]. Tutkijat voivat selvittää kiven kallioperän perusteella, mistä suunnasta jäätikkö sen toi. Jotkut ovat valtavia, ja minä kyllä kunnioitan sellaista matkaa.",
   "linkit": [
-   "Siirtolohkare"
+   "Siirtolohkare",
+   "Suomessa",
+   "Baltiassa"
   ],
   "jatkot": [
    "Miten tutkijat selvittävät kiven alkuperän?",
@@ -2361,8 +2383,9 @@
   "kohde": "kohde:hahmotelma-zarasai",
   "kysymys": "Miksi Zarasain keskusta rakennettiin vuonna 1837 hevosenkengän muotoiseksi?",
   "uusi": false,
-  "vastaus": "No niin, tää on hyvä tarina. Vuoden 1834 tulipalo poltti lähes koko keskustan, ja kaupunki rakennettiin uudelleen vuonna 1837 uuden kaavan mukaan, jossa on hevosenkengän muotoinen aukio ja siitä säteilevät kadut. Tarkoituksena oli ehkäistä suuria tulipaloja, ja kaava on säilynyt lähes muuttumattomana. Säteittäiset kadut ja aukio antavat tulelle vähemmän helppoja reittejä kuin tiheä kujien verkko, ja [[Zarasain]] kaupunkikaava on edelleen tunnistettavissa.\n\nYlhäältä se hevosenkenkä näyttää melkein siltä kuin joku olisi piirtänyt sen tarkoituksella. Se kyllä oli piirretty, mutta pidän siitä silti.",
+  "vastaus": "No niin, tää on hyvä tarina. Vuoden 1834 [[tulipalo]] poltti lähes koko keskustan, ja kaupunki rakennettiin uudelleen vuonna 1837 uuden kaavan mukaan, jossa on hevosenkengän muotoinen aukio ja siitä säteilevät kadut. Tarkoituksena oli ehkäistä suuria tulipaloja, ja kaava on säilynyt lähes muuttumattomana. Säteittäiset kadut ja aukio antavat tulelle vähemmän helppoja reittejä kuin tiheä kujien verkko, ja [[Zarasain]] kaupunkikaava on edelleen tunnistettavissa.\n\nYlhäältä se hevosenkenkä näyttää melkein siltä kuin joku olisi piirtänyt sen tarkoituksella. Se kyllä oli piirretty, mutta pidän siitä silti.",
   "linkit": [
+   "tulipalo",
    "Zarasain"
   ],
   "jatkot": [
@@ -2374,9 +2397,11 @@
   "kohde": "kohde:hahmotelma-zarasai",
   "kysymys": "Mikä kansa antoi Zarasaille nimen, joka viittaa järviin?",
   "uusi": false,
-  "vastaus": "Joo, tän minä tiedän. Nimi juontuu [[seloonien]] kielen sanasta, joka tarkoittaa järveä. Seloonit olivat balttilainen heimo, joka asui nykyisen Liettuan ja Latvian alueilla, ja heidän kielensä on kuollut sukupuuttoon. Zarasai on nimensä veroinen, sillä kaupunkia ympäröivät lukuisat järvet ja joet. Nimi on siis säilynyt vanhan kielen jäänteenä.",
+  "vastaus": "Joo, tän minä tiedän. Nimi juontuu [[seloonien]] kielen sanasta, joka tarkoittaa järveä. Seloonit olivat balttilainen heimo, joka asui nykyisen [[Liettuan]] ja [[Latvian]] alueilla, ja heidän kielensä on kuollut sukupuuttoon. Zarasai on nimensä veroinen, sillä kaupunkia ympäröivät lukuisat järvet ja joet. Nimi on siis säilynyt vanhan kielen jäänteenä.",
   "linkit": [
-   "seloonien"
+   "seloonien",
+   "Liettuan",
+   "Latvian"
   ],
   "jatkot": [
    "Keitä seloonit olivat?",
@@ -2416,8 +2441,10 @@
   "kohde": "kohde:hahmotelma-zarasai",
   "kysymys": "Milloin Liettua julisti itsenäisyytensä ensimmäisen kerran?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Liettua julisti itsenäisyytensä 16. helmikuuta 1918 Vilnassa, kun ensimmäinen maailmansota oli vielä käynnissä ja Venäjän keisarikunta oli romahtanut. Itsenäisyys kesti toiseen maailmansotaan asti, ja [[Neuvostoliitto]] liitti maan itseensä vuonna 1940. Liettua palautti itsenäisyytensä 11. maaliskuuta 1990, ja se oli ensimmäinen neuvostotasavalta, joka teki niin. Onpas siit pitkä aika.",
+  "vastaus": "Hetkinen ny. Liettua julisti itsenäisyytensä 16. helmikuuta 1918 [[Vilnassa]], kun ensimmäinen maailmansota oli vielä käynnissä ja [[Venäjän keisarikunta]] oli romahtanut. Itsenäisyys kesti toiseen maailmansotaan asti, ja [[Neuvostoliitto]] liitti maan itseensä vuonna 1940. Liettua palautti itsenäisyytensä 11. maaliskuuta 1990, ja se oli ensimmäinen neuvostotasavalta, joka teki niin. Onpas siit pitkä aika.",
   "linkit": [
+   "Vilnassa",
+   "Venäjän keisarikunta",
    "Neuvostoliitto"
   ],
   "jatkot": [
@@ -2443,8 +2470,12 @@
   "kohde": "kohde:hahmotelma-birstonas",
   "kysymys": "Miksi suuriruhtinaat matkustivat Birštonasiin jo 1300-luvulla?",
   "uusi": false,
-  "vastaus": "Selvä juttu. Birštonas oli Liettuan suuriruhtinaille ja aatelistolle metsästysretkien kohde 1300–1500-luvuilla, koska seudun metsät ja Nemunas-joen ympäristö tarjosivat hyvän riistamaan. Paikka tunnettiin myös \"suolaisen veden tilana\", mikä viittaa kivennäisvesiin. Kylpyläkäyttö alkoi kuitenkin vasta vuonna 1846, ja sitä ennen tärkeämpää oli metsästys. Metsät ovat nytkin paikalla, vaikka ruhtinaat ovat poissa.",
-  "linkit": [],
+  "vastaus": "Selvä juttu. [[Birštonas]] oli Liettuan suuriruhtinaille ja aatelistolle metsästysretkien kohde 1300–1500-luvuilla, koska seudun metsät ja [[Nemunas-joen]] ympäristö tarjosivat hyvän riistamaan. Paikka tunnettiin myös \"suolaisen veden tilana\", mikä viittaa [[kivennäisvesiin]]. Kylpyläkäyttö alkoi kuitenkin vasta vuonna 1846, ja sitä ennen tärkeämpää oli metsästys. Metsät ovat nytkin paikalla, vaikka ruhtinaat ovat poissa.",
+  "linkit": [
+   "Birštonas",
+   "Nemunas-joen",
+   "kivennäisvesiin"
+  ],
   "jatkot": [
    "Millaista metsästys oli keskiajan Liettuassa?",
    "Milloin Birštonasin kylpylä perustettiin?"
@@ -2454,9 +2485,11 @@
   "kohde": "kohde:hahmotelma-birstonas",
   "kysymys": "Mikä Kaunas on ja missä se sijaitsee?",
   "uusi": true,
-  "vastaus": "No jopas. [[Kaunas]] on Liettuan toiseksi suurin kaupunki, ja se sijaitsee maan keskiosassa Nemunas- ja Neris-jokien yhtymäkohdassa. Kaupunki oli Liettuan väliaikainen pääkaupunki kahden maailmansodan välisenä aikana, kun Vilna kuului Puolalle. Kaupunki tunnetaan muun muassa vanhastakaupungistaan ja modernistisesta arkkitehtuuristaan. Birštonas on siitä noin 30 kilometrin päässä. Ihan hyvin muistin kaiken tämän.",
+  "vastaus": "No jopas. [[Kaunas]] on Liettuan toiseksi suurin kaupunki, ja se sijaitsee maan keskiosassa Nemunas- ja Neris-jokien yhtymäkohdassa. Kaupunki oli Liettuan väliaikainen pääkaupunki kahden maailmansodan välisenä aikana, kun [[Vilna]] kuului Puolalle. Kaupunki tunnetaan muun muassa vanhastakaupungistaan ja modernistisesta arkkitehtuuristaan. [[Birštonas]] on siitä noin 30 kilometrin päässä. Ihan hyvin muistin kaiken tämän.",
   "linkit": [
-   "Kaunas"
+   "Kaunas",
+   "Vilna",
+   "Birštonas"
   ],
   "jatkot": [
    "Miksi Kaunas oli väliaikainen pääkaupunki?",
@@ -2481,9 +2514,10 @@
   "kohde": "kohde:hahmotelma-birstonas",
   "kysymys": "Mikä on kivennäisvesi?",
   "uusi": true,
-  "vastaus": "Ai se. [[Kivennäisvesi]] on vettä, joka sisältää luonnostaan liuenneita mineraaleja, kuten kalsiumia, magnesiumia ja natriumia, koska se on kulkenut maa- tai kallioperän läpi. Sitä on käytetty juomana ja kylpyhoidoissa pitkään, ja monet kylpyläkaupungit ovat syntyneet kivennäislähteiden ympärille. Hoitovaikutuksista on esitetty paljon väitteitä, mutta niiden todistusvoima vaihtelee. Birštonaskin on tällainen kaupunki. Vesi on vesi, mutta kyllä minä tykkään jokaisesta lähteestä.",
+  "vastaus": "Ai se. [[Kivennäisvesi]] on vettä, joka sisältää luonnostaan liuenneita mineraaleja, kuten kalsiumia, magnesiumia ja natriumia, koska se on kulkenut maa- tai kallioperän läpi. Sitä on käytetty juomana ja kylpyhoidoissa pitkään, ja monet kylpyläkaupungit ovat syntyneet kivennäislähteiden ympärille. Hoitovaikutuksista on esitetty paljon väitteitä, mutta niiden todistusvoima vaihtelee. [[Birštonaskin]] on tällainen kaupunki. Vesi on vesi, mutta kyllä minä tykkään jokaisesta lähteestä.",
   "linkit": [
-   "Kivennäisvesi"
+   "Kivennäisvesi",
+   "Birštonaskin"
   ],
   "jatkot": [
    "Mitä kylpylähoidot ovat?",
@@ -2509,8 +2543,9 @@
   "kohde": "kohde:hahmotelma-trakai-niemekelinna",
   "kysymys": "Mikä sodista tuhosi linnan lopullisesti?",
   "uusi": false,
-  "vastaus": "Ai se. Tähän minä osaan vastata ihan suoraan. Linnan tuhosi pahoin Venäjän ja Puolan välinen sota, joka kesti vuosina 1654–1667. Sen jälkeen linnaa ei koskaan rakennettu uudelleen, toisin kuin lähellä sijaitseva saarilinna. Vuonna 1678 alue luovutettiin dominikaanimunkeille, jotka rakensivat sinne luostarin ja kirkon 1770-luvulla, ja nykyään jäljellä olevat muurit ja tornit ovat [[Trakain kansallispuiston]] suojelemia. Hyvä muistaa, että tuhoutunut ei tarkoita kadonnutta.",
+  "vastaus": "Ai se. Tähän minä osaan vastata ihan suoraan. Linnan tuhosi pahoin Venäjän ja Puolan välinen sota, joka kesti vuosina 1654–1667. Sen jälkeen linnaa ei koskaan rakennettu uudelleen, toisin kuin lähellä sijaitseva saarilinna. Vuonna 1678 alue luovutettiin [[dominikaanimunkeille]], jotka rakensivat sinne luostarin ja kirkon 1770-luvulla, ja nykyään jäljellä olevat muurit ja tornit ovat [[Trakain kansallispuiston]] suojelemia. Hyvä muistaa, että tuhoutunut ei tarkoita kadonnutta.",
   "linkit": [
+   "dominikaanimunkeille",
    "Trakain kansallispuiston"
   ],
   "jatkot": [
@@ -2522,8 +2557,10 @@
   "kohde": "kohde:hahmotelma-trakai-niemekelinna",
   "kysymys": "Keitä olivat Saksalaisen ritarikunnan jäsenet?",
   "uusi": true,
-  "vastaus": "Mmm— ritarit. Heistä riittää kerrottavaa. Saksalainen ritarikunta oli keskiajalla syntynyt ritarillinen ja kristillinen järjestö, joka sai alkunsa ristiretkien aikana Pyhällä maalla. Jäsenet olivat sekä ritareita että munkkeja, ja järjestö perusti myöhemmin oman valtionsa Preussiin ja Itämeren itärannalle. Liettuan suuriruhtinaskunta oli pitkään sen vastustaja, ja juuri sitä vastaan [[Trakain]] linnat rakennettiin. Tarkkoja vuosilukuja en rupea arvailemaan, koska tämä on sellainen aihe, jossa lähteet vaihtelevat.",
+  "vastaus": "Mmm— ritarit. Heistä riittää kerrottavaa. [[Saksalainen ritarikunta]] oli keskiajalla syntynyt ritarillinen ja kristillinen järjestö, joka sai alkunsa ristiretkien aikana Pyhällä maalla. Jäsenet olivat sekä ritareita että munkkeja, ja järjestö perusti myöhemmin oman valtionsa [[Preussiin]] ja Itämeren itärannalle. Liettuan suuriruhtinaskunta oli pitkään sen vastustaja, ja juuri sitä vastaan [[Trakain]] linnat rakennettiin. Tarkkoja vuosilukuja en rupea arvailemaan, koska tämä on sellainen aihe, jossa lähteet vaihtelevat.",
   "linkit": [
+   "Saksalainen ritarikunta",
+   "Preussiin",
    "Trakain"
   ],
   "jatkot": [
@@ -2535,9 +2572,11 @@
   "kohde": "kohde:hahmotelma-trakai-niemekelinna",
   "kysymys": "Mikä oli Liettuan suuriruhtinaskunta?",
   "uusi": true,
-  "vastaus": "Joo, tän minä tiedän. Kyyhkyt ovat lennelleet sen rajojen yli. Liettuan suuriruhtinaskunta oli keskiajalla ja uuden ajan alussa Euroopan itäosissa sijainnut laaja valtio, jonka keskuksia olivat [[Vilna]] ja Trakai. Se syntyi 1200-luvun lopulla tai sen tienoilla ja liittyi vähitellen läheiseen yhteyteen Puolan kanssa; 1500-luvulla valtiot muodostivat yhdessä Puola–Liettuan kaksoisvaltakunnan. Sen alueeseen kuului aikoinaan nykyisen Liettuan lisäksi suuria osia nykyisestä Valko-Venäjästä ja Ukrainasta. Valtio päättyi 1700-luvun lopulla Puolan–Liettuan jakoihin. Tarkkoja päivämääriä en nyt väitä.",
+  "vastaus": "Joo, tän minä tiedän. Kyyhkyt ovat lennelleet sen rajojen yli. Liettuan suuriruhtinaskunta oli keskiajalla ja uuden ajan alussa Euroopan itäosissa sijainnut laaja valtio, jonka keskuksia olivat [[Vilna]] ja [[Trakai]]. Se syntyi 1200-luvun lopulla tai sen tienoilla ja liittyi vähitellen läheiseen yhteyteen [[Puolan]] kanssa; 1500-luvulla valtiot muodostivat yhdessä Puola–Liettuan kaksoisvaltakunnan. Sen alueeseen kuului aikoinaan nykyisen Liettuan lisäksi suuria osia nykyisestä Valko-Venäjästä ja Ukrainasta. Valtio päättyi 1700-luvun lopulla Puolan–Liettuan jakoihin. Tarkkoja päivämääriä en nyt väitä.",
   "linkit": [
-   "Vilna"
+   "Vilna",
+   "Trakai",
+   "Puolan"
   ],
   "jatkot": [
    "Mitä Puola–Liettuan kaksoisvaltakunta tarkoitti?",
@@ -2548,8 +2587,12 @@
   "kohde": "kohde:hahmotelma-trakai-niemekelinna",
   "kysymys": "Mitä tarkoittaa niemekelinna?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Sana on kyllä helppo, mutta kerrotaan se kunnolla. Niemekelinna on linna, joka on rakennettu niemelle eli vesistöön työntyvälle maakaistaleelle, jolloin vesi ympäröi sitä useammalta sivulta ja suojaa sitä. Maayhteyttä voitiin puolustaa erikseen esimerkiksi muurilla tai vallihaudalla. Saarilinnasta se eroaa siinä, että saarilinna seisoo kokonaan veden ympäröimänä saarella. Trakain alueella on kumpaakin tyyppiä, jotka ovat rakennetut samoille vesille. Minulle riittää, että linnan edessä on hyvä laituri.",
-  "linkit": [],
+  "vastaus": "Hetkinen ny. Sana on kyllä helppo, mutta kerrotaan se kunnolla. [[Niemekelinna]] on linna, joka on rakennettu niemelle eli vesistöön työntyvälle maakaistaleelle, jolloin vesi ympäröi sitä useammalta sivulta ja suojaa sitä. Maayhteyttä voitiin puolustaa erikseen esimerkiksi muurilla tai [[vallihaudalla]]. Saarilinnasta se eroaa siinä, että saarilinna seisoo kokonaan veden ympäröimänä saarella. [[Trakain]] alueella on kumpaakin tyyppiä, jotka ovat rakennetut samoille vesille. Minulle riittää, että linnan edessä on hyvä laituri.",
+  "linkit": [
+   "Niemekelinna",
+   "vallihaudalla",
+   "Trakain"
+  ],
   "jatkot": [
    "Miksi linnoja rakennettiin järvien rannoille ja saarille?",
    "Mitä vallihauta oli?"
@@ -2573,9 +2616,10 @@
   "kohde": "nosto:kursiu-nerija",
   "kysymys": "Miksi metsän kaataminen liikutti hiekkaa?",
   "uusi": false,
-  "vastaus": "Ai tota. Se on oikeastaan aika selkeä juttu. Metsä sitoo hiekan: puiden juuret pitävät maan paikoillaan, ja latvusto sekä alikasvillisuus hidastavat tuulta pinnan lähellä. Kun [[Kuurinkynnäksen]] metsät hävisivät 1600- ja 1700-luvuilla laidunnuksen, hakkuiden ja veneenrakennuksen takia, tuuli pääsi suoraan hiekkaan ja alkoi kuljettaa sitä. Dyynit lähtivät liikkeelle ja hautasivat alleen kokonaisia kyliä. Peitteen poistaminen riittää siis, kun maaperä on näin kevyttä ja rakeista. Metsää menee vähän aikaa kaataa, mutta kasvattaa sitä menee vuosikymmeniä.",
+  "vastaus": "Ai tota. Se on oikeastaan aika selkeä juttu. Metsä sitoo hiekan: puiden juuret pitävät maan paikoillaan, ja latvusto sekä alikasvillisuus hidastavat tuulta pinnan lähellä. Kun [[Kuurinkynnäksen]] metsät hävisivät 1600- ja 1700-luvuilla laidunnuksen, hakkuiden ja veneenrakennuksen takia, tuuli pääsi suoraan hiekkaan ja alkoi kuljettaa sitä. [[Dyynit]] lähtivät liikkeelle ja hautasivat alleen kokonaisia kyliä. Peitteen poistaminen riittää siis, kun maaperä on näin kevyttä ja rakeista. Metsää menee vähän aikaa kaataa, mutta kasvattaa sitä menee vuosikymmeniä.",
   "linkit": [
-   "Kuurinkynnäksen"
+   "Kuurinkynnäksen",
+   "Dyynit"
   ],
   "jatkot": [
    "Millaisia puita ja kasveja hiekalle istutettiin?",
@@ -2614,8 +2658,9 @@
   "kohde": "nosto:kursiu-nerija",
   "kysymys": "Mikä on Unescon maailmanperintöluettelo?",
   "uusi": true,
-  "vastaus": "Joo, tän minä tiedän. Tästä lukee jokaisen kohteen kyltissä. Unescon maailmanperintöluettelo on luettelo kohteista, joita pidetään koko ihmiskunnan yhteisenä perintönä ja joita halutaan suojella tuleville sukupolville. Kohde voi olla kulttuurikohde, luontokohde tai molempia. Perustana on Unescon maailmanperintösopimus, joka hyväksyttiin vuonna 1972. [[Kuurinkynnäs]] otettiin luetteloon vuonna 2000, ja kohde on Liettuan ja Venäjän yhteinen. Luetteloon pääsy ei ole kunnia vaan velvoite.",
+  "vastaus": "Joo, tän minä tiedän. Tästä lukee jokaisen kohteen kyltissä. [[Unescon maailmanperintöluettelo]] on luettelo kohteista, joita pidetään koko ihmiskunnan yhteisenä perintönä ja joita halutaan suojella tuleville sukupolville. Kohde voi olla kulttuurikohde, luontokohde tai molempia. Perustana on Unescon maailmanperintösopimus, joka hyväksyttiin vuonna 1972. [[Kuurinkynnäs]] otettiin luetteloon vuonna 2000, ja kohde on Liettuan ja Venäjän yhteinen. Luetteloon pääsy ei ole kunnia vaan velvoite.",
   "linkit": [
+   "Unescon maailmanperintöluettelo",
    "Kuurinkynnäs"
   ],
   "jatkot": [
@@ -2627,9 +2672,10 @@
   "kohde": "nosto:kryziu-kalnas",
   "kysymys": "Miksi kukkulalle vietiin ristejä eikä hautakiviä?",
   "uusi": false,
-  "vastaus": "Kääk, tämä on raskaampi aihe. Katsotaan, mitä siitä voi rauhassa sanoa. Ensimmäisten ristien uskotaan tulleen kukkulalle 1800-luvun kapinoiden jälkeen, vuoden 1831 tienoilla. Omaiset eivät löytäneet kaatuneitaan eivätkä voineet haudata heitä, joten he pystyttivät kukkulalle ristin hautakiven sijaan. Risti oli symbolinen muistomerkki sille, jolle ei ollut hautaa. Tapa jäi elämään, ja [[Ristikukkulalle]] on sittemmin tuotu myös Neitsyt Marian patsaita, puuveistoksia ja rukousnauhoja. Siitä on onneksi jo yli sata vuotta.",
+  "vastaus": "Kääk, tämä on raskaampi aihe. Katsotaan, mitä siitä voi rauhassa sanoa. Ensimmäisten ristien uskotaan tulleen kukkulalle 1800-luvun kapinoiden jälkeen, vuoden 1831 tienoilla. Omaiset eivät löytäneet kaatuneitaan eivätkä voineet haudata heitä, joten he pystyttivät kukkulalle ristin hautakiven sijaan. Risti oli symbolinen muistomerkki sille, jolle ei ollut hautaa. Tapa jäi elämään, ja [[Ristikukkulalle]] on sittemmin tuotu myös [[Neitsyt Marian]] patsaita, puuveistoksia ja rukousnauhoja. Siitä on onneksi jo yli sata vuotta.",
   "linkit": [
-   "Ristikukkulalle"
+   "Ristikukkulalle",
+   "Neitsyt Marian"
   ],
   "jatkot": [
    "Miten kukkulan ristien määrää on arvioitu?",
@@ -2640,9 +2686,10 @@
   "kohde": "nosto:kryziu-kalnas",
   "kysymys": "Miten muistomerkki voi kasvaa ilman ketään, joka rakentaa sitä?",
   "uusi": false,
-  "vastaus": "No niin, hyvä kysymys. Vastaus on ihmisissä, ei suunnitelmassa. [[Ristikukkulalla]] ei ole yhtä rakentajaa: kuka tahansa saa tuoda oman ristinsä, ja jokainen risti on yhden ihmisen tai perheen päätös. Kun tapa on kerran syntynyt, se kasvaa vierailijoiden mukana, ja ristejä on sekä isoja puisia että pieniä metallisia. Neuvostoaikana viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa, ja ristit ilmestyivät yön aikana takaisin. Muistomerkki on siis yhteinen teos, jota kukaan ei ole tilannut. Hiljainen paikka, jossa kukaan ei vaadi mitään.",
+  "vastaus": "No niin, hyvä kysymys. Vastaus on ihmisissä, ei suunnitelmassa. [[Ristikukkulalla]] ei ole yhtä rakentajaa: kuka tahansa saa tuoda oman ristinsä, ja jokainen risti on yhden ihmisen tai perheen päätös. Kun tapa on kerran syntynyt, se kasvaa vierailijoiden mukana, ja ristejä on sekä isoja puisia että pieniä metallisia. [[Neuvostoaikana]] viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa, ja ristit ilmestyivät yön aikana takaisin. Muistomerkki on siis yhteinen teos, jota kukaan ei ole tilannut. Hiljainen paikka, jossa kukaan ei vaadi mitään.",
   "linkit": [
-   "Ristikukkulalla"
+   "Ristikukkulalla",
+   "Neuvostoaikana"
   ],
   "jatkot": [
    "Miksi Neuvostoliitto yritti raivata kukkulan?",
@@ -2653,8 +2700,11 @@
   "kohde": "nosto:kryziu-kalnas",
   "kysymys": "Kuinka monta ristiä kukkulalle mahtuu?",
   "uusi": false,
-  "vastaus": "Mmm— tähän ei ole varmaa lukua. Rehellisesti sanoen en tiedä. Kukkulalla ei ole virallista rajaa, ja ristit lisääntyvät jatkuvasti, joten raja tulee vastaan vain käytännössä: tilan ahtautuessa. Tarkkaa laskentaa ei ole, vaan pelkkiä arvioita: noin viisikymmentäviisituhatta ristiä vuonna 1990 ja noin satatuhatta vuonna 2006. Nykyisin ristejä on kuitenkin selvästi enemmän kuin sata tuhatta. Tarkka lukema ei kerro paikasta paljon; ratkaisevaa on, että jokainen risti on jonkun tuoma.",
-  "linkit": [],
+  "vastaus": "Mmm— tähän ei ole varmaa lukua. Rehellisesti sanoen en tiedä. [[Šiauliain]] lähellä sijaitsevalla [[Ristikukkulalla]] ei ole virallista rajaa, ja ristit lisääntyvät jatkuvasti, joten raja tulee vastaan vain käytännössä: tilan ahtautuessa. Tarkkaa laskentaa ei ole, vaan pelkkiä arvioita: noin viisikymmentäviisituhatta ristiä vuonna 1990 ja noin satatuhatta vuonna 2006. Nykyisin ristejä on kuitenkin selvästi enemmän kuin sata tuhatta. Tarkka lukema ei kerro paikasta paljon; ratkaisevaa on, että jokainen risti on jonkun tuoma.",
+  "linkit": [
+   "Šiauliain",
+   "Ristikukkulalla"
+  ],
   "jatkot": [
    "Miten ristien määrää voisi laskea?",
    "Mikä on Šiauliai?"
@@ -2664,8 +2714,9 @@
   "kohde": "nosto:kryziu-kalnas",
   "kysymys": "Mitä tarkoittaa linnavuori?",
   "uusi": true,
-  "vastaus": "Selvä juttu. Tätä sanaa tarvitaan Itämeren maissa usein. Linnavuori on kukkula tai vuoren kumpu, joka on aikoinaan linnoitettu puolustusta varten, usein puuvarustuksin ja vallein. Liettuassa tällaisia muinaisia kukkulalinnoja on paljon, ja ne ovat peräisin ajalta ennen kivilinnoja. [[Ristikukkula]] oli aikanaan linnavuori, ennen kuin siitä tuli muistamisen paikka. Ymmärrät sen paremmin, kun näet kukkulan itse. Kyyhky ei kaipaa muuria, kun on siivet.",
+  "vastaus": "Selvä juttu. Tätä sanaa tarvitaan [[Itämeren]] maissa usein. Linnavuori on kukkula tai vuoren kumpu, joka on aikoinaan linnoitettu puolustusta varten, usein puuvarustuksin ja vallein. Liettuassa tällaisia muinaisia kukkulalinnoja on paljon, ja ne ovat peräisin ajalta ennen kivilinnoja. [[Ristikukkula]] oli aikanaan linnavuori, ennen kuin siitä tuli muistamisen paikka. Ymmärrät sen paremmin, kun näet kukkulan itse. Kyyhky ei kaipaa muuria, kun on siivet.",
   "linkit": [
+   "Itämeren",
    "Ristikukkula"
   ],
   "jatkot": [
@@ -2677,8 +2728,10 @@
   "kohde": "nosto:kryziu-kalnas",
   "kysymys": "Milloin Liettua julistautui itsenäiseksi Neuvostoliitosta?",
   "uusi": true,
-  "vastaus": "Odotas vähän. Tämä on sellainen, jonka haluan sanoa oikein. Liettua julisti itsenäisyytensä uudelleen 11. maaliskuuta 1990, ja se oli ensimmäinen Neuvostoliiton tasavalloista, joka teki niin. Itsenäisyyden kansainvälinen tunnustaminen ja Neuvostoliiton hajoaminen seurasivat vuonna 1991. Liettua oli ollut itsenäinen jo ennen toista maailmansotaa, joten kyse oli palautuksesta eikä aivan uudesta alusta. [[Vilnassa]] päivä on yhä merkittävä muistopäivä. Onpa siitä jo aikaa, mutta muistetaan.",
+  "vastaus": "Odotas vähän. Tämä on sellainen, jonka haluan sanoa oikein. Liettua julisti itsenäisyytensä uudelleen 11. maaliskuuta 1990, ja se oli ensimmäinen [[Neuvostoliiton]] tasavalloista, joka teki niin. Itsenäisyyden kansainvälinen tunnustaminen ja Neuvostoliiton hajoaminen seurasivat vuonna 1991. Liettua oli ollut itsenäinen jo ennen [[toista maailmansotaa]], joten kyse oli palautuksesta eikä aivan uudesta alusta. [[Vilnassa]] päivä on yhä merkittävä muistopäivä. Onpa siitä jo aikaa, mutta muistetaan.",
   "linkit": [
+   "Neuvostoliiton",
+   "toista maailmansotaa",
    "Vilnassa"
   ],
   "jatkot": [
@@ -2704,8 +2757,9 @@
   "kohde": "nosto:trakai",
   "kysymys": "Onko uudelleen rakennettu linna sama linna?",
   "uusi": false,
-  "vastaus": "Hetkinen ny. Tästä filosofit kiistelevät, minä en. Linna on osittain alkuperäinen ja osittain uusi: se rakennettiin uudelleen rauniosta 1900-luvulla, ja työ perustui säilyneisiin muureihin, perustuksiin ja tutkittuun tietoon rakennuksen alkuperäisestä muodosta. Siksi se ei ole täysin sama linna eikä myöskään pelkkä jäljennös, vaan restauroitu ja osin uudelleen koottu rakennus. En ole varma, kuinka suuri osa tiilistä on alkuperäisiä. Historiantutkijat käyttävät rakennuksesta usein sanaa jälleenrakennus. Linna on silti [[Trakain]] linna, vaikka monta tiiltä olisi vaihtunut.",
+  "vastaus": "Hetkinen ny. Tästä filosofit kiistelevät, minä en. Linna on osittain alkuperäinen ja osittain uusi: se rakennettiin uudelleen rauniosta 1900-luvulla, ja työ perustui säilyneisiin muureihin, perustuksiin ja tutkittuun tietoon rakennuksen alkuperäisestä muodosta. Siksi se ei ole täysin sama linna eikä myöskään pelkkä jäljennös, vaan restauroitu ja osin uudelleen koottu rakennus. En ole varma, kuinka suuri osa tiilistä on alkuperäisiä. Historiantutkijat käyttävät rakennuksesta usein sanaa [[jälleenrakennus]]. Linna on silti [[Trakain]] linna, vaikka monta tiiltä olisi vaihtunut.",
   "linkit": [
+   "jälleenrakennus",
    "Trakain"
   ],
   "jatkot": [
@@ -2717,8 +2771,11 @@
   "kohde": "nosto:trakai",
   "kysymys": "Miksi museo skannaa esineensä kolmiulotteisiksi?",
   "uusi": false,
-  "vastaus": "Tota niin. Hyvä, että kysyit. Museot skannaavat esineitään kolmiulotteisiksi useista syistä. Ensinnäkin skannaus tallentaa esineen muodon ja pinnan tarkasti, jolloin tieto säilyy, vaikka alkuperäinen vaurioituisi. Toiseksi tutkijat voivat tutkia esinettä kosketta ottamatta, mikä suojaa hauraita aarteita. Kolmanneksi skannauksesta voi tehdä näyttelyihin kopioita ja verkossa katsottavia malleja, jolloin esine tavoittaa ihmisiä kaikkialta. En ole varma, minkä tekniikan juuri tämä museo on valinnut, mutta tarkoitus on yleensä sama. Kyyhky ei tosin pääse kosketteleman, ei skannerilla eikä ilman.",
-  "linkit": [],
+  "vastaus": "Tota niin. Hyvä, että kysyit. [[Museot]] skannaavat esineitään kolmiulotteisiksi useista syistä. Ensinnäkin [[3D-skannaus]] tallentaa esineen muodon ja pinnan tarkasti, jolloin tieto säilyy, vaikka alkuperäinen vaurioituisi. Toiseksi tutkijat voivat tutkia esinettä kosketta ottamatta, mikä suojaa hauraita aarteita. Kolmanneksi skannauksesta voi tehdä näyttelyihin kopioita ja verkossa katsottavia malleja, jolloin esine tavoittaa ihmisiä kaikkialta. En ole varma, minkä tekniikan juuri tämä museo on valinnut, mutta tarkoitus on yleensä sama. Kyyhky ei tosin pääse kosketteleman, ei skannerilla eikä ilman.",
+  "linkit": [
+   "Museot",
+   "3D-skannaus"
+  ],
   "jatkot": [
    "Miten 3D-skannaus toimii?",
    "Miten museot säilyttävät hauraita esineitä?"
@@ -2728,8 +2785,10 @@
   "kohde": "nosto:trakai",
   "kysymys": "Kuka oli Vytautas Suuri?",
   "uusi": true,
-  "vastaus": "Joo, tän minä tiedän. Hänestä on kerrottu paljon. Vytautas Suuri oli Liettuan suuriruhtinas, joka hallitsi noin vuodesta 1392 vuoteen 1430. Hän oli suuriruhtinas Kęstutisin poika ja nosti Liettuan suuriruhtinaskunnan huippuunsa: valtio ulottui hänen aikanaan laajalle itään ja etelään. Hänen aikaansa kuului myös Grunwaldin taistelu vuonna 1410, jossa Liettuan ja Puolan joukot voittivat Saksalaisen ritarikunnan. Tarkat vuodet vaihtelevat lähteittäin, joten sanon aikavälin vain suuntaa-antavasti. Hän kuoli [[Trakain]] saarilinnassa vuonna 1430. Liettuassa häntä muistetaan kansallissankarina.",
+  "vastaus": "Joo, tän minä tiedän. Hänestä on kerrottu paljon. Vytautas Suuri oli Liettuan suuriruhtinas, joka hallitsi noin vuodesta 1392 vuoteen 1430. Hän oli suuriruhtinas Kęstutisin poika ja nosti Liettuan suuriruhtinaskunnan huippuunsa: valtio ulottui hänen aikanaan laajalle itään ja etelään. Hänen aikaansa kuului myös [[Grunwaldin taistelu]] vuonna 1410, jossa Liettuan ja Puolan joukot voittivat [[Saksalaisen ritarikunnan]]. Tarkat vuodet vaihtelevat lähteittäin, joten sanon aikavälin vain suuntaa-antavasti. Hän kuoli [[Trakain]] saarilinnassa vuonna 1430. Liettuassa häntä muistetaan kansallissankarina.",
   "linkit": [
+   "Grunwaldin taistelu",
+   "Saksalaisen ritarikunnan",
    "Trakain"
   ],
   "jatkot": [

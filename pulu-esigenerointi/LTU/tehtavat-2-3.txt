@@ -1,0 +1,1044 @@
+### 161
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kėdainiai (kulttuuri)
+Tietoruudun teksti: Kėdainiai on kaupunki Nevėžis-joen rannalla noin 45 kilometriä Kaunasista pohjoiseen. Se mainitaan ensimmäisen kerran vuonna 1372 Liivinmaan kronikassa ja sai kaupungin aseman vuonna 1590. Vuonna 1655 Radziwiłł-suvun kaksi jäsentä allekirjoitti kaupungin linnassa lyhytaikaisen sopimuksen Ruotsin kanssa; linnasta on jäljellä vähän, mutta kalvinistisen kirkon kryptaan on haudattu suvun jäseniä. Kaupunkiin muutti 1500- ja 1600-luvuilla skotlantilaisia protestantteja, joiden vaikutus säilyi 1800-luvun puoliväliin asti. Heidän kauppiastalonsa, niin sanotut skotlantilaiset talot, ympäröivät yhä toria, ja 1600-luvulta periytyvä vanha kaupunki on säilynyt hyvin.
+AIEMPI KYSYMYS: Miksi skotlantilaisia protestantteja muutti Liettuan pikkukaupunkiin 1500- ja 1600-luvuilla?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tän minä tiedän ainakin suuntaa-antavasti, sen verran meikäläisten muistiinpanot kertovat. Kėdainiai oli [[Radziwiłł-suvun]] kaupunki, ja suvun jäsenet kuuluivat kalvinistiseen kirkkoon, joten kaupungista tuli [[kalvinismin]] tukikohta Liettuassa. Skotlantilaiset muuttajat olivat suureksi osaksi kauppiaita ja käsityöläisiä, ja heille kaupunki, jonka herrat jakoivat heidän uskontonsa ja suosivat kaupankäyntiä, oli luonteva määränpää; tarkkoja syitä yksittäisten muuttajien kohdalla en ole varma. Heidän jälkensä näkyvät yhä [[skotlantilaisissa taloissa]] torin ympärillä. Ja tän kaiken minä kiikutin yhdellä hengenvedolla.
+KYSYMYS: Kerro lisää: kalvinismin
+
+### 162
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kėdainiai (kulttuuri)
+Tietoruudun teksti: Kėdainiai on kaupunki Nevėžis-joen rannalla noin 45 kilometriä Kaunasista pohjoiseen. Se mainitaan ensimmäisen kerran vuonna 1372 Liivinmaan kronikassa ja sai kaupungin aseman vuonna 1590. Vuonna 1655 Radziwiłł-suvun kaksi jäsentä allekirjoitti kaupungin linnassa lyhytaikaisen sopimuksen Ruotsin kanssa; linnasta on jäljellä vähän, mutta kalvinistisen kirkon kryptaan on haudattu suvun jäseniä. Kaupunkiin muutti 1500- ja 1600-luvuilla skotlantilaisia protestantteja, joiden vaikutus säilyi 1800-luvun puoliväliin asti. Heidän kauppiastalonsa, niin sanotut skotlantilaiset talot, ympäröivät yhä toria, ja 1600-luvulta periytyvä vanha kaupunki on säilynyt hyvin.
+AIEMPI KYSYMYS: Miksi skotlantilaisia protestantteja muutti Liettuan pikkukaupunkiin 1500- ja 1600-luvuilla?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tän minä tiedän ainakin suuntaa-antavasti, sen verran meikäläisten muistiinpanot kertovat. Kėdainiai oli [[Radziwiłł-suvun]] kaupunki, ja suvun jäsenet kuuluivat kalvinistiseen kirkkoon, joten kaupungista tuli [[kalvinismin]] tukikohta Liettuassa. Skotlantilaiset muuttajat olivat suureksi osaksi kauppiaita ja käsityöläisiä, ja heille kaupunki, jonka herrat jakoivat heidän uskontonsa ja suosivat kaupankäyntiä, oli luonteva määränpää; tarkkoja syitä yksittäisten muuttajien kohdalla en ole varma. Heidän jälkensä näkyvät yhä [[skotlantilaisissa taloissa]] torin ympärillä. Ja tän kaiken minä kiikutin yhdellä hengenvedolla.
+KYSYMYS: Kerro lisää: skotlantilaisissa taloissa
+
+### 163
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kėdainiai (kulttuuri)
+Tietoruudun teksti: Kėdainiai on kaupunki Nevėžis-joen rannalla noin 45 kilometriä Kaunasista pohjoiseen. Se mainitaan ensimmäisen kerran vuonna 1372 Liivinmaan kronikassa ja sai kaupungin aseman vuonna 1590. Vuonna 1655 Radziwiłł-suvun kaksi jäsentä allekirjoitti kaupungin linnassa lyhytaikaisen sopimuksen Ruotsin kanssa; linnasta on jäljellä vähän, mutta kalvinistisen kirkon kryptaan on haudattu suvun jäseniä. Kaupunkiin muutti 1500- ja 1600-luvuilla skotlantilaisia protestantteja, joiden vaikutus säilyi 1800-luvun puoliväliin asti. Heidän kauppiastalonsa, niin sanotut skotlantilaiset talot, ympäröivät yhä toria, ja 1600-luvulta periytyvä vanha kaupunki on säilynyt hyvin.
+AIEMPI KYSYMYS: Miksi Radziwiłł-suvun linnassa allekirjoitettiin vuonna 1655 sopimus Ruotsin kanssa?
+AIEMPI VASTAUS (Livia):
+No niin, tää on raskaampaa historiaa. Vuonna 1655 Ruotsi hyökkäsi Puolan ja Liettuan alueelle, ja samoihin aikoihin Moskovan joukot olivat edenneet Liettuan suuriruhtinaskunnan maille ja valloittaneet muun muassa Vilnan. [[Radziwiłł-suvun]] johtavat jäsenet pyrkivät turvaamaan maansa ja oman asemansa hakemalla [[Ruotsin]] suojaa, ja Kėdainiaissa allekirjoitettu sopimus irrotti suuriruhtinaskunnan liitosta Puolan kanssa. Sopimus jäi kuitenkin lyhytaikaiseksi, ja sen tarkoista ehdoista ja päivämääristä en ole varma. Onpas siit jo pitkä aika.
+KYSYMYS: Kerro lisää: Ruotsin
+
+### 164
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kėdainiai (kulttuuri)
+Tietoruudun teksti: Kėdainiai on kaupunki Nevėžis-joen rannalla noin 45 kilometriä Kaunasista pohjoiseen. Se mainitaan ensimmäisen kerran vuonna 1372 Liivinmaan kronikassa ja sai kaupungin aseman vuonna 1590. Vuonna 1655 Radziwiłł-suvun kaksi jäsentä allekirjoitti kaupungin linnassa lyhytaikaisen sopimuksen Ruotsin kanssa; linnasta on jäljellä vähän, mutta kalvinistisen kirkon kryptaan on haudattu suvun jäseniä. Kaupunkiin muutti 1500- ja 1600-luvuilla skotlantilaisia protestantteja, joiden vaikutus säilyi 1800-luvun puoliväliin asti. Heidän kauppiastalonsa, niin sanotut skotlantilaiset talot, ympäröivät yhä toria, ja 1600-luvulta periytyvä vanha kaupunki on säilynyt hyvin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Kaksikymmentä nimeä vapautti maan] 1918 — Ensimmäisen maailmansodan lopulla, Venäjän ja Saksan miehitysten välissä, Liettuan neuvosto kokoontui Vilnan Pilies-kadun talossa ja allekirjoitti 16. helmikuuta 1918 itsenäisyysjulistuksen. Sen allekirjoitti kaksikymmentä jäsentä, puheenjohtajanaan lääkäri Jonas Basanavičius, ja se julisti demokraattisen Liettuan valtion, jonka pääkaupunki olisi Vilna. Talo tunnetaan nykyään Signatarų-talona. Alkuperäinen asiakirja katosi Kaunasista neuvostomiehityksen alla 1940 ja löytyi vasta 2017 Saksan ulkoministeriön arkistosta Berliinistä.
+AIEMPI KYSYMYS: Mikä kaupunki oli Liettuan väliaikainen pääkaupunki sotien välillä?
+AIEMPI VASTAUS (Livia):
+Kato, tää on kiva kysymys. Sotien välisenä aikana Liettuan väliaikainen pääkaupunki oli [[Kaunas]], jonka luona Kėdainiai sijaitsee noin 45 kilometrin päässä. Syynä oli se, että Vilnius oli tuolloin Puolan hallussa, joten Liettuan valtio piti hallintonsa Kaunasissa, vaikka Vilnius säilyi virallisena pääkaupunkina. Kaunas kasvoi näinä vuosina merkittävästi, ja sen modernia arkkitehtuuria on myöhemmin nostettu esiin. Pääkaupungin asema palasi [[Vilnaan]] vasta, kun kaupunki liitettiin takaisin Liettuaan toisen maailmansodan alussa.
+
+Siivin matka Kaunasista Kėdainiaihin on lyhyt, ja pullakin ehtisi pysyä lämpimänä.
+KYSYMYS: Kerro lisää: Kaunas
+
+### 165
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kėdainiai (kulttuuri)
+Tietoruudun teksti: Kėdainiai on kaupunki Nevėžis-joen rannalla noin 45 kilometriä Kaunasista pohjoiseen. Se mainitaan ensimmäisen kerran vuonna 1372 Liivinmaan kronikassa ja sai kaupungin aseman vuonna 1590. Vuonna 1655 Radziwiłł-suvun kaksi jäsentä allekirjoitti kaupungin linnassa lyhytaikaisen sopimuksen Ruotsin kanssa; linnasta on jäljellä vähän, mutta kalvinistisen kirkon kryptaan on haudattu suvun jäseniä. Kaupunkiin muutti 1500- ja 1600-luvuilla skotlantilaisia protestantteja, joiden vaikutus säilyi 1800-luvun puoliväliin asti. Heidän kauppiastalonsa, niin sanotut skotlantilaiset talot, ympäröivät yhä toria, ja 1600-luvulta periytyvä vanha kaupunki on säilynyt hyvin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Kaksi miljoonaa kättä yli kolmen maan] 1989 — Elokuun 23. päivänä 1989 noin kaksi miljoonaa ihmistä tarttui toisiaan käsistä ja muodosti yhtenäisen ketjun Tallinnasta Riian kautta Vilnaan — matkaa kertyi yli kuusisataa kilometriä. Baltian ketju järjestettiin täsmälleen viisikymmentä vuotta sen jälkeen, kun Neuvostoliitto ja natsi-Saksa olivat salaisessa sopimuksessa jakaneet Baltian maat keskenään. Rauhanomainen mielenilmaus vaati Viron, Latvian ja Liettuan miehitysten päättämistä, ja tapahtuma näkyi television välityksellä kaikkialla maailmassa. Kaksi vuotta myöhemmin kaikki kolme maata olivat jälleen itsenäisiä.
+AIEMPI KYSYMYS: Mikä kaupunki oli Liettuan väliaikainen pääkaupunki sotien välillä?
+AIEMPI VASTAUS (Livia):
+Kato, tää on kiva kysymys. Sotien välisenä aikana Liettuan väliaikainen pääkaupunki oli [[Kaunas]], jonka luona Kėdainiai sijaitsee noin 45 kilometrin päässä. Syynä oli se, että Vilnius oli tuolloin Puolan hallussa, joten Liettuan valtio piti hallintonsa Kaunasissa, vaikka Vilnius säilyi virallisena pääkaupunkina. Kaunas kasvoi näinä vuosina merkittävästi, ja sen modernia arkkitehtuuria on myöhemmin nostettu esiin. Pääkaupungin asema palasi [[Vilnaan]] vasta, kun kaupunki liitettiin takaisin Liettuaan toisen maailmansodan alussa.
+
+Siivin matka Kaunasista Kėdainiaihin on lyhyt, ja pullakin ehtisi pysyä lämpimänä.
+KYSYMYS: Kerro lisää: Vilnaan
+
+### 166
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kėdainiai (kulttuuri)
+Tietoruudun teksti: Kėdainiai on kaupunki Nevėžis-joen rannalla noin 45 kilometriä Kaunasista pohjoiseen. Se mainitaan ensimmäisen kerran vuonna 1372 Liivinmaan kronikassa ja sai kaupungin aseman vuonna 1590. Vuonna 1655 Radziwiłł-suvun kaksi jäsentä allekirjoitti kaupungin linnassa lyhytaikaisen sopimuksen Ruotsin kanssa; linnasta on jäljellä vähän, mutta kalvinistisen kirkon kryptaan on haudattu suvun jäseniä. Kaupunkiin muutti 1500- ja 1600-luvuilla skotlantilaisia protestantteja, joiden vaikutus säilyi 1800-luvun puoliväliin asti. Heidän kauppiastalonsa, niin sanotut skotlantilaiset talot, ympäröivät yhä toria, ja 1600-luvulta periytyvä vanha kaupunki on säilynyt hyvin.
+AIEMPI KYSYMYS: Mitä kalvinismi tarkoittaa ja mistä se sai alkunsa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kalvinismi on protestanttinen kristinuskon suuntaus, joka sai nimensä ranskalaissyntyisen uskonpuhdistajan [[Jean Calvinin]] mukaan. Calvin vaikutti 1500-luvulla Genevessä, ja hänen oppinsa korosti Raamatun asemaa, kirkon yksinkertaisuutta ja seurakuntien omaa järjestäytymistä. Suuntaus levisi laajalle Euroopassa, muun muassa Skotlantiin, Alankomaihin ja Unkariin, ja Liettuassakin sillä oli 1500- ja 1600-luvuilla vahvoja kannattajia. Myös [[reformoitu kirkko]] ja presbyteerit polveutuvat sen perinteestä. Ei paha kyyhkyltä, vaikka teologia ei ole minun vahvin lajini.
+KYSYMYS: Kerro lisää: Jean Calvinin
+
+### 167
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kėdainiai (kulttuuri)
+Tietoruudun teksti: Kėdainiai on kaupunki Nevėžis-joen rannalla noin 45 kilometriä Kaunasista pohjoiseen. Se mainitaan ensimmäisen kerran vuonna 1372 Liivinmaan kronikassa ja sai kaupungin aseman vuonna 1590. Vuonna 1655 Radziwiłł-suvun kaksi jäsentä allekirjoitti kaupungin linnassa lyhytaikaisen sopimuksen Ruotsin kanssa; linnasta on jäljellä vähän, mutta kalvinistisen kirkon kryptaan on haudattu suvun jäseniä. Kaupunkiin muutti 1500- ja 1600-luvuilla skotlantilaisia protestantteja, joiden vaikutus säilyi 1800-luvun puoliväliin asti. Heidän kauppiastalonsa, niin sanotut skotlantilaiset talot, ympäröivät yhä toria, ja 1600-luvulta periytyvä vanha kaupunki on säilynyt hyvin.
+AIEMPI KYSYMYS: Mitä kalvinismi tarkoittaa ja mistä se sai alkunsa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kalvinismi on protestanttinen kristinuskon suuntaus, joka sai nimensä ranskalaissyntyisen uskonpuhdistajan [[Jean Calvinin]] mukaan. Calvin vaikutti 1500-luvulla Genevessä, ja hänen oppinsa korosti Raamatun asemaa, kirkon yksinkertaisuutta ja seurakuntien omaa järjestäytymistä. Suuntaus levisi laajalle Euroopassa, muun muassa Skotlantiin, Alankomaihin ja Unkariin, ja Liettuassakin sillä oli 1500- ja 1600-luvuilla vahvoja kannattajia. Myös [[reformoitu kirkko]] ja presbyteerit polveutuvat sen perinteestä. Ei paha kyyhkyltä, vaikka teologia ei ole minun vahvin lajini.
+KYSYMYS: Kerro lisää: reformoitu kirkko
+
+### 168
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kėdainiai (kulttuuri)
+Tietoruudun teksti: Kėdainiai on kaupunki Nevėžis-joen rannalla noin 45 kilometriä Kaunasista pohjoiseen. Se mainitaan ensimmäisen kerran vuonna 1372 Liivinmaan kronikassa ja sai kaupungin aseman vuonna 1590. Vuonna 1655 Radziwiłł-suvun kaksi jäsentä allekirjoitti kaupungin linnassa lyhytaikaisen sopimuksen Ruotsin kanssa; linnasta on jäljellä vähän, mutta kalvinistisen kirkon kryptaan on haudattu suvun jäseniä. Kaupunkiin muutti 1500- ja 1600-luvuilla skotlantilaisia protestantteja, joiden vaikutus säilyi 1800-luvun puoliväliin asti. Heidän kauppiastalonsa, niin sanotut skotlantilaiset talot, ympäröivät yhä toria, ja 1600-luvulta periytyvä vanha kaupunki on säilynyt hyvin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Kaksi miljoonaa kättä yli kolmen maan] 1989 — Elokuun 23. päivänä 1989 noin kaksi miljoonaa ihmistä tarttui toisiaan käsistä ja muodosti yhtenäisen ketjun Tallinnasta Riian kautta Vilnaan — matkaa kertyi yli kuusisataa kilometriä. Baltian ketju järjestettiin täsmälleen viisikymmentä vuotta sen jälkeen, kun Neuvostoliitto ja natsi-Saksa olivat salaisessa sopimuksessa jakaneet Baltian maat keskenään. Rauhanomainen mielenilmaus vaati Viron, Latvian ja Liettuan miehitysten päättämistä, ja tapahtuma näkyi television välityksellä kaikkialla maailmassa. Kaksi vuotta myöhemmin kaikki kolme maata olivat jälleen itsenäisiä.
+AIEMPI KYSYMYS: Mikä oli Liivinmaa, jonka kronikassa Kėdainiai mainitaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Liivinmaa oli keskiaikainen ja myöhempi historiallinen alue Itämeren itärannalla, ja se kattoi lähinnä nykyisen [[Latvian]] ja [[Viron]] alueita. Keskiajalla aluetta hallitsi pääosin [[Saksalainen ritarikunta]] Liivinmaan haaransa kautta, ja alue koostui piispakunnista ja ritarikunnan mailta. Liivinmaasta kirjoitettiin useita kronikoita, joissa kuvataan ritarikunnan sotia ja naapurialueita, myös Liettuaa. Tarkan kronikan tekijästä tai vuodesta en ole varma. Sellainen kronikka sai sitten yhdestä kaupungista maininnan, ja minä pidin sen mielessä.
+KYSYMYS: Kerro lisää: Latvian
+
+### 169
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kėdainiai (kulttuuri)
+Tietoruudun teksti: Kėdainiai on kaupunki Nevėžis-joen rannalla noin 45 kilometriä Kaunasista pohjoiseen. Se mainitaan ensimmäisen kerran vuonna 1372 Liivinmaan kronikassa ja sai kaupungin aseman vuonna 1590. Vuonna 1655 Radziwiłł-suvun kaksi jäsentä allekirjoitti kaupungin linnassa lyhytaikaisen sopimuksen Ruotsin kanssa; linnasta on jäljellä vähän, mutta kalvinistisen kirkon kryptaan on haudattu suvun jäseniä. Kaupunkiin muutti 1500- ja 1600-luvuilla skotlantilaisia protestantteja, joiden vaikutus säilyi 1800-luvun puoliväliin asti. Heidän kauppiastalonsa, niin sanotut skotlantilaiset talot, ympäröivät yhä toria, ja 1600-luvulta periytyvä vanha kaupunki on säilynyt hyvin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Kaksi miljoonaa kättä yli kolmen maan] 1989 — Elokuun 23. päivänä 1989 noin kaksi miljoonaa ihmistä tarttui toisiaan käsistä ja muodosti yhtenäisen ketjun Tallinnasta Riian kautta Vilnaan — matkaa kertyi yli kuusisataa kilometriä. Baltian ketju järjestettiin täsmälleen viisikymmentä vuotta sen jälkeen, kun Neuvostoliitto ja natsi-Saksa olivat salaisessa sopimuksessa jakaneet Baltian maat keskenään. Rauhanomainen mielenilmaus vaati Viron, Latvian ja Liettuan miehitysten päättämistä, ja tapahtuma näkyi television välityksellä kaikkialla maailmassa. Kaksi vuotta myöhemmin kaikki kolme maata olivat jälleen itsenäisiä.
+AIEMPI KYSYMYS: Mikä oli Liivinmaa, jonka kronikassa Kėdainiai mainitaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Liivinmaa oli keskiaikainen ja myöhempi historiallinen alue Itämeren itärannalla, ja se kattoi lähinnä nykyisen [[Latvian]] ja [[Viron]] alueita. Keskiajalla aluetta hallitsi pääosin [[Saksalainen ritarikunta]] Liivinmaan haaransa kautta, ja alue koostui piispakunnista ja ritarikunnan mailta. Liivinmaasta kirjoitettiin useita kronikoita, joissa kuvataan ritarikunnan sotia ja naapurialueita, myös Liettuaa. Tarkan kronikan tekijästä tai vuodesta en ole varma. Sellainen kronikka sai sitten yhdestä kaupungista maininnan, ja minä pidin sen mielessä.
+KYSYMYS: Kerro lisää: Viron
+
+### 170
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kėdainiai (kulttuuri)
+Tietoruudun teksti: Kėdainiai on kaupunki Nevėžis-joen rannalla noin 45 kilometriä Kaunasista pohjoiseen. Se mainitaan ensimmäisen kerran vuonna 1372 Liivinmaan kronikassa ja sai kaupungin aseman vuonna 1590. Vuonna 1655 Radziwiłł-suvun kaksi jäsentä allekirjoitti kaupungin linnassa lyhytaikaisen sopimuksen Ruotsin kanssa; linnasta on jäljellä vähän, mutta kalvinistisen kirkon kryptaan on haudattu suvun jäseniä. Kaupunkiin muutti 1500- ja 1600-luvuilla skotlantilaisia protestantteja, joiden vaikutus säilyi 1800-luvun puoliväliin asti. Heidän kauppiastalonsa, niin sanotut skotlantilaiset talot, ympäröivät yhä toria, ja 1600-luvulta periytyvä vanha kaupunki on säilynyt hyvin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Johanneksen ko-katedraali] 1572–1577 (rakennus), 1608 (Caravaggion maalaus) Arkkitehti Girolamo Cassar suunnitteli kirkon ritarikunnan omaksi konventtikirkoksi vuosina 1572–1577, ja ulkoa se on yhä vaatimaton: paksut kalkkikivimuurit ja kaksi kapeaa tornia näyttävät pikemmin linnoitukselta kuin katedraalilta. Sisällä on toisin — 1660-luvulla Mattia Preti maalasi koko katon ja seinät kultaisiksi barokkiveistoksiksi, ja lattia on yhtenäinen mosaiikki kahdeksastasadasta ritarin hautalaatasta. Caravaggio pakeni Roomasta 1607 tapettuaan miehen kaksintaistelussa, ja Maltalla hänet otettiin heinäkuussa 1608 ritarikunnan jäseneksi. Kiitokseksi hän maalasi oratorioon "Johannes Kastajan mestauksen" — ainoan teoksensa, jonka hä…
+- [Malta — maalehti / Historia: Kaupunki piirrettiin viivaimella] 1566 — Maaliskuun 28. päivänä 1566 suurmestari Jean de Valette laski peruskiven uudelle kaupungille Sciberras-niemellä. Suuren piirityksen jälkeen ritarikunta halusi rakentaa linnoitetun pääkaupungin, ja paavi lähetti suunnittelijaksi Francesco Laparellin. Hän hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat kaupunginportilta kohti Fort St. Elmoa. Laparellin kuoltua työtä johti maltalainen Girolamo Cassar. Valletta valmistui pääosin 1570-luvun alkuun mennessä, ja siitä tuli pääkaupunki vuonna 1571.
+AIEMPI KYSYMYS: Mikä oli Liivinmaa, jonka kronikassa Kėdainiai mainitaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Liivinmaa oli keskiaikainen ja myöhempi historiallinen alue Itämeren itärannalla, ja se kattoi lähinnä nykyisen [[Latvian]] ja [[Viron]] alueita. Keskiajalla aluetta hallitsi pääosin [[Saksalainen ritarikunta]] Liivinmaan haaransa kautta, ja alue koostui piispakunnista ja ritarikunnan mailta. Liivinmaasta kirjoitettiin useita kronikoita, joissa kuvataan ritarikunnan sotia ja naapurialueita, myös Liettuaa. Tarkan kronikan tekijästä tai vuodesta en ole varma. Sellainen kronikka sai sitten yhdestä kaupungista maininnan, ja minä pidin sen mielessä.
+KYSYMYS: Kerro lisää: Saksalainen ritarikunta
+
+### 171
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biržai (historia)
+Tietoruudun teksti: Biržai on pohjoisliettualainen kaupunki, joka tunnetaan uudelleenrakennetusta linnakartanostaan ja monista perinteisiä reseptejä noudattavista panimoista. Linnan rakentaminen alkoi vuonna 1586, ja sitä varten Agluona- ja Apaščia-jokien yhtymäkohtaan oli padottu jo 1575 Širvėna-järvi, Liettuan vanhin säilynyt tekojärvi. Linna oli tärkeä puolustuspaikka Ruotsin sotien aikana, tuhoutui useaan kertaan ja jäi raunioiksi vuodesta 1704 aina 1990-luvun kunnostukseen asti. Kaupunki liittyy vahvasti Radziwiłł-sukuun, ja siitä tuli Liettuan protestanttisen uskonpuhdistuksen kulttuurikeskus. Kaupungin pohjoisosassa on alueellinen luonnonpuisto, jossa on noin 9 000 karstiaukkoa; yksi niistä, 20 metriä syvä Karvės ola eli Lehmänluola, löytyi legendan mukaan, kun lehmä katosi maan alle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Granada — kohdekartta / Kohdekartta: Irvingin huoneet] Kun amerikkalainen Washington Irving tuli Granadaan vuonna 1828, palatsi ei ollut nähtävyys vaan osoite. Valtio oli antanut sen rapistua toistasataa vuotta: hoito oli jäänyt paikallisille kuvernööreille, jotka asuivat perheineen laiminlyödyissä saleissa, ja 1800-luvun alussa taloa asuttivat kertomusten mukaan vangit, työkyvyttömät sotilaat ja muut, joilla ei ollut muutakaan paikkaa. Irving oli tullut kirjoittamaan historiateosta ja pyysi pääsyä sisään palatsin kuvernööriltä ja kaupungin arkkipiispalta. Lupa heltisi, koska hän oli jo kuuluisa mies. Ja sitten tapahtui se, mikä tekee tästä muuta kuin matkakertomuksen: hän ei mennyt arkistoon vaan kysyi ihmisiltä. Oppaaksi tuli seitsemäntoistav…
+AIEMPI KYSYMYS: Miksi Biržaihin padottiin ihmisten tekemä järvi jo 1500-luvun lopulla?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä kysymys tuo. Järvi, [[Širvėna]], padottiin vuonna 1575 Agluona- ja Apaščia-jokien yhtymäkohtaan, ja linnan rakentaminen alkoi vasta vuonna 1586, joten vesistö valmisteltiin linnaa varten. Vesi suojasi linnaa ympäriltä ja teki siitä puolustuskelpoisen, mikä oli tärkeää Ruotsin sotien aikana. Lähteiden mukaan järvi on Liettuan vanhin säilynyt tekojärvi, mutta muista käyttötarkoituksista, kuten myllyistä tai kalastuksesta, en ole varma. Jos haluat katsoa paikkaa, [[Biržain linna]] on rakennettu uudelleen 1990-luvun kunnostuksen jälkeen. Ihan kelpo linnoitus siitä tuli ylhäältä katsottuna.
+KYSYMYS: Kerro lisää: Širvėna
+
+### 172
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biržai (historia)
+Tietoruudun teksti: Biržai on pohjoisliettualainen kaupunki, joka tunnetaan uudelleenrakennetusta linnakartanostaan ja monista perinteisiä reseptejä noudattavista panimoista. Linnan rakentaminen alkoi vuonna 1586, ja sitä varten Agluona- ja Apaščia-jokien yhtymäkohtaan oli padottu jo 1575 Širvėna-järvi, Liettuan vanhin säilynyt tekojärvi. Linna oli tärkeä puolustuspaikka Ruotsin sotien aikana, tuhoutui useaan kertaan ja jäi raunioiksi vuodesta 1704 aina 1990-luvun kunnostukseen asti. Kaupunki liittyy vahvasti Radziwiłł-sukuun, ja siitä tuli Liettuan protestanttisen uskonpuhdistuksen kulttuurikeskus. Kaupungin pohjoisosassa on alueellinen luonnonpuisto, jossa on noin 9 000 karstiaukkoa; yksi niistä, 20 metriä syvä Karvės ola eli Lehmänluola, löytyi legendan mukaan, kun lehmä katosi maan alle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Elmon linnake] 1552 (rakennus), 1565 (piiritys) Linnake rakennettiin 1552 vartioimaan kahden sataman, Grand Harbourin ja Marsamxettin, suuta samalta kapealta niemenkärjeltä, jolle Valletta myöhemmin nousi. Tähden muotoinen muuri oli aikanaan uutta linnoitustekniikkaa, mutta osmanien saapuessa 1565 moni piti sitä silti liian pienenä kestämään pitkää piiritystä. Se piti pintansa lähes kuukauden, 18. toukokuuta – 23. kesäkuuta, vaikka miehistö oli moninkertaisesti alivoimainen. Yöllä veneet toivat Birgusta lisää puolustajia ja veivät haavoittuneita pois, ja monet pahoin haavoittuneet ritarit kieltäytyivät poistumasta: he pyysivät kantaa itsensä tuoleilla muurille jatkaakseen taistelua istualtaan viimeiseen a…
+AIEMPI KYSYMYS: Miksi Biržaihin padottiin ihmisten tekemä järvi jo 1500-luvun lopulla?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä kysymys tuo. Järvi, [[Širvėna]], padottiin vuonna 1575 Agluona- ja Apaščia-jokien yhtymäkohtaan, ja linnan rakentaminen alkoi vasta vuonna 1586, joten vesistö valmisteltiin linnaa varten. Vesi suojasi linnaa ympäriltä ja teki siitä puolustuskelpoisen, mikä oli tärkeää Ruotsin sotien aikana. Lähteiden mukaan järvi on Liettuan vanhin säilynyt tekojärvi, mutta muista käyttötarkoituksista, kuten myllyistä tai kalastuksesta, en ole varma. Jos haluat katsoa paikkaa, [[Biržain linna]] on rakennettu uudelleen 1990-luvun kunnostuksen jälkeen. Ihan kelpo linnoitus siitä tuli ylhäältä katsottuna.
+KYSYMYS: Kerro lisää: Biržain linna
+
+### 173
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biržai (historia)
+Tietoruudun teksti: Biržai on pohjoisliettualainen kaupunki, joka tunnetaan uudelleenrakennetusta linnakartanostaan ja monista perinteisiä reseptejä noudattavista panimoista. Linnan rakentaminen alkoi vuonna 1586, ja sitä varten Agluona- ja Apaščia-jokien yhtymäkohtaan oli padottu jo 1575 Širvėna-järvi, Liettuan vanhin säilynyt tekojärvi. Linna oli tärkeä puolustuspaikka Ruotsin sotien aikana, tuhoutui useaan kertaan ja jäi raunioiksi vuodesta 1704 aina 1990-luvun kunnostukseen asti. Kaupunki liittyy vahvasti Radziwiłł-sukuun, ja siitä tuli Liettuan protestanttisen uskonpuhdistuksen kulttuurikeskus. Kaupungin pohjoisosassa on alueellinen luonnonpuisto, jossa on noin 9 000 karstiaukkoa; yksi niistä, 20 metriä syvä Karvės ola eli Lehmänluola, löytyi legendan mukaan, kun lehmä katosi maan alle.
+AIEMPI KYSYMYS: Miksi Biržain seudulle on syntynyt tuhansia äkillisiä romahdusaukkoja maahan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on oikeasti hieno luonnonilmiö. Biržain seutu kuuluu [[karstialueeseen]], jossa maaperän alla on helposti liukenevia kivilajeja, ja pohjoisessa Liettuassa kyse on lähinnä [[kipsistä]]. Pohjavesi liuottaa kiveä vuosien ajan ja muodostaa maan alle onkaloita, ja kun katto lopulta pettää, pinta romahtaa ja syntyy pyöreä [[karstiaukko]]. Biržain seudulla aukkoja on noin 9 000, ja yksi tunnetuimmista on 20 metriä syvä Karvės ola eli Lehmänluola, jonka legenda kertoo löytyneen, kun lehmä katosi maan alle. Tarkoista geologisista yksityiskohdista en ole varma, mut tämä on pääperiaate. No olipas siin yksi lehmä, jolla oli vaikutusta.
+KYSYMYS: Kerro lisää: karstialueeseen
+
+### 174
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biržai (historia)
+Tietoruudun teksti: Biržai on pohjoisliettualainen kaupunki, joka tunnetaan uudelleenrakennetusta linnakartanostaan ja monista perinteisiä reseptejä noudattavista panimoista. Linnan rakentaminen alkoi vuonna 1586, ja sitä varten Agluona- ja Apaščia-jokien yhtymäkohtaan oli padottu jo 1575 Širvėna-järvi, Liettuan vanhin säilynyt tekojärvi. Linna oli tärkeä puolustuspaikka Ruotsin sotien aikana, tuhoutui useaan kertaan ja jäi raunioiksi vuodesta 1704 aina 1990-luvun kunnostukseen asti. Kaupunki liittyy vahvasti Radziwiłł-sukuun, ja siitä tuli Liettuan protestanttisen uskonpuhdistuksen kulttuurikeskus. Kaupungin pohjoisosassa on alueellinen luonnonpuisto, jossa on noin 9 000 karstiaukkoa; yksi niistä, 20 metriä syvä Karvės ola eli Lehmänluola, löytyi legendan mukaan, kun lehmä katosi maan alle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Washington Squaren riemukaari] 1889–1895 Vuonna 1889 tuli kuluneeksi sata vuotta George Washingtonin virkaanastujaisista, ja liikemies William Rhinelander Stewart pystytti juhlan kunniaksi Viidennelle Avenuelle puusta ja kipsistä tehdyn muistokaaren. Stewart asui aukion pohjoislaidalla, ja hänen ystävänsä keräsivät hankkeeseen 2 765 dollaria. Vapaamuurarit kulkivat juhlakulkueessa kaaren ali Washingtonin virkaanastujaisraamattu mukanaan. Väliaikainen kaari oli niin suosittu, että rahaa kerättiin lisää ja kivinen kaari tilattiin arkkitehti Stanford Whiteltä. White otti mallin roomalaisesta riemukaaresta ja päätyi lähelle ensimmäisellä vuosisadalla rakennettua Tituksen kaarta. Rakennusaine on valkoista Tuckahoen marmoria. …
+AIEMPI KYSYMYS: Miksi Biržain seudulle on syntynyt tuhansia äkillisiä romahdusaukkoja maahan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on oikeasti hieno luonnonilmiö. Biržain seutu kuuluu [[karstialueeseen]], jossa maaperän alla on helposti liukenevia kivilajeja, ja pohjoisessa Liettuassa kyse on lähinnä [[kipsistä]]. Pohjavesi liuottaa kiveä vuosien ajan ja muodostaa maan alle onkaloita, ja kun katto lopulta pettää, pinta romahtaa ja syntyy pyöreä [[karstiaukko]]. Biržain seudulla aukkoja on noin 9 000, ja yksi tunnetuimmista on 20 metriä syvä Karvės ola eli Lehmänluola, jonka legenda kertoo löytyneen, kun lehmä katosi maan alle. Tarkoista geologisista yksityiskohdista en ole varma, mut tämä on pääperiaate. No olipas siin yksi lehmä, jolla oli vaikutusta.
+KYSYMYS: Kerro lisää: kipsistä
+
+### 175
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biržai (historia)
+Tietoruudun teksti: Biržai on pohjoisliettualainen kaupunki, joka tunnetaan uudelleenrakennetusta linnakartanostaan ja monista perinteisiä reseptejä noudattavista panimoista. Linnan rakentaminen alkoi vuonna 1586, ja sitä varten Agluona- ja Apaščia-jokien yhtymäkohtaan oli padottu jo 1575 Širvėna-järvi, Liettuan vanhin säilynyt tekojärvi. Linna oli tärkeä puolustuspaikka Ruotsin sotien aikana, tuhoutui useaan kertaan ja jäi raunioiksi vuodesta 1704 aina 1990-luvun kunnostukseen asti. Kaupunki liittyy vahvasti Radziwiłł-sukuun, ja siitä tuli Liettuan protestanttisen uskonpuhdistuksen kulttuurikeskus. Kaupungin pohjoisosassa on alueellinen luonnonpuisto, jossa on noin 9 000 karstiaukkoa; yksi niistä, 20 metriä syvä Karvės ola eli Lehmänluola, löytyi legendan mukaan, kun lehmä katosi maan alle.
+AIEMPI KYSYMYS: Miksi Biržain seudulle on syntynyt tuhansia äkillisiä romahdusaukkoja maahan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on oikeasti hieno luonnonilmiö. Biržain seutu kuuluu [[karstialueeseen]], jossa maaperän alla on helposti liukenevia kivilajeja, ja pohjoisessa Liettuassa kyse on lähinnä [[kipsistä]]. Pohjavesi liuottaa kiveä vuosien ajan ja muodostaa maan alle onkaloita, ja kun katto lopulta pettää, pinta romahtaa ja syntyy pyöreä [[karstiaukko]]. Biržain seudulla aukkoja on noin 9 000, ja yksi tunnetuimmista on 20 metriä syvä Karvės ola eli Lehmänluola, jonka legenda kertoo löytyneen, kun lehmä katosi maan alle. Tarkoista geologisista yksityiskohdista en ole varma, mut tämä on pääperiaate. No olipas siin yksi lehmä, jolla oli vaikutusta.
+KYSYMYS: Kerro lisää: karstiaukko
+
+### 176
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biržai (historia)
+Tietoruudun teksti: Biržai on pohjoisliettualainen kaupunki, joka tunnetaan uudelleenrakennetusta linnakartanostaan ja monista perinteisiä reseptejä noudattavista panimoista. Linnan rakentaminen alkoi vuonna 1586, ja sitä varten Agluona- ja Apaščia-jokien yhtymäkohtaan oli padottu jo 1575 Širvėna-järvi, Liettuan vanhin säilynyt tekojärvi. Linna oli tärkeä puolustuspaikka Ruotsin sotien aikana, tuhoutui useaan kertaan ja jäi raunioiksi vuodesta 1704 aina 1990-luvun kunnostukseen asti. Kaupunki liittyy vahvasti Radziwiłł-sukuun, ja siitä tuli Liettuan protestanttisen uskonpuhdistuksen kulttuurikeskus. Kaupungin pohjoisosassa on alueellinen luonnonpuisto, jossa on noin 9 000 karstiaukkoa; yksi niistä, 20 metriä syvä Karvės ola eli Lehmänluola, löytyi legendan mukaan, kun lehmä katosi maan alle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Uskonpuhdistus: Wittenberg 1517 — kuka tämän oikein lukee?] 31.10.1517 — Kuka tämän oikein lukee? Martti Luther, 33, Wittenbergin yliopiston teologian professori, taittaa 31. lokakuuta 1517 kirjeen Mainzin arkkipiispa Albrechtille ja liittää mukaan 95 väitettä — teesiä — anekaupasta. Johann Tetzel myy lähikaupungeissa aneita, joilla rahoitetaan Rooman Pietarinkirkkoa ja Albrechtin omaa virkavelkaa, ja Lutherin seurakuntalaiset palaavat ostoksilta uskoen, ettei heidän tarvitse enää katua. Kirje on kohtelias; se olettaa arkkipiispan olevan tietämätön saarnaajiensa puheista. Teesit on kirjoitettu latinaksi, oppineiden väittelyä varten. Se, naulasiko Luther ne samana päivänä linnankirkon oveen, on Philipp Melanchthonin myöhempi kertomus, ja Luther itse …
+AIEMPI KYSYMYS: Milloin ja missä Martti Luther aloitti uskonpuhdistuksen?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Martti Luther]] oli saksalainen teologi ja munkki, ja uskonpuhdistuksen katsotaan alkaneen vuonna 1517, kun hän julkaisi arvostelunsa kirkon anekauppaa vastaan [[Wittenbergissä]]. Perimätiedon mukaan hän kiinnitti 95 teesiään kaupungin linnankirkon oveen, mutta historiantutkijat ovat kiistelleet siitä, tapahtuiko se juuri niin. Uskonpuhdistus levisi nopeasti Euroopassa ja synnytti [[protestantismin]] erilaisia suuntauksia, joihin kuuluvat luterilaisuus ja kalvinismi. Biržai nousi myöhemmin Liettuan uskonpuhdistuksen kulttuurikeskukseksi. Ja minä vielä muistin vuosiluvunkin.
+KYSYMYS: Kerro lisää: Martti Luther
+
+### 177
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biržai (historia)
+Tietoruudun teksti: Biržai on pohjoisliettualainen kaupunki, joka tunnetaan uudelleenrakennetusta linnakartanostaan ja monista perinteisiä reseptejä noudattavista panimoista. Linnan rakentaminen alkoi vuonna 1586, ja sitä varten Agluona- ja Apaščia-jokien yhtymäkohtaan oli padottu jo 1575 Širvėna-järvi, Liettuan vanhin säilynyt tekojärvi. Linna oli tärkeä puolustuspaikka Ruotsin sotien aikana, tuhoutui useaan kertaan ja jäi raunioiksi vuodesta 1704 aina 1990-luvun kunnostukseen asti. Kaupunki liittyy vahvasti Radziwiłł-sukuun, ja siitä tuli Liettuan protestanttisen uskonpuhdistuksen kulttuurikeskus. Kaupungin pohjoisosassa on alueellinen luonnonpuisto, jossa on noin 9 000 karstiaukkoa; yksi niistä, 20 metriä syvä Karvės ola eli Lehmänluola, löytyi legendan mukaan, kun lehmä katosi maan alle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Uskonpuhdistus: Wittenberg 1517 — kuka tämän oikein lukee?] 31.10.1517 — Kuka tämän oikein lukee? Martti Luther, 33, Wittenbergin yliopiston teologian professori, taittaa 31. lokakuuta 1517 kirjeen Mainzin arkkipiispa Albrechtille ja liittää mukaan 95 väitettä — teesiä — anekaupasta. Johann Tetzel myy lähikaupungeissa aneita, joilla rahoitetaan Rooman Pietarinkirkkoa ja Albrechtin omaa virkavelkaa, ja Lutherin seurakuntalaiset palaavat ostoksilta uskoen, ettei heidän tarvitse enää katua. Kirje on kohtelias; se olettaa arkkipiispan olevan tietämätön saarnaajiensa puheista. Teesit on kirjoitettu latinaksi, oppineiden väittelyä varten. Se, naulasiko Luther ne samana päivänä linnankirkon oveen, on Philipp Melanchthonin myöhempi kertomus, ja Luther itse …
+AIEMPI KYSYMYS: Milloin ja missä Martti Luther aloitti uskonpuhdistuksen?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Martti Luther]] oli saksalainen teologi ja munkki, ja uskonpuhdistuksen katsotaan alkaneen vuonna 1517, kun hän julkaisi arvostelunsa kirkon anekauppaa vastaan [[Wittenbergissä]]. Perimätiedon mukaan hän kiinnitti 95 teesiään kaupungin linnankirkon oveen, mutta historiantutkijat ovat kiistelleet siitä, tapahtuiko se juuri niin. Uskonpuhdistus levisi nopeasti Euroopassa ja synnytti [[protestantismin]] erilaisia suuntauksia, joihin kuuluvat luterilaisuus ja kalvinismi. Biržai nousi myöhemmin Liettuan uskonpuhdistuksen kulttuurikeskukseksi. Ja minä vielä muistin vuosiluvunkin.
+KYSYMYS: Kerro lisää: Wittenbergissä
+
+### 178
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biržai (historia)
+Tietoruudun teksti: Biržai on pohjoisliettualainen kaupunki, joka tunnetaan uudelleenrakennetusta linnakartanostaan ja monista perinteisiä reseptejä noudattavista panimoista. Linnan rakentaminen alkoi vuonna 1586, ja sitä varten Agluona- ja Apaščia-jokien yhtymäkohtaan oli padottu jo 1575 Širvėna-järvi, Liettuan vanhin säilynyt tekojärvi. Linna oli tärkeä puolustuspaikka Ruotsin sotien aikana, tuhoutui useaan kertaan ja jäi raunioiksi vuodesta 1704 aina 1990-luvun kunnostukseen asti. Kaupunki liittyy vahvasti Radziwiłł-sukuun, ja siitä tuli Liettuan protestanttisen uskonpuhdistuksen kulttuurikeskus. Kaupungin pohjoisosassa on alueellinen luonnonpuisto, jossa on noin 9 000 karstiaukkoa; yksi niistä, 20 metriä syvä Karvės ola eli Lehmänluola, löytyi legendan mukaan, kun lehmä katosi maan alle.
+AIEMPI KYSYMYS: Milloin ja missä Martti Luther aloitti uskonpuhdistuksen?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Martti Luther]] oli saksalainen teologi ja munkki, ja uskonpuhdistuksen katsotaan alkaneen vuonna 1517, kun hän julkaisi arvostelunsa kirkon anekauppaa vastaan [[Wittenbergissä]]. Perimätiedon mukaan hän kiinnitti 95 teesiään kaupungin linnankirkon oveen, mutta historiantutkijat ovat kiistelleet siitä, tapahtuiko se juuri niin. Uskonpuhdistus levisi nopeasti Euroopassa ja synnytti [[protestantismin]] erilaisia suuntauksia, joihin kuuluvat luterilaisuus ja kalvinismi. Biržai nousi myöhemmin Liettuan uskonpuhdistuksen kulttuurikeskukseksi. Ja minä vielä muistin vuosiluvunkin.
+KYSYMYS: Kerro lisää: protestantismin
+
+### 179
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biržai (historia)
+Tietoruudun teksti: Biržai on pohjoisliettualainen kaupunki, joka tunnetaan uudelleenrakennetusta linnakartanostaan ja monista perinteisiä reseptejä noudattavista panimoista. Linnan rakentaminen alkoi vuonna 1586, ja sitä varten Agluona- ja Apaščia-jokien yhtymäkohtaan oli padottu jo 1575 Širvėna-järvi, Liettuan vanhin säilynyt tekojärvi. Linna oli tärkeä puolustuspaikka Ruotsin sotien aikana, tuhoutui useaan kertaan ja jäi raunioiksi vuodesta 1704 aina 1990-luvun kunnostukseen asti. Kaupunki liittyy vahvasti Radziwiłł-sukuun, ja siitä tuli Liettuan protestanttisen uskonpuhdistuksen kulttuurikeskus. Kaupungin pohjoisosassa on alueellinen luonnonpuisto, jossa on noin 9 000 karstiaukkoa; yksi niistä, 20 metriä syvä Karvės ola eli Lehmänluola, löytyi legendan mukaan, kun lehmä katosi maan alle.
+AIEMPI KYSYMYS: Mikä oli Ruotsin suurvalta-aika, ja milloin se päättyi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää kuuluu vakiokysymyksiin. Ruotsin suurvalta-ajalla tarkoitetaan ajanjaksoa, jolloin [[Ruotsi]] hallitsi Itämeren ympäristön laajoja alueita ja oli yksi Euroopan merkittävistä sotilasvalloista. Sen alkamisajankohdasta lähteet eivät ole täysin yksimielisiä, mutta yleensä sen katsotaan alkaneen 1600-luvun alussa, ja se päättyi Pohjan sodan jälkeen [[Uudenkaupungin rauhaan]] vuonna 1721. Liettuassa Ruotsin sodat tunnetaan siitä, että esimerkiksi Biržain linna toimi niiden aikana tärkeänä puolustuspaikkana. Kyllä tätä olisi saanut kertoa pidemminkin, mut tämä riittää.
+KYSYMYS: Kerro lisää: Ruotsi
+
+### 180
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biržai (historia)
+Tietoruudun teksti: Biržai on pohjoisliettualainen kaupunki, joka tunnetaan uudelleenrakennetusta linnakartanostaan ja monista perinteisiä reseptejä noudattavista panimoista. Linnan rakentaminen alkoi vuonna 1586, ja sitä varten Agluona- ja Apaščia-jokien yhtymäkohtaan oli padottu jo 1575 Širvėna-järvi, Liettuan vanhin säilynyt tekojärvi. Linna oli tärkeä puolustuspaikka Ruotsin sotien aikana, tuhoutui useaan kertaan ja jäi raunioiksi vuodesta 1704 aina 1990-luvun kunnostukseen asti. Kaupunki liittyy vahvasti Radziwiłł-sukuun, ja siitä tuli Liettuan protestanttisen uskonpuhdistuksen kulttuurikeskus. Kaupungin pohjoisosassa on alueellinen luonnonpuisto, jossa on noin 9 000 karstiaukkoa; yksi niistä, 20 metriä syvä Karvės ola eli Lehmänluola, löytyi legendan mukaan, kun lehmä katosi maan alle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Geraldton — kaupunkilehti / Geraldton: Kaupunki jota tuuli ei jätä rauhaan] Geraldtonia kutsutaan usein Australian tuulisimmaksi kaupungiksi, ja nimitys on ansaittu: iltapäivisin lokakuusta huhtikuuhun mereltä puhaltaa lähes joka päivä voimakas ja tasainen etelätuuli. Paikalliset kutsuvat sitä luotettavaksi iltatuuleksi, ja se on tehnyt kaupungista yhden Australian suosituimmista purjelautailu- ja leijalautailukohteista. Lähistön Coronation Beach on tunnettu jopa kansainvälisistä kilpailuista, joihin osallistujia saapuu ympäri maailmaa nauttimaan aalloista ja tasaisesta tuulesta. Sama tuuli, joka nykyään houkuttelee lautailijoita, oli 1800-luvulla purjelaivoille sekä siunaus että riski.
+- [Bolivia — maalehti / Ruoka: Siemen, jonka linnut jättävät rauhaan] Kinua kesytettiin Titicacajärven ympäristössä, ja se kasvaa yli neljän kilometrin korkeudessa. Siementen pinnalla on kitkerää saponiinia, joka karkottaa linnut, joten peltoa ei juuri tarvitse vartioida; kauppaan tuleva kinua on huuhdeltu kerroksesta puhtaaksi. YK:n yleiskokous julisti vuoden 2013 kansainväliseksi kinuavuodeksi andilaisten viljelijöiden perinteen kunniaksi. Vuonna 2023 maailmassa tuotettiin 112 251 tonnia kinuaa, ja siitä Perun osuus oli 62 ja Bolivian 37 prosenttia. Hintanousu 2004–2011 toi ylängölle rahaa mutta myös yksipuolisti viljelyä.
+AIEMPI KYSYMYS: Mikä oli Ruotsin suurvalta-aika, ja milloin se päättyi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää kuuluu vakiokysymyksiin. Ruotsin suurvalta-ajalla tarkoitetaan ajanjaksoa, jolloin [[Ruotsi]] hallitsi Itämeren ympäristön laajoja alueita ja oli yksi Euroopan merkittävistä sotilasvalloista. Sen alkamisajankohdasta lähteet eivät ole täysin yksimielisiä, mutta yleensä sen katsotaan alkaneen 1600-luvun alussa, ja se päättyi Pohjan sodan jälkeen [[Uudenkaupungin rauhaan]] vuonna 1721. Liettuassa Ruotsin sodat tunnetaan siitä, että esimerkiksi Biržain linna toimi niiden aikana tärkeänä puolustuspaikkana. Kyllä tätä olisi saanut kertoa pidemminkin, mut tämä riittää.
+KYSYMYS: Kerro lisää: Uudenkaupungin rauhaan
+
+### 181
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biržai (historia)
+Tietoruudun teksti: Biržai on pohjoisliettualainen kaupunki, joka tunnetaan uudelleenrakennetusta linnakartanostaan ja monista perinteisiä reseptejä noudattavista panimoista. Linnan rakentaminen alkoi vuonna 1586, ja sitä varten Agluona- ja Apaščia-jokien yhtymäkohtaan oli padottu jo 1575 Širvėna-järvi, Liettuan vanhin säilynyt tekojärvi. Linna oli tärkeä puolustuspaikka Ruotsin sotien aikana, tuhoutui useaan kertaan ja jäi raunioiksi vuodesta 1704 aina 1990-luvun kunnostukseen asti. Kaupunki liittyy vahvasti Radziwiłł-sukuun, ja siitä tuli Liettuan protestanttisen uskonpuhdistuksen kulttuurikeskus. Kaupungin pohjoisosassa on alueellinen luonnonpuisto, jossa on noin 9 000 karstiaukkoa; yksi niistä, 20 metriä syvä Karvės ola eli Lehmänluola, löytyi legendan mukaan, kun lehmä katosi maan alle.
+AIEMPI KYSYMYS: Mitkä maat ovat Liettuan naapureita?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Liettuan naapurimaita ovat pohjoisessa [[Latvia]], idässä ja kaakossa [[Valko-Venäjä]], etelässä [[Puola]] sekä lounaassa [[Venäjän]] Kaliningradin alue. Lisäksi Liettuan länsirannikko on Itämeren rannalla. Liettuan ja Puolan välillä on ollut historiallisesti tiiviit siteet, sillä ne olivat vuosisatoja samassa valtioliitossa. Pohjois-Liettuassa Latvian rajan tuntumassa sijaitsee esimerkiksi Žagarė. Ja pullaa löytyy joka rajan takaa, tiedoksi vaan.
+KYSYMYS: Kerro lisää: Latvia
+
+### 182
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biržai (historia)
+Tietoruudun teksti: Biržai on pohjoisliettualainen kaupunki, joka tunnetaan uudelleenrakennetusta linnakartanostaan ja monista perinteisiä reseptejä noudattavista panimoista. Linnan rakentaminen alkoi vuonna 1586, ja sitä varten Agluona- ja Apaščia-jokien yhtymäkohtaan oli padottu jo 1575 Širvėna-järvi, Liettuan vanhin säilynyt tekojärvi. Linna oli tärkeä puolustuspaikka Ruotsin sotien aikana, tuhoutui useaan kertaan ja jäi raunioiksi vuodesta 1704 aina 1990-luvun kunnostukseen asti. Kaupunki liittyy vahvasti Radziwiłł-sukuun, ja siitä tuli Liettuan protestanttisen uskonpuhdistuksen kulttuurikeskus. Kaupungin pohjoisosassa on alueellinen luonnonpuisto, jossa on noin 9 000 karstiaukkoa; yksi niistä, 20 metriä syvä Karvės ola eli Lehmänluola, löytyi legendan mukaan, kun lehmä katosi maan alle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Valtakunta ulottui mereltä merelle] 1430 — Liettuan suuriruhtinaskunta oli 1400-luvun alussa Euroopan suurin valtio. Suuriruhtinas Vytautas Suuri hallitsi aluetta, joka ulottui Itämereltä lähelle Mustaamerta ja kattoi nykyisen Valko-Venäjän, suuren osan Ukrainaa sekä palasia Puolaa, Latviaa ja Venäjää. Vuonna 1386 suuriruhtinas Jogaila meni naimisiin Puolan kuningattaren kanssa ja otti kasteen, ja maat liittyivät henkilöunioniin, joka näkyy tässä kartassa vierekkäisinä valtakuntina. Liettuasta tuli näin viimeinen pakanallinen valtio, joka kääntyi kristinuskoon Euroopassa.
+- [Liettua — maalehti / Tavat: Kukkula, jolle jokainen tuo ristin] 1961 — Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. Neuvostoaikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka tahansa saa tuoda omansa.
+- [Mongolia — maalehti / Ruoka: Valkoinen ruoka talven varalle] Maito keitetään ensin, jotta pinnalta saadaan öröm, paksu kerma. Kuoritusta maidosta tehdään byaslag-juustoa, hieman hapatettua aartsia, jogurttia, kefiriä ja shimiin arkhia, kevyttä maitoviinaa — sekä aaruulia, kuivattuja rahkapaloja, jotka kovettuvat niin sitkeiksi että kestävät talven yli. Kaikkea tätä sanotaan yhteisnimellä tsagaan idee, valkoinen ruoka, ja se on uudenvuoden pöydän ydin. Päivän juoma on süütei tsai, suolattu maitotee, jossa on voita ja usein paahdettua viljaa. Kun teehen lisää riisiä, lihaa tai pieniä bansh-nyyttejä, siitä tulee ateria.
+AIEMPI KYSYMYS: Mitkä maat ovat Liettuan naapureita?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Liettuan naapurimaita ovat pohjoisessa [[Latvia]], idässä ja kaakossa [[Valko-Venäjä]], etelässä [[Puola]] sekä lounaassa [[Venäjän]] Kaliningradin alue. Lisäksi Liettuan länsirannikko on Itämeren rannalla. Liettuan ja Puolan välillä on ollut historiallisesti tiiviit siteet, sillä ne olivat vuosisatoja samassa valtioliitossa. Pohjois-Liettuassa Latvian rajan tuntumassa sijaitsee esimerkiksi Žagarė. Ja pullaa löytyy joka rajan takaa, tiedoksi vaan.
+KYSYMYS: Kerro lisää: Valko-Venäjä
+
+### 183
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biržai (historia)
+Tietoruudun teksti: Biržai on pohjoisliettualainen kaupunki, joka tunnetaan uudelleenrakennetusta linnakartanostaan ja monista perinteisiä reseptejä noudattavista panimoista. Linnan rakentaminen alkoi vuonna 1586, ja sitä varten Agluona- ja Apaščia-jokien yhtymäkohtaan oli padottu jo 1575 Širvėna-järvi, Liettuan vanhin säilynyt tekojärvi. Linna oli tärkeä puolustuspaikka Ruotsin sotien aikana, tuhoutui useaan kertaan ja jäi raunioiksi vuodesta 1704 aina 1990-luvun kunnostukseen asti. Kaupunki liittyy vahvasti Radziwiłł-sukuun, ja siitä tuli Liettuan protestanttisen uskonpuhdistuksen kulttuurikeskus. Kaupungin pohjoisosassa on alueellinen luonnonpuisto, jossa on noin 9 000 karstiaukkoa; yksi niistä, 20 metriä syvä Karvės ola eli Lehmänluola, löytyi legendan mukaan, kun lehmä katosi maan alle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kohdekartta / Kohdekartta: Boratynka] 1659–1668 Kun kassa on tyhjä, voi aina lyödä lisää rahaa — kunhan ei kysy, mitä raha sen jälkeen on arvoltaan. Puola-Liettua kokeili tätä 1600-luvulla kuparilla, ja kansa antoi kolikolle pilkkanimen, joka on kestänyt pidempään kuin kolikon ostovoima.
+AIEMPI KYSYMYS: Mitkä maat ovat Liettuan naapureita?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Liettuan naapurimaita ovat pohjoisessa [[Latvia]], idässä ja kaakossa [[Valko-Venäjä]], etelässä [[Puola]] sekä lounaassa [[Venäjän]] Kaliningradin alue. Lisäksi Liettuan länsirannikko on Itämeren rannalla. Liettuan ja Puolan välillä on ollut historiallisesti tiiviit siteet, sillä ne olivat vuosisatoja samassa valtioliitossa. Pohjois-Liettuassa Latvian rajan tuntumassa sijaitsee esimerkiksi Žagarė. Ja pullaa löytyy joka rajan takaa, tiedoksi vaan.
+KYSYMYS: Kerro lisää: Puola
+
+### 184
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biržai (historia)
+Tietoruudun teksti: Biržai on pohjoisliettualainen kaupunki, joka tunnetaan uudelleenrakennetusta linnakartanostaan ja monista perinteisiä reseptejä noudattavista panimoista. Linnan rakentaminen alkoi vuonna 1586, ja sitä varten Agluona- ja Apaščia-jokien yhtymäkohtaan oli padottu jo 1575 Širvėna-järvi, Liettuan vanhin säilynyt tekojärvi. Linna oli tärkeä puolustuspaikka Ruotsin sotien aikana, tuhoutui useaan kertaan ja jäi raunioiksi vuodesta 1704 aina 1990-luvun kunnostukseen asti. Kaupunki liittyy vahvasti Radziwiłł-sukuun, ja siitä tuli Liettuan protestanttisen uskonpuhdistuksen kulttuurikeskus. Kaupungin pohjoisosassa on alueellinen luonnonpuisto, jossa on noin 9 000 karstiaukkoa; yksi niistä, 20 metriä syvä Karvės ola eli Lehmänluola, löytyi legendan mukaan, kun lehmä katosi maan alle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+AIEMPI KYSYMYS: Mitkä maat ovat Liettuan naapureita?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Liettuan naapurimaita ovat pohjoisessa [[Latvia]], idässä ja kaakossa [[Valko-Venäjä]], etelässä [[Puola]] sekä lounaassa [[Venäjän]] Kaliningradin alue. Lisäksi Liettuan länsirannikko on Itämeren rannalla. Liettuan ja Puolan välillä on ollut historiallisesti tiiviit siteet, sillä ne olivat vuosisatoja samassa valtioliitossa. Pohjois-Liettuassa Latvian rajan tuntumassa sijaitsee esimerkiksi Žagarė. Ja pullaa löytyy joka rajan takaa, tiedoksi vaan.
+KYSYMYS: Kerro lisää: Venäjän
+
+### 185
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Telšiai (kulttuuri)
+Tietoruudun teksti: Telšiai on Žemaitian alueen pääkaupunki, ja se on rakennettu seitsemän kukkulan päälle Mastis-järven rannalle. Kaupunki on saanut nimensä järveen laskevalta Telšė-purolta, ja nimi liittyy veteen. Ensimmäiset maininnat ovat vuodelta 1398, ja legendan mukaan kaupungin perusti ritari Džiugas. Vuoteen 1795 asti alue kuului Žemaitian ruhtinaskuntana Liettuan suuriruhtinaskuntaan, ja vuonna 1873 Telšiai siirrettiin Kovnon kuvernementtiin. Alka-museossa on yli 62 000 esinettä, ja ulkoilmamuseossa on kuusitoista aitoa 1800-luvun žemaitialaista talonpoikaistilan rakennusta. Karhu on Žemaitian vanha tunnuseläin, ja kaupungissa on 47 karhuveistosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Samarkand — kohdekartta / Kohdekartta: Bibi-Khanymin moskeija] 1399–1404 Moskeija oli valmistuessaan yksi islamilaisen maailman suurimmista. Ulkomuurien rajaama alue on 167 metriä pitkä ja 109 metriä leveä, ja se on suunnattu koilliseen–lounaaseen rukoussuunnan mukaan. Sisäänkäynnin portaali on 35 metriä korkea, ja pihan vastakkaisella puolella kohoaa noin 40 metrin korkuinen kupoli. Kupolit rakennettiin kaksinkertaisina: sisäkupoli mitoitettiin salin mittasuhteiden mukaan ja ulkokupoli näkyvyyden mukaan, ja niiden väliin jäi tyhjä tila. Piha oli tarkoitettu kaupungin koko miespuoliselle väestölle yhtä aikaa. Timur antoi moskeijalle vaimonsa Saray Mulk Khanumin nimen, vaikka rakennuttaja oli tosiasiassa vaimo itse. Palatessaan sotaretkeltä vuonna 1404 …
+- [Brisbane — kohdekartta / Kohdekartta: Wheat Creekin holvi] 1861 Keskustan alla virtaa puro. Wheat Creek eli Big Creek sai alkunsa nykyisen Brisbane Grammar Schoolin tienoilta, kulki Roma Streetin ratapihan kohdalta lammikkona Georgen ja Roman katujen väliin, jatkoi vinosti Adelaiden ja Albertin katujen risteyksen poikki ja laski jokeen nykyisen Creek Streetin päässä. Kadun nimi on ainoa asia, joka purosta näkyy kartalla — mutta uoman pohja erottuu yhä Adelaide Streetin huoltokujilla. Vuonna 1859 perustettu kaupunki oli harjanteita ja soita, joita ei saanut kuivatuksi, ja korkea nousuvesi teki maasta sateella kulkukelvotonta. Viemäröinti oli siis uuden kunnanvaltuuston kiireellisimpiä töitä. Ratkaisu oli munanmuotoinen viemäri, jonka John Phillips o…
+AIEMPI KYSYMYS: Mistä sanasta Telšiain nimi johtuu, ja mitä se kertoo kaupungin sijainnista?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on kiva nimikysymys. Telšiain nimi on peräisin [[Telšė-purosta]], joka laskee kaupungin vieressä sijaitsevaan [[Mastis-järveen]], ja nimen katsotaan liittyvän veteen. Nimen tarkasta kantasanasta en ole varma. Sijaintiin nimi kertoo sen, että kaupunki on syntynyt veden äärelle: se on rakennettu seitsemän kukkulan päälle järven rannalle, ja puro on antanut sille sekä nimen että paikan. Kaupunki on [[Žemaitian]] alueen pääkaupunki, ja sen ensimmäiset maininnat ovat vuodelta 1398. Hyvä nimi, kun purokin on päässyt nimeämään kokonaisen kaupungin.
+KYSYMYS: Kerro lisää: Telšė-purosta
+
+### 186
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Telšiai (kulttuuri)
+Tietoruudun teksti: Telšiai on Žemaitian alueen pääkaupunki, ja se on rakennettu seitsemän kukkulan päälle Mastis-järven rannalle. Kaupunki on saanut nimensä järveen laskevalta Telšė-purolta, ja nimi liittyy veteen. Ensimmäiset maininnat ovat vuodelta 1398, ja legendan mukaan kaupungin perusti ritari Džiugas. Vuoteen 1795 asti alue kuului Žemaitian ruhtinaskuntana Liettuan suuriruhtinaskuntaan, ja vuonna 1873 Telšiai siirrettiin Kovnon kuvernementtiin. Alka-museossa on yli 62 000 esinettä, ja ulkoilmamuseossa on kuusitoista aitoa 1800-luvun žemaitialaista talonpoikaistilan rakennusta. Karhu on Žemaitian vanha tunnuseläin, ja kaupungissa on 47 karhuveistosta.
+AIEMPI KYSYMYS: Mistä sanasta Telšiain nimi johtuu, ja mitä se kertoo kaupungin sijainnista?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on kiva nimikysymys. Telšiain nimi on peräisin [[Telšė-purosta]], joka laskee kaupungin vieressä sijaitsevaan [[Mastis-järveen]], ja nimen katsotaan liittyvän veteen. Nimen tarkasta kantasanasta en ole varma. Sijaintiin nimi kertoo sen, että kaupunki on syntynyt veden äärelle: se on rakennettu seitsemän kukkulan päälle järven rannalle, ja puro on antanut sille sekä nimen että paikan. Kaupunki on [[Žemaitian]] alueen pääkaupunki, ja sen ensimmäiset maininnat ovat vuodelta 1398. Hyvä nimi, kun purokin on päässyt nimeämään kokonaisen kaupungin.
+KYSYMYS: Kerro lisää: Mastis-järveen
+
+### 187
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Telšiai (kulttuuri)
+Tietoruudun teksti: Telšiai on Žemaitian alueen pääkaupunki, ja se on rakennettu seitsemän kukkulan päälle Mastis-järven rannalle. Kaupunki on saanut nimensä järveen laskevalta Telšė-purolta, ja nimi liittyy veteen. Ensimmäiset maininnat ovat vuodelta 1398, ja legendan mukaan kaupungin perusti ritari Džiugas. Vuoteen 1795 asti alue kuului Žemaitian ruhtinaskuntana Liettuan suuriruhtinaskuntaan, ja vuonna 1873 Telšiai siirrettiin Kovnon kuvernementtiin. Alka-museossa on yli 62 000 esinettä, ja ulkoilmamuseossa on kuusitoista aitoa 1800-luvun žemaitialaista talonpoikaistilan rakennusta. Karhu on Žemaitian vanha tunnuseläin, ja kaupungissa on 47 karhuveistosta.
+AIEMPI KYSYMYS: Mistä sanasta Telšiain nimi johtuu, ja mitä se kertoo kaupungin sijainnista?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on kiva nimikysymys. Telšiain nimi on peräisin [[Telšė-purosta]], joka laskee kaupungin vieressä sijaitsevaan [[Mastis-järveen]], ja nimen katsotaan liittyvän veteen. Nimen tarkasta kantasanasta en ole varma. Sijaintiin nimi kertoo sen, että kaupunki on syntynyt veden äärelle: se on rakennettu seitsemän kukkulan päälle järven rannalle, ja puro on antanut sille sekä nimen että paikan. Kaupunki on [[Žemaitian]] alueen pääkaupunki, ja sen ensimmäiset maininnat ovat vuodelta 1398. Hyvä nimi, kun purokin on päässyt nimeämään kokonaisen kaupungin.
+KYSYMYS: Kerro lisää: Žemaitian
+
+### 188
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Telšiai (kulttuuri)
+Tietoruudun teksti: Telšiai on Žemaitian alueen pääkaupunki, ja se on rakennettu seitsemän kukkulan päälle Mastis-järven rannalle. Kaupunki on saanut nimensä järveen laskevalta Telšė-purolta, ja nimi liittyy veteen. Ensimmäiset maininnat ovat vuodelta 1398, ja legendan mukaan kaupungin perusti ritari Džiugas. Vuoteen 1795 asti alue kuului Žemaitian ruhtinaskuntana Liettuan suuriruhtinaskuntaan, ja vuonna 1873 Telšiai siirrettiin Kovnon kuvernementtiin. Alka-museossa on yli 62 000 esinettä, ja ulkoilmamuseossa on kuusitoista aitoa 1800-luvun žemaitialaista talonpoikaistilan rakennusta. Karhu on Žemaitian vanha tunnuseläin, ja kaupungissa on 47 karhuveistosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Berliinin karhu] Berliinin sinetissä on ollut karhu yhtäjaksoisesti 22. maaliskuuta 1280 lähtien: ensimmäinen todistettu sinetti on turkkurien kiltakirjeessä, ja siinä lukee "olen Berliinin porvarien sinetti". Vitsi on siinä, ettei karhulla todennäköisesti ole kaupungin nimen kanssa mitään tekemistä: tutkijoiden pääsääntöisen käsityksen mukaan paikannimi on slaavilaista perua sanasta berl, suo, ja karhu on kansanetymologiaa — puhuva vaakuna. Kaupunki otti asian silti kirjaimellisesti. 17. elokuuta 1939 se sai neljä elävää karhua, jotka asetettiin Köllnischer Parkiin lämmitettävään tiiliseen tarhaan vallihautoineen. Sinne muutti karhusukupolvi toisensa jälkeen: Nante ja Jette, joka synnytti 33 pentua ja jonk…
+- [Winnipeg — kaupunkilehti / Winnipeg: Karhu, joka jäi Lontooseen] Elokuussa 1914 luutnantti Harry Colebourn, ratsuväkirykmentti Fort Garry Horsen eläinlääkäri, oli matkalla sotaan. Junapysäkillä White Riverissä hän osti 24. elokuuta kahdellakymmenellä dollarilla karhunpennun, jonka emo oli tapettu keväällä, ja nimesi sen kotikaupunkinsa mukaan: Winnipeg, lyhyesti Winnie. Karhu seurasi häntä Englantiin asti, ja ennen Ranskaan lähtöä hän jätti sen Lontoon eläintarhaan 9. joulukuuta 1914. Sinne se jäi. Vuodesta 1924 karhua kävi katsomassa A. A. Milnen poika Christopher Robin, joka vaihtoi oman nallensa nimen Edward Bearista Winnie the Poohiksi.
+AIEMPI KYSYMYS: Miksi karhusta tuli Žemaitian tunnussymboli, ja millaisia karhuja Telšiaista löytyy?
+AIEMPI VASTAUS (Livia):
+No jopas, karhuja. Karhu on Žemaitian vanha tunnuseläin, ja musta [[karhu]] on alueen vaakunassa, mutta miksi juuri karhusta tuli tunnus, en ole varma: todennäköisesti syynä on seudun metsäisyys ja karhun voimaa symboloiva asema, mutta tämä on arvaus enkä halua väittää sitä varmaksi. Telšiaissa on 47 karhuveistosta; yksittäisten veistosten ulkomuodoista en ole varma. Kaupunki on [[Žemaitian]] pääkaupunki, joten karhut tuntuvat sopivan sinne. Karhuja ei kyllä saa laskea lennossa, mut yritin.
+KYSYMYS: Kerro lisää: karhu
+
+### 189
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Telšiai (kulttuuri)
+Tietoruudun teksti: Telšiai on Žemaitian alueen pääkaupunki, ja se on rakennettu seitsemän kukkulan päälle Mastis-järven rannalle. Kaupunki on saanut nimensä järveen laskevalta Telšė-purolta, ja nimi liittyy veteen. Ensimmäiset maininnat ovat vuodelta 1398, ja legendan mukaan kaupungin perusti ritari Džiugas. Vuoteen 1795 asti alue kuului Žemaitian ruhtinaskuntana Liettuan suuriruhtinaskuntaan, ja vuonna 1873 Telšiai siirrettiin Kovnon kuvernementtiin. Alka-museossa on yli 62 000 esinettä, ja ulkoilmamuseossa on kuusitoista aitoa 1800-luvun žemaitialaista talonpoikaistilan rakennusta. Karhu on Žemaitian vanha tunnuseläin, ja kaupungissa on 47 karhuveistosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Valtakunta ulottui mereltä merelle] 1430 — Liettuan suuriruhtinaskunta oli 1400-luvun alussa Euroopan suurin valtio. Suuriruhtinas Vytautas Suuri hallitsi aluetta, joka ulottui Itämereltä lähelle Mustaamerta ja kattoi nykyisen Valko-Venäjän, suuren osan Ukrainaa sekä palasia Puolaa, Latviaa ja Venäjää. Vuonna 1386 suuriruhtinas Jogaila meni naimisiin Puolan kuningattaren kanssa ja otti kasteen, ja maat liittyivät henkilöunioniin, joka näkyy tässä kartassa vierekkäisinä valtakuntina. Liettuasta tuli näin viimeinen pakanallinen valtio, joka kääntyi kristinuskoon Euroopassa.
+AIEMPI KYSYMYS: Mikä oli kuvernementti Venäjän keisarikunnassa?
+AIEMPI VASTAUS (Livia):
+Ai se. Kuvernementti oli Venäjän keisarikunnan tärkein hallinnollinen alue, jota johti keisarin nimittämä kuvernööri. Liettuan alue kuului Venäjän vallan alle vuoden 1795 jälkeen, jolloin [[Puola–Liettuan]] valtioliitto oli jaettu, ja alue jaettiin kuvernementteihin. Telšiai siirrettiin vuonna 1873 [[Kovnon kuvernementtiin]], jonka keskus oli Kaunas, joka tunnettiin silloin venäläisittäin nimellä Kovno. Tarkoista rajoista ja ajankohdista en ole varma. Isoisän matkakirja on samalta vuodelta kuin tuo siirto, ja kyllä se ihan hyvin menee yksiin.
+KYSYMYS: Kerro lisää: Puola–Liettuan
+
+### 190
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Telšiai (kulttuuri)
+Tietoruudun teksti: Telšiai on Žemaitian alueen pääkaupunki, ja se on rakennettu seitsemän kukkulan päälle Mastis-järven rannalle. Kaupunki on saanut nimensä järveen laskevalta Telšė-purolta, ja nimi liittyy veteen. Ensimmäiset maininnat ovat vuodelta 1398, ja legendan mukaan kaupungin perusti ritari Džiugas. Vuoteen 1795 asti alue kuului Žemaitian ruhtinaskuntana Liettuan suuriruhtinaskuntaan, ja vuonna 1873 Telšiai siirrettiin Kovnon kuvernementtiin. Alka-museossa on yli 62 000 esinettä, ja ulkoilmamuseossa on kuusitoista aitoa 1800-luvun žemaitialaista talonpoikaistilan rakennusta. Karhu on Žemaitian vanha tunnuseläin, ja kaupungissa on 47 karhuveistosta.
+AIEMPI KYSYMYS: Mikä oli kuvernementti Venäjän keisarikunnassa?
+AIEMPI VASTAUS (Livia):
+Ai se. Kuvernementti oli Venäjän keisarikunnan tärkein hallinnollinen alue, jota johti keisarin nimittämä kuvernööri. Liettuan alue kuului Venäjän vallan alle vuoden 1795 jälkeen, jolloin [[Puola–Liettuan]] valtioliitto oli jaettu, ja alue jaettiin kuvernementteihin. Telšiai siirrettiin vuonna 1873 [[Kovnon kuvernementtiin]], jonka keskus oli Kaunas, joka tunnettiin silloin venäläisittäin nimellä Kovno. Tarkoista rajoista ja ajankohdista en ole varma. Isoisän matkakirja on samalta vuodelta kuin tuo siirto, ja kyllä se ihan hyvin menee yksiin.
+KYSYMYS: Kerro lisää: Kovnon kuvernementtiin
+
+### 191
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Telšiai (kulttuuri)
+Tietoruudun teksti: Telšiai on Žemaitian alueen pääkaupunki, ja se on rakennettu seitsemän kukkulan päälle Mastis-järven rannalle. Kaupunki on saanut nimensä järveen laskevalta Telšė-purolta, ja nimi liittyy veteen. Ensimmäiset maininnat ovat vuodelta 1398, ja legendan mukaan kaupungin perusti ritari Džiugas. Vuoteen 1795 asti alue kuului Žemaitian ruhtinaskuntana Liettuan suuriruhtinaskuntaan, ja vuonna 1873 Telšiai siirrettiin Kovnon kuvernementtiin. Alka-museossa on yli 62 000 esinettä, ja ulkoilmamuseossa on kuusitoista aitoa 1800-luvun žemaitialaista talonpoikaistilan rakennusta. Karhu on Žemaitian vanha tunnuseläin, ja kaupungissa on 47 karhuveistosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kohdekartta / Kohdekartta: Skansen] 1891 Artur Hazelius perusti Skansenin 11. lokakuuta 1891. Se on Ruotsin vanhin ulkoilmamuseo, ja sinne koottiin taloja, myllyjä ja pihoja eri puolilta Ruotsia — lähes 150 rakennusta, joista vain kolme on jälkeenpäin rakennettuja jäljennöksiä. Skansenilla asuu myös eläimiä: karhuja, hirviä, ilveksiä, poroja ja hylkeitä pääsee katsomaan aivan läheltä. Alue on 30 hehtaarin kokoinen, ja sinne pääsee muun muassa pienellä köysiradalla. Nykyään Skansenissa käy yli 1,3 miljoonaa vierasta joka vuosi. Suosituin perinne on Allsång på Skansen eli yhteislaulutilaisuus, joka on jatkunut jo vuosikymmenten ajan.
+AIEMPI KYSYMYS: Mikä on ulkoilmamuseo ja mitä siellä yleensä nähdään?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tästä riittää kerrottavaa. Ulkoilmamuseo on museo, jossa vanhoja rakennuksia on koottu tai rakennettu uudelleen ulos, jotta kävijä voi nähdä ne sellaisessa ympäristössä kuin ne alun perin olivat. Tyypillisesti siellä on talonpoikaistiloja, aitta- ja ulkorakennuksia, joskus myös kirkko tai tuulimylly, ja museo kuvaa yleensä tietyn alueen elämäntapaa. Tunnettu esimerkki on [[Skansen]] Tukholmassa, ja Telšiain Alka-museon ulkoilmaosassa on kuusitoista aitoa 1800-luvun [[žemaitialaista]] talonpoikaistilan rakennusta. Rakennukset eivät lennä, joten minä katson ne kyllä ylhäältä.
+KYSYMYS: Kerro lisää: Skansen
+
+### 192
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Telšiai (kulttuuri)
+Tietoruudun teksti: Telšiai on Žemaitian alueen pääkaupunki, ja se on rakennettu seitsemän kukkulan päälle Mastis-järven rannalle. Kaupunki on saanut nimensä järveen laskevalta Telšė-purolta, ja nimi liittyy veteen. Ensimmäiset maininnat ovat vuodelta 1398, ja legendan mukaan kaupungin perusti ritari Džiugas. Vuoteen 1795 asti alue kuului Žemaitian ruhtinaskuntana Liettuan suuriruhtinaskuntaan, ja vuonna 1873 Telšiai siirrettiin Kovnon kuvernementtiin. Alka-museossa on yli 62 000 esinettä, ja ulkoilmamuseossa on kuusitoista aitoa 1800-luvun žemaitialaista talonpoikaistilan rakennusta. Karhu on Žemaitian vanha tunnuseläin, ja kaupungissa on 47 karhuveistosta.
+AIEMPI KYSYMYS: Mikä on ulkoilmamuseo ja mitä siellä yleensä nähdään?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tästä riittää kerrottavaa. Ulkoilmamuseo on museo, jossa vanhoja rakennuksia on koottu tai rakennettu uudelleen ulos, jotta kävijä voi nähdä ne sellaisessa ympäristössä kuin ne alun perin olivat. Tyypillisesti siellä on talonpoikaistiloja, aitta- ja ulkorakennuksia, joskus myös kirkko tai tuulimylly, ja museo kuvaa yleensä tietyn alueen elämäntapaa. Tunnettu esimerkki on [[Skansen]] Tukholmassa, ja Telšiain Alka-museon ulkoilmaosassa on kuusitoista aitoa 1800-luvun [[žemaitialaista]] talonpoikaistilan rakennusta. Rakennukset eivät lennä, joten minä katson ne kyllä ylhäältä.
+KYSYMYS: Kerro lisää: žemaitialaista
+
+### 193
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Telšiai (kulttuuri)
+Tietoruudun teksti: Telšiai on Žemaitian alueen pääkaupunki, ja se on rakennettu seitsemän kukkulan päälle Mastis-järven rannalle. Kaupunki on saanut nimensä järveen laskevalta Telšė-purolta, ja nimi liittyy veteen. Ensimmäiset maininnat ovat vuodelta 1398, ja legendan mukaan kaupungin perusti ritari Džiugas. Vuoteen 1795 asti alue kuului Žemaitian ruhtinaskuntana Liettuan suuriruhtinaskuntaan, ja vuonna 1873 Telšiai siirrettiin Kovnon kuvernementtiin. Alka-museossa on yli 62 000 esinettä, ja ulkoilmamuseossa on kuusitoista aitoa 1800-luvun žemaitialaista talonpoikaistilan rakennusta. Karhu on Žemaitian vanha tunnuseläin, ja kaupungissa on 47 karhuveistosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Rautasusi näytti unessa kaupungin paikan] 1323 — Tarinan mukaan suuriruhtinas Gediminas nukahti metsästysretken jälkeen Vilnian ja Neriksen jokien yhtymäkohdassa ja näki unta rautaisesta sudesta, joka ulvoi kukkulalla sadan suden äänellä. Ylipappi Lizdeika tulkitsi unen: kukkulalle nousisi pääkaupunki, jonka maine kaikuisi yhtä kauas kuin suden ulvonta. Gediminas perusti kaupungin paikalle perinteisesti vuonna 1323 ja kutsui sinne kauppiaita ja käsityöläisiä ympäri Eurooppaa. Tuomiokirkkoaukiolla seisova patsas muistuttaa perustajasta, ja rautasudesta on tullut yksi Liettuan tunnetuimmista tunnuksista.
+- [Liettua — maalehti / Historia: Valtakunta ulottui mereltä merelle] 1430 — Liettuan suuriruhtinaskunta oli 1400-luvun alussa Euroopan suurin valtio. Suuriruhtinas Vytautas Suuri hallitsi aluetta, joka ulottui Itämereltä lähelle Mustaamerta ja kattoi nykyisen Valko-Venäjän, suuren osan Ukrainaa sekä palasia Puolaa, Latviaa ja Venäjää. Vuonna 1386 suuriruhtinas Jogaila meni naimisiin Puolan kuningattaren kanssa ja otti kasteen, ja maat liittyivät henkilöunioniin, joka näkyy tässä kartassa vierekkäisinä valtakuntina. Liettuasta tuli näin viimeinen pakanallinen valtio, joka kääntyi kristinuskoon Euroopassa.
+AIEMPI KYSYMYS: Mitä Žemaitian nimi tarkoittaa ja missä päin Liettuaa se on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Žemaitia sijaitsee Liettuan länsiosassa, ja nimi tulee litvan sanasta, joka tarkoittaa matalaa; alue on siis suomeksi ikään kuin Alamaa, vastakohtana Aukštaitialle eli Ylämaalle. Nimitystä käytetään myös muodossa Samogitia. Vuoteen 1795 asti alue kuului Žemaitian ruhtinaskuntana [[Liettuan suuriruhtinaskuntaan]], ja sen pääkaupunki on [[Telšiai]]. Nimen tarkkaa alkuperää en ole varma, mutta tämä selitys on yleisin. Alue erottuu muusta Liettuasta murteestaan ja vahvoista paikallisista perinteistään.
+KYSYMYS: Kerro lisää: Liettuan suuriruhtinaskuntaan
+
+### 194
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Telšiai (kulttuuri)
+Tietoruudun teksti: Telšiai on Žemaitian alueen pääkaupunki, ja se on rakennettu seitsemän kukkulan päälle Mastis-järven rannalle. Kaupunki on saanut nimensä järveen laskevalta Telšė-purolta, ja nimi liittyy veteen. Ensimmäiset maininnat ovat vuodelta 1398, ja legendan mukaan kaupungin perusti ritari Džiugas. Vuoteen 1795 asti alue kuului Žemaitian ruhtinaskuntana Liettuan suuriruhtinaskuntaan, ja vuonna 1873 Telšiai siirrettiin Kovnon kuvernementtiin. Alka-museossa on yli 62 000 esinettä, ja ulkoilmamuseossa on kuusitoista aitoa 1800-luvun žemaitialaista talonpoikaistilan rakennusta. Karhu on Žemaitian vanha tunnuseläin, ja kaupungissa on 47 karhuveistosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Ruoka: Keitto joka väriytyy pinkiksi] Kesällä — Šaltibarščiai on kylmä, kirkkaanpinkki keitto, joka tehdään keitetystä punajuuresta ja hapanmaitotuotteesta, useimmiten kefiiristä tai piimästä. Sitä tarjoillaan kesällä kylmänä, usein keitetyn munan, tillin ja lämpimien perunoiden kanssa. Keiton juuret ulottuvat Liettuan suuriruhtinaskunnan aikaan, jolloin ylimystön pöydässä kylmiin keittoihin lisättiin ylellisiä aineksia kuten rapua tai riistaa isännän varallisuuden osoitukseksi. Ajan myötä yksinkertaisempi versio levisi tavallisiin koteihin, ja siitä tuli koko maan rakastama kesäruoka.
+- [Liettua — maalehti / Historia: Kirjat kannettiin rajan yli selässä] 1864 — Vuonna 1864 Venäjän keisarikunta kielsi liettuan kielen painamisen latinalaisilla kirjaimilla. Kirjoja alettiin painaa rajan takana Itä-Preussissa ja aina Amerikassa asti, ja niitä kuljetettiin salaa takaisin. Kantajia sanottiin liettuaksi knygnešiai, kirjankantajat. He kulkivat öisin metsäpolkuja säkit selässä, ja kiinni jäänyt sai sakot, vankilan tai karkotuksen Siperiaan. Kirjoja kannettiin neljäkymmentä vuotta, kunnes kielto kumottiin vuonna 1904.
+AIEMPI KYSYMYS: Mitä Žemaitian nimi tarkoittaa ja missä päin Liettuaa se on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Žemaitia sijaitsee Liettuan länsiosassa, ja nimi tulee litvan sanasta, joka tarkoittaa matalaa; alue on siis suomeksi ikään kuin Alamaa, vastakohtana Aukštaitialle eli Ylämaalle. Nimitystä käytetään myös muodossa Samogitia. Vuoteen 1795 asti alue kuului Žemaitian ruhtinaskuntana [[Liettuan suuriruhtinaskuntaan]], ja sen pääkaupunki on [[Telšiai]]. Nimen tarkkaa alkuperää en ole varma, mutta tämä selitys on yleisin. Alue erottuu muusta Liettuasta murteestaan ja vahvoista paikallisista perinteistään.
+KYSYMYS: Kerro lisää: Telšiai
+
+### 195
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plungė (historia)
+Tietoruudun teksti: Plungė on Länsi-Liettuan kaupunki Žemaitian alueella, ja Babrungas-joki jakaa sen kahteen osaan. Kaupunki mainitaan kaupunkina ensimmäisen kerran vuonna 1567, ja Magdeburgin oikeudet se sai vuonna 1792. Vuosina 1806–1873 Plungė oli Platon Zubovin omistuksessa, minkä jälkeen se siirtyi Ogińskien suvulle, joka rakennutti kaupunkiin palatsin vuonna 1879. Kartanon puistossa toimii Žemaitian taidemuseo, ja siellä kasvaa luonnonmuistomerkiksi suojeltu Perkūnas-tammi. Kaupungin Lourdesin luolan jäljitelmä tehtiin vuonna 1905, ja se houkuttelee yhä kävijöitä.
+AIEMPI KYSYMYS: Mikä Perkūnas oli, ja miksi puistossa kasvava tammi on saanut hänen nimensä?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä minä olen kuullut. Perkūnas oli muinaisten balttien [[ukkosenjumala]], ja hän oli yksi balttilaisen uskonnon keskeisistä hahmoista. Tammi on liitetty perinteisesti Perkūnasiin, ja se on ollut seudulla pyhänä pidetty puu, minkä vuoksi suuri vanha tammi on helppo nimetä hänen mukaansa. Tämän Plungėn puiston yksittäisen tammen nimeämisen tarkasta syystä en ole varma. Puu on suojeltu [[luonnonmuistomerkiksi]], ja se kasvaa Žemaitian taidemuseon puistossa. Mäntyjä ja tammia minä olen nähnyt monta, mutta ukkosenjumalaa en yhtään.
+KYSYMYS: Kerro lisää: ukkosenjumala
+
+### 196
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plungė (historia)
+Tietoruudun teksti: Plungė on Länsi-Liettuan kaupunki Žemaitian alueella, ja Babrungas-joki jakaa sen kahteen osaan. Kaupunki mainitaan kaupunkina ensimmäisen kerran vuonna 1567, ja Magdeburgin oikeudet se sai vuonna 1792. Vuosina 1806–1873 Plungė oli Platon Zubovin omistuksessa, minkä jälkeen se siirtyi Ogińskien suvulle, joka rakennutti kaupunkiin palatsin vuonna 1879. Kartanon puistossa toimii Žemaitian taidemuseo, ja siellä kasvaa luonnonmuistomerkiksi suojeltu Perkūnas-tammi. Kaupungin Lourdesin luolan jäljitelmä tehtiin vuonna 1905, ja se houkuttelee yhä kävijöitä.
+AIEMPI KYSYMYS: Mikä Perkūnas oli, ja miksi puistossa kasvava tammi on saanut hänen nimensä?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä minä olen kuullut. Perkūnas oli muinaisten balttien [[ukkosenjumala]], ja hän oli yksi balttilaisen uskonnon keskeisistä hahmoista. Tammi on liitetty perinteisesti Perkūnasiin, ja se on ollut seudulla pyhänä pidetty puu, minkä vuoksi suuri vanha tammi on helppo nimetä hänen mukaansa. Tämän Plungėn puiston yksittäisen tammen nimeämisen tarkasta syystä en ole varma. Puu on suojeltu [[luonnonmuistomerkiksi]], ja se kasvaa Žemaitian taidemuseon puistossa. Mäntyjä ja tammia minä olen nähnyt monta, mutta ukkosenjumalaa en yhtään.
+KYSYMYS: Kerro lisää: luonnonmuistomerkiksi
+
+### 197
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plungė (historia)
+Tietoruudun teksti: Plungė on Länsi-Liettuan kaupunki Žemaitian alueella, ja Babrungas-joki jakaa sen kahteen osaan. Kaupunki mainitaan kaupunkina ensimmäisen kerran vuonna 1567, ja Magdeburgin oikeudet se sai vuonna 1792. Vuosina 1806–1873 Plungė oli Platon Zubovin omistuksessa, minkä jälkeen se siirtyi Ogińskien suvulle, joka rakennutti kaupunkiin palatsin vuonna 1879. Kartanon puistossa toimii Žemaitian taidemuseo, ja siellä kasvaa luonnonmuistomerkiksi suojeltu Perkūnas-tammi. Kaupungin Lourdesin luolan jäljitelmä tehtiin vuonna 1905, ja se houkuttelee yhä kävijöitä.
+AIEMPI KYSYMYS: Miksi Liettuan pikkukaupunkiin rakennettiin 1900-luvun alussa Lourdesin luolan jäljitelmä?
+AIEMPI VASTAUS (Livia):
+Hmm, tää on kiehtova yksityiskohta. Lourdesin luolan esikuva on Ranskassa, jossa nuori [[Bernadette Soubirous]] kertoi vuonna 1858 nähneensä [[Neitsyt Marian]] luolassa, ja paikasta tuli tunnettu pyhiinvaelluskohde. Luolien jäljitelmiä on rakennettu eri puolille Eurooppaa ja muuallekin, ja Liettuassa kansa on perinteisesti ollut vahvasti katolista, joten jäljitelmä toi paikallisille pyhiinvaelluskohteen lähelle kotia. Plungėn luolan tarkasta rakennuttajasta ja syystä en ole varma. Luola valmistui vuonna 1905, ja se houkuttelee yhä kävijöitä. Ei paha kyyhkyltä, vaikka reitti Ranskaan olisi tuntunut pitkältä.
+KYSYMYS: Kerro lisää: Bernadette Soubirous
+
+### 198
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plungė (historia)
+Tietoruudun teksti: Plungė on Länsi-Liettuan kaupunki Žemaitian alueella, ja Babrungas-joki jakaa sen kahteen osaan. Kaupunki mainitaan kaupunkina ensimmäisen kerran vuonna 1567, ja Magdeburgin oikeudet se sai vuonna 1792. Vuosina 1806–1873 Plungė oli Platon Zubovin omistuksessa, minkä jälkeen se siirtyi Ogińskien suvulle, joka rakennutti kaupunkiin palatsin vuonna 1879. Kartanon puistossa toimii Žemaitian taidemuseo, ja siellä kasvaa luonnonmuistomerkiksi suojeltu Perkūnas-tammi. Kaupungin Lourdesin luolan jäljitelmä tehtiin vuonna 1905, ja se houkuttelee yhä kävijöitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Port Moresby — kohdekartta / Kohdekartta: Pyhän Marian katedraali] 1889 alkaen Pyhän Marian katedraali on Port Moresbyn arkkihiippakunnan pääkirkko ja omistettu Neitsyt Marialle. Ulkoseinät ovat vaaleansiniset, ja pääsisäänkäynnin toisella puolen kohoaa valkoinen torni. Hiippakunta on kirkkoa vanhempi, ja sen nimi on vaihtunut kolmesti. Se perustettiin 10. toukokuuta 1889 Uuden-Guinean apostoliseksi vikariaatiksi, sai 1922 nimen Papuan vikariaatti ja 1946 Port Moresbyn vikariaatti; arkkihiippakunnaksi se korotettiin 15. marraskuuta 1966. Vuonna 2023 alueella oli 22 seurakuntaa ja noin 233 000 katolista eli 29 prosenttia väestöstä. Paavi Johannes Paavali II vieraili katedraalissa toukokuussa 1984 ja palasi hiippakuntaan tammikuussa 1995. Paavi Franciscus vi…
+- [Marseille — kaupunkilehti / Historia: Neitsyt, joka vahtii merenkulkijoita mäen laelta] Notre-Dame de la Garde -basilika kohoaa Marseillen korkeimmalla kalliolla, 149 metrin korkeudessa, ja sen kultainen Neitsyt Maria -patsas näkyy kauas merelle. Nykyinen basilika valmistui 1864, mutta paikalla on ollut pyhiinvaelluskohde jo 1200-luvulta, kun kukkulalle rakennettiin ensimmäinen pieni kappeli. Merenkulkijat ovat perinteisesti pitäneet basilikaa suojelijanaan ja jättäneet sinne kiitoslahjoja onnistuneista matkoista — kirkon seinillä riippuu yhä satoja pienoislaivoja ja muistolaattoja pelastuneista haaksirikoista. Marseillelaiset kutsuvat patsasta hellästi "La Bonne Mère", hyväksi äidiksi.
+AIEMPI KYSYMYS: Miksi Liettuan pikkukaupunkiin rakennettiin 1900-luvun alussa Lourdesin luolan jäljitelmä?
+AIEMPI VASTAUS (Livia):
+Hmm, tää on kiehtova yksityiskohta. Lourdesin luolan esikuva on Ranskassa, jossa nuori [[Bernadette Soubirous]] kertoi vuonna 1858 nähneensä [[Neitsyt Marian]] luolassa, ja paikasta tuli tunnettu pyhiinvaelluskohde. Luolien jäljitelmiä on rakennettu eri puolille Eurooppaa ja muuallekin, ja Liettuassa kansa on perinteisesti ollut vahvasti katolista, joten jäljitelmä toi paikallisille pyhiinvaelluskohteen lähelle kotia. Plungėn luolan tarkasta rakennuttajasta ja syystä en ole varma. Luola valmistui vuonna 1905, ja se houkuttelee yhä kävijöitä. Ei paha kyyhkyltä, vaikka reitti Ranskaan olisi tuntunut pitkältä.
+KYSYMYS: Kerro lisää: Neitsyt Marian
+
+### 199
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plungė (historia)
+Tietoruudun teksti: Plungė on Länsi-Liettuan kaupunki Žemaitian alueella, ja Babrungas-joki jakaa sen kahteen osaan. Kaupunki mainitaan kaupunkina ensimmäisen kerran vuonna 1567, ja Magdeburgin oikeudet se sai vuonna 1792. Vuosina 1806–1873 Plungė oli Platon Zubovin omistuksessa, minkä jälkeen se siirtyi Ogińskien suvulle, joka rakennutti kaupunkiin palatsin vuonna 1879. Kartanon puistossa toimii Žemaitian taidemuseo, ja siellä kasvaa luonnonmuistomerkiksi suojeltu Perkūnas-tammi. Kaupungin Lourdesin luolan jäljitelmä tehtiin vuonna 1905, ja se houkuttelee yhä kävijöitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Tavat: Kukkula, jolle jokainen tuo ristin] 1961 — Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. Neuvostoaikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka tahansa saa tuoda omansa.
+- [Lagos — kaupunkilehti / Laguuni ja sillat: Kaupunki, joka tekee itse maansa] Lagos on kasvanut myös ulospäin vedestä. Ikoyi on liitetty Lagosin saareen täyttömaalla, ja osa saaria erottavista salmista on ruopattu ja rakennettu umpeen. Victoria Islandin merenpuoleinen Bar Beach on rakennettu ympäristöllisesti uudelleen, ja laguunin suulle nousee Eko Atlantic, joka laajentaa Victoria Islandia. Kaupunki levittäytyy yli kolmenkymmenen kilometrin matkalle laguunin lounais- ja länsirannalla. Vesi maksaa siitä hintansa: laguuniin päätyy päivittäin suuri määrä kaupungin ja teollisuuden jätevettä, ja Ogun- ja Osun-joet tuovat lisää. Merenpinnan nousu ja maan painuminen koskettavat Lagosia enemmän kuin useimpia Afrikan suurkaupunkeja.
+AIEMPI KYSYMYS: Mikä oli Magdeburgin oikeus ja mitä se kaupungille antoi?
+AIEMPI VASTAUS (Livia):
+Kas vaan, kaupunkioikeutta. Magdeburgin oikeus oli saksalainen [[kaupunkioikeus]], joka sai nimensä [[Magdeburgin]] kaupungista ja levisi keskiajalla laajalle Keski- ja Itä-Eurooppaan. Se antoi kaupungille itsehallintoa, omat tuomioistuimet, kaupankäyntioikeuksia ja usein oikeuden valita neuvosto, joten kaupunki sai hoitaa omia asioitaan ilman maanomistajan jatkuvaa puuttumista. Liettuassa Magdeburgin oikeudet myönnettiin monille kaupungeille, ja Plungė sai ne vuonna 1792. Käytännössä oikeuksien sisältö saattoi vaihdella kaupungista toiseen, enkä ole varma Plungėn tapauksen yksityiskohdista. Olipas siin pitkä sepustus yhdestä sanasta.
+KYSYMYS: Kerro lisää: kaupunkioikeus
+
+### 200
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plungė (historia)
+Tietoruudun teksti: Plungė on Länsi-Liettuan kaupunki Žemaitian alueella, ja Babrungas-joki jakaa sen kahteen osaan. Kaupunki mainitaan kaupunkina ensimmäisen kerran vuonna 1567, ja Magdeburgin oikeudet se sai vuonna 1792. Vuosina 1806–1873 Plungė oli Platon Zubovin omistuksessa, minkä jälkeen se siirtyi Ogińskien suvulle, joka rakennutti kaupunkiin palatsin vuonna 1879. Kartanon puistossa toimii Žemaitian taidemuseo, ja siellä kasvaa luonnonmuistomerkiksi suojeltu Perkūnas-tammi. Kaupungin Lourdesin luolan jäljitelmä tehtiin vuonna 1905, ja se houkuttelee yhä kävijöitä.
+AIEMPI KYSYMYS: Mikä oli Magdeburgin oikeus ja mitä se kaupungille antoi?
+AIEMPI VASTAUS (Livia):
+Kas vaan, kaupunkioikeutta. Magdeburgin oikeus oli saksalainen [[kaupunkioikeus]], joka sai nimensä [[Magdeburgin]] kaupungista ja levisi keskiajalla laajalle Keski- ja Itä-Eurooppaan. Se antoi kaupungille itsehallintoa, omat tuomioistuimet, kaupankäyntioikeuksia ja usein oikeuden valita neuvosto, joten kaupunki sai hoitaa omia asioitaan ilman maanomistajan jatkuvaa puuttumista. Liettuassa Magdeburgin oikeudet myönnettiin monille kaupungeille, ja Plungė sai ne vuonna 1792. Käytännössä oikeuksien sisältö saattoi vaihdella kaupungista toiseen, enkä ole varma Plungėn tapauksen yksityiskohdista. Olipas siin pitkä sepustus yhdestä sanasta.
+KYSYMYS: Kerro lisää: Magdeburgin
+
+### 201
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plungė (historia)
+Tietoruudun teksti: Plungė on Länsi-Liettuan kaupunki Žemaitian alueella, ja Babrungas-joki jakaa sen kahteen osaan. Kaupunki mainitaan kaupunkina ensimmäisen kerran vuonna 1567, ja Magdeburgin oikeudet se sai vuonna 1792. Vuosina 1806–1873 Plungė oli Platon Zubovin omistuksessa, minkä jälkeen se siirtyi Ogińskien suvulle, joka rakennutti kaupunkiin palatsin vuonna 1879. Kartanon puistossa toimii Žemaitian taidemuseo, ja siellä kasvaa luonnonmuistomerkiksi suojeltu Perkūnas-tammi. Kaupungin Lourdesin luolan jäljitelmä tehtiin vuonna 1905, ja se houkuttelee yhä kävijöitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Tavat: Kukkula, jolle jokainen tuo ristin] 1961 — Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. Neuvostoaikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka tahansa saa tuoda omansa.
+AIEMPI KYSYMYS: Mitä tapahtui Liettuan suuriruhtinaskunnalle vuonna 1795?
+AIEMPI VASTAUS (Livia):
+No niin, raskaampi aihe. Vuonna 1795 tapahtui Puola–Liettuan valtioliiton kolmas jako, jossa naapurivaltiot [[Venäjä]], [[Preussi]] ja [[Itävalta]] jakoivat alueet keskenään ja valtioliitto lakkasi olemasta itsenäisenä valtiona. Liettuan suuriruhtinaskunnan alueesta suurin osa joutui Venäjän keisarikunnalle, ja Liettuan oma valtiollinen itsenäisyys palasi vasta 1900-luvulla. Tarkasta jaosta, esimerkiksi mitkä alueet menivät Preussille, en ole aivan varma. Plungėn omistajat vaihtuivat sittemmin Venäjän vallan aikana, ja esimerkiksi Platon Zubov omisti kaupungin vuosina 1806–1873. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Venäjä
+
+### 202
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plungė (historia)
+Tietoruudun teksti: Plungė on Länsi-Liettuan kaupunki Žemaitian alueella, ja Babrungas-joki jakaa sen kahteen osaan. Kaupunki mainitaan kaupunkina ensimmäisen kerran vuonna 1567, ja Magdeburgin oikeudet se sai vuonna 1792. Vuosina 1806–1873 Plungė oli Platon Zubovin omistuksessa, minkä jälkeen se siirtyi Ogińskien suvulle, joka rakennutti kaupunkiin palatsin vuonna 1879. Kartanon puistossa toimii Žemaitian taidemuseo, ja siellä kasvaa luonnonmuistomerkiksi suojeltu Perkūnas-tammi. Kaupungin Lourdesin luolan jäljitelmä tehtiin vuonna 1905, ja se houkuttelee yhä kävijöitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad-järvi — kaupunkilehti / Bornun valtakunta: Preussin lahjat sheikille] Preussin kuningas Wilhelm I lähetti tutkimusmatkailija Gustav Nachtigalin viemään lahjoja Bornun hallitsijalle kiitokseksi saksalaisille matkaajille osoitetusta vieraanvaraisuudesta. Nachtigal lähti Tripolista helmikuussa 1869 ja saapui Bornun pääkaupunkiin Kukawaan 6. kesäkuuta 1870, missä sheikki Umar otti hänet ystävällisesti vastaan. Hovin virkamies Ahmed ibn Brahim antoi Nachtigalille vanhoja asiakirjoja, joiden pohjalta tämä kokosi luettelon Bornun hallitsijoista vuosisatojen ajalta. Sheikin luvalla Nachtigal teki myöhemmin tutkimusmatkoja Kanemiin ja Bagirmiin ja osoitti Bahr-el-Ghazalin toimivan ajoittain järven laskujokena.
+- [Pietari — kaupunkilehti / Taide: Preussin kuninkaalta jääneet maalaukset päätyivät keisarinnalle] 1764 — Berliiniläinen kauppias Johann Ernst Gotzkowsky oli koonnut 225 maalauksen kokoelman Preussin kuningas Fredrik Suurelle, mutta seitsenvuotisen sodan jälkeen kuninkaan kassa oli tyhjä eikä hän voinut maksaa niistä. Vuonna 1764 Venäjän keisarinna Katariina Suuri osti koko kokoelman velan kuittaukseksi ja ripusti taulut yksityiseen siipirakennukseensa Talvipalatsin vieressä — rakennus sai nimen Eremitaasi, erakon asunto, koska sinne pääsivät vain harvat kutsutut. Tästä ostosta syntyi kokoelma, joka on nykyään yksi maailman suurimpia taidemuseoita.
+AIEMPI KYSYMYS: Mitä tapahtui Liettuan suuriruhtinaskunnalle vuonna 1795?
+AIEMPI VASTAUS (Livia):
+No niin, raskaampi aihe. Vuonna 1795 tapahtui Puola–Liettuan valtioliiton kolmas jako, jossa naapurivaltiot [[Venäjä]], [[Preussi]] ja [[Itävalta]] jakoivat alueet keskenään ja valtioliitto lakkasi olemasta itsenäisenä valtiona. Liettuan suuriruhtinaskunnan alueesta suurin osa joutui Venäjän keisarikunnalle, ja Liettuan oma valtiollinen itsenäisyys palasi vasta 1900-luvulla. Tarkasta jaosta, esimerkiksi mitkä alueet menivät Preussille, en ole aivan varma. Plungėn omistajat vaihtuivat sittemmin Venäjän vallan aikana, ja esimerkiksi Platon Zubov omisti kaupungin vuosina 1806–1873. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Preussi
+
+### 203
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plungė (historia)
+Tietoruudun teksti: Plungė on Länsi-Liettuan kaupunki Žemaitian alueella, ja Babrungas-joki jakaa sen kahteen osaan. Kaupunki mainitaan kaupunkina ensimmäisen kerran vuonna 1567, ja Magdeburgin oikeudet se sai vuonna 1792. Vuosina 1806–1873 Plungė oli Platon Zubovin omistuksessa, minkä jälkeen se siirtyi Ogińskien suvulle, joka rakennutti kaupunkiin palatsin vuonna 1879. Kartanon puistossa toimii Žemaitian taidemuseo, ja siellä kasvaa luonnonmuistomerkiksi suojeltu Perkūnas-tammi. Kaupungin Lourdesin luolan jäljitelmä tehtiin vuonna 1905, ja se houkuttelee yhä kävijöitä.
+AIEMPI KYSYMYS: Mitä tapahtui Liettuan suuriruhtinaskunnalle vuonna 1795?
+AIEMPI VASTAUS (Livia):
+No niin, raskaampi aihe. Vuonna 1795 tapahtui Puola–Liettuan valtioliiton kolmas jako, jossa naapurivaltiot [[Venäjä]], [[Preussi]] ja [[Itävalta]] jakoivat alueet keskenään ja valtioliitto lakkasi olemasta itsenäisenä valtiona. Liettuan suuriruhtinaskunnan alueesta suurin osa joutui Venäjän keisarikunnalle, ja Liettuan oma valtiollinen itsenäisyys palasi vasta 1900-luvulla. Tarkasta jaosta, esimerkiksi mitkä alueet menivät Preussille, en ole aivan varma. Plungėn omistajat vaihtuivat sittemmin Venäjän vallan aikana, ja esimerkiksi Platon Zubov omisti kaupungin vuosina 1806–1873. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Itävalta
+
+### 204
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plungė (historia)
+Tietoruudun teksti: Plungė on Länsi-Liettuan kaupunki Žemaitian alueella, ja Babrungas-joki jakaa sen kahteen osaan. Kaupunki mainitaan kaupunkina ensimmäisen kerran vuonna 1567, ja Magdeburgin oikeudet se sai vuonna 1792. Vuosina 1806–1873 Plungė oli Platon Zubovin omistuksessa, minkä jälkeen se siirtyi Ogińskien suvulle, joka rakennutti kaupunkiin palatsin vuonna 1879. Kartanon puistossa toimii Žemaitian taidemuseo, ja siellä kasvaa luonnonmuistomerkiksi suojeltu Perkūnas-tammi. Kaupungin Lourdesin luolan jäljitelmä tehtiin vuonna 1905, ja se houkuttelee yhä kävijöitä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Valtakunta ulottui mereltä merelle] 1430 — Liettuan suuriruhtinaskunta oli 1400-luvun alussa Euroopan suurin valtio. Suuriruhtinas Vytautas Suuri hallitsi aluetta, joka ulottui Itämereltä lähelle Mustaamerta ja kattoi nykyisen Valko-Venäjän, suuren osan Ukrainaa sekä palasia Puolaa, Latviaa ja Venäjää. Vuonna 1386 suuriruhtinas Jogaila meni naimisiin Puolan kuningattaren kanssa ja otti kasteen, ja maat liittyivät henkilöunioniin, joka näkyy tässä kartassa vierekkäisinä valtakuntina. Liettuasta tuli näin viimeinen pakanallinen valtio, joka kääntyi kristinuskoon Euroopassa.
+AIEMPI KYSYMYS: Milloin Liettuasta tuli kristitty maa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Liettuan suuriruhtinaskunta kääntyi virallisesti kristinuskoon noin 1380-luvun lopulla, kun suuriruhtinas [[Jogaila]] otti kasteen ja avioitui Puolan kuningatar [[Hedvigin]] kanssa. [[Žemaitia]] kastettiin vasta myöhemmin, lähteiden mukaan 1400-luvun alussa, ja vanha balttilainen uskonto eli seudulla pitkään. Tarkoista vuosista en ole aivan varma, koska lähteissä on pieniä eroja. Katolinen kirkko on sittemmin ollut Liettuassa vahva. Ja siinäkin ajassa ehtisi kantaa aika monta kirjettä.
+KYSYMYS: Kerro lisää: Jogaila
+
+### 205
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plungė (historia)
+Tietoruudun teksti: Plungė on Länsi-Liettuan kaupunki Žemaitian alueella, ja Babrungas-joki jakaa sen kahteen osaan. Kaupunki mainitaan kaupunkina ensimmäisen kerran vuonna 1567, ja Magdeburgin oikeudet se sai vuonna 1792. Vuosina 1806–1873 Plungė oli Platon Zubovin omistuksessa, minkä jälkeen se siirtyi Ogińskien suvulle, joka rakennutti kaupunkiin palatsin vuonna 1879. Kartanon puistossa toimii Žemaitian taidemuseo, ja siellä kasvaa luonnonmuistomerkiksi suojeltu Perkūnas-tammi. Kaupungin Lourdesin luolan jäljitelmä tehtiin vuonna 1905, ja se houkuttelee yhä kävijöitä.
+AIEMPI KYSYMYS: Milloin Liettuasta tuli kristitty maa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Liettuan suuriruhtinaskunta kääntyi virallisesti kristinuskoon noin 1380-luvun lopulla, kun suuriruhtinas [[Jogaila]] otti kasteen ja avioitui Puolan kuningatar [[Hedvigin]] kanssa. [[Žemaitia]] kastettiin vasta myöhemmin, lähteiden mukaan 1400-luvun alussa, ja vanha balttilainen uskonto eli seudulla pitkään. Tarkoista vuosista en ole aivan varma, koska lähteissä on pieniä eroja. Katolinen kirkko on sittemmin ollut Liettuassa vahva. Ja siinäkin ajassa ehtisi kantaa aika monta kirjettä.
+KYSYMYS: Kerro lisää: Hedvigin
+
+### 206
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plungė (historia)
+Tietoruudun teksti: Plungė on Länsi-Liettuan kaupunki Žemaitian alueella, ja Babrungas-joki jakaa sen kahteen osaan. Kaupunki mainitaan kaupunkina ensimmäisen kerran vuonna 1567, ja Magdeburgin oikeudet se sai vuonna 1792. Vuosina 1806–1873 Plungė oli Platon Zubovin omistuksessa, minkä jälkeen se siirtyi Ogińskien suvulle, joka rakennutti kaupunkiin palatsin vuonna 1879. Kartanon puistossa toimii Žemaitian taidemuseo, ja siellä kasvaa luonnonmuistomerkiksi suojeltu Perkūnas-tammi. Kaupungin Lourdesin luolan jäljitelmä tehtiin vuonna 1905, ja se houkuttelee yhä kävijöitä.
+AIEMPI KYSYMYS: Milloin Liettuasta tuli kristitty maa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Liettuan suuriruhtinaskunta kääntyi virallisesti kristinuskoon noin 1380-luvun lopulla, kun suuriruhtinas [[Jogaila]] otti kasteen ja avioitui Puolan kuningatar [[Hedvigin]] kanssa. [[Žemaitia]] kastettiin vasta myöhemmin, lähteiden mukaan 1400-luvun alussa, ja vanha balttilainen uskonto eli seudulla pitkään. Tarkoista vuosista en ole aivan varma, koska lähteissä on pieniä eroja. Katolinen kirkko on sittemmin ollut Liettuassa vahva. Ja siinäkin ajassa ehtisi kantaa aika monta kirjettä.
+KYSYMYS: Kerro lisää: Žemaitia
+
+### 207
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žagarė (kulttuuri)
+Tietoruudun teksti: Žagarė on pieni kaupunki Pohjois-Liettuassa lähellä Latvian rajaa. Semgallilaisten asutus Sagera mainitaan ensimmäisen kerran maaliskuussa 1254, ja 1200-luvulla paikalla oli semgallilaisten linnoitus. Kaupunki muodostui kahdesta pikkukaupungista, Vanhasta ja Uudesta Žagarėsta, joita Švėtė-joki jakaa; Uuden Žagarėn kivikirkko rakennettiin vuonna 1633 paikallisesta dolomiitista. Dmitri Naryškin osti pikkukaupungit vuonna 1857, ja kartanon uusklassinen palatsi on 1860-luvulta. Vuonna 1914 Žagarėssa asui 14 000 ihmistä ja se oli Liettuan seitsemänneksi suurin kaupunki, mutta nykyään asukkaita on noin 2 000. Kaupunki tunnetaan Žagarvyšnė-kirsikkalajikkeesta, ja kirsikkajuhlaa vietetään vuosittain vuodesta 2005.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Tavat: Kukkula, jolle jokainen tuo ristin] 1961 — Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. Neuvostoaikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka tahansa saa tuoda omansa.
+- [Chennai — kohdekartta / Kohdekartta: Marina Beach] promenadi 1884 Marina on luonnollinen hiekkaranta Koromandelin rannikolla. Se alkaa Fort St. Georgen kupeesta ja jatkuu etelään Besant Nagariin asti. Hiekkaa on kolmetoista kilometriä ja promenadia kuusi; Marina Beach -artikkeli sanoo sitä Intian pisimmäksi luonnolliseksi kaupunkirannaksi ja Chennai-artikkeli maailman toiseksi pisimmäksi kaupunkirannaksi. Leveyttä on keskimäärin kolmesataa metriä ja leveimmillään 437. Ranta on vanhempi kuin kaupunki. Ennen 1500-lukua meri tulvi toistuvasti maalle, ja vetäytyessään se jätti jälkeensä hiekkaharjuja ja laguuneja. Yksi harju kulki Cooum-joen suulta nykyisen Presidency Collegen paikalle, ja juuri sen päällä ranta on. Promenadin valmistumisen 188…
+AIEMPI KYSYMYS: Miksi Žagarė oli vielä 1900-luvun alussa Liettuan suurimpia kaupunkeja mutta on nykyään pieni?
+AIEMPI VASTAUS (Livia):
+Kääk. Tää on raskas kysymys, joten kerron sen varovasti. Žagarėn asukasluku oli vuonna 1914 noin 14 000, kun nykyään asukkaita on noin 2 000, ja väestön romahduksen taustalla ovat 1900-luvun suuret mullistukset. Lähteiden mukaan [[ensimmäinen maailmansota]] ja sen aiheuttamat väestönsiirrot ravistelivat seutua, ja kaupungin merkittävä [[juutalaisyhteisö]] tuhoutui pääosin toisen maailmansodan aikana, kun natsi-Saksan miehitys kohdisti heihin joukkomurhia. Tarkasta jaosta eri syiden välillä, esimerkiksi siitä, kuinka suuri osa väestöstä lähti ennen sotaa ja kuinka suuri osa menehtyi, en ole varma. Näistä tapahtumista on nyt yli kahdeksankymmentä vuotta, ja kaupunki jatkaa elämäänsä pienenä mutta elävänä paikkana.
+KYSYMYS: Kerro lisää: ensimmäinen maailmansota
+
+### 208
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žagarė (kulttuuri)
+Tietoruudun teksti: Žagarė on pieni kaupunki Pohjois-Liettuassa lähellä Latvian rajaa. Semgallilaisten asutus Sagera mainitaan ensimmäisen kerran maaliskuussa 1254, ja 1200-luvulla paikalla oli semgallilaisten linnoitus. Kaupunki muodostui kahdesta pikkukaupungista, Vanhasta ja Uudesta Žagarėsta, joita Švėtė-joki jakaa; Uuden Žagarėn kivikirkko rakennettiin vuonna 1633 paikallisesta dolomiitista. Dmitri Naryškin osti pikkukaupungit vuonna 1857, ja kartanon uusklassinen palatsi on 1860-luvulta. Vuonna 1914 Žagarėssa asui 14 000 ihmistä ja se oli Liettuan seitsemänneksi suurin kaupunki, mutta nykyään asukkaita on noin 2 000. Kaupunki tunnetaan Žagarvyšnė-kirsikkalajikkeesta, ja kirsikkajuhlaa vietetään vuosittain vuodesta 2005.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Manaus — kohdekartta / Kohdekartta: Beit Yaacovin synagoga] 1962 Amazonin juutalaisyhteisö on vanha ja sen synagoga nuori. Manausin seurakunta syntyi kahdesta aiemmasta, joiden juuret ovat 1920-luvulla; nykyinen talo valmistui 1962, kun seurakunnat yhdistyivät. Se on yksi Pohjois-Brasilian suurimmista ja vaikutusvaltaisimmista amazonianjuutalaisten seurakunnista. Yhteisö tuli jokea pitkin kaupan mukana. Marokon juutalaiset alkoivat 1800-luvun alussa muuttaa Brasiliaan, ja moni päätyi Amazonille: he perustivat kauppaverkostoja, jotka ulottuivat Belémistä ja Manausista jokivarren takamaille asti, ja toimivat välikäsinä kumin tuottajien ja vientisatamien välillä. Manaus on tässä poikkeus, sillä sinne saapuivat ensin elsassilaiset juutalaiset Ranskan–Pr…
+- [Fès — kaupunkilehti / Kirjat ja kirjoitus: Maimonides ja Fèsin oppineet] Fèsin juutalaisyhteisö oli olemassa jo kaupungin ensimmäisinä vuosisatoina, ja siitä nousi oppineita, joiden nimet tunnetaan yhä: runoilija Dunash Ben Labrat, kielioppineen Judah ben David Hayyuj ja talmudisti Isaac al-Fasi. Vuosina 1159–1165 kaupungissa asui Maimonides, aikansa merkittävimpiä juutalaisia ajattelijoita, joka oli paennut al-Andalusista. Yhteisö siirrettiin 1400-luvulla Fes Jdidiin syntyneeseen Mellahiin; tarkkaa ajankohtaa ja olosuhteita ei ole vahvistettu. Nykyään yhteisö on hyvin pieni, eivätkä korttelin synagogat ole enää käytössä.
+AIEMPI KYSYMYS: Miksi Žagarė oli vielä 1900-luvun alussa Liettuan suurimpia kaupunkeja mutta on nykyään pieni?
+AIEMPI VASTAUS (Livia):
+Kääk. Tää on raskas kysymys, joten kerron sen varovasti. Žagarėn asukasluku oli vuonna 1914 noin 14 000, kun nykyään asukkaita on noin 2 000, ja väestön romahduksen taustalla ovat 1900-luvun suuret mullistukset. Lähteiden mukaan [[ensimmäinen maailmansota]] ja sen aiheuttamat väestönsiirrot ravistelivat seutua, ja kaupungin merkittävä [[juutalaisyhteisö]] tuhoutui pääosin toisen maailmansodan aikana, kun natsi-Saksan miehitys kohdisti heihin joukkomurhia. Tarkasta jaosta eri syiden välillä, esimerkiksi siitä, kuinka suuri osa väestöstä lähti ennen sotaa ja kuinka suuri osa menehtyi, en ole varma. Näistä tapahtumista on nyt yli kahdeksankymmentä vuotta, ja kaupunki jatkaa elämäänsä pienenä mutta elävänä paikkana.
+KYSYMYS: Kerro lisää: juutalaisyhteisö
+
+### 209
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žagarė (kulttuuri)
+Tietoruudun teksti: Žagarė on pieni kaupunki Pohjois-Liettuassa lähellä Latvian rajaa. Semgallilaisten asutus Sagera mainitaan ensimmäisen kerran maaliskuussa 1254, ja 1200-luvulla paikalla oli semgallilaisten linnoitus. Kaupunki muodostui kahdesta pikkukaupungista, Vanhasta ja Uudesta Žagarėsta, joita Švėtė-joki jakaa; Uuden Žagarėn kivikirkko rakennettiin vuonna 1633 paikallisesta dolomiitista. Dmitri Naryškin osti pikkukaupungit vuonna 1857, ja kartanon uusklassinen palatsi on 1860-luvulta. Vuonna 1914 Žagarėssa asui 14 000 ihmistä ja se oli Liettuan seitsemänneksi suurin kaupunki, mutta nykyään asukkaita on noin 2 000. Kaupunki tunnetaan Žagarvyšnė-kirsikkalajikkeesta, ja kirsikkajuhlaa vietetään vuosittain vuodesta 2005.
+AIEMPI KYSYMYS: Mikä on Žagarvyšnė, ja miksi kaupungissa vietetään kirsikkajuhlaa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Žagarvyšnė on [[kirsikkalajike]], jolla Žagarė on tunnettu, ja kaupungissa vietetään vuosittain kirsikkajuhlaa, jota on järjestetty vuodesta 2005 alkaen. Juhla liittyy siihen, että kaupunki tunnetaan tästä kirsikasta. Lajikkeen tarkasta alkuperästä, esimerkiksi kuka sen alun perin jalosti tai milloin, en ole varma, enkä halua keksiä sitä. Žagarė on pieni kaupunki Pohjois-Liettuassa lähellä [[Latvian]] rajaa. Kirsikoita minä söisin mielelläni, ja pullan kanssa vielä mieluummin.
+KYSYMYS: Kerro lisää: kirsikkalajike
+
+### 210
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žagarė (kulttuuri)
+Tietoruudun teksti: Žagarė on pieni kaupunki Pohjois-Liettuassa lähellä Latvian rajaa. Semgallilaisten asutus Sagera mainitaan ensimmäisen kerran maaliskuussa 1254, ja 1200-luvulla paikalla oli semgallilaisten linnoitus. Kaupunki muodostui kahdesta pikkukaupungista, Vanhasta ja Uudesta Žagarėsta, joita Švėtė-joki jakaa; Uuden Žagarėn kivikirkko rakennettiin vuonna 1633 paikallisesta dolomiitista. Dmitri Naryškin osti pikkukaupungit vuonna 1857, ja kartanon uusklassinen palatsi on 1860-luvulta. Vuonna 1914 Žagarėssa asui 14 000 ihmistä ja se oli Liettuan seitsemänneksi suurin kaupunki, mutta nykyään asukkaita on noin 2 000. Kaupunki tunnetaan Žagarvyšnė-kirsikkalajikkeesta, ja kirsikkajuhlaa vietetään vuosittain vuodesta 2005.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Kaksi miljoonaa kättä yli kolmen maan] 1989 — Elokuun 23. päivänä 1989 noin kaksi miljoonaa ihmistä tarttui toisiaan käsistä ja muodosti yhtenäisen ketjun Tallinnasta Riian kautta Vilnaan — matkaa kertyi yli kuusisataa kilometriä. Baltian ketju järjestettiin täsmälleen viisikymmentä vuotta sen jälkeen, kun Neuvostoliitto ja natsi-Saksa olivat salaisessa sopimuksessa jakaneet Baltian maat keskenään. Rauhanomainen mielenilmaus vaati Viron, Latvian ja Liettuan miehitysten päättämistä, ja tapahtuma näkyi television välityksellä kaikkialla maailmassa. Kaksi vuotta myöhemmin kaikki kolme maata olivat jälleen itsenäisiä.
+AIEMPI KYSYMYS: Mikä on Žagarvyšnė, ja miksi kaupungissa vietetään kirsikkajuhlaa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Žagarvyšnė on [[kirsikkalajike]], jolla Žagarė on tunnettu, ja kaupungissa vietetään vuosittain kirsikkajuhlaa, jota on järjestetty vuodesta 2005 alkaen. Juhla liittyy siihen, että kaupunki tunnetaan tästä kirsikasta. Lajikkeen tarkasta alkuperästä, esimerkiksi kuka sen alun perin jalosti tai milloin, en ole varma, enkä halua keksiä sitä. Žagarė on pieni kaupunki Pohjois-Liettuassa lähellä [[Latvian]] rajaa. Kirsikoita minä söisin mielelläni, ja pullan kanssa vielä mieluummin.
+KYSYMYS: Kerro lisää: Latvian
+
+### 211
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žagarė (kulttuuri)
+Tietoruudun teksti: Žagarė on pieni kaupunki Pohjois-Liettuassa lähellä Latvian rajaa. Semgallilaisten asutus Sagera mainitaan ensimmäisen kerran maaliskuussa 1254, ja 1200-luvulla paikalla oli semgallilaisten linnoitus. Kaupunki muodostui kahdesta pikkukaupungista, Vanhasta ja Uudesta Žagarėsta, joita Švėtė-joki jakaa; Uuden Žagarėn kivikirkko rakennettiin vuonna 1633 paikallisesta dolomiitista. Dmitri Naryškin osti pikkukaupungit vuonna 1857, ja kartanon uusklassinen palatsi on 1860-luvulta. Vuonna 1914 Žagarėssa asui 14 000 ihmistä ja se oli Liettuan seitsemänneksi suurin kaupunki, mutta nykyään asukkaita on noin 2 000. Kaupunki tunnetaan Žagarvyšnė-kirsikkalajikkeesta, ja kirsikkajuhlaa vietetään vuosittain vuodesta 2005.
+AIEMPI KYSYMYS: Keitä olivat semgallilaiset?
+AIEMPI VASTAUS (Livia):
+Ai tota. Semgallilaiset olivat balttilainen heimo, joka asui nykyisen Latvian keskiosissa ja Pohjois-Liettuassa, ja aluetta kutsutaan nimellä [[Semgallia]]. Heidän kielensä kuului balttilaisiin kieliin, kuten litva ja latvia. Keskiajalla he vastustivat [[Saksalaisen ritarikunnan]] ja Liivinmaan valtaa pitkään, ja lähteiden mukaan heidän vastarintansa päättyi 1200-luvun lopulla, mutta tarkasta vuodesta en ole aivan varma. Žagarėssa semgallilaisten asutus Sagera mainitaan ensimmäisen kerran vuonna 1254, ja 1200-luvulla paikalla oli heidän linnoituksensa. Tääl se oli asuttu jo ennen kuin kukaan kirjoitti sen paperille.
+KYSYMYS: Kerro lisää: Semgallia
+
+### 212
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žagarė (kulttuuri)
+Tietoruudun teksti: Žagarė on pieni kaupunki Pohjois-Liettuassa lähellä Latvian rajaa. Semgallilaisten asutus Sagera mainitaan ensimmäisen kerran maaliskuussa 1254, ja 1200-luvulla paikalla oli semgallilaisten linnoitus. Kaupunki muodostui kahdesta pikkukaupungista, Vanhasta ja Uudesta Žagarėsta, joita Švėtė-joki jakaa; Uuden Žagarėn kivikirkko rakennettiin vuonna 1633 paikallisesta dolomiitista. Dmitri Naryškin osti pikkukaupungit vuonna 1857, ja kartanon uusklassinen palatsi on 1860-luvulta. Vuonna 1914 Žagarėssa asui 14 000 ihmistä ja se oli Liettuan seitsemänneksi suurin kaupunki, mutta nykyään asukkaita on noin 2 000. Kaupunki tunnetaan Žagarvyšnė-kirsikkalajikkeesta, ja kirsikkajuhlaa vietetään vuosittain vuodesta 2005.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Plečnikin ja Secessionin Ljubljana: Ritarikunnan luostarista kesäteatteriksi] Križanken luostarin rakentamisen uskotaan alkaneen 1200-luvulla saksalaisen ritarikunnan käyttöön, ja sen barokkikirkko valmistui vuosina 1714–1715. Luostari toimi vuoteen 1945 asti, jolloin kompleksi kansallistettiin. Vuonna 1952 kaupunki pyysi Jože Plečnikia muuttamaan rappeutuneen luostarin Ljubljanan festivaalin näyttämöksi, ja työt valmistuivat 1956. Nykyään pihoilla järjestetään klassisen musiikin, jazzin ja rockin konsertteja, ja pääpihaa koristavat värikkäät sgraffitot.
+AIEMPI KYSYMYS: Keitä olivat semgallilaiset?
+AIEMPI VASTAUS (Livia):
+Ai tota. Semgallilaiset olivat balttilainen heimo, joka asui nykyisen Latvian keskiosissa ja Pohjois-Liettuassa, ja aluetta kutsutaan nimellä [[Semgallia]]. Heidän kielensä kuului balttilaisiin kieliin, kuten litva ja latvia. Keskiajalla he vastustivat [[Saksalaisen ritarikunnan]] ja Liivinmaan valtaa pitkään, ja lähteiden mukaan heidän vastarintansa päättyi 1200-luvun lopulla, mutta tarkasta vuodesta en ole aivan varma. Žagarėssa semgallilaisten asutus Sagera mainitaan ensimmäisen kerran vuonna 1254, ja 1200-luvulla paikalla oli heidän linnoituksensa. Tääl se oli asuttu jo ennen kuin kukaan kirjoitti sen paperille.
+KYSYMYS: Kerro lisää: Saksalaisen ritarikunnan
+
+### 213
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žagarė (kulttuuri)
+Tietoruudun teksti: Žagarė on pieni kaupunki Pohjois-Liettuassa lähellä Latvian rajaa. Semgallilaisten asutus Sagera mainitaan ensimmäisen kerran maaliskuussa 1254, ja 1200-luvulla paikalla oli semgallilaisten linnoitus. Kaupunki muodostui kahdesta pikkukaupungista, Vanhasta ja Uudesta Žagarėsta, joita Švėtė-joki jakaa; Uuden Žagarėn kivikirkko rakennettiin vuonna 1633 paikallisesta dolomiitista. Dmitri Naryškin osti pikkukaupungit vuonna 1857, ja kartanon uusklassinen palatsi on 1860-luvulta. Vuonna 1914 Žagarėssa asui 14 000 ihmistä ja se oli Liettuan seitsemänneksi suurin kaupunki, mutta nykyään asukkaita on noin 2 000. Kaupunki tunnetaan Žagarvyšnė-kirsikkalajikkeesta, ja kirsikkajuhlaa vietetään vuosittain vuodesta 2005.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+AIEMPI KYSYMYS: Mikä on dolomiitti ja mihin sitä käytetään rakentamisessa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Dolomiitti on sedimenttikivilaji, joka koostuu pääosin kalsiumin ja magnesiumin karbonaatista, ja se muistuttaa [[kalkkikiveä]]. Sitä käytetään rakentamisessa muun muassa rakennuskivenä, murskeena tien ja rakennusten perustuksissa sekä [[betonin]] ja kalkin valmistuksessa. Sen työstettävyys ja saatavuus tekevät siitä käytännöllisen materiaalin sellaisilla seuduilla, joilla sitä esiintyy lähellä. Žagarėn Uuden kaupungin kivikirkko rakennettiin vuonna 1633 paikallisesta dolomiitista. Hyvä paikallinen kivi riittää kyllä, ei tarvitse tuoda mitään kaukaa, sanoo kyyhky.
+KYSYMYS: Kerro lisää: kalkkikiveä
+
+### 214
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žagarė (kulttuuri)
+Tietoruudun teksti: Žagarė on pieni kaupunki Pohjois-Liettuassa lähellä Latvian rajaa. Semgallilaisten asutus Sagera mainitaan ensimmäisen kerran maaliskuussa 1254, ja 1200-luvulla paikalla oli semgallilaisten linnoitus. Kaupunki muodostui kahdesta pikkukaupungista, Vanhasta ja Uudesta Žagarėsta, joita Švėtė-joki jakaa; Uuden Žagarėn kivikirkko rakennettiin vuonna 1633 paikallisesta dolomiitista. Dmitri Naryškin osti pikkukaupungit vuonna 1857, ja kartanon uusklassinen palatsi on 1860-luvulta. Vuonna 1914 Žagarėssa asui 14 000 ihmistä ja se oli Liettuan seitsemänneksi suurin kaupunki, mutta nykyään asukkaita on noin 2 000. Kaupunki tunnetaan Žagarvyšnė-kirsikkalajikkeesta, ja kirsikkajuhlaa vietetään vuosittain vuodesta 2005.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kohdekartta / Kohdekartta: Lohikäärmesilta] 1901 Isoisän aikaan tässä ei ole Lohikäärmesiltaa vaan Teurastajien silta, vuonna 1819 rakennettu tammisilta. Vuoden 1895 maanjäristys vaurioitti sitä pahoin, ja pormestari Ivan Hribarin kaupunkiuudistuksessa sen tilalle rakennettiin silta uudesta aineesta, teräsbetonista. Kaupunkisuunnittelun professori Janez Koželj on arvellut, että uutta tekniikkaa kokeiltiin Ljubljanassa eikä Wienissä juuri siksi, että epäonnistuminen olisi täällä ollut pienempi vahinko. Silta tehtiin wieniläisen Pittel+Brausewetterin suunnitelmista insinööri Josef Melanin patentin mukaan, ja arkkitehtina oli Otto Wagnerin koulun kasvatti Jurij Zaninović. Työt alkoivat 1. heinäkuuta 1900, ja piispa Anton Bonaventura Jeg…
+AIEMPI KYSYMYS: Mikä on dolomiitti ja mihin sitä käytetään rakentamisessa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Dolomiitti on sedimenttikivilaji, joka koostuu pääosin kalsiumin ja magnesiumin karbonaatista, ja se muistuttaa [[kalkkikiveä]]. Sitä käytetään rakentamisessa muun muassa rakennuskivenä, murskeena tien ja rakennusten perustuksissa sekä [[betonin]] ja kalkin valmistuksessa. Sen työstettävyys ja saatavuus tekevät siitä käytännöllisen materiaalin sellaisilla seuduilla, joilla sitä esiintyy lähellä. Žagarėn Uuden kaupungin kivikirkko rakennettiin vuonna 1633 paikallisesta dolomiitista. Hyvä paikallinen kivi riittää kyllä, ei tarvitse tuoda mitään kaukaa, sanoo kyyhky.
+KYSYMYS: Kerro lisää: betonin
+
+### 215
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žagarė (kulttuuri)
+Tietoruudun teksti: Žagarė on pieni kaupunki Pohjois-Liettuassa lähellä Latvian rajaa. Semgallilaisten asutus Sagera mainitaan ensimmäisen kerran maaliskuussa 1254, ja 1200-luvulla paikalla oli semgallilaisten linnoitus. Kaupunki muodostui kahdesta pikkukaupungista, Vanhasta ja Uudesta Žagarėsta, joita Švėtė-joki jakaa; Uuden Žagarėn kivikirkko rakennettiin vuonna 1633 paikallisesta dolomiitista. Dmitri Naryškin osti pikkukaupungit vuonna 1857, ja kartanon uusklassinen palatsi on 1860-luvulta. Vuonna 1914 Žagarėssa asui 14 000 ihmistä ja se oli Liettuan seitsemänneksi suurin kaupunki, mutta nykyään asukkaita on noin 2 000. Kaupunki tunnetaan Žagarvyšnė-kirsikkalajikkeesta, ja kirsikkajuhlaa vietetään vuosittain vuodesta 2005.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kohdekartta / Kohdekartta: Križanke] 1228 Križanke on entinen Pyhän ristin luostari. Saksalaisen ritarikunnan luostarin rakentamisen uskotaan alkaneen vuonna 1228. Vuoden 1511 Idrijan maanjäristys vaurioitti rakennuksia pahoin, ja niitä rakennettiin osin uudelleen 1567–1579. Luostarikirkko rakennettiin kokonaan uudelleen barokkiin 1714–1715 venetsialaisen Domenico Rossin piirustuksilla. Sen pohja on kreikkalainen risti, ja se oli ensimmäinen laatuaan Sloveniassa; julkisivua korostavat pilasterit ja aaltoileva kupoli. Työssä oli mukana paikallisia mestareita, kuten Gregor Maček vanhempi, joka suunnitteli myös nykyisen kaupungintalon. Kirkon alkuperäinen pienoismalli on yhä Ljubljanan kaupunginmuseossa, ja luostarin Ritarisali r…
+- [Malta — maalehti / Rakennukset: Linnoitukselta näyttävä kultakirkko] 1573–1578 — Ulkoa Pyhän Johanneksen konkatedraali Vallettassa muistuttaa linnoitusta: julkisivu on lähes koruton, ja sitä reunustaa kaksi suurta kellotornia. Sisällä odottaa aivan toinen maailma. Ritarikunta rakennutti kirkon vuosina 1573–1578 Girolamo Cassarin suunnitelmien mukaan. 1660-luvulla Mattia Preti muutti sisätilan täysin barokkiin, ja siitä tuli yksi Euroopan hienoimmista barokkisisätiloista. Walter Scott kirjoitti vuonna 1831, ettei ollut koskaan nähnyt niin vaikuttavaa kirkon sisätilaa.
+AIEMPI KYSYMYS: Mitä uusklassismi tarkoittaa arkkitehtuurissa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Uusklassismi on arkkitehtuurin tyylisuunta, joka nousi esiin 1700-luvun lopulla ja eli vahvana 1800-luvulle, ja se palasi antiikin Kreikan ja Rooman muotokieleen. Tyylille ovat ominaisia symmetria, selkeät mittasuhteet, pylväät, kolmiomaiset päädyt ja hillitty koristelu verrattuna sitä edeltäneeseen [[barokkiin]]. Suuntausta käytettiin kirkoissa, kartanoissa, palatseissa ja julkisissa rakennuksissa eri puolilla Eurooppaa. Žagarėssa [[Naryškinin]] kartanon palatsi 1860-luvulta edustaa uusklassista tyyliä. Ylhäältä katsottuna symmetria näkyy kyllä erityisen hyvin.
+KYSYMYS: Kerro lisää: barokkiin
+
+### 216
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žagarė (kulttuuri)
+Tietoruudun teksti: Žagarė on pieni kaupunki Pohjois-Liettuassa lähellä Latvian rajaa. Semgallilaisten asutus Sagera mainitaan ensimmäisen kerran maaliskuussa 1254, ja 1200-luvulla paikalla oli semgallilaisten linnoitus. Kaupunki muodostui kahdesta pikkukaupungista, Vanhasta ja Uudesta Žagarėsta, joita Švėtė-joki jakaa; Uuden Žagarėn kivikirkko rakennettiin vuonna 1633 paikallisesta dolomiitista. Dmitri Naryškin osti pikkukaupungit vuonna 1857, ja kartanon uusklassinen palatsi on 1860-luvulta. Vuonna 1914 Žagarėssa asui 14 000 ihmistä ja se oli Liettuan seitsemänneksi suurin kaupunki, mutta nykyään asukkaita on noin 2 000. Kaupunki tunnetaan Žagarvyšnė-kirsikkalajikkeesta, ja kirsikkajuhlaa vietetään vuosittain vuodesta 2005.
+AIEMPI KYSYMYS: Mitä uusklassismi tarkoittaa arkkitehtuurissa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Uusklassismi on arkkitehtuurin tyylisuunta, joka nousi esiin 1700-luvun lopulla ja eli vahvana 1800-luvulle, ja se palasi antiikin Kreikan ja Rooman muotokieleen. Tyylille ovat ominaisia symmetria, selkeät mittasuhteet, pylväät, kolmiomaiset päädyt ja hillitty koristelu verrattuna sitä edeltäneeseen [[barokkiin]]. Suuntausta käytettiin kirkoissa, kartanoissa, palatseissa ja julkisissa rakennuksissa eri puolilla Eurooppaa. Žagarėssa [[Naryškinin]] kartanon palatsi 1860-luvulta edustaa uusklassista tyyliä. Ylhäältä katsottuna symmetria näkyy kyllä erityisen hyvin.
+KYSYMYS: Kerro lisää: Naryškinin
+
+### 217
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rokiškis (historia)
+Tietoruudun teksti: Rokiškis on kaupunki Koillis-Liettuassa lähellä Latvian rajaa. Sen keskusta muotoutui 1700-luvun lopulla Tyzenhausin suvun hallinnon aikana: uusgoottilainen Pyhän Matteuksen kirkko ja kartano, jossa toimii nykyään alueen museo, ovat arvokkaita esimerkkejä 1800-luvun rakennustaiteesta. Legendan mukaan kaupungin nimi juontuu metsästäjä Rokaksi, joka ajoi jäniksiä (liettuaksi kiškis). Vuodesta 1873 Tyzenhausit rahoittivat musiikkikoulua, joka koulutti kirkkourkureita, ja samana vuonna valmistunut rautatien haaralinja sai kaupungin kasvamaan. Nykyään Rokiškis tunnetaan juustostaan, sillä Rokiškio sūris on yksi Liettuan suurimmista maitotuotteiden valmistajista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Tavat: Kukkula, jolle jokainen tuo ristin] 1961 — Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. Neuvostoaikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka tahansa saa tuoda omansa.
+AIEMPI KYSYMYS: Miksi kaupunki alkoi kasvaa juuri rautatien haaralinjan valmistuttua?
+AIEMPI VASTAUS (Livia):
+Kato, junat ne ennen vanhaan kaupunkeja kasvattivat. [[Rautatie]] teki tavaroiden ja ihmisten kuljettamisesta aiempaa nopeampaa ja edullisempaa, joten paikkakunta, jonka kautta kulki [[haaralinja]], pääsi yleensä mukaan laajempaan kauppaan: tuotteet pääsivät markkinoille, ja kauppiaita, käsityöläisiä ja uusia asukkaita saapui helpommin. Rokiškisin tapauksessa haaralinjan valmistuminen vuonna 1873 sai kaupungin kasvamaan, vaikka en osaa sanoa tarkasti, mitkä kuljetukset ja elinkeinot kasvun kantoivat. Kyyhky kulkee ny ilman kiskoja, kiitos kysymästä.
+KYSYMYS: Kerro lisää: Rautatie
+
+### 218
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rokiškis (historia)
+Tietoruudun teksti: Rokiškis on kaupunki Koillis-Liettuassa lähellä Latvian rajaa. Sen keskusta muotoutui 1700-luvun lopulla Tyzenhausin suvun hallinnon aikana: uusgoottilainen Pyhän Matteuksen kirkko ja kartano, jossa toimii nykyään alueen museo, ovat arvokkaita esimerkkejä 1800-luvun rakennustaiteesta. Legendan mukaan kaupungin nimi juontuu metsästäjä Rokaksi, joka ajoi jäniksiä (liettuaksi kiškis). Vuodesta 1873 Tyzenhausit rahoittivat musiikkikoulua, joka koulutti kirkkourkureita, ja samana vuonna valmistunut rautatien haaralinja sai kaupungin kasvamaan. Nykyään Rokiškis tunnetaan juustostaan, sillä Rokiškio sūris on yksi Liettuan suurimmista maitotuotteiden valmistajista.
+AIEMPI KYSYMYS: Miksi kaupunki alkoi kasvaa juuri rautatien haaralinjan valmistuttua?
+AIEMPI VASTAUS (Livia):
+Kato, junat ne ennen vanhaan kaupunkeja kasvattivat. [[Rautatie]] teki tavaroiden ja ihmisten kuljettamisesta aiempaa nopeampaa ja edullisempaa, joten paikkakunta, jonka kautta kulki [[haaralinja]], pääsi yleensä mukaan laajempaan kauppaan: tuotteet pääsivät markkinoille, ja kauppiaita, käsityöläisiä ja uusia asukkaita saapui helpommin. Rokiškisin tapauksessa haaralinjan valmistuminen vuonna 1873 sai kaupungin kasvamaan, vaikka en osaa sanoa tarkasti, mitkä kuljetukset ja elinkeinot kasvun kantoivat. Kyyhky kulkee ny ilman kiskoja, kiitos kysymästä.
+KYSYMYS: Kerro lisää: haaralinja
+
+### 219
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rokiškis (historia)
+Tietoruudun teksti: Rokiškis on kaupunki Koillis-Liettuassa lähellä Latvian rajaa. Sen keskusta muotoutui 1700-luvun lopulla Tyzenhausin suvun hallinnon aikana: uusgoottilainen Pyhän Matteuksen kirkko ja kartano, jossa toimii nykyään alueen museo, ovat arvokkaita esimerkkejä 1800-luvun rakennustaiteesta. Legendan mukaan kaupungin nimi juontuu metsästäjä Rokaksi, joka ajoi jäniksiä (liettuaksi kiškis). Vuodesta 1873 Tyzenhausit rahoittivat musiikkikoulua, joka koulutti kirkkourkureita, ja samana vuonna valmistunut rautatien haaralinja sai kaupungin kasvamaan. Nykyään Rokiškis tunnetaan juustostaan, sillä Rokiškio sūris on yksi Liettuan suurimmista maitotuotteiden valmistajista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Tavat: Kukkula, jolle jokainen tuo ristin] 1961 — Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. Neuvostoaikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka tahansa saa tuoda omansa.
+AIEMPI KYSYMYS: Mitä metsästäjä Rokas ja jänikset kertovat kaupungin nimestä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Legendan mukaan kaupungin nimi juontuu metsästäjä Rokaksi, joka ajoi jäniksiä; liettuaksi jänis on [[kiškis]], ja nimi Rokiškis tulkitaan näiden kahden yhdistelmäksi. Kyse on kansantaruna kerrotusta selityksestä, ei varmasti todennetusta nimen alkuperästä, ja kansanomaiset [[paikannimien]] selitykset poikkeavat usein kielitieteilijöiden tulkinnoista. Nimi kertoo siis ennen kaikkea siitä, että paikalla on haluttu kertoa hauska tarina jäniksestä.
+
+Jäniksen ajaminen on minusta epäilyttävää puuhaa, sillä jänis on nopea. Kyyhky on kuitenkin nopeampi, ainakin suvun muistiinpanojen mukaan.
+KYSYMYS: Kerro lisää: kiškis
+
+### 220
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rokiškis (historia)
+Tietoruudun teksti: Rokiškis on kaupunki Koillis-Liettuassa lähellä Latvian rajaa. Sen keskusta muotoutui 1700-luvun lopulla Tyzenhausin suvun hallinnon aikana: uusgoottilainen Pyhän Matteuksen kirkko ja kartano, jossa toimii nykyään alueen museo, ovat arvokkaita esimerkkejä 1800-luvun rakennustaiteesta. Legendan mukaan kaupungin nimi juontuu metsästäjä Rokaksi, joka ajoi jäniksiä (liettuaksi kiškis). Vuodesta 1873 Tyzenhausit rahoittivat musiikkikoulua, joka koulutti kirkkourkureita, ja samana vuonna valmistunut rautatien haaralinja sai kaupungin kasvamaan. Nykyään Rokiškis tunnetaan juustostaan, sillä Rokiškio sūris on yksi Liettuan suurimmista maitotuotteiden valmistajista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Tavat: Kukkula, jolle jokainen tuo ristin] 1961 — Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. Neuvostoaikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka tahansa saa tuoda omansa.
+AIEMPI KYSYMYS: Mitä metsästäjä Rokas ja jänikset kertovat kaupungin nimestä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Legendan mukaan kaupungin nimi juontuu metsästäjä Rokaksi, joka ajoi jäniksiä; liettuaksi jänis on [[kiškis]], ja nimi Rokiškis tulkitaan näiden kahden yhdistelmäksi. Kyse on kansantaruna kerrotusta selityksestä, ei varmasti todennetusta nimen alkuperästä, ja kansanomaiset [[paikannimien]] selitykset poikkeavat usein kielitieteilijöiden tulkinnoista. Nimi kertoo siis ennen kaikkea siitä, että paikalla on haluttu kertoa hauska tarina jäniksestä.
+
+Jäniksen ajaminen on minusta epäilyttävää puuhaa, sillä jänis on nopea. Kyyhky on kuitenkin nopeampi, ainakin suvun muistiinpanojen mukaan.
+KYSYMYS: Kerro lisää: paikannimien
+
+### 221
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rokiškis (historia)
+Tietoruudun teksti: Rokiškis on kaupunki Koillis-Liettuassa lähellä Latvian rajaa. Sen keskusta muotoutui 1700-luvun lopulla Tyzenhausin suvun hallinnon aikana: uusgoottilainen Pyhän Matteuksen kirkko ja kartano, jossa toimii nykyään alueen museo, ovat arvokkaita esimerkkejä 1800-luvun rakennustaiteesta. Legendan mukaan kaupungin nimi juontuu metsästäjä Rokaksi, joka ajoi jäniksiä (liettuaksi kiškis). Vuodesta 1873 Tyzenhausit rahoittivat musiikkikoulua, joka koulutti kirkkourkureita, ja samana vuonna valmistunut rautatien haaralinja sai kaupungin kasvamaan. Nykyään Rokiškis tunnetaan juustostaan, sillä Rokiškio sūris on yksi Liettuan suurimmista maitotuotteiden valmistajista.
+AIEMPI KYSYMYS: Mitä uusgotiikka tarkoittaa rakennustaiteessa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Uusgotiikka on 1700-luvun lopulla Britanniassa alkanut ja 1800-luvulla Euroopassa laajalle levinnyt rakennustyyli, joka lainasi keskiajan goottilaisen arkkitehtuurin piirteitä: suippokaaria, korkeita torneja, runsaasti koristeltuja ikkunoita ja pystysuoraa linjaa. Tyyliä käytettiin erityisesti kirkoissa, mutta myös kartanoissa, kouluissa ja julkisissa rakennuksissa, ja sen suosio liittyi [[historismin]] aikaan, jolloin menneiden aikakausien tyylejä elvytettiin. Rokiškisin [[Pyhän Matteuksen kirkko]] edustaa tätä tyyliä. Pitkä lause, mutta kestin sen.
+KYSYMYS: Kerro lisää: historismin
+
+### 222
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rokiškis (historia)
+Tietoruudun teksti: Rokiškis on kaupunki Koillis-Liettuassa lähellä Latvian rajaa. Sen keskusta muotoutui 1700-luvun lopulla Tyzenhausin suvun hallinnon aikana: uusgoottilainen Pyhän Matteuksen kirkko ja kartano, jossa toimii nykyään alueen museo, ovat arvokkaita esimerkkejä 1800-luvun rakennustaiteesta. Legendan mukaan kaupungin nimi juontuu metsästäjä Rokaksi, joka ajoi jäniksiä (liettuaksi kiškis). Vuodesta 1873 Tyzenhausit rahoittivat musiikkikoulua, joka koulutti kirkkourkureita, ja samana vuonna valmistunut rautatien haaralinja sai kaupungin kasvamaan. Nykyään Rokiškis tunnetaan juustostaan, sillä Rokiškio sūris on yksi Liettuan suurimmista maitotuotteiden valmistajista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Etiopia — maalehti / Kirjat ja aika: Kolmastoista kuukausi, jossa on viisi päivää] Etiopian kalenterissa on kaksitoista kolmenkymmenen päivän kuukautta ja niiden perässä kolmastoista, johon jää viisi päivää — karkausvuonna kuusi. Vuosi vaihtuu meidän syyskuumme 11. päivänä, ja uudenvuodenpäivää sanotaan amharaksi Enkutatashiksi, korujen lahjaksi. Ajanlaskun alkupiste on eri kuin lännessä, joten vuosiluku on seitsemän tai kahdeksan vuotta pienempi kuin muualla maailmassa. Neljän vuoden karkauskierto on nimetty evankelistojen mukaan: Johanneksen, Matteuksen, Markuksen ja Luukkaan vuodet seuraavat toisiaan.
+AIEMPI KYSYMYS: Mitä uusgotiikka tarkoittaa rakennustaiteessa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Uusgotiikka on 1700-luvun lopulla Britanniassa alkanut ja 1800-luvulla Euroopassa laajalle levinnyt rakennustyyli, joka lainasi keskiajan goottilaisen arkkitehtuurin piirteitä: suippokaaria, korkeita torneja, runsaasti koristeltuja ikkunoita ja pystysuoraa linjaa. Tyyliä käytettiin erityisesti kirkoissa, mutta myös kartanoissa, kouluissa ja julkisissa rakennuksissa, ja sen suosio liittyi [[historismin]] aikaan, jolloin menneiden aikakausien tyylejä elvytettiin. Rokiškisin [[Pyhän Matteuksen kirkko]] edustaa tätä tyyliä. Pitkä lause, mutta kestin sen.
+KYSYMYS: Kerro lisää: Pyhän Matteuksen kirkko
+
+### 223
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rokiškis (historia)
+Tietoruudun teksti: Rokiškis on kaupunki Koillis-Liettuassa lähellä Latvian rajaa. Sen keskusta muotoutui 1700-luvun lopulla Tyzenhausin suvun hallinnon aikana: uusgoottilainen Pyhän Matteuksen kirkko ja kartano, jossa toimii nykyään alueen museo, ovat arvokkaita esimerkkejä 1800-luvun rakennustaiteesta. Legendan mukaan kaupungin nimi juontuu metsästäjä Rokaksi, joka ajoi jäniksiä (liettuaksi kiškis). Vuodesta 1873 Tyzenhausit rahoittivat musiikkikoulua, joka koulutti kirkkourkureita, ja samana vuonna valmistunut rautatien haaralinja sai kaupungin kasvamaan. Nykyään Rokiškis tunnetaan juustostaan, sillä Rokiškio sūris on yksi Liettuan suurimmista maitotuotteiden valmistajista.
+AIEMPI KYSYMYS: Mihin kieliperheeseen liettua kuuluu?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Liettua kuuluu indoeurooppalaisiin kieliin, tarkemmin balttilaisten kielten haaraan, ja sen lähin elossa oleva sukukieli on [[latvia]]. Kielet eivät ole keskenään ymmärrettäviä ilman opiskelua, mutta ne ovat selvästi sukua toisilleen, ja liettuan sanotaan säilyttäneen monia vanhoja indoeurooppalaisia piirteitä. Suomi kuuluu sen sijaan [[uralilaisiin kieliin]], joten suomi ja liettua ovat sukua vain hyvin kaukaisessa mielessä, eli oikeastaan eivät lainkaan. Ei paha selitys kyyhkyltä.
+KYSYMYS: Kerro lisää: latvia
+
+### 224
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rokiškis (historia)
+Tietoruudun teksti: Rokiškis on kaupunki Koillis-Liettuassa lähellä Latvian rajaa. Sen keskusta muotoutui 1700-luvun lopulla Tyzenhausin suvun hallinnon aikana: uusgoottilainen Pyhän Matteuksen kirkko ja kartano, jossa toimii nykyään alueen museo, ovat arvokkaita esimerkkejä 1800-luvun rakennustaiteesta. Legendan mukaan kaupungin nimi juontuu metsästäjä Rokaksi, joka ajoi jäniksiä (liettuaksi kiškis). Vuodesta 1873 Tyzenhausit rahoittivat musiikkikoulua, joka koulutti kirkkourkureita, ja samana vuonna valmistunut rautatien haaralinja sai kaupungin kasvamaan. Nykyään Rokiškis tunnetaan juustostaan, sillä Rokiškio sūris on yksi Liettuan suurimmista maitotuotteiden valmistajista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Kieli: Sukulaisia kaukaa pohjoisesta] Tuhansia vuosia — Unkari ei kuulu indoeurooppalaisiin kieliin kuten sen naapurit, vaan uralilaisiin kieliin. Samaan joukkoon kuuluvat suomi, viro ja saame sekä joukko pienempiä kieliä Uralin molemmin puolin. Sukulaisuus on kaukainen: unkarilainen ja suomalainen eivät ymmärrä toisiaan lainkaan. Yhteiset sanat näkyvät silti vanhimmissa sanoissa: kéz on käsi, vér on veri, hal on kala, méz on mesi ja szem on silmä. Erot syntyivät, kun kansat erosivat toisistaan tuhansia vuosia sitten.
+AIEMPI KYSYMYS: Mihin kieliperheeseen liettua kuuluu?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Liettua kuuluu indoeurooppalaisiin kieliin, tarkemmin balttilaisten kielten haaraan, ja sen lähin elossa oleva sukukieli on [[latvia]]. Kielet eivät ole keskenään ymmärrettäviä ilman opiskelua, mutta ne ovat selvästi sukua toisilleen, ja liettuan sanotaan säilyttäneen monia vanhoja indoeurooppalaisia piirteitä. Suomi kuuluu sen sijaan [[uralilaisiin kieliin]], joten suomi ja liettua ovat sukua vain hyvin kaukaisessa mielessä, eli oikeastaan eivät lainkaan. Ei paha selitys kyyhkyltä.
+KYSYMYS: Kerro lisää: uralilaisiin kieliin
+
+### 225
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rokiškis (historia)
+Tietoruudun teksti: Rokiškis on kaupunki Koillis-Liettuassa lähellä Latvian rajaa. Sen keskusta muotoutui 1700-luvun lopulla Tyzenhausin suvun hallinnon aikana: uusgoottilainen Pyhän Matteuksen kirkko ja kartano, jossa toimii nykyään alueen museo, ovat arvokkaita esimerkkejä 1800-luvun rakennustaiteesta. Legendan mukaan kaupungin nimi juontuu metsästäjä Rokaksi, joka ajoi jäniksiä (liettuaksi kiškis). Vuodesta 1873 Tyzenhausit rahoittivat musiikkikoulua, joka koulutti kirkkourkureita, ja samana vuonna valmistunut rautatien haaralinja sai kaupungin kasvamaan. Nykyään Rokiškis tunnetaan juustostaan, sillä Rokiškio sūris on yksi Liettuan suurimmista maitotuotteiden valmistajista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Tavat: Kukkula, jolle jokainen tuo ristin] 1961 — Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. Neuvostoaikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka tahansa saa tuoda omansa.
+AIEMPI KYSYMYS: Miten kirkkourut tuottavat äänensä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Kirkkourut]] tuottavat äänen putkista, joihin johdetaan ilmaa. Ilma tuotetaan palkeilla tai nykyään yleensä sähköisellä puhaltimella ja ohjataan soittimen koskettimilla, jolloin kunkin koskettimen painaminen päästää ilman tiettyyn putkeen, ja jokaisella putkella on oma sävelkorkeutensa. Urkujen äänenvärin muodostavat eri [[rekisterit]], eli putkirivit, joita soittaja voi kytkeä päälle ja pois, ja suurissa uruissa putkia on useita tuhansia. Ihmettelen vain, miten soittaja ehtii kaiken tuon aikana vielä pedaaleille.
+KYSYMYS: Kerro lisää: Kirkkourut
+
+### 226
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rokiškis (historia)
+Tietoruudun teksti: Rokiškis on kaupunki Koillis-Liettuassa lähellä Latvian rajaa. Sen keskusta muotoutui 1700-luvun lopulla Tyzenhausin suvun hallinnon aikana: uusgoottilainen Pyhän Matteuksen kirkko ja kartano, jossa toimii nykyään alueen museo, ovat arvokkaita esimerkkejä 1800-luvun rakennustaiteesta. Legendan mukaan kaupungin nimi juontuu metsästäjä Rokaksi, joka ajoi jäniksiä (liettuaksi kiškis). Vuodesta 1873 Tyzenhausit rahoittivat musiikkikoulua, joka koulutti kirkkourkureita, ja samana vuonna valmistunut rautatien haaralinja sai kaupungin kasvamaan. Nykyään Rokiškis tunnetaan juustostaan, sillä Rokiškio sūris on yksi Liettuan suurimmista maitotuotteiden valmistajista.
+AIEMPI KYSYMYS: Miten kirkkourut tuottavat äänensä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Kirkkourut]] tuottavat äänen putkista, joihin johdetaan ilmaa. Ilma tuotetaan palkeilla tai nykyään yleensä sähköisellä puhaltimella ja ohjataan soittimen koskettimilla, jolloin kunkin koskettimen painaminen päästää ilman tiettyyn putkeen, ja jokaisella putkella on oma sävelkorkeutensa. Urkujen äänenvärin muodostavat eri [[rekisterit]], eli putkirivit, joita soittaja voi kytkeä päälle ja pois, ja suurissa uruissa putkia on useita tuhansia. Ihmettelen vain, miten soittaja ehtii kaiken tuon aikana vielä pedaaleille.
+KYSYMYS: Kerro lisää: rekisterit
+
+### 227
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pakruojis (historia)
+Tietoruudun teksti: Pakruojin kartano on entinen asuinkartano kahden kilometrin päässä Pakruojis-kaupungista Kruoja-joen oikealla rannalla. Paikka mainitaan lähteissä ensimmäisen kerran vuonna 1531, ja vuodesta 1780 vuoteen 1940 sen omisti paroniperhe von der Ropp. Nykyiset rakennukset ovat pääosin 1800-luvun alkupuolelta ja edustavat myöhäistä klassismia: päärakennuksen julkisivussa on kuuden pylvään portiikki, ja sisällä on soikea peilisali. Joen yli kulkee vuonna 1821 rakennettu kaareva dolomiittisilta, joka toimii samalla patona ja muistuttaa roomalaisia akvedukteja. Kartano on kunnostettu, ja nykyään siellä toimii hotelli, ravintola ja matkailukohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Lapan akvedukti] 1744–1750 Kaupungin ydin oli soiden ympäröimä, ja vesi oli huonoa: juomavesi kannettiin käsin puroista kaupungin ulkopuolelta. Jo 1602 oli suunnitelmia johtaa vettä Cariocajoen latvoilta Santa Teresan kukkulalta, mutta kanavatyöt takkusivat rahan ja tekniikan puutteessa niin, että 1600-luvun lopussa valmiina oli vain muutama sata metriä. Vasta 1706 jälkeen työ eteni, ja ensimmäinen akvedukti valmistui 1723 tuoden veden barokkiseen suihkulähteeseen nykyisellä Largo da Cariocalla. Vuoteen 1744 mennessä rakennelma oli jo huonossa kunnossa, ja kuvernööri Gomes Freire de Andrade määräsi tilalle suuremman. Sen suunnitteli portugalilainen sotilasinsinööri José Fernandes Pinto Alpoim Lissabonin Águ…
+- [Kypros — maalehti / Ruoka: Sokeriruokoa kasvatettiin holvien vieressä] Ennen kuin sokeriruoko siirtyi Atlantin taakse, sitä kasvatettiin Kyproksen etelärannikolla. Kolossin tila annettiin vuonna 1210 johanniittojen ritarikunnalle, ja sokerin valmistus paikalla on dokumentoitu vuodesta 1343. Linnan itäpuolella on yhä jäljellä pitkä ja kapea holvattu halli, jossa ruoko puristettiin ja mehu keitettiin. Työ vaati vettä kahteen tarkoitukseen: kastelemaan ruokoviljelmiä ja pyörittämään myllynrattaita. Sitä varten alueelle rakennettiin akveduktien, altaiden ja vesimyllyjen verkosto. Sokeri oli keskiajan Euroopassa kallis ylellisyystuote, ja saaren sokeri myytiin sinne mausteen tapaan.
+AIEMPI KYSYMYS: Miksi kartanon silta muistuttaa roomalaista akveduktia?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Pakruojin kartanon vuonna 1821 rakennettu dolomiittisilta on kaareva ja toimii samalla patona, ja sen kaarirakenne muistuttaa [[akveduktien]] eli roomalaisten vesijohtosiltojen tuttua riviä pyöreäkaarisia aukkoja. Kaari sopii kivirakenteeseen hyvin, koska se jakaa kuorman tasaisesti ja antaa kivelle tukea, ja siksi roomalaiset rakensivat vesijohtonsa juuri niin, ja siksi samaa muotoa on käytetty myöhemminkin. En tiedä, ajattelivatko sillan rakentajat nimenomaan roomalaisia esikuvia. Rooman kuuluisimpaan lähteeseen vesi tulee yhä antiikin vesijohtoa pitkin, eli [[dolomiittisilta]] on hyvässä seurassa.
+KYSYMYS: Kerro lisää: akveduktien
+
+### 228
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pakruojis (historia)
+Tietoruudun teksti: Pakruojin kartano on entinen asuinkartano kahden kilometrin päässä Pakruojis-kaupungista Kruoja-joen oikealla rannalla. Paikka mainitaan lähteissä ensimmäisen kerran vuonna 1531, ja vuodesta 1780 vuoteen 1940 sen omisti paroniperhe von der Ropp. Nykyiset rakennukset ovat pääosin 1800-luvun alkupuolelta ja edustavat myöhäistä klassismia: päärakennuksen julkisivussa on kuuden pylvään portiikki, ja sisällä on soikea peilisali. Joen yli kulkee vuonna 1821 rakennettu kaareva dolomiittisilta, joka toimii samalla patona ja muistuttaa roomalaisia akvedukteja. Kartano on kunnostettu, ja nykyään siellä toimii hotelli, ravintola ja matkailukohde.
+AIEMPI KYSYMYS: Miksi kartanon silta muistuttaa roomalaista akveduktia?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Pakruojin kartanon vuonna 1821 rakennettu dolomiittisilta on kaareva ja toimii samalla patona, ja sen kaarirakenne muistuttaa [[akveduktien]] eli roomalaisten vesijohtosiltojen tuttua riviä pyöreäkaarisia aukkoja. Kaari sopii kivirakenteeseen hyvin, koska se jakaa kuorman tasaisesti ja antaa kivelle tukea, ja siksi roomalaiset rakensivat vesijohtonsa juuri niin, ja siksi samaa muotoa on käytetty myöhemminkin. En tiedä, ajattelivatko sillan rakentajat nimenomaan roomalaisia esikuvia. Rooman kuuluisimpaan lähteeseen vesi tulee yhä antiikin vesijohtoa pitkin, eli [[dolomiittisilta]] on hyvässä seurassa.
+KYSYMYS: Kerro lisää: dolomiittisilta
+
+### 229
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pakruojis (historia)
+Tietoruudun teksti: Pakruojin kartano on entinen asuinkartano kahden kilometrin päässä Pakruojis-kaupungista Kruoja-joen oikealla rannalla. Paikka mainitaan lähteissä ensimmäisen kerran vuonna 1531, ja vuodesta 1780 vuoteen 1940 sen omisti paroniperhe von der Ropp. Nykyiset rakennukset ovat pääosin 1800-luvun alkupuolelta ja edustavat myöhäistä klassismia: päärakennuksen julkisivussa on kuuden pylvään portiikki, ja sisällä on soikea peilisali. Joen yli kulkee vuonna 1821 rakennettu kaareva dolomiittisilta, joka toimii samalla patona ja muistuttaa roomalaisia akvedukteja. Kartano on kunnostettu, ja nykyään siellä toimii hotelli, ravintola ja matkailukohde.
+AIEMPI KYSYMYS: Millaisia rakennuksia suureen kartanokokonaisuuteen kuului päärakennuksen lisäksi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. En ole varma [[Pakruojin kartanon]] tarkasta rakennuskannasta, joten kerron yleisesti. Suuri kartanokokonaisuus oli pieni itsenäinen yhteisö, jonka päärakennuksen lisäksi kuuluivat tavallisesti talousrakennukset: tallit ja vaunuliiterit, aitat ja viljavarastot, navetat, mylly, mahdollisesti panimo, työväen asuinrakennukset sekä puutarha ja puisto. Pakruojin kartano on kunnostettu, ja nykyään siellä toimii [[hotelli]], ravintola ja matkailukohde, joten osa kokonaisuuden rakennuksista on saanut uuden käytön. Kannattaa tarkistaa tarkka rakennusluettelo kartanon omilta sivuilta.
+KYSYMYS: Kerro lisää: Pakruojin kartanon
+
+### 230
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pakruojis (historia)
+Tietoruudun teksti: Pakruojin kartano on entinen asuinkartano kahden kilometrin päässä Pakruojis-kaupungista Kruoja-joen oikealla rannalla. Paikka mainitaan lähteissä ensimmäisen kerran vuonna 1531, ja vuodesta 1780 vuoteen 1940 sen omisti paroniperhe von der Ropp. Nykyiset rakennukset ovat pääosin 1800-luvun alkupuolelta ja edustavat myöhäistä klassismia: päärakennuksen julkisivussa on kuuden pylvään portiikki, ja sisällä on soikea peilisali. Joen yli kulkee vuonna 1821 rakennettu kaareva dolomiittisilta, joka toimii samalla patona ja muistuttaa roomalaisia akvedukteja. Kartano on kunnostettu, ja nykyään siellä toimii hotelli, ravintola ja matkailukohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Darwin — kohdekartta / Kohdekartta: Vic-hotelli] 1890 Hotellin rakennutti Ellen Ryan, yksi territorion varakkaimmista naisista, joka omisti maata ja useita kaivosvaltauksia. Vuonna 1888 hän haki lupaviranomaisilta lupaa arvokkaalle hotellille Smith Streetin numeroon 27 keskellä kaupunkia, joka tunnettiin silloin Palmerstonina. H. C. Debross rakensi talon 4 000 punnalla, ja siitä tuli Darwinin ensimmäinen kivirakennus: kaksikerroksinen, paikallista monivärista porselaniittia, julkisivussa päätykolmio ja kuistit. Ovet avattiin 8. syyskuuta 1890. Nimi vaihtui kahdesti: ensin Royal Hotel, muutamaa päivää myöhemmin North Australian Hotel ja 1896 Victoria Hotel. Talo menetti kattonsa kolmesti alle sadassa vuodessa. Ensimmäinen kerta oli 6. tamm…
+- [Yangon — kohdekartta / Kohdekartta: Strand-hotelli] avattiin 1901 Osoitteessa 92 Strand Road avattiin vuonna 1901 hotelli, jonka rakennutti brittiläinen liikemies John Darwood. Se siirtyi pian Sarkiesin veljesten omistukseen — samojen, joilla oli Raffles Singaporessa ja Eastern & Oriental Penangissa. Siirtomaa-aikana Strand oli yksi Brittiläisen imperiumin ylellisimmistä hotelleista, ja sitä mainostettiin hienoimpana majatalona Suezista itään. Asiakkaiksi otettiin tuolloin vain valkoisia; burmalaisille ovet avautuivat vasta vuonna 1945. Omistajia on ollut monta. Sarkiesit myivät hotellin vuonna 1925 ravintoloitsija Peter Bugalar Aratoonille ja Ae Amovsielle, ja talo peruskorjattiin 1937. Toisen maailmansodan aikana siinä majoitettiin lyhyen …
+AIEMPI KYSYMYS: Millaisia rakennuksia suureen kartanokokonaisuuteen kuului päärakennuksen lisäksi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. En ole varma [[Pakruojin kartanon]] tarkasta rakennuskannasta, joten kerron yleisesti. Suuri kartanokokonaisuus oli pieni itsenäinen yhteisö, jonka päärakennuksen lisäksi kuuluivat tavallisesti talousrakennukset: tallit ja vaunuliiterit, aitat ja viljavarastot, navetat, mylly, mahdollisesti panimo, työväen asuinrakennukset sekä puutarha ja puisto. Pakruojin kartano on kunnostettu, ja nykyään siellä toimii [[hotelli]], ravintola ja matkailukohde, joten osa kokonaisuuden rakennuksista on saanut uuden käytön. Kannattaa tarkistaa tarkka rakennusluettelo kartanon omilta sivuilta.
+KYSYMYS: Kerro lisää: hotelli
+
+### 231
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pakruojis (historia)
+Tietoruudun teksti: Pakruojin kartano on entinen asuinkartano kahden kilometrin päässä Pakruojis-kaupungista Kruoja-joen oikealla rannalla. Paikka mainitaan lähteissä ensimmäisen kerran vuonna 1531, ja vuodesta 1780 vuoteen 1940 sen omisti paroniperhe von der Ropp. Nykyiset rakennukset ovat pääosin 1800-luvun alkupuolelta ja edustavat myöhäistä klassismia: päärakennuksen julkisivussa on kuuden pylvään portiikki, ja sisällä on soikea peilisali. Joen yli kulkee vuonna 1821 rakennettu kaareva dolomiittisilta, joka toimii samalla patona ja muistuttaa roomalaisia akvedukteja. Kartano on kunnostettu, ja nykyään siellä toimii hotelli, ravintola ja matkailukohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kaupunkilehti / Bergen: Kaupunki ylittää vanhat rajansa] Vuoden 1855 tulipalo Torgallmenningenin länsipuolella johti siihen, että alue rakennettiin uudelleen säännöllisen kokoisiksi kortteleiksi. Kaupungin rajoja laajennettiin 1876, ja Nygård, Møhlenpris ja Sandviken kaupungistuivat nopeasti: suuriin korttelitaloihin muuttivat sekä köyhät että varakkaat. Arkkitehtuurissa sekoittuvat historismi, klassismi ja art nouveau. Varakkaat rakensivat huviloita Møhlenprisin ja Nygårdin välille sekä Fløyen-vuoren rinteeseen, ja nämäkin alueet liitettiin Bergeniin samana vuonna.
+AIEMPI KYSYMYS: Mitä myöhäinen klassismi tarkoittaa arkkitehtuurissa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Klassismi]] on arkkitehtuurin tyylisuunta, joka ammentaa esikuvansa antiikin Kreikasta ja Roomasta, ja sen tunnusmerkkejä ovat symmetria, selkeät mittasuhteet, pylväät, kolmiopäädyt ja hillitty koristelu. Suunta vaikutti Euroopassa 1700-luvun lopulta 1800-luvun puoliväliin, ja myöhäisellä klassismilla tarkoitetaan sen viimeisiä vaiheita, joissa muoto yksinkertaistui ja tyylistä tuli kartanoille ja kaupunkien julkisille rakennuksille tavallinen. [[Pylväsportiikki]] on tästä tyylistä tyypillinen esimerkki. Hyvä, että muistin sen ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Klassismi
+
+### 232
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pakruojis (historia)
+Tietoruudun teksti: Pakruojin kartano on entinen asuinkartano kahden kilometrin päässä Pakruojis-kaupungista Kruoja-joen oikealla rannalla. Paikka mainitaan lähteissä ensimmäisen kerran vuonna 1531, ja vuodesta 1780 vuoteen 1940 sen omisti paroniperhe von der Ropp. Nykyiset rakennukset ovat pääosin 1800-luvun alkupuolelta ja edustavat myöhäistä klassismia: päärakennuksen julkisivussa on kuuden pylvään portiikki, ja sisällä on soikea peilisali. Joen yli kulkee vuonna 1821 rakennettu kaareva dolomiittisilta, joka toimii samalla patona ja muistuttaa roomalaisia akvedukteja. Kartano on kunnostettu, ja nykyään siellä toimii hotelli, ravintola ja matkailukohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Julianuksen pylväs] 362 Uluksen hallintokorttelissa seisoo yksinään noin viisitoista metriä korkea kivipylväs. Sitä ei ole veistetty yhdestä kivestä vaan muurattu kappaleista päällekkäin, ja varren pinta on uurrettu tiheiksi vaakarenkaiksi juuresta latvaan. Ylimpänä on lehtikoristeinen kapiteeli, jonka yläreunasta on lohjennut paloja. Turkiksi pylväs on Julianus Sütunu, mutta ankaralaisten oma nimi sille on Belkıs Minaresi, Belkısin minareetti. Keisari Julianus julisti sodan persialaisia vastaan vuonna 362 ja määräsi sotaretkelle reitin, joka kulki Ankaran kautta. Kun kaupunkiin tuli tieto, että keisari pysähtyy siellä matkallaan, valmistelut aloitettiin koko kaupungissa ja pylväs pystytettiin hänen kunniaksee…
+- [Intia — maalehti / Historia: Pylväs ei ole ruostunut 1600 vuoteen] 400-luku — Delhin Qutb-alueella seisoo rautapylväs, joka on 7,21 metriä korkea ja painaa yli kuusi tonnia. Se pystytettiin Chandragupta II:n aikana 300–400-luvun vaihteessa, alun perin muualle, ja siirrettiin Delhiin vasta 1000-luvulla. Pylväs on kiinnostanut materiaalitutkijoita, koska se ei juuri ruostu ulkoilmassa. Syy on raudan poikkeuksellisen korkea fosforipitoisuus: pintaan on vuosisatojen kuluessa syntynyt ohut tiivis kerros, joka suojaa alla olevaa metallia. Sitä ei osattu tehdä tarkoituksella, mutta seppien taito valmistaa rautaa oli poikkeuksellinen.
+AIEMPI KYSYMYS: Mitä myöhäinen klassismi tarkoittaa arkkitehtuurissa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Klassismi]] on arkkitehtuurin tyylisuunta, joka ammentaa esikuvansa antiikin Kreikasta ja Roomasta, ja sen tunnusmerkkejä ovat symmetria, selkeät mittasuhteet, pylväät, kolmiopäädyt ja hillitty koristelu. Suunta vaikutti Euroopassa 1700-luvun lopulta 1800-luvun puoliväliin, ja myöhäisellä klassismilla tarkoitetaan sen viimeisiä vaiheita, joissa muoto yksinkertaistui ja tyylistä tuli kartanoille ja kaupunkien julkisille rakennuksille tavallinen. [[Pylväsportiikki]] on tästä tyylistä tyypillinen esimerkki. Hyvä, että muistin sen ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Pylväsportiikki
+
+### 233
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pakruojis (historia)
+Tietoruudun teksti: Pakruojin kartano on entinen asuinkartano kahden kilometrin päässä Pakruojis-kaupungista Kruoja-joen oikealla rannalla. Paikka mainitaan lähteissä ensimmäisen kerran vuonna 1531, ja vuodesta 1780 vuoteen 1940 sen omisti paroniperhe von der Ropp. Nykyiset rakennukset ovat pääosin 1800-luvun alkupuolelta ja edustavat myöhäistä klassismia: päärakennuksen julkisivussa on kuuden pylvään portiikki, ja sisällä on soikea peilisali. Joen yli kulkee vuonna 1821 rakennettu kaareva dolomiittisilta, joka toimii samalla patona ja muistuttaa roomalaisia akvedukteja. Kartano on kunnostettu, ja nykyään siellä toimii hotelli, ravintola ja matkailukohde.
+AIEMPI KYSYMYS: Mikä on dolomiitti ja mihin sitä käytetään?
+AIEMPI VASTAUS (Livia):
+Mmm— tämän minä osaan kertoa. [[Dolomiitti]] on kalsium- ja magnesiumkarbonaatista koostuva kivilaji ja mineraali, joka muistuttaa [[kalkkikiveä]] mutta on hieman kovempaa. Sitä käytetään rakennuskivenä, murskeena tie- ja talonrakennuksessa, kalkin ja maanparannusaineiden valmistuksessa sekä teollisuudessa, esimerkiksi lasin ja metallien tuotannossa. Dolomiitti on ollut Liettuassa tuttu rakennusaine, ja sen pinta näyttää vaalealta ja tasaiselta. Sepä oli lyhyt ja täsmällinen, kyyhkyltä harvinaista.
+KYSYMYS: Kerro lisää: Dolomiitti
+
+### 234
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pakruojis (historia)
+Tietoruudun teksti: Pakruojin kartano on entinen asuinkartano kahden kilometrin päässä Pakruojis-kaupungista Kruoja-joen oikealla rannalla. Paikka mainitaan lähteissä ensimmäisen kerran vuonna 1531, ja vuodesta 1780 vuoteen 1940 sen omisti paroniperhe von der Ropp. Nykyiset rakennukset ovat pääosin 1800-luvun alkupuolelta ja edustavat myöhäistä klassismia: päärakennuksen julkisivussa on kuuden pylvään portiikki, ja sisällä on soikea peilisali. Joen yli kulkee vuonna 1821 rakennettu kaareva dolomiittisilta, joka toimii samalla patona ja muistuttaa roomalaisia akvedukteja. Kartano on kunnostettu, ja nykyään siellä toimii hotelli, ravintola ja matkailukohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+AIEMPI KYSYMYS: Mikä on dolomiitti ja mihin sitä käytetään?
+AIEMPI VASTAUS (Livia):
+Mmm— tämän minä osaan kertoa. [[Dolomiitti]] on kalsium- ja magnesiumkarbonaatista koostuva kivilaji ja mineraali, joka muistuttaa [[kalkkikiveä]] mutta on hieman kovempaa. Sitä käytetään rakennuskivenä, murskeena tie- ja talonrakennuksessa, kalkin ja maanparannusaineiden valmistuksessa sekä teollisuudessa, esimerkiksi lasin ja metallien tuotannossa. Dolomiitti on ollut Liettuassa tuttu rakennusaine, ja sen pinta näyttää vaalealta ja tasaiselta. Sepä oli lyhyt ja täsmällinen, kyyhkyltä harvinaista.
+KYSYMYS: Kerro lisää: kalkkikiveä
+
+### 235
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pakruojis (historia)
+Tietoruudun teksti: Pakruojin kartano on entinen asuinkartano kahden kilometrin päässä Pakruojis-kaupungista Kruoja-joen oikealla rannalla. Paikka mainitaan lähteissä ensimmäisen kerran vuonna 1531, ja vuodesta 1780 vuoteen 1940 sen omisti paroniperhe von der Ropp. Nykyiset rakennukset ovat pääosin 1800-luvun alkupuolelta ja edustavat myöhäistä klassismia: päärakennuksen julkisivussa on kuuden pylvään portiikki, ja sisällä on soikea peilisali. Joen yli kulkee vuonna 1821 rakennettu kaareva dolomiittisilta, joka toimii samalla patona ja muistuttaa roomalaisia akvedukteja. Kartano on kunnostettu, ja nykyään siellä toimii hotelli, ravintola ja matkailukohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Musiikki: Paroni, joka kirjoitti musiikin kuuteen niteeseen] 1932–1934 — Rodolphe d’Erlanger kokosi maloufin säännöt ja historian kuuteen niteeseen ja perusti Rachidian, konservatorion, joka toimii yhä. Hänen ehdotuksestaan kuningas Fuad I kutsui koolle arabialaisen musiikin kongressin Kairoon 14. maaliskuuta – 3. huhtikuuta 1932, ja d’Erlanger toimi sen varapuheenjohtajana. Paikalla olivat muun muassa Béla Bartók ja Paul Hindemith, ja delegaatioita tuli Algeriasta, Egyptistä, Irakista, Marokosta, Syyriasta, Tunisiasta ja Turkista. Kongressissa äänitettiin 360 esitystä, joista 162 julkaistiin levyinä; äänitteitä säilytetään Pariisissa, Lontoossa ja Berliinissä.
+AIEMPI KYSYMYS: Mikä on paroni aatelisarvona?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Paroni]] on [[aatelisarvo]], joka useimmissa Euroopan aatelisjärjestelmissä sijoittuu kreivin alapuolelle ja on usein aatelisarvoista alimpia, vaikka järjestys ja nimitykset vaihtelevat maittain. Suomessa ja Ruotsissa vastaava arvo on vapaaherra, ja saksankielisessä maailmassa paronia vastaa Freiherr. Aatelisarvon mukana oli ennen kaikkea sosiaalinen asema ja usein maaomistusta, ja kartanon omistaminen kuului monen aatelissuvun elämään. Tarkoista oikeuksista en uskalla sanoa mitään, sillä ne vaihtelivat valtioittain. Siinä riittää arvonimiä yhdelle kyyhkylle.
+KYSYMYS: Kerro lisää: Paroni
+
+### 236
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pakruojis (historia)
+Tietoruudun teksti: Pakruojin kartano on entinen asuinkartano kahden kilometrin päässä Pakruojis-kaupungista Kruoja-joen oikealla rannalla. Paikka mainitaan lähteissä ensimmäisen kerran vuonna 1531, ja vuodesta 1780 vuoteen 1940 sen omisti paroniperhe von der Ropp. Nykyiset rakennukset ovat pääosin 1800-luvun alkupuolelta ja edustavat myöhäistä klassismia: päärakennuksen julkisivussa on kuuden pylvään portiikki, ja sisällä on soikea peilisali. Joen yli kulkee vuonna 1821 rakennettu kaareva dolomiittisilta, joka toimii samalla patona ja muistuttaa roomalaisia akvedukteja. Kartano on kunnostettu, ja nykyään siellä toimii hotelli, ravintola ja matkailukohde.
+AIEMPI KYSYMYS: Mikä on paroni aatelisarvona?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Paroni]] on [[aatelisarvo]], joka useimmissa Euroopan aatelisjärjestelmissä sijoittuu kreivin alapuolelle ja on usein aatelisarvoista alimpia, vaikka järjestys ja nimitykset vaihtelevat maittain. Suomessa ja Ruotsissa vastaava arvo on vapaaherra, ja saksankielisessä maailmassa paronia vastaa Freiherr. Aatelisarvon mukana oli ennen kaikkea sosiaalinen asema ja usein maaomistusta, ja kartanon omistaminen kuului monen aatelissuvun elämään. Tarkoista oikeuksista en uskalla sanoa mitään, sillä ne vaihtelivat valtioittain. Siinä riittää arvonimiä yhdelle kyyhkylle.
+KYSYMYS: Kerro lisää: aatelisarvo
+
+### 237
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dzūkijan kansallispuisto (kulttuuri)
+Tietoruudun teksti: Dzūkijan kansallispuisto sijaitsee Etelä-Liettuassa, noin sadan kilometrin päässä Vilnasta lounaaseen ja Kaunasista etelään. Se perustettiin 23. huhtikuuta 1991 suojelemaan Dainavan maata, ja se on maan laajin suojeltu metsäalue: 584,5 neliökilometriä Nemunas-joen rannoilla. Maisemaa hallitsevat mäntyvaltaiset metsät, suot, järvet ja sisämaan dyynit, ja alueella on 30 jokea ja puroa. Puiston eteläpuolella on Čepkeliain suoalue, Liettuan suurin suo. Puiston hallintokeskus on Marcinkonysissa, ja alueella sijaitsee etnografinen Zervynosin kylä.
+AIEMPI KYSYMYS: Miksi juuri tämä metsä- ja suoseutu haluttiin suojella kansallispuistona?
+AIEMPI VASTAUS (Livia):
+Ai se. Dzūkijan kansallispuisto perustettiin 23. huhtikuuta 1991 suojelemaan [[Dainavan]] maata, eli Etelä-Liettuan vanhaa metsäistä ja harvaan asuttua seutua. Alue on maan laajin suojeltu metsäalue, 584,5 neliökilometriä, ja sen luontoon kuuluvat mäntyvaltaiset metsät, suot, järvet, sisämaan dyynit ja kolmekymmentä jokea ja puroa Nemunas-joen rannoilla. Puiston eteläpuolella on Čepkeliain suoalue, ja alueella on myös etnografinen [[Zervynosin]] kylä, joten suojelun taustalla ovat sekä luonto että perinteinen kyläkulttuuri. Tarkempia perusteluja päätöksen taustalta en osaa kertoa. Metsä on kyyhkyn mielestä ihan hyvä paikka.
+KYSYMYS: Kerro lisää: Dainavan
+
+### 238
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dzūkijan kansallispuisto (kulttuuri)
+Tietoruudun teksti: Dzūkijan kansallispuisto sijaitsee Etelä-Liettuassa, noin sadan kilometrin päässä Vilnasta lounaaseen ja Kaunasista etelään. Se perustettiin 23. huhtikuuta 1991 suojelemaan Dainavan maata, ja se on maan laajin suojeltu metsäalue: 584,5 neliökilometriä Nemunas-joen rannoilla. Maisemaa hallitsevat mäntyvaltaiset metsät, suot, järvet ja sisämaan dyynit, ja alueella on 30 jokea ja puroa. Puiston eteläpuolella on Čepkeliain suoalue, Liettuan suurin suo. Puiston hallintokeskus on Marcinkonysissa, ja alueella sijaitsee etnografinen Zervynosin kylä.
+AIEMPI KYSYMYS: Miksi juuri tämä metsä- ja suoseutu haluttiin suojella kansallispuistona?
+AIEMPI VASTAUS (Livia):
+Ai se. Dzūkijan kansallispuisto perustettiin 23. huhtikuuta 1991 suojelemaan [[Dainavan]] maata, eli Etelä-Liettuan vanhaa metsäistä ja harvaan asuttua seutua. Alue on maan laajin suojeltu metsäalue, 584,5 neliökilometriä, ja sen luontoon kuuluvat mäntyvaltaiset metsät, suot, järvet, sisämaan dyynit ja kolmekymmentä jokea ja puroa Nemunas-joen rannoilla. Puiston eteläpuolella on Čepkeliain suoalue, ja alueella on myös etnografinen [[Zervynosin]] kylä, joten suojelun taustalla ovat sekä luonto että perinteinen kyläkulttuuri. Tarkempia perusteluja päätöksen taustalta en osaa kertoa. Metsä on kyyhkyn mielestä ihan hyvä paikka.
+KYSYMYS: Kerro lisää: Zervynosin
+
+### 239
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dzūkijan kansallispuisto (kulttuuri)
+Tietoruudun teksti: Dzūkijan kansallispuisto sijaitsee Etelä-Liettuassa, noin sadan kilometrin päässä Vilnasta lounaaseen ja Kaunasista etelään. Se perustettiin 23. huhtikuuta 1991 suojelemaan Dainavan maata, ja se on maan laajin suojeltu metsäalue: 584,5 neliökilometriä Nemunas-joen rannoilla. Maisemaa hallitsevat mäntyvaltaiset metsät, suot, järvet ja sisämaan dyynit, ja alueella on 30 jokea ja puroa. Puiston eteläpuolella on Čepkeliain suoalue, Liettuan suurin suo. Puiston hallintokeskus on Marcinkonysissa, ja alueella sijaitsee etnografinen Zervynosin kylä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Luonto: Dyyni vaeltaa ja hautaa kylän] 2000 — Kuurinkynnäs on lähes sadan kilometrin pituinen hiekkaniemi, joka erottaa matalan lahden merestä. Kapeimmillaan se on vain muutaman sadan metrin levyinen. Kun niemen metsät hakattiin 1600- ja 1700-luvuilla, tuuli pääsi liikuttamaan hiekkaa: dyynit alkoivat vaeltaa ja hautasivat alleen kokonaisia kyliä. Vaellus pysäytettiin istuttamalla mäntyä ja rantakauraa sata vuotta kestäneellä työllä. Unesco otti niemen maailmanperintöluetteloon vuonna 2000.
+- [Namib — kaupunkilehti / Namib: Sossusvlein punaiset dyynit] Namibin eteläosassa Sossusvleissa hiekka on värjäytynyt punaruskeaksi vuosimiljoonien varrella hapettuneen raudan ansiosta – mitä vanhempi dyyni, sitä punaisempi sen pinta. Alueen dyynit kuuluvat maailman korkeimpiin: Big Daddy kohoaa noin 325 metriin, mikä tekee alueesta toiseksi korkeimman dyynialueen maailmassa heti Kiinan Badain Jaranin jälkeen. Suositumpi Dune 45 on vaatimattomampi, noin 80 metriä korkea, mutta sen hiekka on peräti viisi miljoonaa vuotta vanhaa. Auringonnousun valo osuu dyynien harjanteisiin niin, että toinen rinne hehkuu oranssinpunaisena ja toinen jää syvään varjoon – näky joka houkuttelee valokuvaajia paikalle jo pimeän aikaan.
+AIEMPI KYSYMYS: Miten sisämaan dyynit ovat päätyneet metsän keskelle kaukana merestä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Sisämaan [[dyynit]] ovat yleensä peräisin viime [[jääkauden]] lopulta: kun mannerjäätikkö suli, sulamisvesi kuljetti ja kasasi hiekkaa laajoille tasangoille. Kasvillisuutta oli silloin vähän, joten tuuli pääsi muotoilemaan hiekkaa kumpareiksi ja harjuiksi, ja myöhemmin metsä valtasi alueen ja sitoi hiekan paikoilleen. Näin dyynejä voi olla kaukana merestä, ja niiden alla on usein hiekkainen maaperä, jolla viihtyy mänty. En ole varma tämän puiston dyynien tarkasta iästä, joten pidän selityksen yleisenä. Ei paha, vaikka kyyhky ei tunne hiekkaa muuten kuin jaloissaan.
+KYSYMYS: Kerro lisää: dyynit
+
+### 240
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dzūkijan kansallispuisto (kulttuuri)
+Tietoruudun teksti: Dzūkijan kansallispuisto sijaitsee Etelä-Liettuassa, noin sadan kilometrin päässä Vilnasta lounaaseen ja Kaunasista etelään. Se perustettiin 23. huhtikuuta 1991 suojelemaan Dainavan maata, ja se on maan laajin suojeltu metsäalue: 584,5 neliökilometriä Nemunas-joen rannoilla. Maisemaa hallitsevat mäntyvaltaiset metsät, suot, järvet ja sisämaan dyynit, ja alueella on 30 jokea ja puroa. Puiston eteläpuolella on Čepkeliain suoalue, Liettuan suurin suo. Puiston hallintokeskus on Marcinkonysissa, ja alueella sijaitsee etnografinen Zervynosin kylä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vladivostok — kohdekartta / Kohdekartta: Arsenjevin museo] perustettu 1884 Kaukoidän ensimmäinen kotiseutumuseo sai alkunsa 18. huhtikuuta 1884, kun Amurinmaan tutkimusseuran säännöt vahvistettiin, ja ovet avautuivat yleisölle lokakuussa 1890. Vuonna 1945 museo nimettiin Vladimir Arsenjevin, Ussurinmaan tutkijan ja Dersu Uzalan kirjoittajan mukaan — hänen tarinansa on lehden taigasivulla. Kokoelmissa on seudun tutkijoiden, muun muassa Prževalskin, aineistoja, jääkauden fossiileja, 1100-luvun ylimyshauta ja Bohain valtakunnan hallitsijan peili; täytetyt tiikeri ja karhu ovat museon kuuluisin näky. Vuonna 2015 se oli Venäjän katsotuin aluemuseo, yli 421 000 kävijää, ja vuonna 2019 siitä tehtiin liittovaltion museo. Rakennus on tarina itsessään: kaupp…
+- [Whitehorse — kohdekartta / Kohdekartta: Beringia-keskus] 1997 Keskus avattiin 1997 Alaska Highwayn kilometrillä 1423 ja kertoo Beringiasta — 3 200 kilometrin levyisestä maa-alueesta, joka ulottui Siperian Kolyma-joelta Kanadan Mackenzie-joelle. Alue säilyi jääkaudella jäätiköitymättä, koska ilmasto oli kuiva ja lunta satoi vähän. Juuri siksi Beringia kiinnostaa arkeologeja ja paleontologeja: se oli eläinten ja ihmisten kulkureitti Aasian ja Amerikan välillä. Liikennettä oli molempiin suuntiin. Idän suuntaan tulivat mastodontit, mammutit, hirvieläimet, biisonit, lampaat ja myskihärät; länteen menivät hevoseläimet ja kamelit. Sanan Beringia keksi ruotsalainen kasvitieteilijä Eric Hultén vuonna 1937. Keskus on myös tutkimuslaitos. Sen aineistossa on…
+AIEMPI KYSYMYS: Miten sisämaan dyynit ovat päätyneet metsän keskelle kaukana merestä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Sisämaan [[dyynit]] ovat yleensä peräisin viime [[jääkauden]] lopulta: kun mannerjäätikkö suli, sulamisvesi kuljetti ja kasasi hiekkaa laajoille tasangoille. Kasvillisuutta oli silloin vähän, joten tuuli pääsi muotoilemaan hiekkaa kumpareiksi ja harjuiksi, ja myöhemmin metsä valtasi alueen ja sitoi hiekan paikoilleen. Näin dyynejä voi olla kaukana merestä, ja niiden alla on usein hiekkainen maaperä, jolla viihtyy mänty. En ole varma tämän puiston dyynien tarkasta iästä, joten pidän selityksen yleisenä. Ei paha, vaikka kyyhky ei tunne hiekkaa muuten kuin jaloissaan.
+KYSYMYS: Kerro lisää: jääkauden

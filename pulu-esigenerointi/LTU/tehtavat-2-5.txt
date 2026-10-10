@@ -1,0 +1,1150 @@
+### 321
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alytus (kulttuuri)
+Tietoruudun teksti: Alytus on Etelä-Liettuan kaupunki Nemunas-joen rannalla ja maan kuudenneksi suurin. Se on Dzūkijan historiallinen keskus, ja tiet yhdistävät sen muun muassa Vilnaan, Kaunasiin ja Grodnoon. Ensimmäinen maininta on vuodelta 1377, jolloin paikalla oli pieni puinen linnake Saksalaisen ritarikunnan rajalla. Kuningas Stefan Báthory antoi kaupungille kaupunkioikeudet vuonna 1581, ja päivää juhlitaan yhä Alytuksen päivänä. Kaupunki oli vuosisatoja jaettuna kahteen erilliseen osaan, joita kutsutaan yhä nimillä Alytus I ja Alytus II. Kaupungin vaakunassa on valkoinen ruusu, ja sama nimi on Liettuan suurimmalla jalankulkusillalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Menovinkit] Liettua on siirtänyt aarteensa ruudulle: yksi mies maalasi ja sävelsi samat unet, kirjaston holvit on maalattu täyteen kuvia, linnan esineitä saa pyörittää sormella ja lintujen pesille näkee suorana.
+- [Vilna — kohdekartta / Kohdekartta: Boratynka] 1659–1668 Kun kassa on tyhjä, voi aina lyödä lisää rahaa — kunhan ei kysy, mitä raha sen jälkeen on arvoltaan. Puola-Liettua kokeili tätä 1600-luvulla kuparilla, ja kansa antoi kolikolle pilkkanimen, joka on kestänyt pidempään kuin kolikon ostovoima.
+AIEMPI KYSYMYS: Mikä on Liettuan virallinen kieli ja mihin kieliperheeseen se kuuluu?
+AIEMPI VASTAUS (Livia):
+No niin, tämän osaan kertoa. Liettuan virallinen kieli on [[liettua]], joka kuuluu indoeurooppalaisten kielten balttilaiseen haaraan. Sen lähin elossa oleva sukukieli on [[latvia]], mutta kielet eivät ole keskenään ymmärrettäviä ilman opiskelua. Liettua on säilyttänyt paljon vanhoja piirteitä, minkä vuoksi kielitieteilijät pitävät sitä arvokkaana tutkimuskohteena. Sukulaisuus suomen kanssa tästä ei löydy, mikä on pieni pettymys.
+KYSYMYS: Kerro lisää: liettua
+
+### 322
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alytus (kulttuuri)
+Tietoruudun teksti: Alytus on Etelä-Liettuan kaupunki Nemunas-joen rannalla ja maan kuudenneksi suurin. Se on Dzūkijan historiallinen keskus, ja tiet yhdistävät sen muun muassa Vilnaan, Kaunasiin ja Grodnoon. Ensimmäinen maininta on vuodelta 1377, jolloin paikalla oli pieni puinen linnake Saksalaisen ritarikunnan rajalla. Kuningas Stefan Báthory antoi kaupungille kaupunkioikeudet vuonna 1581, ja päivää juhlitaan yhä Alytuksen päivänä. Kaupunki oli vuosisatoja jaettuna kahteen erilliseen osaan, joita kutsutaan yhä nimillä Alytus I ja Alytus II. Kaupungin vaakunassa on valkoinen ruusu, ja sama nimi on Liettuan suurimmalla jalankulkusillalla.
+AIEMPI KYSYMYS: Mikä on Liettuan virallinen kieli ja mihin kieliperheeseen se kuuluu?
+AIEMPI VASTAUS (Livia):
+No niin, tämän osaan kertoa. Liettuan virallinen kieli on [[liettua]], joka kuuluu indoeurooppalaisten kielten balttilaiseen haaraan. Sen lähin elossa oleva sukukieli on [[latvia]], mutta kielet eivät ole keskenään ymmärrettäviä ilman opiskelua. Liettua on säilyttänyt paljon vanhoja piirteitä, minkä vuoksi kielitieteilijät pitävät sitä arvokkaana tutkimuskohteena. Sukulaisuus suomen kanssa tästä ei löydy, mikä on pieni pettymys.
+KYSYMYS: Kerro lisää: latvia
+
+### 323
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alytus (kulttuuri)
+Tietoruudun teksti: Alytus on Etelä-Liettuan kaupunki Nemunas-joen rannalla ja maan kuudenneksi suurin. Se on Dzūkijan historiallinen keskus, ja tiet yhdistävät sen muun muassa Vilnaan, Kaunasiin ja Grodnoon. Ensimmäinen maininta on vuodelta 1377, jolloin paikalla oli pieni puinen linnake Saksalaisen ritarikunnan rajalla. Kuningas Stefan Báthory antoi kaupungille kaupunkioikeudet vuonna 1581, ja päivää juhlitaan yhä Alytuksen päivänä. Kaupunki oli vuosisatoja jaettuna kahteen erilliseen osaan, joita kutsutaan yhä nimillä Alytus I ja Alytus II. Kaupungin vaakunassa on valkoinen ruusu, ja sama nimi on Liettuan suurimmalla jalankulkusillalla.
+AIEMPI KYSYMYS: Millainen alue Dzūkija on?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Dzūkija]] on Liettuan kaakkoisosan historiallinen alue, jonka tunnetuimpia piirteitä ovat laajat metsät, hiekkamaat ja oma murteensa, dzūkin murre. Alue tunnetaan myös sienestyksestä ja marjastuksesta sekä vanhoista kansanperinteistä. Sen historiallinen keskus on Alytus, ja alueella sijaitsee myös [[Dzūkijan kansallispuisto]]. Metsät näyttävät ylhäältä melkein loputtomilta, sen verran sanon.
+KYSYMYS: Kerro lisää: Dzūkija
+
+### 324
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alytus (kulttuuri)
+Tietoruudun teksti: Alytus on Etelä-Liettuan kaupunki Nemunas-joen rannalla ja maan kuudenneksi suurin. Se on Dzūkijan historiallinen keskus, ja tiet yhdistävät sen muun muassa Vilnaan, Kaunasiin ja Grodnoon. Ensimmäinen maininta on vuodelta 1377, jolloin paikalla oli pieni puinen linnake Saksalaisen ritarikunnan rajalla. Kuningas Stefan Báthory antoi kaupungille kaupunkioikeudet vuonna 1581, ja päivää juhlitaan yhä Alytuksen päivänä. Kaupunki oli vuosisatoja jaettuna kahteen erilliseen osaan, joita kutsutaan yhä nimillä Alytus I ja Alytus II. Kaupungin vaakunassa on valkoinen ruusu, ja sama nimi on Liettuan suurimmalla jalankulkusillalla.
+AIEMPI KYSYMYS: Millainen alue Dzūkija on?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Dzūkija]] on Liettuan kaakkoisosan historiallinen alue, jonka tunnetuimpia piirteitä ovat laajat metsät, hiekkamaat ja oma murteensa, dzūkin murre. Alue tunnetaan myös sienestyksestä ja marjastuksesta sekä vanhoista kansanperinteistä. Sen historiallinen keskus on Alytus, ja alueella sijaitsee myös [[Dzūkijan kansallispuisto]]. Metsät näyttävät ylhäältä melkein loputtomilta, sen verran sanon.
+KYSYMYS: Kerro lisää: Dzūkijan kansallispuisto
+
+### 325
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marijampolė (kulttuuri)
+Tietoruudun teksti: Marijampolė on Etelä-Liettuan kaupunki ja Suvalkijan historiallisen alueen kulttuurikeskus. Šešupė-joki jakaa sen kahteen osaan, joita yhdistää kuusi siltaa. Kaupungin nimi juontuu mariaanipatereista, joiden saapuminen vuonna 1751 vauhditti asutuksen kasvua. Vuoden 1868 palo tuhosi monta puutaloa, minkä jälkeen taloja rakennettiin kivestä. Koska Venäjä oli kieltänyt liettuankieliset kirjat, Preussin rajan läheisyys helpotti niiden salakuljetusta, ja kaupungista tuli liettualaisen kansallisen heräämisen keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Ruoka: Leipä jota ei koskaan heitetä pois] Joka aterialla — Tumma ruisleipä, ruginė duona, on liettualaisen ruokapöydän perusta, ja se leivotaan yleensä hapanjuurella pitkän vaivaamisen ja kypsytyksen jälkeen. Leipää on arvostettu niin paljon, ettei sitä perinteisesti heitetä pois eikä aseteta ylösalaisin pöydälle, ja jos pala putoaa lattialle, se saatetaan nostaa ja suudella ennen syömistä. Tapa juontaa juurensa ajoilta, jolloin leipä oli niukkaa ja sen tuhlaaminen nähtiin sekä välinpitämättömyytenä että kiittämättömyytenä ruoalle. Perinne elää yhä monissa liettualaisissa kodeissa.
+AIEMPI KYSYMYS: Miksi liettuankielisiä kirjoja salakuljetettiin 1800-luvulla juuri Marijampolen seudulla?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Venäjän valta oli kieltänyt liettuankieliset kirjat latinalaisin kirjaimin, ja Marijampolen seutu sijaitsi lähellä Preussin rajaa, joten painetut kirjat oli helppo tuoda rajan yli Preussin puolelta. Tämän vuoksi seudusta tuli [[liettualaisen kansallisen heräämisen]] keskus, ja kirjojen kuljettajat tunnettiin nimellä kirjankantajat. Kielto oli voimassa vuosikymmenten ajan, aina 1900-luvun alkuun saakka. Kaupunki kuului tuolloin [[Venäjän keisarikuntaan]], ja Preussi oli rajan toisella puolella.
+
+Kirjeiden ja kirjojen kantajat ovat minulle melkein kollegoita, vaikka heillä oli selkäreput eikä siipiä. Sukuni olisi ollut vähän kateellinen.
+KYSYMYS: Kerro lisää: liettualaisen kansallisen heräämisen
+
+### 326
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marijampolė (kulttuuri)
+Tietoruudun teksti: Marijampolė on Etelä-Liettuan kaupunki ja Suvalkijan historiallisen alueen kulttuurikeskus. Šešupė-joki jakaa sen kahteen osaan, joita yhdistää kuusi siltaa. Kaupungin nimi juontuu mariaanipatereista, joiden saapuminen vuonna 1751 vauhditti asutuksen kasvua. Vuoden 1868 palo tuhosi monta puutaloa, minkä jälkeen taloja rakennettiin kivestä. Koska Venäjä oli kieltänyt liettuankieliset kirjat, Preussin rajan läheisyys helpotti niiden salakuljetusta, ja kaupungista tuli liettualaisen kansallisen heräämisen keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+- [Liettua — maalehti / Historia: Kirjat kannettiin rajan yli selässä] 1864 — Vuonna 1864 Venäjän keisarikunta kielsi liettuan kielen painamisen latinalaisilla kirjaimilla. Kirjoja alettiin painaa rajan takana Itä-Preussissa ja aina Amerikassa asti, ja niitä kuljetettiin salaa takaisin. Kantajia sanottiin liettuaksi knygnešiai, kirjankantajat. He kulkivat öisin metsäpolkuja säkit selässä, ja kiinni jäänyt sai sakot, vankilan tai karkotuksen Siperiaan. Kirjoja kannettiin neljäkymmentä vuotta, kunnes kielto kumottiin vuonna 1904.
+AIEMPI KYSYMYS: Miksi liettuankielisiä kirjoja salakuljetettiin 1800-luvulla juuri Marijampolen seudulla?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Venäjän valta oli kieltänyt liettuankieliset kirjat latinalaisin kirjaimin, ja Marijampolen seutu sijaitsi lähellä Preussin rajaa, joten painetut kirjat oli helppo tuoda rajan yli Preussin puolelta. Tämän vuoksi seudusta tuli [[liettualaisen kansallisen heräämisen]] keskus, ja kirjojen kuljettajat tunnettiin nimellä kirjankantajat. Kielto oli voimassa vuosikymmenten ajan, aina 1900-luvun alkuun saakka. Kaupunki kuului tuolloin [[Venäjän keisarikuntaan]], ja Preussi oli rajan toisella puolella.
+
+Kirjeiden ja kirjojen kantajat ovat minulle melkein kollegoita, vaikka heillä oli selkäreput eikä siipiä. Sukuni olisi ollut vähän kateellinen.
+KYSYMYS: Kerro lisää: Venäjän keisarikuntaan
+
+### 327
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marijampolė (kulttuuri)
+Tietoruudun teksti: Marijampolė on Etelä-Liettuan kaupunki ja Suvalkijan historiallisen alueen kulttuurikeskus. Šešupė-joki jakaa sen kahteen osaan, joita yhdistää kuusi siltaa. Kaupungin nimi juontuu mariaanipatereista, joiden saapuminen vuonna 1751 vauhditti asutuksen kasvua. Vuoden 1868 palo tuhosi monta puutaloa, minkä jälkeen taloja rakennettiin kivestä. Koska Venäjä oli kieltänyt liettuankieliset kirjat, Preussin rajan läheisyys helpotti niiden salakuljetusta, ja kaupungista tuli liettualaisen kansallisen heräämisen keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Tavat: Kukkula, jolle jokainen tuo ristin] 1961 — Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. Neuvostoaikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka tahansa saa tuoda omansa.
+- [Lagos — kaupunkilehti / Laguuni ja sillat: Kaupunki, joka tekee itse maansa] Lagos on kasvanut myös ulospäin vedestä. Ikoyi on liitetty Lagosin saareen täyttömaalla, ja osa saaria erottavista salmista on ruopattu ja rakennettu umpeen. Victoria Islandin merenpuoleinen Bar Beach on rakennettu ympäristöllisesti uudelleen, ja laguunin suulle nousee Eko Atlantic, joka laajentaa Victoria Islandia. Kaupunki levittäytyy yli kolmenkymmenen kilometrin matkalle laguunin lounais- ja länsirannalla. Vesi maksaa siitä hintansa: laguuniin päätyy päivittäin suuri määrä kaupungin ja teollisuuden jätevettä, ja Ogun- ja Osun-joet tuovat lisää. Merenpinnan nousu ja maan painuminen koskettavat Lagosia enemmän kuin useimpia Afrikan suurkaupunkeja.
+AIEMPI KYSYMYS: Miksi Marijampolen puutalot vaihtuivat 1800-luvulla kivitaloiksi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Syynä oli vuoden 1868 [[kaupunkipalo]], joka tuhosi monta [[Marijampolen]] puutaloa. Puurakennukset syttyvät helposti ja tuli leviää niissä nopeasti, joten palon jälkeen taloja alettiin rakentaa kivestä, koska se on paljon paloturvallisempaa. Kaupunki rakennettiin siis osittain uudelleen paloturvallisemmaksi. Sama ajatus ohjasi muuallakin: palosta opittiin, ja kivi tuli puun tilalle.
+KYSYMYS: Kerro lisää: kaupunkipalo
+
+### 328
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marijampolė (kulttuuri)
+Tietoruudun teksti: Marijampolė on Etelä-Liettuan kaupunki ja Suvalkijan historiallisen alueen kulttuurikeskus. Šešupė-joki jakaa sen kahteen osaan, joita yhdistää kuusi siltaa. Kaupungin nimi juontuu mariaanipatereista, joiden saapuminen vuonna 1751 vauhditti asutuksen kasvua. Vuoden 1868 palo tuhosi monta puutaloa, minkä jälkeen taloja rakennettiin kivestä. Koska Venäjä oli kieltänyt liettuankieliset kirjat, Preussin rajan läheisyys helpotti niiden salakuljetusta, ja kaupungista tuli liettualaisen kansallisen heräämisen keskus.
+AIEMPI KYSYMYS: Miksi Marijampolen puutalot vaihtuivat 1800-luvulla kivitaloiksi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Syynä oli vuoden 1868 [[kaupunkipalo]], joka tuhosi monta [[Marijampolen]] puutaloa. Puurakennukset syttyvät helposti ja tuli leviää niissä nopeasti, joten palon jälkeen taloja alettiin rakentaa kivestä, koska se on paljon paloturvallisempaa. Kaupunki rakennettiin siis osittain uudelleen paloturvallisemmaksi. Sama ajatus ohjasi muuallakin: palosta opittiin, ja kivi tuli puun tilalle.
+KYSYMYS: Kerro lisää: Marijampolen
+
+### 329
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marijampolė (kulttuuri)
+Tietoruudun teksti: Marijampolė on Etelä-Liettuan kaupunki ja Suvalkijan historiallisen alueen kulttuurikeskus. Šešupė-joki jakaa sen kahteen osaan, joita yhdistää kuusi siltaa. Kaupungin nimi juontuu mariaanipatereista, joiden saapuminen vuonna 1751 vauhditti asutuksen kasvua. Vuoden 1868 palo tuhosi monta puutaloa, minkä jälkeen taloja rakennettiin kivestä. Koska Venäjä oli kieltänyt liettuankieliset kirjat, Preussin rajan läheisyys helpotti niiden salakuljetusta, ja kaupungista tuli liettualaisen kansallisen heräämisen keskus.
+AIEMPI KYSYMYS: Mistä Šešupė-joki virtaa ja mihin se päätyy?
+AIEMPI VASTAUS (Livia):
+Ai se. Šešupė on [[Nemunas-joen]] sivujoki, ja se virtaa Liettuan lounaisosassa muun muassa [[Marijampolen]] kautta. Joen alajuoksulla se muodostaa osan Liettuan ja Venäjän Kaliningradin alueen välistä rajaa, ja lopulta se yhtyy Nemunas-jokeen. Marijampolessa joki jakaa kaupungin kahteen osaan, joita yhdistävät sillat. Siltoja on kuusi, ja ne ovat minusta kauniita ylhäältä katsottuna.
+KYSYMYS: Kerro lisää: Nemunas-joen
+
+### 330
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marijampolė (kulttuuri)
+Tietoruudun teksti: Marijampolė on Etelä-Liettuan kaupunki ja Suvalkijan historiallisen alueen kulttuurikeskus. Šešupė-joki jakaa sen kahteen osaan, joita yhdistää kuusi siltaa. Kaupungin nimi juontuu mariaanipatereista, joiden saapuminen vuonna 1751 vauhditti asutuksen kasvua. Vuoden 1868 palo tuhosi monta puutaloa, minkä jälkeen taloja rakennettiin kivestä. Koska Venäjä oli kieltänyt liettuankieliset kirjat, Preussin rajan läheisyys helpotti niiden salakuljetusta, ja kaupungista tuli liettualaisen kansallisen heräämisen keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Ruoka: Makkara joka kypsyy kuukausia savussa] 1500-luvulta — Skilandis on liettualainen kylmäsavustettu makkara, joka täytetään karkeaksi jauhetulla sianlihalla, suolalla, pippurilla ja valkosipulilla ja jonka kuorena käytetään perinteisesti sian mahalaukkua tai virtsarakkoa. Se kypsyy savussa ja kuivuu useita kuukausia, jolloin siitä tulee tiivis ja voimakkaan makuinen. Reseptejä tunnetaan jo 1500-luvulta, ja erityisesti Suvalkijan alue on tunnettu skilandiksestaan. Euroopan unioni myönsi liettualaiselle skilandikselle suojatun maantieteellisen merkinnän 2009 ja erillisen aidon perinteisen tuotteen aseman 2016.
+AIEMPI KYSYMYS: Millainen alue Suvalkija on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Suvalkija]] on Liettuan lounaisosan historiallinen alue, joka tunnetaan hedelmällisistä pelloistaan ja maanviljelystään. Sen asukkaiden sanotaan olleen perinteisesti ahkeria ja säästäväisiä viljelijöitä, mutta tällainen yleistys ei päde kaikkiin. Alueen kulttuurikeskus on Marijampolė, ja seutu liittyy myös [[Liettuan kansalliseen heräämiseen]] 1800-luvulla. Maaseudun pelloista näkee ylhäältä hyvin, miten tasaista maa on.
+KYSYMYS: Kerro lisää: Suvalkija
+
+### 331
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marijampolė (kulttuuri)
+Tietoruudun teksti: Marijampolė on Etelä-Liettuan kaupunki ja Suvalkijan historiallisen alueen kulttuurikeskus. Šešupė-joki jakaa sen kahteen osaan, joita yhdistää kuusi siltaa. Kaupungin nimi juontuu mariaanipatereista, joiden saapuminen vuonna 1751 vauhditti asutuksen kasvua. Vuoden 1868 palo tuhosi monta puutaloa, minkä jälkeen taloja rakennettiin kivestä. Koska Venäjä oli kieltänyt liettuankieliset kirjat, Preussin rajan läheisyys helpotti niiden salakuljetusta, ja kaupungista tuli liettualaisen kansallisen heräämisen keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Helsinki — kaupunkilehti / Historian hetki: Ruotsalainen teatteri 1899 — protesti, jota ei sanota ääneen] 4.11.1899 — Kello lähestyy iltaa Ruotsalaisessa teatterissa Helsingissä 4. marraskuuta 1899, ja salissa istuvat ne, joiden lehtiä keisarillinen sensuuri on juuri lakkauttanut. Lehdistön päivien juhlaa vietetään virallisesti sanomalehtimiesten eläkekassan hyväksi; oikeasti se on protesti helmikuun manifestia vastaan, jolla Nikolai II on alkanut supistaa Suomen autonomiaa. Ohjelmassa on kuusi historiallista kuvaelmaa Väinämöisestä isoonvihaan, ja jokaiseen niistä Jean Sibelius, 33, on kirjoittanut musiikin. Viimeinen on nimeltään Suomi herää. Sen loppuun hän on säveltänyt rauhoittuvan hymnin, jota yleisö luulee vanhaksi kansansävelmäksi; se on hänen omansa. Sensori istuu salissa eikä voi kiel…
+- [Helsinki — kohdekartta / Kohdekartta: Suomi herää 1899] Kello lähestyy iltaa Ruotsalaisessa teatterissa Helsingissä 4. marraskuuta 1899, ja salissa istuvat ne, joiden lehtiä keisarillinen sensuuri on juuri lakkauttanut. Lehdistön päivien juhlaa vietetään virallisesti sanomalehtimiesten eläkekassan hyväksi; oikeasti se on protesti helmikuun manifestia vastaan, jolla Nikolai II on alkanut supistaa Suomen autonomiaa. Ohjelmassa on kuusi historiallista kuvaelmaa Väinämöisestä isoonvihaan, ja jokaiseen niistä Jean Sibelius, 33, on kirjoittanut musiikin. Viimeinen on nimeltään Suomi herää. Sen loppuun hän on säveltänyt rauhoittuvan hymnin, jota yleisö luulee vanhaksi kansansävelmäksi; se on hänen omansa. Sensori istuu salissa eikä voi kieltää kuvaelma…
+AIEMPI KYSYMYS: Millainen alue Suvalkija on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Suvalkija]] on Liettuan lounaisosan historiallinen alue, joka tunnetaan hedelmällisistä pelloistaan ja maanviljelystään. Sen asukkaiden sanotaan olleen perinteisesti ahkeria ja säästäväisiä viljelijöitä, mutta tällainen yleistys ei päde kaikkiin. Alueen kulttuurikeskus on Marijampolė, ja seutu liittyy myös [[Liettuan kansalliseen heräämiseen]] 1800-luvulla. Maaseudun pelloista näkee ylhäältä hyvin, miten tasaista maa on.
+KYSYMYS: Kerro lisää: Liettuan kansalliseen heräämiseen
+
+### 332
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marijampolė (kulttuuri)
+Tietoruudun teksti: Marijampolė on Etelä-Liettuan kaupunki ja Suvalkijan historiallisen alueen kulttuurikeskus. Šešupė-joki jakaa sen kahteen osaan, joita yhdistää kuusi siltaa. Kaupungin nimi juontuu mariaanipatereista, joiden saapuminen vuonna 1751 vauhditti asutuksen kasvua. Vuoden 1868 palo tuhosi monta puutaloa, minkä jälkeen taloja rakennettiin kivestä. Koska Venäjä oli kieltänyt liettuankieliset kirjat, Preussin rajan läheisyys helpotti niiden salakuljetusta, ja kaupungista tuli liettualaisen kansallisen heräämisen keskus.
+AIEMPI KYSYMYS: Mitkä maat rajaavat nykyistä Liettuaa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Liettuan naapurimaita ovat pohjoisessa [[Latvia]], idässä ja kaakossa [[Valko-Venäjä]], etelässä [[Puola]] sekä lounaassa Venäjän Kaliningradin alue. Lisäksi Liettuan länsipuolella on Itämeren rannikko. Liettua on yksi kolmesta Baltian maasta, ja sen pohjoinen naapuri Latvia on samalla Baltian keskimmäinen valtio. Rajoja on siis monta, ja minusta ne ovat yhä aika kiinnostavia.
+KYSYMYS: Kerro lisää: Latvia
+
+### 333
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marijampolė (kulttuuri)
+Tietoruudun teksti: Marijampolė on Etelä-Liettuan kaupunki ja Suvalkijan historiallisen alueen kulttuurikeskus. Šešupė-joki jakaa sen kahteen osaan, joita yhdistää kuusi siltaa. Kaupungin nimi juontuu mariaanipatereista, joiden saapuminen vuonna 1751 vauhditti asutuksen kasvua. Vuoden 1868 palo tuhosi monta puutaloa, minkä jälkeen taloja rakennettiin kivestä. Koska Venäjä oli kieltänyt liettuankieliset kirjat, Preussin rajan läheisyys helpotti niiden salakuljetusta, ja kaupungista tuli liettualaisen kansallisen heräämisen keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Valtakunta ulottui mereltä merelle] 1430 — Liettuan suuriruhtinaskunta oli 1400-luvun alussa Euroopan suurin valtio. Suuriruhtinas Vytautas Suuri hallitsi aluetta, joka ulottui Itämereltä lähelle Mustaamerta ja kattoi nykyisen Valko-Venäjän, suuren osan Ukrainaa sekä palasia Puolaa, Latviaa ja Venäjää. Vuonna 1386 suuriruhtinas Jogaila meni naimisiin Puolan kuningattaren kanssa ja otti kasteen, ja maat liittyivät henkilöunioniin, joka näkyy tässä kartassa vierekkäisinä valtakuntina. Liettuasta tuli näin viimeinen pakanallinen valtio, joka kääntyi kristinuskoon Euroopassa.
+- [Liettua — maalehti / Tavat: Kukkula, jolle jokainen tuo ristin] 1961 — Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. Neuvostoaikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka tahansa saa tuoda omansa.
+- [Mongolia — maalehti / Ruoka: Valkoinen ruoka talven varalle] Maito keitetään ensin, jotta pinnalta saadaan öröm, paksu kerma. Kuoritusta maidosta tehdään byaslag-juustoa, hieman hapatettua aartsia, jogurttia, kefiriä ja shimiin arkhia, kevyttä maitoviinaa — sekä aaruulia, kuivattuja rahkapaloja, jotka kovettuvat niin sitkeiksi että kestävät talven yli. Kaikkea tätä sanotaan yhteisnimellä tsagaan idee, valkoinen ruoka, ja se on uudenvuoden pöydän ydin. Päivän juoma on süütei tsai, suolattu maitotee, jossa on voita ja usein paahdettua viljaa. Kun teehen lisää riisiä, lihaa tai pieniä bansh-nyyttejä, siitä tulee ateria.
+AIEMPI KYSYMYS: Mitkä maat rajaavat nykyistä Liettuaa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Liettuan naapurimaita ovat pohjoisessa [[Latvia]], idässä ja kaakossa [[Valko-Venäjä]], etelässä [[Puola]] sekä lounaassa Venäjän Kaliningradin alue. Lisäksi Liettuan länsipuolella on Itämeren rannikko. Liettua on yksi kolmesta Baltian maasta, ja sen pohjoinen naapuri Latvia on samalla Baltian keskimmäinen valtio. Rajoja on siis monta, ja minusta ne ovat yhä aika kiinnostavia.
+KYSYMYS: Kerro lisää: Valko-Venäjä
+
+### 334
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marijampolė (kulttuuri)
+Tietoruudun teksti: Marijampolė on Etelä-Liettuan kaupunki ja Suvalkijan historiallisen alueen kulttuurikeskus. Šešupė-joki jakaa sen kahteen osaan, joita yhdistää kuusi siltaa. Kaupungin nimi juontuu mariaanipatereista, joiden saapuminen vuonna 1751 vauhditti asutuksen kasvua. Vuoden 1868 palo tuhosi monta puutaloa, minkä jälkeen taloja rakennettiin kivestä. Koska Venäjä oli kieltänyt liettuankieliset kirjat, Preussin rajan läheisyys helpotti niiden salakuljetusta, ja kaupungista tuli liettualaisen kansallisen heräämisen keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kohdekartta / Kohdekartta: Boratynka] 1659–1668 Kun kassa on tyhjä, voi aina lyödä lisää rahaa — kunhan ei kysy, mitä raha sen jälkeen on arvoltaan. Puola-Liettua kokeili tätä 1600-luvulla kuparilla, ja kansa antoi kolikolle pilkkanimen, joka on kestänyt pidempään kuin kolikon ostovoima.
+AIEMPI KYSYMYS: Mitkä maat rajaavat nykyistä Liettuaa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Liettuan naapurimaita ovat pohjoisessa [[Latvia]], idässä ja kaakossa [[Valko-Venäjä]], etelässä [[Puola]] sekä lounaassa Venäjän Kaliningradin alue. Lisäksi Liettuan länsipuolella on Itämeren rannikko. Liettua on yksi kolmesta Baltian maasta, ja sen pohjoinen naapuri Latvia on samalla Baltian keskimmäinen valtio. Rajoja on siis monta, ja minusta ne ovat yhä aika kiinnostavia.
+KYSYMYS: Kerro lisää: Puola
+
+### 335
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vištytis (luonto · järvi)
+Tietoruudun teksti: Vištytis on pieni kaupunki Lounais-Liettuassa, Vištytis-järven koillisrannalla lähellä Venäjän Kaliningradin alueen rajaa. Suuriruhtinas Sigismund II Augustus myönsi paikalle kaupunkioikeudet ja vaakunan vuonna 1570, ja se oli alueen ensimmäinen kaupunki. 1800-luvulla tärkeä elinkeino oli harjojen valmistus. Kun rautatie Königsbergistä Venäjälle rakennettiin vuonna 1861 muutaman kilometrin päähän Kybartain kautta, kaupunki taantui nopeasti. Katurakenne ja torinaukio ovat säilyneet 1700-luvulta asti, ja lähistöllä on linnavuori sekä suuri Vištytis-kivi.
+AIEMPI KYSYMYS: Miksi Vištytis alkoi taantua, vaikka rautatie rakennettiin vain muutaman kilometrin päähän?
+AIEMPI VASTAUS (Livia):
+No jopas. Kaupunki jäi rautatien ulkopuolelle: kun rautatie [[Königsbergistä]] Venäjälle rakennettiin vuonna 1861 [[Kybartain]] kautta, kaupan ja liikenteen painopiste siirtyi sinne. Muutama kilometri on junan aikakaudella merkittävä matka, koska tavarat ja ihmiset kulkivat sinne, missä juna pysähtyi. Vištytis ei enää ollut tärkeä kauppapaikka, ja kaupunki taantui nopeasti, vaikka sen katurakenne säilyi.
+KYSYMYS: Kerro lisää: Königsbergistä
+
+### 336
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vištytis (luonto · järvi)
+Tietoruudun teksti: Vištytis on pieni kaupunki Lounais-Liettuassa, Vištytis-järven koillisrannalla lähellä Venäjän Kaliningradin alueen rajaa. Suuriruhtinas Sigismund II Augustus myönsi paikalle kaupunkioikeudet ja vaakunan vuonna 1570, ja se oli alueen ensimmäinen kaupunki. 1800-luvulla tärkeä elinkeino oli harjojen valmistus. Kun rautatie Königsbergistä Venäjälle rakennettiin vuonna 1861 muutaman kilometrin päähän Kybartain kautta, kaupunki taantui nopeasti. Katurakenne ja torinaukio ovat säilyneet 1700-luvulta asti, ja lähistöllä on linnavuori sekä suuri Vištytis-kivi.
+AIEMPI KYSYMYS: Miksi Vištytis alkoi taantua, vaikka rautatie rakennettiin vain muutaman kilometrin päähän?
+AIEMPI VASTAUS (Livia):
+No jopas. Kaupunki jäi rautatien ulkopuolelle: kun rautatie [[Königsbergistä]] Venäjälle rakennettiin vuonna 1861 [[Kybartain]] kautta, kaupan ja liikenteen painopiste siirtyi sinne. Muutama kilometri on junan aikakaudella merkittävä matka, koska tavarat ja ihmiset kulkivat sinne, missä juna pysähtyi. Vištytis ei enää ollut tärkeä kauppapaikka, ja kaupunki taantui nopeasti, vaikka sen katurakenne säilyi.
+KYSYMYS: Kerro lisää: Kybartain
+
+### 337
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vištytis (luonto · järvi)
+Tietoruudun teksti: Vištytis on pieni kaupunki Lounais-Liettuassa, Vištytis-järven koillisrannalla lähellä Venäjän Kaliningradin alueen rajaa. Suuriruhtinas Sigismund II Augustus myönsi paikalle kaupunkioikeudet ja vaakunan vuonna 1570, ja se oli alueen ensimmäinen kaupunki. 1800-luvulla tärkeä elinkeino oli harjojen valmistus. Kun rautatie Königsbergistä Venäjälle rakennettiin vuonna 1861 muutaman kilometrin päähän Kybartain kautta, kaupunki taantui nopeasti. Katurakenne ja torinaukio ovat säilyneet 1700-luvulta asti, ja lähistöllä on linnavuori sekä suuri Vištytis-kivi.
+AIEMPI KYSYMYS: Mikä Vištytisin lähellä oleva suuri kivi on, ja miksi sitä on säilytetty?
+AIEMPI VASTAUS (Livia):
+Hmm, tuota niin. [[Vištytis-kivi]] on suuri [[siirtolohkare]], siis jääkauden mannerjäätikön kuljettama kivi. Täsmällisiä mittoja en muista, joten jätän ne pois, enkä myöskään ole varma, minkä virallisen suojelun piirissä se on. Tällaiset suuret kivet ovat usein luonnonmuistomerkkejä, ja niihin liittyy paikallisia tarinoita ja perinteitä. Kiven vieressä kulkee järven ranta, ja ylhäältä katsottuna maisema on kaunis.
+KYSYMYS: Kerro lisää: Vištytis-kivi
+
+### 338
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vištytis (luonto · järvi)
+Tietoruudun teksti: Vištytis on pieni kaupunki Lounais-Liettuassa, Vištytis-järven koillisrannalla lähellä Venäjän Kaliningradin alueen rajaa. Suuriruhtinas Sigismund II Augustus myönsi paikalle kaupunkioikeudet ja vaakunan vuonna 1570, ja se oli alueen ensimmäinen kaupunki. 1800-luvulla tärkeä elinkeino oli harjojen valmistus. Kun rautatie Königsbergistä Venäjälle rakennettiin vuonna 1861 muutaman kilometrin päähän Kybartain kautta, kaupunki taantui nopeasti. Katurakenne ja torinaukio ovat säilyneet 1700-luvulta asti, ja lähistöllä on linnavuori sekä suuri Vištytis-kivi.
+AIEMPI KYSYMYS: Mikä Vištytisin lähellä oleva suuri kivi on, ja miksi sitä on säilytetty?
+AIEMPI VASTAUS (Livia):
+Hmm, tuota niin. [[Vištytis-kivi]] on suuri [[siirtolohkare]], siis jääkauden mannerjäätikön kuljettama kivi. Täsmällisiä mittoja en muista, joten jätän ne pois, enkä myöskään ole varma, minkä virallisen suojelun piirissä se on. Tällaiset suuret kivet ovat usein luonnonmuistomerkkejä, ja niihin liittyy paikallisia tarinoita ja perinteitä. Kiven vieressä kulkee järven ranta, ja ylhäältä katsottuna maisema on kaunis.
+KYSYMYS: Kerro lisää: siirtolohkare
+
+### 339
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vištytis (luonto · järvi)
+Tietoruudun teksti: Vištytis on pieni kaupunki Lounais-Liettuassa, Vištytis-järven koillisrannalla lähellä Venäjän Kaliningradin alueen rajaa. Suuriruhtinas Sigismund II Augustus myönsi paikalle kaupunkioikeudet ja vaakunan vuonna 1570, ja se oli alueen ensimmäinen kaupunki. 1800-luvulla tärkeä elinkeino oli harjojen valmistus. Kun rautatie Königsbergistä Venäjälle rakennettiin vuonna 1861 muutaman kilometrin päähän Kybartain kautta, kaupunki taantui nopeasti. Katurakenne ja torinaukio ovat säilyneet 1700-luvulta asti, ja lähistöllä on linnavuori sekä suuri Vištytis-kivi.
+AIEMPI KYSYMYS: Mitä Kaliningradin alue on ja kenen alueeseen se kuuluu?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. [[Kaliningradin alue]] on Venäjän osa, joka sijaitsee Liettuan ja Puolan välissä Itämeren rannalla. Se ei rajoitu muuhun Venäjään, joten sitä sanotaan eksklaaviksi. Alueen keskus on Kaliningrad, joka tunnettiin aiemmin nimellä [[Königsberg]]. Nykytilanteesta tietoni voivat olla vanhentuneet. Vištytis on aivan alueen rajan tuntumassa.
+KYSYMYS: Kerro lisää: Kaliningradin alue
+
+### 340
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vištytis (luonto · järvi)
+Tietoruudun teksti: Vištytis on pieni kaupunki Lounais-Liettuassa, Vištytis-järven koillisrannalla lähellä Venäjän Kaliningradin alueen rajaa. Suuriruhtinas Sigismund II Augustus myönsi paikalle kaupunkioikeudet ja vaakunan vuonna 1570, ja se oli alueen ensimmäinen kaupunki. 1800-luvulla tärkeä elinkeino oli harjojen valmistus. Kun rautatie Königsbergistä Venäjälle rakennettiin vuonna 1861 muutaman kilometrin päähän Kybartain kautta, kaupunki taantui nopeasti. Katurakenne ja torinaukio ovat säilyneet 1700-luvulta asti, ja lähistöllä on linnavuori sekä suuri Vištytis-kivi.
+AIEMPI KYSYMYS: Mitä Kaliningradin alue on ja kenen alueeseen se kuuluu?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. [[Kaliningradin alue]] on Venäjän osa, joka sijaitsee Liettuan ja Puolan välissä Itämeren rannalla. Se ei rajoitu muuhun Venäjään, joten sitä sanotaan eksklaaviksi. Alueen keskus on Kaliningrad, joka tunnettiin aiemmin nimellä [[Königsberg]]. Nykytilanteesta tietoni voivat olla vanhentuneet. Vištytis on aivan alueen rajan tuntumassa.
+KYSYMYS: Kerro lisää: Königsberg
+
+### 341
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vištytis (luonto · järvi)
+Tietoruudun teksti: Vištytis on pieni kaupunki Lounais-Liettuassa, Vištytis-järven koillisrannalla lähellä Venäjän Kaliningradin alueen rajaa. Suuriruhtinas Sigismund II Augustus myönsi paikalle kaupunkioikeudet ja vaakunan vuonna 1570, ja se oli alueen ensimmäinen kaupunki. 1800-luvulla tärkeä elinkeino oli harjojen valmistus. Kun rautatie Königsbergistä Venäjälle rakennettiin vuonna 1861 muutaman kilometrin päähän Kybartain kautta, kaupunki taantui nopeasti. Katurakenne ja torinaukio ovat säilyneet 1700-luvulta asti, ja lähistöllä on linnavuori sekä suuri Vištytis-kivi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vladivostok — kohdekartta / Kohdekartta: Arsenjevin museo] perustettu 1884 Kaukoidän ensimmäinen kotiseutumuseo sai alkunsa 18. huhtikuuta 1884, kun Amurinmaan tutkimusseuran säännöt vahvistettiin, ja ovet avautuivat yleisölle lokakuussa 1890. Vuonna 1945 museo nimettiin Vladimir Arsenjevin, Ussurinmaan tutkijan ja Dersu Uzalan kirjoittajan mukaan — hänen tarinansa on lehden taigasivulla. Kokoelmissa on seudun tutkijoiden, muun muassa Prževalskin, aineistoja, jääkauden fossiileja, 1100-luvun ylimyshauta ja Bohain valtakunnan hallitsijan peili; täytetyt tiikeri ja karhu ovat museon kuuluisin näky. Vuonna 2015 se oli Venäjän katsotuin aluemuseo, yli 421 000 kävijää, ja vuonna 2019 siitä tehtiin liittovaltion museo. Rakennus on tarina itsessään: kaupp…
+- [Whitehorse — kohdekartta / Kohdekartta: Beringia-keskus] 1997 Keskus avattiin 1997 Alaska Highwayn kilometrillä 1423 ja kertoo Beringiasta — 3 200 kilometrin levyisestä maa-alueesta, joka ulottui Siperian Kolyma-joelta Kanadan Mackenzie-joelle. Alue säilyi jääkaudella jäätiköitymättä, koska ilmasto oli kuiva ja lunta satoi vähän. Juuri siksi Beringia kiinnostaa arkeologeja ja paleontologeja: se oli eläinten ja ihmisten kulkureitti Aasian ja Amerikan välillä. Liikennettä oli molempiin suuntiin. Idän suuntaan tulivat mastodontit, mammutit, hirvieläimet, biisonit, lampaat ja myskihärät; länteen menivät hevoseläimet ja kamelit. Sanan Beringia keksi ruotsalainen kasvitieteilijä Eric Hultén vuonna 1937. Keskus on myös tutkimuslaitos. Sen aineistossa on…
+AIEMPI KYSYMYS: Miten jääkausi muovasi Liettuan järvimaisemaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Jääkauden]] aikana [[mannerjäätikkö]] peitti suuren osan Pohjois-Eurooppaa, ja sen sulaessa se jätti jälkeensä [[moreenia]], harjuja, kumpuja ja painanteita. Painanteisiin muodostui järviä, ja Liettuassa niitä on runsaasti, erityisesti koillisessa ja kaakossa. Jäätikkö kuljetti mukanaan myös suuria kiviä, joita kutsutaan siirtolohkareiksi. Tämän kaiken oli pakko olla hidasta puuhaa, kun ajattelee, miten monta vuotta siihen meni.
+KYSYMYS: Kerro lisää: Jääkauden
+
+### 342
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vištytis (luonto · järvi)
+Tietoruudun teksti: Vištytis on pieni kaupunki Lounais-Liettuassa, Vištytis-järven koillisrannalla lähellä Venäjän Kaliningradin alueen rajaa. Suuriruhtinas Sigismund II Augustus myönsi paikalle kaupunkioikeudet ja vaakunan vuonna 1570, ja se oli alueen ensimmäinen kaupunki. 1800-luvulla tärkeä elinkeino oli harjojen valmistus. Kun rautatie Königsbergistä Venäjälle rakennettiin vuonna 1861 muutaman kilometrin päähän Kybartain kautta, kaupunki taantui nopeasti. Katurakenne ja torinaukio ovat säilyneet 1700-luvulta asti, ja lähistöllä on linnavuori sekä suuri Vištytis-kivi.
+AIEMPI KYSYMYS: Miten jääkausi muovasi Liettuan järvimaisemaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Jääkauden]] aikana [[mannerjäätikkö]] peitti suuren osan Pohjois-Eurooppaa, ja sen sulaessa se jätti jälkeensä [[moreenia]], harjuja, kumpuja ja painanteita. Painanteisiin muodostui järviä, ja Liettuassa niitä on runsaasti, erityisesti koillisessa ja kaakossa. Jäätikkö kuljetti mukanaan myös suuria kiviä, joita kutsutaan siirtolohkareiksi. Tämän kaiken oli pakko olla hidasta puuhaa, kun ajattelee, miten monta vuotta siihen meni.
+KYSYMYS: Kerro lisää: mannerjäätikkö
+
+### 343
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vištytis (luonto · järvi)
+Tietoruudun teksti: Vištytis on pieni kaupunki Lounais-Liettuassa, Vištytis-järven koillisrannalla lähellä Venäjän Kaliningradin alueen rajaa. Suuriruhtinas Sigismund II Augustus myönsi paikalle kaupunkioikeudet ja vaakunan vuonna 1570, ja se oli alueen ensimmäinen kaupunki. 1800-luvulla tärkeä elinkeino oli harjojen valmistus. Kun rautatie Königsbergistä Venäjälle rakennettiin vuonna 1861 muutaman kilometrin päähän Kybartain kautta, kaupunki taantui nopeasti. Katurakenne ja torinaukio ovat säilyneet 1700-luvulta asti, ja lähistöllä on linnavuori sekä suuri Vištytis-kivi.
+AIEMPI KYSYMYS: Miten jääkausi muovasi Liettuan järvimaisemaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Jääkauden]] aikana [[mannerjäätikkö]] peitti suuren osan Pohjois-Eurooppaa, ja sen sulaessa se jätti jälkeensä [[moreenia]], harjuja, kumpuja ja painanteita. Painanteisiin muodostui järviä, ja Liettuassa niitä on runsaasti, erityisesti koillisessa ja kaakossa. Jäätikkö kuljetti mukanaan myös suuria kiviä, joita kutsutaan siirtolohkareiksi. Tämän kaiken oli pakko olla hidasta puuhaa, kun ajattelee, miten monta vuotta siihen meni.
+KYSYMYS: Kerro lisää: moreenia
+
+### 344
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vištytis (luonto · järvi)
+Tietoruudun teksti: Vištytis on pieni kaupunki Lounais-Liettuassa, Vištytis-järven koillisrannalla lähellä Venäjän Kaliningradin alueen rajaa. Suuriruhtinas Sigismund II Augustus myönsi paikalle kaupunkioikeudet ja vaakunan vuonna 1570, ja se oli alueen ensimmäinen kaupunki. 1800-luvulla tärkeä elinkeino oli harjojen valmistus. Kun rautatie Königsbergistä Venäjälle rakennettiin vuonna 1861 muutaman kilometrin päähän Kybartain kautta, kaupunki taantui nopeasti. Katurakenne ja torinaukio ovat säilyneet 1700-luvulta asti, ja lähistöllä on linnavuori sekä suuri Vištytis-kivi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rovaniemi — kaupunkilehti / Lappi: Kieli, jota puhutaan vain Suomessa] Inarinsaamea puhutaan ainoastaan Inarijärven ympärillä. 1990-luvun puolivälissä kieltä puhui lapsilleen enää kaksi perhettä ja alle 20-vuotiaita puhujia oli neljä. Vuonna 1997 Inarissa aloitettiin kielipesä, jossa aikuiset puhuvat lapsille vain inarinsaamea. Nyt puhujia on muutama sata, ja osa kielipesän lapsista opettaa kieltä itse.
+AIEMPI KYSYMYS: Mitä tarkoittaa siirtolohkare?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Siirtolohkare]] on kivi, jonka mannerjäätikkö on kuljettanut pitkän matkan ja jättänyt sulaessaan paikkaan, jonka kallioperästä se ei ole peräisin. Siksi se eroaa ympäröivästä maaperästä. Siirtolohkareita on paljon esimerkiksi [[Suomessa]] ja [[Baltiassa]]. Tutkijat voivat selvittää kiven kallioperän perusteella, mistä suunnasta jäätikkö sen toi. Jotkut ovat valtavia, ja minä kyllä kunnioitan sellaista matkaa.
+KYSYMYS: Kerro lisää: Suomessa
+
+### 345
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vištytis (luonto · järvi)
+Tietoruudun teksti: Vištytis on pieni kaupunki Lounais-Liettuassa, Vištytis-järven koillisrannalla lähellä Venäjän Kaliningradin alueen rajaa. Suuriruhtinas Sigismund II Augustus myönsi paikalle kaupunkioikeudet ja vaakunan vuonna 1570, ja se oli alueen ensimmäinen kaupunki. 1800-luvulla tärkeä elinkeino oli harjojen valmistus. Kun rautatie Königsbergistä Venäjälle rakennettiin vuonna 1861 muutaman kilometrin päähän Kybartain kautta, kaupunki taantui nopeasti. Katurakenne ja torinaukio ovat säilyneet 1700-luvulta asti, ja lähistöllä on linnavuori sekä suuri Vištytis-kivi.
+AIEMPI KYSYMYS: Mitä tarkoittaa siirtolohkare?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Siirtolohkare]] on kivi, jonka mannerjäätikkö on kuljettanut pitkän matkan ja jättänyt sulaessaan paikkaan, jonka kallioperästä se ei ole peräisin. Siksi se eroaa ympäröivästä maaperästä. Siirtolohkareita on paljon esimerkiksi [[Suomessa]] ja [[Baltiassa]]. Tutkijat voivat selvittää kiven kallioperän perusteella, mistä suunnasta jäätikkö sen toi. Jotkut ovat valtavia, ja minä kyllä kunnioitan sellaista matkaa.
+KYSYMYS: Kerro lisää: Baltiassa
+
+### 346
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zarasai (luonto · järvi)
+Tietoruudun teksti: Zarasai on Koillis-Liettuan kaupunki, jota ympäröivät lukuisat järvet ja joet. Sen nimi juontuu seloonien kielen sanasta, joka tarkoittaa järveä. Virallinen perustamisvuosi on 1506, ja sijainti oli suuren kauppatien varrella Riiasta Pihkovaan. Vuoden 1834 tulipalo poltti lähes koko keskustan, ja vuonna 1837 se rakennettiin uudelleen uuden kaavan mukaan: keskellä on hevosenkengän muotoinen aukio, josta kadut säteilevät. Tarkoitus oli ehkäistä suuria tulipaloja, ja kaava on säilynyt lähes muuttumattomana. Tsaari Nikolai I vieraili kaupungissa vuonna 1836 ja nimesi sen poikansa mukaan Novoaleksandrovskiksi; nimi säilyi vuoteen 1918.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Petra — kaupunkilehti / Tiede ja kivi: Tulipalo tuhosi kirjaston ja säilytti sen] Vuonna 1993 Petran bysanttilaisesta kirkosta löytyi noin 140 papyruskääröä, Jordanian suurin muinaisten asiakirjojen kokoelma. Kääröt ovat kreikankielisiä ja 500-luvulta, ja ne säilyivät samasta syystä kuin Herculaneumin papyrukset: ne hiiltyivät tulipalossa. Suurin osa vaurioitui lukukelvottomaksi, mutta muutamista kymmenistä saa yhä selvää. Ne kertovat kirkon diakonin Theodoroksen varakkaan suvun arjesta — avioliitoista, perinnöistä ja maakaupoista. Kirkko rakennettiin 400-luvun jälkipuoliskolla, ja se paloi 600-luvun alussa. Sivulaivojen mosaiikeissa on vuodenaikoja, eläimiä, ihmisiä, saviastioita ja kasveja.
+- [Liettua — maalehti / Tavat: Kukkula, jolle jokainen tuo ristin] 1961 — Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. Neuvostoaikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka tahansa saa tuoda omansa.
+AIEMPI KYSYMYS: Miksi Zarasain keskusta rakennettiin vuonna 1837 hevosenkengän muotoiseksi?
+AIEMPI VASTAUS (Livia):
+No niin, tää on hyvä tarina. Vuoden 1834 [[tulipalo]] poltti lähes koko keskustan, ja kaupunki rakennettiin uudelleen vuonna 1837 uuden kaavan mukaan, jossa on hevosenkengän muotoinen aukio ja siitä säteilevät kadut. Tarkoituksena oli ehkäistä suuria tulipaloja, ja kaava on säilynyt lähes muuttumattomana. Säteittäiset kadut ja aukio antavat tulelle vähemmän helppoja reittejä kuin tiheä kujien verkko, ja [[Zarasain]] kaupunkikaava on edelleen tunnistettavissa.
+
+Ylhäältä se hevosenkenkä näyttää melkein siltä kuin joku olisi piirtänyt sen tarkoituksella. Se kyllä oli piirretty, mutta pidän siitä silti.
+KYSYMYS: Kerro lisää: tulipalo
+
+### 347
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zarasai (luonto · järvi)
+Tietoruudun teksti: Zarasai on Koillis-Liettuan kaupunki, jota ympäröivät lukuisat järvet ja joet. Sen nimi juontuu seloonien kielen sanasta, joka tarkoittaa järveä. Virallinen perustamisvuosi on 1506, ja sijainti oli suuren kauppatien varrella Riiasta Pihkovaan. Vuoden 1834 tulipalo poltti lähes koko keskustan, ja vuonna 1837 se rakennettiin uudelleen uuden kaavan mukaan: keskellä on hevosenkengän muotoinen aukio, josta kadut säteilevät. Tarkoitus oli ehkäistä suuria tulipaloja, ja kaava on säilynyt lähes muuttumattomana. Tsaari Nikolai I vieraili kaupungissa vuonna 1836 ja nimesi sen poikansa mukaan Novoaleksandrovskiksi; nimi säilyi vuoteen 1918.
+AIEMPI KYSYMYS: Miksi Zarasain keskusta rakennettiin vuonna 1837 hevosenkengän muotoiseksi?
+AIEMPI VASTAUS (Livia):
+No niin, tää on hyvä tarina. Vuoden 1834 [[tulipalo]] poltti lähes koko keskustan, ja kaupunki rakennettiin uudelleen vuonna 1837 uuden kaavan mukaan, jossa on hevosenkengän muotoinen aukio ja siitä säteilevät kadut. Tarkoituksena oli ehkäistä suuria tulipaloja, ja kaava on säilynyt lähes muuttumattomana. Säteittäiset kadut ja aukio antavat tulelle vähemmän helppoja reittejä kuin tiheä kujien verkko, ja [[Zarasain]] kaupunkikaava on edelleen tunnistettavissa.
+
+Ylhäältä se hevosenkenkä näyttää melkein siltä kuin joku olisi piirtänyt sen tarkoituksella. Se kyllä oli piirretty, mutta pidän siitä silti.
+KYSYMYS: Kerro lisää: Zarasain
+
+### 348
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zarasai (luonto · järvi)
+Tietoruudun teksti: Zarasai on Koillis-Liettuan kaupunki, jota ympäröivät lukuisat järvet ja joet. Sen nimi juontuu seloonien kielen sanasta, joka tarkoittaa järveä. Virallinen perustamisvuosi on 1506, ja sijainti oli suuren kauppatien varrella Riiasta Pihkovaan. Vuoden 1834 tulipalo poltti lähes koko keskustan, ja vuonna 1837 se rakennettiin uudelleen uuden kaavan mukaan: keskellä on hevosenkengän muotoinen aukio, josta kadut säteilevät. Tarkoitus oli ehkäistä suuria tulipaloja, ja kaava on säilynyt lähes muuttumattomana. Tsaari Nikolai I vieraili kaupungissa vuonna 1836 ja nimesi sen poikansa mukaan Novoaleksandrovskiksi; nimi säilyi vuoteen 1918.
+AIEMPI KYSYMYS: Mikä kansa antoi Zarasaille nimen, joka viittaa järviin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimi juontuu [[seloonien]] kielen sanasta, joka tarkoittaa järveä. Seloonit olivat balttilainen heimo, joka asui nykyisen [[Liettuan]] ja [[Latvian]] alueilla, ja heidän kielensä on kuollut sukupuuttoon. Zarasai on nimensä veroinen, sillä kaupunkia ympäröivät lukuisat järvet ja joet. Nimi on siis säilynyt vanhan kielen jäänteenä.
+KYSYMYS: Kerro lisää: seloonien
+
+### 349
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zarasai (luonto · järvi)
+Tietoruudun teksti: Zarasai on Koillis-Liettuan kaupunki, jota ympäröivät lukuisat järvet ja joet. Sen nimi juontuu seloonien kielen sanasta, joka tarkoittaa järveä. Virallinen perustamisvuosi on 1506, ja sijainti oli suuren kauppatien varrella Riiasta Pihkovaan. Vuoden 1834 tulipalo poltti lähes koko keskustan, ja vuonna 1837 se rakennettiin uudelleen uuden kaavan mukaan: keskellä on hevosenkengän muotoinen aukio, josta kadut säteilevät. Tarkoitus oli ehkäistä suuria tulipaloja, ja kaava on säilynyt lähes muuttumattomana. Tsaari Nikolai I vieraili kaupungissa vuonna 1836 ja nimesi sen poikansa mukaan Novoaleksandrovskiksi; nimi säilyi vuoteen 1918.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Kaksi miljoonaa kättä yli kolmen maan] 1989 — Elokuun 23. päivänä 1989 noin kaksi miljoonaa ihmistä tarttui toisiaan käsistä ja muodosti yhtenäisen ketjun Tallinnasta Riian kautta Vilnaan — matkaa kertyi yli kuusisataa kilometriä. Baltian ketju järjestettiin täsmälleen viisikymmentä vuotta sen jälkeen, kun Neuvostoliitto ja natsi-Saksa olivat salaisessa sopimuksessa jakaneet Baltian maat keskenään. Rauhanomainen mielenilmaus vaati Viron, Latvian ja Liettuan miehitysten päättämistä, ja tapahtuma näkyi television välityksellä kaikkialla maailmassa. Kaksi vuotta myöhemmin kaikki kolme maata olivat jälleen itsenäisiä.
+- [Liettua — maalehti / Historia: Rautasusi näytti unessa kaupungin paikan] 1323 — Tarinan mukaan suuriruhtinas Gediminas nukahti metsästysretken jälkeen Vilnian ja Neriksen jokien yhtymäkohdassa ja näki unta rautaisesta sudesta, joka ulvoi kukkulalla sadan suden äänellä. Ylipappi Lizdeika tulkitsi unen: kukkulalle nousisi pääkaupunki, jonka maine kaikuisi yhtä kauas kuin suden ulvonta. Gediminas perusti kaupungin paikalle perinteisesti vuonna 1323 ja kutsui sinne kauppiaita ja käsityöläisiä ympäri Eurooppaa. Tuomiokirkkoaukiolla seisova patsas muistuttaa perustajasta, ja rautasudesta on tullut yksi Liettuan tunnetuimmista tunnuksista.
+AIEMPI KYSYMYS: Mikä kansa antoi Zarasaille nimen, joka viittaa järviin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimi juontuu [[seloonien]] kielen sanasta, joka tarkoittaa järveä. Seloonit olivat balttilainen heimo, joka asui nykyisen [[Liettuan]] ja [[Latvian]] alueilla, ja heidän kielensä on kuollut sukupuuttoon. Zarasai on nimensä veroinen, sillä kaupunkia ympäröivät lukuisat järvet ja joet. Nimi on siis säilynyt vanhan kielen jäänteenä.
+KYSYMYS: Kerro lisää: Liettuan
+
+### 350
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zarasai (luonto · järvi)
+Tietoruudun teksti: Zarasai on Koillis-Liettuan kaupunki, jota ympäröivät lukuisat järvet ja joet. Sen nimi juontuu seloonien kielen sanasta, joka tarkoittaa järveä. Virallinen perustamisvuosi on 1506, ja sijainti oli suuren kauppatien varrella Riiasta Pihkovaan. Vuoden 1834 tulipalo poltti lähes koko keskustan, ja vuonna 1837 se rakennettiin uudelleen uuden kaavan mukaan: keskellä on hevosenkengän muotoinen aukio, josta kadut säteilevät. Tarkoitus oli ehkäistä suuria tulipaloja, ja kaava on säilynyt lähes muuttumattomana. Tsaari Nikolai I vieraili kaupungissa vuonna 1836 ja nimesi sen poikansa mukaan Novoaleksandrovskiksi; nimi säilyi vuoteen 1918.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Kaksi miljoonaa kättä yli kolmen maan] 1989 — Elokuun 23. päivänä 1989 noin kaksi miljoonaa ihmistä tarttui toisiaan käsistä ja muodosti yhtenäisen ketjun Tallinnasta Riian kautta Vilnaan — matkaa kertyi yli kuusisataa kilometriä. Baltian ketju järjestettiin täsmälleen viisikymmentä vuotta sen jälkeen, kun Neuvostoliitto ja natsi-Saksa olivat salaisessa sopimuksessa jakaneet Baltian maat keskenään. Rauhanomainen mielenilmaus vaati Viron, Latvian ja Liettuan miehitysten päättämistä, ja tapahtuma näkyi television välityksellä kaikkialla maailmassa. Kaksi vuotta myöhemmin kaikki kolme maata olivat jälleen itsenäisiä.
+AIEMPI KYSYMYS: Mikä kansa antoi Zarasaille nimen, joka viittaa järviin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimi juontuu [[seloonien]] kielen sanasta, joka tarkoittaa järveä. Seloonit olivat balttilainen heimo, joka asui nykyisen [[Liettuan]] ja [[Latvian]] alueilla, ja heidän kielensä on kuollut sukupuuttoon. Zarasai on nimensä veroinen, sillä kaupunkia ympäröivät lukuisat järvet ja joet. Nimi on siis säilynyt vanhan kielen jäänteenä.
+KYSYMYS: Kerro lisää: Latvian
+
+### 351
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zarasai (luonto · järvi)
+Tietoruudun teksti: Zarasai on Koillis-Liettuan kaupunki, jota ympäröivät lukuisat järvet ja joet. Sen nimi juontuu seloonien kielen sanasta, joka tarkoittaa järveä. Virallinen perustamisvuosi on 1506, ja sijainti oli suuren kauppatien varrella Riiasta Pihkovaan. Vuoden 1834 tulipalo poltti lähes koko keskustan, ja vuonna 1837 se rakennettiin uudelleen uuden kaavan mukaan: keskellä on hevosenkengän muotoinen aukio, josta kadut säteilevät. Tarkoitus oli ehkäistä suuria tulipaloja, ja kaava on säilynyt lähes muuttumattomana. Tsaari Nikolai I vieraili kaupungissa vuonna 1836 ja nimesi sen poikansa mukaan Novoaleksandrovskiksi; nimi säilyi vuoteen 1918.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Samarkand — kohdekartta / Kohdekartta: Afrasiyabin rauniokumpu] n. 500 eaa. – 1220 Afrasiyab on vanha Samarkand. Kumpua asutettiin noin vuodesta 500 eaa. mongolivalloitukseen 1220 asti, ja vanhimmat kerrokset ovat ensimmäisen vuosituhannen puolivälistä ennen ajanlaskun alkua. Aluetta on 220 hehtaaria ja arkeologisten kerrostumien paksuus on 8–12 metriä. Kaupunki oli tasakylkisen kolmion muotoinen, leveimmillään puolitoista kilometriä, ja sitä ympäröivät korkeat savimuurit torneineen. Vesi tuotiin kanavia, saviputkia ja kaivoja pitkin, ja eteläisen muurin lähellä oli allas, johon mahtui miljoona gallonaa eli noin neljätuhatta kuutiometriä vettä. Nimi ei ole alun perin sadun kuningas Afrasiabin. Tutkijoiden mukaan se on väännös persian sanasta Parsiab, so…
+- [Ulan Bator — kohdekartta / Kohdekartta: Bogd Khanin talvipalatsi] 1893–1903 Talvipalatsi oli osa laajempaa Vihreän palatsin kokonaisuutta, joka oli kahdeksannen Jebtsundamba Khutuktun eli Bogd Khanin asuinpaikka. Hallitsijalla oli neljä pääasuntoa, ja kaikki olivat Keski- ja Tuul-joen välisellä alueella: kesäpalatsi, Valkoinen palatsi, Pandelinin palatsi ja tämä. Osaa niistä käytettiin myös uskonnollisiin menoihin. Kolme muuta on kadonnut, ja talvipalatsi on ainoa jäljellä oleva. Alueella on kaikkiaan parikymmentä rakennusta. Portin nimi on Rauhan ja onnen portti, ja pihalla on jäähdytyspaviljonki sekä kuusi temppeliä, joissa on buddhalaista taidetta, kirjoituksia ja thangka-maalauksia; kahden temppelin nimet ovat Naidan ja Makhranz. Itse talvipalatsi on …
+AIEMPI KYSYMYS: Kuka oli tsaari Nikolai I?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Nikolai I]] oli Venäjän keisari ja Suomen suuriruhtinas, joka hallitsi vuodesta 1825 vuoteen 1855. Hänen valtakauttaan leimasivat vahva keskusjohtoisuus, sensuuri ja sotilaallisuus. Hän tunnettiin myös vuoden 1830 Puolan marraskuun kansannousun kukistamisesta, ja Liettua kuului hänen aikanaan [[Venäjän keisarikuntaan]]. Zarasai nimettiin hetkeksi hänen poikansa mukaan. Pitkä valtakausi, ja minä muistan sen hyvin.
+KYSYMYS: Kerro lisää: Nikolai I
+
+### 352
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zarasai (luonto · järvi)
+Tietoruudun teksti: Zarasai on Koillis-Liettuan kaupunki, jota ympäröivät lukuisat järvet ja joet. Sen nimi juontuu seloonien kielen sanasta, joka tarkoittaa järveä. Virallinen perustamisvuosi on 1506, ja sijainti oli suuren kauppatien varrella Riiasta Pihkovaan. Vuoden 1834 tulipalo poltti lähes koko keskustan, ja vuonna 1837 se rakennettiin uudelleen uuden kaavan mukaan: keskellä on hevosenkengän muotoinen aukio, josta kadut säteilevät. Tarkoitus oli ehkäistä suuria tulipaloja, ja kaava on säilynyt lähes muuttumattomana. Tsaari Nikolai I vieraili kaupungissa vuonna 1836 ja nimesi sen poikansa mukaan Novoaleksandrovskiksi; nimi säilyi vuoteen 1918.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+- [Liettua — maalehti / Historia: Kirjat kannettiin rajan yli selässä] 1864 — Vuonna 1864 Venäjän keisarikunta kielsi liettuan kielen painamisen latinalaisilla kirjaimilla. Kirjoja alettiin painaa rajan takana Itä-Preussissa ja aina Amerikassa asti, ja niitä kuljetettiin salaa takaisin. Kantajia sanottiin liettuaksi knygnešiai, kirjankantajat. He kulkivat öisin metsäpolkuja säkit selässä, ja kiinni jäänyt sai sakot, vankilan tai karkotuksen Siperiaan. Kirjoja kannettiin neljäkymmentä vuotta, kunnes kielto kumottiin vuonna 1904.
+AIEMPI KYSYMYS: Kuka oli tsaari Nikolai I?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Nikolai I]] oli Venäjän keisari ja Suomen suuriruhtinas, joka hallitsi vuodesta 1825 vuoteen 1855. Hänen valtakauttaan leimasivat vahva keskusjohtoisuus, sensuuri ja sotilaallisuus. Hän tunnettiin myös vuoden 1830 Puolan marraskuun kansannousun kukistamisesta, ja Liettua kuului hänen aikanaan [[Venäjän keisarikuntaan]]. Zarasai nimettiin hetkeksi hänen poikansa mukaan. Pitkä valtakausi, ja minä muistan sen hyvin.
+KYSYMYS: Kerro lisää: Venäjän keisarikuntaan
+
+### 353
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zarasai (luonto · järvi)
+Tietoruudun teksti: Zarasai on Koillis-Liettuan kaupunki, jota ympäröivät lukuisat järvet ja joet. Sen nimi juontuu seloonien kielen sanasta, joka tarkoittaa järveä. Virallinen perustamisvuosi on 1506, ja sijainti oli suuren kauppatien varrella Riiasta Pihkovaan. Vuoden 1834 tulipalo poltti lähes koko keskustan, ja vuonna 1837 se rakennettiin uudelleen uuden kaavan mukaan: keskellä on hevosenkengän muotoinen aukio, josta kadut säteilevät. Tarkoitus oli ehkäistä suuria tulipaloja, ja kaava on säilynyt lähes muuttumattomana. Tsaari Nikolai I vieraili kaupungissa vuonna 1836 ja nimesi sen poikansa mukaan Novoaleksandrovskiksi; nimi säilyi vuoteen 1918.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kaupunkilehti / Riika] Baltian suurin kaupunki kasvoi Väinäjoen suulle kauppapaikaksi. Vanhassakaupungissa talot ovat kapeita ja korkeita, ja jokaisella niistä on oma tarinansa.
+AIEMPI KYSYMYS: Mikä kaupunki Riika on?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Riika]] on Latvian pääkaupunki ja maan suurin kaupunki, joka sijaitsee Väinäjoen suulla Itämeren Riianlahden rannalla. Se on ollut tärkeä kauppakaupunki keskiajalta lähtien ja kuului [[Hansaliittoon]]. Vanhakaupunki ja jugend-arkkitehtuuri ovat tunnettuja, ja kaupungin vanhakaupunki on [[Unescon maailmanperintökohde]]. Riika oli myös se kaupunki, josta Zarasain vanha kauppatie alkoi, ja se on minusta kunnioitettava kirjekyyhkyn silmin.
+KYSYMYS: Kerro lisää: Riika
+
+### 354
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zarasai (luonto · järvi)
+Tietoruudun teksti: Zarasai on Koillis-Liettuan kaupunki, jota ympäröivät lukuisat järvet ja joet. Sen nimi juontuu seloonien kielen sanasta, joka tarkoittaa järveä. Virallinen perustamisvuosi on 1506, ja sijainti oli suuren kauppatien varrella Riiasta Pihkovaan. Vuoden 1834 tulipalo poltti lähes koko keskustan, ja vuonna 1837 se rakennettiin uudelleen uuden kaavan mukaan: keskellä on hevosenkengän muotoinen aukio, josta kadut säteilevät. Tarkoitus oli ehkäistä suuria tulipaloja, ja kaava on säilynyt lähes muuttumattomana. Tsaari Nikolai I vieraili kaupungissa vuonna 1836 ja nimesi sen poikansa mukaan Novoaleksandrovskiksi; nimi säilyi vuoteen 1918.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Historia: Kauppiaiden liitto hallitsi Itämerta] keskiaika — Keskiajalla Itämerta ei hallinnut kuningas vaan kauppiaiden kerho. Hansaliittoon kuului parhaimmillaan lähes kaksisataa kaupunkia Lontoosta Novgorodiin, ja sitä johdettiin Lyypekistä. Hansan laiva oli koggi: pyöreämahainen puualus, joka kuljetti suolaa, silliä, viljaa ja kankaita. Liitolla oli omat lait ja omat kauppatalot vieraissa satamissa, ja kun joku kuningas kiusasi kauppiaita, Hansa saattoi julistaa koko maan saartoon — ja voitti kerran Tanskan sodassakin. Moni Pohjois-Saksan kaupunki kutsuu itseään hansakaupungiksi vielä tänäänkin.
+AIEMPI KYSYMYS: Mikä kaupunki Riika on?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Riika]] on Latvian pääkaupunki ja maan suurin kaupunki, joka sijaitsee Väinäjoen suulla Itämeren Riianlahden rannalla. Se on ollut tärkeä kauppakaupunki keskiajalta lähtien ja kuului [[Hansaliittoon]]. Vanhakaupunki ja jugend-arkkitehtuuri ovat tunnettuja, ja kaupungin vanhakaupunki on [[Unescon maailmanperintökohde]]. Riika oli myös se kaupunki, josta Zarasain vanha kauppatie alkoi, ja se on minusta kunnioitettava kirjekyyhkyn silmin.
+KYSYMYS: Kerro lisää: Hansaliittoon
+
+### 355
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zarasai (luonto · järvi)
+Tietoruudun teksti: Zarasai on Koillis-Liettuan kaupunki, jota ympäröivät lukuisat järvet ja joet. Sen nimi juontuu seloonien kielen sanasta, joka tarkoittaa järveä. Virallinen perustamisvuosi on 1506, ja sijainti oli suuren kauppatien varrella Riiasta Pihkovaan. Vuoden 1834 tulipalo poltti lähes koko keskustan, ja vuonna 1837 se rakennettiin uudelleen uuden kaavan mukaan: keskellä on hevosenkengän muotoinen aukio, josta kadut säteilevät. Tarkoitus oli ehkäistä suuria tulipaloja, ja kaava on säilynyt lähes muuttumattomana. Tsaari Nikolai I vieraili kaupungissa vuonna 1836 ja nimesi sen poikansa mukaan Novoaleksandrovskiksi; nimi säilyi vuoteen 1918.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Tavat: Kukkula, jolle jokainen tuo ristin] 1961 — Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. Neuvostoaikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka tahansa saa tuoda omansa.
+AIEMPI KYSYMYS: Mikä kaupunki Riika on?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Riika]] on Latvian pääkaupunki ja maan suurin kaupunki, joka sijaitsee Väinäjoen suulla Itämeren Riianlahden rannalla. Se on ollut tärkeä kauppakaupunki keskiajalta lähtien ja kuului [[Hansaliittoon]]. Vanhakaupunki ja jugend-arkkitehtuuri ovat tunnettuja, ja kaupungin vanhakaupunki on [[Unescon maailmanperintökohde]]. Riika oli myös se kaupunki, josta Zarasain vanha kauppatie alkoi, ja se on minusta kunnioitettava kirjekyyhkyn silmin.
+KYSYMYS: Kerro lisää: Unescon maailmanperintökohde
+
+### 356
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zarasai (luonto · järvi)
+Tietoruudun teksti: Zarasai on Koillis-Liettuan kaupunki, jota ympäröivät lukuisat järvet ja joet. Sen nimi juontuu seloonien kielen sanasta, joka tarkoittaa järveä. Virallinen perustamisvuosi on 1506, ja sijainti oli suuren kauppatien varrella Riiasta Pihkovaan. Vuoden 1834 tulipalo poltti lähes koko keskustan, ja vuonna 1837 se rakennettiin uudelleen uuden kaavan mukaan: keskellä on hevosenkengän muotoinen aukio, josta kadut säteilevät. Tarkoitus oli ehkäistä suuria tulipaloja, ja kaava on säilynyt lähes muuttumattomana. Tsaari Nikolai I vieraili kaupungissa vuonna 1836 ja nimesi sen poikansa mukaan Novoaleksandrovskiksi; nimi säilyi vuoteen 1918.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kaupunkilehti / Uskonto: Museo, joka kantaa hänen nimeään] Ennen toista maailmansotaa Vilnassa oli yli sata synagogaa ja kukoistava juutalainen yhteisö, jota kutsuttiin Liettuan Jerusalemiksi. Suuri synagoga, yhteisön sydän, tuhoutui sodassa ja purettiin lopullisesti neuvostoaikana. Nykyinen Vilnan Gaonin juutalainen valtionmuseo, nimetty samaisen oppineen mukaan, on Liettuan juutalaisen yhteisön nykyinen koti ja vaalii sitä historiaa, jonka rakennukset eivät enää voi kertoa.
+- [Vilna — kaupunkilehti / Uskonto: Viimeinen suurista synagogista] Ennen toista maailmansotaa Vilnassa oli yli sata synagogaa, ja kaupunkia kutsuttiin juutalaisen oppineisuuden keskuksena Liettuan Jerusalemiksi. Kuorosynagoga, rakennettu 1903, on ainoa niistä, joka selvisi sodasta ja neuvostoajasta ehjänä — se on yhä toimiva synagoga tänä päivänä. Suuri synagoga, kaupungin pääsynagoga, tuhoutui sodassa ja purettiin lopullisesti neuvostoaikana.
+- [Vilna — kohdekartta / Kohdekartta: Salattu avioliitto] 1547–1551 Kuningas voi julistaa sotia ja säätää lakeja, mutta salaa solmittu avioliitto osoittautui vaikeimmaksi asiaksi puolustaa. Sigismund August valitsi Barboran ja piti valintansa — vaikka koko valtakunta, oma äiti etunenässä, oli toista mieltä. Myrkkyhuhut elävät Vilnassa yhä.
+- [Vilna — kaupunkilehti / Oppi] Vilnassa on opiskeltu ja tutkittu satoja vuosia, kaupungin vanhimmasta yliopistosta sen omaan tähtitorniin.
+AIEMPI KYSYMYS: Milloin Liettua julisti itsenäisyytensä ensimmäisen kerran?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Liettua julisti itsenäisyytensä 16. helmikuuta 1918 [[Vilnassa]], kun ensimmäinen maailmansota oli vielä käynnissä ja [[Venäjän keisarikunta]] oli romahtanut. Itsenäisyys kesti toiseen maailmansotaan asti, ja [[Neuvostoliitto]] liitti maan itseensä vuonna 1940. Liettua palautti itsenäisyytensä 11. maaliskuuta 1990, ja se oli ensimmäinen neuvostotasavalta, joka teki niin. Onpas siit pitkä aika.
+KYSYMYS: Kerro lisää: Vilnassa
+
+### 357
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zarasai (luonto · järvi)
+Tietoruudun teksti: Zarasai on Koillis-Liettuan kaupunki, jota ympäröivät lukuisat järvet ja joet. Sen nimi juontuu seloonien kielen sanasta, joka tarkoittaa järveä. Virallinen perustamisvuosi on 1506, ja sijainti oli suuren kauppatien varrella Riiasta Pihkovaan. Vuoden 1834 tulipalo poltti lähes koko keskustan, ja vuonna 1837 se rakennettiin uudelleen uuden kaavan mukaan: keskellä on hevosenkengän muotoinen aukio, josta kadut säteilevät. Tarkoitus oli ehkäistä suuria tulipaloja, ja kaava on säilynyt lähes muuttumattomana. Tsaari Nikolai I vieraili kaupungissa vuonna 1836 ja nimesi sen poikansa mukaan Novoaleksandrovskiksi; nimi säilyi vuoteen 1918.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Kirjat kannettiin rajan yli selässä] 1864 — Vuonna 1864 Venäjän keisarikunta kielsi liettuan kielen painamisen latinalaisilla kirjaimilla. Kirjoja alettiin painaa rajan takana Itä-Preussissa ja aina Amerikassa asti, ja niitä kuljetettiin salaa takaisin. Kantajia sanottiin liettuaksi knygnešiai, kirjankantajat. He kulkivat öisin metsäpolkuja säkit selässä, ja kiinni jäänyt sai sakot, vankilan tai karkotuksen Siperiaan. Kirjoja kannettiin neljäkymmentä vuotta, kunnes kielto kumottiin vuonna 1904.
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+AIEMPI KYSYMYS: Milloin Liettua julisti itsenäisyytensä ensimmäisen kerran?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Liettua julisti itsenäisyytensä 16. helmikuuta 1918 [[Vilnassa]], kun ensimmäinen maailmansota oli vielä käynnissä ja [[Venäjän keisarikunta]] oli romahtanut. Itsenäisyys kesti toiseen maailmansotaan asti, ja [[Neuvostoliitto]] liitti maan itseensä vuonna 1940. Liettua palautti itsenäisyytensä 11. maaliskuuta 1990, ja se oli ensimmäinen neuvostotasavalta, joka teki niin. Onpas siit pitkä aika.
+KYSYMYS: Kerro lisää: Venäjän keisarikunta
+
+### 358
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zarasai (luonto · järvi)
+Tietoruudun teksti: Zarasai on Koillis-Liettuan kaupunki, jota ympäröivät lukuisat järvet ja joet. Sen nimi juontuu seloonien kielen sanasta, joka tarkoittaa järveä. Virallinen perustamisvuosi on 1506, ja sijainti oli suuren kauppatien varrella Riiasta Pihkovaan. Vuoden 1834 tulipalo poltti lähes koko keskustan, ja vuonna 1837 se rakennettiin uudelleen uuden kaavan mukaan: keskellä on hevosenkengän muotoinen aukio, josta kadut säteilevät. Tarkoitus oli ehkäistä suuria tulipaloja, ja kaava on säilynyt lähes muuttumattomana. Tsaari Nikolai I vieraili kaupungissa vuonna 1836 ja nimesi sen poikansa mukaan Novoaleksandrovskiksi; nimi säilyi vuoteen 1918.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Kaksi miljoonaa kättä yli kolmen maan] 1989 — Elokuun 23. päivänä 1989 noin kaksi miljoonaa ihmistä tarttui toisiaan käsistä ja muodosti yhtenäisen ketjun Tallinnasta Riian kautta Vilnaan — matkaa kertyi yli kuusisataa kilometriä. Baltian ketju järjestettiin täsmälleen viisikymmentä vuotta sen jälkeen, kun Neuvostoliitto ja natsi-Saksa olivat salaisessa sopimuksessa jakaneet Baltian maat keskenään. Rauhanomainen mielenilmaus vaati Viron, Latvian ja Liettuan miehitysten päättämistä, ja tapahtuma näkyi television välityksellä kaikkialla maailmassa. Kaksi vuotta myöhemmin kaikki kolme maata olivat jälleen itsenäisiä.
+- [Helsinki — kaupunkilehti / Historia: Helsinki näytteli Neuvostoliittoa] Kylmän sodan aikana länsimaisia kuvausryhmiä ei päästetty kuvaamaan Moskovaan, joten Neuvostoliitto piti kuvata muualla. Helsinki kelpasi sijaiseksi: keskusta on Carl Ludvig Engelin piirtämää empireä ja Katajanokalla kohoaa ortodoksinen katedraali. Rikoselokuva Gorky Park (1983) kuvattiin pääosin Helsingissä, ja Kaisaniemen puisto sai esittää Moskovan nimikkopuistoa. Reds-elokuvan ryhmä taas odotti Helsingissä lunta.
+AIEMPI KYSYMYS: Milloin Liettua julisti itsenäisyytensä ensimmäisen kerran?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Liettua julisti itsenäisyytensä 16. helmikuuta 1918 [[Vilnassa]], kun ensimmäinen maailmansota oli vielä käynnissä ja [[Venäjän keisarikunta]] oli romahtanut. Itsenäisyys kesti toiseen maailmansotaan asti, ja [[Neuvostoliitto]] liitti maan itseensä vuonna 1940. Liettua palautti itsenäisyytensä 11. maaliskuuta 1990, ja se oli ensimmäinen neuvostotasavalta, joka teki niin. Onpas siit pitkä aika.
+KYSYMYS: Kerro lisää: Neuvostoliitto
+
+### 359
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Birštonas (kulttuuri)
+Tietoruudun teksti: Birštonas on kylpyläkaupunki Nemunas-joen oikealla rannalla noin 30 kilometrin päässä Kaunasista. Paikka mainitaan ensi kertaa 1300-luvulla Saksalaisen ritarikunnan kronikoissa "suolaisen veden tilana". Liettuan suuriruhtinaat ja aatelisto viettivät siellä metsästysretkiä 1300–1500-luvuilla, ja kylpylä perustettiin vuonna 1846. Venäläisistä, puolalaisista ja liettualaisista kaupungeista tulleet vieraat hakivat sieltä hoitoa kivennäisvedellä ja parantavilla mutakääreillä. Nykyään kaupungissa on kolme suurta sanatoriota, ja se on Nemunas-mutkien alueellisen puiston keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Plečnikin ja Secessionin Ljubljana: Ritarikunnan luostarista kesäteatteriksi] Križanken luostarin rakentamisen uskotaan alkaneen 1200-luvulla saksalaisen ritarikunnan käyttöön, ja sen barokkikirkko valmistui vuosina 1714–1715. Luostari toimi vuoteen 1945 asti, jolloin kompleksi kansallistettiin. Vuonna 1952 kaupunki pyysi Jože Plečnikia muuttamaan rappeutuneen luostarin Ljubljanan festivaalin näyttämöksi, ja työt valmistuivat 1956. Nykyään pihoilla järjestetään klassisen musiikin, jazzin ja rockin konsertteja, ja pääpihaa koristavat värikkäät sgraffitot.
+AIEMPI KYSYMYS: Mistä Birštonasin nimi mahdollisesti tulee?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Nimen tarkkaa alkuperää en ole varma, ja siitä on useita arvailuja, joten en halua keksiä selitystä. Tiedän, että paikka mainitaan ensimmäisen kerran 1300-luvulla [[Saksalaisen ritarikunnan]] kronikoissa "suolaisen veden tilana", mikä viittaa alueen kivennäisvesiin. Se ei kuitenkaan välttämättä ole nimen alkuperä. Kylpyläkaupunki [[Birštonas]] sijaitsee Nemunas-joen rannalla. Kerrottakoon, että tässä en ole asiantuntija.
+KYSYMYS: Kerro lisää: Saksalaisen ritarikunnan
+
+### 360
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Birštonas (kulttuuri)
+Tietoruudun teksti: Birštonas on kylpyläkaupunki Nemunas-joen oikealla rannalla noin 30 kilometrin päässä Kaunasista. Paikka mainitaan ensi kertaa 1300-luvulla Saksalaisen ritarikunnan kronikoissa "suolaisen veden tilana". Liettuan suuriruhtinaat ja aatelisto viettivät siellä metsästysretkiä 1300–1500-luvuilla, ja kylpylä perustettiin vuonna 1846. Venäläisistä, puolalaisista ja liettualaisista kaupungeista tulleet vieraat hakivat sieltä hoitoa kivennäisvedellä ja parantavilla mutakääreillä. Nykyään kaupungissa on kolme suurta sanatoriota, ja se on Nemunas-mutkien alueellisen puiston keskus.
+AIEMPI KYSYMYS: Mistä Birštonasin nimi mahdollisesti tulee?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Nimen tarkkaa alkuperää en ole varma, ja siitä on useita arvailuja, joten en halua keksiä selitystä. Tiedän, että paikka mainitaan ensimmäisen kerran 1300-luvulla [[Saksalaisen ritarikunnan]] kronikoissa "suolaisen veden tilana", mikä viittaa alueen kivennäisvesiin. Se ei kuitenkaan välttämättä ole nimen alkuperä. Kylpyläkaupunki [[Birštonas]] sijaitsee Nemunas-joen rannalla. Kerrottakoon, että tässä en ole asiantuntija.
+KYSYMYS: Kerro lisää: Birštonas
+
+### 361
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Birštonas (kulttuuri)
+Tietoruudun teksti: Birštonas on kylpyläkaupunki Nemunas-joen oikealla rannalla noin 30 kilometrin päässä Kaunasista. Paikka mainitaan ensi kertaa 1300-luvulla Saksalaisen ritarikunnan kronikoissa "suolaisen veden tilana". Liettuan suuriruhtinaat ja aatelisto viettivät siellä metsästysretkiä 1300–1500-luvuilla, ja kylpylä perustettiin vuonna 1846. Venäläisistä, puolalaisista ja liettualaisista kaupungeista tulleet vieraat hakivat sieltä hoitoa kivennäisvedellä ja parantavilla mutakääreillä. Nykyään kaupungissa on kolme suurta sanatoriota, ja se on Nemunas-mutkien alueellisen puiston keskus.
+AIEMPI KYSYMYS: Miksi suuriruhtinaat matkustivat Birštonasiin jo 1300-luvulla?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Birštonas]] oli Liettuan suuriruhtinaille ja aatelistolle metsästysretkien kohde 1300–1500-luvuilla, koska seudun metsät ja [[Nemunas-joen]] ympäristö tarjosivat hyvän riistamaan. Paikka tunnettiin myös "suolaisen veden tilana", mikä viittaa [[kivennäisvesiin]]. Kylpyläkäyttö alkoi kuitenkin vasta vuonna 1846, ja sitä ennen tärkeämpää oli metsästys. Metsät ovat nytkin paikalla, vaikka ruhtinaat ovat poissa.
+KYSYMYS: Kerro lisää: Nemunas-joen
+
+### 362
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Birštonas (kulttuuri)
+Tietoruudun teksti: Birštonas on kylpyläkaupunki Nemunas-joen oikealla rannalla noin 30 kilometrin päässä Kaunasista. Paikka mainitaan ensi kertaa 1300-luvulla Saksalaisen ritarikunnan kronikoissa "suolaisen veden tilana". Liettuan suuriruhtinaat ja aatelisto viettivät siellä metsästysretkiä 1300–1500-luvuilla, ja kylpylä perustettiin vuonna 1846. Venäläisistä, puolalaisista ja liettualaisista kaupungeista tulleet vieraat hakivat sieltä hoitoa kivennäisvedellä ja parantavilla mutakääreillä. Nykyään kaupungissa on kolme suurta sanatoriota, ja se on Nemunas-mutkien alueellisen puiston keskus.
+AIEMPI KYSYMYS: Miksi suuriruhtinaat matkustivat Birštonasiin jo 1300-luvulla?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Birštonas]] oli Liettuan suuriruhtinaille ja aatelistolle metsästysretkien kohde 1300–1500-luvuilla, koska seudun metsät ja [[Nemunas-joen]] ympäristö tarjosivat hyvän riistamaan. Paikka tunnettiin myös "suolaisen veden tilana", mikä viittaa [[kivennäisvesiin]]. Kylpyläkäyttö alkoi kuitenkin vasta vuonna 1846, ja sitä ennen tärkeämpää oli metsästys. Metsät ovat nytkin paikalla, vaikka ruhtinaat ovat poissa.
+KYSYMYS: Kerro lisää: kivennäisvesiin
+
+### 363
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Birštonas (kulttuuri)
+Tietoruudun teksti: Birštonas on kylpyläkaupunki Nemunas-joen oikealla rannalla noin 30 kilometrin päässä Kaunasista. Paikka mainitaan ensi kertaa 1300-luvulla Saksalaisen ritarikunnan kronikoissa "suolaisen veden tilana". Liettuan suuriruhtinaat ja aatelisto viettivät siellä metsästysretkiä 1300–1500-luvuilla, ja kylpylä perustettiin vuonna 1846. Venäläisistä, puolalaisista ja liettualaisista kaupungeista tulleet vieraat hakivat sieltä hoitoa kivennäisvedellä ja parantavilla mutakääreillä. Nykyään kaupungissa on kolme suurta sanatoriota, ja se on Nemunas-mutkien alueellisen puiston keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Kaksikymmentä nimeä vapautti maan] 1918 — Ensimmäisen maailmansodan lopulla, Venäjän ja Saksan miehitysten välissä, Liettuan neuvosto kokoontui Vilnan Pilies-kadun talossa ja allekirjoitti 16. helmikuuta 1918 itsenäisyysjulistuksen. Sen allekirjoitti kaksikymmentä jäsentä, puheenjohtajanaan lääkäri Jonas Basanavičius, ja se julisti demokraattisen Liettuan valtion, jonka pääkaupunki olisi Vilna. Talo tunnetaan nykyään Signatarų-talona. Alkuperäinen asiakirja katosi Kaunasista neuvostomiehityksen alla 1940 ja löytyi vasta 2017 Saksan ulkoministeriön arkistosta Berliinistä.
+AIEMPI KYSYMYS: Mikä Kaunas on ja missä se sijaitsee?
+AIEMPI VASTAUS (Livia):
+No jopas. [[Kaunas]] on Liettuan toiseksi suurin kaupunki, ja se sijaitsee maan keskiosassa Nemunas- ja Neris-jokien yhtymäkohdassa. Kaupunki oli Liettuan väliaikainen pääkaupunki kahden maailmansodan välisenä aikana, kun [[Vilna]] kuului Puolalle. Kaupunki tunnetaan muun muassa vanhastakaupungistaan ja modernistisesta arkkitehtuuristaan. [[Birštonas]] on siitä noin 30 kilometrin päässä. Ihan hyvin muistin kaiken tämän.
+KYSYMYS: Kerro lisää: Kaunas
+
+### 364
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Birštonas (kulttuuri)
+Tietoruudun teksti: Birštonas on kylpyläkaupunki Nemunas-joen oikealla rannalla noin 30 kilometrin päässä Kaunasista. Paikka mainitaan ensi kertaa 1300-luvulla Saksalaisen ritarikunnan kronikoissa "suolaisen veden tilana". Liettuan suuriruhtinaat ja aatelisto viettivät siellä metsästysretkiä 1300–1500-luvuilla, ja kylpylä perustettiin vuonna 1846. Venäläisistä, puolalaisista ja liettualaisista kaupungeista tulleet vieraat hakivat sieltä hoitoa kivennäisvedellä ja parantavilla mutakääreillä. Nykyään kaupungissa on kolme suurta sanatoriota, ja se on Nemunas-mutkien alueellisen puiston keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Kaksikymmentä nimeä vapautti maan] 1918 — Ensimmäisen maailmansodan lopulla, Venäjän ja Saksan miehitysten välissä, Liettuan neuvosto kokoontui Vilnan Pilies-kadun talossa ja allekirjoitti 16. helmikuuta 1918 itsenäisyysjulistuksen. Sen allekirjoitti kaksikymmentä jäsentä, puheenjohtajanaan lääkäri Jonas Basanavičius, ja se julisti demokraattisen Liettuan valtion, jonka pääkaupunki olisi Vilna. Talo tunnetaan nykyään Signatarų-talona. Alkuperäinen asiakirja katosi Kaunasista neuvostomiehityksen alla 1940 ja löytyi vasta 2017 Saksan ulkoministeriön arkistosta Berliinistä.
+- [Vilna — kaupunkilehti / Vilna] Liettuan pääkaupunki kasvoi kahden joen yhtymäkohtaan kukkuloiden väliin. Vanhassakaupungissa on kapeita kujia, satakunta kirkkoa ja yksi omaksi tasavallakseen julistautunut kortteli.
+AIEMPI KYSYMYS: Mikä Kaunas on ja missä se sijaitsee?
+AIEMPI VASTAUS (Livia):
+No jopas. [[Kaunas]] on Liettuan toiseksi suurin kaupunki, ja se sijaitsee maan keskiosassa Nemunas- ja Neris-jokien yhtymäkohdassa. Kaupunki oli Liettuan väliaikainen pääkaupunki kahden maailmansodan välisenä aikana, kun [[Vilna]] kuului Puolalle. Kaupunki tunnetaan muun muassa vanhastakaupungistaan ja modernistisesta arkkitehtuuristaan. [[Birštonas]] on siitä noin 30 kilometrin päässä. Ihan hyvin muistin kaiken tämän.
+KYSYMYS: Kerro lisää: Vilna
+
+### 365
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Birštonas (kulttuuri)
+Tietoruudun teksti: Birštonas on kylpyläkaupunki Nemunas-joen oikealla rannalla noin 30 kilometrin päässä Kaunasista. Paikka mainitaan ensi kertaa 1300-luvulla Saksalaisen ritarikunnan kronikoissa "suolaisen veden tilana". Liettuan suuriruhtinaat ja aatelisto viettivät siellä metsästysretkiä 1300–1500-luvuilla, ja kylpylä perustettiin vuonna 1846. Venäläisistä, puolalaisista ja liettualaisista kaupungeista tulleet vieraat hakivat sieltä hoitoa kivennäisvedellä ja parantavilla mutakääreillä. Nykyään kaupungissa on kolme suurta sanatoriota, ja se on Nemunas-mutkien alueellisen puiston keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Johanneksen ko-katedraali] 1572–1577 (rakennus), 1608 (Caravaggion maalaus) Arkkitehti Girolamo Cassar suunnitteli kirkon ritarikunnan omaksi konventtikirkoksi vuosina 1572–1577, ja ulkoa se on yhä vaatimaton: paksut kalkkikivimuurit ja kaksi kapeaa tornia näyttävät pikemmin linnoitukselta kuin katedraalilta. Sisällä on toisin — 1660-luvulla Mattia Preti maalasi koko katon ja seinät kultaisiksi barokkiveistoksiksi, ja lattia on yhtenäinen mosaiikki kahdeksastasadasta ritarin hautalaatasta. Caravaggio pakeni Roomasta 1607 tapettuaan miehen kaksintaistelussa, ja Maltalla hänet otettiin heinäkuussa 1608 ritarikunnan jäseneksi. Kiitokseksi hän maalasi oratorioon "Johannes Kastajan mestauksen" — ainoan teoksensa, jonka hä…
+- [Malta — maalehti / Historia: Kaupunki piirrettiin viivaimella] 1566 — Maaliskuun 28. päivänä 1566 suurmestari Jean de Valette laski peruskiven uudelle kaupungille Sciberras-niemellä. Suuren piirityksen jälkeen ritarikunta halusi rakentaa linnoitetun pääkaupungin, ja paavi lähetti suunnittelijaksi Francesco Laparellin. Hän hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat kaupunginportilta kohti Fort St. Elmoa. Laparellin kuoltua työtä johti maltalainen Girolamo Cassar. Valletta valmistui pääosin 1570-luvun alkuun mennessä, ja siitä tuli pääkaupunki vuonna 1571.
+AIEMPI KYSYMYS: Mikä Saksalainen ritarikunta oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Saksalainen ritarikunta]] oli keskiaikainen sotilaallinen ja uskonnollinen ritarikunta, joka syntyi ristiretkien aikana Pyhällä maalla 1100-luvun lopulla. Myöhemmin se siirsi toimintansa Itämeren alueelle, perusti Preussin ritarikunnan valtion ja kävi pitkään sotaa pakanallisia heimoja ja Liettuaa vastaan. Se hävisi ratkaisevasti [[Grunwaldin taistelussa]] vuonna 1410. Nämä ovat vanhoja asioita, ja onneksi niistä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Saksalainen ritarikunta
+
+### 366
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Birštonas (kulttuuri)
+Tietoruudun teksti: Birštonas on kylpyläkaupunki Nemunas-joen oikealla rannalla noin 30 kilometrin päässä Kaunasista. Paikka mainitaan ensi kertaa 1300-luvulla Saksalaisen ritarikunnan kronikoissa "suolaisen veden tilana". Liettuan suuriruhtinaat ja aatelisto viettivät siellä metsästysretkiä 1300–1500-luvuilla, ja kylpylä perustettiin vuonna 1846. Venäläisistä, puolalaisista ja liettualaisista kaupungeista tulleet vieraat hakivat sieltä hoitoa kivennäisvedellä ja parantavilla mutakääreillä. Nykyään kaupungissa on kolme suurta sanatoriota, ja se on Nemunas-mutkien alueellisen puiston keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Varsovan kansallismuseo] 1938 (perustettu 1862) Varsovan kansallismuseo perustettiin jo vuonna 1862 taidemuseona, ja se sai nykyisen nimensä vuonna 1916. Nykyinen suuri rakennus Jerusalimin puistokadun varrella valmistui vasta vuonna 1938, arkkitehti Tadeusz Tolwińskin suunnittelemana. Kokoelmiin kuuluu yli 830 000 esinettä muinaisajalta nykypäivään. Erikoisuutena on Euroopan suurin nubialaisen kristillisen taiteen kokoelma, joka on tuotu aikoinaan Sudanista. Museon seinillä riippuu myös Jan Matejkon jättimäinen maalaus Grunwaldin taistelu vuodelta 1878 - se on lähes 10 metriä leveä, yksi Puolan suurimmista tauluista. Nykyään museossa käy vuosittain yli 1,5 miljoonaa vierailijaa, ja se kuuluu maailman käydyimpien t…
+AIEMPI KYSYMYS: Mikä Saksalainen ritarikunta oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Saksalainen ritarikunta]] oli keskiaikainen sotilaallinen ja uskonnollinen ritarikunta, joka syntyi ristiretkien aikana Pyhällä maalla 1100-luvun lopulla. Myöhemmin se siirsi toimintansa Itämeren alueelle, perusti Preussin ritarikunnan valtion ja kävi pitkään sotaa pakanallisia heimoja ja Liettuaa vastaan. Se hävisi ratkaisevasti [[Grunwaldin taistelussa]] vuonna 1410. Nämä ovat vanhoja asioita, ja onneksi niistä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Grunwaldin taistelussa
+
+### 367
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Birštonas (kulttuuri)
+Tietoruudun teksti: Birštonas on kylpyläkaupunki Nemunas-joen oikealla rannalla noin 30 kilometrin päässä Kaunasista. Paikka mainitaan ensi kertaa 1300-luvulla Saksalaisen ritarikunnan kronikoissa "suolaisen veden tilana". Liettuan suuriruhtinaat ja aatelisto viettivät siellä metsästysretkiä 1300–1500-luvuilla, ja kylpylä perustettiin vuonna 1846. Venäläisistä, puolalaisista ja liettualaisista kaupungeista tulleet vieraat hakivat sieltä hoitoa kivennäisvedellä ja parantavilla mutakääreillä. Nykyään kaupungissa on kolme suurta sanatoriota, ja se on Nemunas-mutkien alueellisen puiston keskus.
+AIEMPI KYSYMYS: Mikä on kivennäisvesi?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Kivennäisvesi]] on vettä, joka sisältää luonnostaan liuenneita mineraaleja, kuten kalsiumia, magnesiumia ja natriumia, koska se on kulkenut maa- tai kallioperän läpi. Sitä on käytetty juomana ja kylpyhoidoissa pitkään, ja monet kylpyläkaupungit ovat syntyneet kivennäislähteiden ympärille. Hoitovaikutuksista on esitetty paljon väitteitä, mutta niiden todistusvoima vaihtelee. [[Birštonaskin]] on tällainen kaupunki. Vesi on vesi, mutta kyllä minä tykkään jokaisesta lähteestä.
+KYSYMYS: Kerro lisää: Kivennäisvesi
+
+### 368
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Birštonas (kulttuuri)
+Tietoruudun teksti: Birštonas on kylpyläkaupunki Nemunas-joen oikealla rannalla noin 30 kilometrin päässä Kaunasista. Paikka mainitaan ensi kertaa 1300-luvulla Saksalaisen ritarikunnan kronikoissa "suolaisen veden tilana". Liettuan suuriruhtinaat ja aatelisto viettivät siellä metsästysretkiä 1300–1500-luvuilla, ja kylpylä perustettiin vuonna 1846. Venäläisistä, puolalaisista ja liettualaisista kaupungeista tulleet vieraat hakivat sieltä hoitoa kivennäisvedellä ja parantavilla mutakääreillä. Nykyään kaupungissa on kolme suurta sanatoriota, ja se on Nemunas-mutkien alueellisen puiston keskus.
+AIEMPI KYSYMYS: Mikä on kivennäisvesi?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Kivennäisvesi]] on vettä, joka sisältää luonnostaan liuenneita mineraaleja, kuten kalsiumia, magnesiumia ja natriumia, koska se on kulkenut maa- tai kallioperän läpi. Sitä on käytetty juomana ja kylpyhoidoissa pitkään, ja monet kylpyläkaupungit ovat syntyneet kivennäislähteiden ympärille. Hoitovaikutuksista on esitetty paljon väitteitä, mutta niiden todistusvoima vaihtelee. [[Birštonaskin]] on tällainen kaupunki. Vesi on vesi, mutta kyllä minä tykkään jokaisesta lähteestä.
+KYSYMYS: Kerro lisää: Birštonaskin
+
+### 369
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trakain niemekelinna (historia)
+Tietoruudun teksti: Suurruhtinas Kęstutis rakennutti Trakain niemekelinnan vuosina 1350–1377 puolustamaan aluetta Saksalaista ritarikuntaa vastaan; sen seitsemää tornia yhdisti kymmenmetrinen muuri. Melnon rauha vuonna 1422 vei linnalta puolustusmerkityksen, ja sen jälkeen suurruhtinaat käyttivät sitä asuinpaikkanaan — Sigismund Kęstutaitis murhattiin siellä vuonna 1440. 1500-luvulla linnaa käytettiin myös vankilana. Venäjän–Puolan sota vuosina 1654–1667 tuhosi linnan pahoin, eikä sitä koskaan jälleenrakennettu, toisin kuin läheistä Trakain saarilinnaa. Vuonna 1678 alue luovutettiin dominikaanimunkeille, jotka rakensivat sinne luostarin ja kirkon 1770-luvulla; jäljellä olevat muurit ja tornit ovat nykyään Trakain kansallispuiston suojelemia.
+AIEMPI KYSYMYS: Kuka linnan rakennutti ja mihin sitä käytettiin sen jälkeen, kun se menetti puolustusmerkityksensä?
+AIEMPI VASTAUS (Livia):
+Kas vaan, linnakysymys. Tän minä näin katolta jo kauempaa. Linnan rakennutti suurruhtinas [[Kęstutis]] 1300-luvun jälkipuoliskolla, ja sen tarkoitus oli puolustaa aluetta [[Saksalaista ritarikuntaa]] vastaan. Kun [[Melnon rauha]] vuonna 1422 vei linnalta puolustusmerkityksen, suurruhtinaat ottivat sen asuinpaikakseen. Linnassa tapahtui myös väkivaltaa: Sigismund Kęstutaitis murhattiin siellä vuonna 1440. Sitä käytettiin 1500-luvulla lisäksi vankilana. Pitkä tarina yhdeksi linnaksi, sanon minä.
+KYSYMYS: Kerro lisää: Kęstutis
+
+### 370
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trakain niemekelinna (historia)
+Tietoruudun teksti: Suurruhtinas Kęstutis rakennutti Trakain niemekelinnan vuosina 1350–1377 puolustamaan aluetta Saksalaista ritarikuntaa vastaan; sen seitsemää tornia yhdisti kymmenmetrinen muuri. Melnon rauha vuonna 1422 vei linnalta puolustusmerkityksen, ja sen jälkeen suurruhtinaat käyttivät sitä asuinpaikkanaan — Sigismund Kęstutaitis murhattiin siellä vuonna 1440. 1500-luvulla linnaa käytettiin myös vankilana. Venäjän–Puolan sota vuosina 1654–1667 tuhosi linnan pahoin, eikä sitä koskaan jälleenrakennettu, toisin kuin läheistä Trakain saarilinnaa. Vuonna 1678 alue luovutettiin dominikaanimunkeille, jotka rakensivat sinne luostarin ja kirkon 1770-luvulla; jäljellä olevat muurit ja tornit ovat nykyään Trakain kansallispuiston suojelemia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Edinburgh — kohdekartta / Kohdekartta: St Gilesin katedraali] 1385–1500 St Gilesin kirkko on seisonut Edinburghin Kuninkaankadun eli Royal Milen varrella jo satoja vuosia — nykyinen goottilainen kivikirkko rakennettiin pääosin 1300–1500-luvuilla. Tunnetuin piirre on kruunun muotoinen torni 1460-luvulta, jossa on poikkeuksellisesti kahdeksan tukipilaria. Vuonna 1559 kirkon saarnastuoliin nousi uskonpuhdistaja John Knox, joka teki kirkosta protestanttisen pääkirkon. Legendan mukaan vuonna 1637 markkinakauppias Jenny Geddes suuttui uudesta rukouskirjasta niin, että heitti jakkaransa saarnaajaa kohti — teko, joka sytytti mellakan koko kaupunkiin. Vuosina 1909–1911 kirkkoon rakennettiin upea Thistle-kappeli Skotlannin ritarikuntaa varten. Nykyään kirkossa …
+AIEMPI KYSYMYS: Kuka linnan rakennutti ja mihin sitä käytettiin sen jälkeen, kun se menetti puolustusmerkityksensä?
+AIEMPI VASTAUS (Livia):
+Kas vaan, linnakysymys. Tän minä näin katolta jo kauempaa. Linnan rakennutti suurruhtinas [[Kęstutis]] 1300-luvun jälkipuoliskolla, ja sen tarkoitus oli puolustaa aluetta [[Saksalaista ritarikuntaa]] vastaan. Kun [[Melnon rauha]] vuonna 1422 vei linnalta puolustusmerkityksen, suurruhtinaat ottivat sen asuinpaikakseen. Linnassa tapahtui myös väkivaltaa: Sigismund Kęstutaitis murhattiin siellä vuonna 1440. Sitä käytettiin 1500-luvulla lisäksi vankilana. Pitkä tarina yhdeksi linnaksi, sanon minä.
+KYSYMYS: Kerro lisää: Saksalaista ritarikuntaa
+
+### 371
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trakain niemekelinna (historia)
+Tietoruudun teksti: Suurruhtinas Kęstutis rakennutti Trakain niemekelinnan vuosina 1350–1377 puolustamaan aluetta Saksalaista ritarikuntaa vastaan; sen seitsemää tornia yhdisti kymmenmetrinen muuri. Melnon rauha vuonna 1422 vei linnalta puolustusmerkityksen, ja sen jälkeen suurruhtinaat käyttivät sitä asuinpaikkanaan — Sigismund Kęstutaitis murhattiin siellä vuonna 1440. 1500-luvulla linnaa käytettiin myös vankilana. Venäjän–Puolan sota vuosina 1654–1667 tuhosi linnan pahoin, eikä sitä koskaan jälleenrakennettu, toisin kuin läheistä Trakain saarilinnaa. Vuonna 1678 alue luovutettiin dominikaanimunkeille, jotka rakensivat sinne luostarin ja kirkon 1770-luvulla; jäljellä olevat muurit ja tornit ovat nykyään Trakain kansallispuiston suojelemia.
+AIEMPI KYSYMYS: Kuka linnan rakennutti ja mihin sitä käytettiin sen jälkeen, kun se menetti puolustusmerkityksensä?
+AIEMPI VASTAUS (Livia):
+Kas vaan, linnakysymys. Tän minä näin katolta jo kauempaa. Linnan rakennutti suurruhtinas [[Kęstutis]] 1300-luvun jälkipuoliskolla, ja sen tarkoitus oli puolustaa aluetta [[Saksalaista ritarikuntaa]] vastaan. Kun [[Melnon rauha]] vuonna 1422 vei linnalta puolustusmerkityksen, suurruhtinaat ottivat sen asuinpaikakseen. Linnassa tapahtui myös väkivaltaa: Sigismund Kęstutaitis murhattiin siellä vuonna 1440. Sitä käytettiin 1500-luvulla lisäksi vankilana. Pitkä tarina yhdeksi linnaksi, sanon minä.
+KYSYMYS: Kerro lisää: Melnon rauha
+
+### 372
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trakain niemekelinna (historia)
+Tietoruudun teksti: Suurruhtinas Kęstutis rakennutti Trakain niemekelinnan vuosina 1350–1377 puolustamaan aluetta Saksalaista ritarikuntaa vastaan; sen seitsemää tornia yhdisti kymmenmetrinen muuri. Melnon rauha vuonna 1422 vei linnalta puolustusmerkityksen, ja sen jälkeen suurruhtinaat käyttivät sitä asuinpaikkanaan — Sigismund Kęstutaitis murhattiin siellä vuonna 1440. 1500-luvulla linnaa käytettiin myös vankilana. Venäjän–Puolan sota vuosina 1654–1667 tuhosi linnan pahoin, eikä sitä koskaan jälleenrakennettu, toisin kuin läheistä Trakain saarilinnaa. Vuonna 1678 alue luovutettiin dominikaanimunkeille, jotka rakensivat sinne luostarin ja kirkon 1770-luvulla; jäljellä olevat muurit ja tornit ovat nykyään Trakain kansallispuiston suojelemia.
+AIEMPI KYSYMYS: Mikä sodista tuhosi linnan lopullisesti?
+AIEMPI VASTAUS (Livia):
+Ai se. Tähän minä osaan vastata ihan suoraan. Linnan tuhosi pahoin Venäjän ja Puolan välinen sota, joka kesti vuosina 1654–1667. Sen jälkeen linnaa ei koskaan rakennettu uudelleen, toisin kuin lähellä sijaitseva saarilinna. Vuonna 1678 alue luovutettiin [[dominikaanimunkeille]], jotka rakensivat sinne luostarin ja kirkon 1770-luvulla, ja nykyään jäljellä olevat muurit ja tornit ovat [[Trakain kansallispuiston]] suojelemia. Hyvä muistaa, että tuhoutunut ei tarkoita kadonnutta.
+KYSYMYS: Kerro lisää: dominikaanimunkeille
+
+### 373
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trakain niemekelinna (historia)
+Tietoruudun teksti: Suurruhtinas Kęstutis rakennutti Trakain niemekelinnan vuosina 1350–1377 puolustamaan aluetta Saksalaista ritarikuntaa vastaan; sen seitsemää tornia yhdisti kymmenmetrinen muuri. Melnon rauha vuonna 1422 vei linnalta puolustusmerkityksen, ja sen jälkeen suurruhtinaat käyttivät sitä asuinpaikkanaan — Sigismund Kęstutaitis murhattiin siellä vuonna 1440. 1500-luvulla linnaa käytettiin myös vankilana. Venäjän–Puolan sota vuosina 1654–1667 tuhosi linnan pahoin, eikä sitä koskaan jälleenrakennettu, toisin kuin läheistä Trakain saarilinnaa. Vuonna 1678 alue luovutettiin dominikaanimunkeille, jotka rakensivat sinne luostarin ja kirkon 1770-luvulla; jäljellä olevat muurit ja tornit ovat nykyään Trakain kansallispuiston suojelemia.
+AIEMPI KYSYMYS: Mikä sodista tuhosi linnan lopullisesti?
+AIEMPI VASTAUS (Livia):
+Ai se. Tähän minä osaan vastata ihan suoraan. Linnan tuhosi pahoin Venäjän ja Puolan välinen sota, joka kesti vuosina 1654–1667. Sen jälkeen linnaa ei koskaan rakennettu uudelleen, toisin kuin lähellä sijaitseva saarilinna. Vuonna 1678 alue luovutettiin [[dominikaanimunkeille]], jotka rakensivat sinne luostarin ja kirkon 1770-luvulla, ja nykyään jäljellä olevat muurit ja tornit ovat [[Trakain kansallispuiston]] suojelemia. Hyvä muistaa, että tuhoutunut ei tarkoita kadonnutta.
+KYSYMYS: Kerro lisää: Trakain kansallispuiston
+
+### 374
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trakain niemekelinna (historia)
+Tietoruudun teksti: Suurruhtinas Kęstutis rakennutti Trakain niemekelinnan vuosina 1350–1377 puolustamaan aluetta Saksalaista ritarikuntaa vastaan; sen seitsemää tornia yhdisti kymmenmetrinen muuri. Melnon rauha vuonna 1422 vei linnalta puolustusmerkityksen, ja sen jälkeen suurruhtinaat käyttivät sitä asuinpaikkanaan — Sigismund Kęstutaitis murhattiin siellä vuonna 1440. 1500-luvulla linnaa käytettiin myös vankilana. Venäjän–Puolan sota vuosina 1654–1667 tuhosi linnan pahoin, eikä sitä koskaan jälleenrakennettu, toisin kuin läheistä Trakain saarilinnaa. Vuonna 1678 alue luovutettiin dominikaanimunkeille, jotka rakensivat sinne luostarin ja kirkon 1770-luvulla; jäljellä olevat muurit ja tornit ovat nykyään Trakain kansallispuiston suojelemia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Johanneksen ko-katedraali] 1572–1577 (rakennus), 1608 (Caravaggion maalaus) Arkkitehti Girolamo Cassar suunnitteli kirkon ritarikunnan omaksi konventtikirkoksi vuosina 1572–1577, ja ulkoa se on yhä vaatimaton: paksut kalkkikivimuurit ja kaksi kapeaa tornia näyttävät pikemmin linnoitukselta kuin katedraalilta. Sisällä on toisin — 1660-luvulla Mattia Preti maalasi koko katon ja seinät kultaisiksi barokkiveistoksiksi, ja lattia on yhtenäinen mosaiikki kahdeksastasadasta ritarin hautalaatasta. Caravaggio pakeni Roomasta 1607 tapettuaan miehen kaksintaistelussa, ja Maltalla hänet otettiin heinäkuussa 1608 ritarikunnan jäseneksi. Kiitokseksi hän maalasi oratorioon "Johannes Kastajan mestauksen" — ainoan teoksensa, jonka hä…
+- [Malta — maalehti / Historia: Kaupunki piirrettiin viivaimella] 1566 — Maaliskuun 28. päivänä 1566 suurmestari Jean de Valette laski peruskiven uudelle kaupungille Sciberras-niemellä. Suuren piirityksen jälkeen ritarikunta halusi rakentaa linnoitetun pääkaupungin, ja paavi lähetti suunnittelijaksi Francesco Laparellin. Hän hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat kaupunginportilta kohti Fort St. Elmoa. Laparellin kuoltua työtä johti maltalainen Girolamo Cassar. Valletta valmistui pääosin 1570-luvun alkuun mennessä, ja siitä tuli pääkaupunki vuonna 1571.
+AIEMPI KYSYMYS: Keitä olivat Saksalaisen ritarikunnan jäsenet?
+AIEMPI VASTAUS (Livia):
+Mmm— ritarit. Heistä riittää kerrottavaa. [[Saksalainen ritarikunta]] oli keskiajalla syntynyt ritarillinen ja kristillinen järjestö, joka sai alkunsa ristiretkien aikana Pyhällä maalla. Jäsenet olivat sekä ritareita että munkkeja, ja järjestö perusti myöhemmin oman valtionsa [[Preussiin]] ja Itämeren itärannalle. Liettuan suuriruhtinaskunta oli pitkään sen vastustaja, ja juuri sitä vastaan [[Trakain]] linnat rakennettiin. Tarkkoja vuosilukuja en rupea arvailemaan, koska tämä on sellainen aihe, jossa lähteet vaihtelevat.
+KYSYMYS: Kerro lisää: Saksalainen ritarikunta
+
+### 375
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trakain niemekelinna (historia)
+Tietoruudun teksti: Suurruhtinas Kęstutis rakennutti Trakain niemekelinnan vuosina 1350–1377 puolustamaan aluetta Saksalaista ritarikuntaa vastaan; sen seitsemää tornia yhdisti kymmenmetrinen muuri. Melnon rauha vuonna 1422 vei linnalta puolustusmerkityksen, ja sen jälkeen suurruhtinaat käyttivät sitä asuinpaikkanaan — Sigismund Kęstutaitis murhattiin siellä vuonna 1440. 1500-luvulla linnaa käytettiin myös vankilana. Venäjän–Puolan sota vuosina 1654–1667 tuhosi linnan pahoin, eikä sitä koskaan jälleenrakennettu, toisin kuin läheistä Trakain saarilinnaa. Vuonna 1678 alue luovutettiin dominikaanimunkeille, jotka rakensivat sinne luostarin ja kirkon 1770-luvulla; jäljellä olevat muurit ja tornit ovat nykyään Trakain kansallispuiston suojelemia.
+AIEMPI KYSYMYS: Keitä olivat Saksalaisen ritarikunnan jäsenet?
+AIEMPI VASTAUS (Livia):
+Mmm— ritarit. Heistä riittää kerrottavaa. [[Saksalainen ritarikunta]] oli keskiajalla syntynyt ritarillinen ja kristillinen järjestö, joka sai alkunsa ristiretkien aikana Pyhällä maalla. Jäsenet olivat sekä ritareita että munkkeja, ja järjestö perusti myöhemmin oman valtionsa [[Preussiin]] ja Itämeren itärannalle. Liettuan suuriruhtinaskunta oli pitkään sen vastustaja, ja juuri sitä vastaan [[Trakain]] linnat rakennettiin. Tarkkoja vuosilukuja en rupea arvailemaan, koska tämä on sellainen aihe, jossa lähteet vaihtelevat.
+KYSYMYS: Kerro lisää: Preussiin
+
+### 376
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trakain niemekelinna (historia)
+Tietoruudun teksti: Suurruhtinas Kęstutis rakennutti Trakain niemekelinnan vuosina 1350–1377 puolustamaan aluetta Saksalaista ritarikuntaa vastaan; sen seitsemää tornia yhdisti kymmenmetrinen muuri. Melnon rauha vuonna 1422 vei linnalta puolustusmerkityksen, ja sen jälkeen suurruhtinaat käyttivät sitä asuinpaikkanaan — Sigismund Kęstutaitis murhattiin siellä vuonna 1440. 1500-luvulla linnaa käytettiin myös vankilana. Venäjän–Puolan sota vuosina 1654–1667 tuhosi linnan pahoin, eikä sitä koskaan jälleenrakennettu, toisin kuin läheistä Trakain saarilinnaa. Vuonna 1678 alue luovutettiin dominikaanimunkeille, jotka rakensivat sinne luostarin ja kirkon 1770-luvulla; jäljellä olevat muurit ja tornit ovat nykyään Trakain kansallispuiston suojelemia.
+AIEMPI KYSYMYS: Keitä olivat Saksalaisen ritarikunnan jäsenet?
+AIEMPI VASTAUS (Livia):
+Mmm— ritarit. Heistä riittää kerrottavaa. [[Saksalainen ritarikunta]] oli keskiajalla syntynyt ritarillinen ja kristillinen järjestö, joka sai alkunsa ristiretkien aikana Pyhällä maalla. Jäsenet olivat sekä ritareita että munkkeja, ja järjestö perusti myöhemmin oman valtionsa [[Preussiin]] ja Itämeren itärannalle. Liettuan suuriruhtinaskunta oli pitkään sen vastustaja, ja juuri sitä vastaan [[Trakain]] linnat rakennettiin. Tarkkoja vuosilukuja en rupea arvailemaan, koska tämä on sellainen aihe, jossa lähteet vaihtelevat.
+KYSYMYS: Kerro lisää: Trakain
+
+### 377
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trakain niemekelinna (historia)
+Tietoruudun teksti: Suurruhtinas Kęstutis rakennutti Trakain niemekelinnan vuosina 1350–1377 puolustamaan aluetta Saksalaista ritarikuntaa vastaan; sen seitsemää tornia yhdisti kymmenmetrinen muuri. Melnon rauha vuonna 1422 vei linnalta puolustusmerkityksen, ja sen jälkeen suurruhtinaat käyttivät sitä asuinpaikkanaan — Sigismund Kęstutaitis murhattiin siellä vuonna 1440. 1500-luvulla linnaa käytettiin myös vankilana. Venäjän–Puolan sota vuosina 1654–1667 tuhosi linnan pahoin, eikä sitä koskaan jälleenrakennettu, toisin kuin läheistä Trakain saarilinnaa. Vuonna 1678 alue luovutettiin dominikaanimunkeille, jotka rakensivat sinne luostarin ja kirkon 1770-luvulla; jäljellä olevat muurit ja tornit ovat nykyään Trakain kansallispuiston suojelemia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Kaksikymmentä nimeä vapautti maan] 1918 — Ensimmäisen maailmansodan lopulla, Venäjän ja Saksan miehitysten välissä, Liettuan neuvosto kokoontui Vilnan Pilies-kadun talossa ja allekirjoitti 16. helmikuuta 1918 itsenäisyysjulistuksen. Sen allekirjoitti kaksikymmentä jäsentä, puheenjohtajanaan lääkäri Jonas Basanavičius, ja se julisti demokraattisen Liettuan valtion, jonka pääkaupunki olisi Vilna. Talo tunnetaan nykyään Signatarų-talona. Alkuperäinen asiakirja katosi Kaunasista neuvostomiehityksen alla 1940 ja löytyi vasta 2017 Saksan ulkoministeriön arkistosta Berliinistä.
+- [Vilna — kaupunkilehti / Vilna] Liettuan pääkaupunki kasvoi kahden joen yhtymäkohtaan kukkuloiden väliin. Vanhassakaupungissa on kapeita kujia, satakunta kirkkoa ja yksi omaksi tasavallakseen julistautunut kortteli.
+AIEMPI KYSYMYS: Mikä oli Liettuan suuriruhtinaskunta?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kyyhkyt ovat lennelleet sen rajojen yli. Liettuan suuriruhtinaskunta oli keskiajalla ja uuden ajan alussa Euroopan itäosissa sijainnut laaja valtio, jonka keskuksia olivat [[Vilna]] ja [[Trakai]]. Se syntyi 1200-luvun lopulla tai sen tienoilla ja liittyi vähitellen läheiseen yhteyteen [[Puolan]] kanssa; 1500-luvulla valtiot muodostivat yhdessä Puola–Liettuan kaksoisvaltakunnan. Sen alueeseen kuului aikoinaan nykyisen Liettuan lisäksi suuria osia nykyisestä Valko-Venäjästä ja Ukrainasta. Valtio päättyi 1700-luvun lopulla Puolan–Liettuan jakoihin. Tarkkoja päivämääriä en nyt väitä.
+KYSYMYS: Kerro lisää: Vilna
+
+### 378
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trakain niemekelinna (historia)
+Tietoruudun teksti: Suurruhtinas Kęstutis rakennutti Trakain niemekelinnan vuosina 1350–1377 puolustamaan aluetta Saksalaista ritarikuntaa vastaan; sen seitsemää tornia yhdisti kymmenmetrinen muuri. Melnon rauha vuonna 1422 vei linnalta puolustusmerkityksen, ja sen jälkeen suurruhtinaat käyttivät sitä asuinpaikkanaan — Sigismund Kęstutaitis murhattiin siellä vuonna 1440. 1500-luvulla linnaa käytettiin myös vankilana. Venäjän–Puolan sota vuosina 1654–1667 tuhosi linnan pahoin, eikä sitä koskaan jälleenrakennettu, toisin kuin läheistä Trakain saarilinnaa. Vuonna 1678 alue luovutettiin dominikaanimunkeille, jotka rakensivat sinne luostarin ja kirkon 1770-luvulla; jäljellä olevat muurit ja tornit ovat nykyään Trakain kansallispuiston suojelemia.
+AIEMPI KYSYMYS: Mikä oli Liettuan suuriruhtinaskunta?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kyyhkyt ovat lennelleet sen rajojen yli. Liettuan suuriruhtinaskunta oli keskiajalla ja uuden ajan alussa Euroopan itäosissa sijainnut laaja valtio, jonka keskuksia olivat [[Vilna]] ja [[Trakai]]. Se syntyi 1200-luvun lopulla tai sen tienoilla ja liittyi vähitellen läheiseen yhteyteen [[Puolan]] kanssa; 1500-luvulla valtiot muodostivat yhdessä Puola–Liettuan kaksoisvaltakunnan. Sen alueeseen kuului aikoinaan nykyisen Liettuan lisäksi suuria osia nykyisestä Valko-Venäjästä ja Ukrainasta. Valtio päättyi 1700-luvun lopulla Puolan–Liettuan jakoihin. Tarkkoja päivämääriä en nyt väitä.
+KYSYMYS: Kerro lisää: Trakai
+
+### 379
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trakain niemekelinna (historia)
+Tietoruudun teksti: Suurruhtinas Kęstutis rakennutti Trakain niemekelinnan vuosina 1350–1377 puolustamaan aluetta Saksalaista ritarikuntaa vastaan; sen seitsemää tornia yhdisti kymmenmetrinen muuri. Melnon rauha vuonna 1422 vei linnalta puolustusmerkityksen, ja sen jälkeen suurruhtinaat käyttivät sitä asuinpaikkanaan — Sigismund Kęstutaitis murhattiin siellä vuonna 1440. 1500-luvulla linnaa käytettiin myös vankilana. Venäjän–Puolan sota vuosina 1654–1667 tuhosi linnan pahoin, eikä sitä koskaan jälleenrakennettu, toisin kuin läheistä Trakain saarilinnaa. Vuonna 1678 alue luovutettiin dominikaanimunkeille, jotka rakensivat sinne luostarin ja kirkon 1770-luvulla; jäljellä olevat muurit ja tornit ovat nykyään Trakain kansallispuiston suojelemia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Valtakunta ulottui mereltä merelle] 1430 — Liettuan suuriruhtinaskunta oli 1400-luvun alussa Euroopan suurin valtio. Suuriruhtinas Vytautas Suuri hallitsi aluetta, joka ulottui Itämereltä lähelle Mustaamerta ja kattoi nykyisen Valko-Venäjän, suuren osan Ukrainaa sekä palasia Puolaa, Latviaa ja Venäjää. Vuonna 1386 suuriruhtinas Jogaila meni naimisiin Puolan kuningattaren kanssa ja otti kasteen, ja maat liittyivät henkilöunioniin, joka näkyy tässä kartassa vierekkäisinä valtakuntina. Liettuasta tuli näin viimeinen pakanallinen valtio, joka kääntyi kristinuskoon Euroopassa.
+AIEMPI KYSYMYS: Mikä oli Liettuan suuriruhtinaskunta?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kyyhkyt ovat lennelleet sen rajojen yli. Liettuan suuriruhtinaskunta oli keskiajalla ja uuden ajan alussa Euroopan itäosissa sijainnut laaja valtio, jonka keskuksia olivat [[Vilna]] ja [[Trakai]]. Se syntyi 1200-luvun lopulla tai sen tienoilla ja liittyi vähitellen läheiseen yhteyteen [[Puolan]] kanssa; 1500-luvulla valtiot muodostivat yhdessä Puola–Liettuan kaksoisvaltakunnan. Sen alueeseen kuului aikoinaan nykyisen Liettuan lisäksi suuria osia nykyisestä Valko-Venäjästä ja Ukrainasta. Valtio päättyi 1700-luvun lopulla Puolan–Liettuan jakoihin. Tarkkoja päivämääriä en nyt väitä.
+KYSYMYS: Kerro lisää: Puolan
+
+### 380
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trakain niemekelinna (historia)
+Tietoruudun teksti: Suurruhtinas Kęstutis rakennutti Trakain niemekelinnan vuosina 1350–1377 puolustamaan aluetta Saksalaista ritarikuntaa vastaan; sen seitsemää tornia yhdisti kymmenmetrinen muuri. Melnon rauha vuonna 1422 vei linnalta puolustusmerkityksen, ja sen jälkeen suurruhtinaat käyttivät sitä asuinpaikkanaan — Sigismund Kęstutaitis murhattiin siellä vuonna 1440. 1500-luvulla linnaa käytettiin myös vankilana. Venäjän–Puolan sota vuosina 1654–1667 tuhosi linnan pahoin, eikä sitä koskaan jälleenrakennettu, toisin kuin läheistä Trakain saarilinnaa. Vuonna 1678 alue luovutettiin dominikaanimunkeille, jotka rakensivat sinne luostarin ja kirkon 1770-luvulla; jäljellä olevat muurit ja tornit ovat nykyään Trakain kansallispuiston suojelemia.
+AIEMPI KYSYMYS: Mitä tarkoittaa niemekelinna?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Sana on kyllä helppo, mutta kerrotaan se kunnolla. [[Niemekelinna]] on linna, joka on rakennettu niemelle eli vesistöön työntyvälle maakaistaleelle, jolloin vesi ympäröi sitä useammalta sivulta ja suojaa sitä. Maayhteyttä voitiin puolustaa erikseen esimerkiksi muurilla tai [[vallihaudalla]]. Saarilinnasta se eroaa siinä, että saarilinna seisoo kokonaan veden ympäröimänä saarella. [[Trakain]] alueella on kumpaakin tyyppiä, jotka ovat rakennetut samoille vesille. Minulle riittää, että linnan edessä on hyvä laituri.
+KYSYMYS: Kerro lisää: Niemekelinna
+
+### 381
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trakain niemekelinna (historia)
+Tietoruudun teksti: Suurruhtinas Kęstutis rakennutti Trakain niemekelinnan vuosina 1350–1377 puolustamaan aluetta Saksalaista ritarikuntaa vastaan; sen seitsemää tornia yhdisti kymmenmetrinen muuri. Melnon rauha vuonna 1422 vei linnalta puolustusmerkityksen, ja sen jälkeen suurruhtinaat käyttivät sitä asuinpaikkanaan — Sigismund Kęstutaitis murhattiin siellä vuonna 1440. 1500-luvulla linnaa käytettiin myös vankilana. Venäjän–Puolan sota vuosina 1654–1667 tuhosi linnan pahoin, eikä sitä koskaan jälleenrakennettu, toisin kuin läheistä Trakain saarilinnaa. Vuonna 1678 alue luovutettiin dominikaanimunkeille, jotka rakensivat sinne luostarin ja kirkon 1770-luvulla; jäljellä olevat muurit ja tornit ovat nykyään Trakain kansallispuiston suojelemia.
+AIEMPI KYSYMYS: Mitä tarkoittaa niemekelinna?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Sana on kyllä helppo, mutta kerrotaan se kunnolla. [[Niemekelinna]] on linna, joka on rakennettu niemelle eli vesistöön työntyvälle maakaistaleelle, jolloin vesi ympäröi sitä useammalta sivulta ja suojaa sitä. Maayhteyttä voitiin puolustaa erikseen esimerkiksi muurilla tai [[vallihaudalla]]. Saarilinnasta se eroaa siinä, että saarilinna seisoo kokonaan veden ympäröimänä saarella. [[Trakain]] alueella on kumpaakin tyyppiä, jotka ovat rakennetut samoille vesille. Minulle riittää, että linnan edessä on hyvä laituri.
+KYSYMYS: Kerro lisää: vallihaudalla
+
+### 382
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Hiekkaniemi, jonka dyynit vaelsivat kylien yli — ja jonka metsä on istutettu käsin
+Tietoruudun teksti: Yhdeksänkymmentäkahdeksan kilometriä pitkä hiekkaniemi erottaa Kuurinlahden Itämerestä. Se on kapeimmillaan neljäsataa metriä ja leveimmillään Nidan pohjoispuolella lähes neljä kilometriä, ja se syntyi noin kolmannella vuosituhannella ennen ajanlaskua jäätikön jättämän moreeniharjanteen päälle, kun tuuli ja virtaukset kasasivat sen päälle hiekkaa. Pohjoinen viidenkymmenenkahden kilometrin osuus on Liettuaa ja loput Venäjää; maailmanperintökohde on molempien yhteinen, ja se otettiin luetteloon vuonna 2000.
+
+Niemen tarina on kuitenkin ihmisen tekemä. Kun metsät hävisivät 1600- ja 1700-luvuilla laidunnuksen, hakkuiden ja veneenrakennuksen takia, tuuli pääsi käsiksi hiekkaan: dyynit lähtivät liikkeelle ja hautasivat alleen kokonaisia kyliä. Preussin hallitus aloitti laajat istutukset vuonna 1825, ja sata vuotta mäntyä ja rantakauraa pysäytti vaelluksen — se metsä, joka niemellä nyt kasvaa, …
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+AIEMPI KYSYMYS: Miten hiekkadyyni voi vaeltaa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tän minä olen nähnyt ylhäältä päin. Hiekkadyyni liikkuu tuulen vaikutuksesta: tuuli nostaa hiekkajyviä dyynin loivaa tuulenpuoleista rinnettä ylöspäin ja pudottaa niitä harjan yli jyrkälle suojanpuoleiselle rinteelle. Kun tätä jatkuu vuosikausia, koko dyyni siirtyy hitaasti eteenpäin. [[Kuurinkynnäksellä]] vaeltavat dyynit hautasivat alleen kokonaisia kyliä sen jälkeen, kun niemen metsät oli hakattu 1600- ja 1700-luvuilla. Kasvillisuus pysäyttää tämän liikkeen, ja siksi [[dyynit]] vaeltavat vain, jos ne ovat paljaita. Onneksi kyliä ehdittiin siirtää.
+KYSYMYS: Kerro lisää: Kuurinkynnäksellä
+
+### 383
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Hiekkaniemi, jonka dyynit vaelsivat kylien yli — ja jonka metsä on istutettu käsin
+Tietoruudun teksti: Yhdeksänkymmentäkahdeksan kilometriä pitkä hiekkaniemi erottaa Kuurinlahden Itämerestä. Se on kapeimmillaan neljäsataa metriä ja leveimmillään Nidan pohjoispuolella lähes neljä kilometriä, ja se syntyi noin kolmannella vuosituhannella ennen ajanlaskua jäätikön jättämän moreeniharjanteen päälle, kun tuuli ja virtaukset kasasivat sen päälle hiekkaa. Pohjoinen viidenkymmenenkahden kilometrin osuus on Liettuaa ja loput Venäjää; maailmanperintökohde on molempien yhteinen, ja se otettiin luetteloon vuonna 2000.
+
+Niemen tarina on kuitenkin ihmisen tekemä. Kun metsät hävisivät 1600- ja 1700-luvuilla laidunnuksen, hakkuiden ja veneenrakennuksen takia, tuuli pääsi käsiksi hiekkaan: dyynit lähtivät liikkeelle ja hautasivat alleen kokonaisia kyliä. Preussin hallitus aloitti laajat istutukset vuonna 1825, ja sata vuotta mäntyä ja rantakauraa pysäytti vaelluksen — se metsä, joka niemellä nyt kasvaa, …
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Luonto: Dyyni vaeltaa ja hautaa kylän] 2000 — Kuurinkynnäs on lähes sadan kilometrin pituinen hiekkaniemi, joka erottaa matalan lahden merestä. Kapeimmillaan se on vain muutaman sadan metrin levyinen. Kun niemen metsät hakattiin 1600- ja 1700-luvuilla, tuuli pääsi liikuttamaan hiekkaa: dyynit alkoivat vaeltaa ja hautasivat alleen kokonaisia kyliä. Vaellus pysäytettiin istuttamalla mäntyä ja rantakauraa sata vuotta kestäneellä työllä. Unesco otti niemen maailmanperintöluetteloon vuonna 2000.
+- [Namib — kaupunkilehti / Namib: Sossusvlein punaiset dyynit] Namibin eteläosassa Sossusvleissa hiekka on värjäytynyt punaruskeaksi vuosimiljoonien varrella hapettuneen raudan ansiosta – mitä vanhempi dyyni, sitä punaisempi sen pinta. Alueen dyynit kuuluvat maailman korkeimpiin: Big Daddy kohoaa noin 325 metriin, mikä tekee alueesta toiseksi korkeimman dyynialueen maailmassa heti Kiinan Badain Jaranin jälkeen. Suositumpi Dune 45 on vaatimattomampi, noin 80 metriä korkea, mutta sen hiekka on peräti viisi miljoonaa vuotta vanhaa. Auringonnousun valo osuu dyynien harjanteisiin niin, että toinen rinne hehkuu oranssinpunaisena ja toinen jää syvään varjoon – näky joka houkuttelee valokuvaajia paikalle jo pimeän aikaan.
+AIEMPI KYSYMYS: Miten hiekkadyyni voi vaeltaa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tän minä olen nähnyt ylhäältä päin. Hiekkadyyni liikkuu tuulen vaikutuksesta: tuuli nostaa hiekkajyviä dyynin loivaa tuulenpuoleista rinnettä ylöspäin ja pudottaa niitä harjan yli jyrkälle suojanpuoleiselle rinteelle. Kun tätä jatkuu vuosikausia, koko dyyni siirtyy hitaasti eteenpäin. [[Kuurinkynnäksellä]] vaeltavat dyynit hautasivat alleen kokonaisia kyliä sen jälkeen, kun niemen metsät oli hakattu 1600- ja 1700-luvuilla. Kasvillisuus pysäyttää tämän liikkeen, ja siksi [[dyynit]] vaeltavat vain, jos ne ovat paljaita. Onneksi kyliä ehdittiin siirtää.
+KYSYMYS: Kerro lisää: dyynit
+
+### 384
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Hiekkaniemi, jonka dyynit vaelsivat kylien yli — ja jonka metsä on istutettu käsin
+Tietoruudun teksti: Yhdeksänkymmentäkahdeksan kilometriä pitkä hiekkaniemi erottaa Kuurinlahden Itämerestä. Se on kapeimmillaan neljäsataa metriä ja leveimmillään Nidan pohjoispuolella lähes neljä kilometriä, ja se syntyi noin kolmannella vuosituhannella ennen ajanlaskua jäätikön jättämän moreeniharjanteen päälle, kun tuuli ja virtaukset kasasivat sen päälle hiekkaa. Pohjoinen viidenkymmenenkahden kilometrin osuus on Liettuaa ja loput Venäjää; maailmanperintökohde on molempien yhteinen, ja se otettiin luetteloon vuonna 2000.
+
+Niemen tarina on kuitenkin ihmisen tekemä. Kun metsät hävisivät 1600- ja 1700-luvuilla laidunnuksen, hakkuiden ja veneenrakennuksen takia, tuuli pääsi käsiksi hiekkaan: dyynit lähtivät liikkeelle ja hautasivat alleen kokonaisia kyliä. Preussin hallitus aloitti laajat istutukset vuonna 1825, ja sata vuotta mäntyä ja rantakauraa pysäytti vaelluksen — se metsä, joka niemellä nyt kasvaa, …
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+AIEMPI KYSYMYS: Miksi metsän kaataminen liikutti hiekkaa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Se on oikeastaan aika selkeä juttu. Metsä sitoo hiekan: puiden juuret pitävät maan paikoillaan, ja latvusto sekä alikasvillisuus hidastavat tuulta pinnan lähellä. Kun [[Kuurinkynnäksen]] metsät hävisivät 1600- ja 1700-luvuilla laidunnuksen, hakkuiden ja veneenrakennuksen takia, tuuli pääsi suoraan hiekkaan ja alkoi kuljettaa sitä. [[Dyynit]] lähtivät liikkeelle ja hautasivat alleen kokonaisia kyliä. Peitteen poistaminen riittää siis, kun maaperä on näin kevyttä ja rakeista. Metsää menee vähän aikaa kaataa, mutta kasvattaa sitä menee vuosikymmeniä.
+KYSYMYS: Kerro lisää: Kuurinkynnäksen
+
+### 385
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Hiekkaniemi, jonka dyynit vaelsivat kylien yli — ja jonka metsä on istutettu käsin
+Tietoruudun teksti: Yhdeksänkymmentäkahdeksan kilometriä pitkä hiekkaniemi erottaa Kuurinlahden Itämerestä. Se on kapeimmillaan neljäsataa metriä ja leveimmillään Nidan pohjoispuolella lähes neljä kilometriä, ja se syntyi noin kolmannella vuosituhannella ennen ajanlaskua jäätikön jättämän moreeniharjanteen päälle, kun tuuli ja virtaukset kasasivat sen päälle hiekkaa. Pohjoinen viidenkymmenenkahden kilometrin osuus on Liettuaa ja loput Venäjää; maailmanperintökohde on molempien yhteinen, ja se otettiin luetteloon vuonna 2000.
+
+Niemen tarina on kuitenkin ihmisen tekemä. Kun metsät hävisivät 1600- ja 1700-luvuilla laidunnuksen, hakkuiden ja veneenrakennuksen takia, tuuli pääsi käsiksi hiekkaan: dyynit lähtivät liikkeelle ja hautasivat alleen kokonaisia kyliä. Preussin hallitus aloitti laajat istutukset vuonna 1825, ja sata vuotta mäntyä ja rantakauraa pysäytti vaelluksen — se metsä, joka niemellä nyt kasvaa, …
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Tavat: Kukkula, jolle jokainen tuo ristin] 1961 — Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. Neuvostoaikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka tahansa saa tuoda omansa.
+- [Vilna — kohdekartta / Kohdekartta: Boratynka] 1659–1668 Kun kassa on tyhjä, voi aina lyödä lisää rahaa — kunhan ei kysy, mitä raha sen jälkeen on arvoltaan. Puola-Liettua kokeili tätä 1600-luvulla kuparilla, ja kansa antoi kolikolle pilkkanimen, joka on kestänyt pidempään kuin kolikon ostovoima.
+- [Arabiemiirikunnat — maalehti / Keidas: Kahvi kaadetaan kupin pohjalle] Arabialainen kahvi eli gahwa paahdetaan vaaleaksi ja maustetaan kardemummalla, joskus myös sahramilla. Se keitetään kupariseen tai teräksiseen kannuun, jota sanotaan dallaksi, ja kaadetaan pieniin korvattomiin kuppeihin vain pohjalle asti — jotta kuppi pysyy kädessä kuumana vain hetken ja jotta tarjoaja voi kaataa lisää. Vieras juo tavallisesti yhdestä kolmeen kuppia ja heiluttaa sitten kuppia kädessään, mikä tarkoittaa kiitos, riittää. Unesco lisäsi tavan aineettoman kulttuuriperinnön luetteloon vuonna 2015.
+AIEMPI KYSYMYS: Voiko maanmuodon säilyttää istuttamalla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tähän on ihan oikea esimerkki. Kyllä voi, ainakin tiettyyn rajaan asti. Preussin hallitus aloitti [[Kuurinkynnäksellä]] laajat istutukset vuonna 1825, ja noin sadan vuoden työ mäntyineen ja rantakauroineen pysäytti dyynien vaelluksen. Kasvillisuus sitoo hiekan ja pitää muodon paikallaan, mutta suoja vaatii huolenpitoa: jos peite rikkoutuu, tuuli pääsee taas hiekkaan. En ole varma, miten nykyinen ylläpito käytännössä järjestetään, mutta [[Unesco]] otti niemen maailmanperintöluetteloon vuonna 2000. Ihminen kyllä sotkee ja korjaa omaa sotkuaan hitaasti.
+KYSYMYS: Kerro lisää: Unesco
+
+### 386
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Hiekkaniemi, jonka dyynit vaelsivat kylien yli — ja jonka metsä on istutettu käsin
+Tietoruudun teksti: Yhdeksänkymmentäkahdeksan kilometriä pitkä hiekkaniemi erottaa Kuurinlahden Itämerestä. Se on kapeimmillaan neljäsataa metriä ja leveimmillään Nidan pohjoispuolella lähes neljä kilometriä, ja se syntyi noin kolmannella vuosituhannella ennen ajanlaskua jäätikön jättämän moreeniharjanteen päälle, kun tuuli ja virtaukset kasasivat sen päälle hiekkaa. Pohjoinen viidenkymmenenkahden kilometrin osuus on Liettuaa ja loput Venäjää; maailmanperintökohde on molempien yhteinen, ja se otettiin luetteloon vuonna 2000.
+
+Niemen tarina on kuitenkin ihmisen tekemä. Kun metsät hävisivät 1600- ja 1700-luvuilla laidunnuksen, hakkuiden ja veneenrakennuksen takia, tuuli pääsi käsiksi hiekkaan: dyynit lähtivät liikkeelle ja hautasivat alleen kokonaisia kyliä. Preussin hallitus aloitti laajat istutukset vuonna 1825, ja sata vuotta mäntyä ja rantakauraa pysäytti vaelluksen — se metsä, joka niemellä nyt kasvaa, …
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+AIEMPI KYSYMYS: Mikä on Kuurinlahti?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kyyhkynä minä katson tällaisia ylhäältä. Kuurinlahti on matala rannikkolahti Itämeren eteläosassa, ja se on erotettu merestä [[Kuurinkynnäksellä]] eli pitkällä hiekkaniemellä. Lahteen laskee [[Nemunas]]-joki, joten sen vesi on suurelta osin vähäsuolaista. Lahti kuuluu osittain Liettuaan ja osittain Venäjään. En ole varma, kuinka tarkasti sen syvyys ja suolaisuus vaihtelevat vuodenaikojen mukaan, mutta matala se on. Hyvä paikka katsella lintuparvia.
+KYSYMYS: Kerro lisää: Nemunas
+
+### 387
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Hiekkaniemi, jonka dyynit vaelsivat kylien yli — ja jonka metsä on istutettu käsin
+Tietoruudun teksti: Yhdeksänkymmentäkahdeksan kilometriä pitkä hiekkaniemi erottaa Kuurinlahden Itämerestä. Se on kapeimmillaan neljäsataa metriä ja leveimmillään Nidan pohjoispuolella lähes neljä kilometriä, ja se syntyi noin kolmannella vuosituhannella ennen ajanlaskua jäätikön jättämän moreeniharjanteen päälle, kun tuuli ja virtaukset kasasivat sen päälle hiekkaa. Pohjoinen viidenkymmenenkahden kilometrin osuus on Liettuaa ja loput Venäjää; maailmanperintökohde on molempien yhteinen, ja se otettiin luetteloon vuonna 2000.
+
+Niemen tarina on kuitenkin ihmisen tekemä. Kun metsät hävisivät 1600- ja 1700-luvuilla laidunnuksen, hakkuiden ja veneenrakennuksen takia, tuuli pääsi käsiksi hiekkaan: dyynit lähtivät liikkeelle ja hautasivat alleen kokonaisia kyliä. Preussin hallitus aloitti laajat istutukset vuonna 1825, ja sata vuotta mäntyä ja rantakauraa pysäytti vaelluksen — se metsä, joka niemellä nyt kasvaa, …
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Tavat: Kukkula, jolle jokainen tuo ristin] 1961 — Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. Neuvostoaikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka tahansa saa tuoda omansa.
+- [Vilna — kohdekartta / Kohdekartta: Boratynka] 1659–1668 Kun kassa on tyhjä, voi aina lyödä lisää rahaa — kunhan ei kysy, mitä raha sen jälkeen on arvoltaan. Puola-Liettua kokeili tätä 1600-luvulla kuparilla, ja kansa antoi kolikolle pilkkanimen, joka on kestänyt pidempään kuin kolikon ostovoima.
+AIEMPI KYSYMYS: Mikä on Unescon maailmanperintöluettelo?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tästä lukee jokaisen kohteen kyltissä. [[Unescon maailmanperintöluettelo]] on luettelo kohteista, joita pidetään koko ihmiskunnan yhteisenä perintönä ja joita halutaan suojella tuleville sukupolville. Kohde voi olla kulttuurikohde, luontokohde tai molempia. Perustana on Unescon maailmanperintösopimus, joka hyväksyttiin vuonna 1972. [[Kuurinkynnäs]] otettiin luetteloon vuonna 2000, ja kohde on Liettuan ja Venäjän yhteinen. Luetteloon pääsy ei ole kunnia vaan velvoite.
+KYSYMYS: Kerro lisää: Unescon maailmanperintöluettelo
+
+### 388
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Hiekkaniemi, jonka dyynit vaelsivat kylien yli — ja jonka metsä on istutettu käsin
+Tietoruudun teksti: Yhdeksänkymmentäkahdeksan kilometriä pitkä hiekkaniemi erottaa Kuurinlahden Itämerestä. Se on kapeimmillaan neljäsataa metriä ja leveimmillään Nidan pohjoispuolella lähes neljä kilometriä, ja se syntyi noin kolmannella vuosituhannella ennen ajanlaskua jäätikön jättämän moreeniharjanteen päälle, kun tuuli ja virtaukset kasasivat sen päälle hiekkaa. Pohjoinen viidenkymmenenkahden kilometrin osuus on Liettuaa ja loput Venäjää; maailmanperintökohde on molempien yhteinen, ja se otettiin luetteloon vuonna 2000.
+
+Niemen tarina on kuitenkin ihmisen tekemä. Kun metsät hävisivät 1600- ja 1700-luvuilla laidunnuksen, hakkuiden ja veneenrakennuksen takia, tuuli pääsi käsiksi hiekkaan: dyynit lähtivät liikkeelle ja hautasivat alleen kokonaisia kyliä. Preussin hallitus aloitti laajat istutukset vuonna 1825, ja sata vuotta mäntyä ja rantakauraa pysäytti vaelluksen — se metsä, joka niemellä nyt kasvaa, …
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Luonto: Dyyni vaeltaa ja hautaa kylän] 2000 — Kuurinkynnäs on lähes sadan kilometrin pituinen hiekkaniemi, joka erottaa matalan lahden merestä. Kapeimmillaan se on vain muutaman sadan metrin levyinen. Kun niemen metsät hakattiin 1600- ja 1700-luvuilla, tuuli pääsi liikuttamaan hiekkaa: dyynit alkoivat vaeltaa ja hautasivat alleen kokonaisia kyliä. Vaellus pysäytettiin istuttamalla mäntyä ja rantakauraa sata vuotta kestäneellä työllä. Unesco otti niemen maailmanperintöluetteloon vuonna 2000.
+AIEMPI KYSYMYS: Mikä on Unescon maailmanperintöluettelo?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tästä lukee jokaisen kohteen kyltissä. [[Unescon maailmanperintöluettelo]] on luettelo kohteista, joita pidetään koko ihmiskunnan yhteisenä perintönä ja joita halutaan suojella tuleville sukupolville. Kohde voi olla kulttuurikohde, luontokohde tai molempia. Perustana on Unescon maailmanperintösopimus, joka hyväksyttiin vuonna 1972. [[Kuurinkynnäs]] otettiin luetteloon vuonna 2000, ja kohde on Liettuan ja Venäjän yhteinen. Luetteloon pääsy ei ole kunnia vaan velvoite.
+KYSYMYS: Kerro lisää: Kuurinkynnäs
+
+### 389
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kukkula, jolta ristit ajettiin pois kolmesti — ja jolle ne palasivat joka kerta yöllä
+Tietoruudun teksti: Noin kaksitoista kilometriä Šiauliaista pohjoiseen on matala kukkula, joka oli aikanaan linnavuori. Ensimmäisten ristien uskotaan tulleen sinne vuoden 1831 jälkeen: omaiset eivät löytäneet kaatuneitaan eivätkä voineet haudata heitä, joten he pystyttivät kukkulalle symbolisen ristin sen sijaan. Tapa jäi. Kukkulalle on sittemmin tuotu ristien lisäksi Neitsyt Marian patsaita, puuveistoksia ja tuhansia pieniä rukousnauhoja, ja tarkkaa lukua ei ole kenelläkään: arviot ovat noin viisikymmentäviisituhatta ristiä vuonna 1990 ja noin satatuhatta vuonna 2006.
+
+Neuvostoaikana kukkula raivattiin puskutraktoreilla kolme kertaa — pelin oma maalehti nimeää vuodet 1961, 1973 ja 1975, ja kansainväliset lähteet vahvistavat kerrat mutta eivät vuosilukuja. Teitä suljettiin ja kukkulaa vartioitiin. Joka kerta ristit ilmestyivät takaisin öiden aikana, ja siihen lopulta tyydyttiin. Liettualainen ristinveisto …
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Puerto Montt: Risti saaren laella] Kapean, vain muutaman sadan metrin levyisen salmen takana kohoaa Isla Tenglo, pieni saari jonka harjanteella seisoo valkoinen risti - kaupungin tunnetuimpia maamerkkejä, joka näkyy laajalle Reloncavín selälle. Saarella asuu enää harvoja kalastajaperheitä, sillä maaperä on niukkaa eikä sähköverkko yllä joka taloon. Vene kuljettaa matkan minuutissa, ja saarelaiset tunnetaan erityisesti curanto-perinteestään: samaa ruokaa kuin Angelmón torillakin, mutta täällä valmistettuna vanhalla tavalla kuumennettujen kivien päällä maakuopassa. Rannalla siintävät kaupungin kerrostalot muistuttavat, miten lähellä saari todellisuudessa on.
+- [Lalibela — kaupunkilehti / Kivi ja kuva: Risti, joka kävi Belgiassa] Lalibelan risti on suuri koristeltu kulkueristi ja yksi Etiopian arvokkaimmista perintöesineistä. Sitä säilytetään Biete Medhane Alemissa. Risti on arviolta 1100-luvulta, noin kuusikymmentä senttiä pitkä ja seitsemän kilon painoinen, ja se on tehty yhdestä metallikappaleesta — joko kullasta tai pronssista ja kullasta. Alaosaa kannattavat Aadamin kädet, aihe joka toistuu etiopialaisissa kulkueristeissä; juhlapäivinä ne verhotaan kirkkaanvärisin kankain. Pappi voi hangata uskovia rististillä siunatakseen heidät.
+- [Unkari — maalehti / Historia: Kruunu, jonka risti on vinossa] 1000 — Unkarin pyhä kruunu on kahdesta osasta: alempi vanne on tehty Bysantissa ja ylempi kaariosa lännessä, ja ne on liitetty yhteen. Kruunua kiertää rivi emalikuvia pyhimyksistä, ja reunasta riippuu ketjuja. Huipulla oleva risti on kallellaan, ja arvellaan että se vääntyi, kun kruunua tungettiin liian pieneen arkkuun. Sitä ei ole suoristettu. Kruunulla oli erikoinen asema: kuningasta ei pidetty oikeana kuninkaana, ellei häntä kruunattu juuri tällä esineellä.
+AIEMPI KYSYMYS: Miksi kukkulalle vietiin ristejä eikä hautakiviä?
+AIEMPI VASTAUS (Livia):
+Kääk, tämä on raskaampi aihe. Katsotaan, mitä siitä voi rauhassa sanoa. Ensimmäisten ristien uskotaan tulleen kukkulalle 1800-luvun kapinoiden jälkeen, vuoden 1831 tienoilla. Omaiset eivät löytäneet kaatuneitaan eivätkä voineet haudata heitä, joten he pystyttivät kukkulalle ristin hautakiven sijaan. Risti oli symbolinen muistomerkki sille, jolle ei ollut hautaa. Tapa jäi elämään, ja [[Ristikukkulalle]] on sittemmin tuotu myös [[Neitsyt Marian]] patsaita, puuveistoksia ja rukousnauhoja. Siitä on onneksi jo yli sata vuotta.
+KYSYMYS: Kerro lisää: Ristikukkulalle
+
+### 390
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kukkula, jolta ristit ajettiin pois kolmesti — ja jolle ne palasivat joka kerta yöllä
+Tietoruudun teksti: Noin kaksitoista kilometriä Šiauliaista pohjoiseen on matala kukkula, joka oli aikanaan linnavuori. Ensimmäisten ristien uskotaan tulleen sinne vuoden 1831 jälkeen: omaiset eivät löytäneet kaatuneitaan eivätkä voineet haudata heitä, joten he pystyttivät kukkulalle symbolisen ristin sen sijaan. Tapa jäi. Kukkulalle on sittemmin tuotu ristien lisäksi Neitsyt Marian patsaita, puuveistoksia ja tuhansia pieniä rukousnauhoja, ja tarkkaa lukua ei ole kenelläkään: arviot ovat noin viisikymmentäviisituhatta ristiä vuonna 1990 ja noin satatuhatta vuonna 2006.
+
+Neuvostoaikana kukkula raivattiin puskutraktoreilla kolme kertaa — pelin oma maalehti nimeää vuodet 1961, 1973 ja 1975, ja kansainväliset lähteet vahvistavat kerrat mutta eivät vuosilukuja. Teitä suljettiin ja kukkulaa vartioitiin. Joka kerta ristit ilmestyivät takaisin öiden aikana, ja siihen lopulta tyydyttiin. Liettualainen ristinveisto …
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kohdekartta / Kohdekartta: Aamuportti] 1503–1514 Aamuportti on ainoa säilynyt niistä yhdeksästä portista, jotka kerran kuuluivat Vilnan vanhaan kaupunginmuuriin. Se rakennettiin vuosina 1503–1514 puolustamaan kaupunkia, ja portin ulkoseinässä näkyy vieläkin vanhoja ampuma-aukkoja. Kun kaupunginmuuri purettiin vuosina 1799–1805, Aamuportti jätettiin pystyyn ainoana, koska sen sisällä olevaa Neitsyt Marian ihmekuvaa pidettiin niin pyhänä. Vuonna 1702 ruotsalaissotilaan luoti osui taistelun aikana suoraan kuvaan – kaupunkia puolustaneet pitivät tapahtumaa ihmeenä, sillä taistelu päättyi ilman suuria tappioita. Kuva on kiehtonut myös maailman mahtimiehiä: paavi Johannes Paavali II rukoili kappelissa vuonna 1993 ja paavi Franciscus v…
+- [Port Moresby — kohdekartta / Kohdekartta: Pyhän Marian katedraali] 1889 alkaen Pyhän Marian katedraali on Port Moresbyn arkkihiippakunnan pääkirkko ja omistettu Neitsyt Marialle. Ulkoseinät ovat vaaleansiniset, ja pääsisäänkäynnin toisella puolen kohoaa valkoinen torni. Hiippakunta on kirkkoa vanhempi, ja sen nimi on vaihtunut kolmesti. Se perustettiin 10. toukokuuta 1889 Uuden-Guinean apostoliseksi vikariaatiksi, sai 1922 nimen Papuan vikariaatti ja 1946 Port Moresbyn vikariaatti; arkkihiippakunnaksi se korotettiin 15. marraskuuta 1966. Vuonna 2023 alueella oli 22 seurakuntaa ja noin 233 000 katolista eli 29 prosenttia väestöstä. Paavi Johannes Paavali II vieraili katedraalissa toukokuussa 1984 ja palasi hiippakuntaan tammikuussa 1995. Paavi Franciscus vi…
+AIEMPI KYSYMYS: Miksi kukkulalle vietiin ristejä eikä hautakiviä?
+AIEMPI VASTAUS (Livia):
+Kääk, tämä on raskaampi aihe. Katsotaan, mitä siitä voi rauhassa sanoa. Ensimmäisten ristien uskotaan tulleen kukkulalle 1800-luvun kapinoiden jälkeen, vuoden 1831 tienoilla. Omaiset eivät löytäneet kaatuneitaan eivätkä voineet haudata heitä, joten he pystyttivät kukkulalle ristin hautakiven sijaan. Risti oli symbolinen muistomerkki sille, jolle ei ollut hautaa. Tapa jäi elämään, ja [[Ristikukkulalle]] on sittemmin tuotu myös [[Neitsyt Marian]] patsaita, puuveistoksia ja rukousnauhoja. Siitä on onneksi jo yli sata vuotta.
+KYSYMYS: Kerro lisää: Neitsyt Marian
+
+### 391
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kukkula, jolta ristit ajettiin pois kolmesti — ja jolle ne palasivat joka kerta yöllä
+Tietoruudun teksti: Noin kaksitoista kilometriä Šiauliaista pohjoiseen on matala kukkula, joka oli aikanaan linnavuori. Ensimmäisten ristien uskotaan tulleen sinne vuoden 1831 jälkeen: omaiset eivät löytäneet kaatuneitaan eivätkä voineet haudata heitä, joten he pystyttivät kukkulalle symbolisen ristin sen sijaan. Tapa jäi. Kukkulalle on sittemmin tuotu ristien lisäksi Neitsyt Marian patsaita, puuveistoksia ja tuhansia pieniä rukousnauhoja, ja tarkkaa lukua ei ole kenelläkään: arviot ovat noin viisikymmentäviisituhatta ristiä vuonna 1990 ja noin satatuhatta vuonna 2006.
+
+Neuvostoaikana kukkula raivattiin puskutraktoreilla kolme kertaa — pelin oma maalehti nimeää vuodet 1961, 1973 ja 1975, ja kansainväliset lähteet vahvistavat kerrat mutta eivät vuosilukuja. Teitä suljettiin ja kukkulaa vartioitiin. Joka kerta ristit ilmestyivät takaisin öiden aikana, ja siihen lopulta tyydyttiin. Liettualainen ristinveisto …
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Puerto Montt: Risti saaren laella] Kapean, vain muutaman sadan metrin levyisen salmen takana kohoaa Isla Tenglo, pieni saari jonka harjanteella seisoo valkoinen risti - kaupungin tunnetuimpia maamerkkejä, joka näkyy laajalle Reloncavín selälle. Saarella asuu enää harvoja kalastajaperheitä, sillä maaperä on niukkaa eikä sähköverkko yllä joka taloon. Vene kuljettaa matkan minuutissa, ja saarelaiset tunnetaan erityisesti curanto-perinteestään: samaa ruokaa kuin Angelmón torillakin, mutta täällä valmistettuna vanhalla tavalla kuumennettujen kivien päällä maakuopassa. Rannalla siintävät kaupungin kerrostalot muistuttavat, miten lähellä saari todellisuudessa on.
+- [Lalibela — kaupunkilehti / Kivi ja kuva: Risti, joka kävi Belgiassa] Lalibelan risti on suuri koristeltu kulkueristi ja yksi Etiopian arvokkaimmista perintöesineistä. Sitä säilytetään Biete Medhane Alemissa. Risti on arviolta 1100-luvulta, noin kuusikymmentä senttiä pitkä ja seitsemän kilon painoinen, ja se on tehty yhdestä metallikappaleesta — joko kullasta tai pronssista ja kullasta. Alaosaa kannattavat Aadamin kädet, aihe joka toistuu etiopialaisissa kulkueristeissä; juhlapäivinä ne verhotaan kirkkaanvärisin kankain. Pappi voi hangata uskovia rististillä siunatakseen heidät.
+- [Unkari — maalehti / Historia: Kruunu, jonka risti on vinossa] 1000 — Unkarin pyhä kruunu on kahdesta osasta: alempi vanne on tehty Bysantissa ja ylempi kaariosa lännessä, ja ne on liitetty yhteen. Kruunua kiertää rivi emalikuvia pyhimyksistä, ja reunasta riippuu ketjuja. Huipulla oleva risti on kallellaan, ja arvellaan että se vääntyi, kun kruunua tungettiin liian pieneen arkkuun. Sitä ei ole suoristettu. Kruunulla oli erikoinen asema: kuningasta ei pidetty oikeana kuninkaana, ellei häntä kruunattu juuri tällä esineellä.
+AIEMPI KYSYMYS: Miten muistomerkki voi kasvaa ilman ketään, joka rakentaa sitä?
+AIEMPI VASTAUS (Livia):
+No niin, hyvä kysymys. Vastaus on ihmisissä, ei suunnitelmassa. [[Ristikukkulalla]] ei ole yhtä rakentajaa: kuka tahansa saa tuoda oman ristinsä, ja jokainen risti on yhden ihmisen tai perheen päätös. Kun tapa on kerran syntynyt, se kasvaa vierailijoiden mukana, ja ristejä on sekä isoja puisia että pieniä metallisia. [[Neuvostoaikana]] viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa, ja ristit ilmestyivät yön aikana takaisin. Muistomerkki on siis yhteinen teos, jota kukaan ei ole tilannut. Hiljainen paikka, jossa kukaan ei vaadi mitään.
+KYSYMYS: Kerro lisää: Ristikukkulalla
+
+### 392
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kukkula, jolta ristit ajettiin pois kolmesti — ja jolle ne palasivat joka kerta yöllä
+Tietoruudun teksti: Noin kaksitoista kilometriä Šiauliaista pohjoiseen on matala kukkula, joka oli aikanaan linnavuori. Ensimmäisten ristien uskotaan tulleen sinne vuoden 1831 jälkeen: omaiset eivät löytäneet kaatuneitaan eivätkä voineet haudata heitä, joten he pystyttivät kukkulalle symbolisen ristin sen sijaan. Tapa jäi. Kukkulalle on sittemmin tuotu ristien lisäksi Neitsyt Marian patsaita, puuveistoksia ja tuhansia pieniä rukousnauhoja, ja tarkkaa lukua ei ole kenelläkään: arviot ovat noin viisikymmentäviisituhatta ristiä vuonna 1990 ja noin satatuhatta vuonna 2006.
+
+Neuvostoaikana kukkula raivattiin puskutraktoreilla kolme kertaa — pelin oma maalehti nimeää vuodet 1961, 1973 ja 1975, ja kansainväliset lähteet vahvistavat kerrat mutta eivät vuosilukuja. Teitä suljettiin ja kukkulaa vartioitiin. Joka kerta ristit ilmestyivät takaisin öiden aikana, ja siihen lopulta tyydyttiin. Liettualainen ristinveisto …
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Tavat: Kukkula, jolle jokainen tuo ristin] 1961 — Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. Neuvostoaikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka tahansa saa tuoda omansa.
+AIEMPI KYSYMYS: Miten muistomerkki voi kasvaa ilman ketään, joka rakentaa sitä?
+AIEMPI VASTAUS (Livia):
+No niin, hyvä kysymys. Vastaus on ihmisissä, ei suunnitelmassa. [[Ristikukkulalla]] ei ole yhtä rakentajaa: kuka tahansa saa tuoda oman ristinsä, ja jokainen risti on yhden ihmisen tai perheen päätös. Kun tapa on kerran syntynyt, se kasvaa vierailijoiden mukana, ja ristejä on sekä isoja puisia että pieniä metallisia. [[Neuvostoaikana]] viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa, ja ristit ilmestyivät yön aikana takaisin. Muistomerkki on siis yhteinen teos, jota kukaan ei ole tilannut. Hiljainen paikka, jossa kukaan ei vaadi mitään.
+KYSYMYS: Kerro lisää: Neuvostoaikana
+
+### 393
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kukkula, jolta ristit ajettiin pois kolmesti — ja jolle ne palasivat joka kerta yöllä
+Tietoruudun teksti: Noin kaksitoista kilometriä Šiauliaista pohjoiseen on matala kukkula, joka oli aikanaan linnavuori. Ensimmäisten ristien uskotaan tulleen sinne vuoden 1831 jälkeen: omaiset eivät löytäneet kaatuneitaan eivätkä voineet haudata heitä, joten he pystyttivät kukkulalle symbolisen ristin sen sijaan. Tapa jäi. Kukkulalle on sittemmin tuotu ristien lisäksi Neitsyt Marian patsaita, puuveistoksia ja tuhansia pieniä rukousnauhoja, ja tarkkaa lukua ei ole kenelläkään: arviot ovat noin viisikymmentäviisituhatta ristiä vuonna 1990 ja noin satatuhatta vuonna 2006.
+
+Neuvostoaikana kukkula raivattiin puskutraktoreilla kolme kertaa — pelin oma maalehti nimeää vuodet 1961, 1973 ja 1975, ja kansainväliset lähteet vahvistavat kerrat mutta eivät vuosilukuja. Teitä suljettiin ja kukkulaa vartioitiin. Joka kerta ristit ilmestyivät takaisin öiden aikana, ja siihen lopulta tyydyttiin. Liettualainen ristinveisto …
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Tavat: Kukkula, jolle jokainen tuo ristin] 1961 — Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. Neuvostoaikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka tahansa saa tuoda omansa.
+AIEMPI KYSYMYS: Kuinka monta ristiä kukkulalle mahtuu?
+AIEMPI VASTAUS (Livia):
+Mmm— tähän ei ole varmaa lukua. Rehellisesti sanoen en tiedä. [[Šiauliain]] lähellä sijaitsevalla [[Ristikukkulalla]] ei ole virallista rajaa, ja ristit lisääntyvät jatkuvasti, joten raja tulee vastaan vain käytännössä: tilan ahtautuessa. Tarkkaa laskentaa ei ole, vaan pelkkiä arvioita: noin viisikymmentäviisituhatta ristiä vuonna 1990 ja noin satatuhatta vuonna 2006. Nykyisin ristejä on kuitenkin selvästi enemmän kuin sata tuhatta. Tarkka lukema ei kerro paikasta paljon; ratkaisevaa on, että jokainen risti on jonkun tuoma.
+KYSYMYS: Kerro lisää: Šiauliain
+
+### 394
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kukkula, jolta ristit ajettiin pois kolmesti — ja jolle ne palasivat joka kerta yöllä
+Tietoruudun teksti: Noin kaksitoista kilometriä Šiauliaista pohjoiseen on matala kukkula, joka oli aikanaan linnavuori. Ensimmäisten ristien uskotaan tulleen sinne vuoden 1831 jälkeen: omaiset eivät löytäneet kaatuneitaan eivätkä voineet haudata heitä, joten he pystyttivät kukkulalle symbolisen ristin sen sijaan. Tapa jäi. Kukkulalle on sittemmin tuotu ristien lisäksi Neitsyt Marian patsaita, puuveistoksia ja tuhansia pieniä rukousnauhoja, ja tarkkaa lukua ei ole kenelläkään: arviot ovat noin viisikymmentäviisituhatta ristiä vuonna 1990 ja noin satatuhatta vuonna 2006.
+
+Neuvostoaikana kukkula raivattiin puskutraktoreilla kolme kertaa — pelin oma maalehti nimeää vuodet 1961, 1973 ja 1975, ja kansainväliset lähteet vahvistavat kerrat mutta eivät vuosilukuja. Teitä suljettiin ja kukkulaa vartioitiin. Joka kerta ristit ilmestyivät takaisin öiden aikana, ja siihen lopulta tyydyttiin. Liettualainen ristinveisto …
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Magadan — kohdekartta / Kohdekartta: Nagajevanlahti] Jeannette Harbour 1852–1869 Nagajevanlahti on Tauinlahden osa Ohotanmeren pohjoisosassa. Se on 14,5 kilometriä pitkä ja suultaan 6,4 kilometriä leveä, ja sitä on kutsuttu koko Ohotanmeren parhaaksi ankkuripaikaksi. Jäätä lahdella on marraskuun lopulta kesäkuun puoliväliin. Kaupunki ja sen satama ovat lahden perukassa Staritskin niemimaan kannaksella. Lahdella on kaksi nimeä ja kaksi tarinaa. Virallinen nimi tulee amiraali Aleksei Nagajevilta (1704–1781), joka oli hydrografi ja kartantekijä ja jonka Beringinmeren ja Itämeren kartastot ilmestyivät vuonna 1752; niitä käytettiin vielä viisikymmentä vuotta myöhemmin, vaikka niissä ei ollut astekoordinaatistoa lainkaan. Toinen nimi on amerikkalai…
+- [Tallinna — kohdekartta / Kohdekartta: Raatihuoneentori] 1402–1404 Tallinnan raatihuone on koko Itämeren alueen ja Pohjoismaiden vanhin säilynyt raatihuone. Se rakennettiin vain parissa vuodessa, vuosina 1402-1404, keskiaikaisen torin laidalle. Hansakaupunkina Tallinnan kaupunginhallitus piti täällä kokouksiaan ja päätti niin kaupan, oikeuden kuin arjenkin asioista. Rakennuksen 36,8 metriä pitkässä salissa on nähtävissä yli 500 vuotta vanhoja seinävaatteita, jotka kuvaavat kuningas Salomonin elämää. Raatihuoneen 64 metriä korkeaan torniin johtaa peräti 115 porrasaskelmaa. Huipulla pyörii Vana Toomas, eli "Vanha Toomas" - kaupunginvartijaa esittävä tuuliviiri, joka on ollut Tallinnan tunnuskuva vuodesta 1530 lähtien. Alkuperäinen tuuliviiri on nyk…
+AIEMPI KYSYMYS: Mitä tarkoittaa linnavuori?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tätä sanaa tarvitaan [[Itämeren]] maissa usein. Linnavuori on kukkula tai vuoren kumpu, joka on aikoinaan linnoitettu puolustusta varten, usein puuvarustuksin ja vallein. Liettuassa tällaisia muinaisia kukkulalinnoja on paljon, ja ne ovat peräisin ajalta ennen kivilinnoja. [[Ristikukkula]] oli aikanaan linnavuori, ennen kuin siitä tuli muistamisen paikka. Ymmärrät sen paremmin, kun näet kukkulan itse. Kyyhky ei kaipaa muuria, kun on siivet.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 395
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kukkula, jolta ristit ajettiin pois kolmesti — ja jolle ne palasivat joka kerta yöllä
+Tietoruudun teksti: Noin kaksitoista kilometriä Šiauliaista pohjoiseen on matala kukkula, joka oli aikanaan linnavuori. Ensimmäisten ristien uskotaan tulleen sinne vuoden 1831 jälkeen: omaiset eivät löytäneet kaatuneitaan eivätkä voineet haudata heitä, joten he pystyttivät kukkulalle symbolisen ristin sen sijaan. Tapa jäi. Kukkulalle on sittemmin tuotu ristien lisäksi Neitsyt Marian patsaita, puuveistoksia ja tuhansia pieniä rukousnauhoja, ja tarkkaa lukua ei ole kenelläkään: arviot ovat noin viisikymmentäviisituhatta ristiä vuonna 1990 ja noin satatuhatta vuonna 2006.
+
+Neuvostoaikana kukkula raivattiin puskutraktoreilla kolme kertaa — pelin oma maalehti nimeää vuodet 1961, 1973 ja 1975, ja kansainväliset lähteet vahvistavat kerrat mutta eivät vuosilukuja. Teitä suljettiin ja kukkulaa vartioitiin. Joka kerta ristit ilmestyivät takaisin öiden aikana, ja siihen lopulta tyydyttiin. Liettualainen ristinveisto …
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Puerto Montt: Risti saaren laella] Kapean, vain muutaman sadan metrin levyisen salmen takana kohoaa Isla Tenglo, pieni saari jonka harjanteella seisoo valkoinen risti - kaupungin tunnetuimpia maamerkkejä, joka näkyy laajalle Reloncavín selälle. Saarella asuu enää harvoja kalastajaperheitä, sillä maaperä on niukkaa eikä sähköverkko yllä joka taloon. Vene kuljettaa matkan minuutissa, ja saarelaiset tunnetaan erityisesti curanto-perinteestään: samaa ruokaa kuin Angelmón torillakin, mutta täällä valmistettuna vanhalla tavalla kuumennettujen kivien päällä maakuopassa. Rannalla siintävät kaupungin kerrostalot muistuttavat, miten lähellä saari todellisuudessa on.
+- [Lalibela — kaupunkilehti / Kivi ja kuva: Risti, joka kävi Belgiassa] Lalibelan risti on suuri koristeltu kulkueristi ja yksi Etiopian arvokkaimmista perintöesineistä. Sitä säilytetään Biete Medhane Alemissa. Risti on arviolta 1100-luvulta, noin kuusikymmentä senttiä pitkä ja seitsemän kilon painoinen, ja se on tehty yhdestä metallikappaleesta — joko kullasta tai pronssista ja kullasta. Alaosaa kannattavat Aadamin kädet, aihe joka toistuu etiopialaisissa kulkueristeissä; juhlapäivinä ne verhotaan kirkkaanvärisin kankain. Pappi voi hangata uskovia rististillä siunatakseen heidät.
+- [Unkari — maalehti / Historia: Kruunu, jonka risti on vinossa] 1000 — Unkarin pyhä kruunu on kahdesta osasta: alempi vanne on tehty Bysantissa ja ylempi kaariosa lännessä, ja ne on liitetty yhteen. Kruunua kiertää rivi emalikuvia pyhimyksistä, ja reunasta riippuu ketjuja. Huipulla oleva risti on kallellaan, ja arvellaan että se vääntyi, kun kruunua tungettiin liian pieneen arkkuun. Sitä ei ole suoristettu. Kruunulla oli erikoinen asema: kuningasta ei pidetty oikeana kuninkaana, ellei häntä kruunattu juuri tällä esineellä.
+AIEMPI KYSYMYS: Mitä tarkoittaa linnavuori?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tätä sanaa tarvitaan [[Itämeren]] maissa usein. Linnavuori on kukkula tai vuoren kumpu, joka on aikoinaan linnoitettu puolustusta varten, usein puuvarustuksin ja vallein. Liettuassa tällaisia muinaisia kukkulalinnoja on paljon, ja ne ovat peräisin ajalta ennen kivilinnoja. [[Ristikukkula]] oli aikanaan linnavuori, ennen kuin siitä tuli muistamisen paikka. Ymmärrät sen paremmin, kun näet kukkulan itse. Kyyhky ei kaipaa muuria, kun on siivet.
+KYSYMYS: Kerro lisää: Ristikukkula
+
+### 396
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kukkula, jolta ristit ajettiin pois kolmesti — ja jolle ne palasivat joka kerta yöllä
+Tietoruudun teksti: Noin kaksitoista kilometriä Šiauliaista pohjoiseen on matala kukkula, joka oli aikanaan linnavuori. Ensimmäisten ristien uskotaan tulleen sinne vuoden 1831 jälkeen: omaiset eivät löytäneet kaatuneitaan eivätkä voineet haudata heitä, joten he pystyttivät kukkulalle symbolisen ristin sen sijaan. Tapa jäi. Kukkulalle on sittemmin tuotu ristien lisäksi Neitsyt Marian patsaita, puuveistoksia ja tuhansia pieniä rukousnauhoja, ja tarkkaa lukua ei ole kenelläkään: arviot ovat noin viisikymmentäviisituhatta ristiä vuonna 1990 ja noin satatuhatta vuonna 2006.
+
+Neuvostoaikana kukkula raivattiin puskutraktoreilla kolme kertaa — pelin oma maalehti nimeää vuodet 1961, 1973 ja 1975, ja kansainväliset lähteet vahvistavat kerrat mutta eivät vuosilukuja. Teitä suljettiin ja kukkulaa vartioitiin. Joka kerta ristit ilmestyivät takaisin öiden aikana, ja siihen lopulta tyydyttiin. Liettualainen ristinveisto …
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Neuvosto äänesti maan kohtalosta] 27.3.1918 — Maaliskuun 27. päivänä 1918 Sfatul Tării, Bessarabian kansanvaltainen neuvosto, kokoontui entisen poikien lyseon juhlasaliin Chișinăussa äänestämään maansa kohtalosta. 86 edustajaa äänesti liittymisen puolesta, 3 vastaan ja 36 pidättäytyi. Puheenjohtaja Ion Inculeț ja neuvosto liittivät Bessarabian Romaniaan sillä ehdolla, että maareformi ja alueellinen itsehallinto säilyisivät. Ehdot pyyhittiin pois vasta saman vuoden marraskuun lopulla, kun neuvosto äänesti Bucureștissa uudelleen ja julisti liittymisen ehdottomaksi. Rakennus tunnetaan nykyään Sfatul Tării -palatsina.
+AIEMPI KYSYMYS: Milloin Liettua julistautui itsenäiseksi Neuvostoliitosta?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tämä on sellainen, jonka haluan sanoa oikein. Liettua julisti itsenäisyytensä uudelleen 11. maaliskuuta 1990, ja se oli ensimmäinen [[Neuvostoliiton]] tasavalloista, joka teki niin. Itsenäisyyden kansainvälinen tunnustaminen ja Neuvostoliiton hajoaminen seurasivat vuonna 1991. Liettua oli ollut itsenäinen jo ennen [[toista maailmansotaa]], joten kyse oli palautuksesta eikä aivan uudesta alusta. [[Vilnassa]] päivä on yhä merkittävä muistopäivä. Onpa siitä jo aikaa, mutta muistetaan.
+KYSYMYS: Kerro lisää: Neuvostoliiton
+
+### 397
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kukkula, jolta ristit ajettiin pois kolmesti — ja jolle ne palasivat joka kerta yöllä
+Tietoruudun teksti: Noin kaksitoista kilometriä Šiauliaista pohjoiseen on matala kukkula, joka oli aikanaan linnavuori. Ensimmäisten ristien uskotaan tulleen sinne vuoden 1831 jälkeen: omaiset eivät löytäneet kaatuneitaan eivätkä voineet haudata heitä, joten he pystyttivät kukkulalle symbolisen ristin sen sijaan. Tapa jäi. Kukkulalle on sittemmin tuotu ristien lisäksi Neitsyt Marian patsaita, puuveistoksia ja tuhansia pieniä rukousnauhoja, ja tarkkaa lukua ei ole kenelläkään: arviot ovat noin viisikymmentäviisituhatta ristiä vuonna 1990 ja noin satatuhatta vuonna 2006.
+
+Neuvostoaikana kukkula raivattiin puskutraktoreilla kolme kertaa — pelin oma maalehti nimeää vuodet 1961, 1973 ja 1975, ja kansainväliset lähteet vahvistavat kerrat mutta eivät vuosilukuja. Teitä suljettiin ja kukkulaa vartioitiin. Joka kerta ristit ilmestyivät takaisin öiden aikana, ja siihen lopulta tyydyttiin. Liettualainen ristinveisto …
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kaupunkilehti / Uskonto: Museo, joka kantaa hänen nimeään] Ennen toista maailmansotaa Vilnassa oli yli sata synagogaa ja kukoistava juutalainen yhteisö, jota kutsuttiin Liettuan Jerusalemiksi. Suuri synagoga, yhteisön sydän, tuhoutui sodassa ja purettiin lopullisesti neuvostoaikana. Nykyinen Vilnan Gaonin juutalainen valtionmuseo, nimetty samaisen oppineen mukaan, on Liettuan juutalaisen yhteisön nykyinen koti ja vaalii sitä historiaa, jonka rakennukset eivät enää voi kertoa.
+- [Vilna — kaupunkilehti / Uskonto: Viimeinen suurista synagogista] Ennen toista maailmansotaa Vilnassa oli yli sata synagogaa, ja kaupunkia kutsuttiin juutalaisen oppineisuuden keskuksena Liettuan Jerusalemiksi. Kuorosynagoga, rakennettu 1903, on ainoa niistä, joka selvisi sodasta ja neuvostoajasta ehjänä — se on yhä toimiva synagoga tänä päivänä. Suuri synagoga, kaupungin pääsynagoga, tuhoutui sodassa ja purettiin lopullisesti neuvostoaikana.
+- [Isfahan — kaupunkilehti / Isfahan: Kun toista tornia keinuttaa, toinenkin liikkuu] Monar Jonban tarkoittaa heiluvia minareetteja. Rakennus on hautarakennus askeetti Amu Abdullah Suqlan haudan päällä, ja hautaholvi tehtiin vuonna 1316 ilkhanidihallitsija Öljaitün käskystä. Minareetteja ei alun perin ollut lainkaan: safavidit lisäsivät ne, ja työn vei loppuun oppinut Baha al-Din al-Amili. Kumpikin minareetti on 17,5 metriä korkea ja päättyy siniseen sipulikupoliin. Nimi tulee siitä, että kun toista minareettia keinutetaan, myös toinen alkaa liikkua samaan tahtiin. Ylös vievät portaat, mutta niitä käyttää nykyään vain talon hoitaja, joka käy keinuttamassa minareetteja. Kohde merkittiin suojeltujen luetteloon 10. kesäkuuta 1942.
+AIEMPI KYSYMYS: Milloin Liettua julistautui itsenäiseksi Neuvostoliitosta?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tämä on sellainen, jonka haluan sanoa oikein. Liettua julisti itsenäisyytensä uudelleen 11. maaliskuuta 1990, ja se oli ensimmäinen [[Neuvostoliiton]] tasavalloista, joka teki niin. Itsenäisyyden kansainvälinen tunnustaminen ja Neuvostoliiton hajoaminen seurasivat vuonna 1991. Liettua oli ollut itsenäinen jo ennen [[toista maailmansotaa]], joten kyse oli palautuksesta eikä aivan uudesta alusta. [[Vilnassa]] päivä on yhä merkittävä muistopäivä. Onpa siitä jo aikaa, mutta muistetaan.
+KYSYMYS: Kerro lisää: toista maailmansotaa
+
+### 398
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kukkula, jolta ristit ajettiin pois kolmesti — ja jolle ne palasivat joka kerta yöllä
+Tietoruudun teksti: Noin kaksitoista kilometriä Šiauliaista pohjoiseen on matala kukkula, joka oli aikanaan linnavuori. Ensimmäisten ristien uskotaan tulleen sinne vuoden 1831 jälkeen: omaiset eivät löytäneet kaatuneitaan eivätkä voineet haudata heitä, joten he pystyttivät kukkulalle symbolisen ristin sen sijaan. Tapa jäi. Kukkulalle on sittemmin tuotu ristien lisäksi Neitsyt Marian patsaita, puuveistoksia ja tuhansia pieniä rukousnauhoja, ja tarkkaa lukua ei ole kenelläkään: arviot ovat noin viisikymmentäviisituhatta ristiä vuonna 1990 ja noin satatuhatta vuonna 2006.
+
+Neuvostoaikana kukkula raivattiin puskutraktoreilla kolme kertaa — pelin oma maalehti nimeää vuodet 1961, 1973 ja 1975, ja kansainväliset lähteet vahvistavat kerrat mutta eivät vuosilukuja. Teitä suljettiin ja kukkulaa vartioitiin. Joka kerta ristit ilmestyivät takaisin öiden aikana, ja siihen lopulta tyydyttiin. Liettualainen ristinveisto …
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kaupunkilehti / Uskonto: Museo, joka kantaa hänen nimeään] Ennen toista maailmansotaa Vilnassa oli yli sata synagogaa ja kukoistava juutalainen yhteisö, jota kutsuttiin Liettuan Jerusalemiksi. Suuri synagoga, yhteisön sydän, tuhoutui sodassa ja purettiin lopullisesti neuvostoaikana. Nykyinen Vilnan Gaonin juutalainen valtionmuseo, nimetty samaisen oppineen mukaan, on Liettuan juutalaisen yhteisön nykyinen koti ja vaalii sitä historiaa, jonka rakennukset eivät enää voi kertoa.
+- [Vilna — kaupunkilehti / Uskonto: Viimeinen suurista synagogista] Ennen toista maailmansotaa Vilnassa oli yli sata synagogaa, ja kaupunkia kutsuttiin juutalaisen oppineisuuden keskuksena Liettuan Jerusalemiksi. Kuorosynagoga, rakennettu 1903, on ainoa niistä, joka selvisi sodasta ja neuvostoajasta ehjänä — se on yhä toimiva synagoga tänä päivänä. Suuri synagoga, kaupungin pääsynagoga, tuhoutui sodassa ja purettiin lopullisesti neuvostoaikana.
+- [Vilna — kohdekartta / Kohdekartta: Salattu avioliitto] 1547–1551 Kuningas voi julistaa sotia ja säätää lakeja, mutta salaa solmittu avioliitto osoittautui vaikeimmaksi asiaksi puolustaa. Sigismund August valitsi Barboran ja piti valintansa — vaikka koko valtakunta, oma äiti etunenässä, oli toista mieltä. Myrkkyhuhut elävät Vilnassa yhä.
+- [Vilna — kaupunkilehti / Oppi] Vilnassa on opiskeltu ja tutkittu satoja vuosia, kaupungin vanhimmasta yliopistosta sen omaan tähtitorniin.
+AIEMPI KYSYMYS: Milloin Liettua julistautui itsenäiseksi Neuvostoliitosta?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tämä on sellainen, jonka haluan sanoa oikein. Liettua julisti itsenäisyytensä uudelleen 11. maaliskuuta 1990, ja se oli ensimmäinen [[Neuvostoliiton]] tasavalloista, joka teki niin. Itsenäisyyden kansainvälinen tunnustaminen ja Neuvostoliiton hajoaminen seurasivat vuonna 1991. Liettua oli ollut itsenäinen jo ennen [[toista maailmansotaa]], joten kyse oli palautuksesta eikä aivan uudesta alusta. [[Vilnassa]] päivä on yhä merkittävä muistopäivä. Onpa siitä jo aikaa, mutta muistetaan.
+KYSYMYS: Kerro lisää: Vilnassa
+
+### 399
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Saarilinna punaisesta tiilestä — raunio, joka koottiin takaisin viisisataa vuotta myöhemmin
+Tietoruudun teksti: Runsaan kahdenkymmenen kilometrin päässä Vilnasta on järvi, jonka saarella seisoo linna. Kivilinnan rakentaminen alkoi 1300-luvulla suuriruhtinas Kęstutisin käskystä, ja hän siirsi saarelle sekä asuinpaikkansa että aarrekammionsa — järvi oli muuri, jota ei tarvinnut muurata. Merkittävin rakennusvaihe päättyi 1409 hänen poikansa Vytautas Suuren aikana, ja siitä linna sai nykyisen hahmonsa: kuusikerroksisen, kolmenkymmenenviiden metrin korkuisen päätornin ja ruhtinaan salin, joka oli noin kymmenen metriä leveä ja kaksikymmentäyksi pitkä. Vytautas kuoli tässä linnassa vuonna 1430. Rakennusaine oli punainen goottilainen tiili, katolla oli lasitettuja tiiliä ja ikkunoissa lasimaalauksia, ja muurit paksuunnettiin myöhemmin kahteen ja puoleen metriin. Järven pinta oli silloin useita metrejä nykyistä korkeammalla, ja palatsi erotettiin muusta linnasta vallihaudalla, joka oli juuri niin leveä et…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+AIEMPI KYSYMYS: Miksi linna rakennettiin saarelle eikä rannalle?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä kysymys. Tän minä näin ylhäältä jo toissa kesänä. Saari antoi puolustukselle valtavan edun: järvi oli luonnollinen muuri, jota ei tarvinnut rakentaa. Vihollisen oli vaikea lähestyä linnaa ilman veneitä, ja jokainen hyökkääjä oli näkyvissä jo kaukaa. Suuriruhtinas [[Kęstutis]] siirsi saarelle asuinpaikkansa ja aarrekammionsa 1300-luvulla, koska paikka suojasi sekä hänet että hänen aarteensa. Merkittävin rakennusvaihe päättyi vuonna 1409 hänen poikansa [[Vytautas Suuren]] aikana. Mikään muuri ei ole yhtä halpa kuin järvi.
+KYSYMYS: Kerro lisää: Kęstutis
+
+### 400
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Saarilinna punaisesta tiilestä — raunio, joka koottiin takaisin viisisataa vuotta myöhemmin
+Tietoruudun teksti: Runsaan kahdenkymmenen kilometrin päässä Vilnasta on järvi, jonka saarella seisoo linna. Kivilinnan rakentaminen alkoi 1300-luvulla suuriruhtinas Kęstutisin käskystä, ja hän siirsi saarelle sekä asuinpaikkansa että aarrekammionsa — järvi oli muuri, jota ei tarvinnut muurata. Merkittävin rakennusvaihe päättyi 1409 hänen poikansa Vytautas Suuren aikana, ja siitä linna sai nykyisen hahmonsa: kuusikerroksisen, kolmenkymmenenviiden metrin korkuisen päätornin ja ruhtinaan salin, joka oli noin kymmenen metriä leveä ja kaksikymmentäyksi pitkä. Vytautas kuoli tässä linnassa vuonna 1430. Rakennusaine oli punainen goottilainen tiili, katolla oli lasitettuja tiiliä ja ikkunoissa lasimaalauksia, ja muurit paksuunnettiin myöhemmin kahteen ja puoleen metriin. Järven pinta oli silloin useita metrejä nykyistä korkeammalla, ja palatsi erotettiin muusta linnasta vallihaudalla, joka oli juuri niin leveä et…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Valtakunta ulottui mereltä merelle] 1430 — Liettuan suuriruhtinaskunta oli 1400-luvun alussa Euroopan suurin valtio. Suuriruhtinas Vytautas Suuri hallitsi aluetta, joka ulottui Itämereltä lähelle Mustaamerta ja kattoi nykyisen Valko-Venäjän, suuren osan Ukrainaa sekä palasia Puolaa, Latviaa ja Venäjää. Vuonna 1386 suuriruhtinas Jogaila meni naimisiin Puolan kuningattaren kanssa ja otti kasteen, ja maat liittyivät henkilöunioniin, joka näkyy tässä kartassa vierekkäisinä valtakuntina. Liettuasta tuli näin viimeinen pakanallinen valtio, joka kääntyi kristinuskoon Euroopassa.
+AIEMPI KYSYMYS: Miksi linna rakennettiin saarelle eikä rannalle?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä kysymys. Tän minä näin ylhäältä jo toissa kesänä. Saari antoi puolustukselle valtavan edun: järvi oli luonnollinen muuri, jota ei tarvinnut rakentaa. Vihollisen oli vaikea lähestyä linnaa ilman veneitä, ja jokainen hyökkääjä oli näkyvissä jo kaukaa. Suuriruhtinas [[Kęstutis]] siirsi saarelle asuinpaikkansa ja aarrekammionsa 1300-luvulla, koska paikka suojasi sekä hänet että hänen aarteensa. Merkittävin rakennusvaihe päättyi vuonna 1409 hänen poikansa [[Vytautas Suuren]] aikana. Mikään muuri ei ole yhtä halpa kuin järvi.
+KYSYMYS: Kerro lisää: Vytautas Suuren

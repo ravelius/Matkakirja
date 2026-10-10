@@ -1,0 +1,134 @@
+### 401
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Saarilinna punaisesta tiilestä — raunio, joka koottiin takaisin viisisataa vuotta myöhemmin
+Tietoruudun teksti: Runsaan kahdenkymmenen kilometrin päässä Vilnasta on järvi, jonka saarella seisoo linna. Kivilinnan rakentaminen alkoi 1300-luvulla suuriruhtinas Kęstutisin käskystä, ja hän siirsi saarelle sekä asuinpaikkansa että aarrekammionsa — järvi oli muuri, jota ei tarvinnut muurata. Merkittävin rakennusvaihe päättyi 1409 hänen poikansa Vytautas Suuren aikana, ja siitä linna sai nykyisen hahmonsa: kuusikerroksisen, kolmenkymmenenviiden metrin korkuisen päätornin ja ruhtinaan salin, joka oli noin kymmenen metriä leveä ja kaksikymmentäyksi pitkä. Vytautas kuoli tässä linnassa vuonna 1430. Rakennusaine oli punainen goottilainen tiili, katolla oli lasitettuja tiiliä ja ikkunoissa lasimaalauksia, ja muurit paksuunnettiin myöhemmin kahteen ja puoleen metriin. Järven pinta oli silloin useita metrejä nykyistä korkeammalla, ja palatsi erotettiin muusta linnasta vallihaudalla, joka oli juuri niin leveä et…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Christchurch — kaupunkilehti / Maanjäristykset ja jälleenrakennus] Christchurch rakennettiin kirkon unelmaksi englantilaisesta kaupungista eteläisellä pallonpuoliskolla. Vuosina 2010 ja 2011 kaupunki koki jotain, mihin perustajat eivät olleet varautuneet.
+- [Managua — kaupunkilehti / Managua: Rakennukset jäivät seisomaan tyhjinä] Jouluaaton aattona 1972, kello puoli yksi yöllä, maa tärähti voimakkuudella 6,3 ja repi Managuan keskustan auki. Järistys tuhosi kolmetoista neliökilometriä ydinkeskustaa ja vaurioitti lähes kaksinkertaisen alan lisää, noin 53 000 kotia jäi käyttökelvottomaksi ja yli 300 000 ihmistä vaille kotia. Kuolonuhreja arvioidaan neljästä yhteentoista tuhanteen. Somozan hallinto keräsi ulkomailta hätäapua, mutta suuri osa siitä katosi matkalla eikä koskaan tavoittanut uhreja — kerrotaan jopa talvivaatteita lähetetyn trooppiseen maahan. Jälleenrakennus jäi vuosikymmeniksi puolitiehen: vielä 1994 keskustassa oli tyhjiä tontteja, joilla ei ollut mitään.
+AIEMPI KYSYMYS: Onko uudelleen rakennettu linna sama linna?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tästä filosofit kiistelevät, minä en. Linna on osittain alkuperäinen ja osittain uusi: se rakennettiin uudelleen rauniosta 1900-luvulla, ja työ perustui säilyneisiin muureihin, perustuksiin ja tutkittuun tietoon rakennuksen alkuperäisestä muodosta. Siksi se ei ole täysin sama linna eikä myöskään pelkkä jäljennös, vaan restauroitu ja osin uudelleen koottu rakennus. En ole varma, kuinka suuri osa tiilistä on alkuperäisiä. Historiantutkijat käyttävät rakennuksesta usein sanaa [[jälleenrakennus]]. Linna on silti [[Trakain]] linna, vaikka monta tiiltä olisi vaihtunut.
+KYSYMYS: Kerro lisää: jälleenrakennus
+
+### 402
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Saarilinna punaisesta tiilestä — raunio, joka koottiin takaisin viisisataa vuotta myöhemmin
+Tietoruudun teksti: Runsaan kahdenkymmenen kilometrin päässä Vilnasta on järvi, jonka saarella seisoo linna. Kivilinnan rakentaminen alkoi 1300-luvulla suuriruhtinas Kęstutisin käskystä, ja hän siirsi saarelle sekä asuinpaikkansa että aarrekammionsa — järvi oli muuri, jota ei tarvinnut muurata. Merkittävin rakennusvaihe päättyi 1409 hänen poikansa Vytautas Suuren aikana, ja siitä linna sai nykyisen hahmonsa: kuusikerroksisen, kolmenkymmenenviiden metrin korkuisen päätornin ja ruhtinaan salin, joka oli noin kymmenen metriä leveä ja kaksikymmentäyksi pitkä. Vytautas kuoli tässä linnassa vuonna 1430. Rakennusaine oli punainen goottilainen tiili, katolla oli lasitettuja tiiliä ja ikkunoissa lasimaalauksia, ja muurit paksuunnettiin myöhemmin kahteen ja puoleen metriin. Järven pinta oli silloin useita metrejä nykyistä korkeammalla, ja palatsi erotettiin muusta linnasta vallihaudalla, joka oli juuri niin leveä et…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+AIEMPI KYSYMYS: Onko uudelleen rakennettu linna sama linna?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tästä filosofit kiistelevät, minä en. Linna on osittain alkuperäinen ja osittain uusi: se rakennettiin uudelleen rauniosta 1900-luvulla, ja työ perustui säilyneisiin muureihin, perustuksiin ja tutkittuun tietoon rakennuksen alkuperäisestä muodosta. Siksi se ei ole täysin sama linna eikä myöskään pelkkä jäljennös, vaan restauroitu ja osin uudelleen koottu rakennus. En ole varma, kuinka suuri osa tiilistä on alkuperäisiä. Historiantutkijat käyttävät rakennuksesta usein sanaa [[jälleenrakennus]]. Linna on silti [[Trakain]] linna, vaikka monta tiiltä olisi vaihtunut.
+KYSYMYS: Kerro lisää: Trakain
+
+### 403
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Saarilinna punaisesta tiilestä — raunio, joka koottiin takaisin viisisataa vuotta myöhemmin
+Tietoruudun teksti: Runsaan kahdenkymmenen kilometrin päässä Vilnasta on järvi, jonka saarella seisoo linna. Kivilinnan rakentaminen alkoi 1300-luvulla suuriruhtinas Kęstutisin käskystä, ja hän siirsi saarelle sekä asuinpaikkansa että aarrekammionsa — järvi oli muuri, jota ei tarvinnut muurata. Merkittävin rakennusvaihe päättyi 1409 hänen poikansa Vytautas Suuren aikana, ja siitä linna sai nykyisen hahmonsa: kuusikerroksisen, kolmenkymmenenviiden metrin korkuisen päätornin ja ruhtinaan salin, joka oli noin kymmenen metriä leveä ja kaksikymmentäyksi pitkä. Vytautas kuoli tässä linnassa vuonna 1430. Rakennusaine oli punainen goottilainen tiili, katolla oli lasitettuja tiiliä ja ikkunoissa lasimaalauksia, ja muurit paksuunnettiin myöhemmin kahteen ja puoleen metriin. Järven pinta oli silloin useita metrejä nykyistä korkeammalla, ja palatsi erotettiin muusta linnasta vallihaudalla, joka oli juuri niin leveä et…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Tavat: Kukkula, jolle jokainen tuo ristin] 1961 — Šiauliain lähellä olevalle kukkulalle alettiin viedä ristejä 1800-luvun kapinoiden jälkeen kaatuneiden muistoksi. Neuvostoaikana paikka tulkittiin vastarinnaksi, ja viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa: 1961, 1973 ja 1975. Joka kerta ihmiset toivat ristit takaisin öisin. Nyt niitä on yli satatuhatta, isoja puuristejä ja pieniä metallisia, ja uusia tuodaan koko ajan lisää — kuka tahansa saa tuoda omansa.
+- [Vilna — kohdekartta / Kohdekartta: Boratynka] 1659–1668 Kun kassa on tyhjä, voi aina lyödä lisää rahaa — kunhan ei kysy, mitä raha sen jälkeen on arvoltaan. Puola-Liettua kokeili tätä 1600-luvulla kuparilla, ja kansa antoi kolikolle pilkkanimen, joka on kestänyt pidempään kuin kolikon ostovoima.
+AIEMPI KYSYMYS: Miksi museo skannaa esineensä kolmiulotteisiksi?
+AIEMPI VASTAUS (Livia):
+Tota niin. Hyvä, että kysyit. [[Museot]] skannaavat esineitään kolmiulotteisiksi useista syistä. Ensinnäkin [[3D-skannaus]] tallentaa esineen muodon ja pinnan tarkasti, jolloin tieto säilyy, vaikka alkuperäinen vaurioituisi. Toiseksi tutkijat voivat tutkia esinettä kosketta ottamatta, mikä suojaa hauraita aarteita. Kolmanneksi skannauksesta voi tehdä näyttelyihin kopioita ja verkossa katsottavia malleja, jolloin esine tavoittaa ihmisiä kaikkialta. En ole varma, minkä tekniikan juuri tämä museo on valinnut, mutta tarkoitus on yleensä sama. Kyyhky ei tosin pääse kosketteleman, ei skannerilla eikä ilman.
+KYSYMYS: Kerro lisää: Museot
+
+### 404
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Saarilinna punaisesta tiilestä — raunio, joka koottiin takaisin viisisataa vuotta myöhemmin
+Tietoruudun teksti: Runsaan kahdenkymmenen kilometrin päässä Vilnasta on järvi, jonka saarella seisoo linna. Kivilinnan rakentaminen alkoi 1300-luvulla suuriruhtinas Kęstutisin käskystä, ja hän siirsi saarelle sekä asuinpaikkansa että aarrekammionsa — järvi oli muuri, jota ei tarvinnut muurata. Merkittävin rakennusvaihe päättyi 1409 hänen poikansa Vytautas Suuren aikana, ja siitä linna sai nykyisen hahmonsa: kuusikerroksisen, kolmenkymmenenviiden metrin korkuisen päätornin ja ruhtinaan salin, joka oli noin kymmenen metriä leveä ja kaksikymmentäyksi pitkä. Vytautas kuoli tässä linnassa vuonna 1430. Rakennusaine oli punainen goottilainen tiili, katolla oli lasitettuja tiiliä ja ikkunoissa lasimaalauksia, ja muurit paksuunnettiin myöhemmin kahteen ja puoleen metriin. Järven pinta oli silloin useita metrejä nykyistä korkeammalla, ja palatsi erotettiin muusta linnasta vallihaudalla, joka oli juuri niin leveä et…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+AIEMPI KYSYMYS: Miksi museo skannaa esineensä kolmiulotteisiksi?
+AIEMPI VASTAUS (Livia):
+Tota niin. Hyvä, että kysyit. [[Museot]] skannaavat esineitään kolmiulotteisiksi useista syistä. Ensinnäkin [[3D-skannaus]] tallentaa esineen muodon ja pinnan tarkasti, jolloin tieto säilyy, vaikka alkuperäinen vaurioituisi. Toiseksi tutkijat voivat tutkia esinettä kosketta ottamatta, mikä suojaa hauraita aarteita. Kolmanneksi skannauksesta voi tehdä näyttelyihin kopioita ja verkossa katsottavia malleja, jolloin esine tavoittaa ihmisiä kaikkialta. En ole varma, minkä tekniikan juuri tämä museo on valinnut, mutta tarkoitus on yleensä sama. Kyyhky ei tosin pääse kosketteleman, ei skannerilla eikä ilman.
+KYSYMYS: Kerro lisää: 3D-skannaus
+
+### 405
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Saarilinna punaisesta tiilestä — raunio, joka koottiin takaisin viisisataa vuotta myöhemmin
+Tietoruudun teksti: Runsaan kahdenkymmenen kilometrin päässä Vilnasta on järvi, jonka saarella seisoo linna. Kivilinnan rakentaminen alkoi 1300-luvulla suuriruhtinas Kęstutisin käskystä, ja hän siirsi saarelle sekä asuinpaikkansa että aarrekammionsa — järvi oli muuri, jota ei tarvinnut muurata. Merkittävin rakennusvaihe päättyi 1409 hänen poikansa Vytautas Suuren aikana, ja siitä linna sai nykyisen hahmonsa: kuusikerroksisen, kolmenkymmenenviiden metrin korkuisen päätornin ja ruhtinaan salin, joka oli noin kymmenen metriä leveä ja kaksikymmentäyksi pitkä. Vytautas kuoli tässä linnassa vuonna 1430. Rakennusaine oli punainen goottilainen tiili, katolla oli lasitettuja tiiliä ja ikkunoissa lasimaalauksia, ja muurit paksuunnettiin myöhemmin kahteen ja puoleen metriin. Järven pinta oli silloin useita metrejä nykyistä korkeammalla, ja palatsi erotettiin muusta linnasta vallihaudalla, joka oli juuri niin leveä et…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Varsovan kansallismuseo] 1938 (perustettu 1862) Varsovan kansallismuseo perustettiin jo vuonna 1862 taidemuseona, ja se sai nykyisen nimensä vuonna 1916. Nykyinen suuri rakennus Jerusalimin puistokadun varrella valmistui vasta vuonna 1938, arkkitehti Tadeusz Tolwińskin suunnittelemana. Kokoelmiin kuuluu yli 830 000 esinettä muinaisajalta nykypäivään. Erikoisuutena on Euroopan suurin nubialaisen kristillisen taiteen kokoelma, joka on tuotu aikoinaan Sudanista. Museon seinillä riippuu myös Jan Matejkon jättimäinen maalaus Grunwaldin taistelu vuodelta 1878 - se on lähes 10 metriä leveä, yksi Puolan suurimmista tauluista. Nykyään museossa käy vuosittain yli 1,5 miljoonaa vierailijaa, ja se kuuluu maailman käydyimpien t…
+AIEMPI KYSYMYS: Kuka oli Vytautas Suuri?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Hänestä on kerrottu paljon. Vytautas Suuri oli Liettuan suuriruhtinas, joka hallitsi noin vuodesta 1392 vuoteen 1430. Hän oli suuriruhtinas Kęstutisin poika ja nosti Liettuan suuriruhtinaskunnan huippuunsa: valtio ulottui hänen aikanaan laajalle itään ja etelään. Hänen aikaansa kuului myös [[Grunwaldin taistelu]] vuonna 1410, jossa Liettuan ja Puolan joukot voittivat [[Saksalaisen ritarikunnan]]. Tarkat vuodet vaihtelevat lähteittäin, joten sanon aikavälin vain suuntaa-antavasti. Hän kuoli [[Trakain]] saarilinnassa vuonna 1430. Liettuassa häntä muistetaan kansallissankarina.
+KYSYMYS: Kerro lisää: Grunwaldin taistelu
+
+### 406
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Saarilinna punaisesta tiilestä — raunio, joka koottiin takaisin viisisataa vuotta myöhemmin
+Tietoruudun teksti: Runsaan kahdenkymmenen kilometrin päässä Vilnasta on järvi, jonka saarella seisoo linna. Kivilinnan rakentaminen alkoi 1300-luvulla suuriruhtinas Kęstutisin käskystä, ja hän siirsi saarelle sekä asuinpaikkansa että aarrekammionsa — järvi oli muuri, jota ei tarvinnut muurata. Merkittävin rakennusvaihe päättyi 1409 hänen poikansa Vytautas Suuren aikana, ja siitä linna sai nykyisen hahmonsa: kuusikerroksisen, kolmenkymmenenviiden metrin korkuisen päätornin ja ruhtinaan salin, joka oli noin kymmenen metriä leveä ja kaksikymmentäyksi pitkä. Vytautas kuoli tässä linnassa vuonna 1430. Rakennusaine oli punainen goottilainen tiili, katolla oli lasitettuja tiiliä ja ikkunoissa lasimaalauksia, ja muurit paksuunnettiin myöhemmin kahteen ja puoleen metriin. Järven pinta oli silloin useita metrejä nykyistä korkeammalla, ja palatsi erotettiin muusta linnasta vallihaudalla, joka oli juuri niin leveä et…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Plečnikin ja Secessionin Ljubljana: Ritarikunnan luostarista kesäteatteriksi] Križanken luostarin rakentamisen uskotaan alkaneen 1200-luvulla saksalaisen ritarikunnan käyttöön, ja sen barokkikirkko valmistui vuosina 1714–1715. Luostari toimi vuoteen 1945 asti, jolloin kompleksi kansallistettiin. Vuonna 1952 kaupunki pyysi Jože Plečnikia muuttamaan rappeutuneen luostarin Ljubljanan festivaalin näyttämöksi, ja työt valmistuivat 1956. Nykyään pihoilla järjestetään klassisen musiikin, jazzin ja rockin konsertteja, ja pääpihaa koristavat värikkäät sgraffitot.
+AIEMPI KYSYMYS: Kuka oli Vytautas Suuri?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Hänestä on kerrottu paljon. Vytautas Suuri oli Liettuan suuriruhtinas, joka hallitsi noin vuodesta 1392 vuoteen 1430. Hän oli suuriruhtinas Kęstutisin poika ja nosti Liettuan suuriruhtinaskunnan huippuunsa: valtio ulottui hänen aikanaan laajalle itään ja etelään. Hänen aikaansa kuului myös [[Grunwaldin taistelu]] vuonna 1410, jossa Liettuan ja Puolan joukot voittivat [[Saksalaisen ritarikunnan]]. Tarkat vuodet vaihtelevat lähteittäin, joten sanon aikavälin vain suuntaa-antavasti. Hän kuoli [[Trakain]] saarilinnassa vuonna 1430. Liettuassa häntä muistetaan kansallissankarina.
+KYSYMYS: Kerro lisää: Saksalaisen ritarikunnan
+
+### 407
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Saarilinna punaisesta tiilestä — raunio, joka koottiin takaisin viisisataa vuotta myöhemmin
+Tietoruudun teksti: Runsaan kahdenkymmenen kilometrin päässä Vilnasta on järvi, jonka saarella seisoo linna. Kivilinnan rakentaminen alkoi 1300-luvulla suuriruhtinas Kęstutisin käskystä, ja hän siirsi saarelle sekä asuinpaikkansa että aarrekammionsa — järvi oli muuri, jota ei tarvinnut muurata. Merkittävin rakennusvaihe päättyi 1409 hänen poikansa Vytautas Suuren aikana, ja siitä linna sai nykyisen hahmonsa: kuusikerroksisen, kolmenkymmenenviiden metrin korkuisen päätornin ja ruhtinaan salin, joka oli noin kymmenen metriä leveä ja kaksikymmentäyksi pitkä. Vytautas kuoli tässä linnassa vuonna 1430. Rakennusaine oli punainen goottilainen tiili, katolla oli lasitettuja tiiliä ja ikkunoissa lasimaalauksia, ja muurit paksuunnettiin myöhemmin kahteen ja puoleen metriin. Järven pinta oli silloin useita metrejä nykyistä korkeammalla, ja palatsi erotettiin muusta linnasta vallihaudalla, joka oli juuri niin leveä et…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+AIEMPI KYSYMYS: Mikä on kibinai, Trakain tunnettu leivonnainen?
+AIEMPI VASTAUS (Livia):
+Ai se! Nyt puhutaan asiaa. Kibinai on täytetty taikinapiirakka, jota leivotaan erityisesti [[Trakaissa]]. Täytteenä on tavallisesti lihaa ja sipulia, mutta myös juusto- ja kasvistäytteitä tehdään. Piirakka liitetään kaupungin pitkään asuneeseen karaiimiyhteisöön, jonka perimätiedon mukaan Vytautas toi seudulle. En ole varma, kuinka vanha tämä tarina tarkalleen on, ja lähteet voivat olla erimielisiä. Joka tapauksessa kibinai on nykyään [[Liettuan]] matkailijoiden suosikki.
+
+Minä en ole koskaan päässyt maistamaan, ja se harmittaa. Pullakyyhky ei kysy, onko taikina makeaa vai suolaista.
+KYSYMYS: Kerro lisää: Trakaissa
+
+### 408
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Vilna
+Maa, jossa pelaaja on: Liettua
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Saarilinna punaisesta tiilestä — raunio, joka koottiin takaisin viisisataa vuotta myöhemmin
+Tietoruudun teksti: Runsaan kahdenkymmenen kilometrin päässä Vilnasta on järvi, jonka saarella seisoo linna. Kivilinnan rakentaminen alkoi 1300-luvulla suuriruhtinas Kęstutisin käskystä, ja hän siirsi saarelle sekä asuinpaikkansa että aarrekammionsa — järvi oli muuri, jota ei tarvinnut muurata. Merkittävin rakennusvaihe päättyi 1409 hänen poikansa Vytautas Suuren aikana, ja siitä linna sai nykyisen hahmonsa: kuusikerroksisen, kolmenkymmenenviiden metrin korkuisen päätornin ja ruhtinaan salin, joka oli noin kymmenen metriä leveä ja kaksikymmentäyksi pitkä. Vytautas kuoli tässä linnassa vuonna 1430. Rakennusaine oli punainen goottilainen tiili, katolla oli lasitettuja tiiliä ja ikkunoissa lasimaalauksia, ja muurit paksuunnettiin myöhemmin kahteen ja puoleen metriin. Järven pinta oli silloin useita metrejä nykyistä korkeammalla, ja palatsi erotettiin muusta linnasta vallihaudalla, joka oli juuri niin leveä et…
+Isoisän matkakirjamerkintä: Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kohdekartta / Kohdekartta: Boratynka] 1659–1668 Kun kassa on tyhjä, voi aina lyödä lisää rahaa — kunhan ei kysy, mitä raha sen jälkeen on arvoltaan. Puola-Liettua kokeili tätä 1600-luvulla kuparilla, ja kansa antoi kolikolle pilkkanimen, joka on kestänyt pidempään kuin kolikon ostovoima.
+- [Vilna — kohdekartta / Kohdekartta: Vilnan tuomiokirkko] 1783 Vilnan tuomiokirkko näyttää ulkoa kreikkalaiselta temppeliltä pylväineen, mutta sen alla piileskelee yli 700 vuoden historia. Paikalla on seissyt kirkko jo 1200-luvulta lähtien, ja arkeologit ovat löytäneet maan alta jopa vanhan pakanatemppelin jäänteitä. Nykyinen valkoinen kirkko sai lopullisen muotonsa vuonna 1783, kun se rakennettiin uudelleen aiempien tulipalojen tuhottua edelliset kirkot. Katolla seisoo kolme kivipatsasta, ja keskimmäisen, Pyhän Helenan, käsissä kohoaa yhdeksän metriä korkea kultainen risti. Neuvostoaikana patsaat purettiin katolta vuonna 1950, koska uskonto ei silloin ollut suosiossa – ne nostettiin takaisin paikoilleen vasta vuonna 1997. Kirkon alla olevissa hol…
+- [Liettua — maalehti / Historia: Kaksi miljoonaa kättä yli kolmen maan] 1989 — Elokuun 23. päivänä 1989 noin kaksi miljoonaa ihmistä tarttui toisiaan käsistä ja muodosti yhtenäisen ketjun Tallinnasta Riian kautta Vilnaan — matkaa kertyi yli kuusisataa kilometriä. Baltian ketju järjestettiin täsmälleen viisikymmentä vuotta sen jälkeen, kun Neuvostoliitto ja natsi-Saksa olivat salaisessa sopimuksessa jakaneet Baltian maat keskenään. Rauhanomainen mielenilmaus vaati Viron, Latvian ja Liettuan miehitysten päättämistä, ja tapahtuma näkyi television välityksellä kaikkialla maailmassa. Kaksi vuotta myöhemmin kaikki kolme maata olivat jälleen itsenäisiä.
+AIEMPI KYSYMYS: Mikä on kibinai, Trakain tunnettu leivonnainen?
+AIEMPI VASTAUS (Livia):
+Ai se! Nyt puhutaan asiaa. Kibinai on täytetty taikinapiirakka, jota leivotaan erityisesti [[Trakaissa]]. Täytteenä on tavallisesti lihaa ja sipulia, mutta myös juusto- ja kasvistäytteitä tehdään. Piirakka liitetään kaupungin pitkään asuneeseen karaiimiyhteisöön, jonka perimätiedon mukaan Vytautas toi seudulle. En ole varma, kuinka vanha tämä tarina tarkalleen on, ja lähteet voivat olla erimielisiä. Joka tapauksessa kibinai on nykyään [[Liettuan]] matkailijoiden suosikki.
+
+Minä en ole koskaan päässyt maistamaan, ja se harmittaa. Pullakyyhky ei kysy, onko taikina makeaa vai suolaista.
+KYSYMYS: Kerro lisää: Liettuan
