@@ -97,3 +97,11 @@ Yhteenveto: VÄÄRIN 9, EPÄVARMA 14.
 | Tiranan pyramidi | 41.32306, 19.82139 | Wikidata Q177335 (sama) | OK |
 | Rinian puisto | 41.32472, 19.81806 | Wikidata Q195228 (sama); ~400 m Skanderbeg-aukiolta, lähde sanoo ~500 m | OK |
 | kohdekartta.rajat | N 41.3328 / S 41.3204 / W 19.8145 / E 19.8297 | kaikki kahdeksan kohdetta rajojen sisällä | OK |
+
+## Korjattu
+
+- Linnoitus: muuri ottomaanien ajalta (artikkeli.teksti, KL0.nostot[0].lyhyt, kuvan lyhyt); "pääiltä" korjattu itä–länsi-suuntaisiksi teiksi.
+- Dita e Verës -taivutus, Skanderbeg-aukion uudistusvuodet 2016–2017 (avattu kesäkuussa 2017), Moskeijan "vanhin kerros" -superlatiivi pois, Kokonozi = Uuden basaarin ympäristö.
+- Minitehtävän vaihtoehdot saman mittaisiksi (oikea ei pisin).
+- EPÄVARMA pehmennetty: selkämäinen kaari pois, Lear-kuva "Commonsin mukaan", julkisivumaalaus, kansalliskirjaston kokoelma, Bunk'Art-selite, aukion kivet suunnitelmana, autoton päivä, pääkaupunki 1920/1925, kohdekartan etäisyys, bussilinjat, uusi basaari, kysymys 2:n vihje.
+- Sää: luvut pysyvät saa.json:ssa, opas sanoo ne mallinnetuiksi kuukausinormaaleiksi; ristiriita kirjattu ehdotukset.huomiot-kenttään.

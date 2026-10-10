@@ -1,0 +1,504 @@
+{
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "skopje",
+ "maa": "MKD",
+ "era": "e01",
+ "kaupunki": {
+  "id": "skopje",
+  "name": "Skopje",
+  "wiki": "Skopje",
+  "ambience": "kaupunki",
+  "pallo": {
+   "lat": 41.996,
+   "lon": 21.432
+  }
+ },
+ "artikkeli": {
+  "intro": "Skopje on Pohjois-Makedonian pääkaupunki ja suurin kaupunki, ja se makaa **Vardar-joen** varrella noin 20 kilometriä leveässä laaksossa, jonka korkeus on noin 240–245 metriä. Vuoden 2021 väestölaskennassa kaupungissa asui 526 502 ihmistä, noin neljännes maan väestöstä. Alueen vanhin asutus oli Kalen kalliolla jo 4. vuosituhannella eaa., ja roomalainen Scupi perustettiin 1. vuosisadan lopulla veteraanien siirtokunnaksi.\n\nOttomaanit hallitsivat kaupunkia vuoden 1392 tienoilta yli 500 vuotta, ja he tunsivat sen nimellä Üsküb. Isoisän matkavuonna 1873 Üsküb oli kivisiltojen ja basaarien kaupunki: Kivisilta, Kale ja Vanha basaari seisoivat jo paikallaan, ja **Skopje–Salonika-rautatie** valmistui samana vuonna. Asema rakennettiin Vardarin eteläpuolelle, ja lähteiden mukaan rata toi kaupunkiin lisää matkustajia ja kauppiaita.\n\nSuuri osa nykyisestä kaupungista on kuitenkin nuorta, sillä **vuoden 1963 maanjäristys** tuhosi valtaosan rakennuksista ja surmasi yli tuhat ihmistä. Jälleenrakennukseen saatiin apua 78 maasta, ja siksi Skopjea kutsutaan kansainvälisen solidaarisuuden kaupungiksi.",
+  "teksti": "Ptolemaios mainitsi kaupungin noin vuonna 150 nimellä Scupi. Nykyään nimi on makedoniaksi Skopje, albaniaksi Shkup ja ottomaanien turkiksi Üsküb, ja länsimaissa kaupunkia kutsuttiin vuoteen 1912 asti nimillä Uskub tai Uskup. Itsenäisen maan pääkaupunki se on ollut vuodesta 1991, ja vuosina 1945–1991 se oli Makedonian sosialistisen tasavallan pääkaupunki.\n\nKaupunki ulottuu hallinnollisissa rajoissaan 571,46 neliökilometrin alueelle. Vardarin keskivirtaama on 51 kuutiometriä sekunnissa, ja tulvia on koettu usein, mutta Kozjak-padon valmistuttua 1994 tulvariski on lähes nolla. Kaupungin rajoihin kuuluu myös 1 066 metriä korkea Vodno-vuori, jonka huipulle nousee köysirata keskustasta.\n\nKulttuurielämä seuraa vuodenaikoja: Skopje Film Festival pidetään maaliskuussa, May Opera Evenings toukokuussa vuodesta 1972 ja Skopje Jazz Festival lokakuussa vuodesta 1981. Perinteistä makedonialaista ruokaa ja musiikkia tarjoillaan kafeanoissa, ja Vanhan basaarin ravintoloissa ottomaanikeittiön ruokia tarjoillaan makedonialaisen viinin rinnalla."
+ },
+ "kysymykset": [
+  {
+   "q": "Mikä joki virtaa Skopjen läpi?",
+   "options": [
+    "Vardar",
+    "Struma",
+    "Tonava",
+    "Marica"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Joki on kuvattuna kaupungin vaakunassa Kivisillan alla.",
+   "fact": "Vardar virtaa kaupungin läpi ja laskee lopulta Egeanmereen; sen keskivirtaama Skopjessa on 51 kuutiometriä sekunnissa.",
+   "source": "https://en.wikipedia.org/wiki/Skopje"
+  },
+  {
+   "q": "Millä nimellä Skopje tunnettiin antiikin roomalaisena aikana?",
+   "options": [
+    "Scupi",
+    "Serdica",
+    "Naissus",
+    "Stobi"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Nimi liittyy veteraanien perustamaan siirtokuntaan.",
+   "fact": "Ptolemaios mainitsi kaupungin noin vuonna 150 nimellä Scupi. Roomalainen siirtokunta perustettiin 1. vuosisadan lopulla.",
+   "source": "https://en.wikipedia.org/wiki/Scupi"
+  },
+  {
+   "q": "Minkä maan arkkitehti voitti osuuden Skopjen jälleenrakennuksen suunnittelukilpailussa vuoden 1963 maanjäristyksen jälkeen?",
+   "options": [
+    "Japanin",
+    "Suomen",
+    "Ranskan",
+    "Brasilian"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Hän oli yksi monista ulkomaisista asiantuntijoista, jotka osallistuivat jälleenrakennukseen.",
+   "fact": "Japanilainen Kenzo Tange voitti osuuden jälleenrakennuskilpailussa, ja apua tuli kaikkiaan 78 maasta.",
+   "source": "https://en.wikipedia.org/wiki/1963_Skopje_earthquake"
+  },
+  {
+   "q": "Montako kaarta Skopjen Kivisillassa on?",
+   "options": [
+    "12",
+    "7",
+    "9",
+    "15"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Silta on 214 metriä pitkä ja 6 metriä leveä.",
+   "fact": "Kivisillalla on 12 puolipyöreää kaarta. Silta rakennettiin roomalaisten perustusten päälle 1451–1469.",
+   "source": "https://en.wikipedia.org/wiki/Stone_Bridge_(Skopje)"
+  },
+  {
+   "q": "Minkä rautatien valmistuminen vuonna 1873 toi kaupunkiin lisää matkustajia ja kauppiaita?",
+   "options": [
+    "Skopje–Salonika",
+    "Skopje–Belgrad",
+    "Skopje–Sofia",
+    "Skopje–Tirana"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Asema rakennettiin Vardarin eteläpuolelle.",
+   "fact": "Üskübin ja Salonikin välinen rautatie valmistui 1873, ja lähteiden mukaan se toi lisää matkustajia ja kauppiaita.",
+   "source": "https://en.wikipedia.org/wiki/History_of_Skopje"
+  }
+ ],
+ "tiedot": [
+  "Kaupungin vaakunassa ovat Kivisilta, Vardar, Kale-linnoitus ja Šar-vuorten lumihuiput, joten koko kaupungin voi lukea yhdestä kilvestä.",
+  "Taivaaseenastumisen kirkko on rakennettu osittain maan alle, ettei se kohoaisi naapurimoskeijoiden yläpuolelle.",
+  "Vodno-vuori on 1 066 metriä korkea ja kuuluu kaupungin rajoihin, ja köysirata yhdistää sen huipun keskustaan."
+ ],
+ "valokuva": {
+  "tiedosto": "Stone Bridge (44229534855).jpg",
+  "vuosi": "2018",
+  "lahde": "jjmusgrove from Glen Allen, VA, United States, Commons (CC BY 2.0)",
+  "lyhyt": "Kivisilta on 214 metriä pitkä ja 12-kaarinen, ja se on kaupungin vaakunan pääaihe.",
+  "selite": "Kivisilta on 214 metriä pitkä ja 12-kaarinen, ja se on kaupungin vaakunan pääaihe. Se valmistui 1400-luvulla, viimeistään 1469, ja yhdistää Makedonia-aukion Vanhaan basaariin."
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "Skopje",
+   "johdanto": "Isoisän matkavuonna 1873 Skopje oli ottomaanien Üsküb, kivisiltojen ja basaarien kaupunki, jonka asemarata oli juuri valmistunut. Kaupungin juuret ulottuvat roomalaiseen Scupiin, ja Vardarin laaksossa on koettu monta maanjäristystä: 518, 1555 ja 1963.",
+   "kansikuvat": [
+    {
+     "tiedosto": "Skopje view from Kale 3.jpg",
+     "selite": "Kalelta avautuu näkymä Vardarin laaksoon, jossa joen yli kulkee useita siltoja.",
+     "lahde": "kallerna, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    {
+     "tiedosto": "Skopje Kale 3.jpg",
+     "selite": "Kale-linnoituksen ensimmäinen vaihe rakennettiin 500-luvulla keltaisesta kalkkikivestä ja travertiinista.",
+     "lahde": "kallerna, Wikimedia Commons (CC BY-SA 4.0)",
+     "lyhyt": "Kale-linnoituksen ensimmäinen vaihe rakennettiin 500-luvulla kalkkikivestä ja travertiinista."
+    },
+    {
+     "tiedosto": "Stone Bridge Skopje 4.jpg",
+     "selite": "Kivisilta yhdistää Makedonia-aukion ja Vanhan basaarin.",
+     "lahde": "kallerna, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Scupi, veteraanien kaupunki",
+     "teksti": "Scupi oli roomalainen siirtokunta, jonka asukkaiksi asettui keisari Domitianuksen aikana, vuosina 81–96, legioonalaisveteraaneja, pääosin Legio VII Claudiasta. Hautakirjoitusten perusteella vain vähemmistö asukkaista oli Italiasta: moni veteraani tuli Dalmatiasta, Etelä-Galliasta ja Syyriasta, ja latina säilyi pääkielenä. Huippuaikanaan Scupi kattoi 40 hehtaaria, ja sitä ympäröi 3,5 metriä leveä muuri. Kaupungissa oli teatteri, kylpylät ja suuri kristillinen basilika. Kun asutus hylättiin 518 maanjäristyksen jälkeen, Justinianus I rakennutti uuden kaupungin Kalen kalliolle, ja lähteen mukaan Scupin kiveä siirrettiin linnoitukseen.",
+     "tiedosto": "Scupi, North Macedonia 2.jpg",
+     "lyhyt": "Scupi oli Domitianuksen aikana perustettu roomalainen veteraanisiirtokunta.",
+     "selite": "Scupi oli Domitianuksen aikana perustettu roomalainen veteraanisiirtokunta, jonka rauniot ovat kaivauksissa. Kaupunki hylättiin 518 maanjäristyksen jälkeen.",
+     "lahde": "Протогер, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Scupi"
+    },
+    {
+     "otsikko": "Vardar ja Kivisilta",
+     "teksti": "Vardar halkoo Skopjen, ja sen keskivirtaama kaupungin kohdalla on 51 kuutiometriä sekunnissa: toukokuussa 99,6, heinäkuussa vain 18,7. Joki aiheutti usein tulvia, muun muassa 1962, mutta Kozjak-padon valmistuttua 1994 tulvariski on lähes nolla. Joen yli kulkee Kivisilta, 214 metriä pitkä ja 6 metriä leveä, ja sen 12 puolipyöreää kaarta lepäävät roomalaisten perustusten päällä. Silta rakennettiin Mehmed II:n suojeluksessa 1451–1469. Vuoden 1555 maanjäristys vaurioitti sen neljää pilaria, ja korjaukset tehtiin samana vuonna. Silta yhdistää Makedonia-aukion ja Vanhan basaarin ja on kaupungin vaakunan pääaihe.",
+     "tiedosto": "Vardar Skopje 1.jpg",
+     "lyhyt": "Vardar halkoo Skopjen, ja sen keskivirtaama kaupungin kohdalla on 51 kuutiometriä sekunnissa.",
+     "selite": "Vardar halkoo Skopjen, ja sen keskivirtaama kaupungin kohdalla on 51 kuutiometriä sekunnissa.",
+     "lahde": "kallerna, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Stone Bridge (Skopje)"
+    },
+    {
+     "otsikko": "Üsküb ja rautatie 1873",
+     "teksti": "Isoisän matkavuonna 1873 Skopje oli ottomaanien Üsküb, ja samana vuonna valmistui Skopje–Salonika-rautatie. Asema rakennettiin Vardarin eteläpuolelle, ja lähteiden mukaan rata toi kaupunkiin lisää matkustajia ja kauppiaita. Noin vuonna 1836 Bitola ja Štip olivat Skopjea suurempia, mutta noin 1850 jälkeen kaupunki alkoi toipua. Vuonna 1877 Skopjesta tuli uuden Kosovon vilayetin pääkaupunki. Kanchovin tilaston mukaan asukkaita oli vuonna 1900 yhteensä 31 900, joista 15 000 turkkilaisia, 13 000 kristittyjä bulgarialaisia ja 1 920 romaneja. Talouden perustana olivat värjäys, kankaankudonta, nahkurintyö, viini- ja jauhotuotanto.",
+     "tiedosto": "Skopje Isak Bey Turbe Aladja Mosque 1917.JPG",
+     "lyhyt": "Ishak Beyn moskeija eli Aladža rakennettiin 1438 Vanhan basaarin pohjoisosaan.",
+     "selite": "Ishak Beyn moskeija eli Aladža rakennettiin 1438 Vanhan basaarin pohjoisosaan.",
+     "lahde": "Unknown author Unknown author, Wikimedia Commons (PD)",
+     "wiki": "History of Skopje"
+    },
+    {
+     "otsikko": "Vanha basaari",
+     "teksti": "Vanha basaari ulottuu Kivisillalta Bit-Pazarille ja Kale-linnoituksesta Serava-joelle. Lähteen mukaan se on ollut kaupan keskus ainakin 1100-luvulta ja yksi Balkanin vanhimmista ja suurimmista markkinapaikoista. Ottomaanikaudelta on jäljellä noin kolmekymmentä moskeijaa sekä lukuisia karavaanisarajeja ja hanejä. Isa Beyn kaudella 1445–1469 rakennettiin muun muassa bezisten, katettu kauppahalli, ja Čifte Hamam, kaksoiskylpylä. Basaarin huippukausi oli 1500–1600-luvuilla, ja Espanjasta karkotettuja sefardijuutalaisia asettui Üskübiin. Basaari vaurioitui 1555, 1689 ja 1963.",
+     "tiedosto": "Saat kula, Skopje, stara slika.jpg",
+     "lyhyt": "Vanhan basaarin kellotorni on 1500-luvulta, ja sen yläosa korvattiin tiilellä 1902.",
+     "selite": "Vanhan basaarin kellotorni on 1500-luvulta, ja sen yläosa korvattiin tiilellä 1902.",
+     "lahde": "Unknown author Unknown author, Wikimedia Commons (PD)",
+     "wiki": "Old Bazaar, Skopje"
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "Mustafa Pasha Mosque view.jpg",
+     "selite": "Mustafa-pasan moskeija valmistui 1492, ja sen kupolin halkaisija on noin 16 metriä.",
+     "lahde": "Cacar60, Wikimedia Commons (CC BY 4.0)"
+    },
+    "kappale": "Skopje on Pohjois-Makedonian pääkaupunki ja suurin kaupunki, ja se on maan poliittinen, taloudellinen ja kulttuurinen keskus. Historiallinen ydin on kävelymatkan päässä: Kivisilta, Makedonia-aukio, Vanha basaari ja Kale ovat lähellä toisiaan Vardarin molemmin puolin. Pääasema ja linja-autoasema ovat samassa kompleksissa, josta Makedonia-aukiolle on noin 15 minuutin kävely. Ilmasto on kostea subtrooppinen, ja kesät ovat kuumia ja suhteellisen kuivia.",
+    "artikkeli": {
+     "nimi": "Matkailijan Skopje",
+     "taitto": "opas",
+     "teksti": "Skopjen ydin kannattaa kulkea jalan, sillä silta, basaari ja linnoitus ovat lähellä toisiaan.",
+     "nosto": "Skopjessa järjestetään Skopje Film Festival maaliskuussa, May Opera Evenings toukokuussa vuodesta 1972 ja Skopje Jazz Festival lokakuussa vuodesta 1981.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "Skopje International Airport (SKP) on Petrovecissa, noin 20 kilometriä kaupungin itäpuolella, ja sitä hoitaa TAV Airports Holding vuodesta 2008. Pääasema ja linja-autoasema ovat samassa Transportation Center -kompleksissa, ja sieltä on noin 15 minuutin kävely Makedonia-aukiolle. Linja-autoasema avattiin 2000-luvun alussa. Kaupunkibusseja ajaa JSP Skopje, joka on perustettu 1948. Pitkät junayhteydet kulkevat Belgradista Thessalonikiin ja Skopjesta Pristinaan.",
+       "kuva": {
+        "tiedosto": "Plaza de Macedonia, Skopie, Macedonia, 2014-04-16, DD 19.JPG",
+        "selite": "Makedonia-aukio on maan suurin aukio, ja sen pinta-ala on 18 500 neliömetriä.",
+        "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 3.0)"
+       }
+      },
+      {
+       "otsikko": "Kale ja jokiranta",
+       "teksti": "Kivisilta, Makedonia-aukio ja kävely Kalelle muodostavat helpon reitin: linnoitus on kaupungin korkeimmalla kohdalla. Lähteen mukaan kaupungin suosituin kävelyreitti alkaa vanhalta asemalta ja päättyy Kalelle.",
+       "kuva": {
+        "tiedosto": "Stairs Leading to Northeast Gate of Skopje Fortress, North Macedonia.jpg",
+        "selite": "Kale on kaupungin korkeimmalla kohdalla, ja siellä on ollut linnoitus 500-luvulta.",
+        "lahde": "Julian Lupyan, Wikimedia Commons (CC0)"
+       }
+      },
+      {
+       "otsikko": "Vanha basaari",
+       "teksti": "Vanhan basaarin kujia kulkiessa vastaan tulevat Mustafa-pasan moskeija, Kuršumli An, hamamit ja Kellotorni. Mustafa-pasan moskeija seisoo tasanteella basaarin yläpuolella lähellä Kalea, ja sen piha on täynnä ruusuja.",
+       "kuva": {
+        "tiedosto": "Street in Old Bazaar, Shkup.jpg",
+        "selite": "Vanha basaari on ollut kaupan keskus ainakin 1100-luvulta.",
+        "lahde": "Liridon, Wikimedia Commons (CC BY-SA 4.0)"
+       }
+      },
+      {
+       "otsikko": "Mitä täällä syödään",
+       "teksti": "Perinteistä makedonialaista ruokaa ja perinteistä musiikkia tarjoillaan kafeanoissa. Vanhan basaarin ravintoloissa tarjoillaan ottomaanikeittiön ruokia makedonialaisen viinin rinnalla."
+      },
+      {
+       "otsikko": "Milloin kannattaa tulla",
+       "teksti": "Kuukausinormaalien mukaan tammikuu on kylmin (keskilämpö 1,4 astetta) ja elokuu lämpimin (25,1 astetta). Kevät on sateisin vuodenaika: huhtikuussa sataa keskimäärin 84 mm, kun syyskuussa vain 19 mm. En-Wikipedian mukaan ilmasto on kostea subtrooppinen ja vuoden keskilämpötila 12,6 astetta, kesät ovat pitkiä, kuumia ja suhteellisen kuivia ja talvi lyhyt, kylmä ja märkä. Kevät ja syksy ovat 15–24 asteen kausia."
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       {
+        "mita": "Kale-linnoitus",
+        "tahdet": 3,
+        "selite": "Kaupungin korkeimmalla kohdalla oleva linnoitus, jonka ensimmäinen vaihe on 500-luvulta."
+       },
+       {
+        "mita": "Kivisilta",
+        "tahdet": 3,
+        "selite": "Vuonna 1469 mennessä valmistunut 214 metriä pitkä silta yhdistää Makedonia-aukion ja Vanhan basaarin."
+       },
+       {
+        "mita": "Vanha basaari",
+        "tahdet": 3,
+        "selite": "Kauppakeskus ainakin 1100-luvulta, jossa on moskeijoita, karavaanisarajeja ja hamameja."
+       },
+       {
+        "mita": "Mustafa-pasan moskeija",
+        "tahdet": 2,
+        "selite": "Vuonna 1492 valmistunut moskeija ruusutarhoineen näkee basaarin yli."
+       },
+       {
+        "mita": "Vodnon köysirata",
+        "tahdet": 2,
+        "selite": "Köysirata yhdistää 1 066 metriä korkean Vodno-vuoren huipun keskustaan."
+       }
+      ],
+      "hyvaTietaa": [
+       {
+        "otsikko": "Alue on seismisesti aktiivinen",
+        "teksti": "Suuria maanjäristyksiä on koettu vuosina 518, 1555 ja 1963; ne ovat historiaa, mutta ne selittävät, miksi vanhaa ja uutta on kaupungissa sekaisin."
+       },
+       {
+        "otsikko": "Lämpötilat vaihtelevat paljon",
+        "teksti": "Vuoden aikana lämpötilat liikkuvat noin −13 ja 39 asteen välillä, joten pakkaukseen kannattaa varautua vuodenajan mukaan."
+       },
+       {
+        "otsikko": "Ilmanlaatu vaihtelee",
+        "teksti": "Lähteen mukaan liikenne ja kaukolämpö heikentävät ilmanlaatua."
+       },
+       {
+        "otsikko": "Kaksi virallista kieltä",
+        "teksti": "Maassa on virallisina kielinä makedonia ja albania, ja kaupungin nimi on kirjoitettu albaniaksi Shkup."
+       }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "kuvataide",
+   "nimi": "Taidetta hamameissa ja lahjoituksina",
+   "johdanto": "Skopjen taide on asunut vanhoissa ottomaanikylpylöissä ja kasvanut maanjäristyksen jälkeen kansainvälisistä lahjoituksista. Keskiaikaisten freskojen ja nykytaiteen väliin mahtuu monta vuosisataa.",
+   "tehtava": {
+    "kysymys": "Minkä maan lahjoitus Skopjen nykytaiteen museon rakennus oli?",
+    "vaihtoehdot": [
+     "Puola",
+     "Ranska",
+     "Kanada",
+     "Tšekkoslovakia"
+    ],
+    "oikea": 0,
+    "fakta": "Museorakennus tuli lahjana Puolasta, ja sen suunnitteli joukko puolalaisia arkkitehteja maanjäristyksen jälkeisen avun aikana."
+   },
+   "nostot": [
+    {
+     "otsikko": "Kansallisgalleria kahdessa hamamissa",
+     "teksti": "Kansallisgalleria esittelee 1300-luvulta 1900-luvulle ajoittuvia maalauksia kahdessa Vanhan basaarin entisessä hamamissa. Daut-pasan hamam rakennettiin 1400-luvun lopulla: Itä-Rumelian suurvisiiri Daut-pasa rahoitti basaarissa rakennuksia vuosina 1489–1497, ja hamam on niistä tunnetuin. Rakennuksessa on 15 huonetta ja 13 kupolia, ja kaksi suurinta kupolia peittää pukuhuoneet. Galleria on toiminut siinä vuodesta 1948. Toinen tila on Čifte Hamam, kaksoiskylpylä, joka jaettiin miesten ja naisten siipeen ja oli kylpylänä vuoteen 1915. Se korjattiin 1963 vaurioiden jälkeen, ja siellä on toiminut nykytaidegalleria siitä lähtien.",
+     "tiedosto": "Daut Pasha Hammam.jpg",
+     "lyhyt": "Daut-pasan hamam on 1400-luvun lopulta, ja siinä on toiminut Kansallisgalleria vuodesta 1948.",
+     "selite": "Daut-pasan hamam rakennettiin 1400-luvun lopulla, ja siinä on toiminut Kansallisgalleria vuodesta 1948.",
+     "lahde": "Soghomon Matevosyan, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "National Gallery (North Macedonia)"
+    },
+    {
+     "otsikko": "Nykytaiteen museo ja lahjoitukset",
+     "teksti": "Skopjen nykytaiteen museo rakennettiin vuoden 1963 maanjäristyksen jälkeen kansainvälisellä avulla. Puolalaisten arkkitehtien suunnittelema museorakennus annettiin kaupungille puolalaisten lahjana. Pablo Picasso lahjoitti uudelle museolle maalauksensa Naisen pää, ja kokoelmassa on lähteen mukaan muun muassa Fernand Légerin, André Massonin, Hans Hartungin, Victor Vasarelyn, Alexander Calderin, Pierre Soulagesin, Alberto Burrin ja Christon töitä. Avustusta tuli 78 maasta, ja siksi kaupunkia kutsutaan kansainvälisen solidaarisuuden kaupungiksi. Univerzalna sala, 1 570 paikan sali, valmistui 1966 noin 35 maan lahjoituksilla.",
+     "tiedosto": "Museum of Contemporary Art Skopje 1.jpg",
+     "lyhyt": "Skopjen nykytaiteen museo rakennettiin maanjäristyksen jälkeen kansainvälisten lahjoitusten turvin.",
+     "selite": "Skopjen nykytaiteen museo rakennettiin maanjäristyksen jälkeen kansainvälisten lahjoitusten turvin.",
+     "lahde": "Kallerna, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "1963 Skopje earthquake"
+    },
+    {
+     "otsikko": "Nerezin freskot",
+     "teksti": "Pyhän Panteleimonin kirkko Skopjen alueella Gorno Nerezissä on 1100-luvulta, ja sen ilmeikkäät freskot ennakoivat lähteen mukaan italialaisia primitiivejä. Suomenkielinen Wikipedia ajoittaa Pyhän Panteleimonin luostarin vuoteen 1164. Vuoden 1555 maanjäristys vaurioitti kirkon ylempiä seinämaalauksia. Nerezin 1100-luku on eri kerros kuin Vardarin koulukunnan 1300-luvun kirkot, esimerkiksi Matkan kirkot, joten ne kannattaa pitää erillään. Keskiaikaisten freskojen ja nykytaiteen väliin mahtuu Skopjessa monta vuosisataa.",
+     "tiedosto": "Gorno Nerezi, Saint Panteleimon church - Christ Pantocrator.jpg",
+     "lyhyt": "Gorno Nerezin Pyhän Panteleimonin kirkon freskot ovat 1100-luvulta.",
+     "selite": "Gorno Nerezin Pyhän Panteleimonin kirkon freskot ovat 1100-luvulta.",
+     "lahde": "zavar_vera, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Skopje"
+    },
+    {
+     "otsikko": "Aladža ja sen koristeet",
+     "teksti": "Ishak Beyn moskeija rakennettiin 1438 Vanhan basaarin pohjoisosaan. Sitä kutsutaan Aladžaksi, koristelluksi, kukkakoristeiden, kirjoitusten ja värillisten laattojen vuoksi. Moskeijan minareetti on 30 metriä korkea, ja takana on türbe. Lähteen mukaan moskeijassa toimi yksi Euroopan ensimmäisistä islamilaisista kirjastoista. Alkuperäinen sininen fajanssipäällys katosi vuoden 1689 suuressa tulipalossa, mutta laattoja näkyy yhä viereisessä türbessä.",
+     "tiedosto": "Isak Bey Turbe Aladja Mosque Skopje.JPG",
+     "lyhyt": "Aladžan türbessä näkyy yhä moskeijan koristeena ollutta sinistä laattaa.",
+     "selite": "Aladžan türbessä näkyy yhä moskeijan koristeena ollutta sinistä laattaa.",
+     "lahde": "Dominik Tefert, Wikimedia Commons (PD)",
+     "wiki": "Old Bazaar, Skopje"
+    }
+   ]
+  }
+ ],
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "Skopjen historiallinen ydin kokoontuu Kivisillan ympärille: Vanhassa basaarissa on hamameja, karavaanisarajeja ja moskeijoita, ja Kale-linnoitus kohoaa kaupungin korkeimmalle kohdalle. Silta on yli 500 vuotta vanha ja kaupungin vaakunan pääaihe.",
+  "rajat": {
+   "pohjoinen": 42.0058,
+   "etela": 41.99342,
+   "lansi": 21.42807,
+   "ita": 21.44059
+  },
+  "kohteet": [
+   {
+    "nimi": "Kivisilta",
+    "lat": 41.99699,
+    "lon": 21.43307
+   },
+   {
+    "nimi": "Makedonia-aukio",
+    "tyyppi": "aukio",
+    "lat": 41.99612,
+    "lon": 21.4317
+   },
+   {
+    "nimi": "Skopjen linnoitus (Kale)",
+    "lat": 42,
+    "lon": 21.43444
+   },
+   {
+    "nimi": "Vanha basaari",
+    "tyyppi": "aukio",
+    "lat": 42.00076,
+    "lon": 21.43696
+   },
+   {
+    "nimi": "Mustafa-pasan moskeija",
+    "lat": 42.00194,
+    "lon": 21.43542
+   },
+   {
+    "nimi": "Kuršumli An",
+    "lat": 42.0031,
+    "lon": 21.4369
+   },
+   {
+    "nimi": "Daut-pasan hamam",
+    "lat": 41.9986,
+    "lon": 21.4356
+   }
+  ]
+ },
+ "nahtavyydet": {
+  "Kivisilta": {
+   "aika": "1451–1469",
+   "teksti": "Kivisilta yhdistää Makedonia-aukion ja Vanhan basaarin Vardarin yli. Se on 214 metriä pitkä ja 6 metriä leveä, ja sillä on 12 puolipyöreää kaarta. Silta rakennettiin roomalaisten perustusten päälle Mehmed II:n suojeluksessa vuosina 1451–1469, ja se on kaupungin vaakunan pääaihe.\n\nVuoden 1555 maanjäristys tuhosi tai vaurioitti neljä pilaria, ja korjaukset tehtiin samana vuonna. Marraskuussa 1944 sillalle asetetut räjähteet jätettiin viime hetkellä käyttämättä kaupunkilaisten pyynnöstä. Viimeisin kunnostus alkoi 1994 ja kesti seitsemän vuotta; silta oli sen ajan suljettu liikenteeltä, mikä vaikutti basaarin käsityöläisiin. Mihrabin muotoinen vartiotorni rekonstruoitiin 2008.\n\nIsoisän matkavuonna 1873 silta oli jo yli 400 vuotta vanha: se oli valmistunut viimeistään 1469, joten kaupunkilaiset kulkivat sen yli samoin kuin nykyäänkin.",
+   "kuvat": [
+    {
+     "tiedosto": "Stone Bridge (Skopje).JPG",
+     "selite": "Kivisilta on 214 metriä pitkä, ja sillä on 12 puolipyöreää kaarta.",
+     "lahde": "Avi1111 dr. avishai teicher, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Makedonia-aukio": {
+   "aika": "2000-luku (uudistettu)",
+   "teksti": "Makedonia-aukio on maan suurin aukio, ja sen kokonaispinta-ala on 18 500 neliömetriä. Se sijaitsee keskustassa Vardarin molemmin puolin, ja sille yhtyy kolme pääkatua: Maksim Gorki, Dimitar Vlahov ja Makedonia. Aukio kuuluu keskustan uudistushankkeeseen, joka toteutettiin 2000-luvulla.\n\nMaksim Gorki -kadun japaninkirsikat aloittavat keväisin viikon mittaisen aasialaisten kulttuuritapahtumien sarjan. Makedonia-katu yhdistää aukion vanhaan rautatieasemaan, ja aukiolla pidetään joulumarkkinat ja muita tapahtumia.\n\nIsoisän matkavuonna 1873 nykyistä aukiota ei vielä ollut. Rautatieasema oli juuri valmistunut Vardarin eteläpuolelle, ja lähteen mukaan talouselämä alkoi siirtyä joen sille puolelle, jota ei ollut aiemmin kaupunkirakennettu.",
+   "kuvat": [
+    {
+     "tiedosto": "Macedonia Square, Skopje, NMK.jpg",
+     "selite": "Makedonia-aukio on maan suurin aukio, ja sen pinta-ala on 18 500 neliömetriä.",
+     "lahde": "Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Skopjen linnoitus (Kale)": {
+   "aika": "500-luku",
+   "teksti": "Skopjen linnoitus eli Kale kohoaa kaupungin korkeimmalle kohdalle. Ensimmäinen linnoitus rakennettiin 500-luvulla keltaisesta kalkkikivestä ja travertiinista, ja lähteen mukaan materiaalia otettiin tuhoutuneesta Scupista; lähteiden mukaan myöhempiä vaiheita on 900–1000-luvuilta. Alueen vanhin asutus on Kale-kallionokalla jo 4. vuosituhannelta eaa.\n\nStefan Dušan kruunattiin keisariksi linnoituksessa 1346, ja hän siirsi Serbian valtakunnan pääkaupungin Skopjeen. Evliya Çelebi kuvasi vuonna 1660 linnoituksen kaksoismuureineen ja seitsemänkymmenine bastioneineen. Vuoden 1963 maanjäristys tuhosi osan linnoituksesta, ja se on sittemmin kunnostettu keskiaikaiseen ulkoasuunsa.\n\nKaivauksista 2006–2007 löytyi neoliittisia soitinesineitä ja koristekeramiikkaa jopa 3000 eaa. ajalta, ja toukokuussa 2010 löytyi Makedonian suurin bysanttilaisten kolikoiden aarre. Isoisän matkavuonna 1873 linnoitus oli ottomaanien Üskübin yllä, ja se on vaakunassa yhä.",
+   "kuvat": [
+    {
+     "tiedosto": "Skopje Fortress, 2026.jpg",
+     "selite": "Kale on kaupungin korkeimmalla kohdalla, ja sen ensimmäinen vaihe on 500-luvulta.",
+     "lahde": "Julian Lupyan, Wikimedia Commons (CC0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Vanha basaari": {
+   "aika": "1100–1600-luku",
+   "teksti": "Vanha basaari ulottuu Kivisillalta Bit-Pazarille ja Kale-linnoituksesta Serava-joelle. Lähteen mukaan se on ollut kaupan keskus ainakin 1100-luvulta ja yksi Balkanin vanhimmista ja suurimmista markkinapaikoista. Ottomaanikaudelta on jäljellä noin kolmekymmentä moskeijaa sekä lukuisia karavaanisarajeja ja hanejä, ja 1500–1600-luvuilla basaari saavutti kaupunkirakenteellisen ja taloudellisen huippunsa.\n\nBezisten, katettu kauppahalli, rakennettiin 1400-luvulla Gazi Ishak Beyn aikana. Se tuhoutui tulipalossa 1689, on kunnostettu ja näyttää 1899 kunnostuksen jälkeiseltä. Kellotorni on kuusikulmainen, ja järistys vaurioitti sitä 1963, mutta se korjattiin pian. Kapan Han on yksi kolmesta jäljellä olevasta karavaanisarajista.\n\nIsoisän matkavuonna 1873 basaari oli kaupungin elävä ydin: moskeijat, sarajit ja hamamit olivat jo paikallaan. Pohjois-Makedonian parlamentti suojeli sen kulttuuriperintönä 13.10.2008.",
+   "kuvat": [
+    {
+     "tiedosto": "Skopje Old Bazaar 1.jpg",
+     "selite": "Vanhan basaarin punakattoisten talojen seassa näkyvät hamamien kupolit ja minareetit.",
+     "lahde": "kallerna, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Mustafa-pasan moskeija": {
+   "aika": "1492",
+   "teksti": "Mustafa-pasan moskeija valmistui 1492. Sen rakennutti Çoban Mustafa-pasa, josta tuli myöhemmin Selim I:n visiiri. Moskeija seisoo tasanteella basaarin yläpuolella lähellä Kalea, ja siitä avautuu näköala basaarille. Lähteen mukaan se rakennettiin vanhalle kristilliselle paikalle.\n\nKupolin halkaisija on noin 16 metriä, ja minareetin korkeudeksi lähteet antavat noin 40–50 metriä. Portiikki lepää neljällä marmoripilarilla, joita koristavat stalaktiittimaiset yksityiskohdat, ja sen päällä on kolme pientä kupolia. Moskeijan piha on täynnä ruusuja.\n\nVieressä on türbe: Mustafa-pasa on haudattu kuusikulmaiseen marmoriseen türbeen, ja hänen tyttärensä Umi lepää koristeellisessa sarkofagissa, jonka kahdella seinällä on persialaisia kirjoituksia. Viisivuotinen kunnostus Turkin valtion rahoituksella valmistui elokuussa 2011. Isoisän matkavuonna 1873 moskeija oli jo yli 380 vuotta vanha.",
+   "kuvat": [
+    {
+     "tiedosto": "Mustafa Paşa Mosque, Skopje.jpg",
+     "selite": "Mustafa-pasan moskeijan minareetti ja kupoli kohoavat basaarin yläpuolelle.",
+     "lahde": "Pudelek, Wikimedia Commons (CC BY-SA 3.0)"
+    },
+    {
+     "tiedosto": "Mustafa Pasha Mosque Skopje 2.jpg",
+     "selite": "Moskeijan portiikki lepää neljällä marmoripilarilla.",
+     "lahde": "Radosław Botev, Wikimedia Commons (CC0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Kuršumli An": {
+   "aika": "1500-luku",
+   "teksti": "Kuršumli An on ottomaanien karavaanisaraji Vanhassa basaarissa, ja se on toiminut majatalona ja vankilana. Se rakennettiin lähteiden mukaan 1400- tai 1500-luvulla, ja toisen lähteen mukaan 1500-luvun puolivälissä. Se on isoin Vanhan basaarin kolmesta jäljellä olevasta karavaanisarajista.\n\nRakennus on neliömäinen, ja sen kupolit ovat pyramidin muotoisia. Kupolit katettiin alun perin lyijyllä, minkä vuoksi paikkaa on kutsuttu Lyijyn basaariksi tai Lyijyn majataloksi; lyijy poistettiin ensimmäisen maailmansodan aikana. Tallit oli mitoitettu sadalle hevoselle, ja alakerta toimi varastona tai eläinten tilana, yläkerta yöpyjien majoituksena.\n\nSen yhteydessä ollut 1600-luvun moskeija ja suurin osa hamamista tuhoutui 1963. Nykyään siellä on Pohjois-Makedonian museon patsaskokoelma. Isoisän matkavuonna 1873 sarajissa oli yli kolmesataa vuotta takana.",
+   "kuvat": [
+    {
+     "tiedosto": "Kursumli an, Skopje.jpg",
+     "selite": "Kuršumli Anin kaksikerroksinen kaaripiha oli alun perin karavaanien majatalo.",
+     "lahde": "Veraumka, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Daut-pasan hamam": {
+   "aika": "1400-luvun loppu",
+   "teksti": "Daut-pasan hamam on Vanhan basaarin tunnetuin kylpylä. Itä-Rumelian suurvisiiri Daut-pasa rahoitti basaarin rakennuksia vuosina 1489–1497, ja toisen lähteen mukaan hamam rakennettiin 1400-luvun lopulla. Rakennuksessa on 15 huonetta ja 13 kupolia: suurimmat kupolit peittävät pukuhuoneet ja loput yksittäisiä kylpyhuoneita.\n\nKansallisgalleria on toiminut rakennuksessa vuodesta 1948, ja se esittelee 1300–1900-lukujen maalauksia kahdessa entisessä hamamissa. Lähellä on Čifte Hamam, kaksoishamam, jossa on ollut nykytaidegalleria vuodesta 1963.\n\nIsoisän matkavuonna 1873 kylpylä oli vielä käytössä: Čifte Hamam toimi kylpylänä vuoteen 1915 asti, joten ottomaanien kylpyperinne oli kaupungissa elävää.",
+   "kuvat": [
+    {
+     "tiedosto": "Daut Pa$a Amam (9).JPG",
+     "selite": "Daut-pasan hamamin seinät on rakennettu tiili- ja kivijuovin, ja kupolit ovat lyijynharmaat.",
+     "lahde": "Darko Nikolovski, Wikimedia Commons (CC BY-SA 3.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  }
+ },
+ "saatiedot": {
+  "lat": 42,
+  "lon": 21.43,
+  "keskilampo": [
+   1.4,
+   3.9,
+   7.6,
+   12.5,
+   17.4,
+   20.9,
+   23.8,
+   25.1,
+   20.5,
+   15.1,
+   7.6,
+   3.6
+  ],
+  "sade": [
+   32,
+   41,
+   63,
+   84,
+   36,
+   51,
+   22,
+   36,
+   19,
+   42,
+   31,
+   49
+  ],
+  "luonnehdinta": "Skopjessa tammikuun keskilämpö on 1,4 ja elokuun 25,1 astetta, joten talvet ovat kylmiä ja kesät lämpimiä. Kevät on sateisin vuodenaika: huhtikuussa sataa keskimäärin 84 mm, kun syyskuussa vain 19 mm. Vuodessa sadetta kertyy yhteensä 506 mm."
+ },
+ "ehdotukset": {
+  "lentoasema": "Skopje International Airport (SKP)",
+  "huomiot": [
+   "Daut-pasan hamamin koordinaatti on Kansallisgallerian (Q3094685), hamamin oma sijainti tarkistamatta; Kalen koordinaatti on Wikidatasta (Q1262367), ei en-Wikipediasta.",
+   "Nostojen T2, T3 ja T4 wiki-kentissä on käytetty varmoja otsikoita (1963 Skopje earthquake, Skopje, Old Bazaar, Skopje), koska Nerezin, Ishak Beyn ja nykytaiteen museon omia artikkeleita ei voitu tarkistaa.",
+   "Konteksti.json kuvaa Matkan kanjonin luolien 20–176 m pituuksina, en-Wikipedian mukaan ne ovat syvyyksiä.",
+   "Oppaan matkustusturvallisuutta ei tarkistettu um.fi:stä eikä Wikivoyagesta (ei saatu); oppaassa ei väitetä mitään poikkeavaa. Scupin bussiyhteys jätettiin pois vanhenevana tietona.",
+   "Sademaksimi: fi-Wikipedia sanoo toukokuun, saa.json huhtikuun (84 mm); teksteissä käytetty saa.json:n lukuja.",
+   "Valokuvaksi ei löytynyt PD-vedosta (1900 tai aiemmin, vähintään 1200 px); päätiedosto on nykykuva eikä uusi-kenttää ole. Kuvien Unknown author -tekijä on Commonsin Artist-kentän mukainen."
+  ]
+ }
+}
