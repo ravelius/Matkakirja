@@ -1,0 +1,78 @@
+================ KOHTA 6 (kohde:apollonia) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apollonia (historia)
+Tietoruudun teksti: Apollonia on antiikin kaupungin rauniot lähellä Pojanin kylää Fierin alueella Albaniassa, noin kymmenen kilometrin päässä Adrianmeren rannikosta. Kaupungin perustivat noin vuonna 600 eaa. korinttolaiset uudisasukkaat, joita johti Gylax, ja hellenistisellä kaudella asukkaita arvioidaan olleen jopa 60 000. Kaupunki taantui 200-luvulla jkr., kun maanjäristys johti sataman liettymiseen, ja se autioitui 300-luvulle tultaessa. Nuori Gaius Octavius, myöhempi Augustus, opiskeli täällä vuonna 44 eaa. ja sai tiedon Caesarin murhasta Apolloniassa. Alue on nykyään arkeologinen puisto, jossa toimii myös museo.
+
+### 6.1
+KYSYMYS: Kuka johti Apollonian perustajia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apollonia (historia)
+Tietoruudun teksti: Apollonia on antiikin kaupungin rauniot lähellä Pojanin kylää Fierin alueella Albaniassa, noin kymmenen kilometrin päässä Adrianmeren rannikosta. Kaupungin perustivat noin vuonna 600 eaa. korinttolaiset uudisasukkaat, joita johti Gylax, ja hellenistisellä kaudella asukkaita arvioidaan olleen jopa 60 000. Kaupunki taantui 200-luvulla jkr., kun maanjäristys johti sataman liettymiseen, ja se autioitui 300-luvulle tultaessa. Nuori Gaius Octavius, myöhempi Augustus, opiskeli täällä vuonna 44 eaa. ja sai tiedon Caesarin murhasta Apolloniassa. Alue on nykyään arkeologinen puisto, jossa toimii myös museo.
+
+### 6.2
+KYSYMYS: Minkä tulevan keisarin kerrotaan opiskelleen kaupungissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apollonia (historia)
+Tietoruudun teksti: Apollonia on antiikin kaupungin rauniot lähellä Pojanin kylää Fierin alueella Albaniassa, noin kymmenen kilometrin päässä Adrianmeren rannikosta. Kaupungin perustivat noin vuonna 600 eaa. korinttolaiset uudisasukkaat, joita johti Gylax, ja hellenistisellä kaudella asukkaita arvioidaan olleen jopa 60 000. Kaupunki taantui 200-luvulla jkr., kun maanjäristys johti sataman liettymiseen, ja se autioitui 300-luvulle tultaessa. Nuori Gaius Octavius, myöhempi Augustus, opiskeli täällä vuonna 44 eaa. ja sai tiedon Caesarin murhasta Apolloniassa. Alue on nykyään arkeologinen puisto, jossa toimii myös museo.
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:hahmotelma-butrint) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Butrint (historia)
+Tietoruudun teksti: Butrint (antiikin Buthrotum) oli kreikkalaisten perustama, roomalaisten laajentama satamakaupunki Välimeren kauppareitillä — teatteri, kylpylät ja foorumi todistavat vuosisatoja kestäneestä vauraudesta. Keskiajan lopulla ympäröivä maasto muuttui soistuvaksi, ja asukkaat hylkäsivät kaupungin vähitellen; Unesco liitti sen maailmanperintöluetteloon 1992.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historia: Kaupunki, jonka suot nielaisivat] 600-luku eaa. – 1928 — Korkyran (nykyisen Korfun) kreikkalaiset perustivat Butrintiin kauppa-asutuksen viimeistään 600-luvulla eaa., ja siitä kasvoi vaurastuva Rooman-kauden kaupunki, jolla oli oma teatteri, kylpylät ja vesijohto. Bysantin aikana kaupungista tuli piispanistuin, ja lyhyen venetsialaiskauden jälkeen ympäristö alkoi soistua. Keskiajan lopulla Butrint hylättiin kokonaan, ja raunioita peitti vuosisatojen ajan malariasuo. Italialainen arkeologi Luigi Maria Ugolini alkoi kaivaa kaupunkia esiin 1928, ja työ paljasti kerroksia kreikkalaisesta, roomalaisesta ja bysanttilaisesta ajasta päällekkäin. Unesco liitti Butrintin maailmanperintöluetteloon 1992.
+
+### 7.1
+KYSYMYS: Miltä Butrint näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Butrint (historia)
+Tietoruudun teksti: Butrint (antiikin Buthrotum) oli kreikkalaisten perustama, roomalaisten laajentama satamakaupunki Välimeren kauppareitillä — teatteri, kylpylät ja foorumi todistavat vuosisatoja kestäneestä vauraudesta. Keskiajan lopulla ympäröivä maasto muuttui soistuvaksi, ja asukkaat hylkäsivät kaupungin vähitellen; Unesco liitti sen maailmanperintöluetteloon 1992.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historia: Kaupunki, jonka suot nielaisivat] 600-luku eaa. – 1928 — Korkyran (nykyisen Korfun) kreikkalaiset perustivat Butrintiin kauppa-asutuksen viimeistään 600-luvulla eaa., ja siitä kasvoi vaurastuva Rooman-kauden kaupunki, jolla oli oma teatteri, kylpylät ja vesijohto. Bysantin aikana kaupungista tuli piispanistuin, ja lyhyen venetsialaiskauden jälkeen ympäristö alkoi soistua. Keskiajan lopulla Butrint hylättiin kokonaan, ja raunioita peitti vuosisatojen ajan malariasuo. Italialainen arkeologi Luigi Maria Ugolini alkoi kaivaa kaupunkia esiin 1928, ja työ paljasti kerroksia kreikkalaisesta, roomalaisesta ja bysanttilaisesta ajasta päällekkäin. Unesco liitti Butrintin maailmanperintöluetteloon 1992.
+
+### 7.2
+KYSYMYS: Miksi Butrint on nykyään raunioina?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Butrint (historia)
+Tietoruudun teksti: Butrint (antiikin Buthrotum) oli kreikkalaisten perustama, roomalaisten laajentama satamakaupunki Välimeren kauppareitillä — teatteri, kylpylät ja foorumi todistavat vuosisatoja kestäneestä vauraudesta. Keskiajan lopulla ympäröivä maasto muuttui soistuvaksi, ja asukkaat hylkäsivät kaupungin vähitellen; Unesco liitti sen maailmanperintöluetteloon 1992.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historia: Kaupunki, jonka suot nielaisivat] 600-luku eaa. – 1928 — Korkyran (nykyisen Korfun) kreikkalaiset perustivat Butrintiin kauppa-asutuksen viimeistään 600-luvulla eaa., ja siitä kasvoi vaurastuva Rooman-kauden kaupunki, jolla oli oma teatteri, kylpylät ja vesijohto. Bysantin aikana kaupungista tuli piispanistuin, ja lyhyen venetsialaiskauden jälkeen ympäristö alkoi soistua. Keskiajan lopulla Butrint hylättiin kokonaan, ja raunioita peitti vuosisatojen ajan malariasuo. Italialainen arkeologi Luigi Maria Ugolini alkoi kaivaa kaupunkia esiin 1928, ja työ paljasti kerroksia kreikkalaisesta, roomalaisesta ja bysanttilaisesta ajasta päällekkäin. Unesco liitti Butrintin maailmanperintöluetteloon 1992.
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
