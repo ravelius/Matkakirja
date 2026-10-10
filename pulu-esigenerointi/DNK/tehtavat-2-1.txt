@@ -1,0 +1,1315 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Møllehøj (luonto · vuori)
+Tietoruudun teksti: Møllehøj on emämaan Tanskan korkein luonnollinen kohta: 170,86 metriä merenpinnasta. Se kohoaa Jyllannin sisämaan viljelysmaisemassa, eikä maassa ole yhtään vuorta — koko Tanska on jääkauden jälkeensä jättämää alavaa moreenimaata. Tanskan kuningaskunnan korkein kohta on aivan muualla, Grönlannin jäätiköiden keskellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historia: Kivi, jossa maan nimi lukee ensimmäisen kerran] 965 — Jellingin kylässä seisoo kaksi riimukiveä. Isomman pystytti noin vuonna 965 kuningas Harald Sinihammas, ja siihen on hakattu, että hän voitti koko Tanskan ja Norjan ja teki tanskalaisista kristittyjä. Sana Tanska esiintyy siinä ensimmäisen kerran maan omalla kielellä, ja siksi kiveä sanotaan maan syntytodistukseksi. Kuningas sai myöhemmin oudon jälkimaineen: langaton Bluetooth-yhteys on nimetty hänen mukaansa, koska se yhdistää laitteita kuten hän yhdisti heimoja.
+- [Tanska — maalehti / Keksinnöt: Myllyt seisovat meressä] 2000 — Tanska on tehnyt sähköä tuulesta pitempään kuin melkein kukaan: opettaja Poul la Cour rakensi jo 1890-luvulla tuulimyllyn, joka tuotti sähköä koulun tarpeisiin. Kööpenhaminan edustalle valmistui vuonna 2000 Middelgrundenin merituulipuisto, jonka kaksikymmentä myllyä seisovat kaaressa merellä. Puolet siitä rakennettiin osuuskuntana: tuhannet tavalliset ihmiset ostivat osuuden ja saavat siitä tuoton. Nykyään tuuli tuottaa yli puolet koko maan sähköstä.
+- [Tanska — maalehti / Menovinkit] Tanska on siirtänyt itsensä ruudulle: kansallisgallerian teokset saa ladata koneelle, koko maa näkyy ilmasta vuodesta 1890, kirkkojen holvimaalauksia selataan aiheittain ja merikotkanpesään näkee suorana.
+AIEMPI KYSYMYS: Miten näin matala kumpu voi olla maan korkein?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ei se kyl kummunkaan koosta kiinni ole. Maan korkeimman kohdan ei tarvitse olla vuori: [[Tanska]] on jääkauden jälkeensä jättämää alavaa [[moreenimaata]], jossa ei ole yhtään varsinaista vuorta, ja [[Møllehøj]] kohoaa Jyllannin sisämaan viljelysmaisemassa vain 170,86 metrin korkeuteen merenpinnasta. Se on emämaan Tanskan korkein luonnollinen kohta. Koko kuningaskunnan korkein kohta sen sijaan on aivan muualla, Grönlannin jäätiköiden keskellä. Tanskassa korkeus mitataan siis mäkinä eikä vuorina. Mut kyl sieltäkin näkee kauas.
+KYSYMYS: Kerro lisää: Tanska
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Møllehøj (luonto · vuori)
+Tietoruudun teksti: Møllehøj on emämaan Tanskan korkein luonnollinen kohta: 170,86 metriä merenpinnasta. Se kohoaa Jyllannin sisämaan viljelysmaisemassa, eikä maassa ole yhtään vuorta — koko Tanska on jääkauden jälkeensä jättämää alavaa moreenimaata. Tanskan kuningaskunnan korkein kohta on aivan muualla, Grönlannin jäätiköiden keskellä.
+AIEMPI KYSYMYS: Miten näin matala kumpu voi olla maan korkein?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ei se kyl kummunkaan koosta kiinni ole. Maan korkeimman kohdan ei tarvitse olla vuori: [[Tanska]] on jääkauden jälkeensä jättämää alavaa [[moreenimaata]], jossa ei ole yhtään varsinaista vuorta, ja [[Møllehøj]] kohoaa Jyllannin sisämaan viljelysmaisemassa vain 170,86 metrin korkeuteen merenpinnasta. Se on emämaan Tanskan korkein luonnollinen kohta. Koko kuningaskunnan korkein kohta sen sijaan on aivan muualla, Grönlannin jäätiköiden keskellä. Tanskassa korkeus mitataan siis mäkinä eikä vuorina. Mut kyl sieltäkin näkee kauas.
+KYSYMYS: Kerro lisää: moreenimaata
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Møllehøj (luonto · vuori)
+Tietoruudun teksti: Møllehøj on emämaan Tanskan korkein luonnollinen kohta: 170,86 metriä merenpinnasta. Se kohoaa Jyllannin sisämaan viljelysmaisemassa, eikä maassa ole yhtään vuorta — koko Tanska on jääkauden jälkeensä jättämää alavaa moreenimaata. Tanskan kuningaskunnan korkein kohta on aivan muualla, Grönlannin jäätiköiden keskellä.
+AIEMPI KYSYMYS: Miten näin matala kumpu voi olla maan korkein?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ei se kyl kummunkaan koosta kiinni ole. Maan korkeimman kohdan ei tarvitse olla vuori: [[Tanska]] on jääkauden jälkeensä jättämää alavaa [[moreenimaata]], jossa ei ole yhtään varsinaista vuorta, ja [[Møllehøj]] kohoaa Jyllannin sisämaan viljelysmaisemassa vain 170,86 metrin korkeuteen merenpinnasta. Se on emämaan Tanskan korkein luonnollinen kohta. Koko kuningaskunnan korkein kohta sen sijaan on aivan muualla, Grönlannin jäätiköiden keskellä. Tanskassa korkeus mitataan siis mäkinä eikä vuorina. Mut kyl sieltäkin näkee kauas.
+KYSYMYS: Kerro lisää: Møllehøj
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Møllehøj (luonto · vuori)
+Tietoruudun teksti: Møllehøj on emämaan Tanskan korkein luonnollinen kohta: 170,86 metriä merenpinnasta. Se kohoaa Jyllannin sisämaan viljelysmaisemassa, eikä maassa ole yhtään vuorta — koko Tanska on jääkauden jälkeensä jättämää alavaa moreenimaata. Tanskan kuningaskunnan korkein kohta on aivan muualla, Grönlannin jäätiköiden keskellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historian hetki: Roskildenvuono noin 1040 — kuusikymmentä airoa] n. 1040 — Ensimmäinen ääni on airon kolahdus hankaimeen, ja se toistuu kuusikymmentä kertaa yhtä aikaa. Nuori soutaja lähtee ensimmäiselle pitkälle matkalleen eikä tiedä, palaako miehistö kaupankävijöinä, sotureina vai ei lainkaan. Vuono on matala ja mutkitteleva, ja sen takana on koko maailma: Atlantti lännessä, idässä jokireitit Mustallemerelle. Miehet työntävät keulaa irti rantamudasta, kilvet on ripustettu laidalle matkan ajaksi, purje on raidallista villaa ja päähineet huopaa ja nahkaa — sarvikypärä on 1800-luvun oopperalavojen keksintö eikä esiinny yhdessäkään viikinkiajan löydössä. Juuri tällaisia laivoja tunnetaan tarkasti, koska viisi niistä upotettiin 1000-luvulla tähän samaan vuo…
+- [Tanska — maalehti / Luonto: Puu joka värjää koko maan vihreäksi] nykyään — Pyökki eli bøg on Tanskan kansallispuu, ja toukokuussa metsät käyvät läpi bøgespringiksi kutsutun muutoksen: lehdet puhkeavat lähes koko maassa saman viikon aikana, ja ruskea talvimetsä muuttuu muutamassa päivässä kirkkaan vihreäksi. Juuri ennen lehtien puhkeamista metsän pohja peittyy valkoisista vuokoista, jotka ehtivät kukkia ainoana hetkenä, jolloin auringonvalo pääsee vielä paljaiden oksien läpi maahan asti. Ilmiö houkuttelee joka kevät tuhansia retkeilijöitä metsiin, ja monet perheet tekevät siitä vuotuisen perinteen. Pyökkimetsiä on eniten Sjællannin ja Itä-Jyllannin alueilla, missä maaperä ja ilmasto sopivat puulle parhaiten.
+AIEMPI KYSYMYS: Mikä on Grönlannin korkein vuori?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Se on tosin aika kaukana minun tavallisilta reiteiltäni. Grönlannin korkein vuori on Gunnbjørn Fjeld, jonka korkeus on noin 3 700 metriä merenpinnasta; tarkasta luvusta en ole aivan varma. Se sijaitsee saaren itärannikon vuoristossa, kaukana asutuista alueista, ja se on myös Arktisen alueen korkeimpia huippuja. Vertailun vuoksi [[Tanskan]] emämaan korkein kohta [[Møllehøj]] yltää vain runsaaseen sataanseitsemääkymmeneen metriin. Siinä on eroa, ja kyl se näkyy kartallakin.
+KYSYMYS: Kerro lisää: Tanskan
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Møllehøj (luonto · vuori)
+Tietoruudun teksti: Møllehøj on emämaan Tanskan korkein luonnollinen kohta: 170,86 metriä merenpinnasta. Se kohoaa Jyllannin sisämaan viljelysmaisemassa, eikä maassa ole yhtään vuorta — koko Tanska on jääkauden jälkeensä jättämää alavaa moreenimaata. Tanskan kuningaskunnan korkein kohta on aivan muualla, Grönlannin jäätiköiden keskellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kilimandžaro — kaupunkilehti / Kilimanjaro: Saksan Itä-Afrikka] Vuodesta 1885 vuoteen 1918 Kilimanjaro kuului Saksan Itä-Afrikkaan, Saksan keisarikunnan siirtomaahan. Alueen hallintoa varten rakennettiin bomia eli hallintolinnoja, joista yksi pystytettiin Moshiin vuonna 1893. Ensimmäisen maailmansodan jälkeen alue siirtyi Britannian hallintaan Tanganjikan nimellä, ja vuonna 1961 itsenäistyneessä maassa kiivettiin Kilimanjaron huipulle pimeässä yössä nostamaan uusi lippu – tästä juontuu myös huipun myöhempi nimi Uhuru eli Vapaus.
+AIEMPI KYSYMYS: Mitä moreeni tarkoittaa ja miten se syntyy?
+AIEMPI VASTAUS (Livia):
+No niin, geologiaa. Tost pidän, vaikka siivet eivät kuulukaan kivien kantamiseen. Moreeni on jäätikön kuljettamaa ja jättämää sekoittunutta maa-ainesta, jossa on savea, hiekkaa, soraa ja isompia lohkareita kaikki yhdessä läjässä. Jäätikkö hiosi ja irrotti kiveä matkallaan ja kasasi aineksen sulaessaan paikoilleen, joten moreeni muodostaa harjuja, kumpuja ja tasaisempia maita. Suuri osa [[Tanskan]] ja [[Pohjois-Saksan]] pinnasta on tällaista [[jääkauden]] jälkeen jäänyttä maata. Kyl tää oli ihan sujuva selitys kyyhkyltä.
+KYSYMYS: Kerro lisää: Pohjois-Saksan
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Møllehøj (luonto · vuori)
+Tietoruudun teksti: Møllehøj on emämaan Tanskan korkein luonnollinen kohta: 170,86 metriä merenpinnasta. Se kohoaa Jyllannin sisämaan viljelysmaisemassa, eikä maassa ole yhtään vuorta — koko Tanska on jääkauden jälkeensä jättämää alavaa moreenimaata. Tanskan kuningaskunnan korkein kohta on aivan muualla, Grönlannin jäätiköiden keskellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vladivostok — kohdekartta / Kohdekartta: Arsenjevin museo] perustettu 1884 Kaukoidän ensimmäinen kotiseutumuseo sai alkunsa 18. huhtikuuta 1884, kun Amurinmaan tutkimusseuran säännöt vahvistettiin, ja ovet avautuivat yleisölle lokakuussa 1890. Vuonna 1945 museo nimettiin Vladimir Arsenjevin, Ussurinmaan tutkijan ja Dersu Uzalan kirjoittajan mukaan — hänen tarinansa on lehden taigasivulla. Kokoelmissa on seudun tutkijoiden, muun muassa Prževalskin, aineistoja, jääkauden fossiileja, 1100-luvun ylimyshauta ja Bohain valtakunnan hallitsijan peili; täytetyt tiikeri ja karhu ovat museon kuuluisin näky. Vuonna 2015 se oli Venäjän katsotuin aluemuseo, yli 421 000 kävijää, ja vuonna 2019 siitä tehtiin liittovaltion museo. Rakennus on tarina itsessään: kaupp…
+- [Whitehorse — kohdekartta / Kohdekartta: Beringia-keskus] 1997 Keskus avattiin 1997 Alaska Highwayn kilometrillä 1423 ja kertoo Beringiasta — 3 200 kilometrin levyisestä maa-alueesta, joka ulottui Siperian Kolyma-joelta Kanadan Mackenzie-joelle. Alue säilyi jääkaudella jäätiköitymättä, koska ilmasto oli kuiva ja lunta satoi vähän. Juuri siksi Beringia kiinnostaa arkeologeja ja paleontologeja: se oli eläinten ja ihmisten kulkureitti Aasian ja Amerikan välillä. Liikennettä oli molempiin suuntiin. Idän suuntaan tulivat mastodontit, mammutit, hirvieläimet, biisonit, lampaat ja myskihärät; länteen menivät hevoseläimet ja kamelit. Sanan Beringia keksi ruotsalainen kasvitieteilijä Eric Hultén vuonna 1937. Keskus on myös tutkimuslaitos. Sen aineistossa on…
+AIEMPI KYSYMYS: Mitä moreeni tarkoittaa ja miten se syntyy?
+AIEMPI VASTAUS (Livia):
+No niin, geologiaa. Tost pidän, vaikka siivet eivät kuulukaan kivien kantamiseen. Moreeni on jäätikön kuljettamaa ja jättämää sekoittunutta maa-ainesta, jossa on savea, hiekkaa, soraa ja isompia lohkareita kaikki yhdessä läjässä. Jäätikkö hiosi ja irrotti kiveä matkallaan ja kasasi aineksen sulaessaan paikoilleen, joten moreeni muodostaa harjuja, kumpuja ja tasaisempia maita. Suuri osa [[Tanskan]] ja [[Pohjois-Saksan]] pinnasta on tällaista [[jääkauden]] jälkeen jäänyttä maata. Kyl tää oli ihan sujuva selitys kyyhkyltä.
+KYSYMYS: Kerro lisää: jääkauden
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Møllehøj (luonto · vuori)
+Tietoruudun teksti: Møllehøj on emämaan Tanskan korkein luonnollinen kohta: 170,86 metriä merenpinnasta. Se kohoaa Jyllannin sisämaan viljelysmaisemassa, eikä maassa ole yhtään vuorta — koko Tanska on jääkauden jälkeensä jättämää alavaa moreenimaata. Tanskan kuningaskunnan korkein kohta on aivan muualla, Grönlannin jäätiköiden keskellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Luonto: Hiekkasärkkä joka kävelee] noin 1700 — Råbjerg Mile on Pohjois-Euroopan suurin liikkuva hiekkasärkkä: se on noin kaksi neliökilometriä laaja ja jopa 40 metriä korkea, ja siinä on arviolta neljä miljoonaa kuutiometriä hiekkaa. Tuuli työntää koko kummun koillista kohti jopa 18 metriä vuodessa, ja hiekan takana paljastuu matala, kostea vyöhyke, josta erottaa, mistä särkkä on kulkenut. Alkujaan hiekka nousi Länsi-Jyllannin rannikolta yli 300 vuotta sitten, ja se on ainoa laaja liikkuvien dyynien alue koko Tanskassa. Skagenin ja Frederikshavnin välissä liikkuvaa hiekkavuorta katsoo vuosittain noin 250 000 kävijää, jotka kiipeävät sen laelle katsomaan merta molempiin suuntiin.
+AIEMPI KYSYMYS: Mitä Møllehøj-nimi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Annas ku mietin. Nimi on tanskaa: sana mølle tarkoittaa myllyä ja høj mäkeä tai kumpua, joten [[Møllehøj]] on suunnilleen Myllymäki. Miksi juuri tälle mäelle on annettu tämä nimi, en ole varma, mutta myllyjä on perinteisesti rakennettu korkeille paikoille, joissa tuuli pääsee kääntämään siipiä. Samanlaisia -høj-päätteisiä nimiä on paljon [[Tanskassa]], koska kumpuja ja mäkiä riittää, vaikka vuoria ei olekaan. Tämä meni nyt ihan myllyn tahtiin.
+KYSYMYS: Kerro lisää: Tanskassa
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Møllehøj (luonto · vuori)
+Tietoruudun teksti: Møllehøj on emämaan Tanskan korkein luonnollinen kohta: 170,86 metriä merenpinnasta. Se kohoaa Jyllannin sisämaan viljelysmaisemassa, eikä maassa ole yhtään vuorta — koko Tanska on jääkauden jälkeensä jättämää alavaa moreenimaata. Tanskan kuningaskunnan korkein kohta on aivan muualla, Grönlannin jäätiköiden keskellä.
+AIEMPI KYSYMYS: Millainen maasto Jyllannissa on muuten?
+AIEMPI VASTAUS (Livia):
+Mmm— tästä riittäisi juttua. Minä olen lentänyt sen yli useammin kuin jaksan laskea. [[Jyllanti]] on Tanskan mantereinen niemimaa, ja sen maasto vaihtelee alueittain. Itäosassa on mäkistä [[moreenimaisemaa]], jota jääkausi on muovannut, ja siellä [[Møllehøj]] kohoaa viljelysmaiden keskellä. Länsiosassa maa on tasaisempaa, hiekkaista ja paikoin kanervaa kasvavaa, ja rannikolla on dyynejä ja matalia lahtia. Koko niemimaa on kuitenkin matalaa verrattuna vuoristomaihin. Ylhäältä se näyttää kauniilta peitolta.
+KYSYMYS: Kerro lisää: Jyllanti
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Møllehøj (luonto · vuori)
+Tietoruudun teksti: Møllehøj on emämaan Tanskan korkein luonnollinen kohta: 170,86 metriä merenpinnasta. Se kohoaa Jyllannin sisämaan viljelysmaisemassa, eikä maassa ole yhtään vuorta — koko Tanska on jääkauden jälkeensä jättämää alavaa moreenimaata. Tanskan kuningaskunnan korkein kohta on aivan muualla, Grönlannin jäätiköiden keskellä.
+AIEMPI KYSYMYS: Millainen maasto Jyllannissa on muuten?
+AIEMPI VASTAUS (Livia):
+Mmm— tästä riittäisi juttua. Minä olen lentänyt sen yli useammin kuin jaksan laskea. [[Jyllanti]] on Tanskan mantereinen niemimaa, ja sen maasto vaihtelee alueittain. Itäosassa on mäkistä [[moreenimaisemaa]], jota jääkausi on muovannut, ja siellä [[Møllehøj]] kohoaa viljelysmaiden keskellä. Länsiosassa maa on tasaisempaa, hiekkaista ja paikoin kanervaa kasvavaa, ja rannikolla on dyynejä ja matalia lahtia. Koko niemimaa on kuitenkin matalaa verrattuna vuoristomaihin. Ylhäältä se näyttää kauniilta peitolta.
+KYSYMYS: Kerro lisää: moreenimaisemaa
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Tanska on ainoa maa, jonka rannat ovat sekä tällä merellä että Itämerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Luonto: Meri joka häviää joka päivä] 2014 — Vadehavi on Pohjanmeren matala rannikkovyöhyke, jonka vuorovesi paljastaa ja peittää kahdesti vuorokaudessa: nousuveden aikaan kaikki on merta, laskuveden aikaan silmänkantamattomiin avautuu lietettä ja hiekkasärkkiä. Oppaat vievät kävijöitä avojaloin lietteen yli sinne, missä äsken kulki vene. Alue on yksi maailman tärkeimmistä lintualueista: miljoonat muutto- ja pesimälinnut käyttävät sitä matkalla tai kotina. Hollannin ja Saksan vadehavi liitettiin Unescon maailmanperintöluetteloon 2009, ja Tanskan osuus seurasi kesäkuussa 2014 — nyt koko rannikkokaistale Esbjergistä Saksan rajalle on yhtä suojeltua merenpohjaa.
+- [Saksa — maalehti / Luonto: Meri vetäytyy ja pohja aukeaa] Pohjanmeren rannikolla meri vetäytyy kahdesti päivässä kilometrien päähän ja jättää jälkeensä Wattenmeerin: mutatasangon, jota pitkin voi kävellä merenpohjassa saarelta toiselle. Opas kulkee aina mukana, sillä vuoksi palaa nopeammin kuin ihminen juoksee. Pohja näyttää tyhjältä mutta kuhisee elämää: yhdessä neliömetrissä voi asua kymmeniätuhansia matoja, kotiloita ja simpukoita, ja hietikoilla lepää kirjohylkeitä. Vattimeri on Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Mikä Vattimeri on?
+AIEMPI VASTAUS (Livia):
+Kato, tää on mun mieliaiheita. Kyyhkynkin jalat kastuvat siellä mielellään. Vattimeri on matala vuorovesialue [[Pohjanmeren]] rannikolla, joka vetäytyy joka luoteella pois ja paljastaa laajoja mutatasankoja. Silloin sinne lähdetään kävelemään: [[wadlopen]] tarkoittaa kävelyä merenpohjaa pitkin mantereelta saarille, esimerkiksi Schiermonnikoogille tai Amelandille. Matkalla kahlataan virtauomien poikki, joissa vesi voi nousta rintaan asti, ja tärkein varuste on kello, sillä [[vuorovesi]] palaa. Yksin ei lähdetä, vaan mukaan tarvitaan viranomaisen hyväksymä opas. Pohja kuhisee elämää, ja hietikoilla lepää kirjohylkeitä. Alankomaiden ja Saksan Vattimeri on ollut Unescon maailmanperintökohde vuodesta 2009. Kyl tää kuulostaa minusta vähän liian märältä.
+KYSYMYS: Kerro lisää: Pohjanmeren
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Tanska on ainoa maa, jonka rannat ovat sekä tällä merellä että Itämerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Merenpohjan yli kävellään saarelle] nykyään — Maan pohjoisrannikon edessä on Vattimeri, matala vesi, joka vetäytyy joka luoteella pois ja paljastaa mutatasangot. Silloin sinne lähdetään kävelemään. Wadlopen tarkoittaa juuri sitä: kävelyä merenpohjaa pitkin mantereelta saarille, esimerkiksi Schiermonnikoogille tai Amelandille. Matkalla kahlataan virtauomien poikki, joissa vesi voi nousta rintaan asti, ja tärkein varuste on kello, sillä vuorovesi palaa. Yksin ei lähdetä: mukaan tarvitaan viranomaisen hyväksymä opas. Vattimeri on ollut maailmanperintökohde vuodesta 2009.
+AIEMPI KYSYMYS: Mikä Vattimeri on?
+AIEMPI VASTAUS (Livia):
+Kato, tää on mun mieliaiheita. Kyyhkynkin jalat kastuvat siellä mielellään. Vattimeri on matala vuorovesialue [[Pohjanmeren]] rannikolla, joka vetäytyy joka luoteella pois ja paljastaa laajoja mutatasankoja. Silloin sinne lähdetään kävelemään: [[wadlopen]] tarkoittaa kävelyä merenpohjaa pitkin mantereelta saarille, esimerkiksi Schiermonnikoogille tai Amelandille. Matkalla kahlataan virtauomien poikki, joissa vesi voi nousta rintaan asti, ja tärkein varuste on kello, sillä [[vuorovesi]] palaa. Yksin ei lähdetä, vaan mukaan tarvitaan viranomaisen hyväksymä opas. Pohja kuhisee elämää, ja hietikoilla lepää kirjohylkeitä. Alankomaiden ja Saksan Vattimeri on ollut Unescon maailmanperintökohde vuodesta 2009. Kyl tää kuulostaa minusta vähän liian märältä.
+KYSYMYS: Kerro lisää: wadlopen
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Tanska on ainoa maa, jonka rannat ovat sekä tällä merellä että Itämerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Välimeren voimakkain vuorovesi] Gabèsin lahti ulottuu Sfaxista Djerbaan, ja antiikissa se tunnettiin nimellä Syrtis Minor, Pieni Syrtti. Välimerellä vuorovesi jää useimmiten muutamaan kymmeneen senttiin, mutta lahden pohjukassa Gabèsin kohdalla se nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Gabès ja Sfax ovat lahden suuret satamat, ja ne elävät sienestä ja tonnikalasta. Syrtti mainitaan myös Uudessa testamentissa: kun Paavalia kuljetettiin vankina Roomaan, laivan miehistö pelkäsi myrskyn ajavan aluksen Syrttiin ja teki kaikkensa välttääkseen sen.
+- [Broome — kaupunkilehti / Dinosaurukset ja vuorovesi] Broomen rannikko ei ole vain ihmisten satama: liuskekivessä uinuu 130 miljoonan vuoden takaisia dinosaurusten jälkiä, ja Roebuck Bayn vuorovesi loihtii joka kuukausi ilmiön, jota ei näe missään muualla maailmassa.
+- [Lontoo — kohdekartta / Kohdekartta: Thamesin vuorovesi] Se sumu, joka söi äänet, nousi joesta — ja se joki ei ole Lontoossa tavallinen joki. Thames on vuorovesijoki Teddingtonin sulkuun asti: vesi nousee ja laskee kahdesti vuorokaudessa, keskustassa parhaimmillaan noin seitsemän metriä. Laskuveden aikaan kivinen ranta paljastuu keskellä miljoonakaupunkia, ja sinne lasketaan portaita pitkin etsimään savipiippuja ja astiansirpaleita. Etsijöitä sanotaan mudlarkeiksi, ja ammatti on isoisääsi vanhempi. Ranta ei silti ole vapaata riistaa: lupa on ostettava satamaviranomaiselta, ja kun lupia oli kertynyt yli 5 000, myynti keskeytettiin vuonna 2022. Se avattiin uudelleen 2024, mutta lupia jaetaan enintään 4 000. Yli kolmesataa vuotta vanhat löydöt on il…
+AIEMPI KYSYMYS: Mikä Vattimeri on?
+AIEMPI VASTAUS (Livia):
+Kato, tää on mun mieliaiheita. Kyyhkynkin jalat kastuvat siellä mielellään. Vattimeri on matala vuorovesialue [[Pohjanmeren]] rannikolla, joka vetäytyy joka luoteella pois ja paljastaa laajoja mutatasankoja. Silloin sinne lähdetään kävelemään: [[wadlopen]] tarkoittaa kävelyä merenpohjaa pitkin mantereelta saarille, esimerkiksi Schiermonnikoogille tai Amelandille. Matkalla kahlataan virtauomien poikki, joissa vesi voi nousta rintaan asti, ja tärkein varuste on kello, sillä [[vuorovesi]] palaa. Yksin ei lähdetä, vaan mukaan tarvitaan viranomaisen hyväksymä opas. Pohja kuhisee elämää, ja hietikoilla lepää kirjohylkeitä. Alankomaiden ja Saksan Vattimeri on ollut Unescon maailmanperintökohde vuodesta 2009. Kyl tää kuulostaa minusta vähän liian märältä.
+KYSYMYS: Kerro lisää: vuorovesi
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Tanska on ainoa maa, jonka rannat ovat sekä tällä merellä että Itämerellä.
+AIEMPI KYSYMYS: Miksi Jyllannin länsirannikko on niin suora?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Sen minä olen nähnyt monta kertaa ylhäältä. Jyllannin länsirannikko on avoinna suoraan [[Pohjanmerelle]], ja aallot ja rannikkovirrat ovat vuosisatojen ajan tasoittaneet hiekkaisen rannan lähes suoraksi. Ne irrottavat hiekkaa jostakin kohdasta ja kasaavat sitä toisaalle, jolloin sopukat täyttyvät ja niemet kuluvat pois. Rannalle syntyy pitkiä hiekkasärkkiä ja dyynejä. Tästä rannikolta nousi aikoinaan myös se hiekka, josta [[Råbjerg Mile]] on koottu. Itärannikolla vuonot ja saaret katkovat rantaviivaa, koska siellä aallokko on heikompaa. Suora viiva on kyl yksinkertaisin ratkaisu merelle.
+KYSYMYS: Kerro lisää: Pohjanmerelle
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Tanska on ainoa maa, jonka rannat ovat sekä tällä merellä että Itämerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Luonto: Hiekkasärkkä joka kävelee] noin 1700 — Råbjerg Mile on Pohjois-Euroopan suurin liikkuva hiekkasärkkä: se on noin kaksi neliökilometriä laaja ja jopa 40 metriä korkea, ja siinä on arviolta neljä miljoonaa kuutiometriä hiekkaa. Tuuli työntää koko kummun koillista kohti jopa 18 metriä vuodessa, ja hiekan takana paljastuu matala, kostea vyöhyke, josta erottaa, mistä särkkä on kulkenut. Alkujaan hiekka nousi Länsi-Jyllannin rannikolta yli 300 vuotta sitten, ja se on ainoa laaja liikkuvien dyynien alue koko Tanskassa. Skagenin ja Frederikshavnin välissä liikkuvaa hiekkavuorta katsoo vuosittain noin 250 000 kävijää, jotka kiipeävät sen laelle katsomaan merta molempiin suuntiin.
+AIEMPI KYSYMYS: Miksi Jyllannin länsirannikko on niin suora?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Sen minä olen nähnyt monta kertaa ylhäältä. Jyllannin länsirannikko on avoinna suoraan [[Pohjanmerelle]], ja aallot ja rannikkovirrat ovat vuosisatojen ajan tasoittaneet hiekkaisen rannan lähes suoraksi. Ne irrottavat hiekkaa jostakin kohdasta ja kasaavat sitä toisaalle, jolloin sopukat täyttyvät ja niemet kuluvat pois. Rannalle syntyy pitkiä hiekkasärkkiä ja dyynejä. Tästä rannikolta nousi aikoinaan myös se hiekka, josta [[Råbjerg Mile]] on koottu. Itärannikolla vuonot ja saaret katkovat rantaviivaa, koska siellä aallokko on heikompaa. Suora viiva on kyl yksinkertaisin ratkaisu merelle.
+KYSYMYS: Kerro lisää: Råbjerg Mile
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Tanska on ainoa maa, jonka rannat ovat sekä tällä merellä että Itämerellä.
+AIEMPI KYSYMYS: Mikä on Doggerbank?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Doggerbank on minulle vähän kuin maailman matalin keskilaituri. Se on laaja matala hiekkasärkkä keskellä [[Pohjanmerta]], jossa vesi on huomattavasti ympäristöä matalampaa. Jääkauden aikana ja sen jälkeen alue oli kuivaa maata, ja tutkijat kutsuvat sitä [[Doggerlandiksi]]; se yhdisti Britannian mantereeseen ennen kuin nouseva merenpinta peitti sen noin kahdeksan tuhatta vuotta sitten, ainakin suuntaa-antavasti. Alue on tärkeä kalastukselle, ja merenpohjasta on löytynyt muun muassa muinaisia työkaluja. En ole varma kaikista yksityiskohdista, mutta suuntaa nuo kertovat. Voi, miten pitkä matka tämäkin oli kuvitella.
+KYSYMYS: Kerro lisää: Pohjanmerta
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Tanska on ainoa maa, jonka rannat ovat sekä tällä merellä että Itämerellä.
+AIEMPI KYSYMYS: Mikä on Doggerbank?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Doggerbank on minulle vähän kuin maailman matalin keskilaituri. Se on laaja matala hiekkasärkkä keskellä [[Pohjanmerta]], jossa vesi on huomattavasti ympäristöä matalampaa. Jääkauden aikana ja sen jälkeen alue oli kuivaa maata, ja tutkijat kutsuvat sitä [[Doggerlandiksi]]; se yhdisti Britannian mantereeseen ennen kuin nouseva merenpinta peitti sen noin kahdeksan tuhatta vuotta sitten, ainakin suuntaa-antavasti. Alue on tärkeä kalastukselle, ja merenpohjasta on löytynyt muun muassa muinaisia työkaluja. En ole varma kaikista yksityiskohdista, mutta suuntaa nuo kertovat. Voi, miten pitkä matka tämäkin oli kuvitella.
+KYSYMYS: Kerro lisää: Doggerlandiksi
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Tanska on ainoa maa, jonka rannat ovat sekä tällä merellä että Itämerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historia: Kivi, jossa maan nimi lukee ensimmäisen kerran] 965 — Jellingin kylässä seisoo kaksi riimukiveä. Isomman pystytti noin vuonna 965 kuningas Harald Sinihammas, ja siihen on hakattu, että hän voitti koko Tanskan ja Norjan ja teki tanskalaisista kristittyjä. Sana Tanska esiintyy siinä ensimmäisen kerran maan omalla kielellä, ja siksi kiveä sanotaan maan syntytodistukseksi. Kuningas sai myöhemmin oudon jälkimaineen: langaton Bluetooth-yhteys on nimetty hänen mukaansa, koska se yhdistää laitteita kuten hän yhdisti heimoja.
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+AIEMPI KYSYMYS: Mitä resursseja Pohjanmerestä saadaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tästä kuulee jatkuvasti torilla. Pohjanmeri on Euroopan tärkeimpiä merialueita: sieltä pyydetään kalaa, ja pohjan alta on pumpattu öljyä ja maakaasua 1960-luvun lopulla alkaneiden löytöjen jälkeen, erityisesti [[Norjan]] ja Ison-Britannian vesillä. Matala mannerjalusta ja kova tuuli ovat tehneet merestä myös [[tuulivoiman]] keskuksen, ja avomerelle on rakennettu suuria tuulipuistoja. Lisäksi meri on yksi maailman vilkkaimmista laivareiteistä. Pohjanmeri on siis aika vilkas paikka. Ja minä en saanut siitä yhtään pullaa.
+KYSYMYS: Kerro lisää: Norjan
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Tanska on ainoa maa, jonka rannat ovat sekä tällä merellä että Itämerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+- [Geraldton — kaupunkilehti / Geraldton: Kaupunki jota tuuli ei jätä rauhaan] Geraldtonia kutsutaan usein Australian tuulisimmaksi kaupungiksi, ja nimitys on ansaittu: iltapäivisin lokakuusta huhtikuuhun mereltä puhaltaa lähes joka päivä voimakas ja tasainen etelätuuli. Paikalliset kutsuvat sitä luotettavaksi iltatuuleksi, ja se on tehnyt kaupungista yhden Australian suosituimmista purjelautailu- ja leijalautailukohteista. Lähistön Coronation Beach on tunnettu jopa kansainvälisistä kilpailuista, joihin osallistujia saapuu ympäri maailmaa nauttimaan aalloista ja tasaisesta tuulesta. Sama tuuli, joka nykyään houkuttelee lautailijoita, oli 1800-luvulla purjelaivoille sekä siunaus että riski.
+AIEMPI KYSYMYS: Mitä resursseja Pohjanmerestä saadaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tästä kuulee jatkuvasti torilla. Pohjanmeri on Euroopan tärkeimpiä merialueita: sieltä pyydetään kalaa, ja pohjan alta on pumpattu öljyä ja maakaasua 1960-luvun lopulla alkaneiden löytöjen jälkeen, erityisesti [[Norjan]] ja Ison-Britannian vesillä. Matala mannerjalusta ja kova tuuli ovat tehneet merestä myös [[tuulivoiman]] keskuksen, ja avomerelle on rakennettu suuria tuulipuistoja. Lisäksi meri on yksi maailman vilkkaimmista laivareiteistä. Pohjanmeri on siis aika vilkas paikka. Ja minä en saanut siitä yhtään pullaa.
+KYSYMYS: Kerro lisää: tuulivoiman
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Tanska on ainoa maa, jonka rannat ovat sekä tällä merellä että Itämerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan tuomiokirkko] 1861 Tromssan tuomiokirkko on kokonaan puusta rakennettu keltainen kirkko, joka valmistui vuonna 1861 arkkitehti Christian Heinrich Groschin piirustusten mukaan. Se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu puusta - ja sen sisään mahtuu yli 600 kirkkovierasta! Paikalla on ollut kirkko jo satoja vuosia ennen tätäkin: kuningas Håkon IV rakennutti tänne kappelin jo vuonna 1252, ja sen jälkeen paikalla on ollut ainakin kaksi muuta kirkkoa ennen nykyistä rakennusta. Kellotorni valmistui vuotta myöhemmin, 1862, ja kirkkoa koristeltiin lisää vielä 1880-luvulla. Isoisän vieraillessa Tromssassa 1873 kirkko oli vasta reilut kymmenen vuotta vanha - täysin uusi nähtävyys pienessä pu…
+AIEMPI KYSYMYS: Kuinka syvä Pohjanmeri on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Sitä en ole itse mitannut. Pohjanmeri on Euroopan mannerjalustalla, ja suuri osa siitä on matalaa: etenkin eteläosassa vesi on vain kymmeniä metrejä syvää. Pohjoisessa syvyys kasvaa, ja [[Norjan]] rannikon edustalla on [[Norjanrauma]], jonka syvin kohta on noin seitsemänsataa metriä; tarkasta luvusta en ole varma. Keskisyvyys on kuitenkin vain noin sata metriä, joten meri on valtameriin verrattuna hyvin matala. Siksi [[Pohjanmeri]] myös myrskyää nopeasti, kun aallot törmäävät pohjaan. Syvyys on siis suhteellista, ja minä pysyn mieluummin pinnalla.
+KYSYMYS: Kerro lisää: Norjanrauma
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Tanska on ainoa maa, jonka rannat ovat sekä tällä merellä että Itämerellä.
+AIEMPI KYSYMYS: Kuinka syvä Pohjanmeri on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Sitä en ole itse mitannut. Pohjanmeri on Euroopan mannerjalustalla, ja suuri osa siitä on matalaa: etenkin eteläosassa vesi on vain kymmeniä metrejä syvää. Pohjoisessa syvyys kasvaa, ja [[Norjan]] rannikon edustalla on [[Norjanrauma]], jonka syvin kohta on noin seitsemänsataa metriä; tarkasta luvusta en ole varma. Keskisyvyys on kuitenkin vain noin sata metriä, joten meri on valtameriin verrattuna hyvin matala. Siksi [[Pohjanmeri]] myös myrskyää nopeasti, kun aallot törmäävät pohjaan. Syvyys on siis suhteellista, ja minä pysyn mieluummin pinnalla.
+KYSYMYS: Kerro lisää: Pohjanmeri
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Suolaisen veden ovi on Tanskan: Juutinrauma, Iso-Belt ja Vähä-Belt ovat meren ainoa yhteys Pohjanmerelle, ja niiden matalat kynnykset päästävät suolavettä sisään vain harvakseltaan. Siksi juuri ne ovat aina olleet Itämeren avain.
+AIEMPI KYSYMYS: Miksi Itämeren vesi on murtovettä?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on oikeasti hyvä juttu. Sanotaan että kyl tää vettä riittää. Itämeri on murtovettä, koska siihen virtaa paljon makeaa vettä jokien mukana ja koska sen yhteys valtamereen on hyvin ahdas. Ainoa väylä [[Pohjanmerelle]] kulkee [[Juutinrauman]], [[Iso-Beltin]] ja Vähä-Beltin kautta, ja salmien matalat kynnykset päästävät suolaista vettä sisään vain harvakseltaan. Makea vesi ja suolainen vesi eivät siis sekoitu tasaisesti, vaan pohjoisessa vesi on lähes makeaa ja lounaassa suolaisempaa. Itämeri on maailman suurin murtovesiallas. Pulla on kyl kuivempaa kuin tämä meri.
+KYSYMYS: Kerro lisää: Pohjanmerelle
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Suolaisen veden ovi on Tanskan: Juutinrauma, Iso-Belt ja Vähä-Belt ovat meren ainoa yhteys Pohjanmerelle, ja niiden matalat kynnykset päästävät suolavettä sisään vain harvakseltaan. Siksi juuri ne ovat aina olleet Itämeren avain.
+AIEMPI KYSYMYS: Miksi Itämeren vesi on murtovettä?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on oikeasti hyvä juttu. Sanotaan että kyl tää vettä riittää. Itämeri on murtovettä, koska siihen virtaa paljon makeaa vettä jokien mukana ja koska sen yhteys valtamereen on hyvin ahdas. Ainoa väylä [[Pohjanmerelle]] kulkee [[Juutinrauman]], [[Iso-Beltin]] ja Vähä-Beltin kautta, ja salmien matalat kynnykset päästävät suolaista vettä sisään vain harvakseltaan. Makea vesi ja suolainen vesi eivät siis sekoitu tasaisesti, vaan pohjoisessa vesi on lähes makeaa ja lounaassa suolaisempaa. Itämeri on maailman suurin murtovesiallas. Pulla on kyl kuivempaa kuin tämä meri.
+KYSYMYS: Kerro lisää: Juutinrauman
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Suolaisen veden ovi on Tanskan: Juutinrauma, Iso-Belt ja Vähä-Belt ovat meren ainoa yhteys Pohjanmerelle, ja niiden matalat kynnykset päästävät suolavettä sisään vain harvakseltaan. Siksi juuri ne ovat aina olleet Itämeren avain.
+AIEMPI KYSYMYS: Miksi Itämeren vesi on murtovettä?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on oikeasti hyvä juttu. Sanotaan että kyl tää vettä riittää. Itämeri on murtovettä, koska siihen virtaa paljon makeaa vettä jokien mukana ja koska sen yhteys valtamereen on hyvin ahdas. Ainoa väylä [[Pohjanmerelle]] kulkee [[Juutinrauman]], [[Iso-Beltin]] ja Vähä-Beltin kautta, ja salmien matalat kynnykset päästävät suolaista vettä sisään vain harvakseltaan. Makea vesi ja suolainen vesi eivät siis sekoitu tasaisesti, vaan pohjoisessa vesi on lähes makeaa ja lounaassa suolaisempaa. Itämeri on maailman suurin murtovesiallas. Pulla on kyl kuivempaa kuin tämä meri.
+KYSYMYS: Kerro lisää: Iso-Beltin
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Suolaisen veden ovi on Tanskan: Juutinrauma, Iso-Belt ja Vähä-Belt ovat meren ainoa yhteys Pohjanmerelle, ja niiden matalat kynnykset päästävät suolavettä sisään vain harvakseltaan. Siksi juuri ne ovat aina olleet Itämeren avain.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Luonto: Meri joka häviää joka päivä] 2014 — Vadehavi on Pohjanmeren matala rannikkovyöhyke, jonka vuorovesi paljastaa ja peittää kahdesti vuorokaudessa: nousuveden aikaan kaikki on merta, laskuveden aikaan silmänkantamattomiin avautuu lietettä ja hiekkasärkkiä. Oppaat vievät kävijöitä avojaloin lietteen yli sinne, missä äsken kulki vene. Alue on yksi maailman tärkeimmistä lintualueista: miljoonat muutto- ja pesimälinnut käyttävät sitä matkalla tai kotina. Hollannin ja Saksan vadehavi liitettiin Unescon maailmanperintöluetteloon 2009, ja Tanskan osuus seurasi kesäkuussa 2014 — nyt koko rannikkokaistale Esbjergistä Saksan rajalle on yhtä suojeltua merenpohjaa.
+- [Saksa — maalehti / Luonto: Meri vetäytyy ja pohja aukeaa] Pohjanmeren rannikolla meri vetäytyy kahdesti päivässä kilometrien päähän ja jättää jälkeensä Wattenmeerin: mutatasangon, jota pitkin voi kävellä merenpohjassa saarelta toiselle. Opas kulkee aina mukana, sillä vuoksi palaa nopeammin kuin ihminen juoksee. Pohja näyttää tyhjältä mutta kuhisee elämää: yhdessä neliömetrissä voi asua kymmeniätuhansia matoja, kotiloita ja simpukoita, ja hietikoilla lepää kirjohylkeitä. Vattimeri on Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Mitkä salmet yhdistävät Itämeren Pohjanmereen?
+AIEMPI VASTAUS (Livia):
+Kato, tää menee helposti. Reitti kulkee kokonaan Tanskan vesillä. Itämeren ja [[Pohjanmeren]] välillä on kolme salmea: [[Juutinrauma]] Sjællandin ja Ruotsin välillä, Iso-Belt Sjællandin ja Fynin saaren välillä sekä Vähä-Belt Fynin ja Jyllannin niemimaan välillä. Ne ovat Itämeren ainoa yhteys Pohjanmerelle, ja matalat kynnykset päästävät suolaista vettä sisään vain harvakseltaan. Siksi nämä salmet ovat aina olleet Itämeren portti, jonka kautta kulkee laivaliikenne ja jota [[Tanska]] on vartioinut. Kolme salmea kuulostaa vähältä, mut sillä riittää.
+KYSYMYS: Kerro lisää: Pohjanmeren
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Suolaisen veden ovi on Tanskan: Juutinrauma, Iso-Belt ja Vähä-Belt ovat meren ainoa yhteys Pohjanmerelle, ja niiden matalat kynnykset päästävät suolavettä sisään vain harvakseltaan. Siksi juuri ne ovat aina olleet Itämeren avain.
+AIEMPI KYSYMYS: Mitkä salmet yhdistävät Itämeren Pohjanmereen?
+AIEMPI VASTAUS (Livia):
+Kato, tää menee helposti. Reitti kulkee kokonaan Tanskan vesillä. Itämeren ja [[Pohjanmeren]] välillä on kolme salmea: [[Juutinrauma]] Sjællandin ja Ruotsin välillä, Iso-Belt Sjællandin ja Fynin saaren välillä sekä Vähä-Belt Fynin ja Jyllannin niemimaan välillä. Ne ovat Itämeren ainoa yhteys Pohjanmerelle, ja matalat kynnykset päästävät suolaista vettä sisään vain harvakseltaan. Siksi nämä salmet ovat aina olleet Itämeren portti, jonka kautta kulkee laivaliikenne ja jota [[Tanska]] on vartioinut. Kolme salmea kuulostaa vähältä, mut sillä riittää.
+KYSYMYS: Kerro lisää: Juutinrauma
+
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Suolaisen veden ovi on Tanskan: Juutinrauma, Iso-Belt ja Vähä-Belt ovat meren ainoa yhteys Pohjanmerelle, ja niiden matalat kynnykset päästävät suolavettä sisään vain harvakseltaan. Siksi juuri ne ovat aina olleet Itämeren avain.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historia: Kivi, jossa maan nimi lukee ensimmäisen kerran] 965 — Jellingin kylässä seisoo kaksi riimukiveä. Isomman pystytti noin vuonna 965 kuningas Harald Sinihammas, ja siihen on hakattu, että hän voitti koko Tanskan ja Norjan ja teki tanskalaisista kristittyjä. Sana Tanska esiintyy siinä ensimmäisen kerran maan omalla kielellä, ja siksi kiveä sanotaan maan syntytodistukseksi. Kuningas sai myöhemmin oudon jälkimaineen: langaton Bluetooth-yhteys on nimetty hänen mukaansa, koska se yhdistää laitteita kuten hän yhdisti heimoja.
+- [Tanska — maalehti / Keksinnöt: Myllyt seisovat meressä] 2000 — Tanska on tehnyt sähköä tuulesta pitempään kuin melkein kukaan: opettaja Poul la Cour rakensi jo 1890-luvulla tuulimyllyn, joka tuotti sähköä koulun tarpeisiin. Kööpenhaminan edustalle valmistui vuonna 2000 Middelgrundenin merituulipuisto, jonka kaksikymmentä myllyä seisovat kaaressa merellä. Puolet siitä rakennettiin osuuskuntana: tuhannet tavalliset ihmiset ostivat osuuden ja saavat siitä tuoton. Nykyään tuuli tuottaa yli puolet koko maan sähköstä.
+- [Tanska — maalehti / Menovinkit] Tanska on siirtänyt itsensä ruudulle: kansallisgallerian teokset saa ladata koneelle, koko maa näkyy ilmasta vuodesta 1890, kirkkojen holvimaalauksia selataan aiheittain ja merikotkanpesään näkee suorana.
+AIEMPI KYSYMYS: Mitkä salmet yhdistävät Itämeren Pohjanmereen?
+AIEMPI VASTAUS (Livia):
+Kato, tää menee helposti. Reitti kulkee kokonaan Tanskan vesillä. Itämeren ja [[Pohjanmeren]] välillä on kolme salmea: [[Juutinrauma]] Sjællandin ja Ruotsin välillä, Iso-Belt Sjællandin ja Fynin saaren välillä sekä Vähä-Belt Fynin ja Jyllannin niemimaan välillä. Ne ovat Itämeren ainoa yhteys Pohjanmerelle, ja matalat kynnykset päästävät suolaista vettä sisään vain harvakseltaan. Siksi nämä salmet ovat aina olleet Itämeren portti, jonka kautta kulkee laivaliikenne ja jota [[Tanska]] on vartioinut. Kolme salmea kuulostaa vähältä, mut sillä riittää.
+KYSYMYS: Kerro lisää: Tanska
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Suolaisen veden ovi on Tanskan: Juutinrauma, Iso-Belt ja Vähä-Belt ovat meren ainoa yhteys Pohjanmerelle, ja niiden matalat kynnykset päästävät suolavettä sisään vain harvakseltaan. Siksi juuri ne ovat aina olleet Itämeren avain.
+AIEMPI KYSYMYS: Miksi Itämeri jäätyy helpommin kuin Pohjanmeri?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tämän minä olen nähnyt omin silmin talvella. [[Itämeri]] jäätyy helpommin kuin valtameri, koska sen vesi on vähäsuolaista. Suolainen vesi jäätyy matalammassa lämpötilassa kuin makea, joten murtovesi jäätyy lähempänä nollaa kuin meriveden. Lisäksi Itämeri on matala ja siihen virtaa makeaa vettä jokien mukana, joten pinta jäähtyy nopeasti, etenkin pohjoisilla lahdilla ja rannikoilla. [[Pohjanmeri]] saa taas lämpöä Atlantilta, eikä se jäädy läheskään samalla tavalla. Siis kylmä merenpinta on minusta kyl jäätävä näky.
+KYSYMYS: Kerro lisää: Itämeri
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Suolaisen veden ovi on Tanskan: Juutinrauma, Iso-Belt ja Vähä-Belt ovat meren ainoa yhteys Pohjanmerelle, ja niiden matalat kynnykset päästävät suolavettä sisään vain harvakseltaan. Siksi juuri ne ovat aina olleet Itämeren avain.
+AIEMPI KYSYMYS: Miksi Itämeri jäätyy helpommin kuin Pohjanmeri?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tämän minä olen nähnyt omin silmin talvella. [[Itämeri]] jäätyy helpommin kuin valtameri, koska sen vesi on vähäsuolaista. Suolainen vesi jäätyy matalammassa lämpötilassa kuin makea, joten murtovesi jäätyy lähempänä nollaa kuin meriveden. Lisäksi Itämeri on matala ja siihen virtaa makeaa vettä jokien mukana, joten pinta jäähtyy nopeasti, etenkin pohjoisilla lahdilla ja rannikoilla. [[Pohjanmeri]] saa taas lämpöä Atlantilta, eikä se jäädy läheskään samalla tavalla. Siis kylmä merenpinta on minusta kyl jäätävä näky.
+KYSYMYS: Kerro lisää: Pohjanmeri
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Suolaisen veden ovi on Tanskan: Juutinrauma, Iso-Belt ja Vähä-Belt ovat meren ainoa yhteys Pohjanmerelle, ja niiden matalat kynnykset päästävät suolavettä sisään vain harvakseltaan. Siksi juuri ne ovat aina olleet Itämeren avain.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Magadan — kohdekartta / Kohdekartta: Nagajevanlahti] Jeannette Harbour 1852–1869 Nagajevanlahti on Tauinlahden osa Ohotanmeren pohjoisosassa. Se on 14,5 kilometriä pitkä ja suultaan 6,4 kilometriä leveä, ja sitä on kutsuttu koko Ohotanmeren parhaaksi ankkuripaikaksi. Jäätä lahdella on marraskuun lopulta kesäkuun puoliväliin. Kaupunki ja sen satama ovat lahden perukassa Staritskin niemimaan kannaksella. Lahdella on kaksi nimeä ja kaksi tarinaa. Virallinen nimi tulee amiraali Aleksei Nagajevilta (1704–1781), joka oli hydrografi ja kartantekijä ja jonka Beringinmeren ja Itämeren kartastot ilmestyivät vuonna 1752; niitä käytettiin vielä viisikymmentä vuotta myöhemmin, vaikka niissä ei ollut astekoordinaatistoa lainkaan. Toinen nimi on amerikkalai…
+- [Tallinna — kohdekartta / Kohdekartta: Raatihuoneentori] 1402–1404 Tallinnan raatihuone on koko Itämeren alueen ja Pohjoismaiden vanhin säilynyt raatihuone. Se rakennettiin vain parissa vuodessa, vuosina 1402-1404, keskiaikaisen torin laidalle. Hansakaupunkina Tallinnan kaupunginhallitus piti täällä kokouksiaan ja päätti niin kaupan, oikeuden kuin arjenkin asioista. Rakennuksen 36,8 metriä pitkässä salissa on nähtävissä yli 500 vuotta vanhoja seinävaatteita, jotka kuvaavat kuningas Salomonin elämää. Raatihuoneen 64 metriä korkeaan torniin johtaa peräti 115 porrasaskelmaa. Huipulla pyörii Vana Toomas, eli "Vanha Toomas" - kaupunginvartijaa esittävä tuuliviiri, joka on ollut Tallinnan tunnuskuva vuodesta 1530 lähtien. Alkuperäinen tuuliviiri on nyk…
+AIEMPI KYSYMYS: Miksi laivamato ei pärjää Itämeren vähäsuolaisessa vedessä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Sehän on puun kauhu. Laivamato on suolaisessa vedessä elävä simpukkaeläin, joka porautuu puuhun ja syö sitä, kunnes laiva tai laituri rapistuu. Se tarvitsee riittävän suolapitoisen veden, ja [[Itämeren]] vähäsuolainen vesi on etenkin pohjoisosissa sille liian makeaa, joten eläin ei siellä viihdy. Siksi puuhylyt säilyvät Itämeressä paljon paremmin kuin valtamerissä. Tunnetuin esimerkki on ruotsalainen sotalaiva [[Vasa]], joka nousi pohjasta lähes ehjänä vuonna 1961. Eläimistä pahin on siis pienin. Ja puu pysyy kuivana, ainakin pullan tavoin.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Suolaisen veden ovi on Tanskan: Juutinrauma, Iso-Belt ja Vähä-Belt ovat meren ainoa yhteys Pohjanmerelle, ja niiden matalat kynnykset päästävät suolavettä sisään vain harvakseltaan. Siksi juuri ne ovat aina olleet Itämeren avain.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kohdekartta / Kohdekartta: Vasa-museo] 1628 Vasa oli komea, 64-tykkinen sotalaiva, mutta se kaatui ja upposi jo neitsytmatkallaan 10. elokuuta 1628 — vain 1 300 metrin päässä satamasta. Tuulenpuuska kallisti laivan kyljelleen, vesi tulvi sisään avoimista tykkiluukuista, ja noin 30 ihmistä hukkui. Laiva oli liian epävakaa: yläosat olivat liian raskaita, ja kannen palkit oli tehty liian isoiksi. Laiva nostettiin vedestä vasta 1961, yli 330 vuotta myöhemmin, lähes ehjänä. Vasan runkoa koristaa lähes 500 puuveistosta. Museo avattiin 15. kesäkuuta 1990, ja siitä lähtien laivaa on käynyt katsomassa jo yli 45 miljoonaa ihmistä.
+AIEMPI KYSYMYS: Miksi laivamato ei pärjää Itämeren vähäsuolaisessa vedessä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Sehän on puun kauhu. Laivamato on suolaisessa vedessä elävä simpukkaeläin, joka porautuu puuhun ja syö sitä, kunnes laiva tai laituri rapistuu. Se tarvitsee riittävän suolapitoisen veden, ja [[Itämeren]] vähäsuolainen vesi on etenkin pohjoisosissa sille liian makeaa, joten eläin ei siellä viihdy. Siksi puuhylyt säilyvät Itämeressä paljon paremmin kuin valtamerissä. Tunnetuin esimerkki on ruotsalainen sotalaiva [[Vasa]], joka nousi pohjasta lähes ehjänä vuonna 1961. Eläimistä pahin on siis pienin. Ja puu pysyy kuivana, ainakin pullan tavoin.
+KYSYMYS: Kerro lisää: Vasa
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Suolaisen veden ovi on Tanskan: Juutinrauma, Iso-Belt ja Vähä-Belt ovat meren ainoa yhteys Pohjanmerelle, ja niiden matalat kynnykset päästävät suolavettä sisään vain harvakseltaan. Siksi juuri ne ovat aina olleet Itämeren avain.
+AIEMPI KYSYMYS: Kuinka syvä Itämeri on?
+AIEMPI VASTAUS (Livia):
+Kato, tää on ihan hyvä kysymys. Minä en ole koskaan käynyt pohjalla. [[Itämeri]] on matala meri: keskisyvyys on noin viisikymmentäviisi metriä, mutta luku vaihtelee lähteestä riippuen. Syvin kohta on [[Landsortdjupet]] Tukholman saariston edustalla, noin neljäsataa viisikymmentä metriä; tarkasta luvusta en ole aivan varma. Matala syvyys yhdessä ahtaiden salmien kanssa on yksi syy siihen, että vesi uusiutuu hitaasti ja että meri jäätyy ja lämpenee helposti. Syvyys on siis suhteellista, ja minä olen enemmän ylhäältä päin -kyyhky.
+KYSYMYS: Kerro lisää: Landsortdjupet
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roskilden tuomiokirkko (historia)
+Tietoruudun teksti: Roskilden tuomiokirkko on Tanskan kirkon katedraali Roskildessa Sjællandin saarella ja Tanskan hallitsijoiden virallinen hautakirkko.
+
+Kirkko rakennettiin 1100- ja 1200-luvuilla, ja siinä on sekä goottilaisia että romaanisia piirteitä. Se on Skandinavian varhaisimpia tiilestä rakennettuja goottilaisia katedraaleja ja levitti tiiligotiikan tyylin Pohjois-Eurooppaan. Maailmanperintökohteeksi se otettiin 1995 kahdesta syystä: rakennus näyttää kahdeksansataa vuotta eurooppalaisia tyylikausia, ja se oli tiiligotiikan varhainen esikuva.
+
+Hallitsijoiden päähautapaikka kirkko on ollut 1400-luvulta lähtien, ja siksi sitä on laajennettu ja muutettu vuosisatojen ajan hautakappeleita varten — kukin lisätty kappeli on oman aikansa tyyliä.
+
+Roskildesta tuli Tanskan pääkaupunki noin vuonna 960, kun Harald Sinihammas siirtyi sinne Jellingistä ja rakennutti kuninkaankartanon ja sen viereen pienen sauvak…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historian hetki: Roskildenvuono noin 1040 — kuusikymmentä airoa] n. 1040 — Ensimmäinen ääni on airon kolahdus hankaimeen, ja se toistuu kuusikymmentä kertaa yhtä aikaa. Nuori soutaja lähtee ensimmäiselle pitkälle matkalleen eikä tiedä, palaako miehistö kaupankävijöinä, sotureina vai ei lainkaan. Vuono on matala ja mutkitteleva, ja sen takana on koko maailma: Atlantti lännessä, idässä jokireitit Mustallemerelle. Miehet työntävät keulaa irti rantamudasta, kilvet on ripustettu laidalle matkan ajaksi, purje on raidallista villaa ja päähineet huopaa ja nahkaa — sarvikypärä on 1800-luvun oopperalavojen keksintö eikä esiinny yhdessäkään viikinkiajan löydössä. Juuri tällaisia laivoja tunnetaan tarkasti, koska viisi niistä upotettiin 1000-luvulla tähän samaan vuo…
+- [Tanska — maalehti / Luonto: Puu joka värjää koko maan vihreäksi] nykyään — Pyökki eli bøg on Tanskan kansallispuu, ja toukokuussa metsät käyvät läpi bøgespringiksi kutsutun muutoksen: lehdet puhkeavat lähes koko maassa saman viikon aikana, ja ruskea talvimetsä muuttuu muutamassa päivässä kirkkaan vihreäksi. Juuri ennen lehtien puhkeamista metsän pohja peittyy valkoisista vuokoista, jotka ehtivät kukkia ainoana hetkenä, jolloin auringonvalo pääsee vielä paljaiden oksien läpi maahan asti. Ilmiö houkuttelee joka kevät tuhansia retkeilijöitä metsiin, ja monet perheet tekevät siitä vuotuisen perinteen. Pyökkimetsiä on eniten Sjællannin ja Itä-Jyllannin alueilla, missä maaperä ja ilmasto sopivat puulle parhaiten.
+AIEMPI KYSYMYS: Miksi kirkossa on niin monta erityylistä kappelia?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tätä minä olen ihmetellyt katolta. Roskildesta tuli [[Tanskan]] hallitsijoiden päähautapaikka 1400-luvulta lähtien, ja kirkkoa on siksi laajennettu ja muutettu vuosisatojen ajan hautakappeleita varten. Kukin lisätty kappeli on oman aikansa tyyliä: kirkon alkuperäinen runko on keskiaikainen, mutta myöhemmät hallitsijat rakennuttivat omat hautakappelinsa sen perään, esimerkiksi [[Christian IV:n]] kappeli 1600-luvulla. Siksi kirkko näyttää kahdeksansataa vuotta [[eurooppalaisia tyylikausia]], mikä oli yksi syy maailmanperintöasemaan vuonna 1995. Yksi kirkko, monta aikaa. Ja minä kun luulin, että kyyhky voi vaihtaa vain oksaa.
+KYSYMYS: Kerro lisää: Tanskan
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roskilden tuomiokirkko (historia)
+Tietoruudun teksti: Roskilden tuomiokirkko on Tanskan kirkon katedraali Roskildessa Sjællandin saarella ja Tanskan hallitsijoiden virallinen hautakirkko.
+
+Kirkko rakennettiin 1100- ja 1200-luvuilla, ja siinä on sekä goottilaisia että romaanisia piirteitä. Se on Skandinavian varhaisimpia tiilestä rakennettuja goottilaisia katedraaleja ja levitti tiiligotiikan tyylin Pohjois-Eurooppaan. Maailmanperintökohteeksi se otettiin 1995 kahdesta syystä: rakennus näyttää kahdeksansataa vuotta eurooppalaisia tyylikausia, ja se oli tiiligotiikan varhainen esikuva.
+
+Hallitsijoiden päähautapaikka kirkko on ollut 1400-luvulta lähtien, ja siksi sitä on laajennettu ja muutettu vuosisatojen ajan hautakappeleita varten — kukin lisätty kappeli on oman aikansa tyyliä.
+
+Roskildesta tuli Tanskan pääkaupunki noin vuonna 960, kun Harald Sinihammas siirtyi sinne Jellingistä ja rakennutti kuninkaankartanon ja sen viereen pienen sauvak…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan tuomiokirkko] 1861 Tromssan tuomiokirkko on kokonaan puusta rakennettu keltainen kirkko, joka valmistui vuonna 1861 arkkitehti Christian Heinrich Groschin piirustusten mukaan. Se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu puusta - ja sen sisään mahtuu yli 600 kirkkovierasta! Paikalla on ollut kirkko jo satoja vuosia ennen tätäkin: kuningas Håkon IV rakennutti tänne kappelin jo vuonna 1252, ja sen jälkeen paikalla on ollut ainakin kaksi muuta kirkkoa ennen nykyistä rakennusta. Kellotorni valmistui vuotta myöhemmin, 1862, ja kirkkoa koristeltiin lisää vielä 1880-luvulla. Isoisän vieraillessa Tromssassa 1873 kirkko oli vasta reilut kymmenen vuotta vanha - täysin uusi nähtävyys pienessä pu…
+AIEMPI KYSYMYS: Miksi kirkossa on niin monta erityylistä kappelia?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tätä minä olen ihmetellyt katolta. Roskildesta tuli [[Tanskan]] hallitsijoiden päähautapaikka 1400-luvulta lähtien, ja kirkkoa on siksi laajennettu ja muutettu vuosisatojen ajan hautakappeleita varten. Kukin lisätty kappeli on oman aikansa tyyliä: kirkon alkuperäinen runko on keskiaikainen, mutta myöhemmät hallitsijat rakennuttivat omat hautakappelinsa sen perään, esimerkiksi [[Christian IV:n]] kappeli 1600-luvulla. Siksi kirkko näyttää kahdeksansataa vuotta [[eurooppalaisia tyylikausia]], mikä oli yksi syy maailmanperintöasemaan vuonna 1995. Yksi kirkko, monta aikaa. Ja minä kun luulin, että kyyhky voi vaihtaa vain oksaa.
+KYSYMYS: Kerro lisää: Christian IV:n
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roskilden tuomiokirkko (historia)
+Tietoruudun teksti: Roskilden tuomiokirkko on Tanskan kirkon katedraali Roskildessa Sjællandin saarella ja Tanskan hallitsijoiden virallinen hautakirkko.
+
+Kirkko rakennettiin 1100- ja 1200-luvuilla, ja siinä on sekä goottilaisia että romaanisia piirteitä. Se on Skandinavian varhaisimpia tiilestä rakennettuja goottilaisia katedraaleja ja levitti tiiligotiikan tyylin Pohjois-Eurooppaan. Maailmanperintökohteeksi se otettiin 1995 kahdesta syystä: rakennus näyttää kahdeksansataa vuotta eurooppalaisia tyylikausia, ja se oli tiiligotiikan varhainen esikuva.
+
+Hallitsijoiden päähautapaikka kirkko on ollut 1400-luvulta lähtien, ja siksi sitä on laajennettu ja muutettu vuosisatojen ajan hautakappeleita varten — kukin lisätty kappeli on oman aikansa tyyliä.
+
+Roskildesta tuli Tanskan pääkaupunki noin vuonna 960, kun Harald Sinihammas siirtyi sinne Jellingistä ja rakennutti kuninkaankartanon ja sen viereen pienen sauvak…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Peking — kohdekartta / Kohdekartta: Yonghe-temppeli] 1694, luostariksi 1744 Rakennus alkoi prinssin kotina. Kangxi-keisari antoi sen 1702 neljännelle pojalleen Yinzhenille, ja tämän tuleva seuraaja, Qianlong-keisari, syntyi talon itäsiivessä 1711. Kun Yinzhen nousi valtaistuimelle Yongzheng-keisarina, talosta tuli Harmonian ja rauhan palatsi — ja keisarin arvon merkiksi sen turkoosit tiilikatot vaihdettiin keltaisiin, jotka oli varattu vain keisarille. Vuonna 1744 Qianlong muutti palatsin tiibetinbuddhalaiseksi luostariksi. Siitä tuli Qing-kauden merkittävin buddhalainen temppeli, jonka rakennuksissa kiinalainen ja tiibetiläinen tyyli kulkevat rinnakkain ja jonne muutti munkkeja Mongoliasta ja Tiibetistä asti. Kuuluisin aarre on Kymmenentuhan…
+- [Karachi — kohdekartta / Kohdekartta: Denso Hall] 1886 Kolmion muotoisessa kulmassa M. A. Jinnah Roadin, Murad Khan Roadin ja Marriott Roadin välissä seisoo pieni hiekkakivinen talo, joka valmistui 1886. Se oli Karachin ensimmäinen kirjasto, joka oli tarkoitettu kaupungin omalle väestölle: siirtomaahallinnon aiemmat kirjastot, Frere Hallin kokoelma niiden joukossa, oli varattu virkamiehille ja heidän perheilleen. Nimensä talo sai Max Densosta, joka johti Karachin kauppakamaria 1870-luvulla. Arkkitehti oli James Strachan, sama kaupungininsinööri joka piirsi Empress Marketin ja Merewetherin kellotornin. Tyyli on venetsialaisgoottia, ja ylimmässä kerroksessa on tudor-aiheita; kivi on paikallista Gizrin hiekkakiveä. Pääkadun puolella on parvek…
+AIEMPI KYSYMYS: Miksi kirkossa on niin monta erityylistä kappelia?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tätä minä olen ihmetellyt katolta. Roskildesta tuli [[Tanskan]] hallitsijoiden päähautapaikka 1400-luvulta lähtien, ja kirkkoa on siksi laajennettu ja muutettu vuosisatojen ajan hautakappeleita varten. Kukin lisätty kappeli on oman aikansa tyyliä: kirkon alkuperäinen runko on keskiaikainen, mutta myöhemmät hallitsijat rakennuttivat omat hautakappelinsa sen perään, esimerkiksi [[Christian IV:n]] kappeli 1600-luvulla. Siksi kirkko näyttää kahdeksansataa vuotta [[eurooppalaisia tyylikausia]], mikä oli yksi syy maailmanperintöasemaan vuonna 1995. Yksi kirkko, monta aikaa. Ja minä kun luulin, että kyyhky voi vaihtaa vain oksaa.
+KYSYMYS: Kerro lisää: eurooppalaisia tyylikausia
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roskilden tuomiokirkko (historia)
+Tietoruudun teksti: Roskilden tuomiokirkko on Tanskan kirkon katedraali Roskildessa Sjællandin saarella ja Tanskan hallitsijoiden virallinen hautakirkko.
+
+Kirkko rakennettiin 1100- ja 1200-luvuilla, ja siinä on sekä goottilaisia että romaanisia piirteitä. Se on Skandinavian varhaisimpia tiilestä rakennettuja goottilaisia katedraaleja ja levitti tiiligotiikan tyylin Pohjois-Eurooppaan. Maailmanperintökohteeksi se otettiin 1995 kahdesta syystä: rakennus näyttää kahdeksansataa vuotta eurooppalaisia tyylikausia, ja se oli tiiligotiikan varhainen esikuva.
+
+Hallitsijoiden päähautapaikka kirkko on ollut 1400-luvulta lähtien, ja siksi sitä on laajennettu ja muutettu vuosisatojen ajan hautakappeleita varten — kukin lisätty kappeli on oman aikansa tyyliä.
+
+Roskildesta tuli Tanskan pääkaupunki noin vuonna 960, kun Harald Sinihammas siirtyi sinne Jellingistä ja rakennutti kuninkaankartanon ja sen viereen pienen sauvak…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historia: Kivi, jossa maan nimi lukee ensimmäisen kerran] 965 — Jellingin kylässä seisoo kaksi riimukiveä. Isomman pystytti noin vuonna 965 kuningas Harald Sinihammas, ja siihen on hakattu, että hän voitti koko Tanskan ja Norjan ja teki tanskalaisista kristittyjä. Sana Tanska esiintyy siinä ensimmäisen kerran maan omalla kielellä, ja siksi kiveä sanotaan maan syntytodistukseksi. Kuningas sai myöhemmin oudon jälkimaineen: langaton Bluetooth-yhteys on nimetty hänen mukaansa, koska se yhdistää laitteita kuten hän yhdisti heimoja.
+AIEMPI KYSYMYS: Kuka teki Roskildesta pääkaupungin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Vanha viikinkijuttu. Roskilde tuli [[Tanskan]] pääkaupungiksi noin vuonna 960, kun [[Harald Sinihammas]] siirtyi sinne [[Jellingistä]]. Hän rakennutti paikalle kuninkaankartanon ja sen viereen pienen puukirkon, jonka paikalle myöhemmin nousi nykyinen tuomiokirkko. Roskilde pysyi hallinnon ja kirkon keskuksena vuosisatoja, kunnes valta siirtyi vähitellen kohti Kööpenhaminaa. Tarkasta vuodesta lähteet ovat vain suuntaa antavia, joten sano "noin". Tämän jälkeen ei kai kukaan enää valita pitkistä matkoista.
+KYSYMYS: Kerro lisää: Harald Sinihammas
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roskilden tuomiokirkko (historia)
+Tietoruudun teksti: Roskilden tuomiokirkko on Tanskan kirkon katedraali Roskildessa Sjællandin saarella ja Tanskan hallitsijoiden virallinen hautakirkko.
+
+Kirkko rakennettiin 1100- ja 1200-luvuilla, ja siinä on sekä goottilaisia että romaanisia piirteitä. Se on Skandinavian varhaisimpia tiilestä rakennettuja goottilaisia katedraaleja ja levitti tiiligotiikan tyylin Pohjois-Eurooppaan. Maailmanperintökohteeksi se otettiin 1995 kahdesta syystä: rakennus näyttää kahdeksansataa vuotta eurooppalaisia tyylikausia, ja se oli tiiligotiikan varhainen esikuva.
+
+Hallitsijoiden päähautapaikka kirkko on ollut 1400-luvulta lähtien, ja siksi sitä on laajennettu ja muutettu vuosisatojen ajan hautakappeleita varten — kukin lisätty kappeli on oman aikansa tyyliä.
+
+Roskildesta tuli Tanskan pääkaupunki noin vuonna 960, kun Harald Sinihammas siirtyi sinne Jellingistä ja rakennutti kuninkaankartanon ja sen viereen pienen sauvak…
+AIEMPI KYSYMYS: Kuka teki Roskildesta pääkaupungin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Vanha viikinkijuttu. Roskilde tuli [[Tanskan]] pääkaupungiksi noin vuonna 960, kun [[Harald Sinihammas]] siirtyi sinne [[Jellingistä]]. Hän rakennutti paikalle kuninkaankartanon ja sen viereen pienen puukirkon, jonka paikalle myöhemmin nousi nykyinen tuomiokirkko. Roskilde pysyi hallinnon ja kirkon keskuksena vuosisatoja, kunnes valta siirtyi vähitellen kohti Kööpenhaminaa. Tarkasta vuodesta lähteet ovat vain suuntaa antavia, joten sano "noin". Tämän jälkeen ei kai kukaan enää valita pitkistä matkoista.
+KYSYMYS: Kerro lisää: Jellingistä
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roskilden tuomiokirkko (historia)
+Tietoruudun teksti: Roskilden tuomiokirkko on Tanskan kirkon katedraali Roskildessa Sjællandin saarella ja Tanskan hallitsijoiden virallinen hautakirkko.
+
+Kirkko rakennettiin 1100- ja 1200-luvuilla, ja siinä on sekä goottilaisia että romaanisia piirteitä. Se on Skandinavian varhaisimpia tiilestä rakennettuja goottilaisia katedraaleja ja levitti tiiligotiikan tyylin Pohjois-Eurooppaan. Maailmanperintökohteeksi se otettiin 1995 kahdesta syystä: rakennus näyttää kahdeksansataa vuotta eurooppalaisia tyylikausia, ja se oli tiiligotiikan varhainen esikuva.
+
+Hallitsijoiden päähautapaikka kirkko on ollut 1400-luvulta lähtien, ja siksi sitä on laajennettu ja muutettu vuosisatojen ajan hautakappeleita varten — kukin lisätty kappeli on oman aikansa tyyliä.
+
+Roskildesta tuli Tanskan pääkaupunki noin vuonna 960, kun Harald Sinihammas siirtyi sinne Jellingistä ja rakennutti kuninkaankartanon ja sen viereen pienen sauvak…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Luonto: Meri joka häviää joka päivä] 2014 — Vadehavi on Pohjanmeren matala rannikkovyöhyke, jonka vuorovesi paljastaa ja peittää kahdesti vuorokaudessa: nousuveden aikaan kaikki on merta, laskuveden aikaan silmänkantamattomiin avautuu lietettä ja hiekkasärkkiä. Oppaat vievät kävijöitä avojaloin lietteen yli sinne, missä äsken kulki vene. Alue on yksi maailman tärkeimmistä lintualueista: miljoonat muutto- ja pesimälinnut käyttävät sitä matkalla tai kotina. Hollannin ja Saksan vadehavi liitettiin Unescon maailmanperintöluetteloon 2009, ja Tanskan osuus seurasi kesäkuussa 2014 — nyt koko rannikkokaistale Esbjergistä Saksan rajalle on yhtä suojeltua merenpohjaa.
+- [Saksa — maalehti / Luonto: Meri vetäytyy ja pohja aukeaa] Pohjanmeren rannikolla meri vetäytyy kahdesti päivässä kilometrien päähän ja jättää jälkeensä Wattenmeerin: mutatasangon, jota pitkin voi kävellä merenpohjassa saarelta toiselle. Opas kulkee aina mukana, sillä vuoksi palaa nopeammin kuin ihminen juoksee. Pohja näyttää tyhjältä mutta kuhisee elämää: yhdessä neliömetrissä voi asua kymmeniätuhansia matoja, kotiloita ja simpukoita, ja hietikoilla lepää kirjohylkeitä. Vattimeri on Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Mikä on tiiligotiikka?
+AIEMPI VASTAUS (Livia):
+Ai se. Tästä saan puhua mielelläni, tiiliä kun on pitkin katujakin. Tiiligotiikka on goottilaisen rakennustaiteen muoto, jossa kirkot ja muut rakennukset tehdään kivijulkisivujen sijaan poltetusta tiilestä. Tyyli kehittyi Pohjois-Euroopassa seuduilla, joilla rakennuskiveä oli niukasti mutta savea riitti, ja se levisi Itämeren ja [[Pohjanmeren]] ympäristöön. Tunnettu esimerkki on [[Lyypekin]] kaupunki Pohjois-Saksassa. [[Roskilden tuomiokirkko]] oli aikansa varhaisia tiilestä rakennettuja goottilaisia katedraaleja Skandinaviassa ja toimi tyylin esikuvana. Tiilen punainen sävy kuuluu minusta aika hyvin yhteen kyyhkyn väritykseen.
+KYSYMYS: Kerro lisää: Pohjanmeren
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roskilden tuomiokirkko (historia)
+Tietoruudun teksti: Roskilden tuomiokirkko on Tanskan kirkon katedraali Roskildessa Sjællandin saarella ja Tanskan hallitsijoiden virallinen hautakirkko.
+
+Kirkko rakennettiin 1100- ja 1200-luvuilla, ja siinä on sekä goottilaisia että romaanisia piirteitä. Se on Skandinavian varhaisimpia tiilestä rakennettuja goottilaisia katedraaleja ja levitti tiiligotiikan tyylin Pohjois-Eurooppaan. Maailmanperintökohteeksi se otettiin 1995 kahdesta syystä: rakennus näyttää kahdeksansataa vuotta eurooppalaisia tyylikausia, ja se oli tiiligotiikan varhainen esikuva.
+
+Hallitsijoiden päähautapaikka kirkko on ollut 1400-luvulta lähtien, ja siksi sitä on laajennettu ja muutettu vuosisatojen ajan hautakappeleita varten — kukin lisätty kappeli on oman aikansa tyyliä.
+
+Roskildesta tuli Tanskan pääkaupunki noin vuonna 960, kun Harald Sinihammas siirtyi sinne Jellingistä ja rakennutti kuninkaankartanon ja sen viereen pienen sauvak…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Ruoka] Virolainen ruokapöytä on tumma ja suolainen: hapan ruisleipä joka on jokaisen aterian pohja, makea marsipaani jonka synnystä kiistellään Lyypekin kanssa, kansalliskala pienessä leivässä ja joulun verinen makkara.
+AIEMPI KYSYMYS: Mikä on tiiligotiikka?
+AIEMPI VASTAUS (Livia):
+Ai se. Tästä saan puhua mielelläni, tiiliä kun on pitkin katujakin. Tiiligotiikka on goottilaisen rakennustaiteen muoto, jossa kirkot ja muut rakennukset tehdään kivijulkisivujen sijaan poltetusta tiilestä. Tyyli kehittyi Pohjois-Euroopassa seuduilla, joilla rakennuskiveä oli niukasti mutta savea riitti, ja se levisi Itämeren ja [[Pohjanmeren]] ympäristöön. Tunnettu esimerkki on [[Lyypekin]] kaupunki Pohjois-Saksassa. [[Roskilden tuomiokirkko]] oli aikansa varhaisia tiilestä rakennettuja goottilaisia katedraaleja Skandinaviassa ja toimi tyylin esikuvana. Tiilen punainen sävy kuuluu minusta aika hyvin yhteen kyyhkyn väritykseen.
+KYSYMYS: Kerro lisää: Lyypekin
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roskilden tuomiokirkko (historia)
+Tietoruudun teksti: Roskilden tuomiokirkko on Tanskan kirkon katedraali Roskildessa Sjællandin saarella ja Tanskan hallitsijoiden virallinen hautakirkko.
+
+Kirkko rakennettiin 1100- ja 1200-luvuilla, ja siinä on sekä goottilaisia että romaanisia piirteitä. Se on Skandinavian varhaisimpia tiilestä rakennettuja goottilaisia katedraaleja ja levitti tiiligotiikan tyylin Pohjois-Eurooppaan. Maailmanperintökohteeksi se otettiin 1995 kahdesta syystä: rakennus näyttää kahdeksansataa vuotta eurooppalaisia tyylikausia, ja se oli tiiligotiikan varhainen esikuva.
+
+Hallitsijoiden päähautapaikka kirkko on ollut 1400-luvulta lähtien, ja siksi sitä on laajennettu ja muutettu vuosisatojen ajan hautakappeleita varten — kukin lisätty kappeli on oman aikansa tyyliä.
+
+Roskildesta tuli Tanskan pääkaupunki noin vuonna 960, kun Harald Sinihammas siirtyi sinne Jellingistä ja rakennutti kuninkaankartanon ja sen viereen pienen sauvak…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historian hetki: Roskildenvuono noin 1040 — kuusikymmentä airoa] n. 1040 — Ensimmäinen ääni on airon kolahdus hankaimeen, ja se toistuu kuusikymmentä kertaa yhtä aikaa. Nuori soutaja lähtee ensimmäiselle pitkälle matkalleen eikä tiedä, palaako miehistö kaupankävijöinä, sotureina vai ei lainkaan. Vuono on matala ja mutkitteleva, ja sen takana on koko maailma: Atlantti lännessä, idässä jokireitit Mustallemerelle. Miehet työntävät keulaa irti rantamudasta, kilvet on ripustettu laidalle matkan ajaksi, purje on raidallista villaa ja päähineet huopaa ja nahkaa — sarvikypärä on 1800-luvun oopperalavojen keksintö eikä esiinny yhdessäkään viikinkiajan löydössä. Juuri tällaisia laivoja tunnetaan tarkasti, koska viisi niistä upotettiin 1000-luvulla tähän samaan vuo…
+AIEMPI KYSYMYS: Mikä on tiiligotiikka?
+AIEMPI VASTAUS (Livia):
+Ai se. Tästä saan puhua mielelläni, tiiliä kun on pitkin katujakin. Tiiligotiikka on goottilaisen rakennustaiteen muoto, jossa kirkot ja muut rakennukset tehdään kivijulkisivujen sijaan poltetusta tiilestä. Tyyli kehittyi Pohjois-Euroopassa seuduilla, joilla rakennuskiveä oli niukasti mutta savea riitti, ja se levisi Itämeren ja [[Pohjanmeren]] ympäristöön. Tunnettu esimerkki on [[Lyypekin]] kaupunki Pohjois-Saksassa. [[Roskilden tuomiokirkko]] oli aikansa varhaisia tiilestä rakennettuja goottilaisia katedraaleja Skandinaviassa ja toimi tyylin esikuvana. Tiilen punainen sävy kuuluu minusta aika hyvin yhteen kyyhkyn väritykseen.
+KYSYMYS: Kerro lisää: Roskilden tuomiokirkko
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roskilden tuomiokirkko (historia)
+Tietoruudun teksti: Roskilden tuomiokirkko on Tanskan kirkon katedraali Roskildessa Sjællandin saarella ja Tanskan hallitsijoiden virallinen hautakirkko.
+
+Kirkko rakennettiin 1100- ja 1200-luvuilla, ja siinä on sekä goottilaisia että romaanisia piirteitä. Se on Skandinavian varhaisimpia tiilestä rakennettuja goottilaisia katedraaleja ja levitti tiiligotiikan tyylin Pohjois-Eurooppaan. Maailmanperintökohteeksi se otettiin 1995 kahdesta syystä: rakennus näyttää kahdeksansataa vuotta eurooppalaisia tyylikausia, ja se oli tiiligotiikan varhainen esikuva.
+
+Hallitsijoiden päähautapaikka kirkko on ollut 1400-luvulta lähtien, ja siksi sitä on laajennettu ja muutettu vuosisatojen ajan hautakappeleita varten — kukin lisätty kappeli on oman aikansa tyyliä.
+
+Roskildesta tuli Tanskan pääkaupunki noin vuonna 960, kun Harald Sinihammas siirtyi sinne Jellingistä ja rakennutti kuninkaankartanon ja sen viereen pienen sauvak…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tallinna — kohdekartta / Kohdekartta: Paksu Margareeta] 1511–1530 Paksu Margareeta on tanakka, pyöreä torni Tallinnan vanhan kaupungin laidalla, aivan sataman kupeessa Pika kadun päässä. Se rakennettiin vuosien 1511 ja 1530 välillä osaksi kaupungin meren puoleista puolustusta, Suuren Rantaportin kylkeen. Torni on niin järeä, että sen läpimitta on 25 metriä ja seinät jopa 5 metriä paksut - se on koko kaupunginmuurin tukevin yksittäinen rakennelma. Sillä oli kaksi tehtävää: torjua hyökkääjät ja tehdä samalla vaikutuksen merta pitkin saapuviin vieraisiin. Vuosisatojen varrella torni sai monta erilaista käyttötarkoitusta. Ensin siellä säilytettiin ruutia ja aseita, myöhemmin siitä tehtiin vankila. Vuoden 1917 vallankumouksen aikaan tornissa tapahtui…
+AIEMPI KYSYMYS: Ketä tunnettuja hallitsijoita Roskildessa on haudattu?
+AIEMPI VASTAUS (Livia):
+No niin, nyt mennään historian pariin. Tästä lintu katsoo ylhäältä mielellään. Roskilden tuomiokirkkoon on haudattu satoja vuosia [[Tanskan]] hallitsijoita ja heidän perheenjäseniään. Tunnetuimpiin kuuluvat [[Margareeta I]], joka yhdisti Pohjoismaat [[Kalmarin unionin]] alle, ja [[Christian IV]], joka rakennutti kuuluisan kappelinsa. Myös uudemman ajan kuninkaita lepää kirkossa, esimerkiksi Frederik IX; tarkkaa luetteloa minulla ei ole mukana, joten luettelo kannattaa tarkistaa kirkon omista tiedoista. Kymmenet kuninkaat samassa kirkossa, ja minä en saanut edes pientä pullaa.
+KYSYMYS: Kerro lisää: Margareeta I
+
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roskilden tuomiokirkko (historia)
+Tietoruudun teksti: Roskilden tuomiokirkko on Tanskan kirkon katedraali Roskildessa Sjællandin saarella ja Tanskan hallitsijoiden virallinen hautakirkko.
+
+Kirkko rakennettiin 1100- ja 1200-luvuilla, ja siinä on sekä goottilaisia että romaanisia piirteitä. Se on Skandinavian varhaisimpia tiilestä rakennettuja goottilaisia katedraaleja ja levitti tiiligotiikan tyylin Pohjois-Eurooppaan. Maailmanperintökohteeksi se otettiin 1995 kahdesta syystä: rakennus näyttää kahdeksansataa vuotta eurooppalaisia tyylikausia, ja se oli tiiligotiikan varhainen esikuva.
+
+Hallitsijoiden päähautapaikka kirkko on ollut 1400-luvulta lähtien, ja siksi sitä on laajennettu ja muutettu vuosisatojen ajan hautakappeleita varten — kukin lisätty kappeli on oman aikansa tyyliä.
+
+Roskildesta tuli Tanskan pääkaupunki noin vuonna 960, kun Harald Sinihammas siirtyi sinne Jellingistä ja rakennutti kuninkaankartanon ja sen viereen pienen sauvak…
+AIEMPI KYSYMYS: Ketä tunnettuja hallitsijoita Roskildessa on haudattu?
+AIEMPI VASTAUS (Livia):
+No niin, nyt mennään historian pariin. Tästä lintu katsoo ylhäältä mielellään. Roskilden tuomiokirkkoon on haudattu satoja vuosia [[Tanskan]] hallitsijoita ja heidän perheenjäseniään. Tunnetuimpiin kuuluvat [[Margareeta I]], joka yhdisti Pohjoismaat [[Kalmarin unionin]] alle, ja [[Christian IV]], joka rakennutti kuuluisan kappelinsa. Myös uudemman ajan kuninkaita lepää kirkossa, esimerkiksi Frederik IX; tarkkaa luetteloa minulla ei ole mukana, joten luettelo kannattaa tarkistaa kirkon omista tiedoista. Kymmenet kuninkaat samassa kirkossa, ja minä en saanut edes pientä pullaa.
+KYSYMYS: Kerro lisää: Kalmarin unionin
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roskilden tuomiokirkko (historia)
+Tietoruudun teksti: Roskilden tuomiokirkko on Tanskan kirkon katedraali Roskildessa Sjællandin saarella ja Tanskan hallitsijoiden virallinen hautakirkko.
+
+Kirkko rakennettiin 1100- ja 1200-luvuilla, ja siinä on sekä goottilaisia että romaanisia piirteitä. Se on Skandinavian varhaisimpia tiilestä rakennettuja goottilaisia katedraaleja ja levitti tiiligotiikan tyylin Pohjois-Eurooppaan. Maailmanperintökohteeksi se otettiin 1995 kahdesta syystä: rakennus näyttää kahdeksansataa vuotta eurooppalaisia tyylikausia, ja se oli tiiligotiikan varhainen esikuva.
+
+Hallitsijoiden päähautapaikka kirkko on ollut 1400-luvulta lähtien, ja siksi sitä on laajennettu ja muutettu vuosisatojen ajan hautakappeleita varten — kukin lisätty kappeli on oman aikansa tyyliä.
+
+Roskildesta tuli Tanskan pääkaupunki noin vuonna 960, kun Harald Sinihammas siirtyi sinne Jellingistä ja rakennutti kuninkaankartanon ja sen viereen pienen sauvak…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan tuomiokirkko] 1861 Tromssan tuomiokirkko on kokonaan puusta rakennettu keltainen kirkko, joka valmistui vuonna 1861 arkkitehti Christian Heinrich Groschin piirustusten mukaan. Se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu puusta - ja sen sisään mahtuu yli 600 kirkkovierasta! Paikalla on ollut kirkko jo satoja vuosia ennen tätäkin: kuningas Håkon IV rakennutti tänne kappelin jo vuonna 1252, ja sen jälkeen paikalla on ollut ainakin kaksi muuta kirkkoa ennen nykyistä rakennusta. Kellotorni valmistui vuotta myöhemmin, 1862, ja kirkkoa koristeltiin lisää vielä 1880-luvulla. Isoisän vieraillessa Tromssassa 1873 kirkko oli vasta reilut kymmenen vuotta vanha - täysin uusi nähtävyys pienessä pu…
+AIEMPI KYSYMYS: Ketä tunnettuja hallitsijoita Roskildessa on haudattu?
+AIEMPI VASTAUS (Livia):
+No niin, nyt mennään historian pariin. Tästä lintu katsoo ylhäältä mielellään. Roskilden tuomiokirkkoon on haudattu satoja vuosia [[Tanskan]] hallitsijoita ja heidän perheenjäseniään. Tunnetuimpiin kuuluvat [[Margareeta I]], joka yhdisti Pohjoismaat [[Kalmarin unionin]] alle, ja [[Christian IV]], joka rakennutti kuuluisan kappelinsa. Myös uudemman ajan kuninkaita lepää kirkossa, esimerkiksi Frederik IX; tarkkaa luetteloa minulla ei ole mukana, joten luettelo kannattaa tarkistaa kirkon omista tiedoista. Kymmenet kuninkaat samassa kirkossa, ja minä en saanut edes pientä pullaa.
+KYSYMYS: Kerro lisää: Christian IV
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roskilden tuomiokirkko (historia)
+Tietoruudun teksti: Roskilden tuomiokirkko on Tanskan kirkon katedraali Roskildessa Sjællandin saarella ja Tanskan hallitsijoiden virallinen hautakirkko.
+
+Kirkko rakennettiin 1100- ja 1200-luvuilla, ja siinä on sekä goottilaisia että romaanisia piirteitä. Se on Skandinavian varhaisimpia tiilestä rakennettuja goottilaisia katedraaleja ja levitti tiiligotiikan tyylin Pohjois-Eurooppaan. Maailmanperintökohteeksi se otettiin 1995 kahdesta syystä: rakennus näyttää kahdeksansataa vuotta eurooppalaisia tyylikausia, ja se oli tiiligotiikan varhainen esikuva.
+
+Hallitsijoiden päähautapaikka kirkko on ollut 1400-luvulta lähtien, ja siksi sitä on laajennettu ja muutettu vuosisatojen ajan hautakappeleita varten — kukin lisätty kappeli on oman aikansa tyyliä.
+
+Roskildesta tuli Tanskan pääkaupunki noin vuonna 960, kun Harald Sinihammas siirtyi sinne Jellingistä ja rakennutti kuninkaankartanon ja sen viereen pienen sauvak…
+AIEMPI KYSYMYS: Mitä viikinkilaivoja Roskildessa on esillä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tästä on kyllä kuultu. Roskilden [[Viikinkilaivamuseossa]] on esillä viisi viikinkiaikaista alusta, jotka upotettiin 1000-luvulla [[Roskildenvuonoon]] sulkemaan väylää vihollisilta. Laivat löydettiin ja nostettiin vuonna 1962 tehdyn kaivauksen yhteydessä, ja ne tunnetaan nimellä Skuldelev-laivat. Joukossa on sekä sotalaivoja että kauppa-aluksia, joten ne kertovat paljon siitä, miten viikingit liikkuivat ja kävivät kauppaa. Sarvikypärä on muuten 1800-luvun oopperalavojen keksintö, eikä sitä löydy yhdestäkään viikinkiajan löydöstä. Sellaisen hatun kanssa en minä lentäisi.
+KYSYMYS: Kerro lisää: Viikinkilaivamuseossa
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roskilden tuomiokirkko (historia)
+Tietoruudun teksti: Roskilden tuomiokirkko on Tanskan kirkon katedraali Roskildessa Sjællandin saarella ja Tanskan hallitsijoiden virallinen hautakirkko.
+
+Kirkko rakennettiin 1100- ja 1200-luvuilla, ja siinä on sekä goottilaisia että romaanisia piirteitä. Se on Skandinavian varhaisimpia tiilestä rakennettuja goottilaisia katedraaleja ja levitti tiiligotiikan tyylin Pohjois-Eurooppaan. Maailmanperintökohteeksi se otettiin 1995 kahdesta syystä: rakennus näyttää kahdeksansataa vuotta eurooppalaisia tyylikausia, ja se oli tiiligotiikan varhainen esikuva.
+
+Hallitsijoiden päähautapaikka kirkko on ollut 1400-luvulta lähtien, ja siksi sitä on laajennettu ja muutettu vuosisatojen ajan hautakappeleita varten — kukin lisätty kappeli on oman aikansa tyyliä.
+
+Roskildesta tuli Tanskan pääkaupunki noin vuonna 960, kun Harald Sinihammas siirtyi sinne Jellingistä ja rakennutti kuninkaankartanon ja sen viereen pienen sauvak…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historian hetki: Roskildenvuono noin 1040 — kuusikymmentä airoa] n. 1040 — Ensimmäinen ääni on airon kolahdus hankaimeen, ja se toistuu kuusikymmentä kertaa yhtä aikaa. Nuori soutaja lähtee ensimmäiselle pitkälle matkalleen eikä tiedä, palaako miehistö kaupankävijöinä, sotureina vai ei lainkaan. Vuono on matala ja mutkitteleva, ja sen takana on koko maailma: Atlantti lännessä, idässä jokireitit Mustallemerelle. Miehet työntävät keulaa irti rantamudasta, kilvet on ripustettu laidalle matkan ajaksi, purje on raidallista villaa ja päähineet huopaa ja nahkaa — sarvikypärä on 1800-luvun oopperalavojen keksintö eikä esiinny yhdessäkään viikinkiajan löydössä. Juuri tällaisia laivoja tunnetaan tarkasti, koska viisi niistä upotettiin 1000-luvulla tähän samaan vuo…
+AIEMPI KYSYMYS: Mitä viikinkilaivoja Roskildessa on esillä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tästä on kyllä kuultu. Roskilden [[Viikinkilaivamuseossa]] on esillä viisi viikinkiaikaista alusta, jotka upotettiin 1000-luvulla [[Roskildenvuonoon]] sulkemaan väylää vihollisilta. Laivat löydettiin ja nostettiin vuonna 1962 tehdyn kaivauksen yhteydessä, ja ne tunnetaan nimellä Skuldelev-laivat. Joukossa on sekä sotalaivoja että kauppa-aluksia, joten ne kertovat paljon siitä, miten viikingit liikkuivat ja kävivät kauppaa. Sarvikypärä on muuten 1800-luvun oopperalavojen keksintö, eikä sitä löydy yhdestäkään viikinkiajan löydöstä. Sellaisen hatun kanssa en minä lentäisi.
+KYSYMYS: Kerro lisää: Roskildenvuonoon
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kronborg (sana)
+Tietoruudun teksti: Kronborg on linna ja linnoitus Helsingørin kaupungissa. William Shakespeare nimesi sen Hamletissa Elsinoreksi, ja se on Pohjois-Euroopan merkittävimpiä renessanssilinnoja.
+
+Linna seisoo Sjællandin koillisimmassa kärjessä Juutinrauman kapeimmalla kohdalla, jossa salmi on vain neljä kilometriä leveä. Siitä sen strateginen merkitys: paikka hallitsee yhtä harvoista uloskäynneistä Itämereltä.
+
+Tarina alkaa Krogen-nimisestä linnoituksesta, jonka Eerik Pommerilainen rakennutti 1420-luvulla. Kuningas vaati Juutinrauman tullia jokaiselta laivalta, joka halusi salmen kautta Itämerelle tai sieltä pois, ja linnoitus salmen kapeimmassa kohdassa oli keino periä maksu. Vuosina 1574–1585 Frederik II muutatti keskiaikaisen linnoituksen renessanssilinnaksi.
+
+Tulipalo tuhosi suuren osan linnasta 1629, ja Christian IV rakennutti sen uudelleen. Vuonna 1658 ruotsalaiset piirittivät ja valtasivat Kronborgin j…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nepal — maalehti / Kirjallisuus: Nepalin myydyin kirja] 1936 — Laxmi Prasad Devkota kuuli Kathmandun katukatoksissa vanhaa newar-balladia Ji Waya La Lachhi Maduni, jossa kauppias lähtee Tiibetiin ja palaa liian myöhään. Hän kirjoitti sen uudelleen nepaliksi kansansävelmän jhyaure-mittaan, ja niin syntyi 1936 Muna Madan, Nepalin myydyin kirja. Päähenkilön säädyn Devkota vaihtoi kauppiaasta soturiksi, koska Rana-hallinto oli kieltänyt newarien kaupan ja kielen. Sama kirjoittaja teki kolmessa kuukaudessa Shakuntalan, ensimmäisen nepalinkielisen mahakavyan, ja käänsi Hamletin nepaliksi.
+AIEMPI KYSYMYS: Millä nimellä Shakespeare kutsui linnaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tämän minä tiedän ulkoa. Shakespeare kutsui linnaa nimellä Elsinore, ja se on [[Hamletin]] näytelmän tapahtumapaikka. Todellisuudessa [[Kronborg]] on linna ja linnoitus Helsingørin kaupungissa Sjællandin koillisimmassa kärjessä, [[Juutinrauman]] kapeimmalla kohdalla. Elsinore on Helsingørin englanninkielinen muoto, ja nimi on tullut tunnetuksi juuri näytelmän kautta. Linna on yksi Pohjois-Euroopan merkittävimmistä renessanssilinnoista. Kyl se linna voitti tämän roolin ilman koulutusta.
+KYSYMYS: Kerro lisää: Hamletin
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kronborg (sana)
+Tietoruudun teksti: Kronborg on linna ja linnoitus Helsingørin kaupungissa. William Shakespeare nimesi sen Hamletissa Elsinoreksi, ja se on Pohjois-Euroopan merkittävimpiä renessanssilinnoja.
+
+Linna seisoo Sjællandin koillisimmassa kärjessä Juutinrauman kapeimmalla kohdalla, jossa salmi on vain neljä kilometriä leveä. Siitä sen strateginen merkitys: paikka hallitsee yhtä harvoista uloskäynneistä Itämereltä.
+
+Tarina alkaa Krogen-nimisestä linnoituksesta, jonka Eerik Pommerilainen rakennutti 1420-luvulla. Kuningas vaati Juutinrauman tullia jokaiselta laivalta, joka halusi salmen kautta Itämerelle tai sieltä pois, ja linnoitus salmen kapeimmassa kohdassa oli keino periä maksu. Vuosina 1574–1585 Frederik II muutatti keskiaikaisen linnoituksen renessanssilinnaksi.
+
+Tulipalo tuhosi suuren osan linnasta 1629, ja Christian IV rakennutti sen uudelleen. Vuonna 1658 ruotsalaiset piirittivät ja valtasivat Kronborgin j…
+AIEMPI KYSYMYS: Millä nimellä Shakespeare kutsui linnaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tämän minä tiedän ulkoa. Shakespeare kutsui linnaa nimellä Elsinore, ja se on [[Hamletin]] näytelmän tapahtumapaikka. Todellisuudessa [[Kronborg]] on linna ja linnoitus Helsingørin kaupungissa Sjællandin koillisimmassa kärjessä, [[Juutinrauman]] kapeimmalla kohdalla. Elsinore on Helsingørin englanninkielinen muoto, ja nimi on tullut tunnetuksi juuri näytelmän kautta. Linna on yksi Pohjois-Euroopan merkittävimmistä renessanssilinnoista. Kyl se linna voitti tämän roolin ilman koulutusta.
+KYSYMYS: Kerro lisää: Kronborg
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kronborg (sana)
+Tietoruudun teksti: Kronborg on linna ja linnoitus Helsingørin kaupungissa. William Shakespeare nimesi sen Hamletissa Elsinoreksi, ja se on Pohjois-Euroopan merkittävimpiä renessanssilinnoja.
+
+Linna seisoo Sjællandin koillisimmassa kärjessä Juutinrauman kapeimmalla kohdalla, jossa salmi on vain neljä kilometriä leveä. Siitä sen strateginen merkitys: paikka hallitsee yhtä harvoista uloskäynneistä Itämereltä.
+
+Tarina alkaa Krogen-nimisestä linnoituksesta, jonka Eerik Pommerilainen rakennutti 1420-luvulla. Kuningas vaati Juutinrauman tullia jokaiselta laivalta, joka halusi salmen kautta Itämerelle tai sieltä pois, ja linnoitus salmen kapeimmassa kohdassa oli keino periä maksu. Vuosina 1574–1585 Frederik II muutatti keskiaikaisen linnoituksen renessanssilinnaksi.
+
+Tulipalo tuhosi suuren osan linnasta 1629, ja Christian IV rakennutti sen uudelleen. Vuonna 1658 ruotsalaiset piirittivät ja valtasivat Kronborgin j…
+AIEMPI KYSYMYS: Millä nimellä Shakespeare kutsui linnaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tämän minä tiedän ulkoa. Shakespeare kutsui linnaa nimellä Elsinore, ja se on [[Hamletin]] näytelmän tapahtumapaikka. Todellisuudessa [[Kronborg]] on linna ja linnoitus Helsingørin kaupungissa Sjællandin koillisimmassa kärjessä, [[Juutinrauman]] kapeimmalla kohdalla. Elsinore on Helsingørin englanninkielinen muoto, ja nimi on tullut tunnetuksi juuri näytelmän kautta. Linna on yksi Pohjois-Euroopan merkittävimmistä renessanssilinnoista. Kyl se linna voitti tämän roolin ilman koulutusta.
+KYSYMYS: Kerro lisää: Juutinrauman
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kronborg (sana)
+Tietoruudun teksti: Kronborg on linna ja linnoitus Helsingørin kaupungissa. William Shakespeare nimesi sen Hamletissa Elsinoreksi, ja se on Pohjois-Euroopan merkittävimpiä renessanssilinnoja.
+
+Linna seisoo Sjællandin koillisimmassa kärjessä Juutinrauman kapeimmalla kohdalla, jossa salmi on vain neljä kilometriä leveä. Siitä sen strateginen merkitys: paikka hallitsee yhtä harvoista uloskäynneistä Itämereltä.
+
+Tarina alkaa Krogen-nimisestä linnoituksesta, jonka Eerik Pommerilainen rakennutti 1420-luvulla. Kuningas vaati Juutinrauman tullia jokaiselta laivalta, joka halusi salmen kautta Itämerelle tai sieltä pois, ja linnoitus salmen kapeimmassa kohdassa oli keino periä maksu. Vuosina 1574–1585 Frederik II muutatti keskiaikaisen linnoituksen renessanssilinnaksi.
+
+Tulipalo tuhosi suuren osan linnasta 1629, ja Christian IV rakennutti sen uudelleen. Vuonna 1658 ruotsalaiset piirittivät ja valtasivat Kronborgin j…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historian hetki: Roskildenvuono noin 1040 — kuusikymmentä airoa] n. 1040 — Ensimmäinen ääni on airon kolahdus hankaimeen, ja se toistuu kuusikymmentä kertaa yhtä aikaa. Nuori soutaja lähtee ensimmäiselle pitkälle matkalleen eikä tiedä, palaako miehistö kaupankävijöinä, sotureina vai ei lainkaan. Vuono on matala ja mutkitteleva, ja sen takana on koko maailma: Atlantti lännessä, idässä jokireitit Mustallemerelle. Miehet työntävät keulaa irti rantamudasta, kilvet on ripustettu laidalle matkan ajaksi, purje on raidallista villaa ja päähineet huopaa ja nahkaa — sarvikypärä on 1800-luvun oopperalavojen keksintö eikä esiinny yhdessäkään viikinkiajan löydössä. Juuri tällaisia laivoja tunnetaan tarkasti, koska viisi niistä upotettiin 1000-luvulla tähän samaan vuo…
+- [Tanska — maalehti / Luonto: Puu joka värjää koko maan vihreäksi] nykyään — Pyökki eli bøg on Tanskan kansallispuu, ja toukokuussa metsät käyvät läpi bøgespringiksi kutsutun muutoksen: lehdet puhkeavat lähes koko maassa saman viikon aikana, ja ruskea talvimetsä muuttuu muutamassa päivässä kirkkaan vihreäksi. Juuri ennen lehtien puhkeamista metsän pohja peittyy valkoisista vuokoista, jotka ehtivät kukkia ainoana hetkenä, jolloin auringonvalo pääsee vielä paljaiden oksien läpi maahan asti. Ilmiö houkuttelee joka kevät tuhansia retkeilijöitä metsiin, ja monet perheet tekevät siitä vuotuisen perinteen. Pyökkimetsiä on eniten Sjællannin ja Itä-Jyllannin alueilla, missä maaperä ja ilmasto sopivat puulle parhaiten.
+AIEMPI KYSYMYS: Mikä Juutinrauman tulli oli?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tästä maksettiin kovasti. Juutinrauman tulli oli maksu, jonka [[Tanskan]] kuningas vaati jokaiselta laivalta, joka halusi salmen kautta Itämerelle tai sieltä pois. Tulli otettiin käyttöön, kun [[Eerik Pommerilainen]] rakennutti Krogenin linnoituksen 1420-luvulla Juutinrauman kapeimpaan kohtaan, ja linnoitus mahdollisti maksun perimisen. Tulli tuotti kruunulle huomattavia tuloja vuosisatojen ajan, ja se lakkautettiin vuonna 1857, mikäli muistan oikein. Salmen vartiointi on siis ollut raha-asia jo ennen nykyistä liikennettä. Minä lensin ilmaiseksi.
+KYSYMYS: Kerro lisää: Tanskan
+
+### 49
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kronborg (sana)
+Tietoruudun teksti: Kronborg on linna ja linnoitus Helsingørin kaupungissa. William Shakespeare nimesi sen Hamletissa Elsinoreksi, ja se on Pohjois-Euroopan merkittävimpiä renessanssilinnoja.
+
+Linna seisoo Sjællandin koillisimmassa kärjessä Juutinrauman kapeimmalla kohdalla, jossa salmi on vain neljä kilometriä leveä. Siitä sen strateginen merkitys: paikka hallitsee yhtä harvoista uloskäynneistä Itämereltä.
+
+Tarina alkaa Krogen-nimisestä linnoituksesta, jonka Eerik Pommerilainen rakennutti 1420-luvulla. Kuningas vaati Juutinrauman tullia jokaiselta laivalta, joka halusi salmen kautta Itämerelle tai sieltä pois, ja linnoitus salmen kapeimmassa kohdassa oli keino periä maksu. Vuosina 1574–1585 Frederik II muutatti keskiaikaisen linnoituksen renessanssilinnaksi.
+
+Tulipalo tuhosi suuren osan linnasta 1629, ja Christian IV rakennutti sen uudelleen. Vuonna 1658 ruotsalaiset piirittivät ja valtasivat Kronborgin j…
+AIEMPI KYSYMYS: Mikä Juutinrauman tulli oli?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tästä maksettiin kovasti. Juutinrauman tulli oli maksu, jonka [[Tanskan]] kuningas vaati jokaiselta laivalta, joka halusi salmen kautta Itämerelle tai sieltä pois. Tulli otettiin käyttöön, kun [[Eerik Pommerilainen]] rakennutti Krogenin linnoituksen 1420-luvulla Juutinrauman kapeimpaan kohtaan, ja linnoitus mahdollisti maksun perimisen. Tulli tuotti kruunulle huomattavia tuloja vuosisatojen ajan, ja se lakkautettiin vuonna 1857, mikäli muistan oikein. Salmen vartiointi on siis ollut raha-asia jo ennen nykyistä liikennettä. Minä lensin ilmaiseksi.
+KYSYMYS: Kerro lisää: Eerik Pommerilainen
+
+### 50
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kronborg (sana)
+Tietoruudun teksti: Kronborg on linna ja linnoitus Helsingørin kaupungissa. William Shakespeare nimesi sen Hamletissa Elsinoreksi, ja se on Pohjois-Euroopan merkittävimpiä renessanssilinnoja.
+
+Linna seisoo Sjællandin koillisimmassa kärjessä Juutinrauman kapeimmalla kohdalla, jossa salmi on vain neljä kilometriä leveä. Siitä sen strateginen merkitys: paikka hallitsee yhtä harvoista uloskäynneistä Itämereltä.
+
+Tarina alkaa Krogen-nimisestä linnoituksesta, jonka Eerik Pommerilainen rakennutti 1420-luvulla. Kuningas vaati Juutinrauman tullia jokaiselta laivalta, joka halusi salmen kautta Itämerelle tai sieltä pois, ja linnoitus salmen kapeimmassa kohdassa oli keino periä maksu. Vuosina 1574–1585 Frederik II muutatti keskiaikaisen linnoituksen renessanssilinnaksi.
+
+Tulipalo tuhosi suuren osan linnasta 1629, ja Christian IV rakennutti sen uudelleen. Vuonna 1658 ruotsalaiset piirittivät ja valtasivat Kronborgin j…
+AIEMPI KYSYMYS: Oliko Hamlet-prinssi oikeasti olemassa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Mutta ei se mikään helppo vastaus ole. Hamlet-prinssi ei ollut tiettävästi oikea historiallinen henkilö. Tarina perustuu keskiaikaiseen [[Amleth]]-legendaan, jonka kirjoitti muistiin tanskalainen historioitsija [[Saxo Grammaticus]] teoksessaan [[Gesta Danorum]] noin vuoden 1200 tienoilla. Shakespeare muokkasi tarinan näytelmäkseen paljon myöhemmin ja siirsi tapahtumat Elsinoreen. Legenda on siis vanhempi kuin näytelmä, mutta sen historiallisuudesta ei ole varmaa näyttöä. Nimi on kyllä elänyt pidempään kuin monen oikean kuninkaan.
+KYSYMYS: Kerro lisää: Amleth
+
+### 51
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kronborg (sana)
+Tietoruudun teksti: Kronborg on linna ja linnoitus Helsingørin kaupungissa. William Shakespeare nimesi sen Hamletissa Elsinoreksi, ja se on Pohjois-Euroopan merkittävimpiä renessanssilinnoja.
+
+Linna seisoo Sjællandin koillisimmassa kärjessä Juutinrauman kapeimmalla kohdalla, jossa salmi on vain neljä kilometriä leveä. Siitä sen strateginen merkitys: paikka hallitsee yhtä harvoista uloskäynneistä Itämereltä.
+
+Tarina alkaa Krogen-nimisestä linnoituksesta, jonka Eerik Pommerilainen rakennutti 1420-luvulla. Kuningas vaati Juutinrauman tullia jokaiselta laivalta, joka halusi salmen kautta Itämerelle tai sieltä pois, ja linnoitus salmen kapeimmassa kohdassa oli keino periä maksu. Vuosina 1574–1585 Frederik II muutatti keskiaikaisen linnoituksen renessanssilinnaksi.
+
+Tulipalo tuhosi suuren osan linnasta 1629, ja Christian IV rakennutti sen uudelleen. Vuonna 1658 ruotsalaiset piirittivät ja valtasivat Kronborgin j…
+AIEMPI KYSYMYS: Oliko Hamlet-prinssi oikeasti olemassa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Mutta ei se mikään helppo vastaus ole. Hamlet-prinssi ei ollut tiettävästi oikea historiallinen henkilö. Tarina perustuu keskiaikaiseen [[Amleth]]-legendaan, jonka kirjoitti muistiin tanskalainen historioitsija [[Saxo Grammaticus]] teoksessaan [[Gesta Danorum]] noin vuoden 1200 tienoilla. Shakespeare muokkasi tarinan näytelmäkseen paljon myöhemmin ja siirsi tapahtumat Elsinoreen. Legenda on siis vanhempi kuin näytelmä, mutta sen historiallisuudesta ei ole varmaa näyttöä. Nimi on kyllä elänyt pidempään kuin monen oikean kuninkaan.
+KYSYMYS: Kerro lisää: Saxo Grammaticus
+
+### 52
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kronborg (sana)
+Tietoruudun teksti: Kronborg on linna ja linnoitus Helsingørin kaupungissa. William Shakespeare nimesi sen Hamletissa Elsinoreksi, ja se on Pohjois-Euroopan merkittävimpiä renessanssilinnoja.
+
+Linna seisoo Sjællandin koillisimmassa kärjessä Juutinrauman kapeimmalla kohdalla, jossa salmi on vain neljä kilometriä leveä. Siitä sen strateginen merkitys: paikka hallitsee yhtä harvoista uloskäynneistä Itämereltä.
+
+Tarina alkaa Krogen-nimisestä linnoituksesta, jonka Eerik Pommerilainen rakennutti 1420-luvulla. Kuningas vaati Juutinrauman tullia jokaiselta laivalta, joka halusi salmen kautta Itämerelle tai sieltä pois, ja linnoitus salmen kapeimmassa kohdassa oli keino periä maksu. Vuosina 1574–1585 Frederik II muutatti keskiaikaisen linnoituksen renessanssilinnaksi.
+
+Tulipalo tuhosi suuren osan linnasta 1629, ja Christian IV rakennutti sen uudelleen. Vuonna 1658 ruotsalaiset piirittivät ja valtasivat Kronborgin j…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kaupunkilehti / Budapest: Patsas, jolle ei tehty kasvoja] Unkarin vanhimman kronikan Gesta Hungarorumin kirjoitti noin vuonna 1200 mies, joka kutsui itseään vain kirjaimella P. ja kuninkaan notaariksi. Nimeä ei tiedä kukaan, joten häntä sanotaan Anonymukseksi eli Nimettömäksi. Kun Miklós Ligeti teki hänestä pronssipatsaan vuonna 1903, hän jätti kasvot tahallaan hupun varjoon: salaisuus saa pysyä salaisuutena. Patsaan kynä on kulunut kiiltäväksi, sillä sitä käydään koskettamassa onnen toivossa.
+AIEMPI KYSYMYS: Oliko Hamlet-prinssi oikeasti olemassa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Mutta ei se mikään helppo vastaus ole. Hamlet-prinssi ei ollut tiettävästi oikea historiallinen henkilö. Tarina perustuu keskiaikaiseen [[Amleth]]-legendaan, jonka kirjoitti muistiin tanskalainen historioitsija [[Saxo Grammaticus]] teoksessaan [[Gesta Danorum]] noin vuoden 1200 tienoilla. Shakespeare muokkasi tarinan näytelmäkseen paljon myöhemmin ja siirsi tapahtumat Elsinoreen. Legenda on siis vanhempi kuin näytelmä, mutta sen historiallisuudesta ei ole varmaa näyttöä. Nimi on kyllä elänyt pidempään kuin monen oikean kuninkaan.
+KYSYMYS: Kerro lisää: Gesta Danorum
+
+### 53
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kronborg (sana)
+Tietoruudun teksti: Kronborg on linna ja linnoitus Helsingørin kaupungissa. William Shakespeare nimesi sen Hamletissa Elsinoreksi, ja se on Pohjois-Euroopan merkittävimpiä renessanssilinnoja.
+
+Linna seisoo Sjællandin koillisimmassa kärjessä Juutinrauman kapeimmalla kohdalla, jossa salmi on vain neljä kilometriä leveä. Siitä sen strateginen merkitys: paikka hallitsee yhtä harvoista uloskäynneistä Itämereltä.
+
+Tarina alkaa Krogen-nimisestä linnoituksesta, jonka Eerik Pommerilainen rakennutti 1420-luvulla. Kuningas vaati Juutinrauman tullia jokaiselta laivalta, joka halusi salmen kautta Itämerelle tai sieltä pois, ja linnoitus salmen kapeimmassa kohdassa oli keino periä maksu. Vuosina 1574–1585 Frederik II muutatti keskiaikaisen linnoituksen renessanssilinnaksi.
+
+Tulipalo tuhosi suuren osan linnasta 1629, ja Christian IV rakennutti sen uudelleen. Vuonna 1658 ruotsalaiset piirittivät ja valtasivat Kronborgin j…
+AIEMPI KYSYMYS: Mikä on Juutinrauman yli kulkeva silta?
+AIEMPI VASTAUS (Livia):
+Kato, tähän on helppo vastata. Juutinrauman eteläosassa kulkee [[Øresundin silta]], joka yhdistää [[Kööpenhaminan]] ja [[Malmön]] ruotsalaisen puolen kanssa. Se on silta-tunnelirakenne, joka avattiin liikenteelle vuonna 2000, ja sen kautta kulkee sekä juna- että autoliikennettä. Kronborgin kohdalla salmi on kapeimmillaan, ja siellä Helsingørin ja Helsingborgin välillä kulkee lauttoja eikä siltaa. Silta teki rajan ylittämisestä arkipäiväistä, eikä salmea tarvitse enää ylittää laivalla. Minulle tuo olisi ollut kyl loistava oksa.
+KYSYMYS: Kerro lisää: Øresundin silta
+
+### 54
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kronborg (sana)
+Tietoruudun teksti: Kronborg on linna ja linnoitus Helsingørin kaupungissa. William Shakespeare nimesi sen Hamletissa Elsinoreksi, ja se on Pohjois-Euroopan merkittävimpiä renessanssilinnoja.
+
+Linna seisoo Sjællandin koillisimmassa kärjessä Juutinrauman kapeimmalla kohdalla, jossa salmi on vain neljä kilometriä leveä. Siitä sen strateginen merkitys: paikka hallitsee yhtä harvoista uloskäynneistä Itämereltä.
+
+Tarina alkaa Krogen-nimisestä linnoituksesta, jonka Eerik Pommerilainen rakennutti 1420-luvulla. Kuningas vaati Juutinrauman tullia jokaiselta laivalta, joka halusi salmen kautta Itämerelle tai sieltä pois, ja linnoitus salmen kapeimmassa kohdassa oli keino periä maksu. Vuosina 1574–1585 Frederik II muutatti keskiaikaisen linnoituksen renessanssilinnaksi.
+
+Tulipalo tuhosi suuren osan linnasta 1629, ja Christian IV rakennutti sen uudelleen. Vuonna 1658 ruotsalaiset piirittivät ja valtasivat Kronborgin j…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Keksinnöt: Myllyt seisovat meressä] 2000 — Tanska on tehnyt sähköä tuulesta pitempään kuin melkein kukaan: opettaja Poul la Cour rakensi jo 1890-luvulla tuulimyllyn, joka tuotti sähköä koulun tarpeisiin. Kööpenhaminan edustalle valmistui vuonna 2000 Middelgrundenin merituulipuisto, jonka kaksikymmentä myllyä seisovat kaaressa merellä. Puolet siitä rakennettiin osuuskuntana: tuhannet tavalliset ihmiset ostivat osuuden ja saavat siitä tuoton. Nykyään tuuli tuottaa yli puolet koko maan sähköstä.
+AIEMPI KYSYMYS: Mikä on Juutinrauman yli kulkeva silta?
+AIEMPI VASTAUS (Livia):
+Kato, tähän on helppo vastata. Juutinrauman eteläosassa kulkee [[Øresundin silta]], joka yhdistää [[Kööpenhaminan]] ja [[Malmön]] ruotsalaisen puolen kanssa. Se on silta-tunnelirakenne, joka avattiin liikenteelle vuonna 2000, ja sen kautta kulkee sekä juna- että autoliikennettä. Kronborgin kohdalla salmi on kapeimmillaan, ja siellä Helsingørin ja Helsingborgin välillä kulkee lauttoja eikä siltaa. Silta teki rajan ylittämisestä arkipäiväistä, eikä salmea tarvitse enää ylittää laivalla. Minulle tuo olisi ollut kyl loistava oksa.
+KYSYMYS: Kerro lisää: Kööpenhaminan
+
+### 55
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kronborg (sana)
+Tietoruudun teksti: Kronborg on linna ja linnoitus Helsingørin kaupungissa. William Shakespeare nimesi sen Hamletissa Elsinoreksi, ja se on Pohjois-Euroopan merkittävimpiä renessanssilinnoja.
+
+Linna seisoo Sjællandin koillisimmassa kärjessä Juutinrauman kapeimmalla kohdalla, jossa salmi on vain neljä kilometriä leveä. Siitä sen strateginen merkitys: paikka hallitsee yhtä harvoista uloskäynneistä Itämereltä.
+
+Tarina alkaa Krogen-nimisestä linnoituksesta, jonka Eerik Pommerilainen rakennutti 1420-luvulla. Kuningas vaati Juutinrauman tullia jokaiselta laivalta, joka halusi salmen kautta Itämerelle tai sieltä pois, ja linnoitus salmen kapeimmassa kohdassa oli keino periä maksu. Vuosina 1574–1585 Frederik II muutatti keskiaikaisen linnoituksen renessanssilinnaksi.
+
+Tulipalo tuhosi suuren osan linnasta 1629, ja Christian IV rakennutti sen uudelleen. Vuonna 1658 ruotsalaiset piirittivät ja valtasivat Kronborgin j…
+AIEMPI KYSYMYS: Mikä on Juutinrauman yli kulkeva silta?
+AIEMPI VASTAUS (Livia):
+Kato, tähän on helppo vastata. Juutinrauman eteläosassa kulkee [[Øresundin silta]], joka yhdistää [[Kööpenhaminan]] ja [[Malmön]] ruotsalaisen puolen kanssa. Se on silta-tunnelirakenne, joka avattiin liikenteelle vuonna 2000, ja sen kautta kulkee sekä juna- että autoliikennettä. Kronborgin kohdalla salmi on kapeimmillaan, ja siellä Helsingørin ja Helsingborgin välillä kulkee lauttoja eikä siltaa. Silta teki rajan ylittämisestä arkipäiväistä, eikä salmea tarvitse enää ylittää laivalla. Minulle tuo olisi ollut kyl loistava oksa.
+KYSYMYS: Kerro lisää: Malmön
+
+### 56
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kronborg (sana)
+Tietoruudun teksti: Kronborg on linna ja linnoitus Helsingørin kaupungissa. William Shakespeare nimesi sen Hamletissa Elsinoreksi, ja se on Pohjois-Euroopan merkittävimpiä renessanssilinnoja.
+
+Linna seisoo Sjællandin koillisimmassa kärjessä Juutinrauman kapeimmalla kohdalla, jossa salmi on vain neljä kilometriä leveä. Siitä sen strateginen merkitys: paikka hallitsee yhtä harvoista uloskäynneistä Itämereltä.
+
+Tarina alkaa Krogen-nimisestä linnoituksesta, jonka Eerik Pommerilainen rakennutti 1420-luvulla. Kuningas vaati Juutinrauman tullia jokaiselta laivalta, joka halusi salmen kautta Itämerelle tai sieltä pois, ja linnoitus salmen kapeimmassa kohdassa oli keino periä maksu. Vuosina 1574–1585 Frederik II muutatti keskiaikaisen linnoituksen renessanssilinnaksi.
+
+Tulipalo tuhosi suuren osan linnasta 1629, ja Christian IV rakennutti sen uudelleen. Vuonna 1658 ruotsalaiset piirittivät ja valtasivat Kronborgin j…
+AIEMPI KYSYMYS: Kuka on Kronborgin kellarissa nukkuva Holger Danske?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tämä on vanha kansantarina. Holger Danske eli Ogier tanskalainen on tanskalainen legendaarinen sankari, jonka kerrotaan nukkuvan [[Kronborgin]] kellareissa. Taru kertoo, että hän herää ja nousee puolustamaan maata, kun [[Tanskaa]] uhkaa suuri vaara. Hahmo on peräisin keskiaikaisista ritaritarinoista, ja hänen patsaansa on nähtävissä linnan holveissa. En ole varma hahmon täsmällisestä alkuperästä, koska legenda on muuttunut vuosisatojen kuluessa. Hyvin vahva uni sillä sankarilla, ja minä nukun kyllä kevyemmin.
+KYSYMYS: Kerro lisää: Kronborgin
+
+### 57
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kronborg (sana)
+Tietoruudun teksti: Kronborg on linna ja linnoitus Helsingørin kaupungissa. William Shakespeare nimesi sen Hamletissa Elsinoreksi, ja se on Pohjois-Euroopan merkittävimpiä renessanssilinnoja.
+
+Linna seisoo Sjællandin koillisimmassa kärjessä Juutinrauman kapeimmalla kohdalla, jossa salmi on vain neljä kilometriä leveä. Siitä sen strateginen merkitys: paikka hallitsee yhtä harvoista uloskäynneistä Itämereltä.
+
+Tarina alkaa Krogen-nimisestä linnoituksesta, jonka Eerik Pommerilainen rakennutti 1420-luvulla. Kuningas vaati Juutinrauman tullia jokaiselta laivalta, joka halusi salmen kautta Itämerelle tai sieltä pois, ja linnoitus salmen kapeimmassa kohdassa oli keino periä maksu. Vuosina 1574–1585 Frederik II muutatti keskiaikaisen linnoituksen renessanssilinnaksi.
+
+Tulipalo tuhosi suuren osan linnasta 1629, ja Christian IV rakennutti sen uudelleen. Vuonna 1658 ruotsalaiset piirittivät ja valtasivat Kronborgin j…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Kuka on Kronborgin kellarissa nukkuva Holger Danske?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tämä on vanha kansantarina. Holger Danske eli Ogier tanskalainen on tanskalainen legendaarinen sankari, jonka kerrotaan nukkuvan [[Kronborgin]] kellareissa. Taru kertoo, että hän herää ja nousee puolustamaan maata, kun [[Tanskaa]] uhkaa suuri vaara. Hahmo on peräisin keskiaikaisista ritaritarinoista, ja hänen patsaansa on nähtävissä linnan holveissa. En ole varma hahmon täsmällisestä alkuperästä, koska legenda on muuttunut vuosisatojen kuluessa. Hyvin vahva uni sillä sankarilla, ja minä nukun kyllä kevyemmin.
+KYSYMYS: Kerro lisää: Tanskaa
+
+### 58
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jellingin kivet (historia)
+Tietoruudun teksti: Jellingin kivet ovat kaksi järeää 900-luvun riimukiveä Jellingin kylässä. Vanhemman pystytti kuningas Gorm Vanha vaimonsa Thyran muistoksi. Suuremman pystytti Gormin poika Harald Sinihammas vanhempiensa muistoksi ja juhli siinä samalla Tanskan ja Norjan valloitustaan sekä tanskalaisten kääntymistä kristinuskoon.
+
+Kivet liitetään vahvasti Tanskan syntyyn kuningaskuntana: molemmissa kirjoituksissa esiintyy nimi Danmark. Suuremmassa kivessä mainitaan nimenomaisesti kääntyminen pakanuudesta ja siinä on kuva ristiinnaulitusta Kristuksesta, ja siksi sitä on kansanomaisesti kutsuttu Tanskan kastetodistukseksi — nimityksen keksi taidehistorioitsija Rudolf Broby-Johansen 1930-luvulla.
+
+Vuonna 1994 kivet sekä lähellä olevat hautakummut ja pieni kirkko liitettiin maailmanperintöluetteloon vertaansa vailla olevana esimerkkinä sekä pakanallisesta että kristillisestä pohjoismaisesta kulttuurista. Vuo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historia: Kivi, jossa maan nimi lukee ensimmäisen kerran] 965 — Jellingin kylässä seisoo kaksi riimukiveä. Isomman pystytti noin vuonna 965 kuningas Harald Sinihammas, ja siihen on hakattu, että hän voitti koko Tanskan ja Norjan ja teki tanskalaisista kristittyjä. Sana Tanska esiintyy siinä ensimmäisen kerran maan omalla kielellä, ja siksi kiveä sanotaan maan syntytodistukseksi. Kuningas sai myöhemmin oudon jälkimaineen: langaton Bluetooth-yhteys on nimetty hänen mukaansa, koska se yhdistää laitteita kuten hän yhdisti heimoja.
+AIEMPI KYSYMYS: Miksi kiviä sanotaan Tanskan kastetodistukseksi?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Hyvä kysymys, vaikka nimi kuulostaa virallisemmalta kuin onkaan. Suurempaan kiveen, jonka pystytti kuningas [[Harald Sinihammas]], on hakattu maininta tanskalaisten kääntymisestä pakanuudesta, ja siinä on myös kuva ristiinnaulitusta Kristuksesta. Siksi sitä on kansanomaisesti kutsuttu Tanskan kastetodistukseksi. Nimityksen keksi taidehistorioitsija [[Rudolf Broby-Johansen]] vasta 1930-luvulla, joten se on myöhempi vertauskuva eikä viikinkiajan oma sanonta. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Harald Sinihammas
+
+### 59
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jellingin kivet (historia)
+Tietoruudun teksti: Jellingin kivet ovat kaksi järeää 900-luvun riimukiveä Jellingin kylässä. Vanhemman pystytti kuningas Gorm Vanha vaimonsa Thyran muistoksi. Suuremman pystytti Gormin poika Harald Sinihammas vanhempiensa muistoksi ja juhli siinä samalla Tanskan ja Norjan valloitustaan sekä tanskalaisten kääntymistä kristinuskoon.
+
+Kivet liitetään vahvasti Tanskan syntyyn kuningaskuntana: molemmissa kirjoituksissa esiintyy nimi Danmark. Suuremmassa kivessä mainitaan nimenomaisesti kääntyminen pakanuudesta ja siinä on kuva ristiinnaulitusta Kristuksesta, ja siksi sitä on kansanomaisesti kutsuttu Tanskan kastetodistukseksi — nimityksen keksi taidehistorioitsija Rudolf Broby-Johansen 1930-luvulla.
+
+Vuonna 1994 kivet sekä lähellä olevat hautakummut ja pieni kirkko liitettiin maailmanperintöluetteloon vertaansa vailla olevana esimerkkinä sekä pakanallisesta että kristillisestä pohjoismaisesta kulttuurista. Vuo…
+AIEMPI KYSYMYS: Miksi kiviä sanotaan Tanskan kastetodistukseksi?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Hyvä kysymys, vaikka nimi kuulostaa virallisemmalta kuin onkaan. Suurempaan kiveen, jonka pystytti kuningas [[Harald Sinihammas]], on hakattu maininta tanskalaisten kääntymisestä pakanuudesta, ja siinä on myös kuva ristiinnaulitusta Kristuksesta. Siksi sitä on kansanomaisesti kutsuttu Tanskan kastetodistukseksi. Nimityksen keksi taidehistorioitsija [[Rudolf Broby-Johansen]] vasta 1930-luvulla, joten se on myöhempi vertauskuva eikä viikinkiajan oma sanonta. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Rudolf Broby-Johansen
+
+### 60
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jellingin kivet (historia)
+Tietoruudun teksti: Jellingin kivet ovat kaksi järeää 900-luvun riimukiveä Jellingin kylässä. Vanhemman pystytti kuningas Gorm Vanha vaimonsa Thyran muistoksi. Suuremman pystytti Gormin poika Harald Sinihammas vanhempiensa muistoksi ja juhli siinä samalla Tanskan ja Norjan valloitustaan sekä tanskalaisten kääntymistä kristinuskoon.
+
+Kivet liitetään vahvasti Tanskan syntyyn kuningaskuntana: molemmissa kirjoituksissa esiintyy nimi Danmark. Suuremmassa kivessä mainitaan nimenomaisesti kääntyminen pakanuudesta ja siinä on kuva ristiinnaulitusta Kristuksesta, ja siksi sitä on kansanomaisesti kutsuttu Tanskan kastetodistukseksi — nimityksen keksi taidehistorioitsija Rudolf Broby-Johansen 1930-luvulla.
+
+Vuonna 1994 kivet sekä lähellä olevat hautakummut ja pieni kirkko liitettiin maailmanperintöluetteloon vertaansa vailla olevana esimerkkinä sekä pakanallisesta että kristillisestä pohjoismaisesta kulttuurista. Vuo…
+AIEMPI KYSYMYS: Mistä langattoman Bluetoothin nimi tulee?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on kyllä hauskin yhteys, mitä kivestä löytyy. Nimi on peräisin kuningas [[Harald Sinihampaan]] lempinimestä: hänet muistetaan siitä, että hän yhdisti heimoja, ja langaton tekniikka yhdistää laitteita samaan tapaan. Harald pystytti suuremman [[Jellingin kivistä]].
+
+Minä olen kantanut viestejä ilman minkäänlaista langatonta yhteyttä, eikä kukaan ole koskaan valittanut kuuluvuudesta. Suku kyllä puolustaisi vanhaa menetelmää, mutta myönnän, että kuninkaasta tuli kunnon markkinointiväki.
+KYSYMYS: Kerro lisää: Harald Sinihampaan
+
+### 61
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jellingin kivet (historia)
+Tietoruudun teksti: Jellingin kivet ovat kaksi järeää 900-luvun riimukiveä Jellingin kylässä. Vanhemman pystytti kuningas Gorm Vanha vaimonsa Thyran muistoksi. Suuremman pystytti Gormin poika Harald Sinihammas vanhempiensa muistoksi ja juhli siinä samalla Tanskan ja Norjan valloitustaan sekä tanskalaisten kääntymistä kristinuskoon.
+
+Kivet liitetään vahvasti Tanskan syntyyn kuningaskuntana: molemmissa kirjoituksissa esiintyy nimi Danmark. Suuremmassa kivessä mainitaan nimenomaisesti kääntyminen pakanuudesta ja siinä on kuva ristiinnaulitusta Kristuksesta, ja siksi sitä on kansanomaisesti kutsuttu Tanskan kastetodistukseksi — nimityksen keksi taidehistorioitsija Rudolf Broby-Johansen 1930-luvulla.
+
+Vuonna 1994 kivet sekä lähellä olevat hautakummut ja pieni kirkko liitettiin maailmanperintöluetteloon vertaansa vailla olevana esimerkkinä sekä pakanallisesta että kristillisestä pohjoismaisesta kulttuurista. Vuo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historia: Kivi, jossa maan nimi lukee ensimmäisen kerran] 965 — Jellingin kylässä seisoo kaksi riimukiveä. Isomman pystytti noin vuonna 965 kuningas Harald Sinihammas, ja siihen on hakattu, että hän voitti koko Tanskan ja Norjan ja teki tanskalaisista kristittyjä. Sana Tanska esiintyy siinä ensimmäisen kerran maan omalla kielellä, ja siksi kiveä sanotaan maan syntytodistukseksi. Kuningas sai myöhemmin oudon jälkimaineen: langaton Bluetooth-yhteys on nimetty hänen mukaansa, koska se yhdistää laitteita kuten hän yhdisti heimoja.
+AIEMPI KYSYMYS: Mistä langattoman Bluetoothin nimi tulee?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on kyllä hauskin yhteys, mitä kivestä löytyy. Nimi on peräisin kuningas [[Harald Sinihampaan]] lempinimestä: hänet muistetaan siitä, että hän yhdisti heimoja, ja langaton tekniikka yhdistää laitteita samaan tapaan. Harald pystytti suuremman [[Jellingin kivistä]].
+
+Minä olen kantanut viestejä ilman minkäänlaista langatonta yhteyttä, eikä kukaan ole koskaan valittanut kuuluvuudesta. Suku kyllä puolustaisi vanhaa menetelmää, mutta myönnän, että kuninkaasta tuli kunnon markkinointiväki.
+KYSYMYS: Kerro lisää: Jellingin kivistä
+
+### 62
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jellingin kivet (historia)
+Tietoruudun teksti: Jellingin kivet ovat kaksi järeää 900-luvun riimukiveä Jellingin kylässä. Vanhemman pystytti kuningas Gorm Vanha vaimonsa Thyran muistoksi. Suuremman pystytti Gormin poika Harald Sinihammas vanhempiensa muistoksi ja juhli siinä samalla Tanskan ja Norjan valloitustaan sekä tanskalaisten kääntymistä kristinuskoon.
+
+Kivet liitetään vahvasti Tanskan syntyyn kuningaskuntana: molemmissa kirjoituksissa esiintyy nimi Danmark. Suuremmassa kivessä mainitaan nimenomaisesti kääntyminen pakanuudesta ja siinä on kuva ristiinnaulitusta Kristuksesta, ja siksi sitä on kansanomaisesti kutsuttu Tanskan kastetodistukseksi — nimityksen keksi taidehistorioitsija Rudolf Broby-Johansen 1930-luvulla.
+
+Vuonna 1994 kivet sekä lähellä olevat hautakummut ja pieni kirkko liitettiin maailmanperintöluetteloon vertaansa vailla olevana esimerkkinä sekä pakanallisesta että kristillisestä pohjoismaisesta kulttuurista. Vuo…
+AIEMPI KYSYMYS: Kuka oli kuningas Gorm Vanha?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Hänestä tiedetään vähemmän kuin pojastaan, mut sen verran kuitenkin. Gorm Vanha oli 900-luvun tanskalainen kuningas ja [[Harald Sinihampaan]] isä. Hän pystytti Jellingin vanhemman riimukiven vaimonsa [[Thyran]] muistoksi, ja hänen nimensä on osa sitä pitkää sukujatkumoa, josta Tanskan kuningaskunta myöhemmin kasvoi. Tarkempia elinvuosia en uskalla sanoa. Pulla jäi tällä kertaa kokonaan sivuun.
+KYSYMYS: Kerro lisää: Thyran
+
+### 63
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jellingin kivet (historia)
+Tietoruudun teksti: Jellingin kivet ovat kaksi järeää 900-luvun riimukiveä Jellingin kylässä. Vanhemman pystytti kuningas Gorm Vanha vaimonsa Thyran muistoksi. Suuremman pystytti Gormin poika Harald Sinihammas vanhempiensa muistoksi ja juhli siinä samalla Tanskan ja Norjan valloitustaan sekä tanskalaisten kääntymistä kristinuskoon.
+
+Kivet liitetään vahvasti Tanskan syntyyn kuningaskuntana: molemmissa kirjoituksissa esiintyy nimi Danmark. Suuremmassa kivessä mainitaan nimenomaisesti kääntyminen pakanuudesta ja siinä on kuva ristiinnaulitusta Kristuksesta, ja siksi sitä on kansanomaisesti kutsuttu Tanskan kastetodistukseksi — nimityksen keksi taidehistorioitsija Rudolf Broby-Johansen 1930-luvulla.
+
+Vuonna 1994 kivet sekä lähellä olevat hautakummut ja pieni kirkko liitettiin maailmanperintöluetteloon vertaansa vailla olevana esimerkkinä sekä pakanallisesta että kristillisestä pohjoismaisesta kulttuurista. Vuo…
+AIEMPI KYSYMYS: Mitä riimukirjoitus oikein on?
+AIEMPI VASTAUS (Livia):
+No niin, riimut ovat oikea kirjoitusaihe, ja ne ovat hyvin pohjoismaisia. Riimut ovat germaanisten kansojen vanha kirjaimisto, jota hakattiin kiveen, puuhun ja metalliin. Viikinkiajan Tanskassa käytettiin nuorempaa [[futharkia]], lyhyttä riimuaakkostoa, ja [[riimukivet]] pystytettiin tavallisesti muistomerkeiksi kuolleen muistoksi, kuten Jellingin kivet. Kirjoitus kertoo, kuka kiven pystytti ja ketä se muistaa. Ja tän kaiken minä muistin ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: futharkia
+
+### 64
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jellingin kivet (historia)
+Tietoruudun teksti: Jellingin kivet ovat kaksi järeää 900-luvun riimukiveä Jellingin kylässä. Vanhemman pystytti kuningas Gorm Vanha vaimonsa Thyran muistoksi. Suuremman pystytti Gormin poika Harald Sinihammas vanhempiensa muistoksi ja juhli siinä samalla Tanskan ja Norjan valloitustaan sekä tanskalaisten kääntymistä kristinuskoon.
+
+Kivet liitetään vahvasti Tanskan syntyyn kuningaskuntana: molemmissa kirjoituksissa esiintyy nimi Danmark. Suuremmassa kivessä mainitaan nimenomaisesti kääntyminen pakanuudesta ja siinä on kuva ristiinnaulitusta Kristuksesta, ja siksi sitä on kansanomaisesti kutsuttu Tanskan kastetodistukseksi — nimityksen keksi taidehistorioitsija Rudolf Broby-Johansen 1930-luvulla.
+
+Vuonna 1994 kivet sekä lähellä olevat hautakummut ja pieni kirkko liitettiin maailmanperintöluetteloon vertaansa vailla olevana esimerkkinä sekä pakanallisesta että kristillisestä pohjoismaisesta kulttuurista. Vuo…
+AIEMPI KYSYMYS: Mitä riimukirjoitus oikein on?
+AIEMPI VASTAUS (Livia):
+No niin, riimut ovat oikea kirjoitusaihe, ja ne ovat hyvin pohjoismaisia. Riimut ovat germaanisten kansojen vanha kirjaimisto, jota hakattiin kiveen, puuhun ja metalliin. Viikinkiajan Tanskassa käytettiin nuorempaa [[futharkia]], lyhyttä riimuaakkostoa, ja [[riimukivet]] pystytettiin tavallisesti muistomerkeiksi kuolleen muistoksi, kuten Jellingin kivet. Kirjoitus kertoo, kuka kiven pystytti ja ketä se muistaa. Ja tän kaiken minä muistin ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: riimukivet
+
+### 65
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jellingin kivet (historia)
+Tietoruudun teksti: Jellingin kivet ovat kaksi järeää 900-luvun riimukiveä Jellingin kylässä. Vanhemman pystytti kuningas Gorm Vanha vaimonsa Thyran muistoksi. Suuremman pystytti Gormin poika Harald Sinihammas vanhempiensa muistoksi ja juhli siinä samalla Tanskan ja Norjan valloitustaan sekä tanskalaisten kääntymistä kristinuskoon.
+
+Kivet liitetään vahvasti Tanskan syntyyn kuningaskuntana: molemmissa kirjoituksissa esiintyy nimi Danmark. Suuremmassa kivessä mainitaan nimenomaisesti kääntyminen pakanuudesta ja siinä on kuva ristiinnaulitusta Kristuksesta, ja siksi sitä on kansanomaisesti kutsuttu Tanskan kastetodistukseksi — nimityksen keksi taidehistorioitsija Rudolf Broby-Johansen 1930-luvulla.
+
+Vuonna 1994 kivet sekä lähellä olevat hautakummut ja pieni kirkko liitettiin maailmanperintöluetteloon vertaansa vailla olevana esimerkkinä sekä pakanallisesta että kristillisestä pohjoismaisesta kulttuurista. Vuo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salalah — kohdekartta / Kohdekartta: Nabi Umranin hauta] perimätieto, ajoittamaton Salalahia on kutsuttu profeettojen kaupungiksi. Seudulla on neljä hautaa, joita perimätieto pitää islamin profeettojen leposijoina: Nabi Imran, Nabi Ayoub eli Raamatun Job, Nabi Houd ja Nabi Salih. Näistä Imranin hauta on ainoa, joka on kaupungin sisällä — muut ovat vuorilla ja rannikolla kymmenien kilometrien päässä. Kuka Imran oli, siitä ei olla yksimielisiä. Osa pitää häntä Neitsyt Marian isänä eli kristillisen perinteen Joakimina, osa Mooseksen isänä. Koraanin kolmas suura on nimeltään Al Imran, Imranin suku, ja siinä kerrotaan Marian syntymästä. Salalahin oma artikkeli pitää todennäköisimpänä, että kyseessä on paikallinen profeetta, jonka nimi on myöhemmin yhd…
+- [St. Helena — kaupunkilehti / Keisari kalliosaaren vankina: Tyhjä hauta Geraniumilaaksossa] Napoleon haudattiin kuolemansa jälkeen kaislaverhoiseen laaksoon, jota hän oli itse kutsunut kävelyillään Geraniumilaaksoksi – virallisesti Sane Valleyksi. Hautakiveen ei koskaan kaiverrettu nimeä, koska Ranska ja Britannia eivät päässeet sopuun siitä, tulisiko siihen lukea vain 'Napoleon' vai täydellisemmin 'Napoleon Bonaparte'. Vuonna 1840 ruumis kaivettiin esiin ja vietiin Ranskaan, mutta tyhjä hauta rautaisine aitoineen on yhä paikallaan rehevän puutarhan keskellä – yksi St. Helenan suosituimmista nähtävyyksistä isoisän ajoista näihin päiviin.
+AIEMPI KYSYMYS: Mitä muuta Jellingissä on kivien lisäksi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kivet eivät seiso siellä aivan yksin. Kivien lähellä on [[hautakummut]] ja pieni kirkko, ja kokonaisuus liitettiin [[maailmanperintöluetteloon]] vuonna 1994 vertaansa vailla olevana esimerkkinä sekä pakanallisesta että kristillisestä pohjoismaisesta kulttuurista. Kohde kertoo siis siirtymästä vanhasta uskosta uuteen yhdellä ja samalla paikalla. Eipä tuo ollut pitkä, mut hyvä silti.
+KYSYMYS: Kerro lisää: hautakummut
+
+### 66
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jellingin kivet (historia)
+Tietoruudun teksti: Jellingin kivet ovat kaksi järeää 900-luvun riimukiveä Jellingin kylässä. Vanhemman pystytti kuningas Gorm Vanha vaimonsa Thyran muistoksi. Suuremman pystytti Gormin poika Harald Sinihammas vanhempiensa muistoksi ja juhli siinä samalla Tanskan ja Norjan valloitustaan sekä tanskalaisten kääntymistä kristinuskoon.
+
+Kivet liitetään vahvasti Tanskan syntyyn kuningaskuntana: molemmissa kirjoituksissa esiintyy nimi Danmark. Suuremmassa kivessä mainitaan nimenomaisesti kääntyminen pakanuudesta ja siinä on kuva ristiinnaulitusta Kristuksesta, ja siksi sitä on kansanomaisesti kutsuttu Tanskan kastetodistukseksi — nimityksen keksi taidehistorioitsija Rudolf Broby-Johansen 1930-luvulla.
+
+Vuonna 1994 kivet sekä lähellä olevat hautakummut ja pieni kirkko liitettiin maailmanperintöluetteloon vertaansa vailla olevana esimerkkinä sekä pakanallisesta että kristillisestä pohjoismaisesta kulttuurista. Vuo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mitä muuta Jellingissä on kivien lisäksi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kivet eivät seiso siellä aivan yksin. Kivien lähellä on [[hautakummut]] ja pieni kirkko, ja kokonaisuus liitettiin [[maailmanperintöluetteloon]] vuonna 1994 vertaansa vailla olevana esimerkkinä sekä pakanallisesta että kristillisestä pohjoismaisesta kulttuurista. Kohde kertoo siis siirtymästä vanhasta uskosta uuteen yhdellä ja samalla paikalla. Eipä tuo ollut pitkä, mut hyvä silti.
+KYSYMYS: Kerro lisää: maailmanperintöluetteloon
+
+### 67
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ribe (kaupungit)
+Tietoruudun teksti: Ribe on kaupunki Lounais-Jyllannissa ja Tanskan vanhin kaupunki. Asukkaita on reilut kahdeksantuhatta.
+
+Kauppa kävi täällä jo 700-luvun alussa, ja rahaa saatettiin lyödä Ribessä jo vuonna 720. Yli kolmestasadasta Tanskasta löytyneestä sceatta-rahasta 216 on löydetty Ribestä tai sen ympäriltä. Kauppasuhteet kulkivat etenkin Friisinmaalle ja Englantiin.
+
+Kun arkkipiispa Ansgar lähti käännyttämään Skandinaviaa, hän pyysi noin vuonna 860 kuningas Horik II:lta luvan rakentaa Skandinavian ensimmäisen kirkon juuri Ribeen. Piispa — ja siis katedraali — voidaan varmuudella osoittaa vasta vuodesta 948. Kaivauksissa on kuitenkin löydetty 2 000–3 000 kristittyä hautaa 800-luvulta, mikä kertoo suuresta kristityistä yhteisöstä, joka eli viikinkien rinnalla rauhassa.
+
+Kaupunki on matalalla merenrantaniityllä, ja myrskytulvat ovat iskeneet siihen toistuvasti. Tuhoisin oli Burchardin tulva vuonna 1634; …
+AIEMPI KYSYMYS: Kuinka vanha Ribe on?
+AIEMPI VASTAUS (Livia):
+Tuota niin, ikä on sellainen asia, jossa täsmällisyys on vaikeaa. Ribe on Tanskan vanhin kaupunki, ja kauppaa käytiin siellä jo 700-luvun alussa. Rahaa saatettiin lyödä Ribessä jo vuonna 720, ja kauppasuhteet kulkivat etenkin [[Friisinmaalle]] ja [[Englantiin]]. Tarkkaa perustamisvuotta en uskalla sanoa, koska kaupungin synty ulottuu aikaan ennen kirjallisia lähteitä. Vanha on, vanhempi kuin kukaan meistä.
+KYSYMYS: Kerro lisää: Friisinmaalle
+
+### 68
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ribe (kaupungit)
+Tietoruudun teksti: Ribe on kaupunki Lounais-Jyllannissa ja Tanskan vanhin kaupunki. Asukkaita on reilut kahdeksantuhatta.
+
+Kauppa kävi täällä jo 700-luvun alussa, ja rahaa saatettiin lyödä Ribessä jo vuonna 720. Yli kolmestasadasta Tanskasta löytyneestä sceatta-rahasta 216 on löydetty Ribestä tai sen ympäriltä. Kauppasuhteet kulkivat etenkin Friisinmaalle ja Englantiin.
+
+Kun arkkipiispa Ansgar lähti käännyttämään Skandinaviaa, hän pyysi noin vuonna 860 kuningas Horik II:lta luvan rakentaa Skandinavian ensimmäisen kirkon juuri Ribeen. Piispa — ja siis katedraali — voidaan varmuudella osoittaa vasta vuodesta 948. Kaivauksissa on kuitenkin löydetty 2 000–3 000 kristittyä hautaa 800-luvulta, mikä kertoo suuresta kristityistä yhteisöstä, joka eli viikinkien rinnalla rauhassa.
+
+Kaupunki on matalalla merenrantaniityllä, ja myrskytulvat ovat iskeneet siihen toistuvasti. Tuhoisin oli Burchardin tulva vuonna 1634; …
+AIEMPI KYSYMYS: Kuinka vanha Ribe on?
+AIEMPI VASTAUS (Livia):
+Tuota niin, ikä on sellainen asia, jossa täsmällisyys on vaikeaa. Ribe on Tanskan vanhin kaupunki, ja kauppaa käytiin siellä jo 700-luvun alussa. Rahaa saatettiin lyödä Ribessä jo vuonna 720, ja kauppasuhteet kulkivat etenkin [[Friisinmaalle]] ja [[Englantiin]]. Tarkkaa perustamisvuotta en uskalla sanoa, koska kaupungin synty ulottuu aikaan ennen kirjallisia lähteitä. Vanha on, vanhempi kuin kukaan meistä.
+KYSYMYS: Kerro lisää: Englantiin
+
+### 69
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ribe (kaupungit)
+Tietoruudun teksti: Ribe on kaupunki Lounais-Jyllannissa ja Tanskan vanhin kaupunki. Asukkaita on reilut kahdeksantuhatta.
+
+Kauppa kävi täällä jo 700-luvun alussa, ja rahaa saatettiin lyödä Ribessä jo vuonna 720. Yli kolmestasadasta Tanskasta löytyneestä sceatta-rahasta 216 on löydetty Ribestä tai sen ympäriltä. Kauppasuhteet kulkivat etenkin Friisinmaalle ja Englantiin.
+
+Kun arkkipiispa Ansgar lähti käännyttämään Skandinaviaa, hän pyysi noin vuonna 860 kuningas Horik II:lta luvan rakentaa Skandinavian ensimmäisen kirkon juuri Ribeen. Piispa — ja siis katedraali — voidaan varmuudella osoittaa vasta vuodesta 948. Kaivauksissa on kuitenkin löydetty 2 000–3 000 kristittyä hautaa 800-luvulta, mikä kertoo suuresta kristityistä yhteisöstä, joka eli viikinkien rinnalla rauhassa.
+
+Kaupunki on matalalla merenrantaniityllä, ja myrskytulvat ovat iskeneet siihen toistuvasti. Tuhoisin oli Burchardin tulva vuonna 1634; …
+AIEMPI KYSYMYS: Mikä Burchardin tulva oli?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tämä on raskaampi aihe. [[Burchardin tulva]] oli [[Pohjanmeren]] rannikon tuhoisa myrskytulva vuonna 1634, ja [[Riben]] kaupungille se oli tuhoisin tulva. Tapahtuma sai nimensä pyhän Burchardin päivän mukaan, jonka aikoihin se iski; tarkasta päivämäärästä en ole varma. Siitä on noin neljäsataa vuotta, ja rannikkoa suojellaan nykyään padoin ja penkereitä. Tarkemmista vahingoista en ole varma, enkä halua arvailla.
+
+Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Burchardin tulva
+
+### 70
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ribe (kaupungit)
+Tietoruudun teksti: Ribe on kaupunki Lounais-Jyllannissa ja Tanskan vanhin kaupunki. Asukkaita on reilut kahdeksantuhatta.
+
+Kauppa kävi täällä jo 700-luvun alussa, ja rahaa saatettiin lyödä Ribessä jo vuonna 720. Yli kolmestasadasta Tanskasta löytyneestä sceatta-rahasta 216 on löydetty Ribestä tai sen ympäriltä. Kauppasuhteet kulkivat etenkin Friisinmaalle ja Englantiin.
+
+Kun arkkipiispa Ansgar lähti käännyttämään Skandinaviaa, hän pyysi noin vuonna 860 kuningas Horik II:lta luvan rakentaa Skandinavian ensimmäisen kirkon juuri Ribeen. Piispa — ja siis katedraali — voidaan varmuudella osoittaa vasta vuodesta 948. Kaivauksissa on kuitenkin löydetty 2 000–3 000 kristittyä hautaa 800-luvulta, mikä kertoo suuresta kristityistä yhteisöstä, joka eli viikinkien rinnalla rauhassa.
+
+Kaupunki on matalalla merenrantaniityllä, ja myrskytulvat ovat iskeneet siihen toistuvasti. Tuhoisin oli Burchardin tulva vuonna 1634; …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Luonto: Meri joka häviää joka päivä] 2014 — Vadehavi on Pohjanmeren matala rannikkovyöhyke, jonka vuorovesi paljastaa ja peittää kahdesti vuorokaudessa: nousuveden aikaan kaikki on merta, laskuveden aikaan silmänkantamattomiin avautuu lietettä ja hiekkasärkkiä. Oppaat vievät kävijöitä avojaloin lietteen yli sinne, missä äsken kulki vene. Alue on yksi maailman tärkeimmistä lintualueista: miljoonat muutto- ja pesimälinnut käyttävät sitä matkalla tai kotina. Hollannin ja Saksan vadehavi liitettiin Unescon maailmanperintöluetteloon 2009, ja Tanskan osuus seurasi kesäkuussa 2014 — nyt koko rannikkokaistale Esbjergistä Saksan rajalle on yhtä suojeltua merenpohjaa.
+- [Saksa — maalehti / Luonto: Meri vetäytyy ja pohja aukeaa] Pohjanmeren rannikolla meri vetäytyy kahdesti päivässä kilometrien päähän ja jättää jälkeensä Wattenmeerin: mutatasangon, jota pitkin voi kävellä merenpohjassa saarelta toiselle. Opas kulkee aina mukana, sillä vuoksi palaa nopeammin kuin ihminen juoksee. Pohja näyttää tyhjältä mutta kuhisee elämää: yhdessä neliömetrissä voi asua kymmeniätuhansia matoja, kotiloita ja simpukoita, ja hietikoilla lepää kirjohylkeitä. Vattimeri on Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Mikä Burchardin tulva oli?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tämä on raskaampi aihe. [[Burchardin tulva]] oli [[Pohjanmeren]] rannikon tuhoisa myrskytulva vuonna 1634, ja [[Riben]] kaupungille se oli tuhoisin tulva. Tapahtuma sai nimensä pyhän Burchardin päivän mukaan, jonka aikoihin se iski; tarkasta päivämäärästä en ole varma. Siitä on noin neljäsataa vuotta, ja rannikkoa suojellaan nykyään padoin ja penkereitä. Tarkemmista vahingoista en ole varma, enkä halua arvailla.
+
+Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Pohjanmeren
+
+### 71
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ribe (kaupungit)
+Tietoruudun teksti: Ribe on kaupunki Lounais-Jyllannissa ja Tanskan vanhin kaupunki. Asukkaita on reilut kahdeksantuhatta.
+
+Kauppa kävi täällä jo 700-luvun alussa, ja rahaa saatettiin lyödä Ribessä jo vuonna 720. Yli kolmestasadasta Tanskasta löytyneestä sceatta-rahasta 216 on löydetty Ribestä tai sen ympäriltä. Kauppasuhteet kulkivat etenkin Friisinmaalle ja Englantiin.
+
+Kun arkkipiispa Ansgar lähti käännyttämään Skandinaviaa, hän pyysi noin vuonna 860 kuningas Horik II:lta luvan rakentaa Skandinavian ensimmäisen kirkon juuri Ribeen. Piispa — ja siis katedraali — voidaan varmuudella osoittaa vasta vuodesta 948. Kaivauksissa on kuitenkin löydetty 2 000–3 000 kristittyä hautaa 800-luvulta, mikä kertoo suuresta kristityistä yhteisöstä, joka eli viikinkien rinnalla rauhassa.
+
+Kaupunki on matalalla merenrantaniityllä, ja myrskytulvat ovat iskeneet siihen toistuvasti. Tuhoisin oli Burchardin tulva vuonna 1634; …
+AIEMPI KYSYMYS: Mikä Burchardin tulva oli?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tämä on raskaampi aihe. [[Burchardin tulva]] oli [[Pohjanmeren]] rannikon tuhoisa myrskytulva vuonna 1634, ja [[Riben]] kaupungille se oli tuhoisin tulva. Tapahtuma sai nimensä pyhän Burchardin päivän mukaan, jonka aikoihin se iski; tarkasta päivämäärästä en ole varma. Siitä on noin neljäsataa vuotta, ja rannikkoa suojellaan nykyään padoin ja penkereitä. Tarkemmista vahingoista en ole varma, enkä halua arvailla.
+
+Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Riben
+
+### 72
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ribe (kaupungit)
+Tietoruudun teksti: Ribe on kaupunki Lounais-Jyllannissa ja Tanskan vanhin kaupunki. Asukkaita on reilut kahdeksantuhatta.
+
+Kauppa kävi täällä jo 700-luvun alussa, ja rahaa saatettiin lyödä Ribessä jo vuonna 720. Yli kolmestasadasta Tanskasta löytyneestä sceatta-rahasta 216 on löydetty Ribestä tai sen ympäriltä. Kauppasuhteet kulkivat etenkin Friisinmaalle ja Englantiin.
+
+Kun arkkipiispa Ansgar lähti käännyttämään Skandinaviaa, hän pyysi noin vuonna 860 kuningas Horik II:lta luvan rakentaa Skandinavian ensimmäisen kirkon juuri Ribeen. Piispa — ja siis katedraali — voidaan varmuudella osoittaa vasta vuodesta 948. Kaivauksissa on kuitenkin löydetty 2 000–3 000 kristittyä hautaa 800-luvulta, mikä kertoo suuresta kristityistä yhteisöstä, joka eli viikinkien rinnalla rauhassa.
+
+Kaupunki on matalalla merenrantaniityllä, ja myrskytulvat ovat iskeneet siihen toistuvasti. Tuhoisin oli Burchardin tulva vuonna 1634; …
+AIEMPI KYSYMYS: Kuka oli arkkipiispa Ansgar?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: hän on se kirkkomies, jonka nimi vilahtaa jokaisessa pohjoismaisessa kristinuskon alkutarinassa. Ansgar oli arkkipiispa, joka lähti käännyttämään [[Skandinaviaa]]. Noin vuonna 860 hän pyysi kuningas [[Horik II:lta]] luvan rakentaa Skandinavian ensimmäisen kirkon juuri Ribeen. Piispa, ja siis katedraali, voidaan varmuudella osoittaa kuitenkin vasta vuodesta 948. Kaivauksista on löytynyt tuhansia kristittyjä hautoja 800-luvulta.
+
+Kristityt ja viikingit saman kaupungin asukkaina rauhassa: sellaisesta naapuruudesta minä pidän, jossa kaikki mahtuvat samalle katolle.
+KYSYMYS: Kerro lisää: Skandinaviaa
+
+### 73
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ribe (kaupungit)
+Tietoruudun teksti: Ribe on kaupunki Lounais-Jyllannissa ja Tanskan vanhin kaupunki. Asukkaita on reilut kahdeksantuhatta.
+
+Kauppa kävi täällä jo 700-luvun alussa, ja rahaa saatettiin lyödä Ribessä jo vuonna 720. Yli kolmestasadasta Tanskasta löytyneestä sceatta-rahasta 216 on löydetty Ribestä tai sen ympäriltä. Kauppasuhteet kulkivat etenkin Friisinmaalle ja Englantiin.
+
+Kun arkkipiispa Ansgar lähti käännyttämään Skandinaviaa, hän pyysi noin vuonna 860 kuningas Horik II:lta luvan rakentaa Skandinavian ensimmäisen kirkon juuri Ribeen. Piispa — ja siis katedraali — voidaan varmuudella osoittaa vasta vuodesta 948. Kaivauksissa on kuitenkin löydetty 2 000–3 000 kristittyä hautaa 800-luvulta, mikä kertoo suuresta kristityistä yhteisöstä, joka eli viikinkien rinnalla rauhassa.
+
+Kaupunki on matalalla merenrantaniityllä, ja myrskytulvat ovat iskeneet siihen toistuvasti. Tuhoisin oli Burchardin tulva vuonna 1634; …
+AIEMPI KYSYMYS: Kuka oli arkkipiispa Ansgar?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: hän on se kirkkomies, jonka nimi vilahtaa jokaisessa pohjoismaisessa kristinuskon alkutarinassa. Ansgar oli arkkipiispa, joka lähti käännyttämään [[Skandinaviaa]]. Noin vuonna 860 hän pyysi kuningas [[Horik II:lta]] luvan rakentaa Skandinavian ensimmäisen kirkon juuri Ribeen. Piispa, ja siis katedraali, voidaan varmuudella osoittaa kuitenkin vasta vuodesta 948. Kaivauksista on löytynyt tuhansia kristittyjä hautoja 800-luvulta.
+
+Kristityt ja viikingit saman kaupungin asukkaina rauhassa: sellaisesta naapuruudesta minä pidän, jossa kaikki mahtuvat samalle katolle.
+KYSYMYS: Kerro lisää: Horik II:lta
+
+### 74
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ribe (kaupungit)
+Tietoruudun teksti: Ribe on kaupunki Lounais-Jyllannissa ja Tanskan vanhin kaupunki. Asukkaita on reilut kahdeksantuhatta.
+
+Kauppa kävi täällä jo 700-luvun alussa, ja rahaa saatettiin lyödä Ribessä jo vuonna 720. Yli kolmestasadasta Tanskasta löytyneestä sceatta-rahasta 216 on löydetty Ribestä tai sen ympäriltä. Kauppasuhteet kulkivat etenkin Friisinmaalle ja Englantiin.
+
+Kun arkkipiispa Ansgar lähti käännyttämään Skandinaviaa, hän pyysi noin vuonna 860 kuningas Horik II:lta luvan rakentaa Skandinavian ensimmäisen kirkon juuri Ribeen. Piispa — ja siis katedraali — voidaan varmuudella osoittaa vasta vuodesta 948. Kaivauksissa on kuitenkin löydetty 2 000–3 000 kristittyä hautaa 800-luvulta, mikä kertoo suuresta kristityistä yhteisöstä, joka eli viikinkien rinnalla rauhassa.
+
+Kaupunki on matalalla merenrantaniityllä, ja myrskytulvat ovat iskeneet siihen toistuvasti. Tuhoisin oli Burchardin tulva vuonna 1634; …
+AIEMPI KYSYMYS: Mitä sceatta-rahat olivat?
+AIEMPI VASTAUS (Livia):
+Ai tota. Rahat ovat aina kiinnostavia, vaikka kyyhky ei niitä tarvitse. Sceatta oli varhaiskeskiajan pieni hopearaha, jota käytettiin Pohjanmeren seudun kaupassa. Tanskasta on löytynyt yli kolmesataa sellaista, ja niistä 216 on löydetty Ribestä tai sen ympäriltä. Löydöt kertovat Riben asemasta varhaisena kauppapaikkana, jonka yhteydet ulottuivat [[Friisinmaan]] ja [[Englannin]] suuntaan. Muistan tän nyt paremmin kuin mitään pullaa.
+KYSYMYS: Kerro lisää: Friisinmaan
+
+### 75
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ribe (kaupungit)
+Tietoruudun teksti: Ribe on kaupunki Lounais-Jyllannissa ja Tanskan vanhin kaupunki. Asukkaita on reilut kahdeksantuhatta.
+
+Kauppa kävi täällä jo 700-luvun alussa, ja rahaa saatettiin lyödä Ribessä jo vuonna 720. Yli kolmestasadasta Tanskasta löytyneestä sceatta-rahasta 216 on löydetty Ribestä tai sen ympäriltä. Kauppasuhteet kulkivat etenkin Friisinmaalle ja Englantiin.
+
+Kun arkkipiispa Ansgar lähti käännyttämään Skandinaviaa, hän pyysi noin vuonna 860 kuningas Horik II:lta luvan rakentaa Skandinavian ensimmäisen kirkon juuri Ribeen. Piispa — ja siis katedraali — voidaan varmuudella osoittaa vasta vuodesta 948. Kaivauksissa on kuitenkin löydetty 2 000–3 000 kristittyä hautaa 800-luvulta, mikä kertoo suuresta kristityistä yhteisöstä, joka eli viikinkien rinnalla rauhassa.
+
+Kaupunki on matalalla merenrantaniityllä, ja myrskytulvat ovat iskeneet siihen toistuvasti. Tuhoisin oli Burchardin tulva vuonna 1634; …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+AIEMPI KYSYMYS: Mitä sceatta-rahat olivat?
+AIEMPI VASTAUS (Livia):
+Ai tota. Rahat ovat aina kiinnostavia, vaikka kyyhky ei niitä tarvitse. Sceatta oli varhaiskeskiajan pieni hopearaha, jota käytettiin Pohjanmeren seudun kaupassa. Tanskasta on löytynyt yli kolmesataa sellaista, ja niistä 216 on löydetty Ribestä tai sen ympäriltä. Löydöt kertovat Riben asemasta varhaisena kauppapaikkana, jonka yhteydet ulottuivat [[Friisinmaan]] ja [[Englannin]] suuntaan. Muistan tän nyt paremmin kuin mitään pullaa.
+KYSYMYS: Kerro lisää: Englannin
+
+### 76
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ribe (kaupungit)
+Tietoruudun teksti: Ribe on kaupunki Lounais-Jyllannissa ja Tanskan vanhin kaupunki. Asukkaita on reilut kahdeksantuhatta.
+
+Kauppa kävi täällä jo 700-luvun alussa, ja rahaa saatettiin lyödä Ribessä jo vuonna 720. Yli kolmestasadasta Tanskasta löytyneestä sceatta-rahasta 216 on löydetty Ribestä tai sen ympäriltä. Kauppasuhteet kulkivat etenkin Friisinmaalle ja Englantiin.
+
+Kun arkkipiispa Ansgar lähti käännyttämään Skandinaviaa, hän pyysi noin vuonna 860 kuningas Horik II:lta luvan rakentaa Skandinavian ensimmäisen kirkon juuri Ribeen. Piispa — ja siis katedraali — voidaan varmuudella osoittaa vasta vuodesta 948. Kaivauksissa on kuitenkin löydetty 2 000–3 000 kristittyä hautaa 800-luvulta, mikä kertoo suuresta kristityistä yhteisöstä, joka eli viikinkien rinnalla rauhassa.
+
+Kaupunki on matalalla merenrantaniityllä, ja myrskytulvat ovat iskeneet siihen toistuvasti. Tuhoisin oli Burchardin tulva vuonna 1634; …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Luonto: Hiekkasärkkä joka kävelee] noin 1700 — Råbjerg Mile on Pohjois-Euroopan suurin liikkuva hiekkasärkkä: se on noin kaksi neliökilometriä laaja ja jopa 40 metriä korkea, ja siinä on arviolta neljä miljoonaa kuutiometriä hiekkaa. Tuuli työntää koko kummun koillista kohti jopa 18 metriä vuodessa, ja hiekan takana paljastuu matala, kostea vyöhyke, josta erottaa, mistä särkkä on kulkenut. Alkujaan hiekka nousi Länsi-Jyllannin rannikolta yli 300 vuotta sitten, ja se on ainoa laaja liikkuvien dyynien alue koko Tanskassa. Skagenin ja Frederikshavnin välissä liikkuvaa hiekkavuorta katsoo vuosittain noin 250 000 kävijää, jotka kiipeävät sen laelle katsomaan merta molempiin suuntiin.
+- [Tanska — maalehti / Luonto: Puu joka värjää koko maan vihreäksi] nykyään — Pyökki eli bøg on Tanskan kansallispuu, ja toukokuussa metsät käyvät läpi bøgespringiksi kutsutun muutoksen: lehdet puhkeavat lähes koko maassa saman viikon aikana, ja ruskea talvimetsä muuttuu muutamassa päivässä kirkkaan vihreäksi. Juuri ennen lehtien puhkeamista metsän pohja peittyy valkoisista vuokoista, jotka ehtivät kukkia ainoana hetkenä, jolloin auringonvalo pääsee vielä paljaiden oksien läpi maahan asti. Ilmiö houkuttelee joka kevät tuhansia retkeilijöitä metsiin, ja monet perheet tekevät siitä vuotuisen perinteen. Pyökkimetsiä on eniten Sjællannin ja Itä-Jyllannin alueilla, missä maaperä ja ilmasto sopivat puulle parhaiten.
+AIEMPI KYSYMYS: Missä päin Tanskaa Ribe sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Ribe löytyy kartalta melko helposti, kunhan tietää suunnan. Ribe sijaitsee [[Jyllannin]] lounaisosassa, matalalla merenrantaniityllä lähellä [[Pohjanmeren]] rannikkoa. Sijainti selittää sekä kaupan että tulvat: meri oli lähellä, mutta niin oli myös vesi, joka nousi kaupunkiin asti. Kyyhkyltä tämä tulee helposti, ylhäältä näkee.
+KYSYMYS: Kerro lisää: Jyllannin
+
+### 77
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skagen (kulttuuri)
+Tietoruudun teksti: Skagen on Tanskan pohjoisin kaupunki Jyllannin pohjoiskärjessä. Sen satama on maan tärkein kalasatama, ja kaupungissa käy noin kaksi miljoonaa matkailijaa vuodessa.
+
+Asutus alkoi keskiajalla kalastajakylänä, joka tunnettiin sillistään. 1800-luvun lopulla merimaisemat, kalastajat ja iltavalo houkuttelivat paikalle ryhmän impressionisteja, jotka tunnetaan nyt Skagenin maalareina. Monet kaupungin tunnetuista rakennuksista liittyvät heihin: Brøndumin hotelli, Skagenin museo sekä Michael ja Anna Ancherin talo.
+
+Pyhän Laurentiuksen kirkko rakennettiin kylän laitaan 1300-luvun lopulla, mutta lentohiekka hautasi sen. Tilalle rakennettiin uusi Skagenin kirkko vuonna 1841.
+
+Matkailu alkoi kasvaa, kun kapearaiteinen rautatie avattiin 1890 ja nykyinen satama 20. marraskuuta 1907. Skagenin asema on Tanskan pohjoisin rautatieasema.
+AIEMPI KYSYMYS: Mikä hautasi vanhan kirkon?
+AIEMPI VASTAUS (Livia):
+Ai se. Kuulostaa kamalalta, mutta hiekka on hidas vihollinen. Kirkon hautasi lentohiekka. [[Pyhän Laurentiuksen kirkko]] rakennettiin kylän laitaan 1300-luvun lopulla, ja [[lentohiekka]] peitti sen ajan mittaan. Tilalle rakennettiin uusi [[Skagenin]] kirkko vuonna 1841. Ihmiset siis jättivät vanhan paikkansa ja siirtyivät uuteen. Ihan vain hiekkaa, ja silti kokonainen kirkko.
+KYSYMYS: Kerro lisää: Pyhän Laurentiuksen kirkko
+
+### 78
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skagen (kulttuuri)
+Tietoruudun teksti: Skagen on Tanskan pohjoisin kaupunki Jyllannin pohjoiskärjessä. Sen satama on maan tärkein kalasatama, ja kaupungissa käy noin kaksi miljoonaa matkailijaa vuodessa.
+
+Asutus alkoi keskiajalla kalastajakylänä, joka tunnettiin sillistään. 1800-luvun lopulla merimaisemat, kalastajat ja iltavalo houkuttelivat paikalle ryhmän impressionisteja, jotka tunnetaan nyt Skagenin maalareina. Monet kaupungin tunnetuista rakennuksista liittyvät heihin: Brøndumin hotelli, Skagenin museo sekä Michael ja Anna Ancherin talo.
+
+Pyhän Laurentiuksen kirkko rakennettiin kylän laitaan 1300-luvun lopulla, mutta lentohiekka hautasi sen. Tilalle rakennettiin uusi Skagenin kirkko vuonna 1841.
+
+Matkailu alkoi kasvaa, kun kapearaiteinen rautatie avattiin 1890 ja nykyinen satama 20. marraskuuta 1907. Skagenin asema on Tanskan pohjoisin rautatieasema.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yhdysvallat — maalehti / Lento] Pohjois-Carolinan hiekkasärkillä nousi 17. joulukuuta 1903 ilmaan kone, jonka lento kesti kaksitoista sekuntia — ja jonka kuvan otti mies, joka ei ollut koskaan ennen käyttänyt kameraa.
+AIEMPI KYSYMYS: Mikä hautasi vanhan kirkon?
+AIEMPI VASTAUS (Livia):
+Ai se. Kuulostaa kamalalta, mutta hiekka on hidas vihollinen. Kirkon hautasi lentohiekka. [[Pyhän Laurentiuksen kirkko]] rakennettiin kylän laitaan 1300-luvun lopulla, ja [[lentohiekka]] peitti sen ajan mittaan. Tilalle rakennettiin uusi [[Skagenin]] kirkko vuonna 1841. Ihmiset siis jättivät vanhan paikkansa ja siirtyivät uuteen. Ihan vain hiekkaa, ja silti kokonainen kirkko.
+KYSYMYS: Kerro lisää: lentohiekka
+
+### 79
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skagen (kulttuuri)
+Tietoruudun teksti: Skagen on Tanskan pohjoisin kaupunki Jyllannin pohjoiskärjessä. Sen satama on maan tärkein kalasatama, ja kaupungissa käy noin kaksi miljoonaa matkailijaa vuodessa.
+
+Asutus alkoi keskiajalla kalastajakylänä, joka tunnettiin sillistään. 1800-luvun lopulla merimaisemat, kalastajat ja iltavalo houkuttelivat paikalle ryhmän impressionisteja, jotka tunnetaan nyt Skagenin maalareina. Monet kaupungin tunnetuista rakennuksista liittyvät heihin: Brøndumin hotelli, Skagenin museo sekä Michael ja Anna Ancherin talo.
+
+Pyhän Laurentiuksen kirkko rakennettiin kylän laitaan 1300-luvun lopulla, mutta lentohiekka hautasi sen. Tilalle rakennettiin uusi Skagenin kirkko vuonna 1841.
+
+Matkailu alkoi kasvaa, kun kapearaiteinen rautatie avattiin 1890 ja nykyinen satama 20. marraskuuta 1907. Skagenin asema on Tanskan pohjoisin rautatieasema.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Luonto: Hiekkasärkkä joka kävelee] noin 1700 — Råbjerg Mile on Pohjois-Euroopan suurin liikkuva hiekkasärkkä: se on noin kaksi neliökilometriä laaja ja jopa 40 metriä korkea, ja siinä on arviolta neljä miljoonaa kuutiometriä hiekkaa. Tuuli työntää koko kummun koillista kohti jopa 18 metriä vuodessa, ja hiekan takana paljastuu matala, kostea vyöhyke, josta erottaa, mistä särkkä on kulkenut. Alkujaan hiekka nousi Länsi-Jyllannin rannikolta yli 300 vuotta sitten, ja se on ainoa laaja liikkuvien dyynien alue koko Tanskassa. Skagenin ja Frederikshavnin välissä liikkuvaa hiekkavuorta katsoo vuosittain noin 250 000 kävijää, jotka kiipeävät sen laelle katsomaan merta molempiin suuntiin.
+AIEMPI KYSYMYS: Mikä hautasi vanhan kirkon?
+AIEMPI VASTAUS (Livia):
+Ai se. Kuulostaa kamalalta, mutta hiekka on hidas vihollinen. Kirkon hautasi lentohiekka. [[Pyhän Laurentiuksen kirkko]] rakennettiin kylän laitaan 1300-luvun lopulla, ja [[lentohiekka]] peitti sen ajan mittaan. Tilalle rakennettiin uusi [[Skagenin]] kirkko vuonna 1841. Ihmiset siis jättivät vanhan paikkansa ja siirtyivät uuteen. Ihan vain hiekkaa, ja silti kokonainen kirkko.
+KYSYMYS: Kerro lisää: Skagenin
+
+### 80
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skagen (kulttuuri)
+Tietoruudun teksti: Skagen on Tanskan pohjoisin kaupunki Jyllannin pohjoiskärjessä. Sen satama on maan tärkein kalasatama, ja kaupungissa käy noin kaksi miljoonaa matkailijaa vuodessa.
+
+Asutus alkoi keskiajalla kalastajakylänä, joka tunnettiin sillistään. 1800-luvun lopulla merimaisemat, kalastajat ja iltavalo houkuttelivat paikalle ryhmän impressionisteja, jotka tunnetaan nyt Skagenin maalareina. Monet kaupungin tunnetuista rakennuksista liittyvät heihin: Brøndumin hotelli, Skagenin museo sekä Michael ja Anna Ancherin talo.
+
+Pyhän Laurentiuksen kirkko rakennettiin kylän laitaan 1300-luvun lopulla, mutta lentohiekka hautasi sen. Tilalle rakennettiin uusi Skagenin kirkko vuonna 1841.
+
+Matkailu alkoi kasvaa, kun kapearaiteinen rautatie avattiin 1890 ja nykyinen satama 20. marraskuuta 1907. Skagenin asema on Tanskan pohjoisin rautatieasema.
+AIEMPI KYSYMYS: Keitä Skagenin maalarit olivat?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: valo tekee maalarista kylän kuuluisan. Skagenin maalarit olivat ryhmä taiteilijoita, jotka 1800-luvun lopulla kokoontuivat Jyllannin pohjoiskärkeen merimaisemien, kalastajien ja iltavalon vetäminä. Heitä kutsutaan impressionisteiksi. Heihin kuuluivat muun muassa [[Anna Ancher]], hänen miehensä Michael Ancher ja [[P. S. Krøyer]]. Kaupungissa heihin liittyvät muun muassa [[Brøndumin hotelli]], Skagenin museo sekä Ancherien talo.
+
+Iltavalo on tosiaan parasta ylhäältä katsottuna, mutta en ole koskaan saanut siitä edes pullaa.
+KYSYMYS: Kerro lisää: Anna Ancher

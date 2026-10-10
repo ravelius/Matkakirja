@@ -1,0 +1,996 @@
+### 241
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Himmelbjerget (luonto · vuori)
+Tietoruudun teksti: Himmelbjerget on 147 metriä korkea kukkula Ryn ja Silkeborgin välissä Søhøjlandetin järviseudulla. Sitä pidettiin Tanskan korkeimpana luonnonpisteenä vuoteen 1847, jolloin Ejer Bavnehøj mitattiin korkeammaksi; vuoden 2005 tutkimuksen jälkeen korkeimmaksi todettiin Møllehøj (170,86 m). Kukkulan rinne on silti tanskalaisittain vaikuttava, sillä Julsø-järven pinnasta huipulle on 121 metriä. Yli kaksisataa vuotta ihmiset ovat kokoontuneet täällä ihailemaan maisemia ja juhlimaan tanskalaisen kansakunnan syntyä. Huipulle rakennettiin vuonna 1875 punatiilinen torni kuningas Frederik VII:n kunniaksi, koska hän antoi maalle sen ensimmäisen perustuslain vuonna 1849.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [João Pessoa — kaupunkilehti / João Pessoa: Hollantilaisten Frederikstad] Vuonna 1585 – samana vuonna kuin kaupunki itse – valmistui Paraíban joen suulle Forte de Santa Catarina, joka puolusti siirtokuntaa ranskalaisten ja hollantilaisten hyökkäyksiltä. Ranskalaiset ja potiguara-intiaanit polttivat linnakkeen jo 1597, mutta se rakennettiin uudelleen ja kesti hollantilaisten hyökkäykset vielä 1630-luvulla. Alankomaiden kauppakomppania valtasi lopulta koko kaupungin 1634 ja nimesi sen Frederikstadiksi; miehityksen aikana hollantilaiset ottivat haltuunsa noin 19 alueen sokerimyllyä. Portugalilaiset karkottivat hollantilaiset 1654, ja linnake seisoo yhä jokisuulla – isoisänkin matka-aikaan jo lähes 300-vuotiaana vartijana.
+AIEMPI KYSYMYS: Mitä kuningas Frederik VII teki Tanskan hyväksi?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Frederik VII]] antoi Tanskalle sen ensimmäisen [[perustuslain]] vuonna 1849, ja siksi [[Himmelbjergetin]] huipulle rakennettiin vuonna 1875 punatiilinen torni hänen kunniakseen. Perustuslaki muutti maan hallintotapaa, sillä se rajasi vallankäyttöä ja loi pohjan kansanedustukselle. Kuninkaan tarkemmista vaiheista en ole varma. Ei paha muistisuoritus kyyhkyltä.
+KYSYMYS: Kerro lisää: Frederik VII
+
+### 242
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Himmelbjerget (luonto · vuori)
+Tietoruudun teksti: Himmelbjerget on 147 metriä korkea kukkula Ryn ja Silkeborgin välissä Søhøjlandetin järviseudulla. Sitä pidettiin Tanskan korkeimpana luonnonpisteenä vuoteen 1847, jolloin Ejer Bavnehøj mitattiin korkeammaksi; vuoden 2005 tutkimuksen jälkeen korkeimmaksi todettiin Møllehøj (170,86 m). Kukkulan rinne on silti tanskalaisittain vaikuttava, sillä Julsø-järven pinnasta huipulle on 121 metriä. Yli kaksisataa vuotta ihmiset ovat kokoontuneet täällä ihailemaan maisemia ja juhlimaan tanskalaisen kansakunnan syntyä. Huipulle rakennettiin vuonna 1875 punatiilinen torni kuningas Frederik VII:n kunniaksi, koska hän antoi maalle sen ensimmäisen perustuslain vuonna 1849.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Mitä kuningas Frederik VII teki Tanskan hyväksi?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Frederik VII]] antoi Tanskalle sen ensimmäisen [[perustuslain]] vuonna 1849, ja siksi [[Himmelbjergetin]] huipulle rakennettiin vuonna 1875 punatiilinen torni hänen kunniakseen. Perustuslaki muutti maan hallintotapaa, sillä se rajasi vallankäyttöä ja loi pohjan kansanedustukselle. Kuninkaan tarkemmista vaiheista en ole varma. Ei paha muistisuoritus kyyhkyltä.
+KYSYMYS: Kerro lisää: perustuslain
+
+### 243
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Himmelbjerget (luonto · vuori)
+Tietoruudun teksti: Himmelbjerget on 147 metriä korkea kukkula Ryn ja Silkeborgin välissä Søhøjlandetin järviseudulla. Sitä pidettiin Tanskan korkeimpana luonnonpisteenä vuoteen 1847, jolloin Ejer Bavnehøj mitattiin korkeammaksi; vuoden 2005 tutkimuksen jälkeen korkeimmaksi todettiin Møllehøj (170,86 m). Kukkulan rinne on silti tanskalaisittain vaikuttava, sillä Julsø-järven pinnasta huipulle on 121 metriä. Yli kaksisataa vuotta ihmiset ovat kokoontuneet täällä ihailemaan maisemia ja juhlimaan tanskalaisen kansakunnan syntyä. Huipulle rakennettiin vuonna 1875 punatiilinen torni kuningas Frederik VII:n kunniaksi, koska hän antoi maalle sen ensimmäisen perustuslain vuonna 1849.
+AIEMPI KYSYMYS: Mitä kuningas Frederik VII teki Tanskan hyväksi?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Frederik VII]] antoi Tanskalle sen ensimmäisen [[perustuslain]] vuonna 1849, ja siksi [[Himmelbjergetin]] huipulle rakennettiin vuonna 1875 punatiilinen torni hänen kunniakseen. Perustuslaki muutti maan hallintotapaa, sillä se rajasi vallankäyttöä ja loi pohjan kansanedustukselle. Kuninkaan tarkemmista vaiheista en ole varma. Ei paha muistisuoritus kyyhkyltä.
+KYSYMYS: Kerro lisää: Himmelbjergetin
+
+### 244
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Himmelbjerget (luonto · vuori)
+Tietoruudun teksti: Himmelbjerget on 147 metriä korkea kukkula Ryn ja Silkeborgin välissä Søhøjlandetin järviseudulla. Sitä pidettiin Tanskan korkeimpana luonnonpisteenä vuoteen 1847, jolloin Ejer Bavnehøj mitattiin korkeammaksi; vuoden 2005 tutkimuksen jälkeen korkeimmaksi todettiin Møllehøj (170,86 m). Kukkulan rinne on silti tanskalaisittain vaikuttava, sillä Julsø-järven pinnasta huipulle on 121 metriä. Yli kaksisataa vuotta ihmiset ovat kokoontuneet täällä ihailemaan maisemia ja juhlimaan tanskalaisen kansakunnan syntyä. Huipulle rakennettiin vuonna 1875 punatiilinen torni kuningas Frederik VII:n kunniaksi, koska hän antoi maalle sen ensimmäisen perustuslain vuonna 1849.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Keksinnöt: Myllyt seisovat meressä] 2000 — Tanska on tehnyt sähköä tuulesta pitempään kuin melkein kukaan: opettaja Poul la Cour rakensi jo 1890-luvulla tuulimyllyn, joka tuotti sähköä koulun tarpeisiin. Kööpenhaminan edustalle valmistui vuonna 2000 Middelgrundenin merituulipuisto, jonka kaksikymmentä myllyä seisovat kaaressa merellä. Puolet siitä rakennettiin osuuskuntana: tuhannet tavalliset ihmiset ostivat osuuden ja saavat siitä tuoton. Nykyään tuuli tuottaa yli puolet koko maan sähköstä.
+AIEMPI KYSYMYS: Miten Tanska tuottaa sähköä tuulesta?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tanska on tehnyt sähköä tuulesta pitempään kuin melkein kukaan: opettaja Poul la Cour rakensi jo 1890-luvulla [[tuulimyllyn]], joka tuotti sähköä koulun tarpeisiin. Kööpenhaminan edustalle valmistui vuonna 2000 [[Middelgrundenin]] merituulipuisto, jonka kaksikymmentä myllyä seisovat kaaressa merellä. Puolet siitä rakennettiin osuuskuntana: tuhannet tavalliset ihmiset ostivat osuuden ja saavat siitä tuoton. Nykyään tuuli tuottaa yli puolet koko maan sähköstä. Tuuli kantaa kyyhkyäkin, mutta sähköä siitä en ole vielä saanut.
+KYSYMYS: Kerro lisää: tuulimyllyn
+
+### 245
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Himmelbjerget (luonto · vuori)
+Tietoruudun teksti: Himmelbjerget on 147 metriä korkea kukkula Ryn ja Silkeborgin välissä Søhøjlandetin järviseudulla. Sitä pidettiin Tanskan korkeimpana luonnonpisteenä vuoteen 1847, jolloin Ejer Bavnehøj mitattiin korkeammaksi; vuoden 2005 tutkimuksen jälkeen korkeimmaksi todettiin Møllehøj (170,86 m). Kukkulan rinne on silti tanskalaisittain vaikuttava, sillä Julsø-järven pinnasta huipulle on 121 metriä. Yli kaksisataa vuotta ihmiset ovat kokoontuneet täällä ihailemaan maisemia ja juhlimaan tanskalaisen kansakunnan syntyä. Huipulle rakennettiin vuonna 1875 punatiilinen torni kuningas Frederik VII:n kunniaksi, koska hän antoi maalle sen ensimmäisen perustuslain vuonna 1849.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Keksinnöt: Myllyt seisovat meressä] 2000 — Tanska on tehnyt sähköä tuulesta pitempään kuin melkein kukaan: opettaja Poul la Cour rakensi jo 1890-luvulla tuulimyllyn, joka tuotti sähköä koulun tarpeisiin. Kööpenhaminan edustalle valmistui vuonna 2000 Middelgrundenin merituulipuisto, jonka kaksikymmentä myllyä seisovat kaaressa merellä. Puolet siitä rakennettiin osuuskuntana: tuhannet tavalliset ihmiset ostivat osuuden ja saavat siitä tuoton. Nykyään tuuli tuottaa yli puolet koko maan sähköstä.
+AIEMPI KYSYMYS: Miten Tanska tuottaa sähköä tuulesta?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tanska on tehnyt sähköä tuulesta pitempään kuin melkein kukaan: opettaja Poul la Cour rakensi jo 1890-luvulla [[tuulimyllyn]], joka tuotti sähköä koulun tarpeisiin. Kööpenhaminan edustalle valmistui vuonna 2000 [[Middelgrundenin]] merituulipuisto, jonka kaksikymmentä myllyä seisovat kaaressa merellä. Puolet siitä rakennettiin osuuskuntana: tuhannet tavalliset ihmiset ostivat osuuden ja saavat siitä tuoton. Nykyään tuuli tuottaa yli puolet koko maan sähköstä. Tuuli kantaa kyyhkyäkin, mutta sähköä siitä en ole vielä saanut.
+KYSYMYS: Kerro lisää: Middelgrundenin
+
+### 246
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Læsø (luonto · saari)
+Tietoruudun teksti: Læsø on Kattegatin suurin saari, noin 19 kilometrin päässä Jyllannin koillisrannikosta. Nimi juontuu muinaisnorjan sanasta Hlésey eli Hlérin saari, ja Hlér on norjalaisessa mytologiassa meren henkilöitymänä esiintyvä jättiläinen. Keskiajalla saari tunnettiin suolateollisuudestaan: pohjavesi voi olla yli 15-prosenttisen suolaista, ja kuumina kesinä suola väkevöityi luontaisesti tasaisilla suoniityillä. Lopullinen keittäminen tehtiin sadoissa suolauuneissa, jotka söivät valtavasti puuta. Lopulta saari jäi ilman metsää, hiekkamyrskyt hautasivat kyliä ja suolan otto kiellettiin. Kattomateriaalin puutteen vuoksi taloja alettiin 1600-luvulta lähtien peittää meriajokkaalla.
+AIEMPI KYSYMYS: Miksi Læsøn suolateollisuus lopulta loppui?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Læsø]] tunnettiin keskiajalla suolateollisuudestaan. Suolan lopullinen keittäminen tehtiin sadoissa [[suolauuneissa]], jotka söivät valtavasti puuta. Lopulta saari jäi ilman metsää, hiekkamyrskyt hautasivat kyliä ja suolan otto kiellettiin. Metsän häviäminen vei siis teollisuuden perustan, ja ihmisten oli etsittävä uusia tapoja asua saarella. Siitä jäi viisaus kantoon, kuten sanotaan.
+KYSYMYS: Kerro lisää: Læsø
+
+### 247
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Læsø (luonto · saari)
+Tietoruudun teksti: Læsø on Kattegatin suurin saari, noin 19 kilometrin päässä Jyllannin koillisrannikosta. Nimi juontuu muinaisnorjan sanasta Hlésey eli Hlérin saari, ja Hlér on norjalaisessa mytologiassa meren henkilöitymänä esiintyvä jättiläinen. Keskiajalla saari tunnettiin suolateollisuudestaan: pohjavesi voi olla yli 15-prosenttisen suolaista, ja kuumina kesinä suola väkevöityi luontaisesti tasaisilla suoniityillä. Lopullinen keittäminen tehtiin sadoissa suolauuneissa, jotka söivät valtavasti puuta. Lopulta saari jäi ilman metsää, hiekkamyrskyt hautasivat kyliä ja suolan otto kiellettiin. Kattomateriaalin puutteen vuoksi taloja alettiin 1600-luvulta lähtien peittää meriajokkaalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Timbuktu — kaupunkilehti / Timbuktu: Suola tulee pohjoisesta, kolme viikkoa kerrallaan] Timbuktu oli Saharan kauppareitin eteläinen päätepiste, ja siihen koko kaupunki perustui. Vielä 1900-luvun jälkipuoliskolle asti kivisuola tuotiin kuudensadankuudenkymmenenneljän kilometrin päästä pohjoisesta kahdessa vuosittaisessa karavaanissa: toinen lähti marraskuun alussa, toinen maaliskuun lopussa. Karavaanissa oli useita tuhansia kameleja, matka kesti kolme viikkoa suuntaansa, ja paluumatkalla jokainen kameli kantoi neljä tai viisi kolmenkymmenen kilon laattaa. Menomatkalla vietiin ruokaa kaivosmiehille. Nykyään laatat tulevat kuorma-autolla, ja Timbuktusta suola jatkaa veneellä muualle Maliin.
+- [Gao — kaupunkilehti / Songhain kultainen valtakunta: Kulta ja suola kulkivat jokea pitkin] Kulta-suolakauppa oli koko Sahelin talouden selkäranka, ja Songhain valtakunta hallitsi sen tärkeintä solmukohtaa. Pohjoisesta tuotu suola ja etelästä noussut kulta vaihtoivat kuljetusvälinettä Timbuktussa, kun kamelikaravaanit kohtasivat joella kulkevat lastiveneet. Tavarat matkasivat vielä noin 800 kilometrin matkan Nigerjokea pitkin Djennéstä Gaohon ja takaisin, ja jokivarren kaupungit vaurastuivat tästä liikenteestä vuosisatojen ajan. Ilmasta katsottuna joki näyttää kapealta vihreältä nauhalta hiekan keskellä - juuri tämä nauha teki Songhaista mahdollisen keskellä maailman suurinta aavikkoa.
+AIEMPI KYSYMYS: Miksi Læsøn suolateollisuus lopulta loppui?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Læsø]] tunnettiin keskiajalla suolateollisuudestaan. Suolan lopullinen keittäminen tehtiin sadoissa [[suolauuneissa]], jotka söivät valtavasti puuta. Lopulta saari jäi ilman metsää, hiekkamyrskyt hautasivat kyliä ja suolan otto kiellettiin. Metsän häviäminen vei siis teollisuuden perustan, ja ihmisten oli etsittävä uusia tapoja asua saarella. Siitä jäi viisaus kantoon, kuten sanotaan.
+KYSYMYS: Kerro lisää: suolauuneissa
+
+### 248
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Læsø (luonto · saari)
+Tietoruudun teksti: Læsø on Kattegatin suurin saari, noin 19 kilometrin päässä Jyllannin koillisrannikosta. Nimi juontuu muinaisnorjan sanasta Hlésey eli Hlérin saari, ja Hlér on norjalaisessa mytologiassa meren henkilöitymänä esiintyvä jättiläinen. Keskiajalla saari tunnettiin suolateollisuudestaan: pohjavesi voi olla yli 15-prosenttisen suolaista, ja kuumina kesinä suola väkevöityi luontaisesti tasaisilla suoniityillä. Lopullinen keittäminen tehtiin sadoissa suolauuneissa, jotka söivät valtavasti puuta. Lopulta saari jäi ilman metsää, hiekkamyrskyt hautasivat kyliä ja suolan otto kiellettiin. Kattomateriaalin puutteen vuoksi taloja alettiin 1600-luvulta lähtien peittää meriajokkaalla.
+AIEMPI KYSYMYS: Miksi saaren talojen katot tehtiin merikasveista?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: kattomateriaalin puutteen vuoksi [[Læsøn]] taloja alettiin 1600-luvulta lähtien peittää [[meriajokkaalla]]. Saari oli menettänyt metsänsä suolanvalmistuksen takia, joten puuta ja muuta tavallista kattomateriaalia ei ollut saatavilla. Meriajokas on merenpohjassa kasvava kasvi, jota rannalle ajautui runsaasti. Yksityiskohtia kattojen rakentamisesta en ole varma. Katto kasvista, kyl se kuulostaa kyyhkyn mielestä mukavalta.
+KYSYMYS: Kerro lisää: Læsøn
+
+### 249
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Læsø (luonto · saari)
+Tietoruudun teksti: Læsø on Kattegatin suurin saari, noin 19 kilometrin päässä Jyllannin koillisrannikosta. Nimi juontuu muinaisnorjan sanasta Hlésey eli Hlérin saari, ja Hlér on norjalaisessa mytologiassa meren henkilöitymänä esiintyvä jättiläinen. Keskiajalla saari tunnettiin suolateollisuudestaan: pohjavesi voi olla yli 15-prosenttisen suolaista, ja kuumina kesinä suola väkevöityi luontaisesti tasaisilla suoniityillä. Lopullinen keittäminen tehtiin sadoissa suolauuneissa, jotka söivät valtavasti puuta. Lopulta saari jäi ilman metsää, hiekkamyrskyt hautasivat kyliä ja suolan otto kiellettiin. Kattomateriaalin puutteen vuoksi taloja alettiin 1600-luvulta lähtien peittää meriajokkaalla.
+AIEMPI KYSYMYS: Miksi saaren talojen katot tehtiin merikasveista?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: kattomateriaalin puutteen vuoksi [[Læsøn]] taloja alettiin 1600-luvulta lähtien peittää [[meriajokkaalla]]. Saari oli menettänyt metsänsä suolanvalmistuksen takia, joten puuta ja muuta tavallista kattomateriaalia ei ollut saatavilla. Meriajokas on merenpohjassa kasvava kasvi, jota rannalle ajautui runsaasti. Yksityiskohtia kattojen rakentamisesta en ole varma. Katto kasvista, kyl se kuulostaa kyyhkyn mielestä mukavalta.
+KYSYMYS: Kerro lisää: meriajokkaalla
+
+### 250
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Læsø (luonto · saari)
+Tietoruudun teksti: Læsø on Kattegatin suurin saari, noin 19 kilometrin päässä Jyllannin koillisrannikosta. Nimi juontuu muinaisnorjan sanasta Hlésey eli Hlérin saari, ja Hlér on norjalaisessa mytologiassa meren henkilöitymänä esiintyvä jättiläinen. Keskiajalla saari tunnettiin suolateollisuudestaan: pohjavesi voi olla yli 15-prosenttisen suolaista, ja kuumina kesinä suola väkevöityi luontaisesti tasaisilla suoniityillä. Lopullinen keittäminen tehtiin sadoissa suolauuneissa, jotka söivät valtavasti puuta. Lopulta saari jäi ilman metsää, hiekkamyrskyt hautasivat kyliä ja suolan otto kiellettiin. Kattomateriaalin puutteen vuoksi taloja alettiin 1600-luvulta lähtien peittää meriajokkaalla.
+AIEMPI KYSYMYS: Mistä Læsøn nimi tulee?
+AIEMPI VASTAUS (Livia):
+Mmm— Nimi juontuu muinaisnorjan sanasta Hlésey eli Hlérin saari. [[Hlér]] on norjalaisessa mytologiassa meren henkilöitymänä esiintyvä jättiläinen. Nimi liittää [[Læsøn]] siis meren mahtiin, mikä sopii saarelle, jonka ympärillä on Kattegatin vesi. Muinaisnorjan sanoista kerron mieluusti lisää, jos tiedän. Tunnen ainakin yhden sanan: pulla.
+KYSYMYS: Kerro lisää: Hlér
+
+### 251
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Læsø (luonto · saari)
+Tietoruudun teksti: Læsø on Kattegatin suurin saari, noin 19 kilometrin päässä Jyllannin koillisrannikosta. Nimi juontuu muinaisnorjan sanasta Hlésey eli Hlérin saari, ja Hlér on norjalaisessa mytologiassa meren henkilöitymänä esiintyvä jättiläinen. Keskiajalla saari tunnettiin suolateollisuudestaan: pohjavesi voi olla yli 15-prosenttisen suolaista, ja kuumina kesinä suola väkevöityi luontaisesti tasaisilla suoniityillä. Lopullinen keittäminen tehtiin sadoissa suolauuneissa, jotka söivät valtavasti puuta. Lopulta saari jäi ilman metsää, hiekkamyrskyt hautasivat kyliä ja suolan otto kiellettiin. Kattomateriaalin puutteen vuoksi taloja alettiin 1600-luvulta lähtien peittää meriajokkaalla.
+AIEMPI KYSYMYS: Missä Læsø sijaitsee ja kuinka kaukana se on mantereesta?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Læsø]] on Kattegatin suurin saari, ja se sijaitsee noin 19 kilometrin päässä Jyllannin koillisrannikosta. [[Kattegat]] on Tanskan ja Ruotsin välinen merialue. Saari on tasainen ja merellinen, ja sen historia liittyy vahvasti suolaan. Lyhyt lento, mutta ehkä tuuli oli vastainen.
+KYSYMYS: Kerro lisää: Kattegat
+
+### 252
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bornholm (luonto · saari)
+Tietoruudun teksti: Bornholm on tanskalainen saari Itämerellä, muusta Tanskasta itään, Ruotsin eteläpuolella sekä Saksan ja Puolan pohjoispuolella. Sitä sanotaan aurinkosaareksi sään vuoksi ja kalliosaareksi geologian takia, sillä kallioperä on pääosin graniittia. Pohjoisessa jyrkät kalliomuodostelmat erottavat saaren muun Tanskan loivasta kumpumaastosta, ja lämmin ilmasto antaa kasvaa paikalliselle viikunalajikkeelle 'Bornholmin timantille'. Saarella on useita Tanskan pyöreistä kirkoista, ja luoteiskärjessä on Hammershusin linnanraunio, Pohjois-Euroopan suurin keskiaikainen linnoitus. Strategisen sijaintinsa vuoksi saaresta on taisteltu vuosisatoja: sitä ovat hallinneet Tanskan lisäksi Ruotsi ja Lyypekki, ja vuonna 1658 Ruotsille luovutettu saari palasi Tanskalle vuonna 1660 paikallisen kapinan jälkeen.
+AIEMPI KYSYMYS: Miksi Bornholmia kutsutaan sekä aurinkosaareksi että kalliosaareksi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Bornholmia]] sanotaan aurinkosaareksi sään vuoksi ja kalliosaareksi geologian takia. Saaren kallioperä on pääosin [[graniittia]], ja pohjoisessa jyrkät kalliomuodostelmat erottavat sen muun Tanskan loivasta kumpumaastosta. Lämmin ilmasto antaa kasvaa paikalliselle viikunalajikkeelle 'Bornholmin timantille'. Saari on siis sekä valoisa että kivinen. Aurinkoa ja kiveä, kunhan ei ole pilvistä.
+KYSYMYS: Kerro lisää: Bornholmia
+
+### 253
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bornholm (luonto · saari)
+Tietoruudun teksti: Bornholm on tanskalainen saari Itämerellä, muusta Tanskasta itään, Ruotsin eteläpuolella sekä Saksan ja Puolan pohjoispuolella. Sitä sanotaan aurinkosaareksi sään vuoksi ja kalliosaareksi geologian takia, sillä kallioperä on pääosin graniittia. Pohjoisessa jyrkät kalliomuodostelmat erottavat saaren muun Tanskan loivasta kumpumaastosta, ja lämmin ilmasto antaa kasvaa paikalliselle viikunalajikkeelle 'Bornholmin timantille'. Saarella on useita Tanskan pyöreistä kirkoista, ja luoteiskärjessä on Hammershusin linnanraunio, Pohjois-Euroopan suurin keskiaikainen linnoitus. Strategisen sijaintinsa vuoksi saaresta on taisteltu vuosisatoja: sitä ovat hallinneet Tanskan lisäksi Ruotsi ja Lyypekki, ja vuonna 1658 Ruotsille luovutettu saari palasi Tanskalle vuonna 1660 paikallisen kapinan jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Halifax — kaupunkilehti / Satama, sumu ja myrskyt: Graniittia ja majakoita] Kaupungin ulkopuolella rannikko muuttuu paljaaksi graniitiksi. Tunnetuin kohta on Peggys Cove, pieni kalastajakylä ja majakka noin tunnin ajomatkan päässä; se saa yli 600 000 kävijää vuodessa. Halifaxin oma rannikko on samaa kiveä: Point Pleasant Parkin polut kulkevat kallion ja männikön välissä, ja Long Lake Provincial Park suojelee yli kahdentuhannen hehtaarin erämaata heti kaupungin länsipuolella. Puisto perustettiin 1984, ja se tuo erämaan aivan kaupunkiasutuksen kylkeen.
+AIEMPI KYSYMYS: Miksi Bornholmia kutsutaan sekä aurinkosaareksi että kalliosaareksi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Bornholmia]] sanotaan aurinkosaareksi sään vuoksi ja kalliosaareksi geologian takia. Saaren kallioperä on pääosin [[graniittia]], ja pohjoisessa jyrkät kalliomuodostelmat erottavat sen muun Tanskan loivasta kumpumaastosta. Lämmin ilmasto antaa kasvaa paikalliselle viikunalajikkeelle 'Bornholmin timantille'. Saari on siis sekä valoisa että kivinen. Aurinkoa ja kiveä, kunhan ei ole pilvistä.
+KYSYMYS: Kerro lisää: graniittia
+
+### 254
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bornholm (luonto · saari)
+Tietoruudun teksti: Bornholm on tanskalainen saari Itämerellä, muusta Tanskasta itään, Ruotsin eteläpuolella sekä Saksan ja Puolan pohjoispuolella. Sitä sanotaan aurinkosaareksi sään vuoksi ja kalliosaareksi geologian takia, sillä kallioperä on pääosin graniittia. Pohjoisessa jyrkät kalliomuodostelmat erottavat saaren muun Tanskan loivasta kumpumaastosta, ja lämmin ilmasto antaa kasvaa paikalliselle viikunalajikkeelle 'Bornholmin timantille'. Saarella on useita Tanskan pyöreistä kirkoista, ja luoteiskärjessä on Hammershusin linnanraunio, Pohjois-Euroopan suurin keskiaikainen linnoitus. Strategisen sijaintinsa vuoksi saaresta on taisteltu vuosisatoja: sitä ovat hallinneet Tanskan lisäksi Ruotsi ja Lyypekki, ja vuonna 1658 Ruotsille luovutettu saari palasi Tanskalle vuonna 1660 paikallisen kapinan jälkeen.
+AIEMPI KYSYMYS: Mitä saarella tapahtui vuonna 1658 ja miten se palasi Tanskalle?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Vuonna 1658 [[Bornholm]] luovutettiin Ruotsille, mutta saari palasi Tanskalle vuonna 1660 paikallisen kapinan jälkeen. Strategisen sijaintinsa vuoksi saaresta on taisteltu vuosisatoja, ja sitä ovat hallinneet Tanskan lisäksi Ruotsi ja [[Lyypekki]]. Kapinan yksityiskohdista en ole varma. Valtiot vaihtuivat, mutta saari pysyi paikoillaan.
+KYSYMYS: Kerro lisää: Bornholm
+
+### 255
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bornholm (luonto · saari)
+Tietoruudun teksti: Bornholm on tanskalainen saari Itämerellä, muusta Tanskasta itään, Ruotsin eteläpuolella sekä Saksan ja Puolan pohjoispuolella. Sitä sanotaan aurinkosaareksi sään vuoksi ja kalliosaareksi geologian takia, sillä kallioperä on pääosin graniittia. Pohjoisessa jyrkät kalliomuodostelmat erottavat saaren muun Tanskan loivasta kumpumaastosta, ja lämmin ilmasto antaa kasvaa paikalliselle viikunalajikkeelle 'Bornholmin timantille'. Saarella on useita Tanskan pyöreistä kirkoista, ja luoteiskärjessä on Hammershusin linnanraunio, Pohjois-Euroopan suurin keskiaikainen linnoitus. Strategisen sijaintinsa vuoksi saaresta on taisteltu vuosisatoja: sitä ovat hallinneet Tanskan lisäksi Ruotsi ja Lyypekki, ja vuonna 1658 Ruotsille luovutettu saari palasi Tanskalle vuonna 1660 paikallisen kapinan jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Ruoka: Makeisen syntytarina, josta kiistellään] 1422 — Legendan mukaan marsipaani keksittiin Tallinnan raatihuoneen apteekissa vuonna 1422, kun apteekkarin oppipoika Mart jauhoi mantelia ja sokeria sairaalle raatimiehelle lääkkeen sijaan — tuloksena syntyi makeus, jota alettiin kutsua nimellä maiasmokk, makea suu. Saksalainen Lyypekki väittää keksineensä saman herkun, eikä kiistaa ole koskaan ratkaistu. Vuonna 1864 Tallinnaan avattu kahvila Maiasmokk jatkaa perinnettä yhä samassa talossa Pikk-kadulla, ja sen marsipaanihuoneessa on esillä yli kaksisataa vuosikymmenten takaisilla muoteilla tehtyä marsipaanihahmoa.
+AIEMPI KYSYMYS: Mitä saarella tapahtui vuonna 1658 ja miten se palasi Tanskalle?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Vuonna 1658 [[Bornholm]] luovutettiin Ruotsille, mutta saari palasi Tanskalle vuonna 1660 paikallisen kapinan jälkeen. Strategisen sijaintinsa vuoksi saaresta on taisteltu vuosisatoja, ja sitä ovat hallinneet Tanskan lisäksi Ruotsi ja [[Lyypekki]]. Kapinan yksityiskohdista en ole varma. Valtiot vaihtuivat, mutta saari pysyi paikoillaan.
+KYSYMYS: Kerro lisää: Lyypekki
+
+### 256
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bornholm (luonto · saari)
+Tietoruudun teksti: Bornholm on tanskalainen saari Itämerellä, muusta Tanskasta itään, Ruotsin eteläpuolella sekä Saksan ja Puolan pohjoispuolella. Sitä sanotaan aurinkosaareksi sään vuoksi ja kalliosaareksi geologian takia, sillä kallioperä on pääosin graniittia. Pohjoisessa jyrkät kalliomuodostelmat erottavat saaren muun Tanskan loivasta kumpumaastosta, ja lämmin ilmasto antaa kasvaa paikalliselle viikunalajikkeelle 'Bornholmin timantille'. Saarella on useita Tanskan pyöreistä kirkoista, ja luoteiskärjessä on Hammershusin linnanraunio, Pohjois-Euroopan suurin keskiaikainen linnoitus. Strategisen sijaintinsa vuoksi saaresta on taisteltu vuosisatoja: sitä ovat hallinneet Tanskan lisäksi Ruotsi ja Lyypekki, ja vuonna 1658 Ruotsille luovutettu saari palasi Tanskalle vuonna 1660 paikallisen kapinan jälkeen.
+AIEMPI KYSYMYS: Mikä on Hammershus ja missä se sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Hammershus]] on linnanraunio [[Bornholmin]] luoteiskärjessä, ja sitä pidetään yhtenä Pohjois-Euroopan suurimmista keskiaikaisista linnoituksista. Linnoitus liittyy saaren pitkään strategiseen historiaan, jonka aikana saarta ovat hallinneet Tanskan lisäksi Ruotsi ja Lyypekki. Linnan rakentamisvuosista en ole varma, joten jätän ne mainitsematta. Raunio on suurikin, ja siitä näkee kauas.
+KYSYMYS: Kerro lisää: Hammershus
+
+### 257
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bornholm (luonto · saari)
+Tietoruudun teksti: Bornholm on tanskalainen saari Itämerellä, muusta Tanskasta itään, Ruotsin eteläpuolella sekä Saksan ja Puolan pohjoispuolella. Sitä sanotaan aurinkosaareksi sään vuoksi ja kalliosaareksi geologian takia, sillä kallioperä on pääosin graniittia. Pohjoisessa jyrkät kalliomuodostelmat erottavat saaren muun Tanskan loivasta kumpumaastosta, ja lämmin ilmasto antaa kasvaa paikalliselle viikunalajikkeelle 'Bornholmin timantille'. Saarella on useita Tanskan pyöreistä kirkoista, ja luoteiskärjessä on Hammershusin linnanraunio, Pohjois-Euroopan suurin keskiaikainen linnoitus. Strategisen sijaintinsa vuoksi saaresta on taisteltu vuosisatoja: sitä ovat hallinneet Tanskan lisäksi Ruotsi ja Lyypekki, ja vuonna 1658 Ruotsille luovutettu saari palasi Tanskalle vuonna 1660 paikallisen kapinan jälkeen.
+AIEMPI KYSYMYS: Mikä on Hammershus ja missä se sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Hammershus]] on linnanraunio [[Bornholmin]] luoteiskärjessä, ja sitä pidetään yhtenä Pohjois-Euroopan suurimmista keskiaikaisista linnoituksista. Linnoitus liittyy saaren pitkään strategiseen historiaan, jonka aikana saarta ovat hallinneet Tanskan lisäksi Ruotsi ja Lyypekki. Linnan rakentamisvuosista en ole varma, joten jätän ne mainitsematta. Raunio on suurikin, ja siitä näkee kauas.
+KYSYMYS: Kerro lisää: Bornholmin
+
+### 258
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bornholm (luonto · saari)
+Tietoruudun teksti: Bornholm on tanskalainen saari Itämerellä, muusta Tanskasta itään, Ruotsin eteläpuolella sekä Saksan ja Puolan pohjoispuolella. Sitä sanotaan aurinkosaareksi sään vuoksi ja kalliosaareksi geologian takia, sillä kallioperä on pääosin graniittia. Pohjoisessa jyrkät kalliomuodostelmat erottavat saaren muun Tanskan loivasta kumpumaastosta, ja lämmin ilmasto antaa kasvaa paikalliselle viikunalajikkeelle 'Bornholmin timantille'. Saarella on useita Tanskan pyöreistä kirkoista, ja luoteiskärjessä on Hammershusin linnanraunio, Pohjois-Euroopan suurin keskiaikainen linnoitus. Strategisen sijaintinsa vuoksi saaresta on taisteltu vuosisatoja: sitä ovat hallinneet Tanskan lisäksi Ruotsi ja Lyypekki, ja vuonna 1658 Ruotsille luovutettu saari palasi Tanskalle vuonna 1660 paikallisen kapinan jälkeen.
+AIEMPI KYSYMYS: Mikä on Bornholmin timantti?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. 'Bornholmin timantti' on paikallinen [[viikunalajike]], joka kasvaa saarella, sillä [[Bornholmin]] lämmin ilmasto sallii viikunan viljelyn tällä pohjoisella leveydellä. Saarta kutsutaan aurinkosaareksi juuri sään vuoksi. Lajikkeen historiasta en ole varma. Viikuna ja pulla, kyl se on hyvä yhdistelmä.
+KYSYMYS: Kerro lisää: viikunalajike
+
+### 259
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bornholm (luonto · saari)
+Tietoruudun teksti: Bornholm on tanskalainen saari Itämerellä, muusta Tanskasta itään, Ruotsin eteläpuolella sekä Saksan ja Puolan pohjoispuolella. Sitä sanotaan aurinkosaareksi sään vuoksi ja kalliosaareksi geologian takia, sillä kallioperä on pääosin graniittia. Pohjoisessa jyrkät kalliomuodostelmat erottavat saaren muun Tanskan loivasta kumpumaastosta, ja lämmin ilmasto antaa kasvaa paikalliselle viikunalajikkeelle 'Bornholmin timantille'. Saarella on useita Tanskan pyöreistä kirkoista, ja luoteiskärjessä on Hammershusin linnanraunio, Pohjois-Euroopan suurin keskiaikainen linnoitus. Strategisen sijaintinsa vuoksi saaresta on taisteltu vuosisatoja: sitä ovat hallinneet Tanskan lisäksi Ruotsi ja Lyypekki, ja vuonna 1658 Ruotsille luovutettu saari palasi Tanskalle vuonna 1660 paikallisen kapinan jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Port Moresby — kaupunkilehti / Historia: Laiva jonka kapteenin nimi jäi kartalle] HMS Basilisk laskettiin vesille Woolwichissa elokuussa 1848, ja se oli ensimmäisen luokan siipiratassluuppi: kaksisylinterinen höyrykone pyöritti laivan kylkien rattaita, ja purjeet olivat parkin takila. Laiva palveli Krimin sodan aikana Itämerellä 1854–1855 ja siirtyi sitten Pohjois-Amerikan, Kiinan ja Japanin asemille. Maaliskuussa 1871 se komennettiin Australian asemalle kapteeni John Moresbyn johtoon, ja siitä alkoivat Uuden-Guinean rannikon merenmittaukset. Myöhemmin Basiliskia käytettiin pakkotyövoiman kuljetuksia vastaan Tyynellämerellä. Laiva palasi Englantiin 1874 ja purettiin romuksi Chathamissa 1882.
+AIEMPI KYSYMYS: Missä Bornholm sijaitsee Itämerellä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Bornholm]] on tanskalainen saari [[Itämerellä]], muusta Tanskasta itään, Ruotsin eteläpuolella sekä Saksan ja Puolan pohjoispuolella. Se on siis erillään Tanskan päämaasta ja lähempänä muita maita kuin [[Kööpenhaminaa]]. Saaren sijainti on selittänyt sen strategista merkitystä vuosisatojen ajan. Minä löydän sen aina, vaikka sää olisi mikä.
+KYSYMYS: Kerro lisää: Itämerellä
+
+### 260
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bornholm (luonto · saari)
+Tietoruudun teksti: Bornholm on tanskalainen saari Itämerellä, muusta Tanskasta itään, Ruotsin eteläpuolella sekä Saksan ja Puolan pohjoispuolella. Sitä sanotaan aurinkosaareksi sään vuoksi ja kalliosaareksi geologian takia, sillä kallioperä on pääosin graniittia. Pohjoisessa jyrkät kalliomuodostelmat erottavat saaren muun Tanskan loivasta kumpumaastosta, ja lämmin ilmasto antaa kasvaa paikalliselle viikunalajikkeelle 'Bornholmin timantille'. Saarella on useita Tanskan pyöreistä kirkoista, ja luoteiskärjessä on Hammershusin linnanraunio, Pohjois-Euroopan suurin keskiaikainen linnoitus. Strategisen sijaintinsa vuoksi saaresta on taisteltu vuosisatoja: sitä ovat hallinneet Tanskan lisäksi Ruotsi ja Lyypekki, ja vuonna 1658 Ruotsille luovutettu saari palasi Tanskalle vuonna 1660 paikallisen kapinan jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kööpenhamina — kohdekartta / Kohdekartta: Kastellet] 1660-luku Kastellet on tähtilinnoitus kaupungin pohjoisreunalla ja yksi Pohjois-Euroopan parhaiten säilyneistä linnoituksista. Se on viisikulmio, jonka jokaisessa kärjessä on bastioni: Kuninkaan, Kuningattaren, Kreivin, Prinsessan ja Prinssin bastioni. Vallit ja vallihaudat olivat aikanaan osa koko kaupungin kiertänyttä bastionirengasta, josta on muuten jäljellä vain Christianshavnin vallit. Alku oli vaatimattomampi. Christian IV perusti paikalle Sankt Annæn skanssin 1624 vahtimaan sataman suuta. Työ jäi hänen aikanaan kesken, ja vasta ruotsalaisten piiritettyä Kööpenhaminaa vuosina 1658–1660 Fredrik III kutsui paikalle hollantilaisen insinöörin Henrik Rusen. Hän rakensi skanssista kunnolli…
+AIEMPI KYSYMYS: Missä Bornholm sijaitsee Itämerellä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Bornholm]] on tanskalainen saari [[Itämerellä]], muusta Tanskasta itään, Ruotsin eteläpuolella sekä Saksan ja Puolan pohjoispuolella. Se on siis erillään Tanskan päämaasta ja lähempänä muita maita kuin [[Kööpenhaminaa]]. Saaren sijainti on selittänyt sen strategista merkitystä vuosisatojen ajan. Minä löydän sen aina, vaikka sää olisi mikä.
+KYSYMYS: Kerro lisää: Kööpenhaminaa
+
+### 261
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hammershus (historia)
+Tietoruudun teksti: Hammershus on keskiaikainen linnoitus Bornholmin saaren pohjoiskärjessä Hammerenin niemellä. Se rakennettiin 1200-luvulla, ja se oli Skandinavian suurin keskiaikainen linnoitus. Linna kohoaa 74 metriä merenpinnan yläpuolelle, ja sitä ympäröi 750 metrin mittainen kehämuuri. Huoneita suojasi useita sisäkkäisiä puolustuskehiä, ja sivulla oli kaksi luonnonlähdelampea juomaveden tarpeisiin. Linnasta taisteltiin monesti Tanskan kuninkaiden ja arkkipiispojen välillä, ja myöhemmin sen valtasivat muun muassa Lyypekin joukot ja ruotsalaiset. Linna hylättiin linnoituksena vuonna 1743 ja purettiin osittain noin vuonna 1750, minkä vuoksi se on nykyään raunio, jota on kunnostettu ja huollettu 1800-luvun lopulta.
+AIEMPI KYSYMYS: Miksi Hammershusia oli vaikea vallata?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän ylhäältä päin. Linna seisoo [[Bornholmin]] pohjoiskärjessä [[Hammerenin]] niemellä noin 74 metrin korkeudessa merenpinnasta, joten hyökkääjän oli lähestyttävä sitä jyrkältä korkeudelta puolustajien silmien alla. Linnaa ympäröi 750 metrin mittainen kehämuuri, ja sisempänä oli useita sisäkkäisiä puolustuskehiä, jotka pakottivat vihollisen etenemään vaihe vaiheelta. Piiritystä auttoi kestämään myös se, että alueella oli kaksi luonnonlähdelampea juomavettä varten. Täysin valloittamaton linna ei silti ollut, sillä sen valtasivat muun muassa [[Lyypekin]] joukot ja ruotsalaiset. Ihan hyvä kasa kiviä näin ylhäältä katsottuna.
+KYSYMYS: Kerro lisää: Bornholmin
+
+### 262
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hammershus (historia)
+Tietoruudun teksti: Hammershus on keskiaikainen linnoitus Bornholmin saaren pohjoiskärjessä Hammerenin niemellä. Se rakennettiin 1200-luvulla, ja se oli Skandinavian suurin keskiaikainen linnoitus. Linna kohoaa 74 metriä merenpinnan yläpuolelle, ja sitä ympäröi 750 metrin mittainen kehämuuri. Huoneita suojasi useita sisäkkäisiä puolustuskehiä, ja sivulla oli kaksi luonnonlähdelampea juomaveden tarpeisiin. Linnasta taisteltiin monesti Tanskan kuninkaiden ja arkkipiispojen välillä, ja myöhemmin sen valtasivat muun muassa Lyypekin joukot ja ruotsalaiset. Linna hylättiin linnoituksena vuonna 1743 ja purettiin osittain noin vuonna 1750, minkä vuoksi se on nykyään raunio, jota on kunnostettu ja huollettu 1800-luvun lopulta.
+AIEMPI KYSYMYS: Miksi Hammershusia oli vaikea vallata?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän ylhäältä päin. Linna seisoo [[Bornholmin]] pohjoiskärjessä [[Hammerenin]] niemellä noin 74 metrin korkeudessa merenpinnasta, joten hyökkääjän oli lähestyttävä sitä jyrkältä korkeudelta puolustajien silmien alla. Linnaa ympäröi 750 metrin mittainen kehämuuri, ja sisempänä oli useita sisäkkäisiä puolustuskehiä, jotka pakottivat vihollisen etenemään vaihe vaiheelta. Piiritystä auttoi kestämään myös se, että alueella oli kaksi luonnonlähdelampea juomavettä varten. Täysin valloittamaton linna ei silti ollut, sillä sen valtasivat muun muassa [[Lyypekin]] joukot ja ruotsalaiset. Ihan hyvä kasa kiviä näin ylhäältä katsottuna.
+KYSYMYS: Kerro lisää: Hammerenin
+
+### 263
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hammershus (historia)
+Tietoruudun teksti: Hammershus on keskiaikainen linnoitus Bornholmin saaren pohjoiskärjessä Hammerenin niemellä. Se rakennettiin 1200-luvulla, ja se oli Skandinavian suurin keskiaikainen linnoitus. Linna kohoaa 74 metriä merenpinnan yläpuolelle, ja sitä ympäröi 750 metrin mittainen kehämuuri. Huoneita suojasi useita sisäkkäisiä puolustuskehiä, ja sivulla oli kaksi luonnonlähdelampea juomaveden tarpeisiin. Linnasta taisteltiin monesti Tanskan kuninkaiden ja arkkipiispojen välillä, ja myöhemmin sen valtasivat muun muassa Lyypekin joukot ja ruotsalaiset. Linna hylättiin linnoituksena vuonna 1743 ja purettiin osittain noin vuonna 1750, minkä vuoksi se on nykyään raunio, jota on kunnostettu ja huollettu 1800-luvun lopulta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Ruoka] Virolainen ruokapöytä on tumma ja suolainen: hapan ruisleipä joka on jokaisen aterian pohja, makea marsipaani jonka synnystä kiistellään Lyypekin kanssa, kansalliskala pienessä leivässä ja joulun verinen makkara.
+AIEMPI KYSYMYS: Miksi Hammershusia oli vaikea vallata?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän ylhäältä päin. Linna seisoo [[Bornholmin]] pohjoiskärjessä [[Hammerenin]] niemellä noin 74 metrin korkeudessa merenpinnasta, joten hyökkääjän oli lähestyttävä sitä jyrkältä korkeudelta puolustajien silmien alla. Linnaa ympäröi 750 metrin mittainen kehämuuri, ja sisempänä oli useita sisäkkäisiä puolustuskehiä, jotka pakottivat vihollisen etenemään vaihe vaiheelta. Piiritystä auttoi kestämään myös se, että alueella oli kaksi luonnonlähdelampea juomavettä varten. Täysin valloittamaton linna ei silti ollut, sillä sen valtasivat muun muassa [[Lyypekin]] joukot ja ruotsalaiset. Ihan hyvä kasa kiviä näin ylhäältä katsottuna.
+KYSYMYS: Kerro lisää: Lyypekin
+
+### 264
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hammershus (historia)
+Tietoruudun teksti: Hammershus on keskiaikainen linnoitus Bornholmin saaren pohjoiskärjessä Hammerenin niemellä. Se rakennettiin 1200-luvulla, ja se oli Skandinavian suurin keskiaikainen linnoitus. Linna kohoaa 74 metriä merenpinnan yläpuolelle, ja sitä ympäröi 750 metrin mittainen kehämuuri. Huoneita suojasi useita sisäkkäisiä puolustuskehiä, ja sivulla oli kaksi luonnonlähdelampea juomaveden tarpeisiin. Linnasta taisteltiin monesti Tanskan kuninkaiden ja arkkipiispojen välillä, ja myöhemmin sen valtasivat muun muassa Lyypekin joukot ja ruotsalaiset. Linna hylättiin linnoituksena vuonna 1743 ja purettiin osittain noin vuonna 1750, minkä vuoksi se on nykyään raunio, jota on kunnostettu ja huollettu 1800-luvun lopulta.
+AIEMPI KYSYMYS: Mitä linnalle tapahtui sen jälkeen, kun se hylättiin linnoituksena?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Linna hylättiin linnoituksena vuonna 1743, ja noin vuonna 1750 se purettiin osittain. Siksi [[Hammershus]] on nykyään raunio eikä ehjä rakennus. Rauniota on kuitenkin kunnostettu ja huollettu 1800-luvun lopulta lähtien, joten jäljelle jääneet muurit on pidetty kunnossa. Linna sijaitsee [[Bornholmin]] saaren pohjoiskärjessä, ja sen vanha kehämuuri ympäröi yhä aluetta. Aika hyvin kestänyt kasa, kun ottaa huomioon iän.
+KYSYMYS: Kerro lisää: Hammershus
+
+### 265
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hammershus (historia)
+Tietoruudun teksti: Hammershus on keskiaikainen linnoitus Bornholmin saaren pohjoiskärjessä Hammerenin niemellä. Se rakennettiin 1200-luvulla, ja se oli Skandinavian suurin keskiaikainen linnoitus. Linna kohoaa 74 metriä merenpinnan yläpuolelle, ja sitä ympäröi 750 metrin mittainen kehämuuri. Huoneita suojasi useita sisäkkäisiä puolustuskehiä, ja sivulla oli kaksi luonnonlähdelampea juomaveden tarpeisiin. Linnasta taisteltiin monesti Tanskan kuninkaiden ja arkkipiispojen välillä, ja myöhemmin sen valtasivat muun muassa Lyypekin joukot ja ruotsalaiset. Linna hylättiin linnoituksena vuonna 1743 ja purettiin osittain noin vuonna 1750, minkä vuoksi se on nykyään raunio, jota on kunnostettu ja huollettu 1800-luvun lopulta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historian hetki: Roskildenvuono noin 1040 — kuusikymmentä airoa] n. 1040 — Ensimmäinen ääni on airon kolahdus hankaimeen, ja se toistuu kuusikymmentä kertaa yhtä aikaa. Nuori soutaja lähtee ensimmäiselle pitkälle matkalleen eikä tiedä, palaako miehistö kaupankävijöinä, sotureina vai ei lainkaan. Vuono on matala ja mutkitteleva, ja sen takana on koko maailma: Atlantti lännessä, idässä jokireitit Mustallemerelle. Miehet työntävät keulaa irti rantamudasta, kilvet on ripustettu laidalle matkan ajaksi, purje on raidallista villaa ja päähineet huopaa ja nahkaa — sarvikypärä on 1800-luvun oopperalavojen keksintö eikä esiinny yhdessäkään viikinkiajan löydössä. Juuri tällaisia laivoja tunnetaan tarkasti, koska viisi niistä upotettiin 1000-luvulla tähän samaan vuo…
+- [Tanska — maalehti / Luonto: Puu joka värjää koko maan vihreäksi] nykyään — Pyökki eli bøg on Tanskan kansallispuu, ja toukokuussa metsät käyvät läpi bøgespringiksi kutsutun muutoksen: lehdet puhkeavat lähes koko maassa saman viikon aikana, ja ruskea talvimetsä muuttuu muutamassa päivässä kirkkaan vihreäksi. Juuri ennen lehtien puhkeamista metsän pohja peittyy valkoisista vuokoista, jotka ehtivät kukkia ainoana hetkenä, jolloin auringonvalo pääsee vielä paljaiden oksien läpi maahan asti. Ilmiö houkuttelee joka kevät tuhansia retkeilijöitä metsiin, ja monet perheet tekevät siitä vuotuisen perinteen. Pyökkimetsiä on eniten Sjællannin ja Itä-Jyllannin alueilla, missä maaperä ja ilmasto sopivat puulle parhaiten.
+AIEMPI KYSYMYS: Keiden välillä Hammershusista taisteltiin?
+AIEMPI VASTAUS (Livia):
+No niin, tää on vanha riita. Linnasta taisteltiin monesti [[Tanskan]] kuninkaiden ja arkkipiispojen välillä, eli maallisen vallan ja kirkon välillä. Myöhemmin sen valtasivat muun muassa [[Lyypekin]] joukot ja ruotsalaiset, joten linna vaihtoi isäntää useampaan kertaan. Tarkkoja vuosilukuja en tässä luettele, koska en ole niistä varma. Linnan strateginen asema [[Itämeren]] keskellä selittää sen, miksi sitä kannatti havitella. Siipiveikot ja valtapelit, aina sama juttu.
+KYSYMYS: Kerro lisää: Tanskan
+
+### 266
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hammershus (historia)
+Tietoruudun teksti: Hammershus on keskiaikainen linnoitus Bornholmin saaren pohjoiskärjessä Hammerenin niemellä. Se rakennettiin 1200-luvulla, ja se oli Skandinavian suurin keskiaikainen linnoitus. Linna kohoaa 74 metriä merenpinnan yläpuolelle, ja sitä ympäröi 750 metrin mittainen kehämuuri. Huoneita suojasi useita sisäkkäisiä puolustuskehiä, ja sivulla oli kaksi luonnonlähdelampea juomaveden tarpeisiin. Linnasta taisteltiin monesti Tanskan kuninkaiden ja arkkipiispojen välillä, ja myöhemmin sen valtasivat muun muassa Lyypekin joukot ja ruotsalaiset. Linna hylättiin linnoituksena vuonna 1743 ja purettiin osittain noin vuonna 1750, minkä vuoksi se on nykyään raunio, jota on kunnostettu ja huollettu 1800-luvun lopulta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Magadan — kohdekartta / Kohdekartta: Nagajevanlahti] Jeannette Harbour 1852–1869 Nagajevanlahti on Tauinlahden osa Ohotanmeren pohjoisosassa. Se on 14,5 kilometriä pitkä ja suultaan 6,4 kilometriä leveä, ja sitä on kutsuttu koko Ohotanmeren parhaaksi ankkuripaikaksi. Jäätä lahdella on marraskuun lopulta kesäkuun puoliväliin. Kaupunki ja sen satama ovat lahden perukassa Staritskin niemimaan kannaksella. Lahdella on kaksi nimeä ja kaksi tarinaa. Virallinen nimi tulee amiraali Aleksei Nagajevilta (1704–1781), joka oli hydrografi ja kartantekijä ja jonka Beringinmeren ja Itämeren kartastot ilmestyivät vuonna 1752; niitä käytettiin vielä viisikymmentä vuotta myöhemmin, vaikka niissä ei ollut astekoordinaatistoa lainkaan. Toinen nimi on amerikkalai…
+- [Tallinna — kohdekartta / Kohdekartta: Raatihuoneentori] 1402–1404 Tallinnan raatihuone on koko Itämeren alueen ja Pohjoismaiden vanhin säilynyt raatihuone. Se rakennettiin vain parissa vuodessa, vuosina 1402-1404, keskiaikaisen torin laidalle. Hansakaupunkina Tallinnan kaupunginhallitus piti täällä kokouksiaan ja päätti niin kaupan, oikeuden kuin arjenkin asioista. Rakennuksen 36,8 metriä pitkässä salissa on nähtävissä yli 500 vuotta vanhoja seinävaatteita, jotka kuvaavat kuningas Salomonin elämää. Raatihuoneen 64 metriä korkeaan torniin johtaa peräti 115 porrasaskelmaa. Huipulla pyörii Vana Toomas, eli "Vanha Toomas" - kaupunginvartijaa esittävä tuuliviiri, joka on ollut Tallinnan tunnuskuva vuodesta 1530 lähtien. Alkuperäinen tuuliviiri on nyk…
+AIEMPI KYSYMYS: Keiden välillä Hammershusista taisteltiin?
+AIEMPI VASTAUS (Livia):
+No niin, tää on vanha riita. Linnasta taisteltiin monesti [[Tanskan]] kuninkaiden ja arkkipiispojen välillä, eli maallisen vallan ja kirkon välillä. Myöhemmin sen valtasivat muun muassa [[Lyypekin]] joukot ja ruotsalaiset, joten linna vaihtoi isäntää useampaan kertaan. Tarkkoja vuosilukuja en tässä luettele, koska en ole niistä varma. Linnan strateginen asema [[Itämeren]] keskellä selittää sen, miksi sitä kannatti havitella. Siipiveikot ja valtapelit, aina sama juttu.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 267
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koldinghus (historia)
+Tietoruudun teksti: Koldinghus on Tanskan kuninkaallinen linna Koldingin kaupungissa Jyllannin niemimaan etelä-keskiosassa. Se perustettiin 1200-luvulla puolustamaan etelärajaa Schleswigin herttuoita vastaan, ja myöhemmin siitä tuli kuninkaallinen asuinpaikka. Kristian IV rakennutti siihen Jättiläistornin, jota koristivat neljän jättiläisen patsaat; nykyään jäljellä on vain Herkuleen patsas. Vuonna 1808 linnaan majoitettiin espanjalaisia sotilaita, ja yöllä syttynyt tulipalo tuhosi päärakennukset. Varoja jälleenrakennukseen ei ollut, joten linna oli vuosikymmeniä raunio, jossa vieraili muun muassa H. C. Andersen. Nykyään restauroitu linna on museo: laaja kunnostus kesti vuodesta 1976 vuoteen 1993 ja palkittiin Europa Nostra -palkinnolla.
+AIEMPI KYSYMYS: Miksi Koldinghus rakennettiin juuri Koldingin kukkulalle?
+AIEMPI VASTAUS (Livia):
+Mmm— Tarkkaa syytä juuri kukkulan valinnalle en ole varma, mutta linnan tehtävä tunnetaan. [[Koldinghus]] perustettiin 1200-luvulla puolustamaan Tanskan etelärajaa [[Schleswigin]] herttuoita vastaan, ja siksi sen sijainti Jyllannin niemimaan etelä-keskiosassa oli strategisesti järkevä. Myöhemmin linnasta tuli kuninkaallinen asuinpaikka. Yleisesti linnat rakennettiin paikkoihin, joista oli hyvä näkyvyys ja joita oli helppo puolustaa, mutta tämän linnan kohdalla en halua väittää sen enempää. Kyyhkynä sanoisin, että korkea paikka on aina hyvä paikka.
+KYSYMYS: Kerro lisää: Koldinghus
+
+### 268
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koldinghus (historia)
+Tietoruudun teksti: Koldinghus on Tanskan kuninkaallinen linna Koldingin kaupungissa Jyllannin niemimaan etelä-keskiosassa. Se perustettiin 1200-luvulla puolustamaan etelärajaa Schleswigin herttuoita vastaan, ja myöhemmin siitä tuli kuninkaallinen asuinpaikka. Kristian IV rakennutti siihen Jättiläistornin, jota koristivat neljän jättiläisen patsaat; nykyään jäljellä on vain Herkuleen patsas. Vuonna 1808 linnaan majoitettiin espanjalaisia sotilaita, ja yöllä syttynyt tulipalo tuhosi päärakennukset. Varoja jälleenrakennukseen ei ollut, joten linna oli vuosikymmeniä raunio, jossa vieraili muun muassa H. C. Andersen. Nykyään restauroitu linna on museo: laaja kunnostus kesti vuodesta 1976 vuoteen 1993 ja palkittiin Europa Nostra -palkinnolla.
+AIEMPI KYSYMYS: Miksi Koldinghus rakennettiin juuri Koldingin kukkulalle?
+AIEMPI VASTAUS (Livia):
+Mmm— Tarkkaa syytä juuri kukkulan valinnalle en ole varma, mutta linnan tehtävä tunnetaan. [[Koldinghus]] perustettiin 1200-luvulla puolustamaan Tanskan etelärajaa [[Schleswigin]] herttuoita vastaan, ja siksi sen sijainti Jyllannin niemimaan etelä-keskiosassa oli strategisesti järkevä. Myöhemmin linnasta tuli kuninkaallinen asuinpaikka. Yleisesti linnat rakennettiin paikkoihin, joista oli hyvä näkyvyys ja joita oli helppo puolustaa, mutta tämän linnan kohdalla en halua väittää sen enempää. Kyyhkynä sanoisin, että korkea paikka on aina hyvä paikka.
+KYSYMYS: Kerro lisää: Schleswigin
+
+### 269
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koldinghus (historia)
+Tietoruudun teksti: Koldinghus on Tanskan kuninkaallinen linna Koldingin kaupungissa Jyllannin niemimaan etelä-keskiosassa. Se perustettiin 1200-luvulla puolustamaan etelärajaa Schleswigin herttuoita vastaan, ja myöhemmin siitä tuli kuninkaallinen asuinpaikka. Kristian IV rakennutti siihen Jättiläistornin, jota koristivat neljän jättiläisen patsaat; nykyään jäljellä on vain Herkuleen patsas. Vuonna 1808 linnaan majoitettiin espanjalaisia sotilaita, ja yöllä syttynyt tulipalo tuhosi päärakennukset. Varoja jälleenrakennukseen ei ollut, joten linna oli vuosikymmeniä raunio, jossa vieraili muun muassa H. C. Andersen. Nykyään restauroitu linna on museo: laaja kunnostus kesti vuodesta 1976 vuoteen 1993 ja palkittiin Europa Nostra -palkinnolla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kööpenhamina — kohdekartta / Kohdekartta: Nyhavn] 1670–1675 Nyhavn eli "uusi satama" on 450 metriä pitkä kanava Kööpenhaminan keskustassa. Kuningas Christian V rakennutti sen vuosina 1670–1675, ja työn tekivät tanskalaiset sotilaat sekä Tanskan ja Ruotsin sodassa vangiksi jääneet ruotsalaiset sotavangit. Kanavan piti tuoda laivat suoraan merenlahdelta kaupungin Kongens Nytorv -torille asti. Ennen vanhaan Nyhavn oli meluisa ja vähän vaarallinenkin satamakortteli täynnä merimiehiä ja krouveja - aivan toisenlainen paikka kuin nykyinen värikäs turistikatu. Vanhin talo, numero 9, on peräisin jo vuodelta 1681. Satukirjailija H. C. Andersen asui Nyhavnin varrella eri osoitteissa yhteensä 18 vuoden ajan. 1960-luvulla kanava oli päässyt rappiolle, …
+- [Kööpenhamina — kaupunkilehti / Sadut: Poika tuli kaupunkiin yksin] Hans Christian Andersen syntyi Odensessa suutarin perheeseen vuonna 1805. Neljätoistavuotiaana hän lähti yksin Kööpenhaminaan ja aikoi kuninkaalliseen teatteriin laulajaksi. Ääni kuitenkin murtui, eikä tanssijasta tai näyttelijästäkään tullut mitään. Virkamies Jonas Collin järjesti pojalle koulupaikan, ja koulussa Andersen istui monta vuotta itseään paljon nuorempien kanssa. Ensimmäinen ohut satuvihko ilmestyi vuonna 1835, ja satuja on käännetty yli sadalle kielelle.
+- [Kööpenhamina — kaupunkilehti / Sadut: Huvipuisto avattiin vuonna 1843] Tivoli avattiin elokuussa 1843 kaupungin vanhan vallihaudan viereen. Andersen kävi puistossa heti sen ensimmäisenä kesänä, ja puiston kiinalaistyylisten rakennusten kerrotaan antaneen hänelle ajatuksen Satakieli-satuun. Puiston tunnetuin laite on puinen vuoristorata Rutschebanen vuodelta 1914. Sen junassa istuu jarrumies, joka hidastaa vauhtia alamäissä, koska rata ei muuten pysyisi hallinnassa. Myös Walt Disney kävi Tivolissa ennen kuin rakensi oman huvipuistonsa.
+AIEMPI KYSYMYS: Miksi linna jäi rauniona vuosikymmeniksi vuoden 1808 palon jälkeen?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Vuonna 1808 linnaan majoitettiin espanjalaisia sotilaita, ja yöllä syttynyt tulipalo tuhosi päärakennukset. Jälleenrakennukseen ei ollut varoja, joten [[Koldinghus]] jäi vuosikymmeniksi raunioksi. Rauniossa vieraili muun muassa [[H. C. Andersen]], joten se ehti saada paikkansa myös kirjailijoiden muistoissa. Nykyisin restauroitu linna on museo. Aika pitkä rötös yhdelle yölle.
+KYSYMYS: Kerro lisää: H. C. Andersen
+
+### 270
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koldinghus (historia)
+Tietoruudun teksti: Koldinghus on Tanskan kuninkaallinen linna Koldingin kaupungissa Jyllannin niemimaan etelä-keskiosassa. Se perustettiin 1200-luvulla puolustamaan etelärajaa Schleswigin herttuoita vastaan, ja myöhemmin siitä tuli kuninkaallinen asuinpaikka. Kristian IV rakennutti siihen Jättiläistornin, jota koristivat neljän jättiläisen patsaat; nykyään jäljellä on vain Herkuleen patsas. Vuonna 1808 linnaan majoitettiin espanjalaisia sotilaita, ja yöllä syttynyt tulipalo tuhosi päärakennukset. Varoja jälleenrakennukseen ei ollut, joten linna oli vuosikymmeniä raunio, jossa vieraili muun muassa H. C. Andersen. Nykyään restauroitu linna on museo: laaja kunnostus kesti vuodesta 1976 vuoteen 1993 ja palkittiin Europa Nostra -palkinnolla.
+AIEMPI KYSYMYS: Mikä oli Kristian IV:n rakennuttama Jättiläistorni?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Kristian IV rakennutti [[Koldinghusiin]] Jättiläistornin, jota koristivat neljän jättiläisen patsaat. Näistä patsaista on nykyään jäljellä vain [[Herkuleen]] patsas. Torni kuului linnan kuninkaalliseen vaiheeseen, jolloin linna oli kuninkaallinen asuinpaikka. Tarkkoja mittoja tai rakennusvuotta en ole varma kertomaan. Neljästä jättiläisestä yksi on pysynyt pystyssä, ei paha saavutus.
+KYSYMYS: Kerro lisää: Koldinghusiin
+
+### 271
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koldinghus (historia)
+Tietoruudun teksti: Koldinghus on Tanskan kuninkaallinen linna Koldingin kaupungissa Jyllannin niemimaan etelä-keskiosassa. Se perustettiin 1200-luvulla puolustamaan etelärajaa Schleswigin herttuoita vastaan, ja myöhemmin siitä tuli kuninkaallinen asuinpaikka. Kristian IV rakennutti siihen Jättiläistornin, jota koristivat neljän jättiläisen patsaat; nykyään jäljellä on vain Herkuleen patsas. Vuonna 1808 linnaan majoitettiin espanjalaisia sotilaita, ja yöllä syttynyt tulipalo tuhosi päärakennukset. Varoja jälleenrakennukseen ei ollut, joten linna oli vuosikymmeniä raunio, jossa vieraili muun muassa H. C. Andersen. Nykyään restauroitu linna on museo: laaja kunnostus kesti vuodesta 1976 vuoteen 1993 ja palkittiin Europa Nostra -palkinnolla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Buenos Aires — kohdekartta / Kohdekartta: Palacio Barolo] 1923 Talon tilasi italialainen siirtolainen Luis Barolo, joka oli tullut maahan 1890 ja rikastunut neuletehtaalla, ja sen suunnitteli italialainen arkkitehti Mario Palanti. Rakennus noudattaa Danten Jumalaisen näytelmän maailmankuvaa: kerroksia on 22 ja ne jakautuvat kolmeen osaan niin, että kellari ja katutaso ovat helvetti, kerrokset 1–14 kiirastuli ja 15–22 taivas. Korkeutta on sata metriä, yksi metri runoelman jokaista laulua kohden, ja huipun majakka vastaa enkelien yhdeksää kuoroa. Kärkikoriste esittää Etelän ristiä. Valmistuessaan 1923 talo oli sekä kaupungin että koko Etelä-Amerikan korkein. Aseman se menetti Kavanagh-talolle — Wikipedia antaa siitä kaksi vuotta, 1935 ja 1936. Aveni…
+- [Tanger — kohdekartta / Kohdekartta: Tangerin suurmoskeija] 1818 Paikalla uskotaan olleen ensin roomalainen Herkuleen temppeli ja sen jälkeen 400-luvun kirkko. Perjantaimoskeija perustettiin marinidien aikaan, mutta portugalilaiset muuttivat sen katedraaliksi vallattuaan kaupungin 1471. Kun englantilaiset lähtivät 1684, Moulay Ismail käski uuden kuvernöörin muuttaa rakennuksen takaisin moskeijaksi. Tulos oli karu, ja matkustavat oppineet moittivat sen puutteita. Sulttaani Moulay Slimane järkyttyi rakennuksen kunnosta nähdessään sen 1815 ja määräsi sen rakennettavaksi kokonaan uudelleen; työhön haettiin käsityöläisiä muualta, ja se valmistui 1817–18. Nykyinen muoto on tuosta työstä: nelikulmainen minareetti vihrein laatoin ja pääportti, jonka geometr…
+AIEMPI KYSYMYS: Mikä oli Kristian IV:n rakennuttama Jättiläistorni?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Kristian IV rakennutti [[Koldinghusiin]] Jättiläistornin, jota koristivat neljän jättiläisen patsaat. Näistä patsaista on nykyään jäljellä vain [[Herkuleen]] patsas. Torni kuului linnan kuninkaalliseen vaiheeseen, jolloin linna oli kuninkaallinen asuinpaikka. Tarkkoja mittoja tai rakennusvuotta en ole varma kertomaan. Neljästä jättiläisestä yksi on pysynyt pystyssä, ei paha saavutus.
+KYSYMYS: Kerro lisää: Herkuleen
+
+### 272
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koldinghus (historia)
+Tietoruudun teksti: Koldinghus on Tanskan kuninkaallinen linna Koldingin kaupungissa Jyllannin niemimaan etelä-keskiosassa. Se perustettiin 1200-luvulla puolustamaan etelärajaa Schleswigin herttuoita vastaan, ja myöhemmin siitä tuli kuninkaallinen asuinpaikka. Kristian IV rakennutti siihen Jättiläistornin, jota koristivat neljän jättiläisen patsaat; nykyään jäljellä on vain Herkuleen patsas. Vuonna 1808 linnaan majoitettiin espanjalaisia sotilaita, ja yöllä syttynyt tulipalo tuhosi päärakennukset. Varoja jälleenrakennukseen ei ollut, joten linna oli vuosikymmeniä raunio, jossa vieraili muun muassa H. C. Andersen. Nykyään restauroitu linna on museo: laaja kunnostus kesti vuodesta 1976 vuoteen 1993 ja palkittiin Europa Nostra -palkinnolla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kohdekartta / Kohdekartta: Omeryen hamam] 1571 Kylpylän paikalla seisoi 1300-luvulla augustinolaisten Pyhän Marian kirkko, kivestä muurattu ja katettu pienillä kupoleilla. Nikosian piirityksessä 1570 tykkituli hajotti siitä suurimman osan. Vuonna 1571 Lala Mustafa Pasha rakennutti paikalle moskeijan kalifi Omarin muistoksi, ja kylpylä pystytettiin saman kokonaisuuden osaksi. Kirkosta on yhä jäljellä pääsisäänkäynnin ovi, joka on 1300-luvulta Lusignanien ajalta, ja koillissivulla erottuu jäänteitä myöhemmästä renessanssivaiheesta. Hamamissa kuljetaan aina samassa järjestyksessä: riisuutumis- ja vilvoittelutila, lämmin välihuone, kuuma huone. Kuuman huoneen keskellä on lämmitetty marmoripöytä, jolla maataan, ja nurkissa pieniä kupoli…
+- [Nikosia — kaupunkilehti / Nikosia: Kangaskauppa muutti kirkon holvien alle] Vanhan kaupungin Bedestenin sisällä on paloja bysanttilaisesta basilikasta, joka ajoitetaan 500-luvulle. Sen tilalle rakennettiin kirkko, jota laajennettiin 1100–1500-luvuilla. Koristeellisin osa on pohjoisjulkisivu: goottilainen portaali, sen molemmin puolin sukujen vaakunat, Pyhän Nikolaoksen pienoispatsas sekä eläinhahmoja ja vedenheittäjiä. Vuonna 1573 talo annettiin bedesteniksi eli katetuksi kangaskaupaksi, ja 1760-luvulla siellä kävivät kauppaa turkkilaiset, kreikkalaiset ja armenialaiset kauppiaat. Vuonna 1873 se oli jauhovarasto. Kunnostus kesti 2004–2009, ja sen suunnittelutyö sai Europa Nostra -palkinnon; nyt talossa on kulttuurikeskus.
+AIEMPI KYSYMYS: Mitä Koldinghusissa voi nähdä nykyään?
+AIEMPI VASTAUS (Livia):
+No jopas. Nykyään [[Koldinghus]] on restauroitu linna ja museo. Laaja kunnostus kesti vuodesta 1976 vuoteen 1993, ja se palkittiin [[Europa Nostra]] -palkinnolla. Linnassa on yhä esillä Jättiläistornin jäännöksenä [[Herkuleen]] patsas. Vuoden 1808 palon jälkeen raunioksi jääneen linnan päärakennukset on siis saatu jälleen käyttöön. Pullakahvilan olemassaolosta en ole varma, mutta toivoa sopii.
+KYSYMYS: Kerro lisää: Europa Nostra
+
+### 273
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koldinghus (historia)
+Tietoruudun teksti: Koldinghus on Tanskan kuninkaallinen linna Koldingin kaupungissa Jyllannin niemimaan etelä-keskiosassa. Se perustettiin 1200-luvulla puolustamaan etelärajaa Schleswigin herttuoita vastaan, ja myöhemmin siitä tuli kuninkaallinen asuinpaikka. Kristian IV rakennutti siihen Jättiläistornin, jota koristivat neljän jättiläisen patsaat; nykyään jäljellä on vain Herkuleen patsas. Vuonna 1808 linnaan majoitettiin espanjalaisia sotilaita, ja yöllä syttynyt tulipalo tuhosi päärakennukset. Varoja jälleenrakennukseen ei ollut, joten linna oli vuosikymmeniä raunio, jossa vieraili muun muassa H. C. Andersen. Nykyään restauroitu linna on museo: laaja kunnostus kesti vuodesta 1976 vuoteen 1993 ja palkittiin Europa Nostra -palkinnolla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Luonto: Hiekkasärkkä joka kävelee] noin 1700 — Råbjerg Mile on Pohjois-Euroopan suurin liikkuva hiekkasärkkä: se on noin kaksi neliökilometriä laaja ja jopa 40 metriä korkea, ja siinä on arviolta neljä miljoonaa kuutiometriä hiekkaa. Tuuli työntää koko kummun koillista kohti jopa 18 metriä vuodessa, ja hiekan takana paljastuu matala, kostea vyöhyke, josta erottaa, mistä särkkä on kulkenut. Alkujaan hiekka nousi Länsi-Jyllannin rannikolta yli 300 vuotta sitten, ja se on ainoa laaja liikkuvien dyynien alue koko Tanskassa. Skagenin ja Frederikshavnin välissä liikkuvaa hiekkavuorta katsoo vuosittain noin 250 000 kävijää, jotka kiipeävät sen laelle katsomaan merta molempiin suuntiin.
+AIEMPI KYSYMYS: Missä Koldinghus sijaitsee Tanskassa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Koldinghus]] sijaitsee Koldingin kaupungissa Jyllannin niemimaan etelä-keskiosassa [[Tanskassa]]. Linna perustettiin 1200-luvulla puolustamaan etelärajaa Schleswigin herttuoita vastaan, ja nykyään se toimii museona. Kaupunki on tunnettu juuri linnastaan. Ylhäältä sen löytää helposti, kun tietää mistä katsoa.
+KYSYMYS: Kerro lisää: Tanskassa
+
+### 274
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dybbøl (historia)
+Tietoruudun teksti: Dybbøl on pieni kaupunki Etelä-Jyllannin kaakkoiskulmassa, noin kuusi kilometriä Sønderborgista länteen. Se tunnetaan vuoden 1864 taistelusta Toisessa Schleswigin sodassa. Tanskan armeija vetäytyi Dannevirken puolustuslinjalta, kun sen tukena olleet vesistöt ja suot jäätyivät kovana talvena, ja hakeutui puolustuskelpoisempaan asemaan Dybbølin kenttälinnakkeisiin. Preussilaiset pommittivat asemaa kuukauden ajan rihlatuilla tykeillä, ja 18. huhtikuuta 1864 heidän hyökkäyksensä onnistui. Rauhansopimuksessa Tanska luovutti Schleswigin, ja paikkakunta oli vuosina 1864–1920 saksalaisen hallinnon alla nimellä Düppel. Dybbølin mylly on Tanskan kansallissymboli, ja alue on nykyään suojeltu muistomerkki- ja museoalue.
+AIEMPI KYSYMYS: Miksi Tanskan armeija vetäytyi Dannevirken linjalta juuri Dybbølin juoksuhautoihin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tanskan armeija vetäytyi [[Dannevirken]] puolustuslinjalta, kun sen tukena olleet vesistöt ja suot jäätyivät kovana talvena eivätkä enää toimineet esteenä. Armeija hakeutui puolustuskelpoisempaan asemaan [[Dybbølin]] kenttälinnakkeisiin. Preussilaiset pommittivat asemaa kuukauden ajan rihlatuilla tykeillä, ja 18. huhtikuuta 1864 heidän hyökkäyksensä onnistui. Asia on sodan historiassa raskas, ja siitä on kulunut jo yli satakuusikymmentä vuotta. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Dannevirken
+
+### 275
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dybbøl (historia)
+Tietoruudun teksti: Dybbøl on pieni kaupunki Etelä-Jyllannin kaakkoiskulmassa, noin kuusi kilometriä Sønderborgista länteen. Se tunnetaan vuoden 1864 taistelusta Toisessa Schleswigin sodassa. Tanskan armeija vetäytyi Dannevirken puolustuslinjalta, kun sen tukena olleet vesistöt ja suot jäätyivät kovana talvena, ja hakeutui puolustuskelpoisempaan asemaan Dybbølin kenttälinnakkeisiin. Preussilaiset pommittivat asemaa kuukauden ajan rihlatuilla tykeillä, ja 18. huhtikuuta 1864 heidän hyökkäyksensä onnistui. Rauhansopimuksessa Tanska luovutti Schleswigin, ja paikkakunta oli vuosina 1864–1920 saksalaisen hallinnon alla nimellä Düppel. Dybbølin mylly on Tanskan kansallissymboli, ja alue on nykyään suojeltu muistomerkki- ja museoalue.
+AIEMPI KYSYMYS: Miksi Tanskan armeija vetäytyi Dannevirken linjalta juuri Dybbølin juoksuhautoihin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tanskan armeija vetäytyi [[Dannevirken]] puolustuslinjalta, kun sen tukena olleet vesistöt ja suot jäätyivät kovana talvena eivätkä enää toimineet esteenä. Armeija hakeutui puolustuskelpoisempaan asemaan [[Dybbølin]] kenttälinnakkeisiin. Preussilaiset pommittivat asemaa kuukauden ajan rihlatuilla tykeillä, ja 18. huhtikuuta 1864 heidän hyökkäyksensä onnistui. Asia on sodan historiassa raskas, ja siitä on kulunut jo yli satakuusikymmentä vuotta. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Dybbølin
+
+### 276
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dybbøl (historia)
+Tietoruudun teksti: Dybbøl on pieni kaupunki Etelä-Jyllannin kaakkoiskulmassa, noin kuusi kilometriä Sønderborgista länteen. Se tunnetaan vuoden 1864 taistelusta Toisessa Schleswigin sodassa. Tanskan armeija vetäytyi Dannevirken puolustuslinjalta, kun sen tukena olleet vesistöt ja suot jäätyivät kovana talvena, ja hakeutui puolustuskelpoisempaan asemaan Dybbølin kenttälinnakkeisiin. Preussilaiset pommittivat asemaa kuukauden ajan rihlatuilla tykeillä, ja 18. huhtikuuta 1864 heidän hyökkäyksensä onnistui. Rauhansopimuksessa Tanska luovutti Schleswigin, ja paikkakunta oli vuosina 1864–1920 saksalaisen hallinnon alla nimellä Düppel. Dybbølin mylly on Tanskan kansallissymboli, ja alue on nykyään suojeltu muistomerkki- ja museoalue.
+AIEMPI KYSYMYS: Miksi Dybbøl tunnettiin aikoinaan nimellä Düppel?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Vuosina 1864–1920 paikkakunta oli saksalaisen hallinnon alla, ja silloin sen nimenä oli [[Düppel]]. Tanska luovutti [[Schleswigin]] rauhansopimuksessa Toisen Schleswigin sodan jälkeen, minkä seurauksena alue siirtyi Preussin ja myöhemmin Saksan hallintaan. Nimenmuutos seurasi siis hallinnonmuutosta, eikä ollut vain kielellinen valinta. Nykyään alue on takaisin Tanskassa ja tunnetaan nimellä Dybbøl. Nimiä vaihdetaan kuin paitoja.
+KYSYMYS: Kerro lisää: Düppel
+
+### 277
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dybbøl (historia)
+Tietoruudun teksti: Dybbøl on pieni kaupunki Etelä-Jyllannin kaakkoiskulmassa, noin kuusi kilometriä Sønderborgista länteen. Se tunnetaan vuoden 1864 taistelusta Toisessa Schleswigin sodassa. Tanskan armeija vetäytyi Dannevirken puolustuslinjalta, kun sen tukena olleet vesistöt ja suot jäätyivät kovana talvena, ja hakeutui puolustuskelpoisempaan asemaan Dybbølin kenttälinnakkeisiin. Preussilaiset pommittivat asemaa kuukauden ajan rihlatuilla tykeillä, ja 18. huhtikuuta 1864 heidän hyökkäyksensä onnistui. Rauhansopimuksessa Tanska luovutti Schleswigin, ja paikkakunta oli vuosina 1864–1920 saksalaisen hallinnon alla nimellä Düppel. Dybbølin mylly on Tanskan kansallissymboli, ja alue on nykyään suojeltu muistomerkki- ja museoalue.
+AIEMPI KYSYMYS: Miksi Dybbøl tunnettiin aikoinaan nimellä Düppel?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Vuosina 1864–1920 paikkakunta oli saksalaisen hallinnon alla, ja silloin sen nimenä oli [[Düppel]]. Tanska luovutti [[Schleswigin]] rauhansopimuksessa Toisen Schleswigin sodan jälkeen, minkä seurauksena alue siirtyi Preussin ja myöhemmin Saksan hallintaan. Nimenmuutos seurasi siis hallinnonmuutosta, eikä ollut vain kielellinen valinta. Nykyään alue on takaisin Tanskassa ja tunnetaan nimellä Dybbøl. Nimiä vaihdetaan kuin paitoja.
+KYSYMYS: Kerro lisää: Schleswigin
+
+### 278
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dybbøl (historia)
+Tietoruudun teksti: Dybbøl on pieni kaupunki Etelä-Jyllannin kaakkoiskulmassa, noin kuusi kilometriä Sønderborgista länteen. Se tunnetaan vuoden 1864 taistelusta Toisessa Schleswigin sodassa. Tanskan armeija vetäytyi Dannevirken puolustuslinjalta, kun sen tukena olleet vesistöt ja suot jäätyivät kovana talvena, ja hakeutui puolustuskelpoisempaan asemaan Dybbølin kenttälinnakkeisiin. Preussilaiset pommittivat asemaa kuukauden ajan rihlatuilla tykeillä, ja 18. huhtikuuta 1864 heidän hyökkäyksensä onnistui. Rauhansopimuksessa Tanska luovutti Schleswigin, ja paikkakunta oli vuosina 1864–1920 saksalaisen hallinnon alla nimellä Düppel. Dybbølin mylly on Tanskan kansallissymboli, ja alue on nykyään suojeltu muistomerkki- ja museoalue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historian hetki: Roskildenvuono noin 1040 — kuusikymmentä airoa] n. 1040 — Ensimmäinen ääni on airon kolahdus hankaimeen, ja se toistuu kuusikymmentä kertaa yhtä aikaa. Nuori soutaja lähtee ensimmäiselle pitkälle matkalleen eikä tiedä, palaako miehistö kaupankävijöinä, sotureina vai ei lainkaan. Vuono on matala ja mutkitteleva, ja sen takana on koko maailma: Atlantti lännessä, idässä jokireitit Mustallemerelle. Miehet työntävät keulaa irti rantamudasta, kilvet on ripustettu laidalle matkan ajaksi, purje on raidallista villaa ja päähineet huopaa ja nahkaa — sarvikypärä on 1800-luvun oopperalavojen keksintö eikä esiinny yhdessäkään viikinkiajan löydössä. Juuri tällaisia laivoja tunnetaan tarkasti, koska viisi niistä upotettiin 1000-luvulla tähän samaan vuo…
+- [Tanska — maalehti / Luonto: Puu joka värjää koko maan vihreäksi] nykyään — Pyökki eli bøg on Tanskan kansallispuu, ja toukokuussa metsät käyvät läpi bøgespringiksi kutsutun muutoksen: lehdet puhkeavat lähes koko maassa saman viikon aikana, ja ruskea talvimetsä muuttuu muutamassa päivässä kirkkaan vihreäksi. Juuri ennen lehtien puhkeamista metsän pohja peittyy valkoisista vuokoista, jotka ehtivät kukkia ainoana hetkenä, jolloin auringonvalo pääsee vielä paljaiden oksien läpi maahan asti. Ilmiö houkuttelee joka kevät tuhansia retkeilijöitä metsiin, ja monet perheet tekevät siitä vuotuisen perinteen. Pyökkimetsiä on eniten Sjællannin ja Itä-Jyllannin alueilla, missä maaperä ja ilmasto sopivat puulle parhaiten.
+AIEMPI KYSYMYS: Mikä on Dybbølin mylly?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Dybbølin]] mylly on [[Tanskan]] kansallissymboli, ja se liittyy läheisesti vuoden 1864 taisteluun. Alue on nykyään suojeltu muistomerkki- ja museoalue. Tarkkoja yksityiskohtia myllyn historiasta en ole varma kertomaan, joten ne kannattaa tarkistaa museon tiedoista. Muistomerkkialue on tärkeä paikka Tanskan historiassa. Myllyssä ei kai pullaa leivota, harmi.
+KYSYMYS: Kerro lisää: Tanskan
+
+### 279
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dybbøl (historia)
+Tietoruudun teksti: Dybbøl on pieni kaupunki Etelä-Jyllannin kaakkoiskulmassa, noin kuusi kilometriä Sønderborgista länteen. Se tunnetaan vuoden 1864 taistelusta Toisessa Schleswigin sodassa. Tanskan armeija vetäytyi Dannevirken puolustuslinjalta, kun sen tukena olleet vesistöt ja suot jäätyivät kovana talvena, ja hakeutui puolustuskelpoisempaan asemaan Dybbølin kenttälinnakkeisiin. Preussilaiset pommittivat asemaa kuukauden ajan rihlatuilla tykeillä, ja 18. huhtikuuta 1864 heidän hyökkäyksensä onnistui. Rauhansopimuksessa Tanska luovutti Schleswigin, ja paikkakunta oli vuosina 1864–1920 saksalaisen hallinnon alla nimellä Düppel. Dybbølin mylly on Tanskan kansallissymboli, ja alue on nykyään suojeltu muistomerkki- ja museoalue.
+AIEMPI KYSYMYS: Missä Dybbøl sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Dybbøl]] on pieni kaupunki Etelä-Jyllannin kaakkoiskulmassa, noin kuusi kilometriä [[Sønderborgista]] länteen. Alue on tunnettu vuoden 1864 taistelusta, ja se on nykyään suojeltu muistomerkki- ja museoalue. Sijainti on lähellä Saksan rajaa. Pieni paikka, iso historia.
+KYSYMYS: Kerro lisää: Dybbøl
+
+### 280
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dybbøl (historia)
+Tietoruudun teksti: Dybbøl on pieni kaupunki Etelä-Jyllannin kaakkoiskulmassa, noin kuusi kilometriä Sønderborgista länteen. Se tunnetaan vuoden 1864 taistelusta Toisessa Schleswigin sodassa. Tanskan armeija vetäytyi Dannevirken puolustuslinjalta, kun sen tukena olleet vesistöt ja suot jäätyivät kovana talvena, ja hakeutui puolustuskelpoisempaan asemaan Dybbølin kenttälinnakkeisiin. Preussilaiset pommittivat asemaa kuukauden ajan rihlatuilla tykeillä, ja 18. huhtikuuta 1864 heidän hyökkäyksensä onnistui. Rauhansopimuksessa Tanska luovutti Schleswigin, ja paikkakunta oli vuosina 1864–1920 saksalaisen hallinnon alla nimellä Düppel. Dybbølin mylly on Tanskan kansallissymboli, ja alue on nykyään suojeltu muistomerkki- ja museoalue.
+AIEMPI KYSYMYS: Missä Dybbøl sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Dybbøl]] on pieni kaupunki Etelä-Jyllannin kaakkoiskulmassa, noin kuusi kilometriä [[Sønderborgista]] länteen. Alue on tunnettu vuoden 1864 taistelusta, ja se on nykyään suojeltu muistomerkki- ja museoalue. Sijainti on lähellä Saksan rajaa. Pieni paikka, iso historia.
+KYSYMYS: Kerro lisää: Sønderborgista
+
+### 281
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Viborgin tuomiokirkko (historia)
+Tietoruudun teksti: Viborgin tuomiokirkko on yksi Tanskan tärkeimmistä historiallisista kirkoista Jyllannin pohjoisosassa, ja kaupungissa on ollut piispanistuin vuodesta 1065. Nykyinen rakennus on silti 1800-luvun työ: sen paikalla seissyt keskiaikainen katedraali aloitettiin noin vuonna 1130, mutta vuoden 1726 tulipalo jätti jäljelle vain paljaat seinät ja holvit. Rauniot koteloitiin barokkityyliseen rakennukseen, ja vuosina 1800–1814 kirkkoa käytettiin jopa viljavarastona. Lopulta se purettiin ja rakennettiin tiilestä uudelleen, minkä jälkeen eteen tehtiin halvempi graniittijulkisivu. Esikuvana oli Lundin romaaninen tuomiokirkko Ruotsissa, ja uusi kirkko vihittiin käyttöön 1876. Vanhin osa on krypta.
+AIEMPI KYSYMYS: Miksi Viborgin tuomiokirkko jouduttiin rakentamaan uudelleen 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on tulipalon tarina. Keskiaikainen katedraali aloitettiin noin vuonna 1130, mutta vuoden 1726 tulipalo jätti jäljelle vain paljaat seinät ja holvit. Rauniot koteloitiin barokkityyliseen rakennukseen, ja vuosina 1800–1814 kirkkoa käytettiin jopa viljavarastona. Lopulta rakennus purettiin ja rakennettiin tiilestä uudelleen, minkä jälkeen eteen tehtiin halvempi graniittijulkisivu. Esikuvana oli [[Lundin]] romaaninen tuomiokirkko [[Ruotsissa]], ja uusi kirkko vihittiin käyttöön 1876. Ei paha, että krypta on yhä paikoillaan.
+KYSYMYS: Kerro lisää: Lundin
+
+### 282
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Viborgin tuomiokirkko (historia)
+Tietoruudun teksti: Viborgin tuomiokirkko on yksi Tanskan tärkeimmistä historiallisista kirkoista Jyllannin pohjoisosassa, ja kaupungissa on ollut piispanistuin vuodesta 1065. Nykyinen rakennus on silti 1800-luvun työ: sen paikalla seissyt keskiaikainen katedraali aloitettiin noin vuonna 1130, mutta vuoden 1726 tulipalo jätti jäljelle vain paljaat seinät ja holvit. Rauniot koteloitiin barokkityyliseen rakennukseen, ja vuosina 1800–1814 kirkkoa käytettiin jopa viljavarastona. Lopulta se purettiin ja rakennettiin tiilestä uudelleen, minkä jälkeen eteen tehtiin halvempi graniittijulkisivu. Esikuvana oli Lundin romaaninen tuomiokirkko Ruotsissa, ja uusi kirkko vihittiin käyttöön 1876. Vanhin osa on krypta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Kuvataide: Abstrakti taide alkoi salaa] Hilma af Klint maalasi jo vuonna 1906 suuria teoksia, joissa ei ole yhtään esittävää kohdetta — värejä, ympyröitä ja spiraaleja. Se tapahtui vuosia ennen kuin Kandinskyn ja muiden abstrakteja maalauksia nähtiin. Hilma ei kuitenkaan näyttänyt niitä juuri kenellekään: hän määräsi testamentissaan, ettei töitä saa asettaa esille ennen kuin kaksikymmentä vuotta on kulunut hänen kuolemastaan. Maailma näki ne kunnolla vasta 1980-luvulla, ja vasta silloin taidehistoriaa alettiin kirjoittaa uudestaan: abstrakti taide olikin alkanut Ruotsissa.
+- [Ruotsi — maalehti / Luonto: Taivas repeää vihreäksi] Abisko Pohjois-Ruotsissa on yksi maailman parhaista paikoista nähdä revontulet, ja syy on maantieteessä: tunturit pysäyttävät Atlantilta tulevat pilvet, joten Torneträskin yllä on usein selkeää silloinkin, kun ympärillä sataa. Ilmiötä kutsutaan siniseksi aukoksi. Revontulet syntyvät, kun auringosta sinkoutuneet hiukkaset törmäävät ilmakehän kaasuihin sadan kilometrin korkeudessa — happi hehkuu vihreänä, typpi violettina. Parhaat yöt ovat pimeimmän talven selkeitä pakkasöitä, jolloin valo näkyy myös vedenpinnasta heijastuneena.
+- [Ruotsi — maalehti / Luonto] Ruotsissa metsä on kaikkien: sinne saa mennä, siellä saa yöpyä ja marjat saa poimia — kunhan ei häiritse eikä tuhoa.
+AIEMPI KYSYMYS: Miksi Viborgin tuomiokirkko jouduttiin rakentamaan uudelleen 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on tulipalon tarina. Keskiaikainen katedraali aloitettiin noin vuonna 1130, mutta vuoden 1726 tulipalo jätti jäljelle vain paljaat seinät ja holvit. Rauniot koteloitiin barokkityyliseen rakennukseen, ja vuosina 1800–1814 kirkkoa käytettiin jopa viljavarastona. Lopulta rakennus purettiin ja rakennettiin tiilestä uudelleen, minkä jälkeen eteen tehtiin halvempi graniittijulkisivu. Esikuvana oli [[Lundin]] romaaninen tuomiokirkko [[Ruotsissa]], ja uusi kirkko vihittiin käyttöön 1876. Ei paha, että krypta on yhä paikoillaan.
+KYSYMYS: Kerro lisää: Ruotsissa
+
+### 283
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Viborgin tuomiokirkko (historia)
+Tietoruudun teksti: Viborgin tuomiokirkko on yksi Tanskan tärkeimmistä historiallisista kirkoista Jyllannin pohjoisosassa, ja kaupungissa on ollut piispanistuin vuodesta 1065. Nykyinen rakennus on silti 1800-luvun työ: sen paikalla seissyt keskiaikainen katedraali aloitettiin noin vuonna 1130, mutta vuoden 1726 tulipalo jätti jäljelle vain paljaat seinät ja holvit. Rauniot koteloitiin barokkityyliseen rakennukseen, ja vuosina 1800–1814 kirkkoa käytettiin jopa viljavarastona. Lopulta se purettiin ja rakennettiin tiilestä uudelleen, minkä jälkeen eteen tehtiin halvempi graniittijulkisivu. Esikuvana oli Lundin romaaninen tuomiokirkko Ruotsissa, ja uusi kirkko vihittiin käyttöön 1876. Vanhin osa on krypta.
+AIEMPI KYSYMYS: Mitä keskiaikaiselle kirkolle tapahtui vuoden 1726 jälkeen, ennen kuin se purettiin?
+AIEMPI VASTAUS (Livia):
+Katotaas. Vuoden 1726 tulipalon jälkeen jäljelle jäivät vain paljaat seinät ja holvit. Rauniot koteloitiin barokkityyliseen rakennukseen, ja vuosina 1800–1814 kirkkoa käytettiin jopa [[viljavarastona]]. Sen jälkeen rakennus purettiin ja korvattiin tiilestä rakennetulla uudella kirkolla, joka vihittiin käyttöön 1876. [[Viborgin]] tuomiokirkon kohtalo on siis ollut vaihteleva. Viljavarastona, voi sentään, kyllä kyyhkynen siitä tykkäisi.
+KYSYMYS: Kerro lisää: viljavarastona
+
+### 284
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Viborgin tuomiokirkko (historia)
+Tietoruudun teksti: Viborgin tuomiokirkko on yksi Tanskan tärkeimmistä historiallisista kirkoista Jyllannin pohjoisosassa, ja kaupungissa on ollut piispanistuin vuodesta 1065. Nykyinen rakennus on silti 1800-luvun työ: sen paikalla seissyt keskiaikainen katedraali aloitettiin noin vuonna 1130, mutta vuoden 1726 tulipalo jätti jäljelle vain paljaat seinät ja holvit. Rauniot koteloitiin barokkityyliseen rakennukseen, ja vuosina 1800–1814 kirkkoa käytettiin jopa viljavarastona. Lopulta se purettiin ja rakennettiin tiilestä uudelleen, minkä jälkeen eteen tehtiin halvempi graniittijulkisivu. Esikuvana oli Lundin romaaninen tuomiokirkko Ruotsissa, ja uusi kirkko vihittiin käyttöön 1876. Vanhin osa on krypta.
+AIEMPI KYSYMYS: Mitä keskiaikaiselle kirkolle tapahtui vuoden 1726 jälkeen, ennen kuin se purettiin?
+AIEMPI VASTAUS (Livia):
+Katotaas. Vuoden 1726 tulipalon jälkeen jäljelle jäivät vain paljaat seinät ja holvit. Rauniot koteloitiin barokkityyliseen rakennukseen, ja vuosina 1800–1814 kirkkoa käytettiin jopa [[viljavarastona]]. Sen jälkeen rakennus purettiin ja korvattiin tiilestä rakennetulla uudella kirkolla, joka vihittiin käyttöön 1876. [[Viborgin]] tuomiokirkon kohtalo on siis ollut vaihteleva. Viljavarastona, voi sentään, kyllä kyyhkynen siitä tykkäisi.
+KYSYMYS: Kerro lisää: Viborgin
+
+### 285
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Viborgin tuomiokirkko (historia)
+Tietoruudun teksti: Viborgin tuomiokirkko on yksi Tanskan tärkeimmistä historiallisista kirkoista Jyllannin pohjoisosassa, ja kaupungissa on ollut piispanistuin vuodesta 1065. Nykyinen rakennus on silti 1800-luvun työ: sen paikalla seissyt keskiaikainen katedraali aloitettiin noin vuonna 1130, mutta vuoden 1726 tulipalo jätti jäljelle vain paljaat seinät ja holvit. Rauniot koteloitiin barokkityyliseen rakennukseen, ja vuosina 1800–1814 kirkkoa käytettiin jopa viljavarastona. Lopulta se purettiin ja rakennettiin tiilestä uudelleen, minkä jälkeen eteen tehtiin halvempi graniittijulkisivu. Esikuvana oli Lundin romaaninen tuomiokirkko Ruotsissa, ja uusi kirkko vihittiin käyttöön 1876. Vanhin osa on krypta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+AIEMPI KYSYMYS: Mikä on Viborgin tuomiokirkon vanhin osa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Viborgin]] tuomiokirkon vanhin osa on krypta. Nykyinen kirkko on 1800-luvun työ, mutta kryptan juuret ovat keskiaikaisessa katedraalissa, jonka rakentaminen aloitettiin noin vuonna 1130. Kaupungissa on ollut [[piispanistuin]] vuodesta 1065. Kryptan tarkkaa ikää en ole varma, mutta se on osa vanhaa rakennusta. Alhaalla on siis vanhinta, ylhäällä uutta, aika hyvä jako.
+KYSYMYS: Kerro lisää: piispanistuin
+
+### 286
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Viborgin tuomiokirkko (historia)
+Tietoruudun teksti: Viborgin tuomiokirkko on yksi Tanskan tärkeimmistä historiallisista kirkoista Jyllannin pohjoisosassa, ja kaupungissa on ollut piispanistuin vuodesta 1065. Nykyinen rakennus on silti 1800-luvun työ: sen paikalla seissyt keskiaikainen katedraali aloitettiin noin vuonna 1130, mutta vuoden 1726 tulipalo jätti jäljelle vain paljaat seinät ja holvit. Rauniot koteloitiin barokkityyliseen rakennukseen, ja vuosina 1800–1814 kirkkoa käytettiin jopa viljavarastona. Lopulta se purettiin ja rakennettiin tiilestä uudelleen, minkä jälkeen eteen tehtiin halvempi graniittijulkisivu. Esikuvana oli Lundin romaaninen tuomiokirkko Ruotsissa, ja uusi kirkko vihittiin käyttöön 1876. Vanhin osa on krypta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Luonto: Hiekkasärkkä joka kävelee] noin 1700 — Råbjerg Mile on Pohjois-Euroopan suurin liikkuva hiekkasärkkä: se on noin kaksi neliökilometriä laaja ja jopa 40 metriä korkea, ja siinä on arviolta neljä miljoonaa kuutiometriä hiekkaa. Tuuli työntää koko kummun koillista kohti jopa 18 metriä vuodessa, ja hiekan takana paljastuu matala, kostea vyöhyke, josta erottaa, mistä särkkä on kulkenut. Alkujaan hiekka nousi Länsi-Jyllannin rannikolta yli 300 vuotta sitten, ja se on ainoa laaja liikkuvien dyynien alue koko Tanskassa. Skagenin ja Frederikshavnin välissä liikkuvaa hiekkavuorta katsoo vuosittain noin 250 000 kävijää, jotka kiipeävät sen laelle katsomaan merta molempiin suuntiin.
+AIEMPI KYSYMYS: Missä Viborg sijaitsee?
+AIEMPI VASTAUS (Livia):
+No niin. [[Viborgin]] tuomiokirkko on Jyllannin pohjoisosassa [[Tanskassa]], ja kaupungissa on ollut piispanistuin vuodesta 1065. Kirkko on yksi Tanskan tärkeimmistä historiallisista kirkoista. Viborg sijaitsee Jyllannin niemimaalla, ja kaupunki on vanha kirkollinen keskus. Siivin katsottuna paikka on helppo löytää.
+KYSYMYS: Kerro lisää: Tanskassa
+
+### 287
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lejre (historia)
+Tietoruudun teksti: Lejre on pieni rautatiekaupunki Sjællandin luoteisosassa, mutta Tanskan historiassa sen nimi painaa paljon. Keskiaikaiset lähteet, kuten Saxo Grammaticuksen Gesta Danorum, kertovat Lejren Skjöldung-suvun kuninkaista, ja paikkaa on pidetty Beowulf-eepoksen kuninkaanhallin Heorotin esikuvana. Legendat ovat suurelta osin satua, mutta 1980-luvulta alkaneet kaivaukset osoittivat niillä olevan todellinen pohja. Gammel Lejren luona paljastui rautakauden ja viikinkiajan asutus, jossa oli vähintään 50–60 metrin pituisten hallien pylväänreikiä. Asutus ajoittuu noin vuosien 550 ja 1000 välille. Aseita löytyi vähän, joten paikka näyttää olleen pikemmin kauppa-, käsityö- ja uskonnollinen keskus kuin sotilastukikohta.
+AIEMPI KYSYMYS: Mitä Lejren kaivauksissa löytyi, joka tukee tarinoita muinaisesta kuningasistuimesta?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tää on mielenkiintoinen juttu. 1980-luvulta alkaneet kaivaukset [[Gammel Lejren]] luona paljastivat rautakauden ja viikinkiajan asutuksen, jossa oli vähintään 50–60 metrin pituisten hallien pylväänreikiä. Asutus ajoittuu noin vuosien 550 ja 1000 välille. Keskiaikaiset lähteet, kuten [[Saxo Grammaticuksen]] Gesta Danorum, kertovat Lejren Skjöldung-suvun kuninkaista, ja paikkaa on pidetty [[Beowulf]]-eepoksen kuninkaanhallin Heorotin esikuvana. Kaivaukset siis osoittivat legendoilla olevan todellinen pohja. Muistutan, että legendat ovat silti suurelta osin satua. Aika iso halli, sanoisin.
+KYSYMYS: Kerro lisää: Gammel Lejren
+
+### 288
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lejre (historia)
+Tietoruudun teksti: Lejre on pieni rautatiekaupunki Sjællandin luoteisosassa, mutta Tanskan historiassa sen nimi painaa paljon. Keskiaikaiset lähteet, kuten Saxo Grammaticuksen Gesta Danorum, kertovat Lejren Skjöldung-suvun kuninkaista, ja paikkaa on pidetty Beowulf-eepoksen kuninkaanhallin Heorotin esikuvana. Legendat ovat suurelta osin satua, mutta 1980-luvulta alkaneet kaivaukset osoittivat niillä olevan todellinen pohja. Gammel Lejren luona paljastui rautakauden ja viikinkiajan asutus, jossa oli vähintään 50–60 metrin pituisten hallien pylväänreikiä. Asutus ajoittuu noin vuosien 550 ja 1000 välille. Aseita löytyi vähän, joten paikka näyttää olleen pikemmin kauppa-, käsityö- ja uskonnollinen keskus kuin sotilastukikohta.
+AIEMPI KYSYMYS: Mitä Lejren kaivauksissa löytyi, joka tukee tarinoita muinaisesta kuningasistuimesta?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tää on mielenkiintoinen juttu. 1980-luvulta alkaneet kaivaukset [[Gammel Lejren]] luona paljastivat rautakauden ja viikinkiajan asutuksen, jossa oli vähintään 50–60 metrin pituisten hallien pylväänreikiä. Asutus ajoittuu noin vuosien 550 ja 1000 välille. Keskiaikaiset lähteet, kuten [[Saxo Grammaticuksen]] Gesta Danorum, kertovat Lejren Skjöldung-suvun kuninkaista, ja paikkaa on pidetty [[Beowulf]]-eepoksen kuninkaanhallin Heorotin esikuvana. Kaivaukset siis osoittivat legendoilla olevan todellinen pohja. Muistutan, että legendat ovat silti suurelta osin satua. Aika iso halli, sanoisin.
+KYSYMYS: Kerro lisää: Saxo Grammaticuksen
+
+### 289
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lejre (historia)
+Tietoruudun teksti: Lejre on pieni rautatiekaupunki Sjællandin luoteisosassa, mutta Tanskan historiassa sen nimi painaa paljon. Keskiaikaiset lähteet, kuten Saxo Grammaticuksen Gesta Danorum, kertovat Lejren Skjöldung-suvun kuninkaista, ja paikkaa on pidetty Beowulf-eepoksen kuninkaanhallin Heorotin esikuvana. Legendat ovat suurelta osin satua, mutta 1980-luvulta alkaneet kaivaukset osoittivat niillä olevan todellinen pohja. Gammel Lejren luona paljastui rautakauden ja viikinkiajan asutus, jossa oli vähintään 50–60 metrin pituisten hallien pylväänreikiä. Asutus ajoittuu noin vuosien 550 ja 1000 välille. Aseita löytyi vähän, joten paikka näyttää olleen pikemmin kauppa-, käsityö- ja uskonnollinen keskus kuin sotilastukikohta.
+AIEMPI KYSYMYS: Mitä Lejren kaivauksissa löytyi, joka tukee tarinoita muinaisesta kuningasistuimesta?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tää on mielenkiintoinen juttu. 1980-luvulta alkaneet kaivaukset [[Gammel Lejren]] luona paljastivat rautakauden ja viikinkiajan asutuksen, jossa oli vähintään 50–60 metrin pituisten hallien pylväänreikiä. Asutus ajoittuu noin vuosien 550 ja 1000 välille. Keskiaikaiset lähteet, kuten [[Saxo Grammaticuksen]] Gesta Danorum, kertovat Lejren Skjöldung-suvun kuninkaista, ja paikkaa on pidetty [[Beowulf]]-eepoksen kuninkaanhallin Heorotin esikuvana. Kaivaukset siis osoittivat legendoilla olevan todellinen pohja. Muistutan, että legendat ovat silti suurelta osin satua. Aika iso halli, sanoisin.
+KYSYMYS: Kerro lisää: Beowulf
+
+### 290
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lejre (historia)
+Tietoruudun teksti: Lejre on pieni rautatiekaupunki Sjællandin luoteisosassa, mutta Tanskan historiassa sen nimi painaa paljon. Keskiaikaiset lähteet, kuten Saxo Grammaticuksen Gesta Danorum, kertovat Lejren Skjöldung-suvun kuninkaista, ja paikkaa on pidetty Beowulf-eepoksen kuninkaanhallin Heorotin esikuvana. Legendat ovat suurelta osin satua, mutta 1980-luvulta alkaneet kaivaukset osoittivat niillä olevan todellinen pohja. Gammel Lejren luona paljastui rautakauden ja viikinkiajan asutus, jossa oli vähintään 50–60 metrin pituisten hallien pylväänreikiä. Asutus ajoittuu noin vuosien 550 ja 1000 välille. Aseita löytyi vähän, joten paikka näyttää olleen pikemmin kauppa-, käsityö- ja uskonnollinen keskus kuin sotilastukikohta.
+AIEMPI KYSYMYS: Miksi Lejren asutusta pidetään pikemmin kauppa- ja uskontokeskuksena kuin sotilastukikohtana?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Syynä on se, että aseita löytyi vähän. Siksi [[Lejren]] asutus näyttää olleen pikemmin kauppa-, käsityö- ja uskonnollinen keskus kuin [[sotilastukikohta]]. Asutus, jossa oli vähintään 50–60 metrin pituisten hallien pylväänreikiä, ajoittuu noin vuosien 550 ja 1000 välille. Johtopäätös perustuu arkeologiseen löytöaineistoon, mutta tulkinnat voivat muuttua uusien kaivausten myötä. Ei sotaa, enemmän markkinoita, ihan mukava.
+KYSYMYS: Kerro lisää: Lejren
+
+### 291
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lejre (historia)
+Tietoruudun teksti: Lejre on pieni rautatiekaupunki Sjællandin luoteisosassa, mutta Tanskan historiassa sen nimi painaa paljon. Keskiaikaiset lähteet, kuten Saxo Grammaticuksen Gesta Danorum, kertovat Lejren Skjöldung-suvun kuninkaista, ja paikkaa on pidetty Beowulf-eepoksen kuninkaanhallin Heorotin esikuvana. Legendat ovat suurelta osin satua, mutta 1980-luvulta alkaneet kaivaukset osoittivat niillä olevan todellinen pohja. Gammel Lejren luona paljastui rautakauden ja viikinkiajan asutus, jossa oli vähintään 50–60 metrin pituisten hallien pylväänreikiä. Asutus ajoittuu noin vuosien 550 ja 1000 välille. Aseita löytyi vähän, joten paikka näyttää olleen pikemmin kauppa-, käsityö- ja uskonnollinen keskus kuin sotilastukikohta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Whitehorse — kohdekartta / Kohdekartta: Whitehorsen lentoasema] 1920 alkaen Keväällä 1920 kaupungin yläpuolisella rinteellä olevaa puutavaratonttia raivattiin kiitoradaksi, koska Yhdysvaltain armeijan Black Wolf Squadron oli tulossa neljällä de Havilland DH-4 -koneella. Sama kaistale palveli 1920-luvun lopulla kaivosyhtiötä ja Yukon Airways and Exploration Companya. Kenttää laajennettiin 1940–1941, ja 1942 se siirtyi Kanadan ilmavoimille osana Luoteista porrasreittiä, jota pitkin koneita siirrettiin pohjoisen kautta. Sotilastukikohta suljettiin 1968, ja kenttä palasi siviilikäyttöön. Kenttä nimettiin 15. joulukuuta 2008 Erik Nielsenin mukaan, joka edusti Yukonia pitkään Kanadan parlamentissa. Se on osa Kanadan kansallista lentoasemajärjestelmää ja Yukon…
+- [Lagos — kaupunkilehti / Lagos: Sotaleiri, jonka nimeksi jäi Eko] 1500-luvun puolivälissä Beninin kuningaskunta laajeni länteen hallitakseen rannikon kauppapaikkoja. Noin 1600 puhkesi kiista beniniläisten ja aworien välillä; oba Orhogbua hyökkäsi Iddoon, ja aworit löivät hänet ensin takaisin. Lopulta Lagosin saaresta tuli linnoitettu Beninin sotilastukikohta. Kun sen komentaja Asheru kaatui, aworipäällikkö Ashipa palautti jäännökset Beniniin ja sai vastineeksi Ekon hallitsijan aseman; veronmaksu Beniniin päättyi vasta 1830. Nimen Eko sanotaan tulevan edon sanasta ikurame, sotaleiri — toinen selitys johtaa sen joruban sanasta ereko, maatila. Portugalilaiset kutsuivat paikkaa ensin nimellä Onim ja sitten Lagos.
+AIEMPI KYSYMYS: Miksi Lejren asutusta pidetään pikemmin kauppa- ja uskontokeskuksena kuin sotilastukikohtana?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Syynä on se, että aseita löytyi vähän. Siksi [[Lejren]] asutus näyttää olleen pikemmin kauppa-, käsityö- ja uskonnollinen keskus kuin [[sotilastukikohta]]. Asutus, jossa oli vähintään 50–60 metrin pituisten hallien pylväänreikiä, ajoittuu noin vuosien 550 ja 1000 välille. Johtopäätös perustuu arkeologiseen löytöaineistoon, mutta tulkinnat voivat muuttua uusien kaivausten myötä. Ei sotaa, enemmän markkinoita, ihan mukava.
+KYSYMYS: Kerro lisää: sotilastukikohta
+
+### 292
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lejre (historia)
+Tietoruudun teksti: Lejre on pieni rautatiekaupunki Sjællandin luoteisosassa, mutta Tanskan historiassa sen nimi painaa paljon. Keskiaikaiset lähteet, kuten Saxo Grammaticuksen Gesta Danorum, kertovat Lejren Skjöldung-suvun kuninkaista, ja paikkaa on pidetty Beowulf-eepoksen kuninkaanhallin Heorotin esikuvana. Legendat ovat suurelta osin satua, mutta 1980-luvulta alkaneet kaivaukset osoittivat niillä olevan todellinen pohja. Gammel Lejren luona paljastui rautakauden ja viikinkiajan asutus, jossa oli vähintään 50–60 metrin pituisten hallien pylväänreikiä. Asutus ajoittuu noin vuosien 550 ja 1000 välille. Aseita löytyi vähän, joten paikka näyttää olleen pikemmin kauppa-, käsityö- ja uskonnollinen keskus kuin sotilastukikohta.
+AIEMPI KYSYMYS: Kuka oli Saxo Grammaticus?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. [[Saxo Grammaticus]] oli tanskalainen keskiajan historioitsija, joka kirjoitti Gesta Danorum -teoksen Tanskan kuninkaista. Teoksessa kerrotaan muun muassa [[Lejren]] Skjöldung-suvun kuninkaista. Tarkkoja elinvuosia en ole varma, mutta hän eli keskiajalla. Teos on tärkeä lähde Tanskan varhaishistoriasta. Latinaa se oli, ja sitä minä kyllä ymmärrän.
+KYSYMYS: Kerro lisää: Saxo Grammaticus
+
+### 293
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lejre (historia)
+Tietoruudun teksti: Lejre on pieni rautatiekaupunki Sjællandin luoteisosassa, mutta Tanskan historiassa sen nimi painaa paljon. Keskiaikaiset lähteet, kuten Saxo Grammaticuksen Gesta Danorum, kertovat Lejren Skjöldung-suvun kuninkaista, ja paikkaa on pidetty Beowulf-eepoksen kuninkaanhallin Heorotin esikuvana. Legendat ovat suurelta osin satua, mutta 1980-luvulta alkaneet kaivaukset osoittivat niillä olevan todellinen pohja. Gammel Lejren luona paljastui rautakauden ja viikinkiajan asutus, jossa oli vähintään 50–60 metrin pituisten hallien pylväänreikiä. Asutus ajoittuu noin vuosien 550 ja 1000 välille. Aseita löytyi vähän, joten paikka näyttää olleen pikemmin kauppa-, käsityö- ja uskonnollinen keskus kuin sotilastukikohta.
+AIEMPI KYSYMYS: Missä Lejre sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Lejre]] on pieni rautatiekaupunki [[Sjællandin]] luoteisosassa Tanskassa. Siitä huolimatta sen nimi painaa paljon Tanskan historiassa, sillä keskiaikaiset lähteet kertovat Lejren kuninkaista. Gammel Lejren luona on kaivauksissa paljastunut rautakauden ja viikinkiajan asutus. Pieni paikka, mutta iso nimi.
+KYSYMYS: Kerro lisää: Lejre
+
+### 294
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lejre (historia)
+Tietoruudun teksti: Lejre on pieni rautatiekaupunki Sjællandin luoteisosassa, mutta Tanskan historiassa sen nimi painaa paljon. Keskiaikaiset lähteet, kuten Saxo Grammaticuksen Gesta Danorum, kertovat Lejren Skjöldung-suvun kuninkaista, ja paikkaa on pidetty Beowulf-eepoksen kuninkaanhallin Heorotin esikuvana. Legendat ovat suurelta osin satua, mutta 1980-luvulta alkaneet kaivaukset osoittivat niillä olevan todellinen pohja. Gammel Lejren luona paljastui rautakauden ja viikinkiajan asutus, jossa oli vähintään 50–60 metrin pituisten hallien pylväänreikiä. Asutus ajoittuu noin vuosien 550 ja 1000 välille. Aseita löytyi vähän, joten paikka näyttää olleen pikemmin kauppa-, käsityö- ja uskonnollinen keskus kuin sotilastukikohta.
+AIEMPI KYSYMYS: Missä Lejre sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Lejre]] on pieni rautatiekaupunki [[Sjællandin]] luoteisosassa Tanskassa. Siitä huolimatta sen nimi painaa paljon Tanskan historiassa, sillä keskiaikaiset lähteet kertovat Lejren kuninkaista. Gammel Lejren luona on kaivauksissa paljastunut rautakauden ja viikinkiajan asutus. Pieni paikka, mutta iso nimi.
+KYSYMYS: Kerro lisää: Sjællandin
+
+### 295
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ringsted (historia)
+Tietoruudun teksti: Ringsted on kaupunki Sjællandin saaren keskiosassa, noin 60 kilometrin päässä Kööpenhaminasta. Keskiajalla siellä kokoontuivat Sjællandin maakäräjät, jotka siirtyivät vuonna 1584 Pyhän Bendtin kirkkoon ja vuonna 1805 Kööpenhaminaan. Pyhän Bendtin kirkko on kaupungin tunnetuin nähtävyys: se on entinen benediktiiniläisluostarin romaaninen kirkko, jossa on lukuisia keskiaikaisten Tanskan kuninkaallisten hautoja. Kaupungin vaakuna on vuodelta 1421, ja sen kolmen palvojahahmon tulkinnasta on väitelty. Kaupunki itse tulkitsee ne pyhäksi Knud Lavardiksi, kuningas Erik Plovpenningiksi ja Benedictus Nursialaiseksi. Nykyään Ringsted on myös vilkas rautatieristeys Sjællandin keskellä.
+AIEMPI KYSYMYS: Mitä Pyhän Bendtin kirkossa on, mikä tekee siitä erityisen Tanskan historiassa?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Pyhän Bendtin kirkko on entisen [[benediktiiniläisluostarin]] romaaninen kirkko, jossa on lukuisia keskiaikaisten Tanskan kuninkaallisten hautoja, ja juuri se tekee siitä erityisen Tanskan historiassa. Kirkko sijaitsee [[Ringstedin]] kaupungissa Sjællandin keskiosassa, ja se on kaupungin tunnetuin nähtävyys. Lisäksi Sjællandin [[maakäräjät]] siirtyivät kirkkoon vuonna 1584, joten rakennus liittyy myös alueen päätöksenteon historiaan. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: benediktiiniläisluostarin
+
+### 296
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ringsted (historia)
+Tietoruudun teksti: Ringsted on kaupunki Sjællandin saaren keskiosassa, noin 60 kilometrin päässä Kööpenhaminasta. Keskiajalla siellä kokoontuivat Sjællandin maakäräjät, jotka siirtyivät vuonna 1584 Pyhän Bendtin kirkkoon ja vuonna 1805 Kööpenhaminaan. Pyhän Bendtin kirkko on kaupungin tunnetuin nähtävyys: se on entinen benediktiiniläisluostarin romaaninen kirkko, jossa on lukuisia keskiaikaisten Tanskan kuninkaallisten hautoja. Kaupungin vaakuna on vuodelta 1421, ja sen kolmen palvojahahmon tulkinnasta on väitelty. Kaupunki itse tulkitsee ne pyhäksi Knud Lavardiksi, kuningas Erik Plovpenningiksi ja Benedictus Nursialaiseksi. Nykyään Ringsted on myös vilkas rautatieristeys Sjællandin keskellä.
+AIEMPI KYSYMYS: Mitä Pyhän Bendtin kirkossa on, mikä tekee siitä erityisen Tanskan historiassa?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Pyhän Bendtin kirkko on entisen [[benediktiiniläisluostarin]] romaaninen kirkko, jossa on lukuisia keskiaikaisten Tanskan kuninkaallisten hautoja, ja juuri se tekee siitä erityisen Tanskan historiassa. Kirkko sijaitsee [[Ringstedin]] kaupungissa Sjællandin keskiosassa, ja se on kaupungin tunnetuin nähtävyys. Lisäksi Sjællandin [[maakäräjät]] siirtyivät kirkkoon vuonna 1584, joten rakennus liittyy myös alueen päätöksenteon historiaan. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Ringstedin
+
+### 297
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ringsted (historia)
+Tietoruudun teksti: Ringsted on kaupunki Sjællandin saaren keskiosassa, noin 60 kilometrin päässä Kööpenhaminasta. Keskiajalla siellä kokoontuivat Sjællandin maakäräjät, jotka siirtyivät vuonna 1584 Pyhän Bendtin kirkkoon ja vuonna 1805 Kööpenhaminaan. Pyhän Bendtin kirkko on kaupungin tunnetuin nähtävyys: se on entinen benediktiiniläisluostarin romaaninen kirkko, jossa on lukuisia keskiaikaisten Tanskan kuninkaallisten hautoja. Kaupungin vaakuna on vuodelta 1421, ja sen kolmen palvojahahmon tulkinnasta on väitelty. Kaupunki itse tulkitsee ne pyhäksi Knud Lavardiksi, kuningas Erik Plovpenningiksi ja Benedictus Nursialaiseksi. Nykyään Ringsted on myös vilkas rautatieristeys Sjællandin keskellä.
+AIEMPI KYSYMYS: Mitä Pyhän Bendtin kirkossa on, mikä tekee siitä erityisen Tanskan historiassa?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Pyhän Bendtin kirkko on entisen [[benediktiiniläisluostarin]] romaaninen kirkko, jossa on lukuisia keskiaikaisten Tanskan kuninkaallisten hautoja, ja juuri se tekee siitä erityisen Tanskan historiassa. Kirkko sijaitsee [[Ringstedin]] kaupungissa Sjællandin keskiosassa, ja se on kaupungin tunnetuin nähtävyys. Lisäksi Sjællandin [[maakäräjät]] siirtyivät kirkkoon vuonna 1584, joten rakennus liittyy myös alueen päätöksenteon historiaan. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: maakäräjät
+
+### 298
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ringsted (historia)
+Tietoruudun teksti: Ringsted on kaupunki Sjællandin saaren keskiosassa, noin 60 kilometrin päässä Kööpenhaminasta. Keskiajalla siellä kokoontuivat Sjællandin maakäräjät, jotka siirtyivät vuonna 1584 Pyhän Bendtin kirkkoon ja vuonna 1805 Kööpenhaminaan. Pyhän Bendtin kirkko on kaupungin tunnetuin nähtävyys: se on entinen benediktiiniläisluostarin romaaninen kirkko, jossa on lukuisia keskiaikaisten Tanskan kuninkaallisten hautoja. Kaupungin vaakuna on vuodelta 1421, ja sen kolmen palvojahahmon tulkinnasta on väitelty. Kaupunki itse tulkitsee ne pyhäksi Knud Lavardiksi, kuningas Erik Plovpenningiksi ja Benedictus Nursialaiseksi. Nykyään Ringsted on myös vilkas rautatieristeys Sjællandin keskellä.
+AIEMPI KYSYMYS: Mitä maakäräjät (landsting) olivat, ja mitä niissä tehtiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Maakäräjät eli landsting olivat keskiajan maakunnallisia kansankokouksia, joissa käsiteltiin alueen yhteisiä asioita. Yleisesti tällaisissa käräjissä ratkaistiin riitoja ja tehtiin päätöksiä, mutta tarkempaa kokousten kulkua en ole varma. Sjællandin maakäräjät kokoontuivat [[Ringstedissä]], siirtyivät vuonna 1584 Pyhän Bendtin kirkkoon ja vuonna 1805 [[Kööpenhaminaan]]. Tuli taas selitettyä vähän pidempään kuin piti.
+KYSYMYS: Kerro lisää: Ringstedissä
+
+### 299
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ringsted (historia)
+Tietoruudun teksti: Ringsted on kaupunki Sjællandin saaren keskiosassa, noin 60 kilometrin päässä Kööpenhaminasta. Keskiajalla siellä kokoontuivat Sjællandin maakäräjät, jotka siirtyivät vuonna 1584 Pyhän Bendtin kirkkoon ja vuonna 1805 Kööpenhaminaan. Pyhän Bendtin kirkko on kaupungin tunnetuin nähtävyys: se on entinen benediktiiniläisluostarin romaaninen kirkko, jossa on lukuisia keskiaikaisten Tanskan kuninkaallisten hautoja. Kaupungin vaakuna on vuodelta 1421, ja sen kolmen palvojahahmon tulkinnasta on väitelty. Kaupunki itse tulkitsee ne pyhäksi Knud Lavardiksi, kuningas Erik Plovpenningiksi ja Benedictus Nursialaiseksi. Nykyään Ringsted on myös vilkas rautatieristeys Sjællandin keskellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nuuk — kohdekartta / Kohdekartta: Grönlannin kansallismuseo] 1965 Nunatta Katersugaasivia Allagaateqarfialu oli yksi Grönlannin ensimmäisistä museoista. Sen ensimmäinen näyttely avattiin 1965 herrnhutilaisessa lähetystalossa, ja 1970-luvulla se muutti vanhaan siirtomaasatamaan vuonna 1936 rakennettuun varastoon. Muutto ei johtunut tilan puutteesta yksin: kokoelma kasvoi, kun Tanskan kansallismuseo alkoi palauttaa grönlantilaisia esineitä takaisin saarelle. Museon tunnetuin näyttely ovat Qilakitsoqin muumiot. Kaksi metsästäjää, Hans ja Jokum Grønvold, löysivät 9. lokakuuta 1972 riekkojahdissa Uummannaqin lähellä kiviröykkiön, jonka alla oli useita ruumiita. He peittivät haudan uudelleen ja ilmoittivat viranomaisille. Kahdeksan vainajaa oli säilynyt lu…
+- [Grönlanti — maalehti / Musiikki: Grönlanniksi euroviisukarsintaan] 1979 — Rasmus Lyberth syntyi Maniitsoqissa 1951, kasvoi Nuukissa ja alkoi kaksitoistavuotiaana esiintyä kitaransa kanssa. Vuonna 1969 hän lähti Kööpenhaminaan ja levytti esikoisalbuminsa Erningaan 1974. Vuonna 1979 hän osallistui Tanskan euroviisukarsintaan kappaleella Faders bøn, Isän rukous, jonka hän lauloi grönlanniksi, ja sijoittui yhdenneksitoista seitsemästätoista. Wikipedian mukaan Lyberth muutti grönlantilaista musiikkia eniten esiintymällä pelkän viihdyttämisen vuoksi. Maan suurin levy-yhtiö ULO julkaisee sekä häntä, Suméa että hiphop-ryhmä Nuuk Possea.
+AIEMPI KYSYMYS: Mitä maakäräjät (landsting) olivat, ja mitä niissä tehtiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Maakäräjät eli landsting olivat keskiajan maakunnallisia kansankokouksia, joissa käsiteltiin alueen yhteisiä asioita. Yleisesti tällaisissa käräjissä ratkaistiin riitoja ja tehtiin päätöksiä, mutta tarkempaa kokousten kulkua en ole varma. Sjællandin maakäräjät kokoontuivat [[Ringstedissä]], siirtyivät vuonna 1584 Pyhän Bendtin kirkkoon ja vuonna 1805 [[Kööpenhaminaan]]. Tuli taas selitettyä vähän pidempään kuin piti.
+KYSYMYS: Kerro lisää: Kööpenhaminaan
+
+### 300
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ringsted (historia)
+Tietoruudun teksti: Ringsted on kaupunki Sjællandin saaren keskiosassa, noin 60 kilometrin päässä Kööpenhaminasta. Keskiajalla siellä kokoontuivat Sjællandin maakäräjät, jotka siirtyivät vuonna 1584 Pyhän Bendtin kirkkoon ja vuonna 1805 Kööpenhaminaan. Pyhän Bendtin kirkko on kaupungin tunnetuin nähtävyys: se on entinen benediktiiniläisluostarin romaaninen kirkko, jossa on lukuisia keskiaikaisten Tanskan kuninkaallisten hautoja. Kaupungin vaakuna on vuodelta 1421, ja sen kolmen palvojahahmon tulkinnasta on väitelty. Kaupunki itse tulkitsee ne pyhäksi Knud Lavardiksi, kuningas Erik Plovpenningiksi ja Benedictus Nursialaiseksi. Nykyään Ringsted on myös vilkas rautatieristeys Sjællandin keskellä.
+AIEMPI KYSYMYS: Mikä on benediktiiniläisluostari?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys tuo. Benediktiiniläisluostari on munkkiyhteisö, jonka elämä perustuu [[Benedictus Nursialaisen]] laatimaan sääntöön. Munkit asuivat yhdessä, rukoilivat päivän tietyin hetkin ja tekivät työtä, ja luostareissa harjoitettiin myös opintoja ja kirjojen jäljentämistä. Keskiajalla luostarit olivat tärkeitä oppineisuuden ja hoivan keskuksia eri puolilla [[Euroopan]] kristittyä maailmaa. Ja tän kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: Benedictus Nursialaisen
+
+### 301
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ringsted (historia)
+Tietoruudun teksti: Ringsted on kaupunki Sjællandin saaren keskiosassa, noin 60 kilometrin päässä Kööpenhaminasta. Keskiajalla siellä kokoontuivat Sjællandin maakäräjät, jotka siirtyivät vuonna 1584 Pyhän Bendtin kirkkoon ja vuonna 1805 Kööpenhaminaan. Pyhän Bendtin kirkko on kaupungin tunnetuin nähtävyys: se on entinen benediktiiniläisluostarin romaaninen kirkko, jossa on lukuisia keskiaikaisten Tanskan kuninkaallisten hautoja. Kaupungin vaakuna on vuodelta 1421, ja sen kolmen palvojahahmon tulkinnasta on väitelty. Kaupunki itse tulkitsee ne pyhäksi Knud Lavardiksi, kuningas Erik Plovpenningiksi ja Benedictus Nursialaiseksi. Nykyään Ringsted on myös vilkas rautatieristeys Sjællandin keskellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Barcelona — kohdekartta / Kohdekartta: Boquerian kauppahalli] 1840–1853 Boquerian kauppahalli on yksi Euroopan vanhimmista ja vilkkaimmista toreista, ja sen juuret ulottuvat todella kauas: jo vuonna 1217 kaupunginportin lähellä myytiin lihaa samalla paikalla. Vuosisatojen kuluessa myyjiä tuli lisää, ja 1400-luvulla torilla myytiin erityisesti sikoja. Nykyinen katettu halli alkoi rakentua vuonna 1840, ja se avattiin virallisesti vuonna 1853. Myöhemmin halliin rakennettiin oma kalaosasto, ja vuonna 1914 koko markkinan päälle nostettiin näyttävä metallikatto, joka suojaa myyjiä ja ostajia edelleen tänäkin päivänä. Torin nimi Boqueria juontuu luultavasti katalaanin sanasta 'boc', joka tarkoittaa vuohta – ennen vanhaan siellä nimittäin myytiin paljon vuohe…
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Mikä on benediktiiniläisluostari?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys tuo. Benediktiiniläisluostari on munkkiyhteisö, jonka elämä perustuu [[Benedictus Nursialaisen]] laatimaan sääntöön. Munkit asuivat yhdessä, rukoilivat päivän tietyin hetkin ja tekivät työtä, ja luostareissa harjoitettiin myös opintoja ja kirjojen jäljentämistä. Keskiajalla luostarit olivat tärkeitä oppineisuuden ja hoivan keskuksia eri puolilla [[Euroopan]] kristittyä maailmaa. Ja tän kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: Euroopan
+
+### 302
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ringsted (historia)
+Tietoruudun teksti: Ringsted on kaupunki Sjællandin saaren keskiosassa, noin 60 kilometrin päässä Kööpenhaminasta. Keskiajalla siellä kokoontuivat Sjællandin maakäräjät, jotka siirtyivät vuonna 1584 Pyhän Bendtin kirkkoon ja vuonna 1805 Kööpenhaminaan. Pyhän Bendtin kirkko on kaupungin tunnetuin nähtävyys: se on entinen benediktiiniläisluostarin romaaninen kirkko, jossa on lukuisia keskiaikaisten Tanskan kuninkaallisten hautoja. Kaupungin vaakuna on vuodelta 1421, ja sen kolmen palvojahahmon tulkinnasta on väitelty. Kaupunki itse tulkitsee ne pyhäksi Knud Lavardiksi, kuningas Erik Plovpenningiksi ja Benedictus Nursialaiseksi. Nykyään Ringsted on myös vilkas rautatieristeys Sjællandin keskellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Enemmän lintuja kuin Euroopassa ja Pohjois-Amerikassa] Kolumbia on yksi maailman seitsemästätoista megadiversistä maasta, ja sillä on maailman suurin lajitiheys pinta-alaa kohti sekä eniten kotoperäisiä lajeja. Noin kymmenen prosenttia maapallon lajeista elää siellä. Lintulajeja on yli 1 900 — enemmän kuin Euroopassa ja Pohjois-Amerikassa yhteensä ja 18 prosenttia koko maailman lintulajeista. Maa on ensimmäinen myös orkidealajien ja kotoperäisten perhosten määrässä, ja siellä on 32 maabiomia ja 314 ekosysteemityyppiä.
+AIEMPI KYSYMYS: Mitä romaaninen kirkko tarkoittaa ja miten sen tunnistaa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Romaaninen tyyli oli keskiajan rakennustaide, joka levisi [[Euroopassa]] noin 1000-luvulta 1200-luvulle. Romaanisen kirkon tunnistaa tavallisesti pyöreistä kaarista, paksuista kiviseinistä ja pienistä ikkunoista, ja sisätilat ovat usein hämäriä ja vakavia. Tyyli väistyi myöhemmin goottilaisen tieltä, jossa kaaret ovat suippoja ja ikkunat suurempia. [[Pyhän Bendtin kirkon]] kaltaiset rakennukset edustavat tätä aiempaa tyyliä.
+
+Minä pidän pyöreistä kaarista, koska ne muistuttavat pesäkoloa. Siivekkäälle sellainen on aika kodikas.
+KYSYMYS: Kerro lisää: Euroopassa
+
+### 303
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ringsted (historia)
+Tietoruudun teksti: Ringsted on kaupunki Sjællandin saaren keskiosassa, noin 60 kilometrin päässä Kööpenhaminasta. Keskiajalla siellä kokoontuivat Sjællandin maakäräjät, jotka siirtyivät vuonna 1584 Pyhän Bendtin kirkkoon ja vuonna 1805 Kööpenhaminaan. Pyhän Bendtin kirkko on kaupungin tunnetuin nähtävyys: se on entinen benediktiiniläisluostarin romaaninen kirkko, jossa on lukuisia keskiaikaisten Tanskan kuninkaallisten hautoja. Kaupungin vaakuna on vuodelta 1421, ja sen kolmen palvojahahmon tulkinnasta on väitelty. Kaupunki itse tulkitsee ne pyhäksi Knud Lavardiksi, kuningas Erik Plovpenningiksi ja Benedictus Nursialaiseksi. Nykyään Ringsted on myös vilkas rautatieristeys Sjællandin keskellä.
+AIEMPI KYSYMYS: Mitä romaaninen kirkko tarkoittaa ja miten sen tunnistaa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Romaaninen tyyli oli keskiajan rakennustaide, joka levisi [[Euroopassa]] noin 1000-luvulta 1200-luvulle. Romaanisen kirkon tunnistaa tavallisesti pyöreistä kaarista, paksuista kiviseinistä ja pienistä ikkunoista, ja sisätilat ovat usein hämäriä ja vakavia. Tyyli väistyi myöhemmin goottilaisen tieltä, jossa kaaret ovat suippoja ja ikkunat suurempia. [[Pyhän Bendtin kirkon]] kaltaiset rakennukset edustavat tätä aiempaa tyyliä.
+
+Minä pidän pyöreistä kaarista, koska ne muistuttavat pesäkoloa. Siivekkäälle sellainen on aika kodikas.
+KYSYMYS: Kerro lisää: Pyhän Bendtin kirkon
+
+### 304
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ringsted (historia)
+Tietoruudun teksti: Ringsted on kaupunki Sjællandin saaren keskiosassa, noin 60 kilometrin päässä Kööpenhaminasta. Keskiajalla siellä kokoontuivat Sjællandin maakäräjät, jotka siirtyivät vuonna 1584 Pyhän Bendtin kirkkoon ja vuonna 1805 Kööpenhaminaan. Pyhän Bendtin kirkko on kaupungin tunnetuin nähtävyys: se on entinen benediktiiniläisluostarin romaaninen kirkko, jossa on lukuisia keskiaikaisten Tanskan kuninkaallisten hautoja. Kaupungin vaakuna on vuodelta 1421, ja sen kolmen palvojahahmon tulkinnasta on väitelty. Kaupunki itse tulkitsee ne pyhäksi Knud Lavardiksi, kuningas Erik Plovpenningiksi ja Benedictus Nursialaiseksi. Nykyään Ringsted on myös vilkas rautatieristeys Sjællandin keskellä.
+AIEMPI KYSYMYS: Kuka oli Benedictus Nursialainen?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Benedictus Nursialainen oli italialainen munkki, joka eli myöhäisantiikin lopulla ja jonka nimeä kantaa [[benediktiiniläisten]] luostarisääntö. Hänen sääntönsä ohjasi munkkien yhteiselämää, rukousta ja työtä, ja siitä tuli länsimaisen luostarilaitoksen tärkeimpiä perustuksia. Hänet yhdistetään [[Italiassa]] sijaitsevaan Monte Cassinon luostariin, mutta tarkkoja vuosilukuja en ole varma. Ringstedin vaakunassa hänen arvellaan olevan yksi kolmesta palvojahahmosta, ja se kertoo luostarin vanhasta merkityksestä kaupungille. Kyl se oli sit pitkä matka Italiasta Tanskaan.
+KYSYMYS: Kerro lisää: benediktiiniläisten
+
+### 305
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ringsted (historia)
+Tietoruudun teksti: Ringsted on kaupunki Sjællandin saaren keskiosassa, noin 60 kilometrin päässä Kööpenhaminasta. Keskiajalla siellä kokoontuivat Sjællandin maakäräjät, jotka siirtyivät vuonna 1584 Pyhän Bendtin kirkkoon ja vuonna 1805 Kööpenhaminaan. Pyhän Bendtin kirkko on kaupungin tunnetuin nähtävyys: se on entinen benediktiiniläisluostarin romaaninen kirkko, jossa on lukuisia keskiaikaisten Tanskan kuninkaallisten hautoja. Kaupungin vaakuna on vuodelta 1421, ja sen kolmen palvojahahmon tulkinnasta on väitelty. Kaupunki itse tulkitsee ne pyhäksi Knud Lavardiksi, kuningas Erik Plovpenningiksi ja Benedictus Nursialaiseksi. Nykyään Ringsted on myös vilkas rautatieristeys Sjællandin keskellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Musiikki: Ooppera keksittiin Italiassa] Ooppera syntyi Firenzessä 1600-luvun taitteessa, kun joukko oppineita yritti herättää henkiin antiikin Kreikan näytelmät — ja loi vahingossa kokonaan uuden taiteenlajin. Milanon La Scala on sen kuuluisin näyttämö: kuusi kerrosta aitioita kultauksineen ja yleisö, joka ei anna virheitä anteeksi. Sanat, joilla musiikista puhutaan kaikkialla maailmassa, ovat italiaa: piano tarkoittaa hiljaa, forte lujaa ja allegro iloisesti.
+AIEMPI KYSYMYS: Kuka oli Benedictus Nursialainen?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Benedictus Nursialainen oli italialainen munkki, joka eli myöhäisantiikin lopulla ja jonka nimeä kantaa [[benediktiiniläisten]] luostarisääntö. Hänen sääntönsä ohjasi munkkien yhteiselämää, rukousta ja työtä, ja siitä tuli länsimaisen luostarilaitoksen tärkeimpiä perustuksia. Hänet yhdistetään [[Italiassa]] sijaitsevaan Monte Cassinon luostariin, mutta tarkkoja vuosilukuja en ole varma. Ringstedin vaakunassa hänen arvellaan olevan yksi kolmesta palvojahahmosta, ja se kertoo luostarin vanhasta merkityksestä kaupungille. Kyl se oli sit pitkä matka Italiasta Tanskaan.
+KYSYMYS: Kerro lisää: Italiassa
+
+### 306
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ladbyn laivahauta (historia)
+Tietoruudun teksti: Ladbyn laivahauta on Fynin koillisosassa, lähellä Kertemindeä. Se on ainoa Tanskasta löydetty viikinkiajan laivahauta, koska vastaava Hedebyn kammiohauta on nykyään Saksassa. Haudan ajoitetaan 900-luvun alkuun, ja ajoitus perustuu koiran valjaiden kullattuun pronssilenkkiin. Hauta paljastui noin 28. helmikuuta 1935, kun apteekkari ja harrastelija-arkeologi Poul Helweg Mikkelsen löysi sen. Kaivauksissa esiin tuli runsaasti hautalahjoja, sekä esineitä että eläimiä. Hauta oli kuitenkin pahoin vahingoittunut, ja vainajasta löytyi vain muutama pieni luu. Nykyään laiva on säilytetty löytöpaikallaan, jossa toimii viikinkimuseo.
+AIEMPI KYSYMYS: Miksi Ladbyn laivahaudasta löytyi vain vähän vainajan luita?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on vähän hankala. Ladbyn laivahauta oli pahoin vahingoittunut, ja vainajasta löytyi vain muutama pieni luu. Tarkkaa syytä en ole varma, mutta luut säilyvät maassa huonosti ja vanhat haudat ovat usein joutuneet häirityiksi vuosisatojen aikana. Hauta paljastui noin 28. helmikuuta 1935, kun apteekkari ja harrastelija-arkeologi Poul Helweg Mikkelsen löysi sen [[Fynin]] koillisosassa lähellä [[Kertemindeä]]. Laiva ja hautalahjat kertovat silti paljon, vaikka vainaja itse on lähes kadonnut.
+KYSYMYS: Kerro lisää: Fynin
+
+### 307
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ladbyn laivahauta (historia)
+Tietoruudun teksti: Ladbyn laivahauta on Fynin koillisosassa, lähellä Kertemindeä. Se on ainoa Tanskasta löydetty viikinkiajan laivahauta, koska vastaava Hedebyn kammiohauta on nykyään Saksassa. Haudan ajoitetaan 900-luvun alkuun, ja ajoitus perustuu koiran valjaiden kullattuun pronssilenkkiin. Hauta paljastui noin 28. helmikuuta 1935, kun apteekkari ja harrastelija-arkeologi Poul Helweg Mikkelsen löysi sen. Kaivauksissa esiin tuli runsaasti hautalahjoja, sekä esineitä että eläimiä. Hauta oli kuitenkin pahoin vahingoittunut, ja vainajasta löytyi vain muutama pieni luu. Nykyään laiva on säilytetty löytöpaikallaan, jossa toimii viikinkimuseo.
+AIEMPI KYSYMYS: Miksi Ladbyn laivahaudasta löytyi vain vähän vainajan luita?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on vähän hankala. Ladbyn laivahauta oli pahoin vahingoittunut, ja vainajasta löytyi vain muutama pieni luu. Tarkkaa syytä en ole varma, mutta luut säilyvät maassa huonosti ja vanhat haudat ovat usein joutuneet häirityiksi vuosisatojen aikana. Hauta paljastui noin 28. helmikuuta 1935, kun apteekkari ja harrastelija-arkeologi Poul Helweg Mikkelsen löysi sen [[Fynin]] koillisosassa lähellä [[Kertemindeä]]. Laiva ja hautalahjat kertovat silti paljon, vaikka vainaja itse on lähes kadonnut.
+KYSYMYS: Kerro lisää: Kertemindeä
+
+### 308
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ladbyn laivahauta (historia)
+Tietoruudun teksti: Ladbyn laivahauta on Fynin koillisosassa, lähellä Kertemindeä. Se on ainoa Tanskasta löydetty viikinkiajan laivahauta, koska vastaava Hedebyn kammiohauta on nykyään Saksassa. Haudan ajoitetaan 900-luvun alkuun, ja ajoitus perustuu koiran valjaiden kullattuun pronssilenkkiin. Hauta paljastui noin 28. helmikuuta 1935, kun apteekkari ja harrastelija-arkeologi Poul Helweg Mikkelsen löysi sen. Kaivauksissa esiin tuli runsaasti hautalahjoja, sekä esineitä että eläimiä. Hauta oli kuitenkin pahoin vahingoittunut, ja vainajasta löytyi vain muutama pieni luu. Nykyään laiva on säilytetty löytöpaikallaan, jossa toimii viikinkimuseo.
+AIEMPI KYSYMYS: Millaisia hautalahjoja viikinkipäällikön mukana oli, ja mitä ne kertovat hänestä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Haudasta löytyi runsaasti hautalahjoja, sekä esineitä että eläimiä, ja eläimiin kuului muun muassa koira, jonka valjaiden kullattu pronssilenkki auttoi ajoittamaan haudan 900-luvun alkuun. Laivan kokoon nähden ja lahjojen runsaudesta päätellen vainaja oli vauras ja arvostettu henkilö, luultavasti päällikkö, mutta hänen nimensä tai asemansa tarkemmin en tiedä. Hautalahjat kertovat myös siitä, että viikingit ajattelivat vainajan tarvitsevan omaisuutta ja seuraa matkallaan. Nykyään [[Ladbyn]] laivahauta on säilytetty löytöpaikallaan, jossa toimii [[viikinkimuseo]]. Onpas siit ollu pitkä aika.
+KYSYMYS: Kerro lisää: Ladbyn
+
+### 309
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ladbyn laivahauta (historia)
+Tietoruudun teksti: Ladbyn laivahauta on Fynin koillisosassa, lähellä Kertemindeä. Se on ainoa Tanskasta löydetty viikinkiajan laivahauta, koska vastaava Hedebyn kammiohauta on nykyään Saksassa. Haudan ajoitetaan 900-luvun alkuun, ja ajoitus perustuu koiran valjaiden kullattuun pronssilenkkiin. Hauta paljastui noin 28. helmikuuta 1935, kun apteekkari ja harrastelija-arkeologi Poul Helweg Mikkelsen löysi sen. Kaivauksissa esiin tuli runsaasti hautalahjoja, sekä esineitä että eläimiä. Hauta oli kuitenkin pahoin vahingoittunut, ja vainajasta löytyi vain muutama pieni luu. Nykyään laiva on säilytetty löytöpaikallaan, jossa toimii viikinkimuseo.
+AIEMPI KYSYMYS: Millaisia hautalahjoja viikinkipäällikön mukana oli, ja mitä ne kertovat hänestä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Haudasta löytyi runsaasti hautalahjoja, sekä esineitä että eläimiä, ja eläimiin kuului muun muassa koira, jonka valjaiden kullattu pronssilenkki auttoi ajoittamaan haudan 900-luvun alkuun. Laivan kokoon nähden ja lahjojen runsaudesta päätellen vainaja oli vauras ja arvostettu henkilö, luultavasti päällikkö, mutta hänen nimensä tai asemansa tarkemmin en tiedä. Hautalahjat kertovat myös siitä, että viikingit ajattelivat vainajan tarvitsevan omaisuutta ja seuraa matkallaan. Nykyään [[Ladbyn]] laivahauta on säilytetty löytöpaikallaan, jossa toimii [[viikinkimuseo]]. Onpas siit ollu pitkä aika.
+KYSYMYS: Kerro lisää: viikinkimuseo
+
+### 310
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ladbyn laivahauta (historia)
+Tietoruudun teksti: Ladbyn laivahauta on Fynin koillisosassa, lähellä Kertemindeä. Se on ainoa Tanskasta löydetty viikinkiajan laivahauta, koska vastaava Hedebyn kammiohauta on nykyään Saksassa. Haudan ajoitetaan 900-luvun alkuun, ja ajoitus perustuu koiran valjaiden kullattuun pronssilenkkiin. Hauta paljastui noin 28. helmikuuta 1935, kun apteekkari ja harrastelija-arkeologi Poul Helweg Mikkelsen löysi sen. Kaivauksissa esiin tuli runsaasti hautalahjoja, sekä esineitä että eläimiä. Hauta oli kuitenkin pahoin vahingoittunut, ja vainajasta löytyi vain muutama pieni luu. Nykyään laiva on säilytetty löytöpaikallaan, jossa toimii viikinkimuseo.
+AIEMPI KYSYMYS: Mitä viikingit uskoivat kuoleman jälkeisestä elämästä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Viikingit uskoivat, että vainaja jatkoi olemassaoloaan jossakin kuoleman jälkeen, ja siksi hautaan laitettiin tavaroita ja joskus eläimiä. Myytit puhuvat useista paikoista, joihin vainajat saattoivat päätyä, kuten [[Valhallasta]], mutta uskomukset vaihtelivat alueittain ja ajasta toiseen, eikä niistä ole yhtä yhtenäistä oppia. Suuri osa tiedosta tulee myöhemmistä kirjallisista lähteistä ja arkeologisista löydöistä, joten kaikkeen ei voi olla varma. Hautatavatkin vaihtelivat, ja [[laivahauta]] oli vain yksi niistä.
+KYSYMYS: Kerro lisää: Valhallasta
+
+### 311
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ladbyn laivahauta (historia)
+Tietoruudun teksti: Ladbyn laivahauta on Fynin koillisosassa, lähellä Kertemindeä. Se on ainoa Tanskasta löydetty viikinkiajan laivahauta, koska vastaava Hedebyn kammiohauta on nykyään Saksassa. Haudan ajoitetaan 900-luvun alkuun, ja ajoitus perustuu koiran valjaiden kullattuun pronssilenkkiin. Hauta paljastui noin 28. helmikuuta 1935, kun apteekkari ja harrastelija-arkeologi Poul Helweg Mikkelsen löysi sen. Kaivauksissa esiin tuli runsaasti hautalahjoja, sekä esineitä että eläimiä. Hauta oli kuitenkin pahoin vahingoittunut, ja vainajasta löytyi vain muutama pieni luu. Nykyään laiva on säilytetty löytöpaikallaan, jossa toimii viikinkimuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+AIEMPI KYSYMYS: Mitä viikingit uskoivat kuoleman jälkeisestä elämästä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Viikingit uskoivat, että vainaja jatkoi olemassaoloaan jossakin kuoleman jälkeen, ja siksi hautaan laitettiin tavaroita ja joskus eläimiä. Myytit puhuvat useista paikoista, joihin vainajat saattoivat päätyä, kuten [[Valhallasta]], mutta uskomukset vaihtelivat alueittain ja ajasta toiseen, eikä niistä ole yhtä yhtenäistä oppia. Suuri osa tiedosta tulee myöhemmistä kirjallisista lähteistä ja arkeologisista löydöistä, joten kaikkeen ei voi olla varma. Hautatavatkin vaihtelivat, ja [[laivahauta]] oli vain yksi niistä.
+KYSYMYS: Kerro lisää: laivahauta
+
+### 312
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ladbyn laivahauta (historia)
+Tietoruudun teksti: Ladbyn laivahauta on Fynin koillisosassa, lähellä Kertemindeä. Se on ainoa Tanskasta löydetty viikinkiajan laivahauta, koska vastaava Hedebyn kammiohauta on nykyään Saksassa. Haudan ajoitetaan 900-luvun alkuun, ja ajoitus perustuu koiran valjaiden kullattuun pronssilenkkiin. Hauta paljastui noin 28. helmikuuta 1935, kun apteekkari ja harrastelija-arkeologi Poul Helweg Mikkelsen löysi sen. Kaivauksissa esiin tuli runsaasti hautalahjoja, sekä esineitä että eläimiä. Hauta oli kuitenkin pahoin vahingoittunut, ja vainajasta löytyi vain muutama pieni luu. Nykyään laiva on säilytetty löytöpaikallaan, jossa toimii viikinkimuseo.
+AIEMPI KYSYMYS: Miten viikinkiaikaiset laivat rakennettiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Viikinkilaivat rakennettiin tammesta tai muusta sopivasta puusta, ja laudat kiinnitettiin runkoon limittäin. Tätä rakennustapaa kutsutaan [[laudoitukseksi]]; se teki aluksesta kevyen ja joustavan, ja siksi laivat kestivät aallokkoa ja pääsivät matalaankin veteen. Laivoissa oli purje sekä airot, ja ne soveltuivat sekä merelle että jokiin. Tarkkoja rakennusmenetelmiä ja yksityiskohtia kannattaa tarkistaa museoista, joissa on säilyneitä aluksia, esimerkiksi [[Roskilden]] viikinkilaivamuseosta.
+
+Minä en rakenna enkä purjehdi, mutta lennän kyllä nopeammin. Ei silti ole vertailtu.
+KYSYMYS: Kerro lisää: laudoitukseksi
+
+### 313
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ladbyn laivahauta (historia)
+Tietoruudun teksti: Ladbyn laivahauta on Fynin koillisosassa, lähellä Kertemindeä. Se on ainoa Tanskasta löydetty viikinkiajan laivahauta, koska vastaava Hedebyn kammiohauta on nykyään Saksassa. Haudan ajoitetaan 900-luvun alkuun, ja ajoitus perustuu koiran valjaiden kullattuun pronssilenkkiin. Hauta paljastui noin 28. helmikuuta 1935, kun apteekkari ja harrastelija-arkeologi Poul Helweg Mikkelsen löysi sen. Kaivauksissa esiin tuli runsaasti hautalahjoja, sekä esineitä että eläimiä. Hauta oli kuitenkin pahoin vahingoittunut, ja vainajasta löytyi vain muutama pieni luu. Nykyään laiva on säilytetty löytöpaikallaan, jossa toimii viikinkimuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historian hetki: Roskildenvuono noin 1040 — kuusikymmentä airoa] n. 1040 — Ensimmäinen ääni on airon kolahdus hankaimeen, ja se toistuu kuusikymmentä kertaa yhtä aikaa. Nuori soutaja lähtee ensimmäiselle pitkälle matkalleen eikä tiedä, palaako miehistö kaupankävijöinä, sotureina vai ei lainkaan. Vuono on matala ja mutkitteleva, ja sen takana on koko maailma: Atlantti lännessä, idässä jokireitit Mustallemerelle. Miehet työntävät keulaa irti rantamudasta, kilvet on ripustettu laidalle matkan ajaksi, purje on raidallista villaa ja päähineet huopaa ja nahkaa — sarvikypärä on 1800-luvun oopperalavojen keksintö eikä esiinny yhdessäkään viikinkiajan löydössä. Juuri tällaisia laivoja tunnetaan tarkasti, koska viisi niistä upotettiin 1000-luvulla tähän samaan vuo…
+AIEMPI KYSYMYS: Miten viikinkiaikaiset laivat rakennettiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Viikinkilaivat rakennettiin tammesta tai muusta sopivasta puusta, ja laudat kiinnitettiin runkoon limittäin. Tätä rakennustapaa kutsutaan [[laudoitukseksi]]; se teki aluksesta kevyen ja joustavan, ja siksi laivat kestivät aallokkoa ja pääsivät matalaankin veteen. Laivoissa oli purje sekä airot, ja ne soveltuivat sekä merelle että jokiin. Tarkkoja rakennusmenetelmiä ja yksityiskohtia kannattaa tarkistaa museoista, joissa on säilyneitä aluksia, esimerkiksi [[Roskilden]] viikinkilaivamuseosta.
+
+Minä en rakenna enkä purjehdi, mutta lennän kyllä nopeammin. Ei silti ole vertailtu.
+KYSYMYS: Kerro lisää: Roskilden
+
+### 314
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ladbyn laivahauta (historia)
+Tietoruudun teksti: Ladbyn laivahauta on Fynin koillisosassa, lähellä Kertemindeä. Se on ainoa Tanskasta löydetty viikinkiajan laivahauta, koska vastaava Hedebyn kammiohauta on nykyään Saksassa. Haudan ajoitetaan 900-luvun alkuun, ja ajoitus perustuu koiran valjaiden kullattuun pronssilenkkiin. Hauta paljastui noin 28. helmikuuta 1935, kun apteekkari ja harrastelija-arkeologi Poul Helweg Mikkelsen löysi sen. Kaivauksissa esiin tuli runsaasti hautalahjoja, sekä esineitä että eläimiä. Hauta oli kuitenkin pahoin vahingoittunut, ja vainajasta löytyi vain muutama pieni luu. Nykyään laiva on säilytetty löytöpaikallaan, jossa toimii viikinkimuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Enemmän lintuja kuin Euroopassa ja Pohjois-Amerikassa] Kolumbia on yksi maailman seitsemästätoista megadiversistä maasta, ja sillä on maailman suurin lajitiheys pinta-alaa kohti sekä eniten kotoperäisiä lajeja. Noin kymmenen prosenttia maapallon lajeista elää siellä. Lintulajeja on yli 1 900 — enemmän kuin Euroopassa ja Pohjois-Amerikassa yhteensä ja 18 prosenttia koko maailman lintulajeista. Maa on ensimmäinen myös orkidealajien ja kotoperäisten perhosten määrässä, ja siellä on 32 maabiomia ja 314 ekosysteemityyppiä.
+AIEMPI KYSYMYS: Mitä tarkoittaa viikinkiaika ja keitä viikingit olivat?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: viikinkiaika on pohjoismaiden historiassa kausi, joka ajoitetaan noin 800-luvulta 1000-luvun puoliväliin, mutta rajat vaihtelevat lähteiden mukaan. Viikingit olivat pohjoismaisia merenkulkijoita, jotka kävivät kauppaa, tekivät ryöstöretkiä ja asettuivat asumaan monille alueille [[Euroopassa]]. Heidän yhteiskuntansa perustui maanviljelyyn, kauppaan ja merenkulkuun, ja heillä oli oma uskontonsa ja kulttuurinsa. Tanskalaiset viikingit liikkuivat erityisesti [[Englannissa]] ja Manner-Euroopan rannikoilla. Tämän verran minä muistan.
+KYSYMYS: Kerro lisää: Euroopassa
+
+### 315
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ladbyn laivahauta (historia)
+Tietoruudun teksti: Ladbyn laivahauta on Fynin koillisosassa, lähellä Kertemindeä. Se on ainoa Tanskasta löydetty viikinkiajan laivahauta, koska vastaava Hedebyn kammiohauta on nykyään Saksassa. Haudan ajoitetaan 900-luvun alkuun, ja ajoitus perustuu koiran valjaiden kullattuun pronssilenkkiin. Hauta paljastui noin 28. helmikuuta 1935, kun apteekkari ja harrastelija-arkeologi Poul Helweg Mikkelsen löysi sen. Kaivauksissa esiin tuli runsaasti hautalahjoja, sekä esineitä että eläimiä. Hauta oli kuitenkin pahoin vahingoittunut, ja vainajasta löytyi vain muutama pieni luu. Nykyään laiva on säilytetty löytöpaikallaan, jossa toimii viikinkimuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kohdekartta / Kohdekartta: Grace Cathedral] 1849–1964 Seurakunta perustettiin 1849 kultaryntäyksen vuosina. Sen kolmas kirkko rakennettiin California Streetin ja Stockton Streetin kulmaan ja vihittiin 3. toukokuuta 1868 — se on se Grace Church, jonka isoisä olisi voinut nähdä. Jäsenistöön kuului kaupungin varakkainta väkeä, muiden muassa rautatiemies Leland Stanford ja pankkiiri William Henry Crocker. Vuoden 1906 järistystä seurannut palo tuhosi kirkon, ja seurakunta sai väliaikaisen tilan 1907. Crockerin suku lahjoitti hiippakunnalle oman raunioituneen tonttinsa Nob Hillin laelta, ja peruskivi laskettiin 1910. Piirustukset teki englantilainen goottilaisen tyylin mestari George Frederick Bodley, joka kuoli 1907, ja työn saattoi loppu…
+- [Sydney — kohdekartta / Kohdekartta: Pyhän Andreaksen katedraali] 1837–1868 Macquarie suunnitteli Greenwayn kanssa katedraalia, joka olisi ollut 61 metriä joka suuntaan ja seissyt suurella aukiolla muiden julkisten talojen keskellä. Peruskivi laskettiin juhlallisesti 31. elokuuta 1819, mutta työ jäi perustuksiin: suunnitelma hylättiin ja paikkaa siirrettiin, jotta George Street saatiin kulkemaan suorana. Piispa William Grant Broughton laski uuden peruskiven 1837 James Humen paljon vaatimattomampien piirustusten mukaan, ja työ pysähtyi 1842 kuivuuteen ja lamaan, kun muurit olivat noin viiden metrin korkuiset. Samana vuonna 1842 Broughtonin luo saapui Edmund Blacket mukanaan Canterburyn arkkipiispan suosituskirje. Hänestä tuli siirtomaan arkkitehti 1849–185…
+AIEMPI KYSYMYS: Mitä tarkoittaa viikinkiaika ja keitä viikingit olivat?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: viikinkiaika on pohjoismaiden historiassa kausi, joka ajoitetaan noin 800-luvulta 1000-luvun puoliväliin, mutta rajat vaihtelevat lähteiden mukaan. Viikingit olivat pohjoismaisia merenkulkijoita, jotka kävivät kauppaa, tekivät ryöstöretkiä ja asettuivat asumaan monille alueille [[Euroopassa]]. Heidän yhteiskuntansa perustui maanviljelyyn, kauppaan ja merenkulkuun, ja heillä oli oma uskontonsa ja kulttuurinsa. Tanskalaiset viikingit liikkuivat erityisesti [[Englannissa]] ja Manner-Euroopan rannikoilla. Tämän verran minä muistan.
+KYSYMYS: Kerro lisää: Englannissa
+
+### 316
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Christiansfeld (historia)
+Tietoruudun teksti: Christiansfeld on kaupunki Etelä-Jyllannissa, jonka herrnhutilaiset perustivat vuonna 1773. Se sai nimensä Tanskan kuningas Kristian VII:n mukaan, ja rakentajien houkuttelemiseksi kuningas lupasi kymmenen vuoden verovapauden sekä maksoi kymmenesosan uusien talojen kustannuksista. Suurin osa kaupungista rakennettiin vuosina 1773–1800 tiukan asemakaavan mukaan Kirkkotorin ympärille: talot ovat yksi- tai kaksikerroksisia, keltaisesta tiilestä tehtyjä ja punakattoisia, ja monet niistä olivat yhteisasuntoja leskille sekä naimattomille naisille ja miehille. Kaupunki liitettiin Preussille vuonna 1864 ja palasi Tanskaan vasta vuonna 1920. Nykyään se on Unescon maailmanperintökohde (2015), parhaiten säilynyt esimerkki herrnhutilaisten kaupunkisuunnittelusta, ja tunnettu hunajakakuistaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan tuomiokirkko] 1861 Tromssan tuomiokirkko on kokonaan puusta rakennettu keltainen kirkko, joka valmistui vuonna 1861 arkkitehti Christian Heinrich Groschin piirustusten mukaan. Se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu puusta - ja sen sisään mahtuu yli 600 kirkkovierasta! Paikalla on ollut kirkko jo satoja vuosia ennen tätäkin: kuningas Håkon IV rakennutti tänne kappelin jo vuonna 1252, ja sen jälkeen paikalla on ollut ainakin kaksi muuta kirkkoa ennen nykyistä rakennusta. Kellotorni valmistui vuotta myöhemmin, 1862, ja kirkkoa koristeltiin lisää vielä 1880-luvulla. Isoisän vieraillessa Tromssassa 1873 kirkko oli vasta reilut kymmenen vuotta vanha - täysin uusi nähtävyys pienessä pu…
+AIEMPI KYSYMYS: Miksi Christiansfeld on Unescon maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Christiansfeld]] on Unescon maailmanperintökohde, koska se on parhaiten säilynyt esimerkki [[herrnhutilaisten]] kaupunkisuunnittelusta. Kaupungin perustivat herrnhutilaiset vuonna 1773, ja suurin osa siitä rakennettiin vuosina 1773–1800 tiukan asemakaavan mukaan Kirkkotorin ympärille. Talot ovat yksi- tai kaksikerroksisia, keltaisesta tiilestä tehtyjä ja punakattoisia, ja monet niistä olivat yhteisasuntoja leskille sekä naimattomille naisille ja miehille. Kohde sai maailmanperintöaseman vuonna 2015. Kyl tää kaupunki on kauniin järjestyksessä.
+KYSYMYS: Kerro lisää: Christiansfeld
+
+### 317
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Christiansfeld (historia)
+Tietoruudun teksti: Christiansfeld on kaupunki Etelä-Jyllannissa, jonka herrnhutilaiset perustivat vuonna 1773. Se sai nimensä Tanskan kuningas Kristian VII:n mukaan, ja rakentajien houkuttelemiseksi kuningas lupasi kymmenen vuoden verovapauden sekä maksoi kymmenesosan uusien talojen kustannuksista. Suurin osa kaupungista rakennettiin vuosina 1773–1800 tiukan asemakaavan mukaan Kirkkotorin ympärille: talot ovat yksi- tai kaksikerroksisia, keltaisesta tiilestä tehtyjä ja punakattoisia, ja monet niistä olivat yhteisasuntoja leskille sekä naimattomille naisille ja miehille. Kaupunki liitettiin Preussille vuonna 1864 ja palasi Tanskaan vasta vuonna 1920. Nykyään se on Unescon maailmanperintökohde (2015), parhaiten säilynyt esimerkki herrnhutilaisten kaupunkisuunnittelusta, ja tunnettu hunajakakuistaan.
+AIEMPI KYSYMYS: Miksi Christiansfeld on Unescon maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Christiansfeld]] on Unescon maailmanperintökohde, koska se on parhaiten säilynyt esimerkki [[herrnhutilaisten]] kaupunkisuunnittelusta. Kaupungin perustivat herrnhutilaiset vuonna 1773, ja suurin osa siitä rakennettiin vuosina 1773–1800 tiukan asemakaavan mukaan Kirkkotorin ympärille. Talot ovat yksi- tai kaksikerroksisia, keltaisesta tiilestä tehtyjä ja punakattoisia, ja monet niistä olivat yhteisasuntoja leskille sekä naimattomille naisille ja miehille. Kohde sai maailmanperintöaseman vuonna 2015. Kyl tää kaupunki on kauniin järjestyksessä.
+KYSYMYS: Kerro lisää: herrnhutilaisten
+
+### 318
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Christiansfeld (historia)
+Tietoruudun teksti: Christiansfeld on kaupunki Etelä-Jyllannissa, jonka herrnhutilaiset perustivat vuonna 1773. Se sai nimensä Tanskan kuningas Kristian VII:n mukaan, ja rakentajien houkuttelemiseksi kuningas lupasi kymmenen vuoden verovapauden sekä maksoi kymmenesosan uusien talojen kustannuksista. Suurin osa kaupungista rakennettiin vuosina 1773–1800 tiukan asemakaavan mukaan Kirkkotorin ympärille: talot ovat yksi- tai kaksikerroksisia, keltaisesta tiilestä tehtyjä ja punakattoisia, ja monet niistä olivat yhteisasuntoja leskille sekä naimattomille naisille ja miehille. Kaupunki liitettiin Preussille vuonna 1864 ja palasi Tanskaan vasta vuonna 1920. Nykyään se on Unescon maailmanperintökohde (2015), parhaiten säilynyt esimerkki herrnhutilaisten kaupunkisuunnittelusta, ja tunnettu hunajakakuistaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nuuk — kaupunkilehti / Nuuk: 1873: kaksi kylää, jotka eivät puhuneet toisilleen] Isoisän matkavuonna Godthåb oli Etelä-Grönlannin siirtomaan hallintopaikka; pohjoisella puoliskolla oli oma pääkaupunkinsa Godhavnissa aina vuoteen 1940, jolloin hallinto yhdistettiin tänne. Aivan vieressä oli toinen asutus. Herrnhutilaiset lähetyssaarnaajat olivat saaneet luvan 1733, ja käännynnäisiä kertyi niin paljon, että vuonna 1747 perustettiin Uusi Herrnhut ja rakennettiin lähetystalo — Grönlannin ensimmäinen varsinainen kirkko, sillä luterilainen lähetys tuli siihen asti toimeen päärakennuksen kappelilla. Kaksi lähetystä toimivat eri tavoin ja pysyivät erillisinä asutuksina, kunnes herrnhutilaiset lähtivät maasta 1900.
+- [Grönlanti — maalehti / Musiikki: Polkka, jonka toivat lähetyssaarnaajat] 1916– — Tanskalaisten mukana Grönlantiin tulivat viulu, haitari ja virsi, ja herrnhutilaiset lähetyssaarnaajat toivat lisäksi vaskisoittimia ja moniäänisen kuoron — juuri kuorosta tuli heidän vaikutusvaltaisin tuontitavaransa. Soittimista syntyi kalattuut, grönlantilainen polkka, jolla on omat virtuoosinsa, kuten haitarinsoittaja Louis Andreasen; uudempi tyyli vaigat muistuttaa countrya. Kansallislaulu Nunarput utoqqarsuanngoravit, "Maamme, joka olet käynyt niin vanhaksi", on ollut virallinen vuodesta 1916; sen sävelsi Jonathan Petersen ja sanoitti Henrik Lund, molemmat grönlantilaisia.
+AIEMPI KYSYMYS: Mitä kuningas Kristian VII lupasi, jotta uuden kaupungin rakentaminen kannattaisi?
+AIEMPI VASTAUS (Livia):
+No jopas. Rakentajien houkuttelemiseksi Tanskan kuningas Kristian VII lupasi kymmenen vuoden verovapauden. Lisäksi hän maksoi kymmenesosan uusien talojen kustannuksista, joten rakentaminen tuli kannattavammaksi. [[Christiansfeld]] sai nimensä kuninkaan mukaan, ja kaupungin perustivat vuonna 1773 [[herrnhutilaiset]]. Etu oli siis sekä verohelpotus että suora tuki rakennuskuluihin. Hyvä diili, jos minulta kysytään.
+KYSYMYS: Kerro lisää: herrnhutilaiset
+
+### 319
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Christiansfeld (historia)
+Tietoruudun teksti: Christiansfeld on kaupunki Etelä-Jyllannissa, jonka herrnhutilaiset perustivat vuonna 1773. Se sai nimensä Tanskan kuningas Kristian VII:n mukaan, ja rakentajien houkuttelemiseksi kuningas lupasi kymmenen vuoden verovapauden sekä maksoi kymmenesosan uusien talojen kustannuksista. Suurin osa kaupungista rakennettiin vuosina 1773–1800 tiukan asemakaavan mukaan Kirkkotorin ympärille: talot ovat yksi- tai kaksikerroksisia, keltaisesta tiilestä tehtyjä ja punakattoisia, ja monet niistä olivat yhteisasuntoja leskille sekä naimattomille naisille ja miehille. Kaupunki liitettiin Preussille vuonna 1864 ja palasi Tanskaan vasta vuonna 1920. Nykyään se on Unescon maailmanperintökohde (2015), parhaiten säilynyt esimerkki herrnhutilaisten kaupunkisuunnittelusta, ja tunnettu hunajakakuistaan.
+AIEMPI KYSYMYS: Keitä herrnhutilaiset olivat ja mihin he uskoivat?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Herrnhutilaiset eli [[moravialaiset]] olivat kristillinen yhteisö, joka sai nimensä saksalaisesta [[Herrnhutin]] kylästä. Heidän uskonsa korosti henkilökohtaista hurskautta ja yhteisöllisyyttä, ja heillä oli tapana elää tiiviissä yhteisöissä, joissa asuttiin ja rukoiltiin yhdessä. Yhteisö tunnettiin myös lähetystyöstään. [[Christiansfeldin]] kaupunki rakennettiin heidän ihanteidensa mukaan järjestäytyneeksi ja vaatimattomaksi, ja talot olivat usein kuoroittain jaettuja leskille sekä naimattomille. Tarkkoja oppeja en ole varma, joten niistä kannattaa lukea lisää.
+KYSYMYS: Kerro lisää: moravialaiset
+
+### 320
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Christiansfeld (historia)
+Tietoruudun teksti: Christiansfeld on kaupunki Etelä-Jyllannissa, jonka herrnhutilaiset perustivat vuonna 1773. Se sai nimensä Tanskan kuningas Kristian VII:n mukaan, ja rakentajien houkuttelemiseksi kuningas lupasi kymmenen vuoden verovapauden sekä maksoi kymmenesosan uusien talojen kustannuksista. Suurin osa kaupungista rakennettiin vuosina 1773–1800 tiukan asemakaavan mukaan Kirkkotorin ympärille: talot ovat yksi- tai kaksikerroksisia, keltaisesta tiilestä tehtyjä ja punakattoisia, ja monet niistä olivat yhteisasuntoja leskille sekä naimattomille naisille ja miehille. Kaupunki liitettiin Preussille vuonna 1864 ja palasi Tanskaan vasta vuonna 1920. Nykyään se on Unescon maailmanperintökohde (2015), parhaiten säilynyt esimerkki herrnhutilaisten kaupunkisuunnittelusta, ja tunnettu hunajakakuistaan.
+AIEMPI KYSYMYS: Keitä herrnhutilaiset olivat ja mihin he uskoivat?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Herrnhutilaiset eli [[moravialaiset]] olivat kristillinen yhteisö, joka sai nimensä saksalaisesta [[Herrnhutin]] kylästä. Heidän uskonsa korosti henkilökohtaista hurskautta ja yhteisöllisyyttä, ja heillä oli tapana elää tiiviissä yhteisöissä, joissa asuttiin ja rukoiltiin yhdessä. Yhteisö tunnettiin myös lähetystyöstään. [[Christiansfeldin]] kaupunki rakennettiin heidän ihanteidensa mukaan järjestäytyneeksi ja vaatimattomaksi, ja talot olivat usein kuoroittain jaettuja leskille sekä naimattomille. Tarkkoja oppeja en ole varma, joten niistä kannattaa lukea lisää.
+KYSYMYS: Kerro lisää: Herrnhutin

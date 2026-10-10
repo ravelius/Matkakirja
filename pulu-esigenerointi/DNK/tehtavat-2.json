@@ -1,0 +1,2750 @@
+[
+ {
+  "n": 1,
+  "kohta": "kohde:mllehj",
+  "kasite": "Tanska",
+  "kysymys": "Kerro lisää: Tanska"
+ },
+ {
+  "n": 2,
+  "kohta": "kohde:mllehj",
+  "kasite": "moreenimaata",
+  "kysymys": "Kerro lisää: moreenimaata"
+ },
+ {
+  "n": 3,
+  "kohta": "kohde:mllehj",
+  "kasite": "Møllehøj",
+  "kysymys": "Kerro lisää: Møllehøj"
+ },
+ {
+  "n": 4,
+  "kohta": "kohde:mllehj",
+  "kasite": "Tanskan",
+  "kysymys": "Kerro lisää: Tanskan"
+ },
+ {
+  "n": 5,
+  "kohta": "kohde:mllehj",
+  "kasite": "Pohjois-Saksan",
+  "kysymys": "Kerro lisää: Pohjois-Saksan"
+ },
+ {
+  "n": 6,
+  "kohta": "kohde:mllehj",
+  "kasite": "jääkauden",
+  "kysymys": "Kerro lisää: jääkauden"
+ },
+ {
+  "n": 7,
+  "kohta": "kohde:mllehj",
+  "kasite": "Tanskassa",
+  "kysymys": "Kerro lisää: Tanskassa"
+ },
+ {
+  "n": 8,
+  "kohta": "kohde:mllehj",
+  "kasite": "Jyllanti",
+  "kysymys": "Kerro lisää: Jyllanti"
+ },
+ {
+  "n": 9,
+  "kohta": "kohde:mllehj",
+  "kasite": "moreenimaisemaa",
+  "kysymys": "Kerro lisää: moreenimaisemaa"
+ },
+ {
+  "n": 10,
+  "kohta": "kohde:pohjanmeri~2",
+  "kasite": "Pohjanmeren",
+  "kysymys": "Kerro lisää: Pohjanmeren"
+ },
+ {
+  "n": 11,
+  "kohta": "kohde:pohjanmeri~2",
+  "kasite": "wadlopen",
+  "kysymys": "Kerro lisää: wadlopen"
+ },
+ {
+  "n": 12,
+  "kohta": "kohde:pohjanmeri~2",
+  "kasite": "vuorovesi",
+  "kysymys": "Kerro lisää: vuorovesi"
+ },
+ {
+  "n": 13,
+  "kohta": "kohde:pohjanmeri~2",
+  "kasite": "Pohjanmerelle",
+  "kysymys": "Kerro lisää: Pohjanmerelle"
+ },
+ {
+  "n": 14,
+  "kohta": "kohde:pohjanmeri~2",
+  "kasite": "Råbjerg Mile",
+  "kysymys": "Kerro lisää: Råbjerg Mile"
+ },
+ {
+  "n": 15,
+  "kohta": "kohde:pohjanmeri~2",
+  "kasite": "Pohjanmerta",
+  "kysymys": "Kerro lisää: Pohjanmerta"
+ },
+ {
+  "n": 16,
+  "kohta": "kohde:pohjanmeri~2",
+  "kasite": "Doggerlandiksi",
+  "kysymys": "Kerro lisää: Doggerlandiksi"
+ },
+ {
+  "n": 17,
+  "kohta": "kohde:pohjanmeri~2",
+  "kasite": "Norjan",
+  "kysymys": "Kerro lisää: Norjan"
+ },
+ {
+  "n": 18,
+  "kohta": "kohde:pohjanmeri~2",
+  "kasite": "tuulivoiman",
+  "kysymys": "Kerro lisää: tuulivoiman"
+ },
+ {
+  "n": 19,
+  "kohta": "kohde:pohjanmeri~2",
+  "kasite": "Norjanrauma",
+  "kysymys": "Kerro lisää: Norjanrauma"
+ },
+ {
+  "n": 20,
+  "kohta": "kohde:pohjanmeri~2",
+  "kasite": "Pohjanmeri",
+  "kysymys": "Kerro lisää: Pohjanmeri"
+ },
+ {
+  "n": 21,
+  "kohta": "kohde:itameri~2",
+  "kasite": "Pohjanmerelle",
+  "kysymys": "Kerro lisää: Pohjanmerelle"
+ },
+ {
+  "n": 22,
+  "kohta": "kohde:itameri~2",
+  "kasite": "Juutinrauman",
+  "kysymys": "Kerro lisää: Juutinrauman"
+ },
+ {
+  "n": 23,
+  "kohta": "kohde:itameri~2",
+  "kasite": "Iso-Beltin",
+  "kysymys": "Kerro lisää: Iso-Beltin"
+ },
+ {
+  "n": 24,
+  "kohta": "kohde:itameri~2",
+  "kasite": "Pohjanmeren",
+  "kysymys": "Kerro lisää: Pohjanmeren"
+ },
+ {
+  "n": 25,
+  "kohta": "kohde:itameri~2",
+  "kasite": "Juutinrauma",
+  "kysymys": "Kerro lisää: Juutinrauma"
+ },
+ {
+  "n": 26,
+  "kohta": "kohde:itameri~2",
+  "kasite": "Tanska",
+  "kysymys": "Kerro lisää: Tanska"
+ },
+ {
+  "n": 27,
+  "kohta": "kohde:itameri~2",
+  "kasite": "Itämeri",
+  "kysymys": "Kerro lisää: Itämeri"
+ },
+ {
+  "n": 28,
+  "kohta": "kohde:itameri~2",
+  "kasite": "Pohjanmeri",
+  "kysymys": "Kerro lisää: Pohjanmeri"
+ },
+ {
+  "n": 29,
+  "kohta": "kohde:itameri~2",
+  "kasite": "Itämeren",
+  "kysymys": "Kerro lisää: Itämeren"
+ },
+ {
+  "n": 30,
+  "kohta": "kohde:itameri~2",
+  "kasite": "Vasa",
+  "kysymys": "Kerro lisää: Vasa"
+ },
+ {
+  "n": 31,
+  "kohta": "kohde:itameri~2",
+  "kasite": "Landsortdjupet",
+  "kysymys": "Kerro lisää: Landsortdjupet"
+ },
+ {
+  "n": 32,
+  "kohta": "kohde:roskilden-tuomiokirkko",
+  "kasite": "Tanskan",
+  "kysymys": "Kerro lisää: Tanskan"
+ },
+ {
+  "n": 33,
+  "kohta": "kohde:roskilden-tuomiokirkko",
+  "kasite": "Christian IV:n",
+  "kysymys": "Kerro lisää: Christian IV:n"
+ },
+ {
+  "n": 34,
+  "kohta": "kohde:roskilden-tuomiokirkko",
+  "kasite": "eurooppalaisia tyylikausia",
+  "kysymys": "Kerro lisää: eurooppalaisia tyylikausia"
+ },
+ {
+  "n": 35,
+  "kohta": "kohde:roskilden-tuomiokirkko",
+  "kasite": "Harald Sinihammas",
+  "kysymys": "Kerro lisää: Harald Sinihammas"
+ },
+ {
+  "n": 36,
+  "kohta": "kohde:roskilden-tuomiokirkko",
+  "kasite": "Jellingistä",
+  "kysymys": "Kerro lisää: Jellingistä"
+ },
+ {
+  "n": 37,
+  "kohta": "kohde:roskilden-tuomiokirkko",
+  "kasite": "Pohjanmeren",
+  "kysymys": "Kerro lisää: Pohjanmeren"
+ },
+ {
+  "n": 38,
+  "kohta": "kohde:roskilden-tuomiokirkko",
+  "kasite": "Lyypekin",
+  "kysymys": "Kerro lisää: Lyypekin"
+ },
+ {
+  "n": 39,
+  "kohta": "kohde:roskilden-tuomiokirkko",
+  "kasite": "Roskilden tuomiokirkko",
+  "kysymys": "Kerro lisää: Roskilden tuomiokirkko"
+ },
+ {
+  "n": 40,
+  "kohta": "kohde:roskilden-tuomiokirkko",
+  "kasite": "Margareeta I",
+  "kysymys": "Kerro lisää: Margareeta I"
+ },
+ {
+  "n": 41,
+  "kohta": "kohde:roskilden-tuomiokirkko",
+  "kasite": "Kalmarin unionin",
+  "kysymys": "Kerro lisää: Kalmarin unionin"
+ },
+ {
+  "n": 42,
+  "kohta": "kohde:roskilden-tuomiokirkko",
+  "kasite": "Christian IV",
+  "kysymys": "Kerro lisää: Christian IV"
+ },
+ {
+  "n": 43,
+  "kohta": "kohde:roskilden-tuomiokirkko",
+  "kasite": "Viikinkilaivamuseossa",
+  "kysymys": "Kerro lisää: Viikinkilaivamuseossa"
+ },
+ {
+  "n": 44,
+  "kohta": "kohde:roskilden-tuomiokirkko",
+  "kasite": "Roskildenvuonoon",
+  "kysymys": "Kerro lisää: Roskildenvuonoon"
+ },
+ {
+  "n": 45,
+  "kohta": "kohde:kronborg",
+  "kasite": "Hamletin",
+  "kysymys": "Kerro lisää: Hamletin"
+ },
+ {
+  "n": 46,
+  "kohta": "kohde:kronborg",
+  "kasite": "Kronborg",
+  "kysymys": "Kerro lisää: Kronborg"
+ },
+ {
+  "n": 47,
+  "kohta": "kohde:kronborg",
+  "kasite": "Juutinrauman",
+  "kysymys": "Kerro lisää: Juutinrauman"
+ },
+ {
+  "n": 48,
+  "kohta": "kohde:kronborg",
+  "kasite": "Tanskan",
+  "kysymys": "Kerro lisää: Tanskan"
+ },
+ {
+  "n": 49,
+  "kohta": "kohde:kronborg",
+  "kasite": "Eerik Pommerilainen",
+  "kysymys": "Kerro lisää: Eerik Pommerilainen"
+ },
+ {
+  "n": 50,
+  "kohta": "kohde:kronborg",
+  "kasite": "Amleth",
+  "kysymys": "Kerro lisää: Amleth"
+ },
+ {
+  "n": 51,
+  "kohta": "kohde:kronborg",
+  "kasite": "Saxo Grammaticus",
+  "kysymys": "Kerro lisää: Saxo Grammaticus"
+ },
+ {
+  "n": 52,
+  "kohta": "kohde:kronborg",
+  "kasite": "Gesta Danorum",
+  "kysymys": "Kerro lisää: Gesta Danorum"
+ },
+ {
+  "n": 53,
+  "kohta": "kohde:kronborg",
+  "kasite": "Øresundin silta",
+  "kysymys": "Kerro lisää: Øresundin silta"
+ },
+ {
+  "n": 54,
+  "kohta": "kohde:kronborg",
+  "kasite": "Kööpenhaminan",
+  "kysymys": "Kerro lisää: Kööpenhaminan"
+ },
+ {
+  "n": 55,
+  "kohta": "kohde:kronborg",
+  "kasite": "Malmön",
+  "kysymys": "Kerro lisää: Malmön"
+ },
+ {
+  "n": 56,
+  "kohta": "kohde:kronborg",
+  "kasite": "Kronborgin",
+  "kysymys": "Kerro lisää: Kronborgin"
+ },
+ {
+  "n": 57,
+  "kohta": "kohde:kronborg",
+  "kasite": "Tanskaa",
+  "kysymys": "Kerro lisää: Tanskaa"
+ },
+ {
+  "n": 58,
+  "kohta": "kohde:jellingin-kivet",
+  "kasite": "Harald Sinihammas",
+  "kysymys": "Kerro lisää: Harald Sinihammas"
+ },
+ {
+  "n": 59,
+  "kohta": "kohde:jellingin-kivet",
+  "kasite": "Rudolf Broby-Johansen",
+  "kysymys": "Kerro lisää: Rudolf Broby-Johansen"
+ },
+ {
+  "n": 60,
+  "kohta": "kohde:jellingin-kivet",
+  "kasite": "Harald Sinihampaan",
+  "kysymys": "Kerro lisää: Harald Sinihampaan"
+ },
+ {
+  "n": 61,
+  "kohta": "kohde:jellingin-kivet",
+  "kasite": "Jellingin kivistä",
+  "kysymys": "Kerro lisää: Jellingin kivistä"
+ },
+ {
+  "n": 62,
+  "kohta": "kohde:jellingin-kivet",
+  "kasite": "Thyran",
+  "kysymys": "Kerro lisää: Thyran"
+ },
+ {
+  "n": 63,
+  "kohta": "kohde:jellingin-kivet",
+  "kasite": "futharkia",
+  "kysymys": "Kerro lisää: futharkia"
+ },
+ {
+  "n": 64,
+  "kohta": "kohde:jellingin-kivet",
+  "kasite": "riimukivet",
+  "kysymys": "Kerro lisää: riimukivet"
+ },
+ {
+  "n": 65,
+  "kohta": "kohde:jellingin-kivet",
+  "kasite": "hautakummut",
+  "kysymys": "Kerro lisää: hautakummut"
+ },
+ {
+  "n": 66,
+  "kohta": "kohde:jellingin-kivet",
+  "kasite": "maailmanperintöluetteloon",
+  "kysymys": "Kerro lisää: maailmanperintöluetteloon"
+ },
+ {
+  "n": 67,
+  "kohta": "kohde:ribe",
+  "kasite": "Friisinmaalle",
+  "kysymys": "Kerro lisää: Friisinmaalle"
+ },
+ {
+  "n": 68,
+  "kohta": "kohde:ribe",
+  "kasite": "Englantiin",
+  "kysymys": "Kerro lisää: Englantiin"
+ },
+ {
+  "n": 69,
+  "kohta": "kohde:ribe",
+  "kasite": "Burchardin tulva",
+  "kysymys": "Kerro lisää: Burchardin tulva"
+ },
+ {
+  "n": 70,
+  "kohta": "kohde:ribe",
+  "kasite": "Pohjanmeren",
+  "kysymys": "Kerro lisää: Pohjanmeren"
+ },
+ {
+  "n": 71,
+  "kohta": "kohde:ribe",
+  "kasite": "Riben",
+  "kysymys": "Kerro lisää: Riben"
+ },
+ {
+  "n": 72,
+  "kohta": "kohde:ribe",
+  "kasite": "Skandinaviaa",
+  "kysymys": "Kerro lisää: Skandinaviaa"
+ },
+ {
+  "n": 73,
+  "kohta": "kohde:ribe",
+  "kasite": "Horik II:lta",
+  "kysymys": "Kerro lisää: Horik II:lta"
+ },
+ {
+  "n": 74,
+  "kohta": "kohde:ribe",
+  "kasite": "Friisinmaan",
+  "kysymys": "Kerro lisää: Friisinmaan"
+ },
+ {
+  "n": 75,
+  "kohta": "kohde:ribe",
+  "kasite": "Englannin",
+  "kysymys": "Kerro lisää: Englannin"
+ },
+ {
+  "n": 76,
+  "kohta": "kohde:ribe",
+  "kasite": "Jyllannin",
+  "kysymys": "Kerro lisää: Jyllannin"
+ },
+ {
+  "n": 77,
+  "kohta": "kohde:skagen",
+  "kasite": "Pyhän Laurentiuksen kirkko",
+  "kysymys": "Kerro lisää: Pyhän Laurentiuksen kirkko"
+ },
+ {
+  "n": 78,
+  "kohta": "kohde:skagen",
+  "kasite": "lentohiekka",
+  "kysymys": "Kerro lisää: lentohiekka"
+ },
+ {
+  "n": 79,
+  "kohta": "kohde:skagen",
+  "kasite": "Skagenin",
+  "kysymys": "Kerro lisää: Skagenin"
+ },
+ {
+  "n": 80,
+  "kohta": "kohde:skagen",
+  "kasite": "Anna Ancher",
+  "kysymys": "Kerro lisää: Anna Ancher"
+ },
+ {
+  "n": 81,
+  "kohta": "kohde:skagen",
+  "kasite": "P. S. Krøyer",
+  "kysymys": "Kerro lisää: P. S. Krøyer"
+ },
+ {
+  "n": 82,
+  "kohta": "kohde:skagen",
+  "kasite": "Brøndumin hotelli",
+  "kysymys": "Kerro lisää: Brøndumin hotelli"
+ },
+ {
+  "n": 83,
+  "kohta": "kohde:skagen",
+  "kasite": "kapearaiteinen rautatie",
+  "kysymys": "Kerro lisää: kapearaiteinen rautatie"
+ },
+ {
+  "n": 84,
+  "kohta": "kohde:skagen",
+  "kasite": "Tanskan",
+  "kysymys": "Kerro lisää: Tanskan"
+ },
+ {
+  "n": 85,
+  "kohta": "kohde:skagen",
+  "kasite": "Frederikshavnin",
+  "kysymys": "Kerro lisää: Frederikshavnin"
+ },
+ {
+  "n": 86,
+  "kohta": "kohde:skagen",
+  "kasite": "Länsi-Jyllannin",
+  "kysymys": "Kerro lisää: Länsi-Jyllannin"
+ },
+ {
+  "n": 87,
+  "kohta": "kohde:skagen",
+  "kasite": "Skagerrak",
+  "kysymys": "Kerro lisää: Skagerrak"
+ },
+ {
+  "n": 88,
+  "kohta": "kohde:skagen",
+  "kasite": "Kattegat",
+  "kysymys": "Kerro lisää: Kattegat"
+ },
+ {
+  "n": 89,
+  "kohta": "kohde:frederiksborgin-linna",
+  "kasite": "J. C. Jacobsenin",
+  "kysymys": "Kerro lisää: J. C. Jacobsenin"
+ },
+ {
+  "n": 90,
+  "kohta": "kohde:frederiksborgin-linna",
+  "kasite": "Hillerødissä",
+  "kysymys": "Kerro lisää: Hillerødissä"
+ },
+ {
+  "n": 91,
+  "kohta": "kohde:frederiksborgin-linna",
+  "kasite": "Carlsbergin",
+  "kysymys": "Kerro lisää: Carlsbergin"
+ },
+ {
+  "n": 92,
+  "kohta": "kohde:frederiksborgin-linna",
+  "kasite": "Frederik II:sta",
+  "kysymys": "Kerro lisää: Frederik II:sta"
+ },
+ {
+  "n": 93,
+  "kohta": "kohde:frederiksborgin-linna",
+  "kasite": "Christian IV",
+  "kysymys": "Kerro lisää: Christian IV"
+ },
+ {
+  "n": 94,
+  "kohta": "kohde:frederiksborgin-linna",
+  "kasite": "muotokuvakokoelma",
+  "kysymys": "Kerro lisää: muotokuvakokoelma"
+ },
+ {
+  "n": 95,
+  "kohta": "kohde:frederiksborgin-linna",
+  "kasite": "kappeli",
+  "kysymys": "Kerro lisää: kappeli"
+ },
+ {
+  "n": 96,
+  "kohta": "kohde:frederiksborgin-linna",
+  "kasite": "Frederiksborgin linna",
+  "kysymys": "Kerro lisää: Frederiksborgin linna"
+ },
+ {
+  "n": 97,
+  "kohta": "kohde:frederiksborgin-linna",
+  "kasite": "barokkityylinen puutarha",
+  "kysymys": "Kerro lisää: barokkityylinen puutarha"
+ },
+ {
+  "n": 98,
+  "kohta": "kohde:frederiksborgin-linna",
+  "kasite": "Sjællandin",
+  "kysymys": "Kerro lisää: Sjællandin"
+ },
+ {
+  "n": 99,
+  "kohta": "kohde:storebaeltin-silta",
+  "kasite": "Isonbeltin",
+  "kysymys": "Kerro lisää: Isonbeltin"
+ },
+ {
+  "n": 100,
+  "kohta": "kohde:storebaeltin-silta",
+  "kasite": "Sjællandin",
+  "kysymys": "Kerro lisää: Sjællandin"
+ },
+ {
+  "n": 101,
+  "kohta": "kohde:storebaeltin-silta",
+  "kasite": "Fynin",
+  "kysymys": "Kerro lisää: Fynin"
+ },
+ {
+  "n": 102,
+  "kohta": "kohde:storebaeltin-silta",
+  "kasite": "rautatietunneli",
+  "kysymys": "Kerro lisää: rautatietunneli"
+ },
+ {
+  "n": 103,
+  "kohta": "kohde:storebaeltin-silta",
+  "kasite": "palkkisilta",
+  "kysymys": "Kerro lisää: palkkisilta"
+ },
+ {
+  "n": 104,
+  "kohta": "kohde:storebaeltin-silta",
+  "kasite": "Riippusillan",
+  "kysymys": "Kerro lisää: Riippusillan"
+ },
+ {
+  "n": 105,
+  "kohta": "kohde:storebaeltin-silta",
+  "kasite": "Öresundin",
+  "kysymys": "Kerro lisää: Öresundin"
+ },
+ {
+  "n": 106,
+  "kohta": "kohde:storebaeltin-silta",
+  "kasite": "Pikkubeltin",
+  "kysymys": "Kerro lisää: Pikkubeltin"
+ },
+ {
+  "n": 107,
+  "kohta": "kohde:storebaeltin-silta",
+  "kasite": "Tanskan",
+  "kysymys": "Kerro lisää: Tanskan"
+ },
+ {
+  "n": 108,
+  "kohta": "kohde:storebaeltin-silta",
+  "kasite": "valtionrautateiden",
+  "kysymys": "Kerro lisää: valtionrautateiden"
+ },
+ {
+  "n": 109,
+  "kohta": "kohde:storebaeltin-silta",
+  "kasite": "Kööpenhaminan",
+  "kysymys": "Kerro lisää: Kööpenhaminan"
+ },
+ {
+  "n": 110,
+  "kohta": "kohde:storebaeltin-silta",
+  "kasite": "Malmön",
+  "kysymys": "Kerro lisää: Malmön"
+ },
+ {
+  "n": 111,
+  "kohta": "kohde:storebaeltin-silta",
+  "kasite": "Storebæltin",
+  "kysymys": "Kerro lisää: Storebæltin"
+ },
+ {
+  "n": 112,
+  "kohta": "kohde:tollundin-mies",
+  "kasite": "Højgaardin",
+  "kysymys": "Kerro lisää: Højgaardin"
+ },
+ {
+  "n": 113,
+  "kohta": "kohde:tollundin-mies",
+  "kasite": "Peter Vilhelm Globin",
+  "kysymys": "Kerro lisää: Peter Vilhelm Globin"
+ },
+ {
+  "n": 114,
+  "kohta": "kohde:tollundin-mies",
+  "kasite": "radiohiiliajoitus",
+  "kysymys": "Kerro lisää: radiohiiliajoitus"
+ },
+ {
+  "n": 115,
+  "kohta": "kohde:tollundin-mies",
+  "kasite": "pehmytkudokset",
+  "kysymys": "Kerro lisää: pehmytkudokset"
+ },
+ {
+  "n": 116,
+  "kohta": "kohde:tollundin-mies",
+  "kasite": "Tollundin miehestä",
+  "kysymys": "Kerro lisää: Tollundin miehestä"
+ },
+ {
+  "n": 117,
+  "kohta": "kohde:tollundin-mies",
+  "kasite": "Silkeborgin",
+  "kysymys": "Kerro lisää: Silkeborgin"
+ },
+ {
+  "n": 118,
+  "kohta": "kohde:tollundin-mies",
+  "kasite": "Tollundin miestä",
+  "kysymys": "Kerro lisää: Tollundin miestä"
+ },
+ {
+  "n": 119,
+  "kohta": "kohde:tollundin-mies",
+  "kasite": "Tollundin miehellä",
+  "kysymys": "Kerro lisää: Tollundin miehellä"
+ },
+ {
+  "n": 120,
+  "kohta": "kohde:tollundin-mies",
+  "kasite": "hirttäminen",
+  "kysymys": "Kerro lisää: hirttäminen"
+ },
+ {
+  "n": 121,
+  "kohta": "kohde:tollundin-mies",
+  "kasite": "rautakauteen",
+  "kysymys": "Kerro lisää: rautakauteen"
+ },
+ {
+  "n": 122,
+  "kohta": "kohde:tollundin-mies",
+  "kasite": "pellavan",
+  "kysymys": "Kerro lisää: pellavan"
+ },
+ {
+  "n": 123,
+  "kohta": "kohde:tollundin-mies",
+  "kasite": "viljan",
+  "kysymys": "Kerro lisää: viljan"
+ },
+ {
+  "n": 124,
+  "kohta": "kohde:egeskov",
+  "kasite": "Kreivin kapina",
+  "kysymys": "Kerro lisää: Kreivin kapina"
+ },
+ {
+  "n": 125,
+  "kohta": "kohde:egeskov",
+  "kasite": "uskonpuhdistukseen",
+  "kysymys": "Kerro lisää: uskonpuhdistukseen"
+ },
+ {
+  "n": 126,
+  "kohta": "kohde:egeskov",
+  "kasite": "Frands Brockenhuus",
+  "kysymys": "Kerro lisää: Frands Brockenhuus"
+ },
+ {
+  "n": 127,
+  "kohta": "kohde:egeskov",
+  "kasite": "nostosilta",
+  "kysymys": "Kerro lisää: nostosilta"
+ },
+ {
+  "n": 128,
+  "kohta": "kohde:egeskov",
+  "kasite": "tammea",
+  "kysymys": "Kerro lisää: tammea"
+ },
+ {
+  "n": 129,
+  "kohta": "kohde:egeskov",
+  "kasite": "Fynin",
+  "kysymys": "Kerro lisää: Fynin"
+ },
+ {
+  "n": 130,
+  "kohta": "kohde:egeskov",
+  "kasite": "Egeskov",
+  "kysymys": "Kerro lisää: Egeskov"
+ },
+ {
+  "n": 131,
+  "kohta": "kohde:egeskov",
+  "kasite": "Tanskan",
+  "kysymys": "Kerro lisää: Tanskan"
+ },
+ {
+  "n": 132,
+  "kohta": "kohde:egeskov",
+  "kasite": "vesilinna",
+  "kysymys": "Kerro lisää: vesilinna"
+ },
+ {
+  "n": 133,
+  "kohta": "kohde:egeskov",
+  "kasite": "kaksoismuuri",
+  "kysymys": "Kerro lisää: kaksoismuuri"
+ },
+ {
+  "n": 134,
+  "kohta": "kohde:egeskov",
+  "kasite": "kulmatornista",
+  "kysymys": "Kerro lisää: kulmatornista"
+ },
+ {
+  "n": 135,
+  "kohta": "kohde:egeskov",
+  "kasite": "renessanssilinna",
+  "kysymys": "Kerro lisää: renessanssilinna"
+ },
+ {
+  "n": 136,
+  "kohta": "kohde:mons-klint",
+  "kasite": "liitu",
+  "kysymys": "Kerro lisää: liitu"
+ },
+ {
+  "n": 137,
+  "kohta": "kohde:mons-klint",
+  "kasite": "Dronningestolen",
+  "kysymys": "Kerro lisää: Dronningestolen"
+ },
+ {
+  "n": 138,
+  "kohta": "kohde:mons-klint",
+  "kasite": "Aborrebjerg",
+  "kysymys": "Kerro lisää: Aborrebjerg"
+ },
+ {
+  "n": 139,
+  "kohta": "kohde:mons-klint",
+  "kasite": "Møns Klint",
+  "kysymys": "Kerro lisää: Møns Klint"
+ },
+ {
+  "n": 140,
+  "kohta": "kohde:mons-klint",
+  "kasite": "Itämeren",
+  "kysymys": "Kerro lisää: Itämeren"
+ },
+ {
+  "n": 141,
+  "kohta": "kohde:mons-klint",
+  "kasite": "Stevns Klint",
+  "kysymys": "Kerro lisää: Stevns Klint"
+ },
+ {
+  "n": 142,
+  "kohta": "kohde:mons-klint",
+  "kasite": "liitua",
+  "kysymys": "Kerro lisää: liitua"
+ },
+ {
+  "n": 143,
+  "kohta": "kohde:mons-klint",
+  "kasite": "jääkausien",
+  "kysymys": "Kerro lisää: jääkausien"
+ },
+ {
+  "n": 144,
+  "kohta": "kohde:mons-klint",
+  "kasite": "GeoCenter Møns Klint",
+  "kysymys": "Kerro lisää: GeoCenter Møns Klint"
+ },
+ {
+  "n": 145,
+  "kohta": "kohde:mons-klint",
+  "kasite": "PLH Architects",
+  "kysymys": "Kerro lisää: PLH Architects"
+ },
+ {
+  "n": 146,
+  "kohta": "kohde:mons-klint",
+  "kasite": "Margrethe",
+  "kysymys": "Kerro lisää: Margrethe"
+ },
+ {
+  "n": 147,
+  "kohta": "kohde:mons-klint",
+  "kasite": "Møns Klintin",
+  "kysymys": "Kerro lisää: Møns Klintin"
+ },
+ {
+  "n": 148,
+  "kohta": "kohde:mons-klint",
+  "kasite": "Mønin",
+  "kysymys": "Kerro lisää: Mønin"
+ },
+ {
+  "n": 149,
+  "kohta": "kohde:mons-klint",
+  "kasite": "luonnonsuojelualueena",
+  "kysymys": "Kerro lisää: luonnonsuojelualueena"
+ },
+ {
+  "n": 150,
+  "kohta": "kohde:lindholm-hoje",
+  "kasite": "Lindholm Højen",
+  "kysymys": "Kerro lisää: Lindholm Højen"
+ },
+ {
+  "n": 151,
+  "kohta": "kohde:lindholm-hoje",
+  "kasite": "tuonpuoleiseen",
+  "kysymys": "Kerro lisää: tuonpuoleiseen"
+ },
+ {
+  "n": 152,
+  "kohta": "kohde:lindholm-hoje",
+  "kasite": "metsänhakkuiden",
+  "kysymys": "Kerro lisää: metsänhakkuiden"
+ },
+ {
+  "n": 153,
+  "kohta": "kohde:lindholm-hoje",
+  "kasite": "Aalborgin",
+  "kysymys": "Kerro lisää: Aalborgin"
+ },
+ {
+  "n": 154,
+  "kohta": "kohde:lindholm-hoje",
+  "kasite": "Limfjordin",
+  "kysymys": "Kerro lisää: Limfjordin"
+ },
+ {
+  "n": 155,
+  "kohta": "kohde:lindholm-hoje",
+  "kasite": "Limfjord",
+  "kysymys": "Kerro lisää: Limfjord"
+ },
+ {
+  "n": 156,
+  "kohta": "kohde:lindholm-hoje",
+  "kasite": "Aggersundista",
+  "kysymys": "Kerro lisää: Aggersundista"
+ },
+ {
+  "n": 157,
+  "kohta": "kohde:lindholm-hoje",
+  "kasite": "viikinkiaikaa",
+  "kysymys": "Kerro lisää: viikinkiaikaa"
+ },
+ {
+  "n": 158,
+  "kohta": "kohde:lindholm-hoje",
+  "kasite": "rautakauteen",
+  "kysymys": "Kerro lisää: rautakauteen"
+ },
+ {
+  "n": 159,
+  "kohta": "kohde:lindholm-hoje",
+  "kasite": "Jyllannissa",
+  "kysymys": "Kerro lisää: Jyllannissa"
+ },
+ {
+  "n": 160,
+  "kohta": "kohde:lindholm-hoje",
+  "kasite": "hautakivet",
+  "kysymys": "Kerro lisää: hautakivet"
+ },
+ {
+  "n": 161,
+  "kohta": "kohde:billund",
+  "kasite": "Ole Kirk Christiansen",
+  "kysymys": "Kerro lisää: Ole Kirk Christiansen"
+ },
+ {
+  "n": 162,
+  "kohta": "kohde:billund",
+  "kasite": "Billundissa",
+  "kysymys": "Kerro lisää: Billundissa"
+ },
+ {
+  "n": 163,
+  "kohta": "kohde:billund",
+  "kasite": "Billundin lentokentän",
+  "kysymys": "Kerro lisää: Billundin lentokentän"
+ },
+ {
+  "n": 164,
+  "kohta": "kohde:billund",
+  "kasite": "Lego",
+  "kysymys": "Kerro lisää: Lego"
+ },
+ {
+  "n": 165,
+  "kohta": "kohde:billund",
+  "kasite": "Jyllannissa",
+  "kysymys": "Kerro lisää: Jyllannissa"
+ },
+ {
+  "n": 166,
+  "kohta": "kohde:billund",
+  "kasite": "Hilary Pagen",
+  "kysymys": "Kerro lisää: Hilary Pagen"
+ },
+ {
+  "n": 167,
+  "kohta": "kohde:billund",
+  "kasite": "Kiddicraft",
+  "kysymys": "Kerro lisää: Kiddicraft"
+ },
+ {
+  "n": 168,
+  "kohta": "kohde:billund",
+  "kasite": "palikkajärjestelmä",
+  "kysymys": "Kerro lisää: palikkajärjestelmä"
+ },
+ {
+  "n": 169,
+  "kohta": "kohde:billund",
+  "kasite": "Kirkbi",
+  "kysymys": "Kerro lisää: Kirkbi"
+ },
+ {
+  "n": 170,
+  "kohta": "kohde:hahmotelma-christiansborg",
+  "kasite": "Slotsholmenin",
+  "kysymys": "Kerro lisää: Slotsholmenin"
+ },
+ {
+  "n": 171,
+  "kohta": "kohde:hahmotelma-christiansborg",
+  "kasite": "C. F. Hansen",
+  "kysymys": "Kerro lisää: C. F. Hansen"
+ },
+ {
+  "n": 172,
+  "kohta": "kohde:hahmotelma-christiansborg",
+  "kasite": "uusklassismin",
+  "kysymys": "Kerro lisää: uusklassismin"
+ },
+ {
+  "n": 173,
+  "kohta": "kohde:hahmotelma-christiansborg",
+  "kasite": "Riddersalen",
+  "kysymys": "Kerro lisää: Riddersalen"
+ },
+ {
+  "n": 174,
+  "kohta": "kohde:hahmotelma-christiansborg",
+  "kasite": "Kööpenhaminan",
+  "kysymys": "Kerro lisää: Kööpenhaminan"
+ },
+ {
+  "n": 175,
+  "kohta": "kohde:hahmotelma-christiansborg",
+  "kasite": "Folketing",
+  "kysymys": "Kerro lisää: Folketing"
+ },
+ {
+  "n": 176,
+  "kohta": "kohde:hahmotelma-christiansborg",
+  "kasite": "Absalonin",
+  "kysymys": "Kerro lisää: Absalonin"
+ },
+ {
+  "n": 177,
+  "kohta": "kohde:hahmotelma-christiansborg",
+  "kasite": "Christian VI",
+  "kysymys": "Kerro lisää: Christian VI"
+ },
+ {
+  "n": 178,
+  "kohta": "kohde:hahmotelma-christiansborg",
+  "kasite": "Absalonia",
+  "kysymys": "Kerro lisää: Absalonia"
+ },
+ {
+  "n": 179,
+  "kohta": "kohde:hahmotelma-christiansborg",
+  "kasite": "Christiansborg",
+  "kysymys": "Kerro lisää: Christiansborg"
+ },
+ {
+  "n": 180,
+  "kohta": "kohde:hahmotelma-vesterport",
+  "kasite": "linnoitusvalleja",
+  "kysymys": "Kerro lisää: linnoitusvalleja"
+ },
+ {
+  "n": 181,
+  "kohta": "kohde:hahmotelma-vesterport",
+  "kasite": "Tivoli",
+  "kysymys": "Kerro lisää: Tivoli"
+ },
+ {
+  "n": 182,
+  "kohta": "kohde:hahmotelma-vesterport",
+  "kasite": "Kööpenhaminan",
+  "kysymys": "Kerro lisää: Kööpenhaminan"
+ },
+ {
+  "n": 183,
+  "kohta": "kohde:hahmotelma-vesterport",
+  "kasite": "Rådhuspladsen",
+  "kysymys": "Kerro lisää: Rådhuspladsen"
+ },
+ {
+  "n": 184,
+  "kohta": "kohde:hahmotelma-vesterport",
+  "kasite": "Martin Nyropin",
+  "kysymys": "Kerro lisää: Martin Nyropin"
+ },
+ {
+  "n": 185,
+  "kohta": "kohde:hahmotelma-vesterport",
+  "kasite": "Georg Carstensen",
+  "kysymys": "Kerro lisää: Georg Carstensen"
+ },
+ {
+  "n": 186,
+  "kohta": "kohde:hahmotelma-vesterport",
+  "kasite": "Kastellet",
+  "kysymys": "Kerro lisää: Kastellet"
+ },
+ {
+  "n": 187,
+  "kohta": "kohde:hahmotelma-rubjerg-knude",
+  "kasite": "Pohjanmeren",
+  "kysymys": "Kerro lisää: Pohjanmeren"
+ },
+ {
+  "n": 188,
+  "kohta": "kohde:hahmotelma-rubjerg-knude",
+  "kasite": "Lønstrup Klintin",
+  "kysymys": "Kerro lisää: Lønstrup Klintin"
+ },
+ {
+  "n": 189,
+  "kohta": "kohde:hahmotelma-rubjerg-knude",
+  "kasite": "Pohjois-Jyllannissa",
+  "kysymys": "Kerro lisää: Pohjois-Jyllannissa"
+ },
+ {
+  "n": 190,
+  "kohta": "kohde:hahmotelma-rubjerg-knude",
+  "kasite": "Rubjerg Knuden",
+  "kysymys": "Kerro lisää: Rubjerg Knuden"
+ },
+ {
+  "n": 191,
+  "kohta": "kohde:hahmotelma-rubjerg-knude",
+  "kasite": "Grenen",
+  "kysymys": "Kerro lisää: Grenen"
+ },
+ {
+  "n": 192,
+  "kohta": "kohde:hahmotelma-rubjerg-knude",
+  "kasite": "Skagenia",
+  "kysymys": "Kerro lisää: Skagenia"
+ },
+ {
+  "n": 193,
+  "kohta": "kohde:hahmotelma-rubjerg-knude",
+  "kasite": "Skagerrak",
+  "kysymys": "Kerro lisää: Skagerrak"
+ },
+ {
+  "n": 194,
+  "kohta": "kohde:hahmotelma-rubjerg-knude",
+  "kasite": "Jammerbugten",
+  "kysymys": "Kerro lisää: Jammerbugten"
+ },
+ {
+  "n": 195,
+  "kohta": "kohde:hahmotelma-raabjerg-mile",
+  "kasite": "Skagerrakia",
+  "kysymys": "Kerro lisää: Skagerrakia"
+ },
+ {
+  "n": 196,
+  "kohta": "kohde:hahmotelma-raabjerg-mile",
+  "kasite": "hiekkadyynejä",
+  "kysymys": "Kerro lisää: hiekkadyynejä"
+ },
+ {
+  "n": 197,
+  "kohta": "kohde:hahmotelma-raabjerg-mile",
+  "kasite": "Pohjois-Jyllannin",
+  "kysymys": "Kerro lisää: Pohjois-Jyllannin"
+ },
+ {
+  "n": 198,
+  "kohta": "kohde:hahmotelma-raabjerg-mile",
+  "kasite": "Skagenia",
+  "kysymys": "Kerro lisää: Skagenia"
+ },
+ {
+  "n": 199,
+  "kohta": "kohde:hahmotelma-raabjerg-mile",
+  "kasite": "Råbjerg Milen",
+  "kysymys": "Kerro lisää: Råbjerg Milen"
+ },
+ {
+  "n": 200,
+  "kohta": "kohde:hahmotelma-raabjerg-mile",
+  "kasite": "Skagenin",
+  "kysymys": "Kerro lisää: Skagenin"
+ },
+ {
+  "n": 201,
+  "kohta": "kohde:hahmotelma-raabjerg-mile",
+  "kasite": "Frederikshavnin",
+  "kysymys": "Kerro lisää: Frederikshavnin"
+ },
+ {
+  "n": 202,
+  "kohta": "kohde:hahmotelma-raabjerg-mile",
+  "kasite": "Skagen",
+  "kysymys": "Kerro lisää: Skagen"
+ },
+ {
+  "n": 203,
+  "kohta": "kohde:hahmotelma-raabjerg-mile",
+  "kasite": "Skagenin maalarit",
+  "kysymys": "Kerro lisää: Skagenin maalarit"
+ },
+ {
+  "n": 204,
+  "kohta": "kohde:hahmotelma-raabjerg-mile",
+  "kasite": "P. S. Krøyer",
+  "kysymys": "Kerro lisää: P. S. Krøyer"
+ },
+ {
+  "n": 205,
+  "kohta": "kohde:hahmotelma-romo",
+  "kasite": "Rømø",
+  "kysymys": "Kerro lisää: Rømø"
+ },
+ {
+  "n": 206,
+  "kohta": "kohde:hahmotelma-romo",
+  "kasite": "Vatimeri",
+  "kysymys": "Kerro lisää: Vatimeri"
+ },
+ {
+  "n": 207,
+  "kohta": "kohde:hahmotelma-romo",
+  "kasite": "Preussille",
+  "kysymys": "Kerro lisää: Preussille"
+ },
+ {
+  "n": 208,
+  "kohta": "kohde:hahmotelma-romo",
+  "kasite": "Etelä-Jyllanti",
+  "kysymys": "Kerro lisää: Etelä-Jyllanti"
+ },
+ {
+  "n": 209,
+  "kohta": "kohde:hahmotelma-romo",
+  "kasite": "Sylt",
+  "kysymys": "Kerro lisää: Sylt"
+ },
+ {
+  "n": 210,
+  "kohta": "kohde:hahmotelma-romo",
+  "kasite": "Peter Mærsk Møllerin",
+  "kysymys": "Kerro lisää: Peter Mærsk Møllerin"
+ },
+ {
+  "n": 211,
+  "kohta": "kohde:hahmotelma-romo",
+  "kasite": "Rømøllä",
+  "kysymys": "Kerro lisää: Rømøllä"
+ },
+ {
+  "n": 212,
+  "kohta": "kohde:hahmotelma-romo",
+  "kasite": "Tanskan",
+  "kysymys": "Kerro lisää: Tanskan"
+ },
+ {
+  "n": 213,
+  "kohta": "kohde:hahmotelma-romo",
+  "kasite": "Vatimeren",
+  "kysymys": "Kerro lisää: Vatimeren"
+ },
+ {
+  "n": 214,
+  "kohta": "kohde:hahmotelma-romo",
+  "kasite": "Schleswig-Holsteinin",
+  "kysymys": "Kerro lisää: Schleswig-Holsteinin"
+ },
+ {
+  "n": 215,
+  "kohta": "kohde:hahmotelma-thy",
+  "kasite": "dyyniheinää",
+  "kysymys": "Kerro lisää: dyyniheinää"
+ },
+ {
+  "n": 216,
+  "kohta": "kohde:hahmotelma-thy",
+  "kasite": "havupuita",
+  "kysymys": "Kerro lisää: havupuita"
+ },
+ {
+  "n": 217,
+  "kohta": "kohde:hahmotelma-thy",
+  "kasite": "Thyn kansallispuisto",
+  "kysymys": "Kerro lisää: Thyn kansallispuisto"
+ },
+ {
+  "n": 218,
+  "kohta": "kohde:hahmotelma-thy",
+  "kasite": "Hanstholm Vildtreservat",
+  "kysymys": "Kerro lisää: Hanstholm Vildtreservat"
+ },
+ {
+  "n": 219,
+  "kohta": "kohde:hahmotelma-thy",
+  "kasite": "hiekkanummi",
+  "kysymys": "Kerro lisää: hiekkanummi"
+ },
+ {
+  "n": 220,
+  "kohta": "kohde:hahmotelma-thy",
+  "kasite": "Thyn kansallispuistoon",
+  "kysymys": "Kerro lisää: Thyn kansallispuistoon"
+ },
+ {
+  "n": 221,
+  "kohta": "kohde:hahmotelma-thy",
+  "kasite": "Hanstholmin",
+  "kysymys": "Kerro lisää: Hanstholmin"
+ },
+ {
+  "n": 222,
+  "kohta": "kohde:hahmotelma-thy",
+  "kasite": "Agger Tangen",
+  "kysymys": "Kerro lisää: Agger Tangen"
+ },
+ {
+  "n": 223,
+  "kohta": "kohde:hahmotelma-thy",
+  "kasite": "Thyn",
+  "kysymys": "Kerro lisää: Thyn"
+ },
+ {
+  "n": 224,
+  "kohta": "kohde:hahmotelma-thy",
+  "kasite": "dyynit",
+  "kysymys": "Kerro lisää: dyynit"
+ },
+ {
+  "n": 225,
+  "kohta": "kohde:hahmotelma-thy",
+  "kasite": "nummet",
+  "kysymys": "Kerro lisää: nummet"
+ },
+ {
+  "n": 226,
+  "kohta": "kohde:hahmotelma-mols-bjerge",
+  "kasite": "Mols Bjerge",
+  "kysymys": "Kerro lisää: Mols Bjerge"
+ },
+ {
+  "n": 227,
+  "kohta": "kohde:hahmotelma-mols-bjerge",
+  "kasite": "Djurslandin",
+  "kysymys": "Kerro lisää: Djurslandin"
+ },
+ {
+  "n": 228,
+  "kohta": "kohde:hahmotelma-mols-bjerge",
+  "kasite": "jääkauden",
+  "kysymys": "Kerro lisää: jääkauden"
+ },
+ {
+  "n": 229,
+  "kohta": "kohde:hahmotelma-mols-bjerge",
+  "kasite": "dolmeneja",
+  "kysymys": "Kerro lisää: dolmeneja"
+ },
+ {
+  "n": 230,
+  "kohta": "kohde:hahmotelma-mols-bjerge",
+  "kasite": "Kalø-linnan",
+  "kysymys": "Kerro lisää: Kalø-linnan"
+ },
+ {
+  "n": 231,
+  "kohta": "kohde:hahmotelma-mols-bjerge",
+  "kasite": "Margrethe II",
+  "kysymys": "Kerro lisää: Margrethe II"
+ },
+ {
+  "n": 232,
+  "kohta": "kohde:hahmotelma-mols-bjerge",
+  "kasite": "Ørnbjerg Mølle",
+  "kysymys": "Kerro lisää: Ørnbjerg Mølle"
+ },
+ {
+  "n": 233,
+  "kohta": "kohde:hahmotelma-mols-bjerge",
+  "kasite": "vesimylly",
+  "kysymys": "Kerro lisää: vesimylly"
+ },
+ {
+  "n": 234,
+  "kohta": "kohde:hahmotelma-mols-bjerge",
+  "kasite": "Kalø-linna",
+  "kysymys": "Kerro lisää: Kalø-linna"
+ },
+ {
+  "n": 235,
+  "kohta": "kohde:hahmotelma-mols-bjerge",
+  "kasite": "dolmenien",
+  "kysymys": "Kerro lisää: dolmenien"
+ },
+ {
+  "n": 236,
+  "kohta": "kohde:hahmotelma-himmelbjerget",
+  "kasite": "Himmelbjerget",
+  "kysymys": "Kerro lisää: Himmelbjerget"
+ },
+ {
+  "n": 237,
+  "kohta": "kohde:hahmotelma-himmelbjerget",
+  "kasite": "Møllehøj",
+  "kysymys": "Kerro lisää: Møllehøj"
+ },
+ {
+  "n": 238,
+  "kohta": "kohde:hahmotelma-himmelbjerget",
+  "kasite": "Frederik VII:n",
+  "kysymys": "Kerro lisää: Frederik VII:n"
+ },
+ {
+  "n": 239,
+  "kohta": "kohde:hahmotelma-himmelbjerget",
+  "kasite": "Julsø-järven",
+  "kysymys": "Kerro lisää: Julsø-järven"
+ },
+ {
+  "n": 240,
+  "kohta": "kohde:hahmotelma-himmelbjerget",
+  "kasite": "Søhøjlandetin",
+  "kysymys": "Kerro lisää: Søhøjlandetin"
+ },
+ {
+  "n": 241,
+  "kohta": "kohde:hahmotelma-himmelbjerget",
+  "kasite": "Frederik VII",
+  "kysymys": "Kerro lisää: Frederik VII"
+ },
+ {
+  "n": 242,
+  "kohta": "kohde:hahmotelma-himmelbjerget",
+  "kasite": "perustuslain",
+  "kysymys": "Kerro lisää: perustuslain"
+ },
+ {
+  "n": 243,
+  "kohta": "kohde:hahmotelma-himmelbjerget",
+  "kasite": "Himmelbjergetin",
+  "kysymys": "Kerro lisää: Himmelbjergetin"
+ },
+ {
+  "n": 244,
+  "kohta": "kohde:hahmotelma-himmelbjerget",
+  "kasite": "tuulimyllyn",
+  "kysymys": "Kerro lisää: tuulimyllyn"
+ },
+ {
+  "n": 245,
+  "kohta": "kohde:hahmotelma-himmelbjerget",
+  "kasite": "Middelgrundenin",
+  "kysymys": "Kerro lisää: Middelgrundenin"
+ },
+ {
+  "n": 246,
+  "kohta": "kohde:hahmotelma-laeso",
+  "kasite": "Læsø",
+  "kysymys": "Kerro lisää: Læsø"
+ },
+ {
+  "n": 247,
+  "kohta": "kohde:hahmotelma-laeso",
+  "kasite": "suolauuneissa",
+  "kysymys": "Kerro lisää: suolauuneissa"
+ },
+ {
+  "n": 248,
+  "kohta": "kohde:hahmotelma-laeso",
+  "kasite": "Læsøn",
+  "kysymys": "Kerro lisää: Læsøn"
+ },
+ {
+  "n": 249,
+  "kohta": "kohde:hahmotelma-laeso",
+  "kasite": "meriajokkaalla",
+  "kysymys": "Kerro lisää: meriajokkaalla"
+ },
+ {
+  "n": 250,
+  "kohta": "kohde:hahmotelma-laeso",
+  "kasite": "Hlér",
+  "kysymys": "Kerro lisää: Hlér"
+ },
+ {
+  "n": 251,
+  "kohta": "kohde:hahmotelma-laeso",
+  "kasite": "Kattegat",
+  "kysymys": "Kerro lisää: Kattegat"
+ },
+ {
+  "n": 252,
+  "kohta": "kohde:hahmotelma-bornholm",
+  "kasite": "Bornholmia",
+  "kysymys": "Kerro lisää: Bornholmia"
+ },
+ {
+  "n": 253,
+  "kohta": "kohde:hahmotelma-bornholm",
+  "kasite": "graniittia",
+  "kysymys": "Kerro lisää: graniittia"
+ },
+ {
+  "n": 254,
+  "kohta": "kohde:hahmotelma-bornholm",
+  "kasite": "Bornholm",
+  "kysymys": "Kerro lisää: Bornholm"
+ },
+ {
+  "n": 255,
+  "kohta": "kohde:hahmotelma-bornholm",
+  "kasite": "Lyypekki",
+  "kysymys": "Kerro lisää: Lyypekki"
+ },
+ {
+  "n": 256,
+  "kohta": "kohde:hahmotelma-bornholm",
+  "kasite": "Hammershus",
+  "kysymys": "Kerro lisää: Hammershus"
+ },
+ {
+  "n": 257,
+  "kohta": "kohde:hahmotelma-bornholm",
+  "kasite": "Bornholmin",
+  "kysymys": "Kerro lisää: Bornholmin"
+ },
+ {
+  "n": 258,
+  "kohta": "kohde:hahmotelma-bornholm",
+  "kasite": "viikunalajike",
+  "kysymys": "Kerro lisää: viikunalajike"
+ },
+ {
+  "n": 259,
+  "kohta": "kohde:hahmotelma-bornholm",
+  "kasite": "Itämerellä",
+  "kysymys": "Kerro lisää: Itämerellä"
+ },
+ {
+  "n": 260,
+  "kohta": "kohde:hahmotelma-bornholm",
+  "kasite": "Kööpenhaminaa",
+  "kysymys": "Kerro lisää: Kööpenhaminaa"
+ },
+ {
+  "n": 261,
+  "kohta": "kohde:hahmotelma-hammershus",
+  "kasite": "Bornholmin",
+  "kysymys": "Kerro lisää: Bornholmin"
+ },
+ {
+  "n": 262,
+  "kohta": "kohde:hahmotelma-hammershus",
+  "kasite": "Hammerenin",
+  "kysymys": "Kerro lisää: Hammerenin"
+ },
+ {
+  "n": 263,
+  "kohta": "kohde:hahmotelma-hammershus",
+  "kasite": "Lyypekin",
+  "kysymys": "Kerro lisää: Lyypekin"
+ },
+ {
+  "n": 264,
+  "kohta": "kohde:hahmotelma-hammershus",
+  "kasite": "Hammershus",
+  "kysymys": "Kerro lisää: Hammershus"
+ },
+ {
+  "n": 265,
+  "kohta": "kohde:hahmotelma-hammershus",
+  "kasite": "Tanskan",
+  "kysymys": "Kerro lisää: Tanskan"
+ },
+ {
+  "n": 266,
+  "kohta": "kohde:hahmotelma-hammershus",
+  "kasite": "Itämeren",
+  "kysymys": "Kerro lisää: Itämeren"
+ },
+ {
+  "n": 267,
+  "kohta": "kohde:hahmotelma-koldinghus",
+  "kasite": "Koldinghus",
+  "kysymys": "Kerro lisää: Koldinghus"
+ },
+ {
+  "n": 268,
+  "kohta": "kohde:hahmotelma-koldinghus",
+  "kasite": "Schleswigin",
+  "kysymys": "Kerro lisää: Schleswigin"
+ },
+ {
+  "n": 269,
+  "kohta": "kohde:hahmotelma-koldinghus",
+  "kasite": "H. C. Andersen",
+  "kysymys": "Kerro lisää: H. C. Andersen"
+ },
+ {
+  "n": 270,
+  "kohta": "kohde:hahmotelma-koldinghus",
+  "kasite": "Koldinghusiin",
+  "kysymys": "Kerro lisää: Koldinghusiin"
+ },
+ {
+  "n": 271,
+  "kohta": "kohde:hahmotelma-koldinghus",
+  "kasite": "Herkuleen",
+  "kysymys": "Kerro lisää: Herkuleen"
+ },
+ {
+  "n": 272,
+  "kohta": "kohde:hahmotelma-koldinghus",
+  "kasite": "Europa Nostra",
+  "kysymys": "Kerro lisää: Europa Nostra"
+ },
+ {
+  "n": 273,
+  "kohta": "kohde:hahmotelma-koldinghus",
+  "kasite": "Tanskassa",
+  "kysymys": "Kerro lisää: Tanskassa"
+ },
+ {
+  "n": 274,
+  "kohta": "kohde:hahmotelma-dybbol",
+  "kasite": "Dannevirken",
+  "kysymys": "Kerro lisää: Dannevirken"
+ },
+ {
+  "n": 275,
+  "kohta": "kohde:hahmotelma-dybbol",
+  "kasite": "Dybbølin",
+  "kysymys": "Kerro lisää: Dybbølin"
+ },
+ {
+  "n": 276,
+  "kohta": "kohde:hahmotelma-dybbol",
+  "kasite": "Düppel",
+  "kysymys": "Kerro lisää: Düppel"
+ },
+ {
+  "n": 277,
+  "kohta": "kohde:hahmotelma-dybbol",
+  "kasite": "Schleswigin",
+  "kysymys": "Kerro lisää: Schleswigin"
+ },
+ {
+  "n": 278,
+  "kohta": "kohde:hahmotelma-dybbol",
+  "kasite": "Tanskan",
+  "kysymys": "Kerro lisää: Tanskan"
+ },
+ {
+  "n": 279,
+  "kohta": "kohde:hahmotelma-dybbol",
+  "kasite": "Dybbøl",
+  "kysymys": "Kerro lisää: Dybbøl"
+ },
+ {
+  "n": 280,
+  "kohta": "kohde:hahmotelma-dybbol",
+  "kasite": "Sønderborgista",
+  "kysymys": "Kerro lisää: Sønderborgista"
+ },
+ {
+  "n": 281,
+  "kohta": "kohde:hahmotelma-viborg",
+  "kasite": "Lundin",
+  "kysymys": "Kerro lisää: Lundin"
+ },
+ {
+  "n": 282,
+  "kohta": "kohde:hahmotelma-viborg",
+  "kasite": "Ruotsissa",
+  "kysymys": "Kerro lisää: Ruotsissa"
+ },
+ {
+  "n": 283,
+  "kohta": "kohde:hahmotelma-viborg",
+  "kasite": "viljavarastona",
+  "kysymys": "Kerro lisää: viljavarastona"
+ },
+ {
+  "n": 284,
+  "kohta": "kohde:hahmotelma-viborg",
+  "kasite": "Viborgin",
+  "kysymys": "Kerro lisää: Viborgin"
+ },
+ {
+  "n": 285,
+  "kohta": "kohde:hahmotelma-viborg",
+  "kasite": "piispanistuin",
+  "kysymys": "Kerro lisää: piispanistuin"
+ },
+ {
+  "n": 286,
+  "kohta": "kohde:hahmotelma-viborg",
+  "kasite": "Tanskassa",
+  "kysymys": "Kerro lisää: Tanskassa"
+ },
+ {
+  "n": 287,
+  "kohta": "kohde:hahmotelma-lejre",
+  "kasite": "Gammel Lejren",
+  "kysymys": "Kerro lisää: Gammel Lejren"
+ },
+ {
+  "n": 288,
+  "kohta": "kohde:hahmotelma-lejre",
+  "kasite": "Saxo Grammaticuksen",
+  "kysymys": "Kerro lisää: Saxo Grammaticuksen"
+ },
+ {
+  "n": 289,
+  "kohta": "kohde:hahmotelma-lejre",
+  "kasite": "Beowulf",
+  "kysymys": "Kerro lisää: Beowulf"
+ },
+ {
+  "n": 290,
+  "kohta": "kohde:hahmotelma-lejre",
+  "kasite": "Lejren",
+  "kysymys": "Kerro lisää: Lejren"
+ },
+ {
+  "n": 291,
+  "kohta": "kohde:hahmotelma-lejre",
+  "kasite": "sotilastukikohta",
+  "kysymys": "Kerro lisää: sotilastukikohta"
+ },
+ {
+  "n": 292,
+  "kohta": "kohde:hahmotelma-lejre",
+  "kasite": "Saxo Grammaticus",
+  "kysymys": "Kerro lisää: Saxo Grammaticus"
+ },
+ {
+  "n": 293,
+  "kohta": "kohde:hahmotelma-lejre",
+  "kasite": "Lejre",
+  "kysymys": "Kerro lisää: Lejre"
+ },
+ {
+  "n": 294,
+  "kohta": "kohde:hahmotelma-lejre",
+  "kasite": "Sjællandin",
+  "kysymys": "Kerro lisää: Sjællandin"
+ },
+ {
+  "n": 295,
+  "kohta": "kohde:hahmotelma-ringsted",
+  "kasite": "benediktiiniläisluostarin",
+  "kysymys": "Kerro lisää: benediktiiniläisluostarin"
+ },
+ {
+  "n": 296,
+  "kohta": "kohde:hahmotelma-ringsted",
+  "kasite": "Ringstedin",
+  "kysymys": "Kerro lisää: Ringstedin"
+ },
+ {
+  "n": 297,
+  "kohta": "kohde:hahmotelma-ringsted",
+  "kasite": "maakäräjät",
+  "kysymys": "Kerro lisää: maakäräjät"
+ },
+ {
+  "n": 298,
+  "kohta": "kohde:hahmotelma-ringsted",
+  "kasite": "Ringstedissä",
+  "kysymys": "Kerro lisää: Ringstedissä"
+ },
+ {
+  "n": 299,
+  "kohta": "kohde:hahmotelma-ringsted",
+  "kasite": "Kööpenhaminaan",
+  "kysymys": "Kerro lisää: Kööpenhaminaan"
+ },
+ {
+  "n": 300,
+  "kohta": "kohde:hahmotelma-ringsted",
+  "kasite": "Benedictus Nursialaisen",
+  "kysymys": "Kerro lisää: Benedictus Nursialaisen"
+ },
+ {
+  "n": 301,
+  "kohta": "kohde:hahmotelma-ringsted",
+  "kasite": "Euroopan",
+  "kysymys": "Kerro lisää: Euroopan"
+ },
+ {
+  "n": 302,
+  "kohta": "kohde:hahmotelma-ringsted",
+  "kasite": "Euroopassa",
+  "kysymys": "Kerro lisää: Euroopassa"
+ },
+ {
+  "n": 303,
+  "kohta": "kohde:hahmotelma-ringsted",
+  "kasite": "Pyhän Bendtin kirkon",
+  "kysymys": "Kerro lisää: Pyhän Bendtin kirkon"
+ },
+ {
+  "n": 304,
+  "kohta": "kohde:hahmotelma-ringsted",
+  "kasite": "benediktiiniläisten",
+  "kysymys": "Kerro lisää: benediktiiniläisten"
+ },
+ {
+  "n": 305,
+  "kohta": "kohde:hahmotelma-ringsted",
+  "kasite": "Italiassa",
+  "kysymys": "Kerro lisää: Italiassa"
+ },
+ {
+  "n": 306,
+  "kohta": "kohde:hahmotelma-ladby",
+  "kasite": "Fynin",
+  "kysymys": "Kerro lisää: Fynin"
+ },
+ {
+  "n": 307,
+  "kohta": "kohde:hahmotelma-ladby",
+  "kasite": "Kertemindeä",
+  "kysymys": "Kerro lisää: Kertemindeä"
+ },
+ {
+  "n": 308,
+  "kohta": "kohde:hahmotelma-ladby",
+  "kasite": "Ladbyn",
+  "kysymys": "Kerro lisää: Ladbyn"
+ },
+ {
+  "n": 309,
+  "kohta": "kohde:hahmotelma-ladby",
+  "kasite": "viikinkimuseo",
+  "kysymys": "Kerro lisää: viikinkimuseo"
+ },
+ {
+  "n": 310,
+  "kohta": "kohde:hahmotelma-ladby",
+  "kasite": "Valhallasta",
+  "kysymys": "Kerro lisää: Valhallasta"
+ },
+ {
+  "n": 311,
+  "kohta": "kohde:hahmotelma-ladby",
+  "kasite": "laivahauta",
+  "kysymys": "Kerro lisää: laivahauta"
+ },
+ {
+  "n": 312,
+  "kohta": "kohde:hahmotelma-ladby",
+  "kasite": "laudoitukseksi",
+  "kysymys": "Kerro lisää: laudoitukseksi"
+ },
+ {
+  "n": 313,
+  "kohta": "kohde:hahmotelma-ladby",
+  "kasite": "Roskilden",
+  "kysymys": "Kerro lisää: Roskilden"
+ },
+ {
+  "n": 314,
+  "kohta": "kohde:hahmotelma-ladby",
+  "kasite": "Euroopassa",
+  "kysymys": "Kerro lisää: Euroopassa"
+ },
+ {
+  "n": 315,
+  "kohta": "kohde:hahmotelma-ladby",
+  "kasite": "Englannissa",
+  "kysymys": "Kerro lisää: Englannissa"
+ },
+ {
+  "n": 316,
+  "kohta": "kohde:hahmotelma-christiansfeld",
+  "kasite": "Christiansfeld",
+  "kysymys": "Kerro lisää: Christiansfeld"
+ },
+ {
+  "n": 317,
+  "kohta": "kohde:hahmotelma-christiansfeld",
+  "kasite": "herrnhutilaisten",
+  "kysymys": "Kerro lisää: herrnhutilaisten"
+ },
+ {
+  "n": 318,
+  "kohta": "kohde:hahmotelma-christiansfeld",
+  "kasite": "herrnhutilaiset",
+  "kysymys": "Kerro lisää: herrnhutilaiset"
+ },
+ {
+  "n": 319,
+  "kohta": "kohde:hahmotelma-christiansfeld",
+  "kasite": "moravialaiset",
+  "kysymys": "Kerro lisää: moravialaiset"
+ },
+ {
+  "n": 320,
+  "kohta": "kohde:hahmotelma-christiansfeld",
+  "kasite": "Herrnhutin",
+  "kysymys": "Kerro lisää: Herrnhutin"
+ },
+ {
+  "n": 321,
+  "kohta": "kohde:hahmotelma-christiansfeld",
+  "kasite": "Christiansfeldin",
+  "kysymys": "Kerro lisää: Christiansfeldin"
+ },
+ {
+  "n": 322,
+  "kohta": "kohde:hahmotelma-christiansfeld",
+  "kasite": "Jyllannissa",
+  "kysymys": "Kerro lisää: Jyllannissa"
+ },
+ {
+  "n": 323,
+  "kohta": "kohde:hahmotelma-christiansfeld",
+  "kasite": "Preussille",
+  "kysymys": "Kerro lisää: Preussille"
+ },
+ {
+  "n": 324,
+  "kohta": "kohde:hahmotelma-christiansfeld",
+  "kasite": "Etelä-Jylland",
+  "kysymys": "Kerro lisää: Etelä-Jylland"
+ },
+ {
+  "n": 325,
+  "kohta": "kohde:hahmotelma-kalundborg",
+  "kasite": "Absalon",
+  "kysymys": "Kerro lisää: Absalon"
+ },
+ {
+  "n": 326,
+  "kohta": "kohde:hahmotelma-kalundborg",
+  "kasite": "Kööpenhaminan",
+  "kysymys": "Kerro lisää: Kööpenhaminan"
+ },
+ {
+  "n": 327,
+  "kohta": "kohde:hahmotelma-kalundborg",
+  "kasite": "Valdemar I:n",
+  "kysymys": "Kerro lisää: Valdemar I:n"
+ },
+ {
+  "n": 328,
+  "kohta": "kohde:hahmotelma-kalundborg",
+  "kasite": "Kalundborgin",
+  "kysymys": "Kerro lisää: Kalundborgin"
+ },
+ {
+  "n": 329,
+  "kohta": "kohde:hahmotelma-kalundborg",
+  "kasite": "Teollinen symbioosi",
+  "kysymys": "Kerro lisää: Teollinen symbioosi"
+ },
+ {
+  "n": 330,
+  "kohta": "kohde:hahmotelma-kalundborg",
+  "kasite": "Kalundborgissa",
+  "kysymys": "Kerro lisää: Kalundborgissa"
+ },
+ {
+  "n": 331,
+  "kohta": "kohde:hahmotelma-kalundborg",
+  "kasite": "Sjælland",
+  "kysymys": "Kerro lisää: Sjælland"
+ },
+ {
+  "n": 332,
+  "kohta": "kohde:hahmotelma-kalundborg",
+  "kasite": "Kööpenhamina",
+  "kysymys": "Kerro lisää: Kööpenhamina"
+ },
+ {
+  "n": 333,
+  "kohta": "kohde:hahmotelma-kalundborg",
+  "kasite": "Kalundborg",
+  "kysymys": "Kerro lisää: Kalundborg"
+ },
+ {
+  "n": 334,
+  "kohta": "kohde:hahmotelma-kalundborg",
+  "kasite": "jääkausina",
+  "kysymys": "Kerro lisää: jääkausina"
+ },
+ {
+  "n": 335,
+  "kohta": "kohde:hahmotelma-kalundborg",
+  "kasite": "Absalonin",
+  "kysymys": "Kerro lisää: Absalonin"
+ },
+ {
+  "n": 336,
+  "kohta": "kohde:hahmotelma-odense",
+  "kasite": "Odinin",
+  "kysymys": "Kerro lisää: Odinin"
+ },
+ {
+  "n": 337,
+  "kohta": "kohde:hahmotelma-odense",
+  "kasite": "Odense",
+  "kysymys": "Kerro lisää: Odense"
+ },
+ {
+  "n": 338,
+  "kohta": "kohde:hahmotelma-odense",
+  "kasite": "Hans Christian Andersen",
+  "kysymys": "Kerro lisää: Hans Christian Andersen"
+ },
+ {
+  "n": 339,
+  "kohta": "kohde:hahmotelma-odense",
+  "kasite": "Kööpenhaminaan",
+  "kysymys": "Kerro lisää: Kööpenhaminaan"
+ },
+ {
+  "n": 340,
+  "kohta": "kohde:hahmotelma-odense",
+  "kasite": "Eurooppaa",
+  "kysymys": "Kerro lisää: Eurooppaa"
+ },
+ {
+  "n": 341,
+  "kohta": "kohde:hahmotelma-odense",
+  "kasite": "Odensessa",
+  "kysymys": "Kerro lisää: Odensessa"
+ },
+ {
+  "n": 342,
+  "kohta": "kohde:hahmotelma-odense",
+  "kasite": "Fynin",
+  "kysymys": "Kerro lisää: Fynin"
+ },
+ {
+  "n": 343,
+  "kohta": "kohde:hahmotelma-odense",
+  "kasite": "Odinille",
+  "kysymys": "Kerro lisää: Odinille"
+ },
+ {
+  "n": 344,
+  "kohta": "kohde:hahmotelma-odense",
+  "kasite": "Edda",
+  "kysymys": "Kerro lisää: Edda"
+ },
+ {
+  "n": 345,
+  "kohta": "kohde:hahmotelma-horsens",
+  "kasite": "teollistuminen",
+  "kysymys": "Kerro lisää: teollistuminen"
+ },
+ {
+  "n": 346,
+  "kohta": "kohde:hahmotelma-horsens",
+  "kasite": "rautavalimo",
+  "kysymys": "Kerro lisää: rautavalimo"
+ },
+ {
+  "n": 347,
+  "kohta": "kohde:hahmotelma-horsens",
+  "kasite": "kaupungit",
+  "kysymys": "Kerro lisää: kaupungit"
+ },
+ {
+  "n": 348,
+  "kohta": "kohde:hahmotelma-horsens",
+  "kasite": "Horsensinvuonon",
+  "kysymys": "Kerro lisää: Horsensinvuonon"
+ },
+ {
+  "n": 349,
+  "kohta": "kohde:hahmotelma-horsens",
+  "kasite": "Jyllannin",
+  "kysymys": "Kerro lisää: Jyllannin"
+ },
+ {
+  "n": 350,
+  "kohta": "kohde:hahmotelma-horsens",
+  "kasite": "Horsensin",
+  "kysymys": "Kerro lisää: Horsensin"
+ },
+ {
+  "n": 351,
+  "kohta": "kohde:hahmotelma-horsens",
+  "kasite": "valtionvankila",
+  "kysymys": "Kerro lisää: valtionvankila"
+ },
+ {
+  "n": 352,
+  "kohta": "kohde:hahmotelma-horsens",
+  "kasite": "Vitus Bering",
+  "kysymys": "Kerro lisää: Vitus Bering"
+ },
+ {
+  "n": 353,
+  "kohta": "kohde:hahmotelma-horsens",
+  "kasite": "Horsensissa",
+  "kysymys": "Kerro lisää: Horsensissa"
+ },
+ {
+  "n": 354,
+  "kohta": "kohde:hahmotelma-horsens",
+  "kasite": "jääkauden",
+  "kysymys": "Kerro lisää: jääkauden"
+ },
+ {
+  "n": 355,
+  "kohta": "kohde:hahmotelma-horsens",
+  "kasite": "Horsensinvuono",
+  "kysymys": "Kerro lisää: Horsensinvuono"
+ },
+ {
+  "n": 356,
+  "kohta": "kohde:hahmotelma-marstal",
+  "kasite": "purjehtimisesta",
+  "kysymys": "Kerro lisää: purjehtimisesta"
+ },
+ {
+  "n": 357,
+  "kohta": "kohde:hahmotelma-marstal",
+  "kasite": "satama",
+  "kysymys": "Kerro lisää: satama"
+ },
+ {
+  "n": 358,
+  "kohta": "kohde:hahmotelma-marstal",
+  "kasite": "Votiivilaivat",
+  "kysymys": "Kerro lisää: Votiivilaivat"
+ },
+ {
+  "n": 359,
+  "kohta": "kohde:hahmotelma-marstal",
+  "kasite": "merenkulun",
+  "kysymys": "Kerro lisää: merenkulun"
+ },
+ {
+  "n": 360,
+  "kohta": "kohde:hahmotelma-marstal",
+  "kasite": "kalkkikiveä",
+  "kysymys": "Kerro lisää: kalkkikiveä"
+ },
+ {
+  "n": 361,
+  "kohta": "kohde:hahmotelma-marstal",
+  "kasite": "laastin",
+  "kysymys": "Kerro lisää: laastin"
+ },
+ {
+  "n": 362,
+  "kohta": "kohde:hahmotelma-marstal",
+  "kasite": "Ærø",
+  "kysymys": "Kerro lisää: Ærø"
+ },
+ {
+  "n": 363,
+  "kohta": "kohde:hahmotelma-marstal",
+  "kasite": "Fynin",
+  "kysymys": "Kerro lisää: Fynin"
+ },
+ {
+  "n": 364,
+  "kohta": "kohde:hahmotelma-marstal",
+  "kasite": "Ærøskøbing",
+  "kysymys": "Kerro lisää: Ærøskøbing"
+ },
+ {
+  "n": 365,
+  "kohta": "kohde:hahmotelma-marstal",
+  "kasite": "kölistä",
+  "kysymys": "Kerro lisää: kölistä"
+ },
+ {
+  "n": 366,
+  "kohta": "kohde:hahmotelma-marstal",
+  "kasite": "tammea",
+  "kysymys": "Kerro lisää: tammea"
+ },
+ {
+  "n": 367,
+  "kohta": "kohde:hahmotelma-aalborg",
+  "kasite": "Akvaviitti",
+  "kysymys": "Kerro lisää: Akvaviitti"
+ },
+ {
+  "n": 368,
+  "kohta": "kohde:hahmotelma-aalborg",
+  "kasite": "kansallisesti suojeltu",
+  "kysymys": "Kerro lisää: kansallisesti suojeltu"
+ },
+ {
+  "n": 369,
+  "kohta": "kohde:hahmotelma-aalborg",
+  "kasite": "Limfjordin",
+  "kysymys": "Kerro lisää: Limfjordin"
+ },
+ {
+  "n": 370,
+  "kohta": "kohde:hahmotelma-aalborg",
+  "kasite": "ulkomaankauppaa",
+  "kysymys": "Kerro lisää: ulkomaankauppaa"
+ },
+ {
+  "n": 371,
+  "kohta": "kohde:hahmotelma-aalborg",
+  "kasite": "Ponttonisilta",
+  "kysymys": "Kerro lisää: Ponttonisilta"
+ },
+ {
+  "n": 372,
+  "kohta": "kohde:hahmotelma-aalborg",
+  "kasite": "rautatie",
+  "kysymys": "Kerro lisää: rautatie"
+ },
+ {
+  "n": 373,
+  "kohta": "kohde:hahmotelma-aalborg",
+  "kasite": "Pohjanmeren",
+  "kysymys": "Kerro lisää: Pohjanmeren"
+ },
+ {
+  "n": 374,
+  "kohta": "kohde:hahmotelma-aalborg",
+  "kasite": "Kattegatin",
+  "kysymys": "Kerro lisää: Kattegatin"
+ },
+ {
+  "n": 375,
+  "kohta": "kohde:hahmotelma-aalborg",
+  "kasite": "kulttuuriperinnöksi",
+  "kysymys": "Kerro lisää: kulttuuriperinnöksi"
+ },
+ {
+  "n": 376,
+  "kohta": "kohde:hahmotelma-aalborg",
+  "kasite": "arkkitehtoninen",
+  "kysymys": "Kerro lisää: arkkitehtoninen"
+ },
+ {
+  "n": 377,
+  "kohta": "kohde:hahmotelma-soro",
+  "kasite": "Reformaation",
+  "kysymys": "Kerro lisää: Reformaation"
+ },
+ {
+  "n": 378,
+  "kohta": "kohde:hahmotelma-soro",
+  "kasite": "ritariakatemiaksi",
+  "kysymys": "Kerro lisää: ritariakatemiaksi"
+ },
+ {
+  "n": 379,
+  "kohta": "kohde:hahmotelma-soro",
+  "kasite": "Amlethin",
+  "kysymys": "Kerro lisää: Amlethin"
+ },
+ {
+  "n": 380,
+  "kohta": "kohde:hahmotelma-soro",
+  "kasite": "Shakespearen",
+  "kysymys": "Kerro lisää: Shakespearen"
+ },
+ {
+  "n": 381,
+  "kohta": "kohde:hahmotelma-soro",
+  "kasite": "Bergenissä",
+  "kysymys": "Kerro lisää: Bergenissä"
+ },
+ {
+  "n": 382,
+  "kohta": "kohde:hahmotelma-soro",
+  "kasite": "Kööpenhaminassa",
+  "kysymys": "Kerro lisää: Kööpenhaminassa"
+ },
+ {
+  "n": 383,
+  "kohta": "kohde:hahmotelma-soro",
+  "kasite": "H. C. Andersen",
+  "kysymys": "Kerro lisää: H. C. Andersen"
+ },
+ {
+  "n": 384,
+  "kohta": "kohde:hahmotelma-soro",
+  "kasite": "Bertel Thorvaldsen",
+  "kysymys": "Kerro lisää: Bertel Thorvaldsen"
+ },
+ {
+  "n": 385,
+  "kohta": "kohde:hahmotelma-soro",
+  "kasite": "Søren Kierkegaard",
+  "kysymys": "Kerro lisää: Søren Kierkegaard"
+ },
+ {
+  "n": 386,
+  "kohta": "kohde:hahmotelma-soro",
+  "kasite": "Roomassa",
+  "kysymys": "Kerro lisää: Roomassa"
+ },
+ {
+  "n": 387,
+  "kohta": "kohde:hahmotelma-soro",
+  "kasite": "klassismia",
+  "kysymys": "Kerro lisää: klassismia"
+ },
+ {
+  "n": 388,
+  "kohta": "kohde:hahmotelma-esbjerg",
+  "kasite": "Altona",
+  "kysymys": "Kerro lisää: Altona"
+ },
+ {
+  "n": 389,
+  "kohta": "kohde:hahmotelma-esbjerg",
+  "kasite": "Jyllannin",
+  "kysymys": "Kerro lisää: Jyllannin"
+ },
+ {
+  "n": 390,
+  "kohta": "kohde:hahmotelma-esbjerg",
+  "kasite": "rautatieyhteyden",
+  "kysymys": "Kerro lisää: rautatieyhteyden"
+ },
+ {
+  "n": 391,
+  "kohta": "kohde:hahmotelma-esbjerg",
+  "kasite": "Vardeen",
+  "kysymys": "Kerro lisää: Vardeen"
+ },
+ {
+  "n": 392,
+  "kohta": "kohde:hahmotelma-esbjerg",
+  "kasite": "Fredericiaan",
+  "kysymys": "Kerro lisää: Fredericiaan"
+ },
+ {
+  "n": 393,
+  "kohta": "kohde:hahmotelma-esbjerg",
+  "kasite": "Preussin",
+  "kysymys": "Kerro lisää: Preussin"
+ },
+ {
+  "n": 394,
+  "kohta": "kohde:hahmotelma-esbjerg",
+  "kasite": "Itävallan",
+  "kysymys": "Kerro lisää: Itävallan"
+ },
+ {
+  "n": 395,
+  "kohta": "kohde:hahmotelma-esbjerg",
+  "kasite": "Schleswigin",
+  "kysymys": "Kerro lisää: Schleswigin"
+ },
+ {
+  "n": 396,
+  "kohta": "kohde:hahmotelma-esbjerg",
+  "kasite": "Hampuria",
+  "kysymys": "Kerro lisää: Hampuria"
+ },
+ {
+  "n": 397,
+  "kohta": "kohde:hahmotelma-esbjerg",
+  "kasite": "Esbjergin",
+  "kysymys": "Kerro lisää: Esbjergin"
+ },
+ {
+  "n": 398,
+  "kohta": "kohde:hahmotelma-esbjerg",
+  "kasite": "Ruutukaava",
+  "kysymys": "Kerro lisää: Ruutukaava"
+ },
+ {
+  "n": 399,
+  "kohta": "kohde:hahmotelma-esbjerg",
+  "kasite": "Esbjergissä",
+  "kysymys": "Kerro lisää: Esbjergissä"
+ },
+ {
+  "n": 400,
+  "kohta": "kohde:hahmotelma-samso",
+  "kasite": "Kanhaven",
+  "kysymys": "Kerro lisää: Kanhaven"
+ },
+ {
+  "n": 401,
+  "kohta": "kohde:hahmotelma-samso",
+  "kasite": "viikinkien",
+  "kysymys": "Kerro lisää: viikinkien"
+ },
+ {
+  "n": 402,
+  "kohta": "kohde:hahmotelma-samso",
+  "kasite": "Kattegatin",
+  "kysymys": "Kerro lisää: Kattegatin"
+ },
+ {
+  "n": 403,
+  "kohta": "kohde:hahmotelma-samso",
+  "kasite": "Samsø",
+  "kysymys": "Kerro lisää: Samsø"
+ },
+ {
+  "n": 404,
+  "kohta": "kohde:hahmotelma-samso",
+  "kasite": "tuulivoimala",
+  "kysymys": "Kerro lisää: tuulivoimala"
+ },
+ {
+  "n": 405,
+  "kohta": "kohde:hahmotelma-samso",
+  "kasite": "biomassaenergialla",
+  "kysymys": "Kerro lisää: biomassaenergialla"
+ },
+ {
+  "n": 406,
+  "kohta": "kohde:hahmotelma-samso",
+  "kasite": "Samsølle",
+  "kysymys": "Kerro lisää: Samsølle"
+ },
+ {
+  "n": 407,
+  "kohta": "kohde:hahmotelma-samso",
+  "kasite": "linnakumpuja",
+  "kysymys": "Kerro lisää: linnakumpuja"
+ },
+ {
+  "n": 408,
+  "kohta": "kohde:hahmotelma-samso",
+  "kasite": "generaattoriin",
+  "kysymys": "Kerro lisää: generaattoriin"
+ },
+ {
+  "n": 409,
+  "kohta": "kohde:hahmotelma-samso",
+  "kasite": "sähköverkkoon",
+  "kysymys": "Kerro lisää: sähköverkkoon"
+ },
+ {
+  "n": 410,
+  "kohta": "kohde:hahmotelma-samso",
+  "kasite": "Skagerrakiin",
+  "kysymys": "Kerro lisää: Skagerrakiin"
+ },
+ {
+  "n": 411,
+  "kohta": "kohde:hahmotelma-samso",
+  "kasite": "Tanskan salmien",
+  "kysymys": "Kerro lisää: Tanskan salmien"
+ },
+ {
+  "n": 412,
+  "kohta": "kohde:hahmotelma-maribo",
+  "kasite": "Leonora Christina",
+  "kysymys": "Kerro lisää: Leonora Christina"
+ },
+ {
+  "n": 413,
+  "kohta": "kohde:hahmotelma-maribo",
+  "kasite": "Jammersminde",
+  "kysymys": "Kerro lisää: Jammersminde"
+ },
+ {
+  "n": 414,
+  "kohta": "kohde:hahmotelma-maribo",
+  "kasite": "Birgitta",
+  "kysymys": "Kerro lisää: Birgitta"
+ },
+ {
+  "n": 415,
+  "kohta": "kohde:hahmotelma-maribo",
+  "kasite": "Vadstenassa",
+  "kysymys": "Kerro lisää: Vadstenassa"
+ },
+ {
+  "n": 416,
+  "kohta": "kohde:hahmotelma-maribo",
+  "kasite": "hiippakunnan",
+  "kysymys": "Kerro lisää: hiippakunnan"
+ },
+ {
+  "n": 417,
+  "kohta": "kohde:hahmotelma-maribo",
+  "kasite": "tuomiokirkon",
+  "kysymys": "Kerro lisää: tuomiokirkon"
+ },
+ {
+  "n": 418,
+  "kohta": "kohde:hahmotelma-maribo",
+  "kasite": "uskonpuhdistus",
+  "kysymys": "Kerro lisää: uskonpuhdistus"
+ },
+ {
+  "n": 419,
+  "kohta": "kohde:hahmotelma-maribo",
+  "kasite": "Kristian III",
+  "kysymys": "Kerro lisää: Kristian III"
+ },
+ {
+  "n": 420,
+  "kohta": "kohde:hahmotelma-maribo",
+  "kasite": "Falster",
+  "kysymys": "Kerro lisää: Falster"
+ },
+ {
+  "n": 421,
+  "kohta": "kohde:hahmotelma-maribo",
+  "kasite": "järvet",
+  "kysymys": "Kerro lisää: järvet"
+ },
+ {
+  "n": 422,
+  "kohta": "kohde:hahmotelma-ebeltoft",
+  "kasite": "Poul la Cour",
+  "kysymys": "Kerro lisää: Poul la Cour"
+ },
+ {
+  "n": 423,
+  "kohta": "kohde:hahmotelma-ebeltoft",
+  "kasite": "vedyn",
+  "kysymys": "Kerro lisää: vedyn"
+ },
+ {
+  "n": 424,
+  "kohta": "kohde:hahmotelma-ebeltoft",
+  "kasite": "ristikkotalot",
+  "kysymys": "Kerro lisää: ristikkotalot"
+ },
+ {
+  "n": 425,
+  "kohta": "kohde:hahmotelma-ebeltoft",
+  "kasite": "Ebeltoft",
+  "kysymys": "Kerro lisää: Ebeltoft"
+ },
+ {
+  "n": 426,
+  "kohta": "kohde:hahmotelma-ebeltoft",
+  "kasite": "Fregatten Jylland",
+  "kysymys": "Kerro lisää: Fregatten Jylland"
+ },
+ {
+  "n": 427,
+  "kohta": "kohde:hahmotelma-ebeltoft",
+  "kasite": "Ebeltoftissa",
+  "kysymys": "Kerro lisää: Ebeltoftissa"
+ },
+ {
+  "n": 428,
+  "kohta": "kohde:hahmotelma-ebeltoft",
+  "kasite": "Ristikkotalo",
+  "kysymys": "Kerro lisää: Ristikkotalo"
+ },
+ {
+  "n": 429,
+  "kohta": "kohde:hahmotelma-ebeltoft",
+  "kasite": "piidioksidista",
+  "kysymys": "Kerro lisää: piidioksidista"
+ },
+ {
+  "n": 430,
+  "kohta": "kohde:hahmotelma-ebeltoft",
+  "kasite": "lasimuseo",
+  "kysymys": "Kerro lisää: lasimuseo"
+ },
+ {
+  "n": 431,
+  "kohta": "kohde:hahmotelma-tonder",
+  "kasite": "Tønder",
+  "kysymys": "Kerro lisää: Tønder"
+ },
+ {
+  "n": 432,
+  "kohta": "kohde:hahmotelma-tonder",
+  "kasite": "Schleswigin",
+  "kysymys": "Kerro lisää: Schleswigin"
+ },
+ {
+  "n": 433,
+  "kohta": "kohde:hahmotelma-tonder",
+  "kasite": "pitsiä",
+  "kysymys": "Kerro lisää: pitsiä"
+ },
+ {
+  "n": 434,
+  "kohta": "kohde:hahmotelma-tonder",
+  "kasite": "Holsteinin",
+  "kysymys": "Kerro lisää: Holsteinin"
+ },
+ {
+  "n": 435,
+  "kohta": "kohde:hahmotelma-tonder",
+  "kasite": "Lübeck",
+  "kysymys": "Kerro lisää: Lübeck"
+ },
+ {
+  "n": 436,
+  "kohta": "kohde:hahmotelma-tonder",
+  "kasite": "Hansa",
+  "kysymys": "Kerro lisää: Hansa"
+ },
+ {
+  "n": 437,
+  "kohta": "kohde:hahmotelma-tonder",
+  "kasite": "Vattimeren",
+  "kysymys": "Kerro lisää: Vattimeren"
+ },
+ {
+  "n": 438,
+  "kohta": "kohde:hahmotelma-tonder",
+  "kasite": "padot",
+  "kysymys": "Kerro lisää: padot"
+ },
+ {
+  "n": 439,
+  "kohta": "kohde:hahmotelma-nyborg",
+  "kasite": "Danehof",
+  "kysymys": "Kerro lisää: Danehof"
+ },
+ {
+  "n": 440,
+  "kohta": "kohde:hahmotelma-nyborg",
+  "kasite": "linna",
+  "kysymys": "Kerro lisää: linna"
+ },
+ {
+  "n": 441,
+  "kohta": "kohde:hahmotelma-nyborg",
+  "kasite": "Folketingetille",
+  "kysymys": "Kerro lisää: Folketingetille"
+ },
+ {
+  "n": 442,
+  "kohta": "kohde:hahmotelma-nyborg",
+  "kasite": "Eerik V Klipping",
+  "kysymys": "Kerro lisää: Eerik V Klipping"
+ },
+ {
+  "n": 443,
+  "kohta": "kohde:hahmotelma-nyborg",
+  "kasite": "Danehofin",
+  "kysymys": "Kerro lisää: Danehofin"
+ },
+ {
+  "n": 444,
+  "kohta": "kohde:hahmotelma-nyborg",
+  "kasite": "Vallihauta",
+  "kysymys": "Kerro lisää: Vallihauta"
+ },
+ {
+  "n": 445,
+  "kohta": "kohde:hahmotelma-nyborg",
+  "kasite": "Nyborgin linna",
+  "kysymys": "Kerro lisää: Nyborgin linna"
+ },
+ {
+  "n": 446,
+  "kohta": "kohde:hahmotelma-nyborg",
+  "kasite": "Kaarle X Kustaa",
+  "kysymys": "Kerro lisää: Kaarle X Kustaa"
+ },
+ {
+  "n": 447,
+  "kohta": "kohde:hahmotelma-nyborg",
+  "kasite": "Roskilden rauhaan",
+  "kysymys": "Kerro lisää: Roskilden rauhaan"
+ },
+ {
+  "n": 448,
+  "kohta": "kohde:hahmotelma-nyborg",
+  "kasite": "Fyn",
+  "kysymys": "Kerro lisää: Fyn"
+ },
+ {
+  "n": 449,
+  "kohta": "kohde:hahmotelma-nyborg",
+  "kasite": "Jyllannin",
+  "kysymys": "Kerro lisää: Jyllannin"
+ },
+ {
+  "n": 450,
+  "kohta": "kohde:hahmotelma-nyborg",
+  "kasite": "Själlandin",
+  "kysymys": "Kerro lisää: Själlandin"
+ },
+ {
+  "n": 451,
+  "kohta": "nosto:trelleborg",
+  "kasite": "Trelleborgin",
+  "kysymys": "Kerro lisää: Trelleborgin"
+ },
+ {
+  "n": 452,
+  "kohta": "nosto:trelleborg",
+  "kasite": "Harald Sinihammaksen",
+  "kysymys": "Kerro lisää: Harald Sinihammaksen"
+ },
+ {
+  "n": 453,
+  "kohta": "nosto:trelleborg",
+  "kasite": "Tanskaa",
+  "kysymys": "Kerro lisää: Tanskaa"
+ },
+ {
+  "n": 454,
+  "kohta": "nosto:trelleborg",
+  "kasite": "Unesco",
+  "kysymys": "Kerro lisää: Unesco"
+ },
+ {
+  "n": 455,
+  "kohta": "nosto:trelleborg",
+  "kasite": "Tanska",
+  "kysymys": "Kerro lisää: Tanska"
+ },
+ {
+  "n": 456,
+  "kohta": "nosto:trelleborg",
+  "kasite": "Bluetooth",
+  "kysymys": "Kerro lisää: Bluetooth"
+ },
+ {
+  "n": 457,
+  "kohta": "nosto:trelleborg",
+  "kasite": "Jellingin",
+  "kysymys": "Kerro lisää: Jellingin"
+ },
+ {
+  "n": 458,
+  "kohta": "nosto:trelleborg",
+  "kasite": "Harald Sinihammas",
+  "kysymys": "Kerro lisää: Harald Sinihammas"
+ }
+]

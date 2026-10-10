@@ -1,0 +1,783 @@
+### 401
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samsø (tekniikka)
+Tietoruudun teksti: Samsø on Kattegatin saari noin 15 kilometrin päässä Jyllannin rannikosta. Saaren poikki kaivettiin vuosina 726–729 puureunainen Kanhaven kanava, joka on yksi suurimmista tunnetuista viikinkien rakennushankkeista. Keskiajalla saarelle rakennettiin viisi linnoitusta, mutta niistä on jäljellä vain linnakumpuja. Vuonna 1997 Samsø voitti valtion kilpailun ja siitä tuli uusiutuvan energian mallikunta: ensimmäinen tuulivoimala käynnistyi vuonna 2000, ja merelle rakennettiin kymmenen voimalaa vuoteen 2003 mennessä. Nykyään saaren sähkö tulee vuositasolla kokonaan tuulesta, ja lämmöstä 75 % tuotetaan paikallisella aurinko- ja biomassaenergialla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia] Ruotsin historia kulkee viikinkien hopeasta Itämeren suurvallaksi ja siitä maaksi, joka ei ole ollut sodassa kahteensataan vuoteen.
+AIEMPI KYSYMYS: Miksi viikingit kaivoivat kanavan keskelle pientä saarta Kattegatissa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Siit kiistellään vieläkin. [[Kanhaven]] kanava kaivettiin Samsøn poikki vuosina 726–729, ja puureunainen vesiväylä kuuluu tunnetuimpiin [[viikinkien]] rakennushankkeisiin. Yleisimmin esitetty selitys on, että kanava oli oikotie ja kulkuväylä: alukset pääsivät saaren poikki sen sijaan, että olisivat kiertäneet koko saaren, ja samalla paikasta saattoi valvoa [[Kattegatin]] liikennettä. En ole varma, oliko päätarkoitus kulku, satama vai puolustus, joten pidän selitystä tutkijoiden arvauksena enkä varmana tietona. No olipa vanha hanke, tää kanava.
+KYSYMYS: Kerro lisää: viikinkien
+
+### 402
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samsø (tekniikka)
+Tietoruudun teksti: Samsø on Kattegatin saari noin 15 kilometrin päässä Jyllannin rannikosta. Saaren poikki kaivettiin vuosina 726–729 puureunainen Kanhaven kanava, joka on yksi suurimmista tunnetuista viikinkien rakennushankkeista. Keskiajalla saarelle rakennettiin viisi linnoitusta, mutta niistä on jäljellä vain linnakumpuja. Vuonna 1997 Samsø voitti valtion kilpailun ja siitä tuli uusiutuvan energian mallikunta: ensimmäinen tuulivoimala käynnistyi vuonna 2000, ja merelle rakennettiin kymmenen voimalaa vuoteen 2003 mennessä. Nykyään saaren sähkö tulee vuositasolla kokonaan tuulesta, ja lämmöstä 75 % tuotetaan paikallisella aurinko- ja biomassaenergialla.
+AIEMPI KYSYMYS: Miksi viikingit kaivoivat kanavan keskelle pientä saarta Kattegatissa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Siit kiistellään vieläkin. [[Kanhaven]] kanava kaivettiin Samsøn poikki vuosina 726–729, ja puureunainen vesiväylä kuuluu tunnetuimpiin [[viikinkien]] rakennushankkeisiin. Yleisimmin esitetty selitys on, että kanava oli oikotie ja kulkuväylä: alukset pääsivät saaren poikki sen sijaan, että olisivat kiertäneet koko saaren, ja samalla paikasta saattoi valvoa [[Kattegatin]] liikennettä. En ole varma, oliko päätarkoitus kulku, satama vai puolustus, joten pidän selitystä tutkijoiden arvauksena enkä varmana tietona. No olipa vanha hanke, tää kanava.
+KYSYMYS: Kerro lisää: Kattegatin
+
+### 403
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samsø (tekniikka)
+Tietoruudun teksti: Samsø on Kattegatin saari noin 15 kilometrin päässä Jyllannin rannikosta. Saaren poikki kaivettiin vuosina 726–729 puureunainen Kanhaven kanava, joka on yksi suurimmista tunnetuista viikinkien rakennushankkeista. Keskiajalla saarelle rakennettiin viisi linnoitusta, mutta niistä on jäljellä vain linnakumpuja. Vuonna 1997 Samsø voitti valtion kilpailun ja siitä tuli uusiutuvan energian mallikunta: ensimmäinen tuulivoimala käynnistyi vuonna 2000, ja merelle rakennettiin kymmenen voimalaa vuoteen 2003 mennessä. Nykyään saaren sähkö tulee vuositasolla kokonaan tuulesta, ja lämmöstä 75 % tuotetaan paikallisella aurinko- ja biomassaenergialla.
+AIEMPI KYSYMYS: Miten saari, joka ennen tuotti energiansa tuontiöljyllä ja -hiilellä, pääsi eroon fossiilisista polttoaineista?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä tiedän jotain. [[Samsø]] voitti vuonna 1997 valtion järjestämän kilpailun, ja siitä tuli uusiutuvan energian mallikunta. Ensimmäinen [[tuulivoimala]] käynnistyi vuonna 2000, ja merelle rakennettiin kymmenen voimalaa vuoteen 2003 mennessä. Nykyään saaren sähkö tulee vuositasolla kokonaan tuulesta, ja lämmöstä 75 prosenttia tuotetaan paikallisella aurinko- ja [[biomassaenergialla]]. Muistaakseni paikalliset asukkaat omistivat itse merkittävän osan voimaloista, ja se auttoi hanketta etenemään, mutta tarkkaa osuutta en ole varma.
+
+Tuuli on meille siivekkäille työkaveri ja kiusankappale samalla kertaa. Kyl minusta on reilua, että saarella se tekee nyt töitä sähköyhtiössä.
+KYSYMYS: Kerro lisää: Samsø
+
+### 404
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samsø (tekniikka)
+Tietoruudun teksti: Samsø on Kattegatin saari noin 15 kilometrin päässä Jyllannin rannikosta. Saaren poikki kaivettiin vuosina 726–729 puureunainen Kanhaven kanava, joka on yksi suurimmista tunnetuista viikinkien rakennushankkeista. Keskiajalla saarelle rakennettiin viisi linnoitusta, mutta niistä on jäljellä vain linnakumpuja. Vuonna 1997 Samsø voitti valtion kilpailun ja siitä tuli uusiutuvan energian mallikunta: ensimmäinen tuulivoimala käynnistyi vuonna 2000, ja merelle rakennettiin kymmenen voimalaa vuoteen 2003 mennessä. Nykyään saaren sähkö tulee vuositasolla kokonaan tuulesta, ja lämmöstä 75 % tuotetaan paikallisella aurinko- ja biomassaenergialla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+- [Geraldton — kaupunkilehti / Geraldton: Kaupunki jota tuuli ei jätä rauhaan] Geraldtonia kutsutaan usein Australian tuulisimmaksi kaupungiksi, ja nimitys on ansaittu: iltapäivisin lokakuusta huhtikuuhun mereltä puhaltaa lähes joka päivä voimakas ja tasainen etelätuuli. Paikalliset kutsuvat sitä luotettavaksi iltatuuleksi, ja se on tehnyt kaupungista yhden Australian suosituimmista purjelautailu- ja leijalautailukohteista. Lähistön Coronation Beach on tunnettu jopa kansainvälisistä kilpailuista, joihin osallistujia saapuu ympäri maailmaa nauttimaan aalloista ja tasaisesta tuulesta. Sama tuuli, joka nykyään houkuttelee lautailijoita, oli 1800-luvulla purjelaivoille sekä siunaus että riski.
+AIEMPI KYSYMYS: Miten saari, joka ennen tuotti energiansa tuontiöljyllä ja -hiilellä, pääsi eroon fossiilisista polttoaineista?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä tiedän jotain. [[Samsø]] voitti vuonna 1997 valtion järjestämän kilpailun, ja siitä tuli uusiutuvan energian mallikunta. Ensimmäinen [[tuulivoimala]] käynnistyi vuonna 2000, ja merelle rakennettiin kymmenen voimalaa vuoteen 2003 mennessä. Nykyään saaren sähkö tulee vuositasolla kokonaan tuulesta, ja lämmöstä 75 prosenttia tuotetaan paikallisella aurinko- ja [[biomassaenergialla]]. Muistaakseni paikalliset asukkaat omistivat itse merkittävän osan voimaloista, ja se auttoi hanketta etenemään, mutta tarkkaa osuutta en ole varma.
+
+Tuuli on meille siivekkäille työkaveri ja kiusankappale samalla kertaa. Kyl minusta on reilua, että saarella se tekee nyt töitä sähköyhtiössä.
+KYSYMYS: Kerro lisää: tuulivoimala
+
+### 405
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samsø (tekniikka)
+Tietoruudun teksti: Samsø on Kattegatin saari noin 15 kilometrin päässä Jyllannin rannikosta. Saaren poikki kaivettiin vuosina 726–729 puureunainen Kanhaven kanava, joka on yksi suurimmista tunnetuista viikinkien rakennushankkeista. Keskiajalla saarelle rakennettiin viisi linnoitusta, mutta niistä on jäljellä vain linnakumpuja. Vuonna 1997 Samsø voitti valtion kilpailun ja siitä tuli uusiutuvan energian mallikunta: ensimmäinen tuulivoimala käynnistyi vuonna 2000, ja merelle rakennettiin kymmenen voimalaa vuoteen 2003 mennessä. Nykyään saaren sähkö tulee vuositasolla kokonaan tuulesta, ja lämmöstä 75 % tuotetaan paikallisella aurinko- ja biomassaenergialla.
+AIEMPI KYSYMYS: Miten saari, joka ennen tuotti energiansa tuontiöljyllä ja -hiilellä, pääsi eroon fossiilisista polttoaineista?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä tiedän jotain. [[Samsø]] voitti vuonna 1997 valtion järjestämän kilpailun, ja siitä tuli uusiutuvan energian mallikunta. Ensimmäinen [[tuulivoimala]] käynnistyi vuonna 2000, ja merelle rakennettiin kymmenen voimalaa vuoteen 2003 mennessä. Nykyään saaren sähkö tulee vuositasolla kokonaan tuulesta, ja lämmöstä 75 prosenttia tuotetaan paikallisella aurinko- ja [[biomassaenergialla]]. Muistaakseni paikalliset asukkaat omistivat itse merkittävän osan voimaloista, ja se auttoi hanketta etenemään, mutta tarkkaa osuutta en ole varma.
+
+Tuuli on meille siivekkäille työkaveri ja kiusankappale samalla kertaa. Kyl minusta on reilua, että saarella se tekee nyt töitä sähköyhtiössä.
+KYSYMYS: Kerro lisää: biomassaenergialla
+
+### 406
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samsø (tekniikka)
+Tietoruudun teksti: Samsø on Kattegatin saari noin 15 kilometrin päässä Jyllannin rannikosta. Saaren poikki kaivettiin vuosina 726–729 puureunainen Kanhaven kanava, joka on yksi suurimmista tunnetuista viikinkien rakennushankkeista. Keskiajalla saarelle rakennettiin viisi linnoitusta, mutta niistä on jäljellä vain linnakumpuja. Vuonna 1997 Samsø voitti valtion kilpailun ja siitä tuli uusiutuvan energian mallikunta: ensimmäinen tuulivoimala käynnistyi vuonna 2000, ja merelle rakennettiin kymmenen voimalaa vuoteen 2003 mennessä. Nykyään saaren sähkö tulee vuositasolla kokonaan tuulesta, ja lämmöstä 75 % tuotetaan paikallisella aurinko- ja biomassaenergialla.
+AIEMPI KYSYMYS: Miksi Samsøn keskiaikaisista linnoista on jäljellä vain kumpuja?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tost en ole ihan varma. [[Samsølle]] rakennettiin keskiajalla viisi linnoitusta, joista on jäljellä vain [[linnakumpuja]]. Monet Pohjolan varhaisista linnoista tehtiin maavalleista ja puurakenteista, ja kun puu lahosi tai rakennukset purettiin, maaperään jäi vain kohoumia. En ole varma, oliko juuri näillä viidellä linnalla tällainen rakenne tai mitä niille tarkalleen tapahtui, joten tämä on yleinen selitys eikä varma tieto. Kumpu on kuitenkin kumpu, ja kyl ne ylhäältä näkyvät.
+KYSYMYS: Kerro lisää: Samsølle
+
+### 407
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samsø (tekniikka)
+Tietoruudun teksti: Samsø on Kattegatin saari noin 15 kilometrin päässä Jyllannin rannikosta. Saaren poikki kaivettiin vuosina 726–729 puureunainen Kanhaven kanava, joka on yksi suurimmista tunnetuista viikinkien rakennushankkeista. Keskiajalla saarelle rakennettiin viisi linnoitusta, mutta niistä on jäljellä vain linnakumpuja. Vuonna 1997 Samsø voitti valtion kilpailun ja siitä tuli uusiutuvan energian mallikunta: ensimmäinen tuulivoimala käynnistyi vuonna 2000, ja merelle rakennettiin kymmenen voimalaa vuoteen 2003 mennessä. Nykyään saaren sähkö tulee vuositasolla kokonaan tuulesta, ja lämmöstä 75 % tuotetaan paikallisella aurinko- ja biomassaenergialla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lhasa — kaupunkilehti / Lhasa: Talvipalatsi Punaisella kummulla] Marpo Rilla eli Punaisella kummulla oli seissyt linna jo 600-luvulta, kun Viides dalai-lama määräsi 1645 rakennettavaksi uuden palatsin. Ulkoseinät nousivat kolmessa vuodessa, mutta sisustus vei neljäkymmentäviisi vuotta lisää. Dalai-lama muutti Valkoiseen palatsiin 1649, ja Punainen palatsi nousi vasta 1690–1694, kaksitoista vuotta hänen kuolemansa jälkeen. Tuloksena on kolmetoista kerrosta, yli tuhat huonetta, kymmenentuhatta pyhäkköä ja noin kaksisataatuhatta patsasta; korkeutta on 119 metriä kukkulan päältä ja yli kolmesataa laakson pohjalta. Kaltevat kiviseinät ovat kolmisen metriä paksut, ja perustuksiin valettiin kuparia järistysten varalta.
+AIEMPI KYSYMYS: Miksi Samsøn keskiaikaisista linnoista on jäljellä vain kumpuja?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tost en ole ihan varma. [[Samsølle]] rakennettiin keskiajalla viisi linnoitusta, joista on jäljellä vain [[linnakumpuja]]. Monet Pohjolan varhaisista linnoista tehtiin maavalleista ja puurakenteista, ja kun puu lahosi tai rakennukset purettiin, maaperään jäi vain kohoumia. En ole varma, oliko juuri näillä viidellä linnalla tällainen rakenne tai mitä niille tarkalleen tapahtui, joten tämä on yleinen selitys eikä varma tieto. Kumpu on kuitenkin kumpu, ja kyl ne ylhäältä näkyvät.
+KYSYMYS: Kerro lisää: linnakumpuja
+
+### 408
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samsø (tekniikka)
+Tietoruudun teksti: Samsø on Kattegatin saari noin 15 kilometrin päässä Jyllannin rannikosta. Saaren poikki kaivettiin vuosina 726–729 puureunainen Kanhaven kanava, joka on yksi suurimmista tunnetuista viikinkien rakennushankkeista. Keskiajalla saarelle rakennettiin viisi linnoitusta, mutta niistä on jäljellä vain linnakumpuja. Vuonna 1997 Samsø voitti valtion kilpailun ja siitä tuli uusiutuvan energian mallikunta: ensimmäinen tuulivoimala käynnistyi vuonna 2000, ja merelle rakennettiin kymmenen voimalaa vuoteen 2003 mennessä. Nykyään saaren sähkö tulee vuositasolla kokonaan tuulesta, ja lämmöstä 75 % tuotetaan paikallisella aurinko- ja biomassaenergialla.
+AIEMPI KYSYMYS: Miten tuulivoimala muuttaa tuulen sähköksi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tän minä näen joka päivä katolta. Tuulivoimalan lavat kääntyvät tuulen voimasta ja pyörittävät roottoria, joka on kytketty [[generaattoriin]]. Generaattori muuttaa pyörimisliikkeen sähköksi, ja muuntaja nostaa jännitteen sopivaksi, jotta sähkö voidaan siirtää [[sähköverkkoon]]. Voimala tuottaa sähköä vain, kun tuulee riittävästi, ja siksi tuulivoiman rinnalla tarvitaan muita tuotantotapoja tai varastointia. Tuuli on siis ilmaista, mutta sen käyttö vaatii paljon tekniikkaa. Lavat pyörii, minä en.
+KYSYMYS: Kerro lisää: generaattoriin
+
+### 409
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samsø (tekniikka)
+Tietoruudun teksti: Samsø on Kattegatin saari noin 15 kilometrin päässä Jyllannin rannikosta. Saaren poikki kaivettiin vuosina 726–729 puureunainen Kanhaven kanava, joka on yksi suurimmista tunnetuista viikinkien rakennushankkeista. Keskiajalla saarelle rakennettiin viisi linnoitusta, mutta niistä on jäljellä vain linnakumpuja. Vuonna 1997 Samsø voitti valtion kilpailun ja siitä tuli uusiutuvan energian mallikunta: ensimmäinen tuulivoimala käynnistyi vuonna 2000, ja merelle rakennettiin kymmenen voimalaa vuoteen 2003 mennessä. Nykyään saaren sähkö tulee vuositasolla kokonaan tuulesta, ja lämmöstä 75 % tuotetaan paikallisella aurinko- ja biomassaenergialla.
+AIEMPI KYSYMYS: Miten tuulivoimala muuttaa tuulen sähköksi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tän minä näen joka päivä katolta. Tuulivoimalan lavat kääntyvät tuulen voimasta ja pyörittävät roottoria, joka on kytketty [[generaattoriin]]. Generaattori muuttaa pyörimisliikkeen sähköksi, ja muuntaja nostaa jännitteen sopivaksi, jotta sähkö voidaan siirtää [[sähköverkkoon]]. Voimala tuottaa sähköä vain, kun tuulee riittävästi, ja siksi tuulivoiman rinnalla tarvitaan muita tuotantotapoja tai varastointia. Tuuli on siis ilmaista, mutta sen käyttö vaatii paljon tekniikkaa. Lavat pyörii, minä en.
+KYSYMYS: Kerro lisää: sähköverkkoon
+
+### 410
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samsø (tekniikka)
+Tietoruudun teksti: Samsø on Kattegatin saari noin 15 kilometrin päässä Jyllannin rannikosta. Saaren poikki kaivettiin vuosina 726–729 puureunainen Kanhaven kanava, joka on yksi suurimmista tunnetuista viikinkien rakennushankkeista. Keskiajalla saarelle rakennettiin viisi linnoitusta, mutta niistä on jäljellä vain linnakumpuja. Vuonna 1997 Samsø voitti valtion kilpailun ja siitä tuli uusiutuvan energian mallikunta: ensimmäinen tuulivoimala käynnistyi vuonna 2000, ja merelle rakennettiin kymmenen voimalaa vuoteen 2003 mennessä. Nykyään saaren sähkö tulee vuositasolla kokonaan tuulesta, ja lämmöstä 75 % tuotetaan paikallisella aurinko- ja biomassaenergialla.
+AIEMPI KYSYMYS: Missä Kattegat on ja mitä merialueita se yhdistää?
+AIEMPI VASTAUS (Livia):
+No niin, tää on helppo. Kattegat on merialue Jyllannin niemimaan ja Ruotsin länsirannikon välissä. Pohjoisessa se yhtyy [[Skagerrakiin]], joka johtaa Pohjanmerelle, ja etelässä sen kautta pääsee [[Tanskan salmien]] läpi Itämerelle. Näitä salmia ovat esimerkiksi Juutinrauma, Suurisalmi ja Pienisalmi. Kattegat on siis Itämeren ja Pohjanmeren välinen kulkureitti, ja Samsø sijaitsee sen keskiosassa. Pienin sanoin: iso vesi, paljon liikennettä, ja ylhäältä katsottuna kaikki näyttää yllättävän lähekkäiseltä.
+KYSYMYS: Kerro lisää: Skagerrakiin
+
+### 411
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samsø (tekniikka)
+Tietoruudun teksti: Samsø on Kattegatin saari noin 15 kilometrin päässä Jyllannin rannikosta. Saaren poikki kaivettiin vuosina 726–729 puureunainen Kanhaven kanava, joka on yksi suurimmista tunnetuista viikinkien rakennushankkeista. Keskiajalla saarelle rakennettiin viisi linnoitusta, mutta niistä on jäljellä vain linnakumpuja. Vuonna 1997 Samsø voitti valtion kilpailun ja siitä tuli uusiutuvan energian mallikunta: ensimmäinen tuulivoimala käynnistyi vuonna 2000, ja merelle rakennettiin kymmenen voimalaa vuoteen 2003 mennessä. Nykyään saaren sähkö tulee vuositasolla kokonaan tuulesta, ja lämmöstä 75 % tuotetaan paikallisella aurinko- ja biomassaenergialla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iqaluit — kaupunkilehti / Iqaluit: Vuosi 1873: lahti, joka ei ollutkaan salmi] Kaksisataa kahdeksankymmentä vuotta Frobisherin jälkeen amerikkalainen Charles Francis Hall talvehti valaanpyytäjän mukana Baffininsaarella. Paikalliset inuiitit kertoivat hänelle, missä Frobisherin kaivosyrityksen jäännökset olivat — tieto oli kulkenut suullisena perimätietona koko sen ajan. Oppaikseen Hall sai aviopari Ipirvikin ja Taqulittuqin, ja 1861 hänestä tuli ensimmäinen ei-alkuperäinen ihminen, joka tajusi, ettei Frobisherin salmi ole salmi vaan umpilahti. Kartta korjattiin. Hall itse kuoli marraskuussa 1871 Grönlannissa oudoissa oloissa, joten isoisän matkavuonna kartta oli kaksi vuotta vanha ja sen tekijä kaksi vuotta kuollut.
+AIEMPI KYSYMYS: Missä Kattegat on ja mitä merialueita se yhdistää?
+AIEMPI VASTAUS (Livia):
+No niin, tää on helppo. Kattegat on merialue Jyllannin niemimaan ja Ruotsin länsirannikon välissä. Pohjoisessa se yhtyy [[Skagerrakiin]], joka johtaa Pohjanmerelle, ja etelässä sen kautta pääsee [[Tanskan salmien]] läpi Itämerelle. Näitä salmia ovat esimerkiksi Juutinrauma, Suurisalmi ja Pienisalmi. Kattegat on siis Itämeren ja Pohjanmeren välinen kulkureitti, ja Samsø sijaitsee sen keskiosassa. Pienin sanoin: iso vesi, paljon liikennettä, ja ylhäältä katsottuna kaikki näyttää yllättävän lähekkäiseltä.
+KYSYMYS: Kerro lisää: Tanskan salmien
+
+### 412
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maribo (kauppa)
+Tietoruudun teksti: Maribo on Lollandin saaren keskellä sijaitseva kauppakaupunki, josta on nykyään tullut Lollandin kunnan hallintokeskus. Kaupunkia ympäröivät pohjoisessa Nørresø ja etelässä Søndersø, joka on Lollandin suurin järvi ja jossa on enemmän saaria kuin missään muussa Tanskan järvessä. Kaupungin menneisyys liittyy birgittalaisluostariin, jonka perustamista auttoivat Vadstenan luostarista lähetetyt munkit. Luostari lakkautettiin vuonna 1536 ja muutettiin 1556 aatelisneitojen luostariksi, ja sen kirkosta tuli myöhemmin kaupungin kirkko. Vuosina 1803–1804 kirkko sai Lolland-Falsterin hiippakunnan tuomiokirkon aseman, ja kuningas Kristian IV:n tytär Leonora Christina Ulfeldt vietti luostarissa elämänsä viimeiset vuodet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Santa Cruz — kohdekartta / Kohdekartta: Gabriel René Moreno -yliopisto] 1880 Bolivian idän suurin julkinen korkeakoulu perustettiin 11. tammikuuta 1880 nimellä Santa Cruzin yliopisto. Perustamisen taustalla oli valtion asetus 15. joulukuuta 1879, jolla haluttiin vastata kaupungin nuorten tarpeeseen: siihen asti tutkintoa oli pitänyt hakea Sucresta tai La Pazista asti. Aloite tuli tohtori Felipe Leonor Riberalta ja cruceño-piispalta, joka toimi myös ensimmäisenä rehtorina. Aluksi tarjolla oli kolme alaa: teologia, lääketiede ja oikeustiede. Niin pysyi lähes viisikymmentä vuotta. Yliopisto sai nimekseen Pyhän Tuomas Akvinolaisen yliopisto 1898 ja nykyisen nimensä 1911 cruceño-kirjailijan ja historioitsijan Gabriel René Morenon mukaan. Keskusrakennus nousi 1940 Ju…
+AIEMPI KYSYMYS: Millainen oli Leonora Christina Ulfeldtin elämä ennen kuin hän päätyi Maribon luostariin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Leonora Christina oli kuningas Kristian IV:n tytär, joten hän varttui hovin piirissä. Hän meni naimisiin valtiomies Corfitz Ulfeldtin kanssa, ja pariskunnan elämä muuttui, kun Ulfeldtia syytettiin maanpetoksesta. Lähteiden mukaan [[Leonora Christina]] vietti sen jälkeen vankina Kööpenhaminassa kaksikymmentä vuotta tai niin, ja tarkkoja vuosia en ole varma. Vankeutensa aikana hän kirjoitti muistelmateoksen [[Jammersminde]], jota pidetään yhtenä Tanskan 1600-luvun merkittävimmistä kirjoista. Vapauduttuaan hän asettui Maribon luostariin, jossa hän vietti elämänsä viimeiset vuodet. Onpa siitä pitkä aika.
+KYSYMYS: Kerro lisää: Leonora Christina
+
+### 413
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maribo (kauppa)
+Tietoruudun teksti: Maribo on Lollandin saaren keskellä sijaitseva kauppakaupunki, josta on nykyään tullut Lollandin kunnan hallintokeskus. Kaupunkia ympäröivät pohjoisessa Nørresø ja etelässä Søndersø, joka on Lollandin suurin järvi ja jossa on enemmän saaria kuin missään muussa Tanskan järvessä. Kaupungin menneisyys liittyy birgittalaisluostariin, jonka perustamista auttoivat Vadstenan luostarista lähetetyt munkit. Luostari lakkautettiin vuonna 1536 ja muutettiin 1556 aatelisneitojen luostariksi, ja sen kirkosta tuli myöhemmin kaupungin kirkko. Vuosina 1803–1804 kirkko sai Lolland-Falsterin hiippakunnan tuomiokirkon aseman, ja kuningas Kristian IV:n tytär Leonora Christina Ulfeldt vietti luostarissa elämänsä viimeiset vuodet.
+AIEMPI KYSYMYS: Millainen oli Leonora Christina Ulfeldtin elämä ennen kuin hän päätyi Maribon luostariin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Leonora Christina oli kuningas Kristian IV:n tytär, joten hän varttui hovin piirissä. Hän meni naimisiin valtiomies Corfitz Ulfeldtin kanssa, ja pariskunnan elämä muuttui, kun Ulfeldtia syytettiin maanpetoksesta. Lähteiden mukaan [[Leonora Christina]] vietti sen jälkeen vankina Kööpenhaminassa kaksikymmentä vuotta tai niin, ja tarkkoja vuosia en ole varma. Vankeutensa aikana hän kirjoitti muistelmateoksen [[Jammersminde]], jota pidetään yhtenä Tanskan 1600-luvun merkittävimmistä kirjoista. Vapauduttuaan hän asettui Maribon luostariin, jossa hän vietti elämänsä viimeiset vuodet. Onpa siitä pitkä aika.
+KYSYMYS: Kerro lisää: Jammersminde
+
+### 414
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maribo (kauppa)
+Tietoruudun teksti: Maribo on Lollandin saaren keskellä sijaitseva kauppakaupunki, josta on nykyään tullut Lollandin kunnan hallintokeskus. Kaupunkia ympäröivät pohjoisessa Nørresø ja etelässä Søndersø, joka on Lollandin suurin järvi ja jossa on enemmän saaria kuin missään muussa Tanskan järvessä. Kaupungin menneisyys liittyy birgittalaisluostariin, jonka perustamista auttoivat Vadstenan luostarista lähetetyt munkit. Luostari lakkautettiin vuonna 1536 ja muutettiin 1556 aatelisneitojen luostariksi, ja sen kirkosta tuli myöhemmin kaupungin kirkko. Vuosina 1803–1804 kirkko sai Lolland-Falsterin hiippakunnan tuomiokirkon aseman, ja kuningas Kristian IV:n tytär Leonora Christina Ulfeldt vietti luostarissa elämänsä viimeiset vuodet.
+AIEMPI KYSYMYS: Mikä birgittalaisluostari oikein oli, ja miksi sellainen perustettiin Lollandille?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Hyvä kysymys tuo. Birgittalaisluostari kuului ruotsalaisen pyhän [[Birgitta]]n perustamaan järjestöön, joka syntyi 1300-luvulla. Järjestön luostarit olivat tavallisesti kaksoisluostareita, joissa nunnat ja munkit elivät samassa yhteisössä mutta erillään toisistaan, ja äitiluostari oli [[Vadstenassa]] Ruotsissa. Maribon luostarin perustamista auttoivat Vadstenasta lähetetyt munkit. En ole varma, miksi juuri Lolland valittiin; tällaiset luostarit perustettiin yleensä hallitsijan tai aateliston tuella. Luostari lakkautettiin 1536.
+KYSYMYS: Kerro lisää: Birgitta
+
+### 415
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maribo (kauppa)
+Tietoruudun teksti: Maribo on Lollandin saaren keskellä sijaitseva kauppakaupunki, josta on nykyään tullut Lollandin kunnan hallintokeskus. Kaupunkia ympäröivät pohjoisessa Nørresø ja etelässä Søndersø, joka on Lollandin suurin järvi ja jossa on enemmän saaria kuin missään muussa Tanskan järvessä. Kaupungin menneisyys liittyy birgittalaisluostariin, jonka perustamista auttoivat Vadstenan luostarista lähetetyt munkit. Luostari lakkautettiin vuonna 1536 ja muutettiin 1556 aatelisneitojen luostariksi, ja sen kirkosta tuli myöhemmin kaupungin kirkko. Vuosina 1803–1804 kirkko sai Lolland-Falsterin hiippakunnan tuomiokirkon aseman, ja kuningas Kristian IV:n tytär Leonora Christina Ulfeldt vietti luostarissa elämänsä viimeiset vuodet.
+AIEMPI KYSYMYS: Mikä birgittalaisluostari oikein oli, ja miksi sellainen perustettiin Lollandille?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Hyvä kysymys tuo. Birgittalaisluostari kuului ruotsalaisen pyhän [[Birgitta]]n perustamaan järjestöön, joka syntyi 1300-luvulla. Järjestön luostarit olivat tavallisesti kaksoisluostareita, joissa nunnat ja munkit elivät samassa yhteisössä mutta erillään toisistaan, ja äitiluostari oli [[Vadstenassa]] Ruotsissa. Maribon luostarin perustamista auttoivat Vadstenasta lähetetyt munkit. En ole varma, miksi juuri Lolland valittiin; tällaiset luostarit perustettiin yleensä hallitsijan tai aateliston tuella. Luostari lakkautettiin 1536.
+KYSYMYS: Kerro lisää: Vadstenassa
+
+### 416
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maribo (kauppa)
+Tietoruudun teksti: Maribo on Lollandin saaren keskellä sijaitseva kauppakaupunki, josta on nykyään tullut Lollandin kunnan hallintokeskus. Kaupunkia ympäröivät pohjoisessa Nørresø ja etelässä Søndersø, joka on Lollandin suurin järvi ja jossa on enemmän saaria kuin missään muussa Tanskan järvessä. Kaupungin menneisyys liittyy birgittalaisluostariin, jonka perustamista auttoivat Vadstenan luostarista lähetetyt munkit. Luostari lakkautettiin vuonna 1536 ja muutettiin 1556 aatelisneitojen luostariksi, ja sen kirkosta tuli myöhemmin kaupungin kirkko. Vuosina 1803–1804 kirkko sai Lolland-Falsterin hiippakunnan tuomiokirkon aseman, ja kuningas Kristian IV:n tytär Leonora Christina Ulfeldt vietti luostarissa elämänsä viimeiset vuodet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolkata — kohdekartta / Kohdekartta: St. John’sin kirkko] 1787 Kirkko oli kauppakomppanian ensimmäisiä julkisia rakennuksia sen jälkeen, kun Kalkutasta oli tullut hallinnon keskus. Peruskiven laski kenraalikuvernööri Warren Hastings 6. huhtikuuta 1784, ja rakentaminen kustannettiin julkisella arpajaisella, joka tuotti kolmekymmentätuhatta rupiaa. Tontin lahjoitti maharadža Nabo Kishen Bahadur. Rakennus valmistui 1787, ja se on kaupungin kolmanneksi vanhin kirkko. Esikuvana oli Lontoon St Martin-in-the-Fields. Kansanomainen nimi on Pathure Girja, kivikirkko. Kivi oli 1700-luvun lopun Kalkutassa harvinaista tavaraa, ja se haettiin keskiaikaisen Gaurin raunioista ja tuotiin jokea alas. Samasta paikasta on lattian harvinainen siniharmaa marmori. Kirkk…
+- [Iqaluit — kohdekartta / Kohdekartta: Pyhän Juudaksen katedraali] 2012 Virallisesti se on Pyhien Simonin ja Juudaksen katedraali, mutta kaupungissa sitä sanotaan iglukatedraaliksi: valkoinen rakennus on iglun muotoinen. Se on arktisen hiippakunnan piispanistuin, ja hiippakunta kattaa Luoteisterritoriot, Nunavutin ja Pohjois-Quebecin Nunavikin — pinta-alaltaan maailman suurin anglikaaninen hiippakunta. Jumalanpalvelukset pidetään englanniksi ja inuktitutiksi. Ensimmäisen katedraalin suunnitteli Ronald Thom 1970, ja paikalliset vapaaehtoiset rakensivat sen 1972. Koristeet olivat inuiittikäsityötä: seinävaatteita, punottuja kolehtikoreja, kahdesta sarvivalaan syöksyhampaasta tehty risti ja vuolukivinen kastemalja, jonka kuningatar Elisabet II vihki käyttöön …
+AIEMPI KYSYMYS: Mitä tuomiokirkko on ja mikä tekee kirkosta tuomiokirkon?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tuomiokirkko on piispan pääkirkko. Sana tulee siitä, että siellä sijaitsee piispan istuin eli kathedra, ja kirkko on koko [[hiippakunnan]] keskuskirkko, jossa pidetään esimerkiksi piispan vihkimiseen liittyviä tilaisuuksia. Tuomiokirkon asema ei riipu kirkon koosta vaan siitä, että piispa toimii siellä. Maribon kirkko sai Lolland-Falsterin hiippakunnan [[tuomiokirkon]] aseman vuosina 1803–1804. Pieni kaupunki, iso titteli, ja kyl se tuomiokirkko sitä paitsi on aika kaunis.
+KYSYMYS: Kerro lisää: hiippakunnan
+
+### 417
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maribo (kauppa)
+Tietoruudun teksti: Maribo on Lollandin saaren keskellä sijaitseva kauppakaupunki, josta on nykyään tullut Lollandin kunnan hallintokeskus. Kaupunkia ympäröivät pohjoisessa Nørresø ja etelässä Søndersø, joka on Lollandin suurin järvi ja jossa on enemmän saaria kuin missään muussa Tanskan järvessä. Kaupungin menneisyys liittyy birgittalaisluostariin, jonka perustamista auttoivat Vadstenan luostarista lähetetyt munkit. Luostari lakkautettiin vuonna 1536 ja muutettiin 1556 aatelisneitojen luostariksi, ja sen kirkosta tuli myöhemmin kaupungin kirkko. Vuosina 1803–1804 kirkko sai Lolland-Falsterin hiippakunnan tuomiokirkon aseman, ja kuningas Kristian IV:n tytär Leonora Christina Ulfeldt vietti luostarissa elämänsä viimeiset vuodet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Luís — kaupunkilehti / Asulejot ja kirkkotaide: Taivas tuomiokirkon katossa] Tuomiokirkon holvikattoon on maalattu illuusio taivaasta: siniset pilvet täyttävät kupolin, ja keskellä kultareunaisessa kehyksessä Kristus kohoaa käsivarret levällään ympärillään leijuvien pienten enkelien seuratessa. Tällaiset trompe l’oeil -kattomaalaukset olivat suosittuja katolisissa kirkoissa ympäri Portugalin siirtomaita, koska ne veivät katsojan huomion pois raskaista kivipilareista ja loivat vaikutelman rajattomasta tilasta. Maalaus kuuluu samaan 1700-luvun lopun laajennukseen, joka antoi kirkolle nykyisen uusklassisen ulkoasunsa – sisällä barokin väri ja liike elävät silti yhä katossa.
+- [Košice — kaupunkilehti / Rakennukset: Seitsemän tonnin kello ja kappeli tuomiokirkon varjossa] Tuomiokirkon vieressä seisoo Urbanin torni, 1500-luvulla rakennettu renessanssin kellotorni. Sen kellon valoi vuonna 1557 olomoucilainen Franciscus Illenfeld; kello painoi seitsemän tonnia ja on pyhitetty viinitarhurien suojeluspyhimykselle Urbanukselle. Tulipalo tuhosi kellon vuonna 1966, ja korjattu torni avattiin uudelleen 1971. Aivan vieressä on Pyhän Mikaelin kappeli, joka valmistui noin 1400 ja toimi seurakunnan kirkkona, kun uutta tuomiokirkkoa vielä rakennettiin.
+AIEMPI KYSYMYS: Mitä tuomiokirkko on ja mikä tekee kirkosta tuomiokirkon?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tuomiokirkko on piispan pääkirkko. Sana tulee siitä, että siellä sijaitsee piispan istuin eli kathedra, ja kirkko on koko [[hiippakunnan]] keskuskirkko, jossa pidetään esimerkiksi piispan vihkimiseen liittyviä tilaisuuksia. Tuomiokirkon asema ei riipu kirkon koosta vaan siitä, että piispa toimii siellä. Maribon kirkko sai Lolland-Falsterin hiippakunnan [[tuomiokirkon]] aseman vuosina 1803–1804. Pieni kaupunki, iso titteli, ja kyl se tuomiokirkko sitä paitsi on aika kaunis.
+KYSYMYS: Kerro lisää: tuomiokirkon
+
+### 418
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maribo (kauppa)
+Tietoruudun teksti: Maribo on Lollandin saaren keskellä sijaitseva kauppakaupunki, josta on nykyään tullut Lollandin kunnan hallintokeskus. Kaupunkia ympäröivät pohjoisessa Nørresø ja etelässä Søndersø, joka on Lollandin suurin järvi ja jossa on enemmän saaria kuin missään muussa Tanskan järvessä. Kaupungin menneisyys liittyy birgittalaisluostariin, jonka perustamista auttoivat Vadstenan luostarista lähetetyt munkit. Luostari lakkautettiin vuonna 1536 ja muutettiin 1556 aatelisneitojen luostariksi, ja sen kirkosta tuli myöhemmin kaupungin kirkko. Vuosina 1803–1804 kirkko sai Lolland-Falsterin hiippakunnan tuomiokirkon aseman, ja kuningas Kristian IV:n tytär Leonora Christina Ulfeldt vietti luostarissa elämänsä viimeiset vuodet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Uskonpuhdistus] Elben rannan yliopistokaupungista lähti lokakuussa 1517 kohtelias kirje arkkipiispalle, ja sen liitteenä olleet 95 latinankielistä väitettä levisivät painettuina nopeammin kuin kukaan osasi odottaa.
+AIEMPI KYSYMYS: Miksi Tanskan luostarit lakkautettiin uskonpuhdistuksessa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tanskan [[uskonpuhdistus]] tapahtui 1530-luvulla, kun kuningas [[Kristian III]] teki luterilaisuudesta maan kirkon. Kirkon omaisuus siirtyi suurelta osin kruunulle, ja luostarielämä ei sopinut uuteen oppiin, koska luterilaisuus ei pitänyt luostarilupauksia tarpeellisina pelastukselle. Lakkauttaminen tapahtui eri luostareissa eri tahtiin, ja Maribon luostarin kohdalla vuosiluku on 1536. Tarkkoja yksityiskohtia luostareiden lakkautuksesta en ole varma, vaan tämä on yleiskuva. Onpa tää iso historian kolahdus.
+KYSYMYS: Kerro lisää: uskonpuhdistus
+
+### 419
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maribo (kauppa)
+Tietoruudun teksti: Maribo on Lollandin saaren keskellä sijaitseva kauppakaupunki, josta on nykyään tullut Lollandin kunnan hallintokeskus. Kaupunkia ympäröivät pohjoisessa Nørresø ja etelässä Søndersø, joka on Lollandin suurin järvi ja jossa on enemmän saaria kuin missään muussa Tanskan järvessä. Kaupungin menneisyys liittyy birgittalaisluostariin, jonka perustamista auttoivat Vadstenan luostarista lähetetyt munkit. Luostari lakkautettiin vuonna 1536 ja muutettiin 1556 aatelisneitojen luostariksi, ja sen kirkosta tuli myöhemmin kaupungin kirkko. Vuosina 1803–1804 kirkko sai Lolland-Falsterin hiippakunnan tuomiokirkon aseman, ja kuningas Kristian IV:n tytär Leonora Christina Ulfeldt vietti luostarissa elämänsä viimeiset vuodet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kööpenhamina — kohdekartta / Kohdekartta: Kastellet] 1660-luku Kastellet on tähtilinnoitus kaupungin pohjoisreunalla ja yksi Pohjois-Euroopan parhaiten säilyneistä linnoituksista. Se on viisikulmio, jonka jokaisessa kärjessä on bastioni: Kuninkaan, Kuningattaren, Kreivin, Prinsessan ja Prinssin bastioni. Vallit ja vallihaudat olivat aikanaan osa koko kaupungin kiertänyttä bastionirengasta, josta on muuten jäljellä vain Christianshavnin vallit. Alku oli vaatimattomampi. Christian IV perusti paikalle Sankt Annæn skanssin 1624 vahtimaan sataman suuta. Työ jäi hänen aikanaan kesken, ja vasta ruotsalaisten piiritettyä Kööpenhaminaa vuosina 1658–1660 Fredrik III kutsui paikalle hollantilaisen insinöörin Henrik Rusen. Hän rakensi skanssista kunnolli…
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Miksi Tanskan luostarit lakkautettiin uskonpuhdistuksessa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tanskan [[uskonpuhdistus]] tapahtui 1530-luvulla, kun kuningas [[Kristian III]] teki luterilaisuudesta maan kirkon. Kirkon omaisuus siirtyi suurelta osin kruunulle, ja luostarielämä ei sopinut uuteen oppiin, koska luterilaisuus ei pitänyt luostarilupauksia tarpeellisina pelastukselle. Lakkauttaminen tapahtui eri luostareissa eri tahtiin, ja Maribon luostarin kohdalla vuosiluku on 1536. Tarkkoja yksityiskohtia luostareiden lakkautuksesta en ole varma, vaan tämä on yleiskuva. Onpa tää iso historian kolahdus.
+KYSYMYS: Kerro lisää: Kristian III
+
+### 420
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maribo (kauppa)
+Tietoruudun teksti: Maribo on Lollandin saaren keskellä sijaitseva kauppakaupunki, josta on nykyään tullut Lollandin kunnan hallintokeskus. Kaupunkia ympäröivät pohjoisessa Nørresø ja etelässä Søndersø, joka on Lollandin suurin järvi ja jossa on enemmän saaria kuin missään muussa Tanskan järvessä. Kaupungin menneisyys liittyy birgittalaisluostariin, jonka perustamista auttoivat Vadstenan luostarista lähetetyt munkit. Luostari lakkautettiin vuonna 1536 ja muutettiin 1556 aatelisneitojen luostariksi, ja sen kirkosta tuli myöhemmin kaupungin kirkko. Vuosina 1803–1804 kirkko sai Lolland-Falsterin hiippakunnan tuomiokirkon aseman, ja kuningas Kristian IV:n tytär Leonora Christina Ulfeldt vietti luostarissa elämänsä viimeiset vuodet.
+AIEMPI KYSYMYS: Missä Lolland sijaitsee ja miten sinne pääsee?
+AIEMPI VASTAUS (Livia):
+Mmm— Lollandin minä olen nähnyt katolta. Lolland on Tanskan saari Itämeren rannalla Själlandin eteläpuolella, ja sen itäpuolella on sisarsaari [[Falster]]. Saarilta on lyhyt matka Saksan Fehmarnin saarelle, ja Fehmarnsbeltin yli on rakenteilla tunneli, mutta valmistumisajasta en ole varma, koska tietoni voi olla vanhentunutta. Lollandiin pääsee tieyhteyksiä pitkin Själlandilta Falsterin kautta. Maribo on saaren keskellä sijaitseva hallintokaupunki, ja kaupungin [[järvet]] ovat tunnettuja. Tää on ihan oikeaa maaseutua.
+KYSYMYS: Kerro lisää: Falster
+
+### 421
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maribo (kauppa)
+Tietoruudun teksti: Maribo on Lollandin saaren keskellä sijaitseva kauppakaupunki, josta on nykyään tullut Lollandin kunnan hallintokeskus. Kaupunkia ympäröivät pohjoisessa Nørresø ja etelässä Søndersø, joka on Lollandin suurin järvi ja jossa on enemmän saaria kuin missään muussa Tanskan järvessä. Kaupungin menneisyys liittyy birgittalaisluostariin, jonka perustamista auttoivat Vadstenan luostarista lähetetyt munkit. Luostari lakkautettiin vuonna 1536 ja muutettiin 1556 aatelisneitojen luostariksi, ja sen kirkosta tuli myöhemmin kaupungin kirkko. Vuosina 1803–1804 kirkko sai Lolland-Falsterin hiippakunnan tuomiokirkon aseman, ja kuningas Kristian IV:n tytär Leonora Christina Ulfeldt vietti luostarissa elämänsä viimeiset vuodet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Järvet jotka rakentavat itse patonsa] 1979 — Plitvicen 16 järveä on kytketty toisiinsa vesiputouksilla ja luonnollisilla travertiinipadoilla — kalkkikivipitoisesta vedestä sakkautuvasta kivestä, jota sammal ja levät sitovat vuosisatojen kuluessa yhä paksummaksi kerrokseksi. Padot kasvavat ja muuttavat muotoaan koko ajan, joten järvien reitti ei ole koskaan täysin sama kahtena vuosikymmenenä. Vesi vaihtaa väriään turkoosista vihreään sen mukaan, kuinka paljon mineraaleja, planktonia ja auringonvaloa siihen osuu. Plitvice on Kroatian vanhin ja suurin kansallispuisto, ja Unesco otti sen maailmanperintöluetteloon jo vuonna 1979.
+AIEMPI KYSYMYS: Missä Lolland sijaitsee ja miten sinne pääsee?
+AIEMPI VASTAUS (Livia):
+Mmm— Lollandin minä olen nähnyt katolta. Lolland on Tanskan saari Itämeren rannalla Själlandin eteläpuolella, ja sen itäpuolella on sisarsaari [[Falster]]. Saarilta on lyhyt matka Saksan Fehmarnin saarelle, ja Fehmarnsbeltin yli on rakenteilla tunneli, mutta valmistumisajasta en ole varma, koska tietoni voi olla vanhentunutta. Lollandiin pääsee tieyhteyksiä pitkin Själlandilta Falsterin kautta. Maribo on saaren keskellä sijaitseva hallintokaupunki, ja kaupungin [[järvet]] ovat tunnettuja. Tää on ihan oikeaa maaseutua.
+KYSYMYS: Kerro lisää: järvet
+
+### 422
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ebeltoft (merenkulku)
+Tietoruudun teksti: Ebeltoft on vanha satamakaupunki Jyllannin niemimaan Djurslandin niemellä, Tanskan keskisellä itärannikolla. Vanhan keskustan mukulakivikadut ja vuosisatoja vanhat ristikkotalot on haluttu säilyttää: suojelusuunnitelmat aloittivat 1960-luvulla kaupunginvaltuusto ja Tanskan kansallismuseo. Kaupungin nähtävyyksiin kuuluu Fregatten Jylland, joka on maailman pisin puinen sotalaiva. Lisäksi Ebeltoftissa toimii Glasmuseet Ebeltoft, yksi maailman ensimmäisistä lasimuseoista, jonka lasitaiteilijat Finn Lynggaard ja Tchai Munch perustivat vuonna 1985. Ebeltoftissa syntyi myös tiedemies ja keksijä Poul la Cour, joka teki varhaista työtä tuulivoiman parissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Keksinnöt: Myllyt seisovat meressä] 2000 — Tanska on tehnyt sähköä tuulesta pitempään kuin melkein kukaan: opettaja Poul la Cour rakensi jo 1890-luvulla tuulimyllyn, joka tuotti sähköä koulun tarpeisiin. Kööpenhaminan edustalle valmistui vuonna 2000 Middelgrundenin merituulipuisto, jonka kaksikymmentä myllyä seisovat kaaressa merellä. Puolet siitä rakennettiin osuuskuntana: tuhannet tavalliset ihmiset ostivat osuuden ja saavat siitä tuoton. Nykyään tuuli tuottaa yli puolet koko maan sähköstä.
+AIEMPI KYSYMYS: Mitä Poul la Cour tutki, kun hän teki varhaista työtä tuulivoiman parissa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Poul la Cour]] oli ebeltoftilaissyntyinen tiedemies ja opettaja. Hän rakensi jo 1890-luvulla tuulimyllyn, joka tuotti sähköä koulun tarpeisiin, ja hänen työtään pidetään tuulivoiman varhaisena kehittämisenä. Muistaakseni hän kokeili myös sähköenergian varastointia ja käytti tuulen sähköä [[vedyn]] valmistamiseen, mutta yksityiskohtia en ole varma. Tanska on tehnyt sähköä tuulesta pitempään kuin melkein kukaan, ja Poul la Courin työ on tämän perinteen alkupäässä. Ei paha, että yksi opettaja sai tämän kaiken liikkeelle.
+KYSYMYS: Kerro lisää: Poul la Cour
+
+### 423
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ebeltoft (merenkulku)
+Tietoruudun teksti: Ebeltoft on vanha satamakaupunki Jyllannin niemimaan Djurslandin niemellä, Tanskan keskisellä itärannikolla. Vanhan keskustan mukulakivikadut ja vuosisatoja vanhat ristikkotalot on haluttu säilyttää: suojelusuunnitelmat aloittivat 1960-luvulla kaupunginvaltuusto ja Tanskan kansallismuseo. Kaupungin nähtävyyksiin kuuluu Fregatten Jylland, joka on maailman pisin puinen sotalaiva. Lisäksi Ebeltoftissa toimii Glasmuseet Ebeltoft, yksi maailman ensimmäisistä lasimuseoista, jonka lasitaiteilijat Finn Lynggaard ja Tchai Munch perustivat vuonna 1985. Ebeltoftissa syntyi myös tiedemies ja keksijä Poul la Cour, joka teki varhaista työtä tuulivoiman parissa.
+AIEMPI KYSYMYS: Mitä Poul la Cour tutki, kun hän teki varhaista työtä tuulivoiman parissa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Poul la Cour]] oli ebeltoftilaissyntyinen tiedemies ja opettaja. Hän rakensi jo 1890-luvulla tuulimyllyn, joka tuotti sähköä koulun tarpeisiin, ja hänen työtään pidetään tuulivoiman varhaisena kehittämisenä. Muistaakseni hän kokeili myös sähköenergian varastointia ja käytti tuulen sähköä [[vedyn]] valmistamiseen, mutta yksityiskohtia en ole varma. Tanska on tehnyt sähköä tuulesta pitempään kuin melkein kukaan, ja Poul la Courin työ on tämän perinteen alkupäässä. Ei paha, että yksi opettaja sai tämän kaiken liikkeelle.
+KYSYMYS: Kerro lisää: vedyn
+
+### 424
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ebeltoft (merenkulku)
+Tietoruudun teksti: Ebeltoft on vanha satamakaupunki Jyllannin niemimaan Djurslandin niemellä, Tanskan keskisellä itärannikolla. Vanhan keskustan mukulakivikadut ja vuosisatoja vanhat ristikkotalot on haluttu säilyttää: suojelusuunnitelmat aloittivat 1960-luvulla kaupunginvaltuusto ja Tanskan kansallismuseo. Kaupungin nähtävyyksiin kuuluu Fregatten Jylland, joka on maailman pisin puinen sotalaiva. Lisäksi Ebeltoftissa toimii Glasmuseet Ebeltoft, yksi maailman ensimmäisistä lasimuseoista, jonka lasitaiteilijat Finn Lynggaard ja Tchai Munch perustivat vuonna 1985. Ebeltoftissa syntyi myös tiedemies ja keksijä Poul la Cour, joka teki varhaista työtä tuulivoiman parissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Puerto Montt: Risti saaren laella] Kapean, vain muutaman sadan metrin levyisen salmen takana kohoaa Isla Tenglo, pieni saari jonka harjanteella seisoo valkoinen risti - kaupungin tunnetuimpia maamerkkejä, joka näkyy laajalle Reloncavín selälle. Saarella asuu enää harvoja kalastajaperheitä, sillä maaperä on niukkaa eikä sähköverkko yllä joka taloon. Vene kuljettaa matkan minuutissa, ja saarelaiset tunnetaan erityisesti curanto-perinteestään: samaa ruokaa kuin Angelmón torillakin, mutta täällä valmistettuna vanhalla tavalla kuumennettujen kivien päällä maakuopassa. Rannalla siintävät kaupungin kerrostalot muistuttavat, miten lähellä saari todellisuudessa on.
+- [Lalibela — kaupunkilehti / Kivi ja kuva: Risti, joka kävi Belgiassa] Lalibelan risti on suuri koristeltu kulkueristi ja yksi Etiopian arvokkaimmista perintöesineistä. Sitä säilytetään Biete Medhane Alemissa. Risti on arviolta 1100-luvulta, noin kuusikymmentä senttiä pitkä ja seitsemän kilon painoinen, ja se on tehty yhdestä metallikappaleesta — joko kullasta tai pronssista ja kullasta. Alaosaa kannattavat Aadamin kädet, aihe joka toistuu etiopialaisissa kulkueristeissä; juhlapäivinä ne verhotaan kirkkaanvärisin kankain. Pappi voi hangata uskovia rististillä siunatakseen heidät.
+- [Unkari — maalehti / Historia: Kruunu, jonka risti on vinossa] 1000 — Unkarin pyhä kruunu on kahdesta osasta: alempi vanne on tehty Bysantissa ja ylempi kaariosa lännessä, ja ne on liitetty yhteen. Kruunua kiertää rivi emalikuvia pyhimyksistä, ja reunasta riippuu ketjuja. Huipulla oleva risti on kallellaan, ja arvellaan että se vääntyi, kun kruunua tungettiin liian pieneen arkkuun. Sitä ei ole suoristettu. Kruunulla oli erikoinen asema: kuningasta ei pidetty oikeana kuninkaana, ellei häntä kruunattu juuri tällä esineellä.
+AIEMPI KYSYMYS: Miksi juuri Ebeltoftin vanha keskusta haluttiin suojella 1960-luvulla?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Ebeltoftin vanhan keskustan mukulakivikadut ja vuosisatoja vanhat [[ristikkotalot]] haluttiin säilyttää, koska ne muodostavat harvinaisen ehjän kokonaisuuden pienessä satamakaupungissa. Suojelusuunnitelmat aloittivat 1960-luvulla kaupunginvaltuusto ja Tanskan kansallismuseo. Syistä en ole varma yksityiskohtaisesti, mutta yleensä tällaisessa suojelussa pyritään pitämään yllä kokonaista kaupunkikuvaa eikä vain yksittäisiä rakennuksia, ennen kuin uudisrakentaminen ehtii purkaa vanhaa. [[Ebeltoft]] on ylhäältä katsottuna nätti kuin pulla, ja siis muistutus siitä, että vanha kannattaa joskus pitää.
+KYSYMYS: Kerro lisää: ristikkotalot
+
+### 425
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ebeltoft (merenkulku)
+Tietoruudun teksti: Ebeltoft on vanha satamakaupunki Jyllannin niemimaan Djurslandin niemellä, Tanskan keskisellä itärannikolla. Vanhan keskustan mukulakivikadut ja vuosisatoja vanhat ristikkotalot on haluttu säilyttää: suojelusuunnitelmat aloittivat 1960-luvulla kaupunginvaltuusto ja Tanskan kansallismuseo. Kaupungin nähtävyyksiin kuuluu Fregatten Jylland, joka on maailman pisin puinen sotalaiva. Lisäksi Ebeltoftissa toimii Glasmuseet Ebeltoft, yksi maailman ensimmäisistä lasimuseoista, jonka lasitaiteilijat Finn Lynggaard ja Tchai Munch perustivat vuonna 1985. Ebeltoftissa syntyi myös tiedemies ja keksijä Poul la Cour, joka teki varhaista työtä tuulivoiman parissa.
+AIEMPI KYSYMYS: Miksi juuri Ebeltoftin vanha keskusta haluttiin suojella 1960-luvulla?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Ebeltoftin vanhan keskustan mukulakivikadut ja vuosisatoja vanhat [[ristikkotalot]] haluttiin säilyttää, koska ne muodostavat harvinaisen ehjän kokonaisuuden pienessä satamakaupungissa. Suojelusuunnitelmat aloittivat 1960-luvulla kaupunginvaltuusto ja Tanskan kansallismuseo. Syistä en ole varma yksityiskohtaisesti, mutta yleensä tällaisessa suojelussa pyritään pitämään yllä kokonaista kaupunkikuvaa eikä vain yksittäisiä rakennuksia, ennen kuin uudisrakentaminen ehtii purkaa vanhaa. [[Ebeltoft]] on ylhäältä katsottuna nätti kuin pulla, ja siis muistutus siitä, että vanha kannattaa joskus pitää.
+KYSYMYS: Kerro lisää: Ebeltoft
+
+### 426
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ebeltoft (merenkulku)
+Tietoruudun teksti: Ebeltoft on vanha satamakaupunki Jyllannin niemimaan Djurslandin niemellä, Tanskan keskisellä itärannikolla. Vanhan keskustan mukulakivikadut ja vuosisatoja vanhat ristikkotalot on haluttu säilyttää: suojelusuunnitelmat aloittivat 1960-luvulla kaupunginvaltuusto ja Tanskan kansallismuseo. Kaupungin nähtävyyksiin kuuluu Fregatten Jylland, joka on maailman pisin puinen sotalaiva. Lisäksi Ebeltoftissa toimii Glasmuseet Ebeltoft, yksi maailman ensimmäisistä lasimuseoista, jonka lasitaiteilijat Finn Lynggaard ja Tchai Munch perustivat vuonna 1985. Ebeltoftissa syntyi myös tiedemies ja keksijä Poul la Cour, joka teki varhaista työtä tuulivoiman parissa.
+AIEMPI KYSYMYS: Mikä Fregatten Jylland on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Fregatten Jylland]] on puinen purjesotalaiva, joka on nykyään museona [[Ebeltoftissa]]. Se on yksi maailman pisimmistä säilyneistä puisista sotalaivoista. Laiva on 1800-luvun puolivälin tienoilta, mahdollisesti 1860-luvulta, mutta tarkkaa vuotta en ole varma. Aikansa fregatti oli sotalaivatyyppi, jolla oli purjeiden lisäksi sekä tykkejä että kone. Laiva on hyvä muistutus siitä, miten pitkälle puusta voi rakentaa. Merellä se on melkein kyyhkyn ainoa kilpailija.
+KYSYMYS: Kerro lisää: Fregatten Jylland
+
+### 427
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ebeltoft (merenkulku)
+Tietoruudun teksti: Ebeltoft on vanha satamakaupunki Jyllannin niemimaan Djurslandin niemellä, Tanskan keskisellä itärannikolla. Vanhan keskustan mukulakivikadut ja vuosisatoja vanhat ristikkotalot on haluttu säilyttää: suojelusuunnitelmat aloittivat 1960-luvulla kaupunginvaltuusto ja Tanskan kansallismuseo. Kaupungin nähtävyyksiin kuuluu Fregatten Jylland, joka on maailman pisin puinen sotalaiva. Lisäksi Ebeltoftissa toimii Glasmuseet Ebeltoft, yksi maailman ensimmäisistä lasimuseoista, jonka lasitaiteilijat Finn Lynggaard ja Tchai Munch perustivat vuonna 1985. Ebeltoftissa syntyi myös tiedemies ja keksijä Poul la Cour, joka teki varhaista työtä tuulivoiman parissa.
+AIEMPI KYSYMYS: Mikä Fregatten Jylland on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Fregatten Jylland]] on puinen purjesotalaiva, joka on nykyään museona [[Ebeltoftissa]]. Se on yksi maailman pisimmistä säilyneistä puisista sotalaivoista. Laiva on 1800-luvun puolivälin tienoilta, mahdollisesti 1860-luvulta, mutta tarkkaa vuotta en ole varma. Aikansa fregatti oli sotalaivatyyppi, jolla oli purjeiden lisäksi sekä tykkejä että kone. Laiva on hyvä muistutus siitä, miten pitkälle puusta voi rakentaa. Merellä se on melkein kyyhkyn ainoa kilpailija.
+KYSYMYS: Kerro lisää: Ebeltoftissa
+
+### 428
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ebeltoft (merenkulku)
+Tietoruudun teksti: Ebeltoft on vanha satamakaupunki Jyllannin niemimaan Djurslandin niemellä, Tanskan keskisellä itärannikolla. Vanhan keskustan mukulakivikadut ja vuosisatoja vanhat ristikkotalot on haluttu säilyttää: suojelusuunnitelmat aloittivat 1960-luvulla kaupunginvaltuusto ja Tanskan kansallismuseo. Kaupungin nähtävyyksiin kuuluu Fregatten Jylland, joka on maailman pisin puinen sotalaiva. Lisäksi Ebeltoftissa toimii Glasmuseet Ebeltoft, yksi maailman ensimmäisistä lasimuseoista, jonka lasitaiteilijat Finn Lynggaard ja Tchai Munch perustivat vuonna 1985. Ebeltoftissa syntyi myös tiedemies ja keksijä Poul la Cour, joka teki varhaista työtä tuulivoiman parissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Puerto Montt: Risti saaren laella] Kapean, vain muutaman sadan metrin levyisen salmen takana kohoaa Isla Tenglo, pieni saari jonka harjanteella seisoo valkoinen risti - kaupungin tunnetuimpia maamerkkejä, joka näkyy laajalle Reloncavín selälle. Saarella asuu enää harvoja kalastajaperheitä, sillä maaperä on niukkaa eikä sähköverkko yllä joka taloon. Vene kuljettaa matkan minuutissa, ja saarelaiset tunnetaan erityisesti curanto-perinteestään: samaa ruokaa kuin Angelmón torillakin, mutta täällä valmistettuna vanhalla tavalla kuumennettujen kivien päällä maakuopassa. Rannalla siintävät kaupungin kerrostalot muistuttavat, miten lähellä saari todellisuudessa on.
+- [Lalibela — kaupunkilehti / Kivi ja kuva: Risti, joka kävi Belgiassa] Lalibelan risti on suuri koristeltu kulkueristi ja yksi Etiopian arvokkaimmista perintöesineistä. Sitä säilytetään Biete Medhane Alemissa. Risti on arviolta 1100-luvulta, noin kuusikymmentä senttiä pitkä ja seitsemän kilon painoinen, ja se on tehty yhdestä metallikappaleesta — joko kullasta tai pronssista ja kullasta. Alaosaa kannattavat Aadamin kädet, aihe joka toistuu etiopialaisissa kulkueristeissä; juhlapäivinä ne verhotaan kirkkaanvärisin kankain. Pappi voi hangata uskovia rististillä siunatakseen heidät.
+- [Unkari — maalehti / Historia: Kruunu, jonka risti on vinossa] 1000 — Unkarin pyhä kruunu on kahdesta osasta: alempi vanne on tehty Bysantissa ja ylempi kaariosa lännessä, ja ne on liitetty yhteen. Kruunua kiertää rivi emalikuvia pyhimyksistä, ja reunasta riippuu ketjuja. Huipulla oleva risti on kallellaan, ja arvellaan että se vääntyi, kun kruunua tungettiin liian pieneen arkkuun. Sitä ei ole suoristettu. Kruunulla oli erikoinen asema: kuningasta ei pidetty oikeana kuninkaana, ellei häntä kruunattu juuri tällä esineellä.
+AIEMPI KYSYMYS: Mitä ristikkotalo tarkoittaa ja miten sellainen rakennetaan?
+AIEMPI VASTAUS (Livia):
+Kato, tää on rakennuspuolen juttu. [[Ristikkotalo]] on talo, jonka runko tehdään puupalkeista. Palkit muodostavat näkyvän ristikon, ja välit täytetään esimerkiksi savella, saviseoksella tai tiilellä ja rapataan. Runko kantaa rakennuksen painon, ja täyte vain tiivistää seinän. Tämä rakennustapa on ollut yleinen monin paikoin Euroopassa, ja Tanskassa tällaisia taloja on säilynyt monissa vanhoissa kaupungeissa, myös [[Ebeltoftissa]]. Rakennustapa kestää hyvin, kun rungon puuta huolletaan.
+
+Ristikkotalot näyttävät ylhäältä melkein piirretyiltä. Kyl minä aina yritän laskea niistä ruutuja, vaikka ne eivät pysy paikoillaan niin kuin minä toivon.
+KYSYMYS: Kerro lisää: Ristikkotalo
+
+### 429
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ebeltoft (merenkulku)
+Tietoruudun teksti: Ebeltoft on vanha satamakaupunki Jyllannin niemimaan Djurslandin niemellä, Tanskan keskisellä itärannikolla. Vanhan keskustan mukulakivikadut ja vuosisatoja vanhat ristikkotalot on haluttu säilyttää: suojelusuunnitelmat aloittivat 1960-luvulla kaupunginvaltuusto ja Tanskan kansallismuseo. Kaupungin nähtävyyksiin kuuluu Fregatten Jylland, joka on maailman pisin puinen sotalaiva. Lisäksi Ebeltoftissa toimii Glasmuseet Ebeltoft, yksi maailman ensimmäisistä lasimuseoista, jonka lasitaiteilijat Finn Lynggaard ja Tchai Munch perustivat vuonna 1985. Ebeltoftissa syntyi myös tiedemies ja keksijä Poul la Cour, joka teki varhaista työtä tuulivoiman parissa.
+AIEMPI KYSYMYS: Mistä raaka-aineista lasi tehdään?
+AIEMPI VASTAUS (Livia):
+Ai se. Ebeltoftin lasimuseon vuoksi tämä tulee mieleen. Lasi tehdään pääasiassa [[piidioksidista]] eli kvartsihiekasta, johon sekoitetaan soodaa ja kalkkia. Seos sulatetaan hyvin korkeassa lämpötilassa, yli tuhannessa asteessa, ja sulaa lasia voi muotoilla puhaltamalla, valamalla tai muokkaamalla. Soodan tehtävä on laskea sulamislämpötilaa, ja kalkki tekee lasista kestävämpää. Eri lisäaineilla lasiin saadaan värejä. Lasitaide perustuu tähän yksinkertaiseen seokseen, ja Ebeltoftin [[lasimuseo]] esittelee sen mahdollisuuksia. Tuntuu hurjalta, että hiekasta saadaan tällaista.
+KYSYMYS: Kerro lisää: piidioksidista
+
+### 430
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ebeltoft (merenkulku)
+Tietoruudun teksti: Ebeltoft on vanha satamakaupunki Jyllannin niemimaan Djurslandin niemellä, Tanskan keskisellä itärannikolla. Vanhan keskustan mukulakivikadut ja vuosisatoja vanhat ristikkotalot on haluttu säilyttää: suojelusuunnitelmat aloittivat 1960-luvulla kaupunginvaltuusto ja Tanskan kansallismuseo. Kaupungin nähtävyyksiin kuuluu Fregatten Jylland, joka on maailman pisin puinen sotalaiva. Lisäksi Ebeltoftissa toimii Glasmuseet Ebeltoft, yksi maailman ensimmäisistä lasimuseoista, jonka lasitaiteilijat Finn Lynggaard ja Tchai Munch perustivat vuonna 1985. Ebeltoftissa syntyi myös tiedemies ja keksijä Poul la Cour, joka teki varhaista työtä tuulivoiman parissa.
+AIEMPI KYSYMYS: Mistä raaka-aineista lasi tehdään?
+AIEMPI VASTAUS (Livia):
+Ai se. Ebeltoftin lasimuseon vuoksi tämä tulee mieleen. Lasi tehdään pääasiassa [[piidioksidista]] eli kvartsihiekasta, johon sekoitetaan soodaa ja kalkkia. Seos sulatetaan hyvin korkeassa lämpötilassa, yli tuhannessa asteessa, ja sulaa lasia voi muotoilla puhaltamalla, valamalla tai muokkaamalla. Soodan tehtävä on laskea sulamislämpötilaa, ja kalkki tekee lasista kestävämpää. Eri lisäaineilla lasiin saadaan värejä. Lasitaide perustuu tähän yksinkertaiseen seokseen, ja Ebeltoftin [[lasimuseo]] esittelee sen mahdollisuuksia. Tuntuu hurjalta, että hiekasta saadaan tällaista.
+KYSYMYS: Kerro lisää: lasimuseo
+
+### 431
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tønder (kauppa)
+Tietoruudun teksti: Tønder on kaupunki Etelä-Tanskan alueella lähellä Saksan rajaa ja Tønderin kunnan pääkaupunki. Hansaliitto myönsi sille satamaoikeudet vuonna 1243, ja sitä pidetään Tanskan vanhimpana etuoikeutettuna kauppakaupunkina. 1550-luvulla sataman suora yhteys mereen katkesi, kun kaupungin länsipuolelle rakennettiin penkereitä. Keskustaa hallitsevat 1600-luvun lopun ja 1700-luvun alun talot, jolloin kaupunki kasvoi nopeasti pitsiteollisuuden ansiosta. Ennen vuotta 1864 Tønder kuului Schleswigin herttuakuntaan, ja vuoden 1920 kansanäänestysten jälkeen se liitettiin Tanskaan, vaikka noin 76 prosenttia kaupunkilaisista äänesti Saksan puolesta.
+AIEMPI KYSYMYS: Miksi kaupunki liitettiin Tanskaan, vaikka useimmat asukkaat äänestivät Saksan puolesta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tää on pitkä juttu, ja sovitaan että sävy pysyy rauhallisena. Ennen vuotta 1864 [[Tønder]] kuului [[Schleswigin]] herttuakuntaan, ja ensimmäisen maailmansodan jälkeen rajaa ratkaistiin kansanäänestyksillä vuonna 1920. Käsitykseni mukaan äänestys järjestettiin alueittain eikä kaupunki kerrallaan: pohjoinen äänestysalue äänesti enemmistöllä Tanskan puolesta, ja koko alue liitettiin Tanskaan, vaikka Tønderin kaupungissa noin 76 prosenttia äänesti Saksan puolesta. Tanskalaiset pitivät rajaa oikeudenmukaisena, kun taas moni saksalaismielinen piti tulosta kaupungin kannalta kohtuuttomana, ja molemmat kannat ovat vakiintuneita. Raja on pysynyt sen jälkeen paikallaan, ja alueella on molempia kieliä ja kulttuureja. Siitä on onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Tønder
+
+### 432
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tønder (kauppa)
+Tietoruudun teksti: Tønder on kaupunki Etelä-Tanskan alueella lähellä Saksan rajaa ja Tønderin kunnan pääkaupunki. Hansaliitto myönsi sille satamaoikeudet vuonna 1243, ja sitä pidetään Tanskan vanhimpana etuoikeutettuna kauppakaupunkina. 1550-luvulla sataman suora yhteys mereen katkesi, kun kaupungin länsipuolelle rakennettiin penkereitä. Keskustaa hallitsevat 1600-luvun lopun ja 1700-luvun alun talot, jolloin kaupunki kasvoi nopeasti pitsiteollisuuden ansiosta. Ennen vuotta 1864 Tønder kuului Schleswigin herttuakuntaan, ja vuoden 1920 kansanäänestysten jälkeen se liitettiin Tanskaan, vaikka noin 76 prosenttia kaupunkilaisista äänesti Saksan puolesta.
+AIEMPI KYSYMYS: Miksi kaupunki liitettiin Tanskaan, vaikka useimmat asukkaat äänestivät Saksan puolesta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tää on pitkä juttu, ja sovitaan että sävy pysyy rauhallisena. Ennen vuotta 1864 [[Tønder]] kuului [[Schleswigin]] herttuakuntaan, ja ensimmäisen maailmansodan jälkeen rajaa ratkaistiin kansanäänestyksillä vuonna 1920. Käsitykseni mukaan äänestys järjestettiin alueittain eikä kaupunki kerrallaan: pohjoinen äänestysalue äänesti enemmistöllä Tanskan puolesta, ja koko alue liitettiin Tanskaan, vaikka Tønderin kaupungissa noin 76 prosenttia äänesti Saksan puolesta. Tanskalaiset pitivät rajaa oikeudenmukaisena, kun taas moni saksalaismielinen piti tulosta kaupungin kannalta kohtuuttomana, ja molemmat kannat ovat vakiintuneita. Raja on pysynyt sen jälkeen paikallaan, ja alueella on molempia kieliä ja kulttuureja. Siitä on onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Schleswigin
+
+### 433
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tønder (kauppa)
+Tietoruudun teksti: Tønder on kaupunki Etelä-Tanskan alueella lähellä Saksan rajaa ja Tønderin kunnan pääkaupunki. Hansaliitto myönsi sille satamaoikeudet vuonna 1243, ja sitä pidetään Tanskan vanhimpana etuoikeutettuna kauppakaupunkina. 1550-luvulla sataman suora yhteys mereen katkesi, kun kaupungin länsipuolelle rakennettiin penkereitä. Keskustaa hallitsevat 1600-luvun lopun ja 1700-luvun alun talot, jolloin kaupunki kasvoi nopeasti pitsiteollisuuden ansiosta. Ennen vuotta 1864 Tønder kuului Schleswigin herttuakuntaan, ja vuoden 1920 kansanäänestysten jälkeen se liitettiin Tanskaan, vaikka noin 76 prosenttia kaupunkilaisista äänesti Saksan puolesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Papua-Uusi-Guinea — maalehti / Luonto: Kyyhky, jonka päässä on pitsiä] Viktoriankruunukyyhky on maailman suurin nykyinen kyyhkylaji: pituutta on 73–75 senttiä, joskus yli kahdeksankymmentä, ja painoa keskimäärin 2,4 kiloa. Sinertävänharmaan linnun päässä on pitsimäinen töyhtö, jonka sulat päättyvät valkoisiin kärkiin, rinta on tummanpurppurainen ja iiris punainen. Se kävelee kiireettömästi Pohjois-Uuden-Guinean alavien metsien ja suometsien pohjalla ja syö maahan pudonneita hedelmiä. Häirittynä se nousee suoraan ylös latvustoon. Nimi muistaa kuningatar Viktoriaa, ja sukuun kuuluu neljä kruunukyyhkylajia, jotka kaikki elävät vain Uuden-Guinean seudulla.
+- [Irlanti — maalehti / Käsityö: Pitsi, jota ei kudota vaan leikataan] 1846 — Carrickmacrossin pitsi ei ole kudottua vaan ommeltua. Ohut palttina kiinnitetään harsokankaan päälle, kuvio ommellaan reunoja pitkin kiinni ja ylimääräinen kangas leikataan varovasti pois. Tekniikka tuli Irlantiin 1820-luvulla, mutta se levisi laajalle vasta nälänhädän aikana, kun pitsikouluja perustettiin antamaan naisille ansiota. Työ oli hidasta ja tarkkaa, ja hyvästä kauluksesta sai enemmän kuin viikon päiväpalkan. Pitsiä tehdään kaupungissa yhä, ja sitä on käytetty muun muassa kuninkaallisissa hääpuvuissa.
+AIEMPI KYSYMYS: Miten pitsiteollisuus sai pienen kauppakaupungin kasvamaan nopeasti 1600- ja 1700-luvuilla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Tønder]] on pitsikaupunki. Keskustaa hallitsevat 1600-luvun lopun ja 1700-luvun alun talot, jolloin kaupunki kasvoi nopeasti pitsiteollisuuden ansiosta. Tønderin pitsi oli luultavasti nyplättyä [[pitsiä]], jossa lanka kierretään puolakeloilla kuvioksi, mutta en ole aivan varma tekniikasta. Kauppiaat ostivat pitsiä alueen työntekijöiltä ja myivät sitä kauas, ja kysyntä toi rahaa, työtä ja uusia taloja. Pitsi oli tuohon aikaan arvostettu koriste-esine, jota käytettiin esimerkiksi kauluksissa ja hihansuissa. Pienikin kaupunki voi siis kasvaa langasta, kun on tarpeeksi kärsivällisiä käsiä.
+KYSYMYS: Kerro lisää: pitsiä
+
+### 434
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tønder (kauppa)
+Tietoruudun teksti: Tønder on kaupunki Etelä-Tanskan alueella lähellä Saksan rajaa ja Tønderin kunnan pääkaupunki. Hansaliitto myönsi sille satamaoikeudet vuonna 1243, ja sitä pidetään Tanskan vanhimpana etuoikeutettuna kauppakaupunkina. 1550-luvulla sataman suora yhteys mereen katkesi, kun kaupungin länsipuolelle rakennettiin penkereitä. Keskustaa hallitsevat 1600-luvun lopun ja 1700-luvun alun talot, jolloin kaupunki kasvoi nopeasti pitsiteollisuuden ansiosta. Ennen vuotta 1864 Tønder kuului Schleswigin herttuakuntaan, ja vuoden 1920 kansanäänestysten jälkeen se liitettiin Tanskaan, vaikka noin 76 prosenttia kaupunkilaisista äänesti Saksan puolesta.
+AIEMPI KYSYMYS: Mitä tapahtui Schleswigin herttuakunnalle vuoden 1864 sodassa?
+AIEMPI VASTAUS (Livia):
+Kääk. Tää on raskas aihe. Tanska kävi vuonna 1864 sotaa Preussia ja Itävaltaa vastaan, ja se hävisi. Rauhassa Tanska menetti [[Schleswigin]] ja [[Holsteinin]] herttuakunnat sekä Lauenburgin, ja Schleswig siirtyi aluksi Preussin ja Itävallan hallintaan ja myöhemmin Preussille. Tønder kuului siksi Saksan puolelle aina vuoteen 1920 asti. Sodan jälkeinen rajanveto on yksi Tanskan nykyhistorian suurista muutoksista, ja sen jäljet näkyvät alueen kielessä ja muistamisessa yhä. Siitä on onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Holsteinin
+
+### 435
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tønder (kauppa)
+Tietoruudun teksti: Tønder on kaupunki Etelä-Tanskan alueella lähellä Saksan rajaa ja Tønderin kunnan pääkaupunki. Hansaliitto myönsi sille satamaoikeudet vuonna 1243, ja sitä pidetään Tanskan vanhimpana etuoikeutettuna kauppakaupunkina. 1550-luvulla sataman suora yhteys mereen katkesi, kun kaupungin länsipuolelle rakennettiin penkereitä. Keskustaa hallitsevat 1600-luvun lopun ja 1700-luvun alun talot, jolloin kaupunki kasvoi nopeasti pitsiteollisuuden ansiosta. Ennen vuotta 1864 Tønder kuului Schleswigin herttuakuntaan, ja vuoden 1920 kansanäänestysten jälkeen se liitettiin Tanskaan, vaikka noin 76 prosenttia kaupunkilaisista äänesti Saksan puolesta.
+AIEMPI KYSYMYS: Mikä Hansaliitto oli ja mitä se teki?
+AIEMPI VASTAUS (Livia):
+Katotaas. Hansaliitto oli pohjoissaksalaisten kauppakaupunkien liittouma, joka hallitsi Itämeren ja Pohjanmeren kauppaa keskiajalla ja myöhemmin. Sen johtavia kaupunkeja olivat [[Lübeck]] ja Hampuri, ja liitto vaali jäsentensä kauppaetuja, ylläpiti turvallisia kauppareittejä ja sopi etuoikeuksista ulkomailla. Hansa muotoutui vähitellen 1200-luvulla, joten tarkka vuosi ja myöntäjä Tønderin satamaoikeuksien kohdalla ovat asioita, joista en ole varma. Liitto menetti merkitystään vähitellen myöhemmin. Sen perintö näkyy yhä vanhoissa kauppakaupungeissa ja [[Hansa]]-nimissä.
+KYSYMYS: Kerro lisää: Lübeck
+
+### 436
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tønder (kauppa)
+Tietoruudun teksti: Tønder on kaupunki Etelä-Tanskan alueella lähellä Saksan rajaa ja Tønderin kunnan pääkaupunki. Hansaliitto myönsi sille satamaoikeudet vuonna 1243, ja sitä pidetään Tanskan vanhimpana etuoikeutettuna kauppakaupunkina. 1550-luvulla sataman suora yhteys mereen katkesi, kun kaupungin länsipuolelle rakennettiin penkereitä. Keskustaa hallitsevat 1600-luvun lopun ja 1700-luvun alun talot, jolloin kaupunki kasvoi nopeasti pitsiteollisuuden ansiosta. Ennen vuotta 1864 Tønder kuului Schleswigin herttuakuntaan, ja vuoden 1920 kansanäänestysten jälkeen se liitettiin Tanskaan, vaikka noin 76 prosenttia kaupunkilaisista äänesti Saksan puolesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tallinna — kohdekartta / Kohdekartta: E-valtio] Viro oli vuonna 2005 maailman ensimmäinen maa, jossa sai äänestää vaaleissa internetissä. Äänestäjä tunnistautuu sirullisella henkilökortilla, joka on pakollinen jokaiselle virolaiselle viidestätoista ikävuodesta alkaen. Vuoden 2023 parlamenttivaaleissa yli puolet äänistä annettiin verkossa. Sama kortti ei ole vain äänestyskortti: sillä haetaan resepti apteekista, allekirjoitetaan sopimus ja perustetaan yritys. Ja sitten on vielä yksi kerros. Joulukuun ensimmäisenä päivänä 2014 alkoi e-residenttiohjelma, joka antaa saman sirukortin myös ulkomaalaiselle, joka ei asu maassa lainkaan — hän voi allekirjoittaa asiakirjoja ja perustaa yrityksen käymättä koskaan paikalla. Se on sama vanha hansa-aj…
+- [Saksa — maalehti / Historia: Kauppiaiden liitto hallitsi Itämerta] keskiaika — Keskiajalla Itämerta ei hallinnut kuningas vaan kauppiaiden kerho. Hansaliittoon kuului parhaimmillaan lähes kaksisataa kaupunkia Lontoosta Novgorodiin, ja sitä johdettiin Lyypekistä. Hansan laiva oli koggi: pyöreämahainen puualus, joka kuljetti suolaa, silliä, viljaa ja kankaita. Liitolla oli omat lait ja omat kauppatalot vieraissa satamissa, ja kun joku kuningas kiusasi kauppiaita, Hansa saattoi julistaa koko maan saartoon — ja voitti kerran Tanskan sodassakin. Moni Pohjois-Saksan kaupunki kutsuu itseään hansakaupungiksi vielä tänäänkin.
+AIEMPI KYSYMYS: Mikä Hansaliitto oli ja mitä se teki?
+AIEMPI VASTAUS (Livia):
+Katotaas. Hansaliitto oli pohjoissaksalaisten kauppakaupunkien liittouma, joka hallitsi Itämeren ja Pohjanmeren kauppaa keskiajalla ja myöhemmin. Sen johtavia kaupunkeja olivat [[Lübeck]] ja Hampuri, ja liitto vaali jäsentensä kauppaetuja, ylläpiti turvallisia kauppareittejä ja sopi etuoikeuksista ulkomailla. Hansa muotoutui vähitellen 1200-luvulla, joten tarkka vuosi ja myöntäjä Tønderin satamaoikeuksien kohdalla ovat asioita, joista en ole varma. Liitto menetti merkitystään vähitellen myöhemmin. Sen perintö näkyy yhä vanhoissa kauppakaupungeissa ja [[Hansa]]-nimissä.
+KYSYMYS: Kerro lisää: Hansa
+
+### 437
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tønder (kauppa)
+Tietoruudun teksti: Tønder on kaupunki Etelä-Tanskan alueella lähellä Saksan rajaa ja Tønderin kunnan pääkaupunki. Hansaliitto myönsi sille satamaoikeudet vuonna 1243, ja sitä pidetään Tanskan vanhimpana etuoikeutettuna kauppakaupunkina. 1550-luvulla sataman suora yhteys mereen katkesi, kun kaupungin länsipuolelle rakennettiin penkereitä. Keskustaa hallitsevat 1600-luvun lopun ja 1700-luvun alun talot, jolloin kaupunki kasvoi nopeasti pitsiteollisuuden ansiosta. Ennen vuotta 1864 Tønder kuului Schleswigin herttuakuntaan, ja vuoden 1920 kansanäänestysten jälkeen se liitettiin Tanskaan, vaikka noin 76 prosenttia kaupunkilaisista äänesti Saksan puolesta.
+AIEMPI KYSYMYS: Miksi Tanskan Vattimeren rannikolle rakennetaan penkereitä?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Vattimeren]] rannikko on matalaa, ja merenpinta voi nousta myrskyjen aikana yllättävän korkealle. Penkereet eli [[padot]] ja valleilla suojatut alueet pitävät meriveden loitolla maatalousmaasta ja asutuksesta, ja niiden taakse jäävää maata on voitu käyttää laiduntamiseen ja viljelyyn. Tønderin seudulla rannikon maisemaa on muokattu tällaisilla rakenteilla, ja 1550-luvulla länsipuolelle rakennetut penkereet katkaisivat kaupungin suoran yhteyden mereen. En ole varma, miten pitkälle koko alueen penkereet ulottuvat ajallisesti, mutta ilmiö on tunnettu Pohjanmeren rannikolla. Ihmisen tekemä rannikko on ylhäältä kyllä komeaa.
+KYSYMYS: Kerro lisää: Vattimeren
+
+### 438
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tønder (kauppa)
+Tietoruudun teksti: Tønder on kaupunki Etelä-Tanskan alueella lähellä Saksan rajaa ja Tønderin kunnan pääkaupunki. Hansaliitto myönsi sille satamaoikeudet vuonna 1243, ja sitä pidetään Tanskan vanhimpana etuoikeutettuna kauppakaupunkina. 1550-luvulla sataman suora yhteys mereen katkesi, kun kaupungin länsipuolelle rakennettiin penkereitä. Keskustaa hallitsevat 1600-luvun lopun ja 1700-luvun alun talot, jolloin kaupunki kasvoi nopeasti pitsiteollisuuden ansiosta. Ennen vuotta 1864 Tønder kuului Schleswigin herttuakuntaan, ja vuoden 1920 kansanäänestysten jälkeen se liitettiin Tanskaan, vaikka noin 76 prosenttia kaupunkilaisista äänesti Saksan puolesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Järvi, jonka padot melkein tappoivat] 1980–2006 — Ichkeulin järvi on Pohjois-Tunisiassa, parikymmentä kilometriä Bizertestä, Afrikan pohjoisimmasta kaupungista. Kansallispuisto on 126 neliökilometriä ja pääsi maailmanperintöluetteloon 1980. Järvi ja sen kosteikot ovat satojentuhansien muuttolintujen levähdyspaikka: sorsia, hanhia, kattohaikaroita ja flamingoja. Sitten järveen laskevat joet padottiin, makean veden tulo väheni, ja ruovikot ja sarat vaihtuivat suolaa sietäviin kasveihin — lintumäärät romahtivat. Kohde siirrettiin uhanalaisten maailmanperintökohteiden listalle 1996 ja poistettiin siltä 2006, kun suolaisuutta oli saatu laskemaan.
+AIEMPI KYSYMYS: Miksi Tanskan Vattimeren rannikolle rakennetaan penkereitä?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Vattimeren]] rannikko on matalaa, ja merenpinta voi nousta myrskyjen aikana yllättävän korkealle. Penkereet eli [[padot]] ja valleilla suojatut alueet pitävät meriveden loitolla maatalousmaasta ja asutuksesta, ja niiden taakse jäävää maata on voitu käyttää laiduntamiseen ja viljelyyn. Tønderin seudulla rannikon maisemaa on muokattu tällaisilla rakenteilla, ja 1550-luvulla länsipuolelle rakennetut penkereet katkaisivat kaupungin suoran yhteyden mereen. En ole varma, miten pitkälle koko alueen penkereet ulottuvat ajallisesti, mutta ilmiö on tunnettu Pohjanmeren rannikolla. Ihmisen tekemä rannikko on ylhäältä kyllä komeaa.
+KYSYMYS: Kerro lisää: padot
+
+### 439
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nyborgin linna (historia)
+Tietoruudun teksti: Nyborgin linna on entisöity keskiaikainen linna Nyborgin kaupungissa Fynin saarella. Se perustettiin noin vuonna 1170, ja alun perin se oli vallihaudan ympäröimä neliönmuotoinen linna, jossa oli kulmatornit ja niiden välillä muuri. Kuningas Eerik V Klipping allekirjoitti linnassa Tanskan ensimmäisen perustuslain vuonna 1282, ja vuoteen 1413 asti linnan päärakennus oli keskiaikaisen parlamentin, Danehofin, pääasiallinen kokouspaikka. Kuningas Kristian III teetti 1540-luvulla uuden juhlasalin ja tornin. Ruotsin ja Tanskan välisessä sodassa 1657–58 linna vaurioitui pahoin, ja se entisöitiin 1900-luvun alussa museoksi.
+AIEMPI KYSYMYS: Mitä Danehof oli, ja keitä siellä kokoontui päättämään maan asioista?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Danehof]] oli keskiaikaisen Tanskan kuninkaan neuvoa-antava kokous eli eräänlainen varhainen parlamentti. Siellä kokoontuivat tavallisesti kuningas sekä maan vaikutusvaltaisimpia henkilöitä, kuten aatelisia ja piispoja, ja kokouksessa käsiteltiin lainsäädäntöä ja kuninkaan tekemiä päätöksiä. En ole varma, keitä muita ryhmiä siihen kuului eri aikoina, enkä sitä, miten usein se tarkalleen kokoontui. Nyborgin [[linna]] oli vuoteen 1413 asti Danehofin pääasiallinen kokouspaikka. Danehof on kaukainen esi-isä nykyiselle Tanskan parlamentille [[Folketingetille]].
+KYSYMYS: Kerro lisää: Danehof
+
+### 440
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nyborgin linna (historia)
+Tietoruudun teksti: Nyborgin linna on entisöity keskiaikainen linna Nyborgin kaupungissa Fynin saarella. Se perustettiin noin vuonna 1170, ja alun perin se oli vallihaudan ympäröimä neliönmuotoinen linna, jossa oli kulmatornit ja niiden välillä muuri. Kuningas Eerik V Klipping allekirjoitti linnassa Tanskan ensimmäisen perustuslain vuonna 1282, ja vuoteen 1413 asti linnan päärakennus oli keskiaikaisen parlamentin, Danehofin, pääasiallinen kokouspaikka. Kuningas Kristian III teetti 1540-luvulla uuden juhlasalin ja tornin. Ruotsin ja Tanskan välisessä sodassa 1657–58 linna vaurioitui pahoin, ja se entisöitiin 1900-luvun alussa museoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Elmon linnake] 1552 (rakennus), 1565 (piiritys) Linnake rakennettiin 1552 vartioimaan kahden sataman, Grand Harbourin ja Marsamxettin, suuta samalta kapealta niemenkärjeltä, jolle Valletta myöhemmin nousi. Tähden muotoinen muuri oli aikanaan uutta linnoitustekniikkaa, mutta osmanien saapuessa 1565 moni piti sitä silti liian pienenä kestämään pitkää piiritystä. Se piti pintansa lähes kuukauden, 18. toukokuuta – 23. kesäkuuta, vaikka miehistö oli moninkertaisesti alivoimainen. Yöllä veneet toivat Birgusta lisää puolustajia ja veivät haavoittuneita pois, ja monet pahoin haavoittuneet ritarit kieltäytyivät poistumasta: he pyysivät kantaa itsensä tuoleilla muurille jatkaakseen taistelua istualtaan viimeiseen a…
+- [Lhasa — kaupunkilehti / Lhasa: Talvipalatsi Punaisella kummulla] Marpo Rilla eli Punaisella kummulla oli seissyt linna jo 600-luvulta, kun Viides dalai-lama määräsi 1645 rakennettavaksi uuden palatsin. Ulkoseinät nousivat kolmessa vuodessa, mutta sisustus vei neljäkymmentäviisi vuotta lisää. Dalai-lama muutti Valkoiseen palatsiin 1649, ja Punainen palatsi nousi vasta 1690–1694, kaksitoista vuotta hänen kuolemansa jälkeen. Tuloksena on kolmetoista kerrosta, yli tuhat huonetta, kymmenentuhatta pyhäkköä ja noin kaksisataatuhatta patsasta; korkeutta on 119 metriä kukkulan päältä ja yli kolmesataa laakson pohjalta. Kaltevat kiviseinät ovat kolmisen metriä paksut, ja perustuksiin valettiin kuparia järistysten varalta.
+AIEMPI KYSYMYS: Mitä Danehof oli, ja keitä siellä kokoontui päättämään maan asioista?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Danehof]] oli keskiaikaisen Tanskan kuninkaan neuvoa-antava kokous eli eräänlainen varhainen parlamentti. Siellä kokoontuivat tavallisesti kuningas sekä maan vaikutusvaltaisimpia henkilöitä, kuten aatelisia ja piispoja, ja kokouksessa käsiteltiin lainsäädäntöä ja kuninkaan tekemiä päätöksiä. En ole varma, keitä muita ryhmiä siihen kuului eri aikoina, enkä sitä, miten usein se tarkalleen kokoontui. Nyborgin [[linna]] oli vuoteen 1413 asti Danehofin pääasiallinen kokouspaikka. Danehof on kaukainen esi-isä nykyiselle Tanskan parlamentille [[Folketingetille]].
+KYSYMYS: Kerro lisää: linna
+
+### 441
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nyborgin linna (historia)
+Tietoruudun teksti: Nyborgin linna on entisöity keskiaikainen linna Nyborgin kaupungissa Fynin saarella. Se perustettiin noin vuonna 1170, ja alun perin se oli vallihaudan ympäröimä neliönmuotoinen linna, jossa oli kulmatornit ja niiden välillä muuri. Kuningas Eerik V Klipping allekirjoitti linnassa Tanskan ensimmäisen perustuslain vuonna 1282, ja vuoteen 1413 asti linnan päärakennus oli keskiaikaisen parlamentin, Danehofin, pääasiallinen kokouspaikka. Kuningas Kristian III teetti 1540-luvulla uuden juhlasalin ja tornin. Ruotsin ja Tanskan välisessä sodassa 1657–58 linna vaurioitui pahoin, ja se entisöitiin 1900-luvun alussa museoksi.
+AIEMPI KYSYMYS: Mitä Danehof oli, ja keitä siellä kokoontui päättämään maan asioista?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Danehof]] oli keskiaikaisen Tanskan kuninkaan neuvoa-antava kokous eli eräänlainen varhainen parlamentti. Siellä kokoontuivat tavallisesti kuningas sekä maan vaikutusvaltaisimpia henkilöitä, kuten aatelisia ja piispoja, ja kokouksessa käsiteltiin lainsäädäntöä ja kuninkaan tekemiä päätöksiä. En ole varma, keitä muita ryhmiä siihen kuului eri aikoina, enkä sitä, miten usein se tarkalleen kokoontui. Nyborgin [[linna]] oli vuoteen 1413 asti Danehofin pääasiallinen kokouspaikka. Danehof on kaukainen esi-isä nykyiselle Tanskan parlamentille [[Folketingetille]].
+KYSYMYS: Kerro lisää: Folketingetille
+
+### 442
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nyborgin linna (historia)
+Tietoruudun teksti: Nyborgin linna on entisöity keskiaikainen linna Nyborgin kaupungissa Fynin saarella. Se perustettiin noin vuonna 1170, ja alun perin se oli vallihaudan ympäröimä neliönmuotoinen linna, jossa oli kulmatornit ja niiden välillä muuri. Kuningas Eerik V Klipping allekirjoitti linnassa Tanskan ensimmäisen perustuslain vuonna 1282, ja vuoteen 1413 asti linnan päärakennus oli keskiaikaisen parlamentin, Danehofin, pääasiallinen kokouspaikka. Kuningas Kristian III teetti 1540-luvulla uuden juhlasalin ja tornin. Ruotsin ja Tanskan välisessä sodassa 1657–58 linna vaurioitui pahoin, ja se entisöitiin 1900-luvun alussa museoksi.
+AIEMPI KYSYMYS: Mitä Tanskan ensimmäinen perustuslaki vuonna 1282 oikeastaan tarkoitti kuninkaan vallalle?
+AIEMPI VASTAUS (Livia):
+No jopas. Isoon kysymykseen vastaan varovasti. Kuningas [[Eerik V Klipping]] allekirjoitti vuonna 1282 asiakirjan, jota kutsutaan usein Tanskan ensimmäiseksi perustuslaiksi, vaikka se poikkesi nykyisestä perustuslaista paljon. Muistaakseni siinä kuningas sitoutui noudattamaan tiettyjä rajoja vallankäytössään: hän lupasi kutsua [[Danehofin]] koolle säännöllisesti ja kunnioittaa lakia esimerkiksi vangitsemisissa. Näin kuninkaan valtaa rajoitettiin sopimuksella ylimystön kanssa, mutta tarkkoja ehtoja en ole varma. Asiakirja on silti tärkeä esimerkki siitä, miten hallitsijan valtaa alettiin sitoa sääntöihin. Onpas vaikeaa ottaa kantaa tällaiseen.
+KYSYMYS: Kerro lisää: Eerik V Klipping
+
+### 443
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nyborgin linna (historia)
+Tietoruudun teksti: Nyborgin linna on entisöity keskiaikainen linna Nyborgin kaupungissa Fynin saarella. Se perustettiin noin vuonna 1170, ja alun perin se oli vallihaudan ympäröimä neliönmuotoinen linna, jossa oli kulmatornit ja niiden välillä muuri. Kuningas Eerik V Klipping allekirjoitti linnassa Tanskan ensimmäisen perustuslain vuonna 1282, ja vuoteen 1413 asti linnan päärakennus oli keskiaikaisen parlamentin, Danehofin, pääasiallinen kokouspaikka. Kuningas Kristian III teetti 1540-luvulla uuden juhlasalin ja tornin. Ruotsin ja Tanskan välisessä sodassa 1657–58 linna vaurioitui pahoin, ja se entisöitiin 1900-luvun alussa museoksi.
+AIEMPI KYSYMYS: Mitä Tanskan ensimmäinen perustuslaki vuonna 1282 oikeastaan tarkoitti kuninkaan vallalle?
+AIEMPI VASTAUS (Livia):
+No jopas. Isoon kysymykseen vastaan varovasti. Kuningas [[Eerik V Klipping]] allekirjoitti vuonna 1282 asiakirjan, jota kutsutaan usein Tanskan ensimmäiseksi perustuslaiksi, vaikka se poikkesi nykyisestä perustuslaista paljon. Muistaakseni siinä kuningas sitoutui noudattamaan tiettyjä rajoja vallankäytössään: hän lupasi kutsua [[Danehofin]] koolle säännöllisesti ja kunnioittaa lakia esimerkiksi vangitsemisissa. Näin kuninkaan valtaa rajoitettiin sopimuksella ylimystön kanssa, mutta tarkkoja ehtoja en ole varma. Asiakirja on silti tärkeä esimerkki siitä, miten hallitsijan valtaa alettiin sitoa sääntöihin. Onpas vaikeaa ottaa kantaa tällaiseen.
+KYSYMYS: Kerro lisää: Danehofin
+
+### 444
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nyborgin linna (historia)
+Tietoruudun teksti: Nyborgin linna on entisöity keskiaikainen linna Nyborgin kaupungissa Fynin saarella. Se perustettiin noin vuonna 1170, ja alun perin se oli vallihaudan ympäröimä neliönmuotoinen linna, jossa oli kulmatornit ja niiden välillä muuri. Kuningas Eerik V Klipping allekirjoitti linnassa Tanskan ensimmäisen perustuslain vuonna 1282, ja vuoteen 1413 asti linnan päärakennus oli keskiaikaisen parlamentin, Danehofin, pääasiallinen kokouspaikka. Kuningas Kristian III teetti 1540-luvulla uuden juhlasalin ja tornin. Ruotsin ja Tanskan välisessä sodassa 1657–58 linna vaurioitui pahoin, ja se entisöitiin 1900-luvun alussa museoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mandalay — kaupunkilehti / Mandalay: Muurit, vallihauta ja kaksitoista porttia] Suunnitelma oli 144 korttelin ruutukaava, jonka keskellä oli kuudentoista korttelin palatsialue. Linnoitusta ympäröi neljä kahden kilometrin muuria täsmällisenä neliönä ja 64 metriä leveä, 4,5 metriä syvä vallihauta. Muuri on tiiltä ja mutalaastia, tyveltä kolme metriä paksu ja lähes seitsemän metriä korkea, ja sen varrella on 48 bastionia kultakärkisine torneineen 169 metrin välein. Portteja on kolme joka sivulla, yhteensä kaksitoista, ja kukin kantaa oman eläinradan merkkinsä. Keskiporttien yllä on seitsemänkerroksinen pyatthat-katos, muiden viisikerroksinen.
+AIEMPI KYSYMYS: Miksi keskiaikaisilla linnoilla oli vallihaudat?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Vallihauta]] oli linnan puolustuksen ensimmäinen este. Se piti hyökkääjät loitolla muurista, vaikeutti piirityskoneiden ja tikkaiden tuomista lähelle seinää ja esti tunnelien kaivamisen muurin alle. Vesihauta oli erityisen tehokas, koska sen yli pääsi yleensä vain nostosillan kautta. [[Nyborgin linna]] oli perustamisaikanaan, noin vuonna 1170, vallihaudan ympäröimä neliönmuotoinen linna, jossa oli kulmatornit ja niiden välillä muuri. Linnan vallihauta kertoo, että linnan tärkein tehtävä oli suojella sen asukkaita ja valtaa. Hauskaa kyllä, kyyhky ei hautoja tarvitse.
+KYSYMYS: Kerro lisää: Vallihauta
+
+### 445
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nyborgin linna (historia)
+Tietoruudun teksti: Nyborgin linna on entisöity keskiaikainen linna Nyborgin kaupungissa Fynin saarella. Se perustettiin noin vuonna 1170, ja alun perin se oli vallihaudan ympäröimä neliönmuotoinen linna, jossa oli kulmatornit ja niiden välillä muuri. Kuningas Eerik V Klipping allekirjoitti linnassa Tanskan ensimmäisen perustuslain vuonna 1282, ja vuoteen 1413 asti linnan päärakennus oli keskiaikaisen parlamentin, Danehofin, pääasiallinen kokouspaikka. Kuningas Kristian III teetti 1540-luvulla uuden juhlasalin ja tornin. Ruotsin ja Tanskan välisessä sodassa 1657–58 linna vaurioitui pahoin, ja se entisöitiin 1900-luvun alussa museoksi.
+AIEMPI KYSYMYS: Miksi keskiaikaisilla linnoilla oli vallihaudat?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Vallihauta]] oli linnan puolustuksen ensimmäinen este. Se piti hyökkääjät loitolla muurista, vaikeutti piirityskoneiden ja tikkaiden tuomista lähelle seinää ja esti tunnelien kaivamisen muurin alle. Vesihauta oli erityisen tehokas, koska sen yli pääsi yleensä vain nostosillan kautta. [[Nyborgin linna]] oli perustamisaikanaan, noin vuonna 1170, vallihaudan ympäröimä neliönmuotoinen linna, jossa oli kulmatornit ja niiden välillä muuri. Linnan vallihauta kertoo, että linnan tärkein tehtävä oli suojella sen asukkaita ja valtaa. Hauskaa kyllä, kyyhky ei hautoja tarvitse.
+KYSYMYS: Kerro lisää: Nyborgin linna
+
+### 446
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nyborgin linna (historia)
+Tietoruudun teksti: Nyborgin linna on entisöity keskiaikainen linna Nyborgin kaupungissa Fynin saarella. Se perustettiin noin vuonna 1170, ja alun perin se oli vallihaudan ympäröimä neliönmuotoinen linna, jossa oli kulmatornit ja niiden välillä muuri. Kuningas Eerik V Klipping allekirjoitti linnassa Tanskan ensimmäisen perustuslain vuonna 1282, ja vuoteen 1413 asti linnan päärakennus oli keskiaikaisen parlamentin, Danehofin, pääasiallinen kokouspaikka. Kuningas Kristian III teetti 1540-luvulla uuden juhlasalin ja tornin. Ruotsin ja Tanskan välisessä sodassa 1657–58 linna vaurioitui pahoin, ja se entisöitiin 1900-luvun alussa museoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kohdekartta / Kohdekartta: Riddarholmenin kirkko] 1835 Riddarholmenin kirkko on yksi Tukholman vanhimmista rakennuksista — se rakennettiin fransiskaanimunkkien luostariksi jo 1200-luvun lopulla. Uskonpuhdistuksen jälkeen munkit lähtivät, ja kirkosta tuli vähitellen kuninkaallisten hautakirkko. Melkein kaikki Ruotsin kuninkaat Kustaa II Aadolfista Kustaa V:een lepäävät kirkon holveissa, samoin kaksi keskiaikaista kuningasta. Vain kuningatar Kristiina on haudattu muualle, Roomaan. Alkuperäisen tornin huipun suunnitteli flaamilainen arkkitehti Willem Boy 1500-luvulla, mutta salama tuhosi sen 28. heinäkuuta 1835. Nykyinen valurautahuippu on rakennettu sen tilalle. Seurakunta lakkautettiin jo 1807, joten kirkkoa käytetään enää hautajaisiin ja m…
+- [Tukholma — kohdekartta / Kohdekartta: Kaupungintalo] 1923 Arkkitehti Ragnar Östberg suunnitteli kaupungintalon, joka rakennettiin kaupungin rantaan vuosina 1911–1923 — melkein kahdeksan miljoonaa punaista tiiltä. Tornissa on 106 metriä ja huipulla kolme kultaista kruunua, Ruotsin vanha tunnus. Talon sisällä on Sininen sali, jossa Nobelin palkintojen juhlaillallinen syödään joka vuosi. Sen jälkeen vieraat tanssivat Kultaisessa salissa, jonka seinät on peitetty yli 18 miljoonalla pienellä mosaiikkipalalla. Kaupungintalo avattiin juhlallisesti 23. kesäkuuta 1923. Avaajat luulivat sen olevan tasan 400 vuotta siitä, kun kuningas Kustaa Vaasa saapui Tukholmaan — todellisuudessa päivämäärä oli hieman väärin, mutta juhla pidettiin silti.
+AIEMPI KYSYMYS: Miksi Ruotsi ja Tanska sotivat vuosina 1657–58?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tää on vakava aihe. Ruotsin ja Tanskan sota 1657–58 liittyi Itämeren hallintaan ja valtasuhteisiin Pohjolassa. Ruotsin kuningas [[Kaarle X Kustaa]] oli sotinut Puolassa, ja Tanska liittyi sotaan Ruotsia vastaan, jolloin Ruotsi käänsi voimansa Tanskaa vastaan. Talvella 1658 ruotsalaiset joukot ylittivät Tanskan salmien jään, ja Nyborgin linna vaurioitui sodassa pahoin. Sota päättyi [[Roskilden rauhaan]], jossa Tanska menetti alueita nykyisen Etelä-Ruotsin alueella. Yksityiskohdat sodan syistä ja etenemisestä ovat monimutkaisia, joten tämä on lyhyt yleiskuva. Onneksi siitä on kauan.
+KYSYMYS: Kerro lisää: Kaarle X Kustaa
+
+### 447
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nyborgin linna (historia)
+Tietoruudun teksti: Nyborgin linna on entisöity keskiaikainen linna Nyborgin kaupungissa Fynin saarella. Se perustettiin noin vuonna 1170, ja alun perin se oli vallihaudan ympäröimä neliönmuotoinen linna, jossa oli kulmatornit ja niiden välillä muuri. Kuningas Eerik V Klipping allekirjoitti linnassa Tanskan ensimmäisen perustuslain vuonna 1282, ja vuoteen 1413 asti linnan päärakennus oli keskiaikaisen parlamentin, Danehofin, pääasiallinen kokouspaikka. Kuningas Kristian III teetti 1540-luvulla uuden juhlasalin ja tornin. Ruotsin ja Tanskan välisessä sodassa 1657–58 linna vaurioitui pahoin, ja se entisöitiin 1900-luvun alussa museoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historian hetki: Roskildenvuono noin 1040 — kuusikymmentä airoa] n. 1040 — Ensimmäinen ääni on airon kolahdus hankaimeen, ja se toistuu kuusikymmentä kertaa yhtä aikaa. Nuori soutaja lähtee ensimmäiselle pitkälle matkalleen eikä tiedä, palaako miehistö kaupankävijöinä, sotureina vai ei lainkaan. Vuono on matala ja mutkitteleva, ja sen takana on koko maailma: Atlantti lännessä, idässä jokireitit Mustallemerelle. Miehet työntävät keulaa irti rantamudasta, kilvet on ripustettu laidalle matkan ajaksi, purje on raidallista villaa ja päähineet huopaa ja nahkaa — sarvikypärä on 1800-luvun oopperalavojen keksintö eikä esiinny yhdessäkään viikinkiajan löydössä. Juuri tällaisia laivoja tunnetaan tarkasti, koska viisi niistä upotettiin 1000-luvulla tähän samaan vuo…
+AIEMPI KYSYMYS: Miksi Ruotsi ja Tanska sotivat vuosina 1657–58?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tää on vakava aihe. Ruotsin ja Tanskan sota 1657–58 liittyi Itämeren hallintaan ja valtasuhteisiin Pohjolassa. Ruotsin kuningas [[Kaarle X Kustaa]] oli sotinut Puolassa, ja Tanska liittyi sotaan Ruotsia vastaan, jolloin Ruotsi käänsi voimansa Tanskaa vastaan. Talvella 1658 ruotsalaiset joukot ylittivät Tanskan salmien jään, ja Nyborgin linna vaurioitui sodassa pahoin. Sota päättyi [[Roskilden rauhaan]], jossa Tanska menetti alueita nykyisen Etelä-Ruotsin alueella. Yksityiskohdat sodan syistä ja etenemisestä ovat monimutkaisia, joten tämä on lyhyt yleiskuva. Onneksi siitä on kauan.
+KYSYMYS: Kerro lisää: Roskilden rauhaan
+
+### 448
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nyborgin linna (historia)
+Tietoruudun teksti: Nyborgin linna on entisöity keskiaikainen linna Nyborgin kaupungissa Fynin saarella. Se perustettiin noin vuonna 1170, ja alun perin se oli vallihaudan ympäröimä neliönmuotoinen linna, jossa oli kulmatornit ja niiden välillä muuri. Kuningas Eerik V Klipping allekirjoitti linnassa Tanskan ensimmäisen perustuslain vuonna 1282, ja vuoteen 1413 asti linnan päärakennus oli keskiaikaisen parlamentin, Danehofin, pääasiallinen kokouspaikka. Kuningas Kristian III teetti 1540-luvulla uuden juhlasalin ja tornin. Ruotsin ja Tanskan välisessä sodassa 1657–58 linna vaurioitui pahoin, ja se entisöitiin 1900-luvun alussa museoksi.
+AIEMPI KYSYMYS: Miten Fyn on yhdistetty Jyllantiin ja Själlandiin?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Nyborg on oikea paikka tähän kysymykseen. [[Fyn]] on Tanskan saari [[Jyllannin]] ja [[Själlandin]] välissä, ja se on yhdistetty muihin osiin siltojen avulla. Suuren Beltin yli kulkee Fynin ja Själlandin välillä yhteys, joka valmistui 1990-luvun lopulla, ja Nyborg on sen Fynin puoleisessa päässä. Fynin ja Jyllannin välillä on Pienen Beltin sillat. Silloin ennen siltoja yhteys hoidettiin laivoilla ja lautoilla, ja talvella jää vaikeutti kulkua. Nyt autolla pääsee sujuvasti, ja minä lennän yhä omin siivin. Tarkat valmistumisvuodet en ole kaikkien siltojen osalta varma.
+KYSYMYS: Kerro lisää: Fyn
+
+### 449
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nyborgin linna (historia)
+Tietoruudun teksti: Nyborgin linna on entisöity keskiaikainen linna Nyborgin kaupungissa Fynin saarella. Se perustettiin noin vuonna 1170, ja alun perin se oli vallihaudan ympäröimä neliönmuotoinen linna, jossa oli kulmatornit ja niiden välillä muuri. Kuningas Eerik V Klipping allekirjoitti linnassa Tanskan ensimmäisen perustuslain vuonna 1282, ja vuoteen 1413 asti linnan päärakennus oli keskiaikaisen parlamentin, Danehofin, pääasiallinen kokouspaikka. Kuningas Kristian III teetti 1540-luvulla uuden juhlasalin ja tornin. Ruotsin ja Tanskan välisessä sodassa 1657–58 linna vaurioitui pahoin, ja se entisöitiin 1900-luvun alussa museoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Luonto: Hiekkasärkkä joka kävelee] noin 1700 — Råbjerg Mile on Pohjois-Euroopan suurin liikkuva hiekkasärkkä: se on noin kaksi neliökilometriä laaja ja jopa 40 metriä korkea, ja siinä on arviolta neljä miljoonaa kuutiometriä hiekkaa. Tuuli työntää koko kummun koillista kohti jopa 18 metriä vuodessa, ja hiekan takana paljastuu matala, kostea vyöhyke, josta erottaa, mistä särkkä on kulkenut. Alkujaan hiekka nousi Länsi-Jyllannin rannikolta yli 300 vuotta sitten, ja se on ainoa laaja liikkuvien dyynien alue koko Tanskassa. Skagenin ja Frederikshavnin välissä liikkuvaa hiekkavuorta katsoo vuosittain noin 250 000 kävijää, jotka kiipeävät sen laelle katsomaan merta molempiin suuntiin.
+- [Tanska — maalehti / Luonto: Puu joka värjää koko maan vihreäksi] nykyään — Pyökki eli bøg on Tanskan kansallispuu, ja toukokuussa metsät käyvät läpi bøgespringiksi kutsutun muutoksen: lehdet puhkeavat lähes koko maassa saman viikon aikana, ja ruskea talvimetsä muuttuu muutamassa päivässä kirkkaan vihreäksi. Juuri ennen lehtien puhkeamista metsän pohja peittyy valkoisista vuokoista, jotka ehtivät kukkia ainoana hetkenä, jolloin auringonvalo pääsee vielä paljaiden oksien läpi maahan asti. Ilmiö houkuttelee joka kevät tuhansia retkeilijöitä metsiin, ja monet perheet tekevät siitä vuotuisen perinteen. Pyökkimetsiä on eniten Sjællannin ja Itä-Jyllannin alueilla, missä maaperä ja ilmasto sopivat puulle parhaiten.
+AIEMPI KYSYMYS: Miten Fyn on yhdistetty Jyllantiin ja Själlandiin?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Nyborg on oikea paikka tähän kysymykseen. [[Fyn]] on Tanskan saari [[Jyllannin]] ja [[Själlandin]] välissä, ja se on yhdistetty muihin osiin siltojen avulla. Suuren Beltin yli kulkee Fynin ja Själlandin välillä yhteys, joka valmistui 1990-luvun lopulla, ja Nyborg on sen Fynin puoleisessa päässä. Fynin ja Jyllannin välillä on Pienen Beltin sillat. Silloin ennen siltoja yhteys hoidettiin laivoilla ja lautoilla, ja talvella jää vaikeutti kulkua. Nyt autolla pääsee sujuvasti, ja minä lennän yhä omin siivin. Tarkat valmistumisvuodet en ole kaikkien siltojen osalta varma.
+KYSYMYS: Kerro lisää: Jyllannin
+
+### 450
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nyborgin linna (historia)
+Tietoruudun teksti: Nyborgin linna on entisöity keskiaikainen linna Nyborgin kaupungissa Fynin saarella. Se perustettiin noin vuonna 1170, ja alun perin se oli vallihaudan ympäröimä neliönmuotoinen linna, jossa oli kulmatornit ja niiden välillä muuri. Kuningas Eerik V Klipping allekirjoitti linnassa Tanskan ensimmäisen perustuslain vuonna 1282, ja vuoteen 1413 asti linnan päärakennus oli keskiaikaisen parlamentin, Danehofin, pääasiallinen kokouspaikka. Kuningas Kristian III teetti 1540-luvulla uuden juhlasalin ja tornin. Ruotsin ja Tanskan välisessä sodassa 1657–58 linna vaurioitui pahoin, ja se entisöitiin 1900-luvun alussa museoksi.
+AIEMPI KYSYMYS: Miten Fyn on yhdistetty Jyllantiin ja Själlandiin?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Nyborg on oikea paikka tähän kysymykseen. [[Fyn]] on Tanskan saari [[Jyllannin]] ja [[Själlandin]] välissä, ja se on yhdistetty muihin osiin siltojen avulla. Suuren Beltin yli kulkee Fynin ja Själlandin välillä yhteys, joka valmistui 1990-luvun lopulla, ja Nyborg on sen Fynin puoleisessa päässä. Fynin ja Jyllannin välillä on Pienen Beltin sillat. Silloin ennen siltoja yhteys hoidettiin laivoilla ja lautoilla, ja talvella jää vaikeutti kulkua. Nyt autolla pääsee sujuvasti, ja minä lennän yhä omin siivin. Tarkat valmistumisvuodet en ole kaikkien siltojen osalta varma.
+KYSYMYS: Kerro lisää: Själlandin
+
+### 451
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kööpenhamina
+Maa, jossa pelaaja on: Tanska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tuhat vuotta vanha linnoitus on niin tarkka ympyrä, että sen mitat kertovat suunnittelijan
+Tietoruudun teksti: Sjællandin Slagelsen lähellä on maastossa rengas, joka näyttää ilmasta katsottuna piirretyltä. Trelleborgin linnoitus rakennettiin noin vuonna 980, ja sen valli kiertää sisäpihan, jonka halkaisija on noin satakolmekymmentäkuusi metriä. Vallin läpi kulkee neljä porttia neljään ilmansuuntaan, ja kaksi tietä risteää keskellä kuin kellotaulun viisarit. Sisällä oli neljä neliötä, joissa kussakin neljä pitkää taloa — kuusitoista taloa, kaikki samanmittaisia.
+
+Tarkkuus on se, mikä tekee paikasta kiinnostavan. Samalla mitalla rakennettiin useita linnoituksia eri puolille maata, ja ne ovat niin samanlaisia, että ne on selvästi suunniteltu yhdessä paikassa ja mitattu maastoon tarkasti. Se tarkoittaa, että joku käski, joku mittasi ja joku maksoi — ja että valtakunta oli olemassa jo ennen kuin siitä kirjoitettiin. Rakennusvuosi saatiin puun vuosirenkaista, ja se osuu saman kuninkaan aikaan, joka py…
+Isoisän matkakirjamerkintä: Tivolin teatterissa palvelija piilotti paistin isännältään. Sanaakaan ei lausuttu. Vieressäni tanskalainen poika nauroi samoissa kohdissa kuin minä. Aamulla olin joutunut piirtämään majatalon isännälle munan saadakseni aamiaisen; täällä ymmärsin vieraan ihmisen juonet vaivatta. Jäin toiseen näytökseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historia: Linnoitus, joka on täydellinen ympyrä] 980 — Trelleborgin linnoitus rakennettiin noin vuonna 980, ja se on ilmasta katsottuna tarkka ympyrä: valli kiertää alueen ja kaksi tietä risteää keskellä kuin kellotaulun viisarit. Sisällä oli neljä taloryhmää, joissa jokaisessa neljä pitkää taloa. Samalla mitalla rakennettiin useita linnoituksia eri puolille maata — ne ovat niin samanlaisia, että ne on selvästi suunniteltu yhdessä paikassa ja mitattu tarkasti maastoon. Unesco otti linnoitukset maailmanperintöluetteloon vuonna 2023.
+AIEMPI KYSYMYS: Miten linnoituksen rakennusvuosi saatiin selville?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tost minä osaan kertoo, vaikken ite ollu paikalla. Rakennusvuosi saatiin puun vuosirenkaista eli dendrokronologiasta: rakennuksiin käytetyn puun vuosirenkaiden leveyksiä verrataan tunnettuun vuosirengassarjaan, ja näin puun kaatovuosi voidaan ajoittaa hyvin tarkasti. [[Trelleborgin]] linnoituksen ajoitus on noin vuosi 980, ja se osuu kuningas [[Harald Sinihammaksen]] aikaan. Menetelmä kertoo kaatovuoden, ei suoraan sitä, milloin rakennus valmistui, mutta rakentaminen on yleensä seurannut kaatoa nopeasti. Ei paha kyyhkyltä, puuta en ole koskaan ajoittanut.
+KYSYMYS: Kerro lisää: Trelleborgin
+
+### 452
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kööpenhamina
+Maa, jossa pelaaja on: Tanska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tuhat vuotta vanha linnoitus on niin tarkka ympyrä, että sen mitat kertovat suunnittelijan
+Tietoruudun teksti: Sjællandin Slagelsen lähellä on maastossa rengas, joka näyttää ilmasta katsottuna piirretyltä. Trelleborgin linnoitus rakennettiin noin vuonna 980, ja sen valli kiertää sisäpihan, jonka halkaisija on noin satakolmekymmentäkuusi metriä. Vallin läpi kulkee neljä porttia neljään ilmansuuntaan, ja kaksi tietä risteää keskellä kuin kellotaulun viisarit. Sisällä oli neljä neliötä, joissa kussakin neljä pitkää taloa — kuusitoista taloa, kaikki samanmittaisia.
+
+Tarkkuus on se, mikä tekee paikasta kiinnostavan. Samalla mitalla rakennettiin useita linnoituksia eri puolille maata, ja ne ovat niin samanlaisia, että ne on selvästi suunniteltu yhdessä paikassa ja mitattu maastoon tarkasti. Se tarkoittaa, että joku käski, joku mittasi ja joku maksoi — ja että valtakunta oli olemassa jo ennen kuin siitä kirjoitettiin. Rakennusvuosi saatiin puun vuosirenkaista, ja se osuu saman kuninkaan aikaan, joka py…
+Isoisän matkakirjamerkintä: Tivolin teatterissa palvelija piilotti paistin isännältään. Sanaakaan ei lausuttu. Vieressäni tanskalainen poika nauroi samoissa kohdissa kuin minä. Aamulla olin joutunut piirtämään majatalon isännälle munan saadakseni aamiaisen; täällä ymmärsin vieraan ihmisen juonet vaivatta. Jäin toiseen näytökseen.
+AIEMPI KYSYMYS: Miten linnoituksen rakennusvuosi saatiin selville?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tost minä osaan kertoo, vaikken ite ollu paikalla. Rakennusvuosi saatiin puun vuosirenkaista eli dendrokronologiasta: rakennuksiin käytetyn puun vuosirenkaiden leveyksiä verrataan tunnettuun vuosirengassarjaan, ja näin puun kaatovuosi voidaan ajoittaa hyvin tarkasti. [[Trelleborgin]] linnoituksen ajoitus on noin vuosi 980, ja se osuu kuningas [[Harald Sinihammaksen]] aikaan. Menetelmä kertoo kaatovuoden, ei suoraan sitä, milloin rakennus valmistui, mutta rakentaminen on yleensä seurannut kaatoa nopeasti. Ei paha kyyhkyltä, puuta en ole koskaan ajoittanut.
+KYSYMYS: Kerro lisää: Harald Sinihammaksen
+
+### 453
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kööpenhamina
+Maa, jossa pelaaja on: Tanska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tuhat vuotta vanha linnoitus on niin tarkka ympyrä, että sen mitat kertovat suunnittelijan
+Tietoruudun teksti: Sjællandin Slagelsen lähellä on maastossa rengas, joka näyttää ilmasta katsottuna piirretyltä. Trelleborgin linnoitus rakennettiin noin vuonna 980, ja sen valli kiertää sisäpihan, jonka halkaisija on noin satakolmekymmentäkuusi metriä. Vallin läpi kulkee neljä porttia neljään ilmansuuntaan, ja kaksi tietä risteää keskellä kuin kellotaulun viisarit. Sisällä oli neljä neliötä, joissa kussakin neljä pitkää taloa — kuusitoista taloa, kaikki samanmittaisia.
+
+Tarkkuus on se, mikä tekee paikasta kiinnostavan. Samalla mitalla rakennettiin useita linnoituksia eri puolille maata, ja ne ovat niin samanlaisia, että ne on selvästi suunniteltu yhdessä paikassa ja mitattu maastoon tarkasti. Se tarkoittaa, että joku käski, joku mittasi ja joku maksoi — ja että valtakunta oli olemassa jo ennen kuin siitä kirjoitettiin. Rakennusvuosi saatiin puun vuosirenkaista, ja se osuu saman kuninkaan aikaan, joka py…
+Isoisän matkakirjamerkintä: Tivolin teatterissa palvelija piilotti paistin isännältään. Sanaakaan ei lausuttu. Vieressäni tanskalainen poika nauroi samoissa kohdissa kuin minä. Aamulla olin joutunut piirtämään majatalon isännälle munan saadakseni aamiaisen; täällä ymmärsin vieraan ihmisen juonet vaivatta. Jäin toiseen näytökseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Miksi samanlaisia linnoituksia rakennettiin useita?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Hyvä kysymys tuo. Samanlaisia linnoituksia rakennettiin eri puolille [[Tanskaa]], ja niiden samankaltaisuus osoittaa, että ne suunniteltiin yhdessä paikassa ja mitattiin maastoon tarkasti. Se viittaa keskitettyyn johtoon: joku käski, joku mittasi ja joku maksoi. Tutkijat pitävät linnoituksia yleisesti kuninkaan vallan ja hallinnon tukikohtina, mutta niiden tarkasta käytöstä ei vallitse täyttä yksimielisyyttä, enkä ole itsekään varma kaikista yksityiskohdista. Yhteinen mitta kertoo joka tapauksessa järjestäytyneestä valtakunnasta. [[Unesco]] otti linnoitukset maailmanperintöluetteloon vuonna 2023. Ja tän minä sain sanottua ilman yhtään sivupolkua.
+KYSYMYS: Kerro lisää: Tanskaa
+
+### 454
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kööpenhamina
+Maa, jossa pelaaja on: Tanska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tuhat vuotta vanha linnoitus on niin tarkka ympyrä, että sen mitat kertovat suunnittelijan
+Tietoruudun teksti: Sjællandin Slagelsen lähellä on maastossa rengas, joka näyttää ilmasta katsottuna piirretyltä. Trelleborgin linnoitus rakennettiin noin vuonna 980, ja sen valli kiertää sisäpihan, jonka halkaisija on noin satakolmekymmentäkuusi metriä. Vallin läpi kulkee neljä porttia neljään ilmansuuntaan, ja kaksi tietä risteää keskellä kuin kellotaulun viisarit. Sisällä oli neljä neliötä, joissa kussakin neljä pitkää taloa — kuusitoista taloa, kaikki samanmittaisia.
+
+Tarkkuus on se, mikä tekee paikasta kiinnostavan. Samalla mitalla rakennettiin useita linnoituksia eri puolille maata, ja ne ovat niin samanlaisia, että ne on selvästi suunniteltu yhdessä paikassa ja mitattu maastoon tarkasti. Se tarkoittaa, että joku käski, joku mittasi ja joku maksoi — ja että valtakunta oli olemassa jo ennen kuin siitä kirjoitettiin. Rakennusvuosi saatiin puun vuosirenkaista, ja se osuu saman kuninkaan aikaan, joka py…
+Isoisän matkakirjamerkintä: Tivolin teatterissa palvelija piilotti paistin isännältään. Sanaakaan ei lausuttu. Vieressäni tanskalainen poika nauroi samoissa kohdissa kuin minä. Aamulla olin joutunut piirtämään majatalon isännälle munan saadakseni aamiaisen; täällä ymmärsin vieraan ihmisen juonet vaivatta. Jäin toiseen näytökseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Arabiemiirikunnat — maalehti / Keidas: Kahvi kaadetaan kupin pohjalle] Arabialainen kahvi eli gahwa paahdetaan vaaleaksi ja maustetaan kardemummalla, joskus myös sahramilla. Se keitetään kupariseen tai teräksiseen kannuun, jota sanotaan dallaksi, ja kaadetaan pieniin korvattomiin kuppeihin vain pohjalle asti — jotta kuppi pysyy kädessä kuumana vain hetken ja jotta tarjoaja voi kaataa lisää. Vieras juo tavallisesti yhdestä kolmeen kuppia ja heiluttaa sitten kuppia kädessään, mikä tarkoittaa kiitos, riittää. Unesco lisäsi tavan aineettoman kulttuuriperinnön luetteloon vuonna 2015.
+AIEMPI KYSYMYS: Miksi samanlaisia linnoituksia rakennettiin useita?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Hyvä kysymys tuo. Samanlaisia linnoituksia rakennettiin eri puolille [[Tanskaa]], ja niiden samankaltaisuus osoittaa, että ne suunniteltiin yhdessä paikassa ja mitattiin maastoon tarkasti. Se viittaa keskitettyyn johtoon: joku käski, joku mittasi ja joku maksoi. Tutkijat pitävät linnoituksia yleisesti kuninkaan vallan ja hallinnon tukikohtina, mutta niiden tarkasta käytöstä ei vallitse täyttä yksimielisyyttä, enkä ole itsekään varma kaikista yksityiskohdista. Yhteinen mitta kertoo joka tapauksessa järjestäytyneestä valtakunnasta. [[Unesco]] otti linnoitukset maailmanperintöluetteloon vuonna 2023. Ja tän minä sain sanottua ilman yhtään sivupolkua.
+KYSYMYS: Kerro lisää: Unesco
+
+### 455
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kööpenhamina
+Maa, jossa pelaaja on: Tanska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tuhat vuotta vanha linnoitus on niin tarkka ympyrä, että sen mitat kertovat suunnittelijan
+Tietoruudun teksti: Sjællandin Slagelsen lähellä on maastossa rengas, joka näyttää ilmasta katsottuna piirretyltä. Trelleborgin linnoitus rakennettiin noin vuonna 980, ja sen valli kiertää sisäpihan, jonka halkaisija on noin satakolmekymmentäkuusi metriä. Vallin läpi kulkee neljä porttia neljään ilmansuuntaan, ja kaksi tietä risteää keskellä kuin kellotaulun viisarit. Sisällä oli neljä neliötä, joissa kussakin neljä pitkää taloa — kuusitoista taloa, kaikki samanmittaisia.
+
+Tarkkuus on se, mikä tekee paikasta kiinnostavan. Samalla mitalla rakennettiin useita linnoituksia eri puolille maata, ja ne ovat niin samanlaisia, että ne on selvästi suunniteltu yhdessä paikassa ja mitattu maastoon tarkasti. Se tarkoittaa, että joku käski, joku mittasi ja joku maksoi — ja että valtakunta oli olemassa jo ennen kuin siitä kirjoitettiin. Rakennusvuosi saatiin puun vuosirenkaista, ja se osuu saman kuninkaan aikaan, joka py…
+Isoisän matkakirjamerkintä: Tivolin teatterissa palvelija piilotti paistin isännältään. Sanaakaan ei lausuttu. Vieressäni tanskalainen poika nauroi samoissa kohdissa kuin minä. Aamulla olin joutunut piirtämään majatalon isännälle munan saadakseni aamiaisen; täällä ymmärsin vieraan ihmisen juonet vaivatta. Jäin toiseen näytökseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kööpenhamina — kaupunkilehti / Historian hetki: Christiansborg 1884 — savu valtaosien alla] 3.10.1884 — Vartija pysähtyy käytävällä ja nuuskii ilmaa — hajussa on jotain, joka ei kuulu perjantai-iltapäivään Christiansborgin linnassa. Se on 3. lokakuuta 1884, ja savu nousee huoneesta aivan Riddersalenin, ritarisalin, alapuolelta, missä vanha kaakeliuuni on juuri sytyttänyt jotain palamaan. Kukaan ei vielä tiedä, että linnan seinien sisällä on vuosikymmenten aikana syntynyt lukemattomia onttoja välitiloja, jotka vetävät liekkiä eteenpäin kuin savupiiput. Palokunta saapuu nopeasti, mutta tuli leviää käytävästä käytävään nopeammin kuin kukaan osaa sitä pysäyttää. Yön aikana koko linnan päärakennus — valtiopäivien, hallituksen ja kuninkaan asuintilojen koti — palaa lähes tyhjäksi kuorek…
+- [Tanska — maalehti / Historia: Kivi, jossa maan nimi lukee ensimmäisen kerran] 965 — Jellingin kylässä seisoo kaksi riimukiveä. Isomman pystytti noin vuonna 965 kuningas Harald Sinihammas, ja siihen on hakattu, että hän voitti koko Tanskan ja Norjan ja teki tanskalaisista kristittyjä. Sana Tanska esiintyy siinä ensimmäisen kerran maan omalla kielellä, ja siksi kiveä sanotaan maan syntytodistukseksi. Kuningas sai myöhemmin oudon jälkimaineen: langaton Bluetooth-yhteys on nimetty hänen mukaansa, koska se yhdistää laitteita kuten hän yhdisti heimoja.
+AIEMPI KYSYMYS: Kuka oli Harald Sinihammas?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Harald Sinihammas oli Tanskan kuningas 900-luvulla. Hän pystytti noin vuonna 965 Jellingin kylään riimukiven, johon on hakattu, että hän voitti koko Tanskan ja Norjan ja teki tanskalaisista kristittyjä. Kivessä esiintyy [[Tanska]]-sana ensimmäisen kerran maan omalla kielellä, minkä vuoksi sitä kutsutaan maan syntytodistukseksi. Kuninkaan nimi elää nykyään myös [[Bluetooth]]-tekniikassa, joka on nimetty hänen mukaansa, koska se yhdistää laitteita samaan tapaan kuin hän yhdisti heimoja. Vasta nyt tajusin, että kuninkaalla oli enemmän yhteistä lennätinten kanssa kuin luulin.
+KYSYMYS: Kerro lisää: Tanska
+
+### 456
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kööpenhamina
+Maa, jossa pelaaja on: Tanska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tuhat vuotta vanha linnoitus on niin tarkka ympyrä, että sen mitat kertovat suunnittelijan
+Tietoruudun teksti: Sjællandin Slagelsen lähellä on maastossa rengas, joka näyttää ilmasta katsottuna piirretyltä. Trelleborgin linnoitus rakennettiin noin vuonna 980, ja sen valli kiertää sisäpihan, jonka halkaisija on noin satakolmekymmentäkuusi metriä. Vallin läpi kulkee neljä porttia neljään ilmansuuntaan, ja kaksi tietä risteää keskellä kuin kellotaulun viisarit. Sisällä oli neljä neliötä, joissa kussakin neljä pitkää taloa — kuusitoista taloa, kaikki samanmittaisia.
+
+Tarkkuus on se, mikä tekee paikasta kiinnostavan. Samalla mitalla rakennettiin useita linnoituksia eri puolille maata, ja ne ovat niin samanlaisia, että ne on selvästi suunniteltu yhdessä paikassa ja mitattu maastoon tarkasti. Se tarkoittaa, että joku käski, joku mittasi ja joku maksoi — ja että valtakunta oli olemassa jo ennen kuin siitä kirjoitettiin. Rakennusvuosi saatiin puun vuosirenkaista, ja se osuu saman kuninkaan aikaan, joka py…
+Isoisän matkakirjamerkintä: Tivolin teatterissa palvelija piilotti paistin isännältään. Sanaakaan ei lausuttu. Vieressäni tanskalainen poika nauroi samoissa kohdissa kuin minä. Aamulla olin joutunut piirtämään majatalon isännälle munan saadakseni aamiaisen; täällä ymmärsin vieraan ihmisen juonet vaivatta. Jäin toiseen näytökseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historia: Kivi, jossa maan nimi lukee ensimmäisen kerran] 965 — Jellingin kylässä seisoo kaksi riimukiveä. Isomman pystytti noin vuonna 965 kuningas Harald Sinihammas, ja siihen on hakattu, että hän voitti koko Tanskan ja Norjan ja teki tanskalaisista kristittyjä. Sana Tanska esiintyy siinä ensimmäisen kerran maan omalla kielellä, ja siksi kiveä sanotaan maan syntytodistukseksi. Kuningas sai myöhemmin oudon jälkimaineen: langaton Bluetooth-yhteys on nimetty hänen mukaansa, koska se yhdistää laitteita kuten hän yhdisti heimoja.
+AIEMPI KYSYMYS: Kuka oli Harald Sinihammas?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Harald Sinihammas oli Tanskan kuningas 900-luvulla. Hän pystytti noin vuonna 965 Jellingin kylään riimukiven, johon on hakattu, että hän voitti koko Tanskan ja Norjan ja teki tanskalaisista kristittyjä. Kivessä esiintyy [[Tanska]]-sana ensimmäisen kerran maan omalla kielellä, minkä vuoksi sitä kutsutaan maan syntytodistukseksi. Kuninkaan nimi elää nykyään myös [[Bluetooth]]-tekniikassa, joka on nimetty hänen mukaansa, koska se yhdistää laitteita samaan tapaan kuin hän yhdisti heimoja. Vasta nyt tajusin, että kuninkaalla oli enemmän yhteistä lennätinten kanssa kuin luulin.
+KYSYMYS: Kerro lisää: Bluetooth
+
+### 457
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kööpenhamina
+Maa, jossa pelaaja on: Tanska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tuhat vuotta vanha linnoitus on niin tarkka ympyrä, että sen mitat kertovat suunnittelijan
+Tietoruudun teksti: Sjællandin Slagelsen lähellä on maastossa rengas, joka näyttää ilmasta katsottuna piirretyltä. Trelleborgin linnoitus rakennettiin noin vuonna 980, ja sen valli kiertää sisäpihan, jonka halkaisija on noin satakolmekymmentäkuusi metriä. Vallin läpi kulkee neljä porttia neljään ilmansuuntaan, ja kaksi tietä risteää keskellä kuin kellotaulun viisarit. Sisällä oli neljä neliötä, joissa kussakin neljä pitkää taloa — kuusitoista taloa, kaikki samanmittaisia.
+
+Tarkkuus on se, mikä tekee paikasta kiinnostavan. Samalla mitalla rakennettiin useita linnoituksia eri puolille maata, ja ne ovat niin samanlaisia, että ne on selvästi suunniteltu yhdessä paikassa ja mitattu maastoon tarkasti. Se tarkoittaa, että joku käski, joku mittasi ja joku maksoi — ja että valtakunta oli olemassa jo ennen kuin siitä kirjoitettiin. Rakennusvuosi saatiin puun vuosirenkaista, ja se osuu saman kuninkaan aikaan, joka py…
+Isoisän matkakirjamerkintä: Tivolin teatterissa palvelija piilotti paistin isännältään. Sanaakaan ei lausuttu. Vieressäni tanskalainen poika nauroi samoissa kohdissa kuin minä. Aamulla olin joutunut piirtämään majatalon isännälle munan saadakseni aamiaisen; täällä ymmärsin vieraan ihmisen juonet vaivatta. Jäin toiseen näytökseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historia: Kivi, jossa maan nimi lukee ensimmäisen kerran] 965 — Jellingin kylässä seisoo kaksi riimukiveä. Isomman pystytti noin vuonna 965 kuningas Harald Sinihammas, ja siihen on hakattu, että hän voitti koko Tanskan ja Norjan ja teki tanskalaisista kristittyjä. Sana Tanska esiintyy siinä ensimmäisen kerran maan omalla kielellä, ja siksi kiveä sanotaan maan syntytodistukseksi. Kuningas sai myöhemmin oudon jälkimaineen: langaton Bluetooth-yhteys on nimetty hänen mukaansa, koska se yhdistää laitteita kuten hän yhdisti heimoja.
+AIEMPI KYSYMYS: Mitä Unescon maailmanperintöluettelo tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Nyt muistan. Unescon maailmanperintöluettelo on YK:n kasvatus-, tiede- ja kulttuurijärjestön ylläpitämä luettelo kohteista, joilla katsotaan olevan poikkeuksellinen yleismaailmallinen arvo koko ihmiskunnalle. Kohteet voivat olla kulttuurikohteita, luontokohteita tai molempien yhdistelmiä, ja niiden suojelusta vastaa ensisijaisesti kunkin kohteen oma valtio. Tanskassa luetteloon kuuluvat esimerkiksi [[Jellingin]] muistomerkit, ja vuonna 2023 luetteloon otettiin myös [[Trelleborgin]] kaltaiset viikinkiajan rengaslinnoitukset. Hui, ja minä kun luulin, että maailmanperintö tarkoittaa vain hyviä tuulia.
+KYSYMYS: Kerro lisää: Jellingin
+
+### 458
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kööpenhamina
+Maa, jossa pelaaja on: Tanska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tuhat vuotta vanha linnoitus on niin tarkka ympyrä, että sen mitat kertovat suunnittelijan
+Tietoruudun teksti: Sjællandin Slagelsen lähellä on maastossa rengas, joka näyttää ilmasta katsottuna piirretyltä. Trelleborgin linnoitus rakennettiin noin vuonna 980, ja sen valli kiertää sisäpihan, jonka halkaisija on noin satakolmekymmentäkuusi metriä. Vallin läpi kulkee neljä porttia neljään ilmansuuntaan, ja kaksi tietä risteää keskellä kuin kellotaulun viisarit. Sisällä oli neljä neliötä, joissa kussakin neljä pitkää taloa — kuusitoista taloa, kaikki samanmittaisia.
+
+Tarkkuus on se, mikä tekee paikasta kiinnostavan. Samalla mitalla rakennettiin useita linnoituksia eri puolille maata, ja ne ovat niin samanlaisia, että ne on selvästi suunniteltu yhdessä paikassa ja mitattu maastoon tarkasti. Se tarkoittaa, että joku käski, joku mittasi ja joku maksoi — ja että valtakunta oli olemassa jo ennen kuin siitä kirjoitettiin. Rakennusvuosi saatiin puun vuosirenkaista, ja se osuu saman kuninkaan aikaan, joka py…
+Isoisän matkakirjamerkintä: Tivolin teatterissa palvelija piilotti paistin isännältään. Sanaakaan ei lausuttu. Vieressäni tanskalainen poika nauroi samoissa kohdissa kuin minä. Aamulla olin joutunut piirtämään majatalon isännälle munan saadakseni aamiaisen; täällä ymmärsin vieraan ihmisen juonet vaivatta. Jäin toiseen näytökseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historia: Kivi, jossa maan nimi lukee ensimmäisen kerran] 965 — Jellingin kylässä seisoo kaksi riimukiveä. Isomman pystytti noin vuonna 965 kuningas Harald Sinihammas, ja siihen on hakattu, että hän voitti koko Tanskan ja Norjan ja teki tanskalaisista kristittyjä. Sana Tanska esiintyy siinä ensimmäisen kerran maan omalla kielellä, ja siksi kiveä sanotaan maan syntytodistukseksi. Kuningas sai myöhemmin oudon jälkimaineen: langaton Bluetooth-yhteys on nimetty hänen mukaansa, koska se yhdistää laitteita kuten hän yhdisti heimoja.
+AIEMPI KYSYMYS: Mitä riimukivet ovat?
+AIEMPI VASTAUS (Livia):
+Ai se. Sepä sattui. Riimukivet ovat kiviä, joihin on hakattu riimukirjoitusta, ja Pohjolassa niitä pystytettiin etenkin viikinkiaikana muistomerkeiksi, joissa kerrotaan vainajista, kuninkaista ja heidän teoistaan. Tanskassa kirjoitukset tehtiin nuoremmalla riimuaakkostolla, joka koostui suunnilleen kuudestatoista merkistä. Tunnetuimpia ovat [[Jellingin]] kivet, joista isomman pystytti noin vuonna 965 kuningas [[Harald Sinihammas]]. Siinä sanotaan hänen voittaneen koko Tanskan ja Norjan ja tehneen tanskalaisista kristittyjä. Kivi on kuin vanhaa postia, ja se minulle kyllä kelpaa.
+KYSYMYS: Kerro lisää: Harald Sinihammas
