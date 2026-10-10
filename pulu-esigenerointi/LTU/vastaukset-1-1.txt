@@ -1,0 +1,106 @@
+### 1.3
+KYSYMYS: Millainen maa Liettua on korkeussuhteiltaan?
+Hetkinen ny. Liettua on korkeussuhteiltaan matala ja suurelta osin tasainen maa, jossa alavat tasangot ja loivat kumpareet vuorottelevat. Maan korkein kohta [[Aukštojas]] kohoaa vain 293,84 metriä merenpinnan yläpuolelle [[Medininkain ylängöllä]] noin 24 kilometriä [[Vilnasta]] kaakkoon, mikä kertoo hyvin maan loivasta luonteesta. Itämeren rannikko on lyhyt ja matala. Ylhäältä katsoen se on kyl aika rauhallista maisemaa.
+JATKOT:
+Mitkä ovat Euroopan matalimpia maita?
+Mikä on Euroopan korkein vuori?
+
+### 1.4
+KYSYMYS: Miten GPS-mittaus eroaa vanhoista korkeusmittauksista?
+Ai tota. Satelliittipaikannus eli [[GPS]] perustuu satelliittien lähettämiin signaaleihin, joiden avulla vastaanottimen sijainti ja korkeus voidaan laskea. Aiemmin korkeuksia määritettiin maanpäällisillä mittauksilla, kuten [[vaaituksella]] ja kulmamittauksilla, ja niiden tarkkuus saattoi vaihdella. Vuonna 2004 [[Aukštojas]] mitattiin GPS:n avulla, tulokseksi saatiin 293,84 metriä, ja se nousi Liettuan korkeimmaksi kohdaksi [[Juozapinėn]] ohi. Tulokset riippuvat myös käytetystä korkeusjärjestelmästä. Itse navigoin kyl vanhaan malliin, nokka kohti kotia.
+JATKOT:
+Mitä vaaitus tarkoittaa maanmittauksessa?
+Miten satelliittipaikannus oikein toimii?
+
+### 1.5
+KYSYMYS: Millainen kaupunki Vilna on?
+No niin, Vilna on tuttu paikka kattojen yläpuolelta. Vilna on Liettuan pääkaupunki, joka sijaitsee [[Neris]]-joen varrella maan kaakkoisosassa. Sen [[vanhakaupunki]] kuuluu [[Unescon]] maailmanperintöluetteloon, ja kaupunki on tunnettu historiallisesta keskustastaan ja kirkoistaan. Katolta katsottuna se kyl kannattaa nähdä.
+JATKOT:
+Mitä kieltä Liettuassa puhutaan?
+Mikä on Unescon maailmanperintöluettelo?
+
+### 2.3
+KYSYMYS: Kuinka syvä Itämeri on?
+Annas ku mietin. Itämeri on matala meri: sen keskisyvyys on noin 50–60 metriä, ja syvin kohta, [[Landsortin syvänne]] Ruotsin rannikon edustalla, yltää lähteiden mukaan noin 460 metriin. Meri on yhteydessä Atlantin valtamereen vain kapeiden [[Tanskan salmien]] kautta, joten vesi vaihtuu hitaasti ja on murtovettä, ja siksi [[Vasan]] kaltaiset puuhylyt säilyvät pohjassa. Syvyydet on kyl enemmän kalojen kuin kyyhkyn alaa.
+JATKOT:
+Miksi Atlantin ja Itämeren välinen yhteys on niin kapea?
+Mitä kaloja Itämeressä elää?
+
+### 2.4
+KYSYMYS: Mistä Vasa-laiva on saanut nimensä?
+Selvä juttu. Laiva sai nimensä Ruotsia hallinneen [[Vaasa-suvun]] mukaan, ja sen tilasi kuningas, joka oli tuolloin [[Kustaa II Aadolf]]. Se lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628 ja kaatui noin kilometrin purjehdittuaan, koska runko oli liian kapea ja korkea ja vesi pääsi sisään avoimista tykkiporteista. Laiva nostettiin pohjasta 1961, ja nykyään se seisoo omassa museossaan, [[Vasa-museossa]] Tukholmassa. Kuninkaat tilaa, kyyhkyt kantaa viestit.
+JATKOT:
+Millaisia sotalaivoja Ruotsilla oli 1600-luvulla?
+Miten Vasa saatiin nostettua pohjasta?
+
+### 2.5
+KYSYMYS: Miksi meripihkaa löytyy Itämeren rannoilta?
+Joo, tän minä tiedän. [[Meripihka]] on kauan sitten puista valunutta ja kivettynyttä hartsia, ja Itämeren seudun pihka on ikivanhaa, lähteiden mukaan kymmenien miljoonien vuosien takaa. Aallot ja myrskyt huuhtovat sitä merenpohjasta rannalle, minkä vuoksi sitä on kerätty rannoilta halki aikojen, ja Itämeren etelärannan esiintymät mainittiin kirjoissa jo 1100-luvulla. Liettuan lyhyt rannikko on meripihkarantaa, ja [[Klaipėdan]] satamakaupunki elää yhä meren varassa. Minä ottaisin kyl mieluummin pullan.
+JATKOT:
+Miten meripihkasta tehdään koruja?
+Mitä meripihkan sisään voi jäädä?
+
+### 3.3
+KYSYMYS: Missä Kaunas sijaitsee?
+Tost minä osaan kertoo. [[Kaunas]] sijaitsee Liettuan keskiosassa, [[Nemunas]]-joen ja [[Neris]]-joen yhtymäkohdassa. Nemunas virtaa tässä kohdassa pohjoiseen ja kääntyy sitten länteen kohti merta. Kahden joen yhtymäkohta on tehnyt paikasta luontevan kauppa- ja liikennekaupungin. Kaksi jokea ja yksi kyyhky, sopiva suhde.
+JATKOT:
+Mitä Kaunasissa on nähtävää?
+Mikä oli Kaunasin asema Liettuan historiassa?
+PAIKKA: Kaunas | 54.90 | 23.89 | kaupunki
+
+### 3.4
+KYSYMYS: Mikä Kaliningradin alue on?
+No niin, tää on hyvä kysymys. Kaliningradin alue on Venäjän alue Itämeren rannalla [[Puolan]] ja [[Liettuan]] välissä, eikä sillä ole maayhteyttä muuhun Venäjään. Sen pääkaupunki Kaliningrad tunnettiin aiemmin nimellä [[Königsberg]], ja alue kuuluu entiseen [[Itä-Preussiin]]. Nemunasin eteläinen haara muodostaa alueen pohjoisrajan. Siivillä rajat on kyl helpompia ylittää.
+JATKOT:
+Miksi Königsbergin nimi vaihtui?
+Millainen oli Itä-Preussin historia?
+
+### 3.5
+KYSYMYS: Mikä Grodno on?
+Ai se. Grodno on kaupunki Valko-Venäjän länsiosassa [[Nemunas]]-joen rannalla, lähellä Puolan ja Liettuan rajaa. Valkovenäjäksi kaupungin nimi kirjoitetaan Hrodna, ja joki virtaa sen kohdalta ensin länteen ja sieltä pohjoiseen kohti [[Kaunasia]]. Nimiä riittää, kyyhky ei pysy perässä.
+JATKOT:
+Miten Nemunas on vaikuttanut kaupunkien syntyyn?
+Mitä kieliä Valko-Venäjällä puhutaan?
+
+### 4.3
+KYSYMYS: Missä Trakai sijaitsee?
+Kato, tää on helppo. Trakai sijaitsee Liettuassa [[Vilnan]] länsipuolella, [[Galvė-järven]] ympäristössä, ja kaupungin tunnetuin nähtävyys on järven saarella seisova [[Trakain saarilinna]]. Trakai oli [[Liettuan suuriruhtinaskunnan]] tärkeimpiä keskuksia. Linna keskellä järveä näyttää ylhäältä kyl aika hyvältä.
+JATKOT:
+Miten Trakaihin pääsee Vilnasta?
+Minkälaista väkeä Trakaissa on asunut historian aikana?
+PAIKKA: Trakai | 54.64 | 24.93 | kaupunki
+
+### 4.4
+KYSYMYS: Mikä Saksalainen ritarikunta oli?
+Hetkinen. Saksalainen ritarikunta oli keskiaikainen sotilaallinen ja uskonnollinen ritarikunta, joka syntyi [[ristiretkien]] aikana 1100-luvun lopulla ja siirsi toimintansa myöhemmin Itämeren alueelle. Se perusti Itämeren etelärannalle oman valtionsa [[Preussiin]] ja kävi pitkään sotia pakanallista Liettuaa vastaan. Trakain linna vaurioitui pahoin ritareiden hyökkäyksessä vuonna 1377, ja Kernavė poltettiin vuonna 1390. Onpas siitä onneksi pitkä aika.
+JATKOT:
+Miten ritarikunnan valtio päättyi?
+Mitä Itämeren ristiretket olivat?
+
+### 4.5
+KYSYMYS: Mitä Vytautas Suuri teki?
+Annas ku mietin. Vytautas Suuri oli Liettuan suuriruhtinas, joka hallitsi 1400-luvun alussa [[Liettuan suuriruhtinaskuntaa]], jonka alue ulottui Itämereltä lähelle Mustaamerta. Hän oli [[Kęstutisin]] poika ja sai valmiiksi [[Trakain saarilinnan]] päätyöt noin vuonna 1409. Hän kuoli linnassa vuonna 1430. Pitkä ja vaikuttava ura, sanon minä.
+JATKOT:
+Millainen oli Liettuan ja Puolan unioni?
+Miten Liettuasta tuli kristitty maa?
+
+### 5.3
+KYSYMYS: Mikä Neris-joki on?
+Joo, tän minä tiedän. [[Neris]] on Liettuan tärkeimpiä jokia: se saa alkunsa Valko-Venäjältä, virtaa Liettuaan [[Vilnan]] kautta ja yhtyy [[Nemunasiin]] Kaunasin kohdalla. Kernavė sijaitsee sen oikealla rannalla 35 kilometrin päässä Vilnasta. Joet kyl tuntee reitit paremmin ku minä.
+JATKOT:
+Mikä on Nemunas-joen merkitys Liettualle?
+Miten joet ovat vaikuttaneet kaupunkien sijaintiin?
+
+### 5.4
+KYSYMYS: Mitä Unescon maailmanperintö tarkoittaa?
+No jopas. Unescon maailmanperintöluettelo kokoaa kohteet, joilla katsotaan olevan poikkeuksellinen yleismaailmallinen arvo, ja niiden suojelu perustuu vuonna 1972 tehtyyn sopimukseen. Kohde otetaan luetteloon kulttuuri- tai luonnonarvojensa perusteella. Liettuasta luettelossa on esimerkiksi [[Kuurinkynnäs]], joka otettiin sinne vuonna 2000, ja myös [[Kernavėn]] arkeologinen alue kuuluu siihen, mutta sisäänoton vuodesta en ole varma. Luettelo on pitkä, eikä kyyhkyä ole vielä siihen merkitty.
+JATKOT:
+Kuka päättää, mitkä kohteet pääsevät luetteloon?
+Mitä tapahtuu, jos kohde vaarantuu?
+
+### 5.5
+KYSYMYS: Kuka oli Traidenis?
+Tuota niin. Traidenis oli Liettuan suuriruhtinas 1200-luvun lopulla, ja [[Kernavė]] oli hänen istuimensa. [[Saksalainen ritarikunta]] piiritti Kernavėa vuonna 1279, ja silloin kaupunki mainitaan ensi kerran kirjallisissa lähteissä. Hänen hallituskautensa tarkat vuodet vaihtelevat lähteissä, joten en ole niistä varma. Vähän tietoa, mutta hyvä että jotain.
+JATKOT:
+Millainen oli Liettua 1200-luvulla?
+Kuka perusti Liettuan valtion?
