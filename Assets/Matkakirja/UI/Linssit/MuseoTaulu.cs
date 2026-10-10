@@ -60,7 +60,7 @@ namespace Matkakirja.Natiivi
             nimi.style.fontSize = Tyylikirja.Koko.Nimio; nimi.style.whiteSpace = WhiteSpace.Normal; nimi.style.unityTextAlign = TextAnchor.LowerLeft;
             alarivi = Rakenne.Teksti("", "mk-aikajana-havainne__kuvateksti", otsikko);
             Kirjasimet.Aseta(alarivi, Kirjasin.Antiikva);
-            alarivi.style.fontSize = 19; alarivi.style.whiteSpace = WhiteSpace.Normal;
+            alarivi.style.fontSize = Tyylikirja.Koko.Valiotsikko; alarivi.style.whiteSpace = WhiteSpace.Normal;
             foreach (var t in new[] { nimi, alarivi })
             {
                 t.style.textShadow = new TextShadow { offset = new Vector2(0, 2), blurRadius = 14, color = Tyylikirja.Himmennys.Kuva };
