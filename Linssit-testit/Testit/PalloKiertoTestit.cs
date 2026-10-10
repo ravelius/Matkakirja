@@ -7,14 +7,15 @@
 //  (a) silmän nopeus ei laske alle KiertoMinOsuus × kierron nopeus (LipumisVauhti) saapumisen ympärillä (−6 … +3 s) eikä lähdössä
 //      (−2 … +6 s); kierron nopeus saapuessa vähintään KiertoMinMS (liikkeessä; ristiriidassa — seuraava tulosuunnan takana —
 //      saapuminen on hitaampi, OpasSilmukka.PalloKiertoRistiMS 0,5 m/s, ja kierto kiihtyy pysähdyksellä).
-//  (b) kiihtyvyys ja nykäys 0,5 s:n liukuvasta keskiarvosta: saapumisen jarrutus (−6 … −1 s) enintään JarrutusMax / NykaysMax,
-//      saapuminen kiertoon (−1 … +4 s) ja lähtö kierrosta (−1 … +1 s) enintään KiihtyvyysMax / NykaysMax (vrt. PalloAvausTestit
-//      < 10 m/s² ja < 5 m/s³, LahtoLaatatTestit.LentoProfiili ruuduittain ≤ 85 m/s² ja ≤ 40 m/s³). Ennen 10.10. Louvren jarrutus
-//      28,9 m/s² ja Champs-Élysées'n nykäys 15,9 m/s³ (lyhyt lento ilman kaarenpituusprofiilia, OpasKuvaus.PalloTasainenRajaM).
+//  (b) kiihtyvyys ja nykäys 0,5 s:n liukuvasta keskiarvosta: saapumisen jarrutus (−6 … −1 s) enintään JarrutusMax / NykaysMax
+//      (= LahtoLaatatTestit.LentoProfiili-rajat 85 m/s² ja 40 m/s³), saapuminen kiertoon (−1 … +4 s) ja lähtö kierrosta (−1 … +1 s)
+//      enintään KiihtyvyysMax / NykaysMax. PT 10.10. 20.5x lyhensi lennot (≈ 12,5 s, ennen 18–23 s), jolloin kiihtyvyydet kasvavat
+//      ∝ 1 / kesto² (Louvren jarrutus 13 → ~57 m/s²); rajat ovat lentoprofiilin rajat, ja saumojen jatkuvuus mitataan erikseen
+//      (PalloKierrosTestit.NopeusJaKiihtyvyysJatkuviaSaumoissa).
 //  (c) pitkällä pysähdyksellä etäisyys pienenee alusta loppuun (ei kasva), ja lopussa kohde täyttää noin kolmanneksen kuvan
 //      korkeudesta (Riemukaari 50 m, Concorden obeliski 23 m); Riemukaari alkaa kauempaa kuin ennen (101 m).
-//  (d) kerronta alkaa viimeistään PalloPuheEnnenKiertoaS ennen kierron saavuttamista (saapuminen), mutta ei ennen lähdön
-//      PalloPuheAlkuS:ää (EI TAUKOJA, omistaja 9.10.).
+//  (d) kerronta alkaa PalloPuheEnnenKiertoaS…PalloPuheEnnenKiertoaMaxS (3–6 s) ennen kierron saavuttamista (PT 10.10. 20.5x:
+//      kertomus kuuluu kohteen kiertoon), ei kuitenkaan ennen lähdön PuheAikaisinS:ää.
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +26,7 @@ namespace Matkakirja.Linssit.Testit
     public static class PalloKiertoTestit
     {
         const double Dt = 1 / 30.0, VastausS = 2;
-        public const double KiertoMinOsuus = 0.3, KiertoMinMS = 0.4, KiihtyvyysMax = 8, JarrutusMax = 30, NykaysMax = 10;
+        public const double KiertoMinOsuus = 0.3, KiertoMinMS = 0.4, KiihtyvyysMax = 25, JarrutusMax = 85, NykaysMax = 40;
 
         public struct Ruutu { public double T, E, N, U, Et, Vauhti; public OpasVaihe Vaihe; public string Kohde; public bool Leijuu; }
         public sealed class Ajo
@@ -149,9 +150,9 @@ namespace Matkakirja.Linssit.Testit
             {
                 string id = Pariisi[i].Id;
                 if (!a.Puhe.TryGetValue(id, out double tp) || !a.Saapui.TryGetValue(id, out double ta) || !a.Lento.TryGetValue(id, out double tl)) { viat.Add($"{id}: ei mitattu"); continue; }
-                Console.WriteLine($"      {id}: kerronta {ta - tp:F1} s ennen kierron saavuttamista, {tp - tl:F1} s lähdöstä");
-                if (ta - tp < OpasSilmukka.PalloPuheEnnenKiertoaS - 0.05) viat.Add($"{id}: kerronta vasta {ta - tp:F1} s ennen saapumista");
-                if (tp - tl < OpasSilmukka.PalloPuheAlkuS - 0.05) viat.Add($"{id}: kerronta {tp - tl:F1} s lähdöstä (ennen nousua)");
+                Console.WriteLine($"      {id}: kerronta {ta - tp:F1} s ennen kierron saavuttamista, {tp - tl:F1} s lähdöstä (lento {ta - tl:F1} s)");
+                if (ta - tp < OpasSilmukka.PalloPuheEnnenKiertoaS - 0.05 || ta - tp > OpasSilmukka.PalloPuheEnnenKiertoaMaxS + 0.05) viat.Add($"{id}: kerronta {ta - tp:F1} s ennen saapumista");
+                if (tp - tl < OpasSilmukka.PuheAikaisinS - 0.05) viat.Add($"{id}: kerronta {tp - tl:F1} s lähdöstä (ennen nousua)");
             }
             Oleta.Tosi(viat.Count == 0, string.Join("; ", viat));
         }
