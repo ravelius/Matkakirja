@@ -1,0 +1,25 @@
+# Sisältökirjurin luovutus 10.10.2026 klo ~23.0x (nollaus, PT:n käsky)
+
+Rooli: Sisältökirjuri (Sonnet 5.5, high), checkout /Users/Shared/Claude/Matkakirja-sisaltokirjuri, haara sisalto-pelikatalogi-20260927. Säännöt ja pysyvä 70 v -rivi: `viesti-sisaltokirjuri-luovutus-20261010-ilta.md` §0 ja `-ilta2.md`. Agentit vain Opus/Sonnet; ei `sh -c`/`bash -c`/`eval`; PT:lle vain valmis erä/jumi/kysymys ≤ 8 riviä; varakanava `mcp__ccd_session_mgmt__send_message` (PT local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc, Julkaisija local_1325b8e8-c39c-49f0-9ba2-7cabd4f44629, Karttaseppä local_4bd7c316-55bc-423a-9da1-821fdd123cab, Pelikoodari local_242febe9-d6cf-45ae-8280-faf394dc6e3e). Codex-posti-cron (`17 * * * *`) on session-only: LUO UUDELLEEN (prompti: `git fetch origin claude/postilaatikko` + `git log --format='%h %ad %s' origin/claude/postilaatikko -8`; uusi Codex-toimitus (ei oma tilaus) → lue posti/codex-fable-*.md, katso kuvat silmin (ei kasvoja/tekstiä/väkivaltaa, 70 v), rivi PT:lle, hyväksytyt Julkaisijalle; ei muutoksia → ei viestiä).
+
+## 1. Valmista tässä sessiossa (18.1x–23.0x)
+
+- **Pulun pistokokeet kaikki valmiit ja viety:** BIH, LUX, MLT, ALB, MKD, MNE, MDA, SRB, BLR, TUR (raportit proto-3d/_tyo/sisaltokirjuri/pulu-pistokoe-*.md, korjaukset pulu-korjaukset-*.md; työkalut siirretty kansioon `pistokoe-tyokalut/`: poimi.py (vaitteet-tiedostot paketista), kokoa.py (korjaustiedosto raporteista), tark3.py (korjausten tarkistus paketista), pnpoly.py (maarajat)). Menetelmä: Sonnet-agentti per maa (10–12 väitettä, 2 lähdettä) → korjaukset PT:lle → korjaushaaran tarkistus hakuilla → Julkaisijalle.
+- **Taidemuseon Alankomaat, nykyajan kertoja** (omistaja: ei Horatio; lyhyt ohje PT 22.3x: 55–90 sanaa, koukku + yksi "Katso" + seuraus + loppulause, ei mittoja/hintoja/kokoelmahistoriaa): kansio proto-3d/_tyo/sisaltokirjuri/taidemuseo-nl-kertoja-20261010/ → `KASIKIRJOITUS-nykykertoja-paasali.md` (20 teosta), `KASIKIRJOITUS-nykykertoja.md` (grafiikkasali 13), faktapohjat, TARKISTUS-*.md, generointiskriptit `tyokalut/`. LOPULLINEN-rivi lähetetty PT:lle; PT välittää omistajalle luettavaksi. EI äänigenerointia ilman omistajan lupaa.
+- **Kartan datakorjaukset A3 + C4:** PR #4368 MERGED (6 karttavaloa oikeaan maahan, SHN-eläin ilman kuvaviittausta). 5 ihme-kuvaa levyllä (`/Users/samireivinen/Documents/Codex/20260928/ihmeet-14maata/`) ja Anticythera-peilaus: Julkaisija vie junan 180 VIE:n jälkeen.
+- **Pääkaupunkipisteet A5:** PR #4374 AUKI (Victoria SYC −4,6231 / 55,4525, Funafuti TUV −8,5211 / 179,1983); Julkaisija mergeää vihreänä. Worktree wt/sisaltokirjuri-paakaupunkipisteet-syc-tuv poistetaan mergen jälkeen (`tools/uusi-worktree.sh --poista`, branch -D).
+- **Codex-tilaus ISL/TUN/LKA (6 kuvaa):** claude/postilaatikko 5374cfed8 (tiedosto posti/sisaltokirjuri-codex-puuttuvat-3-paakaupungit-20261010.md). Toimitusta ei vielä tullut klo 22.49.
+- Levy: poistettu 2 mergettyä worktreetä + vanhat tmp-kansiot (~5,7 Gi).
+
+## 2. KESKEN (aloita tästä)
+
+1. **Pulu CYP -pistokoe** (haara `pulu-cyp-pilvi`, pulu-esigenerointi/CYP/, 455 vastausta, RAPORTTI.md valmis): sama kaava; `git fetch origin`, `git show origin/pulu-cyp-pilvi:pulu-esigenerointi/CYP/CYP.json`; poimi vaitteet työkalulla `pistokoe-tyokalut/poimi.py` (muokkaa maalista ja polut), 2–4 Sonnet-agenttia (CYP on suuri → jaa kahtia kuten TUR), raportti proto-3d/_tyo/sisaltokirjuri/pulu-pistokoe-cyp-*.md, korjausten kokoaminen `kokoa.py`, korjaukset PT:lle, korjaushaaran tarkistus, hyväksytty Julkaisijalle. PT:n sääntö: vienti vasta kun vientitauko päättyy (Julkaisija hoitaa).
+2. **Codexin ISL/TUN/LKA-toimitus**: kun uusi commit (ei oma tilaus) tulee → tarkista kuvat silmin (70 v: Hallgrímskirkja/Harpa/Sólfar/Perlan, Ibn Khaldun/Bourguiba/kellotorni, Bawa-parlamentti/Solias Mendis/Buddha-patsaat jäävät pois), rivi PT:lle → `tools/tee-paakaupungit.mjs` (PAAKAUPUNKIEN_KUVAT, `--kuvat=`-lipulla; katso tools/tee-paakaupungit.mjs) → Julkaisija.
+3. Mahdollinen: PT voi pyytää museotekstien uuden tarkistuskierroksen tai muutoksia omistajan luettua; kaikki generointi edellyttää omistajan lupaa.
+4. Vanhat: PR #4326 (tekoaly-alaikaiset) pidossa, ei mergeä; Raamatun siivous vaihe 2 odottaa omistajaa; kontaktiarkki docs/raportit/kuvat/codex-kaupunkikuvat-kontaktiarkki-20261010.jpg ei commitoitu; Sevilla v2 / Olavinlinna seinä 1 / tähdet NUI:lla.
+
+## 3. Opit
+
+- Pistokokeessa tarkista korjaukset sekä kysymys- että lisää-vastauksista (`lisaa`-rakenne: kohde.kysymykset + kohde.lisaa) ja käytä 0-km-vertailua vain varoituksena (rajakohteet).
+- Museotekstien faktapohjassa Sonnet-agentti löytää HEIKKO/EPÄVARMA-rivit; vain VAHVA saa kerrontaan. Tarkistusagentti löysi joka kierroksella 1–8 virhettä: aja aina riippumaton tarkistus ennen PT:tä.
+- Karttavalojen koordinaatit tulevat js/packs/fokuskohteet-*.js / maastokohteet-*.js `laudat`-pikseleistä (projisoiLaudalle) ja nostoankkurit-*.js:stä; vienti `node tools/vienti/vie-sisalto.mjs --ulos <kansio>` kestää ~8 min.
