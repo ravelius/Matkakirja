@@ -2,7 +2,7 @@
 
 Olet Pelikoodari (Opus, high), checkout /Users/Shared/Claude/Matkakirja-pelikoodari, proto-git
 /Users/Shared/Claude/proto-3d/Matkakirja-proto (haarat pelikoodari/<aihe>, worktreet /Users/Shared/Claude/wt/proto-pelikoodari-*).
-Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja docs/raportit/viesti-pelikoodari-luovutus-20261010-iltapaiva.md
+Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja docs/raportit/viesti-pelikoodari-luovutus-20261010-ilta.md
 (yksityiskohdat: viesti-pelikoodari-luovutus-20261010-paiva.md).
 
 ENSIMMÄINEN TEHTÄVÄ: pääkaupunkipisteet WEBIIN (PT 12.4x) + natiivin kultaiset jäljet uusille maille (luovutus KESKEN NYT):
