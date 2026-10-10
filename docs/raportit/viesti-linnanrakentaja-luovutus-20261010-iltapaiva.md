@@ -65,3 +65,18 @@ Siirtosepän arkki v46z-176-b (`proto-3d/lokit/todistus-vaiheet-v46z-176-b-20261
   v45g:hen → push → `gh workflow run vie-dioraama.yml --ref linnanrakentaja-linna-v45g -f rakennus=olavinlinna -f kuiva=false -f osoitin=false`
   → PALA-hash lokista → nyky-blender.json commit → sama dispatch → molemmat hashit Siirtosepälle + PT:lle.
 - Pienemmät (ei tässä erässä): ohut tolppa (−58,4 / 15,2), rantaliuskan sirpale (69 / 30), kaksi tummaa palaa järvellä.
+
+## JATKO 15.5x–17.1x
+
+- **Olavinlinna v47b VIETY** (Siirtoseppä hylkäsi main-pohjaisen v47:n: asu ja kappalaisen kädet puuttuivat) → haara
+  `linnanrakentaja-linna-v45h` = v45f + #4351 (rantakivi) + lisaPinnat; v45f:n vie-blender.sh (786 tiedostoa).
+  **PALA 1499 e7d9da6d44f147d1** (blender 6b9e612a73a5befe), **NYKY 4e1b2774ab27119a** (blender 6baa011bb9a6c367) → Siirtosepälle.
+  Hylätyt: c7abe064, 02d3f613, 61e0938f. PR #4355 (rakenna.mjs lisaPinnat) MERGETTY mainiin b790d65e2. Worktree wt/linnanrakentaja-linna-v45g
+  (haarassa v45h) auki kunnes Siirtoseppä kuittaa → poista `tools/uusi-worktree.sh --poista linnanrakentaja-linna-v45g`.
+- **ND v5 (omistaja 15.5x: liian kirkas ja keltainen, pystynousut tyhjiä → yksityiskohdat tekstuureiksi)** → LS2:lle pelikuvapariin
+  (oikea | v4d | v5): `_valmiit/notre-dame-v1/tekoaly-v5/`, arkki da726ecc5 (kaappaukset/linnanrakentaja-nd-20261010/). Länsijulkisivu oikeasta
+  valokuvasta (`lahde/kuva_lansi_kohdista.py`, 82 ohjauspistettä, ylipäästö σ 1 m; CC BY-SA 4.0 The wub → Lähteisiin), kivi atlas
+  152/148/139 (ennuste peli b/r 0,88). Uusi `kaupunkipinnat-v1/lahde/kivi_portti.py` (v4d hylkää, v5 läpi), ortoportti läpi.
+  projisoi_tekseli.py: --nakymakuva, valoisuus_raja, ao_kuva (varmuuskopio projisoi_tekseli_ennen_nakymakuva.py). LAHTEET "v5".
+  SEURAAVAKSI LS2:n parin mukaan: jos pystynousut lähikuvassa litteät → polygoneja LOD0:aan; etelä/pohjoinen yhä tekoälypintoja
+  (samalla menetelmällä, jos vapaita suoria kuvia: Sisältökirjurin 04/05).
