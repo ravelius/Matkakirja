@@ -215,10 +215,11 @@ namespace Matkakirja.Natiivi
         public bool TallennusOn => jatkettava != null;
         Matka jatkettava;
 
-        /// <summary>Lähtökaupungit (web start: true; paketin kaupungit.aloitus) laudan järjestyksessä.</summary>
+        /// <summary>Alkulennon kohteet laudan järjestyksessä: paketin kaupungit.lahtokohde (omistaja 10.10. 23.4x: vain neljä),
+        /// vanhassa paketissa kaupungit.aloitus (web start: true). Kaupunki.Lahtokohteet.</summary>
         public List<(string Id, string Nimi)> Lahtokaupungit() =>
             verkko == null ? new List<(string, string)>()
-                : verkko.KaupunkiLista.Where(k => k.Aloitus).Select(k => (k.Id, k.Nimi)).ToList();
+                : Kaupunki.Lahtokohteet(verkko.KaupunkiLista).Select(k => (k.Id, k.Nimi)).ToList();
 
         /// <summary>
         /// Kaikki unohdetut aarteet löytyivät (web NATIIVI_SAAVUTUKSET.kaikkiAarteet, kerran
