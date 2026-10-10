@@ -149,6 +149,10 @@ blender.json `linnanrakentaja-linna-v45e` (worktree `/Users/Shared/Claude/wt/lin
    az 160 / el 55; vyöhykkeet geometriasta: ulokkeet (nz > 0,8, h ≥ 3, korkeusvaihtelu 1,4 m:ssä > 2,5 m), katot (h ≥ 8), maa (h < 1),
    puusto pois. Kirkkaus maahan suhteutettuna. Rajat: |ΔL| ≤ 15 %, |Δ(b−r)| ≤ 15, |ulokkeet/katot − oikea| ≤ 0,12; ylitys → exit 1.
    Avoin: tekseli-glb:stä puuttuu origo_latlon-extra (anna --origo), aurinkosuunta per ortokuva. Sitten KL, Eiffel, Préfecture, Peking.
+   **(11.5x RATKAISTU)** Karttasepän ortot per kohde _tyo/karttaseppa/vertailu/<kohde>/ (notre-dame, kuninkaanlinna, eiffel, prefektuuri,
+   peking; orto.jpg + meta.json + varjot.jpg; uusi malli: tyokalu/vertailu.py --malli <id>). vertaa_orto.py:ssä nyt `--meta meta.json`
+   (ENU-rajaus, origo, aurinko metasta; tulos-jsonissa 'kaytto' — KL:n Copernicus VHR vain sisäiseen). ND v4b ajettu: kohdistus täsmää,
+   aurinko 203,5/50 → katot −29 %, ulokkeet −45 %, suhde 0,70 vs 0,91 (notre-dame-v1/vertailu/v4b-ks.*) → v4c-suunta vahvistuu.
 3) **Siirtoseppä: palatsi-viipale 0,42 m** (osat.json palatsi rajat.min z −10,95 + Askelaanin 0,3 m vaakavara): kirkkotorniportaiden yläpäässä
    x −19,4, y 8,4–8,6, z −11,25…−10,95 reiteillä 41 → 42 ja 69 → 70. Korjaa: palatsin min z ≥ −10,6 tai min x > −19,0 (Olavinlinnan
    v44-lähteet, sama kuin v46z:n tapa). Testi OsaviipaleetTestit (4ced0237b) kaatuu, kun viipale katoaa → Siirtoseppä poistaa odotusrivin.
