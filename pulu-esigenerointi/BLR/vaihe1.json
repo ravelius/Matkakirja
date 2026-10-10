@@ -1,0 +1,519 @@
+[
+ {
+  "kohde": "kohde:mirin-linna",
+  "kysymys": "Kuinka monta tornia Mirin linnan pihaa ympäröi?",
+  "uusi": false,
+  "vastaus": "Kato, siit voi laskea helposti. Mirin linnan sisäpihaa ympäröi viisi tornia. Linna edustaa [[goottilaista]] rakennustyyliä, ja sen neliönmuotoisen sisäpihan sivu on 75 metriä. Rakentaminen alkoi noin 1400-luvun lopun ja 1500-luvun alun tienoilla, ja myöhemmin linna siirtyi [[Radziwiłł]]-suvulle, joka uudisti myös torneja. Nykyään linna kuuluu [[Unescon maailmanperintöluetteloon]]. Ei paha laskutaito kyyhkyltä.",
+  "linkit": [
+   "goottilaista",
+   "Radziwiłł",
+   "Unescon maailmanperintöluetteloon"
+  ],
+  "jatkot": [
+   "Mikä on Radziwiłł-suvun historia?",
+   "Miten linnaa on kunnostettu vuosien varrella?"
+  ]
+ },
+ {
+  "kohde": "kohde:mirin-linna",
+  "kysymys": "Mihin linnaa käytettiin toisen maailmansodan aikana ja sen jälkeen?",
+  "uusi": false,
+  "vastaus": "Tuota niin, tää on raskas aihe. Toisen maailmansodan aikana saksalaiset perustivat linnaan [[getton]] paikallisille juutalaisille. Sodan jälkeen, vuosina 1944–1956, linnassa oli asuntoja, mikä vaurioitti sisätiloja. Tuolloin alue kuului [[Neuvostoliittoon]], ja siitä on nyt yli kahdeksankymmentä vuotta. Nykyään linna on kunnostettu, ja se toimii museona sekä kuuluu Unescon maailmanperintöluetteloon. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "getton",
+   "Neuvostoliittoon"
+  ],
+  "jatkot": [
+   "Miten linna kunnostettiin sodan jälkeen?",
+   "Mitä Mirin linnassa voi nykyään nähdä?"
+  ]
+ },
+ {
+  "kohde": "kohde:mirin-linna",
+  "kysymys": "Mikä on Unescon maailmanperintöluettelo ja kuka sen laatii?",
+  "uusi": true,
+  "vastaus": "Ai se, tästä minä tiedän. Maailmanperintöluettelo on luettelo kohteista, joilla katsotaan olevan poikkeuksellista yleismaailmallista arvoa koko ihmiskunnalle. Sen perustana on vuonna 1972 hyväksytty [[maailmanperintösopimus]], ja kohteet hyväksyy Unescon [[maailmanperintökomitea]] ehdotusten perusteella. Luettelossa on sekä kulttuuri- että luontokohteita. Mirin linna liitettiin siihen vuonna 2000. Kunhan joku lisäis luetteloon vielä pullakahvilan.",
+  "linkit": [
+   "maailmanperintösopimus",
+   "maailmanperintökomitea"
+  ],
+  "jatkot": [
+   "Mitä muita kohteita Valko-Venäjältä on maailmanperintöluettelossa?",
+   "Miten kohde voidaan poistaa maailmanperintöluettelosta?"
+  ]
+ },
+ {
+  "kohde": "kohde:mirin-linna",
+  "kysymys": "Mitä tarkoittaa goottilainen rakennustyyli?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Goottilainen rakennustyyli syntyi [[Pohjois-Ranskassa]] noin 1100-luvun puolivälissä ja levisi sieltä laajalle Eurooppaan. Sille ovat tunnusomaisia [[suippokaaret]], [[ristiholvit]] ja ulkoiset tukikaaret, jotka mahdollistivat korkeat seinät ja suuret ikkunat. Tyyliä käytettiin kirkkojen lisäksi myös linnoissa ja kaupunkien rakennuksissa. Ylhäältä katsoen tornit näyttävät kyl komeilta.",
+  "linkit": [
+   "Pohjois-Ranskassa",
+   "suippokaaret",
+   "ristiholvit"
+  ],
+  "jatkot": [
+   "Mikä on suippokaari?",
+   "Mikä on renessanssin rakennustyyli?"
+  ]
+ },
+ {
+  "kohde": "kohde:mirin-linna",
+  "kysymys": "Mihin linnoissa tarvittiin vallihautoja?",
+  "uusi": true,
+  "vastaus": "No niin, siit minä tiedän jotain. Vallihauta hidasti hyökkääjiä, koska se esti pääsyn suoraan muurille ja vaikeutti [[piiritystornien]] ja tikkaiden käyttöä. Se myös vaikeutti muurien alle kaivettavia tunneleita. Vesitäytteinen vallihauta oli tehokkaampi kuin kuiva, mutta se vaati sopivan vesilähteen, eikä sellaista ollut joka paikassa. Vallihaudan yli kuljettiin yleensä [[nostosillan]] tai kiinteän sillan kautta.\n\nMinulle vallihauta on aina ollut yhdentekevä, koska lennän sen yli. Mutta myönnän, että vedellä täytetty hauta tekee linnasta ihan oikeasti uskottavan näköisen.",
+  "linkit": [
+   "piiritystornien",
+   "nostosillan"
+  ],
+  "jatkot": [
+   "Miten linnaa piiritettiin keskiajalla?",
+   "Miten nostosilta toimi?"
+  ]
+ },
+ {
+  "kohde": "kohde:njasvizin-linna",
+  "kysymys": "Kuka aloitti Njasvižin linnan rakentamisen vuonna 1582?",
+  "uusi": false,
+  "vastaus": "Selvä juttu, tän nimen minä osaan. Linnan rakentamisen aloitti vuonna 1582 [[Mikołaj Krzysztof Sierotka Radziwiłł]], joka kuului mahtavaan Radziwiłł-sukuun. Suku oli saanut alueen haltuunsa vuonna 1533, ja rakennustyöt valmistuivat vuonna 1604. Linna on [[renessanssin]] ja [[barokin]] tyylien yhdistelmä, ja sen kulmissa on neljä kahdeksankulmaista tornia. Pelkkä nimi vei puolet tilasta.",
+  "linkit": [
+   "Mikołaj Krzysztof Sierotka Radziwiłł",
+   "renessanssin",
+   "barokin"
+  ],
+  "jatkot": [
+   "Miten renessanssi ja barokki eroavat toisistaan?",
+   "Mikä oli Radziwiłłien merkitys Liettuan suuriruhtinaskunnassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:njasvizin-linna",
+  "kysymys": "Mitä linnalle tapahtui Pohjan suuressa sodassa?",
+  "uusi": false,
+  "vastaus": "Hmm— tähän tarvii vähän taustaa. Ruotsin armeija ryösti linnan vuonna 1706 Pohjan suuren sodan aikana. Sota käytiin vuosina 1700–1721 pääasiassa [[Ruotsin]] ja sitä vastaan liittoutuneiden valtojen välillä, ja sen taistelut ulottuivat myös [[Puolan–Liettuan kansainyhteisön]] alueelle, johon linna tuolloin kuului. Linna on sittemmin entisöity laajasti vuosina 2004–2012. Siitä on onneksi jo yli kolmesataa vuotta.",
+  "linkit": [
+   "Ruotsin",
+   "Puolan–Liettuan kansainyhteisön"
+  ],
+  "jatkot": [
+   "Milloin Pohjan suuri sota päättyi?",
+   "Mitkä valtiot sotivat Pohjan suuressa sodassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:njasvizin-linna",
+  "kysymys": "Mitä tarkoittaa englantilaistyylinen puisto?",
+  "uusi": true,
+  "vastaus": "Nyt muistan, ylhäältä ne erottuu hyvin. Englantilaistyylinen puisto eli [[maisemapuisto]] syntyi [[Englannissa]] 1700-luvulla, ja se muotoiltiin näyttämään luonnonmukaiselta. Tyypillisiä piirteitä ovat kaarevat polut, avoimet nurmialueet, puuryhmät ja lammet. Se poikkesi [[ranskalaisesta puutarhasta]], jossa kasvit ja polut järjestettiin tiukkaan geometriaan. Puistossa kelpais istua pullan kanssa.",
+  "linkit": [
+   "maisemapuisto",
+   "Englannissa",
+   "ranskalaisesta puutarhasta"
+  ],
+  "jatkot": [
+   "Mikä on ranskalainen puutarha?",
+   "Kuka suunnitteli kuuluisia englantilaisia maisemapuistoja?"
+  ]
+ },
+ {
+  "kohde": "kohde:njasvizin-linna",
+  "kysymys": "Mikä oli Liettuan suuriruhtinaskunta?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Liettuan suuriruhtinaskunta oli keskiaikainen ja uuden ajan alun valtio, joka syntyi 1200-luvulla ja laajeni 1300–1400-luvuilla nykyisen Valko-Venäjän ja Ukrainan alueille. Liitto Puolan kanssa solmittiin vuonna 1385 [[Krewon liitossa]], ja vuonna 1569 [[Lublinin unionissa]] muodostui Puolan–Liettuan kansainyhteisö. Valtio lakkasi olemasta kansainyhteisön jakojen myötä vuoteen 1795 mennessä. [[Radziwiłłit]] kuuluivat sen vaikutusvaltaisimpiin aatelissukuihin.\n\nMeikäläisten muistiinpanojen mukaan sellaisten sukujen kirjeitä kannettiin pitkiä matkoja, ja kyyhkyjäkin oli varmasti mukana. Siitä minä olen vähän ylpeä, vaikka en ollut itse paikalla.",
+  "linkit": [
+   "Krewon liitossa",
+   "Lublinin unionissa",
+   "Radziwiłłit"
+  ],
+  "jatkot": [
+   "Milloin Liettuan suuriruhtinaskunta lakkasi olemasta?",
+   "Mikä oli Puolan–Liettuan kansainyhteisö?"
+  ]
+ },
+ {
+  "kohde": "kohde:njasvizin-linna",
+  "kysymys": "Miten rakennuksia entisöidään, jotta ne säilyvät alkuperäisinä?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Tost minä osaan kertoo. Entisöinti perustuu ensin tutkimukseen: rakennuksen vaiheet selvitetään arkistojen, piirrosten ja rakenteiden tutkimuksen avulla. Korjauksissa käytetään mahdollisuuksien mukaan alkuperäisiä tai samanlaisia materiaaleja ja perinteisiä työtapoja, ja uudet osat pyritään tekemään sellaisiksi, että ne voi erottaa vanhoista. Kansainvälisenä lähtökohtana pidetään vuonna 1964 laadittua [[Venetsian peruskirjaa]]. [[Njasvižin linnassa]] entisöinti kesti vuosina 2004–2012. Kyl sitä remonttia riitti.",
+  "linkit": [
+   "Venetsian peruskirjaa",
+   "Njasvižin linnassa"
+  ],
+  "jatkot": [
+   "Mikä on Venetsian peruskirja?",
+   "Miten vanhoja puurakennuksia entisöidään?"
+  ]
+ },
+ {
+  "kohde": "kohde:braslavin-jarvet",
+  "kysymys": "Kuinka monta järveä Braslavin puistoon kuuluu?",
+  "uusi": false,
+  "vastaus": "Kas vaan, tähän on helppo vastata. Braslavin järvien kansallispuistoon kuuluu 30 toisiinsa yhteydessä olevaa järveä. Puisto sijaitsee [[Vitebskin]] alueen luoteisosassa lähellä Liettuan rajaa, ja se perustettiin syyskuussa 1995. Pinta-alaltaan se on noin 700 neliökilometriä, ja suurimpia järviä ovat [[Drivjaty]], [[Snudy]] ja [[Strusta]]. Kolmekymmentä järveä ja yksi kyyhky, tasapaino on vähän vinossa.",
+  "linkit": [
+   "Vitebskin",
+   "Drivjaty",
+   "Snudy",
+   "Strusta"
+  ],
+  "jatkot": [
+   "Millaista luontoa Valko-Venäjällä on?",
+   "Mitä eläimiä havu- ja lehtimetsissä elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:braslavin-jarvet",
+  "kysymys": "Mikä puiston järvistä on Valko-Venäjän viidenneksi suurin?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Valko-Venäjän viidenneksi suurin järvi on Drivjaty. Se kuuluu Braslavin järvien puiston suurimpiin järviin yhdessä [[Snudyn]] ja [[Strustan]] kanssa. Puistoa ympäröivät havu- ja lehtimetsät sekä suoalueet, ja se perustettiin vuonna 1995. Nimi on semmonen, että kieli menee solmuun.",
+  "linkit": [
+   "Snudyn",
+   "Strustan"
+  ],
+  "jatkot": [
+   "Mitä Snudy ja Strusta ovat?",
+   "Miten Valko-Venäjän järvet ovat syntyneet?"
+  ]
+ },
+ {
+  "kohde": "kohde:braslavin-jarvet",
+  "kysymys": "Miten jääkausi synnytti järviä?",
+  "uusi": true,
+  "vastaus": "No niin, tähän tarvitaan vähän geologiaa. Jääkaudella [[mannerjäätikkö]] kulutti liikkuessaan maanpintaan syvänteitä ja kasasi sulaessaan kerrostumia, joita kutsutaan [[moreeniksi]]. Moreenikasaumat patosivat [[sulamisvesiä]], ja syvänteisiin kerääntyi vettä. Myös jäätikön jättämät suuret jäälohkareet sulivat hitaasti ja jättivät kuoppia, joihin syntyi pienempiä järviä. Viimeisin jääkausi päättyi Euroopassa noin 11 000–12 000 vuotta sitten, ja monet Pohjois- ja Itä-Euroopan järvet ovat sen perua. Geologia ei oo minun vahvin laji, mut hyvin meni.",
+  "linkit": [
+   "mannerjäätikkö",
+   "moreeniksi",
+   "sulamisvesiä"
+  ],
+  "jatkot": [
+   "Mikä on mannerjäätikkö?",
+   "Mikä on moreeni?"
+  ]
+ },
+ {
+  "kohde": "kohde:braslavin-jarvet",
+  "kysymys": "Mitä tarkoittaa kansallispuisto?",
+  "uusi": true,
+  "vastaus": "Selvä juttu, tää on tuttua. Kansallispuisto on suojeltu alue, jonka tarkoituksena on säilyttää [[luonnon monimuotoisuuden]] kannalta arvokasta luontoa ja samalla antaa ihmisille mahdollisuus tutustua siihen. Kansainvälinen luonnonsuojeluliitto [[IUCN]] pitää kansallispuistoa omana suojelualuetyyppinään, ja se on yleensä laaja ja melko luonnontilainen. Käytännön säännöt, kuten retkeilyn ja kalastuksen rajoitukset, vaihtelevat maittain ja puistoittain. [[Braslavin järvien]] puisto perustettiin vuonna 1995. Kyyhkylle kansallispuisto on lähinnä iso ruokapöytä.",
+  "linkit": [
+   "luonnon monimuotoisuuden",
+   "IUCN",
+   "Braslavin järvien"
+  ],
+  "jatkot": [
+   "Mikä on IUCN?",
+   "Mitkä ovat Euroopan vanhimpia kansallispuistoja?"
+  ]
+ },
+ {
+  "kohde": "kohde:braslavin-jarvet",
+  "kysymys": "Miksi kosteikot ovat tärkeitä linnuille?",
+  "uusi": true,
+  "vastaus": "Tuota niin, hyvä peruskysymys. Kosteikot eli suot, järvenrannat ja tulvaniityt tarjoavat linnuille ravintoa, kuten hyönteisiä, kaloja ja vesikasveja, sekä suojaisia pesimäpaikkoja. Monille [[muuttolinnuille]] ne ovat myös tärkeitä levähdyspaikkoja matkan varrella. Lisäksi kosteikot sitovat vettä ja puhdistavat sitä, mikä tukee koko alueen [[ekosysteemiä]]. Siksi niitä suojellaan kansainvälisellä [[Ramsarin sopimuksella]], joka solmittiin vuonna 1971.\n\nMinä en ole muuttolintu, mutta ymmärrän hyvin, miksi pitkän lennon jälkeen kaipaa paikkaa, jossa on ruokaa ja rauhaa. Mut kyllä pullakin kelpaisi.",
+  "linkit": [
+   "muuttolinnuille",
+   "ekosysteemiä",
+   "Ramsarin sopimuksella"
+  ],
+  "jatkot": [
+   "Mikä on Ramsarin sopimus?",
+   "Miksi linnut muuttavat?"
+  ]
+ },
+ {
+  "kohde": "kohde:brestin-linnoitus",
+  "kysymys": "Minä vuonna linnoituksen rakentaminen alkoi?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä muistan. Rakennustyöt alkoivat vuonna 1833. Linnoituksen paikalla oli aiemmin Brestin vanha ruhtinaslinna, ja suunnittelijana toimi sotainsinööri [[Karl Opperman]]. Alue sijaitsee [[Bug-joen]] ja Muhavetsin haarojen ympäröimänä, ja se oli tuolloin osa [[Venäjän keisarikuntaa]]. Vuosiluku tuli kerrasta, siitä saa kyyhky olla vähän ylpeä.",
+  "linkit": [
+   "Karl Opperman",
+   "Bug-joen",
+   "Venäjän keisarikuntaa"
+  ],
+  "jatkot": [
+   "Mikä oli Venäjän keisarikunta?",
+   "Miksi Brest oli sotilaallisesti tärkeä?"
+  ]
+ },
+ {
+  "kohde": "kohde:brestin-linnoitus",
+  "kysymys": "Mitkä kolme linnoitettua saarta citadellia ympäröi?",
+  "uusi": false,
+  "vastaus": "Katotaas, nää pitää saada oikein. Keskussaarella sijaitsevaa citadellia ympäröivät kolme linnoitettua saarta: [[Kobrin]], [[Terespol]] ja [[Volyn]]. Koko linnoituskokonaisuutta ympäröivät Bug-joen ja Muhavets-joen haarat. Punatiilisessä kasarmirakennuksessa oli 500 huonetta. Kolme saarta, ja kaikki tuli oikein.",
+  "linkit": [
+   "Kobrin",
+   "Terespol",
+   "Volyn"
+  ],
+  "jatkot": [
+   "Miksi linnoituksessa oli useita erillisiä saaria?",
+   "Mitä Brestin linnoituksessa voi nykyään nähdä?"
+  ]
+ },
+ {
+  "kohde": "kohde:brestin-linnoitus",
+  "kysymys": "Mikä on citadelli?",
+  "uusi": true,
+  "vastaus": "Ai se. Sen sanan oon kuullu monta kertaa. Citadelli on linnoituksen tai kaupungin vahvimmin linnoitettu sisäosa. Sen tehtävänä oli toimia viimeisenä puolustuspaikkana, jos ulommat linnoitusrakenteet menetettiin. [[Brestin linnoituksessa]] citadelli sijaitsee keskussaarella, jota ympäröivät [[Bug-joen]] ja Muhavets-joen haarat. Citadellin sisällä oli varmaan hyvä leipomo, sitä minä ajattelen.",
+  "linkit": [
+   "Brestin linnoituksessa",
+   "Bug-joen"
+  ],
+  "jatkot": [
+   "Mitä muita kuuluisia linnoituksia Euroopassa on?",
+   "Miten linnoitukset muuttuivat tykkien yleistyessä?"
+  ]
+ },
+ {
+  "kohde": "kohde:brestin-linnoitus",
+  "kysymys": "Miksi joki oli hyvä paikka linnoitukselle?",
+  "uusi": true,
+  "vastaus": "Odotas vähän, ajattelen sitä ylhäältä. Joki ja sen haarat toimivat luonnollisena esteenä, jota hyökkääjän oli vaikea ylittää, ja ne voitiin tarvittaessa yhdistää linnoituksen [[vallihautoihin]]. Joet olivat myös tärkeitä kulkuväyliä, joten niiden risteyskohtien hallinta antoi mahdollisuuden valvoa liikennettä ja kauppaa. Brestin linnoitus rakennettiin juuri [[Bug-joen]] ja [[Muhavets-joen]] haarojen väliin. Ylhäältä joet näkyy kyl hyvin, ne on kuin hopeanauhoja.",
+  "linkit": [
+   "vallihautoihin",
+   "Bug-joen",
+   "Muhavets-joen"
+  ],
+  "jatkot": [
+   "Millaisia muita jokilinnoituksia Euroopassa on?",
+   "Miten rajat kulkevat Itä-Euroopassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:brestin-linnoitus",
+  "kysymys": "Mihin Bug-joki virtaa ja minkä maiden rajaa se kulkee?",
+  "uusi": true,
+  "vastaus": "Kas vaan, joki on tuttu. Tässä tarkoitettu Länsi-Bug on Itä-Euroopan joki, joka saa alkunsa [[Ukrainasta]] ja kulkee pitkän matkaa Ukrainan ja Puolan sekä Puolan ja Valko-Venäjän rajana. Se laskee [[Narew-jokeen]], joka puolestaan yhtyy [[Veikseliin]]. Joen mukaan on kyl helppo lentää.",
+  "linkit": [
+   "Ukrainasta",
+   "Narew-jokeen",
+   "Veikseliin"
+  ],
+  "jatkot": [
+   "Mikä on Veikseli?",
+   "Mikä on Narew-joki?"
+  ]
+ },
+ {
+  "kohde": "kohde:polotskin-sofian-katedraali",
+  "kysymys": "Kuka rakennutti alkuperäisen katedraalin?",
+  "uusi": false,
+  "vastaus": "Sepä sattui, tää on mieluisia aiheita. Alkuperäisen katedraalin rakennutti [[Polotskin]] ruhtinas [[Vseslav]] vuosina 1044–1066. Rakennuksessa oli aluksi seitsemän kupolia, joiden määrä väheni viiteen vuoden 1447 tulipalon jälkeen. Nykyinen rakennus edustaa [[Vilnan barokin]] tyyliä ja valmistui uudelleenrakennuksessa vuosina 1738–1750. Lähes tuhat vuotta vanhaa asiaa, ja kyl se vielä muistissa pysyy.",
+  "linkit": [
+   "Polotskin",
+   "Vseslav",
+   "Vilnan barokin"
+  ],
+  "jatkot": [
+   "Mikä on Polotskin kaupungin historia?",
+   "Mikä oli Kiovan Rus?"
+  ]
+ },
+ {
+  "kohde": "kohde:polotskin-sofian-katedraali",
+  "kysymys": "Millä tavalla rakennusta käytetään nykyään?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny, tää kuulostaa kivalta. Nykyään katedraali toimii Polotskin museoalueella [[konserttisalina]], ja siellä on [[urut]]. Rakennus on säilynyt monien vaiheiden läpi: tulipalo vuonna 1447 vähensi kupolit seitsemästä viiteen, ja 1700-luvun uudelleenrakennuksessa tyyliksi tuli Vilnan barokki. Rakennukseen tuli tuolloin myös tornit. Konsertin jälkeen kelpais kyl pullakahvit.",
+  "linkit": [
+   "konserttisalina",
+   "urut"
+  ],
+  "jatkot": [
+   "Mikä on Polotskin museoalue?",
+   "Millaisia urkukonsertteja katedraaleissa pidetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:polotskin-sofian-katedraali",
+  "kysymys": "Miten urut tuottavat äänensä?",
+  "uusi": true,
+  "vastaus": "No niin, tää on mekaniikkaa. Urut ovat puhallinsoitin, jossa ilmaa puhalletaan [[pillien]] läpi. Soittaja valitsee koskettimilla, mitkä pillit soivat, ja [[rekistereillä]], minkä tyyppisiä pillejä käytetään. Ilma tuotetaan nykyään sähkökäyttöisellä puhaltimella, aiemmin käsikäyttöisillä [[palkeilla]]. Pitkät pillit tuottavat matalia ja lyhyet korkeita ääniä. Aika monta pilliä, ja yksi kyyhky vaan kuuntelee.",
+  "linkit": [
+   "pillien",
+   "rekistereillä",
+   "palkeilla"
+  ],
+  "jatkot": [
+   "Kuka on kuuluisimpia urkusäveltäjiä?",
+   "Miten urkuja huolletaan ja viritetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:polotskin-sofian-katedraali",
+  "kysymys": "Mitä tarkoittaa barokki rakennustaiteessa?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Barokki on tyyli, joka syntyi [[Italiassa]] noin 1600-luvun taitteessa ja levisi laajalle Eurooppaan. Se korostaa liikettä, dramatiikkaa ja runsasta koristelua, ja julkisivuissa on kaarevia muotoja, voimakkaita valon ja varjon vaikutelmia sekä runsaasti veistoksia. [[Vilnan barokki]] on tämän tyylin paikallinen muoto, joka tunnetaan [[Liettuan suuriruhtinaskunnan]] alueelta. Barokissa kaikki on liikaa, ja sitä minä kyl arvostan.",
+  "linkit": [
+   "Italiassa",
+   "Vilnan barokki",
+   "Liettuan suuriruhtinaskunnan"
+  ],
+  "jatkot": [
+   "Millainen on Vilnan barokki?",
+   "Mikä on renessanssin ja barokin ero?"
+  ]
+ },
+ {
+  "kohde": "kohde:polotskin-sofian-katedraali",
+  "kysymys": "Miksi keskiajan kirkot paloivat niin usein?",
+  "uusi": true,
+  "vastaus": "No jopas, tää on mielenkiintoinen. Monissa keskiajan kirkoissa oli kiviset seinät mutta puinen kattorakenne, ja puu paloi helposti. Valaistuksena käytettiin [[kynttilöitä]] ja öljylamppuja, ja tulipalo saattoi syttyä myös salamaniskusta tai kaupunkia kohdanneesta suuresta tulipalosta. Palontorjunta oli vaatimatonta, koska ammattimaista [[palokuntaa]] ei ollut ja vesi haettiin käsin. Siksi monet kirkot jouduttiin rakentamaan uudelleen, kuten Polotskin Pyhän Sofian katedraali 1400-luvun tulipalon jälkeen. Pysyn kyl itse kaukana kynttilöistä.",
+  "linkit": [
+   "kynttilöitä",
+   "palokuntaa"
+  ],
+  "jatkot": [
+   "Miten nykyajan kirkkoja suojataan tulipaloilta?",
+   "Mitä Notre-Damen tulipalossa vuonna 2019 tapahtui?"
+  ]
+ },
+ {
+  "kohde": "kohde:gomelin-palatsi",
+  "kysymys": "Kuka suunnitteli palatsin alkuperäisen uusklassisen version?",
+  "uusi": false,
+  "vastaus": "Kato, tän minä tiedän. Palatsin alkuperäisen uusklassisen suunnitelman laati arkkitehti [[Ivan Starov]], ja rakennuksen teetti kenttämarsalkka [[Pjotr Rumjantsev]] 1700-luvun lopulla Sozh-joen rannalle [[Gomeliin]]. Uusklassismille ovat tyypillisiä selkeät, tasapainoiset muodot ja antiikin esikuvista lainatut yksityiskohdat, ja juuri sellaista tyyliä palatsin ensimmäinen versio edusti. Ei paha kyyhkyltä.",
+  "linkit": [
+   "Ivan Starov",
+   "Pjotr Rumjantsev",
+   "Gomeliin"
+  ],
+  "jatkot": [
+   "Kuka oli kenttämarsalkka Pjotr Rumjantsev?",
+   "Mikä museo palatsissa nykyään toimii?"
+  ]
+ },
+ {
+  "kohde": "kohde:gomelin-palatsi",
+  "kysymys": "Mitä Paskevitš lisäsi palatsiin?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. [[Kenttämarsalkka]] [[Ivan Paskevitš]] lisäsi palatsiin nelikerroksisen tornin ja kolmikerroksisen siiven, kun kiinteistö oli siirtynyt hänelle 1830-luvulla kruunun ostettua sen. Muutokset toivat rakennukseen ison osan siitä ilmeestä, jonka vuoksi palatsi tunnetaan nykyisin molempien omistajiensa nimillä. Tämän kaiken minä muistin ilman muistiinpanoja.",
+  "linkit": [
+   "Kenttämarsalkka",
+   "Ivan Paskevitš"
+  ],
+  "jatkot": [
+   "Kuka oli Ivan Paskevitš?",
+   "Millainen puisto palatsia ympäröi?"
+  ]
+ },
+ {
+  "kohde": "kohde:gomelin-palatsi",
+  "kysymys": "Minne Sozh-joki virtaa?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Sozh on Dneprin sivujoki, joka saa alkunsa Venäjän puolelta ja virtaa Valko-Venäjän kautta [[Dnepriin]]. [[Gomel]] sijaitsee sen rannalla, ja joki on kaupungille tärkeä niin maisemallisesti kuin historiallisesti. Tarkkoja pituuslukuja en ole varma, joten jätän ne mainitsematta.\n\nJoet ovat kyyhkylle parasta navigointia: seuraat vettä ja tiedät, että jossain sen varrella on kaupunki. Sozhin varrella sellainen todella on.",
+  "linkit": [
+   "Dnepriin",
+   "Gomel"
+  ],
+  "jatkot": [
+   "Mikä on Dnepr-joen reitti Mustallemerelle?",
+   "Miten joet ovat vaikuttaneet kaupunkien syntyyn Itä-Euroopassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:gomelin-palatsi",
+  "kysymys": "Mitä uusklassismi tarkoittaa rakennustaiteessa?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. [[Uusklassismi]] on 1700-luvun lopulla vahvistunut rakennustyyli, joka otti esikuvansa antiikin Kreikan ja Rooman arkkitehtuurista. Sille ovat ominaisia symmetria, selkeät mittasuhteet, pylväät ja otsikkorakennelmat sekä vähäeleinen koristelu verrattuna edeltäneeseen barokkiin. Tyyli levisi laajalti Euroopassa, ja sitä edustavia rakennuksia on myös Itä-Euroopassa, kuten [[Gomelin]] palatsi. Siinä meni taas tovi.",
+  "linkit": [
+   "Uusklassismi",
+   "Gomelin"
+  ],
+  "jatkot": [
+   "Miten uusklassismi erosi barokista?",
+   "Missä muualla Euroopassa on uusklassisia palatseja?"
+  ]
+ },
+ {
+  "kohde": "kohde:gomelin-palatsi",
+  "kysymys": "Missä päin Valko-Venäjää Gomel sijaitsee?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. [[Gomel]] sijaitsee Valko-Venäjän kaakkoisosassa Sozh-joen rannalla, melko lähellä maan rajaa Venäjän ja Ukrainan suuntaan, ja se on yksi maan merkittävimmistä kaupungeista. Alue kuuluu [[Valko-Venäjän]] eteläiseen osaan, ja kaupunki on ollut tärkeä jokiliikenteen ja kaupankäynnin paikka. Etäisyyksiä Minskiin en ole varma, joten en arvaa lukua.\n\nYlhäältä katsottuna rajaseutu näyttää vain vihreältä laikulta, ja kyllä minä silti tiedän, kumpi puoli on kumpi. Pullaa en täältä löydä, mutta uskon, että jokin paikallinen versio on olemassa.",
+  "linkit": [
+   "Gomel",
+   "Valko-Venäjän"
+  ],
+  "jatkot": [
+   "Mikä on Valko-Venäjän pääkaupunki ja missä se on?",
+   "Mitä kieliä Valko-Venäjällä puhutaan?"
+  ],
+  "paikka": {
+   "nimi": "Gomel",
+   "lat": 52.43,
+   "lon": 30.98,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-vanha-minsk",
+  "kysymys": "Miltä Vanha Minsk näytti loistoaikanaan?",
+  "uusi": false,
+  "vastaus": "Ai tota. Ennen [[toista maailmansotaa]] Minsk oli tiivis, monikerroksinen itäeurooppalainen kaupunki, jossa oli kivikatuja ja [[synagogia]]. Rakennukset seisoivat lähellä toisiaan ja kadut muodostivat tiheän verkon, jossa arkielämä, kauppa ja uskonnolliset yhteisöt kietoutuivat toisiinsa. Yksittäisten kortteleiden tarkkaa ulkonäköä en ole varma kuvaamaan, koska suuri osa vanhasta rakennuskannasta tuhoutui sodassa. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "toista maailmansotaa",
+   "synagogia"
+  ],
+  "jatkot": [
+   "Mitä Minskistä on jäljellä ennen sotaa rakennetusta?",
+   "Millaisia synagogia Itä-Euroopan kaupungeissa oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vanha-minsk",
+  "kysymys": "Miksi Vanha Minsk katosi?",
+  "uusi": false,
+  "vastaus": "Kääk. Vanha Minsk tuhoutui [[toisessa maailmansodassa]]: saksalainen [[Luftwaffe]] pommitti kaupunkia 24. kesäkuuta 1941 kolmessa aallossa, ja sodan loppuun mennessä 80–90 prosenttia rakennuskannasta oli raunioina. Sodan jälkeen kaupunki päätettiin rakentaa lähes kokonaan uudelleen, eikä vanhaa kaupunkia palautettu ennalleen, vaan tilalle nousi uusi, suunnitelmallinen [[Neuvostoliiton]] aikainen kaupunkikuva. Tapahtuma oli suuri menetys asukkaille, ja sen jäljet näkyvät kaupungissa yhä, vaikka siitä on kulunut jo yli kahdeksankymmentä vuotta.",
+  "linkit": [
+   "toisessa maailmansodassa",
+   "Luftwaffe",
+   "Neuvostoliiton"
+  ],
+  "jatkot": [
+   "Millainen Minsk on nykyisin?",
+   "Miten muut Euroopan kaupungit rakennettiin sodan jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vanha-minsk",
+  "kysymys": "Mitä Minskin vanhasta kaupungista on jäljellä nykyään?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Pieni osa vanhasta kaupunkikuvasta on säilynyt tai rakennettu uudelleen, esimerkiksi [[Ylä-kaupunki]]n alue, jonka historiallisia rakennuksia on kunnostettu ja jälleenrakennettu 2000-luvun puolella. Tarkkaa luetteloa säilyneistä rakennuksista en ole varma, joten en lupaa yksittäisiä kohteita. Pääosa nykyisestä kaupungista on kuitenkin [[toisen maailmansodan]] jälkeistä rakentamista, ja vanhan kaupungin tunnelma elää lähinnä jäljelle jääneissä kortteleissa. Siinä tuli tarpeeksi katselua yhdelle päivälle.",
+  "linkit": [
+   "Ylä-kaupunki",
+   "toisen maailmansodan"
+  ],
+  "jatkot": [
+   "Millainen Minskin sodanjälkeinen arkkitehtuuri on?",
+   "Miten vanhoja kaupunkikeskustoja on jälleenrakennettu Euroopassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vanha-minsk",
+  "kysymys": "Mitä eläimiä Berezinan biosfäärialueella elää?",
+  "uusi": true,
+  "vastaus": "Mmm— tost minä osaan kertoo. [[Berezinan biosfäärialue]] sijaitsee noin 120 kilometriä Minskistä pohjoiseen, ja yli 60 prosenttia siitä on soita. Alueella on tavattu 56 nisäkäs- ja 237 lintulajia, joukossa [[ruskeakarhu]], hirvi, [[ilves]], majava, saukko ja [[kalasääski]]. Luonnonsuojelualue perustettiin vuonna 1925, ja biosfäärialueen aseman se sai vuonna 1979. Kyllä nuo suot ovat linnulle kiinnostavia, mutta minä pysyn mieluummin kaupungin kaiteilla.",
+  "linkit": [
+   "Berezinan biosfäärialue",
+   "ruskeakarhu",
+   "ilves",
+   "kalasääski"
+  ],
+  "jatkot": [
+   "Mikä on biosfäärialue?",
+   "Missä Euroopan muualla elää ilves?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vanha-minsk",
+  "kysymys": "Mitä kieliä Minskissä puhutaan?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Valko-Venäjällä on kaksi virallista kieltä, [[valkovenäjä]] ja [[venäjä]], ja Minskin arjessa kuulee nykyään eniten venäjää, vaikka valkovenäjä näkyy esimerkiksi katukylteissä ja virallisissa yhteyksissä. Tarkkoja puhujamääriä en ole varma, joten jätän ne pois. Molemmat kielet ovat itäslaavilaisia ja läheistä sukua keskenään, joten ne muistuttavat toisiaan sanastoltaan ja rakenteeltaan. Ja tämän minä sain sanottua yhdellä hengenvedolla.",
+  "linkit": [
+   "valkovenäjä",
+   "venäjä"
+  ],
+  "jatkot": [
+   "Mitkä kielet kuuluvat itäslaavilaisiin kieliin?",
+   "Millä kirjaimistolla valkovenäjää kirjoitetaan?"
+  ]
+ }
+]
