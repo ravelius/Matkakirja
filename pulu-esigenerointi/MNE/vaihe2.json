@@ -1,0 +1,1124 @@
+[
+ {
+  "kohde": "kohde:kotorinlahti",
+  "kasite": "Verigen salmessa",
+  "kysymys": "Kerro lisää: Verigen salmessa",
+  "vastaus": "Verigen salmi on Kotorinlahden kapein kohta, jossa lahden leveys kutistuu vain 0,3 kilometriin. Koko lahti on noin 28 kilometriä pitkä ja syvimmillään 60 metriä, joten salmi on sen mittakaavassa hyvin ahdas. Lahden rannoilla sijaitsevat muun muassa [[Kotor]], [[Perast]] ja [[Tivat]], ja lahden alue on kuulunut [[Unescon]] maailmanperintökohteisiin vuodesta 1979.",
+  "linkit": [
+   "Kotor",
+   "Perast",
+   "Tivat",
+   "Unescon"
+  ],
+  "jatkot": [
+   "Mitkä vuoristot reunustavat Kotorinlahtea?",
+   "Kuinka syvä Kotorinlahti on suurimmillaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:kotorinlahti",
+  "kasite": "Kotor",
+  "kysymys": "Kerro lisää: Kotor",
+  "vastaus": "Kotor sijaitsee Kotorinlahden perukassa jyrkkien vuorten ja meren välissä, ja kaupunki on ollut asutettu yli 2000 vuotta. Sen historiaan ovat jättäneet jälkensä roomalaiset, bysanttilaiset, venetsialaiset, itävaltalaiset ja osmanit. Vanhankaupungin sydämessä kohoaa vuonna 1166 vihitty [[Pyhän Tryphonin katedraali]], ja kaupungin yllä kiipeävät lähes 4,5 kilometrin pituiset muurit 260 metrin korkeuteen. Suurin osa muureista rakennettiin [[Venetsian]] vallan aikana, ja ne liitettiin vuonna 2017 venetsialaisten puolustusrakennelmien sarjaan [[Unescon]] maailmanperintöluettelossa.",
+  "linkit": [
+   "Pyhän Tryphonin katedraali",
+   "Venetsian",
+   "Unescon"
+  ],
+  "jatkot": [
+   "Mitä Venetsian puolustusrakennelmien sarja tarkoittaa?",
+   "Mistä Pyhä Tryphon on tunnettu?"
+  ]
+ },
+ {
+  "kohde": "kohde:kotorinlahti",
+  "kasite": "Perast",
+  "kysymys": "Kerro lisää: Perast",
+  "vastaus": "Perast on Kotorinlahden rannalla sijaitseva kaupunki ja yksi lahden viidestä rantapaikkakunnasta, joihin kuuluvat myös [[Kotor]], Risan, Tivat ja Herceg Novi. Perastin edustalla on kaksi saareketta, [[Sveti Đorđe]] ja [[Neitsyt Marian kalliosaari]]. Ne kuuluvat Unescon maailmanperintökohteena suojeltuun Kotorinlahden alueeseen.",
+  "linkit": [
+   "Kotor",
+   "Sveti Đorđe",
+   "Neitsyt Marian kalliosaari"
+  ],
+  "jatkot": [
+   "Miten Neitsyt Marian kalliosaari on syntynyt?",
+   "Mitkä muut paikkakunnat ovat Kotorinlahden rannoilla?"
+  ]
+ },
+ {
+  "kohde": "kohde:kotorinlahti",
+  "kasite": "Orjenin",
+  "kysymys": "Kerro lisää: Orjenin",
+  "vastaus": "Orjen on toinen kahdesta Kotorinlahtea reunustavasta vuoristosta, ja toinen on [[Lovćen]]. Vuoristot nousevat lahden ympärille niin, että lahti työntyy Montenegron rannikolta syvälle vuoristoon. Lahden ranta-alue kiertää kaikkiaan yli 107 kilometriä, ja sen rannoilla ovat muun muassa [[Herceg Novi]] ja [[Kotor]]. Orjenin tarkasta korkeudesta en ole varma, joten lukua ei ole syytä esittää.",
+  "linkit": [
+   "Lovćen",
+   "Herceg Novi",
+   "Kotor"
+  ],
+  "jatkot": [
+   "Mikä vuori Lovćen on?",
+   "Mitkä paikkakunnat ovat Kotorinlahden rannoilla?"
+  ]
+ },
+ {
+  "kohde": "kohde:kotorinlahti",
+  "kasite": "Lovćenin",
+  "kysymys": "Kerro lisää: Lovćenin",
+  "vastaus": "Lovćen on Kotorinlahtea reunustava vuori Montenegrossa. Sen Jezerski vrhin huipulla, noin 1 660 metrin korkeudessa, sijaitsee [[Petar II Petrović-Njegošin]] mausoleumi. Ruhtinaspiispa ja runoilija halusi levätä vuoren huipulla, ja hänet haudattiin sinne pieneen kappeliin. Ensimmäisessä maailmansodassa [[Itävalta-Unkarin]] miehittäjät halusivat pystyttää huipulle keisari Franz Josefin muistomerkin, ja kappeli rappeutui pahoin. Nykyisen mausoleumin suunnitteli kroatialainen kuvanveistäjä [[Ivan Meštrović]], ja se vihittiin käyttöön vuonna 1974. Huipulle kiipeää 461 kiviporrasta.",
+  "linkit": [
+   "Petar II Petrović-Njegošin",
+   "Itävalta-Unkarin",
+   "Ivan Meštrović"
+  ],
+  "jatkot": [
+   "Kuka Petar II Petrović-Njegoš oli?",
+   "Mikä Itävalta-Unkari oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:kotorinlahti",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon",
+  "vastaus": "Unesco on Yhdistyneiden kansakuntien kasvatus-, tiede- ja kulttuurijärjestö, joka ylläpitää [[maailmanperintöluetteloa]]. Kotorinlahden alue on kuulunut luetteloon vuodesta 1979, ja siihen kuuluvat myös [[Perastin]] edustan saarekkeet. Vuonna 2017 Kotorin muurit liitettiin lisäksi venetsialaisten puolustusrakennelmien sarjaan.",
+  "linkit": [
+   "maailmanperintöluetteloa",
+   "Perastin"
+  ],
+  "jatkot": [
+   "Mitä maailmanperintökohteeksi pääseminen vaatii?",
+   "Mitkä muut Montenegron kohteet ovat maailmanperintöä?"
+  ]
+ },
+ {
+  "kohde": "kohde:kotorinlahti",
+  "kasite": "Risan",
+  "kysymys": "Kerro lisää: Risan",
+  "vastaus": "Risan on yksi Kotorinlahden viidestä rantapaikkakunnasta, joihin kuuluvat myös [[Kotor]], [[Perast]], [[Tivat]] ja [[Herceg Novi]]. Risanilla on pitkä historia, ja alueelta tunnetaan antiikin ajan asutuksen jäänteitä. Tarkoista vuosiluvuista en ole varma, joten niitä ei ole syytä esittää.",
+  "linkit": [
+   "Kotor",
+   "Perast",
+   "Tivat",
+   "Herceg Novi"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Kotor on?",
+   "Miksi Kotorinlahti on maailmanperintökohde?"
+  ]
+ },
+ {
+  "kohde": "kohde:kotorinlahti",
+  "kasite": "Tivat",
+  "kysymys": "Kerro lisää: Tivat",
+  "vastaus": "Tivat on yksi Kotorinlahden rantapaikkakunnista [[Kotorin]], [[Perastin]], Risanin ja Herceg Novin rinnalla. Kaupungissa on lentokenttä, joka palvelee Montenegron rannikkoa, ja entisen laivaston telakka-alueen tilalla on huviveneiden satama [[Porto Montenegro]]. Kaupunki sijaitsee lahden ulompaa osaa lähellä, Verigen salmen tuntumassa.",
+  "linkit": [
+   "Kotorin",
+   "Perastin",
+   "Porto Montenegro"
+  ],
+  "jatkot": [
+   "Mitä Tivatin telakka-alueella oli aiemmin?",
+   "Missä Montenegron lentokentät sijaitsevat?"
+  ]
+ },
+ {
+  "kohde": "kohde:kotorinlahti",
+  "kasite": "Herceg Novi",
+  "kysymys": "Kerro lisää: Herceg Novi",
+  "vastaus": "Herceg Novi on Kotorinlahden rannalla sijaitseva kaupunki ja yksi lahden viidestä rantapaikkakunnasta. Lähteiden mukaan kaupungin perusti Bosnian kuningas [[Tvrtko I]] vuonna 1382, ja myöhemmin sen vanhaa osaa hallitsivat eri valtakunnat. Kaupungin taustalla kohoaa [[Orjenin]] vuoristo, joka on yksi lahtea reunustavista vuoristoista. Tarkemmista vaiheista en ole varma, joten niitä ei ole syytä esittää.",
+  "linkit": [
+   "Tvrtko I",
+   "Orjenin"
+  ],
+  "jatkot": [
+   "Kuka Bosnian kuningas Tvrtko I oli?",
+   "Mikä Orjenin vuoristo on?"
+  ]
+ },
+ {
+  "kohde": "kohde:kotorinlahti",
+  "kasite": "Sveti Đorđe",
+  "kysymys": "Kerro lisää: Sveti Đorđe",
+  "vastaus": "Sveti Đorđe eli Pyhän Yrjön saareke sijaitsee Perastin edustalla Kotorinlahdella. Saari kuuluu Unescon suojaamaan Kotorinlahden alueeseen, ja sen naapurina on toinen Perastin edustan saareke, [[Neitsyt Marian kalliosaari]]. Saarella tunnetaan [[benediktiiniläisluostari]]; tarkemmista rakennusajoista en ole varma. Saari sijaitsee lähellä [[Perastin]] rantaa.",
+  "linkit": [
+   "Neitsyt Marian kalliosaari",
+   "benediktiiniläisluostari",
+   "Perastin"
+  ],
+  "jatkot": [
+   "Mitä benediktiinit ovat?",
+   "Miten Neitsyt Marian kalliosaari on syntynyt?"
+  ]
+ },
+ {
+  "kohde": "kohde:kotorinlahti",
+  "kasite": "Neitsyt Marian kalliosaari",
+  "kysymys": "Kerro lisää: Neitsyt Marian kalliosaari",
+  "vastaus": "Neitsyt Marian kalliosaari on Perastin edustalla sijaitseva saareke Kotorinlahdella, ja se kuuluu Unescon maailmanperintökohteeseen vuodesta 1979. Perimätiedon mukaan saari on syntynyt ihmisten työn tuloksena: merenkulkijat kasasivat matalikolle kiviä, ja saaren päällä seisoo kirkko. Sen naapurina on toinen saareke, [[Sveti Đorđe]]. Saarten sijainti [[Perastin]] edustalla tekee niistä lahden tunnetuimpia näkymiä.",
+  "linkit": [
+   "Sveti Đorđe",
+   "Perastin"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Perast on?",
+   "Mikä Sveti Đorđe -saari on?"
+  ]
+ },
+ {
+  "kohde": "kohde:ostrogin-luostari",
+  "kasite": "Vasilije Jovanović",
+  "kysymys": "Kerro lisää: Vasilije Jovanović",
+  "vastaus": "Vasilije Jovanović oli Hertsegovinan metropoliitta, joka perusti Ostrogin luostarin kallioseinämään 1600-luvulla. Perustamisajankohdaksi mainitaan lähteestä riippuen 1600-luvun alku tai vuosi 1665, joten tarkkaan vuoteen ei kannata sitoutua. Hän kuoli luostarissa vuonna 1671 ja julistettiin pyhäksi, ja hänet tunnetaan nimellä [[Ostrogin pyhä Basileios]]. Hän valitsi paikan osin suojaksi etenevää [[Osmanien valtakuntaa]] vastaan, ja samoissa luolissa oli ennen häntä asunut erakkona pyhä [[Isaija Onogoštilainen]].",
+  "linkit": [
+   "Ostrogin pyhä Basileios",
+   "Osmanien valtakuntaa",
+   "Isaija Onogoštilainen"
+  ],
+  "jatkot": [
+   "Mitä metropoliitta tarkoittaa ortodoksisessa kirkossa?",
+   "Mitä Hertsegovina tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:ostrogin-luostari",
+  "kasite": "Ostrogin pyhä Basileios",
+  "kysymys": "Kerro lisää: Ostrogin pyhä Basileios",
+  "vastaus": "Ostrogin pyhä Basileios on sama henkilö kuin Hertsegovinan metropoliitta Vasilije Jovanović, joka perusti Ostrogin luostarin. Hän kuoli luostarissa vuonna 1671, ja kuolemansa jälkeen hänet julistettiin pyhäksi. Hänen [[pyhäinjäännöksensä]] lepäävät luostarin luolakirkossa, ja ne vetävät luostariin [[pyhiinvaeltajia]] kaikista uskonnoista. Luostarin hän oli perustanut etenevän [[Osmanien valtakunnan]] varalle suojapaikaksi.",
+  "linkit": [
+   "pyhäinjäännöksensä",
+   "pyhiinvaeltajia",
+   "Osmanien valtakunnan"
+  ],
+  "jatkot": [
+   "Miksi Ostrogin luostari on pyhiinvaelluskohde?",
+   "Mitä pyhäinjäännökset tarkoittavat?"
+  ]
+ },
+ {
+  "kohde": "kohde:ostrogin-luostari",
+  "kasite": "osmaneja",
+  "kysymys": "Kerro lisää: osmaneja",
+  "vastaus": "Osmaneilla tarkoitetaan [[Osmanien valtakunnan]] hallitsijoita, sotaväkeä ja asukkaita. Valtakunta laajeni Balkanille 1300-luvulta alkaen, ja se hallitsi suuria osia alueesta vuosisatojen ajan. Montenegron historiassa osmanit valtasivat esimerkiksi [[Žabljak Crnojevićin]] linnoituksen vuonna 1478. Ostrogin luostarin perustaja valitsi paikan osin suojaksi eteneviä osmaneja vastaan.",
+  "linkit": [
+   "Osmanien valtakunnan",
+   "Žabljak Crnojevićin"
+  ],
+  "jatkot": [
+   "Milloin osmanit valtasivat Konstantinopolin?",
+   "Miten osmanit vaikuttivat Montenegron historiaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:ostrogin-luostari",
+  "kasite": "luolakirkkoa",
+  "kysymys": "Kerro lisää: luolakirkkoa",
+  "vastaus": "Luolakirkko on kallioluolaan louhittu tai luolaan rakennettu kirkkotila. Ostrogin luostarin yläosan kirkko on louhittu kahteen luolaan ja koristeltu [[freskoin]]. Vuosien 1923–1926 jälleenrakennuksessa, suuren tulipalon jälkeen, kaksi alkuperäistä luolakirkkoa säilyi. Luolakirkossa lepäävät [[Ostrogin pyhän Basileioksen]] pyhäinjäännökset.",
+  "linkit": [
+   "freskoin",
+   "Ostrogin pyhän Basileioksen"
+  ],
+  "jatkot": [
+   "Mikä on fresko?",
+   "Milloin Ostrogin luostari rakennettiin uudelleen?"
+  ]
+ },
+ {
+  "kohde": "kohde:ostrogin-luostari",
+  "kasite": "pyhäinjäännökset",
+  "kysymys": "Kerro lisää: pyhäinjäännökset",
+  "vastaus": "Pyhäinjäännöksillä tarkoitetaan pyhäksi katsotun henkilön ruumiinosia tai tämän käyttämiä esineitä, joita kristillisessä perinteessä kunnioitetaan. Ostrogin luostarissa [[Ostrogin pyhän Basileioksen]] pyhäinjäännökset lepäävät luolakirkossa, ja ne ovat keskeinen syy siihen, että luostariin vaeltaa [[pyhiinvaeltajia]]. Pyhäinjäännöksiä on kunnioitettu Euroopassa vuosisatojen ajan, ja niiden säilytyspaikoista on tullut matkakohteita.",
+  "linkit": [
+   "Ostrogin pyhän Basileioksen",
+   "pyhiinvaeltajia"
+  ],
+  "jatkot": [
+   "Miksi pyhäinjäännöksiä kunnioitetaan?",
+   "Mikä on pyhiinvaellus?"
+  ]
+ },
+ {
+  "kohde": "kohde:ostrogin-luostari",
+  "kasite": "alaluostarilta",
+  "kysymys": "Kerro lisää: alaluostarilta",
+  "vastaus": "Alaluostari on Ostrogin luostarikompleksin alempi osa, josta pyhiinvaeltajien perinteinen reitti lähtee kohti [[yläluostaria]]. Matkaa kertyy noin kolme kilometriä, ja monet kulkevat sen paljain jaloin. Yläluostari on rakennettu lähes pystysuoraan kallioseinämään [[Ostroška Greda]] -kallioon. Pyhiinvaellus on osa luostarin perinteistä elämää.",
+  "linkit": [
+   "yläluostaria",
+   "Ostroška Greda"
+  ],
+  "jatkot": [
+   "Miksi osa pyhiinvaeltajista kulkee paljain jaloin?",
+   "Missä Ostroška Greda sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:ostrogin-luostari",
+  "kasite": "yläluostarille",
+  "kysymys": "Kerro lisää: yläluostarille",
+  "vastaus": "Yläluostari on pyhiinvaellusreitin päätepiste, noin kolme kilometriä alaluostarilta. Se on rakennettu lähes pystysuoraan [[Ostroška Greda]] -kallioon, ja sen kirkko on louhittu kahteen luolaan ja koristeltu [[freskoin]]. Ostrogin pyhän Basileioksen pyhäinjäännökset lepäävät luostarin [[luolakirkossa]]. Rakennelma on kuin kasvanut suoraan vuoresta.",
+  "linkit": [
+   "Ostroška Greda",
+   "freskoin",
+   "luolakirkossa"
+  ],
+  "jatkot": [
+   "Mikä on fresko?",
+   "Mitä luolakirkko tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:ostrogin-luostari",
+  "kasite": "Balkanin",
+  "kysymys": "Kerro lisää: Balkanin",
+  "vastaus": "Balkan viittaa Kaakkois-Euroopan niemimaahan ja sen vuoristoiseen alueeseen, johon kuuluvat muun muassa [[Montenegro]] ja [[Pohjois-Makedonia]]. Alueen historiaa ovat muokanneet Bysantti, Venetsia ja Osmanien valtakunta. Pohjois-Makedoniassa sijaitsevan [[Ohridin]] järven ja vanhankaupungin Unesco liitti maailmanperintöluetteloon vuonna 1979. Montenegrossa Ostrogin luostari on yksi alueen tunnetuista pyhiinvaelluskohteista.",
+  "linkit": [
+   "Montenegro",
+   "Pohjois-Makedonia",
+   "Ohridin"
+  ],
+  "jatkot": [
+   "Mitkä valtiot kuuluvat Balkanin niemimaalle?",
+   "Mikä Ohridin järvi on?"
+  ]
+ },
+ {
+  "kohde": "kohde:ostrogin-luostari",
+  "kasite": "Ostroška Greda",
+  "kysymys": "Kerro lisää: Ostroška Greda",
+  "vastaus": "Ostroška Greda on kallio Montenegrossa lähellä [[Danilovgradia]], ja Ostrogin luostari on rakennettu lähes pystysuoraan sen kallioseinämään. Luostarin ylempi kirkko on louhittu kahteen luolaan, ja kokonaisuus näyttää kasvaneen suoraan vuoresta. Samoissa luolissa asui ennen luostarin perustamista erakkona pyhä [[Isaija Onogoštilainen]]. Kallion tarkoista mitoista en ole varma, joten niitä ei ole syytä esittää.",
+  "linkit": [
+   "Danilovgradia",
+   "Isaija Onogoštilainen"
+  ],
+  "jatkot": [
+   "Missä Danilovgrad sijaitsee?",
+   "Mitä luolakirkko tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:ostrogin-luostari",
+  "kasite": "Danilovgradia",
+  "kysymys": "Kerro lisää: Danilovgradia",
+  "vastaus": "Danilovgrad on kaupunki Montenegron keskiosassa, ja sen lähellä sijaitsee [[Ostrogin luostari]]. Luostari on rakennettu lähes pystysuoraan [[Ostroška Greda]] -kallioon. Kaupungin lähistö on tunnettu pyhiinvaeltajista, jotka suuntaavat luostariin [[Montenegron]] eri osista ja ulkomailta. Kaupungin historian tarkemmista vaiheista en ole varma.",
+  "linkit": [
+   "Ostrogin luostari",
+   "Ostroška Greda",
+   "Montenegron"
+  ],
+  "jatkot": [
+   "Mikä Ostrogin luostari on?",
+   "Mikä on Montenegron pääkaupunki?"
+  ]
+ },
+ {
+  "kohde": "kohde:ostrogin-luostari",
+  "kasite": "freskoin",
+  "kysymys": "Kerro lisää: freskoin",
+  "vastaus": "Freskolla tarkoitetaan seinämaalausta, joka tehdään märälle kalkkilaastille niin, että värit sitoutuvat seinään. Ostrogin luostarin ylempi kirkko on louhittu kahteen luolaan ja koristeltu freskoin. Freskot kuuluvat [[ortodoksisen]] kirkkotaiteen perinteeseen, jossa seinämaalaukset ja [[ikonien]] kuvaukset esittävät pyhiä ja raamatullisia tapahtumia. Maalausten tarkasta iästä en ole varma.",
+  "linkit": [
+   "ortodoksisen",
+   "ikonien"
+  ],
+  "jatkot": [
+   "Miten ikonit eroavat freskoista?",
+   "Mikä on ortodoksinen kirkko?"
+  ]
+ },
+ {
+  "kohde": "kohde:ostrogin-luostari",
+  "kasite": "luolakirkossa",
+  "kysymys": "Kerro lisää: luolakirkossa",
+  "vastaus": "Luolakirkko on Ostrogin luostarin sydän, sillä siellä lepäävät Ostrogin pyhän Basileioksen [[pyhäinjäännökset]]. Luostarin ylempi kirkko on louhittu kahteen luolaan, ja kaksi alkuperäistä luolakirkkoa säilyi vuosien 1923–1926 jälleenrakennuksessa. Samoissa luolissa oli asunut erakkona pyhä [[Isaija Onogoštilainen]] ennen luostarin perustajaa. Seinät on koristeltu [[freskoin]].",
+  "linkit": [
+   "pyhäinjäännökset",
+   "Isaija Onogoštilainen",
+   "freskoin"
+  ],
+  "jatkot": [
+   "Milloin Ostrogin luostari paloi?",
+   "Kuka oli pyhä Isaija Onogoštilainen?"
+  ]
+ },
+ {
+  "kohde": "kohde:ostrogin-luostari",
+  "kasite": "Hertsegovinan metropoliitta",
+  "kysymys": "Kerro lisää: Hertsegovinan metropoliitta",
+  "vastaus": "Metropoliitta on ortodoksisessa kirkossa piispan arvonimi, joka viittaa kirkollisen alueen johtavaan piispaan. Hertsegovinan metropoliitta oli [[Vasilije Jovanović]], joka perusti Ostrogin luostarin ja tunnetaan myöhemmin pyhänä. [[Hertsegovina]] on historiallinen alue Balkanilla. Hän kuoli luostarissa vuonna 1671.",
+  "linkit": [
+   "Vasilije Jovanović",
+   "Hertsegovina"
+  ],
+  "jatkot": [
+   "Mikä on ortodoksinen kirkko?",
+   "Missä Hertsegovina sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:taran-kanjoni",
+  "kasite": "Drinaan",
+  "kysymys": "Kerro lisää: Drinaan",
+  "vastaus": "Drina on joki Balkanilla, joka syntyy, kun Tara ja [[Piva]] yhtyvät. Se virtaa Montenegron, Bosnia ja Hertsegovinan sekä Serbian seudulla ja laskee [[Sava-jokeen]]. Myös [[Lim-joki]] on Drinan sivujoki. Drinan kautta Taran vesi päätyy lopulta Tonavan ja Mustanmeren vesistöön.",
+  "linkit": [
+   "Piva",
+   "Sava-jokeen",
+   "Lim-joki"
+  ],
+  "jatkot": [
+   "Mihin jokeen Sava laskee?",
+   "Mikä Lim-joki on?"
+  ]
+ },
+ {
+  "kohde": "kohde:taran-kanjoni",
+  "kasite": "Durmitorin kansallispuiston",
+  "kysymys": "Kerro lisää: Durmitorin kansallispuiston",
+  "vastaus": "Durmitorin kansallispuisto on Montenegron pohjoisosan vuoristoalue, ja sen Unescon maailmanperintökohde on ollut voimassa vuodesta 1980. Alueeseen kuuluu Taran kanjoni. Durmitorin massiivissa on lehden mukaan 18 jäätikköjärveä, joita kutsutaan nimellä gorske oči eli vuoren silmät. Yksi niistä on [[Barnojärvi]], joka sijaitsee 1 489 metrin korkeudessa lähellä [[Mustaajärveä]]. Puiston ja sen järvien muodot ovat [[jäätikköjärvien]] jääkauden perua.",
+  "linkit": [
+   "Barnojärvi",
+   "Mustaajärveä",
+   "jäätikköjärvien"
+  ],
+  "jatkot": [
+   "Mikä Mustajärvi on?",
+   "Mitä jäätikköjärvi tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:taran-kanjoni",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon",
+  "vastaus": "Unesco on Yhdistyneiden kansakuntien kasvatus-, tiede- ja kulttuurijärjestö. Taran kanjoni kuuluu Durmitorin kansallispuiston maailmanperintökohteeseen, ja [[Durmitorin]] alue on ollut Unescon maailmanperintökohde vuodesta 1980. Montenegrossa on lisäksi [[Kotorinlahti]], jonka alue on kuulunut luetteloon vuodesta 1979. Suojelun tarkoituksena on säilyttää merkittävät luonto- ja kulttuurikohteet tuleville sukupolville.",
+  "linkit": [
+   "Durmitorin",
+   "Kotorinlahti"
+  ],
+  "jatkot": [
+   "Mitä Ihminen ja biosfääri -ohjelma on?",
+   "Mitä maailmanperintöluettelo on?"
+  ]
+ },
+ {
+  "kohde": "kohde:taran-kanjoni",
+  "kasite": "Partisaanit",
+  "kysymys": "Kerro lisää: Partisaanit",
+  "vastaus": "Partisaaneilla tarkoitetaan toisessa maailmansodassa Jugoslaviassa toiminutta vastarintaliikettä, jota johti [[Josip Broz Tito]]. Montenegron alueella partisaanit räjäyttivät Đurđevića Taran sillan yhden kaaren, ja silta korjattiin vuonna 1946. Sodasta on nyt yli kahdeksankymmentä vuotta. Partisaaniliike nousi myöhemmin osaksi [[Jugoslavian]] sodanjälkeistä valtiojärjestystä.",
+  "linkit": [
+   "Josip Broz Tito",
+   "Jugoslavian"
+  ],
+  "jatkot": [
+   "Kuka Josip Broz Tito oli?",
+   "Mitä Jugoslavialle tapahtui myöhemmin?"
+  ]
+ },
+ {
+  "kohde": "kohde:taran-kanjoni",
+  "kasite": "Žabljakin",
+  "kysymys": "Kerro lisää: Žabljakin",
+  "vastaus": "Žabljak on Taran kanjonin lähellä sijaitseva vuoristokaupunki, joka toimii koskenlaskun tukikohtana. Se on [[Durmitorin]] kansallispuiston porttikaupunki, ja sen ympäristö on suosittua retkeily- ja hiihtoaluetta. Kaupungin lähellä [[Taran kanjoni]] on syvimmillään noin 1 300 metriä. Kyse on eri paikasta kuin Skadarjärven rannalla sijaitsevat Žabljak Crnojevićin rauniot.",
+  "linkit": [
+   "Durmitorin",
+   "Taran kanjoni"
+  ],
+  "jatkot": [
+   "Mikä Durmitorin kansallispuisto on?",
+   "Millainen koskenlasku Taralla on?"
+  ]
+ },
+ {
+  "kohde": "kohde:taran-kanjoni",
+  "kasite": "koskenlaskun",
+  "kysymys": "Kerro lisää: koskenlaskun",
+  "vastaus": "Koskenlasku on retkeilylaji, jossa virtaava joki lasketaan kumiveneellä tai lautalla, yleensä ohjaajan johdolla. Kosket luokitellaan vaikeusasteen mukaan, ja varusteina ovat muun muassa pelastusliivit ja kypärä. Tara on yksi koskenlaskun käyttämistä joista Montenegrossa, ja [[Žabljak]] toimii alueen tukikohtana. Joki virtaa syvässä [[Taran kanjonissa]], joka kuuluu [[Durmitorin kansallispuiston]] maailmanperintökohteeseen.",
+  "linkit": [
+   "Žabljak",
+   "Taran kanjonissa",
+   "Durmitorin kansallispuiston"
+  ],
+  "jatkot": [
+   "Kuinka pitkä Tara-joki on?",
+   "Mikä Žabljak on?"
+  ]
+ },
+ {
+  "kohde": "kohde:taran-kanjoni",
+  "kasite": "Montenegrossa",
+  "kysymys": "Kerro lisää: Montenegrossa",
+  "vastaus": "Montenegro on Balkanin länsiosassa Adrianmeren rannalla sijaitseva valtio, ja sen pääkaupunki on [[Podgorica]]. Vanha kuninkaallinen pääkaupunki on [[Cetinje]]. Maa itsenäistyi vuonna 2006, ja sen luonto vaihtelee Adrianmeren rannikosta jäätiköiden muovaamiin vuoriin. Taran kanjoni kuuluu [[Durmitorin]] alueeseen, jossa on myös Đurđevića Taran silta.",
+  "linkit": [
+   "Podgorica",
+   "Cetinje",
+   "Durmitorin"
+  ],
+  "jatkot": [
+   "Milloin Montenegro itsenäistyi?",
+   "Mikä Cetinje on?"
+  ]
+ },
+ {
+  "kohde": "kohde:taran-kanjoni",
+  "kasite": "Taran kanjonin",
+  "kysymys": "Kerro lisää: Taran kanjonin",
+  "vastaus": "Taran kanjoni on Tara-joen muovaama kanjoni Montenegrossa, ja se on syvimmillään noin 1 300 metriä. Tara on 146 kilometriä pitkä joki, joka laskee [[Drinaan]]. Kanjoni kuuluu [[Durmitorin kansallispuiston]] Unescon maailmanperintökohteeseen. Kanjonin ylittää [[Đurđevića Taran silta]], joka rakennettiin vuosina 1937–1940.",
+  "linkit": [
+   "Drinaan",
+   "Durmitorin kansallispuiston",
+   "Đurđevića Taran silta"
+  ],
+  "jatkot": [
+   "Mikä Drina on?",
+   "Mikä Durmitorin kansallispuisto on?"
+  ]
+ },
+ {
+  "kohde": "kohde:taran-kanjoni",
+  "kasite": "Taran kanjonissa",
+  "kysymys": "Kerro lisää: Taran kanjonissa",
+  "vastaus": "Taran kanjonissa Tara-joki virtaa Durmitorin kansallispuiston alueella, ja kanjonin syvyys on syvimmillään noin 1 300 metriä. Kanjonin ylittää [[Đurđevića Taran silta]], joka on 365 metriä pitkä ja noin 170 metriä joen yläpuolella. Joella harrastetaan [[koskenlaskua]], ja lähellä sijaitseva [[Žabljakin]] vuoristokaupunki toimii sen tukikohtana. Silta räjäytettiin toisessa maailmansodassa osin, ja se korjattiin vuonna 1946.",
+  "linkit": [
+   "Đurđevića Taran silta",
+   "koskenlaskua",
+   "Žabljakin"
+  ],
+  "jatkot": [
+   "Mikä Žabljak on?",
+   "Mitä koskenlasku tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:biogradska-gora",
+  "kasite": "Bjelasican",
+  "kysymys": "Kerro lisää: Bjelasican",
+  "vastaus": "Bjelasica on vuorijono Montenegrossa Kolašinin lähellä. Sen korkein huippu on [[Crna Glava]], joka kohoaa 2 139 metriin, ja jonossa on kymmenen yli 2 000 metrin huippua sekä kuusi jäätikköjärveä. Jono rajautuu Lim- ja Tara-jokiin. Vuoriston alueella sijaitsee [[Biogradska Gora]] -kansallispuisto, ja [[Kolašinin]] hiihtokeskus houkuttaa vuorelle myös talvella.",
+  "linkit": [
+   "Crna Glava",
+   "Biogradska Gora",
+   "Kolašinin"
+  ],
+  "jatkot": [
+   "Mikä Biogradska Gora on?",
+   "Missä Kolašin sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:biogradska-gora",
+  "kasite": "Biogradskojärvi",
+  "kysymys": "Kerro lisää: Biogradskojärvi",
+  "vastaus": "Biogradskojärvi sijaitsee metsän keskellä Biogradska Goran kansallispuistossa, ja sen mainitaan olevan puiston suurin jääkausijärvi. Puiston viisi muuta jääkausijärveä sijaitsevat 1 820 metrin korkeudessa. Ympäröivä [[aarniometsä]] on osa puiston 16 neliökilometrin metsäaluetta, jossa kasvaa yli viisisataa vuotta vanhoja puita. Puisto on osa [[Bjelasican]] vuoristoa, ja se julistettiin kansallispuistoksi vuonna 1952.",
+  "linkit": [
+   "aarniometsä",
+   "Bjelasican"
+  ],
+  "jatkot": [
+   "Mikä on aarniometsä?",
+   "Kuinka vanhoja Biogradska Goran puut ovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:biogradska-gora",
+  "kasite": "Taran",
+  "kysymys": "Kerro lisää: Taran",
+  "vastaus": "Tara on 146 kilometriä pitkä joki, joka virtaa Montenegrossa ja liittyy [[Drinaan]]. Sen kanjoni on syvimmillään noin 1 300 metriä, ja se kuuluu [[Durmitorin kansallispuiston]] Unescon maailmanperintökohteeseen. Biogradska Gora sijaitsee Taran ja [[Limin]] jokien välissä. Joen ylittää [[Đurđevića Taran silta]], joka rakennettiin vuosina 1937–1940.",
+  "linkit": [
+   "Drinaan",
+   "Durmitorin kansallispuiston",
+   "Limin",
+   "Đurđevića Taran silta"
+  ],
+  "jatkot": [
+   "Mikä Lim-joki on?",
+   "Milloin Đurđevića Taran silta rakennettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:biogradska-gora",
+  "kasite": "Limin",
+  "kysymys": "Kerro lisää: Limin",
+  "vastaus": "Lim on joki, joka virtaa Montenegrossa ja kuuluu [[Drinan]] vesistöön ja sitä kautta [[Tonavan]] vesistöalueeseen. Plavjärven vesi virtaa pois Lim-jokeen, ja joki rajaa Bjelasican vuoristoa Taran ohella. Biogradska Gora sijaitsee Taran ja Limin jokien välissä, [[Bjelasican]] vuoristossa. Joen tarkasta pituudesta en ole varma.",
+  "linkit": [
+   "Drinan",
+   "Tonavan",
+   "Bjelasican"
+  ],
+  "jatkot": [
+   "Mihin jokeen Lim laskee?",
+   "Mikä Plavjärvi on?"
+  ]
+ },
+ {
+  "kohde": "kohde:biogradska-gora",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon",
+  "vastaus": "Unesco on Yhdistyneiden kansakuntien kasvatus-, tiede- ja kulttuurijärjestö. Biogradska Goran alueelle lisättiin vuonna 1977 sen [[Ihminen ja biosfääri -ohjelman]] suoja, kun alue oli julistettu kansallispuistoksi vuonna 1952. Montenegrossa Unesco on suojellut myös [[Kotorinlahden]] alueen vuodesta 1979 ja [[Durmitorin]] alueen vuodesta 1980. Biosfäärisuojelu tähtää luonnon ja ihmisen yhteiselon tasapainoon.",
+  "linkit": [
+   "Ihminen ja biosfääri -ohjelman",
+   "Kotorinlahden",
+   "Durmitorin"
+  ],
+  "jatkot": [
+   "Mikä Biogradska Gora on?",
+   "Milloin Durmitor liitettiin maailmanperintöön?"
+  ]
+ },
+ {
+  "kohde": "kohde:biogradska-gora",
+  "kasite": "aarniometsää",
+  "kysymys": "Kerro lisää: aarniometsää",
+  "vastaus": "Aarniometsällä tarkoitetaan metsää, jota ihmistoiminta ei ole olennaisesti muuttanut. Siinä on usein hyvin vanhoja puita ja runsaasti [[lahopuuta]], ja se on monille eliölajeille tärkeä elinympäristö. Biogradska Goran kansallispuistossa aarniometsää on 16 neliökilometriä, ja puut ovat yli viisisataa vuotta vanhoja. Metsän keskellä on [[Biogradskojärvi]], ja puisto sijaitsee [[Bjelasican]] vuoristossa.",
+  "linkit": [
+   "lahopuuta",
+   "Biogradskojärvi",
+   "Bjelasican"
+  ],
+  "jatkot": [
+   "Kuinka vanhoja Biogradska Goran puut ovat?",
+   "Mikä on Bjelasica?"
+  ]
+ },
+ {
+  "kohde": "kohde:stari-bar",
+  "kasite": "Adrianmeren",
+  "kysymys": "Kerro lisää: Adrianmeren",
+  "vastaus": "Adrianmeri on [[Välimeren]] pohjoinen haara Italian ja Balkanin niemimaan välissä. Montenegron rannikko sijaitsee sen itärannalla, ja Stari Bar on muutaman kilometrin päässä rannikolta. Slovenian puolella Piranin lähellä [[Sečovljen suola-altaat]] ovat olleet toiminnassa jo 1200-luvulta, ja niissä suolaa tehdään yhä perinteisin menetelmin. Tuote myydään nimellä [[Piranin]] suola.",
+  "linkit": [
+   "Välimeren",
+   "Sečovljen suola-altaat",
+   "Piranin"
+  ],
+  "jatkot": [
+   "Mitkä valtiot rajautuvat Adrianmereen?",
+   "Mikä Sečovljen suola on?"
+  ]
+ },
+ {
+  "kohde": "kohde:stari-bar",
+  "kasite": "Barista",
+  "kysymys": "Kerro lisää: Barista",
+  "vastaus": "Bar on Montenegron rannikolla Adrianmeren äärellä sijaitseva kaupunki, jota sanotaan myös uudeksi Bariksi erotukseksi [[Stari Barin]] raunioista. Stari Bar on noin kolmen kilometrin päässä rannikolla sijaitsevasta uudesta Barista, vuoren rinteellä 184 metrin korkeudessa. Uusi Bar toimii satamakaupunkina, ja [[Adrianmeren]] rannikko on sen elinkeinojen perusta. Kaupungin tarkoista asukasluvuista en ole varma, joten niitä ei esitetä.",
+  "linkit": [
+   "Stari Barin",
+   "Adrianmeren"
+  ],
+  "jatkot": [
+   "Mikä Stari Bar on?",
+   "Mikä on Adrianmeri?"
+  ]
+ },
+ {
+  "kohde": "kohde:stari-bar",
+  "kasite": "Bysantille",
+  "kysymys": "Kerro lisää: Bysantille",
+  "vastaus": "Bysantti eli [[Itä-Rooman valtakunta]] oli antiikin Rooman jatkaja, jonka keskus oli Konstantinopoli. Varhaisella keskiajalla Stari Bar kuului Bysantille, kunnes [[Stefan Vojislav]] liitti sen valtaansa noin vuonna 1040. Bysantin valtakunta päättyi, kun osmanit valtasivat Konstantinopolin vuonna 1453. Sen perintö näkyy Balkanin kirkoissa, kirjoituksissa ja hallintoperinteissä.",
+  "linkit": [
+   "Itä-Rooman valtakunta",
+   "Stefan Vojislav"
+  ],
+  "jatkot": [
+   "Milloin Bysantin valtakunta päättyi?",
+   "Kuka oli Stefan Vojislav?"
+  ]
+ },
+ {
+  "kohde": "kohde:stari-bar",
+  "kasite": "akvedukti",
+  "kysymys": "Kerro lisää: akvedukti",
+  "vastaus": "Akvedukti on vesijohto, joka kuljettaa vettä pitkän matkan, usein holvikaarisiltana tai kanavana. Tekniikkaa tunnettiin jo antiikin [[Roomassa]]. Stari Barissa osmanniajan akvedukti on kunnostettu, ja kunnostuksen jälkeen ihmiset ovat alkaneet palata alueelle. Kohde kuuluu [[Stari Barin]] raunioiden kunnostukseen, jossa vanhoja rakenteita pyritään säilyttämään. Hankkeen tarkoista vaiheista en ole varma.",
+  "linkit": [
+   "Roomassa",
+   "Stari Barin"
+  ],
+  "jatkot": [
+   "Miten roomalaiset akveduktit toimivat?",
+   "Mikä Stari Bar on?"
+  ]
+ },
+ {
+  "kohde": "kohde:stari-bar",
+  "kasite": "maanjäristys",
+  "kysymys": "Kerro lisää: maanjäristys",
+  "vastaus": "Maanjäristys on maankuoren äkillinen värähtely, joka syntyy, kun [[tektonisten laattojen]] liikkeen kerryttämä jännitys purkautuu siirroksessa. [[Adrianmeren]] rannikko ja Balkanin länsiosa ovat järistysalttiita seutuja. Vuoden 1979 maanjäristys vaurioitti Stari Barin raunioita uudelleen sen jälkeen, kun kaupunki oli jo tuhoutunut pitkälti vuosien 1877–1878 piirityksessä. Raunioiden kunnostus on jatkunut sen jälkeen, ja Stari Barin [[osmanniajan]] akvedukti on yksi kunnostetuista rakenteista.",
+  "linkit": [
+   "tektonisten laattojen",
+   "Adrianmeren",
+   "osmanniajan"
+  ],
+  "jatkot": [
+   "Miten maanjäristyksen voimakkuutta mitataan?",
+   "Minkä vahingon vuoden 1979 järistys aiheutti Montenegrossa?"
+  ]
+ },
+ {
+  "kohde": "kohde:stari-bar",
+  "kasite": "Stefan Vojislav",
+  "kysymys": "Kerro lisää: Stefan Vojislav",
+  "vastaus": "Stefan Vojislav oli keskiajan ruhtinas, jonka valtaan Stari Bar liitettiin noin vuonna 1040. Aiemmin paikka oli kuulunut [[Bysantille]]. Hänen hallitsemansa alue tunnetaan nimellä [[Duklja]], ja se oli myöhemmän [[Zetan]] varhainen edeltäjä. Tarkemmista vuosiluvuista en ole varma.",
+  "linkit": [
+   "Bysantille",
+   "Duklja",
+   "Zetan"
+  ],
+  "jatkot": [
+   "Mikä Duklja oli?",
+   "Mikä oli Bysantti?"
+  ]
+ },
+ {
+  "kohde": "kohde:stari-bar",
+  "kasite": "piirityksessä",
+  "kysymys": "Kerro lisää: piirityksessä",
+  "vastaus": "Piiritys tarkoittaa sotilaallista toimintaa, jossa linnoitettu kaupunki eristetään ja sitä pyritään valtaamaan. Stari Bar tuhoutui pitkälti vuosien 1877–1878 piirityksessä, ja tuolloin käytiin [[Venäjän ja Osmanien valtakunnan välistä sotaa]]. Sodan jälkeen [[Berliinin kongressi]] ratkaisi Balkanin rajat vuonna 1878. Vuoden 1979 [[maanjäristys]] vaurioitti raunioita vielä uudelleen, ja siitä on nyt yli neljäkymmentä vuotta.",
+  "linkit": [
+   "Venäjän ja Osmanien valtakunnan välistä sotaa",
+   "Berliinin kongressi",
+   "maanjäristys"
+  ],
+  "jatkot": [
+   "Mikä Berliinin kongressi oli?",
+   "Miten Stari Barin raunioita on kunnostettu?"
+  ]
+ },
+ {
+  "kohde": "kohde:stari-bar",
+  "kasite": "akveduktin",
+  "kysymys": "Kerro lisää: akveduktin",
+  "vastaus": "Stari Barin osmanniajan akvedukti toimi kaupungin vesihuollon osana, ja sen kunnostus on osa raunioiden elvyttämistä. Kunnostuksen jälkeen ihmiset ovat alkaneet palata alueelle. Kaupunki tuhoutui pitkälti vuosien 1877–1878 piirityksessä, ja [[osmanniajan]] rakenteet kärsivät. Lisäksi vuoden 1979 [[maanjäristys]] vaurioitti raunioita uudelleen. Akveduktin tarkemmista mitoista en ole varma.",
+  "linkit": [
+   "osmanniajan",
+   "maanjäristys"
+  ],
+  "jatkot": [
+   "Miten osmanniajan akveduktit toimivat?",
+   "Mikä vuoden 1979 maanjäristys oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:plavjarvi",
+  "kasite": "Montenegron",
+  "kysymys": "Kerro lisää: Montenegron",
+  "vastaus": "Montenegro on pieni Balkanin valtio Adrianmeren rannalla, ja sen pääkaupunki on [[Podgorica]]. Maa itsenäistyi vuonna 2006. Maan korkein vuori on lehden mukaan [[Zla Kolata]], joka kohoaa 2 534 metriin ja kuuluu [[Prokletijeen]]. Plavjärvi sijaitsee maan koillisosassa [[Plavin]] kunnassa.",
+  "linkit": [
+   "Podgorica",
+   "Zla Kolata",
+   "Prokletijeen",
+   "Plavin"
+  ],
+  "jatkot": [
+   "Mikä Zla Kolata on?",
+   "Mikä Podgorica on?"
+  ]
+ },
+ {
+  "kohde": "kohde:plavjarvi",
+  "kasite": "Prokletijen",
+  "kysymys": "Kerro lisää: Prokletijen",
+  "vastaus": "Prokletije eli Kirotut vuoret on vuoristo, jonka nimi tarkoittaa kirottuja. Montenegron korkein huippu on [[Zla Kolata]] 2 534 metrin korkeudessa, mutta koko vuoriston korkein huippu [[Maja Jezercë]], 2 694 metriä, sijaitsee Albanian puolella. Vuoriston Montenegron puolelle perustettiin kansallispuisto vuonna 2009, ja puiston pinta-ala on noin 16 000 hehtaaria. Viimeisen jääkauden aikana laaksoja muovasivat kilometrien mittaiset jäätiköt, ja [[Ropojanan jäätikkö]] oli noin 12,5 kilometriä pitkä.",
+  "linkit": [
+   "Zla Kolata",
+   "Maja Jezercë",
+   "Ropojanan jäätikkö"
+  ],
+  "jatkot": [
+   "Mikä Maja Jezercë on?",
+   "Mitä jäätikköjärvet ovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:plavjarvi",
+  "kasite": "Visitor-vuoriston",
+  "kysymys": "Kerro lisää: Visitor-vuoriston",
+  "vastaus": "Visitor on vuoristo Plavjärven tuntumassa Montenegron koillisosassa. Se rajaa Plavjärveä yhdessä [[Prokletijen]] kanssa, ja järvi sijaitsee 906 metrin korkeudessa [[Plavin]] kunnassa. Vuoriston korkeudesta ja tarkoista rajoista en ole varma, joten niitä ei ole syytä esittää. Plavjärven vesi virtaa pois [[Lim-jokeen]].",
+  "linkit": [
+   "Prokletijen",
+   "Plavin",
+   "Lim-jokeen"
+  ],
+  "jatkot": [
+   "Mitä Prokletije tarkoittaa?",
+   "Millainen Plavjärvi on?"
+  ]
+ },
+ {
+  "kohde": "kohde:plavjarvi",
+  "kasite": "Lim-jokeen",
+  "kysymys": "Kerro lisää: Lim-jokeen",
+  "vastaus": "Lim on joki, johon Plavjärven vesi virtaa. Lim kuuluu [[Drinan]] vesistöön, ja Drina laskee [[Sava-jokeen]], joka puolestaan yhtyy Tonavaan Belgradissa. Tonava laskee lopulta [[Mustaanmereen]], joten Plavjärven vesi päätyy pitkän matkan jälkeen sinne asti. Plavjärven pohjassa on lukuisia lähteitä, joista vesi pulppuaa maasta.",
+  "linkit": [
+   "Drinan",
+   "Sava-jokeen",
+   "Mustaanmereen"
+  ],
+  "jatkot": [
+   "Mikä Drina on?",
+   "Mihin mereen Tonava laskee?"
+  ]
+ },
+ {
+  "kohde": "kohde:plavjarvi",
+  "kasite": "Drina-joen",
+  "kysymys": "Kerro lisää: Drina-joen",
+  "vastaus": "Drina on joki Balkanilla, joka syntyy, kun Tara ja [[Piva]] yhtyvät. Se virtaa osin Bosnia ja Hertsegovinan ja Serbian rajaseudulla ennen kuin laskee [[Sava-jokeen]]. Myös [[Lim]] on Drinan sivujoki, ja sitä kautta Plavjärven vesi kuuluu Drinan vesistöön. Joen tarkasta pituudesta en ole varma.",
+  "linkit": [
+   "Piva",
+   "Sava-jokeen",
+   "Lim"
+  ],
+  "jatkot": [
+   "Mihin jokeen Drina laskee?",
+   "Mikä Piva-joki on?"
+  ]
+ },
+ {
+  "kohde": "kohde:plavjarvi",
+  "kasite": "Tonavan",
+  "kysymys": "Kerro lisää: Tonavan",
+  "vastaus": "Tonava on yksi Euroopan tärkeimmistä jokireiteistä, ja se virtaa Saksasta Wienin, Bratislavan ja Belgradin kautta [[Mustaanmereen]]. Itävallassa Tonavan rannalla sijaitsi roomalaiskaupunki [[Carnuntum]], jonka kohdalla [[meripihkatie]] ylitti joen: Itämereltä tuotu keltainen kivi kulki sieltä Italiaan. Keisari [[Marcus Aurelius]] asui kaupungissa 170-luvulla ja kirjoitti siellä lähteiden mukaan osan Itsetutkisteluistaan. Tarkoista vuosista lähteet ovat ristiriitaisia.",
+  "linkit": [
+   "Mustaanmereen",
+   "Carnuntum",
+   "meripihkatie",
+   "Marcus Aurelius"
+  ],
+  "jatkot": [
+   "Mitkä maat Tonava kohtaa matkallaan?",
+   "Mikä Carnuntum oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:plavjarvi",
+  "kasite": "Kalkkikivi",
+  "kysymys": "Kerro lisää: Kalkkikivi",
+  "vastaus": "Kalkkikivi on sedimenttikivilaji, joka koostuu pääosin kalsiumkarbonaatista. Sade- ja pohjavesi liuottaa sitä hitaasti, jolloin syntyy rakoja, luolia ja maanalaisia vesireittejä. [[Plavjärven]] pohjassa on kalkkikiviluolia ja lukuisia lähteitä. Slovakiassa [[Domican luola]] on osa Aggtelekin ja Slovakian karstin luolastoa, joka sai Unescon maailmanperintöstatuksen vuonna 1995. Luolan käytävät on muovannut maanalainen Styx-joki.",
+  "linkit": [
+   "Plavjärven",
+   "Domican luola"
+  ],
+  "jatkot": [
+   "Mikä on karstiutuminen?",
+   "Mikä Domican luola on?"
+  ]
+ },
+ {
+  "kohde": "kohde:plavjarvi",
+  "kasite": "karstiutumiseksi",
+  "kysymys": "Kerro lisää: karstiutumiseksi",
+  "vastaus": "Karstiutuminen on prosessi, jossa vesi liuottaa kalkkikiveä tai muuta helposti liukenevaa kivilajia ja muokkaa maastoa. Tuloksena syntyy luolia, maanalaisia jokia ja kuoppia, ja maanpinnalla vesi syövyttää kiveä ennen kaikkea rakojen kohdalta. Nimi karst juontuu Slovenian ja Italian rajaseudun [[Kras]]-alueesta. Slovakiassa [[Domican luola]] on esimerkki karstialueen luolasta, ja se löytyi vuonna 1926.",
+  "linkit": [
+   "Kras",
+   "Domican luola"
+  ],
+  "jatkot": [
+   "Miten tippukivet syntyvät?",
+   "Missä Kras sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:plavjarvi",
+  "kasite": "Albanian",
+  "kysymys": "Kerro lisää: Albanian",
+  "vastaus": "Albania on Balkanin länsiosassa sijaitseva valtio, jonka pääkaupunki on [[Tirana]]. Se rajoittuu muun muassa Montenegroon, Kosovoon, Pohjois-Makedoniaan ja Kreikkaan, ja sillä on rannikko Adrianmerellä. [[Prokletijen]] vuoriston korkein huippu, [[Maja Jezercë]], 2 694 metriä, sijaitsee Albanian puolella. Albanian pohjoisosassa on myös osa [[Skadarjärveä]].",
+  "linkit": [
+   "Tirana",
+   "Prokletijen",
+   "Maja Jezercë",
+   "Skadarjärveä"
+  ],
+  "jatkot": [
+   "Mikä Maja Jezercë on?",
+   "Milloin Albania itsenäistyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:plavjarvi",
+  "kasite": "Kosovon",
+  "kysymys": "Kerro lisää: Kosovon",
+  "vastaus": "Kosovo on Balkanin sisämaassa sijaitseva alue, jonka pääkaupunki on [[Pristina]]. Kosovo julistautui itsenäiseksi Serbiasta vuonna 2008. Monet valtiot ovat tunnustaneet itsenäisyyden, mutta [[Serbia]] ei tunnusta sitä. Prokletijen vuoristo ulottuu Montenegron, Albanian ja Kosovon alueelle, ja [[Prokletije]] on tuon seudun tunnetuimpia vuoristoja.",
+  "linkit": [
+   "Pristina",
+   "Serbia",
+   "Prokletije"
+  ],
+  "jatkot": [
+   "Mikä Pristina on?",
+   "Mikä Prokletije on?"
+  ]
+ },
+ {
+  "kohde": "kohde:plavjarvi",
+  "kasite": "kalkkikiviluolia",
+  "kysymys": "Kerro lisää: kalkkikiviluolia",
+  "vastaus": "Plavjärven pohjassa on kalkkikiviluolia sekä lukuisia lähteitä, joista vesi pulppuaa maasta. Luolat syntyvät, kun lievästi hapan sade- ja pohjavesi liuottaa [[kalkkikiveä]] hitaasti vuosituhansien kuluessa. Järvi on matala, ja sen keskisyvyys on noin yhdeksän metriä. Vesi virtaa pois [[Lim-jokeen]], ja järvi sijaitsee [[Prokletijen]] ja Visitor-vuoriston välissä.",
+  "linkit": [
+   "kalkkikiveä",
+   "Lim-jokeen",
+   "Prokletijen"
+  ],
+  "jatkot": [
+   "Miten luolat syntyvät kalkkikivessä?",
+   "Mikä Lim-joki on?"
+  ]
+ },
+ {
+  "kohde": "kohde:lovcen-njegosin-mausoleumi",
+  "kasite": "Ivan Meštrović",
+  "kysymys": "Kerro lisää: Ivan Meštrović",
+  "vastaus": "Ivan Meštrović oli kroatialainen kuvanveistäjä, joka syntyi vuonna 1883 ja kuoli vuonna 1962. Hänen tunnetuimpia töitään ovat [[Grgur Ninski]] -patsas [[Splitissä]] ja Montenegrossa Lovćenin vuoren huipulla sijaitseva mausoleumi, jonka suunnitteli hän. Mausoleumi vihittiin käyttöön vuonna 1974, ja sen sisäänkäyntiä kantavat patsaat esittävät montenegrolaisia. Hänen työnsä on laajalti tunnettu Kroatiassa ja sen ulkopuolella.",
+  "linkit": [
+   "Grgur Ninski",
+   "Splitissä"
+  ],
+  "jatkot": [
+   "Kuka oli Grgur Ninski?",
+   "Mikä on Njegošin mausoleumi?"
+  ]
+ },
+ {
+  "kohde": "kohde:lovcen-njegosin-mausoleumi",
+  "kasite": "Lovćenin",
+  "kysymys": "Kerro lisää: Lovćenin",
+  "vastaus": "Lovćen on vuori Montenegrossa, joka reunustaa Kotorinlahtea. Sen [[Jezerski Vrh]] -huipulla, 1 657–1 660 metrin korkeudessa, sijaitsee Njegošin mausoleumi. Mausoleumille johtaa Cetinjestä noin 21 kilometrin asfalttitie. Kappeli rakennettiin huipulle vuonna 1845 [[Petar II Petrović-Njegošin]] suunnitelmasta, ja nykyinen mausoleumi vihittiin käyttöön 1974. Vuori on Montenegron kansallisen muistin kannalta tärkeä paikka.",
+  "linkit": [
+   "Jezerski Vrh",
+   "Petar II Petrović-Njegošin"
+  ],
+  "jatkot": [
+   "Mikä Jezerski vrh on?",
+   "Mikä Cetinje on?"
+  ]
+ },
+ {
+  "kohde": "kohde:lovcen-njegosin-mausoleumi",
+  "kasite": "Jezerski Vrh",
+  "kysymys": "Kerro lisää: Jezerski Vrh",
+  "vastaus": "Jezerski Vrh on Lovćenin vuoren huippu, jonka korkeudeksi annetaan 1 657 tai 1 660 metriä. Huipulle Petar II Petrović-Njegoš suunnitteli kappelin vuonna 1845 ja valitsi paikan itse hautapaikakseen. Kappeli vaurioitui ensimmäisessä maailmansodassa, rakennettiin uudelleen vuonna 1925 ja purettiin 1960-luvun lopulla. Nykyisen mausoleumin suunnitteli [[Ivan Meštrović]], ja siihen johtaa 461 kiviporrasta. Huipulle pääsee [[Cetinjestä]] noin 21 kilometrin asfalttitietä.",
+  "linkit": [
+   "Ivan Meštrović",
+   "Cetinjestä"
+  ],
+  "jatkot": [
+   "Kuka Petar II Petrović-Njegoš oli?",
+   "Kuka suunnitteli Njegošin mausoleumin?"
+  ]
+ },
+ {
+  "kohde": "kohde:lovcen-njegosin-mausoleumi",
+  "kasite": "Petar II Petrović-Njegoš",
+  "kysymys": "Kerro lisää: Petar II Petrović-Njegoš",
+  "vastaus": "Petar II Petrović-Njegoš syntyi vuonna 1813 ja kuoli vuonna 1851. Hän oli Montenegron [[ruhtinaspiispa]] eli maan hengellinen ja maallinen johtaja, ja samalla yksi maan tärkeimmistä runoilijoista. Hänen tunnetuin teoksensa on [[Vuoren seppele]], joka ilmestyi 1840-luvulla. Hän suunnitteli [[Lovćenin]] huipulle kappelin vuonna 1845 ja valitsi paikan itse hautapaikakseen. Ensimmäisessä maailmansodassa miehittäjät vaativat hänen jäännöksensä siirrettäviksi [[Cetinjeen]].",
+  "linkit": [
+   "ruhtinaspiispa",
+   "Vuoren seppele",
+   "Lovćenin",
+   "Cetinjeen"
+  ],
+  "jatkot": [
+   "Mikä Vuoren seppele on?",
+   "Mikä on ruhtinaspiispa?"
+  ]
+ },
+ {
+  "kohde": "kohde:lovcen-njegosin-mausoleumi",
+  "kasite": "Cetinjestä",
+  "kysymys": "Kerro lisää: Cetinjestä",
+  "vastaus": "Cetinje on Montenegron vanha kuninkaallinen pääkaupunki ja maan historiallinen ja kulttuurinen keskus. Zetan hallitsija [[Ivan Crnojević]] siirsi pääkaupunkinsa 1480-luvulla vuoristoon perustamalleen Cetinjeen, koska Skadarjärven ranta ei enää ollut turvassa osmaneilta. Hänen poikansa Đurađ pystytti lähelle kirjapainon, jossa valmistui 4. tammikuuta 1494 kirkkolaulukirja [[Oktoih prvoglasnik]]. Cetinjestä johtaa noin 21 kilometrin asfalttitie [[Njegošin]] mausoleumille.",
+  "linkit": [
+   "Ivan Crnojević",
+   "Oktoih prvoglasnik",
+   "Njegošin"
+  ],
+  "jatkot": [
+   "Mikä Oktoih prvoglasnik on?",
+   "Kuka oli Ivan Crnojević?"
+  ]
+ },
+ {
+  "kohde": "kohde:lovcen-njegosin-mausoleumi",
+  "kasite": "Montenegron",
+  "kysymys": "Kerro lisää: Montenegron",
+  "vastaus": "Montenegro oli 1800-luvulla ruhtinaspiispojen hallitsema vuoristomaa, ja yksi heistä oli runoilija Njegoš. Vuoden 1878 [[Berliinin kongressi]] tunnusti Montenegron itsenäisyyden ja laajensi sen aluetta. Ensimmäisen maailmansodan jälkeen Montenegro oli osa [[Jugoslavian]] valtiota, ja se itsenäistyi uudelleen vuonna 2006. Nykyään pääkaupunki on [[Podgorica]].",
+  "linkit": [
+   "Berliinin kongressi",
+   "Jugoslavian",
+   "Podgorica"
+  ],
+  "jatkot": [
+   "Mikä Berliinin kongressi oli?",
+   "Milloin Montenegro itsenäistyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:lovcen-njegosin-mausoleumi",
+  "kasite": "Vuoren seppele",
+  "kysymys": "Kerro lisää: Vuoren seppele",
+  "vastaus": "Vuoren seppele on Petar II Petrović-Njegošin kirjoittama runomuotoinen näytelmäteos, joka ilmestyi 1840-luvulla. Teos kuvaa montenegrolaisten ja osmanien välistä konfliktia ja on Montenegron kirjallisuuden keskeisiä teoksia. Teoksen sisältöä on tulkittu eri tavoin, ja sen tulkinnat ovat olleet kiistanalaisia. [[Njegošin]] runous liittyy läheisesti [[osmanien]] aikaan ja montenegrolaiseen kansallistunteeseen. Teos on kirjoitettu [[eepoksen]] tapaan.",
+  "linkit": [
+   "Njegošin",
+   "osmanien",
+   "eepoksen"
+  ],
+  "jatkot": [
+   "Kuka Petar II Petrović-Njegoš oli?",
+   "Mikä on eepos?"
+  ]
+ },
+ {
+  "kohde": "kohde:lovcen-njegosin-mausoleumi",
+  "kasite": "Podgorica",
+  "kysymys": "Kerro lisää: Podgorica",
+  "vastaus": "Cetinje on Montenegron vanha kuninkaallinen pääkaupunki ja maan historiallinen ja kulttuurinen keskus, vaikka nykyinen pääkaupunki on [[Podgorica]]. Podgorica sijaitsee Moračajoen rannalla Montenegron keskiosassa. Se tunnettiin Jugoslavian aikana nimellä [[Titograd]], ja nimi muutettiin takaisin Podgoricaksi vuonna 1992. Kaupunki on maan hallinnollinen keskus.",
+  "linkit": [
+   "Podgorica",
+   "Titograd"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Cetinje on?",
+   "Missä Morača virtaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:lovcen-njegosin-mausoleumi",
+  "kasite": "Kroatian",
+  "kysymys": "Kerro lisää: Kroatian",
+  "vastaus": "Kroatia on Euroopan unionin jäsen vuodesta 2013, ja sen pääkaupunki on [[Zagreb]]. Maalla on pitkä rannikko Adrianmerellä. Luonnonkohteista tunnettu on [[Plitvicen]] järvialue, jonka 16 järveä on kytketty toisiinsa vesiputouksilla ja luonnollisilla [[travertiinipadoilla]]. Unesco otti Plitvicen maailmanperintöluetteloon vuonna 1979. Ivan Meštrović oli kroatialainen kuvanveistäjä.",
+  "linkit": [
+   "Zagreb",
+   "Plitvicen",
+   "travertiinipadoilla"
+  ],
+  "jatkot": [
+   "Mikä Plitvicen kansallispuisto on?",
+   "Mikä Zagreb on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zabljak-crnojevica",
+  "kasite": "Zetan ruhtinaskunnan",
+  "kysymys": "Kerro lisää: Zetan ruhtinaskunnan",
+  "vastaus": "Zetan ruhtinaskunta oli keskiaikainen valtio nykyisen Montenegron seudulla Skadarjärven ympärillä. Sitä hallitsivat 1400-luvulla [[Crnojevićit]]. [[Ivan Crnojević]] siirsi pääkaupunkinsa 1480-luvulla Skadarjärven rannalta vuoristoon perustamalleen Cetinjeen, koska järven ranta ei enää ollut turvassa osmaneilta. Hänen poikansa Đurađ pystytti vuonna 1493 [[Obodin kalliolle]] kirjapainon, joka oli toiminnassa vuoteen 1496.",
+  "linkit": [
+   "Crnojevićit",
+   "Ivan Crnojević",
+   "Obodin kalliolle"
+  ],
+  "jatkot": [
+   "Kuka oli Ivan Crnojević?",
+   "Missä Cetinje sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zabljak-crnojevica",
+  "kasite": "Skadarjärven",
+  "kysymys": "Kerro lisää: Skadarjärven",
+  "vastaus": "Skadarjärvi sijaitsee Montenegron ja Albanian rajalla. Montenegron puolella sen ympäristö on kosteikkoa, jossa tavataan [[pelikaaneja]]. Järven rannalla seisovat edelleen Zetan ruhtinaskunnan linnoitetun pääkaupungin, [[Žabljak Crnojevićin]], rauniot. Albanian puolella sijaitsee [[Shkodran]] kaupunki. Järven tarkasta pinta-alasta en ole varma, sillä se vaihtelee vuodenajan mukaan.",
+  "linkit": [
+   "pelikaaneja",
+   "Žabljak Crnojevićin",
+   "Shkodran"
+  ],
+  "jatkot": [
+   "Mikä Shkodra on?",
+   "Missä Žabljak Crnojević sijaitsi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zabljak-crnojevica",
+  "kasite": "Shkodran",
+  "kysymys": "Kerro lisää: Shkodran",
+  "vastaus": "Shkodra on Albanian pohjoisosan kaupunki Skadarjärven eteläpäässä. Kaupungin linnoitus tunnetaan nimellä [[Rozafa]]. Osmanit piirittivät Shkodraa vuoden 1478 paikkeilla, ja sen puolustajiin kuului [[Venetsian]] joukkoja. Piirityksen yhteydessä osmanit valtasivat Žabljak Crnojevićin, ja sen jälkeen Zetan pääkaupunki siirtyi lopulta Cetinjeen. Piirityksen tarkoista vaiheista en ole varma.",
+  "linkit": [
+   "Rozafa",
+   "Venetsian"
+  ],
+  "jatkot": [
+   "Mikä Rozafan linnoitus on?",
+   "Mikä Skadarjärvi on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zabljak-crnojevica",
+  "kasite": "Cetinjeen",
+  "kysymys": "Kerro lisää: Cetinjeen",
+  "vastaus": "Cetinje on Montenegron vanha kuninkaallinen pääkaupunki, jonka Zetan hallitsija [[Ivan Crnojević]] perusti vuoristoon 1480-luvulla. Syynä oli se, että Skadarjärven ranta ei enää ollut turvassa osmaneilta. Lähelle, [[Obodin kalliolla]] Rijeka Crnojevićan luona, pystytettiin vuonna 1493 kirjapaino. Ensimmäisessä maailmansodassa miehittäjät vaativat [[Njegošin]] jäännökset siirrettäviksi Cetinjeen.",
+  "linkit": [
+   "Ivan Crnojević",
+   "Obodin kalliolla",
+   "Njegošin"
+  ],
+  "jatkot": [
+   "Mikä Zetan ruhtinaskunta oli?",
+   "Milloin Oktoih prvoglasnik valmistui?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zabljak-crnojevica",
+  "kasite": "Berliinin kongressissa",
+  "kysymys": "Kerro lisää: Berliinin kongressissa",
+  "vastaus": "Berliinin kongressi oli vuonna 1878 pidetty suurvaltojen kokous, jossa ratkaistiin Balkanin rajat Venäjän ja Osmanien valtakunnan sodan jälkeen. Kongressia johti [[Otto von Bismarck]]. Kongressissa Serbian, Montenegron ja [[Romanian]] itsenäisyys tunnustettiin, ja Montenegron alue kasvoi. Itävalta-Unkari sai oikeuden miehittää [[Bosnian ja Hertsegovinan]] alueen. Žabljak Crnojevićin alue palasi Montenegron hallintaan, noin 400 vuotta osmanien valtauksen jälkeen.",
+  "linkit": [
+   "Otto von Bismarck",
+   "Romanian",
+   "Bosnian ja Hertsegovinan"
+  ],
+  "jatkot": [
+   "Kuka oli Otto von Bismarck?",
+   "Mitä Bosnian ja Hertsegovinan miehitys tarkoitti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zabljak-crnojevica",
+  "kasite": "Montenegron",
+  "kysymys": "Kerro lisää: Montenegron",
+  "vastaus": "Montenegro tarkoittaa suunnilleen mustaa vuorta, ja paikallinen nimi on [[Crna Gora]]. Maan alue kehittyi osaksi Zetan ruhtinaskuntaa, jota hallitsivat [[Crnojevićit]], ja Skadarjärven ranta menetti asemansa osmanien edetessä. Keskus siirtyi vuoristoon [[Cetinjeen]], josta tuli maan historiallinen keskus. Vuonna 1878 Montenegro sai itsenäisyytensä tunnustettua, ja nykyinen itsenäinen valtio on ollut olemassa vuodesta 2006.",
+  "linkit": [
+   "Crna Gora",
+   "Crnojevićit",
+   "Cetinjeen"
+  ],
+  "jatkot": [
+   "Mitä Cetinje merkitsee Montenegrolle?",
+   "Milloin Montenegro itsenäistyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zabljak-crnojevica",
+  "kasite": "Crnojevićit",
+  "kysymys": "Kerro lisää: Crnojevićit",
+  "vastaus": "Crnojevićit olivat Zetan ruhtinaskuntaa hallinneita ruhtinaita 1400-luvulla. Heidän joukossaan olivat Stefan ja [[Ivan Crnojević]], jonka hallintokeskus oli aluksi Skadarjärven rannalla Žabljak Crnojevićissa. Ivan siirsi pääkaupunkinsa vuoristoon Cetinjeen, ja hänen poikansa [[Đurađ Crnojević]] pystytti Obodiin kirjapainon vuonna 1493. Munkki [[Makarije]] johti sen työtä, ja painosta valmistui 4. tammikuuta 1494 kirkkolaulukirja Oktoih prvoglasnik. Painon toiminta pysähtyi vuonna 1496 osmanien edetessä.",
+  "linkit": [
+   "Ivan Crnojević",
+   "Đurađ Crnojević",
+   "Makarije"
+  ],
+  "jatkot": [
+   "Kuka oli Ivan Crnojević?",
+   "Mikä Oktoih prvoglasnik on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zabljak-crnojevica",
+  "kasite": "Albanian",
+  "kysymys": "Kerro lisää: Albanian",
+  "vastaus": "Albania on Balkanin länsiosassa sijaitseva valtio, jonka pääkaupunki on [[Tirana]]. Skadarjärvi on Montenegron ja Albanian rajalla, ja Albanian puolella järven rannalla sijaitsee [[Shkodran]] kaupunki. Albania itsenäistyi vuonna 1912. Albanian pohjoisosa kuuluu Prokletijen vuoristoon, jonka korkein huippu [[Maja Jezercë]] sijaitsee Albanian puolella.",
+  "linkit": [
+   "Tirana",
+   "Shkodran",
+   "Maja Jezercë"
+  ],
+  "jatkot": [
+   "Mikä Shkodra on?",
+   "Mikä Tirana on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zabljak-crnojevica",
+  "kasite": "Otto von Bismarck",
+  "kysymys": "Kerro lisää: Otto von Bismarck",
+  "vastaus": "Otto von Bismarck oli saksalainen valtiomies, joka syntyi vuonna 1815 ja kuoli vuonna 1898. Hän toimi [[Preussin]] pääministerinä ja oli Saksan yhdistämisen jälkeen [[Saksan keisarikunnan]] ensimmäinen liittokansleri. Vuoden 1878 [[Berliinin kongressia]] johti Bismarck, ja kongressissa ratkaistiin Balkanin rajoja Venäjän ja Osmanien valtakunnan sodan jälkeen. Hänet erotettiin virasta vuonna 1890.",
+  "linkit": [
+   "Preussin",
+   "Saksan keisarikunnan",
+   "Berliinin kongressia"
+  ],
+  "jatkot": [
+   "Mikä Berliinin kongressi oli?",
+   "Milloin Saksa yhdistettiin?"
+  ]
+ }
+]
