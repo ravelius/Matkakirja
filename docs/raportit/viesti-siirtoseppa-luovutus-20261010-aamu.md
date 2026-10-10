@@ -19,7 +19,9 @@ todistus-huoneaanet3-*), lähetä SHA Natiivisepälle ja rivi PT:lle; muuten pyy
   ("äänimaisema soi kappeli:" ilman massa:-rivejä; skenaario huoneaanet.txt). Käännös cd5e3a727 (app-kopio scratchpad/app). Puhtaana →
   SHA ac0047bf0 Natiivisepälle ja rivi PT:lle (kuittaus voimassa ilman uutta kierrosta).
 
-## JUNA 175 (ei vielä kuitattu): `siirtoseppa/esittely-1499` 2210b802d, käännös e1badd974 (app-kopio scratchpad/app175)
+## JUNA 174: ac0047bf0 LÄHETETTY Natiivisepälle 10.10. 04.4x (PT). Avoin: v46q:n 0°-kuvat (päivä + hämärä) osoittimella 4c01…, skenaario scratchpad v46q-0.txt → rivi PT:lle.
+
+## JUNA 175 (ei vielä kuitattu): `siirtoseppa/esittely-1499` 651c2d352 (tarvitsee uuden käännöksen; e1badd974 vanha)
 
 1. 600086317 Esittelyn vuoden 1499 asu: kun ulkokuori.asu = "1499", saapumisen jälkeen kävelydata osittain (vain ranta-1499 ja
    porttikäytävä; SeikkailuKavely.Lataa vainNakyvat, Osittainen) ja SeikkailuHistoria.Esittely1499(true): vuosileikkaukset kuten historia
@@ -28,7 +30,8 @@ todistus-huoneaanet3-*), lähetä SHA Natiivisepälle ja rivi PT:lle; muuten pyy
 2. eca8dc339 Nopea syke hälytyksessä: sydan-nopea-01 ristihäivyttyy 1,5 s tasatehoisesti (SykeSekoitus, Ydin/Seikkailu/Vartija.cs),
    paluu rauhalliseen, puheen aikana −6 dB (SeikkailuRepliikit.PuheSoi). Lokirivi "seikkailu: syke nopea/rauhallinen".
    PT:n ehto ennen kuittausta: äänellinen 30 s kaappaus hälytyksessä + aani mittaa (LUFS, huiput); skenaario scratchpad syke.txt.
-3. 2210b802d LR v46s 8b0bdf3bad55c8df (tornien harjat omalla kivellä, Kijlin torni 16,5 m, Pyhän Eerikin torni, tulkinta).
+3. 2210b802d LR v46s → 040890b30 v46t 6a9023165fa72a12 (Paksu bastioni 1791; historiaan ja K2:een 1788–1800, e4fdb9ea9); 4dfd35f9f esittely KIINNITETYSTÄ paketista (PelattavaPala.Hash, ei uusin.json — PT: vanhoja appeja ei rikota); 8b6950f0b repliikit-lapi-v2.
+   Aiemmin: 2210b802d LR v46s 8b0bdf3bad55c8df (tornien harjat omalla kivellä, Kijlin torni 16,5 m, Pyhän Eerikin torni, tulkinta).
    Arkki: scratchpad esittely1499.txt (8 suuntaa + lounaispuoli lähempää). LR pyysi katsomaan Eerikin ja Kijlin tornien korkeudet ja
    näkyvätkö bastionit 180°/225°/270°. Arkki PT:lle ja LR:lle.
 
@@ -41,6 +44,8 @@ todistus-huoneaanet3-*), lähetä SHA Natiivisepälle ja rivi PT:lle; muuten pyy
 4. Todistusajon kiertokorjaus (vaaka-UI:n stillit oikein päin) myös erillisenä: siirtoseppa/todistus-kierto 25fa87450 (master-pohja).
 
 ## OPITTUA
+
+- ESITTELY LATASI TUOTANNON (uusin.json), ei palan hashia: arkit ilman `poikki osoitin` olivat tuotantoa (v46o-arkki ja 174-uusinnan arkki). 175:stä alkaen esittely kiinnitetty; arkkien nimiin ladatun paketin hash (PT).
 
 - `Pelaa` latausruudun aikana katkaisi seikkailun äänet (nayttamo.Odota piilottaa uudet lapset → coroutinet kuolevat hiljaa): pala odottaa
   SaapumisOdotuksen. Deaktivointi tappaa coroutinet ilman lokia.
