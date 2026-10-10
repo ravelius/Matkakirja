@@ -3543,5 +3543,1188 @@
    "Missä Gålä sijaitsee?",
    "Mitä Vinstrassa on nähtävää?"
   ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ekofisk",
+  "kasite": "Pohjanmeren",
+  "kysymys": "Kerro lisää: Pohjanmeren",
+  "vastaus": "Pohjanmeri on Atlantin reunameri, jota ympäröivät Ison-Britannian, Norjan, Tanskan, Saksan ja Alankomaiden rannat. Pohjoisessa se avautuu avomerelle, etelässä [[Englannin kanaalin]] kautta, ja itäpuolella [[Skagerrakin]] salmi yhdistää sen Itämeren suuntaan. Eteläosa on matalaa, ja Saksan rannikolla meri vetäytyy kahdesti päivässä kilometrien päähän ja jättää jälkeensä [[Wattenmeerin]] mutatasangon, joka on Unescon maailmanperintökohde. Merenpohjasta on 1960-luvun lopulta alkaen löydetty öljyä ja kaasua, ja Ekofisk oli ensimmäinen öljylöytö Pohjanmerellä.",
+  "linkit": [
+   "Englannin kanaalin",
+   "Skagerrakin",
+   "Wattenmeerin"
+  ],
+  "jatkot": [
+   "Miksi Wattenmeer on Unescon maailmanperintökohde?",
+   "Mitä merialueita Skagerrak yhdistää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ekofisk",
+  "kasite": "Stavangerista",
+  "kysymys": "Kerro lisää: Stavangerista",
+  "vastaus": "Stavanger on kaupunki Lounais-Norjassa Rogalandin alueella, ja siitä tuli Norjan öljypääkaupunki, kun Ekofiskin kenttä löytyi vuonna 1969 noin 320 kilometrin päähän lounaaseen. Öljyaikaa edelsi pitkä kalastuskaupungin historia, ja vanha satama ja kalastuskaupungin kortteleita on yhä jäljellä, ja ne ovat osa kaupungin ilmettä. Satamassa sijaitsee [[Norjan öljymuseo]], joka kertoo, miten öljy muutti maata. [[Rogalandin]] alueeseen kuuluvat myös Lysevuono ja Preikestolen, joten kaupunki on lähtöpiste monille retkille. Öljy-yhtiöiden toimistot ja kalastuksen perinne elävät siten rinnakkain.",
+  "linkit": [
+   "Norjan öljymuseo",
+   "Rogalandin"
+  ],
+  "jatkot": [
+   "Mitä Norjan öljymuseo esittelee?",
+   "Millainen kalastuskaupunki Stavanger on vanhastaan ollut?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ekofisk",
+  "kasite": "hydraulisylintereillä",
+  "kysymys": "Kerro lisää: hydraulisylintereillä",
+  "vastaus": "Hydraulisylinteri on laite, jossa paineistettu neste työntää mäntää sylinterin sisällä. [[Pascalin lain]] mukaan paine välittyy nesteessä joka suuntaan yhtä suurena, joten suuripintainen mäntä tuottaa suuren voiman pienelläkin paineella. Siksi hydrauliikalla voidaan nostaa hyvin painavia kuormia tarkasti ja tasaisesti. Ekofiskin kentällä elokuussa 1987 viisi toisiinsa liitettyä lauttaa nostettiin samanaikaisesti kuusi metriä ylemmäs tällaisilla sylintereillä. Sama periaate toimii arjessa esimerkiksi [[kaivinkoneissa]] ja [[autonostimissa]].",
+  "linkit": [
+   "Pascalin lain",
+   "kaivinkoneissa",
+   "autonostimissa"
+  ],
+  "jatkot": [
+   "Kuka oli Blaise Pascal?",
+   "Missä muualla hydrauliikkaa käytetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ekofisk",
+  "kasite": "Guinnessin ennätyskirjaan",
+  "kysymys": "Kerro lisää: Guinnessin ennätyskirjaan",
+  "vastaus": "Guinnessin ennätyskirja on vuosittain ilmestyvä teos, johon kerätään maailmanennätyksiä. Idean takana oli Guinnessin panimon johtaja [[Hugh Beaver]], ja ensimmäinen painos ilmestyi vuonna 1955. Panimo itse on [[Dublinissa]] sijaitseva St. James's Gate -panimo, jonka perusti [[Arthur Guinness]] vuonna 1759 allekirjoittamalla tontista vuokrasopimuksen. Ekofiskin lauttojen nosto elokuussa 1987 kirjattiin kirjaan suurimpana nostoprojektina.",
+  "linkit": [
+   "Hugh Beaver",
+   "Dublinissa",
+   "Arthur Guinness"
+  ],
+  "jatkot": [
+   "Miksi panimon johtaja keksi ennätyskirjan?",
+   "Mikä Guinness Storehouse on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ekofisk",
+  "kasite": "Ekofiskin",
+  "kysymys": "Kerro lisää: Ekofiskin",
+  "vastaus": "Ekofisk on öljykenttä Norjan puoleisella [[Pohjanmerellä]], noin 320 kilometriä lounaaseen [[Stavangerista]]. Kenttä löytyi yli 200 koeporauksen jälkeen, ja juuri ennen joulua 1969 varmistui, että öljyä oli paljon. Tuotanto suoraan tankkereihin alkoi vuonna 1971 neljästä merenalaisesta kaivosta. Löytö muutti Norjan taloutta, sillä maa ohjasi öljytulot [[öljyrahastoon]], jonka on tarkoitus riittää myös tuleville sukupolville. Kentän tuotannon arvioidaan jatkuvan ainakin vuoteen 2048.",
+  "linkit": [
+   "Pohjanmerellä",
+   "Stavangerista",
+   "öljyrahastoon"
+  ],
+  "jatkot": [
+   "Miten Norjan öljyrahasto toimii?",
+   "Miksi kenttä vajosi öljyntuotannon takia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ekofisk",
+  "kasite": "rahastoon",
+  "kysymys": "Kerro lisää: rahastoon",
+  "vastaus": "Rahasto on Norjan valtion omistama sijoitusrahasto, johon kerätään öljy- ja kaasutuloja sen sijaan, että ne kulutettaisiin heti. Se perustettiin 1990-luvulla, ja siitä on kasvanut yksi maailman suurimmista valtiollisista sijoitusrahastoista. Rahastoa hoitaa [[Norjan keskuspankki]], ja varat sijoitetaan pääosin ulkomaille, muun muassa [[osakkeisiin]] ja joukkovelkakirjoihin. Näin tulot eivät kuumenna kotimaan taloutta, ja hyöty säilyy myös sen jälkeen, kun öljyvarat ovat vähentyneet.",
+  "linkit": [
+   "Norjan keskuspankki",
+   "osakkeisiin"
+  ],
+  "jatkot": [
+   "Miksi rahaston varat sijoitetaan ulkomaille?",
+   "Mitä Norjassa tapahtuu, kun öljy loppuu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ekofisk",
+  "kasite": "Ekofisk Bravo",
+  "kysymys": "Kerro lisää: Ekofisk Bravo",
+  "vastaus": "Ekofisk Bravo on yksi Ekofiskin kentän lautoista. Huhtikuussa 1977 sillä tapahtui [[Pohjanmeren]] suurin [[öljyvuoto]], kun pohjaventtiili oli asennettu väärin. Vuodon tukkimiseen osallistui yhdysvaltalainen sammutusasiantuntija Red Adair. Lautta sijaitsee noin 320 kilometriä lounaaseen [[Stavangerista]]. Tapaus kuuluu Norjan öljyhistorian tunnetuimpiin onnettomuuksiin, ja se muistuttaa siitä, miten pieni asennusvirhe voi johtaa suureen päästöön.",
+  "linkit": [
+   "Pohjanmeren",
+   "öljyvuoto",
+   "Stavangerista"
+  ],
+  "jatkot": [
+   "Mikä on öljylautan pohjaventtiilin tehtävä?",
+   "Miten öljyvuotoja torjutaan merellä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ekofisk",
+  "kasite": "kalkkikivessä",
+  "kysymys": "Kerro lisää: kalkkikivessä",
+  "vastaus": "Kalkkikivi on sedimenttikivilaji, joka koostuu pääosin [[kalsiumkarbonaatista]] ja on syntynyt suurelta osin merieliöiden kuorista ja luurangoista. Ekofiskin kentällä öljy on kalkkikivipohjaisessa kerroksessa. Kalkkikivi on huokoista, joten öljy mahtuu sen pieniin onteloihin, mutta samalla kivi on pehmeää, ja öljyn tuotanto sai kentän vajoamaan. [[Liitu]] on hienorakenteista kalkkikiveä. Kalkkikiveä liuottaa myös happamoitunut sadevesi, minkä vuoksi kalkkikiviseuduilla on usein [[luolia]].",
+  "linkit": [
+   "kalsiumkarbonaatista",
+   "Liitu",
+   "luolia"
+  ],
+  "jatkot": [
+   "Miten luolat syntyvät kalkkikiveen?",
+   "Mistä liitu koostuu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trollstigen",
+  "kasite": "Haakon VII",
+  "kysymys": "Kerro lisää: Haakon VII",
+  "vastaus": "Haakon VII oli Norjan kuningas vuodesta 1905 vuoteen 1957. Hän syntyi [[Tanskan]] prinssinä nimellä Carl, ja hänet valittiin Norjan kuninkaaksi, kun maan liitto Ruotsin kanssa oli purkautunut vuonna 1905. Toisen maailmansodan aikana kuningas ja hallitus siirtyivät Saksan hyökkäyksen jälkeen maanpakoon [[Lontooseen]], ja kuningas tuli tunnetuksi norjalaisen vastarinnan symbolina. Hänen poikansa [[Olav V]] seurasi häntä valtaistuimella. Haakon VII avasi virallisesti myös Trollstigenin tien vuonna 1936.",
+  "linkit": [
+   "Tanskan",
+   "Lontooseen",
+   "Olav V"
+  ],
+  "jatkot": [
+   "Miksi Norjan ja Ruotsin liitto purkautui?",
+   "Mitä Norjalle tapahtui toisessa maailmansodassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trollstigen",
+  "kasite": "Åndalsnesin",
+  "kysymys": "Kerro lisää: Åndalsnesin",
+  "vastaus": "Åndalsnes on kaupunki Raumassa, Møre og Romsdalin läänissä, [[Romsdalsvuonon]] pohjukassa. Se on Trollstigenin tien toinen päätepiste, ja maantie 63 yhdistää sen Valldaliin. Kaupungin päähän päättyy [[Raumabanen]]-rautatie, ja sen yläpuolella kohoavat jyrkät vuorenhuiput, joista tunnetuin on [[Romsdalshorn]]. Seutu onkin suosittu vaeltajien ja kiipeilijöiden keskuudessa.",
+  "linkit": [
+   "Romsdalsvuonon",
+   "Raumabanen",
+   "Romsdalshorn"
+  ],
+  "jatkot": [
+   "Mikä Romsdalsvuono on?",
+   "Mitä Raumabanen-rautatie on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trollstigen",
+  "kasite": "Valldalin",
+  "kysymys": "Kerro lisää: Valldalin",
+  "vastaus": "Valldal on kylä Møre og Romsdalin läänissä [[Norddalsvuonon]] pohjukassa, ja se on Trollstigenin tien pohjoinen päätepiste. Kylä tunnetaan [[mansikoistaan]], joita viljellään vuonomaisemassa ja jotka kypsyvät kesän korkeimmillaan. Vuonojen ympäröimä sijainti tekee kylästä myös lähtöpisteen retkille vuorille ja vesille. Valldalin ja Åndalsnesin välinen maantie 63 on yksi alueen tunnetuimmista matkailureiteistä.",
+  "linkit": [
+   "Norddalsvuonon",
+   "mansikoistaan"
+  ],
+  "jatkot": [
+   "Miksi Valldalin mansikat ovat kuuluisia?",
+   "Miten vuono eroaa tavallisesta merenlahdesta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trollstigen",
+  "kasite": "hiuspinnemutkat",
+  "kysymys": "Kerro lisää: hiuspinnemutkat",
+  "vastaus": "Hiuspinnemutka on mutka, jossa tie kääntyy lähes täyteen vastakkaiseen suuntaan. Mutkien avulla tie kiertää jyrkän rinteen pitkin ja nousee loivemmin kuin jos se kulkisi suoraan ylös. Trollstigenilla on yksitoista hiuspinnemutkaa ja keskimääräinen [[nousuprosentti]] on 10, eli tie nousee kymmenen metriä sadan metrin matkalla. Tällaisia [[serpentiiniteitä]] on muillakin Euroopan vuorilla, kuten [[Stelvion solan]] tiellä Italian Alpeilla.",
+  "linkit": [
+   "nousuprosentti",
+   "serpentiiniteitä",
+   "Stelvion solan"
+  ],
+  "jatkot": [
+   "Miten nousuprosentti lasketaan?",
+   "Miksi Stelvion solan tie on kuuluisa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trollstigen",
+  "kasite": "Møre og Romsdalin",
+  "kysymys": "Kerro lisää: Møre og Romsdalin",
+  "vastaus": "Møre og Romsdal on lääni Länsi-Norjassa, jonka hallinnollinen keskus on [[Molde]] ja suurin kaupunki [[Ålesund]]. Ålesund on tunnettu jugend-arkkitehtuuristaan, sillä kaupunki rakennettiin uudelleen vuoden 1904 suurpalon jälkeen. Läänin alueella sijaitsee myös [[Geirangervuono]], joka kuuluu Unescon maailmanperintökohteeseen Länsi-Norjan vuonot. Trollstigenin tie kulkee läänin vuoristoisessa sisäosassa, jossa jyrkät vuoret nousevat suoraan vuonoista.",
+  "linkit": [
+   "Molde",
+   "Ålesund",
+   "Geirangervuono"
+  ],
+  "jatkot": [
+   "Mikä tekee Ålesundin jugend-arkkitehtuurista erityistä?",
+   "Miksi Geirangervuono kuuluu maailmanperintöön?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trollstigen",
+  "kasite": "hiuspinniä",
+  "kysymys": "Kerro lisää: hiuspinniä",
+  "vastaus": "Hiuspinni on U-muotoon taivutettu ohut metallinen pidike, jolla kampaus kiinnitetään. Kun tien suunta kääntyy lähes täyskäännökseksi ja mutka muistuttaa tällaisen pinnin taitetta, siitä käytetään nimitystä hiuspinnemutka. Vertaus on tuttu monessa kielessä: englanniksi puhutaan sanalla [[hairpin bend]] ja saksaksi sanalla [[Haarnadelkurve]], joka tarkoittaa suoraan hiusneulamutkaa. Nimitys on siis syntynyt arkisesta esineestä, joka kaikilla oli käsillä.",
+  "linkit": [
+   "hairpin bend",
+   "Haarnadelkurve"
+  ],
+  "jatkot": [
+   "Mikä on hiusneulan alkuperäinen käyttötarkoitus?",
+   "Miten hiuspinnemutkassa pitää ajaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trollstigen",
+  "kasite": "vuoristoteillä",
+  "kysymys": "Kerro lisää: vuoristoteillä",
+  "vastaus": "Vuoristotien suunnittelussa tavoitteena on pitää kaltevuus ajettavana. Siksi tie kiertää rinteitä mutkitellen, ja tarvittaessa jyrkimpiä kohtia ohitetaan [[tunneleilla]] ja silloilla. Talvella huolena ovat runsas lumi ja [[lumivyöryt]], ja korkeimmat osuudet suljetaan usein kuukausiksi, kuten Trollstigen Norjassa. Keväällä tiet aurataan, kun lumi alkaa sulaa, ja vasta sen jälkeen liikenne pääsee jälleen kulkemaan. Alpeilla vastaavia ovat monet [[solatiet]].",
+  "linkit": [
+   "tunneleilla",
+   "lumivyöryt",
+   "solatiet"
+  ],
+  "jatkot": [
+   "Miten lumivyöryiltä suojaudutaan teillä?",
+   "Mikä on vuoristosola?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trollstigen",
+  "kasite": "Trollstigenilla",
+  "kysymys": "Kerro lisää: Trollstigenilla",
+  "vastaus": "Trollstigen on mutkitteleva vuoristotie ja sola Raumassa, osa [[maantietä 63]] Åndalsnesin ja Valldalin välillä. Tie nousee noin 850 metrin korkeuteen yhdellätoista jyrkällä hiuspinnemutkalla, ja kuningas Haakon VII avasi sen virallisesti 31. heinäkuuta 1936 kahdeksan vuoden rakennustyön jälkeen. Solan huipulla olevalta tasanteelta avautuu näkymä [[Stigfossenin]] vesiputoukseen. Tie kuuluu Norjan [[kansallisiin matkailuteihin]], ja se on talvisin suljettuna lumen vuoksi.",
+  "linkit": [
+   "maantietä 63",
+   "Stigfossenin",
+   "kansallisiin matkailuteihin"
+  ],
+  "jatkot": [
+   "Mitkä ovat Norjan kansalliset matkailutiet?",
+   "Mitä Stigfossen on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trollstigen",
+  "kasite": "Stigfossenin",
+  "kysymys": "Kerro lisää: Stigfossenin",
+  "vastaus": "Stigfossen on vesiputous, joka putoaa noin 320 metriä Trollstigenin solan vieressä. Norjan kielen sana foss tarkoittaa vesiputousta, joten nimen loppuosa kertoo jo, mistä on kyse. Putouksen vesimäärä on yleensä suurimmillaan keväällä ja alkukesällä, kun [[sulamisvesistä]] kertyy lisää vettä vuorilta. Norjan tunnetuimpiin putouksiin kuuluu myös [[Vøringsfossen]], joka sijaitsee [[Hardangerviddan]] reunalla.",
+  "linkit": [
+   "sulamisvesistä",
+   "Vøringsfossen",
+   "Hardangerviddan"
+  ],
+  "jatkot": [
+   "Miten vesiputous syntyy?",
+   "Millainen putous Vøringsfossen on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trollstigen",
+  "kasite": "kansanperinteeseen",
+  "kysymys": "Kerro lisää: kansanperinteeseen",
+  "vastaus": "Norjalainen kansanperinne on säilynyt satuina ja tarinoina, joita kerrottiin suullisesti sukupolvelta toiselle. Niitä keräsivät 1800-luvulla kansansaduiksi [[Asbjørnsen ja Moe]], ja heidän kokoelmansa vakiinnutti peikon aseman norjalaisessa mielikuvituksessa. Perinteessä peikot asuvat vuorilla ja metsissä, ja niiden kerrotaan muuttuvan kiveksi auringonvalossa. Taiteilija [[Theodor Kittelsen]] kuvitti peikkoja ja muita satuolentoja tavalla, joka on muokannut norjalaista käsitystä niiden ulkonäöstä.",
+  "linkit": [
+   "Asbjørnsen ja Moe",
+   "Theodor Kittelsen"
+  ],
+  "jatkot": [
+   "Kuka oli Theodor Kittelsen?",
+   "Miksi peikot muuttuvat kiveksi auringossa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trollstigen",
+  "kasite": "peikot",
+  "kysymys": "Kerro lisää: peikot",
+  "vastaus": "Pohjoismaisessa mielikuvassa peikko on kyhmyinen, sammaleinen ja jättimäinen olento, joka ei ole pelkästään paha. Tämän ilmeen vakiinnutti pitkälti ruotsalainen taiteilija [[John Bauer]], joka kuvitti satukirjasarjaa Bland tomtar och troll. Metsänsä hän maalasi [[Smålannin]] kalliomänniköistä, joissa hän retkeili. Bauer kuoli vain 36-vuotiaana, kun höyrylaiva upposi myrskyssä [[Vätternillä]] vuonna 1918. Hänen kuvansa ovat kulkeneet sukupolvelta toiselle.",
+  "linkit": [
+   "John Bauer",
+   "Smålannin",
+   "Vätternillä"
+  ],
+  "jatkot": [
+   "Mitä Bauerin tunnetuin kuva esittää?",
+   "Missä Vättern-järvi sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hardangervidda",
+  "kasite": "puurajan",
+  "kysymys": "Kerro lisää: puurajan",
+  "vastaus": "Puuraja on se korkeus tai leveysaste, jonka yläpuolella metsä ei enää kasva. Raja määräytyy pääosin [[kasvukauden]] pituuden ja lämpötilan mukaan: kun kesä on liian lyhyt ja viileä, puut eivät ehdi kasvattaa ja kypsyttää uutta kasvustoa. Pohjoismaisissa tuntureissa puurajan muodostaa usein [[tunturikoivu]]. Sen yläpuolella viihtyvät esimerkiksi Alppien [[murmelit]], jotka asuvat puurajan yläpuolella kolonioissa. Hardangerviddalla puurajan yläpuolella on suohon säilyneitä männynrunkoja, jotka kertovat lämpimämmästä ajasta.",
+  "linkit": [
+   "kasvukauden",
+   "tunturikoivu",
+   "murmelit"
+  ],
+  "jatkot": [
+   "Miksi puuraja on korkeammalla etelässä?",
+   "Mikä on tunturikoivu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hardangervidda",
+  "kasite": "männynrungot",
+  "kysymys": "Kerro lisää: männynrungot",
+  "vastaus": "Suohon säilyneet männynrungot ovat todisteita ajasta, jolloin ilmasto oli nykyistä lämpimämpi ja metsä ulottui nykyisen puurajan yläpuolelle. [[Soissa]] happi on vähäistä ja vesi hapanta, minkä vuoksi puuaines hajoaa hitaasti ja voi säilyä tuhansia vuosia. Rungoista voidaan lukea [[puunrenkaiden]] avulla kasvuolosuhteita, ja niiden ajoittamiseen käytetään [[dendrokronologiaa]]. Noin 9 000–5 000 vuotta sitten tasangosta suuri osa oli metsäistä.",
+  "linkit": [
+   "Soissa",
+   "puunrenkaiden",
+   "dendrokronologiaa"
+  ],
+  "jatkot": [
+   "Miten dendrokronologia toimii?",
+   "Miksi suo säilyttää puuta hyvin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hardangervidda",
+  "kasite": "Kivikaudella",
+  "kysymys": "Kerro lisää: Kivikaudella",
+  "vastaus": "Kivikausi on ihmiskunnan varhaisin ajanjakso, jolloin työkalut valmistettiin pääosin kivestä, luusta ja sarvesta. Pohjoismaihin ihmiset levisivät [[jääkauden]] jälkeen, kun mannerjäätikkö oli vetäytynyt. He olivat [[metsästäjä-keräilijöitä]], jotka liikkuivat vuodenaikojen mukaan riistan perässä. Hardangerviddalla elämä perustui ennen kaikkea villipeuran pyyntiin, ja alueelta tunnetaan kivikautisia asuinpaikkoja, joita tutkivat [[arkeologit]]. Noin 9 000–5 000 vuotta sitten ilmasto oli lämpimämpi ja suuri osa tasangosta metsäistä.",
+  "linkit": [
+   "jääkauden",
+   "metsästäjä-keräilijöitä",
+   "arkeologit"
+  ],
+  "jatkot": [
+   "Milloin maanviljely tuli Pohjoismaihin?",
+   "Miten arkeologit ajoittavat kivikautiset löydöt?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hardangervidda",
+  "kasite": "talvilaitumilla",
+  "kysymys": "Kerro lisää: talvilaitumilla",
+  "vastaus": "Talvilaidun on alue, jossa peurat viettävät vuoden kylmimmän ajan. Hardangerviddalla villipeurat siirtyvät talveksi tasangon itäosiin ja etsivät ravintoa lumen alta. Tärkeää talviravintoa on [[poronjäkälä]], jota eläimet kaivavat esiin kavioillaan lumen läpi. Kevään tullessa ne vaeltavat takaisin länteen [[vasomisalueille]], joissa kasvillisuus on rehevämpää. Vaellus seuraa siis ravinnon saatavuutta ja luonnon omaa kalenteria.",
+  "linkit": [
+   "poronjäkälä",
+   "vasomisalueille"
+  ],
+  "jatkot": [
+   "Miten villipeura selviää talvella pakkasessa?",
+   "Missä peurojen vasomisalueet sijaitsevat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hardangervidda",
+  "kasite": "villipeuralaumoista",
+  "kysymys": "Kerro lisää: villipeuralaumoista",
+  "vastaus": "Villipeuralauma on vapaana elävien tunturipeurojen ryhmä, joka kiertää laitumelta toiselle vuodenaikojen mukaan. [[Hardangerviddan]] lauma on yksi Euroopan suurimmista, ja vuonna 1996 siinä oli noin 15 000 eläintä. Laumojen elinympäristöä uhkaavat tiet, [[voimalinjat]] ja mökit, jotka pirstovat vaellusreittejä. Siksi niiden hoito ja seuranta ovat Norjassa viranomaisten tehtävä, ja nykyinen kanta voi poiketa vuoden 1996 luvusta.",
+  "linkit": [
+   "Hardangerviddan",
+   "voimalinjat"
+  ],
+  "jatkot": [
+   "Miksi tiet ja mökit haittaavat villipeuroja?",
+   "Miten villipeura eroaa porosta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hardangervidda",
+  "kasite": "kasvukausi",
+  "kysymys": "Kerro lisää: kasvukausi",
+  "vastaus": "Kasvukausi on se osa vuotta, jolloin lämpötila sallii kasvien kasvun. Pohjoismaissa sen alkuna pidetään usein ajankohtaa, jolloin vuorokauden [[keskilämpötila]] pysyy pysyvästi yli viidessä asteessa. Mitä korkeammalle vuorille noustaan tai mitä pohjoisemmaksi mennään, sitä lyhyempi kasvukausi on. Esimerkiksi [[Lapissa]] se on lyhyt, mutta pitkä valoisa kesäpäivä kompensoi osan lyhyydestä. Kasvukauden pituus ratkaisee, missä kohdassa [[puurajan]] sijainti kulkee.",
+  "linkit": [
+   "keskilämpötila",
+   "Lapissa",
+   "puurajan"
+  ],
+  "jatkot": [
+   "Miksi pohjoisessa kasvit kasvavat nopeasti kesällä?",
+   "Mikä vaikuttaa puurajan korkeuteen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hardangervidda",
+  "kasite": "tunturikangas",
+  "kysymys": "Kerro lisää: tunturikangas",
+  "vastaus": "Tunturikangas on puurajan yläpuolella oleva kasvillisuusvyöhyke, jossa ei kasva korkeaa puustoa. Maata peittävät matalat varvut, kuten [[variksenmarja]] ja [[vaivaiskoivu]], sekä jäkälät ja sammalet. Kasvit ovat matalia, koska tuuli, kylmyys ja lyhyt kasvukausi rajoittavat kasvua, ja matala kasvusto saa lumesta suojaa talven pakkasilta. Syksyllä tunturikankaat värjäytyvät [[ruskassa]] keltaisiksi, oransseiksi ja tulipunaisiksi, kun öiset pakkaset pysäyttävät lehtivihreän tuotannon.",
+  "linkit": [
+   "variksenmarja",
+   "vaivaiskoivu",
+   "ruskassa"
+  ],
+  "jatkot": [
+   "Mistä ruska johtuu?",
+   "Miten tunturikasvit selviävät talvella?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hardangervidda",
+  "kasite": "Rangifer tarandus",
+  "kysymys": "Kerro lisää: Rangifer tarandus",
+  "vastaus": "Rangifer tarandus on peuran ja poron yhteinen tieteellinen laji, ja kesy poro on peräisin villipeurasta. Peuroista tämä laji on poikkeuksellinen siinä, että myös naarailla on [[sarvet]]. Euroopassa tavataan useita alalajeja: tunturipeura ja siitä jalostunut kesy poro, Suomen itäosissa elävä [[metsäpeura]] sekä [[Huippuvuorten]] oma pienikokoinen alalaji. Pohjois-Amerikassa lajia kutsutaan karibuksi. Tarkat luokitukset vaihtelevat lähteittäin, eikä niistä ole täyttä yksimielisyyttä.",
+  "linkit": [
+   "sarvet",
+   "metsäpeura",
+   "Huippuvuorten"
+  ],
+  "jatkot": [
+   "Miten metsäpeura eroaa tunturipeurasta?",
+   "Miksi poron naarailla on sarvet?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hardangervidda",
+  "kasite": "alalajeja",
+  "kysymys": "Kerro lisää: alalajeja",
+  "vastaus": "Alalaji on lajin sisäinen ryhmä, jolla on oma levinneisyysalueensa ja tunnusomaisia piirteitään, mutta joka voi yhä risteytyä saman lajin muiden ryhmien kanssa. Kun ryhmät ovat eläneet pitkään erillään, ne alkavat erota esimerkiksi koossa, värityksessä tai elintavoissa. Luokittelu perustuu perinteisesti [[morfologiaan]] eli ulkoisiin piirteisiin, ja nykyisin yhä enemmän [[perimän]] tutkimukseen. Tutkijat ovat välillä eri mieltä siitä, mihin alalajien raja vedetään, joten luokitukset muuttuvat uusien tutkimusten myötä.",
+  "linkit": [
+   "morfologiaan",
+   "perimän"
+  ],
+  "jatkot": [
+   "Mitä laji tarkoittaa biologiassa?",
+   "Miten perimän tutkimus muuttaa luokittelua?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hardangervidda",
+  "kasite": "firniksi",
+  "kysymys": "Kerro lisää: firniksi",
+  "vastaus": "Firni on lumen ja jäätikköjään välimuoto: rakeista, osittain tiivistynyttä lunta, joka on säilynyt yli yhden sulamiskauden. Uuden lumen paino puristaa vanhaa kokoon, ja [[sulamisvesi]] jäätyy uudelleen kiteiden väliin. Tiivistyminen jääksi kestää tyypillisesti vuosista kymmeniin vuosiin, riippuen lämpötilasta ja lumen määrästä. Jäätikön [[kertymäalueella]] lunta kertyy enemmän kuin sulaa, ja juuri siellä firni muodostuu. Lopulta se muuttuu [[jäätikköjääksi]], joka alkaa virrata oman painonsa vaikutuksesta.",
+  "linkit": [
+   "sulamisvesi",
+   "kertymäalueella",
+   "jäätikköjääksi"
+  ],
+  "jatkot": [
+   "Mikä on jäätikön kertymäalue?",
+   "Miten jäätikkö virtaa alamäkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hardangervidda",
+  "kasite": "Hardangerjøkulenilla",
+  "kysymys": "Kerro lisää: Hardangerjøkulenilla",
+  "vastaus": "Hardangerjøkulen on [[Hardangerviddan]] luoteisosassa sijaitseva jäätikkö, joka kohoaa yli 1 800 metrin korkeuteen. Sen lähellä on [[Finsen]] kylä, jonka kautta kulkee [[Bergensbanan]], Oslon ja Bergenin välinen rautatie. Finsen asema on lähellä radan korkeinta kohtaa, ja seutu on suosittu hiihto- ja vaellusalue. Jäätikkö on osa Hardangerviddan karua ylänköä, jonka kasvillisuus on matalaa tunturikangasta.",
+  "linkit": [
+   "Hardangerviddan",
+   "Finsen",
+   "Bergensbanan"
+  ],
+  "jatkot": [
+   "Millainen on Bergenin ja Oslon välinen rautatie?",
+   "Miten jäätikköä seurataan nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-preikestolen",
+  "kasite": "Hyvlatonnå",
+  "kysymys": "Kerro lisää: Hyvlatonnå",
+  "vastaus": "Hyvlatonnå on Preikestolenin vanha paikallinen nimi, ja se tarkoittaa höylän hammasta. Nimi viittaa luultavasti kallion muotoon: jyrkkä tasanne työntyy esiin vuonon yläpuolella. Nykyinen nimi Prekestolen, nykymuodossaan Preikestolen, merkitsee [[saarnatuolia]], ja se vakiintui vasta noin vuonna 1900, kun [[Stavangerin retkeilyseura]] markkinoi paikkaa vaelluskohteena. Kalliotasanne kohoaa 604 metriä [[Lysevuonon]] yläpuolelle. Nimenmuutos kertoo hyvin, miten matkailu on muokannut tuttujen paikkojen nimiä.",
+  "linkit": [
+   "saarnatuolia",
+   "Stavangerin retkeilyseura",
+   "Lysevuonon"
+  ],
+  "jatkot": [
+   "Mitä Preikestolen tarkoittaa suomeksi?",
+   "Miten matkailu on muuttanut Preikestolenin ympäristöä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-preikestolen",
+  "kasite": "Stavangerin",
+  "kysymys": "Kerro lisää: Stavangerin",
+  "vastaus": "Stavanger on Lounais-Norjan suuri kaupunki, jonka historiallisessa ytimessä on [[Gamlestavanger]], vanhakaupunki valkoisiksi maalattuine puutaloineen. Kaupungin symboli on keskiaikainen [[tuomiokirkko]], jonka rakentaminen alkoi 1100-luvulla. Satamakaupunkina Stavanger kasvoi 1800-luvulla kalastuksen ja [[säilyketeollisuuden]] keskuksena, ja vuonna 1969 alkanut öljyaika käänsi kehityksen uuteen suuntaan. Kaupunki oli myös [[Euroopan kulttuuripääkaupunki]] vuonna 2008.",
+  "linkit": [
+   "Gamlestavanger",
+   "tuomiokirkko",
+   "säilyketeollisuuden",
+   "Euroopan kulttuuripääkaupunki"
+  ],
+  "jatkot": [
+   "Miten öljy muutti Stavangerin?",
+   "Mikä on Euroopan kulttuuripääkaupunki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-preikestolen",
+  "kasite": "Lysevuonon",
+  "kysymys": "Kerro lisää: Lysevuonon",
+  "vastaus": "Lysevuono on kapea ja syvä vuono Rogalandissa, jonka jyrkät kallioseinämät nousevat suoraan vedestä. Preikestolen kohoaa sen rannalla 604 metriä vuonon yläpuolelle. Vuonon kallioseinämällä sijaitsee myös [[Kjeragbolten]], kallionrakoon juuttunut kivilohkare, joka on suosittu valokuvauskohde. Vuono syntyi [[jäätiköiden]] kuluttamana jääkausina, ja jyrkät seinämät ovat tyypillistä vuonomaisemaa. Nimen sanotaan viittaavan vaaleaan kallioon.",
+  "linkit": [
+   "Kjeragbolten",
+   "jäätiköiden"
+  ],
+  "jatkot": [
+   "Mikä on Kjeragbolten?",
+   "Miten vuonot syntyvät?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-preikestolen",
+  "kasite": "BASE-hyppääjien",
+  "kysymys": "Kerro lisää: BASE-hyppääjien",
+  "vastaus": "BASE-hyppy on laskuvarjohyppyä, jossa hypätään kiinteästä kohteesta eikä lentokoneesta. Lyhenne tulee englanninkielisistä sanoista building, antenna, span ja earth, eli rakennus, masto, silta ja kallio. Hypyt tehdään matalalta, joten aikaa laskuvarjon avaamiseen on vähän, ja laji on vaarallinen. Norjassa suosittuja hyppypaikkoja ovat jyrkät kalliot, kuten [[Trollveggen]] ja [[Kjerag]]. Osa hyppääjistä käyttää [[siipipukua]], jonka avulla ilmassa voi liitää pitkiä matkoja.",
+  "linkit": [
+   "Trollveggen",
+   "Kjerag",
+   "siipipukua"
+  ],
+  "jatkot": [
+   "Miksi Trollveggen on kuuluisa kiipeilijöiden keskuudessa?",
+   "Mikä on siipipuku?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-preikestolen",
+  "kasite": "Rogalannin",
+  "kysymys": "Kerro lisää: Rogalannin",
+  "vastaus": "Rogaland on Lounais-Norjan lääni, jonka hallinnollinen keskus on Stavanger. Rannikolla sijaitseva [[Jæren]] on tasaista, hedelmällistä maatalousseutua, kun taas sisämaassa vuonot ja vuoret hallitsevat maisemaa. Perimätiedon mukaan [[Hafrsfjordin taistelu]] käytiin alueella 800-luvun lopulla, ja sen on kerrottu auttaneen Norjan yhdistämistä yhdeksi valtakunnaksi. Rannikolla sijaitsee myös [[Haugesund]], vanha kalastuskaupunki.",
+  "linkit": [
+   "Jæren",
+   "Hafrsfjordin taistelu",
+   "Haugesund"
+  ],
+  "jatkot": [
+   "Mitä Hafrsfjordin taistelussa tapahtui?",
+   "Millaista maataloutta Jæren-seudulla harjoitetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-preikestolen",
+  "kasite": "Strandin",
+  "kysymys": "Kerro lisää: Strandin",
+  "vastaus": "Strand on kunta Rogalandissa Stavangerin läheisyydessä, ja Preikestolen sijaitsee sen alueella. Kunnan keskus on [[Jørpeland]], ja kunta kuuluu [[Ryfylken]] alueeseen, joka on vuonojen ja vuorten leimaama seutu Stavangerin itäpuolella. Strandin alueella alkaa myös [[Lysevuonon]] rannalla kulkeva vaellusreitti, joka vie Preikestolenille. Kunnan matkailu perustuu pitkälti tähän yhteen maamerkkiin.",
+  "linkit": [
+   "Jørpeland",
+   "Ryfylken",
+   "Lysevuonon"
+  ],
+  "jatkot": [
+   "Mikä on Ryfylken alue?",
+   "Miten Preikestolenille pääsee Stavangerista?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-preikestolen",
+  "kasite": "Rogalannissa",
+  "kysymys": "Kerro lisää: Rogalannissa",
+  "vastaus": "Rogalandin maakunta on monipuolinen: rannikolla on kalastusta ja kalankasvatusta, sisämaassa maataloutta ja merellä öljyntuotantoa. [[Haugesundissa]] sijaitsee muistomerkki [[Haraldshaugen]], joka pystytettiin vuonna 1872 Norjan yhdistämisen tuhatvuotisjuhlan kunniaksi. Stavangerin lähellä [[Ullandhaugin]] alueella on rekonstruoitu rautakautinen maatila, joka näyttää, millaista asuminen oli lähes kaksi tuhatta vuotta sitten.",
+  "linkit": [
+   "Haugesundissa",
+   "Haraldshaugen",
+   "Ullandhaugin"
+  ],
+  "jatkot": [
+   "Miten Norja yhdistettiin yhdeksi valtakunnaksi?",
+   "Millainen on rautakautinen maatila?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sognefjord",
+  "kasite": "vuorovesivirtaukseen",
+  "kysymys": "Kerro lisää: vuorovesivirtaukseen",
+  "vastaus": "Vuorovesivirtaus syntyy, kun meren pinta nousee ja laskee [[vuorovesi]]-ilmiön vaikutuksesta ja vesi virtaa vuoroveden mukana. Ahtaissa salmissa ja vuonojen suilla veden on mahduttava kapeasta aukosta, jolloin virtaus voi voimistua huomattavasti. Norjassa tunnettu esimerkki on [[Saltstraumen]] Bodøn lähellä, jota pidetään yhtenä maailman voimakkaimmista vuorovesivirtauksista. Lofooteilla tunnetaan [[Moskstraumen]], joka on innoittanut kirjailijoita. Sognevuonon nimeä koskeva arvelu on siis uskottava, vaikka se ei ole varmaa tietoa.",
+  "linkit": [
+   "vuorovesi",
+   "Saltstraumen",
+   "Moskstraumen"
+  ],
+  "jatkot": [
+   "Miksi Saltstraumen on niin voimakas?",
+   "Mikä aiheuttaa vuoroveden?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sognefjord",
+  "kasite": "Norjan",
+  "kysymys": "Kerro lisää: Norjan",
+  "vastaus": "Norja on Pohjois-Euroopan kuningaskunta, jonka pääkaupunki on [[Oslo]]. Maa irtautui Tanskan alaisuudesta vuonna 1814, jolloin [[Eidsvollin]] kokous hyväksyi sen perustuslain, mutta joutui samana vuonna liittoon Ruotsin kanssa. Liitto purkautui rauhanomaisesti vuonna 1905. Norja ei ole Euroopan unionin jäsen, mutta se kuuluu [[Euroopan talousalueeseen]]. Maan pitkä rannikko ja vuonot ovat muokanneet sen asutusta ja elinkeinoja.",
+  "linkit": [
+   "Oslo",
+   "Eidsvollin",
+   "Euroopan talousalueeseen"
+  ],
+  "jatkot": [
+   "Mitä Norjassa juhlitaan 17. toukokuuta?",
+   "Mikä on Euroopan talousalue?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sognefjord",
+  "kasite": "Skjoldenin",
+  "kysymys": "Kerro lisää: Skjoldenin",
+  "vastaus": "Skjolden on pieni kylä Lusterin kunnassa [[Lustrafjordin]] pohjukassa, Sognevuonon sisimmän haaran päässä. Kylästä nousee vuoristotie [[Sognefjellin]] yli kohti [[Jotunheimenin]] kansallispuistoa, jonka vuoret kuuluvat Pohjois-Euroopan korkeimpiin. Sognevuono ulottuu tänne asti noin 205 kilometrin matkan merestä, joten kylä on vuonon sisimmässä kolkassa.",
+  "linkit": [
+   "Lustrafjordin",
+   "Sognefjellin",
+   "Jotunheimenin"
+  ],
+  "jatkot": [
+   "Mikä on Jotunheimenin kansallispuisto?",
+   "Mistä Sognefjellin tie kulkee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sognefjord",
+  "kasite": "Jostedalsbreen",
+  "kysymys": "Kerro lisää: Jostedalsbreen",
+  "vastaus": "Jostedalsbreen on tasangolla lepäävä laaja jäämassa, mannereurooppalaisen alueen suurin jäätikkö. Siitä laskee useita jäätikkökieliä laaksoihin; tunnetuimpia ovat [[Nigardsbreen]] ja [[Briksdalsbreen]]. Alue on suojeltu [[kansallispuistona]], ja jäätikön reunat ovat ilmaston lämpenemisen myötä vetäytyneet. Jäätikkö kohoaa Sognevuonon sisäosan yläpuolella.",
+  "linkit": [
+   "Nigardsbreen",
+   "Briksdalsbreen",
+   "kansallispuistona"
+  ],
+  "jatkot": [
+   "Miksi Briksdalsbreen on suosittu matkailukohde?",
+   "Miten ilmaston lämpeneminen vaikuttaa jäätiköihin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sognefjord",
+  "kasite": "Hurrungane-vuoristo",
+  "kysymys": "Kerro lisää: Hurrungane-vuoristo",
+  "vastaus": "Hurrungane on terävähuippuinen vuoristo [[Jotunheimenin]] alueella Sognevuonon sisäosan itäpuolella, ja sen huiput nousevat jopa 2 400 metriin. Korkein niistä on [[Store Skagastølstind]], jonka ensimmäisen nousun teki englantilainen vuorikiipeilijä [[William Cecil Slingsby]] vuonna 1876. Slingsbyn sanotaan olleen norjalaisen vuorikiipeilyn uranuurtaja. Hurruganen jyrkät huiput poikkeavat ympäristön pyöreämmistä tuntureista.",
+  "linkit": [
+   "Jotunheimenin",
+   "Store Skagastølstind",
+   "William Cecil Slingsby"
+  ],
+  "jatkot": [
+   "Kuka oli William Cecil Slingsby?",
+   "Mikä tekee Jotunheimenista erityisen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sognefjord",
+  "kasite": "Lusterin",
+  "kysymys": "Kerro lisää: Lusterin",
+  "vastaus": "Luster on kunta Länsi-Norjassa [[Vestlandin]] läänissä, ja sen alueella sijaitsevat Sognevuonon sisäosat. Hallinnollinen keskus on [[Gaupne]]. Kunnan tunnetuin rakennus on [[Urnesin sauvakirkko]], joka on Unescon maailmanperintökohde ja yksi vanhimmista säilyneistä sauvakirkoista. Kunnan alueella kohoavat myös Jostedalsbreen-jäätikkö ja Hurrungane-vuoristo, ja Skjoldenin kylä on kunnan pohjoispäässä Sognevuonon sisimmässä kolkassa.",
+  "linkit": [
+   "Vestlandin",
+   "Gaupne",
+   "Urnesin sauvakirkko"
+  ],
+  "jatkot": [
+   "Mikä on sauvakirkko?",
+   "Miksi Urnesin sauvakirkko on maailmanperintökohde?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-oljemuseo",
+  "kasite": "Norsk Oljemuseumin",
+  "kysymys": "Kerro lisää: Norsk Oljemuseumin",
+  "vastaus": "Norsk Oljemuseum on Stavangerin satamassa sijaitseva museo, joka kertoo Norjan öljyhistoriasta 1960-luvun puolivälistä nykypäivään. Näyttelyt seuraavat kehitystä ensimmäisistä Pohjanmeren porauslautoista teräs- ja betonilauttojen kautta nykyaikaisiin [[tuotantolaivoihin]] ja merenpohjan järjestelmiin. Museo avattiin vuonna 1999, ja sen noin 5 000 neliömetrin rakennus muistuttaa merenpuolelta katsottuna pientä porauslauttaa. Stavangerin asema öljypääkaupunkina perustuu [[Ekofiskin]] kentän löytöön vuonna 1969.",
+  "linkit": [
+   "tuotantolaivoihin",
+   "Ekofiskin"
+  ],
+  "jatkot": [
+   "Mikä on öljyn tuotantolaiva?",
+   "Mistä materiaaleista öljylautat rakennetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-oljemuseo",
+  "kasite": "Pohjanmeren",
+  "kysymys": "Kerro lisää: Pohjanmeren",
+  "vastaus": "Pohjanmeren eteläosa on matala, ja sen pohjalla on [[Doggerland]], jääkauden jälkeinen alanko, joka yhdisti kivikaudella Britannian mantereeseen. Merenpinnan nousun vuoksi alue jäi veden alle noin 8 000 vuotta sitten. Matala [[Doggerbank]] on yhä yksi Pohjanmeren tärkeimmistä kalastusalueista. Nykyisin meri tunnetaan öljyn ja kaasun lisäksi suurista [[merituulivoimaloista]].",
+  "linkit": [
+   "Doggerland",
+   "Doggerbank",
+   "merituulivoimaloista"
+  ],
+  "jatkot": [
+   "Miten Doggerland jäi veden alle?",
+   "Miten merituulivoimalat toimivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-oljemuseo",
+  "kasite": "Stavangerin",
+  "kysymys": "Kerro lisää: Stavangerin",
+  "vastaus": "Stavanger on Norjan öljyteollisuuden keskus, ja kaupungissa on norjalaisen energiayhtiön [[Equinor]] pääkonttori. Kaupungin kulttuuri on kuitenkin yhtä lailla historiallista: [[Hafrsfjordin]] rannalla on muistomerkki [[Sverd i fjell]], jonka kolme jättimäistä miekkaa pystytettiin vuonna 1983 muistuttamaan perimätiedon mukaan 800-luvun lopulla käydystä taistelusta. Satamassa sijaitsee Norjan öljymuseo, ja öljyaika on jättänyt jälkensä kaupungin ilmeeseen. Kaupunki tuo yhteen vanhan kalastuskaupungin ja modernin teollisuuden.",
+  "linkit": [
+   "Equinor",
+   "Hafrsfjordin",
+   "Sverd i fjell"
+  ],
+  "jatkot": [
+   "Mitä Sverd i fjell -muistomerkki esittää?",
+   "Mikä Equinor on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-oljemuseo",
+  "kasite": "Ekofiskin",
+  "kysymys": "Kerro lisää: Ekofiskin",
+  "vastaus": "Ekofisk on yksi Pohjanmeren vanhimmista öljykentistä, ja sen ympärille on kasvanut laaja lauttojen ja putkien verkko. Tuotanto alkoi vuonna 1971 öljyn siirtyessä suoraan tankkereihin, ja myöhemmin otettiin käyttöön putkijohdot. [[Norpipe]]-putkijohto kuljettaa öljyä [[Teessideen]] Englantiin ja kaasua [[Emdeniin]] Saksaan. Kentän käyttöikää on pidennetty useita kertoja, ja tuotannon arvioidaan jatkuvan ainakin vuoteen 2048.",
+  "linkit": [
+   "Norpipe",
+   "Teessideen",
+   "Emdeniin"
+  ],
+  "jatkot": [
+   "Miten öljy ja kaasu kulkevat merenpohjan putkissa?",
+   "Mikä on Teesside?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-oljemuseo",
+  "kasite": "Norjan öljymuseo",
+  "kysymys": "Kerro lisää: Norjan öljymuseo",
+  "vastaus": "Norjan öljymuseon tehtävänä on esitellä, miten öljyaika muutti Norjan. Museo sijaitsee Stavangerin satamassa, ja sen noin 5 000 neliömetrin rakennus muistuttaa merenpuolelta katsottuna pientä porauslauttaa. Näyttelyt kattavat ajan 1960-luvun puolivälistä alkaen: [[Ekofiskin]] löytö vuonna 1969 käynnisti kehityksen, jonka myötä Norjan valtio perusti vuonna 1972 öljy-yhtiö [[Statoilin]]. Yhtiö tunnetaan nykyään nimellä [[Equinor]].",
+  "linkit": [
+   "Ekofiskin",
+   "Statoilin",
+   "Equinor"
+  ],
+  "jatkot": [
+   "Miksi Norja perusti valtion omistaman öljy-yhtiön?",
+   "Miten öljyaika on muuttanut Norjan taloutta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-oljemuseo",
+  "kasite": "Stavangerissa",
+  "kysymys": "Kerro lisää: Stavangerissa",
+  "vastaus": "Stavanger sijaitsee Lounais-Norjassa [[Boknafjordin]] rannalla Rogalandin maakunnassa. Kaupunki on kasvanut kiinni naapurikaupunkiinsa [[Sandnesiin]], ja yhdessä ne muodostavat yhden Norjan suurimmista taajamista. Lentoyhteydet hoituvat [[Solan]] lentoaseman kautta, ja satamasta lähtee laivoja Rogalandin vuonoille. Meren läheisyys ja vuosisatainen kalastus ovat leimanneet kaupungin historiaa jo ennen öljyaikaa.",
+  "linkit": [
+   "Boknafjordin",
+   "Sandnesiin",
+   "Solan"
+  ],
+  "jatkot": [
+   "Mitä Sandnesista tiedetään?",
+   "Miten Stavangeriin pääsee Oslosta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-oljemuseo",
+  "kasite": "Norsk Oljemuseum",
+  "kysymys": "Kerro lisää: Norsk Oljemuseum",
+  "vastaus": "Norsk Oljemuseumin näyttelyiden keskeinen aihe on kehitys teräsrakenteisista lautoista betonisiin rakenteisiin. Norjassa kehitettiin 1970-luvulla betoniset [[painovoimalautat]], joiden ryhmästä käytetään nimeä [[Condeep]]; ne pysyvät paikoillaan merenpohjalla oman painonsa ansiosta. Tunnetuin esimerkki on [[Troll A]] -kaasulautta, jonka rakenne on yksi korkeimmista koskaan siirretyistä. Museo avattiin vuonna 1999 Stavangerin satamassa.",
+  "linkit": [
+   "painovoimalautat",
+   "Condeep",
+   "Troll A"
+  ],
+  "jatkot": [
+   "Miten painovoimalautta pysyy paikallaan merenpohjassa?",
+   "Mikä on Troll A -lautta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-voss",
+  "kasite": "Vossin",
+  "kysymys": "Kerro lisää: Vossin",
+  "vastaus": "Voss on Länsi-Norjan kunta, jonka hallintokeskus on [[Vossevangenin]] kylä Vangsvatnet-järven rannalla. Vossin kautta kulkee Oslon ja Bergenin välinen rata, [[Bergensbanan]], ja seutu on tunnettu hiihto- ja ulkoilumahdollisuuksistaan. Kylän keskellä seisoo keskiaikainen kirkko [[Vangskyrkja]]. Ruokapuolella paikkakunnan tunnetuin erikoisuus on smalahove, poltettu, suolattu ja savustettu lampaanpää.",
+  "linkit": [
+   "Vossevangenin",
+   "Bergensbanan",
+   "Vangskyrkja"
+  ],
+  "jatkot": [
+   "Miten smalahove valmistetaan?",
+   "Millainen kirkko Vangskyrkja on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-voss",
+  "kasite": "lanttumuusin",
+  "kysymys": "Kerro lisää: lanttumuusin",
+  "vastaus": "Lanttumuusi on keitetystä lantusta soseeksi muussattu lisuke. Lanttu on [[juuresvihannes]], jonka kestävyys sopii pohjoiseen: sitä voi säilyttää kellarissa läpi talven. Norjassa muusia kutsutaan nimellä [[rotmos]], ja sitä tarjoillaan lampaanpään lisäksi usein muiden liharuokien kanssa. Suomessa vastaava perinneruoka on joulun [[lanttulaatikko]]. Smalahoven kanssa lanttumuusi tasapainottaa ruoan voimakasta makua.",
+  "linkit": [
+   "juuresvihannes",
+   "rotmos",
+   "lanttulaatikko"
+  ],
+  "jatkot": [
+   "Miten lanttulaatikko valmistetaan?",
+   "Mistä lanttu on peräisin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-voss",
+  "kasite": "akvaviitin",
+  "kysymys": "Kerro lisää: akvaviitin",
+  "vastaus": "Akvaviitti on pohjoismainen väkevä alkoholijuoma, jonka pääasiallinen maustekasvi on [[kumina]]; joissakin versioissa käytetään myös tillin siemeniä tai muita mausteita. Nimi tulee latinan sanoista [[aqua vitae]], elämän vesi. Norjalainen akevitt kypsytetään tammitynnyreissä, ja tunnetuin esimerkki on [[Linie]], jonka tynnyrit kuljetetaan laivalla päiväntasaajan yli ja takaisin ennen pullotusta. Vossin seudulla akvaviittia tarjoillaan perinteisesti smalahoven kanssa.",
+  "linkit": [
+   "kumina",
+   "aqua vitae",
+   "Linie"
+  ],
+  "jatkot": [
+   "Miksi Linie-akvaviitin tynnyrit matkaavat laivalla?",
+   "Mitä kumina on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-voss",
+  "kasite": "Vossestrandiin",
+  "kysymys": "Kerro lisää: Vossestrandiin",
+  "vastaus": "Vossestrand oli Vossin pohjoinen osa, joka erotettiin omaksi kunnakseen vuonna 1868, kun Voss jaettiin kahtia. Vossin alue yhdistettiin takaisin yhdeksi kunnaksi 1960-luvulla, kun Norjassa toteutettiin laaja kuntauudistus, jota valmisteli [[Scheikomitea]]. Uudistuksen tavoitteena oli muodostaa kuntia, jotka kykenisivät hoitamaan palvelut paremmin kuin pienet erilliset kunnat. Samalla myös läntinen [[Evanger]] palasi osaksi Vossia.",
+  "linkit": [
+   "Scheikomitea",
+   "Evanger"
+  ],
+  "jatkot": [
+   "Miksi Norjan kuntia on yhdistetty 1960-luvulta alkaen?",
+   "Mikä Evanger on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-voss",
+  "kasite": "Evangerin",
+  "kysymys": "Kerro lisää: Evangerin",
+  "vastaus": "Evanger oli Vossin läntinen osa, josta tuli oma kuntansa vuonna 1885. Nykyisin Evanger on kylä Vossin kunnan alueella Vossin ja Bergenin välillä, ja sen kautta kulkee [[Bergensbanan]]-rata. Kylä sijaitsee [[Evangervatnet]]-järven rannalla. Kuntarajojen muutokset 1800-luvun lopulta nykypäivään kertovat siitä, miten [[paikallishallinto]] on Norjassa järjestetty toistuvasti uudelleen.",
+  "linkit": [
+   "Bergensbanan",
+   "Evangervatnet",
+   "paikallishallinto"
+  ],
+  "jatkot": [
+   "Missä Evangervatnet-järvi sijaitsee?",
+   "Miten Norjan paikallishallinto on järjestetty?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-voss",
+  "kasite": "Vangsvatnet-järven",
+  "kysymys": "Kerro lisää: Vangsvatnet-järven",
+  "vastaus": "Vangsvatnet on järvi Vossin keskustan tuntumassa, ja sen rannalla sijaitsee Vossevangenin kylä. Norjan kielessä sana [[vang]] tarkoittaa kenttää tai niittyä ja vatn vettä, joten järven nimi viittaa karkeasti kentän veteen. Kylän keskellä, järven läheisyydessä, seisoo keskiaikainen kirkko [[Vangskyrkja]]. Voss tunnetaan talvella hiihtokeskuksena, ja järvi on kylän keskeinen maamerkki.",
+  "linkit": [
+   "vang",
+   "Vangskyrkja"
+  ],
+  "jatkot": [
+   "Mitä Vangskyrkja-kirkosta tiedetään?",
+   "Mitä sana vatn tarkoittaa norjaksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-voss",
+  "kasite": "Länsi-Norjassa",
+  "kysymys": "Kerro lisää: Länsi-Norjassa",
+  "vastaus": "Länsi-Norja eli Vestlandet on Norjan rannikkoalue, jota hallitsevat vuonot ja jyrkät vuoristot. Alueen suurin kaupunki on [[Bergen]], jonka vanha satamakortteli [[Bryggen]] on Unescon maailmanperintökohde ja muistuttaa [[Hansaliiton]] kauppiaiden ajasta. Atlantin läheisyys tuo alueelle runsaasti sadetta ja leutoja talvia.",
+  "linkit": [
+   "Bergen",
+   "Bryggen",
+   "Hansaliiton"
+  ],
+  "jatkot": [
+   "Miksi Bergenissä sataa niin paljon?",
+   "Mikä oli Hansaliitto?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-voss",
+  "kasite": "Länsi-Norjan",
+  "kysymys": "Kerro lisää: Länsi-Norjan",
+  "vastaus": "Länsi-Norjan kulttuuriin kuuluu oma kielimuoto ja musiikkiperinne. Norjan kahdesta kirjoitetusta kielimuodosta [[nynorsk]] eli uusnorja on vahvimmillaan juuri lännessä; sen loi 1800-luvulla [[Ivar Aasen]] murteiden pohjalta. Alueen tunnetuin soitin on [[Hardanger-viulu]], jossa on soittajan käyttämien kielten lisäksi värähtelemään jääviä alakieliä. Nämä perinteet kertovat alueen pitkästä omaleimaisuudesta.",
+  "linkit": [
+   "nynorsk",
+   "Ivar Aasen",
+   "Hardanger-viulu"
+  ],
+  "jatkot": [
+   "Miten nynorsk eroaa bokmålista?",
+   "Miksi Hardanger-viulussa on alakielet?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-notodden",
+  "kasite": "Kristian Birkeland",
+  "kysymys": "Kerro lisää: Kristian Birkeland",
+  "vastaus": "Kristian Birkeland oli norjalainen fyysikko ja keksijä, joka syntyi vuonna 1867 ja kuoli vuonna 1917. Hänet tunnetaan ennen kaikkea siitä, että hän tutki [[revontulia]] ja päätteli oikein niiden johtuvan auringosta sinkoutuvista sähköisistä hiukkasista, jotka törmäävät ilmakehän kaasuihin; satelliitit vahvistivat tämän vasta 1960-luvulla. Hänen mukaansa on nimetty magnetosfäärin sähkövirrat, joita kutsutaan nimellä [[Birkelandin virrat]]. Hän kehitti myös [[sähkömagneettisen tykin]] ja yhdessä Sam Eyden kanssa menetelmän typen sitomiseksi ilmasta lannoitteeksi.",
+  "linkit": [
+   "revontulia",
+   "Birkelandin virrat",
+   "sähkömagneettisen tykin"
+  ],
+  "jatkot": [
+   "Miten revontulet syntyvät?",
+   "Miten sähkömagneettinen tykki toimii?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-notodden",
+  "kasite": "Sam Eyde",
+  "kysymys": "Kerro lisää: Sam Eyde",
+  "vastaus": "Sam Eyde oli norjalainen insinööri ja liikemies, joka syntyi [[Arendalissa]] vuonna 1866. Hän oli keskeinen hahmo, kun Norsk Hydro perustettiin vuonna 1905, ja hänen johdollaan hankittiin [[vesivoiman]] käyttöoikeuksia sekä rakennettiin voimalaitoksia ja tehtaita. Hänen perintöään ovat Notodden ja Rjukan: niiden teollisuusperintökohde liitettiin Unescon maailmanperintöluetteloon vuonna 2015. Eyde yhdisti Birkelandin tieteellisen keksinnön ja rahoittajien pääoman toimivaksi yritykseksi.",
+  "linkit": [
+   "Arendalissa",
+   "vesivoiman"
+  ],
+  "jatkot": [
+   "Miten Rjukanin tehdaskaupunki rakennettiin?",
+   "Miten vesivoimalaitos tuottaa sähköä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-notodden",
+  "kasite": "Svelgfossenin",
+  "kysymys": "Kerro lisää: Svelgfossenin",
+  "vastaus": "Svelgfossen on koski Tinnelva-joessa Notoddenin lähellä. Siihen rakennetun voimalaitoksen sähkö kävi Norsk Hydron ensimmäisessä tehtaassa, jossa ilman typpi sidottiin sähkökaarella. Menetelmää kutsutaan nimellä [[Birkeland–Eyde-prosessi]]: ilma johdetaan sähkökaaren läpi, jolloin syntyy typen oksideja, joista voidaan valmistaa lannoitteena käytettävää [[kalsiumnitraattia]]. Prosessi kulutti poikkeuksellisen paljon sähköä, joten sen sijoittaminen runsasvetisen kosken viereen oli ratkaisevaa. [[Vesivoimaa]] oli Norjassa runsaasti tarjolla.",
+  "linkit": [
+   "Birkeland–Eyde-prosessi",
+   "kalsiumnitraattia",
+   "Vesivoimaa"
+  ],
+  "jatkot": [
+   "Miten ilman typpi saadaan sidottua lannoitteeksi?",
+   "Miksi sähkökaarimenetelmä jäi pois käytöstä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-notodden",
+  "kasite": "Rjukanissa",
+  "kysymys": "Kerro lisää: Rjukanissa",
+  "vastaus": "Rjukan on teollisuuskaupunki [[Telemarkissa]], kapeassa laaksossa. Norsk Hydro rakensi sinne vuonna 1911 toisen, Notoddenin tehdasta suuremman tehtaan, jonka voimalle rakennettiin oma rautatie. Voimalaitos [[Vemork]] oli aikansa suurimpia. Kaupunki sijaitsee niin syvässä laaksossa, ettei aurinko paista keskustaan talvikuukausina, ja vuonna 2013 vuorelle asennettiin peilit, jotka heijastavat valoa torille; ne tunnetaan nimellä [[Solspeilet]].",
+  "linkit": [
+   "Telemarkissa",
+   "Vemork",
+   "Solspeilet"
+  ],
+  "jatkot": [
+   "Mitä Vemorkissa tapahtui toisen maailmansodan aikana?",
+   "Miten Rjukanin aurinkopeilit toimivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-notodden",
+  "kasite": "Haber–Bosch-prosessin",
+  "kysymys": "Kerro lisää: Haber–Bosch-prosessin",
+  "vastaus": "Haber–Bosch-prosessi on menetelmä, jolla valmistetaan [[ammoniakkia]] suoraan ilman typestä ja vedystä. Saksalainen kemisti Fritz Haber kehitti menetelmän laboratoriossa 1900-luvun alussa, ja Carl Bosch kehitti siitä teollisen tuotantotavan saksalaisessa yhtiössä [[BASF]]; ensimmäinen laitos aloitti toimintansa Oppaussa vuonna 1913. Reaktio vaatii korkean paineen, korkean lämpötilan ja rautapohjaisen katalyytin. Menetelmä syrjäytti Norsk Hydron sähkökaarimenetelmän, koska se kuluttaa vähemmän energiaa. Sekä Haber että Bosch saivat [[Nobelin kemianpalkinnon]].",
+  "linkit": [
+   "ammoniakkia",
+   "BASF",
+   "Nobelin kemianpalkinnon"
+  ],
+  "jatkot": [
+   "Miten ammoniakista valmistetaan lannoitteita?",
+   "Miksi Haber–Bosch-prosessi on tärkeä ruoantuotannolle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-notodden",
+  "kasite": "Birkelandin",
+  "kysymys": "Kerro lisää: Birkelandin",
+  "vastaus": "Kristian Birkelandin revontultutkimus perustui sekä maastohavaintoihin että laboratoriokokeisiin. Vuonna 1899 hän rakennutti havaintoasemia Pohjois-Norjan tuntureille, muun muassa [[Haldde]]-vuorelle [[Altafjordin]] lähelle, ja talvehti apulaistensa kanssa mittaamassa magneettikenttää pakkasessa ja myrskyssä. Laboratoriossa hän jäljitteli ilmiötä magnetoidulla pallolla, jota kutsutaan [[terrellaksi]]: kun hiukkasvirta osui palloon tyhjiökammiossa, sen napojen ympärille syntyi revontulten kaltainen hehku. Hänen päätelmänsä todistettiin oikeaksi satelliiteilla vasta 1960-luvulla.",
+  "linkit": [
+   "Haldde",
+   "Altafjordin",
+   "terrellaksi"
+  ],
+  "jatkot": [
+   "Mikä on magnetosfääri?",
+   "Missä Altafjord sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-notodden",
+  "kasite": "Wallenberg-suku",
+  "kysymys": "Kerro lisää: Wallenberg-suku",
+  "vastaus": "Wallenbergit ovat ruotsalainen pankki- ja yrittäjäsuku. André Oscar Wallenberg perusti vuonna 1856 pankin nimeltä [[Stockholms Enskilda Bank]], josta tuli myöhemmin SEB. Suku on tunnettu pitkäaikaisesta omistajuudestaan suurissa ruotsalaisissa teollisuusyhtiöissä, joita hallinnoi sijoitusyhtiö [[Investor]]. Norsk Hydron rahoitus 1900-luvun alussa oli osa tätä kansainvälistä sijoitustoimintaa. Suvun jäsen oli myös diplomaatti [[Raoul Wallenberg]], joka toisen maailmansodan aikana auttoi Budapestissa vainottuja juutalaisia.",
+  "linkit": [
+   "Stockholms Enskilda Bank",
+   "Investor",
+   "Raoul Wallenberg"
+  ],
+  "jatkot": [
+   "Miten Raoul Wallenberg auttoi vainottuja Budapestissa?",
+   "Mitä yrityksiä Wallenbergit omistavat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-notodden",
+  "kasite": "Kristian Birkelandin",
+  "kysymys": "Kerro lisää: Kristian Birkelandin",
+  "vastaus": "Kristian Birkeland syntyi vuonna 1867 [[Kristianiassa]], nykyisessä Oslossa, ja hänestä tuli professori Kristianian yliopistossa vuonna 1898. Hänet ehdotettiin [[Nobelin palkinnon]] saajaksi useita kertoja, mutta palkintoa hän ei saanut. Hänen revontuliteoriansa jäi pitkäksi aikaa kiistanalaiseksi, koska hiukkasvirtojen olemassaoloa ei vielä voitu mitata; vasta satelliitit 1960-luvulla osoittivat hänen olleen oikeassa. Hän kuoli vuonna 1917.",
+  "linkit": [
+   "Kristianiassa",
+   "Nobelin palkinnon"
+  ],
+  "jatkot": [
+   "Miksi Birkelandin revontuliteoria hyväksyttiin vasta myöhemmin?",
+   "Miksi Oslon vanha nimi oli Kristiania?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lindesnes",
+  "kasite": "majakka",
+  "kysymys": "Kerro lisää: majakka",
+  "vastaus": "Majakka on torni tai muu rakennelma, jonka valon tai äänimerkin avulla merenkulkijat tietävät sijaintinsa ja välttävät karit. Ranskalainen fyysikko Augustin-Jean Fresnel kehitti 1800-luvun alussa linssin, joka kokoaa valon tehokkaasti yhdeksi keilaksi; [[Fresnelin linssi]] mahdollisti valon näkymisen kauas. Espanjassa on yhä käytössä roomalaisaikainen [[Herkuleen torni]], ja Ranskan Atlantin rannikolla sijaitseva [[Cordouanin majakka]] valmistui alun perin 1600-luvun alussa. Se on Unescon maailmanperintökohde. Lindesnesin majakka on tämän pitkän perinteen pohjoinen jäsen.",
+  "linkit": [
+   "Fresnelin linssi",
+   "Herkuleen torni",
+   "Cordouanin majakka"
+  ],
+  "jatkot": [
+   "Miten Fresnelin linssi toimii?",
+   "Millaista oli majakanvartijan työ?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lindesnes",
+  "kasite": "Skagerrakin",
+  "kysymys": "Kerro lisää: Skagerrakin",
+  "vastaus": "Skagerrak on Norjan, Ruotsin ja Tanskan välinen merialue, joka yhdistää Pohjanmeren [[Kattegatiin]]. Sen syvin kohta on Norjan rannikon edustalla, missä syvänne eli [[Norjan hauta]] ulottuu yli 700 metrin syvyyteen. Alueella käytiin ensimmäisen maailmansodan suuri laivastotaistelu vuonna 1916, jota kutsutaan [[Jyllannin taisteluksi]] tai saksalaisittain Skagerrakin taisteluksi. Salmen kautta kulkee tiheä meriliikenne Pohjanmeren ja Itämeren välillä.",
+  "linkit": [
+   "Kattegatiin",
+   "Norjan hauta",
+   "Jyllannin taisteluksi"
+  ],
+  "jatkot": [
+   "Mikä on Norjan hauta?",
+   "Mitä Jyllannin taistelussa tapahtui?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lindesnes",
+  "kasite": "Itämeren",
+  "kysymys": "Kerro lisää: Itämeren",
+  "vastaus": "Itämeri on Pohjois-Euroopan sisämeri, jonka rannoilla on yhdeksän valtiota. Se on matala ja vähäsuolainen [[murtovesi]]allas, koska yhteys Pohjanmereen kulkee kapeiden [[Tanskan salmien]] kautta ja jokien makea vesi laimentaa merta. Talvella sen pohjoiset osat, kuten [[Pohjanlahti]], jäätyvät. Lindesnesin majakka osoitti laivoille reittiä Pohjanmereltä Skagerrakin ja Itämeren suuntaan.",
+  "linkit": [
+   "murtovesi",
+   "Tanskan salmien",
+   "Pohjanlahti"
+  ],
+  "jatkot": [
+   "Miksi Itämeri on murtovettä?",
+   "Mitä Tanskan salmet ovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lindesnes",
+  "kasite": "saksalaismiehityksen",
+  "kysymys": "Kerro lisää: saksalaismiehityksen",
+  "vastaus": "Saksa hyökkäsi Norjaan 9. huhtikuuta 1940, ja miehitys kesti toisen maailmansodan loppuun, toukokuuhun 1945. Kuningas Haakon VII ja hallitus siirtyivät maanpakoon Lontooseen, josta käsin ne johtivat Norjan vastarintaa. Maassa toimi saksalaisten tukema [[Quislingin]] johtama hallinto, ja kansalaisten vastarinta ilmeni muun muassa [[vastarintaliikkeen]] toimintana. Miehityksestä on kulunut yli kahdeksankymmentä vuotta, ja sodan jälkeen Norja liittyi vuonna 1949 [[NATOon]]. Miehityksen jäljet näkyvät yhä esimerkiksi rannikon linnoitusten raunioissa.",
+  "linkit": [
+   "Quislingin",
+   "vastarintaliikkeen",
+   "NATOon"
+  ],
+  "jatkot": [
+   "Miten Norjan vastarintaliike toimi miehityksen aikana?",
+   "Mikä NATO on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lindesnes",
+  "kasite": "juoksuhautoja",
+  "kysymys": "Kerro lisää: juoksuhautoja",
+  "vastaus": "Juoksuhauta on maahan kaivettu kapea ja syvä kaivanto, jonka suojissa sotilas voi liikkua ja ampua ilman, että hän on vihollisen näkyvillä. Juoksuhautoja käytettiin laajasti ensimmäisessä maailmansodassa, jossa ne muodostivat [[Länsirintamalla]] pitkiä jonoja. Toisessa maailmansodassa Saksa rakensi miehittämälleen Norjan rannikolle linnoituksia osana [[Atlantin valliksi]] kutsuttua puolustusjärjestelmää. Maanalaisia kaivantoja täydensivät betoniset [[bunkkerit]]. Lindesnesin majakan ympärillä juoksuhautojen jäänteet näkyvät yhä.",
+  "linkit": [
+   "Länsirintamalla",
+   "Atlantin valliksi",
+   "bunkkerit"
+  ],
+  "jatkot": [
+   "Mikä Atlantin valli oli?",
+   "Millaista oli elämä juoksuhaudoissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lindesnes",
+  "kasite": "tunneleita",
+  "kysymys": "Kerro lisää: tunneleita",
+  "vastaus": "Tunneli on kallion tai maaperän läpi louhittu käytävä, jota pitkin kulkevat tiet, junat tai vesi. Norjan vuoristoisessa maastossa tunneleita on poikkeuksellisen paljon. [[Lærdalin tunneli]] Sognevuonon rannalla on pisin tietunneli maailmassa, ja siinä on erityisiä valaistuja luolia kuljettajien jaksamisen tueksi. Rogalandissa rakennetaan [[Rogfast]]-tunnelia, jonka on määrä olla maailman pisin ja syvin merenalainen tietunneli. Lindesnesin majakan ympärillä olevat tunnelit ovat toisen maailmansodan ajalta.",
+  "linkit": [
+   "Lærdalin tunneli",
+   "Rogfast"
+  ],
+  "jatkot": [
+   "Miten Lærdalin tunneli on suunniteltu kuljettajien kannalta?",
+   "Miksi tunneleita louhitaan merenpohjaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lindesnes",
+  "kasite": "valotunnus",
+  "kysymys": "Kerro lisää: valotunnus",
+  "vastaus": "Valotunnus on majakan tai muun merimerkin valon tunnusomainen piirre: välähdysten lukumäärä ja kesto, pimeiden jaksojen pituus, valon väri ja koko jakson kesto. Kuvaus kirjataan [[merikarttaan]] ja majakkaluetteloihin lyhenteillä; esimerkiksi Fl(2) W 10s tarkoittaa kahden välähdyksen sarjaa valkoisella valolla kymmenen sekunnin välein. Joissakin majakoissa on [[sektorivalo]], jonka väri vaihtuu katselusuunnan mukaan ja joka osoittaa turvallisen väylän. Tunnistetyyppejä ovat muun muassa [[vilkkuva valo]] ja kiinteä valo.",
+  "linkit": [
+   "merikarttaan",
+   "sektorivalo",
+   "vilkkuva valo"
+  ],
+  "jatkot": [
+   "Miten sektorivalo osoittaa turvallisen väylän?",
+   "Miten merikarttaa luetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lindesnes",
+  "kasite": "välähdysten",
+  "kysymys": "Kerro lisää: välähdysten",
+  "vastaus": "Majakan välähdykset syntyvät yleensä siten, että valo pysyy sytytettynä, mutta sen edessä pyörii [[Fresnelin linssin]] kaltainen linssijärjestelmä: kokoama valokeila pyyhkäisee merta ja näkyy tarkkailijalle lyhyinä välähdyksinä. Valotyyppi määräytyy sen mukaan, kuinka pitkä välähdys on pimeään jaksoon verrattuna. Jos valo on päällä lyhyemmän aikaa kuin pimeänä, kyseessä on vilkkuva valo; jos ajat ovat yhtä pitkät, kyseessä on [[tasavälinen valo]]. Nykyisin vilkkumista ohjataan usein sähköisesti ja valona käytetään [[LED-valoja]].",
+  "linkit": [
+   "Fresnelin linssin",
+   "tasavälinen valo",
+   "LED-valoja"
+  ],
+  "jatkot": [
+   "Miten majakan linssi pyörii?",
+   "Miksi majakoissa siirryttiin LED-valoihin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lindesnes",
+  "kasite": "merikartasta",
+  "kysymys": "Kerro lisää: merikartasta",
+  "vastaus": "Merikartta on merenkulkijan kartta, johon on merkitty vesisyvyydet, karit ja matalikot, väylät, majakat ja muut merimerkit. Useimmat merikartat perustuvat [[Mercatorin projektioon]], jossa vakiosuuntaista reittiä kuvaa suora viiva; menetelmän esitteli flaamilainen kartografi Gerardus Mercator vuonna 1569. Keskiajalla Välimerellä käytettiin [[portolaanikarttoja]], joissa rannikot ja satamat oli piirretty tarkasti. Nykyisin alukset käyttävät yhä useammin [[elektronisia merikarttoja]].",
+  "linkit": [
+   "Mercatorin projektioon",
+   "portolaanikarttoja",
+   "elektronisia merikarttoja"
+  ],
+  "jatkot": [
+   "Mikä on Mercatorin projektio?",
+   "Miten elektroninen merikartta toimii?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lindesnes",
+  "kasite": "Sumusireeni",
+  "kysymys": "Kerro lisää: Sumusireeni",
+  "vastaus": "Sumusireeni on äänimerkki, jolla varoitetaan alusta sumussa, kun majakan valo ei näy riittävän kauas. Äänimerkkinä on käytetty muun muassa kelloja, torvia ja paineilmalla toimivia sireenejä. Ääni toistetaan tietyssä rytmissä, jotta merenkulkija tunnistaa lähteen, samalla tavoin kuin valotunnus tunnistaa majakan. Lindesnesin majakalle asennettiin sireeni vuonna 1920. Nykyisin [[tutka]], [[satelliittipaikannus]] ja aluksen tunnistusjärjestelmä ovat korvanneet sumumerkit monin paikoin, ja osa vanhoista on poistettu käytöstä.",
+  "linkit": [
+   "tutka",
+   "satelliittipaikannus"
+  ],
+  "jatkot": [
+   "Miten tutka auttaa merenkulussa?",
+   "Miten satelliittipaikannus toimii?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lindesnes",
+  "kasite": "äänimerkki",
+  "kysymys": "Kerro lisää: äänimerkki",
+  "vastaus": "Merenkulussa äänimerkeillä viestitään silloin, kun näköyhteys ei riitä. Kansainväliset yhteentörmäyksen ehkäisemissäännöt, lyhyesti [[COLREG]], määrittelevät, miten alukset käyttävät äänimerkkejä: yksi lyhyt äänimerkki tarkoittaa kääntymistä oikealle, kaksi lyhyttä kääntymistä vasemmalle ja kolme lyhyttä sitä, että alus käyttää konetta peruuttamiseen. Sumussa moottorialus antaa vähintään kahden minuutin välein yhden pitkän äänen. Maissa sijaitsevat [[sumutorvet]] ja kellot varoittavat lisäksi kareista ja rannasta.",
+  "linkit": [
+   "COLREG",
+   "sumutorvet"
+  ],
+  "jatkot": [
+   "Mitä muuta COLREG-säännöt määräävät?",
+   "Miten alus varoittaa vaarasta äänimerkillä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lindesnes",
+  "kasite": "Lindesnesin",
+  "kysymys": "Kerro lisää: Lindesnesin",
+  "vastaus": "Lindesnes on Norjan mantereen eteläisin kärki Agderin läänissä. Paikka on tunnettu majakastaan, mutta myös Pohjanmeren ja Skagerrakin kohtaamisesta: tuulinen ja usein myrskyinen niemi on ollut merenkulkijoille pelätty kohta. Lähellä sijaitseva [[Mandal]] on Norjan eteläisin kaupunki ja tunnetaan pitkästä hiekkarannastaan [[Sjøsandenista]]. Majakka on yhä toiminnassa ja toimii samalla museona.",
+  "linkit": [
+   "Mandal",
+   "Sjøsandenista"
+  ],
+  "jatkot": [
+   "Miksi Lindesnesin vesillä on ollut haaksirikkoja?",
+   "Mikä on Mandalin Sjøsanden?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lindesnes",
+  "kasite": "Pohjanmeren",
+  "kysymys": "Kerro lisää: Pohjanmeren",
+  "vastaus": "Pohjanmeri on Euroopan vilkkaimpia merialueita. Sen rannoilla sijaitsee [[Rotterdamin]] satama, joka on yksi Euroopan suurimmista, ja alueen kautta kulkee suuri osa Pohjois-Euroopan meriliikenteestä. Meri on myös tärkeä kalastusalue, jossa pyydetään muun muassa [[silliä]], turskaa ja koljaa. Liikakalastus on kuitenkin pienentänyt joidenkin kalakantojen kokoa, ja kalastusta rajoitetaan [[kiintiöillä]].",
+  "linkit": [
+   "Rotterdamin",
+   "silliä",
+   "kiintiöillä"
+  ],
+  "jatkot": [
+   "Miten kalastuskiintiöt toimivat?",
+   "Miksi Rotterdamin satama on niin tärkeä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lindesnes",
+  "kasite": "Kattegatiin",
+  "kysymys": "Kerro lisää: Kattegatiin",
+  "vastaus": "Kattegat on matala merialue Tanskan Jyllannin ja Ruotsin länsirannikon välissä. Se jatkaa Skagerrakista etelään ja yhdistyy [[Itämereen]] Tanskan salmien kautta, joista tunnetuin on [[Juutinrauma]] Kööpenhaminan ja Malmön välillä. Kattegatin rannalla sijaitsee Ruotsin toiseksi suurin kaupunki [[Göteborg]]. Alueella Itämeren murtovesi kohtaa Pohjanmeren suolaisemman veden.",
+  "linkit": [
+   "Itämereen",
+   "Juutinrauma",
+   "Göteborg"
+  ],
+  "jatkot": [
+   "Miten Juutinrauman silta rakennettiin?",
+   "Miten Kattegatin vesi eroaa Itämeren vedestä?"
+  ]
  }
 ]
