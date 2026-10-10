@@ -5,18 +5,12 @@ Julkaisija jakaa käännös- ja simuvuorot (SendMessage "Julkaisija (Opus, high)
 skriptit `proto-3d/_tyo/linssiseppa2/skriptit-20261009/`, arkit `docs/raportit/kaappaukset/linssiseppa2-177-20261010/`.
 
 ## KESKEN (järjestys)
-1. **TAIDEMUSEON LATTIAHEIJASTUS** (PT 17.4x, omistaja kysyi; LS1:n suunnitelman kohta 2; LS1 omistaa museon, LR leipoo varjot):
-   haara `linssiseppa2/museo-lattia` **3de6981d1** = museo-kombo-178 691969c66 + Ydin/Museo/MuseoLattia.cs (laatikko, projektio,
-   Fresnel, mip; testit MuseoLattiaTestit, L 1326/1326) + Unity/MuseoLattiaHeijastus.cs (kuutio 128² ARGBHalf, RenderToCubemap
-   osaan tultaessa 0,6 s ja 4 s, sali-GLB:n vaihtuessa uudelleen; QA `linssi museo heijastus 0|1`) + MuseoValaistu.shader
-   (_Heijastus > 0 ja n.y > 0,7: laatikkoprojektio, mip = karheus · 1,35, Fresnel F0 0,04) + MuseoRakennus (_Heijastus:
-   marmori 1, parketti 0,45) + MuseoSovitin (kytkentä). unity 0. Käännös **käynnissä irrotettuna 18.0x** (setsid PID 42071, loki proto-3d/lokit/linssiseppa2-kaanna-museo-lattia.log; proto-kaanna.sh 3de6981d1,
-   PROTO_APP_KOPIO=lokit/linssiseppa2-app-museo-lattia; tulos lokit/kaannospalvelu/*3de6981d1.log) — tarkista KÄÄNNETTY ja ilmoita
-   Julkaisijalle "lukko vapaa". Simu jonossa ~18.25 (Julkaisija). Ajo: `_tyo/linssiseppa2/museo-lattia/vuoro-lattia.zsh <SHA> [iPhone-UDID]`
-   (LS1:n todistusajo, skenaariot sk-lattia-ipad/-puhelin: aula marmori, Kunniagalleria parketti, Yövartio; heijastus 0 | 1).
-   iPhone-simu: oma T7:lle (simusarja.sh) tai LS1:n D0D2CD1E vain LS1:n luvalla. Varjostinta ei ole vielä nähty: jos RenderToCubemap
-   ei toimi URP:ssä (loki "lattiaheijastus … EI ONNISTUNUT"), vaihda 6 kasvoa Camera.Render + CopyTexture. Tulos: pari puhelin pysty
-   + iPad vaaka → PT; sitten iPad Pro 13 Release -mittaus (muisti + fps) Natiivisepän kautta. SSR vain jos pari vaatii.
+1. **TAIDEMUSEON LATTIAHEIJASTUS v2** (18.2x): ajo 1 (käännös dfd373c04 = 3de6981d1; todistus-lattia-ipad-20261010-1806,
+   -puhelin-1810) toimi (kuvaus 1,3–116 ms, 0 virhettä), mutta parketti sumeni mip 4,25:lle → ero lattiassa keskimäärin 1,3/255 eikä aulan
+   kuva osunut lattiaan. Korjaus **50071113d** (karheus² · 2 → mip: marmori 1,3, parketti 2,8 / 7; L 1326/1326, unity 0) + skenaariot
+   katse lattiaan (aula 0 −18, KG 90 −22, Yövartio 0 −15). Julkaisija antaa KÄÄNNÖS NYT ~18.35 → `museo-lattia/kaanna-ja-aja.zsh kaanna`,
+   sitten simu → `kaanna-ja-aja.zsh aja <käännös-SHA>`. Tulos: pari puhelin pysty + iPad vaaka → PT; sitten iPad Pro 13 Release -mittaus.
+   SSR vain jos pari vaatii.
 2. **ND v6k14 VIETY** (Julkaisija 18.0x: 41 tiedostoa, portti 0, uusin-4 → v6k14). LR jatkaa v5c:llä → sama arkki (arkit-nd5b.py-malli, vuoro-nd5b.sh-malli; tekijärivi The wub CC BY-SA 4.0
    lisättävä käsin mallit.jsoniin; mittaa-julkisivu.py tavoite L 150–160, mittaa-parvis.py lyijy).
 3. **PEKING-PARI ILMAKEHÄ PÄÄLLÄ** kun juna 179 käännetty (Natiiviseppä ilmoittaa; junassa ilmakeha-kaikkialla d3885f6d1 +
