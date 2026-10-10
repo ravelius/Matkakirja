@@ -65,13 +65,13 @@ Mitä lasite tekee keramiikalle?
 Miten savenvalajan kiekko toimii?
 
 ### 412
-Bunzlauer-keramiikka erottuu muodostaan, massastaan, lasitteestaan ja koristelustaan. Se kehittyi kansanperinteestä omaksi lajikseen ja lasketaan Euroopan tärkeimpiin kansankeramiikan perinteisiin. Valmistus perustuu Bolesławiecin ympäristön saveen, jota muotoiltiin potkukiekolla, ja astiat poltettiin korkeassa lämpötilassa. Tuloksena on tiivis ja kestävä [[kivitavara]], jota käytettiin ruoan valmistukseen ja säilytykseen. Perinne jatkuu edelleen, ja astioita tehdään Bolesławiecissa yhä sekä perinteisin että uudemmin menetelmin. Kivitavara tarkoittaa tiivistä, korkealla lämpötilalla poltettua savitavaraa.
+Bunzlauer-keramiikka erottuu muodostaan, massastaan, lasitteestaan ja koristelustaan. Se kehittyi kansanperinteestä omaksi lajikseen ja lasketaan Euroopan tärkeimpiin kansankeramiikan perinteisiin. Valmistus perustuu [[Bolesławiecin]] ympäristön saveen, jota muotoiltiin potkukiekolla, ja astiat poltettiin korkeassa lämpötilassa. Tuloksena on tiivis ja kestävä [[kivitavara]], jota käytettiin ruoan valmistukseen ja säilytykseen. Perinne jatkuu edelleen, ja astioita tehdään Bolesławiecissa yhä sekä perinteisin että uudemmin menetelmin. Kivitavara tarkoittaa tiivistä, korkealla lämpötilalla poltettua savitavaraa.
 JATKOT:
 Millaisia kansankeramiikan perinteitä Euroopassa on?
 Miten kivitavara eroaa maasta?
 
 ### 413
-Mihail Kutuzov oli venäläinen kenraalifeldmarsalkka, joka syntyi vuonna 1745 ja nousi Venäjän armeijan ylipäälliköksi Napoleonin hyökkäyksen aikana vuonna 1812. Hänen johdollaan venäläiset kävivät Borodinon taistelun, jonka jälkeen Moskova jouduttiin jättämään. Ranskalaisten vetäytyminen talven aikana ratkaisi sotaretken, ja Kutuzov seurasi heitä länteen. Hän kuoli Bolesławiecissa 28. huhtikuuta 1813, ja hänet haudattiin Pietarin Kazanin katedraaliin. Hänestä tuli Venäjällä Napoleonia vastaan käydyn sodan muistomerkki.
+Mihail Kutuzov oli venäläinen kenraalifeldmarsalkka, joka syntyi vuonna 1745 ja nousi Venäjän armeijan ylipäälliköksi Napoleonin hyökkäyksen aikana vuonna 1812. Hänen johdollaan venäläiset kävivät [[Borodinon taistelun]], jonka jälkeen Moskova jouduttiin jättämään. Ranskalaisten vetäytyminen talven aikana ratkaisi sotaretken, ja Kutuzov seurasi heitä länteen. Hän kuoli Bolesławiecissa 28. huhtikuuta 1813, ja hänet haudattiin Pietarin [[Kazanin katedraaliin]]. Hänestä tuli Venäjällä Napoleonia vastaan käydyn sodan muistomerkki.
 JATKOT:
 Mitä Borodinon taistelussa tapahtui?
 Miksi Napoleonin sotaretki Venäjälle epäonnistui?
@@ -113,7 +113,7 @@ Miten Gdańsk hyötyi sodan lopputuloksesta?
 Mitä läänitys tarkoittaa?
 
 ### 420
-Dansker on ristiritarien linnoille tyypillinen käymälätorni, joka rakennettiin linnan pääosasta erilleen ja yhdistettiin siihen yleensä käytävällä tai kaarisillalla. Torni oli usein rakennettu joen, puron tai vallihaudan päälle, jotta vesi vei jätteet pois. Sanan alkuperästä ei olla täysin yksimielisiä. Rakenne oli myös puolustuksellisesti hyödyllinen, koska se eristi vessatilat asuin- ja kokoontumistiloista ja sen yhteyden saattoi tarvittaessa katkaista. Tunnetuimpia esimerkkejä ovat [[Malborkin]] linnan danskerit. Toruńin linnasta on säilynyt tällainen torni puron yllä.
+Dansker on [[Saksalaisen ritarikunnan]] linnoille tyypillinen käymälätorni, joka rakennettiin linnan pääosasta erilleen ja yhdistettiin siihen yleensä käytävällä tai kaarisillalla. Torni oli usein rakennettu joen, puron tai vallihaudan päälle, jotta vesi vei jätteet pois. Sanan alkuperästä ei olla täysin yksimielisiä. Rakenne oli myös puolustuksellisesti hyödyllinen, koska se eristi vessatilat asuin- ja kokoontumistiloista ja sen yhteyden saattoi tarvittaessa katkaista. Tunnetuimpia esimerkkejä ovat [[Malborkin]] linnan danskerit. Toruńin linnasta on säilynyt tällainen torni puron yllä.
 JATKOT:
 Millainen on Malborkin linna?
 Miten linnojen vedenhuolto toimi?
@@ -251,7 +251,7 @@ Mitä Krakovan vanhakaupunki sisältää?
 Millä kriteereillä kohteet valitaan luetteloon?
 
 ### 443
-Suolakivi eli kivisuola on kivilaji, joka koostuu pääosin mineraali [[haliittista]] eli natriumkloridista. Se syntyy, kun merivesi haihtuu ja suolat saostuvat pohjalle, ja kerrokset peittyvät myöhemmin muilla sedimenteillä. Wieliczkan suolakerrostuma on lähteiden mukaan muodostunut mioseenin aikana noin 14 miljoonaa vuotta sitten. Suolakivi ei ole yleensä puhtaan valkoista, vaan sen väri voi vaihdella harmaasta ruskeaan, koska siihen on sekoittunut savea ja muita epäpuhtauksia. Kivisuolaa louhitaan ruoka-aineeksi, teollisuuden raaka-aineeksi ja liukkaudentorjuntaan. Se on pehmeää, joten sitä voi työstää helposti, ja siksi kaivosmiehet saattoivat veistää siitä patsaita.
+Suolakivi eli kivisuola on kivilaji, joka koostuu pääosin mineraali [[haliittista]] eli [[natriumkloridista]]. Se syntyy, kun merivesi haihtuu ja suolat saostuvat pohjalle, ja kerrokset peittyvät myöhemmin muilla sedimenteillä. Wieliczkan suolakerrostuma on lähteiden mukaan muodostunut mioseenin aikana noin 14 miljoonaa vuotta sitten. Suolakivi ei ole yleensä puhtaan valkoista, vaan sen väri voi vaihdella harmaasta ruskeaan, koska siihen on sekoittunut savea ja muita epäpuhtauksia. Kivisuolaa louhitaan ruoka-aineeksi, teollisuuden raaka-aineeksi ja liukkaudentorjuntaan. Se on pehmeää, joten sitä voi työstää helposti, ja siksi kaivosmiehet saattoivat veistää siitä patsaita.
 JATKOT:
 Mitä haliitti on?
 Mihin kivisuolaa käytetään teollisuudessa?
@@ -315,3 +315,105 @@ Inkivääri on kasvin juurakosta saatava mauste, ja sen tieteellinen nimi on Zin
 JATKOT:
 Miten inkivääriä viljellään?
 Mikä on gingeroli?
+
+### 454
+Neilikka eli mausteneilikka on neilikkapuun kuivattu kukannuppu, joka poimitaan käsin ennen kuin se ehtii avautua. Puu on kotoisin Indonesian Molukkien saarilta, ja siitä tuli vuosisatojen ajan yksi arvokkaimmista mausteista. Tuoksu ja maku johtuvat pääosin yhdisteestä [[eugenoli]]. Eurooppaan neilikka kulkeutui kauppareittejä pitkin, ja 1500- ja 1600-luvuilla [[Portugali]] ja myöhemmin Hollannin Itä-Intian kauppakomppania pyrkivät hallitsemaan sen kauppaa. Omanin sulttaanit toivat puun 1800-luvulla Sansibarille, jossa siitä tuli tärkeä vientituote. Neilikkaa käytetään piparkakuissa, kuumissa juomissa ja ruoissa, ja sen öljyä on käytetty myös perinteisenä hammaskivun lääkkeenä.
+JATKOT:
+Miten hollantilaiset hallitsivat maustekauppaa?
+Mitä eugenoli on?
+
+### 455
+Veikseli on Puolan pisin joki. Se saa alkunsa [[Beskidien]] vuoristosta Etelä-Puolassa ja virtaa pohjoiseen Krakovan, [[Varsovan]] ja Toruńin kautta Itämeren Gdańskinlahteen. Veikseli oli keskiajalla ja uuden ajan alussa tärkeä kauppareitti, jota pitkin vilja ja puutavara kulkivat sisämaasta Gdańskiin ja sieltä meritse muualle Eurooppaan. Krakovassa joki virtaa [[Wawelin]] linnavuoren juurella. Joen suisto on matala ja haarautuu useaan osaan.
+JATKOT:
+Millaisia kaupunkeja Veikselin varrella on?
+Miten vilja kuljetettiin jokea pitkin Gdańskiin?
+
+### 456
+Hansaliitto oli Pohjois-Euroopan kauppakaupunkien ja kauppiaiden yhteenliittymä, joka vaikutti keskiajalta uuden ajan alkuun. Sen johtava kaupunki oli [[Lübeck]], ja liittoon kuului kymmeniä kaupunkeja, muun muassa Gdańsk, Riika ja Tallinna. Liitto kävi kauppaa viljalla, puutavaralla, turkiksilla, kalalla ja suolalla ja piti yllä kauppakonttoreita, joita oli esimerkiksi Bergenissä, Lontoossa, Brugessa ja Novgorodissa. Bergenin konttorin rakennukset [[Bryggenin]] rannalla kuuluvat Unescon maailmanperintöön. Hansaliiton merkitys väheni 1500- ja 1600-luvuilla, kun valtiot vahvistuivat ja kaupan reitit muuttuivat.
+JATKOT:
+Miksi Hansaliiton merkitys väheni?
+Mitä Bryggenin rannalla on nähtävää?
+
+### 457
+Itämeri on Pohjois-Euroopan sisämeri, joka yhtyy Pohjanmereen Tanskan salmien kautta. Se on matala, keskisyvyydeltään vain noin viisikymmentä metriä, ja sen vesi on murtovettä, koska makeaa vettä virtaa jokien mukana paljon ja yhteys valtamereen on kapea. Suolaisuus on suurempi lounaassa ja pienempi pohjoisessa ja idässä. Rannikolla on yhdeksän valtiota: Suomi, Ruotsi, Tanska, Saksa, Puola, Venäjä, Viro, Latvia ja Liettua. Talvisin Itämeren pohjoisosat jäätyvät. Sen satamat ja kauppareitit olivat keskiajalla tärkeitä, ja [[Hansaliitto]] hallitsi kauppaa laajoilla alueilla. Meren osia ovat esimerkiksi [[Suomenlahti]] ja [[Pohjanlahti]].
+JATKOT:
+Miksi Itämeri on murtovettä?
+Mikä on Suomenlahden merkitys?
+
+### 458
+Wrocław on [[Odra]]-joen varrella Lounais-Puolassa sijaitseva kaupunki, joka on [[Ala-Sleesian]] pääkaupunki. Saksalaisen hallinnan aikana kaupunki tunnettiin nimellä Breslau, ja se siirtyi Puolalle toisen maailmansodan jälkeen vuonna 1945. Keskiaikainen kaupunki kehittyi [[Ostrów Tumski]] -nimisen tuomiosaaren ympärille, ja sen suuri tori eli Rynek on yksi Euroopan suurista keskiaikaisista kaupunkiaukioista. Vuosisadan halli on Unescon maailmanperintökohde. Kaupunki oli vuonna 2016 Euroopan kulttuuripääkaupunki. Wrocławissa toimii useita korkeakouluja, ja tunnettuja ovat myös pienet pronssiset [[krasnale]]-hahmot, jotka ovat levinneet ympäri kaupunkia.
+JATKOT:
+Miten Wrocław muuttui Breslausta puolalaiseksi?
+Mikä on Vuosisadan halli?
+
+### 459
+Pomarańczowa Alternatywa eli Oranssi vaihtoehto oli 1980-luvun Wrocławissa syntynyt vastarintaliike, joka vastusti kommunistista hallintoa huumorin ja absurdien katutapahtumien keinoin. Sen perusti [[Waldemar Fydrych]], joka tunnettiin nimellä Majuri. Liikkeen tunnus oli kääpiö: kun viranomaiset peittivät seinille maalattuja poliittisia iskulauseita, aktivistit piirsivät peitetyn maalin päälle kääpiön. Liikkeen järjestämissä happeningeissa kuljettiin kaduilla karnevaalihenkisesti pukeutuneina, ja niissä pilkattiin vallanpitäjiä ilman suoraa vastakkainasettelua. Liike toimi samaan aikaan kuin [[Solidaarisuus]], ja sen vaikutus näkyy yhä Wrocławin kaupunkikuvassa. Tarkoista tapahtumista ja ajoituksista en ole varma.
+JATKOT:
+Millaisia happeningeja liike järjesti?
+Miten kääpiöistä tuli Wrocławin tunnus?
+
+### 460
+Tomasz Moczek on wrocławilainen kuvanveistäjä, joka on valmistunut Wrocławin taideakatemiasta. Hän veisti viisi ensimmäistä kaupungin pronssista kääpiöhahmoa, jotka asetettiin paikoilleen elokuussa 2005: Miekkailijan, Teurastajan, kaksi Sisyfosta ja Odranpesijän. Hahmot ovat parinkymmenen tai kolmenkymmenen sentin korkuisia ja sijaitsevat kadunkulmissa ja muilla näkyvillä paikoilla. Moczekin tuotannon muista osista en ole varma, ja kaupunkiin on sittemmin tullut hahmoja myös muiden tekijöiden käsistä. Hahmojen aiheet viittaavat usein kaupungin paikkoihin, ammatteihin tai historiaan. Moczekin työ liittyy [[krasnale]]-perinteeseen ja [[Pomarańczowa Alternatywa]] -liikkeen perintöön.
+JATKOT:
+Mitä muita krasnale-hahmoja kaupungissa on?
+Miksi hahmot sijoitetaan niin matalalle?
+
+### 461
+Sisyfos on kreikkalaisen mytologian hahmo, Korintin kuningas, jonka jumalat tuomitsivat manalassa vierittämään raskasta kiveä ylös rinnettä. Kivi vieri aina alas ennen kuin se ehti huipulle, ja työ alkoi alusta ikuisesti. Tarina on tullut kuvaamaan turhalta tuntuvaa, loputonta työtä. Ranskalainen kirjailija [[Albert Camus]] käytti hahmoa vuonna 1942 ilmestyneessä esseessään Sisyfoksen myytti, jossa hän pohti elämän mielettömyyttä ja ihmisen kykyä jatkaa siitä huolimatta. Wrocławin Sisyfos-kääpiöt viittaavat samaan tarinaan, ja pieni pronssihahmo sopii hyvin liikkeen muistoksi, joka teki huumorista aseensa. Sisyfosta kuvataan usein [[Hadesin]] valtakunnassa.
+JATKOT:
+Mitä Camus sanoi Sisyfoksesta?
+Millaisia muita tuomioita kreikkalaisessa tarustossa oli?
+
+### 462
+Krasnale on puolankielinen sana, joka tarkoittaa kääpiöitä tai tonttuja. Wrocławissa sillä tarkoitetaan pieniä pronssisia hahmoja, jotka on sijoitettu kadunkulmiin, ikkunalaudoille, portaiden kaiteille ja muihin paikkoihin, usein vain kaksikymmentä tai kolmekymmentä senttiä korkeina. Perinne juontuu [[Pomarańczowa Alternatywa]] -liikkeestä, jonka tunnus oli kääpiö, ja ensimmäinen kääpiöpatsas pystytettiin Świdnickan kadulle vuonna 2001. Nykyään hahmoja on lähteiden mukaan yli tuhat, ja uusia tulee lisää. Kaupunkia kierretään usein hahmoja etsien, ja matkailijoille on tehty kartoja ja sovelluksia. Jokaisella hahmolla on oma aiheensa, esimerkiksi ammatti tai paikkaan liittyvä tarina. Hahmot ovat osa [[Wrocławin]] kaupunkikulttuuria.
+JATKOT:
+Miten kääpiöitä voi etsiä kaupungista?
+Kuka päättää, minne uusi kääpiö asetetaan?
+
+### 463
+Wrocław sijaitsee Odra-joen varrella ja sen alueella on useita saaria ja siltoja. Kaupungin keskusaukio [[Rynek]] on keskiaikaisen kaupungin sydän, ja sen laidalla seisoo goottilainen vanha raatihuone. Kaupungissa on myös [[Racławicen panoraama]], suuri pyöreä maalaus vuoden 1794 taistelusta. Toisen maailmansodan jälkeen Wrocław siirtyi Puolalle, ja monet uudet asukkaat tulivat Puolan entisiltä itäalueilta, muun muassa [[Lvivistä]], joka kuului ennen sotaa Puolaan. Siksi kaupungin historia on sekä saksalainen että puolalainen. Kääpiöpatsaat ovat tämän monikerroksisen kaupungin uusimpia kerroksia, ja ne kertovat siitä, miten kaupunki on halunnut katsoa omaa menneisyyttään leikillisemmin.
+JATKOT:
+Mikä on Racławicen panoraama?
+Miksi Lviv kuului ennen Puolaan?
+
+### 464
+Pyhän Elisabetin kirkko on Wrocławin vanhankaupungin keskiaikainen kirkko lähellä Rynekiä, ja se on rakennettu pääosin tiilestä goottilaiseen tyyliin. Kirkko on omistettu [[Elisabet Unkarilaiselle]], keskiajan tunnetulle pyhimykselle, jonka nimeä kantaa myös Košicen tuomiokirkko Slovakiassa. Kirkon torni on korkea, ja sen näköalatasanne tarjoaa kävijöille näkymän yli vanhankaupungin. Kirkko on kokenut sekä tulipaloja että sodan vaurioita, ja sitä on korjattu useaan otteeseen. Kirkko oli pitkään protestanttinen, kuten monet kaupungin kirkot saksalaisen hallinnon aikana. Tarkoista vuosiluvuista ja mitoista en ole varma. Kirkon ympäristössä sijaitsevat kaupungin vanha tori [[Rynek]] ja sen kadut.
+JATKOT:
+Kuka oli Elisabet Unkarilainen?
+Miksi monet Wrocławin kirkot olivat protestanttisia?
+
+### 465
+Sleesia on historiallinen alue Keski-Euroopassa, ja se ulottuu nykyisin pääosin Lounais-Puolaan sekä osittain Tšekkiin ja Saksaan. Alue jaetaan perinteisesti [[Ylä-Sleesiaan]] ja [[Ala-Sleesiaan]]. Ylä-Sleesia tunnetaan kivihiilestä ja teollisuudesta, ja sen keskus on [[Katowice]]. Ala-Sleesian keskus on Wrocław. Alue kuului keskiajalla Böömin kruunun alaisuuteen, siirtyi Habsburgeille ja valtaosaltaan Preussille 1740-luvun sotien jälkeen, kun kuningas [[Fredrik Suuri]] valloitti sen. Toisen maailmansodan jälkeen suuri osa Sleesiasta siirtyi Puolalle. Seudulla on puhuttu sekä saksaa, puolaa että tšekkiä.
+JATKOT:
+Mikä on Ylä-Sleesian historia?
+Miksi Preussi valloitti Sleesian?
+
+### 466
+Preussi oli saksalainen valtio, jonka ydin oli Brandenburgin vaaliruhtinaskunta ja Preussin herttuakunta. Se nousi kuningaskunnaksi vuonna 1701, ja sen pääkaupunki oli Berliini. Hallitsijasuku oli [[Hohenzollernit]]. Kuningas [[Fredrik Suuri]] laajensi valtaa 1700-luvulla, muun muassa valloittamalla suuren osan Sleesiasta. Preussista tuli yksi Euroopan johtavista sotilasvalloista. Valtion pääministerinä toiminut [[Otto von Bismarck]] ajoi 1860-luvulta alkaen Saksan yhdistämistä, ja vuonna 1871 perustetun Saksan keisarikunnan hallitsija oli Preussin kuningas. Preussi lakkautettiin valtiona vuonna 1947 liittoutuneiden päätöksellä.
+JATKOT:
+Millainen oli Fredrik Suuren Preussi?
+Miksi Preussi lakkautettiin?
+
+### 467
+Saksan keisarikunta perustettiin 18. tammikuuta 1871 Versailles'n linnassa Ranskassa, kun Preussin kuningas [[Vilhelm I]] julistettiin Saksan keisariksi Ranskan ja Preussin sodan lopulla. Liittokansleri [[Otto von Bismarck]] oli yhdistämisen keskeinen valmistelija. Keisarikunta oli liittovaltio, jonka jäseninä oli kuningaskuntia, suuriruhtinaskuntia ja vapaita kaupunkeja, ja Preussi oli niistä suurin. Isoisän matkavuonna 1873 keisarikunta oli siis vasta kaksivuotias. Se päättyi marraskuussa 1918 ensimmäisen maailmansodan loppuvaiheessa, kun keisari Vilhelm II luopui vallasta, ja seuraajaksi tuli [[Weimarin tasavalta]].
+JATKOT:
+Mitä Weimarin tasavalta oli?
+Miten Bismarck yhdisti Saksan?
+
+### 468
+Gdańskin telakka oli Solidaarisuus-liikkeen syntypaikka. Elokuussa 1980 telakalla alkanut lakko laajeni nopeasti, ja työläiset esittivät vaatimuksia, joihin kuuluivat vapaiden ammattiyhdistysten perustaminen ja lakko-oikeus. Lakon johtoon nousi sähkömies [[Lech Wałęsa]]. Lakko päättyi 31. elokuuta 1980 allekirjoitettuun sopimukseen, jonka seurauksena Solidaarisuus saattoi perustaa itsenäisen ammattiliiton, mikä oli kommunistisessa itäblokissa poikkeuksellista. Liike kasvoi nopeasti miljoonien jäsenten järjestöksi. Gdańskissa toimii nykyään [[Euroopan solidaarisuuden keskus]], joka esittelee liikkeen historiaa. Telakka sijaitsee lähellä kaupungin keskustaa Veikselin suiston tuntumassa.
+JATKOT:
+Mitä Gdańskin sopimus sisälsi?
+Mitä Euroopan solidaarisuuden keskuksessa on esillä?
+
+### 469
+Lech Wałęsa syntyi vuonna 1943, ja hän työskenteli sähkömiehenä Gdańskin telakalla. Elokuussa 1980 hän nousi lakkoilevien työläisten johtajaksi ja sai neuvoteltua sopimuksen, joka salli ensimmäisen itsenäisen ammattiliiton kommunistisessa Puolassa. Hänestä tuli [[Solidaarisuus]]-liikkeen puheenjohtaja. Sotatilan aikana hänet pidettiin internoituna vuosina 1981–1982, ja vuonna 1983 hän sai [[Nobelin rauhanpalkinnon]]. Vuonna 1989 hän oli mukana [[Pyöreän pöydän neuvotteluissa]], jotka johtivat osittain vapaisiin vaaleihin. Hänet valittiin Puolan presidentiksi joulukuussa 1990, ja hän toimi virassa vuoteen 1995.
+JATKOT:
+Mitä Pyöreän pöydän neuvotteluissa sovittiin?
+Mitä tapahtui Wałęsan presidenttikaudella?
+
+### 470
+Sotatila julistettiin Puolassa 13. joulukuuta 1981 kenraali [[Wojciech Jaruzelskin]] johdolla. Toimenpiteen taustalla oli Solidaarisuus-liikkeen nopea kasvu ja talouskriisi, ja viranomaiset perustelivat sitä maan vakauden turvaamisella. Solidaarisuus kiellettiin tai pakotettiin toiminnan ulkopuolelle, monet sen johtajat pidätettiin ja ulkonaliikkumista rajoitettiin. Sotatila kesti virallisesti heinäkuuhun 1983, mutta liike jatkoi toimintaansa maan alla. Tapahtumista on kulunut yli neljäkymmentä vuotta. Puolan kommunistisen järjestelmän muutos käynnistyi vuoden 1989 [[Pyöreän pöydän neuvotteluissa]], ja lopulta Puola siirtyi demokratiaan.
+JATKOT:
+Miten Puola siirtyi demokratiaan vuonna 1989?
+Mikä oli Jaruzelskin rooli myöhemmin?
