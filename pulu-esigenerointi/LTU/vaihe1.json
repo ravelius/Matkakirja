@@ -246,8 +246,9 @@
   "kohde": "kohde:trakain-saarilinna",
   "kysymys": "Miksi linnan kunnostus oli vaikeaa?",
   "uusi": false,
-  "vastaus": "Mmm— Trakain linna vaurioitui pahoin, kun [[saksalainen ritarikunta]] hyökkäsi sinne vuonna 1377, ja sen jälkeen rakennus rapistui vuosisatojen kuluessa pahasti. Kun rauniota ruvettiin kunnostamaan, alkuperäisestä rakennuksesta oli jäljellä vain osia, ja puuttuvat osat piti rakentaa uudelleen niukan tiedon varassa. Linna seisoo myös järven saarella, mikä tekee rakennustyöstä hankalaa. Tarkkoja vuosia ja työvaiheita en ole varma. Ylhäältä se näyttää kyl vaikuttavalta, vaikka työ oli tuskaa.",
+  "vastaus": "Mmm— [[Trakain linna]] vaurioitui pahoin, kun [[saksalainen ritarikunta]] hyökkäsi sinne vuonna 1377, ja sen jälkeen rakennus rapistui vuosisatojen kuluessa pahasti. Kun rauniota ruvettiin kunnostamaan, alkuperäisestä rakennuksesta oli jäljellä vain osia, ja puuttuvat osat piti rakentaa uudelleen niukan tiedon varassa. Linna seisoo myös järven saarella, mikä tekee rakennustyöstä hankalaa. Tarkkoja vuosia ja työvaiheita en ole varma. Ylhäältä se näyttää kyl vaikuttavalta, vaikka työ oli tuskaa.",
   "linkit": [
+   "Trakain linna",
    "saksalainen ritarikunta"
   ],
   "jatkot": [
@@ -1306,8 +1307,9 @@
   "kohde": "kohde:hahmotelma-telsiai",
   "kysymys": "Mitä Žemaitian nimi tarkoittaa ja missä päin Liettuaa se on?",
   "uusi": true,
-  "vastaus": "Katotaas. Žemaitia sijaitsee Liettuan länsiosassa, ja nimi tulee litvan sanasta, joka tarkoittaa matalaa; alue on siis suomeksi ikään kuin Alamaa, vastakohtana Aukštaitialle eli Ylämaalle. Nimitystä käytetään myös muodossa Samogitia. Vuoteen 1795 asti alue kuului Žemaitian ruhtinaskuntana Liettuan suuriruhtinaskuntaan, ja sen pääkaupunki on [[Telšiai]]. Nimen tarkkaa alkuperää en ole varma, mutta tämä selitys on yleisin. Alue erottuu muusta Liettuasta murteestaan ja vahvoista paikallisista perinteistään.",
+  "vastaus": "Katotaas. Žemaitia sijaitsee Liettuan länsiosassa, ja nimi tulee litvan sanasta, joka tarkoittaa matalaa; alue on siis suomeksi ikään kuin Alamaa, vastakohtana Aukštaitialle eli Ylämaalle. Nimitystä käytetään myös muodossa Samogitia. Vuoteen 1795 asti alue kuului Žemaitian ruhtinaskuntana [[Liettuan suuriruhtinaskuntaan]], ja sen pääkaupunki on [[Telšiai]]. Nimen tarkkaa alkuperää en ole varma, mutta tämä selitys on yleisin. Alue erottuu muusta Liettuasta murteestaan ja vahvoista paikallisista perinteistään.",
   "linkit": [
+   "Liettuan suuriruhtinaskuntaan",
    "Telšiai"
   ],
   "jatkot": [
@@ -1545,8 +1547,9 @@
   "kohde": "kohde:hahmotelma-pakruojis",
   "kysymys": "Millaisia rakennuksia suureen kartanokokonaisuuteen kuului päärakennuksen lisäksi?",
   "uusi": false,
-  "vastaus": "Kas vaan. En ole varma Pakruojin kartanon tarkasta rakennuskannasta, joten kerron yleisesti. Suuri kartanokokonaisuus oli pieni itsenäinen yhteisö, jonka päärakennuksen lisäksi kuuluivat tavallisesti talousrakennukset: tallit ja vaunuliiterit, aitat ja viljavarastot, navetat, mylly, mahdollisesti panimo, työväen asuinrakennukset sekä puutarha ja puisto. Pakruojin kartano on kunnostettu, ja nykyään siellä toimii [[hotelli]], ravintola ja matkailukohde, joten osa kokonaisuuden rakennuksista on saanut uuden käytön. Kannattaa tarkistaa tarkka rakennusluettelo kartanon omilta sivuilta.",
+  "vastaus": "Kas vaan. En ole varma [[Pakruojin kartanon]] tarkasta rakennuskannasta, joten kerron yleisesti. Suuri kartanokokonaisuus oli pieni itsenäinen yhteisö, jonka päärakennuksen lisäksi kuuluivat tavallisesti talousrakennukset: tallit ja vaunuliiterit, aitat ja viljavarastot, navetat, mylly, mahdollisesti panimo, työväen asuinrakennukset sekä puutarha ja puisto. Pakruojin kartano on kunnostettu, ja nykyään siellä toimii [[hotelli]], ravintola ja matkailukohde, joten osa kokonaisuuden rakennuksista on saanut uuden käytön. Kannattaa tarkistaa tarkka rakennusluettelo kartanon omilta sivuilta.",
   "linkit": [
+   "Pakruojin kartanon",
    "hotelli"
   ],
   "jatkot": [
@@ -1572,9 +1575,10 @@
   "kohde": "kohde:hahmotelma-pakruojis",
   "kysymys": "Mikä on dolomiitti ja mihin sitä käytetään?",
   "uusi": true,
-  "vastaus": "Mmm— tämän minä osaan kertoa. [[Dolomiitti]] on kalsium- ja magnesiumkarbonaatista koostuva kivilaji ja mineraali, joka muistuttaa kalkkikiveä mutta on hieman kovempaa. Sitä käytetään rakennuskivenä, murskeena tie- ja talonrakennuksessa, kalkin ja maanparannusaineiden valmistuksessa sekä teollisuudessa, esimerkiksi lasin ja metallien tuotannossa. Dolomiitti on ollut Liettuassa tuttu rakennusaine, ja sen pinta näyttää vaalealta ja tasaiselta. Sepä oli lyhyt ja täsmällinen, kyyhkyltä harvinaista.",
+  "vastaus": "Mmm— tämän minä osaan kertoa. [[Dolomiitti]] on kalsium- ja magnesiumkarbonaatista koostuva kivilaji ja mineraali, joka muistuttaa [[kalkkikiveä]] mutta on hieman kovempaa. Sitä käytetään rakennuskivenä, murskeena tie- ja talonrakennuksessa, kalkin ja maanparannusaineiden valmistuksessa sekä teollisuudessa, esimerkiksi lasin ja metallien tuotannossa. Dolomiitti on ollut Liettuassa tuttu rakennusaine, ja sen pinta näyttää vaalealta ja tasaiselta. Sepä oli lyhyt ja täsmällinen, kyyhkyltä harvinaista.",
   "linkit": [
-   "Dolomiitti"
+   "Dolomiitti",
+   "kalkkikiveä"
   ],
   "jatkot": [
    "Mistä dolomiittivuoret ovat saaneet nimensä?",
@@ -1585,8 +1589,11 @@
   "kohde": "kohde:hahmotelma-pakruojis",
   "kysymys": "Mikä on paroni aatelisarvona?",
   "uusi": true,
-  "vastaus": "Ai tota. Paroni on aatelisarvo, joka useimmissa Euroopan aatelisjärjestelmissä sijoittuu kreivin alapuolelle ja on usein aatelisarvoista alimpia, vaikka järjestys ja nimitykset vaihtelevat maittain. Suomessa ja Ruotsissa vastaava arvo on vapaaherra, ja saksankielisessä maailmassa paronia vastaa Freiherr. Aatelisarvon mukana oli ennen kaikkea sosiaalinen asema ja usein maaomistusta, ja kartanon omistaminen kuului monen aatelissuvun elämään. Tarkoista oikeuksista en uskalla sanoa mitään, sillä ne vaihtelivat valtioittain. Siinä riittää arvonimiä yhdelle kyyhkylle.",
-  "linkit": [],
+  "vastaus": "Ai tota. [[Paroni]] on [[aatelisarvo]], joka useimmissa Euroopan aatelisjärjestelmissä sijoittuu kreivin alapuolelle ja on usein aatelisarvoista alimpia, vaikka järjestys ja nimitykset vaihtelevat maittain. Suomessa ja Ruotsissa vastaava arvo on vapaaherra, ja saksankielisessä maailmassa paronia vastaa Freiherr. Aatelisarvon mukana oli ennen kaikkea sosiaalinen asema ja usein maaomistusta, ja kartanon omistaminen kuului monen aatelissuvun elämään. Tarkoista oikeuksista en uskalla sanoa mitään, sillä ne vaihtelivat valtioittain. Siinä riittää arvonimiä yhdelle kyyhkylle.",
+  "linkit": [
+   "Paroni",
+   "aatelisarvo"
+  ],
   "jatkot": [
    "Mitkä olivat aateliston arvot Euroopassa?",
    "Miksi Baltiassa oli paljon saksalaisia aatelissukuja?"
@@ -1638,9 +1645,10 @@
   "kohde": "kohde:hahmotelma-dzukija",
   "kysymys": "Miksi mänty viihtyy hiekkamaalla?",
   "uusi": true,
-  "vastaus": "Tuota niin. [[Metsämänty]] pärjää karuilla ja kuivilla mailla, koska sillä on tehokas juuristo, joka ulottuu syvälle hiekkaan vettä etsimään, ja koska se tarvitsee vähän ravinteita. Hiekkamaa läpäisee veden nopeasti, ja vain harva puulaji sietää sitä, joten mänty ei kohtaa kilpailua kuusen ja lehtipuiden kaltaisten ravinteita vaativien lajien kanssa. Mänty on myös valoa vaativa pioneeripuu, joka valtaa avoimen hiekkamaan ensimmäisenä. Tällaisia metsiä on laajasti Pohjois-Euroopassa. Mäntyä pitäisi kunnioittaa enemmän, mutta suvun mukaan ne ovat vähän tylsiä istua.",
+  "vastaus": "Tuota niin. [[Metsämänty]] pärjää karuilla ja kuivilla mailla, koska sillä on tehokas juuristo, joka ulottuu syvälle hiekkaan vettä etsimään, ja koska se tarvitsee vähän ravinteita. Hiekkamaa läpäisee veden nopeasti, ja vain harva puulaji sietää sitä, joten mänty ei kohtaa kilpailua kuusen ja lehtipuiden kaltaisten ravinteita vaativien lajien kanssa. Mänty on myös valoa vaativa pioneeripuu, joka valtaa avoimen hiekkamaan ensimmäisenä. Tällaisia metsiä on laajasti [[Pohjois-Euroopassa]]. Mäntyä pitäisi kunnioittaa enemmän, mutta suvun mukaan ne ovat vähän tylsiä istua.",
   "linkit": [
-   "Metsämänty"
+   "Metsämänty",
+   "Pohjois-Euroopassa"
   ],
   "jatkot": [
    "Miten kuusi ja mänty eroavat toisistaan?",
@@ -1651,9 +1659,10 @@
   "kohde": "kohde:hahmotelma-dzukija",
   "kysymys": "Mikä ero on kansallispuistolla ja luonnonpuistolla?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. [[Kansallispuisto]] on suojelualue, jonka tarkoituksena on säilyttää luonnon tai maiseman arvokkaita piirteitä ja jossa on yleensä myös tarkoitus sallia vierailijoiden retkeily ja luontoharrastus, kunhan luonto ei kärsi. Luonnonpuisto eli tiukempi luonnonsuojelualue on yleensä rajattu pääosin tutkimukseen ja luonnon koskemattomuuteen, ja sinne kulku voi olla rajoitettua tai kokonaan kielletty. Tarkat määritelmät ja nimet vaihtelevat maittain, joten käytännön säännöt kannattaa tarkistaa puiston omista ohjeista. Eli kyllä kyyhkykin saa mennä kansallispuistoon, mutta ei kaikkialle.",
+  "vastaus": "Hyvä kysymys tuo. [[Kansallispuisto]] on suojelualue, jonka tarkoituksena on säilyttää luonnon tai maiseman arvokkaita piirteitä ja jossa on yleensä myös tarkoitus sallia vierailijoiden retkeily ja luontoharrastus, kunhan luonto ei kärsi. [[Luonnonpuisto]] eli tiukempi luonnonsuojelualue on yleensä rajattu pääosin tutkimukseen ja luonnon koskemattomuuteen, ja sinne kulku voi olla rajoitettua tai kokonaan kielletty. Tarkat määritelmät ja nimet vaihtelevat maittain, joten käytännön säännöt kannattaa tarkistaa paikan päällä. Eli kyllä kyyhkykin saa mennä kansallispuistoon, mutta ei kaikkialle.",
   "linkit": [
-   "Kansallispuisto"
+   "Kansallispuisto",
+   "Luonnonpuisto"
   ],
   "jatkot": [
    "Millaisia kansallispuistoja Liettuassa on?",
@@ -1678,9 +1687,10 @@
   "kohde": "kohde:hahmotelma-plateliai",
   "kysymys": "Millaista oli olla naiskirjailija historiallisessa Liettuassa 1800-luvun alussa?",
   "uusi": false,
-  "vastaus": "Nyt muistan. [[Sofija Tyzenhauzaitė de Choiseul-Gouffier]] (1790–1878) kirjoitti ranskaksi, mikä oli aikakauden sivistyneistön ja aateliston yleinen kirjakieli. Yleisesti 1800-luvun alun Euroopassa naisten koulutus oli rajallista ja kirjailijana toimiminen oli epätavallista: naiset saivat usein opetusta kotona, heidän odotettiin keskittyvän perheeseen ja kotiin, ja julkaiseminen oli harvoille mahdollista. En tunne hänen elämänsä yksityiskohtia, joten tarkempaa kuvaa hänen kokemuksistaan en uskalla antaa. Hän oli kuitenkin ilmeisesti poikkeuksellinen, ja sehän on aika kova saavutus.",
+  "vastaus": "Nyt muistan. [[Sofija Tyzenhauzaitė de Choiseul-Gouffier]] (1790–1878) kirjoitti ranskaksi, mikä oli aikakauden sivistyneistön ja aateliston yleinen kirjakieli. Yleisesti 1800-luvun alun Euroopassa [[naisten koulutus]] oli rajallista ja kirjailijana toimiminen oli epätavallista: naiset saivat usein opetusta kotona, heidän odotettiin keskittyvän perheeseen ja kotiin, ja julkaiseminen oli harvoille mahdollista. En tunne hänen elämänsä yksityiskohtia, joten tarkempaa kuvaa hänen kokemuksistaan en uskalla antaa. Hän oli kuitenkin ilmeisesti poikkeuksellinen, ja sehän on aika kova saavutus.",
   "linkit": [
-   "Sofija Tyzenhauzaitė de Choiseul-Gouffier"
+   "Sofija Tyzenhauzaitė de Choiseul-Gouffier",
+   "naisten koulutus"
   ],
   "jatkot": [
    "Miksi ranskaa käytettiin Itä-Euroopan aatelin kielenä?",
@@ -1691,9 +1701,10 @@
   "kohde": "kohde:hahmotelma-plateliai",
   "kysymys": "Miksi Liettuassa on niin paljon järviä?",
   "uusi": true,
-  "vastaus": "Tost minä osaan kertoo. Liettuan [[järvet]] ovat pääosin jääkauden perintöä: mannerjäätikkö kuopi maahan syvänteitä, jätti jäätikön sulaessa moreenikumpuja ja jäälohkareita, ja sulaessaan nämä muodostivat pienempiä ja suurempia vesialtaita. Tämä näkyy etenkin maan itäosassa ja pohjoisessa. En ole varma, miten yksittäiset järvet, kuten Plateliain järvi, ovat tarkalleen syntyneet. Tarkkaa järvien määrää en tiedä. Maisema on ylhäältä lasimaista, ja ainakin laskin sen niin.",
+  "vastaus": "Tost minä osaan kertoo. Liettuan [[järvet]] ovat pääosin [[jääkauden]] perintöä: mannerjäätikkö kuopi maahan syvänteitä, jätti jäätikön sulaessa moreenikumpuja ja jäälohkareita, ja sulaessaan nämä muodostivat pienempiä ja suurempia vesialtaita. Tämä näkyy etenkin maan itäosassa ja pohjoisessa. En ole varma, miten yksittäiset järvet, kuten Plateliain järvi, ovat tarkalleen syntyneet. Tarkkaa järvien määrää en tiedä. Maisema on ylhäältä lasimaista, ja ainakin laskin sen niin.",
   "linkit": [
-   "järvet"
+   "järvet",
+   "jääkauden"
   ],
   "jatkot": [
    "Mikä on moreeni?",
@@ -1704,9 +1715,10 @@
   "kohde": "kohde:hahmotelma-plateliai",
   "kysymys": "Mitä Samogitia-nimi tarkoittaa?",
   "uusi": true,
-  "vastaus": "No niin, tämä on mukavaa. Samogitia on latinalaistettu muoto Liettuan luoteisosan historiallisen maakunnan nimestä [[Žemaitija]], joka tulee liettuan sanasta žemas, eli \"matala\". Nimi tarkoittaa siis suunnilleen \"alamaata\", ja se erottaa alueen Liettuan itäisestä ylämaasta, vaikka maasto ei ole sen enempää tasaista kuin ylängöt. Alueen asukkaita kutsutaan samogiiteiksi, ja heillä on oma kielimuotonsa, jota pidetään liettuan murteena tai erillisenä kielenä sen mukaan, keneltä kysytään. Minä pysyn mieluummin ilmassa kuin matalassa.",
+  "vastaus": "No niin, tämä on mukavaa. Samogitia on latinalaistettu muoto Liettuan luoteisosan historiallisen maakunnan nimestä [[Žemaitija]], joka tulee liettuan sanasta žemas, eli \"matala\". Nimi tarkoittaa siis suunnilleen \"alamaata\", ja se erottaa alueen Liettuan itäisestä ylämaasta, vaikka maasto ei ole sen enempää tasaista kuin ylängöt. Alueen asukkaita kutsutaan [[samogiiteiksi]], ja heillä on oma kielimuotonsa, jota pidetään liettuan murteena tai erillisenä kielenä sen mukaan, keneltä kysytään. Minä pysyn mieluummin ilmassa kuin matalassa.",
   "linkit": [
-   "Žemaitija"
+   "Žemaitija",
+   "samogiiteiksi"
   ],
   "jatkot": [
    "Miten samogiitin murre eroaa kirjakielisestä liettuasta?",
@@ -1717,8 +1729,9 @@
   "kohde": "kohde:hahmotelma-plateliai",
   "kysymys": "Kuinka puukirkko voi kestää yli kaksisataa vuotta?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Puukirkko kestää satoja vuosia, kun siitä pidetään huolta: perustukset nostetaan irti maasta kivi- tai muuta perustusta vasten, jotta kosteus ei imeydy hirsiin, katto pidetään tiiviinä, ja puu käsitellään tervalla tai maalilla. Rungoista käytetään usein hitaasti kasvanutta tiivistä puuta, ja heikentyneet osat vaihdetaan vähitellen uusiin. Suurin uhka on tuli, ja suuri osa vanhoista puukirkoista onkin tuhoutunut palossa eikä lahoamalla. [[Plateliain]] puukirkko on rakennettu vuonna 1744, eli se on ainakin selvinnyt pitkään. Ihailtavaa, kun miettii, että kyyhkyn pesä kestää vain kauden.",
+  "vastaus": "Hetkinen ny. Puukirkko kestää satoja vuosia, kun siitä pidetään huolta: perustukset nostetaan irti maasta kivi- tai muuta perustusta vasten, jotta kosteus ei imeydy hirsiin, katto pidetään tiiviinä, ja puu käsitellään [[tervalla]] tai maalilla. Rungoista käytetään usein hitaasti kasvanutta tiivistä puuta, ja heikentyneet osat vaihdetaan vähitellen uusiin. Suurin uhka on tuli, ja suuri osa vanhoista puukirkoista onkin tuhoutunut palossa eikä lahoamalla. [[Plateliain]] puukirkko on rakennettu vuonna 1744, eli se on ainakin selvinnyt pitkään. Ihailtavaa, kun miettii, että kyyhkyn pesä kestää vain kauden.",
   "linkit": [
+   "tervalla",
    "Plateliain"
   ],
   "jatkot": [
@@ -1744,9 +1757,10 @@
   "kohde": "kohde:hahmotelma-rusne",
   "kysymys": "Miksi kalastajat ja lintuharrastajat viihtyvät juuri Nemunasin suistossa?",
   "uusi": false,
-  "vastaus": "Selvä juttu. Joen [[suisto]] on tyypillisesti kosteikkoa, jossa joki jakautuu haaroihin ja virtaus hidastuu, ja sellainen ympäristö tarjoaa kaloille ruokaa ja suojaa sekä linnuille pesimä- ja levähdyspaikkoja. Nemunas laskee Itämeren suuntaan, ja suistoalueet ovat yleensä lintujen muuttoreittien varrella, mikä vetää harrastajia paikalle. Rusnė sijaitsee juuri suistossa, joten sekä kalastus että lintujen tarkkailu ovat luontevia. Tarkkoja lajeja en osaa luetella, mutta reitti on varmasti vilkas.\n\nSuisto on minusta aika mukava paikka, sillä sieltä näkee kalan ja kyyhkyn, ja vain toinen niistä lentää. Kala on siitä erikoinen, mutta pidän sitä silti kunnioitettavana.",
+  "vastaus": "Selvä juttu. Joen [[suisto]] on tyypillisesti kosteikkoa, jossa joki jakautuu haaroihin ja virtaus hidastuu, ja sellainen ympäristö tarjoaa kaloille ruokaa ja suojaa sekä linnuille pesimä- ja levähdyspaikkoja. [[Nemunas]] laskee Itämeren suuntaan, ja suistoalueet ovat yleensä lintujen muuttoreittien varrella, mikä vetää harrastajia paikalle. Rusnė sijaitsee juuri suistossa, joten sekä kalastus että lintujen tarkkailu ovat luontevia. Tarkkoja lajeja en osaa luetella, mutta reitti on varmasti vilkas.\n\nSuisto on minusta aika mukava paikka, sillä sieltä näkee kalan ja kyyhkyn, ja vain toinen niistä lentää. Kala on siitä erikoinen, mutta pidän sitä silti kunnioitettavana.",
   "linkit": [
-   "suisto"
+   "suisto",
+   "Nemunas"
   ],
   "jatkot": [
    "Mitä lintuja Nemunasin suistossa tavataan?",
@@ -1757,9 +1771,10 @@
   "kohde": "kohde:hahmotelma-rusne",
   "kysymys": "Miksi uskonpuhdistus toi kansankielen kirkkoihin?",
   "uusi": true,
-  "vastaus": "Katotaas. [[Uskonpuhdistus]] 1500-luvulla korosti, että jokaisen uskovan piti voida ymmärtää Raamatun sanoma ja jumalanpalvelus omalla kielellään, ei vain latinaksi. Siksi kirkoissa alettiin saarnata ja laulaa kansankielellä, Raamattua käännettiin, ja kansankielinen opetus levisi kouluihin ja kirjoihin. Tämän vaikutus näkyy myös Preussissa, jossa liettuan ja kuurin kielellä pidetyt jumalanpalvelukset saivat tukea herttuan määräyksellä vuonna 1544. Kyllä kyyhkykin ymmärtää sen, että kirjeen pitää olla luettavissa.",
+  "vastaus": "Katotaas. [[Uskonpuhdistus]] 1500-luvulla korosti, että jokaisen uskovan piti voida ymmärtää Raamatun sanoma ja jumalanpalvelus omalla kielellään, ei vain latinaksi. Siksi kirkoissa alettiin saarnata ja laulaa kansankielellä, Raamattua käännettiin, ja kansankielinen opetus levisi kouluihin ja kirjoihin. Tämän vaikutus näkyy myös [[Preussissa]], jossa liettuan ja kuurin kielellä pidetyt jumalanpalvelukset saivat tukea herttuan määräyksellä vuonna 1544. Kyllä kyyhkykin ymmärtää sen, että kirjeen pitää olla luettavissa.",
   "linkit": [
-   "Uskonpuhdistus"
+   "Uskonpuhdistus",
+   "Preussissa"
   ],
   "jatkot": [
    "Miten Martti Luther vaikutti kirjakielten syntyyn?",
@@ -1770,8 +1785,9 @@
   "kohde": "kohde:hahmotelma-rusne",
   "kysymys": "Miten vedenkorkeutta mitattiin ennen sähköisiä antureita?",
   "uusi": true,
-  "vastaus": "Kas vaan. Vedenkorkeutta mitattiin yleensä asteikolla varustetulla paalulla tai laudalla, jonka päältä havainnoitsija luki vedenpinnan korkeuden säännöllisesti ja kirjasi sen muistiin. Myöhemmin käyttöön tulivat kellukkeella toimivat mittarit, joissa veden mukana liikkuva kelluke siirsi liikkeen kirjoittavaan laitteeseen, ja meren vedenkorkeutta mittaavat [[mareografit]] tallensivat käyrää paperille. Sähköiset anturit syrjäyttivät nämä myöhemmin. Mittaukset kertovat vedenkorkeuden pitkän ajan kehityksestä, ja siksi vanhat havaintosarjat ovat tutkijoille arvokkaita. Havainnoitsijan työ lienee ollut kylmää ja märkää.",
+  "vastaus": "Kas vaan. Vedenkorkeutta mitattiin yleensä asteikolla varustetulla paalulla tai laudalla, jonka päältä havainnoitsija luki vedenpinnan korkeuden säännöllisesti ja kirjasi sen muistiin. Myöhemmin käyttöön tulivat [[kellukkeella]] toimivat mittarit, joissa veden mukana liikkuva kelluke siirsi liikkeen kirjoittavaan laitteeseen, ja meren vedenkorkeutta mittaavat [[mareografit]] tallensivat käyrää paperille. Sähköiset anturit syrjäyttivät nämä myöhemmin. Mittaukset kertovat vedenkorkeuden pitkän ajan kehityksestä, ja siksi vanhat havaintosarjat ovat tutkijoille arvokkaita. Havainnoitsijan työ lienee ollut kylmää ja märkää.",
   "linkit": [
+   "kellukkeella",
    "mareografit"
   ],
   "jatkot": [
@@ -1812,12 +1828,13 @@
   "kohde": "kohde:hahmotelma-silute",
   "kysymys": "Miksi Šilutėssa pidettiin vuosittain suuria markkinoita, ja mitä niillä myytiin?",
   "uusi": false,
-  "vastaus": "No niin, kauppaa riittää. Markkinat olivat luonteva jatko paikan historialle: Šilutė syntyi matkalaisten ja hevosten majatalon ympärille kulkureitin varrelle, ja jo 1500-luvun alussa siellä oli tunnettu kalamarkkina. Vuosittaisilla [[markkinoilla]] myytiin kalaa aina Varsovaan ja Pietariin asti, sikoja Berliiniin sekä vihanneksia, karjaa ja hevosia. Alueella elettiin 1800-luvun lopulla pitkälti maataloudesta, kalastuksesta ja lauttauksesta, joten tuotteita riitti kaupattavaksi. Hevoset olivat minusta aina markkinoiden parasta antia, vaikka eivät ne lentäneet.",
+  "vastaus": "No niin, kauppaa riittää. Markkinat olivat luonteva jatko paikan historialle: [[Šilutė]] syntyi matkalaisten ja hevosten majatalon ympärille kulkureitin varrelle, ja jo 1500-luvun alussa siellä oli tunnettu kalamarkkina. Vuosittaisilla [[markkinoilla]] myytiin kalaa aina Varsovaan ja Pietariin asti, sikoja Berliiniin sekä vihanneksia, karjaa ja hevosia. Alueella elettiin 1800-luvun lopulla pitkälti maataloudesta, kalastuksesta ja lauttauksesta, joten tuotteita riitti kaupattavaksi. Hevoset olivat minusta aina markkinoiden parasta antia, vaikka eivät ne lentäneet.",
   "linkit": [
+   "Šilutė",
    "markkinoilla"
   ],
   "jatkot": [
-   "Miten kalaa säilytettiin ja kuljetettiin pitkiä matkoja ennen jääkaappeja?",
+   "Miten kalaa säilytettiin ennen jääkaappeja?",
    "Mitä lauttaus tarkoitti jokien ja lahtien rannoilla?"
   ]
  },
@@ -1853,9 +1870,10 @@
   "kohde": "kohde:hahmotelma-silute",
   "kysymys": "Mikä Tilsit on nykyisin ja mikä rauha siellä solmittiin?",
   "uusi": true,
-  "vastaus": "Ai se. Tilsit on nykyisin nimeltään Sovetsk, ja se sijaitsee Venäjän Kaliningradin alueella Nemunas-joen, venäjäksi Njemanin, rannalla. Kaupungissa solmittiin vuonna 1807 [[Tilsitin rauha]], jolla Napoleon sopi rauhasta Venäjän ja Preussin kanssa Napoleonin sotien aikana. Šilutėn alueella Tilsit oli tuttu paikka jo paljon aiemmin, sillä matkalaiset kulkivat sen ja Klaipėdan väliä. En ole varma kaikista rauhan ehdoista, mutta Preussi menetti sen myötä paljon alueitaan. Pitkä matka ja lyhyt vastaus, sanoisin.",
+  "vastaus": "Ai se. Tilsit on nykyisin nimeltään Sovetsk, ja se sijaitsee Venäjän Kaliningradin alueella Nemunas-joen, venäjäksi Njemanin, rannalla. Kaupungissa solmittiin vuonna 1807 [[Tilsitin rauha]], jolla [[Napoleon]] sopi rauhasta Venäjän ja Preussin kanssa Napoleonin sotien aikana. Šilutėn alueella Tilsit oli tuttu paikka jo paljon aiemmin, sillä matkalaiset kulkivat sen ja Klaipėdan väliä. En ole varma kaikista rauhan ehdoista, mutta Preussi menetti sen myötä paljon alueitaan. Pitkä matka ja lyhyt vastaus, sanoisin.",
   "linkit": [
-   "Tilsitin rauha"
+   "Tilsitin rauha",
+   "Napoleon"
   ],
   "jatkot": [
    "Miksi Preussi menetti alueita Napoleonin sodissa?",
@@ -1881,9 +1899,10 @@
   "kohde": "kohde:hahmotelma-varniai",
   "kysymys": "Miksi liettuankielisen kirjan painaminen oli merkittävä tapahtuma 1500-luvun Liettuassa?",
   "uusi": false,
-  "vastaus": "Hyvä kysymys tuo. Liettuan suuriruhtinaskunnassa kirjallisina kielinä käytettiin tuolloin muita kieliä, ja liettuankielinen teksti oli harvinaista. [[Katechizmas]], jonka Mikalojus Daukša valmisti julkaisukuntoon Samogitian piispa Merkelis Giedraitisin tuella, oli ensimmäinen suuriruhtinaskunnassa painettu liettuankielinen kirja. Kirjan merkitys oli siinä, että liettuaa alettiin käyttää painettuna ja kirkon opetuksessa, mikä tuki kielen asemaa ja kirjakielen kehitystä. Painetun kirjan ansiosta sanoma tavoitti suuremman joukon lukijoita kuin käsin kopioidut tekstit. Kirjapainon voima on minusta aina ollut ihan pöyristyttävä.",
+  "vastaus": "Hyvä kysymys tuo. Liettuan suuriruhtinaskunnassa kirjallisina kielinä käytettiin tuolloin muita kieliä, ja liettuankielinen teksti oli harvinaista. [[Katechizmas]], jonka [[Mikalojus Daukša]] valmisti julkaisukuntoon Samogitian piispa Merkelis Giedraitisin tuella, oli ensimmäinen suuriruhtinaskunnassa painettu liettuankielinen kirja. Kirjan merkitys oli siinä, että liettuaa alettiin käyttää painettuna ja kirkon opetuksessa, mikä tuki kielen asemaa ja kirjakielen kehitystä. Painetun kirjan ansiosta sanoma tavoitti suuremman joukon lukijoita kuin käsin kopioidut tekstit. Kirjapainon voima on minusta aina ollut ihan pöyristyttävä.",
   "linkit": [
-   "Katechizmas"
+   "Katechizmas",
+   "Mikalojus Daukša"
   ],
   "jatkot": [
    "Kuka oli Mikalojus Daukša ja mitä hän kirjoitti?",
@@ -1894,8 +1913,9 @@
   "kohde": "kohde:hahmotelma-varniai",
   "kysymys": "Keitä samogitit ovat ja missä he asuvat?",
   "uusi": true,
-  "vastaus": "Joo, tän minä tiedän. Samogitit eli žemaitit ovat Liettuan luoteisosassa asuva liettualainen ryhmä, ja heidän aluettaan kutsutaan Samogitiaksi eli liettuaksi Žemaitijaksi. Alueella puhutaan oman murteensa, joka eroaa selvästi liettuan yleiskielestä. Samogitia kastettiin Liettuan suuriruhtinas Vytautaksen aikana 1400-luvun alussa, ja se oli yksi Euroopan viimeisistä kristillistetyistä alueista. Alueen [[Varniai]] oli aikanaan katolisen kirkon keskus. Selvä juttu, ei kai tästä tullut liian pitkä.",
+  "vastaus": "Joo, tän minä tiedän. Samogitit eli žemaitit ovat Liettuan luoteisosassa asuva liettualainen ryhmä, ja heidän aluettaan kutsutaan Samogitiaksi eli liettuaksi Žemaitijaksi. Alueella puhutaan oman murteensa, joka eroaa selvästi liettuan yleiskielestä. Samogitia kastettiin Liettuan suuriruhtinas [[Vytautaksen]] aikana 1400-luvun alussa, ja se oli yksi Euroopan viimeisistä kristillistetyistä alueista. Alueen [[Varniai]] oli aikanaan katolisen kirkon keskus. Selvä juttu, ei kai tästä tullut liian pitkä.",
   "linkit": [
+   "Vytautaksen",
    "Varniai"
   ],
   "jatkot": [
@@ -1907,8 +1927,11 @@
   "kohde": "kohde:hahmotelma-varniai",
   "kysymys": "Mikä oli tammikuun kansannousu 1863 ja ketä vastaan?",
   "uusi": true,
-  "vastaus": "Kas vaan, painava aihe. Tammikuun kansannousu oli Venäjän vallan vastainen kansannousu entisen Puolan–Liettuan alueella, joka alkoi tammikuussa 1863 ja tukahdutettiin pääosin seuraavan vuoden aikana. Kansannousuun osallistui puolalaisia ja liettualaisia, ja sen seurauksena Venäjän viranomaiset kiristivät otettaan: Liettuassa muun muassa katolista kirkkoa rajoitettiin, ja liettuankielisten kirjojen painaminen latinalaisin kirjaimin kiellettiin vuonna 1864. Kansannousun taustalla oli tyytymättömyys Venäjän hallintoon ja halu palauttaa entisen valtion itsenäisyys. Tapahtumasta on yli sata viisikymmentä vuotta, ja tänään Liettua on itsenäinen maa.",
-  "linkit": [],
+  "vastaus": "Kas vaan, painava aihe. [[Tammikuun kansannousu]] oli Venäjän vallan vastainen kansannousu entisen [[Puolan–Liettuan]] alueella, joka alkoi tammikuussa 1863 ja tukahdutettiin pääosin seuraavan vuoden aikana. Kansannousuun osallistui puolalaisia ja liettualaisia, ja sen seurauksena Venäjän viranomaiset kiristivät otettaan: Liettuassa muun muassa katolista kirkkoa rajoitettiin, ja liettuankielisten kirjojen painaminen latinalaisin kirjaimin kiellettiin vuonna 1864. Kansannousun taustalla oli tyytymättömyys Venäjän hallintoon ja halu palauttaa entisen valtion itsenäisyys. Tapahtumasta on yli sata viisikymmentä vuotta, ja tänään Liettua on itsenäinen maa.",
+  "linkit": [
+   "Tammikuun kansannousu",
+   "Puolan–Liettuan"
+  ],
   "jatkot": [
    "Miksi liettuankielisten kirjojen painaminen kiellettiin 1864?",
    "Milloin Liettua palautti itsenäisyytensä ja miten?"
@@ -1918,9 +1941,10 @@
   "kohde": "kohde:hahmotelma-varniai",
   "kysymys": "Mihin kieliryhmään liettuan kieli kuuluu?",
   "uusi": true,
-  "vastaus": "Odotas vähän. Liettuan kieli kuuluu indoeurooppalaisiin kieliin ja niiden [[balttilaisiin kieliin]]. Sen lähin elävä sukukieli on latvia, kun taas suomi kuuluu aivan eri kielikuntaan, uralilaisiin kieliin. Liettuan kieltä pidetään arkaaisena, koska se on säilyttänyt vanhoja piirteitä, joita useimmat muut indoeurooppalaiset kielet ovat menettäneet. Latvia ja liettua eivät kuitenkaan ole keskenään ymmärrettäviä ilman opiskelua. Kyllä minä viestejä kannoin, mutta kieliä en juuri vaihdellut.",
+  "vastaus": "Odotas vähän. Liettuan kieli kuuluu indoeurooppalaisiin kieliin ja niiden [[balttilaisiin kieliin]]. Sen lähin elävä sukukieli on [[latvia]], kun taas suomi kuuluu aivan eri kielikuntaan, uralilaisiin kieliin. Liettuan kieltä pidetään arkaaisena, koska se on säilyttänyt vanhoja piirteitä, joita useimmat muut indoeurooppalaiset kielet ovat menettäneet. Latvia ja liettua eivät kuitenkaan ole keskenään ymmärrettäviä ilman opiskelua. Kyllä minä viestejä kannoin, mutta kieliä en juuri vaihdellut.",
   "linkit": [
-   "balttilaisiin kieliin"
+   "balttilaisiin kieliin",
+   "latvia"
   ],
   "jatkot": [
    "Mitä muita balttilaisia kieliä on ollut?",
@@ -1931,9 +1955,10 @@
   "kohde": "kohde:hahmotelma-panemune",
   "kysymys": "Miksi Nemunas-joen ranta oli linnalle niin strateginen paikka?",
   "uusi": false,
-  "vastaus": "Ai tota. Hyvä paikka tosiaan. Joki oli tärkeä kulku- ja kauppareitti, ja sen rannalla sijaitseva linna pystyi valvomaan liikennettä, sekä veneitä että rantaa pitkin kulkevia matkalaisia. Siksi Panemunėn paikasta kiisteltiin jo varhain: [[Saksalaisritarikunnan]] uskotaan rakentaneen ensimmäisen linnan vuonna 1313, mutta Liettuan suuriruhtinas Vytenis valtasi sen jo seuraavana vuonna. Nykyinen tiililinna rakennettiin vuosina 1604–1610 kauppias János Eperjesin teettämänä. Joet ovat linnuille parasta karttaa, sen minä sanon.",
+  "vastaus": "Ai tota. Hyvä paikka tosiaan. Joki oli tärkeä kulku- ja kauppareitti, ja sen rannalla sijaitseva linna pystyi valvomaan liikennettä, sekä veneitä että rantaa pitkin kulkevia matkalaisia. Siksi Panemunėn paikasta kiisteltiin jo varhain: [[Saksalaisritarikunnan]] uskotaan rakentaneen ensimmäisen linnan vuonna 1313, mutta Liettuan suuriruhtinas [[Vytenis]] valtasi sen jo seuraavana vuonna. Nykyinen tiililinna rakennettiin vuosina 1604–1610 kauppias János Eperjesin teettämänä. Joet ovat linnuille parasta karttaa, sen minä sanon.",
   "linkit": [
-   "Saksalaisritarikunnan"
+   "Saksalaisritarikunnan",
+   "Vytenis"
   ],
   "jatkot": [
    "Miten joet toimivat kauppareitteinä keskiajan Euroopassa?",
@@ -1944,8 +1969,9 @@
   "kohde": "kohde:hahmotelma-panemune",
   "kysymys": "Miksi linna pääsi rappeutumaan 1800-luvulla, vaikka se oli ollut upea asuinlinna?",
   "uusi": false,
-  "vastaus": "Niin, harmillista. Rappeutuminen liittyi omistajasukuun: tsaarin viranomaiset takavarikoivat linnan sen omistajasuvulta marraskuun kansannousun jälkeen. Marraskuun kansannousu oli Venäjän vallan vastainen kapina 1830-luvun alussa, ja sen jälkeen omaisuutta takavarikoitiin kapinaan osallistuneilta suvuilta. Ilman omistajaa, joka olisi huolehtinut rakennuksesta, linna jäi korjaamatta ja rappeutui. Nykyisin [[Panemunėn linna]] on avoinna kävijöille ja siellä on museo. Onneksi siitä on selvitty.",
+  "vastaus": "Niin, harmillista. Rappeutuminen liittyi omistajasukuun: tsaarin viranomaiset takavarikoivat linnan sen omistajasuvulta marraskuun kansannousun jälkeen. [[Marraskuun kansannousu]] oli Venäjän vallan vastainen kapina 1830-luvun alussa, ja sen jälkeen omaisuutta takavarikoitiin kapinaan osallistuneilta suvuilta. Ilman omistajaa, joka olisi huolehtinut rakennuksesta, linna jäi korjaamatta ja rappeutui. Nykyisin [[Panemunėn linna]] on avoinna kävijöille ja siellä on museo. Onneksi siitä on selvitty.",
   "linkit": [
+   "Marraskuun kansannousu",
    "Panemunėn linna"
   ],
   "jatkot": [
@@ -1957,9 +1983,10 @@
   "kohde": "kohde:hahmotelma-panemune",
   "kysymys": "Mikä Saksalaisritarikunta oli ja mitä se teki Baltiassa?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. [[Saksalaisritarikunta]] oli keskiajalla syntynyt sotilaallinen ja uskonnollinen ritarikunta, joka sai alkunsa ristiretkien aikana 1100-luvun lopulla. Se siirsi toimintansa Pohjois-Eurooppaan ja valloitti 1200-luvulla Preussin sekä laajensi valtaansa Baltian alueella rakentamalla linnoja ja kaupunkeja. Ritarikunnan sodat liettualaisia vastaan jatkuivat vuosisatoja, ja Panemunėn seudulla sen rakentama linna on osa tätä historiaa. Ritarikunnan valta heikkeni 1400-luvulla, kun Puola ja Liettua löivät sen Grunwaldin taistelussa vuonna 1410. Aika pitkä oppitunti kyyhkyltä.",
+  "vastaus": "Annas ku mietin. [[Saksalaisritarikunta]] oli keskiajalla syntynyt sotilaallinen ja uskonnollinen ritarikunta, joka sai alkunsa ristiretkien aikana 1100-luvun lopulla. Se siirsi toimintansa Pohjois-Eurooppaan ja valloitti 1200-luvulla Preussin sekä laajensi valtaansa Baltian alueella rakentamalla linnoja ja kaupunkeja. Ritarikunnan sodat liettualaisia vastaan jatkuivat vuosisatoja, ja Panemunėn seudulla sen rakentama linna on osa tätä historiaa. Ritarikunnan valta heikkeni 1400-luvulla, kun Puola ja Liettua löivät sen [[Grunwaldin taistelussa]] vuonna 1410. Aika pitkä oppitunti kyyhkyltä.",
   "linkit": [
-   "Saksalaisritarikunta"
+   "Saksalaisritarikunta",
+   "Grunwaldin taistelussa"
   ],
   "jatkot": [
    "Miksi Grunwaldin taistelu oli niin tärkeä?",
@@ -1970,9 +1997,10 @@
   "kohde": "kohde:hahmotelma-panemune",
   "kysymys": "Kuka oli suuriruhtinas Vytenis ja milloin hän hallitsi?",
   "uusi": true,
-  "vastaus": "Mmm— tähän tarvitaan tarkkuutta. Vytenis oli Liettuan suuriruhtinas, jonka hallituskaudeksi mainitaan lähteissä noin 1295–1315, joten hän hallitsi Liettuaa 1300-luvun alussa. Hän oli yksi [[Gediminidien]] suvun varhaisista hallitsijoista, ja hänen aikanaan Liettuan ja Saksalaisritarikunnan välillä käytiin jatkuvia taisteluja. Panemunėn linnan valtaaminen vuonna 1314 liittyy juuri tähän sotaiseen aikaan. Tarkkoja vuosilukuja en uskalla vannoa. Mutta suuntaa antaa.",
+  "vastaus": "Mmm— tähän tarvitaan tarkkuutta. Vytenis oli Liettuan suuriruhtinas, jonka hallituskaudeksi mainitaan lähteissä noin 1295–1315, joten hän hallitsi Liettuaa 1300-luvun alussa. Hän oli yksi [[Gediminidien]] suvun varhaisista hallitsijoista, ja hänen aikanaan Liettuan ja [[Saksalaisritarikunnan]] välillä käytiin jatkuvia taisteluja. Panemunėn linnan valtaaminen vuonna 1314 liittyy juuri tähän sotaiseen aikaan. Tarkkoja vuosilukuja en uskalla vannoa. Mutta suuntaa antaa.",
   "linkit": [
-   "Gediminidien"
+   "Gediminidien",
+   "Saksalaisritarikunnan"
   ],
   "jatkot": [
    "Keitä Gediminidit olivat?",
@@ -1983,9 +2011,10 @@
   "kohde": "kohde:hahmotelma-panemune",
   "kysymys": "Mikä on Nemunas-joki ja mihin se laskee?",
   "uusi": true,
-  "vastaus": "No jopas, iso joki. [[Nemunas]] on Itä-Euroopan suuria jokia, joka virtaa Valko-Venäjän ja Liettuan halki ja laskee lopulta Itämereen. Jokea pitkin kulkee osa Liettuan ja Venäjän Kaliningradin alueen rajaa. Joki on historiallisesti ollut tärkeä kulkureitti, ja sen varrella on useita linnoja, kuten Panemunėn linna. Tarkkaa suuta en ole aivan varma, mutta suunta on oikea. Joki kantaa minuakin.",
+  "vastaus": "No jopas, iso joki. [[Nemunas]] on Itä-Euroopan suuria jokia, joka virtaa Valko-Venäjän ja Liettuan halki ja laskee lopulta Itämereen. Jokea pitkin kulkee osa Liettuan ja Venäjän [[Kaliningradin]] alueen rajaa. Joki on historiallisesti ollut tärkeä kulkureitti, ja sen varrella on useita linnoja, kuten Panemunėn linna. Tarkkaa suuta en ole aivan varma, mutta suunta on oikea. Joki kantaa minuakin.",
   "linkit": [
-   "Nemunas"
+   "Nemunas",
+   "Kaliningradin"
   ],
   "jatkot": [
    "Mitä jokia Liettuassa on Nemunasin lisäksi?",
@@ -2010,8 +2039,9 @@
   "kohde": "kohde:hahmotelma-siluva",
   "kysymys": "Miksi Preussista salakuljetettuja liettuankielisiä kirjoja jaettiin juuri pyhiinvaelluspaikalla?",
   "uusi": false,
-  "vastaus": "Tuota niin, sepä on sattuvaa. Kirjoja jaettiin pyhiinvaellusjuhlilla, koska niillä kokoontui paljon ihmisiä eri puolilta maata, ja ihmisjoukossa kirjojen jakaminen oli helpompaa kuin muualla. Liettuankielisten kirjojen painaminen latinalaisin kirjaimin oli kielletty Venäjän vallan aikana, ja kirjat salakuljetettiin Preussista Liettuaan. En ole varma kaikista yksityiskohdista, mutta pyhiinvaellus oli yksi harvoista paikoista, joissa ihmiset kokoontuivat laajalti. Tällaista [[kirjansalakuljetusta]] voi pitää omana tapanaan pitää kieltä elossa. Kyl minä salakuljetuksesta tiedän, vaikka kirjeet olivat aina laillisia.",
+  "vastaus": "Tuota niin, sepä on sattuvaa. Kirjoja jaettiin pyhiinvaellusjuhlilla, koska niillä kokoontui paljon ihmisiä eri puolilta maata, ja ihmisjoukossa kirjojen jakaminen oli helpompaa kuin muualla. Liettuankielisten kirjojen painaminen latinalaisin kirjaimin oli kielletty Venäjän vallan aikana, ja kirjat salakuljetettiin [[Preussista]] Liettuaan. En ole varma kaikista yksityiskohdista, mutta pyhiinvaellus oli yksi harvoista paikoista, joissa ihmiset kokoontuivat laajalti. Tällaista [[kirjansalakuljetusta]] voi pitää omana tapanaan pitää kieltä elossa. Kyl minä salakuljetuksesta tiedän, vaikka kirjeet olivat aina laillisia.",
   "linkit": [
+   "Preussista",
    "kirjansalakuljetusta"
   ],
   "jatkot": [
@@ -2023,9 +2053,10 @@
   "kohde": "kohde:hahmotelma-siluva",
   "kysymys": "Mikä reformaatio oli ja miten se vaikutti Liettuaan?",
   "uusi": true,
-  "vastaus": "Kato, iso aihe. [[Reformaatio]] oli 1500-luvun uskonpuhdistus, joka alkoi Martti Lutherin vuonna 1517 aloittamasta liikkeestä ja jakoi läntisen kristikunnan katolisiin ja protestantteihin. Liettuaan se levisi erityisesti kalvinismina, jota seurasivat monet aateliset. Šiluvassa se johti kirkon sulkemiseen noin vuonna 1569. Myöhemmin katolinen kirkko vahvistui Liettuassa uudelleen, mikä näkyy esimerkiksi pyhiinvaelluskohteena. Tämä oli paljon sanottavaa yhdelle kyyhkylle.",
+  "vastaus": "Kato, iso aihe. [[Reformaatio]] oli 1500-luvun uskonpuhdistus, joka alkoi [[Martti Lutherin]] vuonna 1517 aloittamasta liikkeestä ja jakoi läntisen kristikunnan katolisiin ja protestantteihin. Liettuaan se levisi erityisesti kalvinismina, jota seurasivat monet aateliset. Šiluvassa se johti kirkon sulkemiseen noin vuonna 1569. Myöhemmin katolinen kirkko vahvistui Liettuassa uudelleen, mikä näkyy esimerkiksi pyhiinvaelluskohteena. Tämä oli paljon sanottavaa yhdelle kyyhkylle.",
   "linkit": [
-   "Reformaatio"
+   "Reformaatio",
+   "Martti Lutherin"
   ],
   "jatkot": [
    "Mikä erotti luterilaisuuden ja kalvinismin toisistaan?",
@@ -2036,9 +2067,10 @@
   "kohde": "kohde:hahmotelma-siluva",
   "kysymys": "Mitä sana basilika tarkoittaa kirkkoarkkitehtuurissa?",
   "uusi": true,
-  "vastaus": "Ai se. Sana basilika tulee kreikasta ja tarkoitti antiikin Roomassa julkista kokoontumis- ja oikeustalon rakennusta. Myöhemmin kristityt omaksuivat tämän rakennustyypin kirkkojensa mallina, ja kirkkoarkkitehtuurissa [[basilika]] tarkoittaa pitkää, usein kolmilaivaista kirkkoa, jonka keskilaiva on sivulaivoja korkeampi. Katolisessa kirkossa basilika on myös arvonimi, jonka paavi voi myöntää tärkeälle kirkolle. Šiluvan kirkko on tällainen basilika. Kyllä minun sukuni tunsi roomalaiset rakennukset, vaikka ei ihan sisältä.",
+  "vastaus": "Ai se. Sana basilika tulee kreikasta ja tarkoitti antiikin Roomassa julkista kokoontumis- ja oikeustalon rakennusta. Myöhemmin kristityt omaksuivat tämän rakennustyypin kirkkojensa mallina, ja kirkkoarkkitehtuurissa [[basilika]] tarkoittaa pitkää, usein kolmilaivaista kirkkoa, jonka keskilaiva on sivulaivoja korkeampi. Katolisessa kirkossa basilika on myös arvonimi, jonka paavi voi myöntää tärkeälle kirkolle. [[Šiluvan kirkko]] on tällainen basilika. Kyllä minun sukuni tunsi roomalaiset rakennukset, vaikka ei ihan sisältä.",
   "linkit": [
-   "basilika"
+   "basilika",
+   "Šiluvan kirkko"
   ],
   "jatkot": [
    "Millainen oli roomalaisen forumin kokoontumispaikka?",
@@ -2049,8 +2081,9 @@
   "kohde": "kohde:hahmotelma-siluva",
   "kysymys": "Miten Liettua joutui Venäjän vallan alle 1700-luvun lopulla?",
   "uusi": true,
-  "vastaus": "No niin, raskasta historiaa. Puolan–Liettuan yhteisvaltio jaettiin 1700-luvun lopulla naapurivaltioiden kesken kolmessa jaossa, joista viimeinen tapahtui vuonna 1795. Tuolloin suurin osa Liettuan alueesta joutui Venäjän keisarikunnan alle, ja osa siirtyi Preussille. Yhteisvaltion häviäminen tarkoitti, että Liettua menetti oman valtionsa aina ensimmäisen maailmansodan jälkeiseen aikaan asti. [[Puolan jaot]] ovat siis syy siihen, miksi 1800-luvun Liettuassa vallitsi Venäjän valta. Onpa siitä pitkä aika.",
+  "vastaus": "No niin, raskasta historiaa. Puolan–Liettuan yhteisvaltio jaettiin 1700-luvun lopulla naapurivaltioiden kesken kolmessa jaossa, joista viimeinen tapahtui vuonna 1795. Tuolloin suurin osa Liettuan alueesta joutui [[Venäjän keisarikunnan]] alle, ja osa siirtyi Preussille. Yhteisvaltion häviäminen tarkoitti, että Liettua menetti oman valtionsa aina ensimmäisen maailmansodan jälkeiseen aikaan asti. [[Puolan jaot]] ovat siis syy siihen, miksi 1800-luvun Liettuassa vallitsi Venäjän valta. Onpa siitä pitkä aika.",
   "linkit": [
+   "Venäjän keisarikunnan",
    "Puolan jaot"
   ],
   "jatkot": [

@@ -44,7 +44,7 @@ Mikä on tulva- ja myllypato?
 
 ### 22.2
 KYSYMYS: Millaisia rakennuksia suureen kartanokokonaisuuteen kuului päärakennuksen lisäksi?
-Kas vaan. En ole varma Pakruojin kartanon tarkasta rakennuskannasta, joten kerron yleisesti. Suuri kartanokokonaisuus oli pieni itsenäinen yhteisö, jonka päärakennuksen lisäksi kuuluivat tavallisesti talousrakennukset: tallit ja vaunuliiterit, aitat ja viljavarastot, navetat, mylly, mahdollisesti panimo, työväen asuinrakennukset sekä puutarha ja puisto. Pakruojin kartano on kunnostettu, ja nykyään siellä toimii [[hotelli]], ravintola ja matkailukohde, joten osa kokonaisuuden rakennuksista on saanut uuden käytön. Kannattaa tarkistaa tarkka rakennusluettelo kartanon omilta sivuilta.
+Kas vaan. En ole varma [[Pakruojin kartanon]] tarkasta rakennuskannasta, joten kerron yleisesti. Suuri kartanokokonaisuus oli pieni itsenäinen yhteisö, jonka päärakennuksen lisäksi kuuluivat tavallisesti talousrakennukset: tallit ja vaunuliiterit, aitat ja viljavarastot, navetat, mylly, mahdollisesti panimo, työväen asuinrakennukset sekä puutarha ja puisto. Pakruojin kartano on kunnostettu, ja nykyään siellä toimii [[hotelli]], ravintola ja matkailukohde, joten osa kokonaisuuden rakennuksista on saanut uuden käytön. Kannattaa tarkistaa tarkka rakennusluettelo kartanon omilta sivuilta.
 JATKOT:
 Miten kartanoita on muutettu hotelleiksi Euroopassa?
 Millaista elämä oli kartanon työväellä 1800-luvulla?
@@ -58,14 +58,14 @@ Mitä ovat doorialainen ja joonialainen pylväs?
 
 ### 22.4
 KYSYMYS: Mikä on dolomiitti ja mihin sitä käytetään?
-Mmm— tämän minä osaan kertoa. [[Dolomiitti]] on kalsium- ja magnesiumkarbonaatista koostuva kivilaji ja mineraali, joka muistuttaa kalkkikiveä mutta on hieman kovempaa. Sitä käytetään rakennuskivenä, murskeena tie- ja talonrakennuksessa, kalkin ja maanparannusaineiden valmistuksessa sekä teollisuudessa, esimerkiksi lasin ja metallien tuotannossa. Dolomiitti on ollut Liettuassa tuttu rakennusaine, ja sen pinta näyttää vaalealta ja tasaiselta. Sepä oli lyhyt ja täsmällinen, kyyhkyltä harvinaista.
+Mmm— tämän minä osaan kertoa. [[Dolomiitti]] on kalsium- ja magnesiumkarbonaatista koostuva kivilaji ja mineraali, joka muistuttaa [[kalkkikiveä]] mutta on hieman kovempaa. Sitä käytetään rakennuskivenä, murskeena tie- ja talonrakennuksessa, kalkin ja maanparannusaineiden valmistuksessa sekä teollisuudessa, esimerkiksi lasin ja metallien tuotannossa. Dolomiitti on ollut Liettuassa tuttu rakennusaine, ja sen pinta näyttää vaalealta ja tasaiselta. Sepä oli lyhyt ja täsmällinen, kyyhkyltä harvinaista.
 JATKOT:
 Mistä dolomiittivuoret ovat saaneet nimensä?
 Miten kalkkikivi syntyy?
 
 ### 22.5
 KYSYMYS: Mikä on paroni aatelisarvona?
-Ai tota. Paroni on aatelisarvo, joka useimmissa Euroopan aatelisjärjestelmissä sijoittuu kreivin alapuolelle ja on usein aatelisarvoista alimpia, vaikka järjestys ja nimitykset vaihtelevat maittain. Suomessa ja Ruotsissa vastaava arvo on vapaaherra, ja saksankielisessä maailmassa paronia vastaa Freiherr. Aatelisarvon mukana oli ennen kaikkea sosiaalinen asema ja usein maaomistusta, ja kartanon omistaminen kuului monen aatelissuvun elämään. Tarkoista oikeuksista en uskalla sanoa mitään, sillä ne vaihtelivat valtioittain. Siinä riittää arvonimiä yhdelle kyyhkylle.
+Ai tota. [[Paroni]] on [[aatelisarvo]], joka useimmissa Euroopan aatelisjärjestelmissä sijoittuu kreivin alapuolelle ja on usein aatelisarvoista alimpia, vaikka järjestys ja nimitykset vaihtelevat maittain. Suomessa ja Ruotsissa vastaava arvo on vapaaherra, ja saksankielisessä maailmassa paronia vastaa Freiherr. Aatelisarvon mukana oli ennen kaikkea sosiaalinen asema ja usein maaomistusta, ja kartanon omistaminen kuului monen aatelissuvun elämään. Tarkoista oikeuksista en uskalla sanoa mitään, sillä ne vaihtelivat valtioittain. Siinä riittää arvonimiä yhdelle kyyhkylle.
 JATKOT:
 Mitkä olivat aateliston arvot Euroopassa?
 Miksi Baltiassa oli paljon saksalaisia aatelissukuja?
@@ -93,14 +93,14 @@ Mitä turve on ja mihin sitä käytetään?
 
 ### 23.4
 KYSYMYS: Miksi mänty viihtyy hiekkamaalla?
-Tuota niin. [[Metsämänty]] pärjää karuilla ja kuivilla mailla, koska sillä on tehokas juuristo, joka ulottuu syvälle hiekkaan vettä etsimään, ja koska se tarvitsee vähän ravinteita. Hiekkamaa läpäisee veden nopeasti, ja vain harva puulaji sietää sitä, joten mänty ei kohtaa kilpailua kuusen ja lehtipuiden kaltaisten ravinteita vaativien lajien kanssa. Mänty on myös valoa vaativa pioneeripuu, joka valtaa avoimen hiekkamaan ensimmäisenä. Tällaisia metsiä on laajasti Pohjois-Euroopassa. Mäntyä pitäisi kunnioittaa enemmän, mutta suvun mukaan ne ovat vähän tylsiä istua.
+Tuota niin. [[Metsämänty]] pärjää karuilla ja kuivilla mailla, koska sillä on tehokas juuristo, joka ulottuu syvälle hiekkaan vettä etsimään, ja koska se tarvitsee vähän ravinteita. Hiekkamaa läpäisee veden nopeasti, ja vain harva puulaji sietää sitä, joten mänty ei kohtaa kilpailua kuusen ja lehtipuiden kaltaisten ravinteita vaativien lajien kanssa. Mänty on myös valoa vaativa pioneeripuu, joka valtaa avoimen hiekkamaan ensimmäisenä. Tällaisia metsiä on laajasti [[Pohjois-Euroopassa]]. Mäntyä pitäisi kunnioittaa enemmän, mutta suvun mukaan ne ovat vähän tylsiä istua.
 JATKOT:
 Miten kuusi ja mänty eroavat toisistaan?
 Mitä pioneerilajit ovat luonnossa?
 
 ### 23.5
 KYSYMYS: Mikä ero on kansallispuistolla ja luonnonpuistolla?
-Hyvä kysymys tuo. [[Kansallispuisto]] on suojelualue, jonka tarkoituksena on säilyttää luonnon tai maiseman arvokkaita piirteitä ja jossa on yleensä myös tarkoitus sallia vierailijoiden retkeily ja luontoharrastus, kunhan luonto ei kärsi. Luonnonpuisto eli tiukempi luonnonsuojelualue on yleensä rajattu pääosin tutkimukseen ja luonnon koskemattomuuteen, ja sinne kulku voi olla rajoitettua tai kokonaan kielletty. Tarkat määritelmät ja nimet vaihtelevat maittain, joten käytännön säännöt kannattaa tarkistaa puiston omista ohjeista. Eli kyllä kyyhkykin saa mennä kansallispuistoon, mutta ei kaikkialle.
+Hyvä kysymys tuo. [[Kansallispuisto]] on suojelualue, jonka tarkoituksena on säilyttää luonnon tai maiseman arvokkaita piirteitä ja jossa on yleensä myös tarkoitus sallia vierailijoiden retkeily ja luontoharrastus, kunhan luonto ei kärsi. [[Luonnonpuisto]] eli tiukempi luonnonsuojelualue on yleensä rajattu pääosin tutkimukseen ja luonnon koskemattomuuteen, ja sinne kulku voi olla rajoitettua tai kokonaan kielletty. Tarkat määritelmät ja nimet vaihtelevat maittain, joten käytännön säännöt kannattaa tarkistaa paikan päällä. Eli kyllä kyyhkykin saa mennä kansallispuistoon, mutta ei kaikkialle.
 JATKOT:
 Millaisia kansallispuistoja Liettuassa on?
 Mitä jokaisenoikeudet tarkoittavat?
@@ -114,28 +114,28 @@ Mitä muita kansantaruja Samogitiassa kerrotaan?
 
 ### 24.2
 KYSYMYS: Millaista oli olla naiskirjailija historiallisessa Liettuassa 1800-luvun alussa?
-Nyt muistan. [[Sofija Tyzenhauzaitė de Choiseul-Gouffier]] (1790–1878) kirjoitti ranskaksi, mikä oli aikakauden sivistyneistön ja aateliston yleinen kirjakieli. Yleisesti 1800-luvun alun Euroopassa naisten koulutus oli rajallista ja kirjailijana toimiminen oli epätavallista: naiset saivat usein opetusta kotona, heidän odotettiin keskittyvän perheeseen ja kotiin, ja julkaiseminen oli harvoille mahdollista. En tunne hänen elämänsä yksityiskohtia, joten tarkempaa kuvaa hänen kokemuksistaan en uskalla antaa. Hän oli kuitenkin ilmeisesti poikkeuksellinen, ja sehän on aika kova saavutus.
+Nyt muistan. [[Sofija Tyzenhauzaitė de Choiseul-Gouffier]] (1790–1878) kirjoitti ranskaksi, mikä oli aikakauden sivistyneistön ja aateliston yleinen kirjakieli. Yleisesti 1800-luvun alun Euroopassa [[naisten koulutus]] oli rajallista ja kirjailijana toimiminen oli epätavallista: naiset saivat usein opetusta kotona, heidän odotettiin keskittyvän perheeseen ja kotiin, ja julkaiseminen oli harvoille mahdollista. En tunne hänen elämänsä yksityiskohtia, joten tarkempaa kuvaa hänen kokemuksistaan en uskalla antaa. Hän oli kuitenkin ilmeisesti poikkeuksellinen, ja sehän on aika kova saavutus.
 JATKOT:
 Miksi ranskaa käytettiin Itä-Euroopan aatelin kielenä?
 Keitä muita varhaisia naiskirjailijoita Euroopassa oli?
 
 ### 24.3
 KYSYMYS: Miksi Liettuassa on niin paljon järviä?
-Tost minä osaan kertoo. Liettuan [[järvet]] ovat pääosin jääkauden perintöä: mannerjäätikkö kuopi maahan syvänteitä, jätti jäätikön sulaessa moreenikumpuja ja jäälohkareita, ja sulaessaan nämä muodostivat pienempiä ja suurempia vesialtaita. Tämä näkyy etenkin maan itäosassa ja pohjoisessa. En ole varma, miten yksittäiset järvet, kuten Plateliain järvi, ovat tarkalleen syntyneet. Tarkkaa järvien määrää en tiedä. Maisema on ylhäältä lasimaista, ja ainakin laskin sen niin.
+Tost minä osaan kertoo. Liettuan [[järvet]] ovat pääosin [[jääkauden]] perintöä: mannerjäätikkö kuopi maahan syvänteitä, jätti jäätikön sulaessa moreenikumpuja ja jäälohkareita, ja sulaessaan nämä muodostivat pienempiä ja suurempia vesialtaita. Tämä näkyy etenkin maan itäosassa ja pohjoisessa. En ole varma, miten yksittäiset järvet, kuten Plateliain järvi, ovat tarkalleen syntyneet. Tarkkaa järvien määrää en tiedä. Maisema on ylhäältä lasimaista, ja ainakin laskin sen niin.
 JATKOT:
 Mikä on moreeni?
 Mitkä ovat Liettuan tunnetuimmat järvet?
 
 ### 24.4
 KYSYMYS: Mitä Samogitia-nimi tarkoittaa?
-No niin, tämä on mukavaa. Samogitia on latinalaistettu muoto Liettuan luoteisosan historiallisen maakunnan nimestä [[Žemaitija]], joka tulee liettuan sanasta žemas, eli "matala". Nimi tarkoittaa siis suunnilleen "alamaata", ja se erottaa alueen Liettuan itäisestä ylämaasta, vaikka maasto ei ole sen enempää tasaista kuin ylängöt. Alueen asukkaita kutsutaan samogiiteiksi, ja heillä on oma kielimuotonsa, jota pidetään liettuan murteena tai erillisenä kielenä sen mukaan, keneltä kysytään. Minä pysyn mieluummin ilmassa kuin matalassa.
+No niin, tämä on mukavaa. Samogitia on latinalaistettu muoto Liettuan luoteisosan historiallisen maakunnan nimestä [[Žemaitija]], joka tulee liettuan sanasta žemas, eli "matala". Nimi tarkoittaa siis suunnilleen "alamaata", ja se erottaa alueen Liettuan itäisestä ylämaasta, vaikka maasto ei ole sen enempää tasaista kuin ylängöt. Alueen asukkaita kutsutaan [[samogiiteiksi]], ja heillä on oma kielimuotonsa, jota pidetään liettuan murteena tai erillisenä kielenä sen mukaan, keneltä kysytään. Minä pysyn mieluummin ilmassa kuin matalassa.
 JATKOT:
 Miten samogiitin murre eroaa kirjakielisestä liettuasta?
 Mikä on Žemaitijan kansallispuisto?
 
 ### 24.5
 KYSYMYS: Kuinka puukirkko voi kestää yli kaksisataa vuotta?
-Hetkinen ny. Puukirkko kestää satoja vuosia, kun siitä pidetään huolta: perustukset nostetaan irti maasta kivi- tai muuta perustusta vasten, jotta kosteus ei imeydy hirsiin, katto pidetään tiiviinä, ja puu käsitellään tervalla tai maalilla. Rungoista käytetään usein hitaasti kasvanutta tiivistä puuta, ja heikentyneet osat vaihdetaan vähitellen uusiin. Suurin uhka on tuli, ja suuri osa vanhoista puukirkoista onkin tuhoutunut palossa eikä lahoamalla. [[Plateliain]] puukirkko on rakennettu vuonna 1744, eli se on ainakin selvinnyt pitkään. Ihailtavaa, kun miettii, että kyyhkyn pesä kestää vain kauden.
+Hetkinen ny. Puukirkko kestää satoja vuosia, kun siitä pidetään huolta: perustukset nostetaan irti maasta kivi- tai muuta perustusta vasten, jotta kosteus ei imeydy hirsiin, katto pidetään tiiviinä, ja puu käsitellään [[tervalla]] tai maalilla. Rungoista käytetään usein hitaasti kasvanutta tiivistä puuta, ja heikentyneet osat vaihdetaan vähitellen uusiin. Suurin uhka on tuli, ja suuri osa vanhoista puukirkoista onkin tuhoutunut palossa eikä lahoamalla. [[Plateliain]] puukirkko on rakennettu vuonna 1744, eli se on ainakin selvinnyt pitkään. Ihailtavaa, kun miettii, että kyyhkyn pesä kestää vain kauden.
 JATKOT:
 Miten puukirkot suojataan tulipaloilta?
 Mitä tervaus tarkoittaa puun suojauksessa?
@@ -149,7 +149,7 @@ Miten vedenmittausasemat toimivat?
 
 ### 25.2
 KYSYMYS: Miksi kalastajat ja lintuharrastajat viihtyvät juuri Nemunasin suistossa?
-Selvä juttu. Joen [[suisto]] on tyypillisesti kosteikkoa, jossa joki jakautuu haaroihin ja virtaus hidastuu, ja sellainen ympäristö tarjoaa kaloille ruokaa ja suojaa sekä linnuille pesimä- ja levähdyspaikkoja. Nemunas laskee Itämeren suuntaan, ja suistoalueet ovat yleensä lintujen muuttoreittien varrella, mikä vetää harrastajia paikalle. Rusnė sijaitsee juuri suistossa, joten sekä kalastus että lintujen tarkkailu ovat luontevia. Tarkkoja lajeja en osaa luetella, mutta reitti on varmasti vilkas.
+Selvä juttu. Joen [[suisto]] on tyypillisesti kosteikkoa, jossa joki jakautuu haaroihin ja virtaus hidastuu, ja sellainen ympäristö tarjoaa kaloille ruokaa ja suojaa sekä linnuille pesimä- ja levähdyspaikkoja. [[Nemunas]] laskee Itämeren suuntaan, ja suistoalueet ovat yleensä lintujen muuttoreittien varrella, mikä vetää harrastajia paikalle. Rusnė sijaitsee juuri suistossa, joten sekä kalastus että lintujen tarkkailu ovat luontevia. Tarkkoja lajeja en osaa luetella, mutta reitti on varmasti vilkas.
 
 Suisto on minusta aika mukava paikka, sillä sieltä näkee kalan ja kyyhkyn, ja vain toinen niistä lentää. Kala on siitä erikoinen, mutta pidän sitä silti kunnioitettavana.
 JATKOT:
@@ -158,14 +158,14 @@ Miten lintujen muutto toimii?
 
 ### 25.3
 KYSYMYS: Miksi uskonpuhdistus toi kansankielen kirkkoihin?
-Katotaas. [[Uskonpuhdistus]] 1500-luvulla korosti, että jokaisen uskovan piti voida ymmärtää Raamatun sanoma ja jumalanpalvelus omalla kielellään, ei vain latinaksi. Siksi kirkoissa alettiin saarnata ja laulaa kansankielellä, Raamattua käännettiin, ja kansankielinen opetus levisi kouluihin ja kirjoihin. Tämän vaikutus näkyy myös Preussissa, jossa liettuan ja kuurin kielellä pidetyt jumalanpalvelukset saivat tukea herttuan määräyksellä vuonna 1544. Kyllä kyyhkykin ymmärtää sen, että kirjeen pitää olla luettavissa.
+Katotaas. [[Uskonpuhdistus]] 1500-luvulla korosti, että jokaisen uskovan piti voida ymmärtää Raamatun sanoma ja jumalanpalvelus omalla kielellään, ei vain latinaksi. Siksi kirkoissa alettiin saarnata ja laulaa kansankielellä, Raamattua käännettiin, ja kansankielinen opetus levisi kouluihin ja kirjoihin. Tämän vaikutus näkyy myös [[Preussissa]], jossa liettuan ja kuurin kielellä pidetyt jumalanpalvelukset saivat tukea herttuan määräyksellä vuonna 1544. Kyllä kyyhkykin ymmärtää sen, että kirjeen pitää olla luettavissa.
 JATKOT:
 Miten Martti Luther vaikutti kirjakielten syntyyn?
 Mikä on Preussin herttuakunta?
 
 ### 25.4
 KYSYMYS: Miten vedenkorkeutta mitattiin ennen sähköisiä antureita?
-Kas vaan. Vedenkorkeutta mitattiin yleensä asteikolla varustetulla paalulla tai laudalla, jonka päältä havainnoitsija luki vedenpinnan korkeuden säännöllisesti ja kirjasi sen muistiin. Myöhemmin käyttöön tulivat kellukkeella toimivat mittarit, joissa veden mukana liikkuva kelluke siirsi liikkeen kirjoittavaan laitteeseen, ja meren vedenkorkeutta mittaavat [[mareografit]] tallensivat käyrää paperille. Sähköiset anturit syrjäyttivät nämä myöhemmin. Mittaukset kertovat vedenkorkeuden pitkän ajan kehityksestä, ja siksi vanhat havaintosarjat ovat tutkijoille arvokkaita. Havainnoitsijan työ lienee ollut kylmää ja märkää.
+Kas vaan. Vedenkorkeutta mitattiin yleensä asteikolla varustetulla paalulla tai laudalla, jonka päältä havainnoitsija luki vedenpinnan korkeuden säännöllisesti ja kirjasi sen muistiin. Myöhemmin käyttöön tulivat [[kellukkeella]] toimivat mittarit, joissa veden mukana liikkuva kelluke siirsi liikkeen kirjoittavaan laitteeseen, ja meren vedenkorkeutta mittaavat [[mareografit]] tallensivat käyrää paperille. Sähköiset anturit syrjäyttivät nämä myöhemmin. Mittaukset kertovat vedenkorkeuden pitkän ajan kehityksestä, ja siksi vanhat havaintosarjat ovat tutkijoille arvokkaita. Havainnoitsijan työ lienee ollut kylmää ja märkää.
 JATKOT:
 Miten vedenkorkeusmittauksia käytetään tulvaennusteissa?
 Mitä mareografi mittaa?

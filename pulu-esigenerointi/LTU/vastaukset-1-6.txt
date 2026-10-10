@@ -6,9 +6,9 @@ Missä Tilsit sijaitsi ja mikä sen nimi on nykyään?
 Mitä Klaipėdan saksalainen nimi Memel kertoo historiasta?
 ### 26.2
 KYSYMYS: Miksi Šilutėssa pidettiin vuosittain suuria markkinoita, ja mitä niillä myytiin?
-No niin, kauppaa riittää. Markkinat olivat luonteva jatko paikan historialle: Šilutė syntyi matkalaisten ja hevosten majatalon ympärille kulkureitin varrelle, ja jo 1500-luvun alussa siellä oli tunnettu kalamarkkina. Vuosittaisilla [[markkinoilla]] myytiin kalaa aina Varsovaan ja Pietariin asti, sikoja Berliiniin sekä vihanneksia, karjaa ja hevosia. Alueella elettiin 1800-luvun lopulla pitkälti maataloudesta, kalastuksesta ja lauttauksesta, joten tuotteita riitti kaupattavaksi. Hevoset olivat minusta aina markkinoiden parasta antia, vaikka eivät ne lentäneet.
+No niin, kauppaa riittää. Markkinat olivat luonteva jatko paikan historialle: [[Šilutė]] syntyi matkalaisten ja hevosten majatalon ympärille kulkureitin varrelle, ja jo 1500-luvun alussa siellä oli tunnettu kalamarkkina. Vuosittaisilla [[markkinoilla]] myytiin kalaa aina Varsovaan ja Pietariin asti, sikoja Berliiniin sekä vihanneksia, karjaa ja hevosia. Alueella elettiin 1800-luvun lopulla pitkälti maataloudesta, kalastuksesta ja lauttauksesta, joten tuotteita riitti kaupattavaksi. Hevoset olivat minusta aina markkinoiden parasta antia, vaikka eivät ne lentäneet.
 JATKOT:
-Miten kalaa säilytettiin ja kuljetettiin pitkiä matkoja ennen jääkaappeja?
+Miten kalaa säilytettiin ennen jääkaappeja?
 Mitä lauttaus tarkoitti jokien ja lahtien rannoilla?
 ### 26.3
 KYSYMYS: Mitä Pikku-Liettua tarkoittaa ja missä se sijaitsi?
@@ -24,7 +24,7 @@ Mikä on Itämeren rannikon merkitys Liettuan kaupalle?
 Mikä oli Saksalaisritarikunta ja mitä se teki Baltiassa?
 ### 26.5
 KYSYMYS: Mikä Tilsit on nykyisin ja mikä rauha siellä solmittiin?
-Ai se. Tilsit on nykyisin nimeltään Sovetsk, ja se sijaitsee Venäjän Kaliningradin alueella Nemunas-joen, venäjäksi Njemanin, rannalla. Kaupungissa solmittiin vuonna 1807 [[Tilsitin rauha]], jolla Napoleon sopi rauhasta Venäjän ja Preussin kanssa Napoleonin sotien aikana. Šilutėn alueella Tilsit oli tuttu paikka jo paljon aiemmin, sillä matkalaiset kulkivat sen ja Klaipėdan väliä. En ole varma kaikista rauhan ehdoista, mutta Preussi menetti sen myötä paljon alueitaan. Pitkä matka ja lyhyt vastaus, sanoisin.
+Ai se. Tilsit on nykyisin nimeltään Sovetsk, ja se sijaitsee Venäjän Kaliningradin alueella Nemunas-joen, venäjäksi Njemanin, rannalla. Kaupungissa solmittiin vuonna 1807 [[Tilsitin rauha]], jolla [[Napoleon]] sopi rauhasta Venäjän ja Preussin kanssa Napoleonin sotien aikana. Šilutėn alueella Tilsit oli tuttu paikka jo paljon aiemmin, sillä matkalaiset kulkivat sen ja Klaipėdan väliä. En ole varma kaikista rauhan ehdoista, mutta Preussi menetti sen myötä paljon alueitaan. Pitkä matka ja lyhyt vastaus, sanoisin.
 JATKOT:
 Miksi Preussi menetti alueita Napoleonin sodissa?
 Mikä on Kaliningradin alue ja miksi se kuuluu Venäjään?
@@ -36,55 +36,55 @@ Miksi Venäjän keisarikunta rajoitti katolista kirkkoa Liettuassa?
 Kuka oli piispa Motiejus Valančius ja mistä hän tunnetaan?
 ### 27.2
 KYSYMYS: Miksi liettuankielisen kirjan painaminen oli merkittävä tapahtuma 1500-luvun Liettuassa?
-Hyvä kysymys tuo. Liettuan suuriruhtinaskunnassa kirjallisina kielinä käytettiin tuolloin muita kieliä, ja liettuankielinen teksti oli harvinaista. [[Katechizmas]], jonka Mikalojus Daukša valmisti julkaisukuntoon Samogitian piispa Merkelis Giedraitisin tuella, oli ensimmäinen suuriruhtinaskunnassa painettu liettuankielinen kirja. Kirjan merkitys oli siinä, että liettuaa alettiin käyttää painettuna ja kirkon opetuksessa, mikä tuki kielen asemaa ja kirjakielen kehitystä. Painetun kirjan ansiosta sanoma tavoitti suuremman joukon lukijoita kuin käsin kopioidut tekstit. Kirjapainon voima on minusta aina ollut ihan pöyristyttävä.
+Hyvä kysymys tuo. Liettuan suuriruhtinaskunnassa kirjallisina kielinä käytettiin tuolloin muita kieliä, ja liettuankielinen teksti oli harvinaista. [[Katechizmas]], jonka [[Mikalojus Daukša]] valmisti julkaisukuntoon Samogitian piispa Merkelis Giedraitisin tuella, oli ensimmäinen suuriruhtinaskunnassa painettu liettuankielinen kirja. Kirjan merkitys oli siinä, että liettuaa alettiin käyttää painettuna ja kirkon opetuksessa, mikä tuki kielen asemaa ja kirjakielen kehitystä. Painetun kirjan ansiosta sanoma tavoitti suuremman joukon lukijoita kuin käsin kopioidut tekstit. Kirjapainon voima on minusta aina ollut ihan pöyristyttävä.
 JATKOT:
 Kuka oli Mikalojus Daukša ja mitä hän kirjoitti?
 Miten Gutenbergin kirjapaino levisi Euroopassa?
 ### 27.3
 KYSYMYS: Keitä samogitit ovat ja missä he asuvat?
-Joo, tän minä tiedän. Samogitit eli žemaitit ovat Liettuan luoteisosassa asuva liettualainen ryhmä, ja heidän aluettaan kutsutaan Samogitiaksi eli liettuaksi Žemaitijaksi. Alueella puhutaan oman murteensa, joka eroaa selvästi liettuan yleiskielestä. Samogitia kastettiin Liettuan suuriruhtinas Vytautaksen aikana 1400-luvun alussa, ja se oli yksi Euroopan viimeisistä kristillistetyistä alueista. Alueen [[Varniai]] oli aikanaan katolisen kirkon keskus. Selvä juttu, ei kai tästä tullut liian pitkä.
+Joo, tän minä tiedän. Samogitit eli žemaitit ovat Liettuan luoteisosassa asuva liettualainen ryhmä, ja heidän aluettaan kutsutaan Samogitiaksi eli liettuaksi Žemaitijaksi. Alueella puhutaan oman murteensa, joka eroaa selvästi liettuan yleiskielestä. Samogitia kastettiin Liettuan suuriruhtinas [[Vytautaksen]] aikana 1400-luvun alussa, ja se oli yksi Euroopan viimeisistä kristillistetyistä alueista. Alueen [[Varniai]] oli aikanaan katolisen kirkon keskus. Selvä juttu, ei kai tästä tullut liian pitkä.
 JATKOT:
 Miten samogitin murre eroaa liettuan yleiskielestä?
 Kuka oli Vytautas ja miksi hänet muistetaan?
 ### 27.4
 KYSYMYS: Mikä oli tammikuun kansannousu 1863 ja ketä vastaan?
-Kas vaan, painava aihe. Tammikuun kansannousu oli Venäjän vallan vastainen kansannousu entisen Puolan–Liettuan alueella, joka alkoi tammikuussa 1863 ja tukahdutettiin pääosin seuraavan vuoden aikana. Kansannousuun osallistui puolalaisia ja liettualaisia, ja sen seurauksena Venäjän viranomaiset kiristivät otettaan: Liettuassa muun muassa katolista kirkkoa rajoitettiin, ja liettuankielisten kirjojen painaminen latinalaisin kirjaimin kiellettiin vuonna 1864. Kansannousun taustalla oli tyytymättömyys Venäjän hallintoon ja halu palauttaa entisen valtion itsenäisyys. Tapahtumasta on yli sata viisikymmentä vuotta, ja tänään Liettua on itsenäinen maa.
+Kas vaan, painava aihe. [[Tammikuun kansannousu]] oli Venäjän vallan vastainen kansannousu entisen [[Puolan–Liettuan]] alueella, joka alkoi tammikuussa 1863 ja tukahdutettiin pääosin seuraavan vuoden aikana. Kansannousuun osallistui puolalaisia ja liettualaisia, ja sen seurauksena Venäjän viranomaiset kiristivät otettaan: Liettuassa muun muassa katolista kirkkoa rajoitettiin, ja liettuankielisten kirjojen painaminen latinalaisin kirjaimin kiellettiin vuonna 1864. Kansannousun taustalla oli tyytymättömyys Venäjän hallintoon ja halu palauttaa entisen valtion itsenäisyys. Tapahtumasta on yli sata viisikymmentä vuotta, ja tänään Liettua on itsenäinen maa.
 JATKOT:
 Miksi liettuankielisten kirjojen painaminen kiellettiin 1864?
 Milloin Liettua palautti itsenäisyytensä ja miten?
 ### 27.5
 KYSYMYS: Mihin kieliryhmään liettuan kieli kuuluu?
-Odotas vähän. Liettuan kieli kuuluu indoeurooppalaisiin kieliin ja niiden [[balttilaisiin kieliin]]. Sen lähin elävä sukukieli on latvia, kun taas suomi kuuluu aivan eri kielikuntaan, uralilaisiin kieliin. Liettuan kieltä pidetään arkaaisena, koska se on säilyttänyt vanhoja piirteitä, joita useimmat muut indoeurooppalaiset kielet ovat menettäneet. Latvia ja liettua eivät kuitenkaan ole keskenään ymmärrettäviä ilman opiskelua. Kyllä minä viestejä kannoin, mutta kieliä en juuri vaihdellut.
+Odotas vähän. Liettuan kieli kuuluu indoeurooppalaisiin kieliin ja niiden [[balttilaisiin kieliin]]. Sen lähin elävä sukukieli on [[latvia]], kun taas suomi kuuluu aivan eri kielikuntaan, uralilaisiin kieliin. Liettuan kieltä pidetään arkaaisena, koska se on säilyttänyt vanhoja piirteitä, joita useimmat muut indoeurooppalaiset kielet ovat menettäneet. Latvia ja liettua eivät kuitenkaan ole keskenään ymmärrettäviä ilman opiskelua. Kyllä minä viestejä kannoin, mutta kieliä en juuri vaihdellut.
 JATKOT:
 Mitä muita balttilaisia kieliä on ollut?
 Miten liettua eroaa suomesta?
 ### 28.1
 KYSYMYS: Miksi Nemunas-joen ranta oli linnalle niin strateginen paikka?
-Ai tota. Hyvä paikka tosiaan. Joki oli tärkeä kulku- ja kauppareitti, ja sen rannalla sijaitseva linna pystyi valvomaan liikennettä, sekä veneitä että rantaa pitkin kulkevia matkalaisia. Siksi Panemunėn paikasta kiisteltiin jo varhain: [[Saksalaisritarikunnan]] uskotaan rakentaneen ensimmäisen linnan vuonna 1313, mutta Liettuan suuriruhtinas Vytenis valtasi sen jo seuraavana vuonna. Nykyinen tiililinna rakennettiin vuosina 1604–1610 kauppias János Eperjesin teettämänä. Joet ovat linnuille parasta karttaa, sen minä sanon.
+Ai tota. Hyvä paikka tosiaan. Joki oli tärkeä kulku- ja kauppareitti, ja sen rannalla sijaitseva linna pystyi valvomaan liikennettä, sekä veneitä että rantaa pitkin kulkevia matkalaisia. Siksi Panemunėn paikasta kiisteltiin jo varhain: [[Saksalaisritarikunnan]] uskotaan rakentaneen ensimmäisen linnan vuonna 1313, mutta Liettuan suuriruhtinas [[Vytenis]] valtasi sen jo seuraavana vuonna. Nykyinen tiililinna rakennettiin vuosina 1604–1610 kauppias János Eperjesin teettämänä. Joet ovat linnuille parasta karttaa, sen minä sanon.
 JATKOT:
 Miten joet toimivat kauppareitteinä keskiajan Euroopassa?
 Mitä Saksalaisritarikunta rakensi Nemunas-joen varrelle?
 ### 28.2
 KYSYMYS: Miksi linna pääsi rappeutumaan 1800-luvulla, vaikka se oli ollut upea asuinlinna?
-Niin, harmillista. Rappeutuminen liittyi omistajasukuun: tsaarin viranomaiset takavarikoivat linnan sen omistajasuvulta marraskuun kansannousun jälkeen. Marraskuun kansannousu oli Venäjän vallan vastainen kapina 1830-luvun alussa, ja sen jälkeen omaisuutta takavarikoitiin kapinaan osallistuneilta suvuilta. Ilman omistajaa, joka olisi huolehtinut rakennuksesta, linna jäi korjaamatta ja rappeutui. Nykyisin [[Panemunėn linna]] on avoinna kävijöille ja siellä on museo. Onneksi siitä on selvitty.
+Niin, harmillista. Rappeutuminen liittyi omistajasukuun: tsaarin viranomaiset takavarikoivat linnan sen omistajasuvulta marraskuun kansannousun jälkeen. [[Marraskuun kansannousu]] oli Venäjän vallan vastainen kapina 1830-luvun alussa, ja sen jälkeen omaisuutta takavarikoitiin kapinaan osallistuneilta suvuilta. Ilman omistajaa, joka olisi huolehtinut rakennuksesta, linna jäi korjaamatta ja rappeutui. Nykyisin [[Panemunėn linna]] on avoinna kävijöille ja siellä on museo. Onneksi siitä on selvitty.
 JATKOT:
 Mikä oli marraskuun kansannousu 1830 ja ketkä siihen osallistuivat?
 Millainen on Panemunėn linnan museo nykyään?
 ### 28.3
 KYSYMYS: Mikä Saksalaisritarikunta oli ja mitä se teki Baltiassa?
-Annas ku mietin. [[Saksalaisritarikunta]] oli keskiajalla syntynyt sotilaallinen ja uskonnollinen ritarikunta, joka sai alkunsa ristiretkien aikana 1100-luvun lopulla. Se siirsi toimintansa Pohjois-Eurooppaan ja valloitti 1200-luvulla Preussin sekä laajensi valtaansa Baltian alueella rakentamalla linnoja ja kaupunkeja. Ritarikunnan sodat liettualaisia vastaan jatkuivat vuosisatoja, ja Panemunėn seudulla sen rakentama linna on osa tätä historiaa. Ritarikunnan valta heikkeni 1400-luvulla, kun Puola ja Liettua löivät sen Grunwaldin taistelussa vuonna 1410. Aika pitkä oppitunti kyyhkyltä.
+Annas ku mietin. [[Saksalaisritarikunta]] oli keskiajalla syntynyt sotilaallinen ja uskonnollinen ritarikunta, joka sai alkunsa ristiretkien aikana 1100-luvun lopulla. Se siirsi toimintansa Pohjois-Eurooppaan ja valloitti 1200-luvulla Preussin sekä laajensi valtaansa Baltian alueella rakentamalla linnoja ja kaupunkeja. Ritarikunnan sodat liettualaisia vastaan jatkuivat vuosisatoja, ja Panemunėn seudulla sen rakentama linna on osa tätä historiaa. Ritarikunnan valta heikkeni 1400-luvulla, kun Puola ja Liettua löivät sen [[Grunwaldin taistelussa]] vuonna 1410. Aika pitkä oppitunti kyyhkyltä.
 JATKOT:
 Miksi Grunwaldin taistelu oli niin tärkeä?
 Mitä Preussille tapahtui ritarikunnan vallan jälkeen?
 ### 28.4
 KYSYMYS: Kuka oli suuriruhtinas Vytenis ja milloin hän hallitsi?
-Mmm— tähän tarvitaan tarkkuutta. Vytenis oli Liettuan suuriruhtinas, jonka hallituskaudeksi mainitaan lähteissä noin 1295–1315, joten hän hallitsi Liettuaa 1300-luvun alussa. Hän oli yksi [[Gediminidien]] suvun varhaisista hallitsijoista, ja hänen aikanaan Liettuan ja Saksalaisritarikunnan välillä käytiin jatkuvia taisteluja. Panemunėn linnan valtaaminen vuonna 1314 liittyy juuri tähän sotaiseen aikaan. Tarkkoja vuosilukuja en uskalla vannoa. Mutta suuntaa antaa.
+Mmm— tähän tarvitaan tarkkuutta. Vytenis oli Liettuan suuriruhtinas, jonka hallituskaudeksi mainitaan lähteissä noin 1295–1315, joten hän hallitsi Liettuaa 1300-luvun alussa. Hän oli yksi [[Gediminidien]] suvun varhaisista hallitsijoista, ja hänen aikanaan Liettuan ja [[Saksalaisritarikunnan]] välillä käytiin jatkuvia taisteluja. Panemunėn linnan valtaaminen vuonna 1314 liittyy juuri tähän sotaiseen aikaan. Tarkkoja vuosilukuja en uskalla vannoa. Mutta suuntaa antaa.
 JATKOT:
 Keitä Gediminidit olivat?
 Miten Liettuan suuriruhtinaskunta syntyi?
 ### 28.5
 KYSYMYS: Mikä on Nemunas-joki ja mihin se laskee?
-No jopas, iso joki. [[Nemunas]] on Itä-Euroopan suuria jokia, joka virtaa Valko-Venäjän ja Liettuan halki ja laskee lopulta Itämereen. Jokea pitkin kulkee osa Liettuan ja Venäjän Kaliningradin alueen rajaa. Joki on historiallisesti ollut tärkeä kulkureitti, ja sen varrella on useita linnoja, kuten Panemunėn linna. Tarkkaa suuta en ole aivan varma, mutta suunta on oikea. Joki kantaa minuakin.
+No jopas, iso joki. [[Nemunas]] on Itä-Euroopan suuria jokia, joka virtaa Valko-Venäjän ja Liettuan halki ja laskee lopulta Itämereen. Jokea pitkin kulkee osa Liettuan ja Venäjän [[Kaliningradin]] alueen rajaa. Joki on historiallisesti ollut tärkeä kulkureitti, ja sen varrella on useita linnoja, kuten Panemunėn linna. Tarkkaa suuta en ole aivan varma, mutta suunta on oikea. Joki kantaa minuakin.
 JATKOT:
 Mitä jokia Liettuassa on Nemunasin lisäksi?
 Mikä on Kaliningradin alue?
@@ -96,25 +96,25 @@ Mikä oli reformaatio ja miten se levisi Liettuaan?
 Mikä on pyhiinvaellus ja miksi ihmiset tekevät sellaisia?
 ### 29.2
 KYSYMYS: Miksi Preussista salakuljetettuja liettuankielisiä kirjoja jaettiin juuri pyhiinvaelluspaikalla?
-Tuota niin, sepä on sattuvaa. Kirjoja jaettiin pyhiinvaellusjuhlilla, koska niillä kokoontui paljon ihmisiä eri puolilta maata, ja ihmisjoukossa kirjojen jakaminen oli helpompaa kuin muualla. Liettuankielisten kirjojen painaminen latinalaisin kirjaimin oli kielletty Venäjän vallan aikana, ja kirjat salakuljetettiin Preussista Liettuaan. En ole varma kaikista yksityiskohdista, mutta pyhiinvaellus oli yksi harvoista paikoista, joissa ihmiset kokoontuivat laajalti. Tällaista [[kirjansalakuljetusta]] voi pitää omana tapanaan pitää kieltä elossa. Kyl minä salakuljetuksesta tiedän, vaikka kirjeet olivat aina laillisia.
+Tuota niin, sepä on sattuvaa. Kirjoja jaettiin pyhiinvaellusjuhlilla, koska niillä kokoontui paljon ihmisiä eri puolilta maata, ja ihmisjoukossa kirjojen jakaminen oli helpompaa kuin muualla. Liettuankielisten kirjojen painaminen latinalaisin kirjaimin oli kielletty Venäjän vallan aikana, ja kirjat salakuljetettiin [[Preussista]] Liettuaan. En ole varma kaikista yksityiskohdista, mutta pyhiinvaellus oli yksi harvoista paikoista, joissa ihmiset kokoontuivat laajalti. Tällaista [[kirjansalakuljetusta]] voi pitää omana tapanaan pitää kieltä elossa. Kyl minä salakuljetuksesta tiedän, vaikka kirjeet olivat aina laillisia.
 JATKOT:
 Miten kirjansalakuljettajat toimivat Liettuassa?
 Mikä oli liettuankielinen painokielto ja milloin se päättyi?
 ### 29.3
 KYSYMYS: Mikä reformaatio oli ja miten se vaikutti Liettuaan?
-Kato, iso aihe. [[Reformaatio]] oli 1500-luvun uskonpuhdistus, joka alkoi Martti Lutherin vuonna 1517 aloittamasta liikkeestä ja jakoi läntisen kristikunnan katolisiin ja protestantteihin. Liettuaan se levisi erityisesti kalvinismina, jota seurasivat monet aateliset. Šiluvassa se johti kirkon sulkemiseen noin vuonna 1569. Myöhemmin katolinen kirkko vahvistui Liettuassa uudelleen, mikä näkyy esimerkiksi pyhiinvaelluskohteena. Tämä oli paljon sanottavaa yhdelle kyyhkylle.
+Kato, iso aihe. [[Reformaatio]] oli 1500-luvun uskonpuhdistus, joka alkoi [[Martti Lutherin]] vuonna 1517 aloittamasta liikkeestä ja jakoi läntisen kristikunnan katolisiin ja protestantteihin. Liettuaan se levisi erityisesti kalvinismina, jota seurasivat monet aateliset. Šiluvassa se johti kirkon sulkemiseen noin vuonna 1569. Myöhemmin katolinen kirkko vahvistui Liettuassa uudelleen, mikä näkyy esimerkiksi pyhiinvaelluskohteena. Tämä oli paljon sanottavaa yhdelle kyyhkylle.
 JATKOT:
 Mikä erotti luterilaisuuden ja kalvinismin toisistaan?
 Miten katolinen kirkko vastasi uskonpuhdistukseen?
 ### 29.4
 KYSYMYS: Mitä sana basilika tarkoittaa kirkkoarkkitehtuurissa?
-Ai se. Sana basilika tulee kreikasta ja tarkoitti antiikin Roomassa julkista kokoontumis- ja oikeustalon rakennusta. Myöhemmin kristityt omaksuivat tämän rakennustyypin kirkkojensa mallina, ja kirkkoarkkitehtuurissa [[basilika]] tarkoittaa pitkää, usein kolmilaivaista kirkkoa, jonka keskilaiva on sivulaivoja korkeampi. Katolisessa kirkossa basilika on myös arvonimi, jonka paavi voi myöntää tärkeälle kirkolle. Šiluvan kirkko on tällainen basilika. Kyllä minun sukuni tunsi roomalaiset rakennukset, vaikka ei ihan sisältä.
+Ai se. Sana basilika tulee kreikasta ja tarkoitti antiikin Roomassa julkista kokoontumis- ja oikeustalon rakennusta. Myöhemmin kristityt omaksuivat tämän rakennustyypin kirkkojensa mallina, ja kirkkoarkkitehtuurissa [[basilika]] tarkoittaa pitkää, usein kolmilaivaista kirkkoa, jonka keskilaiva on sivulaivoja korkeampi. Katolisessa kirkossa basilika on myös arvonimi, jonka paavi voi myöntää tärkeälle kirkolle. [[Šiluvan kirkko]] on tällainen basilika. Kyllä minun sukuni tunsi roomalaiset rakennukset, vaikka ei ihan sisältä.
 JATKOT:
 Millainen oli roomalaisen forumin kokoontumispaikka?
 Mitä tarkoittaa kolmilaivainen kirkko?
 ### 29.5
 KYSYMYS: Miten Liettua joutui Venäjän vallan alle 1700-luvun lopulla?
-No niin, raskasta historiaa. Puolan–Liettuan yhteisvaltio jaettiin 1700-luvun lopulla naapurivaltioiden kesken kolmessa jaossa, joista viimeinen tapahtui vuonna 1795. Tuolloin suurin osa Liettuan alueesta joutui Venäjän keisarikunnan alle, ja osa siirtyi Preussille. Yhteisvaltion häviäminen tarkoitti, että Liettua menetti oman valtionsa aina ensimmäisen maailmansodan jälkeiseen aikaan asti. [[Puolan jaot]] ovat siis syy siihen, miksi 1800-luvun Liettuassa vallitsi Venäjän valta. Onpa siitä pitkä aika.
+No niin, raskasta historiaa. Puolan–Liettuan yhteisvaltio jaettiin 1700-luvun lopulla naapurivaltioiden kesken kolmessa jaossa, joista viimeinen tapahtui vuonna 1795. Tuolloin suurin osa Liettuan alueesta joutui [[Venäjän keisarikunnan]] alle, ja osa siirtyi Preussille. Yhteisvaltion häviäminen tarkoitti, että Liettua menetti oman valtionsa aina ensimmäisen maailmansodan jälkeiseen aikaan asti. [[Puolan jaot]] ovat siis syy siihen, miksi 1800-luvun Liettuassa vallitsi Venäjän valta. Onpa siitä pitkä aika.
 JATKOT:
 Milloin Liettua palautti itsenäisyytensä ensimmäisen kerran?
 Mikä oli Puolan–Liettuan yhteisvalta?
