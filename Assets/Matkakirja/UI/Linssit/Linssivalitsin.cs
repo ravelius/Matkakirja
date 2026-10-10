@@ -434,7 +434,7 @@ namespace Matkakirja.Natiivi
             ["lentopeli"] = KatalogiJuuri + "lentopeli-havainne.jpg", ["lontoo"] = KatalogiJuuri + "lontoo-havainne.jpg",
             ["tavli"] = KatalogiJuuri + "tavli-havainne-v2.jpg", ["yokartta"] = KatalogiJuuri + "yokartta-havainne-v2.jpg",
             ["ihmisen-matka-2"] = KatalogiJuuri + "ihmisen-matka-2-foto-iso-v3.jpg", ["maapallon-vuosi"] = KatalogiJuuri + "maapallon-vuosi-foto-iso-v2.jpg",
-            ["mylly"] = KatalogiJuuri + "mylly-foto-iso-v2.jpg", ["tahdet"] = KatalogiJuuri + "tahdet-foto-iso-v3.jpg",
+            ["mylly"] = KatalogiJuuri + "mylly-foto-iso-v2.jpg", ["tahdet"] = KatalogiJuuri + "tahdet-foto-iso-v4.jpg",
             ["poikkileikkaus"] = KatalogiJuuri + "poikkileikkaus-foto-iso-v2.jpg", ["isoisa-1873"] = KatalogiJuuri + "isoisa-1873-foto-iso.jpg",
         }, "-foto-iso.jpg");
 
