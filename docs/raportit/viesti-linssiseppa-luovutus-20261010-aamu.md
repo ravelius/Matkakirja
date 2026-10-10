@@ -33,6 +33,19 @@ App-kopiot `proto-3d/lokit/linssiseppa-app/`: ls-ikkuna-175 (63648842a), maa-dtm
   (63648842a) / jälkeen (ce6c93110): sk-bulevardi-dtm.txt.
 - LISÄÄ MUISTIA -rivit lähetetty Natiivisepälle (ikkunat 2,36 Mt, DTM Pariisi 4,5 Mt, julkisivut 0).
 
+## Simuvuoro 05.23 (63648842a / ce6c93110), tulokset proto-3d/lokit/todistus-*-20261010-0523…
+- ls-aanet-174: EI TODENNETTU. A: Tukholman "opas kaupunkitila" ei nouse yli 1,2 km → vain puhdas tuuli (−38,5 LUFS); korkea tuuli
+  vaatii lähdön pallolaudalta kaukaa tai `opas kamera <lat> <lon> 2500 …` -korkeuden. B: `aani 20` BLOKKAA skenaarion → kuukausikomennot
+  menivät kaappauksen jälkeen (hiljainen −91 dB). Korjaus: komennot ennen/aikana raakana `linssi kaappaa 20 <nimi>` + odota, tai
+  todistusajoon ei-blokkaava kaappaus. Kellokoneisto latautui 15/15 (loki "vuosi: kellokoneisto 15/15 ladattu").
+
+- lentoaanet-174b: keinunta OK (4 s aalto lähdössä ja jarrutuksessa, ≤ 2/lento), kertoja −17,7 LUFS → PT:lle 05.4x.
+- julkisivu-*-175 (ikkunat mukana): Tukholma selvä, Pariisi hienovarainen, Riemukaari pieni (parempi kulma: opas kamera lähempää).
+  Kuvaparit pari-*.jpg kansioissa; yopari.py sai valinnaiset tekstit.
+- bulevardi ennen/jälkeen: DTM ladattu, ero ei näy (tasainen aukio). Tarvitaan kulma puiden alla kulkevalle kadulle (esim. Quai,
+  plataanirivit) → uusi pari.
+- Tila PT:lle lähetetty 05.4x; kuittaukset odottavat PT:tä.
+
 ## Jono
 
 1. Simuvuoron tulokset PT:lle: LS-äänet (LUFS/huiput, kellokoneisto ≤ 1/0,3 s), keinunta (vain lähdössä), julkisivu- ja ikkunayöparit
