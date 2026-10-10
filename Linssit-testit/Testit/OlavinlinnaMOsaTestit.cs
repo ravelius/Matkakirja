@@ -158,10 +158,11 @@ namespace Matkakirja.Linssit.Testit
         /// <summary>Kiinnijäänti JOKA reittipisteessä 22…91 (Siirtoseppä 10.10., PT erä 1; yllä viisi kohtaa koko loppureitillä): LR:n paketti
         /// ei voi rikkoa yhtäkään kohtaa huomaamatta. Tarkistuspisteestä ajetaan kiinnijäännin kohdan ohi, kunnes kukaan ei ole enää valpas
         /// (sen jälkeen tilanne on sama kuin ilman kiinnijääntiä), ilman uutta kiinnijääntiä; tarkistuspiste enintään PaluuMax pistettä taaempana
-        /// ja menetetty aika ≤ LisaMaxS (malli 4.3: kiinnijäänti lisää 1–1,5 min tyrmän kanssa). v47a: pahin 99 s (kiinni 68: valppaus 60 s
-        /// pisteen 67 torkkujan vieressä), pisin paluu 19 (huone 6: kaari-ovi 22 ja voudin sali 46). Harjalla (89–91) paluu tikkaiden
+        /// ja menetetty aika ≤ LisaMaxS (malli 4.3: kiinnijäänti lisää 1–1,5 min tyrmän kanssa). v47a: pahin 63 s (kiinni 60; ennen 99 s kiinni 68,
+        /// kun torkkuja valpastui ja näki pisteen 67 ohittajan), pisin paluu 19 (huone 6: kaari-ovi 22 ja voudin sali 46). Harjalla (89–91) paluu tikkaiden
         /// yläpäähän 88 (TikkaidenYlapaaTekeeTarkistuspisteen; ennen muurikäytävän pisteeseen 85).</summary>
-        public const double LisaMaxS = 120; public const int PaluuMax = 20;
+        public const int PaluuMax = 20;
+        public const double LisaMaxS = 80;   // malli 4.3 enintään 1,5 min − tyrmä ~10 s (ennen 120 s, kun pahin oli 99 s)
         /// AJETAAN VAIN PYYDETTÄESSÄ (PT 10.10.: ~150 s): `OLAVINLINNA_LAAJA=1 ./kaanna.sh KiinniJokaPisteessa` aina, kun Olavinlinnan paketti,
         /// reitti tai vartijat muuttuvat.
         [Testi] static void KiinniJokaPisteessa()

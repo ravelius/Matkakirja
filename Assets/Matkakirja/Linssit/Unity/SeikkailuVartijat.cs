@@ -635,7 +635,7 @@ namespace Matkakirja.Natiivi
             // vasta paon jälkeen (armoaika ja valppaus silloin).
             if (p != null && SeikkailuTyrma.Aloita(transform.parent, p, () => { Kiinni(v); }, kirjaa))
             {
-                foreach (var x in vartijat) { var xp = x.Agentti.transform.position; x.Aivot.Nollaa(xp.x, xp.z, valpas: true); x.EdellinenTila = VartijanTila.Partio; }
+                foreach (var x in vartijat) { var xp = x.Agentti.transform.position; x.Aivot.Nollaa(xp.x, xp.z, valpas: !x.Aivot.Torkkuu); x.EdellinenTila = VartijanTila.Partio; }
                 tyrmassa = true;
                 while (SeikkailuTyrma.Aktiivinen != null) yield return null;
                 tyrmassa = false; ote = null;
@@ -663,7 +663,9 @@ namespace Matkakirja.Natiivi
             }
             if (p != null) p.Siirra(tarkistus);
             armoAsti = Time.unscaledTime + ArmoS;   // E1-ajo 7.10.: tarkistuspiste vartijan näkyvissä → kiinni uudelleen heti
-            foreach (var x in vartijat) { var vp = x.Agentti.transform.position; x.Aivot.Nollaa(vp.x, vp.z, valpas: true); x.EdellinenTila = VartijanTila.Partio; }   // tyrmästä palatessa valppaus 60 s
+            // Torkkuva vartija ei valpastu muiden kiinniotosta (Siirtoseppä 10.10., PT): valppaana hän näki Tott-kammion reitin 0,7 m:n päästä,
+            // ja kiinni muuriportailla (68) maksoi ~100 s odotusta; nyt 63 s (OlavinlinnaMOsaTestit.KiinniJokaPisteessa).
+            foreach (var x in vartijat) { var vp = x.Agentti.transform.position; x.Aivot.Nollaa(vp.x, vp.z, valpas: !x.Aivot.Torkkuu); x.EdellinenTila = VartijanTila.Partio; }   // tyrmästä palatessa valppaus 60 s
         }
 
         /// <summary>Tila lokiin ("poikki vartijat"): tila, mittari ja paikka per vartija.</summary>
