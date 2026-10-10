@@ -243,6 +243,57 @@ namespace Matkakirja.Linssit.Testit
             }
         }
 
+        static System.Collections.Generic.List<string> KierrosTeokset()
+        {
+            var l = new System.Collections.Generic.List<string>();
+            var j = Matkakirja.Peli.MiniJson.Objekti(Matkakirja.Peli.MiniJson.Jasenna(File.ReadAllText(Polku("Assets", "Matkakirja", "Linssit", "Resources", "Museo", "alankomaat", "kierros.json"))));
+            foreach (var x in Matkakirja.Peli.MiniJson.TaulukkoTaiTyhja(Matkakirja.Peli.MiniJson.Kentta(j, "pysahdykset"))) l.Add((string)x);
+            return l;
+        }
+
+        [Testi] static void TeoskierrosKertojanTeoksilla()
+        {
+            // PT 11.10. 00.4x: kierros pysähtyy jokaisella kertojan teoksella (33; salissa 31), kamera teoksen katseluasennossa,
+            // matka ei kulje seinien läpi (osasta toiseen oviaukoista) ja muut teokset jäävät seinille.
+            var s = Alankomaat(); var lista = KierrosTeokset();
+            Oleta.Sama(33, lista.Count, "kierros.json: 33 kertojan teosta");
+            foreach (double ks in new[] { 2622.0 / 1206, 4.0 / 3 })
+            {
+                var k = new MuseoKierros(s, lista);
+                Oleta.Tosi(k.Puuttuvat.Count == 2 && k.Puuttuvat.Contains("RP-P-OB-612") && k.Puuttuvat.Contains("RP-P-OB-616"), "salista puuttuvat: " + string.Join(", ", k.Puuttuvat));
+                Oleta.Sama(31, k.Pysahdykset.Count, "pysähdys jokaisella salin kertojan teoksella");
+                k.SovitaPysahdykset(ks);
+                var nahdyt = new System.Collections.Generic.List<string>(); int versio = k.Versio; var ed = k.Nykyinen.P; double maxNopeus = 0;
+                var seinassa = new System.Collections.Generic.List<string>();
+                for (int i = 0; i < 60000 && k.Vaihe != MuseoVaihe.Valmis; i++)
+                {
+                    k.Paivita(0.05);
+                    maxNopeus = Math.Max(maxNopeus, (k.Nykyinen.P - ed).Pituus / 0.05); ed = k.Nykyinen.P;
+                    if (!k.Sallittu(k.Nykyinen.P) && seinassa.Count < 5) seinassa.Add($"{k.Kohta}: {k.Nykyinen.P}");
+                    if (k.Versio != versio)
+                    {
+                        versio = k.Versio;
+                        if (k.Vaihe != MuseoVaihe.Pysahtyy) continue;
+                        var r = k.NykyinenTeos; nahdyt.Add(r.Teos.Id);
+                        var a = k.Katseluasento(r, ks).Value;
+                        Oleta.Tosi((k.Nykyinen.P - a.P).Pituus < 1e-6, $"{r.Teos.Id} {ks:F2}: kamera katseluasennossa");
+                    }
+                }
+                Oleta.Tosi(seinassa.Count == 0, $"{ks:F2}: matka ei seinän läpi: " + string.Join("; ", seinassa));
+                Oleta.Tosi(k.Vaihe == MuseoVaihe.Valmis, $"{ks:F2}: kierros läpi");
+                var odotus = lista.FindAll(id => !k.Puuttuvat.Contains(id));
+                Oleta.Sama(string.Join(",", odotus), string.Join(",", nahdyt), $"{ks:F2}: pysähdykset kierros.json:n järjestyksessä");
+                Oleta.Tosi(maxNopeus < 3.5, $"{ks:F2}: kävelyvauhti (huippu {maxNopeus:F2} m/s)");
+            }
+            // Seuraava (⏭) ohittaa pysähdyksen, Siirry viimeiseen kulkee galleriaan oviaukoista.
+            var m = new MuseoKierros(s, lista); m.SovitaPysahdykset(4.0 / 3);
+            for (int i = 0; i < 600 && m.Vaihe != MuseoVaihe.Pysahtyy; i++) m.Paivita(0.05);
+            m.Seuraava(); Oleta.Tosi(m.Kohta == 1 && m.Vaihe == MuseoVaihe.Siirtyy, "⏭ seuraavaan");
+            m.Siirry(m.Pysahdykset.Count - 1); bool ulkona = false;
+            for (int i = 0; i < 20000 && m.Vaihe != MuseoVaihe.Pysahtyy; i++) { m.Paivita(0.05); ulkona |= !m.Sallittu(m.Nykyinen.P); }
+            Oleta.Tosi(!ulkona && m.NykyinenTeos.Teos.Id == "SK-C-5", "Siirry Yövartioon oviaukoista");
+        }
+
         [Testi] static void PysahdysKertojanMittainen()
         {
             var k = new MuseoKierros(Alankomaat());

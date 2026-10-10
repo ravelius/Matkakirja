@@ -127,10 +127,25 @@ namespace Matkakirja.Natiivi
             if (SaliGlb && !string.IsNullOrEmpty(KuvaJuuri)) o.StartCoroutine(rakennus.LataaSali(KuvaJuuri, SaliTaso, o.Kirjaa));
             // ASTC (MuseoTekstuurit) on ensisijainen; JPEG vain sen puuttuessa, ettei myöhässä valmistuva JPEG ylikirjoita seinätasoa.
             if (!Astc && !string.IsNullOrEmpty(KuvaJuuri)) o.StartCoroutine(rakennus.LataaKuvat(sali, KuvaJuuri, o.Kirjaa));
-            Kierros = new MuseoKierros(sali);
+            // Teoskierros (PT 11.10. 00.4x): pysähdys jokaisella kertojan teoksella kierros.json:n järjestyksessä; ilman sitä LR:n reitti.
+            List<string> kierrosTeokset = null;
+            var kierrosJson = Resources.Load<TextAsset>("Museo/alankomaat/kierros");
+            if (kierrosJson != null)
+            {
+                try
+                {
+                    kierrosTeokset = new List<string>();
+                    foreach (var x in Matkakirja.Peli.MiniJson.TaulukkoTaiTyhja(Matkakirja.Peli.MiniJson.Kentta(Matkakirja.Peli.MiniJson.Objekti(Matkakirja.Peli.MiniJson.Jasenna(kierrosJson.text)), "pysahdykset")))
+                        if (x is string id) kierrosTeokset.Add(id);
+                }
+                catch (Exception e) { kierrosTeokset = null; o.Kirjaa("museo: kierros.json virheellinen: " + e.Message); }
+                Resources.UnloadAsset(kierrosJson);
+            }
+            Kierros = new MuseoKierros(sali, kierrosTeokset);
+            if (Kierros.Puuttuvat.Count > 0) o.Kirjaa("museo: kierroksen teoksia ei salissa: " + string.Join(", ", Kierros.Puuttuvat));
             if (nayttamo.Kamera != null) Kierros.SovitaPysahdykset(nayttamo.Kamera.aspect);
             teosjarjestys.Clear();
-            foreach (int i in Kierros.Pysahdykset) teosjarjestys.Add(sali.HaeRipustus(sali.Reitti[i].Kohde)?.Teos.Id);
+            for (int k = 0; k < Kierros.Pysahdykset.Count; k++) teosjarjestys.Add(sali.HaeRipustus(Kierros.Pysahdys(k).Kohde)?.Teos.Id);
             tekstuurit = nayttamo.gameObject.AddComponent<MuseoTekstuurit>();
             // Paketit teoskohtaisesti kuva.paketista (Kuvapaikka.Paketti); kunnes MuseoTekstuurit lukee sen, juuri + "astc-v1/" + id.
             tekstuurit.Juuri = Astc && KuvaJuuri != null ? KuvaJuuri + "astc-v1/" : null;

@@ -9,6 +9,9 @@
 //  - Tauko pysäyttää ajan (kamera paikallaan), Seuraava/Edellinen hyppäävät pysähdyksestä toiseen kävellen, Vapaa luovuttaa
 //    kameran pelaajalle (VapaaLiike: eteen/sivulle/käännös/kallistus; seinät rajaavat, aukoista pääsee läpi), ja Kierrokselle
 //    kävelee nykyisestä paikasta seuraavaan pysähdykseen.
+//  - TEOSKIERROS (PT 11.10. 00.4x): kierros pysähtyy jokaisella kertojan teoksella (kierros.json, järjestys huoneittain);
+//    pysähdys on teoksen katseluasento, ja siirtymä kulkee suoraan huoneen poikki ja osasta toiseen oviaukkojen kautta
+//    (Ovet), joten muut teokset näkyvät seinillä matkalla. Ilman listaa kierros on LR:n reitti kuten ennen.
 // Puhdas C#: MuseoTestit.
 using System;
 using System.Collections.Generic;
@@ -33,6 +36,11 @@ namespace Matkakirja.Linssit.Museo
         public const double VapaaMs = 1.4, VapaaKaantoAs = 70, KallistusMax = 35;
 
         readonly Sali sali;
+        /// <summary>LR:n reitti (sali.Reitti) tai teoskierroksen pisteet: alku + yksi pysähdys teosta kohden.</summary>
+        readonly List<Reittipiste> reitti;
+        readonly bool teoskierros;
+        /// <summary>Teoskierroksen tunnukset, joita salissa ei ole ripustettuna (sovitin kirjaa).</summary>
+        public readonly List<string> Puuttuvat = new List<string>();
         /// <summary>Reittipisteiden indeksit, joissa on pysähdys (kohde + pysähdysaika).</summary>
         public readonly List<int> Pysahdykset = new List<int>();
         public MuseoVaihe Vaihe { get; private set; }
@@ -47,21 +55,44 @@ namespace Matkakirja.Linssit.Museo
 
         List<V3> polku = new List<V3>();
         List<double> polunMatka = new List<double>();
+        /// <summary>Kaaripituustaulukko: näytteen matka ja parametri u = väli + t (tasainen kävelyvauhti epätasaisillakin väleillä).</summary>
+        readonly List<double> naytteetS = new List<double>(), naytteetU = new List<double>();
         MuseoAsento lahto;
         double yaw, pitch;
 
-        public MuseoKierros(Sali s)
+        /// <param name="teokset">Teoskierros: pysähdykset näille teoksille tässä järjestyksessä (null = LR:n reitti).</param>
+        public MuseoKierros(Sali s, IList<string> teokset = null)
         {
             sali = s;
-            for (int i = 0; i < s.Reitti.Count; i++)
-                if (s.Reitti[i].Kohde != null && s.Reitti[i].PysahdysS > 0 && s.HaeRipustus(s.Reitti[i].Kohde) != null) Pysahdykset.Add(i);   // ripustamaton paikka tai veistos = kulkupiste
-            var alku = s.Reitti.Count > 0 ? s.Reitti[0] : new Reittipiste { P = new V3(0, SilmaY, 0), Katse = new V3(0, SilmaY, -5) };
+            if (teokset == null)
+            {
+                reitti = s.Reitti;
+                for (int i = 0; i < reitti.Count; i++)
+                    if (reitti[i].Kohde != null && reitti[i].PysahdysS > 0 && s.HaeRipustus(reitti[i].Kohde) != null) Pysahdykset.Add(i);   // ripustamaton paikka tai veistos = kulkupiste
+            }
+            else
+            {
+                teoskierros = true;
+                var a0 = s.Reitti.Count > 0 ? s.Reitti[0] : null;
+                reitti = new List<Reittipiste> { new Reittipiste { P = a0?.P ?? new V3(0, SilmaY, 0), Katse = a0?.Katse ?? new V3(0, SilmaY, -5) } };
+                foreach (var id in teokset)
+                {
+                    var r = s.Ripustukset.Find(x => x.Teos.Id == id);
+                    if (r == null) { Puuttuvat.Add(id); continue; }
+                    var a = Katseluasento(r, 4.0 / 3);   // sovitin sovittaa ruudun kuvasuhteeseen (SovitaPysahdykset)
+                    var c = r.Paikka.Keskipiste; var n = r.Paikka.Normaali;
+                    var p = a?.P ?? new V3(c.X + n.X * 1.5, SilmaY, c.Z + n.Z * 1.5);
+                    reitti.Add(new Reittipiste { P = p, Katse = a?.Katse ?? new V3(c.X, SilmaY, c.Z), PysahdysS = PysahdysMinS, Kohde = r.Paikka.Id });
+                    Pysahdykset.Add(reitti.Count - 1);
+                }
+            }
+            var alku = reitti.Count > 0 ? reitti[0] : new Reittipiste { P = new V3(0, SilmaY, 0), Katse = new V3(0, SilmaY, -5) };
             Nykyinen = new MuseoAsento(alku.P, alku.Katse);
             Kohta = 0;
             AloitaSiirtyma(0, 0);
         }
 
-        public Reittipiste Pysahdys(int k) => k >= 0 && k < Pysahdykset.Count ? sali.Reitti[Pysahdykset[k]] : null;
+        public Reittipiste Pysahdys(int k) => k >= 0 && k < Pysahdykset.Count ? reitti[Pysahdykset[k]] : null;
         /// <summary>Ripustus, jonka luona ollaan (vain pysähdyksessä tai sinne tullessa); vapaassa tilassa katsottu teos.</summary>
         public Ripustus NykyinenTeos => Vaihe == MuseoVaihe.Vapaa ? KatsottuTeos() : Pysahdys(Kohta) is { } r ? sali.HaeRipustus(r.Kohde) : null;
 
@@ -75,16 +106,18 @@ namespace Matkakirja.Linssit.Museo
             Kohta = k;
             int loppu = Pysahdykset[k];
             polku = new List<V3> { Nykyinen.P };
-            // Kulkupisteet edellisen ja seuraavan pysähdyksen välissä (taaksepäin hypättäessä samat käänteisesti).
-            if (edellinen < loppu) for (int i = edellinen + 1; i < loppu; i++) polku.Add(sali.Reitti[i].P);
-            else for (int i = edellinen - 1; i > loppu; i--) polku.Add(sali.Reitti[i].P);
-            polku.Add(sali.Reitti[loppu].P);
-            polku = Karsi(polku);
-            polunMatka = Matkat(polku);
+            // Kulkupisteet edellisen ja seuraavan pysähdyksen välissä (taaksepäin hypättäessä samat käänteisesti); teoskierroksella
+            // suoraan. Osasta toiseen aina oviaukkojen kautta (Ovet).
+            if (teoskierros) { }
+            else if (edellinen < loppu) for (int i = edellinen + 1; i < loppu; i++) polku.Add(reitti[i].P);
+            else for (int i = edellinen - 1; i > loppu; i--) polku.Add(reitti[i].P);
+            polku.Add(reitti[loppu].P);
+            polku = Karsi(Ovet(polku));
+            Mittaa();
             lahto = Nykyinen;
             Vaihe = MuseoVaihe.Siirtyy;
             VaiheenAika = 0;
-            VaiheenKesto = Math.Max(SiirtymaMinS, polunMatka[polunMatka.Count - 1] / KavelyMs + KaantoS(lahto, sali.Reitti[loppu]));
+            VaiheenKesto = Math.Max(SiirtymaMinS, polunMatka[polunMatka.Count - 1] / KavelyMs + KaantoS(lahto, reitti[loppu]));
             Versio++;
         }
 
@@ -103,25 +136,89 @@ namespace Matkakirja.Linssit.Museo
             return r;
         }
 
-        static List<double> Matkat(List<V3> p)
+        public const double OviM = 0.6;
+
+        /// <summary>Polku, jonka peräkkäiset pisteet eri osissa yhdistetään oviaukkojen kautta (lyhin ketju osasta toiseen): aukon
+        /// molemmin puolin piste OviM:n päässä seinästä aukon keskellä silmän korkeudella. Ei kulje seinän läpi.</summary>
+        List<V3> Ovet(List<V3> p)
         {
-            var m = new List<double> { 0 };
-            // Kaaren pituus näytteistä (Catmull–Rom), 8 näytettä väliä kohden.
-            for (int i = 0; i + 1 < p.Count; i++)
-            {
-                double s = 0; V3 ed = p[i];
-                for (int k = 1; k <= 8; k++) { var q = Kaari(p, i, k / 8.0); s += (q - ed).Pituus; ed = q; }
-                m.Add(m[i] + s);
-            }
-            return m;
+            var r = new List<V3>();
+            for (int i = 0; i < p.Count; i++) { if (i > 0) r.AddRange(Ovipisteet(p[i - 1], p[i])); r.Add(p[i]); }
+            return r;
         }
 
-        /// <summary>Uniform Catmull–Rom välillä i → i+1 (päätepisteet toistettuina).</summary>
+        List<V3> Ovipisteet(V3 a, V3 b)
+        {
+            var r = new List<V3>();
+            Osa oa = sali.OsaPisteessa(a), ob = sali.OsaPisteessa(b);
+            if (oa == null || ob == null || oa == ob) return r;
+            var edel = new Dictionary<Osa, (Osa Osa, Aukko Aukko)> { [oa] = (null, null) };
+            var jono = new Queue<Osa>(); jono.Enqueue(oa);
+            while (jono.Count > 0 && !edel.ContainsKey(ob))
+            {
+                var o = jono.Dequeue();
+                foreach (var au in sali.Aukot)
+                {
+                    if (au.Osat.Length < 2) continue;
+                    Osa x = sali.HaeOsa(au.Osat[0]), y = sali.HaeOsa(au.Osat[1]);
+                    var m = o == x ? y : o == y ? x : null;
+                    if (m == null || edel.ContainsKey(m)) continue;
+                    edel[m] = (o, au); jono.Enqueue(m);
+                }
+            }
+            if (!edel.ContainsKey(ob)) return r;
+            var ketju = new List<(Osa Mista, Aukko Aukko)>();
+            for (var o = ob; edel[o].Osa != null; o = edel[o].Osa) ketju.Add(edel[o]);
+            ketju.Reverse();
+            foreach (var (mista, au) in ketju)
+            {
+                var o0 = sali.HaeOsa(au.Osat[0]);
+                bool xs = au.Seina == "-x" || au.Seina == "+x";
+                double taso = au.Seina switch { "-x" => o0.X0, "+x" => o0.X1, "-z" => o0.Z0, _ => o0.Z1 };
+                double sis = au.Seina.StartsWith("-") ? 1 : -1;   // osa 0:n sisäpuoli
+                double t0 = taso + sis * OviM, t1 = taso - sis * (au.Syvyys + OviM);
+                V3 P(double t) => xs ? new V3(t, SilmaY, au.Keskipiste) : new V3(au.Keskipiste, SilmaY, t);
+                bool osasta0 = mista == o0;
+                r.Add(P(osasta0 ? t0 : t1)); r.Add(P(osasta0 ? t1 : t0));
+            }
+            return r;
+        }
+
+        const int NaytteitaValilla = 16;
+
+        /// <summary>Polun kaaren pituus näytteistä (välien loppumatkat polunMatkaan ja kaaripituustaulukko Polullalle).</summary>
+        void Mittaa()
+        {
+            polunMatka = new List<double> { 0 }; naytteetS.Clear(); naytteetU.Clear();
+            naytteetS.Add(0); naytteetU.Add(0);
+            double s = 0;
+            for (int i = 0; i + 1 < polku.Count; i++)
+            {
+                V3 ed = polku[i];
+                for (int k = 1; k <= NaytteitaValilla; k++)
+                {
+                    double t = k / (double)NaytteitaValilla; var q = Kaari(polku, i, t);
+                    s += (q - ed).Pituus; ed = q;
+                    naytteetS.Add(s); naytteetU.Add(i + t);
+                }
+                polunMatka.Add(s);
+            }
+        }
+
+        /// <summary>Sentripetaalinen Catmull–Rom välillä i → i+1 (ei silmukoita eikä ylitystä, vaikka välit ovat eri mittaisia, esim.
+        /// oviaukon pisteparit huoneen poikki kulkevien välien välissä); päätepisteissä peilattu apupiste.</summary>
         static V3 Kaari(List<V3> p, int i, double t)
         {
-            V3 p0 = p[Math.Max(0, i - 1)], p1 = p[i], p2 = p[Math.Min(p.Count - 1, i + 1)], p3 = p[Math.Min(p.Count - 1, i + 2)];
-            double t2 = t * t, t3 = t2 * t;
-            return 0.5 * ((2 * p1) + (p2 - p0) * t + (2 * p0 - 5 * p1 + 4 * p2 - p3) * t2 + (3 * p1 - p0 - 3 * p2 + p3) * t3);
+            V3 p1 = p[i], p2 = p[Math.Min(p.Count - 1, i + 1)];
+            V3 p0 = i > 0 ? p[i - 1] : 2 * p1 - p2, p3 = i + 2 < p.Count ? p[i + 2] : 2 * p2 - p1;
+            double d01 = Math.Sqrt(Math.Max(1e-6, (p1 - p0).Pituus)), d12 = Math.Sqrt(Math.Max(1e-6, (p2 - p1).Pituus)), d23 = Math.Sqrt(Math.Max(1e-6, (p3 - p2).Pituus));
+            double t0 = 0, t1 = d01, t2 = t1 + d12, t3 = t2 + d23, u = t1 + t * (t2 - t1);
+            V3 a1 = (t1 - u) / (t1 - t0) * p0 + (u - t0) / (t1 - t0) * p1;
+            V3 a2 = (t2 - u) / (t2 - t1) * p1 + (u - t1) / (t2 - t1) * p2;
+            V3 a3 = (t3 - u) / (t3 - t2) * p2 + (u - t2) / (t3 - t2) * p3;
+            V3 b1 = (t2 - u) / (t2 - t0) * a1 + (u - t0) / (t2 - t0) * a2;
+            V3 b2 = (t3 - u) / (t3 - t1) * a2 + (u - t1) / (t3 - t1) * a3;
+            return (t2 - u) / (t2 - t1) * b1 + (u - t1) / (t2 - t1) * b2;
         }
 
         /// <summary>Piste polulla matkan s kohdalla (ja suunta eteenpäin).</summary>
@@ -129,10 +226,12 @@ namespace Matkakirja.Linssit.Museo
         {
             double L = polunMatka[polunMatka.Count - 1];
             s = Math.Max(0, Math.Min(L, s));
-            int i = 0;
-            while (i + 2 < polunMatka.Count && polunMatka[i + 1] < s) i++;
-            double seg = polunMatka[i + 1] - polunMatka[i];
-            return Kaari(polku, i, seg < 1e-9 ? 1 : (s - polunMatka[i]) / seg);
+            int lo = 0, hi = naytteetS.Count - 1;
+            while (hi - lo > 1) { int m = (lo + hi) / 2; if (naytteetS[m] < s) lo = m; else hi = m; }
+            double ds = naytteetS[hi] - naytteetS[lo];
+            double u = naytteetU[lo] + (ds < 1e-9 ? 1 : (s - naytteetS[lo]) / ds) * (naytteetU[hi] - naytteetU[lo]);
+            int i = Math.Min(polku.Count - 2, Math.Max(0, (int)Math.Floor(u)));
+            return Kaari(polku, i, Math.Max(0, Math.Min(1, u - i)));
         }
 
         public void Paivita(double dt)
@@ -141,7 +240,7 @@ namespace Matkakirja.Linssit.Museo
             VaiheenAika += dt;
             if (Vaihe == MuseoVaihe.Siirtyy)
             {
-                var kohde = sali.Reitti[Pysahdykset[Kohta]];
+                var kohde = reitti[Pysahdykset[Kohta]];
                 double e = Kamerakayrat.Pehmea(Math.Min(1, VaiheenAika / VaiheenKesto));
                 double L = polunMatka[polunMatka.Count - 1];
                 var p = Polulla(e * L);
@@ -193,15 +292,15 @@ namespace Matkakirja.Linssit.Museo
             int paras = Kohta; double pm = double.MaxValue;
             for (int k = 0; k < Pysahdykset.Count; k++)
             {
-                double d = (sali.Reitti[Pysahdykset[k]].P - Nykyinen.P).Pituus;
+                double d = (reitti[Pysahdykset[k]].P - Nykyinen.P).Pituus;
                 if (d < pm) { pm = d; paras = k; }
             }
             Vaihe = MuseoVaihe.Siirtyy;
             AloitaSiirtyma(paras, Pysahdykset[paras]);
             // Polku suoraan nykyisestä paikasta (ei edellisen pysähdyksen kulkupisteitä).
-            polku = Karsi(new List<V3> { Nykyinen.P, sali.Reitti[Pysahdykset[paras]].P });
-            polunMatka = Matkat(polku);
-            VaiheenKesto = Math.Max(SiirtymaMinS, polunMatka[1] / KavelyMs + KaantoS(Nykyinen, sali.Reitti[Pysahdykset[paras]]));
+            polku = Karsi(Ovet(new List<V3> { Nykyinen.P, reitti[Pysahdykset[paras]].P }));
+            Mittaa();
+            VaiheenKesto = Math.Max(SiirtymaMinS, polunMatka[polunMatka.Count - 1] / KavelyMs + KaantoS(Nykyinen, reitti[Pysahdykset[paras]]));
         }
 
         /// <summary>Vapaa liike: eteen (m/s-osuus −1…1), sivulle, käännös (aste-osuus), kallistus; dt sekunteina.
@@ -224,9 +323,9 @@ namespace Matkakirja.Linssit.Museo
         // --- Katseluasento (PT 11.10. 00.3x KIIRE, omistaja TF 180: "Taulut näkyvät liian kaukaa ja matalalta") -----------------
         /// <summary>Museokameran pystysuora näkökenttä (MuseoNayttamo.Kamera.fieldOfView).</summary>
         public const double KameraFovAste = 58;
-        /// <summary>Teos kehyksineen täyttää tämän osan ruudun korkeudesta (enintään TayttoLeveys leveydestä) ja sen keskipiste on
+        /// <summary>Teos kehyksineen täyttää tämän osan ruudun korkeudesta (PT 11.10.: 60–70 %; enintään TayttoLeveys leveydestä) ja sen keskipiste on
         /// KeskiY:n kohdalla ylhäältä: vapaa kaista nimikyltin (ylin ~15 %) ja ohjausnappien (alin ~20 %) välissä.</summary>
-        public const double TayttoKorkeus = 0.60, TayttoLeveys = 0.80, KeskiY = 0.47, LahinM = 0.45, PaspisM = 0.065;   // LahinM: seinävara 0,35 m + 0,1 (pienet grafiikat lähelle)
+        public const double TayttoKorkeus = 0.65, TayttoLeveys = 0.80, KeskiY = 0.48, LahinM = 0.45, PaspisM = 0.065;   // LahinM: seinävara 0,35 m + 0,1 (pienet grafiikat lähelle)
         readonly Dictionary<int, (V3 P, V3 Katse)> lrAsennot = new Dictionary<int, (V3, V3)>();
         public double Kuvasuhde { get; private set; }
 
@@ -269,14 +368,14 @@ namespace Matkakirja.Linssit.Museo
             Kuvasuhde = kuvasuhde;
             foreach (int i in Pysahdykset)
             {
-                var rp = sali.Reitti[i];
+                var rp = reitti[i];
                 if (!lrAsennot.TryGetValue(i, out var lr)) lrAsennot[i] = lr = (rp.P, rp.Katse);
                 var a = Katseluasento(sali.HaeRipustus(rp.Kohde), kuvasuhde);
                 rp.P = a?.P ?? lr.P; rp.Katse = a?.Katse ?? lr.Katse;
             }
-            if (Vaihe == MuseoVaihe.Pysahtyy) { var k = sali.Reitti[Pysahdykset[Kohta]]; Nykyinen = new MuseoAsento(k.P, k.Katse); Versio++; }
+            if (Vaihe == MuseoVaihe.Pysahtyy) { var k = reitti[Pysahdykset[Kohta]]; Nykyinen = new MuseoAsento(k.P, k.Katse); Versio++; }
             else if (Vaihe == MuseoVaihe.Siirtyy && polku != null && polku.Count > 1)
-            { polku[polku.Count - 1] = sali.Reitti[Pysahdykset[Kohta]].P; polunMatka = Matkat(polku); }   // matkalla oleva siirtymä uuteen päätepisteeseen
+            { polku[polku.Count - 1] = reitti[Pysahdykset[Kohta]].P; Mittaa(); }   // matkalla oleva siirtymä uuteen päätepisteeseen
         }
 
         /// <summary>QA (kuva-arkki kaikista teoksista): vapaa kulku teoksen katseluasentoon nykyisellä kuvasuhteella.</summary>
