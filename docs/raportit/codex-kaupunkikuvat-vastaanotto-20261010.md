@@ -18,8 +18,8 @@ Tekijä: Sisältökirjuri. Tilaus: Päätoimittaja 10.10.2026 ~09.0x. Lähde: ha
 | barcelona Q850593 tulostaulu 1930 | Mustavalkoinen sävytys on tarkoituksellinen (arkistotyyli); liitu­taulussa ei luettavaa tekstiä. |
 | barcelona Q48435 raitiovaunu 1926 | Kaatunut henkilö ihmisryhmän keskellä, kasvot eivät näy; ei verta. Sagrada Família jätetty pois (manifestin mukaan). |
 | madrid Q1537446 Cibeles-juhla | Valkoiseen pukeutunut hahmo patsaan päällä; ei logoja. |
-| tower-christian Q83125 Tower Bridge -bussi 1952 | Linja-auto sillan alemmalla tasolla (silta kiinni): historiallinen tilanne on tulkinta, ei dokumentti. |
-| kosice Q133708, bergen Q257558, madrid Q171517 | Palo ja savu (Fantoft 1992, Alcázar 1734): sallittua, ei uhreja. |
+| tower-christian Q83125 Tower Bridge -bussi 1952 | Historiallisen tapahtuman tulkinta, ei dokumentti; sillan ja bussin asettelu on kuvittelua. |
+| bergen Q257558, madrid Q171517, luxemburg Q1205254, lissabon Q1470414, venetsia Q223942 | Palo, savu tai sortuva rakenne (Fantoft 1992, Alcázar 1734, Luxemburg 1554, Lissabon 1755, La Fenice 1836): sallittua, ei uhreja eikä verta. |
 
 Kuvakohtaiset rajat (tarkka julkisivu, väkijoukko, mitat, historiallinen tulkinta) ovat Codexin kuittauksissa (`posti/codex-fable-*.md`, kohta "Kuvakohtaiset rajat"); kuvatekstin on päätyttävä sanaan "Havainnekuva." (manifestin `kuvateksti`).
 
@@ -29,7 +29,7 @@ Tilattu → toimitettu (poisjättöjä): Amsterdam 7→6 (1), Ateena 6→1 (5), 
 
 ## Poisjättöjen syyt (46 kohtaa) ja ehdotus
 
-1. **Museokokoelman teoksen jäljennös** (noin 25: Ateenan ostrakon, mitali ja karyatidi; Firenzen David-patsaat; Kreetan kaikki neljä; Edinburghin Lewisin šakkinappulat; Krakovan Wawelin päät ja Jagellonien maapallo; Oslon Oseberg; Tukholman Erikin kruunu ja Vasa; Helsingin Kalevala-freskot). Syy on omistajan sääntö (ei museoteosten kopioita), ei Codexin virhe. → **Ei uudelleentilausta.** Esittelytekstien ankkureissa nämä kohdat jäävät ilman kuvaa tai saavat Commons-kuvan, jos vapaa kuva löytyy.
+1. **Museokokoelman teoksen jäljennös** (suurin osa poisjätöistä: Ateenan ostrakon, mitali ja karyatidi; Firenzen David-patsaat; Kreetan kaikki neljä; Edinburghin Lewisin šakkinappulat; Krakovan Wawelin päät ja Jagellonien maapallo; Oslon Oseberg; Tukholman Erikin kruunu ja Vasa; Helsingin Kalevala-freskot). Syy on omistajan sääntö (ei museoteosten kopioita), ei Codexin virhe. → **Ei uudelleentilausta.** Esittelytekstien ankkureissa nämä kohdat jäävät ilman kuvaa tai saavat Commons-kuvan, jos vapaa kuva löytyy.
 2. **Geometria tai luku ei täsmää** (Sevillan Giralda kolme palloa neljän sijaan, Maestranzan 30 sivua, Torre del Oro kaksi kerrosta 1248; Krakovan kellonsoittajat 10 eikä 12; Oslon kellopeli 48 eikä 49; Firenzen Tribuna). → **Mahdollinen uusinta, jos tekstin ankkuri muotoillaan pehmeämmin** (ei tarkkoja lukuja kuvassa) tai kohta jätetään ilman kuvaa. Sevilla on ainoa kaupunki, jolla ei ole yhtään kuvaa.
 3. **Aikakausirajaus ei toteutunut** (Ateenan Athene ja Triton, Venetsian rutto-kulkue, Barcelonan Sant Pau 45°, Helsingin apostolit). → Ei uudelleentilausta ennen tekstimuutosta.
 4. **Moderaatio hylkäsi** (Helsingin Havis Amanda) → ei yritystä uudelleen.
