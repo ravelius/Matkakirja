@@ -7,10 +7,10 @@ Millainen kaupunki Turnhout on nykyisin?
 
 ### 26.2
 KYSYMYS: Mikä teollisuus korvasi vuodevaatteiden kudonnan 1800-luvun alussa?
-No niin, tost minä osaan kertoo. Myöhäiskeskiajalla Turnhout oli tunnettu vuodevaatteiden kutomisesta ja [[pellavakauppa]]sta, mutta 1800-luvun alussa nämä korvautuivat paperiin perustuvilla teollisuudenaloilla. Näiden alojen perustajina pidetään [[Pieter Corbeelsia]] ja [[Philippus Jacobus Brepolsia]]. Paperia minä oon kantanut enemmän ku mikään.
+No niin, tost minä osaan kertoo. Väitettä, että jokin ala olisi korvannut kudonnan, en voi vahvistaa. Varmaa on, että 1800-luvun alussa Turnhoutissa nousi painoala, jonka kirjapainajina pidetään [[Pieter Corbeelsia]] ja [[Philippus Jacobus Brepolsia]]. Painotyö sopii hyvin kaupungin pelikorttiperinteeseen.
 JATKOT:
-Miten paperia valmistettiin 1800-luvun alussa?
-Mihin pellavaa käytettiin ennen vanhaan?
+Mitä Turnhoutissa painettiin 1800-luvun alussa?
+Miten kirjapaino muutti Euroopan tiedonvälitystä?
 
 ### 26.3
 KYSYMYS: Milloin [[Turnhoutin]] kanava kaivettiin?
@@ -29,10 +29,10 @@ Mitä vapaakaupungin oikeudet tarkoittivat keskiajalla?
 Keitä Brabantin herttuat olivat?
 
 ### 26.5
-KYSYMYS: Keitä pidetään Turnhoutin paperiteollisuuden perustajina?
-Joo, tän minä tiedän. Turnhoutin paperiin perustuvien teollisuudenalojen perustajina pidetään [[Pieter Corbeelsia]] ja [[Philippus Jacobus Brepolsia]]. Heidän alansa korvasivat 1800-luvun alussa kaupungin aiemmat elinkeinot, vuodevaatteiden kudonnan ja [[pellavakauppa]]n. Nimet kannattaa muistaa, minä muistin ne ihan ensi yrittämällä.
+KYSYMYS: Keitä pidetään Turnhoutin painoalan kirjapainajina?
+Joo, tän minä tiedän. Turnhoutin painoalan kirjapainajina pidetään [[Pieter Corbeelsia]] ja [[Philippus Jacobus Brepolsia]]. He vaikuttivat kaupungissa 1800-luvun alussa. Nimet kannattaa muistaa, minä muistin ne ihan ensi yrittämällä.
 JATKOT:
-Mitä paperiin perustuvat teollisuudenalat valmistavat?
+Mitä kirjapainoissa valmistettiin 1800-luvun alussa?
 Miten Turnhout eroaa muista Flanderin kaupungeista?
 
 ### 27.1
@@ -133,15 +133,15 @@ Miten sokerijuurikkaasta saadaan sokeria?
 Miten teollistuminen muutti työväestön elämää Belgiassa?
 
 ### 29.4
-KYSYMYS: Milloin Hasseltin vanhin tislaamo perustettiin?
-Ai se. Hasseltin vanhin säilynyt [[tislaamo]] perustettiin vuonna 1803 entiselle nunnaluostarin maatilalle. Omistajaperhe [[Stellingwerff]] antoi rakennukselle uusklassisen julkisivun vuonna 1850. Nykyisin rakennuksessa toimii jenevermuseo. Kovasti kestävä talo, ei ihme että se on yhä pystyssä.
+KYSYMYS: Milloin Hasseltin tislaamo perustettiin?
+Ai se. Hasseltin [[tislaamo]], Belgian ensimmäinen teollisuusarkeologinen monumentti (1975), perustettiin vuonna 1803 entiselle nunnaluostarin maatilalle. Omistajaperhe [[Stellingwerff]] antoi rakennukselle uusklassisen julkisivun vuonna 1850. Nykyisin rakennuksessa toimii jenevermuseo. Kovasti kestävä talo, ei ihme että se on yhä pystyssä.
 JATKOT:
 Miten tislaus toimii?
 Mitä jenevermuseossa voi nähdä?
 
 ### 29.5
-KYSYMYS: Mitä [[Hasseltin]] vanhimmassa tislaamossa on nykyisin?
-Mmm— Nykyisin Hasseltin vanhimmassa tislaamossa toimii [[jenevermuseo]]. Rakennus perustettiin vuonna 1803 entiselle [[nunnaluostarin]] maatilalle, ja omistajaperhe antoi sille uusklassisen julkisivun vuonna 1850. Vanha tislaamo on siis säilynyt käyttöön museona. Minä pidän siitä, että vanhat talot saavat uuden tehtävän.
+KYSYMYS: Mitä [[Hasseltin]] tislaamossa on nykyisin?
+Mmm— Nykyisin Hasseltin tislaamossa, Belgian ensimmäisessä teollisuusarkeologisessa monumentissa (1975), toimii [[jenevermuseo]]. Rakennus perustettiin vuonna 1803 entiselle [[nunnaluostarin]] maatilalle, ja omistajaperhe antoi sille uusklassisen julkisivun vuonna 1850. Vanha tislaamo on siis säilynyt käyttöön museona. Minä pidän siitä, että vanhat talot saavat uuden tehtävän.
 JATKOT:
 Millaisia museoita Limburgin maakunnassa on?
 Miten vanhoja teollisuusrakennuksia on muutettu museoiksi?

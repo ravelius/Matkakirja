@@ -723,7 +723,7 @@
   "kohde": "kohde:hahmotelma-tournai",
   "kysymys": "Kuinka monta kellotornia Tournain tuomiokirkon poikkilaivassa on?",
   "uusi": false,
-  "vastaus": "No niin, tornit kiinnostaa kyyhkyä aina. Tournain Neitsyt Marian tuomiokirkon poikkilaivassa on viiden kellotornin ryhmä, joka on rakennuksen erottuvin osa. Sitä reunustavat tornit nousevat 83 metrin korkeuteen. Kirkon rakentaminen alkoi 1100-luvulla, ja se on ollut [[Wallonian]] merkittävä perintökohde vuodesta 1936 ja [[Unescon]] maailmanperintökohde vuodesta 2000. Viis tornia, siit on kyyhkyn hyvä katsella kaupunkia.",
+  "vastaus": "No niin, tornit kiinnostaa kyyhkyä aina. Tournain Neitsyt Marian tuomiokirkon poikkilaivassa on viiden kellotornin ryhmä, joka on rakennuksen erottuvin osa. Sitä reunustavat tornit nousevat 83 metrin korkeuteen. Kirkon rakentaminen alkoi 1100-luvulla, ja se on ollut monumenttisuojelun piirissä vuodesta 1936, [[Wallonian]] poikkeuksellista perintöä vuodesta 1993 ja [[Unescon]] maailmanperintökohde vuodesta 2000. Viis tornia, siit on kyyhkyn hyvä katsella kaupunkia.",
   "linkit": [
    "Wallonian",
    "Unescon"
@@ -779,7 +779,7 @@
   "kohde": "kohde:hahmotelma-tournai",
   "kysymys": "Milloin Tournain tuomiokirkko pääsi Unescon maailmanperintöön?",
   "uusi": true,
-  "vastaus": "Mmm— tän muistan hyvin. Tournain tuomiokirkko on ollut [[Unescon]] maailmanperintökohde vuodesta 2000. Jo aiemmin, vuodesta 1936, se on ollut [[Wallonian]] merkittävä perintökohde. Ei paha ura kirkolle, melkein yhtä pitkä ku sukuni.",
+  "vastaus": "Mmm— tän muistan hyvin. Tournain tuomiokirkko on ollut [[Unescon]] maailmanperintökohde vuodesta 2000. Jo aiemmin se on ollut monumenttisuojelun piirissä vuodesta 1936 ja [[Wallonian]] poikkeuksellista perintöä vuodesta 1993. Ei paha ura kirkolle, melkein yhtä pitkä ku sukuni.",
   "linkit": [
    "Unescon",
    "Wallonian"
@@ -1065,7 +1065,7 @@
   "kohde": "kohde:hahmotelma-chimay",
   "kysymys": "Millaisia kilpa-ajoja Chimayssa on ajettu?",
   "uusi": true,
-  "vastaus": "Kato, kilpa-ajot. Chimayn kaupungissa on perinteisesti ajettu vuotuisia kilpa-ajoja [[katuradalla]]. Kilpailuja on ajettu [[Grand Prix]] -luokissa 1920-luvulta 1960-luvulle. Itse kuljen kyl mieluummin ilmaa pitkin.",
+  "vastaus": "Kato, kilpa-ajot. Chimayn kaupungissa on perinteisesti ajettu vuotuisia kilpa-ajoja [[katuradalla]]. Kilpailuja ajettiin vuosina 1926–1972. [[Grand Prix]] -luokka eli F1-luokka oli mukana vain vuosina 1930–1954, ja 1960-luvulla ajettiin Formula Junior- ja F3-luokissa. Itse kuljen kyl mieluummin ilmaa pitkin.",
   "linkit": [
    "katuradalla",
    "Grand Prix"
@@ -1865,15 +1865,14 @@
   "kohde": "kohde:hahmotelma-turnhout",
   "kysymys": "Mikä teollisuus korvasi vuodevaatteiden kudonnan 1800-luvun alussa?",
   "uusi": false,
-  "vastaus": "No niin, tost minä osaan kertoo. Myöhäiskeskiajalla Turnhout oli tunnettu vuodevaatteiden kutomisesta ja [[pellavakauppa]]sta, mutta 1800-luvun alussa nämä korvautuivat paperiin perustuvilla teollisuudenaloilla. Näiden alojen perustajina pidetään [[Pieter Corbeelsia]] ja [[Philippus Jacobus Brepolsia]]. Paperia minä oon kantanut enemmän ku mikään.",
+  "vastaus": "No niin, tost minä osaan kertoo. Väitettä, että jokin ala olisi korvannut kudonnan, en voi vahvistaa. Varmaa on, että 1800-luvun alussa Turnhoutissa nousi painoala, jonka kirjapainajina pidetään [[Pieter Corbeelsia]] ja [[Philippus Jacobus Brepolsia]]. Painotyö sopii hyvin kaupungin pelikorttiperinteeseen.",
   "linkit": [
-   "pellavakauppa",
    "Pieter Corbeelsia",
    "Philippus Jacobus Brepolsia"
   ],
   "jatkot": [
-   "Miten paperia valmistettiin 1800-luvun alussa?",
-   "Mihin pellavaa käytettiin ennen vanhaan?"
+   "Mitä Turnhoutissa painettiin 1800-luvun alussa?",
+   "Miten kirjapaino muutti Euroopan tiedonvälitystä?"
   ]
  },
  {
@@ -1907,16 +1906,15 @@
  },
  {
   "kohde": "kohde:hahmotelma-turnhout",
-  "kysymys": "Keitä pidetään Turnhoutin paperiteollisuuden perustajina?",
+  "kysymys": "Keitä pidetään Turnhoutin painoalan kirjapainajina?",
   "uusi": true,
-  "vastaus": "Joo, tän minä tiedän. Turnhoutin paperiin perustuvien teollisuudenalojen perustajina pidetään [[Pieter Corbeelsia]] ja [[Philippus Jacobus Brepolsia]]. Heidän alansa korvasivat 1800-luvun alussa kaupungin aiemmat elinkeinot, vuodevaatteiden kudonnan ja [[pellavakauppa]]n. Nimet kannattaa muistaa, minä muistin ne ihan ensi yrittämällä.",
+  "vastaus": "Joo, tän minä tiedän. Turnhoutin painoalan kirjapainajina pidetään [[Pieter Corbeelsia]] ja [[Philippus Jacobus Brepolsia]]. He vaikuttivat kaupungissa 1800-luvun alussa. Nimet kannattaa muistaa, minä muistin ne ihan ensi yrittämällä.",
   "linkit": [
    "Pieter Corbeelsia",
-   "Philippus Jacobus Brepolsia",
-   "pellavakauppa"
+   "Philippus Jacobus Brepolsia"
   ],
   "jatkot": [
-   "Mitä paperiin perustuvat teollisuudenalat valmistavat?",
+   "Mitä kirjapainoissa valmistettiin 1800-luvun alussa?",
    "Miten Turnhout eroaa muista Flanderin kaupungeista?"
   ]
  },
@@ -2107,9 +2105,9 @@
  },
  {
   "kohde": "kohde:hahmotelma-hasselt-jenever",
-  "kysymys": "Milloin Hasseltin vanhin tislaamo perustettiin?",
+  "kysymys": "Milloin Hasseltin tislaamo perustettiin?",
   "uusi": true,
-  "vastaus": "Ai se. Hasseltin vanhin säilynyt [[tislaamo]] perustettiin vuonna 1803 entiselle nunnaluostarin maatilalle. Omistajaperhe [[Stellingwerff]] antoi rakennukselle uusklassisen julkisivun vuonna 1850. Nykyisin rakennuksessa toimii jenevermuseo. Kovasti kestävä talo, ei ihme että se on yhä pystyssä.",
+  "vastaus": "Ai se. Hasseltin [[tislaamo]], Belgian ensimmäinen teollisuusarkeologinen monumentti (1975), perustettiin vuonna 1803 entiselle nunnaluostarin maatilalle. Omistajaperhe [[Stellingwerff]] antoi rakennukselle uusklassisen julkisivun vuonna 1850. Nykyisin rakennuksessa toimii jenevermuseo. Kovasti kestävä talo, ei ihme että se on yhä pystyssä.",
   "linkit": [
    "tislaamo",
    "Stellingwerff"
@@ -2121,9 +2119,9 @@
  },
  {
   "kohde": "kohde:hahmotelma-hasselt-jenever",
-  "kysymys": "Mitä [[Hasseltin]] vanhimmassa tislaamossa on nykyisin?",
+  "kysymys": "Mitä [[Hasseltin]] tislaamossa on nykyisin?",
   "uusi": true,
-  "vastaus": "Mmm— Nykyisin Hasseltin vanhimmassa tislaamossa toimii [[jenevermuseo]]. Rakennus perustettiin vuonna 1803 entiselle [[nunnaluostarin]] maatilalle, ja omistajaperhe antoi sille uusklassisen julkisivun vuonna 1850. Vanha tislaamo on siis säilynyt käyttöön museona. Minä pidän siitä, että vanhat talot saavat uuden tehtävän.",
+  "vastaus": "Mmm— Nykyisin Hasseltin tislaamossa, Belgian ensimmäisessä teollisuusarkeologisessa monumentissa (1975), toimii [[jenevermuseo]]. Rakennus perustettiin vuonna 1803 entiselle [[nunnaluostarin]] maatilalle, ja omistajaperhe antoi sille uusklassisen julkisivun vuonna 1850. Vanha tislaamo on siis säilynyt käyttöön museona. Minä pidän siitä, että vanhat talot saavat uuden tehtävän.",
   "linkit": [
    "jenevermuseo",
    "nunnaluostarin"

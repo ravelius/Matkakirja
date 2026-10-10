@@ -1432,7 +1432,7 @@
   "kohde": "kohde:hahmotelma-tournai",
   "kasite": "Wallonian",
   "kysymys": "Kerro lisää: Wallonian",
-  "vastaus": "Wallonia on Belgian ranskankielinen eteläinen alue, jonka pääkaupunki on [[Namur]]. Tournain Neitsyt Marian tuomiokirkko on luokiteltu Wallonian merkittäväksi perintökohteeksi vuodesta 1936, ja se sijaitsee [[Hainautin]] maakunnassa lähellä Ranskan rajaa. Wallonia kattaa runsaan puolet Belgian pinta-alasta, mutta siellä asuu pienempi osa väestöstä kuin Flanderissa. Alueella on keskiaikaisia kaupunkeja, Ardennien metsiä ja entisiä teollisuusalueita.",
+  "vastaus": "Wallonia on Belgian ranskankielinen eteläinen alue, jonka pääkaupunki on [[Namur]]. Tournain Neitsyt Marian tuomiokirkko on ollut monumenttisuojelun piirissä vuodesta 1936 ja Wallonian poikkeuksellista perintöä vuodesta 1993, ja se sijaitsee [[Hainautin]] maakunnassa lähellä Ranskan rajaa. Wallonia kattaa runsaan puolet Belgian pinta-alasta, mutta siellä asuu pienempi osa väestöstä kuin Flanderissa. Alueella on keskiaikaisia kaupunkeja, Ardennien metsiä ja entisiä teollisuusalueita.",
   "linkit": [
    "Namur",
    "Hainautin"
@@ -2084,7 +2084,7 @@
   "kohde": "kohde:hahmotelma-chimay",
   "kasite": "katuradalla",
   "kysymys": "Kerro lisää: katuradalla",
-  "vastaus": "Katurata tarkoittaa kilparataa, joka on rakennettu tavallisille julkisille teille, jotka suljetaan liikenteeltä kilpailun ajaksi. Chimayn ympäristössä ajettiin perinteisesti vuotuisia kilpailuja tällaisella radalla, ja ne tunnettiin nimellä [[Grand Prix des Frontières]]. Kilpailuja ajettiin 1920-luvulta 1960-luvulle Grand Prix -luokissa. Katuratakilpailut ovat nykyään harvinaisia, mutta esimerkiksi [[Monacon Grand Prix]] ajetaan edelleen kaupungin kaduilla.",
+  "vastaus": "Katurata tarkoittaa kilparataa, joka on rakennettu tavallisille julkisille teille, jotka suljetaan liikenteeltä kilpailun ajaksi. Chimayn ympäristössä ajettiin perinteisesti vuotuisia kilpailuja tällaisella radalla, ja ne tunnettiin nimellä [[Grand Prix des Frontières]]. Kilpailuja ajettiin vuosina 1926–1972. Grand Prix- eli F1-luokka oli mukana vain vuosina 1930–1954, ja 1960-luvulla ajettiin Formula Junior- ja F3-luokissa. Katuratakilpailut ovat nykyään harvinaisia, mutta esimerkiksi [[Monacon Grand Prix]] ajetaan edelleen kaupungin kaduilla.",
   "linkit": [
    "Grand Prix des Frontières",
    "Monacon Grand Prix"
@@ -2098,7 +2098,7 @@
   "kohde": "kohde:hahmotelma-chimay",
   "kasite": "Grand Prix",
   "kysymys": "Kerro lisää: Grand Prix",
-  "vastaus": "Grand Prix tarkoittaa ranskaksi suurta palkintoa, ja nimitystä käytetään arvostetuista moottoriurheilun kilpailuista. Ensimmäisenä Grand Prix -kilpailuna pidetään Ranskan Grand Prix'tä, joka ajettiin vuonna 1906 [[Le Mansin]] lähellä. Kilpailut jaettiin luokkiin, ja Chimayn kaltaisissa kilpailuissa ajettiin eri Grand Prix -luokissa 1920-luvulta 1960-luvulle. [[Formula 1]] -maailmanmestaruussarja alkoi vuonna 1950 ja koostuu useista Grand Prix -osakilpailuista.",
+  "vastaus": "Grand Prix tarkoittaa ranskaksi suurta palkintoa, ja nimitystä käytetään arvostetuista moottoriurheilun kilpailuista. Ensimmäisenä Grand Prix -kilpailuna pidetään Ranskan Grand Prix'tä, joka ajettiin vuonna 1906 [[Le Mansin]] lähellä. Kilpailut jaettiin luokkiin, ja Chimayn kilpailuja ajettiin vuosina 1926–1972, ja Grand Prix- eli F1-luokka oli mukana vain vuosina 1930–1954. [[Formula 1]] -maailmanmestaruussarja alkoi vuonna 1950 ja koostuu useista Grand Prix -osakilpailuista.",
   "linkit": [
    "Le Mansin",
    "Formula 1"
@@ -3784,7 +3784,7 @@
   "kohde": "kohde:hahmotelma-turnhout",
   "kasite": "pelikorttiteollisuudestaan",
   "kysymys": "Kerro lisää: pelikorttiteollisuudestaan",
-  "vastaus": "Turnhoutin pelikorttiteollisuudella on takanaan pitkä paperiin perustuvan teollisuuden perinne: 1800-luvun alussa vuodevaatteiden kudonnan ja pellavakaupan tilalle nousivat paperiin perustuvat teollisuudenalat, joiden perustajina pidetään [[Pieter Corbeelsia]] ja [[Philippus Jacobus Brepolsia]]. Nykyisin kaupungissa sijaitsee maailman suurimman pelikorttien valmistajan [[Cartamundin]] pääkonttori. Pelikortit tulivat Eurooppaan 1300-luvun lopulla, ja niiden valmistus on vuosisatojen ajan kuulunut painotaitoon.",
+  "vastaus": "Turnhoutin pelikorttiteollisuudella on takanaan pitkä painoalan perinne: 1800-luvun alussa kaupungissa vaikuttivat kirjapainajat, joina pidetään [[Pieter Corbeelsia]] ja [[Philippus Jacobus Brepolsia]]. Nykyisin kaupungissa sijaitsee maailman suurimman pelikorttien valmistajan [[Cartamundin]] pääkonttori. Pelikortit tulivat Eurooppaan 1300-luvun lopulla, ja niiden valmistus on vuosisatojen ajan kuulunut painotaitoon.",
   "linkit": [
    "Pieter Corbeelsia",
    "Philippus Jacobus Brepolsia",
@@ -3792,14 +3792,14 @@
   ],
   "jatkot": [
    "Milloin pelikortit levisivät Eurooppaan?",
-   "Miten pelikortit valmistetaan paperista?"
+   "Miten pelikortit valmistetaan?"
   ]
  },
  {
   "kohde": "kohde:hahmotelma-turnhout",
   "kasite": "Cartamundin",
   "kysymys": "Kerro lisää: Cartamundin",
-  "vastaus": "Cartamundi on maailman suurin pelikorttien valmistaja, ja sen pääkonttori sijaitsee [[Turnhoutissa]]. Kaupungilla on pitkä paperiin perustuvan teollisuuden perinne: 1800-luvun alussa vuodevaatteiden kudonnan ja pellavakaupan tilalle nousivat paperiin perustuvat teollisuudenalat, joiden perustajina pidetään [[Pieter Corbeelsia]] ja [[Philippus Jacobus Brepolsia]]. Yhtiön tarkasta syntyhistoriasta en ole varma, joten en voi kertoa, milloin nykyinen yhtiö muodostui. Turnhout on Flanderin kaupunki, jossa asui vuonna 2021 noin 46 000 ihmistä.",
+  "vastaus": "Cartamundi on maailman suurin pelikorttien valmistaja, ja sen pääkonttori sijaitsee [[Turnhoutissa]]. Kaupungilla on pitkä painoalan perinne: 1800-luvun alussa kaupungissa vaikuttivat kirjapainajat, joina pidetään [[Pieter Corbeelsia]] ja [[Philippus Jacobus Brepolsia]]. Yhtiön tarkasta syntyhistoriasta en ole varma, joten en voi kertoa, milloin nykyinen yhtiö muodostui. Turnhout on Flanderin kaupunki, jossa asui vuonna 2021 noin 46 000 ihmistä.",
   "linkit": [
    "Turnhoutissa",
    "Pieter Corbeelsia",
@@ -3807,7 +3807,7 @@
   ],
   "jatkot": [
    "Millainen kaupunki Turnhout on nykyisin?",
-   "Miten pelikortit valmistetaan paperista?"
+   "Miten pelikortit valmistetaan?"
   ]
  },
  {
@@ -3829,10 +3829,10 @@
   "kohde": "kohde:hahmotelma-turnhout",
   "kasite": "pellavakauppa",
   "kysymys": "Kerro lisää: pellavakauppa",
-  "vastaus": "Pellava on viljelykasvi, jonka kuiduista valmistetaan pellavalankaa ja liinakangasta. [[Flanderissa]] pellavan viljely ja liinakankaan valmistus ovat olleet vuosisatojen ajan merkittävä elinkeino. Myöhäiskeskiajalla [[Turnhout]] oli tunnettu vuodevaatteiden kutomisesta ja pellavakaupasta, mutta 1800-luvun alussa nämä korvautuivat paperiin perustuvilla teollisuudenaloilla. Pellavakangas on kestävää ja kuivuu nopeasti, minkä vuoksi sitä on käytetty vuodevaatteisiin ja pöytäliinoihin. Sen valmistus on työlästä, sillä varsi pitää liottaa, murtaa ja kampata ennen kehräystä.",
+  "vastaus": "Pellava on viljelykasvi, jonka kuiduista valmistetaan pellavalankaa ja [[liinakangasta]]. [[Flanderissa]] pellavan viljely ja liinakankaan valmistus ovat olleet vuosisatojen ajan merkittävä elinkeino. Pellavakangas on kestävää ja kuivuu nopeasti, minkä vuoksi sitä on käytetty vuodevaatteisiin ja pöytäliinoihin. Sen valmistus on työlästä, sillä varsi pitää liottaa, murtaa ja kampata ennen kehräystä.",
   "linkit": [
-   "Flanderissa",
-   "Turnhout"
+   "liinakangasta",
+   "Flanderissa"
   ],
   "jatkot": [
    "Miten pellavasta valmistetaan kangasta?",
@@ -3843,14 +3843,13 @@
   "kohde": "kohde:hahmotelma-turnhout",
   "kasite": "Pieter Corbeelsia",
   "kysymys": "Kerro lisää: Pieter Corbeelsia",
-  "vastaus": "Pieter Corbeels on yksi kahdesta miehestä, joita pidetään [[Turnhoutin]] paperiin perustuvien teollisuudenalojen perustajina 1800-luvun alussa. Toinen heistä on [[Philippus Jacobus Brepols]]. Näiden alojen tieltä väistyivät kaupungin vanhemmat elinkeinot, vuodevaatteiden kudonta ja [[pellavakauppa]]. Tarkempia tietoja Corbeelsin elämästä en ole varma, joten jätän arvaukset pois. Kaupungin yhteyksiä paransivat kanava, joka kaivettiin vuonna 1846, ja rautatie, joka rakennettiin vuonna 1855.",
+  "vastaus": "Pieter Corbeels on yksi kahdesta kirjapainajasta, joita pidetään [[Turnhoutin]] painoalan vaikuttajina 1800-luvun alussa. Toinen heistä on [[Philippus Jacobus Brepols]]. Tarkempia tietoja Corbeelsin elämästä en ole varma, joten jätän arvaukset pois. Kaupungin yhteyksiä paransivat kanava, joka kaivettiin vuonna 1846, ja rautatie, joka rakennettiin vuonna 1855.",
   "linkit": [
    "Turnhoutin",
-   "Philippus Jacobus Brepols",
-   "pellavakauppa"
+   "Philippus Jacobus Brepols"
   ],
   "jatkot": [
-   "Miten paperia valmistettiin Euroopassa 1800-luvun alussa?",
+   "Mitä Turnhoutissa painettiin 1800-luvun alussa?",
    "Miten kanava ja rautatie muuttivat kaupunkien kehitystä?"
   ]
  },
@@ -3858,7 +3857,7 @@
   "kohde": "kohde:hahmotelma-turnhout",
   "kasite": "Philippus Jacobus Brepolsia",
   "kysymys": "Kerro lisää: Philippus Jacobus Brepolsia",
-  "vastaus": "Philippus Jacobus Brepols on toinen kahdesta miehestä, joita pidetään Turnhoutin paperiin perustuvien teollisuudenalojen perustajina 1800-luvun alussa; toinen on [[Pieter Corbeels]]. Brepols-nimeä kantaa tietääkseni yhä turnhoutilainen kustantamo, mutta yhteyden tarkasta historiasta en ole varma. [[Turnhoutin]] teollisuus kehittyi paperin ympärillä, ja nykyisin kaupungissa on [[Cartamundin]] pääkonttori.",
+  "vastaus": "Philippus Jacobus Brepols on toinen kahdesta kirjapainajasta, joita pidetään Turnhoutin painoalan vaikuttajina 1800-luvun alussa; toinen on [[Pieter Corbeels]]. Brepols-nimeä kantaa tietääkseni yhä turnhoutilainen kustantamo, mutta yhteyden tarkasta historiasta en ole varma. Nykyisin [[Turnhoutin]] nykyisin kaupungissa on [[Cartamundin]] pääkonttori.",
   "linkit": [
    "Pieter Corbeels",
    "Turnhoutin",
@@ -4223,7 +4222,7 @@
   "kohde": "kohde:hahmotelma-hasselt-jenever",
   "kasite": "jenever",
   "kysymys": "Kerro lisää: jenever",
-  "vastaus": "Jenever on katajanmarjoilla maustettu väkevä alkoholijuoma, jota valmistetaan etenkin Belgiassa ja [[Alankomaissa]]. Nimi juontuu katajaa tarkoittavasta sanasta, ja jeneveriä pidetään [[ginin]] esi-isänä. [[Hasselt]] on profiloitunut jenever-viinan tislauksen keskukseksi vuosisatojen ajan, ja kaupunki vältti vuoden 1601 valmistus- ja myyntikiellon. Hasseltilaiseen jeneveriin lisätään yhä muita belgialaisia enemmän yrttejä ja marjoja, ja kaupungin vanhimmassa säilyneessä tislaamossa toimii nykyisin jenevermuseo.",
+  "vastaus": "Jenever on katajanmarjoilla maustettu väkevä alkoholijuoma, jota valmistetaan etenkin Belgiassa ja [[Alankomaissa]]. Nimi juontuu katajaa tarkoittavasta sanasta, ja jeneveriä pidetään [[ginin]] esi-isänä. [[Hasselt]] on profiloitunut jenever-viinan tislauksen keskukseksi vuosisatojen ajan, ja kaupunki vältti vuoden 1601 valmistus- ja myyntikiellon. Hasseltilaiseen jeneveriin lisätään yhä muita belgialaisia enemmän yrttejä ja marjoja, ja kaupungin tislaamossa, Belgian ensimmäisessä teollisuusarkeologisessa monumentissa (1975), toimii nykyisin jenevermuseo.",
   "linkit": [
    "Alankomaissa",
    "ginin",
@@ -4238,7 +4237,7 @@
   "kohde": "kohde:hahmotelma-hasselt-jenever",
   "kasite": "tislauksen",
   "kysymys": "Kerro lisää: tislauksen",
-  "vastaus": "Tislaus on menetelmä, jossa nestemäinen seos erotetaan kuumentamalla se ja tiivistämällä syntynyt höyry takaisin nesteeksi. Menetelmä perustuu siihen, että aineet kiehuvat eri lämpötiloissa: [[etanolin]] kiehumispiste on noin 78 astetta, kun veden kiehumispiste on 100 astetta, joten alkoholipitoisempi höyry erottuu ensin. Näin saadaan väkevämpi juoma kuin pelkällä käymisellä. [[Hasseltin]] jenever on tislattu juoma, ja halpaa jeneveriä tislattiin [[sokerijuurikasmelassista]]. Kaupungin vanhimmassa säilyneessä tislaamossa toimii nykyisin jenevermuseo.",
+  "vastaus": "Tislaus on menetelmä, jossa nestemäinen seos erotetaan kuumentamalla se ja tiivistämällä syntynyt höyry takaisin nesteeksi. Menetelmä perustuu siihen, että aineet kiehuvat eri lämpötiloissa: [[etanolin]] kiehumispiste on noin 78 astetta, kun veden kiehumispiste on 100 astetta, joten alkoholipitoisempi höyry erottuu ensin. Näin saadaan väkevämpi juoma kuin pelkällä käymisellä. [[Hasseltin]] jenever on tislattu juoma, ja halpaa jeneveriä tislattiin [[sokerijuurikasmelassista]]. Kaupungin tislaamossa, Belgian ensimmäisessä teollisuusarkeologisessa monumentissa (1975), toimii nykyisin jenevermuseo.",
   "linkit": [
    "etanolin",
    "Hasseltin",
@@ -4253,7 +4252,7 @@
   "kohde": "kohde:hahmotelma-hasselt-jenever",
   "kasite": "Hasseltissa",
   "kysymys": "Kerro lisää: Hasseltissa",
-  "vastaus": "Hasselt on Belgian [[Limburgin]] maakunnan pääkaupunki [[Flanderissa]]. Kaupunki on profiloitunut jenever-viinan tislauksen keskukseksi vuosisatojen ajan. Se vältti vuoden 1601 valmistus- ja myyntikiellon, ja 1670-luvulla siellä majailleet hollantilaissotilaat toivat mukanaan makuja, joiden vuoksi hasseltilaiseen jeneveriin lisätään yhä muita belgialaisia enemmän yrttejä ja marjoja. Kaupungin vanhin säilynyt [[tislaamo]] perustettiin vuonna 1803 entiselle nunnaluostarin maatilalle, ja nykyisin siellä toimii jenevermuseo.",
+  "vastaus": "Hasselt on Belgian [[Limburgin]] maakunnan pääkaupunki [[Flanderissa]]. Kaupunki on profiloitunut jenever-viinan tislauksen keskukseksi vuosisatojen ajan. Se vältti vuoden 1601 valmistus- ja myyntikiellon, ja 1670-luvulla siellä majailleet hollantilaissotilaat toivat mukanaan makuja, joiden vuoksi hasseltilaiseen jeneveriin lisätään yhä muita belgialaisia enemmän yrttejä ja marjoja. Kaupungin [[tislaamo]], Belgian ensimmäinen teollisuusarkeologinen monumentti (1975), perustettiin vuonna 1803 entiselle nunnaluostarin maatilalle, ja nykyisin siellä toimii jenevermuseo.",
   "linkit": [
    "Limburgin",
    "Flanderissa",
@@ -4283,7 +4282,7 @@
   "kohde": "kohde:hahmotelma-hasselt-jenever",
   "kasite": "jeneveriä",
   "kysymys": "Kerro lisää: jeneveriä",
-  "vastaus": "Jenever on katajanmarjoilla maustettu väkevä alkoholijuoma. Halpaa jeneveriä tislattiin sokerijuurikasmelassista, ja teollistumisen myötä se levisi työväestön keskuuteen. 1800-luvun lopulla belgialainen kulutti keskimäärin 9,5 litraa 50-prosenttista jeneveriä vuodessa. [[Hasselt]] vältti vuoden 1601 valmistus- ja myyntikiellon, ja hasseltilaiseen jeneveriin lisätään yhä muita belgialaisia enemmän yrttejä ja marjoja. Kaupungin vanhimmassa säilyneessä tislaamossa toimii nykyisin [[jenevermuseo]].",
+  "vastaus": "Jenever on katajanmarjoilla maustettu väkevä alkoholijuoma. Halpaa jeneveriä tislattiin sokerijuurikasmelassista, ja teollistumisen myötä se levisi työväestön keskuuteen. 1800-luvun lopulla belgialainen kulutti keskimäärin 9,5 litraa 50-prosenttista jeneveriä vuodessa. [[Hasselt]] vältti vuoden 1601 valmistus- ja myyntikiellon, ja hasseltilaiseen jeneveriin lisätään yhä muita belgialaisia enemmän yrttejä ja marjoja. Kaupungin tislaamossa, Belgian ensimmäisessä teollisuusarkeologisessa monumentissa (1975), toimii nykyisin [[jenevermuseo]].",
   "linkit": [
    "Hasselt",
    "jenevermuseo"
@@ -4327,7 +4326,7 @@
   "kohde": "kohde:hahmotelma-hasselt-jenever",
   "kasite": "tislaamo",
   "kysymys": "Kerro lisää: tislaamo",
-  "vastaus": "Tislaamo on laitos, jossa alkoholijuomia valmistetaan tislaamalla. Hasseltin vanhin säilynyt tislaamo perustettiin vuonna 1803 entiselle [[nunnaluostarin]] maatilalle. Omistajaperhe [[Stellingwerff]] antoi rakennukselle uusklassisen julkisivun vuonna 1850. Nykyisin rakennuksessa toimii [[jenevermuseo]]. Tislaamon sydän on tislauslaite, jossa nestettä kuumennetaan ja höyry jäähdytetään takaisin nesteeksi.",
+  "vastaus": "Tislaamo on laitos, jossa alkoholijuomia valmistetaan tislaamalla. Hasseltin tislaamo, Belgian ensimmäinen teollisuusarkeologinen monumentti (1975), perustettiin vuonna 1803 entiselle [[nunnaluostarin]] maatilalle. Omistajaperhe [[Stellingwerff]] antoi rakennukselle uusklassisen julkisivun vuonna 1850. Nykyisin rakennuksessa toimii [[jenevermuseo]]. Tislaamon sydän on tislauslaite, jossa nestettä kuumennetaan ja höyry jäähdytetään takaisin nesteeksi.",
   "linkit": [
    "nunnaluostarin",
    "Stellingwerff",
@@ -4342,7 +4341,7 @@
   "kohde": "kohde:hahmotelma-hasselt-jenever",
   "kasite": "Stellingwerff",
   "kysymys": "Kerro lisää: Stellingwerff",
-  "vastaus": "Stellingwerff on perhe, joka omisti Hasseltin vanhimman säilyneen tislaamon. Perhe antoi rakennukselle [[uusklassisen]] julkisivun vuonna 1850. Uusklassinen tyyli hakee esikuvansa antiikin arkkitehtuurista, ja sille ovat tyypillisiä symmetria ja selkeät muodot. Tislaamo oli perustettu vuonna 1803 entiselle nunnaluostarin maatilalle, ja nykyisin rakennuksessa toimii [[jenevermuseo]]. [[Hasseltin]] muusta Stellingwerffien historiasta en ole varma.",
+  "vastaus": "Stellingwerff on perhe, joka omisti Hasseltin tislaamon. Perhe antoi rakennukselle [[uusklassisen]] julkisivun vuonna 1850. Uusklassinen tyyli hakee esikuvansa antiikin arkkitehtuurista, ja sille ovat tyypillisiä symmetria ja selkeät muodot. Tislaamo oli perustettu vuonna 1803 entiselle nunnaluostarin maatilalle, ja nykyisin rakennuksessa toimii [[jenevermuseo]]. [[Hasseltin]] muusta Stellingwerffien historiasta en ole varma.",
   "linkit": [
    "uusklassisen",
    "jenevermuseo",
@@ -4357,7 +4356,7 @@
   "kohde": "kohde:hahmotelma-hasselt-jenever",
   "kasite": "jenevermuseo",
   "kysymys": "Kerro lisää: jenevermuseo",
-  "vastaus": "Jenevermuseo toimii [[Hasseltin]] vanhimmassa säilyneessä tislaamossa. Rakennus perustettiin vuonna 1803 entiselle nunnaluostarin maatilalle, ja omistajaperhe [[Stellingwerff]] antoi sille uusklassisen julkisivun vuonna 1850. Museo on omistettu jenever-viinan historialle ja [[tislauksen]] perinteelle, joka on Hasseltissa vuosisatoja vanha. Tarkasta näyttelysisällöstä en ole varma.",
+  "vastaus": "Jenevermuseo toimii [[Hasseltin]] tislaamossa, Belgian ensimmäisessä teollisuusarkeologisessa monumentissa (1975). Rakennus perustettiin vuonna 1803 entiselle nunnaluostarin maatilalle, ja omistajaperhe [[Stellingwerff]] antoi sille uusklassisen julkisivun vuonna 1850. Museo on omistettu jenever-viinan historialle ja [[tislauksen]] perinteelle, joka on Hasseltissa vuosisatoja vanha. Tarkasta näyttelysisällöstä en ole varma.",
   "linkit": [
    "Hasseltin",
    "Stellingwerff",
@@ -4372,7 +4371,7 @@
   "kohde": "kohde:hahmotelma-hasselt-jenever",
   "kasite": "nunnaluostarin",
   "kysymys": "Kerro lisää: nunnaluostarin",
-  "vastaus": "Nunnaluostari on yhteisö, jossa naiset asuvat uskonnollisen säännön mukaan, ja luostarin maatila tuotti ruoan ja tulot yhteisön tarpeisiin. Belgiassa monet luostarit lakkautettiin [[Ranskan]] vallan aikana 1790-luvun lopulla, ja niiden rakennukset ja maat siirtyivät uusille omistajille. [[Hasseltin]] vanhin tislaamo perustettiin vuonna 1803 entiselle nunnaluostarin maatilalle, mikä sopii tähän kehitykseen, vaikka tarkasta omistushistoriasta en ole varma. Nykyisin tilalla toimii [[jenevermuseo]].",
+  "vastaus": "Nunnaluostari on yhteisö, jossa naiset asuvat uskonnollisen säännön mukaan, ja luostarin maatila tuotti ruoan ja tulot yhteisön tarpeisiin. Belgiassa monet luostarit lakkautettiin [[Ranskan]] vallan aikana 1790-luvun lopulla, ja niiden rakennukset ja maat siirtyivät uusille omistajille. [[Hasseltin]] tislaamo, Belgian ensimmäinen teollisuusarkeologinen monumentti (1975), perustettiin vuonna 1803 entiselle nunnaluostarin maatilalle, mikä sopii tähän kehitykseen, vaikka tarkasta omistushistoriasta en ole varma. Nykyisin tilalla toimii [[jenevermuseo]].",
   "linkit": [
    "Ranskan",
    "Hasseltin",
