@@ -36,7 +36,8 @@ namespace Matkakirja.Natiivi
             var ma = M("esine:avainnippu-tyrma"); t.avainId = ma?.Tunnus; t.avaimet = ma != null ? U(ma) : t.istuin + Vector3.right * 2f;
             t.katse = mi.KiertoY is double ky ? (float)(-ky * 180 / Math.PI) : 0f;
             // Muunnelmat vuorotellen (1 avaimet, 2 vesipoika, 3 irtokivi); puuttuvat merkit → muunnelma 1.
-            var mry = M("ovi:tyrma-ryomi"); t.ryomiOn = mry != null && M("esine:irtokivi-tyrma") != null; if (mry != null) t.ryomi = U(mry);
+            var mry = M("ovi:tyrma-ryomi"); var mk = M("esine:irtokivi-tyrma"); t.ryomiOn = mry != null && mk != null; if (mry != null) t.ryomi = U(mry);
+            if (mk != null) t.aukonSuu = U(mk);
             int mu1 = kerta++ % 3 + 1;
             if (mu1 == 3 && !t.ryomiOn || mu1 == 1 && ma == null) mu1 = 2;
             t.ydin = new Tyrma(mu1);
@@ -102,12 +103,29 @@ namespace Matkakirja.Natiivi
             }
             if (ydin.Vihje) { ydin.Vihje = false; SeikkailuVihjeet.Aktiivinen?.Pakota(2, "tyrmä 20 s"); }   // kieli: ei (tekninen)
             if (ydin.Vaihe == TyrmanVaihe.AvaimetOlissa && avainId != null && SeikkailuEsineet.Aktiivinen?.Kadessa == avainId) ydin.Poimi();
-            if (ydin.PuluAvasi) { ydin.PuluAvasi = false; SeikkailuAanet.SoitaJokin(SeikkailuAanet.LukkoAuki, "avain-lukko", ovi + Vector3.up, 0.8f); kirjaa?.Invoke("seikkailu: tyrmä: lukko aukesi (60 s)"); }
+            if (ydin.PuluAvasi)
+            {
+                // 60 s (pelattavuusmalli 4.1): ovi aukeaa oikeasti (A3: ennen vain lokiin), myös irtokiven muunnelmassa ulos oven kautta.
+                ydin.PuluAvasi = false; puluAvasi = true;
+                SeikkailuAanet.SoitaJokin(SeikkailuAanet.LukkoAuki, "avain-lukko", ovi + Vector3.up, 0.8f);
+                SeikkailuEsineet.Aktiivinen?.OviLehti("tyrma", false);
+                kirjaa?.Invoke("seikkailu: tyrmä: lukko aukesi (60 s), ovi auki");
+            }
+            // Muunnelma 2: raollaan oleva ovi aukeaa kävelemällä (pelaaja oven luona).
+            if (ydin.Muunnelma == 2 && ydin.Vaihe == TyrmanVaihe.OviAuki && !tyonnetty && Vector3.Distance(p.transform.position, ovi) < TyontoM)
+            {
+                tyonnetty = true; SeikkailuEsineet.Aktiivinen?.OviLehti("tyrma", false);
+                SeikkailuAanet.SoitaJokin(SeikkailuAanet.PaksuOviNarina, "luukku-narahdus", ovi + Vector3.up, 0.5f);
+                kirjaa?.Invoke("seikkailu: tyrmä: ovi työnnetty auki");
+            }
             // Muunnelma 2: torkkuva vartija oven takana mutisee kerran, kun pelaaja tulee ovelle (repliikit-lapi-v1).
             if (ydin.Muunnelma == 2 && !rotatKuultu && Vector3.Distance(p.transform.position, ovi) < 2.5f)
             { rotatKuultu = true; SeikkailuRepliikit.SoitaTaiVara("tyrma-vartija-rotat-1", null, ovi + Vector3.up * 1.6f); }
-            var maali = ydin.Muunnelma == 3 && ryomiOn ? ryomi : ulos;
-            if (ydin.Vaihe == TyrmanVaihe.OviAuki && Vector3.Distance(p.transform.position, maali) < UlosM && ydin.Ulos()) StartCoroutine(Ulos());
+            // Muunnelma 3: ryömintä alkaa aukon suulta (irtokiven paikka); merkin ovi:tyrma-ryomi pää on seinän takana (~2 m), jonne
+            // kävellen ei pääse (A3, Laitetestaaja TF 180: irtokiven pakoa ei saatu tehtyä).
+            bool ryomii = ydin.Muunnelma == 3 && ryomiOn && !puluAvasi;
+            var maali = ryomii ? aukonSuu : ulos;
+            if (ydin.Vaihe == TyrmanVaihe.OviAuki && Vector3.Distance(p.transform.position, maali) < (ryomii ? RyomiM : UlosM) && ydin.Ulos()) StartCoroutine(Ulos());
         }
 
         /// <summary>Toimintonappi ovella avaimet kädessä (SeikkailuEsineet kysyy verbin ja kutsuu).</summary>
@@ -150,7 +168,9 @@ namespace Matkakirja.Natiivi
         void KiviIrti(string id) { if (id.StartsWith("irtokivi", StringComparison.Ordinal) && ydin.KiviIrti()) { kirjaa?.Invoke("seikkailu: tyrmä: irtokivi irti, aukko auki"); Kolina(ovi); } }
 
         /// <summary>Kova ääni tyrmässä (muunnelmat 2–3): käytävän vartija vain mutisee (malli 4.1), enintään 12 s:n välein.</summary>
-        float kolinaAsti; bool rotatKuultu;
+        float kolinaAsti; bool rotatKuultu, puluAvasi, tyonnetty;
+        const float TyontoM = 1.3f, RyomiM = 1.0f;
+        Vector3 aukonSuu;
         void Kolina(Vector3 _)
         {
             if (ydin.Muunnelma < 2 || Time.unscaledTime < kolinaAsti) return;

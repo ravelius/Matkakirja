@@ -241,7 +241,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Ovilehti auki tai raolleen koodista (tyrmä: avaimella auki, vesipoika jättää raolleen); vain näkymä.</summary>
         public void OviLehti(string tunnus, bool raollaan)
         {
-            foreach (var o in ovet) if (o.M.Tunnus == tunnus) KaannaLehti(o, raollaan ? OviRaollaanAste : OviAukiAste, OviHidasS);
+            // Myös raollaan oleva ovi päästää läpi (A3, Laitetestaaja TF 180: tyrmän ovi "raolleen" ja "lukko aukesi", mutta aukon
+            // törmäyslaatikko jäi paikalleen eikä ovesta päässyt kävellen).
+            foreach (var o in ovet) if (o.M.Tunnus == tunnus) { o.Auki = true; if (o.Go != null) o.Go.SetActive(false); KaannaLehti(o, raollaan ? OviRaollaanAste : OviAukiAste, OviHidasS); }
         }
 
         /// <summary>Onko lukittu ovi (ovi:&lt;tunnus&gt;) auki (LS2:n vihjeportaat).</summary>
