@@ -160,3 +160,4 @@ blender.json `linnanrakentaja-linna-v45e` (worktree `/Users/Shared/Claude/wt/lin
    Dekimointi + pakkaus meillä (0,04–2,9 M kolmiota). Runko taidemuseo-runko/lahde.
 6) **Peking v2b** on LS2:lla (LS2 lisäsi maa-primitiivin, istuu saumatta). Odota LS2:n pari → säätö (rakenna.py; ajot luovutuksen PEKING-osiossa).
 - Kaupungintalo v2 LS2:lla (vaakatanko-tieto tulee LS2:lta, jos näkyy yhä).
+- (12.5x) Sisältökirjuri: ND:n oikeat vertailukuvat maasta automaattivertailuun _tyo/sisaltokirjuri/vertailu/nd/ (kuvat/ 6 × 1920 px, kuvat.json: tekijä, lisenssi, aika, kamerapaikka, suunta; LUEMINUT.md); muut kohteet perässä → vertaa_orto.py:n rinnalle julkisivuvertailu (kamera kuvat.jsonin paikasta).
