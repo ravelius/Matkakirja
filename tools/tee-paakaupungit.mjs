@@ -54,6 +54,8 @@ const lahde = (a) => (a && typeof a === 'object' ? { arvo: a.arvo ?? null, vuosi
 const ASEMA = { PSE: 'hallinnon paikka', BOL: 'hallinnon paikka' };
 // Pelin maatunnus poikkeaa ISO-koodista vain Etelä-Sudanissa (kartta-aineiston SDS).
 const PELIN_TUNNUS = { SSD: 'SDS' };
+// Kortin nimi lyhyenä; Sisältökirjurin muoto "Washington (Washington, D.C.)" on selite.
+const NIMI = { USA: 'Washington' };
 const LAUDAN_KAUPUNKI_EI_PISTETTA = { ISR: 'jerusalem' };
 // "paakaupunki"-rivien maa-objektissa on vain tunnus, nimi ja genetiivi
 // (maa on jo laudalla omine tietoineen); perustiedot vain täysistä riveistä.
@@ -90,7 +92,7 @@ for (const polku of syotteet) {
     const lat = k.sijainti?.lat ?? o?.lat; const lon = k.sijainti?.lon ?? o?.lon;
     if (!Number.isFinite(lat) || !Number.isFinite(lon)) throw new Error(`${iso}: pääkaupungilta puuttuu sijainti`);
     pisteet.set(iso, {
-      id, nimi: k.nimi_fi, nimiAlkukieli: k.nimi_alkukieli ?? null, maa: iso, lat: Number(lat.toFixed(4)), lon: Number(lon.toFixed(4)),
+      id, nimi: NIMI[iso] ?? k.nimi_fi, nimiAlkukieli: k.nimi_alkukieli ?? null, maa: iso, lat: Number(lat.toFixed(4)), lon: Number(lon.toFixed(4)),
       wikidata: q ?? o?.q ?? null,
       asema: ASEMA[iso] ?? k.asema ?? 'pääkaupunki',
       asukkaat: lahde(k.asukasluku),

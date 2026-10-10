@@ -18,7 +18,9 @@ test('laudan pääkaupunki, pääkaupunkipiste ja hallinnon paikka', () => {
   assert.deepEqual(maanPaakaupunki(MAAILMANKARTTA, 'SRB'), { nimi: 'Belgrad', asema: 'pääkaupunki' });
   assert.deepEqual(maanPaakaupunki(MAAILMANKARTTA, 'ISR'), { nimi: 'Jerusalem', asema: 'hallinnon paikka' });
   assert.deepEqual(maanPaakaupunki(MAAILMANKARTTA, 'PSE'), { nimi: 'Ramallah', asema: 'hallinnon paikka' });
-  assert.equal(maanPaakaupunki(MAAILMANKARTTA, 'USA'), null);
+  // Kaikki maat 10.10.2026: Washington on pääkaupunkipiste; Hongkong ei ole valtio.
+  assert.deepEqual(maanPaakaupunki(MAAILMANKARTTA, 'USA'), { nimi: 'Washington', asema: 'pääkaupunki' });
+  assert.equal(maanPaakaupunki(MAAILMANKARTTA, 'HKG'), null);
 });
 
 test('rivi on kortin ensimmäinen ja Israel/Palestiina eivät koskaan saa "Pääkaupunki"-riviä', () => {
@@ -28,7 +30,7 @@ test('rivi on kortin ensimmäinen ja Israel/Palestiina eivät koskaan saa "Pää
   for (const iso of ['ISR', 'PSE']) {
     assert.ok(!maanRivit(ui, iso).some(([o]) => o === 'Pääkaupunki'), iso);
   }
-  assert.ok(!maanRivit(ui, 'USA').some(([o]) => o === 'Pääkaupunki' || o === 'Hallinnon paikka'));
+  assert.ok(!maanRivit(ui, 'HKG').some(([o]) => o === 'Pääkaupunki' || o === 'Hallinnon paikka'));
 });
 
 test('jokaisella pääkaupungilla on nimi laudalla ja vienti lukee saman taulun', () => {
