@@ -107,6 +107,12 @@ blender.json `linnanrakentaja-linna-v45e` (worktree `/Users/Shared/Claude/wt/lin
 - Pohjatyö proto-3d/_tyo/linnanrakentaja/peking/: lahde/luokittele.py (15 503 → luokat, data/peking-luokat.json, esikatselu/luokat.png),
   monumentit.py (17 maamerkkiä käsin, mitat A → Sisältökirjuri tarkistaa: _tyo/sisaltokirjuri/peking-mitat-20261010/), pihatalot.py
   (硬山-siivet, 四合院-pihat isoista pohjista, ~73 kolmiota/talo), esik_pihat.py (EEVEE-koekuva). Seuraavaksi KK-hallit kk_halli-pohjalta + laatoitus.
+- (11.0x) PEKING v1 VIETY LS2:lle: _tyo/linnanrakentaja/peking/glb/ 24 laattaa (550 × 500 m, i 0–3 itään, j 0–5 pohjoiseen) × lod0/1/2,
+  laatat.json, LAHTEET.md, esikatselu/tarkistusarkki-v1.jpg. Ajo: Blender -b --factory-startup -P lahde/rakenna.py -- --laatta i j --vienti glb
+  (tai --alue x0 y0 x1 y1 --esikatselu kansio --kamerat ilma,taihedian,...). hallit.py: KK OSM-osista (osat_rakennus; L/U-katot suorakaiteiksi
+  luokittele.suorakaiteet), muut parametrit_pohjasta; GloBFP ohitetaan KK:n sisällä. ANSA: pinnat.py:n tavukuvan pixels on sRGB-koodattua.
+  Seuraavaksi: puut, maamerkit Sisältökirjurin mitoilla (pylväiköt), LS2:n Eiffel-maa (~115/110/104 himmeä) ja Kaupungintalo (lyhty + 3 kruunua,
+  tornin vaakatanko pois, ikkunat epäsäännöllisemmiksi, tiili ~110/60/50, sisäpiha) — LS2 10.10. parit docs/raportit/kaappaukset/linssiseppa2-176-20261010/.
 
 ## SEURAAVAN SESSION JÄRJESTYS (nollaus 10.1x)
 1) **PEKING** (omistaja 09.3x: koekaupunki ~2 × 2 km: Kielletty kaupunki, Jingshan, Beihai, Tian'anmen, hutongit; poikkeus ei avaa muuta
