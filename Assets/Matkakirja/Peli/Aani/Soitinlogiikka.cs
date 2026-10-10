@@ -9,7 +9,10 @@
 //   Silmukka     maiseman kierroksen vaihtohetki (duration − 2,6 s, §2.6).
 //   Aanilataus   levyvälimuistin nimi (sama kaava kuin Natiivi-UI:n Aanet.Levy ämpärin osoitteille),
 //                striimausraja (> 3 Mt, §5.2) ja latausvirheen luokitus (§2.7).
+//   EsitysEsilataukset  saapumisesityksen nopean esilatauksen kirjanpito (omistaja KIIRE TF 180): mitkä osoitteet
+//                pidetään purettuina klippivälimuistissa, enintään Enintaan kpl, vanhenee VanheneeS:ssä.
 using System;
+using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -127,6 +130,62 @@ namespace Matkakirja.Peli
             if (purkuvirhe || httpKoodi >= 400 || aikakatkaisu) return Latausseuraus.Puuttuu;
             if (verkkovirhe && kanava != Kanava.Maisema) return Latausseuraus.YritaMyohemmin;
             return Latausseuraus.Puuttuu;
+        }
+    }
+
+    /// <summary>
+    /// SAAPUMISESITYKSEN ESILATAUS (omistaja KIIRE TF 180, juna 181; simu fff0b61f0: musiikki alkoi 2,97 s puheen jälkeen, koska
+    /// pohjasoitin luotiin napautusruudussa ja nopea haettiin vasta silloin verkosta). Aanisoitin lataa uuden esittelyn kaupungin
+    /// nopean levylle ja purkaa sen jaettuun klippivälimuistiin jo ennakoinnissa, ja pitää sille oman viitteen. Tämä luokka on
+    /// viitteen kirjanpito: viite vapautuu, kun soitin ottaa klipin (Otettu), kun esilatausta ei ole pyydetty VanheneeS:ssä
+    /// (Vanhentuneet) tai kun uusia pyyntöjä tulee yli Enintaan (vanhin pyyntö pois), joten muisti ei vuoda.
+    /// </summary>
+    public sealed class EsitysEsilataukset
+    {
+        /// <summary>Enintään näin monta esiladattua nopeaa kerralla (Pariisin nopea 2,1 Mt pakattuna muistissa).</summary>
+        public const int Enintaan = 2;
+        /// <summary>Esilataus vanhenee, ellei sitä pyydetä uudelleen (joutilaan ennakointi pyytää toistuvasti).</summary>
+        public const double VanheneeS = 300;
+
+        readonly List<(string Url, double Pyydetty)> rivit = new List<(string, double)>();
+
+        public int Maara => rivit.Count;
+        public bool Sisaltaa(string url) => Indeksi(url) >= 0;
+
+        int Indeksi(string url)
+        {
+            for (int i = 0; i < rivit.Count; i++) if (rivit[i].Url == url) return i;
+            return -1;
+        }
+
+        /// <summary>
+        /// Pyyntö (ennakointi tai tiedossa oleva saapuminen). true = uusi, lataus aloitetaan; false = jo esiladattu tai kesken
+        /// (aika päivittyy). poistettavat saa ylimääräiset (vanhin pyyntö ensin), joiden viite vapautetaan.
+        /// </summary>
+        public bool Pyyda(string url, double nyt, List<string> poistettavat)
+        {
+            if (string.IsNullOrEmpty(url)) return false;
+            int i = Indeksi(url);
+            if (i >= 0) { rivit.RemoveAt(i); rivit.Add((url, nyt)); return false; }
+            rivit.Add((url, nyt));
+            while (rivit.Count > Enintaan) { poistettavat?.Add(rivit[0].Url); rivit.RemoveAt(0); }
+            return true;
+        }
+
+        /// <summary>Soitin otti osoitteen klipin (tai esilataus perutaan): kirjanpidosta pois. true = oli esiladattu.</summary>
+        public bool Otettu(string url)
+        {
+            int i = Indeksi(url);
+            if (i < 0) return false;
+            rivit.RemoveAt(i);
+            return true;
+        }
+
+        /// <summary>Vanhentuneet (ei pyyntöä VanheneeS:ssä) pois kirjanpidosta ja poistettavat-listaan.</summary>
+        public void Vanhentuneet(double nyt, List<string> poistettavat)
+        {
+            for (int i = rivit.Count - 1; i >= 0; i--)
+                if (nyt - rivit[i].Pyydetty >= VanheneeS) { poistettavat?.Add(rivit[i].Url); rivit.RemoveAt(i); }
         }
     }
 }

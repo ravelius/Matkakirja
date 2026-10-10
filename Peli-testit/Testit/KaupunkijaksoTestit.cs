@@ -298,5 +298,66 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(null, e.Toive(Kanava.Pohja).KestoMs, "jo soivaan ei kosketa");
             Oleta.Sama(null, e.EsitysKaupunki);
         }
+
+        // --- SAAPUMISESITYKSEN ESILATAUS (simu fff0b61f0: nopea haettiin vasta trailerin ruudussa, musiikki 2,97 s myöhässä) -----
+
+        [Testi] static void EsitysEsilatausOsoiteOnPohjasoittimenOsoite()
+        {
+            // Esilataus purkaa klipin tällä avaimella; pohjasoittimen pitää pyytää täsmälleen samaa, jotta Hae löytää sen valmiina.
+            var s = Esitys();
+            s.Paikka("lontoo", "kaupunki");
+            var url = s.EsitysNopeaOsoite("pariisi");
+            Oleta.Tosi(url != null && url.StartsWith(AaniOsoite.Juuri) && url.Contains("/musa-kaupunki-pariisi-nopea-lyria"), "osoite: " + url);
+            s.Paikka("pariisi", "kaupunki"); // maailmahyppy / maitse: soitin syntyy saapumisruudussa
+            Oleta.Sama(url, Pohja(s), "sama osoite kuin odottavalla pohjasoittimella");
+            Oleta.Tosi(s.Toive(Kanava.Pohja).Tauko, "odottaa puhetta");
+            Oleta.Sama(url, s.EsitysNopeaOsoite("pariisi"), "esilataus tunnistaa soivan");
+        }
+
+        [Testi] static void EsitysEsilatausVainKunJaksoSoisi()
+        {
+            var s = Esitys();
+            Oleta.Sama(null, s.EsitysNopeaOsoite("lontoo"), "ei jaksoa");
+            Oleta.Sama(null, s.EsitysNopeaOsoite(null));
+            s.MusiikkiPaalle(false);
+            Oleta.Sama(null, s.EsitysNopeaOsoite("pariisi"), "musiikki pois: ei latausta");
+            s.MusiikkiPaalle(true);
+            Oleta.Tosi(s.EsitysNopeaOsoite("pariisi") != null, "musiikki päällä");
+            s.AanimaisemaPaalle(false);
+            Oleta.Sama(null, s.EsitysNopeaOsoite("pariisi"), "äänimaisema pois");
+            Oleta.Sama(null, Uusi(kerranLapi: false).EsitysNopeaOsoite("pariisi"), "web-tila: ei jaksoa");
+            // Nopea puuttuu (latausvirhe): jakso hyppää hitaaseen, esilataus ei hae puuttuvaa.
+            var p = Esitys();
+            p.Paikka("pariisi", "kaupunki");
+            p.Puuttuu(Kanava.Pohja);
+            Oleta.Sama(null, p.EsitysNopeaOsoite("pariisi"), "puuttuva nopea");
+        }
+
+        [Testi] static void EsitysEsilatauksenViitteetEivatVuoda()
+        {
+            var e = new EsitysEsilataukset();
+            var pois = new System.Collections.Generic.List<string>();
+            Oleta.Tosi(e.Pyyda("a", 0, pois), "uusi pyyntö aloittaa latauksen");
+            Oleta.Tosi(!e.Pyyda("a", 10, pois), "toistuva pyyntö (joutilas) ei lataa uudelleen");
+            Oleta.Sama(1, e.Maara);
+            Oleta.Tosi(!e.Pyyda(null, 0, pois) && !e.Pyyda("", 0, pois), "tyhjä ohi");
+            // Soitin otti klipin: esilatauksen viite pois, toinen otto ei tee mitään.
+            Oleta.Tosi(e.Otettu("a"), "otettu");
+            Oleta.Tosi(!e.Otettu("a") && !e.Sisaltaa("a"), "vain kerran");
+            Oleta.Sama(0, pois.Count);
+            // Ylitys: vanhin pyyntö pois (toistuva pyyntö nuorentaa).
+            e.Pyyda("a", 0, pois); e.Pyyda("b", 1, pois); e.Pyyda("a", 2, pois);
+            e.Pyyda("c", 3, pois);
+            Oleta.Sama(EsitysEsilataukset.Enintaan, e.Maara);
+            Oleta.Sama("b", string.Join(",", pois), "vanhin (b) vapautetaan");
+            Oleta.Tosi(e.Sisaltaa("a") && e.Sisaltaa("c") && !e.Sisaltaa("b"));
+            // Vanheneminen: ilman uutta pyyntöä VanheneeS:ssä vapautuu.
+            pois.Clear();
+            e.Vanhentuneet(2 + EsitysEsilataukset.VanheneeS - 1, pois);
+            Oleta.Sama(0, pois.Count, "ei vielä");
+            e.Vanhentuneet(3 + EsitysEsilataukset.VanheneeS, pois);
+            Oleta.Sama("c,a", string.Join(",", pois), "molemmat vanhenivat");
+            Oleta.Sama(0, e.Maara);
+        }
     }
 }

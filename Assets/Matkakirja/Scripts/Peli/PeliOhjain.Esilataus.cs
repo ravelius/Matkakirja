@@ -5,6 +5,8 @@
 //                    nopalla saavutettavien kaupunkien saapumistarpeet (Kohdekaupungit) ja viimeisenä niiden nostodata (Muu)
 //   kohta 5 (erä 3)  SiirtoKohteetMuuttui: näkyvien kohdekaupunkien saapumistarpeet heti (Kohdekaupungit)
 // PeliOhjain lataa puheet; UI (UiNakymat) kuvat ja nostodatan KaupunkiEnnakoitu- ja JoutilasKaupungissa-tapahtumista.
+// Saapumisesityksen musiikki (omistaja KIIRE TF 180): uuden esittelyn kaupungin nopea levylle ja purettuna muistiin samoissa
+// kohdissa (EsilataaEsitysMusiikki → Aanisoitin.EsilataaEsitysNopea), jotta se alkaa isoisän saapumispuheen kanssa.
 // Kohdat 4–5 seis virransäästössä ja kuumana (Esilataaja.Seis).
 using System;
 using System.Collections.Generic;
@@ -39,7 +41,19 @@ namespace Matkakirja.Natiivi
         {
             if (string.IsNullOrEmpty(kaupunki)) return;
             EsilataaPuheet(kaupunki, Taso.SeuraavaRuutu);
+            EsilataaEsitysMusiikki(kaupunki);
             try { SaapuminenTiedossa?.Invoke(kaupunki); } catch (Exception e) { Debug.LogException(e); }
+        }
+
+        /// <summary>
+        /// SAAPUMISESITYKSEN MUSIIKKI (omistaja KIIRE TF 180, simu fff0b61f0: musiikki 2,97 s puheen jälkeen): uuden esittelyn
+        /// kaupungin (SaapumisluentoPois) jakson nopea levylle ja purettuna Aanisoittimen klippivälimuistiin ennen saapumista.
+        /// Maailmahypyssä ja maitse saavuttaessa pohjasoitin syntyy vasta trailerin ruudussa, joten ilman tätä nopea haettiin silloin.
+        /// </summary>
+        void EsilataaEsitysMusiikki(string kaupunki)
+        {
+            if (aanisoitin == null || string.IsNullOrEmpty(kaupunki) || SaapumisluentoPois?.Invoke(kaupunki) != true) return;
+            try { aanisoitin.EsilataaEsitysNopea(kaupunki); } catch (Exception e) { Debug.LogException(e); }
         }
 
         /// <summary>Puheet, joita pyydettiin ennen kuin luennat.json ja saapumispuheet.json oli luettu (kylmä käynnistys).</summary>
@@ -70,6 +84,7 @@ namespace Matkakirja.Natiivi
             if (string.IsNullOrEmpty(kaupunki) || Esilataaja.Seis) return;
             Esilataaja.KirjaaEnnakointi();
             EsilataaPuheet(kaupunki, taso);
+            EsilataaEsitysMusiikki(kaupunki);
             try { KaupunkiEnnakoitu?.Invoke(kaupunki, taso); } catch (Exception e) { Debug.LogException(e); }
         }
 
@@ -97,6 +112,9 @@ namespace Matkakirja.Natiivi
             var lahella = NopanPaassa(matka);
             if (lahella.Count > 0) Debug.Log($"MATKAKIRJA peli: joutilas {tama}, ennakoidaan {string.Join(", ", lahella)}");
             foreach (var k in lahella) EnnakoiKaupunki(k, Taso.Kohdekaupungit);
+            // Kehittäjän maailmanäkymässä mihin tahansa voi hypätä (MaailmaHyppy): esittelyn kaupungin musiikki valmiiksi.
+            if (Paavalikko.Maailma && tama != Matkakirja.Linssit.Kierros.KaupunkiIntro.Kaupunki)
+                EsilataaEsitysMusiikki(Matkakirja.Linssit.Kierros.KaupunkiIntro.Kaupunki);
         }
 
         /// <summary>

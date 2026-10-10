@@ -622,6 +622,18 @@ namespace Matkakirja.Peli
             if (NopeaOdottaaPuhetta?.Invoke(kaupunki) == true) odottaaPuhetta = kaupunki;
         }
 
+        /// <summary>
+        /// Saapumisesityksen esilataus (omistaja KIIRE TF 180): kaupungin jakson nopean täysi osoite täsmälleen siinä muodossa, jolla
+        /// pohjasoitin sen pyytää (AaniOsoite.Url, sama avain Aanisoittimen klippivälimuistissa), tai null, jos jakso ei soisi
+        /// (musiikki tai äänimaisema pois, ei kerran läpi -tilaa, ei jaksoa, nopea merkitty puuttuvaksi).
+        /// </summary>
+        public string EsitysNopeaOsoite(string kaupunki)
+        {
+            if (!KerranLapi || !JaksoVoiSoida(kaupunki)) return null;
+            var polku = JaksonNopea(kaupunki);
+            return polku == null || puuttuvat.Contains(polku) ? null : AaniOsoite.Url(polku);
+        }
+
         /// <summary>Voiko kaupungin jakso soida (musiikki ja äänimaisema päällä, jakso olemassa); false = intron kello käy hiljaa.</summary>
         public bool JaksoVoiSoida(string kaupunki) => Aanimaisema && Musiikki && kaupunki != null && t.Jaksot.ContainsKey(kaupunki);
 

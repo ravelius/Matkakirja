@@ -729,6 +729,142 @@ namespace Matkakirja.Natiivi
             if (Tila.Jakso == kaupunki + ":nopea" && Tila.EsitysKaupunki != kaupunki) esitysLokiUrl = null;
         }
 
+        // --- SAAPUMISESITYKSEN ESILATAUS (omistaja KIIRE TF 180; simu fff0b61f0: musiikki 2,97 s puheen jälkeen) ------------------
+        // Maailmahypyssä ja maitse saavuttaessa pohjasoitin syntyy samassa ruudussa kuin traileri, ja nopea (2,1 Mt) haettiin vasta
+        // silloin verkosta (~3 s). Ennakointi (PeliOhjain.EsilataaEsitysMusiikki) lataa uuden esittelyn kaupungin nopean levylle ja
+        // purkaa sen jaettuun klippivälimuistiin (klipit) omalla viitteellä; Hae löytää valmiin klipin, ja viite vapautuu, kun
+        // soitin ottaa klipin, esilatausta ei pyydetä 300 s:iin tai pyyntöjä on yli kaksi (EsitysEsilataukset). Striimattava
+        // (> 3 Mt) vain levylle.
+        readonly EsitysEsilataukset esiladatut = new EsitysEsilataukset();
+        /// <summary>Esilatauksen pitämät klipit (oma viite); osoite puuttuu, kun lataus on kesken tai klippi striimataan.</summary>
+        readonly Dictionary<string, Klippi> esiKlipit = new Dictionary<string, Klippi>();
+        readonly List<string> esiPois = new List<string>();
+        float esiTarkistus;
+
+        /// <summary>
+        /// Uuden esittelyn kaupungin nopea valmiiksi (ennakointi tai tiedossa oleva saapuminen). Toistuva pyyntö vain päivittää
+        /// vanhenemisajan. Musiikki pois tai ei jaksoa = ei mitään.
+        /// </summary>
+        public void EsilataaEsitysNopea(string kaupunki)
+        {
+            var url = Tila?.EsitysNopeaOsoite(kaupunki);
+            if (url == null) return;
+            esiPois.Clear();
+            bool uusi = esiladatut.Pyyda(url, Time.unscaledTime, esiPois);
+            foreach (var u in esiPois) VapautaEsiKlippi(u);
+            if (!uusi) return;
+            // Soi jo (tai soitin hakee sitä): ei omaa viitettä.
+            var l = nykyiset[(int)Kanava.Pohja];
+            if (l != null && l.Url == url) { esiladatut.Otettu(url); return; }
+            StartCoroutine(Esilataa(url, kaupunki));
+        }
+
+        IEnumerator Esilataa(string url, string kaupunki)
+        {
+            float t0 = Time.unscaledTime;
+            string levy = LevyPolku(url);
+            string mista = "levyllä";
+            float verkkoS = 0f;
+            if (!File.Exists(levy))
+            {
+                if (ladataan.Contains(url)) { mista = "verkosta, jo latautumassa"; while (ladataan.Contains(url)) yield return null; }
+                else { mista = "verkosta"; yield return Levylle(url, levy); }
+                verkkoS = Time.unscaledTime - t0;
+                if (!File.Exists(levy))
+                {
+                    Debug.LogWarning($"MATKAKIRJA ui saapuminen: musiikin esilataus {kaupunki} ei onnistunut (levylle), {url}");
+                    esiladatut.Otettu(url);
+                    yield break;
+                }
+            }
+            if (!esiladatut.Sisaltaa(url)) yield break; // peruttu tai soitin otti jo
+            long koko = 0;
+            try { koko = new FileInfo(levy).Length; } catch (Exception) { }
+            if (Aanilataus.Striimataan(koko))
+            {
+                Debug.Log($"MATKAKIRJA ui saapuminen: musiikki esiladattu {kaupunki} {Time.unscaledTime:0.000} ({mista}{(verkkoS > 0 ? $" {verkkoS * 1000:0} ms" : "")}, striimi: vain levylle, {koko / 1048576.0:0.0} Mt)");
+                yield break;
+            }
+            Klippi k;
+            float tp = Time.unscaledTime;
+            while (true)
+            {
+                if (klipit.TryGetValue(url, out var jaettu) && !jaettu.Tuhottu)
+                {
+                    while (!jaettu.Valmis && !jaettu.Virhe && !jaettu.Tuhottu) yield return null;
+                    if (jaettu.Tuhottu) continue;
+                    if (jaettu.Virhe) { esiladatut.Otettu(url); yield break; }
+                    k = jaettu;
+                    break;
+                }
+                k = new Klippi { Url = url };
+                klipit[url] = k;
+                yield return Pura(k, levy);
+                if (k.Virhe)
+                {
+                    if (klipit.TryGetValue(url, out var x) && x == k) klipit.Remove(url);
+                    Debug.LogWarning($"MATKAKIRJA ui saapuminen: musiikin esilataus {kaupunki} ei purkautunut, {url}");
+                    esiladatut.Otettu(url);
+                    yield break;
+                }
+                break;
+            }
+            float purkuS = Time.unscaledTime - tp;
+            if (k.Tuhottu || k.Clip == null) { esiladatut.Otettu(url); yield break; }
+            // Peruttu (vanheni, ylitys) tai soitin otti klipin purun aikana; sama osoite uudelleenpyydetty → jo pidossa.
+            if (!esiladatut.Sisaltaa(url) || esiKlipit.ContainsKey(url)) { if (k.Viitteet <= 0) Tuhoa(k); yield break; }
+            k.Viitteet++;
+            esiKlipit[url] = k;
+            Debug.Log($"MATKAKIRJA ui saapuminen: musiikki esiladattu {kaupunki} {Time.unscaledTime:0.000} ({mista}{(verkkoS > 0 ? $" {verkkoS * 1000:0} ms" : "")}, " +
+                      $"purku {purkuS * 1000:0} ms, {koko / 1048576.0:0.0} Mt pakattuna muistiin)");
+        }
+
+        /// <summary>Esilatauksen viite pois (klippi tuhoutuu, jos kukaan muu ei pidä sitä).</summary>
+        void VapautaEsiKlippi(string url)
+        {
+            if (!esiKlipit.TryGetValue(url, out var k)) return;
+            esiKlipit.Remove(url);
+            k.Viitteet--;
+            if (k.Viitteet <= 0) Tuhoa(k);
+        }
+
+        void VanhennaEsilataukset(float nyt)
+        {
+            if (esiladatut.Maara == 0 || nyt < esiTarkistus) return;
+            esiTarkistus = nyt + 5f;
+            esiPois.Clear();
+            esiladatut.Vanhentuneet(nyt, esiPois);
+            foreach (var u in esiPois)
+            {
+                Debug.Log($"MATKAKIRJA ui saapuminen: musiikin esilataus vanheni ({Path.GetFileName(u)})");
+                VapautaEsiKlippi(u);
+            }
+        }
+
+        /// <summary>Saapumisesityksen nopea (kirjaukset): odottava tai esiladattu osoite.</summary>
+        bool OnEsitysUrl(string url)
+        {
+            if (url == null || Tila == null) return false;
+            if (url == esitysLokiUrl || esiladatut.Sisaltaa(url) || esiKlipit.ContainsKey(url)) return true;
+            var odottaa = Tila.OdottaaPuhetta;
+            return odottaa != null && url == Tila.EsitysNopeaOsoite(odottaa);
+        }
+
+        /// <summary>
+        /// VARMISTUS (Saapumistraileri): voiko saapumispuhe alkaa niin, että kaupungin nopea pääsee soimaan samassa ruudussa.
+        /// true = pohjasoittimen klippi on ladattu, valmis purettu klippi odottaa välimuistissa (soitin syntyy ruudun lopussa ja
+        /// ottaa sen 1–2 ruudussa) tai musiikkia ei tule lainkaan. false = lataus kesken; traileri odottaa enintään hetken.
+        /// </summary>
+        public static bool EsitysMusiikkiValmis(string kaupunki)
+        {
+            var s = Instanssi;
+            var url = s?.Tila?.EsitysNopeaOsoite(kaupunki);
+            if (url == null) return true;
+            var l = s.nykyiset[(int)Kanava.Pohja];
+            if (l != null && l.Url == url && l.Ladattu) return true;
+            return s.klipit.TryGetValue(url, out var k) && k.Valmis && !k.Tuhottu;
+        }
+
         // --- KAUPUNKI-INTRO (Pariisin nykyintro, kohta 4): musiikin ajoitus intron kohtaukseen 1 ---------------------------
         /// <summary>
         /// Intron musiikkitahti alkaa: nopea kappale soi (t0 = sen todellinen alku, myös jo soivasta laskettuna). Intro aloittaa
@@ -791,6 +927,7 @@ namespace Matkakirja.Natiivi
             if (Tila.JaksonTaukoNro != jaksoTaukoNahty) { jaksoTaukoNahty = Tila.JaksonTaukoNro; jaksoTaukoLoppuu = nyt + Tila.JaksonTaukoMs / 1000f; }
             if (jaksoTaukoLoppuu > 0 && nyt >= jaksoTaukoLoppuu) { jaksoTaukoLoppuu = 0; int nro = jaksoTaukoNahty; Tee(() => Tila.JaksonTaukoOhi(nro)); }
             PaivitaIntro(nyt, Tee);
+            VanhennaEsilataukset(nyt);
             if (esitysViiveKaupunki != null && nyt >= esitysViiveAika) { var k = esitysViiveKaupunki; Tee(() => AloitaEsitysMusiikki(k)); }
 
             // Takaperin ilman kopiota (ei roskaa joka ruudussa): Vapauta poistaa vain käsiteltävän.
@@ -865,6 +1002,11 @@ namespace Matkakirja.Natiivi
 
         IEnumerator Hae(Lahde l, int vuoro)
         {
+            // Saapumisesityksen nopea: latauksen kesto lokiin ("MATKAKIRJA ui saapuminen: musiikki ladattu", simumittausta varten).
+            float t0 = Time.unscaledTime;
+            bool esitys = l.Kanava == Kanava.Pohja && OnEsitysUrl(l.Url);
+            string mista = "levyllä";
+            float verkkoS = 0f, purkuS = -1f;
             // Aina seuraavassa ruudussa: tulos (ja KestoTiedossa/Puuttuu) ei koskaan tule Sovellan sisältä.
             yield return null;
             if (!Voimassa(l, vuoro)) yield break;
@@ -872,8 +1014,10 @@ namespace Matkakirja.Natiivi
             string levy = LevyPolku(url);
             if (!File.Exists(levy))
             {
-                if (ladataan.Contains(url)) { while (ladataan.Contains(url)) yield return null; }
-                else yield return Levylle(url, levy);
+                float tv = Time.unscaledTime;
+                if (ladataan.Contains(url)) { mista = "verkosta, jo latautumassa"; while (ladataan.Contains(url)) yield return null; }
+                else { mista = "verkosta"; yield return Levylle(url, levy); }
+                verkkoS = Time.unscaledTime - tv;
                 if (!File.Exists(levy))
                 {
                     if (Voimassa(l, vuoro))
@@ -891,15 +1035,20 @@ namespace Matkakirja.Natiivi
             {
                 if (!striimi && klipit.TryGetValue(url, out var jaettu) && !jaettu.Tuhottu)
                 {
+                    if (esitys && mista == "levyllä") mista = jaettu.Valmis ? "esiladattu, valmiiksi purettu" : "esilataus kesken";
+                    float tj = Time.unscaledTime;
                     while (!jaettu.Valmis && !jaettu.Virhe && !jaettu.Tuhottu) yield return null;
                     if (jaettu.Tuhottu) continue;
                     if (jaettu.Virhe) { if (Voimassa(l, vuoro)) Epaonnistui(l, new Latausvirhe { Purku = true }); yield break; }
+                    purkuS = Time.unscaledTime - tj;
                     k = jaettu;
                     break;
                 }
                 k = new Klippi { Url = url, Striimi = striimi };
                 if (!striimi) klipit[url] = k;
+                float tp = Time.unscaledTime;
                 yield return Pura(k, levy);
+                purkuS = Time.unscaledTime - tp;
                 if (k.Virhe)
                 {
                     if (klipit.TryGetValue(url, out var x) && x == k) klipit.Remove(url);
@@ -911,6 +1060,12 @@ namespace Matkakirja.Natiivi
             if (!Voimassa(l, vuoro)) { if (k.Viitteet <= 0) Tuhoa(k); yield break; }
             k.Viitteet++;
             l.K = k;
+            // Soitin otti esiladatun klipin: esilatauksen oma viite pois (soittimen viite pitää klipin).
+            if (esiladatut.Otettu(url)) VapautaEsiKlippi(url);
+            if (esitys)
+                Debug.Log($"MATKAKIRJA ui saapuminen: musiikki ladattu {Time.unscaledTime:0.000} ({mista}{(verkkoS > 0 ? $" {verkkoS * 1000:0} ms" : "")}, " +
+                          $"purku {(purkuS >= 0 ? (purkuS * 1000).ToString("0") : "-")} ms{(striimi ? ", striimi" : "")}, {koko / 1048576.0:0.0} Mt, " +
+                          $"soittimen luonnista {(Time.unscaledTime - t0) * 1000:0} ms)");
             Ladattu(l);
         }
 
