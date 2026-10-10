@@ -129,6 +129,8 @@ const MAAN_GENETIIVIT = {
   'Saint Kitts ja Nevis': 'Saint Kittsin ja Nevisin',
   'Saint Vincent ja Grenadiinit': 'Saint Vincentin ja Grenadiinien',
   'Trinidad ja Tobago': 'Trinidadin ja Tobagon',
+  // Oseania (kaikki maat 10.10.2026): monikko kuten Salomonsaaret.
+  Marshallinsaaret: 'Marshallinsaarten',
 };
 
 /**

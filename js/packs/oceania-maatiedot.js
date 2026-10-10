@@ -244,4 +244,14 @@ export const OCEANIA_MAATIEDOT = {
       { teksti: 'Halo', kieli: 'bislama (yleiskieli)', lippu: 'Flag of Vanuatu.svg', osuus: '60 %' },
     ],
   },
+  // Kaikki maat -projekti (PT 10.10.2026): vain väkiluku ja pinta-ala
+  // Sisältökirjurin faktoista (oseania: kansalliset tilastot ja Maailmanpankki). Ei sijoja.
+  FSM: { vakiluku: '76 000', pintaAla: '701 km²' },
+  KIR: { vakiluku: '119 000', pintaAla: '811 km²' },
+  MHL: { vakiluku: '42 000', pintaAla: '181 km²' },
+  NRU: { vakiluku: '12 000', pintaAla: '21 km²' },
+  PLW: { vakiluku: '18 000', pintaAla: '466 km²' },
+  TON: { vakiluku: '100 000', pintaAla: '748 km²' },
+  TUV: { vakiluku: '11 000', pintaAla: '25 km²' },
+  WSM: { vakiluku: '206 000', pintaAla: '2 800 km²' },
 };

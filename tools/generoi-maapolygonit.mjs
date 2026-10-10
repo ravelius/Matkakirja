@@ -218,8 +218,9 @@ const NIMIVASTAAVUUS = { SDS: 'SSD' };
  * muodon säleeksi, tilalle pienin näkyvä vinoneliö (0,3 yksikön säde, noin
  * 1 km) maan keskipisteeseen: raja on silloin merkki, ei mittaus.
  */
-// Malediivit (kaikki maat 10.10.2026): atollit ovat minivaltioiden kokoluokkaa.
-const MINIVALTIOT = new Set(['AND', 'LIE', 'MCO', 'SMR', 'VAT', 'MDV']);
+// Malediivit, Marshallinsaaret, Nauru ja Tuvalu (kaikki maat 10.10.2026): atollit
+// ovat minivaltioiden kokoluokkaa.
+const MINIVALTIOT = new Set(['AND', 'LIE', 'MCO', 'SMR', 'VAT', 'MDV', 'MHL', 'NRU', 'TUV']);
 const MINI_TOLERANSSI = 0.03;
 
 /* ------------------------------------------------------- projektion todennus */
