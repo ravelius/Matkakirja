@@ -1,0 +1,906 @@
+### 241
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Palaipafos (historia)
+Tietoruudun teksti: Vanha Paphos, nykyinen Kouklia, on kukkulalla noin kaksitoista kilometriä uudesta kaupungista kaakkoon. Paikka on ollut asuttu neoliittiselta ajalta, ja siitä tuli antiikin maailman tärkein Afroditen palvontapaikka — jumalattaren myyttinen syntypaikka oli Kypros. Strabonin mukaan Nea Paphoksesta vanhaan kaupunkiin johtava tie täyttyi vuosittain pyhiinvaeltajista. Tacitus kertoo nuoren Tituksen käyneen katsomassa pyhäkköä ja panneen merkille oudon asian: jumalattaresta ei ollut kuvaa lainkaan, vain pyramidin muotoinen kivi.
+AIEMPI KYSYMYS: Kuka oli Tacitus?
+AIEMPI VASTAUS (Livia):
+No jopas. Tacitus oli roomalainen historioitsija, joka eli ensimmäisen ja toisen vuosisadan vaihteessa. Hänen tunnetuimpia teoksiaan ovat [[Annales]] ja [[Germania]]. [[Palaipafoksen]] yhteydessä hän kertoo nuoren [[Tituksen]] käyneen katsomassa pyhäkköä ja havainneen, ettei jumalattaresta ollut kuvaa lainkaan, vain pyramidin muotoinen kivi. Hyvä että joku kirjoitti muistiin, minä vain kannoin kirjeet.
+KYSYMYS: Kerro lisää: Palaipafoksen
+
+### 242
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Palaipafos (historia)
+Tietoruudun teksti: Vanha Paphos, nykyinen Kouklia, on kukkulalla noin kaksitoista kilometriä uudesta kaupungista kaakkoon. Paikka on ollut asuttu neoliittiselta ajalta, ja siitä tuli antiikin maailman tärkein Afroditen palvontapaikka — jumalattaren myyttinen syntypaikka oli Kypros. Strabonin mukaan Nea Paphoksesta vanhaan kaupunkiin johtava tie täyttyi vuosittain pyhiinvaeltajista. Tacitus kertoo nuoren Tituksen käyneen katsomassa pyhäkköä ja panneen merkille oudon asian: jumalattaresta ei ollut kuvaa lainkaan, vain pyramidin muotoinen kivi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Luonto: Turvetta kaivaessa löytyi kokonainen kivikausi] 1875 — Kaksi vuotta isoisän matkan jälkeen, vuonna 1875, suomologi Karel Dežman löysi Ljubljanan suolta ensimmäiset merkit paalukylistä turvetta kaivaessaan. Myöhemmät kaivaukset paljastivat, että ihmiset olivat asuttaneet suon reunoja jo noin 4600–2000 eaa.: he rakensivat mökkinsä puupaalujen varaan veden ja kosteuden yläpuolelle. Ljubljanan suon paalukylät kuuluvat nykyään Unescon Alppien ympäristön esihistoriallisten paalukylien maailmanperintökohteeseen yhdessä satojen muiden löytöpaikkojen kanssa kuudessa maassa.
+AIEMPI KYSYMYS: Mitä neoliittinen aika tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Neoliittinen aika eli [[uudempi kivikausi]] on esihistorian vaihe, jolloin ihmiset siirtyivät vähitellen metsästyksestä ja keräilystä maanviljelyyn ja kiinteään asutukseen. Ajankohta vaihtelee alueittain. Vanha Paphos eli [[Palaipafos]] on ollut asuttu jo neoliittiselta ajalta. Ei kai siihen aikaan vielä kunnon pullaa leivottu.
+KYSYMYS: Kerro lisää: uudempi kivikausi
+
+### 243
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kourion (historia)
+Tietoruudun teksti: Kourion oli merkittävä kreikkalainen kaupunkivaltio Kyproksen lounaisrannikolla. Argoksesta tulleet uudisasukkaat asettuivat paikalle 1100-luvulla eaa., kun mykeneläiset palatsit olivat romahtaneet. Akropoli seisoo lähes sadan metrin korkuisella kalkkikivikielekkeellä Episkopinlahden yllä. Vuosien 365 ja 370 välillä viisi voimakasta maanjäristystä tuhosi kaupungin lähes kokonaan, ja se rakennettiin uudelleen vasta 400-luvun lopulla. Arabiretkikunnat hävittivät akropolin 648–649, ja asutus siirtyi kaksi kilometriä koilliseen Episkopiin, joka sai nimensä piispanistuimesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Muinaisuus: Teatterista tehtiin kehä ja takaisin] Kourion oli kaupunkikuningaskunta jyrkänteen päällä etelärannikolla. Herodotos kertoo kourionilaisten polveutuvan Argoksesta tulleista siirtolaisista, ja saman toistaa Strabon; akhaialaiset asettuivat paikalle 1100-luvulla eaa. Teatteri rakennettiin 100-luvulla eaa. ja se oli aluksi pienempi. Nykyiseen kokoonsa se laajennettiin 100-luvulla jaa., jolloin katsomoon mahtui 3 500 katsojaa. 200-luvun alkupuolella teatteri muutettiin areenaksi: näyttämön eteen pystytettiin metalliristikko petoeläinnäytöksiä varten ja kolme alinta istuinriviä purettiin, jotta katsojat olisivat kauempana kehästä. Saman vuosisadan puolivälin jälkeen areena muutettiin takaisin teatteriksi, ja alimmat karkeasti hakatu…
+AIEMPI KYSYMYS: Mitä kaupungille tapahtui 300-luvulla?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Tuo on vakava juttu. Vuosien 365 ja 370 välillä viisi voimakasta maanjäristystä tuhosi [[Kourionin]] lähes kokonaan. Tapahtumasta on yli tuhat kuusisataa vuotta, ja se sattui [[Rooman valtakunnan]] aikaan. Kaupunki rakennettiin uudelleen vasta 400-luvun lopulla, ja vuosina 648–649 arabiretkikunnat hävittivät [[akropolin]], jonka jälkeen asutus siirtyi kaksi kilometriä koilliseen [[Episkopiin]]. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Kourionin
+
+### 244
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kourion (historia)
+Tietoruudun teksti: Kourion oli merkittävä kreikkalainen kaupunkivaltio Kyproksen lounaisrannikolla. Argoksesta tulleet uudisasukkaat asettuivat paikalle 1100-luvulla eaa., kun mykeneläiset palatsit olivat romahtaneet. Akropoli seisoo lähes sadan metrin korkuisella kalkkikivikielekkeellä Episkopinlahden yllä. Vuosien 365 ja 370 välillä viisi voimakasta maanjäristystä tuhosi kaupungin lähes kokonaan, ja se rakennettiin uudelleen vasta 400-luvun lopulla. Arabiretkikunnat hävittivät akropolin 648–649, ja asutus siirtyi kaksi kilometriä koilliseen Episkopiin, joka sai nimensä piispanistuimesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sevilla — kaupunkilehti / Historia: Amfiteatterin muurit purettiin padoksi] Yhdeksän kilometrin päässä Sevillasta seisoo Itálica, jonka Scipio perusti vuonna 206 eaa. haavoittuneille veteraaneilleen ja nimesi Italian mukaan. Se oli ensimmäinen roomalainen asutus koko Hispaniassa, ja siellä syntyi kaksi Rooman keisaria, Trajanus ja Hadrianus. Kaupungin amfiteatteri oli aikanaan valtakunnan kolmanneksi suurin: siihen mahtui 25 000 katsojaa, vaikka kaupungissa asui arviolta 8 000 ihmistä. Sitten tuli hitaampi tuho kuin mikään sota: raunioita louhittiin rakennusaineeksi vuosisatoja, ja vuonna 1740 Sevillan kaupunki määräsi amfiteatterin muurit purettaviksi — kiviä tarvittiin Guadalquiviriin rakennettavaan patoon.
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Vesi sadan mailin päästä] Roomalaiset epäröivät pitkään Karthagon paikan uudelleenkäytössä, mutta Gaius Julius Caesar määräsi vuonna 44 eaa. uuden siirtokunnan perustettavaksi täsmälleen samalle niemelle. Kaupunki kasvoi nopeasti, ja 100-luvulla jaa. siitä oli tullut Rooman valtakunnan läntisen osan toiseksi suurin kaupunki, jossa asui parhaimmillaan satojatuhansia ihmisiä. Näin suuri väestö tarvitsi vettä, jota ei riittänyt lähialueelta: keisari Hadrianuksen aikana rakennettu vesijohto kuljetti vettä Zaghouanin vuorilta peräti 132 kilometrin matkan Karthagoon asti, ja se on yhä yksi pisimmistä koko Rooman valtakunnan tunnetuista vesijohdoista.
+AIEMPI KYSYMYS: Mitä kaupungille tapahtui 300-luvulla?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Tuo on vakava juttu. Vuosien 365 ja 370 välillä viisi voimakasta maanjäristystä tuhosi [[Kourionin]] lähes kokonaan. Tapahtumasta on yli tuhat kuusisataa vuotta, ja se sattui [[Rooman valtakunnan]] aikaan. Kaupunki rakennettiin uudelleen vasta 400-luvun lopulla, ja vuosina 648–649 arabiretkikunnat hävittivät [[akropolin]], jonka jälkeen asutus siirtyi kaksi kilometriä koilliseen [[Episkopiin]]. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Rooman valtakunnan
+
+### 245
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kourion (historia)
+Tietoruudun teksti: Kourion oli merkittävä kreikkalainen kaupunkivaltio Kyproksen lounaisrannikolla. Argoksesta tulleet uudisasukkaat asettuivat paikalle 1100-luvulla eaa., kun mykeneläiset palatsit olivat romahtaneet. Akropoli seisoo lähes sadan metrin korkuisella kalkkikivikielekkeellä Episkopinlahden yllä. Vuosien 365 ja 370 välillä viisi voimakasta maanjäristystä tuhosi kaupungin lähes kokonaan, ja se rakennettiin uudelleen vasta 400-luvun lopulla. Arabiretkikunnat hävittivät akropolin 648–649, ja asutus siirtyi kaksi kilometriä koilliseen Episkopiin, joka sai nimensä piispanistuimesta.
+AIEMPI KYSYMYS: Mitä kaupungille tapahtui 300-luvulla?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Tuo on vakava juttu. Vuosien 365 ja 370 välillä viisi voimakasta maanjäristystä tuhosi [[Kourionin]] lähes kokonaan. Tapahtumasta on yli tuhat kuusisataa vuotta, ja se sattui [[Rooman valtakunnan]] aikaan. Kaupunki rakennettiin uudelleen vasta 400-luvun lopulla, ja vuosina 648–649 arabiretkikunnat hävittivät [[akropolin]], jonka jälkeen asutus siirtyi kaksi kilometriä koilliseen [[Episkopiin]]. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: akropolin
+
+### 246
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kourion (historia)
+Tietoruudun teksti: Kourion oli merkittävä kreikkalainen kaupunkivaltio Kyproksen lounaisrannikolla. Argoksesta tulleet uudisasukkaat asettuivat paikalle 1100-luvulla eaa., kun mykeneläiset palatsit olivat romahtaneet. Akropoli seisoo lähes sadan metrin korkuisella kalkkikivikielekkeellä Episkopinlahden yllä. Vuosien 365 ja 370 välillä viisi voimakasta maanjäristystä tuhosi kaupungin lähes kokonaan, ja se rakennettiin uudelleen vasta 400-luvun lopulla. Arabiretkikunnat hävittivät akropolin 648–649, ja asutus siirtyi kaksi kilometriä koilliseen Episkopiin, joka sai nimensä piispanistuimesta.
+AIEMPI KYSYMYS: Mitä kaupungille tapahtui 300-luvulla?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Tuo on vakava juttu. Vuosien 365 ja 370 välillä viisi voimakasta maanjäristystä tuhosi [[Kourionin]] lähes kokonaan. Tapahtumasta on yli tuhat kuusisataa vuotta, ja se sattui [[Rooman valtakunnan]] aikaan. Kaupunki rakennettiin uudelleen vasta 400-luvun lopulla, ja vuosina 648–649 arabiretkikunnat hävittivät [[akropolin]], jonka jälkeen asutus siirtyi kaksi kilometriä koilliseen [[Episkopiin]]. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Episkopiin
+
+### 247
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kourion (historia)
+Tietoruudun teksti: Kourion oli merkittävä kreikkalainen kaupunkivaltio Kyproksen lounaisrannikolla. Argoksesta tulleet uudisasukkaat asettuivat paikalle 1100-luvulla eaa., kun mykeneläiset palatsit olivat romahtaneet. Akropoli seisoo lähes sadan metrin korkuisella kalkkikivikielekkeellä Episkopinlahden yllä. Vuosien 365 ja 370 välillä viisi voimakasta maanjäristystä tuhosi kaupungin lähes kokonaan, ja se rakennettiin uudelleen vasta 400-luvun lopulla. Arabiretkikunnat hävittivät akropolin 648–649, ja asutus siirtyi kaksi kilometriä koilliseen Episkopiin, joka sai nimensä piispanistuimesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aleppo — kohdekartta / Kohdekartta: Antiokian portti] Vanhankaupungin läntisen muurin keskellä seisoo portti, jonka nimi kertoo suunnan: tie vei Antiokiaan, antiikin Syyrian pääkaupunkiin. Kaksi kuusikulmaista bastionia nousee rinnakkain, ja niiden välinen kulkuväylä mutkittelee sen sijaan että menisi suoraan läpi. Aukko on oikeanpuoleisen tornin alla, puolustussyistä: sisään tulija ei pääse vauhtiin eikä näe eteensä. Kivi on valkoista, ja lohkareet ovat noin 0,8 kertaa 1,0 metriä. Bysantin aikana tämä oli kaupungin pääportti, ja sen jälkeen merkitys hiipui. Ajjubidien Aleppon emiiri an-Nasir Yusuf, Saladinin pojanpojanpoika, rakennutti portin uudelleen 1000-luvulta periytyvän perustuksen päälle. Vuosiluvut ovat epätarkkoja: portin kohdalla hä…
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+AIEMPI KYSYMYS: Miksi asutus siirtyi Episkopiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Vuosina 648–649 arabiretkikunnat hävittivät Kourionin [[akropolin]], ja sen jälkeen asutus siirtyi kaksi kilometriä koilliseen [[Episkopiin]]. Paikka sai nimensä piispanistuimesta. Tapahtumista on kulunut yli tuhat kolmesataa vuotta, ja alue kuului silloin [[Bysantin valtakuntaan]]. Hyvä, että siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Bysantin valtakuntaan
+
+### 248
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kourion (historia)
+Tietoruudun teksti: Kourion oli merkittävä kreikkalainen kaupunkivaltio Kyproksen lounaisrannikolla. Argoksesta tulleet uudisasukkaat asettuivat paikalle 1100-luvulla eaa., kun mykeneläiset palatsit olivat romahtaneet. Akropoli seisoo lähes sadan metrin korkuisella kalkkikivikielekkeellä Episkopinlahden yllä. Vuosien 365 ja 370 välillä viisi voimakasta maanjäristystä tuhosi kaupungin lähes kokonaan, ja se rakennettiin uudelleen vasta 400-luvun lopulla. Arabiretkikunnat hävittivät akropolin 648–649, ja asutus siirtyi kaksi kilometriä koilliseen Episkopiin, joka sai nimensä piispanistuimesta.
+AIEMPI KYSYMYS: Keitä mykeneläiset olivat?
+AIEMPI VASTAUS (Livia):
+Mmm— Mykeneläiset olivat pronssikauden kreikkalaisia, joiden kulttuuri sai nimensä [[Mykenen]] kaupungista [[Peloponnesoksella]]. Heidän palatsikeskuksensa romahtivat noin 1200-luvun lopulla eaa., ja sen jälkeen osa kreikkalaisista asettui uusille alueille. Kourionin perustajiksi kerrotaan [[Argoksesta]] tulleita uudisasukkaita, jotka saapuivat 1100-luvulla eaa. No, pitkä historia mahtui kyl lyhyeen vastaukseen.
+KYSYMYS: Kerro lisää: Mykenen
+
+### 249
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kourion (historia)
+Tietoruudun teksti: Kourion oli merkittävä kreikkalainen kaupunkivaltio Kyproksen lounaisrannikolla. Argoksesta tulleet uudisasukkaat asettuivat paikalle 1100-luvulla eaa., kun mykeneläiset palatsit olivat romahtaneet. Akropoli seisoo lähes sadan metrin korkuisella kalkkikivikielekkeellä Episkopinlahden yllä. Vuosien 365 ja 370 välillä viisi voimakasta maanjäristystä tuhosi kaupungin lähes kokonaan, ja se rakennettiin uudelleen vasta 400-luvun lopulla. Arabiretkikunnat hävittivät akropolin 648–649, ja asutus siirtyi kaksi kilometriä koilliseen Episkopiin, joka sai nimensä piispanistuimesta.
+AIEMPI KYSYMYS: Keitä mykeneläiset olivat?
+AIEMPI VASTAUS (Livia):
+Mmm— Mykeneläiset olivat pronssikauden kreikkalaisia, joiden kulttuuri sai nimensä [[Mykenen]] kaupungista [[Peloponnesoksella]]. Heidän palatsikeskuksensa romahtivat noin 1200-luvun lopulla eaa., ja sen jälkeen osa kreikkalaisista asettui uusille alueille. Kourionin perustajiksi kerrotaan [[Argoksesta]] tulleita uudisasukkaita, jotka saapuivat 1100-luvulla eaa. No, pitkä historia mahtui kyl lyhyeen vastaukseen.
+KYSYMYS: Kerro lisää: Peloponnesoksella
+
+### 250
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kourion (historia)
+Tietoruudun teksti: Kourion oli merkittävä kreikkalainen kaupunkivaltio Kyproksen lounaisrannikolla. Argoksesta tulleet uudisasukkaat asettuivat paikalle 1100-luvulla eaa., kun mykeneläiset palatsit olivat romahtaneet. Akropoli seisoo lähes sadan metrin korkuisella kalkkikivikielekkeellä Episkopinlahden yllä. Vuosien 365 ja 370 välillä viisi voimakasta maanjäristystä tuhosi kaupungin lähes kokonaan, ja se rakennettiin uudelleen vasta 400-luvun lopulla. Arabiretkikunnat hävittivät akropolin 648–649, ja asutus siirtyi kaksi kilometriä koilliseen Episkopiin, joka sai nimensä piispanistuimesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Muinaisuus: Teatterista tehtiin kehä ja takaisin] Kourion oli kaupunkikuningaskunta jyrkänteen päällä etelärannikolla. Herodotos kertoo kourionilaisten polveutuvan Argoksesta tulleista siirtolaisista, ja saman toistaa Strabon; akhaialaiset asettuivat paikalle 1100-luvulla eaa. Teatteri rakennettiin 100-luvulla eaa. ja se oli aluksi pienempi. Nykyiseen kokoonsa se laajennettiin 100-luvulla jaa., jolloin katsomoon mahtui 3 500 katsojaa. 200-luvun alkupuolella teatteri muutettiin areenaksi: näyttämön eteen pystytettiin metalliristikko petoeläinnäytöksiä varten ja kolme alinta istuinriviä purettiin, jotta katsojat olisivat kauempana kehästä. Saman vuosisadan puolivälin jälkeen areena muutettiin takaisin teatteriksi, ja alimmat karkeasti hakatu…
+AIEMPI KYSYMYS: Keitä mykeneläiset olivat?
+AIEMPI VASTAUS (Livia):
+Mmm— Mykeneläiset olivat pronssikauden kreikkalaisia, joiden kulttuuri sai nimensä [[Mykenen]] kaupungista [[Peloponnesoksella]]. Heidän palatsikeskuksensa romahtivat noin 1200-luvun lopulla eaa., ja sen jälkeen osa kreikkalaisista asettui uusille alueille. Kourionin perustajiksi kerrotaan [[Argoksesta]] tulleita uudisasukkaita, jotka saapuivat 1100-luvulla eaa. No, pitkä historia mahtui kyl lyhyeen vastaukseen.
+KYSYMYS: Kerro lisää: Argoksesta
+
+### 251
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kourion (historia)
+Tietoruudun teksti: Kourion oli merkittävä kreikkalainen kaupunkivaltio Kyproksen lounaisrannikolla. Argoksesta tulleet uudisasukkaat asettuivat paikalle 1100-luvulla eaa., kun mykeneläiset palatsit olivat romahtaneet. Akropoli seisoo lähes sadan metrin korkuisella kalkkikivikielekkeellä Episkopinlahden yllä. Vuosien 365 ja 370 välillä viisi voimakasta maanjäristystä tuhosi kaupungin lähes kokonaan, ja se rakennettiin uudelleen vasta 400-luvun lopulla. Arabiretkikunnat hävittivät akropolin 648–649, ja asutus siirtyi kaksi kilometriä koilliseen Episkopiin, joka sai nimensä piispanistuimesta.
+AIEMPI KYSYMYS: Missä Argos sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai se. Argos on kaupunki Kreikassa, [[Peloponnesoksen]] niemimaalla. Sieltä tulleet uudisasukkaat asettuivat [[Kourionin]] paikalle 1100-luvulla eaa., kun [[mykeneläisten]] palatsit olivat romahtaneet. Matka Kyprokselle merta pitkin ei ollut kyl pieni, vaikka linnuille se on pikku juttu.
+KYSYMYS: Kerro lisää: Peloponnesoksen
+
+### 252
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kourion (historia)
+Tietoruudun teksti: Kourion oli merkittävä kreikkalainen kaupunkivaltio Kyproksen lounaisrannikolla. Argoksesta tulleet uudisasukkaat asettuivat paikalle 1100-luvulla eaa., kun mykeneläiset palatsit olivat romahtaneet. Akropoli seisoo lähes sadan metrin korkuisella kalkkikivikielekkeellä Episkopinlahden yllä. Vuosien 365 ja 370 välillä viisi voimakasta maanjäristystä tuhosi kaupungin lähes kokonaan, ja se rakennettiin uudelleen vasta 400-luvun lopulla. Arabiretkikunnat hävittivät akropolin 648–649, ja asutus siirtyi kaksi kilometriä koilliseen Episkopiin, joka sai nimensä piispanistuimesta.
+AIEMPI KYSYMYS: Missä Argos sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai se. Argos on kaupunki Kreikassa, [[Peloponnesoksen]] niemimaalla. Sieltä tulleet uudisasukkaat asettuivat [[Kourionin]] paikalle 1100-luvulla eaa., kun [[mykeneläisten]] palatsit olivat romahtaneet. Matka Kyprokselle merta pitkin ei ollut kyl pieni, vaikka linnuille se on pikku juttu.
+KYSYMYS: Kerro lisää: mykeneläisten
+
+### 253
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kourion (historia)
+Tietoruudun teksti: Kourion oli merkittävä kreikkalainen kaupunkivaltio Kyproksen lounaisrannikolla. Argoksesta tulleet uudisasukkaat asettuivat paikalle 1100-luvulla eaa., kun mykeneläiset palatsit olivat romahtaneet. Akropoli seisoo lähes sadan metrin korkuisella kalkkikivikielekkeellä Episkopinlahden yllä. Vuosien 365 ja 370 välillä viisi voimakasta maanjäristystä tuhosi kaupungin lähes kokonaan, ja se rakennettiin uudelleen vasta 400-luvun lopulla. Arabiretkikunnat hävittivät akropolin 648–649, ja asutus siirtyi kaksi kilometriä koilliseen Episkopiin, joka sai nimensä piispanistuimesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan tuomiokirkko] 1861 Tromssan tuomiokirkko on kokonaan puusta rakennettu keltainen kirkko, joka valmistui vuonna 1861 arkkitehti Christian Heinrich Groschin piirustusten mukaan. Se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu puusta - ja sen sisään mahtuu yli 600 kirkkovierasta! Paikalla on ollut kirkko jo satoja vuosia ennen tätäkin: kuningas Håkon IV rakennutti tänne kappelin jo vuonna 1252, ja sen jälkeen paikalla on ollut ainakin kaksi muuta kirkkoa ennen nykyistä rakennusta. Kellotorni valmistui vuotta myöhemmin, 1862, ja kirkkoa koristeltiin lisää vielä 1880-luvulla. Isoisän vieraillessa Tromssassa 1873 kirkko oli vasta reilut kymmenen vuotta vanha - täysin uusi nähtävyys pienessä pu…
+AIEMPI KYSYMYS: Mitä piispanistuin tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Piispanistuin on piispan hallinnollinen ja kirkollinen keskus, yleensä paikka, jossa sijaitsee [[tuomiokirkko]], sekä alue, jota piispa johtaa. [[Episkopin]] nimi tulee tästä: asutus siirtyi [[Kourionin]] tuhon jälkeen kaksi kilometriä koilliseen paikkaan, joka sai nimensä piispanistuimesta. Kreikan sana episkopos tarkoittaa valvojaa. Istuin kuulostaa mukavalta, minä tyydyn kyl orteen.
+KYSYMYS: Kerro lisää: tuomiokirkko
+
+### 254
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kourion (historia)
+Tietoruudun teksti: Kourion oli merkittävä kreikkalainen kaupunkivaltio Kyproksen lounaisrannikolla. Argoksesta tulleet uudisasukkaat asettuivat paikalle 1100-luvulla eaa., kun mykeneläiset palatsit olivat romahtaneet. Akropoli seisoo lähes sadan metrin korkuisella kalkkikivikielekkeellä Episkopinlahden yllä. Vuosien 365 ja 370 välillä viisi voimakasta maanjäristystä tuhosi kaupungin lähes kokonaan, ja se rakennettiin uudelleen vasta 400-luvun lopulla. Arabiretkikunnat hävittivät akropolin 648–649, ja asutus siirtyi kaksi kilometriä koilliseen Episkopiin, joka sai nimensä piispanistuimesta.
+AIEMPI KYSYMYS: Mitä piispanistuin tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Piispanistuin on piispan hallinnollinen ja kirkollinen keskus, yleensä paikka, jossa sijaitsee [[tuomiokirkko]], sekä alue, jota piispa johtaa. [[Episkopin]] nimi tulee tästä: asutus siirtyi [[Kourionin]] tuhon jälkeen kaksi kilometriä koilliseen paikkaan, joka sai nimensä piispanistuimesta. Kreikan sana episkopos tarkoittaa valvojaa. Istuin kuulostaa mukavalta, minä tyydyn kyl orteen.
+KYSYMYS: Kerro lisää: Episkopin
+
+### 255
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Khirokitia (historia)
+Tietoruudun teksti: Khirokitia on neoliittinen asuinpaikka Maronijoen laaksossa kuuden kilometrin päässä etelärannikolta, ja se on ollut Unescon luettelossa vuodesta 1998. Porphyrios Dikaios löysi paikan 1934 ja arveli sen syntyneen noin 4000 eaa.; radiohiiliajoitus siirsi perustamisen 7000 vuoteen eaa. Kylää ympäröi kahden ja puolen metrin paksuinen kivimuuri, ja sen sisällä on tiiviissä ryhmissä pyöreitä tholos-rakennuksia, halkaisijaltaan kahdesta yhdeksään metriä. Vainajat haudattiin koukkuasennossa aivan lattian alle. Kylä hylättiin tuntemattomasta syystä noin 6000 eaa.
+AIEMPI KYSYMYS: Miksi kylän ikä muuttui kolmella vuosituhannella?
+AIEMPI VASTAUS (Livia):
+No jopas. [[Porphyrios Dikaios]] löysi paikan vuonna 1934 ja arveli kylän syntyneen noin 4000 eaa. Myöhemmin [[radiohiiliajoitus]] siirsi perustamisen vuoteen 7000 eaa., eli noin kolme vuosituhatta aiemmaksi. Ajoitusmenetelmä mittaa orgaanisen aineen sisältämän hiili-14:n määrää, ja se antoi tarkemman tuloksen kuin alkuperäinen arvio. Kolme tuhatta vuotta lisää ei kyl ole pikku virhe.
+KYSYMYS: Kerro lisää: Porphyrios Dikaios
+
+### 256
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Khirokitia (historia)
+Tietoruudun teksti: Khirokitia on neoliittinen asuinpaikka Maronijoen laaksossa kuuden kilometrin päässä etelärannikolta, ja se on ollut Unescon luettelossa vuodesta 1998. Porphyrios Dikaios löysi paikan 1934 ja arveli sen syntyneen noin 4000 eaa.; radiohiiliajoitus siirsi perustamisen 7000 vuoteen eaa. Kylää ympäröi kahden ja puolen metrin paksuinen kivimuuri, ja sen sisällä on tiiviissä ryhmissä pyöreitä tholos-rakennuksia, halkaisijaltaan kahdesta yhdeksään metriä. Vainajat haudattiin koukkuasennossa aivan lattian alle. Kylä hylättiin tuntemattomasta syystä noin 6000 eaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nuuk — kohdekartta / Kohdekartta: Grönlannin kansallismuseo] 1965 Nunatta Katersugaasivia Allagaateqarfialu oli yksi Grönlannin ensimmäisistä museoista. Sen ensimmäinen näyttely avattiin 1965 herrnhutilaisessa lähetystalossa, ja 1970-luvulla se muutti vanhaan siirtomaasatamaan vuonna 1936 rakennettuun varastoon. Muutto ei johtunut tilan puutteesta yksin: kokoelma kasvoi, kun Tanskan kansallismuseo alkoi palauttaa grönlantilaisia esineitä takaisin saarelle. Museon tunnetuin näyttely ovat Qilakitsoqin muumiot. Kaksi metsästäjää, Hans ja Jokum Grønvold, löysivät 9. lokakuuta 1972 riekkojahdissa Uummannaqin lähellä kiviröykkiön, jonka alla oli useita ruumiita. He peittivät haudan uudelleen ja ilmoittivat viranomaisille. Kahdeksan vainajaa oli säilynyt lu…
+- [Kanada — maalehti / Historia: Viisisataa vuotta ennen Kolumbusta] 1021 — Newfoundlandin pohjoiskärjessä on kahdeksan turvekattoisen rakennuksen pohjat ja yli 800 esinettä — ainoa kiistaton todiste siitä, että eurooppalaiset kävivät Amerikassa ennen Kolumbusta. Norjalainen tutkija Helge Ingstad ja arkeologi Anne Stine Ingstad kaivoivat paikan 1961–1968 sen jälkeen, kun kyläläinen George Decker oli vienyt heidät kumpujen luo. Radiohiiliajoitus antoi haarukan 990–1050, mutta vuosilustot tarkensivat vuonna 2021 yhden vuoden: 1021. Löydetyt voipähkinät eivät kasva näin pohjoisessa, joten purjehdittiin myös etelämmäksi.
+AIEMPI KYSYMYS: Miksi kylän ikä muuttui kolmella vuosituhannella?
+AIEMPI VASTAUS (Livia):
+No jopas. [[Porphyrios Dikaios]] löysi paikan vuonna 1934 ja arveli kylän syntyneen noin 4000 eaa. Myöhemmin [[radiohiiliajoitus]] siirsi perustamisen vuoteen 7000 eaa., eli noin kolme vuosituhatta aiemmaksi. Ajoitusmenetelmä mittaa orgaanisen aineen sisältämän hiili-14:n määrää, ja se antoi tarkemman tuloksen kuin alkuperäinen arvio. Kolme tuhatta vuotta lisää ei kyl ole pikku virhe.
+KYSYMYS: Kerro lisää: radiohiiliajoitus
+
+### 257
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Khirokitia (historia)
+Tietoruudun teksti: Khirokitia on neoliittinen asuinpaikka Maronijoen laaksossa kuuden kilometrin päässä etelärannikolta, ja se on ollut Unescon luettelossa vuodesta 1998. Porphyrios Dikaios löysi paikan 1934 ja arveli sen syntyneen noin 4000 eaa.; radiohiiliajoitus siirsi perustamisen 7000 vuoteen eaa. Kylää ympäröi kahden ja puolen metrin paksuinen kivimuuri, ja sen sisällä on tiiviissä ryhmissä pyöreitä tholos-rakennuksia, halkaisijaltaan kahdesta yhdeksään metriä. Vainajat haudattiin koukkuasennossa aivan lattian alle. Kylä hylättiin tuntemattomasta syystä noin 6000 eaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Muinaisuus: Pyöreitä taloja muurin sisällä] Khirokitia on kukkulan rinteellä noin kuuden kilometrin päässä etelärannikolta, Maroni-joen mutkan sisällä. Kylässä asuttiin 7.–5. vuosituhannella eaa., ja laajimmillaan se peitti kolme hehtaaria. Talot olivat pyöreitä ja ne muurattiin savitiilestä ja kivestä; katto oli litteä. Yhteen asumukseen kuului useita pyöreitä rakennuksia pienen pihan ympärillä, ja pihalla oli tulisija ja altaita. Vainajat haudattiin talon sisään, poljetun lattian alle kaivettuihin kuoppiin, eikä taloa jätetty sen takia. Kylää suojasivat peräkkäiset muurit, ja kukkulan laelta on kaivettu esiin monimutkainen kulkujärjestely. Khirokitia otettiin maailmanperintöluetteloon 1998. Ranskalainen tutkimusryhmä on kaivanut pa…
+AIEMPI KYSYMYS: Mikä on tholos?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tholos on pyöreä rakennus tai rakennelma. [[Khirokitiassa]] tholos-rakennuksia on tiiviissä ryhmissä kylää ympäröivän kahden ja puolen metrin paksuisen kivimuurin sisällä, ja niiden halkaisija on kahdesta yhdeksään metriä. Antiikin Kreikassa nimitystä käytettiin myös pyöreistä rakennuksista ja mykeneläisistä [[kupolihaudoista]]. Pyöreä talo on kyllä kyyhkylle sympaattinen, ei nurkkia mihin sotkeutua.
+KYSYMYS: Kerro lisää: Khirokitiassa
+
+### 258
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Khirokitia (historia)
+Tietoruudun teksti: Khirokitia on neoliittinen asuinpaikka Maronijoen laaksossa kuuden kilometrin päässä etelärannikolta, ja se on ollut Unescon luettelossa vuodesta 1998. Porphyrios Dikaios löysi paikan 1934 ja arveli sen syntyneen noin 4000 eaa.; radiohiiliajoitus siirsi perustamisen 7000 vuoteen eaa. Kylää ympäröi kahden ja puolen metrin paksuinen kivimuuri, ja sen sisällä on tiiviissä ryhmissä pyöreitä tholos-rakennuksia, halkaisijaltaan kahdesta yhdeksään metriä. Vainajat haudattiin koukkuasennossa aivan lattian alle. Kylä hylättiin tuntemattomasta syystä noin 6000 eaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+- [Sana — kohdekartta / Kohdekartta: Talhan moskeija] 1619–1620 Qubbat Talha on yksi Sanaan vanhimmista moskeijoista, ja sen rakennutti osmanien käskynhaltija Hadji Mehmed Pasha vuosina 1619–1620 ensimmäisen osmanimiehityksen aikana. Minareetti tehtiin samaan aikaan. Vuosina 1831–1832 moskeija kunnostettiin osittain imaami al-Mahdi Abdallahin käskystä; siitä kertoo rukoussalin seinään hakattu kirjoitus. Talha on Al-Bakiriyyan pikkuveli. Se valmistui kaksikymmentäkolme vuotta myöhemmin ja lainasi osan edeltäjänsä muotokielestä, mutta jäi selvästi pienemmäksi: rukoussali on vaatimaton ja minareetti matala, ja juuri siksi rakennus istuu kapeiden kujien väliin luontevammin kuin iso esikuvansa. Kokonaisuuteen kuuluu rukoussalin ja minareetin lisäks…
+AIEMPI KYSYMYS: Mikä on tholos?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tholos on pyöreä rakennus tai rakennelma. [[Khirokitiassa]] tholos-rakennuksia on tiiviissä ryhmissä kylää ympäröivän kahden ja puolen metrin paksuisen kivimuurin sisällä, ja niiden halkaisija on kahdesta yhdeksään metriä. Antiikin Kreikassa nimitystä käytettiin myös pyöreistä rakennuksista ja mykeneläisistä [[kupolihaudoista]]. Pyöreä talo on kyllä kyyhkylle sympaattinen, ei nurkkia mihin sotkeutua.
+KYSYMYS: Kerro lisää: kupolihaudoista
+
+### 259
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Khirokitia (historia)
+Tietoruudun teksti: Khirokitia on neoliittinen asuinpaikka Maronijoen laaksossa kuuden kilometrin päässä etelärannikolta, ja se on ollut Unescon luettelossa vuodesta 1998. Porphyrios Dikaios löysi paikan 1934 ja arveli sen syntyneen noin 4000 eaa.; radiohiiliajoitus siirsi perustamisen 7000 vuoteen eaa. Kylää ympäröi kahden ja puolen metrin paksuinen kivimuuri, ja sen sisällä on tiiviissä ryhmissä pyöreitä tholos-rakennuksia, halkaisijaltaan kahdesta yhdeksään metriä. Vainajat haudattiin koukkuasennossa aivan lattian alle. Kylä hylättiin tuntemattomasta syystä noin 6000 eaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Appalakit — kaupunkilehti / Cumberlandin sola ja vuorten kansa: Hiili nousee vuoren uumenista] Pienimuotoista hiilenlouhintaa harjoitettiin Appalakkien laaksoissa jo 1700-luvun lopulla lähinnä paikallisten seppien ja kotitalouksien tarpeisiin, mutta höyrykoneiden ja rautateiden yleistyminen 1800-luvun alkupuolella kasvatti kysynnän moninkertaiseksi. Sisällissodan jälkeen teollisuuspääoma löysi vuorten sisään kätkeytyneet hiilikerrostumat, ja kokonaisia laaksoja alkoi täyttyä kaivoskylistä, joissa sukupolvi toisensa jälkeen kulki päivittäin maan alle. Nokeen mustunut kasvo ja karbidilampullinen kypärä olivat vielä vuosikymmeniä myöhemminkin tuttu näky appalakialaisen kaivosmiehen arjessa.
+AIEMPI KYSYMYS: Miten radiohiiliajoitus toimii?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: menetelmä perustuu [[hiili-14]]-isotooppiin, jota elävät organismit sitovat itseensä koko elinaikansa. Kuoleman jälkeen isotoopin määrä alkaa vähentyä tasaisesti radioaktiivisen hajoamisen vuoksi, ja sen [[puolittumisaika]] on noin 5 700 vuotta. Mittaamalla jäljellä olevan määrän tutkijat voivat arvioida, milloin esimerkiksi puu tai luu on kuulunut elävään olentoon. Menetelmä sopii kymmenien tuhansien vuosien ikäisille orgaanisille löydöille, ja sen avulla myös [[Khirokitian]] ikä tarkentui.
+
+Minä en ole koskaan ajoittunut mihinkään muuhun kuin aamupalaan. Silti arvostan menetelmää, joka kertoo, mikä on vanhaa ja mikä vain luulee olevansa.
+KYSYMYS: Kerro lisää: hiili-14
+
+### 260
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Khirokitia (historia)
+Tietoruudun teksti: Khirokitia on neoliittinen asuinpaikka Maronijoen laaksossa kuuden kilometrin päässä etelärannikolta, ja se on ollut Unescon luettelossa vuodesta 1998. Porphyrios Dikaios löysi paikan 1934 ja arveli sen syntyneen noin 4000 eaa.; radiohiiliajoitus siirsi perustamisen 7000 vuoteen eaa. Kylää ympäröi kahden ja puolen metrin paksuinen kivimuuri, ja sen sisällä on tiiviissä ryhmissä pyöreitä tholos-rakennuksia, halkaisijaltaan kahdesta yhdeksään metriä. Vainajat haudattiin koukkuasennossa aivan lattian alle. Kylä hylättiin tuntemattomasta syystä noin 6000 eaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Singapore — maalehti / Historia: Kolme ja puoli vuotta banaanirahalla] 1942–1945 — Saari antautui 15. helmikuuta 1942 ja sai nimen Shonan-to, etelän valon saari. Britannian setelit poistuivat, ja tilalle tuli miehityshallinnon oma raha, jota painettiin lisää aina kun sitä tarvittiin. Sata kattia riisiä maksoi ensin viisi dollaria ja sodan lopussa viisituhatta. Ruoka jaettiin korteilla: aikuiselle viisi kiloa riisiä kuussa, lapselle kaksi, ja aikuisen annosta leikattiin neljännes. Bataatti, maniokki ja jamssi kasvoivat takapihoilla ja korvasivat riisin. Sotilaspoliisin vainoissa surmattiin kymmeniätuhansia siviilejä, enimmäkseen kiinalaisia miehiä. Antautumispäivää muistetaan yhä joka vuosi.
+AIEMPI KYSYMYS: Miten radiohiiliajoitus toimii?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: menetelmä perustuu [[hiili-14]]-isotooppiin, jota elävät organismit sitovat itseensä koko elinaikansa. Kuoleman jälkeen isotoopin määrä alkaa vähentyä tasaisesti radioaktiivisen hajoamisen vuoksi, ja sen [[puolittumisaika]] on noin 5 700 vuotta. Mittaamalla jäljellä olevan määrän tutkijat voivat arvioida, milloin esimerkiksi puu tai luu on kuulunut elävään olentoon. Menetelmä sopii kymmenien tuhansien vuosien ikäisille orgaanisille löydöille, ja sen avulla myös [[Khirokitian]] ikä tarkentui.
+
+Minä en ole koskaan ajoittunut mihinkään muuhun kuin aamupalaan. Silti arvostan menetelmää, joka kertoo, mikä on vanhaa ja mikä vain luulee olevansa.
+KYSYMYS: Kerro lisää: puolittumisaika
+
+### 261
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Khirokitia (historia)
+Tietoruudun teksti: Khirokitia on neoliittinen asuinpaikka Maronijoen laaksossa kuuden kilometrin päässä etelärannikolta, ja se on ollut Unescon luettelossa vuodesta 1998. Porphyrios Dikaios löysi paikan 1934 ja arveli sen syntyneen noin 4000 eaa.; radiohiiliajoitus siirsi perustamisen 7000 vuoteen eaa. Kylää ympäröi kahden ja puolen metrin paksuinen kivimuuri, ja sen sisällä on tiiviissä ryhmissä pyöreitä tholos-rakennuksia, halkaisijaltaan kahdesta yhdeksään metriä. Vainajat haudattiin koukkuasennossa aivan lattian alle. Kylä hylättiin tuntemattomasta syystä noin 6000 eaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Muinaisuus: Pyöreitä taloja muurin sisällä] Khirokitia on kukkulan rinteellä noin kuuden kilometrin päässä etelärannikolta, Maroni-joen mutkan sisällä. Kylässä asuttiin 7.–5. vuosituhannella eaa., ja laajimmillaan se peitti kolme hehtaaria. Talot olivat pyöreitä ja ne muurattiin savitiilestä ja kivestä; katto oli litteä. Yhteen asumukseen kuului useita pyöreitä rakennuksia pienen pihan ympärillä, ja pihalla oli tulisija ja altaita. Vainajat haudattiin talon sisään, poljetun lattian alle kaivettuihin kuoppiin, eikä taloa jätetty sen takia. Kylää suojasivat peräkkäiset muurit, ja kukkulan laelta on kaivettu esiin monimutkainen kulkujärjestely. Khirokitia otettiin maailmanperintöluetteloon 1998. Ranskalainen tutkimusryhmä on kaivanut pa…
+AIEMPI KYSYMYS: Miten radiohiiliajoitus toimii?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: menetelmä perustuu [[hiili-14]]-isotooppiin, jota elävät organismit sitovat itseensä koko elinaikansa. Kuoleman jälkeen isotoopin määrä alkaa vähentyä tasaisesti radioaktiivisen hajoamisen vuoksi, ja sen [[puolittumisaika]] on noin 5 700 vuotta. Mittaamalla jäljellä olevan määrän tutkijat voivat arvioida, milloin esimerkiksi puu tai luu on kuulunut elävään olentoon. Menetelmä sopii kymmenien tuhansien vuosien ikäisille orgaanisille löydöille, ja sen avulla myös [[Khirokitian]] ikä tarkentui.
+
+Minä en ole koskaan ajoittunut mihinkään muuhun kuin aamupalaan. Silti arvostan menetelmää, joka kertoo, mikä on vanhaa ja mikä vain luulee olevansa.
+KYSYMYS: Kerro lisää: Khirokitian
+
+### 262
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Khirokitia (historia)
+Tietoruudun teksti: Khirokitia on neoliittinen asuinpaikka Maronijoen laaksossa kuuden kilometrin päässä etelärannikolta, ja se on ollut Unescon luettelossa vuodesta 1998. Porphyrios Dikaios löysi paikan 1934 ja arveli sen syntyneen noin 4000 eaa.; radiohiiliajoitus siirsi perustamisen 7000 vuoteen eaa. Kylää ympäröi kahden ja puolen metrin paksuinen kivimuuri, ja sen sisällä on tiiviissä ryhmissä pyöreitä tholos-rakennuksia, halkaisijaltaan kahdesta yhdeksään metriä. Vainajat haudattiin koukkuasennossa aivan lattian alle. Kylä hylättiin tuntemattomasta syystä noin 6000 eaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yellowstone — kaupunkilehti / Geysirit ja erämaa: Biisonien paluu sukupuuton partaalta] Yellowstone on ainoa paikka Yhdysvalloissa, jossa villejä biisoneja on elänyt yhtäjaksoisesti esihistoriallisista ajoista lähtien. Se ei silti taannut turvaa: 1800-luvun lopun laajamittainen metsästys ajoi Pohjois-Amerikan biisonikannan lähes sukupuuttoon, ja Yellowstonen villi lauma kutistui vuosien 1896 ja 1912 välillä vain 25–50 yksilöön. Puiston tiukka suojelu ja pieni siirtokarjan tuoma lisäys pelastivat kannan häviämiseltä. Elpyminen on ollut niin voimakasta, että nykyisin puistossa laiduntaa noin 5 900 biisonia — yksi harvoista laumoista, joiden perimässä ei ole lainkaan kesyn karjan geenejä.
+AIEMPI KYSYMYS: Miksi vainajat haudattiin lattian alle?
+AIEMPI VASTAUS (Livia):
+Hetkinen. [[Khirokitiassa]] vainajat haudattiin koukkuasennossa asuinrakennusten lattioiden alle. Syytä ei tiedetä varmasti, mutta tutkijat ovat pitäneet tapaa merkkinä siitä, että vainajat säilyivät osana kotitaloutta ja yhteisöä. Vastaava tapa tunnetaan myös muista [[esihistoriallisista]] asutuksista. Hiljainen ja lämmin tapa pitää omat lähellä.
+KYSYMYS: Kerro lisää: esihistoriallisista
+
+### 263
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Khirokitia (historia)
+Tietoruudun teksti: Khirokitia on neoliittinen asuinpaikka Maronijoen laaksossa kuuden kilometrin päässä etelärannikolta, ja se on ollut Unescon luettelossa vuodesta 1998. Porphyrios Dikaios löysi paikan 1934 ja arveli sen syntyneen noin 4000 eaa.; radiohiiliajoitus siirsi perustamisen 7000 vuoteen eaa. Kylää ympäröi kahden ja puolen metrin paksuinen kivimuuri, ja sen sisällä on tiiviissä ryhmissä pyöreitä tholos-rakennuksia, halkaisijaltaan kahdesta yhdeksään metriä. Vainajat haudattiin koukkuasennossa aivan lattian alle. Kylä hylättiin tuntemattomasta syystä noin 6000 eaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Muinaisuus: Pyöreitä taloja muurin sisällä] Khirokitia on kukkulan rinteellä noin kuuden kilometrin päässä etelärannikolta, Maroni-joen mutkan sisällä. Kylässä asuttiin 7.–5. vuosituhannella eaa., ja laajimmillaan se peitti kolme hehtaaria. Talot olivat pyöreitä ja ne muurattiin savitiilestä ja kivestä; katto oli litteä. Yhteen asumukseen kuului useita pyöreitä rakennuksia pienen pihan ympärillä, ja pihalla oli tulisija ja altaita. Vainajat haudattiin talon sisään, poljetun lattian alle kaivettuihin kuoppiin, eikä taloa jätetty sen takia. Kylää suojasivat peräkkäiset muurit, ja kukkulan laelta on kaivettu esiin monimutkainen kulkujärjestely. Khirokitia otettiin maailmanperintöluetteloon 1998. Ranskalainen tutkimusryhmä on kaivanut pa…
+AIEMPI KYSYMYS: Mikä Unescon maailmanperintöluettelo on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Unescon maailmanperintöluettelo on luettelo kohteista, joilla katsotaan olevan poikkeuksellinen merkitys koko ihmiskunnalle, ja se perustuu vuonna 1972 hyväksyttyyn maailmanperintösopimukseen. Luetteloon voidaan liittää sekä kulttuuri- että luontokohteita. [[Khirokitia]] on ollut luettelossa vuodesta 1998 ja [[Paphoksen]] kohde vuodesta 1980. Minä ehdottaisin luetteloon kyl myös hyvän leipomon.
+KYSYMYS: Kerro lisää: Khirokitia
+
+### 264
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Khirokitia (historia)
+Tietoruudun teksti: Khirokitia on neoliittinen asuinpaikka Maronijoen laaksossa kuuden kilometrin päässä etelärannikolta, ja se on ollut Unescon luettelossa vuodesta 1998. Porphyrios Dikaios löysi paikan 1934 ja arveli sen syntyneen noin 4000 eaa.; radiohiiliajoitus siirsi perustamisen 7000 vuoteen eaa. Kylää ympäröi kahden ja puolen metrin paksuinen kivimuuri, ja sen sisällä on tiiviissä ryhmissä pyöreitä tholos-rakennuksia, halkaisijaltaan kahdesta yhdeksään metriä. Vainajat haudattiin koukkuasennossa aivan lattian alle. Kylä hylättiin tuntemattomasta syystä noin 6000 eaa.
+AIEMPI KYSYMYS: Mikä Unescon maailmanperintöluettelo on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Unescon maailmanperintöluettelo on luettelo kohteista, joilla katsotaan olevan poikkeuksellinen merkitys koko ihmiskunnalle, ja se perustuu vuonna 1972 hyväksyttyyn maailmanperintösopimukseen. Luetteloon voidaan liittää sekä kulttuuri- että luontokohteita. [[Khirokitia]] on ollut luettelossa vuodesta 1998 ja [[Paphoksen]] kohde vuodesta 1980. Minä ehdottaisin luetteloon kyl myös hyvän leipomon.
+KYSYMYS: Kerro lisää: Paphoksen
+
+### 265
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Asinoun kirkko (kulttuuri)
+Tietoruudun teksti: Troodosin maalatut kirkot ovat kymmenen bysanttilaista kirkkoa ja luostaria, joiden seinät ovat täynnä bysanttilaista ja sen jälkeistä seinämaalausta. Unesco liitti niistä yhdeksän luetteloonsa 1985 ja kymmenennen, Palaichori Oreinisin kirkon, vasta 2001. Nikitarin kylässä seisova Panagia Phorviotissa eli Asinoun kirkko on 1100-luvulta. Joukossa on myös Kyproksen vanhin säilynyt luostarikirkko, 1000-luvun Agios Nikolaos tis Stegis Kakopetriassa, ja Moutoullasin 1200-luvun kappeli, jonka jyrkkä puukatto on lajinsa varhaisin esimerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Arabiemiirikunnat — maalehti / Keidas: Kahvi kaadetaan kupin pohjalle] Arabialainen kahvi eli gahwa paahdetaan vaaleaksi ja maustetaan kardemummalla, joskus myös sahramilla. Se keitetään kupariseen tai teräksiseen kannuun, jota sanotaan dallaksi, ja kaadetaan pieniin korvattomiin kuppeihin vain pohjalle asti — jotta kuppi pysyy kädessä kuumana vain hetken ja jotta tarjoaja voi kaataa lisää. Vieras juo tavallisesti yhdestä kolmeen kuppia ja heiluttaa sitten kuppia kädessään, mikä tarkoittaa kiitos, riittää. Unesco lisäsi tavan aineettoman kulttuuriperinnön luetteloon vuonna 2015.
+AIEMPI KYSYMYS: Montako Troodosin kirkkoa on maailmanperintöluettelossa?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä muistan. Troodosin maalattujen kirkkojen joukkoon kuuluu kymmenen bysanttilaista kirkkoa ja luostaria, ja ne kaikki ovat nykyään maailmanperintökohteita. [[Unesco]] liitti luetteloonsa ensin yhdeksän niistä vuonna 1985, ja kymmenes, [[Palaichori Oreinisin]] kirkko, tuli mukaan vasta 2001. Joukossa on myös 1100-luvulla rakennettu [[Asinoun kirkko]] Nikitarin kylässä, jonka virallinen nimi on Panagia Phorviotissa. Ei paha kyyhkyltä, laskea kymmeneen.
+KYSYMYS: Kerro lisää: Unesco
+
+### 266
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Asinoun kirkko (kulttuuri)
+Tietoruudun teksti: Troodosin maalatut kirkot ovat kymmenen bysanttilaista kirkkoa ja luostaria, joiden seinät ovat täynnä bysanttilaista ja sen jälkeistä seinämaalausta. Unesco liitti niistä yhdeksän luetteloonsa 1985 ja kymmenennen, Palaichori Oreinisin kirkon, vasta 2001. Nikitarin kylässä seisova Panagia Phorviotissa eli Asinoun kirkko on 1100-luvulta. Joukossa on myös Kyproksen vanhin säilynyt luostarikirkko, 1000-luvun Agios Nikolaos tis Stegis Kakopetriassa, ja Moutoullasin 1200-luvun kappeli, jonka jyrkkä puukatto on lajinsa varhaisin esimerkki.
+AIEMPI KYSYMYS: Montako Troodosin kirkkoa on maailmanperintöluettelossa?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä muistan. Troodosin maalattujen kirkkojen joukkoon kuuluu kymmenen bysanttilaista kirkkoa ja luostaria, ja ne kaikki ovat nykyään maailmanperintökohteita. [[Unesco]] liitti luetteloonsa ensin yhdeksän niistä vuonna 1985, ja kymmenes, [[Palaichori Oreinisin]] kirkko, tuli mukaan vasta 2001. Joukossa on myös 1100-luvulla rakennettu [[Asinoun kirkko]] Nikitarin kylässä, jonka virallinen nimi on Panagia Phorviotissa. Ei paha kyyhkyltä, laskea kymmeneen.
+KYSYMYS: Kerro lisää: Palaichori Oreinisin
+
+### 267
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Asinoun kirkko (kulttuuri)
+Tietoruudun teksti: Troodosin maalatut kirkot ovat kymmenen bysanttilaista kirkkoa ja luostaria, joiden seinät ovat täynnä bysanttilaista ja sen jälkeistä seinämaalausta. Unesco liitti niistä yhdeksän luetteloonsa 1985 ja kymmenennen, Palaichori Oreinisin kirkon, vasta 2001. Nikitarin kylässä seisova Panagia Phorviotissa eli Asinoun kirkko on 1100-luvulta. Joukossa on myös Kyproksen vanhin säilynyt luostarikirkko, 1000-luvun Agios Nikolaos tis Stegis Kakopetriassa, ja Moutoullasin 1200-luvun kappeli, jonka jyrkkä puukatto on lajinsa varhaisin esimerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Kirkot: Seinään kirjoitettiin vuosiluku] Asinoun kirkko eli Panagia Phorbiotissa on Troodoksen pohjoisrinteillä kolme kilometriä Nikitarin kylästä etelään. Se on yksilaivainen ja tynnyriholvattu, muurattu paikallisesta kovasta kivestä. Piirtokirjoituksen mukaan kirkko rakennettiin tai maalattiin vuonna 1105 tai 1106 Nikeforos Ischyrioksen lahjoituksella; miehellä oli bysanttilainen arvonimi magistros. Päivätyt piirtokirjoitukset tekevät Troodoksen kirkoista tutkijoille poikkeuksellisia: keskiajan itäisellä Välimerellä maalauksia päivättiin harvoin, joten näiden avulla voidaan ajoittaa muitakin. Asinoussa on useita maalauskerroksia, ja eteishuone sai yhtenäisen ohjelmansa vuonna 1332 tai 1333. Sen omistuskirjoituksen mukaan työ teh…
+AIEMPI KYSYMYS: Montako Troodosin kirkkoa on maailmanperintöluettelossa?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä muistan. Troodosin maalattujen kirkkojen joukkoon kuuluu kymmenen bysanttilaista kirkkoa ja luostaria, ja ne kaikki ovat nykyään maailmanperintökohteita. [[Unesco]] liitti luetteloonsa ensin yhdeksän niistä vuonna 1985, ja kymmenes, [[Palaichori Oreinisin]] kirkko, tuli mukaan vasta 2001. Joukossa on myös 1100-luvulla rakennettu [[Asinoun kirkko]] Nikitarin kylässä, jonka virallinen nimi on Panagia Phorviotissa. Ei paha kyyhkyltä, laskea kymmeneen.
+KYSYMYS: Kerro lisää: Asinoun kirkko
+
+### 268
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Asinoun kirkko (kulttuuri)
+Tietoruudun teksti: Troodosin maalatut kirkot ovat kymmenen bysanttilaista kirkkoa ja luostaria, joiden seinät ovat täynnä bysanttilaista ja sen jälkeistä seinämaalausta. Unesco liitti niistä yhdeksän luetteloonsa 1985 ja kymmenennen, Palaichori Oreinisin kirkon, vasta 2001. Nikitarin kylässä seisova Panagia Phorviotissa eli Asinoun kirkko on 1100-luvulta. Joukossa on myös Kyproksen vanhin säilynyt luostarikirkko, 1000-luvun Agios Nikolaos tis Stegis Kakopetriassa, ja Moutoullasin 1200-luvun kappeli, jonka jyrkkä puukatto on lajinsa varhaisin esimerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Grand Café 1895 — miten seinä voi liikkua?] 28.12.1895 — Miten seinä voi liikkua? Grand Cafén kellarisalissa Boulevard des Capucines'illa, Pariisissa, on 28. joulukuuta 1895, ja muutama kymmenen ihmistä on maksanut frangin nähdäkseen jotakin, jota mainoksessa kutsutaan Cinématographeksi. Valkokankaalla Lumièren tehtaan portti Lyonissa aukeaa, ja työläiset kävelevät ulos, naiset hameissaan, pyörä, koira. Kuva on 46 sekuntia pitkä. Kymmenen filmiä kestää yhteensä noin kaksikymmentä minuuttia, ja niiden joukossa on puutarhuri, joka kastelee itsensä letkulla — ensimmäinen elokuvavitsi. Auguste ja Louis Lumière ovat valokuvalevytehtailijoita Lyonista; heidän laitteensa, patentoitu helmikuussa 1895, sekä kuvaa, kopioi että heijastaa, ja si…
+- [Caracas — kohdekartta / Kohdekartta: Ensimmäisten kirjainten talo] 1790-luku Talo on kahden vierekkäisen asuintalon, numeroiden 29 ja 31, yhteensulautuma: asukkaiden lapset menivät keskenään naimisiin, ja seinä avattiin. Simón Rodríguez sai opettajanpätevyytensä 1791 ja alkoi pitää talossa koulua. Tilat olivat ahtaat ja varat vähissä — vuonna 1793 Rodríguezin luokassa oli 114 oppilasta, ja poissaolot olivat vaikea ongelma. Yksi noista oppilaista oli Simón Bolívar. Koulu oli ensimmäinen monista, joita Rodríguez yritti pyörittää omien periaatteidensa mukaan: lapsen pitää saada kysellä, koulun pitää opettaa myös työtaitoja, opetuksen pitää olla kaikille yhteistä ja kasvattaa yhteisöllisiä eikä itsekkäitä arvoja. Samaa hän yritti myöhemmin Bogotássa ja Chuquis…
+AIEMPI KYSYMYS: Miksi kirkoilla on jyrkät puukatot?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Troodosvuoristossa sataa talvella runsaasti ja ylimpänä sataa myös lunta, ja jyrkkä katto päästää veden ja lumen valumaan nopeasti pois. Monissa vuoriston kirkoissa kivirakennuksen päälle on rakennettu erillinen, kaksipuolinen puukatto, jonka tehtävänä on suojata alla olevia seiniä ja [[seinämaalauksia]] kosteudelta. Esimerkiksi [[Moutoullan]] 1200-luvun kappelin jyrkkä puukatto on lajinsa varhaisin esimerkki. En ole varma, onko katto kaikissa kirkoissa rakennettu juuri tästä syystä. Katon alla on aina mukavampi, sen kyyhky tietää.
+KYSYMYS: Kerro lisää: seinämaalauksia
+
+### 269
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Asinoun kirkko (kulttuuri)
+Tietoruudun teksti: Troodosin maalatut kirkot ovat kymmenen bysanttilaista kirkkoa ja luostaria, joiden seinät ovat täynnä bysanttilaista ja sen jälkeistä seinämaalausta. Unesco liitti niistä yhdeksän luetteloonsa 1985 ja kymmenennen, Palaichori Oreinisin kirkon, vasta 2001. Nikitarin kylässä seisova Panagia Phorviotissa eli Asinoun kirkko on 1100-luvulta. Joukossa on myös Kyproksen vanhin säilynyt luostarikirkko, 1000-luvun Agios Nikolaos tis Stegis Kakopetriassa, ja Moutoullasin 1200-luvun kappeli, jonka jyrkkä puukatto on lajinsa varhaisin esimerkki.
+AIEMPI KYSYMYS: Miksi kirkoilla on jyrkät puukatot?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Troodosvuoristossa sataa talvella runsaasti ja ylimpänä sataa myös lunta, ja jyrkkä katto päästää veden ja lumen valumaan nopeasti pois. Monissa vuoriston kirkoissa kivirakennuksen päälle on rakennettu erillinen, kaksipuolinen puukatto, jonka tehtävänä on suojata alla olevia seiniä ja [[seinämaalauksia]] kosteudelta. Esimerkiksi [[Moutoullan]] 1200-luvun kappelin jyrkkä puukatto on lajinsa varhaisin esimerkki. En ole varma, onko katto kaikissa kirkoissa rakennettu juuri tästä syystä. Katon alla on aina mukavampi, sen kyyhky tietää.
+KYSYMYS: Kerro lisää: Moutoullan
+
+### 270
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Asinoun kirkko (kulttuuri)
+Tietoruudun teksti: Troodosin maalatut kirkot ovat kymmenen bysanttilaista kirkkoa ja luostaria, joiden seinät ovat täynnä bysanttilaista ja sen jälkeistä seinämaalausta. Unesco liitti niistä yhdeksän luetteloonsa 1985 ja kymmenennen, Palaichori Oreinisin kirkon, vasta 2001. Nikitarin kylässä seisova Panagia Phorviotissa eli Asinoun kirkko on 1100-luvulta. Joukossa on myös Kyproksen vanhin säilynyt luostarikirkko, 1000-luvun Agios Nikolaos tis Stegis Kakopetriassa, ja Moutoullasin 1200-luvun kappeli, jonka jyrkkä puukatto on lajinsa varhaisin esimerkki.
+AIEMPI KYSYMYS: Mitä on freskomaalaus ja miten se tehdään?
+AIEMPI VASTAUS (Livia):
+No niin, tuosta minä tiedän jotain. Freskomaalauksessa maali levitetään märälle [[kalkkilaastiin]], jolloin värijauheet sitoutuvat seinään laastin kuivuessa ja kovettuessa. Siksi väri on osa seinää eikä vain sen pinnalla. Maalarin on työskenneltävä nopeasti, koska laasti kuivuu, ja työ tehdään yleensä päivän työosuuksina. Kuivalle seinälle maalattua tekniikkaa kutsutaan nimellä [[secco]], ja se kestää aikaa huonommin. Kirkkojen seinämaalauksissa on usein käytetty myös tekniikoiden yhdistelmiä. Ihan hyvin kyyhky selitti.
+KYSYMYS: Kerro lisää: kalkkilaastiin
+
+### 271
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Asinoun kirkko (kulttuuri)
+Tietoruudun teksti: Troodosin maalatut kirkot ovat kymmenen bysanttilaista kirkkoa ja luostaria, joiden seinät ovat täynnä bysanttilaista ja sen jälkeistä seinämaalausta. Unesco liitti niistä yhdeksän luetteloonsa 1985 ja kymmenennen, Palaichori Oreinisin kirkon, vasta 2001. Nikitarin kylässä seisova Panagia Phorviotissa eli Asinoun kirkko on 1100-luvulta. Joukossa on myös Kyproksen vanhin säilynyt luostarikirkko, 1000-luvun Agios Nikolaos tis Stegis Kakopetriassa, ja Moutoullasin 1200-luvun kappeli, jonka jyrkkä puukatto on lajinsa varhaisin esimerkki.
+AIEMPI KYSYMYS: Mitä on freskomaalaus ja miten se tehdään?
+AIEMPI VASTAUS (Livia):
+No niin, tuosta minä tiedän jotain. Freskomaalauksessa maali levitetään märälle [[kalkkilaastiin]], jolloin värijauheet sitoutuvat seinään laastin kuivuessa ja kovettuessa. Siksi väri on osa seinää eikä vain sen pinnalla. Maalarin on työskenneltävä nopeasti, koska laasti kuivuu, ja työ tehdään yleensä päivän työosuuksina. Kuivalle seinälle maalattua tekniikkaa kutsutaan nimellä [[secco]], ja se kestää aikaa huonommin. Kirkkojen seinämaalauksissa on usein käytetty myös tekniikoiden yhdistelmiä. Ihan hyvin kyyhky selitti.
+KYSYMYS: Kerro lisää: secco
+
+### 272
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Asinoun kirkko (kulttuuri)
+Tietoruudun teksti: Troodosin maalatut kirkot ovat kymmenen bysanttilaista kirkkoa ja luostaria, joiden seinät ovat täynnä bysanttilaista ja sen jälkeistä seinämaalausta. Unesco liitti niistä yhdeksän luetteloonsa 1985 ja kymmenennen, Palaichori Oreinisin kirkon, vasta 2001. Nikitarin kylässä seisova Panagia Phorviotissa eli Asinoun kirkko on 1100-luvulta. Joukossa on myös Kyproksen vanhin säilynyt luostarikirkko, 1000-luvun Agios Nikolaos tis Stegis Kakopetriassa, ja Moutoullasin 1200-luvun kappeli, jonka jyrkkä puukatto on lajinsa varhaisin esimerkki.
+AIEMPI KYSYMYS: Mikä Unesco on ja miten kohde pääsee maailmanperintöluetteloon?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Unesco]] on Yhdistyneiden kansakuntien kasvatus-, tiede- ja kulttuurijärjestö, ja maailmanperintöluettelo perustuu sen vuonna 1972 hyväksymään yleissopimukseen. Kohteen ehdottaa valtio, joka on sopimuksen osapuoli. Kulttuurikohteiden arvioinnissa apuna on asiantuntijajärjestö [[ICOMOS]], ja lopullisen päätöksen tekee [[maailmanperintökomitea]]. Kohteen on täytettävä vähintään yksi kriteeri ja osoitettava poikkeuksellinen yleismaailmallinen arvo. Viisikymmentä vuotta tuli täyteen, mutta paperityö tuntuu kyyhkyn mielestä yhä pitkältä.
+KYSYMYS: Kerro lisää: ICOMOS
+
+### 273
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Asinoun kirkko (kulttuuri)
+Tietoruudun teksti: Troodosin maalatut kirkot ovat kymmenen bysanttilaista kirkkoa ja luostaria, joiden seinät ovat täynnä bysanttilaista ja sen jälkeistä seinämaalausta. Unesco liitti niistä yhdeksän luetteloonsa 1985 ja kymmenennen, Palaichori Oreinisin kirkon, vasta 2001. Nikitarin kylässä seisova Panagia Phorviotissa eli Asinoun kirkko on 1100-luvulta. Joukossa on myös Kyproksen vanhin säilynyt luostarikirkko, 1000-luvun Agios Nikolaos tis Stegis Kakopetriassa, ja Moutoullasin 1200-luvun kappeli, jonka jyrkkä puukatto on lajinsa varhaisin esimerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mikä Unesco on ja miten kohde pääsee maailmanperintöluetteloon?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Unesco]] on Yhdistyneiden kansakuntien kasvatus-, tiede- ja kulttuurijärjestö, ja maailmanperintöluettelo perustuu sen vuonna 1972 hyväksymään yleissopimukseen. Kohteen ehdottaa valtio, joka on sopimuksen osapuoli. Kulttuurikohteiden arvioinnissa apuna on asiantuntijajärjestö [[ICOMOS]], ja lopullisen päätöksen tekee [[maailmanperintökomitea]]. Kohteen on täytettävä vähintään yksi kriteeri ja osoitettava poikkeuksellinen yleismaailmallinen arvo. Viisikymmentä vuotta tuli täyteen, mutta paperityö tuntuu kyyhkyn mielestä yhä pitkältä.
+KYSYMYS: Kerro lisää: maailmanperintökomitea
+
+### 274
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Asinoun kirkko (kulttuuri)
+Tietoruudun teksti: Troodosin maalatut kirkot ovat kymmenen bysanttilaista kirkkoa ja luostaria, joiden seinät ovat täynnä bysanttilaista ja sen jälkeistä seinämaalausta. Unesco liitti niistä yhdeksän luetteloonsa 1985 ja kymmenennen, Palaichori Oreinisin kirkon, vasta 2001. Nikitarin kylässä seisova Panagia Phorviotissa eli Asinoun kirkko on 1100-luvulta. Joukossa on myös Kyproksen vanhin säilynyt luostarikirkko, 1000-luvun Agios Nikolaos tis Stegis Kakopetriassa, ja Moutoullasin 1200-luvun kappeli, jonka jyrkkä puukatto on lajinsa varhaisin esimerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Historia: Kapalıçarşı — kuusikymmentäyksi katettua katua] Istanbulin katettu basaari eli Kapalıçarşı on maailman suurimpia ja vanhimpia katettuja kauppapaikkoja: 61 katettua katua ja yli 4 000 myymälää, joissa käy satojatuhansia ihmisiä päivässä. Sen ydin rakennettiin talvella 1455–56 pian Konstantinopolin valloituksen jälkeen, kun sulttaani Mehmed II pystytti kankaiden ja jalokivien kaupalle oman hallin. Isoisä kulki samojen holvien alla kuin nykypäivän kävijä — basaaria sanotaan usein yhdeksi maailman ensimmäisistä kauppakeskuksista.
+- [Istanbul — kaupunkilehti / Istanbul: Faaraon kivi Sultanahmetin aukiolla] Sultanahmetin aukio oli ennen hippodromi, hevosvaunujen kilparata. Sen keskellä seisoo yhä punagraniittinen obeliski, joka veistettiin Egyptissä faarao Thutmosis III:n aikana noin 1450 eaa. Mikään muu kaupungissa pystyssä oleva ei ole yhtä vanhaa tekoa. Keisari Theodosius toi sen Konstantinopoliin vuonna 390, ja jalustaan hakattiin kaksi kertomusta pystyttämisestä: latinankielinen kehuu työn kestäneen kolmekymmentä päivää, kreikankielisessä lukee kolmekymmentäkaksi.
+AIEMPI KYSYMYS: Mikä oli Bysantin valtakunta ja mikä oli Kyproksen asema siinä?
+AIEMPI VASTAUS (Livia):
+Ai se. Bysantin valtakunta eli Itä-Rooma oli Rooman valtakunnan itäinen jatke, jonka pääkaupunki oli [[Konstantinopoli]]. Valtakunta kesti vuoteen 1453 asti, ja sen kieli ja kirkko olivat kreikkalaisia. Kypros oli osa Bysantin valtakuntaa pitkään, joskin tarkat ajanjaksot ovat monimutkaisia, sillä saarta hallittiin aikanaan myös yhdessä arabien kanssa. Bysantin valta saarella päättyi vuonna 1191, kun [[Rikhard Leijonamieli]] valloitti Kyproksen. Bysanttilaisen ajan perintö näkyy yhä saaren kirkoissa ja niiden seinämaalauksissa. Sisarussarja pitkä, mutta suvun muistiinpanot kestävät sen.
+KYSYMYS: Kerro lisää: Konstantinopoli
+
+### 275
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Asinoun kirkko (kulttuuri)
+Tietoruudun teksti: Troodosin maalatut kirkot ovat kymmenen bysanttilaista kirkkoa ja luostaria, joiden seinät ovat täynnä bysanttilaista ja sen jälkeistä seinämaalausta. Unesco liitti niistä yhdeksän luetteloonsa 1985 ja kymmenennen, Palaichori Oreinisin kirkon, vasta 2001. Nikitarin kylässä seisova Panagia Phorviotissa eli Asinoun kirkko on 1100-luvulta. Joukossa on myös Kyproksen vanhin säilynyt luostarikirkko, 1000-luvun Agios Nikolaos tis Stegis Kakopetriassa, ja Moutoullasin 1200-luvun kappeli, jonka jyrkkä puukatto on lajinsa varhaisin esimerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubrovnik — kohdekartta / Kohdekartta: Dubrovnikin katedraali] 1671–1713 Tarinan mukaan Englannin kuningas Rikhard Leijonamieli haaksirikkoutui lähellä Lokrumin saarta vuonna 1192 palatessaan ristiretkeltä. Pelastuttuaan hengissä hän lupasi rakentaa kirkon kiitokseksi - ja rahoitti osan Dubrovnikiin nousseesta ensimmäisestä kirkosta. Tuo vanha kirkko vaurioitui pahasti vuoden 1667 valtavassa maanjäristyksessä, joka mullisti koko kaupungin. Dubrovnikilaiset eivät kuitenkaan luovuttaneet: uuden katedraalin rakentaminen alkoi vuonna 1671 ja kesti peräti 42 vuotta, kunnes se valmistui vuonna 1713. Roomalainen arkkitehti Andrea Buffalini suunnitteli komean, kupolikattoisen rakennuksen, joka on 41 metriä pitkä. Katedraalin aarrekammiossa säilytetään 182 pyhä…
+AIEMPI KYSYMYS: Mikä oli Bysantin valtakunta ja mikä oli Kyproksen asema siinä?
+AIEMPI VASTAUS (Livia):
+Ai se. Bysantin valtakunta eli Itä-Rooma oli Rooman valtakunnan itäinen jatke, jonka pääkaupunki oli [[Konstantinopoli]]. Valtakunta kesti vuoteen 1453 asti, ja sen kieli ja kirkko olivat kreikkalaisia. Kypros oli osa Bysantin valtakuntaa pitkään, joskin tarkat ajanjaksot ovat monimutkaisia, sillä saarta hallittiin aikanaan myös yhdessä arabien kanssa. Bysantin valta saarella päättyi vuonna 1191, kun [[Rikhard Leijonamieli]] valloitti Kyproksen. Bysanttilaisen ajan perintö näkyy yhä saaren kirkoissa ja niiden seinämaalauksissa. Sisarussarja pitkä, mutta suvun muistiinpanot kestävät sen.
+KYSYMYS: Kerro lisää: Rikhard Leijonamieli
+
+### 276
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kykkoksen luostari (kulttuuri)
+Tietoruudun teksti: Kykkoksen luostari on Kyproksen varakkaimpia, ja se seisoo 1 318 metrin korkeudessa Troodosin luoteisrinteellä, kaksikymmentä kilometriä Pedoulasista länteen. Bysantin keisari Aleksios I Komnenos perusti sen 1000-luvun lopulla. Alkuperäisestä rakennuksesta ei ole jäljellä mitään: luostari on palanut maan tasalle monta kertaa. Saaren ensimmäinen presidentti, arkkipiispa Makarios III, aloitti kirkollisen uransa täällä munkkina vuonna 1926.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kaupunkilehti / Historia: Käytävät täynnä vuosisatoja] Luolakäytävät ovat kapeita, vain metrin tai puolitoista leveitä, ja niiden seiniin on kaiverrettu pieniä koppeja munkeille ja hautanišejä. Lähiluolissa lepää noin kahdeksankymmentä ja kaukoluolissa noin neljäkymmentäviisi pyhäksi julistettua munkkia, ja kuiva luolailma on säilyttänyt monet heidän jäännöksensä vuosisatojen ajan. Käytävät toimivat yhä hautausmaana ja pyhiinvaelluskohteena, ja kynttilät ovat ainoa valonlähde niiden mutkittelevissa kaarissa.
+AIEMPI KYSYMYS: Miksi alkuperäisestä luostarista ei ole jäljellä mitään?
+AIEMPI VASTAUS (Livia):
+Mmm— tuo on ikävä juttu. Kykkoksen luostari on palanut maan tasalle monta kertaa, ja siksi alkuperäisestä 1000-luvun lopun rakennuksesta ei ole jäljellä mitään. Vuoristoluostarin rakenteissa oli aikanaan paljon puuta, ja valoa pidettiin avotulella, mikä tekee tulipalosta jatkuvan riskin. En ole varma, mikä aiheutti kunkin yksittäisen palon. Nykyiset rakennukset ovat siis myöhempiä, ja luostari on silti säilynyt tärkeänä ortodoksisena [[pyhiinvaelluskohteena]] [[Troodosin]] vuorilla. Onneksi se on noussut aina uudelleen.
+KYSYMYS: Kerro lisää: pyhiinvaelluskohteena
+
+### 277
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kykkoksen luostari (kulttuuri)
+Tietoruudun teksti: Kykkoksen luostari on Kyproksen varakkaimpia, ja se seisoo 1 318 metrin korkeudessa Troodosin luoteisrinteellä, kaksikymmentä kilometriä Pedoulasista länteen. Bysantin keisari Aleksios I Komnenos perusti sen 1000-luvun lopulla. Alkuperäisestä rakennuksesta ei ole jäljellä mitään: luostari on palanut maan tasalle monta kertaa. Saaren ensimmäinen presidentti, arkkipiispa Makarios III, aloitti kirkollisen uransa täällä munkkina vuonna 1926.
+AIEMPI KYSYMYS: Miksi alkuperäisestä luostarista ei ole jäljellä mitään?
+AIEMPI VASTAUS (Livia):
+Mmm— tuo on ikävä juttu. Kykkoksen luostari on palanut maan tasalle monta kertaa, ja siksi alkuperäisestä 1000-luvun lopun rakennuksesta ei ole jäljellä mitään. Vuoristoluostarin rakenteissa oli aikanaan paljon puuta, ja valoa pidettiin avotulella, mikä tekee tulipalosta jatkuvan riskin. En ole varma, mikä aiheutti kunkin yksittäisen palon. Nykyiset rakennukset ovat siis myöhempiä, ja luostari on silti säilynyt tärkeänä ortodoksisena [[pyhiinvaelluskohteena]] [[Troodosin]] vuorilla. Onneksi se on noussut aina uudelleen.
+KYSYMYS: Kerro lisää: Troodosin
+
+### 278
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kykkoksen luostari (kulttuuri)
+Tietoruudun teksti: Kykkoksen luostari on Kyproksen varakkaimpia, ja se seisoo 1 318 metrin korkeudessa Troodosin luoteisrinteellä, kaksikymmentä kilometriä Pedoulasista länteen. Bysantin keisari Aleksios I Komnenos perusti sen 1000-luvun lopulla. Alkuperäisestä rakennuksesta ei ole jäljellä mitään: luostari on palanut maan tasalle monta kertaa. Saaren ensimmäinen presidentti, arkkipiispa Makarios III, aloitti kirkollisen uransa täällä munkkina vuonna 1926.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kohdekartta / Kohdekartta: Neitsyttorni] 1110 Torni seisoo pienellä luodolla Bosporin eteläsuulla, kahdensadan metrin päässä Üsküdarin rannasta. Ateenalainen sotapäällikkö Alkibiades rakensi kalliolle luultavasti jo vuonna 408 eaa. tarkastusaseman Mustaltamereltä tuleville laivoille. Keisari Aleksios Komnenos pystytti paikalle puutornin vuonna 1110, ja siitä vedettiin rautaketju salmen yli toiseen torniin Euroopan puolella — ketjulla suljettiin väylä. Rakennus on tuhoutunut ja noussut yhä uudelleen: maanjäristys kaatoi sen 1509, tulipalo tuhosi sen 1721, ja suurvisiiri Damad İbrahim Pasha rakennutti tilalle majakan. Muureja korjattiin 1731 ja 1734, ja vuonna 1763 torni muurattiin kestävämmästä kivestä. Vuodesta 1829 se toimi karan…
+AIEMPI KYSYMYS: Kuka perusti luostarin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kykkoksen luostarin perusti Bysantin keisari [[Aleksios I Komnenos]] 1000-luvun lopulla. Hän hallitsi keisarina vuosina 1081–1118, ja hänen aikanaan [[Bysantin]] valtakunta kohtasi sekä seldžukkien että ristiretkeläisten painetta. Luostari sijaitsee Troodosvuoriston luoteisrinteellä noin 1 300 metrin korkeudessa. Sen läheisin tunnettu kylä on [[Pedoulas]], josta on matkaa noin kaksikymmentä kilometriä. Keisarit kyllä tiesivät, mihin kannattaa lahjoittaa.
+KYSYMYS: Kerro lisää: Aleksios I Komnenos
+
+### 279
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kykkoksen luostari (kulttuuri)
+Tietoruudun teksti: Kykkoksen luostari on Kyproksen varakkaimpia, ja se seisoo 1 318 metrin korkeudessa Troodosin luoteisrinteellä, kaksikymmentä kilometriä Pedoulasista länteen. Bysantin keisari Aleksios I Komnenos perusti sen 1000-luvun lopulla. Alkuperäisestä rakennuksesta ei ole jäljellä mitään: luostari on palanut maan tasalle monta kertaa. Saaren ensimmäinen presidentti, arkkipiispa Makarios III, aloitti kirkollisen uransa täällä munkkina vuonna 1926.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aleppo — kohdekartta / Kohdekartta: Antiokian portti] Vanhankaupungin läntisen muurin keskellä seisoo portti, jonka nimi kertoo suunnan: tie vei Antiokiaan, antiikin Syyrian pääkaupunkiin. Kaksi kuusikulmaista bastionia nousee rinnakkain, ja niiden välinen kulkuväylä mutkittelee sen sijaan että menisi suoraan läpi. Aukko on oikeanpuoleisen tornin alla, puolustussyistä: sisään tulija ei pääse vauhtiin eikä näe eteensä. Kivi on valkoista, ja lohkareet ovat noin 0,8 kertaa 1,0 metriä. Bysantin aikana tämä oli kaupungin pääportti, ja sen jälkeen merkitys hiipui. Ajjubidien Aleppon emiiri an-Nasir Yusuf, Saladinin pojanpojanpoika, rakennutti portin uudelleen 1000-luvulta periytyvän perustuksen päälle. Vuosiluvut ovat epätarkkoja: portin kohdalla hä…
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+AIEMPI KYSYMYS: Kuka perusti luostarin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kykkoksen luostarin perusti Bysantin keisari [[Aleksios I Komnenos]] 1000-luvun lopulla. Hän hallitsi keisarina vuosina 1081–1118, ja hänen aikanaan [[Bysantin]] valtakunta kohtasi sekä seldžukkien että ristiretkeläisten painetta. Luostari sijaitsee Troodosvuoriston luoteisrinteellä noin 1 300 metrin korkeudessa. Sen läheisin tunnettu kylä on [[Pedoulas]], josta on matkaa noin kaksikymmentä kilometriä. Keisarit kyllä tiesivät, mihin kannattaa lahjoittaa.
+KYSYMYS: Kerro lisää: Bysantin
+
+### 280
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kykkoksen luostari (kulttuuri)
+Tietoruudun teksti: Kykkoksen luostari on Kyproksen varakkaimpia, ja se seisoo 1 318 metrin korkeudessa Troodosin luoteisrinteellä, kaksikymmentä kilometriä Pedoulasista länteen. Bysantin keisari Aleksios I Komnenos perusti sen 1000-luvun lopulla. Alkuperäisestä rakennuksesta ei ole jäljellä mitään: luostari on palanut maan tasalle monta kertaa. Saaren ensimmäinen presidentti, arkkipiispa Makarios III, aloitti kirkollisen uransa täällä munkkina vuonna 1926.
+AIEMPI KYSYMYS: Kuka perusti luostarin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kykkoksen luostarin perusti Bysantin keisari [[Aleksios I Komnenos]] 1000-luvun lopulla. Hän hallitsi keisarina vuosina 1081–1118, ja hänen aikanaan [[Bysantin]] valtakunta kohtasi sekä seldžukkien että ristiretkeläisten painetta. Luostari sijaitsee Troodosvuoriston luoteisrinteellä noin 1 300 metrin korkeudessa. Sen läheisin tunnettu kylä on [[Pedoulas]], josta on matkaa noin kaksikymmentä kilometriä. Keisarit kyllä tiesivät, mihin kannattaa lahjoittaa.
+KYSYMYS: Kerro lisää: Pedoulas
+
+### 281
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kykkoksen luostari (kulttuuri)
+Tietoruudun teksti: Kykkoksen luostari on Kyproksen varakkaimpia, ja se seisoo 1 318 metrin korkeudessa Troodosin luoteisrinteellä, kaksikymmentä kilometriä Pedoulasista länteen. Bysantin keisari Aleksios I Komnenos perusti sen 1000-luvun lopulla. Alkuperäisestä rakennuksesta ei ole jäljellä mitään: luostari on palanut maan tasalle monta kertaa. Saaren ensimmäinen presidentti, arkkipiispa Makarios III, aloitti kirkollisen uransa täällä munkkina vuonna 1926.
+AIEMPI KYSYMYS: Kuka oli arkkipiispa Makarios III ja miksi hän on tunnettu?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuo nimi kuuluu ihan kärkeen. Arkkipiispa Makarios III syntyi vuonna 1913, ja hän aloitti kirkollisen uransa munkkina Kykkoksen luostarissa. Hän johti [[Kyproksen ortodoksista kirkkoa]] ja oli samalla keskeinen poliittinen johtaja saaren itsenäistymisessä [[Britannian]] vallasta vuonna 1960. Hänestä tuli Kyproksen tasavallan ensimmäinen presidentti, ja hän toimi tehtävässä aina kuolemaansa asti vuonna 1977, lukuun ottamatta lyhyttä keskeytystä vuonna 1974. Hänen elämänsä oli pitkä ja täynnä käänteitä.
+KYSYMYS: Kerro lisää: Kyproksen ortodoksista kirkkoa
+
+### 282
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kykkoksen luostari (kulttuuri)
+Tietoruudun teksti: Kykkoksen luostari on Kyproksen varakkaimpia, ja se seisoo 1 318 metrin korkeudessa Troodosin luoteisrinteellä, kaksikymmentä kilometriä Pedoulasista länteen. Bysantin keisari Aleksios I Komnenos perusti sen 1000-luvun lopulla. Alkuperäisestä rakennuksesta ei ole jäljellä mitään: luostari on palanut maan tasalle monta kertaa. Saaren ensimmäinen presidentti, arkkipiispa Makarios III, aloitti kirkollisen uransa täällä munkkina vuonna 1926.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Singapore — maalehti / Historia: Kolme ja puoli vuotta banaanirahalla] 1942–1945 — Saari antautui 15. helmikuuta 1942 ja sai nimen Shonan-to, etelän valon saari. Britannian setelit poistuivat, ja tilalle tuli miehityshallinnon oma raha, jota painettiin lisää aina kun sitä tarvittiin. Sata kattia riisiä maksoi ensin viisi dollaria ja sodan lopussa viisituhatta. Ruoka jaettiin korteilla: aikuiselle viisi kiloa riisiä kuussa, lapselle kaksi, ja aikuisen annosta leikattiin neljännes. Bataatti, maniokki ja jamssi kasvoivat takapihoilla ja korvasivat riisin. Sotilaspoliisin vainoissa surmattiin kymmeniätuhansia siviilejä, enimmäkseen kiinalaisia miehiä. Antautumispäivää muistetaan yhä joka vuosi.
+- [Saint Helena — maalehti / Historia: Britannian toiseksi vanhin siirtomaa] 1657–1673 — Oliver Cromwell antoi Itä-Intian kauppakomppanialle 1657 luvan hallita saarta, ja kapteeni John Dutton saapui 1659 ensimmäisenä kuvernöörinä. Linnake valmistui kuukaudessa, ja sen viereen nousi kaupunki, joka sai kuninkuuden palauduttua nimen Jamestown Yorkin herttuan mukaan. Uudisasukkaille luvattiin oma palsta sadastakolmestakymmenestä, mutta väkeä ei saatu: vuonna 1670 saarella asui 66 ihmistä, heistä 18 orjaa. Jouluna 1672 hollantilaiset valtasivat saaren, mutta kuvernööri pakeni Brasiliaan, vuokrasi nopean laivan ja löysi komppanian laivaston, joka otti saaren takaisin toukokuussa 1673 ilman ihmishenkien menetystä.
+AIEMPI KYSYMYS: Kuka oli arkkipiispa Makarios III ja miksi hän on tunnettu?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuo nimi kuuluu ihan kärkeen. Arkkipiispa Makarios III syntyi vuonna 1913, ja hän aloitti kirkollisen uransa munkkina Kykkoksen luostarissa. Hän johti [[Kyproksen ortodoksista kirkkoa]] ja oli samalla keskeinen poliittinen johtaja saaren itsenäistymisessä [[Britannian]] vallasta vuonna 1960. Hänestä tuli Kyproksen tasavallan ensimmäinen presidentti, ja hän toimi tehtävässä aina kuolemaansa asti vuonna 1977, lukuun ottamatta lyhyttä keskeytystä vuonna 1974. Hänen elämänsä oli pitkä ja täynnä käänteitä.
+KYSYMYS: Kerro lisää: Britannian
+
+### 283
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kykkoksen luostari (kulttuuri)
+Tietoruudun teksti: Kykkoksen luostari on Kyproksen varakkaimpia, ja se seisoo 1 318 metrin korkeudessa Troodosin luoteisrinteellä, kaksikymmentä kilometriä Pedoulasista länteen. Bysantin keisari Aleksios I Komnenos perusti sen 1000-luvun lopulla. Alkuperäisestä rakennuksesta ei ole jäljellä mitään: luostari on palanut maan tasalle monta kertaa. Saaren ensimmäinen presidentti, arkkipiispa Makarios III, aloitti kirkollisen uransa täällä munkkina vuonna 1926.
+AIEMPI KYSYMYS: Miten ortodoksisessa luostarissa yleensä vietetään päivä?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tästä minä olen kuullut ikkunalaudalta. Ortodoksisessa luostarissa päivä rakentuu rukouksen ympärille: päivä alkaa varhain [[aamupalveluksella]], jota seuraa yleensä [[liturgia]], ja päivän päätteeksi pidetään [[ehtoopalvelus]]. Rukousten väliin mahtuu työtä, kuten puutarhan hoitoa, käsitöitä ja luostarin ylläpitoa, sekä yhteiset ateriat. Tarkka aikataulu vaihtelee luostarin ja vuodenajan mukaan, enkä tiedä Kykkoksen päivärytmiä tarkasti. Aamulla ennen kuutta ei kyl pullaa jaeta.
+KYSYMYS: Kerro lisää: aamupalveluksella
+
+### 284
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kykkoksen luostari (kulttuuri)
+Tietoruudun teksti: Kykkoksen luostari on Kyproksen varakkaimpia, ja se seisoo 1 318 metrin korkeudessa Troodosin luoteisrinteellä, kaksikymmentä kilometriä Pedoulasista länteen. Bysantin keisari Aleksios I Komnenos perusti sen 1000-luvun lopulla. Alkuperäisestä rakennuksesta ei ole jäljellä mitään: luostari on palanut maan tasalle monta kertaa. Saaren ensimmäinen presidentti, arkkipiispa Makarios III, aloitti kirkollisen uransa täällä munkkina vuonna 1926.
+AIEMPI KYSYMYS: Miten ortodoksisessa luostarissa yleensä vietetään päivä?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tästä minä olen kuullut ikkunalaudalta. Ortodoksisessa luostarissa päivä rakentuu rukouksen ympärille: päivä alkaa varhain [[aamupalveluksella]], jota seuraa yleensä [[liturgia]], ja päivän päätteeksi pidetään [[ehtoopalvelus]]. Rukousten väliin mahtuu työtä, kuten puutarhan hoitoa, käsitöitä ja luostarin ylläpitoa, sekä yhteiset ateriat. Tarkka aikataulu vaihtelee luostarin ja vuodenajan mukaan, enkä tiedä Kykkoksen päivärytmiä tarkasti. Aamulla ennen kuutta ei kyl pullaa jaeta.
+KYSYMYS: Kerro lisää: liturgia
+
+### 285
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kykkoksen luostari (kulttuuri)
+Tietoruudun teksti: Kykkoksen luostari on Kyproksen varakkaimpia, ja se seisoo 1 318 metrin korkeudessa Troodosin luoteisrinteellä, kaksikymmentä kilometriä Pedoulasista länteen. Bysantin keisari Aleksios I Komnenos perusti sen 1000-luvun lopulla. Alkuperäisestä rakennuksesta ei ole jäljellä mitään: luostari on palanut maan tasalle monta kertaa. Saaren ensimmäinen presidentti, arkkipiispa Makarios III, aloitti kirkollisen uransa täällä munkkina vuonna 1926.
+AIEMPI KYSYMYS: Miten ortodoksisessa luostarissa yleensä vietetään päivä?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tästä minä olen kuullut ikkunalaudalta. Ortodoksisessa luostarissa päivä rakentuu rukouksen ympärille: päivä alkaa varhain [[aamupalveluksella]], jota seuraa yleensä [[liturgia]], ja päivän päätteeksi pidetään [[ehtoopalvelus]]. Rukousten väliin mahtuu työtä, kuten puutarhan hoitoa, käsitöitä ja luostarin ylläpitoa, sekä yhteiset ateriat. Tarkka aikataulu vaihtelee luostarin ja vuodenajan mukaan, enkä tiedä Kykkoksen päivärytmiä tarkasti. Aamulla ennen kuutta ei kyl pullaa jaeta.
+KYSYMYS: Kerro lisää: ehtoopalvelus
+
+### 286
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kykkoksen luostari (kulttuuri)
+Tietoruudun teksti: Kykkoksen luostari on Kyproksen varakkaimpia, ja se seisoo 1 318 metrin korkeudessa Troodosin luoteisrinteellä, kaksikymmentä kilometriä Pedoulasista länteen. Bysantin keisari Aleksios I Komnenos perusti sen 1000-luvun lopulla. Alkuperäisestä rakennuksesta ei ole jäljellä mitään: luostari on palanut maan tasalle monta kertaa. Saaren ensimmäinen presidentti, arkkipiispa Makarios III, aloitti kirkollisen uransa täällä munkkina vuonna 1926.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Kuningas, josta tuli munkki] 1190–1196 — Stefan Nemanja yhdisti Serbian pirstoutuneet ruhtinaskunnat ja perusti Nemanjić-suvun, joka hallitsi maata yli kaksisataa vuotta. Hän aloitti Studenican luostarin rakentamisen 1180-luvulla ja pystytti sen sydämeen valkoisesta marmorista Neitsyt Marian kirkon. Maaliskuun 25. päivänä 1196 hän luopui vallasta poikansa Stefanin hyväksi ja otti munkiksi vihkimisessä nimen Simeon. Syksyllä 1197 hän matkasi Athos-vuorelle liittyäkseen sinne jo aiemmin lähteneeseen nuorimpaan poikaansa Rastkoon, josta tuli myöhemmin pyhä Sava, Serbian ortodoksisen kirkon perustaja. Studenica on Unescon maailmanperintöä vuodesta 1986.
+- [Kiova — kaupunkilehti / Historia: Luola, josta kasvoi luostari] Vuonna 1051 munkki Antonius asettui Athos-vuorelta palattuaan Dnipro-joen rantatörmään kaivettuun luolaan. Hänen askeettinen elämänsä veti puoleensa seuraajia, ja pian luolaan kokoontui pieni munkkiyhteisö. Kolmas johtaja, Teodosios, järjesti yhteisölle omat säännöt ja rakennutti ensimmäiset maanpäälliset rakennukset luolien yläpuolelle. Nimi Petšerska tulee sanasta petšera, luola — ja koko luostarikompleksi kantaa sitä nimeä yhä.
+AIEMPI KYSYMYS: Miksi luostareita rakennettiin usein vuorille?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä on kyyhkyn suvulla näkemystä. Luostareita rakennettiin usein vuorille, koska munkit halusivat vetäytyä pois maailman hälinästä rauhaan ja hiljaisuuteen. Askeettinen perinne, jossa hakeudutaan autioon ja vaikeapääsyiseen paikkaan, on ollut kristinuskossa vanha. Syrjäinen sijainti antoi lisäksi suojaa hyökkäyksiltä, ja vuorilta oli saatavilla vettä, puuta ja laidunmaata. Tunnettu esimerkki on [[Athos-vuoren]] luostariyhteisö Kreikassa, ja saman perinteen vaikutus näkyy [[askeesin]] ihanteessa. Ylhäältä katsottuna se on ihan järkeen käypää.
+KYSYMYS: Kerro lisää: Athos-vuoren
+
+### 287
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kykkoksen luostari (kulttuuri)
+Tietoruudun teksti: Kykkoksen luostari on Kyproksen varakkaimpia, ja se seisoo 1 318 metrin korkeudessa Troodosin luoteisrinteellä, kaksikymmentä kilometriä Pedoulasista länteen. Bysantin keisari Aleksios I Komnenos perusti sen 1000-luvun lopulla. Alkuperäisestä rakennuksesta ei ole jäljellä mitään: luostari on palanut maan tasalle monta kertaa. Saaren ensimmäinen presidentti, arkkipiispa Makarios III, aloitti kirkollisen uransa täällä munkkina vuonna 1926.
+AIEMPI KYSYMYS: Miksi luostareita rakennettiin usein vuorille?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä on kyyhkyn suvulla näkemystä. Luostareita rakennettiin usein vuorille, koska munkit halusivat vetäytyä pois maailman hälinästä rauhaan ja hiljaisuuteen. Askeettinen perinne, jossa hakeudutaan autioon ja vaikeapääsyiseen paikkaan, on ollut kristinuskossa vanha. Syrjäinen sijainti antoi lisäksi suojaa hyökkäyksiltä, ja vuorilta oli saatavilla vettä, puuta ja laidunmaata. Tunnettu esimerkki on [[Athos-vuoren]] luostariyhteisö Kreikassa, ja saman perinteen vaikutus näkyy [[askeesin]] ihanteessa. Ylhäältä katsottuna se on ihan järkeen käypää.
+KYSYMYS: Kerro lisää: askeesin
+
+### 288
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kap Greco (luonto)
+Tietoruudun teksti: Kap Greco on niemeke Kyproksen kaakkoisosassa, Famagustanlahden eteläpäässä Ayia Napan ja Protarasin välissä. Se on Kyproksen tasavallan hallitsemien alueiden itäisin kohta ja käytännössä myös Euroopan unionin itäisin kärki, kun syrjäisimpiä alueita ei lasketa. Antiikissa niemi tunnettiin nimellä Pedalion, ja Strabonin mukaan sen yllä kohoava puolisuunnikkaan muotoinen kukkula oli pyhitetty Afroditelle. Kalkkikivijyrkänteisiin on kulunut merenalaisia luolia, joita kutsutaan keijuluoliksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Muinaisuus: Teatterista tehtiin kehä ja takaisin] Kourion oli kaupunkikuningaskunta jyrkänteen päällä etelärannikolla. Herodotos kertoo kourionilaisten polveutuvan Argoksesta tulleista siirtolaisista, ja saman toistaa Strabon; akhaialaiset asettuivat paikalle 1100-luvulla eaa. Teatteri rakennettiin 100-luvulla eaa. ja se oli aluksi pienempi. Nykyiseen kokoonsa se laajennettiin 100-luvulla jaa., jolloin katsomoon mahtui 3 500 katsojaa. 200-luvun alkupuolella teatteri muutettiin areenaksi: näyttämön eteen pystytettiin metalliristikko petoeläinnäytöksiä varten ja kolme alinta istuinriviä purettiin, jotta katsojat olisivat kauempana kehästä. Saman vuosisadan puolivälin jälkeen areena muutettiin takaisin teatteriksi, ja alimmat karkeasti hakatu…
+AIEMPI KYSYMYS: Mikä oli niemen antiikinaikainen nimi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Pedalion. Antiikissa Kap Greco tunnettiin nimellä Pedalion, ja [[Strabonin]] mukaan sen yllä kohoava puolisuunnikkaan muotoinen kukkula oli pyhitetty [[Afroditelle]]. Niemi sijaitsee Kyproksen kaakkoisosassa [[Famagustanlahden]] eteläpäässä, Ayia Napan ja Protarasin välissä. Se on Kyproksen tasavallan hallitsemien alueiden itäisin kohta. Nimi on pysynyt mielessä paremmin kuin useimpien vanhojen kaupunkien.
+KYSYMYS: Kerro lisää: Strabonin
+
+### 289
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kap Greco (luonto)
+Tietoruudun teksti: Kap Greco on niemeke Kyproksen kaakkoisosassa, Famagustanlahden eteläpäässä Ayia Napan ja Protarasin välissä. Se on Kyproksen tasavallan hallitsemien alueiden itäisin kohta ja käytännössä myös Euroopan unionin itäisin kärki, kun syrjäisimpiä alueita ei lasketa. Antiikissa niemi tunnettiin nimellä Pedalion, ja Strabonin mukaan sen yllä kohoava puolisuunnikkaan muotoinen kukkula oli pyhitetty Afroditelle. Kalkkikivijyrkänteisiin on kulunut merenalaisia luolia, joita kutsutaan keijuluoliksi.
+AIEMPI KYSYMYS: Mikä oli niemen antiikinaikainen nimi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Pedalion. Antiikissa Kap Greco tunnettiin nimellä Pedalion, ja [[Strabonin]] mukaan sen yllä kohoava puolisuunnikkaan muotoinen kukkula oli pyhitetty [[Afroditelle]]. Niemi sijaitsee Kyproksen kaakkoisosassa [[Famagustanlahden]] eteläpäässä, Ayia Napan ja Protarasin välissä. Se on Kyproksen tasavallan hallitsemien alueiden itäisin kohta. Nimi on pysynyt mielessä paremmin kuin useimpien vanhojen kaupunkien.
+KYSYMYS: Kerro lisää: Afroditelle
+
+### 290
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kap Greco (luonto)
+Tietoruudun teksti: Kap Greco on niemeke Kyproksen kaakkoisosassa, Famagustanlahden eteläpäässä Ayia Napan ja Protarasin välissä. Se on Kyproksen tasavallan hallitsemien alueiden itäisin kohta ja käytännössä myös Euroopan unionin itäisin kärki, kun syrjäisimpiä alueita ei lasketa. Antiikissa niemi tunnettiin nimellä Pedalion, ja Strabonin mukaan sen yllä kohoava puolisuunnikkaan muotoinen kukkula oli pyhitetty Afroditelle. Kalkkikivijyrkänteisiin on kulunut merenalaisia luolia, joita kutsutaan keijuluoliksi.
+AIEMPI KYSYMYS: Mikä oli niemen antiikinaikainen nimi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Pedalion. Antiikissa Kap Greco tunnettiin nimellä Pedalion, ja [[Strabonin]] mukaan sen yllä kohoava puolisuunnikkaan muotoinen kukkula oli pyhitetty [[Afroditelle]]. Niemi sijaitsee Kyproksen kaakkoisosassa [[Famagustanlahden]] eteläpäässä, Ayia Napan ja Protarasin välissä. Se on Kyproksen tasavallan hallitsemien alueiden itäisin kohta. Nimi on pysynyt mielessä paremmin kuin useimpien vanhojen kaupunkien.
+KYSYMYS: Kerro lisää: Famagustanlahden
+
+### 291
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kap Greco (luonto)
+Tietoruudun teksti: Kap Greco on niemeke Kyproksen kaakkoisosassa, Famagustanlahden eteläpäässä Ayia Napan ja Protarasin välissä. Se on Kyproksen tasavallan hallitsemien alueiden itäisin kohta ja käytännössä myös Euroopan unionin itäisin kärki, kun syrjäisimpiä alueita ei lasketa. Antiikissa niemi tunnettiin nimellä Pedalion, ja Strabonin mukaan sen yllä kohoava puolisuunnikkaan muotoinen kukkula oli pyhitetty Afroditelle. Kalkkikivijyrkänteisiin on kulunut merenalaisia luolia, joita kutsutaan keijuluoliksi.
+AIEMPI KYSYMYS: Miten merenalaiset luolat syntyvät kalkkikiveen?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kalkkikivi liukenee hitaasti veteen, jonka mukana on [[hiilihappoa]]: sadevesi imee ilmasta ja maaperästä hiilidioksidia, jolloin siitä tulee heikosti hapanta. Kun tällainen vesi valuu halkeamia pitkin, se laajentaa niitä vähitellen luoliksi ja onkaloiksi. Meren pinta on aiemmin ollut nykyistä alempana, ja [[jääkauden]] päättymisen jälkeen [[merenpinta]] nousi, jolloin osa luolista jäi veden alle. Aaltojen kuluttava vaikutus voi myös suurentaa luolia rannikolla. En ole varma, miten Kap Grecon luolat tarkalleen syntyivät. Tähän meni taas ihan oikea hetki.
+KYSYMYS: Kerro lisää: hiilihappoa
+
+### 292
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kap Greco (luonto)
+Tietoruudun teksti: Kap Greco on niemeke Kyproksen kaakkoisosassa, Famagustanlahden eteläpäässä Ayia Napan ja Protarasin välissä. Se on Kyproksen tasavallan hallitsemien alueiden itäisin kohta ja käytännössä myös Euroopan unionin itäisin kärki, kun syrjäisimpiä alueita ei lasketa. Antiikissa niemi tunnettiin nimellä Pedalion, ja Strabonin mukaan sen yllä kohoava puolisuunnikkaan muotoinen kukkula oli pyhitetty Afroditelle. Kalkkikivijyrkänteisiin on kulunut merenalaisia luolia, joita kutsutaan keijuluoliksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vladivostok — kohdekartta / Kohdekartta: Arsenjevin museo] perustettu 1884 Kaukoidän ensimmäinen kotiseutumuseo sai alkunsa 18. huhtikuuta 1884, kun Amurinmaan tutkimusseuran säännöt vahvistettiin, ja ovet avautuivat yleisölle lokakuussa 1890. Vuonna 1945 museo nimettiin Vladimir Arsenjevin, Ussurinmaan tutkijan ja Dersu Uzalan kirjoittajan mukaan — hänen tarinansa on lehden taigasivulla. Kokoelmissa on seudun tutkijoiden, muun muassa Prževalskin, aineistoja, jääkauden fossiileja, 1100-luvun ylimyshauta ja Bohain valtakunnan hallitsijan peili; täytetyt tiikeri ja karhu ovat museon kuuluisin näky. Vuonna 2015 se oli Venäjän katsotuin aluemuseo, yli 421 000 kävijää, ja vuonna 2019 siitä tehtiin liittovaltion museo. Rakennus on tarina itsessään: kaupp…
+- [Whitehorse — kohdekartta / Kohdekartta: Beringia-keskus] 1997 Keskus avattiin 1997 Alaska Highwayn kilometrillä 1423 ja kertoo Beringiasta — 3 200 kilometrin levyisestä maa-alueesta, joka ulottui Siperian Kolyma-joelta Kanadan Mackenzie-joelle. Alue säilyi jääkaudella jäätiköitymättä, koska ilmasto oli kuiva ja lunta satoi vähän. Juuri siksi Beringia kiinnostaa arkeologeja ja paleontologeja: se oli eläinten ja ihmisten kulkureitti Aasian ja Amerikan välillä. Liikennettä oli molempiin suuntiin. Idän suuntaan tulivat mastodontit, mammutit, hirvieläimet, biisonit, lampaat ja myskihärät; länteen menivät hevoseläimet ja kamelit. Sanan Beringia keksi ruotsalainen kasvitieteilijä Eric Hultén vuonna 1937. Keskus on myös tutkimuslaitos. Sen aineistossa on…
+AIEMPI KYSYMYS: Miten merenalaiset luolat syntyvät kalkkikiveen?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kalkkikivi liukenee hitaasti veteen, jonka mukana on [[hiilihappoa]]: sadevesi imee ilmasta ja maaperästä hiilidioksidia, jolloin siitä tulee heikosti hapanta. Kun tällainen vesi valuu halkeamia pitkin, se laajentaa niitä vähitellen luoliksi ja onkaloiksi. Meren pinta on aiemmin ollut nykyistä alempana, ja [[jääkauden]] päättymisen jälkeen [[merenpinta]] nousi, jolloin osa luolista jäi veden alle. Aaltojen kuluttava vaikutus voi myös suurentaa luolia rannikolla. En ole varma, miten Kap Grecon luolat tarkalleen syntyivät. Tähän meni taas ihan oikea hetki.
+KYSYMYS: Kerro lisää: jääkauden
+
+### 293
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kap Greco (luonto)
+Tietoruudun teksti: Kap Greco on niemeke Kyproksen kaakkoisosassa, Famagustanlahden eteläpäässä Ayia Napan ja Protarasin välissä. Se on Kyproksen tasavallan hallitsemien alueiden itäisin kohta ja käytännössä myös Euroopan unionin itäisin kärki, kun syrjäisimpiä alueita ei lasketa. Antiikissa niemi tunnettiin nimellä Pedalion, ja Strabonin mukaan sen yllä kohoava puolisuunnikkaan muotoinen kukkula oli pyhitetty Afroditelle. Kalkkikivijyrkänteisiin on kulunut merenalaisia luolia, joita kutsutaan keijuluoliksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tansania — maalehti / Luonto: Apina, joka jäi saarelle meren noustessa] Sansibarinpunakolobi elää vain Ungujan saarella. Sen esi-isät jäivät saarelle, kun merenpinta nousi jääkauden lopulla, ja eristys on pienentänyt kalloa saarisäännön mukaisesti. Yksilöitä arvioidaan olevan 1 600–3 000, ja puolet niistä elää suojelualueiden ulkopuolella; tärkein turvapaikka on Jozanin kansallispuiston 25 neliökilometriä. Ryhmässä on 30–50 eläintä, ja koiraat pitävät yhtä — ne siistivät toisiaan ja puolustavat ryhmää yhdessä. Paikalliset kutsuvat lajia nimellä kima punju, myrkkyapina, sen voimakkaan hajun takia.
+AIEMPI KYSYMYS: Miten merenalaiset luolat syntyvät kalkkikiveen?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kalkkikivi liukenee hitaasti veteen, jonka mukana on [[hiilihappoa]]: sadevesi imee ilmasta ja maaperästä hiilidioksidia, jolloin siitä tulee heikosti hapanta. Kun tällainen vesi valuu halkeamia pitkin, se laajentaa niitä vähitellen luoliksi ja onkaloiksi. Meren pinta on aiemmin ollut nykyistä alempana, ja [[jääkauden]] päättymisen jälkeen [[merenpinta]] nousi, jolloin osa luolista jäi veden alle. Aaltojen kuluttava vaikutus voi myös suurentaa luolia rannikolla. En ole varma, miten Kap Grecon luolat tarkalleen syntyivät. Tähän meni taas ihan oikea hetki.
+KYSYMYS: Kerro lisää: merenpinta
+
+### 294
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kap Greco (luonto)
+Tietoruudun teksti: Kap Greco on niemeke Kyproksen kaakkoisosassa, Famagustanlahden eteläpäässä Ayia Napan ja Protarasin välissä. Se on Kyproksen tasavallan hallitsemien alueiden itäisin kohta ja käytännössä myös Euroopan unionin itäisin kärki, kun syrjäisimpiä alueita ei lasketa. Antiikissa niemi tunnettiin nimellä Pedalion, ja Strabonin mukaan sen yllä kohoava puolisuunnikkaan muotoinen kukkula oli pyhitetty Afroditelle. Kalkkikivijyrkänteisiin on kulunut merenalaisia luolia, joita kutsutaan keijuluoliksi.
+AIEMPI KYSYMYS: Millainen on Kyproksen ilmasto kesällä ja talvella?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kyproksella on [[välimerellinen ilmasto]], jossa kesät ovat kuumia ja kuivia ja talvet leutoja ja sateisia. Sade ajoittuu pääosin syksystä kevääseen, ja kesällä sataa harvoin. Rannikolla lämpötilat pysyvät talvella leutoina, mutta [[Troodosvuoristossa]] voi talvella olla lunta ja selvästi viileämpää. Tarkat lämpötilat vaihtelevat paikan ja vuoden mukaan. Kyyhkylle kelpaa kyllä kevät, ei liian kuuma.
+KYSYMYS: Kerro lisää: välimerellinen ilmasto
+
+### 295
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kap Greco (luonto)
+Tietoruudun teksti: Kap Greco on niemeke Kyproksen kaakkoisosassa, Famagustanlahden eteläpäässä Ayia Napan ja Protarasin välissä. Se on Kyproksen tasavallan hallitsemien alueiden itäisin kohta ja käytännössä myös Euroopan unionin itäisin kärki, kun syrjäisimpiä alueita ei lasketa. Antiikissa niemi tunnettiin nimellä Pedalion, ja Strabonin mukaan sen yllä kohoava puolisuunnikkaan muotoinen kukkula oli pyhitetty Afroditelle. Kalkkikivijyrkänteisiin on kulunut merenalaisia luolia, joita kutsutaan keijuluoliksi.
+AIEMPI KYSYMYS: Millainen on Kyproksen ilmasto kesällä ja talvella?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kyproksella on [[välimerellinen ilmasto]], jossa kesät ovat kuumia ja kuivia ja talvet leutoja ja sateisia. Sade ajoittuu pääosin syksystä kevääseen, ja kesällä sataa harvoin. Rannikolla lämpötilat pysyvät talvella leutoina, mutta [[Troodosvuoristossa]] voi talvella olla lunta ja selvästi viileämpää. Tarkat lämpötilat vaihtelevat paikan ja vuoden mukaan. Kyyhkylle kelpaa kyllä kevät, ei liian kuuma.
+KYSYMYS: Kerro lisää: Troodosvuoristossa
+
+### 296
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kap Greco (luonto)
+Tietoruudun teksti: Kap Greco on niemeke Kyproksen kaakkoisosassa, Famagustanlahden eteläpäässä Ayia Napan ja Protarasin välissä. Se on Kyproksen tasavallan hallitsemien alueiden itäisin kohta ja käytännössä myös Euroopan unionin itäisin kärki, kun syrjäisimpiä alueita ei lasketa. Antiikissa niemi tunnettiin nimellä Pedalion, ja Strabonin mukaan sen yllä kohoava puolisuunnikkaan muotoinen kukkula oli pyhitetty Afroditelle. Kalkkikivijyrkänteisiin on kulunut merenalaisia luolia, joita kutsutaan keijuluoliksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Winnipeg — kohdekartta / Kohdekartta: Union Station] 1911 Main Streetin varrella oleva Union Station avattiin 1911, ja sen suunnitteli newyorkilainen toimisto Warren and Wetmore. Beaux-arts-tyylisessä talossa on kolme laituria ja kahdeksan raidetta, ja siitä lähtevät yhä Kanadan halki kulkevat kaukojunat. Asemalla, raiteilla yksi ja kaksi, on rautatiemuseo, ja sen tunnetuin kappale on Countess of Dufferin — ensimmäinen höyryveturi, joka on kulkenut Kanadan preeriamaakunnissa. Baldwin Locomotive Works rakensi sen 1872 Northern Pacific Railwaylle, ja 1877 se myytiin 9 700 dollarilla rautatieurakoitsija Joseph Whiteheadille. Veturi lastattiin proomulle Minnesotassa ja hinattiin Punaistajokea pohjoiseen; se saapui St. Bonifaceen 9. lokakuuta 1877…
+- [Latvia — maalehti / Ruoka: Piirakka jota kutsuttiin maailman rumimmaksi] 1600-luku — Sklandrausis on liiviläisperäinen piirakka Kuurinmaalta: ohut ruistaikinapohja taivutetaan matalaksi vuoaksi, täytetään ohuella perunasoseella ja päälle levitetään paksu kerros makeaa, kanelilla maustettua porkkanasosetta. Piirakka syntyi 1600–1700-luvuilla, ja sitä ovat perinteisesti leiponeet suitit, pieni katolinen kansanryhmä muutoin luterilaisessa Kuurinmaassa. Euroopan unioni myönsi sklandrausiselle aidon perinteisen tuotteen suojan vuonna 2013. Erikoisen ulkonäkönsä vuoksi piirakka on saanut myös huonoa mainetta: vuonna 2023 se listattiin yhdeksi maailman huonoiten arvostelluista ruoista, vaikka suitit itse ovat siitä edelleen ylpeitä.
+AIEMPI KYSYMYS: Milloin Kypros liittyi Euroopan unioniin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kypros liittyi [[Euroopan unioniin]] 1. toukokuuta 2004 yhdessä yhdeksän muun maan kanssa. Saari on kuitenkin jakautunut vuodesta 1974, ja unionin lainsäädäntö on voimassa vain alueilla, joita Kyproksen tasavalta hallitsee. Maa otti käyttöön [[euron]] vuonna 2008. Kap Greco on tasavallan hallitsemien alueiden itäisin kohta ja siten käytännössä unionin itäisin kärki. Aika paljon liikennettä on kyyhkyillekin tullut sen jälkeen.
+KYSYMYS: Kerro lisää: Euroopan unioniin
+
+### 297
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kap Greco (luonto)
+Tietoruudun teksti: Kap Greco on niemeke Kyproksen kaakkoisosassa, Famagustanlahden eteläpäässä Ayia Napan ja Protarasin välissä. Se on Kyproksen tasavallan hallitsemien alueiden itäisin kohta ja käytännössä myös Euroopan unionin itäisin kärki, kun syrjäisimpiä alueita ei lasketa. Antiikissa niemi tunnettiin nimellä Pedalion, ja Strabonin mukaan sen yllä kohoava puolisuunnikkaan muotoinen kukkula oli pyhitetty Afroditelle. Kalkkikivijyrkänteisiin on kulunut merenalaisia luolia, joita kutsutaan keijuluoliksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Trevin suihkulähde] 1732–1762 Suihkulähde seisoo paikassa, jonne muinaiset roomalaiset johtivat puhdasta vettä jo vuodesta 19 eaa. lähtien pitkää Aqua Virgo -vesijohtoa pitkin — matkaa maan alla kertyi peräti 22 kilometriä. Nykyinen upea lähde on paljon uudempi: arkkitehti Nicola Salvi aloitti sen rakentamisen 1732, ja se valmistui vasta 1762, 11 vuotta hänen kuolemansa jälkeen. Lähde on maailman suurin barokkityylinen suihkulähde: se on 26 metriä korkea ja lähes 50 metriä leveä. Keskellä komeilee merenjumala Neptunus vaunuillaan, joita vetävät kaksi hevosta — toinen rauhallinen ja toinen villi, kuvaamassa meren kahta puolta. Perinteen mukaan olan yli lähteeseen heitetty kolikko takaa paluun Roomaan. Kolikoita…
+- [Rooma — kohdekartta / Kohdekartta: Kolikko olan yli] Trevin lähteeseen heitetään kolikko oikealla kädellä vasemman olan yli: tarinan mukaan se takaa paluun Roomaan. Kolikoita putoaa veteen noin kolmentuhannen euron edestä joka päivä, ja ne kerätään pohjasta talteen. Rahat lahjoitetaan Caritakselle hyväntekeväisyyteen — ruoka-apuun kaupungin vähävaraisille. Omaa kolikkoa ei saa noukkia takaisin: se on kiellettyä, ja yrittäjiä jää säännöllisesti kiinni.
+AIEMPI KYSYMYS: Milloin Kypros liittyi Euroopan unioniin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kypros liittyi [[Euroopan unioniin]] 1. toukokuuta 2004 yhdessä yhdeksän muun maan kanssa. Saari on kuitenkin jakautunut vuodesta 1974, ja unionin lainsäädäntö on voimassa vain alueilla, joita Kyproksen tasavalta hallitsee. Maa otti käyttöön [[euron]] vuonna 2008. Kap Greco on tasavallan hallitsemien alueiden itäisin kohta ja siten käytännössä unionin itäisin kärki. Aika paljon liikennettä on kyyhkyillekin tullut sen jälkeen.
+KYSYMYS: Kerro lisää: euron
+
+### 298
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kap Greco (luonto)
+Tietoruudun teksti: Kap Greco on niemeke Kyproksen kaakkoisosassa, Famagustanlahden eteläpäässä Ayia Napan ja Protarasin välissä. Se on Kyproksen tasavallan hallitsemien alueiden itäisin kohta ja käytännössä myös Euroopan unionin itäisin kärki, kun syrjäisimpiä alueita ei lasketa. Antiikissa niemi tunnettiin nimellä Pedalion, ja Strabonin mukaan sen yllä kohoava puolisuunnikkaan muotoinen kukkula oli pyhitetty Afroditelle. Kalkkikivijyrkänteisiin on kulunut merenalaisia luolia, joita kutsutaan keijuluoliksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Luonto: Saaren suurin nisäkäs on lammas] Kyproksenmufloni on villilammas, jota ei tavata missään muualla. Se on elänyt saarella yli 8 000 vuotta, ja sen uskotaan polveutuvan kotieläimestä, jonka saaren ensimmäiset asukkaat toivat mukanaan. Uros painaa jopa viisikymmentä kiloa ja naaras noin kolmekymmentäviisi, ja sirppimäiset sarvet kasvavat vain uroksille. Kun mesopotamiankuusipeura hävisi saarelta, muflonista tuli suurin maalla elävä nisäkäs. Vuonna 1930 eläimiä oli kahdessa laumassa runsaat kaksikymmentä kummassakin, ja vuonna 1937 toinen laumoista katosi kokonaan. Metsästyslakia tiukennettiin 1938 ja Pafoksen metsä rauhoitettiin. Kanta on siitä lähtien noussut, ja viranomaiset ilmoittavat nyt yli kolmetuhatta yksilöä — tarkin …
+- [Kypros — maalehti / Luonto: Käpy kypsyy puolitoista vuotta] Kyproksensetri kasvaa luonnonvaraisena vain Pafoksen metsässä, ja sen metsiä on kaikkiaan 290 hehtaaria eli alle 0,2 prosenttia saaren korkeasta metsäkasvillisuudesta. Puu viihtyy 900 metristä ylöspäin, ja pääesiintymä on Tripyloksen laella. Nimi brevifolia tarkoittaa lyhytlehtistä: neulaset ovat lyhyet, 5–16 millimetriä, kun libanoninsetrillä ne ovat 20–25 millimetriä. Lyhyempiä ei ole yhdelläkään setrillä, ja setrejä on maailmassa neljä. Kyproksensetri luetaan välillä omaksi lajikseen, välillä libanoninsetrin muunnokseksi; sukulinjat erkanivat noin 5–10 miljoonaa vuotta sitten. Puu kukkii syys–lokakuussa, ja käpy kypsyy vasta seuraavan vuoden loppukesällä. Vanhimmat puut ovat yli 500-vuot…
+AIEMPI KYSYMYS: Miksi Afrodite liitetään Kyprokseen?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kreikkalaisen kertomuksen mukaan Afrodite syntyi meren vaahdosta ja nousi maihin Kyproksella, ja siksi hänelle on annettu lisänimi Kypris, kyproslainen. Perinteisesti syntypaikkana pidetään [[Pafoksen]] seutua saaren lounaisrannikolla, jossa kalliomuodostuma [[Petra tou Romiou]] tunnetaan Afroditen kallionaan. Antiikissa Afroditea palvottiin Kyproksella laajasti, ja Pafoksessa oli hänen tärkeä pyhäkkönsä. Merivaahdosta syntynyt jumalatar, minä taas haluaisin syntyä pullataikinasta.
+KYSYMYS: Kerro lisää: Pafoksen
+
+### 299
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kap Greco (luonto)
+Tietoruudun teksti: Kap Greco on niemeke Kyproksen kaakkoisosassa, Famagustanlahden eteläpäässä Ayia Napan ja Protarasin välissä. Se on Kyproksen tasavallan hallitsemien alueiden itäisin kohta ja käytännössä myös Euroopan unionin itäisin kärki, kun syrjäisimpiä alueita ei lasketa. Antiikissa niemi tunnettiin nimellä Pedalion, ja Strabonin mukaan sen yllä kohoava puolisuunnikkaan muotoinen kukkula oli pyhitetty Afroditelle. Kalkkikivijyrkänteisiin on kulunut merenalaisia luolia, joita kutsutaan keijuluoliksi.
+AIEMPI KYSYMYS: Miksi Afrodite liitetään Kyprokseen?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kreikkalaisen kertomuksen mukaan Afrodite syntyi meren vaahdosta ja nousi maihin Kyproksella, ja siksi hänelle on annettu lisänimi Kypris, kyproslainen. Perinteisesti syntypaikkana pidetään [[Pafoksen]] seutua saaren lounaisrannikolla, jossa kalliomuodostuma [[Petra tou Romiou]] tunnetaan Afroditen kallionaan. Antiikissa Afroditea palvottiin Kyproksella laajasti, ja Pafoksessa oli hänen tärkeä pyhäkkönsä. Merivaahdosta syntynyt jumalatar, minä taas haluaisin syntyä pullataikinasta.
+KYSYMYS: Kerro lisää: Petra tou Romiou
+
+### 300
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apostolos Andreas (kulttuuri)
+Tietoruudun teksti: Apostolos Andreaksen luostari seisoo Karpasin niemellä aivan Kyproksen koillisimman kärjen eteläpuolella. Se on omistettu apostoli Andreaalle ja on Kyproksen ortodoksiselle kirkolle tärkeä paikka; sitä on kutsuttu Kyproksen Lourdesiksi, eikä sitä ole hoitanut järjestäytynyt munkkiyhteisö vaan vaihtuva joukko vapaaehtoisia pappeja ja maallikoita. Perimätiedon mukaan Andreaan alus ajautui matkalla Pyhälle maalle pois kurssilta ja osui täällä kallioihin; rantauduttuaan Andreas löi kalliota sauvallaan, ja siitä puhkesi lähde, jonka vesi palautti näön aluksen toisesta silmästään sokealle kapteenille. Siitä paikasta tuli pyhiinvaelluskohde. 1100-luvulla tässä oli linnoitettu luostari, ja sieltä käsin Isaakios Komnenos neuvotteli antautumisestaan Rikhard Leijonamielelle. Nykyinen pääkirkko on 1700-luvulta ja päärakennukset sata vuotta nuorempia. Sekä kreikkalais- että turkkilaiskyproslaiset pi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Andreaksen kirkko] 1747–1754 Andreaksen kirkko kohoaa jyrkällä mäellä Kiovan Podilin yläpuolella, ja sen taustalla on vanha legenda. Tarinan mukaan apostoli Andreas nousi tälle samalle kukkulalle jo lähes kaksituhatta vuotta sitten, pystytti sinne ristin ja ennusti paikalle nousevan suuren kaupungin, jossa olisi paljon kirkkoja. Juuri tähän pyhäksi uskottuun paikkaan rakennettiin vuosina 1747–1754 kirkko, joka on saanut nimensä apostolin käynnin muistoksi. Kirkon suunnitteli italialainen arkkitehti Bartolomeo Rastrelli, joka piirsi myös komeita palatseja Pietariin, ja rakennustyötä valvoi paikan päällä Ivan Mitšurin. Kirkko seisoo 15 metriä korkealla kivijalustalla, minkä ansiosta se näyttää melkein leijuvan …
+- [Bergen — kaupunkilehti / Historia: Tykinkuula seinässä, vaalihuone kirkossa] Tuomiokirkon ulkoseinässä on yhä kiinni tykinkuula vuoden 1665 Vågenin taistelusta, jossa englantilainen ja hollantilainen laivasto ottivat yhteen kaupungin satamassa. Vuonna 1814 kirkko toimi vaalikirkkona: yli kolmensadan muun seurakuntakirkon tavoin se oli äänestyspaikka, kun valittiin valitsijamiehet Eidsvollin kansalliskokoukseen, joka kirjoitti Norjan perustuslain. Ne olivat maan ensimmäiset kansalliset vaalit. 1880-luvulla arkkitehdit Christian Christie ja Peter Andreas Blix johtivat korjausta, jossa rokokoosisustus palautettiin keskiaikaiseen asuun.
+AIEMPI KYSYMYS: Mistä luostarin lähde kertomuksen mukaan syntyi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Perimätiedon mukaan apostoli [[Andreas]] matkusti laivalla kohti Pyhää maata, mutta alus ajautui pois kurssilta ja osui [[Karpasin]] niemen kallioihin. Rantauduttuaan Andreas löi kalliota sauvallaan, ja siitä puhkesi lähde. Lähteen veden kerrotaan palauttaneen näön aluksen kapteenille, joka oli sokea toisesta silmästään. Paikasta tuli pyhiinvaelluskohde, ja nykyinen luostari seisoo siinä, missä kertomus tapahtui. Kertomus on kaunis, ja sen minä kyllä jaksan kertoa uudestaan.
+KYSYMYS: Kerro lisää: Andreas
+
+### 301
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apostolos Andreas (kulttuuri)
+Tietoruudun teksti: Apostolos Andreaksen luostari seisoo Karpasin niemellä aivan Kyproksen koillisimman kärjen eteläpuolella. Se on omistettu apostoli Andreaalle ja on Kyproksen ortodoksiselle kirkolle tärkeä paikka; sitä on kutsuttu Kyproksen Lourdesiksi, eikä sitä ole hoitanut järjestäytynyt munkkiyhteisö vaan vaihtuva joukko vapaaehtoisia pappeja ja maallikoita. Perimätiedon mukaan Andreaan alus ajautui matkalla Pyhälle maalle pois kurssilta ja osui täällä kallioihin; rantauduttuaan Andreas löi kalliota sauvallaan, ja siitä puhkesi lähde, jonka vesi palautti näön aluksen toisesta silmästään sokealle kapteenille. Siitä paikasta tuli pyhiinvaelluskohde. 1100-luvulla tässä oli linnoitettu luostari, ja sieltä käsin Isaakios Komnenos neuvotteli antautumisestaan Rikhard Leijonamielelle. Nykyinen pääkirkko on 1700-luvulta ja päärakennukset sata vuotta nuorempia. Sekä kreikkalais- että turkkilaiskyproslaiset pi…
+AIEMPI KYSYMYS: Mistä luostarin lähde kertomuksen mukaan syntyi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Perimätiedon mukaan apostoli [[Andreas]] matkusti laivalla kohti Pyhää maata, mutta alus ajautui pois kurssilta ja osui [[Karpasin]] niemen kallioihin. Rantauduttuaan Andreas löi kalliota sauvallaan, ja siitä puhkesi lähde. Lähteen veden kerrotaan palauttaneen näön aluksen kapteenille, joka oli sokea toisesta silmästään. Paikasta tuli pyhiinvaelluskohde, ja nykyinen luostari seisoo siinä, missä kertomus tapahtui. Kertomus on kaunis, ja sen minä kyllä jaksan kertoa uudestaan.
+KYSYMYS: Kerro lisää: Karpasin
+
+### 302
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apostolos Andreas (kulttuuri)
+Tietoruudun teksti: Apostolos Andreaksen luostari seisoo Karpasin niemellä aivan Kyproksen koillisimman kärjen eteläpuolella. Se on omistettu apostoli Andreaalle ja on Kyproksen ortodoksiselle kirkolle tärkeä paikka; sitä on kutsuttu Kyproksen Lourdesiksi, eikä sitä ole hoitanut järjestäytynyt munkkiyhteisö vaan vaihtuva joukko vapaaehtoisia pappeja ja maallikoita. Perimätiedon mukaan Andreaan alus ajautui matkalla Pyhälle maalle pois kurssilta ja osui täällä kallioihin; rantauduttuaan Andreas löi kalliota sauvallaan, ja siitä puhkesi lähde, jonka vesi palautti näön aluksen toisesta silmästään sokealle kapteenille. Siitä paikasta tuli pyhiinvaelluskohde. 1100-luvulla tässä oli linnoitettu luostari, ja sieltä käsin Isaakios Komnenos neuvotteli antautumisestaan Rikhard Leijonamielelle. Nykyinen pääkirkko on 1700-luvulta ja päärakennukset sata vuotta nuorempia. Sekä kreikkalais- että turkkilaiskyproslaiset pi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kohdekartta / Kohdekartta: Neitsyttorni] 1110 Torni seisoo pienellä luodolla Bosporin eteläsuulla, kahdensadan metrin päässä Üsküdarin rannasta. Ateenalainen sotapäällikkö Alkibiades rakensi kalliolle luultavasti jo vuonna 408 eaa. tarkastusaseman Mustaltamereltä tuleville laivoille. Keisari Aleksios Komnenos pystytti paikalle puutornin vuonna 1110, ja siitä vedettiin rautaketju salmen yli toiseen torniin Euroopan puolella — ketjulla suljettiin väylä. Rakennus on tuhoutunut ja noussut yhä uudelleen: maanjäristys kaatoi sen 1509, tulipalo tuhosi sen 1721, ja suurvisiiri Damad İbrahim Pasha rakennutti tilalle majakan. Muureja korjattiin 1731 ja 1734, ja vuonna 1763 torni muurattiin kestävämmästä kivestä. Vuodesta 1829 se toimi karan…
+AIEMPI KYSYMYS: Kuka neuvotteli täällä antautumisestaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Luostarista käsin neuvotteli antautumisestaan [[Isaakios Komnenos]], joka oli hallinnut Kyprosta itsenäisenä hallitsijana. Neuvottelun toinen osapuoli oli [[Rikhard Leijonamielen]] johtama ristiretkiarmeija, joka valloitti saaren vuonna 1191. Luostari oli tuolloin 1100-luvulla linnoitettu paikka, ja nykyiset rakennukset ovat paljon myöhemmältä ajalta: pääkirkko on 1700-luvulta. Siitä on aikaa jo yli 800 vuotta, ja vieläkin tarina kulkee suusta suuhun.
+KYSYMYS: Kerro lisää: Isaakios Komnenos
+
+### 303
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apostolos Andreas (kulttuuri)
+Tietoruudun teksti: Apostolos Andreaksen luostari seisoo Karpasin niemellä aivan Kyproksen koillisimman kärjen eteläpuolella. Se on omistettu apostoli Andreaalle ja on Kyproksen ortodoksiselle kirkolle tärkeä paikka; sitä on kutsuttu Kyproksen Lourdesiksi, eikä sitä ole hoitanut järjestäytynyt munkkiyhteisö vaan vaihtuva joukko vapaaehtoisia pappeja ja maallikoita. Perimätiedon mukaan Andreaan alus ajautui matkalla Pyhälle maalle pois kurssilta ja osui täällä kallioihin; rantauduttuaan Andreas löi kalliota sauvallaan, ja siitä puhkesi lähde, jonka vesi palautti näön aluksen toisesta silmästään sokealle kapteenille. Siitä paikasta tuli pyhiinvaelluskohde. 1100-luvulla tässä oli linnoitettu luostari, ja sieltä käsin Isaakios Komnenos neuvotteli antautumisestaan Rikhard Leijonamielelle. Nykyinen pääkirkko on 1700-luvulta ja päärakennukset sata vuotta nuorempia. Sekä kreikkalais- että turkkilaiskyproslaiset pi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubrovnik — kohdekartta / Kohdekartta: Dubrovnikin katedraali] 1671–1713 Tarinan mukaan Englannin kuningas Rikhard Leijonamieli haaksirikkoutui lähellä Lokrumin saarta vuonna 1192 palatessaan ristiretkeltä. Pelastuttuaan hengissä hän lupasi rakentaa kirkon kiitokseksi - ja rahoitti osan Dubrovnikiin nousseesta ensimmäisestä kirkosta. Tuo vanha kirkko vaurioitui pahasti vuoden 1667 valtavassa maanjäristyksessä, joka mullisti koko kaupungin. Dubrovnikilaiset eivät kuitenkaan luovuttaneet: uuden katedraalin rakentaminen alkoi vuonna 1671 ja kesti peräti 42 vuotta, kunnes se valmistui vuonna 1713. Roomalainen arkkitehti Andrea Buffalini suunnitteli komean, kupolikattoisen rakennuksen, joka on 41 metriä pitkä. Katedraalin aarrekammiossa säilytetään 182 pyhä…
+AIEMPI KYSYMYS: Kuka neuvotteli täällä antautumisestaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Luostarista käsin neuvotteli antautumisestaan [[Isaakios Komnenos]], joka oli hallinnut Kyprosta itsenäisenä hallitsijana. Neuvottelun toinen osapuoli oli [[Rikhard Leijonamielen]] johtama ristiretkiarmeija, joka valloitti saaren vuonna 1191. Luostari oli tuolloin 1100-luvulla linnoitettu paikka, ja nykyiset rakennukset ovat paljon myöhemmältä ajalta: pääkirkko on 1700-luvulta. Siitä on aikaa jo yli 800 vuotta, ja vieläkin tarina kulkee suusta suuhun.
+KYSYMYS: Kerro lisää: Rikhard Leijonamielen
+
+### 304
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apostolos Andreas (kulttuuri)
+Tietoruudun teksti: Apostolos Andreaksen luostari seisoo Karpasin niemellä aivan Kyproksen koillisimman kärjen eteläpuolella. Se on omistettu apostoli Andreaalle ja on Kyproksen ortodoksiselle kirkolle tärkeä paikka; sitä on kutsuttu Kyproksen Lourdesiksi, eikä sitä ole hoitanut järjestäytynyt munkkiyhteisö vaan vaihtuva joukko vapaaehtoisia pappeja ja maallikoita. Perimätiedon mukaan Andreaan alus ajautui matkalla Pyhälle maalle pois kurssilta ja osui täällä kallioihin; rantauduttuaan Andreas löi kalliota sauvallaan, ja siitä puhkesi lähde, jonka vesi palautti näön aluksen toisesta silmästään sokealle kapteenille. Siitä paikasta tuli pyhiinvaelluskohde. 1100-luvulla tässä oli linnoitettu luostari, ja sieltä käsin Isaakios Komnenos neuvotteli antautumisestaan Rikhard Leijonamielelle. Nykyinen pääkirkko on 1700-luvulta ja päärakennukset sata vuotta nuorempia. Sekä kreikkalais- että turkkilaiskyproslaiset pi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Menovinkit] Espanjan museot ovat vieneet kokoelmansa verkkoon: Pyreneiden kirkkojen maalaukset, iberialainen kivikasvo, Mirón värit ja Don Quijoten ensipainos aukeavat kaikki ilman lippujonoa.
+AIEMPI KYSYMYS: Mikä on Lourdes ja miksi se on pyhiinvaelluskohde?
+AIEMPI VASTAUS (Livia):
+No jopas. Lourdes on kaupunki Etelä-Ranskassa [[Pyreneiden]] juurella. Vuonna 1858 nuori [[Bernadette Soubirous]] kertoi nähneensä Neitsyt Marian ilmestyksiä läheisessä luolassa, ja paikka muuttui pyhiinvaelluskohteeksi. Luolan luona virtaavan lähteen vettä pidetään pyhänä, ja kaupunkiin saapuu vuosittain miljoonia pyhiinvaeltajia, joukossa paljon sairaita. Katolinen kirkko on tunnustanut osan paikalla kerrotuista parantumisista ihmeiksi. Onpas sieltä kaupunki kasvanut yhdestä lähteestä.
+KYSYMYS: Kerro lisää: Pyreneiden
+
+### 305
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apostolos Andreas (kulttuuri)
+Tietoruudun teksti: Apostolos Andreaksen luostari seisoo Karpasin niemellä aivan Kyproksen koillisimman kärjen eteläpuolella. Se on omistettu apostoli Andreaalle ja on Kyproksen ortodoksiselle kirkolle tärkeä paikka; sitä on kutsuttu Kyproksen Lourdesiksi, eikä sitä ole hoitanut järjestäytynyt munkkiyhteisö vaan vaihtuva joukko vapaaehtoisia pappeja ja maallikoita. Perimätiedon mukaan Andreaan alus ajautui matkalla Pyhälle maalle pois kurssilta ja osui täällä kallioihin; rantauduttuaan Andreas löi kalliota sauvallaan, ja siitä puhkesi lähde, jonka vesi palautti näön aluksen toisesta silmästään sokealle kapteenille. Siitä paikasta tuli pyhiinvaelluskohde. 1100-luvulla tässä oli linnoitettu luostari, ja sieltä käsin Isaakios Komnenos neuvotteli antautumisestaan Rikhard Leijonamielelle. Nykyinen pääkirkko on 1700-luvulta ja päärakennukset sata vuotta nuorempia. Sekä kreikkalais- että turkkilaiskyproslaiset pi…
+AIEMPI KYSYMYS: Mikä on Lourdes ja miksi se on pyhiinvaelluskohde?
+AIEMPI VASTAUS (Livia):
+No jopas. Lourdes on kaupunki Etelä-Ranskassa [[Pyreneiden]] juurella. Vuonna 1858 nuori [[Bernadette Soubirous]] kertoi nähneensä Neitsyt Marian ilmestyksiä läheisessä luolassa, ja paikka muuttui pyhiinvaelluskohteeksi. Luolan luona virtaavan lähteen vettä pidetään pyhänä, ja kaupunkiin saapuu vuosittain miljoonia pyhiinvaeltajia, joukossa paljon sairaita. Katolinen kirkko on tunnustanut osan paikalla kerrotuista parantumisista ihmeiksi. Onpas sieltä kaupunki kasvanut yhdestä lähteestä.
+KYSYMYS: Kerro lisää: Bernadette Soubirous
+
+### 306
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apostolos Andreas (kulttuuri)
+Tietoruudun teksti: Apostolos Andreaksen luostari seisoo Karpasin niemellä aivan Kyproksen koillisimman kärjen eteläpuolella. Se on omistettu apostoli Andreaalle ja on Kyproksen ortodoksiselle kirkolle tärkeä paikka; sitä on kutsuttu Kyproksen Lourdesiksi, eikä sitä ole hoitanut järjestäytynyt munkkiyhteisö vaan vaihtuva joukko vapaaehtoisia pappeja ja maallikoita. Perimätiedon mukaan Andreaan alus ajautui matkalla Pyhälle maalle pois kurssilta ja osui täällä kallioihin; rantauduttuaan Andreas löi kalliota sauvallaan, ja siitä puhkesi lähde, jonka vesi palautti näön aluksen toisesta silmästään sokealle kapteenille. Siitä paikasta tuli pyhiinvaelluskohde. 1100-luvulla tässä oli linnoitettu luostari, ja sieltä käsin Isaakios Komnenos neuvotteli antautumisestaan Rikhard Leijonamielelle. Nykyinen pääkirkko on 1700-luvulta ja päärakennukset sata vuotta nuorempia. Sekä kreikkalais- että turkkilaiskyproslaiset pi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubrovnik — kaupunkilehti / Muurit: Torni, jonka rakennutti paavi] Muurin vaikuttavin torni on pyöreä Minčeta, joka nousee kaupungin korkeimmalta kohdalta maan puolelta. Paavi Pius II lähetti sen rakentajat Dubrovnikiin vuonna 1463, juuri kun Ottomaanien uhka Balkanilla oli suurimmillaan — Konstantinopoli oli kaatunut vain kymmenen vuotta aiemmin. Alun perin nelikulmainen linnake muutettiin myöhemmin pyöreäksi, koska pyöreä muoto kesti tykkitulta paremmin kuin terävät kulmat. Torni ei koskaan joutunut todelliseen taisteluun — se riitti, että se näytti vahvalta.
+- [Krakova — kaupunkilehti / Uskonto: Ikkuna, josta paavi jutteli nuorille] Kesäkuussa 1979, ensimmäisellä paavinvierailullaan kotimaahansa, Johannes Paavali II kiipesi yöllä entisen kotinsa, arkkipiispan palatsin, ikkunalaudalle puhumaan alla laulaville nuorille — kardinaali piti häntä kiinni, ettei hän putoaisi. "Kun asuin täällä Krakovassa, olin melko kunnollinen ihminen. En koskaan kiivennyt ikkunoihin", paavi vitsaili yleisölle. Tapahtumasta tuli perinne, jota toistettiin jokaisella hänen vierailullaan kuolemaansa 2005 asti, ja ikkuna vetää yhä pyhiinvaeltajia.
+AIEMPI KYSYMYS: Miten ortodoksinen kirkko eroaa katolisesta kirkosta?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Ortodoksinen ja katolinen kirkko ovat molemmat kristillisiä kirkkoja, jotka erkanivat toisistaan vähitellen, ja perinteisesti erkaantumisen vuodeksi mainitaan 1054. Katolisella kirkolla on yhteinen johtaja, [[paavi]], kun taas ortodoksisessa kirkossa on useita itsenäisiä kirkkoja, joita johtavat patriarkat ja arkkipiispat. Kiistakysymyksiä ovat olleet muun muassa [[Filioque]]-lisäys uskontunnustuksessa ja paavin valta. Ortodoksisessa jumalanpalveluksessa ovat tärkeässä asemassa [[ikonit]], ja naimisissa oleva mies voi tulla vihityksi papiksi. Vaikea aihe, sanon varovasti.
+KYSYMYS: Kerro lisää: paavi
+
+### 307
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apostolos Andreas (kulttuuri)
+Tietoruudun teksti: Apostolos Andreaksen luostari seisoo Karpasin niemellä aivan Kyproksen koillisimman kärjen eteläpuolella. Se on omistettu apostoli Andreaalle ja on Kyproksen ortodoksiselle kirkolle tärkeä paikka; sitä on kutsuttu Kyproksen Lourdesiksi, eikä sitä ole hoitanut järjestäytynyt munkkiyhteisö vaan vaihtuva joukko vapaaehtoisia pappeja ja maallikoita. Perimätiedon mukaan Andreaan alus ajautui matkalla Pyhälle maalle pois kurssilta ja osui täällä kallioihin; rantauduttuaan Andreas löi kalliota sauvallaan, ja siitä puhkesi lähde, jonka vesi palautti näön aluksen toisesta silmästään sokealle kapteenille. Siitä paikasta tuli pyhiinvaelluskohde. 1100-luvulla tässä oli linnoitettu luostari, ja sieltä käsin Isaakios Komnenos neuvotteli antautumisestaan Rikhard Leijonamielelle. Nykyinen pääkirkko on 1700-luvulta ja päärakennukset sata vuotta nuorempia. Sekä kreikkalais- että turkkilaiskyproslaiset pi…
+AIEMPI KYSYMYS: Miten ortodoksinen kirkko eroaa katolisesta kirkosta?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Ortodoksinen ja katolinen kirkko ovat molemmat kristillisiä kirkkoja, jotka erkanivat toisistaan vähitellen, ja perinteisesti erkaantumisen vuodeksi mainitaan 1054. Katolisella kirkolla on yhteinen johtaja, [[paavi]], kun taas ortodoksisessa kirkossa on useita itsenäisiä kirkkoja, joita johtavat patriarkat ja arkkipiispat. Kiistakysymyksiä ovat olleet muun muassa [[Filioque]]-lisäys uskontunnustuksessa ja paavin valta. Ortodoksisessa jumalanpalveluksessa ovat tärkeässä asemassa [[ikonit]], ja naimisissa oleva mies voi tulla vihityksi papiksi. Vaikea aihe, sanon varovasti.
+KYSYMYS: Kerro lisää: Filioque
+
+### 308
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apostolos Andreas (kulttuuri)
+Tietoruudun teksti: Apostolos Andreaksen luostari seisoo Karpasin niemellä aivan Kyproksen koillisimman kärjen eteläpuolella. Se on omistettu apostoli Andreaalle ja on Kyproksen ortodoksiselle kirkolle tärkeä paikka; sitä on kutsuttu Kyproksen Lourdesiksi, eikä sitä ole hoitanut järjestäytynyt munkkiyhteisö vaan vaihtuva joukko vapaaehtoisia pappeja ja maallikoita. Perimätiedon mukaan Andreaan alus ajautui matkalla Pyhälle maalle pois kurssilta ja osui täällä kallioihin; rantauduttuaan Andreas löi kalliota sauvallaan, ja siitä puhkesi lähde, jonka vesi palautti näön aluksen toisesta silmästään sokealle kapteenille. Siitä paikasta tuli pyhiinvaelluskohde. 1100-luvulla tässä oli linnoitettu luostari, ja sieltä käsin Isaakios Komnenos neuvotteli antautumisestaan Rikhard Leijonamielelle. Nykyinen pääkirkko on 1700-luvulta ja päärakennukset sata vuotta nuorempia. Sekä kreikkalais- että turkkilaiskyproslaiset pi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Tretjakovin galleria] 1856-1893 Moskovalainen kauppias Pavel Tretjakov aloitti taidekokoelmansa vuonna 1856 ostamalla kaksi venäläistä maalausta. Vuosikymmenten aikana hän osti satoja teoksia lisää, kunnes kokoelmassa oli jo lähes 2000 taideteosta - yli 1300 maalausta, satoja piirustuksia ja muutama veistos. Elokuussa 1892 Tretjakov lahjoitti koko kokoelmansa Moskovan kaupungille, ja galleria avattiin yleisölle 15. elokuuta 1893. Nykyään museossa on esillä yli 130 000 teosta, muun muassa Andrei Rublevin kuuluisa ikoni Kolminaisuus. Museon satumaisen näköisen punatiilisen julkisivun suunnitteli taiteilija Viktor Vasnetsov vuosina 1902-1904, ja se muistuttaa suoraan venäläisestä kansantarinasta poimittua linnaa. T…
+- [Jekaterinburg — kohdekartta / Kohdekartta: Kuvataidemuseo] 1936, nykyisessä talossa 1986 Museo aloitti vuonna 1936 Sverdlovskin taidegalleriana Vainerin kadulla. Sota toi sinne poikkeuksellisen talletuksen: Eremitaasin kokoelmat siirrettiin turvasäilytykseen tänne. 1980-luvun puolivälissä kokoelma muutti Vojevodinin kadun uudistettuun taloon, jonka ytimenä on vuonna 1730 ruukin sairaalaksi rakennettu talo — yksi kaupungin vanhimmista. Hanke valmistui 1986, ja nimi muuttui kuvataidemuseoksi 1988 ja Jekaterinburgin museoksi 1992 kaupungin nimenmuutoksen jälkeen. Kokoelman kuuluisin esine on Kaslin valurautapaviljonki. Kaslin ruukin verstaat valoivat sen 1800-luvun lopulla, ja se sai Pariisin maailmannäyttelyn pääpalkinnot vuonna 1900. Unesco on kirja…
+AIEMPI KYSYMYS: Miten ortodoksinen kirkko eroaa katolisesta kirkosta?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Ortodoksinen ja katolinen kirkko ovat molemmat kristillisiä kirkkoja, jotka erkanivat toisistaan vähitellen, ja perinteisesti erkaantumisen vuodeksi mainitaan 1054. Katolisella kirkolla on yhteinen johtaja, [[paavi]], kun taas ortodoksisessa kirkossa on useita itsenäisiä kirkkoja, joita johtavat patriarkat ja arkkipiispat. Kiistakysymyksiä ovat olleet muun muassa [[Filioque]]-lisäys uskontunnustuksessa ja paavin valta. Ortodoksisessa jumalanpalveluksessa ovat tärkeässä asemassa [[ikonit]], ja naimisissa oleva mies voi tulla vihityksi papiksi. Vaikea aihe, sanon varovasti.
+KYSYMYS: Kerro lisää: ikonit
+
+### 309
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apostolos Andreas (kulttuuri)
+Tietoruudun teksti: Apostolos Andreaksen luostari seisoo Karpasin niemellä aivan Kyproksen koillisimman kärjen eteläpuolella. Se on omistettu apostoli Andreaalle ja on Kyproksen ortodoksiselle kirkolle tärkeä paikka; sitä on kutsuttu Kyproksen Lourdesiksi, eikä sitä ole hoitanut järjestäytynyt munkkiyhteisö vaan vaihtuva joukko vapaaehtoisia pappeja ja maallikoita. Perimätiedon mukaan Andreaan alus ajautui matkalla Pyhälle maalle pois kurssilta ja osui täällä kallioihin; rantauduttuaan Andreas löi kalliota sauvallaan, ja siitä puhkesi lähde, jonka vesi palautti näön aluksen toisesta silmästään sokealle kapteenille. Siitä paikasta tuli pyhiinvaelluskohde. 1100-luvulla tässä oli linnoitettu luostari, ja sieltä käsin Isaakios Komnenos neuvotteli antautumisestaan Rikhard Leijonamielelle. Nykyinen pääkirkko on 1700-luvulta ja päärakennukset sata vuotta nuorempia. Sekä kreikkalais- että turkkilaiskyproslaiset pi…
+AIEMPI KYSYMYS: Millaisia eläimiä Karpasin niemimaalla elää?
+AIEMPI VASTAUS (Livia):
+Just niin, siellä on sellaista. Karpasin niemimaa tunnetaan [[villiaaseista]], joita elää alueella vapaana. Rannoilla pesii myös [[merikilpikonnia]], joita on tavattu Kyproksen rannikolla sekä vihreän merikilpikonnan että caretta-kilpikonnan lajeina. Niemimaa on harvaanasuttua ja luonnonläheistä seutua. En ole varma tämän hetken tarkoista lukumääristä. Kyyhkynä minä tykkään kyllä ihan lintujen puolella.
+KYSYMYS: Kerro lisää: villiaaseista
+
+### 310
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apostolos Andreas (kulttuuri)
+Tietoruudun teksti: Apostolos Andreaksen luostari seisoo Karpasin niemellä aivan Kyproksen koillisimman kärjen eteläpuolella. Se on omistettu apostoli Andreaalle ja on Kyproksen ortodoksiselle kirkolle tärkeä paikka; sitä on kutsuttu Kyproksen Lourdesiksi, eikä sitä ole hoitanut järjestäytynyt munkkiyhteisö vaan vaihtuva joukko vapaaehtoisia pappeja ja maallikoita. Perimätiedon mukaan Andreaan alus ajautui matkalla Pyhälle maalle pois kurssilta ja osui täällä kallioihin; rantauduttuaan Andreas löi kalliota sauvallaan, ja siitä puhkesi lähde, jonka vesi palautti näön aluksen toisesta silmästään sokealle kapteenille. Siitä paikasta tuli pyhiinvaelluskohde. 1100-luvulla tässä oli linnoitettu luostari, ja sieltä käsin Isaakios Komnenos neuvotteli antautumisestaan Rikhard Leijonamielelle. Nykyinen pääkirkko on 1700-luvulta ja päärakennukset sata vuotta nuorempia. Sekä kreikkalais- että turkkilaiskyproslaiset pi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dili — kaupunkilehti / Vuorten ja meren välissä: Meriruoho ruokkii dugongit] Dilin ympäristö tuottaa luontaisesti kuivaa lehtimetsää. Rannikon mangrovelajeihin kuuluu silmälläpidettävä Ceriops decandra. Rannan edustan meriruohoniityt elättävät dugongeja ja merikilpikonnia, ja kauempana avovesillä liikkuu delfiinejä ja valaita. Kaupungin oma kasvu näkyy näissä luvuissa: vuosina 1990–2014 Dilin ympärillä olevan tasaisen maan maatalouskäytön arvioidaan vähentyneen noin neljäkymmentä prosenttia, ja kosteikot ovat kaventuneet edelleen, kun niitä on kuivattu ja rakennettu.
+- [Egypti — maalehti / Luonto: Riutta, joka sietää kuumaa] Punaisenmeren rannikolla kasvaa satoja kilometrejä koralliriuttaa, jonka väreissä sukeltaa muun muassa papukaijakaloja, keisarikaloja ja merikilpikonnia. Erikoista on, että nämä korallit kestävät lämpöä paremmin kuin mitkään muut maailmassa: vesi on täällä aina ollut lämmintä ja suolaista. Siksi tutkijat arvelevat, että Punaisenmeren riutta voi olla viimeisiä, jotka selviävät merien lämmetessä — koko maailman korallien varakappale.
+AIEMPI KYSYMYS: Millaisia eläimiä Karpasin niemimaalla elää?
+AIEMPI VASTAUS (Livia):
+Just niin, siellä on sellaista. Karpasin niemimaa tunnetaan [[villiaaseista]], joita elää alueella vapaana. Rannoilla pesii myös [[merikilpikonnia]], joita on tavattu Kyproksen rannikolla sekä vihreän merikilpikonnan että caretta-kilpikonnan lajeina. Niemimaa on harvaanasuttua ja luonnonläheistä seutua. En ole varma tämän hetken tarkoista lukumääristä. Kyyhkynä minä tykkään kyllä ihan lintujen puolella.
+KYSYMYS: Kerro lisää: merikilpikonnia

@@ -1,0 +1,1073 @@
+### 161
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Famagusta (kauppa)
+Tietoruudun teksti: Famagusta on kaupunki Kyproksen itärannikolla, saaren syvimmän sataman äärellä; se perustettiin noin vuonna 274 eaa. nimellä Arsinoe sen jälkeen, kun maanjäristys oli tuhonnut läheisen Salamiin kaupungin. Lusignan-suvun vallan aikana 1200-luvulta lähtien kaupunki vaurastui kauppakeskukseksi, ja etenkin Akkon kukistumisen 1291 jälkeen sinne virranneet pakolaiskauppiaat rakennuttivat niin paljon kirkkoja, että Famagustaa alettiin kutsua kirkkojen kaupungiksi. Vuosina 1570–1571 kaupunki oli viimeinen Venetsian Kyproksen tukikohta, joka vastusti osmaneja: 13 kuukauden piirityksen jälkeen antautunut komendantti Marco Antonio Bragadin nyljettiin elävältä. Osmanien vallan alla latinalaiset karkotettiin ja kreikkalaiskyproslaiset joutuivat muuttamaan muurien ulkopuolelle 1570-luvulla, eivätkä Anatoliasta tuodut turkkilaisasukkaat täyttäneet autioitunutta kaupunkia; karkotetut kauppiaat asettuiv…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kohdekartta / Kohdekartta: Selimiyen moskeija] 1570 Perustuskivi laskettiin 1209, ja vihkiminen ehti vasta vuoteen 1326. Väliin osui kaksi maanjäristystä, 1267 ja 1303, ja keskilaiva ja länsijulkisivu valmistuivat vasta arkkipiispa Giovanni del Conten aikana 1319–1326. Sisämitat ovat 66 × 21 metriä, ja rakennus on Kyproksen vanhin ja suurin säilynyt goottilainen kirkko. Pohjakaava on lainattu Pariisista: kuoria kiertää käytävä eikä apsidiin tehty kappeleita, kuten Notre-Damessa. Ranskalaisen Lusignan-suvun kuninkaat kruunattiin täällä. Syyskuussa 1570 rakennus sai toisen elämän. Ensimmäinen perjantairukous pidettiin 15. syyskuuta, ja samana vuonna länsipäätyyn nousi kaksi minareettia. Sisällä muutos oli käytännöllinen: patsaat ja kirkon…
+AIEMPI KYSYMYS: Miksi Famagustaa alettiin kutsua kirkkojen kaupungiksi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Lusignan-suvun]] vallan aikana Famagusta vaurastui kauppakeskukseksi. Etenkin Akkon kukistumisen jälkeen vuonna 1291 kaupunkiin virranneet [[pakolaiskauppiaat]] rakennuttivat niin paljon kirkkoja, että kaupunkia alettiin kutsua kirkkojen kaupungiksi. Kirkkoja riittää, kyl kyyhkynkin siellä katon löytää.
+KYSYMYS: Kerro lisää: Lusignan-suvun
+
+### 162
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Famagusta (kauppa)
+Tietoruudun teksti: Famagusta on kaupunki Kyproksen itärannikolla, saaren syvimmän sataman äärellä; se perustettiin noin vuonna 274 eaa. nimellä Arsinoe sen jälkeen, kun maanjäristys oli tuhonnut läheisen Salamiin kaupungin. Lusignan-suvun vallan aikana 1200-luvulta lähtien kaupunki vaurastui kauppakeskukseksi, ja etenkin Akkon kukistumisen 1291 jälkeen sinne virranneet pakolaiskauppiaat rakennuttivat niin paljon kirkkoja, että Famagustaa alettiin kutsua kirkkojen kaupungiksi. Vuosina 1570–1571 kaupunki oli viimeinen Venetsian Kyproksen tukikohta, joka vastusti osmaneja: 13 kuukauden piirityksen jälkeen antautunut komendantti Marco Antonio Bragadin nyljettiin elävältä. Osmanien vallan alla latinalaiset karkotettiin ja kreikkalaiskyproslaiset joutuivat muuttamaan muurien ulkopuolelle 1570-luvulla, eivätkä Anatoliasta tuodut turkkilaisasukkaat täyttäneet autioitunutta kaupunkia; karkotetut kauppiaat asettuiv…
+AIEMPI KYSYMYS: Miksi Famagustaa alettiin kutsua kirkkojen kaupungiksi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Lusignan-suvun]] vallan aikana Famagusta vaurastui kauppakeskukseksi. Etenkin Akkon kukistumisen jälkeen vuonna 1291 kaupunkiin virranneet [[pakolaiskauppiaat]] rakennuttivat niin paljon kirkkoja, että kaupunkia alettiin kutsua kirkkojen kaupungiksi. Kirkkoja riittää, kyl kyyhkynkin siellä katon löytää.
+KYSYMYS: Kerro lisää: pakolaiskauppiaat
+
+### 163
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Famagusta (kauppa)
+Tietoruudun teksti: Famagusta on kaupunki Kyproksen itärannikolla, saaren syvimmän sataman äärellä; se perustettiin noin vuonna 274 eaa. nimellä Arsinoe sen jälkeen, kun maanjäristys oli tuhonnut läheisen Salamiin kaupungin. Lusignan-suvun vallan aikana 1200-luvulta lähtien kaupunki vaurastui kauppakeskukseksi, ja etenkin Akkon kukistumisen 1291 jälkeen sinne virranneet pakolaiskauppiaat rakennuttivat niin paljon kirkkoja, että Famagustaa alettiin kutsua kirkkojen kaupungiksi. Vuosina 1570–1571 kaupunki oli viimeinen Venetsian Kyproksen tukikohta, joka vastusti osmaneja: 13 kuukauden piirityksen jälkeen antautunut komendantti Marco Antonio Bragadin nyljettiin elävältä. Osmanien vallan alla latinalaiset karkotettiin ja kreikkalaiskyproslaiset joutuivat muuttamaan muurien ulkopuolelle 1570-luvulla, eivätkä Anatoliasta tuodut turkkilaisasukkaat täyttäneet autioitunutta kaupunkia; karkotetut kauppiaat asettuiv…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kaupunkilehti / Historian hetki: Nikosia 1878 — puolikuu laskee, risti nousee] 12.7.1878 — Kaupustelija keskeyttää työnsä, kun väkijoukko kääntyy katsomaan uutta lippua Nikosiassa. On 12. heinäkuuta 1878: saaren hallinto siirtyy Britannialle, ja Union Jack nostetaan vara-amiraali Lord John Hayn läsnä ollessa. Hänen laivastostaan kaupunkiin saapuu merijalkaväkeä ja merimiehiä, mutta uusi hallinto on vasta alkutekijöissään. Britannia ja Osmanien valtakunta olivat sopineet Kyproksen hallinnasta kesäkuussa vastineeksi Britannian tuesta Venäjän uhkaa vastaan. Saari pysyy muodollisesti osmanien valtakunnan osana, vaikka käytännön valta vaihtuu. Ensimmäinen korkea komissaari Garnet Wolseley saapuu Nikosiaan vasta 31. heinäkuuta ja ryhtyy kokoamaan hallintoa. Torin kauppiaall…
+- [Nikosia — kaupunkilehti / Nikosia: Tulkin talo vaihtoi omistajaa kahdesti] Hadjigeorgakis Kornesios toimi Kyproksen dragomaanina eli hallinnon tulkkina vuosina 1779–1809, ja noin vuonna 1796 sulttaani Selim III nimitti hänet virkaan elinikäisesti. Kartanonsa hän rakennutti Agios Antonioksen kaupunginosaan arkkipiispan asunnon lähelle. Vuoden 1804 kapinassa väkijoukko murtautui taloon ja ryösti sen, ja perhe pakeni Konstantinopoliin. Hänet teloitettiin siellä vuonna 1809, omaisuus takavarikoitiin ja talo meni kaupaksi 13 000 kuruşilla; nuorin poika osti sen takaisin vuonna 1830. Viimeinen asukas kuoli 1979, ja nyt talossa on etnologinen museo. Kunnostuksesta myönnettiin Europa Nostra -palkinto.
+AIEMPI KYSYMYS: Millaisen sataman äärellä Famagusta sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai se. Famagusta sijaitsee [[Kyproksen]] itärannikolla saaren syvimmän sataman äärellä. Kaupunki vaurastui kauppakeskukseksi [[Lusignan-suvun]] vallan aikana 1200-luvulta lähtien. Syvä satama on laivojen unelma, minulle riittäisi matala lätäkkö.
+KYSYMYS: Kerro lisää: Kyproksen
+
+### 164
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Famagusta (kauppa)
+Tietoruudun teksti: Famagusta on kaupunki Kyproksen itärannikolla, saaren syvimmän sataman äärellä; se perustettiin noin vuonna 274 eaa. nimellä Arsinoe sen jälkeen, kun maanjäristys oli tuhonnut läheisen Salamiin kaupungin. Lusignan-suvun vallan aikana 1200-luvulta lähtien kaupunki vaurastui kauppakeskukseksi, ja etenkin Akkon kukistumisen 1291 jälkeen sinne virranneet pakolaiskauppiaat rakennuttivat niin paljon kirkkoja, että Famagustaa alettiin kutsua kirkkojen kaupungiksi. Vuosina 1570–1571 kaupunki oli viimeinen Venetsian Kyproksen tukikohta, joka vastusti osmaneja: 13 kuukauden piirityksen jälkeen antautunut komendantti Marco Antonio Bragadin nyljettiin elävältä. Osmanien vallan alla latinalaiset karkotettiin ja kreikkalaiskyproslaiset joutuivat muuttamaan muurien ulkopuolelle 1570-luvulla, eivätkä Anatoliasta tuodut turkkilaisasukkaat täyttäneet autioitunutta kaupunkia; karkotetut kauppiaat asettuiv…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bangkok — kaupunkilehti / Bangkok: Idän Venetsia] Bangkokin vesiväylät olivat 1800-luvun loppuun asti kaupungin pääasiallinen kulkutapa: useimmat asukkaat asuivat veden äärellä tai suoraan sen päällä. Seutu oli alun perin suomaata, jota raivattiin viljelyyn kaivamalla kanavia eli khlongeja 1500-luvulta lähtien. Ulkomaiset vierailijat antoivat kaupungille 1800-luvulla lisänimen idän Venetsia. Ensimmäinen länsimaiseen tapaan rakennettu katu, Charoen Krung, valmistui vasta 1864. Kanavia on yhä: vuonna 2019 niitä laskettiin 1 682 ja yhteispituudeksi 2 604 kilometriä, vaikka moni on täytetty maalla tai muutettu viemäriksi.
+AIEMPI KYSYMYS: Mitä Famagustassa tapahtui vuosina 1570–1571?
+AIEMPI VASTAUS (Livia):
+Hmm. Tämä on vakavampi asia. Vuosina 1570–1571 Famagusta oli [[Venetsian]] viimeinen Kyproksen tukikohta, joka vastusti [[osmaneja]]. Kolmentoista kuukauden piirityksen jälkeen kaupunki antautui, ja komendantti [[Marco Antonio Bragadin]] teloitettiin. Tapahtumista on yli neljäsataa vuotta, ja sen ajan sotatavat olivat toisenlaiset kuin nykyiset. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Venetsian
+
+### 165
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Famagusta (kauppa)
+Tietoruudun teksti: Famagusta on kaupunki Kyproksen itärannikolla, saaren syvimmän sataman äärellä; se perustettiin noin vuonna 274 eaa. nimellä Arsinoe sen jälkeen, kun maanjäristys oli tuhonnut läheisen Salamiin kaupungin. Lusignan-suvun vallan aikana 1200-luvulta lähtien kaupunki vaurastui kauppakeskukseksi, ja etenkin Akkon kukistumisen 1291 jälkeen sinne virranneet pakolaiskauppiaat rakennuttivat niin paljon kirkkoja, että Famagustaa alettiin kutsua kirkkojen kaupungiksi. Vuosina 1570–1571 kaupunki oli viimeinen Venetsian Kyproksen tukikohta, joka vastusti osmaneja: 13 kuukauden piirityksen jälkeen antautunut komendantti Marco Antonio Bragadin nyljettiin elävältä. Osmanien vallan alla latinalaiset karkotettiin ja kreikkalaiskyproslaiset joutuivat muuttamaan muurien ulkopuolelle 1570-luvulla, eivätkä Anatoliasta tuodut turkkilaisasukkaat täyttäneet autioitunutta kaupunkia; karkotetut kauppiaat asettuiv…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Historia: Luostari joka kasvoi kalliosta] 1665–1671 — Korkealle Ostroškan kallioseinämään on veistetty luostari, joka näyttää kasvaneen suoraan vuoresta. Sen perusti 1665 Hertsegovinan metropoliitta Vasilije, joka valitsi paikan osin suojaksi eteneviä osmaneja vastaan – samoissa luolissa oli ennen häntä asunut erakkona pyhä Isaija Onogoštilainen. Ylempi, kahteen luolaan louhittu kirkko koristeltiin freskoin, ja Vasilije johti laajennustyötä kuolemaansa 1671 asti, minkä jälkeen hänet julistettiin pyhäksi. Ostrog on nykyään Balkanin vierailluin pyhiinvaelluskohde: sinne saapuu vuosittain yli miljoona kävijää kaikista uskonnoista.
+AIEMPI KYSYMYS: Mitä Famagustassa tapahtui vuosina 1570–1571?
+AIEMPI VASTAUS (Livia):
+Hmm. Tämä on vakavampi asia. Vuosina 1570–1571 Famagusta oli [[Venetsian]] viimeinen Kyproksen tukikohta, joka vastusti [[osmaneja]]. Kolmentoista kuukauden piirityksen jälkeen kaupunki antautui, ja komendantti [[Marco Antonio Bragadin]] teloitettiin. Tapahtumista on yli neljäsataa vuotta, ja sen ajan sotatavat olivat toisenlaiset kuin nykyiset. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: osmaneja
+
+### 166
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Famagusta (kauppa)
+Tietoruudun teksti: Famagusta on kaupunki Kyproksen itärannikolla, saaren syvimmän sataman äärellä; se perustettiin noin vuonna 274 eaa. nimellä Arsinoe sen jälkeen, kun maanjäristys oli tuhonnut läheisen Salamiin kaupungin. Lusignan-suvun vallan aikana 1200-luvulta lähtien kaupunki vaurastui kauppakeskukseksi, ja etenkin Akkon kukistumisen 1291 jälkeen sinne virranneet pakolaiskauppiaat rakennuttivat niin paljon kirkkoja, että Famagustaa alettiin kutsua kirkkojen kaupungiksi. Vuosina 1570–1571 kaupunki oli viimeinen Venetsian Kyproksen tukikohta, joka vastusti osmaneja: 13 kuukauden piirityksen jälkeen antautunut komendantti Marco Antonio Bragadin nyljettiin elävältä. Osmanien vallan alla latinalaiset karkotettiin ja kreikkalaiskyproslaiset joutuivat muuttamaan muurien ulkopuolelle 1570-luvulla, eivätkä Anatoliasta tuodut turkkilaisasukkaat täyttäneet autioitunutta kaupunkia; karkotetut kauppiaat asettuiv…
+AIEMPI KYSYMYS: Mitä Famagustassa tapahtui vuosina 1570–1571?
+AIEMPI VASTAUS (Livia):
+Hmm. Tämä on vakavampi asia. Vuosina 1570–1571 Famagusta oli [[Venetsian]] viimeinen Kyproksen tukikohta, joka vastusti [[osmaneja]]. Kolmentoista kuukauden piirityksen jälkeen kaupunki antautui, ja komendantti [[Marco Antonio Bragadin]] teloitettiin. Tapahtumista on yli neljäsataa vuotta, ja sen ajan sotatavat olivat toisenlaiset kuin nykyiset. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Marco Antonio Bragadin
+
+### 167
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Famagusta (kauppa)
+Tietoruudun teksti: Famagusta on kaupunki Kyproksen itärannikolla, saaren syvimmän sataman äärellä; se perustettiin noin vuonna 274 eaa. nimellä Arsinoe sen jälkeen, kun maanjäristys oli tuhonnut läheisen Salamiin kaupungin. Lusignan-suvun vallan aikana 1200-luvulta lähtien kaupunki vaurastui kauppakeskukseksi, ja etenkin Akkon kukistumisen 1291 jälkeen sinne virranneet pakolaiskauppiaat rakennuttivat niin paljon kirkkoja, että Famagustaa alettiin kutsua kirkkojen kaupungiksi. Vuosina 1570–1571 kaupunki oli viimeinen Venetsian Kyproksen tukikohta, joka vastusti osmaneja: 13 kuukauden piirityksen jälkeen antautunut komendantti Marco Antonio Bragadin nyljettiin elävältä. Osmanien vallan alla latinalaiset karkotettiin ja kreikkalaiskyproslaiset joutuivat muuttamaan muurien ulkopuolelle 1570-luvulla, eivätkä Anatoliasta tuodut turkkilaisasukkaat täyttäneet autioitunutta kaupunkia; karkotetut kauppiaat asettuiv…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Historian hetki: Sarajevo 1914 — auto pysähtyy väärään paikkaan] 28.6.1914 — Kuljettaja tajuaa virheen vasta, kun on jo kääntynyt väärään kujaan: reitti piti muuttaa sairaalavierailun vuoksi, mutta kukaan ei ehtinyt kertoa sitä hänelle. Se on sunnuntai 28. kesäkuuta 1914, ja arkkiherttua Franz Ferdinand istuu avoautossa vaimonsa Sophien vierellä Sarajevossa, missä joku on jo aiemmin samana aamuna heittänyt pommin heidän saattueensa kohti. Kuljettaja yrittää perua autoa takaisin Latin-sillan kupeessa, mutta moottori sammuu juuri siinä kohtaa, missä nuori Gavrilo Princip seisoo katukahvilan edessä — yksi kuudesta salamurhaajasta, joka oli jo luullut suunnitelman epäonnistuneen. Princip ampuu kahdesti muutaman metrin päästä. Hän yrittää vielä nielaista syan…
+- [Sarajevo — kaupunkilehti / Historian hetki] Arkkiherttua Franz Ferdinandin auto ajoi vahingossa Latin-sillan kulmaan Sarajevossa 28. kesäkuuta 1914 — suoraan salamurhaajan eteen, joka luuli tehtävänsä jo epäonnistuneen.
+- [Istanbul — kaupunkilehti / Historian hetki: Konstantinopoli 1453 — aamu tulee rumpujen mukana] 29.5.1453 — Yö on lyhyt, ja aamu tulee rumpujen ja huutojen mukana. Mesoteichionilla, Lykosjoen laakson muurinpätkällä, on 29. toukokuuta 1453. Sulttaani Mehmed II, 21-vuotias, on piirittänyt kaupunkia 6. huhtikuuta lähtien — 53 päivää — ja unkarilaisen Orbanin valama jättiläistykki on murtanut muuria viikkokausia niin, että puolustajat täyttävät aukkoja öisin. Kaupungissa on alle 50 000 asukasta ja vain noin 7 000–8 000 aseellista miestä kahdentoista mailin muureille; ulkopuolella on 50 000–80 000 osmania. Edellisenä iltana keisari Konstantinos XI kävi Hagia Sofiassa viimeisessä vesperissä, jossa latinalaiset ja kreikkalaiset rukoilivat samassa kirkossa. Hyökkäys tulee aalloittain: ensin p…
+AIEMPI KYSYMYS: Mitä osmanien vallan alla tapahtui Famagustan asukkaille?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tämä on raskaampaa historiaa. Osmanien vallan alla [[latinalaiset]] karkotettiin kaupungista, ja [[kreikkalaiskyproslaiset]] joutuivat muuttamaan muurien ulkopuolelle 1570-luvulla. Anatoliasta tuodut turkkilaisasukkaat eivät täyttäneet autioitunutta kaupunkia. Onpas siitä pitkä aika, ja kaupunki on ehtinyt muuttua moneen kertaan.
+KYSYMYS: Kerro lisää: latinalaiset
+
+### 168
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Famagusta (kauppa)
+Tietoruudun teksti: Famagusta on kaupunki Kyproksen itärannikolla, saaren syvimmän sataman äärellä; se perustettiin noin vuonna 274 eaa. nimellä Arsinoe sen jälkeen, kun maanjäristys oli tuhonnut läheisen Salamiin kaupungin. Lusignan-suvun vallan aikana 1200-luvulta lähtien kaupunki vaurastui kauppakeskukseksi, ja etenkin Akkon kukistumisen 1291 jälkeen sinne virranneet pakolaiskauppiaat rakennuttivat niin paljon kirkkoja, että Famagustaa alettiin kutsua kirkkojen kaupungiksi. Vuosina 1570–1571 kaupunki oli viimeinen Venetsian Kyproksen tukikohta, joka vastusti osmaneja: 13 kuukauden piirityksen jälkeen antautunut komendantti Marco Antonio Bragadin nyljettiin elävältä. Osmanien vallan alla latinalaiset karkotettiin ja kreikkalaiskyproslaiset joutuivat muuttamaan muurien ulkopuolelle 1570-luvulla, eivätkä Anatoliasta tuodut turkkilaisasukkaat täyttäneet autioitunutta kaupunkia; karkotetut kauppiaat asettuiv…
+AIEMPI KYSYMYS: Mitä osmanien vallan alla tapahtui Famagustan asukkaille?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tämä on raskaampaa historiaa. Osmanien vallan alla [[latinalaiset]] karkotettiin kaupungista, ja [[kreikkalaiskyproslaiset]] joutuivat muuttamaan muurien ulkopuolelle 1570-luvulla. Anatoliasta tuodut turkkilaisasukkaat eivät täyttäneet autioitunutta kaupunkia. Onpas siitä pitkä aika, ja kaupunki on ehtinyt muuttua moneen kertaan.
+KYSYMYS: Kerro lisää: kreikkalaiskyproslaiset
+
+### 169
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pano Lefkara (kulttuuri)
+Tietoruudun teksti: Pano Lefkara on kylä Troodoksen vuorten etelärinteillä, kuuluisa pitsistään eli lefkaritikasta ja hopeaseppiensä filigraanikoristeista; nimi juontuu sanoista "lefka" (valkoinen) ja "ori" (vuoret), viitaten alueen vaaleaan kalkkikiveen. Tarinan mukaan Leonardo da Vinci vieraili kylässä vuonna 1481 ja osti sieltä alttariliinan Milanon tuomiokirkkoon. Kylän kivitalot ovat peräisin pääosin osmanien vallan ajalta (1571–1878): paljaat kivijulkisivut, harvat aukot, sisäpihan ympärille järjestetyt huoneet ja tasakatot olivat kylän arkkitehtuurille tyypillisiä aina 1800-luvun loppupuolelle asti. 1500-luvulla Pano Lefkara oli Kyproksen suurin kylä, ja naiset ovat kirjailleet kapeilla kujilla pitsiä vuosisatojen ajan; vuonna 1889 kylään avattiin paikallinen pitsikoulu, joka elvytti käsityön mainetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Käsityö: Kangasta poistetaan, ei lisätä] Lefkaralainen pitsi eli lefkaritika ommellaan pellavaan puuvillalangalla, ja työ koostuu neljästä osasta: reikäompeleesta, leikkaustyöstä, laakapistotäytteistä ja neulapitsireunuksista. Kaksi ensimmäistä tarkoittavat sitä, että osa kuviosta syntyy poistamalla lankoja kankaasta — kuviossa on yhtä paljon reikää kuin lankaa. Perinne ulottuu Lefkaran kylässä ainakin 1300-luvulle. Unesco mainitsee vaikutteina paikallisen käsityön, venetsialaisten hovipukujen kirjonnan sekä antiikin kreikkalaiset ja bysanttilaiset geometriset kuviot. Väriskaala on kapea: valkoinen, ruskea ja ekru. Kylässä kerrotaan, että Leonardo da Vinci olisi ostanut sieltä liinan Milanon tuomiokirkolle vuonna 1481, mutta aikal…
+AIEMPI KYSYMYS: Minä vuonna Leonardo da Vinci kerrotaan vierailleen Pano Lefkarassa?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Tarinan mukaan Leonardo da Vinci vieraili kylässä vuonna 1481 ja osti sieltä alttariliinan [[Milanon tuomiokirkkoon]]. Kylä on kuuluisa [[lefkaritikasta]], ja juuri sen yhteydessä tarina yleensä kerrotaan, mutta se on perimätietoa, jota ei ole syytä pitää varmana historiallisena tietona. Kyl se pitsi ois kelvannut kyyhkyllekin.
+KYSYMYS: Kerro lisää: Milanon tuomiokirkkoon
+
+### 170
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pano Lefkara (kulttuuri)
+Tietoruudun teksti: Pano Lefkara on kylä Troodoksen vuorten etelärinteillä, kuuluisa pitsistään eli lefkaritikasta ja hopeaseppiensä filigraanikoristeista; nimi juontuu sanoista "lefka" (valkoinen) ja "ori" (vuoret), viitaten alueen vaaleaan kalkkikiveen. Tarinan mukaan Leonardo da Vinci vieraili kylässä vuonna 1481 ja osti sieltä alttariliinan Milanon tuomiokirkkoon. Kylän kivitalot ovat peräisin pääosin osmanien vallan ajalta (1571–1878): paljaat kivijulkisivut, harvat aukot, sisäpihan ympärille järjestetyt huoneet ja tasakatot olivat kylän arkkitehtuurille tyypillisiä aina 1800-luvun loppupuolelle asti. 1500-luvulla Pano Lefkara oli Kyproksen suurin kylä, ja naiset ovat kirjailleet kapeilla kujilla pitsiä vuosisatojen ajan; vuonna 1889 kylään avattiin paikallinen pitsikoulu, joka elvytti käsityön mainetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Käsityö: Kangasta poistetaan, ei lisätä] Lefkaralainen pitsi eli lefkaritika ommellaan pellavaan puuvillalangalla, ja työ koostuu neljästä osasta: reikäompeleesta, leikkaustyöstä, laakapistotäytteistä ja neulapitsireunuksista. Kaksi ensimmäistä tarkoittavat sitä, että osa kuviosta syntyy poistamalla lankoja kankaasta — kuviossa on yhtä paljon reikää kuin lankaa. Perinne ulottuu Lefkaran kylässä ainakin 1300-luvulle. Unesco mainitsee vaikutteina paikallisen käsityön, venetsialaisten hovipukujen kirjonnan sekä antiikin kreikkalaiset ja bysanttilaiset geometriset kuviot. Väriskaala on kapea: valkoinen, ruskea ja ekru. Kylässä kerrotaan, että Leonardo da Vinci olisi ostanut sieltä liinan Milanon tuomiokirkolle vuonna 1481, mutta aikal…
+- [Kypros — maalehti / Käsityö: Nuorin tekijä oli 56-vuotias] Pano Lefkara on vuoristokylä Larnakan ja Limassolin välissä, ja sen pääkadulla liinat ripustetaan myyntiin suoraan puotien seinille ja oviaukkojen pieliin. Työ on hidasta: yhteen pöytäliinaan voi kulua kaksi vuotta, ja sellaisen hinta voi nousta tuhansiin euroihin. Tekijöitä on kuitenkin koko ajan vähemmän. Kylässä perustettiin yhdistys pitämään taitoa yllä, ja siihen kirjautui 70 jäsentä. Vuonna 2018 kylän nuorin ompelija oli 56-vuotias — perinne on siis elossa mutta ikääntyvissä käsissä. Lefkaritika merkittiin Unescon aineettoman kulttuuriperinnön luetteloon vuonna 2009.
+AIEMPI KYSYMYS: Minä vuonna Leonardo da Vinci kerrotaan vierailleen Pano Lefkarassa?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Tarinan mukaan Leonardo da Vinci vieraili kylässä vuonna 1481 ja osti sieltä alttariliinan [[Milanon tuomiokirkkoon]]. Kylä on kuuluisa [[lefkaritikasta]], ja juuri sen yhteydessä tarina yleensä kerrotaan, mutta se on perimätietoa, jota ei ole syytä pitää varmana historiallisena tietona. Kyl se pitsi ois kelvannut kyyhkyllekin.
+KYSYMYS: Kerro lisää: lefkaritikasta
+
+### 171
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pano Lefkara (kulttuuri)
+Tietoruudun teksti: Pano Lefkara on kylä Troodoksen vuorten etelärinteillä, kuuluisa pitsistään eli lefkaritikasta ja hopeaseppiensä filigraanikoristeista; nimi juontuu sanoista "lefka" (valkoinen) ja "ori" (vuoret), viitaten alueen vaaleaan kalkkikiveen. Tarinan mukaan Leonardo da Vinci vieraili kylässä vuonna 1481 ja osti sieltä alttariliinan Milanon tuomiokirkkoon. Kylän kivitalot ovat peräisin pääosin osmanien vallan ajalta (1571–1878): paljaat kivijulkisivut, harvat aukot, sisäpihan ympärille järjestetyt huoneet ja tasakatot olivat kylän arkkitehtuurille tyypillisiä aina 1800-luvun loppupuolelle asti. 1500-luvulla Pano Lefkara oli Kyproksen suurin kylä, ja naiset ovat kirjailleet kapeilla kujilla pitsiä vuosisatojen ajan; vuonna 1889 kylään avattiin paikallinen pitsikoulu, joka elvytti käsityön mainetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Käsityö: Kangasta poistetaan, ei lisätä] Lefkaralainen pitsi eli lefkaritika ommellaan pellavaan puuvillalangalla, ja työ koostuu neljästä osasta: reikäompeleesta, leikkaustyöstä, laakapistotäytteistä ja neulapitsireunuksista. Kaksi ensimmäistä tarkoittavat sitä, että osa kuviosta syntyy poistamalla lankoja kankaasta — kuviossa on yhtä paljon reikää kuin lankaa. Perinne ulottuu Lefkaran kylässä ainakin 1300-luvulle. Unesco mainitsee vaikutteina paikallisen käsityön, venetsialaisten hovipukujen kirjonnan sekä antiikin kreikkalaiset ja bysanttilaiset geometriset kuviot. Väriskaala on kapea: valkoinen, ruskea ja ekru. Kylässä kerrotaan, että Leonardo da Vinci olisi ostanut sieltä liinan Milanon tuomiokirkolle vuonna 1481, mutta aikal…
+- [Kypros — maalehti / Käsityö: Nuorin tekijä oli 56-vuotias] Pano Lefkara on vuoristokylä Larnakan ja Limassolin välissä, ja sen pääkadulla liinat ripustetaan myyntiin suoraan puotien seinille ja oviaukkojen pieliin. Työ on hidasta: yhteen pöytäliinaan voi kulua kaksi vuotta, ja sellaisen hinta voi nousta tuhansiin euroihin. Tekijöitä on kuitenkin koko ajan vähemmän. Kylässä perustettiin yhdistys pitämään taitoa yllä, ja siihen kirjautui 70 jäsentä. Vuonna 2018 kylän nuorin ompelija oli 56-vuotias — perinne on siis elossa mutta ikääntyvissä käsissä. Lefkaritika merkittiin Unescon aineettoman kulttuuriperinnön luetteloon vuonna 2009.
+AIEMPI KYSYMYS: Minä vuonna kylään avattiin paikallinen pitsikoulu?
+AIEMPI VASTAUS (Livia):
+No niin, muistinpa sen. Pitsikoulu avattiin kylään vuonna 1889, ja se elvytti käsityön mainetta. Kylän naiset olivat kirjailleet pitsiä kapeilla kujilla jo vuosisatojen ajan, ja [[lefkaritika]] merkittiin myöhemmin [[Unescon]] aineettoman kulttuuriperinnön luetteloon vuonna 2009. Ei paha kyyhkyltä, muistaa vuosiluku.
+KYSYMYS: Kerro lisää: lefkaritika
+
+### 172
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pano Lefkara (kulttuuri)
+Tietoruudun teksti: Pano Lefkara on kylä Troodoksen vuorten etelärinteillä, kuuluisa pitsistään eli lefkaritikasta ja hopeaseppiensä filigraanikoristeista; nimi juontuu sanoista "lefka" (valkoinen) ja "ori" (vuoret), viitaten alueen vaaleaan kalkkikiveen. Tarinan mukaan Leonardo da Vinci vieraili kylässä vuonna 1481 ja osti sieltä alttariliinan Milanon tuomiokirkkoon. Kylän kivitalot ovat peräisin pääosin osmanien vallan ajalta (1571–1878): paljaat kivijulkisivut, harvat aukot, sisäpihan ympärille järjestetyt huoneet ja tasakatot olivat kylän arkkitehtuurille tyypillisiä aina 1800-luvun loppupuolelle asti. 1500-luvulla Pano Lefkara oli Kyproksen suurin kylä, ja naiset ovat kirjailleet kapeilla kujilla pitsiä vuosisatojen ajan; vuonna 1889 kylään avattiin paikallinen pitsikoulu, joka elvytti käsityön mainetta.
+AIEMPI KYSYMYS: Minä vuonna kylään avattiin paikallinen pitsikoulu?
+AIEMPI VASTAUS (Livia):
+No niin, muistinpa sen. Pitsikoulu avattiin kylään vuonna 1889, ja se elvytti käsityön mainetta. Kylän naiset olivat kirjailleet pitsiä kapeilla kujilla jo vuosisatojen ajan, ja [[lefkaritika]] merkittiin myöhemmin [[Unescon]] aineettoman kulttuuriperinnön luetteloon vuonna 2009. Ei paha kyyhkyltä, muistaa vuosiluku.
+KYSYMYS: Kerro lisää: Unescon
+
+### 173
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pano Lefkara (kulttuuri)
+Tietoruudun teksti: Pano Lefkara on kylä Troodoksen vuorten etelärinteillä, kuuluisa pitsistään eli lefkaritikasta ja hopeaseppiensä filigraanikoristeista; nimi juontuu sanoista "lefka" (valkoinen) ja "ori" (vuoret), viitaten alueen vaaleaan kalkkikiveen. Tarinan mukaan Leonardo da Vinci vieraili kylässä vuonna 1481 ja osti sieltä alttariliinan Milanon tuomiokirkkoon. Kylän kivitalot ovat peräisin pääosin osmanien vallan ajalta (1571–1878): paljaat kivijulkisivut, harvat aukot, sisäpihan ympärille järjestetyt huoneet ja tasakatot olivat kylän arkkitehtuurille tyypillisiä aina 1800-luvun loppupuolelle asti. 1500-luvulla Pano Lefkara oli Kyproksen suurin kylä, ja naiset ovat kirjailleet kapeilla kujilla pitsiä vuosisatojen ajan; vuonna 1889 kylään avattiin paikallinen pitsikoulu, joka elvytti käsityön mainetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Luonto: Koko järvi katoaa kesäksi] Larnakan suolajärvi on suurin neljän järven ryhmästä kaupungin laidalla. Vettä siinä on vain myöhäisestä syksystä alkukesään: sadetta tulee vähän, ja haihdunta hoitaa loput. Enimmilläänkin syvyys on noin metri, ja 60 prosentilla pinta-alasta alle 30 senttimetriä. Kun vesi vetäytyy, suolapitoisuus nousee moninkertaiseksi mereen verrattuna, ja kesällä pohja on paljas. Koko ravintoketju lepää kahden lajin varassa: yksisoluinen viherlevä ja sitä syövä suolalehtijalkainen Artemia salina, joka on flamingojen pääruokaa. Linnut saapuvat marraskuussa Turkin ja Iranin pesimäalueilta ja viipyvät helmikuun loppuun; määrä vaihtelee parista tuhannesta yli kymmeneen tuhanteen. Alue on Ramsar-kosteikko ja …
+- [Kypros — maalehti / Käsityö: Nuorin tekijä oli 56-vuotias] Pano Lefkara on vuoristokylä Larnakan ja Limassolin välissä, ja sen pääkadulla liinat ripustetaan myyntiin suoraan puotien seinille ja oviaukkojen pieliin. Työ on hidasta: yhteen pöytäliinaan voi kulua kaksi vuotta, ja sellaisen hinta voi nousta tuhansiin euroihin. Tekijöitä on kuitenkin koko ajan vähemmän. Kylässä perustettiin yhdistys pitämään taitoa yllä, ja siihen kirjautui 70 jäsentä. Vuonna 2018 kylän nuorin ompelija oli 56-vuotias — perinne on siis elossa mutta ikääntyvissä käsissä. Lefkaritika merkittiin Unescon aineettoman kulttuuriperinnön luetteloon vuonna 2009.
+AIEMPI KYSYMYS: Mitä lefkaritika on?
+AIEMPI VASTAUS (Livia):
+Ai se. Lefkaritika on Pano Lefkaran kylän perinteinen pitsi- ja kirjontatyö, jota naiset ovat tehneet vuosisatojen ajan kylän kapeilla kujilla. Työ on hidasta: yhteen pöytäliinaan voi kulua kaksi vuotta, ja tekijöitä on koko ajan vähemmän. Kylä sijaitsee [[Larnakan]] ja [[Limassolin]] välissä vuoristossa, ja sen pääkadulla liinoja ripustetaan myyntiin suoraan puotien seinille. [[Unesco]] merkitsi taidon aineettoman kulttuuriperinnön luetteloon vuonna 2009. Kaks vuotta yhteen liinaan, enkä minä jaksais odottaa postia niin kauan.
+KYSYMYS: Kerro lisää: Larnakan
+
+### 174
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pano Lefkara (kulttuuri)
+Tietoruudun teksti: Pano Lefkara on kylä Troodoksen vuorten etelärinteillä, kuuluisa pitsistään eli lefkaritikasta ja hopeaseppiensä filigraanikoristeista; nimi juontuu sanoista "lefka" (valkoinen) ja "ori" (vuoret), viitaten alueen vaaleaan kalkkikiveen. Tarinan mukaan Leonardo da Vinci vieraili kylässä vuonna 1481 ja osti sieltä alttariliinan Milanon tuomiokirkkoon. Kylän kivitalot ovat peräisin pääosin osmanien vallan ajalta (1571–1878): paljaat kivijulkisivut, harvat aukot, sisäpihan ympärille järjestetyt huoneet ja tasakatot olivat kylän arkkitehtuurille tyypillisiä aina 1800-luvun loppupuolelle asti. 1500-luvulla Pano Lefkara oli Kyproksen suurin kylä, ja naiset ovat kirjailleet kapeilla kujilla pitsiä vuosisatojen ajan; vuonna 1889 kylään avattiin paikallinen pitsikoulu, joka elvytti käsityön mainetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Ruoka: Mustaksi kullaksi sanottu palko] Johanneksenleipäpuun palkoja kutsuttiin Kyproksella mustaksi kullaksi. Puu kestää kuivuutta eikä vaadi kastelua, ja palkoja vietiin ennen kaikkea Englantiin ja Ranskaan. Viljely voimistui Limassolin seudulla vuodesta 1854. Sato korjattiin elokuun lopusta alkaen noin kolmen viikon aikana: miehet pudottivat palot kepeillä ja naiset keräsivät ne koreihin. Vuoden 1994 inventaarissa saarella laskettiin 265 000 puuta, ja määrä oli pudonnut 23 prosenttia vuodesta 1977. Vuonna 2012 viljelyala oli 1 709 hehtaaria ja sato 9 123 tonnia; vuoteen 2022 mennessä ala oli laskenut 1 340 hehtaariin. Paloista keitetään siirappia: niitä haudutetaan vedessä suuressa astiassa muutaman tunnin, minkä jälkeen neste…
+- [Kypros — maalehti / Käsityö: Nuorin tekijä oli 56-vuotias] Pano Lefkara on vuoristokylä Larnakan ja Limassolin välissä, ja sen pääkadulla liinat ripustetaan myyntiin suoraan puotien seinille ja oviaukkojen pieliin. Työ on hidasta: yhteen pöytäliinaan voi kulua kaksi vuotta, ja sellaisen hinta voi nousta tuhansiin euroihin. Tekijöitä on kuitenkin koko ajan vähemmän. Kylässä perustettiin yhdistys pitämään taitoa yllä, ja siihen kirjautui 70 jäsentä. Vuonna 2018 kylän nuorin ompelija oli 56-vuotias — perinne on siis elossa mutta ikääntyvissä käsissä. Lefkaritika merkittiin Unescon aineettoman kulttuuriperinnön luetteloon vuonna 2009.
+AIEMPI KYSYMYS: Mitä lefkaritika on?
+AIEMPI VASTAUS (Livia):
+Ai se. Lefkaritika on Pano Lefkaran kylän perinteinen pitsi- ja kirjontatyö, jota naiset ovat tehneet vuosisatojen ajan kylän kapeilla kujilla. Työ on hidasta: yhteen pöytäliinaan voi kulua kaksi vuotta, ja tekijöitä on koko ajan vähemmän. Kylä sijaitsee [[Larnakan]] ja [[Limassolin]] välissä vuoristossa, ja sen pääkadulla liinoja ripustetaan myyntiin suoraan puotien seinille. [[Unesco]] merkitsi taidon aineettoman kulttuuriperinnön luetteloon vuonna 2009. Kaks vuotta yhteen liinaan, enkä minä jaksais odottaa postia niin kauan.
+KYSYMYS: Kerro lisää: Limassolin
+
+### 175
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pano Lefkara (kulttuuri)
+Tietoruudun teksti: Pano Lefkara on kylä Troodoksen vuorten etelärinteillä, kuuluisa pitsistään eli lefkaritikasta ja hopeaseppiensä filigraanikoristeista; nimi juontuu sanoista "lefka" (valkoinen) ja "ori" (vuoret), viitaten alueen vaaleaan kalkkikiveen. Tarinan mukaan Leonardo da Vinci vieraili kylässä vuonna 1481 ja osti sieltä alttariliinan Milanon tuomiokirkkoon. Kylän kivitalot ovat peräisin pääosin osmanien vallan ajalta (1571–1878): paljaat kivijulkisivut, harvat aukot, sisäpihan ympärille järjestetyt huoneet ja tasakatot olivat kylän arkkitehtuurille tyypillisiä aina 1800-luvun loppupuolelle asti. 1500-luvulla Pano Lefkara oli Kyproksen suurin kylä, ja naiset ovat kirjailleet kapeilla kujilla pitsiä vuosisatojen ajan; vuonna 1889 kylään avattiin paikallinen pitsikoulu, joka elvytti käsityön mainetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Arabiemiirikunnat — maalehti / Keidas: Kahvi kaadetaan kupin pohjalle] Arabialainen kahvi eli gahwa paahdetaan vaaleaksi ja maustetaan kardemummalla, joskus myös sahramilla. Se keitetään kupariseen tai teräksiseen kannuun, jota sanotaan dallaksi, ja kaadetaan pieniin korvattomiin kuppeihin vain pohjalle asti — jotta kuppi pysyy kädessä kuumana vain hetken ja jotta tarjoaja voi kaataa lisää. Vieras juo tavallisesti yhdestä kolmeen kuppia ja heiluttaa sitten kuppia kädessään, mikä tarkoittaa kiitos, riittää. Unesco lisäsi tavan aineettoman kulttuuriperinnön luetteloon vuonna 2015.
+AIEMPI KYSYMYS: Mitä lefkaritika on?
+AIEMPI VASTAUS (Livia):
+Ai se. Lefkaritika on Pano Lefkaran kylän perinteinen pitsi- ja kirjontatyö, jota naiset ovat tehneet vuosisatojen ajan kylän kapeilla kujilla. Työ on hidasta: yhteen pöytäliinaan voi kulua kaksi vuotta, ja tekijöitä on koko ajan vähemmän. Kylä sijaitsee [[Larnakan]] ja [[Limassolin]] välissä vuoristossa, ja sen pääkadulla liinoja ripustetaan myyntiin suoraan puotien seinille. [[Unesco]] merkitsi taidon aineettoman kulttuuriperinnön luetteloon vuonna 2009. Kaks vuotta yhteen liinaan, enkä minä jaksais odottaa postia niin kauan.
+KYSYMYS: Kerro lisää: Unesco
+
+### 176
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pano Lefkara (kulttuuri)
+Tietoruudun teksti: Pano Lefkara on kylä Troodoksen vuorten etelärinteillä, kuuluisa pitsistään eli lefkaritikasta ja hopeaseppiensä filigraanikoristeista; nimi juontuu sanoista "lefka" (valkoinen) ja "ori" (vuoret), viitaten alueen vaaleaan kalkkikiveen. Tarinan mukaan Leonardo da Vinci vieraili kylässä vuonna 1481 ja osti sieltä alttariliinan Milanon tuomiokirkkoon. Kylän kivitalot ovat peräisin pääosin osmanien vallan ajalta (1571–1878): paljaat kivijulkisivut, harvat aukot, sisäpihan ympärille järjestetyt huoneet ja tasakatot olivat kylän arkkitehtuurille tyypillisiä aina 1800-luvun loppupuolelle asti. 1500-luvulla Pano Lefkara oli Kyproksen suurin kylä, ja naiset ovat kirjailleet kapeilla kujilla pitsiä vuosisatojen ajan; vuonna 1889 kylään avattiin paikallinen pitsikoulu, joka elvytti käsityön mainetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namib — kaupunkilehti / Aavikon selviytyjät: Afrikan suurin suojelualue] Namib-Naukluft on Afrikan suurin luonnonsuojelualue, lähes 50 000 neliökilometriä – suurempi kuin Sveitsi. Puisto ulottuu punaisista Sossusvlein dyyneistä pohjoisemmas kivikkoisille soratasangoille ja Naukluft-vuorten rotkoihin, joissa kausivedet ovat kaivertaneet syviä kanjoneita kovaan kalkkikiveen. Yhdellä suojelualueella yhdistyvät näin aavikon täysin erilaiset maisematyypit: liikkuva hiekkameri, paljas kivierämaa ja vuoristo, joissa jokaisessa elää omat, tiukasti sopeutuneet lajinsa. Alueen laajuus ja moni-ilmeisyys ovat yksi syy siihen, miksi Namibia pystyy suojelemaan näin suuren osan maailman ainoasta aidosti aavikkoon sopeutuneesta eliöstöstä.
+- [Exmouth — kaupunkilehti / Exmouth: Muinainen riutta nousi vuoriksi] Exmouthin niemimaan selkärankana kohoava Cape Range ei ole tavallinen kukkulajono, vaan miljoonien vuosien takainen koralliriutta, joka on työntynyt ilmaan. Kalkkikivi syntyi meren pohjalle kertyneistä koralli- ja simpukkajäänteistä, ja kun Australian ja Aasian mannerlaatat alkoivat myöhäisellä mioseenikaudella puristua toisiaan vasten, alue kohosi hitaasti merestä kukkuloiksi. Vuosimiljoonien sadevedet ovat sittemmin uurtaneet kalkkikiveen syviä rotkoja, joiden seinämistä voi yhä löytää muinaisten riutaneliöiden fossiileja. Cape Range onkin Australian ainoa esimerkki näin vuorenpoimutuksen nostamasta karstialueesta.
+AIEMPI KYSYMYS: Mistä Lefkaran nimi juontuu?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Nimi juontuu sanoista lefka, joka tarkoittaa valkoista, ja ori, joka tarkoittaa vuoria. Se viittaa alueen vaaleaan [[kalkkikiveen]], ja kylä sijaitsee [[Troodoksen]] vuorten etelärinteillä. Valkoista vuorta, siis, ja näkyy kyl ylös asti.
+KYSYMYS: Kerro lisää: kalkkikiveen
+
+### 177
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pano Lefkara (kulttuuri)
+Tietoruudun teksti: Pano Lefkara on kylä Troodoksen vuorten etelärinteillä, kuuluisa pitsistään eli lefkaritikasta ja hopeaseppiensä filigraanikoristeista; nimi juontuu sanoista "lefka" (valkoinen) ja "ori" (vuoret), viitaten alueen vaaleaan kalkkikiveen. Tarinan mukaan Leonardo da Vinci vieraili kylässä vuonna 1481 ja osti sieltä alttariliinan Milanon tuomiokirkkoon. Kylän kivitalot ovat peräisin pääosin osmanien vallan ajalta (1571–1878): paljaat kivijulkisivut, harvat aukot, sisäpihan ympärille järjestetyt huoneet ja tasakatot olivat kylän arkkitehtuurille tyypillisiä aina 1800-luvun loppupuolelle asti. 1500-luvulla Pano Lefkara oli Kyproksen suurin kylä, ja naiset ovat kirjailleet kapeilla kujilla pitsiä vuosisatojen ajan; vuonna 1889 kylään avattiin paikallinen pitsikoulu, joka elvytti käsityön mainetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Ruoka: Rypäleet kuivataan ennen puristusta] Commandaria on makea kyproslainen viini, joka tehdään vain kahdesta saaren omasta rypälelajikkeesta: valkoisesta Xynisteristä ja punaisesta Mavrosta. Poimitut rypäleet levitetään kuivauskentille auringonpaisteeseen runsaaksi viikoksi sään mukaan. Kuivuessaan marjat menettävät vettä ja mehun sokeripitoisuus nousee: se vastaa 15–17 tilavuusprosentin alkoholimäärää, kun tavallisissa viineissä luku on 13–14. Lain mukaan viini on kypsytettävä vähintään kaksi vuotta tammitynnyrissä. Tuotantoalueeseen kuuluu neljätoista kylää Troodoksen etelärinteillä, ja nimi juontuu keskiaikaisesta hallintoalueesta La Grande Commanderie. Commandaria on ollut EU:n suojattu alkuperänimitys vuodesta 2006, ja Guinne…
+- [Kypros — maalehti / Luonto: Kerrokset ovat väärinpäin] Troodoksen vuoristo ei ole poimuttunutta mannerta vaan pala vanhaa valtameren pohjaa. Ofioliitiksi kutsuttu kivisarja syntyi noin 92 miljoonaa vuotta sitten Neotethys-meren pohjalla ja työntyi myöhemmin ilmaan. Järjestys on säilynyt niin ehjänä, että sarjaa pidetään maailman parhaiten paljastuneena laatuaan: ylimpänä ovat tyynylaavat, sitten pystyt juonet, karkeat syväkivet ja alimpana maan vaipan kiviä. Tyynylaava syntyy, kun laava purkautuu veden alle ja jähmettyy pallomaisiksi patjoiksi, joiden läpimitta on 30 sentistä metriin; pinta on lasimainen ja sisus huokoinen. Erikoisin piirre on se, että kerrostuma on kääntynyt topografisesti ympäri: syvimmät kivet paljastuvat korkeimman huipun y…
+AIEMPI KYSYMYS: Mistä Lefkaran nimi juontuu?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Nimi juontuu sanoista lefka, joka tarkoittaa valkoista, ja ori, joka tarkoittaa vuoria. Se viittaa alueen vaaleaan [[kalkkikiveen]], ja kylä sijaitsee [[Troodoksen]] vuorten etelärinteillä. Valkoista vuorta, siis, ja näkyy kyl ylös asti.
+KYSYMYS: Kerro lisää: Troodoksen
+
+### 178
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pano Lefkara (kulttuuri)
+Tietoruudun teksti: Pano Lefkara on kylä Troodoksen vuorten etelärinteillä, kuuluisa pitsistään eli lefkaritikasta ja hopeaseppiensä filigraanikoristeista; nimi juontuu sanoista "lefka" (valkoinen) ja "ori" (vuoret), viitaten alueen vaaleaan kalkkikiveen. Tarinan mukaan Leonardo da Vinci vieraili kylässä vuonna 1481 ja osti sieltä alttariliinan Milanon tuomiokirkkoon. Kylän kivitalot ovat peräisin pääosin osmanien vallan ajalta (1571–1878): paljaat kivijulkisivut, harvat aukot, sisäpihan ympärille järjestetyt huoneet ja tasakatot olivat kylän arkkitehtuurille tyypillisiä aina 1800-luvun loppupuolelle asti. 1500-luvulla Pano Lefkara oli Kyproksen suurin kylä, ja naiset ovat kirjailleet kapeilla kujilla pitsiä vuosisatojen ajan; vuonna 1889 kylään avattiin paikallinen pitsikoulu, joka elvytti käsityön mainetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+AIEMPI KYSYMYS: Millaisia taloja Pano Lefkarassa on?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä osaan kertoo. Kylän kivitalot ovat peräisin pääosin [[osmanien]] vallan ajalta, jonka katsotaan kestäneen vuodesta 1571 vuoteen 1878. Julkisivut ovat paljasta kiveä ja aukkoja on vähän, huoneet on järjestetty sisäpihan ympärille ja talot ovat [[tasakattoisia]]. Nämä piirteet olivat kylän arkkitehtuurille tyypillisiä aina 1800-luvun loppupuolelle asti. Tasaiselle katolle on hyvä laskeutua, sen minä sanon.
+KYSYMYS: Kerro lisää: osmanien
+
+### 179
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pano Lefkara (kulttuuri)
+Tietoruudun teksti: Pano Lefkara on kylä Troodoksen vuorten etelärinteillä, kuuluisa pitsistään eli lefkaritikasta ja hopeaseppiensä filigraanikoristeista; nimi juontuu sanoista "lefka" (valkoinen) ja "ori" (vuoret), viitaten alueen vaaleaan kalkkikiveen. Tarinan mukaan Leonardo da Vinci vieraili kylässä vuonna 1481 ja osti sieltä alttariliinan Milanon tuomiokirkkoon. Kylän kivitalot ovat peräisin pääosin osmanien vallan ajalta (1571–1878): paljaat kivijulkisivut, harvat aukot, sisäpihan ympärille järjestetyt huoneet ja tasakatot olivat kylän arkkitehtuurille tyypillisiä aina 1800-luvun loppupuolelle asti. 1500-luvulla Pano Lefkara oli Kyproksen suurin kylä, ja naiset ovat kirjailleet kapeilla kujilla pitsiä vuosisatojen ajan; vuonna 1889 kylään avattiin paikallinen pitsikoulu, joka elvytti käsityön mainetta.
+AIEMPI KYSYMYS: Millaisia taloja Pano Lefkarassa on?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä osaan kertoo. Kylän kivitalot ovat peräisin pääosin [[osmanien]] vallan ajalta, jonka katsotaan kestäneen vuodesta 1571 vuoteen 1878. Julkisivut ovat paljasta kiveä ja aukkoja on vähän, huoneet on järjestetty sisäpihan ympärille ja talot ovat [[tasakattoisia]]. Nämä piirteet olivat kylän arkkitehtuurille tyypillisiä aina 1800-luvun loppupuolelle asti. Tasaiselle katolle on hyvä laskeutua, sen minä sanon.
+KYSYMYS: Kerro lisää: tasakattoisia
+
+### 180
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Protaras (meri)
+Tietoruudun teksti: Protaras on Kyproksen itärannikon kolkka Paralimnin kunnan alueella; antiikin aikana samalla paikalla oli pieni Leukollan kaupunkivaltio, jonka turvallisessa satamassa Demetrios Poliorketes piileskeli vuonna 306 eaa. väijyen Ptolemaiosta, yhtä Aleksanteri Suuren seuraajista. Käydyssä taistelussa Ptolemaios kärsi tappion ja pakeni Egyptiin, ja Kypros jäi hetkeksi Demetrioksen haltuun. Aluetta on kutsuttu myös tuulimyllyjen maaksi, ja sen tunnetuin ranta on kirkkaan turkoosi Fig Tree Bay. Nykyaikaiseksi lomakohteeksi Protaras kasvoi vasta naapurikylä Ayia Napan menestyksen myötä, ja se tunnetaan Ayia Napaa rauhallisempana, perheille ja kyproslaisille itselleen suunnattuna kohteena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Novosibirsk — kohdekartta / Kohdekartta: Aleksanteri Nevskin katedraali] 1896–1899 Katedraali on kaupungin ensimmäisiä kivirakennuksia. Se rakennettiin vuosina 1896–1899, siis samaan aikaan kuin rautatiesilta ja sen ympärille kasvava taajama, ja vihittiin käyttöön 29. joulukuuta 1899. Katedraalin aseman se sai vuonna 1915. Tyyli on uusbysanttilainen: massiivinen keskuskupoli, punatiiliset seinät ja kaari-ikkunoiden rivistöt. Mallina oli Pietarissa muutamaa vuotta aiemmin rakennettu Armollisen Jumalanäidin kirkko. Tiili on täällä poikkeuksellisen näkyvässä osassa — sitä ei ole rapattu lainkaan, ja koristeaiheet on ladottu itse muurauksesta. Kirkko on myös muistomerkki. Se pystytettiin keisari Aleksanteri III:n muistolle: hän oli pannut alulle Transsiperian radan,…
+AIEMPI KYSYMYS: Ketä Demetrios Poliorketes väijyi Leukollan satamassa vuonna 306 eaa.?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Demetrios Poliorketes väijyi Leukollan turvallisessa satamassa Ptolemaiosta, joka oli yksi [[Aleksanteri Suuren]] seuraajista. Käydyssä taistelussa Ptolemaios kärsi tappion ja pakeni Egyptiin, ja Kypros jäi hetkeksi Demetrioksen haltuun. Leukollan kaupunkivaltio sijaitsi samalla paikalla, jossa nykyään on [[Protaras]]. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Aleksanteri Suuren
+
+### 181
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Protaras (meri)
+Tietoruudun teksti: Protaras on Kyproksen itärannikon kolkka Paralimnin kunnan alueella; antiikin aikana samalla paikalla oli pieni Leukollan kaupunkivaltio, jonka turvallisessa satamassa Demetrios Poliorketes piileskeli vuonna 306 eaa. väijyen Ptolemaiosta, yhtä Aleksanteri Suuren seuraajista. Käydyssä taistelussa Ptolemaios kärsi tappion ja pakeni Egyptiin, ja Kypros jäi hetkeksi Demetrioksen haltuun. Aluetta on kutsuttu myös tuulimyllyjen maaksi, ja sen tunnetuin ranta on kirkkaan turkoosi Fig Tree Bay. Nykyaikaiseksi lomakohteeksi Protaras kasvoi vasta naapurikylä Ayia Napan menestyksen myötä, ja se tunnetaan Ayia Napaa rauhallisempana, perheille ja kyproslaisille itselleen suunnattuna kohteena.
+AIEMPI KYSYMYS: Ketä Demetrios Poliorketes väijyi Leukollan satamassa vuonna 306 eaa.?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Demetrios Poliorketes väijyi Leukollan turvallisessa satamassa Ptolemaiosta, joka oli yksi [[Aleksanteri Suuren]] seuraajista. Käydyssä taistelussa Ptolemaios kärsi tappion ja pakeni Egyptiin, ja Kypros jäi hetkeksi Demetrioksen haltuun. Leukollan kaupunkivaltio sijaitsi samalla paikalla, jossa nykyään on [[Protaras]]. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Protaras
+
+### 182
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Protaras (meri)
+Tietoruudun teksti: Protaras on Kyproksen itärannikon kolkka Paralimnin kunnan alueella; antiikin aikana samalla paikalla oli pieni Leukollan kaupunkivaltio, jonka turvallisessa satamassa Demetrios Poliorketes piileskeli vuonna 306 eaa. väijyen Ptolemaiosta, yhtä Aleksanteri Suuren seuraajista. Käydyssä taistelussa Ptolemaios kärsi tappion ja pakeni Egyptiin, ja Kypros jäi hetkeksi Demetrioksen haltuun. Aluetta on kutsuttu myös tuulimyllyjen maaksi, ja sen tunnetuin ranta on kirkkaan turkoosi Fig Tree Bay. Nykyaikaiseksi lomakohteeksi Protaras kasvoi vasta naapurikylä Ayia Napan menestyksen myötä, ja se tunnetaan Ayia Napaa rauhallisempana, perheille ja kyproslaisille itselleen suunnattuna kohteena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alice Springs — kohdekartta / Kohdekartta: Kaupunginkirjasto] 1953 Alice Springsin kaupunginkirjaston virallinen nimi on Nevil Shute Memorial Library, mutta nimeä ei juuri käytetä. Se sai sen, kun nykyinen talo avattiin 19. lokakuuta 1980: kirjailijan romaani A Town Like Alice ja siitä tehty elokuva olivat tehneet kaupungin tunnetuksi. Nimi oli kiistanalainen jo avajaisissa eikä ole koskaan vakiintunut puhekieleen. Kirjastoja on kaupungissa ollut alusta asti pieninä. 1930-luvulla maaseudun naisjärjestö piti omaa pientä kokoelmaansa, jonka Pohjoisterritorion hallitus otti haltuunsa 1938; vuoteen 1940 mennessä kirjoja oli 760. Sota katkaisi toiminnan, ja sen jälkeen Australian kansalliskirjasto rahoitti kaupungin ensimmäisen varsinaisen yleisen kirjasto…
+- [Brisbane — kaupunkilehti / Luonto: Mäki, jonka nimi vaihtui kesken kaiken] Vuonna 1839 maanmittari James Warner raivasi mäen laen puhtaaksi yhtä isoa eukalyptusta lukuun ottamatta, koska yksinäinen puu näkyi kauas ja kelpasi kolmiomittauspisteeksi. Niin syntyi nimi One Tree Hill, ja sillä nimellä isoisä olisi mäen tuntenut. Nykyinen nimi tuli vasta elokuussa 1883, kun alue julistettiin puistoksi; sen ehdotti virkamies Henry Wyatt Radford paikallisen aboriginaalityönjohtajan Kerwallin neuvosta. Ku-ta on yugarabulin sana hunajalle, jota alueelta kerättiin pistiäisettömiltä mehiläisiltä. Mäki ei ole edes seudun korkein: sen 226 metriä jää Constitution Hillin ja The Summitin alle.
+AIEMPI KYSYMYS: Minkä lahden ranta on Protaraksen tunnetuin?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Protaraksen tunnetuin ranta on kirkkaan turkoosi [[Fig Tree Bay]]. Protaras kasvoi nykyaikaiseksi lomakohteeksi vasta naapurikylä [[Ayia Napan]] menestyksen myötä, ja se tunnetaan Ayia Napaa rauhallisempana kohteena. Turkoosi vesi kyl näkyy ylös asti.
+KYSYMYS: Kerro lisää: Fig Tree Bay
+
+### 183
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Protaras (meri)
+Tietoruudun teksti: Protaras on Kyproksen itärannikon kolkka Paralimnin kunnan alueella; antiikin aikana samalla paikalla oli pieni Leukollan kaupunkivaltio, jonka turvallisessa satamassa Demetrios Poliorketes piileskeli vuonna 306 eaa. väijyen Ptolemaiosta, yhtä Aleksanteri Suuren seuraajista. Käydyssä taistelussa Ptolemaios kärsi tappion ja pakeni Egyptiin, ja Kypros jäi hetkeksi Demetrioksen haltuun. Aluetta on kutsuttu myös tuulimyllyjen maaksi, ja sen tunnetuin ranta on kirkkaan turkoosi Fig Tree Bay. Nykyaikaiseksi lomakohteeksi Protaras kasvoi vasta naapurikylä Ayia Napan menestyksen myötä, ja se tunnetaan Ayia Napaa rauhallisempana, perheille ja kyproslaisille itselleen suunnattuna kohteena.
+AIEMPI KYSYMYS: Minkä lahden ranta on Protaraksen tunnetuin?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Protaraksen tunnetuin ranta on kirkkaan turkoosi [[Fig Tree Bay]]. Protaras kasvoi nykyaikaiseksi lomakohteeksi vasta naapurikylä [[Ayia Napan]] menestyksen myötä, ja se tunnetaan Ayia Napaa rauhallisempana kohteena. Turkoosi vesi kyl näkyy ylös asti.
+KYSYMYS: Kerro lisää: Ayia Napan
+
+### 184
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Protaras (meri)
+Tietoruudun teksti: Protaras on Kyproksen itärannikon kolkka Paralimnin kunnan alueella; antiikin aikana samalla paikalla oli pieni Leukollan kaupunkivaltio, jonka turvallisessa satamassa Demetrios Poliorketes piileskeli vuonna 306 eaa. väijyen Ptolemaiosta, yhtä Aleksanteri Suuren seuraajista. Käydyssä taistelussa Ptolemaios kärsi tappion ja pakeni Egyptiin, ja Kypros jäi hetkeksi Demetrioksen haltuun. Aluetta on kutsuttu myös tuulimyllyjen maaksi, ja sen tunnetuin ranta on kirkkaan turkoosi Fig Tree Bay. Nykyaikaiseksi lomakohteeksi Protaras kasvoi vasta naapurikylä Ayia Napan menestyksen myötä, ja se tunnetaan Ayia Napaa rauhallisempana, perheille ja kyproslaisille itselleen suunnattuna kohteena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kaupunkilehti / Historian hetki: Nikosia 1878 — puolikuu laskee, risti nousee] 12.7.1878 — Kaupustelija keskeyttää työnsä, kun väkijoukko kääntyy katsomaan uutta lippua Nikosiassa. On 12. heinäkuuta 1878: saaren hallinto siirtyy Britannialle, ja Union Jack nostetaan vara-amiraali Lord John Hayn läsnä ollessa. Hänen laivastostaan kaupunkiin saapuu merijalkaväkeä ja merimiehiä, mutta uusi hallinto on vasta alkutekijöissään. Britannia ja Osmanien valtakunta olivat sopineet Kyproksen hallinnasta kesäkuussa vastineeksi Britannian tuesta Venäjän uhkaa vastaan. Saari pysyy muodollisesti osmanien valtakunnan osana, vaikka käytännön valta vaihtuu. Ensimmäinen korkea komissaari Garnet Wolseley saapuu Nikosiaan vasta 31. heinäkuuta ja ryhtyy kokoamaan hallintoa. Torin kauppiaall…
+- [Nikosia — kaupunkilehti / Nikosia: Tulkin talo vaihtoi omistajaa kahdesti] Hadjigeorgakis Kornesios toimi Kyproksen dragomaanina eli hallinnon tulkkina vuosina 1779–1809, ja noin vuonna 1796 sulttaani Selim III nimitti hänet virkaan elinikäisesti. Kartanonsa hän rakennutti Agios Antonioksen kaupunginosaan arkkipiispan asunnon lähelle. Vuoden 1804 kapinassa väkijoukko murtautui taloon ja ryösti sen, ja perhe pakeni Konstantinopoliin. Hänet teloitettiin siellä vuonna 1809, omaisuus takavarikoitiin ja talo meni kaupaksi 13 000 kuruşilla; nuorin poika osti sen takaisin vuonna 1830. Viimeinen asukas kuoli 1979, ja nyt talossa on etnologinen museo. Kunnostuksesta myönnettiin Europa Nostra -palkinto.
+AIEMPI KYSYMYS: Minkä kunnan alueella Protaras sijaitsee?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Protaras sijaitsee [[Kyproksen]] itärannikolla [[Paralimnin]] kunnan alueella. Se on rannikon kolkka, jossa on kirkkaan turkoosia vettä ja joka tunnetaan rauhallisena lomakohteena. Katolta katsottuna kunnan raja ei näy, mut ranta kyl.
+KYSYMYS: Kerro lisää: Kyproksen
+
+### 185
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Protaras (meri)
+Tietoruudun teksti: Protaras on Kyproksen itärannikon kolkka Paralimnin kunnan alueella; antiikin aikana samalla paikalla oli pieni Leukollan kaupunkivaltio, jonka turvallisessa satamassa Demetrios Poliorketes piileskeli vuonna 306 eaa. väijyen Ptolemaiosta, yhtä Aleksanteri Suuren seuraajista. Käydyssä taistelussa Ptolemaios kärsi tappion ja pakeni Egyptiin, ja Kypros jäi hetkeksi Demetrioksen haltuun. Aluetta on kutsuttu myös tuulimyllyjen maaksi, ja sen tunnetuin ranta on kirkkaan turkoosi Fig Tree Bay. Nykyaikaiseksi lomakohteeksi Protaras kasvoi vasta naapurikylä Ayia Napan menestyksen myötä, ja se tunnetaan Ayia Napaa rauhallisempana, perheille ja kyproslaisille itselleen suunnattuna kohteena.
+AIEMPI KYSYMYS: Minkä kunnan alueella Protaras sijaitsee?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Protaras sijaitsee [[Kyproksen]] itärannikolla [[Paralimnin]] kunnan alueella. Se on rannikon kolkka, jossa on kirkkaan turkoosia vettä ja joka tunnetaan rauhallisena lomakohteena. Katolta katsottuna kunnan raja ei näy, mut ranta kyl.
+KYSYMYS: Kerro lisää: Paralimnin
+
+### 186
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Protaras (meri)
+Tietoruudun teksti: Protaras on Kyproksen itärannikon kolkka Paralimnin kunnan alueella; antiikin aikana samalla paikalla oli pieni Leukollan kaupunkivaltio, jonka turvallisessa satamassa Demetrios Poliorketes piileskeli vuonna 306 eaa. väijyen Ptolemaiosta, yhtä Aleksanteri Suuren seuraajista. Käydyssä taistelussa Ptolemaios kärsi tappion ja pakeni Egyptiin, ja Kypros jäi hetkeksi Demetrioksen haltuun. Aluetta on kutsuttu myös tuulimyllyjen maaksi, ja sen tunnetuin ranta on kirkkaan turkoosi Fig Tree Bay. Nykyaikaiseksi lomakohteeksi Protaras kasvoi vasta naapurikylä Ayia Napan menestyksen myötä, ja se tunnetaan Ayia Napaa rauhallisempana, perheille ja kyproslaisille itselleen suunnattuna kohteena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Luonto] Kypros on ollut erillään mantereesta niin kauan, että osa sen lajeista on kehittynyt omikseen. Saarella on myös vuoristo, jonka kivilajit eivät muistuta minkään naapurivuoriston kiviä.
+AIEMPI KYSYMYS: Minne Ptolemaios pakeni Leukollan taistelun jälkeen?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Lähteiden mukaan Ptolemaios vetäytyi tappion jälkeen takaisin Egyptiin, ja [[Kypros]] jäi hetkeksi [[Demetrios Poliorketeen]] haltuun. Antiikin [[Leukollan]] kaupunkivaltio sijaitsi nykyisen Protaraksen tienoilla, mutta taistelun tarkasta paikasta en ole varma. Pitkä matka merellä, sen kyyhky tietää.
+KYSYMYS: Kerro lisää: Kypros
+
+### 187
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Protaras (meri)
+Tietoruudun teksti: Protaras on Kyproksen itärannikon kolkka Paralimnin kunnan alueella; antiikin aikana samalla paikalla oli pieni Leukollan kaupunkivaltio, jonka turvallisessa satamassa Demetrios Poliorketes piileskeli vuonna 306 eaa. väijyen Ptolemaiosta, yhtä Aleksanteri Suuren seuraajista. Käydyssä taistelussa Ptolemaios kärsi tappion ja pakeni Egyptiin, ja Kypros jäi hetkeksi Demetrioksen haltuun. Aluetta on kutsuttu myös tuulimyllyjen maaksi, ja sen tunnetuin ranta on kirkkaan turkoosi Fig Tree Bay. Nykyaikaiseksi lomakohteeksi Protaras kasvoi vasta naapurikylä Ayia Napan menestyksen myötä, ja se tunnetaan Ayia Napaa rauhallisempana, perheille ja kyproslaisille itselleen suunnattuna kohteena.
+AIEMPI KYSYMYS: Minne Ptolemaios pakeni Leukollan taistelun jälkeen?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Lähteiden mukaan Ptolemaios vetäytyi tappion jälkeen takaisin Egyptiin, ja [[Kypros]] jäi hetkeksi [[Demetrios Poliorketeen]] haltuun. Antiikin [[Leukollan]] kaupunkivaltio sijaitsi nykyisen Protaraksen tienoilla, mutta taistelun tarkasta paikasta en ole varma. Pitkä matka merellä, sen kyyhky tietää.
+KYSYMYS: Kerro lisää: Demetrios Poliorketeen
+
+### 188
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Protaras (meri)
+Tietoruudun teksti: Protaras on Kyproksen itärannikon kolkka Paralimnin kunnan alueella; antiikin aikana samalla paikalla oli pieni Leukollan kaupunkivaltio, jonka turvallisessa satamassa Demetrios Poliorketes piileskeli vuonna 306 eaa. väijyen Ptolemaiosta, yhtä Aleksanteri Suuren seuraajista. Käydyssä taistelussa Ptolemaios kärsi tappion ja pakeni Egyptiin, ja Kypros jäi hetkeksi Demetrioksen haltuun. Aluetta on kutsuttu myös tuulimyllyjen maaksi, ja sen tunnetuin ranta on kirkkaan turkoosi Fig Tree Bay. Nykyaikaiseksi lomakohteeksi Protaras kasvoi vasta naapurikylä Ayia Napan menestyksen myötä, ja se tunnetaan Ayia Napaa rauhallisempana, perheille ja kyproslaisille itselleen suunnattuna kohteena.
+AIEMPI KYSYMYS: Minne Ptolemaios pakeni Leukollan taistelun jälkeen?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Lähteiden mukaan Ptolemaios vetäytyi tappion jälkeen takaisin Egyptiin, ja [[Kypros]] jäi hetkeksi [[Demetrios Poliorketeen]] haltuun. Antiikin [[Leukollan]] kaupunkivaltio sijaitsi nykyisen Protaraksen tienoilla, mutta taistelun tarkasta paikasta en ole varma. Pitkä matka merellä, sen kyyhky tietää.
+KYSYMYS: Kerro lisää: Leukollan
+
+### 189
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prodromos (luonto · vuori)
+Tietoruudun teksti: Prodromos on Kyproksen korkein kylä, 1 380 metrin korkeudessa Troodoksen vuoriston rinteellä Limassolin piirikunnassa. Kylä on nimetty Johannes Kastajan mukaan, jota kreikkalaisessa ortodoksisessa perinteessä kutsutaan Prodromokseksi eli edelläkävijäksi. Talvella lunta kertyy usein yli metrin, ja pakkasöitä on tiheään; kesällä taas vuoriston viileys houkuttelee vierailijoita. Asukasluku on vähentynyt tasaisesti: vuoden 2011 väestönlaskennassa kylässä oli enää 123 vakituista asukasta, vaikka yli 240 taloa on edelleen käytössä kesä- ja loma-asuntoina. Läheisellä Olympos-vuorella sijaitsee nykyään Kyproksen talviurheilukeskus kolmine hiihtorinteineen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kohdekartta / Kohdekartta: Pyhän Johannes Kastajan basilika] 1839–1855 Basilika on Newfoundlandin siihenastisen historian suurin rakennushanke. Kaivutyöt alkoivat toukokuussa 1839, peruskivi laskettiin toukokuussa 1841, ja kirkko vihittiin 9. syyskuuta 1855. Valmistuessaan se oli Pohjois-Amerikan suurin kirkkorakennus, ja se on yhä Kanadan suurin katedraalikirkko ja maan toiseksi suurin kirkko. Se on myös yksi harvoista rakennuksista, jotka selvisivät vuoden 1892 suurpalosta. Kirkko ei ole suunnattu tavalliseen tapaan itä–länsi- akselille eikä se katso satamansuulle. Sen julkisivu on käännetty talvipäivänseisauksen nousevan ja kesäpäivänseisauksen laskevan auringon linjaan — samalla periaatteella kuin keskiaikainen Chartresin katedraali. Piispa Micha…
+AIEMPI KYSYMYS: Minkä pyhän henkilön mukaan Prodromos on nimetty?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Prodromos on nimetty [[Johannes Kastajan]] mukaan, jota kreikkalaisessa [[ortodoksisessa]] perinteessä kutsutaan Prodromokseksi eli edelläkävijäksi. Kylä sijaitsee 1 380 metrin korkeudessa [[Troodoksen]] vuoriston rinteellä, ja se on Kyproksen korkein kylä. Ei sentään ihan pilvissä, kyl.
+KYSYMYS: Kerro lisää: Johannes Kastajan
+
+### 190
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prodromos (luonto · vuori)
+Tietoruudun teksti: Prodromos on Kyproksen korkein kylä, 1 380 metrin korkeudessa Troodoksen vuoriston rinteellä Limassolin piirikunnassa. Kylä on nimetty Johannes Kastajan mukaan, jota kreikkalaisessa ortodoksisessa perinteessä kutsutaan Prodromokseksi eli edelläkävijäksi. Talvella lunta kertyy usein yli metrin, ja pakkasöitä on tiheään; kesällä taas vuoriston viileys houkuttelee vierailijoita. Asukasluku on vähentynyt tasaisesti: vuoden 2011 väestönlaskennassa kylässä oli enää 123 vakituista asukasta, vaikka yli 240 taloa on edelleen käytössä kesä- ja loma-asuntoina. Läheisellä Olympos-vuorella sijaitsee nykyään Kyproksen talviurheilukeskus kolmine hiihtorinteineen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lalibela — kohdekartta / Kohdekartta: Biete Lehem] 1100–1200-luku Biete Lehem on maanalainen monoliittikirkko Jordan-puron eteläisessä ryhmässä, ja se on kirkoista pienimpiä. Nimi tulee Betlehemistä: heprean bet lehem tarkoittaa leivän taloa, ja amharaksi kirkkoa kutsutaan Pyhän leivän taloksi. Nimi ei ole sattumaa vaan osa suunnitelmaa. Lalibelan rakennusten nimet ja sijoittelu toistavat Jerusalemin ja Pyhän maan paikkoja niin, että pyhiinvaeltaja voi kiertää ne kävellen: kaupungin läpi kulkee Jordan, kirkkojen joukossa on Golgata ja Betlehem, ja ryhmien on tulkittu esittävän maallista ja taivaallista Jerusalemia. Nimen käytännöllinen puoli on sekin uskottava: leivän talo on ollut myös leivän talo. Naapurikirkko Biete Gabriel-Rufael on läh…
+- [Pietari — kohdekartta / Kohdekartta: Kazanin katedraali] 1801–1811 Arkkitehti Andrei Voronihin sai tehtäväkseen suunnitella katedraalin, joka kunnioittaisi ihmeitä tekevää Kazanin Jumalanäidin ikonia. Ortodoksisessa kirkossa pääsisäänkäynnin tulisi olla lännessä, mutta tontti sijaitsi Nevski-bulevardin varrella pohjoisessa – niinpä Voronihin ratkaisi pulman rakentamalla sivulle mahtavan puolikaaren muotoisen pylväikön, jossa on 96 korinttilaista pylvästä neljässä rivissä. Katedraali valmistui vuonna 1811 ja kohoaa korkeimmillaan 71,6 metriin. Vuonna 1812 Napoleonin sotajoukot hyökkäsivät Venäjälle, ja voiton jälkeen katedraalista tuli sodan muistomerkki. Sotamarsalkka Mihail Kutuzov, joka johti Venäjän armeijaa Napoleonia vastaan, haudattiin kate…
+AIEMPI KYSYMYS: Minkä pyhän henkilön mukaan Prodromos on nimetty?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Prodromos on nimetty [[Johannes Kastajan]] mukaan, jota kreikkalaisessa [[ortodoksisessa]] perinteessä kutsutaan Prodromokseksi eli edelläkävijäksi. Kylä sijaitsee 1 380 metrin korkeudessa [[Troodoksen]] vuoriston rinteellä, ja se on Kyproksen korkein kylä. Ei sentään ihan pilvissä, kyl.
+KYSYMYS: Kerro lisää: ortodoksisessa
+
+### 191
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prodromos (luonto · vuori)
+Tietoruudun teksti: Prodromos on Kyproksen korkein kylä, 1 380 metrin korkeudessa Troodoksen vuoriston rinteellä Limassolin piirikunnassa. Kylä on nimetty Johannes Kastajan mukaan, jota kreikkalaisessa ortodoksisessa perinteessä kutsutaan Prodromokseksi eli edelläkävijäksi. Talvella lunta kertyy usein yli metrin, ja pakkasöitä on tiheään; kesällä taas vuoriston viileys houkuttelee vierailijoita. Asukasluku on vähentynyt tasaisesti: vuoden 2011 väestönlaskennassa kylässä oli enää 123 vakituista asukasta, vaikka yli 240 taloa on edelleen käytössä kesä- ja loma-asuntoina. Läheisellä Olympos-vuorella sijaitsee nykyään Kyproksen talviurheilukeskus kolmine hiihtorinteineen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Ruoka: Rypäleet kuivataan ennen puristusta] Commandaria on makea kyproslainen viini, joka tehdään vain kahdesta saaren omasta rypälelajikkeesta: valkoisesta Xynisteristä ja punaisesta Mavrosta. Poimitut rypäleet levitetään kuivauskentille auringonpaisteeseen runsaaksi viikoksi sään mukaan. Kuivuessaan marjat menettävät vettä ja mehun sokeripitoisuus nousee: se vastaa 15–17 tilavuusprosentin alkoholimäärää, kun tavallisissa viineissä luku on 13–14. Lain mukaan viini on kypsytettävä vähintään kaksi vuotta tammitynnyrissä. Tuotantoalueeseen kuuluu neljätoista kylää Troodoksen etelärinteillä, ja nimi juontuu keskiaikaisesta hallintoalueesta La Grande Commanderie. Commandaria on ollut EU:n suojattu alkuperänimitys vuodesta 2006, ja Guinne…
+- [Kypros — maalehti / Luonto: Kerrokset ovat väärinpäin] Troodoksen vuoristo ei ole poimuttunutta mannerta vaan pala vanhaa valtameren pohjaa. Ofioliitiksi kutsuttu kivisarja syntyi noin 92 miljoonaa vuotta sitten Neotethys-meren pohjalla ja työntyi myöhemmin ilmaan. Järjestys on säilynyt niin ehjänä, että sarjaa pidetään maailman parhaiten paljastuneena laatuaan: ylimpänä ovat tyynylaavat, sitten pystyt juonet, karkeat syväkivet ja alimpana maan vaipan kiviä. Tyynylaava syntyy, kun laava purkautuu veden alle ja jähmettyy pallomaisiksi patjoiksi, joiden läpimitta on 30 sentistä metriin; pinta on lasimainen ja sisus huokoinen. Erikoisin piirre on se, että kerrostuma on kääntynyt topografisesti ympäri: syvimmät kivet paljastuvat korkeimman huipun y…
+AIEMPI KYSYMYS: Minkä pyhän henkilön mukaan Prodromos on nimetty?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Prodromos on nimetty [[Johannes Kastajan]] mukaan, jota kreikkalaisessa [[ortodoksisessa]] perinteessä kutsutaan Prodromokseksi eli edelläkävijäksi. Kylä sijaitsee 1 380 metrin korkeudessa [[Troodoksen]] vuoriston rinteellä, ja se on Kyproksen korkein kylä. Ei sentään ihan pilvissä, kyl.
+KYSYMYS: Kerro lisää: Troodoksen
+
+### 192
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prodromos (luonto · vuori)
+Tietoruudun teksti: Prodromos on Kyproksen korkein kylä, 1 380 metrin korkeudessa Troodoksen vuoriston rinteellä Limassolin piirikunnassa. Kylä on nimetty Johannes Kastajan mukaan, jota kreikkalaisessa ortodoksisessa perinteessä kutsutaan Prodromokseksi eli edelläkävijäksi. Talvella lunta kertyy usein yli metrin, ja pakkasöitä on tiheään; kesällä taas vuoriston viileys houkuttelee vierailijoita. Asukasluku on vähentynyt tasaisesti: vuoden 2011 väestönlaskennassa kylässä oli enää 123 vakituista asukasta, vaikka yli 240 taloa on edelleen käytössä kesä- ja loma-asuntoina. Läheisellä Olympos-vuorella sijaitsee nykyään Kyproksen talviurheilukeskus kolmine hiihtorinteineen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Ruoka: Mustaksi kullaksi sanottu palko] Johanneksenleipäpuun palkoja kutsuttiin Kyproksella mustaksi kullaksi. Puu kestää kuivuutta eikä vaadi kastelua, ja palkoja vietiin ennen kaikkea Englantiin ja Ranskaan. Viljely voimistui Limassolin seudulla vuodesta 1854. Sato korjattiin elokuun lopusta alkaen noin kolmen viikon aikana: miehet pudottivat palot kepeillä ja naiset keräsivät ne koreihin. Vuoden 1994 inventaarissa saarella laskettiin 265 000 puuta, ja määrä oli pudonnut 23 prosenttia vuodesta 1977. Vuonna 2012 viljelyala oli 1 709 hehtaaria ja sato 9 123 tonnia; vuoteen 2022 mennessä ala oli laskenut 1 340 hehtaariin. Paloista keitetään siirappia: niitä haudutetaan vedessä suuressa astiassa muutaman tunnin, minkä jälkeen neste…
+- [Kypros — maalehti / Käsityö: Nuorin tekijä oli 56-vuotias] Pano Lefkara on vuoristokylä Larnakan ja Limassolin välissä, ja sen pääkadulla liinat ripustetaan myyntiin suoraan puotien seinille ja oviaukkojen pieliin. Työ on hidasta: yhteen pöytäliinaan voi kulua kaksi vuotta, ja sellaisen hinta voi nousta tuhansiin euroihin. Tekijöitä on kuitenkin koko ajan vähemmän. Kylässä perustettiin yhdistys pitämään taitoa yllä, ja siihen kirjautui 70 jäsentä. Vuonna 2018 kylän nuorin ompelija oli 56-vuotias — perinne on siis elossa mutta ikääntyvissä käsissä. Lefkaritika merkittiin Unescon aineettoman kulttuuriperinnön luetteloon vuonna 2009.
+AIEMPI KYSYMYS: Kuinka monta vakituista asukasta Prodromoksessa oli vuoden 2011 väestönlaskennassa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Vuoden 2011 väestönlaskennassa Prodromoksessa oli enää 123 vakituista asukasta, ja asukasluku on vähentynyt tasaisesti. Yli 240 taloa on silti edelleen käytössä kesä- ja loma-asuntoina, sillä vuoriston viileys houkuttelee vierailijoita. Kylä kuuluu [[Limassolin]] piirikuntaan [[Troodoksen]] vuoriston rinteellä. Hiljaista siellä on talvella, kai.
+KYSYMYS: Kerro lisää: Limassolin
+
+### 193
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prodromos (luonto · vuori)
+Tietoruudun teksti: Prodromos on Kyproksen korkein kylä, 1 380 metrin korkeudessa Troodoksen vuoriston rinteellä Limassolin piirikunnassa. Kylä on nimetty Johannes Kastajan mukaan, jota kreikkalaisessa ortodoksisessa perinteessä kutsutaan Prodromokseksi eli edelläkävijäksi. Talvella lunta kertyy usein yli metrin, ja pakkasöitä on tiheään; kesällä taas vuoriston viileys houkuttelee vierailijoita. Asukasluku on vähentynyt tasaisesti: vuoden 2011 väestönlaskennassa kylässä oli enää 123 vakituista asukasta, vaikka yli 240 taloa on edelleen käytössä kesä- ja loma-asuntoina. Läheisellä Olympos-vuorella sijaitsee nykyään Kyproksen talviurheilukeskus kolmine hiihtorinteineen.
+AIEMPI KYSYMYS: Missä Kyproksen talviurheilukeskus sijaitsee?
+AIEMPI VASTAUS (Livia):
+No jopas. Kyproksen talviurheilukeskus sijaitsee läheisellä [[Olympos-vuorella]], jolla on kolme hiihtorinnettä. Vuori on lähellä Prodromosta, Kyproksen korkeinta kylää [[Troodoksen]] vuoriston rinteellä. Hiihtämään minä en lähtis, siivet jäätyis.
+KYSYMYS: Kerro lisää: Olympos-vuorella
+
+### 194
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prodromos (luonto · vuori)
+Tietoruudun teksti: Prodromos on Kyproksen korkein kylä, 1 380 metrin korkeudessa Troodoksen vuoriston rinteellä Limassolin piirikunnassa. Kylä on nimetty Johannes Kastajan mukaan, jota kreikkalaisessa ortodoksisessa perinteessä kutsutaan Prodromokseksi eli edelläkävijäksi. Talvella lunta kertyy usein yli metrin, ja pakkasöitä on tiheään; kesällä taas vuoriston viileys houkuttelee vierailijoita. Asukasluku on vähentynyt tasaisesti: vuoden 2011 väestönlaskennassa kylässä oli enää 123 vakituista asukasta, vaikka yli 240 taloa on edelleen käytössä kesä- ja loma-asuntoina. Läheisellä Olympos-vuorella sijaitsee nykyään Kyproksen talviurheilukeskus kolmine hiihtorinteineen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Historia: Mies, joka kirjoitti sloveniaksi ensimmäisenä painettuna] Primož Trubar oli protestanttinen uudistaja, joka saarnasi Ljubljanassa 1530-luvulta ja joutui lähtemään kaupungista vuonna 1547. Saksassa hän kirjoitti vuonna 1550 kaksi ensimmäistä sloveniankielistä kirjaa, Catechismuksen ja Abecedariumin, jotka painettiin Schwäbisch Hallissa. Kaikkiaan hän kirjoitti 22 sloveniankielistä kirjaa ja käänsi koko Uuden testamentin. Kirjakielen pohjaksi hän valitsi Ljubljanan puheen, koska piti sitä sopivimpana.
+AIEMPI KYSYMYS: Kuka Johannes Kastaja oli?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Johannes Kastaja oli kristillisen perinteen mukaan saarnaaja, joka kastoi ihmisiä Jordan-joessa ja jota pidetään Jeesuksen edelläkävijänä. Hänet mainitaan [[Uuden testamentin]] evankeliumeissa. [[Ortodoksisessa kirkossa]] hänestä käytetään nimeä Prodromos, joka tarkoittaa edelläkävijää, ja Kyproksen korkein kylä on nimetty hänen mukaansa. Edelläkävijä, sellaisena minäkin mielelläni lentäisin.
+KYSYMYS: Kerro lisää: Uuden testamentin
+
+### 195
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prodromos (luonto · vuori)
+Tietoruudun teksti: Prodromos on Kyproksen korkein kylä, 1 380 metrin korkeudessa Troodoksen vuoriston rinteellä Limassolin piirikunnassa. Kylä on nimetty Johannes Kastajan mukaan, jota kreikkalaisessa ortodoksisessa perinteessä kutsutaan Prodromokseksi eli edelläkävijäksi. Talvella lunta kertyy usein yli metrin, ja pakkasöitä on tiheään; kesällä taas vuoriston viileys houkuttelee vierailijoita. Asukasluku on vähentynyt tasaisesti: vuoden 2011 väestönlaskennassa kylässä oli enää 123 vakituista asukasta, vaikka yli 240 taloa on edelleen käytössä kesä- ja loma-asuntoina. Läheisellä Olympos-vuorella sijaitsee nykyään Kyproksen talviurheilukeskus kolmine hiihtorinteineen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lalibela — kohdekartta / Kohdekartta: Biete Lehem] 1100–1200-luku Biete Lehem on maanalainen monoliittikirkko Jordan-puron eteläisessä ryhmässä, ja se on kirkoista pienimpiä. Nimi tulee Betlehemistä: heprean bet lehem tarkoittaa leivän taloa, ja amharaksi kirkkoa kutsutaan Pyhän leivän taloksi. Nimi ei ole sattumaa vaan osa suunnitelmaa. Lalibelan rakennusten nimet ja sijoittelu toistavat Jerusalemin ja Pyhän maan paikkoja niin, että pyhiinvaeltaja voi kiertää ne kävellen: kaupungin läpi kulkee Jordan, kirkkojen joukossa on Golgata ja Betlehem, ja ryhmien on tulkittu esittävän maallista ja taivaallista Jerusalemia. Nimen käytännöllinen puoli on sekin uskottava: leivän talo on ollut myös leivän talo. Naapurikirkko Biete Gabriel-Rufael on läh…
+- [Pietari — kohdekartta / Kohdekartta: Kazanin katedraali] 1801–1811 Arkkitehti Andrei Voronihin sai tehtäväkseen suunnitella katedraalin, joka kunnioittaisi ihmeitä tekevää Kazanin Jumalanäidin ikonia. Ortodoksisessa kirkossa pääsisäänkäynnin tulisi olla lännessä, mutta tontti sijaitsi Nevski-bulevardin varrella pohjoisessa – niinpä Voronihin ratkaisi pulman rakentamalla sivulle mahtavan puolikaaren muotoisen pylväikön, jossa on 96 korinttilaista pylvästä neljässä rivissä. Katedraali valmistui vuonna 1811 ja kohoaa korkeimmillaan 71,6 metriin. Vuonna 1812 Napoleonin sotajoukot hyökkäsivät Venäjälle, ja voiton jälkeen katedraalista tuli sodan muistomerkki. Sotamarsalkka Mihail Kutuzov, joka johti Venäjän armeijaa Napoleonia vastaan, haudattiin kate…
+AIEMPI KYSYMYS: Kuka Johannes Kastaja oli?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Johannes Kastaja oli kristillisen perinteen mukaan saarnaaja, joka kastoi ihmisiä Jordan-joessa ja jota pidetään Jeesuksen edelläkävijänä. Hänet mainitaan [[Uuden testamentin]] evankeliumeissa. [[Ortodoksisessa kirkossa]] hänestä käytetään nimeä Prodromos, joka tarkoittaa edelläkävijää, ja Kyproksen korkein kylä on nimetty hänen mukaansa. Edelläkävijä, sellaisena minäkin mielelläni lentäisin.
+KYSYMYS: Kerro lisää: Ortodoksisessa kirkossa
+
+### 196
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ólympos (luonto · vuori)
+Tietoruudun teksti: Ólympos on Kyproksen korkein kohta, 1 952 metriä, Troodosin vuoriston keskellä. Kreikkalainen kansannimi Chionistra tarkoittaa lumista — ja nimi pitää paikkansa, sillä Välimeren saareksi huippu saa talvisin kunnon lumipeitteen. Vuori on syntynyt merenpohjan syvyyksistä: sen kivi on Troodosin ofioliitin serpentiiniytynyttä vaippakiveä, jota tutkitaan ympäri maailmaa.
+AIEMPI KYSYMYS: Miksi vuoren toinen nimi on Chionistra?
+AIEMPI VASTAUS (Livia):
+Just niin, mietin samaa. Chionistra on kreikkalainen kansannimi, ja se tarkoittaa lumista. Nimi pitää paikkansa, sillä Ólympos on Kyproksen korkein kohta, ja Välimeren saareksi huippu saa talvisin kunnon lumipeitteen. Vuori sijaitsee [[Troodosin]] vuoriston keskellä [[Kyproksella]]. Lumi ja Välimeri, aika outo pari kyyhkyn mielestä.
+KYSYMYS: Kerro lisää: Troodosin
+
+### 197
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ólympos (luonto · vuori)
+Tietoruudun teksti: Ólympos on Kyproksen korkein kohta, 1 952 metriä, Troodosin vuoriston keskellä. Kreikkalainen kansannimi Chionistra tarkoittaa lumista — ja nimi pitää paikkansa, sillä Välimeren saareksi huippu saa talvisin kunnon lumipeitteen. Vuori on syntynyt merenpohjan syvyyksistä: sen kivi on Troodosin ofioliitin serpentiiniytynyttä vaippakiveä, jota tutkitaan ympäri maailmaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Ruoka: Mustaksi kullaksi sanottu palko] Johanneksenleipäpuun palkoja kutsuttiin Kyproksella mustaksi kullaksi. Puu kestää kuivuutta eikä vaadi kastelua, ja palkoja vietiin ennen kaikkea Englantiin ja Ranskaan. Viljely voimistui Limassolin seudulla vuodesta 1854. Sato korjattiin elokuun lopusta alkaen noin kolmen viikon aikana: miehet pudottivat palot kepeillä ja naiset keräsivät ne koreihin. Vuoden 1994 inventaarissa saarella laskettiin 265 000 puuta, ja määrä oli pudonnut 23 prosenttia vuodesta 1977. Vuonna 2012 viljelyala oli 1 709 hehtaaria ja sato 9 123 tonnia; vuoteen 2022 mennessä ala oli laskenut 1 340 hehtaariin. Paloista keitetään siirappia: niitä haudutetaan vedessä suuressa astiassa muutaman tunnin, minkä jälkeen neste…
+AIEMPI KYSYMYS: Miksi vuoren toinen nimi on Chionistra?
+AIEMPI VASTAUS (Livia):
+Just niin, mietin samaa. Chionistra on kreikkalainen kansannimi, ja se tarkoittaa lumista. Nimi pitää paikkansa, sillä Ólympos on Kyproksen korkein kohta, ja Välimeren saareksi huippu saa talvisin kunnon lumipeitteen. Vuori sijaitsee [[Troodosin]] vuoriston keskellä [[Kyproksella]]. Lumi ja Välimeri, aika outo pari kyyhkyn mielestä.
+KYSYMYS: Kerro lisää: Kyproksella
+
+### 198
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ólympos (luonto · vuori)
+Tietoruudun teksti: Ólympos on Kyproksen korkein kohta, 1 952 metriä, Troodosin vuoriston keskellä. Kreikkalainen kansannimi Chionistra tarkoittaa lumista — ja nimi pitää paikkansa, sillä Välimeren saareksi huippu saa talvisin kunnon lumipeitteen. Vuori on syntynyt merenpohjan syvyyksistä: sen kivi on Troodosin ofioliitin serpentiiniytynyttä vaippakiveä, jota tutkitaan ympäri maailmaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Luonto: Kerrokset ovat väärinpäin] Troodoksen vuoristo ei ole poimuttunutta mannerta vaan pala vanhaa valtameren pohjaa. Ofioliitiksi kutsuttu kivisarja syntyi noin 92 miljoonaa vuotta sitten Neotethys-meren pohjalla ja työntyi myöhemmin ilmaan. Järjestys on säilynyt niin ehjänä, että sarjaa pidetään maailman parhaiten paljastuneena laatuaan: ylimpänä ovat tyynylaavat, sitten pystyt juonet, karkeat syväkivet ja alimpana maan vaipan kiviä. Tyynylaava syntyy, kun laava purkautuu veden alle ja jähmettyy pallomaisiksi patjoiksi, joiden läpimitta on 30 sentistä metriin; pinta on lasimainen ja sisus huokoinen. Erikoisin piirre on se, että kerrostuma on kääntynyt topografisesti ympäri: syvimmät kivet paljastuvat korkeimman huipun y…
+AIEMPI KYSYMYS: Mikä Troodosin vuoristo on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Troodosin vuoristo ei ole poimuttunutta mannerta vaan pala vanhaa valtameren pohjaa. [[Ofioliitiksi]] kutsuttu kivisarja syntyi noin 92 miljoonaa vuotta sitten [[Neotethys-meren]] pohjalla ja työntyi myöhemmin ilmaan. Järjestys on säilynyt niin ehjänä, että sarjaa pidetään yhtenä maailman parhaiten paljastuneista laatuaan. Vuoristoa tutkitaan ympäri maailmaa. Merenpohjalla minä en olis vielä lentänyt.
+KYSYMYS: Kerro lisää: Ofioliitiksi
+
+### 199
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ólympos (luonto · vuori)
+Tietoruudun teksti: Ólympos on Kyproksen korkein kohta, 1 952 metriä, Troodosin vuoriston keskellä. Kreikkalainen kansannimi Chionistra tarkoittaa lumista — ja nimi pitää paikkansa, sillä Välimeren saareksi huippu saa talvisin kunnon lumipeitteen. Vuori on syntynyt merenpohjan syvyyksistä: sen kivi on Troodosin ofioliitin serpentiiniytynyttä vaippakiveä, jota tutkitaan ympäri maailmaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Luonto: Kerrokset ovat väärinpäin] Troodoksen vuoristo ei ole poimuttunutta mannerta vaan pala vanhaa valtameren pohjaa. Ofioliitiksi kutsuttu kivisarja syntyi noin 92 miljoonaa vuotta sitten Neotethys-meren pohjalla ja työntyi myöhemmin ilmaan. Järjestys on säilynyt niin ehjänä, että sarjaa pidetään maailman parhaiten paljastuneena laatuaan: ylimpänä ovat tyynylaavat, sitten pystyt juonet, karkeat syväkivet ja alimpana maan vaipan kiviä. Tyynylaava syntyy, kun laava purkautuu veden alle ja jähmettyy pallomaisiksi patjoiksi, joiden läpimitta on 30 sentistä metriin; pinta on lasimainen ja sisus huokoinen. Erikoisin piirre on se, että kerrostuma on kääntynyt topografisesti ympäri: syvimmät kivet paljastuvat korkeimman huipun y…
+AIEMPI KYSYMYS: Mikä Troodosin vuoristo on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Troodosin vuoristo ei ole poimuttunutta mannerta vaan pala vanhaa valtameren pohjaa. [[Ofioliitiksi]] kutsuttu kivisarja syntyi noin 92 miljoonaa vuotta sitten [[Neotethys-meren]] pohjalla ja työntyi myöhemmin ilmaan. Järjestys on säilynyt niin ehjänä, että sarjaa pidetään yhtenä maailman parhaiten paljastuneista laatuaan. Vuoristoa tutkitaan ympäri maailmaa. Merenpohjalla minä en olis vielä lentänyt.
+KYSYMYS: Kerro lisää: Neotethys-meren
+
+### 200
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ólympos (luonto · vuori)
+Tietoruudun teksti: Ólympos on Kyproksen korkein kohta, 1 952 metriä, Troodosin vuoriston keskellä. Kreikkalainen kansannimi Chionistra tarkoittaa lumista — ja nimi pitää paikkansa, sillä Välimeren saareksi huippu saa talvisin kunnon lumipeitteen. Vuori on syntynyt merenpohjan syvyyksistä: sen kivi on Troodosin ofioliitin serpentiiniytynyttä vaippakiveä, jota tutkitaan ympäri maailmaa.
+AIEMPI KYSYMYS: Mitä tyynylaava on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tyynylaava syntyy, kun laava purkautuu veden alle ja jähmettyy pallomaisiksi patjoiksi. Patjojen läpimitta on 30 sentistä metriin, ja niiden pinta on lasimainen ja sisus huokoinen. [[Troodosin]] [[ofioliitissa]] tyynylaavat ovat sarjan ylimpänä kerroksena. Patjoja, ihan kuin tyynyjä vuoren alla.
+KYSYMYS: Kerro lisää: ofioliitissa
+
+### 201
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ólympos (luonto · vuori)
+Tietoruudun teksti: Ólympos on Kyproksen korkein kohta, 1 952 metriä, Troodosin vuoriston keskellä. Kreikkalainen kansannimi Chionistra tarkoittaa lumista — ja nimi pitää paikkansa, sillä Välimeren saareksi huippu saa talvisin kunnon lumipeitteen. Vuori on syntynyt merenpohjan syvyyksistä: sen kivi on Troodosin ofioliitin serpentiiniytynyttä vaippakiveä, jota tutkitaan ympäri maailmaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mosambik — kaupunkilehti / Orjakauppa ja unohdettu pääkaupunki: Dhow'lla yli Intian valtameren] Tällaiset dhow-purjeveneet kuljettivat vuosisatojen ajan sekä kauppatavaraa että orjia Mosambikin saaren ja Intian valtameren rannikon välillä. Saaresta tuli 1500-luvulta lähtien yksi Itä-Afrikan vilkkaimmista orjakaupan solmukohdista: ihmisiä vietiin niin arabikauppiaiden reittejä kuin portugalilaisilla laivoilla Brasiliaan asti. Joulukuussa 1794 orjalaiva São José Paquete de Africa lastasi saarelta 512 orjaksi otettua ihmistä – laiva haaksirikkoutui jo Etelä-Afrikan rannikolla. Portugali kielsi orjakaupan lailla 1836, mutta orjuus itsessään lakkautettiin sen Afrikan-siirtomaissa vasta 1878, viisi vuotta isoisän vierailun jälkeen.
+AIEMPI KYSYMYS: Kuinka vanhaa Troodosin kivi on?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Troodosin ofioliittinen kivisarja syntyi noin 92 miljoonaa vuotta sitten [[Neotethys-meren]] pohjalla. Myöhemmin se työntyi ilmaan, ja sen kerrokset ovat säilyneet poikkeuksellisen ehjinä. Kyse on siis [[valtameren pohjasta]], ei tavallisesta mannerkalliosta. Onpas siit hurjan pitkä aika.
+KYSYMYS: Kerro lisää: valtameren pohjasta
+
+### 202
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ólympos (luonto · vuori)
+Tietoruudun teksti: Ólympos on Kyproksen korkein kohta, 1 952 metriä, Troodosin vuoriston keskellä. Kreikkalainen kansannimi Chionistra tarkoittaa lumista — ja nimi pitää paikkansa, sillä Välimeren saareksi huippu saa talvisin kunnon lumipeitteen. Vuori on syntynyt merenpohjan syvyyksistä: sen kivi on Troodosin ofioliitin serpentiiniytynyttä vaippakiveä, jota tutkitaan ympäri maailmaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Luonto: Kerrokset ovat väärinpäin] Troodoksen vuoristo ei ole poimuttunutta mannerta vaan pala vanhaa valtameren pohjaa. Ofioliitiksi kutsuttu kivisarja syntyi noin 92 miljoonaa vuotta sitten Neotethys-meren pohjalla ja työntyi myöhemmin ilmaan. Järjestys on säilynyt niin ehjänä, että sarjaa pidetään maailman parhaiten paljastuneena laatuaan: ylimpänä ovat tyynylaavat, sitten pystyt juonet, karkeat syväkivet ja alimpana maan vaipan kiviä. Tyynylaava syntyy, kun laava purkautuu veden alle ja jähmettyy pallomaisiksi patjoiksi, joiden läpimitta on 30 sentistä metriin; pinta on lasimainen ja sisus huokoinen. Erikoisin piirre on se, että kerrostuma on kääntynyt topografisesti ympäri: syvimmät kivet paljastuvat korkeimman huipun y…
+AIEMPI KYSYMYS: Miksi Olymposin huipulla on vaippakiveä?
+AIEMPI VASTAUS (Livia):
+Hmm, hyvä pointti. Troodosin ofioliitissa kerrokset ovat topografisesti väärinpäin: ylimpänä ovat tyynylaavat, sitten pystyt juonet ja karkeat syväkivet, ja alimpana ovat [[maan vaipan]] kiviä. Siksi syvimmät kivet paljastuvat vuoriston korkeimman huipun lähellä, ja Ólympos on [[serpentiiniytynyttä]] vaippakiveä. Tarkasta nousuhistoriasta en ole varma. Aika ylösalaisin tuo vuori on.
+KYSYMYS: Kerro lisää: maan vaipan
+
+### 203
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ólympos (luonto · vuori)
+Tietoruudun teksti: Ólympos on Kyproksen korkein kohta, 1 952 metriä, Troodosin vuoriston keskellä. Kreikkalainen kansannimi Chionistra tarkoittaa lumista — ja nimi pitää paikkansa, sillä Välimeren saareksi huippu saa talvisin kunnon lumipeitteen. Vuori on syntynyt merenpohjan syvyyksistä: sen kivi on Troodosin ofioliitin serpentiiniytynyttä vaippakiveä, jota tutkitaan ympäri maailmaa.
+AIEMPI KYSYMYS: Miksi Olymposin huipulla on vaippakiveä?
+AIEMPI VASTAUS (Livia):
+Hmm, hyvä pointti. Troodosin ofioliitissa kerrokset ovat topografisesti väärinpäin: ylimpänä ovat tyynylaavat, sitten pystyt juonet ja karkeat syväkivet, ja alimpana ovat [[maan vaipan]] kiviä. Siksi syvimmät kivet paljastuvat vuoriston korkeimman huipun lähellä, ja Ólympos on [[serpentiiniytynyttä]] vaippakiveä. Tarkasta nousuhistoriasta en ole varma. Aika ylösalaisin tuo vuori on.
+KYSYMYS: Kerro lisää: serpentiiniytynyttä
+
+### 204
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pediaíos (luonto · joki)
+Tietoruudun teksti: Pediaíos on Kyproksen pisin joki, 98 kilometriä. Se saa alkunsa Troodosin vuoriston Machairasin metsästä, virtaa koilliseen Mesaorian tasangon poikki ja kulkee pääkaupunki Nikosian läpi — kaupungissa sen rantoja pitkin pääsee kävelemään lähes kahdenkymmenen kilometrin matkan. Mereen joki laskee Famagustanlahdella, muinaisen Salamiin kaupungin raunioiden vieressä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kaupunkilehti / Nikosia] Nikosia on Kyproksen hallinnon ja rahan kaupunki: saaren kaikkien pankkien pääkonttorit ovat täällä, samoin viisi yliopistoa ja saaren vanhin ja suurin arkeologinen museo.
+- [Nikosia — kohdekartta / Kohdekartta: Omeryen hamam] 1571 Kylpylän paikalla seisoi 1300-luvulla augustinolaisten Pyhän Marian kirkko, kivestä muurattu ja katettu pienillä kupoleilla. Nikosian piirityksessä 1570 tykkituli hajotti siitä suurimman osan. Vuonna 1571 Lala Mustafa Pasha rakennutti paikalle moskeijan kalifi Omarin muistoksi, ja kylpylä pystytettiin saman kokonaisuuden osaksi. Kirkosta on yhä jäljellä pääsisäänkäynnin ovi, joka on 1300-luvulta Lusignanien ajalta, ja koillissivulla erottuu jäänteitä myöhemmästä renessanssivaiheesta. Hamamissa kuljetaan aina samassa järjestyksessä: riisuutumis- ja vilvoittelutila, lämmin välihuone, kuuma huone. Kuuman huoneen keskellä on lämmitetty marmoripöytä, jolla maataan, ja nurkissa pieniä kupoli…
+- [Nikosia — kaupunkilehti / Arki: Saaren pisin joki kulkee kuivana] Pedieos on Kyproksen pisin joki, 98 kilometriä. Se alkaa Troodoksen Machairas-metsästä samannimisen luostarin läheltä, virtaa koilliseen Mesaorian tasangon poikki Nikosian halki ja kääntyy sitten itään kohti Famagustan lahtea. Uoma on siirretty pois vanhankaupungin vierestä 1500-luvulla. Suurin osa saaren 35 joesta ja purosta on tilapäisiä ja kuivuu kesäksi, ja Nikosiassa mitattiin 4. syyskuuta 2020 lämpötila 46,2 astetta, koko Kyproksen korkein lukema. Jokivartta on muutettu kävelyreitiksi 18 kilometrin matkalta.
+AIEMPI KYSYMYS: Minkä kaupungin läpi joki virtaa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Pediaíos virtaa pääkaupunki [[Nikosian]] läpi, ja kaupungissa sen rantoja pitkin pääsee kävelemään lähes kahdenkymmenen kilometrin matkan. Joki on Kyproksen pisin, 98 kilometriä, ja se saa alkunsa [[Troodoksen]] vuoristosta. Kävely joen vartta kuulostaa hyvältä, vaikka minä lentäisin.
+KYSYMYS: Kerro lisää: Nikosian
+
+### 205
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pediaíos (luonto · joki)
+Tietoruudun teksti: Pediaíos on Kyproksen pisin joki, 98 kilometriä. Se saa alkunsa Troodosin vuoriston Machairasin metsästä, virtaa koilliseen Mesaorian tasangon poikki ja kulkee pääkaupunki Nikosian läpi — kaupungissa sen rantoja pitkin pääsee kävelemään lähes kahdenkymmenen kilometrin matkan. Mereen joki laskee Famagustanlahdella, muinaisen Salamiin kaupungin raunioiden vieressä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Ruoka: Rypäleet kuivataan ennen puristusta] Commandaria on makea kyproslainen viini, joka tehdään vain kahdesta saaren omasta rypälelajikkeesta: valkoisesta Xynisteristä ja punaisesta Mavrosta. Poimitut rypäleet levitetään kuivauskentille auringonpaisteeseen runsaaksi viikoksi sään mukaan. Kuivuessaan marjat menettävät vettä ja mehun sokeripitoisuus nousee: se vastaa 15–17 tilavuusprosentin alkoholimäärää, kun tavallisissa viineissä luku on 13–14. Lain mukaan viini on kypsytettävä vähintään kaksi vuotta tammitynnyrissä. Tuotantoalueeseen kuuluu neljätoista kylää Troodoksen etelärinteillä, ja nimi juontuu keskiaikaisesta hallintoalueesta La Grande Commanderie. Commandaria on ollut EU:n suojattu alkuperänimitys vuodesta 2006, ja Guinne…
+- [Kypros — maalehti / Luonto: Kerrokset ovat väärinpäin] Troodoksen vuoristo ei ole poimuttunutta mannerta vaan pala vanhaa valtameren pohjaa. Ofioliitiksi kutsuttu kivisarja syntyi noin 92 miljoonaa vuotta sitten Neotethys-meren pohjalla ja työntyi myöhemmin ilmaan. Järjestys on säilynyt niin ehjänä, että sarjaa pidetään maailman parhaiten paljastuneena laatuaan: ylimpänä ovat tyynylaavat, sitten pystyt juonet, karkeat syväkivet ja alimpana maan vaipan kiviä. Tyynylaava syntyy, kun laava purkautuu veden alle ja jähmettyy pallomaisiksi patjoiksi, joiden läpimitta on 30 sentistä metriin; pinta on lasimainen ja sisus huokoinen. Erikoisin piirre on se, että kerrostuma on kääntynyt topografisesti ympäri: syvimmät kivet paljastuvat korkeimman huipun y…
+AIEMPI KYSYMYS: Minkä kaupungin läpi joki virtaa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Pediaíos virtaa pääkaupunki [[Nikosian]] läpi, ja kaupungissa sen rantoja pitkin pääsee kävelemään lähes kahdenkymmenen kilometrin matkan. Joki on Kyproksen pisin, 98 kilometriä, ja se saa alkunsa [[Troodoksen]] vuoristosta. Kävely joen vartta kuulostaa hyvältä, vaikka minä lentäisin.
+KYSYMYS: Kerro lisää: Troodoksen
+
+### 206
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pediaíos (luonto · joki)
+Tietoruudun teksti: Pediaíos on Kyproksen pisin joki, 98 kilometriä. Se saa alkunsa Troodosin vuoriston Machairasin metsästä, virtaa koilliseen Mesaorian tasangon poikki ja kulkee pääkaupunki Nikosian läpi — kaupungissa sen rantoja pitkin pääsee kävelemään lähes kahdenkymmenen kilometrin matkan. Mereen joki laskee Famagustanlahdella, muinaisen Salamiin kaupungin raunioiden vieressä.
+AIEMPI KYSYMYS: Missä muinainen Salamis sijaitsi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Muinainen Salamis sijaitsi Kyproksen itärannikolla Famagustanlahden rannalla, Pediaíos-joen suun vieressä. Sen raunioita on nykyisin lähellä [[Famagustaa]]. Kaupunki oli [[antiikin]] aikana tärkeä satamakaupunki. Hienoa, että raunioita on yhä näkyvissä.
+KYSYMYS: Kerro lisää: Famagustaa
+
+### 207
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pediaíos (luonto · joki)
+Tietoruudun teksti: Pediaíos on Kyproksen pisin joki, 98 kilometriä. Se saa alkunsa Troodosin vuoriston Machairasin metsästä, virtaa koilliseen Mesaorian tasangon poikki ja kulkee pääkaupunki Nikosian läpi — kaupungissa sen rantoja pitkin pääsee kävelemään lähes kahdenkymmenen kilometrin matkan. Mereen joki laskee Famagustanlahdella, muinaisen Salamiin kaupungin raunioiden vieressä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kohdekartta / Kohdekartta: Antiikin agora] 500-luku eaa. Antiikin agora oli vanhan Ateenan sydän. Jo 500-luvulta eaa. lähtien tälle aukiolle kokoontuivat kauppiaat, poliitikot ja tavalliset kaupunkilaiset. Toreilla myytiin hedelmiä, kankaita, saviastioita ja tuoksuvia voiteita, ja yllättävän moni myyjä oli nainen, vaikka naiset viettivät muuten aikansa yleensä kotona. Agoran laidalla seisoo yhä pystyssä Hefaistoksen temppeli, yksi maailman parhaiten säilyneistä antiikin kreikkalaisista temppeleistä. Se on kestänyt lähes koskemattomana yli 2 400 vuotta, vaikka moni muu agoran rakennus on murentunut ajan saatossa. Arkeologit ovat kaivaneet agoraa esiin vuodesta 1931 lähtien: pelkästään vuoteen 1935 mennessä maasta nousi noin 600 patsa…
+AIEMPI KYSYMYS: Missä muinainen Salamis sijaitsi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Muinainen Salamis sijaitsi Kyproksen itärannikolla Famagustanlahden rannalla, Pediaíos-joen suun vieressä. Sen raunioita on nykyisin lähellä [[Famagustaa]]. Kaupunki oli [[antiikin]] aikana tärkeä satamakaupunki. Hienoa, että raunioita on yhä näkyvissä.
+KYSYMYS: Kerro lisää: antiikin
+
+### 208
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pediaíos (luonto · joki)
+Tietoruudun teksti: Pediaíos on Kyproksen pisin joki, 98 kilometriä. Se saa alkunsa Troodosin vuoriston Machairasin metsästä, virtaa koilliseen Mesaorian tasangon poikki ja kulkee pääkaupunki Nikosian läpi — kaupungissa sen rantoja pitkin pääsee kävelemään lähes kahdenkymmenen kilometrin matkan. Mereen joki laskee Famagustanlahdella, muinaisen Salamiin kaupungin raunioiden vieressä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kaupunkilehti / Arki: Saaren pisin joki kulkee kuivana] Pedieos on Kyproksen pisin joki, 98 kilometriä. Se alkaa Troodoksen Machairas-metsästä samannimisen luostarin läheltä, virtaa koilliseen Mesaorian tasangon poikki Nikosian halki ja kääntyy sitten itään kohti Famagustan lahtea. Uoma on siirretty pois vanhankaupungin vierestä 1500-luvulla. Suurin osa saaren 35 joesta ja purosta on tilapäisiä ja kuivuu kesäksi, ja Nikosiassa mitattiin 4. syyskuuta 2020 lämpötila 46,2 astetta, koko Kyproksen korkein lukema. Jokivartta on muutettu kävelyreitiksi 18 kilometrin matkalta.
+- [Nikosia — kaupunkilehti / Arki] Nikosia on Mesaorian tasangolla, jonka nimi tarkoittaa vuorten välistä. Tasanko on lähes puuton, ja kaupungin pinta-alasta on puiden alla kolme prosenttia — vähemmän kuin missään muussa Euroopan pääkaupungissa.
+AIEMPI KYSYMYS: Mistä Pediaíos-joki saa alkunsa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Pediaíos saa alkunsa [[Troodoksen]] vuoriston Machairasin metsästä. Sieltä se virtaa koilliseen [[Mesaorian]] tasangon poikki ja kulkee pääkaupunki Nikosian läpi. Joki on pituudeltaan 98 kilometriä. Vuorilta mereen asti, kyl se on pitkä matka.
+KYSYMYS: Kerro lisää: Mesaorian
+
+### 209
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pediaíos (luonto · joki)
+Tietoruudun teksti: Pediaíos on Kyproksen pisin joki, 98 kilometriä. Se saa alkunsa Troodosin vuoriston Machairasin metsästä, virtaa koilliseen Mesaorian tasangon poikki ja kulkee pääkaupunki Nikosian läpi — kaupungissa sen rantoja pitkin pääsee kävelemään lähes kahdenkymmenen kilometrin matkan. Mereen joki laskee Famagustanlahdella, muinaisen Salamiin kaupungin raunioiden vieressä.
+AIEMPI KYSYMYS: Mihin Pediaíos laskee mereen?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä osaan kertoo. Pediaíos laskee mereen [[Famagustanlahdella]], muinaisen [[Salamiin]] kaupungin raunioiden vieressä. Joki kulkee matkallaan [[Troodoksen]] vuoristosta Mesaorian tasangon poikki ja pääkaupunki Nikosian läpi. Joen suulla on siis yhä näkyvissä antiikin jäänteitä. Rauniot ovat melkein kuin vanha postireitti.
+KYSYMYS: Kerro lisää: Famagustanlahdella
+
+### 210
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pediaíos (luonto · joki)
+Tietoruudun teksti: Pediaíos on Kyproksen pisin joki, 98 kilometriä. Se saa alkunsa Troodosin vuoriston Machairasin metsästä, virtaa koilliseen Mesaorian tasangon poikki ja kulkee pääkaupunki Nikosian läpi — kaupungissa sen rantoja pitkin pääsee kävelemään lähes kahdenkymmenen kilometrin matkan. Mereen joki laskee Famagustanlahdella, muinaisen Salamiin kaupungin raunioiden vieressä.
+AIEMPI KYSYMYS: Mihin Pediaíos laskee mereen?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä osaan kertoo. Pediaíos laskee mereen [[Famagustanlahdella]], muinaisen [[Salamiin]] kaupungin raunioiden vieressä. Joki kulkee matkallaan [[Troodoksen]] vuoristosta Mesaorian tasangon poikki ja pääkaupunki Nikosian läpi. Joen suulla on siis yhä näkyvissä antiikin jäänteitä. Rauniot ovat melkein kuin vanha postireitti.
+KYSYMYS: Kerro lisää: Salamiin
+
+### 211
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Levantinmeri (meri)
+Tietoruudun teksti: Levantinmeri on Välimeren itäisin osa, noin 320 000 neliökilometriä, ja Kypros on sen suurin saari. Syvin kohta, 4 384 metriä, on Plinius-hautavajoamassa noin kahdeksankymmentä kilometriä Kreetan eteläpuolella. Isoisäsi matkaa edeltävinä vuosina meri sai uuden oven: Suezin kanava valmistui 1869 ja yhdisti sen Punaiseenmereen. Vuosikymmeniä esteenä olivat Katkerat järvet, joiden suolapitoisuus oli liian korkea, mutta kun se tasaantui kanavan veden kanssa, este katosi ja Punaisenmeren kasvit ja eläimet alkoivat asuttaa itäistä Välimerta. Ilmiötä kutsutaan lessepsiläiseksi vaellukseksi kanavan pääinsinöörin Ferdinand de Lessepsin mukaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Siinai — kaupunkilehti / Siinai: Kanava, joka teki niemimaasta Aasiaa] Vuonna 1859 alkoi työ, joka muutti Siinain aseman kartalla. Ranskalaisen Ferdinand de Lessepsin yhtiö alkoi kaivaa kanavaa Välimereltä Punaisellemerelle, ja urakka kesti kymmenen vuotta. Osa työstä tehtiin pakkotyönä, kunnes se lopetettiin kesken hankkeen. Kanava avattiin 17. marraskuuta 1869 — neljä vuotta ennen isoisän matkaa — ja se on 193 kilometriä pitkä. Sen jälkeen Siinai on ollut käytännössä oma saarensa: kanava vetää rajan Afrikan ja Aasian väliin, ja Siinai jää Aasian puolelle.
+AIEMPI KYSYMYS: Mikä on lessepsiläinen vaellus?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tän minä osaan. Lessepsiläinen vaellus tarkoittaa Punaisenmeren kasvien ja eläinten siirtymistä Suezin kanavan kautta itäiseen Välimereen. Kanava valmistui vuonna 1869 ja yhdisti Välimeren Punaiseenmereen. Vuosikymmeniä esteenä olivat Katkerat järvet, joiden suolapitoisuus oli liian korkea, mutta kun se tasaantui kanavan veden kanssa, este katosi. Ilmiö on saanut nimensä kanavan pääinsinöörin [[Ferdinand de Lessepsin]] mukaan, ja sen vaikutukset näkyvät erityisesti [[Levantinmeren]] ja laajemmin [[Välimeren]] eliöstössä. Kalatkin pääsevät matkaan ilman siipiä.
+KYSYMYS: Kerro lisää: Ferdinand de Lessepsin
+
+### 212
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Levantinmeri (meri)
+Tietoruudun teksti: Levantinmeri on Välimeren itäisin osa, noin 320 000 neliökilometriä, ja Kypros on sen suurin saari. Syvin kohta, 4 384 metriä, on Plinius-hautavajoamassa noin kahdeksankymmentä kilometriä Kreetan eteläpuolella. Isoisäsi matkaa edeltävinä vuosina meri sai uuden oven: Suezin kanava valmistui 1869 ja yhdisti sen Punaiseenmereen. Vuosikymmeniä esteenä olivat Katkerat järvet, joiden suolapitoisuus oli liian korkea, mutta kun se tasaantui kanavan veden kanssa, este katosi ja Punaisenmeren kasvit ja eläimet alkoivat asuttaa itäistä Välimerta. Ilmiötä kutsutaan lessepsiläiseksi vaellukseksi kanavan pääinsinöörin Ferdinand de Lessepsin mukaan.
+AIEMPI KYSYMYS: Mikä on lessepsiläinen vaellus?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tän minä osaan. Lessepsiläinen vaellus tarkoittaa Punaisenmeren kasvien ja eläinten siirtymistä Suezin kanavan kautta itäiseen Välimereen. Kanava valmistui vuonna 1869 ja yhdisti Välimeren Punaiseenmereen. Vuosikymmeniä esteenä olivat Katkerat järvet, joiden suolapitoisuus oli liian korkea, mutta kun se tasaantui kanavan veden kanssa, este katosi. Ilmiö on saanut nimensä kanavan pääinsinöörin [[Ferdinand de Lessepsin]] mukaan, ja sen vaikutukset näkyvät erityisesti [[Levantinmeren]] ja laajemmin [[Välimeren]] eliöstössä. Kalatkin pääsevät matkaan ilman siipiä.
+KYSYMYS: Kerro lisää: Levantinmeren
+
+### 213
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Levantinmeri (meri)
+Tietoruudun teksti: Levantinmeri on Välimeren itäisin osa, noin 320 000 neliökilometriä, ja Kypros on sen suurin saari. Syvin kohta, 4 384 metriä, on Plinius-hautavajoamassa noin kahdeksankymmentä kilometriä Kreetan eteläpuolella. Isoisäsi matkaa edeltävinä vuosina meri sai uuden oven: Suezin kanava valmistui 1869 ja yhdisti sen Punaiseenmereen. Vuosikymmeniä esteenä olivat Katkerat järvet, joiden suolapitoisuus oli liian korkea, mutta kun se tasaantui kanavan veden kanssa, este katosi ja Punaisenmeren kasvit ja eläimet alkoivat asuttaa itäistä Välimerta. Ilmiötä kutsutaan lessepsiläiseksi vaellukseksi kanavan pääinsinöörin Ferdinand de Lessepsin mukaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Välimeren voimakkain vuorovesi] Gabèsin lahti ulottuu Sfaxista Djerbaan, ja antiikissa se tunnettiin nimellä Syrtis Minor, Pieni Syrtti. Välimerellä vuorovesi jää useimmiten muutamaan kymmeneen senttiin, mutta lahden pohjukassa Gabèsin kohdalla se nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Gabès ja Sfax ovat lahden suuret satamat, ja ne elävät sienestä ja tonnikalasta. Syrtti mainitaan myös Uudessa testamentissa: kun Paavalia kuljetettiin vankina Roomaan, laivan miehistö pelkäsi myrskyn ajavan aluksen Syrttiin ja teki kaikkensa välttääkseen sen.
+AIEMPI KYSYMYS: Mikä on lessepsiläinen vaellus?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tän minä osaan. Lessepsiläinen vaellus tarkoittaa Punaisenmeren kasvien ja eläinten siirtymistä Suezin kanavan kautta itäiseen Välimereen. Kanava valmistui vuonna 1869 ja yhdisti Välimeren Punaiseenmereen. Vuosikymmeniä esteenä olivat Katkerat järvet, joiden suolapitoisuus oli liian korkea, mutta kun se tasaantui kanavan veden kanssa, este katosi. Ilmiö on saanut nimensä kanavan pääinsinöörin [[Ferdinand de Lessepsin]] mukaan, ja sen vaikutukset näkyvät erityisesti [[Levantinmeren]] ja laajemmin [[Välimeren]] eliöstössä. Kalatkin pääsevät matkaan ilman siipiä.
+KYSYMYS: Kerro lisää: Välimeren
+
+### 214
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Levantinmeri (meri)
+Tietoruudun teksti: Levantinmeri on Välimeren itäisin osa, noin 320 000 neliökilometriä, ja Kypros on sen suurin saari. Syvin kohta, 4 384 metriä, on Plinius-hautavajoamassa noin kahdeksankymmentä kilometriä Kreetan eteläpuolella. Isoisäsi matkaa edeltävinä vuosina meri sai uuden oven: Suezin kanava valmistui 1869 ja yhdisti sen Punaiseenmereen. Vuosikymmeniä esteenä olivat Katkerat järvet, joiden suolapitoisuus oli liian korkea, mutta kun se tasaantui kanavan veden kanssa, este katosi ja Punaisenmeren kasvit ja eläimet alkoivat asuttaa itäistä Välimerta. Ilmiötä kutsutaan lessepsiläiseksi vaellukseksi kanavan pääinsinöörin Ferdinand de Lessepsin mukaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ras Hafun — kaupunkilehti / Antiikin suitsukekauppa: Yhtä arvokasta kuin hopea] Kerätty pihka lajiteltiin väriltään ja puhtaudeltaan ja myytiin painon mukaan – parhaat palat saattoivat maksaa yhtä paljon kuin hopea. Suitsuketta poltettiin temppeleissä ja kotialttareilla ympäri antiikin maailmaa Egyptistä Roomaan ja Intiaan asti, mutta sitä käytettiin myös mausteena, lääkkeenä ja balsamointiin. Afrikan sarvi ja Etelä-Arabia olivat lähes ainoat alueet, joilla suitsukepuita kasvoi luonnossa, joten koko tuotanto kulki näiden rannikkojen satamien, kuten Oponen, kautta ennen kuin se jatkoi matkaa laivoilla ja karavaaneilla kohti Välimerta.
+AIEMPI KYSYMYS: Miten Suezin kanava muutti Välimeren eliöstöä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Suezin kanava valmistui vuonna 1869 ja yhdisti Välimeren Punaiseenmereen. Aiemmin kulkua olivat vuosikymmeniä estäneet Katkerat järvet, joiden suolapitoisuus oli liian korkea, mutta kun suolapitoisuus tasaantui kanavan veden kanssa, este katosi. Sen jälkeen Punaisenmeren kasvit ja eläimet alkoivat asuttaa itäistä [[Välimerta]]. Ilmiötä kutsutaan lessepsiläiseksi vaellukseksi kanavan pääinsinöörin [[Ferdinand de Lessepsin]] mukaan, ja muutos on kulkenut pääosin yhteen suuntaan, Punaiseltamereltä Välimerelle.
+
+Minä olen nähnyt ylhäältä monta satamaa, mutta pinnan alle en ylety. Silti tiedän, että meri on nyt toinen kuin isoisäsi aikana.
+KYSYMYS: Kerro lisää: Välimerta
+
+### 215
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Levantinmeri (meri)
+Tietoruudun teksti: Levantinmeri on Välimeren itäisin osa, noin 320 000 neliökilometriä, ja Kypros on sen suurin saari. Syvin kohta, 4 384 metriä, on Plinius-hautavajoamassa noin kahdeksankymmentä kilometriä Kreetan eteläpuolella. Isoisäsi matkaa edeltävinä vuosina meri sai uuden oven: Suezin kanava valmistui 1869 ja yhdisti sen Punaiseenmereen. Vuosikymmeniä esteenä olivat Katkerat järvet, joiden suolapitoisuus oli liian korkea, mutta kun se tasaantui kanavan veden kanssa, este katosi ja Punaisenmeren kasvit ja eläimet alkoivat asuttaa itäistä Välimerta. Ilmiötä kutsutaan lessepsiläiseksi vaellukseksi kanavan pääinsinöörin Ferdinand de Lessepsin mukaan.
+AIEMPI KYSYMYS: Miksi Katkerat järvet estivät lajien leviämisen?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Katkerat järvet sijaitsivat Suezin kanavan reitillä, ja niiden suolapitoisuus oli niin korkea, etteivät Punaisenmeren kasvit ja eläimet pystyneet kulkemaan niiden läpi. Este kesti vuosikymmeniä kanavan valmistumisen jälkeen. Kun suolapitoisuus tasaantui kanavan veden kanssa, este katosi ja eliölajit alkoivat levitä itäiseen [[Välimereen]]. Lopulta ilmiö sai nimekseen lessepsiläinen vaellus, ja sen vaikutukset näkyvät erityisesti [[Levantinmeren]] alueella. Suola on kyl pienen asian iso portinvartija.
+KYSYMYS: Kerro lisää: Välimereen
+
+### 216
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Levantinmeri (meri)
+Tietoruudun teksti: Levantinmeri on Välimeren itäisin osa, noin 320 000 neliökilometriä, ja Kypros on sen suurin saari. Syvin kohta, 4 384 metriä, on Plinius-hautavajoamassa noin kahdeksankymmentä kilometriä Kreetan eteläpuolella. Isoisäsi matkaa edeltävinä vuosina meri sai uuden oven: Suezin kanava valmistui 1869 ja yhdisti sen Punaiseenmereen. Vuosikymmeniä esteenä olivat Katkerat järvet, joiden suolapitoisuus oli liian korkea, mutta kun se tasaantui kanavan veden kanssa, este katosi ja Punaisenmeren kasvit ja eläimet alkoivat asuttaa itäistä Välimerta. Ilmiötä kutsutaan lessepsiläiseksi vaellukseksi kanavan pääinsinöörin Ferdinand de Lessepsin mukaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Milford Sound — kaupunkilehti / Sade ja vuonon eläimet: Maailman hienoin kävelyretki] Vuonna 1888 löydetty McKinnonin sola avasi kävelyreitin Te Anaun järveltä Milford Soundiin, ja reitistä muodostui vähitellen Milford Track. Vuonna 1908 runoilija Blanche Baughan patikoi reitin ja lähetti siitä 7 500 sanan pituisen kertomuksen Lontooseen julkaistavaksi. Lehden toimittaja otsikoi jutun "The Finest Walk in the World" eli "maailman hienoin kävelyretki", ja nimitys tarttui reittiin pysyvästi. Uuden-Seelannin matkailuvirasto tarttui heti tilaisuuteen ja käytti lausahdusta maan markkinoinnissa vuosikymmenten ajan. Nykyisin nelipäiväinen, 53 kilometrin vaellus vie kulkijat sademetsän ja McKinnonin solan kautta aina Milford Soundiin asti.
+- [Etelä-Afrikka — maalehti / Historia: Härkävankkurit lähtivät pois brittien ulottuvilta] 1836 alkaen — Kapin siirtokunnan hollanninkieliset maanviljelijät eli buurit olivat kyllästyneet brittihallintoon, ja vuodesta 1836 alkaen tuhannet heistä pakkasivat koko omaisuutensa härkävankkureihin ja lähtivät pohjoiseen sisämaahan. Vaeltajat kutsuivat itseään nimellä voortrekker, "edelläkulkija". Matkasta syntyi kolme itsenäistä buuritasavaltaa — Transvaal, Oranjen vapaavaltio ja Natalia — ja samalla pitkä kiista maasta niiden kanssa, jotka siellä jo asuivat: pohjoiset ndebelet joutuivat väistymään, ja yhteenotot zulukuningaskunnan kanssa alkoivat murentaa sitä. Suuri vaellus on afrikaanerien perustarina.
+AIEMPI KYSYMYS: Kuka oli Ferdinand de Lesseps?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuttu nimi. Ferdinand de Lesseps oli ranskalainen diplomaatti ja kanavahankkeiden johtaja. Hän toimi Suezin kanavan pääinsinöörinä, ja kanava valmistui vuonna 1869. Hänen mukaansa on nimetty [[lessepsiläinen vaellus]], eli Punaisenmeren eliöiden leviäminen kanavan kautta itäiseen [[Välimereen]]. Aika harva saa oman ilmiön nimeensä, kyl se kelpaa.
+KYSYMYS: Kerro lisää: lessepsiläinen vaellus
+
+### 217
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Levantinmeri (meri)
+Tietoruudun teksti: Levantinmeri on Välimeren itäisin osa, noin 320 000 neliökilometriä, ja Kypros on sen suurin saari. Syvin kohta, 4 384 metriä, on Plinius-hautavajoamassa noin kahdeksankymmentä kilometriä Kreetan eteläpuolella. Isoisäsi matkaa edeltävinä vuosina meri sai uuden oven: Suezin kanava valmistui 1869 ja yhdisti sen Punaiseenmereen. Vuosikymmeniä esteenä olivat Katkerat järvet, joiden suolapitoisuus oli liian korkea, mutta kun se tasaantui kanavan veden kanssa, este katosi ja Punaisenmeren kasvit ja eläimet alkoivat asuttaa itäistä Välimerta. Ilmiötä kutsutaan lessepsiläiseksi vaellukseksi kanavan pääinsinöörin Ferdinand de Lessepsin mukaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historian hetki: Pompeji 79 — ropina katolla] 79 jaa. — Ropina katolla kuulostaa ensin rakeilta. Sitten kadulle putoaa kevyitä, vaaleita kiviä, joita voi pitää kädessä — hohkakiveä — ja niitä sataa tunti tunnilta tiheämmin. Pompejin torilla on iltapäivä vuonna 79, ja vuoren päällä seisoo pilvi, jota nuorempi Plinius kuvaa myöhemmin kirjeessään Tacitukselle pinjapuuksi: pitkä runko ja levenevä latva. Hän katselee sitä lahden toiselta puolelta Misenumista, 29 kilometrin päästä, ja hänen enonsa Plinius vanhempi, laivaston komentaja, lähtee laivalla pelastamaan ihmisiä ja kuolee Stabiaen rannalla. Pompejissa kukaan ei kirjoita mitään. Ensimmäisen päivän valkoinen hohkakivi kasaa katoille lähes kolmen metrin kerroksen, ja katot romahtavat; …
+- [Afganistan — maalehti / Kuvataide: Sininen, joka maksoi enemmän kuin kulta] Sar-e Sangin kaivoksia Kokchan laaksossa Badakhshanissa on louhittu yli kuudentuhannen vuoden ajan, ja pitkään ne olivat koko tunnetun maailman ainoa lapis lazulin lähde. Kivi on lazuriittia, valkoista kalsiittia ja kullankeltaista pyriittiä; Plinius vanhempi kuvasi sen läpinäkymättömäksi ja kullanhippusin ripotelluksi. Sitä on Urin kuningashaudoissa ja Tutankhamonin naamiossa, ja Kleopatra jauhoi siitä silmämeikkinsä. Keskiajan lopulla Eurooppa alkoi tuoda kiveä jauhettavaksi ultramariiniksi, ja Masaccio, Tizian ja Vermeer säästivät sen yleensä kuvan tärkeimmän hahmon vaatteisiin.
+- [Italia — maalehti / Historian hetki] Napolinlahden kaupungissa satoi vuonna 79 ensin kevyttä hohkakiveä, ja se oli viimeinen tilaisuus lähteä — kuumat tuhkavyöryt tulivat yöllä, ja Plinius kirjoitti pilvestä, joka näytti pinjapuulta.
+AIEMPI KYSYMYS: Kuinka syvä Levantinmeri on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Levantinmeren syvin kohta on 4 384 metriä, ja se sijaitsee [[Plinius-hautavajoamassa]] noin kahdeksankymmentä kilometriä [[Kreetan]] eteläpuolella. Meri on Välimeren itäisin osa, ja sen pinta-ala on noin 320 000 neliökilometriä. Sen suurin saari on [[Kypros]]. Ylhäältä päin se näyttää kyllä vaan siniseltä.
+KYSYMYS: Kerro lisää: Plinius-hautavajoamassa
+
+### 218
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Levantinmeri (meri)
+Tietoruudun teksti: Levantinmeri on Välimeren itäisin osa, noin 320 000 neliökilometriä, ja Kypros on sen suurin saari. Syvin kohta, 4 384 metriä, on Plinius-hautavajoamassa noin kahdeksankymmentä kilometriä Kreetan eteläpuolella. Isoisäsi matkaa edeltävinä vuosina meri sai uuden oven: Suezin kanava valmistui 1869 ja yhdisti sen Punaiseenmereen. Vuosikymmeniä esteenä olivat Katkerat järvet, joiden suolapitoisuus oli liian korkea, mutta kun se tasaantui kanavan veden kanssa, este katosi ja Punaisenmeren kasvit ja eläimet alkoivat asuttaa itäistä Välimerta. Ilmiötä kutsutaan lessepsiläiseksi vaellukseksi kanavan pääinsinöörin Ferdinand de Lessepsin mukaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreeta — kaupunkilehti / Historian hetki: Arkadi 1866 — viimeinen ovi] 9.11.1866 — Nainen painaa lasta vasten seinää ruutivaraston oven takana, kun kirveniskut ulkopuolella yltyvät — kaksi päivää kestänyt taistelu on hävitty, muurit on murrettu, eikä paluuta enää ole. Satoja kapinallisia ja siviilejä on paennut Arkadin luostariin turvaan marraskuussa 1866, mutta ottomaanijoukot ovat piirittäneet sen tykistöllä. Igumeni Gabriel on jo päättänyt, mitä tapahtuu, jos muurit pettävät: ruutivarasto sytytetään mieluummin kuin antaudutaan. Kun ovi vihdoin murtuu, joku laukaisee liekin — räjähdys tappaa puolustajia ja hyökkääjiä yhdessä, ja luostarin pihalta löytyy myöhemmin kuulien lävistämä tuulimylly, joka seisoo siellä yhä. Uutinen tapahtuneesta kulkeutuu nopeasti E…
+- [Kreikka — maalehti / Luonto: Vuohi, jota ei ole missään muualla] nykyään — Kreetan vuorilla elää kri-kri, kesyvuohta pienempi mutta värikkäämpi eläin, jonka sarvet kaartuvat taakse kuin kaksi sapelia. Sitä tavataan vain Kreetalla ja muutamalla asumattomalla pikkusaarella sen edustalla. Vuonna 1960 kri-krejä oli jäljellä alle kaksisataa, ja se oli yksi syy siihen, että Samarian rotkosta tehtiin kansallispuisto vuonna 1962. Nyt niitä on noin kaksituhatta. Lefká Óri -vuoristossa kri-kri laiduntaa vain yöllä, joten vaeltaja näkee sen harvoin. Molekyylitutkimukset paljastivat yllätyksen: kri-kri ei olekaan alkuperäinen villivuohi vaan villiintynyt kesyvuohi.
+AIEMPI KYSYMYS: Kuinka syvä Levantinmeri on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Levantinmeren syvin kohta on 4 384 metriä, ja se sijaitsee [[Plinius-hautavajoamassa]] noin kahdeksankymmentä kilometriä [[Kreetan]] eteläpuolella. Meri on Välimeren itäisin osa, ja sen pinta-ala on noin 320 000 neliökilometriä. Sen suurin saari on [[Kypros]]. Ylhäältä päin se näyttää kyllä vaan siniseltä.
+KYSYMYS: Kerro lisää: Kreetan
+
+### 219
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Levantinmeri (meri)
+Tietoruudun teksti: Levantinmeri on Välimeren itäisin osa, noin 320 000 neliökilometriä, ja Kypros on sen suurin saari. Syvin kohta, 4 384 metriä, on Plinius-hautavajoamassa noin kahdeksankymmentä kilometriä Kreetan eteläpuolella. Isoisäsi matkaa edeltävinä vuosina meri sai uuden oven: Suezin kanava valmistui 1869 ja yhdisti sen Punaiseenmereen. Vuosikymmeniä esteenä olivat Katkerat järvet, joiden suolapitoisuus oli liian korkea, mutta kun se tasaantui kanavan veden kanssa, este katosi ja Punaisenmeren kasvit ja eläimet alkoivat asuttaa itäistä Välimerta. Ilmiötä kutsutaan lessepsiläiseksi vaellukseksi kanavan pääinsinöörin Ferdinand de Lessepsin mukaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Luonto] Kypros on ollut erillään mantereesta niin kauan, että osa sen lajeista on kehittynyt omikseen. Saarella on myös vuoristo, jonka kivilajit eivät muistuta minkään naapurivuoriston kiviä.
+AIEMPI KYSYMYS: Kuinka syvä Levantinmeri on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Levantinmeren syvin kohta on 4 384 metriä, ja se sijaitsee [[Plinius-hautavajoamassa]] noin kahdeksankymmentä kilometriä [[Kreetan]] eteläpuolella. Meri on Välimeren itäisin osa, ja sen pinta-ala on noin 320 000 neliökilometriä. Sen suurin saari on [[Kypros]]. Ylhäältä päin se näyttää kyllä vaan siniseltä.
+KYSYMYS: Kerro lisää: Kypros
+
+### 220
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paphoksen mosaiikit (historia)
+Tietoruudun teksti: Nea Paphos oli Kyproksen hallinnollinen pääkaupunki Ptolemaiosten ja Rooman aikaan, ja sen varakkaiden huviloiden lattioista on kaivettu esiin Välimeren parhaiten säilyneitä mosaiikkeja. Dionysoksen talo on 200-luvulta jaa., pinta-alaltaan noin 2 000 neliömetriä, ja mosaiikit peittävät siitä neljänneksen: metsästyskohtauksia, Apollon ja Dafnen takaa-ajo, Ganymedes ja kotka sekä neljä vuodenaikaa. Theseuksen huvila sai nimensä lattiakuvasta, jossa Theseus taistelee Minotaurosta vastaan, ja Aionin talo löytyi vasta 1983. Kaivaukset aloitti puolalainen Kazimierz Michałowski kesäkuussa 1965, ja ne jatkuvat yhä; Unesco liitti Paphoksen luetteloonsa 1980.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kaupunkilehti / Historian hetki: Nikosia 1878 — puolikuu laskee, risti nousee] 12.7.1878 — Kaupustelija keskeyttää työnsä, kun väkijoukko kääntyy katsomaan uutta lippua Nikosiassa. On 12. heinäkuuta 1878: saaren hallinto siirtyy Britannialle, ja Union Jack nostetaan vara-amiraali Lord John Hayn läsnä ollessa. Hänen laivastostaan kaupunkiin saapuu merijalkaväkeä ja merimiehiä, mutta uusi hallinto on vasta alkutekijöissään. Britannia ja Osmanien valtakunta olivat sopineet Kyproksen hallinnasta kesäkuussa vastineeksi Britannian tuesta Venäjän uhkaa vastaan. Saari pysyy muodollisesti osmanien valtakunnan osana, vaikka käytännön valta vaihtuu. Ensimmäinen korkea komissaari Garnet Wolseley saapuu Nikosiaan vasta 31. heinäkuuta ja ryhtyy kokoamaan hallintoa. Torin kauppiaall…
+- [Nikosia — kaupunkilehti / Nikosia: Tulkin talo vaihtoi omistajaa kahdesti] Hadjigeorgakis Kornesios toimi Kyproksen dragomaanina eli hallinnon tulkkina vuosina 1779–1809, ja noin vuonna 1796 sulttaani Selim III nimitti hänet virkaan elinikäisesti. Kartanonsa hän rakennutti Agios Antonioksen kaupunginosaan arkkipiispan asunnon lähelle. Vuoden 1804 kapinassa väkijoukko murtautui taloon ja ryösti sen, ja perhe pakeni Konstantinopoliin. Hänet teloitettiin siellä vuonna 1809, omaisuus takavarikoitiin ja talo meni kaupaksi 13 000 kuruşilla; nuorin poika osti sen takaisin vuonna 1830. Viimeinen asukas kuoli 1979, ja nyt talossa on etnologinen museo. Kunnostuksesta myönnettiin Europa Nostra -palkinto.
+AIEMPI KYSYMYS: Mikä Nea Paphos oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nea Paphos oli [[Kyproksen]] hallinnollinen pääkaupunki Ptolemaiosten ja [[Rooman]] aikana. Sen varakkaiden huviloiden lattioista on kaivettu esiin Välimeren parhaiten säilyneitä [[mosaiikkeja]], ja Unesco liitti Paphoksen maailmanperintöluetteloonsa vuonna 1980. Lattia, joka kestää näin pitkään, on kyl ansainnut ihailua.
+KYSYMYS: Kerro lisää: Kyproksen
+
+### 221
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paphoksen mosaiikit (historia)
+Tietoruudun teksti: Nea Paphos oli Kyproksen hallinnollinen pääkaupunki Ptolemaiosten ja Rooman aikaan, ja sen varakkaiden huviloiden lattioista on kaivettu esiin Välimeren parhaiten säilyneitä mosaiikkeja. Dionysoksen talo on 200-luvulta jaa., pinta-alaltaan noin 2 000 neliömetriä, ja mosaiikit peittävät siitä neljänneksen: metsästyskohtauksia, Apollon ja Dafnen takaa-ajo, Ganymedes ja kotka sekä neljä vuodenaikaa. Theseuksen huvila sai nimensä lattiakuvasta, jossa Theseus taistelee Minotaurosta vastaan, ja Aionin talo löytyi vasta 1983. Kaivaukset aloitti puolalainen Kazimierz Michałowski kesäkuussa 1965, ja ne jatkuvat yhä; Unesco liitti Paphoksen luetteloonsa 1980.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vancouver — kohdekartta / Kohdekartta: Keskuskirjasto] 1995 Vancouverin kirjastolla on kolme taloa, ja tämä on kolmas. Ensimmäinen syntyi, kun teräsmagnaatti Andrew Carnegie lupasi 1901 viisikymmentätuhatta dollaria, jos kaupunki antaisi tontin ja viisituhatta dollaria vuodessa toimintaan. Kaupungin itä- ja länsipuoli riitelivät heti siitä, kumpi saisi kirjaston, ja asia ratkaistiin kansanäänestyksellä. Talo avattiin marraskuussa 1903, ja se toimii nykyään asukastalona. Keskuskirjasto muutti 1957 Burrard Streetille ja sieltä 1995 nykyiseen taloonsa. Nykyinen talo on kaupungin siihenastisista hankkeista suurin. Marraskuussa 1990 pidettiin kansanäänestys, jonka jälkeen järjestettiin suunnittelukilpailu. Moshe Safdien ja DA Architectsin ehdotus ol…
+- [Sofia — kaupunkilehti / Sofia: Serdica on minun Roomani] Sofian alla on toinen kaupunki. Roomalaisessa Serdicassa viihtyi keisari Konstantinus Suuri, jonka kerrotaan sanoneen siitä: Serdica on minun Roomani. Kun metroa kaivettiin vuosina 2010–2012, maasta paljastui kokonainen kortteli katuja, taloja ja kaupunginmuurin itäportti. Löytöjä ei peitetty takaisin. Nyt matkustaja nousee liukuportaita ylös keskelle katua, jota pitkin on kuljettu 1800 vuotta.
+AIEMPI KYSYMYS: Mikä Nea Paphos oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nea Paphos oli [[Kyproksen]] hallinnollinen pääkaupunki Ptolemaiosten ja [[Rooman]] aikana. Sen varakkaiden huviloiden lattioista on kaivettu esiin Välimeren parhaiten säilyneitä [[mosaiikkeja]], ja Unesco liitti Paphoksen maailmanperintöluetteloonsa vuonna 1980. Lattia, joka kestää näin pitkään, on kyl ansainnut ihailua.
+KYSYMYS: Kerro lisää: Rooman
+
+### 222
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paphoksen mosaiikit (historia)
+Tietoruudun teksti: Nea Paphos oli Kyproksen hallinnollinen pääkaupunki Ptolemaiosten ja Rooman aikaan, ja sen varakkaiden huviloiden lattioista on kaivettu esiin Välimeren parhaiten säilyneitä mosaiikkeja. Dionysoksen talo on 200-luvulta jaa., pinta-alaltaan noin 2 000 neliömetriä, ja mosaiikit peittävät siitä neljänneksen: metsästyskohtauksia, Apollon ja Dafnen takaa-ajo, Ganymedes ja kotka sekä neljä vuodenaikaa. Theseuksen huvila sai nimensä lattiakuvasta, jossa Theseus taistelee Minotaurosta vastaan, ja Aionin talo löytyi vasta 1983. Kaivaukset aloitti puolalainen Kazimierz Michałowski kesäkuussa 1965, ja ne jatkuvat yhä; Unesco liitti Paphoksen luetteloonsa 1980.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Mikaelin luostari] 1108–1113 Pyhän Mikaelin kultakupolinen luostari perustettiin Kiovan-Venäjän ruhtinas Svjatopolk II:n toimesta vuosina 1108–1113 arkkienkeli Mikaelin kunniaksi. Sen pääkirkon kupoli kullattiin ehkä ensimmäisenä koko Kiovan-Venäjällä, ja juuri siitä koko luostari sai lempinimensä ”kultakupolinen”. Vuonna 1108 luostariin tuotiin myös Konstantinopolista pyhän Barbaran pyhäinjäännökset, ja niistä tuli niin suosittu pyhiinvaellusaarre, että 1870-luvulla luostarissa kävi vuosittain jopa 100 000 vierailijaa. 1700-luvulla kirkkoa laajennettiin ukrainalaiseen barokkityyliin, ja alkuperäisestä yhdestä kupolista tuli lopulta seitsemän kupolin kokonaisuus. Sisäseiniltä löytyi myös upeita 1100-luvun bys…
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Sofian katedraali] 1037 Pyhän Sofian katedraali on Kiovan vanhin säilynyt suurkirkko. Ruhtinas Jaroslav Viisas rakennutti sen ilmeisesti vuonna 1037 samalle kentälle, jolla hänen joukkonsa olivat vuotta aiemmin voittaneet aroilta hyökänneet petšenegit. Kirkko oli 1000-luvulla yksi Euroopan suurimmista rakennuksista: sen keskiosa on neliö, jonka sivu on 30 metriä – täsmälleen sama mitta kuin Konstantinopolin Hagia Sofian pääkupolin alla olevalla neliöllä. Alun perin katedraalia peitti peräti 13 kupolia. Kirkon seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma: mosaiikkeja on 260 neliömetriä ja freskoja peräti 3 000 neliömetriä. Kahdeksan taitavaa käsityöläistä latoi kultataustaise…
+AIEMPI KYSYMYS: Mikä Nea Paphos oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nea Paphos oli [[Kyproksen]] hallinnollinen pääkaupunki Ptolemaiosten ja [[Rooman]] aikana. Sen varakkaiden huviloiden lattioista on kaivettu esiin Välimeren parhaiten säilyneitä [[mosaiikkeja]], ja Unesco liitti Paphoksen maailmanperintöluetteloonsa vuonna 1980. Lattia, joka kestää näin pitkään, on kyl ansainnut ihailua.
+KYSYMYS: Kerro lisää: mosaiikkeja
+
+### 223
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paphoksen mosaiikit (historia)
+Tietoruudun teksti: Nea Paphos oli Kyproksen hallinnollinen pääkaupunki Ptolemaiosten ja Rooman aikaan, ja sen varakkaiden huviloiden lattioista on kaivettu esiin Välimeren parhaiten säilyneitä mosaiikkeja. Dionysoksen talo on 200-luvulta jaa., pinta-alaltaan noin 2 000 neliömetriä, ja mosaiikit peittävät siitä neljänneksen: metsästyskohtauksia, Apollon ja Dafnen takaa-ajo, Ganymedes ja kotka sekä neljä vuodenaikaa. Theseuksen huvila sai nimensä lattiakuvasta, jossa Theseus taistelee Minotaurosta vastaan, ja Aionin talo löytyi vasta 1983. Kaivaukset aloitti puolalainen Kazimierz Michałowski kesäkuussa 1965, ja ne jatkuvat yhä; Unesco liitti Paphoksen luetteloonsa 1980.
+AIEMPI KYSYMYS: Miksi huvilat nimettiin lattioidensa mukaan?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Theseuksen]] huvila sai nimensä lattiakuvasta, jossa Theseus taistelee [[Minotaurosta]] vastaan. Tapa on tavallinen silloin, kun rakennuksen alkuperäistä nimeä tai omistajaa ei tunneta: nimeksi valitaan se, mikä lattiassa on huomiota herättävintä. Samoin on nimetty Dionysoksen talo, ja [[Aionin talo]] löytyi vasta vuonna 1983. En ole varma, että jokaisen talon nimi on syntynyt aivan näin. Minä nimeäisin talot pullan mukaan, mut ei se taida tieteessä kelvata.
+KYSYMYS: Kerro lisää: Theseuksen
+
+### 224
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paphoksen mosaiikit (historia)
+Tietoruudun teksti: Nea Paphos oli Kyproksen hallinnollinen pääkaupunki Ptolemaiosten ja Rooman aikaan, ja sen varakkaiden huviloiden lattioista on kaivettu esiin Välimeren parhaiten säilyneitä mosaiikkeja. Dionysoksen talo on 200-luvulta jaa., pinta-alaltaan noin 2 000 neliömetriä, ja mosaiikit peittävät siitä neljänneksen: metsästyskohtauksia, Apollon ja Dafnen takaa-ajo, Ganymedes ja kotka sekä neljä vuodenaikaa. Theseuksen huvila sai nimensä lattiakuvasta, jossa Theseus taistelee Minotaurosta vastaan, ja Aionin talo löytyi vasta 1983. Kaivaukset aloitti puolalainen Kazimierz Michałowski kesäkuussa 1965, ja ne jatkuvat yhä; Unesco liitti Paphoksen luetteloonsa 1980.
+AIEMPI KYSYMYS: Miksi huvilat nimettiin lattioidensa mukaan?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Theseuksen]] huvila sai nimensä lattiakuvasta, jossa Theseus taistelee [[Minotaurosta]] vastaan. Tapa on tavallinen silloin, kun rakennuksen alkuperäistä nimeä tai omistajaa ei tunneta: nimeksi valitaan se, mikä lattiassa on huomiota herättävintä. Samoin on nimetty Dionysoksen talo, ja [[Aionin talo]] löytyi vasta vuonna 1983. En ole varma, että jokaisen talon nimi on syntynyt aivan näin. Minä nimeäisin talot pullan mukaan, mut ei se taida tieteessä kelvata.
+KYSYMYS: Kerro lisää: Minotaurosta
+
+### 225
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paphoksen mosaiikit (historia)
+Tietoruudun teksti: Nea Paphos oli Kyproksen hallinnollinen pääkaupunki Ptolemaiosten ja Rooman aikaan, ja sen varakkaiden huviloiden lattioista on kaivettu esiin Välimeren parhaiten säilyneitä mosaiikkeja. Dionysoksen talo on 200-luvulta jaa., pinta-alaltaan noin 2 000 neliömetriä, ja mosaiikit peittävät siitä neljänneksen: metsästyskohtauksia, Apollon ja Dafnen takaa-ajo, Ganymedes ja kotka sekä neljä vuodenaikaa. Theseuksen huvila sai nimensä lattiakuvasta, jossa Theseus taistelee Minotaurosta vastaan, ja Aionin talo löytyi vasta 1983. Kaivaukset aloitti puolalainen Kazimierz Michałowski kesäkuussa 1965, ja ne jatkuvat yhä; Unesco liitti Paphoksen luetteloonsa 1980.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Muinaisuus: Hahmojen nimet ladottiin kiveen] Nea Pafos perustettiin 300-luvun eaa. lopulla, ja roomalaisajalla se oli saaren hallinnollinen keskus. Varakkaiden talojen lattiat päällystettiin mosaiikilla. Aionin talon lattia löytyi vasta vuonna 1983, kun puolalainen retkikunta kaivoi esiin 68 neliömetrin huoneen; kuvakenttää siitä on 16 neliömetriä, ja se jakautuu viiteen kohtaukseen. Kivenpalat eli tesserat ovat 2–5 millimetrin kokoisia. Talo on saanut nimensä keskimmäisen kohtauksen tuomarista: Aion on ikuisen ajan jumala, ja hän ratkaisee kauneuskilpailun, jossa Kassiopeia kilpailee merenneitoja vastaan. Aihe on harvinainen — muita esityksiä tunnetaan vain kaksi, molemmat Syyriasta. Lattian erikoisuus on se, että lähes jokaisen hahm…
+AIEMPI KYSYMYS: Miksi huvilat nimettiin lattioidensa mukaan?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Theseuksen]] huvila sai nimensä lattiakuvasta, jossa Theseus taistelee [[Minotaurosta]] vastaan. Tapa on tavallinen silloin, kun rakennuksen alkuperäistä nimeä tai omistajaa ei tunneta: nimeksi valitaan se, mikä lattiassa on huomiota herättävintä. Samoin on nimetty Dionysoksen talo, ja [[Aionin talo]] löytyi vasta vuonna 1983. En ole varma, että jokaisen talon nimi on syntynyt aivan näin. Minä nimeäisin talot pullan mukaan, mut ei se taida tieteessä kelvata.
+KYSYMYS: Kerro lisää: Aionin talo
+
+### 226
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paphoksen mosaiikit (historia)
+Tietoruudun teksti: Nea Paphos oli Kyproksen hallinnollinen pääkaupunki Ptolemaiosten ja Rooman aikaan, ja sen varakkaiden huviloiden lattioista on kaivettu esiin Välimeren parhaiten säilyneitä mosaiikkeja. Dionysoksen talo on 200-luvulta jaa., pinta-alaltaan noin 2 000 neliömetriä, ja mosaiikit peittävät siitä neljänneksen: metsästyskohtauksia, Apollon ja Dafnen takaa-ajo, Ganymedes ja kotka sekä neljä vuodenaikaa. Theseuksen huvila sai nimensä lattiakuvasta, jossa Theseus taistelee Minotaurosta vastaan, ja Aionin talo löytyi vasta 1983. Kaivaukset aloitti puolalainen Kazimierz Michałowski kesäkuussa 1965, ja ne jatkuvat yhä; Unesco liitti Paphoksen luetteloonsa 1980.
+AIEMPI KYSYMYS: Mitä Dionysoksen talon mosaiikeissa on kuvattu?
+AIEMPI VASTAUS (Livia):
+Ai se, hieno paikka. Dionysoksen talo on peräisin 200-luvulta jaa., ja sen pinta-ala on noin 2 000 neliömetriä, josta mosaiikit peittävät neljänneksen. Kuvissa on metsästyskohtauksia, [[Apollon]] ja [[Dafnen]] takaa-ajo, [[Ganymedes]] ja kotka sekä neljä vuodenaikaa. Talo kuuluu Nea Paphoksen varakkaiden huviloiden joukkoon.
+
+Neljä vuodenaikaa lattiassa on minusta hyvä idea. Minä olen nähnyt ne kaikki ylhäältä, ja syksy on aina paras, koska silloin leivotaan.
+KYSYMYS: Kerro lisää: Apollon
+
+### 227
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paphoksen mosaiikit (historia)
+Tietoruudun teksti: Nea Paphos oli Kyproksen hallinnollinen pääkaupunki Ptolemaiosten ja Rooman aikaan, ja sen varakkaiden huviloiden lattioista on kaivettu esiin Välimeren parhaiten säilyneitä mosaiikkeja. Dionysoksen talo on 200-luvulta jaa., pinta-alaltaan noin 2 000 neliömetriä, ja mosaiikit peittävät siitä neljänneksen: metsästyskohtauksia, Apollon ja Dafnen takaa-ajo, Ganymedes ja kotka sekä neljä vuodenaikaa. Theseuksen huvila sai nimensä lattiakuvasta, jossa Theseus taistelee Minotaurosta vastaan, ja Aionin talo löytyi vasta 1983. Kaivaukset aloitti puolalainen Kazimierz Michałowski kesäkuussa 1965, ja ne jatkuvat yhä; Unesco liitti Paphoksen luetteloonsa 1980.
+AIEMPI KYSYMYS: Mitä Dionysoksen talon mosaiikeissa on kuvattu?
+AIEMPI VASTAUS (Livia):
+Ai se, hieno paikka. Dionysoksen talo on peräisin 200-luvulta jaa., ja sen pinta-ala on noin 2 000 neliömetriä, josta mosaiikit peittävät neljänneksen. Kuvissa on metsästyskohtauksia, [[Apollon]] ja [[Dafnen]] takaa-ajo, [[Ganymedes]] ja kotka sekä neljä vuodenaikaa. Talo kuuluu Nea Paphoksen varakkaiden huviloiden joukkoon.
+
+Neljä vuodenaikaa lattiassa on minusta hyvä idea. Minä olen nähnyt ne kaikki ylhäältä, ja syksy on aina paras, koska silloin leivotaan.
+KYSYMYS: Kerro lisää: Dafnen
+
+### 228
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paphoksen mosaiikit (historia)
+Tietoruudun teksti: Nea Paphos oli Kyproksen hallinnollinen pääkaupunki Ptolemaiosten ja Rooman aikaan, ja sen varakkaiden huviloiden lattioista on kaivettu esiin Välimeren parhaiten säilyneitä mosaiikkeja. Dionysoksen talo on 200-luvulta jaa., pinta-alaltaan noin 2 000 neliömetriä, ja mosaiikit peittävät siitä neljänneksen: metsästyskohtauksia, Apollon ja Dafnen takaa-ajo, Ganymedes ja kotka sekä neljä vuodenaikaa. Theseuksen huvila sai nimensä lattiakuvasta, jossa Theseus taistelee Minotaurosta vastaan, ja Aionin talo löytyi vasta 1983. Kaivaukset aloitti puolalainen Kazimierz Michałowski kesäkuussa 1965, ja ne jatkuvat yhä; Unesco liitti Paphoksen luetteloonsa 1980.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venetsia — kaupunkilehti / Historian hetki: Padova 1610 — neljä valopistettä Jupiterin vieressä] tammikuu 1610 — Tammikuun 7. päivän iltana 1610 Galileo Galilei suuntaa itse rakentamansa, noin kaksikymmentä kertaa suurentavan kaukoputken Jupiteriin ja näkee planeetan vieressä kolme pientä valopistettä suorassa rivissä. Hän pitää niitä tähtinä. Seuraavana iltana ne ovat vaihtaneet paikkaa, ja 13. tammikuuta niitä on neljä. Ilta illan jälkeen hän piirtää pisteiden asemat muistiin, apulainen kirjaa ja kynttilä hyytyy tammikuun kylmässä, kunnes selitys ei enää voi olla muu: pisteet kiertävät Jupiteria. Se on ensimmäinen kerta, kun jonkin nähdään kiertävän muuta kuin Maata — ja Ptolemaioksen maailma, jossa kaikki kiertää Maata, saa ensimmäisen näkyvän kolhunsa. Galilei on 45-vuotias matemat…
+AIEMPI KYSYMYS: Mitä Dionysoksen talon mosaiikeissa on kuvattu?
+AIEMPI VASTAUS (Livia):
+Ai se, hieno paikka. Dionysoksen talo on peräisin 200-luvulta jaa., ja sen pinta-ala on noin 2 000 neliömetriä, josta mosaiikit peittävät neljänneksen. Kuvissa on metsästyskohtauksia, [[Apollon]] ja [[Dafnen]] takaa-ajo, [[Ganymedes]] ja kotka sekä neljä vuodenaikaa. Talo kuuluu Nea Paphoksen varakkaiden huviloiden joukkoon.
+
+Neljä vuodenaikaa lattiassa on minusta hyvä idea. Minä olen nähnyt ne kaikki ylhäältä, ja syksy on aina paras, koska silloin leivotaan.
+KYSYMYS: Kerro lisää: Ganymedes
+
+### 229
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paphoksen mosaiikit (historia)
+Tietoruudun teksti: Nea Paphos oli Kyproksen hallinnollinen pääkaupunki Ptolemaiosten ja Rooman aikaan, ja sen varakkaiden huviloiden lattioista on kaivettu esiin Välimeren parhaiten säilyneitä mosaiikkeja. Dionysoksen talo on 200-luvulta jaa., pinta-alaltaan noin 2 000 neliömetriä, ja mosaiikit peittävät siitä neljänneksen: metsästyskohtauksia, Apollon ja Dafnen takaa-ajo, Ganymedes ja kotka sekä neljä vuodenaikaa. Theseuksen huvila sai nimensä lattiakuvasta, jossa Theseus taistelee Minotaurosta vastaan, ja Aionin talo löytyi vasta 1983. Kaivaukset aloitti puolalainen Kazimierz Michałowski kesäkuussa 1965, ja ne jatkuvat yhä; Unesco liitti Paphoksen luetteloonsa 1980.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Kazimierz] 1335 Vuonna 1335 kuningas Kasimir Suuri perusti Krakovan viereen aivan oman kaupungin ja nimesi sen itsensä mukaan Kazimierziksi. Sen keskusaukio Wolnica oli valtava, 195 x 195 metriä - lähes yhtä iso kuin Krakovan oma tori. Vuonna 1495 juutalaiset asukkaat käskettiin muuttamaan pois Krakovan vanhastakaupungista Kazimierziin, ja alueesta kasvoi vuosisatojen kuluessa vilkas juutalaiskortteli lukuisine synagogineen. Vanha synagoga on Puolan vanhin yhä pystyssä seisova synagogarakennus. Toisen maailmansodan aikana korttelin juutalaisväestöä kohtasi julma kohtalo, mutta nykyään Kazimierz on jälleen täynnä elämää: kahviloita, kirjakauppoja ja vuotuinen juutalaisen kulttuurin festivaali vuodesta …
+AIEMPI KYSYMYS: Kuka aloitti Paphoksen kaivaukset?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: kaivaukset aloitti puolalainen arkeologi [[Kazimierz Michałowski]] kesäkuussa 1965. Ne jatkuvat yhä, ja Unesco liitti Paphoksen maailmanperintöluetteloonsa vuonna 1980. Vasta vuonna 1983 löytyi esimerkiksi [[Aionin talo]]. Yhä kaivetaan, siinä on kyl kärsivällisyyttä.
+KYSYMYS: Kerro lisää: Kazimierz Michałowski
+
+### 230
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paphoksen mosaiikit (historia)
+Tietoruudun teksti: Nea Paphos oli Kyproksen hallinnollinen pääkaupunki Ptolemaiosten ja Rooman aikaan, ja sen varakkaiden huviloiden lattioista on kaivettu esiin Välimeren parhaiten säilyneitä mosaiikkeja. Dionysoksen talo on 200-luvulta jaa., pinta-alaltaan noin 2 000 neliömetriä, ja mosaiikit peittävät siitä neljänneksen: metsästyskohtauksia, Apollon ja Dafnen takaa-ajo, Ganymedes ja kotka sekä neljä vuodenaikaa. Theseuksen huvila sai nimensä lattiakuvasta, jossa Theseus taistelee Minotaurosta vastaan, ja Aionin talo löytyi vasta 1983. Kaivaukset aloitti puolalainen Kazimierz Michałowski kesäkuussa 1965, ja ne jatkuvat yhä; Unesco liitti Paphoksen luetteloonsa 1980.
+AIEMPI KYSYMYS: Mitä Theseuksen huvilan lattiakuva esittää?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: lattiakuvassa [[Theseus]] taistelee [[Minotaurosta]] vastaan. Myytin mukaan Theseus surmasi Minotauroksen [[Kreetan]] labyrintissa, ja juuri tämä kuva antoi huvilalle sen nimen. Tuommoisen lattian päällä kävely vaatisi kyl kunnioitusta.
+KYSYMYS: Kerro lisää: Theseus
+
+### 231
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paphoksen mosaiikit (historia)
+Tietoruudun teksti: Nea Paphos oli Kyproksen hallinnollinen pääkaupunki Ptolemaiosten ja Rooman aikaan, ja sen varakkaiden huviloiden lattioista on kaivettu esiin Välimeren parhaiten säilyneitä mosaiikkeja. Dionysoksen talo on 200-luvulta jaa., pinta-alaltaan noin 2 000 neliömetriä, ja mosaiikit peittävät siitä neljänneksen: metsästyskohtauksia, Apollon ja Dafnen takaa-ajo, Ganymedes ja kotka sekä neljä vuodenaikaa. Theseuksen huvila sai nimensä lattiakuvasta, jossa Theseus taistelee Minotaurosta vastaan, ja Aionin talo löytyi vasta 1983. Kaivaukset aloitti puolalainen Kazimierz Michałowski kesäkuussa 1965, ja ne jatkuvat yhä; Unesco liitti Paphoksen luetteloonsa 1980.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreeta — kaupunkilehti / Historian hetki: Arkadi 1866 — viimeinen ovi] 9.11.1866 — Nainen painaa lasta vasten seinää ruutivaraston oven takana, kun kirveniskut ulkopuolella yltyvät — kaksi päivää kestänyt taistelu on hävitty, muurit on murrettu, eikä paluuta enää ole. Satoja kapinallisia ja siviilejä on paennut Arkadin luostariin turvaan marraskuussa 1866, mutta ottomaanijoukot ovat piirittäneet sen tykistöllä. Igumeni Gabriel on jo päättänyt, mitä tapahtuu, jos muurit pettävät: ruutivarasto sytytetään mieluummin kuin antaudutaan. Kun ovi vihdoin murtuu, joku laukaisee liekin — räjähdys tappaa puolustajia ja hyökkääjiä yhdessä, ja luostarin pihalta löytyy myöhemmin kuulien lävistämä tuulimylly, joka seisoo siellä yhä. Uutinen tapahtuneesta kulkeutuu nopeasti E…
+- [Kreikka — maalehti / Luonto: Vuohi, jota ei ole missään muualla] nykyään — Kreetan vuorilla elää kri-kri, kesyvuohta pienempi mutta värikkäämpi eläin, jonka sarvet kaartuvat taakse kuin kaksi sapelia. Sitä tavataan vain Kreetalla ja muutamalla asumattomalla pikkusaarella sen edustalla. Vuonna 1960 kri-krejä oli jäljellä alle kaksisataa, ja se oli yksi syy siihen, että Samarian rotkosta tehtiin kansallispuisto vuonna 1962. Nyt niitä on noin kaksituhatta. Lefká Óri -vuoristossa kri-kri laiduntaa vain yöllä, joten vaeltaja näkee sen harvoin. Molekyylitutkimukset paljastivat yllätyksen: kri-kri ei olekaan alkuperäinen villivuohi vaan villiintynyt kesyvuohi.
+AIEMPI KYSYMYS: Mitä Theseuksen huvilan lattiakuva esittää?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: lattiakuvassa [[Theseus]] taistelee [[Minotaurosta]] vastaan. Myytin mukaan Theseus surmasi Minotauroksen [[Kreetan]] labyrintissa, ja juuri tämä kuva antoi huvilalle sen nimen. Tuommoisen lattian päällä kävely vaatisi kyl kunnioitusta.
+KYSYMYS: Kerro lisää: Kreetan
+
+### 232
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Palaipafos (historia)
+Tietoruudun teksti: Vanha Paphos, nykyinen Kouklia, on kukkulalla noin kaksitoista kilometriä uudesta kaupungista kaakkoon. Paikka on ollut asuttu neoliittiselta ajalta, ja siitä tuli antiikin maailman tärkein Afroditen palvontapaikka — jumalattaren myyttinen syntypaikka oli Kypros. Strabonin mukaan Nea Paphoksesta vanhaan kaupunkiin johtava tie täyttyi vuosittain pyhiinvaeltajista. Tacitus kertoo nuoren Tituksen käyneen katsomassa pyhäkköä ja panneen merkille oudon asian: jumalattaresta ei ollut kuvaa lainkaan, vain pyramidin muotoinen kivi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Muinaisuus: Muuri ladottiin viiden metrin laatoista] Kouklian kylässä Pafoksesta itään on Palaipafos eli Vanha Pafos. Sinne pystytettiin noin 1200–1100 eaa. suuri pyhäkkö, ja jumalatarta palvottiin samalla paikalla 300-luvulle jaa. asti. Säilyneet jäännökset muodostuvat kahdesta suorakaiteen muotoisesta osasta. Eteläinen oli avoin piha, jota rajaa lännessä muuri jättimäisistä työstetyistä kalkkikivilaatoista: pisimmät ovat viisi metriä pitkiä ja 2,2 metriä korkeita. Kulttikuva ei esittänyt ihmistä. Roomalainen historioitsija Tacitus kuvaa sen pyöreäksi möhkäleeksi, joka kohoaa leveästä pohjasta kartiona kapeaan huippuun. Alttarilla ei uhrattu verta vaan pelkkiä rukouksia ja puhdasta liekkiä.
+AIEMPI KYSYMYS: Miksi jumalattaresta ei ollut kuvaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kirjailija [[Tacitus]] kertoo nuoren [[Tituksen]] käyneen katsomassa [[Afroditen]] pyhäkköä ja panneen merkille, ettei jumalattaresta ollut kuvaa lainkaan, vain pyramidin muotoinen kivi. Tarkkaa syytä ei tiedetä varmasti. Antiikin maailmassa jumaluutta saatettiin kuitenkin palvoa pyhänä kivenä eikä ihmisen hahmoisena patsaana. Kivi olisi kyllä helpompi kantaa kuin patsas.
+KYSYMYS: Kerro lisää: Tacitus
+
+### 233
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Palaipafos (historia)
+Tietoruudun teksti: Vanha Paphos, nykyinen Kouklia, on kukkulalla noin kaksitoista kilometriä uudesta kaupungista kaakkoon. Paikka on ollut asuttu neoliittiselta ajalta, ja siitä tuli antiikin maailman tärkein Afroditen palvontapaikka — jumalattaren myyttinen syntypaikka oli Kypros. Strabonin mukaan Nea Paphoksesta vanhaan kaupunkiin johtava tie täyttyi vuosittain pyhiinvaeltajista. Tacitus kertoo nuoren Tituksen käyneen katsomassa pyhäkköä ja panneen merkille oudon asian: jumalattaresta ei ollut kuvaa lainkaan, vain pyramidin muotoinen kivi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Washington Squaren riemukaari] 1889–1895 Vuonna 1889 tuli kuluneeksi sata vuotta George Washingtonin virkaanastujaisista, ja liikemies William Rhinelander Stewart pystytti juhlan kunniaksi Viidennelle Avenuelle puusta ja kipsistä tehdyn muistokaaren. Stewart asui aukion pohjoislaidalla, ja hänen ystävänsä keräsivät hankkeeseen 2 765 dollaria. Vapaamuurarit kulkivat juhlakulkueessa kaaren ali Washingtonin virkaanastujaisraamattu mukanaan. Väliaikainen kaari oli niin suosittu, että rahaa kerättiin lisää ja kivinen kaari tilattiin arkkitehti Stanford Whiteltä. White otti mallin roomalaisesta riemukaaresta ja päätyi lähelle ensimmäisellä vuosisadalla rakennettua Tituksen kaarta. Rakennusaine on valkoista Tuckahoen marmoria. …
+AIEMPI KYSYMYS: Miksi jumalattaresta ei ollut kuvaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kirjailija [[Tacitus]] kertoo nuoren [[Tituksen]] käyneen katsomassa [[Afroditen]] pyhäkköä ja panneen merkille, ettei jumalattaresta ollut kuvaa lainkaan, vain pyramidin muotoinen kivi. Tarkkaa syytä ei tiedetä varmasti. Antiikin maailmassa jumaluutta saatettiin kuitenkin palvoa pyhänä kivenä eikä ihmisen hahmoisena patsaana. Kivi olisi kyllä helpompi kantaa kuin patsas.
+KYSYMYS: Kerro lisää: Tituksen
+
+### 234
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Palaipafos (historia)
+Tietoruudun teksti: Vanha Paphos, nykyinen Kouklia, on kukkulalla noin kaksitoista kilometriä uudesta kaupungista kaakkoon. Paikka on ollut asuttu neoliittiselta ajalta, ja siitä tuli antiikin maailman tärkein Afroditen palvontapaikka — jumalattaren myyttinen syntypaikka oli Kypros. Strabonin mukaan Nea Paphoksesta vanhaan kaupunkiin johtava tie täyttyi vuosittain pyhiinvaeltajista. Tacitus kertoo nuoren Tituksen käyneen katsomassa pyhäkköä ja panneen merkille oudon asian: jumalattaresta ei ollut kuvaa lainkaan, vain pyramidin muotoinen kivi.
+AIEMPI KYSYMYS: Miksi jumalattaresta ei ollut kuvaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kirjailija [[Tacitus]] kertoo nuoren [[Tituksen]] käyneen katsomassa [[Afroditen]] pyhäkköä ja panneen merkille, ettei jumalattaresta ollut kuvaa lainkaan, vain pyramidin muotoinen kivi. Tarkkaa syytä ei tiedetä varmasti. Antiikin maailmassa jumaluutta saatettiin kuitenkin palvoa pyhänä kivenä eikä ihmisen hahmoisena patsaana. Kivi olisi kyllä helpompi kantaa kuin patsas.
+KYSYMYS: Kerro lisää: Afroditen
+
+### 235
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Palaipafos (historia)
+Tietoruudun teksti: Vanha Paphos, nykyinen Kouklia, on kukkulalla noin kaksitoista kilometriä uudesta kaupungista kaakkoon. Paikka on ollut asuttu neoliittiselta ajalta, ja siitä tuli antiikin maailman tärkein Afroditen palvontapaikka — jumalattaren myyttinen syntypaikka oli Kypros. Strabonin mukaan Nea Paphoksesta vanhaan kaupunkiin johtava tie täyttyi vuosittain pyhiinvaeltajista. Tacitus kertoo nuoren Tituksen käyneen katsomassa pyhäkköä ja panneen merkille oudon asian: jumalattaresta ei ollut kuvaa lainkaan, vain pyramidin muotoinen kivi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Muinaisuus: Muuri ladottiin viiden metrin laatoista] Kouklian kylässä Pafoksesta itään on Palaipafos eli Vanha Pafos. Sinne pystytettiin noin 1200–1100 eaa. suuri pyhäkkö, ja jumalatarta palvottiin samalla paikalla 300-luvulle jaa. asti. Säilyneet jäännökset muodostuvat kahdesta suorakaiteen muotoisesta osasta. Eteläinen oli avoin piha, jota rajaa lännessä muuri jättimäisistä työstetyistä kalkkikivilaatoista: pisimmät ovat viisi metriä pitkiä ja 2,2 metriä korkeita. Kulttikuva ei esittänyt ihmistä. Roomalainen historioitsija Tacitus kuvaa sen pyöreäksi möhkäleeksi, joka kohoaa leveästä pohjasta kartiona kapeaan huippuun. Alttarilla ei uhrattu verta vaan pelkkiä rukouksia ja puhdasta liekkiä.
+AIEMPI KYSYMYS: Missä Afroditen tärkein pyhäkkö oli?
+AIEMPI VASTAUS (Livia):
+Katotaas. Antiikin maailman tärkein Afroditen palvontapaikka oli [[Palaipafos]] eli Vanha Paphos, nykyinen Kouklia, Kyproksen lounaisosassa kukkulalla noin kaksitoista kilometriä uudesta Paphoksesta kaakkoon. [[Kypros]] oli jumalattaren myyttinen syntypaikka, ja [[Strabonin]] mukaan uudesta kaupungista vanhaan johtava tie täyttyi vuosittain pyhiinvaeltajista. Tuo tie olisi kyl ollut hyvä paikka tiputella leivänmuruja.
+KYSYMYS: Kerro lisää: Palaipafos
+
+### 236
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Palaipafos (historia)
+Tietoruudun teksti: Vanha Paphos, nykyinen Kouklia, on kukkulalla noin kaksitoista kilometriä uudesta kaupungista kaakkoon. Paikka on ollut asuttu neoliittiselta ajalta, ja siitä tuli antiikin maailman tärkein Afroditen palvontapaikka — jumalattaren myyttinen syntypaikka oli Kypros. Strabonin mukaan Nea Paphoksesta vanhaan kaupunkiin johtava tie täyttyi vuosittain pyhiinvaeltajista. Tacitus kertoo nuoren Tituksen käyneen katsomassa pyhäkköä ja panneen merkille oudon asian: jumalattaresta ei ollut kuvaa lainkaan, vain pyramidin muotoinen kivi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Luonto] Kypros on ollut erillään mantereesta niin kauan, että osa sen lajeista on kehittynyt omikseen. Saarella on myös vuoristo, jonka kivilajit eivät muistuta minkään naapurivuoriston kiviä.
+AIEMPI KYSYMYS: Missä Afroditen tärkein pyhäkkö oli?
+AIEMPI VASTAUS (Livia):
+Katotaas. Antiikin maailman tärkein Afroditen palvontapaikka oli [[Palaipafos]] eli Vanha Paphos, nykyinen Kouklia, Kyproksen lounaisosassa kukkulalla noin kaksitoista kilometriä uudesta Paphoksesta kaakkoon. [[Kypros]] oli jumalattaren myyttinen syntypaikka, ja [[Strabonin]] mukaan uudesta kaupungista vanhaan johtava tie täyttyi vuosittain pyhiinvaeltajista. Tuo tie olisi kyl ollut hyvä paikka tiputella leivänmuruja.
+KYSYMYS: Kerro lisää: Kypros
+
+### 237
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Palaipafos (historia)
+Tietoruudun teksti: Vanha Paphos, nykyinen Kouklia, on kukkulalla noin kaksitoista kilometriä uudesta kaupungista kaakkoon. Paikka on ollut asuttu neoliittiselta ajalta, ja siitä tuli antiikin maailman tärkein Afroditen palvontapaikka — jumalattaren myyttinen syntypaikka oli Kypros. Strabonin mukaan Nea Paphoksesta vanhaan kaupunkiin johtava tie täyttyi vuosittain pyhiinvaeltajista. Tacitus kertoo nuoren Tituksen käyneen katsomassa pyhäkköä ja panneen merkille oudon asian: jumalattaresta ei ollut kuvaa lainkaan, vain pyramidin muotoinen kivi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Muinaisuus: Teatterista tehtiin kehä ja takaisin] Kourion oli kaupunkikuningaskunta jyrkänteen päällä etelärannikolla. Herodotos kertoo kourionilaisten polveutuvan Argoksesta tulleista siirtolaisista, ja saman toistaa Strabon; akhaialaiset asettuivat paikalle 1100-luvulla eaa. Teatteri rakennettiin 100-luvulla eaa. ja se oli aluksi pienempi. Nykyiseen kokoonsa se laajennettiin 100-luvulla jaa., jolloin katsomoon mahtui 3 500 katsojaa. 200-luvun alkupuolella teatteri muutettiin areenaksi: näyttämön eteen pystytettiin metalliristikko petoeläinnäytöksiä varten ja kolme alinta istuinriviä purettiin, jotta katsojat olisivat kauempana kehästä. Saman vuosisadan puolivälin jälkeen areena muutettiin takaisin teatteriksi, ja alimmat karkeasti hakatu…
+AIEMPI KYSYMYS: Missä Afroditen tärkein pyhäkkö oli?
+AIEMPI VASTAUS (Livia):
+Katotaas. Antiikin maailman tärkein Afroditen palvontapaikka oli [[Palaipafos]] eli Vanha Paphos, nykyinen Kouklia, Kyproksen lounaisosassa kukkulalla noin kaksitoista kilometriä uudesta Paphoksesta kaakkoon. [[Kypros]] oli jumalattaren myyttinen syntypaikka, ja [[Strabonin]] mukaan uudesta kaupungista vanhaan johtava tie täyttyi vuosittain pyhiinvaeltajista. Tuo tie olisi kyl ollut hyvä paikka tiputella leivänmuruja.
+KYSYMYS: Kerro lisää: Strabonin
+
+### 238
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Palaipafos (historia)
+Tietoruudun teksti: Vanha Paphos, nykyinen Kouklia, on kukkulalla noin kaksitoista kilometriä uudesta kaupungista kaakkoon. Paikka on ollut asuttu neoliittiselta ajalta, ja siitä tuli antiikin maailman tärkein Afroditen palvontapaikka — jumalattaren myyttinen syntypaikka oli Kypros. Strabonin mukaan Nea Paphoksesta vanhaan kaupunkiin johtava tie täyttyi vuosittain pyhiinvaeltajista. Tacitus kertoo nuoren Tituksen käyneen katsomassa pyhäkköä ja panneen merkille oudon asian: jumalattaresta ei ollut kuvaa lainkaan, vain pyramidin muotoinen kivi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Ruoka: Mustaksi kullaksi sanottu palko] Johanneksenleipäpuun palkoja kutsuttiin Kyproksella mustaksi kullaksi. Puu kestää kuivuutta eikä vaadi kastelua, ja palkoja vietiin ennen kaikkea Englantiin ja Ranskaan. Viljely voimistui Limassolin seudulla vuodesta 1854. Sato korjattiin elokuun lopusta alkaen noin kolmen viikon aikana: miehet pudottivat palot kepeillä ja naiset keräsivät ne koreihin. Vuoden 1994 inventaarissa saarella laskettiin 265 000 puuta, ja määrä oli pudonnut 23 prosenttia vuodesta 1977. Vuonna 2012 viljelyala oli 1 709 hehtaaria ja sato 9 123 tonnia; vuoteen 2022 mennessä ala oli laskenut 1 340 hehtaariin. Paloista keitetään siirappia: niitä haudutetaan vedessä suuressa astiassa muutaman tunnin, minkä jälkeen neste…
+AIEMPI KYSYMYS: Miten Afrodite syntyi myytin mukaan?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Kreikkalaisen myytin mukaan Afrodite nousi meren vaahdosta ja saapui rantaan [[Kyproksella]], minkä vuoksi saarta pidettiin hänen syntypaikkanaan. Siksi saari ja erityisesti [[Palaipafos]] liitettiin hänen palvontaansa, ja paikasta tuli antiikin maailman tärkein Afroditen palvontapaikka. Vaahdosta syntyminen kuulostaa kyl pullataikinalta.
+KYSYMYS: Kerro lisää: Kyproksella
+
+### 239
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Palaipafos (historia)
+Tietoruudun teksti: Vanha Paphos, nykyinen Kouklia, on kukkulalla noin kaksitoista kilometriä uudesta kaupungista kaakkoon. Paikka on ollut asuttu neoliittiselta ajalta, ja siitä tuli antiikin maailman tärkein Afroditen palvontapaikka — jumalattaren myyttinen syntypaikka oli Kypros. Strabonin mukaan Nea Paphoksesta vanhaan kaupunkiin johtava tie täyttyi vuosittain pyhiinvaeltajista. Tacitus kertoo nuoren Tituksen käyneen katsomassa pyhäkköä ja panneen merkille oudon asian: jumalattaresta ei ollut kuvaa lainkaan, vain pyramidin muotoinen kivi.
+AIEMPI KYSYMYS: Kuka oli Tacitus?
+AIEMPI VASTAUS (Livia):
+No jopas. Tacitus oli roomalainen historioitsija, joka eli ensimmäisen ja toisen vuosisadan vaihteessa. Hänen tunnetuimpia teoksiaan ovat [[Annales]] ja [[Germania]]. [[Palaipafoksen]] yhteydessä hän kertoo nuoren [[Tituksen]] käyneen katsomassa pyhäkköä ja havainneen, ettei jumalattaresta ollut kuvaa lainkaan, vain pyramidin muotoinen kivi. Hyvä että joku kirjoitti muistiin, minä vain kannoin kirjeet.
+KYSYMYS: Kerro lisää: Annales
+
+### 240
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Palaipafos (historia)
+Tietoruudun teksti: Vanha Paphos, nykyinen Kouklia, on kukkulalla noin kaksitoista kilometriä uudesta kaupungista kaakkoon. Paikka on ollut asuttu neoliittiselta ajalta, ja siitä tuli antiikin maailman tärkein Afroditen palvontapaikka — jumalattaren myyttinen syntypaikka oli Kypros. Strabonin mukaan Nea Paphoksesta vanhaan kaupunkiin johtava tie täyttyi vuosittain pyhiinvaeltajista. Tacitus kertoo nuoren Tituksen käyneen katsomassa pyhäkköä ja panneen merkille oudon asian: jumalattaresta ei ollut kuvaa lainkaan, vain pyramidin muotoinen kivi.
+AIEMPI KYSYMYS: Kuka oli Tacitus?
+AIEMPI VASTAUS (Livia):
+No jopas. Tacitus oli roomalainen historioitsija, joka eli ensimmäisen ja toisen vuosisadan vaihteessa. Hänen tunnetuimpia teoksiaan ovat [[Annales]] ja [[Germania]]. [[Palaipafoksen]] yhteydessä hän kertoo nuoren [[Tituksen]] käyneen katsomassa pyhäkköä ja havainneen, ettei jumalattaresta ollut kuvaa lainkaan, vain pyramidin muotoinen kivi. Hyvä että joku kirjoitti muistiin, minä vain kannoin kirjeet.
+KYSYMYS: Kerro lisää: Germania
