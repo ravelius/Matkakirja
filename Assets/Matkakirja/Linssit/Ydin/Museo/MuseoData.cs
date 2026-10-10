@@ -18,6 +18,15 @@ namespace Matkakirja.Linssit.Museo
         public double PuolikulmaAste, Reunahaive, Lx, Kelvin;
     }
 
+    /// <summary>Veistospaikka (sali.json "veistospaikat", LR): jalusta (alapinnan keskipiste, koko m), veistoksen alapinnan keskipiste
+    /// (Paikka, jalustan päällä), suurin koko [x, y, z] m, katse ja omat valokeilat. Veistos = patsas-id (veistokset.json) tai null.</summary>
+    public sealed class Jalusta
+    {
+        public string Id, Osa, Ehdotus, Veistos;
+        public V3 AlaKeski, Koko, Paikka, MaxKoko, Katse;
+        public readonly List<Valokeila> Valot = new List<Valokeila>();
+    }
+
     public sealed class Teospaikka
     {
         public string Id, Osa, Seina, Sopii, Kehysprofiili, Ehdotus;
@@ -119,6 +128,21 @@ namespace Matkakirja.Linssit.Museo
         public readonly List<Tekstitaulu> Tekstitaulut = new List<Tekstitaulu>();
         /// <summary>Veistospaikkojen tunnukset (sali.json "veistospaikat"; veistokset GLB:inä myöhemmin, nyt reitin kulkupisteitä).</summary>
         public readonly HashSet<string> Veistospaikat = new HashSet<string>(StringComparer.Ordinal);
+        /// <summary>Veistospaikat kokonaisina (MuseoVeistokset, Natiiviseppä); Veistos täytetään LueVeistokset-kutsulla.</summary>
+        public readonly List<Jalusta> Jalustat = new List<Jalusta>();
+        public Jalusta HaeJalusta(string id) => Jalustat.Find(j => j.Id == id);
+
+        /// <summary>veistokset.json {"sijoitus": {veistospaikka-id: patsas-id}} → Jalusta.Veistos; tuntemattomat paikat ohitetaan.
+        /// Palauttaa sijoitettujen määrän.</summary>
+        public int LueVeistokset(string json)
+        {
+            int n = 0;
+            foreach (var j in Jalustat) j.Veistos = null;
+            if (MiniJson.ObjektiTaiNull(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(json)), "sijoitus")) is { } d)
+                foreach (var kv in d)
+                    if (HaeJalusta(kv.Key) is { } j && kv.Value is string v && v.Length > 0) { j.Veistos = v; n++; }
+            return n;
+        }
         public readonly List<Teos> Teokset = new List<Teos>();
         public readonly List<Ripustus> Ripustukset = new List<Ripustus>();
         public readonly List<Huone> Huoneet = new List<Huone>();
@@ -235,7 +259,29 @@ namespace Matkakirja.Linssit.Museo
                     s.Kehykset[kv.Key] = k;
                 }
             foreach (var o in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(j, "veistospaikat")))
-                if (MiniJson.Teksti(MiniJson.Objekti(o), "id") is string vid) s.Veistospaikat.Add(vid);
+            {
+                var d = MiniJson.Objekti(o);
+                if (!(MiniJson.Teksti(d, "id") is string vid)) continue;
+                s.Veistospaikat.Add(vid);
+                var ja = MiniJson.ObjektiTaiNull(MiniJson.Kentta(d, "jalusta"));
+                var jal = new Jalusta
+                {
+                    Id = vid, Osa = MiniJson.Teksti(d, "osa"), Ehdotus = MiniJson.Teksti(d, "teos_ehdotus"),
+                    AlaKeski = ja != null ? Vektori(MiniJson.Kentta(ja, "keskipiste_ala")) : default, Koko = ja != null ? Vektori(MiniJson.Kentta(ja, "koko")) : default,
+                    Paikka = Vektori(MiniJson.Kentta(d, "paikka")), MaxKoko = Vektori(MiniJson.Kentta(d, "max_koko")), Katse = Vektori(MiniJson.Kentta(d, "katse")),
+                };
+                foreach (var vo in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(d, "valot")))
+                {
+                    var vk = MiniJson.Objekti(vo);
+                    jal.Valot.Add(new Valokeila
+                    {
+                        Paikka = Vektori(MiniJson.Kentta(vk, "paikka")), Suunta = Vektori(MiniJson.Kentta(vk, "suunta")),
+                        PuolikulmaAste = MiniJson.Luku(vk, "puolikulma_aste") ?? 22, Reunahaive = MiniJson.Luku(vk, "reunahaive") ?? 0.35,
+                        Lx = MiniJson.Luku(vk, "lx") ?? 200, Kelvin = MiniJson.Luku(vk, "kelvin") ?? 3200,
+                    });
+                }
+                s.Jalustat.Add(jal);
+            }
             foreach (var o in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(j, "tekstitaulut")))
             {
                 var d = MiniJson.Objekti(o);

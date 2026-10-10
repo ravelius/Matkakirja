@@ -243,7 +243,8 @@ namespace Matkakirja.Natiivi
             return Path.Combine(Application.temporaryCachePath, "museo", i >= 0 ? url.Substring(i + 12) : url.GetHashCode().ToString("x8"));
         }
 
-        static IEnumerator Hae(string url, Action<byte[]> valmis)
+        /// <summary>Lataus levyvälimuistin kautta (myös MuseoRakennus.LataaSali).</summary>
+        internal static IEnumerator Hae(string url, Action<byte[]> valmis)
         {
             string polku = Valimuisti(url);
             if (File.Exists(polku)) { byte[] b = null; try { b = File.ReadAllBytes(polku); } catch { } if (b != null) { valmis(b); yield break; } }

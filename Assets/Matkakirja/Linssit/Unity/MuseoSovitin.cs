@@ -5,7 +5,7 @@
 // Linnanrakentajan reitti, tauko/seuraava/edellinen), vapaa kulku (SeikkailuTapit: vasen tappi liike, veto katse) ja teoksen
 // esittely napista (MuseoTaulu, KORTTI-pohja). Näyttämö dioraaman tapaan omassa kerroksessa ja kuvassa (MuseoNayttamo).
 // Testikomennot (linssi-komento.txt): "linssi taidemuseo" avaa; "museo tila|kierros|vapaa|seuraava|edellinen|tauko 0|1|
-// siirry <n>|esittele [0|1]|liiku <eteen> <sivulle> <kääntö> <s>|katse <yaw> <pitch>|valotus <ev>".
+// siirry <n>|esittele [0|1]|liiku <eteen> <sivulle> <kääntö> <s>|katse <yaw> <pitch>|valotus <ev>|huone [0|1]|sali glb|halli|lod0|lod1|auto"; "museo kuvajuuri <url|pois>", "museo astc pois".
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -42,6 +42,11 @@ namespace Matkakirja.Natiivi
         public static string KuvaJuuri = "https://media.matkakirja.app/taidemuseo/alankomaat/";
         /// <summary>ASTC-seinätaso ja yksityiskohtaruudut (MuseoTekstuurit); false = vain JPEG-seinäkuvat ("museo astc pois").</summary>
         public static bool Astc = true;
+        /// <summary>LR:n sali-GLB väliaikaishallin tilalle (KuvaJuuri + "sali-v1/"); false = väliaikaishalli ("museo sali halli").</summary>
+        public static bool SaliGlb = true;
+        /// <summary>Sali-GLB:n taso: 0 = 13 k kolmiota + atlas 4096² (22 Mt), 1 = 7,8 k + 2048² (5,6 Mt); −1 = laitteen muistin mukaan.</summary>
+        public static int SaliLod = -1;
+        static int SaliTaso => SaliLod >= 0 ? SaliLod : SystemInfo.systemMemorySize >= 7000 ? 0 : 1;
 
         readonly LinssiOhjain o;
         readonly PalloKierto kierto;
@@ -92,6 +97,13 @@ namespace Matkakirja.Natiivi
                 Resources.UnloadAsset(huoneetJson);
             }
             NykyinenHuone = null; HuoneKorttiAuki = false;
+            var veistoksetJson = Resources.Load<TextAsset>("Museo/alankomaat/veistokset");
+            if (veistoksetJson != null)
+            {
+                try { o.Kirjaa($"museo: veistoksia sijoitettu {sali.LueVeistokset(veistoksetJson.text)}/{sali.Jalustat.Count}"); }
+                catch (Exception e) { o.Kirjaa("museo: veistokset.json virheellinen: " + e.Message); }
+                Resources.UnloadAsset(veistoksetJson);
+            }
 
             Auki = true;
             Aktiivinen = this;
@@ -107,6 +119,7 @@ namespace Matkakirja.Natiivi
             if (!rakennus.Varjostin) o.Kirjaa("museo: MuseoValaistu-varjostin puuttuu tai ei tuettu");
             rakennus.Rakenna(sali);
             nayttamo.AsetaKeilat(sali);
+            if (SaliGlb && !string.IsNullOrEmpty(KuvaJuuri)) o.StartCoroutine(rakennus.LataaSali(KuvaJuuri, SaliTaso, o.Kirjaa));
             // ASTC (MuseoTekstuurit) on ensisijainen; JPEG vain sen puuttuessa, ettei myöhässä valmistuva JPEG ylikirjoita seinätasoa.
             if (!Astc && !string.IsNullOrEmpty(KuvaJuuri)) o.StartCoroutine(rakennus.LataaKuvat(sali, KuvaJuuri, o.Kirjaa));
             Kierros = new MuseoKierros(sali);
@@ -245,6 +258,15 @@ namespace Matkakirja.Natiivi
             {
                 KuvaJuuri = osat.Length > 2 && osat[2] != "pois" ? (osat[2].EndsWith("/") ? osat[2] : osat[2] + "/") : null;
                 o.Kirjaa("museo: kuvajuuri " + (KuvaJuuri ?? "pois (paikkakuvat)") + (Auki ? " (voimaan seuraavassa avauksessa)" : ""));
+                return;
+            }
+            if (k == "sali")
+            {
+                string a = osat.Length > 2 ? osat[2] : "";
+                if (a == "halli") SaliGlb = false; else if (a == "glb") SaliGlb = true;
+                else if (a == "lod0" || a == "lod1") { SaliGlb = true; SaliLod = a[3] - '0'; }
+                else if (a == "auto") SaliLod = -1;
+                o.Kirjaa($"museo: sali {(SaliGlb ? "glb lod" + SaliTaso : "väliaikaishalli")}{(rakennus?.SaliGlb == true ? " (nyt glb)" : "")}" + (Auki ? " (voimaan seuraavassa avauksessa)" : ""));
                 return;
             }
             if (k == "astc")

@@ -102,6 +102,19 @@ namespace Matkakirja.Natiivi
                 var suunta = U(k.Suunta).normalized;
                 keilat.Add(new Keila { P = U(k.Paikka), D = suunta, CosUlko = (float)ulko, CosSisa = (float)sisa, Vari = new Vector3((float)(c.R * I), (float)(c.G * I), (float)(c.B * I)) });
             }
+            // Veistosten keilat (vain sijoitetuille): lx veistoksen keskikorkeudella, pinta valoa kohti.
+            foreach (var j in s.Jalustat)
+            {
+                if (j.Veistos == null) continue;
+                var kohde = j.Paikka + new Linssit.Dioraama.V3(0, j.MaxKoko.Y * 0.4, 0);
+                foreach (var k in j.Valot)
+                {
+                    double I = MuseoValo.Voimakkuus(k, kohde, k.Paikka - kohde);
+                    var (ulko, sisa) = MuseoValo.Kartio(k);
+                    var c = MuseoValo.Kelvin(k.Kelvin);
+                    keilat.Add(new Keila { P = U(k.Paikka), D = U(k.Suunta).normalized, CosUlko = (float)ulko, CosSisa = (float)sisa, Vari = new Vector3((float)(c.R * I), (float)(c.G * I), (float)(c.B * I)) });
+                }
+            }
         }
 
         /// <summary>Joka ruutu: kameran asento, lähimmät keilat ja osan hajavalo/valotus (pehmeä siirtymä osasta toiseen).</summary>

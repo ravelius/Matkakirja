@@ -1,0 +1,12 @@
+{
+ "versio": 1,
+ "huomio": "LS1 10.10.: veistospaikka (sali.json veistospaikat, LR) → patsas-id (Sisältökirjuri teokset.patsaat.v2.json; paketti astc-v1/patsaat/<id>/, Natiiviseppä). Rijks-paikat LR:n teos_ehdotuksen tekijän mukaan; yv-v1/v2 = LR:n oma mallinnus (ei patsasta); Leidenin 12 paikkaa odottavat valintaa (Sisältökirjuri/LR, max 0,8 × 1,9 × 0,8 m).",
+ "sijoitus": {
+  "aula-v1": "rijks-ccby-keyser-mies",
+  "aula-v2": "rijks-ccby-keyser-oranian-vilhelm",
+  "aula-v3": "rijks-ccby-verhulst-van-liere",
+  "aula-v4": "rijks-ccby-dieussart-spiering",
+  "kg-v1": "rijks-ccby-houdon-suffren",
+  "kg-v2": "rijks-ccby-falconet-cupido"
+ }
+}

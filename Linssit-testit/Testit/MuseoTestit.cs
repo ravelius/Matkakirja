@@ -90,6 +90,48 @@ namespace Matkakirja.Linssit.Testit
             }
         }
 
+        // LR:n sali-GLB (MuseoRakennus.LataaSali): DioraamaGlb lukee sen, jokaisella osalla on valoatlaksen UV1 (0–1), ja tekstuuroidun
+        // materiaalin nimi on pinnan nimi (paketin tekstuurit/<nimi>.astcm). Ajetaan, kun LR:n paketti on koneella (muuten ohitetaan).
+        [Testi] static void SaliGlb()
+        {
+            const string lr = "/Users/Shared/Claude/proto-3d/_valmiit/taidemuseo-alankomaat-v1/glb/";
+            if (!Directory.Exists(lr)) return;
+            foreach (var lod in new[] { 0, 1 })
+            {
+                var m = DioraamaGlb.Lue(File.ReadAllBytes(lr + $"sali-lod{lod}.glb"), true);
+                Oleta.Tosi(m.Osat.Count == 18, $"lod{lod}: 18 materiaalia: {m.Osat.Count}");
+                int kolmiot = 0;
+                foreach (var o in m.Osat)
+                {
+                    kolmiot += o.Kolmiot.Length / 3;
+                    Oleta.Tosi(o.Uv1 != null && o.Uv1.Length == o.Paikat.Length / 3 * 2, $"lod{lod} {o.Pinta}: UV1 jokaisella kärjellä");
+                    bool rajoissa = true; foreach (var u in o.Uv1) if (u < -1e-4 || u > 1 + 1e-4) rajoissa = false;
+                    Oleta.Tosi(rajoissa, $"lod{lod} {o.Pinta}: UV1 atlaksen sisällä");
+                }
+                var lattia = m.Osat.Find(o => o.Pinta == "parketti_kalanruoto");
+                Oleta.Tosi(lattia != null && lattia.Kuva >= 0, $"lod{lod}: parketti tekstuuroitu, pinta = materiaalin nimi");
+                // Unity-kehys: kävijä etenee +Z:aan (glTF −Z), joten salin syvin kohta (Yövartio, z ≈ −90 glTF) on +Z:ssa.
+                float zmax = float.MinValue; foreach (var o in m.Osat) for (int i = 2; i < o.Paikat.Length; i += 3) zmax = Math.Max(zmax, o.Paikat[i]);
+                Oleta.Tosi(zmax > 85, $"lod{lod}: Unity-kehyksessä sali +Z:ssa ({zmax:F1})");
+                Oleta.Tosi(kolmiot > 5000 && kolmiot < 20000, $"lod{lod}: {kolmiot} kolmiota");
+            }
+        }
+
+        // Veistospaikat (sali.json) ja sijoitus (veistokset.json): jalusta lattialla, veistos jalustan päällä, keilat ylhäältä.
+        [Testi] static void Jalustat()
+        {
+            var s = Alankomaat();
+            Oleta.Tosi(s.Jalustat.Count == 20 && s.Jalustat.Count == s.Veistospaikat.Count, $"20 veistospaikkaa: {s.Jalustat.Count}");
+            foreach (var j in s.Jalustat)
+            {
+                Oleta.Tosi(s.HaeOsa(j.Osa)?.Sisalla(j.Paikka) == true, $"{j.Id} osassa {j.Osa}");
+                Oleta.Tosi(Math.Abs(j.AlaKeski.Y) < 1e-6 && Math.Abs(j.Paikka.Y - j.Koko.Y) < 1e-6 && j.MaxKoko.Y > 1, $"{j.Id}: jalusta lattialla, veistos sen päällä");
+                Oleta.Tosi(j.Valot.Count >= 1 && j.Valot.TrueForAll(v => v.Paikka.Y > j.Paikka.Y + 2 && v.Lx > 0), $"{j.Id}: keilat ylhäältä");
+            }
+            int n = s.LueVeistokset(File.ReadAllText(Polku("Assets", "Matkakirja", "Linssit", "Resources", "Museo", "alankomaat", "veistokset.json")));
+            Oleta.Tosi(n == 6 && s.HaeJalusta("aula-v4").Veistos == "rijks-ccby-dieussart-spiering" && s.HaeJalusta("leiden-v1").Veistos == null, $"sijoitus: {n}");
+        }
+
         [Testi] static void HalliJaAukot()
         {
             var s = Alankomaat();
