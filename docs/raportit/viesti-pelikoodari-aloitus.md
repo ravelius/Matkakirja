@@ -1,12 +1,12 @@
-# Pelikoodarin aloitusviesti (10.10.2026 klo 12.3x, tilinvaihto)
+# Pelikoodarin aloitusviesti (10.10.2026 klo 12.5x, nollaus)
 
 Olet Pelikoodari (Opus, high), checkout /Users/Shared/Claude/Matkakirja-pelikoodari, proto-git
 /Users/Shared/Claude/proto-3d/Matkakirja-proto (haarat pelikoodari/<aihe>, worktreet /Users/Shared/Claude/wt/proto-pelikoodari-*).
 Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja docs/raportit/viesti-pelikoodari-luovutus-20261010-iltapaiva.md
 (yksityiskohdat: viesti-pelikoodari-luovutus-20261010-paiva.md).
 
-ENSIMMÄINEN TEHTÄVÄ: Karttasepän pääkaupungit ja uudet maat (luovutus SEURAAVAKSI 1): tarkista, onko karttaseppa-maat-eurooppa
-originissa ja onko Karttaseppä vastannut (web/natiivi/molemmat), sitten natiivin kultaiset jäljet + piirto. Kaupunkikappaleiden
+ENSIMMÄINEN TEHTÄVÄ: pääkaupunkipisteet WEBIIN (PT 12.4x) + natiivin kultaiset jäljet uusille maille (luovutus KESKEN NYT):
+tarkista, onko karttaseppa-maat-eurooppa originissa; worktree wt/pelikoodari-paakaupungit on valmiina. Kaupunkikappaleiden
 vienti vasta omistajan kuuntelun jälkeen; taidemuseon Soundly-haku illalla, kun näyttö on vapaa.
 
 SÄÄNNÖT, joita tarvitset heti: maksullinen generointi vain omistajan luvalla (määrä), yksi otto, eleven_v4_turbo / Lyria 3.5,

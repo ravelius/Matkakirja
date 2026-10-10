@@ -1,4 +1,4 @@
-# Pelikoodarin luovutus 10.10.2026 klo 12.3x (TILINVAIHTO, PT 12.4x)
+# Pelikoodarin luovutus 10.10.2026 klo 12.5x (NOLLAUS 52 %, PT; tilinvaihto siirtyi junan 177 jälkeen)
 
 Yksityiskohdat: docs/raportit/viesti-pelikoodari-luovutus-20261010-paiva.md (kohdat 2–2e). Ei keskeneräisiä muutoksia:
 checkout puhdas, kaikki worktreet committattu ja pushattu.
@@ -13,7 +13,16 @@ checkout puhdas, kaikki worktreet committattu ja pushattu.
 - Kaupunkikappaleet erä 1 (16, Lyria 3.5, 1,28 $): proto-3d/_tyo/kaupunkikappaleet-20261010/ (EHDOTUS.md) → PT vie äänisivulle
   → omistaja kuuntelee.
 
-## SEURAAVAKSI (järjestyksessä)
+## KESKEN NYT
+- **Pääkaupunkipisteet webiin** (PT 12.4x: piirto WEBISSÄ Karttasepän skeemalla). Worktree wt/pelikoodari-paakaupungit
+  (haara pelikoodari-paakaupungit, origin/main, ei muutoksia). Karttasepän haara karttaseppa-maat-eurooppa EI ollut vielä
+  originissa klo 12.5x (muutokset Karttasepän worktreessa committaamatta; Karttaseppä nollautui). Tarkista `git ls-remote origin
+  | grep maat-eurooppa` tai Karttasepän PR. Webin pallokartta: js/pallolauta/lauta.js (kaupungit-kerros ~r. 2069, pisteet
+  ~r. 4235, merkit.js, nimet.js = nimien karsinta), maakortti js/pallolauta/maapaneeli.js. Kysymykseni Karttasepälle
+  (data natiiville viennin kautta?) jäi vastaamatta → kysy uudelta Karttasepältä.
+- **Pöllön Peking-kokeilu** VALMIS: #4343 julkaistu, tuotannossa todennettu (giza-otsake → Peking näkyy, ilman ei); LS2 ajaa kuvat.
+- **ISS-äänierä 1**: PT:n äänisivulla, odottaa omistajan valintaa → vienti aanet/iss-v1/ + kytkentä (luovutus paiva kohta 1).
+
 1. **Karttasepän pääkaupungit** (PT 12.2x): kun haara karttaseppa-maat-eurooppa on originissa / PR auki: päivitä natiivin kultaiset
    jäljet uusille maille (AND, LIE, MCO, SMR, VAT; liput, kysymysjälki, pelijälki: proto Peli-testit/Kultaiset tee-*.mjs →
    kaanna.sh) ja tee pääkaupunkipisteiden piirto (js/packs/paakaupungit.js PAAKAUPUNKIPISTEET; olemassa oleva kaupunkimerkki ja nimi
