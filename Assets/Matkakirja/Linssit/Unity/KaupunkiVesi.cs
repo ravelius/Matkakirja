@@ -53,9 +53,9 @@ namespace Matkakirja.Natiivi
 
         // MITATTU VEDEN VÄRI (LS2 10.10.; Karttaseppä vesi/vari-v1, Sentinel-2): VesiPinta sekoittaa _Syva-sävyn mitattuun syvän ja matalan
         // (rannan 0–15 m) veden väriin voimalla VariVoima; kärjen uv.y = vesistö (Ydin VesiVari.Tunniste: Tukholmassa 0 Saltsjön, 1 makea).
-        // Mitattu heijastus on ~2× nykyisen _Syva-sävyn tasoa, joten Kerroin skaalaa (kuvapari ratkaisee). Asetukset vesivari 0|1, vesivarikerroin.
+        // Mitattu heijastus on ~2× nykyisen _Syva-sävyn tasoa, kerroin 1 (PT 10.10. 09.2x kuvaparin perusteella; 0,5 liian hento). Asetukset vesivari 0|1, vesivarikerroin.
         public static bool Vari = true;
-        public static float VariKerroin = 0.5f;
+        public static float VariKerroin = 1f;
         static string variJson; static bool variPyydetty; static string variAvain;
         static readonly int IdSyva0 = Shader.PropertyToID("_VesiSyva0"), IdSyva1 = Shader.PropertyToID("_VesiSyva1"),
             IdMatala0 = Shader.PropertyToID("_VesiMatala0"), IdMatala1 = Shader.PropertyToID("_VesiMatala1"), IdVariVoima = Shader.PropertyToID("_VesiVariVoima");
