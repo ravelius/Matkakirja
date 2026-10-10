@@ -272,7 +272,10 @@ namespace Matkakirja.Linssit.Testit
 
         // Vasa-arkki 9.10. 17.54: kierroksella kääntöraja piti saapumisen lentosuunnassa (99° → 88°) ja kaaret kiersivät seuraavaa
         // kohdetta (Skansen) kohti → oman katse_suunnan kohteella lennon kaari pois ja pysähdyksen kaari päättyy katsesuuntaan.
-        public static (double saapui, double loppu, double silmaSaapui, double silmaMin) KierrosSaapumisSuuntima(bool katse)
+        // 10.10. (PT: katse_suunta = kierron aloitus- tai keskikulma, pallo ei pysähdy): kierto kulkee katsesuunnan kautta (keskikulma,
+        // OpasSilmukka.PalloKatseKaariMinAst) eikä pysähdy siihen; tarkistus: pienin ero katsesuuntaan pysähdyksellä.
+        public static (double saapui, double loppu, double silmaSaapui, double silmaMin) KierrosSaapumisSuuntima(bool katse) => KierrosSaapumisSuuntima(katse, out _);
+        public static (double saapui, double loppu, double silmaSaapui, double silmaMin) KierrosSaapumisSuuntima(bool katse, out double lahinKatseeseen)
         {
             bool p0 = OpasSilmukka.PalloLento; OpasSilmukka.PalloLento = true;
             try
@@ -285,6 +288,7 @@ namespace Matkakirja.Linssit.Testit
                 s.Aloita("Tukholma");
                 s.AloitaKierros(jono);
                 const double dt = 1 / 30.0; int vastattu = 0; double saapui = double.NaN, loppu = double.NaN, silmaSaapui = double.NaN, silmaMin = double.MaxValue;
+                lahinKatseeseen = double.MaxValue;
                 for (; t < 400; t += dt)
                 {
                     while (vastattu < pyynnot.Count)
@@ -302,6 +306,7 @@ namespace Matkakirja.Linssit.Testit
                         double silma = s.Asento.KatseKorkeusM + s.Asento.EtaisyysM * Math.Cos(s.Asento.Kallistus * Math.PI / 180);
                         if (double.IsNaN(saapui)) { saapui = s.Asento.Suuntima; silmaSaapui = silma; }
                         loppu = s.Asento.Suuntima; silmaMin = Math.Min(silmaMin, silma);
+                        lahinKatseeseen = Math.Min(lahinKatseeseen, Math.Abs(KierrosLento.Kiedo(s.Asento.Suuntima - 40)));
                     }
                     else if (!double.IsNaN(saapui)) break;
                     double kesto = s.Nykyinen?.Id == "Vasa-museo" ? 40 : 5;
@@ -314,10 +319,11 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void KierroksellaPysahdysKiertaaKatseSuuntaan()
         {
-            var ilman = KierrosSaapumisSuuntima(false); var kanssa = KierrosSaapumisSuuntima(true);
-            string m = $"Vasa kierroksella: ilman kenttää {ilman.saapui:F0}° → {ilman.loppu:F0}°, katse 40°: {kanssa.saapui:F0}° → {kanssa.loppu:F0}°";
+            var ilman = KierrosSaapumisSuuntima(false); var kanssa = KierrosSaapumisSuuntima(true, out double lahin);
+            string m = $"Vasa kierroksella: ilman kenttää {ilman.saapui:F0}° → {ilman.loppu:F0}°, katse 40°: {kanssa.saapui:F0}° → {kanssa.loppu:F0}° (lähimmillään {lahin:F1}°)";
             Oleta.Tosi(!double.IsNaN(ilman.loppu) && !double.IsNaN(kanssa.loppu), "Vasaan perille: " + m);
-            Oleta.Tosi(Math.Abs(KierrosLento.Kiedo(kanssa.loppu - 40)) < 5, "pysähdyksen kaari päättyy katsesuuntaan: " + m);
+            Oleta.Tosi(lahin < 2, "pysähdyksen kierto kulkee katsesuunnan kautta: " + m);
+            Oleta.Tosi(Math.Abs(KierrosLento.Kiedo(kanssa.loppu - 40)) <= OpasSilmukka.PalloKatseKaariMinAst + 5, "kierto päättyy enintään katse_kaaren verran katsesuunnan yli: " + m);
             Oleta.Tosi(kanssa.silmaMin >= kanssa.silmaSaapui - 6, $"kierre ei laske saapumiskorkeutta alemmas: {kanssa.silmaSaapui:F0} → min {kanssa.silmaMin:F0} m (ilman kenttää {ilman.silmaSaapui:F0} → {ilman.silmaMin:F0} m)");
         }
 
@@ -432,8 +438,10 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(!s.Siirtymassa, "mittausajan jälkeen ≥ 95 % → siirtoruutu pois");
         }
 
-        // Omistaja 8.10. 08.3x (liikemalli): esittelyn aikana pallo lipuu kohti seuraavaa, kamera pysyy nykyisessä kohteessa;
-        // lipuminen pysähtyy pehmeästi ennen lentoa (lento alkaa levosta).
+        // Omistaja 8.10. 08.3x (liikemalli): esittelyn aikana pallo liikkuu, kamera pysyy nykyisessä kohteessa. 10.10. (omistaja: "pallon
+        // pitää jäädä selvästi liikkeeseen kiertämään kohdetta"; PT): KUMOTTU "lipuminen pysähtyy pehmeästi ennen lentoa (lento alkaa
+        // levosta)" ja "lipuu kohti seuraavaa" — kierto jatkuu lennon saapumisen suuntaan (seuraava ei ollut tiedossa lennon alussa),
+        // ja lento lähtee kierron vauhdista (OpasSilmukka.AsetaLahtoJatko).
         [Testi] static void PalloLipuuKohtiSeuraavaaKatseNykyisessa()
         {
             OpasSilmukka.PalloLento = true;
@@ -447,19 +455,17 @@ namespace Matkakirja.Linssit.Testit
                 for (int i = 0; i < 800 && s.Vaihe != OpasVaihe.Puhuu; i++) s.Paivita(0.05, _ => 35);
                 s.Vastaus(p[^1].n, K("B", 48.8611, 2.3358));
                 var alku = OpasKuvaus.KameraPaikka(s.Asento, 48.8530, 2.3498);
-                double bE = (2.3358 - 2.3498) * 6371000 * Math.Cos(48.853 * Math.PI / 180) * Math.PI / 180, bN = (48.8611 - 48.8530) * 6371000 * Math.PI / 180;
-                double Etaisyys((double e, double n, double u) x) => Math.Sqrt((x.e - bE) * (x.e - bE) + (x.n - bN) * (x.n - bN));
                 double maks = 0;
                 for (int i = 0; i < 300; i++) { s.Paivita(0.05, _ => 35); maks = Math.Max(maks, s.LipumisVauhti); }   // 15 s esittelyä
                 var nyt = OpasKuvaus.KameraPaikka(s.Asento, 48.8530, 2.3498);
                 Oleta.Tosi(KierrosLento.EtaisyysM(s.Asento.Lat, s.Asento.Lon, 48.8530, 2.3498) < 1, "katse pysyy nykyisessä kohteessa");
-                // 8.10. ilta (omistaja "jää liian kauas"): lipuminen skaalataan kehyksen koolla ja rajataan 1,2 × vaakaetäisyyteen.
-                Oleta.Tosi(Etaisyys(nyt) < Etaisyys(alku) - 10, $"silmä lähestyi seuraavaa ({Etaisyys(alku):F0} → {Etaisyys(nyt):F0} m)");
+                double kierto = Math.Abs(KierrosLento.Kiedo((Math.Atan2(nyt.n, nyt.e) - Math.Atan2(alku.n, alku.e)) * 180 / Math.PI));
+                Oleta.Tosi(kierto >= 10, $"silmä kiertää kohdetta ({kierto:F0}° 15 s:ssa)");
                 Oleta.Tosi(maks <= OpasKuvaus.KaariNopeusMS + 1e-9 && maks > 1, $"vauhti enintään {OpasKuvaus.KaariNopeusMS} m/s ({maks:F1})");
                 s.AaniLoppui();
                 double vauhtiLahtiessa = double.NaN;
                 for (int i = 0; i < 400 && s.Vaihe != OpasVaihe.Lentaa; i++) { vauhtiLahtiessa = s.LipumisVauhti; s.Paivita(0.05, _ => 35); }
-                Oleta.Tosi(s.Vaihe == OpasVaihe.Lentaa && vauhtiLahtiessa < 0.05, $"lipuminen pysähtyi ennen lentoa ({vauhtiLahtiessa:F2} m/s)");
+                Oleta.Tosi(s.Vaihe == OpasVaihe.Lentaa && vauhtiLahtiessa > 0.3, $"lento lähtee kierron vauhdista ({vauhtiLahtiessa:F2} m/s)");
             }
             finally { OpasSilmukka.PalloLento = false; }
         }
