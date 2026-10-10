@@ -33,11 +33,9 @@ const POIKKEUKSET = {
   falkland: 'Falklandinsaaret (GBR), ei Britannian muodossa',
   sanambrosio: 'Desventuradas-saaret (CHL), pudonneet pienet saaret',
   // Aluemerkit ja luontokohteet: laudan oma piste, ei asutusta (7.9.2026 linjaus).
-  alpit: 'Alpit, aluemerkki Sveitsin ja Ranskan rajalla',
   titicaca: 'Titicaca, Perun ja Bolivian rajajärvi',
   sthelena: 'Saint Helena, muodossa vain pääsaari (sade 200)',
   sahalin: 'Sahalin, saaren aluemerkki salmen puolella',
-  borneo: 'Borneo, saaren aluemerkki',
   hawaii: 'Havaiji, saariston aluemerkki',
   sansibar: 'Sansibar, saari Tansanian muodon ulkopuolella',
   rashafun: 'Ras Hafun, niemi pudonneena muodosta',

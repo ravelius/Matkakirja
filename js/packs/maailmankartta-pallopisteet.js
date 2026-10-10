@@ -95,7 +95,7 @@ export const PALLON_KAUPUNKIPISTEET = {
   ahaggar: { lat: 21.44, lon: 3.401 },        // Ahaggar (alue, laudan oma piste — 7.9.2026 linjaus)
   alicesprings: { lat: -23.7, lon: 133.867 }, // Alice Springs, 3 km
   alkufra: { lat: 24.183, lon: 23.283 },      // Al Kufra, 6 km
-  alpit: { lat: 47.666, lon: 7.334 },         // Alpit (alue, laudan oma piste — 7.9.2026 linjaus)
+  alpit: { lat: 46.55, lon: 7.98 },           // Alpit (alue): Bernin Alpit, Sveitsi — PT 10.10.2026: laudan oma piste oli Elsassissa (Ranska)
   amsterdam: { lat: 52.367, lon: 4.883 },     // Amsterdam, 2 km
   anchorage: { lat: 61.217, lon: -149.894 },  // Anchorage, 2 km
   angola: { lat: -12.001, lon: 16.001 },      // Angola (alue, laudan oma piste — 7.9.2026 linjaus)
@@ -118,7 +118,7 @@ export const PALLON_KAUPUNKIPISTEET = {
   birdsville: { lat: -25.899, lon: 139.352 }, // Birdsville (en-Wikipedia), 5 km
   boavista: { lat: 2.82, lon: -60.672 },      // Boa Vista, 0 km
   bogota: { lat: 4.61, lon: -74.082 },        // Bogotá, 11 km
-  borneo: { lat: 1.551, lon: 110.3 },         // Borneo (alue, laudan oma piste — 7.9.2026 linjaus)
+  borneo: { lat: -1.0, lon: 113.9 },         // Borneo (alue): Keski-Kalimantan, Indonesia — PT 10.10.2026: laudan oma piste oli Kuchingissa (Malesia)
   brisbane: { lat: -27.468, lon: 153.028 },   // Brisbane, 42,9 km
   broome: { lat: -17.962, lon: 122.236 },     // Broome, 18,5 km
   bryssel: { lat: 50.847, lon: 4.353 },       // Bryssel, 0 km
