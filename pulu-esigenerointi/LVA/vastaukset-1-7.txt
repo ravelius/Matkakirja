@@ -7,7 +7,7 @@ Keitä kuurilaiset olivat?
 
 ### 31.2
 KYSYMYS: Mitä ovat Magdeburgin oikeudet, ja mitä ne merkitsivät kaupungille?
-Annas ku mietin. Oikeudet on ollut tuttu aihe kirjeidenkin parissa. [[Magdeburgin oikeudet]] olivat saksalainen kaupunkioikeus, joka sai nimensä Magdeburgin kaupungista ja levisi keskiajalla laajalle Keski- ja Itä-Eurooppaan. Yleensä ne merkitsivät, että kaupunki sai oman tuomioistuimen ja neuvoston sekä oikeuden hoitaa omia asioitaan ja kauppaansa, ja kaupunkilaisten asema erosi selvemmin maaseudun väestön asemasta. Aizpute sai oikeudet piispalta vuonna 1378, mikä vahvisti sen asemaa kaupunkina. Yksityiskohdat vaihtelivat kaupungista toiseen, eikä minulla ole varmaa tietoa siitä, mitä ne tarkalleen olivat Aizputessa. Pitkä juridiikka, mut jaksoin.
+Annas ku mietin. Oikeudet on ollut tuttu aihe kirjeidenkin parissa. [[Magdeburgin oikeudet]] olivat saksalainen kaupunkioikeus, joka sai nimensä Magdeburgin kaupungista ja levisi keskiajalla laajalle Keski- ja Itä-Eurooppaan. Yleensä ne merkitsivät, että kaupunki sai oman tuomioistuimen ja neuvoston sekä oikeuden hoitaa omia asioitaan ja kauppaansa, ja kaupunkilaisten asema erosi selvemmin maaseudun väestön asemasta. [[Aizpute]] sai oikeudet piispalta vuonna 1378, mikä vahvisti sen asemaa kaupunkina. Yksityiskohdat vaihtelivat kaupungista toiseen, eikä minulla ole varmaa tietoa siitä, mitä ne tarkalleen olivat Aizputessa. Pitkä juridiikka, mut jaksoin.
 JATKOT:
 Mitkä muut kaupungit saivat Magdeburgin oikeudet?
 Millainen oli keskiajan kaupunkineuvosto?
@@ -49,7 +49,7 @@ Keitä Liivinmaan miekkaveljet olivat?
 
 ### 32.3
 KYSYMYS: Mitä lasikuitu on ja mihin sitä käytetään?
-Ai se. Lasikuitu on tuttu Valmieran teollisuudesta. [[Lasikuitu]] on ohuista lasisäikeistä valmistettu materiaali, joka on kevyttä mutta kestävää. Sitä käytetään muun muassa eristeissä sekä komposiittirakenteissa, joissa lasikuitu vahvistaa muovia ja muodostaa lujan, kevyen aineen. Tällaisia rakenteita on esimerkiksi veneiden, putkien ja tuulivoimaloiden lapojen valmistuksessa. Kuidun ansiosta tuote kestää kulutusta ja kosteutta paremmin kuin moni perinteinen materiaali. Valmieran tärkeimpiä teollisuudenaloja ovat lasikuidun lisäksi elintarviketeollisuus. Ei lintu osaa kudoa, mut kyl se kutsuu kuitua kauniiksi.
+Ai se. Lasikuitu on tuttu [[Valmieran]] teollisuudesta. [[Lasikuitu]] on ohuista lasisäikeistä valmistettu materiaali, joka on kevyttä mutta kestävää. Sitä käytetään muun muassa eristeissä sekä komposiittirakenteissa, joissa lasikuitu vahvistaa muovia ja muodostaa lujan, kevyen aineen. Tällaisia rakenteita on esimerkiksi veneiden, putkien ja tuulivoimaloiden lapojen valmistuksessa. Kuidun ansiosta tuote kestää kulutusta ja kosteutta paremmin kuin moni perinteinen materiaali. Valmieran tärkeimpiä teollisuudenaloja ovat lasikuidun lisäksi elintarviketeollisuus. Ei lintu osaa kudoa, mut kyl se kutsuu kuitua kauniiksi.
 JATKOT:
 Miten lasikuitua valmistetaan?
 Mitä komposiittimateriaalit ovat?
@@ -63,7 +63,7 @@ Mitä Riian hiippakunta oli?
 
 ### 32.5
 KYSYMYS: Mitä maapäivät olivat Liivinmaalla?
-Katotaas. Maapäivät olivat keskiajan ja uuden ajan alun Liivinmaalla säätyjen kokouksia, joissa kokoontuivat yleensä aatelisten, papiston ja kaupunkien edustajat. Niissä käsiteltiin alueen yhteisiä asioita, kuten puolustusta, veroja ja lainsäädäntöä, ja ne olivat tapa sovittaa yhteen eri tahojen etuja. Valmierassa pidettiin useita maapäiviä [[Hansaliiton]] aikana, mikä kertoo kaupungin asemasta Liivinmaan keskuspaikkana. Täsmällisiä vuosia ja päätöksiä en ole varma, joten en nimeä niitä. Tällaisesta tulee mieleen kyyhkyjen parlamentti kaiteella, mut siinä ei päätetä mitään.
+Katotaas. Maapäivät olivat keskiajan ja uuden ajan alun Liivinmaalla säätyjen kokouksia, joissa kokoontuivat yleensä aatelisten, papiston ja kaupunkien edustajat. Niissä käsiteltiin alueen yhteisiä asioita, kuten puolustusta, veroja ja lainsäädäntöä, ja ne olivat tapa sovittaa yhteen eri tahojen etuja. [[Valmierassa]] pidettiin useita maapäiviä [[Hansaliiton]] aikana, mikä kertoo kaupungin asemasta Liivinmaan keskuspaikkana. Täsmällisiä vuosia ja päätöksiä en ole varma, joten en nimeä niitä. Tällaisesta tulee mieleen kyyhkyjen parlamentti kaiteella, mut siinä ei päätetä mitään.
 JATKOT:
 Keitä Liivinmaan säädyt olivat?
 Miten Hansaliitto vaikutti Valmieran kehitykseen?
@@ -91,7 +91,7 @@ Kuka oli runoilija Auseklis?
 
 ### 33.4
 KYSYMYS: Mikä Riian hiippakunta oli?
-Ai tota. [[Riian hiippakunta]] oli katolisen kirkon hallintoalue Liivinmaalla keskiajalla, ja sen perusti piispa Albert 1200-luvun alussa. Hiippakunta hallitsi osaa nykyisen Latvian alueesta, ja sen piispat toimivat sekä hengellisinä että maallisina johtajina. Se kilpaili vallasta Livonian ritarikunnan kanssa. Lielvārdessa hiippakunta rakennutti kivilinnan vuonna 1229. Myöhemmin Riian hiippakunta korotettiin arkkihiippakunnaksi, mutta tarkkaa vuotta en ole varma. Uskonpuhdistus ja Liivinmaan sota muuttivat tilanteen 1500-luvulla. Vahva vaikutus tuli ylhäältäkin katsottuna.
+Ai tota. [[Riian hiippakunta]] oli katolisen kirkon hallintoalue Liivinmaalla keskiajalla, ja sen perusti [[piispa Albert]] 1200-luvun alussa. Hiippakunta hallitsi osaa nykyisen Latvian alueesta, ja sen piispat toimivat sekä hengellisinä että maallisina johtajina. Se kilpaili vallasta Livonian ritarikunnan kanssa. Lielvārdessa hiippakunta rakennutti kivilinnan vuonna 1229. Myöhemmin Riian hiippakunta korotettiin arkkihiippakunnaksi, mutta tarkkaa vuotta en ole varma. Uskonpuhdistus ja Liivinmaan sota muuttivat tilanteen 1500-luvulla. Vahva vaikutus tuli ylhäältäkin katsottuna.
 JATKOT:
 Kuka oli piispa Albert?
 Milloin Riika perustettiin?
@@ -119,7 +119,7 @@ Keitä liiviläiset olivat?
 
 ### 34.3
 KYSYMYS: Millainen kala nahkiainen on?
-Hyvä kysymys tuo. [[Nahkiainen]] on pitkä, ankeriasmainen ja suomuton, leuaton kala, jonka suu on pyöreä ja imevä. Se on vanhaa kalamuotoa edustava laji: sillä ei ole leukoja eikä suomuja, ja sen kehittyminen alkaa jokiin laskeutuneena toukkana. Aikuisena lajit voivat elää jokien ja meren välillä, ja ne nousevat jokiin kutemaan. Nahkiaisten ravinto vaihtelee lajeittain, eivätkä kaikki lajit ime muiden kalojen verta. Suomessakin nahkiaista on syöty perinteisesti, esimerkiksi grillattuna. Tarkkaa lajia Carnikavassa en ole varma. Ei kauneuskilpailun voittaja, mut kyl se maistuu.
+Hyvä kysymys tuo. [[Nahkiainen]] on pitkä, ankeriasmainen ja suomuton, leuaton kala, jonka suu on pyöreä ja imevä. Se on vanhaa kalamuotoa edustava laji: sillä ei ole leukoja eikä suomuja, ja sen kehittyminen alkaa jokiin laskeutuneena toukkana. Aikuisena lajit voivat elää jokien ja meren välillä, ja ne nousevat jokiin kutemaan. Nahkiaisten ravinto vaihtelee lajeittain, eivätkä kaikki lajit ime muiden kalojen verta. Suomessakin nahkiaista on syöty perinteisesti, esimerkiksi grillattuna. Tarkkaa lajia [[Carnikavassa]] en ole varma. Ei kauneuskilpailun voittaja, mut kyl se maistuu.
 JATKOT:
 Miten nahkiainen kutee?
 Mitä leuattomat kalat ovat?
@@ -133,7 +133,7 @@ Mikä on alkuperänimitys?
 
 ### 34.5
 KYSYMYS: Missä Gauja-joki virtaa ja minne se laskee?
-Kas vaan. [[Gauja]] on joki, joka virtaa Latvian koillisosassa Vidzemen alueella. Se kulkee muun muassa Valmieran kaupungin kautta, ja sen laaksossa on kansallispuisto, jossa on jyrkkiä rantakallioita ja metsiä. Joki laskee lopulta Riianlahteen Carnikavan kohdalla, joka sijaitsee noin 25 kilometriä Riiasta pohjoiseen. Gaujan suulla kylä kasvoi kalastajakyläksi, ja joen varrella on historiallisia linnoja. Joen pituutta en ole varma, joten jätän sen pois. Ylhäältä mutka näyttää aina mukavalta.
+Kas vaan. [[Gauja]] on joki, joka virtaa Latvian koillisosassa [[Vidzemen]] alueella. Se kulkee muun muassa Valmieran kaupungin kautta, ja sen laaksossa on kansallispuisto, jossa on jyrkkiä rantakallioita ja metsiä. Joki laskee lopulta Riianlahteen Carnikavan kohdalla, joka sijaitsee noin 25 kilometriä Riiasta pohjoiseen. Gaujan suulla kylä kasvoi kalastajakyläksi, ja joen varrella on historiallisia linnoja. Joen pituutta en ole varma, joten jätän sen pois. Ylhäältä mutka näyttää aina mukavalta.
 JATKOT:
 Mikä Gaujan kansallispuisto on?
 Millainen kaupunki Valmiera on?
@@ -147,7 +147,7 @@ Mikä on Riianlahti?
 
 ### 35.2
 KYSYMYS: Mitä Ainažin nimi voi tarkoittaa?
-Tuota niin. En ole varma. Ainažin nimen merkityksestä ei ole luotettavaa tietoa minulla, eikä arvaus olisi hyvä. Tiedän, että paikalla oli vanha liiviläinen kalastajakylä, joka mainitaan ensimmäisen kerran vuonna 1564, ja että kaupungin virolainen nimi on Heinaste. Nimen taustalla voi olla liiviläistä paikannimistöä, mutta se on pelkkä mahdollisuus, ei tieto. Paikallinen kielentutkija tai merikoulun museo voisi osata vastata. Harmi, ois ollut kiva selittää.
+Tuota niin. En ole varma. [[Ainažin]] nimen merkityksestä ei ole luotettavaa tietoa minulla, eikä arvaus olisi hyvä. Tiedän, että paikalla oli vanha liiviläinen kalastajakylä, joka mainitaan ensimmäisen kerran vuonna 1564, ja että kaupungin virolainen nimi on Heinaste. Nimen taustalla voi olla liiviläistä paikannimistöä, mutta se on pelkkä mahdollisuus, ei tieto. Paikallinen kielentutkija tai merikoulun museo voisi osata vastata. Harmi, ois ollut kiva selittää.
 JATKOT:
 Keitä liiviläiset ovat?
 Miten Ainaži on kehittynyt vuosien mittaan?

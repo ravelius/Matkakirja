@@ -22,7 +22,7 @@ PAIKKA: Rēzekne | 56.51 | 27.34 | kaupunki
 
 ### 26.4
 KYSYMYS: Mikä alue Latgale on ja miksi Rēzekne on sen sydän?
-Ai se. Joo, tän minä tiedän. Latgale on Latvian itäosan historiallinen alue, joka lasketaan yhdeksi maan perinteisistä alueista Kuurinmaan ja Liivinmaan rinnalla. Rēzekne on alueen suurimpia kaupunkeja, ja siksi sitä kutsutaan Latgalen sydämeksi; nimitys kertoo sen asemasta alueen keskuksena. Latgalessa puhutaan myös [[latgalen kieltä]], jota jotkut pitävät latvian murteena ja jotkut omana kielenään, ja molemmat kannat ovat vakiintuneita. Alueen historia on kulkenut osin eri teitä kuin muun Latvian: esimerkiksi Rēzekne kuului Puola-Liettualle ja myöhemmin Venäjän keisarikunnalle. Tarkasta aluejaosta ja sen vaiheista en ole kaikilta osin varma.
+Ai se. Joo, tän minä tiedän. [[Latgale]] on Latvian itäosan historiallinen alue, joka lasketaan yhdeksi maan perinteisistä alueista Kuurinmaan ja Liivinmaan rinnalla. Rēzekne on alueen suurimpia kaupunkeja, ja siksi sitä kutsutaan Latgalen sydämeksi; nimitys kertoo sen asemasta alueen keskuksena. Latgalessa puhutaan myös [[latgalen kieltä]], jota jotkut pitävät latvian murteena ja jotkut omana kielenään, ja molemmat kannat ovat vakiintuneita. Alueen historia on kulkenut osin eri teitä kuin muun Latvian: esimerkiksi Rēzekne kuului Puola-Liettualle ja myöhemmin Venäjän keisarikunnalle. Tarkasta aluejaosta ja sen vaiheista en ole kaikilta osin varma.
 
 Kieliasioissa minä pysyn varovaisena, sillä kyyhkyilläkin on omat murteensa, eikä kukaan ole sopinut, onko hurina kieli. Mut kyllä me toisemme ymmärretään.
 JATKOT:

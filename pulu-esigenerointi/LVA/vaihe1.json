@@ -190,8 +190,9 @@
   "kohde": "kohde:vainajoki",
   "kysymys": "Onko Väinäjoella voimalaitoksia?",
   "uusi": true,
-  "vastaus": "Kato, sepä sattui. Tämä on hyvä kysymys energiasta. Väinäjoella on Latviassa kolme suurta [[vesivoimalaitosta]]: Pļaviņas, Ķegums ja Riian voimalaitos. Ne on rakennettu patoamaan jokea ja tuottavat merkittävän osan Latvian sähköstä. Patojen rakentamisen myötä joen luonnollinen virtaus ja ympäröivä maisema muuttuivat, ja osa joen alkuperäisistä koskista jäi vedenpinnan alle. Tarkkoja tuotantolukuja en ole varma. Jokainen pato on kuin iso porras, jonka yli kyyhky lentää ilman vaivaa.",
+  "vastaus": "Kato, sepä sattui. Tämä on hyvä kysymys energiasta. [[Väinäjoella]] on Latviassa kolme suurta [[vesivoimalaitosta]]: Pļaviņas, Ķegums ja Riian voimalaitos. Ne on rakennettu patoamaan jokea ja tuottavat merkittävän osan Latvian sähköstä. Patojen rakentamisen myötä joen luonnollinen virtaus ja ympäröivä maisema muuttuivat, ja osa joen alkuperäisistä koskista jäi vedenpinnan alle. Tarkkoja tuotantolukuja en ole varma. Jokainen pato on kuin iso porras, jonka yli kyyhky lentää ilman vaivaa.",
   "linkit": [
+   "Väinäjoella",
    "vesivoimalaitosta"
   ],
   "jatkot": [
@@ -234,8 +235,9 @@
   "kohde": "kohde:rundale",
   "kysymys": "Mihin palatsia käytettiin vuonna 1812?",
   "uusi": false,
-  "vastaus": "Hetkinen ny. Tähän minä en ihan osaa vastata. Vuonna 1812 Napoleon hyökkäsi Venäjälle, ja Kuurinmaa oli tuolloin osa Venäjän keisarikuntaa, sillä [[Kuurinmaan herttuakunta]] oli liitetty siihen vuonna 1795. Alue oli sotaretken reunalla, ja sodan vaikutukset tuntuivat sen läpi liikkuneiden joukkojen vuoksi. Siitä, mihin Rundālen palatsia tuona vuonna tarkalleen käytettiin, en ole varma, enkä halua arvata. Sen sijaan tiedän, että palatsi on säilynyt nykypäiviin. Kyl joskus ois ihan hyvä, jos jokaisesta huoneesta olisi säilynyt kirje.",
+  "vastaus": "Hetkinen ny. Tähän minä en ihan osaa vastata. Vuonna 1812 [[Napoleon]] hyökkäsi Venäjälle, ja Kuurinmaa oli tuolloin osa Venäjän keisarikuntaa, sillä [[Kuurinmaan herttuakunta]] oli liitetty siihen vuonna 1795. Alue oli sotaretken reunalla, ja sodan vaikutukset tuntuivat sen läpi liikkuneiden joukkojen vuoksi. Siitä, mihin Rundālen palatsia tuona vuonna tarkalleen käytettiin, en ole varma, enkä halua arvata. Sen sijaan tiedän, että palatsi on säilynyt nykypäiviin. Kyl joskus ois ihan hyvä, jos jokaisesta huoneesta olisi säilynyt kirje.",
   "linkit": [
+   "Napoleon",
    "Kuurinmaan herttuakunta"
   ],
   "jatkot": [
@@ -332,9 +334,10 @@
   "kohde": "kohde:cesis",
   "kysymys": "Kuka kirjoitti Henrik Liiviläisen kronikan?",
   "uusi": true,
-  "vastaus": "Tuota niin. Nimi sanoo sen jo melkein. Kronikan kirjoitti [[Henrik Liiviläinen]], katolinen pappi, joka eli 1200-luvun alun Liivinmaalla ja osallistui itse alueen käännytystyöhön. Teos kertoo Liivinmaan ristiretkestä ja alueen heimoista sekä ritarikunnan ja piispan välisistä suhteista, ja se on keskeinen lähde alueen varhaisesta historiasta. Teos on kirjoitettu latinaksi, ja kronikassa mainitaan myös Cēsisin linna, jota kutsutaan siinä \"Liivinmaan pienimmäksi\". Kronikoitsija ja kyyhky ovat samaa sukua, molemmat vievät viestiä perille.",
+  "vastaus": "Tuota niin. Nimi sanoo sen jo melkein. Kronikan kirjoitti [[Henrik Liiviläinen]], katolinen pappi, joka eli 1200-luvun alun Liivinmaalla ja osallistui itse alueen käännytystyöhön. Teos kertoo [[Liivinmaan]] ristiretkestä ja alueen heimoista sekä ritarikunnan ja piispan välisistä suhteista, ja se on keskeinen lähde alueen varhaisesta historiasta. Teos on kirjoitettu latinaksi, ja kronikassa mainitaan myös Cēsisin linna, jota kutsutaan siinä \"Liivinmaan pienimmäksi\". Kronikoitsija ja kyyhky ovat samaa sukua, molemmat vievät viestiä perille.",
   "linkit": [
-   "Henrik Liiviläinen"
+   "Henrik Liiviläinen",
+   "Liivinmaan"
   ],
   "jatkot": [
    "Miksi kronikka on tärkeä lähde?",
@@ -345,8 +348,9 @@
   "kohde": "kohde:cesis",
   "kysymys": "Mikä on Liivinmaa?",
   "uusi": true,
-  "vastaus": "No jopas, historiallinen aluekysymys. Liivinmaa on historiallinen alue, joka kattaa suuren osan nykyisen Latvian ja Viron alueesta Itämeren itärannalla. Nimi tulee [[liiviläisistä]], itämerensuomalaisesta kansasta, joka asui alueen rannikolla. Keskiajalla Liivinmaata hallitsi ritarikuntien ja piispojen muodostama valtio, ja myöhemmin alue joutui Puolan, Ruotsin ja Venäjän vallan alle. Rajojen tarkka kulku vaihteli eri aikoina. Nykyään nimi elää lähinnä historiankirjoissa ja alueen perinteessä. Minä pidän siitä, että vanha nimi on säilynyt, vaikka rajat eivät.",
+  "vastaus": "No jopas, historiallinen aluekysymys. [[Liivinmaa]] on historiallinen alue, joka kattaa suuren osan nykyisen Latvian ja Viron alueesta Itämeren itärannalla. Nimi tulee [[liiviläisistä]], itämerensuomalaisesta kansasta, joka asui alueen rannikolla. Keskiajalla Liivinmaata hallitsi ritarikuntien ja piispojen muodostama valtio, ja myöhemmin alue joutui Puolan, Ruotsin ja Venäjän vallan alle. Rajojen tarkka kulku vaihteli eri aikoina. Nykyään nimi elää lähinnä historiankirjoissa ja alueen perinteessä. Minä pidän siitä, että vanha nimi on säilynyt, vaikka rajat eivät.",
   "linkit": [
+   "Liivinmaa",
    "liiviläisistä"
   ],
   "jatkot": [
@@ -694,8 +698,9 @@
   "kohde": "kohde:daugavpilsin-linnoitus",
   "kysymys": "Mitä linnoituksessa on nykyisin?",
   "uusi": true,
-  "vastaus": "Ai tota. Nykyisin Daugavpilsin linnoitus on kulttuuri- ja matkailukohde Kaakkois-Latviassa [[Latgalen]] alueella. Sen entisissä sotilasrakennuksissa toimii muun muassa Mark Rothko -taidekeskus, jonka nimi viittaa kaupungissa syntyneeseen taidemaalariin, sekä galleria- ja työpajatiloja. Rakennuskokonaisuus on säilynyt poikkeuksellisen hyvin, sillä siihen ei ole tehty merkittäviä muutoksia. Linnoitus on nykyään rauhallisempi paikka kuin ennen.",
+  "vastaus": "Ai tota. Nykyisin [[Daugavpilsin linnoitus]] on kulttuuri- ja matkailukohde Kaakkois-Latviassa [[Latgalen]] alueella. Sen entisissä sotilasrakennuksissa toimii muun muassa Mark Rothko -taidekeskus, jonka nimi viittaa kaupungissa syntyneeseen taidemaalariin, sekä galleria- ja työpajatiloja. Rakennuskokonaisuus on säilynyt poikkeuksellisen hyvin, sillä siihen ei ole tehty merkittäviä muutoksia. Linnoitus on nykyään rauhallisempi paikka kuin ennen.",
   "linkit": [
+   "Daugavpilsin linnoitus",
    "Latgalen"
   ],
   "jatkot": [
@@ -797,8 +802,9 @@
   "kohde": "kohde:ventas-rumba",
   "kysymys": "Miksi putous perääntyy hitaasti ylävirtaan?",
   "uusi": false,
-  "vastaus": "Kas vaan. Putouksen tekee devonikautinen [[dolomiitti]], jonka alempi kerros rapautuu nopeammin kuin ylempi. Ylempi kerros jää roikkumaan, kunnes se lohkeaa jokeen, ja näin putous perääntyy hitaasti ylävirtaan. Koska virta on keskellä voimakkain, keskikohta vetäytyy reunoja nopeammin. Kiire ei oo kivellä.",
+  "vastaus": "Kas vaan. [[Putouksen]] tekee devonikautinen [[dolomiitti]], jonka alempi kerros rapautuu nopeammin kuin ylempi. Ylempi kerros jää roikkumaan, kunnes se lohkeaa jokeen, ja näin putous perääntyy hitaasti ylävirtaan. Koska virta on keskellä voimakkain, keskikohta vetäytyy reunoja nopeammin. Kiire ei oo kivellä.",
   "linkit": [
+   "Putouksen",
    "dolomiitti"
   ],
   "jatkot": [
@@ -824,8 +830,9 @@
   "kohde": "kohde:ventas-rumba",
   "kysymys": "Miksi Kuldīga syntyi juuri putouksen kohdalle?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. Putous katkaisi keskiaikaisen [[Ventan]] sisävesireitin, ja kaupunki syntyi juuri tähän, reitin katkeamiskohtaan. Sisävesiliikenteessä tavarat ja kulkijat jouduttiin siirtämään putouksen ohi, mikä teki paikasta luontevan pysähdyspaikan. Minä ois lentänyt vaan yli.",
+  "vastaus": "Annas ku mietin. [[Putous]] katkaisi keskiaikaisen [[Ventan]] sisävesireitin, ja kaupunki syntyi juuri tähän, reitin katkeamiskohtaan. Sisävesiliikenteessä tavarat ja kulkijat jouduttiin siirtämään putouksen ohi, mikä teki paikasta luontevan pysähdyspaikan. Minä ois lentänyt vaan yli.",
   "linkit": [
+   "Putous",
    "Ventan"
   ],
   "jatkot": [
@@ -1097,8 +1104,9 @@
   "kohde": "kohde:hahmotelma-mustapaiden-talo",
   "kysymys": "Miksi Riian Mustapäiden talo katosi?",
   "uusi": false,
-  "vastaus": "Hetkinen ny. Talo vaurioitui pahoin kesäkuussa 1941, kun sotatoimet osuivat Riiaan. Vuonna 1948 neuvostoviranomaiset räjäyttivät jäljelle jääneet rauniot kokonaan. Sodasta ja räjäytyksestä on nyt yli kahdeksankymmentä vuotta, ja Latvia oli tuolloin osa [[Neuvostoliittoa]], joten päätökset tehtiin Moskovan johtamassa järjestelmässä. Itsenäistymisen jälkeen talo rakennettiin vanhojen piirustusten pohjalta uudelleen, ja se vihittiin käyttöön vuonna 1999. Onpas siitä onneksi jo pitkä aika.",
+  "vastaus": "Hetkinen ny. Talo vaurioitui pahoin kesäkuussa 1941, kun sotatoimet osuivat [[Riiaan]]. Vuonna 1948 neuvostoviranomaiset räjäyttivät jäljelle jääneet rauniot kokonaan. Sodasta ja räjäytyksestä on nyt yli kahdeksankymmentä vuotta, ja Latvia oli tuolloin osa [[Neuvostoliittoa]], joten päätökset tehtiin Moskovan johtamassa järjestelmässä. Itsenäistymisen jälkeen talo rakennettiin vanhojen piirustusten pohjalta uudelleen, ja se vihittiin käyttöön vuonna 1999. Onpas siitä onneksi jo pitkä aika.",
   "linkit": [
+   "Riiaan",
    "Neuvostoliittoa"
   ],
   "jatkot": [
@@ -1110,8 +1118,9 @@
   "kohde": "kohde:hahmotelma-mustapaiden-talo",
   "kysymys": "Keitä Riian mustapäät olivat?",
   "uusi": true,
-  "vastaus": "Ai se. Mustapäät olivat kauppiaiden veljeskunta, johon kuului naimattomia ulkomaisia kauppiaita. Veljeskunta kokoontui [[Riian]] Mustapäiden talossa 1400-luvulta lähtien, ja talo toimi kauppiaiden kokous- ja juhlapaikkana. Nimen alkuperästä on useita selityksiä, enkä ole varma, mikä niistä on oikea. Ja tän kaiken minä muistin ilman muistiinpanoja.",
+  "vastaus": "Ai se. [[Mustapäät]] olivat kauppiaiden veljeskunta, johon kuului naimattomia ulkomaisia kauppiaita. Veljeskunta kokoontui [[Riian]] Mustapäiden talossa 1400-luvulta lähtien, ja talo toimi kauppiaiden kokous- ja juhlapaikkana. Nimen alkuperästä on useita selityksiä, enkä ole varma, mikä niistä on oikea. Ja tän kaiken minä muistin ilman muistiinpanoja.",
   "linkit": [
+   "Mustapäät",
    "Riian"
   ],
   "jatkot": [
@@ -1137,9 +1146,10 @@
   "kohde": "kohde:hahmotelma-mustapaiden-talo",
   "kysymys": "Onko Riian vanhakaupunki maailmanperintökohde?",
   "uusi": true,
-  "vastaus": "Odotas vähän. Kyllä on: Riian historiallinen keskusta on [[Unescon]] maailmanperintökohde. Vanhakaupunki tunnetaan keskiaikaisesta katuverkostaan ja kauppiastaloistaan, ja Mustapäiden talo kuuluu sen tunnetuimpiin nähtävyyksiin. Tarkkaa vuotta, jolloin kohde otettiin listalle, en ole varma, joten jätän sen mainitsematta. Kaupungin keskustassa on lisäksi runsaasti jugendtaloja, mutta niiden määrästä en anna lukua. Hyvin meni, vaikka kukaan ei kysynyt pullasta.",
+  "vastaus": "Odotas vähän. Kyllä on: Riian historiallinen keskusta on [[Unescon]] maailmanperintökohde. [[Vanhakaupunki]] tunnetaan keskiaikaisesta katuverkostaan ja kauppiastaloistaan, ja Mustapäiden talo kuuluu sen tunnetuimpiin nähtävyyksiin. Tarkkaa vuotta, jolloin kohde otettiin listalle, en ole varma, joten jätän sen mainitsematta. Kaupungin keskustassa on lisäksi runsaasti jugendtaloja, mutta niiden määrästä en anna lukua. Hyvin meni, vaikka kukaan ei kysynyt pullasta.",
   "linkit": [
-   "Unescon"
+   "Unescon",
+   "Vanhakaupunki"
   ],
   "jatkot": [
    "Mitä muita maailmanperintökohteita Latviassa on?",
@@ -1150,9 +1160,10 @@
   "kohde": "kohde:hahmotelma-ventspils",
   "kysymys": "Minne Kuurinmaan herttuan laivasto Ventspilsistä aikoinaan lähti?",
   "uusi": false,
-  "vastaus": "Ai tota. Kuurinmaan herttuakunnan aikana [[Ventspilsissä]] rakennettiin 44 sotalaivaa ja 79 kauppalaivaa, mutta laivaston tarkoista reiteistä minulla ei ole varmaa tietoa. Tiedän, että herttuakunta kävi kauppaa Itämerellä ja Länsi-Euroopan satamien kanssa. Herttua Jaakobin ajoilta tunnetaan myös siirtomaayritykset Länsi-Afrikassa ja Karibialla, mutta en ole varma, mitkä alukset niille matkoille lähtivät juuri Ventspilsistä. Jäätymätön satama teki liikenteestä mahdollista ympäri vuoden. Tämä oli kyllä kunnon laivastokysymys.",
+  "vastaus": "Ai tota. Kuurinmaan herttuakunnan aikana [[Ventspilsissä]] rakennettiin 44 sotalaivaa ja 79 kauppalaivaa, mutta laivaston tarkoista reiteistä minulla ei ole varmaa tietoa. Tiedän, että herttuakunta kävi kauppaa Itämerellä ja Länsi-Euroopan satamien kanssa. [[Herttua Jaakobin]] ajoilta tunnetaan myös siirtomaayritykset Länsi-Afrikassa ja Karibialla, mutta en ole varma, mitkä alukset niille matkoille lähtivät juuri Ventspilsistä. Jäätymätön satama teki liikenteestä mahdollista ympäri vuoden. Tämä oli kyllä kunnon laivastokysymys.",
   "linkit": [
-   "Ventspilsissä"
+   "Ventspilsissä",
+   "Herttua Jaakobin"
   ],
   "jatkot": [
    "Millainen valtio Kuurinmaan herttuakunta oli?",
@@ -1163,8 +1174,9 @@
   "kohde": "kohde:hahmotelma-ventspils",
   "kysymys": "Miksi laivanrakennus ja kauppa elpyivät Ventspilsissä vasta noin vuonna 1850?",
   "uusi": false,
-  "vastaus": "Hyvä kysymys tuo. Kaupunki siirtyi vuonna 1795 Puolan kolmannen jaon jälkeen Venäjän keisarikunnalle, ja laivanrakennus ja kauppa nousivat uudelleen tärkeiksi vasta noin vuonna 1850. En ole varma tarkasta syystä, koska sitä ei tunneta minulle riittävän hyvin. Yleisesti 1800-luvun puolivälissä Itämeren satamien kauppa kasvoi höyrylaivojen ja kehittyvän liikenteen myötä, ja [[Venäjän]] sisämaan tuotteita tarvittiin ulkomaille. Kuurinmaan herttuakunnan päättyminen muutti kuitenkin alueen asemaa. Onpas ollu pitkä aikajana.",
+  "vastaus": "Hyvä kysymys tuo. Kaupunki siirtyi vuonna 1795 [[Puolan kolmannen jaon]] jälkeen Venäjän keisarikunnalle, ja laivanrakennus ja kauppa nousivat uudelleen tärkeiksi vasta noin vuonna 1850. En ole varma tarkasta syystä, koska sitä ei tunneta minulle riittävän hyvin. Yleisesti 1800-luvun puolivälissä Itämeren satamien kauppa kasvoi höyrylaivojen ja kehittyvän liikenteen myötä, ja [[Venäjän]] sisämaan tuotteita tarvittiin ulkomaille. Kuurinmaan herttuakunnan päättyminen muutti kuitenkin alueen asemaa. Onpas ollu pitkä aikajana.",
   "linkit": [
+   "Puolan kolmannen jaon",
    "Venäjän"
   ],
   "jatkot": [
@@ -1190,8 +1202,9 @@
   "kohde": "kohde:hahmotelma-ventspils",
   "kysymys": "Mitä jäätymätön satama tarkoittaa?",
   "uusi": true,
-  "vastaus": "Ai se. Jäätymätön satama tarkoittaa satamaa, jonka vesi ei yleensä jäädy talvella niin, että laivaliikenne pysähtyisi. Siksi alukset voivat käyttää sitä ympäri vuoden, mikä on pohjoisessa suuri etu. [[Ventspilsin]] satama kuuluu tähän ryhmään, ja se sijaitsee Itämeren rannalla Venta-joen suulla. En ole varma tarkasta syystä, miksi jää ei täällä pysäytä liikennettä, mutta avoin meri ja virtaukset vaikuttavat yleensä asiaan.\n\nSiivekkäälle jäätyvä satama on lähinnä suuri liukumäki. Ja sulat laiturit ovat kyllä parempia istuskella.",
+  "vastaus": "Ai se. Jäätymätön satama tarkoittaa satamaa, jonka vesi ei yleensä jäädy talvella niin, että laivaliikenne pysähtyisi. Siksi alukset voivat käyttää sitä ympäri vuoden, mikä on [[pohjoisessa]] suuri etu. [[Ventspilsin]] satama kuuluu tähän ryhmään, ja se sijaitsee Itämeren rannalla Venta-joen suulla. En ole varma tarkasta syystä, miksi jää ei täällä pysäytä liikennettä, mutta avoin meri ja virtaukset vaikuttavat yleensä asiaan.\n\nSiivekkäälle jäätyvä satama on lähinnä suuri liukumäki. Ja sulat laiturit ovat kyllä parempia istuskella.",
   "linkit": [
+   "pohjoisessa",
    "Ventspilsin"
   ],
   "jatkot": [
@@ -1203,8 +1216,9 @@
   "kohde": "kohde:hahmotelma-ventspils",
   "kysymys": "Millainen valtio Kuurinmaan herttuakunta oli?",
   "uusi": true,
-  "vastaus": "Kas vaan. Kuurinmaan herttuakunta oli pieni valtio nykyisen Latvian alueella, ja se oli Puola-Liettuan yhteisvaltion alainen. Herttuakunta oli olemassa 1500-luvun puolivälistä 1700-luvun lopulle, ja sen loppu tuli [[Puolan kolmannen jaon]] myötä vuonna 1795, jolloin alue siirtyi Venäjälle. Herttuakunnan aikana Ventspilsissä rakennettiin sotalaivoja ja kauppalaivoja, ja sen kauppa ulottui ulkomaille. Tarkkoja hallintoasioita en ole varma muistavani oikein. Pienikin valtio ehti siis näyttää kyynärpäänsä.",
+  "vastaus": "Kas vaan. Kuurinmaan herttuakunta oli pieni valtio nykyisen Latvian alueella, ja se oli [[Puola-Liettuan]] yhteisvaltion alainen. Herttuakunta oli olemassa 1500-luvun puolivälistä 1700-luvun lopulle, ja sen loppu tuli [[Puolan kolmannen jaon]] myötä vuonna 1795, jolloin alue siirtyi Venäjälle. Herttuakunnan aikana Ventspilsissä rakennettiin sotalaivoja ja kauppalaivoja, ja sen kauppa ulottui ulkomaille. Tarkkoja hallintoasioita en ole varma muistavani oikein. Pienikin valtio ehti siis näyttää kyynärpäänsä.",
   "linkit": [
+   "Puola-Liettuan",
    "Puolan kolmannen jaon"
   ],
   "jatkot": [
@@ -1258,8 +1272,9 @@
   "kohde": "kohde:hahmotelma-jurmala",
   "kysymys": "Millaisia ovat Jūrmalan vanhat puutalot?",
   "uusi": true,
-  "vastaus": "Joo, tän minä tiedän. Jūrmalan tunnusomaisia piirteitä ovat 1800- ja 1900-luvuilta peräisin olevat [[puutalot]], joita on yli 4000. Ne ovat enimmäkseen lomahuviloita, jotka rakennettiin kylpylävieraille rannan lähelle mäntymetsän sekaan. Tyylit vaihtelevat, ja monissa on koristeellisia verannan ja kuistin yksityiskohtia, mutta tarkkoja arkkitehtuurityylejä en ole varma luetella oikein. Monet talot on säilytetty kaupungin ilmeen osana.\n\nMinä katselisin niitä mieluiten ikkunalaudalta, jolla on pullavati. Vanhat puutalot tuoksuvat ylhäältä katsottuna aina vähän hartsilta ja kesältä.",
+  "vastaus": "Joo, tän minä tiedän. [[Jūrmalan]] tunnusomaisia piirteitä ovat 1800- ja 1900-luvuilta peräisin olevat [[puutalot]], joita on yli 4000. Ne ovat enimmäkseen lomahuviloita, jotka rakennettiin kylpylävieraille rannan lähelle mäntymetsän sekaan. Tyylit vaihtelevat, ja monissa on koristeellisia verannan ja kuistin yksityiskohtia, mutta tarkkoja arkkitehtuurityylejä en ole varma luetella oikein. Monet talot on säilytetty kaupungin ilmeen osana.\n\nMinä katselisin niitä mieluiten ikkunalaudalta, jolla on pullavati. Vanhat puutalot tuoksuvat ylhäältä katsottuna aina vähän hartsilta ja kesältä.",
   "linkit": [
+   "Jūrmalan",
    "puutalot"
   ],
   "jatkot": [
@@ -1299,9 +1314,10 @@
   "kohde": "kohde:hahmotelma-kemeri",
   "kysymys": "Mitä kasveja kohosuolla voi kasvaa, vaikka ravinteita on vähän?",
   "uusi": false,
-  "vastaus": "Mmm— Kohosuo on ravinneköyhä ympäristö, jossa kasvaa lajeja, jotka tulevat toimeen vähällä. Tyypillisiä ovat [[rahkasammalet]], jotka muodostavat suon pintakerroksen, sekä karpalo, hilla ja suopursu. Kihokki kerää ravintoa myös pienistä hyönteisistä. Ķemerin suolla kasvaa syötäviä marjoja, kuten karpaloita ja hillaa. Lajien tarkkaa esiintymistä Ķemerissä en ole varma, mutta kohosuon ravinneköyhyys on ominaista kaikille tällaisille soille. Mitään suosta en ole koskaan syönyt, enkä aio.",
+  "vastaus": "Mmm— Kohosuo on ravinneköyhä ympäristö, jossa kasvaa lajeja, jotka tulevat toimeen vähällä. Tyypillisiä ovat [[rahkasammalet]], jotka muodostavat suon pintakerroksen, sekä karpalo, hilla ja suopursu. Kihokki kerää ravintoa myös pienistä hyönteisistä. [[Ķemerin]] suolla kasvaa syötäviä marjoja, kuten karpaloita ja hillaa. Lajien tarkkaa esiintymistä Ķemerissä en ole varma, mutta kohosuon ravinneköyhyys on ominaista kaikille tällaisille soille. Mitään suosta en ole koskaan syönyt, enkä aio.",
   "linkit": [
-   "rahkasammalet"
+   "rahkasammalet",
+   "Ķemerin"
   ],
   "jatkot": [
    "Miten kasvit selviävät suolla, jossa ravinteita on vähän?",
@@ -1312,8 +1328,9 @@
   "kohde": "kohde:hahmotelma-kemeri",
   "kysymys": "Miten turve syntyy suossa?",
   "uusi": true,
-  "vastaus": "Tuota niin. Turve syntyy, kun suon kuolleet kasvit eivät lahoa kokonaan, koska märässä ympäristössä happea on vähän. Kerros kasvaa vähitellen, ja Ķemerin suolla se tapahtuu noin millimetrin vuodessa. Metrin paksuinen kerros on siis noin tuhat vuotta vanha. [[Rahkasammal]] on kohosuon tärkeä turvetta muodostava kasvi, ja turve on perinteisesti ollut polttoainetta ja kasvualustaa. Tämä käy lyhyestä kasvunopeudesta hyvin ilmi.",
+  "vastaus": "Tuota niin. Turve syntyy, kun suon kuolleet kasvit eivät lahoa kokonaan, koska märässä ympäristössä happea on vähän. Kerros kasvaa vähitellen, ja [[Ķemerin]] suolla se tapahtuu noin millimetrin vuodessa. Metrin paksuinen kerros on siis noin tuhat vuotta vanha. [[Rahkasammal]] on kohosuon tärkeä turvetta muodostava kasvi, ja turve on perinteisesti ollut polttoainetta ja kasvualustaa. Tämä käy lyhyestä kasvunopeudesta hyvin ilmi.",
   "linkit": [
+   "Ķemerin",
    "Rahkasammal"
   ],
   "jatkot": [
@@ -1325,9 +1342,10 @@
   "kohde": "kohde:hahmotelma-kemeri",
   "kysymys": "Mikä Litorinameri oli?",
   "uusi": true,
-  "vastaus": "Just niin, tuo kuulostaa tutulta. Litorinameri oli Itämeren kehitysvaihe jääkauden jälkeen, jolloin meri oli nykyistä suolaisempi ja ulottui laajemmalle alueelle kuin nykyinen [[Itämeri]]. Ķemerin alueen järvet ovat sen entisiä laguuneja, joten ne muodostuivat meren vetäytyessä. Ajoituksesta tiedän vain, että kyse on tuhansien vuosien takaisista ajoista; tarkkoja lukuja en ole varma. Meren muodot ovat siis muuttuneet moneen kertaan.",
+  "vastaus": "Just niin, tuo kuulostaa tutulta. Litorinameri oli Itämeren kehitysvaihe jääkauden jälkeen, jolloin meri oli nykyistä suolaisempi ja ulottui laajemmalle alueelle kuin nykyinen [[Itämeri]]. [[Ķemerin]] alueen järvet ovat sen entisiä laguuneja, joten ne muodostuivat meren vetäytyessä. Ajoituksesta tiedän vain, että kyse on tuhansien vuosien takaisista ajoista; tarkkoja lukuja en ole varma. Meren muodot ovat siis muuttuneet moneen kertaan.",
   "linkit": [
-   "Itämeri"
+   "Itämeri",
+   "Ķemerin"
   ],
   "jatkot": [
    "Miksi Itämeren vedenpinta on vaihdellut jääkauden jälkeen?",
@@ -1338,8 +1356,11 @@
   "kohde": "kohde:hahmotelma-kemeri",
   "kysymys": "Millaisia pitkospolut ovat ja miksi niitä tarvitaan?",
   "uusi": true,
-  "vastaus": "No jopas. Pitkospolut ovat suolle rakennettuja lankkupolkuja, joiden ansiosta kulkija pääsee suon yli kastumatta ja suota rikkomatta. Ķemerissä pitkospolkuja on kaksi, ja pidempi niistä on 3,4 kilometriä. Polku suojaa herkkää turvekasvustoa, sillä jokainen askel painaa pehmeää rahkasammalta. Suota tulee kunnioittaa, koska sen kasvi- ja turvekerros uusiutuu hitaasti. Siivin voisin ylittää suon vaikka ilman polkua.\n\nMinä pidän pitkospoluista, koska ne ovat kuin laiturit märällä maalla. Ja jos lankun päällä kävelee, ei tarvitse kantaa omaa sateenvarjoa.",
-  "linkit": [],
+  "vastaus": "No jopas. [[Pitkospolut]] ovat suolle rakennettuja lankkupolkuja, joiden ansiosta kulkija pääsee suon yli kastumatta ja suota rikkomatta. [[Ķemerissä]] pitkospolkuja on kaksi, ja pidempi niistä on 3,4 kilometriä. Polku suojaa herkkää turvekasvustoa, sillä jokainen askel painaa pehmeää rahkasammalta. Suota tulee kunnioittaa, koska sen kasvi- ja turvekerros uusiutuu hitaasti. Siivin voisin ylittää suon vaikka ilman polkua.\n\nMinä pidän pitkospoluista, koska ne ovat kuin laiturit märällä maalla. Ja jos lankun päällä kävelee, ei tarvitse kantaa omaa sateenvarjoa.",
+  "linkit": [
+   "Pitkospolut",
+   "Ķemerissä"
+  ],
   "jatkot": [
    "Miten suolla pitää käyttäytyä kulkiessaan pitkospolkua?",
    "Mitä eläimiä suolla elää?"
@@ -1363,8 +1384,9 @@
   "kohde": "kohde:hahmotelma-jaunpils",
   "kysymys": "Miksi Jaunpilsin linnaa ympäröivät ennen joka puolelta vesiesteet?",
   "uusi": false,
-  "vastaus": "Ai tota. Tästä en ole varma Jaunpilsin kohdalla, joten en väitä tarkkoja yksityiskohtia. Yleisesti keskiaikaisia linnoja ympäröivät vesiesteet, kuten vallihauta tai lampi, koska ne vaikeuttivat hyökkääjien pääsyä muurien juureen ja tekivät piirityksestä hankalaa. [[Jaunpilsin linna]] on kenttäkivistä ja yläosistaan tiilestä muurattu, ja siinä on massiivinen pyöreä torni. Vesiesteet ovat voineet olla osa tätä puolustusta. Sellaista hyvää selitystä en kuitenkaan osaa antaa varmana.",
+  "vastaus": "Ai tota. Tästä en ole varma Jaunpilsin kohdalla, joten en väitä tarkkoja yksityiskohtia. Yleisesti keskiaikaisia [[linnoja]] ympäröivät vesiesteet, kuten vallihauta tai lampi, koska ne vaikeuttivat hyökkääjien pääsyä muurien juureen ja tekivät piirityksestä hankalaa. [[Jaunpilsin linna]] on kenttäkivistä ja yläosistaan tiilestä muurattu, ja siinä on massiivinen pyöreä torni. Vesiesteet ovat voineet olla osa tätä puolustusta. Sellaista hyvää selitystä en kuitenkaan osaa antaa varmana.",
   "linkit": [
+   "linnoja",
    "Jaunpilsin linna"
   ],
   "jatkot": [
@@ -1390,8 +1412,9 @@
   "kohde": "kohde:hahmotelma-jaunpils",
   "kysymys": "Mikä on komtuuri?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Komtuuri oli ritarikunnan alueyksikön johtaja, jonka tehtäviin kuuluivat alueen hallinto ja puolustus. Hän asui yleensä linnassa, joka toimi hallinnon keskuksena. Jaunpilsin linna siirtyi vuonna 1576 Dobelen viimeiselle ritarikunnan komtuurille Matthias von der Reckelle, ja hänen sukunsa omisti sen 1900-luvun alkuun asti. Sana tulee [[Liivinmaan ritarikunnan]] aikaisesta hallintojärjestelmästä, mutta tarkkaa arvojärjestystä en ole varma. Titteleitä riitti, ja niiden muistaminen vei oman aikansa.",
+  "vastaus": "Hetkinen ny. [[Komtuuri]] oli ritarikunnan alueyksikön johtaja, jonka tehtäviin kuuluivat alueen hallinto ja puolustus. Hän asui yleensä linnassa, joka toimi hallinnon keskuksena. Jaunpilsin linna siirtyi vuonna 1576 Dobelen viimeiselle ritarikunnan komtuurille Matthias von der Reckelle, ja hänen sukunsa omisti sen 1900-luvun alkuun asti. Sana tulee [[Liivinmaan ritarikunnan]] aikaisesta hallintojärjestelmästä, mutta tarkkaa arvojärjestystä en ole varma. Titteleitä riitti, ja niiden muistaminen vei oman aikansa.",
   "linkit": [
+   "Komtuuri",
    "Liivinmaan ritarikunnan"
   ],
   "jatkot": [
@@ -1403,8 +1426,9 @@
   "kohde": "kohde:hahmotelma-jaunpils",
   "kysymys": "Missä Semgallia sijaitsee?",
   "uusi": true,
-  "vastaus": "Kas vaan. Semgallia on historiallinen alue nykyisen [[Latvian]] eteläosassa, ja siellä sijaitsee myös Jaunpilsin linna. Alue on saanut nimensä semgallilaisilta, joka oli muinainen itäbaltialainen heimo. Semgallia on tasaista viljelysmaata, mutta tarkkoja rajoja en ole varma selittämään oikein. Alueen historiaan kuuluvat sekä heimoyhteisöt että myöhemmät herttuakunnan ajat.\n\nMinusta Semgallia kuulostaa komealta nimeltä, vähän niin kuin sukuni olisi sieltä lähtöisin. Se ei ole, mutta kaunis nimi on silti kunnia.",
+  "vastaus": "Kas vaan. [[Semgallia]] on historiallinen alue nykyisen [[Latvian]] eteläosassa, ja siellä sijaitsee myös Jaunpilsin linna. Alue on saanut nimensä semgallilaisilta, joka oli muinainen itäbaltialainen heimo. Semgallia on tasaista viljelysmaata, mutta tarkkoja rajoja en ole varma selittämään oikein. Alueen historiaan kuuluvat sekä heimoyhteisöt että myöhemmät herttuakunnan ajat.\n\nMinusta Semgallia kuulostaa komealta nimeltä, vähän niin kuin sukuni olisi sieltä lähtöisin. Se ei ole, mutta kaunis nimi on silti kunnia.",
   "linkit": [
+   "Semgallia",
    "Latvian"
   ],
   "jatkot": [
@@ -1431,8 +1455,9 @@
   "kohde": "kohde:hahmotelma-slitere",
   "kysymys": "Mikä oli Baltian jääjärvi, ja mitä sen rannalle jäi?",
   "uusi": false,
-  "vastaus": "Annas ku mietin. Baltian jääjärvi oli viimeisen jääkauden lopulla syntynyt sulamisvesien järvi, joka täytti Itämeren altaan ennen kuin yhteys valtamereen avautui. Mannerjäätikön vetäytyessä vesi kertyi jään ja maan väliin, ja järven ranta kulki muun muassa nykyisen Latvian alueella. Tuhansia vuosia sitten muodostunut muinainen ranta on säilynyt maastossa: Slīteren [[Zilie Kalni]] eli Siniset kukkulat ovat tämän rannan jäännös, jota nykyään peittävät lehtimetsät. Tarkat ajat vaihtelevat lähteiden mukaan, joten jätän vuosiluvut pois. Ja tämän kaiken minä muistin ilman karttaa.",
+  "vastaus": "Annas ku mietin. [[Baltian jääjärvi]] oli viimeisen jääkauden lopulla syntynyt sulamisvesien järvi, joka täytti Itämeren altaan ennen kuin yhteys valtamereen avautui. Mannerjäätikön vetäytyessä vesi kertyi jään ja maan väliin, ja järven ranta kulki muun muassa nykyisen Latvian alueella. Tuhansia vuosia sitten muodostunut muinainen ranta on säilynyt maastossa: Slīteren [[Zilie Kalni]] eli Siniset kukkulat ovat tämän rannan jäännös, jota nykyään peittävät lehtimetsät. Tarkat ajat vaihtelevat lähteiden mukaan, joten jätän vuosiluvut pois. Ja tämän kaiken minä muistin ilman karttaa.",
   "linkit": [
+   "Baltian jääjärvi",
    "Zilie Kalni"
   ],
   "jatkot": [
@@ -1444,8 +1469,9 @@
   "kohde": "kohde:hahmotelma-slitere",
   "kysymys": "Miksi harmaahylkeet synnyttävät poikasensa Slīteren rannikolla?",
   "uusi": true,
-  "vastaus": "Kato, hylkeitä. Harmaahylkeet poikivat Itämerellä yleensä talven lopulla jäällä tai, jos jäätä ei ole, rauhallisilla rannoilla ja luodoilla. Slīteren rannikko on suojeltua aluetta, jossa ihmisten liikkuminen on rajallista, ja se tarjoaa poikasille tarvittavan rauhan. Tällä rannikolla sijaitsevat harmaahylkeiden poikashoitoloista eteläisimmät koko maailmassa, ja [[Itämeren]] harmaahylkeet ovat sopeutuneet elämään kylmässä, osin jäätyvässä merialueessa. Poikaset syntyvät paksussa, vaaleassa karvassa ja ovat aluksi emonsa maidon varassa. Itse viihdyn kuivalla maalla, mutta kunnioitan niitä.",
+  "vastaus": "Kato, hylkeitä. Harmaahylkeet poikivat Itämerellä yleensä talven lopulla jäällä tai, jos jäätä ei ole, rauhallisilla rannoilla ja luodoilla. [[Slīteren]] rannikko on suojeltua aluetta, jossa ihmisten liikkuminen on rajallista, ja se tarjoaa poikasille tarvittavan rauhan. Tällä rannikolla sijaitsevat harmaahylkeiden poikashoitoloista eteläisimmät koko maailmassa, ja [[Itämeren]] harmaahylkeet ovat sopeutuneet elämään kylmässä, osin jäätyvässä merialueessa. Poikaset syntyvät paksussa, vaaleassa karvassa ja ovat aluksi emonsa maidon varassa. Itse viihdyn kuivalla maalla, mutta kunnioitan niitä.",
   "linkit": [
+   "Slīteren",
    "Itämeren"
   ],
   "jatkot": [
@@ -1485,9 +1511,10 @@
   "kohde": "kohde:hahmotelma-dundaga",
   "kysymys": "Miksi Dundagan linnan ympärillä on vettä kolmella sivulla?",
   "uusi": false,
-  "vastaus": "Selvä juttu. Vesi oli keskiajalla tehokas puolustuskeino: lampi ja kostea maa vaikeuttivat piirittäjien pääsyä muurien juurelle sekä rynnäkkövälineiden, kuten tikkaiden ja piiritystornien, käyttöä. [[Riian arkkihiippakunta]] rakennutti linnan 1200-luvun lopulla, ja rakentajat hyödynsivät paikan luonnollista ympäristöä, jolloin Dundagan lammikko suojasi kolmea sivua. Tämä vähensi tarvetta rakentaa raskaita ja kalliita puolustusrakenteita kaikille sivuille. Veden äärellä sijainti oli tavallista myös siksi, että vesi oli käytännössä aina saatavilla. Lammikko on yhä paikallaan, vaikka linna ei enää ole sotilaskäytössä. Hyvä paikka, jos lentäjältä kysytään.",
+  "vastaus": "Selvä juttu. Vesi oli keskiajalla tehokas puolustuskeino: lampi ja kostea maa vaikeuttivat piirittäjien pääsyä muurien juurelle sekä rynnäkkövälineiden, kuten tikkaiden ja piiritystornien, käyttöä. [[Riian arkkihiippakunta]] rakennutti linnan 1200-luvun lopulla, ja rakentajat hyödynsivät paikan luonnollista ympäristöä, jolloin [[Dundagan]] lammikko suojasi kolmea sivua. Tämä vähensi tarvetta rakentaa raskaita ja kalliita puolustusrakenteita kaikille sivuille. Veden äärellä sijainti oli tavallista myös siksi, että vesi oli käytännössä aina saatavilla. Lammikko on yhä paikallaan, vaikka linna ei enää ole sotilaskäytössä. Hyvä paikka, jos lentäjältä kysytään.",
   "linkit": [
-   "Riian arkkihiippakunta"
+   "Riian arkkihiippakunta",
+   "Dundagan"
   ],
   "jatkot": [
    "Miten keskiaikaisia linnoja piirittämällä valloitettiin?",
@@ -1512,9 +1539,10 @@
   "kohde": "kohde:hahmotelma-dundaga",
   "kysymys": "Miksi linnan sisäpihalla oli kaivo?",
   "uusi": true,
-  "vastaus": "Sepä sattui: kaivo on linnoilla yhtä tärkeä kuin muuri. Linnan sisäpihan kaivo takasi asukkaille juomaveden myös [[piirityksen]] aikana, jolloin ulkopuolelta ei päässyt hakemaan vettä lähteestä tai joesta. Ilman omaa vedenhankintaa puolustajat olisivat joutuneet antautumaan jo muutamassa päivässä, sillä ihminen tarvitsee vettä ruokaa nopeammin. Dundagan linnassa kaivo on säilynyt sisäpihalla, ja sen ympäristössä linnaa ympäröivä Dundagan lammikko on tuonut lisäksi suojaa. Kaivo oli myös arkinen välttämättömyys rauhan aikana, kun linnassa asuivat henkilökunta ja hevoset. Vesi on lentäjän ystävä.",
+  "vastaus": "Sepä sattui: kaivo on linnoilla yhtä tärkeä kuin muuri. Linnan sisäpihan kaivo takasi asukkaille juomaveden myös [[piirityksen]] aikana, jolloin ulkopuolelta ei päässyt hakemaan vettä lähteestä tai joesta. Ilman omaa vedenhankintaa puolustajat olisivat joutuneet antautumaan jo muutamassa päivässä, sillä ihminen tarvitsee vettä ruokaa nopeammin. [[Dundagan]] linnassa kaivo on säilynyt sisäpihalla, ja sen ympäristössä linnaa ympäröivä Dundagan lammikko on tuonut lisäksi suojaa. Kaivo oli myös arkinen välttämättömyys rauhan aikana, kun linnassa asuivat henkilökunta ja hevoset. Vesi on lentäjän ystävä.",
   "linkit": [
-   "piirityksen"
+   "piirityksen",
+   "Dundagan"
   ],
   "jatkot": [
    "Miten keskiaikaisen linnan vesihuolto muuten järjestettiin?",
@@ -1525,8 +1553,10 @@
   "kohde": "kohde:hahmotelma-dundaga",
   "kysymys": "Keitä baltiansaksalaiset olivat?",
   "uusi": true,
-  "vastaus": "Ai se. Baltiansaksalaiset olivat saksankielinen väestöryhmä nykyisen Latvian ja Viron alueilla. Heidän juurensa ulottuvat 1200-luvun ristiretkiin ja [[Liivinmaan]] saksalaisten ritarikuntien aikaan, jolloin saksalaisia kauppiaita, papistoa ja aatelisia asettui alueelle. Vuosisatojen ajan he muodostivat monissa kaupungeissa kauppiaiden ja käsityöläisten sekä maaseudulla kartanonomistajien eliitin. Ensimmäisen maailmansodan jälkeen Latvian ja Viron itsenäistyessä maanomistus uudistettiin ja suuret kartanot siirtyivät pääosin valtiolle. Suuri osa baltiansaksalaisista muutti Saksaan 1930-luvun lopulla ja 1940-luvun alussa. Siinä on kokonainen kansanosa yhdessä kappaleessa.",
+  "vastaus": "Ai se. Baltiansaksalaiset olivat saksankielinen väestöryhmä nykyisen [[Latvian]] ja [[Viron]] alueilla. Heidän juurensa ulottuvat 1200-luvun ristiretkiin ja [[Liivinmaan]] saksalaisten ritarikuntien aikaan, jolloin saksalaisia kauppiaita, papistoa ja aatelisia asettui alueelle. Vuosisatojen ajan he muodostivat monissa kaupungeissa kauppiaiden ja käsityöläisten sekä maaseudulla kartanonomistajien eliitin. Ensimmäisen maailmansodan jälkeen Latvian ja Viron itsenäistyessä maanomistus uudistettiin ja suuret kartanot siirtyivät pääosin valtiolle. Suuri osa baltiansaksalaisista muutti Saksaan 1930-luvun lopulla ja 1940-luvun alussa. Siinä on kokonainen kansanosa yhdessä kappaleessa.",
   "linkit": [
+   "Latvian",
+   "Viron",
    "Liivinmaan"
   ],
   "jatkot": [
@@ -1538,8 +1568,9 @@
   "kohde": "kohde:hahmotelma-dundaga",
   "kysymys": "Mitä eroa on linnalla ja kartanolla?",
   "uusi": true,
-  "vastaus": "Mmm— hyvä kysymys tuo. Linna on ennen kaikkea puolustettava rakennus, jonka tehtävä oli suojella ja hallita aluetta: paksut muurit, vallihauta tai muu vesieste ja torni kuuluivat siihen. Kartano taas on maatalouden ja asumisen keskus, jonka omistaja on aatelinen tai muu suurmaanomistaja ja jonka ympärillä on peltoja, metsiä ja talousrakennuksia. Dundagassa linna rakennettiin 1200-luvun lopulla [[Riian arkkihiippakunnan]] käyttöön, ja 1600-luvulla siitä tehtiin kartanon herrasrakennus. Rakennus säilyi, mutta sen tehtävä muuttui sotilaallisesta hallinnollis-taloudelliseksi. Sama kivi, uusi tehtävä, kuten kyyhkyllä.",
+  "vastaus": "Mmm— hyvä kysymys tuo. Linna on ennen kaikkea puolustettava rakennus, jonka tehtävä oli suojella ja hallita aluetta: paksut muurit, vallihauta tai muu vesieste ja torni kuuluivat siihen. Kartano taas on maatalouden ja asumisen keskus, jonka omistaja on aatelinen tai muu suurmaanomistaja ja jonka ympärillä on peltoja, metsiä ja talousrakennuksia. [[Dundagassa]] linna rakennettiin 1200-luvun lopulla [[Riian arkkihiippakunnan]] käyttöön, ja 1600-luvulla siitä tehtiin kartanon herrasrakennus. Rakennus säilyi, mutta sen tehtävä muuttui sotilaallisesta hallinnollis-taloudelliseksi. Sama kivi, uusi tehtävä, kuten kyyhkyllä.",
   "linkit": [
+   "Dundagassa",
    "Riian arkkihiippakunnan"
   ],
   "jatkot": [
@@ -1579,9 +1610,11 @@
   "kohde": "kohde:hahmotelma-talsi",
   "kysymys": "Mikä on linnavuori ja miksi kuurilaiset rakensivat sellaisia?",
   "uusi": true,
-  "vastaus": "Just niin, Pilskalns on juuri sellainen. Linnavuori on kukkulan päälle tai muuten luonnostaan suojaisaan paikkaan rakennettu linnoitettu asuinpaikka, jota ympäröi yleensä puinen tai maasta tehty vallirakenne. Se toimi turvapaikkana vihollisen uhatessa, mutta myös paikallisen vallan ja kaupan keskuksena. Kuurilaiset olivat balttilainen heimo, ja [[Kuurinmaan]] nimi tulee heidän nimestään. Talsin keskustan kukkulalla on ollut linnavuori vähintään 900-luvulta lähtien, ja myöhemmin samalle seudulle rakennettiin linna 1200-luvun lopulla. Kukkula on hyvä näköalapaikka, kun aikoo havaita saapuvat vieraat ajoissa. Ymmärrän asian täydellisesti.",
+  "vastaus": "Just niin, [[Pilskalns]] on juuri sellainen. Linnavuori on kukkulan päälle tai muuten luonnostaan suojaisaan paikkaan rakennettu linnoitettu asuinpaikka, jota ympäröi yleensä puinen tai maasta tehty vallirakenne. Se toimi turvapaikkana vihollisen uhatessa, mutta myös paikallisen vallan ja kaupan keskuksena. Kuurilaiset olivat balttilainen heimo, ja [[Kuurinmaan]] nimi tulee heidän nimestään. [[Talsin]] keskustan kukkulalla on ollut linnavuori vähintään 900-luvulta lähtien, ja myöhemmin samalle seudulle rakennettiin linna 1200-luvun lopulla. Kukkula on hyvä näköalapaikka, kun aikoo havaita saapuvat vieraat ajoissa. Ymmärrän asian täydellisesti.",
   "linkit": [
-   "Kuurinmaan"
+   "Pilskalns",
+   "Kuurinmaan",
+   "Talsin"
   ],
   "jatkot": [
    "Mitä tiedetään kuurilaisten elämästä ja kielestä?",

@@ -35,7 +35,7 @@ Miten lintujen muuttoa seurataan tutkimuksessa?
 
 ### 12.1
 KYSYMYS: Miksi putous perääntyy hitaasti ylävirtaan?
-Kas vaan. Putouksen tekee devonikautinen [[dolomiitti]], jonka alempi kerros rapautuu nopeammin kuin ylempi. Ylempi kerros jää roikkumaan, kunnes se lohkeaa jokeen, ja näin putous perääntyy hitaasti ylävirtaan. Koska virta on keskellä voimakkain, keskikohta vetäytyy reunoja nopeammin. Kiire ei oo kivellä.
+Kas vaan. [[Putouksen]] tekee devonikautinen [[dolomiitti]], jonka alempi kerros rapautuu nopeammin kuin ylempi. Ylempi kerros jää roikkumaan, kunnes se lohkeaa jokeen, ja näin putous perääntyy hitaasti ylävirtaan. Koska virta on keskellä voimakkain, keskikohta vetäytyy reunoja nopeammin. Kiire ei oo kivellä.
 JATKOT:
 Mitä dolomiitti on ja miten se syntyy?
 Mitkä muut vesiputoukset perääntyvät rapautumalla?
@@ -49,7 +49,7 @@ Miten kalat pääsevät padon tai putouksen ohi?
 
 ### 12.3
 KYSYMYS: Miksi Kuldīga syntyi juuri putouksen kohdalle?
-Annas ku mietin. Putous katkaisi keskiaikaisen [[Ventan]] sisävesireitin, ja kaupunki syntyi juuri tähän, reitin katkeamiskohtaan. Sisävesiliikenteessä tavarat ja kulkijat jouduttiin siirtämään putouksen ohi, mikä teki paikasta luontevan pysähdyspaikan. Minä ois lentänyt vaan yli.
+Annas ku mietin. [[Putous]] katkaisi keskiaikaisen [[Ventan]] sisävesireitin, ja kaupunki syntyi juuri tähän, reitin katkeamiskohtaan. Sisävesiliikenteessä tavarat ja kulkijat jouduttiin siirtämään putouksen ohi, mikä teki paikasta luontevan pysähdyspaikan. Minä ois lentänyt vaan yli.
 JATKOT:
 Miksi monet kaupungit syntyivät jokien koskien kohdalle?
 Millä tavoin tavaroita kuljetettiin jokia pitkin keskiajalla?

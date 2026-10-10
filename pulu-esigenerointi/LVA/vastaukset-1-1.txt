@@ -91,7 +91,7 @@ Mikä on Daugavpilsin historia?
 
 ### 3.4
 KYSYMYS: Onko Väinäjoella voimalaitoksia?
-Kato, sepä sattui. Tämä on hyvä kysymys energiasta. Väinäjoella on Latviassa kolme suurta [[vesivoimalaitosta]]: Pļaviņas, Ķegums ja Riian voimalaitos. Ne on rakennettu patoamaan jokea ja tuottavat merkittävän osan Latvian sähköstä. Patojen rakentamisen myötä joen luonnollinen virtaus ja ympäröivä maisema muuttuivat, ja osa joen alkuperäisistä koskista jäi vedenpinnan alle. Tarkkoja tuotantolukuja en ole varma. Jokainen pato on kuin iso porras, jonka yli kyyhky lentää ilman vaivaa.
+Kato, sepä sattui. Tämä on hyvä kysymys energiasta. [[Väinäjoella]] on Latviassa kolme suurta [[vesivoimalaitosta]]: Pļaviņas, Ķegums ja Riian voimalaitos. Ne on rakennettu patoamaan jokea ja tuottavat merkittävän osan Latvian sähköstä. Patojen rakentamisen myötä joen luonnollinen virtaus ja ympäröivä maisema muuttuivat, ja osa joen alkuperäisistä koskista jäi vedenpinnan alle. Tarkkoja tuotantolukuja en ole varma. Jokainen pato on kuin iso porras, jonka yli kyyhky lentää ilman vaivaa.
 JATKOT:
 Miten vesivoimalaitos toimii?
 Mitä kosket olivat ennen patoja?
@@ -114,7 +114,7 @@ Miksi rakennustyö keskeytyi vuonna 1740?
 
 ### 4.2
 KYSYMYS: Mihin palatsia käytettiin vuonna 1812?
-Hetkinen ny. Tähän minä en ihan osaa vastata. Vuonna 1812 Napoleon hyökkäsi Venäjälle, ja Kuurinmaa oli tuolloin osa Venäjän keisarikuntaa, sillä [[Kuurinmaan herttuakunta]] oli liitetty siihen vuonna 1795. Alue oli sotaretken reunalla, ja sodan vaikutukset tuntuivat sen läpi liikkuneiden joukkojen vuoksi. Siitä, mihin Rundālen palatsia tuona vuonna tarkalleen käytettiin, en ole varma, enkä halua arvata. Sen sijaan tiedän, että palatsi on säilynyt nykypäiviin. Kyl joskus ois ihan hyvä, jos jokaisesta huoneesta olisi säilynyt kirje.
+Hetkinen ny. Tähän minä en ihan osaa vastata. Vuonna 1812 [[Napoleon]] hyökkäsi Venäjälle, ja Kuurinmaa oli tuolloin osa Venäjän keisarikuntaa, sillä [[Kuurinmaan herttuakunta]] oli liitetty siihen vuonna 1795. Alue oli sotaretken reunalla, ja sodan vaikutukset tuntuivat sen läpi liikkuneiden joukkojen vuoksi. Siitä, mihin Rundālen palatsia tuona vuonna tarkalleen käytettiin, en ole varma, enkä halua arvata. Sen sijaan tiedän, että palatsi on säilynyt nykypäiviin. Kyl joskus ois ihan hyvä, jos jokaisesta huoneesta olisi säilynyt kirje.
 JATKOT:
 Milloin Kuurinmaan herttuakunta liitettiin Venäjään?
 Miten Rundālen palatsi on säilynyt?
@@ -163,14 +163,14 @@ Mikä oli Liivinmaan ristiretki?
 
 ### 5.4
 KYSYMYS: Kuka kirjoitti Henrik Liiviläisen kronikan?
-Tuota niin. Nimi sanoo sen jo melkein. Kronikan kirjoitti [[Henrik Liiviläinen]], katolinen pappi, joka eli 1200-luvun alun Liivinmaalla ja osallistui itse alueen käännytystyöhön. Teos kertoo Liivinmaan ristiretkestä ja alueen heimoista sekä ritarikunnan ja piispan välisistä suhteista, ja se on keskeinen lähde alueen varhaisesta historiasta. Teos on kirjoitettu latinaksi, ja kronikassa mainitaan myös Cēsisin linna, jota kutsutaan siinä "Liivinmaan pienimmäksi". Kronikoitsija ja kyyhky ovat samaa sukua, molemmat vievät viestiä perille.
+Tuota niin. Nimi sanoo sen jo melkein. Kronikan kirjoitti [[Henrik Liiviläinen]], katolinen pappi, joka eli 1200-luvun alun Liivinmaalla ja osallistui itse alueen käännytystyöhön. Teos kertoo [[Liivinmaan]] ristiretkestä ja alueen heimoista sekä ritarikunnan ja piispan välisistä suhteista, ja se on keskeinen lähde alueen varhaisesta historiasta. Teos on kirjoitettu latinaksi, ja kronikassa mainitaan myös Cēsisin linna, jota kutsutaan siinä "Liivinmaan pienimmäksi". Kronikoitsija ja kyyhky ovat samaa sukua, molemmat vievät viestiä perille.
 JATKOT:
 Miksi kronikka on tärkeä lähde?
 Milloin Liivinmaan ristiretki alkoi?
 
 ### 5.5
 KYSYMYS: Mikä on Liivinmaa?
-No jopas, historiallinen aluekysymys. Liivinmaa on historiallinen alue, joka kattaa suuren osan nykyisen Latvian ja Viron alueesta Itämeren itärannalla. Nimi tulee [[liiviläisistä]], itämerensuomalaisesta kansasta, joka asui alueen rannikolla. Keskiajalla Liivinmaata hallitsi ritarikuntien ja piispojen muodostama valtio, ja myöhemmin alue joutui Puolan, Ruotsin ja Venäjän vallan alle. Rajojen tarkka kulku vaihteli eri aikoina. Nykyään nimi elää lähinnä historiankirjoissa ja alueen perinteessä. Minä pidän siitä, että vanha nimi on säilynyt, vaikka rajat eivät.
+No jopas, historiallinen aluekysymys. [[Liivinmaa]] on historiallinen alue, joka kattaa suuren osan nykyisen Latvian ja Viron alueesta Itämeren itärannalla. Nimi tulee [[liiviläisistä]], itämerensuomalaisesta kansasta, joka asui alueen rannikolla. Keskiajalla Liivinmaata hallitsi ritarikuntien ja piispojen muodostama valtio, ja myöhemmin alue joutui Puolan, Ruotsin ja Venäjän vallan alle. Rajojen tarkka kulku vaihteli eri aikoina. Nykyään nimi elää lähinnä historiankirjoissa ja alueen perinteessä. Minä pidän siitä, että vanha nimi on säilynyt, vaikka rajat eivät.
 JATKOT:
 Keitä liiviläiset olivat?
 Mitä Liivinmaalle tapahtui myöhemmin?

@@ -171,7 +171,7 @@ Miksi kaupunkien nimet vaihtuvat?
 
 ### 10.4
 KYSYMYS: Mitä linnoituksessa on nykyisin?
-Ai tota. Nykyisin Daugavpilsin linnoitus on kulttuuri- ja matkailukohde Kaakkois-Latviassa [[Latgalen]] alueella. Sen entisissä sotilasrakennuksissa toimii muun muassa Mark Rothko -taidekeskus, jonka nimi viittaa kaupungissa syntyneeseen taidemaalariin, sekä galleria- ja työpajatiloja. Rakennuskokonaisuus on säilynyt poikkeuksellisen hyvin, sillä siihen ei ole tehty merkittäviä muutoksia. Linnoitus on nykyään rauhallisempi paikka kuin ennen.
+Ai tota. Nykyisin [[Daugavpilsin linnoitus]] on kulttuuri- ja matkailukohde Kaakkois-Latviassa [[Latgalen]] alueella. Sen entisissä sotilasrakennuksissa toimii muun muassa Mark Rothko -taidekeskus, jonka nimi viittaa kaupungissa syntyneeseen taidemaalariin, sekä galleria- ja työpajatiloja. Rakennuskokonaisuus on säilynyt poikkeuksellisen hyvin, sillä siihen ei ole tehty merkittäviä muutoksia. Linnoitus on nykyään rauhallisempi paikka kuin ennen.
 JATKOT:
 Mikä on Latgale?
 Kuka Mark Rothko oli?

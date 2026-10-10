@@ -8,7 +8,7 @@ Miten muuttolintuja lasketaan ja tarkkaillaan?
 
 ### 21.2
 KYSYMYS: Mikä oli Baltian jääjärvi, ja mitä sen rannalle jäi?
-Annas ku mietin. Baltian jääjärvi oli viimeisen jääkauden lopulla syntynyt sulamisvesien järvi, joka täytti Itämeren altaan ennen kuin yhteys valtamereen avautui. Mannerjäätikön vetäytyessä vesi kertyi jään ja maan väliin, ja järven ranta kulki muun muassa nykyisen Latvian alueella. Tuhansia vuosia sitten muodostunut muinainen ranta on säilynyt maastossa: Slīteren [[Zilie Kalni]] eli Siniset kukkulat ovat tämän rannan jäännös, jota nykyään peittävät lehtimetsät. Tarkat ajat vaihtelevat lähteiden mukaan, joten jätän vuosiluvut pois. Ja tämän kaiken minä muistin ilman karttaa.
+Annas ku mietin. [[Baltian jääjärvi]] oli viimeisen jääkauden lopulla syntynyt sulamisvesien järvi, joka täytti Itämeren altaan ennen kuin yhteys valtamereen avautui. Mannerjäätikön vetäytyessä vesi kertyi jään ja maan väliin, ja järven ranta kulki muun muassa nykyisen Latvian alueella. Tuhansia vuosia sitten muodostunut muinainen ranta on säilynyt maastossa: Slīteren [[Zilie Kalni]] eli Siniset kukkulat ovat tämän rannan jäännös, jota nykyään peittävät lehtimetsät. Tarkat ajat vaihtelevat lähteiden mukaan, joten jätän vuosiluvut pois. Ja tämän kaiken minä muistin ilman karttaa.
 
 JATKOT:
 Miten Itämeri sai nykyisen muotonsa jääkauden jälkeen?
@@ -16,7 +16,7 @@ Mitä muita muinaisia rantoja Itämeren ympärillä näkyy?
 
 ### 21.3
 KYSYMYS: Miksi harmaahylkeet synnyttävät poikasensa Slīteren rannikolla?
-Kato, hylkeitä. Harmaahylkeet poikivat Itämerellä yleensä talven lopulla jäällä tai, jos jäätä ei ole, rauhallisilla rannoilla ja luodoilla. Slīteren rannikko on suojeltua aluetta, jossa ihmisten liikkuminen on rajallista, ja se tarjoaa poikasille tarvittavan rauhan. Tällä rannikolla sijaitsevat harmaahylkeiden poikashoitoloista eteläisimmät koko maailmassa, ja [[Itämeren]] harmaahylkeet ovat sopeutuneet elämään kylmässä, osin jäätyvässä merialueessa. Poikaset syntyvät paksussa, vaaleassa karvassa ja ovat aluksi emonsa maidon varassa. Itse viihdyn kuivalla maalla, mutta kunnioitan niitä.
+Kato, hylkeitä. Harmaahylkeet poikivat Itämerellä yleensä talven lopulla jäällä tai, jos jäätä ei ole, rauhallisilla rannoilla ja luodoilla. [[Slīteren]] rannikko on suojeltua aluetta, jossa ihmisten liikkuminen on rajallista, ja se tarjoaa poikasille tarvittavan rauhan. Tällä rannikolla sijaitsevat harmaahylkeiden poikashoitoloista eteläisimmät koko maailmassa, ja [[Itämeren]] harmaahylkeet ovat sopeutuneet elämään kylmässä, osin jäätyvässä merialueessa. Poikaset syntyvät paksussa, vaaleassa karvassa ja ovat aluksi emonsa maidon varassa. Itse viihdyn kuivalla maalla, mutta kunnioitan niitä.
 
 JATKOT:
 Kuinka suuri Itämeren harmaahyljekanta nykyään on?
@@ -40,7 +40,7 @@ Mitä saaria Riianlahdella on?
 
 ### 22.1
 KYSYMYS: Miksi Dundagan linnan ympärillä on vettä kolmella sivulla?
-Selvä juttu. Vesi oli keskiajalla tehokas puolustuskeino: lampi ja kostea maa vaikeuttivat piirittäjien pääsyä muurien juurelle sekä rynnäkkövälineiden, kuten tikkaiden ja piiritystornien, käyttöä. [[Riian arkkihiippakunta]] rakennutti linnan 1200-luvun lopulla, ja rakentajat hyödynsivät paikan luonnollista ympäristöä, jolloin Dundagan lammikko suojasi kolmea sivua. Tämä vähensi tarvetta rakentaa raskaita ja kalliita puolustusrakenteita kaikille sivuille. Veden äärellä sijainti oli tavallista myös siksi, että vesi oli käytännössä aina saatavilla. Lammikko on yhä paikallaan, vaikka linna ei enää ole sotilaskäytössä. Hyvä paikka, jos lentäjältä kysytään.
+Selvä juttu. Vesi oli keskiajalla tehokas puolustuskeino: lampi ja kostea maa vaikeuttivat piirittäjien pääsyä muurien juurelle sekä rynnäkkövälineiden, kuten tikkaiden ja piiritystornien, käyttöä. [[Riian arkkihiippakunta]] rakennutti linnan 1200-luvun lopulla, ja rakentajat hyödynsivät paikan luonnollista ympäristöä, jolloin [[Dundagan]] lammikko suojasi kolmea sivua. Tämä vähensi tarvetta rakentaa raskaita ja kalliita puolustusrakenteita kaikille sivuille. Veden äärellä sijainti oli tavallista myös siksi, että vesi oli käytännössä aina saatavilla. Lammikko on yhä paikallaan, vaikka linna ei enää ole sotilaskäytössä. Hyvä paikka, jos lentäjältä kysytään.
 
 JATKOT:
 Miten keskiaikaisia linnoja piirittämällä valloitettiin?
@@ -56,7 +56,7 @@ Mitä kartanon sivukartanot tekivät?
 
 ### 22.3
 KYSYMYS: Miksi linnan sisäpihalla oli kaivo?
-Sepä sattui: kaivo on linnoilla yhtä tärkeä kuin muuri. Linnan sisäpihan kaivo takasi asukkaille juomaveden myös [[piirityksen]] aikana, jolloin ulkopuolelta ei päässyt hakemaan vettä lähteestä tai joesta. Ilman omaa vedenhankintaa puolustajat olisivat joutuneet antautumaan jo muutamassa päivässä, sillä ihminen tarvitsee vettä ruokaa nopeammin. Dundagan linnassa kaivo on säilynyt sisäpihalla, ja sen ympäristössä linnaa ympäröivä Dundagan lammikko on tuonut lisäksi suojaa. Kaivo oli myös arkinen välttämättömyys rauhan aikana, kun linnassa asuivat henkilökunta ja hevoset. Vesi on lentäjän ystävä.
+Sepä sattui: kaivo on linnoilla yhtä tärkeä kuin muuri. Linnan sisäpihan kaivo takasi asukkaille juomaveden myös [[piirityksen]] aikana, jolloin ulkopuolelta ei päässyt hakemaan vettä lähteestä tai joesta. Ilman omaa vedenhankintaa puolustajat olisivat joutuneet antautumaan jo muutamassa päivässä, sillä ihminen tarvitsee vettä ruokaa nopeammin. [[Dundagan]] linnassa kaivo on säilynyt sisäpihalla, ja sen ympäristössä linnaa ympäröivä Dundagan lammikko on tuonut lisäksi suojaa. Kaivo oli myös arkinen välttämättömyys rauhan aikana, kun linnassa asuivat henkilökunta ja hevoset. Vesi on lentäjän ystävä.
 
 JATKOT:
 Miten keskiaikaisen linnan vesihuolto muuten järjestettiin?
@@ -64,7 +64,7 @@ Miten kaivon syvyys ja vesi tutkittiin?
 
 ### 22.4
 KYSYMYS: Keitä baltiansaksalaiset olivat?
-Ai se. Baltiansaksalaiset olivat saksankielinen väestöryhmä nykyisen Latvian ja Viron alueilla. Heidän juurensa ulottuvat 1200-luvun ristiretkiin ja [[Liivinmaan]] saksalaisten ritarikuntien aikaan, jolloin saksalaisia kauppiaita, papistoa ja aatelisia asettui alueelle. Vuosisatojen ajan he muodostivat monissa kaupungeissa kauppiaiden ja käsityöläisten sekä maaseudulla kartanonomistajien eliitin. Ensimmäisen maailmansodan jälkeen Latvian ja Viron itsenäistyessä maanomistus uudistettiin ja suuret kartanot siirtyivät pääosin valtiolle. Suuri osa baltiansaksalaisista muutti Saksaan 1930-luvun lopulla ja 1940-luvun alussa. Siinä on kokonainen kansanosa yhdessä kappaleessa.
+Ai se. Baltiansaksalaiset olivat saksankielinen väestöryhmä nykyisen [[Latvian]] ja [[Viron]] alueilla. Heidän juurensa ulottuvat 1200-luvun ristiretkiin ja [[Liivinmaan]] saksalaisten ritarikuntien aikaan, jolloin saksalaisia kauppiaita, papistoa ja aatelisia asettui alueelle. Vuosisatojen ajan he muodostivat monissa kaupungeissa kauppiaiden ja käsityöläisten sekä maaseudulla kartanonomistajien eliitin. Ensimmäisen maailmansodan jälkeen Latvian ja Viron itsenäistyessä maanomistus uudistettiin ja suuret kartanot siirtyivät pääosin valtiolle. Suuri osa baltiansaksalaisista muutti Saksaan 1930-luvun lopulla ja 1940-luvun alussa. Siinä on kokonainen kansanosa yhdessä kappaleessa.
 
 JATKOT:
 Mitä maareformi tarkoitti Latvian itsenäistyessä?
@@ -72,7 +72,7 @@ Millainen oli elämä baltiansaksalaisessa kartanossa?
 
 ### 22.5
 KYSYMYS: Mitä eroa on linnalla ja kartanolla?
-Mmm— hyvä kysymys tuo. Linna on ennen kaikkea puolustettava rakennus, jonka tehtävä oli suojella ja hallita aluetta: paksut muurit, vallihauta tai muu vesieste ja torni kuuluivat siihen. Kartano taas on maatalouden ja asumisen keskus, jonka omistaja on aatelinen tai muu suurmaanomistaja ja jonka ympärillä on peltoja, metsiä ja talousrakennuksia. Dundagassa linna rakennettiin 1200-luvun lopulla [[Riian arkkihiippakunnan]] käyttöön, ja 1600-luvulla siitä tehtiin kartanon herrasrakennus. Rakennus säilyi, mutta sen tehtävä muuttui sotilaallisesta hallinnollis-taloudelliseksi. Sama kivi, uusi tehtävä, kuten kyyhkyllä.
+Mmm— hyvä kysymys tuo. Linna on ennen kaikkea puolustettava rakennus, jonka tehtävä oli suojella ja hallita aluetta: paksut muurit, vallihauta tai muu vesieste ja torni kuuluivat siihen. Kartano taas on maatalouden ja asumisen keskus, jonka omistaja on aatelinen tai muu suurmaanomistaja ja jonka ympärillä on peltoja, metsiä ja talousrakennuksia. [[Dundagassa]] linna rakennettiin 1200-luvun lopulla [[Riian arkkihiippakunnan]] käyttöön, ja 1600-luvulla siitä tehtiin kartanon herrasrakennus. Rakennus säilyi, mutta sen tehtävä muuttui sotilaallisesta hallinnollis-taloudelliseksi. Sama kivi, uusi tehtävä, kuten kyyhkyllä.
 
 JATKOT:
 Miten linnat muuttuivat kartanoiksi Euroopassa?
@@ -96,7 +96,7 @@ Miten Beethoven ja hänen ystävänsä pitivät yhteyttä?
 
 ### 23.3
 KYSYMYS: Mikä on linnavuori ja miksi kuurilaiset rakensivat sellaisia?
-Just niin, Pilskalns on juuri sellainen. Linnavuori on kukkulan päälle tai muuten luonnostaan suojaisaan paikkaan rakennettu linnoitettu asuinpaikka, jota ympäröi yleensä puinen tai maasta tehty vallirakenne. Se toimi turvapaikkana vihollisen uhatessa, mutta myös paikallisen vallan ja kaupan keskuksena. Kuurilaiset olivat balttilainen heimo, ja [[Kuurinmaan]] nimi tulee heidän nimestään. Talsin keskustan kukkulalla on ollut linnavuori vähintään 900-luvulta lähtien, ja myöhemmin samalle seudulle rakennettiin linna 1200-luvun lopulla. Kukkula on hyvä näköalapaikka, kun aikoo havaita saapuvat vieraat ajoissa. Ymmärrän asian täydellisesti.
+Just niin, [[Pilskalns]] on juuri sellainen. Linnavuori on kukkulan päälle tai muuten luonnostaan suojaisaan paikkaan rakennettu linnoitettu asuinpaikka, jota ympäröi yleensä puinen tai maasta tehty vallirakenne. Se toimi turvapaikkana vihollisen uhatessa, mutta myös paikallisen vallan ja kaupan keskuksena. Kuurilaiset olivat balttilainen heimo, ja [[Kuurinmaan]] nimi tulee heidän nimestään. [[Talsin]] keskustan kukkulalla on ollut linnavuori vähintään 900-luvulta lähtien, ja myöhemmin samalle seudulle rakennettiin linna 1200-luvun lopulla. Kukkula on hyvä näköalapaikka, kun aikoo havaita saapuvat vieraat ajoissa. Ymmärrän asian täydellisesti.
 
 JATKOT:
 Mitä tiedetään kuurilaisten elämästä ja kielestä?
@@ -152,7 +152,7 @@ Mitkä ovat Latvian neljä historiallista maakuntaa?
 
 ### 24.5
 KYSYMYS: Miksi rautatiesolmukohdat olivat 1800-luvulla tärkeitä?
-Joo, tän minä tiedän. Rautatiesolmukohta on paikka, jossa useita ratoja kohtaa, ja sen merkitys perustui siihen, että tavarat ja matkustajat vaihtoivat siellä junaa. Solmukohtiin kasvoi asemarakennuksia, varastoja, korjaamoja ja majataloja, ja niiden ympärille syntyi työpaikkoja sekä kauppaa. Kaupungit, joilla oli useita ratayhteyksiä, kasvoivat usein muita nopeammin, koska ne olivat helppoja saavuttaa ja niiden kautta kulki sekä raskasta tavaraa että ihmisiä. [[Höyryveturien]] aikakaudella Tukumsin kaltainen solmu yhdisti sisämaan ja rannikon. Minä olisin kantanut kirjeet nopeammin.
+Joo, tän minä tiedän. Rautatiesolmukohta on paikka, jossa useita ratoja kohtaa, ja sen merkitys perustui siihen, että tavarat ja matkustajat vaihtoivat siellä junaa. Solmukohtiin kasvoi asemarakennuksia, varastoja, korjaamoja ja majataloja, ja niiden ympärille syntyi työpaikkoja sekä kauppaa. Kaupungit, joilla oli useita ratayhteyksiä, kasvoivat usein muita nopeammin, koska ne olivat helppoja saavuttaa ja niiden kautta kulki sekä raskasta tavaraa että ihmisiä. [[Höyryveturien]] aikakaudella [[Tukumsin]] kaltainen solmu yhdisti sisämaan ja rannikon. Minä olisin kantanut kirjeet nopeammin.
 
 JATKOT:
 Miten höyryveturi toimii?
@@ -160,7 +160,7 @@ Miten rautatieverkko levisi Baltiassa?
 
 ### 25.1
 KYSYMYS: Miksi Cesvainen linna ja koko kylä hävitettiin Liivinsodan aikana?
-Tuota niin. Tämä on raskas aihe. Liivinsodan aikana vuonna 1577 Venäjän tsaari [[Iivana Julma]] määräsi Cesvainen linnan ja koko kylän hävitettäväksi, koska puolustajat eivät suostuneet antautumaan. Tuohon aikaan piiritetyn linnan kieltäytyminen antautumisesta saattoi johtaa rankaisuun, ja sodankäynnin säännöt olivat hyvin erilaiset kuin nykyään. Sota oli pitkä ja koski laajaa aluetta, ja monet linnat ja kylät kärsivät sen aikana. Kivilinna oli rakennettu 1400-luvun alussa, ja sen rauniot ovat jääneet muistoksi. Onpas siitä onneksi pitkä aika.
+Tuota niin. Tämä on raskas aihe. Liivinsodan aikana vuonna 1577 Venäjän tsaari [[Iivana Julma]] määräsi [[Cesvainen]] linnan ja koko kylän hävitettäväksi, koska puolustajat eivät suostuneet antautumaan. Tuohon aikaan piiritetyn linnan kieltäytyminen antautumisesta saattoi johtaa rankaisuun, ja sodankäynnin säännöt olivat hyvin erilaiset kuin nykyään. Sota oli pitkä ja koski laajaa aluetta, ja monet linnat ja kylät kärsivät sen aikana. Kivilinna oli rakennettu 1400-luvun alussa, ja sen rauniot ovat jääneet muistoksi. Onpas siitä onneksi pitkä aika.
 
 JATKOT:
 Mikä Liivinsota oli ja ketkä siihen osallistuivat?
@@ -176,7 +176,7 @@ Mitä Latgalen kielimuoto on ja kuka sitä puhuu?
 
 ### 25.3
 KYSYMYS: Mitä Cesvainen palatsissa on nykyään?
-Odotas vähän. Cesvainen palatsi valmistui vuonna 1896 keskiaikaisten linnojen raunioiden lähelle, aikana jolloin paroni von Wulfin suku oli kartanon omistaja. Muistaakseni palatsissa toimii nykyisin museo ja kulttuuritoimintaa, mutta en ole varma, mitä siellä on tarkalleen esillä. Palatsi edustaa 1800-luvun lopun kartanoarkkitehtuuria, joka rakennettiin edustavaksi ja perheen asumiseen. Vierailija voi käydä palatsissa ja nähdä samalla vanhojen linnojen rauniot, joten paikka kertoo kahdesta eri aikakaudesta. Aukioloajoista kannattaa kysyä paikan päältä. Tästä palatsista voi kyllä tulla pulla-ajatuksia.
+Odotas vähän. [[Cesvainen palatsi]] valmistui vuonna 1896 keskiaikaisten linnojen raunioiden lähelle, aikana jolloin paroni von Wulfin suku oli kartanon omistaja. Muistaakseni palatsissa toimii nykyisin museo ja kulttuuritoimintaa, mutta en ole varma, mitä siellä on tarkalleen esillä. Palatsi edustaa 1800-luvun lopun kartanoarkkitehtuuria, joka rakennettiin edustavaksi ja perheen asumiseen. Vierailija voi käydä palatsissa ja nähdä samalla vanhojen linnojen rauniot, joten paikka kertoo kahdesta eri aikakaudesta. Aukioloajoista kannattaa kysyä paikan päältä. Tästä palatsista voi kyllä tulla pulla-ajatuksia.
 
 JATKOT:
 Millaisia kartanopalatseja Latviassa on säilynyt 1800-luvulta?
