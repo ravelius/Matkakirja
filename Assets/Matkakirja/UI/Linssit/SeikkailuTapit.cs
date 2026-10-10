@@ -227,7 +227,10 @@ namespace Matkakirja.Natiivi
                 nahdyt.Add(id);
                 if (t.phase == KosketusVaihe.Began || !sormet.TryGetValue(id, out var s))
                 {
-                    s = new Sormi { Alku = px, Edellinen = px, AlkuT = t.startTime, Ui = UiKerros.Peittaa(px), Oikealla = px.x >= Screen.width * 0.5f };
+                    // Linnan näyttämökuva (DioraamaTaulu mk-dioraama-nakyma, koko ruutu, PickingMode.Position) ei ole peittävää UI:ta:
+                    // UiKerros.Peittaa oli sen takia aina tosi, eikä seikkailu saanut yhtään kosketusta (iPad 179: ei liikettä, katsetta
+                    // eikä napautusta; vain kulmatapin UI-tapahtumat).
+                    s = new Sormi { Alku = px, Edellinen = px, AlkuT = t.startTime, Ui = UiKerros.PeittaaMuu(px, "mk-dioraama-nakyma"), Oikealla = px.x >= Screen.width * 0.5f };
                     // Vain yksi käsittely kerrallaan (ei Macin/ohjaimen käynnissä olevan päälle); esineen tunnistus Siirtosepältä.
                     // Veto käynnistyy heti kosketuksesta (Kaynnissa: kohde pysyy aktiivisena ja katse paikallaan), mutta liike
                     // syötetään vasta napautusrajan jälkeen; lyhyt napautus päättää käsittelyn ilman kääntöä.

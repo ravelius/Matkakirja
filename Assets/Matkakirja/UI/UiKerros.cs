@@ -325,7 +325,13 @@ namespace Matkakirja.Natiivi
         /// Osuuko ruudun piste (Input Systemin pikselit, origo vasen alakulma)
         /// johonkin poimittavaan UI-elementtiin millä tahansa kerroksella.
         /// </summary>
-        public bool PeittaaPisteen(Vector2 ruutu)
+        public bool PeittaaPisteen(Vector2 ruutu) => PeittaaPisteen(ruutu, null);
+
+        /// <summary>Kuten PeittaaPisteen, mutta osuma luokalla <paramref name="ohita"/> ei peitä (seikkailu: linnan koko ruudun
+        /// näyttämökuva mk-dioraama-nakyma ottaa kosketukset vastaan, mutta sen läpi kosketus kuuluu maailmalle; Siirtoseppä 10.10.).</summary>
+        public static bool PeittaaMuu(Vector2 ruutu, string ohita) => instanssi != null && instanssi.PeittaaPisteen(ruutu, ohita);
+
+        bool PeittaaPisteen(Vector2 ruutu, string ohita)
         {
             if (!nakyvissa) return false;
             var ylhaalta = new Vector2(ruutu.x, Screen.height - ruutu.y);
@@ -336,7 +342,7 @@ namespace Matkakirja.Natiivi
                 if (paneeli == null) continue;
                 var p = RuntimePanelUtils.ScreenToPanel(paneeli, ylhaalta);
                 var osuma = paneeli.PickAll(p, null); // tuore: Pick lukee hiiren välimuistia (kosketusvälimuisti alla)
-                if (osuma != null && osuma != juuri) return true;
+                if (osuma != null && osuma != juuri && (ohita == null || !osuma.ClassListContains(ohita))) return true;
             }
             return false;
         }
