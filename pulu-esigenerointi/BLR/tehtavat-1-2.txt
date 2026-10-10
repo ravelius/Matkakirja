@@ -1,0 +1,84 @@
+================ KOHTA 6 (kohde:gomelin-palatsi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gomelin Rumjantsev-Paskevitš-palatsi (historia)
+Tietoruudun teksti: Rumjantsev-Paskevitš-palatsi sijaitsee Gomelissa Valko-Venäjällä Sozh-joen rannalla. Kenttämarsalkka Pjotr Rumjantsev rakennutti sen vuosina 1777–1796, ja uusklassisen alkuperäissuunnitelman laati Ivan Starov. Vuonna 1834 kruunu osti kiinteistön, ja se siirtyi kenttämarsalkka Ivan Paskevitšille, joka lisäsi palatsiin nelikerroksisen tornin ja kolmikerroksisen siiven. Palatsia ympäröivä puisto ulottuu noin 800 metrin matkalle joen varrella, ja sen alueella on Pietarin ja Paavalin kirkko, joka vihittiin käyttöön vuonna 1824. Nykyään rakennuksessa toimii museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Manila — kohdekartta / Kohdekartta: Manilan katedraali] nykyinen rakennus 1958 Manilan seurakuntakirkko perustettiin 1571 Meksikon arkkihiippakunnan alaisuuteen, ja paavi Gregorius XIII perusti Manilan hiippakunnan 6. helmikuuta 1579. Ensimmäisen katedraalin rakennutti hiippakunnan ensimmäinen piispa Domingo de Salazar vuonna 1581 nipapalmusta, puusta ja bambusta. Vuonna 1595 Rooma lähetti kirkolle sadan viidenkymmenenviiden marttyyrin ja kahdenkymmenen paavin pyhäinjäännökset, joita varten pääkirkon viereen rakennettiin oma sivurakennus. Rakennuksia on ollut kaikkiaan kahdeksan. Neljännen pääalttari veistettiin molave-puusta 1662, ja firenzeläinen munkki Juan de Uguccioni lisäsi 1750 kupolin ja poikkilaivan. Viides muistutti Rooman Il Gesùa, ku…
+
+### 6.1
+KYSYMYS: Kuka suunnitteli palatsin alkuperäisen uusklassisen version?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gomelin Rumjantsev-Paskevitš-palatsi (historia)
+Tietoruudun teksti: Rumjantsev-Paskevitš-palatsi sijaitsee Gomelissa Valko-Venäjällä Sozh-joen rannalla. Kenttämarsalkka Pjotr Rumjantsev rakennutti sen vuosina 1777–1796, ja uusklassisen alkuperäissuunnitelman laati Ivan Starov. Vuonna 1834 kruunu osti kiinteistön, ja se siirtyi kenttämarsalkka Ivan Paskevitšille, joka lisäsi palatsiin nelikerroksisen tornin ja kolmikerroksisen siiven. Palatsia ympäröivä puisto ulottuu noin 800 metrin matkalle joen varrella, ja sen alueella on Pietarin ja Paavalin kirkko, joka vihittiin käyttöön vuonna 1824. Nykyään rakennuksessa toimii museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Manila — kohdekartta / Kohdekartta: Manilan katedraali] nykyinen rakennus 1958 Manilan seurakuntakirkko perustettiin 1571 Meksikon arkkihiippakunnan alaisuuteen, ja paavi Gregorius XIII perusti Manilan hiippakunnan 6. helmikuuta 1579. Ensimmäisen katedraalin rakennutti hiippakunnan ensimmäinen piispa Domingo de Salazar vuonna 1581 nipapalmusta, puusta ja bambusta. Vuonna 1595 Rooma lähetti kirkolle sadan viidenkymmenenviiden marttyyrin ja kahdenkymmenen paavin pyhäinjäännökset, joita varten pääkirkon viereen rakennettiin oma sivurakennus. Rakennuksia on ollut kaikkiaan kahdeksan. Neljännen pääalttari veistettiin molave-puusta 1662, ja firenzeläinen munkki Juan de Uguccioni lisäsi 1750 kupolin ja poikkilaivan. Viides muistutti Rooman Il Gesùa, ku…
+
+### 6.2
+KYSYMYS: Mitä Paskevitš lisäsi palatsiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gomelin Rumjantsev-Paskevitš-palatsi (historia)
+Tietoruudun teksti: Rumjantsev-Paskevitš-palatsi sijaitsee Gomelissa Valko-Venäjällä Sozh-joen rannalla. Kenttämarsalkka Pjotr Rumjantsev rakennutti sen vuosina 1777–1796, ja uusklassisen alkuperäissuunnitelman laati Ivan Starov. Vuonna 1834 kruunu osti kiinteistön, ja se siirtyi kenttämarsalkka Ivan Paskevitšille, joka lisäsi palatsiin nelikerroksisen tornin ja kolmikerroksisen siiven. Palatsia ympäröivä puisto ulottuu noin 800 metrin matkalle joen varrella, ja sen alueella on Pietarin ja Paavalin kirkko, joka vihittiin käyttöön vuonna 1824. Nykyään rakennuksessa toimii museo.
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:hahmotelma-vanha-minsk) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Minsk (historia)
+Tietoruudun teksti: Ennen toista maailmansotaa Minsk oli tiivis, monikerroksinen itäeurooppalainen kaupunki kivikatuineen ja synagogineen. Saksan Luftwaffe pommitti kaupunkia 24.6.1941 kolmessa aallossa, ja sodan loppuun mennessä 80–90 % rakennuskannasta oli raunioina. Stalin määräsi kaupungin rakennettavaksi täysin uudelleen — vanhaa kaupunkia ei palautettu ennalleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Luonto: Berezinan biosfäärialue] vuodesta 1925 — Berezinan luonnonsuojelualue perustettiin 30. tammikuuta 1925 suojelemaan muun muassa majavia ja muuta riistaa, ja sillä on ollut biosfäärialueen asema vuodesta 1979. Alue sijaitsee noin 120 kilometriä Minskistä pohjoiseen, ja sen pinta-ala on 85 200 hehtaaria. Yli 60 prosenttia siitä on soita, ja Berezina-joki virtaa sen halki 100 kilometrin matkan. Alueella on tavattu 56 nisäkäs- ja 237 lintulajia sekä 813 putkilokasvilajia; joukossa ovat ruskeakarhu, hirvi, ilves, majava, saukko ja kalasääski. Ramsar-kosteikoksi alue nimettiin 2010.
+
+### 7.1
+KYSYMYS: Miltä Vanha Minsk näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Minsk (historia)
+Tietoruudun teksti: Ennen toista maailmansotaa Minsk oli tiivis, monikerroksinen itäeurooppalainen kaupunki kivikatuineen ja synagogineen. Saksan Luftwaffe pommitti kaupunkia 24.6.1941 kolmessa aallossa, ja sodan loppuun mennessä 80–90 % rakennuskannasta oli raunioina. Stalin määräsi kaupungin rakennettavaksi täysin uudelleen — vanhaa kaupunkia ei palautettu ennalleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Luonto: Berezinan biosfäärialue] vuodesta 1925 — Berezinan luonnonsuojelualue perustettiin 30. tammikuuta 1925 suojelemaan muun muassa majavia ja muuta riistaa, ja sillä on ollut biosfäärialueen asema vuodesta 1979. Alue sijaitsee noin 120 kilometriä Minskistä pohjoiseen, ja sen pinta-ala on 85 200 hehtaaria. Yli 60 prosenttia siitä on soita, ja Berezina-joki virtaa sen halki 100 kilometrin matkan. Alueella on tavattu 56 nisäkäs- ja 237 lintulajia sekä 813 putkilokasvilajia; joukossa ovat ruskeakarhu, hirvi, ilves, majava, saukko ja kalasääski. Ramsar-kosteikoksi alue nimettiin 2010.
+
+### 7.2
+KYSYMYS: Miksi Vanha Minsk katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Minsk (historia)
+Tietoruudun teksti: Ennen toista maailmansotaa Minsk oli tiivis, monikerroksinen itäeurooppalainen kaupunki kivikatuineen ja synagogineen. Saksan Luftwaffe pommitti kaupunkia 24.6.1941 kolmessa aallossa, ja sodan loppuun mennessä 80–90 % rakennuskannasta oli raunioina. Stalin määräsi kaupungin rakennettavaksi täysin uudelleen — vanhaa kaupunkia ei palautettu ennalleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Luonto: Berezinan biosfäärialue] vuodesta 1925 — Berezinan luonnonsuojelualue perustettiin 30. tammikuuta 1925 suojelemaan muun muassa majavia ja muuta riistaa, ja sillä on ollut biosfäärialueen asema vuodesta 1979. Alue sijaitsee noin 120 kilometriä Minskistä pohjoiseen, ja sen pinta-ala on 85 200 hehtaaria. Yli 60 prosenttia siitä on soita, ja Berezina-joki virtaa sen halki 100 kilometrin matkan. Alueella on tavattu 56 nisäkäs- ja 237 lintulajia sekä 813 putkilokasvilajia; joukossa ovat ruskeakarhu, hirvi, ilves, majava, saukko ja kalasääski. Ramsar-kosteikoksi alue nimettiin 2010.
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI

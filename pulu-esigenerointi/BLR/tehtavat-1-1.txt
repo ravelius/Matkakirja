@@ -1,0 +1,214 @@
+================ KOHTA 1 (kohde:mirin-linna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mirin linna (historia)
+Tietoruudun teksti: Mirin linnaa Grodnon alueella Valko-Venäjällä alettiin rakentaa 1500-luvun taitteen jälkeen herttua Juryj Ilinitšin toimesta. Goottilaisen linnan sisäpihaa ympäröi viisi tornia, ja pihan muoto on neliö, jonka sivu on 75 metriä. Vuonna 1568 linna siirtyi Radziwiłł-suvulle, joka rakennutti siihen renessanssityylisen asuinsiiven. Toisessa maailmansodassa saksalaiset perustivat linnaan getton paikallisille juutalaisille, ja vuosina 1944–1956 siellä oli asuntoja, mikä vaurioitti sisätiloja. Linna liitettiin Unescon maailmanperintöluetteloon joulukuussa 2000, ja se toimii nykyään museona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Historia: Linna joka selvisi joka sodasta] 1500-luvulta — Aatelismies Jurij Iljinitš aloitti linnan rakentamisen 1400-luvun lopulla tatarien ratsioiden ja naapuririitojen vuoksi. 1500-luvun jälkipuoliskolla linna siirtyi mahtisuku Radziwiłłeille, ja Mikołaj Kristof "Orpo" Radziwiłł laajensi sitä kolmikerroksisilla asuinsiivillä, uudisti torneja ja kaivatti vallihaudan. Vuosisatojen ajan linna koki hyökkäyksiä, tuhoja ja jälleenrakennuksia - viimeksi toisessa maailmansodassa, jolloin sen muurien sisään perustettiin juutalaisghetto. Pitkän kunnostuksen jälkeen Unesco lisäsi Mirin linnan maailmanperintöluetteloon vuonna 2000.
+- [Japani — maalehti / Historia: Linnaa sanotaan valkohaikaraksi] 1609 — Himejin linna alkoi vuonna 1333 vaatimattomana varustuksena kukkulan laella. Nykyisen muotonsa se sai, kun Ikeda Terumasa rakensi paikan uudelleen vuosina 1601–1609 ja laajensi sen 83 rakennuksen verkostoksi. Ulkoseinät rapattiin valkoisella kalkkilaastilla, ja siitä tulee nimi Shirasagi-jō eli valkohaikaran linna: rakennuksen sanotaan muistuttavan lentoon nousevaa lintua. Päätornia käytettiin rauhan aikana varastona. Linna on säilynyt lähes seitsemänsataa vuotta koskemattomana, myös vuoden 1995 suuren Hanshinin maanjäristyksen läpi, ja se merkittiin maailmanperintöluetteloon vuonna 1993.
+
+### 1.1
+KYSYMYS: Kuinka monta tornia Mirin linnan pihaa ympäröi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mirin linna (historia)
+Tietoruudun teksti: Mirin linnaa Grodnon alueella Valko-Venäjällä alettiin rakentaa 1500-luvun taitteen jälkeen herttua Juryj Ilinitšin toimesta. Goottilaisen linnan sisäpihaa ympäröi viisi tornia, ja pihan muoto on neliö, jonka sivu on 75 metriä. Vuonna 1568 linna siirtyi Radziwiłł-suvulle, joka rakennutti siihen renessanssityylisen asuinsiiven. Toisessa maailmansodassa saksalaiset perustivat linnaan getton paikallisille juutalaisille, ja vuosina 1944–1956 siellä oli asuntoja, mikä vaurioitti sisätiloja. Linna liitettiin Unescon maailmanperintöluetteloon joulukuussa 2000, ja se toimii nykyään museona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Historia: Linna joka selvisi joka sodasta] 1500-luvulta — Aatelismies Jurij Iljinitš aloitti linnan rakentamisen 1400-luvun lopulla tatarien ratsioiden ja naapuririitojen vuoksi. 1500-luvun jälkipuoliskolla linna siirtyi mahtisuku Radziwiłłeille, ja Mikołaj Kristof "Orpo" Radziwiłł laajensi sitä kolmikerroksisilla asuinsiivillä, uudisti torneja ja kaivatti vallihaudan. Vuosisatojen ajan linna koki hyökkäyksiä, tuhoja ja jälleenrakennuksia - viimeksi toisessa maailmansodassa, jolloin sen muurien sisään perustettiin juutalaisghetto. Pitkän kunnostuksen jälkeen Unesco lisäsi Mirin linnan maailmanperintöluetteloon vuonna 2000.
+
+### 1.2
+KYSYMYS: Mihin linnaa käytettiin toisen maailmansodan aikana ja sen jälkeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mirin linna (historia)
+Tietoruudun teksti: Mirin linnaa Grodnon alueella Valko-Venäjällä alettiin rakentaa 1500-luvun taitteen jälkeen herttua Juryj Ilinitšin toimesta. Goottilaisen linnan sisäpihaa ympäröi viisi tornia, ja pihan muoto on neliö, jonka sivu on 75 metriä. Vuonna 1568 linna siirtyi Radziwiłł-suvulle, joka rakennutti siihen renessanssityylisen asuinsiiven. Toisessa maailmansodassa saksalaiset perustivat linnaan getton paikallisille juutalaisille, ja vuosina 1944–1956 siellä oli asuntoja, mikä vaurioitti sisätiloja. Linna liitettiin Unescon maailmanperintöluetteloon joulukuussa 2000, ja se toimii nykyään museona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Japani — maalehti / Historia: Linnaa sanotaan valkohaikaraksi] 1609 — Himejin linna alkoi vuonna 1333 vaatimattomana varustuksena kukkulan laella. Nykyisen muotonsa se sai, kun Ikeda Terumasa rakensi paikan uudelleen vuosina 1601–1609 ja laajensi sen 83 rakennuksen verkostoksi. Ulkoseinät rapattiin valkoisella kalkkilaastilla, ja siitä tulee nimi Shirasagi-jō eli valkohaikaran linna: rakennuksen sanotaan muistuttavan lentoon nousevaa lintua. Päätornia käytettiin rauhan aikana varastona. Linna on säilynyt lähes seitsemänsataa vuotta koskemattomana, myös vuoden 1995 suuren Hanshinin maanjäristyksen läpi, ja se merkittiin maailmanperintöluetteloon vuonna 1993.
+- [Valko-Venäjä — maalehti / Historia: Linna joka selvisi joka sodasta] 1500-luvulta — Aatelismies Jurij Iljinitš aloitti linnan rakentamisen 1400-luvun lopulla tatarien ratsioiden ja naapuririitojen vuoksi. 1500-luvun jälkipuoliskolla linna siirtyi mahtisuku Radziwiłłeille, ja Mikołaj Kristof "Orpo" Radziwiłł laajensi sitä kolmikerroksisilla asuinsiivillä, uudisti torneja ja kaivatti vallihaudan. Vuosisatojen ajan linna koki hyökkäyksiä, tuhoja ja jälleenrakennuksia - viimeksi toisessa maailmansodassa, jolloin sen muurien sisään perustettiin juutalaisghetto. Pitkän kunnostuksen jälkeen Unesco lisäsi Mirin linnan maailmanperintöluetteloon vuonna 2000.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:njasvizin-linna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Njasvižin linna (historia)
+Tietoruudun teksti: Njasvižin linna Minskin alueella Valko-Venäjällä oli Radziwiłł-suvun asuinlinna. Suku sai alueen haltuunsa vuonna 1533, ja Mikołaj Krzysztof Sierotka Radziwiłł aloitti nykyisen renessanssi-barokkilinnan rakentamisen vuonna 1582; työ valmistui 1604. Neliönmuotoisen kolmikerroksisen rakennuksen kulmissa on neljä kahdeksankulmaista tornia. Ruotsin armeija ryösti linnan vuonna 1706 Pohjan suuressa sodassa. Laaja entisöinti tehtiin 2004–2012. UNESCO otti kohteen maailmanperintöluetteloon vuonna 2005; linnaa ympäröi englantilaistyylinen puisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Historia: Tsaari perusti pääkaupungin suolle] 1703 — Suuressa Pohjan sodassa Ruotsia vastaan Pietari Suuri valtasi Nevajoen suistoalueen ja käski 27. toukokuuta 1703 perustaa linnoituksen pienelle Jänissaarelle suojaamaan uutta aluetta. Rakennustyöhön komennettiin kymmeniätuhansia talonpoikia ja sotavankeja kaivamaan maata paljain käsin suoperäisellä rannalla, ja moni heistä kuoli raskaissa oloissa. Linnoituksen ympärille nousi kaupunki, josta tuli vuonna 1712 Venäjän uusi pääkaupunki ja jota Pietari kutsui itse "ikkunaksi Eurooppaan". Pietari valvoi rakennustöitä usein itse paikan päällä eurooppalaiseen tapaan pukeutuneena, mikä hämmensi hoviväkeä tottuneempaa tsaarin perinteiseen asuun ja etäisyyteen.
+
+### 2.1
+KYSYMYS: Kuka aloitti Njasvižin linnan rakentamisen vuonna 1582?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Njasvižin linna (historia)
+Tietoruudun teksti: Njasvižin linna Minskin alueella Valko-Venäjällä oli Radziwiłł-suvun asuinlinna. Suku sai alueen haltuunsa vuonna 1533, ja Mikołaj Krzysztof Sierotka Radziwiłł aloitti nykyisen renessanssi-barokkilinnan rakentamisen vuonna 1582; työ valmistui 1604. Neliönmuotoisen kolmikerroksisen rakennuksen kulmissa on neljä kahdeksankulmaista tornia. Ruotsin armeija ryösti linnan vuonna 1706 Pohjan suuressa sodassa. Laaja entisöinti tehtiin 2004–2012. UNESCO otti kohteen maailmanperintöluetteloon vuonna 2005; linnaa ympäröi englantilaistyylinen puisto.
+
+### 2.2
+KYSYMYS: Mitä linnalle tapahtui Pohjan suuressa sodassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Njasvižin linna (historia)
+Tietoruudun teksti: Njasvižin linna Minskin alueella Valko-Venäjällä oli Radziwiłł-suvun asuinlinna. Suku sai alueen haltuunsa vuonna 1533, ja Mikołaj Krzysztof Sierotka Radziwiłł aloitti nykyisen renessanssi-barokkilinnan rakentamisen vuonna 1582; työ valmistui 1604. Neliönmuotoisen kolmikerroksisen rakennuksen kulmissa on neljä kahdeksankulmaista tornia. Ruotsin armeija ryösti linnan vuonna 1706 Pohjan suuressa sodassa. Laaja entisöinti tehtiin 2004–2012. UNESCO otti kohteen maailmanperintöluetteloon vuonna 2005; linnaa ympäröi englantilaistyylinen puisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Historia: Tsaari perusti pääkaupungin suolle] 1703 — Suuressa Pohjan sodassa Ruotsia vastaan Pietari Suuri valtasi Nevajoen suistoalueen ja käski 27. toukokuuta 1703 perustaa linnoituksen pienelle Jänissaarelle suojaamaan uutta aluetta. Rakennustyöhön komennettiin kymmeniätuhansia talonpoikia ja sotavankeja kaivamaan maata paljain käsin suoperäisellä rannalla, ja moni heistä kuoli raskaissa oloissa. Linnoituksen ympärille nousi kaupunki, josta tuli vuonna 1712 Venäjän uusi pääkaupunki ja jota Pietari kutsui itse "ikkunaksi Eurooppaan". Pietari valvoi rakennustöitä usein itse paikan päällä eurooppalaiseen tapaan pukeutuneena, mikä hämmensi hoviväkeä tottuneempaa tsaarin perinteiseen asuun ja etäisyyteen.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:braslavin-jarvet) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Braslavin järvet (luonto · järvi)
+Tietoruudun teksti: Braslavin järvet on Vitebskin alueen luoteisosassa, lähellä Liettuan rajaa sijaitseva kansallispuisto, joka perustettiin syyskuussa 1995. Puiston pinta-ala on noin 700 neliökilometriä, ja siihen kuuluu 30 toisiinsa yhteydessä olevaa järveä. Suurimmat niistä ovat Drivjaty, Snudy ja Strusta; Drivjaty on Valko-Venäjän viidenneksi suurin järvi. Puistossa on havu- ja lehtimetsiä sekä suoalueita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Luonto: Narach, maan suurin järvi] vuodesta 1999 — Narach on Valko-Venäjän suurin järvi: sen pinta-ala on 79,6 neliökilometriä ja pituus 12,8 kilometriä. Suurin syvyys on 24,8 metriä, keskisyvyys 8,9 metriä ja rantaviivaa kertyy 41 kilometriä. Järvi syntyi noin 11 000 vuotta sitten jääkauden jälkeen, ja sitä ympäröivät mäntymetsät. Vuonna 1999 sen ympärille perustettiin Narachin kansallispuisto, joka kattaa yli 87 000 hehtaaria. Puiston lintuja ovat esimerkiksi kaulushaikara, kalasääski ja kurki, ja rannoilla sekä saarekkeilla pesii kyhmyjoutsenia, kun taas järven kalastoon kuuluvat muun muassa ankerias, hauki ja made.
+
+### 3.1
+KYSYMYS: Kuinka monta järveä Braslavin puistoon kuuluu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Braslavin järvet (luonto · järvi)
+Tietoruudun teksti: Braslavin järvet on Vitebskin alueen luoteisosassa, lähellä Liettuan rajaa sijaitseva kansallispuisto, joka perustettiin syyskuussa 1995. Puiston pinta-ala on noin 700 neliökilometriä, ja siihen kuuluu 30 toisiinsa yhteydessä olevaa järveä. Suurimmat niistä ovat Drivjaty, Snudy ja Strusta; Drivjaty on Valko-Venäjän viidenneksi suurin järvi. Puistossa on havu- ja lehtimetsiä sekä suoalueita.
+
+### 3.2
+KYSYMYS: Mikä puiston järvistä on Valko-Venäjän viidenneksi suurin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Braslavin järvet (luonto · järvi)
+Tietoruudun teksti: Braslavin järvet on Vitebskin alueen luoteisosassa, lähellä Liettuan rajaa sijaitseva kansallispuisto, joka perustettiin syyskuussa 1995. Puiston pinta-ala on noin 700 neliökilometriä, ja siihen kuuluu 30 toisiinsa yhteydessä olevaa järveä. Suurimmat niistä ovat Drivjaty, Snudy ja Strusta; Drivjaty on Valko-Venäjän viidenneksi suurin järvi. Puistossa on havu- ja lehtimetsiä sekä suoalueita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Luonto: Narach, maan suurin järvi] vuodesta 1999 — Narach on Valko-Venäjän suurin järvi: sen pinta-ala on 79,6 neliökilometriä ja pituus 12,8 kilometriä. Suurin syvyys on 24,8 metriä, keskisyvyys 8,9 metriä ja rantaviivaa kertyy 41 kilometriä. Järvi syntyi noin 11 000 vuotta sitten jääkauden jälkeen, ja sitä ympäröivät mäntymetsät. Vuonna 1999 sen ympärille perustettiin Narachin kansallispuisto, joka kattaa yli 87 000 hehtaaria. Puiston lintuja ovat esimerkiksi kaulushaikara, kalasääski ja kurki, ja rannoilla sekä saarekkeilla pesii kyhmyjoutsenia, kun taas järven kalastoon kuuluvat muun muassa ankerias, hauki ja made.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:brestin-linnoitus) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brestin linnoitus (historia)
+Tietoruudun teksti: Brestin linnoitus on Bug-joen ja Muhavets-joen haarojen ympäröimä linnoituskompleksi Brestin kaupungissa Valko-Venäjällä. Rakennustyöt alkoivat vuonna 1833 Brestin vanhan ruhtinaslinnan tilalle, ja suunnittelijana oli sotainsinööri Karl Opperman. Keskussaarella sijaitsevaa citadellia ympäröi kolme linnoitettua saarta: Kobrin, Terespol ja Volyn. Punatiilinen kasarmirakennus käsitti 500 huonetta, ja sen kerrotaan majoittaneen 12 000 sotilasta. Alkuperäisestä neljästä portista näkyvissä ovat nykyään enää Kholmin ja Terespolin portit.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 4.1
+KYSYMYS: Minä vuonna linnoituksen rakentaminen alkoi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brestin linnoitus (historia)
+Tietoruudun teksti: Brestin linnoitus on Bug-joen ja Muhavets-joen haarojen ympäröimä linnoituskompleksi Brestin kaupungissa Valko-Venäjällä. Rakennustyöt alkoivat vuonna 1833 Brestin vanhan ruhtinaslinnan tilalle, ja suunnittelijana oli sotainsinööri Karl Opperman. Keskussaarella sijaitsevaa citadellia ympäröi kolme linnoitettua saarta: Kobrin, Terespol ja Volyn. Punatiilinen kasarmirakennus käsitti 500 huonetta, ja sen kerrotaan majoittaneen 12 000 sotilasta. Alkuperäisestä neljästä portista näkyvissä ovat nykyään enää Kholmin ja Terespolin portit.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 4.2
+KYSYMYS: Mitkä kolme linnoitettua saarta citadellia ympäröi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brestin linnoitus (historia)
+Tietoruudun teksti: Brestin linnoitus on Bug-joen ja Muhavets-joen haarojen ympäröimä linnoituskompleksi Brestin kaupungissa Valko-Venäjällä. Rakennustyöt alkoivat vuonna 1833 Brestin vanhan ruhtinaslinnan tilalle, ja suunnittelijana oli sotainsinööri Karl Opperman. Keskussaarella sijaitsevaa citadellia ympäröi kolme linnoitettua saarta: Kobrin, Terespol ja Volyn. Punatiilinen kasarmirakennus käsitti 500 huonetta, ja sen kerrotaan majoittaneen 12 000 sotilasta. Alkuperäisestä neljästä portista näkyvissä ovat nykyään enää Kholmin ja Terespolin portit.
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:polotskin-sofian-katedraali) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Polotskin Pyhän Sofian katedraali (kulttuuri)
+Tietoruudun teksti: Pyhän Sofian katedraali kohoaa Polotskissa Valko-Venäjällä Polota- ja Länsi-Väinäjoen yhtymäkohdassa. Sen edeltäjän rakennutti ruhtinas Vseslav vuosina 1044–1066, ja siinä oli aluksi seitsemän kupolia, joiden määrä väheni viiteen vuoden 1447 tulipalon jälkeen. Vuosina 1738–1750 rakennus rakennettiin uudelleen Vilnan barokin tyyliin, ja työn urakoi varsovalainen muurari Błażej Kosiński. Kupoleita ei rakennettu uudelleen, mutta rakennukseen tuli tornit. Nykyään katedraali toimii Polotskin museoalueella konserttisalina, ja siellä on urut.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Taskut jotka täytetään millä tahansa] nykyään — Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.
+- [Moskova — kohdekartta / Kohdekartta: Vapahtajan katedraali] 1839-1883 Kun Napoleonin joukot perääntyivät Moskovasta vuonna 1812, tsaari Aleksanteri I halusi rakentaa valtavan katedraalin kiitokseksi Venäjän pelastumisesta ja kaatuneiden sotilaiden muistoksi. Peruskivi muurattiin vuonna 1839, mutta katedraali valmistui vasta vuonna 1883 - rakentaminen kesti yli 40 vuotta. Säveltäjä Tšaikovski sävelsi juhlaan sopivan 1812-alkusoiton, joka kuultiin katedraalin pihalla jo elokuussa 1882, ennen kuin koko rakennus oli edes valmis. Vuonna 1931 katedraali räjäytettiin dynamiitilla, sillä sen paikalle oli tarkoitus rakentaa aivan uudenlainen jättimäinen rakennus. Sitä ei koskaan saatu valmiiksi, ja tyhjälle paikalle rakennettiin sen sijaan maailman suurin ul…
+
+### 5.1
+KYSYMYS: Kuka rakennutti alkuperäisen katedraalin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Polotskin Pyhän Sofian katedraali (kulttuuri)
+Tietoruudun teksti: Pyhän Sofian katedraali kohoaa Polotskissa Valko-Venäjällä Polota- ja Länsi-Väinäjoen yhtymäkohdassa. Sen edeltäjän rakennutti ruhtinas Vseslav vuosina 1044–1066, ja siinä oli aluksi seitsemän kupolia, joiden määrä väheni viiteen vuoden 1447 tulipalon jälkeen. Vuosina 1738–1750 rakennus rakennettiin uudelleen Vilnan barokin tyyliin, ja työn urakoi varsovalainen muurari Błażej Kosiński. Kupoleita ei rakennettu uudelleen, mutta rakennukseen tuli tornit. Nykyään katedraali toimii Polotskin museoalueella konserttisalina, ja siellä on urut.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Vapahtajan katedraali] 1839-1883 Kun Napoleonin joukot perääntyivät Moskovasta vuonna 1812, tsaari Aleksanteri I halusi rakentaa valtavan katedraalin kiitokseksi Venäjän pelastumisesta ja kaatuneiden sotilaiden muistoksi. Peruskivi muurattiin vuonna 1839, mutta katedraali valmistui vasta vuonna 1883 - rakentaminen kesti yli 40 vuotta. Säveltäjä Tšaikovski sävelsi juhlaan sopivan 1812-alkusoiton, joka kuultiin katedraalin pihalla jo elokuussa 1882, ennen kuin koko rakennus oli edes valmis. Vuonna 1931 katedraali räjäytettiin dynamiitilla, sillä sen paikalle oli tarkoitus rakentaa aivan uudenlainen jättimäinen rakennus. Sitä ei koskaan saatu valmiiksi, ja tyhjälle paikalle rakennettiin sen sijaan maailman suurin ul…
+- [Belgia — maalehti / Rakennukset: Asema, joka korvasi puisen alkuperäisen] 1905 — Antwerpenin ensimmäinen asema oli puinen, ja sen rata Brysselistä Mechelenin kautta avattiin 3. kesäkuuta 1836. Nykyisen kivisen asemarakennuksen suunnitteli arkkitehti Louis Delacenserie, ja se rakennettiin vuosina 1895-1905. Vuoteen 2007 asti asema oli päätepysäkki, ja 23. maaliskuuta 2007 sen alle avattiin läpikulkutunneli. Odotussalin yllä kohoaa suuri kupoli. Antwerpen-Centraal on yksi Belgian neljästä suurnopeusjunien asemasta.
+
+### 5.2
+KYSYMYS: Millä tavalla rakennusta käytetään nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Polotskin Pyhän Sofian katedraali (kulttuuri)
+Tietoruudun teksti: Pyhän Sofian katedraali kohoaa Polotskissa Valko-Venäjällä Polota- ja Länsi-Väinäjoen yhtymäkohdassa. Sen edeltäjän rakennutti ruhtinas Vseslav vuosina 1044–1066, ja siinä oli aluksi seitsemän kupolia, joiden määrä väheni viiteen vuoden 1447 tulipalon jälkeen. Vuosina 1738–1750 rakennus rakennettiin uudelleen Vilnan barokin tyyliin, ja työn urakoi varsovalainen muurari Błażej Kosiński. Kupoleita ei rakennettu uudelleen, mutta rakennukseen tuli tornit. Nykyään katedraali toimii Polotskin museoalueella konserttisalina, ja siellä on urut.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Taskut jotka täytetään millä tahansa] nykyään — Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
