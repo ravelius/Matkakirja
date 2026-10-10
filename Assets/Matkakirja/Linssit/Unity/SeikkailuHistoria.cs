@@ -248,8 +248,14 @@ namespace Matkakirja.Natiivi
             float alku = Time.unscaledTime;
             int vaihe = -1; double seurLoki = 0;
             HistoriaVaihe nakyva = null;
+            // Linna suljettu kesken historian (Natiiviseppä 10.10., iPad-muistiajo 177: kamera tuhottu → NullReferenceException
+            // kamera.positionissa, siivous jäi ajamatta ja ajossa päälle → Kaynnissa aina true, KameraVapaa ja VainVuosileikkaukset päällä):
+            // tuhottu kamera päättää silmukan, ja siivous ajetaan finallyssä myös poikkeuksessa.
+            try
+            {
             while (!lopeta)
             {
+                if (kamera == null) { kirjaa?.Invoke("seikkailu: historia: kamera tuhottu (linna suljettu), lopetetaan"); break; }
                 double t = Time.unscaledTime - alku;
                 if (t >= h.Kesto) break;
                 var (sij, kohde) = Kameraliike.AsentoSijainti(h.Kamera(t, keski, SeikkailuNousu.LinnaSade, siirto));
@@ -302,6 +308,16 @@ namespace Matkakirja.Natiivi
                 if (kb != null && kb.escapeKey.wasPressedThisFrame) break;
                 yield return null;
             }
+            }
+            finally { Siivoa(kirjaa, kameraVapaa, kasvu, cam, alkuFov, alku); }
+        }
+
+        /// <summary>Historian loppusiivous (myös poikkeuksessa ja tuhotulla kameralla): jokainen vaihe erikseen, jotta ajossa nollautuu,
+        /// KameraVapaa palautuu ja valmis kutsutaan aina.</summary>
+        void Siivoa(Action<string> kirjaa, bool kameraVapaa, bool kasvu, Camera cam, float alkuFov, float alku)
+        {
+            try
+            {
             Avainsana = null;
             LinnaNakyviin(true);
             ValotLoppuun();   // historia päättyy: ei jätetä valoja himmeiksi (objekti tuhotaan)
@@ -314,12 +330,18 @@ namespace Matkakirja.Natiivi
             tasaisetRannat.Clear();
             if (kasvu) { SeikkailuKavely.AsetaHistoriaLeikkaukset(null); SeikkailuKavely.AsetaKasvu(null); }
             if (cam != null) cam.fieldOfView = alkuFov;
-            DioraamaSovitin.KameraVapaa = kameraVapaa;
-            kirjaa?.Invoke($"seikkailu: historia päättyi ({Time.unscaledTime - alku:F1} s)");
-            ajossa = null;
-            var v = valmis;
-            Destroy(gameObject);
-            v?.Invoke();
+            }
+            catch (Exception e) { Debug.LogException(e); }
+            finally
+            {
+                SeikkailuKavely.VainVuosileikkaukset = false;
+                DioraamaSovitin.KameraVapaa = kameraVapaa;
+                kirjaa?.Invoke($"seikkailu: historia päättyi ({Time.unscaledTime - alku:F1} s)");
+                if (ajossa == this) ajossa = null;
+                var v = valmis; valmis = null;
+                Destroy(gameObject);
+                v?.Invoke();
+            }
         }
     }
 }
