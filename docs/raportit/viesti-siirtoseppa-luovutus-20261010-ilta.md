@@ -33,7 +33,7 @@ kivet yhä valkoiset, vaikka rantakivi-pinta latautui (lokissa "pinta rantakivi 
 - Ympäristössä on erillinen malli blender/ymparisto/mallit/rantakivet.glb (DioraamaYmparisto.LataaMalli, DioraamaMaasto: väri = kuva(uv0) ·
   _Kirkkaus, ei splattia), kuva on tumma (keskiarvo 49/255) → valkoisuus syntyy piirrossa. Detalji rantakivi neutraali (albedo_keskiarvo 0,502).
 - PIILOTUSKOE odottaa: haara siirtoseppa/diag-kivet a08c0094a (DIAG, EI JUNAAN: `poikki piilota|nayta <nimen alku>` kirjaa myös materiaalit).
-  Käännös oli menossa nollaushetkellä (PROTO_APP_KOPIO=proto-3d/lokit/siirtoseppa-app-a08c0094a; tarkista kaannospalvelu-lokin viimeinen rivi).
+  KÄÄNNETTY 1b8329002 (17:51): .app /Users/Shared/Claude/proto-3d/lokit/siirtoseppa-app-a08c0094a/Matkakirja3D.app (todistusajon --sha 1b8329002 --haara a08c0094a).
   Skenaario skenaariot/kivet-diag.txt: 1499-vaiheessa kuvat d1 normaali, d2 ilman Ymparisto:malli:rantakivet, d3 ilman Tila:kavely:ranta-1499.
   Pyydä Julkaisijalta SIMULAATTORI NYT 8362879F (~7 min). Tuloksen mukaan: ympäristömalli → DioraamaMaasto/LataaMalli (kuva, uv, kirkkaus);
   kävelyosa → TasainenRanta / ValoKlooni. Rivi PT:lle ja LR:lle.
