@@ -1,0 +1,578 @@
+[
+ {
+  "n": 1,
+  "kohta": "kohde:belgradin-linnoitus",
+  "kasite": "Sava",
+  "kysymys": "Kerro lisää: Sava"
+ },
+ {
+  "n": 2,
+  "kohta": "kohde:belgradin-linnoitus",
+  "kasite": "Tonaviin",
+  "kysymys": "Kerro lisää: Tonaviin"
+ },
+ {
+  "n": 3,
+  "kohta": "kohde:belgradin-linnoitus",
+  "kasite": "Kalemegdanin",
+  "kysymys": "Kerro lisää: Kalemegdanin"
+ },
+ {
+  "n": 4,
+  "kohta": "kohde:belgradin-linnoitus",
+  "kasite": "Ottomaanit",
+  "kysymys": "Kerro lisää: Ottomaanit"
+ },
+ {
+  "n": 5,
+  "kohta": "kohde:belgradin-linnoitus",
+  "kasite": "Itävalta",
+  "kysymys": "Kerro lisää: Itävalta"
+ },
+ {
+  "n": 6,
+  "kohta": "kohde:belgradin-linnoitus",
+  "kasite": "turkin",
+  "kysymys": "Kerro lisää: turkin"
+ },
+ {
+  "n": 7,
+  "kohta": "kohde:belgradin-linnoitus",
+  "kasite": "ottomaanien",
+  "kysymys": "Kerro lisää: ottomaanien"
+ },
+ {
+  "n": 8,
+  "kohta": "kohde:belgradin-linnoitus",
+  "kasite": "Schwarzwaldin",
+  "kysymys": "Kerro lisää: Schwarzwaldin"
+ },
+ {
+  "n": 9,
+  "kohta": "kohde:belgradin-linnoitus",
+  "kasite": "Mustaanmereen",
+  "kysymys": "Kerro lisää: Mustaanmereen"
+ },
+ {
+  "n": 10,
+  "kohta": "kohde:belgradin-linnoitus",
+  "kasite": "Wienin",
+  "kysymys": "Kerro lisää: Wienin"
+ },
+ {
+  "n": 11,
+  "kohta": "kohde:belgradin-linnoitus",
+  "kasite": "Budapestin",
+  "kysymys": "Kerro lisää: Budapestin"
+ },
+ {
+  "n": 12,
+  "kohta": "kohde:belgradin-linnoitus",
+  "kasite": "Julianalppien",
+  "kysymys": "Kerro lisää: Julianalppien"
+ },
+ {
+  "n": 13,
+  "kohta": "kohde:belgradin-linnoitus",
+  "kasite": "Tonavaan",
+  "kysymys": "Kerro lisää: Tonavaan"
+ },
+ {
+  "n": 14,
+  "kohta": "kohde:studenican-luostari",
+  "kasite": "marmoria",
+  "kysymys": "Kerro lisää: marmoria"
+ },
+ {
+  "n": 15,
+  "kohta": "kohde:studenican-luostari",
+  "kasite": "romaaninen",
+  "kysymys": "Kerro lisää: romaaninen"
+ },
+ {
+  "n": 16,
+  "kohta": "kohde:studenican-luostari",
+  "kasite": "bysanttilainen rakennustaide",
+  "kysymys": "Kerro lisää: bysanttilainen rakennustaide"
+ },
+ {
+  "n": 17,
+  "kohta": "kohde:studenican-luostari",
+  "kasite": "Stefan Nemanja",
+  "kysymys": "Kerro lisää: Stefan Nemanja"
+ },
+ {
+  "n": 18,
+  "kohta": "kohde:studenican-luostari",
+  "kasite": "Nemanjić-suvun",
+  "kysymys": "Kerro lisää: Nemanjić-suvun"
+ },
+ {
+  "n": 19,
+  "kohta": "kohde:studenican-luostari",
+  "kasite": "Athos-vuorelle",
+  "kysymys": "Kerro lisää: Athos-vuorelle"
+ },
+ {
+  "n": 20,
+  "kohta": "kohde:studenican-luostari",
+  "kasite": "pyhä Sava",
+  "kysymys": "Kerro lisää: pyhä Sava"
+ },
+ {
+  "n": 21,
+  "kohta": "kohde:studenican-luostari",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 22,
+  "kohta": "kohde:studenican-luostari",
+  "kasite": "Studenica",
+  "kysymys": "Kerro lisää: Studenica"
+ },
+ {
+  "n": 23,
+  "kohta": "kohde:studenican-luostari",
+  "kasite": "Kraljevo",
+  "kysymys": "Kerro lisää: Kraljevo"
+ },
+ {
+  "n": 24,
+  "kohta": "kohde:studenican-luostari",
+  "kasite": "Ibar-joen",
+  "kysymys": "Kerro lisää: Ibar-joen"
+ },
+ {
+  "n": 25,
+  "kohta": "kohde:studenican-luostari",
+  "kasite": "Studenican",
+  "kysymys": "Kerro lisää: Studenican"
+ },
+ {
+  "n": 26,
+  "kohta": "kohde:studenican-luostari",
+  "kasite": "Ortodoksinen kirkko",
+  "kysymys": "Kerro lisää: Ortodoksinen kirkko"
+ },
+ {
+  "n": 27,
+  "kohta": "kohde:studenican-luostari",
+  "kasite": "katolinen kirkko",
+  "kysymys": "Kerro lisää: katolinen kirkko"
+ },
+ {
+  "n": 28,
+  "kohta": "kohde:studenican-luostari",
+  "kasite": "paavi",
+  "kysymys": "Kerro lisää: paavi"
+ },
+ {
+  "n": 29,
+  "kohta": "kohde:djavolja-varos",
+  "kasite": "andesiittia",
+  "kysymys": "Kerro lisää: andesiittia"
+ },
+ {
+  "n": 30,
+  "kohta": "kohde:djavolja-varos",
+  "kasite": "eroosion",
+  "kysymys": "Kerro lisää: eroosion"
+ },
+ {
+  "n": 31,
+  "kohta": "kohde:djavolja-varos",
+  "kasite": "Pirunkaupungiksi",
+  "kysymys": "Kerro lisää: Pirunkaupungiksi"
+ },
+ {
+  "n": 32,
+  "kohta": "kohde:djavolja-varos",
+  "kasite": "Kuršumlijan",
+  "kysymys": "Kerro lisää: Kuršumlijan"
+ },
+ {
+  "n": 33,
+  "kohta": "kohde:djavolja-varos",
+  "kasite": "maapylväitä",
+  "kysymys": "Kerro lisää: maapylväitä"
+ },
+ {
+  "n": 34,
+  "kohta": "kohde:djavolja-varos",
+  "kasite": "Etelä-Tirolissa",
+  "kysymys": "Kerro lisää: Etelä-Tirolissa"
+ },
+ {
+  "n": 35,
+  "kohta": "kohde:djavolja-varos",
+  "kasite": "Kivennäisvesi",
+  "kysymys": "Kerro lisää: Kivennäisvesi"
+ },
+ {
+  "n": 36,
+  "kohta": "kohde:djavolja-varos",
+  "kasite": "mineraaleja",
+  "kysymys": "Kerro lisää: mineraaleja"
+ },
+ {
+  "n": 37,
+  "kohta": "kohde:djavolja-varos",
+  "kasite": "Radan-vuori",
+  "kysymys": "Kerro lisää: Radan-vuori"
+ },
+ {
+  "n": 38,
+  "kohta": "kohde:djavolja-varos",
+  "kasite": "Pirunkaupunki",
+  "kysymys": "Kerro lisää: Pirunkaupunki"
+ },
+ {
+  "n": 39,
+  "kohta": "kohde:golubacin-linnoitus",
+  "kasite": "Tonavan",
+  "kysymys": "Kerro lisää: Tonavan"
+ },
+ {
+  "n": 40,
+  "kohta": "kohde:golubacin-linnoitus",
+  "kasite": "Rautaportin",
+  "kysymys": "Kerro lisää: Rautaportin"
+ },
+ {
+  "n": 41,
+  "kohta": "kohde:golubacin-linnoitus",
+  "kasite": "Golubacin linnoitus",
+  "kysymys": "Kerro lisää: Golubacin linnoitus"
+ },
+ {
+  "n": 42,
+  "kohta": "kohde:golubacin-linnoitus",
+  "kasite": "Stefan Lazarević",
+  "kysymys": "Kerro lisää: Stefan Lazarević"
+ },
+ {
+  "n": 43,
+  "kohta": "kohde:golubacin-linnoitus",
+  "kasite": "Karpaattien",
+  "kysymys": "Kerro lisää: Karpaattien"
+ },
+ {
+  "n": 44,
+  "kohta": "kohde:golubacin-linnoitus",
+  "kasite": "Tabula Traiana",
+  "kysymys": "Kerro lisää: Tabula Traiana"
+ },
+ {
+  "n": 45,
+  "kohta": "kohde:golubacin-linnoitus",
+  "kasite": "Joki",
+  "kysymys": "Kerro lisää: Joki"
+ },
+ {
+  "n": 46,
+  "kohta": "kohde:golubacin-linnoitus",
+  "kasite": "Bysantin",
+  "kysymys": "Kerro lisää: Bysantin"
+ },
+ {
+  "n": 47,
+  "kohta": "kohde:golubacin-linnoitus",
+  "kasite": "Belgradin",
+  "kysymys": "Kerro lisää: Belgradin"
+ },
+ {
+  "n": 48,
+  "kohta": "kohde:gamzigrad",
+  "kasite": "Galerius",
+  "kysymys": "Kerro lisää: Galerius"
+ },
+ {
+  "n": 49,
+  "kohta": "kohde:gamzigrad",
+  "kasite": "Zaječarin",
+  "kysymys": "Kerro lisää: Zaječarin"
+ },
+ {
+  "n": 50,
+  "kohta": "kohde:gamzigrad",
+  "kasite": "tetrarkian",
+  "kysymys": "Kerro lisää: tetrarkian"
+ },
+ {
+  "n": 51,
+  "kohta": "kohde:gamzigrad",
+  "kasite": "mausoleumia",
+  "kysymys": "Kerro lisää: mausoleumia"
+ },
+ {
+  "n": 52,
+  "kohta": "kohde:gamzigrad",
+  "kasite": "Rooman",
+  "kysymys": "Kerro lisää: Rooman"
+ },
+ {
+  "n": 53,
+  "kohta": "kohde:gamzigrad",
+  "kasite": "Diocletianus",
+  "kysymys": "Kerro lisää: Diocletianus"
+ },
+ {
+  "n": 54,
+  "kohta": "kohde:gamzigrad",
+  "kasite": "Dionysosta",
+  "kysymys": "Kerro lisää: Dionysosta"
+ },
+ {
+  "n": 55,
+  "kohta": "kohde:gamzigrad",
+  "kasite": "Medusaa",
+  "kysymys": "Kerro lisää: Medusaa"
+ },
+ {
+  "n": 56,
+  "kohta": "kohde:gamzigrad",
+  "kasite": "Zaječar",
+  "kysymys": "Kerro lisää: Zaječar"
+ },
+ {
+  "n": 57,
+  "kohta": "kohde:gamzigrad",
+  "kasite": "Bulgarian",
+  "kysymys": "Kerro lisää: Bulgarian"
+ },
+ {
+  "n": 58,
+  "kohta": "kohde:gamzigrad",
+  "kasite": "Gamzigrad",
+  "kysymys": "Kerro lisää: Gamzigrad"
+ },
+ {
+  "n": 59,
+  "kohta": "kohde:petrovaradinin-linnoitus",
+  "kasite": "Habsburgit",
+  "kysymys": "Kerro lisää: Habsburgit"
+ },
+ {
+  "n": 60,
+  "kohta": "kohde:petrovaradinin-linnoitus",
+  "kasite": "osmaneilta",
+  "kysymys": "Kerro lisää: osmaneilta"
+ },
+ {
+  "n": 61,
+  "kohta": "kohde:petrovaradinin-linnoitus",
+  "kasite": "Vaubanin",
+  "kysymys": "Kerro lisää: Vaubanin"
+ },
+ {
+  "n": 62,
+  "kohta": "kohde:petrovaradinin-linnoitus",
+  "kasite": "Tonavan Gibraltariksi",
+  "kysymys": "Kerro lisää: Tonavan Gibraltariksi"
+ },
+ {
+  "n": 63,
+  "kohta": "kohde:petrovaradinin-linnoitus",
+  "kasite": "Tonavalla",
+  "kysymys": "Kerro lisää: Tonavalla"
+ },
+ {
+  "n": 64,
+  "kohta": "kohde:petrovaradinin-linnoitus",
+  "kasite": "Humalaiseksi kelloksi",
+  "kysymys": "Kerro lisää: Humalaiseksi kelloksi"
+ },
+ {
+  "n": 65,
+  "kohta": "kohde:petrovaradinin-linnoitus",
+  "kasite": "Gibraltarin",
+  "kysymys": "Kerro lisää: Gibraltarin"
+ },
+ {
+  "n": 66,
+  "kohta": "kohde:petrovaradinin-linnoitus",
+  "kasite": "vastamiinajärjestelmä",
+  "kysymys": "Kerro lisää: vastamiinajärjestelmä"
+ },
+ {
+  "n": 67,
+  "kohta": "kohde:petrovaradinin-linnoitus",
+  "kasite": "Petrovaradinin",
+  "kysymys": "Kerro lisää: Petrovaradinin"
+ },
+ {
+  "n": 68,
+  "kohta": "kohde:petrovaradinin-linnoitus",
+  "kasite": "Habsburgien",
+  "kysymys": "Kerro lisää: Habsburgien"
+ },
+ {
+  "n": 69,
+  "kohta": "kohde:petrovaradinin-linnoitus",
+  "kasite": "Novi Sadin",
+  "kysymys": "Kerro lisää: Novi Sadin"
+ },
+ {
+  "n": 70,
+  "kohta": "kohde:petrovaradinin-linnoitus",
+  "kasite": "Tonavan",
+  "kysymys": "Kerro lisää: Tonavan"
+ },
+ {
+  "n": 71,
+  "kohta": "kohde:sarganin-kahdeksikko",
+  "kasite": "Mokra Goran",
+  "kysymys": "Kerro lisää: Mokra Goran"
+ },
+ {
+  "n": 72,
+  "kohta": "kohde:sarganin-kahdeksikko",
+  "kasite": "Šargan Vitasin",
+  "kysymys": "Kerro lisää: Šargan Vitasin"
+ },
+ {
+  "n": 73,
+  "kohta": "kohde:sarganin-kahdeksikko",
+  "kasite": "Krstin",
+  "kysymys": "Kerro lisää: Krstin"
+ },
+ {
+  "n": 74,
+  "kohta": "kohde:sarganin-kahdeksikko",
+  "kasite": "normaaliraiteesta",
+  "kysymys": "Kerro lisää: normaaliraiteesta"
+ },
+ {
+  "n": 75,
+  "kohta": "kohde:sarganin-kahdeksikko",
+  "kasite": "kapearaiteiseksi",
+  "kysymys": "Kerro lisää: kapearaiteiseksi"
+ },
+ {
+  "n": 76,
+  "kohta": "kohde:sarganin-kahdeksikko",
+  "kasite": "Museorautatie",
+  "kysymys": "Kerro lisää: Museorautatie"
+ },
+ {
+  "n": 77,
+  "kohta": "kohde:sarganin-kahdeksikko",
+  "kasite": "ensimmäisen maailmansodan",
+  "kysymys": "Kerro lisää: ensimmäisen maailmansodan"
+ },
+ {
+  "n": 78,
+  "kohta": "kohde:sarganin-kahdeksikko",
+  "kasite": "Šarganin kahdeksikossa",
+  "kysymys": "Kerro lisää: Šarganin kahdeksikossa"
+ },
+ {
+  "n": 79,
+  "kohta": "kohde:manasijan-luostari",
+  "kasite": "Stefan Lazarević",
+  "kysymys": "Kerro lisää: Stefan Lazarević"
+ },
+ {
+  "n": 80,
+  "kohta": "kohde:manasijan-luostari",
+  "kasite": "helluntaina",
+  "kysymys": "Kerro lisää: helluntaina"
+ },
+ {
+  "n": 81,
+  "kohta": "kohde:manasijan-luostari",
+  "kasite": "Despotovacin",
+  "kysymys": "Kerro lisää: Despotovacin"
+ },
+ {
+  "n": 82,
+  "kohta": "kohde:manasijan-luostari",
+  "kasite": "ottomaanien",
+  "kysymys": "Kerro lisää: ottomaanien"
+ },
+ {
+  "n": 83,
+  "kohta": "kohde:manasijan-luostari",
+  "kasite": "lyijykaton",
+  "kysymys": "Kerro lisää: lyijykaton"
+ },
+ {
+  "n": 84,
+  "kohta": "kohde:manasijan-luostari",
+  "kasite": "Stefan Lazarevićiin",
+  "kysymys": "Kerro lisää: Stefan Lazarevićiin"
+ },
+ {
+  "n": 85,
+  "kohta": "kohde:manasijan-luostari",
+  "kasite": "pääsiäisen",
+  "kysymys": "Kerro lisää: pääsiäisen"
+ },
+ {
+  "n": 86,
+  "kohta": "kohde:manasijan-luostari",
+  "kasite": "osmanien",
+  "kysymys": "Kerro lisää: osmanien"
+ },
+ {
+  "n": 87,
+  "kohta": "kohde:manasijan-luostari",
+  "kasite": "Balkanilla",
+  "kysymys": "Kerro lisää: Balkanilla"
+ },
+ {
+  "n": 88,
+  "kohta": "kohde:hahmotelma-smederevon-linnoitus",
+  "kasite": "Đurađ Branković",
+  "kysymys": "Kerro lisää: Đurađ Branković"
+ },
+ {
+  "n": 89,
+  "kohta": "kohde:hahmotelma-smederevon-linnoitus",
+  "kasite": "Tonavan",
+  "kysymys": "Kerro lisää: Tonavan"
+ },
+ {
+  "n": 90,
+  "kohta": "kohde:hahmotelma-smederevon-linnoitus",
+  "kasite": "Toisen maailmansodan",
+  "kysymys": "Kerro lisää: Toisen maailmansodan"
+ },
+ {
+  "n": 91,
+  "kohta": "kohde:hahmotelma-smederevon-linnoitus",
+  "kasite": "Jugoslavia",
+  "kysymys": "Kerro lisää: Jugoslavia"
+ },
+ {
+  "n": 92,
+  "kohta": "kohde:hahmotelma-smederevon-linnoitus",
+  "kasite": "Mehmed II",
+  "kysymys": "Kerro lisää: Mehmed II"
+ },
+ {
+  "n": 93,
+  "kohta": "kohde:hahmotelma-smederevon-linnoitus",
+  "kasite": "János Hunyadin",
+  "kysymys": "Kerro lisää: János Hunyadin"
+ },
+ {
+  "n": 94,
+  "kohta": "kohde:hahmotelma-smederevon-linnoitus",
+  "kasite": "Smederevo",
+  "kysymys": "Kerro lisää: Smederevo"
+ },
+ {
+  "n": 95,
+  "kohta": "kohde:hahmotelma-smederevon-linnoitus",
+  "kasite": "Savan",
+  "kysymys": "Kerro lisää: Savan"
+ },
+ {
+  "n": 96,
+  "kohta": "kohde:hahmotelma-smederevon-linnoitus",
+  "kasite": "Smederevon",
+  "kysymys": "Kerro lisää: Smederevon"
+ }
+]

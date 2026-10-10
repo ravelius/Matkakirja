@@ -1,0 +1,1042 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Belgradin linnoitus (Kalemegdan) (historia)
+Tietoruudun teksti: Belgradin linnoitus eli Kalemegdan kohoaa 125,5 metriä korkealla harjanteella, jonka juurella Sava yhtyy Tonaviin. Alue on noin 66 hehtaarin laajuinen, ja siihen kuuluu Suuri ja Pieni Kalemegdanin puisto. Ottomaanit valloittivat linnoituksen vuonna 1521, ja se pysyi heidän hallinnassaan vuoteen 1867. Vuonna 1979 se sai Serbiassa erityisen tärkeän kulttuurimonumentin aseman. Nykyään linnoituksen alue on kaupunkilaisten suosima puisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Kuningas, josta tuli munkki] 1190–1196 — Stefan Nemanja yhdisti Serbian pirstoutuneet ruhtinaskunnat ja perusti Nemanjić-suvun, joka hallitsi maata yli kaksisataa vuotta. Hän aloitti Studenican luostarin rakentamisen 1180-luvulla ja pystytti sen sydämeen valkoisesta marmorista Neitsyt Marian kirkon. Maaliskuun 25. päivänä 1196 hän luopui vallasta poikansa Stefanin hyväksi ja otti munkiksi vihkimisessä nimen Simeon. Syksyllä 1197 hän matkasi Athos-vuorelle liittyäkseen sinne jo aiemmin lähteneeseen nuorimpaan poikaansa Rastkoon, josta tuli myöhemmin pyhä Sava, Serbian ortodoksisen kirkon perustaja. Studenica on Unescon maailmanperintöä vuodesta 1986.
+AIEMPI KYSYMYS: Missä joet kohtaavat linnoituksen juurella?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tost minä osaan kertoa. [[Sava]] yhtyy [[Tonaviin]] linnoituksen harjanteen juurella, ja linnoitus kohoaa tuolta harjanteelta noin 125,5 metrin korkeudelle. Joet kohtaavat siis suoraan [[Kalemegdanin]] alapuolella, joten linnoitus hallitsee maisemaa kumpaankin jokeen päin. Alueeseen kuuluvat myös Suuri ja Pieni Kalemegdanin puisto. Hyvä paikka pesälle, jos kyyhkyltä kysytään.
+KYSYMYS: Kerro lisää: Sava
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Belgradin linnoitus (Kalemegdan) (historia)
+Tietoruudun teksti: Belgradin linnoitus eli Kalemegdan kohoaa 125,5 metriä korkealla harjanteella, jonka juurella Sava yhtyy Tonaviin. Alue on noin 66 hehtaarin laajuinen, ja siihen kuuluu Suuri ja Pieni Kalemegdanin puisto. Ottomaanit valloittivat linnoituksen vuonna 1521, ja se pysyi heidän hallinnassaan vuoteen 1867. Vuonna 1979 se sai Serbiassa erityisen tärkeän kulttuurimonumentin aseman. Nykyään linnoituksen alue on kaupunkilaisten suosima puisto.
+AIEMPI KYSYMYS: Missä joet kohtaavat linnoituksen juurella?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tost minä osaan kertoa. [[Sava]] yhtyy [[Tonaviin]] linnoituksen harjanteen juurella, ja linnoitus kohoaa tuolta harjanteelta noin 125,5 metrin korkeudelle. Joet kohtaavat siis suoraan [[Kalemegdanin]] alapuolella, joten linnoitus hallitsee maisemaa kumpaankin jokeen päin. Alueeseen kuuluvat myös Suuri ja Pieni Kalemegdanin puisto. Hyvä paikka pesälle, jos kyyhkyltä kysytään.
+KYSYMYS: Kerro lisää: Tonaviin
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Belgradin linnoitus (Kalemegdan) (historia)
+Tietoruudun teksti: Belgradin linnoitus eli Kalemegdan kohoaa 125,5 metriä korkealla harjanteella, jonka juurella Sava yhtyy Tonaviin. Alue on noin 66 hehtaarin laajuinen, ja siihen kuuluu Suuri ja Pieni Kalemegdanin puisto. Ottomaanit valloittivat linnoituksen vuonna 1521, ja se pysyi heidän hallinnassaan vuoteen 1867. Vuonna 1979 se sai Serbiassa erityisen tärkeän kulttuurimonumentin aseman. Nykyään linnoituksen alue on kaupunkilaisten suosima puisto.
+AIEMPI KYSYMYS: Missä joet kohtaavat linnoituksen juurella?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tost minä osaan kertoa. [[Sava]] yhtyy [[Tonaviin]] linnoituksen harjanteen juurella, ja linnoitus kohoaa tuolta harjanteelta noin 125,5 metrin korkeudelle. Joet kohtaavat siis suoraan [[Kalemegdanin]] alapuolella, joten linnoitus hallitsee maisemaa kumpaankin jokeen päin. Alueeseen kuuluvat myös Suuri ja Pieni Kalemegdanin puisto. Hyvä paikka pesälle, jos kyyhkyltä kysytään.
+KYSYMYS: Kerro lisää: Kalemegdanin
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Belgradin linnoitus (Kalemegdan) (historia)
+Tietoruudun teksti: Belgradin linnoitus eli Kalemegdan kohoaa 125,5 metriä korkealla harjanteella, jonka juurella Sava yhtyy Tonaviin. Alue on noin 66 hehtaarin laajuinen, ja siihen kuuluu Suuri ja Pieni Kalemegdanin puisto. Ottomaanit valloittivat linnoituksen vuonna 1521, ja se pysyi heidän hallinnassaan vuoteen 1867. Vuonna 1979 se sai Serbiassa erityisen tärkeän kulttuurimonumentin aseman. Nykyään linnoituksen alue on kaupunkilaisten suosima puisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kohdekartta / Kohdekartta: Punainen linna] 1500-luku Linna seisoo vanhankaupungin kaakkoisnurkassa omalla kalliollaan. Pohja on epäsäännöllinen nelikulmio, jonka sivut ovat 115, 90, 130 ja 140 metriä, ja pinta-alaa on noin 13 000 neliömetriä; muurien sisällä on useita rakennuksia ja pihoja. Kaivauksissa on löytynyt roomalaisajan jäänteitä, joten paikka voi olla yhtä vanha kuin foinikialaisten Oea. Nykyiset rakenteet ovat pääosin 1500-luvulta. Aragonian kuningaskunta valtasi Tripolin vuonna 1510, ja vuodesta 1530 linnaa pitivät johanniittaritarit, kunnes ottomaanit ajoivat heidät pois 1551. Linnan kerrotaan saaneen punamullan värinsä juuri silloin, ja siitä tulee sen nimi. Ensimmäinen ottomaanien käskynhaltija Murad Agha muutti linna…
+- [Tripoli — kohdekartta / Kohdekartta: Darghutin moskeija] n. 1560 Ottomaanit valtasivat Tripolin vuonna 1551 johanniittaritareilta, ja ensimmäinen käskynhaltija Darghut korjasi ja rakensi kaupungin linnoitukset uudelleen. Vanhakaupunki sai silloin sen viisikulmaisen muodon, joka sillä on yhä. Noin vuonna 1560 Darghut rakennutti muurien sisään oman moskeijansa ja valitsi paikaksi ritarien kirkon tontin. Perimätieto kertoo, ettei kirkkorakennusta purettu vaan se otettiin uuden rakennuksen sisään. Darghut kaatui vuonna 1565 Maltan suuressa piirityksessä. Hänen ruumiinsa tuotiin Tripoliin ja haudattiin tähän moskeijaan, ja haudat ovat yhä toisen mihrabin vieressä. Iskander Pasha teetti 1600-luvun alussa muutoksia: minareetti muotoiltiin uudelleen vuon…
+AIEMPI KYSYMYS: Kuinka kauan ottomaanit hallitsivat linnoitusta?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, lasken. [[Ottomaanit]] valloittivat linnoituksen vuonna 1521, ja se pysyi heidän hallinnassaan vuoteen 1867, joten hallinta kesti noin 346 vuotta. Aikaväli ei ollut täysin yhtämittainen, sillä [[Itävalta]] piti Belgradia hallussaan väliaikaisesti 1700-luvulla. Vuoden 1867 jälkeen linnoituksen hallinta siirtyi Serbian ruhtinaskunnalle. Onpas ollu pitkä pesäaika.
+KYSYMYS: Kerro lisää: Ottomaanit
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Belgradin linnoitus (Kalemegdan) (historia)
+Tietoruudun teksti: Belgradin linnoitus eli Kalemegdan kohoaa 125,5 metriä korkealla harjanteella, jonka juurella Sava yhtyy Tonaviin. Alue on noin 66 hehtaarin laajuinen, ja siihen kuuluu Suuri ja Pieni Kalemegdanin puisto. Ottomaanit valloittivat linnoituksen vuonna 1521, ja se pysyi heidän hallinnassaan vuoteen 1867. Vuonna 1979 se sai Serbiassa erityisen tärkeän kulttuurimonumentin aseman. Nykyään linnoituksen alue on kaupunkilaisten suosima puisto.
+AIEMPI KYSYMYS: Kuinka kauan ottomaanit hallitsivat linnoitusta?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, lasken. [[Ottomaanit]] valloittivat linnoituksen vuonna 1521, ja se pysyi heidän hallinnassaan vuoteen 1867, joten hallinta kesti noin 346 vuotta. Aikaväli ei ollut täysin yhtämittainen, sillä [[Itävalta]] piti Belgradia hallussaan väliaikaisesti 1700-luvulla. Vuoden 1867 jälkeen linnoituksen hallinta siirtyi Serbian ruhtinaskunnalle. Onpas ollu pitkä pesäaika.
+KYSYMYS: Kerro lisää: Itävalta
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Belgradin linnoitus (Kalemegdan) (historia)
+Tietoruudun teksti: Belgradin linnoitus eli Kalemegdan kohoaa 125,5 metriä korkealla harjanteella, jonka juurella Sava yhtyy Tonaviin. Alue on noin 66 hehtaarin laajuinen, ja siihen kuuluu Suuri ja Pieni Kalemegdanin puisto. Ottomaanit valloittivat linnoituksen vuonna 1521, ja se pysyi heidän hallinnassaan vuoteen 1867. Vuonna 1979 se sai Serbiassa erityisen tärkeän kulttuurimonumentin aseman. Nykyään linnoituksen alue on kaupunkilaisten suosima puisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riad — kohdekartta / Kohdekartta: Imam Turkin suurmoskeija] Turki bin Abdullah otti Riadin 1824 ja teki siitä toisen Saudi-valtion pääkaupungin. Suurmoskeija rakennettiin hänen aikanaan vuosina 1826–1830, hallintopalatsi Qasr al-Hukmin viereen. Turki surmattiin vuonna 1834 perjantairukouksesta lähtiessään, ja moskeija kantaa yhä hänen nimeään. Nykyinen moskeija on vuodelta 1992, ja se avattiin tammikuussa 1993. Samoihin vuosiin osui koko Qasr al-Hukmin korttelin uudistus, jonka työt kestivät 1983–1992. Sisätilaa on 16 800 neliömetriä ja rukoilijoita mahtuu 17 000; se on yksi maan suurimmista moskeijoista. Ulkoseinät ja sisätilan yläosa ovat ruskeaa riadilaista kalkkikiveä, alaosa valkoista marmoria. Miesten ja naisten kirjastot ovat kumpikin 325 nel…
+AIEMPI KYSYMYS: Mitä Kalemegdan-nimi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimi on peräisin [[turkin]] kielestä, jossa sana kale tarkoittaa linnoitusta ja sana meydan kenttää tai aukiota, joten nimi on suunnilleen linnoituksen kenttä. Nimi periytyy [[ottomaanien]] ajalta, ja serbiaksi paikasta käytetään myös nimitystä Belgradin linnoitus. Kirjoitusasuja on useita, enkä ole varma kaikista. Kyl nimi kuulostaa linnoitukselta.
+KYSYMYS: Kerro lisää: turkin
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Belgradin linnoitus (Kalemegdan) (historia)
+Tietoruudun teksti: Belgradin linnoitus eli Kalemegdan kohoaa 125,5 metriä korkealla harjanteella, jonka juurella Sava yhtyy Tonaviin. Alue on noin 66 hehtaarin laajuinen, ja siihen kuuluu Suuri ja Pieni Kalemegdanin puisto. Ottomaanit valloittivat linnoituksen vuonna 1521, ja se pysyi heidän hallinnassaan vuoteen 1867. Vuonna 1979 se sai Serbiassa erityisen tärkeän kulttuurimonumentin aseman. Nykyään linnoituksen alue on kaupunkilaisten suosima puisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historian hetki: Belgrad 1456 — talonpojat murtavat piirityksen] 21.–22.7.1456 — Selviääkö hän tästä yöstä hengissä? Talonpoika, joka on tarttunut viikatteeseen ja tervasoihtuun eikä miekkaan, ei tiedä sitä vielä, kun hän ryntää alas Belgradin linnoituksen muurilta kohti ottomaanien tykistöleiriä. On heinäkuun loppu 1456, ja unkarilainen sotapäällikkö János Hunyadi on juuri torjunut viikkoja kestäneen tykistöpommituksen, mutta varsinainen käänne tulee yllättäen: fransiskaanimunkki Giovanni da Capistrano on koonnut tuhansia aseistamattomia ristiretkeläisiä linnoituksen ympärille, ja kun osa heistä hyökkää omin päin vihollisen leiriin, koko rintama seuraa perässä hallitsemattomasti. Sulttaani Mehmed II, valloittanut Konstantinopolin vain kolme vuotta aiemm…
+- [Tripoli — kaupunkilehti / Tripoli: Ottomaanien kellotorni seisoo kujien keskellä] Medinan aukiolla seisoo ottomaaniaikainen kellotorni, yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen kerroksen kulmissa on parittain pylväitä, ja niiden päällä kiertää koristeltu räystäslista. Muotokieli on eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää näkee myös medinan moskeijoissa, joissa marmoripylväät ja kaakelipinnat ovat rinnakkain arabialaisen kalligrafian kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on kujilta helpoin kiintopiste: kun torni näkyy, tietää olevansa medinan keskellä. Rappaus on paikoin lohkeillut ja paljastanut alta kiviaineksen.
+AIEMPI KYSYMYS: Mitä Kalemegdan-nimi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimi on peräisin [[turkin]] kielestä, jossa sana kale tarkoittaa linnoitusta ja sana meydan kenttää tai aukiota, joten nimi on suunnilleen linnoituksen kenttä. Nimi periytyy [[ottomaanien]] ajalta, ja serbiaksi paikasta käytetään myös nimitystä Belgradin linnoitus. Kirjoitusasuja on useita, enkä ole varma kaikista. Kyl nimi kuulostaa linnoitukselta.
+KYSYMYS: Kerro lisää: ottomaanien
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Belgradin linnoitus (Kalemegdan) (historia)
+Tietoruudun teksti: Belgradin linnoitus eli Kalemegdan kohoaa 125,5 metriä korkealla harjanteella, jonka juurella Sava yhtyy Tonaviin. Alue on noin 66 hehtaarin laajuinen, ja siihen kuuluu Suuri ja Pieni Kalemegdanin puisto. Ottomaanit valloittivat linnoituksen vuonna 1521, ja se pysyi heidän hallinnassaan vuoteen 1867. Vuonna 1979 se sai Serbiassa erityisen tärkeän kulttuurimonumentin aseman. Nykyään linnoituksen alue on kaupunkilaisten suosima puisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Ruokaa ja tapakulttuuria: Kello kolme juodaan kahvit ja syödään kakkua] 1900-luku — Kaffee und Kuchen on saksalainen tapa, ei ateria: iltapäivällä noin kolmen aikaan istutaan alas, keitetään kahvi ja syödään pala kakkua. Sunnuntaisin siihen kutsutaan vieraita. Tapa syntyi 1800-luvulla, kun kahvista tuli tavallisen väen juoma, ja se näkyy yhä siinä, että konditoriat ovat täynnä juuri iltapäivällä. Kakku on usein hedelmäpiirakka tai Schwarzwaldin kirsikkakakku.
+AIEMPI KYSYMYS: Mikä on Tonava ja minne se virtaa?
+AIEMPI VASTAUS (Livia):
+No niin, tää on hyvä kysymys. Tonava on Euroopan suuria jokia: se saa alkunsa [[Schwarzwaldin]] vuoristosta Saksassa ja virtaa kymmenen maan kautta [[Mustaanmereen]]. Matkalla se kulkee muun muassa [[Wienin]], [[Budapestin]] ja Belgradin kautta. Belgradissa siihen yhtyy Sava. Ja minä lensin sen vierellä koko matkan, melkein.
+KYSYMYS: Kerro lisää: Schwarzwaldin
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Belgradin linnoitus (Kalemegdan) (historia)
+Tietoruudun teksti: Belgradin linnoitus eli Kalemegdan kohoaa 125,5 metriä korkealla harjanteella, jonka juurella Sava yhtyy Tonaviin. Alue on noin 66 hehtaarin laajuinen, ja siihen kuuluu Suuri ja Pieni Kalemegdanin puisto. Ottomaanit valloittivat linnoituksen vuonna 1521, ja se pysyi heidän hallinnassaan vuoteen 1867. Vuonna 1979 se sai Serbiassa erityisen tärkeän kulttuurimonumentin aseman. Nykyään linnoituksen alue on kaupunkilaisten suosima puisto.
+AIEMPI KYSYMYS: Mikä on Tonava ja minne se virtaa?
+AIEMPI VASTAUS (Livia):
+No niin, tää on hyvä kysymys. Tonava on Euroopan suuria jokia: se saa alkunsa [[Schwarzwaldin]] vuoristosta Saksassa ja virtaa kymmenen maan kautta [[Mustaanmereen]]. Matkalla se kulkee muun muassa [[Wienin]], [[Budapestin]] ja Belgradin kautta. Belgradissa siihen yhtyy Sava. Ja minä lensin sen vierellä koko matkan, melkein.
+KYSYMYS: Kerro lisää: Mustaanmereen
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Belgradin linnoitus (Kalemegdan) (historia)
+Tietoruudun teksti: Belgradin linnoitus eli Kalemegdan kohoaa 125,5 metriä korkealla harjanteella, jonka juurella Sava yhtyy Tonaviin. Alue on noin 66 hehtaarin laajuinen, ja siihen kuuluu Suuri ja Pieni Kalemegdanin puisto. Ottomaanit valloittivat linnoituksen vuonna 1521, ja se pysyi heidän hallinnassaan vuoteen 1867. Vuonna 1979 se sai Serbiassa erityisen tärkeän kulttuurimonumentin aseman. Nykyään linnoituksen alue on kaupunkilaisten suosima puisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Wienin asema] Tässä kaupungissa mitta oli kahdenlainen, ja isoisäsi olisi pitänyt siitä enemmän kuin torin väreistä. Varsovasta lounaaseen lähtevä Wienin rata avattiin 14. kesäkuuta 1845, ensin kolmenkymmenen kilometrin pätkänä, ja se ylsi Itävallan rajalle huhtikuussa 1848: kaikkiaan runsaat 327 kilometriä ja 27 asemaa. Se oli ensimmäinen rata Kongressi-Puolassa ja toinen koko keisarikunnassa. Ja se oli rakennettu eurooppalaiseen mittaan, 1 435 millimetriä kiskosta kiskoon, kun kaikilla muilla keisarikunnan radoilla mitta oli leveämpi, 1 524. Kaksi rataa, kaksi mittaa, eikä yhtäkään vaunua voinut ajaa toiselta toiselle. Pietarin rata tuli Varsovaan 1862 ja pysähtyi joen toiselle rannalle. Kierbedźin sil…
+AIEMPI KYSYMYS: Mikä on Tonava ja minne se virtaa?
+AIEMPI VASTAUS (Livia):
+No niin, tää on hyvä kysymys. Tonava on Euroopan suuria jokia: se saa alkunsa [[Schwarzwaldin]] vuoristosta Saksassa ja virtaa kymmenen maan kautta [[Mustaanmereen]]. Matkalla se kulkee muun muassa [[Wienin]], [[Budapestin]] ja Belgradin kautta. Belgradissa siihen yhtyy Sava. Ja minä lensin sen vierellä koko matkan, melkein.
+KYSYMYS: Kerro lisää: Wienin
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Belgradin linnoitus (Kalemegdan) (historia)
+Tietoruudun teksti: Belgradin linnoitus eli Kalemegdan kohoaa 125,5 metriä korkealla harjanteella, jonka juurella Sava yhtyy Tonaviin. Alue on noin 66 hehtaarin laajuinen, ja siihen kuuluu Suuri ja Pieni Kalemegdanin puisto. Ottomaanit valloittivat linnoituksen vuonna 1521, ja se pysyi heidän hallinnassaan vuoteen 1867. Vuonna 1979 se sai Serbiassa erityisen tärkeän kulttuurimonumentin aseman. Nykyään linnoituksen alue on kaupunkilaisten suosima puisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kaupunkilehti / Budapest] Buda, Óbuda ja Pest olivat vielä vuonna 1873 kolme eri kaupunkia. Samana vuonna niistä tehtiin yksi ainoa: Budapest.
+- [Perth — kohdekartta / Kohdekartta: His Majesty's -teatteri] 1904 Teatteri rakennettiin kultavuosien rahalla. Perthin väkiluku kasvoi 1890-luvun kultalöytöjen jälkeen nopeasti, ja paikallispoliitikko Thomas Molloy tilasi arkkitehti William G. Wolfilta teatterin ja hotellin yhdistelmän Hay Streetin ja King Streetin kulmaan. Nimi annettiin juuri kruunatun Edvard VII:n kunniaksi. Urakan voitti Friederich Liebe, joka oli aiemmin rakentanut Bulgarian parlamenttitalon Sofiaan ja tehnyt työtä Budapestin oopperatalossa. Tontin alla virtasi maanalainen puro, ja perustusten kestävyydestä esitettiin julkisesti epäilyjä kesken rakennustyön. Liebe suunnitteli ojat veden ohjaamiseksi ja jatkoi, mutta kun lasku tuli, Molloy kieltäytyi maksamasta ylimääräisiä 17 000…
+- [Košice — kohdekartta / Kohdekartta: Pyhän Elisabetin tuomiokirkko] 1380–1508 Pyhän Elisabetin tuomiokirkko on Slovakian suurin kirkko ja yksi Euroopan itäisimmistä goottilaisista katedraaleista. Se on 60 metriä pitkä ja 36 metriä leveä, ja sinne mahtuu yli 5 000 ihmistä. Paikalla seisoi jo aiempi kirkko, joka paloi noin 1380. Uutta rakennettiin varakkaiden porvarien rahoilla ja keisari Sigismundin tuella, ja työ valmistui 1508. Kirkon pohjoisportaali on keskiaikaisessa perinteessä harvinainen, koska kirkkojen pohjoisseinässä ei yleensä ollut porttia. Se avautui kaupungin vilkkaimpaan kohtaan, torille ja raatihuoneelle, ja sitä kutsutaan Kultaiseksi portiksi, koska se oli keskiajalla kullattu. Sisällä on Euroopan vanhin säilynyt kaksihaarainen kierreportaik…
+AIEMPI KYSYMYS: Mikä on Tonava ja minne se virtaa?
+AIEMPI VASTAUS (Livia):
+No niin, tää on hyvä kysymys. Tonava on Euroopan suuria jokia: se saa alkunsa [[Schwarzwaldin]] vuoristosta Saksassa ja virtaa kymmenen maan kautta [[Mustaanmereen]]. Matkalla se kulkee muun muassa [[Wienin]], [[Budapestin]] ja Belgradin kautta. Belgradissa siihen yhtyy Sava. Ja minä lensin sen vierellä koko matkan, melkein.
+KYSYMYS: Kerro lisää: Budapestin
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Belgradin linnoitus (Kalemegdan) (historia)
+Tietoruudun teksti: Belgradin linnoitus eli Kalemegdan kohoaa 125,5 metriä korkealla harjanteella, jonka juurella Sava yhtyy Tonaviin. Alue on noin 66 hehtaarin laajuinen, ja siihen kuuluu Suuri ja Pieni Kalemegdanin puisto. Ottomaanit valloittivat linnoituksen vuonna 1521, ja se pysyi heidän hallinnassaan vuoteen 1867. Vuonna 1979 se sai Serbiassa erityisen tärkeän kulttuurimonumentin aseman. Nykyään linnoituksen alue on kaupunkilaisten suosima puisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Houston — kohdekartta / Kohdekartta: Julia Idesonin kirjastotalo] 1926 Julia Idesonin talo on Houstonin kaupunginkirjaston vanhin osa. Sen suunnitteli bostonilainen Ralph Adams Cram, ja se avattiin 1926 espanjalaisrenessanssin tyylissä. Uusi talo korvasi aiemman Carnegie-kirjaston, ja vuosina 1926–1976 se oli kaupungin ainoa pääkirjastorakennus. Nimi tulee Julia Bedford Idesonista, joka toimi kirjastolaitoksen ensimmäisenä ylikirjastonhoitajana neljäkymmentä vuotta. Kun pääkirjasto muutti 1976 uuteen rakennukseen, vanha talo jäi tyhjilleen; se avattiin uudelleen 1979 ja on nykyään arkiston, käsikirjoitusten sekä Texasin ja paikallishistorian osastojen koti. Talossa toimii myös Houston Metropolitan Research Center. Rakennus liitettiin kansalliseen historia…
+AIEMPI KYSYMYS: Mistä Sava-joki saa alkunsa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Sava saa alkunsa Sloveniasta [[Julianalppien]] tienoilta, ja se virtaa Kroatian kautta sekä Bosnia ja Hertsegovinan rajaa pitkin Serbiaan. Belgradissa se yhtyy [[Tonavaan]]. Joki kulkee siis usean valtion halki ja yhdistää niitä. Tarkat lähdehaarat on parasta tarkistaa kartalta, en ole niistä aivan varma.
+KYSYMYS: Kerro lisää: Julianalppien
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Belgradin linnoitus (Kalemegdan) (historia)
+Tietoruudun teksti: Belgradin linnoitus eli Kalemegdan kohoaa 125,5 metriä korkealla harjanteella, jonka juurella Sava yhtyy Tonaviin. Alue on noin 66 hehtaarin laajuinen, ja siihen kuuluu Suuri ja Pieni Kalemegdanin puisto. Ottomaanit valloittivat linnoituksen vuonna 1521, ja se pysyi heidän hallinnassaan vuoteen 1867. Vuonna 1979 se sai Serbiassa erityisen tärkeän kulttuurimonumentin aseman. Nykyään linnoituksen alue on kaupunkilaisten suosima puisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Mistä Sava-joki saa alkunsa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Sava saa alkunsa Sloveniasta [[Julianalppien]] tienoilta, ja se virtaa Kroatian kautta sekä Bosnia ja Hertsegovinan rajaa pitkin Serbiaan. Belgradissa se yhtyy [[Tonavaan]]. Joki kulkee siis usean valtion halki ja yhdistää niitä. Tarkat lähdehaarat on parasta tarkistaa kartalta, en ole niistä aivan varma.
+KYSYMYS: Kerro lisää: Tonavaan
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Studenican luostari (kulttuuri)
+Tietoruudun teksti: Studenican luostari sijaitsee Keski-Serbiassa Kraljevon lähellä, ja Stefan Nemanja perusti sen 1100-luvun lopulla; ensimmäinen rakennusvaihe valmistui kevääksi 1196. Pääkirkko, Neitsyt Marian temppeli, on kupolillinen yksilaivainen basilika, jonka julkisivut ovat valkoista marmoria, ja tyylissä yhdistyvät romaaninen ja bysanttilainen rakennustaide. Seinillä on bysanttilaisia freskoja vuosilta 1208–1209, muun muassa tunnettu ristiinnaulitsemiskuva. Luostarin perustaja Nemanja on haudattu sinne. Studenica on ollut Unescon maailmanperintökohde vuodesta 1986.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Washington Squaren riemukaari] 1889–1895 Vuonna 1889 tuli kuluneeksi sata vuotta George Washingtonin virkaanastujaisista, ja liikemies William Rhinelander Stewart pystytti juhlan kunniaksi Viidennelle Avenuelle puusta ja kipsistä tehdyn muistokaaren. Stewart asui aukion pohjoislaidalla, ja hänen ystävänsä keräsivät hankkeeseen 2 765 dollaria. Vapaamuurarit kulkivat juhlakulkueessa kaaren ali Washingtonin virkaanastujaisraamattu mukanaan. Väliaikainen kaari oli niin suosittu, että rahaa kerättiin lisää ja kivinen kaari tilattiin arkkitehti Stanford Whiteltä. White otti mallin roomalaisesta riemukaaresta ja päätyi lähelle ensimmäisellä vuosisadalla rakennettua Tituksen kaarta. Rakennusaine on valkoista Tuckahoen marmoria. …
+AIEMPI KYSYMYS: Millaista kiveä luostarin julkisivuissa on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Pääkirkon, Neitsyt Marian temppelin, julkisivut ovat valkoista [[marmoria]]. Kirkko on kupolillinen yksilaivainen basilika, ja sen tyylissä yhdistyvät [[romaaninen]] ja [[bysanttilainen rakennustaide]]. Seinillä on lisäksi bysanttilaisia freskoja vuosilta 1208–1209. Valkoinen kivi näkyy ylhäältä kauas.
+KYSYMYS: Kerro lisää: marmoria
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Studenican luostari (kulttuuri)
+Tietoruudun teksti: Studenican luostari sijaitsee Keski-Serbiassa Kraljevon lähellä, ja Stefan Nemanja perusti sen 1100-luvun lopulla; ensimmäinen rakennusvaihe valmistui kevääksi 1196. Pääkirkko, Neitsyt Marian temppeli, on kupolillinen yksilaivainen basilika, jonka julkisivut ovat valkoista marmoria, ja tyylissä yhdistyvät romaaninen ja bysanttilainen rakennustaide. Seinillä on bysanttilaisia freskoja vuosilta 1208–1209, muun muassa tunnettu ristiinnaulitsemiskuva. Luostarin perustaja Nemanja on haudattu sinne. Studenica on ollut Unescon maailmanperintökohde vuodesta 1986.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Myanmar — maalehti / Kirjallisuus: Ensimmäinen romaani oli Monte-Criston sukua] 1724–1904 — Burmalainen runo oli vuosisatoja sidottu lay-lone tha-paikin muottiin: nelitavuisia säkeitä, jotka on ketjutettu kiipeävällä riimillä kolmenkymmenen rivin säkeistöiksi. Muotti alkoi löystyä, kun brittiläinen lähetysseura toi maahan ensimmäisen kirjapainon 1816. Historiaa oli kirjoitettu jo ennen sitä: U Kala kokosi 1724 Suuret aikakirjat vuoteen 1711 asti, ja kuningas Bagyidaw asetti 1829 oppineet laatimaan Lasipalatsin aikakirjan. Ensimmäinen burmalainen romaani ilmestyi 1904, ja sen kirjoitti James Hla Kyaw — esikuvana oli Monte-Criston kreivi.
+- [Dublin — kaupunkilehti / Dublin: Romaani, joka kestää yhden päivän] James Joycen romaani Odysseus kertoo yhden ainoan päivän: torstain 16. kesäkuuta 1904 Dublinissa. Joyce valitsi juuri sen päivän, koska silloin hän oli ollut ensi kertaa kävelyllä tulevan vaimonsa Nora Barnaclen kanssa. Nyt joka 16. kesäkuuta dublinilaiset pukeutuvat vuoden 1904 vaatteisiin ja kulkevat kirjan reitit läpi. Ensimmäinen sellainen retki tehtiin 1954 vanhanaikaisilla hevosvaunuilla, ja se jäi kesken. Vuonna 1982 Irlannin radio luki koko kirjan yhteen menoon: siihen meni 30 tuntia.
+AIEMPI KYSYMYS: Millaista kiveä luostarin julkisivuissa on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Pääkirkon, Neitsyt Marian temppelin, julkisivut ovat valkoista [[marmoria]]. Kirkko on kupolillinen yksilaivainen basilika, ja sen tyylissä yhdistyvät [[romaaninen]] ja [[bysanttilainen rakennustaide]]. Seinillä on lisäksi bysanttilaisia freskoja vuosilta 1208–1209. Valkoinen kivi näkyy ylhäältä kauas.
+KYSYMYS: Kerro lisää: romaaninen
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Studenican luostari (kulttuuri)
+Tietoruudun teksti: Studenican luostari sijaitsee Keski-Serbiassa Kraljevon lähellä, ja Stefan Nemanja perusti sen 1100-luvun lopulla; ensimmäinen rakennusvaihe valmistui kevääksi 1196. Pääkirkko, Neitsyt Marian temppeli, on kupolillinen yksilaivainen basilika, jonka julkisivut ovat valkoista marmoria, ja tyylissä yhdistyvät romaaninen ja bysanttilainen rakennustaide. Seinillä on bysanttilaisia freskoja vuosilta 1208–1209, muun muassa tunnettu ristiinnaulitsemiskuva. Luostarin perustaja Nemanja on haudattu sinne. Studenica on ollut Unescon maailmanperintökohde vuodesta 1986.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Petra — kohdekartta / Kohdekartta: Bysanttilainen kirkko] 400-luvun jälkipuolisko Kirkko rakennettiin 400-luvun jälkipuoliskolla, ja se oli käytössä uskonnollisena rakennuksena 600-luvun alkuun asti, jolloin se tuhoutui tulipalossa. Rakennuksessa yhdistyvät nabatealainen kallioon hakattu rakentaminen ja roomalais-hellenistinen mosaiikkiperinne. Keskilaivan lattia on opus sectile -työtä eli kuvioitu leikatuista kivilaatoista, ja kapeammissa sivulaivoissa on värikkäät kuviomosaiikit. Mosaiikkien aiheina ovat vuodenajat, eläimet, ihmiset, saviastiat ja kasvit. Tyyli muistuttaa läheisesti Gazan koulukuntaa ja lainaa myös hellenistisestä ja roomalaisesta kuvastosta. Kuudennella vuosisadalla kirkkoon rakennettiin atrium, joka yhdisti kirkkosalin ja kast…
+AIEMPI KYSYMYS: Millaista kiveä luostarin julkisivuissa on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Pääkirkon, Neitsyt Marian temppelin, julkisivut ovat valkoista [[marmoria]]. Kirkko on kupolillinen yksilaivainen basilika, ja sen tyylissä yhdistyvät [[romaaninen]] ja [[bysanttilainen rakennustaide]]. Seinillä on lisäksi bysanttilaisia freskoja vuosilta 1208–1209. Valkoinen kivi näkyy ylhäältä kauas.
+KYSYMYS: Kerro lisää: bysanttilainen rakennustaide
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Studenican luostari (kulttuuri)
+Tietoruudun teksti: Studenican luostari sijaitsee Keski-Serbiassa Kraljevon lähellä, ja Stefan Nemanja perusti sen 1100-luvun lopulla; ensimmäinen rakennusvaihe valmistui kevääksi 1196. Pääkirkko, Neitsyt Marian temppeli, on kupolillinen yksilaivainen basilika, jonka julkisivut ovat valkoista marmoria, ja tyylissä yhdistyvät romaaninen ja bysanttilainen rakennustaide. Seinillä on bysanttilaisia freskoja vuosilta 1208–1209, muun muassa tunnettu ristiinnaulitsemiskuva. Luostarin perustaja Nemanja on haudattu sinne. Studenica on ollut Unescon maailmanperintökohde vuodesta 1986.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Kuningas, josta tuli munkki] 1190–1196 — Stefan Nemanja yhdisti Serbian pirstoutuneet ruhtinaskunnat ja perusti Nemanjić-suvun, joka hallitsi maata yli kaksisataa vuotta. Hän aloitti Studenican luostarin rakentamisen 1180-luvulla ja pystytti sen sydämeen valkoisesta marmorista Neitsyt Marian kirkon. Maaliskuun 25. päivänä 1196 hän luopui vallasta poikansa Stefanin hyväksi ja otti munkiksi vihkimisessä nimen Simeon. Syksyllä 1197 hän matkasi Athos-vuorelle liittyäkseen sinne jo aiemmin lähteneeseen nuorimpaan poikaansa Rastkoon, josta tuli myöhemmin pyhä Sava, Serbian ortodoksisen kirkon perustaja. Studenica on Unescon maailmanperintöä vuodesta 1986.
+AIEMPI KYSYMYS: Kuka perusti Studenican luostarin?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tost minä tiedän paljon. [[Stefan Nemanja]] perusti luostarin 1100-luvun lopulla, ja hän oli [[Nemanjić-suvun]] perustaja, jonka hallitsijasuku hallitsi Serbiaa yli kaksisataa vuotta. Hän luopui vallasta poikansa Stefanin hyväksi vuonna 1196 ja otti munkkina nimen Simeon. Myöhemmin hän matkasi [[Athos-vuorelle]] nuorimman poikansa Rastkon luo, josta tuli [[pyhä Sava]], Serbian ortodoksisen kirkon perustaja. Nemanja on haudattu Studenicaan. Ja tän kaiken minä muistin ihan ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Stefan Nemanja
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Studenican luostari (kulttuuri)
+Tietoruudun teksti: Studenican luostari sijaitsee Keski-Serbiassa Kraljevon lähellä, ja Stefan Nemanja perusti sen 1100-luvun lopulla; ensimmäinen rakennusvaihe valmistui kevääksi 1196. Pääkirkko, Neitsyt Marian temppeli, on kupolillinen yksilaivainen basilika, jonka julkisivut ovat valkoista marmoria, ja tyylissä yhdistyvät romaaninen ja bysanttilainen rakennustaide. Seinillä on bysanttilaisia freskoja vuosilta 1208–1209, muun muassa tunnettu ristiinnaulitsemiskuva. Luostarin perustaja Nemanja on haudattu sinne. Studenica on ollut Unescon maailmanperintökohde vuodesta 1986.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Kuningas, josta tuli munkki] 1190–1196 — Stefan Nemanja yhdisti Serbian pirstoutuneet ruhtinaskunnat ja perusti Nemanjić-suvun, joka hallitsi maata yli kaksisataa vuotta. Hän aloitti Studenican luostarin rakentamisen 1180-luvulla ja pystytti sen sydämeen valkoisesta marmorista Neitsyt Marian kirkon. Maaliskuun 25. päivänä 1196 hän luopui vallasta poikansa Stefanin hyväksi ja otti munkiksi vihkimisessä nimen Simeon. Syksyllä 1197 hän matkasi Athos-vuorelle liittyäkseen sinne jo aiemmin lähteneeseen nuorimpaan poikaansa Rastkoon, josta tuli myöhemmin pyhä Sava, Serbian ortodoksisen kirkon perustaja. Studenica on Unescon maailmanperintöä vuodesta 1986.
+AIEMPI KYSYMYS: Kuka perusti Studenican luostarin?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tost minä tiedän paljon. [[Stefan Nemanja]] perusti luostarin 1100-luvun lopulla, ja hän oli [[Nemanjić-suvun]] perustaja, jonka hallitsijasuku hallitsi Serbiaa yli kaksisataa vuotta. Hän luopui vallasta poikansa Stefanin hyväksi vuonna 1196 ja otti munkkina nimen Simeon. Myöhemmin hän matkasi [[Athos-vuorelle]] nuorimman poikansa Rastkon luo, josta tuli [[pyhä Sava]], Serbian ortodoksisen kirkon perustaja. Nemanja on haudattu Studenicaan. Ja tän kaiken minä muistin ihan ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Nemanjić-suvun
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Studenican luostari (kulttuuri)
+Tietoruudun teksti: Studenican luostari sijaitsee Keski-Serbiassa Kraljevon lähellä, ja Stefan Nemanja perusti sen 1100-luvun lopulla; ensimmäinen rakennusvaihe valmistui kevääksi 1196. Pääkirkko, Neitsyt Marian temppeli, on kupolillinen yksilaivainen basilika, jonka julkisivut ovat valkoista marmoria, ja tyylissä yhdistyvät romaaninen ja bysanttilainen rakennustaide. Seinillä on bysanttilaisia freskoja vuosilta 1208–1209, muun muassa tunnettu ristiinnaulitsemiskuva. Luostarin perustaja Nemanja on haudattu sinne. Studenica on ollut Unescon maailmanperintökohde vuodesta 1986.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Kuningas, josta tuli munkki] 1190–1196 — Stefan Nemanja yhdisti Serbian pirstoutuneet ruhtinaskunnat ja perusti Nemanjić-suvun, joka hallitsi maata yli kaksisataa vuotta. Hän aloitti Studenican luostarin rakentamisen 1180-luvulla ja pystytti sen sydämeen valkoisesta marmorista Neitsyt Marian kirkon. Maaliskuun 25. päivänä 1196 hän luopui vallasta poikansa Stefanin hyväksi ja otti munkiksi vihkimisessä nimen Simeon. Syksyllä 1197 hän matkasi Athos-vuorelle liittyäkseen sinne jo aiemmin lähteneeseen nuorimpaan poikaansa Rastkoon, josta tuli myöhemmin pyhä Sava, Serbian ortodoksisen kirkon perustaja. Studenica on Unescon maailmanperintöä vuodesta 1986.
+AIEMPI KYSYMYS: Kuka perusti Studenican luostarin?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tost minä tiedän paljon. [[Stefan Nemanja]] perusti luostarin 1100-luvun lopulla, ja hän oli [[Nemanjić-suvun]] perustaja, jonka hallitsijasuku hallitsi Serbiaa yli kaksisataa vuotta. Hän luopui vallasta poikansa Stefanin hyväksi vuonna 1196 ja otti munkkina nimen Simeon. Myöhemmin hän matkasi [[Athos-vuorelle]] nuorimman poikansa Rastkon luo, josta tuli [[pyhä Sava]], Serbian ortodoksisen kirkon perustaja. Nemanja on haudattu Studenicaan. Ja tän kaiken minä muistin ihan ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Athos-vuorelle
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Studenican luostari (kulttuuri)
+Tietoruudun teksti: Studenican luostari sijaitsee Keski-Serbiassa Kraljevon lähellä, ja Stefan Nemanja perusti sen 1100-luvun lopulla; ensimmäinen rakennusvaihe valmistui kevääksi 1196. Pääkirkko, Neitsyt Marian temppeli, on kupolillinen yksilaivainen basilika, jonka julkisivut ovat valkoista marmoria, ja tyylissä yhdistyvät romaaninen ja bysanttilainen rakennustaide. Seinillä on bysanttilaisia freskoja vuosilta 1208–1209, muun muassa tunnettu ristiinnaulitsemiskuva. Luostarin perustaja Nemanja on haudattu sinne. Studenica on ollut Unescon maailmanperintökohde vuodesta 1986.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Kuningas, josta tuli munkki] 1190–1196 — Stefan Nemanja yhdisti Serbian pirstoutuneet ruhtinaskunnat ja perusti Nemanjić-suvun, joka hallitsi maata yli kaksisataa vuotta. Hän aloitti Studenican luostarin rakentamisen 1180-luvulla ja pystytti sen sydämeen valkoisesta marmorista Neitsyt Marian kirkon. Maaliskuun 25. päivänä 1196 hän luopui vallasta poikansa Stefanin hyväksi ja otti munkiksi vihkimisessä nimen Simeon. Syksyllä 1197 hän matkasi Athos-vuorelle liittyäkseen sinne jo aiemmin lähteneeseen nuorimpaan poikaansa Rastkoon, josta tuli myöhemmin pyhä Sava, Serbian ortodoksisen kirkon perustaja. Studenica on Unescon maailmanperintöä vuodesta 1986.
+AIEMPI KYSYMYS: Kuka perusti Studenican luostarin?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tost minä tiedän paljon. [[Stefan Nemanja]] perusti luostarin 1100-luvun lopulla, ja hän oli [[Nemanjić-suvun]] perustaja, jonka hallitsijasuku hallitsi Serbiaa yli kaksisataa vuotta. Hän luopui vallasta poikansa Stefanin hyväksi vuonna 1196 ja otti munkkina nimen Simeon. Myöhemmin hän matkasi [[Athos-vuorelle]] nuorimman poikansa Rastkon luo, josta tuli [[pyhä Sava]], Serbian ortodoksisen kirkon perustaja. Nemanja on haudattu Studenicaan. Ja tän kaiken minä muistin ihan ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: pyhä Sava
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Studenican luostari (kulttuuri)
+Tietoruudun teksti: Studenican luostari sijaitsee Keski-Serbiassa Kraljevon lähellä, ja Stefan Nemanja perusti sen 1100-luvun lopulla; ensimmäinen rakennusvaihe valmistui kevääksi 1196. Pääkirkko, Neitsyt Marian temppeli, on kupolillinen yksilaivainen basilika, jonka julkisivut ovat valkoista marmoria, ja tyylissä yhdistyvät romaaninen ja bysanttilainen rakennustaide. Seinillä on bysanttilaisia freskoja vuosilta 1208–1209, muun muassa tunnettu ristiinnaulitsemiskuva. Luostarin perustaja Nemanja on haudattu sinne. Studenica on ollut Unescon maailmanperintökohde vuodesta 1986.
+AIEMPI KYSYMYS: Mitä maailmanperintökohteeksi pääseminen tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Kato, hyvä kysymys. [[Unescon]] maailmanperintöluetteloon valitaan kohteita, joilla katsotaan olevan poikkeuksellinen yleismaailmallinen arvo kulttuurin tai luonnon kannalta. Valinta tarkoittaa, että kohteen suojelu ja säilyminen otetaan huomioon kansainvälisesti, mutta kohde pysyy silti sen valtion omistuksessa ja vastuulla, jossa se sijaitsee. [[Studenica]] on kuulunut luetteloon vuodesta 1986. Aika hieno paikka sinänsä.
+KYSYMYS: Kerro lisää: Unescon
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Studenican luostari (kulttuuri)
+Tietoruudun teksti: Studenican luostari sijaitsee Keski-Serbiassa Kraljevon lähellä, ja Stefan Nemanja perusti sen 1100-luvun lopulla; ensimmäinen rakennusvaihe valmistui kevääksi 1196. Pääkirkko, Neitsyt Marian temppeli, on kupolillinen yksilaivainen basilika, jonka julkisivut ovat valkoista marmoria, ja tyylissä yhdistyvät romaaninen ja bysanttilainen rakennustaide. Seinillä on bysanttilaisia freskoja vuosilta 1208–1209, muun muassa tunnettu ristiinnaulitsemiskuva. Luostarin perustaja Nemanja on haudattu sinne. Studenica on ollut Unescon maailmanperintökohde vuodesta 1986.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Kuningas, josta tuli munkki] 1190–1196 — Stefan Nemanja yhdisti Serbian pirstoutuneet ruhtinaskunnat ja perusti Nemanjić-suvun, joka hallitsi maata yli kaksisataa vuotta. Hän aloitti Studenican luostarin rakentamisen 1180-luvulla ja pystytti sen sydämeen valkoisesta marmorista Neitsyt Marian kirkon. Maaliskuun 25. päivänä 1196 hän luopui vallasta poikansa Stefanin hyväksi ja otti munkiksi vihkimisessä nimen Simeon. Syksyllä 1197 hän matkasi Athos-vuorelle liittyäkseen sinne jo aiemmin lähteneeseen nuorimpaan poikaansa Rastkoon, josta tuli myöhemmin pyhä Sava, Serbian ortodoksisen kirkon perustaja. Studenica on Unescon maailmanperintöä vuodesta 1986.
+AIEMPI KYSYMYS: Mitä maailmanperintökohteeksi pääseminen tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Kato, hyvä kysymys. [[Unescon]] maailmanperintöluetteloon valitaan kohteita, joilla katsotaan olevan poikkeuksellinen yleismaailmallinen arvo kulttuurin tai luonnon kannalta. Valinta tarkoittaa, että kohteen suojelu ja säilyminen otetaan huomioon kansainvälisesti, mutta kohde pysyy silti sen valtion omistuksessa ja vastuulla, jossa se sijaitsee. [[Studenica]] on kuulunut luetteloon vuodesta 1986. Aika hieno paikka sinänsä.
+KYSYMYS: Kerro lisää: Studenica
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Studenican luostari (kulttuuri)
+Tietoruudun teksti: Studenican luostari sijaitsee Keski-Serbiassa Kraljevon lähellä, ja Stefan Nemanja perusti sen 1100-luvun lopulla; ensimmäinen rakennusvaihe valmistui kevääksi 1196. Pääkirkko, Neitsyt Marian temppeli, on kupolillinen yksilaivainen basilika, jonka julkisivut ovat valkoista marmoria, ja tyylissä yhdistyvät romaaninen ja bysanttilainen rakennustaide. Seinillä on bysanttilaisia freskoja vuosilta 1208–1209, muun muassa tunnettu ristiinnaulitsemiskuva. Luostarin perustaja Nemanja on haudattu sinne. Studenica on ollut Unescon maailmanperintökohde vuodesta 1986.
+AIEMPI KYSYMYS: Missä Kraljevo sijaitsee Serbiassa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Kraljevo]] on kaupunki Keski-Serbiassa [[Ibar-joen]] varrella, ja [[Studenican]] luostari sijaitsee sen läheisyydessä vuoristoisessa seudussa. Kaupunki on alueensa keskus ja tärkeä liikenteen solmukohta. Tarkemmat etäisyydet kannattaa tarkistaa kartalta, en ole niistä varma. Kartalta se löytyy helposti.
+KYSYMYS: Kerro lisää: Kraljevo
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Studenican luostari (kulttuuri)
+Tietoruudun teksti: Studenican luostari sijaitsee Keski-Serbiassa Kraljevon lähellä, ja Stefan Nemanja perusti sen 1100-luvun lopulla; ensimmäinen rakennusvaihe valmistui kevääksi 1196. Pääkirkko, Neitsyt Marian temppeli, on kupolillinen yksilaivainen basilika, jonka julkisivut ovat valkoista marmoria, ja tyylissä yhdistyvät romaaninen ja bysanttilainen rakennustaide. Seinillä on bysanttilaisia freskoja vuosilta 1208–1209, muun muassa tunnettu ristiinnaulitsemiskuva. Luostarin perustaja Nemanja on haudattu sinne. Studenica on ollut Unescon maailmanperintökohde vuodesta 1986.
+AIEMPI KYSYMYS: Missä Kraljevo sijaitsee Serbiassa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Kraljevo]] on kaupunki Keski-Serbiassa [[Ibar-joen]] varrella, ja [[Studenican]] luostari sijaitsee sen läheisyydessä vuoristoisessa seudussa. Kaupunki on alueensa keskus ja tärkeä liikenteen solmukohta. Tarkemmat etäisyydet kannattaa tarkistaa kartalta, en ole niistä varma. Kartalta se löytyy helposti.
+KYSYMYS: Kerro lisää: Ibar-joen
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Studenican luostari (kulttuuri)
+Tietoruudun teksti: Studenican luostari sijaitsee Keski-Serbiassa Kraljevon lähellä, ja Stefan Nemanja perusti sen 1100-luvun lopulla; ensimmäinen rakennusvaihe valmistui kevääksi 1196. Pääkirkko, Neitsyt Marian temppeli, on kupolillinen yksilaivainen basilika, jonka julkisivut ovat valkoista marmoria, ja tyylissä yhdistyvät romaaninen ja bysanttilainen rakennustaide. Seinillä on bysanttilaisia freskoja vuosilta 1208–1209, muun muassa tunnettu ristiinnaulitsemiskuva. Luostarin perustaja Nemanja on haudattu sinne. Studenica on ollut Unescon maailmanperintökohde vuodesta 1986.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Kuningas, josta tuli munkki] 1190–1196 — Stefan Nemanja yhdisti Serbian pirstoutuneet ruhtinaskunnat ja perusti Nemanjić-suvun, joka hallitsi maata yli kaksisataa vuotta. Hän aloitti Studenican luostarin rakentamisen 1180-luvulla ja pystytti sen sydämeen valkoisesta marmorista Neitsyt Marian kirkon. Maaliskuun 25. päivänä 1196 hän luopui vallasta poikansa Stefanin hyväksi ja otti munkiksi vihkimisessä nimen Simeon. Syksyllä 1197 hän matkasi Athos-vuorelle liittyäkseen sinne jo aiemmin lähteneeseen nuorimpaan poikaansa Rastkoon, josta tuli myöhemmin pyhä Sava, Serbian ortodoksisen kirkon perustaja. Studenica on Unescon maailmanperintöä vuodesta 1986.
+AIEMPI KYSYMYS: Missä Kraljevo sijaitsee Serbiassa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Kraljevo]] on kaupunki Keski-Serbiassa [[Ibar-joen]] varrella, ja [[Studenican]] luostari sijaitsee sen läheisyydessä vuoristoisessa seudussa. Kaupunki on alueensa keskus ja tärkeä liikenteen solmukohta. Tarkemmat etäisyydet kannattaa tarkistaa kartalta, en ole niistä varma. Kartalta se löytyy helposti.
+KYSYMYS: Kerro lisää: Studenican
+
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Studenican luostari (kulttuuri)
+Tietoruudun teksti: Studenican luostari sijaitsee Keski-Serbiassa Kraljevon lähellä, ja Stefan Nemanja perusti sen 1100-luvun lopulla; ensimmäinen rakennusvaihe valmistui kevääksi 1196. Pääkirkko, Neitsyt Marian temppeli, on kupolillinen yksilaivainen basilika, jonka julkisivut ovat valkoista marmoria, ja tyylissä yhdistyvät romaaninen ja bysanttilainen rakennustaide. Seinillä on bysanttilaisia freskoja vuosilta 1208–1209, muun muassa tunnettu ristiinnaulitsemiskuva. Luostarin perustaja Nemanja on haudattu sinne. Studenica on ollut Unescon maailmanperintökohde vuodesta 1986.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Helsinki — kohdekartta / Kohdekartta: Uspenskin katedraali] 1862–1868 Katajanokan kalliolla kohoava Uspenskin katedraali on Pohjois- ja Länsi-Euroopan suurin ortodoksinen kirkko. Sen suunnitteli venäläinen arkkitehti Aleksei Gornostajev, mutta hän ehti kuolla ennen rakennustöiden alkua — rakentamista johti lopulta insinööri Ivan Varnek vuosina 1862–1868. Kirkko muurattiin lähes 700 000 tiilestä, jotka purettiin Bomarsundin linnoituksesta Ahvenanmaalta ja kuljetettiin proomuilla Helsinkiin asti. Katedraali vihittiin käyttöön 25. lokakuuta 1868. Kirkon sisällä kultaiset ikonit ja kuvakaiteen eli ikonostaasin maalasi Pavel Shiltsov. Nykyään katedraalissa käy noin puoli miljoonaa vierailijaa vuodessa ihailemassa sen punatiilistä ulkoasua ja kultaisia ku…
+- [Etiopia — maalehti / Ruoka: Paastopäivät tekivät keittiöstä kasvisruokaa] Etiopian ortodoksinen tewahedo-kirkko paastoaa joka keskiviikko ja perjantai sekä koko paastonajan, eikä silloin syödä mitään eläinperäistä — ei lihaa, ei maitoa, ei kananmunaa. Siksi maan keittiössä on satoja vegaanisia ruokia ja poikkeuksellisen laaja valikoima kasviöljyjä: seesamin ja saflorin lisäksi puristetaan nugia eli niger-siemenen öljyä. Paastopäivän ateria on beyaynetu, injeran päälle aseteltu kehä kasvispatoja: linssiä, kikhernettä, punajuurta, kaalia ja tuoretta salaattia, joista jokainen syödään samasta leivästä.
+- [Sofia — kaupunkilehti / Sofia: Neljä uskontoa saman korttelin ympärillä] Muutaman sadan metrin päässä toisistaan seisoo Sofiassa neljä eri uskonnon rakennusta: ortodoksinen Pyhän Nedeljan kirkko, Banja Bashin moskeija vuodelta 1566, Sofian synagoga ja katolinen Pyhän Joosefin katedraali. Kaupunkia kutsutaan siksi suvaitsevaisuuden neliöksi. Synagoga avattiin 1909 ja on Kaakkois-Euroopan suurin. Sen kattokruunu painaa 1,7 tonnia — enemmän kuin henkilöauto.
+AIEMPI KYSYMYS: Mikä erottaa ortodoksisen kirkon katolisesta?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Ortodoksinen kirkko]] ja [[katolinen kirkko]] erkaantuivat toisistaan vähitellen, ja eroa pidetään usein tapahtuneen noin vuoden 1054 tienoilla. Katolisella kirkolla on yhteinen johtaja, [[paavi]], kun taas ortodoksiset kirkot ovat itsenäisiä kirkkokuntia, joita yhdistää yhteinen uskonoppi ja liturgia. Lisäksi ortodoksisessa perinteessä ikonit ovat tärkeässä asemassa, ja papit voivat olla naimisissa. Eroja on enemmän, mutta ne ovat tämän kysymyksen kannalta pääasiat. Hiljaa täällä luostarin katolla.
+KYSYMYS: Kerro lisää: Ortodoksinen kirkko
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Studenican luostari (kulttuuri)
+Tietoruudun teksti: Studenican luostari sijaitsee Keski-Serbiassa Kraljevon lähellä, ja Stefan Nemanja perusti sen 1100-luvun lopulla; ensimmäinen rakennusvaihe valmistui kevääksi 1196. Pääkirkko, Neitsyt Marian temppeli, on kupolillinen yksilaivainen basilika, jonka julkisivut ovat valkoista marmoria, ja tyylissä yhdistyvät romaaninen ja bysanttilainen rakennustaide. Seinillä on bysanttilaisia freskoja vuosilta 1208–1209, muun muassa tunnettu ristiinnaulitsemiskuva. Luostarin perustaja Nemanja on haudattu sinne. Studenica on ollut Unescon maailmanperintökohde vuodesta 1986.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Paulo — kohdekartta / Kohdekartta: Mustien veljeskunnan kirkko] 1906 Mustien veljeskunnat syntyivät orjuuden aikana yhdessäolon, avunannon ja vastarinnan muodoksi. Ruusukon Neitsyen veljeskunta anoi Portugalin kuninkaalta Juhana V:ltä lupaa omaan kirkkoon 1721. Vastausta ei ole tallella, mutta rahankeruu alkoi: erakko Domingo de Melo Tavares kiersi 1725 Minas Geraisin keräämässä almuja. Kaupunginvaltuusto lahjoitti tontin 10. heinäkuuta 1728, ja kirkko valmistui 1737. Sitä ennen orjat, joita ei päästetty valkoisten kirkkoihin, olivat kokoontuneet pieneen kappeliin Anhangabaú-joen rannalla. Kirkossa katolinen ja bantulainen perinne sekoittuivat. Pyhää Benedictusta kutsuttiin nimellä Lingongo, pyhää Antoniusta nimellä Vereque ja Murheellista Neitsyttä nim…
+- [Porto Alegre — kohdekartta / Kohdekartta: Dores-kirkko] 1807–1904 Dores-kirkko on Porto Alegren vanhin pystyssä oleva katolinen kirkko, ja se rakennettiin lähes sadassa vuodessa. Veljeskunta päätti kirkosta 1. toukokuuta 1806, peruskivi laskettiin 1807 ja kuningattaren lupa saatiin 1809. Kuorin seinät sortuivat 1810. Vuonna 1813 kappeli vihittiin, mutta työ pysähtyi taas Farroupilha-kapinan ajaksi, ja vuoteen 1846 asti rakennus oli käytännössä pelkkä kuori, jonka eteen oli pystytetty vaja kirkkosaliksi. Vasta kun Caxiasin kreivi lahjoitti neljä contoa réistä, sivuseinien perustukset päästiin tekemään. Seinät nousivat 1857, ja João do Couto e Silva teki katon, holvin ja julkisivun. Kirkko vihittiin 10. toukokuuta 1868. Edessä oleva monumentaalipo…
+AIEMPI KYSYMYS: Mikä erottaa ortodoksisen kirkon katolisesta?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Ortodoksinen kirkko]] ja [[katolinen kirkko]] erkaantuivat toisistaan vähitellen, ja eroa pidetään usein tapahtuneen noin vuoden 1054 tienoilla. Katolisella kirkolla on yhteinen johtaja, [[paavi]], kun taas ortodoksiset kirkot ovat itsenäisiä kirkkokuntia, joita yhdistää yhteinen uskonoppi ja liturgia. Lisäksi ortodoksisessa perinteessä ikonit ovat tärkeässä asemassa, ja papit voivat olla naimisissa. Eroja on enemmän, mutta ne ovat tämän kysymyksen kannalta pääasiat. Hiljaa täällä luostarin katolla.
+KYSYMYS: Kerro lisää: katolinen kirkko
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Studenican luostari (kulttuuri)
+Tietoruudun teksti: Studenican luostari sijaitsee Keski-Serbiassa Kraljevon lähellä, ja Stefan Nemanja perusti sen 1100-luvun lopulla; ensimmäinen rakennusvaihe valmistui kevääksi 1196. Pääkirkko, Neitsyt Marian temppeli, on kupolillinen yksilaivainen basilika, jonka julkisivut ovat valkoista marmoria, ja tyylissä yhdistyvät romaaninen ja bysanttilainen rakennustaide. Seinillä on bysanttilaisia freskoja vuosilta 1208–1209, muun muassa tunnettu ristiinnaulitsemiskuva. Luostarin perustaja Nemanja on haudattu sinne. Studenica on ollut Unescon maailmanperintökohde vuodesta 1986.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubrovnik — kaupunkilehti / Muurit: Torni, jonka rakennutti paavi] Muurin vaikuttavin torni on pyöreä Minčeta, joka nousee kaupungin korkeimmalta kohdalta maan puolelta. Paavi Pius II lähetti sen rakentajat Dubrovnikiin vuonna 1463, juuri kun Ottomaanien uhka Balkanilla oli suurimmillaan — Konstantinopoli oli kaatunut vain kymmenen vuotta aiemmin. Alun perin nelikulmainen linnake muutettiin myöhemmin pyöreäksi, koska pyöreä muoto kesti tykkitulta paremmin kuin terävät kulmat. Torni ei koskaan joutunut todelliseen taisteluun — se riitti, että se näytti vahvalta.
+- [Krakova — kaupunkilehti / Uskonto: Ikkuna, josta paavi jutteli nuorille] Kesäkuussa 1979, ensimmäisellä paavinvierailullaan kotimaahansa, Johannes Paavali II kiipesi yöllä entisen kotinsa, arkkipiispan palatsin, ikkunalaudalle puhumaan alla laulaville nuorille — kardinaali piti häntä kiinni, ettei hän putoaisi. "Kun asuin täällä Krakovassa, olin melko kunnollinen ihminen. En koskaan kiivennyt ikkunoihin", paavi vitsaili yleisölle. Tapahtumasta tuli perinne, jota toistettiin jokaisella hänen vierailullaan kuolemaansa 2005 asti, ja ikkuna vetää yhä pyhiinvaeltajia.
+AIEMPI KYSYMYS: Mikä erottaa ortodoksisen kirkon katolisesta?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Ortodoksinen kirkko]] ja [[katolinen kirkko]] erkaantuivat toisistaan vähitellen, ja eroa pidetään usein tapahtuneen noin vuoden 1054 tienoilla. Katolisella kirkolla on yhteinen johtaja, [[paavi]], kun taas ortodoksiset kirkot ovat itsenäisiä kirkkokuntia, joita yhdistää yhteinen uskonoppi ja liturgia. Lisäksi ortodoksisessa perinteessä ikonit ovat tärkeässä asemassa, ja papit voivat olla naimisissa. Eroja on enemmän, mutta ne ovat tämän kysymyksen kannalta pääasiat. Hiljaa täällä luostarin katolla.
+KYSYMYS: Kerro lisää: paavi
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đavolja varoš (Pirunkaupunki) (luonto · vuori)
+Tietoruudun teksti: Đavolja varoš eli Pirunkaupunki sijaitsee Radan-vuorella Kuršumlijan kunnassa Toplican piirikunnassa, noin 700 metrin korkeudessa. Alueella on noin 202 maapylvästä, jotka ovat 2–15 metriä korkeita ja tyveltä 4–6 metriä leveitä. Ne ovat syntyneet tulivuoritoiminnan leimaamalla alueella eroosion kuluttaessa maaperää, ja useimpien pylväiden päällä on andesiittinen kansi, joka suojaa niitä kulumiselta. Nimeen liittyvän kansantarinan mukaan häävieraat muuttuivat kiveksi. Alueella on kaksi kivennäisrikasta lähdettä, ja valtio on suojellut kohdetta vuodesta 1959.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Antofagasta — kaupunkilehti / Sumu ja aavikko: Portti, jonka meri kaivoi] Kahdeksantoista kilometriä pohjoiseen rannikolla seisoo La Portada, portti: luonnon kaari, joka on 43 metriä korkea, 23 metriä leveä ja 70 metriä pitkä. Jalusta on mustaa andesiittia, ja sen ympärille on kerrostunut merisedimenttikiveä, kellastuvaa hiekkakiveä ja kuorifossiileja, joiden ikä on 35—2 miljoonaa vuotta; kaiken on muovannut meren kulutus. Ympärillä on samalla tavoin syntyneitä jyrkänteitä, korkeimmillaan 52 metriä. Kaari on ollut luonnonmuistomerkki 5. lokakuuta 1990 alkaen, ja suojelualue on 31,27 hehtaaria. Vuosina 2003—2008 kohde oli suljettuna jyrkänteen sortuman takia, ja vuodesta 2010 pääsy rannalle on kielletty kasviston ja eläimistön suojelemiseksi.
+AIEMPI KYSYMYS: Mikä suojaa pylväitä kulumiselta?
+AIEMPI VASTAUS (Livia):
+No jopas. Useimpien pylväiden päällä on [[andesiittia]] oleva kansi, joka suojaa niitä kulumiselta. Pylväät ovat syntyneet [[eroosion]] kuluttaessa tulivuoritoiminnan leimaamaa maaperää, ja kovempi kansikivi säästää alla olevaa pehmeämpää ainesta. Kun suoja häviää, pylväs alkaa murentua. Pieni hattu, iso merkitys.
+KYSYMYS: Kerro lisää: andesiittia
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đavolja varoš (Pirunkaupunki) (luonto · vuori)
+Tietoruudun teksti: Đavolja varoš eli Pirunkaupunki sijaitsee Radan-vuorella Kuršumlijan kunnassa Toplican piirikunnassa, noin 700 metrin korkeudessa. Alueella on noin 202 maapylvästä, jotka ovat 2–15 metriä korkeita ja tyveltä 4–6 metriä leveitä. Ne ovat syntyneet tulivuoritoiminnan leimaamalla alueella eroosion kuluttaessa maaperää, ja useimpien pylväiden päällä on andesiittinen kansi, joka suojaa niitä kulumiselta. Nimeen liittyvän kansantarinan mukaan häävieraat muuttuivat kiveksi. Alueella on kaksi kivennäisrikasta lähdettä, ja valtio on suojellut kohdetta vuodesta 1959.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norfolk — kaupunkilehti / Selviytyjät: Phillip Islandin hibiskus — kaksi pensasta koko maailmassa] Norfolkin eteläpuolella kohoava pieni Phillip Island oli vielä 1850-luvulla lähes täysin paljas: 1790-luvulta lähtien saarelle päästetyt siat, vuohet ja kanit olivat syöneet kasvillisuuden loppuun ja jättäneet jäljelle vain punertavan, eroosion kalvaman kallioperän. Eläimet hävitettiin vasta 1980-luvun lopulla, minkä jälkeen saari on vihertynyt uudelleen. Yksi harvinaisimmista selviytyjistä on Phillip Islandin hibiskus, jonka koko luonnonvarainen kanta koostuu edelleen vain kahdesta pensaasta samalla kalliolla — laji kasvaa nykyisin varmuuden vuoksi myös Norfolkin kasvitieteellisessä puutarhassa.
+- [Sahara — kaupunkilehti / Sahara: Sammuneet tulivuoret keskellä aavikkoa] Keskellä Algerian aavikkoa kohoaa Ahaggarin eli Hoggarin vuoristo, jonka huippu Tahat nousee 2 908 metriin – Algerian korkein kohta. Osa jyrkistä huipuista, kuten Ilamen, on sammuneiden tulivuorten eroosion paljastamia syöttökanavia, ja peruskallio on lähes kaksi miljardia vuotta vanhaa. Yöt ovat vuoristossa kylmiä, toisinaan pakkasen puolella, vaikka ympäröivä aavikko hehkuu päivällä kuumuudesta. Alue on vuosisatoja ollut Kel Ahaggar -tuaregien kotiseutua ja yksi Saharan harvoista paikoista, joissa erikoistunut linnusto on säilynyt muuttuvassa ilmastossa.
+AIEMPI KYSYMYS: Mikä suojaa pylväitä kulumiselta?
+AIEMPI VASTAUS (Livia):
+No jopas. Useimpien pylväiden päällä on [[andesiittia]] oleva kansi, joka suojaa niitä kulumiselta. Pylväät ovat syntyneet [[eroosion]] kuluttaessa tulivuoritoiminnan leimaamaa maaperää, ja kovempi kansikivi säästää alla olevaa pehmeämpää ainesta. Kun suoja häviää, pylväs alkaa murentua. Pieni hattu, iso merkitys.
+KYSYMYS: Kerro lisää: eroosion
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đavolja varoš (Pirunkaupunki) (luonto · vuori)
+Tietoruudun teksti: Đavolja varoš eli Pirunkaupunki sijaitsee Radan-vuorella Kuršumlijan kunnassa Toplican piirikunnassa, noin 700 metrin korkeudessa. Alueella on noin 202 maapylvästä, jotka ovat 2–15 metriä korkeita ja tyveltä 4–6 metriä leveitä. Ne ovat syntyneet tulivuoritoiminnan leimaamalla alueella eroosion kuluttaessa maaperää, ja useimpien pylväiden päällä on andesiittinen kansi, joka suojaa niitä kulumiselta. Nimeen liittyvän kansantarinan mukaan häävieraat muuttuivat kiveksi. Alueella on kaksi kivennäisrikasta lähdettä, ja valtio on suojellut kohdetta vuodesta 1959.
+AIEMPI KYSYMYS: Mihin kansantarina selittää pylväiden synnyn?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kansantarinan mukaan pylväät ovat häävieraita, jotka muuttuivat kiveksi. Tarina on osa sitä, miksi paikkaa kutsutaan [[Pirunkaupungiksi]], ja paikalliset kertovat sen eri tavoin, enkä ole varma kaikista yksityiskohdista. Tieteellinen selitys on eri asia: pylväät ovat eroosion muokkaamia. Paikka sijaitsee [[Kuršumlijan]] kunnassa. Hyvä tarina, vaikka kivi ei puhukaan.
+KYSYMYS: Kerro lisää: Pirunkaupungiksi
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đavolja varoš (Pirunkaupunki) (luonto · vuori)
+Tietoruudun teksti: Đavolja varoš eli Pirunkaupunki sijaitsee Radan-vuorella Kuršumlijan kunnassa Toplican piirikunnassa, noin 700 metrin korkeudessa. Alueella on noin 202 maapylvästä, jotka ovat 2–15 metriä korkeita ja tyveltä 4–6 metriä leveitä. Ne ovat syntyneet tulivuoritoiminnan leimaamalla alueella eroosion kuluttaessa maaperää, ja useimpien pylväiden päällä on andesiittinen kansi, joka suojaa niitä kulumiselta. Nimeen liittyvän kansantarinan mukaan häävieraat muuttuivat kiveksi. Alueella on kaksi kivennäisrikasta lähdettä, ja valtio on suojellut kohdetta vuodesta 1959.
+AIEMPI KYSYMYS: Mihin kansantarina selittää pylväiden synnyn?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kansantarinan mukaan pylväät ovat häävieraita, jotka muuttuivat kiveksi. Tarina on osa sitä, miksi paikkaa kutsutaan [[Pirunkaupungiksi]], ja paikalliset kertovat sen eri tavoin, enkä ole varma kaikista yksityiskohdista. Tieteellinen selitys on eri asia: pylväät ovat eroosion muokkaamia. Paikka sijaitsee [[Kuršumlijan]] kunnassa. Hyvä tarina, vaikka kivi ei puhukaan.
+KYSYMYS: Kerro lisää: Kuršumlijan
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đavolja varoš (Pirunkaupunki) (luonto · vuori)
+Tietoruudun teksti: Đavolja varoš eli Pirunkaupunki sijaitsee Radan-vuorella Kuršumlijan kunnassa Toplican piirikunnassa, noin 700 metrin korkeudessa. Alueella on noin 202 maapylvästä, jotka ovat 2–15 metriä korkeita ja tyveltä 4–6 metriä leveitä. Ne ovat syntyneet tulivuoritoiminnan leimaamalla alueella eroosion kuluttaessa maaperää, ja useimpien pylväiden päällä on andesiittinen kansi, joka suojaa niitä kulumiselta. Nimeen liittyvän kansantarinan mukaan häävieraat muuttuivat kiveksi. Alueella on kaksi kivennäisrikasta lähdettä, ja valtio on suojellut kohdetta vuodesta 1959.
+AIEMPI KYSYMYS: Missä muualla Euroopassa on samanlaisia maapylväitä?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä tiedän jotain. Samantyyppisiä [[maapylväitä]] on esimerkiksi Italian [[Etelä-Tirolissa]] Rittenin ylätasangolla ja Sveitsissä Euseignen seudulla. Kaikissa on sama perusidea: kovempi kivi suojaa alla olevaa pehmeämpää maa-ainesta. Muotoihin vaikuttaa kuitenkin paikallinen maaperä, joten kaikki kohteet eivät ole keskenään samanlaisia. Eipä taida löytyä kahta samanlaista, ylhäältä päin.
+KYSYMYS: Kerro lisää: maapylväitä
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đavolja varoš (Pirunkaupunki) (luonto · vuori)
+Tietoruudun teksti: Đavolja varoš eli Pirunkaupunki sijaitsee Radan-vuorella Kuršumlijan kunnassa Toplican piirikunnassa, noin 700 metrin korkeudessa. Alueella on noin 202 maapylvästä, jotka ovat 2–15 metriä korkeita ja tyveltä 4–6 metriä leveitä. Ne ovat syntyneet tulivuoritoiminnan leimaamalla alueella eroosion kuluttaessa maaperää, ja useimpien pylväiden päällä on andesiittinen kansi, joka suojaa niitä kulumiselta. Nimeen liittyvän kansantarinan mukaan häävieraat muuttuivat kiveksi. Alueella on kaksi kivennäisrikasta lähdettä, ja valtio on suojellut kohdetta vuodesta 1959.
+AIEMPI KYSYMYS: Missä muualla Euroopassa on samanlaisia maapylväitä?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä tiedän jotain. Samantyyppisiä [[maapylväitä]] on esimerkiksi Italian [[Etelä-Tirolissa]] Rittenin ylätasangolla ja Sveitsissä Euseignen seudulla. Kaikissa on sama perusidea: kovempi kivi suojaa alla olevaa pehmeämpää maa-ainesta. Muotoihin vaikuttaa kuitenkin paikallinen maaperä, joten kaikki kohteet eivät ole keskenään samanlaisia. Eipä taida löytyä kahta samanlaista, ylhäältä päin.
+KYSYMYS: Kerro lisää: Etelä-Tirolissa
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đavolja varoš (Pirunkaupunki) (luonto · vuori)
+Tietoruudun teksti: Đavolja varoš eli Pirunkaupunki sijaitsee Radan-vuorella Kuršumlijan kunnassa Toplican piirikunnassa, noin 700 metrin korkeudessa. Alueella on noin 202 maapylvästä, jotka ovat 2–15 metriä korkeita ja tyveltä 4–6 metriä leveitä. Ne ovat syntyneet tulivuoritoiminnan leimaamalla alueella eroosion kuluttaessa maaperää, ja useimpien pylväiden päällä on andesiittinen kansi, joka suojaa niitä kulumiselta. Nimeen liittyvän kansantarinan mukaan häävieraat muuttuivat kiveksi. Alueella on kaksi kivennäisrikasta lähdettä, ja valtio on suojellut kohdetta vuodesta 1959.
+AIEMPI KYSYMYS: Mitä kivennäisvesi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Kivennäisvesi]] on luonnonvettä, johon on kallioperässä liuennut [[mineraaleja]], kuten kalsiumia, magnesiumia ja natriumia. Pitoisuus ja koostumus vaihtelevat lähteestä toiseen, ja siksi vesillä on erilainen maku. Alueella on kaksi kivennäisrikasta lähdettä, mutta tarkempaa koostumusta en tiedä. Vedessä on ainakin enemmän makua kuin lammikossa.
+KYSYMYS: Kerro lisää: Kivennäisvesi
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đavolja varoš (Pirunkaupunki) (luonto · vuori)
+Tietoruudun teksti: Đavolja varoš eli Pirunkaupunki sijaitsee Radan-vuorella Kuršumlijan kunnassa Toplican piirikunnassa, noin 700 metrin korkeudessa. Alueella on noin 202 maapylvästä, jotka ovat 2–15 metriä korkeita ja tyveltä 4–6 metriä leveitä. Ne ovat syntyneet tulivuoritoiminnan leimaamalla alueella eroosion kuluttaessa maaperää, ja useimpien pylväiden päällä on andesiittinen kansi, joka suojaa niitä kulumiselta. Nimeen liittyvän kansantarinan mukaan häävieraat muuttuivat kiveksi. Alueella on kaksi kivennäisrikasta lähdettä, ja valtio on suojellut kohdetta vuodesta 1959.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: Marina Beach] promenadi 1884 Marina on luonnollinen hiekkaranta Koromandelin rannikolla. Se alkaa Fort St. Georgen kupeesta ja jatkuu etelään Besant Nagariin asti. Hiekkaa on kolmetoista kilometriä ja promenadia kuusi; Marina Beach -artikkeli sanoo sitä Intian pisimmäksi luonnolliseksi kaupunkirannaksi ja Chennai-artikkeli maailman toiseksi pisimmäksi kaupunkirannaksi. Leveyttä on keskimäärin kolmesataa metriä ja leveimmillään 437. Ranta on vanhempi kuin kaupunki. Ennen 1500-lukua meri tulvi toistuvasti maalle, ja vetäytyessään se jätti jälkeensä hiekkaharjuja ja laguuneja. Yksi harju kulki Cooum-joen suulta nykyisen Presidency Collegen paikalle, ja juuri sen päällä ranta on. Promenadin valmistumisen 188…
+AIEMPI KYSYMYS: Mitä kivennäisvesi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Kivennäisvesi]] on luonnonvettä, johon on kallioperässä liuennut [[mineraaleja]], kuten kalsiumia, magnesiumia ja natriumia. Pitoisuus ja koostumus vaihtelevat lähteestä toiseen, ja siksi vesillä on erilainen maku. Alueella on kaksi kivennäisrikasta lähdettä, mutta tarkempaa koostumusta en tiedä. Vedessä on ainakin enemmän makua kuin lammikossa.
+KYSYMYS: Kerro lisää: mineraaleja
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đavolja varoš (Pirunkaupunki) (luonto · vuori)
+Tietoruudun teksti: Đavolja varoš eli Pirunkaupunki sijaitsee Radan-vuorella Kuršumlijan kunnassa Toplican piirikunnassa, noin 700 metrin korkeudessa. Alueella on noin 202 maapylvästä, jotka ovat 2–15 metriä korkeita ja tyveltä 4–6 metriä leveitä. Ne ovat syntyneet tulivuoritoiminnan leimaamalla alueella eroosion kuluttaessa maaperää, ja useimpien pylväiden päällä on andesiittinen kansi, joka suojaa niitä kulumiselta. Nimeen liittyvän kansantarinan mukaan häävieraat muuttuivat kiveksi. Alueella on kaksi kivennäisrikasta lähdettä, ja valtio on suojellut kohdetta vuodesta 1959.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Medina — kohdekartta / Kohdekartta: Hidžaz-radan asema] 1908 Tämä oli radan pääte, viimeinen asema ennen kuin kiskot loppuvat. Asema rakennettiin Anbariyan kaupunginosaan lähelle Profeetan moskeijaa, ja siihen kuului useita rakennuksia: halli, sivurakennuksia ja oma raiteistonsa. Ensimmäinen juna kaartoi laiturille 1. syyskuuta 1908, ja kortteli oli kaupungille aivan uudenlainen — mitään vastaavaa teollisen ajan rakennusryhmää täällä ei ollut ennen nähty. Junat lakkasivat tulemasta vuoden 1920 tienoilla, mutta rakennukset jäivät. Entisöityyn asemakortteliin avattiin vuonna 2006 Hidžaz-radan museo: siellä on pätkä alkuperäistä rataa, vaunuhalli, vetureita ja liikkuvaa kalustoa sekä aseman omia työkaluja. Osa esineistä on tuotu muualta radan varre…
+- [Medina — kaupunkilehti / Medina: Juna Damaskoksesta] Hanke aloitettiin ilman ulkomaista rahaa. Sulttaani Abdul Hamid II tilasi radan maaliskuussa 1900, ja valtion maatalouspankki Ziraat antoi alkuun satatuhatta liiraa; loput kerättiin muslimien lahjoituksina, joista kuitenkin vain noin joka kymmenes tuli valtakunnan ulkopuolelta. Työtä johti pääinsinööri Mouktar Bey, ja rata saavutti Medinan 1. syyskuuta 1908 — päivä oli valittu, sillä se oli sulttaanin valtaannousun vuosipäivä. Määräaika näkyi jäljessä: osa raiteesta laskettiin väliaikaisille penkereille wadien yli. Mekkaan rataa ei jatkettu, sillä Harb-heimo nousi vuonna 1907 vastustamaan jatkoa.
+AIEMPI KYSYMYS: Missä päin Serbiaa Radan-vuori sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Radan-vuori]] sijaitsee Etelä-Serbiassa Toplican piirikunnassa. Vuoren rinteillä on [[Pirunkaupunki]] noin 700 metrin korkeudessa. Seutu on tulivuoritoiminnan muokkaamaa, mikä näkyy maisemassa ja kivilajeissa. Tarkat rajat ja huippujen korkeudet jätän kartalle. Kartta on kyyhkyn paras ystävä.
+KYSYMYS: Kerro lisää: Radan-vuori
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đavolja varoš (Pirunkaupunki) (luonto · vuori)
+Tietoruudun teksti: Đavolja varoš eli Pirunkaupunki sijaitsee Radan-vuorella Kuršumlijan kunnassa Toplican piirikunnassa, noin 700 metrin korkeudessa. Alueella on noin 202 maapylvästä, jotka ovat 2–15 metriä korkeita ja tyveltä 4–6 metriä leveitä. Ne ovat syntyneet tulivuoritoiminnan leimaamalla alueella eroosion kuluttaessa maaperää, ja useimpien pylväiden päällä on andesiittinen kansi, joka suojaa niitä kulumiselta. Nimeen liittyvän kansantarinan mukaan häävieraat muuttuivat kiveksi. Alueella on kaksi kivennäisrikasta lähdettä, ja valtio on suojellut kohdetta vuodesta 1959.
+AIEMPI KYSYMYS: Missä päin Serbiaa Radan-vuori sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Radan-vuori]] sijaitsee Etelä-Serbiassa Toplican piirikunnassa. Vuoren rinteillä on [[Pirunkaupunki]] noin 700 metrin korkeudessa. Seutu on tulivuoritoiminnan muokkaamaa, mikä näkyy maisemassa ja kivilajeissa. Tarkat rajat ja huippujen korkeudet jätän kartalle. Kartta on kyyhkyn paras ystävä.
+KYSYMYS: Kerro lisää: Pirunkaupunki
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Golubacin linnoitus (historia)
+Tietoruudun teksti: Golubacin linnoitus kohoaa Serbian puolella Tonavan rannalla noin neljä kilometriä alavirtaan Golubacin kaupungista, Rautaportin rotkon suulla. Kivilinnoitus rakennettiin 1300-luvulla, ja se jakautuu kolmeen vaiheittain rakennettuun osaan, joissa on kaikkiaan kymmenen tornia. Linnaa hallitsivat vuorotellen eri vallat: vuosina 1403–1427 se oli serbien despootti Stefan Lazarevićin hallussa. Vuosina 2014–2019 toteutettiin mittava kunnostus, ja linnoitus avattiin kokonaan yleisölle huhtikuussa 2019.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Kuinka monta tornia Golubacin linnoituksessa on?
+AIEMPI VASTAUS (Livia):
+Ai se. Linnoituksessa on kaikkiaan kymmenen tornia, ja se jakautuu kolmeen vaiheittain rakennettuun osaan. Kivilinnoitus rakennettiin 1300-luvulla [[Tonavan]] rannalle [[Rautaportin]] rotkon suulle. Vuosina 2014–2019 tehdyn kunnostuksen jälkeen se on kokonaan avoinna yleisölle. Kymmenen tornia, ja minä laskin ne kahdesti.
+KYSYMYS: Kerro lisää: Tonavan
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Golubacin linnoitus (historia)
+Tietoruudun teksti: Golubacin linnoitus kohoaa Serbian puolella Tonavan rannalla noin neljä kilometriä alavirtaan Golubacin kaupungista, Rautaportin rotkon suulla. Kivilinnoitus rakennettiin 1300-luvulla, ja se jakautuu kolmeen vaiheittain rakennettuun osaan, joissa on kaikkiaan kymmenen tornia. Linnaa hallitsivat vuorotellen eri vallat: vuosina 1403–1427 se oli serbien despootti Stefan Lazarevićin hallussa. Vuosina 2014–2019 toteutettiin mittava kunnostus, ja linnoitus avattiin kokonaan yleisölle huhtikuussa 2019.
+AIEMPI KYSYMYS: Kuinka monta tornia Golubacin linnoituksessa on?
+AIEMPI VASTAUS (Livia):
+Ai se. Linnoituksessa on kaikkiaan kymmenen tornia, ja se jakautuu kolmeen vaiheittain rakennettuun osaan. Kivilinnoitus rakennettiin 1300-luvulla [[Tonavan]] rannalle [[Rautaportin]] rotkon suulle. Vuosina 2014–2019 tehdyn kunnostuksen jälkeen se on kokonaan avoinna yleisölle. Kymmenen tornia, ja minä laskin ne kahdesti.
+KYSYMYS: Kerro lisää: Rautaportin
+
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Golubacin linnoitus (historia)
+Tietoruudun teksti: Golubacin linnoitus kohoaa Serbian puolella Tonavan rannalla noin neljä kilometriä alavirtaan Golubacin kaupungista, Rautaportin rotkon suulla. Kivilinnoitus rakennettiin 1300-luvulla, ja se jakautuu kolmeen vaiheittain rakennettuun osaan, joissa on kaikkiaan kymmenen tornia. Linnaa hallitsivat vuorotellen eri vallat: vuosina 1403–1427 se oli serbien despootti Stefan Lazarevićin hallussa. Vuosina 2014–2019 toteutettiin mittava kunnostus, ja linnoitus avattiin kokonaan yleisölle huhtikuussa 2019.
+AIEMPI KYSYMYS: Milloin linnoitus avattiin kunnostuksen jälkeen yleisölle?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kunnostus tehtiin vuosina 2014–2019, ja [[Golubacin linnoitus]] avattiin kokonaan yleisölle huhtikuussa 2019. Kivilinnoitus rakennettiin 1300-luvulla [[Tonavan]] rannalle, ja siinä on kymmenen tornia. Vuosina 1403–1427 sen omisti serbien despootti [[Stefan Lazarević]]. Viisi vuotta kunnostusta, kyl siinä pesä ehtisi tehdä.
+KYSYMYS: Kerro lisää: Golubacin linnoitus
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Golubacin linnoitus (historia)
+Tietoruudun teksti: Golubacin linnoitus kohoaa Serbian puolella Tonavan rannalla noin neljä kilometriä alavirtaan Golubacin kaupungista, Rautaportin rotkon suulla. Kivilinnoitus rakennettiin 1300-luvulla, ja se jakautuu kolmeen vaiheittain rakennettuun osaan, joissa on kaikkiaan kymmenen tornia. Linnaa hallitsivat vuorotellen eri vallat: vuosina 1403–1427 se oli serbien despootti Stefan Lazarevićin hallussa. Vuosina 2014–2019 toteutettiin mittava kunnostus, ja linnoitus avattiin kokonaan yleisölle huhtikuussa 2019.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Kuningas, josta tuli munkki] 1190–1196 — Stefan Nemanja yhdisti Serbian pirstoutuneet ruhtinaskunnat ja perusti Nemanjić-suvun, joka hallitsi maata yli kaksisataa vuotta. Hän aloitti Studenican luostarin rakentamisen 1180-luvulla ja pystytti sen sydämeen valkoisesta marmorista Neitsyt Marian kirkon. Maaliskuun 25. päivänä 1196 hän luopui vallasta poikansa Stefanin hyväksi ja otti munkiksi vihkimisessä nimen Simeon. Syksyllä 1197 hän matkasi Athos-vuorelle liittyäkseen sinne jo aiemmin lähteneeseen nuorimpaan poikaansa Rastkoon, josta tuli myöhemmin pyhä Sava, Serbian ortodoksisen kirkon perustaja. Studenica on Unescon maailmanperintöä vuodesta 1986.
+AIEMPI KYSYMYS: Milloin linnoitus avattiin kunnostuksen jälkeen yleisölle?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kunnostus tehtiin vuosina 2014–2019, ja [[Golubacin linnoitus]] avattiin kokonaan yleisölle huhtikuussa 2019. Kivilinnoitus rakennettiin 1300-luvulla [[Tonavan]] rannalle, ja siinä on kymmenen tornia. Vuosina 1403–1427 sen omisti serbien despootti [[Stefan Lazarević]]. Viisi vuotta kunnostusta, kyl siinä pesä ehtisi tehdä.
+KYSYMYS: Kerro lisää: Stefan Lazarević
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Golubacin linnoitus (historia)
+Tietoruudun teksti: Golubacin linnoitus kohoaa Serbian puolella Tonavan rannalla noin neljä kilometriä alavirtaan Golubacin kaupungista, Rautaportin rotkon suulla. Kivilinnoitus rakennettiin 1300-luvulla, ja se jakautuu kolmeen vaiheittain rakennettuun osaan, joissa on kaikkiaan kymmenen tornia. Linnaa hallitsivat vuorotellen eri vallat: vuosina 1403–1427 se oli serbien despootti Stefan Lazarevićin hallussa. Vuosina 2014–2019 toteutettiin mittava kunnostus, ja linnoitus avattiin kokonaan yleisölle huhtikuussa 2019.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Sankarien aukio] 1896–1906 Unkarilaiset laskevat valtionsa alkavan vuodesta 896, jolloin heidän esi-isänsä asettuivat Karpaattien altaaseen. Tuhatvuotisjuhlaa varten Budapest rakensi kokonaisen kaupunginosan: Andrássy-katu jatkettiin, sen alle louhittiin Manner-Euroopan ensimmäinen metro, ja kadun päähän nousi aukio muistomerkkeineen. Työt alkoivat 1896, aukio sai nimensä 1900, ja muistomerkki vihittiin lopulta 1906. Suunnittelija oli arkkitehti Albert Schickedanz, joka piirsi myös aukiota reunustavat museot: Taidemuseon eli Szépművészeti Múzeumin, joka valmistui muistomerkin tavoin 1906, ja sitä vastapäätä seisovan Taidehallin eli Műcsarnokin, joka oli valmis jo 1896. Andrássy-katu aukioineen ja metroineen…
+- [Budapest — kohdekartta / Kohdekartta: Kalastajanlinnake] 1895–1902 Kalastajanlinnake näyttää keskiaikaiselta satulinnalta Budan kukkulalla, mutta se ei ole koskaan puolustanut ketään. Arkkitehti Frigyes Schulek suunnitteli sen kaunistamaan viereistä Matthias-kirkkoa, ja rakennustyöt kestivät vuodesta 1895 vuoteen 1902. Torneja on tasan seitsemän, ja ne muistuttavat seitsemästä heimosta, jotka asettuivat Karpaattien altaaseen vuonna 895. Nimi tulee keskiaikaisista kalastajista, joiden kerrotaan vartioineen tätä kukkulanreunaa vihollisilta. Nykyään paikalta avautuu yksi kaupungin komeimmista näköaloista Tonavalle ja Pestin puolelle. Toisessa maailmansodassa linnake vaurioitui pahoin, mutta se korjattiin täysin ennalleen vuoteen 1953 mennessä.
+AIEMPI KYSYMYS: Mikä on Rautaportti?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tost voisin puhua pitkään. Rautaportti on Tonavan rotko, jossa joki kulkee [[Karpaattien]] ja Balkanin vuoristojen välistä Serbian ja Romanian rajalla. Rotkon rinteillä on suojeltua luontoa, ja alue on tunnettu myös roomalaisaikaisista jäänteistä, kuten [[Tabula Traiana]] -kirjoituksesta. Joen vesivoima on valjastettu 1900-luvulla rakennetulla padolla. Näkymä on aika vaikuttava ylhäältä.
+KYSYMYS: Kerro lisää: Karpaattien
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Golubacin linnoitus (historia)
+Tietoruudun teksti: Golubacin linnoitus kohoaa Serbian puolella Tonavan rannalla noin neljä kilometriä alavirtaan Golubacin kaupungista, Rautaportin rotkon suulla. Kivilinnoitus rakennettiin 1300-luvulla, ja se jakautuu kolmeen vaiheittain rakennettuun osaan, joissa on kaikkiaan kymmenen tornia. Linnaa hallitsivat vuorotellen eri vallat: vuosina 1403–1427 se oli serbien despootti Stefan Lazarevićin hallussa. Vuosina 2014–2019 toteutettiin mittava kunnostus, ja linnoitus avattiin kokonaan yleisölle huhtikuussa 2019.
+AIEMPI KYSYMYS: Mikä on Rautaportti?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tost voisin puhua pitkään. Rautaportti on Tonavan rotko, jossa joki kulkee [[Karpaattien]] ja Balkanin vuoristojen välistä Serbian ja Romanian rajalla. Rotkon rinteillä on suojeltua luontoa, ja alue on tunnettu myös roomalaisaikaisista jäänteistä, kuten [[Tabula Traiana]] -kirjoituksesta. Joen vesivoima on valjastettu 1900-luvulla rakennetulla padolla. Näkymä on aika vaikuttava ylhäältä.
+KYSYMYS: Kerro lisää: Tabula Traiana
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Golubacin linnoitus (historia)
+Tietoruudun teksti: Golubacin linnoitus kohoaa Serbian puolella Tonavan rannalla noin neljä kilometriä alavirtaan Golubacin kaupungista, Rautaportin rotkon suulla. Kivilinnoitus rakennettiin 1300-luvulla, ja se jakautuu kolmeen vaiheittain rakennettuun osaan, joissa on kaikkiaan kymmenen tornia. Linnaa hallitsivat vuorotellen eri vallat: vuosina 1403–1427 se oli serbien despootti Stefan Lazarevićin hallussa. Vuosina 2014–2019 toteutettiin mittava kunnostus, ja linnoitus avattiin kokonaan yleisölle huhtikuussa 2019.
+AIEMPI KYSYMYS: Miksi linnoituksia rakennettiin jokien varsille?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Joki]] oli keskiajalla tärkeä kulkureitti ja raja, joten sen varrelle rakennettu linnoitus valvoi liikennettä ja kauppaa. Vesi suojasi linnoitusta yhdeltä puolelta, ja korkea kallio tai harjanne antoi näkymän kauas. [[Tonavan]] kaltaisilla joilla linnoituksilla pystyttiin myös keräämään maksuja ohikulkijoilta, mutta tapa vaihteli paikasta toiseen. Joet ovat olleet kyyhkyn karttoja aina.
+KYSYMYS: Kerro lisää: Joki
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Golubacin linnoitus (historia)
+Tietoruudun teksti: Golubacin linnoitus kohoaa Serbian puolella Tonavan rannalla noin neljä kilometriä alavirtaan Golubacin kaupungista, Rautaportin rotkon suulla. Kivilinnoitus rakennettiin 1300-luvulla, ja se jakautuu kolmeen vaiheittain rakennettuun osaan, joissa on kaikkiaan kymmenen tornia. Linnaa hallitsivat vuorotellen eri vallat: vuosina 1403–1427 se oli serbien despootti Stefan Lazarevićin hallussa. Vuosina 2014–2019 toteutettiin mittava kunnostus, ja linnoitus avattiin kokonaan yleisölle huhtikuussa 2019.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aleppo — kohdekartta / Kohdekartta: Antiokian portti] Vanhankaupungin läntisen muurin keskellä seisoo portti, jonka nimi kertoo suunnan: tie vei Antiokiaan, antiikin Syyrian pääkaupunkiin. Kaksi kuusikulmaista bastionia nousee rinnakkain, ja niiden välinen kulkuväylä mutkittelee sen sijaan että menisi suoraan läpi. Aukko on oikeanpuoleisen tornin alla, puolustussyistä: sisään tulija ei pääse vauhtiin eikä näe eteensä. Kivi on valkoista, ja lohkareet ovat noin 0,8 kertaa 1,0 metriä. Bysantin aikana tämä oli kaupungin pääportti, ja sen jälkeen merkitys hiipui. Ajjubidien Aleppon emiiri an-Nasir Yusuf, Saladinin pojanpojanpoika, rakennutti portin uudelleen 1000-luvulta periytyvän perustuksen päälle. Vuosiluvut ovat epätarkkoja: portin kohdalla hä…
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+AIEMPI KYSYMYS: Kuka oli despootti Stefan Lazarević?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä kysymys. [[Stefan Lazarević]] oli serbialainen hallitsija 1400-luvun alussa, ruhtinas Lazarin poika. Hän sai despootin arvonimen [[Bysantin]] keisarilta, ja hän siirsi Serbian pääkaupungiksi [[Belgradin]]. Hän oli myös runoilija ja kirjallisuuden tukija, ja hänen aikanaan Serbia kukoisti kulttuurisesti. Golubacin linnoitus oli hänen hallussaan vuosina 1403–1427. Aikamoinen mies, ja minä en ole edes tavannut häntä.
+KYSYMYS: Kerro lisää: Bysantin
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Golubacin linnoitus (historia)
+Tietoruudun teksti: Golubacin linnoitus kohoaa Serbian puolella Tonavan rannalla noin neljä kilometriä alavirtaan Golubacin kaupungista, Rautaportin rotkon suulla. Kivilinnoitus rakennettiin 1300-luvulla, ja se jakautuu kolmeen vaiheittain rakennettuun osaan, joissa on kaikkiaan kymmenen tornia. Linnaa hallitsivat vuorotellen eri vallat: vuosina 1403–1427 se oli serbien despootti Stefan Lazarevićin hallussa. Vuosina 2014–2019 toteutettiin mittava kunnostus, ja linnoitus avattiin kokonaan yleisölle huhtikuussa 2019.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historian hetki: Belgrad 1456 — talonpojat murtavat piirityksen] 21.–22.7.1456 — Selviääkö hän tästä yöstä hengissä? Talonpoika, joka on tarttunut viikatteeseen ja tervasoihtuun eikä miekkaan, ei tiedä sitä vielä, kun hän ryntää alas Belgradin linnoituksen muurilta kohti ottomaanien tykistöleiriä. On heinäkuun loppu 1456, ja unkarilainen sotapäällikkö János Hunyadi on juuri torjunut viikkoja kestäneen tykistöpommituksen, mutta varsinainen käänne tulee yllättäen: fransiskaanimunkki Giovanni da Capistrano on koonnut tuhansia aseistamattomia ristiretkeläisiä linnoituksen ympärille, ja kun osa heistä hyökkää omin päin vihollisen leiriin, koko rintama seuraa perässä hallitsemattomasti. Sulttaani Mehmed II, valloittanut Konstantinopolin vain kolme vuotta aiemm…
+AIEMPI KYSYMYS: Kuka oli despootti Stefan Lazarević?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä kysymys. [[Stefan Lazarević]] oli serbialainen hallitsija 1400-luvun alussa, ruhtinas Lazarin poika. Hän sai despootin arvonimen [[Bysantin]] keisarilta, ja hän siirsi Serbian pääkaupungiksi [[Belgradin]]. Hän oli myös runoilija ja kirjallisuuden tukija, ja hänen aikanaan Serbia kukoisti kulttuurisesti. Golubacin linnoitus oli hänen hallussaan vuosina 1403–1427. Aikamoinen mies, ja minä en ole edes tavannut häntä.
+KYSYMYS: Kerro lisää: Belgradin
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gamzigrad (historia)
+Tietoruudun teksti: Gamzigrad eli Felix Romuliana on myöhäisantiikin palatsikompleksi Zaječarin lähellä Serbiassa. Keisari Galerius aloitti sen rakennuttamisen vuonna 298 voitettuaan Sassanidien valtakunnan, ja paikka nimettiin hänen äitinsä Romulan mukaan. Muurien sisällä oli kaksi palatsia, kaksi temppeliä ja kylpylä, ja porteista on löytynyt Dionysosta ja Medusaa esittäviä mosaiikkeja. Läheisellä Magura-kukkulalla on kaksi mausoleumia, joihin Romula ja Galerius haudattiin. Alue hylättiin 600-luvun alussa slaavien saapuessa; kaivaukset alkoivat 1953, ja Unescon maailmanperintökohde se on vuodesta 2007.
+AIEMPI KYSYMYS: Kuka rakennutti Felix Romulianan ja miksi se sai nimensä?
+AIEMPI VASTAUS (Livia):
+Hmm, joo, tän minä muistan. Felix Romulianan rakennutti keisari [[Galerius]], joka aloitti rakentamisen vuonna 298 voitettuaan Sassanidien valtakunnan. Paikka nimettiin hänen äitinsä Romulan mukaan, ja nimessä oleva Felix tarkoittaa onnekasta. Muurien sisällä oli kaksi palatsia, kaksi temppeliä ja kylpylä, ja kompleksi sijaitsee [[Zaječarin]] lähellä Serbiassa. Galerius hallitsi Rooman valtakunnan itäosaa [[tetrarkian]] aikana. Tuollainen lahja äidille, ja minä en ole edes hankkinut kirjettä.
+KYSYMYS: Kerro lisää: Galerius
+
+### 49
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gamzigrad (historia)
+Tietoruudun teksti: Gamzigrad eli Felix Romuliana on myöhäisantiikin palatsikompleksi Zaječarin lähellä Serbiassa. Keisari Galerius aloitti sen rakennuttamisen vuonna 298 voitettuaan Sassanidien valtakunnan, ja paikka nimettiin hänen äitinsä Romulan mukaan. Muurien sisällä oli kaksi palatsia, kaksi temppeliä ja kylpylä, ja porteista on löytynyt Dionysosta ja Medusaa esittäviä mosaiikkeja. Läheisellä Magura-kukkulalla on kaksi mausoleumia, joihin Romula ja Galerius haudattiin. Alue hylättiin 600-luvun alussa slaavien saapuessa; kaivaukset alkoivat 1953, ja Unescon maailmanperintökohde se on vuodesta 2007.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kohdekartta / Kohdekartta: Keskustori] 1940–1942 Keskustori levittäytyy Vodnikin aukiolle Tromostovjen ja Lohikäärmesillan väliin Ljubljanica-joen oikealle rannalle. Aukio on nimetty Valentin Vodnikin mukaan: hän oli valistusajan lopun pappi, toimittaja ja runoilija. Isoisän aikaan aukiolla ei ole toria eikä Vodnikin patsasta, joka paljastettiin vasta 1889. Paikalla seisoo vanha luostari, jossa toimivat hiippakunnan tyttökoulu ja kirjasto. Vuoden 1895 maanjäristys tuhosi luostarin niin pahoin, että se purettiin kokonaan, ja tyhjälle aukiolle syntyi ulkotori. Torihallin suunnitteli Jože Plečnik 1931–1939, ja se rakennettiin 1940–1942. Kaksikerroksinen halli seuraa joen kaarta: jokipuolella on suuret puolipyöreät ikkunat, katupuol…
+AIEMPI KYSYMYS: Kuka rakennutti Felix Romulianan ja miksi se sai nimensä?
+AIEMPI VASTAUS (Livia):
+Hmm, joo, tän minä muistan. Felix Romulianan rakennutti keisari [[Galerius]], joka aloitti rakentamisen vuonna 298 voitettuaan Sassanidien valtakunnan. Paikka nimettiin hänen äitinsä Romulan mukaan, ja nimessä oleva Felix tarkoittaa onnekasta. Muurien sisällä oli kaksi palatsia, kaksi temppeliä ja kylpylä, ja kompleksi sijaitsee [[Zaječarin]] lähellä Serbiassa. Galerius hallitsi Rooman valtakunnan itäosaa [[tetrarkian]] aikana. Tuollainen lahja äidille, ja minä en ole edes hankkinut kirjettä.
+KYSYMYS: Kerro lisää: Zaječarin
+
+### 50
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gamzigrad (historia)
+Tietoruudun teksti: Gamzigrad eli Felix Romuliana on myöhäisantiikin palatsikompleksi Zaječarin lähellä Serbiassa. Keisari Galerius aloitti sen rakennuttamisen vuonna 298 voitettuaan Sassanidien valtakunnan, ja paikka nimettiin hänen äitinsä Romulan mukaan. Muurien sisällä oli kaksi palatsia, kaksi temppeliä ja kylpylä, ja porteista on löytynyt Dionysosta ja Medusaa esittäviä mosaiikkeja. Läheisellä Magura-kukkulalla on kaksi mausoleumia, joihin Romula ja Galerius haudattiin. Alue hylättiin 600-luvun alussa slaavien saapuessa; kaivaukset alkoivat 1953, ja Unescon maailmanperintökohde se on vuodesta 2007.
+AIEMPI KYSYMYS: Kuka rakennutti Felix Romulianan ja miksi se sai nimensä?
+AIEMPI VASTAUS (Livia):
+Hmm, joo, tän minä muistan. Felix Romulianan rakennutti keisari [[Galerius]], joka aloitti rakentamisen vuonna 298 voitettuaan Sassanidien valtakunnan. Paikka nimettiin hänen äitinsä Romulan mukaan, ja nimessä oleva Felix tarkoittaa onnekasta. Muurien sisällä oli kaksi palatsia, kaksi temppeliä ja kylpylä, ja kompleksi sijaitsee [[Zaječarin]] lähellä Serbiassa. Galerius hallitsi Rooman valtakunnan itäosaa [[tetrarkian]] aikana. Tuollainen lahja äidille, ja minä en ole edes hankkinut kirjettä.
+KYSYMYS: Kerro lisää: tetrarkian
+
+### 51
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gamzigrad (historia)
+Tietoruudun teksti: Gamzigrad eli Felix Romuliana on myöhäisantiikin palatsikompleksi Zaječarin lähellä Serbiassa. Keisari Galerius aloitti sen rakennuttamisen vuonna 298 voitettuaan Sassanidien valtakunnan, ja paikka nimettiin hänen äitinsä Romulan mukaan. Muurien sisällä oli kaksi palatsia, kaksi temppeliä ja kylpylä, ja porteista on löytynyt Dionysosta ja Medusaa esittäviä mosaiikkeja. Läheisellä Magura-kukkulalla on kaksi mausoleumia, joihin Romula ja Galerius haudattiin. Alue hylättiin 600-luvun alussa slaavien saapuessa; kaivaukset alkoivat 1953, ja Unescon maailmanperintökohde se on vuodesta 2007.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Delhi — kohdekartta / Kohdekartta: Humayunin mausoleumi] 1558 Keisarinna rakennutti puolisolleen haudan, jollaista Intiassa ei ollut nähty. Humayunin leski Bega Begum tilasi mausoleumin vuonna 1558 ja valitsi arkkitehdiksi Heratista tuodun Mirak Mirza Ghiyasin, jonka työtä jatkoi hänen poikansa Sayyid Muhammad. Esikuvana oli Timurin hauta Samarkandissa. Se oli Intian niemimaan ensimmäinen puutarhahauta: rakennus istuu charbaghin, neljään yhtä suureen osaan jaetun persialaisen paratiisipuutarhan, keskellä. Punaisen hiekkakiven ja valkoisen marmorin yhdistelmästä tuli Mughal-arkkitehtuurin tunnus, ja sarja huipentui seuraavalla vuosisadalla Agran Taj Mahaliin. Maailmanperintökohde mausoleumista tuli 1993. Rakennus on myös historian näyttämö: tänne …
+AIEMPI KYSYMYS: Mitä Magura-kukkulalla on?
+AIEMPI VASTAUS (Livia):
+No niin. Magura-kukkulalla on kaksi [[mausoleumia]], joihin haudattiin Romula ja [[Galerius]]. Kukkula sijaitsee lähellä palatsikompleksia, jota kutsutaan Felix Romulianaksi. Galerius kuoli vuonna 311, ja haudat liittyvät keisarin ja hänen äitinsä muistoon. Hautoja kunnioitetaan nykyään Unescon maailmanperintökohteen osana. Kukkulalta on varmasti hyvä näkymä, mutta vain lintujen mielestä.
+KYSYMYS: Kerro lisää: mausoleumia
+
+### 52
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gamzigrad (historia)
+Tietoruudun teksti: Gamzigrad eli Felix Romuliana on myöhäisantiikin palatsikompleksi Zaječarin lähellä Serbiassa. Keisari Galerius aloitti sen rakennuttamisen vuonna 298 voitettuaan Sassanidien valtakunnan, ja paikka nimettiin hänen äitinsä Romulan mukaan. Muurien sisällä oli kaksi palatsia, kaksi temppeliä ja kylpylä, ja porteista on löytynyt Dionysosta ja Medusaa esittäviä mosaiikkeja. Läheisellä Magura-kukkulalla on kaksi mausoleumia, joihin Romula ja Galerius haudattiin. Alue hylättiin 600-luvun alussa slaavien saapuessa; kaivaukset alkoivat 1953, ja Unescon maailmanperintökohde se on vuodesta 2007.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vancouver — kohdekartta / Kohdekartta: Keskuskirjasto] 1995 Vancouverin kirjastolla on kolme taloa, ja tämä on kolmas. Ensimmäinen syntyi, kun teräsmagnaatti Andrew Carnegie lupasi 1901 viisikymmentätuhatta dollaria, jos kaupunki antaisi tontin ja viisituhatta dollaria vuodessa toimintaan. Kaupungin itä- ja länsipuoli riitelivät heti siitä, kumpi saisi kirjaston, ja asia ratkaistiin kansanäänestyksellä. Talo avattiin marraskuussa 1903, ja se toimii nykyään asukastalona. Keskuskirjasto muutti 1957 Burrard Streetille ja sieltä 1995 nykyiseen taloonsa. Nykyinen talo on kaupungin siihenastisista hankkeista suurin. Marraskuussa 1990 pidettiin kansanäänestys, jonka jälkeen järjestettiin suunnittelukilpailu. Moshe Safdien ja DA Architectsin ehdotus ol…
+- [Sofia — kaupunkilehti / Sofia: Serdica on minun Roomani] Sofian alla on toinen kaupunki. Roomalaisessa Serdicassa viihtyi keisari Konstantinus Suuri, jonka kerrotaan sanoneen siitä: Serdica on minun Roomani. Kun metroa kaivettiin vuosina 2010–2012, maasta paljastui kokonainen kortteli katuja, taloja ja kaupunginmuurin itäportti. Löytöjä ei peitetty takaisin. Nyt matkustaja nousee liukuportaita ylös keskelle katua, jota pitkin on kuljettu 1800 vuotta.
+AIEMPI KYSYMYS: Mikä oli Rooman tetrarkia?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tetrarkia oli järjestelmä, jossa [[Rooman]] valtakuntaa hallitsi neljä hallitsijaa: kaksi vanhempaa keisaria ja kaksi nuorempaa varakeisaria. Sen loi [[Diocletianus]] 290-luvun alussa, ja tavoitteena oli hallita laajaa valtakuntaa tehokkaammin ja turvata perimys. Galerius oli yksi näistä hallitsijoista. Järjestelmä toimi vain lyhyen ajan eikä kestänyt Diocletianuksen eroa 305. Neljä hallitsijaa, ei kuulosta kovin rauhalliselta.
+KYSYMYS: Kerro lisää: Rooman
+
+### 53
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gamzigrad (historia)
+Tietoruudun teksti: Gamzigrad eli Felix Romuliana on myöhäisantiikin palatsikompleksi Zaječarin lähellä Serbiassa. Keisari Galerius aloitti sen rakennuttamisen vuonna 298 voitettuaan Sassanidien valtakunnan, ja paikka nimettiin hänen äitinsä Romulan mukaan. Muurien sisällä oli kaksi palatsia, kaksi temppeliä ja kylpylä, ja porteista on löytynyt Dionysosta ja Medusaa esittäviä mosaiikkeja. Läheisellä Magura-kukkulalla on kaksi mausoleumia, joihin Romula ja Galerius haudattiin. Alue hylättiin 600-luvun alussa slaavien saapuessa; kaivaukset alkoivat 1953, ja Unescon maailmanperintökohde se on vuodesta 2007.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Historia: Palatsi, jonka sisään muutti kokonainen kaupunki] 300 — Keisari Diocletianus rakennutti itselleen noin vuonna 300 eläkepalatsin Adrianmeren rannalle. Se oli enemmän linnoitus kuin huvila: korkeat muurit, neljä porttia ja keskellä pylväiden reunustama aukio. Kun Rooman valta hajosi, lähiseudun asukkaat pakenivat muurien sisään ja jäivät sinne. Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa asuu yhä tuhansia ihmisiä keisarin muurien sisällä.
+AIEMPI KYSYMYS: Mikä oli Rooman tetrarkia?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tetrarkia oli järjestelmä, jossa [[Rooman]] valtakuntaa hallitsi neljä hallitsijaa: kaksi vanhempaa keisaria ja kaksi nuorempaa varakeisaria. Sen loi [[Diocletianus]] 290-luvun alussa, ja tavoitteena oli hallita laajaa valtakuntaa tehokkaammin ja turvata perimys. Galerius oli yksi näistä hallitsijoista. Järjestelmä toimi vain lyhyen ajan eikä kestänyt Diocletianuksen eroa 305. Neljä hallitsijaa, ei kuulosta kovin rauhalliselta.
+KYSYMYS: Kerro lisää: Diocletianus
+
+### 54
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gamzigrad (historia)
+Tietoruudun teksti: Gamzigrad eli Felix Romuliana on myöhäisantiikin palatsikompleksi Zaječarin lähellä Serbiassa. Keisari Galerius aloitti sen rakennuttamisen vuonna 298 voitettuaan Sassanidien valtakunnan, ja paikka nimettiin hänen äitinsä Romulan mukaan. Muurien sisällä oli kaksi palatsia, kaksi temppeliä ja kylpylä, ja porteista on löytynyt Dionysosta ja Medusaa esittäviä mosaiikkeja. Läheisellä Magura-kukkulalla on kaksi mausoleumia, joihin Romula ja Galerius haudattiin. Alue hylättiin 600-luvun alussa slaavien saapuessa; kaivaukset alkoivat 1953, ja Unescon maailmanperintökohde se on vuodesta 2007.
+AIEMPI KYSYMYS: Mikä on mosaiikki ja miten sellainen tehdään?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Mosaiikki on kuva tai kuvio, joka on koottu pienistä kivi- tai lasipaloista, joita kutsutaan tesseroiksi. Palat painetaan märkään laastiin, ja kuva muodostuu niiden väreistä. Gamzigradin porteista on löytynyt [[Dionysosta]] ja [[Medusaa]] esittäviä mosaiikkeja. Hidasta työtä, mutta jälki kestää vuosisatoja. Minä en olisi kärsivällinen.
+KYSYMYS: Kerro lisää: Dionysosta
+
+### 55
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gamzigrad (historia)
+Tietoruudun teksti: Gamzigrad eli Felix Romuliana on myöhäisantiikin palatsikompleksi Zaječarin lähellä Serbiassa. Keisari Galerius aloitti sen rakennuttamisen vuonna 298 voitettuaan Sassanidien valtakunnan, ja paikka nimettiin hänen äitinsä Romulan mukaan. Muurien sisällä oli kaksi palatsia, kaksi temppeliä ja kylpylä, ja porteista on löytynyt Dionysosta ja Medusaa esittäviä mosaiikkeja. Läheisellä Magura-kukkulalla on kaksi mausoleumia, joihin Romula ja Galerius haudattiin. Alue hylättiin 600-luvun alussa slaavien saapuessa; kaivaukset alkoivat 1953, ja Unescon maailmanperintökohde se on vuodesta 2007.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Istanbul: Medusa kannattelee pylvästä ylösalaisin] Hagia Sofiasta 150 metrin päässä laskeutuu 52 porrasta maan alle. Siellä on Yerebatan, keisari Justinianuksen 500-luvulla rakennuttama vesisäiliö: 336 yhdeksänmetristä pylvästä. Kaupunki unohti sen vuosisadoiksi. Vasta 1500-luvulla ranskalainen matkaaja ihmetteli, miksi talojen lattioissa on reikiä, joista lasketaan ämpäri — ja joistakin nousee kaloja. Kahden pylvään jalustaksi on pantu kivi, johon on veistetty Medusan kasvot: toinen kyljellään, toinen ylösalaisin. Varmaa syytä ei tiedetä. Tarina kertoo, että pää käännettiin, jottei kivettävä katse osuisi keneenkään; tutkijoiden mukaan kivet ovat roomalaisajan rakennuksesta otettua kierrätyskiveä.
+AIEMPI KYSYMYS: Mikä on mosaiikki ja miten sellainen tehdään?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Mosaiikki on kuva tai kuvio, joka on koottu pienistä kivi- tai lasipaloista, joita kutsutaan tesseroiksi. Palat painetaan märkään laastiin, ja kuva muodostuu niiden väreistä. Gamzigradin porteista on löytynyt [[Dionysosta]] ja [[Medusaa]] esittäviä mosaiikkeja. Hidasta työtä, mutta jälki kestää vuosisatoja. Minä en olisi kärsivällinen.
+KYSYMYS: Kerro lisää: Medusaa
+
+### 56
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gamzigrad (historia)
+Tietoruudun teksti: Gamzigrad eli Felix Romuliana on myöhäisantiikin palatsikompleksi Zaječarin lähellä Serbiassa. Keisari Galerius aloitti sen rakennuttamisen vuonna 298 voitettuaan Sassanidien valtakunnan, ja paikka nimettiin hänen äitinsä Romulan mukaan. Muurien sisällä oli kaksi palatsia, kaksi temppeliä ja kylpylä, ja porteista on löytynyt Dionysosta ja Medusaa esittäviä mosaiikkeja. Läheisellä Magura-kukkulalla on kaksi mausoleumia, joihin Romula ja Galerius haudattiin. Alue hylättiin 600-luvun alussa slaavien saapuessa; kaivaukset alkoivat 1953, ja Unescon maailmanperintökohde se on vuodesta 2007.
+AIEMPI KYSYMYS: Missä Zaječar sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Zaječar]] on kaupunki Itä-Serbiassa, lähellä [[Bulgarian]] rajaa, ja sen lähellä on [[Gamzigrad]] eli Felix Romuliana. Kaupunki on seutunsa keskus, ja lähistöllä on myös muita nähtävyyksiä. Tarkat etäisyydet ja rajan kulku kannattaa tarkistaa kartalta, en ole niistä varma. Hyvä paikka muuten kyyhkyn välilaskulle.
+KYSYMYS: Kerro lisää: Zaječar
+
+### 57
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gamzigrad (historia)
+Tietoruudun teksti: Gamzigrad eli Felix Romuliana on myöhäisantiikin palatsikompleksi Zaječarin lähellä Serbiassa. Keisari Galerius aloitti sen rakennuttamisen vuonna 298 voitettuaan Sassanidien valtakunnan, ja paikka nimettiin hänen äitinsä Romulan mukaan. Muurien sisällä oli kaksi palatsia, kaksi temppeliä ja kylpylä, ja porteista on löytynyt Dionysosta ja Medusaa esittäviä mosaiikkeja. Läheisellä Magura-kukkulalla on kaksi mausoleumia, joihin Romula ja Galerius haudattiin. Alue hylättiin 600-luvun alussa slaavien saapuessa; kaivaukset alkoivat 1953, ja Unescon maailmanperintökohde se on vuodesta 2007.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Perth — kohdekartta / Kohdekartta: His Majesty's -teatteri] 1904 Teatteri rakennettiin kultavuosien rahalla. Perthin väkiluku kasvoi 1890-luvun kultalöytöjen jälkeen nopeasti, ja paikallispoliitikko Thomas Molloy tilasi arkkitehti William G. Wolfilta teatterin ja hotellin yhdistelmän Hay Streetin ja King Streetin kulmaan. Nimi annettiin juuri kruunatun Edvard VII:n kunniaksi. Urakan voitti Friederich Liebe, joka oli aiemmin rakentanut Bulgarian parlamenttitalon Sofiaan ja tehnyt työtä Budapestin oopperatalossa. Tontin alla virtasi maanalainen puro, ja perustusten kestävyydestä esitettiin julkisesti epäilyjä kesken rakennustyön. Liebe suunnitteli ojat veden ohjaamiseksi ja jatkoi, mutta kun lasku tuli, Molloy kieltäytyi maksamasta ylimääräisiä 17 000…
+- [Sofia — kohdekartta / Kohdekartta: Pyhän Yrjön rotunda] 300-luku Sofian keskustassa, hotellin ja presidentinlinnan välisellä pihalla, seisoo pyöreä punatiilinen rakennus. Se on kaupungin vanhin yhä pystyssä oleva rakennus: rotunda pystytettiin jo 300-luvun alussa, alun perin roomalaisen kylpylän kupolikattoiseksi saliksi – kauan ennen kuin siitä tuli kirkko. Kupoli kohoaa lähes 14 metrin korkeuteen, ja sisäseinillä on peräti viisi eri aikakauden freskokerrosta päällekkäin. Vaikuttavin niistä on peräisin 900-luvulta, Bulgarian niin sanotulta kultakaudelta: maalauksissa on 22 yli kaksimetristä profeettaa ja enkeli, jonka kasvot on maalattu niin taidokkaasti, että ne ovat innoittaneet taiteilijoita vuosisatojen ajan. 1500-luvulla osmanit muuttivat …
+AIEMPI KYSYMYS: Missä Zaječar sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Zaječar]] on kaupunki Itä-Serbiassa, lähellä [[Bulgarian]] rajaa, ja sen lähellä on [[Gamzigrad]] eli Felix Romuliana. Kaupunki on seutunsa keskus, ja lähistöllä on myös muita nähtävyyksiä. Tarkat etäisyydet ja rajan kulku kannattaa tarkistaa kartalta, en ole niistä varma. Hyvä paikka muuten kyyhkyn välilaskulle.
+KYSYMYS: Kerro lisää: Bulgarian
+
+### 58
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gamzigrad (historia)
+Tietoruudun teksti: Gamzigrad eli Felix Romuliana on myöhäisantiikin palatsikompleksi Zaječarin lähellä Serbiassa. Keisari Galerius aloitti sen rakennuttamisen vuonna 298 voitettuaan Sassanidien valtakunnan, ja paikka nimettiin hänen äitinsä Romulan mukaan. Muurien sisällä oli kaksi palatsia, kaksi temppeliä ja kylpylä, ja porteista on löytynyt Dionysosta ja Medusaa esittäviä mosaiikkeja. Läheisellä Magura-kukkulalla on kaksi mausoleumia, joihin Romula ja Galerius haudattiin. Alue hylättiin 600-luvun alussa slaavien saapuessa; kaivaukset alkoivat 1953, ja Unescon maailmanperintökohde se on vuodesta 2007.
+AIEMPI KYSYMYS: Missä Zaječar sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Zaječar]] on kaupunki Itä-Serbiassa, lähellä [[Bulgarian]] rajaa, ja sen lähellä on [[Gamzigrad]] eli Felix Romuliana. Kaupunki on seutunsa keskus, ja lähistöllä on myös muita nähtävyyksiä. Tarkat etäisyydet ja rajan kulku kannattaa tarkistaa kartalta, en ole niistä varma. Hyvä paikka muuten kyyhkyn välilaskulle.
+KYSYMYS: Kerro lisää: Gamzigrad
+
+### 59
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Petrovaradinin linnoitus (historia)
+Tietoruudun teksti: Petrovaradinin linnoitus kohoaa Tonavan oikealla rannalla Novi Sadin Petrovaradinin kaupunginosassa. Sen peruskivi laskettiin 18. lokakuuta 1692, pääasialliset rakennustyöt tehtiin vuosina 1753–1776 ja linnoitus valmistui 1780. Alla on säilynyt yli 16 kilometriä maanalaisia käytäviä, ja nelikerroksinen vastamiinajärjestelmä valmistui 1776. Kellotornin viisarit ovat päinvastoin: pieni viisari näyttää minuutit ja suuri tunnit, jotta Tonavan kalastajat näkisivät ajan kauas. Nykyään linnoitus on suojeltu kulttuuriperintökohde, ja siellä järjestetään kesäisin Exit-musiikkifestivaali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Kello, joka käy väärinpäin] 1692–1780 — Kun Habsburgit valtasivat Petrovaradinin osmaneilta, keisari Leopold I käski 1692 rakentaa vanhan linnoituksen tilalle täysin uuden. Työmaa venyi 88 vuoteen ja viiden hallitsijan ajalle, ja suunnittelun uskotaan nojanneen ranskalaisen Vaubanin tähtimalliin. Tuloksena oli niin vahva pesäke, että sitä alettiin kutsua Tonavan Gibraltariksi. Linnoituksen kellotornissa iso viisari näyttää tunnit ja pieni minuutit, päinvastoin kuin tavallisesti – näin kaukaa joelta tulevat laivurit erottivat kellonajan helpommin. Lämpötilaherkkä koneisto käy kesällä edellä ja talvella jäljessä, minkä vuoksi paikalliset kutsuvat sitä Humalaiseksi kelloksi.
+AIEMPI KYSYMYS: Milloin linnoituksen peruskivi laskettiin?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tähän minä osaan vastata heti. Peruskivi laskettiin 18. lokakuuta 1692, kun [[Habsburgit]] olivat valloittaneet paikan [[osmaneilta]] ja keisari Leopold I käski rakentaa vanhan linnoituksen tilalle kokonaan uuden. Pääasialliset rakennustyöt tehtiin vuosina 1753–1776, ja linnoitus valmistui 1780, joten koko hanke kesti noin 88 vuotta ja ehti viiden hallitsijan ajalle. Suunnittelun uskotaan nojanneen ranskalaisen [[Vaubanin]] tähtimalliin, ja linnoituksesta tuli niin vahva, että sitä alettiin kutsua [[Tonavan Gibraltariksi]]. Kahdeksankymmentäkahdeksan vuotta työmaata, ja minusta jo tunnin lento tuntuu ny pitkältä.
+KYSYMYS: Kerro lisää: Habsburgit
+
+### 60
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Petrovaradinin linnoitus (historia)
+Tietoruudun teksti: Petrovaradinin linnoitus kohoaa Tonavan oikealla rannalla Novi Sadin Petrovaradinin kaupunginosassa. Sen peruskivi laskettiin 18. lokakuuta 1692, pääasialliset rakennustyöt tehtiin vuosina 1753–1776 ja linnoitus valmistui 1780. Alla on säilynyt yli 16 kilometriä maanalaisia käytäviä, ja nelikerroksinen vastamiinajärjestelmä valmistui 1776. Kellotornin viisarit ovat päinvastoin: pieni viisari näyttää minuutit ja suuri tunnit, jotta Tonavan kalastajat näkisivät ajan kauas. Nykyään linnoitus on suojeltu kulttuuriperintökohde, ja siellä järjestetään kesäisin Exit-musiikkifestivaali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Kello, joka käy väärinpäin] 1692–1780 — Kun Habsburgit valtasivat Petrovaradinin osmaneilta, keisari Leopold I käski 1692 rakentaa vanhan linnoituksen tilalle täysin uuden. Työmaa venyi 88 vuoteen ja viiden hallitsijan ajalle, ja suunnittelun uskotaan nojanneen ranskalaisen Vaubanin tähtimalliin. Tuloksena oli niin vahva pesäke, että sitä alettiin kutsua Tonavan Gibraltariksi. Linnoituksen kellotornissa iso viisari näyttää tunnit ja pieni minuutit, päinvastoin kuin tavallisesti – näin kaukaa joelta tulevat laivurit erottivat kellonajan helpommin. Lämpötilaherkkä koneisto käy kesällä edellä ja talvella jäljessä, minkä vuoksi paikalliset kutsuvat sitä Humalaiseksi kelloksi.
+AIEMPI KYSYMYS: Milloin linnoituksen peruskivi laskettiin?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tähän minä osaan vastata heti. Peruskivi laskettiin 18. lokakuuta 1692, kun [[Habsburgit]] olivat valloittaneet paikan [[osmaneilta]] ja keisari Leopold I käski rakentaa vanhan linnoituksen tilalle kokonaan uuden. Pääasialliset rakennustyöt tehtiin vuosina 1753–1776, ja linnoitus valmistui 1780, joten koko hanke kesti noin 88 vuotta ja ehti viiden hallitsijan ajalle. Suunnittelun uskotaan nojanneen ranskalaisen [[Vaubanin]] tähtimalliin, ja linnoituksesta tuli niin vahva, että sitä alettiin kutsua [[Tonavan Gibraltariksi]]. Kahdeksankymmentäkahdeksan vuotta työmaata, ja minusta jo tunnin lento tuntuu ny pitkältä.
+KYSYMYS: Kerro lisää: osmaneilta
+
+### 61
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Petrovaradinin linnoitus (historia)
+Tietoruudun teksti: Petrovaradinin linnoitus kohoaa Tonavan oikealla rannalla Novi Sadin Petrovaradinin kaupunginosassa. Sen peruskivi laskettiin 18. lokakuuta 1692, pääasialliset rakennustyöt tehtiin vuosina 1753–1776 ja linnoitus valmistui 1780. Alla on säilynyt yli 16 kilometriä maanalaisia käytäviä, ja nelikerroksinen vastamiinajärjestelmä valmistui 1776. Kellotornin viisarit ovat päinvastoin: pieni viisari näyttää minuutit ja suuri tunnit, jotta Tonavan kalastajat näkisivät ajan kauas. Nykyään linnoitus on suojeltu kulttuuriperintökohde, ja siellä järjestetään kesäisin Exit-musiikkifestivaali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Kello, joka käy väärinpäin] 1692–1780 — Kun Habsburgit valtasivat Petrovaradinin osmaneilta, keisari Leopold I käski 1692 rakentaa vanhan linnoituksen tilalle täysin uuden. Työmaa venyi 88 vuoteen ja viiden hallitsijan ajalle, ja suunnittelun uskotaan nojanneen ranskalaisen Vaubanin tähtimalliin. Tuloksena oli niin vahva pesäke, että sitä alettiin kutsua Tonavan Gibraltariksi. Linnoituksen kellotornissa iso viisari näyttää tunnit ja pieni minuutit, päinvastoin kuin tavallisesti – näin kaukaa joelta tulevat laivurit erottivat kellonajan helpommin. Lämpötilaherkkä koneisto käy kesällä edellä ja talvella jäljessä, minkä vuoksi paikalliset kutsuvat sitä Humalaiseksi kelloksi.
+AIEMPI KYSYMYS: Milloin linnoituksen peruskivi laskettiin?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tähän minä osaan vastata heti. Peruskivi laskettiin 18. lokakuuta 1692, kun [[Habsburgit]] olivat valloittaneet paikan [[osmaneilta]] ja keisari Leopold I käski rakentaa vanhan linnoituksen tilalle kokonaan uuden. Pääasialliset rakennustyöt tehtiin vuosina 1753–1776, ja linnoitus valmistui 1780, joten koko hanke kesti noin 88 vuotta ja ehti viiden hallitsijan ajalle. Suunnittelun uskotaan nojanneen ranskalaisen [[Vaubanin]] tähtimalliin, ja linnoituksesta tuli niin vahva, että sitä alettiin kutsua [[Tonavan Gibraltariksi]]. Kahdeksankymmentäkahdeksan vuotta työmaata, ja minusta jo tunnin lento tuntuu ny pitkältä.
+KYSYMYS: Kerro lisää: Vaubanin
+
+### 62
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Petrovaradinin linnoitus (historia)
+Tietoruudun teksti: Petrovaradinin linnoitus kohoaa Tonavan oikealla rannalla Novi Sadin Petrovaradinin kaupunginosassa. Sen peruskivi laskettiin 18. lokakuuta 1692, pääasialliset rakennustyöt tehtiin vuosina 1753–1776 ja linnoitus valmistui 1780. Alla on säilynyt yli 16 kilometriä maanalaisia käytäviä, ja nelikerroksinen vastamiinajärjestelmä valmistui 1776. Kellotornin viisarit ovat päinvastoin: pieni viisari näyttää minuutit ja suuri tunnit, jotta Tonavan kalastajat näkisivät ajan kauas. Nykyään linnoitus on suojeltu kulttuuriperintökohde, ja siellä järjestetään kesäisin Exit-musiikkifestivaali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Kello, joka käy väärinpäin] 1692–1780 — Kun Habsburgit valtasivat Petrovaradinin osmaneilta, keisari Leopold I käski 1692 rakentaa vanhan linnoituksen tilalle täysin uuden. Työmaa venyi 88 vuoteen ja viiden hallitsijan ajalle, ja suunnittelun uskotaan nojanneen ranskalaisen Vaubanin tähtimalliin. Tuloksena oli niin vahva pesäke, että sitä alettiin kutsua Tonavan Gibraltariksi. Linnoituksen kellotornissa iso viisari näyttää tunnit ja pieni minuutit, päinvastoin kuin tavallisesti – näin kaukaa joelta tulevat laivurit erottivat kellonajan helpommin. Lämpötilaherkkä koneisto käy kesällä edellä ja talvella jäljessä, minkä vuoksi paikalliset kutsuvat sitä Humalaiseksi kelloksi.
+AIEMPI KYSYMYS: Milloin linnoituksen peruskivi laskettiin?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tähän minä osaan vastata heti. Peruskivi laskettiin 18. lokakuuta 1692, kun [[Habsburgit]] olivat valloittaneet paikan [[osmaneilta]] ja keisari Leopold I käski rakentaa vanhan linnoituksen tilalle kokonaan uuden. Pääasialliset rakennustyöt tehtiin vuosina 1753–1776, ja linnoitus valmistui 1780, joten koko hanke kesti noin 88 vuotta ja ehti viiden hallitsijan ajalle. Suunnittelun uskotaan nojanneen ranskalaisen [[Vaubanin]] tähtimalliin, ja linnoituksesta tuli niin vahva, että sitä alettiin kutsua [[Tonavan Gibraltariksi]]. Kahdeksankymmentäkahdeksan vuotta työmaata, ja minusta jo tunnin lento tuntuu ny pitkältä.
+KYSYMYS: Kerro lisää: Tonavan Gibraltariksi
+
+### 63
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Petrovaradinin linnoitus (historia)
+Tietoruudun teksti: Petrovaradinin linnoitus kohoaa Tonavan oikealla rannalla Novi Sadin Petrovaradinin kaupunginosassa. Sen peruskivi laskettiin 18. lokakuuta 1692, pääasialliset rakennustyöt tehtiin vuosina 1753–1776 ja linnoitus valmistui 1780. Alla on säilynyt yli 16 kilometriä maanalaisia käytäviä, ja nelikerroksinen vastamiinajärjestelmä valmistui 1776. Kellotornin viisarit ovat päinvastoin: pieni viisari näyttää minuutit ja suuri tunnit, jotta Tonavan kalastajat näkisivät ajan kauas. Nykyään linnoitus on suojeltu kulttuuriperintökohde, ja siellä järjestetään kesäisin Exit-musiikkifestivaali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Miksi kellotornin viisarit ovat päinvastoin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Suuri viisari näyttää tunnit ja pieni minuutit, päinvastoin kuin tavallisesti, koska ratkaisu helpotti ajan lukemista kaukaa: [[Tonavalla]] kulkevat laivurit ja kalastajat erottivat suuren viisarin asennon helpommin kuin pienen. Kellon koneisto on herkkä lämpötilalle, joten se käy kesällä edellä ja talvella jäljessä, minkä vuoksi paikalliset kutsuvat sitä [[Humalaiseksi kelloksi]]. Minä en tarvitse kelloa, kyl aurinko riittää.
+KYSYMYS: Kerro lisää: Tonavalla
+
+### 64
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Petrovaradinin linnoitus (historia)
+Tietoruudun teksti: Petrovaradinin linnoitus kohoaa Tonavan oikealla rannalla Novi Sadin Petrovaradinin kaupunginosassa. Sen peruskivi laskettiin 18. lokakuuta 1692, pääasialliset rakennustyöt tehtiin vuosina 1753–1776 ja linnoitus valmistui 1780. Alla on säilynyt yli 16 kilometriä maanalaisia käytäviä, ja nelikerroksinen vastamiinajärjestelmä valmistui 1776. Kellotornin viisarit ovat päinvastoin: pieni viisari näyttää minuutit ja suuri tunnit, jotta Tonavan kalastajat näkisivät ajan kauas. Nykyään linnoitus on suojeltu kulttuuriperintökohde, ja siellä järjestetään kesäisin Exit-musiikkifestivaali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Kello, joka käy väärinpäin] 1692–1780 — Kun Habsburgit valtasivat Petrovaradinin osmaneilta, keisari Leopold I käski 1692 rakentaa vanhan linnoituksen tilalle täysin uuden. Työmaa venyi 88 vuoteen ja viiden hallitsijan ajalle, ja suunnittelun uskotaan nojanneen ranskalaisen Vaubanin tähtimalliin. Tuloksena oli niin vahva pesäke, että sitä alettiin kutsua Tonavan Gibraltariksi. Linnoituksen kellotornissa iso viisari näyttää tunnit ja pieni minuutit, päinvastoin kuin tavallisesti – näin kaukaa joelta tulevat laivurit erottivat kellonajan helpommin. Lämpötilaherkkä koneisto käy kesällä edellä ja talvella jäljessä, minkä vuoksi paikalliset kutsuvat sitä Humalaiseksi kelloksi.
+AIEMPI KYSYMYS: Miksi kellotornin viisarit ovat päinvastoin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Suuri viisari näyttää tunnit ja pieni minuutit, päinvastoin kuin tavallisesti, koska ratkaisu helpotti ajan lukemista kaukaa: [[Tonavalla]] kulkevat laivurit ja kalastajat erottivat suuren viisarin asennon helpommin kuin pienen. Kellon koneisto on herkkä lämpötilalle, joten se käy kesällä edellä ja talvella jäljessä, minkä vuoksi paikalliset kutsuvat sitä [[Humalaiseksi kelloksi]]. Minä en tarvitse kelloa, kyl aurinko riittää.
+KYSYMYS: Kerro lisää: Humalaiseksi kelloksi
+
+### 65
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Petrovaradinin linnoitus (historia)
+Tietoruudun teksti: Petrovaradinin linnoitus kohoaa Tonavan oikealla rannalla Novi Sadin Petrovaradinin kaupunginosassa. Sen peruskivi laskettiin 18. lokakuuta 1692, pääasialliset rakennustyöt tehtiin vuosina 1753–1776 ja linnoitus valmistui 1780. Alla on säilynyt yli 16 kilometriä maanalaisia käytäviä, ja nelikerroksinen vastamiinajärjestelmä valmistui 1776. Kellotornin viisarit ovat päinvastoin: pieni viisari näyttää minuutit ja suuri tunnit, jotta Tonavan kalastajat näkisivät ajan kauas. Nykyään linnoitus on suojeltu kulttuuriperintökohde, ja siellä järjestetään kesäisin Exit-musiikkifestivaali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Winnipeg — kaupunkilehti / Winnipeg: Kaksi yhtiötä ja seitsemän tammea] North West Company rakensi Fort Gibraltarin 1809 ja Hudson's Bay Company Fort Douglasin 1812, ja yhtiöt kilpailivat kiivaasti samasta turkiskaupasta. Lord Selkirk osti maata ja perusti ensimmäisen pysyvän siirtokunnan, Red River Colonyn, ja mittautti jokitontit. Métisit ja Selkirkin uudisasukkaat ottivat yhteen Seitsemän tammen taistelussa 1816. Kilpailu päättyi vasta 1821, kun yhtiöt yhdistyivät. Fort Gibraltar nimettiin Fort Garryksi 1822; tulva tuhosi sen 1826, ja se rakennettiin uudelleen vasta 1835.
+AIEMPI KYSYMYS: Miksi Petrovaradinia kutsutaan Tonavan Gibraltariksi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Nimi viittaa [[Gibraltarin]] linnoitukseen, jota pidettiin vaikeasti valloitettavana, ja Petrovaradinin linnoituksesta tuli samalla tavalla niin vahva pesäke, että sen vertaaminen siihen tuntui luontevalta. Linnoitus kohoaa Tonavan oikealla rannalla, sen rakentaminen alkoi 1692 ja sen alle rakennettiin laaja maanalainen puolustusjärjestelmä, johon kuuluu nelikerroksinen [[vastamiinajärjestelmä]]. Ylhäältä näkee kaiken, sen minä tiedän.
+KYSYMYS: Kerro lisää: Gibraltarin
+
+### 66
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Petrovaradinin linnoitus (historia)
+Tietoruudun teksti: Petrovaradinin linnoitus kohoaa Tonavan oikealla rannalla Novi Sadin Petrovaradinin kaupunginosassa. Sen peruskivi laskettiin 18. lokakuuta 1692, pääasialliset rakennustyöt tehtiin vuosina 1753–1776 ja linnoitus valmistui 1780. Alla on säilynyt yli 16 kilometriä maanalaisia käytäviä, ja nelikerroksinen vastamiinajärjestelmä valmistui 1776. Kellotornin viisarit ovat päinvastoin: pieni viisari näyttää minuutit ja suuri tunnit, jotta Tonavan kalastajat näkisivät ajan kauas. Nykyään linnoitus on suojeltu kulttuuriperintökohde, ja siellä järjestetään kesäisin Exit-musiikkifestivaali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Miksi Petrovaradinia kutsutaan Tonavan Gibraltariksi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Nimi viittaa [[Gibraltarin]] linnoitukseen, jota pidettiin vaikeasti valloitettavana, ja Petrovaradinin linnoituksesta tuli samalla tavalla niin vahva pesäke, että sen vertaaminen siihen tuntui luontevalta. Linnoitus kohoaa Tonavan oikealla rannalla, sen rakentaminen alkoi 1692 ja sen alle rakennettiin laaja maanalainen puolustusjärjestelmä, johon kuuluu nelikerroksinen [[vastamiinajärjestelmä]]. Ylhäältä näkee kaiken, sen minä tiedän.
+KYSYMYS: Kerro lisää: vastamiinajärjestelmä
+
+### 67
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Petrovaradinin linnoitus (historia)
+Tietoruudun teksti: Petrovaradinin linnoitus kohoaa Tonavan oikealla rannalla Novi Sadin Petrovaradinin kaupunginosassa. Sen peruskivi laskettiin 18. lokakuuta 1692, pääasialliset rakennustyöt tehtiin vuosina 1753–1776 ja linnoitus valmistui 1780. Alla on säilynyt yli 16 kilometriä maanalaisia käytäviä, ja nelikerroksinen vastamiinajärjestelmä valmistui 1776. Kellotornin viisarit ovat päinvastoin: pieni viisari näyttää minuutit ja suuri tunnit, jotta Tonavan kalastajat näkisivät ajan kauas. Nykyään linnoitus on suojeltu kulttuuriperintökohde, ja siellä järjestetään kesäisin Exit-musiikkifestivaali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Kello, joka käy väärinpäin] 1692–1780 — Kun Habsburgit valtasivat Petrovaradinin osmaneilta, keisari Leopold I käski 1692 rakentaa vanhan linnoituksen tilalle täysin uuden. Työmaa venyi 88 vuoteen ja viiden hallitsijan ajalle, ja suunnittelun uskotaan nojanneen ranskalaisen Vaubanin tähtimalliin. Tuloksena oli niin vahva pesäke, että sitä alettiin kutsua Tonavan Gibraltariksi. Linnoituksen kellotornissa iso viisari näyttää tunnit ja pieni minuutit, päinvastoin kuin tavallisesti – näin kaukaa joelta tulevat laivurit erottivat kellonajan helpommin. Lämpötilaherkkä koneisto käy kesällä edellä ja talvella jäljessä, minkä vuoksi paikalliset kutsuvat sitä Humalaiseksi kelloksi.
+AIEMPI KYSYMYS: Kuinka pitkät maanalaiset käytävät linnoituksen alla on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Petrovaradinin]] linnoituksen alla on säilynyt yli 16 kilometriä maanalaisia käytäviä. Niihin kuuluu nelikerroksinen [[vastamiinajärjestelmä]], joka valmistui 1776 ja jonka tarkoituksena oli torjua piirittäjien kaivamia miinatunneleita. Käytävät kuuluvat [[Habsburgien]] aikaiseen linnoitusrakentamiseen, joka jatkui useiden hallitsijoiden ajan. Ei kyyhky mene maan alle, kyl minä pysyn taivaalla.
+KYSYMYS: Kerro lisää: Petrovaradinin
+
+### 68
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Petrovaradinin linnoitus (historia)
+Tietoruudun teksti: Petrovaradinin linnoitus kohoaa Tonavan oikealla rannalla Novi Sadin Petrovaradinin kaupunginosassa. Sen peruskivi laskettiin 18. lokakuuta 1692, pääasialliset rakennustyöt tehtiin vuosina 1753–1776 ja linnoitus valmistui 1780. Alla on säilynyt yli 16 kilometriä maanalaisia käytäviä, ja nelikerroksinen vastamiinajärjestelmä valmistui 1776. Kellotornin viisarit ovat päinvastoin: pieni viisari näyttää minuutit ja suuri tunnit, jotta Tonavan kalastajat näkisivät ajan kauas. Nykyään linnoitus on suojeltu kulttuuriperintökohde, ja siellä järjestetään kesäisin Exit-musiikkifestivaali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia] Serbian historia kulkee luostarin valkoisesta marmorista linnoituksen väärinpäin käyvään kelloon ja lopulta pimeään museohuoneeseen, jossa loistaa kultainen pallo. Neljä pysähdystä näyttävät, miten keskiajan kuningaskunta, Habsburgien raja-linnoitus ja nykyaikaisen tieteen sankari kietoutuvat samaan tarinaan Tonavan rannalla.
+AIEMPI KYSYMYS: Kuinka pitkät maanalaiset käytävät linnoituksen alla on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Petrovaradinin]] linnoituksen alla on säilynyt yli 16 kilometriä maanalaisia käytäviä. Niihin kuuluu nelikerroksinen [[vastamiinajärjestelmä]], joka valmistui 1776 ja jonka tarkoituksena oli torjua piirittäjien kaivamia miinatunneleita. Käytävät kuuluvat [[Habsburgien]] aikaiseen linnoitusrakentamiseen, joka jatkui useiden hallitsijoiden ajan. Ei kyyhky mene maan alle, kyl minä pysyn taivaalla.
+KYSYMYS: Kerro lisää: Habsburgien
+
+### 69
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Petrovaradinin linnoitus (historia)
+Tietoruudun teksti: Petrovaradinin linnoitus kohoaa Tonavan oikealla rannalla Novi Sadin Petrovaradinin kaupunginosassa. Sen peruskivi laskettiin 18. lokakuuta 1692, pääasialliset rakennustyöt tehtiin vuosina 1753–1776 ja linnoitus valmistui 1780. Alla on säilynyt yli 16 kilometriä maanalaisia käytäviä, ja nelikerroksinen vastamiinajärjestelmä valmistui 1776. Kellotornin viisarit ovat päinvastoin: pieni viisari näyttää minuutit ja suuri tunnit, jotta Tonavan kalastajat näkisivät ajan kauas. Nykyään linnoitus on suojeltu kulttuuriperintökohde, ja siellä järjestetään kesäisin Exit-musiikkifestivaali.
+AIEMPI KYSYMYS: Millainen tapahtuma Exit-festivaali on?
+AIEMPI VASTAUS (Livia):
+No niin, festarit. Exit on musiikkifestivaali, joka järjestetään kesäisin Petrovaradinin linnoituksen alueella [[Novi Sadin]] kaupunginosassa [[Tonavan]] rannalla. Linnoitus on nykyään suojeltu kulttuuriperintökohde, joten tapahtuma pidetään historiallisessa ympäristössä. Festivaalin alkuvaiheista ja tarkasta ohjelmistosta en ole varma, joten ne jätän kertomatta. Festivaalilla minä etsisin ensin pullakojun.
+KYSYMYS: Kerro lisää: Novi Sadin
+
+### 70
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Petrovaradinin linnoitus (historia)
+Tietoruudun teksti: Petrovaradinin linnoitus kohoaa Tonavan oikealla rannalla Novi Sadin Petrovaradinin kaupunginosassa. Sen peruskivi laskettiin 18. lokakuuta 1692, pääasialliset rakennustyöt tehtiin vuosina 1753–1776 ja linnoitus valmistui 1780. Alla on säilynyt yli 16 kilometriä maanalaisia käytäviä, ja nelikerroksinen vastamiinajärjestelmä valmistui 1776. Kellotornin viisarit ovat päinvastoin: pieni viisari näyttää minuutit ja suuri tunnit, jotta Tonavan kalastajat näkisivät ajan kauas. Nykyään linnoitus on suojeltu kulttuuriperintökohde, ja siellä järjestetään kesäisin Exit-musiikkifestivaali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Millainen tapahtuma Exit-festivaali on?
+AIEMPI VASTAUS (Livia):
+No niin, festarit. Exit on musiikkifestivaali, joka järjestetään kesäisin Petrovaradinin linnoituksen alueella [[Novi Sadin]] kaupunginosassa [[Tonavan]] rannalla. Linnoitus on nykyään suojeltu kulttuuriperintökohde, joten tapahtuma pidetään historiallisessa ympäristössä. Festivaalin alkuvaiheista ja tarkasta ohjelmistosta en ole varma, joten ne jätän kertomatta. Festivaalilla minä etsisin ensin pullakojun.
+KYSYMYS: Kerro lisää: Tonavan
+
+### 71
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šarganin kahdeksikko (tekniikka)
+Tietoruudun teksti: Šarganin kahdeksikko on kapearaiteinen museorautatie, joka kulkee Mokra Goran kylästä Šargan Vitasin asemalle. Rakennustyöt alkoivat ensimmäisen maailmansodan aikana ja jatkuivat 1. maaliskuuta 1921; ensimmäinen juna saapui Vardišteen 25. tammikuuta 1925. Raideleveys on 760 millimetriä, pääreitin pituus 15,44 kilometriä, ja matkalla on 22 tunnelia ja viisi suurta siltaa. Rata kiertyy kahdeksikon muotoon ja voittaa 300 metrin korkeuseron, mikä näkyy parhaiten Krstin asemalta. Museorata avattiin uudelleen 1. syyskuuta 2003.
+AIEMPI KYSYMYS: Minkä muotoinen rata on ja miksi?
+AIEMPI VASTAUS (Livia):
+Ai se, kaunis rata. Rata kulkee [[Mokra Goran]] kylästä [[Šargan Vitasin]] asemalle ja kiertyy kahdeksikon muotoon, koska sen täytyy voittaa 300 metrin korkeusero vuoristoisessa maastossa. Kun rata kiertää omaa kulkuaan, nousu jakautuu pidemmälle matkalle ja pysyy junalle sopivana. Pääreitin pituus on 15,44 kilometriä, ja kahdeksikon muoto näkyy parhaiten [[Krstin]] asemalta. Minä nousen suoraan ylös, eikä siihen tarvita edes tunnelia.
+KYSYMYS: Kerro lisää: Mokra Goran
+
+### 72
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šarganin kahdeksikko (tekniikka)
+Tietoruudun teksti: Šarganin kahdeksikko on kapearaiteinen museorautatie, joka kulkee Mokra Goran kylästä Šargan Vitasin asemalle. Rakennustyöt alkoivat ensimmäisen maailmansodan aikana ja jatkuivat 1. maaliskuuta 1921; ensimmäinen juna saapui Vardišteen 25. tammikuuta 1925. Raideleveys on 760 millimetriä, pääreitin pituus 15,44 kilometriä, ja matkalla on 22 tunnelia ja viisi suurta siltaa. Rata kiertyy kahdeksikon muotoon ja voittaa 300 metrin korkeuseron, mikä näkyy parhaiten Krstin asemalta. Museorata avattiin uudelleen 1. syyskuuta 2003.
+AIEMPI KYSYMYS: Minkä muotoinen rata on ja miksi?
+AIEMPI VASTAUS (Livia):
+Ai se, kaunis rata. Rata kulkee [[Mokra Goran]] kylästä [[Šargan Vitasin]] asemalle ja kiertyy kahdeksikon muotoon, koska sen täytyy voittaa 300 metrin korkeusero vuoristoisessa maastossa. Kun rata kiertää omaa kulkuaan, nousu jakautuu pidemmälle matkalle ja pysyy junalle sopivana. Pääreitin pituus on 15,44 kilometriä, ja kahdeksikon muoto näkyy parhaiten [[Krstin]] asemalta. Minä nousen suoraan ylös, eikä siihen tarvita edes tunnelia.
+KYSYMYS: Kerro lisää: Šargan Vitasin
+
+### 73
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šarganin kahdeksikko (tekniikka)
+Tietoruudun teksti: Šarganin kahdeksikko on kapearaiteinen museorautatie, joka kulkee Mokra Goran kylästä Šargan Vitasin asemalle. Rakennustyöt alkoivat ensimmäisen maailmansodan aikana ja jatkuivat 1. maaliskuuta 1921; ensimmäinen juna saapui Vardišteen 25. tammikuuta 1925. Raideleveys on 760 millimetriä, pääreitin pituus 15,44 kilometriä, ja matkalla on 22 tunnelia ja viisi suurta siltaa. Rata kiertyy kahdeksikon muotoon ja voittaa 300 metrin korkeuseron, mikä näkyy parhaiten Krstin asemalta. Museorata avattiin uudelleen 1. syyskuuta 2003.
+AIEMPI KYSYMYS: Minkä muotoinen rata on ja miksi?
+AIEMPI VASTAUS (Livia):
+Ai se, kaunis rata. Rata kulkee [[Mokra Goran]] kylästä [[Šargan Vitasin]] asemalle ja kiertyy kahdeksikon muotoon, koska sen täytyy voittaa 300 metrin korkeusero vuoristoisessa maastossa. Kun rata kiertää omaa kulkuaan, nousu jakautuu pidemmälle matkalle ja pysyy junalle sopivana. Pääreitin pituus on 15,44 kilometriä, ja kahdeksikon muoto näkyy parhaiten [[Krstin]] asemalta. Minä nousen suoraan ylös, eikä siihen tarvita edes tunnelia.
+KYSYMYS: Kerro lisää: Krstin
+
+### 74
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šarganin kahdeksikko (tekniikka)
+Tietoruudun teksti: Šarganin kahdeksikko on kapearaiteinen museorautatie, joka kulkee Mokra Goran kylästä Šargan Vitasin asemalle. Rakennustyöt alkoivat ensimmäisen maailmansodan aikana ja jatkuivat 1. maaliskuuta 1921; ensimmäinen juna saapui Vardišteen 25. tammikuuta 1925. Raideleveys on 760 millimetriä, pääreitin pituus 15,44 kilometriä, ja matkalla on 22 tunnelia ja viisi suurta siltaa. Rata kiertyy kahdeksikon muotoon ja voittaa 300 metrin korkeuseron, mikä näkyy parhaiten Krstin asemalta. Museorata avattiin uudelleen 1. syyskuuta 2003.
+AIEMPI KYSYMYS: Kuinka leveä raide on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Raideleveys on 760 millimetriä, mikä on runsaat puolet tavallisen rautatien 1 435 millimetrin [[normaaliraiteesta]]. Tämän vuoksi rataa kutsutaan [[kapearaiteiseksi]]. Kapea raide sallii tiukemmat kaarteet, mikä sopii hyvin vuoristoon ja Šarganin kahdeksikon kaltaiselle kiemurtelevalle reitille. Minä mittaan mieluummin siipivälillä, kyl se on helpompaa.
+KYSYMYS: Kerro lisää: normaaliraiteesta
+
+### 75
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šarganin kahdeksikko (tekniikka)
+Tietoruudun teksti: Šarganin kahdeksikko on kapearaiteinen museorautatie, joka kulkee Mokra Goran kylästä Šargan Vitasin asemalle. Rakennustyöt alkoivat ensimmäisen maailmansodan aikana ja jatkuivat 1. maaliskuuta 1921; ensimmäinen juna saapui Vardišteen 25. tammikuuta 1925. Raideleveys on 760 millimetriä, pääreitin pituus 15,44 kilometriä, ja matkalla on 22 tunnelia ja viisi suurta siltaa. Rata kiertyy kahdeksikon muotoon ja voittaa 300 metrin korkeuseron, mikä näkyy parhaiten Krstin asemalta. Museorata avattiin uudelleen 1. syyskuuta 2003.
+AIEMPI KYSYMYS: Kuinka leveä raide on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Raideleveys on 760 millimetriä, mikä on runsaat puolet tavallisen rautatien 1 435 millimetrin [[normaaliraiteesta]]. Tämän vuoksi rataa kutsutaan [[kapearaiteiseksi]]. Kapea raide sallii tiukemmat kaarteet, mikä sopii hyvin vuoristoon ja Šarganin kahdeksikon kaltaiselle kiemurtelevalle reitille. Minä mittaan mieluummin siipivälillä, kyl se on helpompaa.
+KYSYMYS: Kerro lisää: kapearaiteiseksi
+
+### 76
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šarganin kahdeksikko (tekniikka)
+Tietoruudun teksti: Šarganin kahdeksikko on kapearaiteinen museorautatie, joka kulkee Mokra Goran kylästä Šargan Vitasin asemalle. Rakennustyöt alkoivat ensimmäisen maailmansodan aikana ja jatkuivat 1. maaliskuuta 1921; ensimmäinen juna saapui Vardišteen 25. tammikuuta 1925. Raideleveys on 760 millimetriä, pääreitin pituus 15,44 kilometriä, ja matkalla on 22 tunnelia ja viisi suurta siltaa. Rata kiertyy kahdeksikon muotoon ja voittaa 300 metrin korkeuseron, mikä näkyy parhaiten Krstin asemalta. Museorata avattiin uudelleen 1. syyskuuta 2003.
+AIEMPI KYSYMYS: Kuinka pitkä rata on ja montako tunnelia siinä on?
+AIEMPI VASTAUS (Livia):
+Sepä sattui, nämä luvut minä muistan. Pääreitin pituus on 15,44 kilometriä, ja matkalla on 22 tunnelia ja viisi suurta siltaa. [[Museorautatie]] kulkee [[Mokra Goran]] kylästä [[Šargan Vitasin]] asemalle ja voittaa matkallaan 300 metrin korkeuseron. Tunnelissa on pimeää, enkä minä oikein tykkää siitä.
+KYSYMYS: Kerro lisää: Museorautatie
+
+### 77
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šarganin kahdeksikko (tekniikka)
+Tietoruudun teksti: Šarganin kahdeksikko on kapearaiteinen museorautatie, joka kulkee Mokra Goran kylästä Šargan Vitasin asemalle. Rakennustyöt alkoivat ensimmäisen maailmansodan aikana ja jatkuivat 1. maaliskuuta 1921; ensimmäinen juna saapui Vardišteen 25. tammikuuta 1925. Raideleveys on 760 millimetriä, pääreitin pituus 15,44 kilometriä, ja matkalla on 22 tunnelia ja viisi suurta siltaa. Rata kiertyy kahdeksikon muotoon ja voittaa 300 metrin korkeuseron, mikä näkyy parhaiten Krstin asemalta. Museorata avattiin uudelleen 1. syyskuuta 2003.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: Marina Beach] promenadi 1884 Marina on luonnollinen hiekkaranta Koromandelin rannikolla. Se alkaa Fort St. Georgen kupeesta ja jatkuu etelään Besant Nagariin asti. Hiekkaa on kolmetoista kilometriä ja promenadia kuusi; Marina Beach -artikkeli sanoo sitä Intian pisimmäksi luonnolliseksi kaupunkirannaksi ja Chennai-artikkeli maailman toiseksi pisimmäksi kaupunkirannaksi. Leveyttä on keskimäärin kolmesataa metriä ja leveimmillään 437. Ranta on vanhempi kuin kaupunki. Ennen 1500-lukua meri tulvi toistuvasti maalle, ja vetäytyessään se jätti jälkeensä hiekkaharjuja ja laguuneja. Yksi harju kulki Cooum-joen suulta nykyisen Presidency Collegen paikalle, ja juuri sen päällä ranta on. Promenadin valmistumisen 188…
+- [Sana — kohdekartta / Kohdekartta: Talhan moskeija] 1619–1620 Qubbat Talha on yksi Sanaan vanhimmista moskeijoista, ja sen rakennutti osmanien käskynhaltija Hadji Mehmed Pasha vuosina 1619–1620 ensimmäisen osmanimiehityksen aikana. Minareetti tehtiin samaan aikaan. Vuosina 1831–1832 moskeija kunnostettiin osittain imaami al-Mahdi Abdallahin käskystä; siitä kertoo rukoussalin seinään hakattu kirjoitus. Talha on Al-Bakiriyyan pikkuveli. Se valmistui kaksikymmentäkolme vuotta myöhemmin ja lainasi osan edeltäjänsä muotokielestä, mutta jäi selvästi pienemmäksi: rukoussali on vaatimaton ja minareetti matala, ja juuri siksi rakennus istuu kapeiden kujien väliin luontevammin kuin iso esikuvansa. Kokonaisuuteen kuuluu rukoussalin ja minareetin lisäks…
+AIEMPI KYSYMYS: Milloin ensimmäinen juna saapui Vardišteen?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Ensimmäinen juna saapui Vardišteen 25. tammikuuta 1925. Rakennustyöt alkoivat [[ensimmäisen maailmansodan]] aikana ja jatkuivat 1. maaliskuuta 1921, joten rakentaminen kesti lähes neljä vuotta vielä sen jälkeen, kun työt olivat jatkuneet. Rata kulkee [[Mokra Goran]] kylästä vuoristoon. Minä ehdin tuona aikana kantaa aika monta kirjettä.
+KYSYMYS: Kerro lisää: ensimmäisen maailmansodan
+
+### 78
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šarganin kahdeksikko (tekniikka)
+Tietoruudun teksti: Šarganin kahdeksikko on kapearaiteinen museorautatie, joka kulkee Mokra Goran kylästä Šargan Vitasin asemalle. Rakennustyöt alkoivat ensimmäisen maailmansodan aikana ja jatkuivat 1. maaliskuuta 1921; ensimmäinen juna saapui Vardišteen 25. tammikuuta 1925. Raideleveys on 760 millimetriä, pääreitin pituus 15,44 kilometriä, ja matkalla on 22 tunnelia ja viisi suurta siltaa. Rata kiertyy kahdeksikon muotoon ja voittaa 300 metrin korkeuseron, mikä näkyy parhaiten Krstin asemalta. Museorata avattiin uudelleen 1. syyskuuta 2003.
+AIEMPI KYSYMYS: Miksi kapearaiteinen rata sopii vuoristoon?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kapearaiteinen rata voidaan viedä tiukempiin kaarteisiin ja kapeampaan väylään kuin tavallinen rata, joten sen rakentaminen vuoristoon vaatii yleensä vähemmän louhintaa ja on edullisempaa. [[Mokra Goran]] ja [[Šargan Vitasin]] välisellä [[Šarganin kahdeksikossa]] raideleveys on 760 millimetriä, ja rata kiertyy kahdeksikon muotoon voittaakseen 300 metrin korkeuseron. Minä en kaipaa raiteita, mutta tykkään silti noista kaartuvista radoista.
+KYSYMYS: Kerro lisää: Šarganin kahdeksikossa
+
+### 79
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Manasijan luostari (kulttuuri)
+Tietoruudun teksti: Manasijan luostari sijaitsee Despotovacin lähellä Serbiassa. Despootti Stefan Lazarević rakennutti sen vuosina 1406–1418, ja kirkko vihittiin käyttöön helluntaina 1418. Luostaria ympäröi vahva muuri, jossa on 11 tornia; suurin niistä on kirkon pohjoispuolella oleva despootin torni. Kirkon seinille maalattiin vuoden 1413 jälkeen noin 2 000 neliömetriä maalauksia, mutta vain neljännes on säilynyt: ottomaanien aikana poistettu lyijykatto päästi veden seinille. Kohde julistettiin poikkeuksellisen tärkeäksi kulttuurimonumentiksi 1979.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Kuningas, josta tuli munkki] 1190–1196 — Stefan Nemanja yhdisti Serbian pirstoutuneet ruhtinaskunnat ja perusti Nemanjić-suvun, joka hallitsi maata yli kaksisataa vuotta. Hän aloitti Studenican luostarin rakentamisen 1180-luvulla ja pystytti sen sydämeen valkoisesta marmorista Neitsyt Marian kirkon. Maaliskuun 25. päivänä 1196 hän luopui vallasta poikansa Stefanin hyväksi ja otti munkiksi vihkimisessä nimen Simeon. Syksyllä 1197 hän matkasi Athos-vuorelle liittyäkseen sinne jo aiemmin lähteneeseen nuorimpaan poikaansa Rastkoon, josta tuli myöhemmin pyhä Sava, Serbian ortodoksisen kirkon perustaja. Studenica on Unescon maailmanperintöä vuodesta 1986.
+AIEMPI KYSYMYS: Kuka rakennutti Manasijan luostarin?
+AIEMPI VASTAUS (Livia):
+Ai tota. Luostarin rakennutti despootti [[Stefan Lazarević]] vuosina 1406–1418, ja kirkko vihittiin käyttöön [[helluntaina]] 1418. Luostari sijaitsee [[Despotovacin]] lähellä Serbiassa, ja sitä ympäröi vahva muuri, jossa on 11 tornia. Kohde julistettiin poikkeuksellisen tärkeäksi kulttuurimonumentiksi 1979. Kaksitoista vuotta työtä, ja minä valitan jo yhdestä lennosta.
+KYSYMYS: Kerro lisää: Stefan Lazarević
+
+### 80
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Manasijan luostari (kulttuuri)
+Tietoruudun teksti: Manasijan luostari sijaitsee Despotovacin lähellä Serbiassa. Despootti Stefan Lazarević rakennutti sen vuosina 1406–1418, ja kirkko vihittiin käyttöön helluntaina 1418. Luostaria ympäröi vahva muuri, jossa on 11 tornia; suurin niistä on kirkon pohjoispuolella oleva despootin torni. Kirkon seinille maalattiin vuoden 1413 jälkeen noin 2 000 neliömetriä maalauksia, mutta vain neljännes on säilynyt: ottomaanien aikana poistettu lyijykatto päästi veden seinille. Kohde julistettiin poikkeuksellisen tärkeäksi kulttuurimonumentiksi 1979.
+AIEMPI KYSYMYS: Kuka rakennutti Manasijan luostarin?
+AIEMPI VASTAUS (Livia):
+Ai tota. Luostarin rakennutti despootti [[Stefan Lazarević]] vuosina 1406–1418, ja kirkko vihittiin käyttöön [[helluntaina]] 1418. Luostari sijaitsee [[Despotovacin]] lähellä Serbiassa, ja sitä ympäröi vahva muuri, jossa on 11 tornia. Kohde julistettiin poikkeuksellisen tärkeäksi kulttuurimonumentiksi 1979. Kaksitoista vuotta työtä, ja minä valitan jo yhdestä lennosta.
+KYSYMYS: Kerro lisää: helluntaina
