@@ -63,6 +63,14 @@ PT local_593b89a1-2514-4d74-b956-2a73db862382, Siirtoseppä local_b50bb32e-18e2-
   a31a95421; natiivi 80ab967fa (Natiivisepällä, juna 176 rungossa jo d6a8e0139 → d8fed854e). #4343 merge-vihreänä-ajossa.
 - Kaupunkikappaleet: Sisältökirjurin kaupunkimusiikki.json (49, id:t täsmäävät) liitetty SUUNNITELMA.md:hen; odottaa omistajan lupaa.
 
+## 2e. Kaupunkikappaleet erä 1 VALMIS (omistajan kortti "Ensin 16 isointa", PT)
+- proto-3d/_tyo/kaupunkikappaleet-20261010/: peli/musa-kaupunki-<id>-lyria-v2.mp3 (16), raaka/, kehotteet.json, mittaus.tsv,
+  EHDOTUS.md, LAHTEET.md, generoi.mjs + aja.zsh (perl setsid), kasittele.py (−11,9 LUFS, TP ≤ −1,5; Madrid/Oslo RAJA=0.78).
+  Lyria 3.5, yksi otto, 1,28 $. Ääni- ja puheportti 16/16. PT vie äänisivulle → omistaja kuuntelee → vienti ämpäriin audio/ +
+  KAUPUNKIRAIDAT-rivit (web, kuvaus_fi) + AaniTaulut.Kaupunkiraidat (natiivi); loput 28 (SUUNNITELMA.md) vasta sen jälkeen.
+- Kaikki neljä PR:ää mainissa (#4337 ee0e7b3a2, #4343 6f7a16b6a, #4342 4c1f8178c, #4341 983a58c67); web-worktreet poistettu.
+  Natiivin musiikkisääntö junan 176 rungossa cdc9f278e (proto-worktree wt/proto-pelikoodari-musiikki poistetaan junan mergen jälkeen).
+
 ## 3. Odottaa
 - Freesound-lataaja käynnistetty uudelleen 09.46 (perl setsid, aja-originaalit.zsh), odottaa ~/.freesound-tokenia (OAuth). Aikakatkaisu
   ~12 h; käynnistä uudelleen samalla kaavalla, jos token puuttuu yhä.
