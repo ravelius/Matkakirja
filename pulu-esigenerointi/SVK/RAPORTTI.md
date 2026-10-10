@@ -8,3 +8,9 @@
 - Poikkeama: lataa-data.sh:n kovakoodattu v625 ei enää ollut ämpärissä (404); käytettiin versiota v647 (uusin, jossa kokoelmat olivat). fokuskohteet- ja maastokohteet-paketteja ei SVK:lle ole (404, valinnaiset).
 - Faktapistokoetta (30 vastausta) ei ole tehty; agentit eivät ajaneet omia tarkistuksiaan, faktat ovat muistinvaraisia pehmennyksineen. Suositus: pistokoe ennen vientiä.
 - Paketti: pulu-esigenerointi/SVK/SVK.json (33 kohtaa, 165 + 360 vastausta); pulu-esigenerointi/maat.json päivitetty (vain SVK-rivi).
+
+## Pistokoekorjaukset 10.10.
+
+- Štrbské Pleso: väite "ensimmäinen hiihtokoulu perustettiin 1899" (vain yksi lähde) poistettu kaikista kuudesta vastauksesta (vaihe 1: 31.3 ja 31.5; vaihe 2: kohdat 326, 330 ja yksi Rautatie-vastaus vastaukset-2-4.txt:ssä). Kohta 31.5 oli kysymys hiihtokoulusta, joten sen kysymys ja vastaus korvattiin kysymyksellä "Kuka rakensi hirsimajan Štrbské Pleson rannalle?" (hirsimaja 1872, avattu matkailijoille 1873, valtio osti 1901; ei hiihtokoulua). Kohtiin 326 ja 330 lisättiin yksi [[käsite]] (linkkimäärän minimi 2).
+- Muut Štrbské Pleso -faktat (hirsimaja 1872/1873, hammasratarata 1896, valtion osto 1901) säilytettiin. Muihin vastauksiin ei koskettu.
+- Tarkistukset uudelleen: tarkista-era.mjs vaihe 1 ja 2: 0 virhettä; tarkista-valmis.mjs: 0 virhettä, 1 varoitus (ennallaan). SVK.json koostettu uudelleen (ei merkintöjä "1899" tai "hiihtokoul").

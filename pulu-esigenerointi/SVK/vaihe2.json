@@ -4751,7 +4751,7 @@
   "kohde": "kohde:hahmotelma-strbske-pleso",
   "kasite": "rautatie",
   "kysymys": "Kerro lisää: rautatie",
-  "vastaus": "Rautatie tarkoittaa kiskoilla kulkevaa liikennejärjestelmää. Ensimmäiset höyryveturikäyttöiset rautatiet rakennettiin Britanniassa 1800-luvun alkupuolella, ja nykymuotoisen rautatien alkuna pidetään usein [[Stocktonin ja Darlingtonin]] välistä rataa vuodelta 1825. Slovakian alueella rautatie ulottui Tatrojen juurelle [[Popradiin]] vuonna 1871, mikä avasi matkailun Korkeille Tatroille. Štrbské Plesolle valmistui vuonna 1896 [[hammasratasrata]] pääradalta, ja ensimmäinen hiihtokoulu perustettiin vuonna 1899.",
+  "vastaus": "Rautatie tarkoittaa kiskoilla kulkevaa liikennejärjestelmää. Ensimmäiset höyryveturikäyttöiset rautatiet rakennettiin Britanniassa 1800-luvun alkupuolella, ja nykymuotoisen rautatien alkuna pidetään usein [[Stocktonin ja Darlingtonin]] välistä rataa vuodelta 1825. Slovakian alueella rautatie ulottui Tatrojen juurelle [[Popradiin]] vuonna 1871, mikä avasi matkailun Korkeille Tatroille. Štrbské Plesolle valmistui vuonna 1896 [[hammasratasrata]] pääradalta.",
   "linkit": [
    "Stocktonin ja Darlingtonin",
    "Popradiin",
@@ -4837,10 +4837,10 @@
   "kohde": "kohde:hahmotelma-strbske-pleso",
   "kasite": "hammasratarata",
   "kysymys": "Kerro lisää: hammasratarata",
-  "vastaus": "Hammasratarata on rautatie, jonka kiskojen välissä on hammastettu kisko, johon kulkuneuvon hammaspyörä tarttuu. Näin juna pysyy hallinnassa ja pääsee nousemaan jyrkkiä rinteitä, joihin tavallinen kitkaan perustuva rautatie ei yltäisi. Štrbské Pleson hammasratarata valmistui vuonna 1896 ja yhdisti keskuksen pääradalle, mikä helpotti matkaa [[Korkeiden Tatrojen]] matkailukeskukseen. Ensimmäinen [[hiihtokoulu]] perustettiin paikalle vasta vuonna 1899.",
+  "vastaus": "Hammasratarata on rautatie, jonka kiskojen välissä on hammastettu kisko, johon kulkuneuvon hammaspyörä tarttuu. Näin juna pysyy hallinnassa ja pääsee nousemaan jyrkkiä rinteitä, joihin tavallinen kitkaan perustuva rautatie ei yltäisi. [[Štrbské Pleson]] hammasratarata valmistui vuonna 1896 ja yhdisti keskuksen pääradalle, mikä helpotti matkaa [[Korkeiden Tatrojen]] matkailukeskukseen.",
   "linkit": [
-   "Korkeiden Tatrojen",
-   "hiihtokoulu"
+   "Štrbské Pleson",
+   "Korkeiden Tatrojen"
   ],
   "jatkot": [
    "Missä muualla Euroopassa on hammasratoja?",
@@ -4894,9 +4894,9 @@
   "kohde": "kohde:hahmotelma-strbske-pleso",
   "kasite": "hammasratasradan",
   "kysymys": "Kerro lisää: hammasratasradan",
-  "vastaus": "Hammasratarata valmistui Štrbské Plesoon vuonna 1896, kolme vuotta ennen ensimmäisen [[hiihtokoulun]] perustamista. Rata yhdisti keskuksen pääradalle ja teki matkasta [[Korkeiden Tatrojen]] rinteille huomattavasti helpomman. Jyrkässä nousussa hammastettu kisko ja veturin hammaspyörä pitävät junan tukevasti radalla. Yhteys oli yksi syy siihen, että paikasta kehittyi hiihto-, matkailu- ja terveyskylpyläkeskus.",
+  "vastaus": "Hammasratarata valmistui [[Štrbské Plesoon]] vuonna 1896. Rata yhdisti keskuksen pääradalle ja teki matkasta [[Korkeiden Tatrojen]] rinteille huomattavasti helpomman. Jyrkässä nousussa hammastettu kisko ja veturin hammaspyörä pitävät junan tukevasti radalla. Yhteys oli yksi syy siihen, että paikasta kehittyi hiihto-, matkailu- ja terveyskylpyläkeskus.",
   "linkit": [
-   "hiihtokoulun",
+   "Štrbské Plesoon",
    "Korkeiden Tatrojen"
   ],
   "jatkot": [
