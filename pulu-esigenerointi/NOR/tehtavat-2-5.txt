@@ -1,0 +1,941 @@
+### 321
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lindesnesin majakka (merenkulku)
+Tietoruudun teksti: Lindesnesin majakka Norjan eteläisimmässä kärjessä on maan vanhin majakkapaikka: ensimmäinen majakka pystytettiin jo vuonna 1656 osoittamaan laivoille reittiä Pohjanmereltä Skagerrakin ja Itämeren suuntaan. Sitä uusittiin useaan otteeseen, muun muassa vuonna 1822 hiilivalolla ja 1854 uudella linssillä, ja nykyinen valurautainen torni valmistui vasta vuonna 1915 vanhaa Fresnel-linssiä käyttäen. Vuonna 1920 majakalle asennettiin ensimmäinen sumumerkinantolaite, sireeni. Toisen maailmansodan aikana saksalaiset valtasivat majakan ja rakensivat sen ympärille pienen linnoituksen neljine tykkeineen; linnoituksen jäänteet, kuten juoksuhaudat ja tunnelit, näkyvät alueella yhä. Majakka on yhä toiminnassa ja toimii lisäksi museona.
+AIEMPI KYSYMYS: Mikä on Skagerrak ja mitä merialueita se yhdistää?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Skagerrak on Norjan, Ruotsin ja Tanskan välinen merialue, joka yhdistää [[Pohjanmeren]] [[Kattegatiin]]. Kattegatista reitti jatkuu Tanskan salmien kautta [[Itämerelle]], joten Skagerrak on tärkeä väylä Pohjanmeren ja Itämeren välillä.
+
+Ylhäältä katsoen kolmen maan rannat erottaa toisistaan vain väri, ja laivoja risteilee koko ajan. Minä kuvittelen joka kannelle pullakorin.
+KYSYMYS: Kerro lisää: Itämerelle
+
+### 322
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dovrefjell ja myskihärkä (eläimet)
+Tietoruudun teksti: Dovrefjell–Sunndalsfjellan kansallispuisto perustettiin vuonna 2002 aiemman, vuodesta 1974 olleen Dovrefjellin kansallispuiston pohjalta, ja se ulottuu kolmen läänin alueelle. Puiston korkein huippu on 2 286 metriä kohoava Snøhetta, ja alueella elää muun muassa ahmoja, maakotkia ja tunturihaukkoja. Dovrefjellillä ja naapurissa sijaitsevalla Rondanella elää yksi viimeisistä alkuperäisistä villipeurakannoista koko Fennoskandiassa, mahdollisesti peräisin muinaisesta Beringian väestöstä, toisin kuin muut Norjan villipeurat, jotka ovat risteytyneet kotieläinporojen kanssa. Alueelle tuotiin vuonna 1947 myskihärkiä, jotka olivat kadonneet Euroopasta sukupuuttoon jo tuhansia vuosia aiemmin, ja ne muodostavat nykyään mantereen ainoan pysyvän myskihärkäkannan. Naali eli tunturikettu oli alueella yleinen vielä sata vuotta sitten, mutta katosi kannan taantumisen myötä noin vuonna 1990, ja sitä on y…
+AIEMPI KYSYMYS: Miksi Dovrefjellin villipeurakanta on erityisen arvokas verrattuna Norjan muihin villipeuroihin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Dovrefjellillä ja naapurissa [[Rondanella]] elää yksi viimeisistä alkuperäisistä villipeurakannoista koko [[Fennoskandiassa]]. Muut Norjan villipeurat ovat risteytyneet [[kotieläinporojen]] kanssa, mutta tämä kanta on säilynyt alkuperäisempänä, ja se on mahdollisesti peräisin muinaisesta Beringian väestöstä. Siksi sitä pidetään erityisen arvokkaana. Siinä oli yksi hengenveto kyyhkyltä.
+KYSYMYS: Kerro lisää: Rondanella
+
+### 323
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dovrefjell ja myskihärkä (eläimet)
+Tietoruudun teksti: Dovrefjell–Sunndalsfjellan kansallispuisto perustettiin vuonna 2002 aiemman, vuodesta 1974 olleen Dovrefjellin kansallispuiston pohjalta, ja se ulottuu kolmen läänin alueelle. Puiston korkein huippu on 2 286 metriä kohoava Snøhetta, ja alueella elää muun muassa ahmoja, maakotkia ja tunturihaukkoja. Dovrefjellillä ja naapurissa sijaitsevalla Rondanella elää yksi viimeisistä alkuperäisistä villipeurakannoista koko Fennoskandiassa, mahdollisesti peräisin muinaisesta Beringian väestöstä, toisin kuin muut Norjan villipeurat, jotka ovat risteytyneet kotieläinporojen kanssa. Alueelle tuotiin vuonna 1947 myskihärkiä, jotka olivat kadonneet Euroopasta sukupuuttoon jo tuhansia vuosia aiemmin, ja ne muodostavat nykyään mantereen ainoan pysyvän myskihärkäkannan. Naali eli tunturikettu oli alueella yleinen vielä sata vuotta sitten, mutta katosi kannan taantumisen myötä noin vuonna 1990, ja sitä on y…
+AIEMPI KYSYMYS: Miksi Dovrefjellin villipeurakanta on erityisen arvokas verrattuna Norjan muihin villipeuroihin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Dovrefjellillä ja naapurissa [[Rondanella]] elää yksi viimeisistä alkuperäisistä villipeurakannoista koko [[Fennoskandiassa]]. Muut Norjan villipeurat ovat risteytyneet [[kotieläinporojen]] kanssa, mutta tämä kanta on säilynyt alkuperäisempänä, ja se on mahdollisesti peräisin muinaisesta Beringian väestöstä. Siksi sitä pidetään erityisen arvokkaana. Siinä oli yksi hengenveto kyyhkyltä.
+KYSYMYS: Kerro lisää: Fennoskandiassa
+
+### 324
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dovrefjell ja myskihärkä (eläimet)
+Tietoruudun teksti: Dovrefjell–Sunndalsfjellan kansallispuisto perustettiin vuonna 2002 aiemman, vuodesta 1974 olleen Dovrefjellin kansallispuiston pohjalta, ja se ulottuu kolmen läänin alueelle. Puiston korkein huippu on 2 286 metriä kohoava Snøhetta, ja alueella elää muun muassa ahmoja, maakotkia ja tunturihaukkoja. Dovrefjellillä ja naapurissa sijaitsevalla Rondanella elää yksi viimeisistä alkuperäisistä villipeurakannoista koko Fennoskandiassa, mahdollisesti peräisin muinaisesta Beringian väestöstä, toisin kuin muut Norjan villipeurat, jotka ovat risteytyneet kotieläinporojen kanssa. Alueelle tuotiin vuonna 1947 myskihärkiä, jotka olivat kadonneet Euroopasta sukupuuttoon jo tuhansia vuosia aiemmin, ja ne muodostavat nykyään mantereen ainoan pysyvän myskihärkäkannan. Naali eli tunturikettu oli alueella yleinen vielä sata vuotta sitten, mutta katosi kannan taantumisen myötä noin vuonna 1990, ja sitä on y…
+AIEMPI KYSYMYS: Miksi Dovrefjellin villipeurakanta on erityisen arvokas verrattuna Norjan muihin villipeuroihin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Dovrefjellillä ja naapurissa [[Rondanella]] elää yksi viimeisistä alkuperäisistä villipeurakannoista koko [[Fennoskandiassa]]. Muut Norjan villipeurat ovat risteytyneet [[kotieläinporojen]] kanssa, mutta tämä kanta on säilynyt alkuperäisempänä, ja se on mahdollisesti peräisin muinaisesta Beringian väestöstä. Siksi sitä pidetään erityisen arvokkaana. Siinä oli yksi hengenveto kyyhkyltä.
+KYSYMYS: Kerro lisää: kotieläinporojen
+
+### 325
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dovrefjell ja myskihärkä (eläimet)
+Tietoruudun teksti: Dovrefjell–Sunndalsfjellan kansallispuisto perustettiin vuonna 2002 aiemman, vuodesta 1974 olleen Dovrefjellin kansallispuiston pohjalta, ja se ulottuu kolmen läänin alueelle. Puiston korkein huippu on 2 286 metriä kohoava Snøhetta, ja alueella elää muun muassa ahmoja, maakotkia ja tunturihaukkoja. Dovrefjellillä ja naapurissa sijaitsevalla Rondanella elää yksi viimeisistä alkuperäisistä villipeurakannoista koko Fennoskandiassa, mahdollisesti peräisin muinaisesta Beringian väestöstä, toisin kuin muut Norjan villipeurat, jotka ovat risteytyneet kotieläinporojen kanssa. Alueelle tuotiin vuonna 1947 myskihärkiä, jotka olivat kadonneet Euroopasta sukupuuttoon jo tuhansia vuosia aiemmin, ja ne muodostavat nykyään mantereen ainoan pysyvän myskihärkäkannan. Naali eli tunturikettu oli alueella yleinen vielä sata vuotta sitten, mutta katosi kannan taantumisen myötä noin vuonna 1990, ja sitä on y…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Luonto: Myskihärkä tuotiin laivalla] 1947 — Myskihärkä eli Norjassa jääkauden aikaan mutta katosi tuhansia vuosia sitten. 1900-luvulla eläimiä tuotiin laivalla takaisin Grönlannista, ja nykyinen kanta polveutuu vuoden 1947 kuljetuksesta. Dovrefjellin tuntureilla laumassa on nykyään reilut parisataa eläintä. Ne eivät ole härkiä vaan lampaiden ja vuohien sukulaisia, ja niiden alusvilla on maailman lämpimimpiä. Retkeilijöitä kehotetaan pysymään kahdensadan metrin päässä: eläin on rauhallinen mutta nopea suuttumaan.
+AIEMPI KYSYMYS: Milloin ja miksi myskihärät tuotiin Dovrefjellille?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Myskihärkiä tuotiin Dovrefjellille vuonna 1947 laivalla Grönlannista. Laji oli elänyt Norjassa [[jääkauden]] aikaan mutta kadonnut sieltä tuhansia vuosia sitten, joten kyse oli lajin tuomisesta takaisin maahan. Nykyinen kanta polveutuu tuosta vuoden 1947 kuljetuksesta, ja se on Euroopan ainoa pysyvä myskihärkäkanta. Eläimet eivät ole varsinaisia härkiä vaan [[lampaiden]] ja [[vuohien]] sukulaisia, ja niiden [[alusvilla]] on maailman lämpimimpiä. Ihan kunnon laivamatka, ja minä valitan pitkistä lennoista.
+KYSYMYS: Kerro lisää: jääkauden
+
+### 326
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dovrefjell ja myskihärkä (eläimet)
+Tietoruudun teksti: Dovrefjell–Sunndalsfjellan kansallispuisto perustettiin vuonna 2002 aiemman, vuodesta 1974 olleen Dovrefjellin kansallispuiston pohjalta, ja se ulottuu kolmen läänin alueelle. Puiston korkein huippu on 2 286 metriä kohoava Snøhetta, ja alueella elää muun muassa ahmoja, maakotkia ja tunturihaukkoja. Dovrefjellillä ja naapurissa sijaitsevalla Rondanella elää yksi viimeisistä alkuperäisistä villipeurakannoista koko Fennoskandiassa, mahdollisesti peräisin muinaisesta Beringian väestöstä, toisin kuin muut Norjan villipeurat, jotka ovat risteytyneet kotieläinporojen kanssa. Alueelle tuotiin vuonna 1947 myskihärkiä, jotka olivat kadonneet Euroopasta sukupuuttoon jo tuhansia vuosia aiemmin, ja ne muodostavat nykyään mantereen ainoan pysyvän myskihärkäkannan. Naali eli tunturikettu oli alueella yleinen vielä sata vuotta sitten, mutta katosi kannan taantumisen myötä noin vuonna 1990, ja sitä on y…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Luonto: Myskihärkä tuotiin laivalla] 1947 — Myskihärkä eli Norjassa jääkauden aikaan mutta katosi tuhansia vuosia sitten. 1900-luvulla eläimiä tuotiin laivalla takaisin Grönlannista, ja nykyinen kanta polveutuu vuoden 1947 kuljetuksesta. Dovrefjellin tuntureilla laumassa on nykyään reilut parisataa eläintä. Ne eivät ole härkiä vaan lampaiden ja vuohien sukulaisia, ja niiden alusvilla on maailman lämpimimpiä. Retkeilijöitä kehotetaan pysymään kahdensadan metrin päässä: eläin on rauhallinen mutta nopea suuttumaan.
+AIEMPI KYSYMYS: Milloin ja miksi myskihärät tuotiin Dovrefjellille?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Myskihärkiä tuotiin Dovrefjellille vuonna 1947 laivalla Grönlannista. Laji oli elänyt Norjassa [[jääkauden]] aikaan mutta kadonnut sieltä tuhansia vuosia sitten, joten kyse oli lajin tuomisesta takaisin maahan. Nykyinen kanta polveutuu tuosta vuoden 1947 kuljetuksesta, ja se on Euroopan ainoa pysyvä myskihärkäkanta. Eläimet eivät ole varsinaisia härkiä vaan [[lampaiden]] ja [[vuohien]] sukulaisia, ja niiden [[alusvilla]] on maailman lämpimimpiä. Ihan kunnon laivamatka, ja minä valitan pitkistä lennoista.
+KYSYMYS: Kerro lisää: lampaiden
+
+### 327
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dovrefjell ja myskihärkä (eläimet)
+Tietoruudun teksti: Dovrefjell–Sunndalsfjellan kansallispuisto perustettiin vuonna 2002 aiemman, vuodesta 1974 olleen Dovrefjellin kansallispuiston pohjalta, ja se ulottuu kolmen läänin alueelle. Puiston korkein huippu on 2 286 metriä kohoava Snøhetta, ja alueella elää muun muassa ahmoja, maakotkia ja tunturihaukkoja. Dovrefjellillä ja naapurissa sijaitsevalla Rondanella elää yksi viimeisistä alkuperäisistä villipeurakannoista koko Fennoskandiassa, mahdollisesti peräisin muinaisesta Beringian väestöstä, toisin kuin muut Norjan villipeurat, jotka ovat risteytyneet kotieläinporojen kanssa. Alueelle tuotiin vuonna 1947 myskihärkiä, jotka olivat kadonneet Euroopasta sukupuuttoon jo tuhansia vuosia aiemmin, ja ne muodostavat nykyään mantereen ainoan pysyvän myskihärkäkannan. Naali eli tunturikettu oli alueella yleinen vielä sata vuotta sitten, mutta katosi kannan taantumisen myötä noin vuonna 1990, ja sitä on y…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Luonto: Myskihärkä tuotiin laivalla] 1947 — Myskihärkä eli Norjassa jääkauden aikaan mutta katosi tuhansia vuosia sitten. 1900-luvulla eläimiä tuotiin laivalla takaisin Grönlannista, ja nykyinen kanta polveutuu vuoden 1947 kuljetuksesta. Dovrefjellin tuntureilla laumassa on nykyään reilut parisataa eläintä. Ne eivät ole härkiä vaan lampaiden ja vuohien sukulaisia, ja niiden alusvilla on maailman lämpimimpiä. Retkeilijöitä kehotetaan pysymään kahdensadan metrin päässä: eläin on rauhallinen mutta nopea suuttumaan.
+AIEMPI KYSYMYS: Milloin ja miksi myskihärät tuotiin Dovrefjellille?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Myskihärkiä tuotiin Dovrefjellille vuonna 1947 laivalla Grönlannista. Laji oli elänyt Norjassa [[jääkauden]] aikaan mutta kadonnut sieltä tuhansia vuosia sitten, joten kyse oli lajin tuomisesta takaisin maahan. Nykyinen kanta polveutuu tuosta vuoden 1947 kuljetuksesta, ja se on Euroopan ainoa pysyvä myskihärkäkanta. Eläimet eivät ole varsinaisia härkiä vaan [[lampaiden]] ja [[vuohien]] sukulaisia, ja niiden [[alusvilla]] on maailman lämpimimpiä. Ihan kunnon laivamatka, ja minä valitan pitkistä lennoista.
+KYSYMYS: Kerro lisää: vuohien
+
+### 328
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dovrefjell ja myskihärkä (eläimet)
+Tietoruudun teksti: Dovrefjell–Sunndalsfjellan kansallispuisto perustettiin vuonna 2002 aiemman, vuodesta 1974 olleen Dovrefjellin kansallispuiston pohjalta, ja se ulottuu kolmen läänin alueelle. Puiston korkein huippu on 2 286 metriä kohoava Snøhetta, ja alueella elää muun muassa ahmoja, maakotkia ja tunturihaukkoja. Dovrefjellillä ja naapurissa sijaitsevalla Rondanella elää yksi viimeisistä alkuperäisistä villipeurakannoista koko Fennoskandiassa, mahdollisesti peräisin muinaisesta Beringian väestöstä, toisin kuin muut Norjan villipeurat, jotka ovat risteytyneet kotieläinporojen kanssa. Alueelle tuotiin vuonna 1947 myskihärkiä, jotka olivat kadonneet Euroopasta sukupuuttoon jo tuhansia vuosia aiemmin, ja ne muodostavat nykyään mantereen ainoan pysyvän myskihärkäkannan. Naali eli tunturikettu oli alueella yleinen vielä sata vuotta sitten, mutta katosi kannan taantumisen myötä noin vuonna 1990, ja sitä on y…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Luonto: Myskihärkä tuotiin laivalla] 1947 — Myskihärkä eli Norjassa jääkauden aikaan mutta katosi tuhansia vuosia sitten. 1900-luvulla eläimiä tuotiin laivalla takaisin Grönlannista, ja nykyinen kanta polveutuu vuoden 1947 kuljetuksesta. Dovrefjellin tuntureilla laumassa on nykyään reilut parisataa eläintä. Ne eivät ole härkiä vaan lampaiden ja vuohien sukulaisia, ja niiden alusvilla on maailman lämpimimpiä. Retkeilijöitä kehotetaan pysymään kahdensadan metrin päässä: eläin on rauhallinen mutta nopea suuttumaan.
+AIEMPI KYSYMYS: Milloin ja miksi myskihärät tuotiin Dovrefjellille?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Myskihärkiä tuotiin Dovrefjellille vuonna 1947 laivalla Grönlannista. Laji oli elänyt Norjassa [[jääkauden]] aikaan mutta kadonnut sieltä tuhansia vuosia sitten, joten kyse oli lajin tuomisesta takaisin maahan. Nykyinen kanta polveutuu tuosta vuoden 1947 kuljetuksesta, ja se on Euroopan ainoa pysyvä myskihärkäkanta. Eläimet eivät ole varsinaisia härkiä vaan [[lampaiden]] ja [[vuohien]] sukulaisia, ja niiden [[alusvilla]] on maailman lämpimimpiä. Ihan kunnon laivamatka, ja minä valitan pitkistä lennoista.
+KYSYMYS: Kerro lisää: alusvilla
+
+### 329
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dovrefjell ja myskihärkä (eläimet)
+Tietoruudun teksti: Dovrefjell–Sunndalsfjellan kansallispuisto perustettiin vuonna 2002 aiemman, vuodesta 1974 olleen Dovrefjellin kansallispuiston pohjalta, ja se ulottuu kolmen läänin alueelle. Puiston korkein huippu on 2 286 metriä kohoava Snøhetta, ja alueella elää muun muassa ahmoja, maakotkia ja tunturihaukkoja. Dovrefjellillä ja naapurissa sijaitsevalla Rondanella elää yksi viimeisistä alkuperäisistä villipeurakannoista koko Fennoskandiassa, mahdollisesti peräisin muinaisesta Beringian väestöstä, toisin kuin muut Norjan villipeurat, jotka ovat risteytyneet kotieläinporojen kanssa. Alueelle tuotiin vuonna 1947 myskihärkiä, jotka olivat kadonneet Euroopasta sukupuuttoon jo tuhansia vuosia aiemmin, ja ne muodostavat nykyään mantereen ainoan pysyvän myskihärkäkannan. Naali eli tunturikettu oli alueella yleinen vielä sata vuotta sitten, mutta katosi kannan taantumisen myötä noin vuonna 1990, ja sitä on y…
+AIEMPI KYSYMYS: Mikä on Dovrefjellin kansallispuiston korkein huippu?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Dovrefjell–Sunndalsfjellan kansallispuiston korkein huippu on Snøhetta, joka kohoaa 2 286 metrin korkeuteen. Puisto perustettiin vuonna 2002 aiemman, vuodesta 1974 olleen Dovrefjellin kansallispuiston pohjalta, ja se ulottuu kolmen läänin alueelle. Alueella elää muun muassa [[ahmoja]], [[maakotkia]] ja [[tunturihaukkoja]].
+
+Maakotkan seurassa en haluaisi lentää, mutta korkeuksia kyllä kunnioitan.
+KYSYMYS: Kerro lisää: ahmoja
+
+### 330
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dovrefjell ja myskihärkä (eläimet)
+Tietoruudun teksti: Dovrefjell–Sunndalsfjellan kansallispuisto perustettiin vuonna 2002 aiemman, vuodesta 1974 olleen Dovrefjellin kansallispuiston pohjalta, ja se ulottuu kolmen läänin alueelle. Puiston korkein huippu on 2 286 metriä kohoava Snøhetta, ja alueella elää muun muassa ahmoja, maakotkia ja tunturihaukkoja. Dovrefjellillä ja naapurissa sijaitsevalla Rondanella elää yksi viimeisistä alkuperäisistä villipeurakannoista koko Fennoskandiassa, mahdollisesti peräisin muinaisesta Beringian väestöstä, toisin kuin muut Norjan villipeurat, jotka ovat risteytyneet kotieläinporojen kanssa. Alueelle tuotiin vuonna 1947 myskihärkiä, jotka olivat kadonneet Euroopasta sukupuuttoon jo tuhansia vuosia aiemmin, ja ne muodostavat nykyään mantereen ainoan pysyvän myskihärkäkannan. Naali eli tunturikettu oli alueella yleinen vielä sata vuotta sitten, mutta katosi kannan taantumisen myötä noin vuonna 1990, ja sitä on y…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Luonto: Llogaran sola Joonianmeren yllä] vuodesta 1966 — Llogaran solassa tie nousee 1 027 metrin korkeuteen Ceraunian-vuoristossa, ja kohdalta avautuu näkymä Albanian Rivieralle ja meren saarille. Ympäröivä Llogaran kansallispuisto perustettiin vuonna 1966, ja sen pinta-ala on 17,7 neliökilometriä. Puiston korkeus vaihtelee noin 200 metristä yli 2 000 metriin, ja Maja e Çikës nousee 2 045 metriin. Metsissä kasvaa mustamäntyä ja hopeakuusta sekä lehtipuita, ja seudulla elää muun muassa maakotkia, korppikotkia, metsäkauriita ja susia. Lähellä oleva Caesarin sola viittaa siihen, että Julius Caesar ajoi Pompeiusta takaa seudun halki.
+AIEMPI KYSYMYS: Mikä on Dovrefjellin kansallispuiston korkein huippu?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Dovrefjell–Sunndalsfjellan kansallispuiston korkein huippu on Snøhetta, joka kohoaa 2 286 metrin korkeuteen. Puisto perustettiin vuonna 2002 aiemman, vuodesta 1974 olleen Dovrefjellin kansallispuiston pohjalta, ja se ulottuu kolmen läänin alueelle. Alueella elää muun muassa [[ahmoja]], [[maakotkia]] ja [[tunturihaukkoja]].
+
+Maakotkan seurassa en haluaisi lentää, mutta korkeuksia kyllä kunnioitan.
+KYSYMYS: Kerro lisää: maakotkia
+
+### 331
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dovrefjell ja myskihärkä (eläimet)
+Tietoruudun teksti: Dovrefjell–Sunndalsfjellan kansallispuisto perustettiin vuonna 2002 aiemman, vuodesta 1974 olleen Dovrefjellin kansallispuiston pohjalta, ja se ulottuu kolmen läänin alueelle. Puiston korkein huippu on 2 286 metriä kohoava Snøhetta, ja alueella elää muun muassa ahmoja, maakotkia ja tunturihaukkoja. Dovrefjellillä ja naapurissa sijaitsevalla Rondanella elää yksi viimeisistä alkuperäisistä villipeurakannoista koko Fennoskandiassa, mahdollisesti peräisin muinaisesta Beringian väestöstä, toisin kuin muut Norjan villipeurat, jotka ovat risteytyneet kotieläinporojen kanssa. Alueelle tuotiin vuonna 1947 myskihärkiä, jotka olivat kadonneet Euroopasta sukupuuttoon jo tuhansia vuosia aiemmin, ja ne muodostavat nykyään mantereen ainoan pysyvän myskihärkäkannan. Naali eli tunturikettu oli alueella yleinen vielä sata vuotta sitten, mutta katosi kannan taantumisen myötä noin vuonna 1990, ja sitä on y…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Kaksi viikkoa jolloin tunturi syttyy tuleen] syyskuu — Ruska on lyhyt, muutaman viikon mittainen ajanjakso syyskuun alussa, jolloin Lapin tunturikoivikot ja -kanervikot värjäytyvät nopeasti keltaisiksi, oransseiksi ja tulipunaisiksi ennen lehtien putoamista. Ilmiö johtuu siitä, että öiset pakkaset pysäyttävät lehtivihreän tuotannon, jolloin lehdissä koko kasvukauden piilleet keltaiset ja punaiset väripigmentit pääsevät näkyviin. Tunturien paljailla laella väri leviää poikkeuksellisen laajana ja yhtenäisenä, toisin kuin metsäisemmällä Etelä-Suomella. Ruska houkuttelee syksyisin retkeilijöitä Pallas-Yllästunturin ja Urho Kekkosen kansallispuistoihin, ja ajankohta vaihtelee vuosittain sään mukaan.
+- [Rovaniemi — kaupunkilehti / Tunturi] Tunturissa eläminen on aina ollut liikkumista ja lämmön säästämistä: eläin kulkee vapaana mutta on jonkun oma, tavarat kulkivat ahkiossa, ja talo kaivettiin maahan.
+AIEMPI KYSYMYS: Mikä on Dovrefjellin kansallispuiston korkein huippu?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Dovrefjell–Sunndalsfjellan kansallispuiston korkein huippu on Snøhetta, joka kohoaa 2 286 metrin korkeuteen. Puisto perustettiin vuonna 2002 aiemman, vuodesta 1974 olleen Dovrefjellin kansallispuiston pohjalta, ja se ulottuu kolmen läänin alueelle. Alueella elää muun muassa [[ahmoja]], [[maakotkia]] ja [[tunturihaukkoja]].
+
+Maakotkan seurassa en haluaisi lentää, mutta korkeuksia kyllä kunnioitan.
+KYSYMYS: Kerro lisää: tunturihaukkoja
+
+### 332
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dovrefjell ja myskihärkä (eläimet)
+Tietoruudun teksti: Dovrefjell–Sunndalsfjellan kansallispuisto perustettiin vuonna 2002 aiemman, vuodesta 1974 olleen Dovrefjellin kansallispuiston pohjalta, ja se ulottuu kolmen läänin alueelle. Puiston korkein huippu on 2 286 metriä kohoava Snøhetta, ja alueella elää muun muassa ahmoja, maakotkia ja tunturihaukkoja. Dovrefjellillä ja naapurissa sijaitsevalla Rondanella elää yksi viimeisistä alkuperäisistä villipeurakannoista koko Fennoskandiassa, mahdollisesti peräisin muinaisesta Beringian väestöstä, toisin kuin muut Norjan villipeurat, jotka ovat risteytyneet kotieläinporojen kanssa. Alueelle tuotiin vuonna 1947 myskihärkiä, jotka olivat kadonneet Euroopasta sukupuuttoon jo tuhansia vuosia aiemmin, ja ne muodostavat nykyään mantereen ainoan pysyvän myskihärkäkannan. Naali eli tunturikettu oli alueella yleinen vielä sata vuotta sitten, mutta katosi kannan taantumisen myötä noin vuonna 1990, ja sitä on y…
+AIEMPI KYSYMYS: Millainen eläin ahma on ja missä sitä tavataan?
+AIEMPI VASTAUS (Livia):
+Ai tota. Ahma on [[näätäeläimiin]] kuuluva, vahvarakenteinen ja sitkeä petoeläin. Sitä tavataan pohjoisilla tunturi- ja metsäalueilla, ja yksi sen esiintymisalueista on [[Dovrefjellin]] seutu. Ahma saalistaa mutta syö myös [[raatoja]], ja se liikkuu laajoilla alueilla. Pysyn mieluummin kaukana.
+KYSYMYS: Kerro lisää: näätäeläimiin
+
+### 333
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dovrefjell ja myskihärkä (eläimet)
+Tietoruudun teksti: Dovrefjell–Sunndalsfjellan kansallispuisto perustettiin vuonna 2002 aiemman, vuodesta 1974 olleen Dovrefjellin kansallispuiston pohjalta, ja se ulottuu kolmen läänin alueelle. Puiston korkein huippu on 2 286 metriä kohoava Snøhetta, ja alueella elää muun muassa ahmoja, maakotkia ja tunturihaukkoja. Dovrefjellillä ja naapurissa sijaitsevalla Rondanella elää yksi viimeisistä alkuperäisistä villipeurakannoista koko Fennoskandiassa, mahdollisesti peräisin muinaisesta Beringian väestöstä, toisin kuin muut Norjan villipeurat, jotka ovat risteytyneet kotieläinporojen kanssa. Alueelle tuotiin vuonna 1947 myskihärkiä, jotka olivat kadonneet Euroopasta sukupuuttoon jo tuhansia vuosia aiemmin, ja ne muodostavat nykyään mantereen ainoan pysyvän myskihärkäkannan. Naali eli tunturikettu oli alueella yleinen vielä sata vuotta sitten, mutta katosi kannan taantumisen myötä noin vuonna 1990, ja sitä on y…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Luonto: Myskihärkä tuotiin laivalla] 1947 — Myskihärkä eli Norjassa jääkauden aikaan mutta katosi tuhansia vuosia sitten. 1900-luvulla eläimiä tuotiin laivalla takaisin Grönlannista, ja nykyinen kanta polveutuu vuoden 1947 kuljetuksesta. Dovrefjellin tuntureilla laumassa on nykyään reilut parisataa eläintä. Ne eivät ole härkiä vaan lampaiden ja vuohien sukulaisia, ja niiden alusvilla on maailman lämpimimpiä. Retkeilijöitä kehotetaan pysymään kahdensadan metrin päässä: eläin on rauhallinen mutta nopea suuttumaan.
+AIEMPI KYSYMYS: Millainen eläin ahma on ja missä sitä tavataan?
+AIEMPI VASTAUS (Livia):
+Ai tota. Ahma on [[näätäeläimiin]] kuuluva, vahvarakenteinen ja sitkeä petoeläin. Sitä tavataan pohjoisilla tunturi- ja metsäalueilla, ja yksi sen esiintymisalueista on [[Dovrefjellin]] seutu. Ahma saalistaa mutta syö myös [[raatoja]], ja se liikkuu laajoilla alueilla. Pysyn mieluummin kaukana.
+KYSYMYS: Kerro lisää: Dovrefjellin
+
+### 334
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dovrefjell ja myskihärkä (eläimet)
+Tietoruudun teksti: Dovrefjell–Sunndalsfjellan kansallispuisto perustettiin vuonna 2002 aiemman, vuodesta 1974 olleen Dovrefjellin kansallispuiston pohjalta, ja se ulottuu kolmen läänin alueelle. Puiston korkein huippu on 2 286 metriä kohoava Snøhetta, ja alueella elää muun muassa ahmoja, maakotkia ja tunturihaukkoja. Dovrefjellillä ja naapurissa sijaitsevalla Rondanella elää yksi viimeisistä alkuperäisistä villipeurakannoista koko Fennoskandiassa, mahdollisesti peräisin muinaisesta Beringian väestöstä, toisin kuin muut Norjan villipeurat, jotka ovat risteytyneet kotieläinporojen kanssa. Alueelle tuotiin vuonna 1947 myskihärkiä, jotka olivat kadonneet Euroopasta sukupuuttoon jo tuhansia vuosia aiemmin, ja ne muodostavat nykyään mantereen ainoan pysyvän myskihärkäkannan. Naali eli tunturikettu oli alueella yleinen vielä sata vuotta sitten, mutta katosi kannan taantumisen myötä noin vuonna 1990, ja sitä on y…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nepal — maalehti / Luonto: Korppikotkien ravintola] 1990-luku– — Bengalinkorppikotka oli ennen 1990-lukua Intian niemimaan tavallisin korppikotka ja niin runsas, että sitä pidettiin lentokoneiden riesana. Sitten kanta romahti 99 prosentilla. Syy löytyi lääkekaapista: diklofenaakki, karjan tulehduskipulääke, tuhoaa raadon syöneen linnun munuaiset. Nepal kielsi aineen eläinlääkinnässä ja alkoi ylläpitää korppikotkaravintoloita — ruokintapaikkoja, joihin kyläyhteisöt tuovat raatoja, joissa lääkeainetta ei ole. Kanta on vakaantunut niiden ympärillä, mutta lintu liikkuu satojen kilometrien alueella eikä pysy suoja-alueella.
+AIEMPI KYSYMYS: Millainen eläin ahma on ja missä sitä tavataan?
+AIEMPI VASTAUS (Livia):
+Ai tota. Ahma on [[näätäeläimiin]] kuuluva, vahvarakenteinen ja sitkeä petoeläin. Sitä tavataan pohjoisilla tunturi- ja metsäalueilla, ja yksi sen esiintymisalueista on [[Dovrefjellin]] seutu. Ahma saalistaa mutta syö myös [[raatoja]], ja se liikkuu laajoilla alueilla. Pysyn mieluummin kaukana.
+KYSYMYS: Kerro lisää: raatoja
+
+### 335
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dovrefjell ja myskihärkä (eläimet)
+Tietoruudun teksti: Dovrefjell–Sunndalsfjellan kansallispuisto perustettiin vuonna 2002 aiemman, vuodesta 1974 olleen Dovrefjellin kansallispuiston pohjalta, ja se ulottuu kolmen läänin alueelle. Puiston korkein huippu on 2 286 metriä kohoava Snøhetta, ja alueella elää muun muassa ahmoja, maakotkia ja tunturihaukkoja. Dovrefjellillä ja naapurissa sijaitsevalla Rondanella elää yksi viimeisistä alkuperäisistä villipeurakannoista koko Fennoskandiassa, mahdollisesti peräisin muinaisesta Beringian väestöstä, toisin kuin muut Norjan villipeurat, jotka ovat risteytyneet kotieläinporojen kanssa. Alueelle tuotiin vuonna 1947 myskihärkiä, jotka olivat kadonneet Euroopasta sukupuuttoon jo tuhansia vuosia aiemmin, ja ne muodostavat nykyään mantereen ainoan pysyvän myskihärkäkannan. Naali eli tunturikettu oli alueella yleinen vielä sata vuotta sitten, mutta katosi kannan taantumisen myötä noin vuonna 1990, ja sitä on y…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Kaksi viikkoa jolloin tunturi syttyy tuleen] syyskuu — Ruska on lyhyt, muutaman viikon mittainen ajanjakso syyskuun alussa, jolloin Lapin tunturikoivikot ja -kanervikot värjäytyvät nopeasti keltaisiksi, oransseiksi ja tulipunaisiksi ennen lehtien putoamista. Ilmiö johtuu siitä, että öiset pakkaset pysäyttävät lehtivihreän tuotannon, jolloin lehdissä koko kasvukauden piilleet keltaiset ja punaiset väripigmentit pääsevät näkyviin. Tunturien paljailla laella väri leviää poikkeuksellisen laajana ja yhtenäisenä, toisin kuin metsäisemmällä Etelä-Suomella. Ruska houkuttelee syksyisin retkeilijöitä Pallas-Yllästunturin ja Urho Kekkosen kansallispuistoihin, ja ajankohta vaihtelee vuosittain sään mukaan.
+- [Rovaniemi — kaupunkilehti / Tunturi] Tunturissa eläminen on aina ollut liikkumista ja lämmön säästämistä: eläin kulkee vapaana mutta on jonkun oma, tavarat kulkivat ahkiossa, ja talo kaivettiin maahan.
+AIEMPI KYSYMYS: Millainen eläin naali on ja missä sitä tavataan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Naali eli [[tunturikettu]] on pieni, pohjoisilla tuntureilla elävä kettulaji. [[Dovrefjellillä]] se oli vielä noin sata vuotta sitten yleinen, mutta kanta taantui ja laji katosi alueelta noin vuonna 1990. Tämän jälkeisestä tilanteesta en ole täysin varma, joten ajantasainen tieto kannattaa tarkistaa luontoviranomaisilta. Tällaisia uutisia en kanna mielelläni.
+KYSYMYS: Kerro lisää: tunturikettu
+
+### 336
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dovrefjell ja myskihärkä (eläimet)
+Tietoruudun teksti: Dovrefjell–Sunndalsfjellan kansallispuisto perustettiin vuonna 2002 aiemman, vuodesta 1974 olleen Dovrefjellin kansallispuiston pohjalta, ja se ulottuu kolmen läänin alueelle. Puiston korkein huippu on 2 286 metriä kohoava Snøhetta, ja alueella elää muun muassa ahmoja, maakotkia ja tunturihaukkoja. Dovrefjellillä ja naapurissa sijaitsevalla Rondanella elää yksi viimeisistä alkuperäisistä villipeurakannoista koko Fennoskandiassa, mahdollisesti peräisin muinaisesta Beringian väestöstä, toisin kuin muut Norjan villipeurat, jotka ovat risteytyneet kotieläinporojen kanssa. Alueelle tuotiin vuonna 1947 myskihärkiä, jotka olivat kadonneet Euroopasta sukupuuttoon jo tuhansia vuosia aiemmin, ja ne muodostavat nykyään mantereen ainoan pysyvän myskihärkäkannan. Naali eli tunturikettu oli alueella yleinen vielä sata vuotta sitten, mutta katosi kannan taantumisen myötä noin vuonna 1990, ja sitä on y…
+AIEMPI KYSYMYS: Millainen eläin naali on ja missä sitä tavataan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Naali eli [[tunturikettu]] on pieni, pohjoisilla tuntureilla elävä kettulaji. [[Dovrefjellillä]] se oli vielä noin sata vuotta sitten yleinen, mutta kanta taantui ja laji katosi alueelta noin vuonna 1990. Tämän jälkeisestä tilanteesta en ole täysin varma, joten ajantasainen tieto kannattaa tarkistaa luontoviranomaisilta. Tällaisia uutisia en kanna mielelläni.
+KYSYMYS: Kerro lisää: Dovrefjellillä
+
+### 337
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Steinvikholm linna (historia)
+Tietoruudun teksti: Norjan viimeinen katolinen arkkipiispa Olav Engelbrektsson rakennutti Steinvikholm linnan vuosina 1525–1532 pienelle saarelle Trondheimsfjordissa lähellä Trondheimia. Linnasta tuli keskiajan Norjan suurin linnoitus, ja se toimi arkkipiispan tukikohtana tämän vastustaessa Tanskan kuninkaiden Fredrik I:n ja Kristian III:n valtaa. Huhtikuussa 1537 uskonpuhdistus kukisti arkkipiispan vallan, ja Engelbrektsson pakeni maanpakoon Alankomaihin, jossa hän kuoli seuraavana vuonna. Sen jälkeen linna jätettiin autioksi, ja 1600-luvulta 1800-luvulle sen kivimuureja louhittiin ja myytiin rakennusaineeksi, kun Tanska-Norjan viranomaiset sallivat katolisen vastarinnan symbolin hajoamisen. Nykyään rauniolinnan hoidosta vastaa muinaismuistoyhdistys, ja saarella järjestetään joka elokuu ooppera arkkipiispan tarinasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historian hetki: Etelänapa 1911 — viisi miestä ja lipputanko] 14.12.1911 — Telttaan jää kirje. Se on osoitettu Norjan kuninkaalle, ja sen viejäksi pyydetään Robert Scottia — siltä varalta, että Scott saapuu perille mutta viisi norjalaista ei pääse kotiin. Kello on noin kolme iltapäivällä, mittaukset sanovat että tämä on paikka, ja lipputankoon tarttuvat yhdessä Roald Amundsen, Olav Bjaaland, Helmer Hanssen, Sverre Hassel ja Oscar Wisting. Ylätasangon he nimeävät kuningas Haakon VII:n tasangoksi ja teltan Polheimiksi. Seuraavat kolme päivää kuluvat sekstantin ääressä ja hiihtäen navan ympäri ristiin rastiin, jotta paikka olisi todistettavasti oikea: Cookin ja Pearyn riitaiset pohjoisnapaväitteet ovat tuoreessa muistissa. Lipunnosto kestää hetken, ja ko…
+AIEMPI KYSYMYS: Kuka rakennutti Steinvikholm linnan ja miksi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Linnan rakennutti Norjan viimeinen katolinen arkkipiispa [[Olav Engelbrektsson]] vuosina 1525–1532 pienelle saarelle [[Trondheimsfjordissa]], lähellä Trondheimia. Linnasta tuli keskiajan Norjan suurin linnoitus, ja se toimi arkkipiispan tukikohtana tämän vastustaessa [[Tanskan]] kuninkaiden Fredrik I:n ja Kristian III:n valtaa. Tuollainen linna, ja minä asun mieluummin räystäässä.
+KYSYMYS: Kerro lisää: Olav Engelbrektsson
+
+### 338
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Steinvikholm linna (historia)
+Tietoruudun teksti: Norjan viimeinen katolinen arkkipiispa Olav Engelbrektsson rakennutti Steinvikholm linnan vuosina 1525–1532 pienelle saarelle Trondheimsfjordissa lähellä Trondheimia. Linnasta tuli keskiajan Norjan suurin linnoitus, ja se toimi arkkipiispan tukikohtana tämän vastustaessa Tanskan kuninkaiden Fredrik I:n ja Kristian III:n valtaa. Huhtikuussa 1537 uskonpuhdistus kukisti arkkipiispan vallan, ja Engelbrektsson pakeni maanpakoon Alankomaihin, jossa hän kuoli seuraavana vuonna. Sen jälkeen linna jätettiin autioksi, ja 1600-luvulta 1800-luvulle sen kivimuureja louhittiin ja myytiin rakennusaineeksi, kun Tanska-Norjan viranomaiset sallivat katolisen vastarinnan symbolin hajoamisen. Nykyään rauniolinnan hoidosta vastaa muinaismuistoyhdistys, ja saarella järjestetään joka elokuu ooppera arkkipiispan tarinasta.
+AIEMPI KYSYMYS: Kuka rakennutti Steinvikholm linnan ja miksi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Linnan rakennutti Norjan viimeinen katolinen arkkipiispa [[Olav Engelbrektsson]] vuosina 1525–1532 pienelle saarelle [[Trondheimsfjordissa]], lähellä Trondheimia. Linnasta tuli keskiajan Norjan suurin linnoitus, ja se toimi arkkipiispan tukikohtana tämän vastustaessa [[Tanskan]] kuninkaiden Fredrik I:n ja Kristian III:n valtaa. Tuollainen linna, ja minä asun mieluummin räystäässä.
+KYSYMYS: Kerro lisää: Trondheimsfjordissa
+
+### 339
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Steinvikholm linna (historia)
+Tietoruudun teksti: Norjan viimeinen katolinen arkkipiispa Olav Engelbrektsson rakennutti Steinvikholm linnan vuosina 1525–1532 pienelle saarelle Trondheimsfjordissa lähellä Trondheimia. Linnasta tuli keskiajan Norjan suurin linnoitus, ja se toimi arkkipiispan tukikohtana tämän vastustaessa Tanskan kuninkaiden Fredrik I:n ja Kristian III:n valtaa. Huhtikuussa 1537 uskonpuhdistus kukisti arkkipiispan vallan, ja Engelbrektsson pakeni maanpakoon Alankomaihin, jossa hän kuoli seuraavana vuonna. Sen jälkeen linna jätettiin autioksi, ja 1600-luvulta 1800-luvulle sen kivimuureja louhittiin ja myytiin rakennusaineeksi, kun Tanska-Norjan viranomaiset sallivat katolisen vastarinnan symbolin hajoamisen. Nykyään rauniolinnan hoidosta vastaa muinaismuistoyhdistys, ja saarella järjestetään joka elokuu ooppera arkkipiispan tarinasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Kuka rakennutti Steinvikholm linnan ja miksi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Linnan rakennutti Norjan viimeinen katolinen arkkipiispa [[Olav Engelbrektsson]] vuosina 1525–1532 pienelle saarelle [[Trondheimsfjordissa]], lähellä Trondheimia. Linnasta tuli keskiajan Norjan suurin linnoitus, ja se toimi arkkipiispan tukikohtana tämän vastustaessa [[Tanskan]] kuninkaiden Fredrik I:n ja Kristian III:n valtaa. Tuollainen linna, ja minä asun mieluummin räystäässä.
+KYSYMYS: Kerro lisää: Tanskan
+
+### 340
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Steinvikholm linna (historia)
+Tietoruudun teksti: Norjan viimeinen katolinen arkkipiispa Olav Engelbrektsson rakennutti Steinvikholm linnan vuosina 1525–1532 pienelle saarelle Trondheimsfjordissa lähellä Trondheimia. Linnasta tuli keskiajan Norjan suurin linnoitus, ja se toimi arkkipiispan tukikohtana tämän vastustaessa Tanskan kuninkaiden Fredrik I:n ja Kristian III:n valtaa. Huhtikuussa 1537 uskonpuhdistus kukisti arkkipiispan vallan, ja Engelbrektsson pakeni maanpakoon Alankomaihin, jossa hän kuoli seuraavana vuonna. Sen jälkeen linna jätettiin autioksi, ja 1600-luvulta 1800-luvulle sen kivimuureja louhittiin ja myytiin rakennusaineeksi, kun Tanska-Norjan viranomaiset sallivat katolisen vastarinnan symbolin hajoamisen. Nykyään rauniolinnan hoidosta vastaa muinaismuistoyhdistys, ja saarella järjestetään joka elokuu ooppera arkkipiispan tarinasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historia: Yhdestä kukkasipulista maksettiin talon hinta] 1637 — Tulppaani tuotiin Alankomaihin 1500-luvulla Osmanien valtakunnasta, ja pian sitä haluttiin joka puutarhaan. Kalleimpia olivat sipulit, joiden kukkiin ilmestyi valkoista ja punaista raitaa. Kukaan ei tiennyt, mistä raidat johtuivat: ne olivat virustaudin jälkiä, mikä selvisi vasta vuonna 1928. Talvella 1636–37 sipuleilla käytiin kauppaa kapakoissa, ja ne myytiin vielä maan alla kasvavina — ostaja ei ollut nähnyt kukkaa. Alkmaarin huutokaupassa 5. helmikuuta 1637 yhdestä sipulista tarjottiin 4 200 guldenia, ja samalla rahalla sai kanavatalon. Kaksi päivää aiemmin kauppa oli Haarlemissa jo pysähtynyt.
+- [Indonesia — maalehti / Kuvataide: Maalari, joka palasi kahdenkymmenen vuoden jälkeen] 1860 — Raden Saleh syntyi noin 1811 Semarangin lähellä ja oppi maalaamaan belgialaiselta A. J. Payenilta, joka suositteli poikaa opintielle. Vuonna 1829 hänet lähetettiin Alankomaihin, ja Eurooppaan jäi kaksikymmentä vuotta: opettajina olivat Cornelis Kruseman ja Andreas Schelfhout, ja maalaustapa oli aikansa romantiikkaa. Palattuaan Jaavalle 1852 hän maalasi muotokuvia ja maisemia ja hoiti taidekokoelmaa. Häntä pidetään Indonesian ensimmäisenä modernina taiteilijana. Tämä maisema on vuodelta 1860.
+AIEMPI KYSYMYS: Mitä linnalle tapahtui, kun arkkipiispa pakeni uskonpuhdistuksen myötä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Huhtikuussa 1537 uskonpuhdistus kukisti arkkipiispan vallan, ja Engelbrektsson pakeni maanpakoon [[Alankomaihin]], jossa hän kuoli seuraavana vuonna. Linna jätettiin autioksi, ja 1600-luvulta 1800-luvulle sen kivimuureja louhittiin ja myytiin rakennusaineeksi. Nykyään rauniolinnan hoidosta vastaa [[muinaismuistoyhdistys]], ja saarella järjestetään joka elokuu [[ooppera]] arkkipiispan tarinasta. Jotain jäi onneksi jäljelle.
+KYSYMYS: Kerro lisää: Alankomaihin
+
+### 341
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Steinvikholm linna (historia)
+Tietoruudun teksti: Norjan viimeinen katolinen arkkipiispa Olav Engelbrektsson rakennutti Steinvikholm linnan vuosina 1525–1532 pienelle saarelle Trondheimsfjordissa lähellä Trondheimia. Linnasta tuli keskiajan Norjan suurin linnoitus, ja se toimi arkkipiispan tukikohtana tämän vastustaessa Tanskan kuninkaiden Fredrik I:n ja Kristian III:n valtaa. Huhtikuussa 1537 uskonpuhdistus kukisti arkkipiispan vallan, ja Engelbrektsson pakeni maanpakoon Alankomaihin, jossa hän kuoli seuraavana vuonna. Sen jälkeen linna jätettiin autioksi, ja 1600-luvulta 1800-luvulle sen kivimuureja louhittiin ja myytiin rakennusaineeksi, kun Tanska-Norjan viranomaiset sallivat katolisen vastarinnan symbolin hajoamisen. Nykyään rauniolinnan hoidosta vastaa muinaismuistoyhdistys, ja saarella järjestetään joka elokuu ooppera arkkipiispan tarinasta.
+AIEMPI KYSYMYS: Mitä linnalle tapahtui, kun arkkipiispa pakeni uskonpuhdistuksen myötä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Huhtikuussa 1537 uskonpuhdistus kukisti arkkipiispan vallan, ja Engelbrektsson pakeni maanpakoon [[Alankomaihin]], jossa hän kuoli seuraavana vuonna. Linna jätettiin autioksi, ja 1600-luvulta 1800-luvulle sen kivimuureja louhittiin ja myytiin rakennusaineeksi. Nykyään rauniolinnan hoidosta vastaa [[muinaismuistoyhdistys]], ja saarella järjestetään joka elokuu [[ooppera]] arkkipiispan tarinasta. Jotain jäi onneksi jäljelle.
+KYSYMYS: Kerro lisää: muinaismuistoyhdistys
+
+### 342
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Steinvikholm linna (historia)
+Tietoruudun teksti: Norjan viimeinen katolinen arkkipiispa Olav Engelbrektsson rakennutti Steinvikholm linnan vuosina 1525–1532 pienelle saarelle Trondheimsfjordissa lähellä Trondheimia. Linnasta tuli keskiajan Norjan suurin linnoitus, ja se toimi arkkipiispan tukikohtana tämän vastustaessa Tanskan kuninkaiden Fredrik I:n ja Kristian III:n valtaa. Huhtikuussa 1537 uskonpuhdistus kukisti arkkipiispan vallan, ja Engelbrektsson pakeni maanpakoon Alankomaihin, jossa hän kuoli seuraavana vuonna. Sen jälkeen linna jätettiin autioksi, ja 1600-luvulta 1800-luvulle sen kivimuureja louhittiin ja myytiin rakennusaineeksi, kun Tanska-Norjan viranomaiset sallivat katolisen vastarinnan symbolin hajoamisen. Nykyään rauniolinnan hoidosta vastaa muinaismuistoyhdistys, ja saarella järjestetään joka elokuu ooppera arkkipiispan tarinasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jakutsk — kohdekartta / Kohdekartta: Ooppera- ja balettiteatteri] nimikkokirjailija Suorun Omolloon Kartan eteläisin kohde on ooppera- ja balettitalo, joka kantaa Dmitri Sivtsevin eli kirjailijanimeltään Suorun Omolloonin nimeä. Rakennus on 1900-luvun jälkipuoliskolta: betonia, syvä pylväikkö julkisivun levyisenä ja tummapuiset ovet sen takana. Talvella pylväiden väliin ripustetaan pitkiä pystysuoria esitejulisteita, jotka ovat käytännössä ainoa väri koko aukiolla. Ohjelmisto on kaksikielinen, ja se on koko talon olemassaolon syy. Jakuuttien musiikkiperinteessä on piirteitä, joita ei ole muualla: ohuohai on samanaikaisesti piiritanssi ja laulu, jossa esilaulaja sepittää säkeet ja piiri toistaa ne, ja kylyhah on äänihuulten värähtelyyn perustuva laulutekni…
+- [Taiwan — maalehti / Musiikki: Ainoa ooppera, joka syntyi täällä] Gezaixi on ainoa han-kiinalaisen oopperan muoto, joka on saanut alkunsa Taiwanissa — Yilanissa saaren koillisosassa. Sen juuri on koa-á, hokkieniksi laulettu kertova balladi, jossa säkeessä on viisi tai seitsemän merkkiä ja säkeistössä neljä säettä. Kun Shanghaista ja Fujianista kiersi 1923–1949 pekingiläisiä oopperaseurueita, muodolle tarttuivat akrobatia ja lyömäsoittimet. Vuonna 1949 rekisteröityjä seurueita oli yli viisisataa. Ooppera siirtyi radioon 1954, ensimmäiseen elokuvaan 1955 ja televisioon 1962. Miesten roolit laulaa perinteisesti nainen.
+AIEMPI KYSYMYS: Mitä linnalle tapahtui, kun arkkipiispa pakeni uskonpuhdistuksen myötä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Huhtikuussa 1537 uskonpuhdistus kukisti arkkipiispan vallan, ja Engelbrektsson pakeni maanpakoon [[Alankomaihin]], jossa hän kuoli seuraavana vuonna. Linna jätettiin autioksi, ja 1600-luvulta 1800-luvulle sen kivimuureja louhittiin ja myytiin rakennusaineeksi. Nykyään rauniolinnan hoidosta vastaa [[muinaismuistoyhdistys]], ja saarella järjestetään joka elokuu [[ooppera]] arkkipiispan tarinasta. Jotain jäi onneksi jäljelle.
+KYSYMYS: Kerro lisää: ooppera
+
+### 343
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Steinvikholm linna (historia)
+Tietoruudun teksti: Norjan viimeinen katolinen arkkipiispa Olav Engelbrektsson rakennutti Steinvikholm linnan vuosina 1525–1532 pienelle saarelle Trondheimsfjordissa lähellä Trondheimia. Linnasta tuli keskiajan Norjan suurin linnoitus, ja se toimi arkkipiispan tukikohtana tämän vastustaessa Tanskan kuninkaiden Fredrik I:n ja Kristian III:n valtaa. Huhtikuussa 1537 uskonpuhdistus kukisti arkkipiispan vallan, ja Engelbrektsson pakeni maanpakoon Alankomaihin, jossa hän kuoli seuraavana vuonna. Sen jälkeen linna jätettiin autioksi, ja 1600-luvulta 1800-luvulle sen kivimuureja louhittiin ja myytiin rakennusaineeksi, kun Tanska-Norjan viranomaiset sallivat katolisen vastarinnan symbolin hajoamisen. Nykyään rauniolinnan hoidosta vastaa muinaismuistoyhdistys, ja saarella järjestetään joka elokuu ooppera arkkipiispan tarinasta.
+AIEMPI KYSYMYS: Mikä Nidarosin tuomiokirkko on ja miksi sinne pyhiinvaellettiin?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Nidarosin tuomiokirkko sijaitsee [[Trondheimissa]], ja se on rakennettu kuningas Olav Haraldssonin, myöhemmin [[pyhän Olavin]], hautapaikan yhteyteen. Olav kaatui [[Stiklestadin]] taistelussa vuonna 1030, ja hänestä tuli Norjan kansallinen pyhimys. Keskiajalla pyhiinvaeltajat matkasivat tuomiokirkolle hänen vuokseen. Pyhiinvaellus on lopulta vain hidasta lentämistä.
+KYSYMYS: Kerro lisää: Trondheimissa
+
+### 344
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Steinvikholm linna (historia)
+Tietoruudun teksti: Norjan viimeinen katolinen arkkipiispa Olav Engelbrektsson rakennutti Steinvikholm linnan vuosina 1525–1532 pienelle saarelle Trondheimsfjordissa lähellä Trondheimia. Linnasta tuli keskiajan Norjan suurin linnoitus, ja se toimi arkkipiispan tukikohtana tämän vastustaessa Tanskan kuninkaiden Fredrik I:n ja Kristian III:n valtaa. Huhtikuussa 1537 uskonpuhdistus kukisti arkkipiispan vallan, ja Engelbrektsson pakeni maanpakoon Alankomaihin, jossa hän kuoli seuraavana vuonna. Sen jälkeen linna jätettiin autioksi, ja 1600-luvulta 1800-luvulle sen kivimuureja louhittiin ja myytiin rakennusaineeksi, kun Tanska-Norjan viranomaiset sallivat katolisen vastarinnan symbolin hajoamisen. Nykyään rauniolinnan hoidosta vastaa muinaismuistoyhdistys, ja saarella järjestetään joka elokuu ooppera arkkipiispan tarinasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tallinna — kohdekartta / Kohdekartta: Olevisten kirkko] 1267 Olevisten kirkko on nimetty Norjan kuningas Olavin mukaan, joka oli merenkulkijoiden suojeluspyhimys. Kirkosta on maininta jo vuodelta 1267, jolloin sen perustivat alueelle asettuneet skandinaaviset kauppiaat. Kirkon torni puolestaan mainitaan asiakirjoissa ensimmäisen kerran vuonna 1364, ja vuosisatojen kuluessa kirkkoa laajennettiin useaan otteeseen goottilaiseen tyyliin. Torni on kokenut paljon: salamat ovat iskeneet siihen noin kymmenen kertaa, ja koko kirkko on palanut maan tasalle jopa kolme kertaa tunnetun historiansa aikana. Erään keskiaikaisen tarinan mukaan kirkon rakentaja kertoi tornin olevan 84 syltä korkea - jos hän tarkoitti Rein-joen seudun syltä, se tarkoittaisi lähes …
+AIEMPI KYSYMYS: Mikä Nidarosin tuomiokirkko on ja miksi sinne pyhiinvaellettiin?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Nidarosin tuomiokirkko sijaitsee [[Trondheimissa]], ja se on rakennettu kuningas Olav Haraldssonin, myöhemmin [[pyhän Olavin]], hautapaikan yhteyteen. Olav kaatui [[Stiklestadin]] taistelussa vuonna 1030, ja hänestä tuli Norjan kansallinen pyhimys. Keskiajalla pyhiinvaeltajat matkasivat tuomiokirkolle hänen vuokseen. Pyhiinvaellus on lopulta vain hidasta lentämistä.
+KYSYMYS: Kerro lisää: pyhän Olavin
+
+### 345
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Steinvikholm linna (historia)
+Tietoruudun teksti: Norjan viimeinen katolinen arkkipiispa Olav Engelbrektsson rakennutti Steinvikholm linnan vuosina 1525–1532 pienelle saarelle Trondheimsfjordissa lähellä Trondheimia. Linnasta tuli keskiajan Norjan suurin linnoitus, ja se toimi arkkipiispan tukikohtana tämän vastustaessa Tanskan kuninkaiden Fredrik I:n ja Kristian III:n valtaa. Huhtikuussa 1537 uskonpuhdistus kukisti arkkipiispan vallan, ja Engelbrektsson pakeni maanpakoon Alankomaihin, jossa hän kuoli seuraavana vuonna. Sen jälkeen linna jätettiin autioksi, ja 1600-luvulta 1800-luvulle sen kivimuureja louhittiin ja myytiin rakennusaineeksi, kun Tanska-Norjan viranomaiset sallivat katolisen vastarinnan symbolin hajoamisen. Nykyään rauniolinnan hoidosta vastaa muinaismuistoyhdistys, ja saarella järjestetään joka elokuu ooppera arkkipiispan tarinasta.
+AIEMPI KYSYMYS: Mikä Nidarosin tuomiokirkko on ja miksi sinne pyhiinvaellettiin?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Nidarosin tuomiokirkko sijaitsee [[Trondheimissa]], ja se on rakennettu kuningas Olav Haraldssonin, myöhemmin [[pyhän Olavin]], hautapaikan yhteyteen. Olav kaatui [[Stiklestadin]] taistelussa vuonna 1030, ja hänestä tuli Norjan kansallinen pyhimys. Keskiajalla pyhiinvaeltajat matkasivat tuomiokirkolle hänen vuokseen. Pyhiinvaellus on lopulta vain hidasta lentämistä.
+KYSYMYS: Kerro lisää: Stiklestadin
+
+### 346
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Steinvikholm linna (historia)
+Tietoruudun teksti: Norjan viimeinen katolinen arkkipiispa Olav Engelbrektsson rakennutti Steinvikholm linnan vuosina 1525–1532 pienelle saarelle Trondheimsfjordissa lähellä Trondheimia. Linnasta tuli keskiajan Norjan suurin linnoitus, ja se toimi arkkipiispan tukikohtana tämän vastustaessa Tanskan kuninkaiden Fredrik I:n ja Kristian III:n valtaa. Huhtikuussa 1537 uskonpuhdistus kukisti arkkipiispan vallan, ja Engelbrektsson pakeni maanpakoon Alankomaihin, jossa hän kuoli seuraavana vuonna. Sen jälkeen linna jätettiin autioksi, ja 1600-luvulta 1800-luvulle sen kivimuureja louhittiin ja myytiin rakennusaineeksi, kun Tanska-Norjan viranomaiset sallivat katolisen vastarinnan symbolin hajoamisen. Nykyään rauniolinnan hoidosta vastaa muinaismuistoyhdistys, ja saarella järjestetään joka elokuu ooppera arkkipiispan tarinasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Luonto: Saari, jolla linnut saavat olla rauhassa] 1981 — Kymmenkunta kilometriä rannikolta on pieni graniittisaari, joka julistettiin luonnonsuojelualueeksi vuonna 1981. Saarella pesii merilintuja, muun muassa liejuliitäjiä, jotka tulevat pesäkoloilleen vasta pimeän tultua. Kävijämäärää rajoitetaan päivittäisellä kiintiöllä, ja osaan saarta ei saa mennä lainkaan pesimäaikaan. Saarella on myös 1600-luvun linnake, joka on rakennettu omalle luodolleen ja jonne pääsee kapeaa kivipengertä pitkin.
+AIEMPI KYSYMYS: Miksi Norja oli pitkään osa Tanskan kuningaskuntaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Keskiajan lopulla kuninkaallisten avioliittojen ja perintösääntöjen kautta Norja ja Tanska päätyivät saman hallitsijan alaisuuteen. Tämä Tanska-Norjan liitto kesti vuoteen 1814 saakka, jolloin Norja joutui [[Kielin rauhassa]] [[Ruotsin]] kuninkaan alaisuuteen. Rajat liikkuvat, mut kyyhky lentää niiden yli.
+KYSYMYS: Kerro lisää: Kielin rauhassa
+
+### 347
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Steinvikholm linna (historia)
+Tietoruudun teksti: Norjan viimeinen katolinen arkkipiispa Olav Engelbrektsson rakennutti Steinvikholm linnan vuosina 1525–1532 pienelle saarelle Trondheimsfjordissa lähellä Trondheimia. Linnasta tuli keskiajan Norjan suurin linnoitus, ja se toimi arkkipiispan tukikohtana tämän vastustaessa Tanskan kuninkaiden Fredrik I:n ja Kristian III:n valtaa. Huhtikuussa 1537 uskonpuhdistus kukisti arkkipiispan vallan, ja Engelbrektsson pakeni maanpakoon Alankomaihin, jossa hän kuoli seuraavana vuonna. Sen jälkeen linna jätettiin autioksi, ja 1600-luvulta 1800-luvulle sen kivimuureja louhittiin ja myytiin rakennusaineeksi, kun Tanska-Norjan viranomaiset sallivat katolisen vastarinnan symbolin hajoamisen. Nykyään rauniolinnan hoidosta vastaa muinaismuistoyhdistys, ja saarella järjestetään joka elokuu ooppera arkkipiispan tarinasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Lipun kannossa oli silakkasalaatti] 1844 — Norjan nykyinen lippu suunniteltiin jo 1821; sen teki suurkäräjien jäsen Fredrik Meltzer, ja hän perusteli punaista, valkoista ja sinistä sillä, että ne merkitsivät silloin vapautta. Sillä lipulla sai kuitenkin purjehtia vain pohjoisilla vesillä: Kapp Finisterren eteläpuolella oli käytettävä unionin yhteistä kauppalippua, koska suoja Pohjois-Afrikan kaappareilta tuli Ruotsin maksamana. Vuonna 1844 molempien maiden lippujen kantoon pantiin yhteinen unionimerkki, joka jakoi värit tasan. Kansa antoi sille nimen sildesalaten, silakkasalaatti. Kauppalipun kannosta merkki katosi vuoden 1899 lopussa.
+AIEMPI KYSYMYS: Miksi Norja oli pitkään osa Tanskan kuningaskuntaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Keskiajan lopulla kuninkaallisten avioliittojen ja perintösääntöjen kautta Norja ja Tanska päätyivät saman hallitsijan alaisuuteen. Tämä Tanska-Norjan liitto kesti vuoteen 1814 saakka, jolloin Norja joutui [[Kielin rauhassa]] [[Ruotsin]] kuninkaan alaisuuteen. Rajat liikkuvat, mut kyyhky lentää niiden yli.
+KYSYMYS: Kerro lisää: Ruotsin
+
+### 348
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Steinvikholm linna (historia)
+Tietoruudun teksti: Norjan viimeinen katolinen arkkipiispa Olav Engelbrektsson rakennutti Steinvikholm linnan vuosina 1525–1532 pienelle saarelle Trondheimsfjordissa lähellä Trondheimia. Linnasta tuli keskiajan Norjan suurin linnoitus, ja se toimi arkkipiispan tukikohtana tämän vastustaessa Tanskan kuninkaiden Fredrik I:n ja Kristian III:n valtaa. Huhtikuussa 1537 uskonpuhdistus kukisti arkkipiispan vallan, ja Engelbrektsson pakeni maanpakoon Alankomaihin, jossa hän kuoli seuraavana vuonna. Sen jälkeen linna jätettiin autioksi, ja 1600-luvulta 1800-luvulle sen kivimuureja louhittiin ja myytiin rakennusaineeksi, kun Tanska-Norjan viranomaiset sallivat katolisen vastarinnan symbolin hajoamisen. Nykyään rauniolinnan hoidosta vastaa muinaismuistoyhdistys, ja saarella järjestetään joka elokuu ooppera arkkipiispan tarinasta.
+AIEMPI KYSYMYS: Mitä uskonpuhdistus muutti Pohjoismaissa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: 1500-luvulla uskonpuhdistus levisi Pohjoismaihin, ja maat siirtyivät katolisesta kirkosta [[luterilaisuuteen]]. Kuninkaat ottivat kirkon omaisuutta haltuunsa, ja [[luostarit]] suljettiin. Norjassa muutos tuli Tanskan kuninkaan kautta vuoden 1537 tienoilla, kun [[arkkipiispan]] valta kaatui.
+
+Luostareissa leivottiin omat leivät, ja minä olen aina epäillyt, että joukossa oli joskus pullaakin. Todisteita minulla ei ole, mutta toivo elää.
+KYSYMYS: Kerro lisää: luterilaisuuteen
+
+### 349
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Steinvikholm linna (historia)
+Tietoruudun teksti: Norjan viimeinen katolinen arkkipiispa Olav Engelbrektsson rakennutti Steinvikholm linnan vuosina 1525–1532 pienelle saarelle Trondheimsfjordissa lähellä Trondheimia. Linnasta tuli keskiajan Norjan suurin linnoitus, ja se toimi arkkipiispan tukikohtana tämän vastustaessa Tanskan kuninkaiden Fredrik I:n ja Kristian III:n valtaa. Huhtikuussa 1537 uskonpuhdistus kukisti arkkipiispan vallan, ja Engelbrektsson pakeni maanpakoon Alankomaihin, jossa hän kuoli seuraavana vuonna. Sen jälkeen linna jätettiin autioksi, ja 1600-luvulta 1800-luvulle sen kivimuureja louhittiin ja myytiin rakennusaineeksi, kun Tanska-Norjan viranomaiset sallivat katolisen vastarinnan symbolin hajoamisen. Nykyään rauniolinnan hoidosta vastaa muinaismuistoyhdistys, ja saarella järjestetään joka elokuu ooppera arkkipiispan tarinasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Peking — kohdekartta / Kohdekartta: Yonghe-temppeli] 1694, luostariksi 1744 Rakennus alkoi prinssin kotina. Kangxi-keisari antoi sen 1702 neljännelle pojalleen Yinzhenille, ja tämän tuleva seuraaja, Qianlong-keisari, syntyi talon itäsiivessä 1711. Kun Yinzhen nousi valtaistuimelle Yongzheng-keisarina, talosta tuli Harmonian ja rauhan palatsi — ja keisarin arvon merkiksi sen turkoosit tiilikatot vaihdettiin keltaisiin, jotka oli varattu vain keisarille. Vuonna 1744 Qianlong muutti palatsin tiibetinbuddhalaiseksi luostariksi. Siitä tuli Qing-kauden merkittävin buddhalainen temppeli, jonka rakennuksissa kiinalainen ja tiibetiläinen tyyli kulkevat rinnakkain ja jonne muutti munkkeja Mongoliasta ja Tiibetistä asti. Kuuluisin aarre on Kymmenentuhan…
+- [Bergen — kohdekartta / Kohdekartta: Munkelivin luostari] n. 1110 Kuningas Øystein I perusti benediktiiniluostarin noin vuonna 1110 ja omisti sen arkkienkeli Mikaelille. Paikka valittiin tarkoituksella: Nordnesin korkein kohta hallitsi juuri perustettua kaupunkia, ja luostarin oli määrä vauhdittaa sen kasvua. Munkeliv oli Norjan vanhimpia, rikkaimpia ja parhaiten dokumentoituja luostareita. Maan päällä siitä ei näy nykyään mitään. Ensimmäiset vuosisadat olivat vauraita, mutta 1300-luvun puolivälin musta surma käänsi suunnan. Vuonna 1393 rakennukset kärsivät pahoin, kun luostarin kimppuun kävivät vitaaliveljiksi kutsutut merirosvot. 1420-luvulla sen otti paavin luvalla haltuunsa birgittalaisjärjestö, ja siitä tuli kaksoisluostari, jossa asui sekä m…
+AIEMPI KYSYMYS: Mitä uskonpuhdistus muutti Pohjoismaissa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: 1500-luvulla uskonpuhdistus levisi Pohjoismaihin, ja maat siirtyivät katolisesta kirkosta [[luterilaisuuteen]]. Kuninkaat ottivat kirkon omaisuutta haltuunsa, ja [[luostarit]] suljettiin. Norjassa muutos tuli Tanskan kuninkaan kautta vuoden 1537 tienoilla, kun [[arkkipiispan]] valta kaatui.
+
+Luostareissa leivottiin omat leivät, ja minä olen aina epäillyt, että joukossa oli joskus pullaakin. Todisteita minulla ei ole, mutta toivo elää.
+KYSYMYS: Kerro lisää: luostarit
+
+### 350
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Steinvikholm linna (historia)
+Tietoruudun teksti: Norjan viimeinen katolinen arkkipiispa Olav Engelbrektsson rakennutti Steinvikholm linnan vuosina 1525–1532 pienelle saarelle Trondheimsfjordissa lähellä Trondheimia. Linnasta tuli keskiajan Norjan suurin linnoitus, ja se toimi arkkipiispan tukikohtana tämän vastustaessa Tanskan kuninkaiden Fredrik I:n ja Kristian III:n valtaa. Huhtikuussa 1537 uskonpuhdistus kukisti arkkipiispan vallan, ja Engelbrektsson pakeni maanpakoon Alankomaihin, jossa hän kuoli seuraavana vuonna. Sen jälkeen linna jätettiin autioksi, ja 1600-luvulta 1800-luvulle sen kivimuureja louhittiin ja myytiin rakennusaineeksi, kun Tanska-Norjan viranomaiset sallivat katolisen vastarinnan symbolin hajoamisen. Nykyään rauniolinnan hoidosta vastaa muinaismuistoyhdistys, ja saarella järjestetään joka elokuu ooppera arkkipiispan tarinasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kaupunkilehti / Puisto kaupungin rajalla: Sarvikuonon arkki] Puistoa kutsutaan joskus nimellä Kifaru Ark, sarvikuonon arkki. Se on yksi Kenian onnistuneimmista mustasarvikuonon turvapaikoista ja harvoja paikkoja, joissa kävijä näkee mustasarvikuonon luonnossa lähes varmasti. Puiston pääportin lähellä toimii 1963 perustettu turvakoti, joka hoitaa orpoja norsun- ja sarvikuononpoikasia ja palauttaa ne myöhemmin suojelualueille. Vuodesta 2005 alue on luokiteltu myös leijonien suojeluyksiköksi. Puiston pohjoisrajalla olevien tehtaiden jätevedet kuormittavat sen vesiä.
+- [Krakova — kaupunkilehti / Uskonto: Arkkipiispa, josta tuli paavi] Wojtyła syntyi Wadowicessa, viisikymmentä kilometriä Krakovasta, ja toimi Krakovan arkkipiispana neljätoista vuotta ennen paaviksi valintaansa. Hänet muistetaan Wawelin katedraalin patsaassa juuri tässä roolissa, ennen kuin maailma tunsi hänet Johannes Paavali II:na. Patsas on yksi lukuisista Krakovassa, jotka kertovat kaupungin ylpeydestä omasta paavistaan.
+AIEMPI KYSYMYS: Mitä uskonpuhdistus muutti Pohjoismaissa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: 1500-luvulla uskonpuhdistus levisi Pohjoismaihin, ja maat siirtyivät katolisesta kirkosta [[luterilaisuuteen]]. Kuninkaat ottivat kirkon omaisuutta haltuunsa, ja [[luostarit]] suljettiin. Norjassa muutos tuli Tanskan kuninkaan kautta vuoden 1537 tienoilla, kun [[arkkipiispan]] valta kaatui.
+
+Luostareissa leivottiin omat leivät, ja minä olen aina epäillyt, että joukossa oli joskus pullaakin. Todisteita minulla ei ole, mutta toivo elää.
+KYSYMYS: Kerro lisää: arkkipiispan
+
+### 351
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Seljan luostari (historia)
+Tietoruudun teksti: Seljan saarelle liittyy yksi Norjan vanhimmista kristillisistä legendoista: perimätiedon mukaan irlantilainen kuninkaantytär Sunniva pakeni pakkoavioliittoa laivalla ja haaksirikkoutui saarelle 900-luvulla, jossa hän kuoli piileskellessään luolassa vainoojiaan. Hänen pyhäinjäännöstensä ympärille syntyi suosittu pyhiinvaelluskohde, ja benediktiiniluostari perustettiin saarelle noin vuonna 1100, puoliväliin Bergenin ja Nidarosin merireittiä. Luostari koki takaiskun tuhoisassa tulipalossa vuonna 1305, ja mahdollisesti musta surma vuonna 1349 heikensi yhteisöä entisestään, vaikka luostarielämä saattoi jatkua vielä 1400-luvun puoliväliin asti. Piispa Finnboge erotti viimeisen apotin virastaan 1460–1470-luvuilla ja siirsi luostarin maaomaisuuden Bergenin hiippakunnalle, mikä lopetti luostaritoiminnan saarella. Koska saarelle ei myöhemmin asetuttu asumaan, kivirauniot ovat säilyneet hyvin nyky…
+AIEMPI KYSYMYS: Kenen legendaan Seljan luostarisaari liittyy?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Seljan saareen liittyy irlantilaisen kuninkaantyttären, [[Sunnivan]], legenda. Perimätiedon mukaan hän pakeni pakkoavioliittoa laivalla ja haaksirikkoutui saarelle 900-luvulla, jossa hän kuoli piileskellessään vainoojiaan luolassa. Hänen [[pyhäinjäännösten]] ympärille syntyi suosittu pyhiinvaelluskohde, ja saarelle perustettiin noin vuonna 1100 [[benediktiiniluostari]]. Kaunis tarina, vaikkei kyyhkyjä siinä esiinny.
+KYSYMYS: Kerro lisää: Sunnivan
+
+### 352
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Seljan luostari (historia)
+Tietoruudun teksti: Seljan saarelle liittyy yksi Norjan vanhimmista kristillisistä legendoista: perimätiedon mukaan irlantilainen kuninkaantytär Sunniva pakeni pakkoavioliittoa laivalla ja haaksirikkoutui saarelle 900-luvulla, jossa hän kuoli piileskellessään luolassa vainoojiaan. Hänen pyhäinjäännöstensä ympärille syntyi suosittu pyhiinvaelluskohde, ja benediktiiniluostari perustettiin saarelle noin vuonna 1100, puoliväliin Bergenin ja Nidarosin merireittiä. Luostari koki takaiskun tuhoisassa tulipalossa vuonna 1305, ja mahdollisesti musta surma vuonna 1349 heikensi yhteisöä entisestään, vaikka luostarielämä saattoi jatkua vielä 1400-luvun puoliväliin asti. Piispa Finnboge erotti viimeisen apotin virastaan 1460–1470-luvuilla ja siirsi luostarin maaomaisuuden Bergenin hiippakunnalle, mikä lopetti luostaritoiminnan saarella. Koska saarelle ei myöhemmin asetuttu asumaan, kivirauniot ovat säilyneet hyvin nyky…
+AIEMPI KYSYMYS: Kenen legendaan Seljan luostarisaari liittyy?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Seljan saareen liittyy irlantilaisen kuninkaantyttären, [[Sunnivan]], legenda. Perimätiedon mukaan hän pakeni pakkoavioliittoa laivalla ja haaksirikkoutui saarelle 900-luvulla, jossa hän kuoli piileskellessään vainoojiaan luolassa. Hänen [[pyhäinjäännösten]] ympärille syntyi suosittu pyhiinvaelluskohde, ja saarelle perustettiin noin vuonna 1100 [[benediktiiniluostari]]. Kaunis tarina, vaikkei kyyhkyjä siinä esiinny.
+KYSYMYS: Kerro lisää: pyhäinjäännösten
+
+### 353
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Seljan luostari (historia)
+Tietoruudun teksti: Seljan saarelle liittyy yksi Norjan vanhimmista kristillisistä legendoista: perimätiedon mukaan irlantilainen kuninkaantytär Sunniva pakeni pakkoavioliittoa laivalla ja haaksirikkoutui saarelle 900-luvulla, jossa hän kuoli piileskellessään luolassa vainoojiaan. Hänen pyhäinjäännöstensä ympärille syntyi suosittu pyhiinvaelluskohde, ja benediktiiniluostari perustettiin saarelle noin vuonna 1100, puoliväliin Bergenin ja Nidarosin merireittiä. Luostari koki takaiskun tuhoisassa tulipalossa vuonna 1305, ja mahdollisesti musta surma vuonna 1349 heikensi yhteisöä entisestään, vaikka luostarielämä saattoi jatkua vielä 1400-luvun puoliväliin asti. Piispa Finnboge erotti viimeisen apotin virastaan 1460–1470-luvuilla ja siirsi luostarin maaomaisuuden Bergenin hiippakunnalle, mikä lopetti luostaritoiminnan saarella. Koska saarelle ei myöhemmin asetuttu asumaan, kivirauniot ovat säilyneet hyvin nyky…
+AIEMPI KYSYMYS: Kenen legendaan Seljan luostarisaari liittyy?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Seljan saareen liittyy irlantilaisen kuninkaantyttären, [[Sunnivan]], legenda. Perimätiedon mukaan hän pakeni pakkoavioliittoa laivalla ja haaksirikkoutui saarelle 900-luvulla, jossa hän kuoli piileskellessään vainoojiaan luolassa. Hänen [[pyhäinjäännösten]] ympärille syntyi suosittu pyhiinvaelluskohde, ja saarelle perustettiin noin vuonna 1100 [[benediktiiniluostari]]. Kaunis tarina, vaikkei kyyhkyjä siinä esiinny.
+KYSYMYS: Kerro lisää: benediktiiniluostari
+
+### 354
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Seljan luostari (historia)
+Tietoruudun teksti: Seljan saarelle liittyy yksi Norjan vanhimmista kristillisistä legendoista: perimätiedon mukaan irlantilainen kuninkaantytär Sunniva pakeni pakkoavioliittoa laivalla ja haaksirikkoutui saarelle 900-luvulla, jossa hän kuoli piileskellessään luolassa vainoojiaan. Hänen pyhäinjäännöstensä ympärille syntyi suosittu pyhiinvaelluskohde, ja benediktiiniluostari perustettiin saarelle noin vuonna 1100, puoliväliin Bergenin ja Nidarosin merireittiä. Luostari koki takaiskun tuhoisassa tulipalossa vuonna 1305, ja mahdollisesti musta surma vuonna 1349 heikensi yhteisöä entisestään, vaikka luostarielämä saattoi jatkua vielä 1400-luvun puoliväliin asti. Piispa Finnboge erotti viimeisen apotin virastaan 1460–1470-luvuilla ja siirsi luostarin maaomaisuuden Bergenin hiippakunnalle, mikä lopetti luostaritoiminnan saarella. Koska saarelle ei myöhemmin asetuttu asumaan, kivirauniot ovat säilyneet hyvin nyky…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Petra — kaupunkilehti / Tiede ja kivi: Tulipalo tuhosi kirjaston ja säilytti sen] Vuonna 1993 Petran bysanttilaisesta kirkosta löytyi noin 140 papyruskääröä, Jordanian suurin muinaisten asiakirjojen kokoelma. Kääröt ovat kreikankielisiä ja 500-luvulta, ja ne säilyivät samasta syystä kuin Herculaneumin papyrukset: ne hiiltyivät tulipalossa. Suurin osa vaurioitui lukukelvottomaksi, mutta muutamista kymmenistä saa yhä selvää. Ne kertovat kirkon diakonin Theodoroksen varakkaan suvun arjesta — avioliitoista, perinnöistä ja maakaupoista. Kirkko rakennettiin 400-luvun jälkipuoliskolla, ja se paloi 600-luvun alussa. Sivulaivojen mosaiikeissa on vuodenaikoja, eläimiä, ihmisiä, saviastioita ja kasveja.
+- [Tokio — kaupunkilehti / Arki ja alakaupunki: Tulipalo pysäytettiin purkamalla taloja] Edon talot olivat puuta ja paperia, ja tuli pysäytettiin purkamalla: hikeshi-miehet repivät tieltä ne rakennukset, joihin liekki olisi tarttunut. Vuosina 1601–1867 Edossa oli 49 suurta paloa, Osakassa kuusi; siellä talot oli rapattu ja katot tehty tiilestä. Vuoden 1657 Meirekin palon jälkeen shogunaatti perusti pysyvän palokunnan, maailman ensimmäisen; toinen oli Lontoon palokunta vuoden 1666 palon jälkeen. Vapaaehtoisia ryhmiä oli 47, ja kullakin oli oma matoi: pitkä tanko, jonka päässä on ryhmän tunnus ja nippu nauhoja. Se nostettiin katolle palavan talon viereen.
+AIEMPI KYSYMYS: Mikä tapahtuma heikensi luostaria vuonna 1305?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Luostaria heikensi vuonna 1305 tuhoisa [[tulipalo]]. Myöhemmin myös [[mustan surman]] on arveltu heikentäneen yhteisöä vuonna 1349, vaikka luostarielämä saattoi jatkua vielä 1400-luvun puoliväliin asti. Piispa Finnboge erotti viimeisen apotin 1460–1470-luvuilla ja siirsi luostarin maaomaisuuden [[Bergenin hiippakunnalle]], mikä lopetti luostaritoiminnan saarella. Siit on onneksi jo yli kuusisataa vuotta.
+KYSYMYS: Kerro lisää: tulipalo
+
+### 355
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Seljan luostari (historia)
+Tietoruudun teksti: Seljan saarelle liittyy yksi Norjan vanhimmista kristillisistä legendoista: perimätiedon mukaan irlantilainen kuninkaantytär Sunniva pakeni pakkoavioliittoa laivalla ja haaksirikkoutui saarelle 900-luvulla, jossa hän kuoli piileskellessään luolassa vainoojiaan. Hänen pyhäinjäännöstensä ympärille syntyi suosittu pyhiinvaelluskohde, ja benediktiiniluostari perustettiin saarelle noin vuonna 1100, puoliväliin Bergenin ja Nidarosin merireittiä. Luostari koki takaiskun tuhoisassa tulipalossa vuonna 1305, ja mahdollisesti musta surma vuonna 1349 heikensi yhteisöä entisestään, vaikka luostarielämä saattoi jatkua vielä 1400-luvun puoliväliin asti. Piispa Finnboge erotti viimeisen apotin virastaan 1460–1470-luvuilla ja siirsi luostarin maaomaisuuden Bergenin hiippakunnalle, mikä lopetti luostaritoiminnan saarella. Koska saarelle ei myöhemmin asetuttu asumaan, kivirauniot ovat säilyneet hyvin nyky…
+AIEMPI KYSYMYS: Mikä tapahtuma heikensi luostaria vuonna 1305?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Luostaria heikensi vuonna 1305 tuhoisa [[tulipalo]]. Myöhemmin myös [[mustan surman]] on arveltu heikentäneen yhteisöä vuonna 1349, vaikka luostarielämä saattoi jatkua vielä 1400-luvun puoliväliin asti. Piispa Finnboge erotti viimeisen apotin 1460–1470-luvuilla ja siirsi luostarin maaomaisuuden [[Bergenin hiippakunnalle]], mikä lopetti luostaritoiminnan saarella. Siit on onneksi jo yli kuusisataa vuotta.
+KYSYMYS: Kerro lisää: mustan surman
+
+### 356
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Seljan luostari (historia)
+Tietoruudun teksti: Seljan saarelle liittyy yksi Norjan vanhimmista kristillisistä legendoista: perimätiedon mukaan irlantilainen kuninkaantytär Sunniva pakeni pakkoavioliittoa laivalla ja haaksirikkoutui saarelle 900-luvulla, jossa hän kuoli piileskellessään luolassa vainoojiaan. Hänen pyhäinjäännöstensä ympärille syntyi suosittu pyhiinvaelluskohde, ja benediktiiniluostari perustettiin saarelle noin vuonna 1100, puoliväliin Bergenin ja Nidarosin merireittiä. Luostari koki takaiskun tuhoisassa tulipalossa vuonna 1305, ja mahdollisesti musta surma vuonna 1349 heikensi yhteisöä entisestään, vaikka luostarielämä saattoi jatkua vielä 1400-luvun puoliväliin asti. Piispa Finnboge erotti viimeisen apotin virastaan 1460–1470-luvuilla ja siirsi luostarin maaomaisuuden Bergenin hiippakunnalle, mikä lopetti luostaritoiminnan saarella. Koska saarelle ei myöhemmin asetuttu asumaan, kivirauniot ovat säilyneet hyvin nyky…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kohdekartta / Kohdekartta: Grace Cathedral] 1849–1964 Seurakunta perustettiin 1849 kultaryntäyksen vuosina. Sen kolmas kirkko rakennettiin California Streetin ja Stockton Streetin kulmaan ja vihittiin 3. toukokuuta 1868 — se on se Grace Church, jonka isoisä olisi voinut nähdä. Jäsenistöön kuului kaupungin varakkainta väkeä, muiden muassa rautatiemies Leland Stanford ja pankkiiri William Henry Crocker. Vuoden 1906 järistystä seurannut palo tuhosi kirkon, ja seurakunta sai väliaikaisen tilan 1907. Crockerin suku lahjoitti hiippakunnalle oman raunioituneen tonttinsa Nob Hillin laelta, ja peruskivi laskettiin 1910. Piirustukset teki englantilainen goottilaisen tyylin mestari George Frederick Bodley, joka kuoli 1907, ja työn saattoi loppu…
+- [São Paulo — kohdekartta / Kohdekartta: Solar da Marquesa de Santos] 1834 Talo on savesta poljettu ja 1700-luvun jälkipuoliskolta. Asiakirjoissa mainitaan 1739–1754 neljä taloa Rua do Carmon varrella, ja niistä kaksi ilmeisesti yhdistettiin yhdeksi kartanoksi. Prikaatikenraali José Joaquim Pinto de Morais Leme sai talon 1802 velkojen maksuksi. Nimensä talo sai Domitila de Castrolta, Santosin markiisittarelta, joka osti sen prikaatikenraalin perijättäreltä yhdellätoista contolla ja neljälläsadalla tuhannella réisillä palattuaan Rio de Janeirosta ja suhteensa Pedro I:een päätyttyä. Hän asui talossa 1834–1867 ja muutti sitä useaan otteeseen. Tanssiaiset ja illanvietot tekivät siitä São Paulon ylhäisimpiä osoitteita, ja sitä alettiin kutsua nimellä Palacete do C…
+AIEMPI KYSYMYS: Mikä tapahtuma heikensi luostaria vuonna 1305?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Luostaria heikensi vuonna 1305 tuhoisa [[tulipalo]]. Myöhemmin myös [[mustan surman]] on arveltu heikentäneen yhteisöä vuonna 1349, vaikka luostarielämä saattoi jatkua vielä 1400-luvun puoliväliin asti. Piispa Finnboge erotti viimeisen apotin 1460–1470-luvuilla ja siirsi luostarin maaomaisuuden [[Bergenin hiippakunnalle]], mikä lopetti luostaritoiminnan saarella. Siit on onneksi jo yli kuusisataa vuotta.
+KYSYMYS: Kerro lisää: Bergenin hiippakunnalle
+
+### 357
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Seljan luostari (historia)
+Tietoruudun teksti: Seljan saarelle liittyy yksi Norjan vanhimmista kristillisistä legendoista: perimätiedon mukaan irlantilainen kuninkaantytär Sunniva pakeni pakkoavioliittoa laivalla ja haaksirikkoutui saarelle 900-luvulla, jossa hän kuoli piileskellessään luolassa vainoojiaan. Hänen pyhäinjäännöstensä ympärille syntyi suosittu pyhiinvaelluskohde, ja benediktiiniluostari perustettiin saarelle noin vuonna 1100, puoliväliin Bergenin ja Nidarosin merireittiä. Luostari koki takaiskun tuhoisassa tulipalossa vuonna 1305, ja mahdollisesti musta surma vuonna 1349 heikensi yhteisöä entisestään, vaikka luostarielämä saattoi jatkua vielä 1400-luvun puoliväliin asti. Piispa Finnboge erotti viimeisen apotin virastaan 1460–1470-luvuilla ja siirsi luostarin maaomaisuuden Bergenin hiippakunnalle, mikä lopetti luostaritoiminnan saarella. Koska saarelle ei myöhemmin asetuttu asumaan, kivirauniot ovat säilyneet hyvin nyky…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iqaluit — kaupunkilehti / Tundra ja vuorovesi: Mittarit, jotka liikkuvat] Sadetta ja lunta kertyy vuodessa hieman yli 400 millimetriä, mikä on paljon enemmän kuin useimmilla arktisen saariston paikoilla, ja sateisin vuodenaika on kesä. Golfvirran puolella samalla leveysasteella on toinen maailma: Trondheimin vuoden keskilämpötila on 15,2 astetta leudompi. Ennätykset ovat −45,6 astetta (10. helmikuuta 1967) ja 26,8 astetta (21. heinäkuuta 2008). Keskiarvo liikkuu: 1979 vuoden keskilämpötila oli −9,0 astetta ja 2023 −6,8. Mittausjakson ensimmäisellä puoliskolla keskiarvoa kylmempiä vuosia oli neljätoista, jälkimmäisellä kolme.
+AIEMPI KYSYMYS: Miksi merireitti Bergenistä Nidarosiin oli keskiajalla tärkeä?
+AIEMPI VASTAUS (Livia):
+Ai se. Seljan luostari sijaitsi puolivälissä Bergenin ja Nidarosin välistä merireittiä. Nidaros on nykyisen [[Trondheimin]] keskiaikainen nimi, ja Norjan vuoristoisessa maastossa rannikkoväylä oli luonteva kulkutie. Luostari oli [[pyhiinvaeltajille]] ja muille matkaajille luonteva pysähdyspaikka reitin varrella. Merireittiä minäkin kunnioitan, vaikka lennän suoraan.
+KYSYMYS: Kerro lisää: Trondheimin
+
+### 358
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Seljan luostari (historia)
+Tietoruudun teksti: Seljan saarelle liittyy yksi Norjan vanhimmista kristillisistä legendoista: perimätiedon mukaan irlantilainen kuninkaantytär Sunniva pakeni pakkoavioliittoa laivalla ja haaksirikkoutui saarelle 900-luvulla, jossa hän kuoli piileskellessään luolassa vainoojiaan. Hänen pyhäinjäännöstensä ympärille syntyi suosittu pyhiinvaelluskohde, ja benediktiiniluostari perustettiin saarelle noin vuonna 1100, puoliväliin Bergenin ja Nidarosin merireittiä. Luostari koki takaiskun tuhoisassa tulipalossa vuonna 1305, ja mahdollisesti musta surma vuonna 1349 heikensi yhteisöä entisestään, vaikka luostarielämä saattoi jatkua vielä 1400-luvun puoliväliin asti. Piispa Finnboge erotti viimeisen apotin virastaan 1460–1470-luvuilla ja siirsi luostarin maaomaisuuden Bergenin hiippakunnalle, mikä lopetti luostaritoiminnan saarella. Koska saarelle ei myöhemmin asetuttu asumaan, kivirauniot ovat säilyneet hyvin nyky…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lalibela — kohdekartta / Kohdekartta: Biete Giyorgis] 1100-luvun loppu Pyhän Yrjön kirkko on louhittu alaspäin vulkaanisesta tuffista, joka on koko rakenteen ainoa materiaali. Se on ajoitettu 1100-luvun loppuun tai 1200-luvun alkuun ja on todennäköisesti viimeinen yhdestätoista kirkosta. Pohjakaava on risti, ja katto on maanpinnan tasalla. Kirkkoa on kutsuttu maailman kahdeksanneksi ihmeeksi, ja se on kirkoista parhaiten säilynyt. Ensi näkemältä paikka vaikuttaa täysin saavuttamattomalta: joka puolella on pystysuora pudotus eikä sisäänkäyntisiltaa. Sisään mennään hyvin kapeaa, ihmisen hakkaamaa kanjonia pitkin, joka kiertää alaspäin ja muuttuu lähellä kirkkoa tunneliksi — se kätkee kirkon entisestään. Ulkoseinillä on yksinkertaisia avoimia hau…
+AIEMPI KYSYMYS: Miksi merireitti Bergenistä Nidarosiin oli keskiajalla tärkeä?
+AIEMPI VASTAUS (Livia):
+Ai se. Seljan luostari sijaitsi puolivälissä Bergenin ja Nidarosin välistä merireittiä. Nidaros on nykyisen [[Trondheimin]] keskiaikainen nimi, ja Norjan vuoristoisessa maastossa rannikkoväylä oli luonteva kulkutie. Luostari oli [[pyhiinvaeltajille]] ja muille matkaajille luonteva pysähdyspaikka reitin varrella. Merireittiä minäkin kunnioitan, vaikka lennän suoraan.
+KYSYMYS: Kerro lisää: pyhiinvaeltajille
+
+### 359
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Seljan luostari (historia)
+Tietoruudun teksti: Seljan saarelle liittyy yksi Norjan vanhimmista kristillisistä legendoista: perimätiedon mukaan irlantilainen kuninkaantytär Sunniva pakeni pakkoavioliittoa laivalla ja haaksirikkoutui saarelle 900-luvulla, jossa hän kuoli piileskellessään luolassa vainoojiaan. Hänen pyhäinjäännöstensä ympärille syntyi suosittu pyhiinvaelluskohde, ja benediktiiniluostari perustettiin saarelle noin vuonna 1100, puoliväliin Bergenin ja Nidarosin merireittiä. Luostari koki takaiskun tuhoisassa tulipalossa vuonna 1305, ja mahdollisesti musta surma vuonna 1349 heikensi yhteisöä entisestään, vaikka luostarielämä saattoi jatkua vielä 1400-luvun puoliväliin asti. Piispa Finnboge erotti viimeisen apotin virastaan 1460–1470-luvuilla ja siirsi luostarin maaomaisuuden Bergenin hiippakunnalle, mikä lopetti luostaritoiminnan saarella. Koska saarelle ei myöhemmin asetuttu asumaan, kivirauniot ovat säilyneet hyvin nyky…
+AIEMPI KYSYMYS: Miksi Seljan rauniot ovat säilyneet niin hyvin?
+AIEMPI VASTAUS (Livia):
+Katotaas. Saarelle ei luostarin päättymisen jälkeen asetuttu asumaan, joten kukaan ei ole purkanut sen muureja uusiin rakennuksiin. Siksi [[kivirauniot]] ovat säilyneet hyvin nykypäivään asti. Ne muistuttavat keskiajan [[benediktiiniluostarin]] elämästä saaren hiljaisuudessa. Autio saari on rauhallinen paikka, mutta ei siellä pullaa myydä.
+KYSYMYS: Kerro lisää: kivirauniot
+
+### 360
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Seljan luostari (historia)
+Tietoruudun teksti: Seljan saarelle liittyy yksi Norjan vanhimmista kristillisistä legendoista: perimätiedon mukaan irlantilainen kuninkaantytär Sunniva pakeni pakkoavioliittoa laivalla ja haaksirikkoutui saarelle 900-luvulla, jossa hän kuoli piileskellessään luolassa vainoojiaan. Hänen pyhäinjäännöstensä ympärille syntyi suosittu pyhiinvaelluskohde, ja benediktiiniluostari perustettiin saarelle noin vuonna 1100, puoliväliin Bergenin ja Nidarosin merireittiä. Luostari koki takaiskun tuhoisassa tulipalossa vuonna 1305, ja mahdollisesti musta surma vuonna 1349 heikensi yhteisöä entisestään, vaikka luostarielämä saattoi jatkua vielä 1400-luvun puoliväliin asti. Piispa Finnboge erotti viimeisen apotin virastaan 1460–1470-luvuilla ja siirsi luostarin maaomaisuuden Bergenin hiippakunnalle, mikä lopetti luostaritoiminnan saarella. Koska saarelle ei myöhemmin asetuttu asumaan, kivirauniot ovat säilyneet hyvin nyky…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Munkelivin luostari] n. 1110 Kuningas Øystein I perusti benediktiiniluostarin noin vuonna 1110 ja omisti sen arkkienkeli Mikaelille. Paikka valittiin tarkoituksella: Nordnesin korkein kohta hallitsi juuri perustettua kaupunkia, ja luostarin oli määrä vauhdittaa sen kasvua. Munkeliv oli Norjan vanhimpia, rikkaimpia ja parhaiten dokumentoituja luostareita. Maan päällä siitä ei näy nykyään mitään. Ensimmäiset vuosisadat olivat vauraita, mutta 1300-luvun puolivälin musta surma käänsi suunnan. Vuonna 1393 rakennukset kärsivät pahoin, kun luostarin kimppuun kävivät vitaaliveljiksi kutsutut merirosvot. 1420-luvulla sen otti paavin luvalla haltuunsa birgittalaisjärjestö, ja siitä tuli kaksoisluostari, jossa asui sekä m…
+AIEMPI KYSYMYS: Miksi Seljan rauniot ovat säilyneet niin hyvin?
+AIEMPI VASTAUS (Livia):
+Katotaas. Saarelle ei luostarin päättymisen jälkeen asetuttu asumaan, joten kukaan ei ole purkanut sen muureja uusiin rakennuksiin. Siksi [[kivirauniot]] ovat säilyneet hyvin nykypäivään asti. Ne muistuttavat keskiajan [[benediktiiniluostarin]] elämästä saaren hiljaisuudessa. Autio saari on rauhallinen paikka, mutta ei siellä pullaa myydä.
+KYSYMYS: Kerro lisää: benediktiiniluostarin
+
+### 361
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Seljan luostari (historia)
+Tietoruudun teksti: Seljan saarelle liittyy yksi Norjan vanhimmista kristillisistä legendoista: perimätiedon mukaan irlantilainen kuninkaantytär Sunniva pakeni pakkoavioliittoa laivalla ja haaksirikkoutui saarelle 900-luvulla, jossa hän kuoli piileskellessään luolassa vainoojiaan. Hänen pyhäinjäännöstensä ympärille syntyi suosittu pyhiinvaelluskohde, ja benediktiiniluostari perustettiin saarelle noin vuonna 1100, puoliväliin Bergenin ja Nidarosin merireittiä. Luostari koki takaiskun tuhoisassa tulipalossa vuonna 1305, ja mahdollisesti musta surma vuonna 1349 heikensi yhteisöä entisestään, vaikka luostarielämä saattoi jatkua vielä 1400-luvun puoliväliin asti. Piispa Finnboge erotti viimeisen apotin virastaan 1460–1470-luvuilla ja siirsi luostarin maaomaisuuden Bergenin hiippakunnalle, mikä lopetti luostaritoiminnan saarella. Koska saarelle ei myöhemmin asetuttu asumaan, kivirauniot ovat säilyneet hyvin nyky…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: São Benton luostari] 1590–1671 Luostarin historia alkoi 1590, kun Manoel de Brito ja hänen poikansa Diogo lahjoittivat maata kahdelle Bahiasta tulleelle benediktiinimunkille, Pedro Ferrazille ja João Porcalholle. Munkit asuivat siihen asti vaatimattomassa majatalossa Nossa Senhora da Conceiçãon kappelin vieressä sillä kukkulalla, joka tunnetaan nyt São Benton mäkenä. Luostari sai 1596 lisäpyhimyksekseen Pyhän Benedictuksen ja 1602 uuden nimen Montserratin Neitsyen mukaan. Kirkon piirsi portugalilainen sotilasinsinööri Francisco Frias de Mesquita, työ alkoi 1633 ja valmistui 1671; rakennusaikana Bernardo de São Bento Correia de Souza muutti pohjan kolmilaivaiseksi, ja viereinen konventti valmistui vasta 1755 Jos…
+AIEMPI KYSYMYS: Keitä olivat benediktiinit ja mitä he tekivät?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Benediktiinit olivat munkkeja ja nunnia, jotka noudattivat noin 1500 vuotta sitten eläneen pyhän [[Benedictuksen]] sääntöä. Heidän tunnuslauseensa oli [[ora et labora]], rukoile ja tee työtä. Luostareissa viljeltiin maata, otettiin vieraita vastaan, opetettiin ja kopioitiin [[käsikirjoituksia]] käsin.
+
+Munkit leipoivat omat leipänsä, ja minä olen aina epäillyt, että joukossa oli joskus pullaakin. Todisteita minulla ei ole, mutta toivo elää.
+KYSYMYS: Kerro lisää: Benedictuksen
+
+### 362
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Seljan luostari (historia)
+Tietoruudun teksti: Seljan saarelle liittyy yksi Norjan vanhimmista kristillisistä legendoista: perimätiedon mukaan irlantilainen kuninkaantytär Sunniva pakeni pakkoavioliittoa laivalla ja haaksirikkoutui saarelle 900-luvulla, jossa hän kuoli piileskellessään luolassa vainoojiaan. Hänen pyhäinjäännöstensä ympärille syntyi suosittu pyhiinvaelluskohde, ja benediktiiniluostari perustettiin saarelle noin vuonna 1100, puoliväliin Bergenin ja Nidarosin merireittiä. Luostari koki takaiskun tuhoisassa tulipalossa vuonna 1305, ja mahdollisesti musta surma vuonna 1349 heikensi yhteisöä entisestään, vaikka luostarielämä saattoi jatkua vielä 1400-luvun puoliväliin asti. Piispa Finnboge erotti viimeisen apotin virastaan 1460–1470-luvuilla ja siirsi luostarin maaomaisuuden Bergenin hiippakunnalle, mikä lopetti luostaritoiminnan saarella. Koska saarelle ei myöhemmin asetuttu asumaan, kivirauniot ovat säilyneet hyvin nyky…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Grand Canyon — kaupunkilehti / Kivi, joki ja eliöt: Orava jonka kanjoni erotti serkuistaan] Kaibab-orava elää vain yhdessä paikassa maailmassa: Grand Canyonin pohjoisreunan mäntymetsissä. Se on läheistä sukua etelärannan Abert-oravalle, mutta kanjoni on erottanut kannat toisistaan niin kauan – luultavasti tuhansia vuosia – että niistä on kehittynyt eri näköisiä: Kaibab-oravalla on tumma, lähes musta vatsanpuoli ja täysin valkoinen, tuuhea häntä, kun taas Abert-oravan häntä on kaksivärinen. Syvä rotko ja sen pohjalla polttava kuumuus ovat este puissa liikkuvalle jyrsijälle, joten kannat eivät ole koskaan sekoittuneet keskenään – kanjonista on tullut elävä esimerkki siitä, miten maantiede voi ohjata lajien kehitystä erilleen.
+- [Etelä-Sudan — maalehti / Tarinat ja uskomukset: Kolme oraakkelia, joilla oli eri hinta] Azandet käyttivät kolmea oraakkelia, ja niillä oli selvä arvojärjestys. Arvostetuin oli benge, myrkkyoraakkeli, jota vain miehet saivat käyttää ja jonka päätöstä ei kyseenalaistettu. Sitä halvempi ja kaikille avoin oli termiittioraakkeli, jonka vastausta naiset, miehet ja lapset saivat kysyä. Halvin ja epäluotettavimpana pidetty oli hankausoraakkeli, kahdesta puupalasta tehty väline, joka kulki mukana ja jolta saattoi kysyä missä ja milloin tahansa. Pitkään oraakkelit olivat myös oikeuslaitos: ne osoittivat, kuka oli aiheuttanut onnettomuuden.
+AIEMPI KYSYMYS: Keitä olivat benediktiinit ja mitä he tekivät?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Benediktiinit olivat munkkeja ja nunnia, jotka noudattivat noin 1500 vuotta sitten eläneen pyhän [[Benedictuksen]] sääntöä. Heidän tunnuslauseensa oli [[ora et labora]], rukoile ja tee työtä. Luostareissa viljeltiin maata, otettiin vieraita vastaan, opetettiin ja kopioitiin [[käsikirjoituksia]] käsin.
+
+Munkit leipoivat omat leipänsä, ja minä olen aina epäillyt, että joukossa oli joskus pullaakin. Todisteita minulla ei ole, mutta toivo elää.
+KYSYMYS: Kerro lisää: ora et labora
+
+### 363
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Seljan luostari (historia)
+Tietoruudun teksti: Seljan saarelle liittyy yksi Norjan vanhimmista kristillisistä legendoista: perimätiedon mukaan irlantilainen kuninkaantytär Sunniva pakeni pakkoavioliittoa laivalla ja haaksirikkoutui saarelle 900-luvulla, jossa hän kuoli piileskellessään luolassa vainoojiaan. Hänen pyhäinjäännöstensä ympärille syntyi suosittu pyhiinvaelluskohde, ja benediktiiniluostari perustettiin saarelle noin vuonna 1100, puoliväliin Bergenin ja Nidarosin merireittiä. Luostari koki takaiskun tuhoisassa tulipalossa vuonna 1305, ja mahdollisesti musta surma vuonna 1349 heikensi yhteisöä entisestään, vaikka luostarielämä saattoi jatkua vielä 1400-luvun puoliväliin asti. Piispa Finnboge erotti viimeisen apotin virastaan 1460–1470-luvuilla ja siirsi luostarin maaomaisuuden Bergenin hiippakunnalle, mikä lopetti luostaritoiminnan saarella. Koska saarelle ei myöhemmin asetuttu asumaan, kivirauniot ovat säilyneet hyvin nyky…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sana — kohdekartta / Kohdekartta: Suuri moskeija] perimätiedon mukaan noin 630 Al-Jami al-Kabir on kartan tärkein rakennus ja kenties koko islamilaisen maailman vanhimpia moskeijoita. Varhaisten islamilaisten lähteiden mukaan Muhammad käski rakentaa sen noin vuonna 630, ja sitä pidetään ensimmäisenä Mekan ja Medinan ulkopuolelle rakennettuna moskeijana. Ajoitus nojaa perimätietoon: sama artikkeli antaa tietolaatikossaan väljemmän arvion 600–700-luvuille. Kaivauslöydöt kuitenkin tukevat varhaista ikää, sillä seinistä on löytynyt rakennusosia sekä aksumilaisesta katedraalista että sabalaisesta Ghumdanin palatsista — moskeija on siis rakennettu vanhemman kaupungin kivistä. Sen jälkeen se on rakennettu uudelleen monta kertaa. Umaijadikalifi al…
+- [Lhasa — kohdekartta / Kohdekartta: Jokhang-temppeli] 600-luvun puoliväli, laajennettu 1610 Jokhang on nelikerroksinen ja peittää kaksi ja puoli hehtaaria. Katot on päällystetty kullatuilla pronssitiilillä, ja harjoilla seisovat kultaiset kauriit opinkehrän kummallakin puolella, voitonliput ja kalahahmot. Pohjakaava on intialaisen vihara-luostarin mallia, ja siihen on myöhemmin sekoittunut nepalilaista ja Tang-kauden kiinalaista rakennustapaa. Ovenpielet, pylväät ja huiput ovat 600- ja 700-luvun newar-työtä Kathmandun laaksosta, ja kattopalkkien on radiohiiliajoituksella todettu olevan alkuperäisiä. Sisällä kierretään ympyrää: uloimmalla kehällä on rivi suuria rukousmyllyjä, ja sen sisäpuolella on päähalli kappeleineen. Päähallissa on puolitoi…
+AIEMPI KYSYMYS: Keitä olivat benediktiinit ja mitä he tekivät?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Benediktiinit olivat munkkeja ja nunnia, jotka noudattivat noin 1500 vuotta sitten eläneen pyhän [[Benedictuksen]] sääntöä. Heidän tunnuslauseensa oli [[ora et labora]], rukoile ja tee työtä. Luostareissa viljeltiin maata, otettiin vieraita vastaan, opetettiin ja kopioitiin [[käsikirjoituksia]] käsin.
+
+Munkit leipoivat omat leipänsä, ja minä olen aina epäillyt, että joukossa oli joskus pullaakin. Todisteita minulla ei ole, mutta toivo elää.
+KYSYMYS: Kerro lisää: käsikirjoituksia
+
+### 364
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Oslo
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kun isoisäsi kirjoitti Bergenissä, tässä talossa oli yksitoistakuukautinen poika — hänestä tuli ensimmäinen ihminen etelänavalla
+Tietoruudun teksti: Roald Amundsen syntyi 16. heinäkuuta 1872 Borgessa, Fredrikstadin ja Sarpsborgin välillä, laivanvarustajien ja kapteenien sukuun neljäntenä poikana. Kun isoisäsi istui vuotta myöhemmin bergeniläisen kapakan ikkunapöydässä, tämä poika oli yksitoistakuukautinen. Äiti toivoi hänestä lääkäriä, ja hän piti lupauksensa siihen asti kunnes äiti kuoli — silloin hän oli 21, ja hän jätti yliopiston ja lähti merille samana vuonna. Viisitoistavuotiaana hän oli lukenut John Franklinin kertomukset arktisilta retkiltä ja kirjoitti myöhemmin lukeneensa ne palolla, joka muovasi hänen koko elämänsä suunnan. Ensimmäinen työ jäillä oli perämiehen paikka belgialaisella etelämannerretkellä 1897–1899. Sitten hän vei pienen Gjøan Luoteisväylän läpi 1903–1906, ensimmäisenä, ja se kesti kolme vuotta.
+
+Etelänapa oli suunniteltu tarkasti. Amundsen lähti Norjasta kesäkuussa 1910 Fram-laivalla, saapui Etelämantereell…
+Isoisän matkakirjamerkintä: Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historian hetki: Etelänapa 1911 — viisi miestä ja lipputanko] 14.12.1911 — Telttaan jää kirje. Se on osoitettu Norjan kuninkaalle, ja sen viejäksi pyydetään Robert Scottia — siltä varalta, että Scott saapuu perille mutta viisi norjalaista ei pääse kotiin. Kello on noin kolme iltapäivällä, mittaukset sanovat että tämä on paikka, ja lipputankoon tarttuvat yhdessä Roald Amundsen, Olav Bjaaland, Helmer Hanssen, Sverre Hassel ja Oscar Wisting. Ylätasangon he nimeävät kuningas Haakon VII:n tasangoksi ja teltan Polheimiksi. Seuraavat kolme päivää kuluvat sekstantin ääressä ja hiihtäen navan ympäri ristiin rastiin, jotta paikka olisi todistettavasti oikea: Cookin ja Pearyn riitaiset pohjoisnapaväitteet ovat tuoreessa muistissa. Lipunnosto kestää hetken, ja ko…
+- [Oslo — kaupunkilehti / Laivat: Runko tehtiin jäätä varten] Fridtjof Nansen halusi ajelehtia jään mukana kohti pohjoisnapaa, mutta jää oli murskannut monta laivaa ennen häntä. Niinpä laivanrakentaja Colin Archer teki vuonna 1892 laivan, jonka pohja on pyöreä ja kylki viisto: kun jää puristaa, se nostaa laivan ylös päälleen sen sijaan että litistäisi sen. Fram on epätavallisen leveä ja matala, ja siinä oli tuulimylly sähkövaloja varten. Sillä purjehtivat sekä Nansen että myöhemmin Roald Amundsen, ja nykyään sen ympärille on rakennettu museo.
+AIEMPI KYSYMYS: Miksi koirat ratkaisivat matkan etelänavalle?
+AIEMPI VASTAUS (Livia):
+Kato, tää on hyvä tarina. [[Roald Amundsen]] saapui etelänavalle 14. joulukuuta 1911 viiden miehen ryhmän ja [[koiravaljakoiden]] kanssa. Ratkaisu oli koirissa: ne kestivät pakkasta ja vetivät raskasta kuormaa, joten retkikunta eteni sitä nopeammin. Britti [[Robert Scott]] saapui samaan paikkaan 34 päivää myöhemmin. Koira, ei kyyhky, pelasti sen retken.
+KYSYMYS: Kerro lisää: Roald Amundsen
+
+### 365
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Oslo
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kun isoisäsi kirjoitti Bergenissä, tässä talossa oli yksitoistakuukautinen poika — hänestä tuli ensimmäinen ihminen etelänavalla
+Tietoruudun teksti: Roald Amundsen syntyi 16. heinäkuuta 1872 Borgessa, Fredrikstadin ja Sarpsborgin välillä, laivanvarustajien ja kapteenien sukuun neljäntenä poikana. Kun isoisäsi istui vuotta myöhemmin bergeniläisen kapakan ikkunapöydässä, tämä poika oli yksitoistakuukautinen. Äiti toivoi hänestä lääkäriä, ja hän piti lupauksensa siihen asti kunnes äiti kuoli — silloin hän oli 21, ja hän jätti yliopiston ja lähti merille samana vuonna. Viisitoistavuotiaana hän oli lukenut John Franklinin kertomukset arktisilta retkiltä ja kirjoitti myöhemmin lukeneensa ne palolla, joka muovasi hänen koko elämänsä suunnan. Ensimmäinen työ jäillä oli perämiehen paikka belgialaisella etelämannerretkellä 1897–1899. Sitten hän vei pienen Gjøan Luoteisväylän läpi 1903–1906, ensimmäisenä, ja se kesti kolme vuotta.
+
+Etelänapa oli suunniteltu tarkasti. Amundsen lähti Norjasta kesäkuussa 1910 Fram-laivalla, saapui Etelämantereell…
+Isoisän matkakirjamerkintä: Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Etelänavalle koirien vetämänä] 1911 — Roald Amundsen saapui etelänavalle 14. joulukuuta 1911 neljän miehen ja koiravaljakoiden kanssa. Ratkaisu oli koirissa: ne kestivät pakkasta, vetivät kuormaa ja söivät samaa ruokaa kuin miehet. Britti Robert Scott saapui samaan paikkaan 34 päivää myöhemmin ja löysi sieltä Norjan lipun ja Amundsenin jättämän kirjeen. Scottin retkikunta menehtyi paluumatkalla. Amundsen oli aiemmin purjehtinut ensimmäisenä Luoteisväylän ja myöhemmin lensi ilmalaivalla pohjoisnavan yli.
+AIEMPI KYSYMYS: Miksi koirat ratkaisivat matkan etelänavalle?
+AIEMPI VASTAUS (Livia):
+Kato, tää on hyvä tarina. [[Roald Amundsen]] saapui etelänavalle 14. joulukuuta 1911 viiden miehen ryhmän ja [[koiravaljakoiden]] kanssa. Ratkaisu oli koirissa: ne kestivät pakkasta ja vetivät raskasta kuormaa, joten retkikunta eteni sitä nopeammin. Britti [[Robert Scott]] saapui samaan paikkaan 34 päivää myöhemmin. Koira, ei kyyhky, pelasti sen retken.
+KYSYMYS: Kerro lisää: koiravaljakoiden
+
+### 366
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Oslo
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kun isoisäsi kirjoitti Bergenissä, tässä talossa oli yksitoistakuukautinen poika — hänestä tuli ensimmäinen ihminen etelänavalla
+Tietoruudun teksti: Roald Amundsen syntyi 16. heinäkuuta 1872 Borgessa, Fredrikstadin ja Sarpsborgin välillä, laivanvarustajien ja kapteenien sukuun neljäntenä poikana. Kun isoisäsi istui vuotta myöhemmin bergeniläisen kapakan ikkunapöydässä, tämä poika oli yksitoistakuukautinen. Äiti toivoi hänestä lääkäriä, ja hän piti lupauksensa siihen asti kunnes äiti kuoli — silloin hän oli 21, ja hän jätti yliopiston ja lähti merille samana vuonna. Viisitoistavuotiaana hän oli lukenut John Franklinin kertomukset arktisilta retkiltä ja kirjoitti myöhemmin lukeneensa ne palolla, joka muovasi hänen koko elämänsä suunnan. Ensimmäinen työ jäillä oli perämiehen paikka belgialaisella etelämannerretkellä 1897–1899. Sitten hän vei pienen Gjøan Luoteisväylän läpi 1903–1906, ensimmäisenä, ja se kesti kolme vuotta.
+
+Etelänapa oli suunniteltu tarkasti. Amundsen lähti Norjasta kesäkuussa 1910 Fram-laivalla, saapui Etelämantereell…
+Isoisän matkakirjamerkintä: Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historian hetki: Etelänapa 1911 — viisi miestä ja lipputanko] 14.12.1911 — Telttaan jää kirje. Se on osoitettu Norjan kuninkaalle, ja sen viejäksi pyydetään Robert Scottia — siltä varalta, että Scott saapuu perille mutta viisi norjalaista ei pääse kotiin. Kello on noin kolme iltapäivällä, mittaukset sanovat että tämä on paikka, ja lipputankoon tarttuvat yhdessä Roald Amundsen, Olav Bjaaland, Helmer Hanssen, Sverre Hassel ja Oscar Wisting. Ylätasangon he nimeävät kuningas Haakon VII:n tasangoksi ja teltan Polheimiksi. Seuraavat kolme päivää kuluvat sekstantin ääressä ja hiihtäen navan ympäri ristiin rastiin, jotta paikka olisi todistettavasti oikea: Cookin ja Pearyn riitaiset pohjoisnapaväitteet ovat tuoreessa muistissa. Lipunnosto kestää hetken, ja ko…
+- [Norja — maalehti / Historia: Etelänavalle koirien vetämänä] 1911 — Roald Amundsen saapui etelänavalle 14. joulukuuta 1911 neljän miehen ja koiravaljakoiden kanssa. Ratkaisu oli koirissa: ne kestivät pakkasta, vetivät kuormaa ja söivät samaa ruokaa kuin miehet. Britti Robert Scott saapui samaan paikkaan 34 päivää myöhemmin ja löysi sieltä Norjan lipun ja Amundsenin jättämän kirjeen. Scottin retkikunta menehtyi paluumatkalla. Amundsen oli aiemmin purjehtinut ensimmäisenä Luoteisväylän ja myöhemmin lensi ilmalaivalla pohjoisnavan yli.
+AIEMPI KYSYMYS: Miksi koirat ratkaisivat matkan etelänavalle?
+AIEMPI VASTAUS (Livia):
+Kato, tää on hyvä tarina. [[Roald Amundsen]] saapui etelänavalle 14. joulukuuta 1911 viiden miehen ryhmän ja [[koiravaljakoiden]] kanssa. Ratkaisu oli koirissa: ne kestivät pakkasta ja vetivät raskasta kuormaa, joten retkikunta eteni sitä nopeammin. Britti [[Robert Scott]] saapui samaan paikkaan 34 päivää myöhemmin. Koira, ei kyyhky, pelasti sen retken.
+KYSYMYS: Kerro lisää: Robert Scott
+
+### 367
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Oslo
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kun isoisäsi kirjoitti Bergenissä, tässä talossa oli yksitoistakuukautinen poika — hänestä tuli ensimmäinen ihminen etelänavalla
+Tietoruudun teksti: Roald Amundsen syntyi 16. heinäkuuta 1872 Borgessa, Fredrikstadin ja Sarpsborgin välillä, laivanvarustajien ja kapteenien sukuun neljäntenä poikana. Kun isoisäsi istui vuotta myöhemmin bergeniläisen kapakan ikkunapöydässä, tämä poika oli yksitoistakuukautinen. Äiti toivoi hänestä lääkäriä, ja hän piti lupauksensa siihen asti kunnes äiti kuoli — silloin hän oli 21, ja hän jätti yliopiston ja lähti merille samana vuonna. Viisitoistavuotiaana hän oli lukenut John Franklinin kertomukset arktisilta retkiltä ja kirjoitti myöhemmin lukeneensa ne palolla, joka muovasi hänen koko elämänsä suunnan. Ensimmäinen työ jäillä oli perämiehen paikka belgialaisella etelämannerretkellä 1897–1899. Sitten hän vei pienen Gjøan Luoteisväylän läpi 1903–1906, ensimmäisenä, ja se kesti kolme vuotta.
+
+Etelänapa oli suunniteltu tarkasti. Amundsen lähti Norjasta kesäkuussa 1910 Fram-laivalla, saapui Etelämantereell…
+Isoisän matkakirjamerkintä: Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Lipun kannossa oli silakkasalaatti] 1844 — Norjan nykyinen lippu suunniteltiin jo 1821; sen teki suurkäräjien jäsen Fredrik Meltzer, ja hän perusteli punaista, valkoista ja sinistä sillä, että ne merkitsivät silloin vapautta. Sillä lipulla sai kuitenkin purjehtia vain pohjoisilla vesillä: Kapp Finisterren eteläpuolella oli käytettävä unionin yhteistä kauppalippua, koska suoja Pohjois-Afrikan kaappareilta tuli Ruotsin maksamana. Vuonna 1844 molempien maiden lippujen kantoon pantiin yhteinen unionimerkki, joka jakoi värit tasan. Kansa antoi sille nimen sildesalaten, silakkasalaatti. Kauppalipun kannosta merkki katosi vuoden 1899 lopussa.
+AIEMPI KYSYMYS: Mitä Scott löysi navalta?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Scott löysi navalta [[Norjan lipun]] ja Amundsenin telttaan jättämän kirjeen. Kirje oli osoitettu Norjan kuninkaalle, [[Haakon VII:lle]], ja Scottia pyydettiin viemään se perille siltä varalta, ettei Amundsenin ryhmä pääsisi kotiin. Scottin retkikunta menehtyi itse paluumatkalla vuonna 1912, ja siitä on kulunut yli sata vuotta. Siitä on onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Norjan lipun
+
+### 368
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Oslo
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kun isoisäsi kirjoitti Bergenissä, tässä talossa oli yksitoistakuukautinen poika — hänestä tuli ensimmäinen ihminen etelänavalla
+Tietoruudun teksti: Roald Amundsen syntyi 16. heinäkuuta 1872 Borgessa, Fredrikstadin ja Sarpsborgin välillä, laivanvarustajien ja kapteenien sukuun neljäntenä poikana. Kun isoisäsi istui vuotta myöhemmin bergeniläisen kapakan ikkunapöydässä, tämä poika oli yksitoistakuukautinen. Äiti toivoi hänestä lääkäriä, ja hän piti lupauksensa siihen asti kunnes äiti kuoli — silloin hän oli 21, ja hän jätti yliopiston ja lähti merille samana vuonna. Viisitoistavuotiaana hän oli lukenut John Franklinin kertomukset arktisilta retkiltä ja kirjoitti myöhemmin lukeneensa ne palolla, joka muovasi hänen koko elämänsä suunnan. Ensimmäinen työ jäillä oli perämiehen paikka belgialaisella etelämannerretkellä 1897–1899. Sitten hän vei pienen Gjøan Luoteisväylän läpi 1903–1906, ensimmäisenä, ja se kesti kolme vuotta.
+
+Etelänapa oli suunniteltu tarkasti. Amundsen lähti Norjasta kesäkuussa 1910 Fram-laivalla, saapui Etelämantereell…
+Isoisän matkakirjamerkintä: Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historian hetki: Etelänapa 1911 — viisi miestä ja lipputanko] 14.12.1911 — Telttaan jää kirje. Se on osoitettu Norjan kuninkaalle, ja sen viejäksi pyydetään Robert Scottia — siltä varalta, että Scott saapuu perille mutta viisi norjalaista ei pääse kotiin. Kello on noin kolme iltapäivällä, mittaukset sanovat että tämä on paikka, ja lipputankoon tarttuvat yhdessä Roald Amundsen, Olav Bjaaland, Helmer Hanssen, Sverre Hassel ja Oscar Wisting. Ylätasangon he nimeävät kuningas Haakon VII:n tasangoksi ja teltan Polheimiksi. Seuraavat kolme päivää kuluvat sekstantin ääressä ja hiihtäen navan ympäri ristiin rastiin, jotta paikka olisi todistettavasti oikea: Cookin ja Pearyn riitaiset pohjoisnapaväitteet ovat tuoreessa muistissa. Lipunnosto kestää hetken, ja ko…
+AIEMPI KYSYMYS: Mitä Scott löysi navalta?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Scott löysi navalta [[Norjan lipun]] ja Amundsenin telttaan jättämän kirjeen. Kirje oli osoitettu Norjan kuninkaalle, [[Haakon VII:lle]], ja Scottia pyydettiin viemään se perille siltä varalta, ettei Amundsenin ryhmä pääsisi kotiin. Scottin retkikunta menehtyi itse paluumatkalla vuonna 1912, ja siitä on kulunut yli sata vuotta. Siitä on onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Haakon VII:lle
+
+### 369
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Oslo
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kun isoisäsi kirjoitti Bergenissä, tässä talossa oli yksitoistakuukautinen poika — hänestä tuli ensimmäinen ihminen etelänavalla
+Tietoruudun teksti: Roald Amundsen syntyi 16. heinäkuuta 1872 Borgessa, Fredrikstadin ja Sarpsborgin välillä, laivanvarustajien ja kapteenien sukuun neljäntenä poikana. Kun isoisäsi istui vuotta myöhemmin bergeniläisen kapakan ikkunapöydässä, tämä poika oli yksitoistakuukautinen. Äiti toivoi hänestä lääkäriä, ja hän piti lupauksensa siihen asti kunnes äiti kuoli — silloin hän oli 21, ja hän jätti yliopiston ja lähti merille samana vuonna. Viisitoistavuotiaana hän oli lukenut John Franklinin kertomukset arktisilta retkiltä ja kirjoitti myöhemmin lukeneensa ne palolla, joka muovasi hänen koko elämänsä suunnan. Ensimmäinen työ jäillä oli perämiehen paikka belgialaisella etelämannerretkellä 1897–1899. Sitten hän vei pienen Gjøan Luoteisväylän läpi 1903–1906, ensimmäisenä, ja se kesti kolme vuotta.
+
+Etelänapa oli suunniteltu tarkasti. Amundsen lähti Norjasta kesäkuussa 1910 Fram-laivalla, saapui Etelämantereell…
+Isoisän matkakirjamerkintä: Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan tuomiokirkko] 1861 Tromssan tuomiokirkko on kokonaan puusta rakennettu keltainen kirkko, joka valmistui vuonna 1861 arkkitehti Christian Heinrich Groschin piirustusten mukaan. Se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu puusta - ja sen sisään mahtuu yli 600 kirkkovierasta! Paikalla on ollut kirkko jo satoja vuosia ennen tätäkin: kuningas Håkon IV rakennutti tänne kappelin jo vuonna 1252, ja sen jälkeen paikalla on ollut ainakin kaksi muuta kirkkoa ennen nykyistä rakennusta. Kellotorni valmistui vuotta myöhemmin, 1862, ja kirkkoa koristeltiin lisää vielä 1880-luvulla. Isoisän vieraillessa Tromssassa 1873 kirkko oli vasta reilut kymmenen vuotta vanha - täysin uusi nähtävyys pienessä pu…
+- [Tromssa — kohdekartta / Kohdekartta: Polaarimuseo] 1837 (rakennus) / 1978 (museo) Polaarimuseo on hämmentävän vanhassa talossa: se toimii vuonna 1837 rakennetussa laiturimakasiinissa, jonne aikoinaan varastoitiin turkiksia ja muita tavaroita. Talon paksut hirsiseinät ovat nähneet satamassa satojen vuosien ajan hylkeenpyytäjien ja karhumiesten laivoja. Museo kertoo, miten Tromssasta tuli 1800-luvun puolivälissä pohjoisen jäämeren pyynnin pääkaupunki - jo vuoden 1850 tienoilla kaupunki ohitti tärkeydessä aiemman keskuksen Hammerfestin. Täältä lähtivät liikkeelle myös kuuluisat retkeilijät: museo muistaa erityisesti Fridtjof Nansenia ja Roald Amundsenia, joiden matkat pohjoisnavalle ja Etelämantereelle saivat alkunsa juuri Tromssan satamasta. …
+- [Tromssa — kaupunkilehti / Historia] Tromssasta lähdettiin etsimään navan ympäriltä sekä mainetta että olutta, ja sinne ajautui lopulta myös Euroopan pelätyin sotalaiva.
+AIEMPI KYSYMYS: Miten Amundsen katosi?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Roald Amundsen katosi kesäkuussa 1928, kun hän lähti lentokoneella [[Tromssasta]] etsimään ilmalaivan haaksirikon kokeneita, joita johti [[Umberto Nobile]]. Konetta ei koskaan löydetty kokonaisena, mutta sen osia löytyi myöhemmin merestä, eikä Amundsenia löydetty. Tarkkaa tapahtumaketjua ei tiedetä, ja todennäköisesti kone joutui onnettomuuteen Pohjoisen jäämeren tuntumassa. Tapahtuma sattui lähes sata vuotta sitten, jolloin ilmailu oli vielä nuorta ja pelastusretket tehtiin nykyistä vaatimattomammilla laitteilla. Se on surullinen loppu, mutta retket muistetaan yhä.
+KYSYMYS: Kerro lisää: Tromssasta
+
+### 370
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Oslo
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kun isoisäsi kirjoitti Bergenissä, tässä talossa oli yksitoistakuukautinen poika — hänestä tuli ensimmäinen ihminen etelänavalla
+Tietoruudun teksti: Roald Amundsen syntyi 16. heinäkuuta 1872 Borgessa, Fredrikstadin ja Sarpsborgin välillä, laivanvarustajien ja kapteenien sukuun neljäntenä poikana. Kun isoisäsi istui vuotta myöhemmin bergeniläisen kapakan ikkunapöydässä, tämä poika oli yksitoistakuukautinen. Äiti toivoi hänestä lääkäriä, ja hän piti lupauksensa siihen asti kunnes äiti kuoli — silloin hän oli 21, ja hän jätti yliopiston ja lähti merille samana vuonna. Viisitoistavuotiaana hän oli lukenut John Franklinin kertomukset arktisilta retkiltä ja kirjoitti myöhemmin lukeneensa ne palolla, joka muovasi hänen koko elämänsä suunnan. Ensimmäinen työ jäillä oli perämiehen paikka belgialaisella etelämannerretkellä 1897–1899. Sitten hän vei pienen Gjøan Luoteisväylän läpi 1903–1906, ensimmäisenä, ja se kesti kolme vuotta.
+
+Etelänapa oli suunniteltu tarkasti. Amundsen lähti Norjasta kesäkuussa 1910 Fram-laivalla, saapui Etelämantereell…
+Isoisän matkakirjamerkintä: Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.
+AIEMPI KYSYMYS: Miten Amundsen katosi?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Roald Amundsen katosi kesäkuussa 1928, kun hän lähti lentokoneella [[Tromssasta]] etsimään ilmalaivan haaksirikon kokeneita, joita johti [[Umberto Nobile]]. Konetta ei koskaan löydetty kokonaisena, mutta sen osia löytyi myöhemmin merestä, eikä Amundsenia löydetty. Tarkkaa tapahtumaketjua ei tiedetä, ja todennäköisesti kone joutui onnettomuuteen Pohjoisen jäämeren tuntumassa. Tapahtuma sattui lähes sata vuotta sitten, jolloin ilmailu oli vielä nuorta ja pelastusretket tehtiin nykyistä vaatimattomammilla laitteilla. Se on surullinen loppu, mutta retket muistetaan yhä.
+KYSYMYS: Kerro lisää: Umberto Nobile
+
+### 371
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Oslo
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kun isoisäsi kirjoitti Bergenissä, tässä talossa oli yksitoistakuukautinen poika — hänestä tuli ensimmäinen ihminen etelänavalla
+Tietoruudun teksti: Roald Amundsen syntyi 16. heinäkuuta 1872 Borgessa, Fredrikstadin ja Sarpsborgin välillä, laivanvarustajien ja kapteenien sukuun neljäntenä poikana. Kun isoisäsi istui vuotta myöhemmin bergeniläisen kapakan ikkunapöydässä, tämä poika oli yksitoistakuukautinen. Äiti toivoi hänestä lääkäriä, ja hän piti lupauksensa siihen asti kunnes äiti kuoli — silloin hän oli 21, ja hän jätti yliopiston ja lähti merille samana vuonna. Viisitoistavuotiaana hän oli lukenut John Franklinin kertomukset arktisilta retkiltä ja kirjoitti myöhemmin lukeneensa ne palolla, joka muovasi hänen koko elämänsä suunnan. Ensimmäinen työ jäillä oli perämiehen paikka belgialaisella etelämannerretkellä 1897–1899. Sitten hän vei pienen Gjøan Luoteisväylän läpi 1903–1906, ensimmäisenä, ja se kesti kolme vuotta.
+
+Etelänapa oli suunniteltu tarkasti. Amundsen lähti Norjasta kesäkuussa 1910 Fram-laivalla, saapui Etelämantereell…
+Isoisän matkakirjamerkintä: Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Oslo — kaupunkilehti / Historian hetki: Kristiania 1893 — laiva, jonka jää nostaa] 24.6.1893 — Milloin isä tulee takaisin? Sitä ei laiturilla osaa sanoa kukaan. 31-vuotias Fridtjof Nansen jättää rantaan Eva-vaimonsa ja muutaman kuukauden ikäisen Liv-tyttärensä eikä lupaa paluupäivää. Rantakadut ovat mustanaan väkeä, linnoitukselta ammutaan kunnialaukaukset, ja vuonolle liukuu alus, joka näyttää väärin rakennetulta. Fram on matala ja pyöreäpohjainen: Colin Archer suunnitteli sen niin, ettei jäällä ole mistään otetta, vaan ahtojää nostaa laivan ylös eikä murskaa sitä. Runko on kolmea puukerrosta paksu — kuudestakymmenestä seitsemäänkymmeneen senttiä, keulassa runsaan metrin — ja päällystetty greenheart-puulla. Kannella on kolmetoista miestä, ja suunnitelma on se, jota moni …
+- [Oslo — kohdekartta / Kohdekartta: Fram 1893] Milloin isä tulee takaisin? Sitä ei laiturilla osaa sanoa kukaan. 31-vuotias Fridtjof Nansen jättää rantaan Eva-vaimonsa ja muutaman kuukauden ikäisen Liv-tyttärensä eikä lupaa paluupäivää. Rantakadut ovat mustanaan väkeä, linnoitukselta ammutaan kunnialaukaukset, ja vuonolle liukuu alus, joka näyttää väärin rakennetulta. Fram on matala ja pyöreäpohjainen: Colin Archer suunnitteli sen niin, ettei jäällä ole mistään otetta, vaan ahtojää nostaa laivan ylös eikä murskaa sitä. Runko on kolmea puukerrosta paksu — kuudestakymmenestä seitsemäänkymmeneen senttiä, keulassa runsaan metrin — ja päällystetty greenheart-puulla. Kannella on kolmetoista miestä, ja suunnitelma on se, jota moni tutkija on j…
+AIEMPI KYSYMYS: Miksi Fram-laivan runko tehtiin pyöreäpohjaiseksi?
+AIEMPI VASTAUS (Livia):
+Ai tota. Laivanrakentaja [[Colin Archer]] teki Framin vuonna 1892 niin, että sen pohja on pyöreä ja kylki viisto. Kun jää puristaa, se nostaa laivan päälleen sen sijaan että litistäisi sen. Fram on epätavallisen leveä ja matala, ja siinä oli [[tuulimylly]] sähkövaloja varten. Sillä purjehtivat sekä [[Fridtjof Nansen]] että myöhemmin Roald Amundsen, ja nykyään sen ympärille on rakennettu museo. Laiva, joka nousee jään päälle, ansaitsee kyllä kyyhkyn ihailun.
+KYSYMYS: Kerro lisää: Colin Archer
+
+### 372
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Oslo
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kun isoisäsi kirjoitti Bergenissä, tässä talossa oli yksitoistakuukautinen poika — hänestä tuli ensimmäinen ihminen etelänavalla
+Tietoruudun teksti: Roald Amundsen syntyi 16. heinäkuuta 1872 Borgessa, Fredrikstadin ja Sarpsborgin välillä, laivanvarustajien ja kapteenien sukuun neljäntenä poikana. Kun isoisäsi istui vuotta myöhemmin bergeniläisen kapakan ikkunapöydässä, tämä poika oli yksitoistakuukautinen. Äiti toivoi hänestä lääkäriä, ja hän piti lupauksensa siihen asti kunnes äiti kuoli — silloin hän oli 21, ja hän jätti yliopiston ja lähti merille samana vuonna. Viisitoistavuotiaana hän oli lukenut John Franklinin kertomukset arktisilta retkiltä ja kirjoitti myöhemmin lukeneensa ne palolla, joka muovasi hänen koko elämänsä suunnan. Ensimmäinen työ jäillä oli perämiehen paikka belgialaisella etelämannerretkellä 1897–1899. Sitten hän vei pienen Gjøan Luoteisväylän läpi 1903–1906, ensimmäisenä, ja se kesti kolme vuotta.
+
+Etelänapa oli suunniteltu tarkasti. Amundsen lähti Norjasta kesäkuussa 1910 Fram-laivalla, saapui Etelämantereell…
+Isoisän matkakirjamerkintä: Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Oslo — kaupunkilehti / Laivat: Runko tehtiin jäätä varten] Fridtjof Nansen halusi ajelehtia jään mukana kohti pohjoisnapaa, mutta jää oli murskannut monta laivaa ennen häntä. Niinpä laivanrakentaja Colin Archer teki vuonna 1892 laivan, jonka pohja on pyöreä ja kylki viisto: kun jää puristaa, se nostaa laivan ylös päälleen sen sijaan että litistäisi sen. Fram on epätavallisen leveä ja matala, ja siinä oli tuulimylly sähkövaloja varten. Sillä purjehtivat sekä Nansen että myöhemmin Roald Amundsen, ja nykyään sen ympärille on rakennettu museo.
+AIEMPI KYSYMYS: Miksi Fram-laivan runko tehtiin pyöreäpohjaiseksi?
+AIEMPI VASTAUS (Livia):
+Ai tota. Laivanrakentaja [[Colin Archer]] teki Framin vuonna 1892 niin, että sen pohja on pyöreä ja kylki viisto. Kun jää puristaa, se nostaa laivan päälleen sen sijaan että litistäisi sen. Fram on epätavallisen leveä ja matala, ja siinä oli [[tuulimylly]] sähkövaloja varten. Sillä purjehtivat sekä [[Fridtjof Nansen]] että myöhemmin Roald Amundsen, ja nykyään sen ympärille on rakennettu museo. Laiva, joka nousee jään päälle, ansaitsee kyllä kyyhkyn ihailun.
+KYSYMYS: Kerro lisää: tuulimylly
+
+### 373
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Oslo
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kun isoisäsi kirjoitti Bergenissä, tässä talossa oli yksitoistakuukautinen poika — hänestä tuli ensimmäinen ihminen etelänavalla
+Tietoruudun teksti: Roald Amundsen syntyi 16. heinäkuuta 1872 Borgessa, Fredrikstadin ja Sarpsborgin välillä, laivanvarustajien ja kapteenien sukuun neljäntenä poikana. Kun isoisäsi istui vuotta myöhemmin bergeniläisen kapakan ikkunapöydässä, tämä poika oli yksitoistakuukautinen. Äiti toivoi hänestä lääkäriä, ja hän piti lupauksensa siihen asti kunnes äiti kuoli — silloin hän oli 21, ja hän jätti yliopiston ja lähti merille samana vuonna. Viisitoistavuotiaana hän oli lukenut John Franklinin kertomukset arktisilta retkiltä ja kirjoitti myöhemmin lukeneensa ne palolla, joka muovasi hänen koko elämänsä suunnan. Ensimmäinen työ jäillä oli perämiehen paikka belgialaisella etelämannerretkellä 1897–1899. Sitten hän vei pienen Gjøan Luoteisväylän läpi 1903–1906, ensimmäisenä, ja se kesti kolme vuotta.
+
+Etelänapa oli suunniteltu tarkasti. Amundsen lähti Norjasta kesäkuussa 1910 Fram-laivalla, saapui Etelämantereell…
+Isoisän matkakirjamerkintä: Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Oslo — kaupunkilehti / Historian hetki: Kristiania 1893 — laiva, jonka jää nostaa] 24.6.1893 — Milloin isä tulee takaisin? Sitä ei laiturilla osaa sanoa kukaan. 31-vuotias Fridtjof Nansen jättää rantaan Eva-vaimonsa ja muutaman kuukauden ikäisen Liv-tyttärensä eikä lupaa paluupäivää. Rantakadut ovat mustanaan väkeä, linnoitukselta ammutaan kunnialaukaukset, ja vuonolle liukuu alus, joka näyttää väärin rakennetulta. Fram on matala ja pyöreäpohjainen: Colin Archer suunnitteli sen niin, ettei jäällä ole mistään otetta, vaan ahtojää nostaa laivan ylös eikä murskaa sitä. Runko on kolmea puukerrosta paksu — kuudestakymmenestä seitsemäänkymmeneen senttiä, keulassa runsaan metrin — ja päällystetty greenheart-puulla. Kannella on kolmetoista miestä, ja suunnitelma on se, jota moni …
+- [Oslo — kohdekartta / Kohdekartta: Fram 1893] Milloin isä tulee takaisin? Sitä ei laiturilla osaa sanoa kukaan. 31-vuotias Fridtjof Nansen jättää rantaan Eva-vaimonsa ja muutaman kuukauden ikäisen Liv-tyttärensä eikä lupaa paluupäivää. Rantakadut ovat mustanaan väkeä, linnoitukselta ammutaan kunnialaukaukset, ja vuonolle liukuu alus, joka näyttää väärin rakennetulta. Fram on matala ja pyöreäpohjainen: Colin Archer suunnitteli sen niin, ettei jäällä ole mistään otetta, vaan ahtojää nostaa laivan ylös eikä murskaa sitä. Runko on kolmea puukerrosta paksu — kuudestakymmenestä seitsemäänkymmeneen senttiä, keulassa runsaan metrin — ja päällystetty greenheart-puulla. Kannella on kolmetoista miestä, ja suunnitelma on se, jota moni tutkija on j…
+AIEMPI KYSYMYS: Miksi Fram-laivan runko tehtiin pyöreäpohjaiseksi?
+AIEMPI VASTAUS (Livia):
+Ai tota. Laivanrakentaja [[Colin Archer]] teki Framin vuonna 1892 niin, että sen pohja on pyöreä ja kylki viisto. Kun jää puristaa, se nostaa laivan päälleen sen sijaan että litistäisi sen. Fram on epätavallisen leveä ja matala, ja siinä oli [[tuulimylly]] sähkövaloja varten. Sillä purjehtivat sekä [[Fridtjof Nansen]] että myöhemmin Roald Amundsen, ja nykyään sen ympärille on rakennettu museo. Laiva, joka nousee jään päälle, ansaitsee kyllä kyyhkyn ihailun.
+KYSYMYS: Kerro lisää: Fridtjof Nansen
+
+### 374
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Oslo
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kun isoisäsi kirjoitti Bergenissä, tässä talossa oli yksitoistakuukautinen poika — hänestä tuli ensimmäinen ihminen etelänavalla
+Tietoruudun teksti: Roald Amundsen syntyi 16. heinäkuuta 1872 Borgessa, Fredrikstadin ja Sarpsborgin välillä, laivanvarustajien ja kapteenien sukuun neljäntenä poikana. Kun isoisäsi istui vuotta myöhemmin bergeniläisen kapakan ikkunapöydässä, tämä poika oli yksitoistakuukautinen. Äiti toivoi hänestä lääkäriä, ja hän piti lupauksensa siihen asti kunnes äiti kuoli — silloin hän oli 21, ja hän jätti yliopiston ja lähti merille samana vuonna. Viisitoistavuotiaana hän oli lukenut John Franklinin kertomukset arktisilta retkiltä ja kirjoitti myöhemmin lukeneensa ne palolla, joka muovasi hänen koko elämänsä suunnan. Ensimmäinen työ jäillä oli perämiehen paikka belgialaisella etelämannerretkellä 1897–1899. Sitten hän vei pienen Gjøan Luoteisväylän läpi 1903–1906, ensimmäisenä, ja se kesti kolme vuotta.
+
+Etelänapa oli suunniteltu tarkasti. Amundsen lähti Norjasta kesäkuussa 1910 Fram-laivalla, saapui Etelämantereell…
+Isoisän matkakirjamerkintä: Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.
+AIEMPI KYSYMYS: Miten Amundsen lensi ilmalaivalla pohjoisnavan yli?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Amundsen lensi pohjoisnavan yli ilmalaivalla vuonna 1926, ja matka alkoi [[Svalbardilta]]. Mukana oli italialainen ilmalaivainsinööri [[Umberto Nobile]], ja lento jatkui pohjoisnavan yli Alaskaan. Retki oli osa Amundsenin pitkää uraa napaseutujen tutkijana, johon kuului myös etelänavan valloitus.
+
+Ilmalaiva on minun makuuni: hidas, korkealla ja näkymät hyvät. Kunhan siellä olisi pullaa tarjolla.
+KYSYMYS: Kerro lisää: Svalbardilta
+
+### 375
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Oslo
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pohjanmereen porattiin yli kaksisataa tyhjää reikää — ja sitten yksi osui juuri ennen joulua
+Tietoruudun teksti: Norja oli 1960-luvulla Euroopan köyhempiä maita. Pohjanmereltä oli etsitty öljyä vuosia, ja koereikiä oli porattu yli kaksisataa ilman että yksikään olisi osunut. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Kenttä on Norjan sektorissa noin 320 kilometriä Stavangerista lounaaseen, keskellä avomerta, eikä sinne pääse kuin helikopterilla tai laivalla. Tuotanto alkoi jo 1971, aluksi suoraan tankkereihin neljästä merenpohjan kaivosta. Sittemmin paikalle on kasvanut kokonainen kaupunki: 29 lauttaa, jotka toimivat myös naapurikenttien solmukohtana, ja putki nimeltä Norpipe, jota pitkin öljy kulkee Englantiin Teessiden jalostamolle asti.
+
+Löytö olisi voinut valua nopeasti käsien läpi, mutta maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailma…
+Isoisän matkakirjamerkintä: Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Kaivo, joka muutti maan] 1969 — Norja oli 1960-luvulla Euroopan köyhempiä maita, ja Pohjanmereltä oli etsitty öljyä vuosia tuloksetta. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailman suurin valtiollinen sijoitusrahasto. Öljyn ansiosta Norjasta tuli rikas nopeasti, mutta se joutuu nyt miettimään, mitä tehdä kun öljy loppuu.
+AIEMPI KYSYMYS: Kuinka monta reikää porattiin ennen kuin osui?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kuulin sen kerran Pohjanmeren yllä lentäessäni, ja luvut jäivät päähän. Koereikiä porattiin yli kaksisataa ennen kuin yksikään osui, eli tarkkaa määrää ei tässä kannata väittää, vain sen verran, että tyhjiä reikiä oli todella paljon. Etsintä Pohjanmereltä oli kestänyt jo vuosia, ja 1960-luvulla Norja oli vielä Euroopan köyhempiä maita, joten jokainen tyhjä yritys oli kallis. Juuri ennen joulua 1969 varmistui, että [[Ekofiskin]] kentältä löytyi öljyä, ja sitä oli paljon. Kenttä sijaitsee Norjan sektorissa noin 320 kilometriä Stavangerista lounaaseen, keskellä avomerta, ja tuotanto alkoi vuonna 1971. Löytö muutti [[Norjan]] taloutta pysyvästi. Ei paha tuuri, mutta kyllä siihen tarvittiin ensin kärsivällisyyttä.
+KYSYMYS: Kerro lisää: Ekofiskin
+
+### 376
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Oslo
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pohjanmereen porattiin yli kaksisataa tyhjää reikää — ja sitten yksi osui juuri ennen joulua
+Tietoruudun teksti: Norja oli 1960-luvulla Euroopan köyhempiä maita. Pohjanmereltä oli etsitty öljyä vuosia, ja koereikiä oli porattu yli kaksisataa ilman että yksikään olisi osunut. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Kenttä on Norjan sektorissa noin 320 kilometriä Stavangerista lounaaseen, keskellä avomerta, eikä sinne pääse kuin helikopterilla tai laivalla. Tuotanto alkoi jo 1971, aluksi suoraan tankkereihin neljästä merenpohjan kaivosta. Sittemmin paikalle on kasvanut kokonainen kaupunki: 29 lauttaa, jotka toimivat myös naapurikenttien solmukohtana, ja putki nimeltä Norpipe, jota pitkin öljy kulkee Englantiin Teessiden jalostamolle asti.
+
+Löytö olisi voinut valua nopeasti käsien läpi, mutta maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailma…
+Isoisän matkakirjamerkintä: Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Oslo — kohdekartta / Kohdekartta: Akershus] Kun isoisäsi katsoi Christianian satamassa norjalaisten laivojen lippuja, niiden kannossa eli lipputangon puoleisessa yläkulmassa oli pieni kirjava merkki, jossa Norjan ja Ruotsin värit olivat sekaisin. Nykyinen lippu oli suunniteltu jo 1821; sen teki suurkäräjien jäsen Fredrik Meltzer, ja hän perusteli punaista, valkoista ja sinistä sillä, että ne merkitsivät silloin vapautta — samat värit olivat Ranskan, Hollannin, Amerikan ja Englannin lipuissa. Kuningas kieltäytyi allekirjoittamasta lippulakia, mutta hyväksyi mallin siviilikäyttöön kuninkaallisella päätöksellä heinäkuussa 1821. Sillä lipulla sai kuitenkin purjehtia vain pohjoisilla vesillä: Kapp Finisterren eteläpuolella oli käytettävä …
+- [Norja — maalehti / Historian hetki: Etelänapa 1911 — viisi miestä ja lipputanko] 14.12.1911 — Telttaan jää kirje. Se on osoitettu Norjan kuninkaalle, ja sen viejäksi pyydetään Robert Scottia — siltä varalta, että Scott saapuu perille mutta viisi norjalaista ei pääse kotiin. Kello on noin kolme iltapäivällä, mittaukset sanovat että tämä on paikka, ja lipputankoon tarttuvat yhdessä Roald Amundsen, Olav Bjaaland, Helmer Hanssen, Sverre Hassel ja Oscar Wisting. Ylätasangon he nimeävät kuningas Haakon VII:n tasangoksi ja teltan Polheimiksi. Seuraavat kolme päivää kuluvat sekstantin ääressä ja hiihtäen navan ympäri ristiin rastiin, jotta paikka olisi todistettavasti oikea: Cookin ja Pearyn riitaiset pohjoisnapaväitteet ovat tuoreessa muistissa. Lipunnosto kestää hetken, ja ko…
+AIEMPI KYSYMYS: Kuinka monta reikää porattiin ennen kuin osui?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kuulin sen kerran Pohjanmeren yllä lentäessäni, ja luvut jäivät päähän. Koereikiä porattiin yli kaksisataa ennen kuin yksikään osui, eli tarkkaa määrää ei tässä kannata väittää, vain sen verran, että tyhjiä reikiä oli todella paljon. Etsintä Pohjanmereltä oli kestänyt jo vuosia, ja 1960-luvulla Norja oli vielä Euroopan köyhempiä maita, joten jokainen tyhjä yritys oli kallis. Juuri ennen joulua 1969 varmistui, että [[Ekofiskin]] kentältä löytyi öljyä, ja sitä oli paljon. Kenttä sijaitsee Norjan sektorissa noin 320 kilometriä Stavangerista lounaaseen, keskellä avomerta, ja tuotanto alkoi vuonna 1971. Löytö muutti [[Norjan]] taloutta pysyvästi. Ei paha tuuri, mutta kyllä siihen tarvittiin ensin kärsivällisyyttä.
+KYSYMYS: Kerro lisää: Norjan
+
+### 377
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Oslo
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pohjanmereen porattiin yli kaksisataa tyhjää reikää — ja sitten yksi osui juuri ennen joulua
+Tietoruudun teksti: Norja oli 1960-luvulla Euroopan köyhempiä maita. Pohjanmereltä oli etsitty öljyä vuosia, ja koereikiä oli porattu yli kaksisataa ilman että yksikään olisi osunut. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Kenttä on Norjan sektorissa noin 320 kilometriä Stavangerista lounaaseen, keskellä avomerta, eikä sinne pääse kuin helikopterilla tai laivalla. Tuotanto alkoi jo 1971, aluksi suoraan tankkereihin neljästä merenpohjan kaivosta. Sittemmin paikalle on kasvanut kokonainen kaupunki: 29 lauttaa, jotka toimivat myös naapurikenttien solmukohtana, ja putki nimeltä Norpipe, jota pitkin öljy kulkee Englantiin Teessiden jalostamolle asti.
+
+Löytö olisi voinut valua nopeasti käsien läpi, mutta maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailma…
+Isoisän matkakirjamerkintä: Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Kaivo, joka muutti maan] 1969 — Norja oli 1960-luvulla Euroopan köyhempiä maita, ja Pohjanmereltä oli etsitty öljyä vuosia tuloksetta. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailman suurin valtiollinen sijoitusrahasto. Öljyn ansiosta Norjasta tuli rikas nopeasti, mutta se joutuu nyt miettimään, mitä tehdä kun öljy loppuu.
+- [Norja — maalehti / Menovinkit] Norja on avannut verkkoon sen, mihin ei muuten pääse: Huudon siveltimenjäljet, viikinkilaivan jonka museo on kiinni, koko kansan nimet vuodesta 1769 ja kartan, joka kertoo missä revontulet juuri nyt palavat.
+AIEMPI KYSYMYS: Miksi öljytulot pantiin rahastoon?
+AIEMPI VASTAUS (Livia):
+No niin, tästä on kuultu monessa maassa. Minä olen nähnyt kaupunkeja, joissa rahat on käytetty saman vuoden aikana. Norjassa päätettiin, ettei öljytuloja käytetä suoraan, vaan ne siirretään rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Taustalla on se, että öljy on uusiutumaton luonnonvara: kun kentät joskus tyhjenevät, tulot loppuvat, mutta rahasto jää. Samalla maa välttää sen, että äkillinen rahamäärä pyörittäisi koko taloutta ja nostaisi hintoja. Päätös oli poikkeuksellinen ajan ja maan köyhän taustan huomioiden, sillä [[Norja]] oli ollut vielä 1960-luvulla Euroopan köyhempiä maita. [[Rahasto]] sijoittaa varoja ulkomaille, ja sen kasvusta on tullut maalle tärkeä taloudellinen turva. Pitkä ajattelu kannattaa, ja sen minä tunnistan: kyyhky ei lennä kerralla koko matkaa, vaan etappi kerrallaan.
+KYSYMYS: Kerro lisää: Norja
+
+### 378
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Oslo
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pohjanmereen porattiin yli kaksisataa tyhjää reikää — ja sitten yksi osui juuri ennen joulua
+Tietoruudun teksti: Norja oli 1960-luvulla Euroopan köyhempiä maita. Pohjanmereltä oli etsitty öljyä vuosia, ja koereikiä oli porattu yli kaksisataa ilman että yksikään olisi osunut. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Kenttä on Norjan sektorissa noin 320 kilometriä Stavangerista lounaaseen, keskellä avomerta, eikä sinne pääse kuin helikopterilla tai laivalla. Tuotanto alkoi jo 1971, aluksi suoraan tankkereihin neljästä merenpohjan kaivosta. Sittemmin paikalle on kasvanut kokonainen kaupunki: 29 lauttaa, jotka toimivat myös naapurikenttien solmukohtana, ja putki nimeltä Norpipe, jota pitkin öljy kulkee Englantiin Teessiden jalostamolle asti.
+
+Löytö olisi voinut valua nopeasti käsien läpi, mutta maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailma…
+Isoisän matkakirjamerkintä: Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sana — kohdekartta / Kohdekartta: Suuri moskeija] perimätiedon mukaan noin 630 Al-Jami al-Kabir on kartan tärkein rakennus ja kenties koko islamilaisen maailman vanhimpia moskeijoita. Varhaisten islamilaisten lähteiden mukaan Muhammad käski rakentaa sen noin vuonna 630, ja sitä pidetään ensimmäisenä Mekan ja Medinan ulkopuolelle rakennettuna moskeijana. Ajoitus nojaa perimätietoon: sama artikkeli antaa tietolaatikossaan väljemmän arvion 600–700-luvuille. Kaivauslöydöt kuitenkin tukevat varhaista ikää, sillä seinistä on löytynyt rakennusosia sekä aksumilaisesta katedraalista että sabalaisesta Ghumdanin palatsista — moskeija on siis rakennettu vanhemman kaupungin kivistä. Sen jälkeen se on rakennettu uudelleen monta kertaa. Umaijadikalifi al…
+- [Porto Alegre — kohdekartta / Kohdekartta: Vanha kaupungintalo] 1898–1901 Porto Alegren kaupunginjohto toimi 1800-luvun lopulla vuokratiloissa siellä täällä vanhassa keskustassa. Kun José Montaury valittiin 1897 intendantiksi, hän lupasi rakentaa kaupungille oman talon. Rahat kerättiin myymällä kaupungin kiinteistöjä ja täyttämällä maata Doca do Carvãossa. Ensimmäinen suunnitelma oli insinööri Oscar Bittencourtin, mutta se kaadettiin poliittisista syistä, ja uusi tilattiin venetsialaiselta insinööriltä Giovanni Colfoscolta. Peruskivi laskettiin 5. huhtikuuta 1898, työ alkoi saman vuoden 28. syyskuuta ja talo valmistui huhtikuussa 1901. Toukokuun 15. päivästä alkaen siihen muuttivat kaupunginvaltuusto, sihteeristö, kirjanpito, rahasto ja verotus sekä jul…
+AIEMPI KYSYMYS: Miksi öljytulot pantiin rahastoon?
+AIEMPI VASTAUS (Livia):
+No niin, tästä on kuultu monessa maassa. Minä olen nähnyt kaupunkeja, joissa rahat on käytetty saman vuoden aikana. Norjassa päätettiin, ettei öljytuloja käytetä suoraan, vaan ne siirretään rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Taustalla on se, että öljy on uusiutumaton luonnonvara: kun kentät joskus tyhjenevät, tulot loppuvat, mutta rahasto jää. Samalla maa välttää sen, että äkillinen rahamäärä pyörittäisi koko taloutta ja nostaisi hintoja. Päätös oli poikkeuksellinen ajan ja maan köyhän taustan huomioiden, sillä [[Norja]] oli ollut vielä 1960-luvulla Euroopan köyhempiä maita. [[Rahasto]] sijoittaa varoja ulkomaille, ja sen kasvusta on tullut maalle tärkeä taloudellinen turva. Pitkä ajattelu kannattaa, ja sen minä tunnistan: kyyhky ei lennä kerralla koko matkaa, vaan etappi kerrallaan.
+KYSYMYS: Kerro lisää: Rahasto
+
+### 379
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Oslo
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pohjanmereen porattiin yli kaksisataa tyhjää reikää — ja sitten yksi osui juuri ennen joulua
+Tietoruudun teksti: Norja oli 1960-luvulla Euroopan köyhempiä maita. Pohjanmereltä oli etsitty öljyä vuosia, ja koereikiä oli porattu yli kaksisataa ilman että yksikään olisi osunut. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Kenttä on Norjan sektorissa noin 320 kilometriä Stavangerista lounaaseen, keskellä avomerta, eikä sinne pääse kuin helikopterilla tai laivalla. Tuotanto alkoi jo 1971, aluksi suoraan tankkereihin neljästä merenpohjan kaivosta. Sittemmin paikalle on kasvanut kokonainen kaupunki: 29 lauttaa, jotka toimivat myös naapurikenttien solmukohtana, ja putki nimeltä Norpipe, jota pitkin öljy kulkee Englantiin Teessiden jalostamolle asti.
+
+Löytö olisi voinut valua nopeasti käsien läpi, mutta maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailma…
+Isoisän matkakirjamerkintä: Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.
+AIEMPI KYSYMYS: Mihin Ekofiskin öljy putkitetaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tähän on suora vastaus. Ekofiskin öljy kulkee [[Norpipe]]-nimistä putkea pitkin Englantiin, [[Teessiden]] jalostamolle asti. Kenttä on noin 320 kilometriä Stavangerista lounaaseen keskellä avomerta, joten putki on ratkaisevan tärkeä yhteys: sinne ei pääse kuin helikopterilla tai laivalla, eikä öljyä voi kuljettaa sieltä kätevästi muuten. Tuotanto alkoi vuonna 1971, ja aluksi öljy ladattiin suoraan tankkereihin neljästä merenpohjan kaivosta. Putkiyhteys tuli myöhemmin, ja nykyisin alueella on kokonainen [[Ekofiskin]] laitoskeskittymä, joka toimii myös naapurikenttien solmukohtana. Jalostamolla raakaöljystä tehdään käyttökelpoisia tuotteita. Kyyhkynä minä arvostan hyvää reittiä, vaikka tuo menee veden alta.
+
+Putkea pitkin ei kyllä kulje yhtään postia, ja minä olen asiasta hiukan pettynyt.
+KYSYMYS: Kerro lisää: Norpipe
+
+### 380
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Oslo
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pohjanmereen porattiin yli kaksisataa tyhjää reikää — ja sitten yksi osui juuri ennen joulua
+Tietoruudun teksti: Norja oli 1960-luvulla Euroopan köyhempiä maita. Pohjanmereltä oli etsitty öljyä vuosia, ja koereikiä oli porattu yli kaksisataa ilman että yksikään olisi osunut. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Kenttä on Norjan sektorissa noin 320 kilometriä Stavangerista lounaaseen, keskellä avomerta, eikä sinne pääse kuin helikopterilla tai laivalla. Tuotanto alkoi jo 1971, aluksi suoraan tankkereihin neljästä merenpohjan kaivosta. Sittemmin paikalle on kasvanut kokonainen kaupunki: 29 lauttaa, jotka toimivat myös naapurikenttien solmukohtana, ja putki nimeltä Norpipe, jota pitkin öljy kulkee Englantiin Teessiden jalostamolle asti.
+
+Löytö olisi voinut valua nopeasti käsien läpi, mutta maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailma…
+Isoisän matkakirjamerkintä: Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.
+AIEMPI KYSYMYS: Mihin Ekofiskin öljy putkitetaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tähän on suora vastaus. Ekofiskin öljy kulkee [[Norpipe]]-nimistä putkea pitkin Englantiin, [[Teessiden]] jalostamolle asti. Kenttä on noin 320 kilometriä Stavangerista lounaaseen keskellä avomerta, joten putki on ratkaisevan tärkeä yhteys: sinne ei pääse kuin helikopterilla tai laivalla, eikä öljyä voi kuljettaa sieltä kätevästi muuten. Tuotanto alkoi vuonna 1971, ja aluksi öljy ladattiin suoraan tankkereihin neljästä merenpohjan kaivosta. Putkiyhteys tuli myöhemmin, ja nykyisin alueella on kokonainen [[Ekofiskin]] laitoskeskittymä, joka toimii myös naapurikenttien solmukohtana. Jalostamolla raakaöljystä tehdään käyttökelpoisia tuotteita. Kyyhkynä minä arvostan hyvää reittiä, vaikka tuo menee veden alta.
+
+Putkea pitkin ei kyllä kulje yhtään postia, ja minä olen asiasta hiukan pettynyt.
+KYSYMYS: Kerro lisää: Teessiden
+
+### 381
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Oslo
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pohjanmereen porattiin yli kaksisataa tyhjää reikää — ja sitten yksi osui juuri ennen joulua
+Tietoruudun teksti: Norja oli 1960-luvulla Euroopan köyhempiä maita. Pohjanmereltä oli etsitty öljyä vuosia, ja koereikiä oli porattu yli kaksisataa ilman että yksikään olisi osunut. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Kenttä on Norjan sektorissa noin 320 kilometriä Stavangerista lounaaseen, keskellä avomerta, eikä sinne pääse kuin helikopterilla tai laivalla. Tuotanto alkoi jo 1971, aluksi suoraan tankkereihin neljästä merenpohjan kaivosta. Sittemmin paikalle on kasvanut kokonainen kaupunki: 29 lauttaa, jotka toimivat myös naapurikenttien solmukohtana, ja putki nimeltä Norpipe, jota pitkin öljy kulkee Englantiin Teessiden jalostamolle asti.
+
+Löytö olisi voinut valua nopeasti käsien läpi, mutta maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailma…
+Isoisän matkakirjamerkintä: Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.
+AIEMPI KYSYMYS: Mitä raakaöljystä valmistetaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, annas ku mietin. Raakaöljy on monen aineen seos, ja jalostamolla se erotellaan osiin lämmittämällä ja tislaamalla. Siitä saadaan esimerkiksi bensiiniä, dieselöljyä, lentopetrolia ja lämmitykseen käytettävää polttoöljyä. Lisäksi osa öljystä on raaka-aineena petrokemianteollisuudelle, joka valmistaa muun muassa muoveja ja asfalttia. Jalostus on siksi tärkeä vaihe, sillä [[raakaöljy]] ei sellaisenaan kelpaa moottoriin eikä useimpiin muihin käyttötarkoituksiin. Ekofiskin öljy kulkee jalostettavaksi Englantiin [[Teessiden]] jalostamolle, joten tuotteet syntyvät vasta matkan päässä kentältä. Tuon kaiken minä sain mahtumaan yhteen päähän.
+KYSYMYS: Kerro lisää: raakaöljy
+
+### 382
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Oslo
+Maa, jossa pelaaja on: Norja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pohjanmereen porattiin yli kaksisataa tyhjää reikää — ja sitten yksi osui juuri ennen joulua
+Tietoruudun teksti: Norja oli 1960-luvulla Euroopan köyhempiä maita. Pohjanmereltä oli etsitty öljyä vuosia, ja koereikiä oli porattu yli kaksisataa ilman että yksikään olisi osunut. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Kenttä on Norjan sektorissa noin 320 kilometriä Stavangerista lounaaseen, keskellä avomerta, eikä sinne pääse kuin helikopterilla tai laivalla. Tuotanto alkoi jo 1971, aluksi suoraan tankkereihin neljästä merenpohjan kaivosta. Sittemmin paikalle on kasvanut kokonainen kaupunki: 29 lauttaa, jotka toimivat myös naapurikenttien solmukohtana, ja putki nimeltä Norpipe, jota pitkin öljy kulkee Englantiin Teessiden jalostamolle asti.
+
+Löytö olisi voinut valua nopeasti käsien läpi, mutta maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailma…
+Isoisän matkakirjamerkintä: Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Kaivo, joka muutti maan] 1969 — Norja oli 1960-luvulla Euroopan köyhempiä maita, ja Pohjanmereltä oli etsitty öljyä vuosia tuloksetta. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailman suurin valtiollinen sijoitusrahasto. Öljyn ansiosta Norjasta tuli rikas nopeasti, mutta se joutuu nyt miettimään, mitä tehdä kun öljy loppuu.
+AIEMPI KYSYMYS: Miten öljy on syntynyt maan alle?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä kysymys tuo. Öljyn uskotaan syntyneen miljoonien vuosien kuluessa meressä eläneiden pienten eliöiden, kuten planktonin, jäänteistä. Kun ne vajosivat pohjaan ja peittyivät sedimenttiin, paine ja lämpö muuttivat orgaanisen aineen vähitellen hiilivedyiksi. Öljy nousi sen jälkeen huokoisiin kivikerroksiin, joissa se jäi loukkuun tiiviin kivilajin alle. Juuri tällaisia loukkuja etsitään koeporauksilla, ja siksi [[Pohjanmereltä]] löytyneet kentät ovat vaatineet niin paljon työtä: Norjan sektorilla porattiin yli kaksisataa koereikää ennen kuin [[Ekofiskin]] kenttä osui kohdalle. Tarkka syntytapa ja aika vaihtelevat kentästä toiseen. Pitkä aikajänne on minulle kyyhkynä vähän liikaa, ja olen silti tyytyväinen, että muistin kaiken.
+KYSYMYS: Kerro lisää: Pohjanmereltä

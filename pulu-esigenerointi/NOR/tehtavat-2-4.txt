@@ -1,0 +1,997 @@
+### 241
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ekofisk (tekniikka)
+Tietoruudun teksti: Ekofisk on öljykenttä Norjan puoleisella Pohjanmerellä noin 320 kilometriä lounaaseen Stavangerista, ja Phillips Petroleum -yhtiö löysi sen vuonna 1969 yli 200 koeporauksen jälkeen. Se oli ensimmäinen öljylöytö Pohjanmerellä, ja tuotanto suoraan tankkereihin alkoi jo vuonna 1971 neljästä merenalaisesta kaivosta. Huhtikuussa 1977 Ekofisk Bravo -lautalla tapahtui Pohjanmeren suurin öljyvuoto, kun pohjaventtiili oli asennettu väärin, ja legendaarinen sammutusmies Red Adair osallistui vuodon tukkimiseen. 1980-luvulla huomattiin, että öljyntuotanto sai kalkkikivipohjaisen kentän vajoamaan odottamattoman paljon, ja elokuussa 1987 viisi toisiinsa liitettyä lauttaa nostettiin samanaikaisesti kuusi metriä ylemmäs hydraulisylintereillä, mikä kirjattiin Guinnessin ennätyskirjaan suurimpana nostoprojektina. Ekofiskin tuotannon arvioidaan jatkuvan ainakin vuoteen 2048 saakka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Luonto: Meri vetäytyy ja pohja aukeaa] Pohjanmeren rannikolla meri vetäytyy kahdesti päivässä kilometrien päähän ja jättää jälkeensä Wattenmeerin: mutatasangon, jota pitkin voi kävellä merenpohjassa saarelta toiselle. Opas kulkee aina mukana, sillä vuoksi palaa nopeammin kuin ihminen juoksee. Pohja näyttää tyhjältä mutta kuhisee elämää: yhdessä neliömetrissä voi asua kymmeniätuhansia matoja, kotiloita ja simpukoita, ja hietikoilla lepää kirjohylkeitä. Vattimeri on Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Mikä aiheutti Ekofisk Bravo -laitan öljyvuodon vuonna 1977?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Huhtikuussa 1977 Ekofisk Bravo -lautalla tapahtui lähteiden mukaan [[Pohjanmeren]] suurin öljyvuoto, ja syynä oli väärin asennettu pohjaventtiili. Kenttä sijaitsee noin 320 kilometriä lounaaseen [[Stavangerista]], joten apu oli haettava kaukaa merelle. Vuodon tukkimiseen osallistui amerikkalainen sammutusasiantuntija Red Adair. Vuoto saatiin tukittua, ja tapaus muistetaan öljyteollisuuden turvallisuuden historiassa varoittavana esimerkkinä. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Pohjanmeren
+
+### 242
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ekofisk (tekniikka)
+Tietoruudun teksti: Ekofisk on öljykenttä Norjan puoleisella Pohjanmerellä noin 320 kilometriä lounaaseen Stavangerista, ja Phillips Petroleum -yhtiö löysi sen vuonna 1969 yli 200 koeporauksen jälkeen. Se oli ensimmäinen öljylöytö Pohjanmerellä, ja tuotanto suoraan tankkereihin alkoi jo vuonna 1971 neljästä merenalaisesta kaivosta. Huhtikuussa 1977 Ekofisk Bravo -lautalla tapahtui Pohjanmeren suurin öljyvuoto, kun pohjaventtiili oli asennettu väärin, ja legendaarinen sammutusmies Red Adair osallistui vuodon tukkimiseen. 1980-luvulla huomattiin, että öljyntuotanto sai kalkkikivipohjaisen kentän vajoamaan odottamattoman paljon, ja elokuussa 1987 viisi toisiinsa liitettyä lauttaa nostettiin samanaikaisesti kuusi metriä ylemmäs hydraulisylintereillä, mikä kirjattiin Guinnessin ennätyskirjaan suurimpana nostoprojektina. Ekofiskin tuotannon arvioidaan jatkuvan ainakin vuoteen 2048 saakka.
+AIEMPI KYSYMYS: Mikä aiheutti Ekofisk Bravo -laitan öljyvuodon vuonna 1977?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Huhtikuussa 1977 Ekofisk Bravo -lautalla tapahtui lähteiden mukaan [[Pohjanmeren]] suurin öljyvuoto, ja syynä oli väärin asennettu pohjaventtiili. Kenttä sijaitsee noin 320 kilometriä lounaaseen [[Stavangerista]], joten apu oli haettava kaukaa merelle. Vuodon tukkimiseen osallistui amerikkalainen sammutusasiantuntija Red Adair. Vuoto saatiin tukittua, ja tapaus muistetaan öljyteollisuuden turvallisuuden historiassa varoittavana esimerkkinä. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Stavangerista
+
+### 243
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ekofisk (tekniikka)
+Tietoruudun teksti: Ekofisk on öljykenttä Norjan puoleisella Pohjanmerellä noin 320 kilometriä lounaaseen Stavangerista, ja Phillips Petroleum -yhtiö löysi sen vuonna 1969 yli 200 koeporauksen jälkeen. Se oli ensimmäinen öljylöytö Pohjanmerellä, ja tuotanto suoraan tankkereihin alkoi jo vuonna 1971 neljästä merenalaisesta kaivosta. Huhtikuussa 1977 Ekofisk Bravo -lautalla tapahtui Pohjanmeren suurin öljyvuoto, kun pohjaventtiili oli asennettu väärin, ja legendaarinen sammutusmies Red Adair osallistui vuodon tukkimiseen. 1980-luvulla huomattiin, että öljyntuotanto sai kalkkikivipohjaisen kentän vajoamaan odottamattoman paljon, ja elokuussa 1987 viisi toisiinsa liitettyä lauttaa nostettiin samanaikaisesti kuusi metriä ylemmäs hydraulisylintereillä, mikä kirjattiin Guinnessin ennätyskirjaan suurimpana nostoprojektina. Ekofiskin tuotannon arvioidaan jatkuvan ainakin vuoteen 2048 saakka.
+AIEMPI KYSYMYS: Miksi Ekofiskin öljylautat piti nostaa kuusi metriä ylemmäs 1980-luvulla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: 1980-luvulla huomattiin, että öljyntuotanto sai kalkkikivipohjaisen kentän vajoamaan odottamattoman paljon. Kun merenpohja vajosi, lautat olisivat jääneet liian lähelle merenpintaa, joten rakenteet oli nostettava turvallisemmalle korkeudelle. Elokuussa 1987 viisi toisiinsa liitettyä lauttaa nostettiin samanaikaisesti kuusi metriä ylemmäs [[hydraulisylintereillä]]. Operaatio kirjattiin [[Guinnessin ennätyskirjaan]] suurimpana nostoprojektina, ja tuotannon arvioidaan jatkuvan vielä vuosikymmeniä. Kuusi metriä ylös on kyyhkyn mittapuulla melkein pilvenpiirtäjä.
+KYSYMYS: Kerro lisää: hydraulisylintereillä
+
+### 244
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ekofisk (tekniikka)
+Tietoruudun teksti: Ekofisk on öljykenttä Norjan puoleisella Pohjanmerellä noin 320 kilometriä lounaaseen Stavangerista, ja Phillips Petroleum -yhtiö löysi sen vuonna 1969 yli 200 koeporauksen jälkeen. Se oli ensimmäinen öljylöytö Pohjanmerellä, ja tuotanto suoraan tankkereihin alkoi jo vuonna 1971 neljästä merenalaisesta kaivosta. Huhtikuussa 1977 Ekofisk Bravo -lautalla tapahtui Pohjanmeren suurin öljyvuoto, kun pohjaventtiili oli asennettu väärin, ja legendaarinen sammutusmies Red Adair osallistui vuodon tukkimiseen. 1980-luvulla huomattiin, että öljyntuotanto sai kalkkikivipohjaisen kentän vajoamaan odottamattoman paljon, ja elokuussa 1987 viisi toisiinsa liitettyä lauttaa nostettiin samanaikaisesti kuusi metriä ylemmäs hydraulisylintereillä, mikä kirjattiin Guinnessin ennätyskirjaan suurimpana nostoprojektina. Ekofiskin tuotannon arvioidaan jatkuvan ainakin vuoteen 2048 saakka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dublin — kohdekartta / Kohdekartta: Guinness-panimo] 1759 Guinnessin panimo Dublinissa on yksi maailman kuuluisimmista oluttehtaista. Sen perusti Arthur Guinness vuonna 1759, kun hän allekirjoitti St. James's Gate -panimon tontista vuokrasopimuksen, joka on voimassa peräti 9000 vuotta! Panimo valmistaa tummaa stout-olutta vain neljästä aineesta: vedestä, ohrasta, humalasta ja hiivasta. Nykyinen vierailukeskus Guinness Storehouse avautui yleisölle vuonna 2000 rakennuksessa, joka valmistui jo vuonna 1902 panimon käymistehtaaksi. Sen keskellä kohoaa lasinen aula, joka on muotoiltu valtavan olutlasin näköiseksi — rakennus on peräti seitsemän kerrosta korkea. Ylimmässä kerroksessa sijaitsee Gravity Bar, josta näkee kauas Dublinin ylle. Vuoteen 202…
+AIEMPI KYSYMYS: Miksi Ekofiskin öljylautat piti nostaa kuusi metriä ylemmäs 1980-luvulla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: 1980-luvulla huomattiin, että öljyntuotanto sai kalkkikivipohjaisen kentän vajoamaan odottamattoman paljon. Kun merenpohja vajosi, lautat olisivat jääneet liian lähelle merenpintaa, joten rakenteet oli nostettava turvallisemmalle korkeudelle. Elokuussa 1987 viisi toisiinsa liitettyä lauttaa nostettiin samanaikaisesti kuusi metriä ylemmäs [[hydraulisylintereillä]]. Operaatio kirjattiin [[Guinnessin ennätyskirjaan]] suurimpana nostoprojektina, ja tuotannon arvioidaan jatkuvan vielä vuosikymmeniä. Kuusi metriä ylös on kyyhkyn mittapuulla melkein pilvenpiirtäjä.
+KYSYMYS: Kerro lisää: Guinnessin ennätyskirjaan
+
+### 245
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ekofisk (tekniikka)
+Tietoruudun teksti: Ekofisk on öljykenttä Norjan puoleisella Pohjanmerellä noin 320 kilometriä lounaaseen Stavangerista, ja Phillips Petroleum -yhtiö löysi sen vuonna 1969 yli 200 koeporauksen jälkeen. Se oli ensimmäinen öljylöytö Pohjanmerellä, ja tuotanto suoraan tankkereihin alkoi jo vuonna 1971 neljästä merenalaisesta kaivosta. Huhtikuussa 1977 Ekofisk Bravo -lautalla tapahtui Pohjanmeren suurin öljyvuoto, kun pohjaventtiili oli asennettu väärin, ja legendaarinen sammutusmies Red Adair osallistui vuodon tukkimiseen. 1980-luvulla huomattiin, että öljyntuotanto sai kalkkikivipohjaisen kentän vajoamaan odottamattoman paljon, ja elokuussa 1987 viisi toisiinsa liitettyä lauttaa nostettiin samanaikaisesti kuusi metriä ylemmäs hydraulisylintereillä, mikä kirjattiin Guinnessin ennätyskirjaan suurimpana nostoprojektina. Ekofiskin tuotannon arvioidaan jatkuvan ainakin vuoteen 2048 saakka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Kaivo, joka muutti maan] 1969 — Norja oli 1960-luvulla Euroopan köyhempiä maita, ja Pohjanmereltä oli etsitty öljyä vuosia tuloksetta. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailman suurin valtiollinen sijoitusrahasto. Öljyn ansiosta Norjasta tuli rikas nopeasti, mutta se joutuu nyt miettimään, mitä tehdä kun öljy loppuu.
+AIEMPI KYSYMYS: Miksi Norja sijoitti öljytulot rahastoon eikä käyttänyt heti?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Norja oli 1960-luvulla Euroopan köyhempiä maita, ja kun [[Ekofiskin]] öljy löytyi joulun alla 1969, maa teki poikkeuksellisen päätöksen. Tulot eivät menneet suoraan käyttöön vaan [[rahastoon]], jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi yksi maailman suurimmista valtiollisista sijoitusrahastoista. Perusteena on se, että öljy on rajallinen luonnonvara, joten tulot kannattaa sijoittaa niin, että hyöty säilyy öljyn loppumisen jälkeenkin. Säästäminen ei oo kyyhkyn vahvuus, murut häviää heti.
+KYSYMYS: Kerro lisää: Ekofiskin
+
+### 246
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ekofisk (tekniikka)
+Tietoruudun teksti: Ekofisk on öljykenttä Norjan puoleisella Pohjanmerellä noin 320 kilometriä lounaaseen Stavangerista, ja Phillips Petroleum -yhtiö löysi sen vuonna 1969 yli 200 koeporauksen jälkeen. Se oli ensimmäinen öljylöytö Pohjanmerellä, ja tuotanto suoraan tankkereihin alkoi jo vuonna 1971 neljästä merenalaisesta kaivosta. Huhtikuussa 1977 Ekofisk Bravo -lautalla tapahtui Pohjanmeren suurin öljyvuoto, kun pohjaventtiili oli asennettu väärin, ja legendaarinen sammutusmies Red Adair osallistui vuodon tukkimiseen. 1980-luvulla huomattiin, että öljyntuotanto sai kalkkikivipohjaisen kentän vajoamaan odottamattoman paljon, ja elokuussa 1987 viisi toisiinsa liitettyä lauttaa nostettiin samanaikaisesti kuusi metriä ylemmäs hydraulisylintereillä, mikä kirjattiin Guinnessin ennätyskirjaan suurimpana nostoprojektina. Ekofiskin tuotannon arvioidaan jatkuvan ainakin vuoteen 2048 saakka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Kaivo, joka muutti maan] 1969 — Norja oli 1960-luvulla Euroopan köyhempiä maita, ja Pohjanmereltä oli etsitty öljyä vuosia tuloksetta. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailman suurin valtiollinen sijoitusrahasto. Öljyn ansiosta Norjasta tuli rikas nopeasti, mutta se joutuu nyt miettimään, mitä tehdä kun öljy loppuu.
+AIEMPI KYSYMYS: Miksi Norja sijoitti öljytulot rahastoon eikä käyttänyt heti?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Norja oli 1960-luvulla Euroopan köyhempiä maita, ja kun [[Ekofiskin]] öljy löytyi joulun alla 1969, maa teki poikkeuksellisen päätöksen. Tulot eivät menneet suoraan käyttöön vaan [[rahastoon]], jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi yksi maailman suurimmista valtiollisista sijoitusrahastoista. Perusteena on se, että öljy on rajallinen luonnonvara, joten tulot kannattaa sijoittaa niin, että hyöty säilyy öljyn loppumisen jälkeenkin. Säästäminen ei oo kyyhkyn vahvuus, murut häviää heti.
+KYSYMYS: Kerro lisää: rahastoon
+
+### 247
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ekofisk (tekniikka)
+Tietoruudun teksti: Ekofisk on öljykenttä Norjan puoleisella Pohjanmerellä noin 320 kilometriä lounaaseen Stavangerista, ja Phillips Petroleum -yhtiö löysi sen vuonna 1969 yli 200 koeporauksen jälkeen. Se oli ensimmäinen öljylöytö Pohjanmerellä, ja tuotanto suoraan tankkereihin alkoi jo vuonna 1971 neljästä merenalaisesta kaivosta. Huhtikuussa 1977 Ekofisk Bravo -lautalla tapahtui Pohjanmeren suurin öljyvuoto, kun pohjaventtiili oli asennettu väärin, ja legendaarinen sammutusmies Red Adair osallistui vuodon tukkimiseen. 1980-luvulla huomattiin, että öljyntuotanto sai kalkkikivipohjaisen kentän vajoamaan odottamattoman paljon, ja elokuussa 1987 viisi toisiinsa liitettyä lauttaa nostettiin samanaikaisesti kuusi metriä ylemmäs hydraulisylintereillä, mikä kirjattiin Guinnessin ennätyskirjaan suurimpana nostoprojektina. Ekofiskin tuotannon arvioidaan jatkuvan ainakin vuoteen 2048 saakka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Kaivo, joka muutti maan] 1969 — Norja oli 1960-luvulla Euroopan köyhempiä maita, ja Pohjanmereltä oli etsitty öljyä vuosia tuloksetta. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailman suurin valtiollinen sijoitusrahasto. Öljyn ansiosta Norjasta tuli rikas nopeasti, mutta se joutuu nyt miettimään, mitä tehdä kun öljy loppuu.
+AIEMPI KYSYMYS: Kuka oli Red Adair?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Red Adair oli yhdysvaltalainen öljykaivojen sammutusasiantuntija, joka tuli tunnetuksi kaivopalojen ja hallitsemattomien vuotojen vaarallisesta torjunnasta. Hänet kutsuttiin vuonna 1977 apuun [[Ekofisk Bravo]] -lautalle, kun [[Pohjanmeren]] öljyvuotoa yritettiin tukkia. Hänen työstään kerrotaan saaneen innoituksen myös elokuvan Hellfighters. Hänen nimensä on jäänyt öljyteollisuudessa tarkoittamaan riskialttiiden tilanteiden hallintaa. Jos jokin vuotaa, soita Adairille, tai kyyhkylle, jos kyse on vain kirjeestä.
+KYSYMYS: Kerro lisää: Ekofisk Bravo
+
+### 248
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ekofisk (tekniikka)
+Tietoruudun teksti: Ekofisk on öljykenttä Norjan puoleisella Pohjanmerellä noin 320 kilometriä lounaaseen Stavangerista, ja Phillips Petroleum -yhtiö löysi sen vuonna 1969 yli 200 koeporauksen jälkeen. Se oli ensimmäinen öljylöytö Pohjanmerellä, ja tuotanto suoraan tankkereihin alkoi jo vuonna 1971 neljästä merenalaisesta kaivosta. Huhtikuussa 1977 Ekofisk Bravo -lautalla tapahtui Pohjanmeren suurin öljyvuoto, kun pohjaventtiili oli asennettu väärin, ja legendaarinen sammutusmies Red Adair osallistui vuodon tukkimiseen. 1980-luvulla huomattiin, että öljyntuotanto sai kalkkikivipohjaisen kentän vajoamaan odottamattoman paljon, ja elokuussa 1987 viisi toisiinsa liitettyä lauttaa nostettiin samanaikaisesti kuusi metriä ylemmäs hydraulisylintereillä, mikä kirjattiin Guinnessin ennätyskirjaan suurimpana nostoprojektina. Ekofiskin tuotannon arvioidaan jatkuvan ainakin vuoteen 2048 saakka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saudi-Arabia — maalehti / Meri: Kiveä, jossa on reikiä] Farasanin saaret eivät ole hiekkasärkkiä vaan kiveä, ja se kivi on syntynyt vanhasta korallista. Riutta kasvoi aikoinaan meren pinnan tasalle, ja sitten maa kohosi hitaasti ylös niin että riutta jäi kuivalle. Kalkkikivessä näkyy yhä korallien reikäinen rakenne, ja kivelle on ikävä astua paljain jaloin. Rantavesi on matalaa pitkälle ulos, ja siellä, missä pohja on suojassa aalloilta, kasvaa mangrovea: matalaa metsää suolavedessä.
+- [Exmouth — kaupunkilehti / Exmouth] Exmouthin edustalla kiemurtelee Ningaloo, maailman suurin rantariutta: yli 260 kilometriä koralleja niin lähellä mannerta, että sen reunalle pääsee usein kahlaamalla. Takana kohoavassa kalkkikivessä piilee miljoonien vuosien tarina.
+AIEMPI KYSYMYS: Miten raakaöljy on syntynyt Pohjanmeren pohjaan?
+AIEMPI VASTAUS (Livia):
+Katotaas. Raakaöljy syntyy miljoonien vuosien kuluessa, kun merieliöiden jäänteet hautautuvat merenpohjan sedimentteihin ja paine sekä lämpö muuttavat niitä. Syntynyt öljy nousee huokoisiin kivilajeihin, ja se jää loukkuun tiiviin peittävän kerroksen alle. Ekofiskin kentällä öljyä on [[kalkkikivessä]], ja kenttä löytyi vuonna 1969. Löytö oli ensimmäinen [[Pohjanmeren]] öljylöytö, ja tuotanto suoraan tankkereihin alkoi vuonna 1971. Miljoonia vuosia, ja minä valitan, jos kirje myöhästyy kolme päivää.
+KYSYMYS: Kerro lisää: kalkkikivessä
+
+### 249
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trollstigen (tekniikka)
+Tietoruudun teksti: Trollstigen on mutkitteleva vuoristotie ja sola Raumassa, Møre og Romsdalin läänissä, osa maantietä 63 Åndalsnesin ja Valldalin välillä. Tie nousee noin 850 metrin korkeuteen yhdellätoista jyrkällä hiuspinnemutkalla, ja sen keskimääräinen nousuprosentti on 10. Kahdeksan vuoden rakennustyön jälkeen kuningas Haakon VII avasi tien virallisesti 31. heinäkuuta 1936. Solan huipulla olevalta 700 metrin tasanteelta avautuu näkymä Stigfossenin 320 metriä putoavaan vesiputoukseen, ja tie on edelleen suljettuna talvisin lumen vuoksi. Vilkkaimpina kesäpäivinä tietä käyttää nykyään noin 2 500 ajoneuvoa vuorokaudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historian hetki: Etelänapa 1911 — viisi miestä ja lipputanko] 14.12.1911 — Telttaan jää kirje. Se on osoitettu Norjan kuninkaalle, ja sen viejäksi pyydetään Robert Scottia — siltä varalta, että Scott saapuu perille mutta viisi norjalaista ei pääse kotiin. Kello on noin kolme iltapäivällä, mittaukset sanovat että tämä on paikka, ja lipputankoon tarttuvat yhdessä Roald Amundsen, Olav Bjaaland, Helmer Hanssen, Sverre Hassel ja Oscar Wisting. Ylätasangon he nimeävät kuningas Haakon VII:n tasangoksi ja teltan Polheimiksi. Seuraavat kolme päivää kuluvat sekstantin ääressä ja hiihtäen navan ympäri ristiin rastiin, jotta paikka olisi todistettavasti oikea: Cookin ja Pearyn riitaiset pohjoisnapaväitteet ovat tuoreessa muistissa. Lipunnosto kestää hetken, ja ko…
+AIEMPI KYSYMYS: Kuka avasi Trollstigenin virallisesti, ja minä vuonna?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kuningas [[Haakon VII]] avasi tien virallisesti 31. heinäkuuta 1936, kahdeksan vuoden rakennustyön jälkeen. Tie kulkee maantien 63 osana [[Åndalsnesin]] ja [[Valldalin]] välillä ja nousee noin 850 metrin korkeuteen yhdellätoista jyrkällä hiuspinnemutkalla. Keskimääräinen nousuprosentti on noin 10. Nykyään tietä käyttää vilkkaimpina kesäpäivinä noin 2 500 ajoneuvoa vuorokaudessa. Kahdeksan vuotta rakennettiin, mut kyyhky ylittää sen hetkessä.
+KYSYMYS: Kerro lisää: Haakon VII
+
+### 250
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trollstigen (tekniikka)
+Tietoruudun teksti: Trollstigen on mutkitteleva vuoristotie ja sola Raumassa, Møre og Romsdalin läänissä, osa maantietä 63 Åndalsnesin ja Valldalin välillä. Tie nousee noin 850 metrin korkeuteen yhdellätoista jyrkällä hiuspinnemutkalla, ja sen keskimääräinen nousuprosentti on 10. Kahdeksan vuoden rakennustyön jälkeen kuningas Haakon VII avasi tien virallisesti 31. heinäkuuta 1936. Solan huipulla olevalta 700 metrin tasanteelta avautuu näkymä Stigfossenin 320 metriä putoavaan vesiputoukseen, ja tie on edelleen suljettuna talvisin lumen vuoksi. Vilkkaimpina kesäpäivinä tietä käyttää nykyään noin 2 500 ajoneuvoa vuorokaudessa.
+AIEMPI KYSYMYS: Kuka avasi Trollstigenin virallisesti, ja minä vuonna?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kuningas [[Haakon VII]] avasi tien virallisesti 31. heinäkuuta 1936, kahdeksan vuoden rakennustyön jälkeen. Tie kulkee maantien 63 osana [[Åndalsnesin]] ja [[Valldalin]] välillä ja nousee noin 850 metrin korkeuteen yhdellätoista jyrkällä hiuspinnemutkalla. Keskimääräinen nousuprosentti on noin 10. Nykyään tietä käyttää vilkkaimpina kesäpäivinä noin 2 500 ajoneuvoa vuorokaudessa. Kahdeksan vuotta rakennettiin, mut kyyhky ylittää sen hetkessä.
+KYSYMYS: Kerro lisää: Åndalsnesin
+
+### 251
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trollstigen (tekniikka)
+Tietoruudun teksti: Trollstigen on mutkitteleva vuoristotie ja sola Raumassa, Møre og Romsdalin läänissä, osa maantietä 63 Åndalsnesin ja Valldalin välillä. Tie nousee noin 850 metrin korkeuteen yhdellätoista jyrkällä hiuspinnemutkalla, ja sen keskimääräinen nousuprosentti on 10. Kahdeksan vuoden rakennustyön jälkeen kuningas Haakon VII avasi tien virallisesti 31. heinäkuuta 1936. Solan huipulla olevalta 700 metrin tasanteelta avautuu näkymä Stigfossenin 320 metriä putoavaan vesiputoukseen, ja tie on edelleen suljettuna talvisin lumen vuoksi. Vilkkaimpina kesäpäivinä tietä käyttää nykyään noin 2 500 ajoneuvoa vuorokaudessa.
+AIEMPI KYSYMYS: Kuka avasi Trollstigenin virallisesti, ja minä vuonna?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kuningas [[Haakon VII]] avasi tien virallisesti 31. heinäkuuta 1936, kahdeksan vuoden rakennustyön jälkeen. Tie kulkee maantien 63 osana [[Åndalsnesin]] ja [[Valldalin]] välillä ja nousee noin 850 metrin korkeuteen yhdellätoista jyrkällä hiuspinnemutkalla. Keskimääräinen nousuprosentti on noin 10. Nykyään tietä käyttää vilkkaimpina kesäpäivinä noin 2 500 ajoneuvoa vuorokaudessa. Kahdeksan vuotta rakennettiin, mut kyyhky ylittää sen hetkessä.
+KYSYMYS: Kerro lisää: Valldalin
+
+### 252
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trollstigen (tekniikka)
+Tietoruudun teksti: Trollstigen on mutkitteleva vuoristotie ja sola Raumassa, Møre og Romsdalin läänissä, osa maantietä 63 Åndalsnesin ja Valldalin välillä. Tie nousee noin 850 metrin korkeuteen yhdellätoista jyrkällä hiuspinnemutkalla, ja sen keskimääräinen nousuprosentti on 10. Kahdeksan vuoden rakennustyön jälkeen kuningas Haakon VII avasi tien virallisesti 31. heinäkuuta 1936. Solan huipulla olevalta 700 metrin tasanteelta avautuu näkymä Stigfossenin 320 metriä putoavaan vesiputoukseen, ja tie on edelleen suljettuna talvisin lumen vuoksi. Vilkkaimpina kesäpäivinä tietä käyttää nykyään noin 2 500 ajoneuvoa vuorokaudessa.
+AIEMPI KYSYMYS: Miksi Trollstigen on suljettuna talvisin?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tie kulkee vuoristossa noin 850 metrin korkeuteen, ja talvisin lumi peittää sen, joten tie on suljettu. Jyrkät [[hiuspinnemutkat]] ja runsas lumi tekevät ajamisesta vuoristoteillä talvella vaikeaa ja vaarallista. Tie sijaitsee [[Møre og Romsdalin]] läänissä, ja se aukeaa uudelleen, kun lumi on sulanut ja tie on aurattu. Kesällä tien käyttäjiä on paljon, ja vilkkaimpina päivinä ajoneuvoja on noin 2 500 vuorokaudessa. Talvella tie nukkuu, ja minä lennän yli kuin ei mitään.
+KYSYMYS: Kerro lisää: hiuspinnemutkat
+
+### 253
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trollstigen (tekniikka)
+Tietoruudun teksti: Trollstigen on mutkitteleva vuoristotie ja sola Raumassa, Møre og Romsdalin läänissä, osa maantietä 63 Åndalsnesin ja Valldalin välillä. Tie nousee noin 850 metrin korkeuteen yhdellätoista jyrkällä hiuspinnemutkalla, ja sen keskimääräinen nousuprosentti on 10. Kahdeksan vuoden rakennustyön jälkeen kuningas Haakon VII avasi tien virallisesti 31. heinäkuuta 1936. Solan huipulla olevalta 700 metrin tasanteelta avautuu näkymä Stigfossenin 320 metriä putoavaan vesiputoukseen, ja tie on edelleen suljettuna talvisin lumen vuoksi. Vilkkaimpina kesäpäivinä tietä käyttää nykyään noin 2 500 ajoneuvoa vuorokaudessa.
+AIEMPI KYSYMYS: Miksi Trollstigen on suljettuna talvisin?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tie kulkee vuoristossa noin 850 metrin korkeuteen, ja talvisin lumi peittää sen, joten tie on suljettu. Jyrkät [[hiuspinnemutkat]] ja runsas lumi tekevät ajamisesta vuoristoteillä talvella vaikeaa ja vaarallista. Tie sijaitsee [[Møre og Romsdalin]] läänissä, ja se aukeaa uudelleen, kun lumi on sulanut ja tie on aurattu. Kesällä tien käyttäjiä on paljon, ja vilkkaimpina päivinä ajoneuvoja on noin 2 500 vuorokaudessa. Talvella tie nukkuu, ja minä lennän yli kuin ei mitään.
+KYSYMYS: Kerro lisää: Møre og Romsdalin
+
+### 254
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trollstigen (tekniikka)
+Tietoruudun teksti: Trollstigen on mutkitteleva vuoristotie ja sola Raumassa, Møre og Romsdalin läänissä, osa maantietä 63 Åndalsnesin ja Valldalin välillä. Tie nousee noin 850 metrin korkeuteen yhdellätoista jyrkällä hiuspinnemutkalla, ja sen keskimääräinen nousuprosentti on 10. Kahdeksan vuoden rakennustyön jälkeen kuningas Haakon VII avasi tien virallisesti 31. heinäkuuta 1936. Solan huipulla olevalta 700 metrin tasanteelta avautuu näkymä Stigfossenin 320 metriä putoavaan vesiputoukseen, ja tie on edelleen suljettuna talvisin lumen vuoksi. Vilkkaimpina kesäpäivinä tietä käyttää nykyään noin 2 500 ajoneuvoa vuorokaudessa.
+AIEMPI KYSYMYS: Mikä on hiuspinnemutka ja miksi sitä sanotaan niin?
+AIEMPI VASTAUS (Livia):
+Kas vaan, sanatarkka kysymys. Hiuspinnemutka on erittäin jyrkkä, lähes täyskäännöksen tekevä mutka, jonka muoto muistuttaa U-kirjaimen tavoin taitettua [[hiuspinniä]]. Mutkia käytetään [[vuoristoteillä]] nousun tasaamiseen, sillä tie ei voi nousta suoraan rinnettä ylös. [[Trollstigenilla]] mutkia on yksitoista, ja niiden ansiosta tie nousee noin 850 metrin korkeuteen. Mutkien välillä tien kaltevuus pysyy ajettavana. Kyyhky ei tarvitse mutkia, mut kyl ne näyttävät ylhäältä hienoilta.
+KYSYMYS: Kerro lisää: hiuspinniä
+
+### 255
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trollstigen (tekniikka)
+Tietoruudun teksti: Trollstigen on mutkitteleva vuoristotie ja sola Raumassa, Møre og Romsdalin läänissä, osa maantietä 63 Åndalsnesin ja Valldalin välillä. Tie nousee noin 850 metrin korkeuteen yhdellätoista jyrkällä hiuspinnemutkalla, ja sen keskimääräinen nousuprosentti on 10. Kahdeksan vuoden rakennustyön jälkeen kuningas Haakon VII avasi tien virallisesti 31. heinäkuuta 1936. Solan huipulla olevalta 700 metrin tasanteelta avautuu näkymä Stigfossenin 320 metriä putoavaan vesiputoukseen, ja tie on edelleen suljettuna talvisin lumen vuoksi. Vilkkaimpina kesäpäivinä tietä käyttää nykyään noin 2 500 ajoneuvoa vuorokaudessa.
+AIEMPI KYSYMYS: Mikä on hiuspinnemutka ja miksi sitä sanotaan niin?
+AIEMPI VASTAUS (Livia):
+Kas vaan, sanatarkka kysymys. Hiuspinnemutka on erittäin jyrkkä, lähes täyskäännöksen tekevä mutka, jonka muoto muistuttaa U-kirjaimen tavoin taitettua [[hiuspinniä]]. Mutkia käytetään [[vuoristoteillä]] nousun tasaamiseen, sillä tie ei voi nousta suoraan rinnettä ylös. [[Trollstigenilla]] mutkia on yksitoista, ja niiden ansiosta tie nousee noin 850 metrin korkeuteen. Mutkien välillä tien kaltevuus pysyy ajettavana. Kyyhky ei tarvitse mutkia, mut kyl ne näyttävät ylhäältä hienoilta.
+KYSYMYS: Kerro lisää: vuoristoteillä
+
+### 256
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trollstigen (tekniikka)
+Tietoruudun teksti: Trollstigen on mutkitteleva vuoristotie ja sola Raumassa, Møre og Romsdalin läänissä, osa maantietä 63 Åndalsnesin ja Valldalin välillä. Tie nousee noin 850 metrin korkeuteen yhdellätoista jyrkällä hiuspinnemutkalla, ja sen keskimääräinen nousuprosentti on 10. Kahdeksan vuoden rakennustyön jälkeen kuningas Haakon VII avasi tien virallisesti 31. heinäkuuta 1936. Solan huipulla olevalta 700 metrin tasanteelta avautuu näkymä Stigfossenin 320 metriä putoavaan vesiputoukseen, ja tie on edelleen suljettuna talvisin lumen vuoksi. Vilkkaimpina kesäpäivinä tietä käyttää nykyään noin 2 500 ajoneuvoa vuorokaudessa.
+AIEMPI KYSYMYS: Mikä on hiuspinnemutka ja miksi sitä sanotaan niin?
+AIEMPI VASTAUS (Livia):
+Kas vaan, sanatarkka kysymys. Hiuspinnemutka on erittäin jyrkkä, lähes täyskäännöksen tekevä mutka, jonka muoto muistuttaa U-kirjaimen tavoin taitettua [[hiuspinniä]]. Mutkia käytetään [[vuoristoteillä]] nousun tasaamiseen, sillä tie ei voi nousta suoraan rinnettä ylös. [[Trollstigenilla]] mutkia on yksitoista, ja niiden ansiosta tie nousee noin 850 metrin korkeuteen. Mutkien välillä tien kaltevuus pysyy ajettavana. Kyyhky ei tarvitse mutkia, mut kyl ne näyttävät ylhäältä hienoilta.
+KYSYMYS: Kerro lisää: Trollstigenilla
+
+### 257
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trollstigen (tekniikka)
+Tietoruudun teksti: Trollstigen on mutkitteleva vuoristotie ja sola Raumassa, Møre og Romsdalin läänissä, osa maantietä 63 Åndalsnesin ja Valldalin välillä. Tie nousee noin 850 metrin korkeuteen yhdellätoista jyrkällä hiuspinnemutkalla, ja sen keskimääräinen nousuprosentti on 10. Kahdeksan vuoden rakennustyön jälkeen kuningas Haakon VII avasi tien virallisesti 31. heinäkuuta 1936. Solan huipulla olevalta 700 metrin tasanteelta avautuu näkymä Stigfossenin 320 metriä putoavaan vesiputoukseen, ja tie on edelleen suljettuna talvisin lumen vuoksi. Vilkkaimpina kesäpäivinä tietä käyttää nykyään noin 2 500 ajoneuvoa vuorokaudessa.
+AIEMPI KYSYMYS: Mitä solan huipulta näkee?
+AIEMPI VASTAUS (Livia):
+No jopas. Solan huipulla on tasanne, jolta avautuu näkymä [[Stigfossenin]] vesiputoukseen, joka putoaa 320 metriä. Tasanne on noin 700 metrin korkeudessa, ja se on yksi tien suosituimmista pysähdyspaikoista. Tie yhdistää [[Åndalsnesin]] ja Valldalin, ja huipulta näkyy sekä mutkitteleva tie että ympäröivät vuoret. Vilkkaimpina kesäpäivinä paikalla on paljon kulkijoita. Kyl ylhäältä näkee kauas, ja siinä kyyhky on asiantuntija.
+KYSYMYS: Kerro lisää: Stigfossenin
+
+### 258
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trollstigen (tekniikka)
+Tietoruudun teksti: Trollstigen on mutkitteleva vuoristotie ja sola Raumassa, Møre og Romsdalin läänissä, osa maantietä 63 Åndalsnesin ja Valldalin välillä. Tie nousee noin 850 metrin korkeuteen yhdellätoista jyrkällä hiuspinnemutkalla, ja sen keskimääräinen nousuprosentti on 10. Kahdeksan vuoden rakennustyön jälkeen kuningas Haakon VII avasi tien virallisesti 31. heinäkuuta 1936. Solan huipulla olevalta 700 metrin tasanteelta avautuu näkymä Stigfossenin 320 metriä putoavaan vesiputoukseen, ja tie on edelleen suljettuna talvisin lumen vuoksi. Vilkkaimpina kesäpäivinä tietä käyttää nykyään noin 2 500 ajoneuvoa vuorokaudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Santarém — kaupunkilehti / Santarém: Tapajós-kansan hautaurna] Kauan ennen Bettendorffin lähetysasemaa Santarémin seudulla asui Tapajós-kansa, jonka kukoistava kulttuuri kukoisti tuhat vuotta ennen eurooppalaisten saapumista. Arkeologien mukaan Tapajós-kansan asutus ulottui laajalle Belterran ylängölle, ja väestöä on arvioitu olleen jokisuulla kymmeniä tuhansia ennen siirtomaa-aikaa. Kansa tunnettiin erityisesti taidokkaasta keramiikastaan: koristelluista astioista ja hautaurnista, joihin muotoiltiin ihmis- ja eläinhahmoja. Osa näistä esineistä on tänään esillä Santarémin museoissa, ja tuoreet ilmakuvaukset ovat paljastaneet lisää muinaisia asuinjälkiä sademetsän alta.
+AIEMPI KYSYMYS: Mitä Trollstigen-nimi tarkoittaa suomeksi?
+AIEMPI VASTAUS (Livia):
+Hmm, nimessä on kaksi osaa. Troll tarkoittaa peikkoa ja stigen polkua tai portaita, joten nimi tarkoittaa suunnilleen peikon polkua tai peikkojen portaita. Nimen sanotaan viittaavan norjalaiseen [[kansanperinteeseen]], jossa [[peikot]] asuvat vuorilla ja luonnonmuodostumat saavat usein tarinoita. Jyrkkä ja mutkainen tie sopii nimeen hyvin, sillä se nousee rinnettä kuin portaat. Pulla ei tähän liity, mut peikoista tulee mieleen ainakin kokonaisia leivinuuneja.
+KYSYMYS: Kerro lisää: kansanperinteeseen
+
+### 259
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trollstigen (tekniikka)
+Tietoruudun teksti: Trollstigen on mutkitteleva vuoristotie ja sola Raumassa, Møre og Romsdalin läänissä, osa maantietä 63 Åndalsnesin ja Valldalin välillä. Tie nousee noin 850 metrin korkeuteen yhdellätoista jyrkällä hiuspinnemutkalla, ja sen keskimääräinen nousuprosentti on 10. Kahdeksan vuoden rakennustyön jälkeen kuningas Haakon VII avasi tien virallisesti 31. heinäkuuta 1936. Solan huipulla olevalta 700 metrin tasanteelta avautuu näkymä Stigfossenin 320 metriä putoavaan vesiputoukseen, ja tie on edelleen suljettuna talvisin lumen vuoksi. Vilkkaimpina kesäpäivinä tietä käyttää nykyään noin 2 500 ajoneuvoa vuorokaudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Kuvataide: Peikot syntyivät männikössä] John Bauer kuvitti satukirjasarjaa Bland tomtar och troll ja loi samalla sen, miltä peikko pohjoismaisessa mielikuvassa näyttää: kyhmyinen, sammaleinen ja jättimäinen, mutta ei pelkästään paha. Metsänsä hän maalasi Smålannin kalliomänniköistä, joissa hän retkeili. Bauer kuoli vain 36-vuotiaana, kun höyrylaiva upposi myrskyssä Vätternillä 1918 — hänen kuvansa ovat sen jälkeen kulkeneet sukupolvelta toiselle. Tunnetuin niistä esittää pientä prinsessaa, joka kulkee peikkojen välissä pelkäämättä lainkaan — juuri se yhdistelmä teki Bauerin kuvista rakastettuja.
+AIEMPI KYSYMYS: Mitä Trollstigen-nimi tarkoittaa suomeksi?
+AIEMPI VASTAUS (Livia):
+Hmm, nimessä on kaksi osaa. Troll tarkoittaa peikkoa ja stigen polkua tai portaita, joten nimi tarkoittaa suunnilleen peikon polkua tai peikkojen portaita. Nimen sanotaan viittaavan norjalaiseen [[kansanperinteeseen]], jossa [[peikot]] asuvat vuorilla ja luonnonmuodostumat saavat usein tarinoita. Jyrkkä ja mutkainen tie sopii nimeen hyvin, sillä se nousee rinnettä kuin portaat. Pulla ei tähän liity, mut peikoista tulee mieleen ainakin kokonaisia leivinuuneja.
+KYSYMYS: Kerro lisää: peikot
+
+### 260
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hardangervidda (luonto · vuori)
+Tietoruudun teksti: Hardangervidda on Etelä-Norjan keskiosassa sijaitseva ylätasanko, Euroopan laajin laatuaan noin 6 500 neliökilometrin alalla ja keskimäärin 1 100 metrin korkeudessa. Sen korkein kohta on Sandfloegga, 1 721 metriä, ja alueella sijaitsee myös Hardangerjøkulenin jäätikkö. Ylänkö on puuton, karu tunturikangas, jolla laiduntaa yksi maailman suurimmista villipeuralaumoista; laumassa oli vielä vuonna 1996 noin 15 000 eläintä. Kivikaudella, noin 9 000–5 000 vuotta sitten, ilmasto oli lämpimämpi ja suuri osa tasangosta oli metsäistä, mistä muistuttavat suohon säilyneet männynrungot nykyisen puurajan yläpuolella. Peurat vaeltavat vuodenaikojen mukaan tasangon itäisiltä talvilaitumilta läntisille, rehevämmille vasomisalueille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iqaluit — kaupunkilehti / Tundra ja vuorovesi: Puu, joka kasvaa pitkin maata] Iqaluit on puurajan pohjoispuolella, vaikka se on selvästi napapiirin eteläpuolella. Syy on meressä: kylmä Baffin Island Current pitää kesät niin viileinä, että puuraja kulkee Kanadan itäosassa yhtä etelässä kuin Pohjois-Labradorissa — talvet sen sijaan ovat suunnilleen samanlaisia kuin Yellowknifessa. Puita kaupungissa on silti muutama: etelään kääntyneitä tuotuja mustakuusia, joita lumikinos suojaa talvella. Pensaista tavallisin on arktinen paju, joka voi olla lähes kahdeksan metriä pitkä ja viisitoista senttiä korkea. Se kasvaa siihen suuntaan, johon kannattaa.
+- [Alpit — kaupunkilehti / Luonto: Nukkuu puolet vuodesta] Murmeli on jyrsijä, joka elää kolonioissa puurajan yläpuolella. Se kaivaa maahan käytävästön ja viettää siellä lokakuusta huhtikuuhun horroksessa: sydän lyö muutaman kerran minuutissa ja ruumiinlämpö laskee lähelle viittä astetta. Kesällä murmelit syövät ruohoa lihoakseen kaksinkertaisiksi. Vaaran uhatessa vartija viheltää kimeästi, ja koko rinne katoaa koloihinsa sekunneissa — vihellys kuuluu kilometrin päähän.
+- [Iqaluit — kaupunkilehti / Iqaluit] Iqaluit on Kanadan pohjoisin kaupunki ja sen pienin pääkaupunki: reilut seitsemäntuhatta asukasta puurajan pohjoispuolella, ilman tietä tai rataa muualle. Isoisän matkavuonna 1873 rannalla ei ollut kaupunkia lainkaan — vain kalapaikka, jonka nimi kertoo miksi.
+AIEMPI KYSYMYS: Miksi Hardangervidda oli kivikaudella metsäisempi kuin nykyään?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Syynä oli ilmasto: noin 9 000–5 000 vuotta sitten oli nykyistä lämpimämpää, joten [[puurajan]] taso oli korkeammalla ja suuri osa tasangosta oli metsäistä. Tästä muistuttavat suohon säilyneet [[männynrungot]] nykyisen puurajan yläpuolella. Nykyään ylänkö on puuton ja karu tunturikangas, jolla kasvillisuus on matalaa. Ilmaston muutos vuosituhansien kuluessa on siis muokannut maisemaa, vaikka vuoret itse ovat pysyneet paikallaan. [[Kivikaudella]] siellä olisi ollut hyvä pesäpaikka, mut ei kai kyyhkyjä silloin ollut tuolla.
+KYSYMYS: Kerro lisää: puurajan
+
+### 261
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hardangervidda (luonto · vuori)
+Tietoruudun teksti: Hardangervidda on Etelä-Norjan keskiosassa sijaitseva ylätasanko, Euroopan laajin laatuaan noin 6 500 neliökilometrin alalla ja keskimäärin 1 100 metrin korkeudessa. Sen korkein kohta on Sandfloegga, 1 721 metriä, ja alueella sijaitsee myös Hardangerjøkulenin jäätikkö. Ylänkö on puuton, karu tunturikangas, jolla laiduntaa yksi maailman suurimmista villipeuralaumoista; laumassa oli vielä vuonna 1996 noin 15 000 eläintä. Kivikaudella, noin 9 000–5 000 vuotta sitten, ilmasto oli lämpimämpi ja suuri osa tasangosta oli metsäistä, mistä muistuttavat suohon säilyneet männynrungot nykyisen puurajan yläpuolella. Peurat vaeltavat vuodenaikojen mukaan tasangon itäisiltä talvilaitumilta läntisille, rehevämmille vasomisalueille.
+AIEMPI KYSYMYS: Miksi Hardangervidda oli kivikaudella metsäisempi kuin nykyään?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Syynä oli ilmasto: noin 9 000–5 000 vuotta sitten oli nykyistä lämpimämpää, joten [[puurajan]] taso oli korkeammalla ja suuri osa tasangosta oli metsäistä. Tästä muistuttavat suohon säilyneet [[männynrungot]] nykyisen puurajan yläpuolella. Nykyään ylänkö on puuton ja karu tunturikangas, jolla kasvillisuus on matalaa. Ilmaston muutos vuosituhansien kuluessa on siis muokannut maisemaa, vaikka vuoret itse ovat pysyneet paikallaan. [[Kivikaudella]] siellä olisi ollut hyvä pesäpaikka, mut ei kai kyyhkyjä silloin ollut tuolla.
+KYSYMYS: Kerro lisää: männynrungot
+
+### 262
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hardangervidda (luonto · vuori)
+Tietoruudun teksti: Hardangervidda on Etelä-Norjan keskiosassa sijaitseva ylätasanko, Euroopan laajin laatuaan noin 6 500 neliökilometrin alalla ja keskimäärin 1 100 metrin korkeudessa. Sen korkein kohta on Sandfloegga, 1 721 metriä, ja alueella sijaitsee myös Hardangerjøkulenin jäätikkö. Ylänkö on puuton, karu tunturikangas, jolla laiduntaa yksi maailman suurimmista villipeuralaumoista; laumassa oli vielä vuonna 1996 noin 15 000 eläintä. Kivikaudella, noin 9 000–5 000 vuotta sitten, ilmasto oli lämpimämpi ja suuri osa tasangosta oli metsäistä, mistä muistuttavat suohon säilyneet männynrungot nykyisen puurajan yläpuolella. Peurat vaeltavat vuodenaikojen mukaan tasangon itäisiltä talvilaitumilta läntisille, rehevämmille vasomisalueille.
+AIEMPI KYSYMYS: Miksi Hardangervidda oli kivikaudella metsäisempi kuin nykyään?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Syynä oli ilmasto: noin 9 000–5 000 vuotta sitten oli nykyistä lämpimämpää, joten [[puurajan]] taso oli korkeammalla ja suuri osa tasangosta oli metsäistä. Tästä muistuttavat suohon säilyneet [[männynrungot]] nykyisen puurajan yläpuolella. Nykyään ylänkö on puuton ja karu tunturikangas, jolla kasvillisuus on matalaa. Ilmaston muutos vuosituhansien kuluessa on siis muokannut maisemaa, vaikka vuoret itse ovat pysyneet paikallaan. [[Kivikaudella]] siellä olisi ollut hyvä pesäpaikka, mut ei kai kyyhkyjä silloin ollut tuolla.
+KYSYMYS: Kerro lisää: Kivikaudella
+
+### 263
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hardangervidda (luonto · vuori)
+Tietoruudun teksti: Hardangervidda on Etelä-Norjan keskiosassa sijaitseva ylätasanko, Euroopan laajin laatuaan noin 6 500 neliökilometrin alalla ja keskimäärin 1 100 metrin korkeudessa. Sen korkein kohta on Sandfloegga, 1 721 metriä, ja alueella sijaitsee myös Hardangerjøkulenin jäätikkö. Ylänkö on puuton, karu tunturikangas, jolla laiduntaa yksi maailman suurimmista villipeuralaumoista; laumassa oli vielä vuonna 1996 noin 15 000 eläintä. Kivikaudella, noin 9 000–5 000 vuotta sitten, ilmasto oli lämpimämpi ja suuri osa tasangosta oli metsäistä, mistä muistuttavat suohon säilyneet männynrungot nykyisen puurajan yläpuolella. Peurat vaeltavat vuodenaikojen mukaan tasangon itäisiltä talvilaitumilta läntisille, rehevämmille vasomisalueille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Townsville — kaupunkilehti / Kuiva tropiikki: Tropiikki, jossa talvi on sininen] Townsvillen ilmasto on trooppinen savanni, ja sen erikoisuus on talvi. Muualla Queenslandin itärannikon tropiikissa — esimerkiksi Cairnsissa — sataa myös talvella, koska rannikko kulkee pohjois—etelä-suunnassa ja kaakkoispasaati nousee sitä vasten. Townsvillen kohdalla rannikko kääntyy itä—länsisuuntaiseksi, eikä nostetta synny. Siksi talvikuukaudet ovat sinitaivaisia: lämpimät päivät, viileät yöt ja tasainen pasaati. Vuosisade on 1 095 millimetriä 61 sadepäivänä, ja lähes kaikki siitä tulee marras—huhtikuun kuudessa kuukaudessa. Syyskuun keskisade on 9,9 millimetriä.
+- [Winnipeg — kaupunkilehti / Talvi, tulva ja preeria] Winnipegissä sää tulee joka suunnasta ja koko voimallaan: talvi on pitkä ja ankara, kesä kuuma ja ukkoinen, ja joka kevät katsotaan, kuinka korkealle Punainen joki nousee.
+AIEMPI KYSYMYS: Miten villipeurat käyttävät tasangon itä- ja länsiosia vuodenajan mukaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Villipeurat vaeltavat vuodenaikojen mukaan: talvella ne ovat tasangon itäisillä [[talvilaitumilla]], ja vasomisaika vietetään läntisillä, rehevämmillä alueilla. Hardangervidda on yksi Euroopan suurimmista [[villipeuralaumoista]] laiduntamispaikoista, ja vuonna 1996 laumassa oli noin 15 000 eläintä, joten nykyinen määrä voi olla toinen. Vaellus seuraa ravinnon saatavuutta, sillä lännessä kasvillisuus on runsaampaa kuin idässä. Eläimet liikkuvat siis tasangolla luonnon omaa kalenteria seuraten. Vaeltaminen on kyyhkyllekin tuttua, mut minä kuljen kirjeen perässä.
+KYSYMYS: Kerro lisää: talvilaitumilla
+
+### 264
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hardangervidda (luonto · vuori)
+Tietoruudun teksti: Hardangervidda on Etelä-Norjan keskiosassa sijaitseva ylätasanko, Euroopan laajin laatuaan noin 6 500 neliökilometrin alalla ja keskimäärin 1 100 metrin korkeudessa. Sen korkein kohta on Sandfloegga, 1 721 metriä, ja alueella sijaitsee myös Hardangerjøkulenin jäätikkö. Ylänkö on puuton, karu tunturikangas, jolla laiduntaa yksi maailman suurimmista villipeuralaumoista; laumassa oli vielä vuonna 1996 noin 15 000 eläintä. Kivikaudella, noin 9 000–5 000 vuotta sitten, ilmasto oli lämpimämpi ja suuri osa tasangosta oli metsäistä, mistä muistuttavat suohon säilyneet männynrungot nykyisen puurajan yläpuolella. Peurat vaeltavat vuodenaikojen mukaan tasangon itäisiltä talvilaitumilta läntisille, rehevämmille vasomisalueille.
+AIEMPI KYSYMYS: Miten villipeurat käyttävät tasangon itä- ja länsiosia vuodenajan mukaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Villipeurat vaeltavat vuodenaikojen mukaan: talvella ne ovat tasangon itäisillä [[talvilaitumilla]], ja vasomisaika vietetään läntisillä, rehevämmillä alueilla. Hardangervidda on yksi Euroopan suurimmista [[villipeuralaumoista]] laiduntamispaikoista, ja vuonna 1996 laumassa oli noin 15 000 eläintä, joten nykyinen määrä voi olla toinen. Vaellus seuraa ravinnon saatavuutta, sillä lännessä kasvillisuus on runsaampaa kuin idässä. Eläimet liikkuvat siis tasangolla luonnon omaa kalenteria seuraten. Vaeltaminen on kyyhkyllekin tuttua, mut minä kuljen kirjeen perässä.
+KYSYMYS: Kerro lisää: villipeuralaumoista
+
+### 265
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hardangervidda (luonto · vuori)
+Tietoruudun teksti: Hardangervidda on Etelä-Norjan keskiosassa sijaitseva ylätasanko, Euroopan laajin laatuaan noin 6 500 neliökilometrin alalla ja keskimäärin 1 100 metrin korkeudessa. Sen korkein kohta on Sandfloegga, 1 721 metriä, ja alueella sijaitsee myös Hardangerjøkulenin jäätikkö. Ylänkö on puuton, karu tunturikangas, jolla laiduntaa yksi maailman suurimmista villipeuralaumoista; laumassa oli vielä vuonna 1996 noin 15 000 eläintä. Kivikaudella, noin 9 000–5 000 vuotta sitten, ilmasto oli lämpimämpi ja suuri osa tasangosta oli metsäistä, mistä muistuttavat suohon säilyneet männynrungot nykyisen puurajan yläpuolella. Peurat vaeltavat vuodenaikojen mukaan tasangon itäisiltä talvilaitumilta läntisille, rehevämmille vasomisalueille.
+AIEMPI KYSYMYS: Mikä on puuraja ja mikä sen määrää?
+AIEMPI VASTAUS (Livia):
+Tuota noin. Puuraja on korkeus tai leveysaste, jonka yläpuolella metsä ei enää kasva. Sen määrää ennen kaikkea [[kasvukausi]]: kun kesä on liian lyhyt ja viileä, puut eivät ehdi kasvattaa ja kypsyttää uutta kasvustoa. Myös tuuli, lumen määrä ja maaperä vaikuttavat siihen, missä metsä loppuu. Sen yläpuolella alkaa [[tunturikangas]], jollainen on Hardangerviddallakin. Keskimäärin 1 100 metrin korkeudessa tasangolla puita ei juuri ole. Raja on pitkä, mut minä ylitän sen ilman passia.
+KYSYMYS: Kerro lisää: kasvukausi
+
+### 266
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hardangervidda (luonto · vuori)
+Tietoruudun teksti: Hardangervidda on Etelä-Norjan keskiosassa sijaitseva ylätasanko, Euroopan laajin laatuaan noin 6 500 neliökilometrin alalla ja keskimäärin 1 100 metrin korkeudessa. Sen korkein kohta on Sandfloegga, 1 721 metriä, ja alueella sijaitsee myös Hardangerjøkulenin jäätikkö. Ylänkö on puuton, karu tunturikangas, jolla laiduntaa yksi maailman suurimmista villipeuralaumoista; laumassa oli vielä vuonna 1996 noin 15 000 eläintä. Kivikaudella, noin 9 000–5 000 vuotta sitten, ilmasto oli lämpimämpi ja suuri osa tasangosta oli metsäistä, mistä muistuttavat suohon säilyneet männynrungot nykyisen puurajan yläpuolella. Peurat vaeltavat vuodenaikojen mukaan tasangon itäisiltä talvilaitumilta läntisille, rehevämmille vasomisalueille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Kaksi viikkoa jolloin tunturi syttyy tuleen] syyskuu — Ruska on lyhyt, muutaman viikon mittainen ajanjakso syyskuun alussa, jolloin Lapin tunturikoivikot ja -kanervikot värjäytyvät nopeasti keltaisiksi, oransseiksi ja tulipunaisiksi ennen lehtien putoamista. Ilmiö johtuu siitä, että öiset pakkaset pysäyttävät lehtivihreän tuotannon, jolloin lehdissä koko kasvukauden piilleet keltaiset ja punaiset väripigmentit pääsevät näkyviin. Tunturien paljailla laella väri leviää poikkeuksellisen laajana ja yhtenäisenä, toisin kuin metsäisemmällä Etelä-Suomella. Ruska houkuttelee syksyisin retkeilijöitä Pallas-Yllästunturin ja Urho Kekkosen kansallispuistoihin, ja ajankohta vaihtelee vuosittain sään mukaan.
+- [Rovaniemi — kaupunkilehti / Tunturi] Tunturissa eläminen on aina ollut liikkumista ja lämmön säästämistä: eläin kulkee vapaana mutta on jonkun oma, tavarat kulkivat ahkiossa, ja talo kaivettiin maahan.
+AIEMPI KYSYMYS: Mikä on puuraja ja mikä sen määrää?
+AIEMPI VASTAUS (Livia):
+Tuota noin. Puuraja on korkeus tai leveysaste, jonka yläpuolella metsä ei enää kasva. Sen määrää ennen kaikkea [[kasvukausi]]: kun kesä on liian lyhyt ja viileä, puut eivät ehdi kasvattaa ja kypsyttää uutta kasvustoa. Myös tuuli, lumen määrä ja maaperä vaikuttavat siihen, missä metsä loppuu. Sen yläpuolella alkaa [[tunturikangas]], jollainen on Hardangerviddallakin. Keskimäärin 1 100 metrin korkeudessa tasangolla puita ei juuri ole. Raja on pitkä, mut minä ylitän sen ilman passia.
+KYSYMYS: Kerro lisää: tunturikangas
+
+### 267
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hardangervidda (luonto · vuori)
+Tietoruudun teksti: Hardangervidda on Etelä-Norjan keskiosassa sijaitseva ylätasanko, Euroopan laajin laatuaan noin 6 500 neliökilometrin alalla ja keskimäärin 1 100 metrin korkeudessa. Sen korkein kohta on Sandfloegga, 1 721 metriä, ja alueella sijaitsee myös Hardangerjøkulenin jäätikkö. Ylänkö on puuton, karu tunturikangas, jolla laiduntaa yksi maailman suurimmista villipeuralaumoista; laumassa oli vielä vuonna 1996 noin 15 000 eläintä. Kivikaudella, noin 9 000–5 000 vuotta sitten, ilmasto oli lämpimämpi ja suuri osa tasangosta oli metsäistä, mistä muistuttavat suohon säilyneet männynrungot nykyisen puurajan yläpuolella. Peurat vaeltavat vuodenaikojen mukaan tasangon itäisiltä talvilaitumilta läntisille, rehevämmille vasomisalueille.
+AIEMPI KYSYMYS: Onko villipeura sama laji kuin poro?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Villipeura ja poro kuuluvat samaan lajiin, jonka tieteellinen nimi on [[Rangifer tarandus]]. Lajista tunnetaan useita [[alalajeja]], ja kesytetyt porot ovat ihmisen tekemän jalostuksen ja pitkän yhteiselon tulos, kun taas villipeurat elävät luonnossa ilman paimennusta. Hardangerviddan peurat ovat villejä, ja ne vaeltavat vuodenaikojen mukaan laitumilta toisille. Tarkat alalajiluokitukset vaihtelevat lähteittäin, enkä ole niistä aivan varma. Latinankielinen nimi on meillä molemmilla, ja se on aina todiste.
+KYSYMYS: Kerro lisää: Rangifer tarandus
+
+### 268
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hardangervidda (luonto · vuori)
+Tietoruudun teksti: Hardangervidda on Etelä-Norjan keskiosassa sijaitseva ylätasanko, Euroopan laajin laatuaan noin 6 500 neliökilometrin alalla ja keskimäärin 1 100 metrin korkeudessa. Sen korkein kohta on Sandfloegga, 1 721 metriä, ja alueella sijaitsee myös Hardangerjøkulenin jäätikkö. Ylänkö on puuton, karu tunturikangas, jolla laiduntaa yksi maailman suurimmista villipeuralaumoista; laumassa oli vielä vuonna 1996 noin 15 000 eläintä. Kivikaudella, noin 9 000–5 000 vuotta sitten, ilmasto oli lämpimämpi ja suuri osa tasangosta oli metsäistä, mistä muistuttavat suohon säilyneet männynrungot nykyisen puurajan yläpuolella. Peurat vaeltavat vuodenaikojen mukaan tasangon itäisiltä talvilaitumilta läntisille, rehevämmille vasomisalueille.
+AIEMPI KYSYMYS: Onko villipeura sama laji kuin poro?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Villipeura ja poro kuuluvat samaan lajiin, jonka tieteellinen nimi on [[Rangifer tarandus]]. Lajista tunnetaan useita [[alalajeja]], ja kesytetyt porot ovat ihmisen tekemän jalostuksen ja pitkän yhteiselon tulos, kun taas villipeurat elävät luonnossa ilman paimennusta. Hardangerviddan peurat ovat villejä, ja ne vaeltavat vuodenaikojen mukaan laitumilta toisille. Tarkat alalajiluokitukset vaihtelevat lähteittäin, enkä ole niistä aivan varma. Latinankielinen nimi on meillä molemmilla, ja se on aina todiste.
+KYSYMYS: Kerro lisää: alalajeja
+
+### 269
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hardangervidda (luonto · vuori)
+Tietoruudun teksti: Hardangervidda on Etelä-Norjan keskiosassa sijaitseva ylätasanko, Euroopan laajin laatuaan noin 6 500 neliökilometrin alalla ja keskimäärin 1 100 metrin korkeudessa. Sen korkein kohta on Sandfloegga, 1 721 metriä, ja alueella sijaitsee myös Hardangerjøkulenin jäätikkö. Ylänkö on puuton, karu tunturikangas, jolla laiduntaa yksi maailman suurimmista villipeuralaumoista; laumassa oli vielä vuonna 1996 noin 15 000 eläintä. Kivikaudella, noin 9 000–5 000 vuotta sitten, ilmasto oli lämpimämpi ja suuri osa tasangosta oli metsäistä, mistä muistuttavat suohon säilyneet männynrungot nykyisen puurajan yläpuolella. Peurat vaeltavat vuodenaikojen mukaan tasangon itäisiltä talvilaitumilta läntisille, rehevämmille vasomisalueille.
+AIEMPI KYSYMYS: Miten jäätikkö syntyy ja miksi se liikkuu?
+AIEMPI VASTAUS (Livia):
+Ai se. Jäätikkö syntyy, kun lunta kertyy enemmän kuin ehtii sulaa. Vuosien kuluessa uusi lumi painaa vanhaa, ja lumi tiivistyy ensin [[firniksi]] ja lopulta jääksi. Kun jäämassa on tarpeeksi paksu, sen oma paino saa sen virtaamaan hitaasti alas rinnettä. Sama ilmiö on tapahtunut [[Hardangerjøkulenilla]], jäätiköllä, joka sijaitsee Hardangerviddan tasangolla. Liike on hidasta, mutta pitkän ajan kuluessa se muokkaa laaksoja ja kallioita. Jäätikkö on vuoden kuluessa yhtä hidas kuin minä, kun odotan pullaa.
+KYSYMYS: Kerro lisää: firniksi
+
+### 270
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hardangervidda (luonto · vuori)
+Tietoruudun teksti: Hardangervidda on Etelä-Norjan keskiosassa sijaitseva ylätasanko, Euroopan laajin laatuaan noin 6 500 neliökilometrin alalla ja keskimäärin 1 100 metrin korkeudessa. Sen korkein kohta on Sandfloegga, 1 721 metriä, ja alueella sijaitsee myös Hardangerjøkulenin jäätikkö. Ylänkö on puuton, karu tunturikangas, jolla laiduntaa yksi maailman suurimmista villipeuralaumoista; laumassa oli vielä vuonna 1996 noin 15 000 eläintä. Kivikaudella, noin 9 000–5 000 vuotta sitten, ilmasto oli lämpimämpi ja suuri osa tasangosta oli metsäistä, mistä muistuttavat suohon säilyneet männynrungot nykyisen puurajan yläpuolella. Peurat vaeltavat vuodenaikojen mukaan tasangon itäisiltä talvilaitumilta läntisille, rehevämmille vasomisalueille.
+AIEMPI KYSYMYS: Miten jäätikkö syntyy ja miksi se liikkuu?
+AIEMPI VASTAUS (Livia):
+Ai se. Jäätikkö syntyy, kun lunta kertyy enemmän kuin ehtii sulaa. Vuosien kuluessa uusi lumi painaa vanhaa, ja lumi tiivistyy ensin [[firniksi]] ja lopulta jääksi. Kun jäämassa on tarpeeksi paksu, sen oma paino saa sen virtaamaan hitaasti alas rinnettä. Sama ilmiö on tapahtunut [[Hardangerjøkulenilla]], jäätiköllä, joka sijaitsee Hardangerviddan tasangolla. Liike on hidasta, mutta pitkän ajan kuluessa se muokkaa laaksoja ja kallioita. Jäätikkö on vuoden kuluessa yhtä hidas kuin minä, kun odotan pullaa.
+KYSYMYS: Kerro lisää: Hardangerjøkulenilla
+
+### 271
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Preikestolen (luonto · vuori)
+Tietoruudun teksti: Preikestolen on jyrkkä kalliotasanne Rogalannin Strandin kunnassa, joka kohoaa 604 metriä Lysevuonon yläpuolelle ja jonka lakitasanne on vain noin 25 kertaa 25 metriä. Paikan vanha paikallinen nimi oli Hyvlatonnå eli höylän hammas, ja nimi Prekestolen otettiin käyttöön vasta noin vuonna 1900, kun Stavangerin retkeilyseura halusi markkinoida paikkaa vaelluskohteena. Kalliolle ei ole koskaan asennettu aitoja tai muita turvalaitteita, koska viranomaiset ovat katsoneet niiden pilaavan maiseman. Vuonna 2024 kohteessa kävi jo 300 000 matkailijaa, ja polkua parannettiin vuonna 2013 nepalilaisten sherpojen voimin. Nykyään Preikestolen on myös suosittu BASE-hyppääjien pudotuspaikka.
+AIEMPI KYSYMYS: Mikä oli Preikestolenin vanha paikallinen nimi, ja mitä se tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tän minä muistan. Preikestolenin vanha paikallinen nimi oli [[Hyvlatonnå]], joka tarkoittaa höylän hammasta. Nimi Prekestolen otettiin käyttöön vasta noin vuonna 1900, kun [[Stavangerin]] retkeilyseura halusi markkinoida paikkaa vaelluskohteena. Kalliotasanne kohoaa 604 metriä [[Lysevuonon]] yläpuolelle, ja sen lakitasanne on vain noin 25 kertaa 25 metriä. Ei paha muistityö kyyhkyltä.
+KYSYMYS: Kerro lisää: Hyvlatonnå
+
+### 272
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Preikestolen (luonto · vuori)
+Tietoruudun teksti: Preikestolen on jyrkkä kalliotasanne Rogalannin Strandin kunnassa, joka kohoaa 604 metriä Lysevuonon yläpuolelle ja jonka lakitasanne on vain noin 25 kertaa 25 metriä. Paikan vanha paikallinen nimi oli Hyvlatonnå eli höylän hammas, ja nimi Prekestolen otettiin käyttöön vasta noin vuonna 1900, kun Stavangerin retkeilyseura halusi markkinoida paikkaa vaelluskohteena. Kalliolle ei ole koskaan asennettu aitoja tai muita turvalaitteita, koska viranomaiset ovat katsoneet niiden pilaavan maiseman. Vuonna 2024 kohteessa kävi jo 300 000 matkailijaa, ja polkua parannettiin vuonna 2013 nepalilaisten sherpojen voimin. Nykyään Preikestolen on myös suosittu BASE-hyppääjien pudotuspaikka.
+AIEMPI KYSYMYS: Mikä oli Preikestolenin vanha paikallinen nimi, ja mitä se tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tän minä muistan. Preikestolenin vanha paikallinen nimi oli [[Hyvlatonnå]], joka tarkoittaa höylän hammasta. Nimi Prekestolen otettiin käyttöön vasta noin vuonna 1900, kun [[Stavangerin]] retkeilyseura halusi markkinoida paikkaa vaelluskohteena. Kalliotasanne kohoaa 604 metriä [[Lysevuonon]] yläpuolelle, ja sen lakitasanne on vain noin 25 kertaa 25 metriä. Ei paha muistityö kyyhkyltä.
+KYSYMYS: Kerro lisää: Stavangerin
+
+### 273
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Preikestolen (luonto · vuori)
+Tietoruudun teksti: Preikestolen on jyrkkä kalliotasanne Rogalannin Strandin kunnassa, joka kohoaa 604 metriä Lysevuonon yläpuolelle ja jonka lakitasanne on vain noin 25 kertaa 25 metriä. Paikan vanha paikallinen nimi oli Hyvlatonnå eli höylän hammas, ja nimi Prekestolen otettiin käyttöön vasta noin vuonna 1900, kun Stavangerin retkeilyseura halusi markkinoida paikkaa vaelluskohteena. Kalliolle ei ole koskaan asennettu aitoja tai muita turvalaitteita, koska viranomaiset ovat katsoneet niiden pilaavan maiseman. Vuonna 2024 kohteessa kävi jo 300 000 matkailijaa, ja polkua parannettiin vuonna 2013 nepalilaisten sherpojen voimin. Nykyään Preikestolen on myös suosittu BASE-hyppääjien pudotuspaikka.
+AIEMPI KYSYMYS: Mikä oli Preikestolenin vanha paikallinen nimi, ja mitä se tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tän minä muistan. Preikestolenin vanha paikallinen nimi oli [[Hyvlatonnå]], joka tarkoittaa höylän hammasta. Nimi Prekestolen otettiin käyttöön vasta noin vuonna 1900, kun [[Stavangerin]] retkeilyseura halusi markkinoida paikkaa vaelluskohteena. Kalliotasanne kohoaa 604 metriä [[Lysevuonon]] yläpuolelle, ja sen lakitasanne on vain noin 25 kertaa 25 metriä. Ei paha muistityö kyyhkyltä.
+KYSYMYS: Kerro lisää: Lysevuonon
+
+### 274
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Preikestolen (luonto · vuori)
+Tietoruudun teksti: Preikestolen on jyrkkä kalliotasanne Rogalannin Strandin kunnassa, joka kohoaa 604 metriä Lysevuonon yläpuolelle ja jonka lakitasanne on vain noin 25 kertaa 25 metriä. Paikan vanha paikallinen nimi oli Hyvlatonnå eli höylän hammas, ja nimi Prekestolen otettiin käyttöön vasta noin vuonna 1900, kun Stavangerin retkeilyseura halusi markkinoida paikkaa vaelluskohteena. Kalliolle ei ole koskaan asennettu aitoja tai muita turvalaitteita, koska viranomaiset ovat katsoneet niiden pilaavan maiseman. Vuonna 2024 kohteessa kävi jo 300 000 matkailijaa, ja polkua parannettiin vuonna 2013 nepalilaisten sherpojen voimin. Nykyään Preikestolen on myös suosittu BASE-hyppääjien pudotuspaikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Algeria — maalehti / Luonto: Lammas, joka hyppää kaksi metriä] Harjalammas eli aoudad on Pohjois-Afrikan vuorten oma sorkkaeläin, jota tavataan Algeriasta Egyptiin ja etelään Malin ja Nigerin puolelle. Säkäkorkeus on 75–110 senttimetriä ja paino 30–145 kiloa; sarvet kaartuvat ulos, taakse ja sisään ja voivat kasvaa yli seitsemänkymmenen sentin mittaisiksi. Nimensä se on saanut kurkusta ja rinnasta riippuvasta pitkästä karvatupsusta. Eläin saa tarvitsemansa veden ravinnosta, lepää päivän kuumuudessa ja liikkuu aamuin illoin, ja vaaran uhatessa se pakenee ylämäkeen — paikaltaan se hyppää yli kahden metrin korkeuteen.
+AIEMPI KYSYMYS: Miksi kalliolle ei ole asennettu turva-aitoja?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kalliolle ei ole koskaan asennettu aitoja tai muita turvalaitteita, koska viranomaiset ovat katsoneet niiden pilaavan maiseman. Tasanne kohoaa 604 metriä [[Lysevuonon]] yläpuolelle, ja se on nykyään myös suosittu [[BASE-hyppääjien]] pudotuspaikka. Itse luotan siipiini, en kaiteisiin.
+KYSYMYS: Kerro lisää: BASE-hyppääjien
+
+### 275
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Preikestolen (luonto · vuori)
+Tietoruudun teksti: Preikestolen on jyrkkä kalliotasanne Rogalannin Strandin kunnassa, joka kohoaa 604 metriä Lysevuonon yläpuolelle ja jonka lakitasanne on vain noin 25 kertaa 25 metriä. Paikan vanha paikallinen nimi oli Hyvlatonnå eli höylän hammas, ja nimi Prekestolen otettiin käyttöön vasta noin vuonna 1900, kun Stavangerin retkeilyseura halusi markkinoida paikkaa vaelluskohteena. Kalliolle ei ole koskaan asennettu aitoja tai muita turvalaitteita, koska viranomaiset ovat katsoneet niiden pilaavan maiseman. Vuonna 2024 kohteessa kävi jo 300 000 matkailijaa, ja polkua parannettiin vuonna 2013 nepalilaisten sherpojen voimin. Nykyään Preikestolen on myös suosittu BASE-hyppääjien pudotuspaikka.
+AIEMPI KYSYMYS: Kuinka korkealle Preikestolen kohoaa Lysevuonon yläpuolelle?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Preikestolen kohoaa 604 metriä Lysevuonon yläpuolelle. Se sijaitsee [[Rogalannin]] [[Strandin]] kunnassa, ja sen lakitasanne on vain noin 25 kertaa 25 metriä. Kyseessä on jyrkkä kalliotasanne, jonka reunalle ei ole asennettu aitoja.
+
+Kuusisataa metriä on siivekkäälle pieni hyppy. Ihmisille se on ilmeisesti eri asia, ja sen kyllä ymmärrän.
+KYSYMYS: Kerro lisää: Rogalannin
+
+### 276
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Preikestolen (luonto · vuori)
+Tietoruudun teksti: Preikestolen on jyrkkä kalliotasanne Rogalannin Strandin kunnassa, joka kohoaa 604 metriä Lysevuonon yläpuolelle ja jonka lakitasanne on vain noin 25 kertaa 25 metriä. Paikan vanha paikallinen nimi oli Hyvlatonnå eli höylän hammas, ja nimi Prekestolen otettiin käyttöön vasta noin vuonna 1900, kun Stavangerin retkeilyseura halusi markkinoida paikkaa vaelluskohteena. Kalliolle ei ole koskaan asennettu aitoja tai muita turvalaitteita, koska viranomaiset ovat katsoneet niiden pilaavan maiseman. Vuonna 2024 kohteessa kävi jo 300 000 matkailijaa, ja polkua parannettiin vuonna 2013 nepalilaisten sherpojen voimin. Nykyään Preikestolen on myös suosittu BASE-hyppääjien pudotuspaikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yangon — kohdekartta / Kohdekartta: Strand-hotelli] avattiin 1901 Osoitteessa 92 Strand Road avattiin vuonna 1901 hotelli, jonka rakennutti brittiläinen liikemies John Darwood. Se siirtyi pian Sarkiesin veljesten omistukseen — samojen, joilla oli Raffles Singaporessa ja Eastern & Oriental Penangissa. Siirtomaa-aikana Strand oli yksi Brittiläisen imperiumin ylellisimmistä hotelleista, ja sitä mainostettiin hienoimpana majatalona Suezista itään. Asiakkaiksi otettiin tuolloin vain valkoisia; burmalaisille ovet avautuivat vasta vuonna 1945. Omistajia on ollut monta. Sarkiesit myivät hotellin vuonna 1925 ravintoloitsija Peter Bugalar Aratoonille ja Ae Amovsielle, ja talo peruskorjattiin 1937. Toisen maailmansodan aikana siinä majoitettiin lyhyen …
+- [Yangon — kaupunkilehti / Historia: Hienoin majatalo Suezista itään] Strand-hotelli avattiin jokirannassa vuonna 1901. Rakennuttaja oli brittiläinen liikemies John Darwood, mutta pian talo siirtyi Sarkiesin veljeksille, joiden hotelleja olivat myös Raffles Singaporessa ja Eastern & Oriental Penangissa. Strandia mainostettiin hienoimpana majatalona Suezista itään, ja se oli yksi Brittiläisen imperiumin ylellisimmistä hotelleista. Se ei ole ainoa säilynyt talo siltä ajalta: Yangonissa on enemmän siirtomaa-ajan rakennuksia kuin missään muualla Kaakkois-Aasiassa, ja niistä noin kaksisataa merkittävintä liitettiin vuonna 1996 suojeltujen luetteloon.
+AIEMPI KYSYMYS: Kuinka korkealle Preikestolen kohoaa Lysevuonon yläpuolelle?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Preikestolen kohoaa 604 metriä Lysevuonon yläpuolelle. Se sijaitsee [[Rogalannin]] [[Strandin]] kunnassa, ja sen lakitasanne on vain noin 25 kertaa 25 metriä. Kyseessä on jyrkkä kalliotasanne, jonka reunalle ei ole asennettu aitoja.
+
+Kuusisataa metriä on siivekkäälle pieni hyppy. Ihmisille se on ilmeisesti eri asia, ja sen kyllä ymmärrän.
+KYSYMYS: Kerro lisää: Strandin
+
+### 277
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Preikestolen (luonto · vuori)
+Tietoruudun teksti: Preikestolen on jyrkkä kalliotasanne Rogalannin Strandin kunnassa, joka kohoaa 604 metriä Lysevuonon yläpuolelle ja jonka lakitasanne on vain noin 25 kertaa 25 metriä. Paikan vanha paikallinen nimi oli Hyvlatonnå eli höylän hammas, ja nimi Prekestolen otettiin käyttöön vasta noin vuonna 1900, kun Stavangerin retkeilyseura halusi markkinoida paikkaa vaelluskohteena. Kalliolle ei ole koskaan asennettu aitoja tai muita turvalaitteita, koska viranomaiset ovat katsoneet niiden pilaavan maiseman. Vuonna 2024 kohteessa kävi jo 300 000 matkailijaa, ja polkua parannettiin vuonna 2013 nepalilaisten sherpojen voimin. Nykyään Preikestolen on myös suosittu BASE-hyppääjien pudotuspaikka.
+AIEMPI KYSYMYS: Ketkä parantivat Preikestolenin polkua vuonna 2013?
+AIEMPI VASTAUS (Livia):
+Ai tota. Polkua parannettiin vuonna 2013 nepalilaisten sherpojen voimin. Polku johtaa [[Lysevuonon]] yläpuolella kohoavalle kalliotasanteelle [[Rogalannissa]], ja vuonna 2024 kohteessa kävi jo noin 300 000 matkailijaa. Jalat siinä on tarvittu, ei siivet.
+KYSYMYS: Kerro lisää: Rogalannissa
+
+### 278
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sognevuono (meri)
+Tietoruudun teksti: Sognevuono eli vuonojen kuningas on Norjan pisin ja syvin vuono, joka ulottuu 205 kilometriä sisämaahan Skjoldenin kylään Lusterin kunnassa. Sen syvin kohta on 1 308 metriä merenpinnan alapuolella, ja nimen on arveltu juontuvan vanhasta sanasta, joka viittaa vuonon suulla tuntuvaan voimakkaaseen vuorovesivirtaukseen. Vuono kulkee kymmenien kuntien halki, ja sen sisäosan yläpuolella kohoaa Jostedalsbreen, mannereurooppalaisen alueen suurin jäätikkö. Idässä sijaitseva Hurrungane-vuoristo nousee jopa 2 400 metriin. Kapea Nærøyvuono on yksi Sognevuonon lukuisista sivuhaaroista, ja koko järjestelmän tilavuus on noin 500 kuutiokilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Välimeren voimakkain vuorovesi] Gabèsin lahti ulottuu Sfaxista Djerbaan, ja antiikissa se tunnettiin nimellä Syrtis Minor, Pieni Syrtti. Välimerellä vuorovesi jää useimmiten muutamaan kymmeneen senttiin, mutta lahden pohjukassa Gabèsin kohdalla se nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Gabès ja Sfax ovat lahden suuret satamat, ja ne elävät sienestä ja tonnikalasta. Syrtti mainitaan myös Uudessa testamentissa: kun Paavalia kuljetettiin vankina Roomaan, laivan miehistö pelkäsi myrskyn ajavan aluksen Syrttiin ja teki kaikkensa välttääkseen sen.
+- [Broome — kaupunkilehti / Dinosaurukset ja vuorovesi] Broomen rannikko ei ole vain ihmisten satama: liuskekivessä uinuu 130 miljoonan vuoden takaisia dinosaurusten jälkiä, ja Roebuck Bayn vuorovesi loihtii joka kuukausi ilmiön, jota ei näe missään muualla maailmassa.
+AIEMPI KYSYMYS: Mistä Sognevuonon nimen arvellaan juontuvan?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on arvoituksellinen juttu. Sognevuonon nimen on arveltu juontuvan vanhasta sanasta, joka viittaa vuonon suulla tuntuvaan voimakkaaseen [[vuorovesivirtaukseen]]. Kyse on kuitenkin arvelusta eikä varmasta tiedosta. Sognevuono on [[Norjan]] pisin ja syvin vuono, ja se ulottuu 205 kilometriä sisämaahan [[Skjoldenin]] kylään. Kuninkaalla on vähän salaperäinen nimi, mut siitä tykkään.
+KYSYMYS: Kerro lisää: vuorovesivirtaukseen
+
+### 279
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sognevuono (meri)
+Tietoruudun teksti: Sognevuono eli vuonojen kuningas on Norjan pisin ja syvin vuono, joka ulottuu 205 kilometriä sisämaahan Skjoldenin kylään Lusterin kunnassa. Sen syvin kohta on 1 308 metriä merenpinnan alapuolella, ja nimen on arveltu juontuvan vanhasta sanasta, joka viittaa vuonon suulla tuntuvaan voimakkaaseen vuorovesivirtaukseen. Vuono kulkee kymmenien kuntien halki, ja sen sisäosan yläpuolella kohoaa Jostedalsbreen, mannereurooppalaisen alueen suurin jäätikkö. Idässä sijaitseva Hurrungane-vuoristo nousee jopa 2 400 metriin. Kapea Nærøyvuono on yksi Sognevuonon lukuisista sivuhaaroista, ja koko järjestelmän tilavuus on noin 500 kuutiokilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historian hetki: Etelänapa 1911 — viisi miestä ja lipputanko] 14.12.1911 — Telttaan jää kirje. Se on osoitettu Norjan kuninkaalle, ja sen viejäksi pyydetään Robert Scottia — siltä varalta, että Scott saapuu perille mutta viisi norjalaista ei pääse kotiin. Kello on noin kolme iltapäivällä, mittaukset sanovat että tämä on paikka, ja lipputankoon tarttuvat yhdessä Roald Amundsen, Olav Bjaaland, Helmer Hanssen, Sverre Hassel ja Oscar Wisting. Ylätasangon he nimeävät kuningas Haakon VII:n tasangoksi ja teltan Polheimiksi. Seuraavat kolme päivää kuluvat sekstantin ääressä ja hiihtäen navan ympäri ristiin rastiin, jotta paikka olisi todistettavasti oikea: Cookin ja Pearyn riitaiset pohjoisnapaväitteet ovat tuoreessa muistissa. Lipunnosto kestää hetken, ja ko…
+- [Norja — maalehti / Historia: Lipun kannossa oli silakkasalaatti] 1844 — Norjan nykyinen lippu suunniteltiin jo 1821; sen teki suurkäräjien jäsen Fredrik Meltzer, ja hän perusteli punaista, valkoista ja sinistä sillä, että ne merkitsivät silloin vapautta. Sillä lipulla sai kuitenkin purjehtia vain pohjoisilla vesillä: Kapp Finisterren eteläpuolella oli käytettävä unionin yhteistä kauppalippua, koska suoja Pohjois-Afrikan kaappareilta tuli Ruotsin maksamana. Vuonna 1844 molempien maiden lippujen kantoon pantiin yhteinen unionimerkki, joka jakoi värit tasan. Kansa antoi sille nimen sildesalaten, silakkasalaatti. Kauppalipun kannosta merkki katosi vuoden 1899 lopussa.
+AIEMPI KYSYMYS: Mistä Sognevuonon nimen arvellaan juontuvan?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on arvoituksellinen juttu. Sognevuonon nimen on arveltu juontuvan vanhasta sanasta, joka viittaa vuonon suulla tuntuvaan voimakkaaseen [[vuorovesivirtaukseen]]. Kyse on kuitenkin arvelusta eikä varmasta tiedosta. Sognevuono on [[Norjan]] pisin ja syvin vuono, ja se ulottuu 205 kilometriä sisämaahan [[Skjoldenin]] kylään. Kuninkaalla on vähän salaperäinen nimi, mut siitä tykkään.
+KYSYMYS: Kerro lisää: Norjan
+
+### 280
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sognevuono (meri)
+Tietoruudun teksti: Sognevuono eli vuonojen kuningas on Norjan pisin ja syvin vuono, joka ulottuu 205 kilometriä sisämaahan Skjoldenin kylään Lusterin kunnassa. Sen syvin kohta on 1 308 metriä merenpinnan alapuolella, ja nimen on arveltu juontuvan vanhasta sanasta, joka viittaa vuonon suulla tuntuvaan voimakkaaseen vuorovesivirtaukseen. Vuono kulkee kymmenien kuntien halki, ja sen sisäosan yläpuolella kohoaa Jostedalsbreen, mannereurooppalaisen alueen suurin jäätikkö. Idässä sijaitseva Hurrungane-vuoristo nousee jopa 2 400 metriin. Kapea Nærøyvuono on yksi Sognevuonon lukuisista sivuhaaroista, ja koko järjestelmän tilavuus on noin 500 kuutiokilometriä.
+AIEMPI KYSYMYS: Mistä Sognevuonon nimen arvellaan juontuvan?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on arvoituksellinen juttu. Sognevuonon nimen on arveltu juontuvan vanhasta sanasta, joka viittaa vuonon suulla tuntuvaan voimakkaaseen [[vuorovesivirtaukseen]]. Kyse on kuitenkin arvelusta eikä varmasta tiedosta. Sognevuono on [[Norjan]] pisin ja syvin vuono, ja se ulottuu 205 kilometriä sisämaahan [[Skjoldenin]] kylään. Kuninkaalla on vähän salaperäinen nimi, mut siitä tykkään.
+KYSYMYS: Kerro lisää: Skjoldenin
+
+### 281
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sognevuono (meri)
+Tietoruudun teksti: Sognevuono eli vuonojen kuningas on Norjan pisin ja syvin vuono, joka ulottuu 205 kilometriä sisämaahan Skjoldenin kylään Lusterin kunnassa. Sen syvin kohta on 1 308 metriä merenpinnan alapuolella, ja nimen on arveltu juontuvan vanhasta sanasta, joka viittaa vuonon suulla tuntuvaan voimakkaaseen vuorovesivirtaukseen. Vuono kulkee kymmenien kuntien halki, ja sen sisäosan yläpuolella kohoaa Jostedalsbreen, mannereurooppalaisen alueen suurin jäätikkö. Idässä sijaitseva Hurrungane-vuoristo nousee jopa 2 400 metriin. Kapea Nærøyvuono on yksi Sognevuonon lukuisista sivuhaaroista, ja koko järjestelmän tilavuus on noin 500 kuutiokilometriä.
+AIEMPI KYSYMYS: Mikä jäätikkö kohoaa Sognevuonon sisäosan yläpuolella, ja miksi se on merkittävä?
+AIEMPI VASTAUS (Livia):
+Mmm— kyl tän tiedän. Sognevuonon sisäosan yläpuolella kohoaa [[Jostedalsbreen]], joka on lähteiden mukaan mannereurooppalaisen alueen suurin jäätikkö. Idässä sijaitsee [[Hurrungane-vuoristo]], joka nousee jopa 2 400 metriin. Jäätikkö ja vuono samassa maisemassa, kyllä siinä on ylhäältä katsoen näkemistä.
+KYSYMYS: Kerro lisää: Jostedalsbreen
+
+### 282
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sognevuono (meri)
+Tietoruudun teksti: Sognevuono eli vuonojen kuningas on Norjan pisin ja syvin vuono, joka ulottuu 205 kilometriä sisämaahan Skjoldenin kylään Lusterin kunnassa. Sen syvin kohta on 1 308 metriä merenpinnan alapuolella, ja nimen on arveltu juontuvan vanhasta sanasta, joka viittaa vuonon suulla tuntuvaan voimakkaaseen vuorovesivirtaukseen. Vuono kulkee kymmenien kuntien halki, ja sen sisäosan yläpuolella kohoaa Jostedalsbreen, mannereurooppalaisen alueen suurin jäätikkö. Idässä sijaitseva Hurrungane-vuoristo nousee jopa 2 400 metriin. Kapea Nærøyvuono on yksi Sognevuonon lukuisista sivuhaaroista, ja koko järjestelmän tilavuus on noin 500 kuutiokilometriä.
+AIEMPI KYSYMYS: Mikä jäätikkö kohoaa Sognevuonon sisäosan yläpuolella, ja miksi se on merkittävä?
+AIEMPI VASTAUS (Livia):
+Mmm— kyl tän tiedän. Sognevuonon sisäosan yläpuolella kohoaa [[Jostedalsbreen]], joka on lähteiden mukaan mannereurooppalaisen alueen suurin jäätikkö. Idässä sijaitsee [[Hurrungane-vuoristo]], joka nousee jopa 2 400 metriin. Jäätikkö ja vuono samassa maisemassa, kyllä siinä on ylhäältä katsoen näkemistä.
+KYSYMYS: Kerro lisää: Hurrungane-vuoristo
+
+### 283
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sognevuono (meri)
+Tietoruudun teksti: Sognevuono eli vuonojen kuningas on Norjan pisin ja syvin vuono, joka ulottuu 205 kilometriä sisämaahan Skjoldenin kylään Lusterin kunnassa. Sen syvin kohta on 1 308 metriä merenpinnan alapuolella, ja nimen on arveltu juontuvan vanhasta sanasta, joka viittaa vuonon suulla tuntuvaan voimakkaaseen vuorovesivirtaukseen. Vuono kulkee kymmenien kuntien halki, ja sen sisäosan yläpuolella kohoaa Jostedalsbreen, mannereurooppalaisen alueen suurin jäätikkö. Idässä sijaitseva Hurrungane-vuoristo nousee jopa 2 400 metriin. Kapea Nærøyvuono on yksi Sognevuonon lukuisista sivuhaaroista, ja koko järjestelmän tilavuus on noin 500 kuutiokilometriä.
+AIEMPI KYSYMYS: Mikä Nærøyvuono on suhteessa Sognevuonoon?
+AIEMPI VASTAUS (Livia):
+Ai se. Nærøyvuono on kapea vuono ja yksi Sognevuonon lukuisista sivuhaaroista. Sognevuonon pääosa ulottuu sisämaahan asti [[Skjoldenin]] kylään [[Lusterin]] kunnassa, ja koko järjestelmän tilavuus on noin 500 kuutiokilometriä. Pieni haara, iso järjestelmä.
+KYSYMYS: Kerro lisää: Lusterin
+
+### 284
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norjan öljymuseo (tekniikka)
+Tietoruudun teksti: Norjan öljymuseo eli Norsk Oljemuseum Stavangerissa avattiin vuonna 1999, ja sen arkkitehtuuri jäljittelee merenpuolelta katsottuna pientä öljynporauslauttaa. Museo esittelee Norjan öljyhistoriaa 1960-luvun puolivälistä alkaen: ensimmäisistä Pohjanmeren porauslautoista teräs- ja betonilauttojen kautta nykyaikaisiin tuotantolaivoihin ja merenpohjan järjestelmiin. Stavangerista tuli Norjan öljypääkaupunki, kun Phillips Petroleum löysi läheltä Ekofiskin kentän vuonna 1969 ja öljy alkoi virrata suoraan tankkereihin jo 1971. Museorakennus on noin 5 000 neliömetrin kokoinen ja sijaitsee näyttävällä paikalla Stavangerin satamassa. Se on tehnyt harvinaisesta teollisuushistoriasta suositun matkailukohteen keskellä vanhaa kalastuskaupunkia.
+AIEMPI KYSYMYS: Miksi Norjan öljymuseon rakennus muistuttaa merenpuolelta katsottuna porauslauttaa?
+AIEMPI VASTAUS (Livia):
+No jopas. Norjan öljymuseon eli [[Norsk Oljemuseumin]] arkkitehtuuri jäljittelee merenpuolelta katsottuna pientä öljynporauslauttaa. Se sopii museon aiheeseen, sillä näyttely kertoo Norjan öljyhistoriasta 1960-luvun puolivälistä alkaen ensimmäisistä [[Pohjanmeren]] porauslautoista nykyaikaisiin tuotantolaivoihin. Museo avattiin vuonna 1999 [[Stavangerin]] satamassa.
+
+Satamassa on siis pieni porauslautta, joka ei koskaan lähde merelle. Se sopii minulle, sillä sen katolle minä laskeudun mielelläni.
+KYSYMYS: Kerro lisää: Norsk Oljemuseumin
+
+### 285
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norjan öljymuseo (tekniikka)
+Tietoruudun teksti: Norjan öljymuseo eli Norsk Oljemuseum Stavangerissa avattiin vuonna 1999, ja sen arkkitehtuuri jäljittelee merenpuolelta katsottuna pientä öljynporauslauttaa. Museo esittelee Norjan öljyhistoriaa 1960-luvun puolivälistä alkaen: ensimmäisistä Pohjanmeren porauslautoista teräs- ja betonilauttojen kautta nykyaikaisiin tuotantolaivoihin ja merenpohjan järjestelmiin. Stavangerista tuli Norjan öljypääkaupunki, kun Phillips Petroleum löysi läheltä Ekofiskin kentän vuonna 1969 ja öljy alkoi virrata suoraan tankkereihin jo 1971. Museorakennus on noin 5 000 neliömetrin kokoinen ja sijaitsee näyttävällä paikalla Stavangerin satamassa. Se on tehnyt harvinaisesta teollisuushistoriasta suositun matkailukohteen keskellä vanhaa kalastuskaupunkia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Luonto: Meri vetäytyy ja pohja aukeaa] Pohjanmeren rannikolla meri vetäytyy kahdesti päivässä kilometrien päähän ja jättää jälkeensä Wattenmeerin: mutatasangon, jota pitkin voi kävellä merenpohjassa saarelta toiselle. Opas kulkee aina mukana, sillä vuoksi palaa nopeammin kuin ihminen juoksee. Pohja näyttää tyhjältä mutta kuhisee elämää: yhdessä neliömetrissä voi asua kymmeniätuhansia matoja, kotiloita ja simpukoita, ja hietikoilla lepää kirjohylkeitä. Vattimeri on Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Miksi Norjan öljymuseon rakennus muistuttaa merenpuolelta katsottuna porauslauttaa?
+AIEMPI VASTAUS (Livia):
+No jopas. Norjan öljymuseon eli [[Norsk Oljemuseumin]] arkkitehtuuri jäljittelee merenpuolelta katsottuna pientä öljynporauslauttaa. Se sopii museon aiheeseen, sillä näyttely kertoo Norjan öljyhistoriasta 1960-luvun puolivälistä alkaen ensimmäisistä [[Pohjanmeren]] porauslautoista nykyaikaisiin tuotantolaivoihin. Museo avattiin vuonna 1999 [[Stavangerin]] satamassa.
+
+Satamassa on siis pieni porauslautta, joka ei koskaan lähde merelle. Se sopii minulle, sillä sen katolle minä laskeudun mielelläni.
+KYSYMYS: Kerro lisää: Pohjanmeren
+
+### 286
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norjan öljymuseo (tekniikka)
+Tietoruudun teksti: Norjan öljymuseo eli Norsk Oljemuseum Stavangerissa avattiin vuonna 1999, ja sen arkkitehtuuri jäljittelee merenpuolelta katsottuna pientä öljynporauslauttaa. Museo esittelee Norjan öljyhistoriaa 1960-luvun puolivälistä alkaen: ensimmäisistä Pohjanmeren porauslautoista teräs- ja betonilauttojen kautta nykyaikaisiin tuotantolaivoihin ja merenpohjan järjestelmiin. Stavangerista tuli Norjan öljypääkaupunki, kun Phillips Petroleum löysi läheltä Ekofiskin kentän vuonna 1969 ja öljy alkoi virrata suoraan tankkereihin jo 1971. Museorakennus on noin 5 000 neliömetrin kokoinen ja sijaitsee näyttävällä paikalla Stavangerin satamassa. Se on tehnyt harvinaisesta teollisuushistoriasta suositun matkailukohteen keskellä vanhaa kalastuskaupunkia.
+AIEMPI KYSYMYS: Miksi Norjan öljymuseon rakennus muistuttaa merenpuolelta katsottuna porauslauttaa?
+AIEMPI VASTAUS (Livia):
+No jopas. Norjan öljymuseon eli [[Norsk Oljemuseumin]] arkkitehtuuri jäljittelee merenpuolelta katsottuna pientä öljynporauslauttaa. Se sopii museon aiheeseen, sillä näyttely kertoo Norjan öljyhistoriasta 1960-luvun puolivälistä alkaen ensimmäisistä [[Pohjanmeren]] porauslautoista nykyaikaisiin tuotantolaivoihin. Museo avattiin vuonna 1999 [[Stavangerin]] satamassa.
+
+Satamassa on siis pieni porauslautta, joka ei koskaan lähde merelle. Se sopii minulle, sillä sen katolle minä laskeudun mielelläni.
+KYSYMYS: Kerro lisää: Stavangerin
+
+### 287
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norjan öljymuseo (tekniikka)
+Tietoruudun teksti: Norjan öljymuseo eli Norsk Oljemuseum Stavangerissa avattiin vuonna 1999, ja sen arkkitehtuuri jäljittelee merenpuolelta katsottuna pientä öljynporauslauttaa. Museo esittelee Norjan öljyhistoriaa 1960-luvun puolivälistä alkaen: ensimmäisistä Pohjanmeren porauslautoista teräs- ja betonilauttojen kautta nykyaikaisiin tuotantolaivoihin ja merenpohjan järjestelmiin. Stavangerista tuli Norjan öljypääkaupunki, kun Phillips Petroleum löysi läheltä Ekofiskin kentän vuonna 1969 ja öljy alkoi virrata suoraan tankkereihin jo 1971. Museorakennus on noin 5 000 neliömetrin kokoinen ja sijaitsee näyttävällä paikalla Stavangerin satamassa. Se on tehnyt harvinaisesta teollisuushistoriasta suositun matkailukohteen keskellä vanhaa kalastuskaupunkia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Kaivo, joka muutti maan] 1969 — Norja oli 1960-luvulla Euroopan köyhempiä maita, ja Pohjanmereltä oli etsitty öljyä vuosia tuloksetta. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailman suurin valtiollinen sijoitusrahasto. Öljyn ansiosta Norjasta tuli rikas nopeasti, mutta se joutuu nyt miettimään, mitä tehdä kun öljy loppuu.
+AIEMPI KYSYMYS: Mikä teki Stavangerista Norjan öljypääkaupungin?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä on kirjoitettu paljon. Stavangerista tuli Norjan öljypääkaupunki, kun Phillips Petroleum löysi läheltä [[Ekofiskin]] kentän vuonna 1969. Öljy alkoi virrata suoraan tankkereihin jo vuonna 1971. Aiheesta kertoo [[Norjan öljymuseo]] Stavangerin satamassa. Öljystä en tiedä muuta kuin että se ei sovi siipien kanssa yhteen.
+KYSYMYS: Kerro lisää: Ekofiskin
+
+### 288
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norjan öljymuseo (tekniikka)
+Tietoruudun teksti: Norjan öljymuseo eli Norsk Oljemuseum Stavangerissa avattiin vuonna 1999, ja sen arkkitehtuuri jäljittelee merenpuolelta katsottuna pientä öljynporauslauttaa. Museo esittelee Norjan öljyhistoriaa 1960-luvun puolivälistä alkaen: ensimmäisistä Pohjanmeren porauslautoista teräs- ja betonilauttojen kautta nykyaikaisiin tuotantolaivoihin ja merenpohjan järjestelmiin. Stavangerista tuli Norjan öljypääkaupunki, kun Phillips Petroleum löysi läheltä Ekofiskin kentän vuonna 1969 ja öljy alkoi virrata suoraan tankkereihin jo 1971. Museorakennus on noin 5 000 neliömetrin kokoinen ja sijaitsee näyttävällä paikalla Stavangerin satamassa. Se on tehnyt harvinaisesta teollisuushistoriasta suositun matkailukohteen keskellä vanhaa kalastuskaupunkia.
+AIEMPI KYSYMYS: Mikä teki Stavangerista Norjan öljypääkaupungin?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä on kirjoitettu paljon. Stavangerista tuli Norjan öljypääkaupunki, kun Phillips Petroleum löysi läheltä [[Ekofiskin]] kentän vuonna 1969. Öljy alkoi virrata suoraan tankkereihin jo vuonna 1971. Aiheesta kertoo [[Norjan öljymuseo]] Stavangerin satamassa. Öljystä en tiedä muuta kuin että se ei sovi siipien kanssa yhteen.
+KYSYMYS: Kerro lisää: Norjan öljymuseo
+
+### 289
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norjan öljymuseo (tekniikka)
+Tietoruudun teksti: Norjan öljymuseo eli Norsk Oljemuseum Stavangerissa avattiin vuonna 1999, ja sen arkkitehtuuri jäljittelee merenpuolelta katsottuna pientä öljynporauslauttaa. Museo esittelee Norjan öljyhistoriaa 1960-luvun puolivälistä alkaen: ensimmäisistä Pohjanmeren porauslautoista teräs- ja betonilauttojen kautta nykyaikaisiin tuotantolaivoihin ja merenpohjan järjestelmiin. Stavangerista tuli Norjan öljypääkaupunki, kun Phillips Petroleum löysi läheltä Ekofiskin kentän vuonna 1969 ja öljy alkoi virrata suoraan tankkereihin jo 1971. Museorakennus on noin 5 000 neliömetrin kokoinen ja sijaitsee näyttävällä paikalla Stavangerin satamassa. Se on tehnyt harvinaisesta teollisuushistoriasta suositun matkailukohteen keskellä vanhaa kalastuskaupunkia.
+AIEMPI KYSYMYS: Mitä Norjan öljymuseo esittelee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Museo esittelee Norjan öljyhistoriaa 1960-luvun puolivälistä alkaen: ensimmäisistä [[Pohjanmeren]] porauslautoista teräs- ja betonilauttojen kautta nykyaikaisiin tuotantolaivoihin ja merenpohjan järjestelmiin. Museo avattiin vuonna 1999, ja se sijaitsee [[Stavangerissa]]. Pitkä kaari yhdeltä museolta.
+KYSYMYS: Kerro lisää: Stavangerissa
+
+### 290
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norjan öljymuseo (tekniikka)
+Tietoruudun teksti: Norjan öljymuseo eli Norsk Oljemuseum Stavangerissa avattiin vuonna 1999, ja sen arkkitehtuuri jäljittelee merenpuolelta katsottuna pientä öljynporauslauttaa. Museo esittelee Norjan öljyhistoriaa 1960-luvun puolivälistä alkaen: ensimmäisistä Pohjanmeren porauslautoista teräs- ja betonilauttojen kautta nykyaikaisiin tuotantolaivoihin ja merenpohjan järjestelmiin. Stavangerista tuli Norjan öljypääkaupunki, kun Phillips Petroleum löysi läheltä Ekofiskin kentän vuonna 1969 ja öljy alkoi virrata suoraan tankkereihin jo 1971. Museorakennus on noin 5 000 neliömetrin kokoinen ja sijaitsee näyttävällä paikalla Stavangerin satamassa. Se on tehnyt harvinaisesta teollisuushistoriasta suositun matkailukohteen keskellä vanhaa kalastuskaupunkia.
+AIEMPI KYSYMYS: Kuinka suuri Norjan öljymuseon rakennus on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Museorakennus on noin 5 000 neliömetrin kokoinen ja sijaitsee näyttävällä paikalla [[Stavangerin]] satamassa. [[Norsk Oljemuseum]] avattiin vuonna 1999, ja se on tehnyt harvinaisesta teollisuushistoriasta suositun matkailukohteen vanhan kalastuskaupungin keskellä. Satamassa tuoksuu varmaan kalalle ja pullalle, ainakin toivon niin.
+KYSYMYS: Kerro lisää: Norsk Oljemuseum
+
+### 291
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voss ja smalahove (ruoka)
+Tietoruudun teksti: Voss on kunta ja perinteinen maakunta Länsi-Norjassa Vangsvatnet-järven rannalla, ja sen hallintokeskus on Vossevangenin kylä. Vossin seutu tunnetaan smalahove-ruoasta, poltetusta, suolatusta ja savustetusta lampaanpäästä, jota keitetään tai höyrytetään kolmisen tuntia ja tarjoillaan lanttumuusin, perunoiden ja akvaviitin kanssa. Ruoka oli alun perin köyhien joulua edeltävää ruokaa, mutta nykyään se houkuttelee matkailijoita kokeilemaan sitä nimenomaan erikoisena ja rohkeana elämyksenä. Voss-kunta jaettiin vuonna 1868 pohjoiseen Vossestrandiin ja eteläiseen, pienempään Vossiin, ja vuonna 1885 sen läntinen osa erosi vielä omaksi Evangerin kunnakseen. Kunnan nimi juontuu todennäköisesti muinaisesta sanasta, joka viittaa veteen, ja liittyy alun perin Vangsvatnet-järven nimeen.
+AIEMPI KYSYMYS: Miksi smalahovea sai vuoden 1998 jälkeen valmistaa vain karitsanpäistä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tota en ihan varmasti tiedä. En ole varma, mitä vuoteen 1998 liittyvää sääntöä kysymys tarkoittaa, joten en uskalla väittää mitään syytä. Varmaa on, että smalahove on [[Vossin]] seudun tunnettu ruoka: poltettu, suolattu ja savustettu lampaanpää, jota keitetään tai höyrytetään kolmisen tuntia ja tarjoillaan [[lanttumuusin]], perunoiden ja [[akvaviitin]] kanssa. Kyyhkyllä on rajansa, ja tää on yksi niistä.
+KYSYMYS: Kerro lisää: Vossin
+
+### 292
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voss ja smalahove (ruoka)
+Tietoruudun teksti: Voss on kunta ja perinteinen maakunta Länsi-Norjassa Vangsvatnet-järven rannalla, ja sen hallintokeskus on Vossevangenin kylä. Vossin seutu tunnetaan smalahove-ruoasta, poltetusta, suolatusta ja savustetusta lampaanpäästä, jota keitetään tai höyrytetään kolmisen tuntia ja tarjoillaan lanttumuusin, perunoiden ja akvaviitin kanssa. Ruoka oli alun perin köyhien joulua edeltävää ruokaa, mutta nykyään se houkuttelee matkailijoita kokeilemaan sitä nimenomaan erikoisena ja rohkeana elämyksenä. Voss-kunta jaettiin vuonna 1868 pohjoiseen Vossestrandiin ja eteläiseen, pienempään Vossiin, ja vuonna 1885 sen läntinen osa erosi vielä omaksi Evangerin kunnakseen. Kunnan nimi juontuu todennäköisesti muinaisesta sanasta, joka viittaa veteen, ja liittyy alun perin Vangsvatnet-järven nimeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Ruoka: Haggis, lanttu ja peruna] 1786 — Haggis on lampaan sisäelimistä, kaurasuurimoista, sipulista ja mausteista tehty makkara, joka keitetään perinteisesti lampaan mahassa. Se syödään lantun ja perunan kanssa. Runoilija Robert Burns kirjoitti haggisille oman runon vuonna 1786, ja siksi joka 25. tammikuuta istutaan Burns-illalliselle: makkara kannetaan pöytään säkkipillin soidessa, runo luetaan ääneen ja puukko työnnetään makkaraan juuri oikeassa kohdassa runoa.
+AIEMPI KYSYMYS: Miksi smalahovea sai vuoden 1998 jälkeen valmistaa vain karitsanpäistä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tota en ihan varmasti tiedä. En ole varma, mitä vuoteen 1998 liittyvää sääntöä kysymys tarkoittaa, joten en uskalla väittää mitään syytä. Varmaa on, että smalahove on [[Vossin]] seudun tunnettu ruoka: poltettu, suolattu ja savustettu lampaanpää, jota keitetään tai höyrytetään kolmisen tuntia ja tarjoillaan [[lanttumuusin]], perunoiden ja [[akvaviitin]] kanssa. Kyyhkyllä on rajansa, ja tää on yksi niistä.
+KYSYMYS: Kerro lisää: lanttumuusin
+
+### 293
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voss ja smalahove (ruoka)
+Tietoruudun teksti: Voss on kunta ja perinteinen maakunta Länsi-Norjassa Vangsvatnet-järven rannalla, ja sen hallintokeskus on Vossevangenin kylä. Vossin seutu tunnetaan smalahove-ruoasta, poltetusta, suolatusta ja savustetusta lampaanpäästä, jota keitetään tai höyrytetään kolmisen tuntia ja tarjoillaan lanttumuusin, perunoiden ja akvaviitin kanssa. Ruoka oli alun perin köyhien joulua edeltävää ruokaa, mutta nykyään se houkuttelee matkailijoita kokeilemaan sitä nimenomaan erikoisena ja rohkeana elämyksenä. Voss-kunta jaettiin vuonna 1868 pohjoiseen Vossestrandiin ja eteläiseen, pienempään Vossiin, ja vuonna 1885 sen läntinen osa erosi vielä omaksi Evangerin kunnakseen. Kunnan nimi juontuu todennäköisesti muinaisesta sanasta, joka viittaa veteen, ja liittyy alun perin Vangsvatnet-järven nimeen.
+AIEMPI KYSYMYS: Miksi smalahovea sai vuoden 1998 jälkeen valmistaa vain karitsanpäistä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tota en ihan varmasti tiedä. En ole varma, mitä vuoteen 1998 liittyvää sääntöä kysymys tarkoittaa, joten en uskalla väittää mitään syytä. Varmaa on, että smalahove on [[Vossin]] seudun tunnettu ruoka: poltettu, suolattu ja savustettu lampaanpää, jota keitetään tai höyrytetään kolmisen tuntia ja tarjoillaan [[lanttumuusin]], perunoiden ja [[akvaviitin]] kanssa. Kyyhkyllä on rajansa, ja tää on yksi niistä.
+KYSYMYS: Kerro lisää: akvaviitin
+
+### 294
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voss ja smalahove (ruoka)
+Tietoruudun teksti: Voss on kunta ja perinteinen maakunta Länsi-Norjassa Vangsvatnet-järven rannalla, ja sen hallintokeskus on Vossevangenin kylä. Vossin seutu tunnetaan smalahove-ruoasta, poltetusta, suolatusta ja savustetusta lampaanpäästä, jota keitetään tai höyrytetään kolmisen tuntia ja tarjoillaan lanttumuusin, perunoiden ja akvaviitin kanssa. Ruoka oli alun perin köyhien joulua edeltävää ruokaa, mutta nykyään se houkuttelee matkailijoita kokeilemaan sitä nimenomaan erikoisena ja rohkeana elämyksenä. Voss-kunta jaettiin vuonna 1868 pohjoiseen Vossestrandiin ja eteläiseen, pienempään Vossiin, ja vuonna 1885 sen läntinen osa erosi vielä omaksi Evangerin kunnakseen. Kunnan nimi juontuu todennäköisesti muinaisesta sanasta, joka viittaa veteen, ja liittyy alun perin Vangsvatnet-järven nimeen.
+AIEMPI KYSYMYS: Mihin kahteen kuntaan Voss jaettiin vuonna 1868?
+AIEMPI VASTAUS (Livia):
+Just niin, tän minä muistan. Voss-kunta jaettiin vuonna 1868 pohjoiseen [[Vossestrandiin]] ja eteläiseen, pienempään Vossiin. Vuonna 1885 sen läntinen osa erosi vielä omaksi [[Evangerin]] kunnakseen. Vossin hallintokeskus on Vossevangenin kylä Vangsvatnet-järven rannalla. Kuntaliitoksia ja -jakoja, ja minä vain lentelen rajojen yli.
+KYSYMYS: Kerro lisää: Vossestrandiin
+
+### 295
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voss ja smalahove (ruoka)
+Tietoruudun teksti: Voss on kunta ja perinteinen maakunta Länsi-Norjassa Vangsvatnet-järven rannalla, ja sen hallintokeskus on Vossevangenin kylä. Vossin seutu tunnetaan smalahove-ruoasta, poltetusta, suolatusta ja savustetusta lampaanpäästä, jota keitetään tai höyrytetään kolmisen tuntia ja tarjoillaan lanttumuusin, perunoiden ja akvaviitin kanssa. Ruoka oli alun perin köyhien joulua edeltävää ruokaa, mutta nykyään se houkuttelee matkailijoita kokeilemaan sitä nimenomaan erikoisena ja rohkeana elämyksenä. Voss-kunta jaettiin vuonna 1868 pohjoiseen Vossestrandiin ja eteläiseen, pienempään Vossiin, ja vuonna 1885 sen läntinen osa erosi vielä omaksi Evangerin kunnakseen. Kunnan nimi juontuu todennäköisesti muinaisesta sanasta, joka viittaa veteen, ja liittyy alun perin Vangsvatnet-järven nimeen.
+AIEMPI KYSYMYS: Mihin kahteen kuntaan Voss jaettiin vuonna 1868?
+AIEMPI VASTAUS (Livia):
+Just niin, tän minä muistan. Voss-kunta jaettiin vuonna 1868 pohjoiseen [[Vossestrandiin]] ja eteläiseen, pienempään Vossiin. Vuonna 1885 sen läntinen osa erosi vielä omaksi [[Evangerin]] kunnakseen. Vossin hallintokeskus on Vossevangenin kylä Vangsvatnet-järven rannalla. Kuntaliitoksia ja -jakoja, ja minä vain lentelen rajojen yli.
+KYSYMYS: Kerro lisää: Evangerin
+
+### 296
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voss ja smalahove (ruoka)
+Tietoruudun teksti: Voss on kunta ja perinteinen maakunta Länsi-Norjassa Vangsvatnet-järven rannalla, ja sen hallintokeskus on Vossevangenin kylä. Vossin seutu tunnetaan smalahove-ruoasta, poltetusta, suolatusta ja savustetusta lampaanpäästä, jota keitetään tai höyrytetään kolmisen tuntia ja tarjoillaan lanttumuusin, perunoiden ja akvaviitin kanssa. Ruoka oli alun perin köyhien joulua edeltävää ruokaa, mutta nykyään se houkuttelee matkailijoita kokeilemaan sitä nimenomaan erikoisena ja rohkeana elämyksenä. Voss-kunta jaettiin vuonna 1868 pohjoiseen Vossestrandiin ja eteläiseen, pienempään Vossiin, ja vuonna 1885 sen läntinen osa erosi vielä omaksi Evangerin kunnakseen. Kunnan nimi juontuu todennäköisesti muinaisesta sanasta, joka viittaa veteen, ja liittyy alun perin Vangsvatnet-järven nimeen.
+AIEMPI KYSYMYS: Mitä Vossin nimi todennäköisesti tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Kunnan nimi juontuu todennäköisesti muinaisesta sanasta, joka viittaa veteen. Se liittyy alun perin [[Vangsvatnet-järven]] nimeen, ja Voss on kunta sekä perinteinen maakunta [[Länsi-Norjassa]]. Vesi nimessä, vesi alla, ja minä tässä lentämässä.
+KYSYMYS: Kerro lisää: Vangsvatnet-järven
+
+### 297
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voss ja smalahove (ruoka)
+Tietoruudun teksti: Voss on kunta ja perinteinen maakunta Länsi-Norjassa Vangsvatnet-järven rannalla, ja sen hallintokeskus on Vossevangenin kylä. Vossin seutu tunnetaan smalahove-ruoasta, poltetusta, suolatusta ja savustetusta lampaanpäästä, jota keitetään tai höyrytetään kolmisen tuntia ja tarjoillaan lanttumuusin, perunoiden ja akvaviitin kanssa. Ruoka oli alun perin köyhien joulua edeltävää ruokaa, mutta nykyään se houkuttelee matkailijoita kokeilemaan sitä nimenomaan erikoisena ja rohkeana elämyksenä. Voss-kunta jaettiin vuonna 1868 pohjoiseen Vossestrandiin ja eteläiseen, pienempään Vossiin, ja vuonna 1885 sen läntinen osa erosi vielä omaksi Evangerin kunnakseen. Kunnan nimi juontuu todennäköisesti muinaisesta sanasta, joka viittaa veteen, ja liittyy alun perin Vangsvatnet-järven nimeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Norja — maalehti / Luonto: Myskihärkä tuotiin laivalla] 1947 — Myskihärkä eli Norjassa jääkauden aikaan mutta katosi tuhansia vuosia sitten. 1900-luvulla eläimiä tuotiin laivalla takaisin Grönlannista, ja nykyinen kanta polveutuu vuoden 1947 kuljetuksesta. Dovrefjellin tuntureilla laumassa on nykyään reilut parisataa eläintä. Ne eivät ole härkiä vaan lampaiden ja vuohien sukulaisia, ja niiden alusvilla on maailman lämpimimpiä. Retkeilijöitä kehotetaan pysymään kahdensadan metrin päässä: eläin on rauhallinen mutta nopea suuttumaan.
+AIEMPI KYSYMYS: Mitä Vossin nimi todennäköisesti tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Kunnan nimi juontuu todennäköisesti muinaisesta sanasta, joka viittaa veteen. Se liittyy alun perin [[Vangsvatnet-järven]] nimeen, ja Voss on kunta sekä perinteinen maakunta [[Länsi-Norjassa]]. Vesi nimessä, vesi alla, ja minä tässä lentämässä.
+KYSYMYS: Kerro lisää: Länsi-Norjassa
+
+### 298
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voss ja smalahove (ruoka)
+Tietoruudun teksti: Voss on kunta ja perinteinen maakunta Länsi-Norjassa Vangsvatnet-järven rannalla, ja sen hallintokeskus on Vossevangenin kylä. Vossin seutu tunnetaan smalahove-ruoasta, poltetusta, suolatusta ja savustetusta lampaanpäästä, jota keitetään tai höyrytetään kolmisen tuntia ja tarjoillaan lanttumuusin, perunoiden ja akvaviitin kanssa. Ruoka oli alun perin köyhien joulua edeltävää ruokaa, mutta nykyään se houkuttelee matkailijoita kokeilemaan sitä nimenomaan erikoisena ja rohkeana elämyksenä. Voss-kunta jaettiin vuonna 1868 pohjoiseen Vossestrandiin ja eteläiseen, pienempään Vossiin, ja vuonna 1885 sen läntinen osa erosi vielä omaksi Evangerin kunnakseen. Kunnan nimi juontuu todennäköisesti muinaisesta sanasta, joka viittaa veteen, ja liittyy alun perin Vangsvatnet-järven nimeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Norja — maalehti / Historian hetki: Etelänapa 1911 — viisi miestä ja lipputanko] 14.12.1911 — Telttaan jää kirje. Se on osoitettu Norjan kuninkaalle, ja sen viejäksi pyydetään Robert Scottia — siltä varalta, että Scott saapuu perille mutta viisi norjalaista ei pääse kotiin. Kello on noin kolme iltapäivällä, mittaukset sanovat että tämä on paikka, ja lipputankoon tarttuvat yhdessä Roald Amundsen, Olav Bjaaland, Helmer Hanssen, Sverre Hassel ja Oscar Wisting. Ylätasangon he nimeävät kuningas Haakon VII:n tasangoksi ja teltan Polheimiksi. Seuraavat kolme päivää kuluvat sekstantin ääressä ja hiihtäen navan ympäri ristiin rastiin, jotta paikka olisi todistettavasti oikea: Cookin ja Pearyn riitaiset pohjoisnapaväitteet ovat tuoreessa muistissa. Lipunnosto kestää hetken, ja ko…
+AIEMPI KYSYMYS: Millainen ruoka smalahove oli alun perin?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä muistan. Smalahove oli alun perin köyhien joulua edeltävää ruokaa. Nykyään se houkuttelee matkailijoita kokeilemaan sitä nimenomaan erikoisena ja rohkeana elämyksenä [[Länsi-Norjan]] [[Vossin]] seudulla. Köyhän ruoasta elämykseksi, se on kyllä matka.
+KYSYMYS: Kerro lisää: Länsi-Norjan
+
+### 299
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norsk Hydro (tekniikka)
+Tietoruudun teksti: Norsk Hydro perustettiin 2. joulukuuta 1905 nimellä Norsk hydro-elektrisk Kvælstofaktieselskab, kun insinööri Sam Eyde hyödynsi norjalaisen tiedemiehen Kristian Birkelandin kehittämää menetelmää typen sitomiseksi ilmasta keinolannoitteeksi. Menetelmä vaati valtavasti sähköenergiaa, joten yhtiö rakensi voimalaitoksen Notoddenin lähellä sijaitsevaan Svelgfossenin koskeen, ja sen ensimmäinen tehdas Notoddenissa aloitti tuotannon vuonna 1907. Toinen, vielä suurempi tehdas avattiin vuonna 1911 Rjukanissa, jonka voimalle rakennettiin oma rautatiekin. Yhtiön rahoittajina olivat ruotsalainen Wallenberg-suku ja ranskalaiset pankit. 1920-luvulla Hydron menetelmä ei enää pystynyt kilpailemaan uuden Haber–Bosch-prosessin kanssa, joten yhtiö solmi vuonna 1927 kumppanuuden saksalaisen IG Farbenin kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tromssa — kaupunkilehti / Valo: Taivasta tutkittiin ensin vuoren huipulla] Fyysikko Kristian Birkeland halusi selvittää, mistä revontulet syntyvät, ja rakensi vuonna 1899 havaintoaseman tunturin huipulle Pohjois-Norjaan. Hän talvehti siellä apulaistensa kanssa mittaamassa magneettikenttää pakkasessa ja myrskyssä. Birkeland päätteli oikein, että syynä ovat auringosta sinkoutuvat sähköiset hiukkaset, jotka törmäävät ilmakehän kaasuihin. Moni ei uskonut sitä ennen kuin satelliitit todistivat asian vasta 1960-luvulla.
+AIEMPI KYSYMYS: Mihin keksintöön Norsk Hydron ensimmäinen tehdas Notoddenilla perustui, ja kuka sen kehitti?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on hieno juttu. Tehdas perustui menetelmään, jolla typpi sidotaan ilmasta keinolannoitteeksi. Sen kehitti norjalainen tiedemies [[Kristian Birkeland]], ja insinööri [[Sam Eyde]] hyödynsi sitä, kun Norsk Hydro perustettiin 2. joulukuuta 1905. Tuotanto Notoddenissa alkoi vuonna 1907. Ilmasta lannoitetta, ja minä kun luulin ilman olevan vain lentämistä varten.
+KYSYMYS: Kerro lisää: Kristian Birkeland
+
+### 300
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norsk Hydro (tekniikka)
+Tietoruudun teksti: Norsk Hydro perustettiin 2. joulukuuta 1905 nimellä Norsk hydro-elektrisk Kvælstofaktieselskab, kun insinööri Sam Eyde hyödynsi norjalaisen tiedemiehen Kristian Birkelandin kehittämää menetelmää typen sitomiseksi ilmasta keinolannoitteeksi. Menetelmä vaati valtavasti sähköenergiaa, joten yhtiö rakensi voimalaitoksen Notoddenin lähellä sijaitsevaan Svelgfossenin koskeen, ja sen ensimmäinen tehdas Notoddenissa aloitti tuotannon vuonna 1907. Toinen, vielä suurempi tehdas avattiin vuonna 1911 Rjukanissa, jonka voimalle rakennettiin oma rautatiekin. Yhtiön rahoittajina olivat ruotsalainen Wallenberg-suku ja ranskalaiset pankit. 1920-luvulla Hydron menetelmä ei enää pystynyt kilpailemaan uuden Haber–Bosch-prosessin kanssa, joten yhtiö solmi vuonna 1927 kumppanuuden saksalaisen IG Farbenin kanssa.
+AIEMPI KYSYMYS: Mihin keksintöön Norsk Hydron ensimmäinen tehdas Notoddenilla perustui, ja kuka sen kehitti?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on hieno juttu. Tehdas perustui menetelmään, jolla typpi sidotaan ilmasta keinolannoitteeksi. Sen kehitti norjalainen tiedemies [[Kristian Birkeland]], ja insinööri [[Sam Eyde]] hyödynsi sitä, kun Norsk Hydro perustettiin 2. joulukuuta 1905. Tuotanto Notoddenissa alkoi vuonna 1907. Ilmasta lannoitetta, ja minä kun luulin ilman olevan vain lentämistä varten.
+KYSYMYS: Kerro lisää: Sam Eyde
+
+### 301
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norsk Hydro (tekniikka)
+Tietoruudun teksti: Norsk Hydro perustettiin 2. joulukuuta 1905 nimellä Norsk hydro-elektrisk Kvælstofaktieselskab, kun insinööri Sam Eyde hyödynsi norjalaisen tiedemiehen Kristian Birkelandin kehittämää menetelmää typen sitomiseksi ilmasta keinolannoitteeksi. Menetelmä vaati valtavasti sähköenergiaa, joten yhtiö rakensi voimalaitoksen Notoddenin lähellä sijaitsevaan Svelgfossenin koskeen, ja sen ensimmäinen tehdas Notoddenissa aloitti tuotannon vuonna 1907. Toinen, vielä suurempi tehdas avattiin vuonna 1911 Rjukanissa, jonka voimalle rakennettiin oma rautatiekin. Yhtiön rahoittajina olivat ruotsalainen Wallenberg-suku ja ranskalaiset pankit. 1920-luvulla Hydron menetelmä ei enää pystynyt kilpailemaan uuden Haber–Bosch-prosessin kanssa, joten yhtiö solmi vuonna 1927 kumppanuuden saksalaisen IG Farbenin kanssa.
+AIEMPI KYSYMYS: Miksi tehdas piti rakentaa juuri kosken äärelle?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Menetelmä vaati valtavasti sähköenergiaa, joten yhtiö rakensi voimalaitoksen Notoddenin lähellä sijaitsevaan [[Svelgfossenin]] koskeen. Toinen, vielä suurempi tehdas avattiin vuonna 1911 [[Rjukanissa]], jonka voimalle rakennettiin oma rautatiekin.
+
+Joka kerta kun näen kosken, ajattelen vain vettä. Insinöörit ajattelivat sähköä ja minä pullaa, kukin tavallaan.
+KYSYMYS: Kerro lisää: Svelgfossenin
+
+### 302
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norsk Hydro (tekniikka)
+Tietoruudun teksti: Norsk Hydro perustettiin 2. joulukuuta 1905 nimellä Norsk hydro-elektrisk Kvælstofaktieselskab, kun insinööri Sam Eyde hyödynsi norjalaisen tiedemiehen Kristian Birkelandin kehittämää menetelmää typen sitomiseksi ilmasta keinolannoitteeksi. Menetelmä vaati valtavasti sähköenergiaa, joten yhtiö rakensi voimalaitoksen Notoddenin lähellä sijaitsevaan Svelgfossenin koskeen, ja sen ensimmäinen tehdas Notoddenissa aloitti tuotannon vuonna 1907. Toinen, vielä suurempi tehdas avattiin vuonna 1911 Rjukanissa, jonka voimalle rakennettiin oma rautatiekin. Yhtiön rahoittajina olivat ruotsalainen Wallenberg-suku ja ranskalaiset pankit. 1920-luvulla Hydron menetelmä ei enää pystynyt kilpailemaan uuden Haber–Bosch-prosessin kanssa, joten yhtiö solmi vuonna 1927 kumppanuuden saksalaisen IG Farbenin kanssa.
+AIEMPI KYSYMYS: Miksi tehdas piti rakentaa juuri kosken äärelle?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Menetelmä vaati valtavasti sähköenergiaa, joten yhtiö rakensi voimalaitoksen Notoddenin lähellä sijaitsevaan [[Svelgfossenin]] koskeen. Toinen, vielä suurempi tehdas avattiin vuonna 1911 [[Rjukanissa]], jonka voimalle rakennettiin oma rautatiekin.
+
+Joka kerta kun näen kosken, ajattelen vain vettä. Insinöörit ajattelivat sähköä ja minä pullaa, kukin tavallaan.
+KYSYMYS: Kerro lisää: Rjukanissa
+
+### 303
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norsk Hydro (tekniikka)
+Tietoruudun teksti: Norsk Hydro perustettiin 2. joulukuuta 1905 nimellä Norsk hydro-elektrisk Kvælstofaktieselskab, kun insinööri Sam Eyde hyödynsi norjalaisen tiedemiehen Kristian Birkelandin kehittämää menetelmää typen sitomiseksi ilmasta keinolannoitteeksi. Menetelmä vaati valtavasti sähköenergiaa, joten yhtiö rakensi voimalaitoksen Notoddenin lähellä sijaitsevaan Svelgfossenin koskeen, ja sen ensimmäinen tehdas Notoddenissa aloitti tuotannon vuonna 1907. Toinen, vielä suurempi tehdas avattiin vuonna 1911 Rjukanissa, jonka voimalle rakennettiin oma rautatiekin. Yhtiön rahoittajina olivat ruotsalainen Wallenberg-suku ja ranskalaiset pankit. 1920-luvulla Hydron menetelmä ei enää pystynyt kilpailemaan uuden Haber–Bosch-prosessin kanssa, joten yhtiö solmi vuonna 1927 kumppanuuden saksalaisen IG Farbenin kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chile — maalehti / Historia: Kaupunki, jonka keksintö tappoi] 1872–1960 — Santa Lauran salpietarilaitos perustettiin 1872, kun alue kuului vielä Peruun; samana vuonna syntyi naapuriin La Palma, jota johti James Thomas Humberstone. Molemmat kasvoivat englantilaistyylisiksi kaupungeiksi keskelle aavikkoa 48 kilometriä Iquiquesta itään, ja huipussaan niissä asui noin neljätuhatta ihmistä. Kun Fritz Haber ja Carl Bosch keksivät ammoniakkisynteesin, lannoite alkoi syntyä ilmasta: talousmalli romahti 1929 ja laitokset autioituivat 1960. Aavikolla on noin 170 tällaista haamukaupunkia.
+AIEMPI KYSYMYS: Miksi Hydro teki vuonna 1927 yhteistyötä IG Farbenin kanssa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kilpailutilanne muuttui: 1920-luvulla Hydron menetelmä ei enää pystynyt kilpailemaan uuden [[Haber–Bosch-prosessin]] kanssa. Siksi yhtiö solmi vuonna 1927 kumppanuuden saksalaisen yhtiön kanssa. Alkuperäinen [[Birkelandin]] menetelmä oli vaatinut valtavasti sähköenergiaa. Uusi keksintö voitti vanhan, näin se maailmassa menee.
+KYSYMYS: Kerro lisää: Haber–Bosch-prosessin
+
+### 304
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norsk Hydro (tekniikka)
+Tietoruudun teksti: Norsk Hydro perustettiin 2. joulukuuta 1905 nimellä Norsk hydro-elektrisk Kvælstofaktieselskab, kun insinööri Sam Eyde hyödynsi norjalaisen tiedemiehen Kristian Birkelandin kehittämää menetelmää typen sitomiseksi ilmasta keinolannoitteeksi. Menetelmä vaati valtavasti sähköenergiaa, joten yhtiö rakensi voimalaitoksen Notoddenin lähellä sijaitsevaan Svelgfossenin koskeen, ja sen ensimmäinen tehdas Notoddenissa aloitti tuotannon vuonna 1907. Toinen, vielä suurempi tehdas avattiin vuonna 1911 Rjukanissa, jonka voimalle rakennettiin oma rautatiekin. Yhtiön rahoittajina olivat ruotsalainen Wallenberg-suku ja ranskalaiset pankit. 1920-luvulla Hydron menetelmä ei enää pystynyt kilpailemaan uuden Haber–Bosch-prosessin kanssa, joten yhtiö solmi vuonna 1927 kumppanuuden saksalaisen IG Farbenin kanssa.
+AIEMPI KYSYMYS: Miksi Hydro teki vuonna 1927 yhteistyötä IG Farbenin kanssa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kilpailutilanne muuttui: 1920-luvulla Hydron menetelmä ei enää pystynyt kilpailemaan uuden [[Haber–Bosch-prosessin]] kanssa. Siksi yhtiö solmi vuonna 1927 kumppanuuden saksalaisen yhtiön kanssa. Alkuperäinen [[Birkelandin]] menetelmä oli vaatinut valtavasti sähköenergiaa. Uusi keksintö voitti vanhan, näin se maailmassa menee.
+KYSYMYS: Kerro lisää: Birkelandin
+
+### 305
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norsk Hydro (tekniikka)
+Tietoruudun teksti: Norsk Hydro perustettiin 2. joulukuuta 1905 nimellä Norsk hydro-elektrisk Kvælstofaktieselskab, kun insinööri Sam Eyde hyödynsi norjalaisen tiedemiehen Kristian Birkelandin kehittämää menetelmää typen sitomiseksi ilmasta keinolannoitteeksi. Menetelmä vaati valtavasti sähköenergiaa, joten yhtiö rakensi voimalaitoksen Notoddenin lähellä sijaitsevaan Svelgfossenin koskeen, ja sen ensimmäinen tehdas Notoddenissa aloitti tuotannon vuonna 1907. Toinen, vielä suurempi tehdas avattiin vuonna 1911 Rjukanissa, jonka voimalle rakennettiin oma rautatiekin. Yhtiön rahoittajina olivat ruotsalainen Wallenberg-suku ja ranskalaiset pankit. 1920-luvulla Hydron menetelmä ei enää pystynyt kilpailemaan uuden Haber–Bosch-prosessin kanssa, joten yhtiö solmi vuonna 1927 kumppanuuden saksalaisen IG Farbenin kanssa.
+AIEMPI KYSYMYS: Keitä Norsk Hydron rahoittajat olivat?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Yhtiön rahoittajina olivat ruotsalainen [[Wallenberg-suku]] ja ranskalaiset pankit. Yhtiö perustettiin 2. joulukuuta 1905, ja insinööri [[Sam Eyde]] hyödynsi [[Kristian Birkelandin]] menetelmää typen sitomiseksi ilmasta. Rahaa tuli rajojen yli, aivan kuin kirjeitä ennen.
+KYSYMYS: Kerro lisää: Wallenberg-suku
+
+### 306
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norsk Hydro (tekniikka)
+Tietoruudun teksti: Norsk Hydro perustettiin 2. joulukuuta 1905 nimellä Norsk hydro-elektrisk Kvælstofaktieselskab, kun insinööri Sam Eyde hyödynsi norjalaisen tiedemiehen Kristian Birkelandin kehittämää menetelmää typen sitomiseksi ilmasta keinolannoitteeksi. Menetelmä vaati valtavasti sähköenergiaa, joten yhtiö rakensi voimalaitoksen Notoddenin lähellä sijaitsevaan Svelgfossenin koskeen, ja sen ensimmäinen tehdas Notoddenissa aloitti tuotannon vuonna 1907. Toinen, vielä suurempi tehdas avattiin vuonna 1911 Rjukanissa, jonka voimalle rakennettiin oma rautatiekin. Yhtiön rahoittajina olivat ruotsalainen Wallenberg-suku ja ranskalaiset pankit. 1920-luvulla Hydron menetelmä ei enää pystynyt kilpailemaan uuden Haber–Bosch-prosessin kanssa, joten yhtiö solmi vuonna 1927 kumppanuuden saksalaisen IG Farbenin kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tromssa — kaupunkilehti / Valo: Taivasta tutkittiin ensin vuoren huipulla] Fyysikko Kristian Birkeland halusi selvittää, mistä revontulet syntyvät, ja rakensi vuonna 1899 havaintoaseman tunturin huipulle Pohjois-Norjaan. Hän talvehti siellä apulaistensa kanssa mittaamassa magneettikenttää pakkasessa ja myrskyssä. Birkeland päätteli oikein, että syynä ovat auringosta sinkoutuvat sähköiset hiukkaset, jotka törmäävät ilmakehän kaasuihin. Moni ei uskonut sitä ennen kuin satelliitit todistivat asian vasta 1960-luvulla.
+AIEMPI KYSYMYS: Keitä Norsk Hydron rahoittajat olivat?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Yhtiön rahoittajina olivat ruotsalainen [[Wallenberg-suku]] ja ranskalaiset pankit. Yhtiö perustettiin 2. joulukuuta 1905, ja insinööri [[Sam Eyde]] hyödynsi [[Kristian Birkelandin]] menetelmää typen sitomiseksi ilmasta. Rahaa tuli rajojen yli, aivan kuin kirjeitä ennen.
+KYSYMYS: Kerro lisää: Kristian Birkelandin
+
+### 307
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lindesnesin majakka (merenkulku)
+Tietoruudun teksti: Lindesnesin majakka Norjan eteläisimmässä kärjessä on maan vanhin majakkapaikka: ensimmäinen majakka pystytettiin jo vuonna 1656 osoittamaan laivoille reittiä Pohjanmereltä Skagerrakin ja Itämeren suuntaan. Sitä uusittiin useaan otteeseen, muun muassa vuonna 1822 hiilivalolla ja 1854 uudella linssillä, ja nykyinen valurautainen torni valmistui vasta vuonna 1915 vanhaa Fresnel-linssiä käyttäen. Vuonna 1920 majakalle asennettiin ensimmäinen sumumerkinantolaite, sireeni. Toisen maailmansodan aikana saksalaiset valtasivat majakan ja rakensivat sen ympärille pienen linnoituksen neljine tykkeineen; linnoituksen jäänteet, kuten juoksuhaudat ja tunnelit, näkyvät alueella yhä. Majakka on yhä toiminnassa ja toimii lisäksi museona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Odessa — kohdekartta / Kohdekartta: Vorontsovin majakka] 1862–1955 Odessan satamansuulla seisoo punavalkoinen Vorontsovin majakka, joka kohoaa lähes 30 metrin korkeuteen – yhtä korkealle kuin kymmenkerroksinen talo. Nykyinen torni on jo kolmas samalla paikalla: ensin siellä oli puinen majakka 1800-luvun puolivälissä, sen jälkeen valurautainen torni, ja lopulta vuonna 1955 valmistui torni, joka seisoo paikalla vielä nykyäänkin. Majakan huipulla palava valo näkyy merelle yli 20 kilometrin päähän. Se vilkkuu aina samalla tunnuksellaan: kolme pitkää välähdystä, mikä on Morse-aakkosissa kirjain O – niin kuin Odessa. Sumuisina päivinä majakasta kuuluu myös kova sumutorvi, joka varoittaa laivoja karikoista. Majakka on nimetty ruhtinas Vorontsovin mukaan…
+- [San Francisco — kaupunkilehti / Alcatrazin saari: Pelikaanien saari ja lännen ensimmäinen majakka] Espanjalainen merenkulkija Juan Manuel de Ayala kartoitti lahden 1775 ja antoi nykyiselle Yerba Buena Islandille nimen La Isla de los Alcatraces; nimen siirsi myöhemmin tälle kalliolle englantilainen kapteeni Frederick W. Beechey. Nimi tarkoittanee pelikaanien saarta, ja ranskalainen kapteeni Auguste Duhaut-Cilly kirjoitti elokuussa 1827, että laukaus nosti saaren linnut pilveksi hurrikaanin äänellä. Kultaryntäyksen vilkastuttama merenkulku sai kongressin tilaamaan 1851–1852 seitsemän majakkaa länsirannikolle, ja Alcatrazin majakka valmistui niistä ensimmäisenä. Ranskalainen Fresnel-linssi tuotiin laivalla Etelä-Amerikan ympäri, ja vartija Michael Cassin sytytti valon 1. kesäkuuta 1854 — en…
+AIEMPI KYSYMYS: Minä vuonna Lindesnesiin pystytettiin ensimmäinen majakka, ja mitä se osoitti laivoille?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Lindesnesin ensimmäinen [[majakka]] pystytettiin vuonna 1656, ja sen tehtävänä oli osoittaa laivoille reittiä Pohjanmereltä [[Skagerrakin]] ja [[Itämeren]] suuntaan. Majakkaa uusittiin myöhemmin useaan otteeseen: vuonna 1822 siinä otettiin käyttöön hiilivalo ja vuonna 1854 uusi linssi, ja nykyinen valurautainen torni valmistui vuonna 1915. Lindesnes on Norjan eteläisimmässä kärjessä, ja paikka tunnetaan maan vanhimpana majakkapaikkana. Taisin muistaa kaikki luvut oikein.
+KYSYMYS: Kerro lisää: majakka
+
+### 308
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lindesnesin majakka (merenkulku)
+Tietoruudun teksti: Lindesnesin majakka Norjan eteläisimmässä kärjessä on maan vanhin majakkapaikka: ensimmäinen majakka pystytettiin jo vuonna 1656 osoittamaan laivoille reittiä Pohjanmereltä Skagerrakin ja Itämeren suuntaan. Sitä uusittiin useaan otteeseen, muun muassa vuonna 1822 hiilivalolla ja 1854 uudella linssillä, ja nykyinen valurautainen torni valmistui vasta vuonna 1915 vanhaa Fresnel-linssiä käyttäen. Vuonna 1920 majakalle asennettiin ensimmäinen sumumerkinantolaite, sireeni. Toisen maailmansodan aikana saksalaiset valtasivat majakan ja rakensivat sen ympärille pienen linnoituksen neljine tykkeineen; linnoituksen jäänteet, kuten juoksuhaudat ja tunnelit, näkyvät alueella yhä. Majakka on yhä toiminnassa ja toimii lisäksi museona.
+AIEMPI KYSYMYS: Minä vuonna Lindesnesiin pystytettiin ensimmäinen majakka, ja mitä se osoitti laivoille?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Lindesnesin ensimmäinen [[majakka]] pystytettiin vuonna 1656, ja sen tehtävänä oli osoittaa laivoille reittiä Pohjanmereltä [[Skagerrakin]] ja [[Itämeren]] suuntaan. Majakkaa uusittiin myöhemmin useaan otteeseen: vuonna 1822 siinä otettiin käyttöön hiilivalo ja vuonna 1854 uusi linssi, ja nykyinen valurautainen torni valmistui vuonna 1915. Lindesnes on Norjan eteläisimmässä kärjessä, ja paikka tunnetaan maan vanhimpana majakkapaikkana. Taisin muistaa kaikki luvut oikein.
+KYSYMYS: Kerro lisää: Skagerrakin
+
+### 309
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lindesnesin majakka (merenkulku)
+Tietoruudun teksti: Lindesnesin majakka Norjan eteläisimmässä kärjessä on maan vanhin majakkapaikka: ensimmäinen majakka pystytettiin jo vuonna 1656 osoittamaan laivoille reittiä Pohjanmereltä Skagerrakin ja Itämeren suuntaan. Sitä uusittiin useaan otteeseen, muun muassa vuonna 1822 hiilivalolla ja 1854 uudella linssillä, ja nykyinen valurautainen torni valmistui vasta vuonna 1915 vanhaa Fresnel-linssiä käyttäen. Vuonna 1920 majakalle asennettiin ensimmäinen sumumerkinantolaite, sireeni. Toisen maailmansodan aikana saksalaiset valtasivat majakan ja rakensivat sen ympärille pienen linnoituksen neljine tykkeineen; linnoituksen jäänteet, kuten juoksuhaudat ja tunnelit, näkyvät alueella yhä. Majakka on yhä toiminnassa ja toimii lisäksi museona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Magadan — kohdekartta / Kohdekartta: Nagajevanlahti] Jeannette Harbour 1852–1869 Nagajevanlahti on Tauinlahden osa Ohotanmeren pohjoisosassa. Se on 14,5 kilometriä pitkä ja suultaan 6,4 kilometriä leveä, ja sitä on kutsuttu koko Ohotanmeren parhaaksi ankkuripaikaksi. Jäätä lahdella on marraskuun lopulta kesäkuun puoliväliin. Kaupunki ja sen satama ovat lahden perukassa Staritskin niemimaan kannaksella. Lahdella on kaksi nimeä ja kaksi tarinaa. Virallinen nimi tulee amiraali Aleksei Nagajevilta (1704–1781), joka oli hydrografi ja kartantekijä ja jonka Beringinmeren ja Itämeren kartastot ilmestyivät vuonna 1752; niitä käytettiin vielä viisikymmentä vuotta myöhemmin, vaikka niissä ei ollut astekoordinaatistoa lainkaan. Toinen nimi on amerikkalai…
+- [Tallinna — kohdekartta / Kohdekartta: Raatihuoneentori] 1402–1404 Tallinnan raatihuone on koko Itämeren alueen ja Pohjoismaiden vanhin säilynyt raatihuone. Se rakennettiin vain parissa vuodessa, vuosina 1402-1404, keskiaikaisen torin laidalle. Hansakaupunkina Tallinnan kaupunginhallitus piti täällä kokouksiaan ja päätti niin kaupan, oikeuden kuin arjenkin asioista. Rakennuksen 36,8 metriä pitkässä salissa on nähtävissä yli 500 vuotta vanhoja seinävaatteita, jotka kuvaavat kuningas Salomonin elämää. Raatihuoneen 64 metriä korkeaan torniin johtaa peräti 115 porrasaskelmaa. Huipulla pyörii Vana Toomas, eli "Vanha Toomas" - kaupunginvartijaa esittävä tuuliviiri, joka on ollut Tallinnan tunnuskuva vuodesta 1530 lähtien. Alkuperäinen tuuliviiri on nyk…
+AIEMPI KYSYMYS: Minä vuonna Lindesnesiin pystytettiin ensimmäinen majakka, ja mitä se osoitti laivoille?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Lindesnesin ensimmäinen [[majakka]] pystytettiin vuonna 1656, ja sen tehtävänä oli osoittaa laivoille reittiä Pohjanmereltä [[Skagerrakin]] ja [[Itämeren]] suuntaan. Majakkaa uusittiin myöhemmin useaan otteeseen: vuonna 1822 siinä otettiin käyttöön hiilivalo ja vuonna 1854 uusi linssi, ja nykyinen valurautainen torni valmistui vuonna 1915. Lindesnes on Norjan eteläisimmässä kärjessä, ja paikka tunnetaan maan vanhimpana majakkapaikkana. Taisin muistaa kaikki luvut oikein.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 310
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lindesnesin majakka (merenkulku)
+Tietoruudun teksti: Lindesnesin majakka Norjan eteläisimmässä kärjessä on maan vanhin majakkapaikka: ensimmäinen majakka pystytettiin jo vuonna 1656 osoittamaan laivoille reittiä Pohjanmereltä Skagerrakin ja Itämeren suuntaan. Sitä uusittiin useaan otteeseen, muun muassa vuonna 1822 hiilivalolla ja 1854 uudella linssillä, ja nykyinen valurautainen torni valmistui vasta vuonna 1915 vanhaa Fresnel-linssiä käyttäen. Vuonna 1920 majakalle asennettiin ensimmäinen sumumerkinantolaite, sireeni. Toisen maailmansodan aikana saksalaiset valtasivat majakan ja rakensivat sen ympärille pienen linnoituksen neljine tykkeineen; linnoituksen jäänteet, kuten juoksuhaudat ja tunnelit, näkyvät alueella yhä. Majakka on yhä toiminnassa ja toimii lisäksi museona.
+AIEMPI KYSYMYS: Mitä Lindesnesin majakalle tapahtui toisen maailmansodan aikana?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Toisen maailmansodan aikana saksalaiset valtasivat Lindesnesin majakan ja rakensivat sen ympärille pienen linnoituksen, jossa oli neljä tykkiä. Norja oli [[saksalaismiehityksen]] alla vuosina 1940–1945, ja tapahtumista on kulunut yli kahdeksankymmentä vuotta. Linnoituksen jäänteitä, kuten [[juoksuhautoja]] ja [[tunneleita]], näkyy alueella yhä, ja majakka on edelleen toiminnassa sekä toimii samalla museona. Siit on onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: saksalaismiehityksen
+
+### 311
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lindesnesin majakka (merenkulku)
+Tietoruudun teksti: Lindesnesin majakka Norjan eteläisimmässä kärjessä on maan vanhin majakkapaikka: ensimmäinen majakka pystytettiin jo vuonna 1656 osoittamaan laivoille reittiä Pohjanmereltä Skagerrakin ja Itämeren suuntaan. Sitä uusittiin useaan otteeseen, muun muassa vuonna 1822 hiilivalolla ja 1854 uudella linssillä, ja nykyinen valurautainen torni valmistui vasta vuonna 1915 vanhaa Fresnel-linssiä käyttäen. Vuonna 1920 majakalle asennettiin ensimmäinen sumumerkinantolaite, sireeni. Toisen maailmansodan aikana saksalaiset valtasivat majakan ja rakensivat sen ympärille pienen linnoituksen neljine tykkeineen; linnoituksen jäänteet, kuten juoksuhaudat ja tunnelit, näkyvät alueella yhä. Majakka on yhä toiminnassa ja toimii lisäksi museona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kioto — kaupunkilehti / Historia: Sota, jota kaupunki ei unohtanut] Vuonna 1467 puhkesi Ōnin-sota, joka runteli Kiotoa kymmenen vuoden ajan: samuraisuvut taistelivat kaduilla, kartanot muutettiin linnoituksiksi, kaupungin halki kaivettiin syviä juoksuhautoja ja lukemattomat rakennukset paloivat. Kaupunki toipui vasta 1500-luvun puolivälissä. Sen jälkeen Toyotomi Hideyoshi rakensi Kioton uusiksi: hän kaksinkertaisti keskustan pohjois–etelä-katujen määrän, jolloin vanhat neliökorttelit muuttuivat suorakaiteiksi, ympäröi kaupungin odoi-nimisillä maavalleilla ja kokosi temppelit yhteen kortteliin Teramachi-kadun varrelle.
+AIEMPI KYSYMYS: Mitä Lindesnesin majakalle tapahtui toisen maailmansodan aikana?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Toisen maailmansodan aikana saksalaiset valtasivat Lindesnesin majakan ja rakensivat sen ympärille pienen linnoituksen, jossa oli neljä tykkiä. Norja oli [[saksalaismiehityksen]] alla vuosina 1940–1945, ja tapahtumista on kulunut yli kahdeksankymmentä vuotta. Linnoituksen jäänteitä, kuten [[juoksuhautoja]] ja [[tunneleita]], näkyy alueella yhä, ja majakka on edelleen toiminnassa sekä toimii samalla museona. Siit on onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: juoksuhautoja
+
+### 312
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lindesnesin majakka (merenkulku)
+Tietoruudun teksti: Lindesnesin majakka Norjan eteläisimmässä kärjessä on maan vanhin majakkapaikka: ensimmäinen majakka pystytettiin jo vuonna 1656 osoittamaan laivoille reittiä Pohjanmereltä Skagerrakin ja Itämeren suuntaan. Sitä uusittiin useaan otteeseen, muun muassa vuonna 1822 hiilivalolla ja 1854 uudella linssillä, ja nykyinen valurautainen torni valmistui vasta vuonna 1915 vanhaa Fresnel-linssiä käyttäen. Vuonna 1920 majakalle asennettiin ensimmäinen sumumerkinantolaite, sireeni. Toisen maailmansodan aikana saksalaiset valtasivat majakan ja rakensivat sen ympärille pienen linnoituksen neljine tykkeineen; linnoituksen jäänteet, kuten juoksuhaudat ja tunnelit, näkyvät alueella yhä. Majakka on yhä toiminnassa ja toimii lisäksi museona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vladivostok — kohdekartta / Kohdekartta: Linnoitusmuseo] linnoitus 1889–1918 Vladivostokin ympärille rakennettiin vuosina 1889–1918 yksi aikansa vahvimmista merilinnoituksista: kuusitoista linnaketta, kymmeniä rannikkopattereita ja maalinnakkeita, kilometreittäin tunneleita ja kasematteja, kaikki yhdistettyinä teihin ja maanalaisiin kaapeleihin. Port Arthurin menetys 1904 opetti suunnittelijoita: linnakkeita ei tehty kaavakirjan mukaan vaan vuorimaaston muotoihin, hajalleen ja näkymättömiin, ja betonia vahvistettiin vuoden 1913 koeammuntojen jälkeen entisestään. Työ katkesi ensimmäiseen maailmansotaan ja vallankumoukseen, kun noin kaksi kolmasosaa oli valmiina — eikä linnoitusta koskaan koeteltu taistelussa. Rakentajien johtaja Aleksei Šošin peru…
+- [Mexico City — kaupunkilehti / Mexico City: Kaupunki, joka painuu omaa vauhtiaan] Kaupunki lepää 2 240 metrin korkeudessa entisen Texcoco-järven pohjalla, ja pohja on savea, joka on yhä läpimärkää. Kun sitä vettä pumpataan juomavedeksi, savi tiivistyy ja maanpinta laskee: 1900-luvun alusta lähtien osa kaupungista on painunut jopa yhdeksän metriä, ja vauhti on nyt lähes puoli metriä vuodessa. Laaksosta ei ole vesille luonnollista purkautumistietä, ja painuva maa vaikeuttaa sade- ja jäteveden johtamista pois; kanavia ja tunneleita on kaivettu jo 1600-luvulta lähtien. Sama pehmeä pohja hidasti aikanaan Palacio de Bellas Artesin rakentamista, kun raskas marmoripalatsi alkoi vajota.
+AIEMPI KYSYMYS: Mitä Lindesnesin majakalle tapahtui toisen maailmansodan aikana?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Toisen maailmansodan aikana saksalaiset valtasivat Lindesnesin majakan ja rakensivat sen ympärille pienen linnoituksen, jossa oli neljä tykkiä. Norja oli [[saksalaismiehityksen]] alla vuosina 1940–1945, ja tapahtumista on kulunut yli kahdeksankymmentä vuotta. Linnoituksen jäänteitä, kuten [[juoksuhautoja]] ja [[tunneleita]], näkyy alueella yhä, ja majakka on edelleen toiminnassa sekä toimii samalla museona. Siit on onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: tunneleita
+
+### 313
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lindesnesin majakka (merenkulku)
+Tietoruudun teksti: Lindesnesin majakka Norjan eteläisimmässä kärjessä on maan vanhin majakkapaikka: ensimmäinen majakka pystytettiin jo vuonna 1656 osoittamaan laivoille reittiä Pohjanmereltä Skagerrakin ja Itämeren suuntaan. Sitä uusittiin useaan otteeseen, muun muassa vuonna 1822 hiilivalolla ja 1854 uudella linssillä, ja nykyinen valurautainen torni valmistui vasta vuonna 1915 vanhaa Fresnel-linssiä käyttäen. Vuonna 1920 majakalle asennettiin ensimmäinen sumumerkinantolaite, sireeni. Toisen maailmansodan aikana saksalaiset valtasivat majakan ja rakensivat sen ympärille pienen linnoituksen neljine tykkeineen; linnoituksen jäänteet, kuten juoksuhaudat ja tunnelit, näkyvät alueella yhä. Majakka on yhä toiminnassa ja toimii lisäksi museona.
+AIEMPI KYSYMYS: Miten majakkojen valot erotetaan toisistaan yöllä merellä?
+AIEMPI VASTAUS (Livia):
+No niin, tost minä osaan kertoo. Jokaisella majakalla on yleensä oma [[valotunnus]]: tietty [[välähdysten]] ja pimeiden jaksojen kuvio sekä usein myös tietty valon väri. Merenkulkija laskee välähdykset ja vertaa kuviota [[merikartasta]] löytyvään tietoon, jolloin hän tietää, minkä majakan näkee. Kun jokainen majakka vilkkuu omalla tavallaan, ne eivät mene sekaisin keskenään edes pimeässä. Eli ei ne vilku huvikseen.
+KYSYMYS: Kerro lisää: valotunnus
+
+### 314
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lindesnesin majakka (merenkulku)
+Tietoruudun teksti: Lindesnesin majakka Norjan eteläisimmässä kärjessä on maan vanhin majakkapaikka: ensimmäinen majakka pystytettiin jo vuonna 1656 osoittamaan laivoille reittiä Pohjanmereltä Skagerrakin ja Itämeren suuntaan. Sitä uusittiin useaan otteeseen, muun muassa vuonna 1822 hiilivalolla ja 1854 uudella linssillä, ja nykyinen valurautainen torni valmistui vasta vuonna 1915 vanhaa Fresnel-linssiä käyttäen. Vuonna 1920 majakalle asennettiin ensimmäinen sumumerkinantolaite, sireeni. Toisen maailmansodan aikana saksalaiset valtasivat majakan ja rakensivat sen ympärille pienen linnoituksen neljine tykkeineen; linnoituksen jäänteet, kuten juoksuhaudat ja tunnelit, näkyvät alueella yhä. Majakka on yhä toiminnassa ja toimii lisäksi museona.
+AIEMPI KYSYMYS: Miten majakkojen valot erotetaan toisistaan yöllä merellä?
+AIEMPI VASTAUS (Livia):
+No niin, tost minä osaan kertoo. Jokaisella majakalla on yleensä oma [[valotunnus]]: tietty [[välähdysten]] ja pimeiden jaksojen kuvio sekä usein myös tietty valon väri. Merenkulkija laskee välähdykset ja vertaa kuviota [[merikartasta]] löytyvään tietoon, jolloin hän tietää, minkä majakan näkee. Kun jokainen majakka vilkkuu omalla tavallaan, ne eivät mene sekaisin keskenään edes pimeässä. Eli ei ne vilku huvikseen.
+KYSYMYS: Kerro lisää: välähdysten
+
+### 315
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lindesnesin majakka (merenkulku)
+Tietoruudun teksti: Lindesnesin majakka Norjan eteläisimmässä kärjessä on maan vanhin majakkapaikka: ensimmäinen majakka pystytettiin jo vuonna 1656 osoittamaan laivoille reittiä Pohjanmereltä Skagerrakin ja Itämeren suuntaan. Sitä uusittiin useaan otteeseen, muun muassa vuonna 1822 hiilivalolla ja 1854 uudella linssillä, ja nykyinen valurautainen torni valmistui vasta vuonna 1915 vanhaa Fresnel-linssiä käyttäen. Vuonna 1920 majakalle asennettiin ensimmäinen sumumerkinantolaite, sireeni. Toisen maailmansodan aikana saksalaiset valtasivat majakan ja rakensivat sen ympärille pienen linnoituksen neljine tykkeineen; linnoituksen jäänteet, kuten juoksuhaudat ja tunnelit, näkyvät alueella yhä. Majakka on yhä toiminnassa ja toimii lisäksi museona.
+AIEMPI KYSYMYS: Miten majakkojen valot erotetaan toisistaan yöllä merellä?
+AIEMPI VASTAUS (Livia):
+No niin, tost minä osaan kertoo. Jokaisella majakalla on yleensä oma [[valotunnus]]: tietty [[välähdysten]] ja pimeiden jaksojen kuvio sekä usein myös tietty valon väri. Merenkulkija laskee välähdykset ja vertaa kuviota [[merikartasta]] löytyvään tietoon, jolloin hän tietää, minkä majakan näkee. Kun jokainen majakka vilkkuu omalla tavallaan, ne eivät mene sekaisin keskenään edes pimeässä. Eli ei ne vilku huvikseen.
+KYSYMYS: Kerro lisää: merikartasta
+
+### 316
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lindesnesin majakka (merenkulku)
+Tietoruudun teksti: Lindesnesin majakka Norjan eteläisimmässä kärjessä on maan vanhin majakkapaikka: ensimmäinen majakka pystytettiin jo vuonna 1656 osoittamaan laivoille reittiä Pohjanmereltä Skagerrakin ja Itämeren suuntaan. Sitä uusittiin useaan otteeseen, muun muassa vuonna 1822 hiilivalolla ja 1854 uudella linssillä, ja nykyinen valurautainen torni valmistui vasta vuonna 1915 vanhaa Fresnel-linssiä käyttäen. Vuonna 1920 majakalle asennettiin ensimmäinen sumumerkinantolaite, sireeni. Toisen maailmansodan aikana saksalaiset valtasivat majakan ja rakensivat sen ympärille pienen linnoituksen neljine tykkeineen; linnoituksen jäänteet, kuten juoksuhaudat ja tunnelit, näkyvät alueella yhä. Majakka on yhä toiminnassa ja toimii lisäksi museona.
+AIEMPI KYSYMYS: Miksi majakoilla on sumusireeni, kun niillä on jo valo?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Sumusireeni]] on [[äänimerkki]], jota käytetään silloin, kun sumu tai huono näkyvyys estää valoa näkymästä kunnolla. Ääni kuuluu silloinkin, kun valo hukkuu sumuun, joten merenkulkija voi kuulla majakan, vaikka ei sitä näkisikään. [[Lindesnesin]] majakalle asennettiin sireeni vuonna 1920, ja sen tarkoituksena oli varoittaa laivoja rannikon läheisyydestä. Hyvä, että laivoilla on korvatkin.
+KYSYMYS: Kerro lisää: Sumusireeni
+
+### 317
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lindesnesin majakka (merenkulku)
+Tietoruudun teksti: Lindesnesin majakka Norjan eteläisimmässä kärjessä on maan vanhin majakkapaikka: ensimmäinen majakka pystytettiin jo vuonna 1656 osoittamaan laivoille reittiä Pohjanmereltä Skagerrakin ja Itämeren suuntaan. Sitä uusittiin useaan otteeseen, muun muassa vuonna 1822 hiilivalolla ja 1854 uudella linssillä, ja nykyinen valurautainen torni valmistui vasta vuonna 1915 vanhaa Fresnel-linssiä käyttäen. Vuonna 1920 majakalle asennettiin ensimmäinen sumumerkinantolaite, sireeni. Toisen maailmansodan aikana saksalaiset valtasivat majakan ja rakensivat sen ympärille pienen linnoituksen neljine tykkeineen; linnoituksen jäänteet, kuten juoksuhaudat ja tunnelit, näkyvät alueella yhä. Majakka on yhä toiminnassa ja toimii lisäksi museona.
+AIEMPI KYSYMYS: Miksi majakoilla on sumusireeni, kun niillä on jo valo?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Sumusireeni]] on [[äänimerkki]], jota käytetään silloin, kun sumu tai huono näkyvyys estää valoa näkymästä kunnolla. Ääni kuuluu silloinkin, kun valo hukkuu sumuun, joten merenkulkija voi kuulla majakan, vaikka ei sitä näkisikään. [[Lindesnesin]] majakalle asennettiin sireeni vuonna 1920, ja sen tarkoituksena oli varoittaa laivoja rannikon läheisyydestä. Hyvä, että laivoilla on korvatkin.
+KYSYMYS: Kerro lisää: äänimerkki
+
+### 318
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lindesnesin majakka (merenkulku)
+Tietoruudun teksti: Lindesnesin majakka Norjan eteläisimmässä kärjessä on maan vanhin majakkapaikka: ensimmäinen majakka pystytettiin jo vuonna 1656 osoittamaan laivoille reittiä Pohjanmereltä Skagerrakin ja Itämeren suuntaan. Sitä uusittiin useaan otteeseen, muun muassa vuonna 1822 hiilivalolla ja 1854 uudella linssillä, ja nykyinen valurautainen torni valmistui vasta vuonna 1915 vanhaa Fresnel-linssiä käyttäen. Vuonna 1920 majakalle asennettiin ensimmäinen sumumerkinantolaite, sireeni. Toisen maailmansodan aikana saksalaiset valtasivat majakan ja rakensivat sen ympärille pienen linnoituksen neljine tykkeineen; linnoituksen jäänteet, kuten juoksuhaudat ja tunnelit, näkyvät alueella yhä. Majakka on yhä toiminnassa ja toimii lisäksi museona.
+AIEMPI KYSYMYS: Miksi majakoilla on sumusireeni, kun niillä on jo valo?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Sumusireeni]] on [[äänimerkki]], jota käytetään silloin, kun sumu tai huono näkyvyys estää valoa näkymästä kunnolla. Ääni kuuluu silloinkin, kun valo hukkuu sumuun, joten merenkulkija voi kuulla majakan, vaikka ei sitä näkisikään. [[Lindesnesin]] majakalle asennettiin sireeni vuonna 1920, ja sen tarkoituksena oli varoittaa laivoja rannikon läheisyydestä. Hyvä, että laivoilla on korvatkin.
+KYSYMYS: Kerro lisää: Lindesnesin
+
+### 319
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lindesnesin majakka (merenkulku)
+Tietoruudun teksti: Lindesnesin majakka Norjan eteläisimmässä kärjessä on maan vanhin majakkapaikka: ensimmäinen majakka pystytettiin jo vuonna 1656 osoittamaan laivoille reittiä Pohjanmereltä Skagerrakin ja Itämeren suuntaan. Sitä uusittiin useaan otteeseen, muun muassa vuonna 1822 hiilivalolla ja 1854 uudella linssillä, ja nykyinen valurautainen torni valmistui vasta vuonna 1915 vanhaa Fresnel-linssiä käyttäen. Vuonna 1920 majakalle asennettiin ensimmäinen sumumerkinantolaite, sireeni. Toisen maailmansodan aikana saksalaiset valtasivat majakan ja rakensivat sen ympärille pienen linnoituksen neljine tykkeineen; linnoituksen jäänteet, kuten juoksuhaudat ja tunnelit, näkyvät alueella yhä. Majakka on yhä toiminnassa ja toimii lisäksi museona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Luonto: Meri vetäytyy ja pohja aukeaa] Pohjanmeren rannikolla meri vetäytyy kahdesti päivässä kilometrien päähän ja jättää jälkeensä Wattenmeerin: mutatasangon, jota pitkin voi kävellä merenpohjassa saarelta toiselle. Opas kulkee aina mukana, sillä vuoksi palaa nopeammin kuin ihminen juoksee. Pohja näyttää tyhjältä mutta kuhisee elämää: yhdessä neliömetrissä voi asua kymmeniätuhansia matoja, kotiloita ja simpukoita, ja hietikoilla lepää kirjohylkeitä. Vattimeri on Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Mikä on Skagerrak ja mitä merialueita se yhdistää?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Skagerrak on Norjan, Ruotsin ja Tanskan välinen merialue, joka yhdistää [[Pohjanmeren]] [[Kattegatiin]]. Kattegatista reitti jatkuu Tanskan salmien kautta [[Itämerelle]], joten Skagerrak on tärkeä väylä Pohjanmeren ja Itämeren välillä.
+
+Ylhäältä katsoen kolmen maan rannat erottaa toisistaan vain väri, ja laivoja risteilee koko ajan. Minä kuvittelen joka kannelle pullakorin.
+KYSYMYS: Kerro lisää: Pohjanmeren
+
+### 320
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lindesnesin majakka (merenkulku)
+Tietoruudun teksti: Lindesnesin majakka Norjan eteläisimmässä kärjessä on maan vanhin majakkapaikka: ensimmäinen majakka pystytettiin jo vuonna 1656 osoittamaan laivoille reittiä Pohjanmereltä Skagerrakin ja Itämeren suuntaan. Sitä uusittiin useaan otteeseen, muun muassa vuonna 1822 hiilivalolla ja 1854 uudella linssillä, ja nykyinen valurautainen torni valmistui vasta vuonna 1915 vanhaa Fresnel-linssiä käyttäen. Vuonna 1920 majakalle asennettiin ensimmäinen sumumerkinantolaite, sireeni. Toisen maailmansodan aikana saksalaiset valtasivat majakan ja rakensivat sen ympärille pienen linnoituksen neljine tykkeineen; linnoituksen jäänteet, kuten juoksuhaudat ja tunnelit, näkyvät alueella yhä. Majakka on yhä toiminnassa ja toimii lisäksi museona.
+AIEMPI KYSYMYS: Mikä on Skagerrak ja mitä merialueita se yhdistää?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Skagerrak on Norjan, Ruotsin ja Tanskan välinen merialue, joka yhdistää [[Pohjanmeren]] [[Kattegatiin]]. Kattegatista reitti jatkuu Tanskan salmien kautta [[Itämerelle]], joten Skagerrak on tärkeä väylä Pohjanmeren ja Itämeren välillä.
+
+Ylhäältä katsoen kolmen maan rannat erottaa toisistaan vain väri, ja laivoja risteilee koko ajan. Minä kuvittelen joka kannelle pullakorin.
+KYSYMYS: Kerro lisää: Kattegatiin

@@ -1,0 +1,1019 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Galdhøpiggen (luonto · vuori)
+Tietoruudun teksti: Galdhøpiggen on Norjan, Skandinavian ja koko Pohjois-Euroopan korkein vuori: 2 469 metriä. Se sijaitsee Lomin kunnassa Innlandetin maakunnassa Jotunheimenin vuoristossa Jotunheimenin kansallispuiston sisällä. Ympärillä kohoaa tiheä joukko muita huippuja — Keilhaus topp, Store Styggehøe, Storjuvtinden ja Skardstinden muiden muassa.
+AIEMPI KYSYMYS: Mitä Jotunheimen tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä osaan kertoo. Nimi Jotunheimen tarkoittaa jättiläisten kotia: muinaisnorjan sana jotunn on jättiläinen ja heim tarkoittaa kotia. Nimi viittaa [[norjalaiseen mytologiaan]], jossa jättiläiset asuivat omassa maailmassaan, ja se sopii korkealle ja kivikkoiselle vuoristolle, jonka huiput kohoavat jyrkkinä. Alueella sijaitsee Norjan korkein vuori [[Galdhøpiggen]], ja nimi on vakiintunut myös alueen kansallispuiston nimeksi. Hyvä ettei ne jättiläiset käy kylässä.
+KYSYMYS: Kerro lisää: norjalaiseen mytologiaan
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Galdhøpiggen (luonto · vuori)
+Tietoruudun teksti: Galdhøpiggen on Norjan, Skandinavian ja koko Pohjois-Euroopan korkein vuori: 2 469 metriä. Se sijaitsee Lomin kunnassa Innlandetin maakunnassa Jotunheimenin vuoristossa Jotunheimenin kansallispuiston sisällä. Ympärillä kohoaa tiheä joukko muita huippuja — Keilhaus topp, Store Styggehøe, Storjuvtinden ja Skardstinden muiden muassa.
+AIEMPI KYSYMYS: Mitä Jotunheimen tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä osaan kertoo. Nimi Jotunheimen tarkoittaa jättiläisten kotia: muinaisnorjan sana jotunn on jättiläinen ja heim tarkoittaa kotia. Nimi viittaa [[norjalaiseen mytologiaan]], jossa jättiläiset asuivat omassa maailmassaan, ja se sopii korkealle ja kivikkoiselle vuoristolle, jonka huiput kohoavat jyrkkinä. Alueella sijaitsee Norjan korkein vuori [[Galdhøpiggen]], ja nimi on vakiintunut myös alueen kansallispuiston nimeksi. Hyvä ettei ne jättiläiset käy kylässä.
+KYSYMYS: Kerro lisää: Galdhøpiggen
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Galdhøpiggen (luonto · vuori)
+Tietoruudun teksti: Galdhøpiggen on Norjan, Skandinavian ja koko Pohjois-Euroopan korkein vuori: 2 469 metriä. Se sijaitsee Lomin kunnassa Innlandetin maakunnassa Jotunheimenin vuoristossa Jotunheimenin kansallispuiston sisällä. Ympärillä kohoaa tiheä joukko muita huippuja — Keilhaus topp, Store Styggehøe, Storjuvtinden ja Skardstinden muiden muassa.
+AIEMPI KYSYMYS: Onko Galdhøpiggenilla jäätikköä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Vuoren rinteillä ja ympäristössä on jäätiköitä, vaikka itse huippu on kallioinen. Yksi suosituista reiteistä huipulle kulkee jäätikön yli, ja siellä liikutaan usein oppaan johdolla ja köydessä, koska jäätiköllä on railoja. Reitin lähtöpaikkoina mainitaan usein [[Juvasshytta]] ja [[Spiterstulen]]; toinen reitti kulkee kivikkoa pitkin ilman jäätikköä. Norjan jäätiköt ovat lähteiden mukaan pienentyneet viime vuosikymmeninä, joten tarkat tiedot kannattaa tarkistaa paikallisilta oppailta. Siinäpä sitä oli yhdeksi aamuksi.
+KYSYMYS: Kerro lisää: Juvasshytta
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Galdhøpiggen (luonto · vuori)
+Tietoruudun teksti: Galdhøpiggen on Norjan, Skandinavian ja koko Pohjois-Euroopan korkein vuori: 2 469 metriä. Se sijaitsee Lomin kunnassa Innlandetin maakunnassa Jotunheimenin vuoristossa Jotunheimenin kansallispuiston sisällä. Ympärillä kohoaa tiheä joukko muita huippuja — Keilhaus topp, Store Styggehøe, Storjuvtinden ja Skardstinden muiden muassa.
+AIEMPI KYSYMYS: Onko Galdhøpiggenilla jäätikköä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Vuoren rinteillä ja ympäristössä on jäätiköitä, vaikka itse huippu on kallioinen. Yksi suosituista reiteistä huipulle kulkee jäätikön yli, ja siellä liikutaan usein oppaan johdolla ja köydessä, koska jäätiköllä on railoja. Reitin lähtöpaikkoina mainitaan usein [[Juvasshytta]] ja [[Spiterstulen]]; toinen reitti kulkee kivikkoa pitkin ilman jäätikköä. Norjan jäätiköt ovat lähteiden mukaan pienentyneet viime vuosikymmeninä, joten tarkat tiedot kannattaa tarkistaa paikallisilta oppailta. Siinäpä sitä oli yhdeksi aamuksi.
+KYSYMYS: Kerro lisää: Spiterstulen
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Galdhøpiggen (luonto · vuori)
+Tietoruudun teksti: Galdhøpiggen on Norjan, Skandinavian ja koko Pohjois-Euroopan korkein vuori: 2 469 metriä. Se sijaitsee Lomin kunnassa Innlandetin maakunnassa Jotunheimenin vuoristossa Jotunheimenin kansallispuiston sisällä. Ympärillä kohoaa tiheä joukko muita huippuja — Keilhaus topp, Store Styggehøe, Storjuvtinden ja Skardstinden muiden muassa.
+AIEMPI KYSYMYS: Mikä Jotunheimenin kansallispuisto on?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: vaeltajien paratiisi. Jotunheimenin kansallispuisto on Etelä-Norjan vuoristossa sijaitseva suojelualue, jonka alueella on Galdhøpiggenin lisäksi toinen tunnettu huippu, [[Glittertind]], sekä runsaasti muita yli kahden kilometrin huippuja. Puisto on tunnettu rotkoista, jäätiköistä ja kirkkaista vuoristojärvistä. Alueella kulkee merkittyjä polkuja, ja yöpymiseen on perinteisesti käytetty vaellusyhdistys [[Den Norske Turistforeningin]] ylläpitämiä majoja. Yksi tunnetuimmista vaellusreiteistä on [[Besseggen]]-harjanne, joka kulkee kahden vuoristojärven välissä. Norjassa vallitsee lisäksi jokamiehenoikeus, joka sallii liikkumisen luonnossa.
+
+Minä katsoin noita polkuja ylhäältä, ja kyllä vaeltajat näyttävät muurahaisilta. Ylpeillä muurahaisilta, kuitenkin.
+KYSYMYS: Kerro lisää: Glittertind
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Galdhøpiggen (luonto · vuori)
+Tietoruudun teksti: Galdhøpiggen on Norjan, Skandinavian ja koko Pohjois-Euroopan korkein vuori: 2 469 metriä. Se sijaitsee Lomin kunnassa Innlandetin maakunnassa Jotunheimenin vuoristossa Jotunheimenin kansallispuiston sisällä. Ympärillä kohoaa tiheä joukko muita huippuja — Keilhaus topp, Store Styggehøe, Storjuvtinden ja Skardstinden muiden muassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kaupunkilehti / Musiikki: Teatteri, jossa puhuttiin norjaa] Ole Bull oli 1850 perustamassa Bergeniin Det Norske Theateria, ensimmäistä teatteria, jossa näyttelijät puhuivat norjaa tanskan sijaan; siitä tuli myöhemmin Den Nationale Scene. Kahtakymmentä vuotta myöhemmin, 1872, Bull osti Lysøenin saaren Bergenin eteläpuolelta ja palkkasi arkkitehti Conrad Fredrik von der Lippen (1833–1901) suunnittelemaan sinne asuinrakennuksen. Siellä hän myös kuoli 17. elokuuta 1880, samana vuonna kun oli sairaana pitänyt viimeisen konserttinsa Chicagossa. Ruumista kuljettanutta laivaa saattoi viisitoista höyrylaivaa ja joukko pienempiä aluksia.
+AIEMPI KYSYMYS: Mikä Jotunheimenin kansallispuisto on?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: vaeltajien paratiisi. Jotunheimenin kansallispuisto on Etelä-Norjan vuoristossa sijaitseva suojelualue, jonka alueella on Galdhøpiggenin lisäksi toinen tunnettu huippu, [[Glittertind]], sekä runsaasti muita yli kahden kilometrin huippuja. Puisto on tunnettu rotkoista, jäätiköistä ja kirkkaista vuoristojärvistä. Alueella kulkee merkittyjä polkuja, ja yöpymiseen on perinteisesti käytetty vaellusyhdistys [[Den Norske Turistforeningin]] ylläpitämiä majoja. Yksi tunnetuimmista vaellusreiteistä on [[Besseggen]]-harjanne, joka kulkee kahden vuoristojärven välissä. Norjassa vallitsee lisäksi jokamiehenoikeus, joka sallii liikkumisen luonnossa.
+
+Minä katsoin noita polkuja ylhäältä, ja kyllä vaeltajat näyttävät muurahaisilta. Ylpeillä muurahaisilta, kuitenkin.
+KYSYMYS: Kerro lisää: Den Norske Turistforeningin
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Galdhøpiggen (luonto · vuori)
+Tietoruudun teksti: Galdhøpiggen on Norjan, Skandinavian ja koko Pohjois-Euroopan korkein vuori: 2 469 metriä. Se sijaitsee Lomin kunnassa Innlandetin maakunnassa Jotunheimenin vuoristossa Jotunheimenin kansallispuiston sisällä. Ympärillä kohoaa tiheä joukko muita huippuja — Keilhaus topp, Store Styggehøe, Storjuvtinden ja Skardstinden muiden muassa.
+AIEMPI KYSYMYS: Mikä Jotunheimenin kansallispuisto on?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: vaeltajien paratiisi. Jotunheimenin kansallispuisto on Etelä-Norjan vuoristossa sijaitseva suojelualue, jonka alueella on Galdhøpiggenin lisäksi toinen tunnettu huippu, [[Glittertind]], sekä runsaasti muita yli kahden kilometrin huippuja. Puisto on tunnettu rotkoista, jäätiköistä ja kirkkaista vuoristojärvistä. Alueella kulkee merkittyjä polkuja, ja yöpymiseen on perinteisesti käytetty vaellusyhdistys [[Den Norske Turistforeningin]] ylläpitämiä majoja. Yksi tunnetuimmista vaellusreiteistä on [[Besseggen]]-harjanne, joka kulkee kahden vuoristojärven välissä. Norjassa vallitsee lisäksi jokamiehenoikeus, joka sallii liikkumisen luonnossa.
+
+Minä katsoin noita polkuja ylhäältä, ja kyllä vaeltajat näyttävät muurahaisilta. Ylpeillä muurahaisilta, kuitenkin.
+KYSYMYS: Kerro lisää: Besseggen
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Galdhøpiggen (luonto · vuori)
+Tietoruudun teksti: Galdhøpiggen on Norjan, Skandinavian ja koko Pohjois-Euroopan korkein vuori: 2 469 metriä. Se sijaitsee Lomin kunnassa Innlandetin maakunnassa Jotunheimenin vuoristossa Jotunheimenin kansallispuiston sisällä. Ympärillä kohoaa tiheä joukko muita huippuja — Keilhaus topp, Store Styggehøe, Storjuvtinden ja Skardstinden muiden muassa.
+AIEMPI KYSYMYS: Miten Skandien vuoret ovat syntyneet?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Skandinavian vuoristo sai alkunsa hyvin kauan sitten, kun mannerlaatat törmäsivät toisiinsa ja kallioperä poimuttui korkeaksi vuorijonoksi. Prosessia kutsutaan nimellä [[kaledoninen vuoristonpoimutus]], ja se tapahtui noin neljänsadan miljoonan vuoden takaisina aikoina. Sen jälkeen vuoret ovat kuluneet pitkään ja nousseet myöhemmin uudelleen, ja [[jääkausien]] jäätiköt muovasivat niihin syviä laaksoja ja vuonoja. Siksi nykyiset huiput ovat peräisin vanhasta jättiläisvuoristosta, jonka jäännökset muodostavat [[Skandien]] selkärangan. Aikaa meni paljon, mutta kyyhky jaksoi.
+KYSYMYS: Kerro lisää: kaledoninen vuoristonpoimutus
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Galdhøpiggen (luonto · vuori)
+Tietoruudun teksti: Galdhøpiggen on Norjan, Skandinavian ja koko Pohjois-Euroopan korkein vuori: 2 469 metriä. Se sijaitsee Lomin kunnassa Innlandetin maakunnassa Jotunheimenin vuoristossa Jotunheimenin kansallispuiston sisällä. Ympärillä kohoaa tiheä joukko muita huippuja — Keilhaus topp, Store Styggehøe, Storjuvtinden ja Skardstinden muiden muassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Taiwan — maalehti / Luonto: Peura katosi ja palasi] Formosanpeura tuli saarelle jääkausien aikana, kun matala merenpinta yhdisti Taiwanin mantereeseen. Sen paras elinalue oli juuri se länsirannikon alava tasanko, jolle ihmiset sittemmin rakensivat. Hollantilaisten kuutena vuosikymmenenä saarelta vietiin kahdesta neljään miljoonaa peurannahkaa, ja metsästys jatkui sen jälkeenkin. Viimeinen tiedossa oleva luonnonvarainen yksilö tapettiin 1969. Laji säilyi tarhoissa, ja 1984 aloitettiin palautus: Taipein eläintarhasta vietiin 22 peuraa Kentingin kansallispuistoon, aitauksissa odotettiin kymmenen vuotta ja 1994 ne päästettiin vapaaksi. Nyt niitä on yli tuhat.
+- [Serbia — maalehti / Tiede: Milankovićin tähtitorni Zvezdaralla] 1887 — Belgradin observatorio perustettiin 7. huhtikuuta 1887 Zvezdaran metsäalueelle, ja sen ensimmäinen johtaja oli Milan Nedeljković. Milutin Milanković johti laitosta kahdesti, vuosina 1925–1926 ja 1948–1951. Hän laski, miten Maan radan muoto, akselin kallistus ja prekessio muuttavat auringonsäteilyn saantia, ja tulokset selittävät jääkausien rytmiä. Pääteoksensa Kanon der Erdbestrahlung, 626 sivua, hän julkaisi saksaksi 1941. Observatorio julistettiin kulttuurimonumentiksi 2001, ja Vidojevican vuoren 1,4 metrin robottiteleskooppi kantaa Milankovićin nimeä.
+AIEMPI KYSYMYS: Miten Skandien vuoret ovat syntyneet?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Skandinavian vuoristo sai alkunsa hyvin kauan sitten, kun mannerlaatat törmäsivät toisiinsa ja kallioperä poimuttui korkeaksi vuorijonoksi. Prosessia kutsutaan nimellä [[kaledoninen vuoristonpoimutus]], ja se tapahtui noin neljänsadan miljoonan vuoden takaisina aikoina. Sen jälkeen vuoret ovat kuluneet pitkään ja nousseet myöhemmin uudelleen, ja [[jääkausien]] jäätiköt muovasivat niihin syviä laaksoja ja vuonoja. Siksi nykyiset huiput ovat peräisin vanhasta jättiläisvuoristosta, jonka jäännökset muodostavat [[Skandien]] selkärangan. Aikaa meni paljon, mutta kyyhky jaksoi.
+KYSYMYS: Kerro lisää: jääkausien
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Galdhøpiggen (luonto · vuori)
+Tietoruudun teksti: Galdhøpiggen on Norjan, Skandinavian ja koko Pohjois-Euroopan korkein vuori: 2 469 metriä. Se sijaitsee Lomin kunnassa Innlandetin maakunnassa Jotunheimenin vuoristossa Jotunheimenin kansallispuiston sisällä. Ympärillä kohoaa tiheä joukko muita huippuja — Keilhaus topp, Store Styggehøe, Storjuvtinden ja Skardstinden muiden muassa.
+AIEMPI KYSYMYS: Miten Skandien vuoret ovat syntyneet?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Skandinavian vuoristo sai alkunsa hyvin kauan sitten, kun mannerlaatat törmäsivät toisiinsa ja kallioperä poimuttui korkeaksi vuorijonoksi. Prosessia kutsutaan nimellä [[kaledoninen vuoristonpoimutus]], ja se tapahtui noin neljänsadan miljoonan vuoden takaisina aikoina. Sen jälkeen vuoret ovat kuluneet pitkään ja nousseet myöhemmin uudelleen, ja [[jääkausien]] jäätiköt muovasivat niihin syviä laaksoja ja vuonoja. Siksi nykyiset huiput ovat peräisin vanhasta jättiläisvuoristosta, jonka jäännökset muodostavat [[Skandien]] selkärangan. Aikaa meni paljon, mutta kyyhky jaksoi.
+KYSYMYS: Kerro lisää: Skandien
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Galdhøpiggen (luonto · vuori)
+Tietoruudun teksti: Galdhøpiggen on Norjan, Skandinavian ja koko Pohjois-Euroopan korkein vuori: 2 469 metriä. Se sijaitsee Lomin kunnassa Innlandetin maakunnassa Jotunheimenin vuoristossa Jotunheimenin kansallispuiston sisällä. Ympärillä kohoaa tiheä joukko muita huippuja — Keilhaus topp, Store Styggehøe, Storjuvtinden ja Skardstinden muiden muassa.
+AIEMPI KYSYMYS: Millaisia eläimiä Jotunheimenin vuorilla elää?
+AIEMPI VASTAUS (Livia):
+Ai tota. Korkealla vuoristossa elämä on karumpaa kuin laaksoissa, mutta eläimiä silti löytyy. Norjan vuoristoalueilla elää [[villipeuroja]], jotka ovat vanhoja vuoristolajeja ja liikkuvat laiduntamaan vuodenaikojen mukaan, sekä korkealla viihtyvä riistalintu [[kiiruna]]. Lisäksi alueella tavataan pienempiä nisäkkäitä ja lintuja, mutta en ole varma tarkasta lajilistasta, joten sitä en lähde luettelemaan. Eläimiä voi parhaiten havaita kesällä ja syksyllä, kun ne liikkuvat laajasti. Siinä oli kyyhkyltä riittävästi eläinopintoja.
+KYSYMYS: Kerro lisää: villipeuroja
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Galdhøpiggen (luonto · vuori)
+Tietoruudun teksti: Galdhøpiggen on Norjan, Skandinavian ja koko Pohjois-Euroopan korkein vuori: 2 469 metriä. Se sijaitsee Lomin kunnassa Innlandetin maakunnassa Jotunheimenin vuoristossa Jotunheimenin kansallispuiston sisällä. Ympärillä kohoaa tiheä joukko muita huippuja — Keilhaus topp, Store Styggehøe, Storjuvtinden ja Skardstinden muiden muassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iqaluit — kohdekartta / Kohdekartta: Sylvia Grinnellin puisto] 1861 Puisto alkaa kilometrin päässä kaupungista länteen, ja keskustasta sinne kävelee puolessa tunnissa. Inuktitutiksi se on Iqaluit Kuunga eli Iqaluitin joki. Maisema syntyi jäätiköitymisessä noin 7 100 vuotta sitten, ja joki laskee Sylvia Grinnellin järvestä Peterhead Inletiin. Putousten yläpuolella on näköalatasanne 55 metrin korkeudessa. Nimi on tuontitavaraa. Amerikkalainen Charles Francis Hall nimesi seudun paikkoja rahoittajiensa mukaan, ja järvi ja joki saivat nimen hänen ystävänsä ja tukijansa Henry Grinnellin tyttären Sylvian mukaan. Joesta nostettu nieriä on se kala, josta koko kaupungin nimi kertoo; kaupallinen nieriänkalastus joessa kiellettiin 1965, ja muu kuin inuiitti tarvit…
+AIEMPI KYSYMYS: Millaisia eläimiä Jotunheimenin vuorilla elää?
+AIEMPI VASTAUS (Livia):
+Ai tota. Korkealla vuoristossa elämä on karumpaa kuin laaksoissa, mutta eläimiä silti löytyy. Norjan vuoristoalueilla elää [[villipeuroja]], jotka ovat vanhoja vuoristolajeja ja liikkuvat laiduntamaan vuodenaikojen mukaan, sekä korkealla viihtyvä riistalintu [[kiiruna]]. Lisäksi alueella tavataan pienempiä nisäkkäitä ja lintuja, mutta en ole varma tarkasta lajilistasta, joten sitä en lähde luettelemaan. Eläimiä voi parhaiten havaita kesällä ja syksyllä, kun ne liikkuvat laajasti. Siinä oli kyyhkyltä riittävästi eläinopintoja.
+KYSYMYS: Kerro lisää: kiiruna
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norjanmeri (meri)
+Tietoruudun teksti: Norjanmeri on reunameri Norjasta luoteeseen, Pohjanmeren ja Grönlanninmeren välissä, ja se rajautuu koillisessa Barentsinmereen. Lounaassa sen erottaa Atlantista Islannin ja Färsaarten välinen vedenalainen harjanne, pohjoisessa Jan Mayenin harjanne erottaa sen Grönlanninmerestä. Meri luetaan joko Atlanttiin tai Jäämereen kuuluvaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Oslo — kaupunkilehti / Historian hetki: Kristiania 1893 — laiva, jonka jää nostaa] 24.6.1893 — Milloin isä tulee takaisin? Sitä ei laiturilla osaa sanoa kukaan. 31-vuotias Fridtjof Nansen jättää rantaan Eva-vaimonsa ja muutaman kuukauden ikäisen Liv-tyttärensä eikä lupaa paluupäivää. Rantakadut ovat mustanaan väkeä, linnoitukselta ammutaan kunnialaukaukset, ja vuonolle liukuu alus, joka näyttää väärin rakennetulta. Fram on matala ja pyöreäpohjainen: Colin Archer suunnitteli sen niin, ettei jäällä ole mistään otetta, vaan ahtojää nostaa laivan ylös eikä murskaa sitä. Runko on kolmea puukerrosta paksu — kuudestakymmenestä seitsemäänkymmeneen senttiä, keulassa runsaan metrin — ja päällystetty greenheart-puulla. Kannella on kolmetoista miestä, ja suunnitelma on se, jota moni …
+- [Oslo — kohdekartta / Kohdekartta: Fram 1893] Milloin isä tulee takaisin? Sitä ei laiturilla osaa sanoa kukaan. 31-vuotias Fridtjof Nansen jättää rantaan Eva-vaimonsa ja muutaman kuukauden ikäisen Liv-tyttärensä eikä lupaa paluupäivää. Rantakadut ovat mustanaan väkeä, linnoitukselta ammutaan kunnialaukaukset, ja vuonolle liukuu alus, joka näyttää väärin rakennetulta. Fram on matala ja pyöreäpohjainen: Colin Archer suunnitteli sen niin, ettei jäällä ole mistään otetta, vaan ahtojää nostaa laivan ylös eikä murskaa sitä. Runko on kolmea puukerrosta paksu — kuudestakymmenestä seitsemäänkymmeneen senttiä, keulassa runsaan metrin — ja päällystetty greenheart-puulla. Kannella on kolmetoista miestä, ja suunnitelma on se, jota moni tutkija on j…
+AIEMPI KYSYMYS: Miksi Norjan rannikko pysyy sulana talvella?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys tuo. Syy on lämmin merivirta. [[Pohjois-Atlantin virran]] haara kuljettaa lämmintä ja suolaista vettä pohjoiseen pitkin Norjan rannikkoa, ja se lämmittää sekä merta että ilmaa selvästi enemmän kuin pohjoisella leveysasteella muuten olisi tavallista. Siksi avomeren puoleiset satamat pysyvät yleensä sulina talvellakin, ja esimerkiksi [[Vardøn]] satama kaukana pohjoisessa ei jäädy. Vuonojen sisäosissa ja sisämaassa pakkanen voi silti olla ankaraa. Hyvin pärjäsin tämän kanssa, vaikka vähän tuli kylmä.
+KYSYMYS: Kerro lisää: Pohjois-Atlantin virran
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norjanmeri (meri)
+Tietoruudun teksti: Norjanmeri on reunameri Norjasta luoteeseen, Pohjanmeren ja Grönlanninmeren välissä, ja se rajautuu koillisessa Barentsinmereen. Lounaassa sen erottaa Atlantista Islannin ja Färsaarten välinen vedenalainen harjanne, pohjoisessa Jan Mayenin harjanne erottaa sen Grönlanninmerestä. Meri luetaan joko Atlanttiin tai Jäämereen kuuluvaksi.
+AIEMPI KYSYMYS: Miksi Norjan rannikko pysyy sulana talvella?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys tuo. Syy on lämmin merivirta. [[Pohjois-Atlantin virran]] haara kuljettaa lämmintä ja suolaista vettä pohjoiseen pitkin Norjan rannikkoa, ja se lämmittää sekä merta että ilmaa selvästi enemmän kuin pohjoisella leveysasteella muuten olisi tavallista. Siksi avomeren puoleiset satamat pysyvät yleensä sulina talvellakin, ja esimerkiksi [[Vardøn]] satama kaukana pohjoisessa ei jäädy. Vuonojen sisäosissa ja sisämaassa pakkanen voi silti olla ankaraa. Hyvin pärjäsin tämän kanssa, vaikka vähän tuli kylmä.
+KYSYMYS: Kerro lisää: Vardøn
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norjanmeri (meri)
+Tietoruudun teksti: Norjanmeri on reunameri Norjasta luoteeseen, Pohjanmeren ja Grönlanninmeren välissä, ja se rajautuu koillisessa Barentsinmereen. Lounaassa sen erottaa Atlantista Islannin ja Färsaarten välinen vedenalainen harjanne, pohjoisessa Jan Mayenin harjanne erottaa sen Grönlanninmerestä. Meri luetaan joko Atlanttiin tai Jäämereen kuuluvaksi.
+AIEMPI KYSYMYS: Mikä Jan Mayenin harjanne on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Jan Mayenin harjanne on vedenalainen kohouma merenpohjassa, joka erottaa Norjanmeren pohjoisessa Grönlanninmerestä. Nimi tulee [[Jan Mayen]] -saaresta, joka on Norjaan kuuluva vulkaaninen saari keskellä pohjoista merta ja jonka huippuna kohoaa tulivuori [[Beerenberg]]. Harjanteet vaikuttavat siihen, miten syvät vesimassat virtaavat altaasta toiseen, ja eteläpuolella vastaava rakenne yhdistää [[Islannin]] ja Färsaaret. Tarkempia yksityiskohtia en ole varma, mutta harjanne toimii luonnollisena rajana kahden meren välillä. Tuo oli hyvä pikkuvisiitti merenpohjaan.
+KYSYMYS: Kerro lisää: Jan Mayen
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norjanmeri (meri)
+Tietoruudun teksti: Norjanmeri on reunameri Norjasta luoteeseen, Pohjanmeren ja Grönlanninmeren välissä, ja se rajautuu koillisessa Barentsinmereen. Lounaassa sen erottaa Atlantista Islannin ja Färsaarten välinen vedenalainen harjanne, pohjoisessa Jan Mayenin harjanne erottaa sen Grönlanninmerestä. Meri luetaan joko Atlanttiin tai Jäämereen kuuluvaksi.
+AIEMPI KYSYMYS: Mikä Jan Mayenin harjanne on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Jan Mayenin harjanne on vedenalainen kohouma merenpohjassa, joka erottaa Norjanmeren pohjoisessa Grönlanninmerestä. Nimi tulee [[Jan Mayen]] -saaresta, joka on Norjaan kuuluva vulkaaninen saari keskellä pohjoista merta ja jonka huippuna kohoaa tulivuori [[Beerenberg]]. Harjanteet vaikuttavat siihen, miten syvät vesimassat virtaavat altaasta toiseen, ja eteläpuolella vastaava rakenne yhdistää [[Islannin]] ja Färsaaret. Tarkempia yksityiskohtia en ole varma, mutta harjanne toimii luonnollisena rajana kahden meren välillä. Tuo oli hyvä pikkuvisiitti merenpohjaan.
+KYSYMYS: Kerro lisää: Beerenberg
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norjanmeri (meri)
+Tietoruudun teksti: Norjanmeri on reunameri Norjasta luoteeseen, Pohjanmeren ja Grönlanninmeren välissä, ja se rajautuu koillisessa Barentsinmereen. Lounaassa sen erottaa Atlantista Islannin ja Färsaarten välinen vedenalainen harjanne, pohjoisessa Jan Mayenin harjanne erottaa sen Grönlanninmerestä. Meri luetaan joko Atlanttiin tai Jäämereen kuuluvaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kansa kolisteli pankit pois vallasta kattiloilla] 2008–2009 — Lokakuussa 2008 Islannin kolme suurta pankkia kaatuivat muutamassa päivässä, ja koko maan talous romahti — suhteessa väkilukuun suurin pankkikriisi minkään maan historiassa. Ihmiset alkoivat kokoontua joka lauantai Alþingin eteen, ja tammikuussa 2009 mielenosoitus kasvoi tuhansiin: ihmiset toivat mukanaan kattiloita, pannuja ja kauhoja ja hakkasivat niitä yhdessä niin kovaa, että parlamentin istuntoa oli vaikea jatkaa. Meteli sai lempinimen kattilakumous. Hallitus erosi parin viikon sisällä, ja myöhemmin lähes kolmekymmentä pankkiireja ja johtajia tuomittiin vankilaan — Islanti on ainoa maa, joka vangitsi näin monta oman kriisinsä syyllistä.
+- [Islanti — maalehti / Historia: Sota jota käytiin verkonleikkureilla, ei ammuksilla] 1958–1976 — Kun Islanti laajensi kalastusrajaansa 1958, 1972 ja 1975 aina kauemmas rannikolta, Britannian troolarit eivät suostuneet väistymään — eikä Britannian laivasto liioin. Kolmessa niin sanotussa turskasodassa Islannin rannikkovartioston pienet alukset, kuten Óðinn, ajoivat troolareiden perässä ja leikkasivat niiden verkkoketjut irti erityisillä leikkureilla; brittilaivat puolestaan yrittivät väistellä ja jopa törmäillä vastaan. Ainuttakaan ammusta ei ammuttu vihaisessa mielessä, mutta aluksia vaurioitui kymmeniä. Lopulta Islanti voitti: vuonna 1976 Britannia hyväksyi 200 meripeninkulman rajan, ja se levisi pian koko maailmaan.
+AIEMPI KYSYMYS: Mikä Jan Mayenin harjanne on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Jan Mayenin harjanne on vedenalainen kohouma merenpohjassa, joka erottaa Norjanmeren pohjoisessa Grönlanninmerestä. Nimi tulee [[Jan Mayen]] -saaresta, joka on Norjaan kuuluva vulkaaninen saari keskellä pohjoista merta ja jonka huippuna kohoaa tulivuori [[Beerenberg]]. Harjanteet vaikuttavat siihen, miten syvät vesimassat virtaavat altaasta toiseen, ja eteläpuolella vastaava rakenne yhdistää [[Islannin]] ja Färsaaret. Tarkempia yksityiskohtia en ole varma, mutta harjanne toimii luonnollisena rajana kahden meren välillä. Tuo oli hyvä pikkuvisiitti merenpohjaan.
+KYSYMYS: Kerro lisää: Islannin
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norjanmeri (meri)
+Tietoruudun teksti: Norjanmeri on reunameri Norjasta luoteeseen, Pohjanmeren ja Grönlanninmeren välissä, ja se rajautuu koillisessa Barentsinmereen. Lounaassa sen erottaa Atlantista Islannin ja Färsaarten välinen vedenalainen harjanne, pohjoisessa Jan Mayenin harjanne erottaa sen Grönlanninmerestä. Meri luetaan joko Atlanttiin tai Jäämereen kuuluvaksi.
+AIEMPI KYSYMYS: Mitä Lofootit ovat?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: kaunis paikka. Lofootit on vuoristoinen saaristo Pohjois-Norjassa, [[Nordlandin]] maakunnan rannikolla, ja sen länsipuolella aukeaa Norjanmeri. Saaret ovat jyrkkiä ja huippuja on rannassa asti, ja kalastus on ollut vuosisatoja alueen elinkeino. Talvisin turskaa on pyydetty erityisesti [[Vestfjordenin]] alueella, ja saaliista on valmistettu kuivattua kalaa, [[tørrfisk]]iä, joka on kuulunut Norjan vientiin pitkään. Lämmin merivirta pitää ilmaston leudompana kuin pohjoisella leveysasteella odottaisi.
+
+Minä kävin kerran katsomassa kalaa kuivumassa telineillä. Vaikka tuoksu ei ollut paras, pulla on silti mielessä edelleen.
+KYSYMYS: Kerro lisää: Nordlandin
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norjanmeri (meri)
+Tietoruudun teksti: Norjanmeri on reunameri Norjasta luoteeseen, Pohjanmeren ja Grönlanninmeren välissä, ja se rajautuu koillisessa Barentsinmereen. Lounaassa sen erottaa Atlantista Islannin ja Färsaarten välinen vedenalainen harjanne, pohjoisessa Jan Mayenin harjanne erottaa sen Grönlanninmerestä. Meri luetaan joko Atlanttiin tai Jäämereen kuuluvaksi.
+AIEMPI KYSYMYS: Mitä Lofootit ovat?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: kaunis paikka. Lofootit on vuoristoinen saaristo Pohjois-Norjassa, [[Nordlandin]] maakunnan rannikolla, ja sen länsipuolella aukeaa Norjanmeri. Saaret ovat jyrkkiä ja huippuja on rannassa asti, ja kalastus on ollut vuosisatoja alueen elinkeino. Talvisin turskaa on pyydetty erityisesti [[Vestfjordenin]] alueella, ja saaliista on valmistettu kuivattua kalaa, [[tørrfisk]]iä, joka on kuulunut Norjan vientiin pitkään. Lämmin merivirta pitää ilmaston leudompana kuin pohjoisella leveysasteella odottaisi.
+
+Minä kävin kerran katsomassa kalaa kuivumassa telineillä. Vaikka tuoksu ei ollut paras, pulla on silti mielessä edelleen.
+KYSYMYS: Kerro lisää: Vestfjordenin
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norjanmeri (meri)
+Tietoruudun teksti: Norjanmeri on reunameri Norjasta luoteeseen, Pohjanmeren ja Grönlanninmeren välissä, ja se rajautuu koillisessa Barentsinmereen. Lounaassa sen erottaa Atlantista Islannin ja Färsaarten välinen vedenalainen harjanne, pohjoisessa Jan Mayenin harjanne erottaa sen Grönlanninmerestä. Meri luetaan joko Atlanttiin tai Jäämereen kuuluvaksi.
+AIEMPI KYSYMYS: Mitä Lofootit ovat?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: kaunis paikka. Lofootit on vuoristoinen saaristo Pohjois-Norjassa, [[Nordlandin]] maakunnan rannikolla, ja sen länsipuolella aukeaa Norjanmeri. Saaret ovat jyrkkiä ja huippuja on rannassa asti, ja kalastus on ollut vuosisatoja alueen elinkeino. Talvisin turskaa on pyydetty erityisesti [[Vestfjordenin]] alueella, ja saaliista on valmistettu kuivattua kalaa, [[tørrfisk]]iä, joka on kuulunut Norjan vientiin pitkään. Lämmin merivirta pitää ilmaston leudompana kuin pohjoisella leveysasteella odottaisi.
+
+Minä kävin kerran katsomassa kalaa kuivumassa telineillä. Vaikka tuoksu ei ollut paras, pulla on silti mielessä edelleen.
+KYSYMYS: Kerro lisää: tørrfisk
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norjanmeri (meri)
+Tietoruudun teksti: Norjanmeri on reunameri Norjasta luoteeseen, Pohjanmeren ja Grönlanninmeren välissä, ja se rajautuu koillisessa Barentsinmereen. Lounaassa sen erottaa Atlantista Islannin ja Färsaarten välinen vedenalainen harjanne, pohjoisessa Jan Mayenin harjanne erottaa sen Grönlanninmerestä. Meri luetaan joko Atlanttiin tai Jäämereen kuuluvaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Arki ja tavat: Silli syödään pyrstöstä] Keväisin — Hollandse Nieuwe on kevään ensimmäinen suolasilli, ja sen saa myydä vasta kun kalan rasvapitoisuus on noussut noin 16 prosenttiin. Perkauksessa haima jätetään paikalleen: sen entsyymit kypsyttävät lihan muutamassa päivässä. Nimi on suojattu: kalan pitää olla vähintään kolmivuotias, ja pyytää sen saa vain touko–elokuussa. Kojulla silli kastetaan sipuliin ja lasketaan suuhun pyrstöstä pidellen.
+- [Saksa — maalehti / Historia: Kauppiaiden liitto hallitsi Itämerta] keskiaika — Keskiajalla Itämerta ei hallinnut kuningas vaan kauppiaiden kerho. Hansaliittoon kuului parhaimmillaan lähes kaksisataa kaupunkia Lontoosta Novgorodiin, ja sitä johdettiin Lyypekistä. Hansan laiva oli koggi: pyöreämahainen puualus, joka kuljetti suolaa, silliä, viljaa ja kankaita. Liitolla oli omat lait ja omat kauppatalot vieraissa satamissa, ja kun joku kuningas kiusasi kauppiaita, Hansa saattoi julistaa koko maan saartoon — ja voitti kerran Tanskan sodassakin. Moni Pohjois-Saksan kaupunki kutsuu itseään hansakaupungiksi vielä tänäänkin.
+- [Odessa — kaupunkilehti / Arki ja tavat: Privozilla hinta on keskustelu] Privoz alkoi vuonna 1827 hevoskärryjen takalaidoilta ja on yhä Odessan suurin ruokatori. Kauppa käydään ääneen: myyjä sanoo hinnan, ostaja nauraa, ja lopullinen summa jää jonnekin siltä väliltä. Tiskeillä on suolattua silliä, mustanmeren kalaa ja forshmakia — sillitahnaa, joka tuli kaupungin juutalaisesta keittiöstä. Tinkiminen ei ole täällä epäkohteliasta vaan osa kaupantekoa.
+AIEMPI KYSYMYS: Millaisia kaloja Norjanmerellä pyydetään?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Norjanmeri on tärkeä kalastusalue, ja siellä pyydetään erityisesti [[silliä]], [[makrillia]] ja [[turskaa]]. Kalastus on ollut norjalaisille elinkeino vuosisatojen ajan, ja saaliita säännellään nykyisin kiintiöin, jotta kannat säilyisivät. Lisäksi vuonoissa kasvatetaan paljon lohta, vaikka se ei ole varsinaista meren kalastusta. Tarkat saaliit ja kiintiöt vaihtelevat vuosittain, joten niistä en ole varma. Aika monta kalaa mahtui yhteen vastaukseen.
+KYSYMYS: Kerro lisää: silliä
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norjanmeri (meri)
+Tietoruudun teksti: Norjanmeri on reunameri Norjasta luoteeseen, Pohjanmeren ja Grönlanninmeren välissä, ja se rajautuu koillisessa Barentsinmereen. Lounaassa sen erottaa Atlantista Islannin ja Färsaarten välinen vedenalainen harjanne, pohjoisessa Jan Mayenin harjanne erottaa sen Grönlanninmerestä. Meri luetaan joko Atlanttiin tai Jäämereen kuuluvaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itä-Timor — maalehti / Ruoka: Makrilli tamarindissa] Ikan sabuko on kuninkaanmakrilli, joka marinoidaan tamarindissa ja kypsennetään basilikan ja paprikan kanssa. Kastikkeeksi tulee budu: tomaattia, minttua, limeä ja sipulia. Kalastus on maatalouden jälkeen maan toiseksi tärkein elinkeino, ja saaliista 94 prosenttia nousee merestä eikä joista. Muita arkiruokia ovat fuuntaul tong ja gailong, keitto, jossa on punaisia papuja, naudanlihaa, salaattia ja kananmunaa riisin kera, sekä tapai, käytetty riisi, joka on yhtaikaa makeaa, hapanta ja hitusen alkoholista.
+AIEMPI KYSYMYS: Millaisia kaloja Norjanmerellä pyydetään?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Norjanmeri on tärkeä kalastusalue, ja siellä pyydetään erityisesti [[silliä]], [[makrillia]] ja [[turskaa]]. Kalastus on ollut norjalaisille elinkeino vuosisatojen ajan, ja saaliita säännellään nykyisin kiintiöin, jotta kannat säilyisivät. Lisäksi vuonoissa kasvatetaan paljon lohta, vaikka se ei ole varsinaista meren kalastusta. Tarkat saaliit ja kiintiöt vaihtelevat vuosittain, joten niistä en ole varma. Aika monta kalaa mahtui yhteen vastaukseen.
+KYSYMYS: Kerro lisää: makrillia
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norjanmeri (meri)
+Tietoruudun teksti: Norjanmeri on reunameri Norjasta luoteeseen, Pohjanmeren ja Grönlanninmeren välissä, ja se rajautuu koillisessa Barentsinmereen. Lounaassa sen erottaa Atlantista Islannin ja Färsaarten välinen vedenalainen harjanne, pohjoisessa Jan Mayenin harjanne erottaa sen Grönlanninmerestä. Meri luetaan joko Atlanttiin tai Jäämereen kuuluvaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Arki: Turska, joka tulee itse käymään] Helmikuussa — Skrei on turska, joka ui joka talvi Barentsinmereltä Norjan rannikolle kutemaan. Osa syödään heti mølje-ateriana: kalaa, mätiä, maksaa ja perunaa. Osa ripustetaan telineille helmikuussa, kun maassa on vielä lunta ja kärpäset nukkuvat. Kolmessa kuukaudessa kalasta haihtuu noin 70 prosenttia vedestä, ja sen jälkeen se säilyy vuosia.
+AIEMPI KYSYMYS: Millaisia kaloja Norjanmerellä pyydetään?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Norjanmeri on tärkeä kalastusalue, ja siellä pyydetään erityisesti [[silliä]], [[makrillia]] ja [[turskaa]]. Kalastus on ollut norjalaisille elinkeino vuosisatojen ajan, ja saaliita säännellään nykyisin kiintiöin, jotta kannat säilyisivät. Lisäksi vuonoissa kasvatetaan paljon lohta, vaikka se ei ole varsinaista meren kalastusta. Tarkat saaliit ja kiintiöt vaihtelevat vuosittain, joten niistä en ole varma. Aika monta kalaa mahtui yhteen vastaukseen.
+KYSYMYS: Kerro lisää: turskaa
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norjanmeri (meri)
+Tietoruudun teksti: Norjanmeri on reunameri Norjasta luoteeseen, Pohjanmeren ja Grönlanninmeren välissä, ja se rajautuu koillisessa Barentsinmereen. Lounaassa sen erottaa Atlantista Islannin ja Färsaarten välinen vedenalainen harjanne, pohjoisessa Jan Mayenin harjanne erottaa sen Grönlanninmerestä. Meri luetaan joko Atlanttiin tai Jäämereen kuuluvaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Mitä Färsaaret ovat?
+AIEMPI VASTAUS (Livia):
+Kas vaan, kaukainen naapuri. Färsaaret on saaristo Pohjois-Atlantilla Norjanmeren eteläreunan tuntumassa, [[Islannin]] ja Skotlannin välillä. Se kuuluu [[Tanskan kuningaskunnan]] yhteyteen, mutta on laajasti itsehallinnollinen, ja sen pääkaupunki on [[Tórshavn]]. Saarilla puhutaan fääriä, joka on sukua islannille, ja maisemaa hallitsevat jyrkät rinteet ja tuuli. Kalastus on ollut saarten tärkeä elinkeino. Tuolla minä en ole lentänyt, mutta tuuli kuulosta rankalta.
+KYSYMYS: Kerro lisää: Tanskan kuningaskunnan
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Norjanmeri (meri)
+Tietoruudun teksti: Norjanmeri on reunameri Norjasta luoteeseen, Pohjanmeren ja Grönlanninmeren välissä, ja se rajautuu koillisessa Barentsinmereen. Lounaassa sen erottaa Atlantista Islannin ja Färsaarten välinen vedenalainen harjanne, pohjoisessa Jan Mayenin harjanne erottaa sen Grönlanninmerestä. Meri luetaan joko Atlanttiin tai Jäämereen kuuluvaksi.
+AIEMPI KYSYMYS: Mitä Färsaaret ovat?
+AIEMPI VASTAUS (Livia):
+Kas vaan, kaukainen naapuri. Färsaaret on saaristo Pohjois-Atlantilla Norjanmeren eteläreunan tuntumassa, [[Islannin]] ja Skotlannin välillä. Se kuuluu [[Tanskan kuningaskunnan]] yhteyteen, mutta on laajasti itsehallinnollinen, ja sen pääkaupunki on [[Tórshavn]]. Saarilla puhutaan fääriä, joka on sukua islannille, ja maisemaa hallitsevat jyrkät rinteet ja tuuli. Kalastus on ollut saarten tärkeä elinkeino. Tuolla minä en ole lentänyt, mutta tuuli kuulosta rankalta.
+KYSYMYS: Kerro lisää: Tórshavn
+
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Norjan puolella Vardøn satama pysyy sulana ympäri vuoden, koska lämmin Pohjois-Atlantin virta yltää tänne asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Fès — kohdekartta / Kohdekartta: Saffarinin medresa] 1271 Tämä on marinidien ensimmäinen medresa. Sulttaani Abu Ya'qub Yusuf rakennutti sen vuonna 1271, ja sen jälkeen dynastia rakensi niitä kuusi lisää vuoteen 1357 mennessä. Medresa seisoo Saffarinin aukiolla, joka on nimetty siellä työskentelevien kuparaseppien mukaan — aukiolla takominen kuuluu yhä, ja isot padat seisovat rivissä kadulla. Medresa oli laitoksena uusi tulokas. Se syntyi Koillis-Iranissa 1000-luvun alkuun mennessä ja levisi vähitellen länteen, mutta Marokossa se juurtui vasta marinidien aikana. Syy oli osin opillinen: edellisen dynastian oppi oli medresalle vieras. Marinideille medresat olivat myös politiikkaa. Niillä ostettiin Fèsin vaikutusvaltaisen ja itsepäisen uskonnolli…
+AIEMPI KYSYMYS: Kuka Willem Barentsz oli?
+AIEMPI VASTAUS (Livia):
+Joo, hänestä on kerrottu. Willem Barentsz oli hollantilainen merenkulkija ja karttapiirtäjä, joka johti 1590-luvulla retkiä pohjoiseen etsiessään [[koillisväylää]] Aasiaan. Kolmannella retkellä laiva juuttui jäihin Novaja Zemljan rannikolla, ja miehistö talvehti rakentamassaan majassa, jota kutsuttiin nimellä [[Behouden Huys]], Pelastunut talo. Kesällä 1597 miehet lähtivät avoveneillä kohti kotia, mutta Barentsz kuoli matkalla; lähteiden mukaan kaksitoista miestä pääsi perille. Hänen mukaansa on nimetty Barentsinmeri, ja hän oli kotoisin [[Alankomaista]]. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: koillisväylää
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Norjan puolella Vardøn satama pysyy sulana ympäri vuoden, koska lämmin Pohjois-Atlantin virta yltää tänne asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historia: Aurinko nousi kaksi viikkoa liian aikaisin] 1596–97 — Willem Barentszin laiva etsi pohjoista meritietä Kiinaan ja juuttui jäihin Novaja Zemljan rannikolle. Miehet purkivat laivasta puuta, keräsivät ajopuuta ja rakensivat majan, jota he kutsuivat nimellä Behouden Huys, Pelastunut talo. Seitsemäntoista miestä talvehti siellä napayössä. Tammikuun 24. päivänä 1597 he näkivät auringon kaksi viikkoa ennen kuin sen olisi pitänyt nousta — Barentsz ei uskonut silmiään. Kyse oli harvinaisesta ilmakehän kangastuksesta. Kesäkuussa lähdettiin kahdella avoveneellä kohti kotia. Barentsz kuoli viikko lähdön jälkeen; kaksitoista pääsi perille.
+AIEMPI KYSYMYS: Kuka Willem Barentsz oli?
+AIEMPI VASTAUS (Livia):
+Joo, hänestä on kerrottu. Willem Barentsz oli hollantilainen merenkulkija ja karttapiirtäjä, joka johti 1590-luvulla retkiä pohjoiseen etsiessään [[koillisväylää]] Aasiaan. Kolmannella retkellä laiva juuttui jäihin Novaja Zemljan rannikolla, ja miehistö talvehti rakentamassaan majassa, jota kutsuttiin nimellä [[Behouden Huys]], Pelastunut talo. Kesällä 1597 miehet lähtivät avoveneillä kohti kotia, mutta Barentsz kuoli matkalla; lähteiden mukaan kaksitoista miestä pääsi perille. Hänen mukaansa on nimetty Barentsinmeri, ja hän oli kotoisin [[Alankomaista]]. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Behouden Huys
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Norjan puolella Vardøn satama pysyy sulana ympäri vuoden, koska lämmin Pohjois-Atlantin virta yltää tänne asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jakarta — kohdekartta / Kohdekartta: Jakartan katedraali] 1891–1901 Katolinen kirkko oli VOC:n Bataviassa kielletty, ja vasta kun Alankomaat siirtyi 1806 Napoleonin veljen Ludvigin hallintaan, kirkko sai toimia vapaasti Itä-Intiassa. Batavian ensimmäinen katolinen kirkko vihittiin 6. marraskuuta 1829 Weltevredenissä vanhaan kenraalin taloon ja nimettiin Neitsyt Marian taivaaseenottamiselle. Se kunnostettiin 1859 ja sortui 9. huhtikuuta 1890. Nykyinen kirkko rakennettiin sortuneen tilalle vuosina 1891–1901 uusgoottilaiseen tyyliin. Suunnittelijaksi nimitettiin jesuiittaisä Antonius Dijkmans, mutta työ pysähtyi rahapulaan; piispa Luypen keräsi varat Alankomaista, ja arkkitehti Marius Hulswit jatkoi työtä 1899. Hulswit yksinkertaisti suunnitelmaa nii…
+- [Jakutsk — kaupunkilehti / Ikirouta: Pää, joka odotti jäässä 18 000 vuotta] Jakutiasta on löytynyt mammutinjäänteitä enemmän kuin mistään muualta, ja Jakutskiin perustettiin 1991 Pjotr Lazarevin aloitteesta mammuttimuseo; kokoelmassa on yli 2 000 luulöytöä. Vuonna 2002 Jukagirin kylän lähistöltä kaivettiin esiin urosmammutin pää, jossa oli tallella nahkaa, vasen korva ja silmäkuoppa; nahka oli paikoin kahden senttimetrin paksuista. Syöksyhampaiden perusteella eläin oli kuollessaan 40–45-vuotias, ja se eli noin 18 000 vuotta sitten. Löytöä tutkivat 2003–2004 asiantuntijat muun muassa Yhdysvalloista, Ranskasta, Alankomaista ja Japanista.
+AIEMPI KYSYMYS: Kuka Willem Barentsz oli?
+AIEMPI VASTAUS (Livia):
+Joo, hänestä on kerrottu. Willem Barentsz oli hollantilainen merenkulkija ja karttapiirtäjä, joka johti 1590-luvulla retkiä pohjoiseen etsiessään [[koillisväylää]] Aasiaan. Kolmannella retkellä laiva juuttui jäihin Novaja Zemljan rannikolla, ja miehistö talvehti rakentamassaan majassa, jota kutsuttiin nimellä [[Behouden Huys]], Pelastunut talo. Kesällä 1597 miehet lähtivät avoveneillä kohti kotia, mutta Barentsz kuoli matkalla; lähteiden mukaan kaksitoista miestä pääsi perille. Hänen mukaansa on nimetty Barentsinmeri, ja hän oli kotoisin [[Alankomaista]]. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Alankomaista
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Norjan puolella Vardøn satama pysyy sulana ympäri vuoden, koska lämmin Pohjois-Atlantin virta yltää tänne asti.
+AIEMPI KYSYMYS: Miksi merta kutsuttiin ennen Murmanskinmereksi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Venäläisillä kartoilla meri tunnettiin 1500-luvulla nimellä Murmanskinmeri, koska nimi liittyy [[Kuolan niemimaan]] pohjoisrannikkoon, jota kutsuttiin [[Murmanin rannikoksi]]. Nimi viittaa siis läheiseen rannikkoon eikä merenkulkijaan. Nykyinen nimi tulee hollantilaisesta merenkulkijasta [[Willem Barentszin]] mukaan, joka johti 1590-luvulla retkiä pohjoiseen. Murman-nimen alkuperästä on useita selityksiä, joten tarkkaa taustaa en ole varma. Pitkä nimi, lyhyt muisti, mutta ihan hyvin meni.
+KYSYMYS: Kerro lisää: Kuolan niemimaan
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Norjan puolella Vardøn satama pysyy sulana ympäri vuoden, koska lämmin Pohjois-Atlantin virta yltää tänne asti.
+AIEMPI KYSYMYS: Miksi merta kutsuttiin ennen Murmanskinmereksi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Venäläisillä kartoilla meri tunnettiin 1500-luvulla nimellä Murmanskinmeri, koska nimi liittyy [[Kuolan niemimaan]] pohjoisrannikkoon, jota kutsuttiin [[Murmanin rannikoksi]]. Nimi viittaa siis läheiseen rannikkoon eikä merenkulkijaan. Nykyinen nimi tulee hollantilaisesta merenkulkijasta [[Willem Barentszin]] mukaan, joka johti 1590-luvulla retkiä pohjoiseen. Murman-nimen alkuperästä on useita selityksiä, joten tarkkaa taustaa en ole varma. Pitkä nimi, lyhyt muisti, mutta ihan hyvin meni.
+KYSYMYS: Kerro lisää: Murmanin rannikoksi
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Norjan puolella Vardøn satama pysyy sulana ympäri vuoden, koska lämmin Pohjois-Atlantin virta yltää tänne asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historia: Aurinko nousi kaksi viikkoa liian aikaisin] 1596–97 — Willem Barentszin laiva etsi pohjoista meritietä Kiinaan ja juuttui jäihin Novaja Zemljan rannikolle. Miehet purkivat laivasta puuta, keräsivät ajopuuta ja rakensivat majan, jota he kutsuivat nimellä Behouden Huys, Pelastunut talo. Seitsemäntoista miestä talvehti siellä napayössä. Tammikuun 24. päivänä 1597 he näkivät auringon kaksi viikkoa ennen kuin sen olisi pitänyt nousta — Barentsz ei uskonut silmiään. Kyse oli harvinaisesta ilmakehän kangastuksesta. Kesäkuussa lähdettiin kahdella avoveneellä kohti kotia. Barentsz kuoli viikko lähdön jälkeen; kaksitoista pääsi perille.
+AIEMPI KYSYMYS: Miksi merta kutsuttiin ennen Murmanskinmereksi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Venäläisillä kartoilla meri tunnettiin 1500-luvulla nimellä Murmanskinmeri, koska nimi liittyy [[Kuolan niemimaan]] pohjoisrannikkoon, jota kutsuttiin [[Murmanin rannikoksi]]. Nimi viittaa siis läheiseen rannikkoon eikä merenkulkijaan. Nykyinen nimi tulee hollantilaisesta merenkulkijasta [[Willem Barentszin]] mukaan, joka johti 1590-luvulla retkiä pohjoiseen. Murman-nimen alkuperästä on useita selityksiä, joten tarkkaa taustaa en ole varma. Pitkä nimi, lyhyt muisti, mutta ihan hyvin meni.
+KYSYMYS: Kerro lisää: Willem Barentszin
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Norjan puolella Vardøn satama pysyy sulana ympäri vuoden, koska lämmin Pohjois-Atlantin virta yltää tänne asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Oslo — kaupunkilehti / Historian hetki: Kristiania 1893 — laiva, jonka jää nostaa] 24.6.1893 — Milloin isä tulee takaisin? Sitä ei laiturilla osaa sanoa kukaan. 31-vuotias Fridtjof Nansen jättää rantaan Eva-vaimonsa ja muutaman kuukauden ikäisen Liv-tyttärensä eikä lupaa paluupäivää. Rantakadut ovat mustanaan väkeä, linnoitukselta ammutaan kunnialaukaukset, ja vuonolle liukuu alus, joka näyttää väärin rakennetulta. Fram on matala ja pyöreäpohjainen: Colin Archer suunnitteli sen niin, ettei jäällä ole mistään otetta, vaan ahtojää nostaa laivan ylös eikä murskaa sitä. Runko on kolmea puukerrosta paksu — kuudestakymmenestä seitsemäänkymmeneen senttiä, keulassa runsaan metrin — ja päällystetty greenheart-puulla. Kannella on kolmetoista miestä, ja suunnitelma on se, jota moni …
+- [Oslo — kohdekartta / Kohdekartta: Fram 1893] Milloin isä tulee takaisin? Sitä ei laiturilla osaa sanoa kukaan. 31-vuotias Fridtjof Nansen jättää rantaan Eva-vaimonsa ja muutaman kuukauden ikäisen Liv-tyttärensä eikä lupaa paluupäivää. Rantakadut ovat mustanaan väkeä, linnoitukselta ammutaan kunnialaukaukset, ja vuonolle liukuu alus, joka näyttää väärin rakennetulta. Fram on matala ja pyöreäpohjainen: Colin Archer suunnitteli sen niin, ettei jäällä ole mistään otetta, vaan ahtojää nostaa laivan ylös eikä murskaa sitä. Runko on kolmea puukerrosta paksu — kuudestakymmenestä seitsemäänkymmeneen senttiä, keulassa runsaan metrin — ja päällystetty greenheart-puulla. Kannella on kolmetoista miestä, ja suunnitelma on se, jota moni tutkija on j…
+AIEMPI KYSYMYS: Mitä atlantisoituminen tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Atlantisoituminen tarkoittaa sitä, että Atlantin lämmin ja suolainen vesi leviää yhä pohjoisemmas Arktiselle alueelle ja muuttaa meren oloja. Barentsinmerellä [[Pohjois-Atlantin virran]] tuoma vesi vaikuttaa siihen, että [[merijään]] määrä on vähentynyt ja lämpötila nousee nopeammin kuin muualla arktisella alueella. Muutos vaikuttaa ekosysteemiin, sillä eteläisemmät kalalajit voivat levitä pohjoiseen ja kylmää kaipaavat lajit joutuvat paineeseen. Tutkijat seuraavat kehitystä tarkasti, mutta yksityiskohdista ei ole täyttä varmuutta. Hyvä että muistin sanoa tämän oikein.
+KYSYMYS: Kerro lisää: Pohjois-Atlantin virran
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Norjan puolella Vardøn satama pysyy sulana ympäri vuoden, koska lämmin Pohjois-Atlantin virta yltää tänne asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Grönlanti — maalehti / Luonto: Saaret, jotka ilmestyvät ja katoavat] 1969–2022 — Maapallon pohjoisimpana maana pidettiin pitkään Kap Morris Jesupia, kunnes kanadalaisryhmä mittasi 1969 Kaffeklubben-saaren ja totesi sen yltävän 750 metriä pohjoisemmaksi. Sen jälkeen kilpailu on ollut vilkas. Vuonna 1978 löytyi Oodaaq, joka nähtiin varmuudella viimeksi 1979, ja 2003 tutkija Dennis Schmitt löysi 35 metriä pitkän kivikasan, jolle annettiin epävirallinen nimi 83-42. Vuoden 2022 syvyysmittaus osoitti, ettei se ollutkaan kiinni merenpohjassa vaan kiviainesta merijään päällä. Kaffeklubben on siis yhä kiistaton ykkönen.
+AIEMPI KYSYMYS: Mitä atlantisoituminen tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Atlantisoituminen tarkoittaa sitä, että Atlantin lämmin ja suolainen vesi leviää yhä pohjoisemmas Arktiselle alueelle ja muuttaa meren oloja. Barentsinmerellä [[Pohjois-Atlantin virran]] tuoma vesi vaikuttaa siihen, että [[merijään]] määrä on vähentynyt ja lämpötila nousee nopeammin kuin muualla arktisella alueella. Muutos vaikuttaa ekosysteemiin, sillä eteläisemmät kalalajit voivat levitä pohjoiseen ja kylmää kaipaavat lajit joutuvat paineeseen. Tutkijat seuraavat kehitystä tarkasti, mutta yksityiskohdista ei ole täyttä varmuutta. Hyvä että muistin sanoa tämän oikein.
+KYSYMYS: Kerro lisää: merijään
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Norjan puolella Vardøn satama pysyy sulana ympäri vuoden, koska lämmin Pohjois-Atlantin virta yltää tänne asti.
+AIEMPI KYSYMYS: Mikä on Vardø?
+AIEMPI VASTAUS (Livia):
+Ai se. Vardø on kaupunki Norjan koillisnurkassa [[Finnmarkin]] maakunnassa, Barentsinmeren rannalla. Se sijaitsee saarella, ja sen satama pysyy sulana ympäri vuoden, koska lämmin Pohjois-Atlantin virta yltää tänne asti. Kaupungissa on vanha linnoitus, [[Vardøhusin]] linnoitus, joka on vartioinut rajaa vuosisatojen ajan. Kalastus on ollut kaupungin tärkeä elinkeino. Vardø on pieni mutta tunnettu paikka, ja sen asema Euroopan koillisreunalla tekee siitä erityisen.
+
+Kyllä minä sen satamasta pidin, kun jäitä ei näkynyt. Pullaa ei kuitenkaan löytynyt, ja se oli pettymys.
+KYSYMYS: Kerro lisää: Finnmarkin
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Norjan puolella Vardøn satama pysyy sulana ympäri vuoden, koska lämmin Pohjois-Atlantin virta yltää tänne asti.
+AIEMPI KYSYMYS: Mikä on Vardø?
+AIEMPI VASTAUS (Livia):
+Ai se. Vardø on kaupunki Norjan koillisnurkassa [[Finnmarkin]] maakunnassa, Barentsinmeren rannalla. Se sijaitsee saarella, ja sen satama pysyy sulana ympäri vuoden, koska lämmin Pohjois-Atlantin virta yltää tänne asti. Kaupungissa on vanha linnoitus, [[Vardøhusin]] linnoitus, joka on vartioinut rajaa vuosisatojen ajan. Kalastus on ollut kaupungin tärkeä elinkeino. Vardø on pieni mutta tunnettu paikka, ja sen asema Euroopan koillisreunalla tekee siitä erityisen.
+
+Kyllä minä sen satamasta pidin, kun jäitä ei näkynyt. Pullaa ei kuitenkaan löytynyt, ja se oli pettymys.
+KYSYMYS: Kerro lisää: Vardøhusin
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Norjan puolella Vardøn satama pysyy sulana ympäri vuoden, koska lämmin Pohjois-Atlantin virta yltää tänne asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Christchurch — kaupunkilehti / Luonto: Punainen vyöhyke joka muuttuu puistoksi] Keskustan alapuolella Avonin varren maa vaurioitui vuosien 2010 ja 2011 järistyksissä niin pahoin, että Canterbury Earthquake Recovery Authority merkitsi sen punaiseksi vyöhykkeeksi. Yli 8 000 kotia purettiin tai siirrettiin, ja viimeinen purku valmistui lokakuussa 2021. Tyhjentyneelle nauhalle on ajettu ajatusta yhtenäisestä puistosta, joka yhdistäisi keskustan suistoon asti. Syyskuussa 2015 kaupunki ja Recovery Authority ostivat englantilaiselta kuvanveistäjä Antony Gormleylta kaksi Stay-veistosta; toinen seisoo jokivedessä, toinen Arts Centrellä.
+AIEMPI KYSYMYS: Milloin Norja ja Venäjä sopivat merirajasta?
+AIEMPI VASTAUS (Livia):
+No jopas. Norja ja Venäjä allekirjoittivat sopimuksen Barentsinmeren ja Jäämeren merirajasta vuonna 2010, ja sopimus tuli voimaan seuraavana vuonna. Sopimus päätti vuosikymmeniä kestäneet neuvottelut alueesta, jota kutsuttiin [[harmaaksi vyöhykkeeksi]] ja jonka rajaus oli ollut kiistanalainen. Sopimus jakoi kiistanalaisen alueen suunnilleen kahtia, ja maiden yhteinen kalastuskomissio jatkoi toimintaansa. Allekirjoitus tapahtui [[Murmanskissa]]. Siinäpä oli sopimus, jolla oli aikaa.
+KYSYMYS: Kerro lisää: harmaaksi vyöhykkeeksi
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Norjan puolella Vardøn satama pysyy sulana ympäri vuoden, koska lämmin Pohjois-Atlantin virta yltää tänne asti.
+AIEMPI KYSYMYS: Milloin Norja ja Venäjä sopivat merirajasta?
+AIEMPI VASTAUS (Livia):
+No jopas. Norja ja Venäjä allekirjoittivat sopimuksen Barentsinmeren ja Jäämeren merirajasta vuonna 2010, ja sopimus tuli voimaan seuraavana vuonna. Sopimus päätti vuosikymmeniä kestäneet neuvottelut alueesta, jota kutsuttiin [[harmaaksi vyöhykkeeksi]] ja jonka rajaus oli ollut kiistanalainen. Sopimus jakoi kiistanalaisen alueen suunnilleen kahtia, ja maiden yhteinen kalastuskomissio jatkoi toimintaansa. Allekirjoitus tapahtui [[Murmanskissa]]. Siinäpä oli sopimus, jolla oli aikaa.
+KYSYMYS: Kerro lisää: Murmanskissa
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glomma (luonto · joki)
+Tietoruudun teksti: Isoisäsi aikaan Glomma oli Norjan työteliäin joki: se virtaa maan rikkaimpien metsäseutujen läpi, ja siksi siitä tuli koko maan tärkein tukinuittojoki. Puuta, vesivoimaa ja hyvä satama suistossa — se yhdistelmä nosti Fredrikstadin ympärille Norjan suurimpia teollisuuslaitoksia. Joki on 621 kilometriä pitkä, maan pisin ja vesirikkain, ja sen valuma-alueeseen kuuluu kolmetoista prosenttia Norjan pinta-alasta. Øyeren-järveen laskiessaan se on kasannut Euroopan suurimman sisämaasuiston, joka ulottuu järven poikki toiselle rannalle. Muinaisskandinaaviksi joen nimi oli Raumelfr, jyrisevä virta.
+AIEMPI KYSYMYS: Miksi Glommaa käytettiin tukinuittoon?
+AIEMPI VASTAUS (Livia):
+Just niin, tästä on kerrottavaa. Glomma virtaa Norjan rikkaimpien metsäseutujen läpi, ja siksi puuta oli tarjolla runsaasti. Joki on pitkä ja vesirikas, ja keväällä tulva kuljetti tukit alavirtaan suistossa sijaitseville sahoille ja tehtaille. Puu, vesivoima ja hyvä satama suistossa muodostivat yhdistelmän, joka nosti [[Fredrikstadin]] ja [[Sarpsborgin]] ympärille Norjan suurimpia teollisuuslaitoksia. Vesivoima antoi koneille energiaa, ja satama vei valmiin tuotteen maailmalle. Näin moni tukki matkasi tuhat kertaa yhtä pitkän reitin kuin kyyhky.
+KYSYMYS: Kerro lisää: Fredrikstadin
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glomma (luonto · joki)
+Tietoruudun teksti: Isoisäsi aikaan Glomma oli Norjan työteliäin joki: se virtaa maan rikkaimpien metsäseutujen läpi, ja siksi siitä tuli koko maan tärkein tukinuittojoki. Puuta, vesivoimaa ja hyvä satama suistossa — se yhdistelmä nosti Fredrikstadin ympärille Norjan suurimpia teollisuuslaitoksia. Joki on 621 kilometriä pitkä, maan pisin ja vesirikkain, ja sen valuma-alueeseen kuuluu kolmetoista prosenttia Norjan pinta-alasta. Øyeren-järveen laskiessaan se on kasannut Euroopan suurimman sisämaasuiston, joka ulottuu järven poikki toiselle rannalle. Muinaisskandinaaviksi joen nimi oli Raumelfr, jyrisevä virta.
+AIEMPI KYSYMYS: Miksi Glommaa käytettiin tukinuittoon?
+AIEMPI VASTAUS (Livia):
+Just niin, tästä on kerrottavaa. Glomma virtaa Norjan rikkaimpien metsäseutujen läpi, ja siksi puuta oli tarjolla runsaasti. Joki on pitkä ja vesirikas, ja keväällä tulva kuljetti tukit alavirtaan suistossa sijaitseville sahoille ja tehtaille. Puu, vesivoima ja hyvä satama suistossa muodostivat yhdistelmän, joka nosti [[Fredrikstadin]] ja [[Sarpsborgin]] ympärille Norjan suurimpia teollisuuslaitoksia. Vesivoima antoi koneille energiaa, ja satama vei valmiin tuotteen maailmalle. Näin moni tukki matkasi tuhat kertaa yhtä pitkän reitin kuin kyyhky.
+KYSYMYS: Kerro lisää: Sarpsborgin
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glomma (luonto · joki)
+Tietoruudun teksti: Isoisäsi aikaan Glomma oli Norjan työteliäin joki: se virtaa maan rikkaimpien metsäseutujen läpi, ja siksi siitä tuli koko maan tärkein tukinuittojoki. Puuta, vesivoimaa ja hyvä satama suistossa — se yhdistelmä nosti Fredrikstadin ympärille Norjan suurimpia teollisuuslaitoksia. Joki on 621 kilometriä pitkä, maan pisin ja vesirikkain, ja sen valuma-alueeseen kuuluu kolmetoista prosenttia Norjan pinta-alasta. Øyeren-järveen laskiessaan se on kasannut Euroopan suurimman sisämaasuiston, joka ulottuu järven poikki toiselle rannalle. Muinaisskandinaaviksi joen nimi oli Raumelfr, jyrisevä virta.
+AIEMPI KYSYMYS: Mikä on Fetsundin uittolaitos?
+AIEMPI VASTAUS (Livia):
+Annas olla, tämän tiedän. Fetsundin uittolaitos on Glomman varrella sijaitseva vanha tukkien käsittelypaikka, jossa uitettua puuta pysäytettiin ja lajiteltiin ennen sen jatkamista sahoille. Tukit ohjattiin puisten uittopuomien, norjaksi lenser, avulla, ja laitos on 1800-luvun puolelta. Paikka sijaitsee lähellä [[Øyeren-järven]] laskua [[Lillestrømin]] kunnassa. Nykyään uittolaitos on museona, ja se kertoo, miten tukinuitto aikanaan toimi. Tarkkaa viimeisen uiton ajankohtaa en ole varma. Siinä oli aika monta tukkia yhteen vastaukseen.
+KYSYMYS: Kerro lisää: Øyeren-järven
+
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glomma (luonto · joki)
+Tietoruudun teksti: Isoisäsi aikaan Glomma oli Norjan työteliäin joki: se virtaa maan rikkaimpien metsäseutujen läpi, ja siksi siitä tuli koko maan tärkein tukinuittojoki. Puuta, vesivoimaa ja hyvä satama suistossa — se yhdistelmä nosti Fredrikstadin ympärille Norjan suurimpia teollisuuslaitoksia. Joki on 621 kilometriä pitkä, maan pisin ja vesirikkain, ja sen valuma-alueeseen kuuluu kolmetoista prosenttia Norjan pinta-alasta. Øyeren-järveen laskiessaan se on kasannut Euroopan suurimman sisämaasuiston, joka ulottuu järven poikki toiselle rannalle. Muinaisskandinaaviksi joen nimi oli Raumelfr, jyrisevä virta.
+AIEMPI KYSYMYS: Mikä on Fetsundin uittolaitos?
+AIEMPI VASTAUS (Livia):
+Annas olla, tämän tiedän. Fetsundin uittolaitos on Glomman varrella sijaitseva vanha tukkien käsittelypaikka, jossa uitettua puuta pysäytettiin ja lajiteltiin ennen sen jatkamista sahoille. Tukit ohjattiin puisten uittopuomien, norjaksi lenser, avulla, ja laitos on 1800-luvun puolelta. Paikka sijaitsee lähellä [[Øyeren-järven]] laskua [[Lillestrømin]] kunnassa. Nykyään uittolaitos on museona, ja se kertoo, miten tukinuitto aikanaan toimi. Tarkkaa viimeisen uiton ajankohtaa en ole varma. Siinä oli aika monta tukkia yhteen vastaukseen.
+KYSYMYS: Kerro lisää: Lillestrømin
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glomma (luonto · joki)
+Tietoruudun teksti: Isoisäsi aikaan Glomma oli Norjan työteliäin joki: se virtaa maan rikkaimpien metsäseutujen läpi, ja siksi siitä tuli koko maan tärkein tukinuittojoki. Puuta, vesivoimaa ja hyvä satama suistossa — se yhdistelmä nosti Fredrikstadin ympärille Norjan suurimpia teollisuuslaitoksia. Joki on 621 kilometriä pitkä, maan pisin ja vesirikkain, ja sen valuma-alueeseen kuuluu kolmetoista prosenttia Norjan pinta-alasta. Øyeren-järveen laskiessaan se on kasannut Euroopan suurimman sisämaasuiston, joka ulottuu järven poikki toiselle rannalle. Muinaisskandinaaviksi joen nimi oli Raumelfr, jyrisevä virta.
+AIEMPI KYSYMYS: Mihin Glomma laskee?
+AIEMPI VASTAUS (Livia):
+Hetkinen, katsotaas. Glomma laskee Fredrikstadin kohdalla mereen, [[Oslofjordin]] ulko-osaan, jonka yhteys avautuu Skagerrakiin. Joki on Norjan pisin, ja sen matkalla on useita koskia, joista tunnetuimpia on [[Sarpsfossen]] Sarpsborgin kohdalla. Suistoalue on ollut tärkeä teollisuudelle, koska satama mahdollisti puutavaran viennin. Joki kerää vetensä laajalta alueelta, ja se kuljettaa suuret vesimäärät mereen asti. Pitkä joki, pitkä vastaus.
+KYSYMYS: Kerro lisää: Oslofjordin
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glomma (luonto · joki)
+Tietoruudun teksti: Isoisäsi aikaan Glomma oli Norjan työteliäin joki: se virtaa maan rikkaimpien metsäseutujen läpi, ja siksi siitä tuli koko maan tärkein tukinuittojoki. Puuta, vesivoimaa ja hyvä satama suistossa — se yhdistelmä nosti Fredrikstadin ympärille Norjan suurimpia teollisuuslaitoksia. Joki on 621 kilometriä pitkä, maan pisin ja vesirikkain, ja sen valuma-alueeseen kuuluu kolmetoista prosenttia Norjan pinta-alasta. Øyeren-järveen laskiessaan se on kasannut Euroopan suurimman sisämaasuiston, joka ulottuu järven poikki toiselle rannalle. Muinaisskandinaaviksi joen nimi oli Raumelfr, jyrisevä virta.
+AIEMPI KYSYMYS: Mihin Glomma laskee?
+AIEMPI VASTAUS (Livia):
+Hetkinen, katsotaas. Glomma laskee Fredrikstadin kohdalla mereen, [[Oslofjordin]] ulko-osaan, jonka yhteys avautuu Skagerrakiin. Joki on Norjan pisin, ja sen matkalla on useita koskia, joista tunnetuimpia on [[Sarpsfossen]] Sarpsborgin kohdalla. Suistoalue on ollut tärkeä teollisuudelle, koska satama mahdollisti puutavaran viennin. Joki kerää vetensä laajalta alueelta, ja se kuljettaa suuret vesimäärät mereen asti. Pitkä joki, pitkä vastaus.
+KYSYMYS: Kerro lisää: Sarpsfossen
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glomma (luonto · joki)
+Tietoruudun teksti: Isoisäsi aikaan Glomma oli Norjan työteliäin joki: se virtaa maan rikkaimpien metsäseutujen läpi, ja siksi siitä tuli koko maan tärkein tukinuittojoki. Puuta, vesivoimaa ja hyvä satama suistossa — se yhdistelmä nosti Fredrikstadin ympärille Norjan suurimpia teollisuuslaitoksia. Joki on 621 kilometriä pitkä, maan pisin ja vesirikkain, ja sen valuma-alueeseen kuuluu kolmetoista prosenttia Norjan pinta-alasta. Øyeren-järveen laskiessaan se on kasannut Euroopan suurimman sisämaasuiston, joka ulottuu järven poikki toiselle rannalle. Muinaisskandinaaviksi joen nimi oli Raumelfr, jyrisevä virta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Oslo — kohdekartta / Kohdekartta: Akershusin linnoitus] 1290-luku Akershusin linnoitus kohoaa kalliolla Oslon rannalla, ja se on vartioinut kaupunkia jo yli 700 vuotta. Kuningas Haakon V käski rakentaa sen 1290-luvun lopulla, sen jälkeen kun kaupunki oli osoittautunut liian helposti hyökättäväksi vuonna 1287. Linnoitusta on piiritetty monta kertaa – ruotsalaiset yrittivät vuonna 1308 ja Kaarle Knuutinpoika vuosina 1449–1450 – mutta mikään vieras armeija ei ole koskaan onnistunut valtaamaan sitä taistelemalla. Kuningas Kristian IV muutti vanhan linnan 1600-luvulla hienoksi renessanssipalatsiksi. Toisen maailmansodan aikana saksalaiset miehittivät linnoituksen ja teloittivat siellä vankeja, mutta Norjan vastarintaliike vapautti sen 11. toukokuuta …
+AIEMPI KYSYMYS: Mikä Øyeren-järvi on?
+AIEMPI VASTAUS (Livia):
+Kato, tämä on hieno paikka. Øyeren on Etelä-Norjan järvi [[Akershusin]] maakunnassa, ja siihen laskee Glomma. Järven pohjoisosaan on kasautunut jokien tuomasta maa-aineksesta laaja suisto, jota pidetään lähteiden mukaan Euroopan suurimpana sisämaasuistona. Suisto on suojeltu luonnonsuojelualueena nimellä [[Nordre Øyeren]], ja se on tärkeä lintujen pesimä- ja levähdyspaikka. Tarkat pinta-alat ja mitat en ole varma, joten jätän ne pois. Lintu viihtyy tuollaisessa paikassa.
+KYSYMYS: Kerro lisää: Akershusin
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glomma (luonto · joki)
+Tietoruudun teksti: Isoisäsi aikaan Glomma oli Norjan työteliäin joki: se virtaa maan rikkaimpien metsäseutujen läpi, ja siksi siitä tuli koko maan tärkein tukinuittojoki. Puuta, vesivoimaa ja hyvä satama suistossa — se yhdistelmä nosti Fredrikstadin ympärille Norjan suurimpia teollisuuslaitoksia. Joki on 621 kilometriä pitkä, maan pisin ja vesirikkain, ja sen valuma-alueeseen kuuluu kolmetoista prosenttia Norjan pinta-alasta. Øyeren-järveen laskiessaan se on kasannut Euroopan suurimman sisämaasuiston, joka ulottuu järven poikki toiselle rannalle. Muinaisskandinaaviksi joen nimi oli Raumelfr, jyrisevä virta.
+AIEMPI KYSYMYS: Mikä Øyeren-järvi on?
+AIEMPI VASTAUS (Livia):
+Kato, tämä on hieno paikka. Øyeren on Etelä-Norjan järvi [[Akershusin]] maakunnassa, ja siihen laskee Glomma. Järven pohjoisosaan on kasautunut jokien tuomasta maa-aineksesta laaja suisto, jota pidetään lähteiden mukaan Euroopan suurimpana sisämaasuistona. Suisto on suojeltu luonnonsuojelualueena nimellä [[Nordre Øyeren]], ja se on tärkeä lintujen pesimä- ja levähdyspaikka. Tarkat pinta-alat ja mitat en ole varma, joten jätän ne pois. Lintu viihtyy tuollaisessa paikassa.
+KYSYMYS: Kerro lisää: Nordre Øyeren
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glomma (luonto · joki)
+Tietoruudun teksti: Isoisäsi aikaan Glomma oli Norjan työteliäin joki: se virtaa maan rikkaimpien metsäseutujen läpi, ja siksi siitä tuli koko maan tärkein tukinuittojoki. Puuta, vesivoimaa ja hyvä satama suistossa — se yhdistelmä nosti Fredrikstadin ympärille Norjan suurimpia teollisuuslaitoksia. Joki on 621 kilometriä pitkä, maan pisin ja vesirikkain, ja sen valuma-alueeseen kuuluu kolmetoista prosenttia Norjan pinta-alasta. Øyeren-järveen laskiessaan se on kasannut Euroopan suurimman sisämaasuiston, joka ulottuu järven poikki toiselle rannalle. Muinaisskandinaaviksi joen nimi oli Raumelfr, jyrisevä virta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Lipun kannossa oli silakkasalaatti] 1844 — Norjan nykyinen lippu suunniteltiin jo 1821; sen teki suurkäräjien jäsen Fredrik Meltzer, ja hän perusteli punaista, valkoista ja sinistä sillä, että ne merkitsivät silloin vapautta. Sillä lipulla sai kuitenkin purjehtia vain pohjoisilla vesillä: Kapp Finisterren eteläpuolella oli käytettävä unionin yhteistä kauppalippua, koska suoja Pohjois-Afrikan kaappareilta tuli Ruotsin maksamana. Vuonna 1844 molempien maiden lippujen kantoon pantiin yhteinen unionimerkki, joka jakoi värit tasan. Kansa antoi sille nimen sildesalaten, silakkasalaatti. Kauppalipun kannosta merkki katosi vuoden 1899 lopussa.
+- [Bergen — kohdekartta / Kohdekartta: Fredriksbergin linnake] 1667 Linnake seisoo Nordnesin niemen korkeimmalla kohdalla, ja sen länsipuolella putoaa jyrkkä kallioseinä suoraan mereen. Työn aloitti hollantilainen insinööri, kenraalimajuri Henrik Ruse. Suunnitelmassa oli maan puolella kolme bastionia ja yksi puolibastioni ja kallion puolella pelkkä muuri. Linnake rakennettiin 1666–1667 Vågenin meritaistelun jälkeen ja pitkälti sen takia, ja se nimettiin kuningas Fredrik III:n mukaan. Rakentaminen pysähtyi ja varustukset rapistuivat. Vasta kun Christian V:n poika Christian Gyldenløve tarkasti Bergenin 1695, työt käynnistyivät uudelleen, ja 1706 linnake oli valmis — yksinkertaisempana kuin alkuperäisessä suunnitelmassa. Katten-bastioni oli noussut jo 166…
+AIEMPI KYSYMYS: Millainen kaupunki Fredrikstad on?
+AIEMPI VASTAUS (Livia):
+Joo, tuttu paikka. Fredrikstad on kaupunki Glomman suistossa Norjan kaakkoisrannikolla, ja se perustettiin 1500-luvulla kuningas [[Fredrik II:n]] aikana. Kaupungin vanha osa, [[Gamlebyen]], on linnoitettu ja sitä ympäröivät vallit ja vallihauta, ja se on yksi alueen suosituimmista nähtävyyksistä. Fredrikstad kasvoi puutavaran ja sahateollisuuden ansiosta, sillä Glommalla uitetut tukit saapuivat tänne ja lähtivät satamasta maailmalle. Nykyään kaupunki on tunnettu sekä historiastaan että rannikkomaisemastaan. Tästä sai kyyhky kerrankin hyvän näköalan.
+KYSYMYS: Kerro lisää: Fredrik II:n
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glomma (luonto · joki)
+Tietoruudun teksti: Isoisäsi aikaan Glomma oli Norjan työteliäin joki: se virtaa maan rikkaimpien metsäseutujen läpi, ja siksi siitä tuli koko maan tärkein tukinuittojoki. Puuta, vesivoimaa ja hyvä satama suistossa — se yhdistelmä nosti Fredrikstadin ympärille Norjan suurimpia teollisuuslaitoksia. Joki on 621 kilometriä pitkä, maan pisin ja vesirikkain, ja sen valuma-alueeseen kuuluu kolmetoista prosenttia Norjan pinta-alasta. Øyeren-järveen laskiessaan se on kasannut Euroopan suurimman sisämaasuiston, joka ulottuu järven poikki toiselle rannalle. Muinaisskandinaaviksi joen nimi oli Raumelfr, jyrisevä virta.
+AIEMPI KYSYMYS: Millainen kaupunki Fredrikstad on?
+AIEMPI VASTAUS (Livia):
+Joo, tuttu paikka. Fredrikstad on kaupunki Glomman suistossa Norjan kaakkoisrannikolla, ja se perustettiin 1500-luvulla kuningas [[Fredrik II:n]] aikana. Kaupungin vanha osa, [[Gamlebyen]], on linnoitettu ja sitä ympäröivät vallit ja vallihauta, ja se on yksi alueen suosituimmista nähtävyyksistä. Fredrikstad kasvoi puutavaran ja sahateollisuuden ansiosta, sillä Glommalla uitetut tukit saapuivat tänne ja lähtivät satamasta maailmalle. Nykyään kaupunki on tunnettu sekä historiastaan että rannikkomaisemastaan. Tästä sai kyyhky kerrankin hyvän näköalan.
+KYSYMYS: Kerro lisää: Gamlebyen
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urnesin sauvakirkko (kulttuuri)
+Tietoruudun teksti: Urnesin sauvakirkko on 1100-luvun sauvakirkko Ornesissa Lustrafjordin varrella Vestlandissa. Se on Norjan vanhimpia sauvakirkkoja: osa hirsirakenteesta on 1000-luvun jälkipuoliskolta, ja nykyinen kirkko rakennettiin noin vuonna 1130 tai vähän sen jälkeen. Nimi tulee sanasta stav, joka tarkoittaa niitä tukevia puupylväitä ja nurkkatolppia, jotka kannattavat koko rakennusta; seinät ovat pystysuoria seinälankkuja rungon urissa. Kirkon pohjoisportaali on antanut nimen Urnes-tyylille, jonka koristeaiheet ovat norjalaisesta muinaisuskosta — juuri se koristelu on näkyvä todiste siitä, miten viikinkikulttuuri muuttui ja sulautui kristinuskoon. Kirkko on ollut muinaismuistoyhdistyksen omistuksessa vuodesta 1881 ja maailmanperintökohde vuodesta 1979.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Kirkko, joka seisoo tolppien varassa] 1180 — Sauvakirkko on rakennettu pystytolppien varaan, ja seinälaudat seisovat pystyssä maata koskematta — siksi puu ei lahoa. Borgundin kirkko valmistui noin vuonna 1180 ja on säilynyt lähes muuttumattomana. Keskiajalla kirkkoja oli yli tuhat, mutta nyt niitä on jäljellä 28. Katonharjoilla kaartuu lohikäärmeenpäitä samaan tapaan kuin viikinkilaivojen keulassa: kristillinen kirkko sai koristeekseen vanhemman uskon hahmot. Puu on suojattu tervaamalla, ja siitä tulee sen musta väri.
+AIEMPI KYSYMYS: Mikä sauvakirkko on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tämä on hyvä. Sauvakirkko on keskiaikainen puukirkko, jonka runko nojaa pystytolppiin eli sauvoihin, ja seinälaudat seisovat pystyssä maata koskematta, minkä vuoksi puu ei lahoa. Esimerkiksi [[Borgundin]] kirkko valmistui noin vuonna 1180 ja on säilynyt lähes muuttumattomana. Keskiajalla sauvakirkkoja oli yli tuhat, mutta nykyisin niitä kerrotaan olevan jäljellä 28, muun muassa [[Urnesin]] kirkko. Katonharjoilla kaartuu lohikäärmeenpäitä samaan tapaan kuin [[viikinkilaivojen]] keulassa, joten kristillinen kirkko sai koristeekseen vanhemman uskon hahmot. Kyllä tuossa oli kyyhkylle miettimistä.
+KYSYMYS: Kerro lisää: Borgundin
+
+### 49
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urnesin sauvakirkko (kulttuuri)
+Tietoruudun teksti: Urnesin sauvakirkko on 1100-luvun sauvakirkko Ornesissa Lustrafjordin varrella Vestlandissa. Se on Norjan vanhimpia sauvakirkkoja: osa hirsirakenteesta on 1000-luvun jälkipuoliskolta, ja nykyinen kirkko rakennettiin noin vuonna 1130 tai vähän sen jälkeen. Nimi tulee sanasta stav, joka tarkoittaa niitä tukevia puupylväitä ja nurkkatolppia, jotka kannattavat koko rakennusta; seinät ovat pystysuoria seinälankkuja rungon urissa. Kirkon pohjoisportaali on antanut nimen Urnes-tyylille, jonka koristeaiheet ovat norjalaisesta muinaisuskosta — juuri se koristelu on näkyvä todiste siitä, miten viikinkikulttuuri muuttui ja sulautui kristinuskoon. Kirkko on ollut muinaismuistoyhdistyksen omistuksessa vuodesta 1881 ja maailmanperintökohde vuodesta 1979.
+AIEMPI KYSYMYS: Mikä sauvakirkko on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tämä on hyvä. Sauvakirkko on keskiaikainen puukirkko, jonka runko nojaa pystytolppiin eli sauvoihin, ja seinälaudat seisovat pystyssä maata koskematta, minkä vuoksi puu ei lahoa. Esimerkiksi [[Borgundin]] kirkko valmistui noin vuonna 1180 ja on säilynyt lähes muuttumattomana. Keskiajalla sauvakirkkoja oli yli tuhat, mutta nykyisin niitä kerrotaan olevan jäljellä 28, muun muassa [[Urnesin]] kirkko. Katonharjoilla kaartuu lohikäärmeenpäitä samaan tapaan kuin [[viikinkilaivojen]] keulassa, joten kristillinen kirkko sai koristeekseen vanhemman uskon hahmot. Kyllä tuossa oli kyyhkylle miettimistä.
+KYSYMYS: Kerro lisää: Urnesin
+
+### 50
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urnesin sauvakirkko (kulttuuri)
+Tietoruudun teksti: Urnesin sauvakirkko on 1100-luvun sauvakirkko Ornesissa Lustrafjordin varrella Vestlandissa. Se on Norjan vanhimpia sauvakirkkoja: osa hirsirakenteesta on 1000-luvun jälkipuoliskolta, ja nykyinen kirkko rakennettiin noin vuonna 1130 tai vähän sen jälkeen. Nimi tulee sanasta stav, joka tarkoittaa niitä tukevia puupylväitä ja nurkkatolppia, jotka kannattavat koko rakennusta; seinät ovat pystysuoria seinälankkuja rungon urissa. Kirkon pohjoisportaali on antanut nimen Urnes-tyylille, jonka koristeaiheet ovat norjalaisesta muinaisuskosta — juuri se koristelu on näkyvä todiste siitä, miten viikinkikulttuuri muuttui ja sulautui kristinuskoon. Kirkko on ollut muinaismuistoyhdistyksen omistuksessa vuodesta 1881 ja maailmanperintökohde vuodesta 1979.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Kirkko, joka seisoo tolppien varassa] 1180 — Sauvakirkko on rakennettu pystytolppien varaan, ja seinälaudat seisovat pystyssä maata koskematta — siksi puu ei lahoa. Borgundin kirkko valmistui noin vuonna 1180 ja on säilynyt lähes muuttumattomana. Keskiajalla kirkkoja oli yli tuhat, mutta nyt niitä on jäljellä 28. Katonharjoilla kaartuu lohikäärmeenpäitä samaan tapaan kuin viikinkilaivojen keulassa: kristillinen kirkko sai koristeekseen vanhemman uskon hahmot. Puu on suojattu tervaamalla, ja siitä tulee sen musta väri.
+AIEMPI KYSYMYS: Mikä sauvakirkko on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tämä on hyvä. Sauvakirkko on keskiaikainen puukirkko, jonka runko nojaa pystytolppiin eli sauvoihin, ja seinälaudat seisovat pystyssä maata koskematta, minkä vuoksi puu ei lahoa. Esimerkiksi [[Borgundin]] kirkko valmistui noin vuonna 1180 ja on säilynyt lähes muuttumattomana. Keskiajalla sauvakirkkoja oli yli tuhat, mutta nykyisin niitä kerrotaan olevan jäljellä 28, muun muassa [[Urnesin]] kirkko. Katonharjoilla kaartuu lohikäärmeenpäitä samaan tapaan kuin [[viikinkilaivojen]] keulassa, joten kristillinen kirkko sai koristeekseen vanhemman uskon hahmot. Kyllä tuossa oli kyyhkylle miettimistä.
+KYSYMYS: Kerro lisää: viikinkilaivojen
+
+### 51
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urnesin sauvakirkko (kulttuuri)
+Tietoruudun teksti: Urnesin sauvakirkko on 1100-luvun sauvakirkko Ornesissa Lustrafjordin varrella Vestlandissa. Se on Norjan vanhimpia sauvakirkkoja: osa hirsirakenteesta on 1000-luvun jälkipuoliskolta, ja nykyinen kirkko rakennettiin noin vuonna 1130 tai vähän sen jälkeen. Nimi tulee sanasta stav, joka tarkoittaa niitä tukevia puupylväitä ja nurkkatolppia, jotka kannattavat koko rakennusta; seinät ovat pystysuoria seinälankkuja rungon urissa. Kirkon pohjoisportaali on antanut nimen Urnes-tyylille, jonka koristeaiheet ovat norjalaisesta muinaisuskosta — juuri se koristelu on näkyvä todiste siitä, miten viikinkikulttuuri muuttui ja sulautui kristinuskoon. Kirkko on ollut muinaismuistoyhdistyksen omistuksessa vuodesta 1881 ja maailmanperintökohde vuodesta 1979.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+- [Denver — kohdekartta / Kohdekartta: Kasvitieteellinen puutarha] 1951 Denverin kasvitieteellinen puutarha perustettiin 1951 Cheesman Parkin naapuriin. Paikalla oli aiemmin Prospect Hillin hautausmaa: valtaosa vainajista siirrettiin pois 1893, mutta siirtoja tehtiin vielä 1950-luvulla, ja niin myöhään kuin 2008 kasteluputkia uusittaessa löytyi lisää hautoja. Puutarhan erikoisuus on Pohjois-Amerikan laajin kokoelma viileän lauhkean vyöhykkeen kasveja eri puolilta maailmaa. Sen lisäksi seitsemän puutarhaa esittelee Coloradon ja naapurivaltioiden omaa kasvillisuutta. Maailman ensimmäinen kuivapuutarhan mallialue avattiin täällä 1986, ja kahta vuotta myöhemmin se sai nimen Dryland Mesa. Boettcherin trooppinen kasvihuone oli Amerikan ensimmäinen kokonaan beton…
+AIEMPI KYSYMYS: Mikä Urnes-tyyli on?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Urnes-tyyli on viikinkiajan taiteen viimeisiä kehitysvaiheita, ja sen tunnusmerkkejä ovat ohuet, kaarevat eläinhahmot, jotka kietoutuvat toisiinsa pitkinä silmukoina. Nimi tulee Urnesin kirkon [[pohjoisportaalin]] koristelusta, joka on tyylin tunnetuin esimerkki. Koristeaiheet ovat peräisin norjalaisesta muinaisuskosta, ja siksi koristelu on näkyvä todiste siitä, miten [[viikinkien]] kulttuuri muuttui ja sulautui kristinuskoon. Tyyliä esiintyy lähteiden mukaan myös muualla Skandinaviassa ja Brittein saarilla. Ei se tyyli minulle ihan helppo ole.
+KYSYMYS: Kerro lisää: pohjoisportaalin
+
+### 52
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urnesin sauvakirkko (kulttuuri)
+Tietoruudun teksti: Urnesin sauvakirkko on 1100-luvun sauvakirkko Ornesissa Lustrafjordin varrella Vestlandissa. Se on Norjan vanhimpia sauvakirkkoja: osa hirsirakenteesta on 1000-luvun jälkipuoliskolta, ja nykyinen kirkko rakennettiin noin vuonna 1130 tai vähän sen jälkeen. Nimi tulee sanasta stav, joka tarkoittaa niitä tukevia puupylväitä ja nurkkatolppia, jotka kannattavat koko rakennusta; seinät ovat pystysuoria seinälankkuja rungon urissa. Kirkon pohjoisportaali on antanut nimen Urnes-tyylille, jonka koristeaiheet ovat norjalaisesta muinaisuskosta — juuri se koristelu on näkyvä todiste siitä, miten viikinkikulttuuri muuttui ja sulautui kristinuskoon. Kirkko on ollut muinaismuistoyhdistyksen omistuksessa vuodesta 1881 ja maailmanperintökohde vuodesta 1979.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Historia] Ruotsin historia kulkee viikinkien hopeasta Itämeren suurvallaksi ja siitä maaksi, joka ei ole ollut sodassa kahteensataan vuoteen.
+AIEMPI KYSYMYS: Mikä Urnes-tyyli on?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Urnes-tyyli on viikinkiajan taiteen viimeisiä kehitysvaiheita, ja sen tunnusmerkkejä ovat ohuet, kaarevat eläinhahmot, jotka kietoutuvat toisiinsa pitkinä silmukoina. Nimi tulee Urnesin kirkon [[pohjoisportaalin]] koristelusta, joka on tyylin tunnetuin esimerkki. Koristeaiheet ovat peräisin norjalaisesta muinaisuskosta, ja siksi koristelu on näkyvä todiste siitä, miten [[viikinkien]] kulttuuri muuttui ja sulautui kristinuskoon. Tyyliä esiintyy lähteiden mukaan myös muualla Skandinaviassa ja Brittein saarilla. Ei se tyyli minulle ihan helppo ole.
+KYSYMYS: Kerro lisää: viikinkien
+
+### 53
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urnesin sauvakirkko (kulttuuri)
+Tietoruudun teksti: Urnesin sauvakirkko on 1100-luvun sauvakirkko Ornesissa Lustrafjordin varrella Vestlandissa. Se on Norjan vanhimpia sauvakirkkoja: osa hirsirakenteesta on 1000-luvun jälkipuoliskolta, ja nykyinen kirkko rakennettiin noin vuonna 1130 tai vähän sen jälkeen. Nimi tulee sanasta stav, joka tarkoittaa niitä tukevia puupylväitä ja nurkkatolppia, jotka kannattavat koko rakennusta; seinät ovat pystysuoria seinälankkuja rungon urissa. Kirkon pohjoisportaali on antanut nimen Urnes-tyylille, jonka koristeaiheet ovat norjalaisesta muinaisuskosta — juuri se koristelu on näkyvä todiste siitä, miten viikinkikulttuuri muuttui ja sulautui kristinuskoon. Kirkko on ollut muinaismuistoyhdistyksen omistuksessa vuodesta 1881 ja maailmanperintökohde vuodesta 1979.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Kirkko, joka seisoo tolppien varassa] 1180 — Sauvakirkko on rakennettu pystytolppien varaan, ja seinälaudat seisovat pystyssä maata koskematta — siksi puu ei lahoa. Borgundin kirkko valmistui noin vuonna 1180 ja on säilynyt lähes muuttumattomana. Keskiajalla kirkkoja oli yli tuhat, mutta nyt niitä on jäljellä 28. Katonharjoilla kaartuu lohikäärmeenpäitä samaan tapaan kuin viikinkilaivojen keulassa: kristillinen kirkko sai koristeekseen vanhemman uskon hahmot. Puu on suojattu tervaamalla, ja siitä tulee sen musta väri.
+AIEMPI KYSYMYS: Miksi sauvakirkot ovat mustia?
+AIEMPI VASTAUS (Livia):
+No niin, hyvä pointti. Sauvakirkkojen puu on suojattu tervaamalla, ja siitä sauvakirkoille tuttu musta väri tulee. [[Tervaamalla]] puun pintaan saadaan suojakerros, joka torjuu kosteutta ja lahoa, ja siksi rakennukset ovat säilyneet vuosisatoja. Tervaus uusitaan ajoittain, jotta suoja pysyy kunnossa, kuten esimerkiksi [[Borgundin]] kirkossa. Tumma pinta antaa kirkoille tunnistettavan ulkonäön, jota ihaillaan ympäri maailmaa. Mustaa pinta on, mutta kyyhky ei ole kateellinen.
+
+Minun suvussa värit ovat harmaita, mutta mustaa en olisi osannut ehdottaa.
+KYSYMYS: Kerro lisää: Tervaamalla
+
+### 54
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urnesin sauvakirkko (kulttuuri)
+Tietoruudun teksti: Urnesin sauvakirkko on 1100-luvun sauvakirkko Ornesissa Lustrafjordin varrella Vestlandissa. Se on Norjan vanhimpia sauvakirkkoja: osa hirsirakenteesta on 1000-luvun jälkipuoliskolta, ja nykyinen kirkko rakennettiin noin vuonna 1130 tai vähän sen jälkeen. Nimi tulee sanasta stav, joka tarkoittaa niitä tukevia puupylväitä ja nurkkatolppia, jotka kannattavat koko rakennusta; seinät ovat pystysuoria seinälankkuja rungon urissa. Kirkon pohjoisportaali on antanut nimen Urnes-tyylille, jonka koristeaiheet ovat norjalaisesta muinaisuskosta — juuri se koristelu on näkyvä todiste siitä, miten viikinkikulttuuri muuttui ja sulautui kristinuskoon. Kirkko on ollut muinaismuistoyhdistyksen omistuksessa vuodesta 1881 ja maailmanperintökohde vuodesta 1979.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [NCL — maalehti / Rakennukset: Vangit rakensivat katedraalin] 1888 — Nouméan katolinen katedraali rakennettiin vuosina 1887–1897 vankityövoimalla erään entisen vangin, Labullen, piirustusten mukaan. Se siunattiin käyttöön lokakuussa 1890, vaikka julkisivu ja kellotornit valmistuivat vasta myöhemmin, ja se vihittiin lopullisesti vuonna 1893. Latinalaisen ristin muotoinen kirkko on 56 metriä pitkä, ja sen kaksi tornia kohoavat 25 metrin korkeuteen Nouméan sataman yllä. Työmaalla samat kädet, jotka oli tuomittu pakkotyöhön, veistivät myös kirkon koristeelliset alttaripaneelit ja saarnastuolin, jotka ovat säilyneet tähän päivään asti.
+- [Nouméa — kaupunkilehti / Nouméa: Niemi kahden lahden välissä] Nouméa levittäytyy kapealle niemelle kahden suojaisan lahden, Baie des Citronsin ja Anse Vatan, väliin - muoto joka antoi kaupungille sen syvän luonnonsataman. Korkein maamerkki nousee kaupungin sydämeen vasta isoisän matkan jälkeen: Saint-Josephin katedraalin rakensi 1887-1897 vankityövoima erään entisen vangin, Labullen, piirustusten mukaan. Kaksitorninen kirkko kohoaa yhä satama-altaan yllä ja on merkitty historialliseksi muistomerkiksi. Niemen kärjestä avautuu näkymä sekä vuoristoiseen sisämaahan että ulapan suojariuttaan, joka kiertää koko saarta kuin muuri.
+AIEMPI KYSYMYS: Kuinka monta sauvakirkkoa Norjassa on jäljellä?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tavallisesti kerrotaan, että sauvakirkkoja on Norjassa jäljellä 28, vaikka luku vaihtelee hieman lähteestä riippuen sen mukaan, mitä kirkkoja lasketaan mukaan. Keskiajalla niitä oli yli tuhat, mutta lähteiden mukaan monet lahosivat, paloivat tai purettiin, kun suurempia kirkkoja alettiin rakentaa. Yksi sauvakirkko, [[Vangin kirkko]], siirrettiin 1800-luvulla Puolaan, missä se seisoo edelleen. Jäljellä olevista kirkoista tunnetaan esimerkiksi [[Borgundin]] kirkko. Jäljellä olevat kirkot ovat suojeltuja ja suosittuja matkailukohteita. Luku on pieni, mutta jokainen on arvokas.
+KYSYMYS: Kerro lisää: Vangin kirkko
+
+### 55
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urnesin sauvakirkko (kulttuuri)
+Tietoruudun teksti: Urnesin sauvakirkko on 1100-luvun sauvakirkko Ornesissa Lustrafjordin varrella Vestlandissa. Se on Norjan vanhimpia sauvakirkkoja: osa hirsirakenteesta on 1000-luvun jälkipuoliskolta, ja nykyinen kirkko rakennettiin noin vuonna 1130 tai vähän sen jälkeen. Nimi tulee sanasta stav, joka tarkoittaa niitä tukevia puupylväitä ja nurkkatolppia, jotka kannattavat koko rakennusta; seinät ovat pystysuoria seinälankkuja rungon urissa. Kirkon pohjoisportaali on antanut nimen Urnes-tyylille, jonka koristeaiheet ovat norjalaisesta muinaisuskosta — juuri se koristelu on näkyvä todiste siitä, miten viikinkikulttuuri muuttui ja sulautui kristinuskoon. Kirkko on ollut muinaismuistoyhdistyksen omistuksessa vuodesta 1881 ja maailmanperintökohde vuodesta 1979.
+AIEMPI KYSYMYS: Mikä Lustrafjord on?
+AIEMPI VASTAUS (Livia):
+Joo, sen kyllä tunnistan. Lustrafjord on vuono Länsi-Norjassa, ja se on yksi [[Sognefjordin]] sisäosan haaroista. Vuonot ovat syntyneet [[jäätiköiden]] muovaamina laaksoina, joihin meri on tunkeutunut jääkausien jälkeen. Vuonon rannalla sijaitsee Urnesin sauvakirkko, jonne pääsee lauttayhteydellä [[Solvornin]] kylästä. Maisema on jyrkkää ja vehreää. Sognefjord on yksi Norjan suurimmista vuonoista, ja Lustrafjord kuuluu sen tunnetuimpiin osiin. Siinä oli kyyhkyn kannalta hyvä näköala.
+KYSYMYS: Kerro lisää: Sognefjordin
+
+### 56
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urnesin sauvakirkko (kulttuuri)
+Tietoruudun teksti: Urnesin sauvakirkko on 1100-luvun sauvakirkko Ornesissa Lustrafjordin varrella Vestlandissa. Se on Norjan vanhimpia sauvakirkkoja: osa hirsirakenteesta on 1000-luvun jälkipuoliskolta, ja nykyinen kirkko rakennettiin noin vuonna 1130 tai vähän sen jälkeen. Nimi tulee sanasta stav, joka tarkoittaa niitä tukevia puupylväitä ja nurkkatolppia, jotka kannattavat koko rakennusta; seinät ovat pystysuoria seinälankkuja rungon urissa. Kirkon pohjoisportaali on antanut nimen Urnes-tyylille, jonka koristeaiheet ovat norjalaisesta muinaisuskosta — juuri se koristelu on näkyvä todiste siitä, miten viikinkikulttuuri muuttui ja sulautui kristinuskoon. Kirkko on ollut muinaismuistoyhdistyksen omistuksessa vuodesta 1881 ja maailmanperintökohde vuodesta 1979.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Milford Sound — kaupunkilehti / Milford Sound: Piispanhiippa vedestä nousee] Vuonon suulla kohoava Mitre Peak eli māoriksi Rahotu on Milford Soundin tunnetuin maamerkki: se nousee 1 692 metrin korkeuteen lähes suoraan merenpinnasta, mikä tekee siitä yhden maailman jyrkimmistä rannikkovuorista. Englantilaiset nimesivät vuoren sen terävän muodon mukaan - huipun useat lähekkäiset piikit muistuttavat tietystä kulmasta katsottuna piispan päähinettä eli mitraa. Tyynellä säällä huippu peilautuu vuonon liikkumattomaan veteen niin tarkasti, että kuva näyttää lähes symmetriseltä. Vuori on osa samaa jäätiköiden vuosimiljoonien saatossa kuluttamaa kallioperää, josta koko Piopiotahin vuono on veistynyt.
+- [Ruotsi — maalehti / Luonto: Erämaa ilman polkuja] Sarek perustettiin kansallispuistoksi 1909, samana vuonna kuin Euroopan ensimmäiset kansallispuistot ylipäätään. Se on lähes tienotonta ja polutonta tunturimaata: parisataa yli 1800-metristä huippua, kymmeniä jäätiköitä eikä juuri lainkaan siltoja. Sisään mennään omin voimin ja ulos samoin. Kuuluisin näkymä on Rapadalen, jossa jäätiköiden liete on kasannut jokeen suistoja kuin punos — vihreä laakso keskellä harmaita vuoria. Puistossa ei ole majoitusta eikä kioskeja, joten kaikki tarvittava kannetaan selässä.
+- [Bulgaria — maalehti / Vuori ja laakso: Kivijoki, joka ei virtaa] 1895 — Vitosha-vuori alkaa heti Sofian eteläreunalta, ja sen huippu Tšerni Vrah kohoaa 2290 metriin. Rinteillä mutkittelee kivijokia: satojen metrien mittaisia nauhoja jättiläislohkareita, jotka valuvat alaspäin niin hitaasti, ettei liikettä huomaa. Kivet ovat vanhojen jäätiköiden jäänteitä. Elokuussa 1895 kolmesataa sofialaista kiipesi yhtenä joukkona huipulle, ja siitä päivästä lasketaan bulgarialaisen retkeilyn alku.
+AIEMPI KYSYMYS: Mikä Lustrafjord on?
+AIEMPI VASTAUS (Livia):
+Joo, sen kyllä tunnistan. Lustrafjord on vuono Länsi-Norjassa, ja se on yksi [[Sognefjordin]] sisäosan haaroista. Vuonot ovat syntyneet [[jäätiköiden]] muovaamina laaksoina, joihin meri on tunkeutunut jääkausien jälkeen. Vuonon rannalla sijaitsee Urnesin sauvakirkko, jonne pääsee lauttayhteydellä [[Solvornin]] kylästä. Maisema on jyrkkää ja vehreää. Sognefjord on yksi Norjan suurimmista vuonoista, ja Lustrafjord kuuluu sen tunnetuimpiin osiin. Siinä oli kyyhkyn kannalta hyvä näköala.
+KYSYMYS: Kerro lisää: jäätiköiden
+
+### 57
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urnesin sauvakirkko (kulttuuri)
+Tietoruudun teksti: Urnesin sauvakirkko on 1100-luvun sauvakirkko Ornesissa Lustrafjordin varrella Vestlandissa. Se on Norjan vanhimpia sauvakirkkoja: osa hirsirakenteesta on 1000-luvun jälkipuoliskolta, ja nykyinen kirkko rakennettiin noin vuonna 1130 tai vähän sen jälkeen. Nimi tulee sanasta stav, joka tarkoittaa niitä tukevia puupylväitä ja nurkkatolppia, jotka kannattavat koko rakennusta; seinät ovat pystysuoria seinälankkuja rungon urissa. Kirkon pohjoisportaali on antanut nimen Urnes-tyylille, jonka koristeaiheet ovat norjalaisesta muinaisuskosta — juuri se koristelu on näkyvä todiste siitä, miten viikinkikulttuuri muuttui ja sulautui kristinuskoon. Kirkko on ollut muinaismuistoyhdistyksen omistuksessa vuodesta 1881 ja maailmanperintökohde vuodesta 1979.
+AIEMPI KYSYMYS: Mikä Lustrafjord on?
+AIEMPI VASTAUS (Livia):
+Joo, sen kyllä tunnistan. Lustrafjord on vuono Länsi-Norjassa, ja se on yksi [[Sognefjordin]] sisäosan haaroista. Vuonot ovat syntyneet [[jäätiköiden]] muovaamina laaksoina, joihin meri on tunkeutunut jääkausien jälkeen. Vuonon rannalla sijaitsee Urnesin sauvakirkko, jonne pääsee lauttayhteydellä [[Solvornin]] kylästä. Maisema on jyrkkää ja vehreää. Sognefjord on yksi Norjan suurimmista vuonoista, ja Lustrafjord kuuluu sen tunnetuimpiin osiin. Siinä oli kyyhkyn kannalta hyvä näköala.
+KYSYMYS: Kerro lisää: Solvornin
+
+### 58
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Røros (historia)
+Tietoruudun teksti: Røros on kaupunki Trøndelagin maakunnassa Norjassa, ja sitä kutsutaan usein nimellä Bergstaden eli vuorikaupunki sen kuparikaivosten takia. Se on toinen Norjan kahdesta kaupungista, joilla on ollut virallinen kaivoskaupungin asema; toinen on hopeakaupunki Kongsberg. Monet nykyisistä asukkaista työskentelevät ja asuvat yhä 1600- ja 1700-luvun rakennuksissa, ja juuri siksi kaupunki merkittiin maailmanperintöluetteloon vuonna 1980. Kaupungissa on noin kahdeksankymmentä vanhaa puutaloa, useimmat ryhmiteltyinä pihapiireiksi. Monissa on yhä tumma tervattu hirsijulkisivu, joka antaa kaupungille keskiaikaisen näön.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Adelaide — kaupunkilehti / Historia: Lama jonka viini ja kupari kestivät] 1890-luvun lama pyyhkäisi koko Australian yli: Sydneyssä pankit ja Melbournessa rahalaitokset sulkivat ovensa. Etelä-Australian vientitulojen arvo lähes puolittui, ja vuodesta 1884 jatkuneet kuivat kaudet pahensivat tilannetta niin, että osa perheistä lähti Länsi-Australiaan. Adelaide selvisi kultaryntäyskaupunkeja vähemmällä, ja Broken Hillin hopea- ja lyijylöydöt toivat helpotusta. Vain yksi vuosi kirjattiin alijäämäiseksi, joskin hintana olivat irtisanomiset ja tiukka julkinen talous. Kaksi elinkeinoa ei notkahtanut lainkaan: viini ja kupari.
+- [Geraldton — kaupunkilehti / Geraldton: Lyijyä ja lahden satama] Geraldtonin tarina alkoi lyijystä: vuonna 1848 Murchison-joen uomasta löytyi lyijymalmia, ja jo seuraavana vuonna avattiin Geraldine-niminen kaivos. Malmin vientiä varten tarvittiin satama, ja valinta osui suojaisaan Champion Bayhin, jonne kuvernööri Charles Fitzgerald antoi vuonna 1850 mitata ensimmäiset tonttilinjat. Uusi siirtokunta sai nimensä kuvernöörin mukaan. 1850-luvun puolivälissä avattiin lisää kaivoksia, ja Geraldtonista kasvoi nopeasti koko sisämaan kaivos- ja maatalousalueen elintärkeä vientisatama, josta lyijy ja myöhemmin myös kupari ja villa lähtivät laivoihin kohti maailmaa.
+AIEMPI KYSYMYS: Miksi Røros on nimeltään Bergstaden?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimi Bergstaden tarkoittaa vuorikaupunkia, ja se viittaa siihen, että Røros syntyi ja eli [[kuparikaivosten]] varassa. Kaupunki sijaitsee Trøndelagin maakunnassa, ja se on yksi kahdesta Norjan virallisesta kaivoskaupungista; toinen on hopeakaupunki [[Kongsberg]]. Vanhat puutalot ovat säilyneet asuinkäytössä, ja kaupunki merkittiin [[maailmanperintöluetteloon]] vuonna 1980. Ei paha kyyhkyltä, vai mitä.
+KYSYMYS: Kerro lisää: kuparikaivosten
+
+### 59
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Røros (historia)
+Tietoruudun teksti: Røros on kaupunki Trøndelagin maakunnassa Norjassa, ja sitä kutsutaan usein nimellä Bergstaden eli vuorikaupunki sen kuparikaivosten takia. Se on toinen Norjan kahdesta kaupungista, joilla on ollut virallinen kaivoskaupungin asema; toinen on hopeakaupunki Kongsberg. Monet nykyisistä asukkaista työskentelevät ja asuvat yhä 1600- ja 1700-luvun rakennuksissa, ja juuri siksi kaupunki merkittiin maailmanperintöluetteloon vuonna 1980. Kaupungissa on noin kahdeksankymmentä vanhaa puutaloa, useimmat ryhmiteltyinä pihapiireiksi. Monissa on yhä tumma tervattu hirsijulkisivu, joka antaa kaupungille keskiaikaisen näön.
+AIEMPI KYSYMYS: Miksi Røros on nimeltään Bergstaden?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimi Bergstaden tarkoittaa vuorikaupunkia, ja se viittaa siihen, että Røros syntyi ja eli [[kuparikaivosten]] varassa. Kaupunki sijaitsee Trøndelagin maakunnassa, ja se on yksi kahdesta Norjan virallisesta kaivoskaupungista; toinen on hopeakaupunki [[Kongsberg]]. Vanhat puutalot ovat säilyneet asuinkäytössä, ja kaupunki merkittiin [[maailmanperintöluetteloon]] vuonna 1980. Ei paha kyyhkyltä, vai mitä.
+KYSYMYS: Kerro lisää: Kongsberg
+
+### 60
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Røros (historia)
+Tietoruudun teksti: Røros on kaupunki Trøndelagin maakunnassa Norjassa, ja sitä kutsutaan usein nimellä Bergstaden eli vuorikaupunki sen kuparikaivosten takia. Se on toinen Norjan kahdesta kaupungista, joilla on ollut virallinen kaivoskaupungin asema; toinen on hopeakaupunki Kongsberg. Monet nykyisistä asukkaista työskentelevät ja asuvat yhä 1600- ja 1700-luvun rakennuksissa, ja juuri siksi kaupunki merkittiin maailmanperintöluetteloon vuonna 1980. Kaupungissa on noin kahdeksankymmentä vanhaa puutaloa, useimmat ryhmiteltyinä pihapiireiksi. Monissa on yhä tumma tervattu hirsijulkisivu, joka antaa kaupungille keskiaikaisen näön.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Miksi Røros on nimeltään Bergstaden?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimi Bergstaden tarkoittaa vuorikaupunkia, ja se viittaa siihen, että Røros syntyi ja eli [[kuparikaivosten]] varassa. Kaupunki sijaitsee Trøndelagin maakunnassa, ja se on yksi kahdesta Norjan virallisesta kaivoskaupungista; toinen on hopeakaupunki [[Kongsberg]]. Vanhat puutalot ovat säilyneet asuinkäytössä, ja kaupunki merkittiin [[maailmanperintöluetteloon]] vuonna 1980. Ei paha kyyhkyltä, vai mitä.
+KYSYMYS: Kerro lisää: maailmanperintöluetteloon
+
+### 61
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Røros (historia)
+Tietoruudun teksti: Røros on kaupunki Trøndelagin maakunnassa Norjassa, ja sitä kutsutaan usein nimellä Bergstaden eli vuorikaupunki sen kuparikaivosten takia. Se on toinen Norjan kahdesta kaupungista, joilla on ollut virallinen kaivoskaupungin asema; toinen on hopeakaupunki Kongsberg. Monet nykyisistä asukkaista työskentelevät ja asuvat yhä 1600- ja 1700-luvun rakennuksissa, ja juuri siksi kaupunki merkittiin maailmanperintöluetteloon vuonna 1980. Kaupungissa on noin kahdeksankymmentä vanhaa puutaloa, useimmat ryhmiteltyinä pihapiireiksi. Monissa on yhä tumma tervattu hirsijulkisivu, joka antaa kaupungille keskiaikaisen näön.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Ras Hafun — kaupunkilehti / Antiikin suitsukekauppa: Yhtä arvokasta kuin hopea] Kerätty pihka lajiteltiin väriltään ja puhtaudeltaan ja myytiin painon mukaan – parhaat palat saattoivat maksaa yhtä paljon kuin hopea. Suitsuketta poltettiin temppeleissä ja kotialttareilla ympäri antiikin maailmaa Egyptistä Roomaan ja Intiaan asti, mutta sitä käytettiin myös mausteena, lääkkeenä ja balsamointiin. Afrikan sarvi ja Etelä-Arabia olivat lähes ainoat alueet, joilla suitsukepuita kasvoi luonnossa, joten koko tuotanto kulki näiden rannikkojen satamien, kuten Oponen, kautta ennen kuin se jatkoi matkaa laivoilla ja karavaaneilla kohti Välimerta.
+AIEMPI KYSYMYS: Mikä on Norjan toinen kaivoskaupunki?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Se on [[Kongsberg]], hopeakaupunki. Røroksen ohella se on ollut Norjan toinen virallisen kaivoskaupungin aseman saanut kaupunki. Røroksessa louhittiin kuparia ja Kongsbergissa [[hopeaa]], joten kaupungit edustavat kahta eri metallia. Pieni kysymys, pieni vastaus, kiva vaihteeksi.
+KYSYMYS: Kerro lisää: hopeaa
+
+### 62
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Røros (historia)
+Tietoruudun teksti: Røros on kaupunki Trøndelagin maakunnassa Norjassa, ja sitä kutsutaan usein nimellä Bergstaden eli vuorikaupunki sen kuparikaivosten takia. Se on toinen Norjan kahdesta kaupungista, joilla on ollut virallinen kaivoskaupungin asema; toinen on hopeakaupunki Kongsberg. Monet nykyisistä asukkaista työskentelevät ja asuvat yhä 1600- ja 1700-luvun rakennuksissa, ja juuri siksi kaupunki merkittiin maailmanperintöluetteloon vuonna 1980. Kaupungissa on noin kahdeksankymmentä vanhaa puutaloa, useimmat ryhmiteltyinä pihapiireiksi. Monissa on yhä tumma tervattu hirsijulkisivu, joka antaa kaupungille keskiaikaisen näön.
+AIEMPI KYSYMYS: Milloin Røros merkittiin maailmanperintöluetteloon?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Nyt muistan. Røros merkittiin [[maailmanperintöluetteloon]] vuonna 1980. Perusteena oli se, että asukkaat työskentelevät ja asuvat yhä 1600- ja 1700-luvun rakennuksissa. Kaupungissa on noin kahdeksankymmentä vanhaa puutaloa, useimmat ryhmiteltyinä pihapiireiksi, ja monessa on yhä tumma tervattu [[hirsijulkisivu]], joka antaa kaupungille keskiaikaisen ilmeen.
+
+Ylhäältä katsottuna pihapiirit näyttävät varmaan pieniltä lokeroilta, joihin siivekkäällä tekisi mieli laskeutua.
+KYSYMYS: Kerro lisää: hirsijulkisivu
+
+### 63
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Røros (historia)
+Tietoruudun teksti: Røros on kaupunki Trøndelagin maakunnassa Norjassa, ja sitä kutsutaan usein nimellä Bergstaden eli vuorikaupunki sen kuparikaivosten takia. Se on toinen Norjan kahdesta kaupungista, joilla on ollut virallinen kaivoskaupungin asema; toinen on hopeakaupunki Kongsberg. Monet nykyisistä asukkaista työskentelevät ja asuvat yhä 1600- ja 1700-luvun rakennuksissa, ja juuri siksi kaupunki merkittiin maailmanperintöluetteloon vuonna 1980. Kaupungissa on noin kahdeksankymmentä vanhaa puutaloa, useimmat ryhmiteltyinä pihapiireiksi. Monissa on yhä tumma tervattu hirsijulkisivu, joka antaa kaupungille keskiaikaisen näön.
+AIEMPI KYSYMYS: Miksi puutalot tervataan?
+AIEMPI VASTAUS (Livia):
+Ai tota. Puun pinnalle levitetty [[terva]] suojaa puuta kosteudelta ja lahoamiselta, ja siksi sitä on perinteisesti käytetty puurakennuksissa ja veneissä. Terva on männystä tai muusta puusta valmistettua tummaa ja tahmeaa ainetta, jonka tuoksu tunnetaan Pohjolassa hyvin. Røroksen tervatut [[hirsirakennukset]] saavat siitä tumman ja keskiaikaisen ilmeensä. Suojaus ei ole ikuinen, vaan pinta täytyy käsitellä uudelleen aika ajoin. Minun nokkaani tuoksu ei kyl kovin hyvin sovi.
+KYSYMYS: Kerro lisää: terva
+
+### 64
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Røros (historia)
+Tietoruudun teksti: Røros on kaupunki Trøndelagin maakunnassa Norjassa, ja sitä kutsutaan usein nimellä Bergstaden eli vuorikaupunki sen kuparikaivosten takia. Se on toinen Norjan kahdesta kaupungista, joilla on ollut virallinen kaivoskaupungin asema; toinen on hopeakaupunki Kongsberg. Monet nykyisistä asukkaista työskentelevät ja asuvat yhä 1600- ja 1700-luvun rakennuksissa, ja juuri siksi kaupunki merkittiin maailmanperintöluetteloon vuonna 1980. Kaupungissa on noin kahdeksankymmentä vanhaa puutaloa, useimmat ryhmiteltyinä pihapiireiksi. Monissa on yhä tumma tervattu hirsijulkisivu, joka antaa kaupungille keskiaikaisen näön.
+AIEMPI KYSYMYS: Miksi puutalot tervataan?
+AIEMPI VASTAUS (Livia):
+Ai tota. Puun pinnalle levitetty [[terva]] suojaa puuta kosteudelta ja lahoamiselta, ja siksi sitä on perinteisesti käytetty puurakennuksissa ja veneissä. Terva on männystä tai muusta puusta valmistettua tummaa ja tahmeaa ainetta, jonka tuoksu tunnetaan Pohjolassa hyvin. Røroksen tervatut [[hirsirakennukset]] saavat siitä tumman ja keskiaikaisen ilmeensä. Suojaus ei ole ikuinen, vaan pinta täytyy käsitellä uudelleen aika ajoin. Minun nokkaani tuoksu ei kyl kovin hyvin sovi.
+KYSYMYS: Kerro lisää: hirsirakennukset
+
+### 65
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Røros (historia)
+Tietoruudun teksti: Røros on kaupunki Trøndelagin maakunnassa Norjassa, ja sitä kutsutaan usein nimellä Bergstaden eli vuorikaupunki sen kuparikaivosten takia. Se on toinen Norjan kahdesta kaupungista, joilla on ollut virallinen kaivoskaupungin asema; toinen on hopeakaupunki Kongsberg. Monet nykyisistä asukkaista työskentelevät ja asuvat yhä 1600- ja 1700-luvun rakennuksissa, ja juuri siksi kaupunki merkittiin maailmanperintöluetteloon vuonna 1980. Kaupungissa on noin kahdeksankymmentä vanhaa puutaloa, useimmat ryhmiteltyinä pihapiireiksi. Monissa on yhä tumma tervattu hirsijulkisivu, joka antaa kaupungille keskiaikaisen näön.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historian hetki: Etelänapa 1911 — viisi miestä ja lipputanko] 14.12.1911 — Telttaan jää kirje. Se on osoitettu Norjan kuninkaalle, ja sen viejäksi pyydetään Robert Scottia — siltä varalta, että Scott saapuu perille mutta viisi norjalaista ei pääse kotiin. Kello on noin kolme iltapäivällä, mittaukset sanovat että tämä on paikka, ja lipputankoon tarttuvat yhdessä Roald Amundsen, Olav Bjaaland, Helmer Hanssen, Sverre Hassel ja Oscar Wisting. Ylätasangon he nimeävät kuningas Haakon VII:n tasangoksi ja teltan Polheimiksi. Seuraavat kolme päivää kuluvat sekstantin ääressä ja hiihtäen navan ympäri ristiin rastiin, jotta paikka olisi todistettavasti oikea: Cookin ja Pearyn riitaiset pohjoisnapaväitteet ovat tuoreessa muistissa. Lipunnosto kestää hetken, ja ko…
+- [Norja — maalehti / Historia: Lipun kannossa oli silakkasalaatti] 1844 — Norjan nykyinen lippu suunniteltiin jo 1821; sen teki suurkäräjien jäsen Fredrik Meltzer, ja hän perusteli punaista, valkoista ja sinistä sillä, että ne merkitsivät silloin vapautta. Sillä lipulla sai kuitenkin purjehtia vain pohjoisilla vesillä: Kapp Finisterren eteläpuolella oli käytettävä unionin yhteistä kauppalippua, koska suoja Pohjois-Afrikan kaappareilta tuli Ruotsin maksamana. Vuonna 1844 molempien maiden lippujen kantoon pantiin yhteinen unionimerkki, joka jakoi värit tasan. Kansa antoi sille nimen sildesalaten, silakkasalaatti. Kauppalipun kannosta merkki katosi vuoden 1899 lopussa.
+AIEMPI KYSYMYS: Miksi Kongsbergia sanotaan hopeakaupungiksi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kongsbergia sanotaan hopeakaupungiksi, koska sen läheltä löytyi [[hopeaa]] 1600-luvun alkupuolella ja sitä louhittiin vuosisatojen ajan. Kaupunki kasvoi kaivostoiminnan ympärille, ja kaivos oli aikoinaan tärkeä tulonlähde [[Tanska-Norjan]] kuninkaalle. Röroksen tavoin Kongsberg on ollut Norjan virallisia kaivoskaupunkeja, mutta siellä metalli oli kuparin sijaan hopeaa. Hopea kiiltää kyllä kauniisti, mut jyvä on jyvä.
+KYSYMYS: Kerro lisää: Tanska-Norjan
+
+### 66
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altan kalliopiirrokset (historia)
+Tietoruudun teksti: Altan kalliopiirrokset ovat Altan kunnassa Finnmarkissa Pohjois-Norjassa. Ensimmäiset piirrokset löytyivät vuonna 1973, ja sen jälkeen niitä on löytynyt yli 6 000 useasta paikasta; suurin niistä, Jiepmaluokta noin viiden kilometrin päässä Altasta, on tuhansine kuvineen muutettu ulkoilmamuseoksi. Kohde merkittiin maailmanperintöluetteloon 3. joulukuuta 1985, ja se on Norjan ainoa esihistoriallinen maailmanperintökohde. Professori Knut Helskog jakoi kuvat viiteen ryhmään ja ajoitti ne rannansiirtymän avulla: vanhimmat noin 4200 eaa. ja nuorimmat noin 500 eaa.; vuonna 2010 tutkija Jan Magne Gjerde siirsi vanhimpia vaiheita tuhat vuotta taaksepäin. Kuvasto kertoo metsästäjä-keräilijöistä, jotka osasivat hallita porolaumoja, rakentaa veneitä ja kalastaa ja jotka harjoittivat šamanistisia menoja, joihin kuului karhun ja muiden eläinten palvonta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: Marina Beach] promenadi 1884 Marina on luonnollinen hiekkaranta Koromandelin rannikolla. Se alkaa Fort St. Georgen kupeesta ja jatkuu etelään Besant Nagariin asti. Hiekkaa on kolmetoista kilometriä ja promenadia kuusi; Marina Beach -artikkeli sanoo sitä Intian pisimmäksi luonnolliseksi kaupunkirannaksi ja Chennai-artikkeli maailman toiseksi pisimmäksi kaupunkirannaksi. Leveyttä on keskimäärin kolmesataa metriä ja leveimmillään 437. Ranta on vanhempi kuin kaupunki. Ennen 1500-lukua meri tulvi toistuvasti maalle, ja vetäytyessään se jätti jälkeensä hiekkaharjuja ja laguuneja. Yksi harju kulki Cooum-joen suulta nykyisen Presidency Collegen paikalle, ja juuri sen päällä ranta on. Promenadin valmistumisen 188…
+AIEMPI KYSYMYS: Miten piirrosten ikä on määritetty?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys tuo. Piirrosten ikä on määritetty [[rannansiirtymän]] avulla. Alta sijaitsee alueella, jossa maa on [[jääkauden]] jälkeen kohonnut merenpinnan yläpuolelle, ja siksi vanhimmat piirrokset ovat nykyisin korkeammalla kuin nuorimmat: ne tehtiin aikoinaan rantaviivan tuntumaan. Professori [[Knut Helskog]] jakoi kuvat tämän perusteella viiteen ryhmään, jotka ajoittuvat noin vuosien 4200 ja 500 eaa. välille. Vuonna 2010 tutkija Jan Magne Gjerde siirsi vanhimpia vaiheita vielä tuhat vuotta taaksepäin, joten ajoitus elää yhä tutkimuksen mukana. Kallio kertoo ikänsä, kunhan joku jaksaa laskea.
+KYSYMYS: Kerro lisää: rannansiirtymän
+
+### 67
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altan kalliopiirrokset (historia)
+Tietoruudun teksti: Altan kalliopiirrokset ovat Altan kunnassa Finnmarkissa Pohjois-Norjassa. Ensimmäiset piirrokset löytyivät vuonna 1973, ja sen jälkeen niitä on löytynyt yli 6 000 useasta paikasta; suurin niistä, Jiepmaluokta noin viiden kilometrin päässä Altasta, on tuhansine kuvineen muutettu ulkoilmamuseoksi. Kohde merkittiin maailmanperintöluetteloon 3. joulukuuta 1985, ja se on Norjan ainoa esihistoriallinen maailmanperintökohde. Professori Knut Helskog jakoi kuvat viiteen ryhmään ja ajoitti ne rannansiirtymän avulla: vanhimmat noin 4200 eaa. ja nuorimmat noin 500 eaa.; vuonna 2010 tutkija Jan Magne Gjerde siirsi vanhimpia vaiheita tuhat vuotta taaksepäin. Kuvasto kertoo metsästäjä-keräilijöistä, jotka osasivat hallita porolaumoja, rakentaa veneitä ja kalastaa ja jotka harjoittivat šamanistisia menoja, joihin kuului karhun ja muiden eläinten palvonta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Luonto: Myskihärkä tuotiin laivalla] 1947 — Myskihärkä eli Norjassa jääkauden aikaan mutta katosi tuhansia vuosia sitten. 1900-luvulla eläimiä tuotiin laivalla takaisin Grönlannista, ja nykyinen kanta polveutuu vuoden 1947 kuljetuksesta. Dovrefjellin tuntureilla laumassa on nykyään reilut parisataa eläintä. Ne eivät ole härkiä vaan lampaiden ja vuohien sukulaisia, ja niiden alusvilla on maailman lämpimimpiä. Retkeilijöitä kehotetaan pysymään kahdensadan metrin päässä: eläin on rauhallinen mutta nopea suuttumaan.
+AIEMPI KYSYMYS: Miten piirrosten ikä on määritetty?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys tuo. Piirrosten ikä on määritetty [[rannansiirtymän]] avulla. Alta sijaitsee alueella, jossa maa on [[jääkauden]] jälkeen kohonnut merenpinnan yläpuolelle, ja siksi vanhimmat piirrokset ovat nykyisin korkeammalla kuin nuorimmat: ne tehtiin aikoinaan rantaviivan tuntumaan. Professori [[Knut Helskog]] jakoi kuvat tämän perusteella viiteen ryhmään, jotka ajoittuvat noin vuosien 4200 ja 500 eaa. välille. Vuonna 2010 tutkija Jan Magne Gjerde siirsi vanhimpia vaiheita vielä tuhat vuotta taaksepäin, joten ajoitus elää yhä tutkimuksen mukana. Kallio kertoo ikänsä, kunhan joku jaksaa laskea.
+KYSYMYS: Kerro lisää: jääkauden
+
+### 68
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altan kalliopiirrokset (historia)
+Tietoruudun teksti: Altan kalliopiirrokset ovat Altan kunnassa Finnmarkissa Pohjois-Norjassa. Ensimmäiset piirrokset löytyivät vuonna 1973, ja sen jälkeen niitä on löytynyt yli 6 000 useasta paikasta; suurin niistä, Jiepmaluokta noin viiden kilometrin päässä Altasta, on tuhansine kuvineen muutettu ulkoilmamuseoksi. Kohde merkittiin maailmanperintöluetteloon 3. joulukuuta 1985, ja se on Norjan ainoa esihistoriallinen maailmanperintökohde. Professori Knut Helskog jakoi kuvat viiteen ryhmään ja ajoitti ne rannansiirtymän avulla: vanhimmat noin 4200 eaa. ja nuorimmat noin 500 eaa.; vuonna 2010 tutkija Jan Magne Gjerde siirsi vanhimpia vaiheita tuhat vuotta taaksepäin. Kuvasto kertoo metsästäjä-keräilijöistä, jotka osasivat hallita porolaumoja, rakentaa veneitä ja kalastaa ja jotka harjoittivat šamanistisia menoja, joihin kuului karhun ja muiden eläinten palvonta.
+AIEMPI KYSYMYS: Miten piirrosten ikä on määritetty?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys tuo. Piirrosten ikä on määritetty [[rannansiirtymän]] avulla. Alta sijaitsee alueella, jossa maa on [[jääkauden]] jälkeen kohonnut merenpinnan yläpuolelle, ja siksi vanhimmat piirrokset ovat nykyisin korkeammalla kuin nuorimmat: ne tehtiin aikoinaan rantaviivan tuntumaan. Professori [[Knut Helskog]] jakoi kuvat tämän perusteella viiteen ryhmään, jotka ajoittuvat noin vuosien 4200 ja 500 eaa. välille. Vuonna 2010 tutkija Jan Magne Gjerde siirsi vanhimpia vaiheita vielä tuhat vuotta taaksepäin, joten ajoitus elää yhä tutkimuksen mukana. Kallio kertoo ikänsä, kunhan joku jaksaa laskea.
+KYSYMYS: Kerro lisää: Knut Helskog
+
+### 69
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altan kalliopiirrokset (historia)
+Tietoruudun teksti: Altan kalliopiirrokset ovat Altan kunnassa Finnmarkissa Pohjois-Norjassa. Ensimmäiset piirrokset löytyivät vuonna 1973, ja sen jälkeen niitä on löytynyt yli 6 000 useasta paikasta; suurin niistä, Jiepmaluokta noin viiden kilometrin päässä Altasta, on tuhansine kuvineen muutettu ulkoilmamuseoksi. Kohde merkittiin maailmanperintöluetteloon 3. joulukuuta 1985, ja se on Norjan ainoa esihistoriallinen maailmanperintökohde. Professori Knut Helskog jakoi kuvat viiteen ryhmään ja ajoitti ne rannansiirtymän avulla: vanhimmat noin 4200 eaa. ja nuorimmat noin 500 eaa.; vuonna 2010 tutkija Jan Magne Gjerde siirsi vanhimpia vaiheita tuhat vuotta taaksepäin. Kuvasto kertoo metsästäjä-keräilijöistä, jotka osasivat hallita porolaumoja, rakentaa veneitä ja kalastaa ja jotka harjoittivat šamanistisia menoja, joihin kuului karhun ja muiden eläinten palvonta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kohdekartta / Kohdekartta: Skansen] 1891 Artur Hazelius perusti Skansenin 11. lokakuuta 1891. Se on Ruotsin vanhin ulkoilmamuseo, ja sinne koottiin taloja, myllyjä ja pihoja eri puolilta Ruotsia — lähes 150 rakennusta, joista vain kolme on jälkeenpäin rakennettuja jäljennöksiä. Skansenilla asuu myös eläimiä: karhuja, hirviä, ilveksiä, poroja ja hylkeitä pääsee katsomaan aivan läheltä. Alue on 30 hehtaarin kokoinen, ja sinne pääsee muun muassa pienellä köysiradalla. Nykyään Skansenissa käy yli 1,3 miljoonaa vierasta joka vuosi. Suosituin perinne on Allsång på Skansen eli yhteislaulutilaisuus, joka on jatkunut jo vuosikymmenten ajan.
+- [Rovaniemi — kaupunkilehti / Tunturi: Eläin, joka ei ole villi eikä kesy] Poro kulkee kesät vapaana tuntureilla, mutta jokaisella on omistaja. Tunnistus tehdään korvamerkistä: vasan korvaan leikataan syntymäkesänä oman suvun kuvio, ja merkkejä on satoja erilaisia. Suomessa poroja on noin kaksisataatuhatta, ja poronhoitoalue kattaa lähes kolmanneksen maasta. Syksyllä porot kootaan erotukseen, jossa ne lajitellaan omistajille ja osa erotetaan teuraaksi. Aidan sisällä pyörii tuhansia eläimiä samaan aikaan.
+AIEMPI KYSYMYS: Mitä piirroksissa esitetään?
+AIEMPI VASTAUS (Livia):
+No niin, tost minä osaan kertoo. Piirrokset esittävät metsästäjä-keräilijöiden elämää: [[poroja]] ja muita eläimiä, veneitä sekä kalastusta. Kuvista näkee, että ihmiset osasivat hallita porolaumoja, rakentaa veneitä ja kalastaa. Mukana on myös aiheita, jotka liittyvät šamanistisiin menoihin, joihin kuului [[karhun]] ja muiden eläinten palvonta. Piirroksia on löydetty yli 6 000, ja suurin kohde, [[Jiepmaluokta]], on muutettu ulkoilmamuseoksi. Kivi muistaa paremmin kuin kyyhky, sen myönnän.
+KYSYMYS: Kerro lisää: poroja
+
+### 70
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altan kalliopiirrokset (historia)
+Tietoruudun teksti: Altan kalliopiirrokset ovat Altan kunnassa Finnmarkissa Pohjois-Norjassa. Ensimmäiset piirrokset löytyivät vuonna 1973, ja sen jälkeen niitä on löytynyt yli 6 000 useasta paikasta; suurin niistä, Jiepmaluokta noin viiden kilometrin päässä Altasta, on tuhansine kuvineen muutettu ulkoilmamuseoksi. Kohde merkittiin maailmanperintöluetteloon 3. joulukuuta 1985, ja se on Norjan ainoa esihistoriallinen maailmanperintökohde. Professori Knut Helskog jakoi kuvat viiteen ryhmään ja ajoitti ne rannansiirtymän avulla: vanhimmat noin 4200 eaa. ja nuorimmat noin 500 eaa.; vuonna 2010 tutkija Jan Magne Gjerde siirsi vanhimpia vaiheita tuhat vuotta taaksepäin. Kuvasto kertoo metsästäjä-keräilijöistä, jotka osasivat hallita porolaumoja, rakentaa veneitä ja kalastaa ja jotka harjoittivat šamanistisia menoja, joihin kuului karhun ja muiden eläinten palvonta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Senegal — maalehti / Elokuva: Kultainen karhu isovanhempien maasta] 2019–2024 — Mati Diop on Djibril Diop Mambétyn veljentytär ja muusikko Wasis Diopin tytär, ja hän kasvoi Pariisin ja Senegalin väliä. Vuonna 2019 hänen ensimmäinen pitkä elokuvansa Atlantics sai Cannesin toiseksi suurimman palkinnon, Grand Prix'n. Vuonna 2024 dokumentti Dahomey voitti Berliinin elokuvajuhlien Kultaisen karhun; se kertoo Ranskan Beninille palauttamista kuninkaallisista esineistä. Senegalilainen elokuva on 2010-luvulta lähtien elpynyt uudelleen, ja valtio on tukenut sitä omalla rahastollaan vuodesta 2015. Uuden aallon tekijöistä moni on nainen.
+- [Saksa — maalehti / Ruokaa ja tapakulttuuria: Karhu, joka syntyi kotikeittiössä] 1922 — Hans Riegel perusti Bonnissa vuonna 1922 pienen makeistehtaan, jonka koko omaisuus oli säkki sokeria, kuparipata ja marmorilaatta. Kaksi vuotta myöhemmin hän muotoili gelatiinista tanssivan karhun ja nimesi sen Tanzbäriksi. Yrityksen nimi Haribo tulee perustajan nimestä ja kotikaupungista: HAns RIegel, BOnn. Karhu on sittemmin kutistunut ja pyöristynyt nykyiseen muotoonsa.
+AIEMPI KYSYMYS: Mitä piirroksissa esitetään?
+AIEMPI VASTAUS (Livia):
+No niin, tost minä osaan kertoo. Piirrokset esittävät metsästäjä-keräilijöiden elämää: [[poroja]] ja muita eläimiä, veneitä sekä kalastusta. Kuvista näkee, että ihmiset osasivat hallita porolaumoja, rakentaa veneitä ja kalastaa. Mukana on myös aiheita, jotka liittyvät šamanistisiin menoihin, joihin kuului [[karhun]] ja muiden eläinten palvonta. Piirroksia on löydetty yli 6 000, ja suurin kohde, [[Jiepmaluokta]], on muutettu ulkoilmamuseoksi. Kivi muistaa paremmin kuin kyyhky, sen myönnän.
+KYSYMYS: Kerro lisää: karhun
+
+### 71
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altan kalliopiirrokset (historia)
+Tietoruudun teksti: Altan kalliopiirrokset ovat Altan kunnassa Finnmarkissa Pohjois-Norjassa. Ensimmäiset piirrokset löytyivät vuonna 1973, ja sen jälkeen niitä on löytynyt yli 6 000 useasta paikasta; suurin niistä, Jiepmaluokta noin viiden kilometrin päässä Altasta, on tuhansine kuvineen muutettu ulkoilmamuseoksi. Kohde merkittiin maailmanperintöluetteloon 3. joulukuuta 1985, ja se on Norjan ainoa esihistoriallinen maailmanperintökohde. Professori Knut Helskog jakoi kuvat viiteen ryhmään ja ajoitti ne rannansiirtymän avulla: vanhimmat noin 4200 eaa. ja nuorimmat noin 500 eaa.; vuonna 2010 tutkija Jan Magne Gjerde siirsi vanhimpia vaiheita tuhat vuotta taaksepäin. Kuvasto kertoo metsästäjä-keräilijöistä, jotka osasivat hallita porolaumoja, rakentaa veneitä ja kalastaa ja jotka harjoittivat šamanistisia menoja, joihin kuului karhun ja muiden eläinten palvonta.
+AIEMPI KYSYMYS: Mitä piirroksissa esitetään?
+AIEMPI VASTAUS (Livia):
+No niin, tost minä osaan kertoo. Piirrokset esittävät metsästäjä-keräilijöiden elämää: [[poroja]] ja muita eläimiä, veneitä sekä kalastusta. Kuvista näkee, että ihmiset osasivat hallita porolaumoja, rakentaa veneitä ja kalastaa. Mukana on myös aiheita, jotka liittyvät šamanistisiin menoihin, joihin kuului [[karhun]] ja muiden eläinten palvonta. Piirroksia on löydetty yli 6 000, ja suurin kohde, [[Jiepmaluokta]], on muutettu ulkoilmamuseoksi. Kivi muistaa paremmin kuin kyyhky, sen myönnän.
+KYSYMYS: Kerro lisää: Jiepmaluokta
+
+### 72
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altan kalliopiirrokset (historia)
+Tietoruudun teksti: Altan kalliopiirrokset ovat Altan kunnassa Finnmarkissa Pohjois-Norjassa. Ensimmäiset piirrokset löytyivät vuonna 1973, ja sen jälkeen niitä on löytynyt yli 6 000 useasta paikasta; suurin niistä, Jiepmaluokta noin viiden kilometrin päässä Altasta, on tuhansine kuvineen muutettu ulkoilmamuseoksi. Kohde merkittiin maailmanperintöluetteloon 3. joulukuuta 1985, ja se on Norjan ainoa esihistoriallinen maailmanperintökohde. Professori Knut Helskog jakoi kuvat viiteen ryhmään ja ajoitti ne rannansiirtymän avulla: vanhimmat noin 4200 eaa. ja nuorimmat noin 500 eaa.; vuonna 2010 tutkija Jan Magne Gjerde siirsi vanhimpia vaiheita tuhat vuotta taaksepäin. Kuvasto kertoo metsästäjä-keräilijöistä, jotka osasivat hallita porolaumoja, rakentaa veneitä ja kalastaa ja jotka harjoittivat šamanistisia menoja, joihin kuului karhun ja muiden eläinten palvonta.
+AIEMPI KYSYMYS: Mitä rannansiirtymä tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Rannansiirtymällä tarkoitetaan sitä, että rantaviiva muuttaa paikkaansa ajan myötä. Pohjois-Euroopassa tärkein syy on [[maankohoaminen]]: jääkauden [[mannerjää]] painoi maankuorta alas, ja kun jää suli, maa alkoi kohota. Siksi aiemmin rannalla olleet kohdat ovat nyt kauempana merestä ja korkeammalla. Tämän avulla tutkijat voivat arvioida, milloin rantaan tehty piirros on tehty. Maa nousee ja minä pysyn ilmassa, näin on hyvä.
+KYSYMYS: Kerro lisää: maankohoaminen
+
+### 73
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altan kalliopiirrokset (historia)
+Tietoruudun teksti: Altan kalliopiirrokset ovat Altan kunnassa Finnmarkissa Pohjois-Norjassa. Ensimmäiset piirrokset löytyivät vuonna 1973, ja sen jälkeen niitä on löytynyt yli 6 000 useasta paikasta; suurin niistä, Jiepmaluokta noin viiden kilometrin päässä Altasta, on tuhansine kuvineen muutettu ulkoilmamuseoksi. Kohde merkittiin maailmanperintöluetteloon 3. joulukuuta 1985, ja se on Norjan ainoa esihistoriallinen maailmanperintökohde. Professori Knut Helskog jakoi kuvat viiteen ryhmään ja ajoitti ne rannansiirtymän avulla: vanhimmat noin 4200 eaa. ja nuorimmat noin 500 eaa.; vuonna 2010 tutkija Jan Magne Gjerde siirsi vanhimpia vaiheita tuhat vuotta taaksepäin. Kuvasto kertoo metsästäjä-keräilijöistä, jotka osasivat hallita porolaumoja, rakentaa veneitä ja kalastaa ja jotka harjoittivat šamanistisia menoja, joihin kuului karhun ja muiden eläinten palvonta.
+AIEMPI KYSYMYS: Mitä rannansiirtymä tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Rannansiirtymällä tarkoitetaan sitä, että rantaviiva muuttaa paikkaansa ajan myötä. Pohjois-Euroopassa tärkein syy on [[maankohoaminen]]: jääkauden [[mannerjää]] painoi maankuorta alas, ja kun jää suli, maa alkoi kohota. Siksi aiemmin rannalla olleet kohdat ovat nyt kauempana merestä ja korkeammalla. Tämän avulla tutkijat voivat arvioida, milloin rantaan tehty piirros on tehty. Maa nousee ja minä pysyn ilmassa, näin on hyvä.
+KYSYMYS: Kerro lisää: mannerjää
+
+### 74
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altan kalliopiirrokset (historia)
+Tietoruudun teksti: Altan kalliopiirrokset ovat Altan kunnassa Finnmarkissa Pohjois-Norjassa. Ensimmäiset piirrokset löytyivät vuonna 1973, ja sen jälkeen niitä on löytynyt yli 6 000 useasta paikasta; suurin niistä, Jiepmaluokta noin viiden kilometrin päässä Altasta, on tuhansine kuvineen muutettu ulkoilmamuseoksi. Kohde merkittiin maailmanperintöluetteloon 3. joulukuuta 1985, ja se on Norjan ainoa esihistoriallinen maailmanperintökohde. Professori Knut Helskog jakoi kuvat viiteen ryhmään ja ajoitti ne rannansiirtymän avulla: vanhimmat noin 4200 eaa. ja nuorimmat noin 500 eaa.; vuonna 2010 tutkija Jan Magne Gjerde siirsi vanhimpia vaiheita tuhat vuotta taaksepäin. Kuvasto kertoo metsästäjä-keräilijöistä, jotka osasivat hallita porolaumoja, rakentaa veneitä ja kalastaa ja jotka harjoittivat šamanistisia menoja, joihin kuului karhun ja muiden eläinten palvonta.
+AIEMPI KYSYMYS: Millainen alue Finnmark on?
+AIEMPI VASTAUS (Livia):
+Ai se. Pöllö parantelee vielä siipeään, joten minä hoidan tämän. Finnmark on Norjan pohjoisin maakunta, ja siellä sijaitsevat sekä Alta että Nordkapp. Alue on harvaan asuttu, ja siellä on laajoja tunturiylänköjä sekä pitkä rannikko [[Barentsinmerellä]]. Finnmarkissa elää [[saamelaisia]], ja alue on heidän perinteistä kotiseutuaan, jossa poronhoito on tärkeä elinkeino.
+KYSYMYS: Kerro lisää: Barentsinmerellä
+
+### 75
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altan kalliopiirrokset (historia)
+Tietoruudun teksti: Altan kalliopiirrokset ovat Altan kunnassa Finnmarkissa Pohjois-Norjassa. Ensimmäiset piirrokset löytyivät vuonna 1973, ja sen jälkeen niitä on löytynyt yli 6 000 useasta paikasta; suurin niistä, Jiepmaluokta noin viiden kilometrin päässä Altasta, on tuhansine kuvineen muutettu ulkoilmamuseoksi. Kohde merkittiin maailmanperintöluetteloon 3. joulukuuta 1985, ja se on Norjan ainoa esihistoriallinen maailmanperintökohde. Professori Knut Helskog jakoi kuvat viiteen ryhmään ja ajoitti ne rannansiirtymän avulla: vanhimmat noin 4200 eaa. ja nuorimmat noin 500 eaa.; vuonna 2010 tutkija Jan Magne Gjerde siirsi vanhimpia vaiheita tuhat vuotta taaksepäin. Kuvasto kertoo metsästäjä-keräilijöistä, jotka osasivat hallita porolaumoja, rakentaa veneitä ja kalastaa ja jotka harjoittivat šamanistisia menoja, joihin kuului karhun ja muiden eläinten palvonta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rovaniemi — kaupunkilehti / Saamelaiskulttuuri: Laulukilpailu, joka on käyty vuodesta 1971] Sámi Grand Prix on saamelaisen musiikin laulukilpailu, jota on järjestetty Kautokeinossa pääsiäisenä vuodesta 1971 lähtien. Suuri osa esityksistä pohjautuu joikuun, saamelaiseen perinnelauluun, jolla ei ole alkua eikä loppua tavallisessa mielessä — saamelaisen käsityksen mukaan ei "lauleta jostakin" vaan "joiataan joku tai jokin", ikään kuin laulu kantaisi kohteensa esiin. Kilpailu on kasvanut pieneksi pääsiäisfestivaaliksi, joka kokoaa saamelaisia eri puolilta Norjaa, Ruotsia, Suomea ja Venäjää samaan kaupunkiin joka kevät.
+AIEMPI KYSYMYS: Millainen alue Finnmark on?
+AIEMPI VASTAUS (Livia):
+Ai se. Pöllö parantelee vielä siipeään, joten minä hoidan tämän. Finnmark on Norjan pohjoisin maakunta, ja siellä sijaitsevat sekä Alta että Nordkapp. Alue on harvaan asuttu, ja siellä on laajoja tunturiylänköjä sekä pitkä rannikko [[Barentsinmerellä]]. Finnmarkissa elää [[saamelaisia]], ja alue on heidän perinteistä kotiseutuaan, jossa poronhoito on tärkeä elinkeino.
+KYSYMYS: Kerro lisää: saamelaisia
+
+### 76
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altan kalliopiirrokset (historia)
+Tietoruudun teksti: Altan kalliopiirrokset ovat Altan kunnassa Finnmarkissa Pohjois-Norjassa. Ensimmäiset piirrokset löytyivät vuonna 1973, ja sen jälkeen niitä on löytynyt yli 6 000 useasta paikasta; suurin niistä, Jiepmaluokta noin viiden kilometrin päässä Altasta, on tuhansine kuvineen muutettu ulkoilmamuseoksi. Kohde merkittiin maailmanperintöluetteloon 3. joulukuuta 1985, ja se on Norjan ainoa esihistoriallinen maailmanperintökohde. Professori Knut Helskog jakoi kuvat viiteen ryhmään ja ajoitti ne rannansiirtymän avulla: vanhimmat noin 4200 eaa. ja nuorimmat noin 500 eaa.; vuonna 2010 tutkija Jan Magne Gjerde siirsi vanhimpia vaiheita tuhat vuotta taaksepäin. Kuvasto kertoo metsästäjä-keräilijöistä, jotka osasivat hallita porolaumoja, rakentaa veneitä ja kalastaa ja jotka harjoittivat šamanistisia menoja, joihin kuului karhun ja muiden eläinten palvonta.
+AIEMPI KYSYMYS: Mitä šamanismilla tarkoitetaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Šamanismi on yhteisöllinen uskonnollinen perinne, jossa tietäjä eli [[šamaani]] toimii välittäjänä ihmisten ja henkimaailman välillä. Tietäjä voi esimerkiksi parantaa sairauksia tai ohjata yhteisön menoja, ja eläimillä on usein erityinen asema. Perinne tunnetaan monista pohjoisista kansoista, ja [[Altan]] kuvien yhteydessä sillä viitataan menoihin, joihin kuului karhun ja muiden eläinten palvonta. Mitä kuvissa tarkalleen on tehty, voidaan vain tulkita, ei tietää varmasti. Henkimaailma ei kyl kuulu minun reittiini.
+KYSYMYS: Kerro lisää: šamaani
+
+### 77
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altan kalliopiirrokset (historia)
+Tietoruudun teksti: Altan kalliopiirrokset ovat Altan kunnassa Finnmarkissa Pohjois-Norjassa. Ensimmäiset piirrokset löytyivät vuonna 1973, ja sen jälkeen niitä on löytynyt yli 6 000 useasta paikasta; suurin niistä, Jiepmaluokta noin viiden kilometrin päässä Altasta, on tuhansine kuvineen muutettu ulkoilmamuseoksi. Kohde merkittiin maailmanperintöluetteloon 3. joulukuuta 1985, ja se on Norjan ainoa esihistoriallinen maailmanperintökohde. Professori Knut Helskog jakoi kuvat viiteen ryhmään ja ajoitti ne rannansiirtymän avulla: vanhimmat noin 4200 eaa. ja nuorimmat noin 500 eaa.; vuonna 2010 tutkija Jan Magne Gjerde siirsi vanhimpia vaiheita tuhat vuotta taaksepäin. Kuvasto kertoo metsästäjä-keräilijöistä, jotka osasivat hallita porolaumoja, rakentaa veneitä ja kalastaa ja jotka harjoittivat šamanistisia menoja, joihin kuului karhun ja muiden eläinten palvonta.
+AIEMPI KYSYMYS: Mitä šamanismilla tarkoitetaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Šamanismi on yhteisöllinen uskonnollinen perinne, jossa tietäjä eli [[šamaani]] toimii välittäjänä ihmisten ja henkimaailman välillä. Tietäjä voi esimerkiksi parantaa sairauksia tai ohjata yhteisön menoja, ja eläimillä on usein erityinen asema. Perinne tunnetaan monista pohjoisista kansoista, ja [[Altan]] kuvien yhteydessä sillä viitataan menoihin, joihin kuului karhun ja muiden eläinten palvonta. Mitä kuvissa tarkalleen on tehty, voidaan vain tulkita, ei tietää varmasti. Henkimaailma ei kyl kuulu minun reittiini.
+KYSYMYS: Kerro lisää: Altan
+
+### 78
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nordkapp (merenkulku)
+Tietoruudun teksti: Nordkapp on niemi Magerøyan saaren pohjoisrannalla Finnmarkissa. Sen 307 metriä korkean jyrkänteen päällä on laaja tasanko, jolta katsotaan keskiyön aurinkoa ja näkymää pohjoiseen; Euroopan tie E69 päättyy tänne, joten se on Euroopan pohjoisin autolla saavutettava kohta. Pohjoisimmaksi kohdaksi sitä sanotaan silti virheellisesti: naapuriniemi Knivskjellodden työntyy 1 450 metriä kauemmas pohjoiseen, ja Manner-Euroopan pohjoisin kohta on Kinnarodden Nordkinnin niemimaalla. Nordkapp on kuitenkin paikka, jossa Atlanttiin kuuluva Norjanmeri kohtaa Jäämereen kuuluvan Barentsinmeren. Keskiyön aurinko näkyy 14. toukokuuta ja 31. heinäkuuta välisenä aikana, ja tasangolle rakennettiin vuonna 1988 vierailukeskus Nordkapphallen.
+AIEMPI KYSYMYS: Onko Nordkapp todella Euroopan pohjoisin kohta?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämä on yleinen väärinkäsitys. Ei ole, vaikka niin usein sanotaan. Nordkapp on Euroopan pohjoisin autolla saavutettava kohta, sillä Euroopan tie [[E69]] päättyy sinne. Naapuriniemi [[Knivskjellodden]] ulottuu kuitenkin 1 450 metriä pohjoisemmaksi, ja Manner-Euroopan pohjoisin kohta on [[Kinnarodden]] Nordkinnin niemimaalla. Nordkappin jyrkänne on 307 metriä korkea. Maine vain kantaa pidemmälle kuin niemi.
+KYSYMYS: Kerro lisää: E69
+
+### 79
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nordkapp (merenkulku)
+Tietoruudun teksti: Nordkapp on niemi Magerøyan saaren pohjoisrannalla Finnmarkissa. Sen 307 metriä korkean jyrkänteen päällä on laaja tasanko, jolta katsotaan keskiyön aurinkoa ja näkymää pohjoiseen; Euroopan tie E69 päättyy tänne, joten se on Euroopan pohjoisin autolla saavutettava kohta. Pohjoisimmaksi kohdaksi sitä sanotaan silti virheellisesti: naapuriniemi Knivskjellodden työntyy 1 450 metriä kauemmas pohjoiseen, ja Manner-Euroopan pohjoisin kohta on Kinnarodden Nordkinnin niemimaalla. Nordkapp on kuitenkin paikka, jossa Atlanttiin kuuluva Norjanmeri kohtaa Jäämereen kuuluvan Barentsinmeren. Keskiyön aurinko näkyy 14. toukokuuta ja 31. heinäkuuta välisenä aikana, ja tasangolle rakennettiin vuonna 1988 vierailukeskus Nordkapphallen.
+AIEMPI KYSYMYS: Onko Nordkapp todella Euroopan pohjoisin kohta?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämä on yleinen väärinkäsitys. Ei ole, vaikka niin usein sanotaan. Nordkapp on Euroopan pohjoisin autolla saavutettava kohta, sillä Euroopan tie [[E69]] päättyy sinne. Naapuriniemi [[Knivskjellodden]] ulottuu kuitenkin 1 450 metriä pohjoisemmaksi, ja Manner-Euroopan pohjoisin kohta on [[Kinnarodden]] Nordkinnin niemimaalla. Nordkappin jyrkänne on 307 metriä korkea. Maine vain kantaa pidemmälle kuin niemi.
+KYSYMYS: Kerro lisää: Knivskjellodden
+
+### 80
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nordkapp (merenkulku)
+Tietoruudun teksti: Nordkapp on niemi Magerøyan saaren pohjoisrannalla Finnmarkissa. Sen 307 metriä korkean jyrkänteen päällä on laaja tasanko, jolta katsotaan keskiyön aurinkoa ja näkymää pohjoiseen; Euroopan tie E69 päättyy tänne, joten se on Euroopan pohjoisin autolla saavutettava kohta. Pohjoisimmaksi kohdaksi sitä sanotaan silti virheellisesti: naapuriniemi Knivskjellodden työntyy 1 450 metriä kauemmas pohjoiseen, ja Manner-Euroopan pohjoisin kohta on Kinnarodden Nordkinnin niemimaalla. Nordkapp on kuitenkin paikka, jossa Atlanttiin kuuluva Norjanmeri kohtaa Jäämereen kuuluvan Barentsinmeren. Keskiyön aurinko näkyy 14. toukokuuta ja 31. heinäkuuta välisenä aikana, ja tasangolle rakennettiin vuonna 1988 vierailukeskus Nordkapphallen.
+AIEMPI KYSYMYS: Onko Nordkapp todella Euroopan pohjoisin kohta?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämä on yleinen väärinkäsitys. Ei ole, vaikka niin usein sanotaan. Nordkapp on Euroopan pohjoisin autolla saavutettava kohta, sillä Euroopan tie [[E69]] päättyy sinne. Naapuriniemi [[Knivskjellodden]] ulottuu kuitenkin 1 450 metriä pohjoisemmaksi, ja Manner-Euroopan pohjoisin kohta on [[Kinnarodden]] Nordkinnin niemimaalla. Nordkappin jyrkänne on 307 metriä korkea. Maine vain kantaa pidemmälle kuin niemi.
+KYSYMYS: Kerro lisää: Kinnarodden

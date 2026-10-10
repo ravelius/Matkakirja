@@ -1,0 +1,1016 @@
+### 81
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nordkapp (merenkulku)
+Tietoruudun teksti: Nordkapp on niemi Magerøyan saaren pohjoisrannalla Finnmarkissa. Sen 307 metriä korkean jyrkänteen päällä on laaja tasanko, jolta katsotaan keskiyön aurinkoa ja näkymää pohjoiseen; Euroopan tie E69 päättyy tänne, joten se on Euroopan pohjoisin autolla saavutettava kohta. Pohjoisimmaksi kohdaksi sitä sanotaan silti virheellisesti: naapuriniemi Knivskjellodden työntyy 1 450 metriä kauemmas pohjoiseen, ja Manner-Euroopan pohjoisin kohta on Kinnarodden Nordkinnin niemimaalla. Nordkapp on kuitenkin paikka, jossa Atlanttiin kuuluva Norjanmeri kohtaa Jäämereen kuuluvan Barentsinmeren. Keskiyön aurinko näkyy 14. toukokuuta ja 31. heinäkuuta välisenä aikana, ja tasangolle rakennettiin vuonna 1988 vierailukeskus Nordkapphallen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan tuomiokirkko] 1861 Tromssan tuomiokirkko on kokonaan puusta rakennettu keltainen kirkko, joka valmistui vuonna 1861 arkkitehti Christian Heinrich Groschin piirustusten mukaan. Se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu puusta - ja sen sisään mahtuu yli 600 kirkkovierasta! Paikalla on ollut kirkko jo satoja vuosia ennen tätäkin: kuningas Håkon IV rakennutti tänne kappelin jo vuonna 1252, ja sen jälkeen paikalla on ollut ainakin kaksi muuta kirkkoa ennen nykyistä rakennusta. Kellotorni valmistui vuotta myöhemmin, 1862, ja kirkkoa koristeltiin lisää vielä 1880-luvulla. Isoisän vieraillessa Tromssassa 1873 kirkko oli vasta reilut kymmenen vuotta vanha - täysin uusi nähtävyys pienessä pu…
+AIEMPI KYSYMYS: Mitkä kaksi merta kohtaavat niemellä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Nordkappin niemellä kohtaavat Atlanttiin kuuluva [[Norjanmeri]] ja Jäämereen kuuluva [[Barentsinmeri]]. Kohtaamispaikka on kahden suuren merialueen raja-alue eikä mikään terävä viiva, sillä merialueet sulautuvat toisiinsa.
+
+Ylhäältä tuollaista rajaa etsii turhaan, sillä vesi on vettä.
+KYSYMYS: Kerro lisää: Norjanmeri
+
+### 82
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nordkapp (merenkulku)
+Tietoruudun teksti: Nordkapp on niemi Magerøyan saaren pohjoisrannalla Finnmarkissa. Sen 307 metriä korkean jyrkänteen päällä on laaja tasanko, jolta katsotaan keskiyön aurinkoa ja näkymää pohjoiseen; Euroopan tie E69 päättyy tänne, joten se on Euroopan pohjoisin autolla saavutettava kohta. Pohjoisimmaksi kohdaksi sitä sanotaan silti virheellisesti: naapuriniemi Knivskjellodden työntyy 1 450 metriä kauemmas pohjoiseen, ja Manner-Euroopan pohjoisin kohta on Kinnarodden Nordkinnin niemimaalla. Nordkapp on kuitenkin paikka, jossa Atlanttiin kuuluva Norjanmeri kohtaa Jäämereen kuuluvan Barentsinmeren. Keskiyön aurinko näkyy 14. toukokuuta ja 31. heinäkuuta välisenä aikana, ja tasangolle rakennettiin vuonna 1988 vierailukeskus Nordkapphallen.
+AIEMPI KYSYMYS: Mitkä kaksi merta kohtaavat niemellä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Nordkappin niemellä kohtaavat Atlanttiin kuuluva [[Norjanmeri]] ja Jäämereen kuuluva [[Barentsinmeri]]. Kohtaamispaikka on kahden suuren merialueen raja-alue eikä mikään terävä viiva, sillä merialueet sulautuvat toisiinsa.
+
+Ylhäältä tuollaista rajaa etsii turhaan, sillä vesi on vettä.
+KYSYMYS: Kerro lisää: Barentsinmeri
+
+### 83
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nordkapp (merenkulku)
+Tietoruudun teksti: Nordkapp on niemi Magerøyan saaren pohjoisrannalla Finnmarkissa. Sen 307 metriä korkean jyrkänteen päällä on laaja tasanko, jolta katsotaan keskiyön aurinkoa ja näkymää pohjoiseen; Euroopan tie E69 päättyy tänne, joten se on Euroopan pohjoisin autolla saavutettava kohta. Pohjoisimmaksi kohdaksi sitä sanotaan silti virheellisesti: naapuriniemi Knivskjellodden työntyy 1 450 metriä kauemmas pohjoiseen, ja Manner-Euroopan pohjoisin kohta on Kinnarodden Nordkinnin niemimaalla. Nordkapp on kuitenkin paikka, jossa Atlanttiin kuuluva Norjanmeri kohtaa Jäämereen kuuluvan Barentsinmeren. Keskiyön aurinko näkyy 14. toukokuuta ja 31. heinäkuuta välisenä aikana, ja tasangolle rakennettiin vuonna 1988 vierailukeskus Nordkapphallen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Luonto: Aurinko kiertää eikä laske] Kesäkuussa — Napapiirin pohjoispuolella aurinko ei kesällä laske lainkaan vaan kiertää taivaalla ympäri: Lofooteilla se pysyy ylhäällä lähes kaksi kuukautta. Keskiyön aurinko värjää talot ja vuoret oranssiksi kellon ympäri, ja kalastajat käyvät töissä yölläkin. Talvella sama asia toimii toisin päin — kaamos kestää saman verran, ja aurinko ei nouse ollenkaan. Silloin lumi ja meri heijastavat sinistä valoa, jota norjalaiset sanovat siniseksi hetkeksi.
+AIEMPI KYSYMYS: Mikä on keskiyön aurinko?
+AIEMPI VASTAUS (Livia):
+No jopas. Keskiyön aurinko on ilmiö, jossa aurinko ei laske horisontin alapuolelle yöllä [[napapiirin]] pohjoispuolella kesän aikaan. Syynä on maapallon akselin kallistuma, joka kääntää pohjoisen pallonpuoliskon kesällä kohti aurinkoa. Nordkappilla keskiyön aurinko näkyy 14. toukokuuta ja 31. heinäkuuta välisenä aikana. Talvella ilmiön vastakohta on [[kaamos]], jolloin aurinko ei nouse lainkaan. Valoisaa on, mut nukkua kyyhky osaa silti.
+KYSYMYS: Kerro lisää: napapiirin
+
+### 84
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nordkapp (merenkulku)
+Tietoruudun teksti: Nordkapp on niemi Magerøyan saaren pohjoisrannalla Finnmarkissa. Sen 307 metriä korkean jyrkänteen päällä on laaja tasanko, jolta katsotaan keskiyön aurinkoa ja näkymää pohjoiseen; Euroopan tie E69 päättyy tänne, joten se on Euroopan pohjoisin autolla saavutettava kohta. Pohjoisimmaksi kohdaksi sitä sanotaan silti virheellisesti: naapuriniemi Knivskjellodden työntyy 1 450 metriä kauemmas pohjoiseen, ja Manner-Euroopan pohjoisin kohta on Kinnarodden Nordkinnin niemimaalla. Nordkapp on kuitenkin paikka, jossa Atlanttiin kuuluva Norjanmeri kohtaa Jäämereen kuuluvan Barentsinmeren. Keskiyön aurinko näkyy 14. toukokuuta ja 31. heinäkuuta välisenä aikana, ja tasangolle rakennettiin vuonna 1988 vierailukeskus Nordkapphallen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Luonto: Aurinko kiertää eikä laske] Kesäkuussa — Napapiirin pohjoispuolella aurinko ei kesällä laske lainkaan vaan kiertää taivaalla ympäri: Lofooteilla se pysyy ylhäällä lähes kaksi kuukautta. Keskiyön aurinko värjää talot ja vuoret oranssiksi kellon ympäri, ja kalastajat käyvät töissä yölläkin. Talvella sama asia toimii toisin päin — kaamos kestää saman verran, ja aurinko ei nouse ollenkaan. Silloin lumi ja meri heijastavat sinistä valoa, jota norjalaiset sanovat siniseksi hetkeksi.
+AIEMPI KYSYMYS: Mikä on keskiyön aurinko?
+AIEMPI VASTAUS (Livia):
+No jopas. Keskiyön aurinko on ilmiö, jossa aurinko ei laske horisontin alapuolelle yöllä [[napapiirin]] pohjoispuolella kesän aikaan. Syynä on maapallon akselin kallistuma, joka kääntää pohjoisen pallonpuoliskon kesällä kohti aurinkoa. Nordkappilla keskiyön aurinko näkyy 14. toukokuuta ja 31. heinäkuuta välisenä aikana. Talvella ilmiön vastakohta on [[kaamos]], jolloin aurinko ei nouse lainkaan. Valoisaa on, mut nukkua kyyhky osaa silti.
+KYSYMYS: Kerro lisää: kaamos
+
+### 85
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nordkapp (merenkulku)
+Tietoruudun teksti: Nordkapp on niemi Magerøyan saaren pohjoisrannalla Finnmarkissa. Sen 307 metriä korkean jyrkänteen päällä on laaja tasanko, jolta katsotaan keskiyön aurinkoa ja näkymää pohjoiseen; Euroopan tie E69 päättyy tänne, joten se on Euroopan pohjoisin autolla saavutettava kohta. Pohjoisimmaksi kohdaksi sitä sanotaan silti virheellisesti: naapuriniemi Knivskjellodden työntyy 1 450 metriä kauemmas pohjoiseen, ja Manner-Euroopan pohjoisin kohta on Kinnarodden Nordkinnin niemimaalla. Nordkapp on kuitenkin paikka, jossa Atlanttiin kuuluva Norjanmeri kohtaa Jäämereen kuuluvan Barentsinmeren. Keskiyön aurinko näkyy 14. toukokuuta ja 31. heinäkuuta välisenä aikana, ja tasangolle rakennettiin vuonna 1988 vierailukeskus Nordkapphallen.
+AIEMPI KYSYMYS: Millainen saari Magerøya on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Magerøya on saari [[Finnmarkissa]] Pohjois-Norjassa, ja sen pohjoisrannalla sijaitsee Nordkapp. Saarelle pääsee mantereelta vedenalaista tunnelia pitkin, ja sen tärkeä asutuskeskus on kalastajakaupunki [[Honningsvåg]]. Luonto on karua tunturiylänköä ja rannikkoa, jossa puusto on niukkaa. Saaren yllä on kyl tuulta, jota kyyhkykin kunnioittaa.
+KYSYMYS: Kerro lisää: Finnmarkissa
+
+### 86
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nordkapp (merenkulku)
+Tietoruudun teksti: Nordkapp on niemi Magerøyan saaren pohjoisrannalla Finnmarkissa. Sen 307 metriä korkean jyrkänteen päällä on laaja tasanko, jolta katsotaan keskiyön aurinkoa ja näkymää pohjoiseen; Euroopan tie E69 päättyy tänne, joten se on Euroopan pohjoisin autolla saavutettava kohta. Pohjoisimmaksi kohdaksi sitä sanotaan silti virheellisesti: naapuriniemi Knivskjellodden työntyy 1 450 metriä kauemmas pohjoiseen, ja Manner-Euroopan pohjoisin kohta on Kinnarodden Nordkinnin niemimaalla. Nordkapp on kuitenkin paikka, jossa Atlanttiin kuuluva Norjanmeri kohtaa Jäämereen kuuluvan Barentsinmeren. Keskiyön aurinko näkyy 14. toukokuuta ja 31. heinäkuuta välisenä aikana, ja tasangolle rakennettiin vuonna 1988 vierailukeskus Nordkapphallen.
+AIEMPI KYSYMYS: Millainen saari Magerøya on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Magerøya on saari [[Finnmarkissa]] Pohjois-Norjassa, ja sen pohjoisrannalla sijaitsee Nordkapp. Saarelle pääsee mantereelta vedenalaista tunnelia pitkin, ja sen tärkeä asutuskeskus on kalastajakaupunki [[Honningsvåg]]. Luonto on karua tunturiylänköä ja rannikkoa, jossa puusto on niukkaa. Saaren yllä on kyl tuulta, jota kyyhkykin kunnioittaa.
+KYSYMYS: Kerro lisää: Honningsvåg
+
+### 87
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nordkapp (merenkulku)
+Tietoruudun teksti: Nordkapp on niemi Magerøyan saaren pohjoisrannalla Finnmarkissa. Sen 307 metriä korkean jyrkänteen päällä on laaja tasanko, jolta katsotaan keskiyön aurinkoa ja näkymää pohjoiseen; Euroopan tie E69 päättyy tänne, joten se on Euroopan pohjoisin autolla saavutettava kohta. Pohjoisimmaksi kohdaksi sitä sanotaan silti virheellisesti: naapuriniemi Knivskjellodden työntyy 1 450 metriä kauemmas pohjoiseen, ja Manner-Euroopan pohjoisin kohta on Kinnarodden Nordkinnin niemimaalla. Nordkapp on kuitenkin paikka, jossa Atlanttiin kuuluva Norjanmeri kohtaa Jäämereen kuuluvan Barentsinmeren. Keskiyön aurinko näkyy 14. toukokuuta ja 31. heinäkuuta välisenä aikana, ja tasangolle rakennettiin vuonna 1988 vierailukeskus Nordkapphallen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tromssa — kaupunkilehti / Historia: Kaupunki, josta retkikunnat lähtivät napaa kohti] Tromssan sijainti syvän vuonon suojassa mutta silti lähellä avomerta teki siitä 1800-luvun lopulla luontevan viimeisen pysähdyspaikan napaseuduille suuntaaville retkikunnille — muun muassa Roald Amundsen ja Fridtjof Nansen varustautuivat ja rekrytoivat miehistöä Tromssassa ennen matkojaan Koillisväylälle ja Pohjoisnavan suunnalle. Kaupungin lempinimeksi vakiintui "Jäämeren Pariisi", osin ironisesti ja osin ylpeydestä sen kansainvälisestä merkityksestä napatutkimukselle. Nykyinen Polarmuseet toimii vanhassa tullirakennuksessa satamassa ja kertoo näiden retkikuntien historiasta.
+AIEMPI KYSYMYS: Millainen meri Barentsinmeri on?
+AIEMPI VASTAUS (Livia):
+Just niin, tästä minä tiedän jotain. Barentsinmeri on [[Jäämeren]] reunameri, joka rajautuu Norjan ja Venäjän pohjoisrannikoihin. Se on matala verrattuna moniin muihin merialueisiin, ja Atlantilta tuleva lämmin merivirta pitää sen eteläosan pitkälti sulana talvellakin. Meri on tärkeä kalastusalue, ja siellä on perinteisesti pyydetty muun muassa [[turskaa]]. Nimensä se on saanut hollantilaisen löytöretkeilijän [[Willem Barentszin]] mukaan. Kylmä paikka, mut kalastajat tykkäävät.
+KYSYMYS: Kerro lisää: Jäämeren
+
+### 88
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nordkapp (merenkulku)
+Tietoruudun teksti: Nordkapp on niemi Magerøyan saaren pohjoisrannalla Finnmarkissa. Sen 307 metriä korkean jyrkänteen päällä on laaja tasanko, jolta katsotaan keskiyön aurinkoa ja näkymää pohjoiseen; Euroopan tie E69 päättyy tänne, joten se on Euroopan pohjoisin autolla saavutettava kohta. Pohjoisimmaksi kohdaksi sitä sanotaan silti virheellisesti: naapuriniemi Knivskjellodden työntyy 1 450 metriä kauemmas pohjoiseen, ja Manner-Euroopan pohjoisin kohta on Kinnarodden Nordkinnin niemimaalla. Nordkapp on kuitenkin paikka, jossa Atlanttiin kuuluva Norjanmeri kohtaa Jäämereen kuuluvan Barentsinmeren. Keskiyön aurinko näkyy 14. toukokuuta ja 31. heinäkuuta välisenä aikana, ja tasangolle rakennettiin vuonna 1988 vierailukeskus Nordkapphallen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Arki: Turska, joka tulee itse käymään] Helmikuussa — Skrei on turska, joka ui joka talvi Barentsinmereltä Norjan rannikolle kutemaan. Osa syödään heti mølje-ateriana: kalaa, mätiä, maksaa ja perunaa. Osa ripustetaan telineille helmikuussa, kun maassa on vielä lunta ja kärpäset nukkuvat. Kolmessa kuukaudessa kalasta haihtuu noin 70 prosenttia vedestä, ja sen jälkeen se säilyy vuosia.
+AIEMPI KYSYMYS: Millainen meri Barentsinmeri on?
+AIEMPI VASTAUS (Livia):
+Just niin, tästä minä tiedän jotain. Barentsinmeri on [[Jäämeren]] reunameri, joka rajautuu Norjan ja Venäjän pohjoisrannikoihin. Se on matala verrattuna moniin muihin merialueisiin, ja Atlantilta tuleva lämmin merivirta pitää sen eteläosan pitkälti sulana talvellakin. Meri on tärkeä kalastusalue, ja siellä on perinteisesti pyydetty muun muassa [[turskaa]]. Nimensä se on saanut hollantilaisen löytöretkeilijän [[Willem Barentszin]] mukaan. Kylmä paikka, mut kalastajat tykkäävät.
+KYSYMYS: Kerro lisää: turskaa
+
+### 89
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nordkapp (merenkulku)
+Tietoruudun teksti: Nordkapp on niemi Magerøyan saaren pohjoisrannalla Finnmarkissa. Sen 307 metriä korkean jyrkänteen päällä on laaja tasanko, jolta katsotaan keskiyön aurinkoa ja näkymää pohjoiseen; Euroopan tie E69 päättyy tänne, joten se on Euroopan pohjoisin autolla saavutettava kohta. Pohjoisimmaksi kohdaksi sitä sanotaan silti virheellisesti: naapuriniemi Knivskjellodden työntyy 1 450 metriä kauemmas pohjoiseen, ja Manner-Euroopan pohjoisin kohta on Kinnarodden Nordkinnin niemimaalla. Nordkapp on kuitenkin paikka, jossa Atlanttiin kuuluva Norjanmeri kohtaa Jäämereen kuuluvan Barentsinmeren. Keskiyön aurinko näkyy 14. toukokuuta ja 31. heinäkuuta välisenä aikana, ja tasangolle rakennettiin vuonna 1988 vierailukeskus Nordkapphallen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historia: Aurinko nousi kaksi viikkoa liian aikaisin] 1596–97 — Willem Barentszin laiva etsi pohjoista meritietä Kiinaan ja juuttui jäihin Novaja Zemljan rannikolle. Miehet purkivat laivasta puuta, keräsivät ajopuuta ja rakensivat majan, jota he kutsuivat nimellä Behouden Huys, Pelastunut talo. Seitsemäntoista miestä talvehti siellä napayössä. Tammikuun 24. päivänä 1597 he näkivät auringon kaksi viikkoa ennen kuin sen olisi pitänyt nousta — Barentsz ei uskonut silmiään. Kyse oli harvinaisesta ilmakehän kangastuksesta. Kesäkuussa lähdettiin kahdella avoveneellä kohti kotia. Barentsz kuoli viikko lähdön jälkeen; kaksitoista pääsi perille.
+AIEMPI KYSYMYS: Millainen meri Barentsinmeri on?
+AIEMPI VASTAUS (Livia):
+Just niin, tästä minä tiedän jotain. Barentsinmeri on [[Jäämeren]] reunameri, joka rajautuu Norjan ja Venäjän pohjoisrannikoihin. Se on matala verrattuna moniin muihin merialueisiin, ja Atlantilta tuleva lämmin merivirta pitää sen eteläosan pitkälti sulana talvellakin. Meri on tärkeä kalastusalue, ja siellä on perinteisesti pyydetty muun muassa [[turskaa]]. Nimensä se on saanut hollantilaisen löytöretkeilijän [[Willem Barentszin]] mukaan. Kylmä paikka, mut kalastajat tykkäävät.
+KYSYMYS: Kerro lisää: Willem Barentszin
+
+### 90
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nidarosin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Nidarosin tuomiokirkko on Norjan kirkon katedraali Trondheimissa. Se on rakennettu kuningas Olavi II:n haudan päälle: Olavi toi kristinuskon Norjaan, hänestä tuli maan suojeluspyhimys, ja hänen kirkossaan vihitään yhä Norjan uudet hallitsijat. Kirkkoa rakennettiin 230 vuotta, vuodesta 1070 vuoteen 1300, jolloin se oli olennaisilta osin valmis; lisäyksiä ja korjauksia on tehty siitä lähtien, ja viimeisin suuri jälleenrakennus alkoi 1869 ja päättyi 2001. Vuonna 1152 kirkosta tuli Nidarosin arkkihiippakunnan katedraali, ja vuonna 1537 se siirtyi uskonpuhdistuksessa vastaperustettuun Norjan kirkkoon. Se on maailman pohjoisin keskiaikainen katedraali, siihen mahtuu noin 1 850 ihmistä, ja sinne saapuu yhä vuosittain tuhansia pyhiinvaeltajia.
+AIEMPI KYSYMYS: Kenen haudan päälle kirkko rakennettiin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä kuuluu Norjan vanhaan historiaan. Nidarosin tuomiokirkko rakennettiin kuningas [[Olavi II:n]] haudan päälle. Olavi toi kristinuskon Norjaan, ja hänestä tuli maan [[suojeluspyhimys]]. Hän kuoli [[Stiklestadin]] taistelussa vuonna 1030, ja hänen hautansa muodostui pyhiinvaelluskohteeksi. Siitä on onneksi lähes tuhat vuotta.
+KYSYMYS: Kerro lisää: Olavi II:n
+
+### 91
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nidarosin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Nidarosin tuomiokirkko on Norjan kirkon katedraali Trondheimissa. Se on rakennettu kuningas Olavi II:n haudan päälle: Olavi toi kristinuskon Norjaan, hänestä tuli maan suojeluspyhimys, ja hänen kirkossaan vihitään yhä Norjan uudet hallitsijat. Kirkkoa rakennettiin 230 vuotta, vuodesta 1070 vuoteen 1300, jolloin se oli olennaisilta osin valmis; lisäyksiä ja korjauksia on tehty siitä lähtien, ja viimeisin suuri jälleenrakennus alkoi 1869 ja päättyi 2001. Vuonna 1152 kirkosta tuli Nidarosin arkkihiippakunnan katedraali, ja vuonna 1537 se siirtyi uskonpuhdistuksessa vastaperustettuun Norjan kirkkoon. Se on maailman pohjoisin keskiaikainen katedraali, siihen mahtuu noin 1 850 ihmistä, ja sinne saapuu yhä vuosittain tuhansia pyhiinvaeltajia.
+AIEMPI KYSYMYS: Kenen haudan päälle kirkko rakennettiin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä kuuluu Norjan vanhaan historiaan. Nidarosin tuomiokirkko rakennettiin kuningas [[Olavi II:n]] haudan päälle. Olavi toi kristinuskon Norjaan, ja hänestä tuli maan [[suojeluspyhimys]]. Hän kuoli [[Stiklestadin]] taistelussa vuonna 1030, ja hänen hautansa muodostui pyhiinvaelluskohteeksi. Siitä on onneksi lähes tuhat vuotta.
+KYSYMYS: Kerro lisää: suojeluspyhimys
+
+### 92
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nidarosin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Nidarosin tuomiokirkko on Norjan kirkon katedraali Trondheimissa. Se on rakennettu kuningas Olavi II:n haudan päälle: Olavi toi kristinuskon Norjaan, hänestä tuli maan suojeluspyhimys, ja hänen kirkossaan vihitään yhä Norjan uudet hallitsijat. Kirkkoa rakennettiin 230 vuotta, vuodesta 1070 vuoteen 1300, jolloin se oli olennaisilta osin valmis; lisäyksiä ja korjauksia on tehty siitä lähtien, ja viimeisin suuri jälleenrakennus alkoi 1869 ja päättyi 2001. Vuonna 1152 kirkosta tuli Nidarosin arkkihiippakunnan katedraali, ja vuonna 1537 se siirtyi uskonpuhdistuksessa vastaperustettuun Norjan kirkkoon. Se on maailman pohjoisin keskiaikainen katedraali, siihen mahtuu noin 1 850 ihmistä, ja sinne saapuu yhä vuosittain tuhansia pyhiinvaeltajia.
+AIEMPI KYSYMYS: Kenen haudan päälle kirkko rakennettiin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä kuuluu Norjan vanhaan historiaan. Nidarosin tuomiokirkko rakennettiin kuningas [[Olavi II:n]] haudan päälle. Olavi toi kristinuskon Norjaan, ja hänestä tuli maan [[suojeluspyhimys]]. Hän kuoli [[Stiklestadin]] taistelussa vuonna 1030, ja hänen hautansa muodostui pyhiinvaelluskohteeksi. Siitä on onneksi lähes tuhat vuotta.
+KYSYMYS: Kerro lisää: Stiklestadin
+
+### 93
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nidarosin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Nidarosin tuomiokirkko on Norjan kirkon katedraali Trondheimissa. Se on rakennettu kuningas Olavi II:n haudan päälle: Olavi toi kristinuskon Norjaan, hänestä tuli maan suojeluspyhimys, ja hänen kirkossaan vihitään yhä Norjan uudet hallitsijat. Kirkkoa rakennettiin 230 vuotta, vuodesta 1070 vuoteen 1300, jolloin se oli olennaisilta osin valmis; lisäyksiä ja korjauksia on tehty siitä lähtien, ja viimeisin suuri jälleenrakennus alkoi 1869 ja päättyi 2001. Vuonna 1152 kirkosta tuli Nidarosin arkkihiippakunnan katedraali, ja vuonna 1537 se siirtyi uskonpuhdistuksessa vastaperustettuun Norjan kirkkoon. Se on maailman pohjoisin keskiaikainen katedraali, siihen mahtuu noin 1 850 ihmistä, ja sinne saapuu yhä vuosittain tuhansia pyhiinvaeltajia.
+AIEMPI KYSYMYS: Missä Norjan hallitsijat vihitään?
+AIEMPI VASTAUS (Livia):
+Kuulehan, tämä on helppo. Norjan uudet hallitsijat vihitään Nidarosin tuomiokirkossa [[Trondheimissa]]. Kirkko on rakennettu pyhän [[Olavin]] haudan päälle, ja siksi se on Norjan historiassa erityisen tärkeä kuninkaallinen paikka. Perinne on pitkä, sillä kirkko on ollut maan hengellinen keskus jo keskiajalta lähtien. Lyhyempää vastausta ei olisi pöllökään antanut.
+KYSYMYS: Kerro lisää: Trondheimissa
+
+### 94
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nidarosin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Nidarosin tuomiokirkko on Norjan kirkon katedraali Trondheimissa. Se on rakennettu kuningas Olavi II:n haudan päälle: Olavi toi kristinuskon Norjaan, hänestä tuli maan suojeluspyhimys, ja hänen kirkossaan vihitään yhä Norjan uudet hallitsijat. Kirkkoa rakennettiin 230 vuotta, vuodesta 1070 vuoteen 1300, jolloin se oli olennaisilta osin valmis; lisäyksiä ja korjauksia on tehty siitä lähtien, ja viimeisin suuri jälleenrakennus alkoi 1869 ja päättyi 2001. Vuonna 1152 kirkosta tuli Nidarosin arkkihiippakunnan katedraali, ja vuonna 1537 se siirtyi uskonpuhdistuksessa vastaperustettuun Norjan kirkkoon. Se on maailman pohjoisin keskiaikainen katedraali, siihen mahtuu noin 1 850 ihmistä, ja sinne saapuu yhä vuosittain tuhansia pyhiinvaeltajia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tallinna — kohdekartta / Kohdekartta: Olevisten kirkko] 1267 Olevisten kirkko on nimetty Norjan kuningas Olavin mukaan, joka oli merenkulkijoiden suojeluspyhimys. Kirkosta on maininta jo vuodelta 1267, jolloin sen perustivat alueelle asettuneet skandinaaviset kauppiaat. Kirkon torni puolestaan mainitaan asiakirjoissa ensimmäisen kerran vuonna 1364, ja vuosisatojen kuluessa kirkkoa laajennettiin useaan otteeseen goottilaiseen tyyliin. Torni on kokenut paljon: salamat ovat iskeneet siihen noin kymmenen kertaa, ja koko kirkko on palanut maan tasalle jopa kolme kertaa tunnetun historiansa aikana. Erään keskiaikaisen tarinan mukaan kirkon rakentaja kertoi tornin olevan 84 syltä korkea - jos hän tarkoitti Rein-joen seudun syltä, se tarkoittaisi lähes …
+AIEMPI KYSYMYS: Missä Norjan hallitsijat vihitään?
+AIEMPI VASTAUS (Livia):
+Kuulehan, tämä on helppo. Norjan uudet hallitsijat vihitään Nidarosin tuomiokirkossa [[Trondheimissa]]. Kirkko on rakennettu pyhän [[Olavin]] haudan päälle, ja siksi se on Norjan historiassa erityisen tärkeä kuninkaallinen paikka. Perinne on pitkä, sillä kirkko on ollut maan hengellinen keskus jo keskiajalta lähtien. Lyhyempää vastausta ei olisi pöllökään antanut.
+KYSYMYS: Kerro lisää: Olavin
+
+### 95
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nidarosin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Nidarosin tuomiokirkko on Norjan kirkon katedraali Trondheimissa. Se on rakennettu kuningas Olavi II:n haudan päälle: Olavi toi kristinuskon Norjaan, hänestä tuli maan suojeluspyhimys, ja hänen kirkossaan vihitään yhä Norjan uudet hallitsijat. Kirkkoa rakennettiin 230 vuotta, vuodesta 1070 vuoteen 1300, jolloin se oli olennaisilta osin valmis; lisäyksiä ja korjauksia on tehty siitä lähtien, ja viimeisin suuri jälleenrakennus alkoi 1869 ja päättyi 2001. Vuonna 1152 kirkosta tuli Nidarosin arkkihiippakunnan katedraali, ja vuonna 1537 se siirtyi uskonpuhdistuksessa vastaperustettuun Norjan kirkkoon. Se on maailman pohjoisin keskiaikainen katedraali, siihen mahtuu noin 1 850 ihmistä, ja sinne saapuu yhä vuosittain tuhansia pyhiinvaeltajia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Samarkand — kohdekartta / Kohdekartta: Khoja Doniyorin mausoleumi] 1900-luvun alku Mausoleumi on Afrasiyabin kummun itälaidalla Siyob-puron varressa, ja se on Samarkandin tunnetuimpia pyhiä paikkoja. Rakennus on suorakaiteen muotoinen, noin viisitoista metriä pitkä sali, jonka katolla on viisi kupolia. Se on 1900-luvun alusta, mutta paikka on vanha: Abu Tahirhojan teoksen "Samaria" mukaan Khoja Doniyor oli Qutham ibn Abbasin seuralaisia, ja perimätiedon mukaan Timur rakennutti haudan päälle moskeijan. Paikan erikoisuus on se, että kolmen uskonnon — islamin, kristinuskon ja juutalaisuuden — perinteissä esiintyy sama nimi: Doniyor, Daniil, Daniel. Siksi mausoleumilla käy kaikkien kolmen perinteen edustajia. Hautakammion vieressä on lähde, jota pidetään siuna…
+- [Port Vila — kohdekartta / Kohdekartta: Pyhän sydämen katedraali] nykyaika Cathédrale du Sacré-Cœur on Port Vilan moderni katolinen katedraali ja Port Vilan hiippakunnan istuin. Nimi on ranskaksi, kuten monet muutkin kaupungin nimet: ranska on englannin ja bislaman ohella yksi Vanuatun virallisista kielistä. Kristinusko on Vanuatun valtauskonto, ja siihen kuuluu yli yhdeksänkymmentä prosenttia väestöstä. Suurin kirkkokunta on Vanuatun presbyteerikirkko, johon kuuluu kolmasosa väestöstä; katolinen kirkko ja Melanesian kirkko ovat kumpikin noin viidentoista prosentin kokoisia. Kirkkokuntien jako kertoo saarten lähetyshistoriasta: lähetyssaarnaajia alkoi saapua Uusille Hebrideille 1839, ja presbyteerit menestyivät erityisesti eteläisillä saarilla. Ni-vanuatu…
+AIEMPI KYSYMYS: Kuka oli kuningas Olavi II?
+AIEMPI VASTAUS (Livia):
+Hmm, tämä vaatii hetken. Olavi II Haraldsson oli Norjan kuningas 1000-luvulla. Hänen katsotaan vieneen [[kristinuskon]] vakiintumista Norjassa eteenpäin, ja hänestä tuli maan suojeluspyhimys. Hän kaatui [[Stiklestadin]] taistelussa vuonna 1030 ja julistettiin pyhäksi pian sen jälkeen. Lähteet kertovat tapahtumista eri tavoin, joten yksityiskohdat ovat osin historiantutkijoiden tulkintaa.
+KYSYMYS: Kerro lisää: kristinuskon
+
+### 96
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nidarosin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Nidarosin tuomiokirkko on Norjan kirkon katedraali Trondheimissa. Se on rakennettu kuningas Olavi II:n haudan päälle: Olavi toi kristinuskon Norjaan, hänestä tuli maan suojeluspyhimys, ja hänen kirkossaan vihitään yhä Norjan uudet hallitsijat. Kirkkoa rakennettiin 230 vuotta, vuodesta 1070 vuoteen 1300, jolloin se oli olennaisilta osin valmis; lisäyksiä ja korjauksia on tehty siitä lähtien, ja viimeisin suuri jälleenrakennus alkoi 1869 ja päättyi 2001. Vuonna 1152 kirkosta tuli Nidarosin arkkihiippakunnan katedraali, ja vuonna 1537 se siirtyi uskonpuhdistuksessa vastaperustettuun Norjan kirkkoon. Se on maailman pohjoisin keskiaikainen katedraali, siihen mahtuu noin 1 850 ihmistä, ja sinne saapuu yhä vuosittain tuhansia pyhiinvaeltajia.
+AIEMPI KYSYMYS: Mitä uskonpuhdistus tarkoitti Norjassa?
+AIEMPI VASTAUS (Livia):
+Annas olla. Uskonpuhdistus tarkoitti Norjassa siirtymistä katolisesta kirkosta [[luterilaiseen]] uskontoon 1500-luvulla. Prosessi kulki [[Tanskan]] kuninkaan johdolla, sillä Norja kuului tuolloin Tanskan kuninkaan alaisuuteen, ja vuonna 1537 Nidarosin kirkko siirtyi vastaperustettuun [[Norjan kirkkoon]]. Kirkon omaisuutta ja valtaa siirtyi pitkälti kuninkaalle. Iso aihe, pieni kyyhky, mutta selvisin.
+KYSYMYS: Kerro lisää: luterilaiseen
+
+### 97
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nidarosin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Nidarosin tuomiokirkko on Norjan kirkon katedraali Trondheimissa. Se on rakennettu kuningas Olavi II:n haudan päälle: Olavi toi kristinuskon Norjaan, hänestä tuli maan suojeluspyhimys, ja hänen kirkossaan vihitään yhä Norjan uudet hallitsijat. Kirkkoa rakennettiin 230 vuotta, vuodesta 1070 vuoteen 1300, jolloin se oli olennaisilta osin valmis; lisäyksiä ja korjauksia on tehty siitä lähtien, ja viimeisin suuri jälleenrakennus alkoi 1869 ja päättyi 2001. Vuonna 1152 kirkosta tuli Nidarosin arkkihiippakunnan katedraali, ja vuonna 1537 se siirtyi uskonpuhdistuksessa vastaperustettuun Norjan kirkkoon. Se on maailman pohjoisin keskiaikainen katedraali, siihen mahtuu noin 1 850 ihmistä, ja sinne saapuu yhä vuosittain tuhansia pyhiinvaeltajia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Mitä uskonpuhdistus tarkoitti Norjassa?
+AIEMPI VASTAUS (Livia):
+Annas olla. Uskonpuhdistus tarkoitti Norjassa siirtymistä katolisesta kirkosta [[luterilaiseen]] uskontoon 1500-luvulla. Prosessi kulki [[Tanskan]] kuninkaan johdolla, sillä Norja kuului tuolloin Tanskan kuninkaan alaisuuteen, ja vuonna 1537 Nidarosin kirkko siirtyi vastaperustettuun [[Norjan kirkkoon]]. Kirkon omaisuutta ja valtaa siirtyi pitkälti kuninkaalle. Iso aihe, pieni kyyhky, mutta selvisin.
+KYSYMYS: Kerro lisää: Tanskan
+
+### 98
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nidarosin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Nidarosin tuomiokirkko on Norjan kirkon katedraali Trondheimissa. Se on rakennettu kuningas Olavi II:n haudan päälle: Olavi toi kristinuskon Norjaan, hänestä tuli maan suojeluspyhimys, ja hänen kirkossaan vihitään yhä Norjan uudet hallitsijat. Kirkkoa rakennettiin 230 vuotta, vuodesta 1070 vuoteen 1300, jolloin se oli olennaisilta osin valmis; lisäyksiä ja korjauksia on tehty siitä lähtien, ja viimeisin suuri jälleenrakennus alkoi 1869 ja päättyi 2001. Vuonna 1152 kirkosta tuli Nidarosin arkkihiippakunnan katedraali, ja vuonna 1537 se siirtyi uskonpuhdistuksessa vastaperustettuun Norjan kirkkoon. Se on maailman pohjoisin keskiaikainen katedraali, siihen mahtuu noin 1 850 ihmistä, ja sinne saapuu yhä vuosittain tuhansia pyhiinvaeltajia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia] Norjan historiassa kolme puuta ja yksi kaivo: tervattu keskiaikainen kirkko, koiravaljakko etelänavalla ja porauslautta, joka muutti koko maan talouden.
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan tuomiokirkko] 1861 Tromssan tuomiokirkko on kokonaan puusta rakennettu keltainen kirkko, joka valmistui vuonna 1861 arkkitehti Christian Heinrich Groschin piirustusten mukaan. Se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu puusta - ja sen sisään mahtuu yli 600 kirkkovierasta! Paikalla on ollut kirkko jo satoja vuosia ennen tätäkin: kuningas Håkon IV rakennutti tänne kappelin jo vuonna 1252, ja sen jälkeen paikalla on ollut ainakin kaksi muuta kirkkoa ennen nykyistä rakennusta. Kellotorni valmistui vuotta myöhemmin, 1862, ja kirkkoa koristeltiin lisää vielä 1880-luvulla. Isoisän vieraillessa Tromssassa 1873 kirkko oli vasta reilut kymmenen vuotta vanha - täysin uusi nähtävyys pienessä pu…
+- [Norja — maalehti / Historian hetki: Etelänapa 1911 — viisi miestä ja lipputanko] 14.12.1911 — Telttaan jää kirje. Se on osoitettu Norjan kuninkaalle, ja sen viejäksi pyydetään Robert Scottia — siltä varalta, että Scott saapuu perille mutta viisi norjalaista ei pääse kotiin. Kello on noin kolme iltapäivällä, mittaukset sanovat että tämä on paikka, ja lipputankoon tarttuvat yhdessä Roald Amundsen, Olav Bjaaland, Helmer Hanssen, Sverre Hassel ja Oscar Wisting. Ylätasangon he nimeävät kuningas Haakon VII:n tasangoksi ja teltan Polheimiksi. Seuraavat kolme päivää kuluvat sekstantin ääressä ja hiihtäen navan ympäri ristiin rastiin, jotta paikka olisi todistettavasti oikea: Cookin ja Pearyn riitaiset pohjoisnapaväitteet ovat tuoreessa muistissa. Lipunnosto kestää hetken, ja ko…
+AIEMPI KYSYMYS: Mitä uskonpuhdistus tarkoitti Norjassa?
+AIEMPI VASTAUS (Livia):
+Annas olla. Uskonpuhdistus tarkoitti Norjassa siirtymistä katolisesta kirkosta [[luterilaiseen]] uskontoon 1500-luvulla. Prosessi kulki [[Tanskan]] kuninkaan johdolla, sillä Norja kuului tuolloin Tanskan kuninkaan alaisuuteen, ja vuonna 1537 Nidarosin kirkko siirtyi vastaperustettuun [[Norjan kirkkoon]]. Kirkon omaisuutta ja valtaa siirtyi pitkälti kuninkaalle. Iso aihe, pieni kyyhky, mutta selvisin.
+KYSYMYS: Kerro lisää: Norjan kirkkoon
+
+### 99
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nidarosin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Nidarosin tuomiokirkko on Norjan kirkon katedraali Trondheimissa. Se on rakennettu kuningas Olavi II:n haudan päälle: Olavi toi kristinuskon Norjaan, hänestä tuli maan suojeluspyhimys, ja hänen kirkossaan vihitään yhä Norjan uudet hallitsijat. Kirkkoa rakennettiin 230 vuotta, vuodesta 1070 vuoteen 1300, jolloin se oli olennaisilta osin valmis; lisäyksiä ja korjauksia on tehty siitä lähtien, ja viimeisin suuri jälleenrakennus alkoi 1869 ja päättyi 2001. Vuonna 1152 kirkosta tuli Nidarosin arkkihiippakunnan katedraali, ja vuonna 1537 se siirtyi uskonpuhdistuksessa vastaperustettuun Norjan kirkkoon. Se on maailman pohjoisin keskiaikainen katedraali, siihen mahtuu noin 1 850 ihmistä, ja sinne saapuu yhä vuosittain tuhansia pyhiinvaeltajia.
+AIEMPI KYSYMYS: Mikä on Pyhän Olavin tie?
+AIEMPI VASTAUS (Livia):
+Ai se reitti. Pyhän Olavin tie on joukko [[pyhiinvaellusreittejä]], jotka johtavat Trondheimin Nidarosin tuomiokirkolle. Reitit mukailevat perinteisiä kulkureittejä Olavin haudalle, ja tunnetuin niistä lähtee [[Oslosta]] ja kulkee [[Gudbrandsdalenin]] laakson kautta. Vaelluksen voi tehdä jalan monien päivien aikana.
+
+Minä kuljen matkan siivin, mutta jalan se on varmasti ihan toinen juttu.
+KYSYMYS: Kerro lisää: pyhiinvaellusreittejä
+
+### 100
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nidarosin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Nidarosin tuomiokirkko on Norjan kirkon katedraali Trondheimissa. Se on rakennettu kuningas Olavi II:n haudan päälle: Olavi toi kristinuskon Norjaan, hänestä tuli maan suojeluspyhimys, ja hänen kirkossaan vihitään yhä Norjan uudet hallitsijat. Kirkkoa rakennettiin 230 vuotta, vuodesta 1070 vuoteen 1300, jolloin se oli olennaisilta osin valmis; lisäyksiä ja korjauksia on tehty siitä lähtien, ja viimeisin suuri jälleenrakennus alkoi 1869 ja päättyi 2001. Vuonna 1152 kirkosta tuli Nidarosin arkkihiippakunnan katedraali, ja vuonna 1537 se siirtyi uskonpuhdistuksessa vastaperustettuun Norjan kirkkoon. Se on maailman pohjoisin keskiaikainen katedraali, siihen mahtuu noin 1 850 ihmistä, ja sinne saapuu yhä vuosittain tuhansia pyhiinvaeltajia.
+AIEMPI KYSYMYS: Mikä on Pyhän Olavin tie?
+AIEMPI VASTAUS (Livia):
+Ai se reitti. Pyhän Olavin tie on joukko [[pyhiinvaellusreittejä]], jotka johtavat Trondheimin Nidarosin tuomiokirkolle. Reitit mukailevat perinteisiä kulkureittejä Olavin haudalle, ja tunnetuin niistä lähtee [[Oslosta]] ja kulkee [[Gudbrandsdalenin]] laakson kautta. Vaelluksen voi tehdä jalan monien päivien aikana.
+
+Minä kuljen matkan siivin, mutta jalan se on varmasti ihan toinen juttu.
+KYSYMYS: Kerro lisää: Oslosta
+
+### 101
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nidarosin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Nidarosin tuomiokirkko on Norjan kirkon katedraali Trondheimissa. Se on rakennettu kuningas Olavi II:n haudan päälle: Olavi toi kristinuskon Norjaan, hänestä tuli maan suojeluspyhimys, ja hänen kirkossaan vihitään yhä Norjan uudet hallitsijat. Kirkkoa rakennettiin 230 vuotta, vuodesta 1070 vuoteen 1300, jolloin se oli olennaisilta osin valmis; lisäyksiä ja korjauksia on tehty siitä lähtien, ja viimeisin suuri jälleenrakennus alkoi 1869 ja päättyi 2001. Vuonna 1152 kirkosta tuli Nidarosin arkkihiippakunnan katedraali, ja vuonna 1537 se siirtyi uskonpuhdistuksessa vastaperustettuun Norjan kirkkoon. Se on maailman pohjoisin keskiaikainen katedraali, siihen mahtuu noin 1 850 ihmistä, ja sinne saapuu yhä vuosittain tuhansia pyhiinvaeltajia.
+AIEMPI KYSYMYS: Mikä on Pyhän Olavin tie?
+AIEMPI VASTAUS (Livia):
+Ai se reitti. Pyhän Olavin tie on joukko [[pyhiinvaellusreittejä]], jotka johtavat Trondheimin Nidarosin tuomiokirkolle. Reitit mukailevat perinteisiä kulkureittejä Olavin haudalle, ja tunnetuin niistä lähtee [[Oslosta]] ja kulkee [[Gudbrandsdalenin]] laakson kautta. Vaelluksen voi tehdä jalan monien päivien aikana.
+
+Minä kuljen matkan siivin, mutta jalan se on varmasti ihan toinen juttu.
+KYSYMYS: Kerro lisää: Gudbrandsdalenin
+
+### 102
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vemork (tekniikka)
+Tietoruudun teksti: Vemork on vesivoimalaitos ja museo Rjukanin kaupungin ulkopuolella Telemarkissa Norjassa. Norsk Hydro rakensi sen ja avasi vuonna 1911 typen sitomista ja lannoitteiden valmistusta varten, ja 108 megawatin teholla se oli avautuessaan maailman suurin voimalaitos. Myöhemmin Vemorkiin tuli maailman ensimmäinen laitos, joka valmisti raskasta vettä suurina erinä; tuotanto alkoi joulukuussa 1934. Toisessa maailmansodassa laitosta pidettiin niin vakavana uhkana — pelkona oli saksalaisten atomipommi — että sitä vastaan tehtiin ainakin viisi erillistä hyökkäystä: helmikuussa 1943 laskuvarjoilla pudotetut norjalaisagentit tuhosivat operaatiossa Gunnerside laitoksen raskaan veden osaston ja 500 kiloa tuotetta, ja helmikuussa 1944 vastarintaliike upotti lautan, joka vei lastia Saksaan. Myöhemmin selvisi, etteivät saksalaiset olleet lähelläkään pommia; raskaan veden laitos suljettiin 1971, ja voimala…
+AIEMPI KYSYMYS: Mitä raskas vesi on?
+AIEMPI VASTAUS (Livia):
+Ahaa, tämä on hyvä. Raskas vesi on vettä, jossa tavallisen vetyatomin tilalla on raskaampi vedyn isotooppi eli [[deuterium]]. Se muistuttaa ulkonäöltään tavallista vettä, mutta on hieman tiheämpää. Raskasta vettä käytetään [[ydinreaktoreissa]] hidastamaan neutroneja, ja siksi se kiinnosti sotavuosina. [[Vemorkissa]] sen tuotanto alkoi joulukuussa 1934. Vesi on vettä, vaikka olisi raskasta.
+KYSYMYS: Kerro lisää: deuterium
+
+### 103
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vemork (tekniikka)
+Tietoruudun teksti: Vemork on vesivoimalaitos ja museo Rjukanin kaupungin ulkopuolella Telemarkissa Norjassa. Norsk Hydro rakensi sen ja avasi vuonna 1911 typen sitomista ja lannoitteiden valmistusta varten, ja 108 megawatin teholla se oli avautuessaan maailman suurin voimalaitos. Myöhemmin Vemorkiin tuli maailman ensimmäinen laitos, joka valmisti raskasta vettä suurina erinä; tuotanto alkoi joulukuussa 1934. Toisessa maailmansodassa laitosta pidettiin niin vakavana uhkana — pelkona oli saksalaisten atomipommi — että sitä vastaan tehtiin ainakin viisi erillistä hyökkäystä: helmikuussa 1943 laskuvarjoilla pudotetut norjalaisagentit tuhosivat operaatiossa Gunnerside laitoksen raskaan veden osaston ja 500 kiloa tuotetta, ja helmikuussa 1944 vastarintaliike upotti lautan, joka vei lastia Saksaan. Myöhemmin selvisi, etteivät saksalaiset olleet lähelläkään pommia; raskaan veden laitos suljettiin 1971, ja voimala…
+AIEMPI KYSYMYS: Mitä raskas vesi on?
+AIEMPI VASTAUS (Livia):
+Ahaa, tämä on hyvä. Raskas vesi on vettä, jossa tavallisen vetyatomin tilalla on raskaampi vedyn isotooppi eli [[deuterium]]. Se muistuttaa ulkonäöltään tavallista vettä, mutta on hieman tiheämpää. Raskasta vettä käytetään [[ydinreaktoreissa]] hidastamaan neutroneja, ja siksi se kiinnosti sotavuosina. [[Vemorkissa]] sen tuotanto alkoi joulukuussa 1934. Vesi on vettä, vaikka olisi raskasta.
+KYSYMYS: Kerro lisää: ydinreaktoreissa
+
+### 104
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vemork (tekniikka)
+Tietoruudun teksti: Vemork on vesivoimalaitos ja museo Rjukanin kaupungin ulkopuolella Telemarkissa Norjassa. Norsk Hydro rakensi sen ja avasi vuonna 1911 typen sitomista ja lannoitteiden valmistusta varten, ja 108 megawatin teholla se oli avautuessaan maailman suurin voimalaitos. Myöhemmin Vemorkiin tuli maailman ensimmäinen laitos, joka valmisti raskasta vettä suurina erinä; tuotanto alkoi joulukuussa 1934. Toisessa maailmansodassa laitosta pidettiin niin vakavana uhkana — pelkona oli saksalaisten atomipommi — että sitä vastaan tehtiin ainakin viisi erillistä hyökkäystä: helmikuussa 1943 laskuvarjoilla pudotetut norjalaisagentit tuhosivat operaatiossa Gunnerside laitoksen raskaan veden osaston ja 500 kiloa tuotetta, ja helmikuussa 1944 vastarintaliike upotti lautan, joka vei lastia Saksaan. Myöhemmin selvisi, etteivät saksalaiset olleet lähelläkään pommia; raskaan veden laitos suljettiin 1971, ja voimala…
+AIEMPI KYSYMYS: Mitä raskas vesi on?
+AIEMPI VASTAUS (Livia):
+Ahaa, tämä on hyvä. Raskas vesi on vettä, jossa tavallisen vetyatomin tilalla on raskaampi vedyn isotooppi eli [[deuterium]]. Se muistuttaa ulkonäöltään tavallista vettä, mutta on hieman tiheämpää. Raskasta vettä käytetään [[ydinreaktoreissa]] hidastamaan neutroneja, ja siksi se kiinnosti sotavuosina. [[Vemorkissa]] sen tuotanto alkoi joulukuussa 1934. Vesi on vettä, vaikka olisi raskasta.
+KYSYMYS: Kerro lisää: Vemorkissa
+
+### 105
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vemork (tekniikka)
+Tietoruudun teksti: Vemork on vesivoimalaitos ja museo Rjukanin kaupungin ulkopuolella Telemarkissa Norjassa. Norsk Hydro rakensi sen ja avasi vuonna 1911 typen sitomista ja lannoitteiden valmistusta varten, ja 108 megawatin teholla se oli avautuessaan maailman suurin voimalaitos. Myöhemmin Vemorkiin tuli maailman ensimmäinen laitos, joka valmisti raskasta vettä suurina erinä; tuotanto alkoi joulukuussa 1934. Toisessa maailmansodassa laitosta pidettiin niin vakavana uhkana — pelkona oli saksalaisten atomipommi — että sitä vastaan tehtiin ainakin viisi erillistä hyökkäystä: helmikuussa 1943 laskuvarjoilla pudotetut norjalaisagentit tuhosivat operaatiossa Gunnerside laitoksen raskaan veden osaston ja 500 kiloa tuotetta, ja helmikuussa 1944 vastarintaliike upotti lautan, joka vei lastia Saksaan. Myöhemmin selvisi, etteivät saksalaiset olleet lähelläkään pommia; raskaan veden laitos suljettiin 1971, ja voimala…
+AIEMPI KYSYMYS: Mikä oli operaatio Gunnerside?
+AIEMPI VASTAUS (Livia):
+Selvä, tämä on vakavaa asiaa. Operaatio Gunnerside oli helmikuussa 1943 tehty sabotaasioperaatio, jossa laskuvarjolla pudotetut norjalaisagentit tuhosivat [[Vemorkin]] laitoksen raskaan veden osaston ja noin 500 kiloa tuotetta. Syynä oli pelko siitä, että saksalaiset voisivat käyttää raskasta vettä atomipommin kehittämiseen, ja operaatiota tuki [[liittoutuneiden]] johto. Myöhemmin selvisi, etteivät saksalaiset olleet lähelläkään pommia. Laitosta vastaan tehtiin ainakin viisi hyökkäystä, ja helmikuussa 1944 [[vastarintaliike]] upotti lautan, joka vei lastia Saksaan. Siitä on onneksi yli kahdeksankymmentä vuotta.
+KYSYMYS: Kerro lisää: Vemorkin
+
+### 106
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vemork (tekniikka)
+Tietoruudun teksti: Vemork on vesivoimalaitos ja museo Rjukanin kaupungin ulkopuolella Telemarkissa Norjassa. Norsk Hydro rakensi sen ja avasi vuonna 1911 typen sitomista ja lannoitteiden valmistusta varten, ja 108 megawatin teholla se oli avautuessaan maailman suurin voimalaitos. Myöhemmin Vemorkiin tuli maailman ensimmäinen laitos, joka valmisti raskasta vettä suurina erinä; tuotanto alkoi joulukuussa 1934. Toisessa maailmansodassa laitosta pidettiin niin vakavana uhkana — pelkona oli saksalaisten atomipommi — että sitä vastaan tehtiin ainakin viisi erillistä hyökkäystä: helmikuussa 1943 laskuvarjoilla pudotetut norjalaisagentit tuhosivat operaatiossa Gunnerside laitoksen raskaan veden osaston ja 500 kiloa tuotetta, ja helmikuussa 1944 vastarintaliike upotti lautan, joka vei lastia Saksaan. Myöhemmin selvisi, etteivät saksalaiset olleet lähelläkään pommia; raskaan veden laitos suljettiin 1971, ja voimala…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: ANZAC-aukio] 1930 Ensimmäinen maailmansota verotti Australiaa raskaasti. Noin viiden miljoonan asukkaan maasta kaatui 60 000 sotilasta ja haavoittui 152 000; tappio-osuus 68,5 prosenttia oli liittoutuneiden korkein. Ajatus suuresta muistopuistosta keskelle kaupunkia esitettiin jo 1916. Alkuperäinen suunnitelma varasi koko korttelin Annin, Edwardin, Adelaiden ja Creekin katujen välissä, mutta neuvottelut kutistivat alueen; 1928 valtio ja liittovaltio luovuttivat maat ja lupasivat rakentaa reunoille yhtenäisen suunnitelman mukaiset talot. Muistokappelin suunnittelukilpailun voittivat 1928 sydneyläiset arkkitehdit Buchanan ja Cowper. Queenslandin kuvernööri sir John Goodwin vihki aukion ja kappelin aselepo…
+- [Brisbane — kohdekartta / Kohdekartta: MacArthurin talo] 1934 Talo rakennettiin 1931–1934 vakuutusyhtiö AMP:n Queenslandin pääkonttoriksi, ja se korvasi kaksi aiempaa AMP:n taloa samalla tontilla. Ajoitus kertoo yhtiön vahvuudesta: konttori nousi 1930-luvun laman pahimpina vuosina. Suunnittelijoina olivat Francis Richard Hall ja Harold M. Cook, rakentajana Brisbanen mestarirakentaja George A. Stronach, ja hinta oli noin 255 000 puntaa. Jalustan graniitti testautettiin Queenslandin yliopistolla ennen rakentamista, ja teräsrunko koottiin pulteilla eikä niiteillä — vuoden 1932 Brisbanessa se oli uutta. Pääsisäänkäynnin yläpuolisen kuvaelman veisti sydneyläinen Fred Gowan sisilialaisesta marmorista. Se kuvittaa yhtiön tunnuslausetta ”Amicus certus in…
+AIEMPI KYSYMYS: Mikä oli operaatio Gunnerside?
+AIEMPI VASTAUS (Livia):
+Selvä, tämä on vakavaa asiaa. Operaatio Gunnerside oli helmikuussa 1943 tehty sabotaasioperaatio, jossa laskuvarjolla pudotetut norjalaisagentit tuhosivat [[Vemorkin]] laitoksen raskaan veden osaston ja noin 500 kiloa tuotetta. Syynä oli pelko siitä, että saksalaiset voisivat käyttää raskasta vettä atomipommin kehittämiseen, ja operaatiota tuki [[liittoutuneiden]] johto. Myöhemmin selvisi, etteivät saksalaiset olleet lähelläkään pommia. Laitosta vastaan tehtiin ainakin viisi hyökkäystä, ja helmikuussa 1944 [[vastarintaliike]] upotti lautan, joka vei lastia Saksaan. Siitä on onneksi yli kahdeksankymmentä vuotta.
+KYSYMYS: Kerro lisää: liittoutuneiden
+
+### 107
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vemork (tekniikka)
+Tietoruudun teksti: Vemork on vesivoimalaitos ja museo Rjukanin kaupungin ulkopuolella Telemarkissa Norjassa. Norsk Hydro rakensi sen ja avasi vuonna 1911 typen sitomista ja lannoitteiden valmistusta varten, ja 108 megawatin teholla se oli avautuessaan maailman suurin voimalaitos. Myöhemmin Vemorkiin tuli maailman ensimmäinen laitos, joka valmisti raskasta vettä suurina erinä; tuotanto alkoi joulukuussa 1934. Toisessa maailmansodassa laitosta pidettiin niin vakavana uhkana — pelkona oli saksalaisten atomipommi — että sitä vastaan tehtiin ainakin viisi erillistä hyökkäystä: helmikuussa 1943 laskuvarjoilla pudotetut norjalaisagentit tuhosivat operaatiossa Gunnerside laitoksen raskaan veden osaston ja 500 kiloa tuotetta, ja helmikuussa 1944 vastarintaliike upotti lautan, joka vei lastia Saksaan. Myöhemmin selvisi, etteivät saksalaiset olleet lähelläkään pommia; raskaan veden laitos suljettiin 1971, ja voimala…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mikä oli operaatio Gunnerside?
+AIEMPI VASTAUS (Livia):
+Selvä, tämä on vakavaa asiaa. Operaatio Gunnerside oli helmikuussa 1943 tehty sabotaasioperaatio, jossa laskuvarjolla pudotetut norjalaisagentit tuhosivat [[Vemorkin]] laitoksen raskaan veden osaston ja noin 500 kiloa tuotetta. Syynä oli pelko siitä, että saksalaiset voisivat käyttää raskasta vettä atomipommin kehittämiseen, ja operaatiota tuki [[liittoutuneiden]] johto. Myöhemmin selvisi, etteivät saksalaiset olleet lähelläkään pommia. Laitosta vastaan tehtiin ainakin viisi hyökkäystä, ja helmikuussa 1944 [[vastarintaliike]] upotti lautan, joka vei lastia Saksaan. Siitä on onneksi yli kahdeksankymmentä vuotta.
+KYSYMYS: Kerro lisää: vastarintaliike
+
+### 108
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vemork (tekniikka)
+Tietoruudun teksti: Vemork on vesivoimalaitos ja museo Rjukanin kaupungin ulkopuolella Telemarkissa Norjassa. Norsk Hydro rakensi sen ja avasi vuonna 1911 typen sitomista ja lannoitteiden valmistusta varten, ja 108 megawatin teholla se oli avautuessaan maailman suurin voimalaitos. Myöhemmin Vemorkiin tuli maailman ensimmäinen laitos, joka valmisti raskasta vettä suurina erinä; tuotanto alkoi joulukuussa 1934. Toisessa maailmansodassa laitosta pidettiin niin vakavana uhkana — pelkona oli saksalaisten atomipommi — että sitä vastaan tehtiin ainakin viisi erillistä hyökkäystä: helmikuussa 1943 laskuvarjoilla pudotetut norjalaisagentit tuhosivat operaatiossa Gunnerside laitoksen raskaan veden osaston ja 500 kiloa tuotetta, ja helmikuussa 1944 vastarintaliike upotti lautan, joka vei lastia Saksaan. Myöhemmin selvisi, etteivät saksalaiset olleet lähelläkään pommia; raskaan veden laitos suljettiin 1971, ja voimala…
+AIEMPI KYSYMYS: Mitä typen sitominen tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Kemiaa, selvä. Typen sitominen tarkoittaa ilmassa olevan typen muuttamista yhdisteiksi, joita kasvit voivat käyttää. Ilmakehän typpi on kaasumaisena kasveille käyttökelvotonta, mutta kun siitä valmistetaan esimerkiksi [[typpihappoa]] tai [[ammoniakkia]], siitä saadaan lannoitteita. [[Norsk Hydro]] rakensi Vemorkin voimalaitoksen tätä varten, sillä aikoinaan menetelmä vaati paljon sähköä, jota vesivoima tuotti edullisesti. Ilmasta lannoitetta, kyl se vaan on kemistin taikaa.
+KYSYMYS: Kerro lisää: typpihappoa
+
+### 109
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vemork (tekniikka)
+Tietoruudun teksti: Vemork on vesivoimalaitos ja museo Rjukanin kaupungin ulkopuolella Telemarkissa Norjassa. Norsk Hydro rakensi sen ja avasi vuonna 1911 typen sitomista ja lannoitteiden valmistusta varten, ja 108 megawatin teholla se oli avautuessaan maailman suurin voimalaitos. Myöhemmin Vemorkiin tuli maailman ensimmäinen laitos, joka valmisti raskasta vettä suurina erinä; tuotanto alkoi joulukuussa 1934. Toisessa maailmansodassa laitosta pidettiin niin vakavana uhkana — pelkona oli saksalaisten atomipommi — että sitä vastaan tehtiin ainakin viisi erillistä hyökkäystä: helmikuussa 1943 laskuvarjoilla pudotetut norjalaisagentit tuhosivat operaatiossa Gunnerside laitoksen raskaan veden osaston ja 500 kiloa tuotetta, ja helmikuussa 1944 vastarintaliike upotti lautan, joka vei lastia Saksaan. Myöhemmin selvisi, etteivät saksalaiset olleet lähelläkään pommia; raskaan veden laitos suljettiin 1971, ja voimala…
+AIEMPI KYSYMYS: Mitä typen sitominen tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Kemiaa, selvä. Typen sitominen tarkoittaa ilmassa olevan typen muuttamista yhdisteiksi, joita kasvit voivat käyttää. Ilmakehän typpi on kaasumaisena kasveille käyttökelvotonta, mutta kun siitä valmistetaan esimerkiksi [[typpihappoa]] tai [[ammoniakkia]], siitä saadaan lannoitteita. [[Norsk Hydro]] rakensi Vemorkin voimalaitoksen tätä varten, sillä aikoinaan menetelmä vaati paljon sähköä, jota vesivoima tuotti edullisesti. Ilmasta lannoitetta, kyl se vaan on kemistin taikaa.
+KYSYMYS: Kerro lisää: ammoniakkia
+
+### 110
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vemork (tekniikka)
+Tietoruudun teksti: Vemork on vesivoimalaitos ja museo Rjukanin kaupungin ulkopuolella Telemarkissa Norjassa. Norsk Hydro rakensi sen ja avasi vuonna 1911 typen sitomista ja lannoitteiden valmistusta varten, ja 108 megawatin teholla se oli avautuessaan maailman suurin voimalaitos. Myöhemmin Vemorkiin tuli maailman ensimmäinen laitos, joka valmisti raskasta vettä suurina erinä; tuotanto alkoi joulukuussa 1934. Toisessa maailmansodassa laitosta pidettiin niin vakavana uhkana — pelkona oli saksalaisten atomipommi — että sitä vastaan tehtiin ainakin viisi erillistä hyökkäystä: helmikuussa 1943 laskuvarjoilla pudotetut norjalaisagentit tuhosivat operaatiossa Gunnerside laitoksen raskaan veden osaston ja 500 kiloa tuotetta, ja helmikuussa 1944 vastarintaliike upotti lautan, joka vei lastia Saksaan. Myöhemmin selvisi, etteivät saksalaiset olleet lähelläkään pommia; raskaan veden laitos suljettiin 1971, ja voimala…
+AIEMPI KYSYMYS: Mitä typen sitominen tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Kemiaa, selvä. Typen sitominen tarkoittaa ilmassa olevan typen muuttamista yhdisteiksi, joita kasvit voivat käyttää. Ilmakehän typpi on kaasumaisena kasveille käyttökelvotonta, mutta kun siitä valmistetaan esimerkiksi [[typpihappoa]] tai [[ammoniakkia]], siitä saadaan lannoitteita. [[Norsk Hydro]] rakensi Vemorkin voimalaitoksen tätä varten, sillä aikoinaan menetelmä vaati paljon sähköä, jota vesivoima tuotti edullisesti. Ilmasta lannoitetta, kyl se vaan on kemistin taikaa.
+KYSYMYS: Kerro lisää: Norsk Hydro
+
+### 111
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vemork (tekniikka)
+Tietoruudun teksti: Vemork on vesivoimalaitos ja museo Rjukanin kaupungin ulkopuolella Telemarkissa Norjassa. Norsk Hydro rakensi sen ja avasi vuonna 1911 typen sitomista ja lannoitteiden valmistusta varten, ja 108 megawatin teholla se oli avautuessaan maailman suurin voimalaitos. Myöhemmin Vemorkiin tuli maailman ensimmäinen laitos, joka valmisti raskasta vettä suurina erinä; tuotanto alkoi joulukuussa 1934. Toisessa maailmansodassa laitosta pidettiin niin vakavana uhkana — pelkona oli saksalaisten atomipommi — että sitä vastaan tehtiin ainakin viisi erillistä hyökkäystä: helmikuussa 1943 laskuvarjoilla pudotetut norjalaisagentit tuhosivat operaatiossa Gunnerside laitoksen raskaan veden osaston ja 500 kiloa tuotetta, ja helmikuussa 1944 vastarintaliike upotti lautan, joka vei lastia Saksaan. Myöhemmin selvisi, etteivät saksalaiset olleet lähelläkään pommia; raskaan veden laitos suljettiin 1971, ja voimala…
+AIEMPI KYSYMYS: Miksi Rjukan jää talvisin varjoon?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Rjukan sijaitsee [[Telemarkissa]] kapeassa laaksossa jyrkkien vuorten juurella, ja talvella aurinko jää niin matalalle, ettei se yllä kaupunkiin. Varjoisuutta on pyritty lieventämään: kaupungin aukiolle ohjataan vuoren rinteelle sijoitettujen [[peilien]] avulla auringonvaloa, ja nämä peilit asennettiin vuonna 2013.
+
+Laakso näyttää ylhäältä kapealta kaivolta, ja minusta peilit ovat nokkela ratkaisu.
+KYSYMYS: Kerro lisää: Telemarkissa
+
+### 112
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vemork (tekniikka)
+Tietoruudun teksti: Vemork on vesivoimalaitos ja museo Rjukanin kaupungin ulkopuolella Telemarkissa Norjassa. Norsk Hydro rakensi sen ja avasi vuonna 1911 typen sitomista ja lannoitteiden valmistusta varten, ja 108 megawatin teholla se oli avautuessaan maailman suurin voimalaitos. Myöhemmin Vemorkiin tuli maailman ensimmäinen laitos, joka valmisti raskasta vettä suurina erinä; tuotanto alkoi joulukuussa 1934. Toisessa maailmansodassa laitosta pidettiin niin vakavana uhkana — pelkona oli saksalaisten atomipommi — että sitä vastaan tehtiin ainakin viisi erillistä hyökkäystä: helmikuussa 1943 laskuvarjoilla pudotetut norjalaisagentit tuhosivat operaatiossa Gunnerside laitoksen raskaan veden osaston ja 500 kiloa tuotetta, ja helmikuussa 1944 vastarintaliike upotti lautan, joka vei lastia Saksaan. Myöhemmin selvisi, etteivät saksalaiset olleet lähelläkään pommia; raskaan veden laitos suljettiin 1971, ja voimala…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sierra Leone — maalehti / Kuvataide: Naamio, jonka otsassa on peili] Mendejen naamiokalenterissa on toistakymmentä hahmoa, ja voimakkain niistä on gbini. Se saapuu vain suuriin hetkiin: Poro-seuran initiaation päätökseen, kun kyseessä on ylipäällikön poika, sekä ylipäällikön kruunajaisiin ja hautajaisiin. Asuun kuuluu leopardinnahka, ja litteä pyöreä päähine on tehty eläimennahasta bambukehikon päälle: koristeena kaurisimpukoita ja mustia, valkoisia ja punaisia kangassuikaleita, keskellä pyöreä peili. Samassa perinteessä on myös pellehahmoja — gongoli, gonde ja samawa — joiden esitykset ovat huumoria, satiiria ja parodiaa.
+AIEMPI KYSYMYS: Miksi Rjukan jää talvisin varjoon?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Rjukan sijaitsee [[Telemarkissa]] kapeassa laaksossa jyrkkien vuorten juurella, ja talvella aurinko jää niin matalalle, ettei se yllä kaupunkiin. Varjoisuutta on pyritty lieventämään: kaupungin aukiolle ohjataan vuoren rinteelle sijoitettujen [[peilien]] avulla auringonvaloa, ja nämä peilit asennettiin vuonna 2013.
+
+Laakso näyttää ylhäältä kapealta kaivolta, ja minusta peilit ovat nokkela ratkaisu.
+KYSYMYS: Kerro lisää: peilien
+
+### 113
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vemork (tekniikka)
+Tietoruudun teksti: Vemork on vesivoimalaitos ja museo Rjukanin kaupungin ulkopuolella Telemarkissa Norjassa. Norsk Hydro rakensi sen ja avasi vuonna 1911 typen sitomista ja lannoitteiden valmistusta varten, ja 108 megawatin teholla se oli avautuessaan maailman suurin voimalaitos. Myöhemmin Vemorkiin tuli maailman ensimmäinen laitos, joka valmisti raskasta vettä suurina erinä; tuotanto alkoi joulukuussa 1934. Toisessa maailmansodassa laitosta pidettiin niin vakavana uhkana — pelkona oli saksalaisten atomipommi — että sitä vastaan tehtiin ainakin viisi erillistä hyökkäystä: helmikuussa 1943 laskuvarjoilla pudotetut norjalaisagentit tuhosivat operaatiossa Gunnerside laitoksen raskaan veden osaston ja 500 kiloa tuotetta, ja helmikuussa 1944 vastarintaliike upotti lautan, joka vei lastia Saksaan. Myöhemmin selvisi, etteivät saksalaiset olleet lähelläkään pommia; raskaan veden laitos suljettiin 1971, ja voimala…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Paraguay — maalehti / Luonto: Pato, joka valaisee kaksi maata] 1984 — Itaipú valmistui 1984 Paranálle Paraguayn ja Brasilian rajalle. Nimi tulee guaranista ja tarkoittaa soivaa kiveä. Voimalassa on kaksikymmentä turbiinia, kukin 700 megawattia, eli yhteensä 14 gigawattia; putouskorkeus on 118 metriä. Kymmenen turbiinia pyörii Paraguayn taajuudella ja kymmenen Brasilian, sillä maiden sähköverkot eivät ole yhteensopivia. Paraguayn puolikas ylittää moninkertaisesti maan oman kulutuksen, joten ylijäämä myydään Brasiliaan ja siirretään kahdella kahdeksansadan kilometrin tasavirtajohdolla.
+AIEMPI KYSYMYS: Miten vesivoimalaitos tuottaa sähköä?
+AIEMPI VASTAUS (Livia):
+Vesivoimaa, kas näin. Pöllö on kutsuttu puhumaan johonkin, joten minä selitän. Vesivoimalaitoksessa putoava tai virtaava vesi pyörittää [[turbiinia]], joka on kytketty [[generaattoriin]]. Generaattori muuttaa pyörimisliikkeen sähköksi. Mitä suurempi putouskorkeus ja vesimäärä on, sitä enemmän energiaa voidaan tuottaa. Norjassa vuoristo ja runsaat sateet tekevät vesivoimasta tärkeän energialähteen, ja Vemork hyödynsi aikoinaan alueen vesiputousta. Minä en ole koskaan käynyt turbiinin sisällä, ja hyvä niin.
+KYSYMYS: Kerro lisää: turbiinia
+
+### 114
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vemork (tekniikka)
+Tietoruudun teksti: Vemork on vesivoimalaitos ja museo Rjukanin kaupungin ulkopuolella Telemarkissa Norjassa. Norsk Hydro rakensi sen ja avasi vuonna 1911 typen sitomista ja lannoitteiden valmistusta varten, ja 108 megawatin teholla se oli avautuessaan maailman suurin voimalaitos. Myöhemmin Vemorkiin tuli maailman ensimmäinen laitos, joka valmisti raskasta vettä suurina erinä; tuotanto alkoi joulukuussa 1934. Toisessa maailmansodassa laitosta pidettiin niin vakavana uhkana — pelkona oli saksalaisten atomipommi — että sitä vastaan tehtiin ainakin viisi erillistä hyökkäystä: helmikuussa 1943 laskuvarjoilla pudotetut norjalaisagentit tuhosivat operaatiossa Gunnerside laitoksen raskaan veden osaston ja 500 kiloa tuotetta, ja helmikuussa 1944 vastarintaliike upotti lautan, joka vei lastia Saksaan. Myöhemmin selvisi, etteivät saksalaiset olleet lähelläkään pommia; raskaan veden laitos suljettiin 1971, ja voimala…
+AIEMPI KYSYMYS: Miten vesivoimalaitos tuottaa sähköä?
+AIEMPI VASTAUS (Livia):
+Vesivoimaa, kas näin. Pöllö on kutsuttu puhumaan johonkin, joten minä selitän. Vesivoimalaitoksessa putoava tai virtaava vesi pyörittää [[turbiinia]], joka on kytketty [[generaattoriin]]. Generaattori muuttaa pyörimisliikkeen sähköksi. Mitä suurempi putouskorkeus ja vesimäärä on, sitä enemmän energiaa voidaan tuottaa. Norjassa vuoristo ja runsaat sateet tekevät vesivoimasta tärkeän energialähteen, ja Vemork hyödynsi aikoinaan alueen vesiputousta. Minä en ole koskaan käynyt turbiinin sisällä, ja hyvä niin.
+KYSYMYS: Kerro lisää: generaattoriin
+
+### 115
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flåmsbana (tekniikka)
+Tietoruudun teksti: Flåmsbana on 20,2 kilometrin pituinen rautatie Myrdalin ja Flåmin välillä Aurlandissa Vestlandissa. Se on Bergenin radan haara, kulkee Flåmsdalenin laaksoa pitkin ja yhdistää pääradan Sognefjordiin; korkeusero on 866 metriä, ja radalla on kaksikymmentä tunnelia ja yksi silta. Suurin nousu on 5,5 prosenttia eli 1:18, mikä tekee siitä Euroopan jyrkimmän normaaliraiteisen rautatien, ja ylämäkeen saa ajaa 40 ja alamäkeen 30 kilometriä tunnissa. Rakentaminen alkoi vuonna 1924, rata avattiin 1940 ja sähköveto otettiin käyttöön 1944. Tavaraliikenne loppui 1992, ja halvat liput ja kalliit käyttökustannukset veivät radan lakkautuksen partaalle, kunnes Flåm Utvikling otti vuonna 1998 markkinoinnin ja lipunmyynnin hoitaakseen ja nosti hintoja rajusti — nykyään rata on Norjan kolmanneksi suosituin matkailukohde.
+AIEMPI KYSYMYS: Kuinka jyrkkä rata on?
+AIEMPI VASTAUS (Livia):
+Kato, tää on semmonen rata ettei veturikaan hengitä rauhassa. Suurin nousu on 5,5 prosenttia eli 1:18, joten kahdeksantoista metrin matkalla rata nousee yhden metrin. Tietojen mukaan se on yksi Euroopan jyrkimmistä tavallisella raideleveydellä kulkevista rautateistä. Rata on 20,2 kilometriä pitkä ja nousee [[Myrdalin]] ja [[Flåmin]] välillä 866 metriä, minkä vuoksi nopeudet pidetään matalina: ylämäkeen saa ajaa 40 ja alamäkeen 30 kilometriä tunnissa. Ja minä kun luulin, että kyyhkyn nousu on jyrkkä.
+KYSYMYS: Kerro lisää: Myrdalin
+
+### 116
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flåmsbana (tekniikka)
+Tietoruudun teksti: Flåmsbana on 20,2 kilometrin pituinen rautatie Myrdalin ja Flåmin välillä Aurlandissa Vestlandissa. Se on Bergenin radan haara, kulkee Flåmsdalenin laaksoa pitkin ja yhdistää pääradan Sognefjordiin; korkeusero on 866 metriä, ja radalla on kaksikymmentä tunnelia ja yksi silta. Suurin nousu on 5,5 prosenttia eli 1:18, mikä tekee siitä Euroopan jyrkimmän normaaliraiteisen rautatien, ja ylämäkeen saa ajaa 40 ja alamäkeen 30 kilometriä tunnissa. Rakentaminen alkoi vuonna 1924, rata avattiin 1940 ja sähköveto otettiin käyttöön 1944. Tavaraliikenne loppui 1992, ja halvat liput ja kalliit käyttökustannukset veivät radan lakkautuksen partaalle, kunnes Flåm Utvikling otti vuonna 1998 markkinoinnin ja lipunmyynnin hoitaakseen ja nosti hintoja rajusti — nykyään rata on Norjan kolmanneksi suosituin matkailukohde.
+AIEMPI KYSYMYS: Kuinka jyrkkä rata on?
+AIEMPI VASTAUS (Livia):
+Kato, tää on semmonen rata ettei veturikaan hengitä rauhassa. Suurin nousu on 5,5 prosenttia eli 1:18, joten kahdeksantoista metrin matkalla rata nousee yhden metrin. Tietojen mukaan se on yksi Euroopan jyrkimmistä tavallisella raideleveydellä kulkevista rautateistä. Rata on 20,2 kilometriä pitkä ja nousee [[Myrdalin]] ja [[Flåmin]] välillä 866 metriä, minkä vuoksi nopeudet pidetään matalina: ylämäkeen saa ajaa 40 ja alamäkeen 30 kilometriä tunnissa. Ja minä kun luulin, että kyyhkyn nousu on jyrkkä.
+KYSYMYS: Kerro lisää: Flåmin
+
+### 117
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flåmsbana (tekniikka)
+Tietoruudun teksti: Flåmsbana on 20,2 kilometrin pituinen rautatie Myrdalin ja Flåmin välillä Aurlandissa Vestlandissa. Se on Bergenin radan haara, kulkee Flåmsdalenin laaksoa pitkin ja yhdistää pääradan Sognefjordiin; korkeusero on 866 metriä, ja radalla on kaksikymmentä tunnelia ja yksi silta. Suurin nousu on 5,5 prosenttia eli 1:18, mikä tekee siitä Euroopan jyrkimmän normaaliraiteisen rautatien, ja ylämäkeen saa ajaa 40 ja alamäkeen 30 kilometriä tunnissa. Rakentaminen alkoi vuonna 1924, rata avattiin 1940 ja sähköveto otettiin käyttöön 1944. Tavaraliikenne loppui 1992, ja halvat liput ja kalliit käyttökustannukset veivät radan lakkautuksen partaalle, kunnes Flåm Utvikling otti vuonna 1998 markkinoinnin ja lipunmyynnin hoitaakseen ja nosti hintoja rajusti — nykyään rata on Norjan kolmanneksi suosituin matkailukohde.
+AIEMPI KYSYMYS: Miksi rata melkein lakkautettiin?
+AIEMPI VASTAUS (Livia):
+No niin, tästä on hyvä tarina. Radan lakkautusta lähellä pitivät halvat liput ja kalliit käyttökustannukset: liikenne maksoi enemmän kuin se tuotti. Tavaraliikenne oli päättynyt vuonna 1992, joten rata oli entistä riippuvaisempi matkustajista. Vuonna 1998 yhtiö Flåm Utvikling otti markkinoinnin ja lipunmyynnin hoitaakseen ja nosti hintoja rajusti. Nykyään [[Flåmsbana]] on Norjan kolmanneksi suosituin matkailukohde, ja se kulkee [[Flåmsdalenin]] laaksossa kohti [[Sognefjordia]]. Kyllä kyyhky arvostaa reittiä, joka osaa pelastaa itsensä.
+KYSYMYS: Kerro lisää: Flåmsbana
+
+### 118
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flåmsbana (tekniikka)
+Tietoruudun teksti: Flåmsbana on 20,2 kilometrin pituinen rautatie Myrdalin ja Flåmin välillä Aurlandissa Vestlandissa. Se on Bergenin radan haara, kulkee Flåmsdalenin laaksoa pitkin ja yhdistää pääradan Sognefjordiin; korkeusero on 866 metriä, ja radalla on kaksikymmentä tunnelia ja yksi silta. Suurin nousu on 5,5 prosenttia eli 1:18, mikä tekee siitä Euroopan jyrkimmän normaaliraiteisen rautatien, ja ylämäkeen saa ajaa 40 ja alamäkeen 30 kilometriä tunnissa. Rakentaminen alkoi vuonna 1924, rata avattiin 1940 ja sähköveto otettiin käyttöön 1944. Tavaraliikenne loppui 1992, ja halvat liput ja kalliit käyttökustannukset veivät radan lakkautuksen partaalle, kunnes Flåm Utvikling otti vuonna 1998 markkinoinnin ja lipunmyynnin hoitaakseen ja nosti hintoja rajusti — nykyään rata on Norjan kolmanneksi suosituin matkailukohde.
+AIEMPI KYSYMYS: Miksi rata melkein lakkautettiin?
+AIEMPI VASTAUS (Livia):
+No niin, tästä on hyvä tarina. Radan lakkautusta lähellä pitivät halvat liput ja kalliit käyttökustannukset: liikenne maksoi enemmän kuin se tuotti. Tavaraliikenne oli päättynyt vuonna 1992, joten rata oli entistä riippuvaisempi matkustajista. Vuonna 1998 yhtiö Flåm Utvikling otti markkinoinnin ja lipunmyynnin hoitaakseen ja nosti hintoja rajusti. Nykyään [[Flåmsbana]] on Norjan kolmanneksi suosituin matkailukohde, ja se kulkee [[Flåmsdalenin]] laaksossa kohti [[Sognefjordia]]. Kyllä kyyhky arvostaa reittiä, joka osaa pelastaa itsensä.
+KYSYMYS: Kerro lisää: Flåmsdalenin
+
+### 119
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flåmsbana (tekniikka)
+Tietoruudun teksti: Flåmsbana on 20,2 kilometrin pituinen rautatie Myrdalin ja Flåmin välillä Aurlandissa Vestlandissa. Se on Bergenin radan haara, kulkee Flåmsdalenin laaksoa pitkin ja yhdistää pääradan Sognefjordiin; korkeusero on 866 metriä, ja radalla on kaksikymmentä tunnelia ja yksi silta. Suurin nousu on 5,5 prosenttia eli 1:18, mikä tekee siitä Euroopan jyrkimmän normaaliraiteisen rautatien, ja ylämäkeen saa ajaa 40 ja alamäkeen 30 kilometriä tunnissa. Rakentaminen alkoi vuonna 1924, rata avattiin 1940 ja sähköveto otettiin käyttöön 1944. Tavaraliikenne loppui 1992, ja halvat liput ja kalliit käyttökustannukset veivät radan lakkautuksen partaalle, kunnes Flåm Utvikling otti vuonna 1998 markkinoinnin ja lipunmyynnin hoitaakseen ja nosti hintoja rajusti — nykyään rata on Norjan kolmanneksi suosituin matkailukohde.
+AIEMPI KYSYMYS: Miksi rata melkein lakkautettiin?
+AIEMPI VASTAUS (Livia):
+No niin, tästä on hyvä tarina. Radan lakkautusta lähellä pitivät halvat liput ja kalliit käyttökustannukset: liikenne maksoi enemmän kuin se tuotti. Tavaraliikenne oli päättynyt vuonna 1992, joten rata oli entistä riippuvaisempi matkustajista. Vuonna 1998 yhtiö Flåm Utvikling otti markkinoinnin ja lipunmyynnin hoitaakseen ja nosti hintoja rajusti. Nykyään [[Flåmsbana]] on Norjan kolmanneksi suosituin matkailukohde, ja se kulkee [[Flåmsdalenin]] laaksossa kohti [[Sognefjordia]]. Kyllä kyyhky arvostaa reittiä, joka osaa pelastaa itsensä.
+KYSYMYS: Kerro lisää: Sognefjordia
+
+### 120
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flåmsbana (tekniikka)
+Tietoruudun teksti: Flåmsbana on 20,2 kilometrin pituinen rautatie Myrdalin ja Flåmin välillä Aurlandissa Vestlandissa. Se on Bergenin radan haara, kulkee Flåmsdalenin laaksoa pitkin ja yhdistää pääradan Sognefjordiin; korkeusero on 866 metriä, ja radalla on kaksikymmentä tunnelia ja yksi silta. Suurin nousu on 5,5 prosenttia eli 1:18, mikä tekee siitä Euroopan jyrkimmän normaaliraiteisen rautatien, ja ylämäkeen saa ajaa 40 ja alamäkeen 30 kilometriä tunnissa. Rakentaminen alkoi vuonna 1924, rata avattiin 1940 ja sähköveto otettiin käyttöön 1944. Tavaraliikenne loppui 1992, ja halvat liput ja kalliit käyttökustannukset veivät radan lakkautuksen partaalle, kunnes Flåm Utvikling otti vuonna 1998 markkinoinnin ja lipunmyynnin hoitaakseen ja nosti hintoja rajusti — nykyään rata on Norjan kolmanneksi suosituin matkailukohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Luonto: Myskihärkä tuotiin laivalla] 1947 — Myskihärkä eli Norjassa jääkauden aikaan mutta katosi tuhansia vuosia sitten. 1900-luvulla eläimiä tuotiin laivalla takaisin Grönlannista, ja nykyinen kanta polveutuu vuoden 1947 kuljetuksesta. Dovrefjellin tuntureilla laumassa on nykyään reilut parisataa eläintä. Ne eivät ole härkiä vaan lampaiden ja vuohien sukulaisia, ja niiden alusvilla on maailman lämpimimpiä. Retkeilijöitä kehotetaan pysymään kahdensadan metrin päässä: eläin on rauhallinen mutta nopea suuttumaan.
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+AIEMPI KYSYMYS: Mitä normaaliraiteinen rautatie tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai tota, tän minä osaan. Normaaliraiteinen rautatie tarkoittaa rataa, jonka kiskojen väli on 1 435 millimetriä. Mittaa kutsutaan myös standardileveydeksi, ja sitä käytetään suuressa osassa Eurooppaa, kuten [[Norjassa]], Ruotsissa ja Keski-Euroopassa. [[Suomessa]] ja [[Venäjällä]] raideleveys on leveämpi, joten junat eivät voi kulkea rajan yli sellaisenaan. Kapeampia raiteita käytetään esimerkiksi vuoristoradoilla ja paikallisilla pikkuradoilla, koska ne mahtuvat jyrkempiin mutkiin. Hyvin meni, ei tarvinnut edes laskea sormilla.
+KYSYMYS: Kerro lisää: Norjassa
+
+### 121
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flåmsbana (tekniikka)
+Tietoruudun teksti: Flåmsbana on 20,2 kilometrin pituinen rautatie Myrdalin ja Flåmin välillä Aurlandissa Vestlandissa. Se on Bergenin radan haara, kulkee Flåmsdalenin laaksoa pitkin ja yhdistää pääradan Sognefjordiin; korkeusero on 866 metriä, ja radalla on kaksikymmentä tunnelia ja yksi silta. Suurin nousu on 5,5 prosenttia eli 1:18, mikä tekee siitä Euroopan jyrkimmän normaaliraiteisen rautatien, ja ylämäkeen saa ajaa 40 ja alamäkeen 30 kilometriä tunnissa. Rakentaminen alkoi vuonna 1924, rata avattiin 1940 ja sähköveto otettiin käyttöön 1944. Tavaraliikenne loppui 1992, ja halvat liput ja kalliit käyttökustannukset veivät radan lakkautuksen partaalle, kunnes Flåm Utvikling otti vuonna 1998 markkinoinnin ja lipunmyynnin hoitaakseen ja nosti hintoja rajusti — nykyään rata on Norjan kolmanneksi suosituin matkailukohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rovaniemi — kaupunkilehti / Lappi: Kieli, jota puhutaan vain Suomessa] Inarinsaamea puhutaan ainoastaan Inarijärven ympärillä. 1990-luvun puolivälissä kieltä puhui lapsilleen enää kaksi perhettä ja alle 20-vuotiaita puhujia oli neljä. Vuonna 1997 Inarissa aloitettiin kielipesä, jossa aikuiset puhuvat lapsille vain inarinsaamea. Nyt puhujia on muutama sata, ja osa kielipesän lapsista opettaa kieltä itse.
+AIEMPI KYSYMYS: Mitä normaaliraiteinen rautatie tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai tota, tän minä osaan. Normaaliraiteinen rautatie tarkoittaa rataa, jonka kiskojen väli on 1 435 millimetriä. Mittaa kutsutaan myös standardileveydeksi, ja sitä käytetään suuressa osassa Eurooppaa, kuten [[Norjassa]], Ruotsissa ja Keski-Euroopassa. [[Suomessa]] ja [[Venäjällä]] raideleveys on leveämpi, joten junat eivät voi kulkea rajan yli sellaisenaan. Kapeampia raiteita käytetään esimerkiksi vuoristoradoilla ja paikallisilla pikkuradoilla, koska ne mahtuvat jyrkempiin mutkiin. Hyvin meni, ei tarvinnut edes laskea sormilla.
+KYSYMYS: Kerro lisää: Suomessa
+
+### 122
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flåmsbana (tekniikka)
+Tietoruudun teksti: Flåmsbana on 20,2 kilometrin pituinen rautatie Myrdalin ja Flåmin välillä Aurlandissa Vestlandissa. Se on Bergenin radan haara, kulkee Flåmsdalenin laaksoa pitkin ja yhdistää pääradan Sognefjordiin; korkeusero on 866 metriä, ja radalla on kaksikymmentä tunnelia ja yksi silta. Suurin nousu on 5,5 prosenttia eli 1:18, mikä tekee siitä Euroopan jyrkimmän normaaliraiteisen rautatien, ja ylämäkeen saa ajaa 40 ja alamäkeen 30 kilometriä tunnissa. Rakentaminen alkoi vuonna 1924, rata avattiin 1940 ja sähköveto otettiin käyttöön 1944. Tavaraliikenne loppui 1992, ja halvat liput ja kalliit käyttökustannukset veivät radan lakkautuksen partaalle, kunnes Flåm Utvikling otti vuonna 1998 markkinoinnin ja lipunmyynnin hoitaakseen ja nosti hintoja rajusti — nykyään rata on Norjan kolmanneksi suosituin matkailukohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Mikaelin luostari] 1108–1113 Pyhän Mikaelin kultakupolinen luostari perustettiin Kiovan-Venäjän ruhtinas Svjatopolk II:n toimesta vuosina 1108–1113 arkkienkeli Mikaelin kunniaksi. Sen pääkirkon kupoli kullattiin ehkä ensimmäisenä koko Kiovan-Venäjällä, ja juuri siitä koko luostari sai lempinimensä ”kultakupolinen”. Vuonna 1108 luostariin tuotiin myös Konstantinopolista pyhän Barbaran pyhäinjäännökset, ja niistä tuli niin suosittu pyhiinvaellusaarre, että 1870-luvulla luostarissa kävi vuosittain jopa 100 000 vierailijaa. 1700-luvulla kirkkoa laajennettiin ukrainalaiseen barokkityyliin, ja alkuperäisestä yhdestä kupolista tuli lopulta seitsemän kupolin kokonaisuus. Sisäseiniltä löytyi myös upeita 1100-luvun bys…
+- [Ukraina — maalehti / Historia: Tasavalta eli neljä vuotta ennen kuin se hävisi] 1918 — Historioitsija Mychailo Hruševskyin johtama Keskusrada julisti Ukrainan autonomiaksi kesäkuussa 1917 ja täysin itsenäiseksi kansantasavallaksi 22. tammikuuta 1918, kun Venäjällä riehui vallankumous. Nuori tasavalta ehti saada oman lipun, vaakunan – kultaisen kolmikärjen eli tryzubin – ja kansallislaulun, joka on Ukrainan hymni yhä tänään. Se kuitenkin joutui heti sotaan bolševikkeja vastaan, ja vuoteen 1921 mennessä Puna-armeija oli vallannut sen alueet. Hallitus jatkoi maanpaossa aina vuoteen 1992, jolloin se luovutti valtuutensa itsenäistyneelle Ukrainalle.
+AIEMPI KYSYMYS: Mitä normaaliraiteinen rautatie tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai tota, tän minä osaan. Normaaliraiteinen rautatie tarkoittaa rataa, jonka kiskojen väli on 1 435 millimetriä. Mittaa kutsutaan myös standardileveydeksi, ja sitä käytetään suuressa osassa Eurooppaa, kuten [[Norjassa]], Ruotsissa ja Keski-Euroopassa. [[Suomessa]] ja [[Venäjällä]] raideleveys on leveämpi, joten junat eivät voi kulkea rajan yli sellaisenaan. Kapeampia raiteita käytetään esimerkiksi vuoristoradoilla ja paikallisilla pikkuradoilla, koska ne mahtuvat jyrkempiin mutkiin. Hyvin meni, ei tarvinnut edes laskea sormilla.
+KYSYMYS: Kerro lisää: Venäjällä
+
+### 123
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flåmsbana (tekniikka)
+Tietoruudun teksti: Flåmsbana on 20,2 kilometrin pituinen rautatie Myrdalin ja Flåmin välillä Aurlandissa Vestlandissa. Se on Bergenin radan haara, kulkee Flåmsdalenin laaksoa pitkin ja yhdistää pääradan Sognefjordiin; korkeusero on 866 metriä, ja radalla on kaksikymmentä tunnelia ja yksi silta. Suurin nousu on 5,5 prosenttia eli 1:18, mikä tekee siitä Euroopan jyrkimmän normaaliraiteisen rautatien, ja ylämäkeen saa ajaa 40 ja alamäkeen 30 kilometriä tunnissa. Rakentaminen alkoi vuonna 1924, rata avattiin 1940 ja sähköveto otettiin käyttöön 1944. Tavaraliikenne loppui 1992, ja halvat liput ja kalliit käyttökustannukset veivät radan lakkautuksen partaalle, kunnes Flåm Utvikling otti vuonna 1998 markkinoinnin ja lipunmyynnin hoitaakseen ja nosti hintoja rajusti — nykyään rata on Norjan kolmanneksi suosituin matkailukohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kaupunkilehti / Historia: Tykinkuula seinässä, vaalihuone kirkossa] Tuomiokirkon ulkoseinässä on yhä kiinni tykinkuula vuoden 1665 Vågenin taistelusta, jossa englantilainen ja hollantilainen laivasto ottivat yhteen kaupungin satamassa. Vuonna 1814 kirkko toimi vaalikirkkona: yli kolmensadan muun seurakuntakirkon tavoin se oli äänestyspaikka, kun valittiin valitsijamiehet Eidsvollin kansalliskokoukseen, joka kirjoitti Norjan perustuslain. Ne olivat maan ensimmäiset kansalliset vaalit. 1880-luvulla arkkitehdit Christian Christie ja Peter Andreas Blix johtivat korjausta, jossa rokokoosisustus palautettiin keskiaikaiseen asuun.
+AIEMPI KYSYMYS: Mikä oli Norjan ensimmäinen rautatie?
+AIEMPI VASTAUS (Livia):
+Mmm— tän muistan hyvin. Norjan ensimmäinen rautatie oli Hovedbanen, joka avattiin vuonna 1854 Christianian eli nykyisen Oslon ja [[Eidsvollin]] välille. Yhteys liitti pääkaupungin Mjøsa-järven suuntaan, ja sen myötä liikenne ja tavarankuljetus alkoivat nopeutua. Samoihin aikoihin rautateitä rakennettiin ympäri Eurooppaa, ja esimerkiksi [[Semmeringin radan]] Itävallassa avasi Carl von Ghega samana vuonna. Rata on yhä käytössä osana Norjan nykyistä rataverkkoa. Täältä ylhäältä rautatie näyttää hopeiselta lankakerältä.
+KYSYMYS: Kerro lisää: Eidsvollin
+
+### 124
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flåmsbana (tekniikka)
+Tietoruudun teksti: Flåmsbana on 20,2 kilometrin pituinen rautatie Myrdalin ja Flåmin välillä Aurlandissa Vestlandissa. Se on Bergenin radan haara, kulkee Flåmsdalenin laaksoa pitkin ja yhdistää pääradan Sognefjordiin; korkeusero on 866 metriä, ja radalla on kaksikymmentä tunnelia ja yksi silta. Suurin nousu on 5,5 prosenttia eli 1:18, mikä tekee siitä Euroopan jyrkimmän normaaliraiteisen rautatien, ja ylämäkeen saa ajaa 40 ja alamäkeen 30 kilometriä tunnissa. Rakentaminen alkoi vuonna 1924, rata avattiin 1940 ja sähköveto otettiin käyttöön 1944. Tavaraliikenne loppui 1992, ja halvat liput ja kalliit käyttökustannukset veivät radan lakkautuksen partaalle, kunnes Flåm Utvikling otti vuonna 1998 markkinoinnin ja lipunmyynnin hoitaakseen ja nosti hintoja rajusti — nykyään rata on Norjan kolmanneksi suosituin matkailukohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Rata, joka kiertää vuoren kaksin verroin pidemmäksi] 1854 — Semmeringin rata avattiin vuonna 1854, ja se oli Euroopan ensimmäinen normaaliraiteinen vuoristorautatie. Carl von Ghega johdatti kiskot Gloggnitzista Mürzzuschlagiin vuoren yli. Linnuntietä päätepisteiden väli on 21 kilometriä, mutta rataa on 42, koska nousu piti kiertää loivaksi. Ylin kohta on 898 metrissä. Matkalla on 14 tunnelia, 16 viaduktia ja yli sata holvattua kivisiltaa. Moni piti hanketta mahdottomana, koska kukaan ei tiennyt, jaksaisiko veturi nousta niin jyrkkää.
+AIEMPI KYSYMYS: Mikä oli Norjan ensimmäinen rautatie?
+AIEMPI VASTAUS (Livia):
+Mmm— tän muistan hyvin. Norjan ensimmäinen rautatie oli Hovedbanen, joka avattiin vuonna 1854 Christianian eli nykyisen Oslon ja [[Eidsvollin]] välille. Yhteys liitti pääkaupungin Mjøsa-järven suuntaan, ja sen myötä liikenne ja tavarankuljetus alkoivat nopeutua. Samoihin aikoihin rautateitä rakennettiin ympäri Eurooppaa, ja esimerkiksi [[Semmeringin radan]] Itävallassa avasi Carl von Ghega samana vuonna. Rata on yhä käytössä osana Norjan nykyistä rataverkkoa. Täältä ylhäältä rautatie näyttää hopeiselta lankakerältä.
+KYSYMYS: Kerro lisää: Semmeringin radan
+
+### 125
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flåmsbana (tekniikka)
+Tietoruudun teksti: Flåmsbana on 20,2 kilometrin pituinen rautatie Myrdalin ja Flåmin välillä Aurlandissa Vestlandissa. Se on Bergenin radan haara, kulkee Flåmsdalenin laaksoa pitkin ja yhdistää pääradan Sognefjordiin; korkeusero on 866 metriä, ja radalla on kaksikymmentä tunnelia ja yksi silta. Suurin nousu on 5,5 prosenttia eli 1:18, mikä tekee siitä Euroopan jyrkimmän normaaliraiteisen rautatien, ja ylämäkeen saa ajaa 40 ja alamäkeen 30 kilometriä tunnissa. Rakentaminen alkoi vuonna 1924, rata avattiin 1940 ja sähköveto otettiin käyttöön 1944. Tavaraliikenne loppui 1992, ja halvat liput ja kalliit käyttökustannukset veivät radan lakkautuksen partaalle, kunnes Flåm Utvikling otti vuonna 1998 markkinoinnin ja lipunmyynnin hoitaakseen ja nosti hintoja rajusti — nykyään rata on Norjan kolmanneksi suosituin matkailukohde.
+AIEMPI KYSYMYS: Mikä Sognefjord on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Sognefjord on Norjan pisin ja syvin vuono, ja se työntyy kymmeniä kilometrejä sisämaahan Länsi-Norjassa. Pituudeksi mainitaan noin 200 kilometriä ja syvyydeksi yli tuhat metriä, mutta tarkat luvut vaihtelevat lähteittäin. Vuono syntyi jääkaudella, kun jäätikkö kuljetti laaksoa syvemmäksi ja meri täytti sen jään sulettua. Sen rannoilla on pieniä kyliä, vuoristoa ja haaroja, joista tunnetuimpia ovat [[Nærøyvuono]] ja [[Aurlandsvuono]]. Flåmin rata yhdistää [[Bergenin radan]] tähän vuonoon. Pitkä vuono, pitkä vastaus, ja silti jaksoin.
+KYSYMYS: Kerro lisää: Nærøyvuono
+
+### 126
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flåmsbana (tekniikka)
+Tietoruudun teksti: Flåmsbana on 20,2 kilometrin pituinen rautatie Myrdalin ja Flåmin välillä Aurlandissa Vestlandissa. Se on Bergenin radan haara, kulkee Flåmsdalenin laaksoa pitkin ja yhdistää pääradan Sognefjordiin; korkeusero on 866 metriä, ja radalla on kaksikymmentä tunnelia ja yksi silta. Suurin nousu on 5,5 prosenttia eli 1:18, mikä tekee siitä Euroopan jyrkimmän normaaliraiteisen rautatien, ja ylämäkeen saa ajaa 40 ja alamäkeen 30 kilometriä tunnissa. Rakentaminen alkoi vuonna 1924, rata avattiin 1940 ja sähköveto otettiin käyttöön 1944. Tavaraliikenne loppui 1992, ja halvat liput ja kalliit käyttökustannukset veivät radan lakkautuksen partaalle, kunnes Flåm Utvikling otti vuonna 1998 markkinoinnin ja lipunmyynnin hoitaakseen ja nosti hintoja rajusti — nykyään rata on Norjan kolmanneksi suosituin matkailukohde.
+AIEMPI KYSYMYS: Mikä Sognefjord on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Sognefjord on Norjan pisin ja syvin vuono, ja se työntyy kymmeniä kilometrejä sisämaahan Länsi-Norjassa. Pituudeksi mainitaan noin 200 kilometriä ja syvyydeksi yli tuhat metriä, mutta tarkat luvut vaihtelevat lähteittäin. Vuono syntyi jääkaudella, kun jäätikkö kuljetti laaksoa syvemmäksi ja meri täytti sen jään sulettua. Sen rannoilla on pieniä kyliä, vuoristoa ja haaroja, joista tunnetuimpia ovat [[Nærøyvuono]] ja [[Aurlandsvuono]]. Flåmin rata yhdistää [[Bergenin radan]] tähän vuonoon. Pitkä vuono, pitkä vastaus, ja silti jaksoin.
+KYSYMYS: Kerro lisää: Aurlandsvuono
+
+### 127
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Flåmsbana (tekniikka)
+Tietoruudun teksti: Flåmsbana on 20,2 kilometrin pituinen rautatie Myrdalin ja Flåmin välillä Aurlandissa Vestlandissa. Se on Bergenin radan haara, kulkee Flåmsdalenin laaksoa pitkin ja yhdistää pääradan Sognefjordiin; korkeusero on 866 metriä, ja radalla on kaksikymmentä tunnelia ja yksi silta. Suurin nousu on 5,5 prosenttia eli 1:18, mikä tekee siitä Euroopan jyrkimmän normaaliraiteisen rautatien, ja ylämäkeen saa ajaa 40 ja alamäkeen 30 kilometriä tunnissa. Rakentaminen alkoi vuonna 1924, rata avattiin 1940 ja sähköveto otettiin käyttöön 1944. Tavaraliikenne loppui 1992, ja halvat liput ja kalliit käyttökustannukset veivät radan lakkautuksen partaalle, kunnes Flåm Utvikling otti vuonna 1998 markkinoinnin ja lipunmyynnin hoitaakseen ja nosti hintoja rajusti — nykyään rata on Norjan kolmanneksi suosituin matkailukohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+AIEMPI KYSYMYS: Mikä Sognefjord on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Sognefjord on Norjan pisin ja syvin vuono, ja se työntyy kymmeniä kilometrejä sisämaahan Länsi-Norjassa. Pituudeksi mainitaan noin 200 kilometriä ja syvyydeksi yli tuhat metriä, mutta tarkat luvut vaihtelevat lähteittäin. Vuono syntyi jääkaudella, kun jäätikkö kuljetti laaksoa syvemmäksi ja meri täytti sen jään sulettua. Sen rannoilla on pieniä kyliä, vuoristoa ja haaroja, joista tunnetuimpia ovat [[Nærøyvuono]] ja [[Aurlandsvuono]]. Flåmin rata yhdistää [[Bergenin radan]] tähän vuonoon. Pitkä vuono, pitkä vastaus, ja silti jaksoin.
+KYSYMYS: Kerro lisää: Bergenin radan
+
+### 128
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eidsvollin rakennus (historia)
+Tietoruudun teksti: Eidsvollsbygningen on historiallinen kartanorakennus Eidsvollissa Akershusissa Norjassa. Siellä allekirjoitettiin Norjan perustuslaki 17. toukokuuta 1814, ja talo on nykyään valtion omistama kansallismonumentti ja museo. Rakennus valmistui vuonna 1770, ja sen pinta-ala on yli 2 000 neliömetriä; noin vuonna 1800 sen osti Carsten Anker, joka kunnosti kartanon ja asui siellä perheineen juuri allekirjoituksen aikaan. Anker ajautui konkurssiin 1822 ja omistus siirtyi brittiläisille velkojille, mutta runoilija Henrik Wergelandin johtama yksityisten kansalaisten ryhmä keräsi rahat ja osti talon puutarhoineen; kauppa vahvistui 1851, ja ryhmä lahjoitti kiinteistön Norjan valtiolle. Vuonna 2011 alkanut kunnostus palautti talon mahdollisimman tarkasti vuoden 1814 asuun, ja työ valmistui perustuslain 200-vuotisjuhlaan 2014.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Historia: Arabimaailman ensimmäinen perustuslaki] 1846–1861 — Husainidisuvun kymmenes bey Ahmad I hallitsi vuodesta 1837 kuolemaansa 1855 ja lakkautti orjuuden tammikuussa 1846. Uudistukset jatkuivat kahdessa askeleessa. Vuoden 1857 perustavanlaatuinen sopimus vahvisti orjuuden lakkauttamisen ja takasi hengen ja omaisuuden turvan, verotuksen yhdenvertaisuuden, uskonnonvapauden ja yhdenvertaisuuden lain edessä. Sen pohjalta kirjoitettu perustuslaki astui voimaan 26. huhtikuuta 1861 — ensimmäisenä kirjoitettuna perustuslakina arabimaissa ja ensimmäisenä valtiossa, jonka uskonto oli islam. Uudistusten takana vaikutti ministeri Khayr al-Din, ja teksti käännettiin ranskaksi ja osmaniturkiksi jo samana vuonna.
+- [Kap Palmas — kaupunkilehti / Marylandin oma tasavalta: Oma lippu ja perustuslaki] Marylandin siirtokunta julisti itsensä ensin osavaltioksi helmikuussa 1841 ja lopulta täysin itsenäiseksi tasavallaksi 29. toukokuuta 1854 – nimellä Maryland Liberiassa, pääkaupunkinaan Harper. Tasavallalla oli oma lippu, jonka mustat ja keltaiset raidat viittasivat Marylandin osavaltion väreihin, sekä vuonna 1847 laadittu perustuslaki, joka noudatti pitkälti Yhdysvaltain perustuslain mallia. Itsenäisyys jäi kuitenkin lyhytaikaiseksi: jo kolme vuotta myöhemmin, vuonna 1857, tasavalta liittyi naapurinsa Liberian osaksi Marylandin piirikunnaksi.
+AIEMPI KYSYMYS: Mitä Eidsvollissa tapahtui 17. toukokuuta 1814?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Eidsvollissa allekirjoitettiin 17. toukokuuta 1814 Norjan [[perustuslaki]], ja siitä päivästä on tullut Norjan kansallispäivä. Tapahtumapaikkana oli kartanorakennus, jonka noin vuonna 1800 osti [[Carsten Anker]]. Hän asui siellä perheineen juuri allekirjoituksen aikaan. Nykyään [[Eidsvollsbygningen]] on valtion omistama kansallismonumentti ja museo. Talo valmistui jo vuonna 1770, ja sen pinta-ala on yli 2 000 neliömetriä. Ihan komea paikka perustaa maa.
+KYSYMYS: Kerro lisää: perustuslaki
+
+### 129
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eidsvollin rakennus (historia)
+Tietoruudun teksti: Eidsvollsbygningen on historiallinen kartanorakennus Eidsvollissa Akershusissa Norjassa. Siellä allekirjoitettiin Norjan perustuslaki 17. toukokuuta 1814, ja talo on nykyään valtion omistama kansallismonumentti ja museo. Rakennus valmistui vuonna 1770, ja sen pinta-ala on yli 2 000 neliömetriä; noin vuonna 1800 sen osti Carsten Anker, joka kunnosti kartanon ja asui siellä perheineen juuri allekirjoituksen aikaan. Anker ajautui konkurssiin 1822 ja omistus siirtyi brittiläisille velkojille, mutta runoilija Henrik Wergelandin johtama yksityisten kansalaisten ryhmä keräsi rahat ja osti talon puutarhoineen; kauppa vahvistui 1851, ja ryhmä lahjoitti kiinteistön Norjan valtiolle. Vuonna 2011 alkanut kunnostus palautti talon mahdollisimman tarkasti vuoden 1814 asuun, ja työ valmistui perustuslain 200-vuotisjuhlaan 2014.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Port Moresby — kaupunkilehti / Hiri: Ankerias joka lähetti miehen merelle] Boeran kylän kalastaja Edai Siabo oli tarinan mukaan palaamassa kalasta, kun suuri ankerias tarttui häneen ja veti hänet veden alle. Ankerias oli meren henki. Se palautti Edain pinnalle ja käski hänen rakentaa suuren lagatoin, täyttää sen keittopadoilla ja purjehtia länteen kaakkoistuulen mukana, jota motun kielessä kutsutaan nimellä laurabada. Edai totteli. Hän rakensi ensimmäisen hiri-lagatoin ja antoi sille nimeksi Bogebada, merikotka, lastasi sen vaimonsa tekemillä padoilla ja purjehti ystävineen Papuanlahden vesille. Näin alkoi kauppapurjehdusten perinne, joka kesti sukupolvien yli.
+- [Mosul — kohdekartta / Kohdekartta: Kuyunjikin kumpu] pääkaupunki noin 700–612 eKr. Kuyunjik on Niniven kahdesta kummusta pohjoisempi, ja se on kaupungin akropoli. Kummun alla ovat Sanheribin ja hänen seuraajiensa palatsit: Asarhaddonin, Assurbanipalin, Assur-etel-ilanin, Sin-shumu-lisirin ja Sin-shar-ishkunin. Sanherib teki Ninivestä Assyrian pääkaupungin noin vuonna 700 eKr., ja rakennustyö oli mittava: kaupungista tuli suurempi kuin Babylon, Kalhu tai Assur, ja aikansa suurin koko maailmassa. Asukkaita oli yli satatuhatta, ehkä lähes sataviisikymmentätuhatta, eli noin kaksi kertaa niin paljon kuin Babylonissa. Nimi Kuyunjik on Layardin mukaan turkkia ja tarkoittaa lampaan deminutiivia; arabit tunsivat kummun myös nimellä Armousheeah. Kumpu …
+AIEMPI KYSYMYS: Mitä Eidsvollissa tapahtui 17. toukokuuta 1814?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Eidsvollissa allekirjoitettiin 17. toukokuuta 1814 Norjan [[perustuslaki]], ja siitä päivästä on tullut Norjan kansallispäivä. Tapahtumapaikkana oli kartanorakennus, jonka noin vuonna 1800 osti [[Carsten Anker]]. Hän asui siellä perheineen juuri allekirjoituksen aikaan. Nykyään [[Eidsvollsbygningen]] on valtion omistama kansallismonumentti ja museo. Talo valmistui jo vuonna 1770, ja sen pinta-ala on yli 2 000 neliömetriä. Ihan komea paikka perustaa maa.
+KYSYMYS: Kerro lisää: Carsten Anker
+
+### 130
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eidsvollin rakennus (historia)
+Tietoruudun teksti: Eidsvollsbygningen on historiallinen kartanorakennus Eidsvollissa Akershusissa Norjassa. Siellä allekirjoitettiin Norjan perustuslaki 17. toukokuuta 1814, ja talo on nykyään valtion omistama kansallismonumentti ja museo. Rakennus valmistui vuonna 1770, ja sen pinta-ala on yli 2 000 neliömetriä; noin vuonna 1800 sen osti Carsten Anker, joka kunnosti kartanon ja asui siellä perheineen juuri allekirjoituksen aikaan. Anker ajautui konkurssiin 1822 ja omistus siirtyi brittiläisille velkojille, mutta runoilija Henrik Wergelandin johtama yksityisten kansalaisten ryhmä keräsi rahat ja osti talon puutarhoineen; kauppa vahvistui 1851, ja ryhmä lahjoitti kiinteistön Norjan valtiolle. Vuonna 2011 alkanut kunnostus palautti talon mahdollisimman tarkasti vuoden 1814 asuun, ja työ valmistui perustuslain 200-vuotisjuhlaan 2014.
+AIEMPI KYSYMYS: Mitä Eidsvollissa tapahtui 17. toukokuuta 1814?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Eidsvollissa allekirjoitettiin 17. toukokuuta 1814 Norjan [[perustuslaki]], ja siitä päivästä on tullut Norjan kansallispäivä. Tapahtumapaikkana oli kartanorakennus, jonka noin vuonna 1800 osti [[Carsten Anker]]. Hän asui siellä perheineen juuri allekirjoituksen aikaan. Nykyään [[Eidsvollsbygningen]] on valtion omistama kansallismonumentti ja museo. Talo valmistui jo vuonna 1770, ja sen pinta-ala on yli 2 000 neliömetriä. Ihan komea paikka perustaa maa.
+KYSYMYS: Kerro lisää: Eidsvollsbygningen
+
+### 131
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eidsvollin rakennus (historia)
+Tietoruudun teksti: Eidsvollsbygningen on historiallinen kartanorakennus Eidsvollissa Akershusissa Norjassa. Siellä allekirjoitettiin Norjan perustuslaki 17. toukokuuta 1814, ja talo on nykyään valtion omistama kansallismonumentti ja museo. Rakennus valmistui vuonna 1770, ja sen pinta-ala on yli 2 000 neliömetriä; noin vuonna 1800 sen osti Carsten Anker, joka kunnosti kartanon ja asui siellä perheineen juuri allekirjoituksen aikaan. Anker ajautui konkurssiin 1822 ja omistus siirtyi brittiläisille velkojille, mutta runoilija Henrik Wergelandin johtama yksityisten kansalaisten ryhmä keräsi rahat ja osti talon puutarhoineen; kauppa vahvistui 1851, ja ryhmä lahjoitti kiinteistön Norjan valtiolle. Vuonna 2011 alkanut kunnostus palautti talon mahdollisimman tarkasti vuoden 1814 asuun, ja työ valmistui perustuslain 200-vuotisjuhlaan 2014.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kaupunkilehti / Bergen: Sali, jonka tehtävä unohtui] Kuningas Håkon Håkonssonin (1217–1263) aikana 1200-luvun puolivälissä rakennettu kivisali oli Bergenin kuninkaankartanon suurin rakennus, ja se on yhä Norjan suurin keskiaikainen maallinen rakennus. Sen alkuperäinen tehtävä oli 1700-luvulle tultaessa suurelta osin unohtunut. Vuonna 1840 todistettiin, että kyseessä oli kuningas Håkonin vanha juhlasali, ja seuraavan puolen vuosisadan ajan kaupungissa väiteltiin sen ennallistamisesta. Henrik Ibsen kirjoitti salin kunniaksi runon, ja runoilija Henrik Wergeland otti ensimmäisenä käyttöön nimen Haakons hall.
+AIEMPI KYSYMYS: Kuka pelasti talon konkurssin jälkeen?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Carsten Anker ajautui konkurssiin vuonna 1822, ja kartanon omistus siirtyi brittiläisille velkojille. Talon pelasti runoilija [[Henrik Wergelandin]] johtama yksityisten kansalaisten ryhmä, joka keräsi rahat ja osti rakennuksen puutarhoineen. Kauppa vahvistui vuonna 1851, ja ryhmä lahjoitti kiinteistön Norjan valtiolle. Siten [[Eidsvollsbygningen]] säilyi kansakunnan yhteisenä muistomerkkinä. Vuonna 2011 alkanut kunnostus palautti sen mahdollisimman tarkasti vuoden 1814 asuun. Kansalaiset kantoivat tämän kuin kirjeen, huolella.
+KYSYMYS: Kerro lisää: Henrik Wergelandin
+
+### 132
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eidsvollin rakennus (historia)
+Tietoruudun teksti: Eidsvollsbygningen on historiallinen kartanorakennus Eidsvollissa Akershusissa Norjassa. Siellä allekirjoitettiin Norjan perustuslaki 17. toukokuuta 1814, ja talo on nykyään valtion omistama kansallismonumentti ja museo. Rakennus valmistui vuonna 1770, ja sen pinta-ala on yli 2 000 neliömetriä; noin vuonna 1800 sen osti Carsten Anker, joka kunnosti kartanon ja asui siellä perheineen juuri allekirjoituksen aikaan. Anker ajautui konkurssiin 1822 ja omistus siirtyi brittiläisille velkojille, mutta runoilija Henrik Wergelandin johtama yksityisten kansalaisten ryhmä keräsi rahat ja osti talon puutarhoineen; kauppa vahvistui 1851, ja ryhmä lahjoitti kiinteistön Norjan valtiolle. Vuonna 2011 alkanut kunnostus palautti talon mahdollisimman tarkasti vuoden 1814 asuun, ja työ valmistui perustuslain 200-vuotisjuhlaan 2014.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Maracanãn stadion] 1948–1950 Peruskivi laskettiin 2. elokuuta 1948, ja stadionin piti olla valmis vuoden 1950 jalkapallon maailmanmestaruuskisoihin eli alle kahdessa vuodessa. Työ myöhästyi niin pahasti, että Fifa lähetti paikalle Italian liiton johtajan Ottorino Barassin auttamaan. Työmaalla oli 1 500 miestä ja viimeisinä kuukausina 2 000 lisää. Avausottelu pelattiin 16. kesäkuuta 1950, vaikka stadion näytti yhä työmaalta: käymälöitä ja lehdistölehteriä ei ollut. Se oli silti heti maailman suurin stadion. Kisojen ratkaiseva ottelu pelattiin 16. heinäkuuta 1950. Brasilialle olisi riittänyt tasapeli, mutta Uruguay voitti 2–1, ja hiljaisuus katsomossa jäi historiaan nimellä Maracanazo. Virallinen yleisömäärä ol…
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+AIEMPI KYSYMYS: Miksi 17. toukokuuta on Norjan kansallispäivä?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä kysymys tuo. Norjan kansallispäivä on 17. toukokuuta, koska Eidsvollissa allekirjoitettiin sinä päivänä vuonna 1814 maan [[perustuslaki]]. Päivä muistuttaa siitä, että Norja sai oman perustuslakinsa ja pyrki itsenäiseksi valtioksi. Päivää juhlitaan kulkueilla, lipuilla ja [[kansallispukuja]] käyttäen, ja lasten kulkueet ovat tärkeä osa perinnettä. Tarkkaa ohjelmaa ei kannata luvata, sillä tavat vaihtelevat paikkakunnittain. Ilmeisesti hyvä päivä tehdä uusi maa on aina keväinen.
+KYSYMYS: Kerro lisää: kansallispukuja
+
+### 133
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eidsvollin rakennus (historia)
+Tietoruudun teksti: Eidsvollsbygningen on historiallinen kartanorakennus Eidsvollissa Akershusissa Norjassa. Siellä allekirjoitettiin Norjan perustuslaki 17. toukokuuta 1814, ja talo on nykyään valtion omistama kansallismonumentti ja museo. Rakennus valmistui vuonna 1770, ja sen pinta-ala on yli 2 000 neliömetriä; noin vuonna 1800 sen osti Carsten Anker, joka kunnosti kartanon ja asui siellä perheineen juuri allekirjoituksen aikaan. Anker ajautui konkurssiin 1822 ja omistus siirtyi brittiläisille velkojille, mutta runoilija Henrik Wergelandin johtama yksityisten kansalaisten ryhmä keräsi rahat ja osti talon puutarhoineen; kauppa vahvistui 1851, ja ryhmä lahjoitti kiinteistön Norjan valtiolle. Vuonna 2011 alkanut kunnostus palautti talon mahdollisimman tarkasti vuoden 1814 asuun, ja työ valmistui perustuslain 200-vuotisjuhlaan 2014.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Senegal — maalehti / Historia: Runoilija, joka luopui vallasta itse] 1906–2001 — Léopold Sédar Senghor syntyi Joalissa sereeriperheeseen ja opiskeli Pariisissa, jossa hän kehitti 1930-luvulla ystäviensä kanssa négritude-ajattelun: mustan kulttuurin omanarvontunnon, joka ei hae hyväksyntää Euroopalta. Hän oli runoilija ennen kaikkea muuta ja toimi Senegalin ensimmäisenä presidenttinä 1960–1980. Vuosikymmeniin mahtuu myös yksipuoluekausi ja pääministerin vangitseminen; oppositiopuolueet sallittiin uudelleen 1976. Senghor luopui vallasta itse 1980 ja luovutti sen seuraajalleen — harvinaista siihen aikaan. Hänet valittiin ensimmäisenä afrikkalaisena Ranskan akatemiaan.
+- [Pakistan — maalehti / Musiikki: Aavikon runoilija palasi kaupunkiin lauluina] Cholistanin aavikko eli Rohi on 25 800 neliökilometriä hiekkaa Bahawalpurin eteläpuolella, osa suurta Tharin aavikkoa. Se oli karavaanireittien maata, ja reittejä vartioivista linnoituksista parhaiten on säilynyt Derawar. Aavikko sai oman runoilijansa, kun Khwaja Ghulam Farid (k. 1901) vetäytyi Rohiin ja vietti siellä kaikkiaan kahdeksantoista vuotta. Hän kirjoitti äidinkielellään saraikilla runoja rakkaudesta, kaipuusta ja kuolemasta, ja niitä lauletaan yhä seudun juhlissa.
+AIEMPI KYSYMYS: Kuka oli Henrik Wergeland?
+AIEMPI VASTAUS (Livia):
+Ai se, tän minä muistan. Henrik Wergeland oli norjalainen runoilija ja kirjailija, joka eli 1800-luvun alkupuolella. Hän oli [[runoilija]] ja aikansa tunnetuimpia kansallisen kulttuurin puolustajia ja kirjoitti paljon Norjan itsenäisyydestä sekä kansan sivistyksestä. Hän oli mukana siinä ryhmässä, joka osti [[Eidsvollsbygningen]]-talon velkojilta ja siten pelasti sen kansalle. Lisäksi hänet muistetaan toiminnastaan juutalaisten aseman parantamiseksi Norjassa. Pidän runoilijoista, koska he eivät pyydä pullaa palkkioksi.
+KYSYMYS: Kerro lisää: runoilija
+
+### 134
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eidsvollin rakennus (historia)
+Tietoruudun teksti: Eidsvollsbygningen on historiallinen kartanorakennus Eidsvollissa Akershusissa Norjassa. Siellä allekirjoitettiin Norjan perustuslaki 17. toukokuuta 1814, ja talo on nykyään valtion omistama kansallismonumentti ja museo. Rakennus valmistui vuonna 1770, ja sen pinta-ala on yli 2 000 neliömetriä; noin vuonna 1800 sen osti Carsten Anker, joka kunnosti kartanon ja asui siellä perheineen juuri allekirjoituksen aikaan. Anker ajautui konkurssiin 1822 ja omistus siirtyi brittiläisille velkojille, mutta runoilija Henrik Wergelandin johtama yksityisten kansalaisten ryhmä keräsi rahat ja osti talon puutarhoineen; kauppa vahvistui 1851, ja ryhmä lahjoitti kiinteistön Norjan valtiolle. Vuonna 2011 alkanut kunnostus palautti talon mahdollisimman tarkasti vuoden 1814 asuun, ja työ valmistui perustuslain 200-vuotisjuhlaan 2014.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Miksi Norja liittyi Ruotsin kanssa unioniin 1814?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Vuonna 1814 [[Tanska]] joutui luovuttamaan Norjan Ruotsille [[Kielin rauhassa]], mutta norjalaiset julistautuivat itsenäisiksi ja laativat Eidsvollissa oman perustuslain. [[Ruotsi]] vastasi hyökkäämällä, ja lyhyen sodan jälkeen sovittiin, että Norja liittyy Ruotsin kanssa unioniin. Norja kuitenkin säilytti oman perustuslakinsa ja oman hallintonsa, vaikka yhteinen kuningas oli ulkopolitiikan keskeinen johtaja. Unioni purettiin vuonna 1905. Lyhyt sota, pitkä unioni, ja minä kantaisin tämän asian mieluummin kirjeenä.
+KYSYMYS: Kerro lisää: Tanska
+
+### 135
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eidsvollin rakennus (historia)
+Tietoruudun teksti: Eidsvollsbygningen on historiallinen kartanorakennus Eidsvollissa Akershusissa Norjassa. Siellä allekirjoitettiin Norjan perustuslaki 17. toukokuuta 1814, ja talo on nykyään valtion omistama kansallismonumentti ja museo. Rakennus valmistui vuonna 1770, ja sen pinta-ala on yli 2 000 neliömetriä; noin vuonna 1800 sen osti Carsten Anker, joka kunnosti kartanon ja asui siellä perheineen juuri allekirjoituksen aikaan. Anker ajautui konkurssiin 1822 ja omistus siirtyi brittiläisille velkojille, mutta runoilija Henrik Wergelandin johtama yksityisten kansalaisten ryhmä keräsi rahat ja osti talon puutarhoineen; kauppa vahvistui 1851, ja ryhmä lahjoitti kiinteistön Norjan valtiolle. Vuonna 2011 alkanut kunnostus palautti talon mahdollisimman tarkasti vuoden 1814 asuun, ja työ valmistui perustuslain 200-vuotisjuhlaan 2014.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Luonto: Saari, jolla linnut saavat olla rauhassa] 1981 — Kymmenkunta kilometriä rannikolta on pieni graniittisaari, joka julistettiin luonnonsuojelualueeksi vuonna 1981. Saarella pesii merilintuja, muun muassa liejuliitäjiä, jotka tulevat pesäkoloilleen vasta pimeän tultua. Kävijämäärää rajoitetaan päivittäisellä kiintiöllä, ja osaan saarta ei saa mennä lainkaan pesimäaikaan. Saarella on myös 1600-luvun linnake, joka on rakennettu omalle luodolleen ja jonne pääsee kapeaa kivipengertä pitkin.
+AIEMPI KYSYMYS: Miksi Norja liittyi Ruotsin kanssa unioniin 1814?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Vuonna 1814 [[Tanska]] joutui luovuttamaan Norjan Ruotsille [[Kielin rauhassa]], mutta norjalaiset julistautuivat itsenäisiksi ja laativat Eidsvollissa oman perustuslain. [[Ruotsi]] vastasi hyökkäämällä, ja lyhyen sodan jälkeen sovittiin, että Norja liittyy Ruotsin kanssa unioniin. Norja kuitenkin säilytti oman perustuslakinsa ja oman hallintonsa, vaikka yhteinen kuningas oli ulkopolitiikan keskeinen johtaja. Unioni purettiin vuonna 1905. Lyhyt sota, pitkä unioni, ja minä kantaisin tämän asian mieluummin kirjeenä.
+KYSYMYS: Kerro lisää: Kielin rauhassa
+
+### 136
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eidsvollin rakennus (historia)
+Tietoruudun teksti: Eidsvollsbygningen on historiallinen kartanorakennus Eidsvollissa Akershusissa Norjassa. Siellä allekirjoitettiin Norjan perustuslaki 17. toukokuuta 1814, ja talo on nykyään valtion omistama kansallismonumentti ja museo. Rakennus valmistui vuonna 1770, ja sen pinta-ala on yli 2 000 neliömetriä; noin vuonna 1800 sen osti Carsten Anker, joka kunnosti kartanon ja asui siellä perheineen juuri allekirjoituksen aikaan. Anker ajautui konkurssiin 1822 ja omistus siirtyi brittiläisille velkojille, mutta runoilija Henrik Wergelandin johtama yksityisten kansalaisten ryhmä keräsi rahat ja osti talon puutarhoineen; kauppa vahvistui 1851, ja ryhmä lahjoitti kiinteistön Norjan valtiolle. Vuonna 2011 alkanut kunnostus palautti talon mahdollisimman tarkasti vuoden 1814 asuun, ja työ valmistui perustuslain 200-vuotisjuhlaan 2014.
+AIEMPI KYSYMYS: Miksi Norja liittyi Ruotsin kanssa unioniin 1814?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Vuonna 1814 [[Tanska]] joutui luovuttamaan Norjan Ruotsille [[Kielin rauhassa]], mutta norjalaiset julistautuivat itsenäisiksi ja laativat Eidsvollissa oman perustuslain. [[Ruotsi]] vastasi hyökkäämällä, ja lyhyen sodan jälkeen sovittiin, että Norja liittyy Ruotsin kanssa unioniin. Norja kuitenkin säilytti oman perustuslakinsa ja oman hallintonsa, vaikka yhteinen kuningas oli ulkopolitiikan keskeinen johtaja. Unioni purettiin vuonna 1905. Lyhyt sota, pitkä unioni, ja minä kantaisin tämän asian mieluummin kirjeenä.
+KYSYMYS: Kerro lisää: Ruotsi
+
+### 137
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kjerag (luonto · vuori)
+Tietoruudun teksti: Kjerag on 1 132 metriä korkea vuori Lysefjordin eteläreunalla Rogalandissa, ja sen pohjoispuolella jyrkänne putoaa 984 metriä lähes pystysuoraan fjordiin. Tunnetuin kohde on Kjeragbolten, noin viiden kuutiometrin kivenlohkare, joka on juuttunut kahden kallion väliin. Sen päälle voi kävellä ilman varusteita, vaikka alla on 241 metrin pudotus ja sen jälkeen vielä 735 metrin rinne fjordiin. Vaellus alkaa Øygardsstølenista ja kestää kumpaankin suuntaan 2,5–3 tuntia. Kallioseinämältä on hypätty base-hyppyjä vuodesta 1994.
+AIEMPI KYSYMYS: Miten iso kivi on juuttunut kahden kallion väliin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kyseessä on [[Kjeragbolten]], noin viiden kuutiometrin kokoinen kivenlohkare. Se on juuttunut kahden kallion väliin [[Kjerag]]-vuoren rinteellä. Kiven päälle voi kävellä ilman varusteita, vaikka alla on 241 metrin pudotus ja sen jälkeen vielä 735 metrin rinne [[Lysefjordiin]]. Kiven koko on siis suunnilleen pienen auton luokkaa, mutta sen asema tekee siitä erityisen. Katolta katsottuna kivi näyttäisi kyllä aika pieneltä.
+KYSYMYS: Kerro lisää: Kjeragbolten
+
+### 138
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kjerag (luonto · vuori)
+Tietoruudun teksti: Kjerag on 1 132 metriä korkea vuori Lysefjordin eteläreunalla Rogalandissa, ja sen pohjoispuolella jyrkänne putoaa 984 metriä lähes pystysuoraan fjordiin. Tunnetuin kohde on Kjeragbolten, noin viiden kuutiometrin kivenlohkare, joka on juuttunut kahden kallion väliin. Sen päälle voi kävellä ilman varusteita, vaikka alla on 241 metrin pudotus ja sen jälkeen vielä 735 metrin rinne fjordiin. Vaellus alkaa Øygardsstølenista ja kestää kumpaankin suuntaan 2,5–3 tuntia. Kallioseinämältä on hypätty base-hyppyjä vuodesta 1994.
+AIEMPI KYSYMYS: Miten iso kivi on juuttunut kahden kallion väliin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kyseessä on [[Kjeragbolten]], noin viiden kuutiometrin kokoinen kivenlohkare. Se on juuttunut kahden kallion väliin [[Kjerag]]-vuoren rinteellä. Kiven päälle voi kävellä ilman varusteita, vaikka alla on 241 metrin pudotus ja sen jälkeen vielä 735 metrin rinne [[Lysefjordiin]]. Kiven koko on siis suunnilleen pienen auton luokkaa, mutta sen asema tekee siitä erityisen. Katolta katsottuna kivi näyttäisi kyllä aika pieneltä.
+KYSYMYS: Kerro lisää: Kjerag
+
+### 139
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kjerag (luonto · vuori)
+Tietoruudun teksti: Kjerag on 1 132 metriä korkea vuori Lysefjordin eteläreunalla Rogalandissa, ja sen pohjoispuolella jyrkänne putoaa 984 metriä lähes pystysuoraan fjordiin. Tunnetuin kohde on Kjeragbolten, noin viiden kuutiometrin kivenlohkare, joka on juuttunut kahden kallion väliin. Sen päälle voi kävellä ilman varusteita, vaikka alla on 241 metrin pudotus ja sen jälkeen vielä 735 metrin rinne fjordiin. Vaellus alkaa Øygardsstølenista ja kestää kumpaankin suuntaan 2,5–3 tuntia. Kallioseinämältä on hypätty base-hyppyjä vuodesta 1994.
+AIEMPI KYSYMYS: Miten iso kivi on juuttunut kahden kallion väliin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kyseessä on [[Kjeragbolten]], noin viiden kuutiometrin kokoinen kivenlohkare. Se on juuttunut kahden kallion väliin [[Kjerag]]-vuoren rinteellä. Kiven päälle voi kävellä ilman varusteita, vaikka alla on 241 metrin pudotus ja sen jälkeen vielä 735 metrin rinne [[Lysefjordiin]]. Kiven koko on siis suunnilleen pienen auton luokkaa, mutta sen asema tekee siitä erityisen. Katolta katsottuna kivi näyttäisi kyllä aika pieneltä.
+KYSYMYS: Kerro lisää: Lysefjordiin
+
+### 140
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kjerag (luonto · vuori)
+Tietoruudun teksti: Kjerag on 1 132 metriä korkea vuori Lysefjordin eteläreunalla Rogalandissa, ja sen pohjoispuolella jyrkänne putoaa 984 metriä lähes pystysuoraan fjordiin. Tunnetuin kohde on Kjeragbolten, noin viiden kuutiometrin kivenlohkare, joka on juuttunut kahden kallion väliin. Sen päälle voi kävellä ilman varusteita, vaikka alla on 241 metrin pudotus ja sen jälkeen vielä 735 metrin rinne fjordiin. Vaellus alkaa Øygardsstølenista ja kestää kumpaankin suuntaan 2,5–3 tuntia. Kallioseinämältä on hypätty base-hyppyjä vuodesta 1994.
+AIEMPI KYSYMYS: Mikä on base-hyppy?
+AIEMPI VASTAUS (Livia):
+Ai tota, tästä minä tiedän vähän. Base-hyppy on [[laskuvarjohyppyä]] kiinteältä kohteelta, kuten kalliolta, rakennukselta, sillalta tai mastolta. Nimi tulee sanoista building, antenna, span ja earth, eli rakennus, antenni, silta ja maa. Koska hypyn korkeus on pieni verrattuna lentokoneesta hyppäämiseen, aikaa varjon avaamiseen on vähän, ja laji on vaarallinen. [[Kjerag]]in kallioseinämältä on hypätty vuodesta 1994. Minä avaan siipeni ilman varjoa, ja silti ammattilainen.
+KYSYMYS: Kerro lisää: laskuvarjohyppyä
+
+### 141
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kjerag (luonto · vuori)
+Tietoruudun teksti: Kjerag on 1 132 metriä korkea vuori Lysefjordin eteläreunalla Rogalandissa, ja sen pohjoispuolella jyrkänne putoaa 984 metriä lähes pystysuoraan fjordiin. Tunnetuin kohde on Kjeragbolten, noin viiden kuutiometrin kivenlohkare, joka on juuttunut kahden kallion väliin. Sen päälle voi kävellä ilman varusteita, vaikka alla on 241 metrin pudotus ja sen jälkeen vielä 735 metrin rinne fjordiin. Vaellus alkaa Øygardsstølenista ja kestää kumpaankin suuntaan 2,5–3 tuntia. Kallioseinämältä on hypätty base-hyppyjä vuodesta 1994.
+AIEMPI KYSYMYS: Miten Lysefjord on syntynyt?
+AIEMPI VASTAUS (Livia):
+Kato, hyvä kysymys. [[Lysefjord]] syntyi jääkaudella, kun paksu jäätikkö hioi laaksoa syvemmäksi vuoristoon. Kun jää suli, meri tulvi laaksoon ja täytti sen vedellä. Siksi vuonon seinämät nousevat jyrkkinä suoraan vedestä, kuten [[Kjerag]]in pohjoispuolella, jossa jyrkänne putoaa 984 metriä. Vuono sijaitsee Rogalandissa Norjan lounaisosassa. Tarkka pituus ja syvyys eivät ole minulla ulkomuistissa, joten niitä en veikkaa. Hieno työ jäälle, joka lopulta vain suli pois.
+KYSYMYS: Kerro lisää: Lysefjord
+
+### 142
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kjerag (luonto · vuori)
+Tietoruudun teksti: Kjerag on 1 132 metriä korkea vuori Lysefjordin eteläreunalla Rogalandissa, ja sen pohjoispuolella jyrkänne putoaa 984 metriä lähes pystysuoraan fjordiin. Tunnetuin kohde on Kjeragbolten, noin viiden kuutiometrin kivenlohkare, joka on juuttunut kahden kallion väliin. Sen päälle voi kävellä ilman varusteita, vaikka alla on 241 metrin pudotus ja sen jälkeen vielä 735 metrin rinne fjordiin. Vaellus alkaa Øygardsstølenista ja kestää kumpaankin suuntaan 2,5–3 tuntia. Kallioseinämältä on hypätty base-hyppyjä vuodesta 1994.
+AIEMPI KYSYMYS: Mikä on Preikestolen?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Preikestolen]] eli Saarnastuoli on jyrkkä kallioterassi [[Lysefjord]]in reunalla Rogalandissa. Sen tasainen kalliotaso kohoaa noin 600 metrin korkeuteen vuonon yläpuolelle, ja tarkka luku vaihtelee lähteittäin. Paikalle vaelletaan polkua pitkin, ja se on yksi Norjan tunnetuimmista retkikohteista. Pintaa kutsutaan tasaiseksi mutta reunalla on silti syytä pitää varovaisuus mukana. Hyvä paikka kyyhkylle, joka haluaa levätä rauhassa.
+KYSYMYS: Kerro lisää: Preikestolen
+
+### 143
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lyngenin Alpit (luonto · vuori)
+Tietoruudun teksti: Lyngenin Alpit on vuoristo Tromssan maakunnassa Pohjois-Norjassa, Tromssan kaupungista itään. Se on noin 90 kilometriä pitkä ja 15–20 kilometriä leveä, ja se ulottuu neljän kunnan alueelle. Vuoristoa rajaavat idässä Lyngenvuono ja lännessä Ullsfjord. Korkein huippu Jiehkkevárri kohoaa 1 834 metriin, ja alueella on 140 jäätikköä, joiden yhteispinta-ala on noin 141 neliökilometriä. Jäätikköjen ruokkima Blåvatnet-järvi erottuu kirkkaan turkoosista väristään.
+AIEMPI KYSYMYS: Kuinka pitkä Lyngenin Alppien vuoristo on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Lyngenin Alppien vuoristo on noin 90 kilometriä pitkä ja 15–20 kilometriä leveä, ja se ulottuu neljän kunnan alueelle. Vuoristo sijaitsee Tromssan maakunnassa Pohjois-Norjassa, ja sitä rajaavat idässä [[Lyngenvuono]] ja lännessä [[Ullsfjord]]. Alueella on 140 jäätikköä, ja korkein huippu on 1 834 metrin korkeudessa. Siinä riittää kulkemista, vaikka siivet olisi hyvin kunnossa. Tää oli lyhyt vastaus verrattuna matkaan.
+KYSYMYS: Kerro lisää: Lyngenvuono
+
+### 144
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lyngenin Alpit (luonto · vuori)
+Tietoruudun teksti: Lyngenin Alpit on vuoristo Tromssan maakunnassa Pohjois-Norjassa, Tromssan kaupungista itään. Se on noin 90 kilometriä pitkä ja 15–20 kilometriä leveä, ja se ulottuu neljän kunnan alueelle. Vuoristoa rajaavat idässä Lyngenvuono ja lännessä Ullsfjord. Korkein huippu Jiehkkevárri kohoaa 1 834 metriin, ja alueella on 140 jäätikköä, joiden yhteispinta-ala on noin 141 neliökilometriä. Jäätikköjen ruokkima Blåvatnet-järvi erottuu kirkkaan turkoosista väristään.
+AIEMPI KYSYMYS: Kuinka pitkä Lyngenin Alppien vuoristo on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Lyngenin Alppien vuoristo on noin 90 kilometriä pitkä ja 15–20 kilometriä leveä, ja se ulottuu neljän kunnan alueelle. Vuoristo sijaitsee Tromssan maakunnassa Pohjois-Norjassa, ja sitä rajaavat idässä [[Lyngenvuono]] ja lännessä [[Ullsfjord]]. Alueella on 140 jäätikköä, ja korkein huippu on 1 834 metrin korkeudessa. Siinä riittää kulkemista, vaikka siivet olisi hyvin kunnossa. Tää oli lyhyt vastaus verrattuna matkaan.
+KYSYMYS: Kerro lisää: Ullsfjord
+
+### 145
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lyngenin Alpit (luonto · vuori)
+Tietoruudun teksti: Lyngenin Alpit on vuoristo Tromssan maakunnassa Pohjois-Norjassa, Tromssan kaupungista itään. Se on noin 90 kilometriä pitkä ja 15–20 kilometriä leveä, ja se ulottuu neljän kunnan alueelle. Vuoristoa rajaavat idässä Lyngenvuono ja lännessä Ullsfjord. Korkein huippu Jiehkkevárri kohoaa 1 834 metriin, ja alueella on 140 jäätikköä, joiden yhteispinta-ala on noin 141 neliökilometriä. Jäätikköjen ruokkima Blåvatnet-järvi erottuu kirkkaan turkoosista väristään.
+AIEMPI KYSYMYS: Mikä on vuoriston korkein huippu?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: korkein huippu on [[Jiehkkevárri]], joka kohoaa 1 834 metriin. Se sijaitsee Lyngenin Alppien vuoristossa Tromssan maakunnassa Pohjois-Norjassa. Vuoristoa ympäröivät [[Lyngenvuono]] idässä ja [[Ullsfjord]] lännessä, joten huippu nousee lähes merenpinnan tasolta. Alueella on 140 jäätikköä, joiden yhteispinta-ala on noin 141 neliökilometriä. Korkealla vuorella kyyhkyn pitää pukea villapaita.
+KYSYMYS: Kerro lisää: Jiehkkevárri
+
+### 146
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lyngenin Alpit (luonto · vuori)
+Tietoruudun teksti: Lyngenin Alpit on vuoristo Tromssan maakunnassa Pohjois-Norjassa, Tromssan kaupungista itään. Se on noin 90 kilometriä pitkä ja 15–20 kilometriä leveä, ja se ulottuu neljän kunnan alueelle. Vuoristoa rajaavat idässä Lyngenvuono ja lännessä Ullsfjord. Korkein huippu Jiehkkevárri kohoaa 1 834 metriin, ja alueella on 140 jäätikköä, joiden yhteispinta-ala on noin 141 neliökilometriä. Jäätikköjen ruokkima Blåvatnet-järvi erottuu kirkkaan turkoosista väristään.
+AIEMPI KYSYMYS: Miten jäätikkö muovaa vuoristoa?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. Jäätikkö on hitaasti liikkuva valtava jäämassa, joka kuljettaa mukanaan kiveä ja soraa. Se hioo laaksoa pohjaltaan ja sivuiltaan, ja useimmiten tuloksena on U-kirjaimen muotoinen laakso. Jäätikön reunalle kasautuu [[moreenia]], ja se voi irrottaa kallioperästä lohkareita. Kun jää sulaa, jäljelle jäävät jyrkät seinämät, järvet ja tasanteet, ja rannikolla meri voi täyttää laakson vuonoksi. [[Lyngenin Alpeilla]] jäätiköt ovat yhä muovaamassa maisemaa, mutta niiden tarkka vaikutus riippuu ilmastosta. Hitaasti, mutta varmasti, ja siihen minä en ehtisi.
+KYSYMYS: Kerro lisää: moreenia
+
+### 147
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lyngenin Alpit (luonto · vuori)
+Tietoruudun teksti: Lyngenin Alpit on vuoristo Tromssan maakunnassa Pohjois-Norjassa, Tromssan kaupungista itään. Se on noin 90 kilometriä pitkä ja 15–20 kilometriä leveä, ja se ulottuu neljän kunnan alueelle. Vuoristoa rajaavat idässä Lyngenvuono ja lännessä Ullsfjord. Korkein huippu Jiehkkevárri kohoaa 1 834 metriin, ja alueella on 140 jäätikköä, joiden yhteispinta-ala on noin 141 neliökilometriä. Jäätikköjen ruokkima Blåvatnet-järvi erottuu kirkkaan turkoosista väristään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Smaragdikaunotar] nykyään — Soča saa alkunsa Trenta-laaksossa Julian Alpeilla 876 metrin korkeudessa ja virtaa 138 kilometrin matkan Adrianmereen. Sen vesi on niin smaragdinvihreää, että jokea markkinoidaan nimellä Smaragdikaunotar, ja väri säilyy poikkeuksellisen pitkälle. Rannoilla syntyi myös runoutta: Simon Gregorčič kirjoitti joesta runon Soči, jota pidetään slovenialaisen kirjallisuuden mestariteoksena. Jokivarressa elää harvinaista marmoritaimenta, ja alueella kuvattiin osa vuoden 2008 Narnia-elokuvasta Prinssi Kaspian. Italiassa joki tunnetaan nimellä Isonzo.
+- [Italia — maalehti / Luonto: Alppikauris pelastui viime hetkellä] 1800-luvun puolivälissä alppikauriita oli jäljellä alle sata, kaikki yhdessä laaksossa Gran Paradison vuorilla — muualta Alpeilta ne oli metsästetty loppuun. Italian kuningas rauhoitti viimeisen lauman omaksi metsästysmaakseen, ja tästä ristiriidasta alkoi pelastus: alueesta tuli 1922 Italian ensimmäinen kansallispuisto. Nykyään Alpeilla kiipeilee taas yli 50 000 kaurista, ja jokainen polveutuu Gran Paradison lauman eläimistä. Sarvekas kiipeilijä on nykyään puiston tunnuksessa.
+AIEMPI KYSYMYS: Miten jäätikkö muovaa vuoristoa?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. Jäätikkö on hitaasti liikkuva valtava jäämassa, joka kuljettaa mukanaan kiveä ja soraa. Se hioo laaksoa pohjaltaan ja sivuiltaan, ja useimmiten tuloksena on U-kirjaimen muotoinen laakso. Jäätikön reunalle kasautuu [[moreenia]], ja se voi irrottaa kallioperästä lohkareita. Kun jää sulaa, jäljelle jäävät jyrkät seinämät, järvet ja tasanteet, ja rannikolla meri voi täyttää laakson vuonoksi. [[Lyngenin Alpeilla]] jäätiköt ovat yhä muovaamassa maisemaa, mutta niiden tarkka vaikutus riippuu ilmastosta. Hitaasti, mutta varmasti, ja siihen minä en ehtisi.
+KYSYMYS: Kerro lisää: Lyngenin Alpeilla
+
+### 148
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lyngenin Alpit (luonto · vuori)
+Tietoruudun teksti: Lyngenin Alpit on vuoristo Tromssan maakunnassa Pohjois-Norjassa, Tromssan kaupungista itään. Se on noin 90 kilometriä pitkä ja 15–20 kilometriä leveä, ja se ulottuu neljän kunnan alueelle. Vuoristoa rajaavat idässä Lyngenvuono ja lännessä Ullsfjord. Korkein huippu Jiehkkevárri kohoaa 1 834 metriin, ja alueella on 140 jäätikköä, joiden yhteispinta-ala on noin 141 neliökilometriä. Jäätikköjen ruokkima Blåvatnet-järvi erottuu kirkkaan turkoosista väristään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Luonto: Aurinko kiertää eikä laske] Kesäkuussa — Napapiirin pohjoispuolella aurinko ei kesällä laske lainkaan vaan kiertää taivaalla ympäri: Lofooteilla se pysyy ylhäällä lähes kaksi kuukautta. Keskiyön aurinko värjää talot ja vuoret oranssiksi kellon ympäri, ja kalastajat käyvät töissä yölläkin. Talvella sama asia toimii toisin päin — kaamos kestää saman verran, ja aurinko ei nouse ollenkaan. Silloin lumi ja meri heijastavat sinistä valoa, jota norjalaiset sanovat siniseksi hetkeksi.
+AIEMPI KYSYMYS: Mikä on kaamos?
+AIEMPI VASTAUS (Livia):
+Ai se, sen minä tunnen. Kaamos on [[napapiirin]] pohjoispuolella oleva aika, jolloin aurinko ei nouse horisontin yläpuolelle. [[Tromssassa]] kaamos kestää noin marraskuun lopulta tammikuun puoliväliin, mutta tarkat päivät vaihtelevat vuosittain. Aamunkoitto ja iltahämärä tuovat taivaalle sinisen valon, jota kutsutaan sinisen hetken valoksi, ja se on hämärää mutta ei täysin pimeää. Vastakohtana kesällä on yötön yö, jolloin aurinko ei laske lainkaan. Pohjoisessa ihmiset sopeutuvat, ja kyyhky vain kääntää kylkeä.
+KYSYMYS: Kerro lisää: napapiirin
+
+### 149
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lyngenin Alpit (luonto · vuori)
+Tietoruudun teksti: Lyngenin Alpit on vuoristo Tromssan maakunnassa Pohjois-Norjassa, Tromssan kaupungista itään. Se on noin 90 kilometriä pitkä ja 15–20 kilometriä leveä, ja se ulottuu neljän kunnan alueelle. Vuoristoa rajaavat idässä Lyngenvuono ja lännessä Ullsfjord. Korkein huippu Jiehkkevárri kohoaa 1 834 metriin, ja alueella on 140 jäätikköä, joiden yhteispinta-ala on noin 141 neliökilometriä. Jäätikköjen ruokkima Blåvatnet-järvi erottuu kirkkaan turkoosista väristään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan tuomiokirkko] 1861 Tromssan tuomiokirkko on kokonaan puusta rakennettu keltainen kirkko, joka valmistui vuonna 1861 arkkitehti Christian Heinrich Groschin piirustusten mukaan. Se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu puusta - ja sen sisään mahtuu yli 600 kirkkovierasta! Paikalla on ollut kirkko jo satoja vuosia ennen tätäkin: kuningas Håkon IV rakennutti tänne kappelin jo vuonna 1252, ja sen jälkeen paikalla on ollut ainakin kaksi muuta kirkkoa ennen nykyistä rakennusta. Kellotorni valmistui vuotta myöhemmin, 1862, ja kirkkoa koristeltiin lisää vielä 1880-luvulla. Isoisän vieraillessa Tromssassa 1873 kirkko oli vasta reilut kymmenen vuotta vanha - täysin uusi nähtävyys pienessä pu…
+AIEMPI KYSYMYS: Mikä on kaamos?
+AIEMPI VASTAUS (Livia):
+Ai se, sen minä tunnen. Kaamos on [[napapiirin]] pohjoispuolella oleva aika, jolloin aurinko ei nouse horisontin yläpuolelle. [[Tromssassa]] kaamos kestää noin marraskuun lopulta tammikuun puoliväliin, mutta tarkat päivät vaihtelevat vuosittain. Aamunkoitto ja iltahämärä tuovat taivaalle sinisen valon, jota kutsutaan sinisen hetken valoksi, ja se on hämärää mutta ei täysin pimeää. Vastakohtana kesällä on yötön yö, jolloin aurinko ei laske lainkaan. Pohjoisessa ihmiset sopeutuvat, ja kyyhky vain kääntää kylkeä.
+KYSYMYS: Kerro lisää: Tromssassa
+
+### 150
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lyngenin Alpit (luonto · vuori)
+Tietoruudun teksti: Lyngenin Alpit on vuoristo Tromssan maakunnassa Pohjois-Norjassa, Tromssan kaupungista itään. Se on noin 90 kilometriä pitkä ja 15–20 kilometriä leveä, ja se ulottuu neljän kunnan alueelle. Vuoristoa rajaavat idässä Lyngenvuono ja lännessä Ullsfjord. Korkein huippu Jiehkkevárri kohoaa 1 834 metriin, ja alueella on 140 jäätikköä, joiden yhteispinta-ala on noin 141 neliökilometriä. Jäätikköjen ruokkima Blåvatnet-järvi erottuu kirkkaan turkoosista väristään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Kaivo, joka muutti maan] 1969 — Norja oli 1960-luvulla Euroopan köyhempiä maita, ja Pohjanmereltä oli etsitty öljyä vuosia tuloksetta. Juuri ennen joulua 1969 varmistui, että Ekofiskin kentältä löytyi öljyä — ja paljon. Maa teki poikkeuksellisen päätöksen: tulot eivät menneet suoraan käyttöön vaan rahastoon, jonka on tarkoitus riittää myös tuleville sukupolville. Siitä kasvoi maailman suurin valtiollinen sijoitusrahasto. Öljyn ansiosta Norjasta tuli rikas nopeasti, mutta se joutuu nyt miettimään, mitä tehdä kun öljy loppuu.
+- [Norja — maalehti / Menovinkit] Norja on avannut verkkoon sen, mihin ei muuten pääse: Huudon siveltimenjäljet, viikinkilaivan jonka museo on kiinni, koko kansan nimet vuodesta 1769 ja kartan, joka kertoo missä revontulet juuri nyt palavat.
+- [Norja — maalehti / Historia: Lipun kannossa oli silakkasalaatti] 1844 — Norjan nykyinen lippu suunniteltiin jo 1821; sen teki suurkäräjien jäsen Fredrik Meltzer, ja hän perusteli punaista, valkoista ja sinistä sillä, että ne merkitsivät silloin vapautta. Sillä lipulla sai kuitenkin purjehtia vain pohjoisilla vesillä: Kapp Finisterren eteläpuolella oli käytettävä unionin yhteistä kauppalippua, koska suoja Pohjois-Afrikan kaappareilta tuli Ruotsin maksamana. Vuonna 1844 molempien maiden lippujen kantoon pantiin yhteinen unionimerkki, joka jakoi värit tasan. Kansa antoi sille nimen sildesalaten, silakkasalaatti. Kauppalipun kannosta merkki katosi vuoden 1899 lopussa.
+AIEMPI KYSYMYS: Mitä revontulet ovat?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, hieno aihe. Revontulet ovat ilmiö, jossa auringosta tulevat varautuneet hiukkaset osuvat maapallon yläilmakehän kaasuihin, kuten happeen ja typpeen. Kaasut alkavat hehkua, ja valo näkyy vihreänä, punaisena tai violettina. Ilmiö näkyy parhaiten pohjoisilla alueilla pimeällä taivaalla, ja [[Pohjois-Norja]] on tunnettu revontulikohde. [[Tromssa]] on suosittu paikka niiden katseluun, koska se sijaitsee revontulivyöhykkeellä. Taivas näyttää ylhäältä katsottuna vielä paremmalta.
+KYSYMYS: Kerro lisää: Pohjois-Norja
+
+### 151
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lyngenin Alpit (luonto · vuori)
+Tietoruudun teksti: Lyngenin Alpit on vuoristo Tromssan maakunnassa Pohjois-Norjassa, Tromssan kaupungista itään. Se on noin 90 kilometriä pitkä ja 15–20 kilometriä leveä, ja se ulottuu neljän kunnan alueelle. Vuoristoa rajaavat idässä Lyngenvuono ja lännessä Ullsfjord. Korkein huippu Jiehkkevárri kohoaa 1 834 metriin, ja alueella on 140 jäätikköä, joiden yhteispinta-ala on noin 141 neliökilometriä. Jäätikköjen ruokkima Blåvatnet-järvi erottuu kirkkaan turkoosista väristään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan tuomiokirkko] 1861 Tromssan tuomiokirkko on kokonaan puusta rakennettu keltainen kirkko, joka valmistui vuonna 1861 arkkitehti Christian Heinrich Groschin piirustusten mukaan. Se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu puusta - ja sen sisään mahtuu yli 600 kirkkovierasta! Paikalla on ollut kirkko jo satoja vuosia ennen tätäkin: kuningas Håkon IV rakennutti tänne kappelin jo vuonna 1252, ja sen jälkeen paikalla on ollut ainakin kaksi muuta kirkkoa ennen nykyistä rakennusta. Kellotorni valmistui vuotta myöhemmin, 1862, ja kirkkoa koristeltiin lisää vielä 1880-luvulla. Isoisän vieraillessa Tromssassa 1873 kirkko oli vasta reilut kymmenen vuotta vanha - täysin uusi nähtävyys pienessä pu…
+AIEMPI KYSYMYS: Mitä revontulet ovat?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, hieno aihe. Revontulet ovat ilmiö, jossa auringosta tulevat varautuneet hiukkaset osuvat maapallon yläilmakehän kaasuihin, kuten happeen ja typpeen. Kaasut alkavat hehkua, ja valo näkyy vihreänä, punaisena tai violettina. Ilmiö näkyy parhaiten pohjoisilla alueilla pimeällä taivaalla, ja [[Pohjois-Norja]] on tunnettu revontulikohde. [[Tromssa]] on suosittu paikka niiden katseluun, koska se sijaitsee revontulivyöhykkeellä. Taivas näyttää ylhäältä katsottuna vielä paremmalta.
+KYSYMYS: Kerro lisää: Tromssa
+
+### 152
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geirangervuono (meri)
+Tietoruudun teksti: Geirangervuono on 15 kilometrin pituinen sivuhaara Sunnylvsvuonosta Länsi-Norjan Sunnmøressä, ja sen perukassa on pieni Geirangerin kylä. Vuonon jyrkät vuorenseinämät nousevat lähes suoraan vedestä, ja niiltä putoaa useita vesiputouksia, joista tunnetuimmat ovat Seitsemän sisarta ja niitä vastapäätä oleva Kosija. Rinteillä on useita nykyään autioituneita vuoristotiloja, kuten Skageflå ja Knivsflå, joihin pääsi ennen vain jyrkkiä polkuja tai venettä pitkin. Vuonna 2005 Geirangervuono liitettiin yhdessä Nærøyvuonon kanssa Unescon maailmanperintölistalle nimellä Länsi-Norjan vuonot. Vuonoa uhkaa myös Åkernesetin epävakaa vuorenrinne, jonka romahtaminen voisi aiheuttaa hyökyaallon.
+AIEMPI KYSYMYS: Miksi Åkernesetin epävakaa vuorenrinne on Geirangervuonon suurin uhka?
+AIEMPI VASTAUS (Livia):
+Kato, tää on vakava asia. [[Åkernesetin]] vuorenrinne on epävakaa, ja jos se romahtaisi vuonoon, siitä voisi syntyä [[hyökyaalto]]. Vuono on kapea ja jyrkkäseinäinen, joten aalto voisi osua nopeasti rannoille ja pieniin kyliin, kuten [[Geirangerin]] kylään. Kuinka suuri uhka rinne on suhteessa muihin vaaroihin, en osaa sanoa varmasti. Rinnettä tarkkaillaan, jotta mahdollinen liike havaittaisiin ajoissa. Uhka on kuitenkin otettu vakavasti, ja hyvä niin.
+KYSYMYS: Kerro lisää: Åkernesetin
+
+### 153
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geirangervuono (meri)
+Tietoruudun teksti: Geirangervuono on 15 kilometrin pituinen sivuhaara Sunnylvsvuonosta Länsi-Norjan Sunnmøressä, ja sen perukassa on pieni Geirangerin kylä. Vuonon jyrkät vuorenseinämät nousevat lähes suoraan vedestä, ja niiltä putoaa useita vesiputouksia, joista tunnetuimmat ovat Seitsemän sisarta ja niitä vastapäätä oleva Kosija. Rinteillä on useita nykyään autioituneita vuoristotiloja, kuten Skageflå ja Knivsflå, joihin pääsi ennen vain jyrkkiä polkuja tai venettä pitkin. Vuonna 2005 Geirangervuono liitettiin yhdessä Nærøyvuonon kanssa Unescon maailmanperintölistalle nimellä Länsi-Norjan vuonot. Vuonoa uhkaa myös Åkernesetin epävakaa vuorenrinne, jonka romahtaminen voisi aiheuttaa hyökyaallon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lissabon — kohdekartta / Kohdekartta: Kauppatori] 1755–1775 Kauppatori eli Praça do Comércio on yksi Euroopan suurimmista aukioista - se on lähes neliön muotoinen ja mittaa 175 kertaa 175 metriä. Paikalliset kutsuvat sitä myös nimellä Terreiro do Paço, "palatsin piha", sillä täällä sijaitsi ennen kuninkaallinen Ribeiran palatsi, jonka kirjastossa oli yli 200 000 kirjaa. Vuoden 1755 maanjäristys ja sitä seurannut hyökyaalto tuhosivat palatsin täysin. Tilalle rakennettiin avara, jokea vasten avautuva aukio, ja vuonna 1775 sen keskelle pystytettiin komea ratsastajapatsas kuningas Joosef I:stä. Aukion läpi kulkee kaupungin pääkatu vuosina 1873-1875 valmistuneen suuren riemukaaren ali. Aukiolla on nähty myös synkkiä hetkiä: vuonna 1908 kuningas…
+- [Namib — kaupunkilehti / Namib: Maa jonka Jumala teki vihassaan] Namibin pohjoista rannikkoa kutsutaan nykyään Skeleton Coastiksi eli Luurankorannikoksi, mutta vanhemmat kuvaukset ovat vielä synkempiä. San-kansa kutsui aluetta nimellä "maa, jonka Jumala teki vihassaan", ja portugalilaiset puhuivat "helvetin porteista". Molemmat nimet syntyivät samasta syystä: kylmä Benguela-virta nostaa rannikolle sakeaa sumua yli 180 päivänä vuodessa, ja hyökyaalto sekä maalta merelle puhaltava tuuli tekivät purjelaivan pakenemisesta lähes mahdotonta. Vasta 1944 kirjailija John Henry Marsh antoi alueelle nykyisen nimen kirjassaan haaksirikkoutuneesta laivasta – nimen taustalla olivat sekä valaanpyytäjien että merimiesten jäänteet.
+AIEMPI KYSYMYS: Miksi Åkernesetin epävakaa vuorenrinne on Geirangervuonon suurin uhka?
+AIEMPI VASTAUS (Livia):
+Kato, tää on vakava asia. [[Åkernesetin]] vuorenrinne on epävakaa, ja jos se romahtaisi vuonoon, siitä voisi syntyä [[hyökyaalto]]. Vuono on kapea ja jyrkkäseinäinen, joten aalto voisi osua nopeasti rannoille ja pieniin kyliin, kuten [[Geirangerin]] kylään. Kuinka suuri uhka rinne on suhteessa muihin vaaroihin, en osaa sanoa varmasti. Rinnettä tarkkaillaan, jotta mahdollinen liike havaittaisiin ajoissa. Uhka on kuitenkin otettu vakavasti, ja hyvä niin.
+KYSYMYS: Kerro lisää: hyökyaalto
+
+### 154
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geirangervuono (meri)
+Tietoruudun teksti: Geirangervuono on 15 kilometrin pituinen sivuhaara Sunnylvsvuonosta Länsi-Norjan Sunnmøressä, ja sen perukassa on pieni Geirangerin kylä. Vuonon jyrkät vuorenseinämät nousevat lähes suoraan vedestä, ja niiltä putoaa useita vesiputouksia, joista tunnetuimmat ovat Seitsemän sisarta ja niitä vastapäätä oleva Kosija. Rinteillä on useita nykyään autioituneita vuoristotiloja, kuten Skageflå ja Knivsflå, joihin pääsi ennen vain jyrkkiä polkuja tai venettä pitkin. Vuonna 2005 Geirangervuono liitettiin yhdessä Nærøyvuonon kanssa Unescon maailmanperintölistalle nimellä Länsi-Norjan vuonot. Vuonoa uhkaa myös Åkernesetin epävakaa vuorenrinne, jonka romahtaminen voisi aiheuttaa hyökyaallon.
+AIEMPI KYSYMYS: Miksi Åkernesetin epävakaa vuorenrinne on Geirangervuonon suurin uhka?
+AIEMPI VASTAUS (Livia):
+Kato, tää on vakava asia. [[Åkernesetin]] vuorenrinne on epävakaa, ja jos se romahtaisi vuonoon, siitä voisi syntyä [[hyökyaalto]]. Vuono on kapea ja jyrkkäseinäinen, joten aalto voisi osua nopeasti rannoille ja pieniin kyliin, kuten [[Geirangerin]] kylään. Kuinka suuri uhka rinne on suhteessa muihin vaaroihin, en osaa sanoa varmasti. Rinnettä tarkkaillaan, jotta mahdollinen liike havaittaisiin ajoissa. Uhka on kuitenkin otettu vakavasti, ja hyvä niin.
+KYSYMYS: Kerro lisää: Geirangerin
+
+### 155
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geirangervuono (meri)
+Tietoruudun teksti: Geirangervuono on 15 kilometrin pituinen sivuhaara Sunnylvsvuonosta Länsi-Norjan Sunnmøressä, ja sen perukassa on pieni Geirangerin kylä. Vuonon jyrkät vuorenseinämät nousevat lähes suoraan vedestä, ja niiltä putoaa useita vesiputouksia, joista tunnetuimmat ovat Seitsemän sisarta ja niitä vastapäätä oleva Kosija. Rinteillä on useita nykyään autioituneita vuoristotiloja, kuten Skageflå ja Knivsflå, joihin pääsi ennen vain jyrkkiä polkuja tai venettä pitkin. Vuonna 2005 Geirangervuono liitettiin yhdessä Nærøyvuonon kanssa Unescon maailmanperintölistalle nimellä Länsi-Norjan vuonot. Vuonoa uhkaa myös Åkernesetin epävakaa vuorenrinne, jonka romahtaminen voisi aiheuttaa hyökyaallon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sydney — kohdekartta / Kohdekartta: Anzac-muistomerkki] 1930–1934 Varainkeruu aloitettiin 25. huhtikuuta 1916, vuosi Gallipolin maihinnousun jälkeen. Suunnittelukilpailu julistettiin 13. heinäkuuta 1929, ja siihen saivat osallistua vain australialaiset arkkitehdit; rakennuksen hinnaksi määrättiin enintään 75 000 puntaa, ja tiloihin piti mahtua myös veteraanijärjestöjen toimistot. Ehdotuksia tuli 117, ja voittajaksi julkistettiin helmikuussa 1930 Bruce Dellit. Rakennusaineet vaadittiin australialaisiksi ja työntekijöiksi otettiin ensisijaisesti rintamalta palanneita. Kilpailun voitettuaan Dellit pyysi veistokset kuvanveistäjä Rayner Hoffilta, joka oli itse palvellut länsirintamalla. Hoff kahdeksan apulaisensa kanssa teki 1931–1934 kuusitoista ist…
+AIEMPI KYSYMYS: Mitkä kaksi vesiputousta ovat kuuluisia siitä, että Kosija yrittää kosia sisaruksia vastapäätä?
+AIEMPI VASTAUS (Livia):
+No jopas. Putoukset ovat [[Seitsemän sisarta]] ja niitä vastapäätä oleva [[Kosija]], ja ne ovat [[Geirangervuonon]] tunnetuimmat vesiputoukset. Tarinan mukaan Kosija kosii sisaria vuonon toiselta puolelta, ja nimi perustuu tähän kansantarinaan. Seitsemän sisarta koostuu useista vierekkäisistä virroista, jotka putoavat jyrkkää kalliota alas. Tarina on kauniimpi kuin yksikään kosintalaulu, jonka kyyhky on kuullut.
+KYSYMYS: Kerro lisää: Seitsemän sisarta
+
+### 156
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geirangervuono (meri)
+Tietoruudun teksti: Geirangervuono on 15 kilometrin pituinen sivuhaara Sunnylvsvuonosta Länsi-Norjan Sunnmøressä, ja sen perukassa on pieni Geirangerin kylä. Vuonon jyrkät vuorenseinämät nousevat lähes suoraan vedestä, ja niiltä putoaa useita vesiputouksia, joista tunnetuimmat ovat Seitsemän sisarta ja niitä vastapäätä oleva Kosija. Rinteillä on useita nykyään autioituneita vuoristotiloja, kuten Skageflå ja Knivsflå, joihin pääsi ennen vain jyrkkiä polkuja tai venettä pitkin. Vuonna 2005 Geirangervuono liitettiin yhdessä Nærøyvuonon kanssa Unescon maailmanperintölistalle nimellä Länsi-Norjan vuonot. Vuonoa uhkaa myös Åkernesetin epävakaa vuorenrinne, jonka romahtaminen voisi aiheuttaa hyökyaallon.
+AIEMPI KYSYMYS: Mitkä kaksi vesiputousta ovat kuuluisia siitä, että Kosija yrittää kosia sisaruksia vastapäätä?
+AIEMPI VASTAUS (Livia):
+No jopas. Putoukset ovat [[Seitsemän sisarta]] ja niitä vastapäätä oleva [[Kosija]], ja ne ovat [[Geirangervuonon]] tunnetuimmat vesiputoukset. Tarinan mukaan Kosija kosii sisaria vuonon toiselta puolelta, ja nimi perustuu tähän kansantarinaan. Seitsemän sisarta koostuu useista vierekkäisistä virroista, jotka putoavat jyrkkää kalliota alas. Tarina on kauniimpi kuin yksikään kosintalaulu, jonka kyyhky on kuullut.
+KYSYMYS: Kerro lisää: Kosija
+
+### 157
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geirangervuono (meri)
+Tietoruudun teksti: Geirangervuono on 15 kilometrin pituinen sivuhaara Sunnylvsvuonosta Länsi-Norjan Sunnmøressä, ja sen perukassa on pieni Geirangerin kylä. Vuonon jyrkät vuorenseinämät nousevat lähes suoraan vedestä, ja niiltä putoaa useita vesiputouksia, joista tunnetuimmat ovat Seitsemän sisarta ja niitä vastapäätä oleva Kosija. Rinteillä on useita nykyään autioituneita vuoristotiloja, kuten Skageflå ja Knivsflå, joihin pääsi ennen vain jyrkkiä polkuja tai venettä pitkin. Vuonna 2005 Geirangervuono liitettiin yhdessä Nærøyvuonon kanssa Unescon maailmanperintölistalle nimellä Länsi-Norjan vuonot. Vuonoa uhkaa myös Åkernesetin epävakaa vuorenrinne, jonka romahtaminen voisi aiheuttaa hyökyaallon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Luonto: Meri nousi laakson pohjalle] 2005 — Vuono syntyi jääkaudella: paksu jäätikkö hioi laaksosta U-kirjaimen muotoisen uoman kalliota myöten, ja kun jää suli, meri työntyi tyhjään laaksoon sisämaahan asti. Siksi vuonon seinät nousevat pystysuorina suoraan vedestä ja vettä on alla satoja metrejä. Geirangervuono otettiin maailmanperintöluetteloon vuonna 2005. Rinteillä on vanhoja vuoritiloja, joihin päästiin ennen vain veneellä ja köysitikkaita pitkin — lasten kerrotaan olleen köydessä kiinni, jotta he eivät putoaisi.
+AIEMPI KYSYMYS: Mitkä kaksi vesiputousta ovat kuuluisia siitä, että Kosija yrittää kosia sisaruksia vastapäätä?
+AIEMPI VASTAUS (Livia):
+No jopas. Putoukset ovat [[Seitsemän sisarta]] ja niitä vastapäätä oleva [[Kosija]], ja ne ovat [[Geirangervuonon]] tunnetuimmat vesiputoukset. Tarinan mukaan Kosija kosii sisaria vuonon toiselta puolelta, ja nimi perustuu tähän kansantarinaan. Seitsemän sisarta koostuu useista vierekkäisistä virroista, jotka putoavat jyrkkää kalliota alas. Tarina on kauniimpi kuin yksikään kosintalaulu, jonka kyyhky on kuullut.
+KYSYMYS: Kerro lisää: Geirangervuonon
+
+### 158
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geirangervuono (meri)
+Tietoruudun teksti: Geirangervuono on 15 kilometrin pituinen sivuhaara Sunnylvsvuonosta Länsi-Norjan Sunnmøressä, ja sen perukassa on pieni Geirangerin kylä. Vuonon jyrkät vuorenseinämät nousevat lähes suoraan vedestä, ja niiltä putoaa useita vesiputouksia, joista tunnetuimmat ovat Seitsemän sisarta ja niitä vastapäätä oleva Kosija. Rinteillä on useita nykyään autioituneita vuoristotiloja, kuten Skageflå ja Knivsflå, joihin pääsi ennen vain jyrkkiä polkuja tai venettä pitkin. Vuonna 2005 Geirangervuono liitettiin yhdessä Nærøyvuonon kanssa Unescon maailmanperintölistalle nimellä Länsi-Norjan vuonot. Vuonoa uhkaa myös Åkernesetin epävakaa vuorenrinne, jonka romahtaminen voisi aiheuttaa hyökyaallon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Luonto: Meri nousi laakson pohjalle] 2005 — Vuono syntyi jääkaudella: paksu jäätikkö hioi laaksosta U-kirjaimen muotoisen uoman kalliota myöten, ja kun jää suli, meri työntyi tyhjään laaksoon sisämaahan asti. Siksi vuonon seinät nousevat pystysuorina suoraan vedestä ja vettä on alla satoja metrejä. Geirangervuono otettiin maailmanperintöluetteloon vuonna 2005. Rinteillä on vanhoja vuoritiloja, joihin päästiin ennen vain veneellä ja köysitikkaita pitkin — lasten kerrotaan olleen köydessä kiinni, jotta he eivät putoaisi.
+AIEMPI KYSYMYS: Mikä on Unescon maailmanperintölista?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tän minä osaan. Unescon maailmanperintölista on luettelo kohteista, joiden katsotaan olevan koko ihmiskunnan yhteistä kulttuuri- tai luonnonperintöä. Kohteet valitaan sen mukaan, kuinka ainutlaatuisia ja arvokkaita ne ovat, ja niiden suojelu on kansainvälinen tehtävä. Norjassa luetteloon kuuluu esimerkiksi Länsi-Norjan vuonot, johon [[Geirangervuono]] ja [[Nærøyvuono]] liitettiin vuonna 2005. Lista kasvaa ajan mittaan, ja siksi tarkkaa kohteiden määrää en veikkaa. Maailmanperintö kuulostaa minusta hienolta, vaikka se ei sisällä kyyhkyjä.
+KYSYMYS: Kerro lisää: Geirangervuono
+
+### 159
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geirangervuono (meri)
+Tietoruudun teksti: Geirangervuono on 15 kilometrin pituinen sivuhaara Sunnylvsvuonosta Länsi-Norjan Sunnmøressä, ja sen perukassa on pieni Geirangerin kylä. Vuonon jyrkät vuorenseinämät nousevat lähes suoraan vedestä, ja niiltä putoaa useita vesiputouksia, joista tunnetuimmat ovat Seitsemän sisarta ja niitä vastapäätä oleva Kosija. Rinteillä on useita nykyään autioituneita vuoristotiloja, kuten Skageflå ja Knivsflå, joihin pääsi ennen vain jyrkkiä polkuja tai venettä pitkin. Vuonna 2005 Geirangervuono liitettiin yhdessä Nærøyvuonon kanssa Unescon maailmanperintölistalle nimellä Länsi-Norjan vuonot. Vuonoa uhkaa myös Åkernesetin epävakaa vuorenrinne, jonka romahtaminen voisi aiheuttaa hyökyaallon.
+AIEMPI KYSYMYS: Mikä on Unescon maailmanperintölista?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tän minä osaan. Unescon maailmanperintölista on luettelo kohteista, joiden katsotaan olevan koko ihmiskunnan yhteistä kulttuuri- tai luonnonperintöä. Kohteet valitaan sen mukaan, kuinka ainutlaatuisia ja arvokkaita ne ovat, ja niiden suojelu on kansainvälinen tehtävä. Norjassa luetteloon kuuluu esimerkiksi Länsi-Norjan vuonot, johon [[Geirangervuono]] ja [[Nærøyvuono]] liitettiin vuonna 2005. Lista kasvaa ajan mittaan, ja siksi tarkkaa kohteiden määrää en veikkaa. Maailmanperintö kuulostaa minusta hienolta, vaikka se ei sisällä kyyhkyjä.
+KYSYMYS: Kerro lisää: Nærøyvuono
+
+### 160
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geirangervuono (meri)
+Tietoruudun teksti: Geirangervuono on 15 kilometrin pituinen sivuhaara Sunnylvsvuonosta Länsi-Norjan Sunnmøressä, ja sen perukassa on pieni Geirangerin kylä. Vuonon jyrkät vuorenseinämät nousevat lähes suoraan vedestä, ja niiltä putoaa useita vesiputouksia, joista tunnetuimmat ovat Seitsemän sisarta ja niitä vastapäätä oleva Kosija. Rinteillä on useita nykyään autioituneita vuoristotiloja, kuten Skageflå ja Knivsflå, joihin pääsi ennen vain jyrkkiä polkuja tai venettä pitkin. Vuonna 2005 Geirangervuono liitettiin yhdessä Nærøyvuonon kanssa Unescon maailmanperintölistalle nimellä Länsi-Norjan vuonot. Vuonoa uhkaa myös Åkernesetin epävakaa vuorenrinne, jonka romahtaminen voisi aiheuttaa hyökyaallon.
+AIEMPI KYSYMYS: Mitä Nærøyvuono on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Nærøyvuono]] on kapea vuono Länsi-Norjassa, ja se on yksi [[Sognefjordin]] sivuhaaroista. Vuonon seinämät nousevat jyrkkinä, ja se on tunnettu dramaattisista maisemistaan. Vuonna 2005 se liitettiin yhdessä [[Geirangervuonon]] kanssa Unescon maailmanperintölistalle nimellä Länsi-Norjan vuonot. Se on hyvä esimerkki jääkauden muovaamasta maisemasta. Aika kapea paikka, mutta sieltäkin lentäisi läpi.
+KYSYMYS: Kerro lisää: Sognefjordin

@@ -1,0 +1,1046 @@
+### 161
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geirangervuono (meri)
+Tietoruudun teksti: Geirangervuono on 15 kilometrin pituinen sivuhaara Sunnylvsvuonosta Länsi-Norjan Sunnmøressä, ja sen perukassa on pieni Geirangerin kylä. Vuonon jyrkät vuorenseinämät nousevat lähes suoraan vedestä, ja niiltä putoaa useita vesiputouksia, joista tunnetuimmat ovat Seitsemän sisarta ja niitä vastapäätä oleva Kosija. Rinteillä on useita nykyään autioituneita vuoristotiloja, kuten Skageflå ja Knivsflå, joihin pääsi ennen vain jyrkkiä polkuja tai venettä pitkin. Vuonna 2005 Geirangervuono liitettiin yhdessä Nærøyvuonon kanssa Unescon maailmanperintölistalle nimellä Länsi-Norjan vuonot. Vuonoa uhkaa myös Åkernesetin epävakaa vuorenrinne, jonka romahtaminen voisi aiheuttaa hyökyaallon.
+AIEMPI KYSYMYS: Mikä on riippulaakso?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä kysymys. Riippulaakso on sivulaakso, joka päättyy jyrkästi pääalaakson tai vuonon seinämään korkealle pohjan yläpuolelle. Se syntyy jääkaudella, kun [[pääjäätikkö]] hioo päälaaksoa syvemmäksi kuin pienemmät sivujäätiköt. Kun jää sulaa, sivulaakson vesi putoaa seinämältä alas vesiputouksena. Siksi vuonojen jyrkillä seinämillä on niin paljon vesiputouksia, kuten [[Geirangervuonolla]]. Riippulaaksot ovat tyypillisiä jäätikköjen muovaamille maisemille. Vettä putoaa, ja minä istun varmuuden vuoksi alhaalla.
+KYSYMYS: Kerro lisää: pääjäätikkö
+
+### 162
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geirangervuono (meri)
+Tietoruudun teksti: Geirangervuono on 15 kilometrin pituinen sivuhaara Sunnylvsvuonosta Länsi-Norjan Sunnmøressä, ja sen perukassa on pieni Geirangerin kylä. Vuonon jyrkät vuorenseinämät nousevat lähes suoraan vedestä, ja niiltä putoaa useita vesiputouksia, joista tunnetuimmat ovat Seitsemän sisarta ja niitä vastapäätä oleva Kosija. Rinteillä on useita nykyään autioituneita vuoristotiloja, kuten Skageflå ja Knivsflå, joihin pääsi ennen vain jyrkkiä polkuja tai venettä pitkin. Vuonna 2005 Geirangervuono liitettiin yhdessä Nærøyvuonon kanssa Unescon maailmanperintölistalle nimellä Länsi-Norjan vuonot. Vuonoa uhkaa myös Åkernesetin epävakaa vuorenrinne, jonka romahtaminen voisi aiheuttaa hyökyaallon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Luonto: Meri nousi laakson pohjalle] 2005 — Vuono syntyi jääkaudella: paksu jäätikkö hioi laaksosta U-kirjaimen muotoisen uoman kalliota myöten, ja kun jää suli, meri työntyi tyhjään laaksoon sisämaahan asti. Siksi vuonon seinät nousevat pystysuorina suoraan vedestä ja vettä on alla satoja metrejä. Geirangervuono otettiin maailmanperintöluetteloon vuonna 2005. Rinteillä on vanhoja vuoritiloja, joihin päästiin ennen vain veneellä ja köysitikkaita pitkin — lasten kerrotaan olleen köydessä kiinni, jotta he eivät putoaisi.
+AIEMPI KYSYMYS: Mikä on riippulaakso?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä kysymys. Riippulaakso on sivulaakso, joka päättyy jyrkästi pääalaakson tai vuonon seinämään korkealle pohjan yläpuolelle. Se syntyy jääkaudella, kun [[pääjäätikkö]] hioo päälaaksoa syvemmäksi kuin pienemmät sivujäätiköt. Kun jää sulaa, sivulaakson vesi putoaa seinämältä alas vesiputouksena. Siksi vuonojen jyrkillä seinämillä on niin paljon vesiputouksia, kuten [[Geirangervuonolla]]. Riippulaaksot ovat tyypillisiä jäätikköjen muovaamille maisemille. Vettä putoaa, ja minä istun varmuuden vuoksi alhaalla.
+KYSYMYS: Kerro lisää: Geirangervuonolla
+
+### 163
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nærøyvuono (meri)
+Tietoruudun teksti: Nærøyvuono on Aurlandsvuonon sivuhaara, joka puolestaan haarautuu Sognevuonosta, ja se on vain noin 17 kilometrin pituinen mutta kapeimmillaan vain noin 250 metriä leveä. Jyrkät vuorenrinteet nousevat lähes suoraan vedestä yli 1 700 metrin korkeuteen, ja Bakkan kylän eteläpuolella vuono kapenee alle 500 metriin, vaikka vastakkaisten huippujen väli on vain noin kolme kilometriä. Vuonon perukassa on Gudvangenin kylä, jonne Nærøydalselva-joki laskee. Poikkeuksellisen kylminä talvina, kuten 1920-luvulla ja vuonna 1962, vuono on jäätynyt niin pahasti, että laivaliikenne on jouduttu ohjaamaan jäänreunaa pitkin. Vuonna 2005 Nærøyvuono liitettiin yhdessä Geirangervuonon kanssa Unescon maailmanperintölistalle Länsi-Norjan vuonoina.
+AIEMPI KYSYMYS: Miksi Nærøyvuono on joskus jäätynyt talvisin niin pahasti, ettei sillä ole voinut liikennöidä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Nærøyvuono on kapea ja jyrkkien rinteiden suojaama, joten aallokko ei pääse rikkomaan muodostuvaa jäätä, ja vuonoon laskeva [[Nærøydalselva]] tuo mukanaan makeaa vettä, joka jäätyy merivettä helpommin. Kun pakkanen on poikkeuksellisen kova, jää voi siksi levitä nopeasti koko vuonon poikki. Näin kävi esimerkiksi [[1920-luvulla]] ja vuonna 1962, jolloin laivaliikenne jouduttiin ohjaamaan jäänreunaa pitkin. Makean veden osuudesta juuri tässä vuonossa en ole aivan varma, mutta yleisesti se on tavallinen syy vuonojen jäätymiseen. Brr, ei olis tehnyt mieli lentää sen yli.
+KYSYMYS: Kerro lisää: Nærøydalselva
+
+### 164
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nærøyvuono (meri)
+Tietoruudun teksti: Nærøyvuono on Aurlandsvuonon sivuhaara, joka puolestaan haarautuu Sognevuonosta, ja se on vain noin 17 kilometrin pituinen mutta kapeimmillaan vain noin 250 metriä leveä. Jyrkät vuorenrinteet nousevat lähes suoraan vedestä yli 1 700 metrin korkeuteen, ja Bakkan kylän eteläpuolella vuono kapenee alle 500 metriin, vaikka vastakkaisten huippujen väli on vain noin kolme kilometriä. Vuonon perukassa on Gudvangenin kylä, jonne Nærøydalselva-joki laskee. Poikkeuksellisen kylminä talvina, kuten 1920-luvulla ja vuonna 1962, vuono on jäätynyt niin pahasti, että laivaliikenne on jouduttu ohjaamaan jäänreunaa pitkin. Vuonna 2005 Nærøyvuono liitettiin yhdessä Geirangervuonon kanssa Unescon maailmanperintölistalle Länsi-Norjan vuonoina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Alegre — kohdekartta / Kohdekartta: Rio Grande do Sulin taidemuseo] 1954 Osavaltion taidemuseo MARGS perustettiin asetuksella vuonna 1954 — ilman taloa ja ilman yhtäkään teosta. Kulttuuriasioista vastannut José Mariano de Freitas Beck pyysi työhön São Paulossa syntyneen taidemaalarin Ado Malagolin, joka oli juuri saapunut kaupunkiin opettamaan taideinstituuttiin. Malagoli kokosi ensin osavaltion virastoihin hajaantuneet maalaukset yhteen ja osti sitten lisää São Paulosta ja paikallisilta taiteilijoilta. Museo avattiin yleisölle 1955, ja sen ensimmäinen näyttelytila oli Theatro São Pedron lämpiö. Esillä oli noin 120 teosta. 1960-luvulla kokoelma muutti huoneistoon Salgado Filho -kadulle ja 1978 nykyiseen taloonsa. Osavaltion rahoitus loppui, kun Malagoli ero…
+- [Isfahan — kohdekartta / Kohdekartta: Isfahanin basaari] Basaari on käytävä kahden eri-ikäisen kaupungin välillä. Eteläpää aukeaa Naqsh-e Jahanille, joka rakennettiin vuosina 1598–1629, ja pohjoispää vie Kohneh- eli Vanhalle aukiolle vanhan kaupungin ytimeen. Väliin jää holvattua, katettua katua noin kaksi kilometriä. Se on Lähi-idän vanhimpia ja suurimpia basaareja. Osat ovat eri-ikäisiä. Nykyinen rakennus on safavidien ajalta, ja rakennusvuodeksi Naqsh-e Jahanin pohjoislaidalle merkitään 1620. Vanhin osa on 1000-luvulta, seldžukkien ajalta: se syntyi Jameh-moskeijan lounaiskyljelle ja Kohneh-aukion laitaan, ja kaarikäytäviä ja huoneita liitettiin siihen myöhemmin lisää. Tarkkoja vuosia näille osille ei anneta, vain se, että ne ovat yli tuhat vu…
+AIEMPI KYSYMYS: Miksi Nærøyvuono on joskus jäätynyt talvisin niin pahasti, ettei sillä ole voinut liikennöidä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Nærøyvuono on kapea ja jyrkkien rinteiden suojaama, joten aallokko ei pääse rikkomaan muodostuvaa jäätä, ja vuonoon laskeva [[Nærøydalselva]] tuo mukanaan makeaa vettä, joka jäätyy merivettä helpommin. Kun pakkanen on poikkeuksellisen kova, jää voi siksi levitä nopeasti koko vuonon poikki. Näin kävi esimerkiksi [[1920-luvulla]] ja vuonna 1962, jolloin laivaliikenne jouduttiin ohjaamaan jäänreunaa pitkin. Makean veden osuudesta juuri tässä vuonossa en ole aivan varma, mutta yleisesti se on tavallinen syy vuonojen jäätymiseen. Brr, ei olis tehnyt mieli lentää sen yli.
+KYSYMYS: Kerro lisää: 1920-luvulla
+
+### 165
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nærøyvuono (meri)
+Tietoruudun teksti: Nærøyvuono on Aurlandsvuonon sivuhaara, joka puolestaan haarautuu Sognevuonosta, ja se on vain noin 17 kilometrin pituinen mutta kapeimmillaan vain noin 250 metriä leveä. Jyrkät vuorenrinteet nousevat lähes suoraan vedestä yli 1 700 metrin korkeuteen, ja Bakkan kylän eteläpuolella vuono kapenee alle 500 metriin, vaikka vastakkaisten huippujen väli on vain noin kolme kilometriä. Vuonon perukassa on Gudvangenin kylä, jonne Nærøydalselva-joki laskee. Poikkeuksellisen kylminä talvina, kuten 1920-luvulla ja vuonna 1962, vuono on jäätynyt niin pahasti, että laivaliikenne on jouduttu ohjaamaan jäänreunaa pitkin. Vuonna 2005 Nærøyvuono liitettiin yhdessä Geirangervuonon kanssa Unescon maailmanperintölistalle Länsi-Norjan vuonoina.
+AIEMPI KYSYMYS: Mihin isompaan vuonoon Nærøyvuono ja sen kautta Aurlandsvuono lopulta liittyvät?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Nærøyvuono haarautuu Aurlandsvuonosta, ja Aurlandsvuono puolestaan haarautuu [[Sognevuonosta]], joka on Länsi-Norjan pitkä pääväylä. Kapeat sivuhaarat lähtevät siitä kuin oksat rungosta, ja Nærøyvuono on niistä yksi: vain noin 17 kilometriä pitkä, mutta rinteiltään erittäin jyrkkä. Vuonna 2005 se liitettiin yhdessä Geirangervuonon kanssa Unescon maailmanperintölistalle [[Länsi-Norjan vuonoina]]. Ihan kuin kolme sisäkkäistä kirjekuorta, ja minä tiedän, mistä puhun.
+KYSYMYS: Kerro lisää: Sognevuonosta
+
+### 166
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nærøyvuono (meri)
+Tietoruudun teksti: Nærøyvuono on Aurlandsvuonon sivuhaara, joka puolestaan haarautuu Sognevuonosta, ja se on vain noin 17 kilometrin pituinen mutta kapeimmillaan vain noin 250 metriä leveä. Jyrkät vuorenrinteet nousevat lähes suoraan vedestä yli 1 700 metrin korkeuteen, ja Bakkan kylän eteläpuolella vuono kapenee alle 500 metriin, vaikka vastakkaisten huippujen väli on vain noin kolme kilometriä. Vuonon perukassa on Gudvangenin kylä, jonne Nærøydalselva-joki laskee. Poikkeuksellisen kylminä talvina, kuten 1920-luvulla ja vuonna 1962, vuono on jäätynyt niin pahasti, että laivaliikenne on jouduttu ohjaamaan jäänreunaa pitkin. Vuonna 2005 Nærøyvuono liitettiin yhdessä Geirangervuonon kanssa Unescon maailmanperintölistalle Länsi-Norjan vuonoina.
+AIEMPI KYSYMYS: Mihin isompaan vuonoon Nærøyvuono ja sen kautta Aurlandsvuono lopulta liittyvät?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Nærøyvuono haarautuu Aurlandsvuonosta, ja Aurlandsvuono puolestaan haarautuu [[Sognevuonosta]], joka on Länsi-Norjan pitkä pääväylä. Kapeat sivuhaarat lähtevät siitä kuin oksat rungosta, ja Nærøyvuono on niistä yksi: vain noin 17 kilometriä pitkä, mutta rinteiltään erittäin jyrkkä. Vuonna 2005 se liitettiin yhdessä Geirangervuonon kanssa Unescon maailmanperintölistalle [[Länsi-Norjan vuonoina]]. Ihan kuin kolme sisäkkäistä kirjekuorta, ja minä tiedän, mistä puhun.
+KYSYMYS: Kerro lisää: Länsi-Norjan vuonoina
+
+### 167
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nærøyvuono (meri)
+Tietoruudun teksti: Nærøyvuono on Aurlandsvuonon sivuhaara, joka puolestaan haarautuu Sognevuonosta, ja se on vain noin 17 kilometrin pituinen mutta kapeimmillaan vain noin 250 metriä leveä. Jyrkät vuorenrinteet nousevat lähes suoraan vedestä yli 1 700 metrin korkeuteen, ja Bakkan kylän eteläpuolella vuono kapenee alle 500 metriin, vaikka vastakkaisten huippujen väli on vain noin kolme kilometriä. Vuonon perukassa on Gudvangenin kylä, jonne Nærøydalselva-joki laskee. Poikkeuksellisen kylminä talvina, kuten 1920-luvulla ja vuonna 1962, vuono on jäätynyt niin pahasti, että laivaliikenne on jouduttu ohjaamaan jäänreunaa pitkin. Vuonna 2005 Nærøyvuono liitettiin yhdessä Geirangervuonon kanssa Unescon maailmanperintölistalle Länsi-Norjan vuonoina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Odessa — kaupunkilehti / Odessa: Lahti, joka on suolaisempi kuin meri] Kahdeksan kilometrin päässä keskustasta pohjoiseen on vesi, joka ei ole meri eikä järvi. Kuyalnykin lahti on kaksikymmentäkahdeksan kilometriä pitkä ja keskimäärin metrin syvyinen. Se oli aikoinaan joen suu, sitten merenlahti, ja noin 1300-luvulla hiekka kasautui sen ja meren väliin kannakseksi. Siitä lähtien vesi on haihtunut pääsemättä minnekään: suolapitoisuus on mittausten mukaan vaihdellut 29 ja 269 promillen välillä. Näin suolaisessa vedessä elää bakteerien lisäksi vain kaksi lajia, ja lisääntymisaikaan pikkuäyriäisiä on niin paljon, että koko veden sävy kääntyy punertavaksi. Kylpylä perustettiin rannalle jo 1834.
+AIEMPI KYSYMYS: Mitä vuono tarkoittaa ja miten vuonot syntyvät?
+AIEMPI VASTAUS (Livia):
+No niin, tämän minä tiedän ylhäältä katsottuna. Vuono on pitkä, kapea ja jyrkkäreunainen [[merenlahti]], joka syntyy, kun [[jäätiköt]] kuluttavat [[jääkausien]] aikana laaksoja syvälle kallioperään. Kun jää suli ja merenpinta nousi, meri tulvi laaksoon ja täytti sen. Siksi vuonojen seinämät ovat jyrkät ja vesi voi olla syvää jo lähellä rantaa. Nærøyvuonon rinteet nousevat lähes suoraan vedestä yli 1 700 metrin korkeuteen. Aikamoinen urakka jäälle, minä väsyn jo pitkästä lauseesta.
+KYSYMYS: Kerro lisää: merenlahti
+
+### 168
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nærøyvuono (meri)
+Tietoruudun teksti: Nærøyvuono on Aurlandsvuonon sivuhaara, joka puolestaan haarautuu Sognevuonosta, ja se on vain noin 17 kilometrin pituinen mutta kapeimmillaan vain noin 250 metriä leveä. Jyrkät vuorenrinteet nousevat lähes suoraan vedestä yli 1 700 metrin korkeuteen, ja Bakkan kylän eteläpuolella vuono kapenee alle 500 metriin, vaikka vastakkaisten huippujen väli on vain noin kolme kilometriä. Vuonon perukassa on Gudvangenin kylä, jonne Nærøydalselva-joki laskee. Poikkeuksellisen kylminä talvina, kuten 1920-luvulla ja vuonna 1962, vuono on jäätynyt niin pahasti, että laivaliikenne on jouduttu ohjaamaan jäänreunaa pitkin. Vuonna 2005 Nærøyvuono liitettiin yhdessä Geirangervuonon kanssa Unescon maailmanperintölistalle Länsi-Norjan vuonoina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Zla Kolata, Montenegron korkein huippu] vuodesta 2009 — Zla Kolata kohoaa 2 534 metriin, ja se on Montenegron korkein vuori, vaikka koko vuoriston korkein huippu Maja Jezercë (2 694 m) on Albanian puolella. Se kuuluu Prokletijeen, jonka nimi tarkoittaa kirottuja, ja vuoriston Montenegron puolelle perustettiin kansallispuisto vuonna 2009. Puiston pinta-ala on noin 16 000 hehtaaria. Viimeisen jääkauden aikana laaksoja muovasivat kilometrien mittaiset jäätiköt, ja Ropojanan jäätikkö oli noin 12,5 kilometriä pitkä. Vuoristossa on noin 20 jäätikköjärveä, joista Hridsko jezero on vajaat 300 metriä pitkä.
+- [Kilimandžaro — kaupunkilehti / Kilimanjaron luonto: Sulava jäätikkö] Kilimanjaron huipulla oli 1900-luvun alussa laaja jääkenttä, mutta lämpötilan nousun ja ilman kuivumisen myötä jäätiköt ovat kutistuneet dramaattisesti: lähes 85 prosenttia jääpeitteestä suli lokakuun 1912 ja kesäkuun 2011 välillä, ja sulaminen on kiihtynyt vuosikymmen vuosikymmeneltä. Tutkijoiden arvioiden mukaan viimeisetkin jäätiköt, kuten huipun läheinen Furtwänglerin jäätikkö, saattavat kadota kokonaan vuosisadan puoliväliin mennessä. Katoava lumi ja jää ovat samalla se ilmiö, jonka Rebmann näki jo 1848 – vain paljon runsaampana.
+AIEMPI KYSYMYS: Mitä vuono tarkoittaa ja miten vuonot syntyvät?
+AIEMPI VASTAUS (Livia):
+No niin, tämän minä tiedän ylhäältä katsottuna. Vuono on pitkä, kapea ja jyrkkäreunainen [[merenlahti]], joka syntyy, kun [[jäätiköt]] kuluttavat [[jääkausien]] aikana laaksoja syvälle kallioperään. Kun jää suli ja merenpinta nousi, meri tulvi laaksoon ja täytti sen. Siksi vuonojen seinämät ovat jyrkät ja vesi voi olla syvää jo lähellä rantaa. Nærøyvuonon rinteet nousevat lähes suoraan vedestä yli 1 700 metrin korkeuteen. Aikamoinen urakka jäälle, minä väsyn jo pitkästä lauseesta.
+KYSYMYS: Kerro lisää: jäätiköt
+
+### 169
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nærøyvuono (meri)
+Tietoruudun teksti: Nærøyvuono on Aurlandsvuonon sivuhaara, joka puolestaan haarautuu Sognevuonosta, ja se on vain noin 17 kilometrin pituinen mutta kapeimmillaan vain noin 250 metriä leveä. Jyrkät vuorenrinteet nousevat lähes suoraan vedestä yli 1 700 metrin korkeuteen, ja Bakkan kylän eteläpuolella vuono kapenee alle 500 metriin, vaikka vastakkaisten huippujen väli on vain noin kolme kilometriä. Vuonon perukassa on Gudvangenin kylä, jonne Nærøydalselva-joki laskee. Poikkeuksellisen kylminä talvina, kuten 1920-luvulla ja vuonna 1962, vuono on jäätynyt niin pahasti, että laivaliikenne on jouduttu ohjaamaan jäänreunaa pitkin. Vuonna 2005 Nærøyvuono liitettiin yhdessä Geirangervuonon kanssa Unescon maailmanperintölistalle Länsi-Norjan vuonoina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Taiwan — maalehti / Luonto: Peura katosi ja palasi] Formosanpeura tuli saarelle jääkausien aikana, kun matala merenpinta yhdisti Taiwanin mantereeseen. Sen paras elinalue oli juuri se länsirannikon alava tasanko, jolle ihmiset sittemmin rakensivat. Hollantilaisten kuutena vuosikymmenenä saarelta vietiin kahdesta neljään miljoonaa peurannahkaa, ja metsästys jatkui sen jälkeenkin. Viimeinen tiedossa oleva luonnonvarainen yksilö tapettiin 1969. Laji säilyi tarhoissa, ja 1984 aloitettiin palautus: Taipein eläintarhasta vietiin 22 peuraa Kentingin kansallispuistoon, aitauksissa odotettiin kymmenen vuotta ja 1994 ne päästettiin vapaaksi. Nyt niitä on yli tuhat.
+- [Serbia — maalehti / Tiede: Milankovićin tähtitorni Zvezdaralla] 1887 — Belgradin observatorio perustettiin 7. huhtikuuta 1887 Zvezdaran metsäalueelle, ja sen ensimmäinen johtaja oli Milan Nedeljković. Milutin Milanković johti laitosta kahdesti, vuosina 1925–1926 ja 1948–1951. Hän laski, miten Maan radan muoto, akselin kallistus ja prekessio muuttavat auringonsäteilyn saantia, ja tulokset selittävät jääkausien rytmiä. Pääteoksensa Kanon der Erdbestrahlung, 626 sivua, hän julkaisi saksaksi 1941. Observatorio julistettiin kulttuurimonumentiksi 2001, ja Vidojevican vuoren 1,4 metrin robottiteleskooppi kantaa Milankovićin nimeä.
+AIEMPI KYSYMYS: Mitä vuono tarkoittaa ja miten vuonot syntyvät?
+AIEMPI VASTAUS (Livia):
+No niin, tämän minä tiedän ylhäältä katsottuna. Vuono on pitkä, kapea ja jyrkkäreunainen [[merenlahti]], joka syntyy, kun [[jäätiköt]] kuluttavat [[jääkausien]] aikana laaksoja syvälle kallioperään. Kun jää suli ja merenpinta nousi, meri tulvi laaksoon ja täytti sen. Siksi vuonojen seinämät ovat jyrkät ja vesi voi olla syvää jo lähellä rantaa. Nærøyvuonon rinteet nousevat lähes suoraan vedestä yli 1 700 metrin korkeuteen. Aikamoinen urakka jäälle, minä väsyn jo pitkästä lauseesta.
+KYSYMYS: Kerro lisää: jääkausien
+
+### 170
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nærøyvuono (meri)
+Tietoruudun teksti: Nærøyvuono on Aurlandsvuonon sivuhaara, joka puolestaan haarautuu Sognevuonosta, ja se on vain noin 17 kilometrin pituinen mutta kapeimmillaan vain noin 250 metriä leveä. Jyrkät vuorenrinteet nousevat lähes suoraan vedestä yli 1 700 metrin korkeuteen, ja Bakkan kylän eteläpuolella vuono kapenee alle 500 metriin, vaikka vastakkaisten huippujen väli on vain noin kolme kilometriä. Vuonon perukassa on Gudvangenin kylä, jonne Nærøydalselva-joki laskee. Poikkeuksellisen kylminä talvina, kuten 1920-luvulla ja vuonna 1962, vuono on jäätynyt niin pahasti, että laivaliikenne on jouduttu ohjaamaan jäänreunaa pitkin. Vuonna 2005 Nærøyvuono liitettiin yhdessä Geirangervuonon kanssa Unescon maailmanperintölistalle Länsi-Norjan vuonoina.
+AIEMPI KYSYMYS: Mitä Unescon maailmanperintölista on ja miten kohde pääsee sinne?
+AIEMPI VASTAUS (Livia):
+Ai tota. Maailmanperintölista on [[Unescon]] ylläpitämä luettelo kohteista, joilla katsotaan olevan poikkeuksellinen yleismaailmallinen arvo, ja ne voivat olla kulttuuri- tai luontokohteita tai molempia. Kohteen ehdottaa yleensä sen oma valtio, asiantuntijaelimet arvioivat ehdotuksen ja lopullisen päätöksen tekee kansainvälinen maailmanperintökomitea. Nærøyvuono liitettiin listalle vuonna 2005 yhdessä Geirangervuonon kanssa [[Länsi-Norjan vuonoina]].
+
+Minun sukuni ei ole listalla, vaikka se on kantanut kirjeitä Caesarille asti. Kyllä se vähän kirpaisee.
+KYSYMYS: Kerro lisää: Unescon
+
+### 171
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nærøyvuono (meri)
+Tietoruudun teksti: Nærøyvuono on Aurlandsvuonon sivuhaara, joka puolestaan haarautuu Sognevuonosta, ja se on vain noin 17 kilometrin pituinen mutta kapeimmillaan vain noin 250 metriä leveä. Jyrkät vuorenrinteet nousevat lähes suoraan vedestä yli 1 700 metrin korkeuteen, ja Bakkan kylän eteläpuolella vuono kapenee alle 500 metriin, vaikka vastakkaisten huippujen väli on vain noin kolme kilometriä. Vuonon perukassa on Gudvangenin kylä, jonne Nærøydalselva-joki laskee. Poikkeuksellisen kylminä talvina, kuten 1920-luvulla ja vuonna 1962, vuono on jäätynyt niin pahasti, että laivaliikenne on jouduttu ohjaamaan jäänreunaa pitkin. Vuonna 2005 Nærøyvuono liitettiin yhdessä Geirangervuonon kanssa Unescon maailmanperintölistalle Länsi-Norjan vuonoina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Hongkong — kohdekartta / Kohdekartta: Star Ferryn laituri] lauttayhtiö 1888, nykyinen laituri 2006 Star Ferryn päälinja kulkee Centralin ja Tsim Sha Tsuin välillä, ja Centralin laituri on kartan piste. Yhtiö perustettiin 1888 nimellä Kowloon Ferry Company ja sai nykyisen nimensä 1898. Kymmenessä vuodessa perustajan laivasto kasvoi neljään alukseen — Morning Star, Evening Star, Rising Star ja Guiding Star — joista kuhunkin mahtui sata matkustajaa ja jotka tekivät keskimäärin sataneljäkymmentäseitsemän ylitystä päivässä. Laituri on vaihtanut paikkaa monta kertaa, koska satamaa on täytetty. Salisbury Roadin päähän valmistui 1906 mahtava laituri, jossa oli erilliset osastot ensimmäiselle ja toiselle luokalle, mutta taifuuni tuhosi sen saman vuoden syys…
+- [Mumbai — kohdekartta / Kohdekartta: Gateway of India] 1913–1924 Kaari seisoo Apollo Bunderissa siinä kohdassa rantaa, jossa kuningas Yrjö V ja kuningatar Mary nousivat maihin 2. joulukuuta 1911; ennen rakennustöitä paikka oli kalastajien rantaa. Rakenne on keltaista basalttia ja teräsbetonia, muodoltaan suorakaide, jonka pitkillä sivuilla on kolme kaariaukkoa ja lyhyillä yksi. Keskimmäinen kaari on muita korkeampi ja leveämpi, ja sen päällä on ylimääräinen kerros, josta kohoaa neljä pientä tornia. Tyyli on indosaraseeninen, ja skotlantilainen arkkitehti George Wittet otti yksityiskohtansa Gujaratin 1400- ja 1500-luvun rakennusperinteestä: julkisivu muistuttaa Ahmedabadin vuoden 1424 Jaman moskeijaa. Kivi louhittiin lähiseudulta, mutta reikäise…
+AIEMPI KYSYMYS: Miten Norjassa kuljetaan vuonojen yli ja ohi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Jyrkkä maasto tekee teiden rakentamisesta Länsi-Norjassa vaativaa, ja vuonoja ylitetäänkin monin tavoin: [[lautat]] kulkevat vuonon poikki, sillat yhdistävät rantoja ja [[tunnelit]] viedään suoraan vuorten läpi. Paikoin lautta on edelleen käytännöllisin yhteys, ja vuonoristeilyt ovat kasvattaneet laivaliikenteen merkitystä myös matkailussa. Minä lensin suoraan, kiitos vain.
+KYSYMYS: Kerro lisää: lautat
+
+### 172
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nærøyvuono (meri)
+Tietoruudun teksti: Nærøyvuono on Aurlandsvuonon sivuhaara, joka puolestaan haarautuu Sognevuonosta, ja se on vain noin 17 kilometrin pituinen mutta kapeimmillaan vain noin 250 metriä leveä. Jyrkät vuorenrinteet nousevat lähes suoraan vedestä yli 1 700 metrin korkeuteen, ja Bakkan kylän eteläpuolella vuono kapenee alle 500 metriin, vaikka vastakkaisten huippujen väli on vain noin kolme kilometriä. Vuonon perukassa on Gudvangenin kylä, jonne Nærøydalselva-joki laskee. Poikkeuksellisen kylminä talvina, kuten 1920-luvulla ja vuonna 1962, vuono on jäätynyt niin pahasti, että laivaliikenne on jouduttu ohjaamaan jäänreunaa pitkin. Vuonna 2005 Nærøyvuono liitettiin yhdessä Geirangervuonon kanssa Unescon maailmanperintölistalle Länsi-Norjan vuonoina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kaupunkilehti / Historian hetki: Rotherhithe 1827 — 36 lokeroa joen alla] toukokuu 1827 — Tihkuvan veden ääni ei lakkaa koskaan. Se tulee yläpuolelta, missä Thames virtaa ohuen savikerroksen takana, ja jokainen kaivaja kuuntelee, muuttuuko tihku suihkuksi. Rotherhithen kuilussa toukokuussa 1827 työskentelee Marc Brunelin keksimä tunnelikilpi: kaksitoista valurautaista kehystä kolmessa kerroksessa, 36 lokeroa, joissa kukin mies kaivaa oman tukilautansa takaa. Kun koko kilpi on kaivettu tyhjäksi, ruuvitunkit työntävät sitä eteenpäin ja muurarit muuraavat perässä. Työmaata johtaa Marcin poika Isambard Kingdom Brunel, 21, joka otti vastuun edellisen insinöörin sairastuttua. Lontoolaiset maksavat shillingin nähdäkseen kilven työssä. Joen jätevesi tihkuu tunneliin, sen…
+- [Lontoo — kohdekartta / Kohdekartta: Tunneli 1827] Tihkuvan veden ääni ei lakkaa koskaan. Se tulee yläpuolelta, missä Thames virtaa ohuen savikerroksen takana, ja jokainen kaivaja kuuntelee, muuttuuko tihku suihkuksi. Rotherhithen kuilussa toukokuussa 1827 työskentelee Marc Brunelin keksimä tunnelikilpi: kaksitoista valurautaista kehystä kolmessa kerroksessa, 36 lokeroa, joissa kukin mies kaivaa oman tukilautansa takaa. Kun koko kilpi on kaivettu tyhjäksi, ruuvitunkit työntävät sitä eteenpäin ja muurarit muuraavat perässä. Työmaata johtaa Marcin poika Isambard Kingdom Brunel, 21, joka otti vastuun edellisen insinöörin sairastuttua. Lontoolaiset maksavat shillingin nähdäkseen kilven työssä. Joen jätevesi tihkuu tunneliin, sen metaani syttyy …
+AIEMPI KYSYMYS: Miten Norjassa kuljetaan vuonojen yli ja ohi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Jyrkkä maasto tekee teiden rakentamisesta Länsi-Norjassa vaativaa, ja vuonoja ylitetäänkin monin tavoin: [[lautat]] kulkevat vuonon poikki, sillat yhdistävät rantoja ja [[tunnelit]] viedään suoraan vuorten läpi. Paikoin lautta on edelleen käytännöllisin yhteys, ja vuonoristeilyt ovat kasvattaneet laivaliikenteen merkitystä myös matkailussa. Minä lensin suoraan, kiitos vain.
+KYSYMYS: Kerro lisää: tunnelit
+
+### 173
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lofootit (luonto · saari)
+Tietoruudun teksti: Lofootit on saaristo ja perinteinen maakunta Pohjois-Norjan Nordlandissa, tunnettu jylhistä vuorihuipuistaan, jotka kohoavat lähes suoraan merestä. Alueella on asuttu ainakin 11 000 vuotta, ja rautakauden maanviljelyn ja karjanpidon jäljet ulottuvat noin vuoteen 250 eaa. Vágar, nykyisen Kabelvågin tienoilla sijainnut kauppapaikka, oli Pohjois-Norjan ensimmäinen tunnettu kaupunkimainen asutus jo viikinkiajalla. Lofoottien talous on vuosisatoja nojannut talviseen turskanpyyntiin: kalat puhdistetaan ja ripustetaan telineisiin kuivumaan suolaamattomina, jolloin niistä tulee tørrfisk-nimistä kalkkikuivattua kalaa. Nimen Lofoten alkuperä on kiistanalainen: sen on arveltu tarkoittavan ilveksen jalkaa tai liittyvän revontuliin, sillä saaristo on nykyään myös talvisen revontulimatkailun kohde.
+AIEMPI KYSYMYS: Miksi Lofoottien turska kuivataan telineillä ilman suolaa toisin kuin Kristiansundin klippfisk?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Lofoottien turska voidaan kuivattaa suolaamatta, koska talvinen ilma on viileää ja raikasta: lämpötila pysyy noin nollan tienoilla, jolloin kala kuivuu telineillä eikä pilaannu. Näin syntyy [[tørrfisk]], jota kuivataan useita kuukausia ja joka säilyy sen jälkeen pitkään. Klippfisk puolestaan suolataan ensin ja kuivataan vasta sen jälkeen, joten sen valmistus ei ole riippuvainen samalla tavalla kylmästä ilmasta. Miksi juuri Kristiansundissa valittiin tämä tapa, en ole varma, mutta suolattua kalaa on perinteisesti viety muun muassa [[Portugaliin]]. Kuivattu kala ei oo minun lempparini, pulla voittaa.
+KYSYMYS: Kerro lisää: tørrfisk
+
+### 174
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lofootit (luonto · saari)
+Tietoruudun teksti: Lofootit on saaristo ja perinteinen maakunta Pohjois-Norjan Nordlandissa, tunnettu jylhistä vuorihuipuistaan, jotka kohoavat lähes suoraan merestä. Alueella on asuttu ainakin 11 000 vuotta, ja rautakauden maanviljelyn ja karjanpidon jäljet ulottuvat noin vuoteen 250 eaa. Vágar, nykyisen Kabelvågin tienoilla sijainnut kauppapaikka, oli Pohjois-Norjan ensimmäinen tunnettu kaupunkimainen asutus jo viikinkiajalla. Lofoottien talous on vuosisatoja nojannut talviseen turskanpyyntiin: kalat puhdistetaan ja ripustetaan telineisiin kuivumaan suolaamattomina, jolloin niistä tulee tørrfisk-nimistä kalkkikuivattua kalaa. Nimen Lofoten alkuperä on kiistanalainen: sen on arveltu tarkoittavan ilveksen jalkaa tai liittyvän revontuliin, sillä saaristo on nykyään myös talvisen revontulimatkailun kohde.
+AIEMPI KYSYMYS: Miksi Lofoottien turska kuivataan telineillä ilman suolaa toisin kuin Kristiansundin klippfisk?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Lofoottien turska voidaan kuivattaa suolaamatta, koska talvinen ilma on viileää ja raikasta: lämpötila pysyy noin nollan tienoilla, jolloin kala kuivuu telineillä eikä pilaannu. Näin syntyy [[tørrfisk]], jota kuivataan useita kuukausia ja joka säilyy sen jälkeen pitkään. Klippfisk puolestaan suolataan ensin ja kuivataan vasta sen jälkeen, joten sen valmistus ei ole riippuvainen samalla tavalla kylmästä ilmasta. Miksi juuri Kristiansundissa valittiin tämä tapa, en ole varma, mutta suolattua kalaa on perinteisesti viety muun muassa [[Portugaliin]]. Kuivattu kala ei oo minun lempparini, pulla voittaa.
+KYSYMYS: Kerro lisää: Portugaliin
+
+### 175
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lofootit (luonto · saari)
+Tietoruudun teksti: Lofootit on saaristo ja perinteinen maakunta Pohjois-Norjan Nordlandissa, tunnettu jylhistä vuorihuipuistaan, jotka kohoavat lähes suoraan merestä. Alueella on asuttu ainakin 11 000 vuotta, ja rautakauden maanviljelyn ja karjanpidon jäljet ulottuvat noin vuoteen 250 eaa. Vágar, nykyisen Kabelvågin tienoilla sijainnut kauppapaikka, oli Pohjois-Norjan ensimmäinen tunnettu kaupunkimainen asutus jo viikinkiajalla. Lofoottien talous on vuosisatoja nojannut talviseen turskanpyyntiin: kalat puhdistetaan ja ripustetaan telineisiin kuivumaan suolaamattomina, jolloin niistä tulee tørrfisk-nimistä kalkkikuivattua kalaa. Nimen Lofoten alkuperä on kiistanalainen: sen on arveltu tarkoittavan ilveksen jalkaa tai liittyvän revontuliin, sillä saaristo on nykyään myös talvisen revontulimatkailun kohde.
+AIEMPI KYSYMYS: Mikä Vágar oli, ja miksi sitä pidetään merkittävänä löytönä Pohjois-Norjan historiassa?
+AIEMPI VASTAUS (Livia):
+Kas vaan, pieni historiatehtävä. Vágar oli kauppapaikka nykyisen [[Kabelvågin]] tienoilla, ja lähteiden mukaan sitä pidetään Pohjois-Norjan ensimmäisenä tunnettuna kaupunkimaisena asutuksena. Se toimi jo [[viikinkiajalla]], ja sen merkitys on siinä, että se osoittaa pohjoisessa olleen vilkasta kaupankäyntiä ja pysyvää asutusta jo hyvin varhain. Lofoottien talous on myöhemminkin nojannut kalastukseen, ja kala on ollut keskeinen kauppatavara. Aarteelta kuulostaa, mutta kauppapaikka se vain oli.
+KYSYMYS: Kerro lisää: Kabelvågin
+
+### 176
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lofootit (luonto · saari)
+Tietoruudun teksti: Lofootit on saaristo ja perinteinen maakunta Pohjois-Norjan Nordlandissa, tunnettu jylhistä vuorihuipuistaan, jotka kohoavat lähes suoraan merestä. Alueella on asuttu ainakin 11 000 vuotta, ja rautakauden maanviljelyn ja karjanpidon jäljet ulottuvat noin vuoteen 250 eaa. Vágar, nykyisen Kabelvågin tienoilla sijainnut kauppapaikka, oli Pohjois-Norjan ensimmäinen tunnettu kaupunkimainen asutus jo viikinkiajalla. Lofoottien talous on vuosisatoja nojannut talviseen turskanpyyntiin: kalat puhdistetaan ja ripustetaan telineisiin kuivumaan suolaamattomina, jolloin niistä tulee tørrfisk-nimistä kalkkikuivattua kalaa. Nimen Lofoten alkuperä on kiistanalainen: sen on arveltu tarkoittavan ilveksen jalkaa tai liittyvän revontuliin, sillä saaristo on nykyään myös talvisen revontulimatkailun kohde.
+AIEMPI KYSYMYS: Mikä Vágar oli, ja miksi sitä pidetään merkittävänä löytönä Pohjois-Norjan historiassa?
+AIEMPI VASTAUS (Livia):
+Kas vaan, pieni historiatehtävä. Vágar oli kauppapaikka nykyisen [[Kabelvågin]] tienoilla, ja lähteiden mukaan sitä pidetään Pohjois-Norjan ensimmäisenä tunnettuna kaupunkimaisena asutuksena. Se toimi jo [[viikinkiajalla]], ja sen merkitys on siinä, että se osoittaa pohjoisessa olleen vilkasta kaupankäyntiä ja pysyvää asutusta jo hyvin varhain. Lofoottien talous on myöhemminkin nojannut kalastukseen, ja kala on ollut keskeinen kauppatavara. Aarteelta kuulostaa, mutta kauppapaikka se vain oli.
+KYSYMYS: Kerro lisää: viikinkiajalla
+
+### 177
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lofootit (luonto · saari)
+Tietoruudun teksti: Lofootit on saaristo ja perinteinen maakunta Pohjois-Norjan Nordlandissa, tunnettu jylhistä vuorihuipuistaan, jotka kohoavat lähes suoraan merestä. Alueella on asuttu ainakin 11 000 vuotta, ja rautakauden maanviljelyn ja karjanpidon jäljet ulottuvat noin vuoteen 250 eaa. Vágar, nykyisen Kabelvågin tienoilla sijainnut kauppapaikka, oli Pohjois-Norjan ensimmäinen tunnettu kaupunkimainen asutus jo viikinkiajalla. Lofoottien talous on vuosisatoja nojannut talviseen turskanpyyntiin: kalat puhdistetaan ja ripustetaan telineisiin kuivumaan suolaamattomina, jolloin niistä tulee tørrfisk-nimistä kalkkikuivattua kalaa. Nimen Lofoten alkuperä on kiistanalainen: sen on arveltu tarkoittavan ilveksen jalkaa tai liittyvän revontuliin, sillä saaristo on nykyään myös talvisen revontulimatkailun kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Luonto: Aurinko kiertää eikä laske] Kesäkuussa — Napapiirin pohjoispuolella aurinko ei kesällä laske lainkaan vaan kiertää taivaalla ympäri: Lofooteilla se pysyy ylhäällä lähes kaksi kuukautta. Keskiyön aurinko värjää talot ja vuoret oranssiksi kellon ympäri, ja kalastajat käyvät töissä yölläkin. Talvella sama asia toimii toisin päin — kaamos kestää saman verran, ja aurinko ei nouse ollenkaan. Silloin lumi ja meri heijastavat sinistä valoa, jota norjalaiset sanovat siniseksi hetkeksi.
+AIEMPI KYSYMYS: Mistä revontulet syntyvät ja milloin niitä näkee Lofooteilla?
+AIEMPI VASTAUS (Livia):
+Mmm— tämän minä olen nähnyt monta kertaa ylhäältä. Revontulet syntyvät, kun Auringosta tuleva [[aurinkotuuli]] kuljettaa varautuneita hiukkasia kohti Maata ja Maan [[magneettikenttä]] ohjaa ne napa-alueille. Siellä hiukkaset törmäävät ilmakehän happi- ja typpiatomeihin, jotka alkavat hohtaa, yleisimmin vihreänä. Lofooteilla niitä näkee parhaiten pimeinä ja selkeinä iltoina, karkeasti syksystä kevääseen, kun taivas on riittävän tumma. Minä katsoin ne mieluummin lämpimästä pesästä.
+KYSYMYS: Kerro lisää: aurinkotuuli
+
+### 178
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lofootit (luonto · saari)
+Tietoruudun teksti: Lofootit on saaristo ja perinteinen maakunta Pohjois-Norjan Nordlandissa, tunnettu jylhistä vuorihuipuistaan, jotka kohoavat lähes suoraan merestä. Alueella on asuttu ainakin 11 000 vuotta, ja rautakauden maanviljelyn ja karjanpidon jäljet ulottuvat noin vuoteen 250 eaa. Vágar, nykyisen Kabelvågin tienoilla sijainnut kauppapaikka, oli Pohjois-Norjan ensimmäinen tunnettu kaupunkimainen asutus jo viikinkiajalla. Lofoottien talous on vuosisatoja nojannut talviseen turskanpyyntiin: kalat puhdistetaan ja ripustetaan telineisiin kuivumaan suolaamattomina, jolloin niistä tulee tørrfisk-nimistä kalkkikuivattua kalaa. Nimen Lofoten alkuperä on kiistanalainen: sen on arveltu tarkoittavan ilveksen jalkaa tai liittyvän revontuliin, sillä saaristo on nykyään myös talvisen revontulimatkailun kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Taivas joka syttyy vihreäksi] nykyään — Revontulet syntyvät, kun Auringosta virtaavat varatut hiukkaset törmäävät ilmakehän happi- ja typpiatomeihin ja saavat ne hehkumaan — happi loistaa vihreänä ja punaisena, typpi sinisenä ja violettina. Suomen Lappi sijaitsee juuri sillä leveysasteella, jolla revontulet näkyvät useimmin, koska maapallon magneettikenttä ohjaa hiukkaset kehämäiselle vyöhykkeelle napojen ympärille. Pilvettöminä, pimeinä talvi-iltoina valot voivat leimahtaa taivaalle verhoina, säteinä tai kiemuroina, jotka muuttavat muotoaan minuuteissa. Ilmiö tunnetaan nimellä aurora borealis, ja Lapin talvimatkailu ajoittuu pitkälti pimeän vuodenajan ympärille juuri revontulten vuoksi.
+AIEMPI KYSYMYS: Mistä revontulet syntyvät ja milloin niitä näkee Lofooteilla?
+AIEMPI VASTAUS (Livia):
+Mmm— tämän minä olen nähnyt monta kertaa ylhäältä. Revontulet syntyvät, kun Auringosta tuleva [[aurinkotuuli]] kuljettaa varautuneita hiukkasia kohti Maata ja Maan [[magneettikenttä]] ohjaa ne napa-alueille. Siellä hiukkaset törmäävät ilmakehän happi- ja typpiatomeihin, jotka alkavat hohtaa, yleisimmin vihreänä. Lofooteilla niitä näkee parhaiten pimeinä ja selkeinä iltoina, karkeasti syksystä kevääseen, kun taivas on riittävän tumma. Minä katsoin ne mieluummin lämpimästä pesästä.
+KYSYMYS: Kerro lisää: magneettikenttä
+
+### 179
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lofootit (luonto · saari)
+Tietoruudun teksti: Lofootit on saaristo ja perinteinen maakunta Pohjois-Norjan Nordlandissa, tunnettu jylhistä vuorihuipuistaan, jotka kohoavat lähes suoraan merestä. Alueella on asuttu ainakin 11 000 vuotta, ja rautakauden maanviljelyn ja karjanpidon jäljet ulottuvat noin vuoteen 250 eaa. Vágar, nykyisen Kabelvågin tienoilla sijainnut kauppapaikka, oli Pohjois-Norjan ensimmäinen tunnettu kaupunkimainen asutus jo viikinkiajalla. Lofoottien talous on vuosisatoja nojannut talviseen turskanpyyntiin: kalat puhdistetaan ja ripustetaan telineisiin kuivumaan suolaamattomina, jolloin niistä tulee tørrfisk-nimistä kalkkikuivattua kalaa. Nimen Lofoten alkuperä on kiistanalainen: sen on arveltu tarkoittavan ilveksen jalkaa tai liittyvän revontuliin, sillä saaristo on nykyään myös talvisen revontulimatkailun kohde.
+AIEMPI KYSYMYS: Mitä ilves on ja missä sitä tavataan Euroopassa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Ilves on keskikokoinen luonnonvarainen kissaeläin, jolla on lyhyt häntä ja korvien päissä tupsut. Se elää yksinään ja metsästää pääasiassa hämärässä, ja sen elinympäristöä ovat laajat metsät. Euroopassa ilvestä tavataan Pohjoismaissa ja [[Skandinavian]] metsissä sekä [[Karpaateilla]], ja paikoin se on palautettu myös Alpeille. Lofoottien nimen on arveltu viittaavan ilveksen jalkaan, mutta nimen alkuperä on kiistanalainen. Minä pysyn ilveksestä kaukana, kiitos.
+KYSYMYS: Kerro lisää: Skandinavian
+
+### 180
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lofootit (luonto · saari)
+Tietoruudun teksti: Lofootit on saaristo ja perinteinen maakunta Pohjois-Norjan Nordlandissa, tunnettu jylhistä vuorihuipuistaan, jotka kohoavat lähes suoraan merestä. Alueella on asuttu ainakin 11 000 vuotta, ja rautakauden maanviljelyn ja karjanpidon jäljet ulottuvat noin vuoteen 250 eaa. Vágar, nykyisen Kabelvågin tienoilla sijainnut kauppapaikka, oli Pohjois-Norjan ensimmäinen tunnettu kaupunkimainen asutus jo viikinkiajalla. Lofoottien talous on vuosisatoja nojannut talviseen turskanpyyntiin: kalat puhdistetaan ja ripustetaan telineisiin kuivumaan suolaamattomina, jolloin niistä tulee tørrfisk-nimistä kalkkikuivattua kalaa. Nimen Lofoten alkuperä on kiistanalainen: sen on arveltu tarkoittavan ilveksen jalkaa tai liittyvän revontuliin, sillä saaristo on nykyään myös talvisen revontulimatkailun kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Historia: Nuorisoseurasta syntyi armeijan siemen] 1914 — Galitsian ukrainalaiset olivat 1900-luvun alussa perustaneet satoja Sitš-nimisiä liikunta- ja palokuntaseuroja, jotka hakivat innoituksensa kasakoiden Zaporižžjan Sitšistä. Elokuussa 1914 näistä seuroista koottiin Itävalta-Unkarin armeijaan noin 5 000 miehen vapaaehtoislegioona, Ukrainalaiset sitšiläisampujat, joka taisteli Venäjää vastaan Karpaateilla ja Galitsiassa. Sodan päätyttyä legioonan sotilaat muodostivat Länsi-Ukrainan kansantasavallan armeijan ytimen ja taistelivat vielä Puolaa vastaan, kunnes yksikkö hajotettiin toukokuussa 1920. Lvivin Lytšakivin hautausmaalle pystytettiin heille muistomerkki.
+- [Romania — maalehti / Menovinkit] Romaniassa aarteet ovat verkossa yllättävän hyvin esillä: kansallinen aarreluettelo, kylämuseoiden 3D-kierrokset ja lasilevykuvien arkisto. Karpaateilla riittää katsottavaa myös suorana.
+AIEMPI KYSYMYS: Mitä ilves on ja missä sitä tavataan Euroopassa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Ilves on keskikokoinen luonnonvarainen kissaeläin, jolla on lyhyt häntä ja korvien päissä tupsut. Se elää yksinään ja metsästää pääasiassa hämärässä, ja sen elinympäristöä ovat laajat metsät. Euroopassa ilvestä tavataan Pohjoismaissa ja [[Skandinavian]] metsissä sekä [[Karpaateilla]], ja paikoin se on palautettu myös Alpeille. Lofoottien nimen on arveltu viittaavan ilveksen jalkaan, mutta nimen alkuperä on kiistanalainen. Minä pysyn ilveksestä kaukana, kiitos.
+KYSYMYS: Kerro lisää: Karpaateilla
+
+### 181
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lofootit (luonto · saari)
+Tietoruudun teksti: Lofootit on saaristo ja perinteinen maakunta Pohjois-Norjan Nordlandissa, tunnettu jylhistä vuorihuipuistaan, jotka kohoavat lähes suoraan merestä. Alueella on asuttu ainakin 11 000 vuotta, ja rautakauden maanviljelyn ja karjanpidon jäljet ulottuvat noin vuoteen 250 eaa. Vágar, nykyisen Kabelvågin tienoilla sijainnut kauppapaikka, oli Pohjois-Norjan ensimmäinen tunnettu kaupunkimainen asutus jo viikinkiajalla. Lofoottien talous on vuosisatoja nojannut talviseen turskanpyyntiin: kalat puhdistetaan ja ripustetaan telineisiin kuivumaan suolaamattomina, jolloin niistä tulee tørrfisk-nimistä kalkkikuivattua kalaa. Nimen Lofoten alkuperä on kiistanalainen: sen on arveltu tarkoittavan ilveksen jalkaa tai liittyvän revontuliin, sillä saaristo on nykyään myös talvisen revontulimatkailun kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Auckland — kohdekartta / Kohdekartta: Albert Park] 1870–1880-luku Puiston paikalla oli maorien kāinga eli kylä nimeltä Rangipuke, ja sen luoteiskulmassa seisoi Te Horotiun pā. Alueella oli myös Waiohuan kylä Mangahekea, jonka Ngāti Whātua valtasi 1740-luvulla. Maaperä on hiekkakiveä, mutta luoteessa on oma tulivuorensa: Albert Parkin kuonakartio purkautui noin 145 000 vuotta sitten ja peitti suuren osan nykyisestä puistosta tuhkaan. Suurin osa puiston alasta oli 1800-luvun puolivälissä Albert Barracksia, kaupungin varhaisinta eurooppalaista varuskuntaa. 1850- ja 1860-luvuilla siellä majaili sotilaita, muun muassa 58. rykmentti, ja puu- ja kivirakennuksia ympäröi paikallisesta tulivuorikivestä muurattu valli. Pala muuria seisoo yhä yliopisto…
+- [Serbia — maalehti / Tiede: Milankovićin tähtitorni Zvezdaralla] 1887 — Belgradin observatorio perustettiin 7. huhtikuuta 1887 Zvezdaran metsäalueelle, ja sen ensimmäinen johtaja oli Milan Nedeljković. Milutin Milanković johti laitosta kahdesti, vuosina 1925–1926 ja 1948–1951. Hän laski, miten Maan radan muoto, akselin kallistus ja prekessio muuttavat auringonsäteilyn saantia, ja tulokset selittävät jääkausien rytmiä. Pääteoksensa Kanon der Erdbestrahlung, 626 sivua, hän julkaisi saksaksi 1941. Observatorio julistettiin kulttuurimonumentiksi 2001, ja Vidojevican vuoren 1,4 metrin robottiteleskooppi kantaa Milankovićin nimeä.
+AIEMPI KYSYMYS: Miksi Pohjois-Norjassa on talvella kaamos ja kesällä yötön yö?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Maapallon [[akselin kallistuma]] on noin 23,5 astetta, ja siksi [[napapiirin]] pohjoispuolella Aurinko ei talvipäivänseisauksen aikoihin nouse horisontin yläpuolelle ja kesäpäivänseisauksen aikoihin se ei laske. Lofootit sijaitsevat napapiirin pohjoispuolella, joten pimein aika osuu joulu- ja tammikuulle ja valoisin kesä- ja heinäkuulle. Kaamoksessakaan ei ole täysin pimeää, sillä taivaalla on usein hämärää valoa. Minä nukun pimeän yli, kyyhkyjen etuoikeus.
+KYSYMYS: Kerro lisää: akselin kallistuma
+
+### 182
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lofootit (luonto · saari)
+Tietoruudun teksti: Lofootit on saaristo ja perinteinen maakunta Pohjois-Norjan Nordlandissa, tunnettu jylhistä vuorihuipuistaan, jotka kohoavat lähes suoraan merestä. Alueella on asuttu ainakin 11 000 vuotta, ja rautakauden maanviljelyn ja karjanpidon jäljet ulottuvat noin vuoteen 250 eaa. Vágar, nykyisen Kabelvågin tienoilla sijainnut kauppapaikka, oli Pohjois-Norjan ensimmäinen tunnettu kaupunkimainen asutus jo viikinkiajalla. Lofoottien talous on vuosisatoja nojannut talviseen turskanpyyntiin: kalat puhdistetaan ja ripustetaan telineisiin kuivumaan suolaamattomina, jolloin niistä tulee tørrfisk-nimistä kalkkikuivattua kalaa. Nimen Lofoten alkuperä on kiistanalainen: sen on arveltu tarkoittavan ilveksen jalkaa tai liittyvän revontuliin, sillä saaristo on nykyään myös talvisen revontulimatkailun kohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Luonto: Aurinko kiertää eikä laske] Kesäkuussa — Napapiirin pohjoispuolella aurinko ei kesällä laske lainkaan vaan kiertää taivaalla ympäri: Lofooteilla se pysyy ylhäällä lähes kaksi kuukautta. Keskiyön aurinko värjää talot ja vuoret oranssiksi kellon ympäri, ja kalastajat käyvät töissä yölläkin. Talvella sama asia toimii toisin päin — kaamos kestää saman verran, ja aurinko ei nouse ollenkaan. Silloin lumi ja meri heijastavat sinistä valoa, jota norjalaiset sanovat siniseksi hetkeksi.
+AIEMPI KYSYMYS: Miksi Pohjois-Norjassa on talvella kaamos ja kesällä yötön yö?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Maapallon [[akselin kallistuma]] on noin 23,5 astetta, ja siksi [[napapiirin]] pohjoispuolella Aurinko ei talvipäivänseisauksen aikoihin nouse horisontin yläpuolelle ja kesäpäivänseisauksen aikoihin se ei laske. Lofootit sijaitsevat napapiirin pohjoispuolella, joten pimein aika osuu joulu- ja tammikuulle ja valoisin kesä- ja heinäkuulle. Kaamoksessakaan ei ole täysin pimeää, sillä taivaalla on usein hämärää valoa. Minä nukun pimeän yli, kyyhkyjen etuoikeus.
+KYSYMYS: Kerro lisää: napapiirin
+
+### 183
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saamelaiskäräjät (kulttuuri)
+Tietoruudun teksti: Saamelaiset ovat alkuperäiskansa, joka asuu perinteisesti Sápmin alueella Pohjois-Norjassa, Ruotsissa, Suomessa ja Venäjän Kuolan niemimaalla. Heidän elinkeinojaan ovat olleet muun muassa rannikkokalastus, turkismetsästys ja lampaanhoito, mutta tunnetuin niistä on puolipaimentolainen poronhoito, joka on yhä laillisesti varattu vain saamelaisille useilla Pohjoismaiden alueilla. Norjan saamelaiskäräjät eli Sámediggi perustettiin vasta vuonna 1989, kun kuningas Olav V avasi sen ensimmäisen istunnon Karasjoessa; sitä ennen saamelaisasioita hoiti vuodesta 1964 valtion nimittämä Norjan saamelaisneuvosto. Käräjien perustamista edelsi 1970–80-lukujen Altan kiista, jossa saamelaiset vastustivat voimalaitospadon rakentamista Mázen kylän tulva-alueelle. Nykyinen käräjätalo Karasjoessa valmistui vuonna 2000, ja kaupungin asukkaista noin 80 prosenttia puhuu saamea.
+AIEMPI KYSYMYS: Mikä oli Altan kiista, ja miten se johti saamelaiskäräjien perustamiseen?
+AIEMPI VASTAUS (Livia):
+No jopas. Altan kiista oli 1970–80-lukujen kiista, jossa saamelaiset vastustivat voimalaitospadon rakentamista, joka olisi jättänyt [[Mázen]] kylän alueen tulvan alle. Kiistaan liittyi mielenosoituksia ja laajaa julkista keskustelua, ja pato rakennettiin lopulta, mutta kiista herätti koko Norjan pohtimaan saamelaisten oikeuksia. Sen jälkeen saamelaisten asema vahvistui, ja Norjan saamelaiskäräjät eli [[Sámediggi]] perustettiin vuonna 1989, kun kuningas [[Olav V]] avasi sen ensimmäisen istunnon [[Karasjoessa]]. Pitkä tie se oli.
+KYSYMYS: Kerro lisää: Mázen
+
+### 184
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saamelaiskäräjät (kulttuuri)
+Tietoruudun teksti: Saamelaiset ovat alkuperäiskansa, joka asuu perinteisesti Sápmin alueella Pohjois-Norjassa, Ruotsissa, Suomessa ja Venäjän Kuolan niemimaalla. Heidän elinkeinojaan ovat olleet muun muassa rannikkokalastus, turkismetsästys ja lampaanhoito, mutta tunnetuin niistä on puolipaimentolainen poronhoito, joka on yhä laillisesti varattu vain saamelaisille useilla Pohjoismaiden alueilla. Norjan saamelaiskäräjät eli Sámediggi perustettiin vasta vuonna 1989, kun kuningas Olav V avasi sen ensimmäisen istunnon Karasjoessa; sitä ennen saamelaisasioita hoiti vuodesta 1964 valtion nimittämä Norjan saamelaisneuvosto. Käräjien perustamista edelsi 1970–80-lukujen Altan kiista, jossa saamelaiset vastustivat voimalaitospadon rakentamista Mázen kylän tulva-alueelle. Nykyinen käräjätalo Karasjoessa valmistui vuonna 2000, ja kaupungin asukkaista noin 80 prosenttia puhuu saamea.
+AIEMPI KYSYMYS: Mikä oli Altan kiista, ja miten se johti saamelaiskäräjien perustamiseen?
+AIEMPI VASTAUS (Livia):
+No jopas. Altan kiista oli 1970–80-lukujen kiista, jossa saamelaiset vastustivat voimalaitospadon rakentamista, joka olisi jättänyt [[Mázen]] kylän alueen tulvan alle. Kiistaan liittyi mielenosoituksia ja laajaa julkista keskustelua, ja pato rakennettiin lopulta, mutta kiista herätti koko Norjan pohtimaan saamelaisten oikeuksia. Sen jälkeen saamelaisten asema vahvistui, ja Norjan saamelaiskäräjät eli [[Sámediggi]] perustettiin vuonna 1989, kun kuningas [[Olav V]] avasi sen ensimmäisen istunnon [[Karasjoessa]]. Pitkä tie se oli.
+KYSYMYS: Kerro lisää: Sámediggi
+
+### 185
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saamelaiskäräjät (kulttuuri)
+Tietoruudun teksti: Saamelaiset ovat alkuperäiskansa, joka asuu perinteisesti Sápmin alueella Pohjois-Norjassa, Ruotsissa, Suomessa ja Venäjän Kuolan niemimaalla. Heidän elinkeinojaan ovat olleet muun muassa rannikkokalastus, turkismetsästys ja lampaanhoito, mutta tunnetuin niistä on puolipaimentolainen poronhoito, joka on yhä laillisesti varattu vain saamelaisille useilla Pohjoismaiden alueilla. Norjan saamelaiskäräjät eli Sámediggi perustettiin vasta vuonna 1989, kun kuningas Olav V avasi sen ensimmäisen istunnon Karasjoessa; sitä ennen saamelaisasioita hoiti vuodesta 1964 valtion nimittämä Norjan saamelaisneuvosto. Käräjien perustamista edelsi 1970–80-lukujen Altan kiista, jossa saamelaiset vastustivat voimalaitospadon rakentamista Mázen kylän tulva-alueelle. Nykyinen käräjätalo Karasjoessa valmistui vuonna 2000, ja kaupungin asukkaista noin 80 prosenttia puhuu saamea.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historian hetki: Etelänapa 1911 — viisi miestä ja lipputanko] 14.12.1911 — Telttaan jää kirje. Se on osoitettu Norjan kuninkaalle, ja sen viejäksi pyydetään Robert Scottia — siltä varalta, että Scott saapuu perille mutta viisi norjalaista ei pääse kotiin. Kello on noin kolme iltapäivällä, mittaukset sanovat että tämä on paikka, ja lipputankoon tarttuvat yhdessä Roald Amundsen, Olav Bjaaland, Helmer Hanssen, Sverre Hassel ja Oscar Wisting. Ylätasangon he nimeävät kuningas Haakon VII:n tasangoksi ja teltan Polheimiksi. Seuraavat kolme päivää kuluvat sekstantin ääressä ja hiihtäen navan ympäri ristiin rastiin, jotta paikka olisi todistettavasti oikea: Cookin ja Pearyn riitaiset pohjoisnapaväitteet ovat tuoreessa muistissa. Lipunnosto kestää hetken, ja ko…
+AIEMPI KYSYMYS: Mikä oli Altan kiista, ja miten se johti saamelaiskäräjien perustamiseen?
+AIEMPI VASTAUS (Livia):
+No jopas. Altan kiista oli 1970–80-lukujen kiista, jossa saamelaiset vastustivat voimalaitospadon rakentamista, joka olisi jättänyt [[Mázen]] kylän alueen tulvan alle. Kiistaan liittyi mielenosoituksia ja laajaa julkista keskustelua, ja pato rakennettiin lopulta, mutta kiista herätti koko Norjan pohtimaan saamelaisten oikeuksia. Sen jälkeen saamelaisten asema vahvistui, ja Norjan saamelaiskäräjät eli [[Sámediggi]] perustettiin vuonna 1989, kun kuningas [[Olav V]] avasi sen ensimmäisen istunnon [[Karasjoessa]]. Pitkä tie se oli.
+KYSYMYS: Kerro lisää: Olav V
+
+### 186
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saamelaiskäräjät (kulttuuri)
+Tietoruudun teksti: Saamelaiset ovat alkuperäiskansa, joka asuu perinteisesti Sápmin alueella Pohjois-Norjassa, Ruotsissa, Suomessa ja Venäjän Kuolan niemimaalla. Heidän elinkeinojaan ovat olleet muun muassa rannikkokalastus, turkismetsästys ja lampaanhoito, mutta tunnetuin niistä on puolipaimentolainen poronhoito, joka on yhä laillisesti varattu vain saamelaisille useilla Pohjoismaiden alueilla. Norjan saamelaiskäräjät eli Sámediggi perustettiin vasta vuonna 1989, kun kuningas Olav V avasi sen ensimmäisen istunnon Karasjoessa; sitä ennen saamelaisasioita hoiti vuodesta 1964 valtion nimittämä Norjan saamelaisneuvosto. Käräjien perustamista edelsi 1970–80-lukujen Altan kiista, jossa saamelaiset vastustivat voimalaitospadon rakentamista Mázen kylän tulva-alueelle. Nykyinen käräjätalo Karasjoessa valmistui vuonna 2000, ja kaupungin asukkaista noin 80 prosenttia puhuu saamea.
+AIEMPI KYSYMYS: Mikä oli Altan kiista, ja miten se johti saamelaiskäräjien perustamiseen?
+AIEMPI VASTAUS (Livia):
+No jopas. Altan kiista oli 1970–80-lukujen kiista, jossa saamelaiset vastustivat voimalaitospadon rakentamista, joka olisi jättänyt [[Mázen]] kylän alueen tulvan alle. Kiistaan liittyi mielenosoituksia ja laajaa julkista keskustelua, ja pato rakennettiin lopulta, mutta kiista herätti koko Norjan pohtimaan saamelaisten oikeuksia. Sen jälkeen saamelaisten asema vahvistui, ja Norjan saamelaiskäräjät eli [[Sámediggi]] perustettiin vuonna 1989, kun kuningas [[Olav V]] avasi sen ensimmäisen istunnon [[Karasjoessa]]. Pitkä tie se oli.
+KYSYMYS: Kerro lisää: Karasjoessa
+
+### 187
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saamelaiskäräjät (kulttuuri)
+Tietoruudun teksti: Saamelaiset ovat alkuperäiskansa, joka asuu perinteisesti Sápmin alueella Pohjois-Norjassa, Ruotsissa, Suomessa ja Venäjän Kuolan niemimaalla. Heidän elinkeinojaan ovat olleet muun muassa rannikkokalastus, turkismetsästys ja lampaanhoito, mutta tunnetuin niistä on puolipaimentolainen poronhoito, joka on yhä laillisesti varattu vain saamelaisille useilla Pohjoismaiden alueilla. Norjan saamelaiskäräjät eli Sámediggi perustettiin vasta vuonna 1989, kun kuningas Olav V avasi sen ensimmäisen istunnon Karasjoessa; sitä ennen saamelaisasioita hoiti vuodesta 1964 valtion nimittämä Norjan saamelaisneuvosto. Käräjien perustamista edelsi 1970–80-lukujen Altan kiista, jossa saamelaiset vastustivat voimalaitospadon rakentamista Mázen kylän tulva-alueelle. Nykyinen käräjätalo Karasjoessa valmistui vuonna 2000, ja kaupungin asukkaista noin 80 prosenttia puhuu saamea.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Luonto: Myskihärkä tuotiin laivalla] 1947 — Myskihärkä eli Norjassa jääkauden aikaan mutta katosi tuhansia vuosia sitten. 1900-luvulla eläimiä tuotiin laivalla takaisin Grönlannista, ja nykyinen kanta polveutuu vuoden 1947 kuljetuksesta. Dovrefjellin tuntureilla laumassa on nykyään reilut parisataa eläintä. Ne eivät ole härkiä vaan lampaiden ja vuohien sukulaisia, ja niiden alusvilla on maailman lämpimimpiä. Retkeilijöitä kehotetaan pysymään kahdensadan metrin päässä: eläin on rauhallinen mutta nopea suuttumaan.
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+AIEMPI KYSYMYS: Miksi poronhoito on yhä laissa varattu vain saamelaisille monilla alueilla?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tässä säännöt vaihtelevat. Poronhoito on saamelaisille keskeinen osa kulttuuria, kieltä ja elinkeinoa, ja yksinoikeudella pyritään suojaamaan tätä jatkuvuutta sekä rajallisia laidunmaita. [[Norjassa]] ja [[Ruotsissa]] oikeus on rajattu saamelaisille, kun taas [[Suomessa]] poronhoito ei ole laissa varattu yksinomaan saamelaisille. Tarkat säännöt vaihtelevat maittain ja alueittain, eikä niitä kannata yleistää koko Sápmin alueelle. Porot näyttävät ylhäältä pieniltä liikkuvilta pisteiltä.
+KYSYMYS: Kerro lisää: Norjassa
+
+### 188
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saamelaiskäräjät (kulttuuri)
+Tietoruudun teksti: Saamelaiset ovat alkuperäiskansa, joka asuu perinteisesti Sápmin alueella Pohjois-Norjassa, Ruotsissa, Suomessa ja Venäjän Kuolan niemimaalla. Heidän elinkeinojaan ovat olleet muun muassa rannikkokalastus, turkismetsästys ja lampaanhoito, mutta tunnetuin niistä on puolipaimentolainen poronhoito, joka on yhä laillisesti varattu vain saamelaisille useilla Pohjoismaiden alueilla. Norjan saamelaiskäräjät eli Sámediggi perustettiin vasta vuonna 1989, kun kuningas Olav V avasi sen ensimmäisen istunnon Karasjoessa; sitä ennen saamelaisasioita hoiti vuodesta 1964 valtion nimittämä Norjan saamelaisneuvosto. Käräjien perustamista edelsi 1970–80-lukujen Altan kiista, jossa saamelaiset vastustivat voimalaitospadon rakentamista Mázen kylän tulva-alueelle. Nykyinen käräjätalo Karasjoessa valmistui vuonna 2000, ja kaupungin asukkaista noin 80 prosenttia puhuu saamea.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Kuvataide: Abstrakti taide alkoi salaa] Hilma af Klint maalasi jo vuonna 1906 suuria teoksia, joissa ei ole yhtään esittävää kohdetta — värejä, ympyröitä ja spiraaleja. Se tapahtui vuosia ennen kuin Kandinskyn ja muiden abstrakteja maalauksia nähtiin. Hilma ei kuitenkaan näyttänyt niitä juuri kenellekään: hän määräsi testamentissaan, ettei töitä saa asettaa esille ennen kuin kaksikymmentä vuotta on kulunut hänen kuolemastaan. Maailma näki ne kunnolla vasta 1980-luvulla, ja vasta silloin taidehistoriaa alettiin kirjoittaa uudestaan: abstrakti taide olikin alkanut Ruotsissa.
+- [Ruotsi — maalehti / Luonto: Taivas repeää vihreäksi] Abisko Pohjois-Ruotsissa on yksi maailman parhaista paikoista nähdä revontulet, ja syy on maantieteessä: tunturit pysäyttävät Atlantilta tulevat pilvet, joten Torneträskin yllä on usein selkeää silloinkin, kun ympärillä sataa. Ilmiötä kutsutaan siniseksi aukoksi. Revontulet syntyvät, kun auringosta sinkoutuneet hiukkaset törmäävät ilmakehän kaasuihin sadan kilometrin korkeudessa — happi hehkuu vihreänä, typpi violettina. Parhaat yöt ovat pimeimmän talven selkeitä pakkasöitä, jolloin valo näkyy myös vedenpinnasta heijastuneena.
+- [Ruotsi — maalehti / Luonto] Ruotsissa metsä on kaikkien: sinne saa mennä, siellä saa yöpyä ja marjat saa poimia — kunhan ei häiritse eikä tuhoa.
+AIEMPI KYSYMYS: Miksi poronhoito on yhä laissa varattu vain saamelaisille monilla alueilla?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tässä säännöt vaihtelevat. Poronhoito on saamelaisille keskeinen osa kulttuuria, kieltä ja elinkeinoa, ja yksinoikeudella pyritään suojaamaan tätä jatkuvuutta sekä rajallisia laidunmaita. [[Norjassa]] ja [[Ruotsissa]] oikeus on rajattu saamelaisille, kun taas [[Suomessa]] poronhoito ei ole laissa varattu yksinomaan saamelaisille. Tarkat säännöt vaihtelevat maittain ja alueittain, eikä niitä kannata yleistää koko Sápmin alueelle. Porot näyttävät ylhäältä pieniltä liikkuvilta pisteiltä.
+KYSYMYS: Kerro lisää: Ruotsissa
+
+### 189
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saamelaiskäräjät (kulttuuri)
+Tietoruudun teksti: Saamelaiset ovat alkuperäiskansa, joka asuu perinteisesti Sápmin alueella Pohjois-Norjassa, Ruotsissa, Suomessa ja Venäjän Kuolan niemimaalla. Heidän elinkeinojaan ovat olleet muun muassa rannikkokalastus, turkismetsästys ja lampaanhoito, mutta tunnetuin niistä on puolipaimentolainen poronhoito, joka on yhä laillisesti varattu vain saamelaisille useilla Pohjoismaiden alueilla. Norjan saamelaiskäräjät eli Sámediggi perustettiin vasta vuonna 1989, kun kuningas Olav V avasi sen ensimmäisen istunnon Karasjoessa; sitä ennen saamelaisasioita hoiti vuodesta 1964 valtion nimittämä Norjan saamelaisneuvosto. Käräjien perustamista edelsi 1970–80-lukujen Altan kiista, jossa saamelaiset vastustivat voimalaitospadon rakentamista Mázen kylän tulva-alueelle. Nykyinen käräjätalo Karasjoessa valmistui vuonna 2000, ja kaupungin asukkaista noin 80 prosenttia puhuu saamea.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rovaniemi — kaupunkilehti / Lappi: Kieli, jota puhutaan vain Suomessa] Inarinsaamea puhutaan ainoastaan Inarijärven ympärillä. 1990-luvun puolivälissä kieltä puhui lapsilleen enää kaksi perhettä ja alle 20-vuotiaita puhujia oli neljä. Vuonna 1997 Inarissa aloitettiin kielipesä, jossa aikuiset puhuvat lapsille vain inarinsaamea. Nyt puhujia on muutama sata, ja osa kielipesän lapsista opettaa kieltä itse.
+AIEMPI KYSYMYS: Miksi poronhoito on yhä laissa varattu vain saamelaisille monilla alueilla?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tässä säännöt vaihtelevat. Poronhoito on saamelaisille keskeinen osa kulttuuria, kieltä ja elinkeinoa, ja yksinoikeudella pyritään suojaamaan tätä jatkuvuutta sekä rajallisia laidunmaita. [[Norjassa]] ja [[Ruotsissa]] oikeus on rajattu saamelaisille, kun taas [[Suomessa]] poronhoito ei ole laissa varattu yksinomaan saamelaisille. Tarkat säännöt vaihtelevat maittain ja alueittain, eikä niitä kannata yleistää koko Sápmin alueelle. Porot näyttävät ylhäältä pieniltä liikkuvilta pisteiltä.
+KYSYMYS: Kerro lisää: Suomessa
+
+### 190
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saamelaiskäräjät (kulttuuri)
+Tietoruudun teksti: Saamelaiset ovat alkuperäiskansa, joka asuu perinteisesti Sápmin alueella Pohjois-Norjassa, Ruotsissa, Suomessa ja Venäjän Kuolan niemimaalla. Heidän elinkeinojaan ovat olleet muun muassa rannikkokalastus, turkismetsästys ja lampaanhoito, mutta tunnetuin niistä on puolipaimentolainen poronhoito, joka on yhä laillisesti varattu vain saamelaisille useilla Pohjoismaiden alueilla. Norjan saamelaiskäräjät eli Sámediggi perustettiin vasta vuonna 1989, kun kuningas Olav V avasi sen ensimmäisen istunnon Karasjoessa; sitä ennen saamelaisasioita hoiti vuodesta 1964 valtion nimittämä Norjan saamelaisneuvosto. Käräjien perustamista edelsi 1970–80-lukujen Altan kiista, jossa saamelaiset vastustivat voimalaitospadon rakentamista Mázen kylän tulva-alueelle. Nykyinen käräjätalo Karasjoessa valmistui vuonna 2000, ja kaupungin asukkaista noin 80 prosenttia puhuu saamea.
+AIEMPI KYSYMYS: Mikä on gákti ja mitä sen koristeet kertovat?
+AIEMPI VASTAUS (Livia):
+Ai se. Gákti on saamelaisten perinteinen puku, jota käytetään juhlissa ja monin paikoin myös arjessa. Sen värit, nauhat ja koristeet vaihtelevat alueittain, ja usein ne kertovat pukijan kotiseudusta ja suvusta, mutta kuvio ei ole yksiselitteinen viesti kaikkialla. Puku on tehty osin ulkona vietettyyn elämään sopivaksi, ja saamelaisalueella [[Sápmin]] eri osissa on omat tapansa, ja puvun yhteydessä käytetään usein [[poronnahkaa]].
+
+Minun höyhenpukuni on aika yksivärinen verrattuna. Mutta toimii: harmaa sopii joka torille.
+KYSYMYS: Kerro lisää: Sápmin
+
+### 191
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saamelaiskäräjät (kulttuuri)
+Tietoruudun teksti: Saamelaiset ovat alkuperäiskansa, joka asuu perinteisesti Sápmin alueella Pohjois-Norjassa, Ruotsissa, Suomessa ja Venäjän Kuolan niemimaalla. Heidän elinkeinojaan ovat olleet muun muassa rannikkokalastus, turkismetsästys ja lampaanhoito, mutta tunnetuin niistä on puolipaimentolainen poronhoito, joka on yhä laillisesti varattu vain saamelaisille useilla Pohjoismaiden alueilla. Norjan saamelaiskäräjät eli Sámediggi perustettiin vasta vuonna 1989, kun kuningas Olav V avasi sen ensimmäisen istunnon Karasjoessa; sitä ennen saamelaisasioita hoiti vuodesta 1964 valtion nimittämä Norjan saamelaisneuvosto. Käräjien perustamista edelsi 1970–80-lukujen Altan kiista, jossa saamelaiset vastustivat voimalaitospadon rakentamista Mázen kylän tulva-alueelle. Nykyinen käräjätalo Karasjoessa valmistui vuonna 2000, ja kaupungin asukkaista noin 80 prosenttia puhuu saamea.
+AIEMPI KYSYMYS: Mikä on gákti ja mitä sen koristeet kertovat?
+AIEMPI VASTAUS (Livia):
+Ai se. Gákti on saamelaisten perinteinen puku, jota käytetään juhlissa ja monin paikoin myös arjessa. Sen värit, nauhat ja koristeet vaihtelevat alueittain, ja usein ne kertovat pukijan kotiseudusta ja suvusta, mutta kuvio ei ole yksiselitteinen viesti kaikkialla. Puku on tehty osin ulkona vietettyyn elämään sopivaksi, ja saamelaisalueella [[Sápmin]] eri osissa on omat tapansa, ja puvun yhteydessä käytetään usein [[poronnahkaa]].
+
+Minun höyhenpukuni on aika yksivärinen verrattuna. Mutta toimii: harmaa sopii joka torille.
+KYSYMYS: Kerro lisää: poronnahkaa
+
+### 192
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saamelaiskäräjät (kulttuuri)
+Tietoruudun teksti: Saamelaiset ovat alkuperäiskansa, joka asuu perinteisesti Sápmin alueella Pohjois-Norjassa, Ruotsissa, Suomessa ja Venäjän Kuolan niemimaalla. Heidän elinkeinojaan ovat olleet muun muassa rannikkokalastus, turkismetsästys ja lampaanhoito, mutta tunnetuin niistä on puolipaimentolainen poronhoito, joka on yhä laillisesti varattu vain saamelaisille useilla Pohjoismaiden alueilla. Norjan saamelaiskäräjät eli Sámediggi perustettiin vasta vuonna 1989, kun kuningas Olav V avasi sen ensimmäisen istunnon Karasjoessa; sitä ennen saamelaisasioita hoiti vuodesta 1964 valtion nimittämä Norjan saamelaisneuvosto. Käräjien perustamista edelsi 1970–80-lukujen Altan kiista, jossa saamelaiset vastustivat voimalaitospadon rakentamista Mázen kylän tulva-alueelle. Nykyinen käräjätalo Karasjoessa valmistui vuonna 2000, ja kaupungin asukkaista noin 80 prosenttia puhuu saamea.
+AIEMPI KYSYMYS: Mitä tarkoittaa, että saamelaiset ovat alkuperäiskansa?
+AIEMPI VASTAUS (Livia):
+Just niin, tärkeä kysymys. Alkuperäiskansalla tarkoitetaan kansaa, joka on asunut alueellaan ennen nykyisten valtiorajojen syntymistä ja joka on säilyttänyt oman kulttuurinsa, kielensä ja yhteisönsä. Saamelaiset asuvat perinteisesti Sápmin alueella usean valtion alueella, ja heidän asemaansa suojaavat muun muassa [[ILO:n]] alkuperäiskansasopimus ja kansalliset lait. Norjassa saamelaisten oma edustuselin on [[Sámediggi]]. Onpas tämä tärkeä aihe.
+KYSYMYS: Kerro lisää: ILO:n
+
+### 193
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saamelaiskäräjät (kulttuuri)
+Tietoruudun teksti: Saamelaiset ovat alkuperäiskansa, joka asuu perinteisesti Sápmin alueella Pohjois-Norjassa, Ruotsissa, Suomessa ja Venäjän Kuolan niemimaalla. Heidän elinkeinojaan ovat olleet muun muassa rannikkokalastus, turkismetsästys ja lampaanhoito, mutta tunnetuin niistä on puolipaimentolainen poronhoito, joka on yhä laillisesti varattu vain saamelaisille useilla Pohjoismaiden alueilla. Norjan saamelaiskäräjät eli Sámediggi perustettiin vasta vuonna 1989, kun kuningas Olav V avasi sen ensimmäisen istunnon Karasjoessa; sitä ennen saamelaisasioita hoiti vuodesta 1964 valtion nimittämä Norjan saamelaisneuvosto. Käräjien perustamista edelsi 1970–80-lukujen Altan kiista, jossa saamelaiset vastustivat voimalaitospadon rakentamista Mázen kylän tulva-alueelle. Nykyinen käräjätalo Karasjoessa valmistui vuonna 2000, ja kaupungin asukkaista noin 80 prosenttia puhuu saamea.
+AIEMPI KYSYMYS: Mitä tarkoittaa sana Sápmi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämän minä tiedän. Sápmi tarkoittaa saamelaisten kotiseutua ja pohjoissaamessa myös saamelaisia itseään ja heidän yhteisöään. Alue ulottuu Norjan, Ruotsin ja Suomen pohjoisosiin sekä Venäjän [[Kuolan niemimaalle]], eikä sitä ole rajattu valtioiden rajoilla. Saamelaisten kansallispäivää vietetään 6. helmikuuta, ja päivän lähteiden mukaan muistutetaan vuonna 1917 [[Trondheimissa]] pidetystä saamelaisten kokouksesta. Tämä kasvaa pian kunnon esitelmäksi.
+KYSYMYS: Kerro lisää: Kuolan niemimaalle
+
+### 194
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saamelaiskäräjät (kulttuuri)
+Tietoruudun teksti: Saamelaiset ovat alkuperäiskansa, joka asuu perinteisesti Sápmin alueella Pohjois-Norjassa, Ruotsissa, Suomessa ja Venäjän Kuolan niemimaalla. Heidän elinkeinojaan ovat olleet muun muassa rannikkokalastus, turkismetsästys ja lampaanhoito, mutta tunnetuin niistä on puolipaimentolainen poronhoito, joka on yhä laillisesti varattu vain saamelaisille useilla Pohjoismaiden alueilla. Norjan saamelaiskäräjät eli Sámediggi perustettiin vasta vuonna 1989, kun kuningas Olav V avasi sen ensimmäisen istunnon Karasjoessa; sitä ennen saamelaisasioita hoiti vuodesta 1964 valtion nimittämä Norjan saamelaisneuvosto. Käräjien perustamista edelsi 1970–80-lukujen Altan kiista, jossa saamelaiset vastustivat voimalaitospadon rakentamista Mázen kylän tulva-alueelle. Nykyinen käräjätalo Karasjoessa valmistui vuonna 2000, ja kaupungin asukkaista noin 80 prosenttia puhuu saamea.
+AIEMPI KYSYMYS: Mitä tarkoittaa sana Sápmi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämän minä tiedän. Sápmi tarkoittaa saamelaisten kotiseutua ja pohjoissaamessa myös saamelaisia itseään ja heidän yhteisöään. Alue ulottuu Norjan, Ruotsin ja Suomen pohjoisosiin sekä Venäjän [[Kuolan niemimaalle]], eikä sitä ole rajattu valtioiden rajoilla. Saamelaisten kansallispäivää vietetään 6. helmikuuta, ja päivän lähteiden mukaan muistutetaan vuonna 1917 [[Trondheimissa]] pidetystä saamelaisten kokouksesta. Tämä kasvaa pian kunnon esitelmäksi.
+KYSYMYS: Kerro lisää: Trondheimissa
+
+### 195
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gokstadin laiva (historia)
+Tietoruudun teksti: Gokstadin laiva on 800-luvulta peräisin oleva viikinkiajan pitkälaiva, joka löytyi Gokstadhaugen-hautakummusta Sandefjordin Sandarista vuonna 1880. Tilan omistajan pojat kaivoivat sattumalta esiin laivan keulan, ja Muinaismuistoyhdistyksen puheenjohtaja Nicolay Nicolaysen johti varsinaisen kaivauksen samana vuonna. Laiva on 23,8 metriä pitkä ja 5,1 metriä leveä, rakennettu limisaumaisesti tammesta, ja se on Norjan suurin säilynyt viikinkilaiva. Laiva oli tarkoitettu sekä sotaan, kauppaan että ihmisten ja tavaran kuljetukseen, ja sitä ohjattiin perässä olevalla sivuperäsimellä. Nykyään laiva on esillä Oslon viikinkilaivamuseossa, jonne se siirrettiin löytöpaikaltaan Sandefjordin lähistöltä.
+AIEMPI KYSYMYS: Kuka johti Gokstadin laivan kaivauksen, ja mihin yhdistykseen hän kuului?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kaivauksen johti Nicolay Nicolaysen, joka oli Muinaismuistoyhdistyksen eli norjalaisten muinaismuistojen suojelemiseen perustetun yhdistyksen puheenjohtaja. Laivan keulan olivat ensin löytäneet sattumalta tilan omistajan pojat [[Sandefjordin]] Sandarissa vuonna 1880, ja varsinainen kaivaus tehtiin samana vuonna. Nykyään laiva on esillä Oslon [[viikinkilaivamuseossa]]. Pojat löysivät keulan sattumalta, minä olen löytänyt vain leivänmuruja.
+KYSYMYS: Kerro lisää: Sandefjordin
+
+### 196
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gokstadin laiva (historia)
+Tietoruudun teksti: Gokstadin laiva on 800-luvulta peräisin oleva viikinkiajan pitkälaiva, joka löytyi Gokstadhaugen-hautakummusta Sandefjordin Sandarista vuonna 1880. Tilan omistajan pojat kaivoivat sattumalta esiin laivan keulan, ja Muinaismuistoyhdistyksen puheenjohtaja Nicolay Nicolaysen johti varsinaisen kaivauksen samana vuonna. Laiva on 23,8 metriä pitkä ja 5,1 metriä leveä, rakennettu limisaumaisesti tammesta, ja se on Norjan suurin säilynyt viikinkilaiva. Laiva oli tarkoitettu sekä sotaan, kauppaan että ihmisten ja tavaran kuljetukseen, ja sitä ohjattiin perässä olevalla sivuperäsimellä. Nykyään laiva on esillä Oslon viikinkilaivamuseossa, jonne se siirrettiin löytöpaikaltaan Sandefjordin lähistöltä.
+AIEMPI KYSYMYS: Kuka johti Gokstadin laivan kaivauksen, ja mihin yhdistykseen hän kuului?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kaivauksen johti Nicolay Nicolaysen, joka oli Muinaismuistoyhdistyksen eli norjalaisten muinaismuistojen suojelemiseen perustetun yhdistyksen puheenjohtaja. Laivan keulan olivat ensin löytäneet sattumalta tilan omistajan pojat [[Sandefjordin]] Sandarissa vuonna 1880, ja varsinainen kaivaus tehtiin samana vuonna. Nykyään laiva on esillä Oslon [[viikinkilaivamuseossa]]. Pojat löysivät keulan sattumalta, minä olen löytänyt vain leivänmuruja.
+KYSYMYS: Kerro lisää: viikinkilaivamuseossa
+
+### 197
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gokstadin laiva (historia)
+Tietoruudun teksti: Gokstadin laiva on 800-luvulta peräisin oleva viikinkiajan pitkälaiva, joka löytyi Gokstadhaugen-hautakummusta Sandefjordin Sandarista vuonna 1880. Tilan omistajan pojat kaivoivat sattumalta esiin laivan keulan, ja Muinaismuistoyhdistyksen puheenjohtaja Nicolay Nicolaysen johti varsinaisen kaivauksen samana vuonna. Laiva on 23,8 metriä pitkä ja 5,1 metriä leveä, rakennettu limisaumaisesti tammesta, ja se on Norjan suurin säilynyt viikinkilaiva. Laiva oli tarkoitettu sekä sotaan, kauppaan että ihmisten ja tavaran kuljetukseen, ja sitä ohjattiin perässä olevalla sivuperäsimellä. Nykyään laiva on esillä Oslon viikinkilaivamuseossa, jonne se siirrettiin löytöpaikaltaan Sandefjordin lähistöltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historian hetki: Roskildenvuono noin 1040 — kuusikymmentä airoa] n. 1040 — Ensimmäinen ääni on airon kolahdus hankaimeen, ja se toistuu kuusikymmentä kertaa yhtä aikaa. Nuori soutaja lähtee ensimmäiselle pitkälle matkalleen eikä tiedä, palaako miehistö kaupankävijöinä, sotureina vai ei lainkaan. Vuono on matala ja mutkitteleva, ja sen takana on koko maailma: Atlantti lännessä, idässä jokireitit Mustallemerelle. Miehet työntävät keulaa irti rantamudasta, kilvet on ripustettu laidalle matkan ajaksi, purje on raidallista villaa ja päähineet huopaa ja nahkaa — sarvikypärä on 1800-luvun oopperalavojen keksintö eikä esiinny yhdessäkään viikinkiajan löydössä. Juuri tällaisia laivoja tunnetaan tarkasti, koska viisi niistä upotettiin 1000-luvulla tähän samaan vuo…
+AIEMPI KYSYMYS: Mihin kolmeen tarkoitukseen Gokstadin laivaa käytettiin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: laivaa käytettiin sotaan, kauppaan sekä ihmisten ja tavaran kuljetukseen. Se oli [[viikinkiajan]] pitkälaiva, 23,8 metriä pitkä ja 5,1 metriä leveä, ja sitä ohjattiin perässä olevalla [[sivuperäsimellä]]. Laiva on rakennettu tammesta limisaumaisesti, mikä teki rungosta kevyen ja joustavan. Kolme tehtävää yhdelle laivalle, minulla on yksi: lentää kirje perille.
+KYSYMYS: Kerro lisää: viikinkiajan
+
+### 198
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gokstadin laiva (historia)
+Tietoruudun teksti: Gokstadin laiva on 800-luvulta peräisin oleva viikinkiajan pitkälaiva, joka löytyi Gokstadhaugen-hautakummusta Sandefjordin Sandarista vuonna 1880. Tilan omistajan pojat kaivoivat sattumalta esiin laivan keulan, ja Muinaismuistoyhdistyksen puheenjohtaja Nicolay Nicolaysen johti varsinaisen kaivauksen samana vuonna. Laiva on 23,8 metriä pitkä ja 5,1 metriä leveä, rakennettu limisaumaisesti tammesta, ja se on Norjan suurin säilynyt viikinkilaiva. Laiva oli tarkoitettu sekä sotaan, kauppaan että ihmisten ja tavaran kuljetukseen, ja sitä ohjattiin perässä olevalla sivuperäsimellä. Nykyään laiva on esillä Oslon viikinkilaivamuseossa, jonne se siirrettiin löytöpaikaltaan Sandefjordin lähistöltä.
+AIEMPI KYSYMYS: Mihin kolmeen tarkoitukseen Gokstadin laivaa käytettiin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: laivaa käytettiin sotaan, kauppaan sekä ihmisten ja tavaran kuljetukseen. Se oli [[viikinkiajan]] pitkälaiva, 23,8 metriä pitkä ja 5,1 metriä leveä, ja sitä ohjattiin perässä olevalla [[sivuperäsimellä]]. Laiva on rakennettu tammesta limisaumaisesti, mikä teki rungosta kevyen ja joustavan. Kolme tehtävää yhdelle laivalle, minulla on yksi: lentää kirje perille.
+KYSYMYS: Kerro lisää: sivuperäsimellä
+
+### 199
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gokstadin laiva (historia)
+Tietoruudun teksti: Gokstadin laiva on 800-luvulta peräisin oleva viikinkiajan pitkälaiva, joka löytyi Gokstadhaugen-hautakummusta Sandefjordin Sandarista vuonna 1880. Tilan omistajan pojat kaivoivat sattumalta esiin laivan keulan, ja Muinaismuistoyhdistyksen puheenjohtaja Nicolay Nicolaysen johti varsinaisen kaivauksen samana vuonna. Laiva on 23,8 metriä pitkä ja 5,1 metriä leveä, rakennettu limisaumaisesti tammesta, ja se on Norjan suurin säilynyt viikinkilaiva. Laiva oli tarkoitettu sekä sotaan, kauppaan että ihmisten ja tavaran kuljetukseen, ja sitä ohjattiin perässä olevalla sivuperäsimellä. Nykyään laiva on esillä Oslon viikinkilaivamuseossa, jonne se siirrettiin löytöpaikaltaan Sandefjordin lähistöltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yangon — kohdekartta / Kohdekartta: Shwedagon-pagodi] nykyinen korkeus vuodesta 1775 Pagodin uskotaan kätkevän neljän Buddhan jäännökset: Kakusandhan sauvan, Konagamanan vedensuodattimen, palan Kassapan kaavusta ja kahdeksan hiussäiettä Gautaman päästä. Kirjallisesti pagodi mainitaan ensi kerran kuninkaallisissa kronikoissa vuonna 1362, kun kuningas Binnya U korotti sen kahdeksaantoista metriin. Kuningas Dhammazedin ajalta säilyneet piirtokirjoitukset luettelevat korjauksia vuoteen 1436 asti, ja 1400-luvun puolivälissä kuningatar Shin Saw Pu nosti pagodin neljäänkymmeneen metriin ja kullautti sen. Maanjäristykset ovat vaurioittaneet rakennelmaa monta kertaa. Pahin oli vuoden 1768 järistys, joka pudotti stupan huipun; kuningas Hsinbyushin nosti…
+- [Brisbane — kohdekartta / Kohdekartta: MacArthurin talo] 1934 Talo rakennettiin 1931–1934 vakuutusyhtiö AMP:n Queenslandin pääkonttoriksi, ja se korvasi kaksi aiempaa AMP:n taloa samalla tontilla. Ajoitus kertoo yhtiön vahvuudesta: konttori nousi 1930-luvun laman pahimpina vuosina. Suunnittelijoina olivat Francis Richard Hall ja Harold M. Cook, rakentajana Brisbanen mestarirakentaja George A. Stronach, ja hinta oli noin 255 000 puntaa. Jalustan graniitti testautettiin Queenslandin yliopistolla ennen rakentamista, ja teräsrunko koottiin pulteilla eikä niiteillä — vuoden 1932 Brisbanessa se oli uutta. Pääsisäänkäynnin yläpuolisen kuvaelman veisti sydneyläinen Fred Gowan sisilialaisesta marmorista. Se kuvittaa yhtiön tunnuslausetta ”Amicus certus in…
+AIEMPI KYSYMYS: Mitä limisaumarakenne tarkoittaa viikinkilaivassa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Limisaumarakenteessa rungon laudat limittyvät toistensa päälle ja kiinnitetään yhteen [[niiteillä]], jolloin runko muodostuu kerroksittain. Rakenne tekee rungosta kevyen ja joustavan, ja se kestää aallokossa kuormitusta paremmin kuin jäykkä rakenne. [[Gokstadin laiva]] on rakennettu juuri tällä tavalla, tammesta. Saipa selitettyä, vähän tuli hiki.
+KYSYMYS: Kerro lisää: niiteillä
+
+### 200
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gokstadin laiva (historia)
+Tietoruudun teksti: Gokstadin laiva on 800-luvulta peräisin oleva viikinkiajan pitkälaiva, joka löytyi Gokstadhaugen-hautakummusta Sandefjordin Sandarista vuonna 1880. Tilan omistajan pojat kaivoivat sattumalta esiin laivan keulan, ja Muinaismuistoyhdistyksen puheenjohtaja Nicolay Nicolaysen johti varsinaisen kaivauksen samana vuonna. Laiva on 23,8 metriä pitkä ja 5,1 metriä leveä, rakennettu limisaumaisesti tammesta, ja se on Norjan suurin säilynyt viikinkilaiva. Laiva oli tarkoitettu sekä sotaan, kauppaan että ihmisten ja tavaran kuljetukseen, ja sitä ohjattiin perässä olevalla sivuperäsimellä. Nykyään laiva on esillä Oslon viikinkilaivamuseossa, jonne se siirrettiin löytöpaikaltaan Sandefjordin lähistöltä.
+AIEMPI KYSYMYS: Mitä limisaumarakenne tarkoittaa viikinkilaivassa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Limisaumarakenteessa rungon laudat limittyvät toistensa päälle ja kiinnitetään yhteen [[niiteillä]], jolloin runko muodostuu kerroksittain. Rakenne tekee rungosta kevyen ja joustavan, ja se kestää aallokossa kuormitusta paremmin kuin jäykkä rakenne. [[Gokstadin laiva]] on rakennettu juuri tällä tavalla, tammesta. Saipa selitettyä, vähän tuli hiki.
+KYSYMYS: Kerro lisää: Gokstadin laiva
+
+### 201
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gokstadin laiva (historia)
+Tietoruudun teksti: Gokstadin laiva on 800-luvulta peräisin oleva viikinkiajan pitkälaiva, joka löytyi Gokstadhaugen-hautakummusta Sandefjordin Sandarista vuonna 1880. Tilan omistajan pojat kaivoivat sattumalta esiin laivan keulan, ja Muinaismuistoyhdistyksen puheenjohtaja Nicolay Nicolaysen johti varsinaisen kaivauksen samana vuonna. Laiva on 23,8 metriä pitkä ja 5,1 metriä leveä, rakennettu limisaumaisesti tammesta, ja se on Norjan suurin säilynyt viikinkilaiva. Laiva oli tarkoitettu sekä sotaan, kauppaan että ihmisten ja tavaran kuljetukseen, ja sitä ohjattiin perässä olevalla sivuperäsimellä. Nykyään laiva on esillä Oslon viikinkilaivamuseossa, jonne se siirrettiin löytöpaikaltaan Sandefjordin lähistöltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Oslo — kaupunkilehti / Laivat: Laiva kaivettiin ylös hautakummusta] Osebergin laiva rakennettiin noin vuonna 820 ja haudattiin neljätoista vuotta myöhemmin maakummun alle Oslon eteläpuolelle. Sinne pantiin kaksi vainajaa ja koko talouden tavarat: koristeltu kärry, neljä rekeä, vuoteita, kudottuja kankaita ja keittovälineitä. Kummun sininen savi piti puun kosteana, joten laiva säilyi lähes kokonaisena. Se kaivettiin esiin vuonna 1904, ja palaset koottiin takaisin yhteen. Keulan kaareva koristekierre on veistetty yhdestä puukappaleesta.
+AIEMPI KYSYMYS: Mitä muita viikinkilaivoja Norjasta on löydetty hautakummuista?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tunnetuimpia ovat [[Osebergin]] laiva, joka löytyi vuonna 1904, sekä [[Tunen]] laiva. Viikinkiajalla vaikutusvaltaisia ihmisiä haudattiin joskus laivaan tai laivan viereen, ja siksi laivoja on säilynyt hautakumpuihin. Gokstadin laiva on yksi näistä, ja kaikkia näitä laivoja voi nykyään tutustua Oslon museossa, joskin tarkka tilanne kannattaa tarkistaa museon omilta sivuilta. En ole aivan varma, kuinka monta laivaa kaikkiaan on löydetty, joten jätän luvun pois. Ihan kunnon laivasto, mutta ei yhtään kyyhkylaivaa.
+KYSYMYS: Kerro lisää: Osebergin
+
+### 202
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gokstadin laiva (historia)
+Tietoruudun teksti: Gokstadin laiva on 800-luvulta peräisin oleva viikinkiajan pitkälaiva, joka löytyi Gokstadhaugen-hautakummusta Sandefjordin Sandarista vuonna 1880. Tilan omistajan pojat kaivoivat sattumalta esiin laivan keulan, ja Muinaismuistoyhdistyksen puheenjohtaja Nicolay Nicolaysen johti varsinaisen kaivauksen samana vuonna. Laiva on 23,8 metriä pitkä ja 5,1 metriä leveä, rakennettu limisaumaisesti tammesta, ja se on Norjan suurin säilynyt viikinkilaiva. Laiva oli tarkoitettu sekä sotaan, kauppaan että ihmisten ja tavaran kuljetukseen, ja sitä ohjattiin perässä olevalla sivuperäsimellä. Nykyään laiva on esillä Oslon viikinkilaivamuseossa, jonne se siirrettiin löytöpaikaltaan Sandefjordin lähistöltä.
+AIEMPI KYSYMYS: Mitä muita viikinkilaivoja Norjasta on löydetty hautakummuista?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tunnetuimpia ovat [[Osebergin]] laiva, joka löytyi vuonna 1904, sekä [[Tunen]] laiva. Viikinkiajalla vaikutusvaltaisia ihmisiä haudattiin joskus laivaan tai laivan viereen, ja siksi laivoja on säilynyt hautakumpuihin. Gokstadin laiva on yksi näistä, ja kaikkia näitä laivoja voi nykyään tutustua Oslon museossa, joskin tarkka tilanne kannattaa tarkistaa museon omilta sivuilta. En ole aivan varma, kuinka monta laivaa kaikkiaan on löydetty, joten jätän luvun pois. Ihan kunnon laivasto, mutta ei yhtään kyyhkylaivaa.
+KYSYMYS: Kerro lisää: Tunen
+
+### 203
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gokstadin laiva (historia)
+Tietoruudun teksti: Gokstadin laiva on 800-luvulta peräisin oleva viikinkiajan pitkälaiva, joka löytyi Gokstadhaugen-hautakummusta Sandefjordin Sandarista vuonna 1880. Tilan omistajan pojat kaivoivat sattumalta esiin laivan keulan, ja Muinaismuistoyhdistyksen puheenjohtaja Nicolay Nicolaysen johti varsinaisen kaivauksen samana vuonna. Laiva on 23,8 metriä pitkä ja 5,1 metriä leveä, rakennettu limisaumaisesti tammesta, ja se on Norjan suurin säilynyt viikinkilaiva. Laiva oli tarkoitettu sekä sotaan, kauppaan että ihmisten ja tavaran kuljetukseen, ja sitä ohjattiin perässä olevalla sivuperäsimellä. Nykyään laiva on esillä Oslon viikinkilaivamuseossa, jonne se siirrettiin löytöpaikaltaan Sandefjordin lähistöltä.
+AIEMPI KYSYMYS: Miten viikinkien pitkälaivat navigoivat ilman kompassia?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on lintujen aluetta. Viikingit seurasivat rannikon maamerkkejä, Auringon ja tähtien asentoa sekä merenkulun kokemusta, kuten tuulen ja aallokon suuntaa. [[Saagojen]] mukaan he käyttivät apunaan myös lintuja: [[Islannin]] löytäjänä tunnetun Flókin kerrotaan vapauttaneen korppeja, ja linnun lentosuunta paljasti maan suunnan. Kuinka tarkasti tämä pitää paikkansa, on historiantutkijoiden keskuudessa avoin kysymys. Linnut osaavat asiansa, sanon minä.
+KYSYMYS: Kerro lisää: Saagojen
+
+### 204
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gokstadin laiva (historia)
+Tietoruudun teksti: Gokstadin laiva on 800-luvulta peräisin oleva viikinkiajan pitkälaiva, joka löytyi Gokstadhaugen-hautakummusta Sandefjordin Sandarista vuonna 1880. Tilan omistajan pojat kaivoivat sattumalta esiin laivan keulan, ja Muinaismuistoyhdistyksen puheenjohtaja Nicolay Nicolaysen johti varsinaisen kaivauksen samana vuonna. Laiva on 23,8 metriä pitkä ja 5,1 metriä leveä, rakennettu limisaumaisesti tammesta, ja se on Norjan suurin säilynyt viikinkilaiva. Laiva oli tarkoitettu sekä sotaan, kauppaan että ihmisten ja tavaran kuljetukseen, ja sitä ohjattiin perässä olevalla sivuperäsimellä. Nykyään laiva on esillä Oslon viikinkilaivamuseossa, jonne se siirrettiin löytöpaikaltaan Sandefjordin lähistöltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kansa kolisteli pankit pois vallasta kattiloilla] 2008–2009 — Lokakuussa 2008 Islannin kolme suurta pankkia kaatuivat muutamassa päivässä, ja koko maan talous romahti — suhteessa väkilukuun suurin pankkikriisi minkään maan historiassa. Ihmiset alkoivat kokoontua joka lauantai Alþingin eteen, ja tammikuussa 2009 mielenosoitus kasvoi tuhansiin: ihmiset toivat mukanaan kattiloita, pannuja ja kauhoja ja hakkasivat niitä yhdessä niin kovaa, että parlamentin istuntoa oli vaikea jatkaa. Meteli sai lempinimen kattilakumous. Hallitus erosi parin viikon sisällä, ja myöhemmin lähes kolmekymmentä pankkiireja ja johtajia tuomittiin vankilaan — Islanti on ainoa maa, joka vangitsi näin monta oman kriisinsä syyllistä.
+- [Islanti — maalehti / Historia: Sota jota käytiin verkonleikkureilla, ei ammuksilla] 1958–1976 — Kun Islanti laajensi kalastusrajaansa 1958, 1972 ja 1975 aina kauemmas rannikolta, Britannian troolarit eivät suostuneet väistymään — eikä Britannian laivasto liioin. Kolmessa niin sanotussa turskasodassa Islannin rannikkovartioston pienet alukset, kuten Óðinn, ajoivat troolareiden perässä ja leikkasivat niiden verkkoketjut irti erityisillä leikkureilla; brittilaivat puolestaan yrittivät väistellä ja jopa törmäillä vastaan. Ainuttakaan ammusta ei ammuttu vihaisessa mielessä, mutta aluksia vaurioitui kymmeniä. Lopulta Islanti voitti: vuonna 1976 Britannia hyväksyi 200 meripeninkulman rajan, ja se levisi pian koko maailmaan.
+AIEMPI KYSYMYS: Miten viikinkien pitkälaivat navigoivat ilman kompassia?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on lintujen aluetta. Viikingit seurasivat rannikon maamerkkejä, Auringon ja tähtien asentoa sekä merenkulun kokemusta, kuten tuulen ja aallokon suuntaa. [[Saagojen]] mukaan he käyttivät apunaan myös lintuja: [[Islannin]] löytäjänä tunnetun Flókin kerrotaan vapauttaneen korppeja, ja linnun lentosuunta paljasti maan suunnan. Kuinka tarkasti tämä pitää paikkansa, on historiantutkijoiden keskuudessa avoin kysymys. Linnut osaavat asiansa, sanon minä.
+KYSYMYS: Kerro lisää: Islannin
+
+### 205
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Borgundin sauvakirkko (kulttuuri)
+Tietoruudun teksti: Borgundin sauvakirkko Lærdalissa rakennettiin noin vuosina 1180–1250, ja se toimi Borgundin kylän seurakuntakirkkona lähes 700 vuotta. Vuonna 1868 sen kirkolliset tehtävät siirrettiin viereen rakennettuun uuteen Borgundin kirkkoon, ja vanha sauvakirkko muutettiin museoksi. Se on ainoa Norjan sauvakirkoista, jonka yhteydessä on säilynyt erillinen sauvarakenteinen kellotapuli. Räystäillä kohoaa neljä veistettyä lohikäärmeenpäätä, joiden on arveltu karkottavan pahoja henkiä. Muinaismuistoyhdistys osti kirkon vuonna 1877, ja arkkitehti Christian Christie johti 1870-luvun alun kunnostuksen, jossa myöhemmät lisäykset poistettiin kirkon palauttamiseksi lähemmäs keskiaikaista asuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Kirkko, joka seisoo tolppien varassa] 1180 — Sauvakirkko on rakennettu pystytolppien varaan, ja seinälaudat seisovat pystyssä maata koskematta — siksi puu ei lahoa. Borgundin kirkko valmistui noin vuonna 1180 ja on säilynyt lähes muuttumattomana. Keskiajalla kirkkoja oli yli tuhat, mutta nyt niitä on jäljellä 28. Katonharjoilla kaartuu lohikäärmeenpäitä samaan tapaan kuin viikinkilaivojen keulassa: kristillinen kirkko sai koristeekseen vanhemman uskon hahmot. Puu on suojattu tervaamalla, ja siitä tulee sen musta väri.
+AIEMPI KYSYMYS: Miksi Borgundin sauvakirkon räystäillä on lohikäärmeenpäitä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Borgundin sauvakirkon räystäillä on neljä veistettyä lohikäärmeenpäätä, joiden on arveltu karkottavan pahoja henkiä. Ne muistuttavat samalla [[viikinkilaivojen]] keulakoristeita: kristillinen kirkko sai koristeekseen vanhemman uskon hahmot. Kirkko sijaitsee [[Lærdalissa]] ja rakennettiin noin vuosina 1180–1250.
+
+Minun sukuni kyyhkyt ovat aina pitäneet kattoharjoja hyvinä levähdyspaikkoina, mutta lohikäärmeen päälle en laskeutuisi. Varmuuden vuoksi.
+KYSYMYS: Kerro lisää: viikinkilaivojen
+
+### 206
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Borgundin sauvakirkko (kulttuuri)
+Tietoruudun teksti: Borgundin sauvakirkko Lærdalissa rakennettiin noin vuosina 1180–1250, ja se toimi Borgundin kylän seurakuntakirkkona lähes 700 vuotta. Vuonna 1868 sen kirkolliset tehtävät siirrettiin viereen rakennettuun uuteen Borgundin kirkkoon, ja vanha sauvakirkko muutettiin museoksi. Se on ainoa Norjan sauvakirkoista, jonka yhteydessä on säilynyt erillinen sauvarakenteinen kellotapuli. Räystäillä kohoaa neljä veistettyä lohikäärmeenpäätä, joiden on arveltu karkottavan pahoja henkiä. Muinaismuistoyhdistys osti kirkon vuonna 1877, ja arkkitehti Christian Christie johti 1870-luvun alun kunnostuksen, jossa myöhemmät lisäykset poistettiin kirkon palauttamiseksi lähemmäs keskiaikaista asuaan.
+AIEMPI KYSYMYS: Miksi Borgundin sauvakirkon räystäillä on lohikäärmeenpäitä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Borgundin sauvakirkon räystäillä on neljä veistettyä lohikäärmeenpäätä, joiden on arveltu karkottavan pahoja henkiä. Ne muistuttavat samalla [[viikinkilaivojen]] keulakoristeita: kristillinen kirkko sai koristeekseen vanhemman uskon hahmot. Kirkko sijaitsee [[Lærdalissa]] ja rakennettiin noin vuosina 1180–1250.
+
+Minun sukuni kyyhkyt ovat aina pitäneet kattoharjoja hyvinä levähdyspaikkoina, mutta lohikäärmeen päälle en laskeutuisi. Varmuuden vuoksi.
+KYSYMYS: Kerro lisää: Lærdalissa
+
+### 207
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Borgundin sauvakirkko (kulttuuri)
+Tietoruudun teksti: Borgundin sauvakirkko Lærdalissa rakennettiin noin vuosina 1180–1250, ja se toimi Borgundin kylän seurakuntakirkkona lähes 700 vuotta. Vuonna 1868 sen kirkolliset tehtävät siirrettiin viereen rakennettuun uuteen Borgundin kirkkoon, ja vanha sauvakirkko muutettiin museoksi. Se on ainoa Norjan sauvakirkoista, jonka yhteydessä on säilynyt erillinen sauvarakenteinen kellotapuli. Räystäillä kohoaa neljä veistettyä lohikäärmeenpäätä, joiden on arveltu karkottavan pahoja henkiä. Muinaismuistoyhdistys osti kirkon vuonna 1877, ja arkkitehti Christian Christie johti 1870-luvun alun kunnostuksen, jossa myöhemmät lisäykset poistettiin kirkon palauttamiseksi lähemmäs keskiaikaista asuaan.
+AIEMPI KYSYMYS: Mitä kirkolle tapahtui vuonna 1868, ja miksi se silti säilyi purkamatta?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on onnellinen tarina. Vuonna 1868 Borgundin kylän seurakunnan käyttöön valmistui viereen uusi kirkko, ja vanhan sauvakirkon kirkolliset tehtävät siirrettiin sinne, jolloin vanha kirkko muutettiin museoksi. Se säilyi, koska [[Muinaismuistoyhdistys]] osti kirkon vuonna 1877, ja arkkitehti [[Christian Christie]] johti 1870-luvun alun kunnostuksen, jossa myöhemmät lisäykset poistettiin ja kirkko palautettiin lähemmäs keskiaikaista asuaan. Keskiajalla sauvakirkkoja oli yli tuhat, mutta nykyään niitä on jäljellä alle kolmekymmentä. Hyvä, ettei kukaan purkanut: tuolla katolla on lintujen hyvä istua.
+KYSYMYS: Kerro lisää: Muinaismuistoyhdistys
+
+### 208
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Borgundin sauvakirkko (kulttuuri)
+Tietoruudun teksti: Borgundin sauvakirkko Lærdalissa rakennettiin noin vuosina 1180–1250, ja se toimi Borgundin kylän seurakuntakirkkona lähes 700 vuotta. Vuonna 1868 sen kirkolliset tehtävät siirrettiin viereen rakennettuun uuteen Borgundin kirkkoon, ja vanha sauvakirkko muutettiin museoksi. Se on ainoa Norjan sauvakirkoista, jonka yhteydessä on säilynyt erillinen sauvarakenteinen kellotapuli. Räystäillä kohoaa neljä veistettyä lohikäärmeenpäätä, joiden on arveltu karkottavan pahoja henkiä. Muinaismuistoyhdistys osti kirkon vuonna 1877, ja arkkitehti Christian Christie johti 1870-luvun alun kunnostuksen, jossa myöhemmät lisäykset poistettiin kirkon palauttamiseksi lähemmäs keskiaikaista asuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Yliopistomuseo] 1825 Museon perusti 1825 Wilhelm Frimann Koren Christie, joka oli tuolloin suurkäräjien puhemies. Tarkoitus oli kerätä suuret kulttuuri- ja luonnonhistorian kokoelmat, ja museosta tuli koko kaupungin tieteellisen työn perusta. Talo oli Norjan ensimmäinen varta vasten museoksi rakennettu rakennus. Alkuvuosina kokoelmiin kuului myös taidetta, muun muassa useita Johan Christian Dahlin maalauksia, sekä kulttuuriesineitä ja käsityötä. Vuonna 1831 museo muutti Seminarium Fredericianumin talosta katedraalikoulun läheltä uuteen rakennukseen Lille Lungegårdsvannetin lounaispuolelle. Nykyisen luonnonhistoriallisen talon suunnitteli Johan Henrik Nebelong, se valmistui 1865, ja museo muutti sinne 1866.…
+- [Bergen — kaupunkilehti / Historia: Tykinkuula seinässä, vaalihuone kirkossa] Tuomiokirkon ulkoseinässä on yhä kiinni tykinkuula vuoden 1665 Vågenin taistelusta, jossa englantilainen ja hollantilainen laivasto ottivat yhteen kaupungin satamassa. Vuonna 1814 kirkko toimi vaalikirkkona: yli kolmensadan muun seurakuntakirkon tavoin se oli äänestyspaikka, kun valittiin valitsijamiehet Eidsvollin kansalliskokoukseen, joka kirjoitti Norjan perustuslain. Ne olivat maan ensimmäiset kansalliset vaalit. 1880-luvulla arkkitehdit Christian Christie ja Peter Andreas Blix johtivat korjausta, jossa rokokoosisustus palautettiin keskiaikaiseen asuun.
+AIEMPI KYSYMYS: Mitä kirkolle tapahtui vuonna 1868, ja miksi se silti säilyi purkamatta?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on onnellinen tarina. Vuonna 1868 Borgundin kylän seurakunnan käyttöön valmistui viereen uusi kirkko, ja vanhan sauvakirkon kirkolliset tehtävät siirrettiin sinne, jolloin vanha kirkko muutettiin museoksi. Se säilyi, koska [[Muinaismuistoyhdistys]] osti kirkon vuonna 1877, ja arkkitehti [[Christian Christie]] johti 1870-luvun alun kunnostuksen, jossa myöhemmät lisäykset poistettiin ja kirkko palautettiin lähemmäs keskiaikaista asuaan. Keskiajalla sauvakirkkoja oli yli tuhat, mutta nykyään niitä on jäljellä alle kolmekymmentä. Hyvä, ettei kukaan purkanut: tuolla katolla on lintujen hyvä istua.
+KYSYMYS: Kerro lisää: Christian Christie
+
+### 209
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Borgundin sauvakirkko (kulttuuri)
+Tietoruudun teksti: Borgundin sauvakirkko Lærdalissa rakennettiin noin vuosina 1180–1250, ja se toimi Borgundin kylän seurakuntakirkkona lähes 700 vuotta. Vuonna 1868 sen kirkolliset tehtävät siirrettiin viereen rakennettuun uuteen Borgundin kirkkoon, ja vanha sauvakirkko muutettiin museoksi. Se on ainoa Norjan sauvakirkoista, jonka yhteydessä on säilynyt erillinen sauvarakenteinen kellotapuli. Räystäillä kohoaa neljä veistettyä lohikäärmeenpäätä, joiden on arveltu karkottavan pahoja henkiä. Muinaismuistoyhdistys osti kirkon vuonna 1877, ja arkkitehti Christian Christie johti 1870-luvun alun kunnostuksen, jossa myöhemmät lisäykset poistettiin kirkon palauttamiseksi lähemmäs keskiaikaista asuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kazakstan — maalehti / Musiikki: Kaksi kieltä ja tarina, joka kerrotaan ensin] Dombra on kaksikielinen pitkäkaulainen luuttu ja Kazakstanin kansallissoitin. Kaikukoppa veistetään männystä, kuusesta tai aprikoosipuusta, ja nauhat sidottiin ennen jänteestä, nyt siimasta. Lännessä soitetaan tökpe-tekniikalla, jossa molemmat kielet soivat yhtä aikaa nopeina alas-ylös-vetoina; idässä ja keskimaassa käytetään šertpeä, jossa kielet näppäillään erikseen sormenpäillä. Lauluun riittää kahdeksan nauhaa, küy-ohjelmistoon tarvitaan jopa 24. Unesco otti küyn luetteloonsa 2014, ja heinäkuun ensimmäinen sunnuntai on dombrapäivä.
+AIEMPI KYSYMYS: Miksi sauvakirkot on tervattu mustiksi?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tämä on kaunis kysymys. Sauvakirkon puu suojataan tervaamalla, ja siitä tulee sen musta väri. Terva torjuu kosteutta ja hidastaa puun lahoamista, ja perinteinen terva valmistetaan [[männystä]]. Lisäksi sauvakirkon seinälaudat seisovat pystyssä maata koskematta, mikä suojaa puuta kosteudelta entisestään. Pinnan tervaus on tehty [[tervalla]] vuosisatojen ajan. Tervan tuoksu ei ole pullan veroinen, mutta kirkko kiittää.
+KYSYMYS: Kerro lisää: männystä
+
+### 210
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Borgundin sauvakirkko (kulttuuri)
+Tietoruudun teksti: Borgundin sauvakirkko Lærdalissa rakennettiin noin vuosina 1180–1250, ja se toimi Borgundin kylän seurakuntakirkkona lähes 700 vuotta. Vuonna 1868 sen kirkolliset tehtävät siirrettiin viereen rakennettuun uuteen Borgundin kirkkoon, ja vanha sauvakirkko muutettiin museoksi. Se on ainoa Norjan sauvakirkoista, jonka yhteydessä on säilynyt erillinen sauvarakenteinen kellotapuli. Räystäillä kohoaa neljä veistettyä lohikäärmeenpäätä, joiden on arveltu karkottavan pahoja henkiä. Muinaismuistoyhdistys osti kirkon vuonna 1877, ja arkkitehti Christian Christie johti 1870-luvun alun kunnostuksen, jossa myöhemmät lisäykset poistettiin kirkon palauttamiseksi lähemmäs keskiaikaista asuaan.
+AIEMPI KYSYMYS: Miksi sauvakirkot on tervattu mustiksi?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tämä on kaunis kysymys. Sauvakirkon puu suojataan tervaamalla, ja siitä tulee sen musta väri. Terva torjuu kosteutta ja hidastaa puun lahoamista, ja perinteinen terva valmistetaan [[männystä]]. Lisäksi sauvakirkon seinälaudat seisovat pystyssä maata koskematta, mikä suojaa puuta kosteudelta entisestään. Pinnan tervaus on tehty [[tervalla]] vuosisatojen ajan. Tervan tuoksu ei ole pullan veroinen, mutta kirkko kiittää.
+KYSYMYS: Kerro lisää: tervalla
+
+### 211
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Borgundin sauvakirkko (kulttuuri)
+Tietoruudun teksti: Borgundin sauvakirkko Lærdalissa rakennettiin noin vuosina 1180–1250, ja se toimi Borgundin kylän seurakuntakirkkona lähes 700 vuotta. Vuonna 1868 sen kirkolliset tehtävät siirrettiin viereen rakennettuun uuteen Borgundin kirkkoon, ja vanha sauvakirkko muutettiin museoksi. Se on ainoa Norjan sauvakirkoista, jonka yhteydessä on säilynyt erillinen sauvarakenteinen kellotapuli. Räystäillä kohoaa neljä veistettyä lohikäärmeenpäätä, joiden on arveltu karkottavan pahoja henkiä. Muinaismuistoyhdistys osti kirkon vuonna 1877, ja arkkitehti Christian Christie johti 1870-luvun alun kunnostuksen, jossa myöhemmät lisäykset poistettiin kirkon palauttamiseksi lähemmäs keskiaikaista asuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Kirkko, joka seisoo tolppien varassa] 1180 — Sauvakirkko on rakennettu pystytolppien varaan, ja seinälaudat seisovat pystyssä maata koskematta — siksi puu ei lahoa. Borgundin kirkko valmistui noin vuonna 1180 ja on säilynyt lähes muuttumattomana. Keskiajalla kirkkoja oli yli tuhat, mutta nyt niitä on jäljellä 28. Katonharjoilla kaartuu lohikäärmeenpäitä samaan tapaan kuin viikinkilaivojen keulassa: kristillinen kirkko sai koristeekseen vanhemman uskon hahmot. Puu on suojattu tervaamalla, ja siitä tulee sen musta väri.
+AIEMPI KYSYMYS: Miten sauvakirkon rakenne eroaa tavallisesta hirsikirkosta?
+AIEMPI VASTAUS (Livia):
+Ai tota. Sauvakirkko on rakennettu [[pystytolppien]] varaan, ja sen seinälaudat seisovat pystyssä, kun taas hirsikirkon seinät muodostuvat vaakasuoraan päällekkäin asetetuista hirsistä. Pystyrakenne kantaa kirkon painon, ja seinät ovat enemmän kuoria kuin kantavia rakenteita. Borgundin kirkon vieressä on yhä erillinen sauvarakenteinen [[kellotapuli]], jolla on oma rakenteensa. Lintu rakentaa pesän oksista, mutta tämä on kyllä eri sarjaa.
+KYSYMYS: Kerro lisää: pystytolppien
+
+### 212
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Borgundin sauvakirkko (kulttuuri)
+Tietoruudun teksti: Borgundin sauvakirkko Lærdalissa rakennettiin noin vuosina 1180–1250, ja se toimi Borgundin kylän seurakuntakirkkona lähes 700 vuotta. Vuonna 1868 sen kirkolliset tehtävät siirrettiin viereen rakennettuun uuteen Borgundin kirkkoon, ja vanha sauvakirkko muutettiin museoksi. Se on ainoa Norjan sauvakirkoista, jonka yhteydessä on säilynyt erillinen sauvarakenteinen kellotapuli. Räystäillä kohoaa neljä veistettyä lohikäärmeenpäätä, joiden on arveltu karkottavan pahoja henkiä. Muinaismuistoyhdistys osti kirkon vuonna 1877, ja arkkitehti Christian Christie johti 1870-luvun alun kunnostuksen, jossa myöhemmät lisäykset poistettiin kirkon palauttamiseksi lähemmäs keskiaikaista asuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+- [Pariisi — kohdekartta / Kohdekartta: Bastilji 1789] Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvottelut kestäv…
+AIEMPI KYSYMYS: Miten sauvakirkon rakenne eroaa tavallisesta hirsikirkosta?
+AIEMPI VASTAUS (Livia):
+Ai tota. Sauvakirkko on rakennettu [[pystytolppien]] varaan, ja sen seinälaudat seisovat pystyssä, kun taas hirsikirkon seinät muodostuvat vaakasuoraan päällekkäin asetetuista hirsistä. Pystyrakenne kantaa kirkon painon, ja seinät ovat enemmän kuoria kuin kantavia rakenteita. Borgundin kirkon vieressä on yhä erillinen sauvarakenteinen [[kellotapuli]], jolla on oma rakenteensa. Lintu rakentaa pesän oksista, mutta tämä on kyllä eri sarjaa.
+KYSYMYS: Kerro lisää: kellotapuli
+
+### 213
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Borgundin sauvakirkko (kulttuuri)
+Tietoruudun teksti: Borgundin sauvakirkko Lærdalissa rakennettiin noin vuosina 1180–1250, ja se toimi Borgundin kylän seurakuntakirkkona lähes 700 vuotta. Vuonna 1868 sen kirkolliset tehtävät siirrettiin viereen rakennettuun uuteen Borgundin kirkkoon, ja vanha sauvakirkko muutettiin museoksi. Se on ainoa Norjan sauvakirkoista, jonka yhteydessä on säilynyt erillinen sauvarakenteinen kellotapuli. Räystäillä kohoaa neljä veistettyä lohikäärmeenpäätä, joiden on arveltu karkottavan pahoja henkiä. Muinaismuistoyhdistys osti kirkon vuonna 1877, ja arkkitehti Christian Christie johti 1870-luvun alun kunnostuksen, jossa myöhemmät lisäykset poistettiin kirkon palauttamiseksi lähemmäs keskiaikaista asuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Samarkand — kohdekartta / Kohdekartta: Khoja Doniyorin mausoleumi] 1900-luvun alku Mausoleumi on Afrasiyabin kummun itälaidalla Siyob-puron varressa, ja se on Samarkandin tunnetuimpia pyhiä paikkoja. Rakennus on suorakaiteen muotoinen, noin viisitoista metriä pitkä sali, jonka katolla on viisi kupolia. Se on 1900-luvun alusta, mutta paikka on vanha: Abu Tahirhojan teoksen "Samaria" mukaan Khoja Doniyor oli Qutham ibn Abbasin seuralaisia, ja perimätiedon mukaan Timur rakennutti haudan päälle moskeijan. Paikan erikoisuus on se, että kolmen uskonnon — islamin, kristinuskon ja juutalaisuuden — perinteissä esiintyy sama nimi: Doniyor, Daniil, Daniel. Siksi mausoleumilla käy kaikkien kolmen perinteen edustajia. Hautakammion vieressä on lähde, jota pidetään siuna…
+- [Port Vila — kohdekartta / Kohdekartta: Pyhän sydämen katedraali] nykyaika Cathédrale du Sacré-Cœur on Port Vilan moderni katolinen katedraali ja Port Vilan hiippakunnan istuin. Nimi on ranskaksi, kuten monet muutkin kaupungin nimet: ranska on englannin ja bislaman ohella yksi Vanuatun virallisista kielistä. Kristinusko on Vanuatun valtauskonto, ja siihen kuuluu yli yhdeksänkymmentä prosenttia väestöstä. Suurin kirkkokunta on Vanuatun presbyteerikirkko, johon kuuluu kolmasosa väestöstä; katolinen kirkko ja Melanesian kirkko ovat kumpikin noin viidentoista prosentin kokoisia. Kirkkokuntien jako kertoo saarten lähetyshistoriasta: lähetyssaarnaajia alkoi saapua Uusille Hebrideille 1839, ja presbyteerit menestyivät erityisesti eteläisillä saarilla. Ni-vanuatu…
+AIEMPI KYSYMYS: Miksi keskiajalla rakennettiin Norjaan paljon puukirkkoja?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Norjassa oli runsaasti metsää, ja puu oli helppo ja edullinen rakennusmateriaali, kun taas kivirakentaminen vaati enemmän työvoimaa ja taitoa. [[Kristinuskon]] levitessä maahan keskiajalla tarvittiin paljon seurakuntakirkkoja, ja puusta rakennettiin paljon: keskiajalla sauvakirkkoja oli yli tuhat. Kivikirkot jäivät pääosin harvempien paikkojen erityiskohteiksi. [[Keskiajalla]] rakennetuista kirkoista on säilynyt vain murto-osa, ja Borgundin kirkko kuuluu niihin. Metsää riitti, ja minulle riittää pesäpaikkoja.
+KYSYMYS: Kerro lisää: Kristinuskon
+
+### 214
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Borgundin sauvakirkko (kulttuuri)
+Tietoruudun teksti: Borgundin sauvakirkko Lærdalissa rakennettiin noin vuosina 1180–1250, ja se toimi Borgundin kylän seurakuntakirkkona lähes 700 vuotta. Vuonna 1868 sen kirkolliset tehtävät siirrettiin viereen rakennettuun uuteen Borgundin kirkkoon, ja vanha sauvakirkko muutettiin museoksi. Se on ainoa Norjan sauvakirkoista, jonka yhteydessä on säilynyt erillinen sauvarakenteinen kellotapuli. Räystäillä kohoaa neljä veistettyä lohikäärmeenpäätä, joiden on arveltu karkottavan pahoja henkiä. Muinaismuistoyhdistys osti kirkon vuonna 1877, ja arkkitehti Christian Christie johti 1870-luvun alun kunnostuksen, jossa myöhemmät lisäykset poistettiin kirkon palauttamiseksi lähemmäs keskiaikaista asuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historia: Kirkko, joka seisoo tolppien varassa] 1180 — Sauvakirkko on rakennettu pystytolppien varaan, ja seinälaudat seisovat pystyssä maata koskematta — siksi puu ei lahoa. Borgundin kirkko valmistui noin vuonna 1180 ja on säilynyt lähes muuttumattomana. Keskiajalla kirkkoja oli yli tuhat, mutta nyt niitä on jäljellä 28. Katonharjoilla kaartuu lohikäärmeenpäitä samaan tapaan kuin viikinkilaivojen keulassa: kristillinen kirkko sai koristeekseen vanhemman uskon hahmot. Puu on suojattu tervaamalla, ja siitä tulee sen musta väri.
+AIEMPI KYSYMYS: Miksi keskiajalla rakennettiin Norjaan paljon puukirkkoja?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Norjassa oli runsaasti metsää, ja puu oli helppo ja edullinen rakennusmateriaali, kun taas kivirakentaminen vaati enemmän työvoimaa ja taitoa. [[Kristinuskon]] levitessä maahan keskiajalla tarvittiin paljon seurakuntakirkkoja, ja puusta rakennettiin paljon: keskiajalla sauvakirkkoja oli yli tuhat. Kivikirkot jäivät pääosin harvempien paikkojen erityiskohteiksi. [[Keskiajalla]] rakennetuista kirkoista on säilynyt vain murto-osa, ja Borgundin kirkko kuuluu niihin. Metsää riitti, ja minulle riittää pesäpaikkoja.
+KYSYMYS: Kerro lisää: Keskiajalla
+
+### 215
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klippfisk (ruoka)
+Tietoruudun teksti: Klippfisk eli suomeksi kalliokala on suolattua ja kuivattua turskaa, jota on Norjassa valmistettu satoja vuosia erityisesti Kristiansundissa. Perinteisesti kala levitettiin kuivumaan ulkoilmaan paljaille kallioille ja rannikon kiville, mistä nimi klippfisk juontuu; nykyään kuivaus tapahtuu enimmäkseen sähkölämmittimillä sisätiloissa, mutta Länsi- ja Pohjois-Norjassa kalaa kuivataan yhä ulkona vientiin Etelä-Eurooppaan. Suolaaminen yleistyi 1600-luvulla, kun halpaa suolaa alkoi tulla saataville Etelä-Euroopasta, ja tuotteesta tuli perusruokaa katolisten maiden paastopäivinä. Norjassa kalaa kutsuttiin aluksi terranova-kalaksi Newfoundlandin mukaan, ennen kuin nimi klippfisk vakiintui kuvaamaan kallioilla kuivattua kalaa. Kristiansundista kehittyi Norjan tärkein klippfisk-kaupunki, jonka satamassa on ollut purjelaivoja lastaamassa kalaa vientiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mandalay — kaupunkilehti / Historia: Kuningas joka lähetti oppilaita Eurooppaan] Mindon Min hallitsi 18. helmikuuta 1853 alkaen kuolemaansa 1. lokakuuta 1878. Hän nousi valtaan velipuolensa Pagan Minin tilalle yhdessä nuoremman veljensä Kanaungin kanssa ja käytti hallituskautensa yrittäen yhtä aikaa puolustaa Ylä-Burmaa ja nykyaikaistaa sitä. Oppineita lähetettiin Ranskaan, Italiaan, Yhdysvaltoihin ja Britanniaan katsomaan teollistumista. Virkamiehille säädettiin palkka, oikeudenkäyntimaksut kiinnitettiin, verotus uudistettiin ja tullimuureja purettiin, ja palatsin rahapaja löi valtakunnan omaa hopearahaa. Kanaung kävi tehtailla varhain talviaamuina huopa harteillaan kyselemässä koneenkäyttäjiltä, miten laitteet toimivat.
+AIEMPI KYSYMYS: Mistä nimi klippfisk juontuu, ja miten se liittyy kalan kuivaustapaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimi viittaa kallioihin, sillä perinteisesti suolattu turska levitettiin kuivumaan ulkoilmaan rannikon paljaille kallioille ja kiville. Suomeksi tuote on siksi kalliokala. Nykyään kuivaus tehdään enimmäkseen sisätiloissa sähkölämmittimillä, mutta Länsi- ja Pohjois-Norjassa kalaa kuivataan yhä ulkona vientiin [[Etelä-Eurooppaan]]. Ennen kuin nimi klippfisk vakiintui, Norjassa kalaa kutsuttiin terranova-kalaksi Newfoundlandin mukaan. Tärkein valmistuskaupunki on ollut [[Kristiansund]], jonka satamasta [[purjelaivat]] ovat kuljettaneet kalaa maailmalle. Kalliolla kuivuva kala on kyl lintujenkin mielestä kiinnostava näky.
+KYSYMYS: Kerro lisää: Etelä-Eurooppaan
+
+### 216
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klippfisk (ruoka)
+Tietoruudun teksti: Klippfisk eli suomeksi kalliokala on suolattua ja kuivattua turskaa, jota on Norjassa valmistettu satoja vuosia erityisesti Kristiansundissa. Perinteisesti kala levitettiin kuivumaan ulkoilmaan paljaille kallioille ja rannikon kiville, mistä nimi klippfisk juontuu; nykyään kuivaus tapahtuu enimmäkseen sähkölämmittimillä sisätiloissa, mutta Länsi- ja Pohjois-Norjassa kalaa kuivataan yhä ulkona vientiin Etelä-Eurooppaan. Suolaaminen yleistyi 1600-luvulla, kun halpaa suolaa alkoi tulla saataville Etelä-Euroopasta, ja tuotteesta tuli perusruokaa katolisten maiden paastopäivinä. Norjassa kalaa kutsuttiin aluksi terranova-kalaksi Newfoundlandin mukaan, ennen kuin nimi klippfisk vakiintui kuvaamaan kallioilla kuivattua kalaa. Kristiansundista kehittyi Norjan tärkein klippfisk-kaupunki, jonka satamassa on ollut purjelaivoja lastaamassa kalaa vientiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Mistä nimi klippfisk juontuu, ja miten se liittyy kalan kuivaustapaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimi viittaa kallioihin, sillä perinteisesti suolattu turska levitettiin kuivumaan ulkoilmaan rannikon paljaille kallioille ja kiville. Suomeksi tuote on siksi kalliokala. Nykyään kuivaus tehdään enimmäkseen sisätiloissa sähkölämmittimillä, mutta Länsi- ja Pohjois-Norjassa kalaa kuivataan yhä ulkona vientiin [[Etelä-Eurooppaan]]. Ennen kuin nimi klippfisk vakiintui, Norjassa kalaa kutsuttiin terranova-kalaksi Newfoundlandin mukaan. Tärkein valmistuskaupunki on ollut [[Kristiansund]], jonka satamasta [[purjelaivat]] ovat kuljettaneet kalaa maailmalle. Kalliolla kuivuva kala on kyl lintujenkin mielestä kiinnostava näky.
+KYSYMYS: Kerro lisää: Kristiansund
+
+### 217
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klippfisk (ruoka)
+Tietoruudun teksti: Klippfisk eli suomeksi kalliokala on suolattua ja kuivattua turskaa, jota on Norjassa valmistettu satoja vuosia erityisesti Kristiansundissa. Perinteisesti kala levitettiin kuivumaan ulkoilmaan paljaille kallioille ja rannikon kiville, mistä nimi klippfisk juontuu; nykyään kuivaus tapahtuu enimmäkseen sähkölämmittimillä sisätiloissa, mutta Länsi- ja Pohjois-Norjassa kalaa kuivataan yhä ulkona vientiin Etelä-Eurooppaan. Suolaaminen yleistyi 1600-luvulla, kun halpaa suolaa alkoi tulla saataville Etelä-Euroopasta, ja tuotteesta tuli perusruokaa katolisten maiden paastopäivinä. Norjassa kalaa kutsuttiin aluksi terranova-kalaksi Newfoundlandin mukaan, ennen kuin nimi klippfisk vakiintui kuvaamaan kallioilla kuivattua kalaa. Kristiansundista kehittyi Norjan tärkein klippfisk-kaupunki, jonka satamassa on ollut purjelaivoja lastaamassa kalaa vientiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+- [Kööpenhamina — kohdekartta / Kohdekartta: Nyhavn] 1670–1675 Nyhavn eli "uusi satama" on 450 metriä pitkä kanava Kööpenhaminan keskustassa. Kuningas Christian V rakennutti sen vuosina 1670–1675, ja työn tekivät tanskalaiset sotilaat sekä Tanskan ja Ruotsin sodassa vangiksi jääneet ruotsalaiset sotavangit. Kanavan piti tuoda laivat suoraan merenlahdelta kaupungin Kongens Nytorv -torille asti. Ennen vanhaan Nyhavn oli meluisa ja vähän vaarallinenkin satamakortteli täynnä merimiehiä ja krouveja - aivan toisenlainen paikka kuin nykyinen värikäs turistikatu. Vanhin talo, numero 9, on peräisin jo vuodelta 1681. Satukirjailija H. C. Andersen asui Nyhavnin varrella eri osoitteissa yhteensä 18 vuoden ajan. 1960-luvulla kanava oli päässyt rappiolle, …
+AIEMPI KYSYMYS: Mistä nimi klippfisk juontuu, ja miten se liittyy kalan kuivaustapaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimi viittaa kallioihin, sillä perinteisesti suolattu turska levitettiin kuivumaan ulkoilmaan rannikon paljaille kallioille ja kiville. Suomeksi tuote on siksi kalliokala. Nykyään kuivaus tehdään enimmäkseen sisätiloissa sähkölämmittimillä, mutta Länsi- ja Pohjois-Norjassa kalaa kuivataan yhä ulkona vientiin [[Etelä-Eurooppaan]]. Ennen kuin nimi klippfisk vakiintui, Norjassa kalaa kutsuttiin terranova-kalaksi Newfoundlandin mukaan. Tärkein valmistuskaupunki on ollut [[Kristiansund]], jonka satamasta [[purjelaivat]] ovat kuljettaneet kalaa maailmalle. Kalliolla kuivuva kala on kyl lintujenkin mielestä kiinnostava näky.
+KYSYMYS: Kerro lisää: purjelaivat
+
+### 218
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klippfisk (ruoka)
+Tietoruudun teksti: Klippfisk eli suomeksi kalliokala on suolattua ja kuivattua turskaa, jota on Norjassa valmistettu satoja vuosia erityisesti Kristiansundissa. Perinteisesti kala levitettiin kuivumaan ulkoilmaan paljaille kallioille ja rannikon kiville, mistä nimi klippfisk juontuu; nykyään kuivaus tapahtuu enimmäkseen sähkölämmittimillä sisätiloissa, mutta Länsi- ja Pohjois-Norjassa kalaa kuivataan yhä ulkona vientiin Etelä-Eurooppaan. Suolaaminen yleistyi 1600-luvulla, kun halpaa suolaa alkoi tulla saataville Etelä-Euroopasta, ja tuotteesta tuli perusruokaa katolisten maiden paastopäivinä. Norjassa kalaa kutsuttiin aluksi terranova-kalaksi Newfoundlandin mukaan, ennen kuin nimi klippfisk vakiintui kuvaamaan kallioilla kuivattua kalaa. Kristiansundista kehittyi Norjan tärkein klippfisk-kaupunki, jonka satamassa on ollut purjelaivoja lastaamassa kalaa vientiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saint Helena — maalehti / Tiede: Opinnot kesken, laiva etelään] 1676–1679 — Edmond Halley jätti Oxfordin kesken vuonna 1676 ja purjehti Saint Helenalle kartoittamaan tähtiä, joita Euroopasta ei näy; kuningas Kaarle II tuki retkeä. Saarelle pystytettiin observatorio, jossa oli 7,3 metriä pitkä ilmateleskooppi ja kaukoputkitähtäimin varustettu sekstantti. Vuoden aikana syntyi ensimmäinen kaukoputkella tehty eteläisen taivaan luettelo: 341 tähteä. Samalla Halley näki Merkuriuksen kulkevan Auringon editse ja tajusi, että Venuksen vastaavasta ylikulusta voisi laskea Maan etäisyyden Auringosta. Oxford ei aikonut myöntää luvatta lähteneelle tutkintoa, mutta kuninkaan kirje ratkaisi asian joulukuussa 1678.
+AIEMPI KYSYMYS: Miksi suolakalasta tuli tärkeä ruoka nimenomaan katolisissa maissa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Syy on paastossa: katolisessa perinteessä lihaa vältettiin paastopäivinä, mutta kala kelpasi ruoaksi, joten kalalle oli jatkuva kysyntä. Suolattu ja kuivattu kala säilyi pitkään ilman jäähdytystä, ja sitä pystyttiin kuljettamaan kauas rannikolta sisämaahan. Suolaaminen yleistyi 1600-luvulla, kun halpaa suolaa alkoi tulla saataville [[Etelä-Euroopasta]], ja siitä tuli perusruokaa [[paastopäivinä]]. Näin [[Norjan]] rannikon kuivattu turska sai pysyvät ostajat katolisista maista. Paasto ei oo kyyhkyn lempiasia, ellei sen päätteeksi tule pullaa.
+KYSYMYS: Kerro lisää: Etelä-Euroopasta
+
+### 219
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klippfisk (ruoka)
+Tietoruudun teksti: Klippfisk eli suomeksi kalliokala on suolattua ja kuivattua turskaa, jota on Norjassa valmistettu satoja vuosia erityisesti Kristiansundissa. Perinteisesti kala levitettiin kuivumaan ulkoilmaan paljaille kallioille ja rannikon kiville, mistä nimi klippfisk juontuu; nykyään kuivaus tapahtuu enimmäkseen sähkölämmittimillä sisätiloissa, mutta Länsi- ja Pohjois-Norjassa kalaa kuivataan yhä ulkona vientiin Etelä-Eurooppaan. Suolaaminen yleistyi 1600-luvulla, kun halpaa suolaa alkoi tulla saataville Etelä-Euroopasta, ja tuotteesta tuli perusruokaa katolisten maiden paastopäivinä. Norjassa kalaa kutsuttiin aluksi terranova-kalaksi Newfoundlandin mukaan, ennen kuin nimi klippfisk vakiintui kuvaamaan kallioilla kuivattua kalaa. Kristiansundista kehittyi Norjan tärkein klippfisk-kaupunki, jonka satamassa on ollut purjelaivoja lastaamassa kalaa vientiin.
+AIEMPI KYSYMYS: Miksi suolakalasta tuli tärkeä ruoka nimenomaan katolisissa maissa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Syy on paastossa: katolisessa perinteessä lihaa vältettiin paastopäivinä, mutta kala kelpasi ruoaksi, joten kalalle oli jatkuva kysyntä. Suolattu ja kuivattu kala säilyi pitkään ilman jäähdytystä, ja sitä pystyttiin kuljettamaan kauas rannikolta sisämaahan. Suolaaminen yleistyi 1600-luvulla, kun halpaa suolaa alkoi tulla saataville [[Etelä-Euroopasta]], ja siitä tuli perusruokaa [[paastopäivinä]]. Näin [[Norjan]] rannikon kuivattu turska sai pysyvät ostajat katolisista maista. Paasto ei oo kyyhkyn lempiasia, ellei sen päätteeksi tule pullaa.
+KYSYMYS: Kerro lisää: paastopäivinä
+
+### 220
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klippfisk (ruoka)
+Tietoruudun teksti: Klippfisk eli suomeksi kalliokala on suolattua ja kuivattua turskaa, jota on Norjassa valmistettu satoja vuosia erityisesti Kristiansundissa. Perinteisesti kala levitettiin kuivumaan ulkoilmaan paljaille kallioille ja rannikon kiville, mistä nimi klippfisk juontuu; nykyään kuivaus tapahtuu enimmäkseen sähkölämmittimillä sisätiloissa, mutta Länsi- ja Pohjois-Norjassa kalaa kuivataan yhä ulkona vientiin Etelä-Eurooppaan. Suolaaminen yleistyi 1600-luvulla, kun halpaa suolaa alkoi tulla saataville Etelä-Euroopasta, ja tuotteesta tuli perusruokaa katolisten maiden paastopäivinä. Norjassa kalaa kutsuttiin aluksi terranova-kalaksi Newfoundlandin mukaan, ennen kuin nimi klippfisk vakiintui kuvaamaan kallioilla kuivattua kalaa. Kristiansundista kehittyi Norjan tärkein klippfisk-kaupunki, jonka satamassa on ollut purjelaivoja lastaamassa kalaa vientiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Historian hetki: Etelänapa 1911 — viisi miestä ja lipputanko] 14.12.1911 — Telttaan jää kirje. Se on osoitettu Norjan kuninkaalle, ja sen viejäksi pyydetään Robert Scottia — siltä varalta, että Scott saapuu perille mutta viisi norjalaista ei pääse kotiin. Kello on noin kolme iltapäivällä, mittaukset sanovat että tämä on paikka, ja lipputankoon tarttuvat yhdessä Roald Amundsen, Olav Bjaaland, Helmer Hanssen, Sverre Hassel ja Oscar Wisting. Ylätasangon he nimeävät kuningas Haakon VII:n tasangoksi ja teltan Polheimiksi. Seuraavat kolme päivää kuluvat sekstantin ääressä ja hiihtäen navan ympäri ristiin rastiin, jotta paikka olisi todistettavasti oikea: Cookin ja Pearyn riitaiset pohjoisnapaväitteet ovat tuoreessa muistissa. Lipunnosto kestää hetken, ja ko…
+- [Norja — maalehti / Historia: Lipun kannossa oli silakkasalaatti] 1844 — Norjan nykyinen lippu suunniteltiin jo 1821; sen teki suurkäräjien jäsen Fredrik Meltzer, ja hän perusteli punaista, valkoista ja sinistä sillä, että ne merkitsivät silloin vapautta. Sillä lipulla sai kuitenkin purjehtia vain pohjoisilla vesillä: Kapp Finisterren eteläpuolella oli käytettävä unionin yhteistä kauppalippua, koska suoja Pohjois-Afrikan kaappareilta tuli Ruotsin maksamana. Vuonna 1844 molempien maiden lippujen kantoon pantiin yhteinen unionimerkki, joka jakoi värit tasan. Kansa antoi sille nimen sildesalaten, silakkasalaatti. Kauppalipun kannosta merkki katosi vuoden 1899 lopussa.
+AIEMPI KYSYMYS: Miksi suolakalasta tuli tärkeä ruoka nimenomaan katolisissa maissa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Syy on paastossa: katolisessa perinteessä lihaa vältettiin paastopäivinä, mutta kala kelpasi ruoaksi, joten kalalle oli jatkuva kysyntä. Suolattu ja kuivattu kala säilyi pitkään ilman jäähdytystä, ja sitä pystyttiin kuljettamaan kauas rannikolta sisämaahan. Suolaaminen yleistyi 1600-luvulla, kun halpaa suolaa alkoi tulla saataville [[Etelä-Euroopasta]], ja siitä tuli perusruokaa [[paastopäivinä]]. Näin [[Norjan]] rannikon kuivattu turska sai pysyvät ostajat katolisista maista. Paasto ei oo kyyhkyn lempiasia, ellei sen päätteeksi tule pullaa.
+KYSYMYS: Kerro lisää: Norjan
+
+### 221
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klippfisk (ruoka)
+Tietoruudun teksti: Klippfisk eli suomeksi kalliokala on suolattua ja kuivattua turskaa, jota on Norjassa valmistettu satoja vuosia erityisesti Kristiansundissa. Perinteisesti kala levitettiin kuivumaan ulkoilmaan paljaille kallioille ja rannikon kiville, mistä nimi klippfisk juontuu; nykyään kuivaus tapahtuu enimmäkseen sähkölämmittimillä sisätiloissa, mutta Länsi- ja Pohjois-Norjassa kalaa kuivataan yhä ulkona vientiin Etelä-Eurooppaan. Suolaaminen yleistyi 1600-luvulla, kun halpaa suolaa alkoi tulla saataville Etelä-Euroopasta, ja tuotteesta tuli perusruokaa katolisten maiden paastopäivinä. Norjassa kalaa kutsuttiin aluksi terranova-kalaksi Newfoundlandin mukaan, ennen kuin nimi klippfisk vakiintui kuvaamaan kallioilla kuivattua kalaa. Kristiansundista kehittyi Norjan tärkein klippfisk-kaupunki, jonka satamassa on ollut purjelaivoja lastaamassa kalaa vientiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Timbuktu — kaupunkilehti / Timbuktu: Suola tulee pohjoisesta, kolme viikkoa kerrallaan] Timbuktu oli Saharan kauppareitin eteläinen päätepiste, ja siihen koko kaupunki perustui. Vielä 1900-luvun jälkipuoliskolle asti kivisuola tuotiin kuudensadankuudenkymmenenneljän kilometrin päästä pohjoisesta kahdessa vuosittaisessa karavaanissa: toinen lähti marraskuun alussa, toinen maaliskuun lopussa. Karavaanissa oli useita tuhansia kameleja, matka kesti kolme viikkoa suuntaansa, ja paluumatkalla jokainen kameli kantoi neljä tai viisi kolmenkymmenen kilon laattaa. Menomatkalla vietiin ruokaa kaivosmiehille. Nykyään laatat tulevat kuorma-autolla, ja Timbuktusta suola jatkaa veneellä muualle Maliin.
+- [Gao — kaupunkilehti / Songhain kultainen valtakunta: Kulta ja suola kulkivat jokea pitkin] Kulta-suolakauppa oli koko Sahelin talouden selkäranka, ja Songhain valtakunta hallitsi sen tärkeintä solmukohtaa. Pohjoisesta tuotu suola ja etelästä noussut kulta vaihtoivat kuljetusvälinettä Timbuktussa, kun kamelikaravaanit kohtasivat joella kulkevat lastiveneet. Tavarat matkasivat vielä noin 800 kilometrin matkan Nigerjokea pitkin Djennéstä Gaohon ja takaisin, ja jokivarren kaupungit vaurastuivat tästä liikenteestä vuosisatojen ajan. Ilmasta katsottuna joki näyttää kapealta vihreältä nauhalta hiekan keskellä - juuri tämä nauha teki Songhaista mahdollisen keskellä maailman suurinta aavikkoa.
+AIEMPI KYSYMYS: Miksi turska sopii erityisen hyvin kuivattavaksi?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Turska on vähärasvaista valkolihaista kalaa, ja se on kuivattavaksi otollinen juuri siksi. Rasva härskiintyy helposti, joten rasvainen kala säilyy kuivattuna huonommin kuin vähärasvainen. Kuivaus poistaa kalasta veden, jolloin bakteerien on vaikea lisääntyä, ja [[suolaus]] tehostaa säilymistä entisestään. Lisäksi [[Norjan]] rannikon viileä ja tuulinen ilma sopii kuivaukseen hyvin. Lopputuloksena on kova, kevyt tuote, joka kestää pitkiä kuljetuksia ja jonka voi myöhemmin liottaa takaisin pehmeäksi. Kalaa kuivataan, pullaa ei, ja se on kyl vähän epäreilua.
+KYSYMYS: Kerro lisää: suolaus
+
+### 222
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klippfisk (ruoka)
+Tietoruudun teksti: Klippfisk eli suomeksi kalliokala on suolattua ja kuivattua turskaa, jota on Norjassa valmistettu satoja vuosia erityisesti Kristiansundissa. Perinteisesti kala levitettiin kuivumaan ulkoilmaan paljaille kallioille ja rannikon kiville, mistä nimi klippfisk juontuu; nykyään kuivaus tapahtuu enimmäkseen sähkölämmittimillä sisätiloissa, mutta Länsi- ja Pohjois-Norjassa kalaa kuivataan yhä ulkona vientiin Etelä-Eurooppaan. Suolaaminen yleistyi 1600-luvulla, kun halpaa suolaa alkoi tulla saataville Etelä-Euroopasta, ja tuotteesta tuli perusruokaa katolisten maiden paastopäivinä. Norjassa kalaa kutsuttiin aluksi terranova-kalaksi Newfoundlandin mukaan, ennen kuin nimi klippfisk vakiintui kuvaamaan kallioilla kuivattua kalaa. Kristiansundista kehittyi Norjan tärkein klippfisk-kaupunki, jonka satamassa on ollut purjelaivoja lastaamassa kalaa vientiin.
+AIEMPI KYSYMYS: Mihin maihin klippfiskiä viedään nykyään?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä kysymys. Klippfiskiä viedään etenkin Etelä-Euroopan maihin, joissa suolattu ja kuivattu turska on perinteinen ruoka-aine. [[Portugalissa]] suolattua turskaa kutsutaan nimellä [[bacalhau]], ja norjalainen kuivattu kala on sen tärkeä raaka-aine. Samankaltaisia ruokia tunnetaan myös [[Espanjassa]] ja Italiassa. Vienti on vanhaa perua, sillä jo purjelaivat kuljettivat kalaa Kristiansundin satamasta etelään. Pullasta ei tähän kyllä riitä sanottavaa, mut kala on selvästi matkustanut paremmin kuin minä.
+KYSYMYS: Kerro lisää: Portugalissa
+
+### 223
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klippfisk (ruoka)
+Tietoruudun teksti: Klippfisk eli suomeksi kalliokala on suolattua ja kuivattua turskaa, jota on Norjassa valmistettu satoja vuosia erityisesti Kristiansundissa. Perinteisesti kala levitettiin kuivumaan ulkoilmaan paljaille kallioille ja rannikon kiville, mistä nimi klippfisk juontuu; nykyään kuivaus tapahtuu enimmäkseen sähkölämmittimillä sisätiloissa, mutta Länsi- ja Pohjois-Norjassa kalaa kuivataan yhä ulkona vientiin Etelä-Eurooppaan. Suolaaminen yleistyi 1600-luvulla, kun halpaa suolaa alkoi tulla saataville Etelä-Euroopasta, ja tuotteesta tuli perusruokaa katolisten maiden paastopäivinä. Norjassa kalaa kutsuttiin aluksi terranova-kalaksi Newfoundlandin mukaan, ennen kuin nimi klippfisk vakiintui kuvaamaan kallioilla kuivattua kalaa. Kristiansundista kehittyi Norjan tärkein klippfisk-kaupunki, jonka satamassa on ollut purjelaivoja lastaamassa kalaa vientiin.
+AIEMPI KYSYMYS: Mihin maihin klippfiskiä viedään nykyään?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä kysymys. Klippfiskiä viedään etenkin Etelä-Euroopan maihin, joissa suolattu ja kuivattu turska on perinteinen ruoka-aine. [[Portugalissa]] suolattua turskaa kutsutaan nimellä [[bacalhau]], ja norjalainen kuivattu kala on sen tärkeä raaka-aine. Samankaltaisia ruokia tunnetaan myös [[Espanjassa]] ja Italiassa. Vienti on vanhaa perua, sillä jo purjelaivat kuljettivat kalaa Kristiansundin satamasta etelään. Pullasta ei tähän kyllä riitä sanottavaa, mut kala on selvästi matkustanut paremmin kuin minä.
+KYSYMYS: Kerro lisää: bacalhau
+
+### 224
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klippfisk (ruoka)
+Tietoruudun teksti: Klippfisk eli suomeksi kalliokala on suolattua ja kuivattua turskaa, jota on Norjassa valmistettu satoja vuosia erityisesti Kristiansundissa. Perinteisesti kala levitettiin kuivumaan ulkoilmaan paljaille kallioille ja rannikon kiville, mistä nimi klippfisk juontuu; nykyään kuivaus tapahtuu enimmäkseen sähkölämmittimillä sisätiloissa, mutta Länsi- ja Pohjois-Norjassa kalaa kuivataan yhä ulkona vientiin Etelä-Eurooppaan. Suolaaminen yleistyi 1600-luvulla, kun halpaa suolaa alkoi tulla saataville Etelä-Euroopasta, ja tuotteesta tuli perusruokaa katolisten maiden paastopäivinä. Norjassa kalaa kutsuttiin aluksi terranova-kalaksi Newfoundlandin mukaan, ennen kuin nimi klippfisk vakiintui kuvaamaan kallioilla kuivattua kalaa. Kristiansundista kehittyi Norjan tärkein klippfisk-kaupunki, jonka satamassa on ollut purjelaivoja lastaamassa kalaa vientiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kaupunkilehti / Historia: Britit valtasivat Havannan – ja Espanja osti sen takaisin] Seitsenvuotinen sota tuli Karibialle kesällä 1762. Kesäkuun 6. päivän aamunkoitteessa yli 50 aluksen ja yli 11 000 miehen brittijoukko nousi maihin Havannan itäpuolelle, ja piiritys päättyi kaupungin antautumiseen elokuussa. Miehityksen aikana britit avasivat Havannan kaupalle Pohjois-Amerikan ja Karibian siirtokuntiensa kanssa, mikä muutti Kuuban taloutta nopeasti. Alle vuosi valtauksesta solmittu Pariisin rauha palautti Havannan Espanjalle – vastineeksi Espanja luovutti Floridan briteille.
+AIEMPI KYSYMYS: Mihin maihin klippfiskiä viedään nykyään?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä kysymys. Klippfiskiä viedään etenkin Etelä-Euroopan maihin, joissa suolattu ja kuivattu turska on perinteinen ruoka-aine. [[Portugalissa]] suolattua turskaa kutsutaan nimellä [[bacalhau]], ja norjalainen kuivattu kala on sen tärkeä raaka-aine. Samankaltaisia ruokia tunnetaan myös [[Espanjassa]] ja Italiassa. Vienti on vanhaa perua, sillä jo purjelaivat kuljettivat kalaa Kristiansundin satamasta etelään. Pullasta ei tähän kyllä riitä sanottavaa, mut kala on selvästi matkustanut paremmin kuin minä.
+KYSYMYS: Kerro lisää: Espanjassa
+
+### 225
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klippfisk (ruoka)
+Tietoruudun teksti: Klippfisk eli suomeksi kalliokala on suolattua ja kuivattua turskaa, jota on Norjassa valmistettu satoja vuosia erityisesti Kristiansundissa. Perinteisesti kala levitettiin kuivumaan ulkoilmaan paljaille kallioille ja rannikon kiville, mistä nimi klippfisk juontuu; nykyään kuivaus tapahtuu enimmäkseen sähkölämmittimillä sisätiloissa, mutta Länsi- ja Pohjois-Norjassa kalaa kuivataan yhä ulkona vientiin Etelä-Eurooppaan. Suolaaminen yleistyi 1600-luvulla, kun halpaa suolaa alkoi tulla saataville Etelä-Euroopasta, ja tuotteesta tuli perusruokaa katolisten maiden paastopäivinä. Norjassa kalaa kutsuttiin aluksi terranova-kalaksi Newfoundlandin mukaan, ennen kuin nimi klippfisk vakiintui kuvaamaan kallioilla kuivattua kalaa. Kristiansundista kehittyi Norjan tärkein klippfisk-kaupunki, jonka satamassa on ollut purjelaivoja lastaamassa kalaa vientiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Enemmän lintuja kuin Euroopassa ja Pohjois-Amerikassa] Kolumbia on yksi maailman seitsemästätoista megadiversistä maasta, ja sillä on maailman suurin lajitiheys pinta-alaa kohti sekä eniten kotoperäisiä lajeja. Noin kymmenen prosenttia maapallon lajeista elää siellä. Lintulajeja on yli 1 900 — enemmän kuin Euroopassa ja Pohjois-Amerikassa yhteensä ja 18 prosenttia koko maailman lintulajeista. Maa on ensimmäinen myös orkidealajien ja kotoperäisten perhosten määrässä, ja siellä on 32 maabiomia ja 314 ekosysteemityyppiä.
+AIEMPI KYSYMYS: Miten kuivattu kala valmistetaan syötäväksi ennen ruokaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kuivattu ja suolattu kala on kovaa kuin lauta, joten se liotetaan ensin kylmässä vedessä. Liotus kestää yleensä vähintään vuorokauden ja usein pidempään, ja vesi vaihdetaan väliajoin, jotta suola liukenee pois ja kala pehmenee. Sen jälkeen kalaa voi keittää, paistaa tai kypsentää uunissa, ja [[Etelä-Euroopassa]] siitä tehdään esimerkiksi [[muhennoksia]] ja uuniruokia. Liotusaika riippuu kalan paksuudesta ja halutusta suolaisuudesta. Vuorokausi liotusta, kyl minä kärsivällisyyden tunnen, kun odotan pullaa.
+KYSYMYS: Kerro lisää: Etelä-Euroopassa
+
+### 226
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klippfisk (ruoka)
+Tietoruudun teksti: Klippfisk eli suomeksi kalliokala on suolattua ja kuivattua turskaa, jota on Norjassa valmistettu satoja vuosia erityisesti Kristiansundissa. Perinteisesti kala levitettiin kuivumaan ulkoilmaan paljaille kallioille ja rannikon kiville, mistä nimi klippfisk juontuu; nykyään kuivaus tapahtuu enimmäkseen sähkölämmittimillä sisätiloissa, mutta Länsi- ja Pohjois-Norjassa kalaa kuivataan yhä ulkona vientiin Etelä-Eurooppaan. Suolaaminen yleistyi 1600-luvulla, kun halpaa suolaa alkoi tulla saataville Etelä-Euroopasta, ja tuotteesta tuli perusruokaa katolisten maiden paastopäivinä. Norjassa kalaa kutsuttiin aluksi terranova-kalaksi Newfoundlandin mukaan, ennen kuin nimi klippfisk vakiintui kuvaamaan kallioilla kuivattua kalaa. Kristiansundista kehittyi Norjan tärkein klippfisk-kaupunki, jonka satamassa on ollut purjelaivoja lastaamassa kalaa vientiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salvador — kaupunkilehti / Ruoka: Torit jotka ruokkivat kaupunkia yhä] Salvadorin vanhat torit ruokkivat kaupunkia samalla tavalla kuin vuosikymmeniä sitten. Sete Portasin torilla on syöty mocotóa, hidasta härän sorkkapataa, perjantai-iltaisin 1940-luvulta lähtien, jolloin tori avattiin. Mercado Modelon ravintoloissa tarjoillaan sarapatelia ja muhennoksia; talo itse on vanha tullirakennus, joka nousi Cayrún aukiolle 1861 laivojen purkupaikaksi. São Joaquimin, Santa Bárbaran ja São Miguelin toreilla myydään perinneruokia kojuilta, ja rannoilla myyntipöydiltä saa rapumuhennosta ja ostereita.
+AIEMPI KYSYMYS: Miten kuivattu kala valmistetaan syötäväksi ennen ruokaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kuivattu ja suolattu kala on kovaa kuin lauta, joten se liotetaan ensin kylmässä vedessä. Liotus kestää yleensä vähintään vuorokauden ja usein pidempään, ja vesi vaihdetaan väliajoin, jotta suola liukenee pois ja kala pehmenee. Sen jälkeen kalaa voi keittää, paistaa tai kypsentää uunissa, ja [[Etelä-Euroopassa]] siitä tehdään esimerkiksi [[muhennoksia]] ja uuniruokia. Liotusaika riippuu kalan paksuudesta ja halutusta suolaisuudesta. Vuorokausi liotusta, kyl minä kärsivällisyyden tunnen, kun odotan pullaa.
+KYSYMYS: Kerro lisää: muhennoksia
+
+### 227
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brunost (ruoka)
+Tietoruudun teksti: Brunost eli ruskea juusto on norjalainen myöhäisjuustoperhe, jota valmistetaan keittämällä herasta, maidosta ja kermasta ruskeaa, makeaa massaa. Nykyisen kiinteän ja rasvaisen brunostin katsotaan syntyneen vuonna 1863, kun karjapiika Anne Hov keksi Gålän lähellä Valseterin vuoristotilalla lisätä kermaa herakeittoon ja keittää sitä, kunnes seos suli kiinteäksi juustomaiseksi massaksi. Hän kutsui keksintöään aluksi feitostiksi eli rasvajuustoksi, mutta nimi muuttui pian fløtemysostiksi. Muutettuaan Nord-Fronin Rusthågå-tilalle Hov alkoi lisätä seokseen myös vuohenmaitoa voimakkaamman gudbrandsdalsost-juuston valmistamiseksi, ja paikallinen kauppias Ole Kongsli alkoi viedä sitä Christianiaan asti. Keksintö auttoi merkittävästi Gudbrandsdalenin laaksoa, jonka talous oli kärsinyt viljan ja voin hintojen laskusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Arki: Ruskea juusto keitetään herasta] 1863 — Brunost tehdään herasta, joka jää juustonvalmistuksesta yli. Sitä keitetään tuntikausia, kunnes maitosokeri ruskistuu ja massa muuttuu makeaksi. Anne Hov lisäsi joukkoon kermaa vuonna 1863 Gudbrandsdalenissa, ja siitä syntyi maan tunnetuin juusto. Leivän päälle se leikataan juustohöylällä — myös se on norjalainen keksintö, vuodelta 1925.
+AIEMPI KYSYMYS: Miksi Anne Hovin keksimä juusto ei ole tarkkaan ottaen juustoa lainkaan?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä pointti. Tavallinen juusto valmistetaan juoksuttamalla maito, jolloin kiinteä juustomassa erottuu nesteestä. Brunost tehdään sen sijaan [[herasta]], joka jää juustonvalmistuksesta yli, ja sitä keitetään tuntikausia, kunnes [[maitosokeri]] ruskistuu ja massa muuttuu makeaksi. Anne Hov lisäsi heraan vuonna 1863 kermaa, ja siitä syntyi rasvainen ja kiinteä massa, joka muistuttaa juustoa mutta on tekotavaltaan lähempänä keitettyä maitotuotetta. Norjassa se kuuluu silti [[Gudbrandsdalenissa]] syntyneeseen myöhäisjuustojen perheeseen. Pulla on ainakin pullaa, mut tuo ruskea möykky on ihan oma lukunsa.
+KYSYMYS: Kerro lisää: herasta
+
+### 228
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brunost (ruoka)
+Tietoruudun teksti: Brunost eli ruskea juusto on norjalainen myöhäisjuustoperhe, jota valmistetaan keittämällä herasta, maidosta ja kermasta ruskeaa, makeaa massaa. Nykyisen kiinteän ja rasvaisen brunostin katsotaan syntyneen vuonna 1863, kun karjapiika Anne Hov keksi Gålän lähellä Valseterin vuoristotilalla lisätä kermaa herakeittoon ja keittää sitä, kunnes seos suli kiinteäksi juustomaiseksi massaksi. Hän kutsui keksintöään aluksi feitostiksi eli rasvajuustoksi, mutta nimi muuttui pian fløtemysostiksi. Muutettuaan Nord-Fronin Rusthågå-tilalle Hov alkoi lisätä seokseen myös vuohenmaitoa voimakkaamman gudbrandsdalsost-juuston valmistamiseksi, ja paikallinen kauppias Ole Kongsli alkoi viedä sitä Christianiaan asti. Keksintö auttoi merkittävästi Gudbrandsdalenin laaksoa, jonka talous oli kärsinyt viljan ja voin hintojen laskusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Arki: Ruskea juusto keitetään herasta] 1863 — Brunost tehdään herasta, joka jää juustonvalmistuksesta yli. Sitä keitetään tuntikausia, kunnes maitosokeri ruskistuu ja massa muuttuu makeaksi. Anne Hov lisäsi joukkoon kermaa vuonna 1863 Gudbrandsdalenissa, ja siitä syntyi maan tunnetuin juusto. Leivän päälle se leikataan juustohöylällä — myös se on norjalainen keksintö, vuodelta 1925.
+AIEMPI KYSYMYS: Miksi Anne Hovin keksimä juusto ei ole tarkkaan ottaen juustoa lainkaan?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä pointti. Tavallinen juusto valmistetaan juoksuttamalla maito, jolloin kiinteä juustomassa erottuu nesteestä. Brunost tehdään sen sijaan [[herasta]], joka jää juustonvalmistuksesta yli, ja sitä keitetään tuntikausia, kunnes [[maitosokeri]] ruskistuu ja massa muuttuu makeaksi. Anne Hov lisäsi heraan vuonna 1863 kermaa, ja siitä syntyi rasvainen ja kiinteä massa, joka muistuttaa juustoa mutta on tekotavaltaan lähempänä keitettyä maitotuotetta. Norjassa se kuuluu silti [[Gudbrandsdalenissa]] syntyneeseen myöhäisjuustojen perheeseen. Pulla on ainakin pullaa, mut tuo ruskea möykky on ihan oma lukunsa.
+KYSYMYS: Kerro lisää: maitosokeri
+
+### 229
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brunost (ruoka)
+Tietoruudun teksti: Brunost eli ruskea juusto on norjalainen myöhäisjuustoperhe, jota valmistetaan keittämällä herasta, maidosta ja kermasta ruskeaa, makeaa massaa. Nykyisen kiinteän ja rasvaisen brunostin katsotaan syntyneen vuonna 1863, kun karjapiika Anne Hov keksi Gålän lähellä Valseterin vuoristotilalla lisätä kermaa herakeittoon ja keittää sitä, kunnes seos suli kiinteäksi juustomaiseksi massaksi. Hän kutsui keksintöään aluksi feitostiksi eli rasvajuustoksi, mutta nimi muuttui pian fløtemysostiksi. Muutettuaan Nord-Fronin Rusthågå-tilalle Hov alkoi lisätä seokseen myös vuohenmaitoa voimakkaamman gudbrandsdalsost-juuston valmistamiseksi, ja paikallinen kauppias Ole Kongsli alkoi viedä sitä Christianiaan asti. Keksintö auttoi merkittävästi Gudbrandsdalenin laaksoa, jonka talous oli kärsinyt viljan ja voin hintojen laskusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Arki: Ruskea juusto keitetään herasta] 1863 — Brunost tehdään herasta, joka jää juustonvalmistuksesta yli. Sitä keitetään tuntikausia, kunnes maitosokeri ruskistuu ja massa muuttuu makeaksi. Anne Hov lisäsi joukkoon kermaa vuonna 1863 Gudbrandsdalenissa, ja siitä syntyi maan tunnetuin juusto. Leivän päälle se leikataan juustohöylällä — myös se on norjalainen keksintö, vuodelta 1925.
+AIEMPI KYSYMYS: Miksi Anne Hovin keksimä juusto ei ole tarkkaan ottaen juustoa lainkaan?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä pointti. Tavallinen juusto valmistetaan juoksuttamalla maito, jolloin kiinteä juustomassa erottuu nesteestä. Brunost tehdään sen sijaan [[herasta]], joka jää juustonvalmistuksesta yli, ja sitä keitetään tuntikausia, kunnes [[maitosokeri]] ruskistuu ja massa muuttuu makeaksi. Anne Hov lisäsi heraan vuonna 1863 kermaa, ja siitä syntyi rasvainen ja kiinteä massa, joka muistuttaa juustoa mutta on tekotavaltaan lähempänä keitettyä maitotuotetta. Norjassa se kuuluu silti [[Gudbrandsdalenissa]] syntyneeseen myöhäisjuustojen perheeseen. Pulla on ainakin pullaa, mut tuo ruskea möykky on ihan oma lukunsa.
+KYSYMYS: Kerro lisää: Gudbrandsdalenissa
+
+### 230
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brunost (ruoka)
+Tietoruudun teksti: Brunost eli ruskea juusto on norjalainen myöhäisjuustoperhe, jota valmistetaan keittämällä herasta, maidosta ja kermasta ruskeaa, makeaa massaa. Nykyisen kiinteän ja rasvaisen brunostin katsotaan syntyneen vuonna 1863, kun karjapiika Anne Hov keksi Gålän lähellä Valseterin vuoristotilalla lisätä kermaa herakeittoon ja keittää sitä, kunnes seos suli kiinteäksi juustomaiseksi massaksi. Hän kutsui keksintöään aluksi feitostiksi eli rasvajuustoksi, mutta nimi muuttui pian fløtemysostiksi. Muutettuaan Nord-Fronin Rusthågå-tilalle Hov alkoi lisätä seokseen myös vuohenmaitoa voimakkaamman gudbrandsdalsost-juuston valmistamiseksi, ja paikallinen kauppias Ole Kongsli alkoi viedä sitä Christianiaan asti. Keksintö auttoi merkittävästi Gudbrandsdalenin laaksoa, jonka talous oli kärsinyt viljan ja voin hintojen laskusta.
+AIEMPI KYSYMYS: Miten juuston vienti Christianiaan alkoi, ja kuka sen aloitti?
+AIEMPI VASTAUS (Livia):
+No niin. Vienti alkoi, kun Anne Hov muutti Nord-Fronin Rusthågå-tilalle ja alkoi lisätä seokseen myös vuohenmaitoa saadakseen voimakkaamman gudbrandsdalsost-juuston. Paikallinen kauppias [[Ole Kongsli]] alkoi viedä tuotetta [[Christianiaan]] asti, joka on nykyisen [[Oslon]] aiempi nimi. Keksintö oli tärkeä [[Gudbrandsdalenin]] laaksolle, jonka talous oli kärsinyt viljan ja voin hintojen laskusta. Tarkkaa vientivuotta en ole varma, joten jätän sen sanomatta. Kyyhky ois ollu nopeampi, mut kyl kauppiaan kärryt veivät enemmän.
+KYSYMYS: Kerro lisää: Ole Kongsli
+
+### 231
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brunost (ruoka)
+Tietoruudun teksti: Brunost eli ruskea juusto on norjalainen myöhäisjuustoperhe, jota valmistetaan keittämällä herasta, maidosta ja kermasta ruskeaa, makeaa massaa. Nykyisen kiinteän ja rasvaisen brunostin katsotaan syntyneen vuonna 1863, kun karjapiika Anne Hov keksi Gålän lähellä Valseterin vuoristotilalla lisätä kermaa herakeittoon ja keittää sitä, kunnes seos suli kiinteäksi juustomaiseksi massaksi. Hän kutsui keksintöään aluksi feitostiksi eli rasvajuustoksi, mutta nimi muuttui pian fløtemysostiksi. Muutettuaan Nord-Fronin Rusthågå-tilalle Hov alkoi lisätä seokseen myös vuohenmaitoa voimakkaamman gudbrandsdalsost-juuston valmistamiseksi, ja paikallinen kauppias Ole Kongsli alkoi viedä sitä Christianiaan asti. Keksintö auttoi merkittävästi Gudbrandsdalenin laaksoa, jonka talous oli kärsinyt viljan ja voin hintojen laskusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan tuomiokirkko] 1861 Tromssan tuomiokirkko on kokonaan puusta rakennettu keltainen kirkko, joka valmistui vuonna 1861 arkkitehti Christian Heinrich Groschin piirustusten mukaan. Se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu puusta - ja sen sisään mahtuu yli 600 kirkkovierasta! Paikalla on ollut kirkko jo satoja vuosia ennen tätäkin: kuningas Håkon IV rakennutti tänne kappelin jo vuonna 1252, ja sen jälkeen paikalla on ollut ainakin kaksi muuta kirkkoa ennen nykyistä rakennusta. Kellotorni valmistui vuotta myöhemmin, 1862, ja kirkkoa koristeltiin lisää vielä 1880-luvulla. Isoisän vieraillessa Tromssassa 1873 kirkko oli vasta reilut kymmenen vuotta vanha - täysin uusi nähtävyys pienessä pu…
+AIEMPI KYSYMYS: Miten juuston vienti Christianiaan alkoi, ja kuka sen aloitti?
+AIEMPI VASTAUS (Livia):
+No niin. Vienti alkoi, kun Anne Hov muutti Nord-Fronin Rusthågå-tilalle ja alkoi lisätä seokseen myös vuohenmaitoa saadakseen voimakkaamman gudbrandsdalsost-juuston. Paikallinen kauppias [[Ole Kongsli]] alkoi viedä tuotetta [[Christianiaan]] asti, joka on nykyisen [[Oslon]] aiempi nimi. Keksintö oli tärkeä [[Gudbrandsdalenin]] laaksolle, jonka talous oli kärsinyt viljan ja voin hintojen laskusta. Tarkkaa vientivuotta en ole varma, joten jätän sen sanomatta. Kyyhky ois ollu nopeampi, mut kyl kauppiaan kärryt veivät enemmän.
+KYSYMYS: Kerro lisää: Christianiaan
+
+### 232
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brunost (ruoka)
+Tietoruudun teksti: Brunost eli ruskea juusto on norjalainen myöhäisjuustoperhe, jota valmistetaan keittämällä herasta, maidosta ja kermasta ruskeaa, makeaa massaa. Nykyisen kiinteän ja rasvaisen brunostin katsotaan syntyneen vuonna 1863, kun karjapiika Anne Hov keksi Gålän lähellä Valseterin vuoristotilalla lisätä kermaa herakeittoon ja keittää sitä, kunnes seos suli kiinteäksi juustomaiseksi massaksi. Hän kutsui keksintöään aluksi feitostiksi eli rasvajuustoksi, mutta nimi muuttui pian fløtemysostiksi. Muutettuaan Nord-Fronin Rusthågå-tilalle Hov alkoi lisätä seokseen myös vuohenmaitoa voimakkaamman gudbrandsdalsost-juuston valmistamiseksi, ja paikallinen kauppias Ole Kongsli alkoi viedä sitä Christianiaan asti. Keksintö auttoi merkittävästi Gudbrandsdalenin laaksoa, jonka talous oli kärsinyt viljan ja voin hintojen laskusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Oslo — kohdekartta / Kohdekartta: Oslon tuomiokirkko] 1694–1697 Oslon tuomiokirkko on kaupungin pääkirkko, mutta se on jo kolmas kirkko, joka on kantanut tätä tehtävää. Ensimmäinen, keskiaikainen Hallvardin katedraali, jäi liian kauas uudesta kaupungista, kun kuningas Kristian IV siirsi koko Oslon lähemmäs Akershusin linnoitusta suuren tulipalon jälkeen vuonna 1624. Toinen kirkko paloi vain 50 vuoden käytön jälkeen, joten uuden peruskivi muurattiin vuonna 1694. Kirkko vihittiin käyttöön marraskuussa 1697, ja se on seissyt Stortorvetin torin laidalla siitä asti. Kirkon ovet ovat pronssia, ja ikkunoissa on taiteilija Emanuel Vigelandin suunnittelemia lasimaalauksia. Kirkossa on vietetty kuuluisia kuninkaallisia häitä: kuningas Harald ja kuningat…
+- [Oslo — kaupunkilehti / Laivat: Laiva kaivettiin ylös hautakummusta] Osebergin laiva rakennettiin noin vuonna 820 ja haudattiin neljätoista vuotta myöhemmin maakummun alle Oslon eteläpuolelle. Sinne pantiin kaksi vainajaa ja koko talouden tavarat: koristeltu kärry, neljä rekeä, vuoteita, kudottuja kankaita ja keittovälineitä. Kummun sininen savi piti puun kosteana, joten laiva säilyi lähes kokonaisena. Se kaivettiin esiin vuonna 1904, ja palaset koottiin takaisin yhteen. Keulan kaareva koristekierre on veistetty yhdestä puukappaleesta.
+- [Oslo — kaupunkilehti / Taide: Testamentti, joka kirjoitettiin miehityksen alla] Kun Saksa miehitti Norjan huhtikuussa 1940, seitsemänkymmentäkuusivuotias Edvard Munch pelkäsi natsien vievän tai tuhoavan hänen elämäntyönsä — hänen taidettaan oli aiemmin leimattu Saksassa "rappiotaiteeksi". Hän kirjoitti testamenttinsa saman kuun lopulla ja testamenttasi lähes koko jäljellä olevan tuotantonsa Oslon kaupungille. Munch kuoli tammikuussa 1944, vain reilu vuosi ennen sodan päättymistä.
+AIEMPI KYSYMYS: Miten juuston vienti Christianiaan alkoi, ja kuka sen aloitti?
+AIEMPI VASTAUS (Livia):
+No niin. Vienti alkoi, kun Anne Hov muutti Nord-Fronin Rusthågå-tilalle ja alkoi lisätä seokseen myös vuohenmaitoa saadakseen voimakkaamman gudbrandsdalsost-juuston. Paikallinen kauppias [[Ole Kongsli]] alkoi viedä tuotetta [[Christianiaan]] asti, joka on nykyisen [[Oslon]] aiempi nimi. Keksintö oli tärkeä [[Gudbrandsdalenin]] laaksolle, jonka talous oli kärsinyt viljan ja voin hintojen laskusta. Tarkkaa vientivuotta en ole varma, joten jätän sen sanomatta. Kyyhky ois ollu nopeampi, mut kyl kauppiaan kärryt veivät enemmän.
+KYSYMYS: Kerro lisää: Oslon
+
+### 233
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brunost (ruoka)
+Tietoruudun teksti: Brunost eli ruskea juusto on norjalainen myöhäisjuustoperhe, jota valmistetaan keittämällä herasta, maidosta ja kermasta ruskeaa, makeaa massaa. Nykyisen kiinteän ja rasvaisen brunostin katsotaan syntyneen vuonna 1863, kun karjapiika Anne Hov keksi Gålän lähellä Valseterin vuoristotilalla lisätä kermaa herakeittoon ja keittää sitä, kunnes seos suli kiinteäksi juustomaiseksi massaksi. Hän kutsui keksintöään aluksi feitostiksi eli rasvajuustoksi, mutta nimi muuttui pian fløtemysostiksi. Muutettuaan Nord-Fronin Rusthågå-tilalle Hov alkoi lisätä seokseen myös vuohenmaitoa voimakkaamman gudbrandsdalsost-juuston valmistamiseksi, ja paikallinen kauppias Ole Kongsli alkoi viedä sitä Christianiaan asti. Keksintö auttoi merkittävästi Gudbrandsdalenin laaksoa, jonka talous oli kärsinyt viljan ja voin hintojen laskusta.
+AIEMPI KYSYMYS: Miten juuston vienti Christianiaan alkoi, ja kuka sen aloitti?
+AIEMPI VASTAUS (Livia):
+No niin. Vienti alkoi, kun Anne Hov muutti Nord-Fronin Rusthågå-tilalle ja alkoi lisätä seokseen myös vuohenmaitoa saadakseen voimakkaamman gudbrandsdalsost-juuston. Paikallinen kauppias [[Ole Kongsli]] alkoi viedä tuotetta [[Christianiaan]] asti, joka on nykyisen [[Oslon]] aiempi nimi. Keksintö oli tärkeä [[Gudbrandsdalenin]] laaksolle, jonka talous oli kärsinyt viljan ja voin hintojen laskusta. Tarkkaa vientivuotta en ole varma, joten jätän sen sanomatta. Kyyhky ois ollu nopeampi, mut kyl kauppiaan kärryt veivät enemmän.
+KYSYMYS: Kerro lisää: Gudbrandsdalenin
+
+### 234
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brunost (ruoka)
+Tietoruudun teksti: Brunost eli ruskea juusto on norjalainen myöhäisjuustoperhe, jota valmistetaan keittämällä herasta, maidosta ja kermasta ruskeaa, makeaa massaa. Nykyisen kiinteän ja rasvaisen brunostin katsotaan syntyneen vuonna 1863, kun karjapiika Anne Hov keksi Gålän lähellä Valseterin vuoristotilalla lisätä kermaa herakeittoon ja keittää sitä, kunnes seos suli kiinteäksi juustomaiseksi massaksi. Hän kutsui keksintöään aluksi feitostiksi eli rasvajuustoksi, mutta nimi muuttui pian fløtemysostiksi. Muutettuaan Nord-Fronin Rusthågå-tilalle Hov alkoi lisätä seokseen myös vuohenmaitoa voimakkaamman gudbrandsdalsost-juuston valmistamiseksi, ja paikallinen kauppias Ole Kongsli alkoi viedä sitä Christianiaan asti. Keksintö auttoi merkittävästi Gudbrandsdalenin laaksoa, jonka talous oli kärsinyt viljan ja voin hintojen laskusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kenia — maalehti / Ruoka: Maito, jota kypsytetään noessa] Kalenjinien mursik on hapanmaitoa, joka kypsytetään sotet-kalebassissa. Astia harjataan puhtaaksi käpypalmun oksasta tehdyllä sosiot-harjalla ja sivellään sisältä puuhiilellä, joka hehkutetaan itet-pensaan oksista. Hiili tiivistää huokoisen kuoren ilmatiiviiksi, estää pilaantumisen, antaa maidolle sinertävän sävyn ja mausteisen maun. Maito jätetään hapantumaan kolmesta viiteen vuorokautta ja säilyy kuukauden. Mursikia juodaan häiden myötäjäisneuvottelujen päätteeksi, ja kansainvälisistä kisoista palaava juoksija saa kulauksen jo lentokentällä.
+- [Kazakstan — maalehti / Ruoka: Maito, joka hapatettiin satulassa] Kumis on hapatettua tamman maitoa. Siinä on enemmän sokeria kuin lehmänmaidossa, joten käyminen tuottaa alkoholia 0,7–2,5 prosenttia. Lypsy vaatii taitoa: lypsäjä on toinen polvi maassa ja ämpäri toisen polven päällä, ja varsa pidetään koko ajan tamman kyljessä, koska muuten maito ei tule. Kausi kestää kesäkuun puolivälistä lokakuun alkuun, ja tamma antaa 1 000–1 200 litraa, josta puolet jää varsalle. Hapatusastia jätettiin jurtan katolle ja käänneltiin — tai sidottiin satulaan, jolloin päivän ratsastus hoiti sekoittamisen.
+- [Somalia — maalehti / Ruoka: Teehen maito vasta lopuksi] Aamun juoma on shaah tai qahwa, tee tai kahvi. Shaah keitetään mustasta teestä ja maustetaan inkiväärillä, kardemummalla ja kanelilla — mutta mustapippuria siihen ei panna, toisin kuin moneen muuhun maustettuun teehen. Maito lisätään vasta keittämisen jälkeen, ei sen aikana, ja silloin juoma on shaah cadeeys. Illalla ennen nukkumaanmenoa juodaan lasi kardemummalla maustettua maitoa. Lounaan janojuomia ovat balbeelmo eli greippi, raqey eli tamarindi ja isbarmuunto eli limonadi.
+AIEMPI KYSYMYS: Mistä brunostin ruskea väri ja makea maku tulevat?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Väri ja maku syntyvät [[maitosokerista]] eli [[laktoosista]], joka ruskistuu ja karamellisoituu, kun heraa keitetään tuntikausia. Pitkän keiton aikana vesi haihtuu ja jäljelle jää tiivistynyt, makea ja kellanruskea massa. Brunost ei siis ole makea siksi, että siihen olisi lisätty makeutta, vaan siksi, että maidon oma sokeri muuttuu kuumennuksessa. Kerma tekee massasta kiinteää ja rasvaista, ja 1863 on vuosi, jota pidetään nykyisen brunostin syntyvuotena. Makea juusto kuulostaa kyyhkyn korvaan melkein pullalta.
+KYSYMYS: Kerro lisää: maitosokerista
+
+### 235
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brunost (ruoka)
+Tietoruudun teksti: Brunost eli ruskea juusto on norjalainen myöhäisjuustoperhe, jota valmistetaan keittämällä herasta, maidosta ja kermasta ruskeaa, makeaa massaa. Nykyisen kiinteän ja rasvaisen brunostin katsotaan syntyneen vuonna 1863, kun karjapiika Anne Hov keksi Gålän lähellä Valseterin vuoristotilalla lisätä kermaa herakeittoon ja keittää sitä, kunnes seos suli kiinteäksi juustomaiseksi massaksi. Hän kutsui keksintöään aluksi feitostiksi eli rasvajuustoksi, mutta nimi muuttui pian fløtemysostiksi. Muutettuaan Nord-Fronin Rusthågå-tilalle Hov alkoi lisätä seokseen myös vuohenmaitoa voimakkaamman gudbrandsdalsost-juuston valmistamiseksi, ja paikallinen kauppias Ole Kongsli alkoi viedä sitä Christianiaan asti. Keksintö auttoi merkittävästi Gudbrandsdalenin laaksoa, jonka talous oli kärsinyt viljan ja voin hintojen laskusta.
+AIEMPI KYSYMYS: Mistä brunostin ruskea väri ja makea maku tulevat?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Väri ja maku syntyvät [[maitosokerista]] eli [[laktoosista]], joka ruskistuu ja karamellisoituu, kun heraa keitetään tuntikausia. Pitkän keiton aikana vesi haihtuu ja jäljelle jää tiivistynyt, makea ja kellanruskea massa. Brunost ei siis ole makea siksi, että siihen olisi lisätty makeutta, vaan siksi, että maidon oma sokeri muuttuu kuumennuksessa. Kerma tekee massasta kiinteää ja rasvaista, ja 1863 on vuosi, jota pidetään nykyisen brunostin syntyvuotena. Makea juusto kuulostaa kyyhkyn korvaan melkein pullalta.
+KYSYMYS: Kerro lisää: laktoosista
+
+### 236
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brunost (ruoka)
+Tietoruudun teksti: Brunost eli ruskea juusto on norjalainen myöhäisjuustoperhe, jota valmistetaan keittämällä herasta, maidosta ja kermasta ruskeaa, makeaa massaa. Nykyisen kiinteän ja rasvaisen brunostin katsotaan syntyneen vuonna 1863, kun karjapiika Anne Hov keksi Gålän lähellä Valseterin vuoristotilalla lisätä kermaa herakeittoon ja keittää sitä, kunnes seos suli kiinteäksi juustomaiseksi massaksi. Hän kutsui keksintöään aluksi feitostiksi eli rasvajuustoksi, mutta nimi muuttui pian fløtemysostiksi. Muutettuaan Nord-Fronin Rusthågå-tilalle Hov alkoi lisätä seokseen myös vuohenmaitoa voimakkaamman gudbrandsdalsost-juuston valmistamiseksi, ja paikallinen kauppias Ole Kongsli alkoi viedä sitä Christianiaan asti. Keksintö auttoi merkittävästi Gudbrandsdalenin laaksoa, jonka talous oli kärsinyt viljan ja voin hintojen laskusta.
+AIEMPI KYSYMYS: Milloin juustohöylä keksittiin ja mihin sitä käytetään?
+AIEMPI VASTAUS (Livia):
+Mmm— juustohöylä, hyvä aihe. Juustohöylä on norjalainen keksintö vuodelta 1925. Sillä leikataan juustosta ohuita ja tasaisia siivuja, esimerkiksi leivän päälle. Työkalu sopii erityisen hyvin kiinteälle [[brunostille]], jota on vaikea viipaloida veitsellä ohueksi. [[Norjassa]] juusto leikataan perinteisesti juuri höylällä, ja ohut siivu on makeassa juustossa tarkoituksenmukainen, koska maku on voimakas. Höylä on pieni väline, mutta sen vaikutus näkyy jokaisessa norjalaisessa aamiaispöydässä. Tällaista keksintöä ei kyyhkyn siivellä tehdä, ja se on kyl harmi.
+KYSYMYS: Kerro lisää: brunostille
+
+### 237
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brunost (ruoka)
+Tietoruudun teksti: Brunost eli ruskea juusto on norjalainen myöhäisjuustoperhe, jota valmistetaan keittämällä herasta, maidosta ja kermasta ruskeaa, makeaa massaa. Nykyisen kiinteän ja rasvaisen brunostin katsotaan syntyneen vuonna 1863, kun karjapiika Anne Hov keksi Gålän lähellä Valseterin vuoristotilalla lisätä kermaa herakeittoon ja keittää sitä, kunnes seos suli kiinteäksi juustomaiseksi massaksi. Hän kutsui keksintöään aluksi feitostiksi eli rasvajuustoksi, mutta nimi muuttui pian fløtemysostiksi. Muutettuaan Nord-Fronin Rusthågå-tilalle Hov alkoi lisätä seokseen myös vuohenmaitoa voimakkaamman gudbrandsdalsost-juuston valmistamiseksi, ja paikallinen kauppias Ole Kongsli alkoi viedä sitä Christianiaan asti. Keksintö auttoi merkittävästi Gudbrandsdalenin laaksoa, jonka talous oli kärsinyt viljan ja voin hintojen laskusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norja — maalehti / Luonto: Myskihärkä tuotiin laivalla] 1947 — Myskihärkä eli Norjassa jääkauden aikaan mutta katosi tuhansia vuosia sitten. 1900-luvulla eläimiä tuotiin laivalla takaisin Grönlannista, ja nykyinen kanta polveutuu vuoden 1947 kuljetuksesta. Dovrefjellin tuntureilla laumassa on nykyään reilut parisataa eläintä. Ne eivät ole härkiä vaan lampaiden ja vuohien sukulaisia, ja niiden alusvilla on maailman lämpimimpiä. Retkeilijöitä kehotetaan pysymään kahdensadan metrin päässä: eläin on rauhallinen mutta nopea suuttumaan.
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+AIEMPI KYSYMYS: Milloin juustohöylä keksittiin ja mihin sitä käytetään?
+AIEMPI VASTAUS (Livia):
+Mmm— juustohöylä, hyvä aihe. Juustohöylä on norjalainen keksintö vuodelta 1925. Sillä leikataan juustosta ohuita ja tasaisia siivuja, esimerkiksi leivän päälle. Työkalu sopii erityisen hyvin kiinteälle [[brunostille]], jota on vaikea viipaloida veitsellä ohueksi. [[Norjassa]] juusto leikataan perinteisesti juuri höylällä, ja ohut siivu on makeassa juustossa tarkoituksenmukainen, koska maku on voimakas. Höylä on pieni väline, mutta sen vaikutus näkyy jokaisessa norjalaisessa aamiaispöydässä. Tällaista keksintöä ei kyyhkyn siivellä tehdä, ja se on kyl harmi.
+KYSYMYS: Kerro lisää: Norjassa
+
+### 238
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brunost (ruoka)
+Tietoruudun teksti: Brunost eli ruskea juusto on norjalainen myöhäisjuustoperhe, jota valmistetaan keittämällä herasta, maidosta ja kermasta ruskeaa, makeaa massaa. Nykyisen kiinteän ja rasvaisen brunostin katsotaan syntyneen vuonna 1863, kun karjapiika Anne Hov keksi Gålän lähellä Valseterin vuoristotilalla lisätä kermaa herakeittoon ja keittää sitä, kunnes seos suli kiinteäksi juustomaiseksi massaksi. Hän kutsui keksintöään aluksi feitostiksi eli rasvajuustoksi, mutta nimi muuttui pian fløtemysostiksi. Muutettuaan Nord-Fronin Rusthågå-tilalle Hov alkoi lisätä seokseen myös vuohenmaitoa voimakkaamman gudbrandsdalsost-juuston valmistamiseksi, ja paikallinen kauppias Ole Kongsli alkoi viedä sitä Christianiaan asti. Keksintö auttoi merkittävästi Gudbrandsdalenin laaksoa, jonka talous oli kärsinyt viljan ja voin hintojen laskusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuwait — maalehti / Aavikko: Teltta kudotaan lampaan ja vuohen villasta] Beduiinien teltta on nimeltään bait al-shaar. Se kudotaan lampaan ja vuohen villasta ja kamelinkarvasta. Kangaspuut levitetään maahan: kaksi puuta päihin, loimilangat niiden väliin, ja kutoja istuu maassa työnsä vieressä ja siirtyy eteenpäin sitä mukaa kun kangas valmistuu. Kuviot ovat kolmioita ja vinoneliöitä, ja jokainen suku tunnisti omansa. Samalla tavalla tehtiin telttaa jakavat väliverhot ja kamelin selkään sidottavat säkit. Kuwaitissa perustettiin vuonna 1978 yhdistys ja pari vuotta myöhemmin Sadu-talo, jotta taito ei katoaisi, ja vuonna 2020 sadu-kudonta otettiin Unescon perintöluetteloon.
+- [Kreikka — maalehti / Ruoka ja juhlapöytä: Juusto, josta käytiin oikeutta] 2002 — Feta tehdään lampaanmaidosta tai seoksesta, jossa on lampaanmaidon lisäksi enintään 30 prosenttia vuohenmaitoa. Juusto kypsyy isoina lohkoina suolavedessä, ja siitä tulee murea ja rakeinen. Kreikka pyysi EU:lta nimisuojaa fetalle vuonna 1994. Tanska, Ranska ja Saksa, joissa valmistettiin omaa fetaa, veivät asian EU:n tuomioistuimeen ja saivat ensimmäisen päätöksen kumotuksi. Vuonna 2002 nimi suojattiin lopullisesti: fetaksi saa kutsua vain Manner-Kreikassa ja Lesboksella perinteiseen tapaan tehtyä juustoa.
+AIEMPI KYSYMYS: Miten vuohenmaito muuttaa brunostin makua?
+AIEMPI VASTAUS (Livia):
+Ai se. Anne Hov lisäsi seokseen [[vuohenmaitoa]] saadakseen aikaan voimakkaamman juuston, jota alettiin kutsua [[gudbrandsdalsostiksi]]. Vuohenmaito tuo makuun vahvemman ja terävämmän sävyn kuin pelkkä lehmänmaito ja kerma. Perusbrunost, jonka Hov alun perin kehitti kermaa lisäämällä, on mietompi ja rasvaisempi. Muutos tehtiin [[Nord-Fronin]] Rusthågå-tilalla, ja se laajensi tuotteen valikoimaa niin, että kauppias pystyi viemään juustoa kauas. Erilaisia makuja on siis jo pitkään ollut tarjolla. Kyl minä pullassakin arvostan vaihtelua.
+KYSYMYS: Kerro lisää: vuohenmaitoa
+
+### 239
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brunost (ruoka)
+Tietoruudun teksti: Brunost eli ruskea juusto on norjalainen myöhäisjuustoperhe, jota valmistetaan keittämällä herasta, maidosta ja kermasta ruskeaa, makeaa massaa. Nykyisen kiinteän ja rasvaisen brunostin katsotaan syntyneen vuonna 1863, kun karjapiika Anne Hov keksi Gålän lähellä Valseterin vuoristotilalla lisätä kermaa herakeittoon ja keittää sitä, kunnes seos suli kiinteäksi juustomaiseksi massaksi. Hän kutsui keksintöään aluksi feitostiksi eli rasvajuustoksi, mutta nimi muuttui pian fløtemysostiksi. Muutettuaan Nord-Fronin Rusthågå-tilalle Hov alkoi lisätä seokseen myös vuohenmaitoa voimakkaamman gudbrandsdalsost-juuston valmistamiseksi, ja paikallinen kauppias Ole Kongsli alkoi viedä sitä Christianiaan asti. Keksintö auttoi merkittävästi Gudbrandsdalenin laaksoa, jonka talous oli kärsinyt viljan ja voin hintojen laskusta.
+AIEMPI KYSYMYS: Miten vuohenmaito muuttaa brunostin makua?
+AIEMPI VASTAUS (Livia):
+Ai se. Anne Hov lisäsi seokseen [[vuohenmaitoa]] saadakseen aikaan voimakkaamman juuston, jota alettiin kutsua [[gudbrandsdalsostiksi]]. Vuohenmaito tuo makuun vahvemman ja terävämmän sävyn kuin pelkkä lehmänmaito ja kerma. Perusbrunost, jonka Hov alun perin kehitti kermaa lisäämällä, on mietompi ja rasvaisempi. Muutos tehtiin [[Nord-Fronin]] Rusthågå-tilalla, ja se laajensi tuotteen valikoimaa niin, että kauppias pystyi viemään juustoa kauas. Erilaisia makuja on siis jo pitkään ollut tarjolla. Kyl minä pullassakin arvostan vaihtelua.
+KYSYMYS: Kerro lisää: gudbrandsdalsostiksi
+
+### 240
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brunost (ruoka)
+Tietoruudun teksti: Brunost eli ruskea juusto on norjalainen myöhäisjuustoperhe, jota valmistetaan keittämällä herasta, maidosta ja kermasta ruskeaa, makeaa massaa. Nykyisen kiinteän ja rasvaisen brunostin katsotaan syntyneen vuonna 1863, kun karjapiika Anne Hov keksi Gålän lähellä Valseterin vuoristotilalla lisätä kermaa herakeittoon ja keittää sitä, kunnes seos suli kiinteäksi juustomaiseksi massaksi. Hän kutsui keksintöään aluksi feitostiksi eli rasvajuustoksi, mutta nimi muuttui pian fløtemysostiksi. Muutettuaan Nord-Fronin Rusthågå-tilalle Hov alkoi lisätä seokseen myös vuohenmaitoa voimakkaamman gudbrandsdalsost-juuston valmistamiseksi, ja paikallinen kauppias Ole Kongsli alkoi viedä sitä Christianiaan asti. Keksintö auttoi merkittävästi Gudbrandsdalenin laaksoa, jonka talous oli kärsinyt viljan ja voin hintojen laskusta.
+AIEMPI KYSYMYS: Miten vuohenmaito muuttaa brunostin makua?
+AIEMPI VASTAUS (Livia):
+Ai se. Anne Hov lisäsi seokseen [[vuohenmaitoa]] saadakseen aikaan voimakkaamman juuston, jota alettiin kutsua [[gudbrandsdalsostiksi]]. Vuohenmaito tuo makuun vahvemman ja terävämmän sävyn kuin pelkkä lehmänmaito ja kerma. Perusbrunost, jonka Hov alun perin kehitti kermaa lisäämällä, on mietompi ja rasvaisempi. Muutos tehtiin [[Nord-Fronin]] Rusthågå-tilalla, ja se laajensi tuotteen valikoimaa niin, että kauppias pystyi viemään juustoa kauas. Erilaisia makuja on siis jo pitkään ollut tarjolla. Kyl minä pullassakin arvostan vaihtelua.
+KYSYMYS: Kerro lisää: Nord-Fronin
