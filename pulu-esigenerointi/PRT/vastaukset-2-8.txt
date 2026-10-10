@@ -137,7 +137,7 @@ Millaisia kohtauksia São Bento -aseman laatoissa on?
 Mikä on Santo Ildefonson kirkko?
 
 ### 584
-Sacavém on kaupunki Tejo-joen rannalla aivan Lissabonin kupeessa. Se tunnetaan [[Sacavémin keramiikkatehtaasta]], joka valmisti fajanssia ja posliinia ja josta tuli yksi Portugalin tunnetuimmista keramiikkamerkeistä. Tehtaalla valmistettiin tarvikkeita sekä kodin esineitä että rakennuslaattoja. Tehdas on sittemmin lopettanut toimintansa, ja sen tuotteita kerätään nykyään keräilyesineinä. Porton São Bento -aseman laatat valmistettiin tässä tehtaassa.
+[[Sacavém]] on kaupunki [[Tejo]]-joen rannalla aivan [[Lissabonin]] kupeessa. Se tunnetaan keramiikkatehtaastaan, joka valmisti [[fajanssia]] ja posliinia ja josta tuli yksi Portugalin tunnetuimmista keramiikkamerkeistä. Tehtaalla valmistettiin tarvikkeita sekä kodin esineitä että rakennuslaattoja. Tehdas on sittemmin lopettanut toimintansa, ja sen tuotteita kerätään nykyään keräilyesineinä.
 JATKOT:
 Mitä fajanssi on?
 Mikä erottaa fajanssin posliinista?
@@ -185,7 +185,7 @@ Mihin korkkia käytetään viinipullojen lisäksi?
 Millainen alue Alentejo on?
 
 ### 592
-Kork on korkkitammen kuoresta valmistettua materiaalia. Se koostuu pienistä ilmaa täynnä olevista soluista, minkä vuoksi se on kevyttä, kimmoisaa ja hyvä eriste. Tunnetuin käyttötarkoitus on [[viinipullojen]] korkit, mutta korkista valmistetaan myös lattioita, seinäeristeitä ja kenkiä. Portugal on merkittävä korkin tuottaja, ja noin puolet koko maailman korkista tulee sieltä. Korkki on ekologinen materiaali, koska puu ei kuole kuorinnassa, ja se on kierrätettävissä.
+Kork on [[korkkitammen]] kuoresta valmistettua materiaalia. Se koostuu pienistä ilmaa täynnä olevista soluista, minkä vuoksi se on kevyttä, kimmoisaa ja hyvä eriste. Tunnetuin käyttötarkoitus on [[viinipullojen]] korkit, mutta korkista valmistetaan myös lattioita, seinäeristeitä ja kenkiä. [[Portugal]] on merkittävä korkin tuottaja. Korkki on ekologinen materiaali, koska puu ei kuole kuorinnassa, ja se on kierrätettävissä.
 JATKOT:
 Miten viinipullon kork valmistetaan kuoresta?
 Miksi osa viineistä suljetaan kierrekorkilla?
