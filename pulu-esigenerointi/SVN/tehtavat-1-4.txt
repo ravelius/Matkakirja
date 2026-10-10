@@ -1,0 +1,214 @@
+================ KOHTA 16 (kohde:hahmotelma-maribor) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maribor (ruoka)
+Tietoruudun teksti: Maribor on Slovenian toiseksi suurin kaupunki ja Ala-Steiermarkin perinteisen alueen suurin. Linna mainitaan ensi kertaa vuonna 1164, kaupunkioikeudet saatiin 1254, ja alue kuului Habsburgien vallan alle vuoteen 1918 asti; saksaksi kaupunki on Marburg an der Drau. Joka kesäkuu Lentin ranta-alueella järjestetään kahden viikon Lent-festivaali. Kaupunki tunnetaan myös viinistään: Lentissä kasvaa žametovka-lajikkeen köynnös, joka on yli 400-vuotias ja kirjattiin vuonna 2004 Guinnessin ennätyskirjaan maailman vanhimpana viiniköynnöksenä. Vinagin viinikellari on kaksi kilometriä pitkä ja mahtuu 5,5 miljoonaa litraa viiniä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rovaniemi — kaupunkilehti / Saamelaiskulttuuri: Festivaali, joka kutsuu koolle alkuperäiskansat] Riddu Riđđu -festivaali sai alkunsa 1991 nuorten saamelaisten omasta aloitteesta pienessä Manndalenin kylässä Pohjois-Norjassa, kun paikalliset halusivat tehdä saamelaisuudesta jotain, josta kannattaa olla ylpeä sen sijaan että sitä hävettäisiin. Festivaali laajeni nopeasti kutsumaan mukaan myös muiden alkuperäiskansojen esiintyjiä Grönlannista Australiaan asti. Nykyään Riddu Riđđu on yksi Euroopan tunnetuimmista alkuperäiskansojen kulttuuritapahtumista: ohjelmassa on musiikkia, elokuvia, käsityötä ja keskusteluja, ja se kokoaa Manndaleniin tuhansia kävijöitä joka kesä.
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri: Festivaali joka avattiin kesken piirityksen] 1995 — Sarajevon elokuvafestivaali perustettiin vuonna 1995, kun kaupungin piiritys oli yhä käynnissä: ensimmäiset näytökset pidettiin ilman vakituista sähköä, osittain generaattoreiden ja kynttilöiden valossa, tietoisena vastarintana sodalle. Festivaali jatkui piirityksen päätyttyä ja on kasvanut Kaakkois-Euroopan suurimmaksi ja vaikutusvaltaisimmaksi elokuvatapahtumaksi, jonne saapuu vuosittain kymmeniä tuhansia katsojia ja kansainvälisiä elokuvantekijöitä. Festivaalia pidetään esimerkkinä siitä, miten kaupunki piti kulttuurin hengissä sodan keskellä.
+
+### 16.1
+KYSYMYS: Miksi Marburgin Lentissä kasvavaa viiniköynnöstä pidetään ihmeenä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maribor (ruoka)
+Tietoruudun teksti: Maribor on Slovenian toiseksi suurin kaupunki ja Ala-Steiermarkin perinteisen alueen suurin. Linna mainitaan ensi kertaa vuonna 1164, kaupunkioikeudet saatiin 1254, ja alue kuului Habsburgien vallan alle vuoteen 1918 asti; saksaksi kaupunki on Marburg an der Drau. Joka kesäkuu Lentin ranta-alueella järjestetään kahden viikon Lent-festivaali. Kaupunki tunnetaan myös viinistään: Lentissä kasvaa žametovka-lajikkeen köynnös, joka on yli 400-vuotias ja kirjattiin vuonna 2004 Guinnessin ennätyskirjaan maailman vanhimpana viiniköynnöksenä. Vinagin viinikellari on kaksi kilometriä pitkä ja mahtuu 5,5 miljoonaa litraa viiniä.
+
+### 16.2
+KYSYMYS: Mitä Lent-festivaalilla tapahtuu, ja mistä se on saanut nimensä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maribor (ruoka)
+Tietoruudun teksti: Maribor on Slovenian toiseksi suurin kaupunki ja Ala-Steiermarkin perinteisen alueen suurin. Linna mainitaan ensi kertaa vuonna 1164, kaupunkioikeudet saatiin 1254, ja alue kuului Habsburgien vallan alle vuoteen 1918 asti; saksaksi kaupunki on Marburg an der Drau. Joka kesäkuu Lentin ranta-alueella järjestetään kahden viikon Lent-festivaali. Kaupunki tunnetaan myös viinistään: Lentissä kasvaa žametovka-lajikkeen köynnös, joka on yli 400-vuotias ja kirjattiin vuonna 2004 Guinnessin ennätyskirjaan maailman vanhimpana viiniköynnöksenä. Vinagin viinikellari on kaksi kilometriä pitkä ja mahtuu 5,5 miljoonaa litraa viiniä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rovaniemi — kaupunkilehti / Saamelaiskulttuuri: Festivaali, joka kutsuu koolle alkuperäiskansat] Riddu Riđđu -festivaali sai alkunsa 1991 nuorten saamelaisten omasta aloitteesta pienessä Manndalenin kylässä Pohjois-Norjassa, kun paikalliset halusivat tehdä saamelaisuudesta jotain, josta kannattaa olla ylpeä sen sijaan että sitä hävettäisiin. Festivaali laajeni nopeasti kutsumaan mukaan myös muiden alkuperäiskansojen esiintyjiä Grönlannista Australiaan asti. Nykyään Riddu Riđđu on yksi Euroopan tunnetuimmista alkuperäiskansojen kulttuuritapahtumista: ohjelmassa on musiikkia, elokuvia, käsityötä ja keskusteluja, ja se kokoaa Manndaleniin tuhansia kävijöitä joka kesä.
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri: Festivaali joka avattiin kesken piirityksen] 1995 — Sarajevon elokuvafestivaali perustettiin vuonna 1995, kun kaupungin piiritys oli yhä käynnissä: ensimmäiset näytökset pidettiin ilman vakituista sähköä, osittain generaattoreiden ja kynttilöiden valossa, tietoisena vastarintana sodalle. Festivaali jatkui piirityksen päätyttyä ja on kasvanut Kaakkois-Euroopan suurimmaksi ja vaikutusvaltaisimmaksi elokuvatapahtumaksi, jonne saapuu vuosittain kymmeniä tuhansia katsojia ja kansainvälisiä elokuvantekijöitä. Festivaalia pidetään esimerkkinä siitä, miten kaupunki piti kulttuurin hengissä sodan keskellä.
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:hahmotelma-lipica) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lipica (kulttuuri)
+Tietoruudun teksti: Lipica on kylä Sežanan kunnassa Slovenian Karstin alueella, aivan Italian rajan tuntumassa. Se tunnetaan Lipican ori- eli ratsutilasta, jonka mukaan lipizzanerhevonen on saanut nimensä. Arkkiherttua Kaarle II perusti tilan vuonna 1580, ja ensimmäiset hevoset ostettiin Espanjasta 1581, koska Karstin maaperä ja ilmasto muistuttavat Espanjan oloja. Nykyisen muotonsa rotu sai Maria Teresian aikana, ja sotien tieltä hevosia jouduttiin siirtämään pois Lipicasta useaan kertaan. Karstin tasangolla on myös muurin ympäröimä Štanjelin kylä, jonka linna sai nykyisen asunsa 1600-luvun lopulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Historia: Lehmus jokaisen varsan kunniaksi] 1580 — Vuonna 1580 Sisä-Itävallan arkkiherttua Kaarle perusti Karstin alueelle Lipican ratsutilan. Espanjalaista hevosta pidettiin ihanteellisena, ja Karstin maaperä ja ilmasto muistuttivat Espanjan oloja, joten paikka valittiin. Ensimmäiset hevoset, 24 tammaa ja kuusi oria, ostettiin Espanjasta vuonna 1581, ja seudun maanviljelijät häädettiin muualle. Paikan nimi tulee sanasta lipa, joka tarkoittaa lehmusta. Tilalla istutetaan yhä uusi lehmus jokaisen syntyvän varsan kunniaksi. Lipizzan-hevoset syntyvät tummina ja muuttuvat valkoisiksi vasta vuosien kuluessa.
+
+### 17.1
+KYSYMYS: Miksi ratsutila perustettiin juuri Karstin alueelle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lipica (kulttuuri)
+Tietoruudun teksti: Lipica on kylä Sežanan kunnassa Slovenian Karstin alueella, aivan Italian rajan tuntumassa. Se tunnetaan Lipican ori- eli ratsutilasta, jonka mukaan lipizzanerhevonen on saanut nimensä. Arkkiherttua Kaarle II perusti tilan vuonna 1580, ja ensimmäiset hevoset ostettiin Espanjasta 1581, koska Karstin maaperä ja ilmasto muistuttavat Espanjan oloja. Nykyisen muotonsa rotu sai Maria Teresian aikana, ja sotien tieltä hevosia jouduttiin siirtämään pois Lipicasta useaan kertaan. Karstin tasangolla on myös muurin ympäröimä Štanjelin kylä, jonka linna sai nykyisen asunsa 1600-luvun lopulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Historia: Lehmus jokaisen varsan kunniaksi] 1580 — Vuonna 1580 Sisä-Itävallan arkkiherttua Kaarle perusti Karstin alueelle Lipican ratsutilan. Espanjalaista hevosta pidettiin ihanteellisena, ja Karstin maaperä ja ilmasto muistuttivat Espanjan oloja, joten paikka valittiin. Ensimmäiset hevoset, 24 tammaa ja kuusi oria, ostettiin Espanjasta vuonna 1581, ja seudun maanviljelijät häädettiin muualle. Paikan nimi tulee sanasta lipa, joka tarkoittaa lehmusta. Tilalla istutetaan yhä uusi lehmus jokaisen syntyvän varsan kunniaksi. Lipizzan-hevoset syntyvät tummina ja muuttuvat valkoisiksi vasta vuosien kuluessa.
+
+### 17.2
+KYSYMYS: Mistä Lipican nimi tulee, ja mitä sillä on tekemistä varsojen kanssa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lipica (kulttuuri)
+Tietoruudun teksti: Lipica on kylä Sežanan kunnassa Slovenian Karstin alueella, aivan Italian rajan tuntumassa. Se tunnetaan Lipican ori- eli ratsutilasta, jonka mukaan lipizzanerhevonen on saanut nimensä. Arkkiherttua Kaarle II perusti tilan vuonna 1580, ja ensimmäiset hevoset ostettiin Espanjasta 1581, koska Karstin maaperä ja ilmasto muistuttavat Espanjan oloja. Nykyisen muotonsa rotu sai Maria Teresian aikana, ja sotien tieltä hevosia jouduttiin siirtämään pois Lipicasta useaan kertaan. Karstin tasangolla on myös muurin ympäröimä Štanjelin kylä, jonka linna sai nykyisen asunsa 1600-luvun lopulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Historia: Lehmus jokaisen varsan kunniaksi] 1580 — Vuonna 1580 Sisä-Itävallan arkkiherttua Kaarle perusti Karstin alueelle Lipican ratsutilan. Espanjalaista hevosta pidettiin ihanteellisena, ja Karstin maaperä ja ilmasto muistuttivat Espanjan oloja, joten paikka valittiin. Ensimmäiset hevoset, 24 tammaa ja kuusi oria, ostettiin Espanjasta vuonna 1581, ja seudun maanviljelijät häädettiin muualle. Paikan nimi tulee sanasta lipa, joka tarkoittaa lehmusta. Tilalla istutetaan yhä uusi lehmus jokaisen syntyvän varsan kunniaksi. Lipizzan-hevoset syntyvät tummina ja muuttuvat valkoisiksi vasta vuosien kuluessa.
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:hahmotelma-ormoz) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ormož (ruoka)
+Tietoruudun teksti: Ormož on Draava-joen vasemmalla rannalla Itä-Slovenian Prlekijan alueella, aivan Kroatian rajan tuntumassa. Kaupunki sai markkinaoikeudet vuonna 1293 ja kaupunkioikeudet 1331, ja pitkään sen tunnetuin nimi oli saksalainen Friedau; vielä vuoteen 1919 asti väestö oli enimmäkseen saksankielistä. Ptujin herrojen rakentamassa linnassa on nykyään museo. Kaupungin pohjoispuolella kohoavalla mäkimaalla on metsiä ja viinitarhoja, ja Ormožin viinikellari tunnetaan korkealaatuisista viineistään. Kaakkoispuolella oleva tekojärvi ja entisen sokeritehtaan altaista syntynyt lintualue ovat tärkeitä muuttolintujen elinympäristöjä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad-järvi — kaupunkilehti / Tšad-järvi: Ruokovene ja luonnonsuola] Järven saarilla ja rannoilla asuva Buduma-kansa on vuosisatoja elänyt kalastuksesta ja karjanhoidosta, ja sen tunnusmerkki on paksusta järviruo'osta sidottu vene, jonka keula kaartuu jyrkästi ylöspäin. Isompia veneitä käytettiin karjan ja kokonaisten perheiden kuljettamiseen, pienempiä kalastukseen. Yksi tärkeä rahtilasti oli luonnonsuola eli potaska, jota kerättiin järven pohjasedimenteistä ja kuivuneista altaista ja kuljetettiin näillä ruokoveneillä kauppapaikoille myytäväksi ja käytettäväksi muun muassa saippuan valmistuksessa ja karjan ruokinnassa.
+- [Rub al-Khali — kaupunkilehti / Luonto: Dyynit eivät vaella] Aavikon länsireunalla on 12 658 neliökilometrin suojelualue Uruq Bani Ma'arid, joka otettiin 2023 maailmanperintöön Saudi-Arabian ensimmäisenä luontokohteena. Se näyttää tiivistettynä, mistä hiekkameri koostuu: korkeita hiekkadyynejä ja niiden välissä suola-altaita. Punaiset dyyniselänteet kulkevat rinnakkain jopa sadanviidenkymmenen metrin korkuisina, ja niiden väliin jää hiekka- tai sorapohjaisia käytäviä. Suola-altaat eli sabkhat selittävät oudon havainnon: dyynit eivät vaella. Pintahiekka lentää tuulessa, mutta muoto pysyy, koska altaista nousee kosteutta dyynin juureen.
+
+### 18.1
+KYSYMYS: Miksi Ormožia kutsuttiin aiemmin nimellä Friedau?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ormož (ruoka)
+Tietoruudun teksti: Ormož on Draava-joen vasemmalla rannalla Itä-Slovenian Prlekijan alueella, aivan Kroatian rajan tuntumassa. Kaupunki sai markkinaoikeudet vuonna 1293 ja kaupunkioikeudet 1331, ja pitkään sen tunnetuin nimi oli saksalainen Friedau; vielä vuoteen 1919 asti väestö oli enimmäkseen saksankielistä. Ptujin herrojen rakentamassa linnassa on nykyään museo. Kaupungin pohjoispuolella kohoavalla mäkimaalla on metsiä ja viinitarhoja, ja Ormožin viinikellari tunnetaan korkealaatuisista viineistään. Kaakkoispuolella oleva tekojärvi ja entisen sokeritehtaan altaista syntynyt lintualue ovat tärkeitä muuttolintujen elinympäristöjä.
+
+### 18.2
+KYSYMYS: Mikä tekee entisen sokeritehtaan altaista tärkeän luontokohteen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ormož (ruoka)
+Tietoruudun teksti: Ormož on Draava-joen vasemmalla rannalla Itä-Slovenian Prlekijan alueella, aivan Kroatian rajan tuntumassa. Kaupunki sai markkinaoikeudet vuonna 1293 ja kaupunkioikeudet 1331, ja pitkään sen tunnetuin nimi oli saksalainen Friedau; vielä vuoteen 1919 asti väestö oli enimmäkseen saksankielistä. Ptujin herrojen rakentamassa linnassa on nykyään museo. Kaupungin pohjoispuolella kohoavalla mäkimaalla on metsiä ja viinitarhoja, ja Ormožin viinikellari tunnetaan korkealaatuisista viineistään. Kaakkoispuolella oleva tekojärvi ja entisen sokeritehtaan altaista syntynyt lintualue ovat tärkeitä muuttolintujen elinympäristöjä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad-järvi — kaupunkilehti / Tšad-järvi: Ruokovene ja luonnonsuola] Järven saarilla ja rannoilla asuva Buduma-kansa on vuosisatoja elänyt kalastuksesta ja karjanhoidosta, ja sen tunnusmerkki on paksusta järviruo'osta sidottu vene, jonka keula kaartuu jyrkästi ylöspäin. Isompia veneitä käytettiin karjan ja kokonaisten perheiden kuljettamiseen, pienempiä kalastukseen. Yksi tärkeä rahtilasti oli luonnonsuola eli potaska, jota kerättiin järven pohjasedimenteistä ja kuivuneista altaista ja kuljetettiin näillä ruokoveneillä kauppapaikoille myytäväksi ja käytettäväksi muun muassa saippuan valmistuksessa ja karjan ruokinnassa.
+- [Rub al-Khali — kaupunkilehti / Luonto: Dyynit eivät vaella] Aavikon länsireunalla on 12 658 neliökilometrin suojelualue Uruq Bani Ma'arid, joka otettiin 2023 maailmanperintöön Saudi-Arabian ensimmäisenä luontokohteena. Se näyttää tiivistettynä, mistä hiekkameri koostuu: korkeita hiekkadyynejä ja niiden välissä suola-altaita. Punaiset dyyniselänteet kulkevat rinnakkain jopa sadanviidenkymmenen metrin korkuisina, ja niiden väliin jää hiekka- tai sorapohjaisia käytäviä. Suola-altaat eli sabkhat selittävät oudon havainnon: dyynit eivät vaella. Pintahiekka lentää tuulessa, mutta muoto pysyy, koska altaista nousee kosteutta dyynin juureen.
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:hahmotelma-lendava) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lendava (kulttuuri)
+Tietoruudun teksti: Lendava on kaupunki Prekmurjen alueella, lähellä Unkarin ja Kroatian rajaa. Se on Slovenian unkarilaisvähemmistön keskus, ja kunnassa sekä sloveeni että unkari ovat virallisia kieliä. Kaupunki on saanut nimensä Ledava-joesta; unkariksi se on Lendva, aiemmin Alsólendva. Vuoteen 1918 asti Alsólendva oli Zalan komitaatin piiri Unkarin kuningaskunnassa. Kukkulalla keskustan yläpuolella seisoo pääosin 1700-luvulla rakennettu linna, entinen Esterházyn suvun omaisuus, jossa on nykyään museo ja galleria. Lendavassa on myös synagoga, yksi Slovenian kahdesta säilyneestä, ja ympäristössä on viinitarhoja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Makkara, jonka ainekset on säädetty tarkasti] 1912 — Kranjska klobasa eli Carniolan makkara on sloveenialainen esikeitetty makkara, joka muistuttaa puolalaista kielbasaa. Nimi tulee Krainin (sloveeniksi Kranjska) historiallisesta herttuakunnasta, ja sloveeninkielinen nimi mainitaan ensi kerran F. Kalinšekin keittokirjassa 1912. Makkarassa on vähintään 75–80 % sianlihaa ja enintään 20 % pekonia, ja mausteiksi sallitaan vain merisuola, valkosipulia, salpietaria ja mustapippuria. Makkarat liitetään pareiksi puutikulla ja kuumasavustetaan. Tammikuussa 2015 Slovenia sai sille EU:n suojatun maantieteellisen merkinnän (PGI), vaikka Itävalta, Kroatia ja Saksa vastustivat.
+
+### 19.1
+KYSYMYS: Miksi Lendavassa on sloveenin lisäksi virallisena kielenä unkari?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lendava (kulttuuri)
+Tietoruudun teksti: Lendava on kaupunki Prekmurjen alueella, lähellä Unkarin ja Kroatian rajaa. Se on Slovenian unkarilaisvähemmistön keskus, ja kunnassa sekä sloveeni että unkari ovat virallisia kieliä. Kaupunki on saanut nimensä Ledava-joesta; unkariksi se on Lendva, aiemmin Alsólendva. Vuoteen 1918 asti Alsólendva oli Zalan komitaatin piiri Unkarin kuningaskunnassa. Kukkulalla keskustan yläpuolella seisoo pääosin 1700-luvulla rakennettu linna, entinen Esterházyn suvun omaisuus, jossa on nykyään museo ja galleria. Lendavassa on myös synagoga, yksi Slovenian kahdesta säilyneestä, ja ympäristössä on viinitarhoja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Makkara, jonka ainekset on säädetty tarkasti] 1912 — Kranjska klobasa eli Carniolan makkara on sloveenialainen esikeitetty makkara, joka muistuttaa puolalaista kielbasaa. Nimi tulee Krainin (sloveeniksi Kranjska) historiallisesta herttuakunnasta, ja sloveeninkielinen nimi mainitaan ensi kerran F. Kalinšekin keittokirjassa 1912. Makkarassa on vähintään 75–80 % sianlihaa ja enintään 20 % pekonia, ja mausteiksi sallitaan vain merisuola, valkosipulia, salpietaria ja mustapippuria. Makkarat liitetään pareiksi puutikulla ja kuumasavustetaan. Tammikuussa 2015 Slovenia sai sille EU:n suojatun maantieteellisen merkinnän (PGI), vaikka Itävalta, Kroatia ja Saksa vastustivat.
+
+### 19.2
+KYSYMYS: Mikä tekee Lendavan synagogasta erityisen Sloveniassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lendava (kulttuuri)
+Tietoruudun teksti: Lendava on kaupunki Prekmurjen alueella, lähellä Unkarin ja Kroatian rajaa. Se on Slovenian unkarilaisvähemmistön keskus, ja kunnassa sekä sloveeni että unkari ovat virallisia kieliä. Kaupunki on saanut nimensä Ledava-joesta; unkariksi se on Lendva, aiemmin Alsólendva. Vuoteen 1918 asti Alsólendva oli Zalan komitaatin piiri Unkarin kuningaskunnassa. Kukkulalla keskustan yläpuolella seisoo pääosin 1700-luvulla rakennettu linna, entinen Esterházyn suvun omaisuus, jossa on nykyään museo ja galleria. Lendavassa on myös synagoga, yksi Slovenian kahdesta säilyneestä, ja ympäristössä on viinitarhoja.
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:hahmotelma-idrija) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Idrija (tekniikka)
+Tietoruudun teksti: Idrija on Länsi-Slovenian kaupunki Idrijca-joen laaksossa, joka tunnetaan elohopeakaivoksestaan. Legendan mukaan saavinvalmistaja huomasi lähteessä pisaran nestemäistä elohopeaa vuonna 1490. Idrija on yksi harvoista paikoista maailmassa, missä elohopeaa esiintyy sekä puhtaana että sinooperina eli elohopeasulfidimalmina. Kaivos ja sen rakennukset, kuten kaivostyöläisten asuinalueet ja kaivosteatteri, kuuluvat vuodesta 2012 UNESCOn maailmanperintöön yhdessä espanjalaisen Almadénin kanssa. Kaupunki on tunnettu myös idrijalaisesta nyplätystä pitsistä, joka on suojattu maantieteellisellä merkinnällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Historia: Saavin pohjalla kimalsi elohopea] 1490 — Legendan mukaan saavinvalmistaja huomasi vuonna 1490 Idrijan lähteessä kimaltavan nestemäisen metallin. Se oli elohopeaa, ja löytö teki pienestä vuoristokylästä tärkeän kaivoskaupungin. Habsburgien aikana Idrijan elohopea kuljetettiin muun muassa Espanjan valtakunnan hopeakaivoksille, joissa sitä tarvittiin hopean irrottamiseen malmista. Kaivos ulottui lopulta lähes 400 metrin syvyyteen. Kuvan ristikkotorni on Frančiškan kuilun nostotorni, ja sen huipulla risteävät vasarat, kaivosmiesten vanha tunnus. Vuonna 2012 Idrija liitettiin yhdessä espanjalaisen Almadénin kanssa Unescon maailmanperintölistalle.
+
+### 20.1
+KYSYMYS: Mihin elohopeaa tarvittiin hopea- ja kultakaivoksissa, ja miksi sitä kuljetettiin Idrijasta niin kauas?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Idrija (tekniikka)
+Tietoruudun teksti: Idrija on Länsi-Slovenian kaupunki Idrijca-joen laaksossa, joka tunnetaan elohopeakaivoksestaan. Legendan mukaan saavinvalmistaja huomasi lähteessä pisaran nestemäistä elohopeaa vuonna 1490. Idrija on yksi harvoista paikoista maailmassa, missä elohopeaa esiintyy sekä puhtaana että sinooperina eli elohopeasulfidimalmina. Kaivos ja sen rakennukset, kuten kaivostyöläisten asuinalueet ja kaivosteatteri, kuuluvat vuodesta 2012 UNESCOn maailmanperintöön yhdessä espanjalaisen Almadénin kanssa. Kaupunki on tunnettu myös idrijalaisesta nyplätystä pitsistä, joka on suojattu maantieteellisellä merkinnällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Historia: Saavin pohjalla kimalsi elohopea] 1490 — Legendan mukaan saavinvalmistaja huomasi vuonna 1490 Idrijan lähteessä kimaltavan nestemäisen metallin. Se oli elohopeaa, ja löytö teki pienestä vuoristokylästä tärkeän kaivoskaupungin. Habsburgien aikana Idrijan elohopea kuljetettiin muun muassa Espanjan valtakunnan hopeakaivoksille, joissa sitä tarvittiin hopean irrottamiseen malmista. Kaivos ulottui lopulta lähes 400 metrin syvyyteen. Kuvan ristikkotorni on Frančiškan kuilun nostotorni, ja sen huipulla risteävät vasarat, kaivosmiesten vanha tunnus. Vuonna 2012 Idrija liitettiin yhdessä espanjalaisen Almadénin kanssa Unescon maailmanperintölistalle.
+
+### 20.2
+KYSYMYS: Mikä tekee Idrijan elohopeasta harvinaista koko maailmassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Idrija (tekniikka)
+Tietoruudun teksti: Idrija on Länsi-Slovenian kaupunki Idrijca-joen laaksossa, joka tunnetaan elohopeakaivoksestaan. Legendan mukaan saavinvalmistaja huomasi lähteessä pisaran nestemäistä elohopeaa vuonna 1490. Idrija on yksi harvoista paikoista maailmassa, missä elohopeaa esiintyy sekä puhtaana että sinooperina eli elohopeasulfidimalmina. Kaivos ja sen rakennukset, kuten kaivostyöläisten asuinalueet ja kaivosteatteri, kuuluvat vuodesta 2012 UNESCOn maailmanperintöön yhdessä espanjalaisen Almadénin kanssa. Kaupunki on tunnettu myös idrijalaisesta nyplätystä pitsistä, joka on suojattu maantieteellisellä merkinnällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Historia: Saavin pohjalla kimalsi elohopea] 1490 — Legendan mukaan saavinvalmistaja huomasi vuonna 1490 Idrijan lähteessä kimaltavan nestemäisen metallin. Se oli elohopeaa, ja löytö teki pienestä vuoristokylästä tärkeän kaivoskaupungin. Habsburgien aikana Idrijan elohopea kuljetettiin muun muassa Espanjan valtakunnan hopeakaivoksille, joissa sitä tarvittiin hopean irrottamiseen malmista. Kaivos ulottui lopulta lähes 400 metrin syvyyteen. Kuvan ristikkotorni on Frančiškan kuilun nostotorni, ja sen huipulla risteävät vasarat, kaivosmiesten vanha tunnus. Vuonna 2012 Idrija liitettiin yhdessä espanjalaisen Almadénin kanssa Unescon maailmanperintölistalle.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

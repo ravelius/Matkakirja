@@ -1,0 +1,202 @@
+================ KOHTA 26 (kohde:hahmotelma-zice) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žička kartuzija (historia)
+Tietoruudun teksti: Žičen kartuusiluostari perustettiin vuosina 1155–1165 Steiermarkin rajakreivi Ottokar III:n ja hänen poikansa herttua Ottokar IV:n toimesta kapean Žičnica-puron laaksoon: se oli ensimmäinen kartusiaaniluostari saksankielisellä alueella ja samalla ensimmäinen Ranskan ja Italian ulkopuolella. Suuren skisman aikana koko kartusiaaniveljeskunnan ylipriorin istuin siirtyi Žičeen lähes kahdeksi vuosikymmeneksi (1391–1410), ja kolme Žičen prioria peräjälkeen toimi tänä aikana koko veljeskunnan ylipriorina. Osmanien ryöstöretki vuonna 1531 käynnisti luostarin rappion, ja se siirtyi välillä komendaattoripriorien ja jesuiittojen haltuun ennen kuin kartusiaanit saivat sen takaisin 1593. Keisari Joosef II lakkautti luostarin vuonna 1782 osana kirkollisia uudistuksiaan, minkä jälkeen rakennusten annettiin rapistua: jäljellä on nykyisin raunioita ja Johannes Kastajalle omistettu kirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Vanha ruhtinaanhovi] 1459 Vanha ruhtinaanhovi eli Curtea Veche oli aikoinaan Valakian ruhtinaiden linna Bukarestin keskustassa. Se rakennettiin vuonna 1459, ja seuraavien vuosisatojen aikana monet hallitsijat laajensivat ja kaunistivat sitä. Muun muassa ruhtinas Constantin Brâncoveanu lisäsi linnaan komean marmoriportaikon. Linna sijaitsi lähellä jokea, ja sen ympärille kasvoi kauppiaiden ja käsityöläisten kortteli, joka teki paikasta koko kaupungin taloudellisen keskuksen. Vuonna 1775 ruhtinaat muuttivat uuteen palatsiin, ja vanha hovi jätettiin rappeutumaan, kunnes se lopulta myytiin huutokaupalla vuonna 1798. Nykyään paikalla on vain raunioita: vanhoja kivimuureja ja holvikaaria, joita arkeologit ovat kaivan…
+- [Guatemala — kohdekartta / Kohdekartta: San Juan de Diosin sairaala] 1667 Sairaalaveljeskunnan munkit saapuivat Meksikosta vanhaan pääkaupunkiin 1630 isä Carlos Cívico de la Cerdan johdolla ja perustivat luostarinsa 1636. Sen jälkeen he hoitivat kenraalikapteenikunnan sairaaloita. Sairaalat oli jaettu potilaiden mukaan: San Alejo alkuperäisväestölle, San Pedro papistolle, Santiago espanjalaisille ja mulateille sekä San Lázaro omanaan. Vuonna 1667 dominikaanit luovuttivat San Alejon veljeskunnalle, ja 1685 San Alejo ja Santiago yhdistettiin San Juan de Diosin sairaalaksi. Se on siis syntynyt kahdesta eriytetystä sairaalasta yhdeksi. Vuoden 1773 järistysten jälkeen sairaala muutti muun kaupungin mukana uuteen pääkaupunkiin ja sijoittui kaupungin länsilaidalle.…
+
+### 26.1
+KYSYMYS: Mikä teki Žičen luostarista poikkeuksellisen tärkeän koko kartusiaanien veljeskunnalle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žička kartuzija (historia)
+Tietoruudun teksti: Žičen kartuusiluostari perustettiin vuosina 1155–1165 Steiermarkin rajakreivi Ottokar III:n ja hänen poikansa herttua Ottokar IV:n toimesta kapean Žičnica-puron laaksoon: se oli ensimmäinen kartusiaaniluostari saksankielisellä alueella ja samalla ensimmäinen Ranskan ja Italian ulkopuolella. Suuren skisman aikana koko kartusiaaniveljeskunnan ylipriorin istuin siirtyi Žičeen lähes kahdeksi vuosikymmeneksi (1391–1410), ja kolme Žičen prioria peräjälkeen toimi tänä aikana koko veljeskunnan ylipriorina. Osmanien ryöstöretki vuonna 1531 käynnisti luostarin rappion, ja se siirtyi välillä komendaattoripriorien ja jesuiittojen haltuun ennen kuin kartusiaanit saivat sen takaisin 1593. Keisari Joosef II lakkautti luostarin vuonna 1782 osana kirkollisia uudistuksiaan, minkä jälkeen rakennusten annettiin rapistua: jäljellä on nykyisin raunioita ja Johannes Kastajalle omistettu kirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Guatemala — kohdekartta / Kohdekartta: San Juan de Diosin sairaala] 1667 Sairaalaveljeskunnan munkit saapuivat Meksikosta vanhaan pääkaupunkiin 1630 isä Carlos Cívico de la Cerdan johdolla ja perustivat luostarinsa 1636. Sen jälkeen he hoitivat kenraalikapteenikunnan sairaaloita. Sairaalat oli jaettu potilaiden mukaan: San Alejo alkuperäisväestölle, San Pedro papistolle, Santiago espanjalaisille ja mulateille sekä San Lázaro omanaan. Vuonna 1667 dominikaanit luovuttivat San Alejon veljeskunnalle, ja 1685 San Alejo ja Santiago yhdistettiin San Juan de Diosin sairaalaksi. Se on siis syntynyt kahdesta eriytetystä sairaalasta yhdeksi. Vuoden 1773 järistysten jälkeen sairaala muutti muun kaupungin mukana uuteen pääkaupunkiin ja sijoittui kaupungin länsilaidalle.…
+
+### 26.2
+KYSYMYS: Miksi luostari lopulta lakkautettiin ja jätettiin rappeutumaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žička kartuzija (historia)
+Tietoruudun teksti: Žičen kartuusiluostari perustettiin vuosina 1155–1165 Steiermarkin rajakreivi Ottokar III:n ja hänen poikansa herttua Ottokar IV:n toimesta kapean Žičnica-puron laaksoon: se oli ensimmäinen kartusiaaniluostari saksankielisellä alueella ja samalla ensimmäinen Ranskan ja Italian ulkopuolella. Suuren skisman aikana koko kartusiaaniveljeskunnan ylipriorin istuin siirtyi Žičeen lähes kahdeksi vuosikymmeneksi (1391–1410), ja kolme Žičen prioria peräjälkeen toimi tänä aikana koko veljeskunnan ylipriorina. Osmanien ryöstöretki vuonna 1531 käynnisti luostarin rappion, ja se siirtyi välillä komendaattoripriorien ja jesuiittojen haltuun ennen kuin kartusiaanit saivat sen takaisin 1593. Keisari Joosef II lakkautti luostarin vuonna 1782 osana kirkollisia uudistuksiaan, minkä jälkeen rakennusten annettiin rapistua: jäljellä on nykyisin raunioita ja Johannes Kastajalle omistettu kirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Vanha ruhtinaanhovi] 1459 Vanha ruhtinaanhovi eli Curtea Veche oli aikoinaan Valakian ruhtinaiden linna Bukarestin keskustassa. Se rakennettiin vuonna 1459, ja seuraavien vuosisatojen aikana monet hallitsijat laajensivat ja kaunistivat sitä. Muun muassa ruhtinas Constantin Brâncoveanu lisäsi linnaan komean marmoriportaikon. Linna sijaitsi lähellä jokea, ja sen ympärille kasvoi kauppiaiden ja käsityöläisten kortteli, joka teki paikasta koko kaupungin taloudellisen keskuksen. Vuonna 1775 ruhtinaat muuttivat uuteen palatsiin, ja vanha hovi jätettiin rappeutumaan, kunnes se lopulta myytiin huutokaupalla vuonna 1798. Nykyään paikalla on vain raunioita: vanhoja kivimuureja ja holvikaaria, joita arkeologit ovat kaivan…
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-koper) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koper (kauppa)
+Tietoruudun teksti: Koper syntyi roomalaisajan saarikaupunkina, jota kutsuttiin ensin Aegidaksi ja sittemmin, kun trieteläiset pakenivat sinne langobardien hyökkäystä vuonna 568, Justinopolikseksi keisari Justinianus II:n mukaan. Kaupunki liittyi Venetsian tasavaltaan vuonna 1278 ja kasvoi koko Venetsian Istrian pääkaupungiksi nimellä Caput Histriae, josta tuli myöhemmin italiaksi Capodistria; parhaimmillaan asukkaita oli yli 10 000, ennen kuin 1500-luvun ruttoaallot verottivat väestöä rajusti. Kaupunki oli tunnettu jo 1100-luvulta lähtien suolapadoistaan, joilla merivettä haihdutettiin altaissa. Kun Trieste julistettiin vapaasatamaksi vuonna 1719, Koper menetti kauppamonopolinsa eikä koskaan saanut asemaansa takaisin. Napoleonin sotien jälkeen kaupunki siirtyi Itävallan haltuun vuonna 1813 ja kuului Itävallan Primorskaan aina vuoteen 1918 asti.
+
+### 27.1
+KYSYMYS: Miksi Koper sai roomalaisajan jälkeen nimen Justinopolis?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koper (kauppa)
+Tietoruudun teksti: Koper syntyi roomalaisajan saarikaupunkina, jota kutsuttiin ensin Aegidaksi ja sittemmin, kun trieteläiset pakenivat sinne langobardien hyökkäystä vuonna 568, Justinopolikseksi keisari Justinianus II:n mukaan. Kaupunki liittyi Venetsian tasavaltaan vuonna 1278 ja kasvoi koko Venetsian Istrian pääkaupungiksi nimellä Caput Histriae, josta tuli myöhemmin italiaksi Capodistria; parhaimmillaan asukkaita oli yli 10 000, ennen kuin 1500-luvun ruttoaallot verottivat väestöä rajusti. Kaupunki oli tunnettu jo 1100-luvulta lähtien suolapadoistaan, joilla merivettä haihdutettiin altaissa. Kun Trieste julistettiin vapaasatamaksi vuonna 1719, Koper menetti kauppamonopolinsa eikä koskaan saanut asemaansa takaisin. Napoleonin sotien jälkeen kaupunki siirtyi Itävallan haltuun vuonna 1813 ja kuului Itävallan Primorskaan aina vuoteen 1918 asti.
+
+### 27.2
+KYSYMYS: Miten Triesten vapaasatama-asema vuonna 1719 vaikutti Koperin kauppaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koper (kauppa)
+Tietoruudun teksti: Koper syntyi roomalaisajan saarikaupunkina, jota kutsuttiin ensin Aegidaksi ja sittemmin, kun trieteläiset pakenivat sinne langobardien hyökkäystä vuonna 568, Justinopolikseksi keisari Justinianus II:n mukaan. Kaupunki liittyi Venetsian tasavaltaan vuonna 1278 ja kasvoi koko Venetsian Istrian pääkaupungiksi nimellä Caput Histriae, josta tuli myöhemmin italiaksi Capodistria; parhaimmillaan asukkaita oli yli 10 000, ennen kuin 1500-luvun ruttoaallot verottivat väestöä rajusti. Kaupunki oli tunnettu jo 1100-luvulta lähtien suolapadoistaan, joilla merivettä haihdutettiin altaissa. Kun Trieste julistettiin vapaasatamaksi vuonna 1719, Koper menetti kauppamonopolinsa eikä koskaan saanut asemaansa takaisin. Napoleonin sotien jälkeen kaupunki siirtyi Itävallan haltuun vuonna 1813 ja kuului Itävallan Primorskaan aina vuoteen 1918 asti.
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-ljubljana) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ljubljana (historia)
+Tietoruudun teksti: Ljubljana on Kranin herttuakunnan ja nykyisen Slovenian pääkaupunki Ljubljanicajoen rannalla, ja sen juuret ulottuvat roomalaiseen Emona-nimiseen leiriin, jonka legioonat perustivat noin 50 eaa. Vanhan tarun mukaan kaupungin perusti kreikkalainen sankari Iason, joka matkalla kultaisen taljan kanssa kotiin surmasi joen lähteellä lymynneen lohikäärmeen; lohikäärmeestä tuli kaupungin vaakunaeläin ja myöhemmin Lohikäärmesillan koriste-eläin. Ljubljanan linna kohoaa kaupungin yllä kukkulalla, ja kaupungista tuli Kranin pääkaupunki Habsburgien alaisuudessa vuonna 1335. Voimakas maanjäristys tuhosi suuren osan vanhastakaupungista jo vuonna 1511, mutta vielä tuhoisampi järistys iski huhtikuussa 1895, jolloin 31 000 asukkaan kaupungista tuhoutui noin kymmenesosa 1 400 rakennuksesta ja 21 ihmistä kuoli. Jälleenrakennus toi kaupunkiin runsaasti wieniläistä secession-tyylin arkkitehtuuria.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Historia] Roomalaisten Emonasta ranskalaisten Illyriaan ja vuoden 1895 järistykseen: Ljubljana on uusiutunut monta kertaa, ja jokaisesta kerroksesta näkyy jälki vielä katukuvassa.
+- [Murzuk — kaupunkilehti / Murzuk: Alexandrine Tinnén viimeinen matka] Alkuvuodesta 1869 hollantilainen tutkimusmatkailija Alexandrine Tinné saapui Murzukiin aikeenaan ylittää Sahara ensimmäisenä eurooppalaisena naisena. Kaupungissa hän tapasi Gustav Nachtigalin ja toivoi jatkavansa matkaa tämän kanssa, mutta kun Nachtigal suuntasikin ensin Tibestiin, Tinné lähti omalla karavaanillaan yksin kohti Ghatia. Elokuussa 1869 hänen saattueensa tuhoutui matkalla: oppaiksi palkatut tuaregit surmasivat Tinnén ja kaksi hollantilaista merimiestä, luultavasti uskoen naisen vesitynnyreiden kätkevän kultaa. Murzukista lähtenyt matka jäi Tinnén viimeiseksi, vain neljä vuotta ennen isoisän saapumista samoille reiteille.
+- [Samarkand — kaupunkilehti / Historia: Tšingis-kaani ja Timurin työmaa] Mongolit valtasivat Samarkandin 1220. Historioitsija Juvaynin mukaan Tšingis-kaani surmasi linnoitukseen ja moskeijaan paenneet, ryösti kaupungin ja otti palvelukseensa 30 000 nuorta miestä ja 30 000 käsityöläistä. Kaupunki pysyi Tšagatai-kaanikunnan osana vuoteen 1370, jolloin Timur teki siitä valtakuntansa pääkaupungin. Seuraavien 35 vuoden aikana hän kutsui parhaat käsityöläiset valtakuntansa joka kolkasta, kaivatti kaupungin ympärille ojat ja rakensi sen ympäri kahdeksan kilometrin muurin; asukkaita oli noin 150 000. Kastilian lähettiläs Ruy González de Clavijo vieraili 1404 ja kutsui Timurin moskeijaa jaloimmaksi näkemäkseen.
+
+### 28.1
+KYSYMYS: Kuka tarun mukaan surmasi lohikäärmeen Ljubljanican lähteellä, ja miksi hän oli sinne matkalla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ljubljana (historia)
+Tietoruudun teksti: Ljubljana on Kranin herttuakunnan ja nykyisen Slovenian pääkaupunki Ljubljanicajoen rannalla, ja sen juuret ulottuvat roomalaiseen Emona-nimiseen leiriin, jonka legioonat perustivat noin 50 eaa. Vanhan tarun mukaan kaupungin perusti kreikkalainen sankari Iason, joka matkalla kultaisen taljan kanssa kotiin surmasi joen lähteellä lymynneen lohikäärmeen; lohikäärmeestä tuli kaupungin vaakunaeläin ja myöhemmin Lohikäärmesillan koriste-eläin. Ljubljanan linna kohoaa kaupungin yllä kukkulalla, ja kaupungista tuli Kranin pääkaupunki Habsburgien alaisuudessa vuonna 1335. Voimakas maanjäristys tuhosi suuren osan vanhastakaupungista jo vuonna 1511, mutta vielä tuhoisampi järistys iski huhtikuussa 1895, jolloin 31 000 asukkaan kaupungista tuhoutui noin kymmenesosa 1 400 rakennuksesta ja 21 ihmistä kuoli. Jälleenrakennus toi kaupunkiin runsaasti wieniläistä secession-tyylin arkkitehtuuria.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Murzuk — kaupunkilehti / Murzuk: Alexandrine Tinnén viimeinen matka] Alkuvuodesta 1869 hollantilainen tutkimusmatkailija Alexandrine Tinné saapui Murzukiin aikeenaan ylittää Sahara ensimmäisenä eurooppalaisena naisena. Kaupungissa hän tapasi Gustav Nachtigalin ja toivoi jatkavansa matkaa tämän kanssa, mutta kun Nachtigal suuntasikin ensin Tibestiin, Tinné lähti omalla karavaanillaan yksin kohti Ghatia. Elokuussa 1869 hänen saattueensa tuhoutui matkalla: oppaiksi palkatut tuaregit surmasivat Tinnén ja kaksi hollantilaista merimiestä, luultavasti uskoen naisen vesitynnyreiden kätkevän kultaa. Murzukista lähtenyt matka jäi Tinnén viimeiseksi, vain neljä vuotta ennen isoisän saapumista samoille reiteille.
+- [Samarkand — kaupunkilehti / Historia: Tšingis-kaani ja Timurin työmaa] Mongolit valtasivat Samarkandin 1220. Historioitsija Juvaynin mukaan Tšingis-kaani surmasi linnoitukseen ja moskeijaan paenneet, ryösti kaupungin ja otti palvelukseensa 30 000 nuorta miestä ja 30 000 käsityöläistä. Kaupunki pysyi Tšagatai-kaanikunnan osana vuoteen 1370, jolloin Timur teki siitä valtakuntansa pääkaupungin. Seuraavien 35 vuoden aikana hän kutsui parhaat käsityöläiset valtakuntansa joka kolkasta, kaivatti kaupungin ympärille ojat ja rakensi sen ympäri kahdeksan kilometrin muurin; asukkaita oli noin 150 000. Kastilian lähettiläs Ruy González de Clavijo vieraili 1404 ja kutsui Timurin moskeijaa jaloimmaksi näkemäkseen.
+
+### 28.2
+KYSYMYS: Mitä Ljubljanalle tapahtui huhtikuussa 1895, ja miten se näkyy kaupungin arkkitehtuurissa vieläkin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ljubljana (historia)
+Tietoruudun teksti: Ljubljana on Kranin herttuakunnan ja nykyisen Slovenian pääkaupunki Ljubljanicajoen rannalla, ja sen juuret ulottuvat roomalaiseen Emona-nimiseen leiriin, jonka legioonat perustivat noin 50 eaa. Vanhan tarun mukaan kaupungin perusti kreikkalainen sankari Iason, joka matkalla kultaisen taljan kanssa kotiin surmasi joen lähteellä lymynneen lohikäärmeen; lohikäärmeestä tuli kaupungin vaakunaeläin ja myöhemmin Lohikäärmesillan koriste-eläin. Ljubljanan linna kohoaa kaupungin yllä kukkulalla, ja kaupungista tuli Kranin pääkaupunki Habsburgien alaisuudessa vuonna 1335. Voimakas maanjäristys tuhosi suuren osan vanhastakaupungista jo vuonna 1511, mutta vielä tuhoisampi järistys iski huhtikuussa 1895, jolloin 31 000 asukkaan kaupungista tuhoutui noin kymmenesosa 1 400 rakennuksesta ja 21 ihmistä kuoli. Jälleenrakennus toi kaupunkiin runsaasti wieniläistä secession-tyylin arkkitehtuuria.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Historia] Roomalaisten Emonasta ranskalaisten Illyriaan ja vuoden 1895 järistykseen: Ljubljana on uusiutunut monta kertaa, ja jokaisesta kerroksesta näkyy jälki vielä katukuvassa.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-kocevje) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kočevje (kulttuuri)
+Tietoruudun teksti: Kočevje sijaitsee Etelä-Sloveniassa Rinža-joen varrella keskellä laajaa metsäaluetta, jonka Akvileian patriarkka luovutti 1300-luvulla Ortenburgin kreiveille. Kreivit kutsuivat alueelle saksankielisiä uudisraivaajia Tirolista ja Kärntenistä noin vuodesta 1330 lähtien, ja heistä tuli tunnettuja nimellä gottscheelaiset (slovenian kielellä Kočevarji): he raivasivat metsää ja perustivat kymmeniä kyliä omalla, muusta saksasta eristyneellä murteellaan. Kočevje sai markkinaoikeudet vuonna 1377 ja kaupunkioikeudet vuonna 1471, ja se kuului satojen vuosien ajan Itävallan Krainiin. Kielisaari säilyi lähes 600 vuotta, kunnes Itävalta-Unkarin hajoaminen vuonna 1918 teki gottscheelaisista yhtäkkiä vähemmistön uudessa slaavilaisvaltiossa, ja toisen maailmansodan myllerryksissä lähes koko yhteisö siirrettiin pois alueelta 1940-luvun alussa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Darwin — kaupunkilehti / Historia: Joulu jolloin kaupunki hajosi] Jouluaamuna 25. joulukuuta 1974 hirmumyrsky Tracy pyyhkäisi Darwinin yli. Se tuhosi yli 70 prosenttia rakennuksista ja 80 prosenttia asuintaloista, ja asunnoista 94 prosenttia muuttui asumiskelvottomiksi. Yli 30 000 ihmistä siirrettiin pois kaupungista. Kuolinluku raportoitiin vuosikymmeniä 71:ksi, kunnes Pohjoisterritorion museon tutkimus totesi 2023 viiden uhrin tulleen lasketuksi kahdesti; oikea luku on 66, joista 45 maalla ja 21 merellä. Jouluna 2024, viisikymmentä vuotta myöhemmin, East Point Reserveen paljastettiin muistomerkki uhrien nimillä.
+
+### 29.1
+KYSYMYS: Mistä gottscheelaisten esi-isät tulivat Kočevjen seudulle 1300-luvulla, ja kuka heidät kutsui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kočevje (kulttuuri)
+Tietoruudun teksti: Kočevje sijaitsee Etelä-Sloveniassa Rinža-joen varrella keskellä laajaa metsäaluetta, jonka Akvileian patriarkka luovutti 1300-luvulla Ortenburgin kreiveille. Kreivit kutsuivat alueelle saksankielisiä uudisraivaajia Tirolista ja Kärntenistä noin vuodesta 1330 lähtien, ja heistä tuli tunnettuja nimellä gottscheelaiset (slovenian kielellä Kočevarji): he raivasivat metsää ja perustivat kymmeniä kyliä omalla, muusta saksasta eristyneellä murteellaan. Kočevje sai markkinaoikeudet vuonna 1377 ja kaupunkioikeudet vuonna 1471, ja se kuului satojen vuosien ajan Itävallan Krainiin. Kielisaari säilyi lähes 600 vuotta, kunnes Itävalta-Unkarin hajoaminen vuonna 1918 teki gottscheelaisista yhtäkkiä vähemmistön uudessa slaavilaisvaltiossa, ja toisen maailmansodan myllerryksissä lähes koko yhteisö siirrettiin pois alueelta 1940-luvun alussa.
+
+### 29.2
+KYSYMYS: Mitä kielisaarelle tapahtui, kun Itävalta-Unkari hajosi vuonna 1918?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kočevje (kulttuuri)
+Tietoruudun teksti: Kočevje sijaitsee Etelä-Sloveniassa Rinža-joen varrella keskellä laajaa metsäaluetta, jonka Akvileian patriarkka luovutti 1300-luvulla Ortenburgin kreiveille. Kreivit kutsuivat alueelle saksankielisiä uudisraivaajia Tirolista ja Kärntenistä noin vuodesta 1330 lähtien, ja heistä tuli tunnettuja nimellä gottscheelaiset (slovenian kielellä Kočevarji): he raivasivat metsää ja perustivat kymmeniä kyliä omalla, muusta saksasta eristyneellä murteellaan. Kočevje sai markkinaoikeudet vuonna 1377 ja kaupunkioikeudet vuonna 1471, ja se kuului satojen vuosien ajan Itävallan Krainiin. Kielisaari säilyi lähes 600 vuotta, kunnes Itävalta-Unkarin hajoaminen vuonna 1918 teki gottscheelaisista yhtäkkiä vähemmistön uudessa slaavilaisvaltiossa, ja toisen maailmansodan myllerryksissä lähes koko yhteisö siirrettiin pois alueelta 1940-luvun alussa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Darwin — kaupunkilehti / Historia: Joulu jolloin kaupunki hajosi] Jouluaamuna 25. joulukuuta 1974 hirmumyrsky Tracy pyyhkäisi Darwinin yli. Se tuhosi yli 70 prosenttia rakennuksista ja 80 prosenttia asuintaloista, ja asunnoista 94 prosenttia muuttui asumiskelvottomiksi. Yli 30 000 ihmistä siirrettiin pois kaupungista. Kuolinluku raportoitiin vuosikymmeniä 71:ksi, kunnes Pohjoisterritorion museon tutkimus totesi 2023 viiden uhrin tulleen lasketuksi kahdesti; oikea luku on 66, joista 45 maalla ja 21 merellä. Jouluna 2024, viisikymmentä vuotta myöhemmin, East Point Reserveen paljastettiin muistomerkki uhrien nimillä.
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-vipava) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vipava (ruoka)
+Tietoruudun teksti: Vipava on pieni kaupunki Länsi-Sloveniassa, Vipava-joen lukuisten lähteiden äärellä ylä-Vipavanlaaksossa. Nimi juontuu kelttiläisestä sanasta vip, joka tarkoittaa jokea, ja seutu on ollut asuttu jo esiroomalaisella ajalla illyyrien ja kelttien toimesta. Laakso tunnetaan lauhkeasta, lähes Välimeren ilmastostaan, johon vaikuttavat sekä lämmin lounaistuuli että ajoittain jopa 200 kilometriä tunnissa puhaltava koillinen burja-tuuli. Suotuisa ilmasto tekee laaksosta Slovenian merkittävän viinialueen, jossa kasvatetaan erityisesti valkoviinirypäleitä kuten chardonnayta ja sauvignon blancia sekä paikallisia lajikkeita, ja lisäksi laaksossa viljellään persikoita, aprikooseja, persimoneja ja viikunoita. Vipavan kaupunki itse mainitaan asiakirjoissa ensi kerran vuonna 1367, ja se siirtyi Habsburgien haltuun vuonna 1501 sekä liitettiin Kraniniin vuonna 1535.
+
+### 30.1
+KYSYMYS: Mistä sanasta Vipavan nimen uskotaan juontuvan, ja mitä se tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vipava (ruoka)
+Tietoruudun teksti: Vipava on pieni kaupunki Länsi-Sloveniassa, Vipava-joen lukuisten lähteiden äärellä ylä-Vipavanlaaksossa. Nimi juontuu kelttiläisestä sanasta vip, joka tarkoittaa jokea, ja seutu on ollut asuttu jo esiroomalaisella ajalla illyyrien ja kelttien toimesta. Laakso tunnetaan lauhkeasta, lähes Välimeren ilmastostaan, johon vaikuttavat sekä lämmin lounaistuuli että ajoittain jopa 200 kilometriä tunnissa puhaltava koillinen burja-tuuli. Suotuisa ilmasto tekee laaksosta Slovenian merkittävän viinialueen, jossa kasvatetaan erityisesti valkoviinirypäleitä kuten chardonnayta ja sauvignon blancia sekä paikallisia lajikkeita, ja lisäksi laaksossa viljellään persikoita, aprikooseja, persimoneja ja viikunoita. Vipavan kaupunki itse mainitaan asiakirjoissa ensi kerran vuonna 1367, ja se siirtyi Habsburgien haltuun vuonna 1501 sekä liitettiin Kraniniin vuonna 1535.
+
+### 30.2
+KYSYMYS: Mikä on burja, ja miten se vaikuttaa Vipavanlaakson maisemaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vipava (ruoka)
+Tietoruudun teksti: Vipava on pieni kaupunki Länsi-Sloveniassa, Vipava-joen lukuisten lähteiden äärellä ylä-Vipavanlaaksossa. Nimi juontuu kelttiläisestä sanasta vip, joka tarkoittaa jokea, ja seutu on ollut asuttu jo esiroomalaisella ajalla illyyrien ja kelttien toimesta. Laakso tunnetaan lauhkeasta, lähes Välimeren ilmastostaan, johon vaikuttavat sekä lämmin lounaistuuli että ajoittain jopa 200 kilometriä tunnissa puhaltava koillinen burja-tuuli. Suotuisa ilmasto tekee laaksosta Slovenian merkittävän viinialueen, jossa kasvatetaan erityisesti valkoviinirypäleitä kuten chardonnayta ja sauvignon blancia sekä paikallisia lajikkeita, ja lisäksi laaksossa viljellään persikoita, aprikooseja, persimoneja ja viikunoita. Vipavan kaupunki itse mainitaan asiakirjoissa ensi kerran vuonna 1367, ja se siirtyi Habsburgien haltuun vuonna 1501 sekä liitettiin Kraniniin vuonna 1535.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI

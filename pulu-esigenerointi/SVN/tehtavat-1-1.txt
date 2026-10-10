@@ -1,0 +1,211 @@
+================ KOHTA 1 (kohde:hahmotelma-triglav) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Triglav (luonto · vuori)
+Tietoruudun teksti: Triglav on Slovenian korkein vuori ja Julian Alppien korkein huippu, noin 2 864 metriä merenpinnan yläpuolella. Nimi tulee muodosta, joka tarkoittaa kolmipäistä, sillä vuori näyttää Ylä-Krainin suunnalta kolmihuippuiselta. Ensimmäinen tunnettu nousu huipulle tehtiin vuonna 1778 Sigmund Zoisin aloitteesta, ja Valentin Stanič mittasi vuoren korkeuden vuonna 1808. Triglav on Slovenian ainoan kansallispuiston, Triglavin kansallispuiston, keskus, ja sen tyylitelty hahmo on osa Slovenian vaakunaa ja lippua. Vanhassa kansantarussa metsästäjä etsii aarretta, jota vartioi lumottu, kultasarvinen vuorikauris Zlatorog.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Vuori jonka nimi on kolmipäinen] 1778 — Triglav on Slovenian korkein vuori, noin 2 864 metriä, ja sen nimi tarkoittaa kolmipäistä, sillä Ylä-Kraiinin suunnasta se näyttää kolmihuippuiselta. Ensimmäinen tunnettu nousu tehtiin vuonna 1778 teollisuusmies Sigmund Zoisin aloitteesta. Huipulla seisoo pieni metallitorni: pappi Jakob Aljaž osti huipun yhdellä floriinilla huhtikuussa 1895, ja viisi miestä kokosi tornin viidessä tunnissa elokuussa. Torni ja vuori ovat kansallissymboleja. Sanotaan, että jokaisen aidon slovenialaisen pitäisi nousta huipulle kerran elämässään.
+
+### 1.1
+KYSYMYS: Miksi Triglavin nimi tarkoittaa kirjaimellisesti "kolmipäistä"?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Triglav (luonto · vuori)
+Tietoruudun teksti: Triglav on Slovenian korkein vuori ja Julian Alppien korkein huippu, noin 2 864 metriä merenpinnan yläpuolella. Nimi tulee muodosta, joka tarkoittaa kolmipäistä, sillä vuori näyttää Ylä-Krainin suunnalta kolmihuippuiselta. Ensimmäinen tunnettu nousu huipulle tehtiin vuonna 1778 Sigmund Zoisin aloitteesta, ja Valentin Stanič mittasi vuoren korkeuden vuonna 1808. Triglav on Slovenian ainoan kansallispuiston, Triglavin kansallispuiston, keskus, ja sen tyylitelty hahmo on osa Slovenian vaakunaa ja lippua. Vanhassa kansantarussa metsästäjä etsii aarretta, jota vartioi lumottu, kultasarvinen vuorikauris Zlatorog.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Vuori jonka nimi on kolmipäinen] 1778 — Triglav on Slovenian korkein vuori, noin 2 864 metriä, ja sen nimi tarkoittaa kolmipäistä, sillä Ylä-Kraiinin suunnasta se näyttää kolmihuippuiselta. Ensimmäinen tunnettu nousu tehtiin vuonna 1778 teollisuusmies Sigmund Zoisin aloitteesta. Huipulla seisoo pieni metallitorni: pappi Jakob Aljaž osti huipun yhdellä floriinilla huhtikuussa 1895, ja viisi miestä kokosi tornin viidessä tunnissa elokuussa. Torni ja vuori ovat kansallissymboleja. Sanotaan, että jokaisen aidon slovenialaisen pitäisi nousta huipulle kerran elämässään.
+
+### 1.2
+KYSYMYS: Mitä lumottu vuorikauris Zlatorog vartioi vanhassa kansantarussa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Triglav (luonto · vuori)
+Tietoruudun teksti: Triglav on Slovenian korkein vuori ja Julian Alppien korkein huippu, noin 2 864 metriä merenpinnan yläpuolella. Nimi tulee muodosta, joka tarkoittaa kolmipäistä, sillä vuori näyttää Ylä-Krainin suunnalta kolmihuippuiselta. Ensimmäinen tunnettu nousu huipulle tehtiin vuonna 1778 Sigmund Zoisin aloitteesta, ja Valentin Stanič mittasi vuoren korkeuden vuonna 1808. Triglav on Slovenian ainoan kansallispuiston, Triglavin kansallispuiston, keskus, ja sen tyylitelty hahmo on osa Slovenian vaakunaa ja lippua. Vanhassa kansantarussa metsästäjä etsii aarretta, jota vartioi lumottu, kultasarvinen vuorikauris Zlatorog.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:hahmotelma-bled) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bledinjärvi (luonto · järvi)
+Tietoruudun teksti: Bledinjärvi on Julian Alppien Ylä-Krainissa, Luoteis-Slovenian Bledin kaupungin rannalla sijaitseva järvi, jonka syntyyn ovat vaikuttaneet sekä jäätiköt että maankuoren liikkeet. Sen keskellä on pieni saari, jolla on Neitsyt Marian taivaaseenottamisen pyhiinvaelluskirkko, nykymuodossaan 1600-luvun lopulta. Kirkolle johtaa 99 kiviporrasta, ja saarelle mennään perinteisesti pletna-nimisellä, seisten soudetulla puuveneellä. Soutajien ammatti juontuu vuodesta 1740, jolloin keisarinna Maria Teresia antoi 22 paikalliselle perheelle yksinoikeuden kuljettaa pyhiinvaeltajia. Järven pohjoisrannan yläpuolella kohoaa keskiaikainen Bledin linna, jonka keisari Henrik II rakennutti vuonna 1004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Saari jonne morsian kannetaan] 1655 — Bledjärven pienellä saarella seisoo Neitsyt Marian taivaaseenoton pyhiinvaelluskirkko, jonka torni on 52 metriä korkea. Kirkolle johtaa barokkinen porrasnousu vuodelta 1655, jossa on 99 kiviporrasta, ja perinteen mukaan onni seuraa sulhasta, joka kantaa morsiamensa ylös asti. Sen jälkeen soitetaan kelloa ja tehdään toive. Saarelle ei mennä sillalla vaan pletna-veneellä, jota soutaja ohjaa seisaaltaan kahdella airolla. Vuonna 1740 Maria Teresia myönsi lauttaoikeuden 22 paikalliselle suvulle, ja monet nykysoutajat polveutuvat suoraan heistä. Järveä lämmittää 23-asteinen lämpölähde.
+- [Slovenia — maalehti / Luonto: Rotko avattiin kävelijöille] 1893 — Vintgarin rotko Bledin luoteispuolella on 1,6 kilometrin mittainen kuilu, jonka Radovna-joki on kaivertanut kallioon. Seinämät nousevat 50–100 metrin korkeuteen, ja jokeen on syntynyt vesialtaita ja koskia. Rotko oli pitkään melkein saavuttamaton, kunnes Gorjen pormestari Jakob Žumer ja valokuvaaja Benedikt Lergetporer tutkivat sen vuonna 1891. Kaksi vuotta myöhemmin siihen rakennettiin puisia kävelysiltoja, ja rotko avattiin yleisölle 26. elokuuta 1893. Rotkon päässä putoaa 13-metrinen Šum-vesiputous, Slovenian suurin jokivesiputous. Sana vintgar on sittemmin alkanut tarkoittaa muitakin suojeltuja rotkoja.
+
+### 2.1
+KYSYMYS: Miksi pletna-soutajan ammatti on yhä rajattu vain tietyille suvuille?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bledinjärvi (luonto · järvi)
+Tietoruudun teksti: Bledinjärvi on Julian Alppien Ylä-Krainissa, Luoteis-Slovenian Bledin kaupungin rannalla sijaitseva järvi, jonka syntyyn ovat vaikuttaneet sekä jäätiköt että maankuoren liikkeet. Sen keskellä on pieni saari, jolla on Neitsyt Marian taivaaseenottamisen pyhiinvaelluskirkko, nykymuodossaan 1600-luvun lopulta. Kirkolle johtaa 99 kiviporrasta, ja saarelle mennään perinteisesti pletna-nimisellä, seisten soudetulla puuveneellä. Soutajien ammatti juontuu vuodesta 1740, jolloin keisarinna Maria Teresia antoi 22 paikalliselle perheelle yksinoikeuden kuljettaa pyhiinvaeltajia. Järven pohjoisrannan yläpuolella kohoaa keskiaikainen Bledin linna, jonka keisari Henrik II rakennutti vuonna 1004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Saari jonne morsian kannetaan] 1655 — Bledjärven pienellä saarella seisoo Neitsyt Marian taivaaseenoton pyhiinvaelluskirkko, jonka torni on 52 metriä korkea. Kirkolle johtaa barokkinen porrasnousu vuodelta 1655, jossa on 99 kiviporrasta, ja perinteen mukaan onni seuraa sulhasta, joka kantaa morsiamensa ylös asti. Sen jälkeen soitetaan kelloa ja tehdään toive. Saarelle ei mennä sillalla vaan pletna-veneellä, jota soutaja ohjaa seisaaltaan kahdella airolla. Vuonna 1740 Maria Teresia myönsi lauttaoikeuden 22 paikalliselle suvulle, ja monet nykysoutajat polveutuvat suoraan heistä. Järveä lämmittää 23-asteinen lämpölähde.
+
+### 2.2
+KYSYMYS: Mitä perinteen mukaan sulhasen pitää tehdä Bledin saaren kirkon portailla häiden päivänä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bledinjärvi (luonto · järvi)
+Tietoruudun teksti: Bledinjärvi on Julian Alppien Ylä-Krainissa, Luoteis-Slovenian Bledin kaupungin rannalla sijaitseva järvi, jonka syntyyn ovat vaikuttaneet sekä jäätiköt että maankuoren liikkeet. Sen keskellä on pieni saari, jolla on Neitsyt Marian taivaaseenottamisen pyhiinvaelluskirkko, nykymuodossaan 1600-luvun lopulta. Kirkolle johtaa 99 kiviporrasta, ja saarelle mennään perinteisesti pletna-nimisellä, seisten soudetulla puuveneellä. Soutajien ammatti juontuu vuodesta 1740, jolloin keisarinna Maria Teresia antoi 22 paikalliselle perheelle yksinoikeuden kuljettaa pyhiinvaeltajia. Järven pohjoisrannan yläpuolella kohoaa keskiaikainen Bledin linna, jonka keisari Henrik II rakennutti vuonna 1004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Rotko avattiin kävelijöille] 1893 — Vintgarin rotko Bledin luoteispuolella on 1,6 kilometrin mittainen kuilu, jonka Radovna-joki on kaivertanut kallioon. Seinämät nousevat 50–100 metrin korkeuteen, ja jokeen on syntynyt vesialtaita ja koskia. Rotko oli pitkään melkein saavuttamaton, kunnes Gorjen pormestari Jakob Žumer ja valokuvaaja Benedikt Lergetporer tutkivat sen vuonna 1891. Kaksi vuotta myöhemmin siihen rakennettiin puisia kävelysiltoja, ja rotko avattiin yleisölle 26. elokuuta 1893. Rotkon päässä putoaa 13-metrinen Šum-vesiputous, Slovenian suurin jokivesiputous. Sana vintgar on sittemmin alkanut tarkoittaa muitakin suojeltuja rotkoja.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:hahmotelma-soca) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Soča (luonto · joki)
+Tietoruudun teksti: Soča eli italiaksi Isonzo on 138-kilometrinen joki, joka virtaa Länsi-Slovenian halki ja päättyy Koillis-Italiassa Adrianmereen. Sen lähde on Trentan laaksossa Julian Alpeilla, ja matkalla joki kulkee Bovecin, Kobaridin ja Tolminin ohi. Vesi on kirkkaan smaragdinvihreää, minkä vuoksi jokea markkinoidaan nimellä Smaragdinen kaunotar. Tunnettuja nähtävyyksiä ovat Suuri ja Pieni Sočan rotko sekä Kozjakin putous, ja ylävirran erikoisuus on uhanalainen marmoripurotaimen. Ensimmäisessä maailmansodassa laakso oli Isonzon taistelujen näyttämö.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 3.1
+KYSYMYS: Mitä Sočan ja Isonzon nimi kertoo joen luonteesta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Soča (luonto · joki)
+Tietoruudun teksti: Soča eli italiaksi Isonzo on 138-kilometrinen joki, joka virtaa Länsi-Slovenian halki ja päättyy Koillis-Italiassa Adrianmereen. Sen lähde on Trentan laaksossa Julian Alpeilla, ja matkalla joki kulkee Bovecin, Kobaridin ja Tolminin ohi. Vesi on kirkkaan smaragdinvihreää, minkä vuoksi jokea markkinoidaan nimellä Smaragdinen kaunotar. Tunnettuja nähtävyyksiä ovat Suuri ja Pieni Sočan rotko sekä Kozjakin putous, ja ylävirran erikoisuus on uhanalainen marmoripurotaimen. Ensimmäisessä maailmansodassa laakso oli Isonzon taistelujen näyttämö.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 3.2
+KYSYMYS: Miten maanvyörymä vuonna 585 muutti joen ja sen lähijokien kulkua?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Soča (luonto · joki)
+Tietoruudun teksti: Soča eli italiaksi Isonzo on 138-kilometrinen joki, joka virtaa Länsi-Slovenian halki ja päättyy Koillis-Italiassa Adrianmereen. Sen lähde on Trentan laaksossa Julian Alpeilla, ja matkalla joki kulkee Bovecin, Kobaridin ja Tolminin ohi. Vesi on kirkkaan smaragdinvihreää, minkä vuoksi jokea markkinoidaan nimellä Smaragdinen kaunotar. Tunnettuja nähtävyyksiä ovat Suuri ja Pieni Sočan rotko sekä Kozjakin putous, ja ylävirran erikoisuus on uhanalainen marmoripurotaimen. Ensimmäisessä maailmansodassa laakso oli Isonzon taistelujen näyttämö.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:hahmotelma-velika-planina) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Velika Planina (luonto · vuori)
+Tietoruudun teksti: Velika Planina, eli suomeksi Suuri laidun, on Ylä-Krainissa Kamnikin Alppien karstiylängöllä sijaitseva hajanainen paimenkylä. Sen puiset majat ovat yhden huoneen asuntoja, joiden soikeat, päreillä katetut katot ulottuvat lähes maahan asti, joten katon alle jää suoja karjalle. Pysyviä asukkaita on vain vähän, mutta kesäisin ylängölle tuodaan yhä laumoja laiduntamaan. Kylä on yksi Euroopan harvoista näin laajoina säilyneistä paimenasutuksista. Paimenet rakensivat arkkitehti Jože Plečnikin suunnitelmien pohjalta Marija Snežna -kappelin, mutta sota-aikana kappeli ja sata muuta puurakennusta paloivat, ja uusi kappeli valmistui vuonna 1988.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kaupunkilehti / Bukarest: Paimen, jonka nimeä kaupunki kantaa] Bukarestin nimen alkuperää ei tiedetä varmasti, mutta perinne yhdistää sen Bucur-nimiseen mieheen: eri taruissa hän on paimen, kalastaja, metsästäjä tai ruhtinas. Katolinen lähetyssaarnaaja Blasius Kleiner kirjasi tarinan vuonna 1761 — Bucur paimensi lampaitaan Dâmbovițan rannalla, rakensi sinne kirkon ja sen viereen muutaman talon. Romanian sana bucurie tarkoittaa iloa, ja siitä kaupunki on saanut lempinimensä: ilon kaupunki. Radu Vodăn kadulla seisoo yhä pieni valkoinen Bucurin kirkko, jonka tutkijat tosin ajoittavat 1600- tai 1700-luvulle.
+
+### 4.1
+KYSYMYS: Miksi paimenmajojen soikeat katot ulottuvat lähes maahan asti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Velika Planina (luonto · vuori)
+Tietoruudun teksti: Velika Planina, eli suomeksi Suuri laidun, on Ylä-Krainissa Kamnikin Alppien karstiylängöllä sijaitseva hajanainen paimenkylä. Sen puiset majat ovat yhden huoneen asuntoja, joiden soikeat, päreillä katetut katot ulottuvat lähes maahan asti, joten katon alle jää suoja karjalle. Pysyviä asukkaita on vain vähän, mutta kesäisin ylängölle tuodaan yhä laumoja laiduntamaan. Kylä on yksi Euroopan harvoista näin laajoina säilyneistä paimenasutuksista. Paimenet rakensivat arkkitehti Jože Plečnikin suunnitelmien pohjalta Marija Snežna -kappelin, mutta sota-aikana kappeli ja sata muuta puurakennusta paloivat, ja uusi kappeli valmistui vuonna 1988.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kaupunkilehti / Bukarest: Paimen, jonka nimeä kaupunki kantaa] Bukarestin nimen alkuperää ei tiedetä varmasti, mutta perinne yhdistää sen Bucur-nimiseen mieheen: eri taruissa hän on paimen, kalastaja, metsästäjä tai ruhtinas. Katolinen lähetyssaarnaaja Blasius Kleiner kirjasi tarinan vuonna 1761 — Bucur paimensi lampaitaan Dâmbovițan rannalla, rakensi sinne kirkon ja sen viereen muutaman talon. Romanian sana bucurie tarkoittaa iloa, ja siitä kaupunki on saanut lempinimensä: ilon kaupunki. Radu Vodăn kadulla seisoo yhä pieni valkoinen Bucurin kirkko, jonka tutkijat tosin ajoittavat 1600- tai 1700-luvulle.
+
+### 4.2
+KYSYMYS: Mitä paimenmajojen kappelille tapahtui sodan aikana ja milloin uusi rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Velika Planina (luonto · vuori)
+Tietoruudun teksti: Velika Planina, eli suomeksi Suuri laidun, on Ylä-Krainissa Kamnikin Alppien karstiylängöllä sijaitseva hajanainen paimenkylä. Sen puiset majat ovat yhden huoneen asuntoja, joiden soikeat, päreillä katetut katot ulottuvat lähes maahan asti, joten katon alle jää suoja karjalle. Pysyviä asukkaita on vain vähän, mutta kesäisin ylängölle tuodaan yhä laumoja laiduntamaan. Kylä on yksi Euroopan harvoista näin laajoina säilyneistä paimenasutuksista. Paimenet rakensivat arkkitehti Jože Plečnikin suunnitelmien pohjalta Marija Snežna -kappelin, mutta sota-aikana kappeli ja sata muuta puurakennusta paloivat, ja uusi kappeli valmistui vuonna 1988.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kaupunkilehti / Bukarest: Paimen, jonka nimeä kaupunki kantaa] Bukarestin nimen alkuperää ei tiedetä varmasti, mutta perinne yhdistää sen Bucur-nimiseen mieheen: eri taruissa hän on paimen, kalastaja, metsästäjä tai ruhtinas. Katolinen lähetyssaarnaaja Blasius Kleiner kirjasi tarinan vuonna 1761 — Bucur paimensi lampaitaan Dâmbovițan rannalla, rakensi sinne kirkon ja sen viereen muutaman talon. Romanian sana bucurie tarkoittaa iloa, ja siitä kaupunki on saanut lempinimensä: ilon kaupunki. Radu Vodăn kadulla seisoo yhä pieni valkoinen Bucurin kirkko, jonka tutkijat tosin ajoittavat 1600- tai 1700-luvulle.
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:hahmotelma-cerknica) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cerknican järvi (luonto · järvi)
+Tietoruudun teksti: Cerknican järvi on Sisä-Krainissa, Cerknican karstipoljen eteläosassa sijaitseva ajoittain katoava järvi. Täynnä ollessaan se on Slovenian suurin järvi, ja pinta-ala vaihtelee yleensä noin 26–28 neliökilometrin välillä, mutta voi nousta jopa 38 neliökilometriin. Järvi on yhteydessä maanalaisiin onkaloihin: kesällä, kun sataa vähän, vesi valuu kokonaan alempiin luoliin ja pohja peittyy nopeasti rehevään kasvillisuuteen, ja syksyn sateiden myötä vesi purkautuu takaisin. Muutokset ovat epäsäännöllisiä, ja järvi oli kuivana yli vuoden vuosina 1834–35. Valvasor esitti järvestä oman selityksensä 1687, ja sen toiminnan kuvasi tarkasti ensimmäisenä Tobias Gruber vuonna 1781.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Järvi joka katoaa kesäksi] 1689 — Kun Cerknican järvi on täynnä, se on Slovenian suurin järvi, mutta kesällä sen vesi valuu maan alle, ja pohjaan kasvaa vehreä kasvillisuus. Syksyn sateiden jälkeen vesi nousee takaisin luolista niin nopeasti, että järvi voi tulvia ympäristöönsä. Joskus se on ollut kuivana yli vuoden, kuten vuosina 1834–35, ja kalat katoavat ja palaavat veden mukana. Vuonna 1689 Johann Weikhard von Valvasor kuvasi järveä ja toi karst-sanan eurooppalaisten tutkijoiden käyttöön kuvaamaan jokien maanalaista virtausta. Järvi on tärkeä lintualue, ja sen pinta-ala vaihtelee 28 ja 38 neliökilometrin välillä.
+
+### 5.1
+KYSYMYS: Minne Cerknican järven vesi katoaa kesäisin, ja mistä se palaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cerknican järvi (luonto · järvi)
+Tietoruudun teksti: Cerknican järvi on Sisä-Krainissa, Cerknican karstipoljen eteläosassa sijaitseva ajoittain katoava järvi. Täynnä ollessaan se on Slovenian suurin järvi, ja pinta-ala vaihtelee yleensä noin 26–28 neliökilometrin välillä, mutta voi nousta jopa 38 neliökilometriin. Järvi on yhteydessä maanalaisiin onkaloihin: kesällä, kun sataa vähän, vesi valuu kokonaan alempiin luoliin ja pohja peittyy nopeasti rehevään kasvillisuuteen, ja syksyn sateiden myötä vesi purkautuu takaisin. Muutokset ovat epäsäännöllisiä, ja järvi oli kuivana yli vuoden vuosina 1834–35. Valvasor esitti järvestä oman selityksensä 1687, ja sen toiminnan kuvasi tarkasti ensimmäisenä Tobias Gruber vuonna 1781.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Järvi joka katoaa kesäksi] 1689 — Kun Cerknican järvi on täynnä, se on Slovenian suurin järvi, mutta kesällä sen vesi valuu maan alle, ja pohjaan kasvaa vehreä kasvillisuus. Syksyn sateiden jälkeen vesi nousee takaisin luolista niin nopeasti, että järvi voi tulvia ympäristöönsä. Joskus se on ollut kuivana yli vuoden, kuten vuosina 1834–35, ja kalat katoavat ja palaavat veden mukana. Vuonna 1689 Johann Weikhard von Valvasor kuvasi järveä ja toi karst-sanan eurooppalaisten tutkijoiden käyttöön kuvaamaan jokien maanalaista virtausta. Järvi on tärkeä lintualue, ja sen pinta-ala vaihtelee 28 ja 38 neliökilometrin välillä.
+
+### 5.2
+KYSYMYS: Millä tavalla Valvasor ja Gruber yrittivät selittää järven arvoitusta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cerknican järvi (luonto · järvi)
+Tietoruudun teksti: Cerknican järvi on Sisä-Krainissa, Cerknican karstipoljen eteläosassa sijaitseva ajoittain katoava järvi. Täynnä ollessaan se on Slovenian suurin järvi, ja pinta-ala vaihtelee yleensä noin 26–28 neliökilometrin välillä, mutta voi nousta jopa 38 neliökilometriin. Järvi on yhteydessä maanalaisiin onkaloihin: kesällä, kun sataa vähän, vesi valuu kokonaan alempiin luoliin ja pohja peittyy nopeasti rehevään kasvillisuuteen, ja syksyn sateiden myötä vesi purkautuu takaisin. Muutokset ovat epäsäännöllisiä, ja järvi oli kuivana yli vuoden vuosina 1834–35. Valvasor esitti järvestä oman selityksensä 1687, ja sen toiminnan kuvasi tarkasti ensimmäisenä Tobias Gruber vuonna 1781.
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

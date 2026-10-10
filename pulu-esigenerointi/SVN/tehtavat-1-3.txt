@@ -1,0 +1,208 @@
+================ KOHTA 11 (kohde:hahmotelma-sticna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stičnan luostari (historia)
+Tietoruudun teksti: Stičnan luostari on Slovenian vanhin luostari ja maan ainoa edelleen toimiva sistersiläisluostari. Aquileian patriarkka Pellegrinus I antoi perustamiskirjan vuonna 1136, vaikka munkkielämä oli alkanut jo edellisenä vuonna. Luostarista tuli nopeasti tärkeä uskonnollinen, kulttuurinen ja taloudellinen keskus: sen kirjoitustuvassa tehtiin koristeltuja latinankielisiä käsikirjoituksia jo 1100-luvulla, ja sloveniankielinen Stičnan käsikirjoitus syntyi siellä 1400-luvulla. Luostarin koulussa uskotaan renessanssisäveltäjä Jacobus Gallusin saaneen ensimmäisen musiikkiopetuksensa. Osmanien ryöstöretket vaivasivat luostaria, ja keisari Joosef II lakkautti sen vuonna 1784; munkit palasivat vasta vuonna 1898.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venezuela — maalehti / Historia: Yhtiö, joka teki kaakaosta arvonimen] 1728–1784 — Vuosina 1700–1728 Espanjasta purjehti Venezuelaan vain viisi alusta: kaakaokauppa kulki hollantilaisten käsissä. Filip V myönsi 25. syyskuuta 1728 baskilaisille kauppiaille luvan perustaa Guipuzcoana-yhtiön, joka sai yksinoikeuden koko kauppaan. Ensimmäiset neljä laivaa lähtivät 1730 viidensadankuudenkymmenenyhden miehen ja neljän- tai viidenkymmenen tykin kanssa. Laivat lastattiin ylikuormaan, ja baskeista tuli rikas maanomistajaluokka: ilmaus un gran cacao tarkoittaa Venezuelassa yhä pilke silmässä merkkihenkilöä.
+- [Afganistan — maalehti / Ruoka: Kansallisruoka, joka ei ole kotoisin pääkaupungista] Qabeli palaw on Afganistanin kansallisruoka: höyrytettyä riisiä, karamellisoituja porkkanasuikaleita, rusinoita ja marinoitua lampaan- tai naudanlihaa, päälle manteleita ja pistaasipähkinöitä ja joskus sahramia. Englanniksi ruoka tunnetaan nimellä kabuli, mutta Kabulista se ei ole kotoisin — todennäköisemmin maan pohjoisrajalta Uzbekistanin puolelta, ja Saudi-Arabiassa sitä myydään bukharalaisena riisinä. Nimi on luultavasti väännös sanasta qabili, ja ensimmäiset kirjoitetut qabili-reseptit ovat vuoden 1521 käsikirjoituksessa Kar-nama, vanhimmassa persiankielisessä keittokirjassa.
+
+### 11.1
+KYSYMYS: Mitä erikoista on Stičnan käsikirjoituksessa, joka syntyi luostarin kirjoitustuvassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stičnan luostari (historia)
+Tietoruudun teksti: Stičnan luostari on Slovenian vanhin luostari ja maan ainoa edelleen toimiva sistersiläisluostari. Aquileian patriarkka Pellegrinus I antoi perustamiskirjan vuonna 1136, vaikka munkkielämä oli alkanut jo edellisenä vuonna. Luostarista tuli nopeasti tärkeä uskonnollinen, kulttuurinen ja taloudellinen keskus: sen kirjoitustuvassa tehtiin koristeltuja latinankielisiä käsikirjoituksia jo 1100-luvulla, ja sloveniankielinen Stičnan käsikirjoitus syntyi siellä 1400-luvulla. Luostarin koulussa uskotaan renessanssisäveltäjä Jacobus Gallusin saaneen ensimmäisen musiikkiopetuksensa. Osmanien ryöstöretket vaivasivat luostaria, ja keisari Joosef II lakkautti sen vuonna 1784; munkit palasivat vasta vuonna 1898.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Afganistan — maalehti / Ruoka: Kansallisruoka, joka ei ole kotoisin pääkaupungista] Qabeli palaw on Afganistanin kansallisruoka: höyrytettyä riisiä, karamellisoituja porkkanasuikaleita, rusinoita ja marinoitua lampaan- tai naudanlihaa, päälle manteleita ja pistaasipähkinöitä ja joskus sahramia. Englanniksi ruoka tunnetaan nimellä kabuli, mutta Kabulista se ei ole kotoisin — todennäköisemmin maan pohjoisrajalta Uzbekistanin puolelta, ja Saudi-Arabiassa sitä myydään bukharalaisena riisinä. Nimi on luultavasti väännös sanasta qabili, ja ensimmäiset kirjoitetut qabili-reseptit ovat vuoden 1521 käsikirjoituksessa Kar-nama, vanhimmassa persiankielisessä keittokirjassa.
+- [Unkari — maalehti / Luonto: Järvi, joka lämpenee nopeasti] Kesäisin — Balaton on Keski-Euroopan suurin järvi, pinta-alaltaan lähes kuusisataa neliökilometriä. Erikoista siinä on mataluus: keskisyvyys on vain runsaat kolme metriä, ja eteläreunalla voi kahlata satoja metrejä ennen kuin vesi ylettyy hartioihin. Matala vesi lämpenee nopeasti, joten järvi on kesällä lämpimämpi kuin useimmat Euroopan järvet. Samasta syystä se myös jäätyy talvella lähes joka vuosi. Rannat ovat purjehdusaluetta, sillä moottoriveneily on järvellä kielletty.
+- [Egypti — maalehti / Luonto: Riutta, joka sietää kuumaa] Punaisenmeren rannikolla kasvaa satoja kilometrejä koralliriuttaa, jonka väreissä sukeltaa muun muassa papukaijakaloja, keisarikaloja ja merikilpikonnia. Erikoista on, että nämä korallit kestävät lämpöä paremmin kuin mitkään muut maailmassa: vesi on täällä aina ollut lämmintä ja suolaista. Siksi tutkijat arvelevat, että Punaisenmeren riutta voi olla viimeisiä, jotka selviävät merien lämmetessä — koko maailman korallien varakappale.
+
+### 11.2
+KYSYMYS: Mitä luostarille tapahtui vuonna 1784, ja miten se sai uuden alun?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stičnan luostari (historia)
+Tietoruudun teksti: Stičnan luostari on Slovenian vanhin luostari ja maan ainoa edelleen toimiva sistersiläisluostari. Aquileian patriarkka Pellegrinus I antoi perustamiskirjan vuonna 1136, vaikka munkkielämä oli alkanut jo edellisenä vuonna. Luostarista tuli nopeasti tärkeä uskonnollinen, kulttuurinen ja taloudellinen keskus: sen kirjoitustuvassa tehtiin koristeltuja latinankielisiä käsikirjoituksia jo 1100-luvulla, ja sloveniankielinen Stičnan käsikirjoitus syntyi siellä 1400-luvulla. Luostarin koulussa uskotaan renessanssisäveltäjä Jacobus Gallusin saaneen ensimmäisen musiikkiopetuksensa. Osmanien ryöstöretket vaivasivat luostaria, ja keisari Joosef II lakkautti sen vuonna 1784; munkit palasivat vasta vuonna 1898.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venezuela — maalehti / Historia: Yhtiö, joka teki kaakaosta arvonimen] 1728–1784 — Vuosina 1700–1728 Espanjasta purjehti Venezuelaan vain viisi alusta: kaakaokauppa kulki hollantilaisten käsissä. Filip V myönsi 25. syyskuuta 1728 baskilaisille kauppiaille luvan perustaa Guipuzcoana-yhtiön, joka sai yksinoikeuden koko kauppaan. Ensimmäiset neljä laivaa lähtivät 1730 viidensadankuudenkymmenenyhden miehen ja neljän- tai viidenkymmenen tykin kanssa. Laivat lastattiin ylikuormaan, ja baskeista tuli rikas maanomistajaluokka: ilmaus un gran cacao tarkoittaa Venezuelassa yhä pilke silmässä merkkihenkilöä.
+- [Mandalay — kohdekartta / Kohdekartta: Mahamuni-temppeli] patsas tuotu 1784, temppeli 1896 Mahamuni on kaupunkia itseään vanhempi. Sen Buddha-kuva on kotoisin Arakanista, ja se tuotiin tänne vuonna 1784 — seitsemänkymmentäkolme vuotta ennen kuin Mandalay perustettiin. Kuva oli liian suuri kuljetettavaksi kokonaisena, joten se leikattiin osiin ja koottiin uudelleen perillä Amarapurassa, joka oli silloin kaksi vuotta vanha pääkaupunki. Istuva kuva on runsaat kolme ja puoli metriä korkea. Kuva on paksuuntunut vuosisatojen mittaan. Miespuoliset kävijät kiinnittävät siihen kultalehteä, ja kerros on paikoin viidentoista sentin paksuinen, mikä on tehnyt ääriviivoista epämääräiset. Oikea käsi, kruunu ja muut kuninkuuden tunnukset ovat kultalehdettä vailla…
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:hahmotelma-kobarid) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kobarid (historia)
+Tietoruudun teksti: Kobarid sijaitsee Sloveniassa Julian Alppien Ylä-Soča-laaksossa, Soča-joen ja Nadiža-joen yhtymäkohdassa lähellä Italian rajaa. Aluetta on asutettu esihistoriallisista ajoista, ja läheisestä Tonocov Gradin kohteesta on löytynyt roomalaisajan rakennusten jäänteitä. Paikka mainitaan kirjallisissa lähteissä ensimmäisen kerran vuonna 1184, ja Habsburgien maihin kuuluneena se pysyi Itävallan vallan alla vuoteen 1918. Ensimmäisen maailmansodan Isonzon taisteluissa kaupunki tuhoutui lähes kokonaan vuosina 1915–1917, ja vuoden 1917 Caporeton taistelu on sen tunnetuin tapahtuma. Taisteluita esittelee kaupungin keskustan museo, joka sai Euroopan neuvoston palkinnon vuonna 1993.
+
+### 12.1
+KYSYMYS: Mistä Kobaridin nimen arvellaan tulevan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kobarid (historia)
+Tietoruudun teksti: Kobarid sijaitsee Sloveniassa Julian Alppien Ylä-Soča-laaksossa, Soča-joen ja Nadiža-joen yhtymäkohdassa lähellä Italian rajaa. Aluetta on asutettu esihistoriallisista ajoista, ja läheisestä Tonocov Gradin kohteesta on löytynyt roomalaisajan rakennusten jäänteitä. Paikka mainitaan kirjallisissa lähteissä ensimmäisen kerran vuonna 1184, ja Habsburgien maihin kuuluneena se pysyi Itävallan vallan alla vuoteen 1918. Ensimmäisen maailmansodan Isonzon taisteluissa kaupunki tuhoutui lähes kokonaan vuosina 1915–1917, ja vuoden 1917 Caporeton taistelu on sen tunnetuin tapahtuma. Taisteluita esittelee kaupungin keskustan museo, joka sai Euroopan neuvoston palkinnon vuonna 1993.
+
+### 12.2
+KYSYMYS: Miksi Kobaridista tuli ensimmäisen maailmansodan aikana tunnettu paikka?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kobarid (historia)
+Tietoruudun teksti: Kobarid sijaitsee Sloveniassa Julian Alppien Ylä-Soča-laaksossa, Soča-joen ja Nadiža-joen yhtymäkohdassa lähellä Italian rajaa. Aluetta on asutettu esihistoriallisista ajoista, ja läheisestä Tonocov Gradin kohteesta on löytynyt roomalaisajan rakennusten jäänteitä. Paikka mainitaan kirjallisissa lähteissä ensimmäisen kerran vuonna 1184, ja Habsburgien maihin kuuluneena se pysyi Itävallan vallan alla vuoteen 1918. Ensimmäisen maailmansodan Isonzon taisteluissa kaupunki tuhoutui lähes kokonaan vuosina 1915–1917, ja vuoden 1917 Caporeton taistelu on sen tunnetuin tapahtuma. Taisteluita esittelee kaupungin keskustan museo, joka sai Euroopan neuvoston palkinnon vuonna 1993.
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:hahmotelma-ljubljansko-barje) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ljubljanan suo (historia)
+Tietoruudun teksti: Ljubljanan suo eli Ljubljansko barje on Ljubljanan eteläpuolella sijaitseva Slovenian suurin suo, jonka pinta-ala on 163 neliökilometriä. Esihistoriallisena aikana alue oli matala järvi, jonka rannoille rakennettiin paalukyliä. Suosta on löytynyt myös noin 5 150 vuotta vanha puinen pyörä akseleineen, jota pidetään maailman vanhimpana. Ensimmäinen paalukylä löydettiin Igin läheltä vuonna 1875, ja kaksi Igin lähellä olevaa asuinpaikkaa liitettiin Unescon maailmanperintöluetteloon vuonna 2011. Ensimmäinen tie suon poikki, Ljubljanasta Igiin, aloitettiin vuonna 1825 ja valmistui 1827. Nykyisin suuri osa alueesta on suojeltu maisemapuistona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Ruoka: Makkara ilman suolta] Sheftalia on kyproslainen grillimakkara, jossa ei ole lainkaan suolta. Täyte on jauhettua sian- tai lampaanlihaa, sipulia, persiljaa, suolaa ja pippuria, ja se kääritään verkkorasvaan eli vatsapaitaan — ohueen rasvakalvoon, joka ympäröi eläimen vatsaonteloa. Jokainen makkara kääritään erikseen tiiviiksi paketiksi. Grillissä rasvakalvo sulaa ja kastelee lihan sisältä, ja pinta ruskistuu rapeaksi; siksi sheftalia ei kuivu, vaikka siinä ei ole kuorta pitämässä nesteitä sisällä. Makkarat käännellään hiilloksen päällä tasaisin väliajoin ja tarjoillaan joko pitaleivässä salaatin kanssa tai lautasella. Saaren toinen grilliperinne on souvla, jossa suuret lihapalat pyörivät pitkässä vartaassa kauemp…
+- [Namibia — maalehti / Historia: Tuulinen kulma, jonka kapteeni valitsi] 1840–1885 — Oorlamien kapteeni Jonker Afrikaner lähti 1823 isänsä asuinsijoilta kolmen veljensä ja noin kolmensadan seuraajan kanssa pohjoiseen, ja pian hänen neuvostonsa hallitsi maan keskiosaa. Noin 1840 hän pysähtyi kuuman lähteen äärelle ja rakensi kivikirkon, johon mahtui viisisataa ihmistä. Nimen Windhoek hän antoi itse: se on joko afrikaansin tuulinen kulma tai muisto Winterhoekin vuorista, joiden juurella suku oli asunut. Vanhin tunnettu maininta nimestä on hänen kirjeessään 12. elokuuta 1844. Sotien jälkeen paikka autioitui: 1885 sinne saapunut kasvitieteilijä löysi enää sakaaleja ja nälkiintyneitä helmikanoja hoitamattomien hedelmäpuiden seasta.
+
+### 13.1
+KYSYMYS: Miksi Ljubljanan suolta on löytynyt niin paljon esihistoriallisia esineitä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ljubljanan suo (historia)
+Tietoruudun teksti: Ljubljanan suo eli Ljubljansko barje on Ljubljanan eteläpuolella sijaitseva Slovenian suurin suo, jonka pinta-ala on 163 neliökilometriä. Esihistoriallisena aikana alue oli matala järvi, jonka rannoille rakennettiin paalukyliä. Suosta on löytynyt myös noin 5 150 vuotta vanha puinen pyörä akseleineen, jota pidetään maailman vanhimpana. Ensimmäinen paalukylä löydettiin Igin läheltä vuonna 1875, ja kaksi Igin lähellä olevaa asuinpaikkaa liitettiin Unescon maailmanperintöluetteloon vuonna 2011. Ensimmäinen tie suon poikki, Ljubljanasta Igiin, aloitettiin vuonna 1825 ja valmistui 1827. Nykyisin suuri osa alueesta on suojeltu maisemapuistona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Ruoka: Makkara ilman suolta] Sheftalia on kyproslainen grillimakkara, jossa ei ole lainkaan suolta. Täyte on jauhettua sian- tai lampaanlihaa, sipulia, persiljaa, suolaa ja pippuria, ja se kääritään verkkorasvaan eli vatsapaitaan — ohueen rasvakalvoon, joka ympäröi eläimen vatsaonteloa. Jokainen makkara kääritään erikseen tiiviiksi paketiksi. Grillissä rasvakalvo sulaa ja kastelee lihan sisältä, ja pinta ruskistuu rapeaksi; siksi sheftalia ei kuivu, vaikka siinä ei ole kuorta pitämässä nesteitä sisällä. Makkarat käännellään hiilloksen päällä tasaisin väliajoin ja tarjoillaan joko pitaleivässä salaatin kanssa tai lautasella. Saaren toinen grilliperinne on souvla, jossa suuret lihapalat pyörivät pitkässä vartaassa kauemp…
+
+### 13.2
+KYSYMYS: Mitä paalukylä oli, ja miksi sellainen rakennettiin veden äärelle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ljubljanan suo (historia)
+Tietoruudun teksti: Ljubljanan suo eli Ljubljansko barje on Ljubljanan eteläpuolella sijaitseva Slovenian suurin suo, jonka pinta-ala on 163 neliökilometriä. Esihistoriallisena aikana alue oli matala järvi, jonka rannoille rakennettiin paalukyliä. Suosta on löytynyt myös noin 5 150 vuotta vanha puinen pyörä akseleineen, jota pidetään maailman vanhimpana. Ensimmäinen paalukylä löydettiin Igin läheltä vuonna 1875, ja kaksi Igin lähellä olevaa asuinpaikkaa liitettiin Unescon maailmanperintöluetteloon vuonna 2011. Ensimmäinen tie suon poikki, Ljubljanasta Igiin, aloitettiin vuonna 1825 ja valmistui 1827. Nykyisin suuri osa alueesta on suojeltu maisemapuistona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namibia — maalehti / Historia: Tuulinen kulma, jonka kapteeni valitsi] 1840–1885 — Oorlamien kapteeni Jonker Afrikaner lähti 1823 isänsä asuinsijoilta kolmen veljensä ja noin kolmensadan seuraajan kanssa pohjoiseen, ja pian hänen neuvostonsa hallitsi maan keskiosaa. Noin 1840 hän pysähtyi kuuman lähteen äärelle ja rakensi kivikirkon, johon mahtui viisisataa ihmistä. Nimen Windhoek hän antoi itse: se on joko afrikaansin tuulinen kulma tai muisto Winterhoekin vuorista, joiden juurella suku oli asunut. Vanhin tunnettu maininta nimestä on hänen kirjeessään 12. elokuuta 1844. Sotien jälkeen paikka autioitui: 1885 sinne saapunut kasvitieteilijä löysi enää sakaaleja ja nälkiintyneitä helmikanoja hoitamattomien hedelmäpuiden seasta.
+- [Viktorian putoukset — kaupunkilehti / Viktorian putoukset: Maailman suurin vesiverho] Viktorian putoukset syöksyvät alas 108 metrin korkeudesta lähes 1 700 metriä leveänä rintamana, ja korkeuden ja leveyden tulona laskettuna niitä pidetään maailman suurimpana yhtenäisenä vesiverhona. Zambezi-joki virtaa tasaista ylänköä pitkin, kunnes se osuu äkisti kapeaan halkeamaan basalttikalliossa ja syöksyy suoraan kapeaan rotkoon. Runsasvetisenä aikana putouksesta nousevan sumun näkee ja jyminän kuulee kymmenien kilometrien päähän, minkä ansiosta seudun asukkaat tunsivat ihmeen kauan ennen kuin yksikään ulkomaalainen astui sen äärelle.
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:hahmotelma-kostanjevica) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kostanjevica na Krki (historia)
+Tietoruudun teksti: Kostanjevica na Krki on pieni kaupunki Etelä-Slovenian historiallisessa Ala-Krainissa, Gorjancin kukkuloiden pohjoisjuurella lähellä Kroatian rajaa. Keskusta sijaitsee Krka-joen saarella, minkä vuoksi paikkaa mainostetaan nimellä "Ala-Krainin Venetsia". Se mainittiin kaupunkina ensimmäisen kerran vuonna 1210, ja sitä pidetään alueen vanhimpana kaupunkina. 1200-luvun alussa herttua Bernhard von Spanheim perusti paikalle sistersiläisluostarin, jonka varhaisgoottilainen kirkko on rakennettu vuonna 1234. Luostari laajennettiin barokkityyliin 1700-luvun alussa, mutta keisari Joosef II lakkautti sen vuonna 1785. Nykyisin entisissä luostarirakennuksissa toimii Božidar Jakacin galleria, jossa on veistospuisto ja taiteilijan töiden pysyvä näyttely.
+
+### 14.1
+KYSYMYS: Miksi Kostanjevica na Krkia kutsutaan Ala-Krainin Venetsiaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kostanjevica na Krki (historia)
+Tietoruudun teksti: Kostanjevica na Krki on pieni kaupunki Etelä-Slovenian historiallisessa Ala-Krainissa, Gorjancin kukkuloiden pohjoisjuurella lähellä Kroatian rajaa. Keskusta sijaitsee Krka-joen saarella, minkä vuoksi paikkaa mainostetaan nimellä "Ala-Krainin Venetsia". Se mainittiin kaupunkina ensimmäisen kerran vuonna 1210, ja sitä pidetään alueen vanhimpana kaupunkina. 1200-luvun alussa herttua Bernhard von Spanheim perusti paikalle sistersiläisluostarin, jonka varhaisgoottilainen kirkko on rakennettu vuonna 1234. Luostari laajennettiin barokkityyliin 1700-luvun alussa, mutta keisari Joosef II lakkautti sen vuonna 1785. Nykyisin entisissä luostarirakennuksissa toimii Božidar Jakacin galleria, jossa on veistospuisto ja taiteilijan töiden pysyvä näyttely.
+
+### 14.2
+KYSYMYS: Mitä entisessä sistersiläisluostarissa on nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kostanjevica na Krki (historia)
+Tietoruudun teksti: Kostanjevica na Krki on pieni kaupunki Etelä-Slovenian historiallisessa Ala-Krainissa, Gorjancin kukkuloiden pohjoisjuurella lähellä Kroatian rajaa. Keskusta sijaitsee Krka-joen saarella, minkä vuoksi paikkaa mainostetaan nimellä "Ala-Krainin Venetsia". Se mainittiin kaupunkina ensimmäisen kerran vuonna 1210, ja sitä pidetään alueen vanhimpana kaupunkina. 1200-luvun alussa herttua Bernhard von Spanheim perusti paikalle sistersiläisluostarin, jonka varhaisgoottilainen kirkko on rakennettu vuonna 1234. Luostari laajennettiin barokkityyliin 1700-luvun alussa, mutta keisari Joosef II lakkautti sen vuonna 1785. Nykyisin entisissä luostarirakennuksissa toimii Božidar Jakacin galleria, jossa on veistospuisto ja taiteilijan töiden pysyvä näyttely.
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:hahmotelma-piran) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Piran (kulttuuri)
+Tietoruudun teksti: Piran on Slovenian Istrian rannikolla Piranin lahden rannalla sijaitseva lomakaupunki, joka tunnetaan keskiaikaisesta rakennuskannastaan, kapeista kujistaan ja tiiviisti rakennetuista taloistaan. Kaupungissa puhutaan sekä sloveenia että italiaa. Piran kuului vuosina 1283–1797 Venetsian tasavallalle, ja venetsialainen vaikutus näkyy yhä sen rakennuksissa. Sen jälkeen kaupunki liitettiin Itävallan keisarikuntaan, ja 1800-luvun lopulla väestöstä noin 80 prosenttia oli kulttuuriltaan italialaisia. Kaupungin kuuluisin poika on viulisti ja säveltäjä Giuseppe Tartini, jonka mukaan pääaukio on nimetty. Keskiaikaisia kaupunginmuureja on säilynyt monin paikoin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Rakennukset: Satama joka muuttui toriksi] 1894 — Piranin Tartinin aukio oli ennen kaupungin sisäsatama, jossa pienet kalastusveneet lepäsivät muurien ulkopuolella. Satama ympäröitiin keskiajalla tärkeillä rakennuksilla, mutta viemärin takia viranomaiset päättivät täyttää sen, ja tori rakennettiin vuonna 1894. Aukio sai nimensä viulisti ja säveltäjä Giuseppe Tartinin mukaan, jonka pronssinen patsas paljastettiin 1896 kuvanveistäjä Antonio Dal Zòtton tekemänä. Ainoa alkuperäisen ulkoasunsa säilyttänyt rakennus on 1400-luvun goottilainen Venetsialainen talo. Myöhemmin torin lattiaksi tehtiin arkkitehti Boris Podrecan suunnittelema valkoisesta kivestä muodostettu ellipsi.
+- [Slovenia — maalehti / Ruoka: Makkara, jonka ainekset on säädetty tarkasti] 1912 — Kranjska klobasa eli Carniolan makkara on sloveenialainen esikeitetty makkara, joka muistuttaa puolalaista kielbasaa. Nimi tulee Krainin (sloveeniksi Kranjska) historiallisesta herttuakunnasta, ja sloveeninkielinen nimi mainitaan ensi kerran F. Kalinšekin keittokirjassa 1912. Makkarassa on vähintään 75–80 % sianlihaa ja enintään 20 % pekonia, ja mausteiksi sallitaan vain merisuola, valkosipulia, salpietaria ja mustapippuria. Makkarat liitetään pareiksi puutikulla ja kuumasavustetaan. Tammikuussa 2015 Slovenia sai sille EU:n suojatun maantieteellisen merkinnän (PGI), vaikka Itävalta, Kroatia ja Saksa vastustivat.
+
+### 15.1
+KYSYMYS: Miksi Piranissa puhutaan sekä sloveenia että italiaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Piran (kulttuuri)
+Tietoruudun teksti: Piran on Slovenian Istrian rannikolla Piranin lahden rannalla sijaitseva lomakaupunki, joka tunnetaan keskiaikaisesta rakennuskannastaan, kapeista kujistaan ja tiiviisti rakennetuista taloistaan. Kaupungissa puhutaan sekä sloveenia että italiaa. Piran kuului vuosina 1283–1797 Venetsian tasavallalle, ja venetsialainen vaikutus näkyy yhä sen rakennuksissa. Sen jälkeen kaupunki liitettiin Itävallan keisarikuntaan, ja 1800-luvun lopulla väestöstä noin 80 prosenttia oli kulttuuriltaan italialaisia. Kaupungin kuuluisin poika on viulisti ja säveltäjä Giuseppe Tartini, jonka mukaan pääaukio on nimetty. Keskiaikaisia kaupunginmuureja on säilynyt monin paikoin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Makkara, jonka ainekset on säädetty tarkasti] 1912 — Kranjska klobasa eli Carniolan makkara on sloveenialainen esikeitetty makkara, joka muistuttaa puolalaista kielbasaa. Nimi tulee Krainin (sloveeniksi Kranjska) historiallisesta herttuakunnasta, ja sloveeninkielinen nimi mainitaan ensi kerran F. Kalinšekin keittokirjassa 1912. Makkarassa on vähintään 75–80 % sianlihaa ja enintään 20 % pekonia, ja mausteiksi sallitaan vain merisuola, valkosipulia, salpietaria ja mustapippuria. Makkarat liitetään pareiksi puutikulla ja kuumasavustetaan. Tammikuussa 2015 Slovenia sai sille EU:n suojatun maantieteellisen merkinnän (PGI), vaikka Itävalta, Kroatia ja Saksa vastustivat.
+
+### 15.2
+KYSYMYS: Kuka oli Giuseppe Tartini, ja miksi hänen patsaansa seisoo Piranin pääaukiolla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Piran (kulttuuri)
+Tietoruudun teksti: Piran on Slovenian Istrian rannikolla Piranin lahden rannalla sijaitseva lomakaupunki, joka tunnetaan keskiaikaisesta rakennuskannastaan, kapeista kujistaan ja tiiviisti rakennetuista taloistaan. Kaupungissa puhutaan sekä sloveenia että italiaa. Piran kuului vuosina 1283–1797 Venetsian tasavallalle, ja venetsialainen vaikutus näkyy yhä sen rakennuksissa. Sen jälkeen kaupunki liitettiin Itävallan keisarikuntaan, ja 1800-luvun lopulla väestöstä noin 80 prosenttia oli kulttuuriltaan italialaisia. Kaupungin kuuluisin poika on viulisti ja säveltäjä Giuseppe Tartini, jonka mukaan pääaukio on nimetty. Keskiaikaisia kaupunginmuureja on säilynyt monin paikoin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Rakennukset: Satama joka muuttui toriksi] 1894 — Piranin Tartinin aukio oli ennen kaupungin sisäsatama, jossa pienet kalastusveneet lepäsivät muurien ulkopuolella. Satama ympäröitiin keskiajalla tärkeillä rakennuksilla, mutta viemärin takia viranomaiset päättivät täyttää sen, ja tori rakennettiin vuonna 1894. Aukio sai nimensä viulisti ja säveltäjä Giuseppe Tartinin mukaan, jonka pronssinen patsas paljastettiin 1896 kuvanveistäjä Antonio Dal Zòtton tekemänä. Ainoa alkuperäisen ulkoasunsa säilyttänyt rakennus on 1400-luvun goottilainen Venetsialainen talo. Myöhemmin torin lattiaksi tehtiin arkkitehti Boris Podrecan suunnittelema valkoisesta kivestä muodostettu ellipsi.
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

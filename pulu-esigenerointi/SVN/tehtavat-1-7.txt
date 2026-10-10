@@ -1,0 +1,69 @@
+================ KOHTA 31 (kohde:hahmotelma-metlika) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Metlika (kulttuuri)
+Tietoruudun teksti: Metlika on Etelä-Slovenian Bela Krajinan eli Valko-Krainin pääkaupunki Kolpa-joen rannalla, aivan Kroatian rajalla. Kaupunki mainitaan asiakirjoissa ensi kerran vuonna 1228 nimellä Metlica, ja se sai kaupunkioikeudet vuonna 1335 kuuluttuaan jo aiemmin Kranin merkkikreivikuntaan. Ottomaanien ratsujoukot tekivät alueelle toistuvia hävitysretkiä 1400- ja 1500-luvuilla, ja vuoden 1705 suurpalo tuhosi koko kaupungin, minkä jälkeen sekä Metlikan linna että Pyhän Nikolauksen kirkko rakennettiin uudelleen barokkityyliin. Bela Krajina tunnetaan omaleimaisesta kansankulttuuristaan: alueen tamburica-soittimin säestetyt kansantanssit ja puvut sekä satoja vuosia vanha Zeleni Jurij eli Vihreä Yrjö -kevätperinne elävät yhä joka kesä järjestettävässä Jurjevanje-juhlassa.
+
+### 31.1
+KYSYMYS: Mitä Metlikalle tapahtui suuressa tulipalossa vuonna 1705?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Metlika (kulttuuri)
+Tietoruudun teksti: Metlika on Etelä-Slovenian Bela Krajinan eli Valko-Krainin pääkaupunki Kolpa-joen rannalla, aivan Kroatian rajalla. Kaupunki mainitaan asiakirjoissa ensi kerran vuonna 1228 nimellä Metlica, ja se sai kaupunkioikeudet vuonna 1335 kuuluttuaan jo aiemmin Kranin merkkikreivikuntaan. Ottomaanien ratsujoukot tekivät alueelle toistuvia hävitysretkiä 1400- ja 1500-luvuilla, ja vuoden 1705 suurpalo tuhosi koko kaupungin, minkä jälkeen sekä Metlikan linna että Pyhän Nikolauksen kirkko rakennettiin uudelleen barokkityyliin. Bela Krajina tunnetaan omaleimaisesta kansankulttuuristaan: alueen tamburica-soittimin säestetyt kansantanssit ja puvut sekä satoja vuosia vanha Zeleni Jurij eli Vihreä Yrjö -kevätperinne elävät yhä joka kesä järjestettävässä Jurjevanje-juhlassa.
+
+### 31.2
+KYSYMYS: Kuka on Zeleni Jurij eli Vihreä Yrjö, ja mitä hänen saapumisensa juhlii?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Metlika (kulttuuri)
+Tietoruudun teksti: Metlika on Etelä-Slovenian Bela Krajinan eli Valko-Krainin pääkaupunki Kolpa-joen rannalla, aivan Kroatian rajalla. Kaupunki mainitaan asiakirjoissa ensi kerran vuonna 1228 nimellä Metlica, ja se sai kaupunkioikeudet vuonna 1335 kuuluttuaan jo aiemmin Kranin merkkikreivikuntaan. Ottomaanien ratsujoukot tekivät alueelle toistuvia hävitysretkiä 1400- ja 1500-luvuilla, ja vuoden 1705 suurpalo tuhosi koko kaupungin, minkä jälkeen sekä Metlikan linna että Pyhän Nikolauksen kirkko rakennettiin uudelleen barokkityyliin. Bela Krajina tunnetaan omaleimaisesta kansankulttuuristaan: alueen tamburica-soittimin säestetyt kansantanssit ja puvut sekä satoja vuosia vanha Zeleni Jurij eli Vihreä Yrjö -kevätperinne elävät yhä joka kesä järjestettävässä Jurjevanje-juhlassa.
+
+### 31.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+================ KOHTA 32 (kohde:hahmotelma-pohorje) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohorje (luonto · vuori)
+Tietoruudun teksti: Pohorje on laaja, enimmäkseen metsäinen keskikorkea vuoristo Koillis-Sloveniassa Draava-joen eteläpuolella, Maribor’in, Dravogradin ja Slovenske Konjicen väliin jäävällä alueella. Sen korkein kohta on Musta huippu eli Črni vrh, 1 543 metriä merenpinnan yläpuolella, ja Pohorje on Slovenian ainoa vuoristo, joka koostuu kokonaan piikivilajitteisesta kivestä, keskiosiltaan graniitin sukuisesta syväkivestä. Yli 70 prosenttia alueesta on metsän peitossa, ja puun, veden ja hiekan yhdistelmä teki Ruusen Pohorjesta 1600-luvulta lähtien lasinvalmistuksen keskuksen: parhaimmillaan vuorilla toimi viisi lasitehdasta, joiden tuotteita vietiin aina Wienin hoviin, Saksaan, Böömiin, Egyptiin ja itämaille asti. Vanhin tunnettu tehdas, niin kutsuttu Stara glažuta, toimi Lobnican laaksossa Šumikin yläpuolella vuosina 1692–1793, kauan ennen kuin alueesta tuli 1900-luvulla hiihtomatkailun keskus.
+
+### 32.1
+KYSYMYS: Mikä teki Pohorjesta 1600-luvulta lähtien lasinvalmistuksen keskuksen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohorje (luonto · vuori)
+Tietoruudun teksti: Pohorje on laaja, enimmäkseen metsäinen keskikorkea vuoristo Koillis-Sloveniassa Draava-joen eteläpuolella, Maribor’in, Dravogradin ja Slovenske Konjicen väliin jäävällä alueella. Sen korkein kohta on Musta huippu eli Črni vrh, 1 543 metriä merenpinnan yläpuolella, ja Pohorje on Slovenian ainoa vuoristo, joka koostuu kokonaan piikivilajitteisesta kivestä, keskiosiltaan graniitin sukuisesta syväkivestä. Yli 70 prosenttia alueesta on metsän peitossa, ja puun, veden ja hiekan yhdistelmä teki Ruusen Pohorjesta 1600-luvulta lähtien lasinvalmistuksen keskuksen: parhaimmillaan vuorilla toimi viisi lasitehdasta, joiden tuotteita vietiin aina Wienin hoviin, Saksaan, Böömiin, Egyptiin ja itämaille asti. Vanhin tunnettu tehdas, niin kutsuttu Stara glažuta, toimi Lobnican laaksossa Šumikin yläpuolella vuosina 1692–1793, kauan ennen kuin alueesta tuli 1900-luvulla hiihtomatkailun keskus.
+
+### 32.2
+KYSYMYS: Minne Pohorjen lasitehtaiden tuotteita vietiin parhaimmillaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohorje (luonto · vuori)
+Tietoruudun teksti: Pohorje on laaja, enimmäkseen metsäinen keskikorkea vuoristo Koillis-Sloveniassa Draava-joen eteläpuolella, Maribor’in, Dravogradin ja Slovenske Konjicen väliin jäävällä alueella. Sen korkein kohta on Musta huippu eli Črni vrh, 1 543 metriä merenpinnan yläpuolella, ja Pohorje on Slovenian ainoa vuoristo, joka koostuu kokonaan piikivilajitteisesta kivestä, keskiosiltaan graniitin sukuisesta syväkivestä. Yli 70 prosenttia alueesta on metsän peitossa, ja puun, veden ja hiekan yhdistelmä teki Ruusen Pohorjesta 1600-luvulta lähtien lasinvalmistuksen keskuksen: parhaimmillaan vuorilla toimi viisi lasitehdasta, joiden tuotteita vietiin aina Wienin hoviin, Saksaan, Böömiin, Egyptiin ja itämaille asti. Vanhin tunnettu tehdas, niin kutsuttu Stara glažuta, toimi Lobnican laaksossa Šumikin yläpuolella vuosina 1692–1793, kauan ennen kuin alueesta tuli 1900-luvulla hiihtomatkailun keskus.
+
+### 32.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI

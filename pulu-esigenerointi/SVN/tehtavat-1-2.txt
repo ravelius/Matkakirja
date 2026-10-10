@@ -1,0 +1,201 @@
+================ KOHTA 6 (kohde:hahmotelma-skocjan) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Škocjanin luolat (luonto · vuori)
+Tietoruudun teksti: Škocjanin luolat ovat luolajärjestelmä Slovenian Karstilla, ja UNESCO otti ne maailmanperintölistalleen vuonna 1986. Reka-joki katoaa Suuren romahdusdolinan kohdalla maan alle, virtaa noin 3,5 kilometriä pitkässä ja jopa yli 140 metriä korkeassa maanalaisessa kanjonissa ja jatkaa sitten maan alla yhteensä noin 34 kilometriä, kunnes nousee pintaan Monfalconen lähellä. Kanjonin suurin tila, Martelin sali, on tilavuudeltaan 2,2 miljoonaa kuutiometriä, ja sitä pidetään Euroopan suurimpana tunnettuna maanalaisena salina. Alueelta on löytynyt yli kymmenentuhatta vuotta vanhoja asutuksen jälkiä. Nykyaikaisen matkailun katsotaan alkaneen 1. tammikuuta 1819, kun luoliin otettiin käyttöön vieraskirja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Joki joka katoaa maan alle] 1884 — Škocjanin luolissa Reka-joki syöksyy Suureen sortumakuoppaan ja katoaa kallion alle. Maan alla se virtaa 34 kilometriä ja nousee taas pintaan Monfalconen lähellä, jossa siitä tulee kolmannes Timavo-joen vedestä. Luolaston tutkittu pituus on 6 200 metriä, ja 2,2 miljoonan kuutiometrin Martelin sali on Euroopan suurin tunnettu maanalainen sali. Järjestelmällinen tutkimus alkoi vuonna 1884, ja Unesco merkitsi luolat maailmanperintökohteeksi vuonna 1986. Alueelta on löytynyt merkkejä ihmisasutuksesta yli kymmenentuhannen vuoden ajalta.
+
+### 6.1
+KYSYMYS: Miksi Reka-joki katoaa Škocjanissa maan alle, ja minne se sieltä päätyy?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Škocjanin luolat (luonto · vuori)
+Tietoruudun teksti: Škocjanin luolat ovat luolajärjestelmä Slovenian Karstilla, ja UNESCO otti ne maailmanperintölistalleen vuonna 1986. Reka-joki katoaa Suuren romahdusdolinan kohdalla maan alle, virtaa noin 3,5 kilometriä pitkässä ja jopa yli 140 metriä korkeassa maanalaisessa kanjonissa ja jatkaa sitten maan alla yhteensä noin 34 kilometriä, kunnes nousee pintaan Monfalconen lähellä. Kanjonin suurin tila, Martelin sali, on tilavuudeltaan 2,2 miljoonaa kuutiometriä, ja sitä pidetään Euroopan suurimpana tunnettuna maanalaisena salina. Alueelta on löytynyt yli kymmenentuhatta vuotta vanhoja asutuksen jälkiä. Nykyaikaisen matkailun katsotaan alkaneen 1. tammikuuta 1819, kun luoliin otettiin käyttöön vieraskirja.
+
+### 6.2
+KYSYMYS: Mikä tekee Martelin salista niin poikkeuksellisen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Škocjanin luolat (luonto · vuori)
+Tietoruudun teksti: Škocjanin luolat ovat luolajärjestelmä Slovenian Karstilla, ja UNESCO otti ne maailmanperintölistalleen vuonna 1986. Reka-joki katoaa Suuren romahdusdolinan kohdalla maan alle, virtaa noin 3,5 kilometriä pitkässä ja jopa yli 140 metriä korkeassa maanalaisessa kanjonissa ja jatkaa sitten maan alla yhteensä noin 34 kilometriä, kunnes nousee pintaan Monfalconen lähellä. Kanjonin suurin tila, Martelin sali, on tilavuudeltaan 2,2 miljoonaa kuutiometriä, ja sitä pidetään Euroopan suurimpana tunnettuna maanalaisena salina. Alueelta on löytynyt yli kymmenentuhatta vuotta vanhoja asutuksen jälkiä. Nykyaikaisen matkailun katsotaan alkaneen 1. tammikuuta 1819, kun luoliin otettiin käyttöön vieraskirja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Joki joka katoaa maan alle] 1884 — Škocjanin luolissa Reka-joki syöksyy Suureen sortumakuoppaan ja katoaa kallion alle. Maan alla se virtaa 34 kilometriä ja nousee taas pintaan Monfalconen lähellä, jossa siitä tulee kolmannes Timavo-joen vedestä. Luolaston tutkittu pituus on 6 200 metriä, ja 2,2 miljoonan kuutiometrin Martelin sali on Euroopan suurin tunnettu maanalainen sali. Järjestelmällinen tutkimus alkoi vuonna 1884, ja Unesco merkitsi luolat maailmanperintökohteeksi vuonna 1986. Alueelta on löytynyt merkkejä ihmisasutuksesta yli kymmenentuhannen vuoden ajalta.
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:hahmotelma-postojna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Postojnan luola (luonto · vuori)
+Tietoruudun teksti: Postojnan luola on Pivka-joen kaivertama karstiluolasto Lounais-Sloveniassa, ja sen pituus on yli 24 kilometriä. Luolan sisällä on graffiti vuodelta 1213, ja Johann Weikhard von Valvasor kuvasi sen 1600-luvulla. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n vierailua varten, ja silloin paikallinen lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden osan. Luolasta tuli virallisesti matkailukohde vuonna 1819, ja Čeč toimi sen ensimmäisenä oppaana. Vuonna 1872 luolaan asennettiin kiskot ja ensimmäinen matkailijoiden luolajuna, jota oppaat aluksi työnsivät itse. Sähkövalot luolaan tulivat vuonna 1884, ennen kuin Krainin pääkaupunki Ljubljana sai omansa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Sähkövalo luolassa ennen pääkaupunkia] 1884 — Postojnan luola on 24,3 kilometrin mittainen karstiluola, jonka Pivka-joki on kaivertanut. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n vierailua varten, ja lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden osan luolaa. Hänestä tuli luolan ensimmäinen virallinen opas. Vuonna 1872 luolaan laskettiin raiteet, ja aluksi oppaat työnsivät vieraita vaunuissa. Sähkövalo saatiin luolaan 1884, ennen kuin Ljubljanassa oli sellaista. Luolassa on myös maailman ensimmäinen ja ainoa maanalainen postitoimisto, joka avattiin vuonna 1899.
+
+### 7.1
+KYSYMYS: Miksi Postojnan luolasta tuli matkailukohde jo 1800-luvun alussa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Postojnan luola (luonto · vuori)
+Tietoruudun teksti: Postojnan luola on Pivka-joen kaivertama karstiluolasto Lounais-Sloveniassa, ja sen pituus on yli 24 kilometriä. Luolan sisällä on graffiti vuodelta 1213, ja Johann Weikhard von Valvasor kuvasi sen 1600-luvulla. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n vierailua varten, ja silloin paikallinen lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden osan. Luolasta tuli virallisesti matkailukohde vuonna 1819, ja Čeč toimi sen ensimmäisenä oppaana. Vuonna 1872 luolaan asennettiin kiskot ja ensimmäinen matkailijoiden luolajuna, jota oppaat aluksi työnsivät itse. Sähkövalot luolaan tulivat vuonna 1884, ennen kuin Krainin pääkaupunki Ljubljana sai omansa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Sähkövalo luolassa ennen pääkaupunkia] 1884 — Postojnan luola on 24,3 kilometrin mittainen karstiluola, jonka Pivka-joki on kaivertanut. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n vierailua varten, ja lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden osan luolaa. Hänestä tuli luolan ensimmäinen virallinen opas. Vuonna 1872 luolaan laskettiin raiteet, ja aluksi oppaat työnsivät vieraita vaunuissa. Sähkövalo saatiin luolaan 1884, ennen kuin Ljubljanassa oli sellaista. Luolassa on myös maailman ensimmäinen ja ainoa maanalainen postitoimisto, joka avattiin vuonna 1899.
+
+### 7.2
+KYSYMYS: Miten luolassa kuljettiin 1800-luvulla, kun sähkövaloja ei vielä ollut?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Postojnan luola (luonto · vuori)
+Tietoruudun teksti: Postojnan luola on Pivka-joen kaivertama karstiluolasto Lounais-Sloveniassa, ja sen pituus on yli 24 kilometriä. Luolan sisällä on graffiti vuodelta 1213, ja Johann Weikhard von Valvasor kuvasi sen 1600-luvulla. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n vierailua varten, ja silloin paikallinen lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden osan. Luolasta tuli virallisesti matkailukohde vuonna 1819, ja Čeč toimi sen ensimmäisenä oppaana. Vuonna 1872 luolaan asennettiin kiskot ja ensimmäinen matkailijoiden luolajuna, jota oppaat aluksi työnsivät itse. Sähkövalot luolaan tulivat vuonna 1884, ennen kuin Krainin pääkaupunki Ljubljana sai omansa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Sähkövalo luolassa ennen pääkaupunkia] 1884 — Postojnan luola on 24,3 kilometrin mittainen karstiluola, jonka Pivka-joki on kaivertanut. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n vierailua varten, ja lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden osan luolaa. Hänestä tuli luolan ensimmäinen virallinen opas. Vuonna 1872 luolaan laskettiin raiteet, ja aluksi oppaat työnsivät vieraita vaunuissa. Sähkövalo saatiin luolaan 1884, ennen kuin Ljubljanassa oli sellaista. Luolassa on myös maailman ensimmäinen ja ainoa maanalainen postitoimisto, joka avattiin vuonna 1899.
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:hahmotelma-ptuj) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ptuj (historia)
+Tietoruudun teksti: Ptuj on Slovenian vanhimmaksi kirjattu kaupunki Steiermarkin alueella Draava-joen rannalla. Se kehittyi roomalaisesta sotilasleiristä nimeltä Poetovio, joka sijaitsi tärkeällä joenylityspaikalla muinaisella kauppareitillä Itämereltä Adrianmerelle. Vuonna 69 Tonavan legioonat julistivat Ptujissa Vespasianuksen keisariksi, ja kaupungissa oli noin 40 000 asukasta, kunnes hunnit ryöstivät sen vuonna 450. Keskiajalla kaupunki kuului Salzburgin arkkipiispalle, ja saksaksi sitä kutsuttiin Pettauksi. Joka kevät kaupungissa vietetään kymmenpäiväistä Kurentovanjea, jossa lampaantaljoihin ja kelloihin pukeutuneet kurentit kiertävät katuja karkottamassa talvea ja pahoja henkiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Historia: Lampaantaljat häätävät talven] 1960 — Helmikuussa Ptujin kaduilla marssivat kurentit, lampaantaljoihin pukeutuneet hahmot, joilla on värikäs naamio. Heidän kädessään on puinen nuija, jonka päässä on siilinnahkoja, ja koko melu on tarkoitettu ajamaan talvi pois. Ensimmäisen nykymuotoisen Kurentovanje-karnevaalin järjestivät 27. helmikuuta 1960 Drago Hasl ja hänen ystävänsä. Aiemmin kurentiksi pääsivät vain naimattomat miehet, mutta nykyään mukana on myös naisia ja lapsia. Karnevaali on Slovenian suosituin, ja vuonna 2017 kurenttien kiertäminen talosta taloon merkittiin Unescon aineettoman kulttuuriperinnön listalle.
+
+### 8.1
+KYSYMYS: Miksi Ptujia sanotaan Slovenian vanhimmaksi kaupungiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ptuj (historia)
+Tietoruudun teksti: Ptuj on Slovenian vanhimmaksi kirjattu kaupunki Steiermarkin alueella Draava-joen rannalla. Se kehittyi roomalaisesta sotilasleiristä nimeltä Poetovio, joka sijaitsi tärkeällä joenylityspaikalla muinaisella kauppareitillä Itämereltä Adrianmerelle. Vuonna 69 Tonavan legioonat julistivat Ptujissa Vespasianuksen keisariksi, ja kaupungissa oli noin 40 000 asukasta, kunnes hunnit ryöstivät sen vuonna 450. Keskiajalla kaupunki kuului Salzburgin arkkipiispalle, ja saksaksi sitä kutsuttiin Pettauksi. Joka kevät kaupungissa vietetään kymmenpäiväistä Kurentovanjea, jossa lampaantaljoihin ja kelloihin pukeutuneet kurentit kiertävät katuja karkottamassa talvea ja pahoja henkiä.
+
+### 8.2
+KYSYMYS: Mitä kurentit Kurentovanjessa tekevät, ja miksi he pukeutuvat lampaantaljoihin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ptuj (historia)
+Tietoruudun teksti: Ptuj on Slovenian vanhimmaksi kirjattu kaupunki Steiermarkin alueella Draava-joen rannalla. Se kehittyi roomalaisesta sotilasleiristä nimeltä Poetovio, joka sijaitsi tärkeällä joenylityspaikalla muinaisella kauppareitillä Itämereltä Adrianmerelle. Vuonna 69 Tonavan legioonat julistivat Ptujissa Vespasianuksen keisariksi, ja kaupungissa oli noin 40 000 asukasta, kunnes hunnit ryöstivät sen vuonna 450. Keskiajalla kaupunki kuului Salzburgin arkkipiispalle, ja saksaksi sitä kutsuttiin Pettauksi. Joka kevät kaupungissa vietetään kymmenpäiväistä Kurentovanjea, jossa lampaantaljoihin ja kelloihin pukeutuneet kurentit kiertävät katuja karkottamassa talvea ja pahoja henkiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Historia: Lampaantaljat häätävät talven] 1960 — Helmikuussa Ptujin kaduilla marssivat kurentit, lampaantaljoihin pukeutuneet hahmot, joilla on värikäs naamio. Heidän kädessään on puinen nuija, jonka päässä on siilinnahkoja, ja koko melu on tarkoitettu ajamaan talvi pois. Ensimmäisen nykymuotoisen Kurentovanje-karnevaalin järjestivät 27. helmikuuta 1960 Drago Hasl ja hänen ystävänsä. Aiemmin kurentiksi pääsivät vain naimattomat miehet, mutta nykyään mukana on myös naisia ja lapsia. Karnevaali on Slovenian suosituin, ja vuonna 2017 kurenttien kiertäminen talosta taloon merkittiin Unescon aineettoman kulttuuriperinnön listalle.
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:hahmotelma-celje) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Celjen linna (historia)
+Tietoruudun teksti: Celjen linna on rauniolinna Celjen kaakkoispuolella kolmen kukkulan päällä, ja se oli aikoinaan Celjen kreivien asuinpaikka. Se oli aikanaan Slovenian alueen suurin linnoitus. Ensimmäisen linnan rakensivat 1200-luvulla Heunburgin kreivit, ja vuonna 1333 se siirtyi Sanneckin herroille, joista tuli vuonna 1341 Celjen kreivejä. Kreivit muuttivat linnoituksen mukavaksi asuinpaikaksi ja lisäsivät noin vuonna 1400 nelikerroksisen Friderikin tornin. Kun linna menetti merkityksensä, se alkoi rappeutua: viimeiset asukkaat lähtivät vuonna 1795, ja vuonna 1803 talonpoika osti sen ja käytti louhoksena. Kunnostustyöt alkoivat vuonna 1882 museoyhdistyksen aloitteesta ja jatkuvat yhä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Auckland — kaupunkilehti / Auckland: Maa, jonka Ngāti Whātua lahjoitti] Ngāti Whātua Ōrākein ylipäällikkö Āpihai Te Kawau allekirjoitti Waitangin sopimuksen 20. maaliskuuta 1840 Manukau-sataman rannalla, missä heimo viljeli maata. Ngāti Whātua haki kruunulta suojaa Ngāpuhia vastaan ja vastavuoroista suhdetta hallitsijaan ja kirkkoon. Pian sopimuksen jälkeen heimo teki strategisen lahjoituksen: maata Waitematā-sataman rannalta uudelle kuvernöörille William Hobsonille uuden pääkaupungin paikaksi. Lähteet antavat alan kooksi joko 3 500 tai 3 000 eekkeriä. Hobson nimesi kaupungin Aucklandin jaarlin George Edenin mukaan, ja Auckland perustettiin 18. syyskuuta 1840.
+
+### 9.1
+KYSYMYS: Miksi Celjen kreivit olivat niin vaikutusvaltaisia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Celjen linna (historia)
+Tietoruudun teksti: Celjen linna on rauniolinna Celjen kaakkoispuolella kolmen kukkulan päällä, ja se oli aikoinaan Celjen kreivien asuinpaikka. Se oli aikanaan Slovenian alueen suurin linnoitus. Ensimmäisen linnan rakensivat 1200-luvulla Heunburgin kreivit, ja vuonna 1333 se siirtyi Sanneckin herroille, joista tuli vuonna 1341 Celjen kreivejä. Kreivit muuttivat linnoituksen mukavaksi asuinpaikaksi ja lisäsivät noin vuonna 1400 nelikerroksisen Friderikin tornin. Kun linna menetti merkityksensä, se alkoi rappeutua: viimeiset asukkaat lähtivät vuonna 1795, ja vuonna 1803 talonpoika osti sen ja käytti louhoksena. Kunnostustyöt alkoivat vuonna 1882 museoyhdistyksen aloitteesta ja jatkuvat yhä.
+
+### 9.2
+KYSYMYS: Mitä linnalle tapahtui sen jälkeen, kun se oli menettänyt strategisen merkityksensä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Celjen linna (historia)
+Tietoruudun teksti: Celjen linna on rauniolinna Celjen kaakkoispuolella kolmen kukkulan päällä, ja se oli aikoinaan Celjen kreivien asuinpaikka. Se oli aikanaan Slovenian alueen suurin linnoitus. Ensimmäisen linnan rakensivat 1200-luvulla Heunburgin kreivit, ja vuonna 1333 se siirtyi Sanneckin herroille, joista tuli vuonna 1341 Celjen kreivejä. Kreivit muuttivat linnoituksen mukavaksi asuinpaikaksi ja lisäsivät noin vuonna 1400 nelikerroksisen Friderikin tornin. Kun linna menetti merkityksensä, se alkoi rappeutua: viimeiset asukkaat lähtivät vuonna 1795, ja vuonna 1803 talonpoika osti sen ja käytti louhoksena. Kunnostustyöt alkoivat vuonna 1882 museoyhdistyksen aloitteesta ja jatkuvat yhä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Auckland — kaupunkilehti / Auckland: Maa, jonka Ngāti Whātua lahjoitti] Ngāti Whātua Ōrākein ylipäällikkö Āpihai Te Kawau allekirjoitti Waitangin sopimuksen 20. maaliskuuta 1840 Manukau-sataman rannalla, missä heimo viljeli maata. Ngāti Whātua haki kruunulta suojaa Ngāpuhia vastaan ja vastavuoroista suhdetta hallitsijaan ja kirkkoon. Pian sopimuksen jälkeen heimo teki strategisen lahjoituksen: maata Waitematā-sataman rannalta uudelle kuvernöörille William Hobsonille uuden pääkaupungin paikaksi. Lähteet antavat alan kooksi joko 3 500 tai 3 000 eekkeriä. Hobson nimesi kaupungin Aucklandin jaarlin George Edenin mukaan, ja Auckland perustettiin 18. syyskuuta 1840.
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:hahmotelma-skofja-loka) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Škofja Loka (historia)
+Tietoruudun teksti: Škofja Loka on Ylä-Krainin kaupunki, jonka nimi tarkoittaa piispan kosteaa niittyä. Keisari Otto II lahjoitti alueen herruuden Freisingin piispoille vuonna 973, ja lähes tuhat vuotta kaupungin historia oli sidoksissa tähän kaukaiseen kirkolliseen ruhtinaskuntaan. Markkinaoikeudet mainitaan ensi kerran vuonna 1248 ja kaupunkioikeudet vuonna 1274, ja 1300-luvulla kaupunki ympäröitiin muurilla. Vuonna 1803 Saksan alueiden uudelleenjärjestelyissä Škofja Loka liitettiin Itävallan Krainin herttuakuntaan. Vanha keskusta on yksi Slovenian parhaiten säilyneistä keskiaikaisista kaupunkiytimistä. Kaupungissa syntyi myös sloveniankielisen näytelmäkirjallisuuden vanhin näytelmä, pitkäperjantain passiokulkue.
+
+### 10.1
+KYSYMYS: Miksi Škofja Lokan nimi tarkoittaa piispan niittyä, ja kenen piispoja he olivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Škofja Loka (historia)
+Tietoruudun teksti: Škofja Loka on Ylä-Krainin kaupunki, jonka nimi tarkoittaa piispan kosteaa niittyä. Keisari Otto II lahjoitti alueen herruuden Freisingin piispoille vuonna 973, ja lähes tuhat vuotta kaupungin historia oli sidoksissa tähän kaukaiseen kirkolliseen ruhtinaskuntaan. Markkinaoikeudet mainitaan ensi kerran vuonna 1248 ja kaupunkioikeudet vuonna 1274, ja 1300-luvulla kaupunki ympäröitiin muurilla. Vuonna 1803 Saksan alueiden uudelleenjärjestelyissä Škofja Loka liitettiin Itävallan Krainin herttuakuntaan. Vanha keskusta on yksi Slovenian parhaiten säilyneistä keskiaikaisista kaupunkiytimistä. Kaupungissa syntyi myös sloveniankielisen näytelmäkirjallisuuden vanhin näytelmä, pitkäperjantain passiokulkue.
+
+### 10.2
+KYSYMYS: Mikä Škofja Lokan passiokulkue oli, ja miksi se on merkittävä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Škofja Loka (historia)
+Tietoruudun teksti: Škofja Loka on Ylä-Krainin kaupunki, jonka nimi tarkoittaa piispan kosteaa niittyä. Keisari Otto II lahjoitti alueen herruuden Freisingin piispoille vuonna 973, ja lähes tuhat vuotta kaupungin historia oli sidoksissa tähän kaukaiseen kirkolliseen ruhtinaskuntaan. Markkinaoikeudet mainitaan ensi kerran vuonna 1248 ja kaupunkioikeudet vuonna 1274, ja 1300-luvulla kaupunki ympäröitiin muurilla. Vuonna 1803 Saksan alueiden uudelleenjärjestelyissä Škofja Loka liitettiin Itävallan Krainin herttuakuntaan. Vanha keskusta on yksi Slovenian parhaiten säilyneistä keskiaikaisista kaupunkiytimistä. Kaupungissa syntyi myös sloveniankielisen näytelmäkirjallisuuden vanhin näytelmä, pitkäperjantain passiokulkue.
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
