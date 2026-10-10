@@ -6,7 +6,7 @@
 // silmä Pariisin ENU:ssa. Mitataan:
 //  (a) silmän nopeus ei laske alle KiertoMinOsuus × kierron nopeus (LipumisVauhti) saapumisen ympärillä (−6 … +3 s) eikä lähdössä
 //      (−2 … +6 s); kierron nopeus saapuessa vähintään KiertoMinMS (liikkeessä; ristiriidassa — seuraava tulosuunnan takana —
-//      saapuminen on hitaampi, OpasSilmukka.PalloKiertoRistiMS 0,5 m/s, ja kierto kiihtyy pysähdyksellä).
+//      saapuminen on hitaampi, OpasSilmukka.PalloKiertoRistiMS 1,5 m/s (11.10., ennen 0,5), ja kierto kiihtyy pysähdyksellä).
 //  (b) kiihtyvyys ja nykäys 0,5 s:n liukuvasta keskiarvosta: saapumisen jarrutus (−6 … −1 s) enintään JarrutusMax / NykaysMax
 //      (= LahtoLaatatTestit.LentoProfiili-rajat 85 m/s² ja 40 m/s³), saapuminen kiertoon (−1 … +4 s) ja lähtö kierrosta (−1 … +1 s)
 //      enintään KiihtyvyysMax / NykaysMax. PT 10.10. 20.5x lyhensi lennot (≈ 12,5 s, ennen 18–23 s), jolloin kiihtyvyydet kasvavat

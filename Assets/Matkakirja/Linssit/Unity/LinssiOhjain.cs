@@ -26,7 +26,7 @@
 // Pelikoodarin maisemakanavalla ilman linssiä); elävälle kartalle "elava kreikka [alku s] [nopeus] | kuva <s> | jatka |
 // saapuminen <kaupunki> | saato | ui | pois | tila" (ElavaKartta); ISS:n radalle "iss tila | lataa" (IssTleLataaja).
 // Lontoo-pilotille (Linssiseppä 5.10.2026) "linssi lontoo" ja "lontoo ohita | data google|ion|oma | tila"; elävälle
-// oppaalle "linssi opas" ja "opas testi 0|1 | testiotsake 0|1 | pysayta 0|1 | kaupunki <nimi> | toive <teksti> | data google|ion|oma | steamaudio 0|1|tila | tila" (LontooSovitin; kehitystunnus
+// oppaalle "linssi opas" ja "opas testi 0|1 | testiotsake 0|1 | pysayta 0|1 | kaupunki <nimi> | toive <teksti> | data google|ion|oma | steamaudio 0|1|tila | nopeusloki 0|1 | tila" (LontooSovitin; kehitystunnus
 // Documents/cesium-ion-tunnus.txt).
 // Tulos lokiin ja Documents/linssi-loki.txt:hen.
 using System;
@@ -2171,6 +2171,8 @@ namespace Matkakirja.Natiivi
                         Kirjaa($"opas: kamera kiinteä {OpasSovitin.KiinteaKamera}");
                     }
                     else if (osat.Length > 2 && osat[1] == "pcm") OpasSovitin.PcmKaytossa = osat[2] == "1";
+                    // QA (juna 181): pallon nopeusloki 0,1 s:n välein (OpasNopeusloki; "MATKAKIRJA opas nopeus t=… v=… kulma=… kohde=… vaihe=…").
+                    else if (osat.Length > 2 && osat[1] == "nopeusloki") { OpasSovitin.NopeusLoki = osat[2] == "1"; Kirjaa($"opas: nopeusloki {(OpasSovitin.NopeusLoki ? "päällä" : "pois")}"); }
                     // Laitekokeet ilman kosketusta (juna 151): kierros, Liiku-kohde, lopetus, jatko ja kysymys kuten napeista.
                     else if (osat.Length > 1 && osat[1] == "testi429") OpasSovitin.TestiGoogle429();
                     else if (osat.Length > 1 && osat[1] == "kierros") Kirjaa($"opas: kierros → {OpasSovitin.Kaupunkikierros()}");

@@ -32,6 +32,8 @@ namespace Matkakirja.Linssit.Kierros
         public const double SivuKulma = 25;
         public const double PalloMatalampiAst = 6, AukioEtMaxM = 220;
         static readonly System.Collections.Generic.HashSet<string> AukioLuokat = new System.Collections.Generic.HashSet<string> { "aukio", "tori" };
+        /// <summary>Workerin luokka on aukio tai tori (OpasKohde.Lue ottaa nämä kehystykseen).</summary>
+        public static bool AukioLuokka(string luokka) => luokka != null && AukioLuokat.Contains(luokka.Trim().ToLowerInvariant());
         // Pysähdys
         // KAKSI KEHYSTÄ (omistaja 5.10. 23.3x: "hidas orbit … saisi olla nopeampi ja näyttää samasta kohteesta myös toisen suunnan"):
         // orbit KiertoAsteS VaiheS:n ajan, sitten pehmeä siirtolento SiirtoS: katu ja alue kohteen toiselle puolelle (+SiirtoKulma),
@@ -117,8 +119,11 @@ namespace Matkakirja.Linssit.Kierros
                 double hKoko = korkeus > 0 ? korkeus : aukio ? AukioKohdeKorkeusM : koko / KuvaSuhde;
                 double luokanMax = korkeus >= KorkeaRajaM ? KorkeaEtMaxM : l == Luokka.Katu ? KatuEtMaxM : l == Luokka.Alue ? AlueEtMaxM : RakennusEtMaxM;
                 loppuEt = Rajaa(hKoko / (KolmannesOsuus * 2 * tanPysty), Math.Max(PalloLoppuMinM, minEt), luokanMax);
+                // AUKIO LÄHEMPÄÄ (omistaja TF 180, Concorde: "kierretään yhä liian kaukaa"; PT 11.10.: alussa 110–140 m, lopussa 70–90 m,
+                // silmä 35–50 m): aukion kierto alkaa enintään PalloAukioAlkuMaxKerroin × loppu (Concorde 148 → 130 m, silmä 41 → 36 m).
+                double alkuMax = aukio ? PalloAukioAlkuMaxKerroin : PalloAlkuMaxKerroin;
                 if (mitattu && korkeus < KorkeaRajaM && loppuEt * PalloAlkuMinKerroin <= luokanMax)
-                    et = Rajaa(et, loppuEt * PalloAlkuMinKerroin, Math.Max(loppuEt * PalloAlkuMinKerroin, Math.Min(luokanMax, loppuEt * PalloAlkuMaxKerroin)));
+                    et = Rajaa(et, loppuEt * PalloAlkuMinKerroin, Math.Max(loppuEt * PalloAlkuMinKerroin, Math.Min(luokanMax, loppuEt * alkuMax)));
                 et = Math.Max(et, minEt);
                 if (loppuEt >= et) loppuEt = 0;   // ei lähestymistä
             }
@@ -160,7 +165,7 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Kierron loppu (PT 10.10.): kohde täyttää näin suuren osan pystykentästä (KuvaPystyAst) kierron lopussa.</summary>
         public const double KolmannesOsuus = 1.0 / 3;
         /// <summary>Kierron alku loppuetäisyyden kerrannaisena (alussa kohde ympäristöineen; kehys pidetään, jos se on välissä).</summary>
-        public const double PalloAlkuMinKerroin = 1.25, PalloAlkuMaxKerroin = 2.0;
+        public const double PalloAlkuMinKerroin = 1.25, PalloAlkuMaxKerroin = 2.0, PalloAukioAlkuMaxKerroin = 1.75;
         /// <summary>Kierron loppuetäisyys vähintään (m) ja aukion keskusmonumentin oletuskorkeus (m; Concorden obeliski 23 m), kun
         /// workerin korkeus_m puuttuu.</summary>
         public const double PalloLoppuMinM = 70, AukioKohdeKorkeusM = 23;
