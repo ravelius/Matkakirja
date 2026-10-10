@@ -1168,6 +1168,26 @@
   </dialog>
 
   <!--
+    Ikäkysely ennen ensimmäistä live-kysymystä (Raamattu ALLE 18 KURATOITU, 10.10.2026; js/ikaraja.js). Pohja on sama
+    <dialog class="dialog"> kuin yllä, valinta lukijaäänen säätimen rivinä; tekstit ja järjestys natiivikortista.
+  -->
+  <dialog id="ikaraja-dialog" class="dialog">
+   <div class="dialog-card" tabindex="-1" autofocus>
+    <h2>Minä vuonna olet syntynyt?</h2>
+    <p class="dialog-teksti">Pulun vapaat vastaukset tuottaa tekoäly (Claude). Alle 18-vuotiaille Pulu vastaa rajatummin: vain pelin paikoista ja aiheista.</p>
+    <div class="puhe-saadin-rivi">
+      <label for="ikaraja-vuosi">Syntymävuosi</label>
+      <select id="ikaraja-vuosi"></select>
+    </div>
+    <p class="dialog-teksti">Syntymävuotta ei tallenneta. Peli muistaa vain, oletko täysi-ikäinen.</p>
+    <div class="dialog-actions">
+      <button id="ikaraja-ei-nyt" class="ghost" type="button">Ei nyt</button>
+      <button id="ikaraja-jatka" class="primary" type="button" disabled>Jatka</button>
+    </div>
+   </div>
+  </dialog>
+
+  <!--
     Kehittäjätila. Salasana on tarkoituksella kevyt lukko eikä
     tietoturvaa: se estää vahingossa avaamisen, ei tahallista.
   -->

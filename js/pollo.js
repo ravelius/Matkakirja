@@ -80,6 +80,7 @@ import { merkitseLivianOmaDialogi } from './livia-dialogitila.js';
 import { haeKuvallinenArtikkeli, suurennusportaat } from './wiki.js';
 import { lueAaneen, lueVirtana, lukijaLukee, lukijaTuettu, pysaytaLukija } from './lukija.js';
 import { poistaPuhetagit } from './puhetagit.js';
+import { AIKUINEN_OTSAKE, IKARAJA_TEKSTIT, ikaKysytty, ikaOtsakeArvo, kysyIkaEnsin } from './ikaraja.js';
 import { sfx } from './sound.js';
 import {
   hiljennaAmbienssi, palautaAmbienssi, taukoaSanelunAjaksi, jatkaSanelunJalkeen,
@@ -5959,6 +5960,8 @@ export class Pollo {
     viesti.appendChild(this.doc.createTextNode(TERVEHDYS_ALKU));
     viesti.appendChild(polloElementti('b', 'pollo-tervehdys-ydin', TERVEHDYS_YDIN));
     viesti.appendChild(this.doc.createTextNode(TERVEHDYS_LOPPU));
+    // Tekoälymerkintä kaikille keskustelun alkuun (Raamattu ALLE 18 KURATOITU): sama tilarivi kuin "Näytän kartalla".
+    this.lisaaViesti('paikkarivi', IKARAJA_TEKSTIT.merkinta);
     return viesti;
   }
 
@@ -6276,7 +6279,8 @@ export class Pollo {
    * se ei tekisi mitään vaikka lähetettäisiinkin.
    */
   otsakkeet(lisat = {}) {
-    const ulos = { 'content-type': 'application/json', ...lisat };
+    // Ikätieto aina (js/ikaraja.js): 1 = aikuinen, 0 = kuratoitu live (alle 18 tai tuntematon).
+    const ulos = { 'content-type': 'application/json', [AIKUINEN_OTSAKE]: ikaOtsakeArvo(), ...lisat };
     const koodi = polloAsetus(POLLO_KEHITTAJAKOODI_AVAIN).trim();
     if (koodi) ulos[POLLO_KEHITTAJA_OTSAKE] = koodi;
     return ulos;
@@ -6678,6 +6682,12 @@ export class Pollo {
   async kysy(raakaKysymys, { jatko = false, puhe = false, aihe = null } = {}) {
     const kysymys = String(raakaKysymys ?? '').trim();
     if (!kysymys || this.kesken || !this.palvelin) return;
+    // Ikä kerran ennen ensimmäistä live-kysymystä (js/ikaraja.js); vastaus tai Ei nyt jatkaa samaa kysymystä.
+    const ikakysely = ikaKysytty() ? null : kysyIkaEnsin({ doc: this.doc });
+    if (ikakysely) {
+      await ikakysely;
+      if (this.kesken) return;
+    }
     // Kortin aihe koskee vain tätä kysymystä (ks. lueNakyma aihe); jatkot
     // nojaavat historiaan, johon ensimmäinen vastaus jo nimeää aiheen.
     this.kysymyksenAihe = aihe?.nimi ? aihe : null;
@@ -7026,6 +7036,11 @@ export class Pollo {
     if (!kysymys) throw new Error('tyhja');
     if (this.kesken) throw new Error('kesken');
     if (!this.palvelin) throw new Error('ei-palvelinta');
+    const ikakysely = ikaKysytty() ? null : kysyIkaEnsin({ doc: this.doc });
+    if (ikakysely) {
+      await ikakysely;
+      if (this.kesken) throw new Error('kesken');
+    }
     this.asetaKesken(true);
     const runko = {
       tehtava: 'vastaus',

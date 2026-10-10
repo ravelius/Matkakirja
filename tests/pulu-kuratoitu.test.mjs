@@ -153,3 +153,82 @@ test('esilento sallii ikäotsakkeen', async () => {
   const v = await polloWorker.fetch(new Request('https://pollo.testi/', { method: 'OPTIONS', headers: { origin: ORIGIN } }), ENV, {});
   assert.match(v.headers.get('access-control-allow-headers') ?? '', /x-matkakirja-aikuinen/);
 });
+
+/* ---------------------------------------------------------------- */
+/* Web: ikäkysely (js/ikaraja.js, #ikaraja-dialog)                   */
+/* ---------------------------------------------------------------- */
+import { readFileSync } from 'node:fs';
+import {
+  IKARAJA_AVAIN, IKARAJA_TEKSTIT, ikaAikuinen, ikaKysytty, ikaOtsakeArvo, kysyIkaEnsin, nollaaIka, onAikuinen,
+} from '../js/ikaraja.js';
+
+function muistiVarasto() {
+  const m = new Map();
+  return { getItem: (k) => (m.has(k) ? m.get(k) : null), setItem: (k, v) => m.set(k, String(v)), removeItem: (k) => m.delete(k) };
+}
+
+/** Pieni #ikaraja-dialog-malli: select, kaksi nappia, showModal/close + close-tapahtuma. */
+function ikaDialogi() {
+  const kuuntelijat = (el) => { el.k = {}; el.addEventListener = (t, f) => { (el.k[t] ??= []).push(f); }; el.removeEventListener = (t, f) => { el.k[t] = (el.k[t] ?? []).filter((x) => x !== f); }; el.laukaise = (t) => (el.k[t] ?? []).slice().forEach((f) => f()); return el; };
+  const valinta = kuuntelijat({ value: '', vaihtoehdot: [], replaceChildren(...o) { this.vaihtoehdot = o; }, add(o) { this.vaihtoehdot.push(o); } });
+  const jatka = kuuntelijat({ disabled: false });
+  const eiNyt = kuuntelijat({});
+  const dialogi = kuuntelijat({ open: false, showModal() { this.open = true; }, close() { this.open = false; this.laukaise('close'); } });
+  dialogi.querySelector = (s) => ({ '#ikaraja-vuosi': valinta, '#ikaraja-jatka': jatka, '#ikaraja-ei-nyt': eiNyt })[s];
+  return { doc: { getElementById: (id) => (id === 'ikaraja-dialog' ? dialogi : null) }, dialogi, valinta, jatka, eiNyt };
+}
+
+test('web: aikuinen vain varmasti, otsake 0 kunnes vastattu aikuiseksi', () => {
+  globalThis.localStorage = muistiVarasto();
+  globalThis.Option ??= class { constructor(t, v) { this.text = t; this.value = v; } };
+  nollaaIka();
+  assert.equal(onAikuinen(2007, 2026), true);
+  assert.equal(onAikuinen(2008, 2026), false, '18 täyttyy vasta syntymäpäivänä');
+  assert.equal(ikaAikuinen(), null);
+  assert.equal(ikaOtsakeArvo(), '0');
+  assert.equal(ikaKysytty(), false);
+});
+
+test('web: Jatka tallentaa vain aikuinen k/e, Ei nyt = kuratoitu tämän käynnistyksen', async () => {
+  globalThis.localStorage = muistiVarasto();
+  nollaaIka();
+  let d = ikaDialogi();
+  let lupaus = kysyIkaEnsin({ doc: d.doc, nyt: 2026 });
+  assert.equal(d.dialogi.open, true);
+  assert.equal(d.jatka.disabled, true);
+  assert.equal(d.valinta.vaihtoehdot[0].text, IKARAJA_TEKSTIT.valitse);
+  assert.equal(d.valinta.vaihtoehdot[1].value, '2026');
+  d.valinta.value = '1990'; d.valinta.laukaise('change');
+  assert.equal(d.jatka.disabled, false);
+  d.jatka.laukaise('click');
+  await lupaus;
+  assert.equal(globalThis.localStorage.getItem(IKARAJA_AVAIN), '1', 'vain 1/0, ei vuotta');
+  assert.equal(ikaOtsakeArvo(), '1');
+  // Kysytty: ei uutta korttia.
+  d = ikaDialogi();
+  assert.equal(kysyIkaEnsin({ doc: d.doc, nyt: 2026 }), null, 'kysytty: ei odotusta');
+  assert.equal(d.dialogi.open, false);
+
+  nollaaIka();
+  d = ikaDialogi();
+  lupaus = kysyIkaEnsin({ doc: d.doc, nyt: 2026 });
+  d.eiNyt.laukaise('click');
+  await lupaus;
+  assert.equal(globalThis.localStorage.getItem(IKARAJA_AVAIN), null);
+  assert.equal(ikaKysytty(), true);
+  assert.equal(ikaOtsakeArvo(), '0');
+  nollaaIka();
+});
+
+test('web: kortti on olemassa oleva dialog-pohja natiivin teksteillä, pyynnöt kantavat otsakkeen ja merkinnän', () => {
+  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const kortti = html.slice(html.indexOf('<dialog id="ikaraja-dialog" class="dialog">'), html.indexOf('</dialog>', html.indexOf('id="ikaraja-dialog"')));
+  assert.ok(kortti.length > 0);
+  for (const k of ['otsikko', 'teksti', 'tallennus', 'syntymavuosi', 'eiNyt', 'jatka']) assert.ok(kortti.includes(IKARAJA_TEKSTIT[k]), k);
+  assert.match(kortti, /class="dialog-card"[\s\S]*class="puhe-saadin-rivi"[\s\S]*class="dialog-actions"/);
+  const pollo = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+  assert.match(pollo, /\[AIKUINEN_OTSAKE\]: ikaOtsakeArvo\(\)/);
+  assert.match(pollo, /this\.lisaaViesti\('paikkarivi', IKARAJA_TEKSTIT\.merkinta\)/);
+  assert.equal((pollo.match(/ikaKysytty\(\) \? null : kysyIkaEnsin\(\{ doc: this\.doc \}\)/g) ?? []).length, 2, 'kysy ja kysyUlkoisesti');
+  for (const f of ['../sw.js', '../tools/build-standalone.mjs']) assert.match(readFileSync(new URL(f, import.meta.url), 'utf8'), /js\/ikaraja\.js/);
+});
