@@ -5,6 +5,16 @@ Edellinen: viesti-natiiviseppa-luovutus-20261010-aamu.md (TILA-osiot 08.0x–11.
 Viestit: SendMessage-raja oli täynnä → varakanava mcp__ccd_session_mgmt__send_message (PT local_593b89a1…, Julkaisija local_22b29f10…,
 LS1 local_45a869de…, LS2 local_fc4fcc54…, NUI local_33ba1387…, Pelikoodari local_97810d35…, Sisältökirjuri local_256f6a15…).
 
+## TILA 16.2x — BUILD 178 LUKITTU, JUNA 179 KOOTAAN
+- **BUILD 178 = 9e10d4d33e165b59ba534772c64a2a9d951f9236** (proton master; juna/b13 dbd56ba32, puu identtinen; L1309/P456/K460, unity 0; käännöspalvelu
+  KÄÄNNETTY 911df91bf 16.11). Omistaja 16.0x: julkaise, taidemuseo seuraavaan junaan. Muistiajo 177 pätee. Muutosloki (PT kuittasi 16.1x)
+  julkaisija-tyokalut/muutosloki-178.txt. Mac 178 KÄÄNNETTY 16.15 (MATKAKIRJA_BUNDLE_ID=fi.matkakirja.peli MATKAKIRJA_APPSTORE=1 — HUOM etuliite;
+  ensimmäinen yritys ilman etuliitettä pysäytetty) → kopio lokit/natiiviseppa-mac-tf-178-9e10d4d3. SHA + Mac Julkaisijalle 16.1x. Peilattu.
+- **JUNA 179 = natiiviseppa/juna-179 37835358d** (juna-178:n päällä): Siirtoseppä 5f4b1f616, 187359ae0 (sis. eecbb6474, 674f3d589), kiinni68 51029519e;
+  NUI varivakiot 293eae603, paakaupungit-lahi-ita 79eb3c621 (v650 ulkona). L1315/P456/K461, unity 0. ODOTTAA: LS1 museo2-kärki, jossa
+  museo-muisti 378daacc3 + a52df1672 (PT kuittaa kuva-arkin jälkeen).
+- Worktreet (raja 3): j175 (junat), museo, T7 unity67. Poistettu ci-luo-uusinta (PR #4334 mergetty) ja pohja175 (haara peilattu).
+
 ## TILA 15.4x — JUNA 178 dbd56ba32, MUSEON MUISTIKORJAUS VALMIS
 - **JUNA 178 = natiiviseppa/juna-178 dbd56ba32** (350a97ac0 + Siirtoseppä kiinni-kaikki 73bc9b9bd → ajuri-osaraja 8775705c9, LS1 pariisi-mac 92cda8472,
   tuileries-pois 197610afd). L1309/P456/K460, unity 0. Lisää muistia: ei. Muutoslokiin lisäksi: "Kaupunkipallon napautus avaa taas Pariisin esittelyn."
