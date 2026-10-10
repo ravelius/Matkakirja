@@ -22,6 +22,12 @@ namespace Matkakirja.Natiivi
     {
         /// <summary>Nykyintro Pariisissa (oletus päällä; komento "opas intro 0|1"). Muut kaupungit kuten ennen.</summary>
         public static bool IntroPaalla = true;
+        /// <summary>
+        /// Intro kuumailmapallossa (omistaja 10.10.2026 klo 17.3x, sitova: "Pariisin esittely ei pitäisi liittyä kuumailmapalloon
+        /// mitenkään"): oletus pois — kippi aukeaa aina ilman musiikkia ja C-kuvia, ja esittely soi saapumisesityksen jatkona
+        /// (Saapumisesitys.NykyIntro). Koodi säilyy kokeiluja varten ("opas intro pallossa 0|1").
+        /// </summary>
+        public static bool IntroPallossa = false;
 
         bool introKaynnissa, introAvausVapaa = true, introOhitusPyynto;
         /// <summary>Intro soitettiin tällä esityksellä ja 1. kyydin opastus odottaa ensimmäistä pysähdystä.</summary>
@@ -66,7 +72,7 @@ namespace Matkakirja.Natiivi
         {
             esitysAlku = Time.unscaledTime; avausEnnenS = 0;
             opastusSiirretty = false; opastusUrl = null;
-            if (Testi || !IntroPaalla || !KaupunkiIntro.OnIntro(kaupunkiId) || kaupunkitila == null) return false;
+            if (Testi || !IntroPaalla || !IntroPallossa || !KaupunkiIntro.OnIntro(kaupunkiId) || kaupunkitila == null) return false;
             // Vähän muistia (juna 173, iPad Pro 13 jetsam): koko nykyintro ohitetaan, avaus kuten ilman introa (juna 172).
             long vapaaAlussa = CesiumKaupunki.VapaaMuisti();
             if (vapaaAlussa > 0 && vapaaAlussa / 1e9 < IntroOhitusRajaGt)

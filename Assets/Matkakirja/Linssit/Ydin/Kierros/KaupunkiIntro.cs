@@ -97,6 +97,23 @@ namespace Matkakirja.Linssit.Kierros
             new IntroOtos { Nro = 9, AlkuS = PaluuAlkaaS, LoppuS = PaluuLoppuS, Laji = IntroLaji.Kuva, Kuva = 5, KbAlku = R(1.03, 0.5, 0.55), KbLoppu = R(1.04, 0.5, 0.56) },
         };
 
+        /// <summary>
+        /// SAAPUMISESITYKSEN JATKO (omistaja 10.10.2026 klo 17.3x, sitova: "Pariisin esittely ei pitäisi liittyä kuumailmapalloon
+        /// mitenkään, vaan se pitää tulla kun pelaaja saapuu kaupunkiin ja korvaa tai jatkaa sitä nykyistä kolmen kuvan esittelyä"):
+        /// Codex-kuvat C1–C5 saapumisesityksen kuvapakkaan kukin ensimmäisen otoksensa alussa (aika musiikin alusta, tahdin iskulla).
+        /// 3D-otokset (avausnäkymä, Eiffel) jäävät pois: niiden ajan pakassa näkyy edellinen kuva.
+        /// </summary>
+        public static IReadOnlyList<(int Kuva, double AlkuS)> Kuvasarja()
+        {
+            var l = new List<(int, double)>();
+            foreach (var o in Otokset)
+                if (o.Laji == IntroLaji.Kuva && o.Kuva > 0 && !l.Exists(x => x.Item1 == o.Kuva)) l.Add((o.Kuva, o.AlkuS));
+            return l;
+        }
+
+        /// <summary>Kuvasarjan loppu (s musiikin alusta): C5 näkyy täysin, sitten pakka hiljenee kuten luennan jälkeen.</summary>
+        public const double KuvasarjaLoppuS = PaluuAlkaaS;
+
         public static IntroOtos Otos(double t)
         {
             foreach (var o in Otokset) if (t >= o.AlkuS && t < o.LoppuS) return o;
