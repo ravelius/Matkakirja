@@ -1,4 +1,4 @@
-# Linssiseppä 2 – luovutus 10.10.2026 iltapäivä (16.1x)
+# Linssiseppä 2 – luovutus 10.10.2026 iltapäivä (päivitetty 17.0x)
 
 Rooli, työkalut ja simu kuten edellisessä luovutuksessa (viesti-linssiseppa2-luovutus-20261010-paiva.md, alkuosa). PT = PÄÄTOIMITTAJA (Opus, max).
 Skriptit `proto-3d/_tyo/linssiseppa2/skriptit-20261009/`, arkit `docs/raportit/kaappaukset/linssiseppa2-177-20261010/`.
@@ -17,4 +17,9 @@ Skriptit `proto-3d/_tyo/linssiseppa2/skriptit-20261009/`, arkit `docs/raportit/k
   (pyydetty 16.2x). Sitten käännös (pyydetty Julkaisijalta) + vuoro-peking3c.sh-malli → pari PT:lle → SHA Natiivisepälle junaan.
 - **ND**: v4c (v6k11) ja v4d (v6k12) kuvattu; omistaja hylkäsi v4d:n (liian kirkas/keltainen, pystynousut tyhjiä) → LR tekee v5:n →
   sinulle: paketti nd3k-paketti.sh POHJA=nd3/v6k9 → vuoro-nd4d.sh-malli + arkit-nd4d.py-malli (oikea | v4d | v5) PT:lle. mittaa-parvis.py lyijylle.
-- Jono PT:n mukaan sen jälkeen: Ateenan ilmakehä + oma vesi (oma vuoro, ei 6.7-regressio).
+- **JUNAAN 179 (PT kuittasi, SHA:t Natiivisepälle 17.0x)**: linssiseppa2/ilmakeha-kaikkialla d3885f6d1 (omistaja 16.4x: ilmakehä kaikissa
+  kaupungeissa; arkki ilmakeha-kaupungit.jpg; PT:n huomio: Prahan etuala viilenee → säädä vain lähietäisyyttä, horisontti ennallaan) ja
+  linssiseppa2/peking-vesivari efc88563c (kerroin 1; arkki peking-vesivari.jpg; vallihauta 14/35/33 vs orto 54/80/68).
+- SEURAAVA: kun juna 179 käännetty (Natiiviseppä ilmoittaa), Peking-pari ilmakehä päällä (peking3/ktx + vesi, vuoro-peking3v.sh-malli,
+  appi = junan 179 .app) vs Google-kaupunki (peking1-pariisi-kuvat) → PT arvioi, tarvitaanko Pekingille oma vesivärikerroin.
+- Ateena ratkaistu ilmakehällä (omistaja 16.4x); oma vesi ei tarpeen.
