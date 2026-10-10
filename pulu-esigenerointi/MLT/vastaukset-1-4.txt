@@ -1,13 +1,13 @@
 ### 16.1
 KYSYMYS: Mistä Mellieħan nimi juontuu?
-Ai tota, tän minä tiedän. Nimi juontuu seemiläisestä sanajuuresta, joka tarkoittaa suolaa. Todennäköisimmin se viittaa alueella sijainneisiin [[foinikialaisten]] ja roomalaisten aikaisiin [[suolapatoihin]], joissa merivettä haihdutettiin suolaksi. Kylä sijaitsee [[Maltan]] pohjoisosassa, ja nimi kertoo, että suolaa on seudulla otettu merestä hyvin kauan. Suolaa en kyllä itse kaipaa, mut ois siinä pullalle sopiva pari.
+Ai tota, tän minä tiedän. Nimi juontuu seemiläisestä sanajuuresta, joka tarkoittaa suolaa. Todennäköisimmin se viittaa alueella sijainneisiin [[foinikialaisten]] ja roomalaisten aikaisiin [[suolapatoihin]], joissa merivettä haihdutettiin suolaksi. Kylä sijaitsee [[Maltan]] pohjoisosassa, ja nimi kertoo, että suolaa on seudulla otettu merestä hyvin kauan. Suolaa en kyllä itse kaipaa, mut pullan päällä se olisi kyllä hyvä.
 JATKOT:
 Miten suolaa on tehty merivedestä aikojen kuluessa?
 Keitä foinikialaiset olivat ja miksi he purjehtivat Maltalle?
 
 ### 16.2
 KYSYMYS: Minä vuonna pyhäkkökirkon luola vihittiin kirkoksi perimätiedon mukaan?
-Selvä juttu. Perimätiedon mukaan luola vihittiin kirkoksi vuonna 409. Samassa perimätiedossa kerrotaan, että apostoli Paavalin matkakumppani [[Luukas]] olisi maalannut [[Neitsyt Marian]] kuvan luolan kallioseinään, ja luolasta tuli myöhemmin Neitsyt Marian pyhäkkökirkko. Kyse on siis kertomuksesta, jota ei ole syytä esittää tarkistettuna tosiasiana, vaikka vuosiluku onkin perinteessä vakiintunut. Pyhäkkö on yhä Mellieħan tunnetuimpia nähtävyyksiä. Tällaiset luvut pysyvät päässä, vaikka lentäisi kuinka korkealla.
+Selvä juttu. Perimätiedon mukaan luola vihittiin kirkoksi vuonna 409. Samassa perimätiedossa kerrotaan, että apostoli Paavalin matkakumppani [[Luukas]] maalasi [[Neitsyt Marian]] kuvan luolan kallioseinään, ja luolasta tuli myöhemmin Neitsyt Marian pyhäkkökirkko. Kyse on siis perimätiedosta, ei tarkistetusta tosiasiasta, vaikka vuosiluku onkin perinteessä vakiintunut. Vuosiluvun muistaa helposti, vaikka lentäisi kuinka korkealla.
 JATKOT:
 Mitä tarkoittaa perimätieto ja miten se eroaa historiankirjoituksesta?
 Miten luolia on käytetty kirkkoina Välimeren alueella?
@@ -42,7 +42,7 @@ Mitä muita paikannimiä Maltalla on arabian pohjalta?
 
 ### 17.2
 KYSYMYS: Minä vuonna kaupungin seurakuntakirkko valmistui?
-No niin, katsotaas. Nykyinen Pyhälle Annalle omistettu seurakuntakirkko valmistui vuonna 1953, joten se on kaupungin historiassa verrattain nuori rakennus. Kaupunki oli alun perin kalastajakylä, joka on kasvanut matkailukohteeksi ja pysyväksi asuinpaikaksi, ja seurakuntakirkko kuvastaa tätä kasvua. Kaupungin juhlaa vietetään heinäkuun lopussa. Nuori kirkko, vanha satama, ja minä siinä välissä.
+No niin, katsotaas. Nykyinen [[Pyhälle Annalle]] omistettu seurakuntakirkko valmistui vuonna 1953, joten se on kaupungin historiassa verrattain nuori rakennus. Kaupunki oli alun perin [[kalastajakylä]], joka on kasvanut matkailukohteeksi ja pysyväksi asuinpaikaksi, ja seurakuntakirkko kuvastaa tätä kasvua. Kaupungin juhlaa vietetään heinäkuun lopussa. Nuori kirkko, vanha satama, ja minä siinä välissä.
 JATKOT:
 Kuka Pyhä Anna oli kirkon perimätiedon mukaan?
 Miten juhlia vietetään maltalaisissa kylissä?
@@ -70,14 +70,14 @@ Millaista kalastus on perinteisesti ollut Maltalla?
 
 ### 18.1
 KYSYMYS: Minkä suurmestarin mukaan palatsi on nimetty?
-Tuota niin. Palatsi on nimetty suurmestari Hugues Loubenx de Verdallen mukaan, jonka aikana vuonna 1586 metsästysmaja laajennettiin palatsiksi. Hän johti [[Johanniittaritarikuntaa]], jonka suurmestarit hallitsivat Maltaa. Paikalla oli aiemmin suurmestari Jean Parisot de la Valetten rakennuttama majatalo-, tarkemmin metsästysmaja, [[Boschetton]] riistamaalla, ja nykyisin rakennus on Maltan presidentin kesäasunto. Suurmestareita oli niin monta, että minulla meni hetki päästä perille.
+Tuota niin. Palatsi on nimetty suurmestari Hugues Loubenx de Verdallen mukaan, jonka aikana vuonna 1586 metsästysmaja laajennettiin palatsiksi. Hän johti [[Johanniittaritarikuntaa]], jonka suurmestarit hallitsivat Maltaa. Paikalla oli aiemmin suurmestari Jean Parisot de la Valetten rakennuttama metsästysmaja [[Boschetton]] riistamaalla, ja nykyisin rakennus on Maltan presidentin kesäasunto. Suurmestareita oli niin monta, että minulla meni hetki päästä perille.
 JATKOT:
 Mitä suurmestarin tehtävään kuului Johanniittaritarikunnassa?
 Mikä on Buskettin puutarha ja mitä siellä kasvaa?
 
 ### 18.2
 KYSYMYS: Mitä rakennusta paikalla oli ennen palatsia?
-Kas vaan, tähän on suora vastaus. Paikalla oli ennen palatsia metsästysmaja, jonka suurmestari Jean Parisot de la Valette rakennutti 1550–1560-luvuilla [[Boschetton]] riistamaalle. Maja laajennettiin palatsiksi vuonna 1586 suurmestari Verdallen aikana, ja palatsi sai nimensä hänen mukaansa. Myöhemmin rakennusta koristeltiin lisää, ja nykyään se on Maltan presidentin kesäasunto. Metsästysmajasta palatsiksi, siinä on kyllä urakehitystä, jota kyyhky ei saavuta.
+Kas vaan, tähän on suora vastaus. Paikalla oli ennen palatsia metsästysmaja, jonka suurmestari [[Jean Parisot de la Valette]] rakennutti 1550–1560-luvuilla [[Boschetton]] riistamaalle. Maja laajennettiin palatsiksi vuonna 1586 suurmestari Verdallen aikana, ja palatsi sai nimensä hänen mukaansa. Myöhemmin rakennusta koristeltiin lisää, ja nykyään se on Maltan presidentin kesäasunto. Metsästysmajasta palatsiksi, siinä on kyllä urakehitystä, jota kyyhky ei saavuta.
 JATKOT:
 Millaista metsästys oli johanniittojen aikana Maltalla?
 Mitä presidentti tekee palatsissa kesäisin?
@@ -87,11 +87,11 @@ KYSYMYS: Mihin käyttöön Verdalan palatsi on nykyään?
 Mmm— no niin. Palatsi toimii nykyään Maltan presidentin virallisena kesäasuntona. Se kohoaa [[Buskettin]] puutarhojen keskellä Siġġiewin kunnan alueella. Brittiaikana sitä käytettiin Maltan kuvernöörin residenssinä, ja nykyinen käyttö jatkaa rakennuksen vanhaa virallista asemaa. Maltan tasavallan [[presidentti]] on valtionpäämies, ja palatsi on hänen kesäpaikkansa. Kesäasunto kuulostaa minun korvaani kovin hyvältä ajatukselta.
 JATKOT:
 Mikä on Maltan presidentin asema valtiossa?
-Mitä Buskettin puutarhat ovat ja miten ne tunnetaan?
+Mikä on Buskettin puutarha ja mitä siellä kasvaa?
 
 ### 18.4
 KYSYMYS: Mikä asema palatsilla oli brittiaikana?
-Annas ku mietin. Brittiaikana palatsi toimi Maltan kuvernöörin residenssinä San Anton -palatsin ohella. Siellä majoittui myös brittihallitsijoita ja muuta ylhäisöä, joten rakennus oli tärkeä paikka vallan edustuksessa. Maltalla [[britit]] pitivät hallintoa kauan, ja kuvernööri edusti Britannian kruunua saarella. Nykyään palatsin käyttö on rauhallisempaa. Kuvernöörin elämä ei kuulosta kyyhkyn elämältä, mutta pidempi vierailu voisi onnistua.
+Annas ku mietin. Brittiaikana palatsi toimi Maltan [[kuvernöörin]] residenssinä [[San Anton -palatsin]] ohella. Siellä majoittui myös brittihallitsijoita ja muuta ylhäisöä, joten rakennus oli tärkeä paikka vallan edustuksessa. Maltalla britit pitivät hallintoa kauan, ja kuvernööri edusti Britannian kruunua saarella. Nykyään palatsin käyttö on rauhallisempaa. Kuvernöörin elämä ei kuulosta kyyhkyn elämältä, mutta pidempi vierailu voisi onnistua.
 JATKOT:
 Miten Malta päätyi brittien hallintaan?
 Mikä on San Anton -palatsi ja kuka siellä asuu nykyään?
@@ -105,7 +105,7 @@ Millaista oli Lascarisin aika suurmestarina?
 
 ### 19.1
 KYSYMYS: Minä vuonna Arturo Issel teki ensimmäiset tieteelliset kaivaukset luolassa?
-Joo, tän minä tiedän. Italialainen paleontologi Arturo Issel teki ensimmäiset tieteelliset kaivaukset vuonna 1865. Lisäkaivauksia teki John H. Cooke vuonna 1892, ja osa löydöistä lähetettiin vertailukokoelmaksi Lontoon [[British Museumiin]]. Luolan kerrostumista on löytynyt eläinten luita pleistoseeni- ja holoseenikaudelta, mikä tekee paikasta tutkijoille arvokkaan. Vuosiluvut pysyvät päässä, kun on opetellut ne oikein.
+Joo, tän minä tiedän. Italialainen paleontologi [[Arturo Issel]] teki ensimmäiset tieteelliset kaivaukset vuonna 1865. Lisäkaivauksia teki John H. Cooke vuonna 1892, ja osa löydöistä lähetettiin vertailukokoelmaksi Lontoon [[British Museumiin]]. Luolan kerrostumista on löytynyt eläinten luita [[pleistoseeni]]- ja holoseenikaudelta, mikä tekee paikasta tutkijoille arvokkaan. Vuosiluvut pysyvät päässä, kun on opetellut ne oikein.
 JATKOT:
 Mitä paleontologi tutkii ja miten työ etenee?
 Mitä pleistoseeni tarkoittaa geologiassa?
@@ -126,7 +126,7 @@ Mitä tiedetään Maltan esihistoriasta ennen temppeleitä?
 
 ### 19.4
 KYSYMYS: Miksi luolasta on löytynyt kääpiönorsujen luita?
-Hetkinen ny. Pienikokoiset norsut ovat tunnettu ilmiö eristyneillä saarilla, sillä rajallinen ravinto ajaa suuria eläimiä pienenemään. Għar Dalamin luolasta on löydetty pleistoseenikauden eläinten luita, muun muassa kääpiönorsuja, virtahepoja ja jättiläisjoutsenia. Tarkkaa selitystä siitä, miten eläimet Maltalle tulivat, en ole varma, enkä halua arvailla. Kääpiönorsu kuulostaa minusta sympaattiselta, ja lentäminen olisi sille silti hankalaa.
+Hetkinen ny. Pienikokoiset [[norsut]] ovat tunnettu ilmiö eristyneillä saarilla, sillä rajallinen ravinto ajaa suuria eläimiä pienenemään. [[Għar Dalamin]] luolasta on löydetty [[pleistoseenikauden]] eläinten luita, muun muassa [[kääpiönorsuja]], virtahepoja ja jättiläisjoutsenia. Tarkkaa selitystä siitä, miten eläimet Maltalle tulivat, en ole varma, enkä halua arvailla. Kääpiönorsu kuulostaa minusta sympaattiselta, ja lentäminen olisi sille silti hankalaa.
 JATKOT:
 Miten eläimet muuttuvat pienemmiksi eristetyillä saarilla?
 Mitä muita kääpiöeläimiä saarilta tunnetaan?
@@ -171,4 +171,4 @@ KYSYMYS: Mikä Grand Harbour on?
 Odotas vähän. Grand Harbour on [[Maltan]] suuri luonnonsatama, jota ympäröivät [[Valletta]] ja muita kaupunkeja, kuten [[Birgu]]. Sen poukamat ovat tarjonneet suojaa merimatkalta saapuville jo kauan, ja Kalkaran kylä sijaitsee tämän satama-alueen tuntumassa. Satama on ollut saaren historiassa keskeinen. Tarkkoja mittoja en ole varma, joten jätän ne pois. Satamien katseleminen ylhäältä on parasta, mitä tiedän.
 JATKOT:
 Miten Grand Harbour on vaikuttanut Maltan historiaan?
-Mitä Birgu tunnetaan ennen Vallettan rakentamista?
+Mikä merkitys Birgulla oli ennen Vallettan rakentamista?
