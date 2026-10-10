@@ -3,6 +3,9 @@
 // jokilaivat lautan moottori, pikkuveneet moottorivene; silmukat satunnaisesta kohdasta ja hieman eri sävelkorkeudella (ei kaikuja).
 // Etäisyys: lineaarinen 40–900 m (pallo 100–800 m:n päässä), taso mikserin Kerroin("maisema", laiva.<tunnus>) × LaivaTaso; enintään 24
 // ääntä kerrallaan (prioriteetti). Äänirekisteri (Natiivi-UI 9.10.): kolme laivaääntä pallon Äänimaisema-ryhmään, klipin nimi = tunnus.
+// HÖYRYKONE SOUNDLYSTA (LS2 10.10., PT:n jako LS1:n kautta): vanhat höyry- ja saaristolaivat soittavat yhtä neljästä Soundly-silmukasta
+// (ui-linssit-soundly-v1/hoyrykone-01…04, 30 s saumaton, −23 LUFS, ylipäästö 80 Hz) laivan mukaan; puuttuessa elava-kaupunki-v1/hoyrykone.
+// Nykyalukset (lautat, moottoriveneet) ennallaan. Mikserin tunnus pysyy laiva.hoyrykone.
 // Steam Audio -koe (9.10., oletus pois): lähteet SteamAudioKoe.Rekisteroi-kutsulla, kytkin pallo.SteamAudio / "opas steamaudio".
 using System.Collections;
 using System.Collections.Generic;
@@ -14,10 +17,12 @@ namespace Matkakirja.Natiivi
     public static class VeneAanet
     {
         public const string Juuri = KaupunkiAanimaisemaSoitin.Juuri + "elava-kaupunki-v1/";
+        public const string SoundlyJuuri = KaupunkiAanimaisemaSoitin.Juuri + "ui-linssit-soundly-v1/";
+        public const int HoyrykoneVariantit = 4;
         public const float LaivaTaso = 0.7f, MinM = 40f, MaxM = 900f;
         static readonly Dictionary<string, AudioClip> klipit = new Dictionary<string, AudioClip>();
         static readonly HashSet<string> ladataan = new HashSet<string>();
-        static readonly List<(AudioSource a, string tunnus)> lahteet = new List<(AudioSource, string)>();
+        static readonly List<(AudioSource a, string tunnus, string klippi)> lahteet = new List<(AudioSource, string, string)>();
 
         static readonly string[] Tunnukset = { "hoyrykone", "lautta", "moottorivene" };
         static readonly float[] tasot = new float[3];
@@ -46,27 +51,42 @@ namespace Matkakirja.Natiivi
         {
             string t = Tunnus(laji); if (t == null || isanta == null || vene == null) return;
             Rekisteroi();
-            if (!klipit.ContainsKey(t) && ladataan.Add(t)) isanta.StartCoroutine(Lataa(t));
+            string kl = Klippi(t, vene.GetHashCode());   // Unity 6.7: GetInstanceID vanhentunut (CS0619)
+            if (!klipit.ContainsKey(kl) && ladataan.Add(kl)) isanta.StartCoroutine(Lataa(t, kl));
             var a = vene.AddComponent<AudioSource>();
             float s = Mathf.Max(1e-4f, vene.transform.lossyScale.y);
             a.spatialBlend = 1f; a.rolloffMode = AudioRolloffMode.Linear; a.minDistance = MinM * s; a.maxDistance = MaxM * s;
             a.loop = true; a.playOnAwake = false; a.dopplerLevel = 0f; a.pitch = Random.Range(0.92f, 1.08f); a.volume = 0f;
             a.priority = 200;
             SaumatonSilmukka.Kiinnita(a);   // saumaton silmukka (juna 174)
-            lahteet.Add((a, t));
+            lahteet.Add((a, t, kl));
             SteamAudioKoe.Rekisteroi(a);   // HRTF-koe (kehittäjäkytkin pallo.SteamAudio, oletus pois)
         }
 
-        static IEnumerator Lataa(string t)
+        /// <summary>Klipin nimi: höyrykone laivan mukaan yksi Soundly-varianteista (hoyrykone-01…04), muut lajin tunnus.</summary>
+        public static string Klippi(string tunnus, int siemen) =>
+            tunnus == "hoyrykone" ? $"hoyrykone-{(siemen & 0x7fffffff) % HoyrykoneVariantit + 1:00}" : tunnus;
+
+        static IEnumerator Lataa(string t, string kl)
         {
-            using var r = UnityWebRequestMultimedia.GetAudioClip(Juuri + t + ".mp3", AudioType.MPEG);
-            ((DownloadHandlerAudioClip)r.downloadHandler).compressed = true;   // 3 laivaa PCM:nä 11 Mt, pakattuina 1,6 Mt (juna 174, muisti)
-            r.timeout = 30;
-            yield return r.SendWebRequest();
-            var c = r.result == UnityWebRequest.Result.Success ? DownloadHandlerAudioClip.GetContent(r) : null;
-            if (c != null) { c.name = AaniId(t); yield return SaumatonSilmukka.HaeTagi(r.url, c); }   // tagi ennen käyttöönottoa
-            ladataan.Remove(t); klipit[t] = c;
-            if (klipit[t] == null) Debug.Log($"MATKAKIRJA kaupunki: laivan ääni {t} ei latautunut ({r.error})");
+            bool soundly = kl != t;
+            AudioClip c = null; string virhe = null, url = null;
+            foreach (var u in soundly ? new[] { SoundlyJuuri + kl + ".mp3", Juuri + t + ".mp3" } : new[] { Juuri + t + ".mp3" })   // varalla elävän kaupungin höyrykone
+            {
+                using var r = UnityWebRequestMultimedia.GetAudioClip(u, AudioType.MPEG);
+                ((DownloadHandlerAudioClip)r.downloadHandler).compressed = true;   // pakattuina muistissa (juna 174)
+                r.timeout = 30;
+                yield return r.SendWebRequest();
+                if (r.result == UnityWebRequest.Result.Success && (c = DownloadHandlerAudioClip.GetContent(r)) != null) { url = r.url; break; }
+                virhe = r.error;
+            }
+            if (c != null)
+            {
+                c.name = AaniId(t); yield return SaumatonSilmukka.HaeTagi(url, c);   // tagi ennen käyttöönottoa
+                Debug.Log($"MATKAKIRJA kaupunki: laivan ääni {kl} ladattu ({(url.StartsWith(SoundlyJuuri) ? "Soundly" : "elävä kaupunki")}, {c.length:F0} s), lähteitä {lahteet.Count}");
+            }
+            else Debug.Log($"MATKAKIRJA kaupunki: laivan ääni {kl} ei latautunut ({virhe})");
+            ladataan.Remove(kl); klipit[kl] = c;
         }
 
         /// <summary>Joka kehys (ElavaKaupunki): klipit lähteisiin, taso mikseristä (Äänimaisema × laivan ääni); tuhoutuneet pois.</summary>
@@ -77,9 +97,9 @@ namespace Matkakirja.Natiivi
             for (int j = 0; j < Tunnukset.Length; j++) tasot[j] = m.Kerroin("maisema", AaniId(Tunnukset[j])) * LaivaTaso;
             for (int i = lahteet.Count - 1; i >= 0; i--)
             {
-                var (a, t) = lahteet[i];
+                var (a, t, kl) = lahteet[i];
                 if (a == null) { lahteet.RemoveAt(i); continue; }
-                if (a.clip == null && klipit.TryGetValue(t, out var k) && k != null)
+                if (a.clip == null && klipit.TryGetValue(kl, out var k) && k != null)
                 {
                     a.clip = k; a.time = Random.Range(0f, Mathf.Max(0f, k.length - 0.1f));
                     if (a.isActiveAndEnabled) a.Play();
