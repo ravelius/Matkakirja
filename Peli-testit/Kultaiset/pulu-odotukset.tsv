@@ -1,5 +1,6 @@
 # maa	kohtia	kysymysvastauksia	Kerro lisää -vastauksia (pulu-kultaiset.py --kirjoita; PuluValmiitMaatTestit.KaikkiMaat)
 AUT	53	265	586
+BEL	31	155	307
 BGR	48	240	539
 CHE	40	200	382
 CZE	47	235	452
@@ -14,6 +15,7 @@ GRC	78	390	930
 HRV	48	240	544
 HUN	44	220	472
 IRL	52	260	639
+ISL	30	150	308
 ITA	63	315	763
 LTU	39	195	408
 LVA	39	195	426

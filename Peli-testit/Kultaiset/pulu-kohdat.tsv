@@ -1,4 +1,4 @@
-# Karttavalot (kohde:<id>) ja täkynostot (nosto:<id>) maittain sisältöpaketista v651 (AUT, BGR, CHE, CZE, DEU, DNK, ESP, EST, FIN, FRA, GBR, GRC, HRV, HUN, IRL, ITA, LTU, LVA, NLD, NOR, POL, PRT, ROU, RUS, SVK, SVN, SWE, UKR), Pulun valmiiden vastausten testiin (pulu-kultaiset.py)
+# Karttavalot (kohde:<id>) ja täkynostot (nosto:<id>) maittain sisältöpaketista v653 (AUT, BEL, BGR, CHE, CZE, DEU, DNK, ESP, EST, FIN, FRA, GBR, GRC, HRV, HUN, IRL, ISL, ITA, LTU, LVA, NLD, NOR, POL, PRT, ROU, RUS, SVK, SVN, SWE, UKR), Pulun valmiiden vastausten testiin (pulu-kultaiset.py)
 elaintaky:AUT	AUT
 elaintaky:BGR	BGR
 elaintaky:CHE	CHE
@@ -14,6 +14,7 @@ elaintaky:GRC	GRC
 elaintaky:HRV	HRV
 elaintaky:HUN	HUN
 elaintaky:IRL	IRL
+elaintaky:ISL	ISL
 elaintaky:ITA	ITA
 elaintaky:LTU	LTU
 elaintaky:LVA	LVA
@@ -155,6 +156,7 @@ kohde:decin	CZE
 kohde:delfoi	GRC
 kohde:deltatyot	NLD
 kohde:derzhprom	UKR
+kohde:dettifoss	ISL
 kohde:devils-bit	IRL
 kohde:dinara	HRV
 kohde:dnepr	UKR
@@ -176,6 +178,7 @@ kohde:egeanmeri	GRC
 kohde:eger	HUN
 kohde:egeskov	DNK
 kohde:eidsvoll	NOR
+kohde:eiriksstadir	ISL
 kohde:eisriesenwelt	AUT
 kohde:elbe	DEU
 kohde:elblaginkanava	POL
@@ -197,6 +200,7 @@ kohde:gaizinkalns	LVA
 kohde:galdhpiggen	NOR
 kohde:gamla-uppsala	SWE
 kohde:gerace	ITA
+kohde:geysir	ISL
 kohde:giethoorn	NLD
 kohde:glencarin-vesiputous	IRL
 kohde:glendalough	IRL
@@ -207,7 +211,9 @@ kohde:gota-kanava	SWE
 kohde:gotaalv	SWE
 kohde:gotthardin-tunneli	CHE
 kohde:grand-st-bernard	CHE
+kohde:grimsey	ISL
 kohde:groglockner	AUT
+kohde:gronlanninmeri	ISL
 kohde:grosser-arber	DEU
 kohde:grutas-puisto	LTU
 kohde:gruyeres	CHE
@@ -228,6 +234,7 @@ kohde:hahmotelma-agrigento	ITA
 kohde:hahmotelma-ainazi	LVA
 kohde:hahmotelma-aizpute	LVA
 kohde:hahmotelma-ajaccio	FRA
+kohde:hahmotelma-akureyri	ISL
 kohde:hahmotelma-alatskivi	EST
 kohde:hahmotelma-alba	ITA
 kohde:hahmotelma-alba-iulia	ROU
@@ -244,6 +251,7 @@ kohde:hahmotelma-amiens	FRA
 kohde:hahmotelma-amsterdamin-vanha-raatihuone	NLD
 kohde:hahmotelma-ansbach	DEU
 kohde:hahmotelma-antiikin-serdika	BGR
+kohde:hahmotelma-antwerpen-beurs	BEL
 kohde:hahmotelma-aranjuez	ESP
 kohde:hahmotelma-arrabida	PRT
 kohde:hahmotelma-arta	GRC
@@ -264,6 +272,7 @@ kohde:hahmotelma-bardejov	SVK
 kohde:hahmotelma-bardenas-reales	ESP
 kohde:hahmotelma-basel	CHE
 kohde:hahmotelma-bassae	GRC
+kohde:hahmotelma-bastogne	BEL
 kohde:hahmotelma-bauska	LVA
 kohde:hahmotelma-bayreuth	DEU
 kohde:hahmotelma-beaune	FRA
@@ -283,20 +292,24 @@ kohde:hahmotelma-birr	IRL
 kohde:hahmotelma-birstonas	LTU
 kohde:hahmotelma-birzai	LTU
 kohde:hahmotelma-biskupin	POL
+kohde:hahmotelma-blaa-lonid	ISL
 kohde:hahmotelma-blarney	IRL
 kohde:hahmotelma-bled	SVN
 kohde:hahmotelma-bochnia	POL
 kohde:hahmotelma-bohemian-paradise	CZE
+kohde:hahmotelma-bois-du-cazier	BEL
 kohde:hahmotelma-bojnice	SVK
 kohde:hahmotelma-boleslawiec	POL
 kohde:hahmotelma-bonifacio	FRA
 kohde:hahmotelma-borger	NLD
 kohde:hahmotelma-borgund	NOR
 kohde:hahmotelma-bornholm	DNK
+kohde:hahmotelma-bouillon	BEL
 kohde:hahmotelma-brasov	ROU
 kohde:hahmotelma-bratislava	SVK
 kohde:hahmotelma-bregenzerwald	AUT
 kohde:hahmotelma-brennero	ITA
+kohde:hahmotelma-brugge-belfry	BEL
 kohde:hahmotelma-brunost	NOR
 kohde:hahmotelma-budan-matyas-palatsi	HUN
 kohde:hahmotelma-buen-retiro	ESP
@@ -308,6 +321,7 @@ kohde:hahmotelma-cacvina	HRV
 kohde:hahmotelma-caernarfon	GBR
 kohde:hahmotelma-campo-de-criptana	ESP
 kohde:hahmotelma-canal-de-castilla	ESP
+kohde:hahmotelma-canal-du-centre	BEL
 kohde:hahmotelma-canal-du-midi	FRA
 kohde:hahmotelma-canigou	FRA
 kohde:hahmotelma-cannae	ITA
@@ -331,6 +345,7 @@ kohde:hahmotelma-chernihiv	UKR
 kohde:hahmotelma-cherven	BGR
 kohde:hahmotelma-chianti	ITA
 kohde:hahmotelma-chiemsee	DEU
+kohde:hahmotelma-chimay	BEL
 kohde:hahmotelma-chios	GRC
 kohde:hahmotelma-chlemoutsi	GRC
 kohde:hahmotelma-christiansborg	DNK
@@ -347,6 +362,7 @@ kohde:hahmotelma-connemara	IRL
 kohde:hahmotelma-convento-carmo	PRT
 kohde:hahmotelma-corrib	IRL
 kohde:hahmotelma-cotnari	ROU
+kohde:hahmotelma-coudenberg	BEL
 kohde:hahmotelma-covadonga	ESP
 kohde:hahmotelma-cremona	ITA
 kohde:hahmotelma-cruquius	NLD
@@ -356,6 +372,7 @@ kohde:hahmotelma-deinokrateen-vuori	GRC
 kohde:hahmotelma-delos	GRC
 kohde:hahmotelma-deva	ROU
 kohde:hahmotelma-devin	SVK
+kohde:hahmotelma-dinant	BEL
 kohde:hahmotelma-dingle	IRL
 kohde:hahmotelma-diosgyor	HUN
 kohde:hahmotelma-dispilio	GRC
@@ -369,11 +386,13 @@ kohde:hahmotelma-dovrefjell	NOR
 kohde:hahmotelma-dublinin-keskiaikainen-linna	IRL
 kohde:hahmotelma-dunajec-gorge	POL
 kohde:hahmotelma-dundaga	LVA
+kohde:hahmotelma-durbuy	BEL
 kohde:hahmotelma-durdevac	HRV
 kohde:hahmotelma-dwingelderveld	NLD
 kohde:hahmotelma-dybbol	DNK
 kohde:hahmotelma-dzukija	LTU
 kohde:hahmotelma-ebeltoft	DNK
+kohde:hahmotelma-eben-emael	BEL
 kohde:hahmotelma-edam	NLD
 kohde:hahmotelma-edinburgh-castle	GBR
 kohde:hahmotelma-eisenstadt	AUT
@@ -398,6 +417,7 @@ kohde:hahmotelma-ferlach	AUT
 kohde:hahmotelma-fertod	HUN
 kohde:hahmotelma-fish-and-chips	GBR
 kohde:hahmotelma-fiskars	FIN
+kohde:hahmotelma-flateyjarbok	ISL
 kohde:hahmotelma-forchtenstein	AUT
 kohde:hahmotelma-foz-coa	PRT
 kohde:hahmotelma-franeker	NLD
@@ -410,16 +430,19 @@ kohde:hahmotelma-geevor-tin	GBR
 kohde:hahmotelma-geirangerfjord	NOR
 kohde:hahmotelma-gemenc	HUN
 kohde:hahmotelma-geneve	CHE
+kohde:hahmotelma-geraardsbergen	BEL
 kohde:hahmotelma-gernikako-arbola	ESP
 kohde:hahmotelma-giants-causeway	GBR
 kohde:hahmotelma-gla	GRC
 kohde:hahmotelma-gmunden	AUT
+kohde:hahmotelma-godafoss	ISL
 kohde:hahmotelma-godollo	HUN
 kohde:hahmotelma-gokstad	NOR
 kohde:hahmotelma-gortynin-laki	GRC
 kohde:hahmotelma-gouda	NLD
 kohde:hahmotelma-gran-paradiso	ITA
 kohde:hahmotelma-gran-sasso	ITA
+kohde:hahmotelma-grand-hornu	BEL
 kohde:hahmotelma-grand-hotel-schreiber-rigi-kulm	CHE
 kohde:hahmotelma-grande-dixence	CHE
 kohde:hahmotelma-granna	SWE
@@ -429,6 +452,7 @@ kohde:hahmotelma-grossvenediger	AUT
 kohde:hahmotelma-grunwald	POL
 kohde:hahmotelma-gyula	HUN
 kohde:hahmotelma-haggis	GBR
+kohde:hahmotelma-hakarl	ISL
 kohde:hahmotelma-hall-in-tirol	AUT
 kohde:hahmotelma-halsingegardar	SWE
 kohde:hahmotelma-hambach	DEU
@@ -436,7 +460,9 @@ kohde:hahmotelma-hameln	DEU
 kohde:hahmotelma-hamina	FIN
 kohde:hahmotelma-hammershus	DNK
 kohde:hahmotelma-hampurin-vanha-raatihuone	DEU
+kohde:hahmotelma-han-sur-lesse	BEL
 kohde:hahmotelma-hardangervidda	NOR
+kohde:hahmotelma-hasselt-jenever	BEL
 kohde:hahmotelma-heiligenkreuz	AUT
 kohde:hahmotelma-helgoland	DEU
 kohde:hahmotelma-heraion	GRC
@@ -445,10 +471,12 @@ kohde:hahmotelma-herend	HUN
 kohde:hahmotelma-hermannsdenkmal	DEU
 kohde:hahmotelma-het-loo	NLD
 kohde:hahmotelma-heviz	HUN
+kohde:hahmotelma-high-fens	BEL
 kohde:hahmotelma-himmelbjerget	DNK
 kohde:hahmotelma-hindeloopen	NLD
 kohde:hahmotelma-hochosterwitz	AUT
 kohde:hahmotelma-hoga-kusten	SWE
+kohde:hahmotelma-hoge-kempen	BEL
 kohde:hahmotelma-hohenzollern	DEU
 kohde:hahmotelma-hook	IRL
 kohde:hahmotelma-hoorn	NLD
@@ -467,6 +495,7 @@ kohde:hahmotelma-inari	FIN
 kohde:hahmotelma-industripalatset-1897	SWE
 kohde:hahmotelma-ipatievin-luostari	RUS
 kohde:hahmotelma-ipolytarnoc	HUN
+kohde:hahmotelma-isafjordur	ISL
 kohde:hahmotelma-isle-of-skye	GBR
 kohde:hahmotelma-ivrea	ITA
 kohde:hahmotelma-jabugo	ESP
@@ -481,6 +510,7 @@ kohde:hahmotelma-kajaani	FIN
 kohde:hahmotelma-kalavryta	GRC
 kohde:hahmotelma-kaliakra	BGR
 kohde:hahmotelma-kalix	SWE
+kohde:hahmotelma-kalmthout	BEL
 kohde:hahmotelma-kalocsa	HUN
 kohde:hahmotelma-kalundborg	DNK
 kohde:hahmotelma-kalwaria	POL
@@ -510,6 +540,7 @@ kohde:hahmotelma-killarney	IRL
 kohde:hahmotelma-kinderdijk	NLD
 kohde:hahmotelma-kinsale	IRL
 kohde:hahmotelma-kiova	UKR
+kohde:hahmotelma-kirkjufell	ISL
 kohde:hahmotelma-kiskunsag	HUN
 kohde:hahmotelma-kitzbuehel	AUT
 kohde:hahmotelma-kivik	SWE
@@ -530,6 +561,7 @@ kohde:hahmotelma-korfu	GRC
 kohde:hahmotelma-korintin-apollon-temppeli	GRC
 kohde:hahmotelma-kornati	HRV
 kohde:hahmotelma-kornik	POL
+kohde:hahmotelma-kortrijk	BEL
 kohde:hahmotelma-kostanjevica	SVN
 kohde:hahmotelma-kosterhavet	SWE
 kohde:hahmotelma-kovel	UKR
@@ -562,6 +594,7 @@ kohde:hahmotelma-lacko	SWE
 kohde:hahmotelma-ladby	DNK
 kohde:hahmotelma-laeso	DNK
 kohde:hahmotelma-lancut	POL
+kohde:hahmotelma-landmannalaugar	ISL
 kohde:hahmotelma-larderello	ITA
 kohde:hahmotelma-las-navas	ESP
 kohde:hahmotelma-lastovo	HRV
@@ -577,6 +610,7 @@ kohde:hahmotelma-lendava	SVN
 kohde:hahmotelma-lielvarde	LVA
 kohde:hahmotelma-lienz	AUT
 kohde:hahmotelma-lindesnes	NOR
+kohde:hahmotelma-lions-mound	BEL
 kohde:hahmotelma-lipica	SVN
 kohde:hahmotelma-lipno	CZE
 kohde:hahmotelma-liptovsky-mikulas	SVK
@@ -620,6 +654,7 @@ kohde:hahmotelma-meissen	DEU
 kohde:hahmotelma-melissani	GRC
 kohde:hahmotelma-mellifont	IRL
 kohde:hahmotelma-melnik	BGR
+kohde:hahmotelma-menin-gate	BEL
 kohde:hahmotelma-merenkurkku	FIN
 kohde:hahmotelma-mertola	PRT
 kohde:hahmotelma-meteora	GRC
@@ -677,12 +712,15 @@ kohde:hahmotelma-ogrodzieniec	POL
 kohde:hahmotelma-oland	SWE
 kohde:hahmotelma-oljemuseo	NOR
 kohde:hahmotelma-omis	HRV
+kohde:hahmotelma-oostende	BEL
 kohde:hahmotelma-oostvaardersplassen	NLD
 kohde:hahmotelma-opusztaszer	HUN
 kohde:hahmotelma-orava	SVK
 kohde:hahmotelma-ormoz	SVN
+kohde:hahmotelma-orval	BEL
 kohde:hahmotelma-orvelte	NLD
 kohde:hahmotelma-otepaa	EST
+kohde:hahmotelma-oudenaarde	BEL
 kohde:hahmotelma-oudewater	NLD
 kohde:hahmotelma-oulanka	FIN
 kohde:hahmotelma-oxford	GBR
@@ -759,6 +797,8 @@ kohde:hahmotelma-real-alcazar-madrid	ESP
 kohde:hahmotelma-reims	FRA
 kohde:hahmotelma-resita	ROU
 kohde:hahmotelma-retezat	ROU
+kohde:hahmotelma-reykjavik	ISL
+kohde:hahmotelma-reynisfjara	ISL
 kohde:hahmotelma-rezekne	LVA
 kohde:hahmotelma-ria-formosa	PRT
 kohde:hahmotelma-riegersburg	AUT
@@ -802,8 +842,11 @@ kohde:hahmotelma-scarisoara	ROU
 kohde:hahmotelma-schiermonnikoog	NLD
 kohde:hahmotelma-scuol	CHE
 kohde:hahmotelma-selje	NOR
+kohde:hahmotelma-semois	BEL
+kohde:hahmotelma-seraing	BEL
 kohde:hahmotelma-sergiev-posad	RUS
 kohde:hahmotelma-setomaa	EST
+kohde:hahmotelma-seydisfjordur	ISL
 kohde:hahmotelma-sfanta-ana	ROU
 kohde:hahmotelma-shipka	BGR
 kohde:hahmotelma-sibiu	ROU
@@ -819,7 +862,9 @@ kohde:hahmotelma-skalica	SVK
 kohde:hahmotelma-skibbereen	IRL
 kohde:hahmotelma-skocjan	SVN
 kohde:hahmotelma-skofja-loka	SVN
+kohde:hahmotelma-skogafoss	ISL
 kohde:hahmotelma-skokloster	SWE
+kohde:hahmotelma-skyr	ISL
 kohde:hahmotelma-slanic	ROU
 kohde:hahmotelma-slavkov	CZE
 kohde:hahmotelma-slavonski-brod	HRV
@@ -841,6 +886,7 @@ kohde:hahmotelma-soro	DNK
 kohde:hahmotelma-sounion	GRC
 kohde:hahmotelma-sovata	ROU
 kohde:hahmotelma-sozopol	BGR
+kohde:hahmotelma-spa	BEL
 kohde:hahmotelma-spis	SVK
 kohde:hahmotelma-sporadien-meripuisto	GRC
 kohde:hahmotelma-spreewald	DEU
@@ -885,6 +931,7 @@ kohde:hahmotelma-telc	CZE
 kohde:hahmotelma-telsiai	LTU
 kohde:hahmotelma-terchova	SVK
 kohde:hahmotelma-terschelling	NLD
+kohde:hahmotelma-tervuren	BEL
 kohde:hahmotelma-texel	NLD
 kohde:hahmotelma-thermopylae	GRC
 kohde:hahmotelma-thorn	NLD
@@ -897,6 +944,7 @@ kohde:hahmotelma-tordesillas	ESP
 kohde:hahmotelma-tornio	FIN
 kohde:hahmotelma-torres-vedras	PRT
 kohde:hahmotelma-torun-zamek	POL
+kohde:hahmotelma-tournai	BEL
 kohde:hahmotelma-trakai-niemekelinna	LTU
 kohde:hahmotelma-trakoscan	HRV
 kohde:hahmotelma-trancoso	PRT
@@ -914,6 +962,7 @@ kohde:hahmotelma-trollstigen	NOR
 kohde:hahmotelma-trujillo	ESP
 kohde:hahmotelma-tsiolkovski	RUS
 kohde:hahmotelma-tukums	LVA
+kohde:hahmotelma-turnhout	BEL
 kohde:hahmotelma-turun-tuomiokirkon-vanha-torni	FIN
 kohde:hahmotelma-tytuvenai	LTU
 kohde:hahmotelma-urbino	ITA
@@ -996,18 +1045,22 @@ kohde:hahmotelma-zice	SVN
 kohde:hahmotelma-zurich	CHE
 kohde:hahmotelma-zvikov	CZE
 kohde:hahmotelma-zvolen	SVK
+kohde:hahmotelma-zwin	BEL
 kohde:hahmotelma-zywiec	POL
 kohde:hallstatt	AUT
 kohde:halti	FIN
 kohde:hameenlinna	FIN
 kohde:hampuri	DEU
+kohde:heimaey	ISL
 kohde:hersonesos	UKR
 kohde:hill-of-uisneach	IRL
 kohde:hohensalzburg	AUT
+kohde:holar	ISL
 kohde:holloko	HUN
 kohde:hortobagy	HUN
 kohde:hortytsja	UKR
 kohde:hoverla	UKR
+kohde:hvannadalshnukur	ISL
 kohde:hvar	HRV
 kohde:iloinen-hautausmaa	ROU
 kohde:inn	AUT
@@ -1035,6 +1088,7 @@ kohde:jelgava	LVA
 kohde:jellingin-kivet	DNK
 kohde:jogurtti	BGR
 kohde:joonianmeri	GRC
+kohde:jorsa	ISL
 kohde:jungfrau	CHE
 kohde:jurassic-coast-durdle-door	GBR
 kohde:kaali	EST
@@ -1078,9 +1132,11 @@ kohde:kuurinkynnas	LTU
 kohde:la-chaux-de-fonds	CHE
 kohde:labe	CZE
 kohde:lahemaa	EST
+kohde:lakagigar	ISL
 kohde:landwasserin-viadukti	CHE
 kohde:las-medulas	ESP
 kohde:lascaux	FRA
+kohde:latrabjarg	ISL
 kohde:lednice	CZE
 kohde:liepaja	LVA
 kohde:ligurianmeri	ITA
@@ -1120,6 +1176,7 @@ kohde:munchen	DEU
 kohde:musala	BGR
 kohde:mustameri	ROU
 kohde:mustameri~3	UKR
+kohde:myvatn	ISL
 kohde:nafplio	GRC
 kohde:nakyva-kaupunki-bordeaux	FRA
 kohde:nakyva-kaupunki-lille	FRA
@@ -1190,6 +1247,7 @@ kohde:rein	CHE
 kohde:reininputous	CHE
 kohde:rein~2	DEU
 kohde:reunuskilpikonna	GRC
+kohde:reykholt	ISL
 kohde:rhone	CHE
 kohde:rhone~2	FRA
 kohde:ribe	DNK
@@ -1233,10 +1291,12 @@ kohde:shannon	IRL
 kohde:sighisoara	ROU
 kohde:sintra	PRT
 kohde:skagen	DNK
+kohde:skalholt	ISL
 kohde:skara-brae	GBR
 kohde:skellig-michael	IRL
 kohde:skerriesin-myllyt	IRL
 kohde:smolikas	GRC
+kohde:snaefellsjokull	ISL
 kohde:snezka	CZE
 kohde:sniezka	POL
 kohde:snowdon	GBR
@@ -1269,6 +1329,7 @@ kohde:tejo	PRT
 kohde:termolin-linna	ITA
 kohde:thames	GBR
 kohde:thessaloniki	GRC
+kohde:thingvellir	ISL
 kohde:timisoaran-vanhakaupunki	ROU
 kohde:tismanan-luostari	ROU
 kohde:tisza	HUN
@@ -1311,6 +1372,7 @@ kohde:vanern	SWE
 kohde:vanha-london-bridge	GBR
 kohde:vanharauma	FIN
 kohde:varna	BGR
+kohde:vatnajokull	ISL
 kohde:veiksel	POL
 kohde:veliki-novgorod	RUS
 kohde:veliki-preslav	BGR
@@ -1456,6 +1518,7 @@ skandaali:anna-goldin-tapaus	CHE
 skandaali:baldomera-larra-pyramidi	ESP
 skandaali:banca-romana-1893	ITA
 skandaali:barbora-salainen-avioliitto	LTU
+skandaali:baskivainot-1615	ISL
 skandaali:battenbergin-ruhtinaskaappaus	BGR
 skandaali:belokas-maratonhuijaus-1896	GRC
 skandaali:beringerin-valhekivet	DEU
@@ -1476,6 +1539,7 @@ skandaali:kaulanauhajuttu-1785	FRA
 skandaali:kelley-alkemistihuijari	CZE
 skandaali:kieltolaki-ja-pirtukuningas	FIN
 skandaali:klimtin-tiedekuntamaalaukset	AUT
+skandaali:koirapaivien-kuningas	ISL
 skandaali:kopenickin-kapteeni	DEU
 skandaali:kreugerin-romahdus	SWE
 skandaali:kultakanan-ryosto-1875	ROU
@@ -1510,6 +1574,7 @@ skandaali:salieran-varkaus	AUT
 skandaali:seitseman-veljesta-kirjasota	FIN
 skandaali:seuso-aarteen-kiista	HUN
 skandaali:shakkiturkkilainen	AUT
+skandaali:siivettoman-ruokin-loppu	ISL
 skandaali:simonides-kasikirjoitusvaarentaja	GRC
 skandaali:sonja-kultakasi	RUS
 skandaali:strousbergin-rautatieskandaali	ROU
