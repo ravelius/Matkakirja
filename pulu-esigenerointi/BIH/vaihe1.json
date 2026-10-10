@@ -1,0 +1,344 @@
+[
+ {
+  "kohde": "kohde:mostar",
+  "kysymys": "Kuka oli Mimar Sinan?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Mimar Sinan oli ottomaanien hoviarkkitehti 1500-luvulla ja yksi koko aikakauden tunnetuimmista rakennusmestareista. Hän palveli useita sulttaaneja, ja hänen nimiinsä kirjataan lähteiden mukaan satoja rakennuksia, joista tunnetuimpia ovat [[Süleymaniye-moskeija]] Istanbulissa ja [[Selimiye]] Edirnessä. Hänen työnsä näkyy laajalla alueella: Damaskoksessa hänen piirustustensa mukaan rakennettiin 1550-luvulla moskeijan, keittiön ja majoitussiipien kokonaisuus, ja Mostarin [[Vanhan sillan]] suunnittelija [[Mimar Hayruddin]] oli hänen oppilaansa. Ja tän kaiken minä kannoin päässäni.",
+  "linkit": [
+   "Süleymaniye-moskeija",
+   "Selimiye",
+   "Vanhan sillan",
+   "Mimar Hayruddin"
+  ],
+  "jatkot": [
+   "Millainen on Süleymaniye-moskeijan kupoli?",
+   "Miten Sinanista tuli ottomaanien pääarkkitehti?"
+  ]
+ },
+ {
+  "kohde": "kohde:mostar",
+  "kysymys": "Mitä sillanvartijan työhön kuului?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Sana mostari tarkoittaa sillanvartijaa, ja sillanvartijat vartioivat [[Vanhaa siltaa]] ottomaanien aikana yli [[Neretva-joen]]. Silta oli tärkeä kulkureitti, ja sellaisilla paikoilla vartijoiden tehtävänä oli yleensä valvoa liikennettä ja pitää silta turvassa. En ole varma, perittiinkö sillalla maksuja, joten sitä en väitä. Nimi jäi kuitenkin elämään: koko kaupunki on nimetty vartijoidensa mukaan. Onpas siinä lyhyt virka, jonka mukaan kokonainen kaupunki nimettiin.",
+  "linkit": [
+   "Vanhaa siltaa",
+   "Neretva-joen"
+  ],
+  "jatkot": [
+   "Miksi Mostar sijaitsee juuri Neretva-joen varrella?",
+   "Millaisia siltoja ottomaanit rakensivat Balkanille?"
+  ]
+ },
+ {
+  "kohde": "kohde:mostar",
+  "kysymys": "Miksi Mostarin sillalta hypätään jokeen?",
+  "uusi": true,
+  "vastaus": "No jopas, sitä minä olen katsonut ylhäältä. Mostarin sillalta hyppääminen on vanha paikallinen perinne, ja nykyään siitä on tullut vuosittainen hyppykilpailu, jossa taitavat hyppääjät sukeltavat sillan kaarelta [[Neretva-jokeen]]. Hyppy on korkea, ja joen vesi on kylmää ja virtaavaa, joten sitä harjoitellaan ja siihen valmistaudutaan huolella. En ole varma tarkasta korkeudesta, joten jätän luvun pois. Perinteen kerrotaan olevan vanhempi kuin nykyinen kilpailu, ja sillan kaari on ollut hyppääjien katseenvangitsija vuosisatoja.",
+  "linkit": [
+   "Neretva-jokeen"
+  ],
+  "jatkot": [
+   "Kuinka kylmää Neretva-joen vesi on?",
+   "Milloin Mostarin hyppykilpailu järjestetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:mostar",
+  "kysymys": "Mikä on Neretva-joki?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Neretva on Bosnia ja Hertsegovinan halki virtaava joki, joka kulkee [[Mostarin]] läpi ja päätyy lopulta Kroatian puolella [[Adrianmereen]]. Sen suiston alue on laaja ja hedelmällinen, ja jokilaakso on ollut vuosisatoja tärkeä kulkureitti rannikon ja sisämaan välillä. Joen vesi on vuoristoista, kirkasta ja viileää. Mostarissa joki jakaa kaupungin kahteen puoleen, ja sen yli kaartuu [[Vanha silta]]. Oikein hyvin kyyhky selvisi joesta, vaikka vettä en ole koskaan tykännyt kastella siipiä.",
+  "linkit": [
+   "Mostarin",
+   "Adrianmereen",
+   "Vanha silta"
+  ],
+  "jatkot": [
+   "Mihin kaupunkeihin Neretva-joki kulkee Mostarin jälkeen?",
+   "Millaista elämää Neretvan suistossa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:mostar",
+  "kysymys": "Mitä tarkoittaa Unescon maailmanperintökohde?",
+  "uusi": true,
+  "vastaus": "Katotaas. Unescon maailmanperintökohde on paikka, jonka kansainvälinen yhteisö on todennut niin arvokkaaksi, että sen suojelu kuuluu koko ihmiskunnalle. Kohde voi olla rakennus, kaupunki tai luonnonmaisema, ja sen pitää täyttää tietyt kriteerit, jotka koskevat sen merkitystä ja aitoutta. Kun kohde on listalla, sen valtio sitoutuu suojelemaan sitä, ja suojelutyölle voi saada kansainvälistä tukea. Mostarin vanhakaupunki [[Vanhoine siltoineen]] kuuluu kohteisiin, ja myös Višegradin [[Drinan silta]] on listalla. Jotain sellaista tästä jää käteen, vaikka en pullaa saanut.",
+  "linkit": [
+   "Vanhoine siltoineen",
+   "Drinan silta"
+  ],
+  "jatkot": [
+   "Kuka päättää, mitkä kohteet pääsevät maailmanperintölistalle?",
+   "Mitä tapahtuu, jos kohde on vaarassa tuhoutua?"
+  ]
+ },
+ {
+  "kohde": "kohde:blagaj",
+  "kysymys": "Keitä dervissit olivat?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Dervissit olivat islamilaisen mystiikan eli sufilaisuuden seuraajia, jotka kuuluivat veljeskuntiin ja elivät usein yhteisissä luostareissa. Heidän elämäänsä kuuluivat rukous, hartausharjoitukset, opetus ja vieraanvaraisuus matkaajille. Tunnetuimpia ovat pyörivät dervissit, joiden pyörimistanssi on osa uskonnollista harjoitusta. Ottomaanien aikana dervissiluostareita rakennettiin laajalle, ja [[Blagajin]] luostarissa on yhä vierashuone ja mausoleumi. Tarkka päivämäärä ei ole tässä tärkeä, ja suurin osa tavoista vaihteli veljeskunnittain. Kunnioittavasti sanottuna, kyyhky ei kyllä pysyisi tanssissa pyörimään.",
+  "linkit": [
+   "Blagajin"
+  ],
+  "jatkot": [
+   "Mikä on sufilaisuus?",
+   "Miksi dervissit pyörivät rukouksessaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:blagaj",
+  "kysymys": "Miksi luostari rakennettiin juuri kallion juureen?",
+  "uusi": false,
+  "vastaus": "No niin, hyvä paikka sillä. Luostari rakennettiin aivan [[Buna-joen]] lähteen viereen, kallion juureen, ja syy lienee ollut paikan erityisyys. Lähde syöksyy esiin valtavasta luolasta pystysuoran kallioseinän alta, ja vesi on poikkeuksellisen kylmää ja kirkasta. Tällainen paikka on luonnostaan rauhallinen, ja puhdas vesi oli luostarille ja sen vieraille tärkeä. En ole varma, mitä rakentajat tarkalleen ajattelivat, joten tämä on tulkintaa. Luostari seisoi noin vuonna 1520 viimeistään, ja vierashuone ja mausoleumi ovat yhä pystyssä. Kallion varjossa on kyllä varmasti ollut viileämpi kuin ikkunalaudalla.",
+  "linkit": [
+   "Buna-joen"
+  ],
+  "jatkot": [
+   "Kuinka syvä Buna-joen lähdeluola on?",
+   "Miten kaukaa matkaajat tulivat luostariin yöpymään?"
+  ]
+ },
+ {
+  "kohde": "kohde:blagaj",
+  "kysymys": "Mikä on karstilähde?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Karstilähde on lähde, jossa vesi tulee esiin kalkkikivialueen maanalaisista käytävistä ja luolista. Kalkkikivi liukenee vähitellen sateen ja pohjaveden mukana, ja liukeneminen muodostaa maan alle onkaloita ja vesiväyliä. Vesi voi kulkea maan alla pitkiäkin matkoja ennen kuin se purkautuu pintaan, ja se on usein kirkasta ja kylmää. [[Buna-joen]] lähde Blagajissa on tällainen: joki syöksyy valmiina esiin luolasta kallioseinän alta. Kalkkikivialueet ovat tyypillisiä Balkanin länsiosille, joten sama ilmiö toistuu laajalla alueella. Ei paha kyyhkyltä.",
+  "linkit": [
+   "Buna-joen"
+  ],
+  "jatkot": [
+   "Miksi karstialueilla on niin paljon luolia?",
+   "Mihin kaikkiin joet katoavat karstialueella?"
+  ]
+ },
+ {
+  "kohde": "kohde:blagaj",
+  "kysymys": "Miten bosnialainen kahvi valmistetaan?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Bosnialainen kahvi keitetään perinteisesti pienessä pitkävartisessa metallikannussa, jota kutsutaan nimellä džezva. Kahvi jauhetaan hyvin hienoksi, ja se keitetään yhdessä veden kanssa, kunnes pinnalle nousee vaahto. Kahvi kaadetaan pieniin kuppeihin, ja pohjalle jää hienoa sakkaa, joten sitä ei juoda aivan viimeiseen pisaraan asti. Kahvin kanssa tarjotaan usein sokeria ja makeisia, kuten [[lokumia]]. Kahvilla on paikallisessa vieraanvaraisuudessa tärkeä sija, ja sen ääressä istutaan rauhassa. Voisin minä istua sen kanssa, jos joku tarjoaisi pullan viereen.",
+  "linkit": [
+   "lokumia"
+  ],
+  "jatkot": [
+   "Mitä on lokum?",
+   "Mistä kahvi tuli ensin ottomaanien Balkanille?"
+  ]
+ },
+ {
+  "kohde": "kohde:blagaj",
+  "kysymys": "Mihin Buna-joki laskee?",
+  "uusi": true,
+  "vastaus": "Kato, tän minä tiedän. Buna on lyhyt joki, joka laskee [[Neretva-jokeen]] Blagajin lähistöllä. Vaikka matka on lyhyt, joki on vesirikas, koska sen lähde on yksi Euroopan suurimmista: vettä tulee noin 30 kuutiometriä sekunnissa. Joki ei siis ala purosta vaan syöksyy esiin valmiina luolasta pystysuoran kallioseinän alta. Neretva puolestaan jatkaa matkaansa kohti [[Adrianmerta]]. Pituudesta en ole varma, joten jätän luvun pois. Lyhyt joki, mutta ei pieni, ja se näkyy kyllä ylhäältä.",
+  "linkit": [
+   "Neretva-jokeen",
+   "Adrianmerta"
+  ],
+  "jatkot": [
+   "Miten Neretva-joki kulkee Adrianmerelle?",
+   "Mitä kaikkea Blagajin lähistöllä voi nähdä?"
+  ]
+ },
+ {
+  "kohde": "kohde:una",
+  "kysymys": "Mihin Una lopulta laskee?",
+  "uusi": false,
+  "vastaus": "Nyt muistan:  Una laskee [[Save-jokeen]], jonka vesi jatkaa edelleen [[Tonavaan]] ja sitä kautta Mustallemerelle. Una kulkee matkallaan Bosnian ja Kroatian rajaseudulla, ja joen alajuoksulla se muodostaa osan valtioiden välistä rajaa. Joki on siis osa laajaa Tonavan vesistöä. Matkaa Unalla on 212 kilometriä, ja varrella on koskia, putouksia ja karstilähteitä. Kyllä joesta tulee aika iso, kun se liittyy isompaan.",
+  "linkit": [
+   "Save-jokeen",
+   "Tonavaan"
+  ],
+  "jatkot": [
+   "Mihin Sava-joki laskee?",
+   "Miten Una kulkee Bosnian ja Kroatian rajalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:una",
+  "kysymys": "Mitä Unan kansallispuistossa voi tehdä?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Unan kansallispuisto on luontokohde, jonka joki- ja vesiputousmaisemat houkuttelevat kävijöitä. Alueella voi muun muassa kävellä ja patikoida luontopolkuja pitkin, ihailla putouksia ja kulkea joen varrella. Jokea käytetään myös melontaan ja koskenlaskuun, ja kesällä veteen uskaltautuvat uimarit. Tarkat palvelut ja reitit vaihtelevat, joten ajantasaiset tiedot kannattaa tarkistaa puiston omilta sivuilta. Puiston merkittävin nähtävyys on [[Štrbački buk]], joen suurin putous. Minä olen sentään lentäjä, joten en melo.",
+  "linkit": [
+   "Štrbački buk"
+  ],
+  "jatkot": [
+   "Millaisia eläimiä Unan kansallispuistossa elää?",
+   "Mikä on koskenlasku?"
+  ]
+ },
+ {
+  "kohde": "kohde:una",
+  "kysymys": "Mikä on Štrbački buk?",
+  "uusi": true,
+  "vastaus": "Ai tota. Štrbački buk on [[Unan]] suurin putous ja koko joen tunnetuimpia nähtävyyksiä. Putous muodostuu useista portaista, ja vesi kaatuu kalkkikivestä muodostuneiden kynnysten yli vaahtoavina verhoina. Putous sijaitsee Unan kansallispuiston alueella. En ole varma sen tarkasta korkeudesta, ja eri lähteet antavat vähän erilaisia lukuja, joten jätän tarkan luvun pois. Putouksen edessä vesi on turkoosia ja kirkasta, ja siitä syntyy hyvä kuva. Kaunis paikka, vaikka en uskalla mennä kovin lähelle.",
+  "linkit": [
+   "Unan"
+  ],
+  "jatkot": [
+   "Miten karstijoen putous syntyy?",
+   "Miten Štrbački bukille pääsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:una",
+  "kysymys": "Miksi Una-joen vesi on niin kirkasta?",
+  "uusi": true,
+  "vastaus": "Kas vaan, hyvä kysymys. Kirkkaus johtuu pitkälti siitä, että joki virtaa kalkkikivialueella eli karstissa. Sadevesi suodattuu kalkkikiven läpi ja kulkee maan alla, ja vesi kirkastuu kulkiessaan, koska siitä jää hiukkasia pois. Samalla vesi liuottaa kalkkia, ja se voi laskeutua takaisin kasvien ja kivien pinnalle muodostaen kalkkitufaa. Siitä ovat osittain muodostuneet [[Unan]] putousten kynnykset. Turkoosi sävy syntyy veden mineraaleista ja valon heijastuksista. Ylhäältä se näyttää kyllä kauniimmalta kuin mikään torin pulla.",
+  "linkit": [
+   "Unan"
+  ],
+  "jatkot": [
+   "Mikä on kalkkitufa?",
+   "Miksi karstijoet ovat usein turkoosinvärisiä?"
+  ]
+ },
+ {
+  "kohde": "kohde:una",
+  "kysymys": "Missä päin Bosniaa Bihać sijaitsee?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Bihać sijaitsee Bosnia ja Hertsegovinan luoteisosassa aivan Kroatian rajan tuntumassa [[Una-joen]] varrella. Kaupunki on alueen tärkein keskus, ja sen ympärillä levittäytyy [[Unan kansallispuisto]]. Sijainti rajalla tarkoittaa, että kaupunki on lähempänä Kroatian kaupunkeja kuin monia Bosnian omia. Joki virtaa kaupungin läpi ja antaa sille leimansa. Pienestä päin se silti näyttää ylhäältä rauhalliselta paikalta.",
+  "linkit": [
+   "Una-joen",
+   "Unan kansallispuisto"
+  ],
+  "jatkot": [
+   "Millainen on Bihaćin vanhakaupunki?",
+   "Miten Bihaćiin pääsee Kroatian puolelta?"
+  ],
+  "paikka": {
+   "nimi": "Bihać",
+   "lat": 44.82,
+   "lon": 15.87,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:jajce",
+  "kysymys": "Kuka oli Mithras?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Mithras oli jumala, jota palvottiin [[mithralaisuudessa]], salaisessa kultissa, joka levisi Rooman valtakunnassa erityisesti sotilaiden keskuudessa. Hänet kuvattiin usein tappamassa härkää, ja kuva toistuu temppeleiden alttareissa. Kulttiin kuuluivat vihkimykset ja yhteiset ateriat maanalaisissa tai luolamaisissa temppeleissä. Jumalan nimi periytyy ilmeisesti Persian Mithraan, mutta yhteyden tarkkaa luonnetta tutkijat ovat pohtineet, enkä ole varma yksityiskohdista. Jajcen temppeli on 100-luvulta ja yksi Euroopan parhaiten säilyneistä. Lentävältä kyyhkyltä tämä vaatii kyllä luolassa käymistä.",
+  "linkit": [
+   "mithralaisuudessa"
+  ],
+  "jatkot": [
+   "Miksi mithralaisuus levisi sotilaiden keskuudessa?",
+   "Miten Jajcen Mithras-temppeli löydettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:jajce",
+  "kysymys": "Millainen valtakunta Bosnian kuningaskunta oli?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Bosnian kuningaskunta oli keskiaikainen itsenäinen valtakunta, jonka johdossa oli [[Kotromanićin]] suku. Tvrtko I kruunattiin kuninkaaksi vuonna 1377, ja hänen aikanaan valtakunta laajeni suurimpaan ulottuvuuteensa. Pääasiallinen kuninkaanlinnoitus oli [[Bobovac]], jonne oli koottu kruununjalokivet ja kuninkaiden haudat. Ottomaanit valloittivat valtakunnan, ja Bobovac kavallettiin vihollisille vuonna 1463. Samana vuonna viimeinen kuningas Stjepan Tomašević vangittiin ja teloitettiin Jajcessa, ja itsenäinen keskiaikainen Bosnia lakkasi olemasta. Siitä on onneksi jo yli viisisataa vuotta.",
+  "linkit": [
+   "Kotromanićin",
+   "Bobovac"
+  ],
+  "jatkot": [
+   "Millainen oli Tvrtko I:n kruunajaisten merkitys?",
+   "Miksi ottomaanit valloittivat Bosnian?"
+  ]
+ },
+ {
+  "kohde": "kohde:jajce",
+  "kysymys": "Miksi vesiputous on keskellä Jajcen kaupunkia?",
+  "uusi": true,
+  "vastaus": "Kato, tää on hauska. Putous syntyy siitä, että [[Pliva-joki]] kohtaa [[Vrbas-joen]] ja syöksyy sen laaksoon korkealta kynnykseltä. Kaupunki on rakentunut tälle kohdalle, koska paikka oli puolustuksen kannalta hyvä: joet ja jyrkät rinteet suojasivat vanhaakaupunkia. Siksi putous jäi keskelle, ja kaupunki kasvoi sen ympärille. En ole varma putouksen tarkasta korkeudesta, joten jätän luvun pois. Vesi pauhaa aivan kaupungin sydämessä, mikä on harvinaista. Hyvä paikka kyyhkylle, kun on kuuma.",
+  "linkit": [
+   "Pliva-joki",
+   "Vrbas-joen"
+  ],
+  "jatkot": [
+   "Millaisia vesimyllyjä Pliva-järvillä on?",
+   "Miten Jajcen linnoitus puolustettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:jajce",
+  "kysymys": "Mitä Pliva-järvillä on nähtävää?",
+  "uusi": true,
+  "vastaus": "Ai tota. Pliva-järvet ovat kaksi Jajcen lähellä sijaitsevaa järveä, jotka ovat suosittu retkikohde. Niiden rannoilla on perinteisiä puisia vesimyllyjä, jotka seisovat veden päällä pienten putousten ja virtauksen keskellä. Maisema on vehreä ja rauhallinen, ja järvillä voi veneillä ja kävellä rantoja pitkin. [[Pliva-joki]] virtaa järvistä kaupunkiin ja syöksyy putoukseen. En muista tarkkoja lukuja, joten jätän ne pois. Myllyjen jauhoista pitäisi saada oikein hyvää pullaa, se on selvä.",
+  "linkit": [
+   "Pliva-joki"
+  ],
+  "jatkot": [
+   "Miten vesimylly toimii?",
+   "Miten Pliva-joki yhdistyy Vrbasiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:jajce",
+  "kysymys": "Kuka paavi Pius II oli?",
+  "uusi": true,
+  "vastaus": "Nyt muistan:  paavi Pius II oli alkujaan italialainen Enea Silvio Piccolomini, ja hän toimi paaviudessa 1400-luvun lopulla viime vuosikymmeninä ennen Bosnian kaatumista. Hän oli oppinut humanisti, joka kirjoitti paljon, myös historiaa, matkakuvauksia ja kirjeitä. Paavina hän yritti koota Euroopan hallitsijat ristiretkelle ottomaaneja vastaan, mutta hanke ei onnistunut. Bosnian viimeinen kuningas Stjepan Tomašević sai häneltä kruununsa. Kirjeitä kirjoittanut ja matkustanut mies, jonka kanssa minulla olisi puhuttavaa.",
+  "linkit": [],
+  "jatkot": [
+   "Mitä humanismi renessanssissa tarkoitti?",
+   "Mitä ristiretki ottomaaneja vastaan tarkoitti?"
+  ]
+ },
+ {
+  "kohde": "kohde:visegrad",
+  "kysymys": "Mistä romaani Drinan silta kertoo?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. [[Ivo Andrićin]] romaani Drinan silta seuraa Višegradin kaupunkia ja sen kivisiltaa useiden vuosisatojen ajan. Silta toimii kirjan keskuksena: sen ympärillä elävät eri uskontoja ja kansallisuuksia edustavat ihmiset, ja heidän elämänsä, ilonsa ja surunsa kulkevat sillan yli sukupolvesta toiseen. Teos on historiallinen kronikka, joka alkaa ottomaanien ajasta ja ulottuu 1900-luvulle. Andrić sai kirjallisuuden Nobel-palkinnon, ja Drinan silta on hänen tunnetuimpia teoksiaan. Itse en ole lukenut sitä kokonaan, mutta kyllä sen sivuja on vilkaistu.",
+  "linkit": [
+   "Ivo Andrićin"
+  ],
+  "jatkot": [
+   "Kuka Ivo Andrić oli?",
+   "Miksi Višegradin silta on niin tunnettu?"
+  ]
+ },
+ {
+  "kohde": "kohde:visegrad",
+  "kysymys": "Mitä suurvisiirin työhön kuului?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Suurvisiiri oli ottomaanien sulttaanin ylin ministeri, jonka vastuulla oli valtakunnan päivittäinen hallinto. Hän johti sulttaanin neuvostoa eli divaania, valvoi virkamiehiä ja veroja ja vastasi usein myös sotilasasioista. Sulttaani saattoi antaa hänelle suuren vallan, ja sodan aikana suurvisiiri saattoi johtaa armeijaa. [[Višegradin]] sillan tilaaja Mehmed-pasha Sokolović toimi suurvisiirinä 1500-luvulla ja käytti asemaansa rakennuttaakseen sillan kotiseutunsa kunniaksi. Virka oli arvostettu mutta myös vaarallinen, sillä sulttaanin suosio saattoi vaihtua. Raskas virka, ja yhtä raskas oli pitkä vastaus.",
+  "linkit": [
+   "Višegradin"
+  ],
+  "jatkot": [
+   "Kuka Mehmed-pasha Sokolović oli?",
+   "Miten divaani eli ottomaanien neuvosto toimi?"
+  ]
+ },
+ {
+  "kohde": "kohde:visegrad",
+  "kysymys": "Mikä on Drina-joki?",
+  "uusi": true,
+  "vastaus": "Tuota niin, Drina on Balkanin joki, joka kulkee pitkälti [[Bosnia ja Hertsegovinan]] ja Serbian rajalla. Se laskee [[Save-jokeen]], joka jatkaa Tonavaan. Joen kaksi latvahaaraa kohtaavat vuoristossa, ja alajuoksulla Drina on kulkenut syvässä, vehreässä laaksossa. Višegradissa sen yli kaartuu kivinen [[Sokolovićin silta]], jonka yksitoista kaarta tekevät joesta tunnetun. Tarkkaa pituutta en muista, joten jätän luvun pois. Hyvä joki lentää pitkin, jos ei yhtään eksy.",
+  "linkit": [
+   "Bosnia ja Hertsegovinan",
+   "Save-jokeen",
+   "Sokolovićin silta"
+  ],
+  "jatkot": [
+   "Miten Drina-joki on ollut raja eri aikoina?",
+   "Mitä Drinan laaksossa voi nähdä?"
+  ]
+ },
+ {
+  "kohde": "kohde:visegrad",
+  "kysymys": "Kuka Mehmed-pasha Sokolović oli?",
+  "uusi": true,
+  "vastaus": "Kas vaan, mielenkiintoinen mies. Mehmed-pasha Sokolović syntyi Bosniassa Višegradin seudulla ja päätyi lapsena ottomaanien palvelukseen devširme-järjestelmän kautta. Hän nousi uralla huipulle ja toimi suurvisiirinä useiden sulttaanien aikana 1500-luvun loppupuoliskolla. Hän käytti valtaansa myös rakennuttamalla, ja tunnetuin työ on kotiseudun [[Drinan silta]], jonka suunnitteli [[Mimar Sinan]] ja joka valmistui vuonna 1577. Tarkkoja vuosilukuja hänen virka-ajastaan en ole varma, joten jätän ne pois. Kotiseutu muistettiin hienosti, sen myönnän.",
+  "linkit": [
+   "Drinan silta",
+   "Mimar Sinan"
+  ],
+  "jatkot": [
+   "Mikä oli devširme-järjestelmä?",
+   "Millaisia muita rakennuksia Sokolović rakennutti?"
+  ]
+ },
+ {
+  "kohde": "kohde:visegrad",
+  "kysymys": "Mikä on sevdalinka?",
+  "uusi": true,
+  "vastaus": "Nyt muistan:  sevdalinka on bosnialainen perinteinen laulutyyli, joka kertoo usein rakkaudesta, kaipauksesta ja surusta. Sana sevdah tulee turkin kautta arabiasta ja viittaa tunteelliseen kaipuuseen. Laulut ovat hitaita ja haikeita, ja niissä kuuluu Balkanin sekä ottomaanien vaikutus. Perinteisesti niitä esitettiin ilman säestystä tai pienellä soittimella, ja myöhemmin mukaan on tullut esimerkiksi harmonikka. Tarkkaa alkuperää ja aikaa tutkijat eivät tiedä varmasti. Hiljainen laulu sopii hyvin sillan ylle, jos kyyhky saa ehdottaa.",
+  "linkit": [],
+  "jatkot": [
+   "Mitä soittimia sevdalinkassa käytetään?",
+   "Miten sevdalinka eroaa muusta balkanilaisesta musiikista?"
+  ]
+ }
+]
