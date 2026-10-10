@@ -693,6 +693,9 @@ namespace Matkakirja.Natiivi
             // POISTU (omistaja TF 176, PT 12.2x: "lisää latausruutuun POISTU-nappi … kuten Myllyn Poistu"): sama nappirivi ja nappi kuin
             // Myllyssä; sulkee linssin, jolloin siirtymäkierros purkaa ruudun (SiirtymaPeru) ja lataus keskeytyy, ja peli palaa kartalle.
             var poistuRivi = Rakenne.El("mk-kortti__napit", siirtymaTeksti, PickingMode.Ignore);
+            // Tumma latausruutu: KORTTI-pohjan tumma variantti (vaalea reunus ja teksti) kuten museon Poistu; läpinäkyvän
+            // toimintonapin muste-teksti ei erottunut tummasta ruudusta (omistaja 10.10. 22.4x: napin teksti ei näy).
+            poistuRivi.AddToClassList("mk-kortti-kehys--tumma");
             Kirjasimet.Aseta(Rakenne.Nappi(Kieli.T("ui.pelit.poistu"), "mk-nappi--toiminto", () =>
             {
                 Debug.Log("MATKAKIRJA opas: siirtymä — Poistu");
