@@ -987,10 +987,14 @@ namespace Matkakirja.Natiivi
             koydet.Add(Latauskuva.Koysi.Ankkuri(p.Maa, 0, p.Ankkuri));
             palloKerrokset.Aseta(palloKerrosKuvat[0], new[]
             {
+                // TUULI (omistaja 10.10. 16.5x: "pallo pitää liikkua selkeästi tuulessa heiluen"): sama puuskainen tuuli, pallo ±2,5° ja
+                // ±12 pt, jakso 6 s; kori seuraa 0,25 s myöhemmin pienemmällä kallistuksella (riippuu pallon alla).
                 new Latauskuva.Kerros { Kuva = palloKerrosKuvat[1], Paikka = new Rect(0, 0, 1, 1), Kaanto = p.KoriKaanto,
-                    Liike = new Matkakirja.Linssit.LatausLiike.Profiili { KulmaAste = 0.6, NousuPt = 3, JaksoS = 7, Vaihe = -0.6 } },
-                new Latauskuva.Kerros { Kuva = palloKerrosKuvat[2], Paikka = new Rect(0, 0, 1, 1), Kaanto = p.KupuKaanto,
-                    Liike = new Matkakirja.Linssit.LatausLiike.Profiili { KulmaAste = 0.75, NousuPt = 4, JaksoS = 7 } },
+                    Liike = new Matkakirja.Linssit.LatausLiike.Profiili { Tuuli = true, KulmaAste = 1.6, SivuPt = 12, NousuPt = 3, JaksoS = 6, Puuska = 1, ViiveS = 0.25 } },
+                // Kupu kallistuu köysien kiinnityskohdan (kuvun alareunan) ympäri: alareuna kulkee korin mukana, huippu heiluu enemmän.
+                new Latauskuva.Kerros { Kuva = palloKerrosKuvat[2], Paikka = new Rect(0, 0, 1, 1),
+                    Kaanto = (p.Kupu[0] + p.Kupu[1] + p.Kupu[2] + p.Kupu[3]) / 4f,
+                    Liike = new Matkakirja.Linssit.LatausLiike.Profiili { Tuuli = true, KulmaAste = 2.5, SivuPt = 12, NousuPt = 4, JaksoS = 6, Puuska = 1 } },
             }, koydet);
             palloKerroksetNakyy = true;
             AsetaPalloAlaosa();

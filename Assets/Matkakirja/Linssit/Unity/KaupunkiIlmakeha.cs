@@ -5,7 +5,9 @@
 //  3) CesiumKaupunki antaa Googlen tilesetille LaattaMateriaali()n (IlmakehaLaatat: ilmaperspektiivi ja pilvien varjot), kun Paalla.
 // Map Tiles -ehdot: renderöintitehosteet (varjostus, sumu, ilmakehä) eivät ole rajoitettuja, kuten Cesiumin omat; ei sisällön
 // tunnistusta, ei tallennusta, krediitit ennallaan (Karttaseppä 8.10., vesimaski-google-ehdot-20261008.md kohta 2).
-// OLETUS (omistaja 21.1x, PT): päällä kehityskaupungeissa (Kehityskaupungit: Tukholma, Pariisi), muualla pois; asetus "ilmakeha 0|1"
+// OLETUS (omistaja 10.10.2026 16.4x, kortti "Kaikissa kaupungeissa"; Ateenan arkki 481204381): ilmakehä päällä KAIKISSA kaupungeissa
+// (ennen omistaja 21.1x: vain kehityskaupungeissa; Ateenassa Googlen meri näkyi ilman ilmaperspektiiviä tummana nauhana horisontissa).
+// Pilvikerros ja kaupunkikohtaiset tiedot (aerosoli, pilvi-ilmasto, leivottu atsimuutti) yhä vain kehityskaupungeissa; asetus "ilmakeha 0|1"
 // (kaupunki-kuva-asetukset.txt) pakottaa. Varjostimen ollessa rikki (isSupported false) materiaalia ei käytetä (Google ei muutu).
 using UnityEngine;
 
@@ -13,11 +15,13 @@ namespace Matkakirja.Natiivi
 {
     public static class KaupunkiIlmakeha
     {
-        /// <summary>Asetuksen pakotus (null = kehityskaupungeissa päällä).</summary>
+        /// <summary>Asetuksen pakotus (null = oletus <see cref="Oletus"/>).</summary>
         public static bool? Pakotettu;
-        public static bool Paalla => Pakotettu ?? kehitys;
+        /// <summary>Oletus kaikissa kaupungeissa (omistaja 10.10. 16.4x).</summary>
+        public const bool Oletus = true;
+        public static bool Paalla => Pakotettu ?? Oletus;
         static bool kehitys;
-        /// <summary>Nykyinen kaupunki (kameran georeferenssi): kehityskaupungissa oletus päällä.</summary>
+        /// <summary>Nykyinen kaupunki (kameran georeferenssi): kehityskaupungissa pilvikerros ja kaupunkikohtaiset tiedot.</summary>
         public static void Kaupunki(double lat, double lon)
         {
             kaupunkiId = Matkakirja.Linssit.Kehityskaupungit.Lahella(lat, lon);
@@ -209,7 +213,7 @@ namespace Matkakirja.Natiivi
         public static float YoOsuus;
         public static float Valotus = 12f, ApVoima = 1f, VarjoVoima = 0.45f, PilviJaksoM = 30000f, PilviKorkeusM = (float)Matkakirja.Linssit.Ilmakeha.KaupunkiPilvet.PohjaM;
         /// <summary>Pallon pilvikerros taivaskupolissa (raportin kohta 6a; omistaja 9.10. "pilviä voisi vähän lisätä taivaalle"): oletus
-        /// päällä kehityskaupungeissa (kuten ilmakehä), asetus "pilvet 0|1" pakottaa. Pohja = PilviKorkeusM, paksuus PilviPaksuusM.</summary>
+        /// päällä kehityskaupungeissa (ilmakehä 10.10. alkaen kaikkialla), asetus "pilvet 0|1" pakottaa. Pohja = PilviKorkeusM, paksuus PilviPaksuusM.</summary>
         public static bool? PilvetPakotettu;
         public static bool Pilvet => PilvetPakotettu ?? kehitys;
         /// <summary>Tuuli (m/s, x itä, y pohjoinen): pilvikentän ja pilvien varjojen siirtymä sekä laivojen savu (VeneSavu).</summary>

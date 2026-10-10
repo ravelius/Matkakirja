@@ -62,6 +62,9 @@ namespace Matkakirja.Natiivi
         public Dictionary<string, object> Numeroina;
         /// <summary>Skeema 1.15+: lipun tarina (web LIPPUTIEDOT: maa, symboliikka, kappaleet, versiot).</summary>
         public Dictionary<string, object> Lipputarina;
+        /// <summary>Skeema 1.60: pääkaupungin (tai hallinnon paikan) nimi maat.*.paakaupunki-viitteestä ja asema ("pääkaupunki" /
+        /// "hallinnon paikka"); null = ei tietoa (PT 10.10.: maakortin ensimmäinen rivi).</summary>
+        public string Paakaupunki, PaakaupunkiAsema;
         public bool OnTiedot => Vakiluku != null || PintaAla != null || Demokratia != null || Keskitulo != null || Tervehdykset.Count > 0;
     }
 
@@ -139,8 +142,9 @@ namespace Matkakirja.Natiivi
             // Kaupunkilehdet (16 Mt) EIVÄT pidätä Valmis-tilaa: ne luetaan perään (LehdetPerassa).
             yield return Sisalto.HaeTeksti("julisteet", t => julisteet = t, valinnainen: true);
             yield return Sisalto.HaeTeksti("lippumaat", t => liput = t, valinnainen: true);
-            string maaTeksti = null, puheet = null;
+            string maaTeksti = null, puheet = null, paakaupungit = null;
             yield return Sisalto.HaeTeksti("maat", t => maaTeksti = t, valinnainen: true);
+            yield return Sisalto.HaeTeksti("paakaupungit", t => paakaupungit = t, valinnainen: true);   // skeema 1.60
             yield return Sisalto.HaeTeksti("saapumispuheet", t => puheet = t, valinnainen: true);
             if (kaup == null)
             {
@@ -154,7 +158,7 @@ namespace Matkakirja.Natiivi
                 try
                 {
                     tulos = Jasenna(kaup, null, julisteet, liput);
-                    JasennaMaat(maaTeksti, tulos);
+                    JasennaMaat(maaTeksti, tulos, paakaupungit);
                     foreach (var a in Alkiot(puheet))
                     {
                         var id = MiniJson.Teksti(a, "kaupunki") ?? MiniJson.Teksti(a, "id");
@@ -292,9 +296,15 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        static void JasennaMaat(string teksti, Dictionary<string, KaupunkiTiedot> kaupungit)
+        static void JasennaMaat(string teksti, Dictionary<string, KaupunkiTiedot> kaupungit, string paakaupungit = null)
         {
             var t = new Dictionary<string, MaaTiedot>();
+            var pkNimet = new Dictionary<string, string>();
+            foreach (var p in Alkiot(paakaupungit))
+            {
+                string id = MiniJson.Teksti(p, "id"), nimi = MiniJson.Teksti(p, "nimi");
+                if (id != null && nimi != null) pkNimet[id] = nimi;
+            }
             foreach (var a in Alkiot(teksti))
             {
                 string iso = MiniJson.Teksti(a, "id");
@@ -304,6 +314,15 @@ namespace Matkakirja.Natiivi
                     Iso3 = iso, Nimi = MiniJson.Teksti(a, "nimi"), Paikallinen = MiniJson.Teksti(a, "paikallinen"),
                     Valtiomuoto = MiniJson.Teksti(a, "valtiomuoto"), Maalehti = MiniJson.Teksti(a, "maalehti"),
                 };
+                // Skeema 1.60: maat.*.paakaupunki { id, kokoelma: "kaupungit" | "paakaupungit", asema } → nimi kokoelmasta.
+                var pk = Rakenne.Olio(MiniJson.Kentta(a, "paakaupunki"));
+                if (pk != null && MiniJson.Teksti(pk, "id") is string pkId)
+                {
+                    m.Paakaupunki = MiniJson.Teksti(pk, "kokoelma") == "kaupungit"
+                        ? (kaupungit != null && kaupungit.TryGetValue(pkId, out var pkK) ? pkK.Nimi : null)
+                        : pkNimet.TryGetValue(pkId, out var pkN) ? pkN : null;
+                    if (m.Paakaupunki != null) m.PaakaupunkiAsema = MiniJson.Teksti(pk, "asema");
+                }
                 var lippuUrl = MiniJson.Teksti(a, "lippuUrl");
                 if (lippuUrl != null) m.Lippu.Add(lippuUrl);
                 var lippu = MiniJson.Teksti(a, "lippu");

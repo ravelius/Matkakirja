@@ -30,7 +30,7 @@ namespace Matkakirja.Natiivi
         public static bool ToimintoPyydetty;
 
         enum Laji { Heitettava, Nostettava, Irrotettava, Kiintea, Kaadettava, Puettava }
-        sealed class Esine { public string Id; public GameObject Go; public Rigidbody Rb; public bool Heitetty, Kuului; public Laji Laji; public bool Irrotettu, Kaatunut; public Vector3 Ulos; public int Napautuksia; public double AaniM; }
+        sealed class Esine { public string Id; public GameObject Go; public Rigidbody Rb; public bool Heitetty, Kuului; public Laji Laji; public bool Irrotettu, Kaatunut; public Vector3 Ulos; public int Napautuksia; public double AaniM; public Vector3 Alku; public Quaternion AlkuKierto; }
         /// <summary>Veitsen raapaisu saumaan (E3c: ensimmäinen raapaisu laukaisee kappalaisen paluun).</summary>
         public static event Action Raapaistiin;
         /// <summary>Syvennyksen esine (kalkki, pateeni, liuskekivi) nostettiin (E3 vaihe 10: löytö).</summary>
@@ -292,6 +292,7 @@ namespace Matkakirja.Natiivi
             puetut.Add(e.Id);
             kirjaa?.Invoke($"seikkailu: puettu {e.Id}{(Naamio ? " → naamio (palvelija)" : "")}");
             SeikkailuTallentaja.Aktiivinen?.Tallenna("m: puettu " + e.Id);
+            if (Naamio) SeikkailuVartijat.EsineTarkistuspiste("naamio");   // T6b (pelattavuusmalli 4.3); kieli: ei (lokin tunniste)
         }
 
         public static IEnumerator Lataa(KavelyData d, string juuri, Func<string, string> url, Transform isa, Action<string> kirjaa)
@@ -333,7 +334,8 @@ namespace Matkakirja.Natiivi
                 var laji = m.Kiintea || m.Tunnus.StartsWith("arkku", StringComparison.Ordinal) ? Laji.Kiintea : m.Puettava ? Laji.Puettava : m.Kaadettava ? Laji.Kaadettava : m.Irrotettava ? Laji.Irrotettava : m.Heitettava ? Laji.Heitettava : Laji.Nostettava;
                 // Irrotettavan ulospäin = vastakkainen kuin "suunta seinään" (kierto_y), Unityssa (sin, 0, −cos) peilattuna.
                 var ulos = m.KiertoY is double ka ? -new Vector3((float)Math.Sin(ka), 0f, (float)-Math.Cos(ka)) : Vector3.zero;
-                var e = new Esine { Id = m.Tunnus, Go = eg, Rb = rb, Laji = laji, Ulos = ulos, AaniM = m.AaniM > 0 ? m.AaniM : KuuluuM };
+                var e = new Esine { Id = m.Tunnus, Go = eg, Rb = rb, Laji = laji, Ulos = ulos, AaniM = m.AaniM > 0 ? m.AaniM : KuuluuM,
+                    Alku = eg.transform.position, AlkuKierto = eg.transform.rotation };
                 eg.AddComponent<Osuma>().Kun = (nopeus, kohta) => se.Osui(e, nopeus, kohta);
                 se.esineet.Add(e);
             }
@@ -573,6 +575,18 @@ namespace Matkakirja.Natiivi
                 if (Lahella(yla)) return (ala, yla, suunta, true);
             }
             return null;
+        }
+
+        /// <summary>Kiinnijäänti tarjotin kädessä (Siirtoseppä 10.10., PT): tarjotin palaa keittiön pöydälle (alkupaikkaansa), kuten
+        /// läpipeluusimulaatiossa. Ennen se jäi käteen, ja tyrmässä se piti laskea maahan avainten tai irtokiven takia, jolloin se jäi
+        /// tyrmään eikä torkkujaa voinut enää ohittaa eväillä.</summary>
+        public void TarjotinPoydalle()
+        {
+            if (kadessa == null || kadessa.Id != Tarjotin || kadessa.Go == null) return;
+            var e = kadessa; kadessa = null;
+            e.Go.transform.SetParent(transform, true); e.Go.transform.SetPositionAndRotation(e.Alku, e.AlkuKierto);
+            e.Rb.isKinematic = true; e.Heitetty = false; e.Go.SetActive(true);
+            kirjaa?.Invoke("seikkailu: tarjotin palasi pöydälle (kiinni)");
         }
 
         /// <summary>Esine pois näkyvistä ja poiminnasta (kappalainen vie kirjan).</summary>
@@ -933,6 +947,7 @@ namespace Matkakirja.Natiivi
                 SeikkailuAanet.SoitaTaiVara("avainnippu", "hopea-kilahdus", e.Go.transform.position, 0.7f);
                 kirjaa?.Invoke("seikkailu: avainrengas laukkuun");
                 SeikkailuTallentaja.Aktiivinen?.Tallenna("m: avainrengas");
+                SeikkailuVartijat.EsineTarkistuspiste("avaimet");   // T6c; kieli: ei (lokin tunniste)
                 return;
             }
             kadessa = e; e.Heitetty = false; e.Kuului = false;
@@ -946,7 +961,7 @@ namespace Matkakirja.Natiivi
                 e.Go.transform.localPosition = p.KahvaKiinni ? Vector3.zero : SeikkailuPelaaja.Ensimmainen ? new Vector3(0.02f, -0.05f, 0.05f) : new Vector3(0.03f, -0.1f, 0f);
             }));
             kirjaa?.Invoke($"seikkailu: poimittu {e.Id}");
-            if (e.Id == Koysikieppi) SeikkailuAanet.SoitaTaiVara("koysi-otto", null, e.Go.transform.position, 0.8f);
+            if (e.Id == Koysikieppi) { SeikkailuAanet.SoitaTaiVara("koysi-otto", null, e.Go.transform.position, 0.8f); SeikkailuVartijat.EsineTarkistuspiste("köysi"); }   // T8a; kieli: ei (lokin tunniste)
             if (e.Laji == Laji.Nostettava) Nostettiin?.Invoke(e.Id);
         }
 

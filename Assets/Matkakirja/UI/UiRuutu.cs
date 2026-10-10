@@ -15,6 +15,8 @@ namespace Matkakirja.Natiivi
             public Rect Turva;
             public float PikseliaPisteessa;
             public bool Tabletti;
+            /// <summary>Natiivi Mac -ikkuna (UiKerros.Mac, MacSyote.Kaytossa): Macin yläpalkki ja koot (PT 10.10.).</summary>
+            public bool Mac;
         }
 
         /// <summary>Asettelutestin koko; null = laitteen ruutu.</summary>
@@ -22,7 +24,7 @@ namespace Matkakirja.Natiivi
 
 #if UNITY_EDITOR
         /// <summary>Ympäristömuuttuja, jolla editorin asettelutesti välittää koon Play-tilan domain reloadin yli:
-        /// "leveys,korkeus,turvaX,turvaY,turvaL,turvaK,pikseliäPisteessä,tabletti(0|1)".</summary>
+        /// "leveys,korkeus,turvaX,turvaY,turvaL,turvaK,pikseliäPisteessä,tabletti(0|1)[,mac(0|1)]".</summary>
         public const string TestiMuuttuja = "MATKAKIRJA_UI_TESTIKOKO";
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
@@ -30,11 +32,11 @@ namespace Matkakirja.Natiivi
         {
             Testi = null;
             var o = (System.Environment.GetEnvironmentVariable(TestiMuuttuja) ?? "").Split(',');
-            if (o.Length != 8) return;
+            if (o.Length != 8 && o.Length != 9) return;
             var ic = System.Globalization.CultureInfo.InvariantCulture;
             float F(int i) => float.Parse(o[i], ic);
-            Testi = new Koko { Leveys = (int)F(0), Korkeus = (int)F(1), Turva = new Rect(F(2), F(3), F(4), F(5)), PikseliaPisteessa = F(6), Tabletti = o[7] == "1" };
-            Debug.Log($"MATKAKIRJA ui: asettelutestin koko {Testi.Value.Leveys}×{Testi.Value.Korkeus} @{Testi.Value.PikseliaPisteessa}");
+            Testi = new Koko { Leveys = (int)F(0), Korkeus = (int)F(1), Turva = new Rect(F(2), F(3), F(4), F(5)), PikseliaPisteessa = F(6), Tabletti = o[7] == "1", Mac = o.Length == 9 && o[8] == "1" };
+            Debug.Log($"MATKAKIRJA ui: asettelutestin koko {Testi.Value.Leveys}×{Testi.Value.Korkeus} @{Testi.Value.PikseliaPisteessa}{(Testi.Value.Mac ? " Mac" : "")}");
         }
 #endif
 

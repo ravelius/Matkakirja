@@ -1,0 +1,86 @@
+{
+ "versio": 1,
+ "maa": "alankomaat",
+ "huomio": "Huonekortin teksti avautuu vain napautuksesta. osat = LR:n sali.json:n osa-tunnukset (kg-komerot kattaa kaikki 8 komeroa). Faktat: Mauritshuis rakennettu 1600-luvulla Johan Maurits Nassau-Siegenille, museona 1822 alkaen; Rijksmuseumin rakennus Pierre Cuypers, avattu 1885; Yövartio 379,5 × 453,5 cm (1642); RMO perustettu 1818.",
+ "huoneet": [
+  {
+   "id": "aula",
+   "nimi_fi": "Veistosaula",
+   "nimi_en": "Sculpture Hall",
+   "osat": [
+    "aula"
+   ],
+   "teksti_fi": "Sali alkaa kuvanveistosta: rintakuvia ja muotokuvia 1600- ja 1700-luvuilta Rijksmuseumista. Hollannissa muotokuva tehtiin usein savesta, koska se oli marmoria edullisempaa. Katso, miten kasvojen ilme syntyy pienistä muodoista."
+  },
+  {
+   "id": "m1",
+   "nimi_fi": "Punainen kabinetti",
+   "nimi_en": "Red Cabinet",
+   "osat": [
+    "m1"
+   ],
+   "teksti_fi": "Kultaisen ajan maalaukset ripustettiin aikanaan pieniin huoneisiin, joissa jokaista teosta katsottiin läheltä. Punainen kangasseinä on tyypillinen tausta Haagin Mauritshuisin kabineteille. Tule lähelle ja tutki siveltimenjälkeä."
+  },
+  {
+   "id": "m2",
+   "nimi_fi": "Vihreä kabinetti",
+   "nimi_en": "Green Cabinet",
+   "osat": [
+    "m2"
+   ],
+   "teksti_fi": "Mauritshuis rakennettiin 1600-luvulla kreivi Johan Maurits Nassau-Siegenin kaupunkipalatsiksi, ja siinä on ollut museo vuodesta 1822. Vihreä seinä rauhoittaa katsetta ja nostaa maalausten värit esiin. Kabinettien pienessä mittakaavassa yksityiskohdat tulevat näkyviin."
+  },
+  {
+   "id": "m3",
+   "nimi_fi": "Sininen kabinetti",
+   "nimi_en": "Blue Cabinet",
+   "osat": [
+    "m3"
+   ],
+   "teksti_fi": "Sininen kabinetti päättää kabinettisarjan ennen suurta galleriaa. Tila on tarkoituksella kodikas ja hiljainen. Pysähdy ja katso lähelle, sillä pienet maalaukset avautuvat hitaasti."
+  },
+  {
+   "id": "kg",
+   "nimi_fi": "Kunniagalleria",
+   "nimi_en": "Gallery of Honour",
+   "osat": [
+    "kg"
+   ],
+   "teksti_fi": "Kunniagalleria on Rijksmuseumin pitkä päägalleria, joka johtaa Yövartioon. Pierre Cuypersin suunnittelema rakennus avattiin vuonna 1885. Seinillä on 1600-luvun mestareita, kuten Rembrandt, Vermeer ja Hals."
+  },
+  {
+   "id": "kg-komerot",
+   "nimi_fi": "Kunniagallerian komerot",
+   "nimi_en": "Gallery of Honour: side rooms",
+   "osat": [
+    "kg-k1v",
+    "kg-k1o",
+    "kg-k2v",
+    "kg-k2o",
+    "kg-k3v",
+    "kg-k3o",
+    "kg-k4v",
+    "kg-k4o"
+   ],
+   "teksti_fi": "Kunniagallerian sivukomerot ovat pieniä huoneita, joissa lähellä katsottavat teokset saavat oman tilansa. Tässä ei kiirehditä. Tutki pintaa, valoa ja pieniä yksityiskohtia."
+  },
+  {
+   "id": "yv",
+   "nimi_fi": "Yövartio-sali",
+   "nimi_en": "Night Watch Hall",
+   "osat": [
+    "yv"
+   ],
+   "teksti_fi": "Galleria päättyy saliin, jonka päätyseinää hallitsee Rembrandtin Yövartio vuodelta 1642. Maalaus on noin 3,8 metriä korkea ja 4,5 metriä leveä, joten sitä kannattaa katsoa sekä kaukaa että läheltä. Valo ja liike vetävät katseen kapteenin ja hänen luutnanttinsa luo."
+  },
+  {
+   "id": "leiden",
+   "nimi_fi": "Leidenin antiikkisiipi",
+   "nimi_en": "Leiden Antiquities Wing",
+   "osat": [
+    "leiden"
+   ],
+   "teksti_fi": "Leidenin Rijksmuseum van Oudheden on Alankomaiden kansallinen antiikkimuseo, perustettu vuonna 1818. Tässä siivessä on roomalaisia alttareita ja hautakiviä, egyptiläisiä patsaita ja kreikkalaisia maljakoita. Osa esineistä on löydetty Alankomaiden omasta maaperästä."
+  }
+ ]
+}

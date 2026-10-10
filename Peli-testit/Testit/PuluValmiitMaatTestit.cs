@@ -35,6 +35,9 @@ namespace Matkakirja.Peli.Testit
             "kohde:cordoban-moskeijakatedraali / mekkaa",                                            // ESP
             "kohde:hahmotelma-hoorn / itä-intian kauppakomppanian", "kohde:hahmotelma-nuenen / perunansyöjät",
             "kohde:hahmotelma-enkhuizen / itä-intian merikaupan",                                     // NLD
+            "kohde:kjerag / lysefjordiin",                                                           // NOR (linkki [[Lysefjord]])
+            "kohde:hahmotelma-strbske-pleso / hammasratasradan",
+            "kohde:hahmotelma-strbske-pleso / jozef szentiványiin",                                  // SVK (linkit perusmuodossa)
         };
 
         static void Maa(string maa, int kohtia, int kysymyksia, int lisaa)

@@ -88,6 +88,9 @@ namespace Matkakirja.Linssit.Testit
         public const double TarkistusPiiloM = 6;
         bool oliPiilossa, paljastui, riitaKaynnissa; double riitaAsti = 20, riitaAlkaa = -1; string pelaajanOsa;
         public string PelaajanOsa => pelaajanOsa;
+        KavelyMerkki tikkaatAla;
+        static List<KavelyMerkki> tikkaat;
+        static List<KavelyMerkki> Tikkaat { get { if (tikkaat == null) { tikkaat = new List<KavelyMerkki>(); foreach (var m in Data.Lajia("kiipeily")) if (m.Yla != null) tikkaat.Add(m); } return tikkaat; } }
 
         public static Huonesimulaatio Uusi()
         {
@@ -228,13 +231,30 @@ namespace Matkakirja.Linssit.Testit
         /// <summary>Toiminto pelaajan kohdalla: tarjotin pöydältä, eväät torkkuvalle (kynttilä jää käteen), naamio naulakosta.</summary>
         public void Toiminnot()
         {
-            if (!Naamio) foreach (var m in Data.Lajia("naulakko")) if (Etaisyys2(PX, PZ, m.X, m.Z) <= PoimintaM && Math.Abs(PY - m.Y) < 2) Naamio = true;
+            if (!Naamio) foreach (var m in Data.Lajia("naulakko")) if (Etaisyys2(PX, PZ, m.X, m.Z) <= PoimintaM && Math.Abs(PY - m.Y) < 2) { Naamio = true; EsineTarkistus(); }
+            // Avainesineet (pelattavuusmalli 4.3 T6c avaimet, T8a köysi; SeikkailuVartijat.EsineTarkistuspiste): tarkistuspiste otettaessa.
+            foreach (var m in Data.Lajia("esine"))
+                if ((m.Tunnus == "avainrengas" || m.Tunnus == "koysikieppi") && !Kaytetyt.Contains("otettu:" + m.Tunnus)
+                    && Etaisyys2(PX, PZ, m.X, m.Z) <= PoimintaM + 0.5 && Math.Abs(PY - m.Y) < 1.5) { Kaytetyt.Add("otettu:" + m.Tunnus); EsineTarkistus(); }
             if (!Tarjotin && !Annettu)
                 foreach (var m in Data.Lajia("esine")) if (m.Kannettava && m.Tunnus == "tarjotin" && Etaisyys2(PX, PZ, m.X, m.Z) <= PoimintaM && Math.Abs(PY - m.Y) < 1.5) Tarjotin = true;
             if (Tarjotin)
                 foreach (var h in Hahmot)
                     if (h.Aivot.Profiili == VartijaProfiili.Torkku && !h.Aivot.Syo && h.Aivot.Tila != VartijanTila.Halytys && h.Aivot.Tila != VartijanTila.Kiinni
                         && Etaisyys3(h.X, h.Y, h.Z, PX, PY, PZ) < AnnaM) { h.Aivot.Torkkuu = true; h.Aivot.Syo = true; Tarjotin = false; Annettu = true; Kynttila = true; }
+        }
+
+        /// <summary>Tarkistuspiste avainesineestä (T6b naamio, T6c avaimet, T8a köysi), kun kukaan ei epäile.</summary>
+        /// Ehto kuten SeikkailuVartijat.EpaileePelaajaa: harhautuksen tutkiminen muualla sallitaan (avaimet voudin kiistan aikana).
+        void EsineTarkistus()
+        {
+            foreach (var h in Hahmot)
+            {
+                if (!h.Aktiivinen) continue; var t = h.Aivot.Tila;
+                if (h.Aivot.Mittari >= 0.15 || t == VartijanTila.Epaily || t == VartijanTila.Halytys || t == VartijanTila.Kiinni) return;
+                if ((t == VartijanTila.Etsinta || t == VartijanTila.Etsii) && Etaisyys2(h.Aivot.EpailyX, h.Aivot.EpailyZ, PX, PZ) < 3) return;
+            }
+            Tarkistus = (PX, PY, PZ); TarkistusSeuraava = Seuraava;
         }
 
         /// <summary>Heitettävät ja kaadettavat pelaajan ulottuvilla (≤ 1,2 m), joita ei ole käytetty.</summary>
@@ -274,6 +294,17 @@ namespace Matkakirja.Linssit.Testit
                 if (pelaajanOsa != null && !Vaara()) { Tarkistus = (PX, PY, PZ); TarkistusSeuraava = Seuraava; }
                 pelaajanOsa = osa;
                 if (kiinniOsa != null && osa != kiinniOsa) { kiinniOsa = null; kiinniOsassa = 0; foreach (var x in Hahmot) x.Aivot.Helpotettu = false; }   // helpotus päättyy
+            }
+            // Tarkistuspiste tikkaiden yläpäähän (SeikkailuVartijat, PT 10.10.): kiipeily:-merkin alapäästä (≤ 1 m vaaka, 1,2 m pysty) yläpäähän
+            // noustessa (≥ 1,5 m) kenenkään epäilemättä; harja on samaa osaa kuin muurikäytävä.
+            foreach (var m in Tikkaat)
+            {
+                if (Etaisyys2(PX, PZ, m.X, m.Z) <= 1.0 && Math.Abs(PY - m.Y) <= 1.2) tikkaatAla = m;
+                else if (tikkaatAla == m && Etaisyys2(PX, PZ, m.Yla[0], m.Yla[2]) <= 1.0 && PY >= m.Yla[1] - 0.3 && m.Yla[1] - m.Y >= 1.5)
+                {
+                    tikkaatAla = null;
+                    if (!Vaara()) { Tarkistus = (PX, PY, PZ); TarkistusSeuraava = Seuraava; }
+                }
             }
             var aanet = new List<Aanilahde>(Jono); Jono.Clear();
             double sade = Askelaani.Sade(Askelaani.Pinta(d, PX, PY, PZ), Hiipii ? Liiketapa.Hiipiminen : Liiketapa.Kavely);
@@ -352,7 +383,8 @@ namespace Matkakirja.Linssit.Testit
             string osa = Askelaani.Osa(d, PX, PY, PZ);
             kiinniOsassa = osa == kiinniOsa ? kiinniOsassa + 1 : 1; kiinniOsa = osa;
             (PX, PY, PZ) = Tarkistus; Seuraava = TarkistusSeuraava; ArmoAsti = T + ArmoS; Tarjotin = false; pelaajanOsa = Askelaani.Osa(d, PX, PY, PZ);
-            foreach (var w in Hahmot) if (w.Aktiivinen) { w.Aivot.Nollaa(w.X, w.Z, valpas: true); if (kiinniOsassa >= 2) w.Aivot.Helpotettu = true; }
+            foreach (var w in Hahmot) if (w.Aktiivinen) { w.Aivot.Nollaa(w.X, w.Z, valpas: !w.Aivot.Torkkuu);   // torkkuva ei valpastu (SeikkailuVartijat.Kiinni)
+                 if (kiinniOsassa >= 2) w.Aivot.Helpotettu = true; }
             if (kiinniOsassa >= 3) PuluPakotettu++;
         }
         public int KiinniOsassa => kiinniOsassa;

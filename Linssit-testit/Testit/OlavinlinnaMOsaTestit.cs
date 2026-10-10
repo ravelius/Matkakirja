@@ -158,41 +158,74 @@ namespace Matkakirja.Linssit.Testit
         /// <summary>Kiinnijäänti JOKA reittipisteessä 22…91 (Siirtoseppä 10.10., PT erä 1; yllä viisi kohtaa koko loppureitillä): LR:n paketti
         /// ei voi rikkoa yhtäkään kohtaa huomaamatta. Tarkistuspisteestä ajetaan kiinnijäännin kohdan ohi, kunnes kukaan ei ole enää valpas
         /// (sen jälkeen tilanne on sama kuin ilman kiinnijääntiä), ilman uutta kiinnijääntiä; tarkistuspiste enintään PaluuMax pistettä taaempana
-        /// ja menetetty aika ≤ LisaMaxS (malli 4.3: kiinnijäänti lisää 1–1,5 min tyrmän kanssa). v47a: pahin 99 s (kiinni 68: valppaus 60 s
-        /// pisteen 67 torkkujan vieressä), pisin paluu 19 (huone 6: kaari-ovi 22 ja voudin sali 46). Harjalla (89–91) ei ole omaa tarkistuspistettä:
-        /// paluu muurikäytävän pisteeseen 85 (menetys ~17 s).</summary>
-        public const double LisaMaxS = 120; public const int PaluuMax = 20;
+        /// ja menetetty aika ≤ LisaMaxS (malli 4.3: kiinnijäänti lisää 1–1,5 min tyrmän kanssa). v47a: pahin 63 s (kiinni 60; ennen 99 s kiinni 68,
+        /// kun torkkuja valpastui ja näki pisteen 67 ohittajan), pisin paluu 19 (huone 6: kaari-ovi 22 ja voudin sali 46). Harjalla (89–91) paluu tikkaiden
+        /// yläpäähän 88 (TikkaidenYlapaaTekeeTarkistuspisteen; ennen muurikäytävän pisteeseen 85).</summary>
+        public const int PaluuMax = 20;
+        public const double LisaMaxS = 80;   // malli 4.3 enintään 1,5 min − tyrmä ~10 s (ennen 120 s, kun pahin oli 99 s)
         /// AJETAAN VAIN PYYDETTÄESSÄ (PT 10.10.: ~150 s): `OLAVINLINNA_LAAJA=1 ./kaanna.sh KiinniJokaPisteessa` aina, kun Olavinlinnan paketti,
         /// reitti tai vartijat muuttuvat.
         [Testi] static void KiinniJokaPisteessa()
         {
             if (Environment.GetEnvironmentVariable("OLAVINLINNA_LAAJA") != "1") { Console.WriteLine("      ohitettu (OLAVINLINNA_LAAJA=1 ajaa)"); return; }
-            var koko = Koko(); Oleta.Tosi(koko.Loppu != null, "koko M-reitti läpi");
+            Oleta.Tosi(Koko().Loppu != null, "koko M-reitti läpi");
+            KiinniKaikissa(Tila, MAlku + 1, KiipeilyAlku);
+        }
+
+        /// <summary>Kiinnijäänti jokaisessa pisteessä alku…loppu − 1 (tila(k) = tila pisteessä k ilman kiinnijääntiä, tila(loppu) mukaan
+        /// lukien); ks. KiinniJokaPisteessa. Myös huoneet 2–4 (OlavinlinnaPalaKiinniTestit).</summary>
+        public static void KiinniKaikissa(Func<int, Huonesimulaatio> tilaK, int alku, int loppuK)
+        {
             double pahin = 0; int pahinK = 0, pisinPaluu = 0;
-            for (int k = MAlku + 1; k < KiipeilyAlku; k++)
+            for (int k = alku; k < loppuK; k++)
             {
-                var tila = Tila(k); var koe = tila.Kopioi(); double t0 = koe.T;
+                var tila = tilaK(k); var koe = tila.Kopioi(); double t0 = koe.T;
                 koe.Kiinnijaanti(); int takaisin = koe.Seuraava;
                 // Osissa (3 pistettä kerrallaan) kunnes valppaus on ohi; jos osa jumittaa, koko loppureitti kerralla (ajurin paluuhaku osarajan yli).
                 var w = koe; int loppu = k + 1; bool jumi = false;
                 while (true)
                 {
                     var osa = ThiefAjuri.Aja(w, w.Seuraava, loppu, budjetti: 600);
-                    if (osa.Loppu == null) { var t = ThiefAjuri.Aja(koe, koe.Seuraava, KiipeilyAlku, budjetti: 600); w = t.Loppu; loppu = KiipeilyAlku; jumi = w == null; if (jumi) { Console.WriteLine($"      kiinni {k + 1}: jumissa pisteessä {t.Pisin + 1}:"); ThiefAjuri.Tulosta(t.PisinTila); } break; }
+                    if (osa.Loppu == null) { var t = ThiefAjuri.Aja(koe, koe.Seuraava, loppuK, budjetti: 600); w = t.Loppu; loppu = loppuK; jumi = w == null; if (jumi) { Console.WriteLine($"      kiinni {k + 1}: jumissa pisteessä {t.Pisin + 1}:"); ThiefAjuri.Tulosta(t.PisinTila); } break; }
                     w = osa.Loppu; bool valpas = false;
                     foreach (var h in w.Hahmot) if (h.Aktiivinen && h.Aivot.Valppaus > 0) valpas = true;
-                    if (!valpas || loppu >= KiipeilyAlku) break;
-                    loppu = Math.Min(loppu + 3, KiipeilyAlku);
+                    if (!valpas || loppu >= loppuK) break;
+                    loppu = Math.Min(loppu + 3, loppuK);
                 }
-                Oleta.Tosi(!jumi && w.Kiinni == 1, $"kiinni {k + 1}: tarkistuspisteestä {takaisin + 1} pisteeseen {loppu + 1} ilman uutta kiinnijääntiä");
+                Oleta.Tosi(!jumi && w.Kiinni == tila.Kiinni + 1, $"kiinni {k + 1}: tarkistuspisteestä {takaisin + 1} pisteeseen {loppu + 1} ilman uutta kiinnijääntiä");
                 if (jumi) continue;
-                double lisa = (w.T - t0) - (Tila(loppu).T - tila.T);
+                double lisa = (w.T - t0) - (tilaK(loppu).T - tila.T);
                 if (lisa > pahin) { pahin = lisa; pahinK = k; }
                 pisinPaluu = Math.Max(pisinPaluu, k - takaisin);
                 Oleta.Tosi(k - takaisin <= PaluuMax, $"kiinni {k + 1}: tarkistus {takaisin + 1} enintään {PaluuMax} pistettä taaempana ({k - takaisin})");
                 Oleta.Tosi(lisa <= LisaMaxS, $"kiinni {k + 1}: menetetty aika {lisa:F0} s ≤ {LisaMaxS:F0} s");
             }
-            Console.WriteLine($"      {KiipeilyAlku - MAlku - 1} kohtaa: pahin menetys {pahin:F0} s (kiinni {pahinK + 1}), pisin paluu {pisinPaluu} pistettä");
+            Console.WriteLine($"      {loppuK - alku} kohtaa: pahin menetys {pahin:F0} s (kiinni {pahinK + 1}), pisin paluu {pisinPaluu} pistettä");
+        }
+
+        /// <summary>Tikkaiden yläpää tekee tarkistuspisteen (PT 10.10., SeikkailuVartijat): harja on samaa osaa kuin muurikäytävä, joten
+        /// harjalla (89–91) kiinni jäänyt palasi ennen muurikäytävän pisteeseen 85; nyt tikkaiden yläpäähän 88.</summary>
+        [Testi] static void TikkaidenYlapaaTekeeTarkistuspisteen()
+        {
+            for (int k = TikkaatAla + 2; k < KiipeilyAlku; k++)
+            {
+                var w = Tila(k); w.Kiinnijaanti();
+                Console.WriteLine($"      kiinni {k + 1} → tarkistus {w.Seuraava + 1} ({w.PX:F1}, {w.PY:F1}, {w.PZ:F1})");
+                Oleta.Tosi(w.Seuraava == TikkaatAla + 1 && w.PY > 16, $"kiinni {k + 1}: tarkistus tikkaiden yläpäässä {TikkaatAla + 2} (nyt {w.Seuraava + 1}, y {w.PY:F1})");
+            }
+        }
+
+        /// <summary>Avainesine tekee tarkistuspisteen (pelattavuusmalli 4.3 T6c, SeikkailuVartijat.EsineTarkistuspiste), kun kukaan ei epäile
+        /// tai etsi pelaajaa; Thief-reitillä avaimet otetaan kulhon harhautuksen aikana, kun linnaväki etsii pelaajan kohtaa → ei pistettä.</summary>
+        [Testi] static void AvaimetTekevatTarkistuspisteen()
+        {
+            const int Avaimet = 56;   // reitti:pelaaja-57 voudin pöytä
+            var etsii = Tila(Avaimet); etsii.Kaytetyt.Remove("otettu:avainrengas"); int ennen = etsii.TarkistusSeuraava; etsii.Toiminnot();
+            Oleta.Tosi(etsii.TarkistusSeuraava == ennen, $"etsinnän aikana ei tarkistuspistettä ({etsii.TarkistusSeuraava + 1})");
+            var rauha = Tila(Avaimet); rauha.Kaytetyt.Remove("otettu:avainrengas"); rauha.Seuraava = Avaimet;
+            foreach (var h in rauha.Hahmot) h.Aivot.Nollaa(h.X, h.Z);
+            rauha.Toiminnot();
+            Oleta.Tosi(rauha.TarkistusSeuraava == Avaimet && rauha.Tarkistus.X == rauha.PX && rauha.Tarkistus.Z == rauha.PZ, $"avaimet → tarkistuspiste 57 ({rauha.TarkistusSeuraava + 1})");
         }
 
         /// <summary>Piiloon meno tekee tarkistuspisteen (SeikkailuVartijat, Siirtoseppä juna 167): muuriportailla (69, tarkistus vielä

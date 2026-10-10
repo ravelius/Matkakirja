@@ -96,6 +96,7 @@ namespace Matkakirja.Natiivi
             valtiomuoto = Rakenne.Teksti("", "mk-kartuscha__arvo", valtiomuotoRivi);
             tilastot = Rakenne.El("mk-kartuscha__tilastot", sisus);
             tilastot.RegisterCallback<PointerDownEvent>(_ => { sijatAuki = !sijatAuki; tilastot.EnableInClassList("mk-sijat-auki", sijatAuki); });
+            tilastot.RegisterCallback<GeometryChangedEvent>(_ => SovitaNimikkeet());
             kielet = Rakenne.El("mk-kartuscha__kielet", tilastot, PickingMode.Ignore);
             aiheet = Rakenne.El("mk-kartuscha__aiheet", sisus, PickingMode.Ignore);
             // Radio kortin oikeaan yläkulmaan (web .maapaneeli-radio: absolute, top/right 0,7rem).
@@ -467,6 +468,10 @@ namespace Matkakirja.Natiivi
             valtiomuotoRivi.style.display = DisplayStyle.None;
             foreach (var vanha in tilastot.Query(className: "mk-kartuscha__rivi").ToList()) vanha.RemoveFromHierarchy();
             vertailut.Clear();
+            // Pääkaupunki ensimmäisenä rivinä (PT 10.10., sama kuin web): "HALLINNON PAIKKA", kun asema on "hallinnon paikka"
+            // (ISR → Jerusalem, PSE → Ramallah); ilman tietoa ei riviä.
+            if (m.Paakaupunki != null)
+                Tilasto(Kieli.T(m.PaakaupunkiAsema == "hallinnon paikka" ? "ui.kartuscha.hallinnon-paikka" : "ui.kartuscha.paakaupunki"), m.Paakaupunki, null);
             if (m.OnTiedot)
             {
                 Tilasto(Kieli.T("ui.kartuscha.vakiluku"), m.Vakiluku, m.VakilukuSija);
@@ -474,7 +479,7 @@ namespace Matkakirja.Natiivi
                 Tilasto(Kieli.T("ui.kartuscha.demokratia"), m.Demokratia != null ? m.Demokratia + " · V-Dem" : null, m.DemokratiaSija);
                 Tilasto(Kieli.T("ui.kartuscha.keskitulo"), m.Keskitulo, m.KeskituloSija);
             }
-            tilastot.style.display = m.OnTiedot || m.Tervehdykset.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+            tilastot.style.display = m.OnTiedot || m.Tervehdykset.Count > 0 || m.Paakaupunki != null ? DisplayStyle.Flex : DisplayStyle.None;
 
             kielet.Clear();
             kielet.BringToFront(); // rivien jälkeen
@@ -500,6 +505,7 @@ namespace Matkakirja.Natiivi
                 }
             }
             kielet.style.display = m.Tervehdykset.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+            NollaaNimikkeet();
 
             aiheet.Clear();
             foreach (var (id, aiheNimi) in m.Aiheet)
@@ -513,6 +519,40 @@ namespace Matkakirja.Natiivi
             }
             aiheet.style.display = m.Aiheet.Count > 0 && m.Maalehti != null ? DisplayStyle.Flex : DisplayStyle.None;
             PaivitaMuste();
+        }
+
+        /// <summary>
+        /// NIMIKESARAKE KUTEN WEBISSÄ (PT 10.10.; web .maapaneeli-rivit grid-template-columns: auto): sarake on kortin leveimmän
+        /// nimikkeen levyinen, vähintään USS:n 78 pt (.mk-kartuscha__nimike). Asettelutesti: "HALLINNON PAIKKA" (116 pt) piirtyi
+        /// kiinteässä 78 pt:n sarakkeessa arvon päälle. Täytössä nimikkeet luontaiseen leveyteensä, ensimmäisellä asettelulla
+        /// (GeometryChanged) kaikki leveimmän mukaan.
+        /// </summary>
+        const float NimikeMin = 78f;
+        bool nimikkeetSovitettu;
+
+        List<VisualElement> Nimikkeet() => tilastot.Query(className: "mk-kartuscha__nimike").ToList();
+
+        void NollaaNimikkeet()
+        {
+            nimikkeetSovitettu = false;
+            foreach (var n in Nimikkeet()) { n.style.width = StyleKeyword.Auto; n.style.minWidth = NimikeMin; }
+        }
+
+        void SovitaNimikkeet()
+        {
+            if (nimikkeetSovitettu) return;
+            float leveys = 0f;
+            foreach (var n in Nimikkeet())
+            {
+                if (!Rakenne.Naytetaan(n)) continue;
+                float w = n.layout.width;
+                if (float.IsNaN(w) || w <= 0f) return;   // ei vielä asettelua (kortti kiinni): seuraavalla kerralla
+                leveys = Mathf.Max(leveys, w);
+            }
+            if (leveys <= 0f) return;
+            nimikkeetSovitettu = true;
+            leveys = Mathf.Ceil(leveys);
+            foreach (var n in Nimikkeet()) n.style.width = leveys;
         }
 
         void Tilasto(string nimike, string arvo, string sija)

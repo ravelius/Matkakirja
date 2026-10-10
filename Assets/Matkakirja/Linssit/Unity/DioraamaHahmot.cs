@@ -3,10 +3,7 @@
 // ruutu (DioraamaData.Henkilo/Silmukka). Näkyvyys, silmukka ja ruutu tulevat Ytimen NakymaHetkella-kutsun
 // Nakyma.Hahmot-listasta (Heratys.HahmonTila); tämä tiedosto vain piirtää sen, mitä Ydin päätti.
 //
-// TILAPÄINEN POIKKEAMA (raportoitu erän 1 luovutuksessa): Ohjaaja/Heratys (Ydin) eivät laske reittihahmon
-// PAIKKAA, vain näkyvyyden/silmukan/ruudun. Reittihahmon paikka lasketaan siksi tässä deterministisesti ajasta t
-// (edestakainen kulku pisteestä toiseen vakionopeudella, tauko päissä) — jos Ydin saa vastaavan funktion
-// myöhemmin (esim. Ohjaaja.ReittiPaikka), tämä paikallinen laskenta pitäisi korvata sillä.
+// Reittihahmon paikka: Ytimen ReittiKulku (sama kaava kuin DioraamaHahmot3D; Siirtoseppä 10.10.2026, ennen paikallinen kopio).
 using System;
 using System.Collections.Generic;
 using Matkakirja.Linssit.Dioraama;
@@ -34,8 +31,7 @@ namespace Matkakirja.Natiivi
             public string AtlasAvain;
             public int ViimeRivi = -1, ViimeSarake = -1;
             public double ReitinVaihe;
-            public double ReitinMatka, ReitinKulkuS;
-            public double[] Kumulatiivinen;
+            public ReittiKulku Kulku;
         }
 
         readonly Transform juuri;
@@ -120,9 +116,9 @@ namespace Matkakirja.Natiivi
                 {
                     TilaId = tila.Id, HahmoId = hahmo.Id, Hahmo = hahmo, Henkilo = henkilo,
                     Go = go, Renderer = renderer, Mesh = mesh, AtlasAvain = henkilo.Atlas,
-                    ReitinVaihe = VaiheYksikko(hahmo.Id),
+                    ReitinVaihe = ReittiKulku.VaiheYksikko(hahmo.Id),
                 };
-                if (hahmo.Reitti != null) ValmisteleReitti(e, hahmo.Reitti);
+                if (hahmo.Reitti != null) e.Kulku = new ReittiKulku(hahmo.Reitti);
                 esiintymat.Add(e);
             }
         }
@@ -226,59 +222,12 @@ namespace Matkakirja.Natiivi
             mesh.uv = new[] { new Vector2(u0, vAla), new Vector2(u1, vAla), new Vector2(u1, vYla), new Vector2(u0, vYla) };
         }
 
-        // --- reittihahmon paikka (tilapäinen, ks. tiedoston alkukommentti) ------------------------------------
-
-        void ValmisteleReitti(Esiintyma e, Reitti reitti)
-        {
-            int n = reitti.Pisteet?.Count ?? 0;
-            e.Kumulatiivinen = new double[Math.Max(1, n)];
-            double summa = 0;
-            for (int i = 1; i < n; i++)
-            {
-                summa += (reitti.Pisteet[i] - reitti.Pisteet[i - 1]).Pituus;
-                e.Kumulatiivinen[i] = summa;
-            }
-            e.ReitinMatka = summa;
-            double nopeus = reitti.Nopeus > 0 ? reitti.Nopeus : 1.0;
-            e.ReitinKulkuS = summa / nopeus;
-        }
-
-        /// <summary>Edestakainen kulku reitin pisteiden välillä vakionopeudella, tauko kummassakin päässä.</summary>
+        /// <summary>Reittihahmon paikka (ReittiKulku); ilman pisteitä hahmo pysyy, missä on.</summary>
         static Vector3 ReittiPaikka(Esiintyma e, double t)
         {
-            var reitti = e.Hahmo.Reitti;
-            var pisteet = reitti.Pisteet;
+            var pisteet = e.Kulku.Reitti.Pisteet;
             if (pisteet == null || pisteet.Count == 0) return e.Go.transform.position;
-            if (pisteet.Count == 1 || e.ReitinMatka <= 0) return DioraamaNayttamo.UnityPiste(pisteet[0]);
-
-            double tauko = Math.Max(0, reitti.Tauko);
-            double kierto = 2 * e.ReitinKulkuS + 2 * tauko;
-            if (kierto <= 0) return DioraamaNayttamo.UnityPiste(pisteet[0]);
-            double vaihe = Mod(t + e.ReitinVaihe * kierto, kierto);
-            double nopeus = reitti.Nopeus > 0 ? reitti.Nopeus : 1.0;
-            double matka;
-            if (vaihe < e.ReitinKulkuS) matka = vaihe * nopeus;
-            else if (vaihe < e.ReitinKulkuS + tauko) matka = e.ReitinMatka;
-            else if (vaihe < 2 * e.ReitinKulkuS + tauko) matka = e.ReitinMatka - (vaihe - e.ReitinKulkuS - tauko) * nopeus;
-            else matka = 0;
-
-            int seg = 0;
-            while (seg < e.Kumulatiivinen.Length - 2 && e.Kumulatiivinen[seg + 1] < matka) seg++;
-            double segAlku = e.Kumulatiivinen[seg], segLoppu = e.Kumulatiivinen[Math.Min(seg + 1, e.Kumulatiivinen.Length - 1)];
-            double osuus = segLoppu > segAlku ? Math.Clamp((matka - segAlku) / (segLoppu - segAlku), 0.0, 1.0) : 0;
-            V3 piste = V3.Lerp(pisteet[seg], pisteet[Math.Min(seg + 1, pisteet.Count - 1)], osuus);
-            return DioraamaNayttamo.UnityPiste(piste);
-        }
-
-        static double Mod(double a, double m) => a - m * Math.Floor(a / m);
-
-        /// <summary>Deterministinen 0..1-vaihe merkkijonosta (FNV-1a): reittihahmot eivät liiku tahdissa.</summary>
-        static double VaiheYksikko(string id)
-        {
-            if (string.IsNullOrEmpty(id)) return 0;
-            uint h = 2166136261;
-            foreach (char c in id) { h ^= c; h *= 16777619; }
-            return (h % 1000) / 1000.0;
+            return DioraamaNayttamo.UnityPiste(e.Kulku.Paikka(t, e.ReitinVaihe).Paikka);
         }
 
         public void Tyhjenna()

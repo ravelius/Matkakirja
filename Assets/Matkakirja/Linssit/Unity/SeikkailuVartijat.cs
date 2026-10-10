@@ -124,6 +124,7 @@ namespace Matkakirja.Natiivi
         Action<string> kirjaa;
         Vector3 tarkistus; SeikkailuPelaaja tarkistusPelaaja;
         string pelaajanOsa; float osaTarkistus, hehkuTarkistus; string kiinniOsa; int kiinniOsassa;
+        bool oliKiipeily; float kiipeilyAlkuY;
         /// <summary>Viimeisimmän tarkistuspisteen osa ja tapahtuma (V6 tallennus kuuntelee).</summary>
         public static string TarkistusOsa;
         public static event Action<string, Vector3> Tarkistuspiste;
@@ -134,6 +135,34 @@ namespace Matkakirja.Natiivi
         /// <summary>Sydän lyö (jonkin hahmon vaara, kohta 3.4).</summary>
         public bool SydanLyo => sydanPaalla;
         public Vector3 Tarkistus => tarkistus;
+
+        /// <summary>Tarkistuspiste avainesineestä (pelattavuusmalli 4.3: T6b naamio, T6c avaimet, T8a köysi; Siirtoseppä 10.10., PT):
+        /// pelaajan paikka, kun kukaan ei epäile pelaajaa (harhautuksen tutkiminen muualla sallitaan: avaimet otetaan voudin kiistan
+        /// aikana). Tarjotin (T3c) ei, koska se putoaa kiinnijäännissä.</summary>
+        /// <summary>Joku epäilee tai etsii pelaajaa (mittari ≥ 0,15, epäily, hälytys, kiinni tai etsintä alle 3 m pelaajasta); vrt. Vaara,
+        /// joka laskee myös harhautuksen tutkimisen muualla.</summary>
+        static bool EpaileePelaajaa(Vector3 pp)
+        {
+            var a = Aktiivinen; if (a == null) return false;
+            foreach (var v in a.vartijat)
+            {
+                if (v.Agentti == null || !v.Agentti.gameObject.activeInHierarchy) continue;
+                var t = v.Aivot.Tila;
+                if (v.Aivot.Mittari >= 0.15 || t == VartijanTila.Epaily || t == VartijanTila.Halytys || t == VartijanTila.Kiinni) return true;
+                float dx = (float)v.Aivot.EpailyX - pp.x, dz = (float)v.Aivot.EpailyZ - pp.z;
+                if ((t == VartijanTila.Etsinta || t == VartijanTila.Etsii) && dx * dx + dz * dz < 9f) return true;
+            }
+            return false;
+        }
+
+        public static void EsineTarkistuspiste(string esine)
+        {
+            var a = Aktiivinen; var p = SeikkailuPelaaja.Aktiivinen; if (a == null || p == null || p.Otteessa) return;
+            var pp = p.transform.position; if (EpaileePelaajaa(pp)) return;
+            a.tarkistus = pp; TarkistusOsa = Askelaani.Osa(SeikkailuKavely.Data, pp.x, pp.y, -pp.z) ?? TarkistusOsa;
+            a.kirjaa?.Invoke($"seikkailu: tarkistuspiste {esine} ({pp})");
+            Tarkistuspiste?.Invoke(TarkistusOsa, pp);
+        }
         float armoAsti = -1f; const float ArmoS = 4f;
         double sykliMs = 0.955;
 
@@ -268,6 +297,18 @@ namespace Matkakirja.Natiivi
                     if (kiinniOsa != null && osaNyt != kiinniOsa) { kiinniOsa = null; kiinniOsassa = 0; foreach (var x in vartijat) x.Aivot.Helpotettu = false; }   // helpotus päättyy huoneen vaihtuessa
                 }
             }
+            // Tarkistuspiste tikkaiden yläpäähän (PT 10.10., pelattavuusmalli 4.3 "tarkistuspiste huoneen alussa"): harja on samaa
+            // muurikaytava-osaa kuin muurikäytävä, joten osarajaa ei ylitetä; ylöspäin päättynyt kiipeily (≥ 1,5 m) kenenkään epäilemättä.
+            bool kiipeileeNyt = p != null && p.Kiipeilee;
+            if (kiipeileeNyt && !oliKiipeily) kiipeilyAlkuY = p.transform.position.y;
+            if (!kiipeileeNyt && oliKiipeily && p != null && p.transform.position.y > kiipeilyAlkuY + 1.5f && !Vaara(p.transform.position, 0f) && !p.Otteessa)
+            {
+                var pp3 = p.transform.position;
+                tarkistus = pp3; TarkistusOsa = Askelaani.Osa(SeikkailuKavely.Data, pp3.x, pp3.y, -pp3.z) ?? TarkistusOsa;
+                kirjaa?.Invoke($"seikkailu: tarkistuspiste tikkaiden yläpäässä ({pp3})");
+                Tarkistuspiste?.Invoke(TarkistusOsa, pp3);
+            }
+            oliKiipeily = kiipeileeNyt;
             var aanet = new List<Aanilahde>(jono); jono.Clear();
             if (p != null)
             {
@@ -618,11 +659,12 @@ namespace Matkakirja.Natiivi
             if (r != null && r.Valmis && v.Agentti != null) r.Soita("vartija-kiinni-2", v.Agentti.transform);
             yield return new WaitForSecondsRealtime(SeikkailuNakyvyys.HimmennysS);
             if (p != null) p.Otteessa = false;
+            SeikkailuEsineet.Aktiivinen?.TarjotinPoydalle();   // ei tarjotinta tyrmään (Huonesimulaatio.Kiinnijaanti: Tarjotin = false)
             // Tyrmä (pelattavuusmalli 4.1), jos sen merkit ovat paketissa: vartijat nollautuvat heti, pelaaja palaa tarkistuspisteeseen
             // vasta paon jälkeen (armoaika ja valppaus silloin).
             if (p != null && SeikkailuTyrma.Aloita(transform.parent, p, () => { Kiinni(v); }, kirjaa))
             {
-                foreach (var x in vartijat) { var xp = x.Agentti.transform.position; x.Aivot.Nollaa(xp.x, xp.z, valpas: true); x.EdellinenTila = VartijanTila.Partio; }
+                foreach (var x in vartijat) { var xp = x.Agentti.transform.position; x.Aivot.Nollaa(xp.x, xp.z, valpas: !x.Aivot.Torkkuu); x.EdellinenTila = VartijanTila.Partio; }
                 tyrmassa = true;
                 while (SeikkailuTyrma.Aktiivinen != null) yield return null;
                 tyrmassa = false; ote = null;
@@ -650,7 +692,9 @@ namespace Matkakirja.Natiivi
             }
             if (p != null) p.Siirra(tarkistus);
             armoAsti = Time.unscaledTime + ArmoS;   // E1-ajo 7.10.: tarkistuspiste vartijan näkyvissä → kiinni uudelleen heti
-            foreach (var x in vartijat) { var vp = x.Agentti.transform.position; x.Aivot.Nollaa(vp.x, vp.z, valpas: true); x.EdellinenTila = VartijanTila.Partio; }   // tyrmästä palatessa valppaus 60 s
+            // Torkkuva vartija ei valpastu muiden kiinniotosta (Siirtoseppä 10.10., PT): valppaana hän näki Tott-kammion reitin 0,7 m:n päästä,
+            // ja kiinni muuriportailla (68) maksoi ~100 s odotusta; nyt 63 s (OlavinlinnaMOsaTestit.KiinniJokaPisteessa).
+            foreach (var x in vartijat) { var vp = x.Agentti.transform.position; x.Aivot.Nollaa(vp.x, vp.z, valpas: !x.Aivot.Torkkuu); x.EdellinenTila = VartijanTila.Partio; }   // tyrmästä palatessa valppaus 60 s
         }
 
         /// <summary>Tila lokiin ("poikki vartijat"): tila, mittari ja paikka per vartija.</summary>
