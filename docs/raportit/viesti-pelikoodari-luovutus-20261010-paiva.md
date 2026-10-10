@@ -59,7 +59,9 @@ PT local_593b89a1-2514-4d74-b956-2a73db862382, Siirtoseppä local_b50bb32e-18e2-
   vaskimarssi (06) jäi ennalleen.
 - Kaupunkikappaleiden suunnitelma proto-3d/_tyo/kaupunkikappaleet-20261010/SUUNNITELMA.md (44 uutta, 0,08 $/kpl ≈ 3,50 $, 1. erä 16) → PT:n kortti.
 - Peking kokeilukohteeksi PR #4343 (8618f8101, wt/pelikoodari-peking-kokeilu); ilmoita LS2:lle, kun worker julkaistu.
-- Julkaisijalle lähetetty järjestys: #4337, #4343, #4342; #4341 vasta #4337:n workerjulkaisun jälkeen.
+- #4337 MERGETTY ja julkaistu (ee0e7b3a2). #4341 rebasettu e0e6d8163 → Julkaisija. #4342:een aloituslento ilman musiikkia
+  a31a95421; natiivi 80ab967fa (Natiivisepällä, juna 176 rungossa jo d6a8e0139 → d8fed854e). #4343 merge-vihreänä-ajossa.
+- Kaupunkikappaleet: Sisältökirjurin kaupunkimusiikki.json (49, id:t täsmäävät) liitetty SUUNNITELMA.md:hen; odottaa omistajan lupaa.
 
 ## 3. Odottaa
 - Freesound-lataaja käynnistetty uudelleen 09.46 (perl setsid, aja-originaalit.zsh), odottaa ~/.freesound-tokenia (OAuth). Aikakatkaisu
