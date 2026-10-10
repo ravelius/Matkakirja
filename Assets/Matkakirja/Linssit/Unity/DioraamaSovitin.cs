@@ -1012,12 +1012,12 @@ namespace Matkakirja.Natiivi
         /// <summary>Pelattava pala jatkuu tallennuksesta (Natiivi-UI:n Jatka; SeikkailuTallentaja.LueTiedosto kertoo, onko jatkettavaa).</summary>
         public static bool PelattavaPalaJatka;
 
-        /// <summary>Hahmojen repliikit (repliikit-v4) ja puuttuvat repliikit lisämanifestina (repliikit-lapi-v1: muurin partio, kellon vartija,
+        /// <summary>Hahmojen repliikit (repliikit-v5: v4 + soutajan repliikit ilman kuiskausta, omistaja 10.10.) ja puuttuvat repliikit lisämanifestina (repliikit-lapi-v1: muurin partio, kellon vartija,
         /// tyrmä; Pelikoodarin aja-generointi.sh omistajan luvalla, PT 9.10.). Puuttuva lisämanifest = hiljaa.</summary>
         void RepliikitPaalle()
         {
             var ennen = SeikkailuRepliikit.Aktiivinen;
-            var r = SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v4/manifest.json", o.Kirjaa);
+            var r = SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v5/manifest.json", o.Kirjaa);
             if (r != ennen) SeikkailuRepliikit.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-lapi-v2/manifest.json");   // v2 (Pelikoodari 10.10.): tyrma-vesipoika-1 huippu −2,3 dBTP, muut samat
         }
 
