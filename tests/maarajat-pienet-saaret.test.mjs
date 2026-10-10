@@ -3,7 +3,7 @@
 // suuremman renkaan sisään (natiivin even-odd-täyttö tekisi siitä reiän).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { maarajaRivit, sisakkaisetPois } from '../tools/vienti/maarajat.mjs';
+import { maarajaRivit, sisakkaisetPois, alanSailyttavaHarvennus } from '../tools/vienti/maarajat.mjs';
 
 const nelio = (x0, y0, x1, y1) => [[x0, y0], [x1, y0], [x1, y1], [x0, y1], [x0, y0]];
 
@@ -14,6 +14,16 @@ test('sisakkaisetPois: sisällä oleva pikkurengas putoaa, ulkopuolinen ja enimm
   const reunalla = nelio(9.95, 4, 10.15, 4.2); // neljäsosa mantereen sisällä
   const tulos = sisakkaisetPois([manner, sisalla, ulkona, reunalla]);
   assert.deepEqual(tulos, [manner, ulkona, reunalla]);
+});
+
+test('alanSailyttavaHarvennus: kapea kaistale ei litisty nollan alaiseksi viivaksi (Majuro, A5b)', () => {
+  const kaista = nelio(0, 0, 1, 0.01);
+  const h = alanSailyttavaHarvennus(kaista, 0.05);
+  assert.equal(h.length, 5);
+  const ala = Math.abs(h.slice(0, -1).reduce((s, p, i) => s + p[0] * h[i + 1][1] - h[i + 1][0] * p[1], 0) / 2);
+  assert.ok(ala > 0.009, `ala ${ala}`);
+  // Leveä rengas harvennetaan entisellään.
+  assert.deepEqual(alanSailyttavaHarvennus(nelio(0, 0, 1, 1), 0.05), nelio(0, 0, 1, 1));
 });
 
 const rivit = maarajaRivit(new URL('../assets/data/maapolygonit.json', import.meta.url));

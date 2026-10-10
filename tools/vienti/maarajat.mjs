@@ -80,6 +80,22 @@ export function sisakkaisetPois(renkaat) {
   });
 }
 
+/*
+ * ALA SÄILYY (A5b, kartan kokonaistarkistus 10.10.2026): kapea atolli tai
+ * niemi voi litistyä harvennuksessa edestakaiseksi viivaksi, jonka ala on
+ * nolla (Majuron rengas: 5 pistettä, ala 0), jolloin natiivin even-odd-
+ * täyttö ei näe maata lainkaan. Jos harvennettu rengas säilyttää alle
+ * kymmenesosan alastaan, toleranssi puolitetaan (alaraja 0,002°).
+ * Korjasi Majuron ja Dún Aonghasan (Inishmore); maarajat +1,7 %.
+ */
+export function alanSailyttavaHarvennus(r, tol) {
+  const a0 = ala(r);
+  for (let t = tol; ; t /= 2) {
+    const h = harvenna(r, t).map(([lon, lat]) => [pyorista(lon), pyorista(lat)]);
+    if (t < 0.002 || ala(h) >= a0 / 10) return h;
+  }
+}
+
 const pyorista = (v) => Math.round(v * 1000) / 1000;
 
 const laatikko = (renkaat) => {
@@ -100,7 +116,7 @@ export function maarajaRivit(polku) {
     // vain alle 0,2°:n renkaisiin; maarajat 1,076 → 1,158 Mt).
     const tol = (r) => Math.min(MAARAJOJEN_TOLERANSSI, laajuus(r) / (MINIVALTIOT.has(iso) ? 10 : 4));
     const kaikki = sisakkaisetPois(maanRenkaatAsteina(data, iso, asteet)
-      .map((r) => harvenna(r, tol(r)).map(([lon, lat]) => [pyorista(lon), pyorista(lat)]))
+      .map((r) => alanSailyttavaHarvennus(r, tol(r)))
       .filter((r) => r.length >= 4));
     // Skeema 1.34 (Fable 24.9.2026): web piirtää pallon maat nyt Natural Earth 10m
     // -aineistosta (#3078, Huippuvuoret Norjalle), joten rajausta ei enää tehdä:
