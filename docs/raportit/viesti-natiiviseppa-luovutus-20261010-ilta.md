@@ -60,3 +60,8 @@ Taustalla EI omia ajoja (cron 440f4d6d katoaa nollauksessa).
 - Juna 180 = 6b75dc11b (+ LS1 f65ed2a39, Siirtoseppä d71ce2d4a ⊃ 0f1d24980, NUI yhdistetty-180 71409749e, Pelikoodari latausmusiikki a9cef25b5). L1354/P470/K461, unity 0, tarkista ok.
   Muistiajo kuitattu (PT 21.3x); pääkaupunkikuvat Kuvat-LRU:ssa (200/300 Mt) → ei ajoa. Lukitus odottaa PT:n lupaa (Siirtosepän v47d-kytkentä, NUI:n iPhone-Pulu).
 - JUNA 181 -jono: LS1 pariisi-kippi-180-l2 eca61364a (kipin linjaus 2, PT kuittasi 22.0x).
+
+## TILA 10.10. 22.24
+- Juna 180 = 44af9cda2 (+ NUI 0cabed3f3, Siirtoseppä v47d b51f3aefb; v47d ei lisää muistia). Lukitus odottaa: LS1:n esittelypakan korjaus (yksi SHA, ⊃ NUI 81a694496)
+  ja PT:n kuittausta Siirtosepän läpipeluu-vahdeille 25fe0ce70 (Kuuntele-nappi + pankkiäänien rekisteröinti, puhdas merge). Laiturin sininen pinta → 181 (LR).
+- JUNA 181 -jono: LS1 eca61364a (kipin linjaus 2), Pelikoodari latausmusiikki 04d98a0b9 (pallon omat latausraidat; äänet Julkaisijan viennin kautta).
