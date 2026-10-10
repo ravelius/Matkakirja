@@ -1793,6 +1793,12 @@
     left: -20px;
 }
 
+/* OHJAUSNAPPI-pohjan vasen marginaali (--tk-vali-s) ohitti nuolen marginaalin: ‹ oli 8 pt sisempänä leipätekstin päällä
+ * (asettelutesti 10.10.2026, iPhone vaaka). Tarkempi valitsin palauttaa puoliksi reunan yli -sijainnin. */
+.mk-nahtavyys__nuoli.mk-ohjausnappi {
+    margin: -20px 0 0 0;
+}
+
 .mk-nahtavyys__nuoli--oikea {
     right: -20px;
 }
