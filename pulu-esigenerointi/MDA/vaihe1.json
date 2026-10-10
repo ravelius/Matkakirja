@@ -3,9 +3,8 @@
   "kohde": "kohde:sorokan-linnoitus",
   "kysymys": "Kuka rakennutti linnoituksen ensimmäisen, puisen version?",
   "uusi": false,
-  "vastaus": "Kato, tän minä tiedän. Ensimmäisen, puisen linnakkeen rakennutti vuonna 1499 Moldovan hallitsija [[Tapani Suuri]], ja sen tarkoituksena oli suojata [[Dnestr]]-joen kahlaamoa. Kivilinnoitus rakennettiin vasta myöhemmin, kun [[Petru Rareș]] muurautti varustuksen kivestä 1500-luvun puolivälissä. Ja tän tiesin ilman pullaakin.",
+  "vastaus": "Kato, tän minä tiedän. Sorokan linnoituksen alkuperäinen puu- ja savilinnake seisoi [[Dnestr]]in kahlaamon suojana; ruhtinas Tapani Suuren aikaan paikka mainitaan ensi kerran asiakirjassa vuonna 1499. Kivilinnoitus rakennettiin vasta myöhemmin, kun [[Petru Rareș]] muurautti varustuksen kivestä 1500-luvun puolivälissä. Ja tän tiesin ilman pullaakin.",
   "linkit": [
-   "Tapani Suuri",
    "Dnestr",
    "Petru Rareș"
   ],
@@ -32,7 +31,7 @@
   "kohde": "kohde:sorokan-linnoitus",
   "kysymys": "Kuka rakennutti Sorokan linnoituksen kivisen version?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. Kivilinnoituksen rakennutti Moldovan hallitsija [[Petru Rareș]], ja rakennustyö ajoitetaan vuosiin 1543–1546. Työn tekivät [[Transilvaniasta]] kutsutut muurarit, ja heidän johtajansa oli mestari Iacob. Kivet kantoi varmaan joku muu kuin kyyhky.",
+  "vastaus": "Hyvä kysymys tuo. Kivilinnoituksen rakennutti Moldovan hallitsija [[Petru Rareș]], ja rakennustyö ajoitetaan vuosiin 1543–1546. Kerrotaan, että kivilinnoituksen rakensivat [[Transilvaniasta]] kutsutut muurarit; paikallisen perimätiedon mukaan heidän mestarinsa Iacob jätti seinään nimensä, mutta kaiverruksesta ei ole varmaa jälkeä. Kivet kantoi varmaan joku muu kuin kyyhky.",
   "linkit": [
    "Petru Rareș",
    "Transilvaniasta"
@@ -58,12 +57,12 @@
  },
  {
   "kohde": "kohde:sorokan-linnoitus",
-  "kysymys": "Kuka jätti nimensä linnoituksen seinään?",
+  "kysymys": "Kuka kerrotaan jättäneen nimensä linnoituksen seinään?",
   "uusi": true,
-  "vastaus": "Kas vaan. Kivityön tehneiden muurarien johtajana oli mestari [[Iacob]], joka jätti seinään kaiverruksen: tämän linnan rakensi Iacob. Muurarit oli kutsuttu [[Transilvaniasta]], ja näin rakentajan nimi on säilynyt, vaikka työn tilaaja tunnetaan paremmin. Hänellä on nimi seinässä, minulla vain rengas jalassa.",
+  "vastaus": "Kas vaan. Kerrotaan, että kivilinnoituksen rakensivat [[Transilvaniasta]] kutsutut muurarit; paikallisen perimätiedon mukaan heidän mestarinsa [[Iacob]] jätti seinään nimensä, mutta kaiverruksesta ei ole varmaa jälkeä. Näin rakentajan nimi on säilynyt lähinnä perimätietona, vaikka työn tilaaja tunnetaan paremmin. Perimätiedon mukaan hänellä on nimi seinässä, minulla vain rengas jalassa.",
   "linkit": [
-   "Iacob",
-   "Transilvaniasta"
+   "Transilvaniasta",
+   "Iacob"
   ],
   "jatkot": [
    "Miksi keskiajan rakentajat harvoin allekirjoittivat työnsä?",
@@ -74,10 +73,10 @@
   "kohde": "kohde:milestii-mici",
   "kysymys": "Kuinka pitkä on viinikellarin tunnelien verkosto?",
   "uusi": false,
-  "vastaus": "Annas ku mietin. Lähteet ovat tässä hieman ristiriidassa: Wikipedian mukaan [[Mileștii Micin]] käytäväverkosto on noin 250 kilometriä pitkä ja siitä on käytössä 120 kilometriä, kun taas toisen lähteen mukaan käytäviä on louhittu noin 200 kilometriä. Pulloja kellareissa on lähes kaksi miljoonaa, ja kokoelma on kirjattu [[Guinnessin ennätyskirjaan]]. Satojen kilometrien tunneli, eikä siellä ole yhtään ikkunaa.",
+  "vastaus": "Annas ku mietin. Lähteet ovat tässä hieman ristiriidassa: [[Mileștii Micin]] maanalaisia käytäviä on louhittu yli 200 kilometriä, mutta viinin säilytykseen on käytössä noin 55 kilometriä. Guinnessin ennätyskirjan mukaan kellareissa on yli 1,5 miljoonaa pulloa, ja kellari on noin 18-20 kilometrin päässä [[Chișinăusta]]. Satojen kilometrien tunneli, eikä siellä ole yhtään ikkunaa.",
   "linkit": [
    "Mileștii Micin",
-   "Guinnessin ennätyskirjaan"
+   "Chișinăusta"
   ],
   "jatkot": [
    "Miksi viinikellarit rakennetaan maan alle?",
@@ -102,7 +101,7 @@
   "kohde": "kohde:milestii-mici",
   "kysymys": "Kuinka kaukana viinikellari on Chișinăusta?",
   "uusi": true,
-  "vastaus": "Nyt muistan: [[Mileștii Mici]] sijaitsee noin 18 kilometrin päässä Moldovan pääkaupungista [[Chișinăusta]], Ialovenin piirikunnassa. Etäisyys on siis lyhyt, ja kellarille pääsee kaupungista helposti. Lintuna se on lyhyt lenkki.",
+  "vastaus": "Nyt muistan: [[Mileștii Mici]] sijaitsee noin 18-20 kilometrin päässä Moldovan pääkaupungista [[Chișinăusta]], Ialovenin piirikunnassa. Etäisyys on siis lyhyt, ja kellarille pääsee kaupungista helposti. Lintuna se on lyhyt lenkki.",
   "linkit": [
    "Mileștii Mici",
    "Chișinăusta"
@@ -116,7 +115,7 @@
   "kohde": "kohde:milestii-mici",
   "kysymys": "Mistä kellarin käytävät on alun perin louhittu?",
   "uusi": true,
-  "vastaus": "Sepä sattui: tän minä tiedän. Käytävät on louhittu hylätystä [[kalkkikivilouhoksesta]] 1900-luvun puolivälin jälkeen, 1950-luvulta alkaen. Louhoksen tyhjä tila sopi viinin säilytykseen, koska maan alla lämpötila pysyy tasaisena ympäri vuoden. [[Mileștii Mici]] on näin syntynyt vanhasta louhoksesta. Louhos vaihtui viiniksi, kyl se on ihan hyvä vaihtokauppa.",
+  "vastaus": "Sepä sattui: tän minä tiedän. Käytävät on louhittu [[kalkkikivilouhoksesta]], jossa kiveä otettiin jo 1800-luvun lopulta; viinin varastointi alkoi 1960-luvun lopussa, kun paikasta tehtiin viinikellari. Louhoksen tyhjä tila sopi viinin säilytykseen, koska maan alla lämpötila pysyy tasaisena ympäri vuoden. [[Mileștii Mici]] on näin syntynyt vanhasta louhoksesta. Louhos vaihtui viiniksi, kyl se on ihan hyvä vaihtokauppa.",
   "linkit": [
    "kalkkikivilouhoksesta",
    "Mileștii Mici"
@@ -130,24 +129,24 @@
   "kohde": "kohde:milestii-mici",
   "kysymys": "Mikä viinikellari sijaitsee Mileștii Micin naapurissa?",
   "uusi": true,
-  "vastaus": "Kääk, tuo vie vähän synkemmälle puolelle. Naapurissa on [[Cricova]], jonka luolastossa on noin 120 kilometriä käytäviä. Kerrotun mukaan puna-armeija takavarikoi Berliinin valtauksen yhteydessä vuonna 1945 natsijohtaja [[Hermann Göringin]] yksityisen viinikellarin, ja osa saaliista päätyi Moskovan ja Krimin kautta Cricovaan. Siellä on yhä esillä 129 pulloa, jotka muistuttavat sodan ajasta. Onpas siit jo pitkä aika.",
+  "vastaus": "Kääk, tuo vie vähän synkemmälle puolelle. Naapurissa on [[Cricova]], jonka luolastossa on noin 120 kilometriä käytäviä. Cricovan kokoelmassa on yhä esillä pulloja, jotka kuuluivat aikoinaan natsijohtaja [[Hermann Göringin]] yksityiseen viinikokoelmaan; Neuvostoliitto otti viinit sodan jälkeen mukaansa, ja osa päätyi lopulta Cricovaan. Onpas siit jo pitkä aika.",
   "linkit": [
    "Cricova",
    "Hermann Göringin"
   ],
   "jatkot": [
    "Mikä Cricovan viinikellari on ja mitä siellä tuotetaan?",
-   "Milloin Berliinin valtaus päättyi toisessa maailmansodassa?"
+   "Milloin toinen maailmansota päättyi Euroopassa?"
   ]
  },
  {
   "kohde": "kohde:cricovan-viinikellarit",
   "kysymys": "Kuinka pitkä on Cricovan tunneliverkosto?",
   "uusi": false,
-  "vastaus": "Joo, tän minä tiedän. [[Cricovan]] käytäviä on noin 120 kilometriä. Alueen tunneleista on louhittu [[kalkkikiveä]] jo 1400-luvulta, ja 1950-luvulla ne muutettiin viinikellareiksi. Siinä on kyl käytävää kyyhkyllekin.",
+  "vastaus": "Joo, tän minä tiedän. [[Cricovan]] käytäviä on noin 120 kilometriä. Ne alkoivat kalkkikivikaivoksina, ja 1950-luvulla ne muutettiin viinikellareiksi. Cricova on vain kymmenen-viisitoista kilometrin päässä [[Chișinăusta]]. Siinä on kyl käytävää kyyhkyllekin.",
   "linkit": [
    "Cricovan",
-   "kalkkikiveä"
+   "Chișinăusta"
   ],
   "jatkot": [
    "Miten kuohuviiniä valmistetaan samppanjamenetelmällä?",
@@ -158,7 +157,7 @@
   "kohde": "kohde:cricovan-viinikellarit",
   "kysymys": "Minkä lämpötilan kellarit pitävät ympäri vuoden?",
   "uusi": false,
-  "vastaus": "Nyt muistan: lämpötila on tässä helppo. [[Cricovan]] kellareissa lämpötila pysyy ympäri vuoden noin 12 asteessa. Toisen lähteen mukaan tasainen lämpötila on 12–14 astetta, joten tarkka luku vaihtelee hieman lähteestä riippuen. [[Kalkkikiviluolan]] viileys ja tasaisuus ovat viinille eduksi. Minulle tuo on vähän viileä, mutta pulla pysyisi siellä tuoreena.",
+  "vastaus": "Nyt muistan: lämpötila on tässä helppo. [[Cricovan]] kellareissa lämpötila pysyy ympäri vuoden noin 12-14 asteessa. [[Kalkkikiviluolan]] viileys ja tasaisuus ovat viinille eduksi. Minulle tuo on vähän viileä, mutta pulla pysyisi siellä tuoreena.",
   "linkit": [
    "Cricovan",
    "Kalkkikiviluolan"
@@ -201,7 +200,7 @@
   "kohde": "kohde:cricovan-viinikellarit",
   "kysymys": "Kuinka kaukana Cricova on Chișinăusta?",
   "uusi": true,
-  "vastaus": "Odotas vähän. [[Cricova]] on viinitehdas ja maanalainen kellarikaupunki, joka sijaitsee noin 15 kilometrin päässä Moldovan pääkaupungista [[Chișinăusta]]. Matka on siis lyhyt, ja kaupungin lähellä sijaitseva kellari on helppo tavoittaa. Tänne minä lentäisin vaikka vain katsomaan.",
+  "vastaus": "Odotas vähän. [[Cricova]] on viinitehdas ja maanalainen kellarikaupunki, joka sijaitsee vain kymmenen-viisitoista kilometrin päässä Moldovan pääkaupungista [[Chișinăusta]]. Matka on siis lyhyt, ja kaupungin lähellä sijaitseva kellari on helppo tavoittaa. Tänne minä lentäisin vaikka vain katsomaan.",
   "linkit": [
    "Cricova",
    "Chișinăusta"
@@ -215,7 +214,7 @@
   "kohde": "kohde:tipovan-luostari",
   "kysymys": "Kuinka monta luolaa Țipovan luostariin kuuluu?",
   "uusi": false,
-  "vastaus": "No jopas. Lähteen mukaan [[Țipovan]] luostariin kuuluu 18 luolaa, joita yhdistävät sisäiset käytävät. Luostari on kaiverrettu [[Dnestr]]-joen jyrkän rantakallion kalkkikiveen, ja sen rakentaminen ajoitetaan lähteen mukaan 900–1100-luvuille. Luolia riittää kyl yöpymiseenkin.",
+  "vastaus": "No jopas. Lähteen mukaan [[Țipovan]] luostariin kuuluu 18 luolaa, joita yhdistävät sisäiset käytävät. Luostari on kaiverrettu [[Dnestr]]-joen jyrkän rantakallion kalkkikiveen, ja sen kaivertaminen kallioon ajoitetaan tutkijoiden mukaan 1000-luvulle, ja sitä on laajennettu ja käytetty aina 1700-luvulle asti. Luolia riittää kyl yöpymiseenkin.",
   "linkit": [
    "Țipovan",
    "Dnestr"
@@ -243,7 +242,7 @@
   "kohde": "kohde:tipovan-luostari",
   "kysymys": "Kuinka suuri Țipovan suojelualue on?",
   "uusi": true,
-  "vastaus": "Mmm— tän minä muistan. [[Țipovan]] suojelualue kattaa 430 hehtaaria [[jokiterasseja]] ja puron rotkolaaksoa. Rotkolaaksossa on useita putouksia, joiden korkeus on 10–16 metriä. Alue on siis paljon muutakin kuin luostari, ja sen luontoa suojellaan. Pitkä lista lukuja, mut kyl ne mahtuivat päähän.",
+  "vastaus": "Mmm— tän minä muistan. [[Țipovan]] suojelualue kattaa noin 306 hehtaaria [[jokiterasseja]] ja puron rotkolaaksoa, jossa on useita 10-16 metrin putouksia. Alue on siis paljon muutakin kuin luostari, ja sen luontoa suojellaan. Pitkä lista lukuja, mut kyl ne mahtuivat päähän.",
   "linkit": [
    "Țipovan",
    "jokiterasseja"
@@ -257,7 +256,7 @@
   "kohde": "kohde:tipovan-luostari",
   "kysymys": "Milloin Țipovan luostari kaiverrettiin kallioon?",
   "uusi": true,
-  "vastaus": "Katotaas. Lähteen mukaan [[Țipovan]] luostari rakennettiin 900–1100-luvuilla suureen [[kalkkikivikallioon]] kaiverrettuna. Tarkasta ajoituksesta en ole varma, joten väli kannattaa ymmärtää suuntaa antavaksi. Luostari on yhä nähtävissä Dnestrin rantakalliolla. Aika vanha pesäpaikka.",
+  "vastaus": "Katotaas. Tutkijoiden mukaan [[Țipovan]] luostarin kaivertaminen [[kalkkikivikallioon]] ajoitetaan 1000-luvulle, ja sitä on laajennettu ja käytetty aina 1700-luvulle asti. Tarkasta ajoituksesta en ole varma, joten vuosiluvut kannattaa ymmärtää suuntaa antaviksi. Luostari on yhä nähtävissä Dnestrin rantakalliolla. Aika vanha pesäpaikka.",
   "linkit": [
    "Țipovan",
    "kalkkikivikallioon"
@@ -271,10 +270,9 @@
   "kohde": "kohde:tipovan-luostari",
   "kysymys": "Miksi luostareita rakennettiin kallioihin?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. Kallioon kaiverrettu luostari tarjoaa suojaa sekä rauhaa, ja jyrkkä kallio on myös vaikea saavuttaa. Esimerkiksi Montenegron [[Ostrogin luostari]] perustettiin vuonna 1665 kallioseinämään, ja paikka valittiin osin suojaksi etenevää [[Osmanien valtakuntaa]] vastaan. [[Țipovan]] luostarin syistä en ole varma. Kyl kyyhkykin tykkää korkeista kallioista.",
+  "vastaus": "Hyvä kysymys tuo. Kallioon kaiverrettu luostari tarjoaa suojaa sekä rauhaa, ja jyrkkä kallio on myös vaikea saavuttaa. Esimerkiksi Montenegron [[Ostrogin luostari]] on kaiverrettu jyrkkään kallioseinämään, ja sen perustajana pidetään pyhää Vasilia, joka kuoli siellä 1671; luostari ajoitetaan 1600-luvulle. [[Țipovan]] luostarin syistä en ole varma. Kyl kyyhkykin tykkää korkeista kallioista.",
   "linkit": [
    "Ostrogin luostari",
-   "Osmanien valtakuntaa",
    "Țipovan"
   ],
   "jatkot": [
@@ -300,7 +298,7 @@
   "kohde": "kohde:caprianan-luostari",
   "kysymys": "Milloin luostarin kivinen pääkirkko rakennettiin?",
   "uusi": false,
-  "vastaus": "Kato, tää on helppo. Luostarin nykyinen kivinen Neitsyt Marian kuolonuneen kirkko rakennettiin vuosina 1491–1496 [[Stefan Suuren]] aikana. Kirkko on rakennettu moldavialaiseen tyyliin, ja se on yhä luostarin pääkirkko. [[Căprianan]] pihalla on lisäksi nuorempia rakennuksia. Viisi vuotta rakentaa, ei paha.",
+  "vastaus": "Kato, tää on helppo. Luostarin nykyinen kivinen Neitsyt Marian kuolonuneen kirkko rakennettiin Petru Rarešin aikana 1540-luvulla (vanhempi kirkko oli peräisin [[Stefan Suuren]] ajalta). Kirkko on rakennettu moldavialaiseen tyyliin, ja se on yhä luostarin pääkirkko. [[Căprianan]] pihalla on lisäksi nuorempia rakennuksia. Vanhaa kiveä, kyl kyyhky sitä arvostaa.",
   "linkit": [
    "Stefan Suuren",
    "Căprianan"
@@ -328,7 +326,7 @@
   "kohde": "kohde:caprianan-luostari",
   "kysymys": "Mitä muita rakennuksia luostarialueella on?",
   "uusi": true,
-  "vastaus": "Hetkinen. Luostarialueella on pääkirkon lisäksi 1800-luvun Pyhän Nikolauksen kirkko ja 1900-luvun talvikirkko. Pääkirkko on [[Neitsyt Marian kuolonuneen kirkko]], joka on rakennettu 1490-luvulla. [[Căprianan]] luostarialue on siis kasvanut vuosisatojen kuluessa. Kyl sinne mahtuu monta kattoa kyyhkyn levähtää.",
+  "vastaus": "Hetkinen. Luostarialueella on pääkirkon lisäksi 1800-luvun Pyhän Nikolauksen kirkko ja 1900-luvun talvikirkko. Pääkirkko on [[Neitsyt Marian kuolonuneen kirkko]], joka on rakennettu 1540-luvulla. [[Căprianan]] luostarialue on siis kasvanut vuosisatojen kuluessa. Kyl sinne mahtuu monta kattoa kyyhkyn levähtää.",
   "linkit": [
    "Neitsyt Marian kuolonuneen kirkko",
    "Căprianan"
@@ -430,13 +428,12 @@
   "kohde": "kohde:hahmotelma-orheiul-vechi",
   "kysymys": "Miltä Orheiul Vechi näytti loistoaikanaan?",
   "uusi": false,
-  "vastaus": "Hetkinen ny. Tarkkaa kuvaa on vaikea antaa, enkä ole varma yksityiskohdista, koska rakennuksia ei ole säilynyt paljon. Alue kohoaa [[kalkkikivijyrkänteellä]] [[Răutin]] joen mutkassa, ja siinä on ollut [[geto-daakialainen]] linnoitus, keskiaikainen kaupunki sekä [[Kultaisen ordan]] asutusta. Lisäksi kallioon louhittiin 1400-luvulla [[luolaluostareita]], joten maisema oli jyrkänteen reunalla yhtä aikaa kaupunki, linnoitus ja luostari. Ylhäältä se mutka näyttää varmasti kauniilta.",
+  "vastaus": "Hetkinen ny. Tarkkaa kuvaa on vaikea antaa, enkä ole varma yksityiskohdista, koska rakennuksia ei ole säilynyt paljon. Alue kohoaa [[kalkkikivijyrkänteellä]] [[Răutin]] joen mutkassa, ja siinä on ollut [[geto-daakialainen]] linnoitus, [[Kultaisen ordan]] kaupunki ja keskiaikainen Orhei. Kalkkikivijyrkänteeseen louhittu luolaluostari on peräisin keskiajalta (lähteet antavat 1200-1400-luvun), joten maisema oli jyrkänteen reunalla yhtä aikaa kaupunki, linnoitus ja luostari. Ylhäältä se mutka näyttää varmasti kauniilta.",
   "linkit": [
    "kalkkikivijyrkänteellä",
    "Răutin",
    "geto-daakialainen",
-   "Kultaisen ordan",
-   "luolaluostareita"
+   "Kultaisen ordan"
   ],
   "jatkot": [
    "Miten luolaluostari louhitaan kallioon?",
@@ -447,14 +444,13 @@
   "kohde": "kohde:hahmotelma-orheiul-vechi",
   "kysymys": "Miksi Orheiul Vechi on nykyään raunioina?",
   "uusi": false,
-  "vastaus": "Kääk, vakava kysymys. Osa kaupungista hylättiin vuosisatojen kuluessa, eikä alue ole sen jälkeen ollut entisenlainen asutuskeskus. En ole varma yksittäisestä syystä, koska siihen vaikutti luultavasti monta asiaa. Tiedetään, että munkit vetäytyivät 1400-luvulla [[luolaluostareihin]] turvaan [[Krimin tataarien]] ryöstöretkiltä, ja alueella on ollut asutusta jo [[Kultaisen ordan]] aikana. Onpas siit onneksi pitkä aika.",
+  "vastaus": "Kääk, vakava kysymys. Osa kaupungista hylättiin vuosisatojen kuluessa, eikä alue ole sen jälkeen ollut entisenlainen asutuskeskus. En ole varma yksittäisestä syystä, koska siihen vaikutti luultavasti monta asiaa. Luolaluostari on peräisin keskiajalta (lähteet antavat 1200-1400-luvun), ja luolia on käytetty piilopaikkana vielä myöhemminkin; alueella oli [[geto-daakialainen]] linnoitus, [[Kultaisen ordan]] kaupunki ja keskiaikainen Orhei. Onpas siit onneksi pitkä aika.",
   "linkit": [
-   "luolaluostareihin",
-   "Krimin tataarien",
+   "geto-daakialainen",
    "Kultaisen ordan"
   ],
   "jatkot": [
-   "Keitä olivat Krimin tataarit?",
+   "Keitä olivat geto-daakialaiset?",
    "Mikä Orheiul Vechi on nykyään?"
   ]
  },
@@ -462,7 +458,7 @@
   "kohde": "kohde:hahmotelma-orheiul-vechi",
   "kysymys": "Keitä olivat Krimin tataarit?",
   "uusi": true,
-  "vastaus": "Ai se. [[Krimin tataarit]] ovat turkkilaista kieltä puhuva kansa, jonka historia liittyy [[Krimin]] niemimaahan. Keskiajan lopulla ja uuden ajan alussa Krimin khaanikunta teki ryöstöretkiä Itä-Euroopan alueille, Moldovan ympäristö mukaan lukien, ja juuri siksi Orheiul Vechin munkit vetäytyivät kallioluostareihin. Tarkat ajankohdat ja laajuus vaihtelevat lähteittäin. Vanhoja aikoja, onneksi.",
+  "vastaus": "Ai se. [[Krimin tataarit]] ovat turkkilaista kieltä puhuva kansa, jonka historia liittyy [[Krimin]] niemimaahan. Keskiajan lopulla ja uuden ajan alussa Krimin khaanikunta teki ryöstöretkiä Itä-Euroopan alueille, Moldovan ympäristö mukaan lukien, ja Orheiul Vechin luolia on käytetty piilopaikkana. Tarkat ajankohdat ja laajuus vaihtelevat lähteittäin. Vanhoja aikoja, onneksi.",
   "linkit": [
    "Krimin tataarit",
    "Krimin"

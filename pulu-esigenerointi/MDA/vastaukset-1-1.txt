@@ -1,6 +1,6 @@
 ### 1.1
 KYSYMYS: Millainen oli linnoituksen ensimmäinen, puinen versio?
-Kato, tän minä tiedän. Sorokan linnoituksen alkuperäinen puu- ja savilinnake seisoi [[Dnestr]]in kahlaamon suojana; ruhtinas [[Tapani Suuren]] aikaan paikka mainitaan ensi kerran asiakirjassa vuonna 1499. Kivilinnoitus rakennettiin vasta myöhemmin, kun [[Petru Rareș]] muurautti varustuksen kivestä 1500-luvun puolivälissä. Ja tän tiesin ilman pullaakin.
+Kato, tän minä tiedän. Sorokan linnoituksen alkuperäinen puu- ja savilinnake seisoi [[Dnestr]]in kahlaamon suojana; ruhtinas Tapani Suuren aikaan paikka mainitaan ensi kerran asiakirjassa vuonna 1499. Kivilinnoitus rakennettiin vasta myöhemmin, kun [[Petru Rareș]] muurautti varustuksen kivestä 1500-luvun puolivälissä. Ja tän tiesin ilman pullaakin.
 JATKOT:
 Miksi joen kahlaamo oli niin tärkeä paikka?
 Keitä tataarit olivat ja miksi he uhkasivat Moldovaa?
@@ -35,7 +35,7 @@ Missä Transilvania sijaitsee ja millainen alue se on?
 
 ### 2.1
 KYSYMYS: Kuinka pitkä on viinikellarin tunnelien verkosto?
-Annas ku mietin. Lähteet ovat tässä hieman ristiriidassa: [[Mileștii Micin]] maanalaisia käytäviä on louhittu yli 200 kilometriä, mutta viinin säilytykseen on käytössä noin 55 kilometriä. [[Guinnessin ennätyskirjan]] mukaan kellareissa on yli 1,5 miljoonaa pulloa. Satojen kilometrien tunneli, eikä siellä ole yhtään ikkunaa.
+Annas ku mietin. Lähteet ovat tässä hieman ristiriidassa: [[Mileștii Micin]] maanalaisia käytäviä on louhittu yli 200 kilometriä, mutta viinin säilytykseen on käytössä noin 55 kilometriä. Guinnessin ennätyskirjan mukaan kellareissa on yli 1,5 miljoonaa pulloa, ja kellari on noin 18-20 kilometrin päässä [[Chișinăusta]]. Satojen kilometrien tunneli, eikä siellä ole yhtään ikkunaa.
 JATKOT:
 Miksi viinikellarit rakennetaan maan alle?
 Mikä on Moldovan tunnetuin viinialue?
@@ -70,7 +70,7 @@ Milloin toinen maailmansota päättyi Euroopassa?
 
 ### 3.1
 KYSYMYS: Kuinka pitkä on Cricovan tunneliverkosto?
-Joo, tän minä tiedän. [[Cricovan]] käytäviä on noin 120 kilometriä. Ne alkoivat [[kalkkikivikaivoksina]], ja 1950-luvulla ne muutettiin viinikellareiksi. Siinä on kyl käytävää kyyhkyllekin.
+Joo, tän minä tiedän. [[Cricovan]] käytäviä on noin 120 kilometriä. Ne alkoivat kalkkikivikaivoksina, ja 1950-luvulla ne muutettiin viinikellareiksi. Cricova on vain kymmenen-viisitoista kilometrin päässä [[Chișinăusta]]. Siinä on kyl käytävää kyyhkyllekin.
 JATKOT:
 Miten kuohuviiniä valmistetaan samppanjamenetelmällä?
 Miten ihmiset liikkuvat Cricovan käytävillä?
@@ -147,7 +147,7 @@ Missä Codrit-metsäalue sijaitsee Moldovassa?
 
 ### 5.2
 KYSYMYS: Milloin luostarin kivinen pääkirkko rakennettiin?
-Kato, tää on helppo. Luostarin nykyinen kivinen Neitsyt Marian kuolonuneen kirkko rakennettiin [[Petru Rarešin]] aikana 1540-luvulla (vanhempi kirkko oli peräisin [[Stefan Suuren]] ajalta). Kirkko on rakennettu moldavialaiseen tyyliin, ja se on yhä luostarin pääkirkko. [[Căprianan]] pihalla on lisäksi nuorempia rakennuksia. Vanhaa kiveä, kyl kyyhky sitä arvostaa.
+Kato, tää on helppo. Luostarin nykyinen kivinen Neitsyt Marian kuolonuneen kirkko rakennettiin Petru Rarešin aikana 1540-luvulla (vanhempi kirkko oli peräisin [[Stefan Suuren]] ajalta). Kirkko on rakennettu moldavialaiseen tyyliin, ja se on yhä luostarin pääkirkko. [[Căprianan]] pihalla on lisäksi nuorempia rakennuksia. Vanhaa kiveä, kyl kyyhky sitä arvostaa.
 JATKOT:
 Millainen on moldavialainen kirkkoarkkitehtuuri?
 Kuka Stefan Suuri oli ja mitä hän saavutti?

@@ -18,7 +18,7 @@
   "kohde": "kohde:sorokan-linnoitus",
   "kasite": "Dnestr",
   "kysymys": "Kerro lisää: Dnestr",
-  "vastaus": "Dnestr, moldovaksi Nistru, on Ukrainassa ja Moldovassa virtaava joki, jonka lähteet ovat [[Karpaateilla]] Länsi-Ukrainassa ja joka laskee [[Mustaanmereen]]. Joen pituus on noin 1 350 kilometriä. Moldovassa se kulkee kalkkikivijyrkänteiden välissä, ja sen rannoilla sijaitsevat sekä Sorokan linnoitus että Țipovan luolaluostari. Joen kahlaamot olivat vuosisatojen ajan strategisesti tärkeitä, ja siksi Sorokan puinen linnake rakennettiin vuonna 1499 suojaamaan juuri kahlaamoa tataarien ratsujoukkoja vastaan.",
+  "vastaus": "Dnestr, moldovaksi Nistru, on Ukrainassa ja Moldovassa virtaava joki, jonka lähteet ovat [[Karpaateilla]] Länsi-Ukrainassa ja joka laskee [[Mustaanmereen]]. Joen pituus on noin 1 350 kilometriä. Moldovassa se kulkee kalkkikivijyrkänteiden välissä, ja sen rannoilla sijaitsevat sekä Sorokan linnoitus että Țipovan luolaluostari. Joen kahlaamot olivat vuosisatojen ajan strategisesti tärkeitä, ja siksi Sorokan linnoituksen alkuperäinen puu- ja savilinnake seisoi Dnestrin kahlaamon suojana, ja ruhtinas Tapani Suuren aikaan paikka mainitaan ensi kerran asiakirjassa vuonna 1499.",
   "linkit": [
    "Karpaateilla",
    "Mustaanmereen"
@@ -60,7 +60,7 @@
   "kohde": "kohde:sorokan-linnoitus",
   "kasite": "Sorokan linnoituksen",
   "kysymys": "Kerro lisää: Sorokan linnoituksen",
-  "vastaus": "Sorokan linnoitus on pyöreä linnake [[Dnestr]]-joen rannalla Moldovassa. Alkuperäinen puinen varustus rakennettiin vuonna 1499 suojaamaan joen kahlaamoa, ja ruhtinas [[Petru Rareș]] rakennutti kivilinnoituksen vuosina 1543–1546. Linnoituksessa on viisi [[bastionia]] tasaisin välein, ja sen halkaisija on lähteestä riippuen noin 30–38 metriä. Muurit ovat noin kolme metriä paksut, ja tornit ovat nelikerroksisia niin, että alimmat kerrokset oli tarkoitettu tykeille. Restaurointi on valmis, ja linnoitus on Moldovan kansallisesti merkittävä historiallinen ja arkkitehtoninen muistomerkki.",
+  "vastaus": "Sorokan linnoitus on pyöreä linnake [[Dnestr]]-joen rannalla Moldovassa. Alkuperäinen puu- ja savilinnake seisoi Dnestrin kahlaamon suojana, ja ruhtinas Tapani Suuren aikaan paikka mainitaan ensi kerran asiakirjassa vuonna 1499. Lisäksi ruhtinas [[Petru Rareș]] rakennutti kivilinnoituksen vuosina 1543–1546. Linnoituksessa on viisi [[bastionia]] tasaisin välein, ja sen halkaisija on lähteestä riippuen noin 30–38 metriä. Muurit ovat noin kolme metriä paksut, ja tornit ovat nelikerroksisia niin, että alimmat kerrokset oli tarkoitettu tykeille. Restaurointi on valmis, ja linnoitus on Moldovan kansallisesti merkittävä historiallinen ja arkkitehtoninen muistomerkki.",
   "linkit": [
    "Dnestr",
    "Petru Rareș",
@@ -105,10 +105,10 @@
   "kohde": "kohde:sorokan-linnoitus",
   "kasite": "Iacob",
   "kysymys": "Kerro lisää: Iacob",
-  "vastaus": "Iacob oli mestarimuurari, joka johti [[Transilvaniasta]] kutsuttuja muurareita [[Sorokan]] kivilinnoituksen rakennustyössä. Hän jätti linnoituksen seinään kaiverruksen, jonka mukaan tämän linnan rakensi Iacob. Työn tilaaja oli ruhtinas [[Petru Rareș]], mutta rakentajan nimi on säilynyt juuri tämän kaiverruksen ansiosta. Hänen elämästään en ole varma muista tiedoista, joten niitä ei kannata olettaa.",
+  "vastaus": "Iacob on mestarimuurari, jonka nimi liitetään [[Sorokan]] kivilinnoituksen rakentamiseen. Kerrotaan, että kivilinnoituksen rakensivat [[Transilvaniasta]] kutsutut muurarit; paikallisen perimätiedon mukaan heidän mestarinsa Iacob jätti seinään nimensä, mutta kaiverruksesta ei ole varmaa jälkeä. Työn tilaaja oli ruhtinas [[Petru Rareș]]. Hänen elämästään en ole varma muista tiedoista, joten niitä ei kannata olettaa.",
   "linkit": [
-   "Transilvaniasta",
    "Sorokan",
+   "Transilvaniasta",
    "Petru Rareș"
   ],
   "jatkot": [
@@ -120,10 +120,10 @@
   "kohde": "kohde:milestii-mici",
   "kasite": "Mileștii Micin",
   "kysymys": "Kerro lisää: Mileștii Micin",
-  "vastaus": "Mileștii Mici on viinikellari [[Ialovenin]] piirikunnassa noin 18 kilometrin päässä pääkaupungista Chișinăusta. Kellarit on louhittu hylätyn kalkkikivilouhoksen tyhjiin tiloihin 1900-luvun puolivälin jälkeen, ja niissä lepää lähes kaksi miljoonaa pulloa viiniä. Kokoelma on kirjattu [[Guinnessin ennätyskirjaan]] maailman suurimmaksi viinikokoelmaksi. Käytäväverkoston pituudeksi mainitaan eri lähteissä 200–250 kilometriä, ja käytössä siitä on noin 120 kilometriä. Neuvostoaikaan liittyy kertomus salaovesta, jonka taakse viinit kätkettiin, kun ne oli määrätty tuhottaviksi, mutta kyse on kertomuksesta, ei varmennetusta tiedosta.",
+  "vastaus": "Mileștii Mici on viinikellari [[Ialovenin]] piirikunnassa noin 18-20 kilometrin päässä pääkaupungista Chișinăusta. Käytävät on louhittu kalkkikivilouhoksesta, jossa kiveä otettiin jo 1800-luvun lopulta; viinin varastointi alkoi 1960-luvun lopussa, kun paikasta tehtiin viinikellari. Mileștii Micin maanalaisia käytäviä on louhittu yli 200 kilometriä, mutta viinin säilytykseen on käytössä noin 55 kilometriä. [[Guinnessin ennätyskirjan]] mukaan kellareissa on yli 1,5 miljoonaa pulloa. Neuvostoaikaan liittyy kertomus salaovesta, jonka taakse viinit kätkettiin, kun ne oli määrätty tuhottaviksi, mutta kyse on kertomuksesta, ei varmennetusta tiedosta.",
   "linkit": [
    "Ialovenin",
-   "Guinnessin ennätyskirjaan"
+   "Guinnessin ennätyskirjan"
   ],
   "jatkot": [
    "Mikä on naapurissa sijaitseva Cricovan kellari?",
@@ -134,7 +134,7 @@
   "kohde": "kohde:milestii-mici",
   "kasite": "Guinnessin ennätyskirjaan",
   "kysymys": "Kerro lisää: Guinnessin ennätyskirjaan",
-  "vastaus": "Guinnessin ennätyskirja on vuosittain ilmestyvä kirja, johon kerätään todennettuja maailmanennätyksiä. Idea syntyi [[Dublinissa]] sijaitsevan Guinnessin panimon piirissä, ja ensimmäinen painos ilmestyi vuonna 1955. Ennätykset todennetaan ennen kirjaamista, ja nykyään ennätyksiä kirjataan kirjan lisäksi verkossa. [[Mileștii Micin]] viinikellari on kirjattu kirjaan maailman suurimmaksi viinikokoelmaksi, jossa on lähes kaksi miljoonaa pulloa.",
+  "vastaus": "Guinnessin ennätyskirja on vuosittain ilmestyvä kirja, johon kerätään todennettuja maailmanennätyksiä. Idea syntyi [[Dublinissa]] sijaitsevan Guinnessin panimon piirissä, ja ensimmäinen painos ilmestyi vuonna 1955. Ennätykset todennetaan ennen kirjaamista, ja nykyään ennätyksiä kirjataan kirjan lisäksi verkossa. [[Mileștii Micin]] viinikellari on kirjattu kirjaan maailman suurimmaksi viinikokoelmaksi, jossa on yli 1,5 miljoonaa pulloa.",
   "linkit": [
    "Dublinissa",
    "Mileștii Micin"
@@ -162,10 +162,10 @@
   "kohde": "kohde:milestii-mici",
   "kasite": "Mileștii Mici",
   "kysymys": "Kerro lisää: Mileștii Mici",
-  "vastaus": "Mileștii Mici on viinikellari, joka sijaitsee [[Ialovenin]] piirikunnassa noin 18 kilometrin päässä Moldovan pääkaupungista Chișinăusta. Kellarit syntyivät hylätystä kalkkikivilouhoksesta, josta louhittiin 1900-luvun puolivälin jälkeen käytäviä, ja niissä on lähes kaksi miljoonaa pulloa viiniä. Käytäväverkoston pituudeksi ilmoitetaan joko 250 kilometriä, josta 120 kilometriä on käytössä, tai noin 200 kilometriä. Kokoelma on kirjattu [[Guinnessin ennätyskirjaan]], ja sen kerrotaan olleen neuvostoaikana viinien piilopaikka, kun ne määrättiin tuhottaviksi.",
+  "vastaus": "Mileștii Mici on viinikellari, joka sijaitsee [[Ialovenin]] piirikunnassa noin 18-20 kilometrin päässä Moldovan pääkaupungista Chișinăusta. Käytävät on louhittu kalkkikivilouhoksesta, jossa kiveä otettiin jo 1800-luvun lopulta; viinin varastointi alkoi 1960-luvun lopussa, kun paikasta tehtiin viinikellari. Mileștii Micin maanalaisia käytäviä on louhittu yli 200 kilometriä, mutta viinin säilytykseen on käytössä noin 55 kilometriä. [[Guinnessin ennätyskirjan]] mukaan kellareissa on yli 1,5 miljoonaa pulloa, ja sen kerrotaan olleen neuvostoaikana viinien piilopaikka, kun ne määrättiin tuhottaviksi.",
   "linkit": [
    "Ialovenin",
-   "Guinnessin ennätyskirjaan"
+   "Guinnessin ennätyskirjan"
   ],
   "jatkot": [
    "Millaisissa olosuhteissa viini säilyy kalkkikivikellarissa?",
@@ -192,7 +192,7 @@
   "kohde": "kohde:milestii-mici",
   "kasite": "kalkkikivilouhoksesta",
   "kysymys": "Kerro lisää: kalkkikivilouhoksesta",
-  "vastaus": "Kalkkikivi on pääosin kalsiumkarbonaatista koostuva sedimenttikivi, joka syntyy merenpohjaan kertyneistä kuorista ja muista eliöjäänteistä. Se on verraten helppo louhia ja työstää, joten sitä on käytetty laajalti rakennuskivenä. Kun kivi louhitaan maan alta, jäljelle jää käytäväverkosto, ja Moldovassa sellaisia on muutettu viinikellareiksi, sillä maan alla lämpötila pysyy tasaisena ympäri vuoden. Näin [[Mileștii Micin]] käytävät ovat syntyneet hylätystä louhoksesta, ja naapurissa [[Cricovan]] tunneleista on louhittu kalkkikiveä jo 1400-luvulta. Samaa kivilajia ovat myös Moldovan jyrkänteet, joihin on kaiverrettu luolaluostareita.",
+  "vastaus": "Kalkkikivi on pääosin kalsiumkarbonaatista koostuva sedimenttikivi, joka syntyy merenpohjaan kertyneistä kuorista ja muista eliöjäänteistä. Se on verraten helppo louhia ja työstää, joten sitä on käytetty laajalti rakennuskivenä. Kun kivi louhitaan maan alta, jäljelle jää käytäväverkosto, ja Moldovassa sellaisia on muutettu viinikellareiksi, sillä maan alla lämpötila pysyy tasaisena ympäri vuoden. Näin [[Mileștii Micin]] käytävät ovat syntyneet hylätystä louhoksesta, ja naapurissa [[Cricovan]] käytävät alkoivat kalkkikivikaivoksina. Samaa kivilajia ovat myös Moldovan jyrkänteet, joihin on kaiverrettu luolaluostareita.",
   "linkit": [
    "Mileștii Micin",
    "Cricovan"
@@ -206,10 +206,9 @@
   "kohde": "kohde:milestii-mici",
   "kasite": "Cricova",
   "kysymys": "Kerro lisää: Cricova",
-  "vastaus": "[[Cricova]] on viinitehdas ja maanalainen kellarikaupunki, joka sijaitsee noin 15 kilometrin päässä Chișinăusta. Sen luolasto käsittää noin 120 kilometriä käytäviä, ja lämpötila pysyy tasaisena noin 12–14 asteessa. Lähteiden mukaan puna-armeija takavarikoi [[Berliinin]] valtauksen yhteydessä vuonna 1945 natsijohtaja [[Hermann Göringin]] yksityisen viinikellarin, ja osa saaliista päätyi Moskovan ja Krimin kautta Cricovaan. Siellä on yhä esillä 129 pulloa, joita esitellään sotahistorian todistajina.",
+  "vastaus": "[[Cricova]] on viinitehdas ja maanalainen kellarikaupunki, joka sijaitsee kymmenen–viidentoista kilometrin päässä Chișinăusta. Sen luolasto käsittää noin 120 kilometriä käytäviä, ja lämpötila pysyy tasaisena noin 12-14 asteessa. Cricovan kokoelmassa on yhä esillä pulloja, jotka kuuluivat aikoinaan natsijohtaja [[Hermann Göringin]] yksityiseen viinikokoelmaan; Neuvostoliitto otti viinit sodan jälkeen mukaansa, ja osa päätyi lopulta Cricovaan.",
   "linkit": [
    "Cricova",
-   "Berliinin",
    "Hermann Göringin"
   ],
   "jatkot": [
@@ -221,7 +220,7 @@
   "kohde": "kohde:milestii-mici",
   "kasite": "Hermann Göringin",
   "kysymys": "Kerro lisää: Hermann Göringin",
-  "vastaus": "Hermann Göring oli natsi-Saksan johtohahmoja, [[Luftwaffen]] komentaja ja valtakunnanmarsalkka. Hänet tuomittiin kuolemaan [[Nürnbergin]] kansainvälisessä sotilastuomioistuimessa vuonna 1946, mutta hän kuoli vankilassa ennen tuomion täytäntöpanoa. Hän oli myös taide- ja viinikeräilijä, ja sodan aikana hänen kokoelmiinsa päätyi runsaasti ryöstettyä omaisuutta. Lähteiden mukaan puna-armeija takavarikoi hänen viinikellarinsa vuonna 1945, ja osa pulloista päätyi Cricovaan Moldovaan.",
+  "vastaus": "Hermann Göring oli natsi-Saksan johtohahmoja, [[Luftwaffen]] komentaja ja valtakunnanmarsalkka. Hänet tuomittiin kuolemaan [[Nürnbergin]] kansainvälisessä sotilastuomioistuimessa vuonna 1946, mutta hän kuoli vankilassa ennen tuomion täytäntöpanoa. Hän oli myös taide- ja viinikeräilijä, ja sodan aikana hänen kokoelmiinsa päätyi runsaasti ryöstettyä omaisuutta. Cricovan kokoelmassa on yhä esillä pulloja, jotka kuuluivat aikoinaan hänen yksityiseen viinikokoelmaansa; Neuvostoliitto otti viinit sodan jälkeen mukaansa, ja osa päätyi lopulta Cricovaan.",
   "linkit": [
    "Luftwaffen",
    "Nürnbergin"
@@ -235,9 +234,9 @@
   "kohde": "kohde:cricovan-viinikellarit",
   "kasite": "Cricovan",
   "kysymys": "Kerro lisää: Cricovan",
-  "vastaus": "Cricova on viinitehdas ja maanalainen kellarikaupunki Moldovassa, noin 15 kilometrin päässä Chișinăusta. Alueen tunneleista on louhittu [[kalkkikiveä]] jo 1400-luvulta, ja 1950-luvulla ne muutettiin viinikellareiksi. Käytäviä on nykyään noin 120 kilometriä, ja lämpötila pysyy ympäri vuoden noin 12 asteessa. Puolet tunneleista on varattu viinin säilytykseen, ja katujen nimet kertovat, minkä lajin pulloja kussakin varastoidaan. Kokoelmaan kuuluu viiniä vuodelta 1902, ja [[kuohuviiniä]] tehdään yhä [[samppanjamenetelmällä]].",
+  "vastaus": "Cricova on viinitehdas ja maanalainen kellarikaupunki Moldovassa, kymmenen–viidentoista kilometrin päässä Chișinăusta. Cricovan käytävät alkoivat [[kalkkikivikaivoksina]], ja 1950-luvulla ne muutettiin viinikellareiksi. Käytäviä on noin 120 kilometriä, ja lämpötila pysyy noin 12-14 asteessa. Puolet tunneleista on varattu viinin säilytykseen, ja katujen nimet kertovat, minkä lajin pulloja kussakin varastoidaan. Kokoelmaan kuuluu viiniä vuodelta 1902, ja [[kuohuviiniä]] tehdään yhä [[samppanjamenetelmällä]].",
   "linkit": [
-   "kalkkikiveä",
+   "kalkkikivikaivoksina",
    "kuohuviiniä",
    "samppanjamenetelmällä"
   ],
@@ -250,7 +249,7 @@
   "kohde": "kohde:cricovan-viinikellarit",
   "kasite": "kalkkikiveä",
   "kysymys": "Kerro lisää: kalkkikiveä",
-  "vastaus": "Kalkkikivi on sedimenttikivi, joka koostuu pääosin kalsiumkarbonaatista ja syntyy muinaisten merieliöiden kuorista ja muista jäänteistä. Sitä on helppo louhia, ja siksi sitä on käytetty rakennuskivenä ja maanalaisten tilojen tekemiseen. Cricovan alueella kalkkikiveä on louhittu tunneleista jo 1400-luvulta, ja 1950-luvulla käytävät muutettiin [[viinikellareiksi]]. Kellarit sopivat viinille, koska lämpötila pysyy maan alla ympäri vuoden noin 12 asteessa. Käytäviä on nykyään noin 120 kilometriä, ja niiden [[katujen]] nimet kertovat, minkä lajin pulloja kussakin varastoidaan.",
+  "vastaus": "Kalkkikivi on sedimenttikivi, joka koostuu pääosin kalsiumkarbonaatista ja syntyy muinaisten merieliöiden kuorista ja muista jäänteistä. Sitä on helppo louhia, ja siksi sitä on käytetty rakennuskivenä ja maanalaisten tilojen tekemiseen. Cricovan käytävät alkoivat kalkkikivikaivoksina, ja 1950-luvulla ne muutettiin [[viinikellareiksi]]. Kellarit sopivat viinille, koska lämpötila pysyy maan alla ympäri vuoden noin 12-14 asteessa. Käytäviä on nykyään noin 120 kilometriä, ja niiden [[katujen]] nimet kertovat, minkä lajin pulloja kussakin varastoidaan.",
   "linkit": [
    "viinikellareiksi",
    "katujen"
@@ -292,11 +291,11 @@
   "kohde": "kohde:cricovan-viinikellarit",
   "kasite": "Cricovassa",
   "kysymys": "Kerro lisää: Cricovassa",
-  "vastaus": "Cricova on viinitehdas ja maanalainen kellarikaupunki Moldovassa, noin 15 kilometrin päässä [[Chișinăusta]]. Käytäviä on noin 120 kilometriä, ja lämpötila pysyy ympäri vuoden noin 12 asteessa. Kokoelmaan kuuluu viiniä vuodelta 1902, ja [[kuohuviiniä]] tehdään yhä samppanjamenetelmällä, jossa kuplat syntyvät pullossa tapahtuvassa toisessa käymisessä. Puolet tunneleista on varattu viinin säilytykseen, ja katujen nimet kertovat, minkä lajin pulloja kussakin varastoidaan. Alueen tunneleista on louhittu [[kalkkikiveä]] jo 1400-luvulta, ja 1950-luvulla ne muutettiin viinikellareiksi.",
+  "vastaus": "Cricova on viinitehdas ja maanalainen kellarikaupunki Moldovassa, kymmenen–viidentoista kilometrin päässä [[Chișinăusta]]. Käytäviä on noin 120 kilometriä, ja lämpötila pysyy noin 12-14 asteessa. Kokoelmaan kuuluu viiniä vuodelta 1902, ja [[kuohuviiniä]] tehdään yhä samppanjamenetelmällä, jossa kuplat syntyvät pullossa tapahtuvassa toisessa käymisessä. Puolet tunneleista on varattu viinin säilytykseen, ja katujen nimet kertovat, minkä lajin pulloja kussakin varastoidaan. Käytävät alkoivat [[kalkkikivikaivoksina]], ja 1950-luvulla ne muutettiin viinikellareiksi.",
   "linkit": [
    "Chișinăusta",
    "kuohuviiniä",
-   "kalkkikiveä"
+   "kalkkikivikaivoksina"
   ],
   "jatkot": [
    "Mitä eroa on kuohuviinillä ja samppanjalla?",
@@ -336,7 +335,7 @@
   "kohde": "kohde:cricovan-viinikellarit",
   "kasite": "Cricova",
   "kysymys": "Kerro lisää: Cricova",
-  "vastaus": "Cricova on viinitehdas ja maanalainen kellarikaupunki noin 15 kilometrin päässä Moldovan pääkaupungista Chișinăusta. Sen luolastossa on noin 120 kilometriä käytäviä, ja lämpötila pysyy tasaisena noin 12–14 asteessa. Lähteiden mukaan puna-armeija takavarikoi Berliinin valtauksen yhteydessä vuonna 1945 natsijohtaja [[Hermann Göringin]] yksityisen viinikellarin, ja osa saaliista päätyi Moskovan ja Krimin kautta Cricovaan. Siellä on yhä esillä 129 pulloa. Naapurissa sijaitsee [[Mileștii Mici]], jonka kellarit on louhittu hylätystä kalkkikivilouhoksesta.",
+  "vastaus": "Cricova on viinitehdas ja maanalainen kellarikaupunki kymmenen–viidentoista kilometrin päässä Moldovan pääkaupungista Chișinăusta. Sen luolastossa on noin 120 kilometriä käytäviä, ja lämpötila pysyy tasaisena noin 12-14 asteessa. Cricovan kokoelmassa on yhä esillä pulloja, jotka kuuluivat aikoinaan natsijohtaja [[Hermann Göringin]] yksityiseen viinikokoelmaan; Neuvostoliitto otti viinit sodan jälkeen mukaansa, ja osa päätyi lopulta Cricovaan. Naapurissa sijaitsee [[Mileștii Mici]], jonka kellarit on louhittu hylätystä kalkkikivilouhoksesta.",
   "linkit": [
    "Hermann Göringin",
    "Mileștii Mici"
@@ -350,7 +349,7 @@
   "kohde": "kohde:cricovan-viinikellarit",
   "kasite": "Chișinăusta",
   "kysymys": "Kerro lisää: Chișinăusta",
-  "vastaus": "Chișinău on Moldovan pääkaupunki, ja se sijaitsee maan keskiosassa. Kaupunki mainitaan asiakirjoissa ensimmäisen kerran 1400-luvulla, ja vuodesta 1812 se kuului Venäjän valtakunnan hallitsemaan [[Bessarabiaan]]. Vuonna 1918 Bessarabian kansanneuvosto kokoontui kaupungissa ja äänesti liittymisestä Romaniaan. Moldova itsenäistyi vuonna 1991, ja Chișinăusta tuli itsenäisen valtion pääkaupunki. Noin 15 kilometrin päässä sijaitsee [[Cricovan]] maanalainen kellarikaupunki, ja sen tunnetun naapurin [[Mileștii Micin]] kellarit ovat noin 18 kilometrin päässä kaupungista.",
+  "vastaus": "Chișinău on Moldovan pääkaupunki, ja se sijaitsee maan keskiosassa. Kaupunki mainitaan asiakirjoissa ensimmäisen kerran 1400-luvulla, ja vuodesta 1812 se kuului Venäjän valtakunnan hallitsemaan [[Bessarabiaan]]. Vuonna 1918 Bessarabian kansanneuvosto kokoontui kaupungissa ja äänesti liittymisestä Romaniaan. Moldova itsenäistyi vuonna 1991, ja Chișinăusta tuli itsenäisen valtion pääkaupunki. Kymmenen–viidentoista kilometrin päässä sijaitsee [[Cricovan]] maanalainen kellarikaupunki, ja sen tunnetun naapurin [[Mileștii Micin]] kellarit ovat noin 18-20 kilometrin päässä kaupungista.",
   "linkit": [
    "Bessarabiaan",
    "Cricovan",
@@ -365,7 +364,7 @@
   "kohde": "kohde:tipovan-luostari",
   "kasite": "Țipovan",
   "kysymys": "Kerro lisää: Țipovan",
-  "vastaus": "Țipovan luostari sijaitsee Rezinan piirissä Dnestrin, moldovaksi Nistrun, jyrkällä rantakalliolla. Lähteen mukaan luostari on kaiverrettu suureen [[kalkkikivikallioon]] 900–1100-luvuilla, ja siihen kuuluu 18 luolaa, joita yhdistävät sisäiset käytävät. Ajoitus on suuntaa antava, ja eri lähteet voivat antaa toisistaan poikkeavia vuosisatoja. Ympäristö on yhtä huomionarvoinen: Țipovan suojelualue kattaa 430 hehtaaria [[jokiterasseja]] ja puron rotkolaaksoa, jossa on useita 10–16 metrin putouksia.",
+  "vastaus": "Țipovan luostari sijaitsee Rezinan piirissä Dnestrin, moldovaksi Nistrun, jyrkällä rantakalliolla. Luostarin kaivertaminen [[kalkkikivikallioon]] ajoitetaan tutkijoiden mukaan 1000-luvulle, ja sitä on laajennettu ja käytetty aina 1700-luvulle asti. Siihen kuuluu 18 luolaa, joita yhdistävät sisäiset käytävät. Ajoitus on suuntaa antava, ja eri lähteet voivat antaa toisistaan poikkeavia vuosisatoja. Ympäristö on yhtä huomionarvoinen: Țipovan suojelualue kattaa noin 306 hehtaaria [[jokiterasseja]] ja puron rotkolaaksoa, jossa on useita 10–16 metrin putouksia.",
   "linkit": [
    "kalkkikivikallioon",
    "jokiterasseja"
@@ -379,7 +378,7 @@
   "kohde": "kohde:tipovan-luostari",
   "kasite": "Dnestr",
   "kysymys": "Kerro lisää: Dnestr",
-  "vastaus": "Dnestr, moldovaksi Nistru, on yli tuhat kilometriä pitkä joki, joka saa alkunsa [[Karpaateilla]] Länsi-Ukrainassa ja laskee [[Mustaanmereen]]. Moldovassa joen rannat ovat paikoin kalkkikivijyrkänteiden reunustamat, ja juuri sellaiselle jyrkälle rantakalliolle on kaiverrettu Țipovan luolaluostari. Joen varrella sijaitsee myös [[Sorokan]] linnoitus, jonka puinen edeltäjä rakennettiin vuonna 1499 suojaamaan joen kahlaamoa. Tarkka pituus ilmoitetaan lähteissä noin 1 350 kilometriksi.",
+  "vastaus": "Dnestr, moldovaksi Nistru, on yli tuhat kilometriä pitkä joki, joka saa alkunsa [[Karpaateilla]] Länsi-Ukrainassa ja laskee [[Mustaanmereen]]. Moldovassa joen rannat ovat paikoin kalkkikivijyrkänteiden reunustamat, ja juuri sellaiselle jyrkälle rantakalliolle on kaiverrettu Țipovan luolaluostari. Joen varrella sijaitsee myös [[Sorokan]] linnoitus, jonka alkuperäinen puu- ja savilinnake seisoi Dnestrin kahlaamon suojana, ja ruhtinas Tapani Suuren aikaan paikka mainitaan ensi kerran asiakirjassa vuonna 1499. Tarkka pituus ilmoitetaan lähteissä noin 1 350 kilometriksi.",
   "linkit": [
    "Karpaateilla",
    "Mustaanmereen",
@@ -394,7 +393,7 @@
   "kohde": "kohde:tipovan-luostari",
   "kasite": "jokiterasseja",
   "kysymys": "Kerro lisää: jokiterasseja",
-  "vastaus": "Jokiterassit ovat laakeita, porrasmaisia tasanteita joen laakson reunoilla. Ne syntyvät, kun joki uurtaa uomaansa syvemmälle ja entinen tulvatasanne jää korkeammalle. Prosessiin vaikuttavat [[eroosio]] ja ilmastonmuutokset sekä maankohoaminen, ja terassit voivat olla jopa sadoilta tuhansilta vuosilta. Terassit ovat usein viljelyyn ja asumiseen sopivia tasaisia alueita. Țipovan suojelualueella ne muodostavat yhdessä puron rotkolaakson kanssa 430 hehtaarin kokonaisuuden, jonka putoukset ovat 10–16 metriä korkeita ja joka sijaitsee [[Dnestrin]] jyrkän rannan tuntumassa.",
+  "vastaus": "Jokiterassit ovat laakeita, porrasmaisia tasanteita joen laakson reunoilla. Ne syntyvät, kun joki uurtaa uomaansa syvemmälle ja entinen tulvatasanne jää korkeammalle. Prosessiin vaikuttavat [[eroosio]] ja ilmastonmuutokset sekä maankohoaminen, ja terassit voivat olla jopa sadoilta tuhansilta vuosilta. Terassit ovat usein viljelyyn ja asumiseen sopivia tasaisia alueita. Țipovan suojelualueella ne muodostavat yhdessä puron rotkolaakson kanssa noin 306 hehtaarin kokonaisuuden, jonka putoukset ovat 10–16 metriä korkeita ja joka sijaitsee [[Dnestrin]] jyrkän rannan tuntumassa.",
   "linkit": [
    "eroosio",
    "Dnestrin"
@@ -408,7 +407,7 @@
   "kohde": "kohde:tipovan-luostari",
   "kasite": "kalkkikivikallioon",
   "kysymys": "Kerro lisää: kalkkikivikallioon",
-  "vastaus": "Kalkkikivi on pehmeähköä kiveä, jota on verraten helppo työstää, ja siksi sitä on käytetty sekä rakennuskivenä että luolien ja käytävien louhimiseen. [[Țipovan]] luostari on kaiverrettu suureen kalkkikivikallioon, ja siihen kuuluu 18 luolaa, joita yhdistävät sisäiset käytävät. Rakentamisen ajoitus on lähteen mukaan 900–1100-luvuille, mutta tarkka ajoitus on epävarma. Samanlaiseen kalkkikivijyrkänteeseen on kaiverrettu myös [[Orheiul Vechin]] luolaluostari, joten tapa on yleinen tällä seudulla.",
+  "vastaus": "Kalkkikivi on pehmeähköä kiveä, jota on verraten helppo työstää, ja siksi sitä on käytetty sekä rakennuskivenä että luolien ja käytävien louhimiseen. [[Țipovan]] luostari on kaiverrettu suureen kalkkikivikallioon, ja siihen kuuluu 18 luolaa, joita yhdistävät sisäiset käytävät. Luostarin kaivertaminen kallioon ajoitetaan tutkijoiden mukaan 1000-luvulle, ja sitä on laajennettu ja käytetty aina 1700-luvulle asti, mutta tarkka ajoitus on epävarma. Samanlaiseen kalkkikivijyrkänteeseen on kaiverrettu myös [[Orheiul Vechin]] luolaluostari, joten tapa on yleinen tällä seudulla.",
   "linkit": [
    "Țipovan",
    "Orheiul Vechin"
@@ -422,11 +421,11 @@
   "kohde": "kohde:tipovan-luostari",
   "kasite": "Ostrogin luostari",
   "kysymys": "Kerro lisää: Ostrogin luostari",
-  "vastaus": "[[Ostrogin luostari]] on [[Montenegrossa]] Ostroška-kallion seinämään veistetty ortodoksinen luostari, joka näyttää kasvaneen suoraan vuoresta. Sen perusti vuonna 1665 Hertsegovinan metropoliitta [[Vasilije]], joka valitsi paikan osin suojaksi etenevää osmaneja vastaan. Samoissa luolissa oli ennen häntä asunut erakkona pyhä Isaija Onogoštilainen. Ylempi kirkko on louhittu kahteen luolaan ja koristeltu freskoin. Vasilije johti laajennustöitä kuolemaansa vuoteen 1671 asti, ja hänet julistettiin pyhimykseksi. Luostari on nykyään yksi Balkanin tunnetuimmista pyhiinvaelluskohteista.",
+  "vastaus": "[[Ostrogin luostari]] on [[Montenegrossa]] Ostroška-kallion seinämään veistetty ortodoksinen luostari, joka näyttää kasvaneen suoraan vuoresta. Sen perustajana pidetään pyhää [[Vasilia]], joka kuoli siellä 1671, ja luostari ajoitetaan 1600-luvulle. Samoissa luolissa oli ennen häntä asunut erakkona pyhä Isaija Onogoštilainen. Ylempi kirkko on louhittu kahteen luolaan ja koristeltu freskoin. Vasilije johti laajennustöitä, ja hänet julistettiin pyhimykseksi. Luostari on nykyään yksi Balkanin tunnetuimmista pyhiinvaelluskohteista.",
   "linkit": [
    "Ostrogin luostari",
    "Montenegrossa",
-   "Vasilije"
+   "Vasilia"
   ],
   "jatkot": [
    "Miksi Vasilije julistettiin pyhimykseksi?",
@@ -451,9 +450,10 @@
   "kohde": "kohde:caprianan-luostari",
   "kasite": "Căprianan",
   "kysymys": "Kerro lisää: Căprianan",
-  "vastaus": "Căprianan luostari sijaitsee Strășenin piirissä Moldovassa metsäisellä alueella, jota kutsuttiin aiemmin nimellä Codrii Lăpușnei. Luostari sai ensimmäisen merkittävän maininnan vuonna 1429, kun [[Aleksanteri Hyvä]] myönsi sille kuninkaallisen aseman. Nykyinen kivinen Neitsyt Marian kuolonuneen kirkko rakennettiin vuosina 1491–1496 [[Stefan Suuren]] aikana moldavialaiseen tyyliin. Alueella on lisäksi 1800-luvun Pyhän Nikolauksen kirkko ja 1900-luvun talvikirkko. Neitsyt Marian kuolonuneen kirkossa on metropoliitta [[Gavril Bănulescu-Bodonin]] hauta.",
+  "vastaus": "Căprianan luostari sijaitsee Strășenin piirissä Moldovassa metsäisellä alueella, jota kutsuttiin aiemmin nimellä Codrii Lăpușnei. Luostari sai ensimmäisen merkittävän maininnan vuonna 1429, kun [[Aleksanteri Hyvä]] myönsi sille kuninkaallisen aseman. Nykyinen kivinen Neitsyt Marian kuolonuneen kirkko rakennettiin [[Petru Rarešin]] aikana 1540-luvulla (vanhempi kirkko oli peräisin [[Stefan Suuren]] ajalta). Alueella on lisäksi 1800-luvun Pyhän Nikolauksen kirkko ja 1900-luvun talvikirkko. Neitsyt Marian kuolonuneen kirkossa on metropoliitta [[Gavril Bănulescu-Bodonin]] hauta.",
   "linkit": [
    "Aleksanteri Hyvä",
+   "Petru Rarešin",
    "Stefan Suuren",
    "Gavril Bănulescu-Bodonin"
   ],
@@ -480,7 +480,7 @@
   "kohde": "kohde:caprianan-luostari",
   "kasite": "Stefan Suuren",
   "kysymys": "Kerro lisää: Stefan Suuren",
-  "vastaus": "Stefan Suuri, romaniaksi Ștefan cel Mare, hallitsi Moldovan ruhtinaskuntaa vuosina 1457–1504. Hän puolusti maataan ottomaaneja vastaan, ja tunnetuin voitto on vuoden 1475 taistelu [[Vasluin]] luona. Hänen aikanaan rakennettiin runsaasti ortodoksisia kirkkoja ja luostareita, ja nämä muodostavat osan moldavialaisesta kirkkoarkkitehtuurista, johon myös Căprianan kivinen pääkirkko kuuluu. Esimerkki on [[Voroneț]]in luostarikirkko, joka valmistui vuonna 1488. Hänet on haudattu [[Putnan]] luostariin, ja ortodoksinen kirkko julisti hänet pyhimykseksi vuonna 1992.",
+  "vastaus": "Stefan Suuri, romaniaksi Ștefan cel Mare, hallitsi Moldovan ruhtinaskuntaa vuosina 1457–1504. Hän puolusti maataan ottomaaneja vastaan, ja tunnetuin voitto on vuoden 1475 taistelu [[Vasluin]] luona. Hänen aikanaan rakennettiin runsaasti ortodoksisia kirkkoja ja luostareita, ja nämä muodostavat osan moldavialaisesta kirkkoarkkitehtuurista, johon myös Căprianan vanhempi, Stefan Suuren ajalta peräisin ollut kirkko kuului. Esimerkki on [[Voroneț]]in luostarikirkko, joka valmistui vuonna 1488. Hänet on haudattu [[Putnan]] luostariin, ja ortodoksinen kirkko julisti hänet pyhimykseksi vuonna 1992.",
   "linkit": [
    "Vasluin",
    "Voroneț",
@@ -509,9 +509,9 @@
   "kohde": "kohde:caprianan-luostari",
   "kasite": "Neitsyt Marian kuolonuneen kirkko",
   "kysymys": "Kerro lisää: Neitsyt Marian kuolonuneen kirkko",
-  "vastaus": "Neitsyt Marian kuolonuneen kirkko on Căprianan luostarin pääkirkko. Se rakennettiin vuosina 1491–1496 [[Stefan Suuren]] aikana, ja sen tyyli on [[moldavialaista tyyliä]], jossa yhdistyvät bysanttilaiset ja goottilaiset vaikutteet. Kirkko on omistettu Neitsyt Marian kuolonunelle, joka on ortodoksisessa kirkossa suuri juhla elokuussa. Kirkossa on metropoliitta Gavril Bănulescu-Bodonin hauta. Luostarialueella on lisäksi nuorempia rakennuksia, joita ovat 1800-luvun Pyhän Nikolauksen kirkko ja 1900-luvun talvikirkko.",
+  "vastaus": "Neitsyt Marian kuolonuneen kirkko on Căprianan luostarin pääkirkko. Se rakennettiin [[Petru Rarešin]] aikana 1540-luvulla (vanhempi kirkko oli peräisin Stefan Suuren ajalta), ja sen tyyli on [[moldavialaista tyyliä]], jossa yhdistyvät bysanttilaiset ja goottilaiset vaikutteet. Kirkko on omistettu Neitsyt Marian kuolonunelle, joka on ortodoksisessa kirkossa suuri juhla elokuussa. Kirkossa on metropoliitta Gavril Bănulescu-Bodonin hauta. Luostarialueella on lisäksi nuorempia rakennuksia, joita ovat 1800-luvun Pyhän Nikolauksen kirkko ja 1900-luvun talvikirkko.",
   "linkit": [
-   "Stefan Suuren",
+   "Petru Rarešin",
    "moldavialaista tyyliä"
   ],
   "jatkot": [
@@ -694,7 +694,7 @@
   "kohde": "kohde:hahmotelma-orheiul-vechi",
   "kasite": "kalkkikivijyrkänteellä",
   "kysymys": "Kerro lisää: kalkkikivijyrkänteellä",
-  "vastaus": "Orheiul Vechi, Vanha Orhei, on muinaismuistoalue [[Răutin]] joen mutkassa, ja sen ympärillä kohoaa kalkkikivijyrkänne. Alueella on yli 2 000 vuoden historia: geto-daakialainen linnoitus, keskiaikainen Moldovan kaupunki ja [[Kultaisen ordan]] aikainen asutus. Jyrkänteeseen louhittiin luolaluostari, johon munkit vetäytyivät turvaan ryöstöretkiltä. Lähteet ajoittavat sen vuosisadoista joko 1200-luvulle tai 1400-luvulle, ja kammioissa asuttiin lähes 1700-luvun loppuun. Moldovan itsenäistyttyä munkit palasivat luoliin vuonna 1996.",
+  "vastaus": "Orheiul Vechi, Vanha Orhei, on muinaismuistoalue [[Răutin]] joen mutkassa, ja sen ympärillä kohoaa kalkkikivijyrkänne. Alueella on yli 2 000 vuoden historia: geto-daakialainen linnoitus, keskiaikainen Moldovan kaupunki ja [[Kultaisen ordan]] aikainen asutus. Kalkkikivijyrkänteeseen louhittu luolaluostari on peräisin keskiajalta (lähteet antavat 1200-1400-luvun), ja luolia on käytetty piilopaikkana vielä myöhemminkin. Kammioissa asuttiin lähes 1700-luvun loppuun. Moldovan itsenäistyttyä munkit palasivat luoliin vuonna 1996.",
   "linkit": [
    "Răutin",
    "Kultaisen ordan"
@@ -752,7 +752,7 @@
   "kohde": "kohde:hahmotelma-orheiul-vechi",
   "kasite": "luolaluostareita",
   "kysymys": "Kerro lisää: luolaluostareita",
-  "vastaus": "Luolaluostari on luostari, jonka tilat on kaiverrettu kallioon tai luonnonluoliin. [[Orheiul Vechin]] luolaluostarissa ortodoksimunkit kaivoivat kammiot kalkkikivijyrkänteeseen, ja lähteet ajoittavat sen vuosisadoista 1200-luvulle tai 1400-luvulle. Kammioissa asuttiin lähes 1700-luvun loppuun, minkä jälkeen paikka autioitui, ja munkit palasivat sinne vuonna 1996. Kallioluostareita on rakennettu myös muualle Itä-Euroopassa. Tunnettu esimerkki on [[Kiovan Petšerskin luostari]], joka perustettiin 1000-luvulla. Luola tarjosi sekä rauhaa rukoukselle että suojaa ryöstöretkiltä.",
+  "vastaus": "Luolaluostari on luostari, jonka tilat on kaiverrettu kallioon tai luonnonluoliin. [[Orheiul Vechin]] luolaluostarissa ortodoksimunkit kaivoivat kammiot kalkkikivijyrkänteeseen, ja se on peräisin keskiajalta (lähteet antavat 1200-1400-luvun). Kammioissa asuttiin lähes 1700-luvun loppuun, minkä jälkeen paikka autioitui, ja munkit palasivat sinne vuonna 1996. Kallioluostareita on rakennettu myös muualle Itä-Euroopassa. Tunnettu esimerkki on [[Kiovan Petšerskin luostari]], joka perustettiin 1000-luvulla. Luola tarjosi rauhaa rukoukselle, ja luolia on käytetty piilopaikkana vielä myöhemminkin.",
   "linkit": [
    "Orheiul Vechin",
    "Kiovan Petšerskin luostari"
@@ -766,9 +766,9 @@
   "kohde": "kohde:hahmotelma-orheiul-vechi",
   "kasite": "luolaluostareihin",
   "kysymys": "Kerro lisää: luolaluostareihin",
-  "vastaus": "Luolaluostari tarjosi munkeille sekä rauhaa että suojaa. Orheiul Vechin luolaluostariin munkit vetäytyivät turvaan [[Krimin tataarien]] ryöstöretkiltä, ja kammiot kaivettiin kalkkikivijyrkänteeseen. Lähteet ajoittavat luolaluostarin vuosisadoista joko 1200-luvulle tai 1400-luvulle. Kammioissa asuttiin lähes 1700-luvun loppuun, kunnes paikka autioitui vuosisadoiksi. Moldovan itsenäistyttyä munkit palasivat luoliin vuonna 1996, siivosivat kammiot ja aloittivat rukoukset uudelleen kallioon hakatuissa seinissä. Koska [[ortodoksimunkit]] elivät usein erakkoina, vetäytyminen kallioon sopi myös heidän elämäntapaansa.",
+  "vastaus": "Luolaluostari tarjosi munkeille sekä rauhaa että suojaa. Orheiul Vechin luolaluostari on louhittu [[kalkkikivijyrkänteeseen]], ja se on peräisin keskiajalta (lähteet antavat 1200-1400-luvun); luolia on käytetty piilopaikkana vielä myöhemminkin. Kammioissa asuttiin lähes 1700-luvun loppuun, kunnes paikka autioitui vuosisadoiksi. Moldovan itsenäistyttyä munkit palasivat luoliin vuonna 1996, siivosivat kammiot ja aloittivat rukoukset uudelleen kallioon hakatuissa seinissä. Koska [[ortodoksimunkit]] elivät usein erakkoina, vetäytyminen kallioon sopi myös heidän elämäntapaansa.",
   "linkit": [
-   "Krimin tataarien",
+   "kalkkikivijyrkänteeseen",
    "ortodoksimunkit"
   ],
   "jatkot": [
@@ -836,11 +836,10 @@
   "kohde": "kohde:hahmotelma-orheiul-vechi",
   "kasite": "Orheiul Vechin",
   "kysymys": "Kerro lisää: Orheiul Vechin",
-  "vastaus": "Orheiul Vechi eli Vanha Orhei on kalkkikivijyrkänteelle [[Răutin]] joen mutkaan kerrostunut muinaismuistoalue Moldovassa. Alueella on geto-daakialainen linnoitus, keskiaikainen Moldovan kaupunki, [[Kultaisen ordan]] aikainen asutus ja kallioon louhitut luolaluostarit. Munkit vetäytyivät luoliin turvaan [[Krimin tataarien]] ryöstöretkiltä. Osa kaupungista hylättiin vuosisatojen kuluessa, ja nykyään alue on yksi Moldovan tunnetuimmista matkailukohteista.",
+  "vastaus": "Orheiul Vechi eli Vanha Orhei on kalkkikivijyrkänteelle [[Răutin]] joen mutkaan kerrostunut muinaismuistoalue Moldovassa. Alueella on geto-daakialainen linnoitus, keskiaikainen Moldovan kaupunki, [[Kultaisen ordan]] aikainen asutus ja kallioon louhitut luolaluostarit. Luolia on käytetty piilopaikkana vielä keskiajan jälkeenkin. Osa kaupungista hylättiin vuosisatojen kuluessa, ja nykyään alue on yksi Moldovan tunnetuimmista matkailukohteista.",
   "linkit": [
    "Răutin",
-   "Kultaisen ordan",
-   "Krimin tataarien"
+   "Kultaisen ordan"
   ],
   "jatkot": [
    "Miten Orheiul Vechin luolaluostari on rakennettu?",
