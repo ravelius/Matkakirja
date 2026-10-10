@@ -629,6 +629,56 @@ namespace Matkakirja.Natiivi
         int jaksoTaukoNahty;
         float jaksoTaukoLoppuu;
 
+        // --- KAUPUNKI-INTRO (Pariisin nykyintro, kohta 4): musiikin ajoitus intron kohtaukseen 1 ---------------------------
+        /// <summary>
+        /// Intron musiikkitahti alkaa: nopea kappale soi (t0 = sen todellinen alku, myös jo soivasta laskettuna). Intro aloittaa
+        /// kohtauksen 1 tästä ruudusta. Argumentti: kaupunki ja nopean kappaleen kohta sekunteina (0 = juuri alkoi).
+        /// </summary>
+        public static event Action<string, float> KaupunkiIntroAlkoi;
+        readonly KaupunkiIntroKello intro = new KaupunkiIntroKello();
+        string introUrl;
+
+        /// <summary>
+        /// Intro pyytää kaupunkijakson ajoitusta: nopea katkeaa katkoS:ssä (häivytys haivytysS) ja hidas alkaa hidasS:ssä ilman
+        /// jakson taukoa. Kutsutaan saapumisen yhteydessä (ennen tai jälkeen Paikka-tapahtuman) tai linssin ollessa auki
+        /// (AaniTila.JaksonIntroAlusta: nopea alkaa heti pidon ohi, hitaan loppu palauttaa pidon). Jos musiikki ei voi soida
+        /// (musiikki tai äänimaisema pois), kello käy hiljaa ja KaupunkiIntroAlkoi(k, 0) laukeaa heti. false = kaupungilla ei jaksoa.
+        /// </summary>
+        public bool KaupunkiIntro(string kaupunki, float katkoS = 31f, float haivytysS = 2f, float hidasS = 32f)
+        {
+            var polku = Tila?.JaksonNopea(kaupunki);
+            if (polku == null) return false;
+            introUrl = AaniOsoite.Url(polku);
+            bool hiljainen = !Tila.JaksoVoiSoida(kaupunki);
+            intro.Aloita(kaupunki, katkoS, haivytysS, hidasS, hiljainen);
+            if (!hiljainen) Tila.JaksonIntroAlusta(kaupunki); // linssi auki (pallon opas): nopea alusta pidon ohi; muuten Paikka käynnistää jakson
+            else Debug.Log($"MATKAKIRJA aani: kaupunki-intro {kaupunki} hiljaisella kellolla (musiikki pois)");
+            return true;
+        }
+
+        /// <summary>
+        /// Intron ohitus (napautus hyppää kohtaukseen 7 eli siirtymään vanhaan): musiikki tekee heti saman kuin katkoS:ssä, eli
+        /// nopean häivytys alkaa nyt ja hidas alkaa (hidasS − katkoS) myöhemmin. Toimii missä tahansa intron kohdassa, myös ennen
+        /// kuin nopea on alkanut soida (KaupunkiIntroAlkoi ei silloin enää laukea). false = intro ei ole käynnissä.
+        /// </summary>
+        public bool KaupunkiIntroOhita()
+        {
+            if (!intro.Ohita()) return false;
+            Debug.Log($"MATKAKIRJA aani: kaupunki-intro {intro.Kaupunki} ohitettu");
+            return true;
+        }
+
+        void PaivitaIntro(float nyt, Action<Action> tee)
+        {
+            if (!intro.Kaynnissa) return;
+            var l = nykyiset[(int)Kanava.Pohja];
+            float? kohta = l != null && l.Kaynnistetty && l.A != null && l.Url == introUrl ? l.A.time : (float?)null;
+            intro.Paivita(nyt, kohta,
+                (k, t) => { tee(() => KaupunkiIntroAlkoi?.Invoke(k, t)); Debug.Log($"MATKAKIRJA aani: kaupunki-intro {k} alkoi (nopea {t:0.00} s)"); },
+                ms => tee(() => Tila.JaksonIntroKatko(ms)),
+                () => tee(() => Tila.JaksonIntroHidas()));
+        }
+
         void Update()
         {
             if (jaassa || Tila == null) return;
@@ -640,6 +690,7 @@ namespace Matkakirja.Natiivi
             // Kaupunkijakson tauko (AaniTila.JaksonTaukoNro/Ms): ajastus täällä, siirtymä hitaaseen kappaleeseen koneessa.
             if (Tila.JaksonTaukoNro != jaksoTaukoNahty) { jaksoTaukoNahty = Tila.JaksonTaukoNro; jaksoTaukoLoppuu = nyt + Tila.JaksonTaukoMs / 1000f; }
             if (jaksoTaukoLoppuu > 0 && nyt >= jaksoTaukoLoppuu) { jaksoTaukoLoppuu = 0; int nro = jaksoTaukoNahty; Tee(() => Tila.JaksonTaukoOhi(nro)); }
+            PaivitaIntro(nyt, Tee);
 
             // Takaperin ilman kopiota (ei roskaa joka ruudussa): Vapauta poistaa vain käsiteltävän.
             for (int i = elavat.Count - 1; i >= 0; i--)

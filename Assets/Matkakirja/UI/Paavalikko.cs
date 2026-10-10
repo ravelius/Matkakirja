@@ -54,23 +54,23 @@ namespace Matkakirja.Natiivi
             Paneeli.Add(new KarheaKehys { Sade = 10, Paksuus = 1.2f });
             AukiMuuttui += auki => { if (!auki) Asetukset.Tallenna(); };
             // ‹ Takaisin palaa pillerivalikkoon (UiNakymat).
-            takaisin = Rakenne.Nappi("‹ Takaisin", "mk-selite__sulje mk-linssivalitsin__takaisin mk-paavalikko__takaisin", () => { Sulje(); Takaisin?.Invoke(); }, Sisalto);
-            takaisin.tooltip = "Takaisin valikkoon";
+            takaisin = Rakenne.Nappi(Kieli.T("ui.yleinen.takaisin-nuoli"), "mk-selite__sulje mk-linssivalitsin__takaisin mk-paavalikko__takaisin", () => { Sulje(); Takaisin?.Invoke(); }, Sisalto);
+            takaisin.tooltip = Kieli.T("ui.paavalikko.takaisin-valikkoon");
             // Retkikunta omassa kuoressaan: SahkeNakyma ohjaa sisemmän näkyvyyttä, osa kuoren.
             retkiKuori = Rakenne.El("mk-paavalikko__retkikuori", Sisalto, PickingMode.Ignore);
             Retkikunta = Rakenne.El("mk-paavalikko__retkikunta", retkiKuori, PickingMode.Ignore);
             Retkikunta.style.display = DisplayStyle.None;
             // Kehittäjärivit vain Kehittäjä-osassa kehittäjätilassa (Fablen tarkastus C4, löydös 65: ei pelaajalle).
             kokeet = Rakenne.El("mk-paavalikko__kokeet", Sisalto, PickingMode.Ignore);
-            Rakenne.Teksti("KEHITTÄJÄ", "mk-pudotus__otsikko", kokeet);
+            Rakenne.Teksti("KEHITTÄJÄ", "mk-pudotus__otsikko", kokeet);   // kieli: ei (kehittäjätyökalu)
             // Löydös 103 (omistaja build 13): Maailma-tilan kytkin kehittäjäosassa.
             maailma = Rakenne.Nappi(null, "mk-kytkinrivi", () => { AsetaMaailma(!Maailma); Paivita(); }, kokeet, Maapallo);
-            maailma.tooltip = "Maailmanäkymä: huntu pois ja liikkuminen koko pallolla (kehittäjä)";
-            Rakenne.Teksti("Maailma", "mk-kytkinrivi__nimi", maailma);
+            maailma.tooltip = "Maailmanäkymä: huntu pois ja liikkuminen koko pallolla (kehittäjä)";   // kieli: ei (kehittäjätyökalu)
+            Rakenne.Teksti("Maailma", "mk-kytkinrivi__nimi", maailma);   // kieli: ei (kehittäjätyökalu)
             maailmaTila = Rakenne.Teksti("", "mk-kytkinrivi__tila", maailma);
             reliefi = Rakenne.Nappi(null, "mk-kytkinrivi", VaihdaReliefi, kokeet, Ikonit.Viiva["satelliitti"]);
-            reliefi.tooltip = "Astronautin kameran reliefi: täysvärinen (1,0) tai webin vaimea (0,8). Näkyy seuraavalla avauksella.";
-            Rakenne.Teksti("Astronautin reliefi", "mk-kytkinrivi__nimi", reliefi);
+            reliefi.tooltip = "Astronautin kameran reliefi: täysvärinen (1,0) tai webin vaimea (0,8). Näkyy seuraavalla avauksella.";   // kieli: ei (kehittäjätyökalu)
+            Rakenne.Teksti("Astronautin reliefi", "mk-kytkinrivi__nimi", reliefi);   // kieli: ei (kehittäjätyökalu)
             reliefiTila = Rakenne.Teksti("", "mk-kytkinrivi__tila", reliefi);
             // Omistaja 7.10. 12.5x: kokeilukytkimet myös App Store -käännöksessä (näkyvät vasta kehittäjäkoodilla); työhuone ei.
             // Linssien avautumiskynnykset (Linssiseppä): kehittäjätilassa kaikki linssit auki.
@@ -79,16 +79,16 @@ namespace Matkakirja.Natiivi
                 LinssiOhjain.AsetaKehittajatila(!Matkakirja.Linssit.Linssirekisteri.Kehittajatila);
                 Paivita();
             }, kokeet, Ikonit.Viiva["taikalasit"]);
-            kynnykset.tooltip = "Linssien kynnykset: pois = kaikki linssit auki (kehittäjä).";
-            Rakenne.Teksti("Linssien kynnykset", "mk-kytkinrivi__nimi", kynnykset);
+            kynnykset.tooltip = "Linssien kynnykset: pois = kaikki linssit auki (kehittäjä).";   // kieli: ei (kehittäjätyökalu)
+            Rakenne.Teksti("Linssien kynnykset", "mk-kytkinrivi__nimi", kynnykset);   // kieli: ei (kehittäjätyökalu)
             kynnyksetTila = Rakenne.Teksti("", "mk-kytkinrivi__tila", kynnykset);
             // Pohjakartan sävy (Natiiviseppä, omistajan löydös 27.9. klo 17.2x: maitomaisempi kartta, arvo valitaan laitteella):
             // vedon aikana kartalle heti, levylle vasta sormen noustessa (Pohjasavy.Aseta tallenna).
             kontrasti = SavyRivi("Kartan kontrasti", Pohjasavy.KontrastiMin, Pohjasavy.KontrastiMax, true);
             nosto = SavyRivi("Mustan nosto", Pohjasavy.NostoMin, Pohjasavy.NostoMax, false);
             var savyNollaus = Rakenne.Nappi(null, "mk-kytkinrivi", () => { Pohjasavy.Aseta(0f, 0f); PaivitaSavy(); }, kokeet, Ikonit.Viiva["paivita"]);
-            savyNollaus.tooltip = "Kartan kontrasti ja mustan nosto oletukseen (0, 0).";
-            Rakenne.Teksti("Kartan sävy oletukseen", "mk-kytkinrivi__nimi", savyNollaus);
+            savyNollaus.tooltip = "Kartan kontrasti ja mustan nosto oletukseen (0, 0).";   // kieli: ei (kehittäjätyökalu)
+            Rakenne.Teksti("Kartan sävy oletukseen", "mk-kytkinrivi__nimi", savyNollaus);   // kieli: ei (kehittäjätyökalu)
             // Paperin rae ja patina (Natiiviseppä, omistajan tilaus 27.9. klo 23.4x: tasot testataan laitteella, hyvät arvot
             // poltetaan myöhemmin laattoihin; Pohjapatina). Sama kaava kuin sävyssä: vedon aikana kartalle, levylle irrotettaessa.
             patinaRivit.Clear();
@@ -107,8 +107,8 @@ namespace Matkakirja.Natiivi
                 Pohjapatina.Aseta(0f, Pohjapatina.OletusKoko, 0f, 0f, 0f);
                 PaivitaSavy();
             }, kokeet, Ikonit.Viiva["paivita"]);
-            patinaNollaus.tooltip = "Paperin rae ja patina oletukseen (0 = poltettu kartta sellaisenaan).";
-            Rakenne.Teksti("Rae ja patina oletukseen", "mk-kytkinrivi__nimi", patinaNollaus);
+            patinaNollaus.tooltip = "Paperin rae ja patina oletukseen (0 = poltettu kartta sellaisenaan).";   // kieli: ei (kehittäjätyökalu)
+            Rakenne.Teksti("Rae ja patina oletukseen", "mk-kytkinrivi__nimi", patinaNollaus);   // kieli: ei (kehittäjätyökalu)
             // Historiamoottorin pelattava pala (Päätoimittaja 7.10. 16.0x): omistaja pelaa E1:n itse TF:ssä kehittäjäkoodilla.
             // Jatka/Alusta (Natiivi-UI SeikkailuTapit.AvaaPelattavaPala, V6 tallennus); vara suoraan alusta.
             var pala = Rakenne.Nappi(null, "mk-kytkinrivi", () =>
@@ -117,12 +117,12 @@ namespace Matkakirja.Natiivi
                 var m = typeof(Paavalikko).Assembly.GetType("Matkakirja.Natiivi.SeikkailuTapit")?.GetMethod("AvaaPelattavaPala", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static, null, System.Type.EmptyTypes, null);
                 if (m != null) m.Invoke(null, null); else LinssiOhjain.AvaaPelattavaPala();
             }, kokeet, Ikonit.Viiva["taikalasit"]);
-            pala.tooltip = "Olavinlinnan peliosan kokeilu: venesaapuminen, laituri, keittiö (kehittäjä).";
-            Rakenne.Teksti("Olavinlinna – pelattava pala (kokeilu)", "mk-kytkinrivi__nimi", pala);
+            pala.tooltip = "Olavinlinnan peliosan kokeilu: venesaapuminen, laituri, keittiö (kehittäjä).";   // kieli: ei (kehittäjätyökalu)
+            Rakenne.Teksti("Olavinlinna – pelattava pala (kokeilu)", "mk-kytkinrivi__nimi", pala);   // kieli: ei (kehittäjätyökalu)
             // Volumetriset valot (kuunsäteet; Päätoimittaja 7.10. 20.4x: testaaja voi sammuttaa ajon aikana, jos jotain hajoaa).
             volumetriset = Rakenne.Nappi(null, "mk-kytkinrivi", () => { SeikkailuValot.Aseta(volumetriset: !SeikkailuValot.Volumetriset); Paivita(); }, kokeet, Ikonit.Viiva["yo"]);
-            volumetriset.tooltip = "Linnan volumetriset valot (kuunsäteet) päälle tai pois heti (kehittäjä). Oletus: Mac ja M-sarjan iPad päällä.";
-            Rakenne.Teksti("Volumetriset valot", "mk-kytkinrivi__nimi", volumetriset);
+            volumetriset.tooltip = "Linnan volumetriset valot (kuunsäteet) päälle tai pois heti (kehittäjä). Oletus: Mac ja M-sarjan iPad päällä.";   // kieli: ei (kehittäjätyökalu)
+            Rakenne.Teksti("Volumetriset valot", "mk-kytkinrivi__nimi", volumetriset);   // kieli: ei (kehittäjätyökalu)
             volumetrisetTila = Rakenne.Teksti("", "mk-kytkinrivi__tila", volumetriset);
             // Striimiääni muutti kehittäjävalikosta nostokortin säätörattaaseen pelinimellä (omistaja 27.9. klo 10.2x,
             // web #3388; KortinLukija, Striimiaani.Pelinimet).
@@ -138,7 +138,7 @@ namespace Matkakirja.Natiivi
             MitaUutta = new MitaUutta(kerros, kehittaja.Avaa);
             // Kehittäjäkoodi (sama ikkuna aukeaa myös Asetusten Kehittäjä-kytkimestä ja Mitä uutta -näkymän napista).
             var koodi = Rakenne.Nappi(null, "mk-kytkinrivi", () => { Sulje(); kehittaja.Avaa(); }, kokeet, Ikonit.Ratas);
-            Rakenne.Teksti("Kehittäjäkoodi", "mk-kytkinrivi__nimi", koodi);
+            Rakenne.Teksti("Kehittäjäkoodi", "mk-kytkinrivi__nimi", koodi);   // kieli: ei (kehittäjätyökalu)
             Asetukset.Muuttui += _ => { VarmistaMaailma(); if (Auki) Paivita(); };
             kerros.Juuri(UiKerros.Valikot).schedule.Execute(VarmistaMaailma).StartingIn(1000);
         }
@@ -146,15 +146,15 @@ namespace Matkakirja.Natiivi
         public void KysyUusiPeli()
         {
             // KORTTI-pohja (web #3793): kapiteeli "Uusi peli", otsikkona kysymys, viimeinen virke korostuskappaleena.
-            vahvistus.Kysy("Aloitetaanko uusi matka?",
-                "Matka alkaa alusta ja kaikki muistit tyhjennetään: tallennettu peli, passin leimat, laukun tavarat ja ääniasetukset.",
-                "Peruuta", "Aloita alusta", () =>
+            vahvistus.Kysy(Kieli.T("ui.paavalikko.uusi-matka.kysymys"),
+                Kieli.T("ui.paavalikko.uusi-matka.teksti"),
+                Kieli.T("ui.yleinen.peruuta"), Kieli.T("ui.paavalikko.uusi-matka.aloita"), () =>
                 {
                     Asetukset.Nollaa();
                     // Web tyhjennaMuistit pyyhkii myös pro-tunnuksen (matkakirja-pro-tunnus).
                     Palautekanava.AsetaProTunnus(null, null);
                     UusiPeli?.Invoke();
-                }, kapiteeliTeksti: "Uusi peli", korostusTeksti: "Tätä ei voi perua.");
+                }, kapiteeliTeksti: Kieli.T("ui.paavalikko.uusi-matka.kapiteeli"), korostusTeksti: Kieli.T("ui.paavalikko.uusi-matka.korostus"));
         }
 
         public void Ehdota() => EhdotaPainettu?.Invoke();
@@ -311,19 +311,19 @@ namespace Matkakirja.Natiivi
             if (!kehittajaOsa) return;
             PaivitaSavy();
             maailma.EnableInClassList("mk-valittu", Maailma);
-            maailmaTila.text = Maailma ? "PÄÄLLÄ" : "POIS";
+            maailmaTila.text = Maailma ? "PÄÄLLÄ" : "POIS";   // kieli: ei (kehittäjätyökalu)
             reliefi.EnableInClassList("mk-valittu", ReliefiTaysi);
-            reliefiTila.text = ReliefiTaysi ? "TÄYSI" : "VAIMEA";
+            reliefiTila.text = ReliefiTaysi ? "TÄYSI" : "VAIMEA";   // kieli: ei (kehittäjätyökalu)
             if (kynnykset != null)
             {
                 bool paalla = !Matkakirja.Linssit.Linssirekisteri.Kehittajatila;
                 kynnykset.EnableInClassList("mk-valittu", paalla);
-                kynnyksetTila.text = paalla ? "PÄÄLLÄ" : "POIS";
+                kynnyksetTila.text = paalla ? "PÄÄLLÄ" : "POIS";   // kieli: ei (kehittäjätyökalu)
             }
             if (volumetriset != null)
             {
                 volumetriset.EnableInClassList("mk-valittu", SeikkailuValot.Volumetriset);
-                volumetrisetTila.text = SeikkailuValot.Volumetriset ? "PÄÄLLÄ" : "POIS";
+                volumetrisetTila.text = SeikkailuValot.Volumetriset ? "PÄÄLLÄ" : "POIS";   // kieli: ei (kehittäjätyökalu)
             }
         }
     }
@@ -346,16 +346,16 @@ namespace Matkakirja.Natiivi
             himmennys.RegisterCallback<PointerDownEvent>(e => { if (e.target == himmennys) Sulje(); });
             var kortti = new Kortti("mk-kehittaja");
             himmennys.Add(kortti);
-            Kirjasimet.Aseta(Rakenne.Teksti("Kehittäjätila", "mk-kortti__otsikko", kortti.Sisus), Kirjasin.LukuLihava);
+            Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.kehittaja.otsikko"), "mk-kortti__otsikko", kortti.Sisus), Kirjasin.LukuLihava);
             selite = Rakenne.Teksti("", "mk-kortti__teksti", kortti.Sisus);
             kentta = new TextField { isPasswordField = true, maxLength = 64 };
             kentta.AddToClassList("mk-chat__kentta");
-            kentta.textEdition.placeholder = "Koodi";
+            kentta.textEdition.placeholder = Kieli.T("ui.kehittaja.koodi");
             kortti.Sisus.Add(kentta);
-            virhe = Rakenne.Teksti("Koodi ei kelpaa.", "mk-kortti__teksti mk-kehittaja__virhe", kortti.Sisus);
+            virhe = Rakenne.Teksti(Kieli.T("ui.kehittaja.ei-kelpaa"), "mk-kortti__teksti mk-kehittaja__virhe", kortti.Sisus);
             var napit = Rakenne.El("mk-kortti__napit", kortti.Sisus, PickingMode.Ignore);
-            Rakenne.Nappi("Peruuta", "mk-nappi--haamu", Sulje, napit);
-            ok = Rakenne.Nappi("Kytke päälle", "mk-nappi--kulta", Kytke, napit);
+            Rakenne.Nappi(Kieli.T("ui.yleinen.peruuta"), "mk-nappi--haamu", Sulje, napit);
+            ok = Rakenne.Nappi(Kieli.T("ui.kehittaja.kytke-paalle"), "mk-nappi--kulta", Kytke, napit);
             Rakenne.Tausta(ok, Kuviot.Kulta);
             Kirjasimet.Aseta(ok, Kirjasin.KoneLihava);
         }
@@ -363,13 +363,13 @@ namespace Matkakirja.Natiivi
         public void Avaa()
         {
             bool paalla = Asetukset.Kehittaja || Asetukset.Testaaja;
-            selite.text = Asetukset.Kehittaja ? "Kehittäjätila on päällä: Kehittäjätyökalut näkyvät Asetuksissa."
-                : Asetukset.Testaaja ? "Testaajatila on päällä: kaikki linssit ja vapaa liikkuminen kartalla."
-                : "Kehittäjä- tai testaajakoodi avaa lisätoiminnot.";
+            selite.text = Asetukset.Kehittaja ? Kieli.T("ui.kehittaja.kehittaja-paalla")
+                : Asetukset.Testaaja ? Kieli.T("ui.kehittaja.testaaja-paalla")
+                : Kieli.T("ui.kehittaja.selite");
             kentta.style.display = paalla ? DisplayStyle.None : DisplayStyle.Flex;
             kentta.value = "";
             virhe.style.display = DisplayStyle.None;
-            ok.Q<Label>().text = paalla ? "Kytke pois" : "Kytke päälle";
+            ok.Q<Label>().text = paalla ? Kieli.T("ui.kehittaja.kytke-pois") : Kieli.T("ui.kehittaja.kytke-paalle");
             Rakenne.Nayta(himmennys, true, 220);
             SyoteLukko.Esta(this);
         }

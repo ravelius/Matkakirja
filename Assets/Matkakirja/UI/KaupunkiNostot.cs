@@ -73,7 +73,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Web KAUPUNGIN_SADE_KM (Pariisin mitalla: Versailles 17 km jää kartalle).</summary>
         public const double SadeKm = 12;
         public const string MuutAihe = "";
-        public const string MuutNimi = "Muut";
+        public static string MuutNimi => Kieli.T("ui.nosto.kategoria-muut");
 
         /// <summary>Web --sym-* (css/styles.css) karttavaloVari-reitillä; puuttuva = kaupunki.</summary>
         static readonly Dictionary<string, string> Varit = new Dictionary<string, string>

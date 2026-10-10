@@ -43,6 +43,10 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Äänen tunniste (PCM ensisijainen, muuten mp3); null = ei ääntä.</summary>
         public string AaniAvain => !string.IsNullOrEmpty(AaniPcm) ? AaniPcm : Aani;
         public double Lat, Lon, KokoM = 60, KorkeusM, KestoS;
+        /// <summary>Kohteen oma katsesuunta (Linssiseppä 9.10., PT junaan 174: Vasa-museo veden puolelta mastoineen; worker
+        /// "katse_suunta", astetta pohjoisesta, suunta johon kamera katsoo): korvaa lentosuunnan pysähdyksen kehyksessä (pallon
+        /// kääntöraja pätee yhä). NaN = lentosuunnan mukaan kuten ennen.</summary>
+        public double KatseSuunta = double.NaN;
         /// <summary>Workerin kysymys (tyyppi "kysymys"): opas kysyy ääneen, vaihtoehdot chattiin; ei sijaintia.</summary>
         public bool Kysymys;
         public string[] Vaihtoehdot;
@@ -68,6 +72,7 @@ namespace Matkakirja.Linssit.Kierros
                 Id = S("id"), Nimi = S("nimi"), Alarivi = S("alarivi"), Teksti = S("teksti"), Aani = S("aani"), AaniPcm = S("aani_pcm"),
                 AaniAjat = S("aani_ajat"), AaniTaajuus = (int)D("aani_taajuus", 24000),
                 Lat = D("lat", double.NaN), Lon = D("lon", double.NaN), KokoM = D("koko_m", 60), KorkeusM = D("korkeus_m", 0), KestoS = D("kesto_s", 0),
+                KatseSuunta = D("katse_suunta", double.NaN),
             };
             if (j.TryGetValue("vaihtoehdot", out var pv) && pv is IList<object> pl)
             {
@@ -240,6 +245,8 @@ namespace Matkakirja.Linssit.Kierros
         public double LentoKestoS { get; private set; }
         /// <summary>Lennon kaaren vähimmäiskorkeus (rho; OpasKuvaus.NopeusRho), 0 = oletus.</summary>
         double lentoRho;
+        /// <summary>Seuraavan lennon esilatauksen nousu (NopeusRho) välimuistissa.</summary>
+        string esiRhoAvain; double esiRho;
         /// <summary>Alkaneen lennon mittari (OpasKuvaus.Mittari): suurin kiihtyvyys m/s² ja suurin laskunopeus m/s; siirrossa (0, 0).</summary>
         public (double kiihtyvyys, double lasku) LentoMittari { get; private set; }
         /// <summary>Lähtevä pyyntö: toive (tai null) — sovitin lähettää workerille. Palauttaa pyynnön järjestysnumeron.</summary>
@@ -346,6 +353,7 @@ namespace Matkakirja.Linssit.Kierros
         {
             lentoKaari = 0; lentoKaariLoppuW = 0;
             if (!PalloLento || !KierrosKaynnissa || siirto || suoraLasku || kohdeKehys == null || k?.Id == null || LentoKestoS < 8 || lahto.EtaisyysM > 1500) return;   // ei yleiskuvasta laskeutuessa
+            if (!double.IsNaN(k.KatseSuunta)) return;   // kohteen oma katsesuunta (Vasa): kaari seuraavaa kohti kääntäisi sen pois
             (double lat, double lon)? seur = null;
             for (int i = 0; i + 1 < kierrosJono.Count; i++)
                 if (KierrosLento.EtaisyysM(kierrosJono[i].lat, kierrosJono[i].lon, k.Lat, k.Lon) < 80) { seur = (kierrosJono[i + 1].lat, kierrosJono[i + 1].lon); break; }
@@ -516,6 +524,11 @@ namespace Matkakirja.Linssit.Kierros
         /// Pallolennon saapumissuunta: kohteen kehys katsoo enintään niin paljon nykyisestä suunnasta poispäin, että suunta kääntyy
         /// koko lennon ajan etenemisen mukana (huippu enintään 2 × keskiarvo) enintään PalloKaantoAstS asteen sekuntinopeudella.
         /// </summary>
+        /// <summary>Kehyksen tulosuunta: kohteen oma katsesuunta (OpasKohde.KatseSuunta − SivuKulma, jolloin kehyksen suuntima on
+        /// juuri katsesuunta), muuten lentosuunta.</summary>
+        public static double KohteenTulo(OpasKohde k, double lentoTulo) =>
+            k != null && !double.IsNaN(k.KatseSuunta) ? KierrosLento.Kiedo(k.KatseSuunta - OpasKuvaus.SivuKulma) : lentoTulo;
+
         public static double PalloTulosuunta(double nykyinen, double lentosuunta, double kestoS)
         {
             // Kääntö vaakaliikkeen mukana: huippu ≈ 2 × keskiarvo (S-käyrä) × korkeussuhde (vaakanopeus ∝ korkeus, pitkillä lennoilla ≤ 1,6) → 3,2;
@@ -1294,6 +1307,7 @@ namespace Matkakirja.Linssit.Kierros
             if (arvio) maa = MaaArvioM;
             tulo = PalloLento ? LennonSuunta(k.Lat, k.Lon) : Suunta(Asento.Lat, Asento.Lon, k.Lat, k.Lon);
             double matkaM = KierrosLento.EtaisyysM(Asento.Lat, Asento.Lon, k.Lat, k.Lon);
+            if (matkaM >= 150) tulo = KohteenTulo(k, tulo);   // kohteen oma katsesuunta (Vasa), kääntöraja alla pätee
             if (matkaM < 150) tulo = Asento.Suuntima;
             // Raja koskee lopullista kehyssuuntimaa (tulo + SivuKulma; video6 Louvre: kääntö 13,6 °/s, kun sivukulma jäi rajan ulkopuolelle).
             else if (PalloLento) tulo = PalloTulosuunta(Asento.Suuntima - OpasKuvaus.SivuKulma, tulo, LennonKesto(matkaM));
@@ -1423,6 +1437,15 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Kaaren suunta kohti seuraavan kohteen puolta: seuraava, odotettu tai kierroslistan seuraava; muuten myötäpäivään.</summary>
         int KaariSuunta(Kuvakulma perus)
         {
+            // KOHTEEN OMA KATSESUUNTA (Vasa-arkki 9.10.: kääntöraja piti saapumisen lentosuunnassa, 99° → 88°): kaari kiertää
+            // pysähdyksen aikana katsesuuntaan ja pysähtyy siihen (Spiraali: +kulma kiertää silmää vastapäivään, suuntima pienenee).
+            if (Nykyinen != null && !double.IsNaN(Nykyinen.KatseSuunta)
+                && KierrosLento.EtaisyysM(Nykyinen.Lat, Nykyinen.Lon, perus.Lat, perus.Lon) < 80)
+            {
+                double d = KierrosLento.Kiedo(perus.Suuntima - Nykyinen.KatseSuunta);
+                kaariRaja = Math.Abs(d);
+                return d >= 0 ? 1 : -1;
+            }
             (double, double)? kohti = Seuraava != null && !Seuraava.Kysymys ? (Seuraava.Lat, Seuraava.Lon) : OdotettuPaikka;
             if (kohti == null && NykyinenKehys != null)
                 for (int i = 0; i + 1 < kierrosJono.Count; i++)
@@ -1496,7 +1519,12 @@ namespace Matkakirja.Linssit.Kierros
                 double A0 = Math.PI / 180, rr = NykyinenKehys.EtaisyysM * Math.Sin(NykyinenKehys.Kallistus * A0), hh = NykyinenKehys.EtaisyysM * Math.Cos(NykyinenKehys.Kallistus * A0);
                 double tau = Math.Max(OpasKuvaus.SpiraaliAikaS, 0.86 * (rr * OpasKuvaus.SpiraaliLahesty + hh * OpasKuvaus.SpiraaliLasku) / OpasKuvaus.SpiraaliMaxMS);
                 double q = 1 - Math.Exp(-Math.Pow(lipumisRaaka / tau, 2));
-                Asento = Ohjaus.Sovella(OpasKuvaus.Spiraali(perus, kaariKulma, q, NykyinenKehys.MaaM, NykyinenKehys.KattoYlaM), NykyinenKehys.MaaM, NykyinenKehys.KattoYlaM);
+                // Oma katsesuunta (PT 9.10. Vasa: "matalimmassa kohdassa etualan tummat katot peittävät mastojen juuren"): kierre lähestyy
+                // mutta ei laske saapumiskorkeutta alemmas, joten valittu näkymä pysyy esteettä.
+                double kattoK = NykyinenKehys.KattoYlaM;
+                if (Nykyinen != null && !double.IsNaN(Nykyinen.KatseSuunta))
+                    kattoK = Math.Max(kattoK, perus.KatseKorkeusM + perus.EtaisyysM * Math.Cos(perus.Kallistus * A0) - NykyinenKehys.MaaM - 5);
+                Asento = Ohjaus.Sovella(OpasKuvaus.Spiraali(perus, kaariKulma, q, NykyinenKehys.MaaM, kattoK), NykyinenKehys.MaaM, NykyinenKehys.KattoYlaM);
                 return;
             }
             // Pallon avausnäkymä (kehys ilman kohdetta; omistaja TF 168: "parin kertojan lauseen jälkeen kip kääntyy kovalla vauhdilla
@@ -1592,7 +1620,7 @@ namespace Matkakirja.Linssit.Kierros
         public int ReittiEsilataus(Func<OpasKohde, double> maaKorkeus, Kuvakulma[] ulos)
         {
             if (ulos == null || VapaaTila || Siirtymassa || Tauolla) return 0;
-            Kuvakulma a, b; double t0, rho = 0;   // seuraavan lennon nousua (NopeusRho) ei vielä tiedetä: esilataus matalalta
+            Kuvakulma a, b; double t0, rho = 0;
             if (Vaihe == OpasVaihe.Lentaa)
             {
                 // Myös siirtymälento (kierroksen aloitus yleiskuvasta arviokehykseen, video4 5–12 s karkeana).
@@ -1606,6 +1634,19 @@ namespace Matkakirja.Linssit.Kierros
                 if (matka >= SiirtoRajaM || SamaPaikka()) return 0;   // siirto ei lennä; "kerro lisää" jää paikalleen
                 b = KehysAsento(KehysKohteelle(Seuraava, maaKorkeus), 0);
                 t0 = 0;
+                // Seuraavan lennon nousu kaaressa (OpasKuvaus.NopeusRho) samalla kestolla kuin AloitaLento laskee (kuva-arkki 2, p32:
+                // Sacré-Cœurin nopean lennon alussa sumea laatta, koska esilataus kulki matalaa rataa ja lento nousi). Välimuisti:
+                // kohde, lähtöpaikka (~10 m) ja kehyksen etäisyys, joten laskenta ei toistu joka kehys.
+                if (PalloLento)
+                {
+                    string avain = $"{Seuraava.Nimi}|{a.Lat:F4}|{a.Lon:F4}|{b.EtaisyysM:F0}";
+                    if (avain != esiRhoAvain)
+                    {
+                        double kesto = LennonKesto(matka) * (!(PalloLento && KierrosKaynnissa) || nopeatKohteet.Contains(Seuraava.Nimi ?? "") ? 1 : PalloRauhallinenKerroin);
+                        esiRhoAvain = avain; esiRho = OpasKuvaus.NopeusRho(a, b, kesto);
+                    }
+                    rho = esiRho;
+                }
             }
             else return 0;
             int n = 0;

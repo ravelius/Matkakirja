@@ -46,14 +46,14 @@ namespace Matkakirja.Natiivi
             var ylarivi = Rakenne.El("mk-tiedeliite__ylarivi", kortti, PickingMode.Ignore);
             var vasen = Rakenne.El("mk-tiedeliite__reuna", ylarivi, PickingMode.Ignore);
             var hampurilainen = Rakenne.Nappi(null, "mk-tiedeliite__ikoninappi", VaihdaSisallys, vasen, Ikonit.Valikko);
-            hampurilainen.tooltip = "Sisällys: kaikki keksijät";
+            hampurilainen.tooltip = Kieli.T("ui.tiedeliite.sisallys-keksijat");
             var nimiot = Rakenne.El("mk-tiedeliite__nimiot", ylarivi, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti(Tiedeliite.Nimio.ToUpperInvariant(), "mk-tiedeliite__nimio", nimiot), Kirjasin.KoneLihava);
             paikkarivi = Rakenne.Teksti("", "mk-tiedeliite__paikkarivi", nimiot);
             Kirjasimet.Aseta(paikkarivi, Kirjasin.LukuKursiivi);
             var oikea = Rakenne.El("mk-tiedeliite__reuna mk-tiedeliite__reuna--oikea", ylarivi, PickingMode.Ignore);
             // Kaksinappinen lukija (omistaja 28.9.2026, web #3537): [valikko][kaiutin] sulkijan vasemmalla.
-            lukija = new KortinLukija(oikea, "Kuuntele tiedeliite", "mk-tiedeliite__lukija", saatimet: true, rajaus: () => kortti.worldBound);
+            lukija = new KortinLukija(oikea, Kieli.T("ui.tiedeliite.kuuntele"), "mk-tiedeliite__lukija", saatimet: true, rajaus: () => kortti.worldBound);
             // Ei ✕:ää (omistaja 5.10.2026 klo 00.1x: "pyritään aina välttämään turhia x nappeja"; Päätoimittajan ✕-inventaario): peitteen napautus kortin
             // ulkopuolelle sulkee (lisätty samalla), samoin linssin sulku.
             peite.RegisterCallback<PointerDownEvent>(e => { if (e.target == peite) Sulje(); });
@@ -116,7 +116,7 @@ namespace Matkakirja.Natiivi
             if (!string.IsNullOrEmpty(alkusanat) && lahde.Sisallys().Count > 0 && lahde.Sisallys()[0].I == j)
                 Kirjasimet.Aseta(Rakenne.Teksti(alkusanat, "mk-tiedeliite__alkusanat", sivu), Kirjasin.LukuKursiivi);
             PiirraSivu(sivu, s);
-            lukija.Aseta(new[] { s.Otsikko }.Concat(s.Ingressi).Concat(s.Juttu).Concat(s.Henkilojuttu), "Kuuntele tiedeliite");
+            lukija.Aseta(new[] { s.Otsikko }.Concat(s.Ingressi).Concat(s.Juttu).Concat(s.Henkilojuttu), Kieli.T("ui.tiedeliite.kuuntele"));
             Naviteksti(edellinen, s.Edellinen, "‹", true);
             Naviteksti(seuraava, s.Seuraava, "›", false);
             if (avattu) lahde.JuttuVaihtui(j);
@@ -139,7 +139,7 @@ namespace Matkakirja.Natiivi
             var t = j >= 0 ? lahde?.Tiedeliite(j) : null;
             nappi.SetEnabled(t != null);
             var l = nappi.Q<Label>();
-            if (t == null) { l.text = ennen ? merkki + " Kaaren alku" : "Kaaren loppu " + merkki; return; }
+            if (t == null) { l.text = ennen ? Kieli.T("ui.tiedeliite.kaaren-alku", merkki) : Kieli.T("ui.tiedeliite.kaaren-loppu", merkki); return; }
             string nimi = (t.Henkilo ?? t.Otsikko ?? "").Trim();
             string aika = Ajoitus(t);
             l.text = ennen ? merkki + " " + (aika + " " + nimi).Trim() : (aika + " " + nimi).Trim() + " " + merkki;
@@ -210,7 +210,7 @@ namespace Matkakirja.Natiivi
             if (s.Henkilojuttu.Count > 0)
             {
                 var osio = Rakenne.El("mk-tiedeliite__keksija", sivu, PickingMode.Ignore);
-                Kirjasimet.Aseta(Rakenne.Teksti(s.Henkilo ?? "Keksijä", "mk-tiedeliite__valiotsikko", osio), Kirjasin.LukuLihava);
+                Kirjasimet.Aseta(Rakenne.Teksti(s.Henkilo ?? Kieli.T("ui.tiedeliite.keksija"), "mk-tiedeliite__valiotsikko", osio), Kirjasin.LukuLihava);
                 var rivi = Rakenne.El("mk-tiedeliite__palsta", osio, PickingMode.Ignore);
                 var teksti = Rakenne.El("mk-tiedeliite__leipa", rivi, PickingMode.Ignore);
                 foreach (var k in s.Henkilojuttu) Rakenne.Teksti(k, "mk-tiedeliite__kappale", teksti);

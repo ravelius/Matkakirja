@@ -47,16 +47,16 @@ namespace Matkakirja.Natiivi
             });
             kuva = Rakenne.El("mk-issomakuva__kuva", ikkuna, PickingMode.Ignore);
             var alarivi = Rakenne.El("mk-issomakuva__alarivi", ikkuna, PickingMode.Ignore);
-            edellinen = Ohjausnappi.Nappi(Ikonit.Takaisin, "Edellinen kuva", () => Nayta(nyt + 1), alarivi, "harmaa");
+            edellinen = Ohjausnappi.Nappi(Ikonit.Takaisin, Kieli.T("ui.iss.edellinen-kuva"), () => Nayta(nyt + 1), alarivi, "harmaa");
             teksti = Rakenne.Teksti("", "mk-issomakuva__teksti", alarivi);
             Kirjasimet.Aseta(teksti, Kirjasin.Luku);
-            seuraava = Ohjausnappi.Nappi(Ikonit.NuoliOikea, "Uudempi kuva", () => Nayta(nyt - 1), alarivi, "harmaa");
+            seuraava = Ohjausnappi.Nappi(Ikonit.NuoliOikea, Kieli.T("ui.iss.uudempi-kuva"), () => Nayta(nyt - 1), alarivi, "harmaa");
             var ryhma = Ohjausnappi.Ryhma(ikkuna);
-            jaa = Ohjausnappi.Nappi(Ikonit.Jaa, "Jaa kuva", Jaa, ryhma);
-            Ohjausnappi.Nappi(Ikonit.Viiva["rasti"], "Sulje kuva", () => Sulje("sulku"), ryhma);
+            jaa = Ohjausnappi.Nappi(Ikonit.Jaa, Kieli.T("ui.iss.jaa-kuva"), Jaa, ryhma);
+            Ohjausnappi.Nappi(Ikonit.Viiva["rasti"], Kieli.T("ui.iss.sulje-kuva"), () => Sulje("sulku"), ryhma);
 
             pino = Rakenne.El("mk-issomakuva__pino", isa);
-            pino.tooltip = "Omat kuvat";
+            pino.tooltip = Kieli.T("ui.iss.omat-kuvat");
             for (int i = pinonKuvat.Length - 1; i >= 0; i--)
                 pinonKuvat[i] = Rakenne.El("mk-issomakuva__pikku mk-issomakuva__pikku--" + i, pino, PickingMode.Ignore);
             pino.AddManipulator(new Clickable(() => Avaa(0, null)));
@@ -133,7 +133,7 @@ namespace Matkakirja.Natiivi
             if (maa.Length > 0 && !string.Equals(maa, paikka, StringComparison.OrdinalIgnoreCase)) paikka = paikka.Length > 0 ? paikka + ", " + maa : maa;
             // Ikkunassa päiväys ja kello omalle rivilleen (Päätoimittaja 4.10.: "klo / 18.10" katkesi; U+00A0 piirtyy Luku-fontissa
             // leveänä aukkona, LS2:n Cupola-ruutu), jakoarkissa yhdelle riville.
-            return "Oma kuva" + (paikka.Length > 0 ? " · " + paikka : "") + (kahdelleRiville ? "\n" : " · ") + $"{d.Day}.{d.Month}.{d.Year} klo {d.Hour}.{d.Minute:00}";
+            return Kieli.T("ui.iss.oma-kuva") + (paikka.Length > 0 ? " · " + paikka : "") + (kahdelleRiville ? "\n" : " · ") + Kieli.T("ui.iss.kuvaushetki", d.Day, d.Month, d.Year, d.Hour, d.Minute.ToString("00"));
         }
 
         void Nayta(int i)

@@ -37,5 +37,22 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(0, Valmisluennat.Lue("ei jsonia", "https://x/y.json"), "virheellinen manifesti");
             Valmisluennat.Nollaa();
         }
+
+        [Testi] static void PettanytValmisPoistuuIstunnosta()
+        {
+            Valmisluennat.Nollaa();
+            Oleta.Sama(0, Valmisluennat.Petti("https://x/y.mp3"), "ilman manifestia ei poistettavaa");
+            string a = Valmisluennat.Avain("Yksi", "eleven_v4_turbo", "W", 1.15, ""), b = Valmisluennat.Avain("Kaksi", "eleven_v4_turbo", "W", 1.15, "");
+            Valmisluennat.Lue("{\"versio\":1,\"aanet\":{\"W\":\"eleven_v4_turbo\"},\"palat\":{\"" + a + "\":{\"u\":\"k/" + a + ".mp3\"},\""
+                + b + "\":{\"u\":\"k/" + b + ".mp3\"}}}", "https://media.matkakirja.app/aanet/luennat/v1/manifest.json");
+            string url = Valmisluennat.Url("Yksi", "W", 1.15, "");
+            Oleta.Tosi(url != null, "osuma ennen");
+            Oleta.Sama(1, Valmisluennat.Petti(url), "yksi avain pois");
+            Oleta.Sama(null, Valmisluennat.Url("Yksi", "W", 1.15, ""), "pettänyt → palavirta (null)");
+            Oleta.Tosi(Valmisluennat.Url("Kaksi", "W", 1.15, "") != null, "muut säilyvät");
+            Oleta.Sama(1, Valmisluennat.Maara, "määrä");
+            Oleta.Sama(0, Valmisluennat.Petti(url), "toinen kerta: ei mitään");
+            Valmisluennat.Nollaa();
+        }
     }
 }

@@ -65,7 +65,7 @@ namespace Matkakirja.Natiivi
         {
             var turva = kerros.Turva(LinssiUi.Kerros);
             nappi = Rakenne.Nappi(null, "mk-linssiNappi", Vaihda, turva, Ikonit.Viiva["taikalasit"]);
-            nappi.tooltip = "Linssit";
+            nappi.tooltip = Kieli.T("ui.linssi.linssit");
             nappi.style.display = DisplayStyle.None;
             Aloitusnakyma.AukiMuuttui += _ => PaivitaNakyvyys();
 
@@ -77,10 +77,10 @@ namespace Matkakirja.Natiivi
 
             ylarivi = Rakenne.El("mk-selite__ylarivi", paneeli, PickingMode.Ignore);
             // Pillerivalikon alinäkymät (Linssit, Aarteet): ‹ Takaisin pääsivulle (Linssivalitsin.Pilleri.cs).
-            alaTakaisin = Rakenne.Nappi("‹ Takaisin", "mk-selite__sulje mk-linssivalitsin__takaisin", () => NaytaNakyma(Nakyma.Paa), ylarivi);
-            alaTakaisin.tooltip = "Takaisin valikkoon";
+            alaTakaisin = Rakenne.Nappi(Kieli.T("ui.yleinen.takaisin-nuoli"), "mk-selite__sulje mk-linssivalitsin__takaisin", () => NaytaNakyma(Nakyma.Paa), ylarivi);
+            alaTakaisin.tooltip = Kieli.T("ui.paavalikko.takaisin-valikkoon");
             alaTakaisin.style.display = DisplayStyle.None;
-            otsikko = Rakenne.Teksti("LINSSIT", "mk-selite__otsikko", ylarivi);
+            otsikko = Rakenne.Teksti(Kieli.T("ui.pelit.valilehti-linssit"), "mk-selite__otsikko", ylarivi);
 
             var vieritys = new ScrollView(ScrollViewMode.Vertical);
             vieritys.AddToClassList("mk-linssivalitsin__vieritys");
@@ -95,7 +95,7 @@ namespace Matkakirja.Natiivi
             this.vieritys = vieritys;
             LuoPilleriOsat(turva, kerros);
 
-            poisNappi = Rakenne.Nappi("Ota linssi pois", "mk-nappi--haamu mk-linssivalitsin__pois", () => { Sulje(); Suljettava?.Invoke(); }, paneeli);
+            poisNappi = Rakenne.Nappi(Kieli.T("ui.linssi.ota-linssi-pois"), "mk-nappi--haamu mk-linssivalitsin__pois", () => { Sulje(); Suljettava?.Invoke(); }, paneeli);
             poisNappi.style.display = DisplayStyle.None;
 
             kerros.TurvaMuuttui += Asettele;
@@ -165,7 +165,7 @@ namespace Matkakirja.Natiivi
             {
                 bool p = rid == (id ?? EiLinssia);
                 rivi.EnableInClassList("mk-valittu", p);
-                tila.text = p ? "PÄÄLLÄ" : ""; // PANEELI: tila kapiteelina (web #3811)
+                tila.text = p ? Kieli.T("ui.yleinen.paalla-iso") : ""; // PANEELI: tila kapiteelina (web #3811)
                 // "Ei linssiä" vain, kun jokin linssi on päällä (omistaja 5.10.2026 klo 11.0x: "jos ollaan päänäkymässä, eli
                 // normaalilla kartalla, niin jätä silloin se pois näkyvistä"); rivi palauttaa normaalin kartan.
                 if (rid == EiLinssia) rivi.style.display = id != null ? DisplayStyle.Flex : DisplayStyle.None;
@@ -335,14 +335,14 @@ namespace Matkakirja.Natiivi
             // Valikkona ilman löydettyjä linssejä: ei otsikkoa eikä tyhjää riviä, vain valikon rivit.
             bool tyhjaValikko = Valikkona && r != null && tiedot.Count == 0;
             // Valikkona otsikko "LINSSIT" on linssien yllä viivan alla, yläkaistassa vain ✕.
-            otsikko.text = Valikkona ? "" : "LINSSIT";
+            otsikko.text = Valikkona ? "" : Kieli.T("ui.pelit.valilehti-linssit");
             lista.style.display = tyhjaValikko ? DisplayStyle.None : DisplayStyle.Flex;
             if (Valikkona && !tyhjaValikko && !PilleriValikko)
             {
                 Rakenne.El("mk-linssivalitsin__erotin", lista, PickingMode.Ignore);
-                Rakenne.Teksti("LINSSIT", "mk-selite__otsikko mk-linssivalitsin__valiotsikko", lista);
+                Rakenne.Teksti(Kieli.T("ui.pelit.valilehti-linssit"), "mk-selite__otsikko mk-linssivalitsin__valiotsikko", lista);
             }
-            if (tiedot.Count == 0 && !tyhjaValikko) Rakenne.Teksti("Linssit latautuvat…", "mk-linssivalitsin__tyhja", lista);
+            if (tiedot.Count == 0 && !tyhjaValikko) Rakenne.Teksti(Kieli.T("ui.linssi.latautuvat"), "mk-linssivalitsin__tyhja", lista);
             if (PilleriValikko && tiedot.Count > 0)
             {
                 // Web (js/ui.js paivitaLinssiTiedot, pariteetti-2 rivi 12): "Ei linssiä" ja valmiit, sitten otsikko
@@ -358,7 +358,7 @@ namespace Matkakirja.Natiivi
                     otsikkorivi.style.flexDirection = FlexDirection.Row;
                     otsikkorivi.style.alignItems = Align.Center;
                     otsikkorivi.style.minHeight = 44f;   // osuma-ala
-                    var o = Rakenne.Teksti("KESKENERÄISET", "mk-selite__otsikko mk-linssivalitsin__valiotsikko", otsikkorivi);
+                    var o = Rakenne.Teksti(Kieli.T("ui.linssi.keskeneraiset-iso"), "mk-selite__otsikko mk-linssivalitsin__valiotsikko", otsikkorivi);
                     o.pickingMode = PickingMode.Ignore;
                     Kirjasimet.Aseta(o, Kirjasin.Kone);
                     var vakanen = Rakenne.Teksti("›", "mk-linssivalitsin__vakanen", otsikkorivi);
@@ -387,7 +387,9 @@ namespace Matkakirja.Natiivi
         readonly Dictionary<string, LinssiTiedot> linssiTiedot = new Dictionary<string, LinssiTiedot>();
         /// <summary>KESKENERÄISET-osio auki (oletuksena kiinni; istunnon ajan, testikomento ui pilleri kesken).</summary>
         public static bool KeskenAuki;
-        static string EsikatselunKuva(LinssiTiedot t) => !string.IsNullOrEmpty(t.Havainnekuva) ? t.Havainnekuva
+        // Fotorealistinen iso varustekuva voittaa linssin oman katalogikuvan (omistaja 9.10.2026, Raamattu #4280).
+        static string EsikatselunKuva(LinssiTiedot t) => FotoIsot.TryGetValue(t.Id, out var f) ? f
+            : !string.IsNullOrEmpty(t.Havainnekuva) ? t.Havainnekuva
             : KatalogiKuvat.TryGetValue(t.Id, out var k) ? k : Matkalaukku.VarusteKuva(t.Id);
 
         /// <summary>
@@ -405,19 +407,42 @@ namespace Matkakirja.Natiivi
         };
         const string KatalogiJuuri = "https://media.matkakirja.app/linssikatalogi/";
 
+        /// <summary>Alustetaan ennen FotoMinit/FotoIsot-tauluja (staattiset kentät tekstijärjestyksessä). Codexin 10 linssin fotot (linssikatalogi/&lt;id&gt;-foto-mini|iso.jpg, Sisältökirjurin avainkartta).</summary>
+        static readonly string[] CodexFotot = { "ajattelijat", "ihmisen-matka", "keksinnot", "maatiedot", "opas", "radio", "satelliitti", "topografia", "vertailu", "vesistot" };
+
         /// <summary>
         /// VARUSTEKUVAT FOTOREALISTISINA (omistaja 9.10.2026 klo 12.0x, Raamattu #4280; Sisältökirjurin avainkartta
         /// varustekuvat-foto-kartta-20261009.json): minikuva listan rivikuvakkeeksi ja laukun ruutuun, iso kuva esikatseluun
-        /// (KatalogiKuvat). Uusinnat tulevat uusilla -v2-avaimilla; tahdet, yokartta ja poikkileikkaus odottavat v2-minejä.
+        /// (FotoIsot). Uusinnat uusilla -v2-avaimilla (CDN), Codexin 10 linssiä linssikatalogi/<id>-foto-mini.jpg.
         /// </summary>
-        internal static readonly Dictionary<string, string> FotoMinit = new Dictionary<string, string>
+        internal static readonly Dictionary<string, string> FotoMinit = Taydenna(new Dictionary<string, string>
         {
-            ["ihmisen-matka-2"] = FotoMiniJuuri + "varuste-ihmisen-matka-2-foto.jpg", ["lentopeli"] = FotoMiniJuuri + "varuste-lentopeli-foto.jpg",
+            ["lentopeli"] = FotoMiniJuuri + "varuste-lentopeli-foto.jpg",
             ["lontoo"] = FotoMiniJuuri + "varuste-lontoo-foto.jpg", ["mylly"] = FotoMiniJuuri + "varuste-mylly-foto.jpg",
             ["maapallon-vuosi"] = FotoMiniJuuri + "varuste-maapallon-vuosi-foto.jpg", ["tavli"] = FotoMiniJuuri + "varuste-tavli-foto.jpg",
             ["isoisa-1873"] = FotoMiniJuuri + "varuste-isoisa-1873-foto.jpg",
-        };
+            // Uusinnat (-v2/-v3: CDN, vanha jää) ja Codexin toimitus (Sisältökirjuri tarkisti).
+            ["tahdet"] = KatalogiJuuri + "tahdet-foto-mini-v3.jpg", ["ihmisen-matka-2"] = KatalogiJuuri + "ihmisen-matka-2-foto-mini-v3.jpg",
+            ["yokartta"] = KatalogiJuuri + "yokartta-foto-mini-v2.jpg",
+            ["poikkileikkaus"] = KatalogiJuuri + "poikkileikkaus-foto-mini-v2.jpg",
+        }, "-foto-mini.jpg");
         const string FotoMiniJuuri = "https://media.matkakirja.app/julisteet/varustekuvat-foto/20261009/";
+
+        /// <summary>Iso fotorealistinen varustekuva esikatseluun (ennen aktivointia); voittaa katalogikuvan ja linssin oman havainnekuvan.</summary>
+        internal static readonly Dictionary<string, string> FotoIsot = Taydenna(new Dictionary<string, string>
+        {
+            ["lentopeli"] = KatalogiJuuri + "lentopeli-havainne.jpg", ["lontoo"] = KatalogiJuuri + "lontoo-havainne.jpg",
+            ["tavli"] = KatalogiJuuri + "tavli-havainne-v2.jpg", ["yokartta"] = KatalogiJuuri + "yokartta-havainne-v2.jpg",
+            ["ihmisen-matka-2"] = KatalogiJuuri + "ihmisen-matka-2-foto-iso-v3.jpg", ["maapallon-vuosi"] = KatalogiJuuri + "maapallon-vuosi-foto-iso-v2.jpg",
+            ["mylly"] = KatalogiJuuri + "mylly-foto-iso-v2.jpg", ["tahdet"] = KatalogiJuuri + "tahdet-foto-iso-v3.jpg",
+            ["poikkileikkaus"] = KatalogiJuuri + "poikkileikkaus-foto-iso-v2.jpg", ["isoisa-1873"] = KatalogiJuuri + "isoisa-1873-foto-iso.jpg",
+        }, "-foto-iso.jpg");
+
+        static Dictionary<string, string> Taydenna(Dictionary<string, string> d, string paate)
+        {
+            foreach (var id in CodexFotot) d[id] = KatalogiJuuri + id + paate;
+            return d;
+        }
 
         /// <summary>Rivin pieni kuva: fotorealistinen minikuva, jos sellainen on, muuten sama kuin esikatselussa.</summary>
         internal static string RivinKuva(string id, string iso) => id != null && FotoMinit.TryGetValue(id, out var m) ? m : iso;
@@ -440,20 +465,20 @@ namespace Matkakirja.Natiivi
             {
                 if (esiId != EiLinssia)
                 {
-                    Esikatsele(EiLinssia, b, tila, null, "Ei linssiä", "Kartta sellaisena kuin isoisä sen piirsi.",
-                        aukiId == null ? "Ota pois" : "Aktivoi", () => { Sulje(); Suljettava?.Invoke(); }, EiLinssiaIkoni);
+                    Esikatsele(EiLinssia, b, tila, null, Kieli.T("ui.linssi.ei-linssia"), Kieli.T("ui.linssi.ei-linssia-selite"),
+                        Kieli.T(aukiId == null ? "ui.linssi.ota-pois" : "ui.linssi.aktivoi"), () => { Sulje(); Suljettava?.Invoke(); }, EiLinssiaIkoni);
                     return;
                 }
                 Sulje();
                 Suljettava?.Invoke();
             }, lista);
-            b.tooltip = "Ei linssiä";
+            b.tooltip = Kieli.T("ui.linssi.ei-linssia");
             b.AddToClassList("mk-linssirivi--aktivoi");
             var ikoni = new SvgIkoni(EiLinssiaIkoni);
             ikoni.AddToClassList("mk-linssirivi__ikoni");
             b.Add(ikoni);
             var nimirivi = Rakenne.El("mk-linssirivi__nimirivi", Rakenne.El("mk-linssirivi__tekstit", b, PickingMode.Ignore), PickingMode.Ignore);
-            Kirjasimet.Aseta(Rakenne.Teksti("Ei linssiä", "mk-linssirivi__nimi", nimirivi), Kirjasin.LukuLihava);
+            Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.linssi.ei-linssia"), "mk-linssirivi__nimi", nimirivi), Kirjasin.LukuLihava);
             tila = Rakenne.Teksti("", "mk-linssirivi__tila", nimirivi);
             rivit.Add((EiLinssia, b, tila));
         }
@@ -474,7 +499,7 @@ namespace Matkakirja.Natiivi
                     // Web (Pelikoodari): kuva LINSSI.havainnekuva tai varana varusteen kuva, teksti esittely tai varana lyhyt.
                     // Aktiivisen linssin rivi: "Ota pois" (palaute 6, web).
                     bool paalla = id == aukiId;
-                    Esikatsele(id, b, tila, EsikatselunKuva(t), t.Nimi, EsikatselunTeksti(t), paalla ? "Ota pois" : "Aktivoi",
+                    Esikatsele(id, b, tila, EsikatselunKuva(t), t.Nimi, EsikatselunTeksti(t), Kieli.T(paalla ? "ui.linssi.ota-pois" : "ui.linssi.aktivoi"),
                         paalla ? () => { Sulje(); Suljettava?.Invoke(); } : () => { Sulje(); Valittu?.Invoke(id); }, LinssinIkoni(t));
                     return;
                 }

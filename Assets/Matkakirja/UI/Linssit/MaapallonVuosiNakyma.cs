@@ -27,7 +27,7 @@ namespace Matkakirja.Natiivi
         const string ToistaIkoni = "<path class=\"taytto\" d=\"M8 5.5v13l10.5-6.5z\"/>";
         const string TaukoIkoni = "<rect class=\"taytto\" x=\"6.5\" y=\"5.5\" width=\"4\" height=\"13\" rx=\"0.8\"/>"
             + "<rect class=\"taytto\" x=\"13.5\" y=\"5.5\" width=\"4\" height=\"13\" rx=\"0.8\"/>";
-        const string EiKerrosta = "Ei kerrosta";
+        static string EiKerrosta => Kieli.T("ui.maapallonvuosi.ei-kerrosta");
 
         readonly UiKerros kerros;
         readonly VisualElement juuri, paneeli, toistaIkoni, taukoIkoni;
@@ -57,7 +57,7 @@ namespace Matkakirja.Natiivi
             kuukausi = new SliderInt(1, 12) { pageSize = 0 };
             kuukausi.AddToClassList("mk-saadin");
             kuukausi.AddToClassList("mk-vuosi__liuku");
-            kuukausi.tooltip = "Kuukausi";
+            kuukausi.tooltip = Kieli.T("ui.maapallonvuosi.kuukausi");
             rivi1.Add(kuukausi);
             kuukausi.RegisterValueChangedCallback(e => { if (!paivittaa) linssi?.AsetaKuukausi(e.newValue); });
             nimi = Rakenne.Teksti("", "mk-vuosi__nimi", rivi1);
@@ -65,7 +65,7 @@ namespace Matkakirja.Natiivi
             var rivi2 = Rakenne.El("mk-vuosi__rivi", paneeli, PickingMode.Ignore);
             valinta = new DropdownField(new List<string> { EiKerrosta }, 0);
             valinta.AddToClassList("mk-vuosi__valinta");
-            valinta.tooltip = "Datakerros";
+            valinta.tooltip = Kieli.T("ui.maapallonvuosi.datakerros");
             Kirjasimet.Aseta(valinta, Kirjasin.Luku);
             rivi2.Add(valinta);
             valinta.RegisterValueChangedCallback(_ =>
@@ -77,7 +77,7 @@ namespace Matkakirja.Natiivi
             peitto = new Slider(0f, 1f) { pageSize = 0 };
             peitto.AddToClassList("mk-saadin");
             peitto.AddToClassList("mk-vuosi__peitto");
-            peitto.tooltip = "Kerroksen läpinäkyvyys";
+            peitto.tooltip = Kieli.T("ui.maapallonvuosi.peitto");
             rivi2.Add(peitto);
             peitto.RegisterValueChangedCallback(e =>
             {
@@ -129,7 +129,7 @@ namespace Matkakirja.Natiivi
                 nimi.text = linssi.KuukaudenNimi.ToUpperInvariant();
                 toistaIkoni.style.display = linssi.Toistaa ? DisplayStyle.None : DisplayStyle.Flex;
                 taukoIkoni.style.display = linssi.Toistaa ? DisplayStyle.Flex : DisplayStyle.None;
-                toista.tooltip = linssi.Toistaa ? "Pysäytä vuosi" : "Toista vuosi";
+                toista.tooltip = Kieli.T(linssi.Toistaa ? "ui.maapallonvuosi.pysayta" : "ui.maapallonvuosi.toista");
                 var kerrokset = linssi.Kerrokset;
                 if (kerrokset.Count != kerrosVersio)
                 {

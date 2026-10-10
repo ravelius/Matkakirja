@@ -70,9 +70,9 @@ namespace Matkakirja.Natiivi
             valinta.RegisterCallback<PointerDownEvent>(e => { if (e.target == valinta) AjattelijatSovitin.PyydaSulku(); });
             kortti = new Kortti("mk-ajattelija-valinta", pohja: true);
             valinta.Add(kortti);
-            Kirjasimet.Aseta(Rakenne.Teksti("Ajattelijat", "mk-kortti__kapiteeli", kortti.Sisus), Tyylikirja.Kirjain.Kapiteeli);
-            Kirjasimet.Aseta(Rakenne.Teksti("Kenen ajatteluun tutustut?", "mk-kortti__otsikko", kortti.Sisus), Tyylikirja.Kirjain.Otsikko);
-            Kirjasimet.Aseta(Rakenne.Teksti("Kehitysvaihe: näkyy vain kehittäjätilassa.", "mk-kortti__teksti", kortti.Sisus), Tyylikirja.Kirjain.Leipa);
+            Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.ajattelija.kapiteeli"), "mk-kortti__kapiteeli", kortti.Sisus), Tyylikirja.Kirjain.Kapiteeli);
+            Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.ajattelija.otsikko"), "mk-kortti__otsikko", kortti.Sisus), Tyylikirja.Kirjain.Otsikko);
+            Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.ajattelija.kehitysvaihe"), "mk-kortti__teksti", kortti.Sisus), Tyylikirja.Kirjain.Leipa);
             korttiNapit = Rakenne.El("mk-kortti__napit", kortti.Sisus, PickingMode.Ignore);
             Kirjasimet.Aseta(korttiNapit, Kirjasin.Kone);
 
@@ -127,7 +127,7 @@ namespace Matkakirja.Natiivi
             pulunappi.RegisterCallback<PointerDownEvent>(e => { e.StopPropagation(); PuluNapautettu(); });
 
             // KUVANÄKYMÄn ✕ OHJAUSNAPPI-neliönä harmaalla teemalla kuten astronautin kuva (EI OVAALEJA, Päätoimittaja 3.10.).
-            sulku = Ohjausnappi.Nappi(Ikonit.Viiva["rasti"], "Sulje", AjattelijatSovitin.PyydaSulku, turva, "harmaa");
+            sulku = Ohjausnappi.Nappi(Ikonit.Viiva["rasti"], Kieli.T("ui.reaktiot.sulje"), AjattelijatSovitin.PyydaSulku, turva, "harmaa");
             sulku.AddToClassList("mk-kuvanakyma__sulku");
             NaytaSulku(false, heti: true);
             // Napautus mihin tahansa kohtauksessa tuo ✕:n (web pointerdown kaappausvaiheessa, ei estä alla olevaa toimintoa).

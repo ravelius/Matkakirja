@@ -78,9 +78,9 @@
   },
   "ranta-1499": {
    "kolmiot": {
-    "nakyva": 13298,
-    "-tormays": 13280,
-    "-kavely": 9944
+    "nakyva": 14794,
+    "-tormays": 14774,
+    "-kavely": 11084
    },
    "merkit": [
     "leikkaus:vain-1499-b"
@@ -239,11 +239,11 @@
    "rajat": {
     "min": [
      -98.48,
-     -7.77,
-     -8.6
+     -7.73,
+     -58.0
     ],
     "max": [
-     -16.0,
+     98.0,
      0.19,
      66.0
     ]
@@ -262,7 +262,7 @@
     "kavely": "ranta-1499-kavely.glb"
    },
    "muistiarvio": {
-    "kolmiot_nakyva": 13298,
+    "kolmiot_nakyva": 14794,
     "tekstuurit_mt": 0,
     "huom": "pinnat rakennuksen pinta-materiaaleista"
    },

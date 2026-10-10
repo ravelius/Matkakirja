@@ -41,7 +41,7 @@ namespace Matkakirja.Linssit.Testit
 
         static OpasKohde Kopio(OpasKohde k) => new OpasKohde { Id = k.Id, Nimi = k.Nimi, Lat = k.Lat, Lon = k.Lon, KokoM = k.KokoM, KorkeusM = k.KorkeusM, Luokka = k.Luokka, KestoS = k.KestoS, Kierros = true };
 
-        static List<Ruutu> Aja(Kaupunki c, bool hidas, List<(double t, string laji, string kohde, double kesto)> tap = null, List<(double t, Kuvakulma? esi, Kuvakulma asento, string kohde)> esit = null)
+        static List<Ruutu> Aja(Kaupunki c, bool hidas, List<(double t, string laji, string kohde, double kesto)> tap = null, List<(double t, Kuvakulma? esi, Kuvakulma asento, string kohde)> esit = null, Action<OpasSilmukka, double> kehys = null)
         {
             bool vanha = OpasSilmukka.PalloLento; OpasSilmukka.PalloLento = true;
             try
@@ -70,6 +70,7 @@ namespace Matkakirja.Linssit.Testit
                     }
                     for (int j = hiljaa.Count - 1; j >= 0; j--) if (hiljaa[j] <= t) { hiljaa.RemoveAt(j); s.AaniLoppui(); tap?.Add((t, "hiljaa", s.Nykyinen?.Id, 0)); }
                     s.Paivita(Dt, _ => 35, laatat);
+                    kehys?.Invoke(s, t);
                     var e = OpasKuvaus.KameraPaikka(s.Asento, c.Lat, c.Lon);
                     int kohde = s.Nykyinen == null ? -1 : Array.FindIndex(c.Kohteet, k => k.Id == s.Nykyinen.Id);
                     esit?.Add((t, s.Esilataus(_ => 35), s.Asento, s.Vaihe == OpasVaihe.Puhuu ? s.Nykyinen?.Id : null));
@@ -111,6 +112,44 @@ namespace Matkakirja.Linssit.Testit
                     i = j;
                 }
             }
+        }
+
+        /// <summary>
+        /// ESILATAUS NOPEAN LENNON RADALTA (kuva-arkki 2, p32; PT 9.10.): lähtöä edeltävät reittinäkymät (ReittiEsilataus) ovat samat
+        /// kuin lennon todelliset asennot samoissa kohdissa, myös kun nopea lento nousee kaaressa (NopeusRho > 0).
+        /// </summary>
+        [Testi] static void EsilatausNopeanLennonRadalta()
+        {
+            var c0 = Lue().First(x => x.Id == "pariisi");
+            var c = new Kaupunki { Id = c0.Id, Nimi = c0.Nimi, Lat = c0.Lat, Lon = c0.Lon, Kohteet = OpasReitti.Lyhin(c0.Kohteet, k => (k.Lat, k.Lon), out _).ToArray() };
+            var ennen = new Dictionary<string, Kuvakulma[]>(); var lennot = new Dictionary<string, List<(double t, Kuvakulma a)>>();
+            var puskuri = new Kuvakulma[3]; OpasVaihe edellinen = OpasVaihe.Alku; double alku = 0; string kohde = null;
+            Aja(c, false, kehys: (s, t) =>
+            {
+                if (s.Vaihe != OpasVaihe.Lentaa && s.KierrosKaynnissa)
+                {
+                    int n = s.ReittiEsilataus(_ => 35, puskuri);
+                    if (n == 3 && s.Seuraava?.Nimi != null) ennen[s.Seuraava.Nimi] = (Kuvakulma[])puskuri.Clone();
+                }
+                if (s.Vaihe == OpasVaihe.Lentaa && edellinen != OpasVaihe.Lentaa) { alku = t; kohde = s.Nykyinen?.Nimi; lennot[kohde ?? "?"] = new List<(double, Kuvakulma)>(); }
+                if (s.Vaihe == OpasVaihe.Lentaa && kohde != null) lennot[kohde].Add(((t - alku) / Math.Max(0.01, s.LentoKestoS), s.Asento));
+                edellinen = s.Vaihe;
+            });
+            int tarkistettu = 0;
+            foreach (var nimi in new[] { "Sacré-Cœur", "Eiffel-torni" })
+            {
+                Oleta.Tosi(ennen.ContainsKey(nimi) && lennot.ContainsKey(nimi), $"{nimi}: esilataus ja lento mitattu");
+                var e = ennen[nimi]; var l = lennot[nimi];
+                for (int i = 0; i < OpasSilmukka.ReittiNaytteet.Length; i++)
+                {
+                    var lahin = l.OrderBy(x => Math.Abs(x.t - OpasSilmukka.ReittiNaytteet[i])).First().a;
+                    double d = KierrosLento.EtaisyysM(e[i].Lat, e[i].Lon, lahin.Lat, lahin.Lon), de = Math.Abs(e[i].EtaisyysM - lahin.EtaisyysM);
+                    Console.WriteLine($"      {nimi} näyte {OpasSilmukka.ReittiNaytteet[i]:F2}: katsepiste {d:F0} m, etäisyys {e[i].EtaisyysM:F0} / lento {lahin.EtaisyysM:F0} m");
+                    Oleta.Tosi(de <= 0.08 * lahin.EtaisyysM + 15, $"{nimi} {OpasSilmukka.ReittiNaytteet[i]:F2}: esilatauksen etäisyys {e[i].EtaisyysM:F0} ≈ lennon {lahin.EtaisyysM:F0} m");
+                    tarkistettu++;
+                }
+            }
+            Oleta.Tosi(tarkistettu == 6, "kuusi näytettä");
         }
 
         static bool Pysahdyksella(OpasVaihe v) => v == OpasVaihe.Puhuu || v == OpasVaihe.Odottaa;

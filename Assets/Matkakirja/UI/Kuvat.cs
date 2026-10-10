@@ -643,6 +643,22 @@ namespace Matkakirja.Natiivi
             if (!muisti.ContainsValue(t2)) UnityEngine.Object.Destroy(t2);
         }
 
+        /// <summary>
+        /// Poistaa tekstuurin heti myös LRU-välimuistista ja tuhoaa sen (Linssiseppä 9.10., juna 173 iPad-jetsam: Vapauta jättää
+        /// LRU:ssa olevan muistiin, ja Pariisin nykyintron viisi 2048×1536-kuvaa jäivät 300 Mt:n LRU:hun). Kertakäyttökuville
+        /// (intro), joita ei tarvita uudelleen; kiinteitä (buildin) ei poisteta.
+        /// </summary>
+        public static void Poista(Texture t)
+        {
+            if (!(t is Texture2D t2) || t2 == null) return;
+            kiinnitetyt.Remove(t2);
+            string avain = null;
+            foreach (var kv in muisti) if (kv.Value == t2) { avain = kv.Key; break; }
+            if (avain != null && !tavut.ContainsKey(avain)) return;   // kiinteä
+            if (avain != null) Unohda(avain);
+            UnityEngine.Object.Destroy(t2);
+        }
+
         static void Muista(string avain, Texture2D t, bool kiintea = false)
         {
             if (muisti.ContainsKey(avain)) Unohda(avain);

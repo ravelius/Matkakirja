@@ -71,7 +71,7 @@ namespace Matkakirja.Natiivi
         {
             nosto = n;
             pinId = null;
-            lukija.Aseta(LuennanTekstit(n), "Kuuntele: " + (n.Otsikko ?? ""), PinOmistajaNostolle(n));
+            lukija.Aseta(LuennanTekstit(n), Kieli.T("ui.nosto.kuuntele-otsikko", n.Otsikko ?? ""), PinOmistajaNostolle(n));
             selain.Paivita(valo);
             lukija.Paina();        // pelaajan luenta: korvaa edellisen pinnatun
             VaihdaPin();           // uusi nosto pinnatuksi …
@@ -113,7 +113,7 @@ namespace Matkakirja.Natiivi
         {
             bool p = PinNakyvissa;
             pinNappi.EnableInClassList("mk-valittu", p);
-            pinNappi.tooltip = p ? "Poista pinnaus" : "Pinnaa";
+            pinNappi.tooltip = Kieli.T(p ? "ui.nosto.poista-pinnaus" : "ui.nosto.pinnaa");
             kerros.pickingMode = p ? PickingMode.Ignore : PickingMode.Position;
             kerros.EnableInClassList("mk-himmennys--pin", p);
             if (!Auki) return;
@@ -208,7 +208,7 @@ namespace Matkakirja.Natiivi
             selain.MuuLista = id => id.StartsWith(MaakuntaEtuliite, StringComparison.Ordinal) ? MaakuntaLista?.Invoke(id) : null;
             // PIN-KUVAKE (omistaja 5.10.2026 klo 23.3x): ylärivillä kaiuttimen kokoisena (mk-lukija 34 pt), pinnattuna korostettu.
             pinNappi = Rakenne.Nappi(null, "mk-lukija mk-nosto__pin", VaihdaPin, null, Ikonit.Viiva["pin"]);
-            pinNappi.tooltip = "Pinnaa";
+            pinNappi.tooltip = Kieli.T("ui.nosto.pinnaa");
             // OSUMA ERILLEEN (junan 146 video 6.10.: kaksi napautusta pinnin keskelle avasi ≡-valikon): lukijan rivi (≡ ja kaiutin)
             // on kortin päällä omana kerroksenaan ja peitti pinnin. Pinnin näkyvä alue voittaa: kortin tasolla ennen lukijaa.
             kortti.RegisterCallback<PointerDownEvent>(e =>
@@ -785,7 +785,7 @@ namespace Matkakirja.Natiivi
             // Web .nostokuva-selite keskitettynä ja .nostokuva-lisaa sen alla keskellä (mitattu 24.9. b11); lähde vain suurennoksessa.
             // Web nostokuvaAloita: kuvatekstiLyhyt(kuva), eläintäyn vakioselite vasta karusellissa (pariteetti b12-2 #27).
             if (nosto.Laji != NostoLaji.Maakunta) Kuvateksti(alarivi, k.LyhytVara ? "" : k.Lyhyt ?? nosto.Otsikko ?? "", k);
-            var lisaa = Rakenne.Nappi("LISÄÄ", "mk-nosto__lisaa", Vaihe2, alarivi);
+            var lisaa = Rakenne.Nappi(Kieli.T("ui.nosto.lisaa"), "mk-nosto__lisaa", Vaihe2, alarivi);
             Kirjasimet.Aseta(lisaa, Kirjasin.Kone);
         }
 
@@ -815,13 +815,13 @@ namespace Matkakirja.Natiivi
             // Web: lööppi kuuluu luentaan; otsikko lajin mukaan (skandaalit.js, historian-hetket.js,
             // elaintaky.js, fokuskohteet.js, fokusnosto.js, syvennys.js lisaaLukijanappi).
             lukija.Aseta(LuennanTekstit(n),
-                n.Laji == NostoLaji.Skandaali ? "Kuuntele lisälehti"
-                : n.Laji == NostoLaji.Kohde ? "Kuuntele: " + (n.Otsikko ?? "")
-                : n.Laji == NostoLaji.Elain ? "Kuuntele eläinkortti"
-                : n.Laji == NostoLaji.Takynosto ? "Kuuntele kortti"
-                : n.Laji == NostoLaji.Syvennys ? "Kuuntele tarina"
-                : n.Laji == NostoLaji.Maakunta ? "Kuuntele: " + (n.Otsikko ?? "")
-                : "Kuuntele hetki", PinOmistajaNostolle(n));
+                n.Laji == NostoLaji.Skandaali ? Kieli.T("ui.nosto.kuuntele-lisalehti")
+                : n.Laji == NostoLaji.Kohde ? Kieli.T("ui.nosto.kuuntele-otsikko", n.Otsikko ?? "")
+                : n.Laji == NostoLaji.Elain ? Kieli.T("ui.nosto.kuuntele-elainkortti")
+                : n.Laji == NostoLaji.Takynosto ? Kieli.T("ui.nosto.kuuntele-kortti")
+                : n.Laji == NostoLaji.Syvennys ? Kieli.T("ui.nosto.kuuntele-tarina")
+                : n.Laji == NostoLaji.Maakunta ? Kieli.T("ui.nosto.kuuntele-otsikko", n.Otsikko ?? "")
+                : Kieli.T("ui.nosto.kuuntele-hetki"), PinOmistajaNostolle(n));
 
             // Löydös 133: kaiutin ylärivin oikeaan päähän (oikean yläkulman ✕ ja sen viereinen kaiutin poistuivat).
             // NAPIT NÄKYVÄT HETI (omistaja 28.9.2026, TF 1.0.34: "käyttäjän pitää vierittää lappua hieman alaspäin, jotta
@@ -835,7 +835,7 @@ namespace Matkakirja.Natiivi
             SiirraYlarivi();
             if (n.Looppi)
             {
-                var nimio = Rakenne.Teksti("LISÄLEHTI", "mk-nosto__nimio", sisus);
+                var nimio = Rakenne.Teksti(Kieli.T("ui.nosto.lisalehti"), "mk-nosto__nimio", sisus);
                 Kirjasimet.Aseta(nimio, Kirjasin.Kone);
                 if (n.Meta != null)
                 {
@@ -870,7 +870,7 @@ namespace Matkakirja.Natiivi
                     if (string.IsNullOrEmpty(e.linkID)) return;
                     // Löydös 136: nosto jää taustalle, chat aukeaa sen päälle (UiNakymat.ChatinKerros).
                     lukija.Pysayta();
-                    UiNakymat.Hae()?.Chat.Kysy($"Kerro lisää: {e.linkID} (kohteessa {nimi})", aihe: PuluChat.NostonAihe(n));
+                    UiNakymat.Hae()?.Chat.Kysy($"Kerro lisää: {e.linkID} (kohteessa {nimi})", aihe: PuluChat.NostonAihe(n));   // kieli: ei (Pulun kysymys, PuluValmiit.KerroLisaaAlku)
                 });
             }
             var kappaleet = Kappaleet(n.Teksti).Select(k => Korosta(k, jaljella)).ToList();
@@ -984,7 +984,7 @@ namespace Matkakirja.Natiivi
             visaKerros.Clear();
             var k = new Kortti("mk-nosto-visa", pohja: true);
             visaKerros.Add(k);
-            Kirjasimet.Aseta(Rakenne.Teksti("VISA", "mk-kortti__kapiteeli", k.Sisus), Kirjasin.Kone);
+            Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.nosto.visa-iso"), "mk-kortti__kapiteeli", k.Sisus), Kirjasin.Kone);
             Kirjasimet.Aseta(Rakenne.Teksti(n.Otsikko ?? "", "mk-kortti__otsikko", k.Sisus), Kirjasin.LukuLihava);
             Visa(k.Sisus, n);
             visaAuki = true;
@@ -1070,14 +1070,18 @@ namespace Matkakirja.Natiivi
             // Napit kuten web avaaKohdePohjalla (#3788, omistaja 2.10.2026 pysyväksi): Kysy vain kysymyksillä, Visa, Kierros,
             // Lehti = kohteen oma täkynosto (Livian leikekirja), ei kaupungin/maan lehteä. Esim. Ateena: vain Kysy.
             if (n.Kysymykset.Count > 0)
-                Nappi("kysy", "Kysy", () => { lukija.Pysayta(); UiNakymat.Hae()?.Chat.AvaaKortista(PuluChat.NostonAihe(n), n.Kysymykset); });
+            {
+                // Pulun valmiit vastaukset (omistaja 9.10.2026): maan paketti esiladataan, jotta Kysy vastaa heti.
+                PuluValmiitLataus.Esilataa(n.Iso);
+                Nappi("kysy", Kieli.T("ui.nosto.kysy"), () => { lukija.Pysayta(); UiNakymat.Hae()?.Chat.AvaaKortista(PuluChat.NostonAihe(n), n.Kysymykset, PuluValmiitLataus.Kohta(n), n.Iso); });
+            }
             if (n.Visa != null)
-                Nappi("visa", "Visa", () => AvaaVisa(n));
-            if (n.Kierrokset.Count > 0) { string u = n.Kierrokset[0].Item2; Nappi("kierros", "Kierros", () => Application.OpenURL(u)); }
+                Nappi("visa", Kieli.T("ui.nosto.visa"), () => AvaaVisa(n));
+            if (n.Kierrokset.Count > 0) { string u = n.Kierrokset[0].Item2; Nappi("kierros", Kieli.T("ui.nosto.kierros"), () => Application.OpenURL(u)); }
             if (n.LeikekirjaValo != null)
             {
                 string valo = n.LeikekirjaValo;
-                Nappi("lehti", "Lehti", () => Avaa(valo), true);
+                Nappi("lehti", Kieli.T("ui.nosto.lehti"), () => Avaa(valo), true);
                 napit["leikekirja"] = napit["lehti"]; // testikomento ui leikekirja
             }
             if (toimintorivi.childCount == 0) PoistaToimintorivi();
@@ -1090,7 +1094,7 @@ namespace Matkakirja.Natiivi
             toimintorivi = Rakenne.El("mk-nosto__toiminnot", kortti, PickingMode.Ignore);
             kortti.AddToClassList("mk-nosto--toiminnot");
             Action kysy = () => { lukija.Pysayta(); UiNakymat.Hae()?.Chat.AvaaValmiilla(n.PuluAihe, n.ValmiitKysymykset); };
-            var b = Rakenne.Nappi("Kysy", "mk-nosto__toiminto", kysy, toimintorivi);
+            var b = Rakenne.Nappi(Kieli.T("ui.nosto.kysy"), "mk-nosto__toiminto", kysy, toimintorivi);
             Kirjasimet.Aseta(b, Kirjasin.KoneLihava);
             napit["kysy"] = kysy;
         }
@@ -1106,7 +1110,7 @@ namespace Matkakirja.Natiivi
                 float h = Mathf.Round(e.newRect.width * suhde);
                 if (e.newRect.width > 0 && Mathf.Abs(kylki.resolvedStyle.height - h) > 0.5f) kylki.style.height = h;
             });
-            kylki.tooltip = "Suurenna kartta";
+            kylki.tooltip = Kieli.T("ui.nosto.suurenna-kartta");
             Action avaa = () => minikartta.Avaa(kylki, kartta);
             kylki.RegisterCallback<ClickEvent>(e => { e.StopPropagation(); avaa(); });
             napit["kartta"] = avaa;
@@ -1116,14 +1120,14 @@ namespace Matkakirja.Natiivi
         void KysyPululta(VisualElement isa, Nosto n)
         {
             if (n.Kysymykset.Count == 0) return;
-            var q = Rakenne.Teksti("Kysy <s>viisaalta pöllöltä</s> pululta:", "mk-nosto__kysyotsikko", isa);
+            var q = Rakenne.Teksti(Kieli.T("ui.nosto.kysy-pululta"), "mk-nosto__kysyotsikko", isa);
             q.enableRichText = true;
             Kirjasimet.Aseta(q, Kirjasin.KoneLihava);
             for (int i = 0; i < n.Kysymykset.Count; i++)
             {
                 string kk = n.Kysymykset[i];
                 // Kortin aihe kysymyksen mukana (omistajan löydös 30.9.2026: pulu ei tiennyt, mistä akveduktista on kyse).
-                Action kysy = () => { lukija.Pysayta(); UiNakymat.Hae()?.Chat.Kysy(kk, aihe: PuluChat.NostonAihe(n)); };
+                Action kysy = () => { lukija.Pysayta(); UiNakymat.Hae()?.Chat.Kysy(kk, aihe: PuluChat.NostonAihe(n), kohta: PuluValmiitLataus.Kohta(n), maa: n.Iso); };
                 var b = Rakenne.Nappi(kk, "mk-nosto__kysymys", kysy, isa);
                 Kirjasimet.Aseta(b, Kirjasin.Luku);
                 napit["kysy" + i] = kysy;
@@ -1144,12 +1148,12 @@ namespace Matkakirja.Natiivi
                 if (otsake != null) b.tooltip = otsake;
                 Kirjasimet.Aseta(b, Kirjasin.Kone);
             }
-            if (n.Aani != null) { string u = n.Aani; Nappi("▷ Kuuntele näyte", null, () => Puhe.Hae()?.Soita(u, pyynnosta: true)); }
+            if (n.Aani != null) { string u = n.Aani; Nappi(Kieli.T("ui.nosto.kuuntele-nayte"), null, () => Puhe.Hae()?.Soita(u, pyynnosta: true)); }
             foreach (var (nimi, url) in n.Musiikkilinkit) { string u = url; Nappi(nimi + " ›", null, () => Application.OpenURL(u)); }
             if (n.MusiikkiNayte != null)
             {
                 string u = n.MusiikkiNayte;
-                Nappi("▷ Kuuntele musiikkia", n.MusiikkiNayteNimi ?? "Vapaasti lisensoitu ääninäyte", () => Puhe.Hae()?.Soita(u, pyynnosta: true));
+                Nappi(Kieli.T("ui.nosto.kuuntele-musiikkia"), n.MusiikkiNayteNimi ?? Kieli.T("ui.nosto.vapaa-naytteet"), () => Puhe.Hae()?.Soita(u, pyynnosta: true));
             }
         }
 
@@ -1169,10 +1173,10 @@ namespace Matkakirja.Natiivi
         void Karttaliite(VisualElement isa, NostoKuva k)
         {
             var liite = Rakenne.El("mk-nosto__liite", isa, PickingMode.Ignore);
-            Kirjasimet.Aseta(Rakenne.Teksti("ISOISÄN MATKAKIRJAN LIITE", "mk-nosto__liiteotsake", liite), Kirjasin.Luku);
+            Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.nosto.liiteotsake"), "mk-nosto__liiteotsake", liite), Kirjasin.Luku);
             Action avaa = () => SuurennaYksi(k);
             var nappi = Rakenne.Nappi(null, "mk-nosto__liitenappi", avaa, liite);
-            nappi.tooltip = "Avaa kartta suurena";
+            nappi.tooltip = Kieli.T("ui.nosto.avaa-kartta");
             var kuva = Rakenne.El("mk-nosto__liitekuva", nappi, PickingMode.Ignore);
             // Taitteen viivat (web .fokusnosto-liitekehys::after): arkki on ollut taitettuna kirjan välissä.
             Rakenne.El("mk-nosto__liitetaite mk-nosto__liitetaite--pysty", nappi, PickingMode.Ignore);
@@ -1195,7 +1199,7 @@ namespace Matkakirja.Natiivi
         void Kohdenappi(VisualElement isa, Nosto n)
         {
             Action katso = () => KatsoKartalla(n);
-            var b = Rakenne.Nappi("→ Katso " + n.KohdeNimi + " kartalla", "mk-nosto__kohdenappi", katso, isa);
+            var b = Rakenne.Nappi(Kieli.T("ui.nosto.katso-kartalla", n.KohdeNimi), "mk-nosto__kohdenappi", katso, isa);
             Kirjasimet.Aseta(b, Kirjasin.Luku);
             napit["kartalla"] = katso;
         }
@@ -1419,8 +1423,8 @@ namespace Matkakirja.Natiivi
             var sanat = (teksti ?? "").Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0; i < sanat.Length; i++)
                 Rakenne.Teksti(sanat[i], i < sanat.Length - 1 ? "mk-nosto__kuvasana mk-nosto__kuvasana--vali" : "mk-nosto__kuvasana", kotelo);
-            var m = Rakenne.Teksti("Havainnekuva".ToUpperInvariant(), "mk-nosto__havainne", kotelo);
-            m.tooltip = "Havainnekuva";   // Raamattu KUVAT: sana havainnekuva (PT 9.10.)
+            var m = Rakenne.Teksti(Kieli.T("ui.nosto.havainnekuva").ToUpperInvariant(), "mk-nosto__havainne", kotelo);
+            m.tooltip = Kieli.T("ui.nosto.havainnekuva");   // Raamattu KUVAT: sana havainnekuva (PT 9.10.)
             Kirjasimet.Aseta(m, Kirjasin.Kone);
         }
 
@@ -1443,17 +1447,17 @@ namespace Matkakirja.Natiivi
             // skandaali, hetki ja syvennys (web piirraSyvennysVisa) kertovat palkkion.
             bool lukijan = n.Laji == NostoLaji.Kohde || n.Laji == NostoLaji.Takynosto;
             var laatikko = Rakenne.El("mk-nosto__visa", isa, PickingMode.Ignore);
-            if (lukijan) Kirjasimet.Aseta(Rakenne.Teksti(n.Visa.Otsake ?? "LUKIJAN KYSYMYS", "mk-nosto__visaotsikko", laatikko), Kirjasin.Kone);
+            if (lukijan) Kirjasimet.Aseta(Rakenne.Teksti(n.Visa.Otsake ?? Kieli.T("ui.nosto.lukijan-kysymys"), "mk-nosto__visaotsikko", laatikko), Kirjasin.Kone);
             Kirjasimet.Aseta(Rakenne.Teksti(n.Visa.Kysymys, "mk-nosto__visakysymys", laatikko), Kirjasin.LukuLihava);
             var o = PeliOhjain.Instanssi;
             bool vastattu = o?.Kaupat != null && o.Kaupat.MinitehtavaVastattu(n.VisaKaupunki, n.VisaAihe);
             if (vastattu)
             {
-                Rakenne.Teksti(n.Visa.Fakta ?? "Tähän on jo vastattu.", "mk-nosto__visavihje", laatikko);
+                Rakenne.Teksti(n.Visa.Fakta ?? Kieli.T("ui.nosto.jo-vastattu"), "mk-nosto__visavihje", laatikko);
                 return;
             }
-            var vihje = Rakenne.Teksti(lukijan ? n.Visa.Vihje ?? $"Vastaus löytyy tästä jutusta · +£{n.VisaPalkkio}"
-                : $"Oikeasta vastauksesta saat £{n.VisaPalkkio}.", "mk-nosto__visavihje", laatikko);
+            var vihje = Rakenne.Teksti(lukijan ? n.Visa.Vihje ?? Kieli.T("ui.nosto.visa-vihje-lukija", n.VisaPalkkio)
+                : Kieli.T("ui.nosto.visa-vihje", n.VisaPalkkio), "mk-nosto__visavihje", laatikko);
             var napitVisa = new List<Button>();
             var tulos = Rakenne.Teksti("", "mk-nosto__visatulos", laatikko);
             tulos.style.display = DisplayStyle.None;
@@ -1487,8 +1491,8 @@ namespace Matkakirja.Natiivi
                     if (!oikein) b.AddToClassList("mk-vaarin");
                     // Web: vihjerivi oli lupaus vastaamattomalle; tulos korvaa sen.
                     if (lukijan) vihje.style.display = DisplayStyle.None;
-                    tulos.text = t != null && !t.Ok && t.Virhe != null && t.Virhe != "Jo vastattu" ? t.Virhe
-                        : oikein ? $"Oikein! +£{n.VisaPalkkio}." : $"Oikea vastaus: {n.Visa.Vaihtoehdot[n.Visa.Oikea]}.";
+                    tulos.text = t != null && !t.Ok && t.Virhe != null && t.Virhe != "Jo vastattu" ? t.Virhe   // kieli: ei (palvelimen virhekoodi)
+                        : oikein ? Kieli.T("ui.nosto.oikein", n.VisaPalkkio) : Kieli.T("ui.nosto.oikea-vastaus", n.Visa.Vaihtoehdot[n.Visa.Oikea]);
                     if (!string.IsNullOrEmpty(n.Visa.Fakta)) tulos.text += " " + n.Visa.Fakta;
                     tulos.EnableInClassList("mk-oikein", oikein);
                     tulos.style.display = DisplayStyle.Flex;
@@ -1496,7 +1500,7 @@ namespace Matkakirja.Natiivi
                     {
                         // Web syvennys: juliste laukkuun heti, katselu napista (naytaJuliste).
                         Action nayta = () => NaytaJuliste(juliste);
-                        var lunasta = Rakenne.Nappi("Lunasta juliste", "mk-nosto__lunastus", nayta, laatikko);
+                        var lunasta = Rakenne.Nappi(Kieli.T("ui.nosto.lunasta-juliste"), "mk-nosto__lunastus", nayta, laatikko);
                         Kirjasimet.Aseta(lunasta, Kirjasin.LukuLihava);
                         napit["juliste"] = nayta;
                     }
@@ -1518,7 +1522,7 @@ namespace Matkakirja.Natiivi
                 new LehtiKuva
                 {
                     Lahde = j.Url, Otsikko = j.Otsikko, Lyhyt = j.Lyhyt, Selite = j.Selite ?? j.Lyhyt ?? j.Otsikko,
-                    LahdeRivi = "Matkakirjan oma paino",
+                    LahdeRivi = Kieli.T("ui.nosto.oma-paino"),
                 },
             });
 
@@ -1527,13 +1531,13 @@ namespace Matkakirja.Natiivi
             // Web: palkkio maksetaan, kun sisältö ladotaan (kuvallisella kortilla LISÄÄ-napista).
             var o = PeliOhjain.Instanssi;
             string teksti;
-            if (o == null) teksti = "Eläin on kirjattu.";
+            if (o == null) teksti = Kieli.T("ui.nosto.elain-kirjattu");
             else
             {
                 var t = o.KauppaTeko(k => k.Elaintaky(n.Iso, KauppaVakiot.ElaintakyPalkkio));
-                teksti = t == null || !t.Ok ? "Eläin on kirjattu."
-                    : t.Uusi ? $"Löytöpalkkio +£{t.Palkkio} lisätty kukkaroon." : "Tämä eläin on jo löydetty.";
-                if (t != null && t.Ok && !t.Uusi) teksti = "Tämä eläin on jo löydetty.";
+                teksti = t == null || !t.Ok ? Kieli.T("ui.nosto.elain-kirjattu")
+                    : t.Uusi ? Kieli.T("ui.nosto.loytopalkkio", t.Palkkio) : Kieli.T("ui.nosto.elain-jo-loydetty");
+                if (t != null && t.Ok && !t.Uusi) teksti = Kieli.T("ui.nosto.elain-jo-loydetty");
             }
             var l = Rakenne.Teksti(teksti, "mk-nosto__palkkio", isa);
             Kirjasimet.Aseta(l, Kirjasin.Kone);

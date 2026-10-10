@@ -50,7 +50,7 @@ namespace Matkakirja.Natiivi
             this.poistu = poistu;
             this.alusta = alusta;
             Nappi = Rakenne.Nappi(null, "mk-aikajana-nappi mk-linssivalikko__nappi", Vaihda, null, Ikonit.Valikko);
-            Nappi.tooltip = "Valikko";
+            Nappi.tooltip = Kieli.T("ui.linssivalikko.valikko");
 
             // Kerroksen juureen (ei turva-alueeseen): ylärivi on juuressa turvan jälkeen ja peitti valikon yläosan (Poistu) — avaus
             // tuo valikon sen päälle (f4f47679-todennus 1.10.2026). Paikka lasketaan napista (Asettele), joten turvaa ei tarvita.
@@ -61,11 +61,11 @@ namespace Matkakirja.Natiivi
             valikko.AddToClassList("mk-linssivalikko--pohja");
             Kirjasimet.Aseta(valikko, Kirjasin.Luku);
 
-            Komento("Poistu", () => this.poistu?.Invoke());
-            alustaNappi = Komento("Aloita alusta", () => this.alusta?.Invoke());
+            Komento(Kieli.T("ui.linssivalikko.poistu"), () => this.poistu?.Invoke());
+            alustaNappi = Komento(Kieli.T("ui.linssivalikko.aloita-alusta"), () => this.alusta?.Invoke());
             Rakenne.El("mk-linssivalikko__viiva", valikko, PickingMode.Ignore);
-            kertoja = Kytkinrivi(Kytkin.Kertoja, "Kertoja");
-            musiikki = Kytkinrivi(Kytkin.Musiikki, "Taustamusiikki");
+            kertoja = Kytkinrivi(Kytkin.Kertoja, Kieli.T("ui.linssivalikko.kertoja"));
+            musiikki = Kytkinrivi(Kytkin.Musiikki, Kieli.T("ui.linssivalikko.taustamusiikki"));
             tekstitys = Tekstitysrivi();
             kerros.JokaRuutu += TarkistaOhiNapautus;
         }
@@ -85,7 +85,7 @@ namespace Matkakirja.Natiivi
             IEnumerable<(string Nimi, Func<bool> Lue, Action<bool> Kirjoita)> kytkimet = null, string teema = "harmaa")
         {
             poistu = sulje;
-            Nappi = Ohjausnappi.Nappi(Ikonit.Valikko, "Valikko", Vaihda, null, teema);
+            Nappi = Ohjausnappi.Nappi(Ikonit.Valikko, Kieli.T("ui.linssivalikko.valikko"), Vaihda, null, teema);
             valikko = Rakenne.El("mk-linssivalikko mk-linssivalikko--pohja", kerros.Juuri(LinssiUi.Kerros));
             valikko.style.display = DisplayStyle.None;
             Kirjasimet.Aseta(valikko, Kirjasin.Luku);
@@ -95,8 +95,8 @@ namespace Matkakirja.Natiivi
                 foreach (var (nimi, lue, kirjoita) in kytkimet) { omat.Add(OmaKytkin(nimi, lue, kirjoita)); omia = true; }
             // Webin karttalinssin valikossa (kohdat) ei ole erotinta omien rivien ja sulun välissä.
             if (omia && aanet) Rakenne.El("mk-linssivalikko__viiva", valikko, PickingMode.Ignore);
-            kertoja = Kytkinrivi(Kytkin.Kertoja, "Kertoja");
-            musiikki = Kytkinrivi(Kytkin.Musiikki, "Taustamusiikki");
+            kertoja = Kytkinrivi(Kytkin.Kertoja, Kieli.T("ui.linssivalikko.kertoja"));
+            musiikki = Kytkinrivi(Kytkin.Musiikki, Kieli.T("ui.linssivalikko.taustamusiikki"));
             tekstitys = Tekstitysrivi();
             if (aanet) Rakenne.El("mk-linssivalikko__viiva", valikko, PickingMode.Ignore);
             else { kertoja.Rivi.style.display = DisplayStyle.None; musiikki.Rivi.style.display = DisplayStyle.None; }
@@ -132,8 +132,8 @@ namespace Matkakirja.Natiivi
             {
                 bool paalla = lue();
                 rivi.EnableInClassList("mk-valittu", paalla);
-                tila.text = paalla ? "PÄÄLLÄ" : "POIS";
-                rivi.tooltip = nimi + ": " + (paalla ? "päällä" : "pois");
+                tila.text = Kieli.T(paalla ? "ui.yleinen.paalla-iso" : "ui.yleinen.pois-iso");
+                rivi.tooltip = Kieli.T(paalla ? "ui.yleinen.kytkin-paalla" : "ui.yleinen.kytkin-pois", nimi);
             }
         }
 
@@ -147,7 +147,7 @@ namespace Matkakirja.Natiivi
                 PaivitaTekstitys();
                 Sulje();
             }, valikko);
-            Rakenne.Teksti("Tekstitys", "mk-linssivalikko__nimi", tb);
+            Rakenne.Teksti(Kieli.T("ui.linssivalikko.tekstitys"), "mk-linssivalikko__nimi", tb);
             var tila = Rakenne.Teksti("", "mk-linssivalikko__tila", tb);
             Kirjasimet.Aseta(tila, Kirjasin.KoneBold);
             tb.style.display = DisplayStyle.None;
@@ -186,8 +186,8 @@ namespace Matkakirja.Natiivi
             var (rivi, tila) = k == Kytkin.Kertoja ? kertoja : musiikki;
             bool paalla = Asetukset.Paalla(k);
             rivi.EnableInClassList("mk-valittu", paalla);
-            tila.text = paalla ? "PÄÄLLÄ" : "POIS";
-            rivi.tooltip = (k == Kytkin.Kertoja ? "Kertoja" : "Taustamusiikki") + ": " + (paalla ? "päällä" : "pois");
+            tila.text = Kieli.T(paalla ? "ui.yleinen.paalla-iso" : "ui.yleinen.pois-iso");
+            rivi.tooltip = Kieli.T(paalla ? "ui.yleinen.kytkin-paalla" : "ui.yleinen.kytkin-pois", Kieli.T(k == Kytkin.Kertoja ? "ui.linssivalikko.kertoja" : "ui.linssivalikko.taustamusiikki"));
         }
 
         /// <summary>Kytkinten tila Asetuksista (web paivita).</summary>
@@ -217,8 +217,8 @@ namespace Matkakirja.Natiivi
             if (tekstitysTila == null) return;
             bool paalla = tekstitysTila();
             tekstitys.Rivi.EnableInClassList("mk-valittu", paalla);
-            tekstitys.Tila.text = paalla ? "PÄÄLLÄ" : "POIS";
-            tekstitys.Rivi.tooltip = "Tekstitys: " + (paalla ? "päällä" : "pois");
+            tekstitys.Tila.text = Kieli.T(paalla ? "ui.yleinen.paalla-iso" : "ui.yleinen.pois-iso");
+            tekstitys.Rivi.tooltip = Kieli.T(paalla ? "ui.yleinen.kytkin-paalla" : "ui.yleinen.kytkin-pois", Kieli.T("ui.linssivalikko.tekstitys"));
         }
 
         /// <summary>Aloita alusta -rivi näkyviin tai pois (kaari, jolle alustusta ei vielä ole).</summary>

@@ -81,7 +81,8 @@ namespace Matkakirja.Natiivi
     public static class Matkakirjamerkinnat
     {
         // Web VOICES (js/pack.js).
-        public const string AaniNuori = "Nuoren Foggin havainto", AaniIsoisa = "Isoisän päiväkirjasta, 1873";
+        public static string AaniNuori => Kieli.T("ui.pulu.aani-nuori");
+        public static string AaniIsoisa => Kieli.T("ui.pulu.aani-isoisa");
 
         static Dictionary<string, Saapumisteksti> saapumistekstit;
         static Dictionary<string, string> kaarisaapumiset;
@@ -255,7 +256,7 @@ namespace Matkakirja.Natiivi
         {
             if (v?.AarreTeksti == null) return null;
             string nimi = Nimi(v.Kaupunki);
-            var (o, tunnelma) = MatkakirjanOtsikko(v.AarrePaikkarivi ?? "Isoisän merkintä · " + nimi, nimi);
+            var (o, tunnelma) = MatkakirjanOtsikko(v.AarrePaikkarivi ?? Kieli.T("ui.pulu.isoisan-merkinta", nimi), nimi);
             return new Merkinta
             {
                 Avain = "fokusaarre:" + v.Kaupunki, Kaupunki = v.Kaupunki, Laji = "aarre",
@@ -284,7 +285,7 @@ namespace Matkakirja.Natiivi
                     // Web naytaMerkinnanKaiutin: kaiutin vain äänitteelle, ei puhesynteesille.
                     Kaiutin = s.AaniUrl != null,
                 };
-                Otsake(sm, nimi, s.Otsikko ?? "Matkakirjasta", s.Paikkarivi ?? nimi);
+                Otsake(sm, nimi, s.Otsikko ?? Kieli.T("ui.pulu.matkakirjasta"), s.Paikkarivi ?? nimi);
                 return sm;
             }
             if (!kaariSaa || kaarisaapumiset == null || !kaarisaapumiset.TryGetValue(kaupunki, out var kuvaus)
@@ -295,7 +296,7 @@ namespace Matkakirja.Natiivi
                 Avain = "saapui:" + kaupunki, Kaupunki = kaupunki, Laji = "kaari",
                 Lihava = eka, Teksti = loput,
             };
-            Otsake(m, nimi, "Matkakirjasta", nimi);
+            Otsake(m, nimi, Kieli.T("ui.pulu.matkakirjasta"), nimi);
             return m;
         }
 
@@ -353,7 +354,7 @@ namespace Matkakirja.Natiivi
             var m = new Merkinta
             {
                 Avain = kaupunki + ":" + f.Teksti, Kaupunki = kaupunki, Laji = reitilla ? "reitti" : "satunnainen",
-                Otsikko = AanenOtsikko(f.Aani), Paikkarivi = reitilla ? "Matkalla — " + nimi : nimi, Lyhyt = nimi,
+                Otsikko = AanenOtsikko(f.Aani), Paikkarivi = reitilla ? Kieli.T("ui.pulu.matkalla-nimi", nimi) : nimi, Lyhyt = nimi,
                 Teksti = f.Teksti, Wiki = Tyhja(f.Wiki),
             };
             if (!string.IsNullOrWhiteSpace(f.Lahde)) m.Lahteet.Add(f.Lahde.Trim());
@@ -404,7 +405,7 @@ namespace Matkakirja.Natiivi
                 if (!raja.Success) return (IlmanPistetta(rivi), "");
                 return (IlmanPistetta(rivi.Substring(0, raja.Index)), IlmanPistetta(rivi.Substring(raja.Index + 1)));
             }
-            if (rivi.Length == 0 || rivi == nimi) return (nimi.Length > 0 ? nimi + ", 1873" : "", "");
+            if (rivi.Length == 0 || rivi == nimi) return (nimi.Length > 0 ? Kieli.T("ui.pulu.nimi-vuosi", nimi) : "", "");
             return (IlmanPistetta(rivi), "");
         }
 

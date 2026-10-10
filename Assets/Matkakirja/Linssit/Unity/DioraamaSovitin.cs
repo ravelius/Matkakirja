@@ -35,7 +35,7 @@ namespace Matkakirja.Natiivi
         /// <summary>
         /// HISTORIAMOOTTORI H0 (Siirtoseppä 7.10.2026; omistajan linja 08.4x: Olavinlinna, Kielletty kaupunki ja Giza seikkailuina):
         /// rakennuksen ämpärijuuri rakennus-id:stä (ennen vakio …/olavinlinna/). Id asetetaan ennen linssin avausta
-        /// (AsetaRakennus tai "poikki rakennus &lt;id&gt;"); osoitin, paketti, äänet ja levyvälimuisti seuraavat sitä. Oletus olavinlinna.
+        /// (AsetaRakennus tai "poikki rakennus <id>"); osoitin, paketti, äänet ja levyvälimuisti seuraavat sitä. Oletus olavinlinna.
         /// </summary>
         public static string RakennusId { get; private set; } = Oletusrakennus;
         public const string Oletusrakennus = "olavinlinna";
@@ -394,11 +394,17 @@ namespace Matkakirja.Natiivi
             if (PelattavaPalaPyydetty && rakennus != null && nayttamo != null && cm != null && SeikkailuVene.Aktiivinen == null && SeikkailuPelaaja.Aktiivinen == null)
             {
                 PelattavaPalaPyydetty = false;
+                // Latausodotuksen aikana (nimiruutu) pala ei käynnisty, vaikka valinta on tehty (Siirtoseppä 9.10., junan 174
+                // äänitarkistus): nayttamo.Odota(true) piilottaa joka ruutu näyttämön uudet lapset, jolloin "Seikkailu äänet"
+                // -objektin manifestilataukset katkesivat hiljaa (ei tehosteita eikä Soundly-pankkia) ja veneyö alkoi nimiruudun takana.
+                if (SaapumisOdotus && (alkuValittu || PelattavaPalaJatka)) { PelattavaPalaPyydetty = true; goto palaOhi; }
                 // V6: jatko tallennuksesta vain pyynnöstä (Natiivi-UI "Jatka"); muuten aina alusta (veneyö).
                 var jatka = PelattavaPalaJatka ? SeikkailuTallentaja.LueTiedosto("olavinlinna", PelattavaPalaHash) : null;
                 // Alun valinta (PT 9.10., juna 171): "Pelaa: kesäyö 1499" / "Linnan historia" (Natiivi-UI:n OlavinlinnaAlku, suorat kutsut:
                 // puuttuva rajapinta kaataa käännöksen). Kerran valittu → seuraavalla kerralla suoraan peliin (OlavinlinnaAlku.Nahty).
+                // Valinta näkyy jo latauksen aikana; peli alkaa vasta, kun linna on ladattu.
                 if (jatka == null && !alkuValittu && AlunValinta()) { PelattavaPalaJatka = false; goto palaOhi; }
+                if (SaapumisOdotus) { alkuValittu = true; PelattavaPalaPyydetty = true; goto palaOhi; }
                 alkuValittu = false; pelattavaPala = true;
                 PelattavaPalaJatka = false;
                 SeikkailuTallentaja.Luo(nayttamo.transform, "olavinlinna", PelattavaPalaHash, jatka, o.Kirjaa);
@@ -621,7 +627,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Äänen URL (era 2, DioraamaAanet.cs): Rakennus.Aanet[id].Tiedosto on suhteessa RAKENNUKSEN
         /// JUUREEN eli uusin.json:n kansioon (AmpariJuuri), EI hash-kansioon (dioraama-rajapinnat-era2-20260929.md
-        /// kohta 1 ja 2 "AANET": äänet asuvat ämpärissä polussa dioraama/&lt;r&gt;/aanet/v&lt;versio&gt;/). Peili-ajossa
+        /// kohta 1 ja 2 "AANET": äänet asuvat ämpärissä polussa dioraama/<r>/aanet/v<versio>/). Peili-ajossa
         /// juuret ovat samat. Löydös 29.9. PEILI=pois-ajosta: paketinJuuri antoi 404 kaikille äänille.</summary>
         public string AaniUrl(string tiedostoRelPolku) =>
             string.IsNullOrEmpty(tiedostoRelPolku) ? null
@@ -836,6 +842,16 @@ namespace Matkakirja.Natiivi
             // Vakaa kääntymisviite hahmoille: lepokameran suunta (kanoninen (sin a, −cos a) → Unity (sin a, 0, cos a)).
             if (tila != null && lepo.Avain == "tila:" + tila) { double la = lepo.Perus.Atsimuutti * Math.PI / 180; DioraamaHahmot3D.LepoKameraSuunta = new Vector3((float)Math.Sin(la), 0f, (float)Math.Cos(la)); }
             else DioraamaHahmot3D.LepoKameraSuunta = null;
+            // VUORONVAIHTO KASVOJEN PUOLELTA (PT 9.10., juna 174: kamera siirtyi uuteen puhujaan ~1 s ennen kuin tämä kääntyi, selkäkuva):
+            // kamera pysyy edellisessä puhujassa, kunnes uuden puhujan kasvot ovat kameran puolella, enintään VuoroOdotusS.
+            string tuleva = puhuja;
+            if (tuleva == null) kameranPuhuja = null;
+            else if (tuleva != kameranPuhuja)
+            {
+                if (kameranPuhuja != null && SelinKameraan(tuleva) && Time.unscaledTime - vuoroOdotusAlku < VuoroOdotusS) puhuja = kameranPuhuja;
+                else kameranPuhuja = tuleva;
+            }
+            if (tuleva == kameranPuhuja) vuoroOdotusAlku = Time.unscaledTime;   // odotus alkaa vasta, kun tuleva puhuja vaihtuu
             if (puhuja == null || lepo.Jaljella > 0 || tila == null || lepo.Avain != "tila:" + tila || rakennus?.Tila(tila) is not Tila t) return lepo;
             Hahmo h = null;
             foreach (var x in t.Hahmot) if (x.Id == puhuja) { h = x; break; }
@@ -878,6 +894,21 @@ namespace Matkakirja.Natiivi
             double leveydesta = (vali + 1.6) / (2 * tanPuoli * RuudunSuhde * 0.8);
             double etaisyys = Math.Clamp(Math.Max(korkeudesta, leveydesta), p.Etaisyys * 0.3, p.Etaisyys * 0.88);
             return (lepo.Avain + "|" + puhuja, new Asento(kohde, p.Atsimuutti, p.Korkeus, etaisyys, p.Fov, p.Aukko, p.Kierto), 0.2, false);
+        }
+        string kameranPuhuja;
+        float vuoroOdotusAlku;
+        const float VuoroOdotusS = 2f, SelinAst = 100f;
+        /// <summary>Hahmon kasvot yli SelinAst lepokameran suunnasta (DioraamaHahmot3D.TilanHahmot, tämä kehys); tuntematon = ei selin.</summary>
+        static bool SelinKameraan(string id)
+        {
+            if (DioraamaHahmot3D.LepoKameraSuunta is not Vector3 kd) return false;
+            foreach (var th in DioraamaHahmot3D.TilanHahmot)
+                if (th.Id == id)
+                {
+                    var k = new Vector3(th.Kasvot.x, 0f, th.Kasvot.z);
+                    return k.sqrMagnitude > 1e-4f && Vector3.Angle(k, kd) > SelinAst;
+                }
+            return false;
         }
         /// <summary>
         /// PUOLILÄHIKUVA (Päätoimittaja 7.10. 03.0x, omistajan linja 6.10. "kamera puhujan mukaan, rauhallisesti", ~1 s blendi, ei
@@ -1002,6 +1033,7 @@ namespace Matkakirja.Natiivi
             // Vaihemallit (LR v45y): paketin blender-kansio kävelydatan polusta (blender/kavely/osat.json → blender/).
             string ko = rakennus?.KavelyOsat; int ki = ko != null ? ko.LastIndexOf("kavely/", StringComparison.Ordinal) : -1;
             string vaiheJuuri = ki >= 0 && kavelyKehitysJuuri == null ? paketinJuuri + ko.Substring(0, ki) : null;
+            SeikkailuHistoria.Hamara = DioraamaTunnelma.Hamara(rakennus);   // mustan korvauksen sävy kuoren hämärä- tai päiväkuvaan
             SeikkailuHistoria.Aloita(nayttamo != null && nayttamo.Kamera != null ? nayttamo.Kamera.transform : null,
                 () => { if (!oli) SeikkailuKavely.Leikkaukset(false); valmis?.Invoke(); }, o.Kirjaa, vaiheJuuri, peili);
         }
@@ -1244,12 +1276,12 @@ namespace Matkakirja.Natiivi
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-saa-v3/manifest.json");   // Pelikoodari 8.10.: sade, tippuminen, ukkonen, märät askeleet, vihje-kimallus
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/aanet/sonniss-tuulet-v1/manifest.json");   // Pelikoodari 9.10.: tuuli-korkea, tuuli-kostea
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/aanet/sonniss-aanet-v2/manifest.json", "tuuli-metsa");   // PT 9.10.: vain tuuli-metsa (kirkonkellot eivät linnaan)
-                // sonniss-aanet-v3 (PT 9.10., juna 172): lukot, salvat, ovet, arkku, kolikot, sirkat ja rannan vesi; ei nappula-puuta (Mylly/Tavli),
+                // sonniss-aanet-v4 (PT 9.10., juna 173; Pelikoodarin portitettu v3: salpa-1, puuovi-narina-1 ja lukko-ravistus-b pois, matala jyrinä
+                // suodatettu, lukko-ravistus-a → lukko-ravistus): lukot, salvat, ovet, arkku, kolikot, sirkat ja rannan vesi; ei nappula-puuta (Mylly/Tavli),
                 // ei kesayo-sirkat-koiria (koira on jo aanet-lapi-v1:ssä). askel-puu (silmukka, RYK:n puulattia) korvaa rakennus.json:n heikon
                 // laituriaskeleen: pelaajan askeleet ovat silmukoita (SeikkailuVartijat.OmatAskeleet), SeikkailuAanet ennen AskelKlipitiä.
-                SeikkailuAanet.LisaaManifest(MediaJuuri + "/aanet/sonniss-aanet-v3/manifest.json", "lukko-ulko-1-a", "lukko-ulko-1-b", "lukko-ulko-2-a", "lukko-ulko-2-b",
-                    "lukko-raapaisu-a", "lukko-raapaisu-b", "lukko-ravistus-a", "lukko-ravistus-b", "salpa-2", "puuovi-narina-1-a", "puuovi-narina-1-b",
-                    "puuovi-narina-2-a", "puuovi-narina-2-b", "portti-narahdus", "portin-salpa", "raskas-ovi-avain-a", "raskas-ovi-avain-b", "arkku-kansi",
+                SeikkailuAanet.LisaaManifest(MediaJuuri + "/aanet/sonniss-aanet-v4/manifest.json", "lukko-ulko-1-a", "lukko-ulko-1-b", "lukko-ulko-2-a", "lukko-ulko-2-b",
+                    "lukko-raapaisu-a", "lukko-raapaisu-b", "lukko-ravistus", "salpa-2", "puuovi-narina-2-a", "puuovi-narina-2-b", "portti-narahdus", "portin-salpa", "raskas-ovi-avain-a", "raskas-ovi-avain-b", "arkku-kansi",
                     "kolikot-1", "kolikot-2", "kesayo-sirkat", "satama-vesi", "askel-puu");
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-lapi-v1/manifest.json");   // Pelikoodari 9.10. (maksuttomat): vesisanko, viitta, savipurkki, patapino, luuta, varusteet, yolinnut, koira
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-lapi-v2/manifest.json");   // generoidut (PT 9.10.): sytytys, hanska, kauha, nauris, tarjotin; puuttuva = hiljaa
@@ -1455,7 +1487,7 @@ namespace Matkakirja.Natiivi
         Vector3? puolilahiRinta;
         const float PuolilahiVapaaM = 0.9f, PuolilahiLeikkausMaxM = 1.2f;
         const double PuolilahiSivu = 35, PuolilahiMaxKierto = 60, PuolilahiKohdeY = 1.35, PuolilahiKorkeusM = 1.5, PuolilahiMinM = 1.7,
-            PuolilahiKorkeusAst = 22;
+            PuolilahiKorkeusAst = 12;   // PT 9.10. vouti v4: 22° katsoi hupun lipan yli, ilme jäi varjoon; 12° lähes silmien tasolta
         const double PuhujaSiirtyma = 0.9, PuhujanPaino = 0.65, HahmonKeski = 0.9, HahmonKorkeus = 1.75,
             HahmonOsuusKorkeudesta = 0.4, RuudunSuhde = 2.0, KuulijaMaxM = 4.0;
 
@@ -1794,6 +1826,16 @@ namespace Matkakirja.Natiivi
         /// paketin glb (tiedostonimen mukaan, esim. vouti-1500-faceit.glb) luetaan paikallisesta tiedostosta ja ASTC-kuvat sen kansion
         /// astc/<nimi>-<i>-6x6.astcm:stä. Ei junan sisältöä: ei pysyvää tilaa eikä osoittimen vaihtoa.</summary>
         static readonly Dictionary<string, string> hahmoKorvaus = new Dictionary<string, string>(StringComparer.Ordinal);
+        /// <summary>METAHUMAN (LR v46j 9.10., PT kuittasi vouti v4:n): paketin <nimi>-mh.glb korvaa <nimi>-faceit.glb:n, kun se on
+        /// paketin manifestissa (ASTC-kuvat <nimi>-mh-<i>-6x6.astcm). faceit-glb jää pakettiin (LR:n mh_vouti.py lukee asun ja
+        /// animaatiot siitä), ja vanhat paketit ilman mh-glb:tä toimivat ennallaan.</summary>
+        public static string HahmonLahde(string glbPolku)
+        {
+            const string Faceit = "-faceit.glb";
+            if (glbPolku == null || !glbPolku.EndsWith(Faceit, StringComparison.Ordinal)) return glbPolku;
+            string mh = glbPolku.Substring(0, glbPolku.Length - Faceit.Length) + "-mh.glb";
+            return DioraamaLevyvalimuisti.PaketissaPolku(mh) == true ? mh : glbPolku;
+        }
         static string Korvaus(string glbPolku) { int i = glbPolku.LastIndexOf('/'); return hahmoKorvaus.TryGetValue(i >= 0 ? glbPolku.Substring(i + 1) : glbPolku, out var p) ? p : null; }
         static IEnumerator HaeSuoraan(string url, Action<byte[]> valmis)
         {
@@ -1807,8 +1849,13 @@ namespace Matkakirja.Natiivi
             int kerta = avauskerta;
             byte[] tavut = null;
             string korvaus = Korvaus(glbPolku);
+            string lahde = korvaus == null ? HahmonLahde(glbPolku) : glbPolku;
             if (korvaus != null) { o.Kirjaa($"poikki: hahmo3d {glbPolku} → paikallinen koe {korvaus}"); yield return HaeSuoraan("file://" + korvaus, t => tavut = t); }
-            else yield return HaeTavut(peili(paketinJuuri + glbPolku), t => tavut = t);
+            else
+            {
+                if (lahde != glbPolku) o.Kirjaa($"poikki: hahmo3d {glbPolku} → MetaHuman {lahde}");
+                yield return HaeTavut(peili(paketinJuuri + lahde), t => tavut = t);
+            }
             if (tavut == null) { o.Kirjaa($"poikki: hahmo3d {glbPolku} ei latautunut (hahmo puuttuu)"); yield break; }
             GlbMalli malli;
             try { malli = DioraamaGlb.Lue(tavut, true); }
@@ -1821,7 +1868,7 @@ namespace Matkakirja.Natiivi
             if (glbPolku.EndsWith(".glb", StringComparison.OrdinalIgnoreCase) && DioraamaAstc.AstcTuettu)
                 for (int ki = 0; ki < malli.Kuvat.Count; ki++)
                 {
-                    string url = peili(paketinJuuri + glbPolku.Substring(0, glbPolku.Length - 4) + "-" + ki + "-6x6.astcm");
+                    string url = peili(paketinJuuri + lahde.Substring(0, lahde.Length - 4) + "-" + ki + "-6x6.astcm");
                     byte[] a = null;
                     if (korvaus != null)
                     {
@@ -1964,6 +2011,8 @@ namespace Matkakirja.Natiivi
             if (mita == "historia")
             {
                 if (arvo == "pois") { SeikkailuHistoria.Lopeta(); return; }
+                // "poikki historia saari 0|1" (arvio 10 virhe 1, oletus 1): tyhjän saaren maa näkyy linnan alla koko historian ajan.
+                if (arvo == "saari") { SeikkailuHistoria.SaariAlla = osat.Length > 3 && osat[3] == "1"; o.Kirjaa("poikki: historia saari " + (SeikkailuHistoria.SaariAlla ? "alla" : "vain alussa")); return; }
                 // Kuva-arkki 9.10. (virhe 1): tuotantopaketissa ei ole vaihemalleja eikä vuosia → pelattavan palan paketti ensin.
                 if (DioraamaLevyvalimuisti.TestiOsoitin != PelattavaPalaHash)
                 {

@@ -48,10 +48,9 @@ namespace Matkakirja.Natiivi
         List<(Maa Maa, Rgba Vari)> testiLaput;
 
         // Maakäyrien tila arkissa (web avaaVertailuNakyma: "Haetaan tilastoja…" → käyrät / verkkorivi).
-        public const string KayratHaussa = "Haetaan tilastoja…";
-        public const string KayratEiVerkkoa = "Tämä näkymä tarvitsee verkkoyhteyden ensimmäisellä avauksella "
-            + "— luvut haetaan silloin talteen.";
-        public const string KayratVirhe = "Tilastoja ei saatu haettua.";
+        public static string KayratHaussa => Kieli.T("ui.maat.kayrat-haussa");
+        public static string KayratEiVerkkoa => Kieli.T("ui.maat.kayrat-ei-verkkoa");
+        public static string KayratVirhe => Kieli.T("ui.maat.kayrat-virhe");
         /// <summary>Näin kauan odotetaan aineistoa ennen verkkoyhteysriviä (kysely jatkuu silti).</summary>
         const float KayraOdotus = 15f;
         enum KayraTesti { Ei, Latautuu, EiVerkkoa }
@@ -78,12 +77,12 @@ namespace Matkakirja.Natiivi
 
             kyltti = Rakenne.Nappi(null, "mk-maakyltti", AvaaLehti, turva);
             kyltti.style.display = DisplayStyle.None;
-            kyltti.tooltip = "Lue maan lehti";
+            kyltti.tooltip = Kieli.T("ui.maat.lue-maan-lehti");
             Kirjasimet.Aseta(kyltti, Kirjasin.Kone);
             var rivi = Rakenne.El("mk-maakyltti__rivi", kyltti, PickingMode.Ignore);
             kylttiLippu = Rakenne.El("mk-maakyltti__lippu", rivi, PickingMode.Ignore);
             kylttiNimi = Rakenne.Teksti("", "mk-maakyltti__nimi", rivi);
-            kylttiLehti = Rakenne.Teksti("Lue lehti ›", "mk-maakyltti__lehti", kyltti);
+            kylttiLehti = Rakenne.Teksti(Kieli.T("ui.maat.lue-lehti"), "mk-maakyltti__lehti", kyltti);
             // Linssipariteetti rivi 41 (web .maa-pilleri): yksi rivi, lippu + NIMI; koko pilleri avaa lehden.
             kylttiLehti.style.display = DisplayStyle.None;
             // NIMIKYLTTI (omistaja 5.10.2026, juna 146): maan valinta tuo kyltin ~3 s:ksi, sitten se häipyy.
@@ -101,7 +100,7 @@ namespace Matkakirja.Natiivi
                 sisus.style.paddingTop = r.y + 10; sisus.style.paddingBottom = r.w + 10;
                 sisus.style.paddingLeft = r.x + 12; sisus.style.paddingRight = r.z + 12;
             };
-            var otsikko = Rakenne.Teksti("Vertailu", "mk-vertailuarkki__otsikko", sisus);
+            var otsikko = Rakenne.Teksti(Kieli.T("ui.maat.vertailu"), "mk-vertailuarkki__otsikko", sisus);
             Kirjasimet.Aseta(otsikko, Kirjasin.LukuLihava);
             arkinYlarivi = Rakenne.El("mk-vertailuarkki__ylarivi", sisus, PickingMode.Ignore);
             var vieritys = new ScrollView(ScrollViewMode.Vertical);
@@ -248,7 +247,7 @@ namespace Matkakirja.Natiivi
                 });
                 b.EnableInClassList("mk-pois", pois.Contains(iso));
             }
-            var muuta = Rakenne.Nappi("Muuta valintoja", "mk-nappi--haamu mk-vertailuarkki__muuta", SuljeArkki, arkinYlarivi);
+            var muuta = Rakenne.Nappi(Kieli.T("ui.maat.muuta-valintoja"), "mk-nappi--haamu mk-vertailuarkki__muuta", SuljeArkki, arkinYlarivi);
             Kirjasimet.Aseta(muuta, Kirjasin.Kone);
 
             kortit.Clear();
@@ -265,7 +264,7 @@ namespace Matkakirja.Natiivi
                 AsetaLippu(lippu, maa, 20f);
                 var nimi = Rakenne.Teksti(maa.Nimi ?? maa.Id, "mk-vertailukortti__nimi", ylarivi);
                 Kirjasimet.Aseta(nimi, Kirjasin.LukuLihava);
-                if (maa.Tunnusluvut.Count == 0) Rakenne.Teksti("Ei tunnuslukuja.", "mk-vertailukortti__tyhja", k);
+                if (maa.Tunnusluvut.Count == 0) Rakenne.Teksti(Kieli.T("ui.maat.ei-tunnuslukuja"), "mk-vertailukortti__tyhja", k);
                 foreach (var (nimio, arvo) in maa.Tunnusluvut)
                 {
                     if (string.IsNullOrEmpty(arvo)) continue;
@@ -384,12 +383,12 @@ namespace Matkakirja.Natiivi
         {
             if (m == null) return;
             var o = PeliOhjain.Instanssi;
-            if (o == null) { ui.Tilarivi.Viesti("Peli ei ole vielä käynnissä"); return; }
+            if (o == null) { ui.Tilarivi.Viesti(Kieli.T("ui.maat.peli-ei-kaynnissa")); return; }
             var virhe = o.LueMaalehti(m.Id);
             if (virhe != null)
             {
                 Debug.LogWarning("MATKAKIRJA ui maatiedot: " + virhe);
-                ui.Tilarivi.Viesti(m.Nimi + ": lehteä ei voi avata");
+                ui.Tilarivi.Viesti(Kieli.T("ui.maat.lehtea-ei-voi-avata", m.Nimi));
             }
         }
 

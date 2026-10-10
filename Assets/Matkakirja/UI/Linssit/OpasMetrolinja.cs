@@ -68,6 +68,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Testi (`ui opasvalikko metro`): Pariisin kohteet ilman kierrosta.</summary>
         public bool Testi;
+        /// <summary>Asettelutesti: linjan juuri.</summary>
+        public VisualElement TestiJuuri => juuri;
         public int TestiIndeksi = 2;
         static readonly string[] TestiNimet = { "Eiffel-torni", "Trocadéro", "Riemukaari", "Champs-Élysées", "Place de la Concorde",
             "Louvre", "Notre-Dame de Paris", "Sacré-Cœurin basilika Montmartren kukkulalla" };
@@ -237,9 +239,11 @@ namespace Matkakirja.Natiivi
                 float taso = Mathf.Lerp(alkuTaso.Length == n ? alkuTaso[k] : 0f, Taso(k, kohde), e);
                 nytTaso[k] = taso;
                 var (rivi, nimi, paikka) = asemat[k];
-                // Koko: kapiteeli 12 → apuri 14 → väliotsikko 18; peitto 0,6 → 0,85 → 1; piste 6 → 8 → 12 pt.
+                // Koko: kapiteeli 12 → apuri 14 → väliotsikko 18; peitto 0,85 → 0,85 → 1; piste 6 → 8 → 12 pt. Kauempien peitto 0,6 → 0,85
+                // (pallon UI-katselmointi TF 172, PT 9.10.2026): 0,6 himmensi myös varjon ja ääriviivan, ja nimet hukkuivat yöllä tummaan ja
+                // päivällä vaaleaan kaupunkiin. Porrastus jää kokoon ja painoon; ei taustaa (omistaja 7.10. 12.3x).
                 float koko = taso < 1f ? Mathf.Lerp(Tyylikirja.Koko.Kapiteeli, Tyylikirja.Koko.Apuri, taso) : Mathf.Lerp(Tyylikirja.Koko.Apuri, Tyylikirja.Koko.Valiotsikko, taso - 1f);
-                float peitto = taso < 1f ? Mathf.Lerp(0.6f, 0.85f, taso) : Mathf.Lerp(0.85f, 1f, taso - 1f);
+                float peitto = taso < 1f ? 0.85f : Mathf.Lerp(0.85f, 1f, taso - 1f);
                 float piste = taso < 1f ? Mathf.Lerp(6f, 8f, taso) : Mathf.Lerp(8f, 12f, taso - 1f);
                 // Korostettu nimi yhdellä rivillä, koko leveyden mukaan (SovitaKorostus); kahdelle riville vain, jos ei mahdu muuten.
                 if (k == kohde && kt > 0f) koko = Mathf.Lerp(koko, korostusKoko, kt);

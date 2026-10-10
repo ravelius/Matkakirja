@@ -37,13 +37,9 @@ namespace Matkakirja.Natiivi
         static readonly string[] Kuut = { "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII" };
 
         // Web REVEAL_SUB.star ja POLLO_AARRE (js/ui-apurit.js, js/pollo.js; päätoimittajan kaanonteksti).
-        public const string PaaaarreRivi = "Vie unohdettu aarre kotiin ja voitat pelin!";
-        const string PolloSelite = "Columba Livia, kirjekyyhky, liittyy seuraan";
-        const string PolloEsittely = "Laatan alta löytyy Livia — täydeltä nimeltään Columba Livia, "
-            + "kirjekyyhky, jonka suku on kantanut viestejä Caesarille ja Pariisin "
-            + "piiritykseen. Hän tuuraa Viisasta Pöllöä, joka palaa aivan pian, ja "
-            + "kasvattaa sillä välin sinun untuvikkopöllöäsi. Napauta häntä, kun "
-            + "haluat kysyä jotakin maailmasta.";
+        public static string PaaaarreRivi => Kieli.T("ui.paljastus.vie-aarre-kotiin");
+        static string PolloSelite => Kieli.T("ui.paljastus.pollo-selite");
+        static string PolloEsittely => Kieli.T("ui.paljastus.pollo-esittely");
 
         // Web js/aani-ehdokkaat.js HUUDAHDUKSET.star: kolme luettua hihkaisua (huudahdus-star-1…3.mp3).
         const int PaaHihkaisuja = 3;
@@ -69,6 +65,10 @@ namespace Matkakirja.Natiivi
         static readonly System.Random arpa = new System.Random();
 
         public bool Auki { get; private set; }
+        /// <summary>Asettelutesti: kortti, Jatka matkaa ja onko Jatka jo esillä.</summary>
+        public VisualElement TestiKortti => scene;
+        public VisualElement TestiJatka => jatka;
+        public bool TestiJatkaEsilla => kerros.ClassListContains("mk-jatka");
 
         /// <summary>Paljastus suljettiin (true = aarre, ei pöllö): laukku heilahtaa (web elavoitaLaukku).</summary>
         public event Action<bool> Suljettiin;
@@ -87,10 +87,10 @@ namespace Matkakirja.Natiivi
             scene = Rakenne.El("mk-paljastus__scene", kerros, PickingMode.Ignore);
 
             tunnus = Rakenne.El("mk-paljastus__tunnus", scene, PickingMode.Ignore);
-            Kirjasimet.Aseta(Rakenne.Teksti("AARNIN LUETTELO", "mk-paljastus__otsake", tunnus), Kirjasin.KoneLihava);
+            Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.paljastus.aarnin-luettelo"), "mk-paljastus__otsake", tunnus), Kirjasin.KoneLihava);
             Rakenne.Tausta(Rakenne.El("mk-paljastus__viiva", tunnus, PickingMode.Ignore),
                 Kuviot.Vaaka("paljastus-viiva", Kuviot.Vari("#e8c98a", 0f), Kuviot.Vari("#e8c98a", 0.72f)));
-            alaotsake = Rakenne.Teksti("UNOHDETTU AARRE", "mk-paljastus__alaotsake", tunnus);
+            alaotsake = Rakenne.Teksti(Kieli.T("ui.paljastus.unohdettu-aarre"), "mk-paljastus__alaotsake", tunnus);
             Kirjasimet.Aseta(alaotsake, Kirjasin.Kone);
 
             kuvapaikka = Rakenne.El("mk-paljastus__kuvapaikka", scene, PickingMode.Ignore);
@@ -116,11 +116,11 @@ namespace Matkakirja.Natiivi
             arvo = Rakenne.Teksti("", "mk-paljastus__arvo", loyto);
             Kirjasimet.Aseta(arvo, Kirjasin.Kone);
             leima = Rakenne.El("mk-paljastus__leima", loyto, PickingMode.Ignore);
-            Kirjasimet.Aseta(Rakenne.Teksti("LÖYDETTY", "mk-paljastus__leimateksti", leima), Kirjasin.KoneLihava);
+            Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.paljastus.loydetty"), "mk-paljastus__leimateksti", leima), Kirjasin.KoneLihava);
             leimaPvm = Rakenne.Teksti("", "mk-paljastus__leimapvm", leima);
             Kirjasimet.Aseta(leimaPvm, Kirjasin.KoneLihava);
 
-            jatka = Rakenne.Nappi("JATKA MATKAA", "mk-paljastus__jatka", Sulje, scene);
+            jatka = Rakenne.Nappi(Kieli.T("ui.paljastus.jatka-matkaa"), "mk-paljastus__jatka", Sulje, scene);
             Kirjasimet.Aseta(jatka, Kirjasin.KoneLihava);
         }
 
@@ -154,11 +154,11 @@ namespace Matkakirja.Natiivi
             string k = kaupunki ?? PeliOhjain.Instanssi?.PelaajanKaupunki;
             string manner = k != null ? UiSisalto.Kaupunki(k)?.Manner : null;
             alaotsake.text = manner != null && KauppaVakiot.MannerNimet.TryGetValue(manner, out var mn)
-                ? mn.Nimi.ToUpperInvariant() + " · UNOHDETTU AARRE" : "UNOHDETTU AARRE";
+                ? Kieli.T("ui.paljastus.manner-unohdettu-aarre", mn.Nimi.ToUpperInvariant()) : Kieli.T("ui.paljastus.unohdettu-aarre");
 
             // Nimi: pöllöllä yliviivattu nimilappu (web polloNimilappu), muuten löydön nimi.
             nimi.enableRichText = pollo;
-            nimi.text = pollo ? "<s>Viisas Pöllö</s> Pulu" : d.LoytoNimi ?? NimiRivista(d.Loyto) ?? "";
+            nimi.text = pollo ? Kieli.T("ui.paljastus.pollo-nimi") : d.LoytoNimi ?? NimiRivista(d.Loyto) ?? "";
             // Alarivi: web REVEAL_SUB[type] ?? "+N puntaa" (löytöhetken arvo).
             string rivi = pollo ? PolloSelite : paa ? PaaaarreRivi : d.LoytoRivi ?? Puntaa(d.Loyto);
             Nakyy(palkkio, rivi);
@@ -167,7 +167,7 @@ namespace Matkakirja.Natiivi
             Mitoita();
 
             var nyt = DateTime.Now;
-            arvo.text = paa ? $"ARVO {LaattaVakiot.PaaaarrePalkkio} PUNTAA" : "";
+            arvo.text = paa ? Kieli.T("ui.paljastus.arvo", LaattaVakiot.PaaaarrePalkkio) : "";
             leimaPvm.text = $"{nyt.Day} · {Kuut[nyt.Month - 1]}";
 
             int v = ++versio;
@@ -354,7 +354,7 @@ namespace Matkakirja.Natiivi
                 // Äänimikseri (Natiivi-UI 9.10.): aarreaihe ryhmään musiikki nykyisessä kontekstissa, tunnus musiikki/<tiedosto>.
                 var m = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
                 string id = Aanet.MikseriId("musiikki/", System.IO.Path.GetFileNameWithoutExtension(url.Split('?')[0]));
-                m.Rekisteroi(m.Nyt, "musiikki", id, url.Contains("paaaarre") ? "Pääaarteen paljastus" : "Aarteen paljastus", klippi.name);
+                m.Rekisteroi(m.Nyt, "musiikki", id, url.Contains("paaaarre") ? "Pääaarteen paljastus" : "Aarteen paljastus", klippi.name);   // kieli: ei (mikserin rekisterinimi (mikseri vain kehittäjäkoodilla))
                 musiikki.volume = Mathf.Clamp01(Asetukset.Taso(Voima.Musiikki) * MusiikinKerroin * m.AaniKerroin(m.Nyt, id));
                 musiikki.Play();
             });

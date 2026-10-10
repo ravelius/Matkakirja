@@ -225,6 +225,9 @@ namespace Matkakirja.Natiivi
             return manifesti.ContainsKey(url.Substring(juuri.Length));
         }
 
+        /// <summary>Onko paketin suhteellinen polku (esim. "blender/hahmot/x.glb") nykyisen paketin manifestissa; null = manifestia ei ole.</summary>
+        public static bool? PaketissaPolku(string polku) => manifesti == null || polku == null ? null : manifesti.ContainsKey(polku);
+
         /// <summary>Paikallinen polku ja odotettu sha256 url:lle, tai (null, null), jos url ei ole nykyisen paketin manifestin tiedosto.</summary>
         static (string Paikka, string Sha) Paikka(string url)
         {

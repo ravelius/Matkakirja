@@ -147,7 +147,7 @@ namespace Matkakirja.Natiivi
             // kaaren loppupään vuosiluvulle ("n. 1250 jaa.").
             mittari = new Matkamittari(kelloRuutu);
             mittari.Nayta(false);
-            kelloYksikko = Rakenne.Teksti("v. sitten", "mk-aikajana-kello__yksikko", kelloRuutu);
+            kelloYksikko = Rakenne.Teksti(Kieli.T("ui.aikajana.v-sitten"), "mk-aikajana-kello__yksikko", kelloRuutu);
             Kirjasimet.Aseta(kelloYksikko, Kirjasin.Kone);
             kelloYksikko.style.display = DisplayStyle.None;
             kello.RegisterCallback<GeometryChangedEvent>(_ => MitoitaKello());
@@ -168,16 +168,16 @@ namespace Matkakirja.Natiivi
             kahva = Rakenne.Nappi("", "mk-aikajana-nappi mk-aikajana-kahva", NaytaLappu, ohjaimet);
             kahva.style.display = DisplayStyle.None;
             // Yksi tekstinappi: Tauko / Jatka (myös välinäytöksessä, hehkuen) / Loppu (web taukoNappi).
-            tauko = Rakenne.Nappi("Tauko", "mk-aikajana-nappi mk-aikajana-nappi--teksti", VaihdaTauko, ohjaimet);
+            tauko = Rakenne.Nappi(Kieli.T("ui.aikajana.tauko"), "mk-aikajana-nappi mk-aikajana-nappi--teksti", VaihdaTauko, ohjaimet);
             Kirjasimet.Aseta(tauko, Kirjasin.Kone);
             // Löydös 148: II:n soitin (Linssisepän ohjaus: alkuun AloitaAlusta, loppuun SiirryTutkimukseen, tauko Esitys).
             soitin = Rakenne.El("mk-aikajana-soitin", ohjaimet, PickingMode.Ignore);
             soitinAlkuun = Rakenne.Nappi(null, "mk-aikajana-nappi mk-aikajana-soitin__nappi", SoitinAlkuun, soitin, KelaaAlkuun);
-            soitinAlkuun.tooltip = "Aloita alusta";
+            soitinAlkuun.tooltip = Kieli.T("ui.aikajana.aloita-alusta");
             soitinToisto = Rakenne.Nappi(null, "mk-aikajana-nappi mk-aikajana-soitin__nappi", SoitinToisto, soitin, Pysayta);
-            soitinToisto.tooltip = "Tauko";
+            soitinToisto.tooltip = Kieli.T("ui.aikajana.tauko");
             soitinLoppuun = Rakenne.Nappi(null, "mk-aikajana-nappi mk-aikajana-soitin__nappi", SiirryTutkimaan, soitin, KelaaLoppuun);
-            soitinLoppuun.tooltip = "Tutki karttaa itse";
+            soitinLoppuun.tooltip = Kieli.T("ui.aikajana.tutki-karttaa");
             soitin.style.display = DisplayStyle.None;
             Valikko = new LinssiValikko(kerros, () => linssit.SuljeLinssi(), AloitaAlusta);
             ohjaimet.Add(Valikko.Nappi);
@@ -216,7 +216,7 @@ namespace Matkakirja.Natiivi
             pTeksti = Rakenne.Teksti("", "mk-aikajana-paneeli__teksti", paneeli);
             Kirjasimet.Aseta(pTeksti, Kirjasin.Luku);
             // "Lue juttu" (web aikajana.js .aikajana-lue): tiedeliitteen sivu, kun pysäkillä on juttu.
-            lueJuttu = Rakenne.Nappi("Lue juttu", "mk-aikajana-lue", () => { if (pysakki >= 0) LinssiUi.Keksinnot?.AvaaJuttu(pysakki); }, paneeli);
+            lueJuttu = Rakenne.Nappi(Kieli.T("ui.aikajana.lue-juttu"), "mk-aikajana-lue", () => { if (pysakki >= 0) LinssiUi.Keksinnot?.AvaaJuttu(pysakki); }, paneeli);
             Kirjasimet.Aseta(lueJuttu, Kirjasin.KoneLihava);
             lueJuttu.style.display = DisplayStyle.None;
             tiedeliite = new Tiedeliitenakyma(kerros);
@@ -314,7 +314,7 @@ namespace Matkakirja.Natiivi
                 if (!float.IsNaN(w) && w > 0) eKehys.style.width = Mathf.Min(496f, 0.88f * (w - 32f));
             });
             eValo = Lyhdyt(eKehys, out eLyhtyV, out eLyhtyO);
-            kaynnista = Rakenne.Nappi(Kapiteelit("Käynnistä"), "mk-aikajana-avausnappi", Kaynnista, eNapit);
+            kaynnista = Rakenne.Nappi(Kapiteelit(Kieli.T("ui.aikajana.kaynnista")), "mk-aikajana-avausnappi", Kaynnista, eNapit);
             Kirjasimet.Aseta(kaynnista, Kirjasin.LukuLihava);
             foreach (var l in kaynnista.Query<Label>().ToList()) l.enableRichText = true;
             kaynnista.style.backgroundImage = new StyleBackground(Kuviot.Pysty("avausnappi", new Color(74 / 255f, 51 / 255f, 22 / 255f, 0.94f), new Color(44 / 255f, 28 / 255f, 10 / 255f, 0.96f)));
@@ -656,7 +656,7 @@ namespace Matkakirja.Natiivi
         {
             var ikoni = soitinToisto.Q<SvgIkoni>();
             if (ikoni != null) ikoni.Polku = o == EsityksenOhjaus.Soi ? Pysayta : Ikonit.Toista;
-            soitinToisto.tooltip = o == EsityksenOhjaus.Soi ? "Tauko" : "Jatka";
+            soitinToisto.tooltip = Kieli.T(o == EsityksenOhjaus.Soi ? "ui.aikajana.tauko" : "ui.aikajana.jatka");
             soitinToisto.SetEnabled(o != EsityksenOhjaus.Tutkimus);
             soitinLoppuun.SetEnabled(o != EsityksenOhjaus.Tutkimus);
         }
@@ -877,7 +877,7 @@ namespace Matkakirja.Natiivi
         void PaivitaTauko()
         {
             // Web taukoNappi.textContent: käynnissä "Tauko", muuten loppu ? "Loppu" : "Jatka".
-            tauko.Q<Label>().text = !tauolla ? "Tauko" : lopussa ? "Loppu" : "Jatka";
+            tauko.Q<Label>().text = Kieli.T(!tauolla ? "ui.aikajana.tauko" : lopussa ? "ui.aikajana.loppu" : "ui.aikajana.jatka");
             tauko.tooltip = tauko.Q<Label>().text;
             // Ihmisen matkan lopussa nappi on pois käytöstä (web ihmisen-matka-esitys.js).
             tauko.SetEnabled(!(lopussa && tila == Tila.Ihminen));
@@ -940,9 +940,9 @@ namespace Matkakirja.Natiivi
 
         void PaivitaKahva()
         {
-            string nimi = lapunNimi ?? "Kortti";
+            string nimi = lapunNimi ?? Kieli.T("ui.aikajana.kortti");
             kahva.Q<Label>().text = nimi + " ▾";
-            kahva.tooltip = "Näytä " + nimi;
+            kahva.tooltip = Kieli.T("ui.aikajana.nayta-kortti", nimi);
             kahva.style.display = lappuPiilossa ? DisplayStyle.Flex : DisplayStyle.None;
         }
 
@@ -1055,7 +1055,7 @@ namespace Matkakirja.Natiivi
 
         void NaytaEsittely()
         {
-            AsetaLaatikko(keksinnot?.EsittelyOtsikko ?? keksinnot?.Otsikko ?? "Keksinnöt", keksinnot?.EsittelyTeksti ?? "", musta: true);
+            AsetaLaatikko(keksinnot?.EsittelyOtsikko ?? keksinnot?.Otsikko ?? Kieli.T("ui.aikajana.keksinnot"), keksinnot?.EsittelyTeksti ?? "", musta: true);
             Rakenne.Nayta(esittely, true, 250);
         }
 
@@ -1301,9 +1301,9 @@ namespace Matkakirja.Natiivi
             lopussa = true;
             NaytaLappu();
             lapunNimi = keksinnot.LoppuOtsikko ?? lapunNimi;
-            NaytaTekstipaneeli((keksinnot.Otsikko ?? "").ToUpperInvariant(), keksinnot.LoppuOtsikko ?? "Kaari päättyi", keksinnot.LoppuTeksti, false);
+            NaytaTekstipaneeli((keksinnot.Otsikko ?? "").ToUpperInvariant(), keksinnot.LoppuOtsikko ?? Kieli.T("ui.aikajana.kaari-paattyi"), keksinnot.LoppuTeksti, false);
             paneeli.style.display = DisplayStyle.Flex;
-            paikka.text = keksinnot.Jakso + " · " + keksinnot.Valoja + " valoa";
+            paikka.text = Kieli.T("ui.aikajana.valoja", keksinnot.Jakso, keksinnot.Valoja);
             AsetaTauko(true);
         }
 
@@ -1313,7 +1313,7 @@ namespace Matkakirja.Natiivi
         {
             // Ihmisen matka II (Linssisepän video 25.9.2026): esittelyn otsikko linssin nimestä, koska aineiston otsikko
             // on I:n ("Ihmisen matka"); I:ssä aineiston otsikko kuten ennen.
-            string nimi = ihmisenNimi == IhmisenMatkaLinssi.IhmisenMatka2Tiedot.Nimi ? ihmisenNimi : ihmisenAloitus.Otsikko ?? ihmisenNimi ?? "Ihmisen matka";
+            string nimi = ihmisenNimi == IhmisenMatkaLinssi.IhmisenMatka2Tiedot.Nimi ? ihmisenNimi : ihmisenAloitus.Otsikko ?? ihmisenNimi ?? Kieli.T("ui.aikajana.ihmisen-matka");
             AsetaLaatikko(nimi, ihmisenAloitus.Teksti ?? "", musta: false);
             AsetaKaynnistaOdottaa(false);
             avausTausta.Nayta(ihmisenAloitus.Taustakuvat);
@@ -1358,7 +1358,7 @@ namespace Matkakirja.Natiivi
         void AsetaKaynnistaOdottaa(bool odottaa)
         {
             kaynnista.SetEnabled(!odottaa);
-            kaynnista.Q<Label>().text = Kapiteelit(odottaa ? "Hetki…" : "Käynnistä");
+            kaynnista.Q<Label>().text = Kapiteelit(Kieli.T(odottaa ? "ui.aikajana.hetki" : "ui.aikajana.kaynnista"));
         }
 
         void Musta(bool paalla, double feidiMs)
@@ -1861,9 +1861,7 @@ namespace Matkakirja.Natiivi
             }
             // Paketin vientilistalla ei vielä ole ALOITUS/ESITTELY-vientejä (Siirtoseppä lisää):
             // siihen asti webin IHMISEN_MATKA_ALOITUS sanasta sanaan (js/linssit/ihmisen-matka-data.js).
-            t.Teksti ??= "Yksi laji levisi yhdestä maanosasta kaikkiin. Kukaan ei suunnitellut matkaa: "
-                + "jokainen sukupolvi siirtyi vain vähän kauemmas kuin edellinen, ja tuhat sukupolvea "
-                + "myöhemmin oltiin toisella puolella maapalloa.";
+            t.Teksti ??= Kieli.T("ui.aikajana.ihmisen-matka-aloitus");
             foreach (var tunnus in AloituksenTaustakuvat)
             {
                 var p = a.Paikat.FirstOrDefault(x => x.Tunnus == tunnus) ?? a.Lisanostot.FirstOrDefault(x => x.Tunnus == tunnus);
@@ -1933,7 +1931,7 @@ namespace Matkakirja.Natiivi
         {
             Ala(Tila.Ihminen);
             // Testitila ilman linssiä: otsikko ei tule Kytke-kutsusta (pariteetti 24.9.: jäi "KEKSINNÖT EUROOPASSA").
-            otsikko.text = (IhmisenMatkaLinssi.IhmisenMatkaTiedot.Nimi ?? "Ihmisen matka").ToUpperInvariant();
+            otsikko.text = (IhmisenMatkaLinssi.IhmisenMatkaTiedot.Nimi ?? "Ihmisen matka").ToUpperInvariant();   // kieli: ei (testikomento (TestaaIhminen))
             LataaIhminen(() =>
             {
                 switch (mita)

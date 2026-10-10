@@ -20,7 +20,7 @@ using UnityEngine.Networking;
 
 namespace Matkakirja.Natiivi
 {
-    public sealed class OpasSovitin : ILinssi
+    public sealed partial class OpasSovitin : ILinssi
     {
         public static readonly LinssiTiedot OpasTiedot = new LinssiTiedot
         {
@@ -422,7 +422,9 @@ namespace Matkakirja.Natiivi
             if (puhuu && loppui)
             {
                 if (pcmNyt != null) { if (pcmNyt.Katkoja > 0) o.Kirjaa($"opas: PCM-virrassa {pcmNyt.Katkoja} katkoa"); pcmNyt = null; if (puhe != null) puhe.Stop(); }
-                puhuu = false; y.Repliikki(false); silmukka.AaniLoppui();
+                puhuu = false; y.Repliikki(false);
+                // Pariisin nykyintro (OpasSovitin.Intro): 1. kyydin opastus ensimmäisen pysähdyksen kerronnan jälkeen; lähtö odottaa.
+                if (OpastusPysahdyksella()) o.StartCoroutine(OpastusPysahdyksenJalkeen()); else silmukka.AaniLoppui();
             }
             kaupunki.PidaMaski();
             kaupunki.PaivitaAvauslataus();   // ion-logo avauslatauksen ajan (Natiivi-UI KrediititTiivis)
@@ -481,7 +483,7 @@ namespace Matkakirja.Natiivi
             if (silmukka.Vaihe != ennen) o.Kirjaa($"opas: {ennen} → {silmukka.Vaihe} {(silmukka.Nykyinen?.Nimi ?? "")}, laatat {kaupunki.Latausaste:F0} %"
                 + (silmukka.Vaihe == OpasVaihe.Lentaa && silmukka.LahtoOdottiS > 0 ? $", lähtö odotti laattoja {silmukka.LahtoOdottiS:F1} s" : ""));
             if (silmukka.Vaihe != ennen && silmukka.Vaihe == OpasVaihe.Lentaa) { OpasKorostusKuva.Piilota(); KohdeKorostus.Piilota(); }
-            y.Kuvaa(silmukka.Asento);
+            y.Kuvaa(introKamera ?? silmukka.Asento);   // Pariisin nykyintron Eiffel-otos (OpasSovitin.Intro), muuten silmukka
             PaivitaKameraTila();
             // Yövalot v4: nykyinen kohde saa yöllä lämpimän valonheiton (KaupunkiYovalot; Päätoimittaja 22.3x "Eiffel kultaisena").
             KaupunkiYovalot.KaupunkiId = NykyinenKaupunkiId;
@@ -514,13 +516,16 @@ namespace Matkakirja.Natiivi
             LatausKuvaPaivita();
             Luotaa();
             KameraKuvattu?.Invoke(kierto != null ? kierto.GetComponent<Camera>() : null, silmukka);
+            // Pienellä muistilla ei esilatausta nykyintron aikana (juna 173, R18: 10 s:n pidon jälkeen palannut esilataus vei latauspaikat
+            // pyörivältä avausnäkymältä, ja kaukainen kaupunki näkyi intron 14. sekunnilla vetenä). Kierros esilataa vasta intron jälkeen.
+            kaupunki.IntroEsilatausPois = introKaynnissa && KaupunkiKuva.PieniMuisti;
             // Esilataus: lennon aikana laskeutumiskehys, muuten esihaetun kohteen kehys (OpasKuvaus, sama kuin lento).
             var esi = silmukka.Esilataus(MaaKorkeus);
             // Siirtoruudun aikana 1. kohde puolikkaalla tarkkuudella: yleiskuva saa kaistan, tarkka kohde latautuu laskeutumisessa.
             if (esi.HasValue) kaupunki.AsetaEsikamera(esi.Value, silmukka.Siirtymassa ? CesiumKaupunki.ReittiSkaala : 1f);
             else kaupunki.EsikameraPois();   // ei esilattavaa: piilokamera ei pidä vanhoja laattoja elossa
             // Reitin välinäkymät (Päätoimittaja 8.10. 07.4x: sumea kortteli lennon alussa); 0 näkymää → reittikamerat pois.
-            kaupunki.AsetaReittikamerat(reittiNakymat, silmukka.ReittiEsilataus(MaaKorkeus, reittiNakymat));
+            kaupunki.AsetaReittikamerat(reittiNakymat, IntroReitti(silmukka.ReittiEsilataus(MaaKorkeus, reittiNakymat)));
             EsilataaKortit();
             Telemetria(ennen);
             SaaLive();
@@ -535,7 +540,7 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        readonly Kuvakulma[] reittiNakymat = new Kuvakulma[OpasSilmukka.ReittiNaytteet.Length];
+        readonly Kuvakulma[] reittiNakymat = new Kuvakulma[OpasSilmukka.ReittiNaytteet.Length + 1];   // + intron Eiffel-otos
         float maamerkitAika = -9f;
         double MaaKorkeus(OpasKohde k) => maaKorkeudet.TryGetValue(Avain(k), out var h) ? h : MaaPisteessa(k.Lat, k.Lon);
         double MaaPisteessa(double lat, double lon) => pisteKorkeudet.TryGetValue(PisteAvain(lat, lon), out var h) ? h : double.NaN;
@@ -1081,12 +1086,13 @@ namespace Matkakirja.Natiivi
         {
             double kesto = KierrosLento.LukuKesto(teksti);
             o.Kirjaa($"opas: esitys avaus tekstinä ({kesto:F1} s)");
+            while (IntroOdottaa() && silmukka != null && Kaupunkitila) yield return null;   // nykyintro: avaus aikajanan mukaan
             KysymysChattiin(new OpasKohde { Id = "avaus", Teksti = teksti });
             TekstiNakyviin();
             var avausK = new OpasKohde { Id = "avaus", Teksti = teksti };
             tekstina = avausK; tekstiKulunut = 0;
             YksAloitaTeksti("avaus", teksti, kesto, () => tekstina == avausK);
-            silmukka?.AsetaAvausKesto(kesto + (OpastusKuultu ? 0 : OpastusArvioS) + AvausLepoS);
+            silmukka?.AsetaAvausKesto(avausEnnenS + kesto + AvausLisaS);
             double t = 0;
             while (t < kesto && silmukka != null && Kaupunkitila && tekstina == avausK) { if (!tauolla) t += Time.unscaledDeltaTime; tekstiKulunut = t; yield return null; }
             if (tekstina == avausK) tekstina = null;
@@ -1104,7 +1110,9 @@ namespace Matkakirja.Natiivi
             // avauksen soidessa ja ajoitus odotti 3 s).
             VarmistaYksityiskohdat();
             if (!Testi && Kehityskaupungit.On(kaupunkiId)) o.StartCoroutine(LataaHistoria(kaupunkiId));
-            o.Kirjaa($"opas: esitys alkaa ({kaupunkiId}): avaus{(OpastusKuultu ? "" : " + opastus (1. kyyti)")}{(kaupunkiId != null && esittelyPolut.ContainsKey(kaupunkiId) ? " [" + esittelyPolut[kaupunkiId] + "]" : "")}");
+            // Pariisin nykyintro (OpasSovitin.Intro) ennen avausta; avauksen JSON ja ääni latautuvat intron aikana.
+            bool intro = AloitaIntro(kaupunkiId);
+            o.Kirjaa($"opas: esitys alkaa ({kaupunkiId}): {(intro ? "nykyintro + " : "")}avaus{(OpastusKuultu ? "" : opastusSiirretty ? " (opastus 1. pysähdyksen jälkeen)" : " + opastus (1. kyyti)")}{(kaupunkiId != null && esittelyPolut.ContainsKey(kaupunkiId) ? " [" + esittelyPolut[kaupunkiId] + "]" : "")}");
             if (!Testi && !string.IsNullOrEmpty(kaupunkiId))
             {
                 Dictionary<string, object> avaus = null;
@@ -1117,9 +1125,10 @@ namespace Matkakirja.Natiivi
                 }
                 string avausTeksti = avaus != null && avaus.TryGetValue("teksti", out var at) ? at as string : null;
                 if (avaus != null && avaus.TryGetValue("aani", out var au) && au is string url && Asetukset.Paalla(Kytkin.Kertoja))
-                    yield return SoitaJaOdota(url, "avaus", avausTeksti);
+                    yield return SoitaJaOdota(url, "avaus", avausTeksti, IntroOdottaa);
                 else if (!string.IsNullOrWhiteSpace(avausTeksti) && silmukka != null)
                     yield return AvausTekstina(avausTeksti);
+                while (IntroOdottaa() && silmukka != null && Kaupunkitila) yield return null;   // avaus puuttui: intron loppuun
                 if (!OpastusKuultu && silmukka != null && Kaupunkitila)
                 {
                     string ourl = null;
@@ -1131,10 +1140,12 @@ namespace Matkakirja.Natiivi
                             && j.TryGetValue("opastus", out var ol) && ol is IList<object> l && l.Count > 0 && l[0] is Dictionary<string, object> o0
                             && o0.TryGetValue("aani", out var ou)) ourl = ou as string;
                     }
-                    if (ourl != null) { yield return SoitaJaOdota(ourl, "opastus"); OpastusKuultu = true; }
+                    if (ourl != null && opastusSiirretty) { opastusUrl = ourl; o.Kirjaa("opas: esitys: opastus siirretty 1. pysähdyksen jälkeen (nykyintro)"); }
+                    else if (ourl != null) { yield return SoitaJaOdota(ourl, "opastus"); OpastusKuultu = true; }
                 }
             }
             // Avaus kunnolla ohi ennen ensimmäistä siirtymää (omistaja TF 168, 9.10.: "parin kertojan lauseen jälkeen kip kääntyy").
+            while (introKaynnissa && silmukka != null && Kaupunkitila) yield return null;   // nykyintron paluu 3D:hen ensin
             if (!Testi) yield return new WaitForSeconds(AvausLepoS);
             if (silmukka == null || !Kaupunkitila) yield break;
             o.Kirjaa("opas: esitys: kaupunkikierros");
@@ -1143,7 +1154,8 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Esityksen puhe (avaus, opastus) siltalauseiden kanavalla; odottaa loppuun (ei kertojaa päälle).</summary>
-        IEnumerator SoitaJaOdota(string url, string mika, string teksti = null)
+        /// <param name="odota">Ladattu klippi odottaa, kunnes tämä on false (nykyintron aikajana: avaus 33,5 s).</param>
+        IEnumerator SoitaJaOdota(string url, string mika, string teksti = null, Func<bool> odota = null)
         {
             if (silta == null || !Asetukset.Paalla(Kytkin.Kertoja)) yield break;
             using var p = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG);
@@ -1152,9 +1164,11 @@ namespace Matkakirja.Natiivi
             yield return p.SendWebRequest();
             if (p.result != UnityWebRequest.Result.Success || silmukka == null) { o.Kirjaa($"opas: esitys {mika} ei latautunut ({p.responseCode})"); yield break; }
             var klippi = DownloadHandlerAudioClip.GetContent(p);
+            while (odota != null && odota() && silmukka != null && Kaupunkitila) yield return null;
+            if (silmukka == null) yield break;
             silta.clip = Nimea(klippi, SiltaId); silta.volume = SiltaTaso; silta.Play();
             // Avauskehyksen kierto koko avauksen ajan (kuva-arkki 9.10., T2): avaus + opastus (ensimmäisellä kyydillä) + lepo.
-            if (mika == "avaus" && silmukka != null) silmukka.AsetaAvausKesto(klippi.length + (OpastusKuultu ? 0 : OpastusArvioS) + AvausLepoS);
+            if (mika == "avaus" && silmukka != null) silmukka.AsetaAvausKesto(avausEnnenS + klippi.length + AvausLisaS);
             // Avauksen sana-ajat avauksen äänen rinnalla (.mp3 → .ajat.json, Pelikoodari #4152); puuttuessa varapolku.
             if (teksti != null) YksAloita("avaus", teksti, silta, klippi, url.EndsWith(".mp3") ? url.Substring(0, url.Length - 4) + ".ajat.json" : null, klippi.length);
             o.Kirjaa($"opas: esitys {mika} soi ({klippi.length:F1} s, lataus {Time.realtimeSinceStartup - t0:F1} s)");
@@ -2834,7 +2848,7 @@ namespace Matkakirja.Natiivi
             var llh = CesiumForUnity.CesiumWgs84Ellipsoid.EarthCenteredEarthFixedToLongitudeLatitudeHeight(
                 g.TransformUnityPositionToEarthCenteredEarthFixed((double3)(float3)kam.transform.position));
             double vaaka = KierrosLento.EtaisyysM(llh.y, llh.x, k.Lat, k.Lon);
-            o.Kirjaa($"opas: kamera {milloin} {k.Nimi}: kehys et {kh.EtaisyysM:F0} m, kallistus {kh.Kallistus:F0}°, maa {kh.MaaM:F0}, nosto {kh.NostoM:F0}, korkeus_m {k.KorkeusM:F0}, koko {k.KokoM:F0} " +
+            o.Kirjaa($"opas: kamera {milloin} {k.Nimi}: kehys et {kh.EtaisyysM:F0} m, kallistus {kh.Kallistus:F0}°, maa {kh.MaaM:F0}, nosto {kh.NostoM:F0}, korkeus_m {k.KorkeusM:F0}, koko {k.KokoM:F0}, katse {(double.IsNaN(k.KatseSuunta) ? "-" : k.KatseSuunta.ToString("F0"))}, suuntima {kh.Suuntima:F0} " +
                 $"| silmä {llh.z - kh.MaaM:F0} m maasta, {vaaka:F0} m kohteesta, kallistus käytössä {kierto.KaytettyKallistus:F0}°");
         }
         IEnumerator KameraLokiMyohemmin(OpasKohde k, float s) { yield return new WaitForSecondsRealtime(s); if (silmukka?.Nykyinen == k) KameraLoki(k, $"{s:F0} s"); }
@@ -3069,6 +3083,7 @@ namespace Matkakirja.Natiivi
         public void Sulje()
         {
             YksPois(); kortti?.Sulje(); kortti = null; tekstiAvasiChatin = false; Nosto?.Piilota(); if (kelloLahde != null) kelloLahde.Stop(); kellotSoineet.Clear();
+            IntroSulje();
             luotain?.Dispose(); luotain = null;
             OpasKorostusKuva.Piilota(true); KohdeKorostus.Piilota(true);
             KaupunkiYovalot.Kohde = null;

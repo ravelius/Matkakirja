@@ -227,6 +227,160 @@ namespace Matkakirja.Linssit.Testit
             finally { OpasSilmukka.PalloLento = false; }
         }
 
+        // Tukholman kuva-arkki 9.10. (PT junaan 174): Vasa-museo nähtiin lentosuunnasta tumman takaseinän puolelta → worker
+        // "katse_suunta" kääntää pysähdyksen kehyksen veden puolelle (kamera lounaassa, katse koilliseen), kääntöraja pätee yhä.
+        [Testi] static void KohteenKatseSuuntaKorvaaLentosuunnan()
+        {
+            var j = (Dictionary<string, object>)Matkakirja.Peli.MiniJson.Jasenna("{\"nimi\":\"Vasa-museo\",\"lat\":59.3281,\"lon\":18.0914,\"katse_suunta\":40}");
+            Oleta.Tosi(Math.Abs(OpasKohde.Lue(j).KatseSuunta - 40) < 1e-9, "katse_suunta luetaan");
+            Oleta.Tosi(double.IsNaN(OpasKohde.Lue((Dictionary<string, object>)Matkakirja.Peli.MiniJson.Jasenna("{\"nimi\":\"x\",\"lat\":1,\"lon\":2}")).KatseSuunta), "puuttuva = NaN");
+            foreach (bool pallo in new[] { false, true })
+                foreach (double? katse in new double?[] { null, 40 })
+                {
+                    OpasSilmukka.PalloLento = pallo;
+                    try
+                    {
+                        var s = new OpasSilmukka(new Kuvakulma(59.3250, 18.0708, 420, 58, 70, 30));
+                        var p = new List<(int n, string t)>();
+                        s.Pyyda += (n, t) => p.Add((n, t));
+                        s.Aloita("Tukholma");
+                        s.Vastaus(p[^1].n, K("Gamla stan", 59.3250, 18.0708));
+                        for (int i = 0; i < 600 && s.Vaihe != OpasVaihe.Puhuu; i++) s.Paivita(0.05, _ => 25);
+                        var vasa = new OpasKohde { Id = "Q901371", Nimi = "Vasa-museo", Lat = 59.3281, Lon = 18.0914, KokoM = 120, KorkeusM = 39, KestoS = 5 };
+                        if (katse.HasValue) vasa.KatseSuunta = katse.Value;
+                        s.Vastaus(p[^1].n, vasa);
+                        s.AaniLoppui();
+                        for (int i = 0; i < 400 && s.Vaihe != OpasVaihe.Lentaa; i++) s.Paivita(0.05, _ => 25);
+                        double maks = 0, ed = s.Asento.Suuntima; const double dt = 1 / 60.0;
+                        for (int i = 0; i < 4000 && s.Vaihe != OpasVaihe.Puhuu; i++)
+                        {
+                            s.Paivita(dt, _ => 25);
+                            if (s.Vaihe == OpasVaihe.Lentaa) maks = Math.Max(maks, Math.Abs(KierrosLento.Kiedo(s.Asento.Suuntima - ed)) / dt);
+                            ed = s.Asento.Suuntima;
+                        }
+                        Oleta.Tosi(s.Vaihe == OpasVaihe.Puhuu && s.Nykyinen?.Id == "Q901371", $"perillä Vasassa ({s.Vaihe})");
+                        double su = s.Asento.Suuntima, lento = OpasSilmukka.Suunta(59.3250, 18.0708, 59.3281, 18.0914);
+                        string m = $"pallo {pallo}, katse {(katse?.ToString() ?? "-")}: suuntima {su:F0}°, lentosuunta {lento:F0}°, kääntö {maks:F1} °/s";
+                        if (katse.HasValue && !pallo) Oleta.Tosi(Math.Abs(KierrosLento.Kiedo(su - 40)) < 6, m);
+                        if (katse.HasValue && pallo) Oleta.Tosi(Math.Abs(KierrosLento.Kiedo(su - 40)) < Math.Abs(KierrosLento.Kiedo(lento + OpasKuvaus.SivuKulma - 40)), "pallo kääntyy kohti katsesuuntaa: " + m);
+                        if (!katse.HasValue) Oleta.Tosi(Math.Abs(KierrosLento.Kiedo(su - 40)) > 20, "ilman kenttää lentosuunnan mukaan: " + m);
+                        if (pallo) Oleta.Tosi(maks <= OpasSilmukka.PalloKaantoAstS + 0.3, "kääntöraja: " + m);
+                    }
+                    finally { OpasSilmukka.PalloLento = false; }
+                }
+        }
+
+        // Vasa-arkki 9.10. 17.54: kierroksella kääntöraja piti saapumisen lentosuunnassa (99° → 88°) ja kaaret kiersivät seuraavaa
+        // kohdetta (Skansen) kohti → oman katse_suunnan kohteella lennon kaari pois ja pysähdyksen kaari päättyy katsesuuntaan.
+        public static (double saapui, double loppu, double silmaSaapui, double silmaMin) KierrosSaapumisSuuntima(bool katse)
+        {
+            bool p0 = OpasSilmukka.PalloLento; OpasSilmukka.PalloLento = true;
+            try
+            {
+                var jono = new List<(string, double, double)> { ("Gamla stan", 59.3250, 18.0708), ("Vasa-museo", 59.3281, 18.0914), ("Ulkoilmamuseo Skansen", 59.3245, 18.1010) };
+                var s = new OpasSilmukka(new Kuvakulma(59.3250, 18.0708, 420, 58, 70, 30));
+                var pyynnot = new List<(int n, string t)>();
+                s.Pyyda += (n, t) => pyynnot.Add((n, t));
+                double puheAlkoi = -1, t = 0; s.AlkaaPuhua += k => puheAlkoi = t;
+                s.Aloita("Tukholma");
+                s.AloitaKierros(jono);
+                const double dt = 1 / 30.0; int vastattu = 0; double saapui = double.NaN, loppu = double.NaN, silmaSaapui = double.NaN, silmaMin = double.MaxValue;
+                for (; t < 400; t += dt)
+                {
+                    while (vastattu < pyynnot.Count)
+                    {
+                        var (n, nimi) = pyynnot[vastattu++];
+                        var e = jono.Find(x => x.Item1 == nimi);
+                        if (e.Item1 == null) continue;
+                        var k = new OpasKohde { Id = e.Item1, Nimi = e.Item1, Lat = e.Item2, Lon = e.Item3, KokoM = 120, KorkeusM = 39, KestoS = 5, Kierros = true };
+                        if (katse && e.Item1 == "Vasa-museo") k.KatseSuunta = 40;
+                        s.Vastaus(n, k);
+                    }
+                    s.Paivita(dt, _ => 29);
+                    if (s.Nykyinen?.Id == "Vasa-museo" && (s.Vaihe == OpasVaihe.Puhuu || s.Vaihe == OpasVaihe.Odottaa))
+                    {
+                        double silma = s.Asento.KatseKorkeusM + s.Asento.EtaisyysM * Math.Cos(s.Asento.Kallistus * Math.PI / 180);
+                        if (double.IsNaN(saapui)) { saapui = s.Asento.Suuntima; silmaSaapui = silma; }
+                        loppu = s.Asento.Suuntima; silmaMin = Math.Min(silmaMin, silma);
+                    }
+                    else if (!double.IsNaN(saapui)) break;
+                    double kesto = s.Nykyinen?.Id == "Vasa-museo" ? 40 : 5;
+                    if (s.Vaihe == OpasVaihe.Puhuu && puheAlkoi >= 0 && t - puheAlkoi > kesto) { s.AaniLoppui(); puheAlkoi = -1; }
+                }
+                return (saapui, loppu, silmaSaapui, silmaMin);
+            }
+            finally { OpasSilmukka.PalloLento = p0; }
+        }
+
+        [Testi] static void KierroksellaPysahdysKiertaaKatseSuuntaan()
+        {
+            var ilman = KierrosSaapumisSuuntima(false); var kanssa = KierrosSaapumisSuuntima(true);
+            string m = $"Vasa kierroksella: ilman kenttää {ilman.saapui:F0}° → {ilman.loppu:F0}°, katse 40°: {kanssa.saapui:F0}° → {kanssa.loppu:F0}°";
+            Oleta.Tosi(!double.IsNaN(ilman.loppu) && !double.IsNaN(kanssa.loppu), "Vasaan perille: " + m);
+            Oleta.Tosi(Math.Abs(KierrosLento.Kiedo(kanssa.loppu - 40)) < 5, "pysähdyksen kaari päättyy katsesuuntaan: " + m);
+            Oleta.Tosi(kanssa.silmaMin >= kanssa.silmaSaapui - 6, $"kierre ei laske saapumiskorkeutta alemmas: {kanssa.silmaSaapui:F0} → min {kanssa.silmaMin:F0} m (ilman kenttää {ilman.silmaSaapui:F0} → {ilman.silmaMin:F0} m)");
+        }
+
+        public static (double kiihd, double jarru, double nyk, double kesto, double vmax) LentoProfiili((string n, double la, double lo, double koko, double kor) a, (string n, double la, double lo, double koko, double kor) b, (string n, double la, double lo, double koko, double kor) c)
+        {
+            bool p0 = OpasSilmukka.PalloLento; OpasSilmukka.PalloLento = true;
+            try
+            {
+                var jono = new List<(string, double, double)> { (a.n, a.la, a.lo), (b.n, b.la, b.lo), (c.n, c.la, c.lo) };
+                var tied = new[] { a, b, c };
+                var s = new OpasSilmukka(new Kuvakulma(a.la, a.lo, 420, 58, 290, 76));
+                var pyynnot = new List<(int n, string t)>();
+                s.Pyyda += (n, t) => pyynnot.Add((n, t));
+                double puheAlkoi = -1, t = 0; s.AlkaaPuhua += k => puheAlkoi = t;
+                s.Aloita("Testi"); s.AloitaKierros(jono);
+                const double dt = 1 / 60.0; int vastattu = 0;
+                var p = new List<(double e, double n, double u)>();
+                for (; t < 400; t += dt)
+                {
+                    while (vastattu < pyynnot.Count)
+                    {
+                        var (n, nimi) = pyynnot[vastattu++]; int i0 = Array.FindIndex(tied, x => x.n == nimi);
+                        if (i0 < 0) continue; var x0 = tied[i0];
+                        s.Vastaus(n, new OpasKohde { Id = x0.n, Nimi = x0.n, Lat = x0.la, Lon = x0.lo, KokoM = x0.koko, KorkeusM = x0.kor, KestoS = 5, Kierros = true });
+                    }
+                    s.Paivita(dt, _ => 35);
+                    if (s.Vaihe == OpasVaihe.Lentaa && s.Nykyinen?.Id == b.n) { var k = OpasKuvaus.KameraPaikka(s.Asento, a.la, a.lo); p.Add((k.e, k.n, k.u)); }
+                    else if (p.Count > 0) break;
+                    if (s.Vaihe == OpasVaihe.Puhuu && puheAlkoi >= 0 && t - puheAlkoi > 5) { s.AaniLoppui(); puheAlkoi = -1; }
+                }
+                var v = new List<double>(); var acc = new List<double>();
+                for (int i = 1; i < p.Count; i++) v.Add(Math.Sqrt(Math.Pow(p[i].e - p[i - 1].e, 2) + Math.Pow(p[i].n - p[i - 1].n, 2) + Math.Pow(p[i].u - p[i - 1].u, 2)) / dt);
+                for (int i = 2; i < p.Count; i++)
+                {
+                    double ax = (p[i].e - 2 * p[i - 1].e + p[i - 2].e) / (dt * dt), ay = (p[i].n - 2 * p[i - 1].n + p[i - 2].n) / (dt * dt), az = (p[i].u - 2 * p[i - 1].u + p[i - 2].u) / (dt * dt);
+                    acc.Add(Math.Sqrt(ax * ax + ay * ay + az * az));
+                }
+                int iv = 0; for (int i = 0; i < v.Count; i++) if (v[i] > v[iv]) iv = i;
+                double ki = 0, ja = 0, ny = 0;
+                for (int i = 0; i < acc.Count; i++) { if (i < iv) ki = Math.Max(ki, acc[i]); else ja = Math.Max(ja, acc[i]); if (i > 0) ny = Math.Max(ny, Math.Abs(acc[i] - acc[i - 1]) / dt); }
+                return (ki, ja, ny, p.Count * dt, v.Count > 0 ? v[iv] : 0);
+            }
+            finally { OpasSilmukka.PalloLento = p0; }
+        }
+        public static readonly (string, double, double, double, double) PConcorde = ("Concorden aukio", 48.8656, 2.3212, 360, 0), PEiffel = ("Eiffel-torni", 48.8583, 2.2945, 125, 330),
+            PRiemu = ("Riemukaari", 48.8738, 2.2950, 50, 50), PChamps = ("Champs-Élysées", 48.8698, 2.3078, 1900, 0), PSacre = ("Sacré-Cœur", 48.8867, 2.3431, 85, 83), PBastille = ("Bastille", 48.8532, 2.3691, 100, 50);
+
+        // PEHMEÄ JARRUTUS (PT 9.10., Pariisin kulma-arkki: Eiffelin lennolla jarrutus 63 vs kiihdytys 35 m/s², Riemukaari ja
+        // Sacré-Cœur 115/102 m/s² kiihdytyksessä): pitkät pallolennot kaarenpituuden mukaan 7. asteen S-käyrällä. Ruuduittain 60 Hz
+        // (ennen → jälkeen): Eiffel 35/63/27 → 47/39/17, Riemukaari 115/82/71 → 52/50/19, Sacré-Cœur 102/67/41 → 80/68/30
+        // (kiihdytys/jarrutus m/s², nykäys m/s³); kesto ennallaan.
+        [Testi] static void PitkatPallolennotJarruttavatPehmeasti()
+        {
+            foreach (var (a, b, d) in new[] { (PConcorde, PEiffel, PRiemu), (PEiffel, PRiemu, PChamps), (PChamps, PSacre, PBastille) })
+            {
+                var r = LentoProfiili(a, b, d);
+                string m = $"{b.Item1}: kiihdytys {r.kiihd:F0}, jarrutus {r.jarru:F0} m/s², nykäys {r.nyk:F0} m/s³, kesto {r.kesto:F1} s";
+                Oleta.Tosi(r.jarru <= r.kiihd + 1, "jarrutus enintään kiihdytys: " + m);
+                Oleta.Tosi(Math.Max(r.kiihd, r.jarru) <= 85 && r.nyk <= 40, "huippu ja nykäys: " + m);
+                Oleta.Tosi(Math.Abs(r.kesto - 18) < 0.5, "kesto ennallaan: " + m);
+            }
+        }
+
         // Video8 8.10.: siirron maanäyte pyydettiin ennen kuin kaupunki oli auki (hylättiin hiljaa) → siirto aina aikarajaan.
         [Testi] static void SiirtoPyytaaMaanNaytteenUudelleen()
         {

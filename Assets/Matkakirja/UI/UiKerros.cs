@@ -192,6 +192,8 @@ namespace Matkakirja.Natiivi
             AsetaSkaala(asetukset);
             asetukset.sortingOrder = kerros;
             asetukset.clearColor = false;
+            // Asettelutesti: paneeli kiinteän kokoiseen tekstuuriin (laitteen pikselit), ei Screenin kokoon.
+            if (UiRuutu.Testi is UiRuutu.Koko tk) asetukset.targetTexture = new RenderTexture(tk.Leveys, tk.Korkeus, 0);
 
             // UIDocument vaatii PanelSettingsin ennen OnEnablea: luodaan passiivisena.
             var go = new GameObject("UI " + kerros);
@@ -225,6 +227,7 @@ namespace Matkakirja.Natiivi
         {
             get
             {
+                if (UiRuutu.Testi is UiRuutu.Koko tk) return tk.Tabletti;   // asettelutesti
                 if (SystemInfo.deviceModel.StartsWith("iPad", StringComparison.Ordinal)) return true;
                 if (Mac) return true;   // natiivi Mac: iPadin asettelut ja koot (Natiivi-UI, juna 152)
                 if (!Application.isMobilePlatform) return false;
@@ -255,6 +258,7 @@ namespace Matkakirja.Natiivi
         {
             get
             {
+                if (UiRuutu.Testi.HasValue) return true;   // asettelutesti: pisteskaala kuten laitteella
                 string s = PlayerPrefs.GetString(SkaalaAvain, "");
                 return s == "piste" || (s != "viite" && (Tabletti || Application.isMobilePlatform));
             }
@@ -270,6 +274,7 @@ namespace Matkakirja.Natiivi
             get
             {
                 // Natiivi Mac: ikkunan näytön backingScaleFactor (Retina 2, muuten 1; Natiiviseppä f3a80d8e), ei Screen.dpi:tä.
+                if (UiRuutu.Testi is UiRuutu.Koko tk) return tk.PikseliaPisteessa;   // asettelutesti
                 if (Mac) return MacSyote.Skaala;
                 if (Tabletti) return Screen.dpi > 0 ? Mathf.Max(1f, Mathf.Round(Screen.dpi / 132f)) : 2f;
                 return Mathf.Min(Screen.width, Screen.height) >= 1000 ? 3f : 2f;
@@ -706,8 +711,8 @@ namespace Matkakirja.Natiivi
 
         void PaivitaTurvaalueet()
         {
-            var alue = Screen.safeArea;
-            var koko = new Vector2Int(Screen.width, Screen.height);
+            var alue = UiRuutu.Turva;
+            var koko = new Vector2Int(UiRuutu.Leveys, UiRuutu.Korkeus);
             if (alue == viimeTurva && koko == viimeKoko) return;
             viimeTurva = alue;
             viimeKoko = koko;

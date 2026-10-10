@@ -55,7 +55,7 @@ namespace Matkakirja.Natiivi
             var nimi = Rakenne.Nappi(null, "mk-linssiselite__nimi", Kutista, kortti);
             otsikko = Rakenne.Teksti("", "mk-linssiselite__otsikko", nimi);
             Kirjasimet.Aseta(otsikko, Kirjasin.Kone);
-            nimi.tooltip = "Kutista tai avaa selite";
+            nimi.tooltip = Kieli.T("ui.linssiselite.kutista");
             // Koko kortti on napautuspinta (web: kortin click → vaihdaLinssiSelite; nimi hoitaa omansa).
             kortti.RegisterCallback<ClickEvent>(e =>
             {

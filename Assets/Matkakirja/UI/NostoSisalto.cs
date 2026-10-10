@@ -686,7 +686,7 @@ namespace Matkakirja.Natiivi
         {
             var n = new Nosto
             {
-                Laji = NostoLaji.Skandaali, Id = id, Iso = iso, Luokka = "SKANDAALIT", Symboli = "huuto",
+                Laji = NostoLaji.Skandaali, Id = id, Iso = iso, Luokka = Kieli.T("ui.nosto.luokka-skandaalit"), Symboli = "huuto",
                 Otsikko = T(d, "otsikko"), Meta = Liita(T(d, "paikka"), T(d, "vuosi")),
                 Ingressi = T(d, "kortti"), Teksti = T(d, "teksti"),
                 VisaKaupunki = iso, VisaAihe = "skandaali:" + id, VisaPalkkio = 50, Looppi = true,
@@ -719,7 +719,7 @@ namespace Matkakirja.Natiivi
         {
             var n = new Nosto
             {
-                Laji = NostoLaji.Hetki, Id = id, Iso = iso, Luokka = "HISTORIAN HETKET", Symboli = "hetki",
+                Laji = NostoLaji.Hetki, Id = id, Iso = iso, Luokka = Kieli.T("ui.nosto.luokka-historian-hetket"), Symboli = "hetki",
                 Otsikko = T(d, "otsikko"), Meta = Liita(T(d, "paikka"), T(d, "paivays")), Teksti = T(d, "teksti"),
                 VisaKaupunki = iso, VisaAihe = "hetki:" + id, VisaPalkkio = 50,
             };
@@ -733,7 +733,7 @@ namespace Matkakirja.Natiivi
         {
             var n = new Nosto
             {
-                Laji = NostoLaji.Elain, Id = iso, Iso = iso, Luokka = "ELÄIMET", Symboli = "elain",
+                Laji = NostoLaji.Elain, Id = iso, Iso = iso, Luokka = Kieli.T("ui.nosto.luokka-elaimet"), Symboli = "elain",
                 Otsikko = T(d, "otsikko"), Teksti = T(d, "teksti"),
             };
             string elain = T(d, "elain");
@@ -747,9 +747,9 @@ namespace Matkakirja.Natiivi
 
         static readonly Dictionary<string, string> Tyypit = new Dictionary<string, string>
         {
-            { "kaupunki", "KAUPUNGIT" }, { "historia", "HISTORIA" }, { "luonto", "LUONTO" }, { "vuori", "LUONTO · VUORI" },
-            { "joki", "LUONTO · JOKI" }, { "jarvi", "LUONTO · JÄRVI" }, { "elain", "ELÄIMET" }, { "kulttuuri", "KULTTUURI" },
-            { "kauppa", "KAUPPA" }, { "ihme", "IHMEET" }, { "nahtavyys", "NÄHTÄVYYDET" }, { "saari", "LUONTO · SAARI" },
+            { "kaupunki", "ui.nosto.luokka-kaupungit" }, { "historia", "ui.nosto.luokka-historia" }, { "luonto", "ui.nosto.luokka-luonto" }, { "vuori", "ui.nosto.luokka-luonto-vuori" },
+            { "joki", "ui.nosto.luokka-luonto-joki" }, { "jarvi", "ui.nosto.luokka-luonto-jarvi" }, { "elain", "ui.nosto.luokka-elaimet" }, { "kulttuuri", "ui.nosto.luokka-kulttuuri" },
+            { "kauppa", "ui.nosto.luokka-kauppa" }, { "ihme", "ui.nosto.luokka-ihmeet" }, { "nahtavyys", "ui.nosto.luokka-nahtavyydet" }, { "saari", "ui.nosto.luokka-luonto-saari" },
         };
 
         static Nosto Kohde(string id, string iso, Dictionary<string, object> d)
@@ -758,7 +758,7 @@ namespace Matkakirja.Natiivi
             var n = new Nosto
             {
                 Laji = NostoLaji.Kohde, Id = id, Iso = iso,
-                Luokka = Tyypit.TryGetValue(tyyppi, out var l) ? l : tyyppi.ToUpperInvariant(),
+                Luokka = Tyypit.TryGetValue(tyyppi, out var l) ? Kieli.T(l) : tyyppi.ToUpperInvariant(),
                 Otsikko = T(d, "nimi"), Teksti = T(d, "teksti"),
                 VisaKaupunki = "nosto", VisaAihe = id, VisaPalkkio = 25,
             };
@@ -773,7 +773,7 @@ namespace Matkakirja.Natiivi
             if (MiniJson.Kentta(d, "korostukset") is List<object> kor) n.Korostukset = kor.OfType<string>().ToList();
             var kierrokset = MiniJson.Kentta(d, "kierrokset") as List<object> ?? (MiniJson.Kentta(d, "kierros") is object yksi ? new List<object> { yksi } : null);
             foreach (var x in kierrokset?.Select(Ob).Where(x => x != null) ?? Enumerable.Empty<Dictionary<string, object>>())
-                if (T(x, "url") is string url) n.Kierrokset.Add((T(x, "nappi") ?? "Kierros", url));
+                if (T(x, "url") is string url) n.Kierrokset.Add((T(x, "nappi") ?? Kieli.T("ui.nosto.kierros"), url));
             // Matkakirjan ihme (web kohteenIhmekuva, kohteenKuvalista): ihmekuva kortin ensimmäiseksi kadonneella ja
             // 27.9.2026 alkaen myös säilyneellä (omistaja, Olympia-kortti: "Koe ihme" -nappi pois). Säilyneen oma
             // valokuva (`kuva`) ei ole sarjassa vaan pienenä tekstin kyljessä (Nykykuva). Nauha on pelin piirtämä.
@@ -801,8 +801,8 @@ namespace Matkakirja.Natiivi
             // Web kohteenYlarivinNimike: luokka kategoriasta (kadonnut ihme → KADONNEET IHMEET, kierros → NÄHTÄVYYDET),
             // luonnolla laji perään; ilman kategoriaa entinen tyyppinimi.
             if (n.Symboli != null && SymbolinLuokat.TryGetValue(n.Symboli, out var luokka))
-                n.Luokka = (luokka + (n.Symboli == "luonto" && T(d, "tyyppi") is string tl && LuonnonNimikkeet.TryGetValue(tl, out var laji)
-                    ? " · " + laji : "")).ToUpperInvariant();
+                n.Luokka = (Kieli.T(luokka) + (n.Symboli == "luonto" && T(d, "tyyppi") is string tl && LuonnonNimikkeet.TryGetValue(tl, out var laji)
+                    ? " · " + Kieli.T(laji) : "")).ToUpperInvariant();
             return n;
         }
 
@@ -823,14 +823,14 @@ namespace Matkakirja.Natiivi
         // Web NOSTOSYM_LUOKAT ja LUONNON_NIMIKKEET.
         static readonly Dictionary<string, string> SymbolinLuokat = new Dictionary<string, string>
         {
-            { "huuto", "Skandaalit" }, { "elain", "Eläimet" }, { "silma", "Nähtävyydet" }, { "historia", "Historia" },
-            { "luonto", "Luonto" }, { "ruoka", "Ruoka ja juoma" }, { "kulttuuri", "Kulttuuri" }, { "tekniikka", "Tekniikka" },
-            { "kauppa", "Kauppa" }, { "sana", "Tarinat" }, { "merenkulku", "Merenkulku" }, { "urheilu", "Urheilu" },
-            { "kaupunki", "Kaupungit" }, { "ihme", "Kadonneet ihmeet" }, { "hetki", "Historian hetket" },
+            { "huuto", "ui.nosto.symboli-skandaalit" }, { "elain", "ui.nosto.symboli-elaimet" }, { "silma", "ui.nosto.symboli-nahtavyydet" }, { "historia", "ui.nosto.symboli-historia" },
+            { "luonto", "ui.nosto.symboli-luonto" }, { "ruoka", "ui.nosto.symboli-ruoka" }, { "kulttuuri", "ui.nosto.symboli-kulttuuri" }, { "tekniikka", "ui.nosto.symboli-tekniikka" },
+            { "kauppa", "ui.nosto.symboli-kauppa" }, { "sana", "ui.nosto.symboli-tarinat" }, { "merenkulku", "ui.nosto.symboli-merenkulku" }, { "urheilu", "ui.nosto.symboli-urheilu" },
+            { "kaupunki", "ui.nosto.symboli-kaupungit" }, { "ihme", "ui.nosto.symboli-ihmeet" }, { "hetki", "ui.nosto.symboli-hetket" },
         };
         static readonly Dictionary<string, string> LuonnonNimikkeet = new Dictionary<string, string>
         {
-            { "vuori", "vuori" }, { "meri", "meri" }, { "saari", "saari" }, { "joki", "joki" }, { "jarvi", "järvi" },
+            { "vuori", "ui.nosto.laji-vuori" }, { "meri", "ui.nosto.laji-meri" }, { "saari", "ui.nosto.laji-saari" }, { "joki", "ui.nosto.laji-joki" }, { "jarvi", "ui.nosto.laji-jarvi" },
         };
 
         /// <summary>Web kohteenKategoria: kadonnut ihme → ihme, oma symboli, kierroksellinen → silma, tyypin symboli.</summary>
@@ -848,7 +848,7 @@ namespace Matkakirja.Natiivi
             symboli != null && MiniJson.Kentta(luokat, symboli) != null ? symboli : "huuto";
 
         /// <summary>Ihmekuvan nauhan teksti (web KOHDE_IHMENAUHA, pelin alaotsikko).</summary>
-        public const string IhmeNauha = "Unohdettu aarre";
+        public static string IhmeNauha => Kieli.T("ui.nosto.ihmenauha");
 
         /// <summary>
         /// Web KOHDE_IHMEEN_NIMET (js/fokuskohteet.js): kaupunkikartan nimi → fokuskohteen nimi, kun ne eroavat.
@@ -888,7 +888,7 @@ namespace Matkakirja.Natiivi
         static string Ylarivi(string symboli, Dictionary<string, object> luokat)
         {
             string s = symboli != null && MiniJson.Kentta(luokat, symboli) != null ? symboli : "huuto";
-            return (T(luokat, s) ?? "Skandaalit").ToUpperInvariant();
+            return (T(luokat, s) ?? Kieli.T("ui.nosto.symboli-skandaalit")).ToUpperInvariant();
         }
 
         /// <summary>
@@ -912,7 +912,7 @@ namespace Matkakirja.Natiivi
                 Meta = looppi ? T(d, "paivays") ?? Liita(T(Ob(MiniJson.Kentta(d, "paikka")), "nimi"), T(d, "vuosi")) : null,
                 Ingressi = looppi ? T(d, "ingressi") : null,
                 VisaKaupunki = "nosto", VisaAihe = id, VisaPalkkio = 25,
-                VisaRahaSyy = "Lukijan kysymys ratkesi", VisaNostotehtava = true,
+                VisaRahaSyy = Kieli.T("ui.nosto.raha-lukijan-kysymys"), VisaNostotehtava = true,
                 KohdeId = T(d, "kohde"),
                 // Fokusvirrassa osoitteet ovat merkkijonoja, kokoelmassa takynostot olioita {url, nimi, …}.
                 Aani = Osoite(MiniJson.Kentta(d, "aani")), MusiikkiNayte = Osoite(MiniJson.Kentta(d, "musiikkiNayte")),
@@ -927,12 +927,12 @@ namespace Matkakirja.Natiivi
             n.Visa = Visa(d);
             if (MiniJson.Kentta(d, "kysymykset") is List<object> q)
                 n.Kysymykset = q.Select(x => x?.ToString().Trim()).Where(x => !string.IsNullOrEmpty(x)).Take(3).ToList();
-            // Web nostonMusiikkilinkit: merkkijono = yksi "Apple Music" -linkki, taulukko = nimetyt linkit.
+            // Web nostonMusiikkilinkit: merkkijono = yksi "Apple Music" -linkki, taulukko = nimetyt linkit.   // kieli: ei (tuotenimi, ei käännetä)
             var musiikki = MiniJson.Kentta(d, "musiikki");
-            if (musiikki is string url) n.Musiikkilinkit.Add(("Apple Music", url));
+            if (musiikki is string url) n.Musiikkilinkit.Add(("Apple Music", url));   // kieli: ei (tuotenimi, ei käännetä)
             else if (musiikki is List<object> linkit)
                 foreach (var l in linkit.Select(Ob).Where(l => l != null))
-                    if (T(l, "url") is string u && u.Length > 0) n.Musiikkilinkit.Add((T(l, "nimi") ?? T(l, "nakyva") ?? "Apple Music", u));
+                    if (T(l, "url") is string u && u.Length > 0) n.Musiikkilinkit.Add((T(l, "nimi") ?? T(l, "nakyva") ?? "Apple Music", u));   // kieli: ei (tuotenimi, ei käännetä)
             return n;
         }
 
@@ -955,7 +955,7 @@ namespace Matkakirja.Natiivi
                 Luokka = Ylarivi(symboli, luokat), Symboli = YlarivinSymboli(symboli, luokat),
                 Otsikko = T(d, "otsikko") ?? T(d, "nappi"), Teksti = T(d, "teksti"),
                 VisaKaupunki = kaupunki, VisaAihe = "fokus:" + id, VisaPalkkio = 50,
-                VisaRahaSyy = "Livian täky ratkesi", VisaJuliste = kaupunki,
+                VisaRahaSyy = Kieli.T("ui.nosto.raha-livian-taky"), VisaJuliste = kaupunki,
             };
             if (Yksi(MiniJson.Kentta(d, "kuva")) is NostoKuva k) n.Kuvat.Add(k);
             n.Visa = Visa(d);

@@ -289,15 +289,15 @@ namespace Matkakirja.Natiivi
             // Leima vain pulmissa ja valokuvissa (web: kehys kertoo muuten, kuka kysyy).
             string leimaTeksti = d.Laji switch
             {
-                KysymysLaji.Pulma => "PULMA",
-                KysymysLaji.Kuva => "VALOKUVA",
-                KysymysLaji.Lippu => "LIPPU",
+                KysymysLaji.Pulma => Kieli.T("ui.kysymys.pulma"),
+                KysymysLaji.Kuva => Kieli.T("ui.kysymys.valokuva"),
+                KysymysLaji.Lippu => Kieli.T("ui.kysymys.lippu"),
                 _ => null,
             };
             leima.text = leimaTeksti ?? "";
             leima.style.display = leimaTeksti == null ? DisplayStyle.None : DisplayStyle.Flex;
             // Kohtaamisen yrityslaskuri otsikkoriville (web: "Kaupunki — kohtaaminen · yritys 1/2").
-            string yritys = d.Yritys.HasValue && d.Yrityksia.HasValue ? $" · yritys {d.Yritys}/{d.Yrityksia}" : "";
+            string yritys = d.Yritys.HasValue && d.Yrityksia.HasValue ? Kieli.T("ui.kysymys.yritys", d.Yritys.Value, d.Yrityksia.Value) : "";
             kaupunki.text = pohja ? ((d.Otsikko ?? "") + yritys).ToUpperInvariant() : (d.Otsikko ?? "") + yritys;
 
             // Tiimalasi vain vastaamattomassa, aikarajallisessa kysymyksessä (pulmassa ei kelloa,
@@ -394,7 +394,7 @@ namespace Matkakirja.Natiivi
             var kuva = Rakenne.El("mk-kysymys__muotokuvakuva", kuvio);
             // Suurennokseen pitkä kuvateksti ja lähde (web quizKohtaaminenKuva, js/kuvatekstit.js).
             string url = d.MuotokuvaUrl, pitka = d.MuotokuvaKuvateksti ?? d.MuotokuvaLyhyt;
-            Suurennettava(kuva, new LehtiKuva { Lahde = url, Selite = pitka, LahdeRivi = string.IsNullOrEmpty(pitka) ? null : "Matkakirjan havainnekuva" },
+            Suurennettava(kuva, new LehtiKuva { Lahde = url, Selite = pitka, LahdeRivi = string.IsNullOrEmpty(pitka) ? null : Kieli.T("ui.kysymys.havainnekuva") },
                 omaSelite: !string.IsNullOrEmpty(pitka));
             if (iso)
             {
@@ -405,7 +405,7 @@ namespace Matkakirja.Natiivi
                     l.enableRichText = false;
                     Kirjasimet.Aseta(l, Kirjasin.LukuKursiivi);
                 }
-                Kirjasimet.Aseta(Rakenne.Teksti("Matkakirjan havainnekuva", "mk-kysymys__muotokuvalahde", teksti), Kirjasin.Kone);
+                Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.kysymys.havainnekuva"), "mk-kysymys__muotokuvalahde", teksti), Kirjasin.Kone);
             }
             string odotettu = avain;
             Kuvat.Hae(d.MuotokuvaUrl, t =>
@@ -427,11 +427,11 @@ namespace Matkakirja.Natiivi
             if (string.IsNullOrEmpty(k) && d.Laji == KysymysLaji.Vaite)
             {
                 // Web openClaim-otsikko: isoisä puhuu, ja paikka on usein muu kuin pelaajan sijainti.
-                string paikka = string.IsNullOrEmpty(d.Paikka) ? "" : " · " + d.Paikka;
-                return $"Isoisän päiväkirjasta, 1873{paikka} — pitääkö tämä yhä paikkansa?";
+                string paikka = string.IsNullOrEmpty(d.Paikka) ? "" : Kieli.T("ui.kysymys.paikka-liite", d.Paikka);
+                return Kieli.T("ui.kysymys.isoisan-paivakirjasta", paikka);
             }
             if (string.IsNullOrEmpty(k)) return null;
-            if (d.Laji == KysymysLaji.Vaite && !string.IsNullOrEmpty(d.Paikka)) k += " · " + d.Paikka;
+            if (d.Laji == KysymysLaji.Vaite && !string.IsNullOrEmpty(d.Paikka)) k += Kieli.T("ui.kysymys.paikka-liite", d.Paikka);
             // "… kysyy" → "… kysyy:" (web: `${city.name} — ${quiz.frame}:`).
             return char.IsLetter(k[k.Length - 1]) ? k + ":" : k;
         }
@@ -453,7 +453,7 @@ namespace Matkakirja.Natiivi
             if (lippu) kehys.AddToClassList("mk-kysymys__kuvakehys--lippu");
             if (lippu) url = LiputIso.Url(url);   // peilin liput/ → liput-1024/, jos luettelossa (terävyys 9.10.2026)
             // Vain kysymyksen oma kuva suurena, ei artikkeligalleriaa (paljastaisi vastauksen).
-            Suurennettava(kehys, new LehtiKuva { Lahde = url, Selite = lippu ? "Tullimiehen näyttämä lippu" : "Matkavalokuvaajan vedos" });
+            Suurennettava(kehys, new LehtiKuva { Lahde = url, Selite = Kieli.T(lippu ? "ui.kysymys.lippu-selite" : "ui.kysymys.vedos-selite") });
             var kuva = Rakenne.El("mk-kysymys__kuva", kehys, PickingMode.Ignore);
             Label lahdeRivi = null;
             // Tekijä ja lisenssi Commonsista, jos lähteestä puuttuu (web ui.js kuvalahde taytaLahderivi, #3438).
@@ -545,7 +545,7 @@ namespace Matkakirja.Natiivi
         VisualElement Tuomio(KysymysNaytto d, VisualElement s)
         {
             var laatikko = TulosLaatikko(d, s);
-            string tuomio = d.AikaLoppui ? "Aika loppui!" : d.Oikein ? "Oikein!" : "Väärin.";
+            string tuomio = Kieli.T(d.AikaLoppui ? "ui.kysymys.aika-loppui" : d.Oikein ? "ui.kysymys.oikein" : "ui.kysymys.vaarin");
             Kirjasimet.Aseta(Rakenne.Teksti(tuomio, "mk-kysymys__tuomio", laatikko), pohja ? Kirjasin.LukuLihava : Kirjasin.KoneLihava);
             // Kätkön sulkeutuminen näkyy jo tuomiossa (web lukkoRivi).
             foreach (var rivi in Rivit(d.Loyto))
@@ -569,8 +569,8 @@ namespace Matkakirja.Natiivi
             bool oikeaErikseen = !d.Oikein
                 && d.Oikea >= 0 && d.Vaihtoehdot != null && d.Oikea < d.Vaihtoehdot.Count;
             var rivit = Rivit(d.Loyto);
-            if (oikeaErikseen) Vahva(runko, (d.AikaLoppui ? "Aika loppui. " : "") + $"Oikea vastaus oli \"{d.Vaihtoehdot[d.Oikea]}\".");
-            else if (d.Oikein && rivit.Count == 0) Vahva(runko, string.IsNullOrEmpty(d.LoytoNimi) ? "Oikein!" : "Löysit: " + d.LoytoNimi);
+            if (oikeaErikseen) Vahva(runko, Kieli.T(d.AikaLoppui ? "ui.kysymys.aika-loppui-oikea-vastaus" : "ui.kysymys.oikea-vastaus-oli", d.Vaihtoehdot[d.Oikea]));
+            else if (d.Oikein && rivit.Count == 0) Vahva(runko, string.IsNullOrEmpty(d.LoytoNimi) ? Kieli.T("ui.kysymys.oikein") : Kieli.T("ui.kysymys.loysit", d.LoytoNimi));
             foreach (var rivi in rivit)
             {
                 // Uuden yrityksen ohje ja kätkön sulkeutuminen punaruskealla (web .quiz-uusi-yritys, .quiz-lukko).
@@ -600,7 +600,7 @@ namespace Matkakirja.Natiivi
             // Web js/visa.js (katko.addEventListener('click') → ui.openLightbox(null, 'Kätkö', src)): napautus avaa kuvan
             // koko ruudulle samalla suurennoksella kuin kysymyskuva (Kuva-metodi).
             var katko = Rakenne.El("mk-kysymys__katko", isa);
-            Suurennettava(katko, new LehtiKuva { Lahde = url, Selite = "Kätkö" });
+            Suurennettava(katko, new LehtiKuva { Lahde = url, Selite = Kieli.T("ui.kysymys.katko") });
             string odotettu = avain;
             Kuvat.Hae(url, t =>
             {
@@ -652,7 +652,7 @@ namespace Matkakirja.Natiivi
             {
                 var lahde = raaka?.Trim();
                 if (string.IsNullOrEmpty(lahde)) continue;
-                if (n++ == 0) Kirjasimet.Aseta(Rakenne.Teksti("LÄHDE:", "mk-kysymys__lahdeotsikko", rivi), Kirjasin.Kone);
+                if (n++ == 0) Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.kysymys.lahde"), "mk-kysymys__lahdeotsikko", rivi), Kirjasin.Kone);
                 else Rakenne.Teksti(" · ", "mk-kysymys__lahdeteksti", rivi);
                 bool url = (lahde.StartsWith("https://") || lahde.StartsWith("http://")) && lahde.IndexOf(' ') < 0;
                 string nimi = lahde;
@@ -696,7 +696,7 @@ namespace Matkakirja.Natiivi
             if (tervehdys)
             {
                 // "Aloita peli" / "Yritä viimeistä kertaa": näkyviin, kun tervehdys on kirjoitettu.
-                aloitaNappi = Rakenne.Nappi(string.IsNullOrEmpty(d.AloitaTeksti) ? "Aloita peli" : d.AloitaTeksti,
+                aloitaNappi = Rakenne.Nappi(string.IsNullOrEmpty(d.AloitaTeksti) ? Kieli.T("ui.kysymys.aloita-peli") : d.AloitaTeksti,
                     "mk-nappi--kulta mk-kysymys__jatka mk-kysymys__aloita", () => Teko(toiminnot?.Aloita), napit);
                 if (!pohja) Rakenne.Tausta(aloitaNappi, Kuviot.Pysty("dialogi-kulta", Kuviot.Vari("#e9c169"), Kuviot.Vari("#d3a03c")));
                 Kirjasimet.Aseta(aloitaNappi, Kirjasin.KoneLihava);
@@ -707,32 +707,32 @@ namespace Matkakirja.Natiivi
                 // Vihje: tarjolla → hinta; ostettu → harmaa "Vihje ostettu" (web quizHint).
                 if (d.VihjeTarjolla)
                 {
-                    var v = Rakenne.Nappi($"Vihje ({d.Valuutta}{d.VihjeHinta})", "mk-kysymys__apu mk-kysymys__vihjenappi", () => Teko(toiminnot?.Vihje), napit);
+                    var v = Rakenne.Nappi(Kieli.T("ui.kysymys.vihje-hinta", d.Valuutta, d.VihjeHinta), "mk-kysymys__apu mk-kysymys__vihjenappi", () => Teko(toiminnot?.Vihje), napit);
                     v.SetEnabled(d.Raha >= d.VihjeHinta);
                 }
                 else if (!string.IsNullOrEmpty(d.Vihje))
-                    Rakenne.Nappi("Vihje ostettu", "mk-kysymys__apu mk-kysymys__vihjenappi", null, napit).SetEnabled(false);
+                    Rakenne.Nappi(Kieli.T("ui.kysymys.vihje-ostettu"), "mk-kysymys__apu mk-kysymys__vihjenappi", null, napit).SetEnabled(false);
 
                 // 50:50; käytetty → harmaa.
                 if (d.PuolitusTarjolla)
                 {
-                    string teksti = $"50:50 ({d.Valuutta}{d.PuolitusHinta})";
+                    string teksti = Kieli.T("ui.kysymys.puolitus-hinta", d.Valuutta, d.PuolitusHinta);
                     var p = Rakenne.Nappi(teksti, "mk-kysymys__apu", () => Teko(toiminnot?.Puolita), napit);
                     p.SetEnabled(d.Raha >= d.PuolitusHinta);
                 }
                 else if (d.Piilotetut != null && d.Piilotetut.Count > 0)
-                    Rakenne.Nappi("50:50 käytetty", "mk-kysymys__apu", null, napit).SetEnabled(false);
+                    Rakenne.Nappi(Kieli.T("ui.kysymys.puolitus-kaytetty"), "mk-kysymys__apu", null, napit).SetEnabled(false);
 
                 // Kaveriapu (web sahke.js "Kysy kaverilta (25 £)"); käytetty → harmaa "Kaverilta kysytty".
                 if (d.Kaveriapu != null && d.Kaveriapu.Nakyy)
                 {
-                    var k = Rakenne.Nappi(d.Kaveriapu.Teksti ?? "Kysy kaverilta", "mk-kysymys__apu", () => Teko(toiminnot?.KysyKaverilta), napit);
+                    var k = Rakenne.Nappi(d.Kaveriapu.Teksti ?? Kieli.T("ui.kysymys.kysy-kaverilta"), "mk-kysymys__apu", () => Teko(toiminnot?.KysyKaverilta), napit);
                     k.SetEnabled(d.Kaveriapu.Kaytossa);
                 }
             }
             if (d.Vastattu && tulosVaihe >= 2)
             {
-                var j = Rakenne.Nappi(string.IsNullOrEmpty(d.JatkaTeksti) ? "Jatka" : d.JatkaTeksti, "mk-nappi--kulta mk-kysymys__jatka",
+                var j = Rakenne.Nappi(string.IsNullOrEmpty(d.JatkaTeksti) ? Kieli.T("ui.yleinen.jatka") : d.JatkaTeksti, "mk-nappi--kulta mk-kysymys__jatka",
                     () => Teko(toiminnot?.Jatka), napit);
                 if (!pohja) Rakenne.Tausta(j, Kuviot.Pysty("dialogi-kulta", Kuviot.Vari("#e9c169"), Kuviot.Vari("#d3a03c")));
                 Kirjasimet.Aseta(j, Kirjasin.KoneLihava);

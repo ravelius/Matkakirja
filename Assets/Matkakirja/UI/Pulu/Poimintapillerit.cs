@@ -101,12 +101,12 @@ namespace Matkakirja.Natiivi
             var lista = Parit(avain);
             rivi.style.display = lista.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
             if (lista.Count == 0) return;
-            Kirjasimet.Aseta(Rakenne.Teksti("LIVIALTA KYSYTTYÄ", "mk-poiminnat__nimio", rivi), Kirjasin.Kone);
+            Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.poiminta.livialta-kysyttya"), "mk-poiminnat__nimio", rivi), Kirjasin.Kone);
             foreach (var pari in lista)
             {
                 var b = Rakenne.Nappi(pari.Kysymys, pari.Oma ? "mk-poiminnat__pilleri mk-poiminnat__pilleri--oma" : "mk-poiminnat__pilleri",
                     () => AvaaVastaus(avain, pari.Kysymys, pari.Vastaus, pari.Oma), rivi);
-                if (pari.Oma) b.tooltip = "Tallennettu tällä laitteella — ei vielä paketissa";
+                if (pari.Oma) b.tooltip = "Tallennettu tällä laitteella — ei vielä paketissa";   // kieli: ei (kehittäjätyökalu (vain kehittäjätilan omat parit))
                 Kirjasimet.Aseta(b, Kirjasin.Luku);
             }
         }
@@ -127,23 +127,23 @@ namespace Matkakirja.Natiivi
             var rivi = Rakenne.El("mk-minipopup__poistorivi", s, PickingMode.Ignore);
             Label kuittaus = null;
             Button poista = null;
-            poista = Rakenne.Nappi(oma ? "Poista laitteelta" : "Pyydä poistoa paketista", "mk-minipopup__poista", () =>
+            poista = Rakenne.Nappi(oma ? "Poista laitteelta" : "Pyydä poistoa paketista", "mk-minipopup__poista", () =>   // kieli: ei (kehittäjätyökalu)
             {
                 poista.SetEnabled(false);
                 if (oma)
                 {
                     PoimintaVarasto.Poista(avain, kysymys);
                     Paivita(avain);
-                    kuittaus.text = "Poistettu laitteelta.";
+                    kuittaus.text = "Poistettu laitteelta.";   // kieli: ei (kehittäjätyökalu)
                     Palautekanava.Postita("/laheta", Kentat("Pöllöpoiminta: PERUUTUS\n\nKysymys: " + kysymys, avain, "Pöllöpoiminta: peruutus"), null, _ => { });
                     return;
                 }
-                kuittaus.text = "Lähetetään…";
+                kuittaus.text = "Lähetetään…";   // kieli: ei (kehittäjätyökalu)
                 Palautekanava.Postita("/laheta", Kentat("Pöllöpoiminta: POISTOPYYNTÖ\n\nKysymys: " + kysymys, avain, "Pöllöpoiminta: poisto"), null, t =>
                 {
                     if (rivi.panel == null) return;
-                    if (t.Ok) { kuittaus.text = "Poistopyyntö lähti Fablelle."; return; }
-                    kuittaus.text = t.Estetty ? Palautekanava.Virheviesti(t) : "Ei lähtenyt. Yritä uudelleen.";
+                    if (t.Ok) { kuittaus.text = "Poistopyyntö lähti Fablelle."; return; }   // kieli: ei (kehittäjätyökalu)
+                    kuittaus.text = t.Estetty ? Palautekanava.Virheviesti(t) : "Ei lähtenyt. Yritä uudelleen.";   // kieli: ei (kehittäjätyökalu)
                     poista.SetEnabled(true);
                 });
             }, rivi);

@@ -21,10 +21,10 @@ namespace Matkakirja.Natiivi
 {
     public sealed class Julistegalleria
     {
-        static readonly (string Id, string Nimi)[] Mantereet =
+        static readonly (string Id, string Avain)[] Mantereet =
         {
-            ("europe", "Eurooppa"), ("middleeast", "Lähi-itä"), ("africa", "Afrikka"), ("asia", "Aasia"),
-            ("northamerica", "Pohjois-Amerikka"), ("southamerica", "Etelä-Amerikka"), ("oceania", "Oseania"),
+            ("europe", "ui.manner.eurooppa"), ("middleeast", "ui.manner.lahi-ita"), ("africa", "ui.manner.afrikka"), ("asia", "ui.manner.aasia"),
+            ("northamerica", "ui.manner.pohjois-amerikka"), ("southamerica", "ui.manner.etela-amerikka"), ("oceania", "ui.manner.oseania"),
         };
 
         readonly VisualElement himmennys, sisus;
@@ -47,7 +47,7 @@ namespace Matkakirja.Natiivi
                 if (w > 0f && Mathf.Abs(kortti.resolvedStyle.width - w) > 0.5f) kortti.style.width = w;
             });
             var yla = Rakenne.El("mk-galleria__yla", kortti, PickingMode.Ignore);
-            Kirjasimet.Aseta(Rakenne.Teksti("JULISTEET", "mk-galleria__otsikko", yla), Kirjasin.Kone);
+            Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.laukku.julisteet"), "mk-galleria__otsikko", yla), Kirjasin.Kone);
             luku = Rakenne.Teksti("", "mk-galleria__luku", yla);
             Kirjasimet.Aseta(luku, Kirjasin.Kone);
             // Ei ✕:ää (omistaja 5.10.2026 klo 00.1x: "pyritään aina välttämään turhia x nappeja"; Päätoimittajan ✕-inventaario): himmennyksen napautus sulkee.
@@ -105,11 +105,11 @@ namespace Matkakirja.Natiivi
             for (int oi = 0; oi < osiot.Count; oi++)
             {
                 var g = osiot[oi];
-                string nimi = Mantereet.FirstOrDefault(m => m.Id == g.Key).Nimi ?? "Muualla";
-                Kirjasimet.Aseta(Rakenne.Teksti($"{nimi.ToUpperInvariant()} {g.Count(j => Voitettu(j, saadut))}/{g.Count()}", "mk-galleria__ryhma", sisus), Kirjasin.Kone);
+                string nimi = Kieli.T(Mantereet.FirstOrDefault(m => m.Id == g.Key).Avain ?? "ui.galleriat.muualla");
+                Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.galleriat.ryhma", nimi.ToUpperInvariant(), g.Count(j => Voitettu(j, saadut)), g.Count()), "mk-galleria__ryhma", sisus), Kirjasin.Kone);
                 var ruudukko = Rakenne.El("mk-galleria__ruudukko" + (oi < osiot.Count - 1 ? " mk-galleria__ruudukko--vali" : ""), sisus, PickingMode.Ignore);
                 var sarja = g.Where(j => Voitettu(j, saadut)).ToList();
-                var teokset = sarja.Select(j => new LehtiKuva { Lahde = j.Url, Lyhyt = j.Otsikko, Selite = j.Selite ?? j.Lyhyt ?? j.Otsikko, Otsikko = j.Otsikko, LahdeRivi = "Matkakirjan oma paino" }).ToList();
+                var teokset = sarja.Select(j => new LehtiKuva { Lahde = j.Url, Lyhyt = j.Otsikko, Selite = j.Selite ?? j.Lyhyt ?? j.Otsikko, Otsikko = j.Otsikko, LahdeRivi = Kieli.T("ui.nosto.oma-paino") }).ToList();
                 foreach (var j in g)
                 {
                     if (!Voitettu(j, saadut))
@@ -155,11 +155,7 @@ namespace Matkakirja.Natiivi
         }
 
         // Päätoimittajan kaanonteksti (js/tietajagalleria.js TIETAJASELITYS, omistaja 18.8.2026).
-        const string Selitys = "Livia — täydeltä nimeltään Columba Livia, kirjekyyhky, "
-            + "jonka suku on kantanut viestejä Caesarille ja Pariisin piiritykseen (ja hän kyllä "
-            + "kertoo sen, jos aihetta on) — kulkee mukanasi ja kasvattaa sinua tiedon tiellä. "
-            + "Jokainen uusi kaupunki, lauta ja oikea vastaus kartuttaa tietäjäpisteitä, ja pisteet "
-            + "nostavat tietäjätasoa: untuvikosta aina Tietäjäksi iänikuiseksi asti.";
+        static string Selitys => Kieli.T("ui.galleriat.tietaja-selitys");
 
         public static string Avatar(int taso) => Laukku.SivustoJuuri + $"assets/tietaja/taso-{taso:00}.jpg";
 
@@ -168,7 +164,7 @@ namespace Matkakirja.Natiivi
             Kuvat.Hae(Avatar(taso), t => { if (t != null && e != null) e.style.backgroundImage = new StyleBackground(t); });
 
         /// <summary>Webin avaaTietajagalleria(pisteet): minipopup "Tietäjän tie".</summary>
-        public static Minipopup Avaa(int pisteet) => Minipopup.Avaa("Tietäjän tie", s =>
+        public static Minipopup Avaa(int pisteet) => Minipopup.Avaa(Kieli.T("ui.galleriat.tietajan-tie"), s =>
         {
             var nyt = Kokemus.TasoPisteille(pisteet);
             var ylarivi = Rakenne.El("mk-tietaja__ylarivi", s, PickingMode.Ignore);
@@ -200,7 +196,7 @@ namespace Matkakirja.Natiivi
                 // Pisin sana mahtuu riville (kapea valikko 320 pt: "Maailmanmatkaaja" katkesi keskeltä sanaa, 86638635):
                 // fontti pienenee 0,5 px kerrallaan enintään 8 px:iin; vain pienenee, joten asettelu ei kierrä.
                 nimi.RegisterCallback<GeometryChangedEvent>(_ => SovitaSana(nimi));
-                Rakenne.Teksti($"{t.Raja} tp", "mk-tietaja__raja", kohta);
+                Rakenne.Teksti(Kieli.T("ui.laukku.pisteet-tp", t.Raja), "mk-tietaja__raja", kohta);
             }
             Rakenne.Ruudukko(ruudukko, 83f, 9f); // grid auto-fill minmax(5.2rem, 1fr), gap .55rem
             return ruudukko;

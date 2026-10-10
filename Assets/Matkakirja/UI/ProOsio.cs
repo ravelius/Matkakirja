@@ -23,41 +23,37 @@ namespace Matkakirja.Natiivi
     public static class ProOsio
     {
         /// <summary>Lisenssit: sama suljettu lista kuin workerissa (MATERIAALIN_LISENSSIT).</summary>
-        public static readonly (string Arvo, string Nimi)[] Lisenssit =
+        public static (string Arvo, string Nimi)[] Lisenssit => new[]
         {
-            ("matkakirja", "Vain Matkakirja-käyttö (peli ja sen julisteet)"),
-            ("cc-by-4.0", "CC BY 4.0"),
-            ("cc-by-sa-4.0", "CC BY-SA 4.0"),
+            ("matkakirja", Kieli.T("ui.pro.lisenssi-matkakirja")),
+            ("cc-by-4.0", "CC BY 4.0"),   // kieli: ei (lisenssin oikea nimi)
+            ("cc-by-sa-4.0", "CC BY-SA 4.0"),   // kieli: ei (lisenssin oikea nimi)
         };
 
         const int Linkkeja = 3, EsittelyKatto = 600, FaktaKatto = 500, NimeamisriviKatto = 200;
 
-        const string Seloste = "Omistaja kutsuu peliin ammattilaisia — valokuvaajia ja "
-            + "tutkijoita. Kutsutut saavat koodin, jolla pääsee rakentamaan "
-            + "oman tekijäsivun: kuva, esittely ja linkit omille sivuille. "
-            + "Tekijäsivu avautuu pelaajalle kuviesi lähderiviltä, eli nimesi "
-            + "kulkee jokaisen kuvasi mukana.";
+        static string Seloste => Kieli.T("ui.pro.seloste");
 
         /// <summary>Web proHakuRasti: rasti + i (minipopup lomakkeen kerrokseen).</summary>
         public static Rasti HakuRasti(VisualElement isa, int kerros)
         {
             var rivi = Rakenne.El("mk-palaute__prorivi", isa, PickingMode.Ignore);
-            var rasti = new Rasti(rivi, "Haluan hakea pro-sisällöntuottajaksi", "mk-palaute__rasti--pro");
-            var i = Rakenne.Nappi("i", "mk-seloste-nappi mk-palaute__seloste", () => Minipopup.AvaaTeksti("Pro-sisällöntuottaja", Seloste, kerros), rivi);
-            i.tooltip = "Mikä on pro-sisällöntuottaja?";
+            var rasti = new Rasti(rivi, Kieli.T("ui.pro.haku-rasti"), "mk-palaute__rasti--pro");
+            var i = Rakenne.Nappi("i", "mk-seloste-nappi mk-palaute__seloste", () => Minipopup.AvaaTeksti(Kieli.T("ui.pro.popup-otsikko"), Seloste, kerros), rivi);
+            i.tooltip = Kieli.T("ui.pro.mika-on");
             Kirjasimet.Aseta(i, Kirjasin.Kone);
             return rasti;
         }
 
         /// <summary>Web proOsio: kirjautuminen väkäsen takana.</summary>
         public static Vakalohko Rakenna(VisualElement isa) =>
-            Lomake.Vakanen(isa, "Olen jo pro-tuottaja — kirjaudu", Kirjautuminen);
+            Lomake.Vakanen(isa, Kieli.T("ui.pro.olen-jo-pro"), Kirjautuminen);
 
         static void Kirjautuminen(VisualElement sisus)
         {
             var lohko = Rakenne.El("mk-palaute__kirjautuminen", sisus, PickingMode.Ignore);
-            var posti = Lomake.Kentta(lohko, "Sähköposti", Kenttalaji.Sahkoposti);
-            var koodi = Lomake.Kentta(lohko, "Koodi (8 merkkiä)");
+            var posti = Lomake.Kentta(lohko, Kieli.T("ui.pro.sahkoposti"), Kenttalaji.Sahkoposti);
+            var koodi = Lomake.Kentta(lohko, Kieli.T("ui.pro.koodi"));
             Button nappi = null;
             Label huomio = null;
 
@@ -75,17 +71,17 @@ namespace Matkakirja.Natiivi
                     }
                     // Muistin pari on voinut vanhentua: unohdetaan, mutta ei säikäytetä pelaajaa.
                     Palautekanava.AsetaProTunnus(null, null);
-                    if (!hiljaa) huomio.text = t.Estetty ? Palautekanava.EiNatiivissa : t.Verkoton ? "Lähetys ei onnistunut: yhteyttä ei saatu." : t.Virhe;
+                    if (!hiljaa) huomio.text = t.Estetty ? Palautekanava.EiNatiivissa : t.Verkoton ? Kieli.T("ui.pro.yhteytta-ei-saatu") : t.Virhe;
                     valmis?.Invoke(false);
                 });
             }
 
-            nappi = Lomake.Laheta(lohko, "Kirjaudu", () =>
+            nappi = Lomake.Laheta(lohko, Kieli.T("ui.pro.kirjaudu"), () =>
             {
                 string p = posti.value.Trim(), k = koodi.value.Trim();
-                if (p.Length == 0 || k.Length == 0) { huomio.text = "Kirjoita sähköposti ja koodi."; return; }
+                if (p.Length == 0 || k.Length == 0) { huomio.text = Kieli.T("ui.pro.kirjoita-posti-koodi"); return; }
                 nappi.SetEnabled(false);
-                huomio.text = "Tarkistetaan…";
+                huomio.text = Kieli.T("ui.pro.tarkistetaan");
                 Avaa(p, k, false, ok => { if (!ok) nappi.SetEnabled(true); });
             });
             huomio = Lomake.Huomio(lohko, "");
@@ -96,10 +92,10 @@ namespace Matkakirja.Natiivi
 
         static string TilaTeksti(string tila) => tila switch
         {
-            "odottaa" => "Profiili odottaa julkaisua.",
-            "julkaistu" => "Tekijäsivusi on julkaistu pelissä.",
-            "hylatty" => "Profiilia ei julkaistu — voit lähettää uuden.",
-            _ => "Et ole vielä lähettänyt profiilia.",
+            "odottaa" => Kieli.T("ui.pro.tila-odottaa"),
+            "julkaistu" => Kieli.T("ui.pro.tila-julkaistu"),
+            "hylatty" => Kieli.T("ui.pro.tila-hylatty"),
+            _ => Kieli.T("ui.pro.tila-ei-lahetetty"),
         };
 
         /// <summary>Web proNakyma: kirjautuneen tuottajan näkymä.</summary>
@@ -109,25 +105,23 @@ namespace Matkakirja.Natiivi
             var profiiliTiedot = MiniJson.Kentta(tiedot, "profiili") as Dictionary<string, object>;
             var lohko = Rakenne.El("mk-palaute__pronakyma", isa, PickingMode.Ignore);
 
-            Lomake.Teksti(lohko, $"Hei {(nimi.Length > 0 ? nimi : sahkoposti)}! Täältä lähetät materiaalia "
-                + "lehtiin, ja täältä hoidat oman tekijäsivusi — se näkyy pelaajalle "
-                + "kuviesi lähderiviltä.");
+            Lomake.Teksti(lohko, Kieli.T("ui.pro.tervehdys", nimi.Length > 0 ? nimi : sahkoposti));
             var tila = Lomake.Huomio(lohko, TilaTeksti(MiniJson.Teksti(tiedot, "tila")));
             if (MiniJson.Teksti(tiedot, "kommentti") is string kommentti && kommentti.Length > 0)
-                Lomake.Huomio(lohko, "Omistajan viesti: " + kommentti);
+                Lomake.Huomio(lohko, Kieli.T("ui.pro.omistajan-viesti", kommentti));
 
             // Materiaali ensin, tekijäsivu väkäsen takana (omistaja 25.8.2026).
             var materiaaliNappi = Materiaali(lohko, sahkoposti, koodi, nimi);
 
             Button profiiliNappi = null;
-            Lomake.Vakanen(lohko, "Oma tekijäsivu — kuva, esittely ja linkit",
+            Lomake.Vakanen(lohko, Kieli.T("ui.pro.tekijasivu-vakanen"),
                 s => profiiliNappi = Profiili(s, sahkoposti, koodi, profiiliTiedot, tila), heti: true);
 
-            Lomake.Toissijainen(lohko, "Unohda tunnukseni tältä laitteelta", () =>
+            Lomake.Toissijainen(lohko, Kieli.T("ui.pro.unohda-tunnukseni"), () =>
             {
                 Palautekanava.AsetaProTunnus(null, null);
                 // Viesti tilariville: profiili on väkäsen takana, eikä sen kuittaus näkyisi.
-                tila.text = "Tunnukset unohdettu. Avaa osio uudelleen ja kirjaudu koodillasi.";
+                tila.text = Kieli.T("ui.pro.tunnukset-unohdettu");
                 profiiliNappi?.SetEnabled(false);
                 materiaaliNappi.SetEnabled(false);
             });
@@ -137,48 +131,46 @@ namespace Matkakirja.Natiivi
         static Button Materiaali(VisualElement isa, string sahkoposti, string koodi, string tekija)
         {
             var lohko = Rakenne.El("mk-palaute__osio", isa, PickingMode.Ignore);
-            Lomake.Valiotsikko(lohko, "Lähetä materiaalia").AddToClassList("mk-palaute__valiotsikko--alku");
-            Lomake.Teksti(lohko, "Kuva tai video lehteen. Täytä myös oikeudet ja konteksti — "
-                + "niistä kirjoitetaan kuvan lähderivi ja täkyn lunastusteksti.");
+            Lomake.Valiotsikko(lohko, Kieli.T("ui.pro.laheta-materiaalia")).AddToClassList("mk-palaute__valiotsikko--alku");
+            Lomake.Teksti(lohko, Kieli.T("ui.pro.materiaali-ohje"));
 
-            var kuvat = new Kuvavalinta(lohko, $"Kuvat (enintään {Palautekanava.Kuvia})", Palautekanava.Kuvia, Palautekanava.ProMateriaalinSivu);
+            var kuvat = new Kuvavalinta(lohko, Kieli.T("ui.pro.kuvat", Palautekanava.Kuvia), Palautekanava.Kuvia, Palautekanava.ProMateriaalinSivu);
             // Huomio kuvanapin ja tilarivin väliin kuten webissä (kuvaNimio, huomio, kuvaTieto).
-            var ohje = Lomake.Huomio(null, $"Vaakakuvat vähintään {Palautekanava.ProMateriaalinSivu} px pitkältä sivulta; "
-                + "lähetys pienentää suuremmat siihen mittaan. Video: linkki riittää.");
+            var ohje = Lomake.Huomio(null, Kieli.T("ui.pro.kuva-ohje", Palautekanava.ProMateriaalinSivu));
             lohko.Insert(lohko.IndexOf(kuvat.Tieto), ohje);
-            var video = Lomake.Kentta(lohko, "Videon osoite (vapaaehtoinen)", Kenttalaji.Osoite);
+            var video = Lomake.Kentta(lohko, Kieli.T("ui.pro.video-osoite"), Kenttalaji.Osoite);
 
-            Lomake.Valiotsikko(lohko, "Konteksti");
-            var paikka = Lomake.Kentta(lohko, "Paikka: missä kuvattu?");
-            var aihe = Lomake.Kentta(lohko, "Aihe: mikä eläin tai kohde?");
-            var fakta = Lomake.Kentta(lohko, "Fakta (1–2 virkettä): mitä kuvassa tapahtuu tai miksi se on kiinnostava?", Kenttalaji.Monirivi, FaktaKatto);
+            Lomake.Valiotsikko(lohko, Kieli.T("ui.pro.konteksti"));
+            var paikka = Lomake.Kentta(lohko, Kieli.T("ui.pro.paikka"));
+            var aihe = Lomake.Kentta(lohko, Kieli.T("ui.pro.aihe"));
+            var fakta = Lomake.Kentta(lohko, Kieli.T("ui.pro.fakta"), Kenttalaji.Monirivi, FaktaKatto);
 
-            Lomake.Valiotsikko(lohko, "Oikeudet");
-            var oikeudet = new Rasti(lohko, "Myönnän Matkakirjalle oikeuden käyttää materiaalia pelissä ja sen julisteissa.");
-            Lomake.Nimio(lohko, "Lisenssi");
+            Lomake.Valiotsikko(lohko, Kieli.T("ui.pro.oikeudet"));
+            var oikeudet = new Rasti(lohko, Kieli.T("ui.pro.oikeudet-rasti"));
+            Lomake.Nimio(lohko, Kieli.T("ui.kuvanakyma.lisenssi"));
             var nimet = new List<string>();
             foreach (var l in Lisenssit) nimet.Add(l.Nimi);
             var lisenssi = Lomake.Valinta(lohko, nimet, 0);
-            var nimeaminen = Lomake.Kentta(lohko, "Nimeämisrivi, esim. \"Kuva: Maija Meikäläinen\"", Kenttalaji.Rivi, NimeamisriviKatto);
+            var nimeaminen = Lomake.Kentta(lohko, Kieli.T("ui.pro.nimeamisrivi"), Kenttalaji.Rivi, NimeamisriviKatto);
             // Valmis ehdotus tuottajan omasta nimestä: rivin saa yhä muuttaa.
-            if (tekija.Length > 0) nimeaminen.value = "Kuva: " + tekija;
+            if (tekija.Length > 0) nimeaminen.value = Kieli.T("ui.pro.kuva-tekija", tekija);
 
             Button nappi = null;
             Label huomio = null;
-            nappi = Lomake.Laheta(lohko, "Lähetä materiaali", () =>
+            nappi = Lomake.Laheta(lohko, Kieli.T("ui.pro.laheta-materiaali"), () =>
             {
                 // Puutteet lomakkeen järjestyksessä ylhäältä alas.
                 void Puute(string viesti, Focusable kentta) { huomio.text = viesti; kentta?.Focus(); }
-                if (kuvat.Valitut.Count == 0 && video.value.Trim().Length == 0) { Puute("Valitse kuva tai anna videon osoite.", video); return; }
-                if (paikka.value.Trim().Length == 0) { Puute("Kerro, missä materiaali on kuvattu.", paikka); return; }
-                if (aihe.value.Trim().Length == 0) { Puute("Kerro, mikä eläin tai kohde on aiheena.", aihe); return; }
-                if (fakta.value.Trim().Length == 0) { Puute("Kirjoita 1–2 virkkeen fakta.", fakta); return; }
-                if (!oikeudet.Arvo) { Puute("Myönnä vielä käyttöoikeus materiaaliin.", null); return; }
-                if (nimeaminen.value.Trim().Length == 0) { Puute("Kirjoita nimeämisrivi — se päätyy kuvan lähderiville.", nimeaminen); return; }
+                if (kuvat.Valitut.Count == 0 && video.value.Trim().Length == 0) { Puute(Kieli.T("ui.pro.puute-kuva"), video); return; }
+                if (paikka.value.Trim().Length == 0) { Puute(Kieli.T("ui.pro.puute-paikka"), paikka); return; }
+                if (aihe.value.Trim().Length == 0) { Puute(Kieli.T("ui.pro.puute-aihe"), aihe); return; }
+                if (fakta.value.Trim().Length == 0) { Puute(Kieli.T("ui.pro.puute-fakta"), fakta); return; }
+                if (!oikeudet.Arvo) { Puute(Kieli.T("ui.pro.puute-oikeudet"), null); return; }
+                if (nimeaminen.value.Trim().Length == 0) { Puute(Kieli.T("ui.pro.puute-nimeamisrivi"), nimeaminen); return; }
 
                 string lis = Lisenssit[Mathf.Clamp(lisenssi.index, 0, Lisenssit.Length - 1)].Arvo;
                 nappi.SetEnabled(false);
-                huomio.text = "Lähetetään…";
+                huomio.text = Kieli.T("ui.sahke.lahetetaan");
                 var kentat = new List<(string, string)>
                 {
                     ("teksti", MateriaaliTeksti(tekija, paikka.value.Trim(), aihe.value.Trim(), fakta.value.Trim(), nimeaminen.value.Trim(), lis, video.value.Trim())),
@@ -205,8 +197,7 @@ namespace Matkakirja.Natiivi
                     paikka.value = "";
                     aihe.value = "";
                     fakta.value = "";
-                    huomio.text = "Kiitos! Materiaali on perillä ja odottaa omistajan "
-                        + "arviota. Oikeudet ja nimeämisrivi tallennettiin lähetyksen mukana.";
+                    huomio.text = Kieli.T("ui.pro.kiitos-materiaali");
                 });
             });
             huomio = Lomake.Huomio(lohko, "");
@@ -234,29 +225,29 @@ namespace Matkakirja.Natiivi
         /// <summary>Web proNakyma: tekijäsivun lohko (omakuva, esittely, linkit). Palauttaa lähetysnapin.</summary>
         static Button Profiili(VisualElement isa, string sahkoposti, string koodi, Dictionary<string, object> profiili, Label tila)
         {
-            var kuva = new Kuvavalinta(isa, "Oma kuva (1 kpl)", 1, Palautekanava.ProKuvanSivu);
-            if (MiniJson.Kentta(profiili, "kuva") != null) kuva.Tieto.text = "Kuva on tallessa. Uusi valinta korvaa sen.";
+            var kuva = new Kuvavalinta(isa, Kieli.T("ui.pro.oma-kuva"), 1, Palautekanava.ProKuvanSivu);
+            if (MiniJson.Kentta(profiili, "kuva") != null) kuva.Tieto.text = Kieli.T("ui.pro.kuva-tallessa");
 
-            var esittely = Lomake.Kentta(isa, $"Lyhyt esittely (enintään {EsittelyKatto} merkkiä)", Kenttalaji.Monirivi, EsittelyKatto);
+            var esittely = Lomake.Kentta(isa, Kieli.T("ui.pro.esittely", EsittelyKatto), Kenttalaji.Monirivi, EsittelyKatto);
             esittely.value = MiniJson.Teksti(profiili, "esittely") ?? "";
 
-            Lomake.Huomio(isa, $"Linkit omille sivuillesi (enintään {Linkkeja}, http- tai https-osoite).");
+            Lomake.Huomio(isa, Kieli.T("ui.pro.linkit-ohje", Linkkeja));
             var vanhat = MiniJson.Kentta(profiili, "linkit") as List<object>;
             var linkit = new List<TextField>();
             for (int i = 0; i < Linkkeja; i++)
             {
-                var k = Lomake.Kentta(isa, i == 0 ? "https://omatsivut.fi" : "Lisälinkki (vapaaehtoinen)", Kenttalaji.Osoite);
+                var k = Lomake.Kentta(isa, i == 0 ? "https://omatsivut.fi" : Kieli.T("ui.pro.lisalinkki"), Kenttalaji.Osoite);   // kieli: ei (esimerkki-URL)
                 if (vanhat != null && i < vanhat.Count) k.value = MiniJson.Teksti(vanhat[i] as Dictionary<string, object>, "url") ?? "";
                 linkit.Add(k);
             }
 
             Button nappi = null;
             Label huomio = null;
-            nappi = Lomake.Laheta(isa, "Lähetä profiili", () =>
+            nappi = Lomake.Laheta(isa, Kieli.T("ui.pro.laheta-profiili"), () =>
             {
-                if (esittely.value.Trim().Length == 0) { huomio.text = "Kirjoita lyhyt esittely."; esittely.Focus(); return; }
+                if (esittely.value.Trim().Length == 0) { huomio.text = Kieli.T("ui.pro.kirjoita-esittely"); esittely.Focus(); return; }
                 nappi.SetEnabled(false);
-                huomio.text = "Lähetetään…";
+                huomio.text = Kieli.T("ui.sahke.lahetetaan");
                 var kentat = new List<(string, string)>
                 {
                     ("sahkoposti", sahkoposti),
@@ -271,7 +262,7 @@ namespace Matkakirja.Natiivi
                     kuva.Tyhjenna();
                     tila.text = TilaTeksti("odottaa");
                     huomio.text = MiniJson.Teksti(t.Data, "viesti")
-                        ?? "Profiili odottaa julkaisua — saat krediitin kun ensimmäinen kuvasi julkaistaan lehdessä.";
+                        ?? Kieli.T("ui.pro.profiili-odottaa-viesti");
                 });
             });
             huomio = Lomake.Huomio(isa, "");

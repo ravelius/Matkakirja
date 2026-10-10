@@ -78,10 +78,10 @@ namespace Matkakirja.Natiivi
             musta.style.display = DisplayStyle.None;
             otsikko = Rakenne.El("mk-astroavaus__otsikko", musta, PickingMode.Ignore);
             Kirjasimet.Aseta(otsikko, Kirjasin.Kone);
-            var nimi = Rakenne.Teksti("ASTRONAUTIN KAMERA", "mk-astroavaus__nimi", otsikko);
+            var nimi = Rakenne.Teksti(Kieli.T("ui.astronautti.kamera-iso"), "mk-astroavaus__nimi", otsikko);
             Kirjasimet.Aseta(nimi, Kirjasin.KoneLihava);
             Rakenne.El("mk-astroavaus__viiva", otsikko, PickingMode.Ignore);
-            Rakenne.Teksti("kuvat: NASA", "mk-astroavaus__lahde", otsikko);
+            Rakenne.Teksti(Kieli.T("ui.astronautti.kuvat-nasa"), "mk-astroavaus__lahde", otsikko);
 
             Kuva = new Kuvanakyma(kerros);
             Kuva.AukiMuuttui += auki => KuvaAuki?.Invoke(auki);
@@ -98,11 +98,11 @@ namespace Matkakirja.Natiivi
             // kyytiin; ISS:n rinnalla pois pelistä 2.10.) ja aloittaa kävelyn perillä. Omistaja 4.10.2026 klo 11.44: pois
             // valikosta, koodi jää talteen (AvaruuskavelyValikossa palauttaa rivin).
             if (AvaruuskavelyValikossa)
-                Taulu.LisaaRivi("avaruuskavely", "Avaruuskävely", "Ulos kaiteelle katsomaan auringonnousua",
+                Taulu.LisaaRivi("avaruuskavely", Kieli.T("ui.astronautti.avaruuskavely"), Kieli.T("ui.astronautti.avaruuskavely-selite"),
                     () => AstroLinssi()?.Kavely?.Kaynnissa == true, () => { AstroLinssi()?.AloitaKavely(); }, AstroMoodi.Ikkuna);
             // ÄÄNISÄÄTIMET PULUN VALIKKOON (omistaja 6.10. 08.3x: "siirrä tuon äänisäätimet pulun valikon taakse pois tuolta näytön
             // keskivaiheilta"): kehittäjän mikseri avataan taulun Äänet-rivistä; pyöreä säätönappi on astronautin linssissä piilossa.
-            Taulu.LisaaRivi("aanet", "Äänet", "Kaiut ja taustaäänet",
+            Taulu.LisaaRivi("aanet", "Äänet", "Kaiut ja taustaäänet",   // kieli: ei (kehittäjän mikserin rivi; näkyy vain Asetukset.Kehittaja-ehdolla)
                 () => false, () => UiNakymat.Hae()?.Linssit?.Mikseri?.Avaa(true),
                 nakyy: () => Asetukset.Kehittaja && MikseriPaneeli.Lahde != null);
             // Laite 29.9. kavely1: linssin avauksen automaattitaulu jäi auki kävelyn päälle (kehittäjäkomennolla aloitettu).
@@ -127,7 +127,7 @@ namespace Matkakirja.Natiivi
             // Keskelle ruutua ja keskitettynä (ei ajattelijan vasen 6 % / 58 %): mustan ruudun flex keskittää.
             lohko.style.position = Position.Relative; lohko.style.left = StyleKeyword.Auto; lohko.style.bottom = StyleKeyword.Auto;
             lohko.style.alignItems = Align.Center;
-            cupolaNimi = Rakenne.Teksti("ISS", "mk-ajattelija__nimi", lohko);
+            cupolaNimi = Rakenne.Teksti("ISS", "mk-ajattelija__nimi", lohko);   // kieli: ei (kansainvälinen tunnus)
             Kirjasimet.Aseta(cupolaNimi, Kirjasin.Lcd);
             cupolaKorkeus = Rakenne.Teksti("", "mk-ajattelija__vuodet", lohko);
             cupolaNopeus = Rakenne.Teksti("", "mk-ajattelija__vuodet", lohko);
@@ -194,11 +194,11 @@ namespace Matkakirja.Natiivi
             cupolaHaivytys?.Pause();
             cupolaPiilotus?.Pause();
             // Tuhaterotin tavallisena välilyöntinä (simu 6e8576ff: lukukirjaimessa U+00A0 näkyi leveänä aukkona "27  600").
-            cupolaKorkeus.text = $"Lentokorkeus {KyydinTeksti.Luku(a.KorkeusKm).Replace('\u00a0', ' ')} km";
+            cupolaKorkeus.text = Kieli.T("ui.astronautti.lentokorkeus", KyydinTeksti.Luku(a.KorkeusKm).Replace('\u00a0', ' '));
             // Sama lähde ja pyöristys kuin ohjaamon tietorivillä (Päätoimittaja 4.10.: musta 27 600 vs. LCD 27 560).
-            cupolaNopeus.text = $"Nopeus {KyydinTeksti.Nopeus(a.NopeusKmh).Replace('\u00a0', ' ')} km/h";
+            cupolaNopeus.text = Kieli.T("ui.astronautti.nopeus", KyydinTeksti.Nopeus(a.NopeusKmh).Replace('\u00a0', ' '));
             var d = TimeZoneInfo.ConvertTimeFromUtc(DateTime.SpecifyKind(a.Utc, DateTimeKind.Utc), TimeZoneInfo.Local);
-            cupolaAika.text = $"{d.Day}.{d.Month}.{d.Year} klo {d.Hour}.{d.Minute:00}";
+            cupolaAika.text = Kieli.T("ui.iss.kuvaushetki", d.Day, d.Month, d.Year, d.Hour, d.Minute.ToString("00"));
             Kirjoita();
             cupolaMusta.RemoveFromClassList("mk-astroavaus--haipyy");
             cupolaMusta.style.opacity = 1f;

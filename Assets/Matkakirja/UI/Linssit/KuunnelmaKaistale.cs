@@ -117,7 +117,7 @@ namespace Matkakirja.Natiivi
             naytetty = toisto.Indeksi;
             var r = toisto.Rivi;
             if (r == null) { Nimi = null; Teksti = null; return; }
-            string n = (r.Nimi ?? (r.Pulu ? "Pulu" : r.Puhuja ?? "")).ToUpperInvariant();
+            string n = (r.Nimi ?? (r.Pulu ? Kieli.T("ui.pulu.otsikko") : r.Puhuja ?? "")).ToUpperInvariant();
             Nimi = string.IsNullOrEmpty(r.Huom) ? n : n + " · " + r.Huom;
             // Omistaja 2.10. 14.1x (loki 14.09): ääneen puhuttua riviä ei näytetä tekstinä; puhujan nimi jää.
             bool aaneen = !string.IsNullOrEmpty(r.Aani) && DioraamaAanet.Puhutaan(r.Aani);

@@ -42,15 +42,51 @@ def glb_tiedot(polku):
     if tyyppi != b'JSON':
         raise SystemExit(f'{polku}: ensimmäinen lohko ei ole JSON')
     g = json.loads(data[20:20 + pituus])
-    for solmu in g.get('nodes', []):
-        if any(k in solmu for k in ('matrix', 'translation', 'rotation', 'scale')):
-            print(f'VAROITUS {polku}: solmulla {solmu.get("name")} on muunnos; laatikko lasketaan ilman sitä', file=sys.stderr)
+    # Rajauslaatikko solmumuunnoksineen (LR 9.10.: ND:n puut ovat glTF-instansseja, 90 solmua jakaa 4 verkkoa): jokaisen
+    # verkon POSITION-laatikon kahdeksan kulmaa kerrotaan solmun maailmamatriisilla. Kolmiot lasketaan verkoittain kuten ennen.
     lo, hi, kolmiot = [math.inf] * 3, [-math.inf] * 3, 0
-    for m in g.get('meshes', []):
+    nodes, meshes = g.get('nodes', []), g.get('meshes', [])
+
+    def kertaa(a, b):   # 4×4, sarakepääjärjestys kuten glTF
+        return [sum(a[k * 4 + r] * b[c * 4 + k] for k in range(4)) for c in range(4) for r in range(4)]
+
+    def paikallinen(n):
+        if 'matrix' in n:
+            return list(n['matrix'])
+        t = n.get('translation', [0, 0, 0]); x, y, z, w = n.get('rotation', [0, 0, 0, 1]); sx, sy, sz = n.get('scale', [1, 1, 1])
+        r = [1 - 2 * (y * y + z * z), 2 * (x * y + z * w), 2 * (x * z - y * w),
+             2 * (x * y - z * w), 1 - 2 * (x * x + z * z), 2 * (y * z + x * w),
+             2 * (x * z + y * w), 2 * (y * z - x * w), 1 - 2 * (x * x + y * y)]
+        return [r[0] * sx, r[1] * sx, r[2] * sx, 0, r[3] * sy, r[4] * sy, r[5] * sy, 0, r[6] * sz, r[7] * sz, r[8] * sz, 0, *t, 1]
+
+    kaytetty = set()
+
+    def kay(i, M):
+        n = nodes[i]; M = kertaa(M, paikallinen(n))
+        if 'mesh' in n:
+            kaytetty.add(n['mesh'])
+            for p in meshes[n['mesh']].get('primitives', []):
+                acc = g['accessors'][p['attributes']['POSITION']]
+                for kx in (acc['min'][0], acc['max'][0]):
+                    for ky in (acc['min'][1], acc['max'][1]):
+                        for kz in (acc['min'][2], acc['max'][2]):
+                            v = [M[r] * kx + M[4 + r] * ky + M[8 + r] * kz + M[12 + r] for r in range(3)]
+                            for j in range(3):
+                                lo[j] = min(lo[j], v[j]); hi[j] = max(hi[j], v[j])
+        for c in n.get('children', []):
+            kay(c, M)
+
+    yksikko = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
+    scenes = g.get('scenes', [])
+    juuret = scenes[g.get('scene', 0)].get('nodes', []) if scenes else list(range(len(nodes)))
+    for i in juuret:
+        kay(i, yksikko)
+    for mi, m in enumerate(meshes):
         for p in m.get('primitives', []):
             acc = g['accessors'][p['attributes']['POSITION']]
-            for i in range(3):
-                lo[i] = min(lo[i], acc['min'][i]); hi[i] = max(hi[i], acc['max'][i])
+            if mi not in kaytetty:   # verkko ilman solmua (vanha tapa): oma laatikko sellaisenaan
+                for i in range(3):
+                    lo[i] = min(lo[i], acc['min'][i]); hi[i] = max(hi[i], acc['max'][i])
             if 'indices' in p:
                 kolmiot += g['accessors'][p['indices']]['count'] // 3
             else:

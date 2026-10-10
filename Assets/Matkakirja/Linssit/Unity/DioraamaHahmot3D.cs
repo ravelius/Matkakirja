@@ -970,6 +970,19 @@ namespace Matkakirja.Natiivi
                             : m.PaaIndeksi >= 0 ? m.SolmuT[m.PaaIndeksi].position : m.Juuri.transform.position + Vector3.up * 1.55f;
                         var eteen = -e.Juuri.transform.forward; // skinnatun mallin kasvot (ks. PaivitaSijainti)
                         var suunta = kohdePaa - paa.position;
+                        // Puhujan PÄÄ samalla rajalla kuin kasvot (Katse, PuhujaKameraAst; PT 9.10. vouti v4: pää kääntyi kuulijaan yli
+                        // vartalon rajan, ja puolilähikuvaan jäi sivuprofiili hupun varjossa): kuulija kameran suunnasta yli rajan → katse rajalle.
+                        if (kohde != KameraKohde && e.HahmoId == Puhuja && EleetPaalla && LepoKameraSuunta is Vector3 kdp)
+                        {
+                            var kd = kdp; kd.y = 0f;
+                            var vaaka = new Vector3(suunta.x, 0f, suunta.z);
+                            float ero = Vector3.SignedAngle(kd, vaaka, Vector3.up);
+                            if (kd.sqrMagnitude > 0.04f && vaaka.sqrMagnitude > 0.01f && Mathf.Abs(ero) > PuhujaKameraAst)
+                            {
+                                var raj = Quaternion.AngleAxis(Mathf.Sign(ero) * PuhujaKameraAst, Vector3.up) * kd.normalized * vaaka.magnitude;
+                                suunta = new Vector3(raj.x, suunta.y, raj.z);
+                            }
+                        }
                         // Pystykatse enintään PaaPystyAst (Päätoimittaja 5.10.: polvistuva kappalainen kallisti pään taakse
                         // kuin katsoisi kattoon, kun seisova puhuja oli yläpuolella).
                         float vaakaPituus = new Vector2(suunta.x, suunta.z).magnitude, maxY = vaakaPituus * Mathf.Tan(PaaPystyAst * Mathf.Deg2Rad);
@@ -1057,11 +1070,13 @@ namespace Matkakirja.Natiivi
             // SKIN (omistaja 20.1x "kuin moon walkia"): glTF-mallin kasvot ovat +Z (Linnanrakentajan mittaus: varvas
             // (0, 0, +0,16), tukijalka liukuu −Z:aan), ja DioraamaGlb:n z-peilaus kääntää ne Unityssä −Z:ksi. LookRotation
             // vie paikallisen +Z:n kasvosuuntaan, joten skinnatulle hahmolle käytetään vastavektoria. Nivelhahmot ennallaan.
-            if (e.Sekoitin != null) kasvot = -kasvot;
+            // KATSE ENNEN VASTAVEKTORIA (Siirtoseppä 9.10., MetaHuman-vouti v4: puolilähikuva jäi voudin selän taakse, kappalainen puhui
+            // selin voutiin): Katse kääntää KASVOJA kuulijaan ja kameraan päin; vastavektorille ajettuna se käänsi selän.
             Vector3 paikka = DioraamaNayttamo.UnityPiste(paikkaKanoninen);
             paikka.y += (float)juuriNousuM;
             e.Juuri.transform.position = paikka;
             if (e.Hahmo.Reitti == null && e.Sekoitin != null) kasvot = Katse(e, paikka, kasvot);
+            if (e.Sekoitin != null) kasvot = -kasvot;
             if (kasvot.sqrMagnitude > 1e-8f) e.Juuri.transform.rotation = Quaternion.LookRotation(kasvot, Vector3.up);
             if (PuhujanTila != null && e.TilaId == PuhujanTila && e.Juuri != null)
             {

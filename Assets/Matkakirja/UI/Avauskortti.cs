@@ -42,7 +42,7 @@ namespace Matkakirja.Natiivi
         const float HeroOsuus = 0.16f, HeroOsuusTabletti = 0.14f, HeroVahintaan = 120f, KarttaOsuus = 0.35f;
         const float HaivytysMs = 200f;
         /// <summary>Web LEHDEN_VAKIOESITTELY.</summary>
-        const string Vakioesittely = "Isoisä on merkinnyt tämän paikan karttaansa.";
+        static string Vakioesittely => Kieli.T("ui.avauskortti.vakioesittely");
         const string RiviVali = "<line-height=1.42em>";
 
         readonly UiKerros kerros;
@@ -100,7 +100,7 @@ namespace Matkakirja.Natiivi
             teksti.enableRichText = true;
             Kirjasimet.Aseta(teksti, Kirjasin.Luku);
             teksti.RegisterCallback<GeometryChangedEvent>(_ => RajaaTeksti());
-            lehtiNappi = Rakenne.Nappi("Lue kaupunkilehti →", "mk-avauskortti__lehti", LueLehti, esittely);
+            lehtiNappi = Rakenne.Nappi(Kieli.T("ui.avauskortti.lue-kaupunkilehti"), "mk-avauskortti__lehti", LueLehti, esittely);
             Kirjasimet.Aseta(lehtiNappi, Kirjasin.Kone);
 
             // 2. Nähtävyyskartta ilman tekstejä.
@@ -111,7 +111,7 @@ namespace Matkakirja.Natiivi
             oppaanRivi = Rakenne.Nappi(null, "mk-avauskortti__opas", AvaaOpas, sisalto);
             oppaanKuva = Rakenne.El("mk-avauskortti__opaskuva", oppaanRivi, PickingMode.Ignore);
             var tekstit = Rakenne.El("mk-avauskortti__opastekstit", oppaanRivi, PickingMode.Ignore);
-            Kirjasimet.Aseta(Rakenne.Teksti("TURISTI-INFO", "mk-avauskortti__oppaanlaji", tekstit), Kirjasin.KoneLihava);
+            Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.avauskortti.turisti-info"), "mk-avauskortti__oppaanlaji", tekstit), Kirjasin.KoneLihava);
             oppaanOtsikko = Rakenne.Teksti("", "mk-avauskortti__oppaanotsikko", tekstit);
             Kirjasimet.Aseta(oppaanOtsikko, Kirjasin.LukuLihava);
             oppaanTeksti = Rakenne.Teksti("", "mk-avauskortti__oppaanteksti", tekstit);
@@ -364,7 +364,7 @@ namespace Matkakirja.Natiivi
             {
                 if (o == null || !Auki || kaupunki != id) return;
                 opas = o;
-                oppaanOtsikko.text = o.Nimi ?? "TURISTI-INFO";
+                oppaanOtsikko.text = o.Nimi ?? Kieli.T("ui.avauskortti.turisti-info");
                 oppaanTeksti.text = Lauseet(o.Teksti, 2);
                 oppaanRivi.style.display = DisplayStyle.Flex;
                 oppaanKuva.style.display = DisplayStyle.None;

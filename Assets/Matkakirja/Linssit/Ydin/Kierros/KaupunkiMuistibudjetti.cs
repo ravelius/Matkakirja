@@ -16,23 +16,38 @@ namespace Matkakirja.Linssit.Kierros
     {
         public const double MarginaaliGt = 1.5, KaupunkiGt = 2.4, Eksponentti = 0.8;
         public const double AlarajaKerroin = 1.3, TaysiLattia = 0.5;
+        /// <summary>Karkein kerroin näyttökertoimeen nähden, kun budjetti ei riitä näyttökertoimellakaan (juna 173: iPad Pro 13 kaatui
+        /// Pariisissa jetsamiin, vapaa 3,02 Gt kaupungin avautuessa → kasvu näyttökertoimella 2,4 Gt > budjetti 1,5 Gt). Ennen 173:a
+        /// kerroin pysähtyi näyttökertoimeen; nyt se karkenee enintään ×1,6 (esim. iPad 1,70 → 2,72, Google-SSE 27 → 44).</summary>
+        public const double KarkeinLisa = 1.6;
+        /// <summary>Kehityskaupungin oma sisältö (omat mallit, vesi, ilmakehän taulukot, äänet, intro; juna 174, Opus-erittely 9.10.:
+        /// ~0,3 Gt), joka ei ole Googlen laattoja: vähennetään budjetista ennen kertoimen valintaa.</summary>
+        public const double OmaSisaltoGt = 0.3;
+        /// <summary>PIENI MUISTI (< 12 Gt, juna 173, LS1:n iPad-ajot 9.10. 22.4x): mallin kasvu aliarvioi laitteella ~1,75× (kertoimella 2,72
+        /// täysi lataus 1388 laattaa, tekstuurit 1,91 Gt, vapaa 3,0 → 0,06 Gt). Välimuisti 64 Mt. KATTO ×1,6 kuten muilla (PT 9.10. 23.2x:
+        /// ×2,5 eli kerroin 4,25 pois; Natiiviseppä mittasi 10.10.: iPadin jetsam ei ollut Googlen laattoja vaan Notre-Damen mallin 90
+        /// puutekstuuria, ja ilman sitä kertoimella 2,72 koko kierros jää ≥ 0,82 Gt vapaaksi; raportti muistimittaus-juna173-20261010.md).</summary>
+        public const double PieniKasvuKerroin = 1.75, PieniKarkeinLisa = 1.6;
+        public const long PieniValimuisti = 64L << 20;
         public const long ValimuistiPerus = 256L << 20, ValimuistiMax = 1536L << 20;
 
         /// <summary>Kaupungin arvioitu muistin kasvu (Gt) kertoimella k.</summary>
-        public static double Kasvu(double k, double naytto) => KaupunkiGt * Math.Pow(Math.Max(1.0, naytto) / k, Eksponentti);
+        public static double Kasvu(double k, double naytto, double kasvuKerroin = 1) => KaupunkiGt * Math.Max(1, kasvuKerroin) * Math.Pow(Math.Max(1.0, naytto) / k, Eksponentti);
 
         /// <summary>SSE-kerroin ja Googlen välimuisti (tavua). vapaaGt ≤ 0 = ei tiedossa.</summary>
-        public static (double Kerroin, long Valimuisti) Valitse(double vapaaGt, double naytto, bool taysi)
+        public static (double Kerroin, long Valimuisti) Valitse(double vapaaGt, double naytto, bool taysi, double omaGt = 0, bool pieni = false)
         {
             naytto = Math.Max(1.0, naytto);
             double lattia = taysi ? TaysiLattia : Math.Min(naytto, AlarajaKerroin);
             if (vapaaGt <= 0) return (Math.Min(naytto, Math.Max(AlarajaKerroin, naytto)), ValimuistiPerus);   // entinen: näyttökerroin
-            double budjetti = vapaaGt - MarginaaliGt;
-            if (budjetti <= 0.1) return (naytto, ValimuistiPerus);
-            double k = naytto * Math.Pow(KaupunkiGt / budjetti, 1.0 / Eksponentti);
-            k = Math.Min(naytto, Math.Max(lattia, k));
-            long valimuisti = ValimuistiPerus;
-            if (taysi)
+            double kk = pieni ? PieniKasvuKerroin : 1.0;
+            long perusVm = pieni ? PieniValimuisti : ValimuistiPerus;
+            double budjetti = vapaaGt - MarginaaliGt - Math.Max(0, omaGt), karkein = naytto * (pieni ? PieniKarkeinLisa : KarkeinLisa);
+            if (budjetti <= 0.1) return (karkein, perusVm);
+            double k = naytto * Math.Pow(KaupunkiGt * kk / budjetti, 1.0 / Eksponentti);
+            k = Math.Min(karkein, Math.Max(lattia, k));
+            long valimuisti = perusVm;
+            if (taysi && !pieni)
             {
                 double yli = budjetti - Kasvu(k, naytto);
                 if (yli > 0.5) valimuisti = Math.Min(ValimuistiMax, Math.Max(ValimuistiPerus, (long)(yli / 2 * (1L << 30))));
@@ -56,13 +71,14 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>SSE-kerroin, välimuisti ja lähikameran kerroin L samasta budjetista.</summary>
         public static double Karkeneminen = 1.0;
 
-        public static (double Kerroin, long Valimuisti, double Lahi) ValitseLahella(double vapaaGt, double naytto, bool taysi, double karkeneminen = -1)
+        public static (double Kerroin, long Valimuisti, double Lahi) ValitseLahella(double vapaaGt, double naytto, bool taysi, double karkeneminen = -1, double omaGt = 0, bool pieni = false)
         {
             if (karkeneminen <= 0) karkeneminen = Karkeneminen;
-            var (k0, v0) = Valitse(vapaaGt, naytto, taysi);
+            var (k0, v0) = Valitse(vapaaGt, naytto, taysi, omaGt, pieni);
+            if (pieni) return (k0, v0, 1.0);   // pienellä muistilla ei lähikameraa
             naytto = Math.Max(1.0, naytto);
             if (!taysi || vapaaGt <= 0 || k0 <= TaysiLattia * 1.05) return (k0, v0, 1.0);
-            double budjetti = vapaaGt - MarginaaliGt;
+            double budjetti = vapaaGt - MarginaaliGt - Math.Max(0, omaGt);
             for (double l = 1.1; l <= LahiMax + 1e-9; l += 0.05)
             {
                 double k = l * TaysiLattia;

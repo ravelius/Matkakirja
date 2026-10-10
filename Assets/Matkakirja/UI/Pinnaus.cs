@@ -42,13 +42,13 @@ namespace Matkakirja.Natiivi
             var turva = kerros.Turva(UiKerros.Tilarivi);
             palkki = Rakenne.Nappi(null, "tk-teema-paperi mk-pinpalkki", Palauta, turva);
             palkki.style.display = DisplayStyle.None;
-            palkki.tooltip = "Palauta pinnattu ikkuna";
+            palkki.tooltip = Kieli.T("ui.pinnaus.palauta");
             var rivi = Rakenne.El("mk-pinpalkki__rivi", palkki, PickingMode.Ignore);
             Rakenne.Ikoni(Ikonit.Viiva["pin"], "mk-pinpalkki__pin", rivi);
             otsikko = Rakenne.Teksti("", "mk-pinpalkki__otsikko", rivi);
             Kirjasimet.Aseta(otsikko, Kirjasin.Kone);
             tauko = Rakenne.Nappi(null, "mk-pinpalkki__tauko", VaihdaTauko, rivi, Ikonit.Tauko);
-            tauko.tooltip = "Tauko";
+            tauko.tooltip = Kieli.T("ui.yleinen.tauko");
             raita = Rakenne.El("mk-edistyminen mk-pinpalkki__edistyminen", palkki, PickingMode.Ignore);
             taytto = Rakenne.El("mk-edistyminen__taytto", raita, PickingMode.Ignore);
             // Uuden noston ensimmäinen kuva palkin alla 3 s (omistaja 6.10. 23.0x), palkin levyisenä ilman kehystä ja tekstiä.
@@ -359,7 +359,7 @@ namespace Matkakirja.Natiivi
                 tauko.EnableInClassList("mk-pinpalkki__tauko--jatka", tauolla);
                 tauko.Clear();
                 tauko.Add(new SvgIkoni(tauolla ? Ikonit.Toista : Ikonit.Tauko));
-                tauko.tooltip = tauolla ? "Jatka" : "Tauko";
+                tauko.tooltip = Kieli.T(tauolla ? "ui.yleinen.jatka" : "ui.yleinen.tauko");
             }
         }
 

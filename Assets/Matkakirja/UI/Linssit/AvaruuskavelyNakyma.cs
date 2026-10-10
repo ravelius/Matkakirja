@@ -273,13 +273,13 @@ namespace Matkakirja.Natiivi
             oma.style.backgroundImage = new StyleBackground(omaKuva);
             var utc = IssNyt.Kello();
             var p = IssNyt.Paikka(utc);
-            omaTeksti.text = $"Oma kuva ISS:n kaiteelta\n{Paikka(p.Lat, p.Lon)}";
+            omaTeksti.text = Kieli.T("ui.avaruuskavely.oma-kuva", Paikka(p.Lat, p.Lon));
             Debug.Log($"avaruuskävely: kuva {omaKuva.width}×{omaKuva.height}");
             nasa.style.backgroundImage = StyleKeyword.None;
             var vv = l?.KavelynVertailu;
-            if (vv == null) { nasaTeksti.text = "Astronautin kuvaa ei löytynyt"; yield break; }
+            if (vv == null) { nasaTeksti.text = Kieli.T("ui.avaruuskavely.ei-loytynyt"); yield break; }
             var kohde = vv.Value.Kohde;
-            nasaTeksti.text = $"Astronautin kuva (NASA)\n{kohde.Nimi} · {KyydinTeksti.Luku(vv.Value.Km)} km alapisteestä";
+            nasaTeksti.text = Kieli.T("ui.avaruuskavely.nasa-kuva", kohde.Nimi, KyydinTeksti.Luku(vv.Value.Km));
             var h = kohde.Havainnot.Count > 0 ? kohde.Havainnot[kohde.OletusIndeksi] : null;
             string osoite = h?.Pikku ?? h?.Kuva;
             Debug.Log($"avaruuskävely: vertailu {kohde.Tunnus} {vv.Value.Km:0} km {osoite}");
@@ -288,7 +288,7 @@ namespace Matkakirja.Natiivi
         }
 
         static string Paikka(double lat, double lon) =>
-            $"{System.Math.Abs(lat):0.0}° {(lat >= 0 ? "N" : "S")}, {System.Math.Abs(lon):0.0}° {(lon >= 0 ? "E" : "W")}";
+            Kieli.T("ui.avaruuskavely.paikka", System.Math.Abs(lat).ToString("0.0"), Kieli.T(lat >= 0 ? "ui.avaruuskavely.suunta-n" : "ui.avaruuskavely.suunta-s"), System.Math.Abs(lon).ToString("0.0"), Kieli.T(lon >= 0 ? "ui.avaruuskavely.suunta-e" : "ui.avaruuskavely.suunta-w"));
 
         static void Tayta(VisualElement e)
         {
@@ -334,11 +334,11 @@ namespace Matkakirja.Natiivi
         {
             if (rekisteroity) return; rekisteroity = true;
             var m = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
-            m.Rekisteroi("iss", "tehosteet", "kavely-ilmalukko", "Ilmalukko (paine ja luukku)", "ilmalukko-paine", "ilmalukko-luukku");
-            m.Rekisteroi("iss", "tehosteet", "kavely-karabiini", "Karabiini", "karabiini");
-            m.Rekisteroi("iss", "tehosteet", "kavely-suljin", "Kameran suljin", "suljin");
-            m.Rekisteroi("iss", "maisema", "kavely-hengitys", "Hengitys kypärässä", "hengitys-silmukka");
-            m.Rekisteroi("iss", "pulu", "kavely-pulu", "Pulu kypäräradiossa", "pulu-1", "pulu-2", "pulu-3", "quindar");
+            m.Rekisteroi("iss", "tehosteet", "kavely-ilmalukko", "Ilmalukko (paine ja luukku)", "ilmalukko-paine", "ilmalukko-luukku");   // kieli: ei (mikserin rivinimi, kehittäjäkoodin takana)
+            m.Rekisteroi("iss", "tehosteet", "kavely-karabiini", "Karabiini", "karabiini");   // kieli: ei (mikserin rivinimi, kehittäjäkoodin takana)
+            m.Rekisteroi("iss", "tehosteet", "kavely-suljin", "Kameran suljin", "suljin");   // kieli: ei (mikserin rivinimi, kehittäjäkoodin takana)
+            m.Rekisteroi("iss", "maisema", "kavely-hengitys", "Hengitys kypärässä", "hengitys-silmukka");   // kieli: ei (mikserin rivinimi, kehittäjäkoodin takana)
+            m.Rekisteroi("iss", "pulu", "kavely-pulu", "Pulu kypäräradiossa", "pulu-1", "pulu-2", "pulu-3", "quindar");   // kieli: ei (mikserin rivinimi, kehittäjäkoodin takana)
         }
         /// <summary>Tehosteen taso: webin master × makeup × mikserin kerroin (korvaa Asetukset.Taso(Voima.Tehosteet)).</summary>
         static float TehosteTaso(string id) => !Asetukset.Paalla(Kytkin.Aanimaisema) ? 0f

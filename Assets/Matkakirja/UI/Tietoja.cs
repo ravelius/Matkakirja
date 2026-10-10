@@ -46,10 +46,10 @@ namespace Matkakirja.Natiivi
             if (logoKuva != null) logo.style.backgroundImage = new StyleBackground(logoKuva);
             // Omistaja 29.9.2026: "niiden tietojen yläreunassa olisi nappi, mistä pääsisi pelin tilannesivulle, missä on ne
             // linssit ja kehityksen yhteenveto" (web projekti.html; natiivissa selaimeen).
-            var tilanne = Rakenne.Nappi("Pelin tilannesivu", "mk-nappi--haamu mk-tietoja__tilanne",
+            var tilanne = Rakenne.Nappi(Kieli.T("ui.tietoja.tilannesivu"), "mk-nappi--haamu mk-tietoja__tilanne",
                 () => Application.OpenURL(Laukku.SivustoJuuri + "projekti.html"), kortti.Sisus);
             Kirjasimet.Aseta(tilanne, Kirjasin.KoneLihava);
-            tilanne.tooltip = "Pelin tilannesivu: linssit ja kehityksen yhteenveto";
+            tilanne.tooltip = Kieli.T("ui.tietoja.tilannesivu-tooltip");
             var vieritys = new ScrollView(ScrollViewMode.Vertical);
             vieritys.AddToClassList("mk-tietoja__vieritys");
             vieritys.verticalScrollerVisibility = ScrollerVisibility.Hidden;
@@ -59,7 +59,7 @@ namespace Matkakirja.Natiivi
             this.vieritys = vieritys;
 
             var napit = Rakenne.El("mk-kortti__napit", kortti.Sisus, PickingMode.Ignore);
-            var sulje = Rakenne.Nappi("Sulje", "mk-nappi--kulta", Sulje, napit);
+            var sulje = Rakenne.Nappi(Kieli.T("ui.tietoja.sulje"), "mk-nappi--kulta", Sulje, napit);
             Rakenne.Tausta(sulje, Kuviot.Kulta);
             Kirjasimet.Aseta(sulje, Kirjasin.KoneLihava);
         }
@@ -115,16 +115,14 @@ namespace Matkakirja.Natiivi
                 foreach (var k in new[] { "tekija", "apu", "ehdot", "johdanto" }) Kappale(Teksti(peli, k), null);
                 // Nimetön kävijälaskuri (Kaynti.cs): web PELI.yksityisyys, vanhemmassa paketissa koodin vara.
                 Kappale(Teksti(peli, "yksityisyys") ?? Kaynti.Tekijatietorivi, null);
-                var h = Rakenne.Teksti("LÄHTEET JA AINEISTOT", "mk-tietoja__otsikko", sisus);
+                var h = Rakenne.Teksti(Kieli.T("ui.tietoja.lahteet-ja-aineistot"), "mk-tietoja__otsikko", sisus);
                 Kirjasimet.Aseta(h, Kirjasin.KoneLihava);
                 Kappale(Teksti(peli, "kolmannet"), null);
             }
             else
             {
-                Kappale("Matkakirja ja unohdettu aarre", "mk-tietoja__copyright");
-                Kappale("Suomenkielinen seikkailupeli nuoren Foggin matkasta isoisän vuoden 1873 matkapäiväkirjan jäljillä. "
-                    + "Valokuvat, julisteet ja liput ovat Wikimedia Commonsista (vapaat lisenssit); tekijä ja lisenssi näkyvät "
-                    + "kunkin kuvan yhteydessä.", null);
+                Kappale(Kieli.T("ui.tietoja.vara-otsikko"), "mk-tietoja__copyright");
+                Kappale(Kieli.T("ui.tietoja.vara-teksti"), null);
             }
             int aineistoja = 0;
             if (ryhmat != null)
@@ -152,31 +150,30 @@ namespace Matkakirja.Natiivi
             if (ajattelijat.Count > 0)
             {
                 aineistoja += ajattelijat.Count;
-                Ryhma("Ajattelijat", "Ajattelijoiden kohtausten kaikukuvat.", ajattelijat);
+                Ryhma(Kieli.T("ui.ajattelija.kapiteeli"), Kieli.T("ui.tietoja.ajattelijat-johdanto"), ajattelijat);
             }
-            Ryhma("Sovelluksen kartta, malli ja fontit", "Natiivisovelluksen omat aineistot.", new List<Rivi>
+            Ryhma(Kieli.T("ui.tietoja.sovellus-ryhma"), Kieli.T("ui.tietoja.sovellus-johdanto"), new List<Rivi>
             {
-                new Rivi { Nimi = "Maasto ja pallo", Tekija = KarttaKerrokset.Tekijatiedot, EiLisenssia = true },
+                new Rivi { Nimi = Kieli.T("ui.tietoja.maasto-ja-pallo"), Tekija = KarttaKerrokset.Tekijatiedot, EiLisenssia = true },
                 // Lennon pinta satelliittiin (Natiiviseppä build 10, Fable: EOX:n täysi muoto, s2/laatat.json attribuutioEox).
-                new Rivi { Nimi = "Lennon pinta", Tekija = "NASA Earth Observatory (Blue Marble Next Generation)", EiLisenssia = true },
+                new Rivi { Nimi = Kieli.T("ui.tietoja.lennon-pinta"), Tekija = "NASA Earth Observatory (Blue Marble Next Generation)", EiLisenssia = true },   // kieli: ei (tekijän ja aineiston oikea nimi)
                 // Radiolinssin yövalot (Karttasepän sarja yovalot/2026-09-25, VIIRS, public domain; RadioMastot.YovaloUrl).
-                new Rivi { Nimi = "Radion yövalot", Tekija = "NASA Earth Observatory (Black Marble)", EiLisenssia = true },
+                new Rivi { Nimi = Kieli.T("ui.tietoja.radion-yovalot"), Tekija = "NASA Earth Observatory (Black Marble)", EiLisenssia = true },   // kieli: ei (tekijän ja aineiston oikea nimi)
                 // Cupolan ääni: NASA:n radio ja sisätilahumina poistuivat käytöstä 3.10.2026 (omistaja: rätinä pois); humina v2 on pelin oma
                 // generoitu ääni, joten rivi poistettiin (CupolaAani.cs).
-                new Rivi { Nimi = "Lennon pinta, pilvetön",Tekija = "EOxCloudless https://cloudless.eox.at by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2016 & 2017)", EiLisenssia = true },
-                new Rivi { Nimi = "Lentokone (DC-3-tyyppinen potkurikone)", Tekija = "Pelin oma malli", Lisenssi = "CC0 (public domain)" },
+                new Rivi { Nimi = Kieli.T("ui.tietoja.lennon-pinta-pilveton"),Tekija = "EOxCloudless https://cloudless.eox.at by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2016 & 2017)", EiLisenssia = true },   // kieli: ei (tekijän ja aineiston oikea nimi)
+                new Rivi { Nimi = Kieli.T("ui.tietoja.lentokone"), Tekija = Kieli.T("ui.tietoja.pelin-oma-malli"), Lisenssi = "CC0 (public domain)" },   // kieli: ei (lisenssin nimi)
                 // Myllyn naksahdukset (Siirtoseppä 2.10.2026, omistajan OK): Resources/Pelit/Mylly/mylly-asetus|poisto.wav.
-                new Rivi { Nimi = "Myllyn nappuloiden äänet", Tekija = "Kenney (kenney.nl), Impact Sounds", Lisenssi = "CC0 (public domain)" },
+                new Rivi { Nimi = Kieli.T("ui.tietoja.myllyn-aanet"), Tekija = "Kenney (kenney.nl), Impact Sounds", Lisenssi = "CC0 (public domain)" },   // kieli: ei (lisenssin nimi)
                 // ISS-kytkinpaneelin painetut otsikot ja legendat (Linnanrakentajan Cycles-renderit 30.9., Päätoimittaja).
-                new Rivi { Nimi = "Barlow Condensed (ISS-kytkinpaneelin tekstit)", Tekija = "© 2017 The Barlow Project Authors (github.com/jpt/barlow)",
+                new Rivi { Nimi = Kieli.T("ui.tietoja.barlow"), Tekija = "© 2017 The Barlow Project Authors (github.com/jpt/barlow)",   // kieli: ei (tekijänoikeusmerkintä)
                     Lisenssi = "SIL Open Font License 1.1" },
-                new Rivi { Nimi = "EB Garamond (varafontti)", Tekija = "Georg Duffner ja Octavio Pardo", Lisenssi = "SIL Open Font License 1.1",
-                    Huom = "American Typewriter, Iowan Old Style ja Snell Roundhand ovat iOS:n järjestelmäfontteja." },
+                new Rivi { Nimi = Kieli.T("ui.tietoja.garamond"), Tekija = Kieli.T("ui.tietoja.garamond-tekijat"), Lisenssi = "SIL Open Font License 1.1",
+                    Huom = Kieli.T("ui.tietoja.fontit-huom") },
             });
             if (aineistoja > 0)
-                Kappale(aineistoja + " aineistoa. Yksittäisen valokuvan, äänitteen ja väitteen oma lähde näkyy siinä kohdassa "
-                    + "peliä, jossa se esitetään.", "mk-tietoja__lopetus");
-            Kappale("Sovellus " + Application.version + (UiNakymat.SisaltoVersio != null ? " · sisältö " + UiNakymat.SisaltoVersio : ""),
+                Kappale(Kieli.T("ui.tietoja.aineistoa", aineistoja), "mk-tietoja__lopetus");
+            Kappale(Kieli.T(UiNakymat.SisaltoVersio != null ? "ui.tietoja.versio-sisalto" : "ui.tietoja.versio", Application.version, UiNakymat.SisaltoVersio),
                 "mk-tietoja__lopetus");
             rakennettu = peli != null;
         }
@@ -267,7 +264,7 @@ namespace Matkakirja.Natiivi
                 if (r.Tekija != null) Rakenne.Teksti(r.Tekija, "mk-tietoja__tekija", li);
                 // Kirjaamaton lisenssi näkyy eikä jää pois (web: tyhjä luettaisiin "ei ehtoja").
                 if (!r.EiLisenssia)
-                    Rakenne.Teksti(r.Lisenssi ?? "Lisenssi epäselvä",
+                    Rakenne.Teksti(r.Lisenssi ?? Kieli.T("ui.tietoja.lisenssi-epaselva"),
                         "mk-tietoja__lisenssi" + (r.Lisenssi == null ? " mk-tietoja__lisenssi--epaselva" : ""), li);
                 if (r.Huom != null) Rakenne.Teksti(r.Huom, "mk-tietoja__huom", li);
             }

@@ -77,7 +77,23 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(i > 0 && j > i, "Muistivahti ja PaivitaPysaytys");
             string vahti = c.Substring(i, j - i);
             Oleta.Tosi(!vahti.Contains("maximumScreenSpaceError") && !vahti.Contains("maximumCachedBytes"), "hädässä ei SSE- eikä välimuistivaihtoa");
-            Oleta.Tosi(vahti.Contains("Karkeaksi()") && c.Contains("bool halu = Tauko && !muistiPysaytys && Latausaste >= ValmisProsentti;"), "karkea valinta hädässä, suspendUpdate tauolla");
+            Oleta.Tosi(vahti.Contains("Karkeaksi()") && c.Contains("bool halu = (Tauko && !muistiPysaytys && !EsilatausEstetty && Latausaste >= ValmisProsentti) || hataSeis;"), "karkea valinta hädässä, suspendUpdate tauolla ja hädän toisessa portaassa");
+            Oleta.Tosi(vahti.Contains("hataSeis = true") && c.Contains("HataSeisGt = 0.6"), "hätä 2: lataus seis alle 0,6 Gt (juna 173)");
+            Oleta.Tosi(c.Contains("bool kevyt = KaupunkiKuva.PieniMuisti && KaupunkiKuva.PieniLataus;") && c.Contains("t.forbidHoles = !kevyt;") && c.Contains("t.preloadAncestors = !kevyt;"), "pieni muisti: kevyt laattalataus (juna 173)");
+            // Juna 173 f (PT 10.10. 02.2x): pienellä muistilla ei karkeaa kameraa, vaan kaksi porrasta (esilataus pois → lataus seis).
+            Oleta.Tosi(vahti.Contains("if (KaupunkiKuva.PieniMuisti) { PieniHata(v); return; }") && vahti.Contains("hataSeis = nyt >= 2;") && vahti.Contains("EsilatausPois();"), "pieni muisti: hätä kahdessa portaassa ilman karkeaa kameraa");
+        }
+
+        [Testi] static void PienenMuistinHataPoistaaEsilatauksen()
+        {
+            // Juna 173 f: tasolla 1 esikamera, reittikamerat ja lähikamera pois laattavalinnasta, päivitys jatkuu (välimuisti vapautuu).
+            string c = System.IO.File.ReadAllText(System.IO.Path.Combine(AppContext.BaseDirectory, "..", "..", "Assets", "Matkakirja", "Linssit", "Unity", "CesiumKaupunki.cs"));
+            Oleta.Tosi(c.Contains("if (EsilatausEstetty) { EsikameraPois(); return; }"), "esikamera");
+            Oleta.Tosi(c.Contains("if (georef == null || juuri == null || nakymat == null || EsilatausEstetty) maara = 0;"), "reittikamerat");
+            Oleta.Tosi(c.Contains("&& !kuormaValinta && !EsilatausEstetty;"), "lähikamera");
+            Oleta.Tosi(c.Contains("public bool EsilatausEstetty => (KaupunkiKuva.PieniMuisti && pieniHata.Taso >= 1) || IntroEsilatausPois;") && c.Contains("pieniHata.Nollaa();"), "vain pienellä muistilla, nollaus avauksessa");
+            string o = System.IO.File.ReadAllText(System.IO.Path.Combine(AppContext.BaseDirectory, "..", "..", "Assets", "Matkakirja", "Linssit", "Unity", "OpasSovitin.cs"));
+            Oleta.Tosi(o.Contains("kaupunki.IntroEsilatausPois = introKaynnissa && KaupunkiKuva.PieniMuisti;"), "R18: pienellä muistilla ei esilatausta intron aikana");
         }
 
         [Testi] static void AluskerrosKorkealla()
@@ -97,6 +113,24 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(v.Contains("SampleSH(n)") && v.Contains("IlmIlmaperspektiivi") && v.Contains("_IlmMaailma.z"), "ympäristövalo, ilma ja ilta");
             Oleta.Tosi(v.Contains("\"LightMode\" = \"DepthNormals\"") && v.Contains("\"LightMode\" = \"ShadowCaster\""), "syvyys ja varjot");
             Oleta.Tosi(c.Contains("t.opaqueMaterial = om"), "materiaali tilesetille");
+        }
+
+        [Testi] static void OmienMallienPbrKartat()
+        {
+            // Omistaja 9.10. (PT junaan 173): ND:n ja KL:n oikeat pinnat → OmaMalli lukee glTF:n normaali-, metalli/karheus- ja peittokartat
+            // Cesiumin ominaisuusnimillä; tangentit derivaatoista, koska malleissa ei ole TANGENT-attribuuttia.
+            string v = System.IO.File.ReadAllText(System.IO.Path.Combine(AppContext.BaseDirectory, "..", "..", "Assets", "Matkakirja", "Linssit", "Resources", "Varjostimet", "OmaMalli.shader"));
+            foreach (var o in new[] { "_normalMapTexture", "_normalMapScale", "_normalMapTextureCoordinateIndex", "_metallicRoughnessTexture",
+                                      "_metallicRoughnessFactor", "_metallicRoughnessTextureCoordinateIndex", "_occlusionTexture", "_occlusionStrength", "_occlusionTextureCoordinateIndex" })
+                Oleta.Tosi(v.Contains(o + " ("), "Cesiumin ominaisuus " + o);
+            Oleta.Tosi(v.Contains("_metallicRoughnessFactor.x * mr.b") && v.Contains("_metallicRoughnessFactor.y * mr.g"), "metalli B, karheus G (glTF)");
+            Oleta.Tosi(v.Contains("Kartoitettu(n0, v.w, v.uvNM.xy") && v.Contains("ddx(w)"), "kotangenttikehys derivaatoista");
+            Oleta.Tosi(v.Contains("\"white\" {}") && v.Contains("_metallicRoughnessFactor (\"Metalli, karheus\", Vector) = (0, 1, 0, 0)"), "oletus: ei metallia, karhea (vanhat mallit ennallaan)");
+            // PT 9.10.: ND kauempaa harmaa → valo kaupungin auringosta (_IlmAurinko), ei kameraa seuraavasta kartan päävalosta.
+            Oleta.Tosi(v.Contains("valo.direction = kaupunki ? normalize(_IlmAurinko.xyz) : valo.direction;"), "kaupungin aurinko");
+            // Uusi data (PBR, alfa, COLOR_0) vain 173+: oma osoitin uusin-3.json (vanhat buildit lukevat uusin-2:ta).
+            string c = System.IO.File.ReadAllText(System.IO.Path.Combine(AppContext.BaseDirectory, "..", "..", "Assets", "Matkakirja", "Linssit", "Unity", "CesiumOmatMallit.cs"));
+            Oleta.Tosi(c.Contains("omat-mallit/uusin-3.json\";"), "osoitin uusin-3");
         }
 
         [Testi] static void SadepilvetJaSalama()

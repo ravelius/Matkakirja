@@ -42,10 +42,7 @@ namespace Matkakirja.Natiivi
         const string TilastotAvain = "matkakirja-laukku-tilastot";
 
         // Tarinakaanonia (Fablen teksti, web ui.js aarni-otsikko): ei lyhennetä.
-        public const string AarniSeloste = "Aarnin luettelo on isoisän vanhan ystävän, keräilijä Aarnin, kokoama "
-            + "lista aarteista, jotka ovat päässeet unohtumaan. Kateissa-luku "
-            + "kertoo, montako niistä on vielä löytämättä — jokainen matkalla "
-            + "ratkaistu johtolanka voi viedä yhden jäljille.";
+        public static string AarniSeloste => Kieli.T("ui.laukku.aarni-seloste");
 
         readonly Func<VisualElement> pilleri;
         readonly VisualElement matka, tilastot, lohko, aarteet, tavarat, julisteet;
@@ -90,30 +87,30 @@ namespace Matkakirja.Natiivi
                 var logo = Rakenne.El("mk-laukku__logo", Paneeli);
                 var kuva = Resources.Load<Texture2D>("MatkakirjaUI/logo");
                 if (kuva != null) logo.style.backgroundImage = new StyleBackground(kuva);
-                logo.tooltip = "Tekijätiedot ja lähteet";
+                logo.tooltip = Kieli.T("ui.laukku.tekijatiedot");
                 logo.AddManipulator(new Clickable(() => { Sulje(); LogoPainettu?.Invoke(); }));
             }
 
             // Pillerin tiedot omassa kuoressaan: pillerivalikko (omistaja 29.9.2026) upottaa ne pääsivunsa pohjalle (Upota).
             tiedotKuori = Rakenne.El("mk-laukku__tiedot", Sisalto, PickingMode.Ignore);
-            Osio("Matka", tiedotKuori);
+            Osio(Kieli.T("ui.laukku.matka"), tiedotKuori);
             matka = Rakenne.El("mk-laukku__rivit", tiedotKuori, PickingMode.Ignore);
 
             tilastoNappi = Rakenne.Nappi(null, "mk-laukku__lohkonappi", VaihdaTilastot, tiedotKuori);
-            var ot = Rakenne.Teksti("MATKAN TILASTOT", "mk-laukku__osio", tilastoNappi);
+            var ot = Rakenne.Teksti(Kieli.T("ui.laukku.matkan-tilastot"), "mk-laukku__osio", tilastoNappi);
             Kirjasimet.Aseta(ot, Kirjasin.Kone);
             Rakenne.Teksti("›", "mk-laukku__vakanen", tilastoNappi);
             lohko = Rakenne.El("mk-laukku__lohko", tiedotKuori, PickingMode.Ignore);
             tilastot = Rakenne.El("mk-laukku__rivit", lohko, PickingMode.Ignore);
             aarniOtsikko = Rakenne.El("mk-laukku__osiorivi", lohko, PickingMode.Ignore);
-            Osio("Aarnin luettelo", aarniOtsikko);
+            Osio(Kieli.T("ui.aarteet.aarnin-luettelo"), aarniOtsikko);
             Pikkuseloste.Nappi(AarniSeloste, aarniOtsikko);
             aarteet = Rakenne.El("mk-laukku__rivit", lohko, PickingMode.Ignore);
-            tavaraOtsikko = Osio("Tavarat", lohko);
+            tavaraOtsikko = Osio(Kieli.T("ui.aarteet.tavarat"), lohko);
             tavarat = Rakenne.El("mk-laukku__rivit", lohko, PickingMode.Ignore);
             julisteet = Rakenne.El("mk-laukku__julisteet", lohko);
             julisteet.AddManipulator(new Clickable(AvaaJulisteet));
-            varusteOtsikko = Osio("Varusteet");
+            varusteOtsikko = Osio(Kieli.T("ui.laukku.varusteet"));
             varusteet = Rakenne.El("mk-laukku__rivit", Sisalto, PickingMode.Ignore);
             AsetaTilastot(PlayerPrefs.GetString(TilastotAvain, "0") == "1");
             AukiMuuttui += auki => { if (!auki) Pikkuseloste.Sulje(); Aanisoitin.MusiikkiTila("matkalaukku", auki); };
@@ -189,7 +186,7 @@ namespace Matkakirja.Natiivi
             Varusteet();
             if (d == null)
             {
-                Rivi(matka, "Matka ei ole vielä alkanut.", null);
+                Rivi(matka, Kieli.T("ui.aarteet.ei-alkanut"), null);
                 tilastoNappi.style.display = DisplayStyle.None;
                 lohko.style.display = DisplayStyle.None;
                 return;
@@ -197,8 +194,8 @@ namespace Matkakirja.Natiivi
             tilastoNappi.style.display = DisplayStyle.Flex;
             AsetaTilastot(tilastoNappi.ClassListContains("mk-auki"));
 
-            Rivi(matka, "Sijainti", d.Sijainti);
-            Rivi(matka, "Kukkaro", d.Kukkaro);
+            Rivi(matka, Kieli.T("ui.laukku.sijainti"), d.Sijainti);
+            Rivi(matka, Kieli.T("ui.laukku.kukkaro"), d.Kukkaro);
             // Talouden vaihe 1: webin kassan vihje (title) kosketuslaitteella kukkaron alle.
             var vihje = testiData == null ? KassaVihje(PeliOhjain.Instanssi?.Matka) : null;
             if (vihje != null) Rakenne.Teksti(vihje, "mk-laukku__kassavihje", matka);
@@ -212,14 +209,14 @@ namespace Matkakirja.Natiivi
                 var r = Rakenne.El("mk-laukku__aarre mk-loytynyt", aarteet, PickingMode.Ignore);
                 r.Add(Aloitusnakyma.Merkki("mk-laukku__aarremerkki"));
                 Rakenne.Teksti(a.Nimi, "mk-laukku__aarrenimi", r);
-                var tila = Rakenne.Teksti("LÖYTYI", "mk-laukku__aarretila", r);
+                var tila = Rakenne.Teksti(Kieli.T("ui.laukku.loytyi"), "mk-laukku__aarretila", r);
                 Kirjasimet.Aseta(tila, Kirjasin.Kone);
             }
             var kateissa = Rakenne.El("mk-laukku__aarre", aarteet, PickingMode.Ignore);
-            Rakenne.Teksti("Kateissa", "mk-laukku__aarrenimi", kateissa);
+            Rakenne.Teksti(Kieli.T("ui.laukku.kateissa"), "mk-laukku__aarrenimi", kateissa);
             Rakenne.Teksti(d.Kateissa.ToString(), "mk-laukku__arvo", kateissa);
 
-            if (d.Tavarat.Count == 0) Rakenne.Teksti(d.TavaratTyhja ?? "Laukku on vielä tyhjä.", "mk-laukku__tyhja", tavarat);
+            if (d.Tavarat.Count == 0) Rakenne.Teksti(d.TavaratTyhja ?? Kieli.T("ui.laukku.tyhja"), "mk-laukku__tyhja", tavarat);
             foreach (var t in d.Tavarat)
             {
                 var r = Rakenne.El("mk-laukku__tavara", tavarat, PickingMode.Ignore);
@@ -232,7 +229,7 @@ namespace Matkakirja.Natiivi
             julisteet.style.display = d.Julisteet.Count > 0 && !upotettu ? DisplayStyle.Flex : DisplayStyle.None;
             if (d.Julisteet.Count > 0)
             {
-                var n = Rakenne.Teksti("JULISTEET", "mk-laukku__julistenimio", julisteet);
+                var n = Rakenne.Teksti(Kieli.T("ui.laukku.julisteet"), "mk-laukku__julistenimio", julisteet);
                 Kirjasimet.Aseta(n, Kirjasin.Kone);
                 var vedokset = Rakenne.El("mk-laukku__vedokset", julisteet, PickingMode.Ignore);
                 foreach (var j in d.ViimeisimmatJulisteet)
@@ -240,7 +237,7 @@ namespace Matkakirja.Natiivi
                     var v = Rakenne.El("mk-laukku__vedos", vedokset, PickingMode.Ignore);
                     if (!string.IsNullOrEmpty(j.Url)) Kuvat.Hae(j.Url, tex => { if (tex != null) v.style.backgroundImage = new StyleBackground(tex); else v.RemoveFromHierarchy(); });
                 }
-                var luku = Rakenne.Teksti($"{d.Julisteet.Count}/{d.JulisteitaKaikkiaan} »", "mk-laukku__arvo", julisteet);
+                var luku = Rakenne.Teksti(Kieli.T("ui.laukku.julisteet-luku", d.Julisteet.Count, d.JulisteitaKaikkiaan), "mk-laukku__arvo", julisteet);
                 Kirjasimet.Aseta(luku, Kirjasin.Kone);
             }
         }
@@ -284,8 +281,8 @@ namespace Matkakirja.Natiivi
             var linssi = tunnus == null ? null : lista.FirstOrDefault(x => x.Id == tunnus);
             if (linssi == null)
             {
-                if (esikatselussa) Nimio(tiedot, "Paljain silmin");
-                Lyhyt(tiedot, "Kartta sellaisena kuin isoisä sen piirsi.");
+                if (esikatselussa) Nimio(tiedot, Kieli.T("ui.laukku.paljain-silmin"));
+                Lyhyt(tiedot, Kieli.T("ui.laukku.paljain-silmin-selite"));
                 if (esikatselussa) Aktivointi(tiedot, null, null, auki);
                 return;
             }
@@ -298,7 +295,7 @@ namespace Matkakirja.Natiivi
         void Ruutu(VisualElement ruudukko, Matkakirja.Linssit.LinssiTiedot t, string auki, bool kesken)
         {
             string id = t?.Id;
-            string nimi = t == null ? "Ei linssiä" : (t.Nimi ?? id) + (kesken ? " (keskeneräinen)" : "");
+            string nimi = t == null ? Kieli.T("ui.linssi.ei-linssia") : (t.Nimi ?? id) + (kesken ? Kieli.T("ui.laukku.keskenerainen") : "");
             var solu = Rakenne.El("mk-laukku__linssisolu", ruudukko, PickingMode.Ignore);
             var b = Rakenne.Nappi(null, "mk-laukku__linssi", () => Esikatsele(id), solu,
                 t == null ? EiLinssiaIkoni : string.IsNullOrEmpty(t.Ikoni) ? Ikonit.Viiva["taikalasit"] : t.Ikoni);
@@ -332,9 +329,9 @@ namespace Matkakirja.Natiivi
         void Aktivointi(VisualElement isa, string tunnus, string nimi, string auki)
         {
             bool paalla = tunnus != null && tunnus == auki;
-            var b = Rakenne.Nappi(paalla ? "OTA POIS" : "AKTIVOI", "mk-laukku__aktivoi", () => Aktivoi(paalla ? null : tunnus), isa);
+            var b = Rakenne.Nappi(Kieli.T(paalla ? "ui.laukku.ota-pois" : "ui.laukku.aktivoi"), "mk-laukku__aktivoi", () => Aktivoi(paalla ? null : tunnus), isa);
             b.EnableInClassList("mk-pois", paalla);
-            b.tooltip = paalla ? $"Ota linssi {nimi} pois käytöstä" : tunnus != null ? $"Aktivoi linssi {nimi}" : "Katso karttaa paljain silmin";
+            b.tooltip = paalla ? Kieli.T("ui.laukku.ota-linssi-pois", nimi) : tunnus != null ? Kieli.T("ui.laukku.aktivoi-linssi", nimi) : Kieli.T("ui.laukku.katso-paljain");
             Kirjasimet.Aseta(b, Kirjasin.KoneLihava);
         }
 
@@ -383,8 +380,8 @@ namespace Matkakirja.Natiivi
             if (m == null) return null;
             var k = m.PaivakuluNyt();
             int riittaa = m.KassaRiittaa();
-            return $"Päiväkulu £{k.Yhteensa} (ruoka £{k.Ruoka}{(k.Majoitus > 0 ? $", majoitus £{k.Majoitus}" : "")})"
-                + (riittaa != int.MaxValue ? $" — kassa riittää noin {riittaa} päiväksi" : "");
+            return Kieli.T("ui.laukku.paivakulu", k.Yhteensa, k.Ruoka, k.Majoitus > 0 ? Kieli.T("ui.laukku.paivakulu-majoitus", k.Majoitus) : "")
+                + (riittaa != int.MaxValue ? Kieli.T("ui.laukku.kassa-riittaa", riittaa) : "");
         }
 
         void Rivi(VisualElement isa, string nimi, string arvo)
@@ -404,15 +401,15 @@ namespace Matkakirja.Natiivi
             Rakenne.Teksti(t.Nimi, "mk-laukku__teksti", r);
             // i heti nimikkeen perään, pisteet yksin oikeaan reunaan (omistaja 18.8.2026).
             int pisteet = t.Pisteet;
-            var info = Rakenne.Nappi("i", "mk-seloste-nappi", () => Tietajagalleria.Avaa(pisteet), r);
+            var info = Rakenne.Nappi("i", "mk-seloste-nappi", () => Tietajagalleria.Avaa(pisteet), r);   // kieli: ei (kirjain-ikoni "i", ei käännettävä teksti)
             Kirjasimet.Aseta(info, Kirjasin.Kone);
-            Rakenne.Teksti(t.Pisteet + " tp", "mk-laukku__arvo", r);
+            Rakenne.Teksti(Kieli.T("ui.laukku.pisteet-tp", t.Pisteet), "mk-laukku__arvo", r);
             if (t.SeuraavaRaja == null) return;
             var palkki = Rakenne.El("mk-laukku__palkki", matka, PickingMode.Ignore);
             var tayte = Rakenne.El("mk-laukku__palkkitayte", palkki, PickingMode.Ignore);
             Rakenne.Tausta(tayte, Kuviot.Vaaka("tietaja-palkki", Kuviot.Vari("#8a6114"), Kuviot.Vari("#d9a13b")));
             tayte.style.width = Length.Percent(Mathf.Clamp01((float)t.Osuus) * 100f);
-            Rakenne.Teksti($"Seuraava taso {t.SeuraavaRaja} tp: {t.SeuraavaNimi}", "mk-laukku__seuraava", matka);
+            Rakenne.Teksti(Kieli.T("ui.laukku.seuraava-taso", t.SeuraavaRaja, t.SeuraavaNimi), "mk-laukku__seuraava", matka);
         }
 
         void VaihdaTilastot()
@@ -454,7 +451,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Esimerkkilaukku kuvasarjoihin (web renderProgress-rivien muodossa).</summary>
         public static LaukkuNaytto Esimerkki() => new LaukkuNaytto
         {
-            Sijainti = "Firenze",
+            Sijainti = "Firenze",   // kieli: ei (esimerkkidata kuvasarjoihin (Esimerkki(), testi), ei pelaajan UI)
             Raha = 340,
             Tietaja = new LaukkuTietaja
             {

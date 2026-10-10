@@ -143,12 +143,12 @@ namespace Matkakirja.Natiivi
             });
 
             var ylarivi = Rakenne.El("mk-matkakirja__ylarivi", kortti, PickingMode.Ignore);
-            otsikko = Rakenne.Teksti("Matkapäiväkirja", "mk-matkakirja__otsikko", ylarivi);
+            otsikko = Rakenne.Teksti(Kieli.T("ui.matkakirjakortti.otsikko"), "mk-matkakirja__otsikko", ylarivi);
             lyhyt = Rakenne.Teksti("", "mk-matkakirja__lyhyt", ylarivi);
             // Webin lappu: otsikko lihavoituna (#fact-voice h2.paikka-aika, font-weight 700).
             Kirjasimet.Aseta(lyhyt, Kirjasin.KoneLihava);
             kaiutin = Rakenne.Nappi(null, "mk-matkakirja__kaiutin", VaihdaKertoja, ylarivi);
-            kaiutin.tooltip = "Kertoja";
+            kaiutin.tooltip = Kieli.T("ui.linssivalikko.kertoja");
             var kuvake = Rakenne.El("mk-kaiutin", kaiutin, PickingMode.Ignore);
             Rakenne.Ikoni(KaiutinRunko, "mk-kaiutin__osa", kuvake);
             for (int i = 0; i < 3; i++) kaaret[i] = Rakenne.Ikoni(Kaaret[i], "mk-kaiutin__osa mk-kaiutin__kaari", kuvake);
@@ -161,7 +161,7 @@ namespace Matkakirja.Natiivi
             Piiloon(lahderivi, true);
             // Pieni kuvaikoni: avaa havainnossa mainitun ilmiön artikkelin (web #fact-image).
             kuvanappi = Rakenne.Nappi(null, "mk-matkakirja__kuva", AvaaWiki, kortti);
-            kuvanappi.tooltip = "Katso kuva";
+            kuvanappi.tooltip = Kieli.T("ui.matkakirjakortti.katso-kuva");
             Rakenne.Ikoni(KuvaIkoni, "mk-matkakirja__kuvaikoni", kuvanappi).pickingMode = PickingMode.Ignore;
             Piiloon(kuvanappi, true);
             pikkukuvat = Rakenne.El("mk-matkakirja__pikkukuvat", kortti, PickingMode.Ignore);
@@ -598,7 +598,7 @@ namespace Matkakirja.Natiivi
             merkinta = m;
             kirjoitettu = valmis;
             kirjoitus?.Pause();
-            otsikko.text = m.PaikkaAika ? m.Otsikko ?? "" : (m.Otsikko ?? "Matkapäiväkirja").ToUpperInvariant();
+            otsikko.text = m.PaikkaAika ? m.Otsikko ?? "" : (m.Otsikko ?? Kieli.T("ui.matkakirjakortti.otsikko")).ToUpperInvariant();
             otsikko.EnableInClassList("mk-matkakirja__otsikko--paikka", m.PaikkaAika);
             // Web h2 (font-weight 700): paikka ja aika lihavoituna ruskeana kirjoituskoneella.
             Kirjasimet.Aseta(otsikko, m.PaikkaAika ? Kirjasin.KoneLihava : Kirjasin.Kone);
@@ -844,7 +844,7 @@ namespace Matkakirja.Natiivi
             lahderivi.Clear();
             var lahteet = merkinta?.Lahteet;
             if (lahteet == null || lahteet.Count == 0) { Piiloon(lahderivi, true); return; }
-            Rakenne.Teksti("LÄHDE:", "mk-matkakirja__lahdeotsikko", lahderivi);
+            Rakenne.Teksti(Kieli.T("ui.matkakirjakortti.lahde"), "mk-matkakirja__lahdeotsikko", lahderivi);
             for (int i = 0; i < lahteet.Count; i++)
             {
                 if (i > 0) Rakenne.Teksti(" · ", "mk-matkakirja__lahde", lahderivi);
@@ -887,7 +887,7 @@ namespace Matkakirja.Natiivi
             bool paalla = Asetukset.Paalla(Kytkin.Kertoja);
             kaiutin.EnableInClassList("mk-mykistetty", !paalla);
             // E20: web paivitaKaiutinTila (title tilan mukaan).
-            kaiutin.tooltip = paalla ? "Luenta päällä — mykistä" : "Luenta pois — kytke päälle";
+            kaiutin.tooltip = Kieli.T(paalla ? "ui.matkakirjakortti.luenta-paalla" : "ui.matkakirjakortti.luenta-pois");
         }
 
         void Mittari()

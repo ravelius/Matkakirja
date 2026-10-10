@@ -26,7 +26,7 @@
 // Pelikoodarin maisemakanavalla ilman linssiä); elävälle kartalle "elava kreikka [alku s] [nopeus] | kuva <s> | jatka |
 // saapuminen <kaupunki> | saato | ui | pois | tila" (ElavaKartta); ISS:n radalle "iss tila | lataa" (IssTleLataaja).
 // Lontoo-pilotille (Linssiseppä 5.10.2026) "linssi lontoo" ja "lontoo ohita | data google|ion|oma | tila"; elävälle
-// oppaalle "linssi opas" ja "opas testi 0|1 | testiotsake 0|1 | pysayta 0|1 | kaupunki <nimi> | toive <teksti> | data google|ion|oma | tila" (LontooSovitin; kehitystunnus
+// oppaalle "linssi opas" ja "opas testi 0|1 | testiotsake 0|1 | pysayta 0|1 | kaupunki <nimi> | toive <teksti> | data google|ion|oma | steamaudio 0|1|tila | tila" (LontooSovitin; kehitystunnus
 // Documents/cesium-ion-tunnus.txt).
 // Tulos lokiin ja Documents/linssi-loki.txt:hen.
 using System;
@@ -2200,11 +2200,11 @@ namespace Matkakirja.Natiivi
                         foreach (var a in FindObjectsByType<AudioSource>(FindObjectsSortMode.None))
                             if (a.isPlaying && a.volume > 0.001f && !a.mute) soivat.Add($"{a.gameObject.name}/{(a.clip != null ? a.clip.name : "-")} {a.volume:F3}");
                         Kirjaa($"opas: äänet soi {soivat.Count}: {string.Join("; ", soivat)}");
+                        Kirjaa("opas: " + ElavaKaupunki.KaupunkiAanetTila());   // juna 173: kaupunkiäänet (kirkot, suihkut, taustat, vene-ohi)
                     }
+                    // Kaupunkiäänet v1 (juna 173): tila, tai seuraava kirkonkello / maitovaahdotin heti ehtojen täyttyessä (kuuntelu simulla).
+                    else if (osat.Length > 2 && osat[1] == "kaupunkiaanet") { if (osat[2] != "tila") ElavaKaupunki.PakotaKaupunkiAani(osat[2]); Kirjaa($"opas: kaupunkiäänet {osat[2]} → " + ElavaKaupunki.KaupunkiAanetTila()); }
                     else if (osat.Length > 2 && osat[1] == "vuorokausi") { KaupunkiKuva.Valinta = osat[2]; Kirjaa($"opas: vuorokausi {KaupunkiKuva.Valinta}"); }
-                    else if (osat.Length > 2 && osat[1] == "yovalotvaihe" && int.TryParse(osat[2], out var yv)) { KaupunkiPassi.Tapahtuma = (UnityEngine.Rendering.Universal.RenderPassEvent)yv; Kirjaa($"opas: yövalojen passi tapahtumassa {KaupunkiPassi.Tapahtuma}"); }
-                    else if (osat.Length > 2 && osat[1] == "yovalotmsaa") { KaupunkiYovalot.MsaaPois = osat[2] == "0"; Kirjaa($"opas: yövalot MSAA {(KaupunkiYovalot.MsaaPois.Value ? "pois" : "päällä")}"); }
-                    else if (osat.Length > 3 && osat[1] == "passi") { if (osat[3] == "0") KaupunkiPassi.Estetyt.Add(osat[2]); else KaupunkiPassi.Estetyt.Remove(osat[2]); Kirjaa($"opas: passi {osat[2]} {(osat[3] == "0" ? "estetty" : "sallittu")}"); }
                     else if (osat.Length > 2 && osat[1] == "ssao") { Kirjaa("opas: " + KaupunkiPassi.Ssao(osat[2] == "tila" ? (bool?)null : osat[2] == "1")); }
                     else if (osat.Length > 3 && osat[1] == "salama" && osat[2] == "pito") { OpasSovitin.SalamaPito = osat[3] == "1"; Kirjaa($"opas: salaman pito {(OpasSovitin.SalamaPito ? "päällä" : "pois")}"); }
                     else if (osat.Length > 2 && osat[1] == "salama" && float.TryParse(osat[2], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var sp)) { OpasSovitin.SalamaPakkoS = sp; Kirjaa($"opas: salamat pakotettu {sp:F0} s"); }
@@ -2219,12 +2219,20 @@ namespace Matkakirja.Natiivi
                     else if (osat.Length > 2 && osat[1] == "elava") { ElavaKaupunki.Pakko = osat[2] == "1"; Kirjaa($"opas: elävä kaupunki {(ElavaKaupunki.Paalla ? "päällä" : "pois")} (seuraava kaupungin avaus)"); }
                     // Savu piipuista ja liput (B8, juna 171): heti voimaan; "tila" vain tulostaa.
                     else if (osat.Length > 2 && osat[1] == "savu") { if (osat[2] != "tila") ElavaSavuLiput.SavuPaalla = osat[2] == "1"; Kirjaa("opas: " + ElavaKaupunki.Tila()); }
+                    // Steam Audio HRTF -koe (9.10., oletus pois): 0|1 ohittaa asetuksen pallo.SteamAudio istunnon ajaksi; tila = diagnoosi.
+                    else if (osat.Length > 2 && osat[1] == "steamaudio") Kirjaa("opas: " + SteamAudioKoe.Komento(osat[2]));
                     else if (osat.Length > 2 && osat[1] == "liput") { if (osat[2] != "tila") ElavaSavuLiput.LiputPaalla = osat[2] == "1"; Kirjaa("opas: " + ElavaKaupunki.Tila()); }
                     else if (osat.Length > 3 && osat[1] == "pinta")
                     {
                         var pp = new List<(double, double)>();
                         for (int i = 2; i + 1 < osat.Length; i += 2) pp.Add((Luku(osat[i]), Luku(osat[i + 1])));
                         Kirjaa($"opas: pinta → {OpasSovitin.Pinta(pp)}");
+                    }
+                    // Pariisin nykyintro (OpasSovitin.Intro): "opas intro 0|1" kytkin (seuraava esitys), "tila", "ohita" (= napautus).
+                    else if (osat.Length > 2 && osat[1] == "intro")
+                    {
+                        if (osat[2] == "ohita") Kirjaa($"opas: intro ohita → {(OpasSovitin.IntroOhita() ? "ok" : "ei käynnissä")}");
+                        else { if (osat[2] != "tila") OpasSovitin.IntroPaalla = osat[2] == "1"; Kirjaa("opas: " + OpasSovitin.IntroTila()); }
                     }
                     else if (osat.Length > 2 && osat[1] == "opastus" && osat[2] == "nollaa") { OpasSovitin.OpastusKuultu = false; Kirjaa("opas: opastus nollattu (seuraava kyyti soittaa)"); }
                     else if (osat.Length > 2 && osat[1] == "kaupunkitila") Kirjaa($"opas: kaupunkitila → {OpasSovitin.AvaaKaupunkitila(string.Join(" ", osat.Skip(2)))}");
@@ -2255,6 +2263,7 @@ namespace Matkakirja.Natiivi
                         OpasSovitin.TestiVapaa(vvx, vvy, vox, voy, (float)vs);
                     else if (osat.Length > 1 && osat[1] == "vapaa") Kirjaa("opas " + (OpasSovitin.VapaanTila ?? "vapaa: ei vapaassa tilassa"));
                     else if (osat.Length > 1 && osat[1] == "muisti") Kirjaa(opas?.Muisti() ?? "opas: ei sovitinta");
+                    else if (osat.Length > 1 && osat[1] == "tekstuurit") Kirjaa("opas: " + CesiumKaupunki.Tekstuurit(osat.Length > 2 && int.TryParse(osat[2], out var tn2) ? tn2 : 20));
                     // "opas vaihda <lat> <lon> <nimi>": kaupungin vaihto kuten valikosta (OpasSovitin.VaihdaKaupunki; äänimaiseman todennus 7.10.).
                     else if (osat.Length > 4 && osat[1] == "vaihda" && LukuOk(osat[2], out double vla) && LukuOk(osat[3], out double vlo))
                         Kirjaa($"opas: vaihda → {(OpasSovitin.VaihdaKaupunki(string.Join(" ", osat.Skip(4)), vla, vlo) ? "ok" : "ei otettu")}");

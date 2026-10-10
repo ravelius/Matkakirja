@@ -19,8 +19,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Pykälät ylhäältä alas (vivun suunta: ylös = enemmän kaasua).</summary>
         static readonly (string Nimi, Lentopeli.Kaasu Kaasu)[] Kaasut =
         {
-            ("TÄYSI", Lentopeli.Kaasu.Taysi), ("MATKA", Lentopeli.Kaasu.Matka),
-            ("TALOUS", Lentopeli.Kaasu.Talous), ("TYHJÄ", Lentopeli.Kaasu.Tyhjakaynti),
+            ("ui.lentopeli.kaasu-taysi", Lentopeli.Kaasu.Taysi), ("ui.lentopeli.kaasu-matka", Lentopeli.Kaasu.Matka),
+            ("ui.lentopeli.kaasu-talous", Lentopeli.Kaasu.Talous), ("ui.lentopeli.kaasu-tyhja", Lentopeli.Kaasu.Tyhjakaynti),
         };
 
         readonly UiKerros kerros;
@@ -43,9 +43,9 @@ namespace Matkakirja.Natiivi
             paneeli.AddToClassList("tk-teema-lasi");
 
             var rivi1 = Rakenne.El("mk-lento__rivi", paneeli, PickingMode.Ignore);
-            otsikko = Rakenne.Teksti("LENTOPELI", "mk-lento__otsikko", rivi1);
+            otsikko = Rakenne.Teksti(Kieli.T("ui.lentopeli.otsikko"), "mk-lento__otsikko", rivi1);
             Kirjasimet.Aseta(otsikko, Kirjasin.Kone);
-            var lopeta = Rakenne.Nappi("Lopeta", "mk-lento__lopeta", () => Nappula.Lentopelissa?.Lopeta(), rivi1);
+            var lopeta = Rakenne.Nappi(Kieli.T("ui.lentopeli.lopeta"), "mk-lento__lopeta", () => Nappula.Lentopelissa?.Lopeta(), rivi1);
             Kirjasimet.Aseta(lopeta, Kirjasin.Kone);
 
             lukema = Rakenne.Teksti("", "mk-lento__lukema", paneeli);
@@ -58,7 +58,7 @@ namespace Matkakirja.Natiivi
             Rakenne.El("mk-lento-vipu__rata", vipu, PickingMode.Ignore);
             for (int i = 0; i < Kaasut.Length; i++)
             {
-                pykalat[i] = Rakenne.Teksti(Kaasut[i].Nimi, "mk-lento-vipu__pykala", vipu);
+                pykalat[i] = Rakenne.Teksti(Kieli.T(Kaasut[i].Nimi), "mk-lento-vipu__pykala", vipu);
                 pykalat[i].style.top = PykalanY(i) - 11f;
                 Kirjasimet.Aseta(pykalat[i], Kirjasin.Kone);
             }
@@ -129,13 +129,13 @@ namespace Matkakirja.Natiivi
             if (a == null) return;
             var l = a.Lento;
             var t = l.Tila;
-            otsikko.text = a.Lataus >= 0f ? $"LENTOPELI · LADATAAN {a.Lataus * 100f:0} %"
-                : l.RataValmis ? "LENTOPELI · PALUU KOTIIN" : $"LENTOPELI · RENGAS {l.Seuraava + 1}/{l.Rata.Length}";
+            otsikko.text = a.Lataus >= 0f ? Kieli.T("ui.lentopeli.otsikko-lataus", (a.Lataus * 100f).ToString("0"))
+                : l.RataValmis ? Kieli.T("ui.lentopeli.otsikko-paluu") : Kieli.T("ui.lentopeli.otsikko-rengas", l.Seuraava + 1, l.Rata.Length);
             // Nopeus Tiger Mothin km/h:na (pelin 2,2 km/s = matkanopeus 145 km/h, suunnitelma kohta 2).
             double kmh = t.NopeusKms / Lentopeli.Tavoitenopeus(Lentopeli.Kaasu.Matka) * 145.0;
             // Yksi rivi puhelimen pystykuvaan (simulaattori 5ac7d518: pitkä rivi rivittyi kahdeksi).
-            lukema.text = $"{t.Polttoaine * 100:0} %  {t.KorkeusKm:0.0} km  {kmh:0} km/h  {(t.Suunta % 360 + 360) % 360:000}°"
-                          + $"  kotiin {a.KotiinKm:0}/{a.PaluuKm:0} km" + (t.Moottori ? "" : "  LIITO") + (t.Sakkaus > 0 ? "  SAKKAUS" : "");
+            lukema.text = Kieli.T("ui.lentopeli.lukema", (t.Polttoaine * 100).ToString("0"), t.KorkeusKm.ToString("0.0"), kmh.ToString("0"), ((t.Suunta % 360 + 360) % 360).ToString("000"))
+                          + Kieli.T("ui.lentopeli.lukema-kotiin", a.KotiinKm.ToString("0"), a.PaluuKm.ToString("0")) + (t.Moottori ? "" : Kieli.T("ui.lentopeli.lukema-liito")) + (t.Sakkaus > 0 ? Kieli.T("ui.lentopeli.lukema-sakkaus") : "");
             if (vetoId >= 0) return;   // veto kesken: nuppi seuraa sormea
             for (int i = 0; i < Kaasut.Length; i++)
             {

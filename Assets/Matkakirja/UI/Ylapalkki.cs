@@ -222,8 +222,7 @@ namespace Matkakirja.Natiivi
         public Func<(Rect Selite, Rect Paivakirja)> ElamaAnkkurit;
         readonly Label elamaSelite;
         IVisualElementScheduledItem elamaAjastin, elamaSeliteAjastin;
-        const string ElamaSeliteTeksti = "Rahat ovat loppu. Jokainen neliö on 6 tuntia matkaa — kun kaikki sammuvat, matka päättyy. "
-            + "Ansaitse tai löydä rahaa jatkaaksesi.";
+        static string ElamaSeliteTeksti => Kieli.T("ui.ylapalkki.rahat-loppu-selite");
 
         void VaihdaElamaSelite()
         {
@@ -323,9 +322,9 @@ namespace Matkakirja.Natiivi
 
             napit = Rakenne.El("mk-ylapalkki__napit", palkki, PickingMode.Ignore);
             Ratas = Rakenne.Nappi(null, "mk-ikoninappi", null, napit, Ikonit.Ratas);
-            Ratas.tooltip = "Äänentasot ja asetukset";
+            Ratas.tooltip = Kieli.T("ui.ylapalkki.aanentasot-ja-asetukset");
             Valikko = Rakenne.Nappi(null, "mk-ikoninappi", null, napit, Ikonit.Valikko);
-            Valikko.tooltip = "Valikko";
+            Valikko.tooltip = Kieli.T("ui.ylapalkki.valikko");
             // Pillerivalikko (omistaja 29.9.2026 klo 09.07): puhelimella logo vasemmalla, ☰ pois ja pilleri oikealla; pilleri
             // avaa valikon. iPadilla nykyinen palkki jää (iPad-versio vasta iPhonen jälkeen), ☰ ja pilleri avaavat saman valikon.
             if (PilleriOikealla)
@@ -377,7 +376,7 @@ namespace Matkakirja.Natiivi
                 if (VetoPiilossa) { NaytaVedonJalkeen(); return; }
                 VaakaValikkoPainettu?.Invoke();
             }, turva, Ikonit.Valikko);
-            vakasnappi.tooltip = "Valikko";
+            vakasnappi.tooltip = Kieli.T("ui.ylapalkki.valikko");
 
             Kirjasimet.Aseta(juuri, Kirjasin.Kone);
             kerros.TurvaMuuttui += Asettele;
@@ -936,7 +935,8 @@ namespace Matkakirja.Natiivi
         /// pitkä teksti"): yksirivisen pillerin vähimmäisleveys mallitekstin "80 pv £9999" mukaan samoilla sisätäytteillä, teksti
         /// keskellä (USS .mk-pilleri--lyhyt). Pilleri ei hypi lukujen muuttuessa; pidempi teksti (rahattomuuden varoitus) levittää sitä.
         /// </summary>
-        const string MalliPaiva = "80 pv", MalliRaha = "9999";
+        static string MalliPaiva => Kieli.T("ui.ylapalkki.pv", 80);
+        const string MalliRaha = "9999";
 
         void AsetaPilleriVahimmais(float mittakaava)
         {
@@ -1130,7 +1130,7 @@ namespace Matkakirja.Natiivi
                 // Kukkaron muutos välähtää kuten kello (osto, palkkio, lento).
                 if (uusiRaha != RahaNyt && RahaNyt.StartsWith("£")) Valahda(raha, ref rahaAjastin);
                 AsetaRahaTeksti(uusiRaha);
-                string uusiKello = lyhyt ? pv.Value + " pv" : Iso(osat[1]) + ", " + osat[2];
+                string uusiKello = lyhyt ? Kieli.T("ui.ylapalkki.pv", pv.Value) : Iso(osat[1]) + ", " + osat[2];
                 kello.style.display = DisplayStyle.Flex;
                 if (uusiKello != kelloTeksti && kelloTeksti.Length > 0) Valahda(kello, ref valahdysAjastin);
                 kelloTeksti = uusiKello;
@@ -1194,8 +1194,8 @@ namespace Matkakirja.Natiivi
                 elamaLohkot[i].EnableInClassList("mk-elamapalkki__lohko--kulunut", i >= n);
             // Web: aika = lohkot × 6 h → "N vrk" + "M h" (tyhjä osa pois, 0 → "0 h").
             int tunnit = n * 6, vrk = tunnit / 24, h = tunnit % 24;
-            string aika = (vrk > 0 ? vrk + " VRK" : "") + (h > 0 || vrk == 0 ? (vrk > 0 ? " " : "") + h + " H" : "");
-            elamaTeksti.text = "RAHAT LOPPU · " + aika;
+            string aika = (vrk > 0 ? Kieli.T("ui.ylapalkki.aika-vrk", vrk) : "") + (h > 0 || vrk == 0 ? (vrk > 0 ? " " : "") + Kieli.T("ui.ylapalkki.aika-h", h) : "");
+            elamaTeksti.text = Kieli.T("ui.ylapalkki.rahat-loppu", aika);
             elamaTeksti.style.display = ElamaTekstilla ? DisplayStyle.Flex : DisplayStyle.None;
             AsetteleElama();
         }
@@ -1316,7 +1316,7 @@ namespace Matkakirja.Natiivi
             bool loppu = pelirivi && matkaPaattyi;
             if (loppu)
             {
-                AsetaRahaTeksti("Matka päättyi");
+                AsetaRahaTeksti(Kieli.T("ui.aloitus.huipennus.loppu-otsikko"));
                 kello.style.display = DisplayStyle.None;
             }
             bool varoitus = pelirivi && !loppu && rahatonVrk != null;
@@ -1329,7 +1329,7 @@ namespace Matkakirja.Natiivi
             // Lyhyt "2 vrk" kaikilla laitteilla (omistaja 27.9. 15.1x: iPad kuten iPhone, ei webin "rahat loppu · 2 vrk").
             // iPhonen pilleri on Dynamic Islandin vieressä (~104 pt), joten siellä myös laukkuikoni väistyy.
             bool kapea = kelluvaNyt == true || matalaNyt == true;
-            rahaton.text = varoitus ? rahatonVrk + " vrk" : "";
+            rahaton.text = varoitus ? Kieli.T("ui.ylapalkki.rahaton-vrk", rahatonVrk) : "";
             // iPhonella laukkuikoni väistyy varoituksen ajaksi (~22 pt), jotta päivä "1/80" mahtuu saaren viereen.
             var laukku = pilleri.Q(className: "mk-ikoni");
             if (laukku != null) laukku.style.display = varoitus && kapea ? DisplayStyle.None : DisplayStyle.Flex;

@@ -84,6 +84,112 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(Soi(s, "musa-kaupunki-pariisi-nopea"), "takaisin Pariisiin: nopea alusta: " + Pohja(s));
         }
 
+        [Testi] static void IntronKatkoJaHidasIlmanTaukoa()
+        {
+            var s = Uusi();
+            Oleta.Tosi(s.JaksonNopea("pariisi")?.Contains("musa-kaupunki-pariisi-nopea-lyria") == true, "intro tunnistaa nopean");
+            Oleta.Sama(null, s.JaksonNopea("lontoo"), "Lontoolla ei jaksoa");
+            s.Paikka("pariisi", "kaupunki");
+            s.JaksonIntroKatko(2000);
+            Oleta.Sama(null, Pohja(s), "31,0 s: nopea häivytetään pois");
+            Oleta.Sama("pariisi:tauko", s.Jakso);
+            Oleta.Sama(0, s.JaksonTaukoNro, "ei jakson 3 s:n taukoajastinta");
+            s.JaksonIntroHidas();
+            Oleta.Tosi(Soi(s, "musa-kaupunki-pariisi") && !Soi(s, "musa-kaupunki-pariisi-nopea"), "32,0 s: hidas: " + Pohja(s));
+            Oleta.Sama("pariisi:hidas", s.Jakso);
+            s.JaksonIntroKatko(2000);
+            Oleta.Tosi(Soi(s, "musa-kaupunki-pariisi"), "katko hitaan aikana ei tee mitään");
+        }
+
+        [Testi] static void IntroLinssinPidonOhi()
+        {
+            var s = Uusi();
+            s.Paikka("lontoo", "kaupunki");
+            s.LinssiPito(true, 200);
+            Oleta.Sama(null, Pohja(s), "linssi auki: pohja pidossa");
+            s.JaksonIntroAlusta("lontoo");
+            Oleta.Sama(null, Pohja(s), "Lontoolla ei jaksoa → pito pysyy");
+            s.JaksonIntroAlusta("pariisi");
+            Oleta.Tosi(Soi(s, "musa-kaupunki-pariisi-nopea"), "intro: nopea alusta pidon ohi: " + Pohja(s));
+            Oleta.Sama("pariisi:nopea", s.Jakso);
+            s.Hiljennys("lehti", true); s.Hiljennys("lehti", false);
+            Oleta.Tosi(Soi(s, "musa-kaupunki-pariisi-nopea"), "tilamuutos ei katkaise introa: " + Pohja(s));
+            s.JaksonIntroKatko(2000);
+            Oleta.Sama(null, Pohja(s), "31,0 s: katko");
+            s.JaksonIntroHidas();
+            Oleta.Tosi(Soi(s, "musa-kaupunki-pariisi") && !Soi(s, "musa-kaupunki-pariisi-nopea"), "32,0 s: hidas pidon ohi: " + Pohja(s));
+            s.PohjaLoppui();
+            Oleta.Sama(null, Pohja(s), "hitaan jälkeen takaisin pitoon (ei taustaa)");
+            Oleta.Tosi(s.Pidossa, "pito voimassa");
+            s.LinssiPito(false);
+            Oleta.Tosi(Soi(s, "musa-kaupunki-lontoo"), "linssi kiinni: paikan musiikki: " + Pohja(s));
+        }
+
+        [Testi] static void IntroIlmanPitoaEiTeeMitaan()
+        {
+            var s = Uusi();
+            s.Paikka("lontoo", "kaupunki");
+            s.JaksonIntroAlusta("pariisi");
+            Oleta.Tosi(Soi(s, "musa-kaupunki-lontoo"), "ilman linssipitoa Paikka hoitaa jakson: " + Pohja(s));
+            Oleta.Sama(null, s.Jakso);
+        }
+
+        static string Aja(KaupunkiIntroKello k, float nyt, float? kohta)
+        {
+            string tulos = "";
+            k.Paivita(nyt, kohta, (c, t) => tulos += "alkoi " + c + " " + t.ToString("0.0", System.Globalization.CultureInfo.InvariantCulture) + ";", ms => tulos += $"katko {ms};", () => tulos += "hidas;");
+            return tulos;
+        }
+
+        [Testi] static void IntroKelloNopeastaKatkoonJaHitaaseen()
+        {
+            var k = new KaupunkiIntroKello();
+            k.Aloita("pariisi", 31f, 2f, 32f, false);
+            Oleta.Sama("", Aja(k, 10f, null), "nopea ei vielä soi: odotetaan");
+            Oleta.Sama("alkoi pariisi 0.5;", Aja(k, 11f, 0.5f), "kello alkaa kappaleen todellisesta alusta");
+            Oleta.Sama("", Aja(k, 41f, 30.5f), "30,5 s: ei vielä");
+            Oleta.Sama("katko 2000;", Aja(k, 41.5f, 31f), "31,0 s: katko");
+            Oleta.Sama("hidas;", Aja(k, 42.5f, null), "32,0 s: hidas");
+            Oleta.Tosi(!k.Kaynnissa, "intro ohi");
+            Oleta.Sama("", Aja(k, 50f, null));
+        }
+
+        [Testi] static void IntroKelloHiljainenKunMusiikkiPois()
+        {
+            var s = Uusi();
+            Oleta.Tosi(s.JaksoVoiSoida("pariisi"), "oletuksena soi");
+            Oleta.Tosi(!s.JaksoVoiSoida("lontoo"), "Lontoolla ei jaksoa");
+            s.MusiikkiPaalle(false);
+            Oleta.Tosi(!s.JaksoVoiSoida("pariisi"), "musiikki pois → hiljainen kello");
+            var k = new KaupunkiIntroKello();
+            k.Aloita("pariisi", 31f, 2f, 32f, !s.JaksoVoiSoida("pariisi"));
+            Oleta.Sama("alkoi pariisi 0.0;", Aja(k, 5f, null), "hiljainen kello: KaupunkiIntroAlkoi(k, 0) heti ilman nopeaa");
+            Oleta.Sama("", Aja(k, 36f, null), "31 s: katko ei soita mitään");
+            Oleta.Sama("", Aja(k, 37f, null), "32 s: hidas ei soita mitään");
+            Oleta.Tosi(!k.Kaynnissa, "hiljainen intro päättyy ajallaan");
+        }
+
+        [Testi] static void IntroKelloOhitus()
+        {
+            var k = new KaupunkiIntroKello();
+            Oleta.Tosi(!k.Ohita(), "ei käynnissä → false");
+            k.Aloita("pariisi", 31f, 2f, 32f, false);
+            Aja(k, 0f, 0f);
+            Oleta.Tosi(k.Ohita());
+            Oleta.Sama("katko 2000;", Aja(k, 15.5f, 15.5f), "ohitus ennen nousua: katko heti");
+            Oleta.Sama("", Aja(k, 16f, null));
+            Oleta.Sama("hidas;", Aja(k, 16.5f, null), "hidas 1 s myöhemmin");
+            k.Aloita("pariisi", 31f, 2f, 32f, false);
+            k.Ohita();
+            Oleta.Sama("katko 2000;", Aja(k, 3f, null), "ohitus ennen kuin nopea soi: katko, ei alkoi-tapahtumaa");
+            Oleta.Sama("hidas;", Aja(k, 4f, 0.2f));
+            k.Aloita("pariisi", 31f, 2f, 32f, false);
+            Aja(k, 0f, 0f); Aja(k, 31.2f, 31.2f);
+            k.Ohita();
+            Oleta.Sama("", Aja(k, 31.5f, null), "katkon jälkeen ohitus ei toista katkoa");
+            Oleta.Sama("hidas;", Aja(k, 32f, null));
+        }
+
         [Testi] static void MuutKaupungitJaWebTilaEnnallaan()
         {
             var s = Uusi();

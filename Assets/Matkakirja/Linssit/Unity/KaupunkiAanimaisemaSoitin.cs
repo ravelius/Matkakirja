@@ -26,6 +26,9 @@ namespace Matkakirja.Natiivi
         public static Func<double, double, IReadOnlyDictionary<string, double>> Aanikartta;
         public static Func<double, double, int> KirkkojaLahella;
         public static Func<string, string> SilmukanUrl;
+        /// <summary>Silmukan pari (Linssiseppä 9.10., pallon puhdas tuuli): ristihäivytyksen varalähde soittaa tämän osoitteen, joten
+        /// silmukka vuorottelee kahta jaksoa (A → B → A). null = sama silmukka kuten ennen.</summary>
+        public static Func<string, string> SilmukanPari;
         public static Func<double> Sade;
         public static string KelloUrl = Juuri + "aanimaisema-v2/kello-01.mp3";   // v2 8.10.: tuuli-01 vaihdettu (laaduntarkistus), muut kuten v1
         /// <summary>Kaupungin tunnus (LS1: oppaan kaupunki); äänikartta ladataan Juuri + "aanikartta-v1/&lt;id&gt;.json" (Pelikoodari).</summary>
@@ -309,7 +312,8 @@ namespace Matkakirja.Natiivi
             }
             // Tasatunti: lyönnit hajautettuina kirkoittain (vain kun maisema kuuluu).
             int h = (int)Math.Floor(tunti);
-            if (edellinenTunti >= 0 && h != edellinenTunti && kello != null && paalla && k.HasValue)
+            // Juna 173 (Soundly-erä 1): elävässä kaupungissa lähimmän kirkon omat 3D-lyönnit (ElavaKaupunki, Ydin KaupunkiAanet) korvaavat nämä.
+            if (edellinenTunti >= 0 && h != edellinenTunti && kello != null && paalla && k.HasValue && !ElavaKaupunki.OmatLyonnit)
             {
                 int kirkkoja = KirkkojaLahella?.Invoke(k.Value.Lat, k.Value.Lon) ?? kartta?.KirkkojaLahella(k.Value.Lat, k.Value.Lon) ?? 0;
                 foreach (var (viive, kirkko) in KaupunkiAanimaisema.TasatunninLyonnit(h, Math.Min(kirkkoja, 3), (int)(karttaLat * 1000)))
@@ -411,7 +415,8 @@ namespace Matkakirja.Natiivi
         // SILMUKAN RISTIHÄIVYTYS (Päätoimittaja 7.10. 04.4x): mp3:n kooderiviive ja täyte (~44 ms) jäisivät silmukan saumaan, ja
         // suoratoistetun mp3:n pituus on arvio (loki 91 s, todellinen 90,04 s). Siksi toinen lähde (oma klippi samasta välimuistitiedostosta)
         // alkaa XfAlkuS ennen arvioitua loppua kohdasta PadS (viiveen yli) ja ristihäivyttää tasatehoisesti XfS:ssä; sitten vaihto.
-        // Jos toinen klippi ei ole vielä valmis, ensimmäinen silmukoi itse (loop = true) kuten ennen.
+        // Jos toinen klippi ei ole vielä valmis, ensimmäinen silmukoi itse (loop = true) kuten ennen. SilmukanPari antaa varalle
+        // toisen jakson (pallon tuuli 9.10.), jolloin vaihto vuorottelee jaksoja eikä sama 50 s toistu peräkkäin.
         readonly AudioSource[] varat = new AudioSource[KaupunkiAanimaisema.Kerrokset.Length];
         readonly float[] xfAlku = new float[KaupunkiAanimaisema.Kerrokset.Length];
         const float XfS = 1.2f, XfAlkuS = 2.5f, PadS = 0.06f;
@@ -431,7 +436,8 @@ namespace Matkakirja.Natiivi
 
         void AvaaVara(int i, string url)
         {
-            StartCoroutine(Lataa(url, c =>
+            string pari = SilmukanPari?.Invoke(url);
+            StartCoroutine(Lataa(string.IsNullOrEmpty(pari) ? url : pari, c =>
             {
                 if (c == null || this == null || lahteet[i] == null || varat[i] != null) { if (c != null) Destroy(c); return; }
                 string kerros = KaupunkiAanimaisema.Kerrokset[i];

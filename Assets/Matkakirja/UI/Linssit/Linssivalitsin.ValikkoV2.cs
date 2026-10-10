@@ -94,7 +94,7 @@ namespace Matkakirja.Natiivi
         public Button LisaTasorivi(VisualElement ryhma)
         {
             var b = Rakenne.Nappi(null, "mk-luettelorivi mk-tasorivi", () => NaytaNakyma(Nakyma.Matka), ryhma);
-            b.tooltip = "Tietäjätaso";
+            b.tooltip = Kieli.T("ui.valikko.tietajataso");
             tasoAvatar = Rakenne.El("mk-tasorivi__avatar", b, PickingMode.Ignore);
             // Avatar valmiiksi ennen ensimmäistä avausta (Päätoimittaja 2.10.2026 klo 23.5x: ensimmäisellä avauksella kuva puuttui):
             // nykyisen tason kuva haetaan taustalla ja vaihtuu tason noustessa, joten avattaessa se on jo välimuistissa.
@@ -182,7 +182,7 @@ namespace Matkakirja.Natiivi
                 paivaRivi.style.display = m != null ? DisplayStyle.Flex : DisplayStyle.None;
                 if (m == null) return;
                 var t = m.Tila;
-                paivaTeksti.text = $"Päivä {t.Paiva()}/{LaattaVakiot.EnnatysPaivat}, {PeliApu.AikaNimi(t.Vuorokaudenaika())} ·"; // väli £:ään USS-marginaalina (lopun välilyönti ei mitoitu)
+                paivaTeksti.text = Kieli.T("ui.valikko.paiva-aika", t.Paiva(), LaattaVakiot.EnnatysPaivat, PeliApu.AikaNimi(t.Vuorokaudenaika())); // väli £:ään USS-marginaalina (lopun välilyönti ei mitoitu)
                 paivaRaha.text = t.Pelaaja.Raha.ToString();
                 int kulu = m.PaivakuluNyt().Yhteensa;
                 paivaKulu.style.display = kulu > 0 ? DisplayStyle.Flex : DisplayStyle.None;
