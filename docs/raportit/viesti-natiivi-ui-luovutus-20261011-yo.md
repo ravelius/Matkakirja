@@ -39,7 +39,7 @@ Haara natiivi-ui/olavinlinna-181 **5d6742d58** (pohja siirtoseppa/botti-kavely 9
   (SeikkailuKynttilat.OmaVaihto) – palava kynttilä vei napin ovelta/tikkailta; liekkinappi aina sammuneelle omalle kynttilälle;
   kynttilävihje PT:n vaihtoehto B (SeikkailuTapit.KorostaToiminto 3 s + kimallusääni, kerran pimeällä ja ☰ › Vihjeestä pimeässä).
 - B4: huoneiden nimilaput piiloon historiassa ennen 1475 (SeikkailuHistoria.Vuosi), historian otsikko tatin yläpuolelle.
-Testit: tarkista.sh 0, Linssit 1343/1344 (ui.linna.tyrma puuttuu jo pohjassa, Siirtosepän; hänelle kerrottu).
+Testit: tarkista.sh 0, Linssit 1343/1344 (ui.linna.tyrma: Siirtoseppä korjasi haarassa siirtoseppa/laituri-varoitus 11351a887, avain olavinlinna.seikkailu.tyrma.nimi; ei tehdä omaan haaraan). Siirtoseppä kuittasi B2/B4, eikä hänen haaransa koske SeikkailuEsineet/Kynttilat/Vihjeet-tiedostoihin.
 SEURAAVAKSI: käännös- ja simuvuoro Julkaisijalta → todistusajo Olavinlinnan pelistä (laiturilta tyrmään/pimeään: kynttilävihje,
 3D-napautus ei sammuta, ovi aukeaa kynttilä palaessa) + historia (kivikausi ilman kylttejä, otsikko tatin yläpuolella), iPhone + iPad
 → kuvapari merkinnöin PT:lle → juna 181. Siirtosepän A-kohdat ovat samassa koodissa: tarkista hänen haaransa ennen käännöstä.
