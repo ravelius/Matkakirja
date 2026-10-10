@@ -1,0 +1,1019 @@
+### 321
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Żywiec (ruoka)
+Tietoruudun teksti: Żywiec on noin 31 000 asukkaan kaupunki Soła-joen varrella Etelä-Puolassa Żywiecin järven ja maisemapuiston lähellä; historiallisesti ja kulttuurisesti se kuuluu Pikku-Puolaan ja goralien maihin. Kaupunki mainitaan ensimmäisen kerran vuonna 1308 katolisen seurakunnan paikkana, ja se siirrettiin nykyiselle paikalleen vuonna 1448, koska vanha Żywiec oli altis tulville. Vanha linna rakennettiin 1300-luvun puolivälissä, ja sen ympärillä on 26 hehtaarin maisemapuisto. Kun kaupungin tilat siirtyivät vuonna 1822 Habsburg-Lothringenin arkkiherttua Kaarlelle, hänen poikansa arkkiherttua Albrecht perusti kaupunkiin Żywiecin panimon vuonna 1852; Heineken osti sen 1990-luvulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Historia: Sydän joka jäi kotiin] 1849 — Fryderyk Chopin kuoli Pariisissa 17. lokakuuta 1849 vain 39-vuotiaana, kaukana kotimaastaan. Hänen oma toiveensa oli, että hänen sydämensä palautettaisiin Puolaan, vaikka ruumis haudattiinkin Père Lachaisen hautausmaalle Pariisiin. Ruumiinavauksen tehnyt lääkäri otti sydämen talteen, ja Chopinin sisar Ludwika kuljetti sen alkoholiin säilöttynä Varsovaan. Sydän muurattiin Pyhän Ristin kirkon pilariin, jossa se lepää yhä tänään — säveltäjä jäi ruumiiltaan Ranskaan mutta sydämeltään kotiin Puolaan.
+AIEMPI KYSYMYS: Miksi kaupunki siirrettiin nykyiselle paikalleen vuonna 1448?
+AIEMPI VASTAUS (Livia):
+Ai se. Vanha Żywiec oli altis tulville, ja siksi kaupunki siirrettiin vuonna 1448 nykyiselle paikalleen [[Soła-joen]] varrelle. Kaupunki kuuluu historiallisesti ja kulttuurisesti [[Pikku-Puolaan]] ja [[goralien]] maihin. Uusi paikka on vanhan linnan ja maisemapuiston läheisyydessä. Tulvaa ei kyyhky pelkää, siivet kuivuu.
+KYSYMYS: Kerro lisää: Pikku-Puolaan
+
+### 322
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Żywiec (ruoka)
+Tietoruudun teksti: Żywiec on noin 31 000 asukkaan kaupunki Soła-joen varrella Etelä-Puolassa Żywiecin järven ja maisemapuiston lähellä; historiallisesti ja kulttuurisesti se kuuluu Pikku-Puolaan ja goralien maihin. Kaupunki mainitaan ensimmäisen kerran vuonna 1308 katolisen seurakunnan paikkana, ja se siirrettiin nykyiselle paikalleen vuonna 1448, koska vanha Żywiec oli altis tulville. Vanha linna rakennettiin 1300-luvun puolivälissä, ja sen ympärillä on 26 hehtaarin maisemapuisto. Kun kaupungin tilat siirtyivät vuonna 1822 Habsburg-Lothringenin arkkiherttua Kaarlelle, hänen poikansa arkkiherttua Albrecht perusti kaupunkiin Żywiecin panimon vuonna 1852; Heineken osti sen 1990-luvulla.
+AIEMPI KYSYMYS: Miksi kaupunki siirrettiin nykyiselle paikalleen vuonna 1448?
+AIEMPI VASTAUS (Livia):
+Ai se. Vanha Żywiec oli altis tulville, ja siksi kaupunki siirrettiin vuonna 1448 nykyiselle paikalleen [[Soła-joen]] varrelle. Kaupunki kuuluu historiallisesti ja kulttuurisesti [[Pikku-Puolaan]] ja [[goralien]] maihin. Uusi paikka on vanhan linnan ja maisemapuiston läheisyydessä. Tulvaa ei kyyhky pelkää, siivet kuivuu.
+KYSYMYS: Kerro lisää: goralien
+
+### 323
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Żywiec (ruoka)
+Tietoruudun teksti: Żywiec on noin 31 000 asukkaan kaupunki Soła-joen varrella Etelä-Puolassa Żywiecin järven ja maisemapuiston lähellä; historiallisesti ja kulttuurisesti se kuuluu Pikku-Puolaan ja goralien maihin. Kaupunki mainitaan ensimmäisen kerran vuonna 1308 katolisen seurakunnan paikkana, ja se siirrettiin nykyiselle paikalleen vuonna 1448, koska vanha Żywiec oli altis tulville. Vanha linna rakennettiin 1300-luvun puolivälissä, ja sen ympärillä on 26 hehtaarin maisemapuisto. Kun kaupungin tilat siirtyivät vuonna 1822 Habsburg-Lothringenin arkkiherttua Kaarlelle, hänen poikansa arkkiherttua Albrecht perusti kaupunkiin Żywiecin panimon vuonna 1852; Heineken osti sen 1990-luvulla.
+AIEMPI KYSYMYS: Mikä Habsburgien suku oli?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Habsburgit olivat keskieurooppalainen hallitsijasuku, joka hallitsi [[Itävaltaa]] vuosisatojen ajan ja jonka alaisuuteen kuului laaja joukko eri kansojen maita. Suvun valta päättyi ensimmäisen maailmansodan lopussa vuonna 1918, kun [[Itävalta-Unkarin]] monarkia hajosi. Habsburgien haara omisti myös Żywiecin tilat 1800-luvulla. Pitkä suku, mut kyl meikäläisten on pidempi.
+KYSYMYS: Kerro lisää: Itävaltaa
+
+### 324
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Żywiec (ruoka)
+Tietoruudun teksti: Żywiec on noin 31 000 asukkaan kaupunki Soła-joen varrella Etelä-Puolassa Żywiecin järven ja maisemapuiston lähellä; historiallisesti ja kulttuurisesti se kuuluu Pikku-Puolaan ja goralien maihin. Kaupunki mainitaan ensimmäisen kerran vuonna 1308 katolisen seurakunnan paikkana, ja se siirrettiin nykyiselle paikalleen vuonna 1448, koska vanha Żywiec oli altis tulville. Vanha linna rakennettiin 1300-luvun puolivälissä, ja sen ympärillä on 26 hehtaarin maisemapuisto. Kun kaupungin tilat siirtyivät vuonna 1822 Habsburg-Lothringenin arkkiherttua Kaarlelle, hänen poikansa arkkiherttua Albrecht perusti kaupunkiin Żywiecin panimon vuonna 1852; Heineken osti sen 1990-luvulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Mikä Habsburgien suku oli?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Habsburgit olivat keskieurooppalainen hallitsijasuku, joka hallitsi [[Itävaltaa]] vuosisatojen ajan ja jonka alaisuuteen kuului laaja joukko eri kansojen maita. Suvun valta päättyi ensimmäisen maailmansodan lopussa vuonna 1918, kun [[Itävalta-Unkarin]] monarkia hajosi. Habsburgien haara omisti myös Żywiecin tilat 1800-luvulla. Pitkä suku, mut kyl meikäläisten on pidempi.
+KYSYMYS: Kerro lisää: Itävalta-Unkarin
+
+### 325
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Żywiec (ruoka)
+Tietoruudun teksti: Żywiec on noin 31 000 asukkaan kaupunki Soła-joen varrella Etelä-Puolassa Żywiecin järven ja maisemapuiston lähellä; historiallisesti ja kulttuurisesti se kuuluu Pikku-Puolaan ja goralien maihin. Kaupunki mainitaan ensimmäisen kerran vuonna 1308 katolisen seurakunnan paikkana, ja se siirrettiin nykyiselle paikalleen vuonna 1448, koska vanha Żywiec oli altis tulville. Vanha linna rakennettiin 1300-luvun puolivälissä, ja sen ympärillä on 26 hehtaarin maisemapuisto. Kun kaupungin tilat siirtyivät vuonna 1822 Habsburg-Lothringenin arkkiherttua Kaarlelle, hänen poikansa arkkiherttua Albrecht perusti kaupunkiin Żywiecin panimon vuonna 1852; Heineken osti sen 1990-luvulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Luonto: Kaupungin läpi virtaa villi joki] Nykyisin — Veiksel kulkee Varsovan halki patoamattomana, ja itäranta on jätetty lähes luonnontilaan: hiekkasärkkiä, pajukkoa ja majavia keskellä lähes kahden miljoonan asukkaan kaupunkia. Ranta kuuluu EU:n Natura 2000 -suojeluverkostoon, koska joen hiekkasaaret ovat lintujen pesimäpaikkoja. Kesäisin kaupunkilaiset makaavat samoilla hiekoilla, ja vastarannalla näkyy lasitorneja.
+AIEMPI KYSYMYS: Mihin jokeen Soła laskee?
+AIEMPI VASTAUS (Livia):
+No niin, tost minä osaan kertoo. Soła on Veikselin sivujoki, joka virtaa Etelä-Puolan vuoristoalueilta Żywiecin kautta ja laskee [[Veikseliin]]. Veikseli puolestaan päätyy lopulta [[Itämereen]]. Żywiecin järvi ja maisemapuisto sijaitsevat kaupungin lähellä. Vesi löytää tiensä, ja kyyhky löytää kotiin.
+KYSYMYS: Kerro lisää: Veikseliin
+
+### 326
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Żywiec (ruoka)
+Tietoruudun teksti: Żywiec on noin 31 000 asukkaan kaupunki Soła-joen varrella Etelä-Puolassa Żywiecin järven ja maisemapuiston lähellä; historiallisesti ja kulttuurisesti se kuuluu Pikku-Puolaan ja goralien maihin. Kaupunki mainitaan ensimmäisen kerran vuonna 1308 katolisen seurakunnan paikkana, ja se siirrettiin nykyiselle paikalleen vuonna 1448, koska vanha Żywiec oli altis tulville. Vanha linna rakennettiin 1300-luvun puolivälissä, ja sen ympärillä on 26 hehtaarin maisemapuisto. Kun kaupungin tilat siirtyivät vuonna 1822 Habsburg-Lothringenin arkkiherttua Kaarlelle, hänen poikansa arkkiherttua Albrecht perusti kaupunkiin Żywiecin panimon vuonna 1852; Heineken osti sen 1990-luvulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kaupunkilehti / Kadut ja sulut: Polhem sai sulkutyön 83-vuotiaana] Mälaren on järvi, jonka pinta on merenpintaa korkeammalla, ja Tukholma seisoo juuri siinä kohdassa, jossa vesi purkautuu Itämereen. Ennen sulkuja veneet piti sauvoa ja hinata virran läpi maksua vastaan, ja moni ajoi matalikolle. Ensimmäisen sulun rakensivat hollantilaiset mestarit kuningatar Kristiinan aikaan, ja se valmistui 1642. Kun siitä tuli liian pieni, työ annettiin 1744 Christopher Polhemille, joka oli silloin 83-vuotias. Hän kuoli kesken hankkeen, ja poika Gabriel sai sulun valmiiksi 1755.
+AIEMPI KYSYMYS: Mihin jokeen Soła laskee?
+AIEMPI VASTAUS (Livia):
+No niin, tost minä osaan kertoo. Soła on Veikselin sivujoki, joka virtaa Etelä-Puolan vuoristoalueilta Żywiecin kautta ja laskee [[Veikseliin]]. Veikseli puolestaan päätyy lopulta [[Itämereen]]. Żywiecin järvi ja maisemapuisto sijaitsevat kaupungin lähellä. Vesi löytää tiensä, ja kyyhky löytää kotiin.
+KYSYMYS: Kerro lisää: Itämereen
+
+### 327
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Żywiec (ruoka)
+Tietoruudun teksti: Żywiec on noin 31 000 asukkaan kaupunki Soła-joen varrella Etelä-Puolassa Żywiecin järven ja maisemapuiston lähellä; historiallisesti ja kulttuurisesti se kuuluu Pikku-Puolaan ja goralien maihin. Kaupunki mainitaan ensimmäisen kerran vuonna 1308 katolisen seurakunnan paikkana, ja se siirrettiin nykyiselle paikalleen vuonna 1448, koska vanha Żywiec oli altis tulville. Vanha linna rakennettiin 1300-luvun puolivälissä, ja sen ympärillä on 26 hehtaarin maisemapuisto. Kun kaupungin tilat siirtyivät vuonna 1822 Habsburg-Lothringenin arkkiherttua Kaarlelle, hänen poikansa arkkiherttua Albrecht perusti kaupunkiin Żywiecin panimon vuonna 1852; Heineken osti sen 1990-luvulla.
+AIEMPI KYSYMYS: Mistä aineksista olut valmistetaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Oluen perusainekset ovat vesi, [[mallas]], [[humala]] ja hiiva. Mallas valmistetaan idätetystä ja kuivatusta viljasta, yleensä ohrasta, humala antaa oluelle kitkeryyttä ja hiiva muuttaa [[käymisessä]] sokerin alkoholiksi ja hiilidioksidiksi. Żywiecissä panimotoiminta on vanhaa perua, sillä panimo perustettiin vuonna 1852. Pullan puolelta minä hiivan tunnen paremmin.
+KYSYMYS: Kerro lisää: mallas
+
+### 328
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Żywiec (ruoka)
+Tietoruudun teksti: Żywiec on noin 31 000 asukkaan kaupunki Soła-joen varrella Etelä-Puolassa Żywiecin järven ja maisemapuiston lähellä; historiallisesti ja kulttuurisesti se kuuluu Pikku-Puolaan ja goralien maihin. Kaupunki mainitaan ensimmäisen kerran vuonna 1308 katolisen seurakunnan paikkana, ja se siirrettiin nykyiselle paikalleen vuonna 1448, koska vanha Żywiec oli altis tulville. Vanha linna rakennettiin 1300-luvun puolivälissä, ja sen ympärillä on 26 hehtaarin maisemapuisto. Kun kaupungin tilat siirtyivät vuonna 1822 Habsburg-Lothringenin arkkiherttua Kaarlelle, hänen poikansa arkkiherttua Albrecht perusti kaupunkiin Żywiecin panimon vuonna 1852; Heineken osti sen 1990-luvulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Angola — maalehti / Musiikki: Van Damme, humalainen tanssi ja Fruity Loops] Kuduro syntyi Luandassa 1980-luvun lopulla, kun tuottajat sekoittivat afrikkalaista lyömäsoitinta karibialaiseen socaan ja zoukiin sekä eurooppalaiseen houseen ja technoon; ensin tyyliä sanottiin batidaksi, biitiksi. Tony Amado kertoo keksineensä tanssin nähtyään Jean-Claude Van Dammen tanssivan humalaista kohtausta vuoden 1989 elokuvassa Kickboxer — tanssi syntyi siis ennen musiikkia. Ensimmäiset kappaleet tehtiin Euroopasta tuoduilla sekvenssereillä, joiden pieni muisti selittää lyhyet luupit. Kun tietokoneet yleistyivät ja Fruity Loops levisi kopioina, kuduro karkasi musseque-kaupunginosiin ja sieltä maailmalle.
+AIEMPI KYSYMYS: Mistä aineksista olut valmistetaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Oluen perusainekset ovat vesi, [[mallas]], [[humala]] ja hiiva. Mallas valmistetaan idätetystä ja kuivatusta viljasta, yleensä ohrasta, humala antaa oluelle kitkeryyttä ja hiiva muuttaa [[käymisessä]] sokerin alkoholiksi ja hiilidioksidiksi. Żywiecissä panimotoiminta on vanhaa perua, sillä panimo perustettiin vuonna 1852. Pullan puolelta minä hiivan tunnen paremmin.
+KYSYMYS: Kerro lisää: humala
+
+### 329
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Żywiec (ruoka)
+Tietoruudun teksti: Żywiec on noin 31 000 asukkaan kaupunki Soła-joen varrella Etelä-Puolassa Żywiecin järven ja maisemapuiston lähellä; historiallisesti ja kulttuurisesti se kuuluu Pikku-Puolaan ja goralien maihin. Kaupunki mainitaan ensimmäisen kerran vuonna 1308 katolisen seurakunnan paikkana, ja se siirrettiin nykyiselle paikalleen vuonna 1448, koska vanha Żywiec oli altis tulville. Vanha linna rakennettiin 1300-luvun puolivälissä, ja sen ympärillä on 26 hehtaarin maisemapuisto. Kun kaupungin tilat siirtyivät vuonna 1822 Habsburg-Lothringenin arkkiherttua Kaarlelle, hänen poikansa arkkiherttua Albrecht perusti kaupunkiin Żywiecin panimon vuonna 1852; Heineken osti sen 1990-luvulla.
+AIEMPI KYSYMYS: Mistä aineksista olut valmistetaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Oluen perusainekset ovat vesi, [[mallas]], [[humala]] ja hiiva. Mallas valmistetaan idätetystä ja kuivatusta viljasta, yleensä ohrasta, humala antaa oluelle kitkeryyttä ja hiiva muuttaa [[käymisessä]] sokerin alkoholiksi ja hiilidioksidiksi. Żywiecissä panimotoiminta on vanhaa perua, sillä panimo perustettiin vuonna 1852. Pullan puolelta minä hiivan tunnen paremmin.
+KYSYMYS: Kerro lisää: käymisessä
+
+### 330
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kartuzy (kulttuuri)
+Tietoruudun teksti: Kartuzy on kaupunki Pohjois-Puolassa Itä-Pommerin historiallisella alueella noin 32 kilometriä Gdańskista länteen. Se perustettiin noin vuonna 1380 Prahasta tulleiden kartusiaanimunkkien luostariksi, ja kaupunki on saanut nimensä heiltä; Saksalainen ritarikunta antoi luostarille suuria maa-alueita. Munkit raivasivat lähimetsät ja houkuttelivat Pommerin ruhtinaskunnasta talonpoikia asuttamaan raivattuja alueita. Preussi liitti seudun Puolan ensimmäisessä jaossa 1772 ja lakkautti luostarin vuonna 1826, ja asutus alkoi kasvaa taloudellisesti vasta, kun luostarin maat jaettiin vuonna 1841. Kartuzy on pitkään ollut kašubien kulttuurikeskus, ja kašubimuseo on toiminut siellä vuodesta 1947.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Ketkä perustivat Kartuzyn noin vuonna 1380?
+AIEMPI VASTAUS (Livia):
+Kato, tän nimen kuulee heti. Kartuzyn perustivat noin vuonna 1380 [[Prahasta]] tulleet [[kartusiaanimunkit]], jotka rakensivat paikalle luostarin, ja kaupunki on saanut nimensä heiltä. [[Saksalainen ritarikunta]] antoi luostarille suuria maa-alueita, minkä jälkeen munkit raivasivat lähimetsiä ja houkuttelivat Pommerin ruhtinaskunnasta talonpoikia asuttamaan raivattuja alueita. Seutu kuuluu Itä-Pommerin historialliseen alueeseen noin 32 kilometriä Gdańskista länteen. Munkit tekivät kyl ison työn.
+KYSYMYS: Kerro lisää: Prahasta
+
+### 331
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kartuzy (kulttuuri)
+Tietoruudun teksti: Kartuzy on kaupunki Pohjois-Puolassa Itä-Pommerin historiallisella alueella noin 32 kilometriä Gdańskista länteen. Se perustettiin noin vuonna 1380 Prahasta tulleiden kartusiaanimunkkien luostariksi, ja kaupunki on saanut nimensä heiltä; Saksalainen ritarikunta antoi luostarille suuria maa-alueita. Munkit raivasivat lähimetsät ja houkuttelivat Pommerin ruhtinaskunnasta talonpoikia asuttamaan raivattuja alueita. Preussi liitti seudun Puolan ensimmäisessä jaossa 1772 ja lakkautti luostarin vuonna 1826, ja asutus alkoi kasvaa taloudellisesti vasta, kun luostarin maat jaettiin vuonna 1841. Kartuzy on pitkään ollut kašubien kulttuurikeskus, ja kašubimuseo on toiminut siellä vuodesta 1947.
+AIEMPI KYSYMYS: Ketkä perustivat Kartuzyn noin vuonna 1380?
+AIEMPI VASTAUS (Livia):
+Kato, tän nimen kuulee heti. Kartuzyn perustivat noin vuonna 1380 [[Prahasta]] tulleet [[kartusiaanimunkit]], jotka rakensivat paikalle luostarin, ja kaupunki on saanut nimensä heiltä. [[Saksalainen ritarikunta]] antoi luostarille suuria maa-alueita, minkä jälkeen munkit raivasivat lähimetsiä ja houkuttelivat Pommerin ruhtinaskunnasta talonpoikia asuttamaan raivattuja alueita. Seutu kuuluu Itä-Pommerin historialliseen alueeseen noin 32 kilometriä Gdańskista länteen. Munkit tekivät kyl ison työn.
+KYSYMYS: Kerro lisää: kartusiaanimunkit
+
+### 332
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kartuzy (kulttuuri)
+Tietoruudun teksti: Kartuzy on kaupunki Pohjois-Puolassa Itä-Pommerin historiallisella alueella noin 32 kilometriä Gdańskista länteen. Se perustettiin noin vuonna 1380 Prahasta tulleiden kartusiaanimunkkien luostariksi, ja kaupunki on saanut nimensä heiltä; Saksalainen ritarikunta antoi luostarille suuria maa-alueita. Munkit raivasivat lähimetsät ja houkuttelivat Pommerin ruhtinaskunnasta talonpoikia asuttamaan raivattuja alueita. Preussi liitti seudun Puolan ensimmäisessä jaossa 1772 ja lakkautti luostarin vuonna 1826, ja asutus alkoi kasvaa taloudellisesti vasta, kun luostarin maat jaettiin vuonna 1841. Kartuzy on pitkään ollut kašubien kulttuurikeskus, ja kašubimuseo on toiminut siellä vuodesta 1947.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Johanneksen ko-katedraali] 1572–1577 (rakennus), 1608 (Caravaggion maalaus) Arkkitehti Girolamo Cassar suunnitteli kirkon ritarikunnan omaksi konventtikirkoksi vuosina 1572–1577, ja ulkoa se on yhä vaatimaton: paksut kalkkikivimuurit ja kaksi kapeaa tornia näyttävät pikemmin linnoitukselta kuin katedraalilta. Sisällä on toisin — 1660-luvulla Mattia Preti maalasi koko katon ja seinät kultaisiksi barokkiveistoksiksi, ja lattia on yhtenäinen mosaiikki kahdeksastasadasta ritarin hautalaatasta. Caravaggio pakeni Roomasta 1607 tapettuaan miehen kaksintaistelussa, ja Maltalla hänet otettiin heinäkuussa 1608 ritarikunnan jäseneksi. Kiitokseksi hän maalasi oratorioon "Johannes Kastajan mestauksen" — ainoan teoksensa, jonka hä…
+- [Malta — maalehti / Historia: Kaupunki piirrettiin viivaimella] 1566 — Maaliskuun 28. päivänä 1566 suurmestari Jean de Valette laski peruskiven uudelle kaupungille Sciberras-niemellä. Suuren piirityksen jälkeen ritarikunta halusi rakentaa linnoitetun pääkaupungin, ja paavi lähetti suunnittelijaksi Francesco Laparellin. Hän hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat kaupunginportilta kohti Fort St. Elmoa. Laparellin kuoltua työtä johti maltalainen Girolamo Cassar. Valletta valmistui pääosin 1570-luvun alkuun mennessä, ja siitä tuli pääkaupunki vuonna 1571.
+AIEMPI KYSYMYS: Ketkä perustivat Kartuzyn noin vuonna 1380?
+AIEMPI VASTAUS (Livia):
+Kato, tän nimen kuulee heti. Kartuzyn perustivat noin vuonna 1380 [[Prahasta]] tulleet [[kartusiaanimunkit]], jotka rakensivat paikalle luostarin, ja kaupunki on saanut nimensä heiltä. [[Saksalainen ritarikunta]] antoi luostarille suuria maa-alueita, minkä jälkeen munkit raivasivat lähimetsiä ja houkuttelivat Pommerin ruhtinaskunnasta talonpoikia asuttamaan raivattuja alueita. Seutu kuuluu Itä-Pommerin historialliseen alueeseen noin 32 kilometriä Gdańskista länteen. Munkit tekivät kyl ison työn.
+KYSYMYS: Kerro lisää: Saksalainen ritarikunta
+
+### 333
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kartuzy (kulttuuri)
+Tietoruudun teksti: Kartuzy on kaupunki Pohjois-Puolassa Itä-Pommerin historiallisella alueella noin 32 kilometriä Gdańskista länteen. Se perustettiin noin vuonna 1380 Prahasta tulleiden kartusiaanimunkkien luostariksi, ja kaupunki on saanut nimensä heiltä; Saksalainen ritarikunta antoi luostarille suuria maa-alueita. Munkit raivasivat lähimetsät ja houkuttelivat Pommerin ruhtinaskunnasta talonpoikia asuttamaan raivattuja alueita. Preussi liitti seudun Puolan ensimmäisessä jaossa 1772 ja lakkautti luostarin vuonna 1826, ja asutus alkoi kasvaa taloudellisesti vasta, kun luostarin maat jaettiin vuonna 1841. Kartuzy on pitkään ollut kašubien kulttuurikeskus, ja kašubimuseo on toiminut siellä vuodesta 1947.
+AIEMPI KYSYMYS: Minkä kansan kulttuurikeskus Kartuzy on ollut?
+AIEMPI VASTAUS (Livia):
+No niin, se on helppo. Kartuzy on pitkään ollut [[kašubien]] kulttuurikeskus. Kašubit ovat Pommerin alueella elävä länsislaavilainen kansa, jolla on oma kielensä, ja kaupungissa on toiminut [[kašubimuseo]] vuodesta 1947. Kaupunki sijaitsee Itä-Pommerin historiallisella alueella Pohjois-Puolassa. Siinä meni lyhyt vastaus.
+KYSYMYS: Kerro lisää: kašubien
+
+### 334
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kartuzy (kulttuuri)
+Tietoruudun teksti: Kartuzy on kaupunki Pohjois-Puolassa Itä-Pommerin historiallisella alueella noin 32 kilometriä Gdańskista länteen. Se perustettiin noin vuonna 1380 Prahasta tulleiden kartusiaanimunkkien luostariksi, ja kaupunki on saanut nimensä heiltä; Saksalainen ritarikunta antoi luostarille suuria maa-alueita. Munkit raivasivat lähimetsät ja houkuttelivat Pommerin ruhtinaskunnasta talonpoikia asuttamaan raivattuja alueita. Preussi liitti seudun Puolan ensimmäisessä jaossa 1772 ja lakkautti luostarin vuonna 1826, ja asutus alkoi kasvaa taloudellisesti vasta, kun luostarin maat jaettiin vuonna 1841. Kartuzy on pitkään ollut kašubien kulttuurikeskus, ja kašubimuseo on toiminut siellä vuodesta 1947.
+AIEMPI KYSYMYS: Minkä kansan kulttuurikeskus Kartuzy on ollut?
+AIEMPI VASTAUS (Livia):
+No niin, se on helppo. Kartuzy on pitkään ollut [[kašubien]] kulttuurikeskus. Kašubit ovat Pommerin alueella elävä länsislaavilainen kansa, jolla on oma kielensä, ja kaupungissa on toiminut [[kašubimuseo]] vuodesta 1947. Kaupunki sijaitsee Itä-Pommerin historiallisella alueella Pohjois-Puolassa. Siinä meni lyhyt vastaus.
+KYSYMYS: Kerro lisää: kašubimuseo
+
+### 335
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kartuzy (kulttuuri)
+Tietoruudun teksti: Kartuzy on kaupunki Pohjois-Puolassa Itä-Pommerin historiallisella alueella noin 32 kilometriä Gdańskista länteen. Se perustettiin noin vuonna 1380 Prahasta tulleiden kartusiaanimunkkien luostariksi, ja kaupunki on saanut nimensä heiltä; Saksalainen ritarikunta antoi luostarille suuria maa-alueita. Munkit raivasivat lähimetsät ja houkuttelivat Pommerin ruhtinaskunnasta talonpoikia asuttamaan raivattuja alueita. Preussi liitti seudun Puolan ensimmäisessä jaossa 1772 ja lakkautti luostarin vuonna 1826, ja asutus alkoi kasvaa taloudellisesti vasta, kun luostarin maat jaettiin vuonna 1841. Kartuzy on pitkään ollut kašubien kulttuurikeskus, ja kašubimuseo on toiminut siellä vuodesta 1947.
+AIEMPI KYSYMYS: Millainen munkkikunta kartusiaanit ovat?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kartusiaanit ovat katolinen luostarijärjestö, jonka perusti noin vuonna 1084 [[Bruno Kölniläinen]]. Järjestön nimi tulee [[Chartreuse-vuoristosta]] Ranskasta, jonne ensimmäinen luostari rakennettiin. Kartusiaanien elämä on vaikenemisen ja yksinäisyyden elämää: jokaisella munkilla on oma selli, ja yhteisiä hetkiä on vain vähän. Kartuzyn munkit tulivat Prahasta, ja luostari raivasi seutua viljelykselle.
+
+Hiljaisuus kuulostaa minusta ihan mahdottomalta. Minä kuherran vähintään kolme kertaa päivässä.
+KYSYMYS: Kerro lisää: Bruno Kölniläinen
+
+### 336
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kartuzy (kulttuuri)
+Tietoruudun teksti: Kartuzy on kaupunki Pohjois-Puolassa Itä-Pommerin historiallisella alueella noin 32 kilometriä Gdańskista länteen. Se perustettiin noin vuonna 1380 Prahasta tulleiden kartusiaanimunkkien luostariksi, ja kaupunki on saanut nimensä heiltä; Saksalainen ritarikunta antoi luostarille suuria maa-alueita. Munkit raivasivat lähimetsät ja houkuttelivat Pommerin ruhtinaskunnasta talonpoikia asuttamaan raivattuja alueita. Preussi liitti seudun Puolan ensimmäisessä jaossa 1772 ja lakkautti luostarin vuonna 1826, ja asutus alkoi kasvaa taloudellisesti vasta, kun luostarin maat jaettiin vuonna 1841. Kartuzy on pitkään ollut kašubien kulttuurikeskus, ja kašubimuseo on toiminut siellä vuodesta 1947.
+AIEMPI KYSYMYS: Millainen munkkikunta kartusiaanit ovat?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kartusiaanit ovat katolinen luostarijärjestö, jonka perusti noin vuonna 1084 [[Bruno Kölniläinen]]. Järjestön nimi tulee [[Chartreuse-vuoristosta]] Ranskasta, jonne ensimmäinen luostari rakennettiin. Kartusiaanien elämä on vaikenemisen ja yksinäisyyden elämää: jokaisella munkilla on oma selli, ja yhteisiä hetkiä on vain vähän. Kartuzyn munkit tulivat Prahasta, ja luostari raivasi seutua viljelykselle.
+
+Hiljaisuus kuulostaa minusta ihan mahdottomalta. Minä kuherran vähintään kolme kertaa päivässä.
+KYSYMYS: Kerro lisää: Chartreuse-vuoristosta
+
+### 337
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kartuzy (kulttuuri)
+Tietoruudun teksti: Kartuzy on kaupunki Pohjois-Puolassa Itä-Pommerin historiallisella alueella noin 32 kilometriä Gdańskista länteen. Se perustettiin noin vuonna 1380 Prahasta tulleiden kartusiaanimunkkien luostariksi, ja kaupunki on saanut nimensä heiltä; Saksalainen ritarikunta antoi luostarille suuria maa-alueita. Munkit raivasivat lähimetsät ja houkuttelivat Pommerin ruhtinaskunnasta talonpoikia asuttamaan raivattuja alueita. Preussi liitti seudun Puolan ensimmäisessä jaossa 1772 ja lakkautti luostarin vuonna 1826, ja asutus alkoi kasvaa taloudellisesti vasta, kun luostarin maat jaettiin vuonna 1841. Kartuzy on pitkään ollut kašubien kulttuurikeskus, ja kašubimuseo on toiminut siellä vuodesta 1947.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad-järvi — kaupunkilehti / Bornun valtakunta: Preussin lahjat sheikille] Preussin kuningas Wilhelm I lähetti tutkimusmatkailija Gustav Nachtigalin viemään lahjoja Bornun hallitsijalle kiitokseksi saksalaisille matkaajille osoitetusta vieraanvaraisuudesta. Nachtigal lähti Tripolista helmikuussa 1869 ja saapui Bornun pääkaupunkiin Kukawaan 6. kesäkuuta 1870, missä sheikki Umar otti hänet ystävällisesti vastaan. Hovin virkamies Ahmed ibn Brahim antoi Nachtigalille vanhoja asiakirjoja, joiden pohjalta tämä kokosi luettelon Bornun hallitsijoista vuosisatojen ajalta. Sheikin luvalla Nachtigal teki myöhemmin tutkimusmatkoja Kanemiin ja Bagirmiin ja osoitti Bahr-el-Ghazalin toimivan ajoittain järven laskujokena.
+- [Pietari — kaupunkilehti / Taide: Preussin kuninkaalta jääneet maalaukset päätyivät keisarinnalle] 1764 — Berliiniläinen kauppias Johann Ernst Gotzkowsky oli koonnut 225 maalauksen kokoelman Preussin kuningas Fredrik Suurelle, mutta seitsenvuotisen sodan jälkeen kuninkaan kassa oli tyhjä eikä hän voinut maksaa niistä. Vuonna 1764 Venäjän keisarinna Katariina Suuri osti koko kokoelman velan kuittaukseksi ja ripusti taulut yksityiseen siipirakennukseensa Talvipalatsin vieressä — rakennus sai nimen Eremitaasi, erakon asunto, koska sinne pääsivät vain harvat kutsutut. Tästä ostosta syntyi kokoelma, joka on nykyään yksi maailman suurimpia taidemuseoita.
+AIEMPI KYSYMYS: Mikä oli Puolan ensimmäinen jako vuonna 1772?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Vuonna 1772 [[Preussi]], [[Venäjä]] ja Itävalta liittivät itseensä osia Puola-Liettuan reuna-alueista, ja tapahtumaa kutsutaan Puolan ensimmäiseksi jaoksi. Preussi sai haltuunsa muun muassa Pommerin seutua, jolla Kartuzy sijaitsee. Jakoja oli kaikkiaan kolme: myöhemmät tapahtuivat 1793 ja 1795, minkä jälkeen Puola-Liettua lakkasi olemasta, ja itsenäinen Puola palasi kartalle vasta vuonna 1918. [[Puola-Liettuan]] valtio oli siis pitkään poissa kartalta.
+KYSYMYS: Kerro lisää: Preussi
+
+### 338
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kartuzy (kulttuuri)
+Tietoruudun teksti: Kartuzy on kaupunki Pohjois-Puolassa Itä-Pommerin historiallisella alueella noin 32 kilometriä Gdańskista länteen. Se perustettiin noin vuonna 1380 Prahasta tulleiden kartusiaanimunkkien luostariksi, ja kaupunki on saanut nimensä heiltä; Saksalainen ritarikunta antoi luostarille suuria maa-alueita. Munkit raivasivat lähimetsät ja houkuttelivat Pommerin ruhtinaskunnasta talonpoikia asuttamaan raivattuja alueita. Preussi liitti seudun Puolan ensimmäisessä jaossa 1772 ja lakkautti luostarin vuonna 1826, ja asutus alkoi kasvaa taloudellisesti vasta, kun luostarin maat jaettiin vuonna 1841. Kartuzy on pitkään ollut kašubien kulttuurikeskus, ja kašubimuseo on toiminut siellä vuodesta 1947.
+AIEMPI KYSYMYS: Mikä oli Puolan ensimmäinen jako vuonna 1772?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Vuonna 1772 [[Preussi]], [[Venäjä]] ja Itävalta liittivät itseensä osia Puola-Liettuan reuna-alueista, ja tapahtumaa kutsutaan Puolan ensimmäiseksi jaoksi. Preussi sai haltuunsa muun muassa Pommerin seutua, jolla Kartuzy sijaitsee. Jakoja oli kaikkiaan kolme: myöhemmät tapahtuivat 1793 ja 1795, minkä jälkeen Puola-Liettua lakkasi olemasta, ja itsenäinen Puola palasi kartalle vasta vuonna 1918. [[Puola-Liettuan]] valtio oli siis pitkään poissa kartalta.
+KYSYMYS: Kerro lisää: Venäjä
+
+### 339
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kartuzy (kulttuuri)
+Tietoruudun teksti: Kartuzy on kaupunki Pohjois-Puolassa Itä-Pommerin historiallisella alueella noin 32 kilometriä Gdańskista länteen. Se perustettiin noin vuonna 1380 Prahasta tulleiden kartusiaanimunkkien luostariksi, ja kaupunki on saanut nimensä heiltä; Saksalainen ritarikunta antoi luostarille suuria maa-alueita. Munkit raivasivat lähimetsät ja houkuttelivat Pommerin ruhtinaskunnasta talonpoikia asuttamaan raivattuja alueita. Preussi liitti seudun Puolan ensimmäisessä jaossa 1772 ja lakkautti luostarin vuonna 1826, ja asutus alkoi kasvaa taloudellisesti vasta, kun luostarin maat jaettiin vuonna 1841. Kartuzy on pitkään ollut kašubien kulttuurikeskus, ja kašubimuseo on toiminut siellä vuodesta 1947.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Metsästäjän pata joka paranee odottaessa] nykyään — Bigos eli metsästäjän pata on hidas muhennos, jossa erilaiset lihat haudutetaan yhdessä hapankaalin ja tuoreen kaalin kanssa. Ruokaan lisätään usein makkaraa, sieniä, luumuja ja viiniä, ja mausteet vaihtelevat perheittäin. Bigosin erikoisuus on, että se paranee uudelleenlämmittäessä: monet väittävät parhaan bigosin olevan se, joka on saanut seistä ja maustua useita päiviä, jopa viikon. Ruoka levisi alkuperäisestä Puolasta laajalle koko Puolan–Liettuan unionin alueelle.
+AIEMPI KYSYMYS: Mikä oli Puolan ensimmäinen jako vuonna 1772?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Vuonna 1772 [[Preussi]], [[Venäjä]] ja Itävalta liittivät itseensä osia Puola-Liettuan reuna-alueista, ja tapahtumaa kutsutaan Puolan ensimmäiseksi jaoksi. Preussi sai haltuunsa muun muassa Pommerin seutua, jolla Kartuzy sijaitsee. Jakoja oli kaikkiaan kolme: myöhemmät tapahtuivat 1793 ja 1795, minkä jälkeen Puola-Liettua lakkasi olemasta, ja itsenäinen Puola palasi kartalle vasta vuonna 1918. [[Puola-Liettuan]] valtio oli siis pitkään poissa kartalta.
+KYSYMYS: Kerro lisää: Puola-Liettuan
+
+### 340
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kartuzy (kulttuuri)
+Tietoruudun teksti: Kartuzy on kaupunki Pohjois-Puolassa Itä-Pommerin historiallisella alueella noin 32 kilometriä Gdańskista länteen. Se perustettiin noin vuonna 1380 Prahasta tulleiden kartusiaanimunkkien luostariksi, ja kaupunki on saanut nimensä heiltä; Saksalainen ritarikunta antoi luostarille suuria maa-alueita. Munkit raivasivat lähimetsät ja houkuttelivat Pommerin ruhtinaskunnasta talonpoikia asuttamaan raivattuja alueita. Preussi liitti seudun Puolan ensimmäisessä jaossa 1772 ja lakkautti luostarin vuonna 1826, ja asutus alkoi kasvaa taloudellisesti vasta, kun luostarin maat jaettiin vuonna 1841. Kartuzy on pitkään ollut kašubien kulttuurikeskus, ja kašubimuseo on toiminut siellä vuodesta 1947.
+AIEMPI KYSYMYS: Millainen kaupunki Gdańsk on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Gdańsk on Itämeren rannalla Pohjois-Puolassa sijaitseva satamakaupunki, jota kutsuttiin saksaksi nimellä [[Danzig]]. Se on vanha kauppakaupunki, ja sen telakoilta lähti 1980-luvun alussa liikkeelle [[Solidaarisuus]]-ammattiliike, jolla oli suuri merkitys Puolan ja koko Itä-Euroopan muutokselle. Kaupunki sijaitsee Veikselin suistoalueen läheisyydessä [[Itämeren]] rannalla. Ylhäältä katsoen satamat näyttävät aina vähän kutsuvilta.
+KYSYMYS: Kerro lisää: Danzig
+
+### 341
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kartuzy (kulttuuri)
+Tietoruudun teksti: Kartuzy on kaupunki Pohjois-Puolassa Itä-Pommerin historiallisella alueella noin 32 kilometriä Gdańskista länteen. Se perustettiin noin vuonna 1380 Prahasta tulleiden kartusiaanimunkkien luostariksi, ja kaupunki on saanut nimensä heiltä; Saksalainen ritarikunta antoi luostarille suuria maa-alueita. Munkit raivasivat lähimetsät ja houkuttelivat Pommerin ruhtinaskunnasta talonpoikia asuttamaan raivattuja alueita. Preussi liitti seudun Puolan ensimmäisessä jaossa 1772 ja lakkautti luostarin vuonna 1826, ja asutus alkoi kasvaa taloudellisesti vasta, kun luostarin maat jaettiin vuonna 1841. Kartuzy on pitkään ollut kašubien kulttuurikeskus, ja kašubimuseo on toiminut siellä vuodesta 1947.
+AIEMPI KYSYMYS: Millainen kaupunki Gdańsk on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Gdańsk on Itämeren rannalla Pohjois-Puolassa sijaitseva satamakaupunki, jota kutsuttiin saksaksi nimellä [[Danzig]]. Se on vanha kauppakaupunki, ja sen telakoilta lähti 1980-luvun alussa liikkeelle [[Solidaarisuus]]-ammattiliike, jolla oli suuri merkitys Puolan ja koko Itä-Euroopan muutokselle. Kaupunki sijaitsee Veikselin suistoalueen läheisyydessä [[Itämeren]] rannalla. Ylhäältä katsoen satamat näyttävät aina vähän kutsuvilta.
+KYSYMYS: Kerro lisää: Solidaarisuus
+
+### 342
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kartuzy (kulttuuri)
+Tietoruudun teksti: Kartuzy on kaupunki Pohjois-Puolassa Itä-Pommerin historiallisella alueella noin 32 kilometriä Gdańskista länteen. Se perustettiin noin vuonna 1380 Prahasta tulleiden kartusiaanimunkkien luostariksi, ja kaupunki on saanut nimensä heiltä; Saksalainen ritarikunta antoi luostarille suuria maa-alueita. Munkit raivasivat lähimetsät ja houkuttelivat Pommerin ruhtinaskunnasta talonpoikia asuttamaan raivattuja alueita. Preussi liitti seudun Puolan ensimmäisessä jaossa 1772 ja lakkautti luostarin vuonna 1826, ja asutus alkoi kasvaa taloudellisesti vasta, kun luostarin maat jaettiin vuonna 1841. Kartuzy on pitkään ollut kašubien kulttuurikeskus, ja kašubimuseo on toiminut siellä vuodesta 1947.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Magadan — kohdekartta / Kohdekartta: Nagajevanlahti] Jeannette Harbour 1852–1869 Nagajevanlahti on Tauinlahden osa Ohotanmeren pohjoisosassa. Se on 14,5 kilometriä pitkä ja suultaan 6,4 kilometriä leveä, ja sitä on kutsuttu koko Ohotanmeren parhaaksi ankkuripaikaksi. Jäätä lahdella on marraskuun lopulta kesäkuun puoliväliin. Kaupunki ja sen satama ovat lahden perukassa Staritskin niemimaan kannaksella. Lahdella on kaksi nimeä ja kaksi tarinaa. Virallinen nimi tulee amiraali Aleksei Nagajevilta (1704–1781), joka oli hydrografi ja kartantekijä ja jonka Beringinmeren ja Itämeren kartastot ilmestyivät vuonna 1752; niitä käytettiin vielä viisikymmentä vuotta myöhemmin, vaikka niissä ei ollut astekoordinaatistoa lainkaan. Toinen nimi on amerikkalai…
+- [Tallinna — kohdekartta / Kohdekartta: Raatihuoneentori] 1402–1404 Tallinnan raatihuone on koko Itämeren alueen ja Pohjoismaiden vanhin säilynyt raatihuone. Se rakennettiin vain parissa vuodessa, vuosina 1402-1404, keskiaikaisen torin laidalle. Hansakaupunkina Tallinnan kaupunginhallitus piti täällä kokouksiaan ja päätti niin kaupan, oikeuden kuin arjenkin asioista. Rakennuksen 36,8 metriä pitkässä salissa on nähtävissä yli 500 vuotta vanhoja seinävaatteita, jotka kuvaavat kuningas Salomonin elämää. Raatihuoneen 64 metriä korkeaan torniin johtaa peräti 115 porrasaskelmaa. Huipulla pyörii Vana Toomas, eli "Vanha Toomas" - kaupunginvartijaa esittävä tuuliviiri, joka on ollut Tallinnan tunnuskuva vuodesta 1530 lähtien. Alkuperäinen tuuliviiri on nyk…
+AIEMPI KYSYMYS: Millainen kaupunki Gdańsk on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Gdańsk on Itämeren rannalla Pohjois-Puolassa sijaitseva satamakaupunki, jota kutsuttiin saksaksi nimellä [[Danzig]]. Se on vanha kauppakaupunki, ja sen telakoilta lähti 1980-luvun alussa liikkeelle [[Solidaarisuus]]-ammattiliike, jolla oli suuri merkitys Puolan ja koko Itä-Euroopan muutokselle. Kaupunki sijaitsee Veikselin suistoalueen läheisyydessä [[Itämeren]] rannalla. Ylhäältä katsoen satamat näyttävät aina vähän kutsuvilta.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 343
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łowicz (kulttuuri)
+Tietoruudun teksti: Łowicz on noin 27 000 asukkaan kaupunki Keski-Puolassa Łódźin maakunnassa. Se oli Puolan primasten eli arkkipiispojen residenssi Puola-Liettuassa, ja kuningasvallan välivaiheessa siitä tuli väliaikainen Puolan pääkaupunki; siksi pienellä kaupungilla on oma piispa ja tuomiokirkkobasilika. Tuomiokirkko on Puolan historiallinen monumentti, ja kaupungin laidalla ovat entisen piispanlinnan rauniot. Łowiczissa on merkittävä etnografinen museo ja 17 hehtaarin ulkoilmamuseo, joka esittelee perinteisiä puutaloja ja kylämaailmaa. Kaupunki on myös tärkeä ruoantuotantopaikka: siellä valmistetaan hedelmä- ja vihannessäilykkeitä sekä maitotuotteita.
+AIEMPI KYSYMYS: Keiden asuinpaikka Łowicz oli Puola-Liettuassa?
+AIEMPI VASTAUS (Livia):
+Ai tota, helppo. Łowicz oli Puolan [[primasten]] eli arkkipiispojen residenssi Puola-Liettuassa. Kuningasvallan välivaiheessa kaupungista tuli väliaikainen Puolan pääkaupunki, ja siksi pienellä kaupungilla on yhä oma piispa ja [[tuomiokirkkobasilika]]. Nykyisin kaupungissa asuu noin 27 000 ihmistä Keski-Puolassa Łódźin maakunnassa. Pieni kaupunki, mutta vanhaa arvokkuutta riittää.
+KYSYMYS: Kerro lisää: primasten
+
+### 344
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łowicz (kulttuuri)
+Tietoruudun teksti: Łowicz on noin 27 000 asukkaan kaupunki Keski-Puolassa Łódźin maakunnassa. Se oli Puolan primasten eli arkkipiispojen residenssi Puola-Liettuassa, ja kuningasvallan välivaiheessa siitä tuli väliaikainen Puolan pääkaupunki; siksi pienellä kaupungilla on oma piispa ja tuomiokirkkobasilika. Tuomiokirkko on Puolan historiallinen monumentti, ja kaupungin laidalla ovat entisen piispanlinnan rauniot. Łowiczissa on merkittävä etnografinen museo ja 17 hehtaarin ulkoilmamuseo, joka esittelee perinteisiä puutaloja ja kylämaailmaa. Kaupunki on myös tärkeä ruoantuotantopaikka: siellä valmistetaan hedelmä- ja vihannessäilykkeitä sekä maitotuotteita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan tuomiokirkko] 1861 Tromssan tuomiokirkko on kokonaan puusta rakennettu keltainen kirkko, joka valmistui vuonna 1861 arkkitehti Christian Heinrich Groschin piirustusten mukaan. Se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu puusta - ja sen sisään mahtuu yli 600 kirkkovierasta! Paikalla on ollut kirkko jo satoja vuosia ennen tätäkin: kuningas Håkon IV rakennutti tänne kappelin jo vuonna 1252, ja sen jälkeen paikalla on ollut ainakin kaksi muuta kirkkoa ennen nykyistä rakennusta. Kellotorni valmistui vuotta myöhemmin, 1862, ja kirkkoa koristeltiin lisää vielä 1880-luvulla. Isoisän vieraillessa Tromssassa 1873 kirkko oli vasta reilut kymmenen vuotta vanha - täysin uusi nähtävyys pienessä pu…
+AIEMPI KYSYMYS: Keiden asuinpaikka Łowicz oli Puola-Liettuassa?
+AIEMPI VASTAUS (Livia):
+Ai tota, helppo. Łowicz oli Puolan [[primasten]] eli arkkipiispojen residenssi Puola-Liettuassa. Kuningasvallan välivaiheessa kaupungista tuli väliaikainen Puolan pääkaupunki, ja siksi pienellä kaupungilla on yhä oma piispa ja [[tuomiokirkkobasilika]]. Nykyisin kaupungissa asuu noin 27 000 ihmistä Keski-Puolassa Łódźin maakunnassa. Pieni kaupunki, mutta vanhaa arvokkuutta riittää.
+KYSYMYS: Kerro lisää: tuomiokirkkobasilika
+
+### 345
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łowicz (kulttuuri)
+Tietoruudun teksti: Łowicz on noin 27 000 asukkaan kaupunki Keski-Puolassa Łódźin maakunnassa. Se oli Puolan primasten eli arkkipiispojen residenssi Puola-Liettuassa, ja kuningasvallan välivaiheessa siitä tuli väliaikainen Puolan pääkaupunki; siksi pienellä kaupungilla on oma piispa ja tuomiokirkkobasilika. Tuomiokirkko on Puolan historiallinen monumentti, ja kaupungin laidalla ovat entisen piispanlinnan rauniot. Łowiczissa on merkittävä etnografinen museo ja 17 hehtaarin ulkoilmamuseo, joka esittelee perinteisiä puutaloja ja kylämaailmaa. Kaupunki on myös tärkeä ruoantuotantopaikka: siellä valmistetaan hedelmä- ja vihannessäilykkeitä sekä maitotuotteita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+AIEMPI KYSYMYS: Mitä ulkoilmamuseossa Łowiczin lähellä on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Łowiczin ulkoilmamuseo on 17 hehtaarin laajuinen, ja se esittelee perinteisiä [[puutaloja]] ja kylämaailmaa. Kaupungissa on lisäksi merkittävä [[etnografinen museo]], joten perinteinen maalaiselämä on esillä sekä sisällä että ulkona. Kaupungin laidalla ovat myös entisen piispanlinnan rauniot. Kyllä kyyhky tykkää museosta, jossa on ulkotilaa.
+KYSYMYS: Kerro lisää: puutaloja
+
+### 346
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łowicz (kulttuuri)
+Tietoruudun teksti: Łowicz on noin 27 000 asukkaan kaupunki Keski-Puolassa Łódźin maakunnassa. Se oli Puolan primasten eli arkkipiispojen residenssi Puola-Liettuassa, ja kuningasvallan välivaiheessa siitä tuli väliaikainen Puolan pääkaupunki; siksi pienellä kaupungilla on oma piispa ja tuomiokirkkobasilika. Tuomiokirkko on Puolan historiallinen monumentti, ja kaupungin laidalla ovat entisen piispanlinnan rauniot. Łowiczissa on merkittävä etnografinen museo ja 17 hehtaarin ulkoilmamuseo, joka esittelee perinteisiä puutaloja ja kylämaailmaa. Kaupunki on myös tärkeä ruoantuotantopaikka: siellä valmistetaan hedelmä- ja vihannessäilykkeitä sekä maitotuotteita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montevideo — kohdekartta / Kohdekartta: Alkuperäiskansojen taiteen museo] 1888 Talo ei ollut alun perin museo. Emilio Reus suunnitteli sen 1800-luvun lopulla kahden saksalaisen arkkitehdin kanssa vesihoitolaitokseksi, ja rakennus valmistui 1888. Myöhemmin siinä toimi puolustusministeriön päämaja, ja jossain vaiheessa talo jäi tyhjilleen. Kansalliseksi historialliseksi monumentiksi se julistettiin 1986, kunnostettiin 2004 ja sai silloin nykyisen tehtävänsä. Museo on etnografinen ja keskittyy Latinalaisen Amerikan eri osien alkuperäiskansoihin. Kokoelmassa on yli 700 etnografista tai arkeologista esinettä: tekstiilejä, perinteisiä soittimia, keramiikkaa ja taidetta. Pääpaino on Uruguayn alkuperäiskansoissa, mutta esillä ovat myös Mesoamerikka eli Meksiko ja Guatema…
+AIEMPI KYSYMYS: Mitä ulkoilmamuseossa Łowiczin lähellä on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Łowiczin ulkoilmamuseo on 17 hehtaarin laajuinen, ja se esittelee perinteisiä [[puutaloja]] ja kylämaailmaa. Kaupungissa on lisäksi merkittävä [[etnografinen museo]], joten perinteinen maalaiselämä on esillä sekä sisällä että ulkona. Kaupungin laidalla ovat myös entisen piispanlinnan rauniot. Kyllä kyyhky tykkää museosta, jossa on ulkotilaa.
+KYSYMYS: Kerro lisää: etnografinen museo
+
+### 347
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łowicz (kulttuuri)
+Tietoruudun teksti: Łowicz on noin 27 000 asukkaan kaupunki Keski-Puolassa Łódźin maakunnassa. Se oli Puolan primasten eli arkkipiispojen residenssi Puola-Liettuassa, ja kuningasvallan välivaiheessa siitä tuli väliaikainen Puolan pääkaupunki; siksi pienellä kaupungilla on oma piispa ja tuomiokirkkobasilika. Tuomiokirkko on Puolan historiallinen monumentti, ja kaupungin laidalla ovat entisen piispanlinnan rauniot. Łowiczissa on merkittävä etnografinen museo ja 17 hehtaarin ulkoilmamuseo, joka esittelee perinteisiä puutaloja ja kylämaailmaa. Kaupunki on myös tärkeä ruoantuotantopaikka: siellä valmistetaan hedelmä- ja vihannessäilykkeitä sekä maitotuotteita.
+AIEMPI KYSYMYS: Mistä Łowiczin kansanpuvut ovat tunnettuja?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä osaan kertoo vähän. Muistini mukaan Łowiczin seudun kansanpuvut ovat tunnettuja värikkäistä raidallisista villakankaista, ja seutu tunnetaan myös [[wycinanki]]-nimisistä paperileikkeistä. Perinteisiä pukuja nähdään parhaiten juhlissa, esimerkiksi [[Corpus Christi]] -juhlan kulkueessa, jossa kuljetaan kansanpuvuissa. En ole varma yksityiskohdista, joten tarkemmat tiedot kannattaa tarkistaa museosta. Katolta katsottuna värit näyttävät varmasti hienoilta.
+KYSYMYS: Kerro lisää: wycinanki
+
+### 348
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łowicz (kulttuuri)
+Tietoruudun teksti: Łowicz on noin 27 000 asukkaan kaupunki Keski-Puolassa Łódźin maakunnassa. Se oli Puolan primasten eli arkkipiispojen residenssi Puola-Liettuassa, ja kuningasvallan välivaiheessa siitä tuli väliaikainen Puolan pääkaupunki; siksi pienellä kaupungilla on oma piispa ja tuomiokirkkobasilika. Tuomiokirkko on Puolan historiallinen monumentti, ja kaupungin laidalla ovat entisen piispanlinnan rauniot. Łowiczissa on merkittävä etnografinen museo ja 17 hehtaarin ulkoilmamuseo, joka esittelee perinteisiä puutaloja ja kylämaailmaa. Kaupunki on myös tärkeä ruoantuotantopaikka: siellä valmistetaan hedelmä- ja vihannessäilykkeitä sekä maitotuotteita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venezuela — maalehti / Musiikki: Paholaiset, jotka tanssivat lupauksen takia] 1749 — Corpus Christin juhlassa veljeskunnat pukeutuvat paholaisiksi ja tanssivat kirkon edessä. Tapa syntyi 1600-luvun puolivälissä Araguan ja Vargasin haciendoilla, ja vuodelta 1749 on kirjattu, että miehet, naiset ja lapset pukeutuivat paholaisiksi täyttääkseen pyhälle sakramentille antamansa lupauksen. Tunnustettuja veljeskuntia on yksitoista ja osallistujia yli viisituhatta; tunnetuin on San Francisco de Yaren veljeskunta. Unesco otti perinteen aineettoman kulttuuriperinnön luetteloon vuonna 2012.
+AIEMPI KYSYMYS: Mistä Łowiczin kansanpuvut ovat tunnettuja?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä osaan kertoo vähän. Muistini mukaan Łowiczin seudun kansanpuvut ovat tunnettuja värikkäistä raidallisista villakankaista, ja seutu tunnetaan myös [[wycinanki]]-nimisistä paperileikkeistä. Perinteisiä pukuja nähdään parhaiten juhlissa, esimerkiksi [[Corpus Christi]] -juhlan kulkueessa, jossa kuljetaan kansanpuvuissa. En ole varma yksityiskohdista, joten tarkemmat tiedot kannattaa tarkistaa museosta. Katolta katsottuna värit näyttävät varmasti hienoilta.
+KYSYMYS: Kerro lisää: Corpus Christi
+
+### 349
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łowicz (kulttuuri)
+Tietoruudun teksti: Łowicz on noin 27 000 asukkaan kaupunki Keski-Puolassa Łódźin maakunnassa. Se oli Puolan primasten eli arkkipiispojen residenssi Puola-Liettuassa, ja kuningasvallan välivaiheessa siitä tuli väliaikainen Puolan pääkaupunki; siksi pienellä kaupungilla on oma piispa ja tuomiokirkkobasilika. Tuomiokirkko on Puolan historiallinen monumentti, ja kaupungin laidalla ovat entisen piispanlinnan rauniot. Łowiczissa on merkittävä etnografinen museo ja 17 hehtaarin ulkoilmamuseo, joka esittelee perinteisiä puutaloja ja kylämaailmaa. Kaupunki on myös tärkeä ruoantuotantopaikka: siellä valmistetaan hedelmä- ja vihannessäilykkeitä sekä maitotuotteita.
+AIEMPI KYSYMYS: Mikä on primas?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Primas on kirkon arvonimi: katolisessa kirkossa primas on maan arkkipiispoista arvoltaan ensimmäinen, ja Puolassa tämä asema kuuluu [[Gnieznon]] arkkipiispalle. Puola-Liettuassa primas oli myös valtiollisesti tärkeä henkilö, sillä kuninkaan kuoleman ja uuden valinnan välisenä aikana hän toimi väliaikaisena valtionpäämiehenä eli [[interrex]]-hallitsijana. Tästä syystä Łowicz, primasten residenssi, nousi väliaikaisesti kuningasvallan välivaiheessa pääkaupungiksi. Pitkä sana, lyhyt virka.
+KYSYMYS: Kerro lisää: Gnieznon
+
+### 350
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łowicz (kulttuuri)
+Tietoruudun teksti: Łowicz on noin 27 000 asukkaan kaupunki Keski-Puolassa Łódźin maakunnassa. Se oli Puolan primasten eli arkkipiispojen residenssi Puola-Liettuassa, ja kuningasvallan välivaiheessa siitä tuli väliaikainen Puolan pääkaupunki; siksi pienellä kaupungilla on oma piispa ja tuomiokirkkobasilika. Tuomiokirkko on Puolan historiallinen monumentti, ja kaupungin laidalla ovat entisen piispanlinnan rauniot. Łowiczissa on merkittävä etnografinen museo ja 17 hehtaarin ulkoilmamuseo, joka esittelee perinteisiä puutaloja ja kylämaailmaa. Kaupunki on myös tärkeä ruoantuotantopaikka: siellä valmistetaan hedelmä- ja vihannessäilykkeitä sekä maitotuotteita.
+AIEMPI KYSYMYS: Mikä on primas?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Primas on kirkon arvonimi: katolisessa kirkossa primas on maan arkkipiispoista arvoltaan ensimmäinen, ja Puolassa tämä asema kuuluu [[Gnieznon]] arkkipiispalle. Puola-Liettuassa primas oli myös valtiollisesti tärkeä henkilö, sillä kuninkaan kuoleman ja uuden valinnan välisenä aikana hän toimi väliaikaisena valtionpäämiehenä eli [[interrex]]-hallitsijana. Tästä syystä Łowicz, primasten residenssi, nousi väliaikaisesti kuningasvallan välivaiheessa pääkaupungiksi. Pitkä sana, lyhyt virka.
+KYSYMYS: Kerro lisää: interrex
+
+### 351
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łowicz (kulttuuri)
+Tietoruudun teksti: Łowicz on noin 27 000 asukkaan kaupunki Keski-Puolassa Łódźin maakunnassa. Se oli Puolan primasten eli arkkipiispojen residenssi Puola-Liettuassa, ja kuningasvallan välivaiheessa siitä tuli väliaikainen Puolan pääkaupunki; siksi pienellä kaupungilla on oma piispa ja tuomiokirkkobasilika. Tuomiokirkko on Puolan historiallinen monumentti, ja kaupungin laidalla ovat entisen piispanlinnan rauniot. Łowiczissa on merkittävä etnografinen museo ja 17 hehtaarin ulkoilmamuseo, joka esittelee perinteisiä puutaloja ja kylämaailmaa. Kaupunki on myös tärkeä ruoantuotantopaikka: siellä valmistetaan hedelmä- ja vihannessäilykkeitä sekä maitotuotteita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan tuomiokirkko] 1861 Tromssan tuomiokirkko on kokonaan puusta rakennettu keltainen kirkko, joka valmistui vuonna 1861 arkkitehti Christian Heinrich Groschin piirustusten mukaan. Se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu puusta - ja sen sisään mahtuu yli 600 kirkkovierasta! Paikalla on ollut kirkko jo satoja vuosia ennen tätäkin: kuningas Håkon IV rakennutti tänne kappelin jo vuonna 1252, ja sen jälkeen paikalla on ollut ainakin kaksi muuta kirkkoa ennen nykyistä rakennusta. Kellotorni valmistui vuotta myöhemmin, 1862, ja kirkkoa koristeltiin lisää vielä 1880-luvulla. Isoisän vieraillessa Tromssassa 1873 kirkko oli vasta reilut kymmenen vuotta vanha - täysin uusi nähtävyys pienessä pu…
+AIEMPI KYSYMYS: Mitä tuomiokirkkobasilika tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Tuomiokirkko]] on kirkko, jossa [[piispan]] istuin eli katedra sijaitsee. Basilika on puolestaan joko rakennustyyppi, jossa keskilaiva on sivulaivoja korkeampi, tai kunnianimi, jonka [[paavi]] voi myöntää historiallisesti tai hengellisesti merkittävälle kirkolle. Łowiczissa kaksi nimitystä yhdistyy, koska kaupungissa on piispa ja tuomiokirkkobasilika. En ole varma, onko Łowiczin kirkon basilika-asema nimenomaan paavin myöntämä kunnianimi.
+KYSYMYS: Kerro lisää: Tuomiokirkko
+
+### 352
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łowicz (kulttuuri)
+Tietoruudun teksti: Łowicz on noin 27 000 asukkaan kaupunki Keski-Puolassa Łódźin maakunnassa. Se oli Puolan primasten eli arkkipiispojen residenssi Puola-Liettuassa, ja kuningasvallan välivaiheessa siitä tuli väliaikainen Puolan pääkaupunki; siksi pienellä kaupungilla on oma piispa ja tuomiokirkkobasilika. Tuomiokirkko on Puolan historiallinen monumentti, ja kaupungin laidalla ovat entisen piispanlinnan rauniot. Łowiczissa on merkittävä etnografinen museo ja 17 hehtaarin ulkoilmamuseo, joka esittelee perinteisiä puutaloja ja kylämaailmaa. Kaupunki on myös tärkeä ruoantuotantopaikka: siellä valmistetaan hedelmä- ja vihannessäilykkeitä sekä maitotuotteita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Galápagos — kaupunkilehti / Galápagossaaret: Piispan harhaan ajautunut laiva] Tomás de Berlanga oli matkalla Panamasta Peruun sovittelemaan riitaa, kun tuulet tyyntyivät ja virtaukset kuljettivat hänen laivansa harhaan reitiltä. Miehistö ajautui tuntemattomaan saaristoon, jossa ei ollut makeaa vettä: kaksi merimiestä ja kymmenen hevosta kuoli janoon ennen kuin retkikunta pääsi jatkamaan matkaa. Berlanga kirjoitti Espanjan kuninkaalle kuvauksen karusta paikasta, jonka kivikkoisilla rannoilla vaelsi jättiläiskilpikonnia ja oudon näköisiä liskoja. Raportti oli ensimmäinen kirjallinen maininta saaristosta — mutta yli kolme vuosisataa kului ennen kuin kukaan tutki sitä tieteellisesti.
+- [Sitka — kaupunkilehti / Sitka: Piispantalo hirsistä] Suomalaiset työmiehet pystyttivät Sitkaan vuosina 1841–1843 kaksikerroksisen hirsirakennuksen Venäjän-Amerikan-yhtiön palveluksessa: siitä tuli Alaskan ensimmäisen piispan, Innokenti Veniaminovin, koti ja hallintokeskus. Rakennuksessa asui myöhemmin myös pappeja, ja se toimi välillä jopa majatalona, kunnes Sitkan hiippakunta siirrettiin San Franciscoon 1872. Piispantalo on yksi harvoista Venäjän-Amerikan ajalta säilyneistä rakennuksista koko Alaskassa, ja se rauhoitettiin kansallismuistomerkiksi 1962. Nykyisin se on osa Sitkan kansallista historiallista puistoa ja avoinna yleisölle opastetuilla kierroksilla museona.
+AIEMPI KYSYMYS: Mitä tuomiokirkkobasilika tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Tuomiokirkko]] on kirkko, jossa [[piispan]] istuin eli katedra sijaitsee. Basilika on puolestaan joko rakennustyyppi, jossa keskilaiva on sivulaivoja korkeampi, tai kunnianimi, jonka [[paavi]] voi myöntää historiallisesti tai hengellisesti merkittävälle kirkolle. Łowiczissa kaksi nimitystä yhdistyy, koska kaupungissa on piispa ja tuomiokirkkobasilika. En ole varma, onko Łowiczin kirkon basilika-asema nimenomaan paavin myöntämä kunnianimi.
+KYSYMYS: Kerro lisää: piispan
+
+### 353
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łowicz (kulttuuri)
+Tietoruudun teksti: Łowicz on noin 27 000 asukkaan kaupunki Keski-Puolassa Łódźin maakunnassa. Se oli Puolan primasten eli arkkipiispojen residenssi Puola-Liettuassa, ja kuningasvallan välivaiheessa siitä tuli väliaikainen Puolan pääkaupunki; siksi pienellä kaupungilla on oma piispa ja tuomiokirkkobasilika. Tuomiokirkko on Puolan historiallinen monumentti, ja kaupungin laidalla ovat entisen piispanlinnan rauniot. Łowiczissa on merkittävä etnografinen museo ja 17 hehtaarin ulkoilmamuseo, joka esittelee perinteisiä puutaloja ja kylämaailmaa. Kaupunki on myös tärkeä ruoantuotantopaikka: siellä valmistetaan hedelmä- ja vihannessäilykkeitä sekä maitotuotteita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubrovnik — kaupunkilehti / Muurit: Torni, jonka rakennutti paavi] Muurin vaikuttavin torni on pyöreä Minčeta, joka nousee kaupungin korkeimmalta kohdalta maan puolelta. Paavi Pius II lähetti sen rakentajat Dubrovnikiin vuonna 1463, juuri kun Ottomaanien uhka Balkanilla oli suurimmillaan — Konstantinopoli oli kaatunut vain kymmenen vuotta aiemmin. Alun perin nelikulmainen linnake muutettiin myöhemmin pyöreäksi, koska pyöreä muoto kesti tykkitulta paremmin kuin terävät kulmat. Torni ei koskaan joutunut todelliseen taisteluun — se riitti, että se näytti vahvalta.
+- [Krakova — kaupunkilehti / Uskonto: Ikkuna, josta paavi jutteli nuorille] Kesäkuussa 1979, ensimmäisellä paavinvierailullaan kotimaahansa, Johannes Paavali II kiipesi yöllä entisen kotinsa, arkkipiispan palatsin, ikkunalaudalle puhumaan alla laulaville nuorille — kardinaali piti häntä kiinni, ettei hän putoaisi. "Kun asuin täällä Krakovassa, olin melko kunnollinen ihminen. En koskaan kiivennyt ikkunoihin", paavi vitsaili yleisölle. Tapahtumasta tuli perinne, jota toistettiin jokaisella hänen vierailullaan kuolemaansa 2005 asti, ja ikkuna vetää yhä pyhiinvaeltajia.
+AIEMPI KYSYMYS: Mitä tuomiokirkkobasilika tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Tuomiokirkko]] on kirkko, jossa [[piispan]] istuin eli katedra sijaitsee. Basilika on puolestaan joko rakennustyyppi, jossa keskilaiva on sivulaivoja korkeampi, tai kunnianimi, jonka [[paavi]] voi myöntää historiallisesti tai hengellisesti merkittävälle kirkolle. Łowiczissa kaksi nimitystä yhdistyy, koska kaupungissa on piispa ja tuomiokirkkobasilika. En ole varma, onko Łowiczin kirkon basilika-asema nimenomaan paavin myöntämä kunnianimi.
+KYSYMYS: Kerro lisää: paavi
+
+### 354
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ciechocinek (kulttuuri)
+Tietoruudun teksti: Ciechocinek on kylpyläkaupunki Kuyavian–Pommerin maakunnassa Veikselin rannalla Pohjois-Keski-Puolassa, ja siellä asuu noin 10 400 ihmistä. Kaupunki on kuuluisa maailman pisimmistä suolavesitorneistaan (graduation towers). Paikalliset suolaiset lähteet arvioitiin poikkeuksellisen arvokkaiksi, ja lähdettä nro 14 kutsuttiin luonnon ihmeeksi. Kun Wieliczka ja Bochnia joutuivat Itävallalle Puolan ensimmäisessä jaossa, viranomaiset kiinnostuivat Ciechocinekin ja läheisen Słońskin suolavaroista, ja Stanisław Staszicin aloitteesta laadittiin suolanvalmistushanke. Kylpylän ja lomakohteen kehitys alkoi vuonna 1836, ja vuonna 1867 kaupunki sai rautatieyhteyden Bydgoszczin ja Varsovan kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Timbuktu — kaupunkilehti / Timbuktu: Suola tulee pohjoisesta, kolme viikkoa kerrallaan] Timbuktu oli Saharan kauppareitin eteläinen päätepiste, ja siihen koko kaupunki perustui. Vielä 1900-luvun jälkipuoliskolle asti kivisuola tuotiin kuudensadankuudenkymmenenneljän kilometrin päästä pohjoisesta kahdessa vuosittaisessa karavaanissa: toinen lähti marraskuun alussa, toinen maaliskuun lopussa. Karavaanissa oli useita tuhansia kameleja, matka kesti kolme viikkoa suuntaansa, ja paluumatkalla jokainen kameli kantoi neljä tai viisi kolmenkymmenen kilon laattaa. Menomatkalla vietiin ruokaa kaivosmiehille. Nykyään laatat tulevat kuorma-autolla, ja Timbuktusta suola jatkaa veneellä muualle Maliin.
+- [Gao — kaupunkilehti / Songhain kultainen valtakunta: Kulta ja suola kulkivat jokea pitkin] Kulta-suolakauppa oli koko Sahelin talouden selkäranka, ja Songhain valtakunta hallitsi sen tärkeintä solmukohtaa. Pohjoisesta tuotu suola ja etelästä noussut kulta vaihtoivat kuljetusvälinettä Timbuktussa, kun kamelikaravaanit kohtasivat joella kulkevat lastiveneet. Tavarat matkasivat vielä noin 800 kilometrin matkan Nigerjokea pitkin Djennéstä Gaohon ja takaisin, ja jokivarren kaupungit vaurastuivat tästä liikenteestä vuosisatojen ajan. Ilmasta katsottuna joki näyttää kapealta vihreältä nauhalta hiekan keskellä - juuri tämä nauha teki Songhaista mahdollisen keskellä maailman suurinta aavikkoa.
+AIEMPI KYSYMYS: Minkä maailmanennätyksen kaupungin rakennelmat pitävät?
+AIEMPI VASTAUS (Livia):
+Kas vaan, ennätyksiä. Ciechocinek on kuuluisa maailman pisimmistä [[suolavesitorneista]], joita kutsutaan englanniksi nimellä graduation towers. Torneissa suolainen lähdevesi valutetaan korkean rakennelman läpi, jolloin veden haihtuessa ilmaan nousee hienojakoista suolasumua, ja tornien ympäristöä pidetään terveellisenä hengityksen kannalta. Kaupunki sijaitsee [[Veikselin]] rannalla Kuyavian–Pommerin maakunnassa, ja siellä asuu noin 10 400 ihmistä. Tarkkaa pituutta en ole varma, mutta pitkiä ne ovat.
+KYSYMYS: Kerro lisää: suolavesitorneista
+
+### 355
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ciechocinek (kulttuuri)
+Tietoruudun teksti: Ciechocinek on kylpyläkaupunki Kuyavian–Pommerin maakunnassa Veikselin rannalla Pohjois-Keski-Puolassa, ja siellä asuu noin 10 400 ihmistä. Kaupunki on kuuluisa maailman pisimmistä suolavesitorneistaan (graduation towers). Paikalliset suolaiset lähteet arvioitiin poikkeuksellisen arvokkaiksi, ja lähdettä nro 14 kutsuttiin luonnon ihmeeksi. Kun Wieliczka ja Bochnia joutuivat Itävallalle Puolan ensimmäisessä jaossa, viranomaiset kiinnostuivat Ciechocinekin ja läheisen Słońskin suolavaroista, ja Stanisław Staszicin aloitteesta laadittiin suolanvalmistushanke. Kylpylän ja lomakohteen kehitys alkoi vuonna 1836, ja vuonna 1867 kaupunki sai rautatieyhteyden Bydgoszczin ja Varsovan kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Wawel] Isoisäsi kirjasi, että kuninkaat nukkuvat kirkon lattian alla ja että kaupunki kuuluu nyt keisarille. Molemmat pitivät paikkansa yhtä aikaa, ja juuri se oli kukkulan kipeä kohta. Wawel on jurakautista kalkkikiveä, karstiutunut ja luolia täynnä — yksi niistä on lohikäärmeluola — ja linna seisoo 228 metrissä Veikselin rannalla. Katedraalissa kruunattiin ja haudattiin Puolan hallitsijat, vaikka pääkaupunki siirtyi Varsovaan jo 1596. Sitten kukkula vaihtoi omistajaa. Vuoden 1795 jaon jälkeen Wawel joutui Itävallalle, ja sotilaat muuttivat sen kasarmiksi: sisäpihan renessanssikaarikäytävät muurattiin umpeen, sisätiloja muutettiin ja rakennuksia purettiin, kahden kirkon verran. 1800-luvun jälkipu…
+- [Krakova — kaupunkilehti / Historia: Wawel oli kasarmi ennen kuin siitä tuli museo] Wawel on jurakautista kalkkikiveä, karstiutunut ja luolia täynnä, ja linna seisoo 228 metrissä Veikselin rannalla. Katedraalissa kruunattiin ja haudattiin Puolan hallitsijat, vaikka pääkaupunki siirtyi Varsovaan jo 1596. Vuoden 1795 jaon jälkeen kukkula joutui Itävallalle, ja sotilaat muuttivat sen kasarmiksi: sisäpihan renessanssikaarikäytävät muurattiin umpeen ja rakennuksia purettiin. Vasta vuonna 1905 keisari Frans Joosef käski joukkonsa pois. Kunnostus rahoitettiin yleisellä keräyksellä, ja lahjoittajien nimet kaiverrettiin tiiliin, joista muurattiin muuri pohjoisen portin lähelle. Ne ovat siellä yhä ja niitä voi lukea.
+AIEMPI KYSYMYS: Minkä maailmanennätyksen kaupungin rakennelmat pitävät?
+AIEMPI VASTAUS (Livia):
+Kas vaan, ennätyksiä. Ciechocinek on kuuluisa maailman pisimmistä [[suolavesitorneista]], joita kutsutaan englanniksi nimellä graduation towers. Torneissa suolainen lähdevesi valutetaan korkean rakennelman läpi, jolloin veden haihtuessa ilmaan nousee hienojakoista suolasumua, ja tornien ympäristöä pidetään terveellisenä hengityksen kannalta. Kaupunki sijaitsee [[Veikselin]] rannalla Kuyavian–Pommerin maakunnassa, ja siellä asuu noin 10 400 ihmistä. Tarkkaa pituutta en ole varma, mutta pitkiä ne ovat.
+KYSYMYS: Kerro lisää: Veikselin
+
+### 356
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ciechocinek (kulttuuri)
+Tietoruudun teksti: Ciechocinek on kylpyläkaupunki Kuyavian–Pommerin maakunnassa Veikselin rannalla Pohjois-Keski-Puolassa, ja siellä asuu noin 10 400 ihmistä. Kaupunki on kuuluisa maailman pisimmistä suolavesitorneistaan (graduation towers). Paikalliset suolaiset lähteet arvioitiin poikkeuksellisen arvokkaiksi, ja lähdettä nro 14 kutsuttiin luonnon ihmeeksi. Kun Wieliczka ja Bochnia joutuivat Itävallalle Puolan ensimmäisessä jaossa, viranomaiset kiinnostuivat Ciechocinekin ja läheisen Słońskin suolavaroista, ja Stanisław Staszicin aloitteesta laadittiin suolanvalmistushanke. Kylpylän ja lomakohteen kehitys alkoi vuonna 1836, ja vuonna 1867 kaupunki sai rautatieyhteyden Bydgoszczin ja Varsovan kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Roomalainen kylpylä] Kylpylän lattiat ovat poissa, mutta niiden kannattimet ovat tallella: nurmella seisoo satoja tiilipinoja tasaisissa riveissä. Ne ovat hypokaustin pilareita. Pinojen päälle ladottiin tiililaatta, sen päälle betonikerros ja vasta ylimmäksi huoneen lattia, joten lattian ja maan väliin jäi yhtenäinen ontelo. Uunista tuleva kuuma ilma ja savu kiersivät pilareiden välissä ja nousivat seinien sisään muurattuja tiiliputkia pitkin katolle, joten lämpöä tuli sekä lattiasta että seinistä. Kylpylä rakennettiin 200-luvulla keisari Caracallan (hallitsi 198–217) aikana ja omistettiin lääketieteen jumalalle Asklepiokselle. Kolikkolöydöt ajoittivat rakentamisen ja osoittivat noin viidensadan vuoden käytön. …
+- [Sansibar — kohdekartta / Kohdekartta: Hamamnin kylpylä] 1870–1888 Sulttaani Barghash bin Said rakennutti kaupunkiin yleisen kylpylän vuosina 1870–1888. Se toimi kylpylänä vuoteen 1920 asti. Persialaiseksi sitä kutsutaan siksi, että rakentaminen tilattiin shiraziarkkitehdeilta. Sana hamamni tarkoittaa kylpyjen paikkaa, ja siitä on tullut myös koko korttelin nimi. Sisällä oli monimutkainen tilasarja: kuumia ja kylmiä altaita, käymälöitä, parranajotiloja ja ravintola. Kuuma vesi tuotiin maanalaisia akvedukteja pitkin. Sisäänpääsy oli maksullinen, joten säännöllisesti kylpylää käyttivät vain varakkaat sansibarilaiset. Kylpylä oli avoinna sekä miehille että naisille, mutta eri aikoina. Kylpylä ei ole enää toiminnassa, mutta se on avoinna kävijöille j…
+AIEMPI KYSYMYS: Mihin sairauksiin paikallisten lähteiden hoitovaikutukset kohdistuvat?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Ciechocinekin suolalähteitä käytetään [[kylpylähoidoissa]], ja suolavesitornien ympäristön ilmaa hyödynnetään erityisesti hengitysteiden hoidossa. Muistini mukaan kylpylän hoidot kohdistuvat myös tuki- ja liikuntaelinten sekä verenkiertoelinten vaivoihin. En ole varma täydellisestä luettelosta, joten tarkat tiedot kannattaa tarkistaa kylpylän omista lähteistä. Lääkäri tietää tästä enemmän kuin kyyhky.
+KYSYMYS: Kerro lisää: kylpylähoidoissa
+
+### 357
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ciechocinek (kulttuuri)
+Tietoruudun teksti: Ciechocinek on kylpyläkaupunki Kuyavian–Pommerin maakunnassa Veikselin rannalla Pohjois-Keski-Puolassa, ja siellä asuu noin 10 400 ihmistä. Kaupunki on kuuluisa maailman pisimmistä suolavesitorneistaan (graduation towers). Paikalliset suolaiset lähteet arvioitiin poikkeuksellisen arvokkaiksi, ja lähdettä nro 14 kutsuttiin luonnon ihmeeksi. Kun Wieliczka ja Bochnia joutuivat Itävallalle Puolan ensimmäisessä jaossa, viranomaiset kiinnostuivat Ciechocinekin ja läheisen Słońskin suolavaroista, ja Stanisław Staszicin aloitteesta laadittiin suolanvalmistushanke. Kylpylän ja lomakohteen kehitys alkoi vuonna 1836, ja vuonna 1867 kaupunki sai rautatieyhteyden Bydgoszczin ja Varsovan kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Historia: Suolakaivos jossa on kirkko maan alla] 13. vuosisata — Wieliczkan suolakaivos Krakovan lähellä on kaivettu 1200-luvulta lähtien, ja suolaa louhittiin siellä yhtäjaksoisesti aina vuoteen 1996 asti — yksi maailman vanhimmista toimivista kaivoksista. Kaivos ulottuu 327 metrin syvyyteen ja yli 287 kilometrin käytäväverkostoon. Vuosisatojen aikana kaivosmiehet veistivät suolasta patsaita, kappeleita ja jopa kokonaisia kirkkosaleja kattokruunuineen — kaikki, myös valaisimet, on veistetty tai puhallettu suolasta. Nykyään kaivos on Unescon maailmanperintökohde ja yksi Puolan suosituimmista nähtävyyksistä.
+AIEMPI KYSYMYS: Miksi suolalla oli ennen niin suuri arvo?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä kysymys. Ennen jääkaappeja suolaa tarvittiin ruoan säilyttämiseen, ja siksi sitä kauppasivat ja verottivat kaikki, jotka saivat siitä tuloja. Puolassa suola oli arvokasta, ja kun [[Wieliczka]] ja [[Bochnia]] joutuivat Puolan ensimmäisessä jaossa Itävallalle, viranomaiset alkoivat kiinnostua Ciechocinekin ja läheisen Słońskin suolavaroista. [[Stanisław Staszicin]] aloitteesta laadittiin suolanvalmistushanke. Siitä alkoi kylpyläkaupungin tie, ja tästä asiasta kyyhky kirjoittaisi kirjeen heti.
+KYSYMYS: Kerro lisää: Wieliczka
+
+### 358
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ciechocinek (kulttuuri)
+Tietoruudun teksti: Ciechocinek on kylpyläkaupunki Kuyavian–Pommerin maakunnassa Veikselin rannalla Pohjois-Keski-Puolassa, ja siellä asuu noin 10 400 ihmistä. Kaupunki on kuuluisa maailman pisimmistä suolavesitorneistaan (graduation towers). Paikalliset suolaiset lähteet arvioitiin poikkeuksellisen arvokkaiksi, ja lähdettä nro 14 kutsuttiin luonnon ihmeeksi. Kun Wieliczka ja Bochnia joutuivat Itävallalle Puolan ensimmäisessä jaossa, viranomaiset kiinnostuivat Ciechocinekin ja läheisen Słońskin suolavaroista, ja Stanisław Staszicin aloitteesta laadittiin suolanvalmistushanke. Kylpylän ja lomakohteen kehitys alkoi vuonna 1836, ja vuonna 1867 kaupunki sai rautatieyhteyden Bydgoszczin ja Varsovan kanssa.
+AIEMPI KYSYMYS: Miksi suolalla oli ennen niin suuri arvo?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä kysymys. Ennen jääkaappeja suolaa tarvittiin ruoan säilyttämiseen, ja siksi sitä kauppasivat ja verottivat kaikki, jotka saivat siitä tuloja. Puolassa suola oli arvokasta, ja kun [[Wieliczka]] ja [[Bochnia]] joutuivat Puolan ensimmäisessä jaossa Itävallalle, viranomaiset alkoivat kiinnostua Ciechocinekin ja läheisen Słońskin suolavaroista. [[Stanisław Staszicin]] aloitteesta laadittiin suolanvalmistushanke. Siitä alkoi kylpyläkaupungin tie, ja tästä asiasta kyyhky kirjoittaisi kirjeen heti.
+KYSYMYS: Kerro lisää: Bochnia
+
+### 359
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ciechocinek (kulttuuri)
+Tietoruudun teksti: Ciechocinek on kylpyläkaupunki Kuyavian–Pommerin maakunnassa Veikselin rannalla Pohjois-Keski-Puolassa, ja siellä asuu noin 10 400 ihmistä. Kaupunki on kuuluisa maailman pisimmistä suolavesitorneistaan (graduation towers). Paikalliset suolaiset lähteet arvioitiin poikkeuksellisen arvokkaiksi, ja lähdettä nro 14 kutsuttiin luonnon ihmeeksi. Kun Wieliczka ja Bochnia joutuivat Itävallalle Puolan ensimmäisessä jaossa, viranomaiset kiinnostuivat Ciechocinekin ja läheisen Słońskin suolavaroista, ja Stanisław Staszicin aloitteesta laadittiin suolanvalmistushanke. Kylpylän ja lomakohteen kehitys alkoi vuonna 1836, ja vuonna 1867 kaupunki sai rautatieyhteyden Bydgoszczin ja Varsovan kanssa.
+AIEMPI KYSYMYS: Miksi suolalla oli ennen niin suuri arvo?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä kysymys. Ennen jääkaappeja suolaa tarvittiin ruoan säilyttämiseen, ja siksi sitä kauppasivat ja verottivat kaikki, jotka saivat siitä tuloja. Puolassa suola oli arvokasta, ja kun [[Wieliczka]] ja [[Bochnia]] joutuivat Puolan ensimmäisessä jaossa Itävallalle, viranomaiset alkoivat kiinnostua Ciechocinekin ja läheisen Słońskin suolavaroista. [[Stanisław Staszicin]] aloitteesta laadittiin suolanvalmistushanke. Siitä alkoi kylpyläkaupungin tie, ja tästä asiasta kyyhky kirjoittaisi kirjeen heti.
+KYSYMYS: Kerro lisää: Stanisław Staszicin
+
+### 360
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ciechocinek (kulttuuri)
+Tietoruudun teksti: Ciechocinek on kylpyläkaupunki Kuyavian–Pommerin maakunnassa Veikselin rannalla Pohjois-Keski-Puolassa, ja siellä asuu noin 10 400 ihmistä. Kaupunki on kuuluisa maailman pisimmistä suolavesitorneistaan (graduation towers). Paikalliset suolaiset lähteet arvioitiin poikkeuksellisen arvokkaiksi, ja lähdettä nro 14 kutsuttiin luonnon ihmeeksi. Kun Wieliczka ja Bochnia joutuivat Itävallalle Puolan ensimmäisessä jaossa, viranomaiset kiinnostuivat Ciechocinekin ja läheisen Słońskin suolavaroista, ja Stanisław Staszicin aloitteesta laadittiin suolanvalmistushanke. Kylpylän ja lomakohteen kehitys alkoi vuonna 1836, ja vuonna 1867 kaupunki sai rautatieyhteyden Bydgoszczin ja Varsovan kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Timbuktu — kaupunkilehti / Timbuktu: Suola tulee pohjoisesta, kolme viikkoa kerrallaan] Timbuktu oli Saharan kauppareitin eteläinen päätepiste, ja siihen koko kaupunki perustui. Vielä 1900-luvun jälkipuoliskolle asti kivisuola tuotiin kuudensadankuudenkymmenenneljän kilometrin päästä pohjoisesta kahdessa vuosittaisessa karavaanissa: toinen lähti marraskuun alussa, toinen maaliskuun lopussa. Karavaanissa oli useita tuhansia kameleja, matka kesti kolme viikkoa suuntaansa, ja paluumatkalla jokainen kameli kantoi neljä tai viisi kolmenkymmenen kilon laattaa. Menomatkalla vietiin ruokaa kaivosmiehille. Nykyään laatat tulevat kuorma-autolla, ja Timbuktusta suola jatkaa veneellä muualle Maliin.
+- [Gao — kaupunkilehti / Songhain kultainen valtakunta: Kulta ja suola kulkivat jokea pitkin] Kulta-suolakauppa oli koko Sahelin talouden selkäranka, ja Songhain valtakunta hallitsi sen tärkeintä solmukohtaa. Pohjoisesta tuotu suola ja etelästä noussut kulta vaihtoivat kuljetusvälinettä Timbuktussa, kun kamelikaravaanit kohtasivat joella kulkevat lastiveneet. Tavarat matkasivat vielä noin 800 kilometrin matkan Nigerjokea pitkin Djennéstä Gaohon ja takaisin, ja jokivarren kaupungit vaurastuivat tästä liikenteestä vuosisatojen ajan. Ilmasta katsottuna joki näyttää kapealta vihreältä nauhalta hiekan keskellä - juuri tämä nauha teki Songhaista mahdollisen keskellä maailman suurinta aavikkoa.
+AIEMPI KYSYMYS: Miten suolavesitornit toimivat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, katsotaas. Suolavesitornissa suolainen lähdevesi pumpataan korkean puurakennelman huipulle ja valutetaan risukimppujen läpi alas. Samalla osa vedestä haihtuu, jolloin jäljelle jäävä [[suolaliuos]] väkevöityy, ja tornin ympärille syntyy suolaisen sumun kyllästämä [[mikroilmasto]]. Alun perin tornit rakennettiin suolan valmistuksen tehostamiseksi, ja myöhemmin ne on otettu hoitokäyttöön. Haihtuva vesi on kyllä kiehtovaa, vaikka lentäjälle pelkkä tuuli riittää.
+KYSYMYS: Kerro lisää: suolaliuos
+
+### 361
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ciechocinek (kulttuuri)
+Tietoruudun teksti: Ciechocinek on kylpyläkaupunki Kuyavian–Pommerin maakunnassa Veikselin rannalla Pohjois-Keski-Puolassa, ja siellä asuu noin 10 400 ihmistä. Kaupunki on kuuluisa maailman pisimmistä suolavesitorneistaan (graduation towers). Paikalliset suolaiset lähteet arvioitiin poikkeuksellisen arvokkaiksi, ja lähdettä nro 14 kutsuttiin luonnon ihmeeksi. Kun Wieliczka ja Bochnia joutuivat Itävallalle Puolan ensimmäisessä jaossa, viranomaiset kiinnostuivat Ciechocinekin ja läheisen Słońskin suolavaroista, ja Stanisław Staszicin aloitteesta laadittiin suolanvalmistushanke. Kylpylän ja lomakohteen kehitys alkoi vuonna 1836, ja vuonna 1867 kaupunki sai rautatieyhteyden Bydgoszczin ja Varsovan kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iguazú — kaupunkilehti / Sademetsä ja sen asukkaat: Sumun kostuttama viidakko] Iguazún putoukset syytävät ilmaan niin paljon vesipisaroita, että ympärille syntyy oma pieni mikroilmasto: kosteus pysyy koholla myös kuivimpina kuukausina, ja se pitää yllä poikkeuksellisen rehevää atlantin sademetsää. Tämä metsätyyppi on kutistunut Etelä-Amerikassa murto-osaan alkuperäisestä laajuudestaan maanviljelyn ja kaupunkien tieltä, ja Iguazún ympärille säilynyt palanen on yksi sen tärkeimmistä jäljellä olevista osista. Latvuskerroksen alla kasvaa sananjalkoja, orkideoita ja liaaneja päällekkäin, ja jokainen kerros tarjoaa elinympäristön hyönteisille, linnuille ja nisäkkäille. Puiston rajat eivät suojaa vain putouksia vaan koko elämän kirjoa.
+AIEMPI KYSYMYS: Miten suolavesitornit toimivat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, katsotaas. Suolavesitornissa suolainen lähdevesi pumpataan korkean puurakennelman huipulle ja valutetaan risukimppujen läpi alas. Samalla osa vedestä haihtuu, jolloin jäljelle jäävä [[suolaliuos]] väkevöityy, ja tornin ympärille syntyy suolaisen sumun kyllästämä [[mikroilmasto]]. Alun perin tornit rakennettiin suolan valmistuksen tehostamiseksi, ja myöhemmin ne on otettu hoitokäyttöön. Haihtuva vesi on kyllä kiehtovaa, vaikka lentäjälle pelkkä tuuli riittää.
+KYSYMYS: Kerro lisää: mikroilmasto
+
+### 362
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ciechocinek (kulttuuri)
+Tietoruudun teksti: Ciechocinek on kylpyläkaupunki Kuyavian–Pommerin maakunnassa Veikselin rannalla Pohjois-Keski-Puolassa, ja siellä asuu noin 10 400 ihmistä. Kaupunki on kuuluisa maailman pisimmistä suolavesitorneistaan (graduation towers). Paikalliset suolaiset lähteet arvioitiin poikkeuksellisen arvokkaiksi, ja lähdettä nro 14 kutsuttiin luonnon ihmeeksi. Kun Wieliczka ja Bochnia joutuivat Itävallalle Puolan ensimmäisessä jaossa, viranomaiset kiinnostuivat Ciechocinekin ja läheisen Słońskin suolavaroista, ja Stanisław Staszicin aloitteesta laadittiin suolanvalmistushanke. Kylpylän ja lomakohteen kehitys alkoi vuonna 1836, ja vuonna 1867 kaupunki sai rautatieyhteyden Bydgoszczin ja Varsovan kanssa.
+AIEMPI KYSYMYS: Mikä joki Veikseli on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Veikseli]] on Puolan pisin joki. Se saa alkunsa Karpaattien vuoristosta Etelä-Puolassa, virtaa [[Varsovan]] ja Krakovan kautta ja laskee Gdańskin lähellä [[Itämereen]]. Ciechocinek sijaitsee joen rannalla Pohjois-Keski-Puolassa, ja joki on ollut tärkeä kulkuväylä Puolan kaupalle. Tarkkaa pituutta en ole varma, mutta pitkä se on. Yläilmoista Veikseli näyttää hopeiselta nauhalta.
+KYSYMYS: Kerro lisää: Veikseli
+
+### 363
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ciechocinek (kulttuuri)
+Tietoruudun teksti: Ciechocinek on kylpyläkaupunki Kuyavian–Pommerin maakunnassa Veikselin rannalla Pohjois-Keski-Puolassa, ja siellä asuu noin 10 400 ihmistä. Kaupunki on kuuluisa maailman pisimmistä suolavesitorneistaan (graduation towers). Paikalliset suolaiset lähteet arvioitiin poikkeuksellisen arvokkaiksi, ja lähdettä nro 14 kutsuttiin luonnon ihmeeksi. Kun Wieliczka ja Bochnia joutuivat Itävallalle Puolan ensimmäisessä jaossa, viranomaiset kiinnostuivat Ciechocinekin ja läheisen Słońskin suolavaroista, ja Stanisław Staszicin aloitteesta laadittiin suolanvalmistushanke. Kylpylän ja lomakohteen kehitys alkoi vuonna 1836, ja vuonna 1867 kaupunki sai rautatieyhteyden Bydgoszczin ja Varsovan kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Varsovan linna] 1971–1984 (alkuperäinen linna 1300-luvulta) Varsovan linna on seisonut Wisła-joen rannalla jo 1300-luvulta lähtien, aluksi vaatimattomana Mazovian herttuoiden linnana. 1600-luvun alussa kuningas Zygmunt III Vaasa siirsi hovinsa Krakovasta Varsovaan ja rakennutti linnasta komean barokkilinnan, jota kruunaa 60 metriä korkea Sigismundin torni. Linnan sisällä sijaitsee sali, jossa hyväksyttiin Euroopan ensimmäinen kirjoitettu perustuslaki vuonna 1791. Kuninkaallisissa asunnoissa riippuu maalauksia mestari Canaletolta, ja linnan kappelissa säilytetään jopa sotasankari Tadeusz Kościuszkon sydäntä. Toinen maailmansota tuhosi linnan lähes kokonaan - ensin pommeissa syksyllä 1939, sitten saksalaiste…
+- [Varsova — kohdekartta / Kohdekartta: Varsovan kansallismuseo] 1938 (perustettu 1862) Varsovan kansallismuseo perustettiin jo vuonna 1862 taidemuseona, ja se sai nykyisen nimensä vuonna 1916. Nykyinen suuri rakennus Jerusalimin puistokadun varrella valmistui vasta vuonna 1938, arkkitehti Tadeusz Tolwińskin suunnittelemana. Kokoelmiin kuuluu yli 830 000 esinettä muinaisajalta nykypäivään. Erikoisuutena on Euroopan suurin nubialaisen kristillisen taiteen kokoelma, joka on tuotu aikoinaan Sudanista. Museon seinillä riippuu myös Jan Matejkon jättimäinen maalaus Grunwaldin taistelu vuodelta 1878 - se on lähes 10 metriä leveä, yksi Puolan suurimmista tauluista. Nykyään museossa käy vuosittain yli 1,5 miljoonaa vierailijaa, ja se kuuluu maailman käydyimpien t…
+AIEMPI KYSYMYS: Mikä joki Veikseli on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Veikseli]] on Puolan pisin joki. Se saa alkunsa Karpaattien vuoristosta Etelä-Puolassa, virtaa [[Varsovan]] ja Krakovan kautta ja laskee Gdańskin lähellä [[Itämereen]]. Ciechocinek sijaitsee joen rannalla Pohjois-Keski-Puolassa, ja joki on ollut tärkeä kulkuväylä Puolan kaupalle. Tarkkaa pituutta en ole varma, mutta pitkä se on. Yläilmoista Veikseli näyttää hopeiselta nauhalta.
+KYSYMYS: Kerro lisää: Varsovan
+
+### 364
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ciechocinek (kulttuuri)
+Tietoruudun teksti: Ciechocinek on kylpyläkaupunki Kuyavian–Pommerin maakunnassa Veikselin rannalla Pohjois-Keski-Puolassa, ja siellä asuu noin 10 400 ihmistä. Kaupunki on kuuluisa maailman pisimmistä suolavesitorneistaan (graduation towers). Paikalliset suolaiset lähteet arvioitiin poikkeuksellisen arvokkaiksi, ja lähdettä nro 14 kutsuttiin luonnon ihmeeksi. Kun Wieliczka ja Bochnia joutuivat Itävallalle Puolan ensimmäisessä jaossa, viranomaiset kiinnostuivat Ciechocinekin ja läheisen Słońskin suolavaroista, ja Stanisław Staszicin aloitteesta laadittiin suolanvalmistushanke. Kylpylän ja lomakohteen kehitys alkoi vuonna 1836, ja vuonna 1867 kaupunki sai rautatieyhteyden Bydgoszczin ja Varsovan kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kaupunkilehti / Kadut ja sulut: Polhem sai sulkutyön 83-vuotiaana] Mälaren on järvi, jonka pinta on merenpintaa korkeammalla, ja Tukholma seisoo juuri siinä kohdassa, jossa vesi purkautuu Itämereen. Ennen sulkuja veneet piti sauvoa ja hinata virran läpi maksua vastaan, ja moni ajoi matalikolle. Ensimmäisen sulun rakensivat hollantilaiset mestarit kuningatar Kristiinan aikaan, ja se valmistui 1642. Kun siitä tuli liian pieni, työ annettiin 1744 Christopher Polhemille, joka oli silloin 83-vuotias. Hän kuoli kesken hankkeen, ja poika Gabriel sai sulun valmiiksi 1755.
+AIEMPI KYSYMYS: Mikä joki Veikseli on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Veikseli]] on Puolan pisin joki. Se saa alkunsa Karpaattien vuoristosta Etelä-Puolassa, virtaa [[Varsovan]] ja Krakovan kautta ja laskee Gdańskin lähellä [[Itämereen]]. Ciechocinek sijaitsee joen rannalla Pohjois-Keski-Puolassa, ja joki on ollut tärkeä kulkuväylä Puolan kaupalle. Tarkkaa pituutta en ole varma, mutta pitkä se on. Yläilmoista Veikseli näyttää hopeiselta nauhalta.
+KYSYMYS: Kerro lisää: Itämereen
+
+### 365
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kórnikin linna (kulttuuri)
+Tietoruudun teksti: Kórnikin linna on 1300-luvulla rakennettu linna Kórnikin kaupungissa Wielkopolskassa. Nykyisen uusgoottilaisen ilmeensä se sai vuonna 1855 tehdyssä muutostyössä, joka perustui osittain Karl Friedrich Schinkelin suunnitelmiin Tytus Działyńskille ja tämän pojalle Jan Kanty Działyńskille. Linnaa ympäröi Kórnikin arboretum, jonka kreivi Tytus Działyński perusti 1800-luvun alkupuolella; se on Puolan vanhin ja suurin ja Euroopan neljänneksi suurin, noin 40 hehtaaria ja yli 3 300 taksonia. Kreivi Władysław Zamoyski testamenttasi linnan taidekokoelmineen ja arboretumeineen Puolan valtiolle ennen kuolemaansa vuonna 1924. Nykyään linnassa on museo ja Kórnikin kirjasto, jonka merkittäviin teoksiin kuuluu Adam Mickiewiczin Dziady-runoelman kolmannen osan alkuperäiskäsikirjoitus.
+AIEMPI KYSYMYS: Kuka perusti Kórnikin arboretumin 1800-luvun alkupuolella?
+AIEMPI VASTAUS (Livia):
+Ai se. Kórnikin arboretumin perusti kreivi [[Tytus Działyński]] 1800-luvun alkupuolella. Hän ja hänen poikansa [[Jan Kanty Działyński]] teettivät myös linnaan 1855 uusgoottilaisen ilmeen, joka perustui osittain Karl Friedrich Schinkelin suunnitelmiin. Arboretum ympäröi linnaa, ja sen pinta-ala on noin 40 hehtaaria ja kasvilajeja eli taksoneja on yli 3 300. Lähteiden mukaan se on Puolan vanhimpia ja suurimpia puutarhoja. Puissa on aina hyvä istua.
+KYSYMYS: Kerro lisää: Tytus Działyński
+
+### 366
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kórnikin linna (kulttuuri)
+Tietoruudun teksti: Kórnikin linna on 1300-luvulla rakennettu linna Kórnikin kaupungissa Wielkopolskassa. Nykyisen uusgoottilaisen ilmeensä se sai vuonna 1855 tehdyssä muutostyössä, joka perustui osittain Karl Friedrich Schinkelin suunnitelmiin Tytus Działyńskille ja tämän pojalle Jan Kanty Działyńskille. Linnaa ympäröi Kórnikin arboretum, jonka kreivi Tytus Działyński perusti 1800-luvun alkupuolella; se on Puolan vanhin ja suurin ja Euroopan neljänneksi suurin, noin 40 hehtaaria ja yli 3 300 taksonia. Kreivi Władysław Zamoyski testamenttasi linnan taidekokoelmineen ja arboretumeineen Puolan valtiolle ennen kuolemaansa vuonna 1924. Nykyään linnassa on museo ja Kórnikin kirjasto, jonka merkittäviin teoksiin kuuluu Adam Mickiewiczin Dziady-runoelman kolmannen osan alkuperäiskäsikirjoitus.
+AIEMPI KYSYMYS: Kuka perusti Kórnikin arboretumin 1800-luvun alkupuolella?
+AIEMPI VASTAUS (Livia):
+Ai se. Kórnikin arboretumin perusti kreivi [[Tytus Działyński]] 1800-luvun alkupuolella. Hän ja hänen poikansa [[Jan Kanty Działyński]] teettivät myös linnaan 1855 uusgoottilaisen ilmeen, joka perustui osittain Karl Friedrich Schinkelin suunnitelmiin. Arboretum ympäröi linnaa, ja sen pinta-ala on noin 40 hehtaaria ja kasvilajeja eli taksoneja on yli 3 300. Lähteiden mukaan se on Puolan vanhimpia ja suurimpia puutarhoja. Puissa on aina hyvä istua.
+KYSYMYS: Kerro lisää: Jan Kanty Działyński
+
+### 367
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kórnikin linna (kulttuuri)
+Tietoruudun teksti: Kórnikin linna on 1300-luvulla rakennettu linna Kórnikin kaupungissa Wielkopolskassa. Nykyisen uusgoottilaisen ilmeensä se sai vuonna 1855 tehdyssä muutostyössä, joka perustui osittain Karl Friedrich Schinkelin suunnitelmiin Tytus Działyńskille ja tämän pojalle Jan Kanty Działyńskille. Linnaa ympäröi Kórnikin arboretum, jonka kreivi Tytus Działyński perusti 1800-luvun alkupuolella; se on Puolan vanhin ja suurin ja Euroopan neljänneksi suurin, noin 40 hehtaaria ja yli 3 300 taksonia. Kreivi Władysław Zamoyski testamenttasi linnan taidekokoelmineen ja arboretumeineen Puolan valtiolle ennen kuolemaansa vuonna 1924. Nykyään linnassa on museo ja Kórnikin kirjasto, jonka merkittäviin teoksiin kuuluu Adam Mickiewiczin Dziady-runoelman kolmannen osan alkuperäiskäsikirjoitus.
+AIEMPI KYSYMYS: Kenelle kreivi Zamoyski testamenttasi linnan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kreivi testamenttasi linnan taidekokoelmineen ja arboretumeineen Puolan valtiolle ennen kuolemaansa vuonna 1924. Nykyään linnassa toimii museo sekä [[Kórnikin kirjasto]], jonka merkittäviin teoksiin kuuluu [[Adam Mickiewiczin]] Dziady-runoelman kolmannen osan alkuperäiskäsikirjoitus. Linna on 1300-luvulla rakennettu, ja se sijaitsee Wielkopolskassa. Siinä oli yksi hyvä lahjoitus.
+KYSYMYS: Kerro lisää: Kórnikin kirjasto
+
+### 368
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kórnikin linna (kulttuuri)
+Tietoruudun teksti: Kórnikin linna on 1300-luvulla rakennettu linna Kórnikin kaupungissa Wielkopolskassa. Nykyisen uusgoottilaisen ilmeensä se sai vuonna 1855 tehdyssä muutostyössä, joka perustui osittain Karl Friedrich Schinkelin suunnitelmiin Tytus Działyńskille ja tämän pojalle Jan Kanty Działyńskille. Linnaa ympäröi Kórnikin arboretum, jonka kreivi Tytus Działyński perusti 1800-luvun alkupuolella; se on Puolan vanhin ja suurin ja Euroopan neljänneksi suurin, noin 40 hehtaaria ja yli 3 300 taksonia. Kreivi Władysław Zamoyski testamenttasi linnan taidekokoelmineen ja arboretumeineen Puolan valtiolle ennen kuolemaansa vuonna 1924. Nykyään linnassa on museo ja Kórnikin kirjasto, jonka merkittäviin teoksiin kuuluu Adam Mickiewiczin Dziady-runoelman kolmannen osan alkuperäiskäsikirjoitus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kaupunkilehti / Arki ja tavat: Pahvikaupunki kilpailee joka joulukuu] Szopka on krakovalainen jouluseimi, joka rakennetaan pahvista ja värillisestä foliosta oikeiden rakennusten mukaan: Mariankirkon tornit, Sukiennice, Wawel. Tavan aloittivat 1800-luvulla muurarit ja kirvesmiehet, joilla ei ollut talvella töitä. Vuodesta 1937 seimet on kannettu joulukuun ensimmäisenä torstaina Adam Mickiewiczin patsaalle keskustorille kilpailuun. Unesco otti tavan kulttuuriperintöluetteloonsa 2018.
+AIEMPI KYSYMYS: Kenelle kreivi Zamoyski testamenttasi linnan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kreivi testamenttasi linnan taidekokoelmineen ja arboretumeineen Puolan valtiolle ennen kuolemaansa vuonna 1924. Nykyään linnassa toimii museo sekä [[Kórnikin kirjasto]], jonka merkittäviin teoksiin kuuluu [[Adam Mickiewiczin]] Dziady-runoelman kolmannen osan alkuperäiskäsikirjoitus. Linna on 1300-luvulla rakennettu, ja se sijaitsee Wielkopolskassa. Siinä oli yksi hyvä lahjoitus.
+KYSYMYS: Kerro lisää: Adam Mickiewiczin
+
+### 369
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kórnikin linna (kulttuuri)
+Tietoruudun teksti: Kórnikin linna on 1300-luvulla rakennettu linna Kórnikin kaupungissa Wielkopolskassa. Nykyisen uusgoottilaisen ilmeensä se sai vuonna 1855 tehdyssä muutostyössä, joka perustui osittain Karl Friedrich Schinkelin suunnitelmiin Tytus Działyńskille ja tämän pojalle Jan Kanty Działyńskille. Linnaa ympäröi Kórnikin arboretum, jonka kreivi Tytus Działyński perusti 1800-luvun alkupuolella; se on Puolan vanhin ja suurin ja Euroopan neljänneksi suurin, noin 40 hehtaaria ja yli 3 300 taksonia. Kreivi Władysław Zamoyski testamenttasi linnan taidekokoelmineen ja arboretumeineen Puolan valtiolle ennen kuolemaansa vuonna 1924. Nykyään linnassa on museo ja Kórnikin kirjasto, jonka merkittäviin teoksiin kuuluu Adam Mickiewiczin Dziady-runoelman kolmannen osan alkuperäiskäsikirjoitus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Varsovan linna] 1971–1984 (alkuperäinen linna 1300-luvulta) Varsovan linna on seisonut Wisła-joen rannalla jo 1300-luvulta lähtien, aluksi vaatimattomana Mazovian herttuoiden linnana. 1600-luvun alussa kuningas Zygmunt III Vaasa siirsi hovinsa Krakovasta Varsovaan ja rakennutti linnasta komean barokkilinnan, jota kruunaa 60 metriä korkea Sigismundin torni. Linnan sisällä sijaitsee sali, jossa hyväksyttiin Euroopan ensimmäinen kirjoitettu perustuslaki vuonna 1791. Kuninkaallisissa asunnoissa riippuu maalauksia mestari Canaletolta, ja linnan kappelissa säilytetään jopa sotasankari Tadeusz Kościuszkon sydäntä. Toinen maailmansota tuhosi linnan lähes kokonaan - ensin pommeissa syksyllä 1939, sitten saksalaiste…
+- [Varsova — kohdekartta / Kohdekartta: Varsovan kansallismuseo] 1938 (perustettu 1862) Varsovan kansallismuseo perustettiin jo vuonna 1862 taidemuseona, ja se sai nykyisen nimensä vuonna 1916. Nykyinen suuri rakennus Jerusalimin puistokadun varrella valmistui vasta vuonna 1938, arkkitehti Tadeusz Tolwińskin suunnittelemana. Kokoelmiin kuuluu yli 830 000 esinettä muinaisajalta nykypäivään. Erikoisuutena on Euroopan suurin nubialaisen kristillisen taiteen kokoelma, joka on tuotu aikoinaan Sudanista. Museon seinillä riippuu myös Jan Matejkon jättimäinen maalaus Grunwaldin taistelu vuodelta 1878 - se on lähes 10 metriä leveä, yksi Puolan suurimmista tauluista. Nykyään museossa käy vuosittain yli 1,5 miljoonaa vierailijaa, ja se kuuluu maailman käydyimpien t…
+AIEMPI KYSYMYS: Kuka oli Adam Mickiewicz?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: runoilija. Adam Mickiewicz eli vuosina 1798–1855, ja häntä pidetään Puolan kansallisrunoilijana. Hänen tunnetuimpiin teoksiinsa kuuluvat runoelma [[Pan Tadeusz]] ja näytelmämäinen [[Dziady]], ja hän kuului [[romantiikan]] suuriin kirjailijoihin Euroopassa. Dziady-runoelman kolmannen osan käsikirjoitus on Kórnikin kirjastossa. Runoilijat ovat hieman kuin kirjekyyhkyjä, sanoma vain kulkee eteenpäin.
+KYSYMYS: Kerro lisää: Pan Tadeusz
+
+### 370
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kórnikin linna (kulttuuri)
+Tietoruudun teksti: Kórnikin linna on 1300-luvulla rakennettu linna Kórnikin kaupungissa Wielkopolskassa. Nykyisen uusgoottilaisen ilmeensä se sai vuonna 1855 tehdyssä muutostyössä, joka perustui osittain Karl Friedrich Schinkelin suunnitelmiin Tytus Działyńskille ja tämän pojalle Jan Kanty Działyńskille. Linnaa ympäröi Kórnikin arboretum, jonka kreivi Tytus Działyński perusti 1800-luvun alkupuolella; se on Puolan vanhin ja suurin ja Euroopan neljänneksi suurin, noin 40 hehtaaria ja yli 3 300 taksonia. Kreivi Władysław Zamoyski testamenttasi linnan taidekokoelmineen ja arboretumeineen Puolan valtiolle ennen kuolemaansa vuonna 1924. Nykyään linnassa on museo ja Kórnikin kirjasto, jonka merkittäviin teoksiin kuuluu Adam Mickiewiczin Dziady-runoelman kolmannen osan alkuperäiskäsikirjoitus.
+AIEMPI KYSYMYS: Kuka oli Adam Mickiewicz?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: runoilija. Adam Mickiewicz eli vuosina 1798–1855, ja häntä pidetään Puolan kansallisrunoilijana. Hänen tunnetuimpiin teoksiinsa kuuluvat runoelma [[Pan Tadeusz]] ja näytelmämäinen [[Dziady]], ja hän kuului [[romantiikan]] suuriin kirjailijoihin Euroopassa. Dziady-runoelman kolmannen osan käsikirjoitus on Kórnikin kirjastossa. Runoilijat ovat hieman kuin kirjekyyhkyjä, sanoma vain kulkee eteenpäin.
+KYSYMYS: Kerro lisää: Dziady
+
+### 371
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kórnikin linna (kulttuuri)
+Tietoruudun teksti: Kórnikin linna on 1300-luvulla rakennettu linna Kórnikin kaupungissa Wielkopolskassa. Nykyisen uusgoottilaisen ilmeensä se sai vuonna 1855 tehdyssä muutostyössä, joka perustui osittain Karl Friedrich Schinkelin suunnitelmiin Tytus Działyńskille ja tämän pojalle Jan Kanty Działyńskille. Linnaa ympäröi Kórnikin arboretum, jonka kreivi Tytus Działyński perusti 1800-luvun alkupuolella; se on Puolan vanhin ja suurin ja Euroopan neljänneksi suurin, noin 40 hehtaaria ja yli 3 300 taksonia. Kreivi Władysław Zamoyski testamenttasi linnan taidekokoelmineen ja arboretumeineen Puolan valtiolle ennen kuolemaansa vuonna 1924. Nykyään linnassa on museo ja Kórnikin kirjasto, jonka merkittäviin teoksiin kuuluu Adam Mickiewiczin Dziady-runoelman kolmannen osan alkuperäiskäsikirjoitus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Luonto: Liitukalliot hehkuvat valkoisina] Rügenin saaren itärannalla metsä päättyy äkkiä sadan metrin valkoiseen pudotukseen. Liitukalliot ovat muinaisen meren pohjaa: liitu on syntynyt miljardien pikkuruisten levänkuorien kerrostumista kymmenien miljoonien vuosien aikana, ja kallioista löytää yhä fossiileja. Korkein kohta on 118-metrinen Königsstuhl, Kuninkaanistuin. Taidemaalari Caspar David Friedrich maalasi kalliot 1818, ja taulusta tuli niin kuuluisa, että sitä pidetään Saksan romantiikan tunnuskuvana.
+AIEMPI KYSYMYS: Kuka oli Adam Mickiewicz?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: runoilija. Adam Mickiewicz eli vuosina 1798–1855, ja häntä pidetään Puolan kansallisrunoilijana. Hänen tunnetuimpiin teoksiinsa kuuluvat runoelma [[Pan Tadeusz]] ja näytelmämäinen [[Dziady]], ja hän kuului [[romantiikan]] suuriin kirjailijoihin Euroopassa. Dziady-runoelman kolmannen osan käsikirjoitus on Kórnikin kirjastossa. Runoilijat ovat hieman kuin kirjekyyhkyjä, sanoma vain kulkee eteenpäin.
+KYSYMYS: Kerro lisää: romantiikan
+
+### 372
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kórnikin linna (kulttuuri)
+Tietoruudun teksti: Kórnikin linna on 1300-luvulla rakennettu linna Kórnikin kaupungissa Wielkopolskassa. Nykyisen uusgoottilaisen ilmeensä se sai vuonna 1855 tehdyssä muutostyössä, joka perustui osittain Karl Friedrich Schinkelin suunnitelmiin Tytus Działyńskille ja tämän pojalle Jan Kanty Działyńskille. Linnaa ympäröi Kórnikin arboretum, jonka kreivi Tytus Działyński perusti 1800-luvun alkupuolella; se on Puolan vanhin ja suurin ja Euroopan neljänneksi suurin, noin 40 hehtaaria ja yli 3 300 taksonia. Kreivi Władysław Zamoyski testamenttasi linnan taidekokoelmineen ja arboretumeineen Puolan valtiolle ennen kuolemaansa vuonna 1924. Nykyään linnassa on museo ja Kórnikin kirjasto, jonka merkittäviin teoksiin kuuluu Adam Mickiewiczin Dziady-runoelman kolmannen osan alkuperäiskäsikirjoitus.
+AIEMPI KYSYMYS: Mitä uusgoottilainen tyyli tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Just niin, hyvä kysymys. [[Uusgotiikka]] on 1800-luvulla suosittu rakennustyyli, joka palautti keskiajan goottilaisia piirteitä: suippokaaria, torneja ja ikkunakoristeita. Kórnikin linna sai nykyisen ilmeensä vuonna 1855, ja muutos perustui osittain [[Karl Friedrich Schinkelin]] suunnitelmiin, vaikka linna itse on rakennettu jo 1300-luvulla. Tyyli oli tuolloin muotia monissa Euroopan linnoissa ja kirkoissa. Ylhäältä päin linna näyttää kyllä satukirjan kuvalta.
+KYSYMYS: Kerro lisää: Uusgotiikka
+
+### 373
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kórnikin linna (kulttuuri)
+Tietoruudun teksti: Kórnikin linna on 1300-luvulla rakennettu linna Kórnikin kaupungissa Wielkopolskassa. Nykyisen uusgoottilaisen ilmeensä se sai vuonna 1855 tehdyssä muutostyössä, joka perustui osittain Karl Friedrich Schinkelin suunnitelmiin Tytus Działyńskille ja tämän pojalle Jan Kanty Działyńskille. Linnaa ympäröi Kórnikin arboretum, jonka kreivi Tytus Działyński perusti 1800-luvun alkupuolella; se on Puolan vanhin ja suurin ja Euroopan neljänneksi suurin, noin 40 hehtaaria ja yli 3 300 taksonia. Kreivi Władysław Zamoyski testamenttasi linnan taidekokoelmineen ja arboretumeineen Puolan valtiolle ennen kuolemaansa vuonna 1924. Nykyään linnassa on museo ja Kórnikin kirjasto, jonka merkittäviin teoksiin kuuluu Adam Mickiewiczin Dziady-runoelman kolmannen osan alkuperäiskäsikirjoitus.
+AIEMPI KYSYMYS: Mitä uusgoottilainen tyyli tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Just niin, hyvä kysymys. [[Uusgotiikka]] on 1800-luvulla suosittu rakennustyyli, joka palautti keskiajan goottilaisia piirteitä: suippokaaria, torneja ja ikkunakoristeita. Kórnikin linna sai nykyisen ilmeensä vuonna 1855, ja muutos perustui osittain [[Karl Friedrich Schinkelin]] suunnitelmiin, vaikka linna itse on rakennettu jo 1300-luvulla. Tyyli oli tuolloin muotia monissa Euroopan linnoissa ja kirkoissa. Ylhäältä päin linna näyttää kyllä satukirjan kuvalta.
+KYSYMYS: Kerro lisää: Karl Friedrich Schinkelin
+
+### 374
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kórnikin linna (kulttuuri)
+Tietoruudun teksti: Kórnikin linna on 1300-luvulla rakennettu linna Kórnikin kaupungissa Wielkopolskassa. Nykyisen uusgoottilaisen ilmeensä se sai vuonna 1855 tehdyssä muutostyössä, joka perustui osittain Karl Friedrich Schinkelin suunnitelmiin Tytus Działyńskille ja tämän pojalle Jan Kanty Działyńskille. Linnaa ympäröi Kórnikin arboretum, jonka kreivi Tytus Działyński perusti 1800-luvun alkupuolella; se on Puolan vanhin ja suurin ja Euroopan neljänneksi suurin, noin 40 hehtaaria ja yli 3 300 taksonia. Kreivi Władysław Zamoyski testamenttasi linnan taidekokoelmineen ja arboretumeineen Puolan valtiolle ennen kuolemaansa vuonna 1924. Nykyään linnassa on museo ja Kórnikin kirjasto, jonka merkittäviin teoksiin kuuluu Adam Mickiewiczin Dziady-runoelman kolmannen osan alkuperäiskäsikirjoitus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Menovinkit] Puola on avannut kokoelmansa verkkoon isolla kädellä: kansalliskirjaston käsikirjoituksia, Chopinin omaa käsialaa, suolakaivos katunäkymänä, museoesineitä 3D:nä ja kirja, jossa on jokainen maailman visentti.
+- [Vilna — kohdekartta / Kohdekartta: Boratynka] 1659–1668 Kun kassa on tyhjä, voi aina lyödä lisää rahaa — kunhan ei kysy, mitä raha sen jälkeen on arvoltaan. Puola-Liettua kokeili tätä 1600-luvulla kuparilla, ja kansa antoi kolikolle pilkkanimen, joka on kestänyt pidempään kuin kolikon ostovoima.
+AIEMPI KYSYMYS: Millainen alue Wielkopolska on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Wielkopolska on Länsi-Puolan historiallinen alue, jonka suomenkielinen nimi on [[Suur-Puola]]. Aluetta pidetään usein Puolan valtion kehtona, ja sen vanhoja keskuksia ovat [[Poznań]] ja [[Gniezno]]. Kórnikin linna sijaitsee Wielkopolskassa, ja sen kaupunki on arboretumin ja museon ansiosta tunnettu kohde. Nimi on pitkä, mutta alue on kyllä helppo muistaa.
+KYSYMYS: Kerro lisää: Suur-Puola
+
+### 375
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kórnikin linna (kulttuuri)
+Tietoruudun teksti: Kórnikin linna on 1300-luvulla rakennettu linna Kórnikin kaupungissa Wielkopolskassa. Nykyisen uusgoottilaisen ilmeensä se sai vuonna 1855 tehdyssä muutostyössä, joka perustui osittain Karl Friedrich Schinkelin suunnitelmiin Tytus Działyńskille ja tämän pojalle Jan Kanty Działyńskille. Linnaa ympäröi Kórnikin arboretum, jonka kreivi Tytus Działyński perusti 1800-luvun alkupuolella; se on Puolan vanhin ja suurin ja Euroopan neljänneksi suurin, noin 40 hehtaaria ja yli 3 300 taksonia. Kreivi Władysław Zamoyski testamenttasi linnan taidekokoelmineen ja arboretumeineen Puolan valtiolle ennen kuolemaansa vuonna 1924. Nykyään linnassa on museo ja Kórnikin kirjasto, jonka merkittäviin teoksiin kuuluu Adam Mickiewiczin Dziady-runoelman kolmannen osan alkuperäiskäsikirjoitus.
+AIEMPI KYSYMYS: Millainen alue Wielkopolska on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Wielkopolska on Länsi-Puolan historiallinen alue, jonka suomenkielinen nimi on [[Suur-Puola]]. Aluetta pidetään usein Puolan valtion kehtona, ja sen vanhoja keskuksia ovat [[Poznań]] ja [[Gniezno]]. Kórnikin linna sijaitsee Wielkopolskassa, ja sen kaupunki on arboretumin ja museon ansiosta tunnettu kohde. Nimi on pitkä, mutta alue on kyllä helppo muistaa.
+KYSYMYS: Kerro lisää: Poznań
+
+### 376
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kórnikin linna (kulttuuri)
+Tietoruudun teksti: Kórnikin linna on 1300-luvulla rakennettu linna Kórnikin kaupungissa Wielkopolskassa. Nykyisen uusgoottilaisen ilmeensä se sai vuonna 1855 tehdyssä muutostyössä, joka perustui osittain Karl Friedrich Schinkelin suunnitelmiin Tytus Działyńskille ja tämän pojalle Jan Kanty Działyńskille. Linnaa ympäröi Kórnikin arboretum, jonka kreivi Tytus Działyński perusti 1800-luvun alkupuolella; se on Puolan vanhin ja suurin ja Euroopan neljänneksi suurin, noin 40 hehtaaria ja yli 3 300 taksonia. Kreivi Władysław Zamoyski testamenttasi linnan taidekokoelmineen ja arboretumeineen Puolan valtiolle ennen kuolemaansa vuonna 1924. Nykyään linnassa on museo ja Kórnikin kirjasto, jonka merkittäviin teoksiin kuuluu Adam Mickiewiczin Dziady-runoelman kolmannen osan alkuperäiskäsikirjoitus.
+AIEMPI KYSYMYS: Millainen alue Wielkopolska on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Wielkopolska on Länsi-Puolan historiallinen alue, jonka suomenkielinen nimi on [[Suur-Puola]]. Aluetta pidetään usein Puolan valtion kehtona, ja sen vanhoja keskuksia ovat [[Poznań]] ja [[Gniezno]]. Kórnikin linna sijaitsee Wielkopolskassa, ja sen kaupunki on arboretumin ja museon ansiosta tunnettu kohde. Nimi on pitkä, mutta alue on kyllä helppo muistaa.
+KYSYMYS: Kerro lisää: Gniezno
+
+### 377
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łańcutin linna (kulttuuri)
+Tietoruudun teksti: Łańcutin linna on historiallisten rakennusten kompleksi Łańcutissa Subkarpaattien maakunnassa Kaakkois-Puolassa, ja sitä ympäröi puisto. Se oli aikanaan Pileckien, Lubomirskien ja Potockien suvun asuinpaikka, ja se on yksi Puolan virallisista kansallisista historiallisista monumenteista. Paikan omisti 1300-luvun jälkipuoliskolla Toporczykin suku, joka rakensi kukkulalle puulinnan. Nykyinen linna on peräisin 1600-luvulta, ja omistajat muuttivat sen myöhemmin palatsiasunnoksi. Lubomirskit omistivat sen vuoteen 1816 ja Potockit vuoteen 1944.
+AIEMPI KYSYMYS: Mitkä suvut olivat Łańcutin linnan tunnetuimmat omistajat?
+AIEMPI VASTAUS (Livia):
+Tuota niin, kolme sukua. Łańcutin linna oli aikanaan [[Pileckien]], [[Lubomirskien]] ja [[Potockien]] suvun asuinpaikka. Paikan omisti 1300-luvun jälkipuoliskolla Toporczykin suku, joka rakensi kukkulalle puulinnan. Nykyinen linna on peräisin 1600-luvulta, ja omistajat muuttivat sen myöhemmin palatsiasunnoksi. Lubomirskit omistivat sen vuoteen 1816 ja Potockit vuoteen 1944, ja nykyään kompleksi on yksi Puolan virallisista kansallisista historiallisista monumenteista. Aika monta nimeä yhdeksi linnaksi.
+KYSYMYS: Kerro lisää: Pileckien
+
+### 378
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łańcutin linna (kulttuuri)
+Tietoruudun teksti: Łańcutin linna on historiallisten rakennusten kompleksi Łańcutissa Subkarpaattien maakunnassa Kaakkois-Puolassa, ja sitä ympäröi puisto. Se oli aikanaan Pileckien, Lubomirskien ja Potockien suvun asuinpaikka, ja se on yksi Puolan virallisista kansallisista historiallisista monumenteista. Paikan omisti 1300-luvun jälkipuoliskolla Toporczykin suku, joka rakensi kukkulalle puulinnan. Nykyinen linna on peräisin 1600-luvulta, ja omistajat muuttivat sen myöhemmin palatsiasunnoksi. Lubomirskit omistivat sen vuoteen 1816 ja Potockit vuoteen 1944.
+AIEMPI KYSYMYS: Mitkä suvut olivat Łańcutin linnan tunnetuimmat omistajat?
+AIEMPI VASTAUS (Livia):
+Tuota niin, kolme sukua. Łańcutin linna oli aikanaan [[Pileckien]], [[Lubomirskien]] ja [[Potockien]] suvun asuinpaikka. Paikan omisti 1300-luvun jälkipuoliskolla Toporczykin suku, joka rakensi kukkulalle puulinnan. Nykyinen linna on peräisin 1600-luvulta, ja omistajat muuttivat sen myöhemmin palatsiasunnoksi. Lubomirskit omistivat sen vuoteen 1816 ja Potockit vuoteen 1944, ja nykyään kompleksi on yksi Puolan virallisista kansallisista historiallisista monumenteista. Aika monta nimeä yhdeksi linnaksi.
+KYSYMYS: Kerro lisää: Lubomirskien
+
+### 379
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łańcutin linna (kulttuuri)
+Tietoruudun teksti: Łańcutin linna on historiallisten rakennusten kompleksi Łańcutissa Subkarpaattien maakunnassa Kaakkois-Puolassa, ja sitä ympäröi puisto. Se oli aikanaan Pileckien, Lubomirskien ja Potockien suvun asuinpaikka, ja se on yksi Puolan virallisista kansallisista historiallisista monumenteista. Paikan omisti 1300-luvun jälkipuoliskolla Toporczykin suku, joka rakensi kukkulalle puulinnan. Nykyinen linna on peräisin 1600-luvulta, ja omistajat muuttivat sen myöhemmin palatsiasunnoksi. Lubomirskit omistivat sen vuoteen 1816 ja Potockit vuoteen 1944.
+AIEMPI KYSYMYS: Mitkä suvut olivat Łańcutin linnan tunnetuimmat omistajat?
+AIEMPI VASTAUS (Livia):
+Tuota niin, kolme sukua. Łańcutin linna oli aikanaan [[Pileckien]], [[Lubomirskien]] ja [[Potockien]] suvun asuinpaikka. Paikan omisti 1300-luvun jälkipuoliskolla Toporczykin suku, joka rakensi kukkulalle puulinnan. Nykyinen linna on peräisin 1600-luvulta, ja omistajat muuttivat sen myöhemmin palatsiasunnoksi. Lubomirskit omistivat sen vuoteen 1816 ja Potockit vuoteen 1944, ja nykyään kompleksi on yksi Puolan virallisista kansallisista historiallisista monumenteista. Aika monta nimeä yhdeksi linnaksi.
+KYSYMYS: Kerro lisää: Potockien
+
+### 380
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łańcutin linna (kulttuuri)
+Tietoruudun teksti: Łańcutin linna on historiallisten rakennusten kompleksi Łańcutissa Subkarpaattien maakunnassa Kaakkois-Puolassa, ja sitä ympäröi puisto. Se oli aikanaan Pileckien, Lubomirskien ja Potockien suvun asuinpaikka, ja se on yksi Puolan virallisista kansallisista historiallisista monumenteista. Paikan omisti 1300-luvun jälkipuoliskolla Toporczykin suku, joka rakensi kukkulalle puulinnan. Nykyinen linna on peräisin 1600-luvulta, ja omistajat muuttivat sen myöhemmin palatsiasunnoksi. Lubomirskit omistivat sen vuoteen 1816 ja Potockit vuoteen 1944.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kohdekartta / Kohdekartta: Grand-Place] 1695–1699 Grand-Place on Brysselin keskusaukio, 68 kertaa 110 metriä ja kokonaan kivetty. Tori syntyi 1000-luvun lopulla kuivuneelle suolle Senne-joen sataman lähelle. Sen etelälaidalla seisoo vuosina 1401–1455 rakennettu goottilainen kaupungintalo, jonka 96-metrisen tornin huipulla kaupungin suojeluspyhimys Mikael surmaa lohikäärmettä. Vastapäätä on Kuninkaan talo, jota hollanniksi kutsutaan yhä Leipätaloksi paikalla ennen olleen leipätorin mukaan, vaikka yksikään kuningas ei ole siinä asunut. Elokuun 13. päivänä 1695 ranskalainen 70 000 miehen armeija alkoi pommittaa lähes puolustuskyvytöntä kaupunkia, ja suurin osa aukiosta paloi. Pystyyn jäi vain kaupungintalon kivikuori — ironista kyll…
+- [Colombo — kohdekartta / Kohdekartta: Galle Face Hotel] 1864 Neljä brittiläistä yrittäjää perusti hotellin 1864 vanhan hollantilaisen Galle Face House -huvilan paikalle nurmikentän eteläpäähän, ja kenttä antoi talolle nimen. Siitä tuli yksi Suezin itäpuolen vanhimmista hotelleista. Maata laajennuksia varten ostettiin 1870–1894, ja arkkitehti Edward Skinnerin suunnittelema eteläsiipi valmistui 1894. Pohjoissiipi peruskorjattiin 2010-luvulla ja avattiin uudelleen lokakuussa 2015; huoneita on sataviisikymmentäkuusi. Talon oma museo on Regency-siivessä. Siellä on esillä muun muassa Edinburghin herttuan Philipin ensimmäinen auto ja galleria kuuluisista vieraista. Hotellin uima-allas on Colombon ainoa suolavesiallas, ja terassin mustavalkoruudulle men…
+AIEMPI KYSYMYS: Miksi aatelisto muutti linnoja palatseiksi 1600-luvulta alkaen?
+AIEMPI VASTAUS (Livia):
+No niin, siihen on selitys. Keskiaikaiset linnat oli rakennettu puolustamaan, mutta [[tykistön]] kehittyessä vanhat muurit eivät enää suojanneet kunnolla. Samaan aikaan aatelisto halusi asumismukavuutta ja edustuksellisia tiloja, jotka sopivat [[barokin]] aikakauden makuun: suuria saleja, puistoja ja koristeltuja julkisivuja. Siksi monet linnat saivat palatsin muodon, ja Łańcutin nykyinen linna on peräisin 1600-luvulta. Tämä koskee Euroopassa monia aatelissukujen asuinpaikkoja.
+
+Minä olisin valinnut palatsin heti: lämmin, korkea ja täynnä ikkunalautoja. Linnaa tuskin kukaan haluaa pullapäivänä.
+KYSYMYS: Kerro lisää: tykistön
+
+### 381
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łańcutin linna (kulttuuri)
+Tietoruudun teksti: Łańcutin linna on historiallisten rakennusten kompleksi Łańcutissa Subkarpaattien maakunnassa Kaakkois-Puolassa, ja sitä ympäröi puisto. Se oli aikanaan Pileckien, Lubomirskien ja Potockien suvun asuinpaikka, ja se on yksi Puolan virallisista kansallisista historiallisista monumenteista. Paikan omisti 1300-luvun jälkipuoliskolla Toporczykin suku, joka rakensi kukkulalle puulinnan. Nykyinen linna on peräisin 1600-luvulta, ja omistajat muuttivat sen myöhemmin palatsiasunnoksi. Lubomirskit omistivat sen vuoteen 1816 ja Potockit vuoteen 1944.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: El Sagrarion kirkko] 1617–1715 Sagrario tarkoittaa tabernaakkelia, ja tällaiset kirkot rakennettiin katedraalin kylkeen sen sakramenttikappeliksi — ja samalla ympäröivän kaupunginosan omaksi seurakuntakirkoksi. Malli on peräisin Sevillan katedraalista, ja sieltä espanjalaiset veivät sen kaikkialle Uuteen maailmaan. Quiton El Sagrario näyttää kokonsa ja taiteellisen painoarvonsa takia enemmän itsenäiseltä kirkolta kuin katedraalin sivukappelilta. Perustustyöt aloitettiin 1617 Pyhän Sakramentin veljeskunnan varoilla, ja ne olivat vaativat: kirkko seisoo holvirakenteella, joka sulkee vanhan Zanguñan rotkon. Perustukset ulottuvat eteläsivulla neljäntoista metrin ja pohjoissivulla kolmen metrin syvyyteen — rotko vie…
+- [Aleppo — kohdekartta / Kohdekartta: Beit Ajiqbash] 1757 Jdeideh tarkoittaa uutta kaupunkia. Kortteli kasvoi Aleppon pohjoisen muurin ulkopuolelle mamelukkien ajan lopulla, ja siitä tuli kristittyjen kauppiassukujen alue; armenialaiset kävivät täältä kauppaa Persiaan ja Intiaan. Beit Ajiqbash valmistui kujien keskelle vuonna 1757; rakennuttaja oli varakas kauppias Qarah Ali. Talo ei silti kanna hänen nimeään: kun suku muutti Alexandrettaan, sen osti mies nimeltä Ashiqbash. Itälaidan huoneet purettiin myöhemmin, kun talon eteen vedettiin katu. Talossa toimii kansanperinteen museo. Ydin on sisäpiha. Sitä kiertää kaksi kerrosta ikkunoita, ja aukkojen ylle on veistetty kiveen leveitä koristenauhoja ja pyöreitä ruusukkeita. Tyyli yhdistää mameluk…
+AIEMPI KYSYMYS: Miksi aatelisto muutti linnoja palatseiksi 1600-luvulta alkaen?
+AIEMPI VASTAUS (Livia):
+No niin, siihen on selitys. Keskiaikaiset linnat oli rakennettu puolustamaan, mutta [[tykistön]] kehittyessä vanhat muurit eivät enää suojanneet kunnolla. Samaan aikaan aatelisto halusi asumismukavuutta ja edustuksellisia tiloja, jotka sopivat [[barokin]] aikakauden makuun: suuria saleja, puistoja ja koristeltuja julkisivuja. Siksi monet linnat saivat palatsin muodon, ja Łańcutin nykyinen linna on peräisin 1600-luvulta. Tämä koskee Euroopassa monia aatelissukujen asuinpaikkoja.
+
+Minä olisin valinnut palatsin heti: lämmin, korkea ja täynnä ikkunalautoja. Linnaa tuskin kukaan haluaa pullapäivänä.
+KYSYMYS: Kerro lisää: barokin
+
+### 382
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łańcutin linna (kulttuuri)
+Tietoruudun teksti: Łańcutin linna on historiallisten rakennusten kompleksi Łańcutissa Subkarpaattien maakunnassa Kaakkois-Puolassa, ja sitä ympäröi puisto. Se oli aikanaan Pileckien, Lubomirskien ja Potockien suvun asuinpaikka, ja se on yksi Puolan virallisista kansallisista historiallisista monumenteista. Paikan omisti 1300-luvun jälkipuoliskolla Toporczykin suku, joka rakensi kukkulalle puulinnan. Nykyinen linna on peräisin 1600-luvulta, ja omistajat muuttivat sen myöhemmin palatsiasunnoksi. Lubomirskit omistivat sen vuoteen 1816 ja Potockit vuoteen 1944.
+AIEMPI KYSYMYS: Millainen oli aatelin asema Puola-Liettuassa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Puola-Liettuassa aatelisto eli [[szlachta]] oli poikkeuksellisen suuri ja vaikutusvaltainen yhteiskuntaluokka. Kuningas valittiin vaalilla, ja aateliston edustajat kokoontuivat valtiopäiville eli [[Sejm]]iin, jossa päätöksentekoon vaikutti myös [[liberum veto]] -periaate: yksi edustaja saattoi estää päätöksen. Aateliston etuja puolustettiin niin sanotulla kultaisella vapaudella, ja linnat ja palatsit olivat sen vauraan elämäntavan näkyvä osoitus. Moni linna kertoo siitä, miten eri tavalla maata silloin hallittiin.
+KYSYMYS: Kerro lisää: szlachta
+
+### 383
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łańcutin linna (kulttuuri)
+Tietoruudun teksti: Łańcutin linna on historiallisten rakennusten kompleksi Łańcutissa Subkarpaattien maakunnassa Kaakkois-Puolassa, ja sitä ympäröi puisto. Se oli aikanaan Pileckien, Lubomirskien ja Potockien suvun asuinpaikka, ja se on yksi Puolan virallisista kansallisista historiallisista monumenteista. Paikan omisti 1300-luvun jälkipuoliskolla Toporczykin suku, joka rakensi kukkulalle puulinnan. Nykyinen linna on peräisin 1600-luvulta, ja omistajat muuttivat sen myöhemmin palatsiasunnoksi. Lubomirskit omistivat sen vuoteen 1816 ja Potockit vuoteen 1944.
+AIEMPI KYSYMYS: Millainen oli aatelin asema Puola-Liettuassa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Puola-Liettuassa aatelisto eli [[szlachta]] oli poikkeuksellisen suuri ja vaikutusvaltainen yhteiskuntaluokka. Kuningas valittiin vaalilla, ja aateliston edustajat kokoontuivat valtiopäiville eli [[Sejm]]iin, jossa päätöksentekoon vaikutti myös [[liberum veto]] -periaate: yksi edustaja saattoi estää päätöksen. Aateliston etuja puolustettiin niin sanotulla kultaisella vapaudella, ja linnat ja palatsit olivat sen vauraan elämäntavan näkyvä osoitus. Moni linna kertoo siitä, miten eri tavalla maata silloin hallittiin.
+KYSYMYS: Kerro lisää: Sejm
+
+### 384
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łańcutin linna (kulttuuri)
+Tietoruudun teksti: Łańcutin linna on historiallisten rakennusten kompleksi Łańcutissa Subkarpaattien maakunnassa Kaakkois-Puolassa, ja sitä ympäröi puisto. Se oli aikanaan Pileckien, Lubomirskien ja Potockien suvun asuinpaikka, ja se on yksi Puolan virallisista kansallisista historiallisista monumenteista. Paikan omisti 1300-luvun jälkipuoliskolla Toporczykin suku, joka rakensi kukkulalle puulinnan. Nykyinen linna on peräisin 1600-luvulta, ja omistajat muuttivat sen myöhemmin palatsiasunnoksi. Lubomirskit omistivat sen vuoteen 1816 ja Potockit vuoteen 1944.
+AIEMPI KYSYMYS: Millainen oli aatelin asema Puola-Liettuassa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Puola-Liettuassa aatelisto eli [[szlachta]] oli poikkeuksellisen suuri ja vaikutusvaltainen yhteiskuntaluokka. Kuningas valittiin vaalilla, ja aateliston edustajat kokoontuivat valtiopäiville eli [[Sejm]]iin, jossa päätöksentekoon vaikutti myös [[liberum veto]] -periaate: yksi edustaja saattoi estää päätöksen. Aateliston etuja puolustettiin niin sanotulla kultaisella vapaudella, ja linnat ja palatsit olivat sen vauraan elämäntavan näkyvä osoitus. Moni linna kertoo siitä, miten eri tavalla maata silloin hallittiin.
+KYSYMYS: Kerro lisää: liberum veto
+
+### 385
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łańcutin linna (kulttuuri)
+Tietoruudun teksti: Łańcutin linna on historiallisten rakennusten kompleksi Łańcutissa Subkarpaattien maakunnassa Kaakkois-Puolassa, ja sitä ympäröi puisto. Se oli aikanaan Pileckien, Lubomirskien ja Potockien suvun asuinpaikka, ja se on yksi Puolan virallisista kansallisista historiallisista monumenteista. Paikan omisti 1300-luvun jälkipuoliskolla Toporczykin suku, joka rakensi kukkulalle puulinnan. Nykyinen linna on peräisin 1600-luvulta, ja omistajat muuttivat sen myöhemmin palatsiasunnoksi. Lubomirskit omistivat sen vuoteen 1816 ja Potockit vuoteen 1944.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Sankarien aukio] 1896–1906 Unkarilaiset laskevat valtionsa alkavan vuodesta 896, jolloin heidän esi-isänsä asettuivat Karpaattien altaaseen. Tuhatvuotisjuhlaa varten Budapest rakensi kokonaisen kaupunginosan: Andrássy-katu jatkettiin, sen alle louhittiin Manner-Euroopan ensimmäinen metro, ja kadun päähän nousi aukio muistomerkkeineen. Työt alkoivat 1896, aukio sai nimensä 1900, ja muistomerkki vihittiin lopulta 1906. Suunnittelija oli arkkitehti Albert Schickedanz, joka piirsi myös aukiota reunustavat museot: Taidemuseon eli Szépművészeti Múzeumin, joka valmistui muistomerkin tavoin 1906, ja sitä vastapäätä seisovan Taidehallin eli Műcsarnokin, joka oli valmis jo 1896. Andrássy-katu aukioineen ja metroineen…
+- [Budapest — kohdekartta / Kohdekartta: Kalastajanlinnake] 1895–1902 Kalastajanlinnake näyttää keskiaikaiselta satulinnalta Budan kukkulalla, mutta se ei ole koskaan puolustanut ketään. Arkkitehti Frigyes Schulek suunnitteli sen kaunistamaan viereistä Matthias-kirkkoa, ja rakennustyöt kestivät vuodesta 1895 vuoteen 1902. Torneja on tasan seitsemän, ja ne muistuttavat seitsemästä heimosta, jotka asettuivat Karpaattien altaaseen vuonna 895. Nimi tulee keskiaikaisista kalastajista, joiden kerrotaan vartioineen tätä kukkulanreunaa vihollisilta. Nykyään paikalta avautuu yksi kaupungin komeimmista näköaloista Tonavalle ja Pestin puolelle. Toisessa maailmansodassa linnake vaurioitui pahoin, mutta se korjattiin täysin ennalleen vuoteen 1953 mennessä.
+AIEMPI KYSYMYS: Millainen alue Subkarpaattien maakunta on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Subkarpaattien maakunta eli Podkarpackie on Kaakkois-Puolan alue [[Karpaattien]] juurella. Sen pääkaupunki on [[Rzeszów]], ja maakunta rajoittuu etelässä Slovakiaan sekä idässä Ukrainaan. Łańcutin linna sijaitsee maakunnassa, ja se on yksi Puolan virallisista kansallisista historiallisista monumenteista. Vuorten läheltä on kyllä mukava lentää.
+KYSYMYS: Kerro lisää: Karpaattien
+
+### 386
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łańcutin linna (kulttuuri)
+Tietoruudun teksti: Łańcutin linna on historiallisten rakennusten kompleksi Łańcutissa Subkarpaattien maakunnassa Kaakkois-Puolassa, ja sitä ympäröi puisto. Se oli aikanaan Pileckien, Lubomirskien ja Potockien suvun asuinpaikka, ja se on yksi Puolan virallisista kansallisista historiallisista monumenteista. Paikan omisti 1300-luvun jälkipuoliskolla Toporczykin suku, joka rakensi kukkulalle puulinnan. Nykyinen linna on peräisin 1600-luvulta, ja omistajat muuttivat sen myöhemmin palatsiasunnoksi. Lubomirskit omistivat sen vuoteen 1816 ja Potockit vuoteen 1944.
+AIEMPI KYSYMYS: Millainen alue Subkarpaattien maakunta on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Subkarpaattien maakunta eli Podkarpackie on Kaakkois-Puolan alue [[Karpaattien]] juurella. Sen pääkaupunki on [[Rzeszów]], ja maakunta rajoittuu etelässä Slovakiaan sekä idässä Ukrainaan. Łańcutin linna sijaitsee maakunnassa, ja se on yksi Puolan virallisista kansallisista historiallisista monumenteista. Vuorten läheltä on kyllä mukava lentää.
+KYSYMYS: Kerro lisää: Rzeszów
+
+### 387
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pszczynan linna (kulttuuri)
+Tietoruudun teksti: Pszczynan linna on klassististyylinen palatsi Pszczynan kaupungissa Etelä-Puolassa. Se rakennettiin linnaksi 1200-luvulla tai aiemmin goottilaiseen tyyliin, ja 1600-luvulla se rakennettiin uudelleen renessanssityyliin; 1700- ja 1800-luvuilla sen ulkoasua muutettiin osittain barokki-klassistiseksi. Linna oli Piast-herttuoiden, sitten saksalaisen von Promnitz -suvun 1500-luvun puolivälistä 1700-luvun puoliväliin ja myöhemmin von Pless -suvun asuinpaikka. Vuonna 1742 Pless liitettiin Preussin kuningaskuntaan, ja vuosina 1870–1876 ranskalainen arkkitehti Gabriel-Hippolyte Destailleur johti palatsin uudistusta. Vuonna 1705 säveltäjä Georg Philipp Telemann oli Promnitzin kapellimestarina ja vietti palatsissa paljon aikaa tutustuen puolalaiseen ja määriläiseen kansanmusiikkiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Keksinnöt: Puuseppä, joka rakensi voimakkaan dynamon] 1873 — Zénobe Gramme oli lähes lukutaidoton puuseppä Jehay-Bodegnéen kylästä. Hän muutti Pariisiin, pääsi töihin sähkölaitteita valmistavaan yritykseen ja rakensi parannellun dynamon, joka tuotti tasaisempaa ja paljon voimakkaampaa tasavirtaa kuin aiemmat koneet. Yhdessä Hippolyte Fontainen kanssa hän perusti tehtaan, ja Grammen kone oli esillä Wienin maailmannäyttelyssä 1873. Samana vuonna miehet huomasivat vahingossa, että kone toimii myös toisin päin: kun siihen johdettiin virtaa, se pyöri moottorina.
+AIEMPI KYSYMYS: Kuka ranskalainen arkkitehti johti palatsin uudistusta 1870-luvulla?
+AIEMPI VASTAUS (Livia):
+Kato, tän nimen minä muistan. Palatsin uudistusta vuosina 1870–1876 johti ranskalainen arkkitehti [[Gabriel-Hippolyte Destailleur]]. Uudistus tehtiin aikana, jolloin [[Pszczynan linna]] oli von Pless -suvun asuinpaikka ja Pless kuului Preussin kuningaskuntaan. Ranskalainen nimi puolalaisessa linnassa, kyl se kyyhkyä hymyilyttää.
+KYSYMYS: Kerro lisää: Gabriel-Hippolyte Destailleur
+
+### 388
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pszczynan linna (kulttuuri)
+Tietoruudun teksti: Pszczynan linna on klassististyylinen palatsi Pszczynan kaupungissa Etelä-Puolassa. Se rakennettiin linnaksi 1200-luvulla tai aiemmin goottilaiseen tyyliin, ja 1600-luvulla se rakennettiin uudelleen renessanssityyliin; 1700- ja 1800-luvuilla sen ulkoasua muutettiin osittain barokki-klassistiseksi. Linna oli Piast-herttuoiden, sitten saksalaisen von Promnitz -suvun 1500-luvun puolivälistä 1700-luvun puoliväliin ja myöhemmin von Pless -suvun asuinpaikka. Vuonna 1742 Pless liitettiin Preussin kuningaskuntaan, ja vuosina 1870–1876 ranskalainen arkkitehti Gabriel-Hippolyte Destailleur johti palatsin uudistusta. Vuonna 1705 säveltäjä Georg Philipp Telemann oli Promnitzin kapellimestarina ja vietti palatsissa paljon aikaa tutustuen puolalaiseen ja määriläiseen kansanmusiikkiin.
+AIEMPI KYSYMYS: Kuka ranskalainen arkkitehti johti palatsin uudistusta 1870-luvulla?
+AIEMPI VASTAUS (Livia):
+Kato, tän nimen minä muistan. Palatsin uudistusta vuosina 1870–1876 johti ranskalainen arkkitehti [[Gabriel-Hippolyte Destailleur]]. Uudistus tehtiin aikana, jolloin [[Pszczynan linna]] oli von Pless -suvun asuinpaikka ja Pless kuului Preussin kuningaskuntaan. Ranskalainen nimi puolalaisessa linnassa, kyl se kyyhkyä hymyilyttää.
+KYSYMYS: Kerro lisää: Pszczynan linna
+
+### 389
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pszczynan linna (kulttuuri)
+Tietoruudun teksti: Pszczynan linna on klassististyylinen palatsi Pszczynan kaupungissa Etelä-Puolassa. Se rakennettiin linnaksi 1200-luvulla tai aiemmin goottilaiseen tyyliin, ja 1600-luvulla se rakennettiin uudelleen renessanssityyliin; 1700- ja 1800-luvuilla sen ulkoasua muutettiin osittain barokki-klassistiseksi. Linna oli Piast-herttuoiden, sitten saksalaisen von Promnitz -suvun 1500-luvun puolivälistä 1700-luvun puoliväliin ja myöhemmin von Pless -suvun asuinpaikka. Vuonna 1742 Pless liitettiin Preussin kuningaskuntaan, ja vuosina 1870–1876 ranskalainen arkkitehti Gabriel-Hippolyte Destailleur johti palatsin uudistusta. Vuonna 1705 säveltäjä Georg Philipp Telemann oli Promnitzin kapellimestarina ja vietti palatsissa paljon aikaa tutustuen puolalaiseen ja määriläiseen kansanmusiikkiin.
+AIEMPI KYSYMYS: Mikä säveltäjä vieraili palatsissa 1705?
+AIEMPI VASTAUS (Livia):
+No niin, tost minä osaan kertoo. Vuonna 1705 palatsissa vieraili säveltäjä [[Georg Philipp Telemann]], joka toimi tuolloin Promnitzin kapellimestarina. Hän vietti palatsissa paljon aikaa ja tutustui puolalaiseen ja määriläiseen kansanmusiikkiin, joka jätti jälkensä hänen sävellyksiinsä. Promnitzin suku oli saksalainen aatelissuku, joka piti [[Pszczynan linna]]a asuinpaikkanaan 1500-luvun puolivälistä 1700-luvun puoliväliin.
+
+Kansanmusiikki on minusta aina kuulostanut paremmalta torin laidalta kuin salissa, mutta ehkä Telemann oli samaa mieltä, koska hän kuunteli sitä niin tarkasti.
+KYSYMYS: Kerro lisää: Georg Philipp Telemann
+
+### 390
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pszczynan linna (kulttuuri)
+Tietoruudun teksti: Pszczynan linna on klassististyylinen palatsi Pszczynan kaupungissa Etelä-Puolassa. Se rakennettiin linnaksi 1200-luvulla tai aiemmin goottilaiseen tyyliin, ja 1600-luvulla se rakennettiin uudelleen renessanssityyliin; 1700- ja 1800-luvuilla sen ulkoasua muutettiin osittain barokki-klassistiseksi. Linna oli Piast-herttuoiden, sitten saksalaisen von Promnitz -suvun 1500-luvun puolivälistä 1700-luvun puoliväliin ja myöhemmin von Pless -suvun asuinpaikka. Vuonna 1742 Pless liitettiin Preussin kuningaskuntaan, ja vuosina 1870–1876 ranskalainen arkkitehti Gabriel-Hippolyte Destailleur johti palatsin uudistusta. Vuonna 1705 säveltäjä Georg Philipp Telemann oli Promnitzin kapellimestarina ja vietti palatsissa paljon aikaa tutustuen puolalaiseen ja määriläiseen kansanmusiikkiin.
+AIEMPI KYSYMYS: Mikä suku asui Pszczynan linnassa 1700-luvun jälkeen?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Linna oli von Promnitz -suvun asuinpaikka 1500-luvun puolivälistä 1700-luvun puoliväliin, ja sen jälkeen siellä asui [[von Pless -suku]]. Aiemmin linnan omistivat Piast-herttuat, ja vuonna 1742 Pless liitettiin [[Preussin]] kuningaskuntaan. Sukujen vaihtuessa myös linnan ulkoasu muuttui, osittain barokki-klassistiseksi.
+
+Pitkä suvunvaihtoketju, mut kyl minä pysyin mukana.
+KYSYMYS: Kerro lisää: von Pless -suku
+
+### 391
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pszczynan linna (kulttuuri)
+Tietoruudun teksti: Pszczynan linna on klassististyylinen palatsi Pszczynan kaupungissa Etelä-Puolassa. Se rakennettiin linnaksi 1200-luvulla tai aiemmin goottilaiseen tyyliin, ja 1600-luvulla se rakennettiin uudelleen renessanssityyliin; 1700- ja 1800-luvuilla sen ulkoasua muutettiin osittain barokki-klassistiseksi. Linna oli Piast-herttuoiden, sitten saksalaisen von Promnitz -suvun 1500-luvun puolivälistä 1700-luvun puoliväliin ja myöhemmin von Pless -suvun asuinpaikka. Vuonna 1742 Pless liitettiin Preussin kuningaskuntaan, ja vuosina 1870–1876 ranskalainen arkkitehti Gabriel-Hippolyte Destailleur johti palatsin uudistusta. Vuonna 1705 säveltäjä Georg Philipp Telemann oli Promnitzin kapellimestarina ja vietti palatsissa paljon aikaa tutustuen puolalaiseen ja määriläiseen kansanmusiikkiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad-järvi — kaupunkilehti / Bornun valtakunta: Preussin lahjat sheikille] Preussin kuningas Wilhelm I lähetti tutkimusmatkailija Gustav Nachtigalin viemään lahjoja Bornun hallitsijalle kiitokseksi saksalaisille matkaajille osoitetusta vieraanvaraisuudesta. Nachtigal lähti Tripolista helmikuussa 1869 ja saapui Bornun pääkaupunkiin Kukawaan 6. kesäkuuta 1870, missä sheikki Umar otti hänet ystävällisesti vastaan. Hovin virkamies Ahmed ibn Brahim antoi Nachtigalille vanhoja asiakirjoja, joiden pohjalta tämä kokosi luettelon Bornun hallitsijoista vuosisatojen ajalta. Sheikin luvalla Nachtigal teki myöhemmin tutkimusmatkoja Kanemiin ja Bagirmiin ja osoitti Bahr-el-Ghazalin toimivan ajoittain järven laskujokena.
+- [Pietari — kaupunkilehti / Taide: Preussin kuninkaalta jääneet maalaukset päätyivät keisarinnalle] 1764 — Berliiniläinen kauppias Johann Ernst Gotzkowsky oli koonnut 225 maalauksen kokoelman Preussin kuningas Fredrik Suurelle, mutta seitsenvuotisen sodan jälkeen kuninkaan kassa oli tyhjä eikä hän voinut maksaa niistä. Vuonna 1764 Venäjän keisarinna Katariina Suuri osti koko kokoelman velan kuittaukseksi ja ripusti taulut yksityiseen siipirakennukseensa Talvipalatsin vieressä — rakennus sai nimen Eremitaasi, erakon asunto, koska sinne pääsivät vain harvat kutsutut. Tästä ostosta syntyi kokoelma, joka on nykyään yksi maailman suurimpia taidemuseoita.
+AIEMPI KYSYMYS: Mikä suku asui Pszczynan linnassa 1700-luvun jälkeen?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Linna oli von Promnitz -suvun asuinpaikka 1500-luvun puolivälistä 1700-luvun puoliväliin, ja sen jälkeen siellä asui [[von Pless -suku]]. Aiemmin linnan omistivat Piast-herttuat, ja vuonna 1742 Pless liitettiin [[Preussin]] kuningaskuntaan. Sukujen vaihtuessa myös linnan ulkoasu muuttui, osittain barokki-klassistiseksi.
+
+Pitkä suvunvaihtoketju, mut kyl minä pysyin mukana.
+KYSYMYS: Kerro lisää: Preussin
+
+### 392
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pszczynan linna (kulttuuri)
+Tietoruudun teksti: Pszczynan linna on klassististyylinen palatsi Pszczynan kaupungissa Etelä-Puolassa. Se rakennettiin linnaksi 1200-luvulla tai aiemmin goottilaiseen tyyliin, ja 1600-luvulla se rakennettiin uudelleen renessanssityyliin; 1700- ja 1800-luvuilla sen ulkoasua muutettiin osittain barokki-klassistiseksi. Linna oli Piast-herttuoiden, sitten saksalaisen von Promnitz -suvun 1500-luvun puolivälistä 1700-luvun puoliväliin ja myöhemmin von Pless -suvun asuinpaikka. Vuonna 1742 Pless liitettiin Preussin kuningaskuntaan, ja vuosina 1870–1876 ranskalainen arkkitehti Gabriel-Hippolyte Destailleur johti palatsin uudistusta. Vuonna 1705 säveltäjä Georg Philipp Telemann oli Promnitzin kapellimestarina ja vietti palatsissa paljon aikaa tutustuen puolalaiseen ja määriläiseen kansanmusiikkiin.
+AIEMPI KYSYMYS: Mihin valtioon Pless liitettiin vuonna 1742?
+AIEMPI VASTAUS (Livia):
+Ai se. Vuonna 1742 Pless liitettiin Preussin kuningaskuntaan. Alue oli sitä ennen kuulunut muihin hallintoihin, ja liittäminen muutti sen asemaa [[Sleesian]] rajamaiden kartalla. Myöhemmin alueen mukana linnaa asuttivat saksalaiset von Pless -suvun jäsenet, ja 1870–1876 palatsin uudistusta johti ranskalainen arkkitehti. Rajat ovat siis siirtyneet useammin kuin kyyhky ehtii perään lentää, ja tarkat vuodet jätän sen takia vain tähän yhteen.
+KYSYMYS: Kerro lisää: Sleesian
+
+### 393
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pszczynan linna (kulttuuri)
+Tietoruudun teksti: Pszczynan linna on klassististyylinen palatsi Pszczynan kaupungissa Etelä-Puolassa. Se rakennettiin linnaksi 1200-luvulla tai aiemmin goottilaiseen tyyliin, ja 1600-luvulla se rakennettiin uudelleen renessanssityyliin; 1700- ja 1800-luvuilla sen ulkoasua muutettiin osittain barokki-klassistiseksi. Linna oli Piast-herttuoiden, sitten saksalaisen von Promnitz -suvun 1500-luvun puolivälistä 1700-luvun puoliväliin ja myöhemmin von Pless -suvun asuinpaikka. Vuonna 1742 Pless liitettiin Preussin kuningaskuntaan, ja vuosina 1870–1876 ranskalainen arkkitehti Gabriel-Hippolyte Destailleur johti palatsin uudistusta. Vuonna 1705 säveltäjä Georg Philipp Telemann oli Promnitzin kapellimestarina ja vietti palatsissa paljon aikaa tutustuen puolalaiseen ja määriläiseen kansanmusiikkiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Renessanssi syntyi kilpailusta] 1400-luku — 1400-luvun Firenzessä suvut ja killat kilpailivat siitä, kuka teettää kauneimman kirkon, patsaan tai kupolin. Kilpailusta syntyi renessanssi — "uudelleensyntyminen" — joka muutti koko Euroopan taiteen, tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli oli valmistuessaan 1436 maailman suurin muuraamalla tehty kupoli, eikä kukaan tiennyt varmasti, pysyisikö se pystyssä: se rakennettiin ilman tukitelineitä tavalla, jota insinöörit ihmettelevät yhä.
+- [Quito — kohdekartta / Kohdekartta: El Sagrarion kirkko] 1617–1715 Sagrario tarkoittaa tabernaakkelia, ja tällaiset kirkot rakennettiin katedraalin kylkeen sen sakramenttikappeliksi — ja samalla ympäröivän kaupunginosan omaksi seurakuntakirkoksi. Malli on peräisin Sevillan katedraalista, ja sieltä espanjalaiset veivät sen kaikkialle Uuteen maailmaan. Quiton El Sagrario näyttää kokonsa ja taiteellisen painoarvonsa takia enemmän itsenäiseltä kirkolta kuin katedraalin sivukappelilta. Perustustyöt aloitettiin 1617 Pyhän Sakramentin veljeskunnan varoilla, ja ne olivat vaativat: kirkko seisoo holvirakenteella, joka sulkee vanhan Zanguñan rotkon. Perustukset ulottuvat eteläsivulla neljäntoista metrin ja pohjoissivulla kolmen metrin syvyyteen — rotko vie…
+AIEMPI KYSYMYS: Mihin tyyliin linna rakennettiin uudelleen 1600-luvulla?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Linna rakennettiin 1600-luvulla uudelleen [[renessanssityyliin]]. Alun perin se oli rakennettu linnaksi 1200-luvulla tai aiemmin goottilaiseen tyyliin. Myöhemmin, 1700- ja 1800-luvuilla, ulkoasua muutettiin osittain barokki-klassistiseksi, ja nykyisin [[Pszczynan linna]] kuvataan klassististyyliseksi palatsiksi. Tyylit ovat kerrostuneet toistensa päälle kuin pullan kierteet.
+KYSYMYS: Kerro lisää: renessanssityyliin
+
+### 394
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łódź (kauppa)
+Tietoruudun teksti: Łódź on Keski-Puolan entinen teollisuuskeskus, joka on nykyään maan neljänneksi suurin kaupunki ja jossa asuu noin 640 000 ihmistä. Vuonna 1851 Venäjän viranomaiset poistivat Kongressi-Puolalle asetetun tullimuurin, minkä ansiosta kaupunki saattoi viedä tekstiilejään vapaasti Venäjälle, jossa kysyntä oli suurta; Puolan ensimmäinen höyrykäyttöinen kangaspuu oli aloittanut toimintansa Ludwik Geyerin Valkoisessa tehtaassa jo vuonna 1839. Rautatiet, kuten vuonna 1865 avattu Łódźin ja Koluszkin yhteys, vauhdittivat teollisuutta edelleen. Kaupungin rakennukset ja laitokset syntyivät teollisuusmagnaattien, erityisesti Karl Wilhelm Scheiblerin ja Izrael Poznańskin, rahoilla, ja Poznański rakensi vuosina 1872–1892 suuren tekstiilivalmistuskokonaisuuden, johon kuului kaksitoista tehdasta, voimalaitoksia, työläistaloja ja eklektinen palatsi. Voimakkaimman teollistumisen vuosina 1870–1890 kaupungis…
+AIEMPI KYSYMYS: Kenen Valkoisessa tehtaassa Puolan ensimmäinen höyrykäyttöinen kangaspuu aloitti toimintansa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Puolan ensimmäinen höyrykäyttöinen kangaspuu aloitti toimintansa vuonna 1839 [[Ludwik Geyerin]] Valkoisessa tehtaassa [[Łódźissa]]. Tehdas edustaa kaupungin tekstiiliteollisuuden alkuvaiheita, ja teollistuminen kiihtyi etenkin sen jälkeen, kun tullimuuri Venäjän rajalta poistettiin 1851. Valkoinen tehdas on siis kutomisen historiaa, ja se kuulostaa kyyhkyn korvaan kovin kolkolta.
+KYSYMYS: Kerro lisää: Ludwik Geyerin
+
+### 395
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łódź (kauppa)
+Tietoruudun teksti: Łódź on Keski-Puolan entinen teollisuuskeskus, joka on nykyään maan neljänneksi suurin kaupunki ja jossa asuu noin 640 000 ihmistä. Vuonna 1851 Venäjän viranomaiset poistivat Kongressi-Puolalle asetetun tullimuurin, minkä ansiosta kaupunki saattoi viedä tekstiilejään vapaasti Venäjälle, jossa kysyntä oli suurta; Puolan ensimmäinen höyrykäyttöinen kangaspuu oli aloittanut toimintansa Ludwik Geyerin Valkoisessa tehtaassa jo vuonna 1839. Rautatiet, kuten vuonna 1865 avattu Łódźin ja Koluszkin yhteys, vauhdittivat teollisuutta edelleen. Kaupungin rakennukset ja laitokset syntyivät teollisuusmagnaattien, erityisesti Karl Wilhelm Scheiblerin ja Izrael Poznańskin, rahoilla, ja Poznański rakensi vuosina 1872–1892 suuren tekstiilivalmistuskokonaisuuden, johon kuului kaksitoista tehdasta, voimalaitoksia, työläistaloja ja eklektinen palatsi. Voimakkaimman teollistumisen vuosina 1870–1890 kaupungis…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kohdekartta / Kohdekartta: Pyövelin bastioni] 1400-luku Pyövelin bastioni on Slovakian suurin ja parhaiten säilynyt osa keskiaikaisia kaupunginmuureja. Alun perin se ei ollut bastioni vaan barbakaani eli portin eteen rakennettu puolustusvarustus. Nimen se sai lähellä sijainneesta pyövelin talosta, ja nimi on vasta 1800-luvulta. Varustuksen rakennutti vuoden 1441 jälkeen Košicen kapteeni Jan Jiskra suojaamaan kaupungin Maalattua porttia. Aluksi se oli yksinkertainen puolipyöreä rakennus, mutta noin 1461–1471 se muutettiin tykkikammioilla varustetuksi tykistölinnoitteeksi, jonka ympärillä oli iskuja vaimentava maavalli. Kasemateissa toimi myöhemmin Friedrich Gebrechtin hattumanufaktuuri, ja sen jälkeen niissä asuttiin. Itä-Slovakian muse…
+- [Košice — kaupunkilehti / Historia: Rákóczit ja kotiinpaluu Kassaan] Rákóczi-suku kuuluu Kassan historiaan kahdesti. Tammikuussa 1644 Kassan valtiopäivät valitsivat György I Rákóczin Unkarin ruhtinaaksi. Vuosina 1704–1711 Transilvanian ruhtinas Ferenc II Rákóczi teki Kassasta pääasemansa vapaussodassaan. Hän kuoli maanpaossa Tekirdağissa 1735, ja hänen jäänteensä siirrettiin 29. lokakuuta 1906 Pyhän Elisabetin tuomiokirkkoon, jossa hän lepää äitinsä Ilona Zrínyin ja poikansa vieressä.
+AIEMPI KYSYMYS: Kenen Valkoisessa tehtaassa Puolan ensimmäinen höyrykäyttöinen kangaspuu aloitti toimintansa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Puolan ensimmäinen höyrykäyttöinen kangaspuu aloitti toimintansa vuonna 1839 [[Ludwik Geyerin]] Valkoisessa tehtaassa [[Łódźissa]]. Tehdas edustaa kaupungin tekstiiliteollisuuden alkuvaiheita, ja teollistuminen kiihtyi etenkin sen jälkeen, kun tullimuuri Venäjän rajalta poistettiin 1851. Valkoinen tehdas on siis kutomisen historiaa, ja se kuulostaa kyyhkyn korvaan kovin kolkolta.
+KYSYMYS: Kerro lisää: Łódźissa
+
+### 396
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łódź (kauppa)
+Tietoruudun teksti: Łódź on Keski-Puolan entinen teollisuuskeskus, joka on nykyään maan neljänneksi suurin kaupunki ja jossa asuu noin 640 000 ihmistä. Vuonna 1851 Venäjän viranomaiset poistivat Kongressi-Puolalle asetetun tullimuurin, minkä ansiosta kaupunki saattoi viedä tekstiilejään vapaasti Venäjälle, jossa kysyntä oli suurta; Puolan ensimmäinen höyrykäyttöinen kangaspuu oli aloittanut toimintansa Ludwik Geyerin Valkoisessa tehtaassa jo vuonna 1839. Rautatiet, kuten vuonna 1865 avattu Łódźin ja Koluszkin yhteys, vauhdittivat teollisuutta edelleen. Kaupungin rakennukset ja laitokset syntyivät teollisuusmagnaattien, erityisesti Karl Wilhelm Scheiblerin ja Izrael Poznańskin, rahoilla, ja Poznański rakensi vuosina 1872–1892 suuren tekstiilivalmistuskokonaisuuden, johon kuului kaksitoista tehdasta, voimalaitoksia, työläistaloja ja eklektinen palatsi. Voimakkaimman teollistumisen vuosina 1870–1890 kaupungis…
+AIEMPI KYSYMYS: Kuka rakennutti kaksitoista tehdasta ja eklektisen palatsin vuosina 1872–1892?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Vuosina 1872–1892 suuren tekstiilivalmistuskokonaisuuden rakennutti [[Izrael Poznański]]. Kokonaisuuteen kuului kaksitoista tehdasta, voimalaitoksia, työläistaloja ja eklektinen palatsi. Poznański oli yksi Łódźin teollisuusmagnaateista, ja toinen merkittävä rahoittaja oli [[Karl Wilhelm Scheibler]]. Ei paha rakennusurakka, ja minä vain katselin sitä ylhäältä.
+KYSYMYS: Kerro lisää: Izrael Poznański
+
+### 397
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łódź (kauppa)
+Tietoruudun teksti: Łódź on Keski-Puolan entinen teollisuuskeskus, joka on nykyään maan neljänneksi suurin kaupunki ja jossa asuu noin 640 000 ihmistä. Vuonna 1851 Venäjän viranomaiset poistivat Kongressi-Puolalle asetetun tullimuurin, minkä ansiosta kaupunki saattoi viedä tekstiilejään vapaasti Venäjälle, jossa kysyntä oli suurta; Puolan ensimmäinen höyrykäyttöinen kangaspuu oli aloittanut toimintansa Ludwik Geyerin Valkoisessa tehtaassa jo vuonna 1839. Rautatiet, kuten vuonna 1865 avattu Łódźin ja Koluszkin yhteys, vauhdittivat teollisuutta edelleen. Kaupungin rakennukset ja laitokset syntyivät teollisuusmagnaattien, erityisesti Karl Wilhelm Scheiblerin ja Izrael Poznańskin, rahoilla, ja Poznański rakensi vuosina 1872–1892 suuren tekstiilivalmistuskokonaisuuden, johon kuului kaksitoista tehdasta, voimalaitoksia, työläistaloja ja eklektinen palatsi. Voimakkaimman teollistumisen vuosina 1870–1890 kaupungis…
+AIEMPI KYSYMYS: Kuka rakennutti kaksitoista tehdasta ja eklektisen palatsin vuosina 1872–1892?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Vuosina 1872–1892 suuren tekstiilivalmistuskokonaisuuden rakennutti [[Izrael Poznański]]. Kokonaisuuteen kuului kaksitoista tehdasta, voimalaitoksia, työläistaloja ja eklektinen palatsi. Poznański oli yksi Łódźin teollisuusmagnaateista, ja toinen merkittävä rahoittaja oli [[Karl Wilhelm Scheibler]]. Ei paha rakennusurakka, ja minä vain katselin sitä ylhäältä.
+KYSYMYS: Kerro lisää: Karl Wilhelm Scheibler
+
+### 398
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łódź (kauppa)
+Tietoruudun teksti: Łódź on Keski-Puolan entinen teollisuuskeskus, joka on nykyään maan neljänneksi suurin kaupunki ja jossa asuu noin 640 000 ihmistä. Vuonna 1851 Venäjän viranomaiset poistivat Kongressi-Puolalle asetetun tullimuurin, minkä ansiosta kaupunki saattoi viedä tekstiilejään vapaasti Venäjälle, jossa kysyntä oli suurta; Puolan ensimmäinen höyrykäyttöinen kangaspuu oli aloittanut toimintansa Ludwik Geyerin Valkoisessa tehtaassa jo vuonna 1839. Rautatiet, kuten vuonna 1865 avattu Łódźin ja Koluszkin yhteys, vauhdittivat teollisuutta edelleen. Kaupungin rakennukset ja laitokset syntyivät teollisuusmagnaattien, erityisesti Karl Wilhelm Scheiblerin ja Izrael Poznańskin, rahoilla, ja Poznański rakensi vuosina 1872–1892 suuren tekstiilivalmistuskokonaisuuden, johon kuului kaksitoista tehdasta, voimalaitoksia, työläistaloja ja eklektinen palatsi. Voimakkaimman teollistumisen vuosina 1870–1890 kaupungis…
+AIEMPI KYSYMYS: Minä vuonna Łódźin ja Koluszkin rautatie avattiin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: vuonna 1865. Łódźin ja Koluszkin yhteys avattiin silloin, ja rautatie vauhditti kaupungin teollisuutta entisestään. Aiemmin kasvua oli edistänyt se, että tullimuuri poistettiin 1851, jolloin [[Łódźin]] tekstiilejä voitiin viedä vapaasti Venäjälle. Voimakkaimman teollistumisen aikaa olivat vuodet 1870–1890. Rautatiet kuuluvat niihin keksintöihin, joista kyyhky ei ole koskaan ollut täysin varma, onko ne kilpailija vai kollega.
+KYSYMYS: Kerro lisää: Łódźin
+
+### 399
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łódź (kauppa)
+Tietoruudun teksti: Łódź on Keski-Puolan entinen teollisuuskeskus, joka on nykyään maan neljänneksi suurin kaupunki ja jossa asuu noin 640 000 ihmistä. Vuonna 1851 Venäjän viranomaiset poistivat Kongressi-Puolalle asetetun tullimuurin, minkä ansiosta kaupunki saattoi viedä tekstiilejään vapaasti Venäjälle, jossa kysyntä oli suurta; Puolan ensimmäinen höyrykäyttöinen kangaspuu oli aloittanut toimintansa Ludwik Geyerin Valkoisessa tehtaassa jo vuonna 1839. Rautatiet, kuten vuonna 1865 avattu Łódźin ja Koluszkin yhteys, vauhdittivat teollisuutta edelleen. Kaupungin rakennukset ja laitokset syntyivät teollisuusmagnaattien, erityisesti Karl Wilhelm Scheiblerin ja Izrael Poznańskin, rahoilla, ja Poznański rakensi vuosina 1872–1892 suuren tekstiilivalmistuskokonaisuuden, johon kuului kaksitoista tehdasta, voimalaitoksia, työläistaloja ja eklektinen palatsi. Voimakkaimman teollistumisen vuosina 1870–1890 kaupungis…
+AIEMPI KYSYMYS: Mitkä kaksi teollisuusmagnaattia rahoittivat Łódźin rakennuksia?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä kysymys. Łódźin rakennukset ja laitokset syntyivät teollisuusmagnaattien rahoilla, erityisesti [[Karl Wilhelm Scheiblerin]] ja [[Izrael Poznańskin]]. Heidän vaikutuksensa näkyy kaupungissa tehtaina, voimalaitoksina, työläistaloina ja palatseina. Poznański rakennutti vuosina 1872–1892 laajan tekstiilitehtaiden kokonaisuuden. Rahaa oli sillon paljon, sen verran sentään tiedän.
+KYSYMYS: Kerro lisää: Karl Wilhelm Scheiblerin
+
+### 400
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łódź (kauppa)
+Tietoruudun teksti: Łódź on Keski-Puolan entinen teollisuuskeskus, joka on nykyään maan neljänneksi suurin kaupunki ja jossa asuu noin 640 000 ihmistä. Vuonna 1851 Venäjän viranomaiset poistivat Kongressi-Puolalle asetetun tullimuurin, minkä ansiosta kaupunki saattoi viedä tekstiilejään vapaasti Venäjälle, jossa kysyntä oli suurta; Puolan ensimmäinen höyrykäyttöinen kangaspuu oli aloittanut toimintansa Ludwik Geyerin Valkoisessa tehtaassa jo vuonna 1839. Rautatiet, kuten vuonna 1865 avattu Łódźin ja Koluszkin yhteys, vauhdittivat teollisuutta edelleen. Kaupungin rakennukset ja laitokset syntyivät teollisuusmagnaattien, erityisesti Karl Wilhelm Scheiblerin ja Izrael Poznańskin, rahoilla, ja Poznański rakensi vuosina 1872–1892 suuren tekstiilivalmistuskokonaisuuden, johon kuului kaksitoista tehdasta, voimalaitoksia, työläistaloja ja eklektinen palatsi. Voimakkaimman teollistumisen vuosina 1870–1890 kaupungis…
+AIEMPI KYSYMYS: Mitkä kaksi teollisuusmagnaattia rahoittivat Łódźin rakennuksia?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä kysymys. Łódźin rakennukset ja laitokset syntyivät teollisuusmagnaattien rahoilla, erityisesti [[Karl Wilhelm Scheiblerin]] ja [[Izrael Poznańskin]]. Heidän vaikutuksensa näkyy kaupungissa tehtaina, voimalaitoksina, työläistaloina ja palatseina. Poznański rakennutti vuosina 1872–1892 laajan tekstiilitehtaiden kokonaisuuden. Rahaa oli sillon paljon, sen verran sentään tiedän.
+KYSYMYS: Kerro lisää: Izrael Poznańskin

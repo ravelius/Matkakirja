@@ -1,0 +1,1037 @@
+### 81
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Auschwitz-Birkenau (historia)
+Tietoruudun teksti: Auschwitz — puolaksi Oświęcim — oli natsi-Saksan miehitetyssä Puolassa ylläpitämä yli neljänkymmenen keskitys- ja tuhoamisleirin kokonaisuus. Siihen kuuluivat pääleiri Auschwitz I Oświęcimissä, kaasukammioilla varustettu keskitys- ja tuhoamisleiri Auschwitz II-Birkenau, kemianyhtiö IG Farbenin työleiri Auschwitz III-Monowitz sekä kymmeniä sivuleirejä. Ensimmäiset vangit olivat lähes yksinomaan puolalaisia poliittisia pidätettyjä, ja kahtena ensimmäisenä vuotena enemmistö vangeista oli puolalaisia; vuodesta 1942 vuoden 1944 loppuun tavarajunat toivat juutalaisia kaikkialta saksalaismiehitetystä Euroopasta kaasukammioihin. Leirille lähetetystä 1,3 miljoonasta ihmisestä 1,1 miljoonaa murhattiin: 960 000 juutalaista, 74 000 ei-juutalaista puolalaista, 21 000 romania, 15 000 neuvostosotavankia ja jopa 15 000 muuta. Neuvostojoukot vapauttivat leirin 27. tammikuuta 1945, ja päivää on vietetty …
+AIEMPI KYSYMYS: Mitä leirin paikalla on nykyään?
+AIEMPI VASTAUS (Livia):
+Joo, tän tiedän. Auschwitz-Birkenaun alueella toimii nykyään museo ja muistopaikka, jonka ylläpidosta vastaa Puola. Kävijät voivat tutustua entisen pääleirin ja [[Birkenaun]] alueeseen, ja paikalla on näyttelyitä sekä opastettuja kierroksia. Alue on merkitty [[UNESCOn]] maailmanperintöluetteloon. Se on paikka, jossa on hyvä olla hiljaa.
+KYSYMYS: Kerro lisää: UNESCOn
+
+### 82
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Auschwitz-Birkenau (historia)
+Tietoruudun teksti: Auschwitz — puolaksi Oświęcim — oli natsi-Saksan miehitetyssä Puolassa ylläpitämä yli neljänkymmenen keskitys- ja tuhoamisleirin kokonaisuus. Siihen kuuluivat pääleiri Auschwitz I Oświęcimissä, kaasukammioilla varustettu keskitys- ja tuhoamisleiri Auschwitz II-Birkenau, kemianyhtiö IG Farbenin työleiri Auschwitz III-Monowitz sekä kymmeniä sivuleirejä. Ensimmäiset vangit olivat lähes yksinomaan puolalaisia poliittisia pidätettyjä, ja kahtena ensimmäisenä vuotena enemmistö vangeista oli puolalaisia; vuodesta 1942 vuoden 1944 loppuun tavarajunat toivat juutalaisia kaikkialta saksalaismiehitetystä Euroopasta kaasukammioihin. Leirille lähetetystä 1,3 miljoonasta ihmisestä 1,1 miljoonaa murhattiin: 960 000 juutalaista, 74 000 ei-juutalaista puolalaista, 21 000 romania, 15 000 neuvostosotavankia ja jopa 15 000 muuta. Neuvostojoukot vapauttivat leirin 27. tammikuuta 1945, ja päivää on vietetty …
+AIEMPI KYSYMYS: Mikä yhtiö IG Farben oli?
+AIEMPI VASTAUS (Livia):
+No niin, kerron senkin. IG Farben oli saksalainen kemianyhtiöiden suurkonserni, joka perustettiin 1920-luvulla ja josta tuli yksi Saksan merkittävimmistä teollisuusyrityksistä. Toisen maailmansodan aikana yhtiö rakennutti tehtaan [[Monowitzin]] lähelle, ja sen työleirillä Auschwitz III-Monowitz työskenteli vankeja. Sodan jälkeen liittoutuneet purkivat konsernin erillisiksi yrityksiksi, joiden joukossa olivat [[BASF]], [[Bayer]] ja Hoechst. Siitä on kulunut jo yli kahdeksankymmentä vuotta.
+KYSYMYS: Kerro lisää: Monowitzin
+
+### 83
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Auschwitz-Birkenau (historia)
+Tietoruudun teksti: Auschwitz — puolaksi Oświęcim — oli natsi-Saksan miehitetyssä Puolassa ylläpitämä yli neljänkymmenen keskitys- ja tuhoamisleirin kokonaisuus. Siihen kuuluivat pääleiri Auschwitz I Oświęcimissä, kaasukammioilla varustettu keskitys- ja tuhoamisleiri Auschwitz II-Birkenau, kemianyhtiö IG Farbenin työleiri Auschwitz III-Monowitz sekä kymmeniä sivuleirejä. Ensimmäiset vangit olivat lähes yksinomaan puolalaisia poliittisia pidätettyjä, ja kahtena ensimmäisenä vuotena enemmistö vangeista oli puolalaisia; vuodesta 1942 vuoden 1944 loppuun tavarajunat toivat juutalaisia kaikkialta saksalaismiehitetystä Euroopasta kaasukammioihin. Leirille lähetetystä 1,3 miljoonasta ihmisestä 1,1 miljoonaa murhattiin: 960 000 juutalaista, 74 000 ei-juutalaista puolalaista, 21 000 romania, 15 000 neuvostosotavankia ja jopa 15 000 muuta. Neuvostojoukot vapauttivat leirin 27. tammikuuta 1945, ja päivää on vietetty …
+AIEMPI KYSYMYS: Mikä yhtiö IG Farben oli?
+AIEMPI VASTAUS (Livia):
+No niin, kerron senkin. IG Farben oli saksalainen kemianyhtiöiden suurkonserni, joka perustettiin 1920-luvulla ja josta tuli yksi Saksan merkittävimmistä teollisuusyrityksistä. Toisen maailmansodan aikana yhtiö rakennutti tehtaan [[Monowitzin]] lähelle, ja sen työleirillä Auschwitz III-Monowitz työskenteli vankeja. Sodan jälkeen liittoutuneet purkivat konsernin erillisiksi yrityksiksi, joiden joukossa olivat [[BASF]], [[Bayer]] ja Hoechst. Siitä on kulunut jo yli kahdeksankymmentä vuotta.
+KYSYMYS: Kerro lisää: BASF
+
+### 84
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Auschwitz-Birkenau (historia)
+Tietoruudun teksti: Auschwitz — puolaksi Oświęcim — oli natsi-Saksan miehitetyssä Puolassa ylläpitämä yli neljänkymmenen keskitys- ja tuhoamisleirin kokonaisuus. Siihen kuuluivat pääleiri Auschwitz I Oświęcimissä, kaasukammioilla varustettu keskitys- ja tuhoamisleiri Auschwitz II-Birkenau, kemianyhtiö IG Farbenin työleiri Auschwitz III-Monowitz sekä kymmeniä sivuleirejä. Ensimmäiset vangit olivat lähes yksinomaan puolalaisia poliittisia pidätettyjä, ja kahtena ensimmäisenä vuotena enemmistö vangeista oli puolalaisia; vuodesta 1942 vuoden 1944 loppuun tavarajunat toivat juutalaisia kaikkialta saksalaismiehitetystä Euroopasta kaasukammioihin. Leirille lähetetystä 1,3 miljoonasta ihmisestä 1,1 miljoonaa murhattiin: 960 000 juutalaista, 74 000 ei-juutalaista puolalaista, 21 000 romania, 15 000 neuvostosotavankia ja jopa 15 000 muuta. Neuvostojoukot vapauttivat leirin 27. tammikuuta 1945, ja päivää on vietetty …
+AIEMPI KYSYMYS: Mikä yhtiö IG Farben oli?
+AIEMPI VASTAUS (Livia):
+No niin, kerron senkin. IG Farben oli saksalainen kemianyhtiöiden suurkonserni, joka perustettiin 1920-luvulla ja josta tuli yksi Saksan merkittävimmistä teollisuusyrityksistä. Toisen maailmansodan aikana yhtiö rakennutti tehtaan [[Monowitzin]] lähelle, ja sen työleirillä Auschwitz III-Monowitz työskenteli vankeja. Sodan jälkeen liittoutuneet purkivat konsernin erillisiksi yrityksiksi, joiden joukossa olivat [[BASF]], [[Bayer]] ja Hoechst. Siitä on kulunut jo yli kahdeksankymmentä vuotta.
+KYSYMYS: Kerro lisää: Bayer
+
+### 85
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jasna Góra (kulttuuri)
+Tietoruudun teksti: Jasna Góra eli Valoisa vuori on Neitsyt Marialle omistettu pyhäkkö Częstochowassa ja yksi Puolan tärkeimmistä pyhiinvaelluspaikoista. Sen kallisarvoisin aarre on Częstochowan Musta Madonna, ikoni, jolla uskotaan olevan ihmeitä tekeviä voimia. Luostarin perustivat vuonna 1382 Unkarista kutsutut pauliinimunkit, ja heille uskottiin heti tuo Jumalanäidin ja Kristus-lapsen ikoni; kirkko oli aluksi yksilaivainen ja laajennettiin noin 1463 kolmilaivaiseksi goottilaiseksi hallikirkoksi. Talvella 1655 Ruotsin armeija piiritti luostaria tuloksetta toisen pohjoisen sodan eli vedenpaisumuksen aikana, ja se sytytti puolalaisen vastarinnan: kuningas Jan Kazimierz vannoi 1. huhtikuuta 1656 Lvivin katedraalissa vihkivänsä maansa Jumalanäidin suojelukseen ja julisti tämän valtakuntansa kuningattareksi. Ruotsalaiset yrittivät uudestaan 1702, 1705 ja 1709 suuren Pohjan sodan aikana — yhtä huonolla menesty…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namib — kaupunkilehti / Namib: Maa jonka Jumala teki vihassaan] Namibin pohjoista rannikkoa kutsutaan nykyään Skeleton Coastiksi eli Luurankorannikoksi, mutta vanhemmat kuvaukset ovat vielä synkempiä. San-kansa kutsui aluetta nimellä "maa, jonka Jumala teki vihassaan", ja portugalilaiset puhuivat "helvetin porteista". Molemmat nimet syntyivät samasta syystä: kylmä Benguela-virta nostaa rannikolle sakeaa sumua yli 180 päivänä vuodessa, ja hyökyaalto sekä maalta merelle puhaltava tuuli tekivät purjelaivan pakenemisesta lähes mahdotonta. Vasta 1944 kirjailija John Henry Marsh antoi alueelle nykyisen nimen kirjassaan haaksirikkoutuneesta laivasta – nimen taustalla olivat sekä valaanpyytäjien että merimiesten jäänteet.
+- [Irak — maalehti / Muinaisuus: Kolme portaikkoa kuun jumalan luo] Urin ziggurat on porrastettu torni, jonka Ur-Nammu aloitti noin 2100-luvulla eaa. ja jonka hänen seuraajansa Shulgi sai valmiiksi noin vuonna 2000 eaa. Pohja on noin 64 metriä pitkä ja 45 metriä leveä, ja korkeutta oli yli 30 metriä. Sisus on kuivattua savitiiltä, mutta ulkokuori on poltettua tiiltä — siksi rinteet ovat yhä pystyssä. Huipulla oli kuun jumalan Nannan pyhäkkö. Uusbabylonialainen kuningas Nabonidus korjasi tornin 500-luvulla eaa., ja julkisivu ja portaikko muurattiin uudelleen 1980-luvulla.
+AIEMPI KYSYMYS: Mikä Częstochowan Musta Madonna on?
+AIEMPI VASTAUS (Livia):
+Mmm— sen minä muistan. Częstochowan Musta Madonna on [[Jumalanäidin]] ja Kristus-lapsen ikoni, joka on [[Jasna Góran]] pyhäkön kallisarvoisin aarre. Sen uskotaan tekevän ihmeitä, ja se on yksi Puolan tärkeimmistä pyhiinvaelluskohteista. Ikoni uskottiin [[pauliinimunkeille]] heti, kun he perustivat luostarin vuonna 1382 Unkarista kutsuttuina. Sitä kuvaa katselisin mielelläni ihan läheltä.
+KYSYMYS: Kerro lisää: Jumalanäidin
+
+### 86
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jasna Góra (kulttuuri)
+Tietoruudun teksti: Jasna Góra eli Valoisa vuori on Neitsyt Marialle omistettu pyhäkkö Częstochowassa ja yksi Puolan tärkeimmistä pyhiinvaelluspaikoista. Sen kallisarvoisin aarre on Częstochowan Musta Madonna, ikoni, jolla uskotaan olevan ihmeitä tekeviä voimia. Luostarin perustivat vuonna 1382 Unkarista kutsutut pauliinimunkit, ja heille uskottiin heti tuo Jumalanäidin ja Kristus-lapsen ikoni; kirkko oli aluksi yksilaivainen ja laajennettiin noin 1463 kolmilaivaiseksi goottilaiseksi hallikirkoksi. Talvella 1655 Ruotsin armeija piiritti luostaria tuloksetta toisen pohjoisen sodan eli vedenpaisumuksen aikana, ja se sytytti puolalaisen vastarinnan: kuningas Jan Kazimierz vannoi 1. huhtikuuta 1656 Lvivin katedraalissa vihkivänsä maansa Jumalanäidin suojelukseen ja julisti tämän valtakuntansa kuningattareksi. Ruotsalaiset yrittivät uudestaan 1702, 1705 ja 1709 suuren Pohjan sodan aikana — yhtä huonolla menesty…
+AIEMPI KYSYMYS: Mikä Częstochowan Musta Madonna on?
+AIEMPI VASTAUS (Livia):
+Mmm— sen minä muistan. Częstochowan Musta Madonna on [[Jumalanäidin]] ja Kristus-lapsen ikoni, joka on [[Jasna Góran]] pyhäkön kallisarvoisin aarre. Sen uskotaan tekevän ihmeitä, ja se on yksi Puolan tärkeimmistä pyhiinvaelluskohteista. Ikoni uskottiin [[pauliinimunkeille]] heti, kun he perustivat luostarin vuonna 1382 Unkarista kutsuttuina. Sitä kuvaa katselisin mielelläni ihan läheltä.
+KYSYMYS: Kerro lisää: Jasna Góran
+
+### 87
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jasna Góra (kulttuuri)
+Tietoruudun teksti: Jasna Góra eli Valoisa vuori on Neitsyt Marialle omistettu pyhäkkö Częstochowassa ja yksi Puolan tärkeimmistä pyhiinvaelluspaikoista. Sen kallisarvoisin aarre on Częstochowan Musta Madonna, ikoni, jolla uskotaan olevan ihmeitä tekeviä voimia. Luostarin perustivat vuonna 1382 Unkarista kutsutut pauliinimunkit, ja heille uskottiin heti tuo Jumalanäidin ja Kristus-lapsen ikoni; kirkko oli aluksi yksilaivainen ja laajennettiin noin 1463 kolmilaivaiseksi goottilaiseksi hallikirkoksi. Talvella 1655 Ruotsin armeija piiritti luostaria tuloksetta toisen pohjoisen sodan eli vedenpaisumuksen aikana, ja se sytytti puolalaisen vastarinnan: kuningas Jan Kazimierz vannoi 1. huhtikuuta 1656 Lvivin katedraalissa vihkivänsä maansa Jumalanäidin suojelukseen ja julisti tämän valtakuntansa kuningattareksi. Ruotsalaiset yrittivät uudestaan 1702, 1705 ja 1709 suuren Pohjan sodan aikana — yhtä huonolla menesty…
+AIEMPI KYSYMYS: Mikä Częstochowan Musta Madonna on?
+AIEMPI VASTAUS (Livia):
+Mmm— sen minä muistan. Częstochowan Musta Madonna on [[Jumalanäidin]] ja Kristus-lapsen ikoni, joka on [[Jasna Góran]] pyhäkön kallisarvoisin aarre. Sen uskotaan tekevän ihmeitä, ja se on yksi Puolan tärkeimmistä pyhiinvaelluskohteista. Ikoni uskottiin [[pauliinimunkeille]] heti, kun he perustivat luostarin vuonna 1382 Unkarista kutsuttuina. Sitä kuvaa katselisin mielelläni ihan läheltä.
+KYSYMYS: Kerro lisää: pauliinimunkeille
+
+### 88
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jasna Góra (kulttuuri)
+Tietoruudun teksti: Jasna Góra eli Valoisa vuori on Neitsyt Marialle omistettu pyhäkkö Częstochowassa ja yksi Puolan tärkeimmistä pyhiinvaelluspaikoista. Sen kallisarvoisin aarre on Częstochowan Musta Madonna, ikoni, jolla uskotaan olevan ihmeitä tekeviä voimia. Luostarin perustivat vuonna 1382 Unkarista kutsutut pauliinimunkit, ja heille uskottiin heti tuo Jumalanäidin ja Kristus-lapsen ikoni; kirkko oli aluksi yksilaivainen ja laajennettiin noin 1463 kolmilaivaiseksi goottilaiseksi hallikirkoksi. Talvella 1655 Ruotsin armeija piiritti luostaria tuloksetta toisen pohjoisen sodan eli vedenpaisumuksen aikana, ja se sytytti puolalaisen vastarinnan: kuningas Jan Kazimierz vannoi 1. huhtikuuta 1656 Lvivin katedraalissa vihkivänsä maansa Jumalanäidin suojelukseen ja julisti tämän valtakuntansa kuningattareksi. Ruotsalaiset yrittivät uudestaan 1702, 1705 ja 1709 suuren Pohjan sodan aikana — yhtä huonolla menesty…
+AIEMPI KYSYMYS: Mitä luostarissa tapahtui talvella 1655?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Talvella 1655 [[Ruotsin]] armeija piiritti Jasna Góran luostaria tuloksetta [[toisen pohjoisen sodan]] eli vedenpaisumuksen aikana. Piiritys sytytti puolalaisen vastarinnan, ja kuningas [[Jan Kazimierz]] vannoi 1. huhtikuuta 1656 Lvivin katedraalissa vihkivänsä maansa Jumalanäidin suojelukseen ja julisti tämän valtakuntansa kuningattareksi. Siitä on jo reilusti yli kolmesataa vuotta.
+KYSYMYS: Kerro lisää: Ruotsin
+
+### 89
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jasna Góra (kulttuuri)
+Tietoruudun teksti: Jasna Góra eli Valoisa vuori on Neitsyt Marialle omistettu pyhäkkö Częstochowassa ja yksi Puolan tärkeimmistä pyhiinvaelluspaikoista. Sen kallisarvoisin aarre on Częstochowan Musta Madonna, ikoni, jolla uskotaan olevan ihmeitä tekeviä voimia. Luostarin perustivat vuonna 1382 Unkarista kutsutut pauliinimunkit, ja heille uskottiin heti tuo Jumalanäidin ja Kristus-lapsen ikoni; kirkko oli aluksi yksilaivainen ja laajennettiin noin 1463 kolmilaivaiseksi goottilaiseksi hallikirkoksi. Talvella 1655 Ruotsin armeija piiritti luostaria tuloksetta toisen pohjoisen sodan eli vedenpaisumuksen aikana, ja se sytytti puolalaisen vastarinnan: kuningas Jan Kazimierz vannoi 1. huhtikuuta 1656 Lvivin katedraalissa vihkivänsä maansa Jumalanäidin suojelukseen ja julisti tämän valtakuntansa kuningattareksi. Ruotsalaiset yrittivät uudestaan 1702, 1705 ja 1709 suuren Pohjan sodan aikana — yhtä huonolla menesty…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+AIEMPI KYSYMYS: Mitä luostarissa tapahtui talvella 1655?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Talvella 1655 [[Ruotsin]] armeija piiritti Jasna Góran luostaria tuloksetta [[toisen pohjoisen sodan]] eli vedenpaisumuksen aikana. Piiritys sytytti puolalaisen vastarinnan, ja kuningas [[Jan Kazimierz]] vannoi 1. huhtikuuta 1656 Lvivin katedraalissa vihkivänsä maansa Jumalanäidin suojelukseen ja julisti tämän valtakuntansa kuningattareksi. Siitä on jo reilusti yli kolmesataa vuotta.
+KYSYMYS: Kerro lisää: toisen pohjoisen sodan
+
+### 90
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jasna Góra (kulttuuri)
+Tietoruudun teksti: Jasna Góra eli Valoisa vuori on Neitsyt Marialle omistettu pyhäkkö Częstochowassa ja yksi Puolan tärkeimmistä pyhiinvaelluspaikoista. Sen kallisarvoisin aarre on Częstochowan Musta Madonna, ikoni, jolla uskotaan olevan ihmeitä tekeviä voimia. Luostarin perustivat vuonna 1382 Unkarista kutsutut pauliinimunkit, ja heille uskottiin heti tuo Jumalanäidin ja Kristus-lapsen ikoni; kirkko oli aluksi yksilaivainen ja laajennettiin noin 1463 kolmilaivaiseksi goottilaiseksi hallikirkoksi. Talvella 1655 Ruotsin armeija piiritti luostaria tuloksetta toisen pohjoisen sodan eli vedenpaisumuksen aikana, ja se sytytti puolalaisen vastarinnan: kuningas Jan Kazimierz vannoi 1. huhtikuuta 1656 Lvivin katedraalissa vihkivänsä maansa Jumalanäidin suojelukseen ja julisti tämän valtakuntansa kuningattareksi. Ruotsalaiset yrittivät uudestaan 1702, 1705 ja 1709 suuren Pohjan sodan aikana — yhtä huonolla menesty…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Kazimierz] 1335 Vuonna 1335 kuningas Kasimir Suuri perusti Krakovan viereen aivan oman kaupungin ja nimesi sen itsensä mukaan Kazimierziksi. Sen keskusaukio Wolnica oli valtava, 195 x 195 metriä - lähes yhtä iso kuin Krakovan oma tori. Vuonna 1495 juutalaiset asukkaat käskettiin muuttamaan pois Krakovan vanhastakaupungista Kazimierziin, ja alueesta kasvoi vuosisatojen kuluessa vilkas juutalaiskortteli lukuisine synagogineen. Vanha synagoga on Puolan vanhin yhä pystyssä seisova synagogarakennus. Toisen maailmansodan aikana korttelin juutalaisväestöä kohtasi julma kohtalo, mutta nykyään Kazimierz on jälleen täynnä elämää: kahviloita, kirjakauppoja ja vuotuinen juutalaisen kulttuurin festivaali vuodesta …
+AIEMPI KYSYMYS: Mitä luostarissa tapahtui talvella 1655?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Talvella 1655 [[Ruotsin]] armeija piiritti Jasna Góran luostaria tuloksetta [[toisen pohjoisen sodan]] eli vedenpaisumuksen aikana. Piiritys sytytti puolalaisen vastarinnan, ja kuningas [[Jan Kazimierz]] vannoi 1. huhtikuuta 1656 Lvivin katedraalissa vihkivänsä maansa Jumalanäidin suojelukseen ja julisti tämän valtakuntansa kuningattareksi. Siitä on jo reilusti yli kolmesataa vuotta.
+KYSYMYS: Kerro lisää: Jan Kazimierz
+
+### 91
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jasna Góra (kulttuuri)
+Tietoruudun teksti: Jasna Góra eli Valoisa vuori on Neitsyt Marialle omistettu pyhäkkö Częstochowassa ja yksi Puolan tärkeimmistä pyhiinvaelluspaikoista. Sen kallisarvoisin aarre on Częstochowan Musta Madonna, ikoni, jolla uskotaan olevan ihmeitä tekeviä voimia. Luostarin perustivat vuonna 1382 Unkarista kutsutut pauliinimunkit, ja heille uskottiin heti tuo Jumalanäidin ja Kristus-lapsen ikoni; kirkko oli aluksi yksilaivainen ja laajennettiin noin 1463 kolmilaivaiseksi goottilaiseksi hallikirkoksi. Talvella 1655 Ruotsin armeija piiritti luostaria tuloksetta toisen pohjoisen sodan eli vedenpaisumuksen aikana, ja se sytytti puolalaisen vastarinnan: kuningas Jan Kazimierz vannoi 1. huhtikuuta 1656 Lvivin katedraalissa vihkivänsä maansa Jumalanäidin suojelukseen ja julisti tämän valtakuntansa kuningattareksi. Ruotsalaiset yrittivät uudestaan 1702, 1705 ja 1709 suuren Pohjan sodan aikana — yhtä huonolla menesty…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Ruoka: Gulassi on Unkarissa keitto] 1897 — Se, mitä muualla Euroopassa kutsutaan gulassiksi, on Unkarissa pörkölt eli paksu pata. Gulyás taas on keitto: lientä, naudanlihaa, perunaa ja paprikaa, ja se syödään lusikalla. Sana tarkoittaa karjapaimenta — keitto keitettiin alun perin padassa laitumella. Paprika saapui maahan ottomaanien mukana 1500-luvulla, ja Budapestin suuressa kauppahallissa, joka avattiin vuonna 1897, sitä myydään makeasta tuliseen.
+AIEMPI KYSYMYS: Keitä pauliinimunkit ovat?
+AIEMPI VASTAUS (Livia):
+Ai tota. Pauliinimunkit ovat katolinen munkkikunta, jonka juuret ovat [[Unkarissa]] ja joka syntyi keskiajalla erakkojen yhteisöistä. [[Jasna Góran]] luostarin perustivat vuonna 1382 Unkarista kutsutut pauliinimunkit, ja heidän huomaansa uskottiin heti Częstochowan ikoni. Heidän luostarinsa on pysynyt pyhiinvaeltajien kohteena siitä lähtien. Kyllä he ovat pitäneet paikkaa pitkään.
+KYSYMYS: Kerro lisää: Unkarissa
+
+### 92
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jasna Góra (kulttuuri)
+Tietoruudun teksti: Jasna Góra eli Valoisa vuori on Neitsyt Marialle omistettu pyhäkkö Częstochowassa ja yksi Puolan tärkeimmistä pyhiinvaelluspaikoista. Sen kallisarvoisin aarre on Częstochowan Musta Madonna, ikoni, jolla uskotaan olevan ihmeitä tekeviä voimia. Luostarin perustivat vuonna 1382 Unkarista kutsutut pauliinimunkit, ja heille uskottiin heti tuo Jumalanäidin ja Kristus-lapsen ikoni; kirkko oli aluksi yksilaivainen ja laajennettiin noin 1463 kolmilaivaiseksi goottilaiseksi hallikirkoksi. Talvella 1655 Ruotsin armeija piiritti luostaria tuloksetta toisen pohjoisen sodan eli vedenpaisumuksen aikana, ja se sytytti puolalaisen vastarinnan: kuningas Jan Kazimierz vannoi 1. huhtikuuta 1656 Lvivin katedraalissa vihkivänsä maansa Jumalanäidin suojelukseen ja julisti tämän valtakuntansa kuningattareksi. Ruotsalaiset yrittivät uudestaan 1702, 1705 ja 1709 suuren Pohjan sodan aikana — yhtä huonolla menesty…
+AIEMPI KYSYMYS: Missä Częstochowa sijaitsee Puolassa?
+AIEMPI VASTAUS (Livia):
+Joo, sen löytää kartalta. Częstochowa sijaitsee Etelä-Puolassa [[Wartajoen]] varrella, [[Sleesian voivodikunnan]] pohjoisosassa. Kaupungin tuntumassa kohoaa kukkulalla Jasna Góran pyhäkkö, joka on yksi Puolan tärkeimmistä pyhiinvaelluspaikoista. Ylhäältä se on helppo löytää.
+KYSYMYS: Kerro lisää: Wartajoen
+
+### 93
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jasna Góra (kulttuuri)
+Tietoruudun teksti: Jasna Góra eli Valoisa vuori on Neitsyt Marialle omistettu pyhäkkö Częstochowassa ja yksi Puolan tärkeimmistä pyhiinvaelluspaikoista. Sen kallisarvoisin aarre on Częstochowan Musta Madonna, ikoni, jolla uskotaan olevan ihmeitä tekeviä voimia. Luostarin perustivat vuonna 1382 Unkarista kutsutut pauliinimunkit, ja heille uskottiin heti tuo Jumalanäidin ja Kristus-lapsen ikoni; kirkko oli aluksi yksilaivainen ja laajennettiin noin 1463 kolmilaivaiseksi goottilaiseksi hallikirkoksi. Talvella 1655 Ruotsin armeija piiritti luostaria tuloksetta toisen pohjoisen sodan eli vedenpaisumuksen aikana, ja se sytytti puolalaisen vastarinnan: kuningas Jan Kazimierz vannoi 1. huhtikuuta 1656 Lvivin katedraalissa vihkivänsä maansa Jumalanäidin suojelukseen ja julisti tämän valtakuntansa kuningattareksi. Ruotsalaiset yrittivät uudestaan 1702, 1705 ja 1709 suuren Pohjan sodan aikana — yhtä huonolla menesty…
+AIEMPI KYSYMYS: Missä Częstochowa sijaitsee Puolassa?
+AIEMPI VASTAUS (Livia):
+Joo, sen löytää kartalta. Częstochowa sijaitsee Etelä-Puolassa [[Wartajoen]] varrella, [[Sleesian voivodikunnan]] pohjoisosassa. Kaupungin tuntumassa kohoaa kukkulalla Jasna Góran pyhäkkö, joka on yksi Puolan tärkeimmistä pyhiinvaelluspaikoista. Ylhäältä se on helppo löytää.
+KYSYMYS: Kerro lisää: Sleesian voivodikunnan
+
+### 94
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jasna Góra (kulttuuri)
+Tietoruudun teksti: Jasna Góra eli Valoisa vuori on Neitsyt Marialle omistettu pyhäkkö Częstochowassa ja yksi Puolan tärkeimmistä pyhiinvaelluspaikoista. Sen kallisarvoisin aarre on Częstochowan Musta Madonna, ikoni, jolla uskotaan olevan ihmeitä tekeviä voimia. Luostarin perustivat vuonna 1382 Unkarista kutsutut pauliinimunkit, ja heille uskottiin heti tuo Jumalanäidin ja Kristus-lapsen ikoni; kirkko oli aluksi yksilaivainen ja laajennettiin noin 1463 kolmilaivaiseksi goottilaiseksi hallikirkoksi. Talvella 1655 Ruotsin armeija piiritti luostaria tuloksetta toisen pohjoisen sodan eli vedenpaisumuksen aikana, ja se sytytti puolalaisen vastarinnan: kuningas Jan Kazimierz vannoi 1. huhtikuuta 1656 Lvivin katedraalissa vihkivänsä maansa Jumalanäidin suojelukseen ja julisti tämän valtakuntansa kuningattareksi. Ruotsalaiset yrittivät uudestaan 1702, 1705 ja 1709 suuren Pohjan sodan aikana — yhtä huonolla menesty…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kohdekartta / Kohdekartta: Katedraaliaukio] 1748–1777 Aukio oli alun perin suo, ja sen nimi oli Plaza de la Ciénaga eli Suoaukio. Se kuivattiin ja otettiin laivaston telakaksi. Santiago de Cuban piispa Diego Evelino Hurtado de Compostela osti aukion laidalta tontin, ja vuonna 1727 hyväksyttiin suunnitelma kirkosta, luostarista ja kollegiosta. Kun katedraali valmistui, aukion ympärille nousivat kaupungin komeimmat kartanot; niistä yhdessä, kreivi Lombillon palatsissa, toimii nykyään siirtomaataiteen museo. Jesuiitat aloittivat katedraalin rakentamisen 1748 vanhemman kirkon paikalle, ja työ valmistui 1777 — siis kymmenen vuotta sen jälkeen, kun kuningas Kaarle III oli karkottanut jesuiitat saarelta 1767. Kirkko vihittiin 1782. Se on 30…
+AIEMPI KYSYMYS: Mitä pyhiinvaellus tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Pyhiinvaellus on uskonnollisista syistä tehtävä matka pyhäksi katsotulle paikalle, johon liittyy esimerkiksi rukous, hiljentyminen tai kiitollisuuden osoittaminen. Euroopan tunnettuja kristillisiä kohteita ovat esimerkiksi [[Santiago de Compostela]], [[Rooma]] ja [[Lourdes]], ja Puolassa vaeltajia kokoaa Jasna Góra. Matka tehdään perinteisesti jalan, ja matka itsessään on osa kokemusta.
+
+Minä kuljen jalan vain pakon edessä, koska siivet on tehty parempaan. Silti ymmärrän, että joskus matka on koko pointti.
+KYSYMYS: Kerro lisää: Santiago de Compostela
+
+### 95
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jasna Góra (kulttuuri)
+Tietoruudun teksti: Jasna Góra eli Valoisa vuori on Neitsyt Marialle omistettu pyhäkkö Częstochowassa ja yksi Puolan tärkeimmistä pyhiinvaelluspaikoista. Sen kallisarvoisin aarre on Częstochowan Musta Madonna, ikoni, jolla uskotaan olevan ihmeitä tekeviä voimia. Luostarin perustivat vuonna 1382 Unkarista kutsutut pauliinimunkit, ja heille uskottiin heti tuo Jumalanäidin ja Kristus-lapsen ikoni; kirkko oli aluksi yksilaivainen ja laajennettiin noin 1463 kolmilaivaiseksi goottilaiseksi hallikirkoksi. Talvella 1655 Ruotsin armeija piiritti luostaria tuloksetta toisen pohjoisen sodan eli vedenpaisumuksen aikana, ja se sytytti puolalaisen vastarinnan: kuningas Jan Kazimierz vannoi 1. huhtikuuta 1656 Lvivin katedraalissa vihkivänsä maansa Jumalanäidin suojelukseen ja julisti tämän valtakuntansa kuningattareksi. Ruotsalaiset yrittivät uudestaan 1702, 1705 ja 1709 suuren Pohjan sodan aikana — yhtä huonolla menesty…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Washington Squaren riemukaari] 1889–1895 Vuonna 1889 tuli kuluneeksi sata vuotta George Washingtonin virkaanastujaisista, ja liikemies William Rhinelander Stewart pystytti juhlan kunniaksi Viidennelle Avenuelle puusta ja kipsistä tehdyn muistokaaren. Stewart asui aukion pohjoislaidalla, ja hänen ystävänsä keräsivät hankkeeseen 2 765 dollaria. Vapaamuurarit kulkivat juhlakulkueessa kaaren ali Washingtonin virkaanastujaisraamattu mukanaan. Väliaikainen kaari oli niin suosittu, että rahaa kerättiin lisää ja kivinen kaari tilattiin arkkitehti Stanford Whiteltä. White otti mallin roomalaisesta riemukaaresta ja päätyi lähelle ensimmäisellä vuosisadalla rakennettua Tituksen kaarta. Rakennusaine on valkoista Tuckahoen marmoria. …
+AIEMPI KYSYMYS: Mitä pyhiinvaellus tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Pyhiinvaellus on uskonnollisista syistä tehtävä matka pyhäksi katsotulle paikalle, johon liittyy esimerkiksi rukous, hiljentyminen tai kiitollisuuden osoittaminen. Euroopan tunnettuja kristillisiä kohteita ovat esimerkiksi [[Santiago de Compostela]], [[Rooma]] ja [[Lourdes]], ja Puolassa vaeltajia kokoaa Jasna Góra. Matka tehdään perinteisesti jalan, ja matka itsessään on osa kokemusta.
+
+Minä kuljen jalan vain pakon edessä, koska siivet on tehty parempaan. Silti ymmärrän, että joskus matka on koko pointti.
+KYSYMYS: Kerro lisää: Rooma
+
+### 96
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jasna Góra (kulttuuri)
+Tietoruudun teksti: Jasna Góra eli Valoisa vuori on Neitsyt Marialle omistettu pyhäkkö Częstochowassa ja yksi Puolan tärkeimmistä pyhiinvaelluspaikoista. Sen kallisarvoisin aarre on Częstochowan Musta Madonna, ikoni, jolla uskotaan olevan ihmeitä tekeviä voimia. Luostarin perustivat vuonna 1382 Unkarista kutsutut pauliinimunkit, ja heille uskottiin heti tuo Jumalanäidin ja Kristus-lapsen ikoni; kirkko oli aluksi yksilaivainen ja laajennettiin noin 1463 kolmilaivaiseksi goottilaiseksi hallikirkoksi. Talvella 1655 Ruotsin armeija piiritti luostaria tuloksetta toisen pohjoisen sodan eli vedenpaisumuksen aikana, ja se sytytti puolalaisen vastarinnan: kuningas Jan Kazimierz vannoi 1. huhtikuuta 1656 Lvivin katedraalissa vihkivänsä maansa Jumalanäidin suojelukseen ja julisti tämän valtakuntansa kuningattareksi. Ruotsalaiset yrittivät uudestaan 1702, 1705 ja 1709 suuren Pohjan sodan aikana — yhtä huonolla menesty…
+AIEMPI KYSYMYS: Mitä pyhiinvaellus tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Pyhiinvaellus on uskonnollisista syistä tehtävä matka pyhäksi katsotulle paikalle, johon liittyy esimerkiksi rukous, hiljentyminen tai kiitollisuuden osoittaminen. Euroopan tunnettuja kristillisiä kohteita ovat esimerkiksi [[Santiago de Compostela]], [[Rooma]] ja [[Lourdes]], ja Puolassa vaeltajia kokoaa Jasna Góra. Matka tehdään perinteisesti jalan, ja matka itsessään on osa kokemusta.
+
+Minä kuljen jalan vain pakon edessä, koska siivet on tehty parempaan. Silti ymmärrän, että joskus matka on koko pointti.
+KYSYMYS: Kerro lisää: Lourdes
+
+### 97
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zamość (kulttuuri)
+Tietoruudun teksti: Zamość on kaupunki Kaakkois-Puolassa Lublinin voivodikunnassa, noin 90 kilometriä Lublinista ja 247 kilometriä Varsovasta. Sen perusti vuonna 1580 Puolan suurkansleri ja hetmani Jan Zamoyski, joka halusi rakentaa ihannekaupungin kauppatielle, joka yhdisti Länsi- ja Pohjois-Euroopan Mustaanmereen. Padovalainen arkkitehti Bernardo Morando piirsi kaupungin italialaisten kauppakaupunkien malliin myöhäisrenessanssin aikaan, ja siitä on säilynyt alkuperäinen katuverkko, linnoitukset ja suuri määrä alkuperäisiä rakennuksia, joissa venetsialainen ja keskieurooppalainen perinne sekoittuvat. Historiallinen keskusta merkittiin maailmanperintöluetteloon vuonna 1992 ainutlaatuisena esimerkkinä keskieurooppalaisesta renessanssikaupungista. Zamoyski perusti kaupunkiin vuonna 1594 myös oman akatemiansa, ja kaupunki kesti sekä Bohdan Hmelnytskyin kasakkapiirityksen että ruotsalaisten piirityksen 1656 — …
+AIEMPI KYSYMYS: Kuka perusti Zamośćin?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä kysymys, ja Viisas Pöllö parantelee yhä siipeään. Zamośćin perusti vuonna 1580 Puolan suurkansleri ja hetmani [[Jan Zamoyski]]. Hän halusi rakentaa ihannekaupungin kauppatielle, joka yhdisti Länsi- ja Pohjois-Euroopan [[Mustaanmereen]], ja kaupunki piirrettiin italialaisten kauppakaupunkien malliin. Suunnittelijana toimi padovalainen arkkitehti [[Bernardo Morando]]. Zamoyski perusti kaupunkiin vuonna 1594 myös oman akatemiansa. Tää meni nyt sujuvasti kuin lentäisi myötätuulessa.
+KYSYMYS: Kerro lisää: Jan Zamoyski
+
+### 98
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zamość (kulttuuri)
+Tietoruudun teksti: Zamość on kaupunki Kaakkois-Puolassa Lublinin voivodikunnassa, noin 90 kilometriä Lublinista ja 247 kilometriä Varsovasta. Sen perusti vuonna 1580 Puolan suurkansleri ja hetmani Jan Zamoyski, joka halusi rakentaa ihannekaupungin kauppatielle, joka yhdisti Länsi- ja Pohjois-Euroopan Mustaanmereen. Padovalainen arkkitehti Bernardo Morando piirsi kaupungin italialaisten kauppakaupunkien malliin myöhäisrenessanssin aikaan, ja siitä on säilynyt alkuperäinen katuverkko, linnoitukset ja suuri määrä alkuperäisiä rakennuksia, joissa venetsialainen ja keskieurooppalainen perinne sekoittuvat. Historiallinen keskusta merkittiin maailmanperintöluetteloon vuonna 1992 ainutlaatuisena esimerkkinä keskieurooppalaisesta renessanssikaupungista. Zamoyski perusti kaupunkiin vuonna 1594 myös oman akatemiansa, ja kaupunki kesti sekä Bohdan Hmelnytskyin kasakkapiirityksen että ruotsalaisten piirityksen 1656 — …
+AIEMPI KYSYMYS: Kuka perusti Zamośćin?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä kysymys, ja Viisas Pöllö parantelee yhä siipeään. Zamośćin perusti vuonna 1580 Puolan suurkansleri ja hetmani [[Jan Zamoyski]]. Hän halusi rakentaa ihannekaupungin kauppatielle, joka yhdisti Länsi- ja Pohjois-Euroopan [[Mustaanmereen]], ja kaupunki piirrettiin italialaisten kauppakaupunkien malliin. Suunnittelijana toimi padovalainen arkkitehti [[Bernardo Morando]]. Zamoyski perusti kaupunkiin vuonna 1594 myös oman akatemiansa. Tää meni nyt sujuvasti kuin lentäisi myötätuulessa.
+KYSYMYS: Kerro lisää: Mustaanmereen
+
+### 99
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zamość (kulttuuri)
+Tietoruudun teksti: Zamość on kaupunki Kaakkois-Puolassa Lublinin voivodikunnassa, noin 90 kilometriä Lublinista ja 247 kilometriä Varsovasta. Sen perusti vuonna 1580 Puolan suurkansleri ja hetmani Jan Zamoyski, joka halusi rakentaa ihannekaupungin kauppatielle, joka yhdisti Länsi- ja Pohjois-Euroopan Mustaanmereen. Padovalainen arkkitehti Bernardo Morando piirsi kaupungin italialaisten kauppakaupunkien malliin myöhäisrenessanssin aikaan, ja siitä on säilynyt alkuperäinen katuverkko, linnoitukset ja suuri määrä alkuperäisiä rakennuksia, joissa venetsialainen ja keskieurooppalainen perinne sekoittuvat. Historiallinen keskusta merkittiin maailmanperintöluetteloon vuonna 1992 ainutlaatuisena esimerkkinä keskieurooppalaisesta renessanssikaupungista. Zamoyski perusti kaupunkiin vuonna 1594 myös oman akatemiansa, ja kaupunki kesti sekä Bohdan Hmelnytskyin kasakkapiirityksen että ruotsalaisten piirityksen 1656 — …
+AIEMPI KYSYMYS: Kuka perusti Zamośćin?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä kysymys, ja Viisas Pöllö parantelee yhä siipeään. Zamośćin perusti vuonna 1580 Puolan suurkansleri ja hetmani [[Jan Zamoyski]]. Hän halusi rakentaa ihannekaupungin kauppatielle, joka yhdisti Länsi- ja Pohjois-Euroopan [[Mustaanmereen]], ja kaupunki piirrettiin italialaisten kauppakaupunkien malliin. Suunnittelijana toimi padovalainen arkkitehti [[Bernardo Morando]]. Zamoyski perusti kaupunkiin vuonna 1594 myös oman akatemiansa. Tää meni nyt sujuvasti kuin lentäisi myötätuulessa.
+KYSYMYS: Kerro lisää: Bernardo Morando
+
+### 100
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zamość (kulttuuri)
+Tietoruudun teksti: Zamość on kaupunki Kaakkois-Puolassa Lublinin voivodikunnassa, noin 90 kilometriä Lublinista ja 247 kilometriä Varsovasta. Sen perusti vuonna 1580 Puolan suurkansleri ja hetmani Jan Zamoyski, joka halusi rakentaa ihannekaupungin kauppatielle, joka yhdisti Länsi- ja Pohjois-Euroopan Mustaanmereen. Padovalainen arkkitehti Bernardo Morando piirsi kaupungin italialaisten kauppakaupunkien malliin myöhäisrenessanssin aikaan, ja siitä on säilynyt alkuperäinen katuverkko, linnoitukset ja suuri määrä alkuperäisiä rakennuksia, joissa venetsialainen ja keskieurooppalainen perinne sekoittuvat. Historiallinen keskusta merkittiin maailmanperintöluetteloon vuonna 1992 ainutlaatuisena esimerkkinä keskieurooppalaisesta renessanssikaupungista. Zamoyski perusti kaupunkiin vuonna 1594 myös oman akatemiansa, ja kaupunki kesti sekä Bohdan Hmelnytskyin kasakkapiirityksen että ruotsalaisten piirityksen 1656 — …
+AIEMPI KYSYMYS: Mistä kaupungin pohjakaava on peräisin?
+AIEMPI VASTAUS (Livia):
+Katotaas. Zamośćin pohjakaava on peräisin italialaisten kauppakaupunkien mallista. Padovalainen arkkitehti [[Bernardo Morando]] piirsi kaupungin [[myöhäisrenessanssin]] aikaan, ja siitä on säilynyt alkuperäinen katuverkko, linnoitukset ja suuri määrä alkuperäisiä rakennuksia, joissa venetsialainen ja keskieurooppalainen perinne sekoittuvat. Historiallinen keskusta merkittiin [[maailmanperintöluetteloon]] vuonna 1992. Italia taitaa olla kaikkialla, minne kyyhky lentää.
+KYSYMYS: Kerro lisää: myöhäisrenessanssin
+
+### 101
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zamość (kulttuuri)
+Tietoruudun teksti: Zamość on kaupunki Kaakkois-Puolassa Lublinin voivodikunnassa, noin 90 kilometriä Lublinista ja 247 kilometriä Varsovasta. Sen perusti vuonna 1580 Puolan suurkansleri ja hetmani Jan Zamoyski, joka halusi rakentaa ihannekaupungin kauppatielle, joka yhdisti Länsi- ja Pohjois-Euroopan Mustaanmereen. Padovalainen arkkitehti Bernardo Morando piirsi kaupungin italialaisten kauppakaupunkien malliin myöhäisrenessanssin aikaan, ja siitä on säilynyt alkuperäinen katuverkko, linnoitukset ja suuri määrä alkuperäisiä rakennuksia, joissa venetsialainen ja keskieurooppalainen perinne sekoittuvat. Historiallinen keskusta merkittiin maailmanperintöluetteloon vuonna 1992 ainutlaatuisena esimerkkinä keskieurooppalaisesta renessanssikaupungista. Zamoyski perusti kaupunkiin vuonna 1594 myös oman akatemiansa, ja kaupunki kesti sekä Bohdan Hmelnytskyin kasakkapiirityksen että ruotsalaisten piirityksen 1656 — …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mistä kaupungin pohjakaava on peräisin?
+AIEMPI VASTAUS (Livia):
+Katotaas. Zamośćin pohjakaava on peräisin italialaisten kauppakaupunkien mallista. Padovalainen arkkitehti [[Bernardo Morando]] piirsi kaupungin [[myöhäisrenessanssin]] aikaan, ja siitä on säilynyt alkuperäinen katuverkko, linnoitukset ja suuri määrä alkuperäisiä rakennuksia, joissa venetsialainen ja keskieurooppalainen perinne sekoittuvat. Historiallinen keskusta merkittiin [[maailmanperintöluetteloon]] vuonna 1992. Italia taitaa olla kaikkialla, minne kyyhky lentää.
+KYSYMYS: Kerro lisää: maailmanperintöluetteloon
+
+### 102
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zamość (kulttuuri)
+Tietoruudun teksti: Zamość on kaupunki Kaakkois-Puolassa Lublinin voivodikunnassa, noin 90 kilometriä Lublinista ja 247 kilometriä Varsovasta. Sen perusti vuonna 1580 Puolan suurkansleri ja hetmani Jan Zamoyski, joka halusi rakentaa ihannekaupungin kauppatielle, joka yhdisti Länsi- ja Pohjois-Euroopan Mustaanmereen. Padovalainen arkkitehti Bernardo Morando piirsi kaupungin italialaisten kauppakaupunkien malliin myöhäisrenessanssin aikaan, ja siitä on säilynyt alkuperäinen katuverkko, linnoitukset ja suuri määrä alkuperäisiä rakennuksia, joissa venetsialainen ja keskieurooppalainen perinne sekoittuvat. Historiallinen keskusta merkittiin maailmanperintöluetteloon vuonna 1992 ainutlaatuisena esimerkkinä keskieurooppalaisesta renessanssikaupungista. Zamoyski perusti kaupunkiin vuonna 1594 myös oman akatemiansa, ja kaupunki kesti sekä Bohdan Hmelnytskyin kasakkapiirityksen että ruotsalaisten piirityksen 1656 — …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Renessanssi syntyi kilpailusta] 1400-luku — 1400-luvun Firenzessä suvut ja killat kilpailivat siitä, kuka teettää kauneimman kirkon, patsaan tai kupolin. Kilpailusta syntyi renessanssi — "uudelleensyntyminen" — joka muutti koko Euroopan taiteen, tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli oli valmistuessaan 1436 maailman suurin muuraamalla tehty kupoli, eikä kukaan tiennyt varmasti, pysyisikö se pystyssä: se rakennettiin ilman tukitelineitä tavalla, jota insinöörit ihmettelevät yhä.
+- [Auckland — kohdekartta / Kohdekartta: Aucklandin kaupungintalo] 1909–1911 Kaupungintaloa suunniteltiin Aucklandiin jo 1872, vuosi ennen isoisän käyntiä. Paikaksi valittiin 1880 Greys Avenuen ja Queen Streetin kulma, joka lunastettiin omalla parlamenttilailla 1881, ja kun tontti osoittautui liian pieneksi, kaupunki osti naapurikiinteistöt 1883. Suunnittelukilpailu järjestettiin vasta 1908, ja sen voittivat melbournelaiset arkkitehdit JJ & EJ Clark. Peruskiven muurasi pormestari Arthur Myers 24. helmikuuta 1909, ja kenraalikuvernööri lordi Islington vihki talon 14. joulukuuta 1911. Hinta oli 126 000 puntaa. Julkisivun alaosa on tummaa melbournelaista basalttia ja yläosa vaaleaa Oamarun kalkkikiveä, ja kellotorni nousee 40 metriin. Viisikerroksinen italial…
+AIEMPI KYSYMYS: Mikä on ihannekaupunki?
+AIEMPI VASTAUS (Livia):
+Joo, sen minä osaan. Ihannekaupunki on [[renessanssin]] ajan ajatus kaupungista, joka suunnitellaan etukäteen järjestelmällisesti: säännöllinen katuverkko, selkeä keskusaukio ja usein puolustukseen sopivat muurit. Ajatus syntyi [[Italiassa]], ja sen mukaan on rakennettu esimerkiksi [[Palmanova]]. Myös Zamość perustettiin ihannekaupungiksi, jonka Jan Zamoyski halusi rakentaa tärkeälle kauppatielle.
+
+Minä pidän siitä, että säännöllinen katuverkko näkyy ylhäältä selvästi. Sotkuisen vanhan kaupungin kattojen yli lentäminen on pelkkää arvailua.
+KYSYMYS: Kerro lisää: renessanssin
+
+### 103
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zamość (kulttuuri)
+Tietoruudun teksti: Zamość on kaupunki Kaakkois-Puolassa Lublinin voivodikunnassa, noin 90 kilometriä Lublinista ja 247 kilometriä Varsovasta. Sen perusti vuonna 1580 Puolan suurkansleri ja hetmani Jan Zamoyski, joka halusi rakentaa ihannekaupungin kauppatielle, joka yhdisti Länsi- ja Pohjois-Euroopan Mustaanmereen. Padovalainen arkkitehti Bernardo Morando piirsi kaupungin italialaisten kauppakaupunkien malliin myöhäisrenessanssin aikaan, ja siitä on säilynyt alkuperäinen katuverkko, linnoitukset ja suuri määrä alkuperäisiä rakennuksia, joissa venetsialainen ja keskieurooppalainen perinne sekoittuvat. Historiallinen keskusta merkittiin maailmanperintöluetteloon vuonna 1992 ainutlaatuisena esimerkkinä keskieurooppalaisesta renessanssikaupungista. Zamoyski perusti kaupunkiin vuonna 1594 myös oman akatemiansa, ja kaupunki kesti sekä Bohdan Hmelnytskyin kasakkapiirityksen että ruotsalaisten piirityksen 1656 — …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Musiikki: Ooppera keksittiin Italiassa] Ooppera syntyi Firenzessä 1600-luvun taitteessa, kun joukko oppineita yritti herättää henkiin antiikin Kreikan näytelmät — ja loi vahingossa kokonaan uuden taiteenlajin. Milanon La Scala on sen kuuluisin näyttämö: kuusi kerrosta aitioita kultauksineen ja yleisö, joka ei anna virheitä anteeksi. Sanat, joilla musiikista puhutaan kaikkialla maailmassa, ovat italiaa: piano tarkoittaa hiljaa, forte lujaa ja allegro iloisesti.
+AIEMPI KYSYMYS: Mikä on ihannekaupunki?
+AIEMPI VASTAUS (Livia):
+Joo, sen minä osaan. Ihannekaupunki on [[renessanssin]] ajan ajatus kaupungista, joka suunnitellaan etukäteen järjestelmällisesti: säännöllinen katuverkko, selkeä keskusaukio ja usein puolustukseen sopivat muurit. Ajatus syntyi [[Italiassa]], ja sen mukaan on rakennettu esimerkiksi [[Palmanova]]. Myös Zamość perustettiin ihannekaupungiksi, jonka Jan Zamoyski halusi rakentaa tärkeälle kauppatielle.
+
+Minä pidän siitä, että säännöllinen katuverkko näkyy ylhäältä selvästi. Sotkuisen vanhan kaupungin kattojen yli lentäminen on pelkkää arvailua.
+KYSYMYS: Kerro lisää: Italiassa
+
+### 104
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zamość (kulttuuri)
+Tietoruudun teksti: Zamość on kaupunki Kaakkois-Puolassa Lublinin voivodikunnassa, noin 90 kilometriä Lublinista ja 247 kilometriä Varsovasta. Sen perusti vuonna 1580 Puolan suurkansleri ja hetmani Jan Zamoyski, joka halusi rakentaa ihannekaupungin kauppatielle, joka yhdisti Länsi- ja Pohjois-Euroopan Mustaanmereen. Padovalainen arkkitehti Bernardo Morando piirsi kaupungin italialaisten kauppakaupunkien malliin myöhäisrenessanssin aikaan, ja siitä on säilynyt alkuperäinen katuverkko, linnoitukset ja suuri määrä alkuperäisiä rakennuksia, joissa venetsialainen ja keskieurooppalainen perinne sekoittuvat. Historiallinen keskusta merkittiin maailmanperintöluetteloon vuonna 1992 ainutlaatuisena esimerkkinä keskieurooppalaisesta renessanssikaupungista. Zamoyski perusti kaupunkiin vuonna 1594 myös oman akatemiansa, ja kaupunki kesti sekä Bohdan Hmelnytskyin kasakkapiirityksen että ruotsalaisten piirityksen 1656 — …
+AIEMPI KYSYMYS: Mikä on ihannekaupunki?
+AIEMPI VASTAUS (Livia):
+Joo, sen minä osaan. Ihannekaupunki on [[renessanssin]] ajan ajatus kaupungista, joka suunnitellaan etukäteen järjestelmällisesti: säännöllinen katuverkko, selkeä keskusaukio ja usein puolustukseen sopivat muurit. Ajatus syntyi [[Italiassa]], ja sen mukaan on rakennettu esimerkiksi [[Palmanova]]. Myös Zamość perustettiin ihannekaupungiksi, jonka Jan Zamoyski halusi rakentaa tärkeälle kauppatielle.
+
+Minä pidän siitä, että säännöllinen katuverkko näkyy ylhäältä selvästi. Sotkuisen vanhan kaupungin kattojen yli lentäminen on pelkkää arvailua.
+KYSYMYS: Kerro lisää: Palmanova
+
+### 105
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zamość (kulttuuri)
+Tietoruudun teksti: Zamość on kaupunki Kaakkois-Puolassa Lublinin voivodikunnassa, noin 90 kilometriä Lublinista ja 247 kilometriä Varsovasta. Sen perusti vuonna 1580 Puolan suurkansleri ja hetmani Jan Zamoyski, joka halusi rakentaa ihannekaupungin kauppatielle, joka yhdisti Länsi- ja Pohjois-Euroopan Mustaanmereen. Padovalainen arkkitehti Bernardo Morando piirsi kaupungin italialaisten kauppakaupunkien malliin myöhäisrenessanssin aikaan, ja siitä on säilynyt alkuperäinen katuverkko, linnoitukset ja suuri määrä alkuperäisiä rakennuksia, joissa venetsialainen ja keskieurooppalainen perinne sekoittuvat. Historiallinen keskusta merkittiin maailmanperintöluetteloon vuonna 1992 ainutlaatuisena esimerkkinä keskieurooppalaisesta renessanssikaupungista. Zamoyski perusti kaupunkiin vuonna 1594 myös oman akatemiansa, ja kaupunki kesti sekä Bohdan Hmelnytskyin kasakkapiirityksen että ruotsalaisten piirityksen 1656 — …
+AIEMPI KYSYMYS: Missä Zamość on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Zamość sijaitsee Kaakkois-Puolassa [[Lublinin voivodikunnassa]], noin 90 kilometrin päässä [[Lublinista]] ja 247 kilometrin päässä [[Varsovasta]]. Kaupunki perustettiin vuonna 1580 kauppatien varrelle, joka yhdisti Länsi- ja Pohjois-Euroopan Mustaanmereen. Sen historiallinen keskusta on maailmanperintökohde. Linnuntietä matka sujuu nopeammin.
+KYSYMYS: Kerro lisää: Lublinin voivodikunnassa
+
+### 106
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zamość (kulttuuri)
+Tietoruudun teksti: Zamość on kaupunki Kaakkois-Puolassa Lublinin voivodikunnassa, noin 90 kilometriä Lublinista ja 247 kilometriä Varsovasta. Sen perusti vuonna 1580 Puolan suurkansleri ja hetmani Jan Zamoyski, joka halusi rakentaa ihannekaupungin kauppatielle, joka yhdisti Länsi- ja Pohjois-Euroopan Mustaanmereen. Padovalainen arkkitehti Bernardo Morando piirsi kaupungin italialaisten kauppakaupunkien malliin myöhäisrenessanssin aikaan, ja siitä on säilynyt alkuperäinen katuverkko, linnoitukset ja suuri määrä alkuperäisiä rakennuksia, joissa venetsialainen ja keskieurooppalainen perinne sekoittuvat. Historiallinen keskusta merkittiin maailmanperintöluetteloon vuonna 1992 ainutlaatuisena esimerkkinä keskieurooppalaisesta renessanssikaupungista. Zamoyski perusti kaupunkiin vuonna 1594 myös oman akatemiansa, ja kaupunki kesti sekä Bohdan Hmelnytskyin kasakkapiirityksen että ruotsalaisten piirityksen 1656 — …
+AIEMPI KYSYMYS: Missä Zamość on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Zamość sijaitsee Kaakkois-Puolassa [[Lublinin voivodikunnassa]], noin 90 kilometrin päässä [[Lublinista]] ja 247 kilometrin päässä [[Varsovasta]]. Kaupunki perustettiin vuonna 1580 kauppatien varrelle, joka yhdisti Länsi- ja Pohjois-Euroopan Mustaanmereen. Sen historiallinen keskusta on maailmanperintökohde. Linnuntietä matka sujuu nopeammin.
+KYSYMYS: Kerro lisää: Lublinista
+
+### 107
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zamość (kulttuuri)
+Tietoruudun teksti: Zamość on kaupunki Kaakkois-Puolassa Lublinin voivodikunnassa, noin 90 kilometriä Lublinista ja 247 kilometriä Varsovasta. Sen perusti vuonna 1580 Puolan suurkansleri ja hetmani Jan Zamoyski, joka halusi rakentaa ihannekaupungin kauppatielle, joka yhdisti Länsi- ja Pohjois-Euroopan Mustaanmereen. Padovalainen arkkitehti Bernardo Morando piirsi kaupungin italialaisten kauppakaupunkien malliin myöhäisrenessanssin aikaan, ja siitä on säilynyt alkuperäinen katuverkko, linnoitukset ja suuri määrä alkuperäisiä rakennuksia, joissa venetsialainen ja keskieurooppalainen perinne sekoittuvat. Historiallinen keskusta merkittiin maailmanperintöluetteloon vuonna 1992 ainutlaatuisena esimerkkinä keskieurooppalaisesta renessanssikaupungista. Zamoyski perusti kaupunkiin vuonna 1594 myös oman akatemiansa, ja kaupunki kesti sekä Bohdan Hmelnytskyin kasakkapiirityksen että ruotsalaisten piirityksen 1656 — …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Wienin asema] Tässä kaupungissa mitta oli kahdenlainen, ja isoisäsi olisi pitänyt siitä enemmän kuin torin väreistä. Varsovasta lounaaseen lähtevä Wienin rata avattiin 14. kesäkuuta 1845, ensin kolmenkymmenen kilometrin pätkänä, ja se ylsi Itävallan rajalle huhtikuussa 1848: kaikkiaan runsaat 327 kilometriä ja 27 asemaa. Se oli ensimmäinen rata Kongressi-Puolassa ja toinen koko keisarikunnassa. Ja se oli rakennettu eurooppalaiseen mittaan, 1 435 millimetriä kiskosta kiskoon, kun kaikilla muilla keisarikunnan radoilla mitta oli leveämpi, 1 524. Kaksi rataa, kaksi mittaa, eikä yhtäkään vaunua voinut ajaa toiselta toiselle. Pietarin rata tuli Varsovaan 1862 ja pysähtyi joen toiselle rannalle. Kierbedźin sil…
+- [Varsova — kaupunkilehti / Historia: Maalaukset, joista tuli pohjapiirustus] Vuonna 1767 italialainen Bernardo Bellotto, joka käytti setänsä Canaletton tavaramerkkinimeä, tuli Puolan kuninkaan hovimaalariksi ja maalasi lähes kolmekymmentä näkymää Varsovasta niin tarkasti, että ikkunat, koristelistat ja talojen mittasuhteet erottuvat yksitellen. Taulut olivat sodan aikana muualla kuin Varsovassa ja säilyivät ehjinä. Jälleenrakennuksessa arkkitehdit käyttivät niitä pohjapiirustuksina: talo toisensa jälkeen rakennettiin takaisin täsmälleen sellaisena kuin Bellotto oli sen kaksisataa vuotta aiemmin maalannut.
+AIEMPI KYSYMYS: Missä Zamość on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Zamość sijaitsee Kaakkois-Puolassa [[Lublinin voivodikunnassa]], noin 90 kilometrin päässä [[Lublinista]] ja 247 kilometrin päässä [[Varsovasta]]. Kaupunki perustettiin vuonna 1580 kauppatien varrelle, joka yhdisti Länsi- ja Pohjois-Euroopan Mustaanmereen. Sen historiallinen keskusta on maailmanperintökohde. Linnuntietä matka sujuu nopeammin.
+KYSYMYS: Kerro lisää: Varsovasta
+
+### 108
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zamość (kulttuuri)
+Tietoruudun teksti: Zamość on kaupunki Kaakkois-Puolassa Lublinin voivodikunnassa, noin 90 kilometriä Lublinista ja 247 kilometriä Varsovasta. Sen perusti vuonna 1580 Puolan suurkansleri ja hetmani Jan Zamoyski, joka halusi rakentaa ihannekaupungin kauppatielle, joka yhdisti Länsi- ja Pohjois-Euroopan Mustaanmereen. Padovalainen arkkitehti Bernardo Morando piirsi kaupungin italialaisten kauppakaupunkien malliin myöhäisrenessanssin aikaan, ja siitä on säilynyt alkuperäinen katuverkko, linnoitukset ja suuri määrä alkuperäisiä rakennuksia, joissa venetsialainen ja keskieurooppalainen perinne sekoittuvat. Historiallinen keskusta merkittiin maailmanperintöluetteloon vuonna 1992 ainutlaatuisena esimerkkinä keskieurooppalaisesta renessanssikaupungista. Zamoyski perusti kaupunkiin vuonna 1594 myös oman akatemiansa, ja kaupunki kesti sekä Bohdan Hmelnytskyin kasakkapiirityksen että ruotsalaisten piirityksen 1656 — …
+AIEMPI KYSYMYS: Mikä oli hetmanin virka Puolassa?
+AIEMPI VASTAUS (Livia):
+Ai se, sotilasarvo. Hetmani oli [[Puolan–Liettuan yhteisvaltakunnassa]] sotajoukkojen ylin päällikkö. Virkoja oli kaksi tasoa, suurhetmani ja kenttähetmani, ja ne jaettiin erikseen Puolan kruunun ja Liettuan suuriruhtinaskunnan armeijoille. [[Jan Zamoyski]] toimi sekä suurkanslerina että hetmanina. Minulle riittää, että joku käskee kantamaan postin perille.
+KYSYMYS: Kerro lisää: Puolan–Liettuan yhteisvaltakunnassa
+
+### 109
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Westerplatte (historia)
+Tietoruudun teksti: Westerplatte on niemi Gdańskissa Itämeren rannalla Kuolleen Veikselin suulla, sataman väylän varrella. Vuosina 1926–1939 siellä oli Puolan sotilaskuljetusvarikko Danzigin vapaakaupungin alueella: Kansainliitto myönsi Puolalle vuonna 1921 oikeuden pitää ampumatarvikevarastoa ja varusväkeä lähellä Gdańskia, ja paikaksi sovittiin 1925 Westerplatte. Varikko valmistui marraskuussa 1925 ja aloitti toimintansa tammikuussa 1926; varusväen kooksi määrättiin 88 sotilasta, eikä Puola saanut rakentaa linnoituksia. Toisen maailmansodan ensimmäiset laukaukset ammuttiin täällä 1. syyskuuta 1939 kello 4.50, kun saksalainen ensimmäisen maailmansodan taistelulaiva SMS Schleswig-Holstein alkoi tulittaa puolalaista ampumatarvikevarastoa. Viikon kestäneen piirityksen jälkeen puolalainen varusväki antautui Puolaan hyökänneille saksalaisjoukoille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: Marina Beach] promenadi 1884 Marina on luonnollinen hiekkaranta Koromandelin rannikolla. Se alkaa Fort St. Georgen kupeesta ja jatkuu etelään Besant Nagariin asti. Hiekkaa on kolmetoista kilometriä ja promenadia kuusi; Marina Beach -artikkeli sanoo sitä Intian pisimmäksi luonnolliseksi kaupunkirannaksi ja Chennai-artikkeli maailman toiseksi pisimmäksi kaupunkirannaksi. Leveyttä on keskimäärin kolmesataa metriä ja leveimmillään 437. Ranta on vanhempi kuin kaupunki. Ennen 1500-lukua meri tulvi toistuvasti maalle, ja vetäytyessään se jätti jälkeensä hiekkaharjuja ja laguuneja. Yksi harju kulki Cooum-joen suulta nykyisen Presidency Collegen paikalle, ja juuri sen päällä ranta on. Promenadin valmistumisen 188…
+- [Sana — kohdekartta / Kohdekartta: Talhan moskeija] 1619–1620 Qubbat Talha on yksi Sanaan vanhimmista moskeijoista, ja sen rakennutti osmanien käskynhaltija Hadji Mehmed Pasha vuosina 1619–1620 ensimmäisen osmanimiehityksen aikana. Minareetti tehtiin samaan aikaan. Vuosina 1831–1832 moskeija kunnostettiin osittain imaami al-Mahdi Abdallahin käskystä; siitä kertoo rukoussalin seinään hakattu kirjoitus. Talha on Al-Bakiriyyan pikkuveli. Se valmistui kaksikymmentäkolme vuotta myöhemmin ja lainasi osan edeltäjänsä muotokielestä, mutta jäi selvästi pienemmäksi: rukoussali on vaatimaton ja minareetti matala, ja juuri siksi rakennus istuu kapeiden kujien väliin luontevammin kuin iso esikuvansa. Kokonaisuuteen kuuluu rukoussalin ja minareetin lisäks…
+AIEMPI KYSYMYS: Mikä Danzigin vapaakaupunki oli?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Danzigin vapaakaupunki oli [[ensimmäisen maailmansodan]] jälkeen perustettu kaupunkivaltio, joka oli [[Kansainliiton]] suojeluksessa. Suurin osa asukkaista oli saksankielisiä, mutta Puolalla oli alueella erityisoikeuksia: Kansainliitto myönsi sille vuonna 1921 oikeuden pitää ampumatarvikevarastoa ja varusväkeä lähellä Gdańskia, ja paikaksi sovittiin 1925 [[Westerplatte]]. Vapaakaupungin aika päättyi toisen maailmansodan alkuun vuonna 1939. Maailma oli silloin aika toisenlainen.
+KYSYMYS: Kerro lisää: ensimmäisen maailmansodan
+
+### 110
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Westerplatte (historia)
+Tietoruudun teksti: Westerplatte on niemi Gdańskissa Itämeren rannalla Kuolleen Veikselin suulla, sataman väylän varrella. Vuosina 1926–1939 siellä oli Puolan sotilaskuljetusvarikko Danzigin vapaakaupungin alueella: Kansainliitto myönsi Puolalle vuonna 1921 oikeuden pitää ampumatarvikevarastoa ja varusväkeä lähellä Gdańskia, ja paikaksi sovittiin 1925 Westerplatte. Varikko valmistui marraskuussa 1925 ja aloitti toimintansa tammikuussa 1926; varusväen kooksi määrättiin 88 sotilasta, eikä Puola saanut rakentaa linnoituksia. Toisen maailmansodan ensimmäiset laukaukset ammuttiin täällä 1. syyskuuta 1939 kello 4.50, kun saksalainen ensimmäisen maailmansodan taistelulaiva SMS Schleswig-Holstein alkoi tulittaa puolalaista ampumatarvikevarastoa. Viikon kestäneen piirityksen jälkeen puolalainen varusväki antautui Puolaan hyökänneille saksalaisjoukoille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Maracanãn stadion] 1948–1950 Peruskivi laskettiin 2. elokuuta 1948, ja stadionin piti olla valmis vuoden 1950 jalkapallon maailmanmestaruuskisoihin eli alle kahdessa vuodessa. Työ myöhästyi niin pahasti, että Fifa lähetti paikalle Italian liiton johtajan Ottorino Barassin auttamaan. Työmaalla oli 1 500 miestä ja viimeisinä kuukausina 2 000 lisää. Avausottelu pelattiin 16. kesäkuuta 1950, vaikka stadion näytti yhä työmaalta: käymälöitä ja lehdistölehteriä ei ollut. Se oli silti heti maailman suurin stadion. Kisojen ratkaiseva ottelu pelattiin 16. heinäkuuta 1950. Brasilialle olisi riittänyt tasapeli, mutta Uruguay voitti 2–1, ja hiljaisuus katsomossa jäi historiaan nimellä Maracanazo. Virallinen yleisömäärä ol…
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+AIEMPI KYSYMYS: Mikä Danzigin vapaakaupunki oli?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Danzigin vapaakaupunki oli [[ensimmäisen maailmansodan]] jälkeen perustettu kaupunkivaltio, joka oli [[Kansainliiton]] suojeluksessa. Suurin osa asukkaista oli saksankielisiä, mutta Puolalla oli alueella erityisoikeuksia: Kansainliitto myönsi sille vuonna 1921 oikeuden pitää ampumatarvikevarastoa ja varusväkeä lähellä Gdańskia, ja paikaksi sovittiin 1925 [[Westerplatte]]. Vapaakaupungin aika päättyi toisen maailmansodan alkuun vuonna 1939. Maailma oli silloin aika toisenlainen.
+KYSYMYS: Kerro lisää: Kansainliiton
+
+### 111
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Westerplatte (historia)
+Tietoruudun teksti: Westerplatte on niemi Gdańskissa Itämeren rannalla Kuolleen Veikselin suulla, sataman väylän varrella. Vuosina 1926–1939 siellä oli Puolan sotilaskuljetusvarikko Danzigin vapaakaupungin alueella: Kansainliitto myönsi Puolalle vuonna 1921 oikeuden pitää ampumatarvikevarastoa ja varusväkeä lähellä Gdańskia, ja paikaksi sovittiin 1925 Westerplatte. Varikko valmistui marraskuussa 1925 ja aloitti toimintansa tammikuussa 1926; varusväen kooksi määrättiin 88 sotilasta, eikä Puola saanut rakentaa linnoituksia. Toisen maailmansodan ensimmäiset laukaukset ammuttiin täällä 1. syyskuuta 1939 kello 4.50, kun saksalainen ensimmäisen maailmansodan taistelulaiva SMS Schleswig-Holstein alkoi tulittaa puolalaista ampumatarvikevarastoa. Viikon kestäneen piirityksen jälkeen puolalainen varusväki antautui Puolaan hyökänneille saksalaisjoukoille.
+AIEMPI KYSYMYS: Mikä Danzigin vapaakaupunki oli?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Danzigin vapaakaupunki oli [[ensimmäisen maailmansodan]] jälkeen perustettu kaupunkivaltio, joka oli [[Kansainliiton]] suojeluksessa. Suurin osa asukkaista oli saksankielisiä, mutta Puolalla oli alueella erityisoikeuksia: Kansainliitto myönsi sille vuonna 1921 oikeuden pitää ampumatarvikevarastoa ja varusväkeä lähellä Gdańskia, ja paikaksi sovittiin 1925 [[Westerplatte]]. Vapaakaupungin aika päättyi toisen maailmansodan alkuun vuonna 1939. Maailma oli silloin aika toisenlainen.
+KYSYMYS: Kerro lisää: Westerplatte
+
+### 112
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Westerplatte (historia)
+Tietoruudun teksti: Westerplatte on niemi Gdańskissa Itämeren rannalla Kuolleen Veikselin suulla, sataman väylän varrella. Vuosina 1926–1939 siellä oli Puolan sotilaskuljetusvarikko Danzigin vapaakaupungin alueella: Kansainliitto myönsi Puolalle vuonna 1921 oikeuden pitää ampumatarvikevarastoa ja varusväkeä lähellä Gdańskia, ja paikaksi sovittiin 1925 Westerplatte. Varikko valmistui marraskuussa 1925 ja aloitti toimintansa tammikuussa 1926; varusväen kooksi määrättiin 88 sotilasta, eikä Puola saanut rakentaa linnoituksia. Toisen maailmansodan ensimmäiset laukaukset ammuttiin täällä 1. syyskuuta 1939 kello 4.50, kun saksalainen ensimmäisen maailmansodan taistelulaiva SMS Schleswig-Holstein alkoi tulittaa puolalaista ampumatarvikevarastoa. Viikon kestäneen piirityksen jälkeen puolalainen varusväki antautui Puolaan hyökänneille saksalaisjoukoille.
+AIEMPI KYSYMYS: Kuinka kauan puolustus kesti?
+AIEMPI VASTAUS (Livia):
+Joo, sen kerron rauhassa. Puolalaisen varusväen puolustus kesti viikon. Toisen maailmansodan ensimmäiset laukaukset ammuttiin Westerplattella 1. syyskuuta 1939 kello 4.50, kun saksalainen taistelulaiva [[SMS Schleswig-Holstein]] alkoi tulittaa puolalaista ampumatarvikevarastoa. Viikon kestäneen piirityksen jälkeen varusväki antautui. Sopimuksen mukaan varusväen koko oli 88 sotilasta, eikä Puola saanut rakentaa linnoituksia. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: SMS Schleswig-Holstein
+
+### 113
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Westerplatte (historia)
+Tietoruudun teksti: Westerplatte on niemi Gdańskissa Itämeren rannalla Kuolleen Veikselin suulla, sataman väylän varrella. Vuosina 1926–1939 siellä oli Puolan sotilaskuljetusvarikko Danzigin vapaakaupungin alueella: Kansainliitto myönsi Puolalle vuonna 1921 oikeuden pitää ampumatarvikevarastoa ja varusväkeä lähellä Gdańskia, ja paikaksi sovittiin 1925 Westerplatte. Varikko valmistui marraskuussa 1925 ja aloitti toimintansa tammikuussa 1926; varusväen kooksi määrättiin 88 sotilasta, eikä Puola saanut rakentaa linnoituksia. Toisen maailmansodan ensimmäiset laukaukset ammuttiin täällä 1. syyskuuta 1939 kello 4.50, kun saksalainen ensimmäisen maailmansodan taistelulaiva SMS Schleswig-Holstein alkoi tulittaa puolalaista ampumatarvikevarastoa. Viikon kestäneen piirityksen jälkeen puolalainen varusväki antautui Puolaan hyökänneille saksalaisjoukoille.
+AIEMPI KYSYMYS: Mikä Kansainliitto oli?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kansainliitto perustettiin ensimmäisen maailmansodan jälkeen vuonna 1920 edistämään rauhaa ja kansainvälistä yhteistyötä, ja sen päämaja oli [[Genevessä]]. Se ratkaisi myös suomalaisille tutun [[Ahvenanmaan]] kysymyksen vuonna 1921. Kansainliitto ei kyennyt estämään toisen maailmansodan syttymistä, ja se lakkautettiin vuonna 1946; sen tehtäviä jatkoivat [[Yhdistyneet kansakunnat]]. Idea elää kyl yhä.
+KYSYMYS: Kerro lisää: Genevessä
+
+### 114
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Westerplatte (historia)
+Tietoruudun teksti: Westerplatte on niemi Gdańskissa Itämeren rannalla Kuolleen Veikselin suulla, sataman väylän varrella. Vuosina 1926–1939 siellä oli Puolan sotilaskuljetusvarikko Danzigin vapaakaupungin alueella: Kansainliitto myönsi Puolalle vuonna 1921 oikeuden pitää ampumatarvikevarastoa ja varusväkeä lähellä Gdańskia, ja paikaksi sovittiin 1925 Westerplatte. Varikko valmistui marraskuussa 1925 ja aloitti toimintansa tammikuussa 1926; varusväen kooksi määrättiin 88 sotilasta, eikä Puola saanut rakentaa linnoituksia. Toisen maailmansodan ensimmäiset laukaukset ammuttiin täällä 1. syyskuuta 1939 kello 4.50, kun saksalainen ensimmäisen maailmansodan taistelulaiva SMS Schleswig-Holstein alkoi tulittaa puolalaista ampumatarvikevarastoa. Viikon kestäneen piirityksen jälkeen puolalainen varusväki antautui Puolaan hyökänneille saksalaisjoukoille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Meri jossa on 50 000 saarta] nykyään — Saaristomeri Turun ja Ahvenanmaan välissä on joidenkin määritelmien mukaan maailman saarirunsain saaristo: sillä on arviolta 50 000 saarta, joskin suuri osa niistä on aivan pieniä ja tiiviisti toistensa lähellä. Suurimmat saaret ovat asuttuja ja niille pääsee lautoilla ja silloilla, kun taas ulompi saaristo koostuu enimmäkseen asumattomista luodoista ja karikoista. Ahvenanmaa, alueen suurin saariryhmä, on Suomen itsehallinnollinen, ruotsinkielinen maakunta. Saaristomeri on suosittu purjehdus- ja veneilykohde kesäisin, ja sen rikas saaristolintukanta ja poikkeuksellinen kasvillisuus tekevät siitä myös merkittävän luontokohteen.
+AIEMPI KYSYMYS: Mikä Kansainliitto oli?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kansainliitto perustettiin ensimmäisen maailmansodan jälkeen vuonna 1920 edistämään rauhaa ja kansainvälistä yhteistyötä, ja sen päämaja oli [[Genevessä]]. Se ratkaisi myös suomalaisille tutun [[Ahvenanmaan]] kysymyksen vuonna 1921. Kansainliitto ei kyennyt estämään toisen maailmansodan syttymistä, ja se lakkautettiin vuonna 1946; sen tehtäviä jatkoivat [[Yhdistyneet kansakunnat]]. Idea elää kyl yhä.
+KYSYMYS: Kerro lisää: Ahvenanmaan
+
+### 115
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Westerplatte (historia)
+Tietoruudun teksti: Westerplatte on niemi Gdańskissa Itämeren rannalla Kuolleen Veikselin suulla, sataman väylän varrella. Vuosina 1926–1939 siellä oli Puolan sotilaskuljetusvarikko Danzigin vapaakaupungin alueella: Kansainliitto myönsi Puolalle vuonna 1921 oikeuden pitää ampumatarvikevarastoa ja varusväkeä lähellä Gdańskia, ja paikaksi sovittiin 1925 Westerplatte. Varikko valmistui marraskuussa 1925 ja aloitti toimintansa tammikuussa 1926; varusväen kooksi määrättiin 88 sotilasta, eikä Puola saanut rakentaa linnoituksia. Toisen maailmansodan ensimmäiset laukaukset ammuttiin täällä 1. syyskuuta 1939 kello 4.50, kun saksalainen ensimmäisen maailmansodan taistelulaiva SMS Schleswig-Holstein alkoi tulittaa puolalaista ampumatarvikevarastoa. Viikon kestäneen piirityksen jälkeen puolalainen varusväki antautui Puolaan hyökänneille saksalaisjoukoille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mexico City — kaupunkilehti / Atsteekkien perintö: Viljelysaaret, jotka ruokkivat imperiumin] Chinampa tarkoittaa nahuatliksi ruokoaidan sisällä olevaa. Matalikkoon lyötiin paaluja, väliin punottiin aitaa ja sisus täytettiin järvimudalla ja kasvijätteellä, kunnes saareke nousi vedenpinnan yläpuolelle; kulmiin istutetut pajut sitoivat sen paikoilleen. Ravinteikas muta nostettiin kanavien pohjasta pelloille yhä uudelleen, ja satoja saatiin jopa seitsemän vuodessa. Ensimmäiset tällaiset pellot rakennettiin noin vuonna 1100, ja Xochimilcossa niitä viljellään yhä: keskustan alueella niitä on noin 200 ja kanavia 170 kilometriä. Yhdistyneet kansakunnat nimesi järjestelmän tärkeäksi maatalousperinnöksi 2018.
+AIEMPI KYSYMYS: Mikä Kansainliitto oli?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kansainliitto perustettiin ensimmäisen maailmansodan jälkeen vuonna 1920 edistämään rauhaa ja kansainvälistä yhteistyötä, ja sen päämaja oli [[Genevessä]]. Se ratkaisi myös suomalaisille tutun [[Ahvenanmaan]] kysymyksen vuonna 1921. Kansainliitto ei kyennyt estämään toisen maailmansodan syttymistä, ja se lakkautettiin vuonna 1946; sen tehtäviä jatkoivat [[Yhdistyneet kansakunnat]]. Idea elää kyl yhä.
+KYSYMYS: Kerro lisää: Yhdistyneet kansakunnat
+
+### 116
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Westerplatte (historia)
+Tietoruudun teksti: Westerplatte on niemi Gdańskissa Itämeren rannalla Kuolleen Veikselin suulla, sataman väylän varrella. Vuosina 1926–1939 siellä oli Puolan sotilaskuljetusvarikko Danzigin vapaakaupungin alueella: Kansainliitto myönsi Puolalle vuonna 1921 oikeuden pitää ampumatarvikevarastoa ja varusväkeä lähellä Gdańskia, ja paikaksi sovittiin 1925 Westerplatte. Varikko valmistui marraskuussa 1925 ja aloitti toimintansa tammikuussa 1926; varusväen kooksi määrättiin 88 sotilasta, eikä Puola saanut rakentaa linnoituksia. Toisen maailmansodan ensimmäiset laukaukset ammuttiin täällä 1. syyskuuta 1939 kello 4.50, kun saksalainen ensimmäisen maailmansodan taistelulaiva SMS Schleswig-Holstein alkoi tulittaa puolalaista ampumatarvikevarastoa. Viikon kestäneen piirityksen jälkeen puolalainen varusväki antautui Puolaan hyökänneille saksalaisjoukoille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Magadan — kohdekartta / Kohdekartta: Nagajevanlahti] Jeannette Harbour 1852–1869 Nagajevanlahti on Tauinlahden osa Ohotanmeren pohjoisosassa. Se on 14,5 kilometriä pitkä ja suultaan 6,4 kilometriä leveä, ja sitä on kutsuttu koko Ohotanmeren parhaaksi ankkuripaikaksi. Jäätä lahdella on marraskuun lopulta kesäkuun puoliväliin. Kaupunki ja sen satama ovat lahden perukassa Staritskin niemimaan kannaksella. Lahdella on kaksi nimeä ja kaksi tarinaa. Virallinen nimi tulee amiraali Aleksei Nagajevilta (1704–1781), joka oli hydrografi ja kartantekijä ja jonka Beringinmeren ja Itämeren kartastot ilmestyivät vuonna 1752; niitä käytettiin vielä viisikymmentä vuotta myöhemmin, vaikka niissä ei ollut astekoordinaatistoa lainkaan. Toinen nimi on amerikkalai…
+- [Tallinna — kohdekartta / Kohdekartta: Raatihuoneentori] 1402–1404 Tallinnan raatihuone on koko Itämeren alueen ja Pohjoismaiden vanhin säilynyt raatihuone. Se rakennettiin vain parissa vuodessa, vuosina 1402-1404, keskiaikaisen torin laidalle. Hansakaupunkina Tallinnan kaupunginhallitus piti täällä kokouksiaan ja päätti niin kaupan, oikeuden kuin arjenkin asioista. Rakennuksen 36,8 metriä pitkässä salissa on nähtävissä yli 500 vuotta vanhoja seinävaatteita, jotka kuvaavat kuningas Salomonin elämää. Raatihuoneen 64 metriä korkeaan torniin johtaa peräti 115 porrasaskelmaa. Huipulla pyörii Vana Toomas, eli "Vanha Toomas" - kaupunginvartijaa esittävä tuuliviiri, joka on ollut Tallinnan tunnuskuva vuodesta 1530 lähtien. Alkuperäinen tuuliviiri on nyk…
+AIEMPI KYSYMYS: Missä Westerplatte sijaitsee?
+AIEMPI VASTAUS (Livia):
+No niin. Westerplatte on niemi Gdańskissa [[Itämeren]] rannalla [[Kuolleen Veikselin]] suulla, sataman väylän varrella. Vuosina 1926–1939 siellä toimi Puolan sotilaskuljetusvarikko Danzigin vapaakaupungin alueella. Merelle päin siellä näkee kauas.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 117
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Westerplatte (historia)
+Tietoruudun teksti: Westerplatte on niemi Gdańskissa Itämeren rannalla Kuolleen Veikselin suulla, sataman väylän varrella. Vuosina 1926–1939 siellä oli Puolan sotilaskuljetusvarikko Danzigin vapaakaupungin alueella: Kansainliitto myönsi Puolalle vuonna 1921 oikeuden pitää ampumatarvikevarastoa ja varusväkeä lähellä Gdańskia, ja paikaksi sovittiin 1925 Westerplatte. Varikko valmistui marraskuussa 1925 ja aloitti toimintansa tammikuussa 1926; varusväen kooksi määrättiin 88 sotilasta, eikä Puola saanut rakentaa linnoituksia. Toisen maailmansodan ensimmäiset laukaukset ammuttiin täällä 1. syyskuuta 1939 kello 4.50, kun saksalainen ensimmäisen maailmansodan taistelulaiva SMS Schleswig-Holstein alkoi tulittaa puolalaista ampumatarvikevarastoa. Viikon kestäneen piirityksen jälkeen puolalainen varusväki antautui Puolaan hyökänneille saksalaisjoukoille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Wawel] Isoisäsi kirjasi, että kuninkaat nukkuvat kirkon lattian alla ja että kaupunki kuuluu nyt keisarille. Molemmat pitivät paikkansa yhtä aikaa, ja juuri se oli kukkulan kipeä kohta. Wawel on jurakautista kalkkikiveä, karstiutunut ja luolia täynnä — yksi niistä on lohikäärmeluola — ja linna seisoo 228 metrissä Veikselin rannalla. Katedraalissa kruunattiin ja haudattiin Puolan hallitsijat, vaikka pääkaupunki siirtyi Varsovaan jo 1596. Sitten kukkula vaihtoi omistajaa. Vuoden 1795 jaon jälkeen Wawel joutui Itävallalle, ja sotilaat muuttivat sen kasarmiksi: sisäpihan renessanssikaarikäytävät muurattiin umpeen, sisätiloja muutettiin ja rakennuksia purettiin, kahden kirkon verran. 1800-luvun jälkipu…
+- [Krakova — kaupunkilehti / Historia: Wawel oli kasarmi ennen kuin siitä tuli museo] Wawel on jurakautista kalkkikiveä, karstiutunut ja luolia täynnä, ja linna seisoo 228 metrissä Veikselin rannalla. Katedraalissa kruunattiin ja haudattiin Puolan hallitsijat, vaikka pääkaupunki siirtyi Varsovaan jo 1596. Vuoden 1795 jaon jälkeen kukkula joutui Itävallalle, ja sotilaat muuttivat sen kasarmiksi: sisäpihan renessanssikaarikäytävät muurattiin umpeen ja rakennuksia purettiin. Vasta vuonna 1905 keisari Frans Joosef käski joukkonsa pois. Kunnostus rahoitettiin yleisellä keräyksellä, ja lahjoittajien nimet kaiverrettiin tiiliin, joista muurattiin muuri pohjoisen portin lähelle. Ne ovat siellä yhä ja niitä voi lukea.
+AIEMPI KYSYMYS: Missä Westerplatte sijaitsee?
+AIEMPI VASTAUS (Livia):
+No niin. Westerplatte on niemi Gdańskissa [[Itämeren]] rannalla [[Kuolleen Veikselin]] suulla, sataman väylän varrella. Vuosina 1926–1939 siellä toimi Puolan sotilaskuljetusvarikko Danzigin vapaakaupungin alueella. Merelle päin siellä näkee kauas.
+KYSYMYS: Kerro lisää: Kuolleen Veikselin
+
+### 118
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Westerplatte (historia)
+Tietoruudun teksti: Westerplatte on niemi Gdańskissa Itämeren rannalla Kuolleen Veikselin suulla, sataman väylän varrella. Vuosina 1926–1939 siellä oli Puolan sotilaskuljetusvarikko Danzigin vapaakaupungin alueella: Kansainliitto myönsi Puolalle vuonna 1921 oikeuden pitää ampumatarvikevarastoa ja varusväkeä lähellä Gdańskia, ja paikaksi sovittiin 1925 Westerplatte. Varikko valmistui marraskuussa 1925 ja aloitti toimintansa tammikuussa 1926; varusväen kooksi määrättiin 88 sotilasta, eikä Puola saanut rakentaa linnoituksia. Toisen maailmansodan ensimmäiset laukaukset ammuttiin täällä 1. syyskuuta 1939 kello 4.50, kun saksalainen ensimmäisen maailmansodan taistelulaiva SMS Schleswig-Holstein alkoi tulittaa puolalaista ampumatarvikevarastoa. Viikon kestäneen piirityksen jälkeen puolalainen varusväki antautui Puolaan hyökänneille saksalaisjoukoille.
+AIEMPI KYSYMYS: Mikä oli Solidarność ja missä se sai alkunsa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Solidarność oli puolalainen vapaa ammattiliitto ja kansanliike, joka syntyi elokuun 1980 lakkojen jälkeen [[Gdańskin telakalla]]. Liiton johtajana tunnettiin [[Lech Wałęsa]]. Liike nousi kommunistisen hallinnon merkittäväksi haastajaksi, ja vuoden 1989 neuvottelujen ja vaalien kautta Puolassa siirryttiin demokratiaan. Tässä kaupungissa on nähty paljon historiaa.
+KYSYMYS: Kerro lisää: Gdańskin telakalla
+
+### 119
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Westerplatte (historia)
+Tietoruudun teksti: Westerplatte on niemi Gdańskissa Itämeren rannalla Kuolleen Veikselin suulla, sataman väylän varrella. Vuosina 1926–1939 siellä oli Puolan sotilaskuljetusvarikko Danzigin vapaakaupungin alueella: Kansainliitto myönsi Puolalle vuonna 1921 oikeuden pitää ampumatarvikevarastoa ja varusväkeä lähellä Gdańskia, ja paikaksi sovittiin 1925 Westerplatte. Varikko valmistui marraskuussa 1925 ja aloitti toimintansa tammikuussa 1926; varusväen kooksi määrättiin 88 sotilasta, eikä Puola saanut rakentaa linnoituksia. Toisen maailmansodan ensimmäiset laukaukset ammuttiin täällä 1. syyskuuta 1939 kello 4.50, kun saksalainen ensimmäisen maailmansodan taistelulaiva SMS Schleswig-Holstein alkoi tulittaa puolalaista ampumatarvikevarastoa. Viikon kestäneen piirityksen jälkeen puolalainen varusväki antautui Puolaan hyökänneille saksalaisjoukoille.
+AIEMPI KYSYMYS: Mikä oli Solidarność ja missä se sai alkunsa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Solidarność oli puolalainen vapaa ammattiliitto ja kansanliike, joka syntyi elokuun 1980 lakkojen jälkeen [[Gdańskin telakalla]]. Liiton johtajana tunnettiin [[Lech Wałęsa]]. Liike nousi kommunistisen hallinnon merkittäväksi haastajaksi, ja vuoden 1989 neuvottelujen ja vaalien kautta Puolassa siirryttiin demokratiaan. Tässä kaupungissa on nähty paljon historiaa.
+KYSYMYS: Kerro lisää: Lech Wałęsa
+
+### 120
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gniezno (historia)
+Tietoruudun teksti: Gniezno on kaupunki Keski-Länsi-Puolassa noin viidenkymmenen kilometrin päässä Poznańista. Se oli Piast-suvun päälinnoja ja Puolan ensimmäinen historiallinen pääkaupunki 900-luvulla ja 1000-luvun alussa. Kaupunki on maan vanhimman arkkihiippakunnan istuin — se perustettiin vuonna 1000 — ja sen arkkipiispa on Puolan primas, joten Gniezno on maan kirkollinen pääkaupunki. Kuten Rooma, Gniezno perustettiin seitsemälle kukkulalle; Lechin kukkulalla seisoo Gnieznon katedraali, ja ruhtinaan linnoitus rakennettiin sinne juuri ennen vuotta 940 paikalle, jossa oli aiemmin ollut slaavilaisen uskonnon pyhiä paikkoja. Puolalaisen tarun mukaan kolme veljestä lähti metsälle ja hajaantui: Rus itään, Čech länteen ja Lech pohjoiseen, missä hän kohtasi pesäänsä puolustavan valkoisen kotkan laskevaa aurinkoa vasten ja päätti asettua paikalle.
+AIEMPI KYSYMYS: Miksi Gniezno oli Puolan ensimmäinen pääkaupunki?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tost minä osaan kertoo. [[Gniezno]] oli [[Piast-suvun]] päälinnoja, ja ruhtinaan linnoitus rakennettiin Lechin kukkulalle juuri ennen vuotta 940 paikalle, jossa oli aiemmin ollut slaavilaisen uskonnon pyhiä paikkoja. Siksi kaupunki oli 900-luvulla ja 1000-luvun alussa Puolan ensimmäinen historiallinen pääkaupunki. Asemaa vahvisti vuonna 1000 perustettu [[arkkihiippakunta]], jonka arkkipiispa on edelleen Puolan [[primas]], joten kaupunki on maan kirkollinen pääkaupunki. Sana pääkaupunki on varhaiskeskiajalla kuitenkin väljempi kuin nykyään, sillä valtaa käytettiin useasta linnasta. Kyl se tuli taas pitkä rimpsu.
+KYSYMYS: Kerro lisää: Gniezno
+
+### 121
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gniezno (historia)
+Tietoruudun teksti: Gniezno on kaupunki Keski-Länsi-Puolassa noin viidenkymmenen kilometrin päässä Poznańista. Se oli Piast-suvun päälinnoja ja Puolan ensimmäinen historiallinen pääkaupunki 900-luvulla ja 1000-luvun alussa. Kaupunki on maan vanhimman arkkihiippakunnan istuin — se perustettiin vuonna 1000 — ja sen arkkipiispa on Puolan primas, joten Gniezno on maan kirkollinen pääkaupunki. Kuten Rooma, Gniezno perustettiin seitsemälle kukkulalle; Lechin kukkulalla seisoo Gnieznon katedraali, ja ruhtinaan linnoitus rakennettiin sinne juuri ennen vuotta 940 paikalle, jossa oli aiemmin ollut slaavilaisen uskonnon pyhiä paikkoja. Puolalaisen tarun mukaan kolme veljestä lähti metsälle ja hajaantui: Rus itään, Čech länteen ja Lech pohjoiseen, missä hän kohtasi pesäänsä puolustavan valkoisen kotkan laskevaa aurinkoa vasten ja päätti asettua paikalle.
+AIEMPI KYSYMYS: Miksi Gniezno oli Puolan ensimmäinen pääkaupunki?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tost minä osaan kertoo. [[Gniezno]] oli [[Piast-suvun]] päälinnoja, ja ruhtinaan linnoitus rakennettiin Lechin kukkulalle juuri ennen vuotta 940 paikalle, jossa oli aiemmin ollut slaavilaisen uskonnon pyhiä paikkoja. Siksi kaupunki oli 900-luvulla ja 1000-luvun alussa Puolan ensimmäinen historiallinen pääkaupunki. Asemaa vahvisti vuonna 1000 perustettu [[arkkihiippakunta]], jonka arkkipiispa on edelleen Puolan [[primas]], joten kaupunki on maan kirkollinen pääkaupunki. Sana pääkaupunki on varhaiskeskiajalla kuitenkin väljempi kuin nykyään, sillä valtaa käytettiin useasta linnasta. Kyl se tuli taas pitkä rimpsu.
+KYSYMYS: Kerro lisää: Piast-suvun
+
+### 122
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gniezno (historia)
+Tietoruudun teksti: Gniezno on kaupunki Keski-Länsi-Puolassa noin viidenkymmenen kilometrin päässä Poznańista. Se oli Piast-suvun päälinnoja ja Puolan ensimmäinen historiallinen pääkaupunki 900-luvulla ja 1000-luvun alussa. Kaupunki on maan vanhimman arkkihiippakunnan istuin — se perustettiin vuonna 1000 — ja sen arkkipiispa on Puolan primas, joten Gniezno on maan kirkollinen pääkaupunki. Kuten Rooma, Gniezno perustettiin seitsemälle kukkulalle; Lechin kukkulalla seisoo Gnieznon katedraali, ja ruhtinaan linnoitus rakennettiin sinne juuri ennen vuotta 940 paikalle, jossa oli aiemmin ollut slaavilaisen uskonnon pyhiä paikkoja. Puolalaisen tarun mukaan kolme veljestä lähti metsälle ja hajaantui: Rus itään, Čech länteen ja Lech pohjoiseen, missä hän kohtasi pesäänsä puolustavan valkoisen kotkan laskevaa aurinkoa vasten ja päätti asettua paikalle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kaupunkilehti / Puisto kaupungin rajalla: Sarvikuonon arkki] Puistoa kutsutaan joskus nimellä Kifaru Ark, sarvikuonon arkki. Se on yksi Kenian onnistuneimmista mustasarvikuonon turvapaikoista ja harvoja paikkoja, joissa kävijä näkee mustasarvikuonon luonnossa lähes varmasti. Puiston pääportin lähellä toimii 1963 perustettu turvakoti, joka hoitaa orpoja norsun- ja sarvikuononpoikasia ja palauttaa ne myöhemmin suojelualueille. Vuodesta 2005 alue on luokiteltu myös leijonien suojeluyksiköksi. Puiston pohjoisrajalla olevien tehtaiden jätevedet kuormittavat sen vesiä.
+- [Monterrey — kohdekartta / Kohdekartta: La Purísiman kirkko] 1939 Kirkon takana on tlaxcalteekkinainen. Antonia Teresa asettui Monterreyhin noin vuonna 1680 ja toi mukanaan neljänkymmenenkahden sentin korkuisen Purísima-veistoksen, jota alettiin kutsua nimellä Virgen Chiquita, pieni Neitsyt. Antonia oli suutarin leski, ja siitä tuli hänen liikanimensä la Zapatera. Perimätiedon mukaan noin vuonna 1700 satoi neljäkymmentä päivää putkeen ja Santa Catarina uhkasi tulvia yli äyräidensä. Antonia kantoi kuvan kulkueessa joen rantaan, ja vedet vetäytyivät. Fray Servando Teresa de Mier kirjasi tarinan 1700-luvulla mutta epäilevään sävyyn; arkistot vahvistavat Antonia Teresan olemassaolon ja sen, että hän toi veistoksen. Testamentissaan 20. lokakuuta 1719 hän …
+AIEMPI KYSYMYS: Miksi Gniezno oli Puolan ensimmäinen pääkaupunki?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tost minä osaan kertoo. [[Gniezno]] oli [[Piast-suvun]] päälinnoja, ja ruhtinaan linnoitus rakennettiin Lechin kukkulalle juuri ennen vuotta 940 paikalle, jossa oli aiemmin ollut slaavilaisen uskonnon pyhiä paikkoja. Siksi kaupunki oli 900-luvulla ja 1000-luvun alussa Puolan ensimmäinen historiallinen pääkaupunki. Asemaa vahvisti vuonna 1000 perustettu [[arkkihiippakunta]], jonka arkkipiispa on edelleen Puolan [[primas]], joten kaupunki on maan kirkollinen pääkaupunki. Sana pääkaupunki on varhaiskeskiajalla kuitenkin väljempi kuin nykyään, sillä valtaa käytettiin useasta linnasta. Kyl se tuli taas pitkä rimpsu.
+KYSYMYS: Kerro lisää: arkkihiippakunta
+
+### 123
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gniezno (historia)
+Tietoruudun teksti: Gniezno on kaupunki Keski-Länsi-Puolassa noin viidenkymmenen kilometrin päässä Poznańista. Se oli Piast-suvun päälinnoja ja Puolan ensimmäinen historiallinen pääkaupunki 900-luvulla ja 1000-luvun alussa. Kaupunki on maan vanhimman arkkihiippakunnan istuin — se perustettiin vuonna 1000 — ja sen arkkipiispa on Puolan primas, joten Gniezno on maan kirkollinen pääkaupunki. Kuten Rooma, Gniezno perustettiin seitsemälle kukkulalle; Lechin kukkulalla seisoo Gnieznon katedraali, ja ruhtinaan linnoitus rakennettiin sinne juuri ennen vuotta 940 paikalle, jossa oli aiemmin ollut slaavilaisen uskonnon pyhiä paikkoja. Puolalaisen tarun mukaan kolme veljestä lähti metsälle ja hajaantui: Rus itään, Čech länteen ja Lech pohjoiseen, missä hän kohtasi pesäänsä puolustavan valkoisen kotkan laskevaa aurinkoa vasten ja päätti asettua paikalle.
+AIEMPI KYSYMYS: Miksi Gniezno oli Puolan ensimmäinen pääkaupunki?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tost minä osaan kertoo. [[Gniezno]] oli [[Piast-suvun]] päälinnoja, ja ruhtinaan linnoitus rakennettiin Lechin kukkulalle juuri ennen vuotta 940 paikalle, jossa oli aiemmin ollut slaavilaisen uskonnon pyhiä paikkoja. Siksi kaupunki oli 900-luvulla ja 1000-luvun alussa Puolan ensimmäinen historiallinen pääkaupunki. Asemaa vahvisti vuonna 1000 perustettu [[arkkihiippakunta]], jonka arkkipiispa on edelleen Puolan [[primas]], joten kaupunki on maan kirkollinen pääkaupunki. Sana pääkaupunki on varhaiskeskiajalla kuitenkin väljempi kuin nykyään, sillä valtaa käytettiin useasta linnasta. Kyl se tuli taas pitkä rimpsu.
+KYSYMYS: Kerro lisää: primas
+
+### 124
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gniezno (historia)
+Tietoruudun teksti: Gniezno on kaupunki Keski-Länsi-Puolassa noin viidenkymmenen kilometrin päässä Poznańista. Se oli Piast-suvun päälinnoja ja Puolan ensimmäinen historiallinen pääkaupunki 900-luvulla ja 1000-luvun alussa. Kaupunki on maan vanhimman arkkihiippakunnan istuin — se perustettiin vuonna 1000 — ja sen arkkipiispa on Puolan primas, joten Gniezno on maan kirkollinen pääkaupunki. Kuten Rooma, Gniezno perustettiin seitsemälle kukkulalle; Lechin kukkulalla seisoo Gnieznon katedraali, ja ruhtinaan linnoitus rakennettiin sinne juuri ennen vuotta 940 paikalle, jossa oli aiemmin ollut slaavilaisen uskonnon pyhiä paikkoja. Puolalaisen tarun mukaan kolme veljestä lähti metsälle ja hajaantui: Rus itään, Čech länteen ja Lech pohjoiseen, missä hän kohtasi pesäänsä puolustavan valkoisen kotkan laskevaa aurinkoa vasten ja päätti asettua paikalle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+AIEMPI KYSYMYS: Kuka oli tarun Lech?
+AIEMPI VASTAUS (Livia):
+Hei, tästä on kiva kertoa. Nyt muistan. Lech on puolalaisen taruperinteen hahmo, yksi kolmesta veljestä, jotka lähtivät metsälle ja hajaantuivat: [[Rus]] meni itään, [[Čech]] länteen ja Lech pohjoiseen. Pohjoisessa hän kohtasi pesäänsä puolustavan [[valkoisen kotkan]] laskevaa aurinkoa vasten ja päätti asettua sille paikalle, josta tuli [[Gniezno]]. Kyse on legendasta eikä todistetusta historiasta, mutta Lechin kukkulalla seisoo nykyään Gnieznon katedraali.
+
+Kotka puolusti pesäänsä, ja Lech päätti jäädä. Minä ymmärrän sen täysin, sillä ylhäältä näkee heti, mikä kukkula kelpaa pesäpaikaksi.
+KYSYMYS: Kerro lisää: Rus
+
+### 125
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gniezno (historia)
+Tietoruudun teksti: Gniezno on kaupunki Keski-Länsi-Puolassa noin viidenkymmenen kilometrin päässä Poznańista. Se oli Piast-suvun päälinnoja ja Puolan ensimmäinen historiallinen pääkaupunki 900-luvulla ja 1000-luvun alussa. Kaupunki on maan vanhimman arkkihiippakunnan istuin — se perustettiin vuonna 1000 — ja sen arkkipiispa on Puolan primas, joten Gniezno on maan kirkollinen pääkaupunki. Kuten Rooma, Gniezno perustettiin seitsemälle kukkulalle; Lechin kukkulalla seisoo Gnieznon katedraali, ja ruhtinaan linnoitus rakennettiin sinne juuri ennen vuotta 940 paikalle, jossa oli aiemmin ollut slaavilaisen uskonnon pyhiä paikkoja. Puolalaisen tarun mukaan kolme veljestä lähti metsälle ja hajaantui: Rus itään, Čech länteen ja Lech pohjoiseen, missä hän kohtasi pesäänsä puolustavan valkoisen kotkan laskevaa aurinkoa vasten ja päätti asettua paikalle.
+AIEMPI KYSYMYS: Kuka oli tarun Lech?
+AIEMPI VASTAUS (Livia):
+Hei, tästä on kiva kertoa. Nyt muistan. Lech on puolalaisen taruperinteen hahmo, yksi kolmesta veljestä, jotka lähtivät metsälle ja hajaantuivat: [[Rus]] meni itään, [[Čech]] länteen ja Lech pohjoiseen. Pohjoisessa hän kohtasi pesäänsä puolustavan [[valkoisen kotkan]] laskevaa aurinkoa vasten ja päätti asettua sille paikalle, josta tuli [[Gniezno]]. Kyse on legendasta eikä todistetusta historiasta, mutta Lechin kukkulalla seisoo nykyään Gnieznon katedraali.
+
+Kotka puolusti pesäänsä, ja Lech päätti jäädä. Minä ymmärrän sen täysin, sillä ylhäältä näkee heti, mikä kukkula kelpaa pesäpaikaksi.
+KYSYMYS: Kerro lisää: Čech
+
+### 126
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gniezno (historia)
+Tietoruudun teksti: Gniezno on kaupunki Keski-Länsi-Puolassa noin viidenkymmenen kilometrin päässä Poznańista. Se oli Piast-suvun päälinnoja ja Puolan ensimmäinen historiallinen pääkaupunki 900-luvulla ja 1000-luvun alussa. Kaupunki on maan vanhimman arkkihiippakunnan istuin — se perustettiin vuonna 1000 — ja sen arkkipiispa on Puolan primas, joten Gniezno on maan kirkollinen pääkaupunki. Kuten Rooma, Gniezno perustettiin seitsemälle kukkulalle; Lechin kukkulalla seisoo Gnieznon katedraali, ja ruhtinaan linnoitus rakennettiin sinne juuri ennen vuotta 940 paikalle, jossa oli aiemmin ollut slaavilaisen uskonnon pyhiä paikkoja. Puolalaisen tarun mukaan kolme veljestä lähti metsälle ja hajaantui: Rus itään, Čech länteen ja Lech pohjoiseen, missä hän kohtasi pesäänsä puolustavan valkoisen kotkan laskevaa aurinkoa vasten ja päätti asettua paikalle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Filippiinit — maalehti / Luonto: Kotka, joka syö lentäviä lemureita] Filippiinienkotka on pituudeltaan maailman suurin kotka: naaras on runsaan metrin mittainen ja painaa noin kuusi kiloa. Se pesii enää neljällä saarella, ja Mindanaon vanhoissa vuorimetsissä sen pääsaalis on kolugo eli lentävä lemuri. Lisääntymiskierto kestää kaksi vuotta: naaras munii yhden munan, poikanen lähtee lennolle vasta neljän tai viiden kuukauden ikäisenä ja saa vanhempien hoitoa parikymmentä kuukautta. Lentäjä Charles Lindbergh matkusti maahan useasti 1969–1972 ja sai hallituksen ryhtymään lajin suojeluun.
+- [Vladivostok — kohdekartta / Kohdekartta: Kotkanpesän kukkula] 199 metriä Kotkanpesä eli Orlinoje gnezdo on keskustan korkein kohta, 199 metriä — toisten mittausten mukaan 214. Sitä kutsutaan usein koko kaupungin korkeimmaksi paikaksi, mutta se ei pidä paikkaansa: Holodilnik-vuori pohjoisempana on 257 metriä. Väärinkäsitys on silti ymmärrettävä, sillä juuri tältä kukkulalta kaupunki avautuu parhaiten. Laelta näkee kerralla sen, minkä kartta kertoo viivoina: Kultaisen sarven mutkan laitureineen, sillan pylonit, Amurinlahden ja kirkkaalla säällä Russkin saaren sillan salmen takana. Kukkula kertoo myös, miksi Vladivostokissa kävellään raskaasti: keskustan kadut on vedetty rantaviivan suuntaisesti, ja niiden väliset poikkikadut kiipeävät rinteitä suoraan y…
+AIEMPI KYSYMYS: Kuka oli tarun Lech?
+AIEMPI VASTAUS (Livia):
+Hei, tästä on kiva kertoa. Nyt muistan. Lech on puolalaisen taruperinteen hahmo, yksi kolmesta veljestä, jotka lähtivät metsälle ja hajaantuivat: [[Rus]] meni itään, [[Čech]] länteen ja Lech pohjoiseen. Pohjoisessa hän kohtasi pesäänsä puolustavan [[valkoisen kotkan]] laskevaa aurinkoa vasten ja päätti asettua sille paikalle, josta tuli [[Gniezno]]. Kyse on legendasta eikä todistetusta historiasta, mutta Lechin kukkulalla seisoo nykyään Gnieznon katedraali.
+
+Kotka puolusti pesäänsä, ja Lech päätti jäädä. Minä ymmärrän sen täysin, sillä ylhäältä näkee heti, mikä kukkula kelpaa pesäpaikaksi.
+KYSYMYS: Kerro lisää: valkoisen kotkan
+
+### 127
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gniezno (historia)
+Tietoruudun teksti: Gniezno on kaupunki Keski-Länsi-Puolassa noin viidenkymmenen kilometrin päässä Poznańista. Se oli Piast-suvun päälinnoja ja Puolan ensimmäinen historiallinen pääkaupunki 900-luvulla ja 1000-luvun alussa. Kaupunki on maan vanhimman arkkihiippakunnan istuin — se perustettiin vuonna 1000 — ja sen arkkipiispa on Puolan primas, joten Gniezno on maan kirkollinen pääkaupunki. Kuten Rooma, Gniezno perustettiin seitsemälle kukkulalle; Lechin kukkulalla seisoo Gnieznon katedraali, ja ruhtinaan linnoitus rakennettiin sinne juuri ennen vuotta 940 paikalle, jossa oli aiemmin ollut slaavilaisen uskonnon pyhiä paikkoja. Puolalaisen tarun mukaan kolme veljestä lähti metsälle ja hajaantui: Rus itään, Čech länteen ja Lech pohjoiseen, missä hän kohtasi pesäänsä puolustavan valkoisen kotkan laskevaa aurinkoa vasten ja päätti asettua paikalle.
+AIEMPI KYSYMYS: Keitä olivat Piastit?
+AIEMPI VASTAUS (Livia):
+No niin, tää on hyvä kysymys. Odotas vähän. [[Piastit]] olivat Puolan ensimmäinen hallitsijasuku, jonka valtaa Gnieznon seudulta laajennettiin 900-luvulla ja joka hallitsi keskiajalla Puolaa vuosisatoja. Tunnetuin varhainen hallitsija on [[Mieszko I]], joka otti kasteen yleisesti 966 mainittuna vuonna, mutta täsmällisestä vuodesta ei ole täyttä varmuutta. Suvun nimi tulee tarun mukaan esi-isä Piastista. Kyl minä sen päässäni kannoin.
+KYSYMYS: Kerro lisää: Piastit
+
+### 128
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gniezno (historia)
+Tietoruudun teksti: Gniezno on kaupunki Keski-Länsi-Puolassa noin viidenkymmenen kilometrin päässä Poznańista. Se oli Piast-suvun päälinnoja ja Puolan ensimmäinen historiallinen pääkaupunki 900-luvulla ja 1000-luvun alussa. Kaupunki on maan vanhimman arkkihiippakunnan istuin — se perustettiin vuonna 1000 — ja sen arkkipiispa on Puolan primas, joten Gniezno on maan kirkollinen pääkaupunki. Kuten Rooma, Gniezno perustettiin seitsemälle kukkulalle; Lechin kukkulalla seisoo Gnieznon katedraali, ja ruhtinaan linnoitus rakennettiin sinne juuri ennen vuotta 940 paikalle, jossa oli aiemmin ollut slaavilaisen uskonnon pyhiä paikkoja. Puolalaisen tarun mukaan kolme veljestä lähti metsälle ja hajaantui: Rus itään, Čech länteen ja Lech pohjoiseen, missä hän kohtasi pesäänsä puolustavan valkoisen kotkan laskevaa aurinkoa vasten ja päätti asettua paikalle.
+AIEMPI KYSYMYS: Keitä olivat Piastit?
+AIEMPI VASTAUS (Livia):
+No niin, tää on hyvä kysymys. Odotas vähän. [[Piastit]] olivat Puolan ensimmäinen hallitsijasuku, jonka valtaa Gnieznon seudulta laajennettiin 900-luvulla ja joka hallitsi keskiajalla Puolaa vuosisatoja. Tunnetuin varhainen hallitsija on [[Mieszko I]], joka otti kasteen yleisesti 966 mainittuna vuonna, mutta täsmällisestä vuodesta ei ole täyttä varmuutta. Suvun nimi tulee tarun mukaan esi-isä Piastista. Kyl minä sen päässäni kannoin.
+KYSYMYS: Kerro lisää: Mieszko I
+
+### 129
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gniezno (historia)
+Tietoruudun teksti: Gniezno on kaupunki Keski-Länsi-Puolassa noin viidenkymmenen kilometrin päässä Poznańista. Se oli Piast-suvun päälinnoja ja Puolan ensimmäinen historiallinen pääkaupunki 900-luvulla ja 1000-luvun alussa. Kaupunki on maan vanhimman arkkihiippakunnan istuin — se perustettiin vuonna 1000 — ja sen arkkipiispa on Puolan primas, joten Gniezno on maan kirkollinen pääkaupunki. Kuten Rooma, Gniezno perustettiin seitsemälle kukkulalle; Lechin kukkulalla seisoo Gnieznon katedraali, ja ruhtinaan linnoitus rakennettiin sinne juuri ennen vuotta 940 paikalle, jossa oli aiemmin ollut slaavilaisen uskonnon pyhiä paikkoja. Puolalaisen tarun mukaan kolme veljestä lähti metsälle ja hajaantui: Rus itään, Čech länteen ja Lech pohjoiseen, missä hän kohtasi pesäänsä puolustavan valkoisen kotkan laskevaa aurinkoa vasten ja päätti asettua paikalle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Historia: Suolakaivos jossa on kirkko maan alla] 13. vuosisata — Wieliczkan suolakaivos Krakovan lähellä on kaivettu 1200-luvulta lähtien, ja suolaa louhittiin siellä yhtäjaksoisesti aina vuoteen 1996 asti — yksi maailman vanhimmista toimivista kaivoksista. Kaivos ulottuu 327 metrin syvyyteen ja yli 287 kilometrin käytäväverkostoon. Vuosisatojen aikana kaivosmiehet veistivät suolasta patsaita, kappeleita ja jopa kokonaisia kirkkosaleja kattokruunuineen — kaikki, myös valaisimet, on veistetty tai puhallettu suolasta. Nykyään kaivos on Unescon maailmanperintökohde ja yksi Puolan suosituimmista nähtävyyksistä.
+- [Puola — maalehti / Ruoka: Viina jossa on heinänkorsi pullossa] nykyään — Żubrówka on maustettu vodka, jonka jokaiseen pulloon lisätään yksi puhdas heinänkorsi — biisoninheinää, joka kerätään käsin Białowieżan metsästä Puolan itärajalta Valko-Venäjän vastaisella rajaseudulla. Sama metsä on Euroopan alkuperäisten metsäbiisonien viimeinen laaja elinalue, ja heinä saa nimensä juuri niiden laidunmaista. Kuivattu heinä antaa viinalle vienon, hieman vaniljaisen ja tuoreen heinän tuoksun, joka erottaa sen selvästi tavallisesta vodkasta — pullon pohjalle jäävä korsi on samalla merkki aitoudesta.
+- [Puola — maalehti / Ruoka: Metsästäjän pata joka paranee odottaessa] nykyään — Bigos eli metsästäjän pata on hidas muhennos, jossa erilaiset lihat haudutetaan yhdessä hapankaalin ja tuoreen kaalin kanssa. Ruokaan lisätään usein makkaraa, sieniä, luumuja ja viiniä, ja mausteet vaihtelevat perheittäin. Bigosin erikoisuus on, että se paranee uudelleenlämmittäessä: monet väittävät parhaan bigosin olevan se, joka on saanut seistä ja maustua useita päiviä, jopa viikon. Ruoka levisi alkuperäisestä Puolasta laajalle koko Puolan–Liettuan unionin alueelle.
+AIEMPI KYSYMYS: Miksi valkoinen kotka on Puolan vaakunassa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tost minä tiedän jotain. Valkoinen kotka punaisella pohjalla on [[Puolan vaakuna]], jonka merkki on peräisin keskiajalta, ja sen alkuperä liitetään kahteen kertomukseen. Taru kertoo, että Lech näki Gnieznon kohdalla valkoisen kotkan pesänsä luona ja asettui sille paikalle; historiallisesti merkki liittyy Piast-suvun hallitsijoihin. Tarkkaa ensimmäistä käyttöä en ole varma, joten jätän vuoden sanomatta. Ylhäältä kotka näyttää aina vähän liian ylpeältä.
+KYSYMYS: Kerro lisää: Puolan vaakuna
+
+### 130
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elblągin kanava (tekniikka)
+Tietoruudun teksti: Elblągin kanava on 80,5 kilometriä pitkä kanava Varmian ja Masurian voivodikunnassa Puolassa: se kulkee etelään Drużno-järveltä Drwęca-joelle ja Jeziorak-järvelle ja kantaa enintään viidenkymmenen tonnin aluksia. Korkeusero on lähes sata metriä, ja se voitetaan sulkujen sekä järvien välisten vinohissien järjestelmällä. Preussin kuninkaan toimeksiannosta kanavan suunnitteli Georg Steenke vuosina 1825–1844, ja rakentaminen alkoi 1844; 9,5 kilometrin matkalla korkeusero oli tavallisille suluille liian suuri, joten tilalle otettiin Yhdysvaltain Morris-kanavan mallin mukaiset vinohissit. Kanava avattiin nimellä Oberländischer Kanal 29. lokakuuta 1860, ja rajojen muututtua toisen maailmansodan jälkeen se jäi Puolaan; sotavauriot korjattiin ja liikenne palasi 1948. Alkuperäisiä vinohissejä oli neljä — Buczyniec, Kąty, Oleśnica ja Jelenie — ja niiden nousut ovat 18,8–22 metriä; myöhemmin lisätt…
+AIEMPI KYSYMYS: Miten alukset nousevat sata metriä ylös?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Nyt muistan. [[Elblągin kanavan]] korkeusero on lähes sata metriä, ja se voitetaan sulkujen sekä [[vinohissien]] järjestelmällä. Yhden 9,5 kilometrin matkan korkeusero oli tavallisille suluille liian suuri, joten käyttöön otettiin vinohissit, jotka noudattavat Yhdysvaltain Morris-kanavan mallia. Alus ajetaan vaunulle, joka kulkee kiskoilla rinnettä ylös ja alas, ja liikkeen aikaansaa vesivoima. Alkuperäisiä vinohissejä oli neljä, [[Buczyniec]], Kąty, Oleśnica ja Jelenie, ja niiden nousut ovat 18,8–22 metriä.
+
+Alus siis ajaa kuivalle maalle ja jatkaa matkaa kuin ei mitään. Ylhäältä se näyttää kyllä hämmästyttävältä, ainakin kyyhkyn silmin.
+KYSYMYS: Kerro lisää: Elblągin kanavan
+
+### 131
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elblągin kanava (tekniikka)
+Tietoruudun teksti: Elblągin kanava on 80,5 kilometriä pitkä kanava Varmian ja Masurian voivodikunnassa Puolassa: se kulkee etelään Drużno-järveltä Drwęca-joelle ja Jeziorak-järvelle ja kantaa enintään viidenkymmenen tonnin aluksia. Korkeusero on lähes sata metriä, ja se voitetaan sulkujen sekä järvien välisten vinohissien järjestelmällä. Preussin kuninkaan toimeksiannosta kanavan suunnitteli Georg Steenke vuosina 1825–1844, ja rakentaminen alkoi 1844; 9,5 kilometrin matkalla korkeusero oli tavallisille suluille liian suuri, joten tilalle otettiin Yhdysvaltain Morris-kanavan mallin mukaiset vinohissit. Kanava avattiin nimellä Oberländischer Kanal 29. lokakuuta 1860, ja rajojen muututtua toisen maailmansodan jälkeen se jäi Puolaan; sotavauriot korjattiin ja liikenne palasi 1948. Alkuperäisiä vinohissejä oli neljä — Buczyniec, Kąty, Oleśnica ja Jelenie — ja niiden nousut ovat 18,8–22 metriä; myöhemmin lisätt…
+AIEMPI KYSYMYS: Miten alukset nousevat sata metriä ylös?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Nyt muistan. [[Elblągin kanavan]] korkeusero on lähes sata metriä, ja se voitetaan sulkujen sekä [[vinohissien]] järjestelmällä. Yhden 9,5 kilometrin matkan korkeusero oli tavallisille suluille liian suuri, joten käyttöön otettiin vinohissit, jotka noudattavat Yhdysvaltain Morris-kanavan mallia. Alus ajetaan vaunulle, joka kulkee kiskoilla rinnettä ylös ja alas, ja liikkeen aikaansaa vesivoima. Alkuperäisiä vinohissejä oli neljä, [[Buczyniec]], Kąty, Oleśnica ja Jelenie, ja niiden nousut ovat 18,8–22 metriä.
+
+Alus siis ajaa kuivalle maalle ja jatkaa matkaa kuin ei mitään. Ylhäältä se näyttää kyllä hämmästyttävältä, ainakin kyyhkyn silmin.
+KYSYMYS: Kerro lisää: vinohissien
+
+### 132
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elblągin kanava (tekniikka)
+Tietoruudun teksti: Elblągin kanava on 80,5 kilometriä pitkä kanava Varmian ja Masurian voivodikunnassa Puolassa: se kulkee etelään Drużno-järveltä Drwęca-joelle ja Jeziorak-järvelle ja kantaa enintään viidenkymmenen tonnin aluksia. Korkeusero on lähes sata metriä, ja se voitetaan sulkujen sekä järvien välisten vinohissien järjestelmällä. Preussin kuninkaan toimeksiannosta kanavan suunnitteli Georg Steenke vuosina 1825–1844, ja rakentaminen alkoi 1844; 9,5 kilometrin matkalla korkeusero oli tavallisille suluille liian suuri, joten tilalle otettiin Yhdysvaltain Morris-kanavan mallin mukaiset vinohissit. Kanava avattiin nimellä Oberländischer Kanal 29. lokakuuta 1860, ja rajojen muututtua toisen maailmansodan jälkeen se jäi Puolaan; sotavauriot korjattiin ja liikenne palasi 1948. Alkuperäisiä vinohissejä oli neljä — Buczyniec, Kąty, Oleśnica ja Jelenie — ja niiden nousut ovat 18,8–22 metriä; myöhemmin lisätt…
+AIEMPI KYSYMYS: Miten alukset nousevat sata metriä ylös?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Nyt muistan. [[Elblągin kanavan]] korkeusero on lähes sata metriä, ja se voitetaan sulkujen sekä [[vinohissien]] järjestelmällä. Yhden 9,5 kilometrin matkan korkeusero oli tavallisille suluille liian suuri, joten käyttöön otettiin vinohissit, jotka noudattavat Yhdysvaltain Morris-kanavan mallia. Alus ajetaan vaunulle, joka kulkee kiskoilla rinnettä ylös ja alas, ja liikkeen aikaansaa vesivoima. Alkuperäisiä vinohissejä oli neljä, [[Buczyniec]], Kąty, Oleśnica ja Jelenie, ja niiden nousut ovat 18,8–22 metriä.
+
+Alus siis ajaa kuivalle maalle ja jatkaa matkaa kuin ei mitään. Ylhäältä se näyttää kyllä hämmästyttävältä, ainakin kyyhkyn silmin.
+KYSYMYS: Kerro lisää: Buczyniec
+
+### 133
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elblągin kanava (tekniikka)
+Tietoruudun teksti: Elblągin kanava on 80,5 kilometriä pitkä kanava Varmian ja Masurian voivodikunnassa Puolassa: se kulkee etelään Drużno-järveltä Drwęca-joelle ja Jeziorak-järvelle ja kantaa enintään viidenkymmenen tonnin aluksia. Korkeusero on lähes sata metriä, ja se voitetaan sulkujen sekä järvien välisten vinohissien järjestelmällä. Preussin kuninkaan toimeksiannosta kanavan suunnitteli Georg Steenke vuosina 1825–1844, ja rakentaminen alkoi 1844; 9,5 kilometrin matkalla korkeusero oli tavallisille suluille liian suuri, joten tilalle otettiin Yhdysvaltain Morris-kanavan mallin mukaiset vinohissit. Kanava avattiin nimellä Oberländischer Kanal 29. lokakuuta 1860, ja rajojen muututtua toisen maailmansodan jälkeen se jäi Puolaan; sotavauriot korjattiin ja liikenne palasi 1948. Alkuperäisiä vinohissejä oli neljä — Buczyniec, Kąty, Oleśnica ja Jelenie — ja niiden nousut ovat 18,8–22 metriä; myöhemmin lisätt…
+AIEMPI KYSYMYS: Kuka kanavan suunnitteli?
+AIEMPI VASTAUS (Livia):
+Ai se, tän muistan. Hetkinen ny. Kanavan suunnitteli [[Georg Steenke]] Preussin kuninkaan toimeksiannosta vuosina 1825–1844, ja rakentaminen alkoi vuonna 1844. Kanava avattiin 29. lokakuuta 1860 nimellä [[Oberländischer Kanal]], ja toisen maailmansodan jälkeen se jäi Puolaan. Sotavauriot korjattiin, ja liikenne palasi vuonna 1948. Sain sen sanottua ilman sivupolkuja.
+KYSYMYS: Kerro lisää: Georg Steenke
+
+### 134
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elblągin kanava (tekniikka)
+Tietoruudun teksti: Elblągin kanava on 80,5 kilometriä pitkä kanava Varmian ja Masurian voivodikunnassa Puolassa: se kulkee etelään Drużno-järveltä Drwęca-joelle ja Jeziorak-järvelle ja kantaa enintään viidenkymmenen tonnin aluksia. Korkeusero on lähes sata metriä, ja se voitetaan sulkujen sekä järvien välisten vinohissien järjestelmällä. Preussin kuninkaan toimeksiannosta kanavan suunnitteli Georg Steenke vuosina 1825–1844, ja rakentaminen alkoi 1844; 9,5 kilometrin matkalla korkeusero oli tavallisille suluille liian suuri, joten tilalle otettiin Yhdysvaltain Morris-kanavan mallin mukaiset vinohissit. Kanava avattiin nimellä Oberländischer Kanal 29. lokakuuta 1860, ja rajojen muututtua toisen maailmansodan jälkeen se jäi Puolaan; sotavauriot korjattiin ja liikenne palasi 1948. Alkuperäisiä vinohissejä oli neljä — Buczyniec, Kąty, Oleśnica ja Jelenie — ja niiden nousut ovat 18,8–22 metriä; myöhemmin lisätt…
+AIEMPI KYSYMYS: Kuka kanavan suunnitteli?
+AIEMPI VASTAUS (Livia):
+Ai se, tän muistan. Hetkinen ny. Kanavan suunnitteli [[Georg Steenke]] Preussin kuninkaan toimeksiannosta vuosina 1825–1844, ja rakentaminen alkoi vuonna 1844. Kanava avattiin 29. lokakuuta 1860 nimellä [[Oberländischer Kanal]], ja toisen maailmansodan jälkeen se jäi Puolaan. Sotavauriot korjattiin, ja liikenne palasi vuonna 1948. Sain sen sanottua ilman sivupolkuja.
+KYSYMYS: Kerro lisää: Oberländischer Kanal
+
+### 135
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elblągin kanava (tekniikka)
+Tietoruudun teksti: Elblągin kanava on 80,5 kilometriä pitkä kanava Varmian ja Masurian voivodikunnassa Puolassa: se kulkee etelään Drużno-järveltä Drwęca-joelle ja Jeziorak-järvelle ja kantaa enintään viidenkymmenen tonnin aluksia. Korkeusero on lähes sata metriä, ja se voitetaan sulkujen sekä järvien välisten vinohissien järjestelmällä. Preussin kuninkaan toimeksiannosta kanavan suunnitteli Georg Steenke vuosina 1825–1844, ja rakentaminen alkoi 1844; 9,5 kilometrin matkalla korkeusero oli tavallisille suluille liian suuri, joten tilalle otettiin Yhdysvaltain Morris-kanavan mallin mukaiset vinohissit. Kanava avattiin nimellä Oberländischer Kanal 29. lokakuuta 1860, ja rajojen muututtua toisen maailmansodan jälkeen se jäi Puolaan; sotavauriot korjattiin ja liikenne palasi 1948. Alkuperäisiä vinohissejä oli neljä — Buczyniec, Kąty, Oleśnica ja Jelenie — ja niiden nousut ovat 18,8–22 metriä; myöhemmin lisätt…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Pöydän perinteet: Salaatti lipun väreissä] 1956 — Shopska-salaatti syntyi 1950-luvulla, kun valtion matkailuyhtiö Balkantourist kehitti Mustanmeren rannikon Družban lomakylän ravintolassa uuden annoksen ulkomaisille turisteille. Kokit valitsivat ainekset tarkoituksella niin, että lautanen näyttää Bulgarian lipulta: valkoinen raastettu sirene-juusto, vihreä kurkku ja paprika, ja punainen tomaatti. Salaatti sai nimensä läntisen Bulgarian shop-alueen asukkaista, vaikka resepti keksittiin rantahotellissa eikä vuorikylässä. Monista samaan aikaan luoduista matkailuruoista shopska on ainoa, joka jäi elämään — siitä tuli koko maan tunnetuin ruokalaji.
+AIEMPI KYSYMYS: Mikä on Drużno-järvi?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä osaan kertoo. [[Drużno-järvi]] on kanavan pohjoispäässä sijaitseva matala järvi, jolta kanava kulkee etelään kohti Drwęca-jokea ja Jeziorak-järveä. Alue on tunnettu kosteikkolinnuista, mutta tarkkoja lukuja en ole varma muistavani. Järvi ja kanava sijaitsevat [[Varmian ja Masurian voivodikunnassa]] Puolassa.
+
+Järvi on matala, mutta kanavan kannalta tärkeä lähtöpiste. Minä pidän matalista vesistä, koska niissä lintu näkee kalan ennen kuin kala näkee linnun.
+KYSYMYS: Kerro lisää: Drużno-järvi
+
+### 136
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elblągin kanava (tekniikka)
+Tietoruudun teksti: Elblągin kanava on 80,5 kilometriä pitkä kanava Varmian ja Masurian voivodikunnassa Puolassa: se kulkee etelään Drużno-järveltä Drwęca-joelle ja Jeziorak-järvelle ja kantaa enintään viidenkymmenen tonnin aluksia. Korkeusero on lähes sata metriä, ja se voitetaan sulkujen sekä järvien välisten vinohissien järjestelmällä. Preussin kuninkaan toimeksiannosta kanavan suunnitteli Georg Steenke vuosina 1825–1844, ja rakentaminen alkoi 1844; 9,5 kilometrin matkalla korkeusero oli tavallisille suluille liian suuri, joten tilalle otettiin Yhdysvaltain Morris-kanavan mallin mukaiset vinohissit. Kanava avattiin nimellä Oberländischer Kanal 29. lokakuuta 1860, ja rajojen muututtua toisen maailmansodan jälkeen se jäi Puolaan; sotavauriot korjattiin ja liikenne palasi 1948. Alkuperäisiä vinohissejä oli neljä — Buczyniec, Kąty, Oleśnica ja Jelenie — ja niiden nousut ovat 18,8–22 metriä; myöhemmin lisätt…
+AIEMPI KYSYMYS: Mikä on Drużno-järvi?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä osaan kertoo. [[Drużno-järvi]] on kanavan pohjoispäässä sijaitseva matala järvi, jolta kanava kulkee etelään kohti Drwęca-jokea ja Jeziorak-järveä. Alue on tunnettu kosteikkolinnuista, mutta tarkkoja lukuja en ole varma muistavani. Järvi ja kanava sijaitsevat [[Varmian ja Masurian voivodikunnassa]] Puolassa.
+
+Järvi on matala, mutta kanavan kannalta tärkeä lähtöpiste. Minä pidän matalista vesistä, koska niissä lintu näkee kalan ennen kuin kala näkee linnun.
+KYSYMYS: Kerro lisää: Varmian ja Masurian voivodikunnassa
+
+### 137
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elblągin kanava (tekniikka)
+Tietoruudun teksti: Elblągin kanava on 80,5 kilometriä pitkä kanava Varmian ja Masurian voivodikunnassa Puolassa: se kulkee etelään Drużno-järveltä Drwęca-joelle ja Jeziorak-järvelle ja kantaa enintään viidenkymmenen tonnin aluksia. Korkeusero on lähes sata metriä, ja se voitetaan sulkujen sekä järvien välisten vinohissien järjestelmällä. Preussin kuninkaan toimeksiannosta kanavan suunnitteli Georg Steenke vuosina 1825–1844, ja rakentaminen alkoi 1844; 9,5 kilometrin matkalla korkeusero oli tavallisille suluille liian suuri, joten tilalle otettiin Yhdysvaltain Morris-kanavan mallin mukaiset vinohissit. Kanava avattiin nimellä Oberländischer Kanal 29. lokakuuta 1860, ja rajojen muututtua toisen maailmansodan jälkeen se jäi Puolaan; sotavauriot korjattiin ja liikenne palasi 1948. Alkuperäisiä vinohissejä oli neljä — Buczyniec, Kąty, Oleśnica ja Jelenie — ja niiden nousut ovat 18,8–22 metriä; myöhemmin lisätt…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Neuvosto äänesti maan kohtalosta] 27.3.1918 — Maaliskuun 27. päivänä 1918 Sfatul Tării, Bessarabian kansanvaltainen neuvosto, kokoontui entisen poikien lyseon juhlasaliin Chișinăussa äänestämään maansa kohtalosta. 86 edustajaa äänesti liittymisen puolesta, 3 vastaan ja 36 pidättäytyi. Puheenjohtaja Ion Inculeț ja neuvosto liittivät Bessarabian Romaniaan sillä ehdolla, että maareformi ja alueellinen itsehallinto säilyisivät. Ehdot pyyhittiin pois vasta saman vuoden marraskuun lopulla, kun neuvosto äänesti Bucureștissa uudelleen ja julisti liittymisen ehdottomaksi. Rakennus tunnetaan nykyään Sfatul Tării -palatsina.
+AIEMPI KYSYMYS: Miten Puolan rajat siirtyivät toisen maailmansodan jälkeen?
+AIEMPI VASTAUS (Livia):
+Kääk. Tää on iso aihe. Toisen maailmansodan jälkeen, yli kahdeksankymmentä vuotta sitten, Puolan alue siirtyi voittajavaltioiden päätösten mukaan länteen: itäiset alueet liitettiin [[Neuvostoliittoon]], ja Puola sai vastineeksi alueita lännestä ja pohjoisesta, kuten osan entisestä [[Itä-Preussista]]. Länsiraja kulki [[Oder-Neisse-linjaa]] pitkin. Näiden muutosten mukana suuria ihmisjoukkoja joutui muuttamaan, ja alueiden nimet vaihtuivat. Onpas siit onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Neuvostoliittoon
+
+### 138
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elblągin kanava (tekniikka)
+Tietoruudun teksti: Elblągin kanava on 80,5 kilometriä pitkä kanava Varmian ja Masurian voivodikunnassa Puolassa: se kulkee etelään Drużno-järveltä Drwęca-joelle ja Jeziorak-järvelle ja kantaa enintään viidenkymmenen tonnin aluksia. Korkeusero on lähes sata metriä, ja se voitetaan sulkujen sekä järvien välisten vinohissien järjestelmällä. Preussin kuninkaan toimeksiannosta kanavan suunnitteli Georg Steenke vuosina 1825–1844, ja rakentaminen alkoi 1844; 9,5 kilometrin matkalla korkeusero oli tavallisille suluille liian suuri, joten tilalle otettiin Yhdysvaltain Morris-kanavan mallin mukaiset vinohissit. Kanava avattiin nimellä Oberländischer Kanal 29. lokakuuta 1860, ja rajojen muututtua toisen maailmansodan jälkeen se jäi Puolaan; sotavauriot korjattiin ja liikenne palasi 1948. Alkuperäisiä vinohissejä oli neljä — Buczyniec, Kąty, Oleśnica ja Jelenie — ja niiden nousut ovat 18,8–22 metriä; myöhemmin lisätt…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Adelaide — kaupunkilehti / Saksalaisperintö: Kylä jonka nimi tuli laivan kapteenilta] Hahndorfin perustivat luterilaiset siirtolaiset, jotka tulivat pääosin Kayn kylästä Preussista — nykyisin Kije Puolassa. Suuri osa heistä saapui laivalla Zebra 28. joulukuuta 1838. He asettuivat perämangkien perinteiselle maalle paikkaan, jonka nimi Bukartilla viittaa seudun vesikuoppiin, ja kylä nimettiin Zebran kapteenin Dirk Meinerts Hahnin mukaan. Hahndorf on Australian vanhin yhä olemassa oleva saksalaissiirtokunta, ja saksalainen kädenjälki näkyy säilyneiden alkuperäisrakennusten puurunkoisessa Fachwerk-rakenteessa.
+AIEMPI KYSYMYS: Miten Puolan rajat siirtyivät toisen maailmansodan jälkeen?
+AIEMPI VASTAUS (Livia):
+Kääk. Tää on iso aihe. Toisen maailmansodan jälkeen, yli kahdeksankymmentä vuotta sitten, Puolan alue siirtyi voittajavaltioiden päätösten mukaan länteen: itäiset alueet liitettiin [[Neuvostoliittoon]], ja Puola sai vastineeksi alueita lännestä ja pohjoisesta, kuten osan entisestä [[Itä-Preussista]]. Länsiraja kulki [[Oder-Neisse-linjaa]] pitkin. Näiden muutosten mukana suuria ihmisjoukkoja joutui muuttamaan, ja alueiden nimet vaihtuivat. Onpas siit onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Itä-Preussista
+
+### 139
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elblągin kanava (tekniikka)
+Tietoruudun teksti: Elblągin kanava on 80,5 kilometriä pitkä kanava Varmian ja Masurian voivodikunnassa Puolassa: se kulkee etelään Drużno-järveltä Drwęca-joelle ja Jeziorak-järvelle ja kantaa enintään viidenkymmenen tonnin aluksia. Korkeusero on lähes sata metriä, ja se voitetaan sulkujen sekä järvien välisten vinohissien järjestelmällä. Preussin kuninkaan toimeksiannosta kanavan suunnitteli Georg Steenke vuosina 1825–1844, ja rakentaminen alkoi 1844; 9,5 kilometrin matkalla korkeusero oli tavallisille suluille liian suuri, joten tilalle otettiin Yhdysvaltain Morris-kanavan mallin mukaiset vinohissit. Kanava avattiin nimellä Oberländischer Kanal 29. lokakuuta 1860, ja rajojen muututtua toisen maailmansodan jälkeen se jäi Puolaan; sotavauriot korjattiin ja liikenne palasi 1948. Alkuperäisiä vinohissejä oli neljä — Buczyniec, Kąty, Oleśnica ja Jelenie — ja niiden nousut ovat 18,8–22 metriä; myöhemmin lisätt…
+AIEMPI KYSYMYS: Miten Puolan rajat siirtyivät toisen maailmansodan jälkeen?
+AIEMPI VASTAUS (Livia):
+Kääk. Tää on iso aihe. Toisen maailmansodan jälkeen, yli kahdeksankymmentä vuotta sitten, Puolan alue siirtyi voittajavaltioiden päätösten mukaan länteen: itäiset alueet liitettiin [[Neuvostoliittoon]], ja Puola sai vastineeksi alueita lännestä ja pohjoisesta, kuten osan entisestä [[Itä-Preussista]]. Länsiraja kulki [[Oder-Neisse-linjaa]] pitkin. Näiden muutosten mukana suuria ihmisjoukkoja joutui muuttamaan, ja alueiden nimet vaihtuivat. Onpas siit onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Oder-Neisse-linjaa
+
+### 140
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krzemionki (kauppa)
+Tietoruudun teksti: Krzemionki on neoliittinen ja varhaisen pronssikauden piikivikaivosten kokonaisuus noin kahdeksan kilometriä Ostrowiec Świętokrzyskin kaupungista koilliseen. Se on Euroopan suurimpia esihistoriallisia piikivikaivoksia yhdessä Englannin Grime's Gravesin ja Belgian Spiennesin kanssa. Louhinta alkoi noin 3900 eaa. ja jatkui noin vuoteen 1600 eaa.: kaivosalue on 4,5 kilometriä pitkä ja 25–180 metriä leveä, ja tunnettuja kuiluja on yli 4 000, syvimmillään yhdeksän metriä. Raidallisesta piikivestä tehtiin ennen kaikkea kirveitä ja talttoja, ja niillä käytiin kauppaa jopa 660 kilometrin päähän kaivoksilta; vilkkain aika oli 2500–2000 eaa. Kohde merkittiin Unescon maailmanperintöluetteloon 6. heinäkuuta 2019.
+AIEMPI KYSYMYS: Mitä Krzemionkista louhittiin?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Joo, tän minä tiedän. [[Krzemionkista]] louhittiin raidallista [[piikiveä]], josta tehtiin ennen kaikkea kirveitä ja talttoja. Louhinta alkoi noin 3900 eaa. ja jatkui noin vuoteen 1600 eaa., ja kaivosalueella tunnetaan yli 4 000 kuilua, syvimmillään yhdeksän metriä. Kohde on [[Unescon maailmanperintöluettelossa]] vuodesta 2019. Kyl se oli vanhaa työtä.
+KYSYMYS: Kerro lisää: Krzemionkista
+
+### 141
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krzemionki (kauppa)
+Tietoruudun teksti: Krzemionki on neoliittinen ja varhaisen pronssikauden piikivikaivosten kokonaisuus noin kahdeksan kilometriä Ostrowiec Świętokrzyskin kaupungista koilliseen. Se on Euroopan suurimpia esihistoriallisia piikivikaivoksia yhdessä Englannin Grime's Gravesin ja Belgian Spiennesin kanssa. Louhinta alkoi noin 3900 eaa. ja jatkui noin vuoteen 1600 eaa.: kaivosalue on 4,5 kilometriä pitkä ja 25–180 metriä leveä, ja tunnettuja kuiluja on yli 4 000, syvimmillään yhdeksän metriä. Raidallisesta piikivestä tehtiin ennen kaikkea kirveitä ja talttoja, ja niillä käytiin kauppaa jopa 660 kilometrin päähän kaivoksilta; vilkkain aika oli 2500–2000 eaa. Kohde merkittiin Unescon maailmanperintöluetteloon 6. heinäkuuta 2019.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Toronto — kaupunkilehti / Alkuperäiskansat: Kauppa, jota kutsuttiin ostoksi] Syyskuussa 1787 Britannian edustaja lordi Dorchester hankki mississaugoilta yli 250 000 eekkeriä maata nykyisen Toronton kohdalta. Vastineeksi annettiin rahaa, 2 000 piikiveä, 24 messinkikattilaa, 120 peiliä, 24 hattua, kangaspakka ja 96 gallonaa rommia. Kauppakirjassa ei kuvattu aluetta tarkasti, ja sitä täsmennettiin uudella asiakirjalla 1805, jolloin yksikään alkuperäisistä neuvottelijoista ei ollut enää elossa. Mississaugat pitivät sopimusta alun perin vuokrana ikuisiksi ajoiksi luvattuja lahjoja vastaan. Kiista kesti yli kaksisataa vuotta: 2010 Kanada suostui maksamaan 145 miljoonaa dollaria maan historialliseen arvoon perustuvana hyvityksenä.
+- [Nullarbor — kaupunkilehti / Kalkkikivitasanko elää maan alla: Pimeä maailma kalkkikiven alla] Kalkkikivi liukenee veteen hitaasti mutta väsymättä, ja vuosituhannet ovat kaivertaneet Nullarborin alle satoja luolia, pystykuiluja ja maanalaisia järviä. Osa luolista, kuten Thampana, avautuu suoraan pinnalle pyöreänä aukkona, josta valo pilkottaa syvälle kaivautuneeseen halliin. Merkittävin löytö tehtiin Koonalda-luolasta, jonne muinaiset ihmiset kiipesivät yli 20 000 vuotta sitten louhimaan piikiveä pimeässä sormin – seinille jääneet piirrosurat ovat Australian vanhimpia tunnettuja ihmiskäden jälkiä täysin valottomassa tilassa. Luola sai kansallisen suojelun vasta 2014, yli 50 vuotta löydön jälkeen.
+AIEMPI KYSYMYS: Mitä Krzemionkista louhittiin?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Joo, tän minä tiedän. [[Krzemionkista]] louhittiin raidallista [[piikiveä]], josta tehtiin ennen kaikkea kirveitä ja talttoja. Louhinta alkoi noin 3900 eaa. ja jatkui noin vuoteen 1600 eaa., ja kaivosalueella tunnetaan yli 4 000 kuilua, syvimmillään yhdeksän metriä. Kohde on [[Unescon maailmanperintöluettelossa]] vuodesta 2019. Kyl se oli vanhaa työtä.
+KYSYMYS: Kerro lisää: piikiveä
+
+### 142
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krzemionki (kauppa)
+Tietoruudun teksti: Krzemionki on neoliittinen ja varhaisen pronssikauden piikivikaivosten kokonaisuus noin kahdeksan kilometriä Ostrowiec Świętokrzyskin kaupungista koilliseen. Se on Euroopan suurimpia esihistoriallisia piikivikaivoksia yhdessä Englannin Grime's Gravesin ja Belgian Spiennesin kanssa. Louhinta alkoi noin 3900 eaa. ja jatkui noin vuoteen 1600 eaa.: kaivosalue on 4,5 kilometriä pitkä ja 25–180 metriä leveä, ja tunnettuja kuiluja on yli 4 000, syvimmillään yhdeksän metriä. Raidallisesta piikivestä tehtiin ennen kaikkea kirveitä ja talttoja, ja niillä käytiin kauppaa jopa 660 kilometrin päähän kaivoksilta; vilkkain aika oli 2500–2000 eaa. Kohde merkittiin Unescon maailmanperintöluetteloon 6. heinäkuuta 2019.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mitä Krzemionkista louhittiin?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Joo, tän minä tiedän. [[Krzemionkista]] louhittiin raidallista [[piikiveä]], josta tehtiin ennen kaikkea kirveitä ja talttoja. Louhinta alkoi noin 3900 eaa. ja jatkui noin vuoteen 1600 eaa., ja kaivosalueella tunnetaan yli 4 000 kuilua, syvimmillään yhdeksän metriä. Kohde on [[Unescon maailmanperintöluettelossa]] vuodesta 2019. Kyl se oli vanhaa työtä.
+KYSYMYS: Kerro lisää: Unescon maailmanperintöluettelossa
+
+### 143
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krzemionki (kauppa)
+Tietoruudun teksti: Krzemionki on neoliittinen ja varhaisen pronssikauden piikivikaivosten kokonaisuus noin kahdeksan kilometriä Ostrowiec Świętokrzyskin kaupungista koilliseen. Se on Euroopan suurimpia esihistoriallisia piikivikaivoksia yhdessä Englannin Grime's Gravesin ja Belgian Spiennesin kanssa. Louhinta alkoi noin 3900 eaa. ja jatkui noin vuoteen 1600 eaa.: kaivosalue on 4,5 kilometriä pitkä ja 25–180 metriä leveä, ja tunnettuja kuiluja on yli 4 000, syvimmillään yhdeksän metriä. Raidallisesta piikivestä tehtiin ennen kaikkea kirveitä ja talttoja, ja niillä käytiin kauppaa jopa 660 kilometrin päähän kaivoksilta; vilkkain aika oli 2500–2000 eaa. Kohde merkittiin Unescon maailmanperintöluetteloon 6. heinäkuuta 2019.
+AIEMPI KYSYMYS: Kuinka kauas kirveet kulkivat?
+AIEMPI VASTAUS (Livia):
+Hei, tästä on kiva kertoa. Nyt muistan. Raidallisesta piikivestä tehdyillä kirveillä ja talttoilla käytiin kauppaa jopa 660 kilometrin päähän [[Krzemionkin]] kaivoksilta. Vilkkain aika oli noin 2500–2000 eaa., jolloin [[piikivikirveitä]] kulki laajalle alueelle. Tarkat reitit eivät ole täysin tiedossa, joten matka kuvaa pisintä tunnettua etäisyyttä.
+
+Siinä on enemmän matkaa kuin monella postireitillä, jonka suku on lentänyt. Kirves kulki ilman siipiä, eikä kellään ollut kiire.
+KYSYMYS: Kerro lisää: Krzemionkin
+
+### 144
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krzemionki (kauppa)
+Tietoruudun teksti: Krzemionki on neoliittinen ja varhaisen pronssikauden piikivikaivosten kokonaisuus noin kahdeksan kilometriä Ostrowiec Świętokrzyskin kaupungista koilliseen. Se on Euroopan suurimpia esihistoriallisia piikivikaivoksia yhdessä Englannin Grime's Gravesin ja Belgian Spiennesin kanssa. Louhinta alkoi noin 3900 eaa. ja jatkui noin vuoteen 1600 eaa.: kaivosalue on 4,5 kilometriä pitkä ja 25–180 metriä leveä, ja tunnettuja kuiluja on yli 4 000, syvimmillään yhdeksän metriä. Raidallisesta piikivestä tehtiin ennen kaikkea kirveitä ja talttoja, ja niillä käytiin kauppaa jopa 660 kilometrin päähän kaivoksilta; vilkkain aika oli 2500–2000 eaa. Kohde merkittiin Unescon maailmanperintöluetteloon 6. heinäkuuta 2019.
+AIEMPI KYSYMYS: Kuinka kauas kirveet kulkivat?
+AIEMPI VASTAUS (Livia):
+Hei, tästä on kiva kertoa. Nyt muistan. Raidallisesta piikivestä tehdyillä kirveillä ja talttoilla käytiin kauppaa jopa 660 kilometrin päähän [[Krzemionkin]] kaivoksilta. Vilkkain aika oli noin 2500–2000 eaa., jolloin [[piikivikirveitä]] kulki laajalle alueelle. Tarkat reitit eivät ole täysin tiedossa, joten matka kuvaa pisintä tunnettua etäisyyttä.
+
+Siinä on enemmän matkaa kuin monella postireitillä, jonka suku on lentänyt. Kirves kulki ilman siipiä, eikä kellään ollut kiire.
+KYSYMYS: Kerro lisää: piikivikirveitä
+
+### 145
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krzemionki (kauppa)
+Tietoruudun teksti: Krzemionki on neoliittinen ja varhaisen pronssikauden piikivikaivosten kokonaisuus noin kahdeksan kilometriä Ostrowiec Świętokrzyskin kaupungista koilliseen. Se on Euroopan suurimpia esihistoriallisia piikivikaivoksia yhdessä Englannin Grime's Gravesin ja Belgian Spiennesin kanssa. Louhinta alkoi noin 3900 eaa. ja jatkui noin vuoteen 1600 eaa.: kaivosalue on 4,5 kilometriä pitkä ja 25–180 metriä leveä, ja tunnettuja kuiluja on yli 4 000, syvimmillään yhdeksän metriä. Raidallisesta piikivestä tehtiin ennen kaikkea kirveitä ja talttoja, ja niillä käytiin kauppaa jopa 660 kilometrin päähän kaivoksilta; vilkkain aika oli 2500–2000 eaa. Kohde merkittiin Unescon maailmanperintöluetteloon 6. heinäkuuta 2019.
+AIEMPI KYSYMYS: Mikä on Grime's Graves?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Odotas vähän. [[Grime's Graves]] on Englannissa Norfolkissa sijaitseva neoliittinen piikivikaivosalue, joka lasketaan Euroopan merkittävimpiin esihistoriallisiin piikivikaivoksiin Krzemionkin ja Belgian Spiennesin rinnalla. Kaivoksia louhittiin kuiluilla ja käytävillä, ja nimen alkuperä on myöhempää perua. Tarkkoja vuosilukuja en ole varma muistavani. Aika kaukana Puolasta, mutta saman kiven perässä.
+KYSYMYS: Kerro lisää: Grime's Graves
+
+### 146
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krzemionki (kauppa)
+Tietoruudun teksti: Krzemionki on neoliittinen ja varhaisen pronssikauden piikivikaivosten kokonaisuus noin kahdeksan kilometriä Ostrowiec Świętokrzyskin kaupungista koilliseen. Se on Euroopan suurimpia esihistoriallisia piikivikaivoksia yhdessä Englannin Grime's Gravesin ja Belgian Spiennesin kanssa. Louhinta alkoi noin 3900 eaa. ja jatkui noin vuoteen 1600 eaa.: kaivosalue on 4,5 kilometriä pitkä ja 25–180 metriä leveä, ja tunnettuja kuiluja on yli 4 000, syvimmillään yhdeksän metriä. Raidallisesta piikivestä tehtiin ennen kaikkea kirveitä ja talttoja, ja niillä käytiin kauppaa jopa 660 kilometrin päähän kaivoksilta; vilkkain aika oli 2500–2000 eaa. Kohde merkittiin Unescon maailmanperintöluetteloon 6. heinäkuuta 2019.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rub al-Khali — kaupunkilehti / Luonto: Järvien pohjat hiekan seassa] Aavikon keskivaiheilla on koholla olevia kovettuneita laikkuja, joissa on kalsiumkarbonaattia, kipsiä, liejusavea ja savea. Ne ovat matalien järvien pohjia. Järviä syntyi kahdesti, 6 000–5 000 ja 3 000–2 000 vuotta sitten, kun sadetta tuli monsuunin tapaan rajusti; useimmat kuivuivat parissa vuodessa, mutta lounaassa Mundafanin alueella vesi säilyi jopa kahdeksansataa vuotta, koska Tuwaiqin jyrkänteeltä valui lisää. Kerrostumista on löytynyt virtahevon, vesipuhvelin ja pitkäsarvisen naudan luita, etanoita ja makean veden simpukoita — ja piikivityökaluja, mutta ei yhtään ihmisen luuta.
+AIEMPI KYSYMYS: Miksi piikivi oli kivikaudella arvokasta?
+AIEMPI VASTAUS (Livia):
+No niin, hyvä kysymys tuo. [[Piikivi]] halkeaa iskusta terävin reunoin, joten siitä saattoi takoa kirveitä, taltta ja kaapimia, jotka kestivät työtä paremmin kuin useimmat muut kivilajit. Sitä käytettiin myös tulen sytyttämiseen iskemällä sitä teräkseen, vaikka se käytäntö on myöhempi. Hyvälaatuista kiveä oli vain tietyillä alueilla, ja siksi kauppa [[Krzemionkin]] kaltaisilta kaivoksilta kannatti. Mmm, kaikki johtui kivestä.
+KYSYMYS: Kerro lisää: Piikivi
+
+### 147
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krzemionki (kauppa)
+Tietoruudun teksti: Krzemionki on neoliittinen ja varhaisen pronssikauden piikivikaivosten kokonaisuus noin kahdeksan kilometriä Ostrowiec Świętokrzyskin kaupungista koilliseen. Se on Euroopan suurimpia esihistoriallisia piikivikaivoksia yhdessä Englannin Grime's Gravesin ja Belgian Spiennesin kanssa. Louhinta alkoi noin 3900 eaa. ja jatkui noin vuoteen 1600 eaa.: kaivosalue on 4,5 kilometriä pitkä ja 25–180 metriä leveä, ja tunnettuja kuiluja on yli 4 000, syvimmillään yhdeksän metriä. Raidallisesta piikivestä tehtiin ennen kaikkea kirveitä ja talttoja, ja niillä käytiin kauppaa jopa 660 kilometrin päähän kaivoksilta; vilkkain aika oli 2500–2000 eaa. Kohde merkittiin Unescon maailmanperintöluetteloon 6. heinäkuuta 2019.
+AIEMPI KYSYMYS: Mikä on neoliitikum?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tost minä osaan kertoo. [[Neoliitikum]] eli nuorempi kivikausi on esihistoriallinen ajanjakso, jolloin ihmiset siirtyivät metsästyksestä ja keräilystä maanviljelyyn ja pysyvään asutukseen. Sen ajoitus vaihtelee alueittain, ja Euroopassa se alkoi eri aikoihin. [[Krzemionkin]] kaivokset ovat tämän kauden merkittävä muisto, sillä louhinta alkoi noin 3900 eaa. Hyvää työtä, pitkä aika.
+KYSYMYS: Kerro lisää: Neoliitikum
+
+### 148
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Białowieżan metsä (kulttuuri)
+Tietoruudun teksti: Białowieżan metsä on laaja metsäkompleksi ja Unescon maailmanperintöalue Puolan ja Valko-Venäjän rajalla. Se on yksi Euroopan tasangon halki aikanaan ulottuneen alkumetsän viimeisistä ja suurimmista jäänteistä, ja siellä elää yli 800 visenttiä, Euroopan raskain maaeläin. Nimi tulee metsän keskellä olevasta Białowieżan kylästä ja tarkoittaa puolaksi valkoista tornia; se viittaa Władysław II Jagiellon rakennuttamaan valkoiseen puiseen metsästyskartanoon. Kolmannessa Puolan jaossa 1795 metsä joutui Venäjän hallintaan, ja vuonna 1888 se siirrettiin keisarillisen hovin ministeriön suoraan hallintaan, jolloin siitä tuli keisarin yksityinen metsästysalue palatsin, puiston, teiden ja rautatien kera.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Collegium Maius] 1400-luvun loppu Jagellonin yliopiston vanhin rakennus Collegium Maius sai nykyisen goottilaisen ilmeensä 1400-luvun lopulla, vaikka talo on osittain jo 1300-luvulta. Kuningas Władysław Jagiełło osti rakennuksen yliopiston käyttöön rahoilla, jotka olivat jääneet hänen edesmenneeltä puolisoltaan kuningatar Jadwigalta. Sisäpihaa kiertävät kivikaaret, ja pihan keskellä on kaivo vuodelta 1517. Talossa opiskeli 1490-luvulla nuori Mikael Kopernikus, josta tuli myöhemmin tähtitieteilijä, joka osoitti Maan kiertävän Aurinkoa eikä toisin päin. Nykyään rakennuksessa toimii yliopiston museo. Aarrekammiossa säilytetään muun muassa vanha Jagellonin maapallo, jossa näkyy jo äskettäin löydetty Amerikka, s…
+AIEMPI KYSYMYS: Kuka rakennutti Białowieżan kylään valkoisen puisen metsästyskartanon?
+AIEMPI VASTAUS (Livia):
+Ai tota. Hetkinen ny. Valkoisen puisen metsästyskartanon rakennutti [[Władysław II Jagiellon]], ja siitä [[Białowieżan]] kylä ja metsä saivat nimensä, joka tarkoittaa puolaksi valkoista tornia. Metsä kuului myöhemmin Venäjälle kolmannessa Puolan jaossa vuonna 1795, ja vuonna 1888 se siirrettiin keisarillisen hovin suoraan hallintaan, jolloin siitä tuli keisarin yksityinen metsästysalue. Kyl se kartano näkyy ylhäältä aika valkoisena.
+KYSYMYS: Kerro lisää: Władysław II Jagiellon
+
+### 149
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Białowieżan metsä (kulttuuri)
+Tietoruudun teksti: Białowieżan metsä on laaja metsäkompleksi ja Unescon maailmanperintöalue Puolan ja Valko-Venäjän rajalla. Se on yksi Euroopan tasangon halki aikanaan ulottuneen alkumetsän viimeisistä ja suurimmista jäänteistä, ja siellä elää yli 800 visenttiä, Euroopan raskain maaeläin. Nimi tulee metsän keskellä olevasta Białowieżan kylästä ja tarkoittaa puolaksi valkoista tornia; se viittaa Władysław II Jagiellon rakennuttamaan valkoiseen puiseen metsästyskartanoon. Kolmannessa Puolan jaossa 1795 metsä joutui Venäjän hallintaan, ja vuonna 1888 se siirrettiin keisarillisen hovin ministeriön suoraan hallintaan, jolloin siitä tuli keisarin yksityinen metsästysalue palatsin, puiston, teiden ja rautatien kera.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Viina jossa on heinänkorsi pullossa] nykyään — Żubrówka on maustettu vodka, jonka jokaiseen pulloon lisätään yksi puhdas heinänkorsi — biisoninheinää, joka kerätään käsin Białowieżan metsästä Puolan itärajalta Valko-Venäjän vastaisella rajaseudulla. Sama metsä on Euroopan alkuperäisten metsäbiisonien viimeinen laaja elinalue, ja heinä saa nimensä juuri niiden laidunmaista. Kuivattu heinä antaa viinalle vienon, hieman vaniljaisen ja tuoreen heinän tuoksun, joka erottaa sen selvästi tavallisesta vodkasta — pullon pohjalle jäävä korsi on samalla merkki aitoudesta.
+AIEMPI KYSYMYS: Kuka rakennutti Białowieżan kylään valkoisen puisen metsästyskartanon?
+AIEMPI VASTAUS (Livia):
+Ai tota. Hetkinen ny. Valkoisen puisen metsästyskartanon rakennutti [[Władysław II Jagiellon]], ja siitä [[Białowieżan]] kylä ja metsä saivat nimensä, joka tarkoittaa puolaksi valkoista tornia. Metsä kuului myöhemmin Venäjälle kolmannessa Puolan jaossa vuonna 1795, ja vuonna 1888 se siirrettiin keisarillisen hovin suoraan hallintaan, jolloin siitä tuli keisarin yksityinen metsästysalue. Kyl se kartano näkyy ylhäältä aika valkoisena.
+KYSYMYS: Kerro lisää: Białowieżan
+
+### 150
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Białowieżan metsä (kulttuuri)
+Tietoruudun teksti: Białowieżan metsä on laaja metsäkompleksi ja Unescon maailmanperintöalue Puolan ja Valko-Venäjän rajalla. Se on yksi Euroopan tasangon halki aikanaan ulottuneen alkumetsän viimeisistä ja suurimmista jäänteistä, ja siellä elää yli 800 visenttiä, Euroopan raskain maaeläin. Nimi tulee metsän keskellä olevasta Białowieżan kylästä ja tarkoittaa puolaksi valkoista tornia; se viittaa Władysław II Jagiellon rakennuttamaan valkoiseen puiseen metsästyskartanoon. Kolmannessa Puolan jaossa 1795 metsä joutui Venäjän hallintaan, ja vuonna 1888 se siirrettiin keisarillisen hovin ministeriön suoraan hallintaan, jolloin siitä tuli keisarin yksityinen metsästysalue palatsin, puiston, teiden ja rautatien kera.
+AIEMPI KYSYMYS: Minkä suuren maaeläimen kanta metsässä on Euroopan suurin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Joo, tän minä tiedän. Kyse on [[visentistä]], jota kutsutaan Euroopan raskaimmaksi maaeläimeksi ja jota [[Białowieżan metsässä]] elää yli 800. En ole varma, onko juuri tämä kanta Euroopan suurin, mutta metsä on yksi lajin tärkeimmistä elinalueista. Metsä on Euroopan tasangon halki aikanaan ulottuneen [[alkumetsän]] viimeisiä ja suurimpia jäänteitä.
+
+Raskain maaeläin, ja silti hiljainen kuin sumu. Minä katson sitä mieluummin ylhäältä, koska maasta katsottuna se olisi vähän liian iso.
+KYSYMYS: Kerro lisää: visentistä
+
+### 151
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Białowieżan metsä (kulttuuri)
+Tietoruudun teksti: Białowieżan metsä on laaja metsäkompleksi ja Unescon maailmanperintöalue Puolan ja Valko-Venäjän rajalla. Se on yksi Euroopan tasangon halki aikanaan ulottuneen alkumetsän viimeisistä ja suurimmista jäänteistä, ja siellä elää yli 800 visenttiä, Euroopan raskain maaeläin. Nimi tulee metsän keskellä olevasta Białowieżan kylästä ja tarkoittaa puolaksi valkoista tornia; se viittaa Władysław II Jagiellon rakennuttamaan valkoiseen puiseen metsästyskartanoon. Kolmannessa Puolan jaossa 1795 metsä joutui Venäjän hallintaan, ja vuonna 1888 se siirrettiin keisarillisen hovin ministeriön suoraan hallintaan, jolloin siitä tuli keisarin yksityinen metsästysalue palatsin, puiston, teiden ja rautatien kera.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Viina jossa on heinänkorsi pullossa] nykyään — Żubrówka on maustettu vodka, jonka jokaiseen pulloon lisätään yksi puhdas heinänkorsi — biisoninheinää, joka kerätään käsin Białowieżan metsästä Puolan itärajalta Valko-Venäjän vastaisella rajaseudulla. Sama metsä on Euroopan alkuperäisten metsäbiisonien viimeinen laaja elinalue, ja heinä saa nimensä juuri niiden laidunmaista. Kuivattu heinä antaa viinalle vienon, hieman vaniljaisen ja tuoreen heinän tuoksun, joka erottaa sen selvästi tavallisesta vodkasta — pullon pohjalle jäävä korsi on samalla merkki aitoudesta.
+AIEMPI KYSYMYS: Minkä suuren maaeläimen kanta metsässä on Euroopan suurin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Joo, tän minä tiedän. Kyse on [[visentistä]], jota kutsutaan Euroopan raskaimmaksi maaeläimeksi ja jota [[Białowieżan metsässä]] elää yli 800. En ole varma, onko juuri tämä kanta Euroopan suurin, mutta metsä on yksi lajin tärkeimmistä elinalueista. Metsä on Euroopan tasangon halki aikanaan ulottuneen [[alkumetsän]] viimeisiä ja suurimpia jäänteitä.
+
+Raskain maaeläin, ja silti hiljainen kuin sumu. Minä katson sitä mieluummin ylhäältä, koska maasta katsottuna se olisi vähän liian iso.
+KYSYMYS: Kerro lisää: Białowieżan metsässä
+
+### 152
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Białowieżan metsä (kulttuuri)
+Tietoruudun teksti: Białowieżan metsä on laaja metsäkompleksi ja Unescon maailmanperintöalue Puolan ja Valko-Venäjän rajalla. Se on yksi Euroopan tasangon halki aikanaan ulottuneen alkumetsän viimeisistä ja suurimmista jäänteistä, ja siellä elää yli 800 visenttiä, Euroopan raskain maaeläin. Nimi tulee metsän keskellä olevasta Białowieżan kylästä ja tarkoittaa puolaksi valkoista tornia; se viittaa Władysław II Jagiellon rakennuttamaan valkoiseen puiseen metsästyskartanoon. Kolmannessa Puolan jaossa 1795 metsä joutui Venäjän hallintaan, ja vuonna 1888 se siirrettiin keisarillisen hovin ministeriön suoraan hallintaan, jolloin siitä tuli keisarin yksityinen metsästysalue palatsin, puiston, teiden ja rautatien kera.
+AIEMPI KYSYMYS: Minkä suuren maaeläimen kanta metsässä on Euroopan suurin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Joo, tän minä tiedän. Kyse on [[visentistä]], jota kutsutaan Euroopan raskaimmaksi maaeläimeksi ja jota [[Białowieżan metsässä]] elää yli 800. En ole varma, onko juuri tämä kanta Euroopan suurin, mutta metsä on yksi lajin tärkeimmistä elinalueista. Metsä on Euroopan tasangon halki aikanaan ulottuneen [[alkumetsän]] viimeisiä ja suurimpia jäänteitä.
+
+Raskain maaeläin, ja silti hiljainen kuin sumu. Minä katson sitä mieluummin ylhäältä, koska maasta katsottuna se olisi vähän liian iso.
+KYSYMYS: Kerro lisää: alkumetsän
+
+### 153
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Białowieżan metsä (kulttuuri)
+Tietoruudun teksti: Białowieżan metsä on laaja metsäkompleksi ja Unescon maailmanperintöalue Puolan ja Valko-Venäjän rajalla. Se on yksi Euroopan tasangon halki aikanaan ulottuneen alkumetsän viimeisistä ja suurimmista jäänteistä, ja siellä elää yli 800 visenttiä, Euroopan raskain maaeläin. Nimi tulee metsän keskellä olevasta Białowieżan kylästä ja tarkoittaa puolaksi valkoista tornia; se viittaa Władysław II Jagiellon rakennuttamaan valkoiseen puiseen metsästyskartanoon. Kolmannessa Puolan jaossa 1795 metsä joutui Venäjän hallintaan, ja vuonna 1888 se siirrettiin keisarillisen hovin ministeriön suoraan hallintaan, jolloin siitä tuli keisarin yksityinen metsästysalue palatsin, puiston, teiden ja rautatien kera.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Eläimet kaupungissa: Visentti pelastui kaupungin mäellä] 1891 — Djurgårdenin Skansen avattiin 1891, ja sinne siirrettiin kokonaisia taloja ympäri Ruotsia. Malli levisi niin laajalle, että monessa kielessä sana skansen tarkoittaa yhä ulkoilmamuseota. Skansenilla pidettiin myös visenttejä, Euroopan raskaimpia maaeläimiä. Kun laji oli 1920-luvulla katoamassa, koko maailmassa oli enää 54 visenttiä — ja kaksi niistä eli täällä. Vuonna 1929 Skansenilta lähetettiin hiehoja Puolan Białowieżaan, jonne laji päästettiin takaisin metsään 1952.
+- [Puola — maalehti / Menovinkit] Puola on avannut kokoelmansa verkkoon isolla kädellä: kansalliskirjaston käsikirjoituksia, Chopinin omaa käsialaa, suolakaivos katunäkymänä, museoesineitä 3D:nä ja kirja, jossa on jokainen maailman visentti.
+AIEMPI KYSYMYS: Miten visentti eroaa amerikanbiisonista?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tän asian minä osaan. Visentti ja amerikanbiisoni ovat läheistä sukua mutta eri lajeja. [[Visentti]] on yleensä pitkäjalkaisempi ja kevyemmän näköinen, kun taas amerikanbiisonilla on yleensä korkeampi selkäkyttyrä ja tuuheampi turkki etuosassa. Erot ovat yleisluonteisia, eikä kaikkiin yksilöihin sovi sama kuvaus. Visentti on Euroopan raskain maaeläin, ja sen suuri kanta elää [[Białowieżan metsässä]]. Kaksi serkusta, eri mantereilla.
+KYSYMYS: Kerro lisää: Visentti
+
+### 154
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Białowieżan metsä (kulttuuri)
+Tietoruudun teksti: Białowieżan metsä on laaja metsäkompleksi ja Unescon maailmanperintöalue Puolan ja Valko-Venäjän rajalla. Se on yksi Euroopan tasangon halki aikanaan ulottuneen alkumetsän viimeisistä ja suurimmista jäänteistä, ja siellä elää yli 800 visenttiä, Euroopan raskain maaeläin. Nimi tulee metsän keskellä olevasta Białowieżan kylästä ja tarkoittaa puolaksi valkoista tornia; se viittaa Władysław II Jagiellon rakennuttamaan valkoiseen puiseen metsästyskartanoon. Kolmannessa Puolan jaossa 1795 metsä joutui Venäjän hallintaan, ja vuonna 1888 se siirrettiin keisarillisen hovin ministeriön suoraan hallintaan, jolloin siitä tuli keisarin yksityinen metsästysalue palatsin, puiston, teiden ja rautatien kera.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Viina jossa on heinänkorsi pullossa] nykyään — Żubrówka on maustettu vodka, jonka jokaiseen pulloon lisätään yksi puhdas heinänkorsi — biisoninheinää, joka kerätään käsin Białowieżan metsästä Puolan itärajalta Valko-Venäjän vastaisella rajaseudulla. Sama metsä on Euroopan alkuperäisten metsäbiisonien viimeinen laaja elinalue, ja heinä saa nimensä juuri niiden laidunmaista. Kuivattu heinä antaa viinalle vienon, hieman vaniljaisen ja tuoreen heinän tuoksun, joka erottaa sen selvästi tavallisesta vodkasta — pullon pohjalle jäävä korsi on samalla merkki aitoudesta.
+AIEMPI KYSYMYS: Miksi visentti oli lähes kuolla sukupuuttoon?
+AIEMPI VASTAUS (Livia):
+Kääk. Tää on vakava juttu. Visentti metsästettiin lähes sukupuuttoon, ja ensimmäisen maailmansodan aikoihin vapaana elänyt kanta oli hävinnyt [[Białowieżan metsästä]]. Laji säilyi eläintarhoissa ja tarhoissa pidetyissä eläimissä, ja niiden jälkeläisiä on sittemmin palautettu luontoon. Nykyään metsässä elää yli 800 [[visenttiä]]. Onpas hyvä, että laji pelastui.
+KYSYMYS: Kerro lisää: Białowieżan metsästä
+
+### 155
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Białowieżan metsä (kulttuuri)
+Tietoruudun teksti: Białowieżan metsä on laaja metsäkompleksi ja Unescon maailmanperintöalue Puolan ja Valko-Venäjän rajalla. Se on yksi Euroopan tasangon halki aikanaan ulottuneen alkumetsän viimeisistä ja suurimmista jäänteistä, ja siellä elää yli 800 visenttiä, Euroopan raskain maaeläin. Nimi tulee metsän keskellä olevasta Białowieżan kylästä ja tarkoittaa puolaksi valkoista tornia; se viittaa Władysław II Jagiellon rakennuttamaan valkoiseen puiseen metsästyskartanoon. Kolmannessa Puolan jaossa 1795 metsä joutui Venäjän hallintaan, ja vuonna 1888 se siirrettiin keisarillisen hovin ministeriön suoraan hallintaan, jolloin siitä tuli keisarin yksityinen metsästysalue palatsin, puiston, teiden ja rautatien kera.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Eläimet kaupungissa: Visentti pelastui kaupungin mäellä] 1891 — Djurgårdenin Skansen avattiin 1891, ja sinne siirrettiin kokonaisia taloja ympäri Ruotsia. Malli levisi niin laajalle, että monessa kielessä sana skansen tarkoittaa yhä ulkoilmamuseota. Skansenilla pidettiin myös visenttejä, Euroopan raskaimpia maaeläimiä. Kun laji oli 1920-luvulla katoamassa, koko maailmassa oli enää 54 visenttiä — ja kaksi niistä eli täällä. Vuonna 1929 Skansenilta lähetettiin hiehoja Puolan Białowieżaan, jonne laji päästettiin takaisin metsään 1952.
+AIEMPI KYSYMYS: Miksi visentti oli lähes kuolla sukupuuttoon?
+AIEMPI VASTAUS (Livia):
+Kääk. Tää on vakava juttu. Visentti metsästettiin lähes sukupuuttoon, ja ensimmäisen maailmansodan aikoihin vapaana elänyt kanta oli hävinnyt [[Białowieżan metsästä]]. Laji säilyi eläintarhoissa ja tarhoissa pidetyissä eläimissä, ja niiden jälkeläisiä on sittemmin palautettu luontoon. Nykyään metsässä elää yli 800 [[visenttiä]]. Onpas hyvä, että laji pelastui.
+KYSYMYS: Kerro lisää: visenttiä
+
+### 156
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Białowieżan metsä (kulttuuri)
+Tietoruudun teksti: Białowieżan metsä on laaja metsäkompleksi ja Unescon maailmanperintöalue Puolan ja Valko-Venäjän rajalla. Se on yksi Euroopan tasangon halki aikanaan ulottuneen alkumetsän viimeisistä ja suurimmista jäänteistä, ja siellä elää yli 800 visenttiä, Euroopan raskain maaeläin. Nimi tulee metsän keskellä olevasta Białowieżan kylästä ja tarkoittaa puolaksi valkoista tornia; se viittaa Władysław II Jagiellon rakennuttamaan valkoiseen puiseen metsästyskartanoon. Kolmannessa Puolan jaossa 1795 metsä joutui Venäjän hallintaan, ja vuonna 1888 se siirrettiin keisarillisen hovin ministeriön suoraan hallintaan, jolloin siitä tuli keisarin yksityinen metsästysalue palatsin, puiston, teiden ja rautatien kera.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mikä on Unescon maailmanperintöluettelo?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Selvä juttu. [[Unescon maailmanperintöluettelo]] on luettelo kulttuuri- ja luontokohteista, joilla katsotaan olevan poikkeuksellinen yleismaailmallinen arvo. Sen perustana on vuonna 1972 hyväksytty maailmanperintösopimus, ja luetteloon hyväksyttävien kohteiden suojelusta vastaa ensisijaisesti kohteen sijaintivaltio. [[Białowieżan metsä]] ja Krzemionki ovat molemmat luettelossa. Siinä on paljon nähtävää.
+KYSYMYS: Kerro lisää: Unescon maailmanperintöluettelo
+
+### 157
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Białowieżan metsä (kulttuuri)
+Tietoruudun teksti: Białowieżan metsä on laaja metsäkompleksi ja Unescon maailmanperintöalue Puolan ja Valko-Venäjän rajalla. Se on yksi Euroopan tasangon halki aikanaan ulottuneen alkumetsän viimeisistä ja suurimmista jäänteistä, ja siellä elää yli 800 visenttiä, Euroopan raskain maaeläin. Nimi tulee metsän keskellä olevasta Białowieżan kylästä ja tarkoittaa puolaksi valkoista tornia; se viittaa Władysław II Jagiellon rakennuttamaan valkoiseen puiseen metsästyskartanoon. Kolmannessa Puolan jaossa 1795 metsä joutui Venäjän hallintaan, ja vuonna 1888 se siirrettiin keisarillisen hovin ministeriön suoraan hallintaan, jolloin siitä tuli keisarin yksityinen metsästysalue palatsin, puiston, teiden ja rautatien kera.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Viina jossa on heinänkorsi pullossa] nykyään — Żubrówka on maustettu vodka, jonka jokaiseen pulloon lisätään yksi puhdas heinänkorsi — biisoninheinää, joka kerätään käsin Białowieżan metsästä Puolan itärajalta Valko-Venäjän vastaisella rajaseudulla. Sama metsä on Euroopan alkuperäisten metsäbiisonien viimeinen laaja elinalue, ja heinä saa nimensä juuri niiden laidunmaista. Kuivattu heinä antaa viinalle vienon, hieman vaniljaisen ja tuoreen heinän tuoksun, joka erottaa sen selvästi tavallisesta vodkasta — pullon pohjalle jäävä korsi on samalla merkki aitoudesta.
+AIEMPI KYSYMYS: Mikä on Unescon maailmanperintöluettelo?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Selvä juttu. [[Unescon maailmanperintöluettelo]] on luettelo kulttuuri- ja luontokohteista, joilla katsotaan olevan poikkeuksellinen yleismaailmallinen arvo. Sen perustana on vuonna 1972 hyväksytty maailmanperintösopimus, ja luetteloon hyväksyttävien kohteiden suojelusta vastaa ensisijaisesti kohteen sijaintivaltio. [[Białowieżan metsä]] ja Krzemionki ovat molemmat luettelossa. Siinä on paljon nähtävää.
+KYSYMYS: Kerro lisää: Białowieżan metsä
+
+### 158
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biebrzan suot (luonto · joki)
+Tietoruudun teksti: Biebrzan kansallispuisto sijaitsee Podlasien maakunnassa Koillis-Puolassa Biebrza-joen varrella. Se perustettiin 9. syyskuuta 1993, ja sen pinta-ala on 592 neliökilometriä, joten se on Puolan 23 kansallispuiston suurin; siitä noin 255 neliökilometriä on soita, 182 peltoja ja niittyjä ja 155 metsää. Biebrzan suot suojelevat laajoja, suhteellisen koskemattomia rämeitä, joissa elää harvinaisia kosteikkolintuja sekä hirviä ja majavia. Puisto on kirjattu Ramsar-sopimuksen kosteikoksi vuonna 1995, ja sen tärkein osa on tiukasti suojeltu Czerwone Bagno eli Punainen suo. Puiston päämaja on Osowiecin 1800-luvun linnoituksen alueella.
+AIEMPI KYSYMYS: Mitä eläimiä Biebrzan soilla elää?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tost minä osaan kertoo. [[Biebrzan]] suot suojelevat laajoja, suhteellisen koskemattomia rämeitä, joissa elää harvinaisia kosteikkolintuja sekä hirviä ja majavia. Alue sijaitsee Koillis-Puolassa Biebrza-joen varrella, ja puisto on Puolan 23 kansallispuiston suurin. Kyl siel riittää katsottavaa.
+KYSYMYS: Kerro lisää: Biebrzan
+
+### 159
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biebrzan suot (luonto · joki)
+Tietoruudun teksti: Biebrzan kansallispuisto sijaitsee Podlasien maakunnassa Koillis-Puolassa Biebrza-joen varrella. Se perustettiin 9. syyskuuta 1993, ja sen pinta-ala on 592 neliökilometriä, joten se on Puolan 23 kansallispuiston suurin; siitä noin 255 neliökilometriä on soita, 182 peltoja ja niittyjä ja 155 metsää. Biebrzan suot suojelevat laajoja, suhteellisen koskemattomia rämeitä, joissa elää harvinaisia kosteikkolintuja sekä hirviä ja majavia. Puisto on kirjattu Ramsar-sopimuksen kosteikoksi vuonna 1995, ja sen tärkein osa on tiukasti suojeltu Czerwone Bagno eli Punainen suo. Puiston päämaja on Osowiecin 1800-luvun linnoituksen alueella.
+AIEMPI KYSYMYS: Mikä suo on puiston tiukimmin suojeltu osa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Selvä juttu. Puiston tärkein ja tiukimmin suojeltu osa on [[Czerwone Bagno]] eli [[Punainen suo]]. Se kuuluu [[Biebrzan kansallispuistoon]], joka perustettiin 9. syyskuuta 1993 ja jonka pinta-ala on 592 neliökilometriä. Siitä noin 255 neliökilometriä on soita. Nimestä en ole varma, mutta punainen kuulostaa lintuperspektiivistä hyvältä.
+KYSYMYS: Kerro lisää: Czerwone Bagno
+
+### 160
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biebrzan suot (luonto · joki)
+Tietoruudun teksti: Biebrzan kansallispuisto sijaitsee Podlasien maakunnassa Koillis-Puolassa Biebrza-joen varrella. Se perustettiin 9. syyskuuta 1993, ja sen pinta-ala on 592 neliökilometriä, joten se on Puolan 23 kansallispuiston suurin; siitä noin 255 neliökilometriä on soita, 182 peltoja ja niittyjä ja 155 metsää. Biebrzan suot suojelevat laajoja, suhteellisen koskemattomia rämeitä, joissa elää harvinaisia kosteikkolintuja sekä hirviä ja majavia. Puisto on kirjattu Ramsar-sopimuksen kosteikoksi vuonna 1995, ja sen tärkein osa on tiukasti suojeltu Czerwone Bagno eli Punainen suo. Puiston päämaja on Osowiecin 1800-luvun linnoituksen alueella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riad — kohdekartta / Kohdekartta: Punainen palatsi] Vuonna 1943 Saud bin Abdulazizin kaksikerroksinen savitiilipalatsi Murabban palatsin vieressä syttyi palamaan. Saud ja perhe saatiin ulos, palanut talo purettiin, ja tontille nousi myöhemmin al-Yamamahin koulu. Samana vuonna kuningas Abdulaziz teetti pojalleen uuden palatsin. Talo valmistui 1948, ja siitä tuli lähteen mukaan Saudi-Arabian ensimmäinen teräsbetonirakennus. Esikuva oli kaukaa: Saud oli vieraillut 1940 Intian Hyderabadissa ja ihastunut brittiläisen residenssin rakennukseen niin, että halusi omansa samanlaisen. Virallinen nimi on al-Hamra, mutta talo tunnetaan paremmin nimellä al-Qasr al-Ahmar, Punainen palatsi; molemmat sanat tarkoittavat arabiaksi punaista. Saud asui talossa v…
+- [Taipei — kohdekartta / Kohdekartta: Punainen talo] rakennettu 1908 Punainen talo valmistui 1908, ja sen suunnitteli japanilainen arkkitehti Kondo Juro. Se ei ollut alun perin teatteri vaan markkinahalli, jonka pohjakerroksessa toimi tavaratalo. Rakennus on kahden osan yhdistelmä: kahdeksankulmainen etuosa ja sen takana ristin muotoinen halli. Tyyli sekoittaa länsimaista ja Meiji-kauden japanilaista rakennustapaa — arkkitehti oli opiskellut Tokion keisarillisessa yliopistossa. Vuodesta 1945 talossa toimi teatteri, jossa esitettiin pekingiläisoopperaa. Rakennus merkittiin kolmannen luokan historialliseksi kohteeksi 1997. Ristirakennus kunnostettiin 2015 niin, että saaren ensimmäinen markkinahalli tuli taas näkyviin, ja kahdeksankulmainen osa …
+AIEMPI KYSYMYS: Mikä suo on puiston tiukimmin suojeltu osa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Selvä juttu. Puiston tärkein ja tiukimmin suojeltu osa on [[Czerwone Bagno]] eli [[Punainen suo]]. Se kuuluu [[Biebrzan kansallispuistoon]], joka perustettiin 9. syyskuuta 1993 ja jonka pinta-ala on 592 neliökilometriä. Siitä noin 255 neliökilometriä on soita. Nimestä en ole varma, mutta punainen kuulostaa lintuperspektiivistä hyvältä.
+KYSYMYS: Kerro lisää: Punainen suo

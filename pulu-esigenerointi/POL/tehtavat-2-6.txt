@@ -1,0 +1,1066 @@
+### 401
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łódź (kauppa)
+Tietoruudun teksti: Łódź on Keski-Puolan entinen teollisuuskeskus, joka on nykyään maan neljänneksi suurin kaupunki ja jossa asuu noin 640 000 ihmistä. Vuonna 1851 Venäjän viranomaiset poistivat Kongressi-Puolalle asetetun tullimuurin, minkä ansiosta kaupunki saattoi viedä tekstiilejään vapaasti Venäjälle, jossa kysyntä oli suurta; Puolan ensimmäinen höyrykäyttöinen kangaspuu oli aloittanut toimintansa Ludwik Geyerin Valkoisessa tehtaassa jo vuonna 1839. Rautatiet, kuten vuonna 1865 avattu Łódźin ja Koluszkin yhteys, vauhdittivat teollisuutta edelleen. Kaupungin rakennukset ja laitokset syntyivät teollisuusmagnaattien, erityisesti Karl Wilhelm Scheiblerin ja Izrael Poznańskin, rahoilla, ja Poznański rakensi vuosina 1872–1892 suuren tekstiilivalmistuskokonaisuuden, johon kuului kaksitoista tehdasta, voimalaitoksia, työläistaloja ja eklektinen palatsi. Voimakkaimman teollistumisen vuosina 1870–1890 kaupungis…
+AIEMPI KYSYMYS: Miksi Łódźin tekstiilivienti Venäjälle vapautui 1851?
+AIEMPI VASTAUS (Livia):
+Ai tota. Vuonna 1851 Venäjän viranomaiset poistivat Kongressi-Puolalle asetetun tullimuurin. Sen ansiosta [[Łódź]] saattoi viedä tekstiilejään vapaasti Venäjälle, jossa kysyntä oli suurta. Tämä vauhditti kaupungin kasvua teollisuuskeskukseksi, jota rautatiet ja magnaattien rahoitus edistivät edelleen. Tulleista minulla ei ole kokemusta, kyyhky kun ylittää rajat ilman paperia.
+KYSYMYS: Kerro lisää: Łódź
+
+### 402
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bochnian suolakaivos (tekniikka)
+Tietoruudun teksti: Bochnian suolakaivos on yksi maailman vanhimmista suolakaivoksista ja Puolan vanhin kaupallinen yritys. Se perustettiin vuonna 1248, kun suolaa oli löydetty alueelta 1100- ja 1200-luvuilla, ja siitä tuli osa kuninkaallista Krakovan suolayhtiötä (Żupy krakowskie). Kaivos lopetti suolan tuotannon vuonna 1990 mutta säilyi matkailukohteena, ja se kuuluu Unescon maailmanperintöluetteloon Wieliczkan kohteen laajennuksena vuodesta 2013. Kaivoksen kammiot, kuilut ja käytävät muodostavat maanalaisen kaupungin, jossa suurin säilynyt kammio on muutettu sanatorioksi. Kaivoksen kappelin läpi kulkevat junaraiteet.
+AIEMPI KYSYMYS: Milloin Bochnian suolakaivos perustettiin?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Bochnian suolakaivos]] perustettiin vuonna 1248, sen jälkeen kun suolaa oli löydetty alueelta 1100- ja 1200-luvuilla. Siitä tuli osa kuninkaallista Krakovan suolayhtiötä, ja se on Puolan vanhin kaupallinen yritys. Kaivos lopetti suolan tuotannon vuonna 1990, mutta se on säilynyt matkailukohteena. Ei ihme, että suolaa riitti, mutta kuka sen jaksoi kantaa.
+KYSYMYS: Kerro lisää: Bochnian suolakaivos
+
+### 403
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bochnian suolakaivos (tekniikka)
+Tietoruudun teksti: Bochnian suolakaivos on yksi maailman vanhimmista suolakaivoksista ja Puolan vanhin kaupallinen yritys. Se perustettiin vuonna 1248, kun suolaa oli löydetty alueelta 1100- ja 1200-luvuilla, ja siitä tuli osa kuninkaallista Krakovan suolayhtiötä (Żupy krakowskie). Kaivos lopetti suolan tuotannon vuonna 1990 mutta säilyi matkailukohteena, ja se kuuluu Unescon maailmanperintöluetteloon Wieliczkan kohteen laajennuksena vuodesta 2013. Kaivoksen kammiot, kuilut ja käytävät muodostavat maanalaisen kaupungin, jossa suurin säilynyt kammio on muutettu sanatorioksi. Kaivoksen kappelin läpi kulkevat junaraiteet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Pyhän ristin kirkko] 1679–1696 Pyhän ristin kirkko rakennettiin Krakowskie Przedmieście -kadun varrelle vuosina 1679–1696 komeaan barokkityyliin, pääsuunnittelijanaan Józef Szymon Bellotti. Julkisivun koristeelliset huiput lisättiin vielä 1720- ja 1730-luvuilla. Kirkon pilariin muurattiin vuonna 1882 pieni uurna, jossa säilytetään säveltäjä Fryderyk Chopinin sydäntä. Chopinin sisar oli salakuljettanut sydämen Pariisista Varsovaan jo vuonna 1849 veljensä toiveen mukaisesti - vaikka ruumis haudattiin Ranskaan, sydän sai levätä kotimaassa. Sodan aikana vuonna 1944 saksalaiset joukot räjäyttivät kirkon pahoin, mutta Chopinin sydän ehdittiin siirtää turvaan ennen räjäytyksiä. Kirkko rakennettiin uudelleen vuosina 19…
+AIEMPI KYSYMYS: Minkä kuninkaallisen yhtiön osaksi kaivos tuli?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kaivoksesta tuli osa kuninkaallista Krakovan suolayhtiötä, puolaksi [[Żupy krakowskie]]. Yhtiö hallinnoi suolan louhintaa kuninkaan lukuun, ja [[Bochnian suolakaivos]] on tunnettu Puolan vanhimpana kaupallisena yrityksenä. Kaivos perustettiin vuonna 1248, ja suolan tuotanto päättyi 1990. Kuninkaallinen yhtiö, joo, ja minä olen vain kyyhky.
+KYSYMYS: Kerro lisää: Żupy krakowskie
+
+### 404
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bochnian suolakaivos (tekniikka)
+Tietoruudun teksti: Bochnian suolakaivos on yksi maailman vanhimmista suolakaivoksista ja Puolan vanhin kaupallinen yritys. Se perustettiin vuonna 1248, kun suolaa oli löydetty alueelta 1100- ja 1200-luvuilla, ja siitä tuli osa kuninkaallista Krakovan suolayhtiötä (Żupy krakowskie). Kaivos lopetti suolan tuotannon vuonna 1990 mutta säilyi matkailukohteena, ja se kuuluu Unescon maailmanperintöluetteloon Wieliczkan kohteen laajennuksena vuodesta 2013. Kaivoksen kammiot, kuilut ja käytävät muodostavat maanalaisen kaupungin, jossa suurin säilynyt kammio on muutettu sanatorioksi. Kaivoksen kappelin läpi kulkevat junaraiteet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Historia: Suolakaivos jossa on kirkko maan alla] 13. vuosisata — Wieliczkan suolakaivos Krakovan lähellä on kaivettu 1200-luvulta lähtien, ja suolaa louhittiin siellä yhtäjaksoisesti aina vuoteen 1996 asti — yksi maailman vanhimmista toimivista kaivoksista. Kaivos ulottuu 327 metrin syvyyteen ja yli 287 kilometrin käytäväverkostoon. Vuosisatojen aikana kaivosmiehet veistivät suolasta patsaita, kappeleita ja jopa kokonaisia kirkkosaleja kattokruunuineen — kaikki, myös valaisimet, on veistetty tai puhallettu suolasta. Nykyään kaivos on Unescon maailmanperintökohde ja yksi Puolan suosituimmista nähtävyyksistä.
+AIEMPI KYSYMYS: Mihin Unescon kohteeseen Bochnia kuuluu laajennuksena?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Bochnian suolakaivos kuuluu Unescon maailmanperintöluetteloon [[Wieliczkan suolakaivoksen]] kohteen laajennuksena vuodesta 2013. Kaivoksen kammiot, kuilut ja käytävät muodostavat maanalaisen kaupungin, ja kappelin läpi kulkevat junaraiteet. Kohde on myös [[Bochnian suolakaivos]] eli yksi maailman vanhimmista suolakaivoksista. Raiteet kappelissa ovat minusta aina olleet kummallinen yhdistelmä.
+KYSYMYS: Kerro lisää: Wieliczkan suolakaivoksen
+
+### 405
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarnowskie Górin hopeakaivos (tekniikka)
+Tietoruudun teksti: Tarnowskie Góry on Sleesian kaupunki Etelä-Puolassa Katowicen lähellä, ja siellä sijaitsee Unescon maailmanperintökohde, Tarnowskie Górin historiallinen hopeakaivos. Kaupungin nimi tulee Tarnowice-kylästä ja sanasta góry, joka vanhassa puolassa tarkoitti kaivoksia. Vuonna 1788 Walesista tuotiin Newcomenin ilmakehäkone tyhjentämään maanalaisia vesiä, mikä sytytti teollisen vallankumouksen paikalla; lopulta käytössä oli kahdeksan höyrykonetta. Vuonna 1803 kaupungissa perustettiin yksi maailman ensimmäisistä kaivoskouluista. Hopeamalmin lähde ehtyi 1900-luvun alussa, ja louhinta loppui kokonaan.
+AIEMPI KYSYMYS: Mitä sana góry tarkoitti vanhassa puolassa?
+AIEMPI VASTAUS (Livia):
+Ai se. Sana góry tarkoitti vanhassa puolassa kaivoksia, vaikka nykypuolassa se tarkoittaa vuoria. Se on osa [[Tarnowskie Górin]] nimeä, joka tulee Tarnowice-kylästä ja kyseisestä sanasta. Kaupunki sijaitsee Sleesiassa Etelä-Puolassa Katowicen lähellä, ja siellä on Unescon maailmanperintökohde, historiallinen [[hopeakaivos]]. Kyl nimet kantavat historiaa mukanaan.
+KYSYMYS: Kerro lisää: Tarnowskie Górin
+
+### 406
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarnowskie Górin hopeakaivos (tekniikka)
+Tietoruudun teksti: Tarnowskie Góry on Sleesian kaupunki Etelä-Puolassa Katowicen lähellä, ja siellä sijaitsee Unescon maailmanperintökohde, Tarnowskie Górin historiallinen hopeakaivos. Kaupungin nimi tulee Tarnowice-kylästä ja sanasta góry, joka vanhassa puolassa tarkoitti kaivoksia. Vuonna 1788 Walesista tuotiin Newcomenin ilmakehäkone tyhjentämään maanalaisia vesiä, mikä sytytti teollisen vallankumouksen paikalla; lopulta käytössä oli kahdeksan höyrykonetta. Vuonna 1803 kaupungissa perustettiin yksi maailman ensimmäisistä kaivoskouluista. Hopeamalmin lähde ehtyi 1900-luvun alussa, ja louhinta loppui kokonaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ras Hafun — kaupunkilehti / Antiikin suitsukekauppa: Yhtä arvokasta kuin hopea] Kerätty pihka lajiteltiin väriltään ja puhtaudeltaan ja myytiin painon mukaan – parhaat palat saattoivat maksaa yhtä paljon kuin hopea. Suitsuketta poltettiin temppeleissä ja kotialttareilla ympäri antiikin maailmaa Egyptistä Roomaan ja Intiaan asti, mutta sitä käytettiin myös mausteena, lääkkeenä ja balsamointiin. Afrikan sarvi ja Etelä-Arabia olivat lähes ainoat alueet, joilla suitsukepuita kasvoi luonnossa, joten koko tuotanto kulki näiden rannikkojen satamien, kuten Oponen, kautta ennen kuin se jatkoi matkaa laivoilla ja karavaaneilla kohti Välimerta.
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Tšekki — maalehti / Historia] Tšekin historian käänteet eivät ole kuninkaiden vaan tavallisen väen tekemiä: kylän saarnaaja, hopeakaivos, suutarin poika ja avaimia helisyttävä joukko.
+AIEMPI KYSYMYS: Mitä sana góry tarkoitti vanhassa puolassa?
+AIEMPI VASTAUS (Livia):
+Ai se. Sana góry tarkoitti vanhassa puolassa kaivoksia, vaikka nykypuolassa se tarkoittaa vuoria. Se on osa [[Tarnowskie Górin]] nimeä, joka tulee Tarnowice-kylästä ja kyseisestä sanasta. Kaupunki sijaitsee Sleesiassa Etelä-Puolassa Katowicen lähellä, ja siellä on Unescon maailmanperintökohde, historiallinen [[hopeakaivos]]. Kyl nimet kantavat historiaa mukanaan.
+KYSYMYS: Kerro lisää: hopeakaivos
+
+### 407
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarnowskie Górin hopeakaivos (tekniikka)
+Tietoruudun teksti: Tarnowskie Góry on Sleesian kaupunki Etelä-Puolassa Katowicen lähellä, ja siellä sijaitsee Unescon maailmanperintökohde, Tarnowskie Górin historiallinen hopeakaivos. Kaupungin nimi tulee Tarnowice-kylästä ja sanasta góry, joka vanhassa puolassa tarkoitti kaivoksia. Vuonna 1788 Walesista tuotiin Newcomenin ilmakehäkone tyhjentämään maanalaisia vesiä, mikä sytytti teollisen vallankumouksen paikalla; lopulta käytössä oli kahdeksan höyrykonetta. Vuonna 1803 kaupungissa perustettiin yksi maailman ensimmäisistä kaivoskouluista. Hopeamalmin lähde ehtyi 1900-luvun alussa, ja louhinta loppui kokonaan.
+AIEMPI KYSYMYS: Mikä kone tuotiin Walesista kaivosten vedenpoistoon 1788?
+AIEMPI VASTAUS (Livia):
+Nyt muistan tämän. Vuonna 1788 Walesista tuotiin [[Newcomenin ilmakehäkone]] tyhjentämään maanalaisia vesiä. Kone sytytti teollisen vallankumouksen paikalla, ja lopulta käytössä oli kahdeksan höyrykonetta. Tämä tapahtui [[Tarnowskie Górin]] hopeakaivoksilla Sleesiassa, joka kuuluu nykyisin Unescon maailmanperintöön. Höyrykoneet ovat kyyhkyn silmin kovin äänekkäitä, mutta kyl ne kaivoksesta veden poistivat.
+KYSYMYS: Kerro lisää: Newcomenin ilmakehäkone
+
+### 408
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarnowskie Górin hopeakaivos (tekniikka)
+Tietoruudun teksti: Tarnowskie Góry on Sleesian kaupunki Etelä-Puolassa Katowicen lähellä, ja siellä sijaitsee Unescon maailmanperintökohde, Tarnowskie Górin historiallinen hopeakaivos. Kaupungin nimi tulee Tarnowice-kylästä ja sanasta góry, joka vanhassa puolassa tarkoitti kaivoksia. Vuonna 1788 Walesista tuotiin Newcomenin ilmakehäkone tyhjentämään maanalaisia vesiä, mikä sytytti teollisen vallankumouksen paikalla; lopulta käytössä oli kahdeksan höyrykonetta. Vuonna 1803 kaupungissa perustettiin yksi maailman ensimmäisistä kaivoskouluista. Hopeamalmin lähde ehtyi 1900-luvun alussa, ja louhinta loppui kokonaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Geraldton — kaupunkilehti / Geraldton: Lyijyä ja lahden satama] Geraldtonin tarina alkoi lyijystä: vuonna 1848 Murchison-joen uomasta löytyi lyijymalmia, ja jo seuraavana vuonna avattiin Geraldine-niminen kaivos. Malmin vientiä varten tarvittiin satama, ja valinta osui suojaisaan Champion Bayhin, jonne kuvernööri Charles Fitzgerald antoi vuonna 1850 mitata ensimmäiset tonttilinjat. Uusi siirtokunta sai nimensä kuvernöörin mukaan. 1850-luvun puolivälissä avattiin lisää kaivoksia, ja Geraldtonista kasvoi nopeasti koko sisämaan kaivos- ja maatalousalueen elintärkeä vientisatama, josta lyijy ja myöhemmin myös kupari ja villa lähtivät laivoihin kohti maailmaa.
+- [Mekka — kaupunkilehti / Mekka: Kaivo, jolla oli oma ammattikunta] Kaksikymmentä metriä Kaabasta itään on Zamzamin kaivo, jonka varassa kaupunki eli ennen vesijohtoja. Se on noin kolmekymmentä metriä syvä ja halkaisijaltaan runsaasta metristä kahteen ja puoleen; yläpuolisko on hiekkakerroksissa kivimuurattuna, alapuolisko louhittu kallioon. Perimätiedon mukaan kaivo avautui, kun Hagar etsi vettä pojalleen Ismailille. Vettä nostettiin köydellä ja ämpärillä, ja jakelua hoiti oma ammattikunta, zamzamit: 1800-luvulla tulijalle osoitettiin oma zamzami, joka säilytti hänen nimellään merkittyä ruukkua ja kantoi vettä koko matkan. Vuonna 1964 kaivon suu siirrettiin kellariin, ja nyt sitä katsellaan lasin takaa.
+AIEMPI KYSYMYS: Mitä kaupungissa perustettiin vuonna 1803?
+AIEMPI VASTAUS (Livia):
+Katotaas. Vuonna 1803 Tarnowskie Górissa perustettiin yksi maailman ensimmäisistä [[kaivoskouluista]]. Koulu liittyi kaupungin kaivosperinteeseen, johon kuuluivat myös höyrykoneet ja hopeamalmin louhinta. Malmin lähde ehtyi 1900-luvun alussa ja louhinta loppui kokonaan. [[Tarnowskie Górin]] hopeakaivos on nykyään Unescon maailmanperintökohde. Kaivoskoulussa kyyhkyllä ei olisi ollut paljoa opittavaa, ja ehkä se on pelkkä hyvä asia.
+KYSYMYS: Kerro lisää: kaivoskouluista
+
+### 409
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bolesławiec (kauppa)
+Tietoruudun teksti: Bolesławiec on historiallinen kaupunki Bóbr-joen varrella Ala-Sleesiassa Lounais-Puolassa; se perustettiin 1200-luvulla ja on tunnettu pitkästä keramiikkaperinteestään ja vanhastakaupungistaan. Keramiikkaa kutsutaan kaupungin saksankielisen nimen mukaan Bunzlauer-keramiikaksi, ja se kehittyi kansanperinteestä omaksi keramiikkalajikseen, joka erottuu muodostaan, massastaan, lasitteestaan ja koristelustaan; se lasketaan Euroopan tärkeimpiin kansankeramiikan perinteisiin. Alueen savi soveltuu hyvin savenvalantaan: astiat muotoiltiin potkukiekolla, kastettiin lietelasitteeseen ja poltettiin suorakaiteen muotoisessa uunissa jopa 1 320 asteessa. Napoleon vieraili kaupungissa kuusi kertaa Napoleonin sotien aikana, ja Venäjän kenraalifeldmarsalkka Kutuzov kuoli siellä 28. huhtikuuta 1813.
+AIEMPI KYSYMYS: Millä saksankielisellä nimellä Bolesławiecin keramiikkaa kutsutaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tämän tiedän. Keramiikkaa kutsutaan kaupungin saksankielisen nimen mukaan [[Bunzlauer-keramiikaksi]]. Se kehittyi kansanperinteestä omaksi keramiikkalajikseen, joka erottuu muodostaan, massastaan, lasitteestaan ja koristelustaan. Se lasketaan Euroopan tärkeimpiin kansankeramiikan perinteisiin, ja kaupunki, [[Bolesławiec]], sijaitsee Bóbr-joen varrella Ala-Sleesiassa. Kyl sellaisesta astiasta söisi mielellään jotain hyvää.
+KYSYMYS: Kerro lisää: Bunzlauer-keramiikaksi
+
+### 410
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bolesławiec (kauppa)
+Tietoruudun teksti: Bolesławiec on historiallinen kaupunki Bóbr-joen varrella Ala-Sleesiassa Lounais-Puolassa; se perustettiin 1200-luvulla ja on tunnettu pitkästä keramiikkaperinteestään ja vanhastakaupungistaan. Keramiikkaa kutsutaan kaupungin saksankielisen nimen mukaan Bunzlauer-keramiikaksi, ja se kehittyi kansanperinteestä omaksi keramiikkalajikseen, joka erottuu muodostaan, massastaan, lasitteestaan ja koristelustaan; se lasketaan Euroopan tärkeimpiin kansankeramiikan perinteisiin. Alueen savi soveltuu hyvin savenvalantaan: astiat muotoiltiin potkukiekolla, kastettiin lietelasitteeseen ja poltettiin suorakaiteen muotoisessa uunissa jopa 1 320 asteessa. Napoleon vieraili kaupungissa kuusi kertaa Napoleonin sotien aikana, ja Venäjän kenraalifeldmarsalkka Kutuzov kuoli siellä 28. huhtikuuta 1813.
+AIEMPI KYSYMYS: Millä saksankielisellä nimellä Bolesławiecin keramiikkaa kutsutaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tämän tiedän. Keramiikkaa kutsutaan kaupungin saksankielisen nimen mukaan [[Bunzlauer-keramiikaksi]]. Se kehittyi kansanperinteestä omaksi keramiikkalajikseen, joka erottuu muodostaan, massastaan, lasitteestaan ja koristelustaan. Se lasketaan Euroopan tärkeimpiin kansankeramiikan perinteisiin, ja kaupunki, [[Bolesławiec]], sijaitsee Bóbr-joen varrella Ala-Sleesiassa. Kyl sellaisesta astiasta söisi mielellään jotain hyvää.
+KYSYMYS: Kerro lisää: Bolesławiec
+
+### 411
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bolesławiec (kauppa)
+Tietoruudun teksti: Bolesławiec on historiallinen kaupunki Bóbr-joen varrella Ala-Sleesiassa Lounais-Puolassa; se perustettiin 1200-luvulla ja on tunnettu pitkästä keramiikkaperinteestään ja vanhastakaupungistaan. Keramiikkaa kutsutaan kaupungin saksankielisen nimen mukaan Bunzlauer-keramiikaksi, ja se kehittyi kansanperinteestä omaksi keramiikkalajikseen, joka erottuu muodostaan, massastaan, lasitteestaan ja koristelustaan; se lasketaan Euroopan tärkeimpiin kansankeramiikan perinteisiin. Alueen savi soveltuu hyvin savenvalantaan: astiat muotoiltiin potkukiekolla, kastettiin lietelasitteeseen ja poltettiin suorakaiteen muotoisessa uunissa jopa 1 320 asteessa. Napoleon vieraili kaupungissa kuusi kertaa Napoleonin sotien aikana, ja Venäjän kenraalifeldmarsalkka Kutuzov kuoli siellä 28. huhtikuuta 1813.
+AIEMPI KYSYMYS: Mikä Bolesławiecin ympäristössä soveltuu savenvalantaan?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Alueen savi soveltuu hyvin savenvalantaan. Astiat muotoiltiin potkukiekolla, kastettiin lietelasitteeseen ja poltettiin suorakaiteen muotoisessa uunissa jopa 1 320 asteessa. Näin syntyi [[Bunzlauer-keramiikka]], josta [[Bolesławiec]] on tunnettu. Savessa ei ole kyyhkylle mitään kiinnostavaa, mutta astioista pidän.
+KYSYMYS: Kerro lisää: Bunzlauer-keramiikka
+
+### 412
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bolesławiec (kauppa)
+Tietoruudun teksti: Bolesławiec on historiallinen kaupunki Bóbr-joen varrella Ala-Sleesiassa Lounais-Puolassa; se perustettiin 1200-luvulla ja on tunnettu pitkästä keramiikkaperinteestään ja vanhastakaupungistaan. Keramiikkaa kutsutaan kaupungin saksankielisen nimen mukaan Bunzlauer-keramiikaksi, ja se kehittyi kansanperinteestä omaksi keramiikkalajikseen, joka erottuu muodostaan, massastaan, lasitteestaan ja koristelustaan; se lasketaan Euroopan tärkeimpiin kansankeramiikan perinteisiin. Alueen savi soveltuu hyvin savenvalantaan: astiat muotoiltiin potkukiekolla, kastettiin lietelasitteeseen ja poltettiin suorakaiteen muotoisessa uunissa jopa 1 320 asteessa. Napoleon vieraili kaupungissa kuusi kertaa Napoleonin sotien aikana, ja Venäjän kenraalifeldmarsalkka Kutuzov kuoli siellä 28. huhtikuuta 1813.
+AIEMPI KYSYMYS: Millä joella Bolesławiec sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Bolesławiec]] sijaitsee Bóbr-joen varrella Ala-Sleesiassa Lounais-Puolassa. Kaupunki perustettiin 1200-luvulla, ja se on tunnettu pitkästä keramiikkaperinteestään ja vanhastakaupungistaan. Joen lähellä oleva savi on osaltaan tehnyt [[Bunzlauer-keramiikasta]] mahdollista. Joki on kyllä kyyhkyllekin hyvä suunnistuspiste.
+KYSYMYS: Kerro lisää: Bunzlauer-keramiikasta
+
+### 413
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bolesławiec (kauppa)
+Tietoruudun teksti: Bolesławiec on historiallinen kaupunki Bóbr-joen varrella Ala-Sleesiassa Lounais-Puolassa; se perustettiin 1200-luvulla ja on tunnettu pitkästä keramiikkaperinteestään ja vanhastakaupungistaan. Keramiikkaa kutsutaan kaupungin saksankielisen nimen mukaan Bunzlauer-keramiikaksi, ja se kehittyi kansanperinteestä omaksi keramiikkalajikseen, joka erottuu muodostaan, massastaan, lasitteestaan ja koristelustaan; se lasketaan Euroopan tärkeimpiin kansankeramiikan perinteisiin. Alueen savi soveltuu hyvin savenvalantaan: astiat muotoiltiin potkukiekolla, kastettiin lietelasitteeseen ja poltettiin suorakaiteen muotoisessa uunissa jopa 1 320 asteessa. Napoleon vieraili kaupungissa kuusi kertaa Napoleonin sotien aikana, ja Venäjän kenraalifeldmarsalkka Kutuzov kuoli siellä 28. huhtikuuta 1813.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Kazanin katedraali] 1801–1811 Arkkitehti Andrei Voronihin sai tehtäväkseen suunnitella katedraalin, joka kunnioittaisi ihmeitä tekevää Kazanin Jumalanäidin ikonia. Ortodoksisessa kirkossa pääsisäänkäynnin tulisi olla lännessä, mutta tontti sijaitsi Nevski-bulevardin varrella pohjoisessa – niinpä Voronihin ratkaisi pulman rakentamalla sivulle mahtavan puolikaaren muotoisen pylväikön, jossa on 96 korinttilaista pylvästä neljässä rivissä. Katedraali valmistui vuonna 1811 ja kohoaa korkeimmillaan 71,6 metriin. Vuonna 1812 Napoleonin sotajoukot hyökkäsivät Venäjälle, ja voiton jälkeen katedraalista tuli sodan muistomerkki. Sotamarsalkka Mihail Kutuzov, joka johti Venäjän armeijaa Napoleonia vastaan, haudattiin kate…
+AIEMPI KYSYMYS: Kuka Venäjän kenraalifeldmarsalkka kuoli Bolesławiecissa 1813?
+AIEMPI VASTAUS (Livia):
+Selvä. Venäjän kenraalifeldmarsalkka [[Kutuzov]] kuoli Bolesławiecissa 28. huhtikuuta 1813 Napoleonin sotien aikana. Kaupungissa vieraili Napoleonin sotien aikana myös [[Napoleon]] itse, kuuden tiedetyn käynnin mukaan. Tapahtumista on kulunut yli kaksisataa vuotta, ja aikanaan kaupungin hallitsijat ja rajat olivat toisenlaiset kuin nykyään. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Kutuzov
+
+### 414
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bolesławiec (kauppa)
+Tietoruudun teksti: Bolesławiec on historiallinen kaupunki Bóbr-joen varrella Ala-Sleesiassa Lounais-Puolassa; se perustettiin 1200-luvulla ja on tunnettu pitkästä keramiikkaperinteestään ja vanhastakaupungistaan. Keramiikkaa kutsutaan kaupungin saksankielisen nimen mukaan Bunzlauer-keramiikaksi, ja se kehittyi kansanperinteestä omaksi keramiikkalajikseen, joka erottuu muodostaan, massastaan, lasitteestaan ja koristelustaan; se lasketaan Euroopan tärkeimpiin kansankeramiikan perinteisiin. Alueen savi soveltuu hyvin savenvalantaan: astiat muotoiltiin potkukiekolla, kastettiin lietelasitteeseen ja poltettiin suorakaiteen muotoisessa uunissa jopa 1 320 asteessa. Napoleon vieraili kaupungissa kuusi kertaa Napoleonin sotien aikana, ja Venäjän kenraalifeldmarsalkka Kutuzov kuoli siellä 28. huhtikuuta 1813.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. Helena — kaupunkilehti / St. Helena: Napoleon-kadun siirtomaatalo] Konsulaatti-niminen hotelli Jamestownin pääkadulla, jonka nimi onkin osuvasti Napoleon Street, on 1700-luvun puolivälin rakennus rautaisine parvekkeineen. Se edustaa Itä-Intian kauppakomppanian ajan georgiaanista rakennustyyliä, joka antaa koko kaupungille tunnusomaisen ilmeensä ja joka on säilynyt lähes muuttumattomana isoisän 1873 vierailusta lähtien. Sisällä ja parvekkeella vierailijoita tervehtii täysikokoinen Napoleonin hahmoa esittävä patsas univormussaan – muistutus siitä, että keisarin varjo on yhä läsnä kaikkialla saaren arjessa.
+AIEMPI KYSYMYS: Kuka Venäjän kenraalifeldmarsalkka kuoli Bolesławiecissa 1813?
+AIEMPI VASTAUS (Livia):
+Selvä. Venäjän kenraalifeldmarsalkka [[Kutuzov]] kuoli Bolesławiecissa 28. huhtikuuta 1813 Napoleonin sotien aikana. Kaupungissa vieraili Napoleonin sotien aikana myös [[Napoleon]] itse, kuuden tiedetyn käynnin mukaan. Tapahtumista on kulunut yli kaksisataa vuotta, ja aikanaan kaupungin hallitsijat ja rajat olivat toisenlaiset kuin nykyään. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Napoleon
+
+### 415
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Toruńin ristiritarien linna (historia)
+Tietoruudun teksti: Toruńin linna oli Saksalaisen ritarikunnan 1200-luvun puolivälissä perustama linnoitus, yksi ritarikunnan ensimmäisistä Kulmanmaalla, ja se toimi alkujaan ritarikunnan komentajan asuinpaikkana ja tukikohtana pakanallisten preussilaisten alistamiseen sekä ritarikunnan oman valtion synnyssä. Toruńin porvarit nousivat kapinaan ritarikunnan sortoa vastaan, ja helmikuussa 1454 pieni saksalaisvarusväki antautui ja sai poistua; kaupunki ryösti linnan ja päätti sen jälkeen purkaa sen kokonaan, ettei ritarikunta voisi vallata sitä takaisin. Tapahtuma käynnisti kolmentoista vuoden sodan (1454–1466). Linnasta on jäljellä lähinnä käymälätorni (dansker) puron yllä ja kellariholveja; rauniot kaivettiin osin esiin ja avattiin museona 1966, ja ne ovat nykyään osa Toruńin vanhankaupungin maailmanperintöaluetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Plečnikin ja Secessionin Ljubljana: Ritarikunnan luostarista kesäteatteriksi] Križanken luostarin rakentamisen uskotaan alkaneen 1200-luvulla saksalaisen ritarikunnan käyttöön, ja sen barokkikirkko valmistui vuosina 1714–1715. Luostari toimi vuoteen 1945 asti, jolloin kompleksi kansallistettiin. Vuonna 1952 kaupunki pyysi Jože Plečnikia muuttamaan rappeutuneen luostarin Ljubljanan festivaalin näyttämöksi, ja työt valmistuivat 1956. Nykyään pihoilla järjestetään klassisen musiikin, jazzin ja rockin konsertteja, ja pääpihaa koristavat värikkäät sgraffitot.
+AIEMPI KYSYMYS: Minkä ritarikunnan linna Toruńin rauniot olivat?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Toruńin linna oli [[Saksalaisen ritarikunnan]] linnoitus. Ritarikunta perusti sen 1200-luvun puolivälissä yhdeksi ensimmäisistä linnoistaan [[Kulmanmaalla]], ja se toimi aluksi komentajan asuinpaikkana sekä tukikohtana, josta käsin alistettiin pakanallisia preussilaisia. Linnasta on jäljellä lähinnä käymälätorni ja kellariholveja, ja ne kuuluvat nykyään [[Toruńin]] vanhankaupungin maailmanperintöalueeseen. Ei paha kyyhkyltä näin heti alkuun.
+KYSYMYS: Kerro lisää: Saksalaisen ritarikunnan
+
+### 416
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Toruńin ristiritarien linna (historia)
+Tietoruudun teksti: Toruńin linna oli Saksalaisen ritarikunnan 1200-luvun puolivälissä perustama linnoitus, yksi ritarikunnan ensimmäisistä Kulmanmaalla, ja se toimi alkujaan ritarikunnan komentajan asuinpaikkana ja tukikohtana pakanallisten preussilaisten alistamiseen sekä ritarikunnan oman valtion synnyssä. Toruńin porvarit nousivat kapinaan ritarikunnan sortoa vastaan, ja helmikuussa 1454 pieni saksalaisvarusväki antautui ja sai poistua; kaupunki ryösti linnan ja päätti sen jälkeen purkaa sen kokonaan, ettei ritarikunta voisi vallata sitä takaisin. Tapahtuma käynnisti kolmentoista vuoden sodan (1454–1466). Linnasta on jäljellä lähinnä käymälätorni (dansker) puron yllä ja kellariholveja; rauniot kaivettiin osin esiin ja avattiin museona 1966, ja ne ovat nykyään osa Toruńin vanhankaupungin maailmanperintöaluetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namibia — maalehti / Historia: Tuulinen kulma, jonka kapteeni valitsi] 1840–1885 — Oorlamien kapteeni Jonker Afrikaner lähti 1823 isänsä asuinsijoilta kolmen veljensä ja noin kolmensadan seuraajan kanssa pohjoiseen, ja pian hänen neuvostonsa hallitsi maan keskiosaa. Noin 1840 hän pysähtyi kuuman lähteen äärelle ja rakensi kivikirkon, johon mahtui viisisataa ihmistä. Nimen Windhoek hän antoi itse: se on joko afrikaansin tuulinen kulma tai muisto Winterhoekin vuorista, joiden juurella suku oli asunut. Vanhin tunnettu maininta nimestä on hänen kirjeessään 12. elokuuta 1844. Sotien jälkeen paikka autioitui: 1885 sinne saapunut kasvitieteilijä löysi enää sakaaleja ja nälkiintyneitä helmikanoja hoitamattomien hedelmäpuiden seasta.
+AIEMPI KYSYMYS: Minkä ritarikunnan linna Toruńin rauniot olivat?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Toruńin linna oli [[Saksalaisen ritarikunnan]] linnoitus. Ritarikunta perusti sen 1200-luvun puolivälissä yhdeksi ensimmäisistä linnoistaan [[Kulmanmaalla]], ja se toimi aluksi komentajan asuinpaikkana sekä tukikohtana, josta käsin alistettiin pakanallisia preussilaisia. Linnasta on jäljellä lähinnä käymälätorni ja kellariholveja, ja ne kuuluvat nykyään [[Toruńin]] vanhankaupungin maailmanperintöalueeseen. Ei paha kyyhkyltä näin heti alkuun.
+KYSYMYS: Kerro lisää: Kulmanmaalla
+
+### 417
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Toruńin ristiritarien linna (historia)
+Tietoruudun teksti: Toruńin linna oli Saksalaisen ritarikunnan 1200-luvun puolivälissä perustama linnoitus, yksi ritarikunnan ensimmäisistä Kulmanmaalla, ja se toimi alkujaan ritarikunnan komentajan asuinpaikkana ja tukikohtana pakanallisten preussilaisten alistamiseen sekä ritarikunnan oman valtion synnyssä. Toruńin porvarit nousivat kapinaan ritarikunnan sortoa vastaan, ja helmikuussa 1454 pieni saksalaisvarusväki antautui ja sai poistua; kaupunki ryösti linnan ja päätti sen jälkeen purkaa sen kokonaan, ettei ritarikunta voisi vallata sitä takaisin. Tapahtuma käynnisti kolmentoista vuoden sodan (1454–1466). Linnasta on jäljellä lähinnä käymälätorni (dansker) puron yllä ja kellariholveja; rauniot kaivettiin osin esiin ja avattiin museona 1966, ja ne ovat nykyään osa Toruńin vanhankaupungin maailmanperintöaluetta.
+AIEMPI KYSYMYS: Minkä ritarikunnan linna Toruńin rauniot olivat?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Toruńin linna oli [[Saksalaisen ritarikunnan]] linnoitus. Ritarikunta perusti sen 1200-luvun puolivälissä yhdeksi ensimmäisistä linnoistaan [[Kulmanmaalla]], ja se toimi aluksi komentajan asuinpaikkana sekä tukikohtana, josta käsin alistettiin pakanallisia preussilaisia. Linnasta on jäljellä lähinnä käymälätorni ja kellariholveja, ja ne kuuluvat nykyään [[Toruńin]] vanhankaupungin maailmanperintöalueeseen. Ei paha kyyhkyltä näin heti alkuun.
+KYSYMYS: Kerro lisää: Toruńin
+
+### 418
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Toruńin ristiritarien linna (historia)
+Tietoruudun teksti: Toruńin linna oli Saksalaisen ritarikunnan 1200-luvun puolivälissä perustama linnoitus, yksi ritarikunnan ensimmäisistä Kulmanmaalla, ja se toimi alkujaan ritarikunnan komentajan asuinpaikkana ja tukikohtana pakanallisten preussilaisten alistamiseen sekä ritarikunnan oman valtion synnyssä. Toruńin porvarit nousivat kapinaan ritarikunnan sortoa vastaan, ja helmikuussa 1454 pieni saksalaisvarusväki antautui ja sai poistua; kaupunki ryösti linnan ja päätti sen jälkeen purkaa sen kokonaan, ettei ritarikunta voisi vallata sitä takaisin. Tapahtuma käynnisti kolmentoista vuoden sodan (1454–1466). Linnasta on jäljellä lähinnä käymälätorni (dansker) puron yllä ja kellariholveja; rauniot kaivettiin osin esiin ja avattiin museona 1966, ja ne ovat nykyään osa Toruńin vanhankaupungin maailmanperintöaluetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Johanneksen ko-katedraali] 1572–1577 (rakennus), 1608 (Caravaggion maalaus) Arkkitehti Girolamo Cassar suunnitteli kirkon ritarikunnan omaksi konventtikirkoksi vuosina 1572–1577, ja ulkoa se on yhä vaatimaton: paksut kalkkikivimuurit ja kaksi kapeaa tornia näyttävät pikemmin linnoitukselta kuin katedraalilta. Sisällä on toisin — 1660-luvulla Mattia Preti maalasi koko katon ja seinät kultaisiksi barokkiveistoksiksi, ja lattia on yhtenäinen mosaiikki kahdeksastasadasta ritarin hautalaatasta. Caravaggio pakeni Roomasta 1607 tapettuaan miehen kaksintaistelussa, ja Maltalla hänet otettiin heinäkuussa 1608 ritarikunnan jäseneksi. Kiitokseksi hän maalasi oratorioon "Johannes Kastajan mestauksen" — ainoan teoksensa, jonka hä…
+- [Malta — maalehti / Historia: Kaupunki piirrettiin viivaimella] 1566 — Maaliskuun 28. päivänä 1566 suurmestari Jean de Valette laski peruskiven uudelle kaupungille Sciberras-niemellä. Suuren piirityksen jälkeen ritarikunta halusi rakentaa linnoitetun pääkaupungin, ja paavi lähetti suunnittelijaksi Francesco Laparellin. Hän hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat kaupunginportilta kohti Fort St. Elmoa. Laparellin kuoltua työtä johti maltalainen Girolamo Cassar. Valletta valmistui pääosin 1570-luvun alkuun mennessä, ja siitä tuli pääkaupunki vuonna 1571.
+AIEMPI KYSYMYS: Miksi kaupunkilaiset purkivat linnan vuonna 1454?
+AIEMPI VASTAUS (Livia):
+No niin. [[Toruńin]] porvarit nousivat helmikuussa 1454 kapinaan ritarikunnan sortoa vastaan, ja linnan pieni saksalaisvarusväki antautui ja sai poistua. Sen jälkeen kaupunki ryösti linnan ja päätti purkaa sen kokonaan, jotta [[Saksalainen ritarikunta]] ei voisi vallata sitä takaisin. Tapahtuma käynnisti [[kolmentoista vuoden sodan]], joka kesti vuoteen 1466. Linnan jäännökset on kaivettu osin esiin, ja ne avattiin museona vuonna 1966. Onneksi siitä on jo yli viisisataa vuotta.
+KYSYMYS: Kerro lisää: Saksalainen ritarikunta
+
+### 419
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Toruńin ristiritarien linna (historia)
+Tietoruudun teksti: Toruńin linna oli Saksalaisen ritarikunnan 1200-luvun puolivälissä perustama linnoitus, yksi ritarikunnan ensimmäisistä Kulmanmaalla, ja se toimi alkujaan ritarikunnan komentajan asuinpaikkana ja tukikohtana pakanallisten preussilaisten alistamiseen sekä ritarikunnan oman valtion synnyssä. Toruńin porvarit nousivat kapinaan ritarikunnan sortoa vastaan, ja helmikuussa 1454 pieni saksalaisvarusväki antautui ja sai poistua; kaupunki ryösti linnan ja päätti sen jälkeen purkaa sen kokonaan, ettei ritarikunta voisi vallata sitä takaisin. Tapahtuma käynnisti kolmentoista vuoden sodan (1454–1466). Linnasta on jäljellä lähinnä käymälätorni (dansker) puron yllä ja kellariholveja; rauniot kaivettiin osin esiin ja avattiin museona 1966, ja ne ovat nykyään osa Toruńin vanhankaupungin maailmanperintöaluetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+- [Singapore — maalehti / Historia: Kolme ja puoli vuotta banaanirahalla] 1942–1945 — Saari antautui 15. helmikuuta 1942 ja sai nimen Shonan-to, etelän valon saari. Britannian setelit poistuivat, ja tilalle tuli miehityshallinnon oma raha, jota painettiin lisää aina kun sitä tarvittiin. Sata kattia riisiä maksoi ensin viisi dollaria ja sodan lopussa viisituhatta. Ruoka jaettiin korteilla: aikuiselle viisi kiloa riisiä kuussa, lapselle kaksi, ja aikuisen annosta leikattiin neljännes. Bataatti, maniokki ja jamssi kasvoivat takapihoilla ja korvasivat riisin. Sotilaspoliisin vainoissa surmattiin kymmeniätuhansia siviilejä, enimmäkseen kiinalaisia miehiä. Antautumispäivää muistetaan yhä joka vuosi.
+AIEMPI KYSYMYS: Miksi kaupunkilaiset purkivat linnan vuonna 1454?
+AIEMPI VASTAUS (Livia):
+No niin. [[Toruńin]] porvarit nousivat helmikuussa 1454 kapinaan ritarikunnan sortoa vastaan, ja linnan pieni saksalaisvarusväki antautui ja sai poistua. Sen jälkeen kaupunki ryösti linnan ja päätti purkaa sen kokonaan, jotta [[Saksalainen ritarikunta]] ei voisi vallata sitä takaisin. Tapahtuma käynnisti [[kolmentoista vuoden sodan]], joka kesti vuoteen 1466. Linnan jäännökset on kaivettu osin esiin, ja ne avattiin museona vuonna 1966. Onneksi siitä on jo yli viisisataa vuotta.
+KYSYMYS: Kerro lisää: kolmentoista vuoden sodan
+
+### 420
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Toruńin ristiritarien linna (historia)
+Tietoruudun teksti: Toruńin linna oli Saksalaisen ritarikunnan 1200-luvun puolivälissä perustama linnoitus, yksi ritarikunnan ensimmäisistä Kulmanmaalla, ja se toimi alkujaan ritarikunnan komentajan asuinpaikkana ja tukikohtana pakanallisten preussilaisten alistamiseen sekä ritarikunnan oman valtion synnyssä. Toruńin porvarit nousivat kapinaan ritarikunnan sortoa vastaan, ja helmikuussa 1454 pieni saksalaisvarusväki antautui ja sai poistua; kaupunki ryösti linnan ja päätti sen jälkeen purkaa sen kokonaan, ettei ritarikunta voisi vallata sitä takaisin. Tapahtuma käynnisti kolmentoista vuoden sodan (1454–1466). Linnasta on jäljellä lähinnä käymälätorni (dansker) puron yllä ja kellariholveja; rauniot kaivettiin osin esiin ja avattiin museona 1966, ja ne ovat nykyään osa Toruńin vanhankaupungin maailmanperintöaluetta.
+AIEMPI KYSYMYS: Miksi linnan käymälätorni rakennettiin puron päälle?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Keskiaikaisissa linnoissa käymälätorni rakennettiin usein joen, puron tai vallihaudan päälle, jotta virtaava vesi vei jätteet pois ja ne pysyivät kaukana asuintiloista. Ritarikunnan linnoissa tällaista tornia kutsuttiin nimellä [[dansker]], ja sellainen on Toruńin linnasta jäljellä. Tornilla saattoi olla myös puolustuksellinen merkitys, mutta en ole varma, miten se toteutui juuri Toruńissa. Aika arkinen aihe, mutta hyödyllinen.
+KYSYMYS: Kerro lisää: dansker
+
+### 421
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Toruńin ristiritarien linna (historia)
+Tietoruudun teksti: Toruńin linna oli Saksalaisen ritarikunnan 1200-luvun puolivälissä perustama linnoitus, yksi ritarikunnan ensimmäisistä Kulmanmaalla, ja se toimi alkujaan ritarikunnan komentajan asuinpaikkana ja tukikohtana pakanallisten preussilaisten alistamiseen sekä ritarikunnan oman valtion synnyssä. Toruńin porvarit nousivat kapinaan ritarikunnan sortoa vastaan, ja helmikuussa 1454 pieni saksalaisvarusväki antautui ja sai poistua; kaupunki ryösti linnan ja päätti sen jälkeen purkaa sen kokonaan, ettei ritarikunta voisi vallata sitä takaisin. Tapahtuma käynnisti kolmentoista vuoden sodan (1454–1466). Linnasta on jäljellä lähinnä käymälätorni (dansker) puron yllä ja kellariholveja; rauniot kaivettiin osin esiin ja avattiin museona 1966, ja ne ovat nykyään osa Toruńin vanhankaupungin maailmanperintöaluetta.
+AIEMPI KYSYMYS: Mikä on UNESCOn maailmanperintöluettelo?
+AIEMPI VASTAUS (Livia):
+Ai tota. Maailmanperintöluettelo on YK:n kasvatus-, tiede- ja kulttuurijärjestö [[UNESCOn]] ylläpitämä luettelo kohteista, joilla katsotaan olevan yleismaailmallista merkitystä koko ihmiskunnalle. Perustana on vuonna 1972 hyväksytty [[maailmanperintösopimus]]. Kohteet ovat kulttuuri- tai luonnonperintöä, ja maa, jonka alueella kohde sijaitsee, sitoutuu suojelemaan sitä. Myös [[Toruńin]] vanhakaupunki kuuluu luetteloon. Aika iso luettelo tuli selitettyä.
+KYSYMYS: Kerro lisää: UNESCOn
+
+### 422
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Toruńin ristiritarien linna (historia)
+Tietoruudun teksti: Toruńin linna oli Saksalaisen ritarikunnan 1200-luvun puolivälissä perustama linnoitus, yksi ritarikunnan ensimmäisistä Kulmanmaalla, ja se toimi alkujaan ritarikunnan komentajan asuinpaikkana ja tukikohtana pakanallisten preussilaisten alistamiseen sekä ritarikunnan oman valtion synnyssä. Toruńin porvarit nousivat kapinaan ritarikunnan sortoa vastaan, ja helmikuussa 1454 pieni saksalaisvarusväki antautui ja sai poistua; kaupunki ryösti linnan ja päätti sen jälkeen purkaa sen kokonaan, ettei ritarikunta voisi vallata sitä takaisin. Tapahtuma käynnisti kolmentoista vuoden sodan (1454–1466). Linnasta on jäljellä lähinnä käymälätorni (dansker) puron yllä ja kellariholveja; rauniot kaivettiin osin esiin ja avattiin museona 1966, ja ne ovat nykyään osa Toruńin vanhankaupungin maailmanperintöaluetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mikä on UNESCOn maailmanperintöluettelo?
+AIEMPI VASTAUS (Livia):
+Ai tota. Maailmanperintöluettelo on YK:n kasvatus-, tiede- ja kulttuurijärjestö [[UNESCOn]] ylläpitämä luettelo kohteista, joilla katsotaan olevan yleismaailmallista merkitystä koko ihmiskunnalle. Perustana on vuonna 1972 hyväksytty [[maailmanperintösopimus]]. Kohteet ovat kulttuuri- tai luonnonperintöä, ja maa, jonka alueella kohde sijaitsee, sitoutuu suojelemaan sitä. Myös [[Toruńin]] vanhakaupunki kuuluu luetteloon. Aika iso luettelo tuli selitettyä.
+KYSYMYS: Kerro lisää: maailmanperintösopimus
+
+### 423
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Toruńin ristiritarien linna (historia)
+Tietoruudun teksti: Toruńin linna oli Saksalaisen ritarikunnan 1200-luvun puolivälissä perustama linnoitus, yksi ritarikunnan ensimmäisistä Kulmanmaalla, ja se toimi alkujaan ritarikunnan komentajan asuinpaikkana ja tukikohtana pakanallisten preussilaisten alistamiseen sekä ritarikunnan oman valtion synnyssä. Toruńin porvarit nousivat kapinaan ritarikunnan sortoa vastaan, ja helmikuussa 1454 pieni saksalaisvarusväki antautui ja sai poistua; kaupunki ryösti linnan ja päätti sen jälkeen purkaa sen kokonaan, ettei ritarikunta voisi vallata sitä takaisin. Tapahtuma käynnisti kolmentoista vuoden sodan (1454–1466). Linnasta on jäljellä lähinnä käymälätorni (dansker) puron yllä ja kellariholveja; rauniot kaivettiin osin esiin ja avattiin museona 1966, ja ne ovat nykyään osa Toruńin vanhankaupungin maailmanperintöaluetta.
+AIEMPI KYSYMYS: Mistä Preussi sai nimensä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Nimi tulee [[preussilaisista]], balttilaisesta heimosta, joka asui Itämeren etelärannikolla ennen kuin Saksalainen ritarikunta valloitti seudun 1200-luvulla. Ritarikunnan valtio muuttui myöhemmin sekularisoiduksi [[Preussin herttuakunnaksi]], ja nimi säilyi eri valtioissa vuosisatojen ajan. Alkuperäisten preussilaisten oman kielen tunnetaan kadonneen vuosisatoja sitten. Pitkä matka heimosta valtioksi.
+KYSYMYS: Kerro lisää: preussilaisista
+
+### 424
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Toruńin ristiritarien linna (historia)
+Tietoruudun teksti: Toruńin linna oli Saksalaisen ritarikunnan 1200-luvun puolivälissä perustama linnoitus, yksi ritarikunnan ensimmäisistä Kulmanmaalla, ja se toimi alkujaan ritarikunnan komentajan asuinpaikkana ja tukikohtana pakanallisten preussilaisten alistamiseen sekä ritarikunnan oman valtion synnyssä. Toruńin porvarit nousivat kapinaan ritarikunnan sortoa vastaan, ja helmikuussa 1454 pieni saksalaisvarusväki antautui ja sai poistua; kaupunki ryösti linnan ja päätti sen jälkeen purkaa sen kokonaan, ettei ritarikunta voisi vallata sitä takaisin. Tapahtuma käynnisti kolmentoista vuoden sodan (1454–1466). Linnasta on jäljellä lähinnä käymälätorni (dansker) puron yllä ja kellariholveja; rauniot kaivettiin osin esiin ja avattiin museona 1966, ja ne ovat nykyään osa Toruńin vanhankaupungin maailmanperintöaluetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad-järvi — kaupunkilehti / Bornun valtakunta: Preussin lahjat sheikille] Preussin kuningas Wilhelm I lähetti tutkimusmatkailija Gustav Nachtigalin viemään lahjoja Bornun hallitsijalle kiitokseksi saksalaisille matkaajille osoitetusta vieraanvaraisuudesta. Nachtigal lähti Tripolista helmikuussa 1869 ja saapui Bornun pääkaupunkiin Kukawaan 6. kesäkuuta 1870, missä sheikki Umar otti hänet ystävällisesti vastaan. Hovin virkamies Ahmed ibn Brahim antoi Nachtigalille vanhoja asiakirjoja, joiden pohjalta tämä kokosi luettelon Bornun hallitsijoista vuosisatojen ajalta. Sheikin luvalla Nachtigal teki myöhemmin tutkimusmatkoja Kanemiin ja Bagirmiin ja osoitti Bahr-el-Ghazalin toimivan ajoittain järven laskujokena.
+- [Pietari — kaupunkilehti / Taide: Preussin kuninkaalta jääneet maalaukset päätyivät keisarinnalle] 1764 — Berliiniläinen kauppias Johann Ernst Gotzkowsky oli koonnut 225 maalauksen kokoelman Preussin kuningas Fredrik Suurelle, mutta seitsenvuotisen sodan jälkeen kuninkaan kassa oli tyhjä eikä hän voinut maksaa niistä. Vuonna 1764 Venäjän keisarinna Katariina Suuri osti koko kokoelman velan kuittaukseksi ja ripusti taulut yksityiseen siipirakennukseensa Talvipalatsin vieressä — rakennus sai nimen Eremitaasi, erakon asunto, koska sinne pääsivät vain harvat kutsutut. Tästä ostosta syntyi kokoelma, joka on nykyään yksi maailman suurimpia taidemuseoita.
+AIEMPI KYSYMYS: Mistä Preussi sai nimensä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Nimi tulee [[preussilaisista]], balttilaisesta heimosta, joka asui Itämeren etelärannikolla ennen kuin Saksalainen ritarikunta valloitti seudun 1200-luvulla. Ritarikunnan valtio muuttui myöhemmin sekularisoiduksi [[Preussin herttuakunnaksi]], ja nimi säilyi eri valtioissa vuosisatojen ajan. Alkuperäisten preussilaisten oman kielen tunnetaan kadonneen vuosisatoja sitten. Pitkä matka heimosta valtioksi.
+KYSYMYS: Kerro lisää: Preussin herttuakunnaksi
+
+### 425
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ogrodzieńcin linna (historia)
+Tietoruudun teksti: Ogrodzieńcin linna kohoaa Puolan Jura-ylängön korkeimmalla kukkulalla, kalkkikivikallioiden ympäröimänä, ja se on osa "Kotkanpesät"-linnojen reittiä, joka yhdistää alueen tunnettuja keskiaikaisia linnoja. Ensimmäinen puinen linnake paikalla tuhoutui mongolien hyökkäyksessä 1241, ja 1300-luvun puolivälissä kallioiden väliin rakennettiin uusi goottilainen linna, joka laajeni myöhemmin renessanssilinnaksi 1500-luvulla Boner-suvun aikana. Ruotsalaiset joukot polttivat linnaa osittain 1655 Ruotsin miehityksen aikana, ja vuonna 1702 Kaarle XII:n sotajoukot polttivat yli puolet linnasta uudelleen Isossa Pohjan sodassa; sen jälkeen linnaa ei enää koskaan korjattu, ja se jäi vähitellen raunioiksi ja rakennusaineksen lähteeksi lähialueen asukkaille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Filippiinit — maalehti / Luonto: Kotka, joka syö lentäviä lemureita] Filippiinienkotka on pituudeltaan maailman suurin kotka: naaras on runsaan metrin mittainen ja painaa noin kuusi kiloa. Se pesii enää neljällä saarella, ja Mindanaon vanhoissa vuorimetsissä sen pääsaalis on kolugo eli lentävä lemuri. Lisääntymiskierto kestää kaksi vuotta: naaras munii yhden munan, poikanen lähtee lennolle vasta neljän tai viiden kuukauden ikäisenä ja saa vanhempien hoitoa parikymmentä kuukautta. Lentäjä Charles Lindbergh matkusti maahan useasti 1969–1972 ja sai hallituksen ryhtymään lajin suojeluun.
+- [Portugali — maalehti / Urheilu: Kotka kiertää stadionin] 1904 — Maan suurimmalla jalkapalloseuralla on tapa, jota ei ole monella muulla: ennen ottelua elävä kotka päästetään lentoon ja se kiertää stadionin yleisön yllä ennen kuin palaa hoitajansa käsivarrelle. Kotka on ollut seuran tunnuksessa sen perustamisesta 1904 lähtien, ja jokaisella linnulla on oma nimi. Seuran kotistadion on maan suurin, ja sinne mahtuu yli 64 000 katsojaa. Kannattajakirjoja on niin paljon, että seura on ollut jäsenmäärältään maailman suurimpia.
+AIEMPI KYSYMYS: Minkä reitin varrella Ogrodzieńcin linna on?
+AIEMPI VASTAUS (Livia):
+Ai se. Linna on osa [[Kotkanpesät]]-linnojen reittiä, joka yhdistää alueen tunnettuja keskiaikaisia linnoja. Ogrodzieńcin linna kohoaa [[Jura-ylängön]] korkeimmalla kukkulalla, kalkkikivikallioiden ympäröimänä.
+
+Kotkanpesät kuulostaa aika pröystäilevältä nimeltä. Kyyhkyn pesä olisi maltillisempi, mutta ei läheskään yhtä dramaattinen.
+KYSYMYS: Kerro lisää: Kotkanpesät
+
+### 426
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ogrodzieńcin linna (historia)
+Tietoruudun teksti: Ogrodzieńcin linna kohoaa Puolan Jura-ylängön korkeimmalla kukkulalla, kalkkikivikallioiden ympäröimänä, ja se on osa "Kotkanpesät"-linnojen reittiä, joka yhdistää alueen tunnettuja keskiaikaisia linnoja. Ensimmäinen puinen linnake paikalla tuhoutui mongolien hyökkäyksessä 1241, ja 1300-luvun puolivälissä kallioiden väliin rakennettiin uusi goottilainen linna, joka laajeni myöhemmin renessanssilinnaksi 1500-luvulla Boner-suvun aikana. Ruotsalaiset joukot polttivat linnaa osittain 1655 Ruotsin miehityksen aikana, ja vuonna 1702 Kaarle XII:n sotajoukot polttivat yli puolet linnasta uudelleen Isossa Pohjan sodassa; sen jälkeen linnaa ei enää koskaan korjattu, ja se jäi vähitellen raunioiksi ja rakennusaineksen lähteeksi lähialueen asukkaille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuwait — kohdekartta / Kohdekartta: Al Hamra -torni] Tornin pohjakaava on pyöristetty neliö, josta on leikattu neljännes pois. Puuttuva neljännes ei ole joka kerroksessa samassa kohdassa: alhaalla se on lounaisnurkassa, ylhäällä kaakkoisnurkassa ja siirtyy kerros kerrokselta vähän. Siksi torni näyttää kiertyvän. Viillon reunoina on kaksi betoniseinää, jotka nousevat ytimen nurkista katolle asti ja kaartuvat ulospäin. Niiden väliin jäävä eteläsivu on lähes umpinainen kalkkikiviseinä; lasia on vain pohjoisessa, idässä ja lännessä. Muodon sanelee aurinko. Kuwait City on 29. leveyspiirillä, joten aurinko on keskipäivällä aina etelässä ja eteläjulkisivu saisi päivän kovimman säteilyn. Poistettu neljännes siirtää toimistokerrokset pois siltä puolel…
+AIEMPI KYSYMYS: Minkä reitin varrella Ogrodzieńcin linna on?
+AIEMPI VASTAUS (Livia):
+Ai se. Linna on osa [[Kotkanpesät]]-linnojen reittiä, joka yhdistää alueen tunnettuja keskiaikaisia linnoja. Ogrodzieńcin linna kohoaa [[Jura-ylängön]] korkeimmalla kukkulalla, kalkkikivikallioiden ympäröimänä.
+
+Kotkanpesät kuulostaa aika pröystäilevältä nimeltä. Kyyhkyn pesä olisi maltillisempi, mutta ei läheskään yhtä dramaattinen.
+KYSYMYS: Kerro lisää: Jura-ylängön
+
+### 427
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ogrodzieńcin linna (historia)
+Tietoruudun teksti: Ogrodzieńcin linna kohoaa Puolan Jura-ylängön korkeimmalla kukkulalla, kalkkikivikallioiden ympäröimänä, ja se on osa "Kotkanpesät"-linnojen reittiä, joka yhdistää alueen tunnettuja keskiaikaisia linnoja. Ensimmäinen puinen linnake paikalla tuhoutui mongolien hyökkäyksessä 1241, ja 1300-luvun puolivälissä kallioiden väliin rakennettiin uusi goottilainen linna, joka laajeni myöhemmin renessanssilinnaksi 1500-luvulla Boner-suvun aikana. Ruotsalaiset joukot polttivat linnaa osittain 1655 Ruotsin miehityksen aikana, ja vuonna 1702 Kaarle XII:n sotajoukot polttivat yli puolet linnasta uudelleen Isossa Pohjan sodassa; sen jälkeen linnaa ei enää koskaan korjattu, ja se jäi vähitellen raunioiksi ja rakennusaineksen lähteeksi lähialueen asukkaille.
+AIEMPI KYSYMYS: Mikä joukko poltti linnan osittain 1655?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Linnan polttivat osittain ruotsalaiset joukot vuonna 1655 [[Ruotsin]] miehityksen aikana. Vuonna 1702 [[Kaarle XII:n]] sotajoukot polttivat yli puolet linnasta uudelleen [[Isossa Pohjan sodassa]], eikä linnaa sen jälkeen enää koskaan korjattu. Se jäi vähitellen raunioiksi, ja lähialueen asukkaat käyttivät sitä rakennusaineksen lähteenä. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Ruotsin
+
+### 428
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ogrodzieńcin linna (historia)
+Tietoruudun teksti: Ogrodzieńcin linna kohoaa Puolan Jura-ylängön korkeimmalla kukkulalla, kalkkikivikallioiden ympäröimänä, ja se on osa "Kotkanpesät"-linnojen reittiä, joka yhdistää alueen tunnettuja keskiaikaisia linnoja. Ensimmäinen puinen linnake paikalla tuhoutui mongolien hyökkäyksessä 1241, ja 1300-luvun puolivälissä kallioiden väliin rakennettiin uusi goottilainen linna, joka laajeni myöhemmin renessanssilinnaksi 1500-luvulla Boner-suvun aikana. Ruotsalaiset joukot polttivat linnaa osittain 1655 Ruotsin miehityksen aikana, ja vuonna 1702 Kaarle XII:n sotajoukot polttivat yli puolet linnasta uudelleen Isossa Pohjan sodassa; sen jälkeen linnaa ei enää koskaan korjattu, ja se jäi vähitellen raunioiksi ja rakennusaineksen lähteeksi lähialueen asukkaille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Colțean torni] Isoisäsi kiipesi Bukarestin korkeimpaan rakennukseen: Colțean torni kohosi arviolta 54 metriin ja oli kaupungin korkein yli vuosisadan ajan. Sen rakentamisessa vuosina 1709–1714 auttoivat Ruotsin kuninkaan Kaarle XII:n sotilaat, jotka olivat paenneet Valakiaan Poltavan tappion jälkeen; ruhtinas Constantin Brâncoveanu majoitti heidät. Sisäänkäynnin molemmin puolin oli maalattuna kaksi ruotsalaista sotilasta, jalkaväkimies ja ratsumies, kiväärit olalla — juuri ne, jotka isoisäsi näki. Tornissa oli myös kirjoitus ruotsalaisten muuraustöiden muistoksi; se on kadonnut. Vuoden 1802 maanjäristys pudotti tornin huipun ja kellon, ja kun torni 1888 purettiin kokonaan, sen 1 700 kilon kello vietiin Si…
+- [Ruotsi — maalehti / Ruoka: Lihapullat ja punainen marja] Ruotsalaiselle lautaselle kuuluu kolme asiaa: lihapullat, perunamuusi ja lusikallinen puolukkahilloa. Makea marja hapan lihan vieressä hämmästyttää monta vierasta, mutta yhdistelmä on vanha keino: ennen jääkaappeja happamat ja sokeriset säilykkeet pitivät ruoan syömäkelpoisena talven yli. Ruotsin virallinen somekin on kertonut, että lihapullan resepti tuotiin maahan Turkista kuningas Kaarle XII:n mukana 1700-luvun alussa — asiaa on sen jälkeen kiistelty innokkaasti.
+AIEMPI KYSYMYS: Mikä joukko poltti linnan osittain 1655?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Linnan polttivat osittain ruotsalaiset joukot vuonna 1655 [[Ruotsin]] miehityksen aikana. Vuonna 1702 [[Kaarle XII:n]] sotajoukot polttivat yli puolet linnasta uudelleen [[Isossa Pohjan sodassa]], eikä linnaa sen jälkeen enää koskaan korjattu. Se jäi vähitellen raunioiksi, ja lähialueen asukkaat käyttivät sitä rakennusaineksen lähteenä. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Kaarle XII:n
+
+### 429
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ogrodzieńcin linna (historia)
+Tietoruudun teksti: Ogrodzieńcin linna kohoaa Puolan Jura-ylängön korkeimmalla kukkulalla, kalkkikivikallioiden ympäröimänä, ja se on osa "Kotkanpesät"-linnojen reittiä, joka yhdistää alueen tunnettuja keskiaikaisia linnoja. Ensimmäinen puinen linnake paikalla tuhoutui mongolien hyökkäyksessä 1241, ja 1300-luvun puolivälissä kallioiden väliin rakennettiin uusi goottilainen linna, joka laajeni myöhemmin renessanssilinnaksi 1500-luvulla Boner-suvun aikana. Ruotsalaiset joukot polttivat linnaa osittain 1655 Ruotsin miehityksen aikana, ja vuonna 1702 Kaarle XII:n sotajoukot polttivat yli puolet linnasta uudelleen Isossa Pohjan sodassa; sen jälkeen linnaa ei enää koskaan korjattu, ja se jäi vähitellen raunioiksi ja rakennusaineksen lähteeksi lähialueen asukkaille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Doha — kaupunkilehti / Doha: Kaikki hyllyt ovat samassa salissa] Qatarin kansalliskirjasto avattiin Education Cityssä huhtikuussa 2018. Talon piirsi hollantilainen Rem Koolhaas, eivätkä kirjat ole erillisissä huoneissa vaan yhdessä isossa salissa, jonka poikki hyllyrivit kulkevat suorina. Avausvuonna hyllyillä oli yli 800 000 kirjaa ja lisäksi puoli miljoonaa sähkökirjaa, lehteä ja erikoiskokoelmien nidettä. Sama talo hoitaa kolmea tehtävää: se on kansalliskirjasto, yliopistokirjasto ja kaupunginkirjasto, ja kirjastokortin saa jokainen maassa vakinaisesti asuva. Perintökokoelmassa on noin 2 400 käsikirjoitusta sekä karttoja ja matkakertomuksia, joita Persianlahdelle tulleet kirjoittivat vuosisatojen mittaan.
+- [Sudan — maalehti / Ruoka: Papuja, jotka on hauduttu yön yli] Nimi tarkoittaa haudattuja papuja: härkäpavut kiehuvat matalalla lämmöllä koko yön isossa metallikannussa, josta ne myös tarjoillaan aamulla. Päälle kaadetaan öljyä ja kuminaa ja lisätään maun mukaan valkosipulia, sipulia, sitruunaa, persiljaa tai chiliä. Ruoka on vanha: Nasaretin lähistön kivikautiselta paikalta on kaivettu esiin 2 600 kuivattua härkäpapua, ja Jerusalemin Talmud tuntee ruoan jo 300-luvulla. Keskiajan Kairossa fulin keitto oli erään korttelin asukkaiden yksinoikeus. Sudanissa se on aamiainen, joka syödään yhdessä samalta vadilta.
+AIEMPI KYSYMYS: Mikä joukko poltti linnan osittain 1655?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Linnan polttivat osittain ruotsalaiset joukot vuonna 1655 [[Ruotsin]] miehityksen aikana. Vuonna 1702 [[Kaarle XII:n]] sotajoukot polttivat yli puolet linnasta uudelleen [[Isossa Pohjan sodassa]], eikä linnaa sen jälkeen enää koskaan korjattu. Se jäi vähitellen raunioiksi, ja lähialueen asukkaat käyttivät sitä rakennusaineksen lähteenä. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Isossa Pohjan sodassa
+
+### 430
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ogrodzieńcin linna (historia)
+Tietoruudun teksti: Ogrodzieńcin linna kohoaa Puolan Jura-ylängön korkeimmalla kukkulalla, kalkkikivikallioiden ympäröimänä, ja se on osa "Kotkanpesät"-linnojen reittiä, joka yhdistää alueen tunnettuja keskiaikaisia linnoja. Ensimmäinen puinen linnake paikalla tuhoutui mongolien hyökkäyksessä 1241, ja 1300-luvun puolivälissä kallioiden väliin rakennettiin uusi goottilainen linna, joka laajeni myöhemmin renessanssilinnaksi 1500-luvulla Boner-suvun aikana. Ruotsalaiset joukot polttivat linnaa osittain 1655 Ruotsin miehityksen aikana, ja vuonna 1702 Kaarle XII:n sotajoukot polttivat yli puolet linnasta uudelleen Isossa Pohjan sodassa; sen jälkeen linnaa ei enää koskaan korjattu, ja se jäi vähitellen raunioiksi ja rakennusaineksen lähteeksi lähialueen asukkaille.
+AIEMPI KYSYMYS: Mikä on kalkkikivi ja miten se syntyy?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kalkkikivi on [[sedimenttikivilaji]], joka koostuu pääosin [[kalsiumkarbonaatista]]. Se syntyy yleensä meressä, kun merieliöiden kuoret ja luurangot kerrostuvat pohjaan ja kovettuvat vuosimiljoonien kuluessa kiveksi; osa kalkista saostuu myös suoraan vedestä. Jura-ylängön kalkkikalliot ovat pääosin [[jurakauden]] merenpohjaa. Aika vanhaa tavaraa, kyl.
+KYSYMYS: Kerro lisää: sedimenttikivilaji
+
+### 431
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ogrodzieńcin linna (historia)
+Tietoruudun teksti: Ogrodzieńcin linna kohoaa Puolan Jura-ylängön korkeimmalla kukkulalla, kalkkikivikallioiden ympäröimänä, ja se on osa "Kotkanpesät"-linnojen reittiä, joka yhdistää alueen tunnettuja keskiaikaisia linnoja. Ensimmäinen puinen linnake paikalla tuhoutui mongolien hyökkäyksessä 1241, ja 1300-luvun puolivälissä kallioiden väliin rakennettiin uusi goottilainen linna, joka laajeni myöhemmin renessanssilinnaksi 1500-luvulla Boner-suvun aikana. Ruotsalaiset joukot polttivat linnaa osittain 1655 Ruotsin miehityksen aikana, ja vuonna 1702 Kaarle XII:n sotajoukot polttivat yli puolet linnasta uudelleen Isossa Pohjan sodassa; sen jälkeen linnaa ei enää koskaan korjattu, ja se jäi vähitellen raunioiksi ja rakennusaineksen lähteeksi lähialueen asukkaille.
+AIEMPI KYSYMYS: Mikä on kalkkikivi ja miten se syntyy?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kalkkikivi on [[sedimenttikivilaji]], joka koostuu pääosin [[kalsiumkarbonaatista]]. Se syntyy yleensä meressä, kun merieliöiden kuoret ja luurangot kerrostuvat pohjaan ja kovettuvat vuosimiljoonien kuluessa kiveksi; osa kalkista saostuu myös suoraan vedestä. Jura-ylängön kalkkikalliot ovat pääosin [[jurakauden]] merenpohjaa. Aika vanhaa tavaraa, kyl.
+KYSYMYS: Kerro lisää: kalsiumkarbonaatista
+
+### 432
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ogrodzieńcin linna (historia)
+Tietoruudun teksti: Ogrodzieńcin linna kohoaa Puolan Jura-ylängön korkeimmalla kukkulalla, kalkkikivikallioiden ympäröimänä, ja se on osa "Kotkanpesät"-linnojen reittiä, joka yhdistää alueen tunnettuja keskiaikaisia linnoja. Ensimmäinen puinen linnake paikalla tuhoutui mongolien hyökkäyksessä 1241, ja 1300-luvun puolivälissä kallioiden väliin rakennettiin uusi goottilainen linna, joka laajeni myöhemmin renessanssilinnaksi 1500-luvulla Boner-suvun aikana. Ruotsalaiset joukot polttivat linnaa osittain 1655 Ruotsin miehityksen aikana, ja vuonna 1702 Kaarle XII:n sotajoukot polttivat yli puolet linnasta uudelleen Isossa Pohjan sodassa; sen jälkeen linnaa ei enää koskaan korjattu, ja se jäi vähitellen raunioiksi ja rakennusaineksen lähteeksi lähialueen asukkaille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marrakech — kaupunkilehti / Vesi, vuoret ja puutarhat: Kuuma tasanko vuorten varjossa] Ilmasto on kuuma puoliaava: heinäkuun keskiylin on 37,7 astetta ja kuumin mitattu lukema 49,6, kun taas tammikuussa on mitattu 3,6 pakkasastetta. Sadetta tulee vain 221 millimetriä ja 29 päivänä vuodessa. Silti seutu ei ole aavikkoa: maantieteilijä Barrows huomautti, että kosteus liikkuu täällä maan alla eikä pintavesinä, ja että sijainti Atlaksen pohjoispuolella erottaa Marrakechin aavikkokaupungeista. Vuoriston keskikorkeus on yli kolme kilometriä, ja se on pääosin jurakauden kalkkikiveä. Pohjaveden pinta on laskenut vuodesta 2002 keskimäärin 0,9 metriä vuodessa.
+AIEMPI KYSYMYS: Mikä on kalkkikivi ja miten se syntyy?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kalkkikivi on [[sedimenttikivilaji]], joka koostuu pääosin [[kalsiumkarbonaatista]]. Se syntyy yleensä meressä, kun merieliöiden kuoret ja luurangot kerrostuvat pohjaan ja kovettuvat vuosimiljoonien kuluessa kiveksi; osa kalkista saostuu myös suoraan vedestä. Jura-ylängön kalkkikalliot ovat pääosin [[jurakauden]] merenpohjaa. Aika vanhaa tavaraa, kyl.
+KYSYMYS: Kerro lisää: jurakauden
+
+### 433
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ogrodzieńcin linna (historia)
+Tietoruudun teksti: Ogrodzieńcin linna kohoaa Puolan Jura-ylängön korkeimmalla kukkulalla, kalkkikivikallioiden ympäröimänä, ja se on osa "Kotkanpesät"-linnojen reittiä, joka yhdistää alueen tunnettuja keskiaikaisia linnoja. Ensimmäinen puinen linnake paikalla tuhoutui mongolien hyökkäyksessä 1241, ja 1300-luvun puolivälissä kallioiden väliin rakennettiin uusi goottilainen linna, joka laajeni myöhemmin renessanssilinnaksi 1500-luvulla Boner-suvun aikana. Ruotsalaiset joukot polttivat linnaa osittain 1655 Ruotsin miehityksen aikana, ja vuonna 1702 Kaarle XII:n sotajoukot polttivat yli puolet linnasta uudelleen Isossa Pohjan sodassa; sen jälkeen linnaa ei enää koskaan korjattu, ja se jäi vähitellen raunioiksi ja rakennusaineksen lähteeksi lähialueen asukkaille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Singapore — kohdekartta / Kohdekartta: Fort Canningin kukkula] linnoitus 1861, purettu 1907 Kaupungin keskellä kohoava 48 metrin kukkula tunnettiin malaijiksi nimellä Bukit Larangan, Kielletty kukkula. Perimätiedon mukaan siellä lepäsivät muinaisen Singapuran kuninkaat, ja paikkaa pidettiin aavemaisena. Rinteen länsipuolella pulppusi lähde, jota kutsuttiin kielletyksi lähteeksi; 1800-luvun alussa siitä otettiin juomavesi jokaiseen satamaan poikkeavaan laivaan, kunnes kysyntä ylitti sen tuoton ja lähde kuivui kaivojen myötä. Kun sopimus oli allekirjoitettu 6. helmikuuta 1819, majuri William Farquhar nousi kukkulalle, veti sinne ensimmäisen tykin ja nosti lipun. Raffles rakennutti laelle asuinrakennuksen, jonka piirsi George Drumgoole Coleman: puinen bun…
+- [Valparaíso — kohdekartta / Kohdekartta: Pyhien sydänten kirkko] 1874 Laiva Sylphide saapui Bordeaux’sta Valparaísoon 13. toukokuuta 1834, ja sen matkustajina oli neljä Jeesuksen ja Marian pyhien sydänten sääntökunnan pappia, joiden määränpää oli Gambiersaaret Ranskan Polynesiassa. Heistä Chrysostome Liausu jäi kaupunkiin ja perusti sääntökunnan ensimmäisen yhteisön eteläamerikkalaiseen satamaan. Vuonna 1837 kaupungin cabildo antoi hänelle luvan perustaa koulun — itsenäisen Chilen ensimmäisen yksityiskoulun. Koulu muutti 1840 Independencia-kadulle nykyiselle paikalleen, jota laajennettiin ostamalla viereisiä tontteja, ja sinne rakennettiin kappeli. Vuoden 1860 lopulla isä Oliver määräsi rakennettavaksi uuden kirkon, jonka suunnittelivat arkkitehdit Lucie…
+AIEMPI KYSYMYS: Miten renessanssilinna eroaa goottilaisesta linnasta?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Aikaisempi [[goottilainen]] linna oli ennen kaikkea puolustusrakennus, jossa oli paksut muurit, tornit ja pienet ikkunat. [[Renessanssi]] toi mukanaan symmetrian, runsaamman koristelun ja suuremmat ikkunat, ja linnasta tuli enemmän asuinpalatsi. Ogrodzieńcin linna laajeni renessanssilinnaksi 1500-luvulla [[Boner-suvun]] aikana. Tyylit vaihtuvat, kyyhky pysyy.
+KYSYMYS: Kerro lisää: goottilainen
+
+### 434
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ogrodzieńcin linna (historia)
+Tietoruudun teksti: Ogrodzieńcin linna kohoaa Puolan Jura-ylängön korkeimmalla kukkulalla, kalkkikivikallioiden ympäröimänä, ja se on osa "Kotkanpesät"-linnojen reittiä, joka yhdistää alueen tunnettuja keskiaikaisia linnoja. Ensimmäinen puinen linnake paikalla tuhoutui mongolien hyökkäyksessä 1241, ja 1300-luvun puolivälissä kallioiden väliin rakennettiin uusi goottilainen linna, joka laajeni myöhemmin renessanssilinnaksi 1500-luvulla Boner-suvun aikana. Ruotsalaiset joukot polttivat linnaa osittain 1655 Ruotsin miehityksen aikana, ja vuonna 1702 Kaarle XII:n sotajoukot polttivat yli puolet linnasta uudelleen Isossa Pohjan sodassa; sen jälkeen linnaa ei enää koskaan korjattu, ja se jäi vähitellen raunioiksi ja rakennusaineksen lähteeksi lähialueen asukkaille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Renessanssi syntyi kilpailusta] 1400-luku — 1400-luvun Firenzessä suvut ja killat kilpailivat siitä, kuka teettää kauneimman kirkon, patsaan tai kupolin. Kilpailusta syntyi renessanssi — "uudelleensyntyminen" — joka muutti koko Euroopan taiteen, tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli oli valmistuessaan 1436 maailman suurin muuraamalla tehty kupoli, eikä kukaan tiennyt varmasti, pysyisikö se pystyssä: se rakennettiin ilman tukitelineitä tavalla, jota insinöörit ihmettelevät yhä.
+AIEMPI KYSYMYS: Miten renessanssilinna eroaa goottilaisesta linnasta?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Aikaisempi [[goottilainen]] linna oli ennen kaikkea puolustusrakennus, jossa oli paksut muurit, tornit ja pienet ikkunat. [[Renessanssi]] toi mukanaan symmetrian, runsaamman koristelun ja suuremmat ikkunat, ja linnasta tuli enemmän asuinpalatsi. Ogrodzieńcin linna laajeni renessanssilinnaksi 1500-luvulla [[Boner-suvun]] aikana. Tyylit vaihtuvat, kyyhky pysyy.
+KYSYMYS: Kerro lisää: Renessanssi
+
+### 435
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ogrodzieńcin linna (historia)
+Tietoruudun teksti: Ogrodzieńcin linna kohoaa Puolan Jura-ylängön korkeimmalla kukkulalla, kalkkikivikallioiden ympäröimänä, ja se on osa "Kotkanpesät"-linnojen reittiä, joka yhdistää alueen tunnettuja keskiaikaisia linnoja. Ensimmäinen puinen linnake paikalla tuhoutui mongolien hyökkäyksessä 1241, ja 1300-luvun puolivälissä kallioiden väliin rakennettiin uusi goottilainen linna, joka laajeni myöhemmin renessanssilinnaksi 1500-luvulla Boner-suvun aikana. Ruotsalaiset joukot polttivat linnaa osittain 1655 Ruotsin miehityksen aikana, ja vuonna 1702 Kaarle XII:n sotajoukot polttivat yli puolet linnasta uudelleen Isossa Pohjan sodassa; sen jälkeen linnaa ei enää koskaan korjattu, ja se jäi vähitellen raunioiksi ja rakennusaineksen lähteeksi lähialueen asukkaille.
+AIEMPI KYSYMYS: Miten renessanssilinna eroaa goottilaisesta linnasta?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Aikaisempi [[goottilainen]] linna oli ennen kaikkea puolustusrakennus, jossa oli paksut muurit, tornit ja pienet ikkunat. [[Renessanssi]] toi mukanaan symmetrian, runsaamman koristelun ja suuremmat ikkunat, ja linnasta tuli enemmän asuinpalatsi. Ogrodzieńcin linna laajeni renessanssilinnaksi 1500-luvulla [[Boner-suvun]] aikana. Tyylit vaihtuvat, kyyhky pysyy.
+KYSYMYS: Kerro lisää: Boner-suvun
+
+### 436
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ogrodzieńcin linna (historia)
+Tietoruudun teksti: Ogrodzieńcin linna kohoaa Puolan Jura-ylängön korkeimmalla kukkulalla, kalkkikivikallioiden ympäröimänä, ja se on osa "Kotkanpesät"-linnojen reittiä, joka yhdistää alueen tunnettuja keskiaikaisia linnoja. Ensimmäinen puinen linnake paikalla tuhoutui mongolien hyökkäyksessä 1241, ja 1300-luvun puolivälissä kallioiden väliin rakennettiin uusi goottilainen linna, joka laajeni myöhemmin renessanssilinnaksi 1500-luvulla Boner-suvun aikana. Ruotsalaiset joukot polttivat linnaa osittain 1655 Ruotsin miehityksen aikana, ja vuonna 1702 Kaarle XII:n sotajoukot polttivat yli puolet linnasta uudelleen Isossa Pohjan sodassa; sen jälkeen linnaa ei enää koskaan korjattu, ja se jäi vähitellen raunioiksi ja rakennusaineksen lähteeksi lähialueen asukkaille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kööpenhamina — kohdekartta / Kohdekartta: Kastellet] 1660-luku Kastellet on tähtilinnoitus kaupungin pohjoisreunalla ja yksi Pohjois-Euroopan parhaiten säilyneistä linnoituksista. Se on viisikulmio, jonka jokaisessa kärjessä on bastioni: Kuninkaan, Kuningattaren, Kreivin, Prinsessan ja Prinssin bastioni. Vallit ja vallihaudat olivat aikanaan osa koko kaupungin kiertänyttä bastionirengasta, josta on muuten jäljellä vain Christianshavnin vallit. Alku oli vaatimattomampi. Christian IV perusti paikalle Sankt Annæn skanssin 1624 vahtimaan sataman suuta. Työ jäi hänen aikanaan kesken, ja vasta ruotsalaisten piiritettyä Kööpenhaminaa vuosina 1658–1660 Fredrik III kutsui paikalle hollantilaisen insinöörin Henrik Rusen. Hän rakensi skanssista kunnolli…
+AIEMPI KYSYMYS: Kuka oli Ruotsin kuningas Kaarle XII?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kaarle XII oli [[Ruotsin]] kuningas vuosina 1697–1718. Hänet tunnetaan sotakuninkaana, joka johti Ruotsia [[Isossa Pohjan sodassa]] ja kävi sotaretkiä muun muassa Puolassa. Hän kuoli vuonna 1718 [[Fredrikstenin linnoituksen]] piirityksessä Norjassa. Siitä on onneksi jo yli kolmesataa vuotta.
+KYSYMYS: Kerro lisää: Fredrikstenin linnoituksen
+
+### 437
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaivos, jonka pohjalle veistettiin kirkkosali siitä, mikä louhittiin pois
+Tietoruudun teksti: Runsaan kymmenen kilometrin päässä Krakovasta on kaivos, jota on kaivettu 1200-luvulta lähtien — ja jo sitä ennen paikalla otettiin talteen maasta nousevaa suolavettä ja keitettiin siitä suolaa. Vanhin asiakirja on vuodelta 1044. Kaivosta johti kuninkaallinen Żupy Krakowskie, ja Kasimir III Suuri antoi sille etuoikeuksia, otti kaivosmiehet suojelukseensa ja perusti kaivoksen viereen sairaalan vuonna 1363. Hänestä sanotaan, että hän muutti puisen Puolan kiviseksi — osaksi siksi, että naapurimetsien puu meni kaivoksen tukirakenteisiin ja tulot olivat sen mukaiset. Juuri tämä suola kulki Krakovan kangashallin läpi maailmalle. Se ei muuten ole valkoista: suolakivi on eri sävyistä harmaata ja muistuttaa enemmän kiillottamatonta graniittia kuin sitä, mitä pöydällä on.
+
+Isoisäsi kävi maan päällä juuri silloin, kun kaivos oli parhaimmillaan: vuoteen 1871 mennessä sitä pidettiin yhtenä maailman …
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Historia: Suolakaivos jossa on kirkko maan alla] 13. vuosisata — Wieliczkan suolakaivos Krakovan lähellä on kaivettu 1200-luvulta lähtien, ja suolaa louhittiin siellä yhtäjaksoisesti aina vuoteen 1996 asti — yksi maailman vanhimmista toimivista kaivoksista. Kaivos ulottuu 327 metrin syvyyteen ja yli 287 kilometrin käytäväverkostoon. Vuosisatojen aikana kaivosmiehet veistivät suolasta patsaita, kappeleita ja jopa kokonaisia kirkkosaleja kattokruunuineen — kaikki, myös valaisimet, on veistetty tai puhallettu suolasta. Nykyään kaivos on Unescon maailmanperintökohde ja yksi Puolan suosituimmista nähtävyyksistä.
+AIEMPI KYSYMYS: Miksi suolasta kannatti kaivaa vuori tyhjäksi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Wieliczkan]] kaivoksessa kaivettu suola oli ennen jääkaappeja välttämätöntä, koska sillä säilöttiin ruokaa, ja siitä maksettiin hyvin. Kaivosta johti kuninkaallinen Żupy Krakowskie, ja [[Kasimir III Suuri]] antoi sille etuoikeuksia sekä otti kaivosmiehet suojelukseensa. Suola kulki [[Krakovan kangashallin]] kautta maailmalle, ja tulot olivat sen mukaiset. Pöydässä suola näyttää kyllä paljon vaatimattomammalta.
+KYSYMYS: Kerro lisää: Wieliczkan
+
+### 438
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaivos, jonka pohjalle veistettiin kirkkosali siitä, mikä louhittiin pois
+Tietoruudun teksti: Runsaan kymmenen kilometrin päässä Krakovasta on kaivos, jota on kaivettu 1200-luvulta lähtien — ja jo sitä ennen paikalla otettiin talteen maasta nousevaa suolavettä ja keitettiin siitä suolaa. Vanhin asiakirja on vuodelta 1044. Kaivosta johti kuninkaallinen Żupy Krakowskie, ja Kasimir III Suuri antoi sille etuoikeuksia, otti kaivosmiehet suojelukseensa ja perusti kaivoksen viereen sairaalan vuonna 1363. Hänestä sanotaan, että hän muutti puisen Puolan kiviseksi — osaksi siksi, että naapurimetsien puu meni kaivoksen tukirakenteisiin ja tulot olivat sen mukaiset. Juuri tämä suola kulki Krakovan kangashallin läpi maailmalle. Se ei muuten ole valkoista: suolakivi on eri sävyistä harmaata ja muistuttaa enemmän kiillottamatonta graniittia kuin sitä, mitä pöydällä on.
+
+Isoisäsi kävi maan päällä juuri silloin, kun kaivos oli parhaimmillaan: vuoteen 1871 mennessä sitä pidettiin yhtenä maailman …
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Wawelin linna] 1507–1536 Vistula-joen yllä kohoavalla kalkkikivikukkulalla sijaitseva Wawelin linna oli Puolan kuninkaiden koti ja kruunajaispaikka satojen vuosien ajan. Kuningas Kasimir Suuri rakennutti ensimmäisen kivilinnan 1300-luvulla, ja tulipalon jälkeen kuningas Sigismund I rakennutti sen uudelleen upeaksi renessanssilinnaksi vuosina 1507-1536. Linnan tornissa riippuu Sigismund-kello, joka painaa lähes 13 tonnia ja jota soittamaan tarvitaan 12 miestä - sitä kumautetaan vain aivan erityisinä hetkinä. Aarrekammiossa säilytetään muun muassa Szczerbiec-nimistä kruunajaismiekkaa, ja linnan alla piilee tunnettu lohikäärmeen luola. Linna on kokenut sekä loistoa että tuhoa: vuonna 1794 Preussi vei kruunun…
+- [Krakova — kohdekartta / Kohdekartta: Kazimierz] 1335 Vuonna 1335 kuningas Kasimir Suuri perusti Krakovan viereen aivan oman kaupungin ja nimesi sen itsensä mukaan Kazimierziksi. Sen keskusaukio Wolnica oli valtava, 195 x 195 metriä - lähes yhtä iso kuin Krakovan oma tori. Vuonna 1495 juutalaiset asukkaat käskettiin muuttamaan pois Krakovan vanhastakaupungista Kazimierziin, ja alueesta kasvoi vuosisatojen kuluessa vilkas juutalaiskortteli lukuisine synagogineen. Vanha synagoga on Puolan vanhin yhä pystyssä seisova synagogarakennus. Toisen maailmansodan aikana korttelin juutalaisväestöä kohtasi julma kohtalo, mutta nykyään Kazimierz on jälleen täynnä elämää: kahviloita, kirjakauppoja ja vuotuinen juutalaisen kulttuurin festivaali vuodesta …
+AIEMPI KYSYMYS: Miksi suolasta kannatti kaivaa vuori tyhjäksi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Wieliczkan]] kaivoksessa kaivettu suola oli ennen jääkaappeja välttämätöntä, koska sillä säilöttiin ruokaa, ja siitä maksettiin hyvin. Kaivosta johti kuninkaallinen Żupy Krakowskie, ja [[Kasimir III Suuri]] antoi sille etuoikeuksia sekä otti kaivosmiehet suojelukseensa. Suola kulki [[Krakovan kangashallin]] kautta maailmalle, ja tulot olivat sen mukaiset. Pöydässä suola näyttää kyllä paljon vaatimattomammalta.
+KYSYMYS: Kerro lisää: Kasimir III Suuri
+
+### 439
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaivos, jonka pohjalle veistettiin kirkkosali siitä, mikä louhittiin pois
+Tietoruudun teksti: Runsaan kymmenen kilometrin päässä Krakovasta on kaivos, jota on kaivettu 1200-luvulta lähtien — ja jo sitä ennen paikalla otettiin talteen maasta nousevaa suolavettä ja keitettiin siitä suolaa. Vanhin asiakirja on vuodelta 1044. Kaivosta johti kuninkaallinen Żupy Krakowskie, ja Kasimir III Suuri antoi sille etuoikeuksia, otti kaivosmiehet suojelukseensa ja perusti kaivoksen viereen sairaalan vuonna 1363. Hänestä sanotaan, että hän muutti puisen Puolan kiviseksi — osaksi siksi, että naapurimetsien puu meni kaivoksen tukirakenteisiin ja tulot olivat sen mukaiset. Juuri tämä suola kulki Krakovan kangashallin läpi maailmalle. Se ei muuten ole valkoista: suolakivi on eri sävyistä harmaata ja muistuttaa enemmän kiillottamatonta graniittia kuin sitä, mitä pöydällä on.
+
+Isoisäsi kävi maan päällä juuri silloin, kun kaivos oli parhaimmillaan: vuoteen 1871 mennessä sitä pidettiin yhtenä maailman …
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Historia: Mies joka pysäytti Auringon ja liikutti Maata] 1543 — Nikolaus Kopernikus opiskeli Krakovan yliopistossa ja työskenteli myöhemmin katolisena kirkonmiehenä Fromborkissa, mutta hänen elämäntyönsä oli tähtitiede. Vuonna 1543, juuri ennen kuolemaansa, hän julkaisi teoksen De revolutionibus orbium coelestium, jossa hän esitti Auringon eikä Maan olevan aurinkokunnan keskipiste. Ajatus ei ollut aivan uusi — antiikin kreikkalainen Aristarkhos Samoslainen oli esittänyt samankaltaisen mallin jo lähes kaksi vuosituhatta aiemmin — mutta Kopernikuksen teos käynnisti tieteellisen vallankumouksen, joka muutti lopullisesti käsityksen ihmisen paikasta maailmankaikkeudessa.
+- [Puola — maalehti / Historia: Suolakaivos jossa on kirkko maan alla] 13. vuosisata — Wieliczkan suolakaivos Krakovan lähellä on kaivettu 1200-luvulta lähtien, ja suolaa louhittiin siellä yhtäjaksoisesti aina vuoteen 1996 asti — yksi maailman vanhimmista toimivista kaivoksista. Kaivos ulottuu 327 metrin syvyyteen ja yli 287 kilometrin käytäväverkostoon. Vuosisatojen aikana kaivosmiehet veistivät suolasta patsaita, kappeleita ja jopa kokonaisia kirkkosaleja kattokruunuineen — kaikki, myös valaisimet, on veistetty tai puhallettu suolasta. Nykyään kaivos on Unescon maailmanperintökohde ja yksi Puolan suosituimmista nähtävyyksistä.
+AIEMPI KYSYMYS: Miksi suolasta kannatti kaivaa vuori tyhjäksi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Wieliczkan]] kaivoksessa kaivettu suola oli ennen jääkaappeja välttämätöntä, koska sillä säilöttiin ruokaa, ja siitä maksettiin hyvin. Kaivosta johti kuninkaallinen Żupy Krakowskie, ja [[Kasimir III Suuri]] antoi sille etuoikeuksia sekä otti kaivosmiehet suojelukseensa. Suola kulki [[Krakovan kangashallin]] kautta maailmalle, ja tulot olivat sen mukaiset. Pöydässä suola näyttää kyllä paljon vaatimattomammalta.
+KYSYMYS: Kerro lisää: Krakovan kangashallin
+
+### 440
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaivos, jonka pohjalle veistettiin kirkkosali siitä, mikä louhittiin pois
+Tietoruudun teksti: Runsaan kymmenen kilometrin päässä Krakovasta on kaivos, jota on kaivettu 1200-luvulta lähtien — ja jo sitä ennen paikalla otettiin talteen maasta nousevaa suolavettä ja keitettiin siitä suolaa. Vanhin asiakirja on vuodelta 1044. Kaivosta johti kuninkaallinen Żupy Krakowskie, ja Kasimir III Suuri antoi sille etuoikeuksia, otti kaivosmiehet suojelukseensa ja perusti kaivoksen viereen sairaalan vuonna 1363. Hänestä sanotaan, että hän muutti puisen Puolan kiviseksi — osaksi siksi, että naapurimetsien puu meni kaivoksen tukirakenteisiin ja tulot olivat sen mukaiset. Juuri tämä suola kulki Krakovan kangashallin läpi maailmalle. Se ei muuten ole valkoista: suolakivi on eri sävyistä harmaata ja muistuttaa enemmän kiillottamatonta graniittia kuin sitä, mitä pöydällä on.
+
+Isoisäsi kävi maan päällä juuri silloin, kun kaivos oli parhaimmillaan: vuoteen 1871 mennessä sitä pidettiin yhtenä maailman …
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+AIEMPI KYSYMYS: Miten kappelin voi veistää siitä, mikä louhitaan pois?
+AIEMPI VASTAUS (Livia):
+Ai se kappeli. Suolakivi on pehmeää kiveä, joten sitä pystyy työstämään käsityökaluilla toisin kuin esimerkiksi graniittia. [[Wieliczkan]] kaivoksessa kaivosmiehet veistivät suolasta alttareita, patsaita ja kokonaisia kirkkosaleja suoraan kaivoksen seiniin ja lattiaan. [[Pyhän Kingan kappeli]] on tunnetuin esimerkki, ja kerrotaan, että siellä myös kattokruunut on tehty suolakiteistä.
+
+Minä viihdyn mieluummin taivaalla, koska maan alla ei ole yhtään ilmavirtaa. Suolakiteistä tehty kattokruunu kuulostaa silti niin kauniilta, että voisin kerran käydä katsomassa.
+KYSYMYS: Kerro lisää: Pyhän Kingan kappeli
+
+### 441
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaivos, jonka pohjalle veistettiin kirkkosali siitä, mikä louhittiin pois
+Tietoruudun teksti: Runsaan kymmenen kilometrin päässä Krakovasta on kaivos, jota on kaivettu 1200-luvulta lähtien — ja jo sitä ennen paikalla otettiin talteen maasta nousevaa suolavettä ja keitettiin siitä suolaa. Vanhin asiakirja on vuodelta 1044. Kaivosta johti kuninkaallinen Żupy Krakowskie, ja Kasimir III Suuri antoi sille etuoikeuksia, otti kaivosmiehet suojelukseensa ja perusti kaivoksen viereen sairaalan vuonna 1363. Hänestä sanotaan, että hän muutti puisen Puolan kiviseksi — osaksi siksi, että naapurimetsien puu meni kaivoksen tukirakenteisiin ja tulot olivat sen mukaiset. Juuri tämä suola kulki Krakovan kangashallin läpi maailmalle. Se ei muuten ole valkoista: suolakivi on eri sävyistä harmaata ja muistuttaa enemmän kiillottamatonta graniittia kuin sitä, mitä pöydällä on.
+
+Isoisäsi kävi maan päällä juuri silloin, kun kaivos oli parhaimmillaan: vuoteen 1871 mennessä sitä pidettiin yhtenä maailman …
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Historia: Suolakaivos jossa on kirkko maan alla] 13. vuosisata — Wieliczkan suolakaivos Krakovan lähellä on kaivettu 1200-luvulta lähtien, ja suolaa louhittiin siellä yhtäjaksoisesti aina vuoteen 1996 asti — yksi maailman vanhimmista toimivista kaivoksista. Kaivos ulottuu 327 metrin syvyyteen ja yli 287 kilometrin käytäväverkostoon. Vuosisatojen aikana kaivosmiehet veistivät suolasta patsaita, kappeleita ja jopa kokonaisia kirkkosaleja kattokruunuineen — kaikki, myös valaisimet, on veistetty tai puhallettu suolasta. Nykyään kaivos on Unescon maailmanperintökohde ja yksi Puolan suosituimmista nähtävyyksistä.
+AIEMPI KYSYMYS: Mitä kaivokselle tapahtuu, kun sen tavara loppuu kaupasta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kaupallinen suolan louhinta [[Wieliczkan kaivoksessa]] päättyi 1990-luvulla, mutta tarkasta vuodesta en ole varma. Sen jälkeen kaivos on toiminut museona ja matkailukohteena, ja se on otettu [[maailmanperintöluetteloon]]. Kyllä kaivoskin osaa vaihtaa ammattia, kun tavara loppuu.
+KYSYMYS: Kerro lisää: Wieliczkan kaivoksessa
+
+### 442
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaivos, jonka pohjalle veistettiin kirkkosali siitä, mikä louhittiin pois
+Tietoruudun teksti: Runsaan kymmenen kilometrin päässä Krakovasta on kaivos, jota on kaivettu 1200-luvulta lähtien — ja jo sitä ennen paikalla otettiin talteen maasta nousevaa suolavettä ja keitettiin siitä suolaa. Vanhin asiakirja on vuodelta 1044. Kaivosta johti kuninkaallinen Żupy Krakowskie, ja Kasimir III Suuri antoi sille etuoikeuksia, otti kaivosmiehet suojelukseensa ja perusti kaivoksen viereen sairaalan vuonna 1363. Hänestä sanotaan, että hän muutti puisen Puolan kiviseksi — osaksi siksi, että naapurimetsien puu meni kaivoksen tukirakenteisiin ja tulot olivat sen mukaiset. Juuri tämä suola kulki Krakovan kangashallin läpi maailmalle. Se ei muuten ole valkoista: suolakivi on eri sävyistä harmaata ja muistuttaa enemmän kiillottamatonta graniittia kuin sitä, mitä pöydällä on.
+
+Isoisäsi kävi maan päällä juuri silloin, kun kaivos oli parhaimmillaan: vuoteen 1871 mennessä sitä pidettiin yhtenä maailman …
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mitä kaivokselle tapahtuu, kun sen tavara loppuu kaupasta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kaupallinen suolan louhinta [[Wieliczkan kaivoksessa]] päättyi 1990-luvulla, mutta tarkasta vuodesta en ole varma. Sen jälkeen kaivos on toiminut museona ja matkailukohteena, ja se on otettu [[maailmanperintöluetteloon]]. Kyllä kaivoskin osaa vaihtaa ammattia, kun tavara loppuu.
+KYSYMYS: Kerro lisää: maailmanperintöluetteloon
+
+### 443
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaivos, jonka pohjalle veistettiin kirkkosali siitä, mikä louhittiin pois
+Tietoruudun teksti: Runsaan kymmenen kilometrin päässä Krakovasta on kaivos, jota on kaivettu 1200-luvulta lähtien — ja jo sitä ennen paikalla otettiin talteen maasta nousevaa suolavettä ja keitettiin siitä suolaa. Vanhin asiakirja on vuodelta 1044. Kaivosta johti kuninkaallinen Żupy Krakowskie, ja Kasimir III Suuri antoi sille etuoikeuksia, otti kaivosmiehet suojelukseensa ja perusti kaivoksen viereen sairaalan vuonna 1363. Hänestä sanotaan, että hän muutti puisen Puolan kiviseksi — osaksi siksi, että naapurimetsien puu meni kaivoksen tukirakenteisiin ja tulot olivat sen mukaiset. Juuri tämä suola kulki Krakovan kangashallin läpi maailmalle. Se ei muuten ole valkoista: suolakivi on eri sävyistä harmaata ja muistuttaa enemmän kiillottamatonta graniittia kuin sitä, mitä pöydällä on.
+
+Isoisäsi kävi maan päällä juuri silloin, kun kaivos oli parhaimmillaan: vuoteen 1871 mennessä sitä pidettiin yhtenä maailman …
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Timbuktu — kaupunkilehti / Timbuktu: Suola tulee pohjoisesta, kolme viikkoa kerrallaan] Timbuktu oli Saharan kauppareitin eteläinen päätepiste, ja siihen koko kaupunki perustui. Vielä 1900-luvun jälkipuoliskolle asti kivisuola tuotiin kuudensadankuudenkymmenenneljän kilometrin päästä pohjoisesta kahdessa vuosittaisessa karavaanissa: toinen lähti marraskuun alussa, toinen maaliskuun lopussa. Karavaanissa oli useita tuhansia kameleja, matka kesti kolme viikkoa suuntaansa, ja paluumatkalla jokainen kameli kantoi neljä tai viisi kolmenkymmenen kilon laattaa. Menomatkalla vietiin ruokaa kaivosmiehille. Nykyään laatat tulevat kuorma-autolla, ja Timbuktusta suola jatkaa veneellä muualle Maliin.
+- [Gao — kaupunkilehti / Songhain kultainen valtakunta: Kulta ja suola kulkivat jokea pitkin] Kulta-suolakauppa oli koko Sahelin talouden selkäranka, ja Songhain valtakunta hallitsi sen tärkeintä solmukohtaa. Pohjoisesta tuotu suola ja etelästä noussut kulta vaihtoivat kuljetusvälinettä Timbuktussa, kun kamelikaravaanit kohtasivat joella kulkevat lastiveneet. Tavarat matkasivat vielä noin 800 kilometrin matkan Nigerjokea pitkin Djennéstä Gaohon ja takaisin, ja jokivarren kaupungit vaurastuivat tästä liikenteestä vuosisatojen ajan. Ilmasta katsottuna joki näyttää kapealta vihreältä nauhalta hiekan keskellä - juuri tämä nauha teki Songhaista mahdollisen keskellä maailman suurinta aavikkoa.
+AIEMPI KYSYMYS: Miten suolakerrokset ovat syntyneet maan alle?
+AIEMPI VASTAUS (Livia):
+Just niin. Suolakerrokset syntyvät, kun merivesi haihtuu. Muinainen matala meri tai merenlahti on voinut eristyä ja kuivua, jolloin veteen liuenneet suolat saostuivat pohjalle kerroksiksi, jotka myöhemmin peittyivät muilla sedimenteillä. [[Wieliczkan]] suola on peräisin tällaisesta muinaisesta merestä, joka haihtui miljoonia vuosia sitten, ja [[suolakivi]] on tämän kerrostuman kiinteää muotoa. Merestä kuiville, ja nyt siellä käydään kävelemässä.
+KYSYMYS: Kerro lisää: suolakivi
+
+### 444
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaivos, jonka pohjalle veistettiin kirkkosali siitä, mikä louhittiin pois
+Tietoruudun teksti: Runsaan kymmenen kilometrin päässä Krakovasta on kaivos, jota on kaivettu 1200-luvulta lähtien — ja jo sitä ennen paikalla otettiin talteen maasta nousevaa suolavettä ja keitettiin siitä suolaa. Vanhin asiakirja on vuodelta 1044. Kaivosta johti kuninkaallinen Żupy Krakowskie, ja Kasimir III Suuri antoi sille etuoikeuksia, otti kaivosmiehet suojelukseensa ja perusti kaivoksen viereen sairaalan vuonna 1363. Hänestä sanotaan, että hän muutti puisen Puolan kiviseksi — osaksi siksi, että naapurimetsien puu meni kaivoksen tukirakenteisiin ja tulot olivat sen mukaiset. Juuri tämä suola kulki Krakovan kangashallin läpi maailmalle. Se ei muuten ole valkoista: suolakivi on eri sävyistä harmaata ja muistuttaa enemmän kiillottamatonta graniittia kuin sitä, mitä pöydällä on.
+
+Isoisäsi kävi maan päällä juuri silloin, kun kaivos oli parhaimmillaan: vuoteen 1871 mennessä sitä pidettiin yhtenä maailman …
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+AIEMPI KYSYMYS: Kuka oli Kasimir III Suuri?
+AIEMPI VASTAUS (Livia):
+No jopas. Kasimir III Suuri oli Puolan kuningas, joka hallitsi vuosina 1333–1370. Hän oli [[Piast-suvun]] viimeinen kuningas, ja hänet muistetaan lainsäädännön, linnoitusten ja kaupunkien kehittämisestä. Vuonna 1364 hän perusti Krakovaan yliopiston, josta tuli myöhemmin [[Jagellonian yliopisto]]. Hänestä sanotaan, että hän muutti puisen Puolan kiviseksi. Aika paljon tehtyä yhdelle kuninkaalle.
+KYSYMYS: Kerro lisää: Piast-suvun
+
+### 445
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaivos, jonka pohjalle veistettiin kirkkosali siitä, mikä louhittiin pois
+Tietoruudun teksti: Runsaan kymmenen kilometrin päässä Krakovasta on kaivos, jota on kaivettu 1200-luvulta lähtien — ja jo sitä ennen paikalla otettiin talteen maasta nousevaa suolavettä ja keitettiin siitä suolaa. Vanhin asiakirja on vuodelta 1044. Kaivosta johti kuninkaallinen Żupy Krakowskie, ja Kasimir III Suuri antoi sille etuoikeuksia, otti kaivosmiehet suojelukseensa ja perusti kaivoksen viereen sairaalan vuonna 1363. Hänestä sanotaan, että hän muutti puisen Puolan kiviseksi — osaksi siksi, että naapurimetsien puu meni kaivoksen tukirakenteisiin ja tulot olivat sen mukaiset. Juuri tämä suola kulki Krakovan kangashallin läpi maailmalle. Se ei muuten ole valkoista: suolakivi on eri sävyistä harmaata ja muistuttaa enemmän kiillottamatonta graniittia kuin sitä, mitä pöydällä on.
+
+Isoisäsi kävi maan päällä juuri silloin, kun kaivos oli parhaimmillaan: vuoteen 1871 mennessä sitä pidettiin yhtenä maailman …
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+AIEMPI KYSYMYS: Kuka oli Kasimir III Suuri?
+AIEMPI VASTAUS (Livia):
+No jopas. Kasimir III Suuri oli Puolan kuningas, joka hallitsi vuosina 1333–1370. Hän oli [[Piast-suvun]] viimeinen kuningas, ja hänet muistetaan lainsäädännön, linnoitusten ja kaupunkien kehittämisestä. Vuonna 1364 hän perusti Krakovaan yliopiston, josta tuli myöhemmin [[Jagellonian yliopisto]]. Hänestä sanotaan, että hän muutti puisen Puolan kiviseksi. Aika paljon tehtyä yhdelle kuninkaalle.
+KYSYMYS: Kerro lisää: Jagellonian yliopisto
+
+### 446
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Piparkakku, jonka reseptiä kaksi kaupunkia vahti toisiltaan kaksisataa vuotta
+Tietoruudun teksti: Veikselin varrella Krakovasta alavirtaan on kaupunki, jonka ammatti on piparkakku. Työ laajeni siellä 1200-luvulta lähtien, ja syy oli sijainti: hyvä maaperä antoi vehnän, lähikylät hunajan, ja mausteet tulivat kaukaa — pääosin Intiasta Mustanmeren ja Lvivin kautta tai meritse Gdańskin satamaan. Varhaisin maininta on vuodelta 1380 ja koskee leipuria nimeltä Niclos Czana. Maine levisi nopeasti, ja se johti asetelmaan, joka kuulostaa nykyaikaiselta: Toruń ja Nürnberg varjelivat reseptejään toisiltaan niin kauan, että lopulta ne tekivät vuonna 1556 sopimuksen, jonka mukaan kumpikin sai leipoa toisen erikoisuuksia. Kaupunki tuki kauppaa verohelpotuksilla, ja 1500-luvulla lähistön sistersiläisluostari vaurastui pääosin tällä yhdellä työllä.
+
+Sitten se melkein loppui. 1700- ja 1800-luvulla käsityö hiipui, ja vuonna 1825 koko kaupungissa oli jäljellä kolme leipuria. Mitä seurasi, oli tehdas: G…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+AIEMPI KYSYMYS: Miksi mausteleivonnasta tuli juuri yhden kaupungin ammatti?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Piparkakkuammatin synty johtui sijainnista: hyvä maaperä antoi vehnää, lähikylät hunajaa, ja mausteet tulivat kaukaa, pääosin Intiasta [[Mustanmeren]] ja [[Lvivin]] kautta tai meritse [[Gdańskin]] satamaan. Kaupunki tuki kauppaa verohelpotuksilla, ja 1500-luvulla lähistön sistersiläisluostari vaurastui pääosin tällä yhdellä työllä. Varhaisin maininta on vuodelta 1380 ja koskee leipuria nimeltä Niclos Czana. Ja tämä kaikki ilman, että kukaan kysyi pullasta.
+KYSYMYS: Kerro lisää: Mustanmeren
+
+### 447
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Piparkakku, jonka reseptiä kaksi kaupunkia vahti toisiltaan kaksisataa vuotta
+Tietoruudun teksti: Veikselin varrella Krakovasta alavirtaan on kaupunki, jonka ammatti on piparkakku. Työ laajeni siellä 1200-luvulta lähtien, ja syy oli sijainti: hyvä maaperä antoi vehnän, lähikylät hunajan, ja mausteet tulivat kaukaa — pääosin Intiasta Mustanmeren ja Lvivin kautta tai meritse Gdańskin satamaan. Varhaisin maininta on vuodelta 1380 ja koskee leipuria nimeltä Niclos Czana. Maine levisi nopeasti, ja se johti asetelmaan, joka kuulostaa nykyaikaiselta: Toruń ja Nürnberg varjelivat reseptejään toisiltaan niin kauan, että lopulta ne tekivät vuonna 1556 sopimuksen, jonka mukaan kumpikin sai leipoa toisen erikoisuuksia. Kaupunki tuki kauppaa verohelpotuksilla, ja 1500-luvulla lähistön sistersiläisluostari vaurastui pääosin tällä yhdellä työllä.
+
+Sitten se melkein loppui. 1700- ja 1800-luvulla käsityö hiipui, ja vuonna 1825 koko kaupungissa oli jäljellä kolme leipuria. Mitä seurasi, oli tehdas: G…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Historia: Nuorisoseurasta syntyi armeijan siemen] 1914 — Galitsian ukrainalaiset olivat 1900-luvun alussa perustaneet satoja Sitš-nimisiä liikunta- ja palokuntaseuroja, jotka hakivat innoituksensa kasakoiden Zaporižžjan Sitšistä. Elokuussa 1914 näistä seuroista koottiin Itävalta-Unkarin armeijaan noin 5 000 miehen vapaaehtoislegioona, Ukrainalaiset sitšiläisampujat, joka taisteli Venäjää vastaan Karpaateilla ja Galitsiassa. Sodan päätyttyä legioonan sotilaat muodostivat Länsi-Ukrainan kansantasavallan armeijan ytimen ja taistelivat vielä Puolaa vastaan, kunnes yksikkö hajotettiin toukokuussa 1920. Lvivin Lytšakivin hautausmaalle pystytettiin heille muistomerkki.
+AIEMPI KYSYMYS: Miksi mausteleivonnasta tuli juuri yhden kaupungin ammatti?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Piparkakkuammatin synty johtui sijainnista: hyvä maaperä antoi vehnää, lähikylät hunajaa, ja mausteet tulivat kaukaa, pääosin Intiasta [[Mustanmeren]] ja [[Lvivin]] kautta tai meritse [[Gdańskin]] satamaan. Kaupunki tuki kauppaa verohelpotuksilla, ja 1500-luvulla lähistön sistersiläisluostari vaurastui pääosin tällä yhdellä työllä. Varhaisin maininta on vuodelta 1380 ja koskee leipuria nimeltä Niclos Czana. Ja tämä kaikki ilman, että kukaan kysyi pullasta.
+KYSYMYS: Kerro lisää: Lvivin
+
+### 448
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Piparkakku, jonka reseptiä kaksi kaupunkia vahti toisiltaan kaksisataa vuotta
+Tietoruudun teksti: Veikselin varrella Krakovasta alavirtaan on kaupunki, jonka ammatti on piparkakku. Työ laajeni siellä 1200-luvulta lähtien, ja syy oli sijainti: hyvä maaperä antoi vehnän, lähikylät hunajan, ja mausteet tulivat kaukaa — pääosin Intiasta Mustanmeren ja Lvivin kautta tai meritse Gdańskin satamaan. Varhaisin maininta on vuodelta 1380 ja koskee leipuria nimeltä Niclos Czana. Maine levisi nopeasti, ja se johti asetelmaan, joka kuulostaa nykyaikaiselta: Toruń ja Nürnberg varjelivat reseptejään toisiltaan niin kauan, että lopulta ne tekivät vuonna 1556 sopimuksen, jonka mukaan kumpikin sai leipoa toisen erikoisuuksia. Kaupunki tuki kauppaa verohelpotuksilla, ja 1500-luvulla lähistön sistersiläisluostari vaurastui pääosin tällä yhdellä työllä.
+
+Sitten se melkein loppui. 1700- ja 1800-luvulla käsityö hiipui, ja vuonna 1825 koko kaupungissa oli jäljellä kolme leipuria. Mitä seurasi, oli tehdas: G…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+AIEMPI KYSYMYS: Miksi mausteleivonnasta tuli juuri yhden kaupungin ammatti?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Piparkakkuammatin synty johtui sijainnista: hyvä maaperä antoi vehnää, lähikylät hunajaa, ja mausteet tulivat kaukaa, pääosin Intiasta [[Mustanmeren]] ja [[Lvivin]] kautta tai meritse [[Gdańskin]] satamaan. Kaupunki tuki kauppaa verohelpotuksilla, ja 1500-luvulla lähistön sistersiläisluostari vaurastui pääosin tällä yhdellä työllä. Varhaisin maininta on vuodelta 1380 ja koskee leipuria nimeltä Niclos Czana. Ja tämä kaikki ilman, että kukaan kysyi pullasta.
+KYSYMYS: Kerro lisää: Gdańskin
+
+### 449
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Piparkakku, jonka reseptiä kaksi kaupunkia vahti toisiltaan kaksisataa vuotta
+Tietoruudun teksti: Veikselin varrella Krakovasta alavirtaan on kaupunki, jonka ammatti on piparkakku. Työ laajeni siellä 1200-luvulta lähtien, ja syy oli sijainti: hyvä maaperä antoi vehnän, lähikylät hunajan, ja mausteet tulivat kaukaa — pääosin Intiasta Mustanmeren ja Lvivin kautta tai meritse Gdańskin satamaan. Varhaisin maininta on vuodelta 1380 ja koskee leipuria nimeltä Niclos Czana. Maine levisi nopeasti, ja se johti asetelmaan, joka kuulostaa nykyaikaiselta: Toruń ja Nürnberg varjelivat reseptejään toisiltaan niin kauan, että lopulta ne tekivät vuonna 1556 sopimuksen, jonka mukaan kumpikin sai leipoa toisen erikoisuuksia. Kaupunki tuki kauppaa verohelpotuksilla, ja 1500-luvulla lähistön sistersiläisluostari vaurastui pääosin tällä yhdellä työllä.
+
+Sitten se melkein loppui. 1700- ja 1800-luvulla käsityö hiipui, ja vuonna 1825 koko kaupungissa oli jäljellä kolme leipuria. Mitä seurasi, oli tehdas: G…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Rakennukset] Belgian kaupungeissa kannattaa katsoa ylös: kiltojen kultaiset julkisivut, jugendin ensimmäiset asuintalot, aseman kupolisali ja rautakiteen mallinen torni kertovat kukin omasta ajastaan.
+AIEMPI KYSYMYS: Miten resepti pidetään salassa kokonaisen kaupungin kokoisena?
+AIEMPI VASTAUS (Livia):
+Hmm, salaisuuksia. Toruń ja Nürnberg varjelivat reseptejään toisiltaan pitkään, ja lopulta kaupungit tekivät vuonna 1556 sopimuksen, jonka mukaan kumpikin sai leipoa toisen erikoisuuksia. Keskiaikaisessa käsityössä salaisuus säilyi yleensä niin, että ammattitaito kulki vain [[kiltojen]] sisällä mestarilta oppipojalle, mutta Toruńin omista käytännöistä en ole varma. Esimerkiksi [[Nürnbergin]] piparkakkuperinne on samalla tavoin vanha. Pitkä salaisuus, ja silti se tuli tässä kerralla ilmi.
+KYSYMYS: Kerro lisää: kiltojen
+
+### 450
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Piparkakku, jonka reseptiä kaksi kaupunkia vahti toisiltaan kaksisataa vuotta
+Tietoruudun teksti: Veikselin varrella Krakovasta alavirtaan on kaupunki, jonka ammatti on piparkakku. Työ laajeni siellä 1200-luvulta lähtien, ja syy oli sijainti: hyvä maaperä antoi vehnän, lähikylät hunajan, ja mausteet tulivat kaukaa — pääosin Intiasta Mustanmeren ja Lvivin kautta tai meritse Gdańskin satamaan. Varhaisin maininta on vuodelta 1380 ja koskee leipuria nimeltä Niclos Czana. Maine levisi nopeasti, ja se johti asetelmaan, joka kuulostaa nykyaikaiselta: Toruń ja Nürnberg varjelivat reseptejään toisiltaan niin kauan, että lopulta ne tekivät vuonna 1556 sopimuksen, jonka mukaan kumpikin sai leipoa toisen erikoisuuksia. Kaupunki tuki kauppaa verohelpotuksilla, ja 1500-luvulla lähistön sistersiläisluostari vaurastui pääosin tällä yhdellä työllä.
+
+Sitten se melkein loppui. 1700- ja 1800-luvulla käsityö hiipui, ja vuonna 1825 koko kaupungissa oli jäljellä kolme leipuria. Mitä seurasi, oli tehdas: G…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Ruokaa ja tapakulttuuria: Markkinat, jotka avataan joka vuosi samana päivänä] 1628 — Joulumarkkinat ovat Saksassa oma vuodenaikansa. Nürnbergin Christkindlesmarkt on niistä kuuluisin, ja se mainitaan asiakirjoissa jo vuonna 1628. Markkinat avataan adventin alla ja suljetaan jouluaattona. Kojuissa myydään puisia leluja, kynttilöitä, paahdettuja manteleita ja Glühweiniä, joka on kuumaa maustettua viiniä — lapsille sama juoma tehdään ilman viiniä ja se on nimeltään Kinderpunsch.
+AIEMPI KYSYMYS: Miten resepti pidetään salassa kokonaisen kaupungin kokoisena?
+AIEMPI VASTAUS (Livia):
+Hmm, salaisuuksia. Toruń ja Nürnberg varjelivat reseptejään toisiltaan pitkään, ja lopulta kaupungit tekivät vuonna 1556 sopimuksen, jonka mukaan kumpikin sai leipoa toisen erikoisuuksia. Keskiaikaisessa käsityössä salaisuus säilyi yleensä niin, että ammattitaito kulki vain [[kiltojen]] sisällä mestarilta oppipojalle, mutta Toruńin omista käytännöistä en ole varma. Esimerkiksi [[Nürnbergin]] piparkakkuperinne on samalla tavoin vanha. Pitkä salaisuus, ja silti se tuli tässä kerralla ilmi.
+KYSYMYS: Kerro lisää: Nürnbergin
+
+### 451
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Piparkakku, jonka reseptiä kaksi kaupunkia vahti toisiltaan kaksisataa vuotta
+Tietoruudun teksti: Veikselin varrella Krakovasta alavirtaan on kaupunki, jonka ammatti on piparkakku. Työ laajeni siellä 1200-luvulta lähtien, ja syy oli sijainti: hyvä maaperä antoi vehnän, lähikylät hunajan, ja mausteet tulivat kaukaa — pääosin Intiasta Mustanmeren ja Lvivin kautta tai meritse Gdańskin satamaan. Varhaisin maininta on vuodelta 1380 ja koskee leipuria nimeltä Niclos Czana. Maine levisi nopeasti, ja se johti asetelmaan, joka kuulostaa nykyaikaiselta: Toruń ja Nürnberg varjelivat reseptejään toisiltaan niin kauan, että lopulta ne tekivät vuonna 1556 sopimuksen, jonka mukaan kumpikin sai leipoa toisen erikoisuuksia. Kaupunki tuki kauppaa verohelpotuksilla, ja 1500-luvulla lähistön sistersiläisluostari vaurastui pääosin tällä yhdellä työllä.
+
+Sitten se melkein loppui. 1700- ja 1800-luvulla käsityö hiipui, ja vuonna 1825 koko kaupungissa oli jäljellä kolme leipuria. Mitä seurasi, oli tehdas: G…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+AIEMPI KYSYMYS: Mitä leivontamuotti kertoo siitä, kenelle leivottiin?
+AIEMPI VASTAUS (Livia):
+Kato ny. Yleisesti ottaen [[piparkakkumuotteihin]] veistettiin kuvia, jotka sopivat tilaisuuteen: pyhimyksiä ja hallitsijoita kirkkojuhliin, sydämiä ja pareja hääpöytään. Muotista voi siis päätellä, millaiseen juhlaan tai ostajaan kakku oli tarkoitettu, ja kuvat kertovat myös ajan makumaailmasta ja uskosta. Toruńin muottien tarkkoja aiheita en ole varma. Muotti on kyl se osa, jonka minä jättäisin syömättä.
+KYSYMYS: Kerro lisää: piparkakkumuotteihin
+
+### 452
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Piparkakku, jonka reseptiä kaksi kaupunkia vahti toisiltaan kaksisataa vuotta
+Tietoruudun teksti: Veikselin varrella Krakovasta alavirtaan on kaupunki, jonka ammatti on piparkakku. Työ laajeni siellä 1200-luvulta lähtien, ja syy oli sijainti: hyvä maaperä antoi vehnän, lähikylät hunajan, ja mausteet tulivat kaukaa — pääosin Intiasta Mustanmeren ja Lvivin kautta tai meritse Gdańskin satamaan. Varhaisin maininta on vuodelta 1380 ja koskee leipuria nimeltä Niclos Czana. Maine levisi nopeasti, ja se johti asetelmaan, joka kuulostaa nykyaikaiselta: Toruń ja Nürnberg varjelivat reseptejään toisiltaan niin kauan, että lopulta ne tekivät vuonna 1556 sopimuksen, jonka mukaan kumpikin sai leipoa toisen erikoisuuksia. Kaupunki tuki kauppaa verohelpotuksilla, ja 1500-luvulla lähistön sistersiläisluostari vaurastui pääosin tällä yhdellä työllä.
+
+Sitten se melkein loppui. 1700- ja 1800-luvulla käsityö hiipui, ja vuonna 1825 koko kaupungissa oli jäljellä kolme leipuria. Mitä seurasi, oli tehdas: G…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sri Lanka — maalehti / Ruoka: Aito kaneli irrotetaan messinkitangolla] Cinnamomum verum eli aito kaneli on kotoisin Sri Lankasta, ja saari tuottaa yhä 80–90 prosenttia maailman aidosta kanelista; kasvin vanha tieteellinen nimi zeylanicum kertoo saman. Puu kasvaisi viisitoistametriseksi, mutta viljelmillä se pidetään kolmen metrin pensaana, josta leikataan ohuita oksia. Ulkokuori poistetaan, ja sisäkuori irrotetaan hankaamalla sitä messinkitangolla ja halkaisemalla veitsellä, jotta se saataisiin irti mahdollisimman ehjänä. Käärö kuivataan ensin varjossa ja sitten pimeässä. Ehjä pitkä käärö on arvokkaampi kuin murut, ja luokat nimetään halkaisijan mukaan: Alba on alle kuusi milliä.
+AIEMPI KYSYMYS: Mitä mausteita piparkakkuun tavallisesti tulee?
+AIEMPI VASTAUS (Livia):
+Mmm— mausteita. Piparkakun mausteet vaihtelevat reseptin mukaan, mutta tavallisimpia ovat [[kaneli]], [[inkivääri]] ja [[neilikka]], ja usein mukana on myös kardemummaa tai maustepippuria. Perinteisessä piparkakkutaikinassa makeuttajana käytetään usein hunajaa, ja Toruńissa hunaja tuli lähikylistä.
+
+Tuoksun arvaan jo korkealta, ja se on minusta paras osa. Pulla ja piparkakku pitäisi vain pitää samassa taskussa.
+KYSYMYS: Kerro lisää: kaneli
+
+### 453
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Piparkakku, jonka reseptiä kaksi kaupunkia vahti toisiltaan kaksisataa vuotta
+Tietoruudun teksti: Veikselin varrella Krakovasta alavirtaan on kaupunki, jonka ammatti on piparkakku. Työ laajeni siellä 1200-luvulta lähtien, ja syy oli sijainti: hyvä maaperä antoi vehnän, lähikylät hunajan, ja mausteet tulivat kaukaa — pääosin Intiasta Mustanmeren ja Lvivin kautta tai meritse Gdańskin satamaan. Varhaisin maininta on vuodelta 1380 ja koskee leipuria nimeltä Niclos Czana. Maine levisi nopeasti, ja se johti asetelmaan, joka kuulostaa nykyaikaiselta: Toruń ja Nürnberg varjelivat reseptejään toisiltaan niin kauan, että lopulta ne tekivät vuonna 1556 sopimuksen, jonka mukaan kumpikin sai leipoa toisen erikoisuuksia. Kaupunki tuki kauppaa verohelpotuksilla, ja 1500-luvulla lähistön sistersiläisluostari vaurastui pääosin tällä yhdellä työllä.
+
+Sitten se melkein loppui. 1700- ja 1800-luvulla käsityö hiipui, ja vuonna 1825 koko kaupungissa oli jäljellä kolme leipuria. Mitä seurasi, oli tehdas: G…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nigeria — maalehti / Ruoka: Vartaat, joissa mauste on maapähkinää] Suya on hausalainen katuruoka, alun perin nimeltään tsire. Ohuiksi viipaloitu naudan-, lampaan- tai vuohenliha pujotetaan puuvartaisiin ja marinoidaan yaji-mausteseoksessa, jossa on chiliä, inkivääriä, kuivattua sipulia ja kuli-kulia eli maapähkinäpuristetta. Kahta samanlaista yajia ei ole: jokainen myyjä sekoittaa omansa. Vartaat kastellaan öljyllä ja grillataan hiilillä, ja valmis liha leikataan suupaloiksi, joiden päälle ripotellaan lisää mausteseosta sekä sipulia ja tomaattia. Myyjää kutsutaan nimellä mai suya, suyan omistaja.
+- [Madagaskar — maalehti / Ruoka: Kansallisruoka, joka puuduttaa kielen] Romazava on liemi, jossa on naudanlihaa ja lehtivihanneksia. Erottava tekijä on anamalao, jonka keitetyt lehdet ja kukat jättävät suuhun lievän puutumisen — tunne on sama kuin jos kielelle olisi laittanut heikon sähkövirran. Mukaan tulee tavallisesti tomaattia, sipulia ja inkivääriä. Ruokaa ei mausteta valmiiksi tuliseksi: pöytään tuodaan sakay, chilistä, inkivääristä ja valkosipulista survottu tahna, ja jokainen sekoittaa sitä omaan annokseensa. Liemillä on omat tehtävänsä: ron-akoho eli kana ja inkivääri on kotikonsti flunssaan, ja rompatsa kuuluu synnyttäneen ruokavalioon.
+AIEMPI KYSYMYS: Mitä mausteita piparkakkuun tavallisesti tulee?
+AIEMPI VASTAUS (Livia):
+Mmm— mausteita. Piparkakun mausteet vaihtelevat reseptin mukaan, mutta tavallisimpia ovat [[kaneli]], [[inkivääri]] ja [[neilikka]], ja usein mukana on myös kardemummaa tai maustepippuria. Perinteisessä piparkakkutaikinassa makeuttajana käytetään usein hunajaa, ja Toruńissa hunaja tuli lähikylistä.
+
+Tuoksun arvaan jo korkealta, ja se on minusta paras osa. Pulla ja piparkakku pitäisi vain pitää samassa taskussa.
+KYSYMYS: Kerro lisää: inkivääri
+
+### 454
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Piparkakku, jonka reseptiä kaksi kaupunkia vahti toisiltaan kaksisataa vuotta
+Tietoruudun teksti: Veikselin varrella Krakovasta alavirtaan on kaupunki, jonka ammatti on piparkakku. Työ laajeni siellä 1200-luvulta lähtien, ja syy oli sijainti: hyvä maaperä antoi vehnän, lähikylät hunajan, ja mausteet tulivat kaukaa — pääosin Intiasta Mustanmeren ja Lvivin kautta tai meritse Gdańskin satamaan. Varhaisin maininta on vuodelta 1380 ja koskee leipuria nimeltä Niclos Czana. Maine levisi nopeasti, ja se johti asetelmaan, joka kuulostaa nykyaikaiselta: Toruń ja Nürnberg varjelivat reseptejään toisiltaan niin kauan, että lopulta ne tekivät vuonna 1556 sopimuksen, jonka mukaan kumpikin sai leipoa toisen erikoisuuksia. Kaupunki tuki kauppaa verohelpotuksilla, ja 1500-luvulla lähistön sistersiläisluostari vaurastui pääosin tällä yhdellä työllä.
+
+Sitten se melkein loppui. 1700- ja 1800-luvulla käsityö hiipui, ja vuonna 1825 koko kaupungissa oli jäljellä kolme leipuria. Mitä seurasi, oli tehdas: G…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tansania — maalehti / Ruoka: Nuput, jotka tekivät saarista maustesaaret] 1800-luku– — Mausteneilikka on kotoisin Indonesian Molukeilta, mutta Omanin sulttaanit toivat sen Sansibariin 1800-luvun alkupuolella, ja saaret nousivat maailman suurimmaksi neilikan tuottajaksi — etenkin Pemba, jonka punainen multa sopi puille. Neilikka on kuivattu kukannuppu, joka poimitaan käsin ennen kuin se ehtii avautua. Sansibarin osuus maailman tuotannosta on nykyään noin seitsemän prosenttia, kun Indonesia tuottaa kolme neljäsosaa. Mausteita kasvatetaan yhä: kanelia, muskottia, mustapippuria ja kookosta.
+AIEMPI KYSYMYS: Mitä mausteita piparkakkuun tavallisesti tulee?
+AIEMPI VASTAUS (Livia):
+Mmm— mausteita. Piparkakun mausteet vaihtelevat reseptin mukaan, mutta tavallisimpia ovat [[kaneli]], [[inkivääri]] ja [[neilikka]], ja usein mukana on myös kardemummaa tai maustepippuria. Perinteisessä piparkakkutaikinassa makeuttajana käytetään usein hunajaa, ja Toruńissa hunaja tuli lähikylistä.
+
+Tuoksun arvaan jo korkealta, ja se on minusta paras osa. Pulla ja piparkakku pitäisi vain pitää samassa taskussa.
+KYSYMYS: Kerro lisää: neilikka
+
+### 455
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Piparkakku, jonka reseptiä kaksi kaupunkia vahti toisiltaan kaksisataa vuotta
+Tietoruudun teksti: Veikselin varrella Krakovasta alavirtaan on kaupunki, jonka ammatti on piparkakku. Työ laajeni siellä 1200-luvulta lähtien, ja syy oli sijainti: hyvä maaperä antoi vehnän, lähikylät hunajan, ja mausteet tulivat kaukaa — pääosin Intiasta Mustanmeren ja Lvivin kautta tai meritse Gdańskin satamaan. Varhaisin maininta on vuodelta 1380 ja koskee leipuria nimeltä Niclos Czana. Maine levisi nopeasti, ja se johti asetelmaan, joka kuulostaa nykyaikaiselta: Toruń ja Nürnberg varjelivat reseptejään toisiltaan niin kauan, että lopulta ne tekivät vuonna 1556 sopimuksen, jonka mukaan kumpikin sai leipoa toisen erikoisuuksia. Kaupunki tuki kauppaa verohelpotuksilla, ja 1500-luvulla lähistön sistersiläisluostari vaurastui pääosin tällä yhdellä työllä.
+
+Sitten se melkein loppui. 1700- ja 1800-luvulla käsityö hiipui, ja vuonna 1825 koko kaupungissa oli jäljellä kolme leipuria. Mitä seurasi, oli tehdas: G…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Wawel] Isoisäsi kirjasi, että kuninkaat nukkuvat kirkon lattian alla ja että kaupunki kuuluu nyt keisarille. Molemmat pitivät paikkansa yhtä aikaa, ja juuri se oli kukkulan kipeä kohta. Wawel on jurakautista kalkkikiveä, karstiutunut ja luolia täynnä — yksi niistä on lohikäärmeluola — ja linna seisoo 228 metrissä Veikselin rannalla. Katedraalissa kruunattiin ja haudattiin Puolan hallitsijat, vaikka pääkaupunki siirtyi Varsovaan jo 1596. Sitten kukkula vaihtoi omistajaa. Vuoden 1795 jaon jälkeen Wawel joutui Itävallalle, ja sotilaat muuttivat sen kasarmiksi: sisäpihan renessanssikaarikäytävät muurattiin umpeen, sisätiloja muutettiin ja rakennuksia purettiin, kahden kirkon verran. 1800-luvun jälkipu…
+- [Krakova — kaupunkilehti / Historia: Wawel oli kasarmi ennen kuin siitä tuli museo] Wawel on jurakautista kalkkikiveä, karstiutunut ja luolia täynnä, ja linna seisoo 228 metrissä Veikselin rannalla. Katedraalissa kruunattiin ja haudattiin Puolan hallitsijat, vaikka pääkaupunki siirtyi Varsovaan jo 1596. Vuoden 1795 jaon jälkeen kukkula joutui Itävallalle, ja sotilaat muuttivat sen kasarmiksi: sisäpihan renessanssikaarikäytävät muurattiin umpeen ja rakennuksia purettiin. Vasta vuonna 1905 keisari Frans Joosef käski joukkonsa pois. Kunnostus rahoitettiin yleisellä keräyksellä, ja lahjoittajien nimet kaiverrettiin tiiliin, joista muurattiin muuri pohjoisen portin lähelle. Ne ovat siellä yhä ja niitä voi lukea.
+AIEMPI KYSYMYS: Miksi Gdańsk oli ennen niin tärkeä satama?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Gdańsk sijaitsee [[Veikselin]] suistossa Itämeren rannalla, joten Puolan sisämaan tuotteet, kuten vilja ja puutavara, kulkivat jokea pitkin sinne ja sieltä meritse muualle Eurooppaan. Kaupunki kuului myös [[Hansaliiton]] kaupunkeihin, mikä helpotti kauppaa [[Itämeren]] ympärillä. Ylhäältä se näytti varmaan lokien valtakunnalta.
+KYSYMYS: Kerro lisää: Veikselin
+
+### 456
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Piparkakku, jonka reseptiä kaksi kaupunkia vahti toisiltaan kaksisataa vuotta
+Tietoruudun teksti: Veikselin varrella Krakovasta alavirtaan on kaupunki, jonka ammatti on piparkakku. Työ laajeni siellä 1200-luvulta lähtien, ja syy oli sijainti: hyvä maaperä antoi vehnän, lähikylät hunajan, ja mausteet tulivat kaukaa — pääosin Intiasta Mustanmeren ja Lvivin kautta tai meritse Gdańskin satamaan. Varhaisin maininta on vuodelta 1380 ja koskee leipuria nimeltä Niclos Czana. Maine levisi nopeasti, ja se johti asetelmaan, joka kuulostaa nykyaikaiselta: Toruń ja Nürnberg varjelivat reseptejään toisiltaan niin kauan, että lopulta ne tekivät vuonna 1556 sopimuksen, jonka mukaan kumpikin sai leipoa toisen erikoisuuksia. Kaupunki tuki kauppaa verohelpotuksilla, ja 1500-luvulla lähistön sistersiläisluostari vaurastui pääosin tällä yhdellä työllä.
+
+Sitten se melkein loppui. 1700- ja 1800-luvulla käsityö hiipui, ja vuonna 1825 koko kaupungissa oli jäljellä kolme leipuria. Mitä seurasi, oli tehdas: G…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Historia: Kolme taloa, kolme eri vuosisataa] 1490 — Mazā Pils -kadulla seisoo kolmen talon rivi, jota kutsutaan kolmeksi veljeksi. Vanhin, numero 17, rakennettiin noin vuonna 1490 kauppa- ja työtilaksi, ja sen porrasmaisessa päädyssä näkyy myöhäisgotiikkaa. Keskimmäinen talo sai nykyisen ulkoasunsa vuonna 1646, ja kapea, nuorin talo valmistui vasta 1600-luvun lopulla — niin rivissä seisoo kolme eri vuosisataa vierekkäin. Hansaliiton aikaan Riiassa maksettiin veroa kadunpuoleisen julkisivun leveyden mukaan, minkä vuoksi kauppiastalot rakennettiin kapeiksi ja syviksi. Nykyään taloissa toimii Latvian arkkitehtuurimuseo.
+- [Bergen — kaupunkilehti / Bergen: Varasto, joka palveli kahteen suuntaan] Hansaliiton kontori perustettiin Bryggenin rantaan noin vuonna 1350, ja kun kaupungista kasvoi kaupan keskus, laiturin talot siirtyivät vähitellen saksalaisten kauppiaiden haltuun. Varastot palvelivat kahteen suuntaan: niihin säilöttiin Pohjois-Norjasta tuotua kalaa vietäväksi eteenpäin ja Euroopasta tuotua viljaa jaettavaksi paikallisille. Vuoden 1702 palo tuhosi hansakauppiaiden rakennukset, ja nykyisistä taloista vain noin neljäsosa on rakennettu sen jälkeen — loput ovat sitäkin nuorempia. Osa kivikellareista on kuitenkin 1400-luvulta.
+AIEMPI KYSYMYS: Miksi Gdańsk oli ennen niin tärkeä satama?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Gdańsk sijaitsee [[Veikselin]] suistossa Itämeren rannalla, joten Puolan sisämaan tuotteet, kuten vilja ja puutavara, kulkivat jokea pitkin sinne ja sieltä meritse muualle Eurooppaan. Kaupunki kuului myös [[Hansaliiton]] kaupunkeihin, mikä helpotti kauppaa [[Itämeren]] ympärillä. Ylhäältä se näytti varmaan lokien valtakunnalta.
+KYSYMYS: Kerro lisää: Hansaliiton
+
+### 457
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Piparkakku, jonka reseptiä kaksi kaupunkia vahti toisiltaan kaksisataa vuotta
+Tietoruudun teksti: Veikselin varrella Krakovasta alavirtaan on kaupunki, jonka ammatti on piparkakku. Työ laajeni siellä 1200-luvulta lähtien, ja syy oli sijainti: hyvä maaperä antoi vehnän, lähikylät hunajan, ja mausteet tulivat kaukaa — pääosin Intiasta Mustanmeren ja Lvivin kautta tai meritse Gdańskin satamaan. Varhaisin maininta on vuodelta 1380 ja koskee leipuria nimeltä Niclos Czana. Maine levisi nopeasti, ja se johti asetelmaan, joka kuulostaa nykyaikaiselta: Toruń ja Nürnberg varjelivat reseptejään toisiltaan niin kauan, että lopulta ne tekivät vuonna 1556 sopimuksen, jonka mukaan kumpikin sai leipoa toisen erikoisuuksia. Kaupunki tuki kauppaa verohelpotuksilla, ja 1500-luvulla lähistön sistersiläisluostari vaurastui pääosin tällä yhdellä työllä.
+
+Sitten se melkein loppui. 1700- ja 1800-luvulla käsityö hiipui, ja vuonna 1825 koko kaupungissa oli jäljellä kolme leipuria. Mitä seurasi, oli tehdas: G…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Magadan — kohdekartta / Kohdekartta: Nagajevanlahti] Jeannette Harbour 1852–1869 Nagajevanlahti on Tauinlahden osa Ohotanmeren pohjoisosassa. Se on 14,5 kilometriä pitkä ja suultaan 6,4 kilometriä leveä, ja sitä on kutsuttu koko Ohotanmeren parhaaksi ankkuripaikaksi. Jäätä lahdella on marraskuun lopulta kesäkuun puoliväliin. Kaupunki ja sen satama ovat lahden perukassa Staritskin niemimaan kannaksella. Lahdella on kaksi nimeä ja kaksi tarinaa. Virallinen nimi tulee amiraali Aleksei Nagajevilta (1704–1781), joka oli hydrografi ja kartantekijä ja jonka Beringinmeren ja Itämeren kartastot ilmestyivät vuonna 1752; niitä käytettiin vielä viisikymmentä vuotta myöhemmin, vaikka niissä ei ollut astekoordinaatistoa lainkaan. Toinen nimi on amerikkalai…
+- [Tallinna — kohdekartta / Kohdekartta: Raatihuoneentori] 1402–1404 Tallinnan raatihuone on koko Itämeren alueen ja Pohjoismaiden vanhin säilynyt raatihuone. Se rakennettiin vain parissa vuodessa, vuosina 1402-1404, keskiaikaisen torin laidalle. Hansakaupunkina Tallinnan kaupunginhallitus piti täällä kokouksiaan ja päätti niin kaupan, oikeuden kuin arjenkin asioista. Rakennuksen 36,8 metriä pitkässä salissa on nähtävissä yli 500 vuotta vanhoja seinävaatteita, jotka kuvaavat kuningas Salomonin elämää. Raatihuoneen 64 metriä korkeaan torniin johtaa peräti 115 porrasaskelmaa. Huipulla pyörii Vana Toomas, eli "Vanha Toomas" - kaupunginvartijaa esittävä tuuliviiri, joka on ollut Tallinnan tunnuskuva vuodesta 1530 lähtien. Alkuperäinen tuuliviiri on nyk…
+AIEMPI KYSYMYS: Miksi Gdańsk oli ennen niin tärkeä satama?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Gdańsk sijaitsee [[Veikselin]] suistossa Itämeren rannalla, joten Puolan sisämaan tuotteet, kuten vilja ja puutavara, kulkivat jokea pitkin sinne ja sieltä meritse muualle Eurooppaan. Kaupunki kuului myös [[Hansaliiton]] kaupunkeihin, mikä helpotti kauppaa [[Itämeren]] ympärillä. Ylhäältä se näytti varmaan lokien valtakunnalta.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 458
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki, jonka muistomerkkejä on yli tuhat — ja jokainen on polven korkeudella
+Tietoruudun teksti: Wrocławissa, Puolan kolmanneksi suurimmassa kaupungissa, on muistomerkki, jota ei näe jos katsoo eteenpäin. Kadunkulmissa, ikkunalaudoilla ja portaiden kaiteissa istuu pieniä pronssihahmoja, kaksikymmentä tai kolmekymmentä senttiä korkeita: krasnale, kääpiöt. Ensimmäinen niistä ei ollut leikkiä. Vuonna 2001 Świdnickan kadulle pystytettiin kääpiöpatsas muistomerkiksi Pomarańczowa Alternatywa -liikkeelle, jonka tunnus kääpiö oli, ja kaksi vuotta myöhemmin kaupunginjohtaja paljasti polven korkeudelle pienen laatan vanhan porvaristalon seinään torin ja Pyhän Elisabetin kirkon välissä. Sitten tuli kuvanveistäjä. Wrocławin taideakatemiasta valmistuneen Tomasz Moczekin viisi ensimmäistä hahmoa asetettiin paikoilleen elokuussa 2005: Miekkailija yliopiston lähelle, Teurastaja Stare Jatkin holvikäytävään, kaksi Sisyfosta Świdnickan kadulle ja Odranpesijä Piasekin sillan kupeeseen. Isoisäsi ei näh…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+AIEMPI KYSYMYS: Miksi kaupunki muistaa kääpiöillä eikä patsailla?
+AIEMPI VASTAUS (Livia):
+Joo, ne pikkuiset. Ensimmäinen kääpiöpatsas pystytettiin [[Wrocławin]] Świdnickan kadulle vuonna 2001 muistomerkiksi [[Pomarańczowa Alternatywa]] -liikkeelle, jonka tunnus kääpiö oli. Liikkeen tiedetään käyttäneen huumoria ja absurdeja katutapahtumia, joten pieni kääpiö sopii muistomerkiksi paremmin kuin juhlallinen patsas. Kaksi vuotta myöhemmin kaupunginjohtaja paljasti pienen laatan, ja elokuussa 2005 kuvanveistäjä [[Tomasz Moczek]] asetti paikoilleen viisi ensimmäistä hahmoa. Kyllä pienikin muistomerkki jaksaa naurattaa.
+KYSYMYS: Kerro lisää: Wrocławin
+
+### 459
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki, jonka muistomerkkejä on yli tuhat — ja jokainen on polven korkeudella
+Tietoruudun teksti: Wrocławissa, Puolan kolmanneksi suurimmassa kaupungissa, on muistomerkki, jota ei näe jos katsoo eteenpäin. Kadunkulmissa, ikkunalaudoilla ja portaiden kaiteissa istuu pieniä pronssihahmoja, kaksikymmentä tai kolmekymmentä senttiä korkeita: krasnale, kääpiöt. Ensimmäinen niistä ei ollut leikkiä. Vuonna 2001 Świdnickan kadulle pystytettiin kääpiöpatsas muistomerkiksi Pomarańczowa Alternatywa -liikkeelle, jonka tunnus kääpiö oli, ja kaksi vuotta myöhemmin kaupunginjohtaja paljasti polven korkeudelle pienen laatan vanhan porvaristalon seinään torin ja Pyhän Elisabetin kirkon välissä. Sitten tuli kuvanveistäjä. Wrocławin taideakatemiasta valmistuneen Tomasz Moczekin viisi ensimmäistä hahmoa asetettiin paikoilleen elokuussa 2005: Miekkailija yliopiston lähelle, Teurastaja Stare Jatkin holvikäytävään, kaksi Sisyfosta Świdnickan kadulle ja Odranpesijä Piasekin sillan kupeeseen. Isoisäsi ei näh…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+AIEMPI KYSYMYS: Miksi kaupunki muistaa kääpiöillä eikä patsailla?
+AIEMPI VASTAUS (Livia):
+Joo, ne pikkuiset. Ensimmäinen kääpiöpatsas pystytettiin [[Wrocławin]] Świdnickan kadulle vuonna 2001 muistomerkiksi [[Pomarańczowa Alternatywa]] -liikkeelle, jonka tunnus kääpiö oli. Liikkeen tiedetään käyttäneen huumoria ja absurdeja katutapahtumia, joten pieni kääpiö sopii muistomerkiksi paremmin kuin juhlallinen patsas. Kaksi vuotta myöhemmin kaupunginjohtaja paljasti pienen laatan, ja elokuussa 2005 kuvanveistäjä [[Tomasz Moczek]] asetti paikoilleen viisi ensimmäistä hahmoa. Kyllä pienikin muistomerkki jaksaa naurattaa.
+KYSYMYS: Kerro lisää: Pomarańczowa Alternatywa
+
+### 460
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki, jonka muistomerkkejä on yli tuhat — ja jokainen on polven korkeudella
+Tietoruudun teksti: Wrocławissa, Puolan kolmanneksi suurimmassa kaupungissa, on muistomerkki, jota ei näe jos katsoo eteenpäin. Kadunkulmissa, ikkunalaudoilla ja portaiden kaiteissa istuu pieniä pronssihahmoja, kaksikymmentä tai kolmekymmentä senttiä korkeita: krasnale, kääpiöt. Ensimmäinen niistä ei ollut leikkiä. Vuonna 2001 Świdnickan kadulle pystytettiin kääpiöpatsas muistomerkiksi Pomarańczowa Alternatywa -liikkeelle, jonka tunnus kääpiö oli, ja kaksi vuotta myöhemmin kaupunginjohtaja paljasti polven korkeudelle pienen laatan vanhan porvaristalon seinään torin ja Pyhän Elisabetin kirkon välissä. Sitten tuli kuvanveistäjä. Wrocławin taideakatemiasta valmistuneen Tomasz Moczekin viisi ensimmäistä hahmoa asetettiin paikoilleen elokuussa 2005: Miekkailija yliopiston lähelle, Teurastaja Stare Jatkin holvikäytävään, kaksi Sisyfosta Świdnickan kadulle ja Odranpesijä Piasekin sillan kupeeseen. Isoisäsi ei näh…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+AIEMPI KYSYMYS: Miksi kaupunki muistaa kääpiöillä eikä patsailla?
+AIEMPI VASTAUS (Livia):
+Joo, ne pikkuiset. Ensimmäinen kääpiöpatsas pystytettiin [[Wrocławin]] Świdnickan kadulle vuonna 2001 muistomerkiksi [[Pomarańczowa Alternatywa]] -liikkeelle, jonka tunnus kääpiö oli. Liikkeen tiedetään käyttäneen huumoria ja absurdeja katutapahtumia, joten pieni kääpiö sopii muistomerkiksi paremmin kuin juhlallinen patsas. Kaksi vuotta myöhemmin kaupunginjohtaja paljasti pienen laatan, ja elokuussa 2005 kuvanveistäjä [[Tomasz Moczek]] asetti paikoilleen viisi ensimmäistä hahmoa. Kyllä pienikin muistomerkki jaksaa naurattaa.
+KYSYMYS: Kerro lisää: Tomasz Moczek
+
+### 461
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki, jonka muistomerkkejä on yli tuhat — ja jokainen on polven korkeudella
+Tietoruudun teksti: Wrocławissa, Puolan kolmanneksi suurimmassa kaupungissa, on muistomerkki, jota ei näe jos katsoo eteenpäin. Kadunkulmissa, ikkunalaudoilla ja portaiden kaiteissa istuu pieniä pronssihahmoja, kaksikymmentä tai kolmekymmentä senttiä korkeita: krasnale, kääpiöt. Ensimmäinen niistä ei ollut leikkiä. Vuonna 2001 Świdnickan kadulle pystytettiin kääpiöpatsas muistomerkiksi Pomarańczowa Alternatywa -liikkeelle, jonka tunnus kääpiö oli, ja kaksi vuotta myöhemmin kaupunginjohtaja paljasti polven korkeudelle pienen laatan vanhan porvaristalon seinään torin ja Pyhän Elisabetin kirkon välissä. Sitten tuli kuvanveistäjä. Wrocławin taideakatemiasta valmistuneen Tomasz Moczekin viisi ensimmäistä hahmoa asetettiin paikoilleen elokuussa 2005: Miekkailija yliopiston lähelle, Teurastaja Stare Jatkin holvikäytävään, kaksi Sisyfosta Świdnickan kadulle ja Odranpesijä Piasekin sillan kupeeseen. Isoisäsi ei näh…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+AIEMPI KYSYMYS: Kuinka monta hahmoa kaupunkiin mahtuu?
+AIEMPI VASTAUS (Livia):
+Laskeminen on vaikeaa. Hahmoja on yli tuhat, ja niitä on tullut lisää vuosien mittaan, joten tarkkaa nykyistä lukua en ole varma. Ensimmäiset viisi, Miekkailija, Teurastaja, kaksi [[Sisyfosta]] ja Odranpesijä, asetettiin paikoilleen elokuussa 2005, ja jokainen [[krasnale]]-hahmo on vain kaksikymmentä tai kolmekymmentä senttiä korkea. Kaupunki ei ole vielä sanonut, että tuli täyteen.
+KYSYMYS: Kerro lisää: Sisyfosta
+
+### 462
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki, jonka muistomerkkejä on yli tuhat — ja jokainen on polven korkeudella
+Tietoruudun teksti: Wrocławissa, Puolan kolmanneksi suurimmassa kaupungissa, on muistomerkki, jota ei näe jos katsoo eteenpäin. Kadunkulmissa, ikkunalaudoilla ja portaiden kaiteissa istuu pieniä pronssihahmoja, kaksikymmentä tai kolmekymmentä senttiä korkeita: krasnale, kääpiöt. Ensimmäinen niistä ei ollut leikkiä. Vuonna 2001 Świdnickan kadulle pystytettiin kääpiöpatsas muistomerkiksi Pomarańczowa Alternatywa -liikkeelle, jonka tunnus kääpiö oli, ja kaksi vuotta myöhemmin kaupunginjohtaja paljasti polven korkeudelle pienen laatan vanhan porvaristalon seinään torin ja Pyhän Elisabetin kirkon välissä. Sitten tuli kuvanveistäjä. Wrocławin taideakatemiasta valmistuneen Tomasz Moczekin viisi ensimmäistä hahmoa asetettiin paikoilleen elokuussa 2005: Miekkailija yliopiston lähelle, Teurastaja Stare Jatkin holvikäytävään, kaksi Sisyfosta Świdnickan kadulle ja Odranpesijä Piasekin sillan kupeeseen. Isoisäsi ei näh…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+AIEMPI KYSYMYS: Kuinka monta hahmoa kaupunkiin mahtuu?
+AIEMPI VASTAUS (Livia):
+Laskeminen on vaikeaa. Hahmoja on yli tuhat, ja niitä on tullut lisää vuosien mittaan, joten tarkkaa nykyistä lukua en ole varma. Ensimmäiset viisi, Miekkailija, Teurastaja, kaksi [[Sisyfosta]] ja Odranpesijä, asetettiin paikoilleen elokuussa 2005, ja jokainen [[krasnale]]-hahmo on vain kaksikymmentä tai kolmekymmentä senttiä korkea. Kaupunki ei ole vielä sanonut, että tuli täyteen.
+KYSYMYS: Kerro lisää: krasnale
+
+### 463
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki, jonka muistomerkkejä on yli tuhat — ja jokainen on polven korkeudella
+Tietoruudun teksti: Wrocławissa, Puolan kolmanneksi suurimmassa kaupungissa, on muistomerkki, jota ei näe jos katsoo eteenpäin. Kadunkulmissa, ikkunalaudoilla ja portaiden kaiteissa istuu pieniä pronssihahmoja, kaksikymmentä tai kolmekymmentä senttiä korkeita: krasnale, kääpiöt. Ensimmäinen niistä ei ollut leikkiä. Vuonna 2001 Świdnickan kadulle pystytettiin kääpiöpatsas muistomerkiksi Pomarańczowa Alternatywa -liikkeelle, jonka tunnus kääpiö oli, ja kaksi vuotta myöhemmin kaupunginjohtaja paljasti polven korkeudelle pienen laatan vanhan porvaristalon seinään torin ja Pyhän Elisabetin kirkon välissä. Sitten tuli kuvanveistäjä. Wrocławin taideakatemiasta valmistuneen Tomasz Moczekin viisi ensimmäistä hahmoa asetettiin paikoilleen elokuussa 2005: Miekkailija yliopiston lähelle, Teurastaja Stare Jatkin holvikäytävään, kaksi Sisyfosta Świdnickan kadulle ja Odranpesijä Piasekin sillan kupeeseen. Isoisäsi ei näh…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+AIEMPI KYSYMYS: Voiko muistomerkki olla piiloleikki?
+AIEMPI VASTAUS (Livia):
+Ai tuo leikki. Voi, ja [[Wrocławissa]] se on juuri sitä: [[krasnale]]-hahmot istuvat kadunkulmissa, ikkunalaudoilla ja portaiden kaiteilla, joten ne näkee vain katsomalla alas tai sivuun. Esimerkiksi kaupunginjohtajan paljastama laatta on polven korkeudella vanhan porvaristalon seinässä [[Pyhän Elisabetin kirkon]] ja torin välissä. Näin muistomerkistä tulee etsintäleikki, jossa kadut on kuljettava tarkemmin.
+
+Minä katson kaupunkeja ylhäältä, joten polven korkeudella oleva muistomerkki jäisi minulta kokonaan huomaamatta. Pitäisi kävellä, ja se on kyyhkylle epäilyttävä ajatus.
+KYSYMYS: Kerro lisää: Wrocławissa
+
+### 464
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki, jonka muistomerkkejä on yli tuhat — ja jokainen on polven korkeudella
+Tietoruudun teksti: Wrocławissa, Puolan kolmanneksi suurimmassa kaupungissa, on muistomerkki, jota ei näe jos katsoo eteenpäin. Kadunkulmissa, ikkunalaudoilla ja portaiden kaiteissa istuu pieniä pronssihahmoja, kaksikymmentä tai kolmekymmentä senttiä korkeita: krasnale, kääpiöt. Ensimmäinen niistä ei ollut leikkiä. Vuonna 2001 Świdnickan kadulle pystytettiin kääpiöpatsas muistomerkiksi Pomarańczowa Alternatywa -liikkeelle, jonka tunnus kääpiö oli, ja kaksi vuotta myöhemmin kaupunginjohtaja paljasti polven korkeudelle pienen laatan vanhan porvaristalon seinään torin ja Pyhän Elisabetin kirkon välissä. Sitten tuli kuvanveistäjä. Wrocławin taideakatemiasta valmistuneen Tomasz Moczekin viisi ensimmäistä hahmoa asetettiin paikoilleen elokuussa 2005: Miekkailija yliopiston lähelle, Teurastaja Stare Jatkin holvikäytävään, kaksi Sisyfosta Świdnickan kadulle ja Odranpesijä Piasekin sillan kupeeseen. Isoisäsi ei näh…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kohdekartta / Kohdekartta: Pyhän Elisabetin tuomiokirkko] 1380–1508 Pyhän Elisabetin tuomiokirkko on Slovakian suurin kirkko ja yksi Euroopan itäisimmistä goottilaisista katedraaleista. Se on 60 metriä pitkä ja 36 metriä leveä, ja sinne mahtuu yli 5 000 ihmistä. Paikalla seisoi jo aiempi kirkko, joka paloi noin 1380. Uutta rakennettiin varakkaiden porvarien rahoilla ja keisari Sigismundin tuella, ja työ valmistui 1508. Kirkon pohjoisportaali on keskiaikaisessa perinteessä harvinainen, koska kirkkojen pohjoisseinässä ei yleensä ollut porttia. Se avautui kaupungin vilkkaimpaan kohtaan, torille ja raatihuoneelle, ja sitä kutsutaan Kultaiseksi portiksi, koska se oli keskiajalla kullattu. Sisällä on Euroopan vanhin säilynyt kaksihaarainen kierreportaik…
+- [Košice — kaupunkilehti / Rakennukset: Kirkko, johon mahtuu yli viisituhatta ihmistä] Pyhän Elisabetin tuomiokirkko on Slovakian suurin kirkko ja yksi Euroopan itäisimmistä goottilaisista katedraaleista. Se on 60 metriä pitkä ja 36 metriä leveä, pohjoinen torni kohoaa 59 metriin, ja kirkkoon mahtuu yli 5 000 ihmistä. Nykyinen kirkko alkoi nousta noin vuoden 1380 palon jälkeen aiemman, Elisabetille pyhitetyn kirkon paikalle, ja sen katsotaan valmistuneen vuonna 1508. Sisällä keskilaivaa leikkaa yhtä korkea ja leveä poikkilaiva, ja yhdessä ne muodostavat kreikkalaisen ristin.
+AIEMPI KYSYMYS: Voiko muistomerkki olla piiloleikki?
+AIEMPI VASTAUS (Livia):
+Ai tuo leikki. Voi, ja [[Wrocławissa]] se on juuri sitä: [[krasnale]]-hahmot istuvat kadunkulmissa, ikkunalaudoilla ja portaiden kaiteilla, joten ne näkee vain katsomalla alas tai sivuun. Esimerkiksi kaupunginjohtajan paljastama laatta on polven korkeudella vanhan porvaristalon seinässä [[Pyhän Elisabetin kirkon]] ja torin välissä. Näin muistomerkistä tulee etsintäleikki, jossa kadut on kuljettava tarkemmin.
+
+Minä katson kaupunkeja ylhäältä, joten polven korkeudella oleva muistomerkki jäisi minulta kokonaan huomaamatta. Pitäisi kävellä, ja se on kyyhkylle epäilyttävä ajatus.
+KYSYMYS: Kerro lisää: Pyhän Elisabetin kirkon
+
+### 465
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki, jonka muistomerkkejä on yli tuhat — ja jokainen on polven korkeudella
+Tietoruudun teksti: Wrocławissa, Puolan kolmanneksi suurimmassa kaupungissa, on muistomerkki, jota ei näe jos katsoo eteenpäin. Kadunkulmissa, ikkunalaudoilla ja portaiden kaiteissa istuu pieniä pronssihahmoja, kaksikymmentä tai kolmekymmentä senttiä korkeita: krasnale, kääpiöt. Ensimmäinen niistä ei ollut leikkiä. Vuonna 2001 Świdnickan kadulle pystytettiin kääpiöpatsas muistomerkiksi Pomarańczowa Alternatywa -liikkeelle, jonka tunnus kääpiö oli, ja kaksi vuotta myöhemmin kaupunginjohtaja paljasti polven korkeudelle pienen laatan vanhan porvaristalon seinään torin ja Pyhän Elisabetin kirkon välissä. Sitten tuli kuvanveistäjä. Wrocławin taideakatemiasta valmistuneen Tomasz Moczekin viisi ensimmäistä hahmoa asetettiin paikoilleen elokuussa 2005: Miekkailija yliopiston lähelle, Teurastaja Stare Jatkin holvikäytävään, kaksi Sisyfosta Świdnickan kadulle ja Odranpesijä Piasekin sillan kupeeseen. Isoisäsi ei näh…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+AIEMPI KYSYMYS: Mikä oli Wrocławin nimi, kun se kuului Saksaan?
+AIEMPI VASTAUS (Livia):
+Odotas hetki. Saksaksi kaupungin nimi oli Breslau. Kaupunki on historiallisesti [[Sleesian]] keskus ja kuului [[Preussin]] ja myöhemmin [[Saksan keisarikunnan]] osana Saksaan aina vuoteen 1945 saakka, jolloin se toisen maailmansodan jälkeen siirtyi Puolalle ja sai nimen Wrocław. Isoisän matkavuonna 1873 kaupunki oli siis vielä Breslau. Nimet vaihtuvat, mutta kaupunki jää.
+KYSYMYS: Kerro lisää: Sleesian
+
+### 466
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki, jonka muistomerkkejä on yli tuhat — ja jokainen on polven korkeudella
+Tietoruudun teksti: Wrocławissa, Puolan kolmanneksi suurimmassa kaupungissa, on muistomerkki, jota ei näe jos katsoo eteenpäin. Kadunkulmissa, ikkunalaudoilla ja portaiden kaiteissa istuu pieniä pronssihahmoja, kaksikymmentä tai kolmekymmentä senttiä korkeita: krasnale, kääpiöt. Ensimmäinen niistä ei ollut leikkiä. Vuonna 2001 Świdnickan kadulle pystytettiin kääpiöpatsas muistomerkiksi Pomarańczowa Alternatywa -liikkeelle, jonka tunnus kääpiö oli, ja kaksi vuotta myöhemmin kaupunginjohtaja paljasti polven korkeudelle pienen laatan vanhan porvaristalon seinään torin ja Pyhän Elisabetin kirkon välissä. Sitten tuli kuvanveistäjä. Wrocławin taideakatemiasta valmistuneen Tomasz Moczekin viisi ensimmäistä hahmoa asetettiin paikoilleen elokuussa 2005: Miekkailija yliopiston lähelle, Teurastaja Stare Jatkin holvikäytävään, kaksi Sisyfosta Świdnickan kadulle ja Odranpesijä Piasekin sillan kupeeseen. Isoisäsi ei näh…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad-järvi — kaupunkilehti / Bornun valtakunta: Preussin lahjat sheikille] Preussin kuningas Wilhelm I lähetti tutkimusmatkailija Gustav Nachtigalin viemään lahjoja Bornun hallitsijalle kiitokseksi saksalaisille matkaajille osoitetusta vieraanvaraisuudesta. Nachtigal lähti Tripolista helmikuussa 1869 ja saapui Bornun pääkaupunkiin Kukawaan 6. kesäkuuta 1870, missä sheikki Umar otti hänet ystävällisesti vastaan. Hovin virkamies Ahmed ibn Brahim antoi Nachtigalille vanhoja asiakirjoja, joiden pohjalta tämä kokosi luettelon Bornun hallitsijoista vuosisatojen ajalta. Sheikin luvalla Nachtigal teki myöhemmin tutkimusmatkoja Kanemiin ja Bagirmiin ja osoitti Bahr-el-Ghazalin toimivan ajoittain järven laskujokena.
+- [Pietari — kaupunkilehti / Taide: Preussin kuninkaalta jääneet maalaukset päätyivät keisarinnalle] 1764 — Berliiniläinen kauppias Johann Ernst Gotzkowsky oli koonnut 225 maalauksen kokoelman Preussin kuningas Fredrik Suurelle, mutta seitsenvuotisen sodan jälkeen kuninkaan kassa oli tyhjä eikä hän voinut maksaa niistä. Vuonna 1764 Venäjän keisarinna Katariina Suuri osti koko kokoelman velan kuittaukseksi ja ripusti taulut yksityiseen siipirakennukseensa Talvipalatsin vieressä — rakennus sai nimen Eremitaasi, erakon asunto, koska sinne pääsivät vain harvat kutsutut. Tästä ostosta syntyi kokoelma, joka on nykyään yksi maailman suurimpia taidemuseoita.
+AIEMPI KYSYMYS: Mikä oli Wrocławin nimi, kun se kuului Saksaan?
+AIEMPI VASTAUS (Livia):
+Odotas hetki. Saksaksi kaupungin nimi oli Breslau. Kaupunki on historiallisesti [[Sleesian]] keskus ja kuului [[Preussin]] ja myöhemmin [[Saksan keisarikunnan]] osana Saksaan aina vuoteen 1945 saakka, jolloin se toisen maailmansodan jälkeen siirtyi Puolalle ja sai nimen Wrocław. Isoisän matkavuonna 1873 kaupunki oli siis vielä Breslau. Nimet vaihtuvat, mutta kaupunki jää.
+KYSYMYS: Kerro lisää: Preussin
+
+### 467
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki, jonka muistomerkkejä on yli tuhat — ja jokainen on polven korkeudella
+Tietoruudun teksti: Wrocławissa, Puolan kolmanneksi suurimmassa kaupungissa, on muistomerkki, jota ei näe jos katsoo eteenpäin. Kadunkulmissa, ikkunalaudoilla ja portaiden kaiteissa istuu pieniä pronssihahmoja, kaksikymmentä tai kolmekymmentä senttiä korkeita: krasnale, kääpiöt. Ensimmäinen niistä ei ollut leikkiä. Vuonna 2001 Świdnickan kadulle pystytettiin kääpiöpatsas muistomerkiksi Pomarańczowa Alternatywa -liikkeelle, jonka tunnus kääpiö oli, ja kaksi vuotta myöhemmin kaupunginjohtaja paljasti polven korkeudelle pienen laatan vanhan porvaristalon seinään torin ja Pyhän Elisabetin kirkon välissä. Sitten tuli kuvanveistäjä. Wrocławin taideakatemiasta valmistuneen Tomasz Moczekin viisi ensimmäistä hahmoa asetettiin paikoilleen elokuussa 2005: Miekkailija yliopiston lähelle, Teurastaja Stare Jatkin holvikäytävään, kaksi Sisyfosta Świdnickan kadulle ja Odranpesijä Piasekin sillan kupeeseen. Isoisäsi ei näh…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kilimandžaro — kaupunkilehti / Kilimanjaro: Saksan Itä-Afrikka] Vuodesta 1885 vuoteen 1918 Kilimanjaro kuului Saksan Itä-Afrikkaan, Saksan keisarikunnan siirtomaahan. Alueen hallintoa varten rakennettiin bomia eli hallintolinnoja, joista yksi pystytettiin Moshiin vuonna 1893. Ensimmäisen maailmansodan jälkeen alue siirtyi Britannian hallintaan Tanganjikan nimellä, ja vuonna 1961 itsenäistyneessä maassa kiivettiin Kilimanjaron huipulle pimeässä yössä nostamaan uusi lippu – tästä juontuu myös huipun myöhempi nimi Uhuru eli Vapaus.
+AIEMPI KYSYMYS: Mikä oli Wrocławin nimi, kun se kuului Saksaan?
+AIEMPI VASTAUS (Livia):
+Odotas hetki. Saksaksi kaupungin nimi oli Breslau. Kaupunki on historiallisesti [[Sleesian]] keskus ja kuului [[Preussin]] ja myöhemmin [[Saksan keisarikunnan]] osana Saksaan aina vuoteen 1945 saakka, jolloin se toisen maailmansodan jälkeen siirtyi Puolalle ja sai nimen Wrocław. Isoisän matkavuonna 1873 kaupunki oli siis vielä Breslau. Nimet vaihtuvat, mutta kaupunki jää.
+KYSYMYS: Kerro lisää: Saksan keisarikunnan
+
+### 468
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki, jonka muistomerkkejä on yli tuhat — ja jokainen on polven korkeudella
+Tietoruudun teksti: Wrocławissa, Puolan kolmanneksi suurimmassa kaupungissa, on muistomerkki, jota ei näe jos katsoo eteenpäin. Kadunkulmissa, ikkunalaudoilla ja portaiden kaiteissa istuu pieniä pronssihahmoja, kaksikymmentä tai kolmekymmentä senttiä korkeita: krasnale, kääpiöt. Ensimmäinen niistä ei ollut leikkiä. Vuonna 2001 Świdnickan kadulle pystytettiin kääpiöpatsas muistomerkiksi Pomarańczowa Alternatywa -liikkeelle, jonka tunnus kääpiö oli, ja kaksi vuotta myöhemmin kaupunginjohtaja paljasti polven korkeudelle pienen laatan vanhan porvaristalon seinään torin ja Pyhän Elisabetin kirkon välissä. Sitten tuli kuvanveistäjä. Wrocławin taideakatemiasta valmistuneen Tomasz Moczekin viisi ensimmäistä hahmoa asetettiin paikoilleen elokuussa 2005: Miekkailija yliopiston lähelle, Teurastaja Stare Jatkin holvikäytävään, kaksi Sisyfosta Świdnickan kadulle ja Odranpesijä Piasekin sillan kupeeseen. Isoisäsi ei näh…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+AIEMPI KYSYMYS: Mikä oli Solidaarisuus-liike Puolassa?
+AIEMPI VASTAUS (Livia):
+Selvä, tuo on tärkeä asia. Solidaarisuus eli Solidarność oli puolalainen vapaa ammattiyhdistys ja kansanliike, joka syntyi elokuussa 1980 [[Gdańskin]] telakan lakon yhteydessä. Sen tunnetuin johtaja oli [[Lech Wałęsa]]. Joulukuussa 1981 julistettu [[sotatila]] ajoi liikkeen maan alle, mutta vuoden 1989 neuvottelujen ja osittain vapaiden vaalien jälkeen kommunistinen valta Puolassa päättyi. Onneksi siitä on jo vuosikymmeniä.
+KYSYMYS: Kerro lisää: Gdańskin
+
+### 469
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki, jonka muistomerkkejä on yli tuhat — ja jokainen on polven korkeudella
+Tietoruudun teksti: Wrocławissa, Puolan kolmanneksi suurimmassa kaupungissa, on muistomerkki, jota ei näe jos katsoo eteenpäin. Kadunkulmissa, ikkunalaudoilla ja portaiden kaiteissa istuu pieniä pronssihahmoja, kaksikymmentä tai kolmekymmentä senttiä korkeita: krasnale, kääpiöt. Ensimmäinen niistä ei ollut leikkiä. Vuonna 2001 Świdnickan kadulle pystytettiin kääpiöpatsas muistomerkiksi Pomarańczowa Alternatywa -liikkeelle, jonka tunnus kääpiö oli, ja kaksi vuotta myöhemmin kaupunginjohtaja paljasti polven korkeudelle pienen laatan vanhan porvaristalon seinään torin ja Pyhän Elisabetin kirkon välissä. Sitten tuli kuvanveistäjä. Wrocławin taideakatemiasta valmistuneen Tomasz Moczekin viisi ensimmäistä hahmoa asetettiin paikoilleen elokuussa 2005: Miekkailija yliopiston lähelle, Teurastaja Stare Jatkin holvikäytävään, kaksi Sisyfosta Świdnickan kadulle ja Odranpesijä Piasekin sillan kupeeseen. Isoisäsi ei näh…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+AIEMPI KYSYMYS: Mikä oli Solidaarisuus-liike Puolassa?
+AIEMPI VASTAUS (Livia):
+Selvä, tuo on tärkeä asia. Solidaarisuus eli Solidarność oli puolalainen vapaa ammattiyhdistys ja kansanliike, joka syntyi elokuussa 1980 [[Gdańskin]] telakan lakon yhteydessä. Sen tunnetuin johtaja oli [[Lech Wałęsa]]. Joulukuussa 1981 julistettu [[sotatila]] ajoi liikkeen maan alle, mutta vuoden 1989 neuvottelujen ja osittain vapaiden vaalien jälkeen kommunistinen valta Puolassa päättyi. Onneksi siitä on jo vuosikymmeniä.
+KYSYMYS: Kerro lisää: Lech Wałęsa
+
+### 470
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki, jonka muistomerkkejä on yli tuhat — ja jokainen on polven korkeudella
+Tietoruudun teksti: Wrocławissa, Puolan kolmanneksi suurimmassa kaupungissa, on muistomerkki, jota ei näe jos katsoo eteenpäin. Kadunkulmissa, ikkunalaudoilla ja portaiden kaiteissa istuu pieniä pronssihahmoja, kaksikymmentä tai kolmekymmentä senttiä korkeita: krasnale, kääpiöt. Ensimmäinen niistä ei ollut leikkiä. Vuonna 2001 Świdnickan kadulle pystytettiin kääpiöpatsas muistomerkiksi Pomarańczowa Alternatywa -liikkeelle, jonka tunnus kääpiö oli, ja kaksi vuotta myöhemmin kaupunginjohtaja paljasti polven korkeudelle pienen laatan vanhan porvaristalon seinään torin ja Pyhän Elisabetin kirkon välissä. Sitten tuli kuvanveistäjä. Wrocławin taideakatemiasta valmistuneen Tomasz Moczekin viisi ensimmäistä hahmoa asetettiin paikoilleen elokuussa 2005: Miekkailija yliopiston lähelle, Teurastaja Stare Jatkin holvikäytävään, kaksi Sisyfosta Świdnickan kadulle ja Odranpesijä Piasekin sillan kupeeseen. Isoisäsi ei näh…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Los Angeles — kohdekartta / Kohdekartta: Fort Mooren muistomuuri] 1847 Yhdysvaltain joukot miehittivät Los Angelesin elokuussa 1846, mutta kapteeni Archibald Gillespien ankara sotatila sytytti kapinan. Californiot piirittivät kaupungin, ja Gillespien viisikymmentä merisotilasta perääntyi mäelle, jossa he pinosivat hiekkasäkeistä suojan ja asettivat tykkinsä. Vastapuolen voimat kasvoivat yli kuuteensataan mieheen, ja Gillespie suostui poistumaan kaupungista 30. syyskuuta 1846. Amerikkalaiset palasivat 10. tammikuuta 1847, ja Cahuengan sopimus päätti sodan Ylä-Kaliforniassa kolme päivää myöhemmin. Samalle mäelle alettiin heti rakentaa linnaketta. Ensimmäinen, tähdenmuotoinen suunnitelma jäi kesken, ja 23. huhtikuuta 1847 aloitettiin suurempi. Sen piirsi luu…
+AIEMPI KYSYMYS: Mikä oli Solidaarisuus-liike Puolassa?
+AIEMPI VASTAUS (Livia):
+Selvä, tuo on tärkeä asia. Solidaarisuus eli Solidarność oli puolalainen vapaa ammattiyhdistys ja kansanliike, joka syntyi elokuussa 1980 [[Gdańskin]] telakan lakon yhteydessä. Sen tunnetuin johtaja oli [[Lech Wałęsa]]. Joulukuussa 1981 julistettu [[sotatila]] ajoi liikkeen maan alle, mutta vuoden 1989 neuvottelujen ja osittain vapaiden vaalien jälkeen kommunistinen valta Puolassa päättyi. Onneksi siitä on jo vuosikymmeniä.
+KYSYMYS: Kerro lisää: sotatila
