@@ -133,6 +133,10 @@ namespace Matkakirja.Natiivi
         // kertojan jakso, avainsanat, nimet, hahmot) ja pysäyttää linnan puheen kohtaansa; jatko siirtää kelloa tauon verran,
         // joten kaikki jatkuu samasta hetkestä. Kehittäjän "poikki aika" (pysaytettyT) on erillinen ja voittaa.
         double? taukoT;
+        /// <summary>Esittelyn vaiheet (juna 176) soivat: linnan aika jäädytetty tähän (kertojan kierros odottaa), jatkuu vaiheiden jälkeen.</summary>
+        double? vaiheT;
+        /// <summary>Kehittäjä/automaatti: "poikki vaiheet 0" ohittaa esittelyn vaiheet (oletus päällä).</summary>
+        public static bool VaiheetPaalla = true;
         public static bool Tauolla => Linssi != null && aktiivinenSovitin?.taukoT != null;
         static DioraamaSovitin aktiivinenSovitin;
 
@@ -296,7 +300,7 @@ namespace Matkakirja.Natiivi
             // rakennus == null: "poikki lataa" kesken (1.0.54-ajossa DioraamaAanet.Paivita kaatui NullReferenceen).
             if (!avoinna || y == null || !linssi.Auki || rakennus == null) return;
             aktiivinenSovitin = this;
-            double t = pysaytettyT ?? taukoT ?? YdinAika;
+            double t = pysaytettyT ?? taukoT ?? vaiheT ?? YdinAika;
             // Laajat kuvat sovitetaan todelliseen kuvasuhteeseen: näyttämön kameran oma (kuvan) suhde, ei ympäristön arvo
             // (1.1 (79) vaaka: kierron jälkeen sovitus käytti vielä pystyn suhdetta ja linna jäi pieneksi).
             float kameranSuhde = nayttamo.Kamera != null ? nayttamo.Kamera.aspect : 0f;
@@ -341,7 +345,7 @@ namespace Matkakirja.Natiivi
                     try { PlayerPrefs.SetString(LatausAvain, DioraamaLevyvalimuisti.PyydettyTavuja.ToString()); PlayerPrefs.SetFloat(KestoAvain, odotettu); } catch (Exception) { }
                     o.Kirjaa($"poikki: latauspalkki 100 % {odotettu:F1} s (avaus)");
                     latausOsuus = 1f;
-                    t = pysaytettyT ?? taukoT ?? YdinAika;
+                    t = pysaytettyT ?? taukoT ?? vaiheT ?? YdinAika;
                     o.Kirjaa($"poikki: saapuminen alkaa (kaikki valmiina täydellä tarkkuudella: kuori, tilat {tilojaKasitelty}/{TilojaGlb()}, " +
                              $"hahmot {hahmojaKasitelty}/{hahmoGlbJonossaTaiValmiit.Count}, ympäristö; odotettiin {odotettu:F1} s, " +
                              $"välimuistista {DioraamaLevyvalimuisti.Osumia - osumiaAlussa}, verkosta {DioraamaLevyvalimuisti.Latauksia - latauksiaAlussa})");
@@ -367,7 +371,7 @@ namespace Matkakirja.Natiivi
                 puluJono = null;
                 if (jTila == ViimeisinNakyma?.KohdeTila) { linssi.Napauta(t, jHahmo, jKohta); o.Kirjaa($"poikki: pulu jonosta ({jHahmo ?? (jKohta >= 0 ? "kohde " + jKohta : "kohta")})"); }
             }
-            timeline.Paivita(linssi, rakennus, t, pysty, pysaytettyT.HasValue || taukoT.HasValue || SaapumisOdotus);
+            timeline.Paivita(linssi, rakennus, t, pysty, pysaytettyT.HasValue || taukoT.HasValue || vaiheT.HasValue || SaapumisOdotus);
             var nakyma = linssi.NakymaHetkella(t, pysty);
             timeline.Tarkista(nakyma.KertojaJakso, t);
             // Elävä linna: saapumiskaaren eteneminen → soihtujen syttyminen; kaari nähty → seuraavalla kerralla lyhyt.
@@ -375,7 +379,7 @@ namespace Matkakirja.Natiivi
             {
                 double osuus = linssi.SaapuminenOsuus(t);
                 nayttamo.Liekit?.Syttyminen(osuus, DioraamaNayttamo.UnityPiste((pysty ? rakennus.YleisPysty : rakennus.YleisVaaka).Kohde));
-                if (osuus >= 1 && !SaapuminenNahty) SaapuminenNahty = true;
+                if (osuus >= 1 && !SaapuminenNahty) { SaapuminenNahty = true; if (VaiheetPaalla) o.StartCoroutine(EsittelynVaiheet()); }
                 // Uusi linna: kertojan kierroksen aikana ei elävien kohteiden sykkeitä (1.1 (73) -kuva: renkaat jaksojen päällä).
                 nayttamo.Syke?.Paivita(rakennus, SeikkailuPelaaja.Aktiivinen == null && SeikkailuVene.Aktiivinen == null && nakyma.KohdeTila == null && osuus >= 1 && nakyma.KertojaJakso < 0 && !linssi.KertojaKaynnissa(t), nakyma.KohdeTila != null, t, y.VahennettyLiike);
                 // Etsintä: vaihe näkyy vasta perillä tilassa (ei kesken lennon).
@@ -417,6 +421,7 @@ namespace Matkakirja.Natiivi
                 if (jatka == null && !alkuValittu && AlunValinta()) { PelattavaPalaJatka = false; goto palaOhi; }
                 if (SaapumisOdotus) { alkuValittu = true; PelattavaPalaPyydetty = true; goto palaOhi; }
                 alkuValittu = false; pelattavaPala = true;
+                if (vaiheT.HasValue) SeikkailuHistoria.Lopeta();   // esittelyn vaiheet väistyvät pelattavan palan tieltä
                 PelattavaPalaJatka = false;
                 SeikkailuTallentaja.Luo(nayttamo.transform, "olavinlinna", PelattavaPalaHash, jatka, o.Kirjaa);
                 SeikkailuVihjeet.Luo(nayttamo.transform, o.Kirjaa);
@@ -580,6 +585,7 @@ namespace Matkakirja.Natiivi
             avoinna = false;
             pysaytettyT = null;
             if (taukoT.HasValue) { taukoT = null; DioraamaAanet.TaukoPuhe(false); }
+            vaiheT = null;
             if (aktiivinenSovitin == this) aktiivinenSovitin = null;
             pakotettuTila = null;
             pakotettuTaso = -1;
@@ -1071,7 +1077,22 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Linnan historia (SeikkailuHistoria): kävelydata ja leikkaukset käyttöön, jotta vuoden 1499 jälkeiset osat kasvavat;
         /// lopuksi leikkaukset ennalleen ja valmis().</summary>
-        IEnumerator Historia(Action valmis)
+        /// <summary>ESITTELYN VAIHEET (omistaja 10.10. 07.1x, PT:n hyväksymä suunnitelma, juna 176): ensimmäisen saapumiskaaren jälkeen
+        /// Historiajana.Esittely (~50 s) kameran nykyisestä asennosta; linnan aika jäädytetään (vaiheT), joten kertojan kierros alkaa
+        /// vaiheiden jälkeen samasta kohdasta. Ei pelattavan palan, veneen tai historian aikana; ⏭ Ohita ja Esc lopettavat kuten historiassa.</summary>
+        IEnumerator EsittelynVaiheet()
+        {
+            if (!HistoriaKaytettavissa || pelattavaPala || PelattavaPalaPyydetty || SeikkailuPelaaja.Aktiivinen != null || SeikkailuVene.Aktiivinen != null)
+            { o.Kirjaa("seikkailu: esittelyn vaiheet ohitettu (ei käytettävissä)"); yield break; }
+            vaiheT = YdinAika;
+            bool valmis = false;
+            yield return Historia(() => valmis = true, Historiajana.Esittely, true);
+            while (!valmis && aktiivinenSovitin == this && vaiheT.HasValue) yield return null;
+            if (vaiheT.HasValue) { kelloSiirto -= YdinAika - vaiheT.Value; vaiheT = null; }
+            o.Kirjaa("seikkailu: esittelyn vaiheet päättyivät, kierros jatkuu");
+        }
+
+        IEnumerator Historia(Action valmis, Historiajana jana = null, bool jatkaKamerasta = false)
         {
             yield return VarmistaKavelyData();
             bool oli = SeikkailuKavely.LeikkauksetPaalla;
@@ -1081,7 +1102,7 @@ namespace Matkakirja.Natiivi
             string vaiheJuuri = ki >= 0 && kavelyKehitysJuuri == null ? paketinJuuri + ko.Substring(0, ki) : null;
             SeikkailuHistoria.Hamara = DioraamaTunnelma.Hamara(rakennus);   // mustan korvauksen sävy kuoren hämärä- tai päiväkuvaan
             SeikkailuHistoria.Aloita(nayttamo != null && nayttamo.Kamera != null ? nayttamo.Kamera.transform : null,
-                () => { if (!oli) SeikkailuKavely.Leikkaukset(false); valmis?.Invoke(); }, o.Kirjaa, vaiheJuuri, peili);
+                () => { if (!oli) SeikkailuKavely.Leikkaukset(false); valmis?.Invoke(); }, o.Kirjaa, vaiheJuuri, peili, jana, jatkaKamerasta);
         }
 
         IEnumerator Botti(int alkuN)
@@ -2058,6 +2079,12 @@ namespace Matkakirja.Natiivi
             // napautuskävelyllä, kirjaa saapumiset, kiinnijäämiset ja ajat sekä lopuksi Natiivi-UI:n Tekstivahdin (ei näkyvää tekstiä).
             // "poikki valot volumetriset 0|1 | liekit 0|1": laatutaso (PT 7.10.: volumetriset Mac + M-iPad, liekit kaikilla).
             // "poikki historia [pois]": linnan historia (Historiajana, juna 171; PT 9.10.) drone-kameralla ilman kertojaa.
+            // "poikki vaiheet 0|1 | nyt": esittelyn vaiheet (juna 176) pois/päälle ensimmäisen saapumisen jälkeen, tai heti (kuva-arkki).
+            if (mita == "vaiheet")
+            {
+                if (arvo == "nyt") { o.StartCoroutine(EsittelynVaiheet()); return; }
+                VaiheetPaalla = arvo != "0"; o.Kirjaa($"poikki: esittelyn vaiheet {(VaiheetPaalla ? "päällä" : "pois")}"); return;
+            }
             if (mita == "historia")
             {
                 if (arvo == "pois") { SeikkailuHistoria.Lopeta(); return; }

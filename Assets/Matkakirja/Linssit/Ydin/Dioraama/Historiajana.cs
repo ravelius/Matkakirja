@@ -124,6 +124,20 @@ namespace Matkakirja.Linssit.Dioraama
         public const double KertojaViiveS = 0.8, Fov = 50;
         /// <summary>Kameran alkuasento (ensimmäinen avainasento ajassa 0).</summary>
         public double AlkuAtsimuutti = 130, AlkuKorkeus = 38, AlkuEtaisyysKerroin = 3.4;
+        /// <summary>Lokin nimi (historia / esittely).</summary>
+        public string Nimi = "historia";
+
+        /// <summary>Alkuasennon korkeus ja etäisyys (esittely jatkaa saapumiskaaren loppuasennosta, ei hyppyä); kamerakäyrä lasketaan uudelleen.</summary>
+        public void AsetaAlku(double korkeus, double etaisyysKerroin) { AlkuKorkeus = korkeus; AlkuEtaisyysKerroin = etaisyysKerroin; ajat = null; }
+
+        /// <summary>Asento (kompassiatsimuutti, korkeuskulma, etäisyys) kameran sijainnista kohteeseen nähden; Kameraliike.AsentoSijainnin käänteinen.</summary>
+        public static (double Atsimuutti, double Korkeus, double Etaisyys) AsentoSijainnista(V3 sijainti, V3 kohde)
+        {
+            var d = sijainti - kohde; double e = d.Pituus;
+            if (e < 1e-9) return (0, 0, 0);
+            double a = Math.Atan2(d.X / e, -d.Z / e) * 180 / Math.PI;
+            return (a < 0 ? a + 360 : a, Math.Asin(Math.Max(-1, Math.Min(1, d.Y / e))) * 180 / Math.PI, e);
+        }
 
         public readonly IReadOnlyList<HistoriaVaihe> Vaiheet;
         public readonly double LoppuVuosi, Kesto;
@@ -345,6 +359,24 @@ namespace Matkakirja.Linssit.Dioraama
             new HistoriaVaihe(1961, 17, 20, 1.65, "1961") { Atsimuutti = 272, AvainsanaAlku = 1.3, Kertoja = false },
             new HistoriaVaihe(1976, 8, 15, 1.7) { Atsimuutti = 282, Kertoja = false },   // nykylinna (ponttonisilta), Kellotornin kaaren suunta
         }, 1985);
+
+        /// <summary>ESITTELYN VAIHEET (omistaja 10.10. 07.1x: "esittelyn pitää näyttää linnan eri vaiheet"; PT:n hyväksymä suunnitelma):
+        /// saapumisen jälkeen ~50 s kivilinnasta nykyasuun samalla moottorilla kuin historia (vuosileikkaukset, vaihemallit, kasvu), ilman
+        /// kertojaa; avainsanat historian tarkistetuista teksteistä (Paksu bastioni 1788–1800 ja nykyasu ilman tekstiä). Atsimuutit ovat
+        /// suhteellisia: SeikkailuHistoria siirtää käyrän saapumiskaaren loppuasentoon ja kamera kiertää ~25° vaiheessa.</summary>
+        public static readonly Historiajana Esittely = new Historiajana(new[]
+        {
+            new HistoriaVaihe(1475, 8, 24, 2.2, "1475") { Atsimuutti = 20, Kertoja = false },   // puuvarustus; kivilinna nousee RakennusS:ssä
+            new HistoriaVaihe(1477, 6, 20, 1.9, "1477") { Atsimuutti = 45, Kertoja = false },
+            new HistoriaVaihe(1499, 5, 16, 1.7, "1499") { Atsimuutti = 70, Kertoja = false },
+            new HistoriaVaihe(1550, 5, 22, 1.9, "1500") { Atsimuutti = 95, Kertoja = false },
+            // Bastionit 1749–1756 kasvavat näkyvästi (kuten historiassa), kohde lounaaseen bastionien puolelle.
+            new HistoriaVaihe(1743, 8, 28, 2.1, "1743") { Atsimuutti = 120, KohdeX = -10, KohdeZ = 8, Kertoja = false, Ankkurit = new[] { (3.0, 1749.0), (6.0, 1756.0) } },
+            new HistoriaVaihe(1788, 4, 24, 2.0) { Atsimuutti = 145, Kertoja = false, Ankkurit = new[] { (3.0, 1800.0) } },   // Paksu bastioni 1791 (LR v46t)
+            new HistoriaVaihe(1847, 5, 30, 2.0, "1847") { Atsimuutti = 170, Kertoja = false, Ankkurit = new[] { (2.5, 1868.0) } },
+            new HistoriaVaihe(1961, 5, 20, 1.8, "1961") { Atsimuutti = 195, Kertoja = false },
+            new HistoriaVaihe(1976, 4, 16, 1.8) { Atsimuutti = 215, Kertoja = false },   // nykyasu (ponttonisilta)
+        }, 1985) { Nimi = "esittely", AlkuAtsimuutti = 0, AlkuKorkeus = 20, AlkuEtaisyysKerroin = 2.0 };
 
         /// <summary>K2-lyhennys (8 s): vuoden 1499 linna → 1740–50-luvun varustukset kasvavat → ponttonisilta. Ei avainsanoja.</summary>
         public static readonly Historiajana K2Lyhyt = new Historiajana(new[]
