@@ -659,6 +659,7 @@ namespace Matkakirja.Natiivi
             if (r != null && r.Valmis && v.Agentti != null) r.Soita("vartija-kiinni-2", v.Agentti.transform);
             yield return new WaitForSecondsRealtime(SeikkailuNakyvyys.HimmennysS);
             if (p != null) p.Otteessa = false;
+            SeikkailuEsineet.Aktiivinen?.TarjotinPoydalle();   // ei tarjotinta tyrmään (Huonesimulaatio.Kiinnijaanti: Tarjotin = false)
             // Tyrmä (pelattavuusmalli 4.1), jos sen merkit ovat paketissa: vartijat nollautuvat heti, pelaaja palaa tarkistuspisteeseen
             // vasta paon jälkeen (armoaika ja valppaus silloin).
             if (p != null && SeikkailuTyrma.Aloita(transform.parent, p, () => { Kiinni(v); }, kirjaa))
