@@ -94,3 +94,18 @@ Ajoskriptit ja skenaariot: `proto-3d/tyokalut/linssiseppa-ajot/` (simuvuoro-*.zs
   (merkinnät kuvaan) PT:lle ennen kuittausta. Simuajossa ehto: enintään 1 muu simu käynnissä (Julkaisija; ks. simuvuoro-pakka-180.zsh odota_simu).
 - **Kipin Soundly-äänet (juna 182)**: Pelikoodarin paketti aanet/pallo-soundly-v2/ (37 + tuuli-tasainen-01; _valmiit/pallo-soundly-v2-vienti-20261010).
   Kytkentä Opus-agentilla haarassa linssiseppa/soundly-kippi-182 (wt intro, pohja eca61364a) — tarkista agentin commit ja testit.
+
+## PÄIVITYS 00.0x (11.10.) — JONO PT:n järjestyksessä
+1. **KIIRE Pariisin saapumisesitys (omistaja 23.5x, TF 180, juna 181)**: musiikki alkaa samalla hetkellä kuin isoisän "Pariisi"
+   + iskulause (ero ≤ 0,2 s aaltomuodosta), lisäkuvat putkeen trailerin 3 aloituskuvan jälkeen. Juurisyy (agentin analyysi):
+   musiikki lähtee paikan vaihtuessa (Aanikoukut/AaniTila; 4 s nousu, puheen alla 25 %), esittely alkaa vasta trailerin jälkeen +
+   C1 7,74 s → ~8–9 s tyhjää. Korjaus Opus-agentilla haarassa **linssiseppa/esitys-musiikki-181** (wt intro, pohja 7c4fa279c):
+   tarkista commit + testit → käännös → äänellinen simuajo (skenaario linssiseppa-ajot/sk-saapumisesitys-toisto.txt,
+   simuvuoro-esitys-toisto.zsh <SHA> <app>) → mittausrivi PT:lle (musiikin alku vs. "Pariisi"-sanan alku aaltomuodosta; kuva 3 → C1 väli).
+   TOISTO TF 180 -koodilla: lokit/todistus-esitys-toisto-iphone-* (d107ccb57, iPhone D0D2CD1E) = "ennen".
+2. **Notre-Dame (omistaja 00.0x, kippi)**: pysähdyksessä kamera laskeutuu nopeammin ja kaartaa länsijulkisivun (tornit, portaalit) eteen.
+   Opas-datana jos mahdollista (katse_suunta/katse_kaari, osoitinvaihto), muuten juna 181. Todiste: kuva-arkki laskeutumisesta + kaaresta ja ajat → PT.
+3. **Pallokompassi**: testikäännös cb9dc2ed4 (app lokit/linssiseppa-app/testi-181, sis. kompassi + puut + soundly). Uusi iPad-ajo OK
+   (lokit/todistus-pallokompassi-uusi-ipad-20261010-2353: kompassi kokonaan näkyvissä). Loput: `zsh linssiseppa-ajot/simuvuoro-pallokompassi-ajo.zsh
+   cb9dc2ed4 /Users/Shared/Claude/proto-3d/lokit/linssiseppa-app/testi-181` (poista ensin jo ajettu uusi-ipad-rivi) → kuvapari nykyinen | uusi PT:lle.
+4. Kaupunkipuut + Soundly samasta käännöksestä (sk-puut-181, sk-soundly-182 sisältyvät -ajo.zsh:iin).
