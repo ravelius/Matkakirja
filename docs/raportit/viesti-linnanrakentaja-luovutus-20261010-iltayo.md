@@ -54,3 +54,8 @@ Python-kuvatyökalut: `/Users/Shared/Claude/proto-3d/_tyo/venv-rembg/bin/python 
   LS2:n täysi läpipeluulista tulee junan 180 käännösvuoron jälkeen.
 - **Kesken jonossa:** vertailuportti Olavinlinnan nykyasusta (VHR 2 m, kaytto vain sisäinen; malli ilman georeferenssiä glb:ssä →
   sijoitus selvitettävä, olavinlinna-blender-v44-nyky ei sisällä rakennus-sijoitettu.json:ia), raportti PT:lle.
+- (23.1x) **v47e VIETY:** 1499 PALA b2fc8fe8b05a9e4f (blender 86fd4cb2ba69c81d), NYKY PALA 467a1fde69984be3 (blender e4f28ed81b9f0fc6),
+  haara linnanrakentaja-linna-v45k (9b52e90a5, 266d94941) → Siirtoseppä + PT (pelikuvaparit laiturilta ja portilta odottavat).
+- (23.0x) Vertailuportti Olavinlinna nyky tehty ja raportoitu PT:lle (json kaappaukset/linnanrakentaja-olavinlinna-20261010/); vertaa_orto.py:n
+  --origo + --meta -siirtovirhe korjattu (vanha vertaa_orto_ennen_origo.py). Levysiivous 7,6 Gi (codex-ohje-v46t → T7 symlinkillä).
+- ODOTTAA: Siirtosepän v47e-pelikuvat, LS2:n museo v2g -pelikuva + täysi läpipeluulista (junan 180 jälkeen), LS2:n Pariisi v2 ja ND v5f -parit.
