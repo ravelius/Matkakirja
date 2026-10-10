@@ -64,3 +64,12 @@ Polkuväli: `kl0` = kaupunkilehti[0] (kaupunki), `kl1` = kaupunkilehti[1] (ruoka
 | 1873-väitteet (Stara Varoš, Sahat kula, Nova Varoš, silta, katedraali, linnoitus) | Ei keksittyjä isoisän tekemisiä; ainoa heikko kohta linnoituksen "ehjä" (ks. A) | - | OK | - |
 | nykypolitiikka ja sota | Ei NATO-, mielenosoitus-, vaali- tai 1990-luvun sotamainintoja; Venäjän patriarkka poistettu; WWII-pommitukset neutraalisti | - | OK | - |
 | kaupunki.wiki, nostot[*].wiki | Podgorica, Doclea (Illyria), Stara Varoš, Podgorica ovat en-Wikipediassa (haku onnistui) | en.wikipedia.org | OK | - |
+
+## Korjattu
+
+- VÄÄRIN-kohdat korjattu sanatarkasti: kl1.nostot[1].selite (tasankokuvan selite), kl1.tehtava.fakta (Zetska-säästöpankki), "syyskuun alku" poistettu kuivasta jaksosta, Ribnican linnoituksen kuvaselite (ei "tuhosi"/"valvoi"), opas.jaksot[1].kuva.selite ja parasta[1].selite (ei "mistä kaupunki alkoi"). Selitteet lyhennetty alle 100 merkkiin (tarkistin vaatii).
+- EPÄVARMA-kohdat pehmennetty tai korvattu taulukon ehdotuksilla: kansikuvan selite, nostot (sodan jälkeen, Sahat kula), Morača "lähteen mukaan noin 70 m", Skaline-portaat (opas, vanha silta, ruoka-nosto ja sen selite), "Vanha kivisilta" -> "Vanha silta", johdanto, kohdekartta.esittely, matkailijalle.kappale (keskikokoinen, jalan), kysymys 2 (Mareza ja Cijevna, uusi vihje), Doclean juusto, tupakkanosto (1969 lisätty pituuden vuoksi), Plantaže-lause, Ribnican linnoituksen teksti (1873 ja 1100-luku).
+- Sää: sateisimman kuukauden väite poistettu (kappale, hyvaTietaa, jakso, luonnehdinta; jäljellä kuivin heinäkuu saa.json:n mukaan); vuosisade yhtenäistetty "lähteen mukaan noin 1 660 mm". Sääluvut ennallaan.
+- Doclean juuston nostoon lisätty lähdelause (Doclea 3 km pohjoiseen) 440 merkin alarajan vuoksi.
+- Koordinaatit (vanha silta, Ribnican linnoitus) pidetty; kirjattu ehdotukset.huomiot-kenttään Macilla tarkistettaviksi.
+- Ajot: `tarkista e01 podgorica` ja `--verkko`: 0 virhettä, 3 varoitusta (pyöreät luvut 10 000, Itsenäisyydenaukio ja Millennium-silta; lähteessä tarkat/lähteen mukaiset). Kuvia ei vaihdettu.

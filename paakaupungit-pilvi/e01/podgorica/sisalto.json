@@ -15,7 +15,7 @@
  },
  "artikkeli": {
   "intro": "**Podgorica** on Montenegron pääkaupunki ja maan suurin kaupunki. Se sijaitsee Ribnica- ja Morača-jokien yhtymäkohdassa, missä Dinaaristen Alppien eteläiset juuret kohtaavat Zetan tasangon pohjoisosan. Nimi tarkoittaa kukkulan alla, ja sen antoi Gorica, yksi kaupungin ylle kohoavista sypressikukkuloista. Nimi mainitaan ensi kerran vuoden 1326 asiakirjassa Kotorin arkistossa.\n\nIsoisän matkavuonna 1873 kaupunki oli ottomaanien hallinnassa, ja sen ydin oli **Stara Varoš** Ribnican rannalla. Berliinin kongressi liitti kaupungin Montenegroon vuonna 1878. Vuosina 1946–1992 kaupungin nimi oli Titograd. Toisen maailmansodan pommitukset tuhosivat suuren osan vanhasta kaupungista, joten nykyinen kaupunkikuva on pääosin sodanjälkeinen. Asukkaita oli vuoden 2023 väestölaskennan mukaan 179 505.",
-  "teksti": "Alueen vanhimmat jäänteet ovat myöhäiseltä kivikaudelta, ja Podgorica on useiden historiallisten reittien risteyksessä. Rautakaudella seutua asuttivat illyriläiset heimot labeatit ja dokleatit. Noin kolme kilometriä nykyisen kaupungin pohjoispuolella sijaitsi roomalainen Doclea, josta tuli kunta keisari Claudiuksen aikana.\n\nOttomaanit valtasivat Podgorican 1400-luvun lopulla ja rakensivat sinne linnoituksen, torneja, portteja ja puolustusmuureja. Kaupunki kehittyi Ribnican vasemmalle rannalle ottomaanikaupungin tapaan, ja Sahat kula -kellotorni valmistui vuonna 1667. Vuonna 1878 kaupungissa oli noin 1 500 taloa ja yli 8 000 asukasta, jotka kuuluivat kolmeen eri uskontoon.\n\nNykyään Podgorica on Montenegron hallinnon, talouden ja koulutuksen keskus: yliopisto, tiedeakatemia, valtion televisioyhtiö ja kaikki päivälehdet ovat täällä. Morača on keskustan kohdalla noin 70 metriä leveä ja on uurtanut kaupungin läpi 20 metriä syvän kanjonin. Adrianmeri on noin 35 kilometrin päässä etelässä, mutta Rumija-vuori rajoittaa merellistä vaikutusta."
+  "teksti": "Alueen vanhimmat jäänteet ovat myöhäiseltä kivikaudelta, ja Podgorica on useiden historiallisten reittien risteyksessä. Rautakaudella seutua asuttivat illyriläiset heimot labeatit ja dokleatit. Noin kolme kilometriä nykyisen kaupungin pohjoispuolella sijaitsi roomalainen Doclea, josta tuli kunta keisari Claudiuksen aikana.\n\nOttomaanit valtasivat Podgorican 1400-luvun lopulla ja rakensivat sinne linnoituksen, torneja, portteja ja puolustusmuureja. Kaupunki kehittyi Ribnican vasemmalle rannalle ottomaanikaupungin tapaan, ja Sahat kula -kellotorni valmistui vuonna 1667. Vuonna 1878 kaupungissa oli noin 1 500 taloa ja yli 8 000 asukasta, jotka kuuluivat kolmeen eri uskontoon.\n\nNykyään Podgorica on Montenegron hallinnon, talouden ja koulutuksen keskus: yliopisto, tiedeakatemia, valtion televisioyhtiö ja kaikki päivälehdet ovat täällä. Morača on lähteen mukaan keskustan kohdalla noin 70 metriä leveä ja on uurtanut kaupungin läpi 20 metriä syvän kanjonin. Adrianmeri on noin 35 kilometrin päässä etelässä, mutta Rumija-vuori rajoittaa merellistä vaikutusta."
  },
  "kysymykset": [
   {
@@ -38,11 +38,11 @@
     "Ribnica ja Morača",
     "Zeta ja Cijevna",
     "Sitnica ja Mareza",
-    "Morača ja Zeta"
+    "Mareza ja Cijevna"
    ],
    "correct": 0,
    "level": 1,
-   "hint": "Toinen joista on uurtanut keskustan läpi syvän kanjonin.",
+   "hint": "Toinen joista kulkee vanhan kaupungin vierestä ja antoi kaupungille keskiajalla nimen.",
    "fact": "Ribnica ja Morača kohtaavat kaupungissa, ja Zeta, Cijevna, Sitnica ja Mareza virtaavat lähellä.",
    "source": "https://en.wikipedia.org/wiki/Podgorica"
   },
@@ -104,11 +104,11 @@
   {
    "id": "kaupunki",
    "nimi": "Podgorica",
-   "johdanto": "Podgorica kasvoi kukkulan juurelle kahden joen yhtymäkohtaan, ja isoisän matkavuonna 1873 se oli vielä ottomaanien kaupunki Ribnican rannalla. Vanhasta kaupungista on jäljellä kellotorni, linnoituksen muuri ja kapeita katuja, sillä nykyinen kaupunki rakennettiin sodan jälkeen.",
+   "johdanto": "Podgorica kasvoi kukkulan juurelle kahden joen yhtymäkohtaan, ja isoisän matkavuonna 1873 se oli vielä ottomaanien kaupunki Ribnican rannalla. Vanhasta kaupungista on jäljellä Stara Varoš kellotorneineen, moskeijoineen ja kapeine katuineen, sillä suuri osa kaupungista tuhoutui sodassa ja rakennettiin uudelleen.",
    "kansikuvat": [
     {
      "tiedosto": "Podgorica, panorama.jpg",
-     "selite": "Podgorica on Montenegron pääkaupunki, jonka nykyinen keskusta on pääosin sodanjälkeinen.",
+     "selite": "Podgorica on Montenegron pääkaupunki, jonka nykyinen kaupunkikuva on pääosin sodanjälkeinen.",
      "lahde": "A81t, Wikimedia Commons (CC BY-SA 4.0)"
     },
     {
@@ -118,7 +118,7 @@
     },
     {
      "tiedosto": "Podgorica Sept 2013 .jpg",
-     "selite": "Morača on kaupungin pääjoki, noin 70 metriä leveä keskustan kohdalla.",
+     "selite": "Morača on kaupungin pääjoki, lähteen mukaan noin 70 metriä leveä keskustan kohdalla.",
      "lahde": "Das Kraftfuttermischwerk, Wikimedia Commons (CC BY 2.0)"
     }
    ],
@@ -143,7 +143,7 @@
      "otsikko": "Ottomaanien kaupunki joen rannalla",
      "teksti": "Ottomaanit valtasivat Podgorican 1400-luvun lopulla ja rakensivat siihen suuren linnoituksen sekä torneja, portteja ja puolustusmuureja. Kaupunki kehittyi Ribnican vasemmalle rannalle ottomaanikaupungin tapaan, ja Stara Varoš oli sen ydin 1400–1800-luvuilla. Sahat kula -kellotorni valmistui vuonna 1667 Hadži-paša Osmanagićin rakennuttamana. Vuonna 1864 Podgoricasta tuli Skutarin vilajetin kaza. Berliinin kongressi liitti kaupungin Montenegroon vuonna 1878, jolloin siellä oli noin 1 500 taloa ja yli 8 000 asukasta.",
      "tiedosto": "Podgorica Uhrturm (Sahat Kula).JPG",
-     "selite": "Sahat kula valmistui vuonna 1667 Stara Varošin keskelle.",
+     "selite": "Sahat kula valmistui vuonna 1667 Stara Varošiin, Podgorican vanhaan kaupunkiin.",
      "lahde": "Colomen, Wikimedia Commons (CC BY-SA 4.0)",
      "wiki": "Stara Varoš, Podgorica"
     },
@@ -151,7 +151,7 @@
      "otsikko": "Kaupunki rakennetaan uudelleen",
      "teksti": "Toisessa maailmansodassa Podgorica oli lähteen mukaan yksi Euroopan pahiten pommitetuista kaupungeista: ilmaiskuja oli yli 80, ja kaupunki vapautettiin 19.12.1944. Vuonna 1946 kaupunki sai nimen Titograd ja siitä tuli Montenegron pääkaupunki Jugoslavian liittovaltiossa. Sodanjälkeinen asukasluku, noin 15 000, kasvoi seitsenkertaiseksi kolmessa vuosikymmenessä. Alumiinikombinaatti rakennettiin 1969 ja yliopisto perustettiin 1974. Maanjäristys 15.4.1979 vaurioitti kaupunkia, ja nimi Podgorica palautettiin 1992.",
      "tiedosto": "City of Podgorica,Montenegro in 2020.15.jpg",
-     "selite": "Sodan jälkeen Podgorica rakennettiin lähes kokonaan uudelleen.",
+     "selite": "Sodan jälkeen suuri osa Podgoricasta rakennettiin uudelleen, ja kaupunki kasvoi nopeasti.",
      "lahde": "CAPTAIN RAJU, Wikimedia Commons (CC BY-SA 4.0)",
      "wiki": "Podgorica"
     }
@@ -162,7 +162,7 @@
      "selite": "Sahat kula on 19 metriä korkea kivitorni, joka seisoi jo ennen Montenegron aikaa.",
      "lahde": "Liridon, Wikimedia Commons (CC BY-SA 4.0)"
     },
-    "kappale": "Podgorica on kompakti kaupunki, jonka keskusta ja joen toisen puolen kaupunginosat ovat kuljettavissa jalan. Lentoasema TGD on noin kymmenen kilometriä etelään, ja matka keskustaan kestää autolla alle 15 minuuttia. Valuutta on euro. Vanha ja uusi kaupunki ovat kävelymatkan päässä toisistaan, ja kahviloita riittää kävelykaduilla. Mallinnettujen kuukausinormaalien mukaan kesä on kuuma ja sateisinta on lokakuussa.",
+    "kappale": "Podgorica on keskikokoinen kaupunki, jonka nähtävyydet ovat kuljettavissa jalan, kun majoitus on keskustassa tai joen toisella puolella. Lentoasema TGD on noin kymmenen kilometriä etelään, ja matka keskustaan kestää autolla alle 15 minuuttia. Valuutta on euro. Vanha ja uusi kaupunki ovat kävelymatkan päässä toisistaan, ja kahviloita riittää kävelykaduilla. Mallinnettujen kuukausinormaalien mukaan kesä on kuuma ja heinäkuu on kuivin.",
     "artikkeli": {
      "nimi": "Matkailijan Podgorica",
      "taitto": "opas",
@@ -180,10 +180,10 @@
       },
       {
        "otsikko": "Vanha kaupunki Ribnican rannalla",
-       "teksti": "Kaupungin vanha ydin Stara Varoš on Ribnican rannalla. Siellä seisovat Sahat kula -kellotorni, Ribnican linnoituksen jäänteet, vanha silta ja kaksi moskeijaa, ja kadut ovat yhä kapeita ja mutkaisia. Ribnican laskupaikalla Moračaan ovat Skaline-portaat, joita pitkin pääsee joen rantaan.",
+       "teksti": "Kaupungin vanha ydin Stara Varoš on Ribnican rannalla. Siellä seisovat Sahat kula -kellotorni, Ribnican linnoituksen jäänteet, vanha silta ja kaksi moskeijaa, ja kadut ovat yhä kapeita ja mutkaisia. Ribnican laskupaikalla Moračaan ovat Skaline-portaat.",
        "kuva": {
         "tiedosto": "Ribnica fortress, rivers.jpg",
-        "selite": "Ribnica ja Morača yhtyvät linnoituksen juurella, jossa kaupunki sai alkunsa.",
+        "selite": "Ribnican linnoitus kohoaa jokien yhtymäkohdan yläpuolella Stara Varošissa.",
         "lahde": "MOs810, Wikimedia Commons (CC BY 4.0)"
        }
       },
@@ -202,7 +202,7 @@
       },
       {
        "otsikko": "Milloin kannattaa tulla",
-       "teksti": "Mallinnettujen kuukausinormaalien mukaan tammikuun keskilämpötila on noin 2,7 astetta, touko- ja kesäkuussa 18–21 astetta ja elokuussa noin 26 astetta. Sadetta tulee vuodessa noin 1 690 millimetriä: lokakuu on sateisin (360 mm) ja heinäkuu kuivin (21 mm). Lämmin ja suhteellisen kuiva ajanjakso on touko–kesäkuu sekä syyskuun alku.",
+       "teksti": "Mallinnettujen kuukausinormaalien mukaan tammikuun keskilämpötila on noin 2,7 astetta, touko- ja kesäkuussa 18–21 astetta ja elokuussa noin 26 astetta. Sadetta tulee vuodessa lähteen mukaan noin 1 660 millimetriä, ja heinäkuu on kuivin (21 mm). Lämmin ja suhteellisen kuiva ajanjakso on touko–kesäkuu.",
        "kuva": {
         "tiedosto": "Moracha.JPG",
         "selite": "Morača virtaa kaupungin läpi kanjonissa, jonka yli kulkee Millennium-silta.",
@@ -220,7 +220,7 @@
        {
         "mita": "Ribnican linnoitus ja vanha silta",
         "tahdet": 3,
-        "selite": "Joen yhtymäkohdan yläpuolella näkee, mistä kaupunki alkoi."
+        "selite": "Ottomaanien linnoitus kohoaa Ribnican ja Moračan yhtymäkohdan yläpuolella."
        },
        {
         "mita": "Millennium-silta",
@@ -245,7 +245,7 @@
        },
        {
         "otsikko": "Sää",
-        "teksti": "Mallinnettujen kuukausinormaalien mukaan sateisin kuukausi on lokakuu ja kuumimmat heinä- ja elokuu."
+        "teksti": "Mallinnettujen kuukausinormaalien mukaan kuivin kuukausi on heinäkuu ja kuumimmat heinä- ja elokuu."
        },
        {
         "otsikko": "Taksi",
@@ -274,12 +274,12 @@
      "Oliiviöljy"
     ],
     "oikea": 0,
-    "fakta": "Tupakka oli kaupungin ensimmäinen merkittävä kauppatuote, kun naapurikaupunkeihin oli saatu tiet."
+    "fakta": "Vuonna 1904 perustettu Zetska-säästöpankki oli kaupungin ensimmäinen merkittävä rahalaitos, ja siitä kasvoi Podgorička Bank."
    },
    "nostot": [
     {
      "otsikko": "Doclean juusto",
-     "teksti": "Seudun ruokakulttuurin juuret ulottuvat roomalaisaikaan. Plinius vanhempi mainitsee Doclean juuston kuuluisana illyrialaisena tuotteena, ja se kertoo, että kaupunki tunnettiin tuotteistaan jo antiikissa. Lähteen mukaan Doclean ympärillä asukastiheys oli korkea 10 kilometrin säteellä suotuisan ilmaston ja talouden ansiosta. Doclea sijaitsi reittien varrella, ja kauppa kuului sen talouteen. Roomalaiset rakensivat alueelle myös vesijohdon, mikä viittaa suurehkoon asutukseen ja siihen, että ruokaa tarvittiin paljon.",
+     "teksti": "Seudun ruokakulttuurin juuret ulottuvat roomalaisaikaan. Plinius vanhempi mainitsee Doclean juuston kuuluisana illyrialaisena tuotteena. Doclea oli roomalainen kaupunki noin kolme kilometriä nykyisen Podgorican pohjoispuolella. Lähteen mukaan Doclean ympärillä asukastiheys oli korkea 10 kilometrin säteellä suotuisan ilmaston ja talouden ansiosta. Roomalaiset rakensivat alueelle myös vesijohdon, mikä viittaa suurehkoon asutukseen. Doclean yhteyteen rakennettiin myös castrum, jonka tehtävänä oli valvoa tietä.",
      "tiedosto": "Ancient city Doclea - ruins 05.jpg",
      "selite": "Plinius vanhempi mainitsee Doclean juuston kuuluisana illyrialaisena tuotteena.",
      "lahde": "BuhaM, Wikimedia Commons (CC BY-SA 4.0)",
@@ -287,15 +287,15 @@
     },
     {
      "otsikko": "Tupakka tuo ensimmäiset rahat",
-     "teksti": "Vuonna 1902 Podgoricasta rakennettiin tiet kaikkiin naapurikaupunkeihin, ja tupakasta tuli kaupungin ensimmäinen merkittävä kauppatuote. Vuonna 1904 perustettiin Zetska-säästöpankki, josta kasvoi Podgorička Bank. Ennen ensimmäistä maailmansotaa talous perustui kauppaan ja pienteollisuuteen, ja malli periytyi ottomaanikaudelta. Tupakan jalostus kuului myös sodanjälkeisiin teollisuudenaloihin, joten tuote pysyi kaupungin taloudessa mukana vielä alumiinikombinaatin aikaan.",
+     "teksti": "Vuonna 1902 Podgoricasta rakennettiin tiet kaikkiin naapurikaupunkeihin, ja tupakasta tuli kaupungin ensimmäinen merkittävä kauppatuote. Vuonna 1904 perustettiin Zetska-säästöpankki, josta kasvoi Podgorička Bank. Ennen ensimmäistä maailmansotaa talous perustui kauppaan ja pienteollisuuteen, ja malli periytyi ottomaanikaudelta. Tupakan jalostus kuului myös sodanjälkeisiin teollisuudenaloihin alumiinin ja tekstiilien rinnalla, ja alumiinikombinaatti rakennettiin vuonna 1969.",
      "tiedosto": "Podgorica-Tuzi plantaze wineyard IMG 1316 Cijevna river.JPG",
-     "selite": "Tupakka oli Podgorican ensimmäinen merkittävä kauppatuote 1900-luvun alussa.",
+     "selite": "Podgorican ympäristön tasanko: kaupungin talous perustui kauppaan ja pienteollisuuteen.",
      "lahde": "Bjoertvedt, Wikimedia Commons (CC BY-SA 4.0)",
      "wiki": "Podgorica"
     },
     {
      "otsikko": "Viinitarhat tasangolla",
-     "teksti": "Podgorican ympäristön tasangolla kasvavat laajat viinitarhat. Plantaže tuottaa viiniä ja brandya, ja sen menestys perustuu 1970–1980-luvuilla lähiympäristöön istutettuihin viinitarhoihin. Yritys selvisi 1990-luvun myllerryksestä ja on lähteen mukaan yhä merkittävä vientiyritys. Viininvalmistus kuului kaupungin teollisuudenaloihin, ja alueen joet Zeta ja Cijevna virtaavat kaupungin lähellä. Podgorican ympäristön tasanko on siis sekä kauppa- että viljelyseutua, jossa viini on tullut tupakan rinnalle.",
+     "teksti": "Podgorican ympäristön tasangolla kasvavat laajat viinitarhat. Plantaže tuottaa viiniä ja brandya, ja sen menestys perustuu 1970–1980-luvuilla lähiympäristöön istutettuihin viinitarhoihin. Yritys selvisi 1990-luvun myllerryksestä ja on lähteen mukaan yhä merkittävä vientiyritys. Viininvalmistus kuului kaupungin teollisuudenaloihin, ja alueen joet Zeta ja Cijevna virtaavat kaupungin lähellä. Plantaže on yksi niistä yrityksistä, jotka selvisivät 1990-luvun myllerryksestä.",
      "tiedosto": "Podgorica-Tuzi plantaze wineyard IMG 1315.JPG",
      "selite": "Plantaže on yritys, jonka viinitarhat levittyvät Podgorican ympäristön tasangolle.",
      "lahde": "Bjoertvedt, Wikimedia Commons (CC BY-SA 4.0)",
@@ -303,9 +303,9 @@
     },
     {
      "otsikko": "Espresso ja Njegoševa",
-     "teksti": "Lähteen mukaan asukkaiden rakkain ajanvietto on istua kahvilassa kesäpäivänä ja juoda espresso. Kävelykatu Njegoševa on täynnä kahviloita, ja uudempia muodikkaita kahviloita on Vectra-alueella ja Roomalaisella aukiolla. Ruokapuolella tavallisimpia pikaruokia ovat pleskavica ja grillattu liha, roštilj. Kahvilakulttuuri on osa kaupungin arkea, ja Skaline-portaat vievät Ribnican laskukohdasta Moračan rantaan, lähelle vanhaa kaupunkia. Espresso kuuluu täällä kesäpäivään ja kävelykadun hetkiin.",
+     "teksti": "Lähteen mukaan asukkaiden rakkain ajanvietto on istua kahvilassa kesäpäivänä ja juoda espresso. Kävelykatu Njegoševa on täynnä kahviloita, ja uudempia muodikkaita kahviloita on Vectra-alueella ja Roomalaisella aukiolla. Ruokapuolella tavallisimpia pikaruokia ovat pleskavica ja grillattu liha, roštilj. Kahvilakulttuuri on osa kaupungin arkea, ja Skaline-portaat ovat Ribnican laskukohdassa Moračaan, lähellä vanhaa kaupunkia. Espresso kuuluu täällä kesäpäivään ja kävelykadun hetkiin.",
      "tiedosto": "Skaline.JPG",
-     "selite": "Skaline-portaat ja vanha silta ovat Ribnican laskukohdassa Moračaan.",
+     "selite": "Moračan rantaa Ribnican laskukohdan lähellä; rinteellä näkyy Podgorican vanha kaupunki.",
      "lahde": "Rasho992, Wikimedia Commons (CC BY-SA 3.0)",
      "wiki": "Podgorica"
     }
@@ -314,7 +314,7 @@
  ],
  "kohdekartta": {
   "numeroympyrat": true,
-  "esittely": "Vanha ja uusi Podgorica ovat kävelymatkan päässä toisistaan. Ribnican rannalla seisovat kellotorni ja linnoituksen muurit, ja Moračan toisella puolella ovat nykyajan silta ja katedraali.",
+  "esittely": "Vanha ja uusi Podgorica ovat kävelymatkan päässä toisistaan. Ribnican rannalla seisovat kellotorni ja linnoituksen muurit, ja Moračan yli vie nykyajan silta, jonka toisella puolella kohoaa katedraali.",
   "rajat": {
    "pohjoinen": 42.4484,
    "etela": 42.43286,
@@ -370,11 +370,11 @@
   },
   "Ribnican linnoitus": {
    "aika": "1400-luvun loppu",
-   "teksti": "Ribnican linnoitus eli Depedogen, turkiksi Depedöğen, on ottomaanien linnoitus Stara Varošissa Ribnican ja Moračan yhtymäkohdan yläpuolella. Se rakennettiin 1400-luvun lopulla, lähteiden mukaan noin vuosina 1477–1479, ja se oli toinen kahdesta Stara Varošia ympäröineestä linnoituksesta.\n\nLinnoitus oli pitkään ammusvarastona. Isoisän matkavuonna 1873 se oli vielä ehjä, sillä salamanisku sytytti räjähdyksen vasta vuonna 1878 ja tuhosi suuren osan linnoituksen sisä- ja ulkopuolesta.\n\nUskotaan, että paikalla on ollut linnoitus jo 1100-luvulla, mutta tätä ei ole vahvistettu.",
+   "teksti": "Ribnican linnoitus eli Depedogen, turkiksi Depedöğen, on ottomaanien linnoitus Stara Varošissa Ribnican ja Moračan yhtymäkohdan yläpuolella. Se rakennettiin 1400-luvun lopulla, lähteiden mukaan noin vuosina 1477–1479, ja se oli toinen kahdesta Stara Varošia ympäröineestä linnoituksesta.\n\nLinnoitus oli pitkään ammusvarastona. Salamanisku sytytti räjähdyksen vuonna 1878 ja tuhosi suuren osan linnoituksen sisä- ja ulkopuolesta, joten isoisän matkavuonna 1873 tuhoa ei ollut vielä tapahtunut.\n\nUskotaan, että linnoitus periytyy 1100-luvulta.",
    "kuvat": [
     {
      "tiedosto": "Depedogen.JPG",
-     "selite": "Ribnican linnoitus valvoi jokien yhtymäkohtaa 1400-luvun lopulta, kunnes salama tuhosi sen 1878.",
+     "selite": "Ribnican linnoitus rakennettiin 1400-luvun lopulla, ja salamanisku vaurioitti sitä pahoin 1878.",
      "lahde": "Rasho992, Wikimedia Commons (CC BY-SA 3.0)"
     }
    ],
@@ -382,7 +382,7 @@
   },
   "Vanha silta Ribnican yli": {
    "aika": "ottomaanikausi",
-   "teksti": "Vanha kivisilta ylittää Ribnica-joen Stara Varošin kupeessa. Stara Varošin nähtävyyksien luettelossa sitä kutsutaan Adži-paša-sillaksi, ja toisessa yhteydessä nimellä Vezirov most eli Vezirin silta.\n\nSilta on kohdassa, jossa Ribnica laskee Moračaan. Samassa paikassa ovat Skaline-portaat, joita pitkin pääsee joen rantaan. Kaupunki kehittyi Ribnican vasemmalle rannalle ottomaanikaupungin tapaan, ja joen ylitys oli osa vanhan kaupungin arkea.\n\nSilta kuuluu Stara Varošin ottomaaniytimeen, jota Stara Varošissa 1400–1800-luvuilla edusti myös Sahat kula, Ribnican linnoitus ja kaksi moskeijaa. Sillan tarkasta rakennusvuodesta lähteet eivät kerro, mutta isoisän matkavuonna 1873 Stara Varoš oli yhä kaupungin ydin.",
+   "teksti": "Vanha silta ylittää Ribnica-joen Stara Varošin kupeessa. Stara Varošin nähtävyyksien luettelossa sitä kutsutaan Adži-paša-sillaksi, ja toisessa yhteydessä nimellä Vezirov most eli Vezirin silta.\n\nSilta on kohdassa, jossa Ribnica laskee Moračaan. Samassa paikassa ovat Skaline-portaat. Kaupunki kehittyi Ribnican vasemmalle rannalle ottomaanikaupungin tapaan, ja joen ylitys oli osa vanhan kaupungin arkea.\n\nSilta kuuluu Stara Varošin ottomaaniytimeen, jota Stara Varošissa 1400–1800-luvuilla edusti myös Sahat kula, Ribnican linnoitus ja kaksi moskeijaa. Sillan tarkasta rakennusvuodesta lähteet eivät kerro, mutta isoisän matkavuonna 1873 Stara Varoš oli yhä kaupungin ydin.",
    "kuvat": [
     {
      "tiedosto": "Starimost.JPG",
@@ -460,7 +460,7 @@
    128,
    229
   ],
-  "luonnehdinta": "Mallinnettujen kuukausinormaalien mukaan Podgoricassa on talvella leuto, sillä tammikuun keskilämpötila on noin 2,7 astetta. Kesä on kuuma, ja lämpimin kuukausi on elokuu noin 26 asteella. Sadetta tulee vuodessa noin 1 690 millimetriä, ja sateisin kuukausi on lokakuu (360 mm) ja kuivin heinäkuu (21 mm)."
+  "luonnehdinta": "Mallinnettujen kuukausinormaalien mukaan Podgoricassa on talvella leuto, sillä tammikuun keskilämpötila on noin 2,7 astetta. Kesä on kuuma, ja lämpimin kuukausi on elokuu noin 26 asteella. Sadetta tulee vuodessa lähteen mukaan noin 1 660 millimetriä, ja kuivin kuukausi on heinäkuu (21 mm)."
  },
  "ehdotukset": {
   "lentoasema": "Podgorican lentoasema (TGD)",
@@ -469,6 +469,7 @@
    "Teemasivu ruoka: lähdepohja ohut (juusto, tupakka, viini, kahvila); vaihtoehtona nykytaide-sivu (Modernin taiteen keskus). T2-nostossa korvaava tasankokuva, koska tupakkakuvaa ei löytynyt.",
    "Oppaan ruokajakso kuvaton: ei sopivaa kuvaa.",
    "Vanhan sillan rakennusvuosi puuttuu lähteistä; sijainti Wikivoyagen Skaline-kohteesta, likimääräinen.",
+   "Macilla tarkistettavaksi: vanhan sillan koordinaatti (42.43951 / 19.25921) ja Ribnican linnoituksen koordinaatti (42.439 / 19.25913) ovat varmistamattomia arvioita, jotka täytyy tarkistaa; varmista Commonsin Starimost.JPG-/Depedogen.JPG-kuvien tai Wikidatan (Adži-paša-silta, Ribnican linnoitus) koordinaateista ennen julkaisua, ja korvaa, jos ero on yli 50 m.",
    "Sää luettu saa.json:sta (mallinnettu); Wikivoyagen ilmastotaulu poikkeaa (sateisin marraskuu), jätetty pois.",
    "Matkustusturvallisuus tarkistamatta: um.fi ei ollut luettavissa.",
    "Katedraalikuvauksessa käytetty kiertoilmausta (tarkistimen sanatörmäys); Venäjän patriarkka jätetty pois nykypolitiikan välttämiseksi."
