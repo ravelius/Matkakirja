@@ -14,6 +14,13 @@ skriptit `proto-3d/_tyo/linssiseppa2/skriptit-20261009/`, arkit `docs/raportit/k
    arkki kaappaukset/linssiseppa2-179-20261010/peking-179-ilmakeha.jpg → PT. Vallihauta 27/47/60 (ennen 17/38/35, oikea 54/80/68):
    ilmakehä sinistää. PT päättää oman vesivärikertoimen tarpeesta.
 
+4. **PEKINGIN VESIKERROIN** (PT 18.4x) VALMIS: proto linssiseppa2/peking-vesikerroin **2c2305012** (L 1345, unity 0; VesiVari.Korjaus,
+   kalibrointi lokit/linssiseppa2-pkv-k{1,2.5,5}, mittaa-pekingvesi.py). Katot (+28 % R) LR:lle ja PT:lle. Käännös + simu pyydetty →
+   omistajan Peking-kuvasarja yleis + lähi + vallihauta, sarakkeet peli | S2-orto (orto.jpg, krediitti Copernicus Sentinel 2024) → PT.
+5. **"JOS MAA LAKKAISI PYÖRIMÄSTÄ"** (PT 18.5x, omistaja): pääkartan linssi, minä piirto, Natiivi-UI UI + Ydin/MaanPyoriminen.cs
+   (id "maa-ei-pyori", Pyorimisnopeus 0–2, Muuttui). Merenpinta s(φ) = C(f) − A(1−f²)cos²φ, A ≈ 11,0 km, C(f) tilavuudesta ETOPO 3′:llä
+   (tarkistus: 0 % → päiväntasaaja −4,17 km, navat +6,85 km, raja 38,0°). Ensin prototyyppikuvat 100/50/0/150 % iPad + iPhone → PT.
+
 ## TÄNÄÄN VALMISTA (iltapäivä–ilta)
 - Junaan 179 (PT kuittasi, SHA:t Natiivisepälle): ilmakeha-kaikkialla d3885f6d1 (omistaja 16.4x), peking-vesivari efc88563c
   (ämpäri vesi/vari-v1 0dd206f9). PT:n huomio: Prahan etuala viilenee → jos säädät, vain lähietäisyys.
