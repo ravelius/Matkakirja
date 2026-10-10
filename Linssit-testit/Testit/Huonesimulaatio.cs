@@ -366,7 +366,8 @@ namespace Matkakirja.Linssit.Testit
             string osa = Askelaani.Osa(d, PX, PY, PZ);
             kiinniOsassa = osa == kiinniOsa ? kiinniOsassa + 1 : 1; kiinniOsa = osa;
             (PX, PY, PZ) = Tarkistus; Seuraava = TarkistusSeuraava; ArmoAsti = T + ArmoS; Tarjotin = false; pelaajanOsa = Askelaani.Osa(d, PX, PY, PZ);
-            foreach (var w in Hahmot) if (w.Aktiivinen) { w.Aivot.Nollaa(w.X, w.Z, valpas: true); if (kiinniOsassa >= 2) w.Aivot.Helpotettu = true; }
+            foreach (var w in Hahmot) if (w.Aktiivinen) { w.Aivot.Nollaa(w.X, w.Z, valpas: !w.Aivot.Torkkuu);   // torkkuva ei valpastu (SeikkailuVartijat.Kiinni)
+                 if (kiinniOsassa >= 2) w.Aivot.Helpotettu = true; }
             if (kiinniOsassa >= 3) PuluPakotettu++;
         }
         public int KiinniOsassa => kiinniOsassa;
