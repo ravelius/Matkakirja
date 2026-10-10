@@ -3,17 +3,35 @@
 # komennolla. Hakee ämpärin hakemiston pulu/vastaukset/v1/maat.json, maiden paketit (?v=<versio>) ja ajantasaisen sisältöpaketin
 # (sisalto/1/uusin.json → karttavalot + täkynostot), vertaa Kultaiset/pulu-<iso>.json-tiedostoihin tavu tavulta ja tulostaa:
 #   - maittain SAMA / ERO / UUSI, koko ja versio = luotu -tarkistus
-#   - testirivit [Testi] … Maa("ISO", kohtia, kysymysvastauksia, lisaa) ja testin kohteet-tiedoston nimen
+#   - odotukset (maa, kohtia, kysymysvastauksia, lisaa) → Kultaiset/pulu-odotukset.tsv, jonka testi lukee
 #   - löydökset, jotka testi kaataisi: puuttuvat kohteet, väärän maan kortit, valmiittomat linkit, saavuttamattomat Kerro lisää
 #     -vastaukset (PurettujenJaanteet-ehdokkaat) ja rikkinäiset jatkot (lataaja purkaa [[ ]], muut viat jäävät)
-# Käyttö: python3 -I pulu-kultaiset.py [--kirjoita]   (--kirjoita päivittää Kultaiset/-tiedostot; ilman sitä vain raportti)
+# Käyttö: python3 -I pulu-kultaiset.py [--kirjoita] [--haarat] [--testaa]
+#   --kirjoita  päivittää Kultaiset/: muuttuneet paketit, pulu-maat.json, pulu-kohdat.tsv ja pulu-odotukset.tsv (testi lukee sen,
+#               joten uusi maa ei vaadi koodimuutosta, PT 10.10.)
+#   --haarat    tavuvertailu myös pelin repon pilvihaaraan (uusin origin/pulu-<maa>-*: pulu-esigenerointi/<ISO>/<ISO>.json)
+#   --testaa    ajaa lopuksi ./kaanna.sh PuluValmiitMaat (poistumiskoodi = testin)
 # Ei avaimia: julkinen ämpäri media.matkakirja.app.
-import hashlib, json, os, re, sys, time, urllib.request
+import hashlib, json, os, re, subprocess, sys, time, urllib.request
 
 AMPARI = 'https://media.matkakirja.app/'
 KULTAISET = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'Kultaiset')
 KUVIO = re.compile(r'\[\[([^\[\]\n]{1,60})\]\]')   # = PuluChat.KasiteKuvio
 KATTO = 12                                          # = PuluChat.KasitteidenKatto
+REPO = '/Users/Shared/Claude/Matkakirja-pelikoodari'   # pelin repo (pilvihaarat)
+
+
+def haara(maa, raaka):
+    """Uusin origin/pulu-<maa>-* -haara ja täsmääkö sen paketti ämpärin tavuihin."""
+    nimi = {'FRA': 'ranska'}.get(maa, maa.lower())   # Ranskan pilotti ennen ISO-nimiä (pulu-ranska-pilvi)
+    r = subprocess.run(['git', '-C', REPO, 'for-each-ref', '--sort=-committerdate', '--format=%(refname:short)', f'refs/remotes/origin/pulu-{nimi}-*'],
+                       capture_output=True, text=True).stdout.split()
+    for b in r:
+        o = subprocess.run(['git', '-C', REPO, 'show', f'{b}:pulu-esigenerointi/{maa}/{maa}.json'], capture_output=True).stdout
+        if o:
+            sha = subprocess.run(['git', '-C', REPO, 'rev-parse', '--short', b], capture_output=True, text=True).stdout.strip()
+            return f"{'=' if o == raaka else '≠'} {b} {sha}"
+    return 'ei haaraa'
 
 
 def hae(polku):
@@ -83,7 +101,8 @@ def main():
     hakemisto_raaka = hae(f'pulu/vastaukset/v1/maat.json?t={t}')
     hakemisto = json.loads(hakemisto_raaka)['maat']
     print(f'sisältö v{versio}, hakemistossa {len(hakemisto)} maata: {", ".join(sorted(hakemisto))}')
-    testirivit, kaikki_orvot = [], []
+    if '--haarat' in sys.argv: subprocess.run(['git', '-C', REPO, 'fetch', '-q', 'origin'])
+    kaikki_orvot, odotukset = [], []
     for maa, v in sorted(hakemisto.items()):
         raaka = hae(f'pulu/vastaukset/v1/{maa}.json?v={v}')
         d = json.loads(raaka)
@@ -94,17 +113,16 @@ def main():
         kys = sum(len(k.get('kysymykset', [])) for k in d['kohdat'].values())
         lis = sum(len(k.get('lisaa', {})) for k in d['kohdat'].values())
         viat, orvot = tarkista(maa, d, kohteet)
+        hv = f', haara {haara(maa, raaka)}' if '--haarat' in sys.argv else ''
         print(f'{maa} {tila} {len(raaka) // 1024} kt sha {hashlib.sha256(raaka).hexdigest()[:12]} versio {v}'
-              f'{"" if luotu == v else " ≠ luotu " + luotu}, kohtia {len(d["kohdat"])}, {kys} + {lis}, vikoja {len(viat)}, jäänteitä {len(orvot)}')
+              f'{"" if luotu == v else " ≠ luotu " + luotu}, kohtia {len(d["kohdat"])}, {kys} + {lis}, vikoja {len(viat)}, jäänteitä {len(orvot)}{hv}')
+        odotukset.append((maa, len(d['kohdat']), kys, lis))
         for x in viat[:20]:
             print('    VIKA', x)
         kaikki_orvot += orvot
-        testirivit.append(f'        [Testi] static void {maa}Paketti() => Maa("{maa}", {len(d["kohdat"])}, {kys}, {lis});')
         if kirjoita and tila != 'SAMA':
             open(polku, 'wb').write(raaka)
-    print('\nTestirivit (PuluValmiitMaatTestit; nimeä suomeksi kuten muut):')
-    print('\n'.join(testirivit))
-    print(f'        HakemistoKaikkiMaat: "{",".join(sorted(hakemisto))}"')
+    print(f'\nOdotukset ({len(odotukset)} maata) → Kultaiset/pulu-odotukset.tsv (--kirjoita)')
     if kaikki_orvot:
         print('\nSaavuttamattomat Kerro lisää -vastaukset (PurettujenJaanteet, jos puretun linkin jäänne):')
         print('\n'.join('            ' + o for o in kaikki_orvot))
@@ -117,7 +135,14 @@ def main():
                     f'({", ".join(sorted(maat))}), Pulun valmiiden vastausten testiin (pulu-kultaiset.py)\n')
             for i, m in sorted((i, m) for i, m in kohteet.items() if m in maat):
                 f.write(f'{i}\t{m}\n')
-        print(f'\nKirjoitettu Kultaiset/: muuttuneet paketit, pulu-maat.json, {nimi} (sisältö v{versio})')
+        with open(os.path.join(KULTAISET, 'pulu-odotukset.tsv'), 'w') as f:
+            f.write('# maa\tkohtia\tkysymysvastauksia\tKerro lisää -vastauksia (pulu-kultaiset.py --kirjoita; PuluValmiitMaatTestit.KaikkiMaat)\n')
+            for r in sorted(odotukset): f.write('\t'.join(map(str, r)) + '\n')
+        print(f'\nKirjoitettu Kultaiset/: muuttuneet paketit, pulu-maat.json, {nimi} (sisältö v{versio}), pulu-odotukset.tsv')
+    if '--testaa' in sys.argv:
+        r = subprocess.run(['sh', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'kaanna.sh'), 'PuluValmiitMaat'], capture_output=True, text=True)
+        print('\n'.join(x for x in r.stdout.splitlines() if x.startswith(('OK', 'FAIL')) or 'läpi' in x))
+        sys.exit(r.returncode)
 
 
 if __name__ == '__main__':
