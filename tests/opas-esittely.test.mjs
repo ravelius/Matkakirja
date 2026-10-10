@@ -234,28 +234,28 @@ test('sana-ajat (LS1 7.10.): aani_ajat vain kun R2:ssa on <sha>.ajat.json; GET p
   assert.equal('aani_ajat' in d2, false);
 });
 
-test('yksityiskohdat_polut: 6 äänellistä + kaikki 31 äänetöntä (Sisältökirjuri 8.10.; 13 havainnekuvaversiota)', async () => {
+test('yksityiskohdat_polut: 6 äänellistä + kaikki 31 äänetöntä (Sisältökirjuri 10.10.; 33 havainnekuvakaupunkia, Sevilla perässä)', async () => {
   const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
   assert.deepEqual(OPAS_AINEISTOT.yksityiskohdat_polut, { pariisi: 'esittely/pariisi-v2/pariisi-yksityiskohdat.json',
     praha: 'esittely/praha-v1/praha-yksityiskohdat.json', wien: 'esittely/wien-v1/wien-yksityiskohdat.json',
-    rooma: 'esittely/rooma-v5/rooma-yksityiskohdat.json', lontoo: 'esittely/lontoo-v2/lontoo-yksityiskohdat.json',
-    koopenhamina: 'esittely/koopenhamina-v3/koopenhamina-yksityiskohdat.json',
-    venetsia: 'esittely/venetsia-v1/venetsia-yksityiskohdat.json', barcelona: 'esittely/barcelona-v1/barcelona-yksityiskohdat.json',
-    berliini: 'esittely/berliini-v2/berliini-yksityiskohdat.json', amsterdam: 'esittely/amsterdam-v1/amsterdam-yksityiskohdat.json',
-    madrid: 'esittely/madrid-v1/madrid-yksityiskohdat.json', ateena: 'esittely/ateena-v1/ateena-yksityiskohdat.json',
-    firenze: 'esittely/firenze-v2/firenze-yksityiskohdat.json',
-    lissabon: 'esittely/lissabon-v1/lissabon-yksityiskohdat.json', tukholma: 'esittely/tukholma-v5/tukholma-yksityiskohdat.json',
-    helsinki: 'esittely/helsinki-v2/helsinki-yksityiskohdat.json', budapest: 'esittely/budapest-v1/budapest-yksityiskohdat.json',
-    edinburgh: 'esittely/edinburgh-v1/edinburgh-yksityiskohdat.json', dublin: 'esittely/dublin-v1/dublin-yksityiskohdat.json',
-    krakova: 'esittely/krakova-v1/krakova-yksityiskohdat.json', sevilla: 'esittely/sevilla-v1/sevilla-yksityiskohdat.json',
-    oslo: 'esittely/oslo-v1/oslo-yksityiskohdat.json',
-    bryssel: 'esittely/bryssel-v1/bryssel-yksityiskohdat.json', marseille: 'esittely/marseille-v1/marseille-yksityiskohdat.json',
+    rooma: 'esittely/rooma-v5/rooma-yksityiskohdat.json', lontoo: 'esittely/lontoo-v3/lontoo-yksityiskohdat.json',
+    koopenhamina: 'esittely/koopenhamina-v4/koopenhamina-yksityiskohdat.json',
+    venetsia: 'esittely/venetsia-v2/venetsia-yksityiskohdat.json', barcelona: 'esittely/barcelona-v2/barcelona-yksityiskohdat.json',
+    berliini: 'esittely/berliini-v3/berliini-yksityiskohdat.json', amsterdam: 'esittely/amsterdam-v2/amsterdam-yksityiskohdat.json',
+    madrid: 'esittely/madrid-v2/madrid-yksityiskohdat.json', ateena: 'esittely/ateena-v2/ateena-yksityiskohdat.json',
+    firenze: 'esittely/firenze-v3/firenze-yksityiskohdat.json',
+    lissabon: 'esittely/lissabon-v2/lissabon-yksityiskohdat.json', tukholma: 'esittely/tukholma-v6/tukholma-yksityiskohdat.json',
+    helsinki: 'esittely/helsinki-v3/helsinki-yksityiskohdat.json', budapest: 'esittely/budapest-v2/budapest-yksityiskohdat.json',
+    edinburgh: 'esittely/edinburgh-v2/edinburgh-yksityiskohdat.json', dublin: 'esittely/dublin-v2/dublin-yksityiskohdat.json',
+    krakova: 'esittely/krakova-v2/krakova-yksityiskohdat.json', sevilla: 'esittely/sevilla-v1/sevilla-yksityiskohdat.json',
+    oslo: 'esittely/oslo-v2/oslo-yksityiskohdat.json',
+    bryssel: 'esittely/bryssel-v2/bryssel-yksityiskohdat.json', marseille: 'esittely/marseille-v2/marseille-yksityiskohdat.json',
     bergen: 'esittely/bergen-v2/bergen-yksityiskohdat.json', granada: 'esittely/granada-v2/granada-yksityiskohdat.json',
     tampere: 'esittely/tampere-v3/tampere-yksityiskohdat.json', vilna: 'esittely/vilna-v3/vilna-yksityiskohdat.json',
     ljubljana: 'esittely/ljubljana-v2/ljubljana-yksityiskohdat.json', valletta: 'esittely/valletta-v2/valletta-yksityiskohdat.json',
     sofia: 'esittely/sofia-v2/sofia-yksityiskohdat.json', bukarest: 'esittely/bukarest-v2/bukarest-yksityiskohdat.json',
     luxemburg: 'esittely/luxemburg-v2/luxemburg-yksityiskohdat.json', kosice: 'esittely/kosice-v2/kosice-yksityiskohdat.json',
-    islanti: 'esittely/islanti-v2/islanti-yksityiskohdat.json', kreeta: 'esittely/kreeta-v2/kreeta-yksityiskohdat.json',
+    islanti: 'esittely/islanti-v3/islanti-yksityiskohdat.json', kreeta: 'esittely/kreeta-v2/kreeta-yksityiskohdat.json',
     sisilia: 'esittely/sisilia-v4/sisilia-yksityiskohdat.json' });
   // Kaikki 37 esittelykaupunkia (6 äänellistä + 31 äänetöntä) saavat yksityiskohtakuvat.
   assert.deepEqual(Object.keys(OPAS_AINEISTOT.yksityiskohdat_polut).sort(), [...OPAS_AINEISTOT.esittely].sort());

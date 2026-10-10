@@ -71,25 +71,26 @@ export const OPAS_AINEISTOT = Object.freeze({
     vilna: 'opas/esittely-v2/vilna.json',
   },
   // Yksityiskohtakuvat (Sisältökirjuri 7.10.; natiivi lentää kuvan sivuun ankkurisanan kohdalla): luettelo media-juuresta.
+  // 10.10. (Päätoimittajan kuittaus 09.3x): 63 uutta Codex-havainnekuvaa 20 kaupunkiin (paketti opas-havainnekuvat-vienti-20261010; Sevilla perässä, kun Codex toimittaa).
   yksityiskohdat_polut: {
     pariisi: 'esittely/pariisi-v2/pariisi-yksityiskohdat.json',
     praha: 'esittely/praha-v1/praha-yksityiskohdat.json', wien: 'esittely/wien-v1/wien-yksityiskohdat.json',
-    rooma: 'esittely/rooma-v5/rooma-yksityiskohdat.json', lontoo: 'esittely/lontoo-v2/lontoo-yksityiskohdat.json',
-    koopenhamina: 'esittely/koopenhamina-v3/koopenhamina-yksityiskohdat.json',
+    rooma: 'esittely/rooma-v5/rooma-yksityiskohdat.json', lontoo: 'esittely/lontoo-v3/lontoo-yksityiskohdat.json',
+    koopenhamina: 'esittely/koopenhamina-v4/koopenhamina-yksityiskohdat.json',
     // 31 äänetöntä (Sisältökirjuri 8.10., erät 1–2; ankkurit tarkistettu esittely-aaneton-v3:sta).
-    venetsia: 'esittely/venetsia-v1/venetsia-yksityiskohdat.json', barcelona: 'esittely/barcelona-v1/barcelona-yksityiskohdat.json',
-    berliini: 'esittely/berliini-v2/berliini-yksityiskohdat.json', amsterdam: 'esittely/amsterdam-v1/amsterdam-yksityiskohdat.json',
-    madrid: 'esittely/madrid-v1/madrid-yksityiskohdat.json', ateena: 'esittely/ateena-v1/ateena-yksityiskohdat.json',
-    firenze: 'esittely/firenze-v2/firenze-yksityiskohdat.json',
+    venetsia: 'esittely/venetsia-v2/venetsia-yksityiskohdat.json', barcelona: 'esittely/barcelona-v2/barcelona-yksityiskohdat.json',
+    berliini: 'esittely/berliini-v3/berliini-yksityiskohdat.json', amsterdam: 'esittely/amsterdam-v2/amsterdam-yksityiskohdat.json',
+    madrid: 'esittely/madrid-v2/madrid-yksityiskohdat.json', ateena: 'esittely/ateena-v2/ateena-yksityiskohdat.json',
+    firenze: 'esittely/firenze-v3/firenze-yksityiskohdat.json',
     // erät 3–4 (8.10.)
-    lissabon: 'esittely/lissabon-v1/lissabon-yksityiskohdat.json', tukholma: 'esittely/tukholma-v5/tukholma-yksityiskohdat.json',   // v5 9.10.: + Kuninkaanlinnan aarrekammio ja Erik XIV:n kruunu
-    helsinki: 'esittely/helsinki-v2/helsinki-yksityiskohdat.json', budapest: 'esittely/budapest-v1/budapest-yksityiskohdat.json',
+    lissabon: 'esittely/lissabon-v2/lissabon-yksityiskohdat.json', tukholma: 'esittely/tukholma-v6/tukholma-yksityiskohdat.json',   // v5 9.10.: + Kuninkaanlinnan aarrekammio ja Erik XIV:n kruunu
+    helsinki: 'esittely/helsinki-v3/helsinki-yksityiskohdat.json', budapest: 'esittely/budapest-v2/budapest-yksityiskohdat.json',
     // erät 5–6 (8.10.)
-    edinburgh: 'esittely/edinburgh-v1/edinburgh-yksityiskohdat.json', dublin: 'esittely/dublin-v1/dublin-yksityiskohdat.json',
-    krakova: 'esittely/krakova-v1/krakova-yksityiskohdat.json', sevilla: 'esittely/sevilla-v1/sevilla-yksityiskohdat.json',
-    oslo: 'esittely/oslo-v1/oslo-yksityiskohdat.json',
+    edinburgh: 'esittely/edinburgh-v2/edinburgh-yksityiskohdat.json', dublin: 'esittely/dublin-v2/dublin-yksityiskohdat.json',
+    krakova: 'esittely/krakova-v2/krakova-yksityiskohdat.json', sevilla: 'esittely/sevilla-v1/sevilla-yksityiskohdat.json',
+    oslo: 'esittely/oslo-v2/oslo-yksityiskohdat.json',
     // erät 7–8 (8.10.)
-    bryssel: 'esittely/bryssel-v1/bryssel-yksityiskohdat.json', marseille: 'esittely/marseille-v1/marseille-yksityiskohdat.json',
+    bryssel: 'esittely/bryssel-v2/bryssel-yksityiskohdat.json', marseille: 'esittely/marseille-v2/marseille-yksityiskohdat.json',
     bergen: 'esittely/bergen-v2/bergen-yksityiskohdat.json', granada: 'esittely/granada-v2/granada-yksityiskohdat.json',
     // erät 9–10 (8.10.)
     tampere: 'esittely/tampere-v3/tampere-yksityiskohdat.json', vilna: 'esittely/vilna-v3/vilna-yksityiskohdat.json',
@@ -97,7 +98,7 @@ export const OPAS_AINEISTOT = Object.freeze({
     // erät 11–13 (8.10.): kaikki 31 äänetöntä valmiina
     sofia: 'esittely/sofia-v2/sofia-yksityiskohdat.json', bukarest: 'esittely/bukarest-v2/bukarest-yksityiskohdat.json',
     luxemburg: 'esittely/luxemburg-v2/luxemburg-yksityiskohdat.json', kosice: 'esittely/kosice-v2/kosice-yksityiskohdat.json',
-    islanti: 'esittely/islanti-v2/islanti-yksityiskohdat.json', kreeta: 'esittely/kreeta-v2/kreeta-yksityiskohdat.json',
+    islanti: 'esittely/islanti-v3/islanti-yksityiskohdat.json', kreeta: 'esittely/kreeta-v2/kreeta-yksityiskohdat.json',
     sisilia: 'esittely/sisilia-v4/sisilia-yksityiskohdat.json',
   },
   // Klikattavat lisäkuvat ilman ankkuria (Sisältökirjuri 9.10.; NUI näyttää lisäkuvina):
