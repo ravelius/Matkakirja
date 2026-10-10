@@ -2456,7 +2456,7 @@
     "lx": 150,
     "kelvin": 3500
    },
-   "teos_ehdotus": null
+   "teos_ehdotus": "mauritshuis-605"
   },
   {
    "id": "kg-k3v-t1",
@@ -2904,7 +2904,7 @@
     0,
     0
    ],
-   "max_leveys": 3.0,
+   "max_leveys": 3.2,
    "max_korkeus": 2.8,
    "sopii": "maalaus",
    "kehysprofiili": "nl_aalto_musta",
@@ -2919,12 +2919,12 @@
      -0.866,
      0.0
     ],
-    "puolikulma_aste": 26.3,
+    "puolikulma_aste": 27.2,
     "reunahaive": 0.35,
     "lx": 150,
     "kelvin": 3500
    },
-   "teos_ehdotus": null
+   "teos_ehdotus": "fhm-os-i-116"
   },
   {
    "id": "kg-pilari1o",
@@ -2940,7 +2940,7 @@
     0,
     0
    ],
-   "max_leveys": 3.0,
+   "max_leveys": 3.2,
    "max_korkeus": 2.8,
    "sopii": "maalaus",
    "kehysprofiili": "nl_aalto_musta",
@@ -2955,12 +2955,12 @@
      -0.866,
      0.0
     ],
-    "puolikulma_aste": 26.3,
+    "puolikulma_aste": 27.2,
     "reunahaive": 0.35,
     "lx": 150,
     "kelvin": 3500
    },
-   "teos_ehdotus": null
+   "teos_ehdotus": "vgm-s0005v1962"
   },
   {
    "id": "kg-pilari2v",
@@ -2976,7 +2976,7 @@
     0,
     0
    ],
-   "max_leveys": 3.0,
+   "max_leveys": 3.2,
    "max_korkeus": 2.8,
    "sopii": "maalaus",
    "kehysprofiili": "nl_aalto_musta",
@@ -2991,12 +2991,12 @@
      -0.866,
      0.0
     ],
-    "puolikulma_aste": 26.3,
+    "puolikulma_aste": 27.2,
     "reunahaive": 0.35,
     "lx": 150,
     "kelvin": 3500
    },
-   "teos_ehdotus": null
+   "teos_ehdotus": "SK-A-2280"
   },
   {
    "id": "kg-pilari2o",
@@ -3012,7 +3012,7 @@
     0,
     0
    ],
-   "max_leveys": 3.0,
+   "max_leveys": 3.2,
    "max_korkeus": 2.8,
    "sopii": "maalaus",
    "kehysprofiili": "nl_aalto_musta",
@@ -3027,12 +3027,12 @@
      -0.866,
      0.0
     ],
-    "puolikulma_aste": 26.3,
+    "puolikulma_aste": 27.2,
     "reunahaive": 0.35,
     "lx": 150,
     "kelvin": 3500
    },
-   "teos_ehdotus": null
+   "teos_ehdotus": "vgm-s0149v1962"
   },
   {
    "id": "kg-pilari3v",
@@ -3048,7 +3048,7 @@
     0,
     0
    ],
-   "max_leveys": 3.0,
+   "max_leveys": 3.2,
    "max_korkeus": 2.8,
    "sopii": "maalaus",
    "kehysprofiili": "nl_aalto_musta",
@@ -3063,12 +3063,12 @@
      -0.866,
      0.0
     ],
-    "puolikulma_aste": 26.3,
+    "puolikulma_aste": 27.2,
     "reunahaive": 0.35,
     "lx": 150,
     "kelvin": 3500
    },
-   "teos_ehdotus": null
+   "teos_ehdotus": "kmska-2200"
   },
   {
    "id": "kg-pilari3o",
@@ -3084,7 +3084,7 @@
     0,
     0
    ],
-   "max_leveys": 3.0,
+   "max_leveys": 3.2,
    "max_korkeus": 2.8,
    "sopii": "maalaus",
    "kehysprofiili": "nl_aalto_musta",
@@ -3099,12 +3099,12 @@
      -0.866,
      0.0
     ],
-    "puolikulma_aste": 26.3,
+    "puolikulma_aste": 27.2,
     "reunahaive": 0.35,
     "lx": 150,
     "kelvin": 3500
    },
-   "teos_ehdotus": null
+   "teos_ehdotus": "vgm-s0031v1962"
   },
   {
    "id": "yv-yovartio",
@@ -3176,7 +3176,7 @@
     "lx": 180,
     "kelvin": 3300
    },
-   "teos_ehdotus": null
+   "teos_ehdotus": "mauritshuis-146"
   },
   {
    "id": "yv-v2",
@@ -3212,7 +3212,7 @@
     "lx": 180,
     "kelvin": 3300
    },
-   "teos_ehdotus": null
+   "teos_ehdotus": "mauritshuis-840"
   },
   {
    "id": "yv-o1",
@@ -3248,7 +3248,7 @@
     "lx": 180,
     "kelvin": 3300
    },
-   "teos_ehdotus": null
+   "teos_ehdotus": "mauritshuis-92"
   },
   {
    "id": "yv-o2",
@@ -3284,7 +3284,7 @@
     "lx": 180,
     "kelvin": 3300
    },
-   "teos_ehdotus": null
+   "teos_ehdotus": "mauritshuis-670"
   }
  ],
  "tekstitaulut": [
@@ -4314,7 +4314,7 @@
    "keskipiste": [
     -4.49,
     1.45,
-    -35.35
+    -35.25
    ],
    "normaali": [
     1,
@@ -4334,7 +4334,7 @@
    "keskipiste": [
     4.49,
     1.45,
-    -39.05
+    -39.15
    ],
    "normaali": [
     -1,
@@ -4354,7 +4354,7 @@
    "keskipiste": [
     -4.49,
     1.45,
-    -47.35
+    -47.25
    ],
    "normaali": [
     1,
@@ -4374,7 +4374,7 @@
    "keskipiste": [
     4.49,
     1.45,
-    -51.05
+    -51.15
    ],
    "normaali": [
     -1,
@@ -4394,7 +4394,7 @@
    "keskipiste": [
     -4.49,
     1.45,
-    -59.35
+    -59.25
    ],
    "normaali": [
     1,
@@ -4414,7 +4414,7 @@
    "keskipiste": [
     4.49,
     1.45,
-    -63.05
+    -63.15
    ],
    "normaali": [
     -1,

@@ -262,7 +262,7 @@ namespace Matkakirja.Natiivi
         public const float AtlasLx = 1200f;
 
         /// <summary>Atlaksen ja sali.json:n versio (LR:n v2f 10.10.: kehys- ja patsasvarjot); vaihdetaan yhdessä Resources/Museo/&lt;maa&gt;/sali.json:n kanssa.</summary>
-        public const string SaliKansio = "sali-v2/";
+        public const string SaliKansio = "sali-v2g/";   // LR:n v2g (LS2 10.10. 22.3x): 11 tyhjää paikkaa täytetty, jalustat ja kivi_hiekka
 
         /// <summary>Lataa &lt;maaJuuri&gt;SaliKansio{sali-lod&lt;L&gt;.glb, valot/sali-lod&lt;L&gt;-4x4.astcm, tekstuurit/&lt;materiaali&gt;.astcm} ja vaihtaa
         /// väliaikaishallin tilalle, kun kaikki on valmiina. Puuttuva malli tai atlas jättää väliaikaishallin; puuttuva tekstuuri jättää
