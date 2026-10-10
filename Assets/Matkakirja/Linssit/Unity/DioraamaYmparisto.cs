@@ -27,6 +27,13 @@ namespace Matkakirja.Natiivi
         public static bool Kaytossa { get; private set; }
         /// <summary>Kehittäjä: "poikki vesi heijastus 0|1" (null = laatutason mukaan).</summary>
         public static bool? HeijastusPakotettu;
+        // MITATTU VEDEN VÄRI (PT 10.10. 10.1x, juna 176; Karttaseppä vesivari-kaudet-olavinlinna.json, Sentinel-2 L2A 2019–2025, LS2:n
+        // VesiPinta-kaava): Kyrönsalmen kesä (40 kuvaa, sameus 0,9 FNU) lineaarisena, pintaheijastus poistettu (varjostin lisää taivaan
+        // heijastuksen). Matala = rantavyö, syvä = avovesi; DioraamaVesi sekoittaa ne syvyyskartan mukaan 0–6 m. Linna on aina kesässä, joten
+        // kausi on kiinteä (talvi epäluotettava: jää suodatettu). Kehittäjä: "poikki vesi vari 0|1 [kerroin]" (0 = vanhat käsin valitut sävyt).
+        public static bool MitattuVari = true;
+        public static float VariKerroin = 1f;
+        static readonly Vector4 KyronsalmiSyva = new Vector4(0.0011f, 0.0030f, 0.0054f, 1f), KyronsalmiMatala = new Vector4(0.0020f, 0.0038f, 0.0058f, 1f);
 
         static readonly int IdAallot = Shader.PropertyToID("_VesiAallot"), IdParam = Shader.PropertyToID("_VesiParam"),
             IdSyvyysParam = Shader.PropertyToID("_SyvyysParam"), IdMata = Shader.PropertyToID("_VesiMata"),
@@ -151,6 +158,15 @@ namespace Matkakirja.Natiivi
 
         // --- JÄRVI ----------------------------------------------------------------------------------------------------
 
+        /// <summary>Veden runko: mitattu Kyrönsalmen kesäväri (lineaarinen, SetGlobalVector ilman gammamuunnosta) tai vanhat sävyt.</summary>
+        public static void AsetaVedenVari()
+        {
+            if (MitattuVari) { Shader.SetGlobalVector(IdMata, KyronsalmiMatala * VariKerroin); Shader.SetGlobalVector(IdSyva, KyronsalmiSyva * VariKerroin); return; }
+            // Tumma järvi (Saimaan ruskehtava vesi, 1.10.): runko vain varjoissa, pinta peilaa taivasta.
+            Shader.SetGlobalColor(IdMata, new Color(0.11f, 0.12f, 0.10f));
+            Shader.SetGlobalColor(IdSyva, new Color(0.035f, 0.055f, 0.065f));
+        }
+
         void LuoVesi()
         {
             var varjostin = Shader.Find("Matkakirja/Linssit/DioraamaVesi");
@@ -166,9 +182,7 @@ namespace Matkakirja.Natiivi
             }
             Shader.SetGlobalVectorArray(IdAallot, Aallot);
             Shader.SetGlobalVector(IdSyvyysParam, Vector4.zero);
-            // Tumma järvi (Saimaan ruskehtava vesi): runko vain varjoissa, pinta peilaa taivasta.
-            Shader.SetGlobalColor(IdMata, new Color(0.11f, 0.12f, 0.10f));
-            Shader.SetGlobalColor(IdSyva, new Color(0.035f, 0.055f, 0.065f));
+            AsetaVedenVari();
             Shader.SetGlobalColor(IdTaivasYla, new Color(0.56f, 0.64f, 0.74f));
             Shader.SetGlobalColor(IdTaivasAla, DioraamaNayttamo.TaustaVari);
             Shader.SetGlobalColor(IdAurinko, new Color(1f, 0.85f, 0.62f));

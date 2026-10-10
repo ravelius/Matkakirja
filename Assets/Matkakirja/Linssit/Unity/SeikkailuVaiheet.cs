@@ -65,6 +65,10 @@ namespace Matkakirja.Natiivi
                 if (malli == null) { kirjaa?.Invoke($"seikkailu: vaihe {m.Id}: {virhe}"); continue; }
                 var v = new Vaihe { Malli = m };
                 v.Go = s.Rakenna(malli, m.Id, isa, v);
+                // Esittelyn esihistoria (LR v46x, juna 176): tyhjät liekki:/savu: (nuotio, kaskisavu) savuksi vaiheen alle, näkyy vaiheen mukana.
+                var tyhjat = DioraamaTyhja.Lue(malli);
+                var savu = isa.GetComponent<DioraamaNayttamo>()?.Savu;
+                if (savu != null && tyhjat.Exists(t => t.Laji == "savu" || t.Laji == "liekki")) savu.LisaaTila("vaihe:" + m.Id, v.Go.transform, tyhjat, kirjaa, v.Go.transform);
                 v.Go.SetActive(false);
                 if (!string.IsNullOrEmpty(m.Leikkaukset))
                 {

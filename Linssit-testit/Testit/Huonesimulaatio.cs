@@ -252,7 +252,7 @@ namespace Matkakirja.Linssit.Testit
             else Jono.Add(new Aanilahde(kohde.X, kohde.Z, HeittoAaniM, Askelaani.Osa(Data, kohde.X, kohde.Y, kohde.Z), kohde.Y));
         }
 
-        bool Vaara() { foreach (var h in Hahmot) if (h.Aktiivinen && h.Aivot.Tila != VartijanTila.Partio && h.Aivot.Tila != VartijanTila.Paluu) return true; return false; }
+        public bool Vaara() { foreach (var h in Hahmot) if (h.Aktiivinen && h.Aivot.Tila != VartijanTila.Partio && h.Aivot.Tila != VartijanTila.Paluu) return true; return false; }
 
         void Paivita(double vauhti)
         {

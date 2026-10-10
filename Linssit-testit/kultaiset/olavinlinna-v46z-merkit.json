@@ -1,0 +1,4499 @@
+[
+ {
+  "nimi": "ovi:vesiportti-loppu",
+  "paikka": [
+   -40.851,
+   -5.6,
+   24.015
+  ],
+  "leveys": 2.4,
+  "korkeus": 2.6,
+  "kierto_y": -2.1763,
+  "huom": "etuvarustuksen portti länsikyljessä (1499, L1 s. 99 + TULKINTA); silta laiturilta",
+  "osa": "vesiportti"
+ },
+ {
+  "nimi": "ovi:vesiportti-alku",
+  "paikka": [
+   -58.381,
+   -5.9,
+   20.926
+  ],
+  "leveys": 2.4,
+  "korkeus": 2.6,
+  "kierto_y": 1.4085,
+  "huom": "sillan alku laiturin itäkyljessä s 4,5 (1499: silta etuvarustuksen porttiin; portinvartijan selän takana > 5 m); nousun jälkeen katse tänne",
+  "osa": "vesiportti"
+ },
+ {
+  "nimi": "leikkaus:vain-1499-b",
+  "paikka": [
+   -45.0,
+   -4.0,
+   30.0
+  ],
+  "leikkaukset": [
+   "b1499-vesiportin-bastioni-l",
+   "b1499-vesiportin-bastioni-e",
+   "b1499-vesiportin-bastioni-fw",
+   "b1499-porttikurtiini-s101",
+   "b1499-s201-rakennus",
+   "b1499-kellobastioni",
+   "b1499-vesiportin-bastioni-itakylki",
+   "b1499-ponttonisilta",
+   "b1499-kellobastioni-lounas",
+   "b1499-paksu-bastioni",
+   "b1499-paksu-bastioni-pohjoinen"
+  ],
+  "huom": "B (omistaja 8.10.): 1790-luvun länsivarustukset, ponttonisilta ja (PT 10.10.) itäpään Paksu bastioni pois vuoden 1499 näkymästä; tilalle kallioranta (oma geometria tässä osassa) ja etuvarustus + silta (osa vesiportti). Drone-näkymässä (K2) nykylinna normaalisti.",
+  "osa": "ranta-1499"
+ },
+ {
+  "nimi": "ovi:porttikaytava-T102-alku",
+  "paikka": [
+   -32.6,
+   -5.6,
+   20.0
+  ],
+  "leveys": 4.3,
+  "korkeus": 2.6,
+  "osa": "porttikaytava-T102"
+ },
+ {
+  "nimi": "ovi:porttikaytava-T102-loppu",
+  "paikka": [
+   -26.1,
+   -2.74,
+   10.6
+  ],
+  "leveys": 1.9,
+  "korkeus": 2.6,
+  "osa": "porttikaytava-T102"
+ },
+ {
+  "nimi": "ovi:keittio-piha",
+  "paikka": [
+   -21.5,
+   -2.65,
+   10.6
+  ],
+  "leveys": 1.1,
+  "korkeus": 2.0,
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "piilo:poydan-alla",
+  "paikka": [
+   -20.0,
+   -2.65,
+   12.6
+  ],
+  "tyyppi": "kyykky",
+  "koko": [
+   1.6,
+   1.0,
+   0.9
+  ],
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "piilo:tynnyrien-takana",
+  "paikka": [
+   -15.95,
+   -2.65,
+   14.35
+  ],
+  "tyyppi": "kyykky",
+  "koko": [
+   1.0,
+   1.1,
+   0.9
+  ],
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "piilo:uunin-vieressa",
+  "paikka": [
+   -23.8,
+   -2.65,
+   13.9
+  ],
+  "tyyppi": "seisova",
+  "koko": [
+   0.8,
+   1.9,
+   0.7
+  ],
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "esine:savipurkki",
+  "paikka": [
+   -21.0,
+   -1.75,
+   12.6
+  ],
+  "glb": "esine-savipurkki.glb",
+  "heitettava": true,
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "esine:kauha",
+  "paikka": [
+   -22.8,
+   -1.65,
+   13.4
+  ],
+  "glb": "esine-kauha.glb",
+  "heitettava": true,
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "esine:nauris",
+  "paikka": [
+   -19.2,
+   -1.7,
+   12.4
+  ],
+  "glb": "esine-nauris.glb",
+  "heitettava": true,
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "esine:lautanen",
+  "paikka": [
+   -20.4,
+   -1.73,
+   12.8
+  ],
+  "glb": "esine-lautanen.glb",
+  "heitettava": true,
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "partio:keittio-1",
+  "paikka": [
+   -17.5,
+   -2.65,
+   11.6
+  ],
+  "odota_s": 4,
+  "osa": "keittio-G102",
+  "profiili": "kokki",
+  "henkilo": "kokki-1500"
+ },
+ {
+  "nimi": "partio:keittio-2",
+  "paikka": [
+   -22.6,
+   -2.65,
+   11.6
+  ],
+  "odota_s": 3,
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "ovi:kirkkotorni-piha",
+  "paikka": [
+   -20.7,
+   -2.74,
+   5.5
+  ],
+  "leveys": 2.0,
+  "korkeus": 2.6,
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "ovi:kierreporras",
+  "paikka": [
+   -20.7,
+   -2.74,
+   -2.8
+  ],
+  "leveys": 1.05,
+  "korkeus": 1.95,
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "ovi:tott-kammio",
+  "paikka": [
+   -17.244,
+   3.4,
+   -10.61
+  ],
+  "leveys": 1.05,
+  "korkeus": 2.0,
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "ovi:linnantupa",
+  "paikka": [
+   -15.792,
+   3.4,
+   -10.136
+  ],
+  "leveys": 1.05,
+  "korkeus": 2.0,
+  "huom": "Tott-kammion eteläovi Linnantupaan (L2, L15)",
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "naulakko:tott-kammio",
+  "paikka": [
+   -14.689,
+   5.0,
+   -10.259
+  ],
+  "kierto_y": -3.002,
+  "huom": "puinen naulalauta seinässä Linnantuvan oven vieressä, varjossa; esiliina ja myssy (pukeutuminen 2 s), viitta jää naulaan",
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "esine:esiliina",
+  "paikka": [
+   -14.524,
+   4.85,
+   -10.327
+  ],
+  "kierto_y": -3.002,
+  "puettava": true,
+  "glb": "esine-esiliina.glb",
+  "huom": "naulakossa; origo naulan kohdalla, roikkuu −Y",
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "esine:myssy",
+  "paikka": [
+   -14.867,
+   4.85,
+   -10.278
+  ],
+  "kierto_y": -3.002,
+  "puettava": true,
+  "glb": "esine-myssy.glb",
+  "huom": "naulakossa; origo naulan kohdalla, roikkuu −Y",
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "valo:tott-takka",
+  "paikka": [
+   -11.508,
+   4.0,
+   -13.59
+  ],
+  "sade": 5.0,
+  "voima": 0.6,
+  "vari": "#ff7a30",
+  "lepatus": 0.35,
+  "hiillos": true,
+  "huom": "takan hiillos valaisee kammion keskiosaa (0,4–0,5), seinän vierus jää pimeäksi (0,2); TULKINTA",
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "piilo:muuriporras-2-komero",
+  "paikka": [
+   -20.681,
+   8.05,
+   -11.115
+  ],
+  "tyyppi": "seisova",
+  "koko": [
+   0.9,
+   2.0,
+   1.3
+  ],
+  "kierto_y": -1.0472,
+  "huom": "ampuma-aukkokomero porrasvarren ulkoseinässä (pelattavuusmalli 8.1 huone 4: vastaantulijan väistö)",
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "ovi:paaovi",
+  "paikka": [
+   -17.637,
+   9.6,
+   -11.405
+  ],
+  "leveys": 1.0,
+  "korkeus": 1.9,
+  "lukko": true,
+  "valorako_m": 0.025,
+  "huom": "pääovi (muuriportaat alhaalta Tott-kammiosta); E3: lukko ja 2–3 cm:n valorako alla",
+  "osa": "kirkkotorni-portaat",
+  "glb": "ovi-tammi-100x190.glb"
+ },
+ {
+  "nimi": "ovi:kappeli-alku",
+  "paikka": [
+   -17.637,
+   9.6,
+   -11.405
+  ],
+  "leveys": 1.0,
+  "korkeus": 1.9,
+  "huom": "= ovi:paaovi (vanha nimi)",
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "piilo:alttarin-varjo",
+  "paikka": [
+   -12.389,
+   9.6,
+   -16.069
+  ],
+  "tyyppi": "kyykky",
+  "koko": [
+   0.8,
+   1.1,
+   0.6
+  ],
+  "huom": "pääalttarin pohjoispää, kynttilöiden varjo",
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "veto:syvennys",
+  "paikka": [
+   -13.003,
+   10.9,
+   -17.587
+  ],
+  "kierto_y": 2.4653,
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "ontto:syvennys",
+  "paikka": [
+   -12.971,
+   10.9,
+   -17.626
+  ],
+  "leveys": 0.5,
+  "korkeus": 0.4,
+  "kierto_y": 2.4653,
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "esine:kivi-1",
+  "paikka": [
+   -13.0,
+   10.8,
+   -17.79
+  ],
+  "glb": "esine-kivi-1.glb",
+  "irrotettava": true,
+  "kierto_y": 2.4653,
+  "huom": "paikka = lohkon keskipiste; glTF +z = etupinta",
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "esine:kivi-2",
+  "paikka": [
+   -12.805,
+   10.8,
+   -17.633
+  ],
+  "glb": "esine-kivi-2.glb",
+  "irrotettava": true,
+  "kierto_y": 2.4653,
+  "huom": "paikka = lohkon keskipiste; glTF +z = etupinta",
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "esine:kivi-3",
+  "paikka": [
+   -13.0,
+   11.0,
+   -17.79
+  ],
+  "glb": "esine-kivi-3.glb",
+  "irrotettava": true,
+  "kierto_y": 2.4653,
+  "huom": "paikka = lohkon keskipiste; glTF +z = etupinta",
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "esine:kivi-4",
+  "paikka": [
+   -12.805,
+   11.0,
+   -17.633
+  ],
+  "glb": "esine-kivi-4.glb",
+  "irrotettava": true,
+  "kierto_y": 2.4653,
+  "huom": "paikka = lohkon keskipiste; glTF +z = etupinta",
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "esine:liinanyytti",
+  "paikka": [
+   -12.821,
+   10.7,
+   -17.813
+  ],
+  "glb": "esine-liinanyytti.glb",
+  "kierto_y": 2.4653,
+  "huom": "syvennyksen pohjalla; sisällä kalkki, pateeni ja liuskekivi",
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "esine:kalkki",
+  "paikka": [
+   -12.924,
+   10.7,
+   -17.845
+  ],
+  "glb": "esine-kalkki.glb",
+  "kierto_y": 2.4653,
+  "huom": "nyytin avauksen jälkeen; paikka = pohjan keskipiste",
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "esine:pateeni",
+  "paikka": [
+   -12.768,
+   10.7,
+   -17.719
+  ],
+  "glb": "esine-pateeni.glb",
+  "kierto_y": 2.4653,
+  "huom": "nyytin avauksen jälkeen; paikka = pohjan keskipiste",
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "esine:liuskekivi",
+  "paikka": [
+   -12.771,
+   10.7,
+   -17.876
+  ],
+  "glb": "esine-liuskekivi.glb",
+  "kierto_y": 2.4653,
+  "huom": "nyytin avauksen jälkeen; paikka = pohjan keskipiste",
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "esine:kilpilaatta-tott",
+  "paikka": [
+   -13.135,
+   11.6,
+   -17.757
+  ],
+  "glb": "esine-kilpilaatta-tott.glb",
+  "kiintea": true,
+  "kierto_y": -0.6763,
+  "huom": "tumma liuskelaatta, matala kohokuva; origo takapinnan keskellä seinässä, +z kappeliin; Tott vasemmalla",
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "esine:kilpilaatta-sture",
+  "paikka": [
+   -12.808,
+   11.6,
+   -17.495
+  ],
+  "glb": "esine-kilpilaatta-sture.glb",
+  "kiintea": true,
+  "kierto_y": -0.6763,
+  "huom": "tumma liuskelaatta, matala kohokuva; origo takapinnan keskellä seinässä, +z kappeliin; Tott vasemmalla",
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "luukku:koillinen",
+  "paikka": [
+   -12.115,
+   11.5,
+   -16.598
+  ],
+  "kierto_y": 2.1171,
+  "sarana": [
+   -12.192533664921283,
+   11.5,
+   -16.725719809696635
+  ],
+  "leveys": 0.3,
+  "korkeus": 0.84,
+  "glb": "esine-luukku.glb",
+  "huom": "rautaluukku kiinni (yö); sarana vasemmalla (vastapäivään) reunassa; aukeaa sisään kappeliin",
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "valo:ikuinen",
+  "paikka": [
+   -12.957,
+   11.4,
+   -15.489
+  ],
+  "glb": "esine-ikuinen-valo.glb",
+  "huom": "riippulampun alareuna 1,8 m (Fogg ylettyy), ketju holviin",
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "esine:kirja",
+  "paikka": [
+   -14.5,
+   10.72,
+   -16.5
+  ],
+  "glb": "esine-kirja.glb",
+  "huom": "pulpetin kaltevalla kannella",
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "reitti:kappalainen-paluu-1",
+  "paikka": [
+   -17.35,
+   9.6,
+   -11.815
+  ],
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "reitti:kappalainen-paluu-2",
+  "paikka": [
+   -15.834,
+   9.6,
+   -12.138
+  ],
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "reitti:kappalainen-paluu-3",
+  "paikka": [
+   -14.934,
+   9.6,
+   -12.861
+  ],
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "reitti:kappalainen-paluu-4",
+  "paikka": [
+   -14.5,
+   9.6,
+   -15.9
+  ],
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "reitti:kappalainen-luukku-1",
+  "paikka": [
+   -17.35,
+   9.6,
+   -11.815
+  ],
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "reitti:kappalainen-luukku-2",
+  "paikka": [
+   -15.834,
+   9.6,
+   -12.138
+  ],
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "reitti:kappalainen-luukku-3",
+  "paikka": [
+   -14.014,
+   9.6,
+   -13.8
+  ],
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "reitti:kappalainen-luukku-4",
+  "paikka": [
+   -12.839,
+   9.6,
+   -15.961
+  ],
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "reitti:kappalainen-1",
+  "paikka": [
+   -17.35,
+   9.6,
+   -11.815
+  ],
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "reitti:kappalainen-2",
+  "paikka": [
+   -15.627,
+   9.6,
+   -12.01
+  ],
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "reitti:kappalainen-3",
+  "paikka": [
+   -13.844,
+   9.6,
+   -13.044
+  ],
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "reitti:kappalainen-4",
+  "paikka": [
+   -12.91,
+   9.6,
+   -14.382
+  ],
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "reitti:kappalainen-5",
+  "paikka": [
+   -12.889,
+   9.6,
+   -15.043
+  ],
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "ovi:muuriporras",
+  "paikka": [
+   -17.63,
+   3.4,
+   -17.649
+  ],
+  "leveys": 1.0,
+  "korkeus": 1.9,
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "ovi:kappeli-porras",
+  "paikka": [
+   -17.487,
+   9.6,
+   -11.055
+  ],
+  "leveys": 1.0,
+  "korkeus": 1.9,
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "partio:piha-1",
+  "paikka": [
+   -21.0,
+   -2.74,
+   7.0
+  ],
+  "odota_s": 5,
+  "osa": "kirkkotorni-portaat",
+  "profiili": "vartija",
+  "henkilo": "vartija-1500"
+ },
+ {
+  "nimi": "partio:piha-2",
+  "paikka": [
+   -17.0,
+   -2.74,
+   9.5
+  ],
+  "odota_s": 3,
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "aukko:ampuma-1",
+  "paikka": [
+   -13.368,
+   14.45,
+   -19.506
+  ],
+  "kierto_y": 2.7489,
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "reitti:vouti-1",
+  "paikka": [
+   -13.544,
+   13.4,
+   -19.081
+  ],
+  "odota_s": 5,
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "aukko:ampuma-2",
+  "paikka": [
+   -10.494,
+   14.45,
+   -16.632
+  ],
+  "kierto_y": 1.9635,
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "reitti:vouti-2",
+  "paikka": [
+   -10.919,
+   13.4,
+   -16.456
+  ],
+  "odota_s": 5,
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "aukko:ampuma-3",
+  "paikka": [
+   -10.494,
+   14.45,
+   -12.568
+  ],
+  "kierto_y": 1.1781,
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "reitti:vouti-3",
+  "paikka": [
+   -10.919,
+   13.4,
+   -12.744
+  ],
+  "odota_s": 5,
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "aukko:ampuma-4",
+  "paikka": [
+   -13.368,
+   14.45,
+   -9.694
+  ],
+  "kierto_y": 0.3927,
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "reitti:vouti-4",
+  "paikka": [
+   -13.544,
+   13.4,
+   -10.119
+  ],
+  "odota_s": 5,
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "aukko:ampuma-5",
+  "paikka": [
+   -17.432,
+   14.45,
+   -9.694
+  ],
+  "kierto_y": -0.3927,
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "reitti:vouti-5",
+  "paikka": [
+   -17.256,
+   13.4,
+   -10.119
+  ],
+  "odota_s": 5,
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "aukko:ampuma-6",
+  "paikka": [
+   -20.306,
+   14.45,
+   -12.568
+  ],
+  "kierto_y": -1.1781,
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "reitti:vouti-6",
+  "paikka": [
+   -19.881,
+   13.4,
+   -12.744
+  ],
+  "odota_s": 5,
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "aukko:ampuma-7",
+  "paikka": [
+   -20.306,
+   14.45,
+   -16.632
+  ],
+  "kierto_y": -1.9635,
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "reitti:vouti-7",
+  "paikka": [
+   -19.881,
+   13.4,
+   -16.456
+  ],
+  "odota_s": 5,
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "aukko:ampuma-8",
+  "paikka": [
+   -17.432,
+   14.45,
+   -19.506
+  ],
+  "kierto_y": -2.7489,
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "reitti:vouti-8",
+  "paikka": [
+   -17.256,
+   13.4,
+   -19.081
+  ],
+  "odota_s": 5,
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "ovi:paaovi-porras-yla",
+  "paikka": [
+   -14.028,
+   13.4,
+   -9.481
+  ],
+  "leveys": 0.95,
+  "korkeus": 2.0,
+  "huom": "ampumakäytävältä alas pääoven ulkotasanteelle (huone 6)",
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "ovi:paaovi-porras-ala",
+  "paikka": [
+   -18.738,
+   9.6,
+   -9.257
+  ],
+  "leveys": 0.95,
+  "korkeus": 2.3,
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "portaikko:ylapaa",
+  "paikka": [
+   -12.475,
+   13.4,
+   -19.666
+  ],
+  "raja": false,
+  "huom": "voudin hehku näkyy portaikossa; 7.10. 20.3x raja poistettu (huone 6 reitti)",
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "reitti:vouti-laskeutuminen-1",
+  "paikka": [
+   -12.975,
+   13.4,
+   -18.8
+  ],
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "reitti:vouti-laskeutuminen-2",
+  "paikka": [
+   -12.475,
+   13.4,
+   -19.666
+  ],
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "reitti:vouti-laskeutuminen-3",
+  "paikka": [
+   -16.214,
+   11.5,
+   -20.393
+  ],
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "reitti:vouti-laskeutuminen-4",
+  "paikka": [
+   -16.914,
+   11.5,
+   -20.251
+  ],
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "reitti:vouti-laskeutuminen-5",
+  "paikka": [
+   -20.466,
+   9.6,
+   -17.525
+  ],
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "reitti:vouti-laskeutuminen-6",
+  "paikka": [
+   -19.124,
+   9.6,
+   -16.75
+  ],
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "ovi:kaari-ovi",
+  "paikka": [
+   -18.76,
+   9.6,
+   -16.54
+  ],
+  "leveys": 1.05,
+  "korkeus": 2.4,
+  "huom": "Maconi 1910: kaari-ovi, askelmat seinänsisäiseen tilaan (ampumakäytävä TULKINTA)",
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "piilo:kaari-ovi",
+  "paikka": [
+   -19.254,
+   9.6,
+   -16.825
+  ],
+  "tyyppi": "seisova",
+  "koko": [
+   1.0,
+   2.2,
+   0.7
+  ],
+  "huom": "kaari-oven syvennys",
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "piilo:muurikaytava-komero-1",
+  "paikka": [
+   -24.925,
+   13.4,
+   -15.209
+  ],
+  "tyyppi": "seisova",
+  "koko": [
+   0.9,
+   2.0,
+   1.2999999999999998
+  ],
+  "kierto_y": -2.7652,
+  "huom": "ampuma-aukkokomero pohjoismuurissa (huone 7): seisova piilo lyhtyvartijalta; aukko komeron perällä, kuunvaloa",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "piilo:muurikaytava-komero-2",
+  "paikka": [
+   -29.017,
+   13.4,
+   -13.591
+  ],
+  "tyyppi": "seisova",
+  "koko": [
+   0.9,
+   2.0,
+   1.2999999999999998
+  ],
+  "kierto_y": -2.7652,
+  "huom": "ampuma-aukkokomero pohjoismuurissa (huone 7): seisova piilo lyhtyvartijalta; aukko komeron perällä, kuunvaloa",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "piilo:muurikaytava-komero-3",
+  "paikka": [
+   -33.109,
+   13.4,
+   -11.974
+  ],
+  "tyyppi": "seisova",
+  "koko": [
+   0.9,
+   2.0,
+   1.2999999999999998
+  ],
+  "kierto_y": -2.7652,
+  "huom": "ampuma-aukkokomero pohjoismuurissa (huone 7): seisova piilo lyhtyvartijalta; aukko komeron perällä, kuunvaloa",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "piilo:muurikaytava-komero-4",
+  "paikka": [
+   -37.015,
+   13.4,
+   -10.43
+  ],
+  "tyyppi": "seisova",
+  "koko": [
+   0.9,
+   2.0,
+   1.2999999999999998
+  ],
+  "kierto_y": -2.7652,
+  "huom": "ampuma-aukkokomero pohjoismuurissa (huone 7): seisova piilo lyhtyvartijalta; aukko komeron perällä, kuunvaloa",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "aukko:muuri-1",
+  "paikka": [
+   -25.164,
+   14.45,
+   -15.813
+  ],
+  "kierto_y": -2.7652,
+  "huom": "ampuma-aukko pohjoismuurissa (L2: 4-aukkoinen käytävä)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "valo:kuu-muuri-1",
+  "paikka": [
+   -24.76,
+   14.4,
+   -14.79
+  ],
+  "sade": 1.6,
+  "voima": 0.35,
+  "vari": "#9fb4d8",
+  "huom": "kuunvaloa aukosta (valoisuus 0,5 aukon kohdalla)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "aukko:muuri-2",
+  "paikka": [
+   -29.256,
+   14.45,
+   -14.196
+  ],
+  "kierto_y": -2.7652,
+  "huom": "ampuma-aukko pohjoismuurissa (L2: 4-aukkoinen käytävä)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "valo:kuu-muuri-2",
+  "paikka": [
+   -28.852,
+   14.4,
+   -13.173
+  ],
+  "sade": 1.6,
+  "voima": 0.35,
+  "vari": "#9fb4d8",
+  "huom": "kuunvaloa aukosta (valoisuus 0,5 aukon kohdalla)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "aukko:muuri-3",
+  "paikka": [
+   -33.348,
+   14.45,
+   -12.579
+  ],
+  "kierto_y": -2.7652,
+  "huom": "ampuma-aukko pohjoismuurissa (L2: 4-aukkoinen käytävä)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "valo:kuu-muuri-3",
+  "paikka": [
+   -32.944,
+   14.4,
+   -11.556
+  ],
+  "sade": 1.6,
+  "voima": 0.35,
+  "vari": "#9fb4d8",
+  "huom": "kuunvaloa aukosta (valoisuus 0,5 aukon kohdalla)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "aukko:muuri-4",
+  "paikka": [
+   -37.254,
+   14.45,
+   -11.035
+  ],
+  "kierto_y": -2.7652,
+  "huom": "ampuma-aukko pohjoismuurissa (L2: 4-aukkoinen käytävä)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "valo:kuu-muuri-4",
+  "paikka": [
+   -36.85,
+   14.4,
+   -10.012
+  ],
+  "sade": 1.6,
+  "voima": 0.35,
+  "vari": "#9fb4d8",
+  "huom": "kuunvaloa aukosta (valoisuus 0,5 aukon kohdalla)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ovi:muurikaytava",
+  "paikka": [
+   -21.955,
+   13.4,
+   -15.039
+  ],
+  "leveys": 1.0,
+  "korkeus": 2.0,
+  "lukko": true,
+  "avain": "avainrengas",
+  "aani_hidas_m": 0,
+  "aani_nopea_m": 4,
+  "kierto_y": -1.1944,
+  "huom": "muurikäytävän ovi yöllä lukossa (TULKINTA); avautuu länteen",
+  "osa": "muurikaytava",
+  "glb": "ovi-tammi-100x200.glb"
+ },
+ {
+  "nimi": "partio:muurikaytava-1",
+  "paikka": [
+   -25.582,
+   13.4,
+   -13.605
+  ],
+  "profiili": "vartija",
+  "henkilo": "vartija-1500",
+  "lyhty": true,
+  "odotus_s": 3,
+  "huom": "lyhdyn kanssa edestakaisin s 4,2 ↔ 14,8 (8.10.: ovi ja tikkaat jäävät partion ulkopuolelle; piilo 2,2 m välein)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "partio:muurikaytava-2",
+  "paikka": [
+   -35.44,
+   13.4,
+   -9.709
+  ],
+  "odotus_s": 3,
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "piilo:muurikaytava-vali-1",
+  "paikka": [
+   -26.402,
+   13.4,
+   -12.959
+  ],
+  "tyyppi": "kyykky",
+  "koko": [
+   0.9,
+   1.0,
+   0.6
+  ],
+  "kierto_y": 0.3764,
+  "huom": "aukkojen välinen varjo sisäseinän vierellä (kyykky); valoisuus noin 0,15",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "piilo:muurikaytava-vali-2",
+  "paikka": [
+   -30.494,
+   13.4,
+   -11.341
+  ],
+  "tyyppi": "kyykky",
+  "koko": [
+   0.9,
+   1.0,
+   0.6
+  ],
+  "kierto_y": 0.3764,
+  "huom": "aukkojen välinen varjo sisäseinän vierellä (kyykky); valoisuus noin 0,15",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "piilo:muurikaytava-vali-3",
+  "paikka": [
+   -34.493,
+   13.4,
+   -9.761
+  ],
+  "tyyppi": "kyykky",
+  "koko": [
+   0.9,
+   1.0,
+   0.6
+  ],
+  "kierto_y": 0.3764,
+  "huom": "aukkojen välinen varjo sisäseinän vierellä (kyykky); valoisuus noin 0,15",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "esine:kivi-muurikaytava",
+  "paikka": [
+   -29.315,
+   13.4,
+   -13.528
+  ],
+  "heitettava": true,
+  "glb": "esine-kivi-heitto.glb",
+  "aani_m": 6,
+  "huom": "irtokivi aukkokomeron 2 lattialla; heitä aukosta pihalle → vartija kurkistaa 6 s (hätävara)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ovi:kellotorni",
+  "paikka": [
+   -38.644,
+   13.4,
+   -8.442
+  ],
+  "leveys": 1.0,
+  "korkeus": 2.0,
+  "lukko": true,
+  "aani": "fatabuuri-kohtaus",
+  "aani_vaimea": true,
+  "huom": "Kellotornin kehäkäytävän ovi; takaa kuuluu vaimeana valmis Fatabuuri-kohtaus (ei avata huoneessa 7)",
+  "osa": "muurikaytava",
+  "glb": "ovi-tammi-100x200.glb"
+ },
+ {
+  "nimi": "pinta:kivi-muuri",
+  "paikka": [
+   -30.16,
+   13.4,
+   -11.796
+  ],
+  "koko": [
+   1.4,
+   1.0,
+   18.24541963831685
+  ],
+  "kierto_y": -1.1944,
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "kiipeily:tikkaat-harja",
+  "paikka": [
+   -37.632,
+   13.4,
+   -8.466
+  ],
+  "yla": [
+   -37.63196140969746,
+   16.6,
+   -8.466103942357002
+  ],
+  "kierto_y": 1.9472,
+  "huom": "puutikkaat luukkuun muurinharjalle (A); kiipeily-leike, kamera nousee 0,30 m/s",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "pinta:kivi-harja",
+  "paikka": [
+   -35.197,
+   16.6,
+   -9.106
+  ],
+  "koko": [
+   3.1,
+   1.0,
+   8.100000000000001
+  ],
+  "kierto_y": -1.1944,
+  "markyys": 0.75,
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "seisoo:harja-vartija",
+  "paikka": [
+   -33.546,
+   16.6,
+   -10.78
+  ],
+  "henkilo": "vartija-1500",
+  "profiili": "vartija",
+  "kierto_y": -2.7652,
+  "huom": "katsoo järvelle harjalla 5 m tornin liitoksesta (valmis Muurinharja-kohtaus alkaa 8 m:stä)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "seisoo:harja-talonpoika",
+  "paikka": [
+   -32.746,
+   16.6,
+   -11.204
+  ],
+  "henkilo": "talonpoika-1500",
+  "kierto_y": -2.7652,
+  "kaantyy_s": 4,
+  "huom": "kääntyy kerran 4 s:ksi kohti käytävää",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "esine:koysikieppi",
+  "paikka": [
+   -35.452,
+   16.6,
+   -7.984
+  ],
+  "kannettava": true,
+  "glb": "esine-koysikieppi.glb",
+  "huom": "heidän takanaan sisäreunalla; hamppuköysi 14 m Ø 16 mm litteänä kiepinä 0,63 × 0,51 × 0,08 m (esineet-v1)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "koysi:sakara",
+  "paikka": [
+   -38.723,
+   17.95,
+   -9.594
+  ],
+  "huom": "köysi sakaraan, sitten kaiteen yli (takakuva)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-1",
+  "paikka": [
+   -38.47,
+   16.853,
+   -9.506
+  ],
+  "ulkonormaali": [
+   0.702,
+   0.0,
+   -0.712
+  ],
+  "tyyppi": "tulkinta",
+  "kompassi": 44.6,
+  "huom": "ote (telinereikä tai reuna, TULKINTA)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-2",
+  "paikka": [
+   -38.994,
+   17.161,
+   -9.976
+  ],
+  "ulkonormaali": [
+   0.632,
+   0.0,
+   -0.775
+  ],
+  "tyyppi": "tulkinta",
+  "kompassi": 39.2,
+  "huom": "ote (telinereikä tai reuna, TULKINTA)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-3",
+  "paikka": [
+   -39.561,
+   16.98,
+   -10.395
+  ],
+  "ulkonormaali": [
+   0.556,
+   0.0,
+   -0.831
+  ],
+  "tyyppi": "tulkinta",
+  "kompassi": 33.8,
+  "huom": "ote (telinereikä tai reuna, TULKINTA)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-4",
+  "paikka": [
+   -40.164,
+   17.265,
+   -10.758
+  ],
+  "ulkonormaali": [
+   0.475,
+   0.0,
+   -0.88
+  ],
+  "tyyppi": "tulkinta",
+  "kompassi": 28.3,
+  "huom": "ote (telinereikä tai reuna, TULKINTA)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-5",
+  "paikka": [
+   -40.799,
+   17.053,
+   -11.062
+  ],
+  "ulkonormaali": [
+   0.389,
+   0.0,
+   -0.921
+  ],
+  "tyyppi": "tulkinta",
+  "kompassi": 22.9,
+  "huom": "ote (telinereikä tai reuna, TULKINTA)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-6",
+  "paikka": [
+   -41.459,
+   17.299,
+   -11.305
+  ],
+  "ulkonormaali": [
+   0.301,
+   0.0,
+   -0.954
+  ],
+  "tyyppi": "tulkinta",
+  "kompassi": 17.5,
+  "huom": "ote (telinereikä tai reuna, TULKINTA)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-7",
+  "paikka": [
+   -42.14,
+   17.042,
+   -11.485
+  ],
+  "ulkonormaali": [
+   0.209,
+   0.0,
+   -0.978
+  ],
+  "tyyppi": "tulkinta",
+  "kompassi": 12.1,
+  "huom": "ote (telinereikä tai reuna, TULKINTA)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-8",
+  "paikka": [
+   -42.835,
+   17.24,
+   -11.6
+  ],
+  "ulkonormaali": [
+   0.116,
+   0.0,
+   -0.993
+  ],
+  "tyyppi": "tulkinta",
+  "kompassi": 6.7,
+  "huom": "ote (telinereikä tai reuna, TULKINTA)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-9",
+  "paikka": [
+   -43.537,
+   16.93,
+   -11.648
+  ],
+  "ulkonormaali": [
+   0.022,
+   0.0,
+   -1.0
+  ],
+  "tyyppi": "tulkinta",
+  "kompassi": 1.2,
+  "huom": "kapea ote: vain sormenpäät (PT 9.10.)",
+  "osa": "muurikaytava",
+  "kapea": true
+ },
+ {
+  "nimi": "ote:kellotorni-10",
+  "paikka": [
+   -44.241,
+   17.073,
+   -11.631
+  ],
+  "ulkonormaali": [
+   -0.073,
+   0.0,
+   -0.997
+  ],
+  "tyyppi": "tulkinta",
+  "kompassi": 355.8,
+  "huom": "kapea ote: vain sormenpäät (PT 9.10.)",
+  "osa": "muurikaytava",
+  "kapea": true
+ },
+ {
+  "nimi": "ote:kellotorni-11",
+  "paikka": [
+   -44.94,
+   16.709,
+   -11.546
+  ],
+  "ulkonormaali": [
+   -0.166,
+   0.0,
+   -0.986
+  ],
+  "tyyppi": "tulkinta",
+  "kompassi": 350.4,
+  "huom": "ote (telinereikä tai reuna, TULKINTA)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-12",
+  "paikka": [
+   -45.628,
+   16.799,
+   -11.396
+  ],
+  "ulkonormaali": [
+   -0.259,
+   0.0,
+   -0.966
+  ],
+  "tyyppi": "lepo",
+  "kompassi": 345.0,
+  "huom": "lepokohta puolivälissä: leveä ulkoneva reunakivi, molemmat jalat (PT 9.10., TULKINTA)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-13",
+  "paikka": [
+   -46.299,
+   16.386,
+   -11.182
+  ],
+  "ulkonormaali": [
+   -0.349,
+   0.0,
+   -0.937
+  ],
+  "tyyppi": "tulkinta",
+  "kompassi": 339.6,
+  "huom": "ote (telinereikä tai reuna, TULKINTA)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-14",
+  "paikka": [
+   -46.946,
+   16.432,
+   -10.906
+  ],
+  "ulkonormaali": [
+   -0.436,
+   0.0,
+   -0.9
+  ],
+  "tyyppi": "tulkinta",
+  "kompassi": 334.2,
+  "huom": "ote (telinereikä tai reuna, TULKINTA)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-15",
+  "paikka": [
+   -47.565,
+   15.98,
+   -10.569
+  ],
+  "ulkonormaali": [
+   -0.519,
+   0.0,
+   -0.855
+  ],
+  "tyyppi": "tulkinta",
+  "kompassi": 328.8,
+  "huom": "kapea ote: vain sormenpäät (PT 9.10.)",
+  "osa": "muurikaytava",
+  "kapea": true
+ },
+ {
+  "nimi": "ote:kellotorni-16",
+  "paikka": [
+   -48.149,
+   15.994,
+   -10.176
+  ],
+  "ulkonormaali": [
+   -0.597,
+   0.0,
+   -0.802
+  ],
+  "tyyppi": "tulkinta",
+  "kompassi": 323.3,
+  "huom": "kapea ote: vain sormenpäät (PT 9.10.)",
+  "osa": "muurikaytava",
+  "kapea": true
+ },
+ {
+  "nimi": "ote:kellotorni-17",
+  "paikka": [
+   -48.693,
+   15.52,
+   -9.729
+  ],
+  "ulkonormaali": [
+   -0.67,
+   0.0,
+   -0.742
+  ],
+  "tyyppi": "tulkinta",
+  "kompassi": 317.9,
+  "huom": "kapea ote: vain sormenpäät (PT 9.10.)",
+  "osa": "muurikaytava",
+  "kapea": true
+ },
+ {
+  "nimi": "ote:kellotorni-18",
+  "paikka": [
+   -49.193,
+   15.52,
+   -9.233
+  ],
+  "ulkonormaali": [
+   -0.737,
+   0.0,
+   -0.676
+  ],
+  "tyyppi": "krampi",
+  "kompassi": 312.5,
+  "huom": "rautakramppi laatan vieressä [1L]",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-19",
+  "paikka": [
+   -49.643,
+   15.197,
+   -8.692
+  ],
+  "ulkonormaali": [
+   -0.798,
+   0.0,
+   -0.603
+  ],
+  "tyyppi": "krampi",
+  "kompassi": 307.1,
+  "huom": "rautakramppi laatan vieressä [1L]",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-20",
+  "paikka": [
+   -50.041,
+   15.353,
+   -8.111
+  ],
+  "ulkonormaali": [
+   -0.851,
+   0.0,
+   -0.525
+  ],
+  "tyyppi": "krampi",
+  "kompassi": 301.7,
+  "huom": "rautakramppi laatan vieressä [1L]",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-21",
+  "paikka": [
+   -50.382,
+   15.03,
+   -7.495
+  ],
+  "ulkonormaali": [
+   -0.897,
+   0.0,
+   -0.442
+  ],
+  "tyyppi": "krampi",
+  "kompassi": 296.2,
+  "huom": "rautakramppi laatan vieressä [1L]",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-22",
+  "paikka": [
+   -50.663,
+   15.187,
+   -6.85
+  ],
+  "ulkonormaali": [
+   -0.935,
+   0.0,
+   -0.356
+  ],
+  "tyyppi": "krampi",
+  "kompassi": 290.8,
+  "huom": "rautakramppi laatan vieressä [1L]",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-23",
+  "paikka": [
+   -50.882,
+   14.863,
+   -6.18
+  ],
+  "ulkonormaali": [
+   -0.964,
+   0.0,
+   -0.266
+  ],
+  "tyyppi": "krampi",
+  "kompassi": 285.4,
+  "huom": "rautakramppi laatan vieressä [1L]",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "ote:kellotorni-24",
+  "paikka": [
+   -51.037,
+   15.02,
+   -5.494
+  ],
+  "ulkonormaali": [
+   -0.985,
+   0.0,
+   -0.174
+  ],
+  "tyyppi": "krampi",
+  "kompassi": 280.0,
+  "huom": "rautakramppi laatan vieressä [1L]",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "tuuli:puuska-1",
+  "paikka": [
+   -42.14,
+   17.042,
+   -11.485
+  ],
+  "kesto_s": 2.5,
+  "huom": "tuulenpuuska: liike lipsauttaa otteen",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "tuuli:puuska-2",
+  "paikka": [
+   -46.946,
+   16.432,
+   -10.906
+  ],
+  "kesto_s": 2.5,
+  "huom": "tuulenpuuska: liike lipsauttaa otteen",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "tuuli:puuska-3",
+  "paikka": [
+   -50.041,
+   15.353,
+   -8.111
+  ],
+  "kesto_s": 2.5,
+  "huom": "tuulenpuuska: liike lipsauttaa otteen",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "komero:kellotorni",
+  "paikka": [
+   -50.988,
+   14.8,
+   -5.485
+  ],
+  "leveys": 0.85,
+  "korkeus": 1.95,
+  "syvyys": 0.56,
+  "kierto_y": -1.7453,
+  "huom": "segmenttikaarinen komero, tiilillä umpeen muurattu [1L]; kynnys 0,85 m leveä, silmiin 0,6 s:ssa",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "tiili:komero-1",
+  "paikka": [
+   -50.963,
+   15.15,
+   -5.278
+  ],
+  "raapaisut": 2,
+  "irrotettava": true,
+  "kierto_y": -1.7453,
+  "glb": "esine-tiili-komero.glb",
+  "huom": "ensimmäinen putoaa aina kalliolle (14 m); muut vedolla: hidas veto komeroon, nopea pudottaa",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "tiili:komero-2",
+  "paikka": [
+   -50.894,
+   15.15,
+   -5.672
+  ],
+  "raapaisut": 2,
+  "irrotettava": true,
+  "kierto_y": -1.7453,
+  "glb": "esine-tiili-komero.glb",
+  "huom": "tiili, 2 raapaisua",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "tiili:komero-3",
+  "paikka": [
+   -50.963,
+   15.55,
+   -5.278
+  ],
+  "raapaisut": 2,
+  "irrotettava": true,
+  "kierto_y": -1.7453,
+  "glb": "esine-tiili-komero.glb",
+  "huom": "tiili, 2 raapaisua",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "tiili:komero-4",
+  "paikka": [
+   -50.894,
+   15.55,
+   -5.672
+  ],
+  "raapaisut": 2,
+  "irrotettava": true,
+  "kierto_y": -1.7453,
+  "glb": "esine-tiili-komero.glb",
+  "huom": "tiili, 2 raapaisua",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "tiili:komero-5",
+  "paikka": [
+   -50.963,
+   15.95,
+   -5.278
+  ],
+  "raapaisut": 2,
+  "irrotettava": true,
+  "kierto_y": -1.7453,
+  "glb": "esine-tiili-komero.glb",
+  "huom": "tiili, 2 raapaisua",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "tiili:komero-6",
+  "paikka": [
+   -50.894,
+   15.95,
+   -5.672
+  ],
+  "raapaisut": 2,
+  "irrotettava": true,
+  "kierto_y": -1.7453,
+  "glb": "esine-tiili-komero.glb",
+  "huom": "tiili, 2 raapaisua",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "esine:arkku-komero",
+  "paikka": [
+   -50.712,
+   14.8,
+   -5.436
+  ],
+  "kierto_y": -1.7453,
+  "glb": "esine-arkku-komero.glb",
+  "huom": "rautahelainen arkku 61 × 41 × 48 cm (FIKTIO); solmut runko, kansi (sarana, −X avaa), kilpi-1 (Tott), kilpi-2 (Sture)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "kilpi:arkku-1",
+  "paikka": [
+   -50.733,
+   15.21,
+   -5.318
+  ],
+  "kaanto_aste": 45,
+  "sallittu_aste": 10,
+  "kierto_y": -1.7453,
+  "huom": "käännä 45° toisiaan kohti (liuskekiven kuvio); oikea asento → arkku-kansi",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "kilpi:arkku-2",
+  "paikka": [
+   -50.691,
+   15.21,
+   -5.555
+  ],
+  "kaanto_aste": 45,
+  "sallittu_aste": 10,
+  "kierto_y": -1.7453,
+  "huom": "käännä 45° toisiaan kohti (liuskekiven kuvio); oikea asento → arkku-kansi",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "valo:kuu-komero",
+  "paikka": [
+   -52.465,
+   17.3,
+   -5.745
+  ],
+  "sade": 4.0,
+  "voima": 0.5,
+  "vari": "#9fb4d8",
+  "huom": "kuunvalo viistosti: tiilimuurauksen saumat näkyvät (kuten kappelissa)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "koysi:krampi-komero",
+  "paikka": [
+   -50.883,
+   15.1,
+   -6.076
+  ],
+  "huom": "huone 10: köysi kramppiin → köysilasku kalliolle (takakuva); laskupaikka paljas kallio Kellobastionin pohjoispuolella (bastioni 1790-l. rajattu pois 1499-näkymästä)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "leikkaus:vain-1499",
+  "paikka": [
+   -57.647,
+   1.843,
+   -5.42
+  ],
+  "leikkaukset": [
+   "pako-kellobastioni-1",
+   "pako-kellobastioni-2",
+   "pako-kellobastioni-3"
+  ],
+  "huom": "Kellobastioni (1790-l.) pois vain seikkailun pakonäkymästä (PT 7.10. A); drone-näkymässä normaalisti; K4/K5-kaukokuvissa rajaus tai usva",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "koysilasku:loppu",
+  "paikka": [
+   -53.669,
+   2.1,
+   -8.849
+  ],
+  "alku": [
+   -50.88338846569019,
+   15.100000000000001,
+   -6.075881166542606
+  ],
+  "huom": "köysilasku viistoon kalliolle 12,7 m (takakuva); lyhty pyyhkäisee seinää ylhäältä 2 s:n varoituksella",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "reitti:pako-1",
+  "paikka": [
+   -54.958,
+   1.2,
+   -10.7
+  ],
+  "huom": "kalliorinne 25–35° (ensimmäinen persoona)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "reitti:pako-2",
+  "paikka": [
+   -57.556,
+   0.0,
+   -12.2
+  ],
+  "huom": "kalliorinne 25–35° (ensimmäinen persoona)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "reitti:pako-3",
+  "paikka": [
+   -61.021,
+   -2.5,
+   -14.2
+  ],
+  "huom": "kalliorinne 25–35° (ensimmäinen persoona)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "reitti:pako-4",
+  "paikka": [
+   -62.753,
+   -4.6,
+   -15.2
+  ],
+  "tyyppi": "liuku",
+  "huom": "rantajyrkänne noin 50°: liuku/laskeutuminen",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "reitti:pako-5",
+  "paikka": [
+   -63.878,
+   -5.4,
+   -15.85
+  ],
+  "tyyppi": "liuku",
+  "huom": "rantajyrkänne noin 50°: liuku/laskeutuminen",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "kamera:K4",
+  "paikka": [
+   -65.784,
+   -5.6,
+   -16.95
+  ],
+  "katse": [
+   -78.341,
+   -7.0,
+   -24.2
+  ],
+  "huom": "sukellus salmeen; bastioni rajataan pois tai usvan taakse",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "vene:pako",
+  "paikka": [
+   -75.743,
+   -7.0,
+   -22.7
+  ],
+  "kierto_y": 1.0472,
+  "huom": "soutaja ojentaa kätensä; uinti 10–15 s, virta kuljettaa",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "seisoo:ranta-vartija",
+  "paikka": [
+   -62.612,
+   -6.8,
+   -18.976
+  ],
+  "henkilo": "vartija-1500",
+  "profiili": "vartija",
+  "huom": "pitää veneen kiinnitysköydestä matalassa vedessä; katkaise köysi tai töytäise käsi irti (omistajan päätös 1)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "koysi:vene-kiinnitys",
+  "paikka": [
+   -63.602,
+   -6.9,
+   -18.66
+  ],
+  "loppu": [
+   -75.743,
+   -6.8,
+   -22.7
+  ],
+  "glb": "esine-koysi-vene.glb",
+  "kierto_y": 0.0,
+  "huom": "köysi vartijan kädestä (+0,9) veneen keulaan (+0,35); solmut koysi-ranta / koysi-vene (katkaisu puolivälistä); glb maailman akseleissa",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "partio:ranta-1",
+  "paikka": [
+   -66.0,
+   -2.5,
+   -2.0
+  ],
+  "profiili": "vartija",
+  "henkilo": "vartija-1500",
+  "soihtu": true,
+  "huom": "epäonnistuminen: kaksi vartijaa soihtuineen rannassa (> 25 s kellon alusta)",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "partio:ranta-2",
+  "paikka": [
+   -65.025,
+   -3.0,
+   -12.816
+  ],
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "kamera:K5",
+  "paikka": [
+   -69.681,
+   -4.0,
+   -19.2
+  ],
+  "katse": [
+   -112.982,
+   -7.0,
+   -44.2
+  ],
+  "huom": "virta vie veneen sumuun → drone nykyiseen linnaan",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "valo:lyhty-harja",
+  "paikka": [
+   -38.179,
+   18.2,
+   -8.626
+  ],
+  "sade": 4.0,
+  "voima": 0.8,
+  "vari": "#ffb060",
+  "liikkuu": true,
+  "huom": "lyhty kulkee kerran yläpuolella: valopiiri kasvaa seinällä 2 s",
+  "osa": "muurikaytava"
+ },
+ {
+  "nimi": "istuu:pelaaja-tyrma",
+  "paikka": [
+   -16.347,
+   -3.68,
+   -2.894
+  ],
+  "silmat_m": 1.0,
+  "kierto_y": 0.4713,
+  "huom": "pelaaja herää oljilta, katse oven suuntaan; valoisuus 0,15",
+  "osa": "tyrma-E101"
+ },
+ {
+  "nimi": "ilmarako:tyrma",
+  "paikka": [
+   -14.853,
+   -1.42,
+   -6.349
+  ],
+  "leveys": 0.12,
+  "korkeus": 0.45,
+  "huom": "Pulu tulee tästä (pako 1); kuunvalo",
+  "osa": "tyrma-E101"
+ },
+ {
+  "nimi": "esine:avainnippu-tyrma",
+  "paikka": [
+   -14.824,
+   -3.74,
+   -2.548
+  ],
+  "glb": "esine-avainnippu.glb",
+  "kannettava": true,
+  "huom": "Pulu pudottaa olkiin 2 m:n päähän (pako 1)",
+  "osa": "tyrma-E101"
+ },
+ {
+  "nimi": "ovi:tyrma",
+  "paikka": [
+   -16.181,
+   -3.8,
+   1.286
+  ],
+  "leveys": 1.0,
+  "korkeus": 1.9,
+  "lukko": true,
+  "kierto_y": -1.0996,
+  "huom": "lukittu tammiovi; pako 1 avaimella, pako 2 vesipoika jättää raolleen",
+  "osa": "tyrma-E101",
+  "glb": "ovi-tammi-100x190.glb"
+ },
+ {
+  "nimi": "istuu:tyrma-vartija",
+  "paikka": [
+   -18.008,
+   -3.8,
+   2.217
+  ],
+  "profiili": "torkku",
+  "henkilo": "vartija-1500",
+  "kierto_y": 0.4713,
+  "huom": "käytävässä torkkuva vartija (pako 2)",
+  "osa": "tyrma-E101"
+ },
+ {
+  "nimi": "ovi:tyrma-ulos",
+  "paikka": [
+   -18.632,
+   -3.8,
+   2.534
+  ],
+  "leveys": 1.0,
+  "korkeus": 1.9,
+  "huom": "käytävän pää: himmennys ja paluu tarkistuspisteeseen",
+  "osa": "tyrma-E101"
+ },
+ {
+  "nimi": "ontto:tyrma",
+  "paikka": [
+   -11.984,
+   -3.5,
+   0.382
+  ],
+  "leveys": 0.6,
+  "korkeus": 0.55,
+  "huom": "koputus kuulostaa ontolta (pako 3)",
+  "osa": "tyrma-E101"
+ },
+ {
+  "nimi": "esine:irtokivi-tyrma",
+  "paikka": [
+   -11.894,
+   -3.53,
+   0.56
+  ],
+  "glb": "esine-kivi-2.glb",
+  "irrotettava": true,
+  "vedot": 3,
+  "kierto_y": 0.4713,
+  "huom": "tukkii ryömintäaukon 0,6 × 0,55 m; kolme vetoa",
+  "osa": "tyrma-E101"
+ },
+ {
+  "nimi": "ovi:tyrma-ryomi",
+  "paikka": [
+   -10.94,
+   -3.8,
+   2.431
+  ],
+  "leveys": 0.6,
+  "korkeus": 0.55,
+  "tyyppi": "ryomi",
+  "huom": "ryömintäaukon pää (takakuva 5–8 s, himmennys)",
+  "osa": "tyrma-E101"
+ },
+ {
+  "nimi": "pinta:olki-1",
+  "paikka": [
+   -15.537,
+   -3.8,
+   -2.185
+  ],
+  "koko": [
+   4.6,
+   0.8,
+   6.0
+  ],
+  "huom": "oljet tyrmän lattialla (AABB likimäärin)",
+  "osa": "tyrma-E101"
+ },
+ {
+  "nimi": "valo:tyrma-rako",
+  "paikka": [
+   -14.535,
+   -1.6,
+   -5.726
+  ],
+  "sade": 3.0,
+  "voima": 0.15,
+  "vari": "#9fb4d8",
+  "huom": "kuunvalo ilmaraosta; valoisuus 0,15",
+  "osa": "tyrma-E101"
+ },
+ {
+  "nimi": "ovi:linnantupa-pohjoinen",
+  "paikka": [
+   -16.144,
+   3.4,
+   -5.579
+  ],
+  "leveys": 1.05,
+  "korkeus": 2.0,
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "ovi:palatsi-porras-ala",
+  "paikka": [
+   -18.582,
+   3.4,
+   -2.654
+  ],
+  "leveys": 1.0,
+  "korkeus": 2.1,
+  "huom": "muurinsisäinen porras saliin (A), noin 20 askelmaa",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "ovi:palatsi-porras-yla",
+  "paikka": [
+   -15.994,
+   7.5,
+   2.425
+  ],
+  "leveys": 1.0,
+  "korkeus": 2.1,
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "pinta:porras-1",
+  "paikka": [
+   -18.045,
+   5.45,
+   0.271
+  ],
+  "koko": [
+   1.6,
+   4.6,
+   7.4
+  ],
+  "huom": "muurinsisäinen porras (AABB likimäärin)",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "esine:keittokulho",
+  "paikka": [
+   -12.698,
+   4.18,
+   0.633
+  ],
+  "kannettava": true,
+  "glb": "esine-keittokulho.glb",
+  "huom": "Linnantuvan pitkällä pöydällä (\"voudin pöytään ylös\"); höyry solmusta hoyry",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "istuu:linnavaki-1",
+  "paikka": [
+   -13.369,
+   3.4,
+   0.638
+  ],
+  "kierto_y": -1.0995,
+  "profiili": "vartija",
+  "henkilo": "vartija-1500",
+  "huom": "syö pitkän pöydän ääressä",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "istuu:linnavaki-2",
+  "paikka": [
+   -12.234,
+   3.4,
+   2.866
+  ],
+  "kierto_y": -1.0995,
+  "profiili": "vartija",
+  "henkilo": "talonpoika-1500",
+  "huom": "syö pitkän pöydän ääressä",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "istuu:linnavaki-3",
+  "paikka": [
+   -11.533,
+   3.4,
+   0.937
+  ],
+  "kierto_y": 2.0421,
+  "profiili": "vartija",
+  "henkilo": "vartija-1500",
+  "huom": "syö pitkän pöydän ääressä",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "istuu:linnavaki-4",
+  "paikka": [
+   -10.625,
+   3.4,
+   2.719
+  ],
+  "kierto_y": 2.0421,
+  "profiili": "vartija",
+  "henkilo": "talonpoika-1500",
+  "huom": "syö pitkän pöydän ääressä",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "istuu:noppa-1",
+  "paikka": [
+   -10.346,
+   3.4,
+   7.123
+  ],
+  "kierto_y": 0.4713,
+  "profiili": "vartija",
+  "henkilo": "renki-1500",
+  "huom": "noppapeli (kuunnelma)",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "istuu:noppa-2",
+  "paikka": [
+   -9.665,
+   3.4,
+   8.459
+  ],
+  "kierto_y": -2.6703,
+  "profiili": "vartija",
+  "henkilo": "renki-1500",
+  "huom": "noppapeli (kuunnelma)",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "partio:apulainen-tupa-1",
+  "paikka": [
+   -15.618,
+   3.4,
+   -1.022
+  ],
+  "profiili": "apulainen",
+  "henkilo": "apulainen-1500",
+  "odotus_s": 4,
+  "huom": "tarjoilee pitkän pöydän ja oven väliä",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "partio:apulainen-tupa-2",
+  "paikka": [
+   -11.759,
+   3.4,
+   6.552
+  ],
+  "odotus_s": 3,
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "lakaisu:apulainen-tupa",
+  "paikka": [
+   -11.396,
+   3.4,
+   7.265
+  ],
+  "henkilo": "apulainen-1500",
+  "aani": "luuta",
+  "huom": "9.10. Siirtoseppä: luuta-äänen paikka; apulainen lakaisee oven edustaa partio-2:n kohdalla",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "istuu:vouti",
+  "paikka": [
+   -9.016,
+   7.5,
+   8.409
+  ],
+  "kierto_y": -2.6703,
+  "henkilo": "vouti-1500",
+  "huom": "voudin pöydän eteläpuolella, katse pohjoiseen saliin",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "seisoo:aitan-hoitaja",
+  "paikka": [
+   -8.41,
+   7.5,
+   5.856
+  ],
+  "kierto_y": -0.4849,
+  "henkilo": "kirjuri-1500",
+  "huom": "aitan hoitaja luetteloineen; vouti kääntyy kahdesti 6 s:ksi häneen päin",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "esine:avainrengas",
+  "paikka": [
+   -9.893,
+   8.3,
+   7.79
+  ],
+  "glb": "esine-avainrengas.glb",
+  "kannettava": true,
+  "huom": "Kellotornin avaimet voudin pöydällä",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "esine:kulho-poydalle",
+  "paikka": [
+   -9.114,
+   8.3,
+   7.337
+  ],
+  "huom": "tähän pelaaja laskee keittokulhon",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "piilo:tupa-tynnyrit",
+  "paikka": [
+   -7.189,
+   3.4,
+   7.591
+  ],
+  "tyyppi": "kyykky",
+  "koko": [
+   0.8,
+   1.0,
+   0.8
+  ],
+  "kierto_y": 0.4713,
+  "huom": "oluttynnyrien takana kaakkoiskulmassa",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "vene:alku",
+  "paikka": [
+   -93.05,
+   -7.0,
+   64.32
+  ],
+  "huom": "8.10. Siirtoseppä: souto noin 22 s (oli 50 s): alku 20 m ennen vene:muuria samalla suoralla (vanha −131,85; 110,1)",
+  "osa": "ulkoalue"
+ },
+ {
+  "nimi": "vene:muuri",
+  "paikka": [
+   -80.12,
+   -7.0,
+   49.06
+  ],
+  "osa": "ulkoalue"
+ },
+ {
+  "nimi": "vene:portti",
+  "paikka": [
+   -66.04,
+   -7.0,
+   31.49
+  ],
+  "osa": "ulkoalue"
+ },
+ {
+  "nimi": "vene:laituri",
+  "paikka": [
+   -63.09,
+   -7.0,
+   28.1
+  ],
+  "kierto_y": 2.426,
+  "kierto_y_aste": 139.0,
+  "huom": "laiturin itäkylki ulkopäässä (tilan kavassi länsikyljessä, pieni vene itäkyljen sisäosassa); keula (+Z) kohti vesiporttia",
+  "osa": "ulkoalue"
+ },
+ {
+  "nimi": "nousu:laituri",
+  "paikka": [
+   -62.38,
+   -5.9,
+   25.0
+  ],
+  "huom": "kannen itäreuna veneen kohdalla (s 10,2; itäreunan lasti s 10,75–11,5); pelaajan ohjaus alkaa",
+  "osa": "ulkoalue"
+ },
+ {
+  "nimi": "nakyma:kellotorni-kaari",
+  "paikka": [
+   -51.0,
+   15.8,
+   -5.5
+  ],
+  "ulkonormaali": [
+   -0.985,
+   0.0,
+   -0.174
+  ],
+  "kompassi": 280,
+  "kaari": {
+   "leveys": 0.85,
+   "korkeus": 1.95,
+   "syvyys": 0.56,
+   "kynnys_y": 14.8
+  },
+  "torni_keskipiste": [
+   -43.7,
+   14.8,
+   -4.2
+  ],
+  "huom": "komero, ei ikkuna eikä ovi; katsotaan ulkoa normaalin suunnasta",
+  "osa": "ulkoalue"
+ },
+ {
+  "nimi": "pinta:puu-1",
+  "paikka": [
+   -60.443,
+   -5.9,
+   20.325
+  ],
+  "markyys": 0.9,
+  "koko": [
+   4.1,
+   1.2,
+   13.4
+  ],
+  "kierto_y": -0.7156,
+  "huom": "laiturin kansi ja kynnysluiska",
+  "osa": "vesiportti"
+ },
+ {
+  "nimi": "pinta:sora-1",
+  "paikka": [
+   -36.867,
+   -5.6,
+   26.165
+  ],
+  "markyys": 0.7,
+  "koko": [
+   8.0,
+   1.2,
+   15.0
+  ],
+  "kierto_y": -0.6055,
+  "huom": "etuvarustuksen piha (1499, TULKINTA: sora ja kivet)",
+  "osa": "vesiportti"
+ },
+ {
+  "nimi": "pinta:puu-silta",
+  "paikka": [
+   -49.82,
+   -5.75,
+   22.328
+  ],
+  "markyys": 0.9,
+  "koko": [
+   2.4,
+   1.2,
+   17.0
+  ],
+  "kierto_y": 1.4085,
+  "huom": "puusilta laiturilta etuvarustukseen",
+  "osa": "vesiportti"
+ },
+ {
+  "nimi": "pinta:kivi-1",
+  "paikka": [
+   -15.25,
+   3.4,
+   -14.25
+  ],
+  "koko": [
+   8.3,
+   1.2,
+   8.3
+  ],
+  "huom": "Tott-kammion lattia (osan oletus porras)",
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "pinta:kivi-2",
+  "paikka": [
+   -20.7,
+   -2.74,
+   1.35
+  ],
+  "koko": [
+   2.2,
+   1.2,
+   8.4
+  ],
+  "huom": "E 102 -käytävä pikkupihalta kierreportaalle",
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "pinta:kivi-3",
+  "paikka": [
+   -15.4,
+   9.6,
+   -14.6
+  ],
+  "koko": [
+   7.8,
+   1.2,
+   7.8
+  ],
+  "huom": "kappelin lattia",
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "pinta:vesi-1",
+  "paikka": [
+   -19.3,
+   -2.65,
+   14.35
+  ],
+  "koko": [
+   1.1,
+   0.6,
+   0.8
+  ],
+  "huom": "vesisankojen lätäkkö saavin vieressä",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "partio:portinvartija-1",
+  "paikka": [
+   -55.63,
+   -5.95,
+   16.161
+  ],
+  "profiili": "portinvartija",
+  "henkilo": "portinvartija-1500",
+  "lyhty": true,
+  "odotus_s": 8,
+  "kierto_y": -0.7156,
+  "huom": "laiturin juurella (1499), katse laiturille; riidassa kääntyy veneeseen; silta lähtee hänen selkänsä takaa itäkyljestä > 5 m",
+  "osa": "vesiportti"
+ },
+ {
+  "nimi": "partio:portinvartija-2",
+  "paikka": [
+   -56.989,
+   -5.95,
+   14.98
+  ],
+  "odotus_s": 6,
+  "kierto_y": -0.7156,
+  "osa": "vesiportti"
+ },
+ {
+  "nimi": "partio:renki-1",
+  "paikka": [
+   -64.629,
+   -5.9,
+   23.312
+  ],
+  "profiili": "renki",
+  "henkilo": "renki-1500",
+  "odotus_s": 4,
+  "huom": "säkit laiturin ulkopäästä (lasti) portille, 25 s kierros",
+  "osa": "vesiportti"
+ },
+ {
+  "nimi": "partio:renki-2",
+  "paikka": [
+   -39.782,
+   -5.6,
+   24.755
+  ],
+  "odotus_s": 3,
+  "huom": "etuvarustuksen portin sisäpuoli (säkit sillan yli)",
+  "osa": "vesiportti"
+ },
+ {
+  "nimi": "piilo:laituri-tynnyrit",
+  "paikka": [
+   -58.968,
+   -5.9,
+   18.096
+  ],
+  "tyyppi": "kyykky",
+  "koko": [
+   0.9,
+   1.0,
+   1.4
+  ],
+  "kierto_y": -0.7156,
+  "huom": "kolmen tynnyrin itäpuolella (kannen keskiosan puolella)",
+  "osa": "vesiportti"
+ },
+ {
+  "nimi": "piilo:laituri-sakit",
+  "paikka": [
+   -61.363,
+   -5.9,
+   20.851
+  ],
+  "tyyppi": "kyykky",
+  "koko": [
+   0.9,
+   1.0,
+   1.0
+  ],
+  "kierto_y": -0.7156,
+  "huom": "säkkipinon itäpuolella",
+  "osa": "vesiportti"
+ },
+ {
+  "nimi": "esine:tarjotin",
+  "paikka": [
+   -19.55,
+   -1.75,
+   12.8
+  ],
+  "kannettava": true,
+  "sisalto": [
+   "leipa",
+   "olutkannu",
+   "talikynttila",
+   "leipaveitsi"
+  ],
+  "glb": "esine-tarjotin.glb",
+  "huom": "pöydällä; solmut tarjotin, leipa, olutkannu, talikynttila (liekki), leipaveitsi",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "esine:patapino",
+  "paikka": [
+   -22.9,
+   -2.65,
+   12.35
+  ],
+  "kaadettava": true,
+  "aani_m": 16,
+  "glb": "esine-patapino.glb",
+  "huom": "rautapadat pinossa lattialla työpöydän ja pöydän välissä; solmut pata-1..4",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "valo:hiilipannu",
+  "paikka": [
+   -16.4,
+   -2.74,
+   9.9
+  ],
+  "sade": 2.0,
+  "vari": "#ff8a3a",
+  "lepatus": 0.3,
+  "glb": "esine-hiilipannu.glb",
+  "kiintea": true,
+  "huom": "pihan vartijan kierroksen itäpää; valon paikka solmu valo",
+  "osa": "pikkupiha"
+ },
+ {
+  "nimi": "istuu:torkkuva-vartija",
+  "paikka": [
+   -17.114,
+   3.4,
+   -16.913
+  ],
+  "profiili": "torkku",
+  "henkilo": "vartija-1500",
+  "kierto_y": 0.6107,
+  "huom": "istuu muuriportaiden juurella selin portaisiin, katse kammioon",
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "partio:portaat-1",
+  "paikka": [
+   -17.0,
+   3.4,
+   -16.9
+  ],
+  "profiili": "vartija",
+  "henkilo": "vartija-1500",
+  "soihtu": true,
+  "odotus_s": 20,
+  "huom": "vastaantulija muuriportaissa: alas kappelin ovelta Tott-kammioon ja takaisin",
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "partio:portaat-2",
+  "paikka": [
+   -17.49,
+   9.6,
+   -11.05
+  ],
+  "odotus_s": 15,
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "reitti:pelaaja-1",
+  "paikka": [
+   -62.38,
+   -5.9,
+   25.0
+  ],
+  "osa": "ulkoalue"
+ },
+ {
+  "nimi": "reitti:pelaaja-2",
+  "paikka": [
+   -60.193,
+   -5.9,
+   21.867
+  ],
+  "osa": "vesiportti"
+ },
+ {
+  "nimi": "reitti:pelaaja-3",
+  "paikka": [
+   -58.381,
+   -5.9,
+   20.926
+  ],
+  "osa": "vesiportti"
+ },
+ {
+  "nimi": "reitti:pelaaja-4",
+  "paikka": [
+   -49.82,
+   -5.75,
+   22.328
+  ],
+  "osa": "vesiportti"
+ },
+ {
+  "nimi": "reitti:pelaaja-5",
+  "paikka": [
+   -40.851,
+   -5.6,
+   24.015
+  ],
+  "osa": "vesiportti"
+ },
+ {
+  "nimi": "reitti:pelaaja-6",
+  "paikka": [
+   -37.152,
+   -5.6,
+   26.576
+  ],
+  "osa": "vesiportti"
+ },
+ {
+  "nimi": "reitti:pelaaja-7",
+  "paikka": [
+   -32.6,
+   -5.6,
+   20.0
+  ],
+  "osa": "porttikaytava-T102"
+ },
+ {
+  "nimi": "reitti:pelaaja-8",
+  "paikka": [
+   -26.1,
+   -2.74,
+   10.6
+  ],
+  "osa": "porttikaytava-T102"
+ },
+ {
+  "nimi": "reitti:pelaaja-9",
+  "paikka": [
+   -21.5,
+   -2.74,
+   9.8
+  ],
+  "osa": "pikkupiha"
+ },
+ {
+  "nimi": "reitti:pelaaja-10",
+  "paikka": [
+   -21.5,
+   -2.65,
+   10.6
+  ],
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "reitti:pelaaja-11",
+  "paikka": [
+   -19.55,
+   -2.65,
+   11.75
+  ],
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "reitti:pelaaja-12",
+  "paikka": [
+   -21.5,
+   -2.65,
+   10.6
+  ],
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "reitti:pelaaja-13",
+  "paikka": [
+   -21.0,
+   -2.74,
+   7.5
+  ],
+  "osa": "pikkupiha"
+ },
+ {
+  "nimi": "reitti:pelaaja-14",
+  "paikka": [
+   -20.7,
+   -2.74,
+   5.5
+  ],
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "reitti:pelaaja-15",
+  "paikka": [
+   -20.7,
+   -2.74,
+   -2.8
+  ],
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "reitti:pelaaja-16",
+  "paikka": [
+   -17.24,
+   3.4,
+   -10.61
+  ],
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "reitti:pelaaja-17",
+  "paikka": [
+   -15.8,
+   3.4,
+   -14.0
+  ],
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "reitti:pelaaja-18",
+  "paikka": [
+   -17.63,
+   3.4,
+   -17.65
+  ],
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "reitti:pelaaja-19",
+  "paikka": [
+   -17.49,
+   9.6,
+   -11.05
+  ],
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "reitti:pelaaja-20",
+  "paikka": [
+   -16.6,
+   9.6,
+   -12.6
+  ],
+  "osa": "kirkkotorni-portaat"
+ },
+ {
+  "nimi": "reitti:pelaaja-21",
+  "paikka": [
+   -18.76,
+   9.6,
+   -16.54
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "kaari-ovi (huone 6 alkaa)"
+ },
+ {
+  "nimi": "reitti:pelaaja-22",
+  "paikka": [
+   -19.124,
+   9.6,
+   -16.75
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "kaari-oven aukko"
+ },
+ {
+  "nimi": "reitti:pelaaja-23",
+  "paikka": [
+   -20.033,
+   9.6,
+   -17.275
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "kaariportaiden alapää"
+ },
+ {
+  "nimi": "reitti:pelaaja-24",
+  "paikka": [
+   -18.961,
+   10.55,
+   -19.241
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "kaariportaat"
+ },
+ {
+  "nimi": "reitti:pelaaja-25",
+  "paikka": [
+   -16.915,
+   11.5,
+   -20.251
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "kaariportaiden tasanne"
+ },
+ {
+  "nimi": "reitti:pelaaja-26",
+  "paikka": [
+   -16.214,
+   11.5,
+   -20.393
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "kaariportaiden tasanne"
+ },
+ {
+  "nimi": "reitti:pelaaja-27",
+  "paikka": [
+   -14.284,
+   12.45,
+   -20.343
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "kaariportaat"
+ },
+ {
+  "nimi": "reitti:pelaaja-28",
+  "paikka": [
+   -12.475,
+   13.4,
+   -19.666
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "kaariportaiden yläpää"
+ },
+ {
+  "nimi": "reitti:pelaaja-29",
+  "paikka": [
+   -12.975,
+   13.4,
+   -18.8
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-30",
+  "paikka": [
+   -11.971,
+   13.4,
+   -18.029
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-31",
+  "paikka": [
+   -11.2,
+   13.4,
+   -17.025
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-32",
+  "paikka": [
+   -10.715,
+   13.4,
+   -15.855
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-33",
+  "paikka": [
+   -10.55,
+   13.4,
+   -14.6
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-34",
+  "paikka": [
+   -10.715,
+   13.4,
+   -13.345
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-35",
+  "paikka": [
+   -11.2,
+   13.4,
+   -12.175
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-36",
+  "paikka": [
+   -11.971,
+   13.4,
+   -11.171
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-37",
+  "paikka": [
+   -12.975,
+   13.4,
+   -10.4
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-38",
+  "paikka": [
+   -14.145,
+   13.4,
+   -9.915
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "voudin portaan suu"
+ },
+ {
+  "nimi": "reitti:pelaaja-39",
+  "paikka": [
+   -13.769,
+   13.4,
+   -8.515
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "voudin portaan yläpää"
+ },
+ {
+  "nimi": "reitti:pelaaja-40",
+  "paikka": [
+   -18.454,
+   9.6,
+   -9.09
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "pääoven ulkotasanne"
+ },
+ {
+  "nimi": "reitti:pelaaja-41",
+  "paikka": [
+   -18.491,
+   9.6,
+   -9.622
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "muuriportaiden yläpää"
+ },
+ {
+  "nimi": "reitti:pelaaja-42",
+  "paikka": [
+   -20.879,
+   6.5,
+   -13.758
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "muuriportaiden tasanne"
+ },
+ {
+  "nimi": "reitti:pelaaja-43",
+  "paikka": [
+   -20.879,
+   6.5,
+   -14.742
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "muuriportaiden tasanne (ampuma-aukkokomero)"
+ },
+ {
+  "nimi": "reitti:pelaaja-44",
+  "paikka": [
+   -18.491,
+   3.4,
+   -18.878
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "muuriportaiden alapää"
+ },
+ {
+  "nimi": "reitti:pelaaja-45",
+  "paikka": [
+   -17.544,
+   3.4,
+   -17.527
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "Tott-kammio, portaiden juuri (istuva vartija)"
+ },
+ {
+  "nimi": "reitti:pelaaja-46",
+  "paikka": [
+   -14.773,
+   3.4,
+   -10.853
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "naulakko: esiliina ja myssy (naamio)"
+ },
+ {
+  "nimi": "reitti:pelaaja-47",
+  "paikka": [
+   -15.701,
+   3.4,
+   -10.83
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "eteläoven edusta"
+ },
+ {
+  "nimi": "reitti:pelaaja-48",
+  "paikka": [
+   -15.792,
+   3.4,
+   -10.136
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "Tott-kammion eteläovi"
+ },
+ {
+  "nimi": "reitti:pelaaja-49",
+  "paikka": [
+   -17.097,
+   3.4,
+   -7.45
+  ],
+  "osa": "palatsi",
+  "huom": "käytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-50",
+  "paikka": [
+   -16.144,
+   3.4,
+   -5.579
+  ],
+  "osa": "palatsi",
+  "huom": "Linnantuvan pohjoisovi"
+ },
+ {
+  "nimi": "reitti:pelaaja-51",
+  "paikka": [
+   -15.781,
+   3.4,
+   -4.867
+  ],
+  "osa": "palatsi",
+  "huom": "Linnantupa"
+ },
+ {
+  "nimi": "reitti:pelaaja-52",
+  "paikka": [
+   -13.812,
+   3.4,
+   1.201
+  ],
+  "osa": "palatsi",
+  "huom": "pitkä pöytä: keittokulho"
+ },
+ {
+  "nimi": "reitti:pelaaja-53",
+  "paikka": [
+   -18.136,
+   3.4,
+   -2.881
+  ],
+  "osa": "palatsi",
+  "huom": "kohti salin porrasta"
+ },
+ {
+  "nimi": "reitti:pelaaja-54",
+  "paikka": [
+   -19.112,
+   3.4,
+   -1.823
+  ],
+  "osa": "palatsi",
+  "huom": "salin portaan alapää"
+ },
+ {
+  "nimi": "reitti:pelaaja-55",
+  "paikka": [
+   -16.978,
+   7.5,
+   2.365
+  ],
+  "osa": "palatsi",
+  "huom": "salin portaan yläpää"
+ },
+ {
+  "nimi": "reitti:pelaaja-56",
+  "paikka": [
+   -15.548,
+   7.5,
+   2.198
+  ],
+  "osa": "palatsi",
+  "huom": "voudin sali"
+ },
+ {
+  "nimi": "reitti:pelaaja-57",
+  "paikka": [
+   -9.924,
+   7.5,
+   6.627
+  ],
+  "osa": "palatsi",
+  "huom": "voudin pöytä: kulho pöytään, avainrengas"
+ },
+ {
+  "nimi": "reitti:pelaaja-58",
+  "paikka": [
+   -15.548,
+   7.5,
+   2.198
+  ],
+  "osa": "palatsi",
+  "huom": "paluu"
+ },
+ {
+  "nimi": "reitti:pelaaja-59",
+  "paikka": [
+   -16.978,
+   7.5,
+   2.365
+  ],
+  "osa": "palatsi",
+  "huom": "salin portaan yläpää"
+ },
+ {
+  "nimi": "reitti:pelaaja-60",
+  "paikka": [
+   -19.112,
+   3.4,
+   -1.823
+  ],
+  "osa": "palatsi",
+  "huom": "salin portaan alapää"
+ },
+ {
+  "nimi": "reitti:pelaaja-61",
+  "paikka": [
+   -15.781,
+   3.4,
+   -4.867
+  ],
+  "osa": "palatsi",
+  "huom": "Linnantupa"
+ },
+ {
+  "nimi": "reitti:pelaaja-62",
+  "paikka": [
+   -16.144,
+   3.4,
+   -5.579
+  ],
+  "osa": "palatsi",
+  "huom": "Linnantuvan pohjoisovi"
+ },
+ {
+  "nimi": "reitti:pelaaja-63",
+  "paikka": [
+   -17.097,
+   3.4,
+   -7.45
+  ],
+  "osa": "palatsi",
+  "huom": "käytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-64",
+  "paikka": [
+   -15.792,
+   3.4,
+   -10.136
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "Tott-kammion eteläovi (huone 7 alkaa)"
+ },
+ {
+  "nimi": "reitti:pelaaja-65",
+  "paikka": [
+   -15.701,
+   3.4,
+   -10.83
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "eteläoven edusta"
+ },
+ {
+  "nimi": "reitti:pelaaja-66",
+  "paikka": [
+   -17.544,
+   3.4,
+   -17.527
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "Tott-kammio, portaiden juuri"
+ },
+ {
+  "nimi": "reitti:pelaaja-67",
+  "paikka": [
+   -18.491,
+   3.4,
+   -18.878
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "muuriportaiden alapää"
+ },
+ {
+  "nimi": "reitti:pelaaja-68",
+  "paikka": [
+   -20.879,
+   6.5,
+   -14.742
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "muuriportaiden tasanne: odota komerossa"
+ },
+ {
+  "nimi": "reitti:pelaaja-69",
+  "paikka": [
+   -20.879,
+   6.5,
+   -13.758
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "muuriportaiden tasanne"
+ },
+ {
+  "nimi": "reitti:pelaaja-70",
+  "paikka": [
+   -18.491,
+   9.6,
+   -9.622
+  ],
+  "osa": "kirkkotorni-portaat",
+  "huom": "muuriportaiden yläpää"
+ },
+ {
+  "nimi": "reitti:pelaaja-71",
+  "paikka": [
+   -18.454,
+   9.6,
+   -9.09
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "pääoven ulkotasanne"
+ },
+ {
+  "nimi": "reitti:pelaaja-72",
+  "paikka": [
+   -13.769,
+   13.4,
+   -8.515
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "voudin portaan yläpää"
+ },
+ {
+  "nimi": "reitti:pelaaja-73",
+  "paikka": [
+   -14.145,
+   13.4,
+   -9.915
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä (K3)"
+ },
+ {
+  "nimi": "reitti:pelaaja-74",
+  "paikka": [
+   -15.46,
+   13.4,
+   -9.75
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-75",
+  "paikka": [
+   -16.772,
+   13.4,
+   -9.948
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-76",
+  "paikka": [
+   -17.98,
+   13.4,
+   -10.493
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-77",
+  "paikka": [
+   -18.996,
+   13.4,
+   -11.346
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-78",
+  "paikka": [
+   -19.743,
+   13.4,
+   -12.441
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-79",
+  "paikka": [
+   -20.165,
+   13.4,
+   -13.698
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä"
+ },
+ {
+  "nimi": "reitti:pelaaja-80",
+  "paikka": [
+   -20.232,
+   13.4,
+   -15.023
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "ampumakäytävä, muurikäytävän kohta"
+ },
+ {
+  "nimi": "reitti:pelaaja-81",
+  "paikka": [
+   -21.676,
+   13.4,
+   -15.149
+  ],
+  "osa": "kappeli-kavely",
+  "huom": "muurikäytävän suu"
+ },
+ {
+  "nimi": "reitti:pelaaja-82",
+  "paikka": [
+   -21.955,
+   13.4,
+   -15.039
+  ],
+  "osa": "muurikaytava",
+  "huom": "muurikäytävän ovi (avainrengas)"
+ },
+ {
+  "nimi": "reitti:pelaaja-83",
+  "paikka": [
+   -26.512,
+   13.4,
+   -13.237
+  ],
+  "osa": "muurikaytava",
+  "huom": "aukkojen väli: varjo"
+ },
+ {
+  "nimi": "reitti:pelaaja-84",
+  "paikka": [
+   -30.604,
+   13.4,
+   -11.62
+  ],
+  "osa": "muurikaytava",
+  "huom": "aukkojen väli: varjo"
+ },
+ {
+  "nimi": "reitti:pelaaja-85",
+  "paikka": [
+   -34.602,
+   13.4,
+   -10.04
+  ],
+  "osa": "muurikaytava",
+  "huom": "aukkojen väli: varjo"
+ },
+ {
+  "nimi": "reitti:pelaaja-86",
+  "paikka": [
+   -37.714,
+   13.4,
+   -8.81
+  ],
+  "osa": "muurikaytava",
+  "huom": "muurikäytävän pää"
+ },
+ {
+  "nimi": "reitti:pelaaja-87",
+  "paikka": [
+   -37.632,
+   13.4,
+   -8.466
+  ],
+  "osa": "muurikaytava",
+  "huom": "tikkaat muurinharjalle"
+ },
+ {
+  "nimi": "reitti:pelaaja-88",
+  "paikka": [
+   -36.702,
+   16.6,
+   -8.834
+  ],
+  "osa": "muurikaytava",
+  "huom": "muurinharja, luukun vieressä (tikkaiden yläpää)"
+ },
+ {
+  "nimi": "reitti:pelaaja-89",
+  "paikka": [
+   -35.452,
+   16.6,
+   -7.984
+  ],
+  "osa": "muurikaytava",
+  "huom": "köysikieppi"
+ },
+ {
+  "nimi": "reitti:pelaaja-90",
+  "paikka": [
+   -37.998,
+   16.6,
+   -7.623
+  ],
+  "osa": "muurikaytava",
+  "huom": "harjan pää"
+ },
+ {
+  "nimi": "reitti:pelaaja-91",
+  "paikka": [
+   -38.723,
+   16.6,
+   -9.594
+  ],
+  "osa": "muurikaytava",
+  "huom": "sakara: köysi, kaiteen yli"
+ },
+ {
+  "nimi": "reitti:pelaaja-92",
+  "paikka": [
+   -39.216,
+   16.7,
+   -10.15
+  ],
+  "osa": "muurikaytava",
+  "huom": "kiipeilyn alku (ote 1)"
+ },
+ {
+  "nimi": "reitti:pelaaja-93",
+  "paikka": [
+   -50.988,
+   14.8,
+   -5.485
+  ],
+  "osa": "muurikaytava",
+  "huom": "komeron kynnys (huone 9)"
+ },
+ {
+  "nimi": "reitti:pelaaja-94",
+  "paikka": [
+   -50.883,
+   15.1,
+   -6.076
+  ],
+  "osa": "muurikaytava",
+  "huom": "köysilaskun alku (huone 10)"
+ },
+ {
+  "nimi": "kamera:K3",
+  "paikka": [
+   -37.2,
+   14.9,
+   -8.75
+  ],
+  "katse": [
+   -22.3,
+   14.1,
+   -14.9
+  ],
+  "osa": "muurikaytava",
+  "huom": "huone 7:n alun kaukokuva: muurikäytävä länsipäästä ovelle (Fogg reitti 82)"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-wine_barrel_01-1",
+  "paikka": [
+   -20.65,
+   -2.65,
+   15.95
+  ],
+  "kierto_y": -0.5786,
+  "glb": "rekvisiitta-wine_barrel_01.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-wine_barrel_01-2",
+  "paikka": [
+   -22.45,
+   -2.648,
+   15.15
+  ],
+  "kierto_y": -0.3275,
+  "glb": "rekvisiitta-wine_barrel_01.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-Barrel_01-1",
+  "paikka": [
+   -18.65,
+   -2.648,
+   13.75
+  ],
+  "kierto_y": 1.0257,
+  "glb": "rekvisiitta-Barrel_01.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-Barrel_01-2",
+  "paikka": [
+   -20.25,
+   -2.651,
+   13.95
+  ],
+  "kierto_y": 2.7402,
+  "glb": "rekvisiitta-Barrel_01.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-wooden_bucket_01-1",
+  "paikka": [
+   -16.85,
+   -2.65,
+   15.15
+  ],
+  "kierto_y": -3.0187,
+  "glb": "rekvisiitta-wooden_bucket_01.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-wooden_bucket_01-2",
+  "paikka": [
+   -18.85,
+   -2.651,
+   14.75
+  ],
+  "kierto_y": 2.1284,
+  "glb": "rekvisiitta-wooden_bucket_01.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-wicker_basket_01-1",
+  "paikka": [
+   -15.25,
+   -2.651,
+   15.55
+  ],
+  "kierto_y": -0.9252,
+  "glb": "rekvisiitta-wicker_basket_01.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-ceramic_pot-1",
+  "paikka": [
+   -17.45,
+   -2.648,
+   14.35
+  ],
+  "kierto_y": -0.8707,
+  "glb": "rekvisiitta-ceramic_pot.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-wooden_crate_01-1",
+  "paikka": [
+   -18.25,
+   -2.65,
+   12.95
+  ],
+  "kierto_y": 1.5608,
+  "glb": "rekvisiitta-wooden_crate_01.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-wooden_bowl_01-1",
+  "paikka": [
+   -23.85,
+   -1.8,
+   11.95
+  ],
+  "kierto_y": -0.3656,
+  "glb": "rekvisiitta-wooden_bowl_01.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-wooden_bowl_02-1",
+  "paikka": [
+   -16.25,
+   -1.75,
+   13.15
+  ],
+  "kierto_y": -1.0441,
+  "glb": "rekvisiitta-wooden_bowl_02.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-wooden_bowl_02-2",
+  "paikka": [
+   -15.65,
+   -1.75,
+   13.15
+  ],
+  "kierto_y": 1.6215,
+  "glb": "rekvisiitta-wooden_bowl_02.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-wooden_spoon-1",
+  "paikka": [
+   -21.25,
+   -1.71,
+   14.55
+  ],
+  "kierto_y": -2.9553,
+  "glb": "rekvisiitta-wooden_spoon.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-yellow_onion-1",
+  "paikka": [
+   -16.85,
+   -1.75,
+   13.75
+  ],
+  "kierto_y": 2.1542,
+  "glb": "rekvisiitta-yellow_onion.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-yellow_onion-2",
+  "paikka": [
+   -23.65,
+   -1.8,
+   12.35
+  ],
+  "kierto_y": -0.2134,
+  "glb": "rekvisiitta-yellow_onion.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-yellow_onion-3",
+  "paikka": [
+   -21.25,
+   -1.71,
+   14.15
+  ],
+  "kierto_y": -1.7266,
+  "glb": "rekvisiitta-yellow_onion.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-food_apple_01-1",
+  "paikka": [
+   -22.85,
+   -1.71,
+   13.95
+  ],
+  "kierto_y": -2.294,
+  "glb": "rekvisiitta-food_apple_01.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-food_apple_01-2",
+  "paikka": [
+   -15.45,
+   -1.75,
+   12.95
+  ],
+  "kierto_y": 1.8384,
+  "glb": "rekvisiitta-food_apple_01.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-food_apple_01-3",
+  "paikka": [
+   -23.65,
+   -1.8,
+   11.55
+  ],
+  "kierto_y": -0.1253,
+  "glb": "rekvisiitta-food_apple_01.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-wooden_stool_01-1",
+  "paikka": [
+   -9.76,
+   3.4,
+   1.93
+  ],
+  "kierto_y": -1.3259,
+  "glb": "rekvisiitta-wooden_stool_01.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-wooden_stool_01-2",
+  "paikka": [
+   -11.96,
+   3.4,
+   -3.87
+  ],
+  "kierto_y": -1.3293,
+  "glb": "rekvisiitta-wooden_stool_01.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-wine_barrel_01-1",
+  "paikka": [
+   -13.76,
+   3.4,
+   5.13
+  ],
+  "kierto_y": 2.6456,
+  "glb": "rekvisiitta-wine_barrel_01.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-wooden_bucket_02-1",
+  "paikka": [
+   -12.96,
+   3.4,
+   -6.07
+  ],
+  "kierto_y": -0.5713,
+  "glb": "rekvisiitta-wooden_bucket_02.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-brass_goblets-1",
+  "paikka": [
+   -13.56,
+   4.4,
+   9.33
+  ],
+  "kierto_y": -1.3558,
+  "glb": "rekvisiitta-brass_goblets.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-carved_wooden_plate-1",
+  "paikka": [
+   -6.56,
+   4.4,
+   4.93
+  ],
+  "kierto_y": 0.1423,
+  "glb": "rekvisiitta-carved_wooden_plate.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-carved_wooden_plate-2",
+  "paikka": [
+   -8.76,
+   4.4,
+   -1.87
+  ],
+  "kierto_y": -2.0461,
+  "glb": "rekvisiitta-carved_wooden_plate.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-carved_wooden_plate-3",
+  "paikka": [
+   -5.76,
+   4.4,
+   4.33
+  ],
+  "kierto_y": 0.5439,
+  "glb": "rekvisiitta-carved_wooden_plate.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-carved_wooden_plate-4",
+  "paikka": [
+   -10.96,
+   4.18,
+   1.13
+  ],
+  "kierto_y": 2.5457,
+  "glb": "rekvisiitta-carved_wooden_plate.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-metal_jug-1",
+  "paikka": [
+   -13.56,
+   4.18,
+   2.73
+  ],
+  "kierto_y": -1.2979,
+  "glb": "rekvisiitta-metal_jug.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-jug_01-1",
+  "paikka": [
+   -11.96,
+   4.18,
+   1.73
+  ],
+  "kierto_y": -2.4039,
+  "glb": "rekvisiitta-jug_01.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-wooden_bowl_02-1",
+  "paikka": [
+   -13.96,
+   4.18,
+   2.93
+  ],
+  "kierto_y": -1.9579,
+  "glb": "rekvisiitta-wooden_bowl_02.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-wooden_bowl_02-2",
+  "paikka": [
+   -10.36,
+   4.18,
+   0.53
+  ],
+  "kierto_y": -3.0795,
+  "glb": "rekvisiitta-wooden_bowl_02.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-food_apple_01-1",
+  "paikka": [
+   -9.76,
+   4.4,
+   -1.47
+  ],
+  "kierto_y": -2.8204,
+  "glb": "rekvisiitta-food_apple_01.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-food_apple_01-2",
+  "paikka": [
+   -14.16,
+   4.18,
+   2.33
+  ],
+  "kierto_y": 2.9382,
+  "glb": "rekvisiitta-food_apple_01.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:voudin-sali-GothicCabinet_01-1",
+  "paikka": [
+   -8.76,
+   7.51,
+   3.53
+  ],
+  "kierto_y": -1.4206,
+  "glb": "rekvisiitta-GothicCabinet_01.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:voudin-sali-wooden_crate_02-1",
+  "paikka": [
+   -18.16,
+   7.51,
+   -3.47
+  ],
+  "kierto_y": 2.2469,
+  "glb": "rekvisiitta-wooden_crate_02.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:voudin-sali-wooden_candlestick-1",
+  "paikka": [
+   -6.56,
+   8.05,
+   8.33
+  ],
+  "kierto_y": 1.6864,
+  "glb": "rekvisiitta-wooden_candlestick.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:voudin-sali-wooden_candlestick-2",
+  "paikka": [
+   -14.36,
+   8.2,
+   6.53
+  ],
+  "kierto_y": -2.8639,
+  "glb": "rekvisiitta-wooden_candlestick.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:voudin-sali-brass_goblets-1",
+  "paikka": [
+   -10.96,
+   8.4,
+   -3.87
+  ],
+  "kierto_y": 1.0421,
+  "glb": "rekvisiitta-brass_goblets.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:voudin-sali-metal_jug-1",
+  "paikka": [
+   -6.76,
+   8.4,
+   4.73
+  ],
+  "kierto_y": -0.0318,
+  "glb": "rekvisiitta-metal_jug.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:voudin-sali-carved_wooden_plate-1",
+  "paikka": [
+   -15.16,
+   8.2,
+   6.33
+  ],
+  "kierto_y": 2.7889,
+  "glb": "rekvisiitta-carved_wooden_plate.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:voudin-sali-carved_wooden_plate-2",
+  "paikka": [
+   -6.16,
+   8.4,
+   4.53
+  ],
+  "kierto_y": 0.6002,
+  "glb": "rekvisiitta-carved_wooden_plate.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:tyrma-wooden_bucket_02-1",
+  "paikka": [
+   -12.83,
+   -3.8,
+   -5.94
+  ],
+  "kierto_y": 1.956,
+  "glb": "rekvisiitta-wooden_bucket_02.glb",
+  "osa": "tyrma-E101"
+ },
+ {
+  "nimi": "rekvisiitta:tyrma-jug_01-1",
+  "paikka": [
+   -15.83,
+   -3.8,
+   -5.94
+  ],
+  "kierto_y": 0.4699,
+  "glb": "rekvisiitta-jug_01.glb",
+  "osa": "tyrma-E101"
+ },
+ {
+  "nimi": "rekvisiitta:tyrma-carved_wooden_plate-1",
+  "paikka": [
+   -18.63,
+   -3.8,
+   -3.54
+  ],
+  "kierto_y": -0.9367,
+  "glb": "rekvisiitta-carved_wooden_plate.glb",
+  "osa": "tyrma-E101"
+ },
+ {
+  "nimi": "rekvisiitta:voudin-sali-codex-viltti-sininen-1",
+  "paikka": [
+   -16.76,
+   7.51,
+   -4.67
+  ],
+  "kierto_y": 0.6882,
+  "glb": "rekvisiitta-codex-viltti-sininen.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:voudin-sali-codex-asiakirja-1",
+  "paikka": [
+   -10.36,
+   8.402,
+   -4.47
+  ],
+  "kierto_y": 0.0,
+  "glb": "rekvisiitta-codex-asiakirja.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:voudin-sali-codex-tilikirja-1",
+  "paikka": [
+   -8.56,
+   8.302,
+   7.13
+  ],
+  "kierto_y": 1.5708,
+  "glb": "rekvisiitta-codex-tilikirja.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:voudin-sali-codex-kuvakudos-1",
+  "paikka": [
+   -12.975,
+   8.51,
+   -7.057
+  ],
+  "kierto_y": -1.0996,
+  "glb": "rekvisiitta-codex-kuvakudos.glb",
+  "osa": "palatsi",
+  "seina": true
+ },
+ {
+  "nimi": "rekvisiitta:voudin-sali-codex-lippu-sture-1",
+  "paikka": [
+   -8.587,
+   8.81,
+   1.554
+  ],
+  "kierto_y": -1.0996,
+  "glb": "rekvisiitta-codex-lippu-sture.glb",
+  "osa": "palatsi",
+  "seina": true
+ },
+ {
+  "nimi": "rekvisiitta:voudin-sali-codex-tott-vaakuna-1",
+  "paikka": [
+   -10.274,
+   9.06,
+   -1.758
+  ],
+  "kierto_y": -1.0996,
+  "glb": "rekvisiitta-codex-tott-vaakuna.glb",
+  "osa": "palatsi",
+  "seina": true
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-codex-viltti-punainen-1",
+  "paikka": [
+   -15.96,
+   3.4,
+   1.13
+  ],
+  "kierto_y": 1.7921,
+  "glb": "rekvisiitta-codex-viltti-punainen.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-codex-liina-1",
+  "paikka": [
+   -15.76,
+   4.402,
+   4.73
+  ],
+  "kierto_y": -0.3927,
+  "glb": "rekvisiitta-codex-liina.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-codex-saakki-1-1",
+  "paikka": [
+   -16.05,
+   -2.653,
+   11.95
+  ],
+  "kierto_y": 2.3495,
+  "glb": "rekvisiitta-codex-saakki-1.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-codex-saakki-2-1",
+  "paikka": [
+   -19.45,
+   -2.65,
+   14.15
+  ],
+  "kierto_y": 2.6839,
+  "glb": "rekvisiitta-codex-saakki-2.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-codex-saakki-1-2",
+  "paikka": [
+   -17.05,
+   -2.65,
+   12.75
+  ],
+  "kierto_y": -1.8872,
+  "glb": "rekvisiitta-codex-saakki-1.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:tyrma-codex-viltti-ruskea-1",
+  "paikka": [
+   -11.43,
+   -3.8,
+   -0.54
+  ],
+  "kierto_y": -2.5421,
+  "glb": "rekvisiitta-codex-viltti-ruskea.glb",
+  "osa": "tyrma-E101"
+ },
+ {
+  "nimi": "rekvisiitta:tyrma-codex-raapustukset-1",
+  "paikka": [
+   -16.656,
+   -3.1,
+   -0.516
+  ],
+  "kierto_y": -1.0996,
+  "glb": "rekvisiitta-codex-raapustukset.glb",
+  "osa": "tyrma-E101",
+  "seina": true
+ },
+ {
+  "nimi": "rekvisiitta:kappeli-codex-alttarikaappi-1",
+  "paikka": [
+   -11.676,
+   10.571,
+   -15.306
+  ],
+  "kierto_y": -1.3956,
+  "glb": "rekvisiitta-codex-alttarikaappi.glb",
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "rekvisiitta:kappeli-codex-brokadi-1",
+  "paikka": [
+   -12.288,
+   9.6,
+   -15.198
+  ],
+  "kierto_y": -1.3956,
+  "glb": "rekvisiitta-codex-brokadi.glb",
+  "osa": "kappeli-kavely",
+  "seina": true
+ },
+ {
+  "nimi": "rekvisiitta:keittio-codex-noki-1",
+  "paikka": [
+   -22.224,
+   -1.748,
+   14.591
+  ],
+  "kierto_y": 2.7202,
+  "glb": "rekvisiitta-codex-noki.glb",
+  "osa": "keittio-G102",
+  "seina": true
+ }
+]
