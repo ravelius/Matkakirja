@@ -558,6 +558,8 @@ namespace Matkakirja.Natiivi
             VerkkoOdotus.PeliVaihe = VerkkoVaihe;
             // Ruudunpaivitys: linssin ollessa auki täysi taajuus (aikajanat, radion mittarit, kamera-ajot; lämpöerä 25.9.).
             Ruudunpaivitys.Aktiivinen.Add(() => LinssiOhjain.Rekisteri?.Auki != null);
+            // Säästökatto (omistaja 11.10.2026, akku- ja lämpömittaus TF 180): opas-linssin pallokierros 40/30 fps (KuvataajuusPaatos).
+            Ruudunpaivitys.PalloKierros = () => LinssiOhjain.Rekisteri?.Auki?.Tiedot.Id == "opas";
             AloituslentoPaattyi += _ => verkkoSaapui = Time.realtimeSinceStartup;
             MatkaPerilla += k => { if (k != null) verkkoSaapui = Time.realtimeSinceStartup; };
             // Verkko-odotus: pelin sisältö (kaupungit, reitit) ennen aloitusta; aloitusnäkymä odottaa tätä.
