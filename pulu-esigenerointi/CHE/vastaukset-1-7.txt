@@ -28,10 +28,10 @@ Kuinka monta virallista kieltä Sveitsillä on?
 
 ### 31.5
 KYSYMYS: Mistä tuotteista Fribourg oli tunnettu 1300-luvulla?
-Odotas vähän. Fribourg oli jo 1300-luvulla tunnettu [[kangas- ja nahkatuotannostaan]] ympäri Keski-Eurooppaa. Kaupunki oli tuolloin siirtynyt Kyburgin suvulta Habsburgeille, ja käsityöläisten tuotteet liikkuivat laajalla alueella. Jokimutkan suojaama kalliokaupunki tarjosi sopivan paikan sekä työlle että kaupalle. Tarkempia tuotantolukuja en ole varma tietäväni, joten jätän ne mainitsematta. Hyvin muistin tuonkin.
+Odotas vähän. Fribourg oli jo 1300-luvulla tunnettu [[kangas- ja nahkatuotannostaan]] ympäri Keski-Eurooppaa. Kaupunki oli tuolloin siirtynyt Kyburgin suvulta [[Habsburgeille]], ja käsityöläisten tuotteet liikkuivat laajalla alueella. Jokimutkan suojaama kalliokaupunki tarjosi sopivan paikan sekä työlle että kaupalle. Tarkempia tuotantolukuja en ole varma tietäväni, joten jätän ne mainitsematta. Hyvin muistin tuonkin.
 JATKOT:
 Miten nahkaa on perinteisesti valmistettu?
-Mitkä muut Sveitsin kaupungit olivat keskiajalla tunnettuja kauppakaupunkeja?
+Mitkä kaupungit olivat keskiajan kauppakaupunkeja?
 
 ### 32.1
 KYSYMYS: Mikä oli Zürichin roomalaisaikainen nimi?
@@ -56,7 +56,7 @@ Mitä nähtävyyksiä Zürichin vanhakaupungissa on?
 
 ### 32.4
 KYSYMYS: Mitä valtakunnanvälittömyys keskiajalla tarkoitti?
-Annas ku mietin. Valtakunnanvälittömyys tarkoitti keskiajalla sitä, että kaupunki oli suoraan keisarin alaisuudessa eikä minkään välissä olevan herran tai ruhtinaan alainen. Zürich sai tämän erioikeuden [[Pyhän saksalais-roomalaisen keisarikunnan]] aikana, ja se antoi kaupungille huomattavan itsenäisyyden omissa asioissaan. Käytännössä kaupunki hallitsi itseään, mutta kuului silti keisarikuntaan. Tarkkaa vuotta erioikeuden saamiselle en ole varma. Hirmuinen sana, mutta selvisin siitä.
+Annas ku mietin. Valtakunnanvälittömyys tarkoitti keskiajalla sitä, että kaupunki oli suoraan keisarin alaisuudessa eikä minkään välissä olevan herran tai ruhtinaan alainen. [[Zürich]] sai tämän erioikeuden [[Pyhän saksalais-roomalaisen keisarikunnan]] aikana, ja se antoi kaupungille huomattavan itsenäisyyden omissa asioissaan. Käytännössä kaupunki hallitsi itseään, mutta kuului silti keisarikuntaan. Tarkkaa vuotta erioikeuden saamiselle en ole varma. Hirmuinen sana, mutta selvisin siitä.
 JATKOT:
 Mitä muita valtakunnanvälittömiä kaupunkeja oli keisarikunnassa?
 Miten kaupunki hallitsi itseään keskiajalla?
@@ -100,7 +100,7 @@ Miksi lääketeollisuus keskittyi juuri Basel-seudulle?
 
 ### 33.5
 KYSYMYS: Minkä joen varrella Basel sijaitsee?
-Kas vaan, tämä on helppo. Basel sijaitsee [[Reinin]] varrella, ja se on Sveitsin kolmanneksi suurin kaupunki. Rein on yksi Euroopan tärkeimmistä jokiväylistä, ja Baselissa on pitkään ollut satamatoimintaa. Väritehtaan siirto Klybeckin rantaan vuonna 1864 liittyi juuri tähän jokimaisemaan. Joesta olen varma, satamasta vähemmän tarkkojen lukujen osalta. Jokirannasta näkee kyl hyvin.
+Kas vaan, tämä on helppo. Basel sijaitsee [[Reinin]] varrella, ja se on [[Sveitsin]] kolmanneksi suurin kaupunki. Rein on yksi Euroopan tärkeimmistä jokiväylistä, ja Baselissa on pitkään ollut satamatoimintaa. Väritehtaan siirto Klybeckin rantaan vuonna 1864 liittyi juuri tähän jokimaisemaan. Joesta olen varma, satamasta vähemmän tarkkojen lukujen osalta. Jokirannasta näkee kyl hyvin.
 JATKOT:
 Mistä Rein saa alkunsa?
 Mitä maita Rein virtaa läpi?

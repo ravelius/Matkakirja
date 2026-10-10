@@ -1,0 +1,2940 @@
+[
+ {
+  "kohde": "kohde:dufourspitze",
+  "kysymys": "Kuka Guillaume-Henri Dufour oli?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Tän miehen nimi kuuluu kyl Sveitsissä lähes kaikkialla. Guillaume-Henri Dufour (1787–1875) oli sveitsiläinen insinööri, upseeri ja kartoittaja. Hän johti Sveitsin virallisen kartaston laatimista, ja tuo [[Dufourin kartta]] valmistui 1800-luvun puolivälissä. Hän toimi myös armeijan kenraalina vuoden 1847 [[Sonderbundin sodassa]], joka päättyi nopeasti ja verrattain pienin tappioin. Lisäksi hän oli mukana perustamassa [[Punaista Ristiä]] Genevessä. Vuoren huippu nimettiin hänen mukaansa vielä hänen elinaikanaan. Ei paha muisti kyyhkyltä.",
+  "linkit": [
+   "Dufourin kartta",
+   "Sonderbundin sodassa",
+   "Punaista Ristiä"
+  ],
+  "jatkot": [
+   "Mitä Sonderbundin sodassa tapahtui?",
+   "Miten Punainen Risti syntyi Genevessä?"
+  ]
+ },
+ {
+  "kohde": "kohde:dufourspitze",
+  "kysymys": "Kuinka monta neljäntuhannen metrin huippua Monte Rosassa on?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Laskemista tää vaatii. Monte Rosan massiivissa on noin kymmenen yli neljäntuhannen metrin huippua, ja tarkka luku riippuu siitä, lasketaanko pienimmät kärjet omiksi huipuikseen. Dufourspitzen lisäksi tunnetuimpia ovat [[Nordend]], [[Zumsteinspitze]] ja [[Signalkuppe]], jotka kaikki ylittävät neljä tuhatta metriä. Osa huipuista sijaitsee Sveitsin ja Italian rajalla. Kyl se kymmenen riittää kyyhkylle.",
+  "linkit": [
+   "Nordend",
+   "Zumsteinspitze",
+   "Signalkuppe"
+  ],
+  "jatkot": [
+   "Miten Monte Rosalle nousee turvallisesti?",
+   "Kuka nousi ensimmäisenä Monte Rosan huipulle?"
+  ]
+ },
+ {
+  "kohde": "kohde:dufourspitze",
+  "kysymys": "Mitä vedenjakaja tarkoittaa ja minne Monte Rosan vedet virtaavat?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän, ylhäältä sen näkee selvästi. Vedenjakaja on maanpinnan korkea kohta, jonka eri puolille satanut vesi virtaa eri vesistöihin. Monte Rosan massiivissa vedet jakautuvat [[Rhônen]] ja [[Pon]] vesistöihin: Rhônen vedet kulkevat Sveitsin ja Ranskan halki [[Välimerelle]], ja Pon vedet virtaavat Pohjois-Italian halki [[Adrianmerelle]]. Sama sadepisara päätyy siis eri meriin sen mukaan, kummalle puolelle harjannetta se putoaa. Kyl se vaan on hienosti järjestetty.",
+  "linkit": [
+   "Rhônen",
+   "Pon",
+   "Välimerelle",
+   "Adrianmerelle"
+  ],
+  "jatkot": [
+   "Mistä Po-joki saa alkunsa?",
+   "Mihin mereen Rein laskee?"
+  ]
+ },
+ {
+  "kohde": "kohde:dufourspitze",
+  "kysymys": "Miten Dufourspitzelle noustaan ja onko reitti vaativa?",
+  "uusi": true,
+  "vastaus": "Mmm— hyvä kysymys tuo, vähän jalkoja kylmää. Tavallisin nousureitti lähtee [[Zermattista]], ja yöpymispaikkana käytetään yleensä [[Monte Rosa -majaa]]. Sieltä reitti kulkee [[jäätikön]] yli ja päättyy kallioiselle harjanteelle. Nousu on vaativa vuoristoretki, joka edellyttää jäätikkö- ja kiipeilytaitoja, kunnollista varustusta ja hyvää kuntoa, ja monet kiipeäjät käyttävät opasta. Sää ja olosuhteet vaikuttavat reitin vaikeuteen paljon. Minä pysyn mieluummin ilmassa, siellä ei tarvita köyttä.",
+  "linkit": [
+   "Zermattista",
+   "Monte Rosa -majaa",
+   "jäätikön"
+  ],
+  "jatkot": [
+   "Mikä Gornergratin hammasratajuna on?",
+   "Milloin Dufourspitzelle nousu on turvallisinta?"
+  ]
+ },
+ {
+  "kohde": "kohde:dufourspitze",
+  "kysymys": "Mikä on Alppien korkein vuori ja missä se sijaitsee?",
+  "uusi": true,
+  "vastaus": "Ai se. Kaikki kyyhkyt tietävät sen. Alppien korkein vuori on [[Mont Blanc]], jonka huippu kohoaa noin 4 806 metrin korkeuteen Ranskan ja Italian rajalla. Rajan tarkasta kulusta huipun läheisyydessä ranskalaiset ja italialaiset ovat olleet eri mieltä, joten lähteet voivat sijoittaa huipun eri tavoin. Vuoren juurella on ranskalainen [[Chamonixin]] laakso, josta kiipeäjät ja retkeilijät lähtevät liikkeelle. [[Dufourspitze]] on Alppien toiseksi korkein vuori.\n\nMinä olen katsonut sitä monta kertaa ylhäältä, eikä ero toiseksi korkeimpaan siivin juuri näy, mutta korkein on silti korkein.",
+  "linkit": [
+   "Mont Blanc",
+   "Chamonixin",
+   "Dufourspitze"
+  ],
+  "jatkot": [
+   "Milloin Mont Blancille noustiin ensimmäisen kerran?",
+   "Millainen kaupunki Chamonix on?"
+  ],
+  "paikka": {
+   "nimi": "Mont Blanc",
+   "lat": 45.83,
+   "lon": 6.87,
+   "tarkkuus": "alue"
+  }
+ },
+ {
+  "kohde": "kohde:matterhorn",
+  "kysymys": "Kuka nousi Matterhornille ensimmäisenä?",
+  "uusi": false,
+  "vastaus": "Tuota niin, siihen liittyy surullinen loppu. Matterhornin huipulle nousi ensimmäisenä englantilaisen [[Edward Whymperin]] johtama seitsemän hengen seurue 14. heinäkuuta 1865 Sveitsin puolelta [[Zermattista]] lähtien. Laskeutumisessa köysi katkesi, ja neljä seurueen jäsentä sai surmansa, kolme selvisi. Onnettomuus järkytti aikalaisia ja herätti keskustelua vuorikiipeilyn vaaroista. Noin kolme päivää myöhemmin italialainen [[Jean-Antoine Carrel]] kumppaneineen nousi huipulle Italian puolelta. Siitä on yli sata viisikymmentä vuotta, ja nykyään vuorella on vakiintuneet reitit, oppaat ja vuoristopelastus. Onneksi siitä on jo pitkä aika.",
+  "linkit": [
+   "Edward Whymperin",
+   "Zermattista",
+   "Jean-Antoine Carrel"
+  ],
+  "jatkot": [
+   "Millaisia reittejä Matterhornille on nykyään?",
+   "Miten vuorikiipeilyn turvallisuus on kehittynyt?"
+  ]
+ },
+ {
+  "kohde": "kohde:matterhorn",
+  "kysymys": "Miksi Matterhorn on niin tarkan pyramidin muotoinen?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin, miltä se ylhäältä näyttää. Matterhornin muoto on syntynyt pitkän ajan kuluessa, kun [[jäätiköt]] ovat [[jääkausien]] aikana kuluttaneet ja louhineet vuoren eri sivuilta syviä, kulhomaisia syvänteitä. Kun tällaisia jäätikön kaivertamia syvänteitä on useilla sivuilla lähellä toisiaan, niiden väliin jää terävä, jyrkkäseinäinen huippu. Matterhornin neljä seinämää kääntyvät suunnilleen eri ilmansuuntiin, minkä vuoksi vuori näyttää lähes symmetriseltä pyramidilta. Myös kallioperän rakenne vaikuttaa siihen, miten rapautuminen etenee, mutta en ole varma kaikista yksityiskohdista. Ei kyl pyramidi hullumpi muoto ole.",
+  "linkit": [
+   "jäätiköt",
+   "jääkausien"
+  ],
+  "jatkot": [
+   "Miten jäätiköt muokkaavat vuoria?",
+   "Miksi Alppien jäätiköt sulavat nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:matterhorn",
+  "kysymys": "Mitä Matterhornin nimi tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Matterhorn on saksankielinen nimi, jonka alkuosa viittaa [[Mattertalin]] laaksoon ja loppuosa tarkoittaa huippua eli sarvea. Alkuosan uskotaan juontuvan sanasta, joka tarkoittaa niittyä, mutta en ole tästä aivan varma. Italiaksi vuori on [[Monte Cervino]] ja ranskaksi [[Cervin]]. Kolme nimeä yhdelle vuorelle, ja silti se pysyy paikallaan.",
+  "linkit": [
+   "Mattertalin",
+   "Monte Cervino",
+   "Cervin"
+  ],
+  "jatkot": [
+   "Miksi Zermatt on autoton?",
+   "Mikä on Monte Cervino Italian puolella?"
+  ]
+ },
+ {
+  "kohde": "kohde:matterhorn",
+  "kysymys": "Miksi Matterhornia pidetään niin usein valokuvatuimpana vuorena?",
+  "uusi": true,
+  "vastaus": "Kas vaan, sitä on kyl tuijotettu. Matterhornin muoto on poikkeuksellisen tunnistettava: se kohoaa lähes yksinään symmetrisenä pyramidina ympäröivien vuorten yläpuolelle, ja sen huippu näkyy hyvin [[Zermattin]] kylästä. Näköalapaikoille on helppo päästä, esimerkiksi [[Gornergratilta]] ja [[Riffelsee-järven]] rannalta, jossa vuori heijastuu veteen tyynenä päivänä. Väite, että se olisi maailman valokuvatuin vuori, on kuitenkin pikemminkin vakiintunut luonnehdinta kuin mitattu tosiasia.\n\nItse en ole saanut siitä yhtään kuvaa, vaikka olen poseerannut sen edessä oikein ahkerasti.",
+  "linkit": [
+   "Zermattin",
+   "Gornergratilta",
+   "Riffelsee-järven"
+  ],
+  "jatkot": [
+   "Mikä Gornergratin hammasratajuna on?",
+   "Mitä Zermattissa voi tehdä kesällä?"
+  ]
+ },
+ {
+  "kohde": "kohde:matterhorn",
+  "kysymys": "Mikä on Hörnli-harjanne ja miksi sitä käytetään?",
+  "uusi": true,
+  "vastaus": "Annas ku katson ylhäältä. Hörnli-harjanne on Matterhornin koillisharjanne ja yleisin nousureitti Sveitsin puolelta. Reitti lähtee [[Hörnlihüttestä]], jonne pääsee [[Zermattista]] jalan, ja jatkuu kallioista harjannetta pitkin kohti huippua. Reitin varrella on myös pieni hätämaja, [[Solvay-hütte]]. Italian puolella nousu kulkee toista harjannetta pitkin. Minä kyllä kierrän koko jutun lentämällä.",
+  "linkit": [
+   "Hörnlihüttestä",
+   "Zermattista",
+   "Solvay-hütte"
+  ],
+  "jatkot": [
+   "Mikä on Italian puolen Lion-harjanne?",
+   "Milloin kiipeilykausi Matterhornilla on?"
+  ]
+ },
+ {
+  "kohde": "kohde:jungfrau",
+  "kysymys": "Mitkä ovat Eiger ja Mönch?",
+  "uusi": false,
+  "vastaus": "Katotaas. Nuo kaksi ovat Jungfraun naapureita ja kuuluvat samaan kuuluisaan vuorimuuriin. Eiger on kolmikon matalin, noin 3 970 metriä korkea, ja sen jyrkkä [[Eigerin pohjoisseinämä]] on alpinistien keskuudessa tunnettu ja pelätty. Mönch on noin 4 107 metriä korkea ja sijaitsee Eigerin ja Jungfraun välissä. Näiden kahden vuoren sisällä kulkee [[Jungfraujochin]] rautatieasemalle johtava tunneli. Kolme vuorta, ja minä muistin kaikkien korkeudet.",
+  "linkit": [
+   "Eigerin pohjoisseinämä",
+   "Jungfraujochin"
+  ],
+  "jatkot": [
+   "Miksi Eigerin pohjoisseinämä on niin kuuluisa?",
+   "Missä Jungfraujochin asema sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:jungfrau",
+  "kysymys": "Miten Jungfraulle päästään nykyään?",
+  "uusi": false,
+  "vastaus": "No niin, junaahan kyyhky ei tarvitse. Huipulle itsessään pääsee vain vuoristokiipeilijöille tarkoitettuja reittejä, mutta lähes huipun tuntumaan nousee juna. Matka alkaa tyypillisesti [[Interlakenista]], josta kuljetaan [[Grindelwaldin]] tai Lauterbrunnenin kautta [[Kleine Scheideggin]] asemalle, ja sieltä jatketaan [[Jungfraujochin]] asemalle louhittua tunnelia pitkin. Asema on 3 454 metrin korkeudessa, ja tunneli kulkee Eigerin ja Mönchin sisällä. Huipulle asti nouseminen vaatii jäätikkökokemusta ja tavallisesti opasta. Minä ohitan koko asemarakennuksen siivin.",
+  "linkit": [
+   "Interlakenista",
+   "Grindelwaldin",
+   "Kleine Scheideggin",
+   "Jungfraujochin"
+  ],
+  "jatkot": [
+   "Mitä Jungfraujochilla on nähtävää?",
+   "Miten korkeus vaikuttaa ihmiseen vuoristossa?"
+  ]
+ },
+ {
+  "kohde": "kohde:jungfrau",
+  "kysymys": "Mistä Jungfrau-vuoren nimi on peräisin?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny, mukava kysymys. Jungfrau tarkoittaa saksaksi neitoa tai neitsyttä. Nimen alkuperästä on esitetty useita selityksiä, eikä yksiselitteistä vastausta ole. Yhden tulkinnan mukaan nimi viittaa lumen valkeuteen ja vuoren koskemattomaan olemukseen, toisen mukaan [[Interlakenin]] luostarin nunniin. Naapurivuori [[Mönch]] taas tarkoittaa munkkia, ja nimet sopivat yhteen. Minä olisin nimennyt sen Pulla-vuoreksi.",
+  "linkit": [
+   "Interlakenin",
+   "Mönch"
+  ],
+  "jatkot": [
+   "Milloin Jungfraulle noustiin ensimmäisen kerran?",
+   "Millainen kaupunki Interlaken on?"
+  ]
+ },
+ {
+  "kohde": "kohde:jungfrau",
+  "kysymys": "Miksi Alppien jäätiköt ovat vetäytymässä?",
+  "uusi": true,
+  "vastaus": "Odotas vähän, tää vaatii tarkkuutta. Alppien jäätiköt ovat vetäytyneet 1800-luvun puolivälin jälkeen lähes koko ajan, ja vetäytyminen on viime vuosikymmeninä nopeutunut. Pääsyy on [[ilmaston lämpeneminen]]: kesät ovat lämpimämpiä, jolloin jäätä sulaa enemmän kuin talven lumi ehtii korvata. Jungfraun lähellä alkava [[Aletschjäätikkö]], Alppien pisin jäätikkö, on lyhentynyt ja ohentunut selvästi, vaikka se on yhä näyttävä. Toivottavasti jäätä riittää vielä pitkään.",
+  "linkit": [
+   "ilmaston lämpeneminen",
+   "Aletschjäätikkö"
+  ],
+  "jatkot": [
+   "Mikä on Jungfrau-Aletsch-maailmanperintökohde?",
+   "Kuinka jäätiköt muodostuvat?"
+  ]
+ },
+ {
+  "kohde": "kohde:jungfrau",
+  "kysymys": "Miksi korkealla vuoristossa on vaikeampi hengittää?",
+  "uusi": true,
+  "vastaus": "Ai tota, kyyhky on tässä edukseen. Ilman happipitoisuus pysyy korkeuden kasvaessa suunnilleen samana, mutta [[ilmanpaine]] laskee, jolloin jokaisella hengenvedolla keuhkoihin tulee vähemmän happea. Jungfraujochin kaltaisella noin 3 500 metrin korkeudella tämä voi tuntua hengästymisenä ja päänsärkynä. Joillekin kehittyy [[vuoristotauti]], jonka oireita ovat pahoinvointi ja väsymys, ja paras ehkäisy on nousta rauhallisesti ja antaa keholle aikaa tottua. Minä kuulemma hengitän ohuessa ilmassa ihan hyvin.",
+  "linkit": [
+   "ilmanpaine",
+   "vuoristotauti"
+  ],
+  "jatkot": [
+   "Mitkä ovat vuoristotaudin oireet?",
+   "Miten keho tottuu korkeaan ilmanalaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:rein",
+  "kysymys": "Missä Reinin varsinainen lähde on?",
+  "uusi": false,
+  "vastaus": "Ai tota, tästä riidellään kyl vieläkin. Rein syntyy kahdesta latvahaarasta, jotka yhtyvät Reichenaussa Churin läheisyydessä: Vorderrhein saa alkunsa [[Tomajärvestä]] Oberalppassin tuntumassa, ja Hinterrhein tulee [[Rheinwaldhornin]] jäätiköiltä. Perinteisesti Tomajärveä pidetään Reinin lähteenä, mutta tulkinnat vaihtelevat sen mukaan, kumpi haara katsotaan pääuomaksi. Joesta tulee jo lähteessä riita, ihan kuin kyyhkyistä.",
+  "linkit": [
+   "Tomajärvestä",
+   "Rheinwaldhornin"
+  ],
+  "jatkot": [
+   "Kuinka pitkä Rein on?",
+   "Mitkä kaupungit sijaitsevat Reinin varrella?"
+  ],
+  "paikka": {
+   "nimi": "Tomajärvi",
+   "lat": 46.62,
+   "lon": 8.67,
+   "tarkkuus": "alue"
+  }
+ },
+ {
+  "kohde": "kohde:rein",
+  "kysymys": "Kuinka monen maan rajaa Rein muodostaa?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny, lasketaanpas rannat. Rein muodostaa osan viiden maan rajoista: Sveitsin ja [[Liechtensteinin]], Sveitsin ja Itävallan, Sveitsin ja Saksan sekä Ranskan ja Saksan välisistä rajoista, joten mukana ovat Sveitsi, Liechtenstein, Itävalta, Saksa ja Ranska. [[Bodenjärvestä]] alaspäin joki on Sveitsin ja Saksan rajana, ja [[Baselin]] jälkeen Ranskan ja Saksan rajana. Alankomaissa joki ei enää ole rajana vaan virtaa maan halki Pohjanmereen. Viisi maata yhdellä joella, ei paha kyyhkyn laskettavaksi.",
+  "linkit": [
+   "Liechtensteinin",
+   "Bodenjärvestä",
+   "Baselin"
+  ],
+  "jatkot": [
+   "Mikä Rein on liikenneväylänä?",
+   "Mitkä maat ympäröivät Bodenjärveä?"
+  ]
+ },
+ {
+  "kohde": "kohde:rein",
+  "kysymys": "Mikä on Lorelei-kallio Reinin varrella?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Lorelei on jyrkkä kallio Reinin oikealla rannalla [[Sankt Goarshausenin]] kaupungin lähellä, kohdassa jossa jokiuoma on kapea ja virta vaarallinen laivoille. Kalliosta kerrotaan taru kauniista naisesta, jonka laulu houkutteli laivureita haaksirikkoon, ja tarua levitti erityisesti saksalaisen [[Heinrich Heinen]] 1800-luvun alun runo. Alue kuuluu Reinin keskiosan [[Unescon maailmanperintökohteeseen]]. Laulavista naisista en tiedä mitään, kyyhky vain kuhertaa.",
+  "linkit": [
+   "Sankt Goarshausenin",
+   "Heinrich Heinen",
+   "Unescon maailmanperintökohteeseen"
+  ],
+  "jatkot": [
+   "Mitä linnoja Reinin varrella on?",
+   "Kuka Heinrich Heine oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:rein",
+  "kysymys": "Millainen merkitys Reinillä on rahtiliikenteelle?",
+  "uusi": true,
+  "vastaus": "Mmm— hyvä kysymys tuo. Rein on yksi Euroopan vilkkaimmista sisävesiliikenteen väylistä: sitä pitkin kuljetetaan lastia muun muassa kemikaaleja, polttoaineita ja rakennusmateriaaleja. Joki yhdistää [[Rotterdamin]] meriaseman Saksan teollisuusalueisiin, ja [[Duisburgin]] satama on merkittävä sisävesisatama. Myös Sveitsi hyödyntää [[Baselin]] satamia, joiden kautta rahtia kulkee merelle.\n\nMinä kannan vain kirjeitä, ja sekin riittää hyvin, vaikka tuuli välillä käy vastaan.",
+  "linkit": [
+   "Rotterdamin",
+   "Duisburgin",
+   "Baselin"
+  ],
+  "jatkot": [
+   "Mikä Rotterdamin satama on?",
+   "Miten Rein on vaikuttanut Saksan teollisuuteen?"
+  ]
+ },
+ {
+  "kohde": "kohde:rein",
+  "kysymys": "Miksi Kölnin tuomiokirkon rakentaminen kesti niin kauan?",
+  "uusi": true,
+  "vastaus": "Kas vaan, sen minä muistan kyl ylhäältä katsottuna. Rakentaminen aloitettiin vuonna 1248, mutta työ keskeytyi keskiajan lopulla ja kirkko jäi pitkäksi aikaa keskeneräiseksi. Työ jatkui 1800-luvulla, kun alkuperäiset suunnitelmat oli löydetty, ja kirkko valmistui vuonna 1880. [[Reinin]] rannalla seisova kirkko edustaa [[gotiikan]] rakennustaidetta, ja se kuuluu [[maailmanperintöluetteloon]]. Siinä sai kyyhkysukupolvi jos toinenkin odottaa.",
+  "linkit": [
+   "Reinin",
+   "gotiikan",
+   "maailmanperintöluetteloon"
+  ],
+  "jatkot": [
+   "Mikä on gotiikka rakennustyylinä?",
+   "Mitä muuta Kölnissä on nähtävää?"
+  ]
+ },
+ {
+  "kohde": "kohde:rhone",
+  "kysymys": "Mikä Rhône-jäätikkö on?",
+  "uusi": false,
+  "vastaus": "Katotaas. Rhône-jäätikkö on [[Valais'n]] kantonissa [[Furkapassin]] tuntumassa sijaitseva Alppien jäätikkö, josta Rhône-joki saa alkunsa. Jäätikkö on vetäytynyt voimakkaasti, ja osaa sen pinnasta peitetään kesäisin valkoisilla suojahuovilla sulamisen hidastamiseksi. Jäätikköön tehdään kävijöille avoin [[jääluola]]. Aika paljon pienemmältä se näyttää ylhäältä.",
+  "linkit": [
+   "Valais'n",
+   "Furkapassin",
+   "jääluola"
+  ],
+  "jatkot": [
+   "Miten jäätikköä voi suojata sulamiselta?",
+   "Mitä Furkan solassa on nähtävää?"
+  ]
+ },
+ {
+  "kohde": "kohde:rhone",
+  "kysymys": "Miksi Genevenjärvi on niin kirkas?",
+  "uusi": false,
+  "vastaus": "No niin, tän kysymyksen kanssa pitää olla tarkka. Genevenjärvi on kirkas ennen kaikkea siksi, että se on suuri ja syvä järvi, jonka vesimäärä laimentaa epäpuhtauksia, ja siksi, että vesiensuojeluun on panostettu: [[jätevedenpuhdistus]] ja fosforia sisältävien aineiden rajoittaminen vähensivät rehevöitymistä 1900-luvun lopulla. [[Rhônen]] tuoma jäätikköjauhe samentaa vettä järven itäpäässä, joten kirkkaus vaihtelee paikan ja vuodenajan mukaan. Yksityiskohtaisista mittaustuloksista en ole varma. Kyl minä sitä kaiteelta ihailen.",
+  "linkit": [
+   "jätevedenpuhdistus",
+   "Rhônen"
+  ],
+  "jatkot": [
+   "Kuinka syvä Genevenjärvi on?",
+   "Mitkä kaupungit ovat Genevenjärven rannalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:rhone",
+  "kysymys": "Millainen alue Rhônen suisto on luonnoltaan?",
+  "uusi": true,
+  "vastaus": "Ai se, sinne minä lentäisin mielelläni. Rhônen suistoalue tunnetaan nimellä [[Camargue]]. Se on laaja kosteikkoalue [[Arles'n]] eteläpuolella, jossa on lampia, suolamaita ja ruovikkoa. Alue on tärkeä lintujen elinympäristö, ja siellä tavataan muun muassa [[flamingoja]]. Camarguelle ovat ominaisia myös valkoiset hevoset ja mustat härät, jotka laiduntavat puolivapaina. Pitkä lentomatka sinne, mutta kai se kannattaisi.",
+  "linkit": [
+   "Camargue",
+   "Arles'n",
+   "flamingoja"
+  ],
+  "jatkot": [
+   "Millaisia lintuja Camarguessa tavataan?",
+   "Millainen kaupunki Arles on?"
+  ]
+ },
+ {
+  "kohde": "kohde:rhone",
+  "kysymys": "Miten Rhônea käytetään sähköntuotantoon?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Rhônea hyödynnetään sähköntuotannossa monella tavalla. Ranskan puolella jokea on padottu useilla voimalaitoksilla, jotka tuottavat [[vesivoimaa]], ja joen varrella on useita [[ydinvoimaloita]], jotka käyttävät sen vettä jäähdytykseen. Myös Sveitsin Valais'ssa vuoristojokien vesiä käytetään laajasti vesivoimaan.\n\nMinä kuljen vain omilla siivillä, eikä lentämisestä synny sähkölaskua, vaikka välillä tekisi mieli valittaa.",
+  "linkit": [
+   "vesivoimaa",
+   "ydinvoimaloita"
+  ],
+  "jatkot": [
+   "Miten ydinvoimala käyttää jokivettä jäähdytykseen?",
+   "Kuinka suuri osa Ranskan sähköstä on ydinvoimaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:rhone",
+  "kysymys": "Mitkä suuret kaupungit sijaitsevat Rhônen varrella?",
+  "uusi": true,
+  "vastaus": "Mmm— lasketaanpas siipiä ja kaupunkeja. Rhône virtaa Genevenjärvestä [[Geneven]] kaupungin kautta Ranskaan, jossa sen varrella ovat muun muassa [[Lyon]], jossa Saône-joki yhtyy siihen, sekä [[Avignon]] ja [[Arles]]. Joki päättää matkansa Välimereen suiston kautta Arles'n eteläpuolella. Lyonissa kuulemma syödään hyvin.",
+  "linkit": [
+   "Geneven",
+   "Lyon",
+   "Avignon",
+   "Arles"
+  ],
+  "jatkot": [
+   "Miksi Lyon on tunnettu ruokakaupunki?",
+   "Mitä Avignonin paavinlinna on?"
+  ]
+ },
+ {
+  "kohde": "kohde:kapellbrucke",
+  "kysymys": "Miksi sillan kolmiokehykset ovat ainutlaatuisia?",
+  "uusi": false,
+  "vastaus": "Ai tota. Sillan sisäkatossa on kolmion muotoisia maalauksia 1600-luvulta, ja ne ovat kulkijan yläpuolella koko sillan matkalla. [[Luzernin]] ainutlaatuisuus liittyy kaupungin kolmeen puiseen kävelysiltaan, mutta en ole varma, mikä täsmälleen tekee niistä poikkeuksellisia. Silta ylittää [[Reussin]] vinottain, ja sen alta kulkeva vesi on tuttu näky ylhäältä. Kannattaa kävellä hitaasti ja katsoa ylös.",
+  "linkit": [
+   "Luzernin",
+   "Reussin"
+  ],
+  "jatkot": [
+   "Mitä Luzernin muut puusillat ovat?",
+   "Miten puumaalaukset säilyvät kosteassa ilmanalassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:kapellbrucke",
+  "kysymys": "Mihin Wasserturmia on käytetty?",
+  "uusi": false,
+  "vastaus": "Selvä. Wasserturm eli vesitorni on kahdeksankulmainen, 34,5 metriä korkea torni, joka seisoo vedessä osana siltakokonaisuutta. Se on noin kolmekymmentä vuotta siltaa vanhempi. Vuosisatojen mittaan sitä on käytetty vankilana, kidutuskammiona ja myöhemmin [[Luzernin]] kaupungin arkistona ja rahastona. Kidutus kuului aikaan, jolloin oikeudenkäyttö oli aivan toisenlaista kuin nykyään, ja nykyisin torni on yksi [[Reuss]]-joen tunnetuimmista maamerkeistä. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "Luzernin",
+   "Reuss"
+  ],
+  "jatkot": [
+   "Millainen oli keskiajan oikeudenkäyttö Euroopassa?",
+   "Miksi torni rakennettiin veteen?"
+  ]
+ },
+ {
+  "kohde": "kohde:kapellbrucke",
+  "kysymys": "Miksi Kapellbrücke rakennettiin?",
+  "uusi": true,
+  "vastaus": "No niin, tämän minä tiedän. Silta rakennettiin noin vuonna 1365 osaksi [[Luzernin]] kaupunkia suojaavia linnoituksia. Se yhdisti [[Reuss]]-joen oikealla rannalla sijaitsevan vanhankaupungin vasemman rannan uuteen kaupunkiin ja suojasi kaupunkia järven suunnalta tulevalta hyökkäykseltä. Silta oli siis samaan aikaan kulkuväylä ja osa puolustusta. Ny siinä kuljetaan lähinnä kuvaamassa.",
+  "linkit": [
+   "Luzernin",
+   "Reuss"
+  ],
+  "jatkot": [
+   "Millainen on Luzernin vanhakaupunki?",
+   "Miksi vanhat sillat tehtiin usein katetuiksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:kapellbrucke",
+  "kysymys": "Kuinka pitkä silta on nykyään?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Nykyinen pituus on 204,7 metriä, mutta alun perin silta oli yli 270 metriä pitkä. Lyhennykset ja rantatäytöt ovat vähentäneet sen mittaa vuosisatojen kuluessa. Silta ylittää [[Reussin]] vinottain keskellä [[Luzernia]], ja sen sisäkatossa on 1600-luvulla tehtyjä maalauksia. Kyl minä sen päästä päähän lennän hetkessä.",
+  "linkit": [
+   "Reussin",
+   "Luzernia"
+  ],
+  "jatkot": [
+   "Mitä silloilla on tehty ennen kuin maalla liikuttiin autoilla?",
+   "Mikä on Reuss-joen reitti järvestä eteenpäin?"
+  ]
+ },
+ {
+  "kohde": "kohde:kapellbrucke",
+  "kysymys": "Mistä Kapellbrücken nimi tulee?",
+  "uusi": true,
+  "vastaus": "Kato, nimi on helppo. Nimi tulee sillan vieressä sijaitsevasta [[Pyhän Pietarin kappelista]]. Saksan kielessä Kapelle tarkoittaa kappelia ja Brücke siltaa, joten nimi tarkoittaa kappelisiltaa. Silta sijaitsee [[Luzernin]] keskustassa, ja sen nimi on säilynyt samana vuosisatojen ajan. Ei paha kyyhkyltä, saksaakin.",
+  "linkit": [
+   "Pyhän Pietarin kappelista",
+   "Luzernin"
+  ],
+  "jatkot": [
+   "Missä muualla Euroopassa on katettuja puusiltoja?",
+   "Millainen kaupunki Luzern on?"
+  ]
+ },
+ {
+  "kohde": "kohde:stiftsbibliothek",
+  "kysymys": "Mitä oven yllä oleva kreikankielinen kirjoitus tarkoittaa?",
+  "uusi": false,
+  "vastaus": "No jopas. Kreikankielinen kirjoitus ΨΥΧΗΣ ΙΑΤΡΕΙΟΝ tarkoittaa sielun parantolaa. Lähteiden mukaan se on lainattu Ramses II:n kirjaston kaiverruksesta. Kirjoitus kuvaa kirjastoa paikkana, jossa lukeminen hoitaa mieltä. [[St. Gallenin]] luostarikirjasto on yksi maailman vanhimmista luostarikirjastoista, ja sen perusti luostarin perustaja [[Pyhä Othmar]]. Minusta se on aika kaunis ajatus.",
+  "linkit": [
+   "St. Gallenin",
+   "Pyhä Othmar"
+  ],
+  "jatkot": [
+   "Milloin St. Gallenin luostari perustettiin?",
+   "Miten kreikan aakkoset kehittyivät?"
+  ]
+ },
+ {
+  "kohde": "kohde:stiftsbibliothek",
+  "kysymys": "Mistä näkee, mitä kirjakaapissa on?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: kerubista. Käsikirjoitukset ovat lasikaapeissa, ja jokaisen kaapin päällä on veistetty [[kerubi]], joka kertoo katseellaan, mitä hyllyssä on. Esimerkiksi tähtitieteen kaapin kerubi tähyilee kirjoja kaukoputkella. Kokoelmassa on 2 100 käsikirjoitusta 700-luvulta 1400-luvulle sekä 1 650 [[inkunaabelia]] eli ennen vuotta 1500 painettua kirjaa. Kyl minä tykkään, että kirjoilla on oma vahtinsa.",
+  "linkit": [
+   "kerubi",
+   "inkunaabelia"
+  ],
+  "jatkot": [
+   "Mitä kerubit ovat?",
+   "Mikä Nibelungenlied on?"
+  ]
+ },
+ {
+  "kohde": "kohde:stiftsbibliothek",
+  "kysymys": "Milloin nykyinen kirjastosali rakennettiin?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Nykyinen kirjastosali rakennettiin vuosina 1758–1767 arkkitehti [[Peter Thumbin]] rokokoopiirustusten mukaan. Sali on siis huomattavasti nuorempi kuin [[St. Gallenin]] luostarikirjasto itse, jonka kokoelmassa on käsikirjoituksia 700-luvulta alkaen. Siinä on ollut tekemistä, minä väsyin jo lukiessa.",
+  "linkit": [
+   "Peter Thumbin",
+   "St. Gallenin"
+  ],
+  "jatkot": [
+   "Mitä rokokoo-tyyli tarkoittaa?",
+   "Mitä käsikirjoituksia St. Gallenin kirjastossa säilytetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:stiftsbibliothek",
+  "kysymys": "Mitä inkunaabelit ovat?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Inkunaabeli on ennen vuotta 1500 painettu kirja, eli teos kirjapainotaidon varhaisilta vuosikymmeniltä [[Gutenbergin]] keksinnön jälkeen. Sana juontuu latinan sanasta, joka tarkoittaa kapaloita tai kehtoa, koska kirjapainotaito oli tuolloin vasta syntymässä. [[St. Gallenin]] kokoelmassa niitä on 1 650. Eipä minun kantamani kirjeet ole noin vanhoja.",
+  "linkit": [
+   "Gutenbergin",
+   "St. Gallenin"
+  ],
+  "jatkot": [
+   "Milloin Gutenberg kehitti kirjapainotaidon?",
+   "Miten keskiajan käsikirjoituksia kopioitiin käsin?"
+  ]
+ },
+ {
+  "kohde": "kohde:stiftsbibliothek",
+  "kysymys": "Mitä kirjastolle kävi, kun luostari paloi vuonna 937?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Kun luostari paloi vuonna 937, kirjasto säilyi ehjänä. En ole varma, mikä sen tarkalleen pelasti. Kirjaston perustajaksi mainitaan [[Pyhä Othmar]], ja nykyään kokoelma on [[Sveitsin]] vanhin. Kyl minäkin tulipaloa karttaisin, kun on höyhenet.",
+  "linkit": [
+   "Pyhä Othmar",
+   "Sveitsin"
+  ],
+  "jatkot": [
+   "Miksi luostareilla oli keskiajalla omat kirjastonsa?",
+   "Kuka oli Pyhä Othmar?"
+  ]
+ },
+ {
+  "kohde": "kohde:chillon",
+  "kysymys": "Miksi linna rakennettiin juuri tähän kohtaan?",
+  "uusi": false,
+  "vastaus": "Hetkinen. Linna rakennettiin paikkaan, josta voitiin valvoa kulkua [[Vaud’n]] rivieran ja [[Rhônen]] laakson välillä. Rivieralta pääsi pohjoiseen Saksaan ja Ranskaan, ja Rhônen laaksosta oli nopea tie Italiaan. Varuskunta pystyi siten valvomaan Italian-tietä sekä sotilaallisesti että kaupallisesti ja perimään tullia ohikulkijoilta. Linna seisoo pienellä jyrkkäreunaisella kalkkikivisaarella [[Genevenjärvessä]]. Minä kyl perisin tullina vain pullaa.",
+  "linkit": [
+   "Vaud’n",
+   "Rhônen",
+   "Genevenjärvessä"
+  ],
+  "jatkot": [
+   "Miten tullit toimivat keskiajalla?",
+   "Mihin Rhône-joki virtaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:chillon",
+  "kysymys": "Mitä nimi Chillon tarkoittaa?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Sveitsiläisen kansatieteilijän [[Albert Samuel Gatschet’n]] mukaan nimi tulee valdolaismurteen sanasta, joka tarkoittaa litteää kiveä tai lavaa. Linna tunnetaan jo vuodesta 1195 nimellä [[Castrum Quilonis]], joten nimi tarkoittaisi kalliolavalle rakennettua linnaa. Tämä on yksi selitys, ja en ole varma, onko sille kilpailevia. Latina on ainakin minun sukukieleni.",
+  "linkit": [
+   "Albert Samuel Gatschet’n",
+   "Castrum Quilonis"
+  ],
+  "jatkot": [
+   "Mikä on valdolaismurre?",
+   "Millaisia linnojen nimiä Sveitsissä on?"
+  ]
+ },
+ {
+  "kohde": "kohde:chillon",
+  "kysymys": "Kenelle Chillonin linna kuului 1100-luvulla?",
+  "uusi": true,
+  "vastaus": "Ai se. Vuoden 1150 asiakirja osoittaa linnan kuuluneen [[Savoijin]] suvulle, ja suvun kreivit pitivät sitä hallussaan 1100-luvun puolivälistä alkaen. Linna seisoo [[Genevenjärven]] saarella tärkeän kulkureitin varrella, joten sen hallinta oli suvulle arvokasta. Onpas siin aikaa ehtinyt kulua.",
+  "linkit": [
+   "Savoijin",
+   "Genevenjärven"
+  ],
+  "jatkot": [
+   "Keitä Savoijin kreivit olivat?",
+   "Millä alueilla Savoijin suku hallitsi?"
+  ]
+ },
+ {
+  "kohde": "kohde:chillon",
+  "kysymys": "Millaisella saarella Chillonin linna seisoo?",
+  "uusi": true,
+  "vastaus": "Mmm— Linna seisoo pienellä, jyrkkäreunaisella kalkkikivisaarella [[Genevenjärvessä]], [[Montreux’n]] ja [[Villeneuven]] välisellä kapealla rannalla. Kapea ranta jättää kulkijalle vain vähän tilaa, ja siksi paikka oli otollinen tien vartiointiin. Ylhäältä katsoen se näyttää vähän veteen pudonneelta kiveltä.",
+  "linkit": [
+   "Genevenjärvessä",
+   "Montreux’n",
+   "Villeneuven"
+  ],
+  "jatkot": [
+   "Mikä on Genevenjärven toinen nimi?",
+   "Mitä muita nähtävyyksiä Montreux’n seudulla on?"
+  ]
+ },
+ {
+  "kohde": "kohde:chillon",
+  "kysymys": "Mitä linnan neliömäinen päätorni valvoi?",
+  "uusi": true,
+  "vastaus": "Katotaas. Neliömäinen päätorni rakennettiin saarelle 1000-luvulla valvomaan tietä, joka johti [[Burgundista]] [[Suuren Pyhän Bernhardin solaan]]. Linna vartioi myös kulkua Vaud’n rivieran ja [[Rhônen]] laakson välillä, joka oli nopea tie Italiaan. Kyl minä sen tien lentäisin yhdellä aamulla.",
+  "linkit": [
+   "Burgundista",
+   "Suuren Pyhän Bernhardin solaan",
+   "Rhônen"
+  ],
+  "jatkot": [
+   "Millainen on Suuren Pyhän Bernhardin sola?",
+   "Miten tulli perittiin keskiajan vuoristoteillä?"
+  ]
+ },
+ {
+  "kohde": "kohde:gotthardin-tunneli",
+  "kysymys": "Miksi Louis Favre ei nähnyt tunnelin valmistuvan?",
+  "uusi": false,
+  "vastaus": "Ai niin. [[Louis Favre]] johti Gotthardin rautatietunnelin louhintaa, mutta hän kuoli sydänkohtaukseen tunnelissa heinäkuussa 1879. Pohjoisesta [[Göschenenistä]] ja etelästä [[Airolosta]] louhitut käytävät kohtasivat vasta 29. helmikuuta 1880, kahdeksan kuukautta myöhemmin, ja tunneli avattiin vuonna 1882. Työolot olivat tuolloin aivan toiset kuin nykyään, ja tunnelin rakentaminen oli vaarallista työtä. Onneksi työ kuitenkin valmistui.",
+  "linkit": [
+   "Louis Favre",
+   "Göschenenistä",
+   "Airolosta"
+  ],
+  "jatkot": [
+   "Miten tunnelityömaiden turvallisuus on kehittynyt?",
+   "Mitä Gotthardin tunnelin jälkeen rakennettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:gotthardin-tunneli",
+  "kysymys": "Mikä uusi keksintö otettiin täällä ensi kertaa suureen käyttöön?",
+  "uusi": false,
+  "vastaus": "Selvä. [[Dynamiitti]] oli patentoitu vasta vuonna 1867, ja Gotthardin työmaa oli ensimmäinen paikka, jossa sitä käytettiin suuressa mitassa. Urakoitsija [[Louis Favre]] ajoi läpi myös koneellisten poravaunujen käytön, ja energia siirrettiin työmaalle [[paineilmana]]. Minä pidän niistä keksinnöistä kyl etäisyyttä.",
+  "linkit": [
+   "Dynamiitti",
+   "Louis Favre",
+   "paineilmana"
+  ],
+  "jatkot": [
+   "Kuka keksi dynamiitin?",
+   "Miten tunnelien louhinta tehdään nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:gotthardin-tunneli",
+  "kysymys": "Kuinka pitkä Gotthardin tunneli on?",
+  "uusi": true,
+  "vastaus": "Kas vaan, tuohon minä osaan vastata. Tunnelin pituus on noin viisitoista kilometriä, ja se yhdistää [[Göschenenin]] ja [[Airolon]] [[Saint-Gotthardin]] vuorimassiivin läpi. Kun se avattiin vuonna 1882, se oli lähteiden mukaan maailman pisin tunneli. Rautatie kulki siis vuoren läpi eikä vanhaa solaa pitkin. Minä kyl lennän mieluummin vuoren yli.",
+  "linkit": [
+   "Göschenenin",
+   "Airolon",
+   "Saint-Gotthardin"
+  ],
+  "jatkot": [
+   "Mikä on maailman pisin rautatietunneli nykyään?",
+   "Miten vanhaa Gotthardin solaa ylitettiin ennen tunnelia?"
+  ]
+ },
+ {
+  "kohde": "kohde:gotthardin-tunneli",
+  "kysymys": "Miten tunnelin kaksi päätä saatiin kohtaamaan?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Tunnelia kaivettiin molemmista päistä yhtä aikaa, ja pienikin virhe suunnassa olisi johtanut siihen, että käytävät olisivat ohittaneet toisensa. Siksi työ vaati tarkkaa [[maanmittausta]]. Pohjoisesta [[Göschenenistä]] ja etelästä [[Airolosta]] louhitut käytävät kohtasivat lopulta 29. helmikuuta 1880 vuoren sisällä. Minä en tarvitse maanmittausta, kunhan näen katon.",
+  "linkit": [
+   "maanmittausta",
+   "Göschenenistä",
+   "Airolosta"
+  ],
+  "jatkot": [
+   "Miten vuoren läpi voidaan mitata suunta?",
+   "Mitä muita tunneleita Alppien läpi on rakennettu?"
+  ]
+ },
+ {
+  "kohde": "kohde:gotthardin-tunneli",
+  "kysymys": "Miten tunnelityömaalle saatiin voimaa?",
+  "uusi": true,
+  "vastaus": "Sepä sattui: tästä on tietoa. Energia siirrettiin työmaalle paineilmana genevalaisen insinöörin [[Colladonin]] ehdotuksesta, ja kalliopintaa jäähdytettiin vesisuihkuilla. Urakoitsija [[Louis Favre]] ajoi läpi myös koneellisten poravaunujen käytön. Ja minä kun luulin, että ilma on vain lentämistä varten.",
+  "linkit": [
+   "Colladonin",
+   "Louis Favre"
+  ],
+  "jatkot": [
+   "Miten paineilma toimii työkalujen voimanlähteenä?",
+   "Miksi vuoren sisällä on lämmin?"
+  ]
+ },
+ {
+  "kohde": "kohde:grand-st-bernard",
+  "kysymys": "Miksi juuri nämä koirat kelpasivat pelastustyöhön?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. [[Bernhardilaiset]] koirat jalostettiin juuri tässä hospitaalissa, todennäköisesti [[Valais’n]] perheiden lahjoittamista koirista 1660- ja 1670-luvuilla. Ensimmäinen varma maininta rodusta on vuodelta 1709. Alun perin ne olivat vahtikoiria ja vasta myöhemmin [[pelastuskoiria]]. En ole varma, mitkä ominaisuudet ratkaisivat, mutta todennäköisesti koirien koko, voima ja kestävyys lumessa. Ja minä kun luulin, että vain kyyhky kantaa apua.",
+  "linkit": [
+   "Bernhardilaiset",
+   "Valais’n",
+   "pelastuskoiria"
+  ],
+  "jatkot": [
+   "Millaisia bernhardinkoirat ovat luonteeltaan?",
+   "Mikä Valais on?"
+  ]
+ },
+ {
+  "kohde": "kohde:grand-st-bernard",
+  "kysymys": "Onko konjakkitynnyri koiran kaulassa totta?",
+  "uusi": false,
+  "vastaus": "Ai se. Konjakkitynnyri koiran kaulassa on yleisen käsityksen mukaan myytti, joka levisi 1800-luvulla ja jonka kertojat ja taiteilijat tekivät tunnetuksi. En ole varma, onko jokin koira joskus kantanut mitään vastaavaa, mutta pelastustyön tunnuskuvaa se ei todellisuudessa ollut. Perinteen mukaan koirat löysivät hädässä olevia matkalaisia lumesta, ja [[kanonikot]] hoitivat heidät hospitaalissa [[Suuren Pyhän Bernhardin solassa]]. Kyl se tynnyri olisi minulle liian painava.",
+  "linkit": [
+   "kanonikot",
+   "Suuren Pyhän Bernhardin solassa"
+  ],
+  "jatkot": [
+   "Miten lumivyöryyn hautautuneita ihmisiä etsitään nykyään?",
+   "Mikä on bernhardinkoiran elinikä?"
+  ]
+ },
+ {
+  "kohde": "kohde:grand-st-bernard",
+  "kysymys": "Kuka perusti Suuren Pyhän Bernhardin hospitaalin?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Hospitaalin perusti noin vuonna 1050 Aostan arkkidiakoni [[Bernhard Menthonilainen]], joka näki solassa jatkuvasti hädänalaisia matkalaisia ja päätti tehdä lopun alueen rosvoudesta. Hospitaali sai myöhemmin hänen nimensä. Aiempi hospitaali oli rakennettu 800-luvulla [[Bourg-Saint-Pierreen]], mutta [[saraseenien]] ryöstöretket tuhosivat sen 900-luvun puolivälissä. Ei paha, että koirakin sai nimen.",
+  "linkit": [
+   "Bernhard Menthonilainen",
+   "Bourg-Saint-Pierreen",
+   "saraseenien"
+  ],
+  "jatkot": [
+   "Keitä saraseenit olivat?",
+   "Miten Alppien solissa matkustettiin keskiajalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:grand-st-bernard",
+  "kysymys": "Kuinka korkealla hospitaali sijaitsee?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: korkealla. Hospitaali sijaitsee Suuren Pyhän Bernhardin solassa 2 469 metrin korkeudessa [[Pennialpeilla]], muutaman sadan metrin päässä [[Italian]] rajasta. Se on matkalaisten majatalo, ja sola yhdistää pohjoisen ja Italian välisen reitin Alppien yli. Siellä lentäminen tuntuu jo ihan työltä.",
+  "linkit": [
+   "Pennialpeilla",
+   "Italian"
+  ],
+  "jatkot": [
+   "Millainen ilmasto on 2 500 metrin korkeudessa Alpeilla?",
+   "Mitkä ovat Pennialppien korkeimmat huiput?"
+  ]
+ },
+ {
+  "kohde": "kohde:grand-st-bernard",
+  "kysymys": "Kuka on hoitanut hospitaalia perustamisesta asti?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Hospitaalia on hoitanut perustamisestaan asti sama sääntökuntaisten [[kanonikkien]] yhteisö. Kanonikit elävät yhteisönä yhteisen säännön mukaan, ja hospitaalin synty liittyy arkkidiakoni [[Bernhard Menthonilaisen]] haluun auttaa solan hädänalaisia matkalaisia. Pitkä vuoro, sanon minä.",
+  "linkit": [
+   "kanonikkien",
+   "Bernhard Menthonilaisen"
+  ],
+  "jatkot": [
+   "Mikä on sääntökunta?",
+   "Miten munkit ja kanonikot eroavat toisistaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:zytglogge",
+  "kysymys": "Mistä torni sai nimensä?",
+  "uusi": false,
+  "vastaus": "Kato, tän nimen selitys on onneksi aika suora. Zytglogge tarkoittaa Bernin murteella aikakelloa, ja nimi tulee kellosta, joka asennettiin portin ylle 1400-luvun alussa. Kello oli luultavasti jo yksinkertainen [[astronominen kello]] soittokoneistoineen, ja samoihin aikoihin valettu suuri kirkonkello vahvisti nimen. Aiemmin [[Zytglogge]] oli ollut [[Bernin]] länsipuolen porttitorni, joten nimi kertoo nimenomaan tornin uudesta tehtävästä kaupungin ajanmittarina. Ja minä muistin tämän ilman lunttia.",
+  "linkit": [
+   "astronominen kello",
+   "Zytglogge",
+   "Bernin"
+  ],
+  "jatkot": [
+   "Mitä astronominen kello näyttää kellonajan lisäksi?",
+   "Mikä asema Bernillä on Sveitsissä?"
+  ]
+ },
+ {
+  "kohde": "kohde:zytglogge",
+  "kysymys": "Mihin tornia käytettiin ennen kelloa?",
+  "uusi": false,
+  "vastaus": "No niin, tää onkin tornin vanhinta aikaa. Torni rakennettiin noin vuosina 1218–1220 [[Bernin]] läntisten linnoitusten porttitorniksi, ja silloin se oli vain noin kuusitoista metriä korkea. Kun kaupunki kasvoi ja muurit siirtyivät kauemmas, tornia korotettiin, jotta se näkisi yhä talojen yli. Vuosina 1344–1346 länsipuolustus laajeni jälleen, ja silloin [[Zytglogge]] sai uuden roolin naisvankilana. Vuoden 1405 palon jälkeen vankisellit jätettiin pois ja torniin tuli kello. Vartiotornista vankilaan ja sieltä kelloksi, ihan kunnon ura.",
+  "linkit": [
+   "Bernin",
+   "Zytglogge"
+  ],
+  "jatkot": [
+   "Miksi keskiajan kaupungit paloivat niin usein?",
+   "Miksi kaupunkien muureja siirrettiin kaupungin kasvaessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:zytglogge",
+  "kysymys": "Mikä asema Bernillä on Sveitsissä?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Bern on Sveitsin liittovaltion kaupunki eli niin sanottu Bundesstadt, jossa sijaitsevat liittohallitus ja parlamentti. Sveitsin perustuslaki ei nimeä mitään kaupunkia virallisesti pääkaupungiksi, joten Bernistä puhutaan usein tosiasiallisena pääkaupunkina. [[Bern]] sijaitsee Aare-joen mutkassa, ja sen keskiaikainen vanhakaupunki on tunnettu holvikaarikäytävistään. Maan suurin kaupunki ei ole Bern vaan [[Zürich]]. Tää on kyl hyvä tietovisan kysymys.",
+  "linkit": [
+   "Bern",
+   "Zürich"
+  ],
+  "jatkot": [
+   "Mikä on Sveitsin suurin kaupunki?",
+   "Miten Sveitsin liittovaltio on rakentunut kantoneista?"
+  ]
+ },
+ {
+  "kohde": "kohde:zytglogge",
+  "kysymys": "Mitä astronominen kello näyttää kellonajan lisäksi?",
+  "uusi": true,
+  "vastaus": "Ai tota, hyvä kysymys tuo. Astronominen kello näyttää kellonajan lisäksi taivaankappaleiden liikkeitä: tyypillisesti Auringon ja Kuun paikan, Kuun vaiheet ja usein myös eläinradan merkit. Joissakin kelloissa on lisäksi kalenteri, joka kertoo päivämäärän ja pyhäpäivät. Tällaiset kellot olivat keskiajalla ja myöhemminkin sekä mittareita että taidokkaita esityksiä kaupunkilaisille, ja monissa [[Euroopan]] kaupungeissa on yhä oma astronominen kellonsa, kuten [[Prahan]] kuuluisa raatihuoneen kello. Hyvä kello, vaikken itse kannakaan ranteessa mitään.",
+  "linkit": [
+   "Euroopan",
+   "Prahan"
+  ],
+  "jatkot": [
+   "Miten mekaaninen kello toimii?",
+   "Miksi Prahan astronominen kello on niin kuuluisa?"
+  ]
+ },
+ {
+  "kohde": "kohde:zytglogge",
+  "kysymys": "Miksi keskiajan kaupungit paloivat niin usein?",
+  "uusi": true,
+  "vastaus": "Selvä juttu, tän syyt ovat aika arkisia. Keskiajan kaupungeissa rakennukset olivat usein puuta tai olkikattoisia ja ne seisoivat tiiviisti vierekkäin, joten tuli pääsi leviämään talosta toiseen nopeasti. Avotulta käytettiin joka päivä lämmitykseen, ruoanlaittoon ja työpajoissa, ja yksikin kipinä saattoi riittää. Vesi oli usein kaukana, eikä järjestäytyneitä palokuntia ollut. Moni kaupunki rakennettiin palon jälkeen uudelleen kivestä, ja esimerkiksi [[Bernin]] vuoden 1405 suurpalon jälkeen [[Zytglogge]] sai uuden elämän. Kyyhky ei olisi jäänyt savuun odottelemaan.",
+  "linkit": [
+   "Bernin",
+   "Zytglogge"
+  ],
+  "jatkot": [
+   "Miten kaupunkeja rakennettiin uudelleen palojen jälkeen?",
+   "Milloin ensimmäiset palokunnat perustettiin Euroopassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:la-chaux-de-fonds",
+  "kysymys": "Miksi kaupunki elää kellosepäntyöstä eikä maanviljelystä?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. La Chaux-de-Fonds sijaitsee [[Juravuorilla]] noin 992 metrin korkeudessa, ja korkeus yhdessä veden puutteen kanssa tekee maasta huonoa viljelyyn. Kallioperä on huokoista, joten vesi valuu pois pinnalta, eikä peltoviljelystä voinut tulla seudun pääelinkeinoa. Asukkaat jäivät elämään kellojen valmistuksesta ja viennistä, ja kaupungista kasvoi [[Watch Valley]] -alueen tärkein kellosepänteollisuuden keskus. Kaavoituskin mukautui työhön: asuintalot ja verstaat lomittuvat rinnakkaisiksi nauhoiksi. Pienet kellot, isot tulot, sanoisin.",
+  "linkit": [
+   "Juravuorilla",
+   "Watch Valley"
+  ],
+  "jatkot": [
+   "Mistä Juravuorten nimi on peräisin?",
+   "Miten mekaaninen kello toimii?"
+  ]
+ },
+ {
+  "kohde": "kohde:la-chaux-de-fonds",
+  "kysymys": "Miksi kadut kulkevat suorassa ruudukossa?",
+  "uusi": false,
+  "vastaus": "Odotas vähän, tää on kiva yksityiskohta. Vuoden 1794 tulipalo tuhosi osan kaupungista, ja alue rakennettiin uudelleen ruudukkokaavan mukaan, mikä on Sveitsin kaupunkien joukossa ainutlaatuista. Vain itäisin osa säästyi palolta, ja siellä kadut ovat yhä kapeita ja mutkaisia, joten kaupungissa näkee vanhan ja uuden kaavoituksen vierekkäin. [[La Chaux-de-Fonds]] on myös [[Le Corbusier'n]] syntymäkaupunki. Ylhäältä katsoen ruudukko näyttää kyl tosi siistiltä.",
+  "linkit": [
+   "La Chaux-de-Fonds",
+   "Le Corbusier'n"
+  ],
+  "jatkot": [
+   "Kuka oli Le Corbusier?",
+   "Miksi kaupungit rakennettiin palojen jälkeen usein uudelleen?"
+  ]
+ },
+ {
+  "kohde": "kohde:la-chaux-de-fonds",
+  "kysymys": "Kuka oli Le Corbusier?",
+  "uusi": true,
+  "vastaus": "Hmm, tän miehen tunnen. Le Corbusier oli sveitsiläissyntyinen arkkitehti, joka syntyi vuonna 1887 [[La Chaux-de-Fondsissa]] ja vaikutti myöhemmin pääasiassa Ranskassa. Hän oli modernin arkkitehtuurin keskeisiä hahmoja, ja hänen ajatuksensa asumisesta, kaupunkisuunnittelusta ja betonirakentamisesta levisivät laajalle. Hänen oikea nimensä oli Charles-Édouard Jeanneret, ja Le Corbusier oli taiteilijanimi. Moni hänen rakennuksistaan kuuluu nykyään [[UNESCOn]] maailmanperintöön. Ei paha kyyhkyltä, vai mitä.",
+  "linkit": [
+   "La Chaux-de-Fondsissa",
+   "UNESCOn"
+  ],
+  "jatkot": [
+   "Mitä modernismi arkkitehtuurissa tarkoittaa?",
+   "Mitä UNESCOn maailmanperintö tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:la-chaux-de-fonds",
+  "kysymys": "Mistä Juravuorten nimi on peräisin?",
+  "uusi": true,
+  "vastaus": "Katotaas. Juravuoret ovat kalkkikivisiä vuoria Sveitsin ja Ranskan rajalla, ja niiden nimi on yleisesti kuvailtu kelttiläisperäiseksi: sen uskotaan viittaavan metsäiseen vuoristoon. En ole kuitenkaan aivan varma tarkasta etymologiasta. Varmaa on, että geologiassa jurakausi on nimetty näiden [[Juravuorten]] mukaan, koska seudun kalkkikerrostumat kuuluvat tunnetuimpiin kyseisen ajanjakson kerrostumiin. Sveitsissä [[Jura]] on myös kantonin nimi. Tää meni nyt vähän historiasta geologiaan.",
+  "linkit": [
+   "Juravuorten",
+   "Jura"
+  ],
+  "jatkot": [
+   "Mikä on jurakausi ja milloin se oli?",
+   "Mitä kalkkikivi on ja miten se syntyy?"
+  ]
+ },
+ {
+  "kohde": "kohde:la-chaux-de-fonds",
+  "kysymys": "Miten mekaaninen kello toimii?",
+  "uusi": true,
+  "vastaus": "Joo, tän selitän ilomielin. Mekaanisen kellon voimanlähteenä on yleensä jousi tai paino, joka purkautuessaan pyörittää rattaistoa. Rattaisto välittää liikkeen osoittimille, mutta jotta voima ei purkautuisi kerralla, mukana on pidäke eli kaappausmekanismi. Se päästää rattaita liikkeelle pienin tasaisin askelin, ja tahdin määrää heiluri tai taskukelloissa ja rannekelloissa tasapainopyörä. [[Sveitsi]] on tunnettu kellojen valmistuksesta, ja esimerkiksi [[La Chaux-de-Fonds]] on yksi alan keskuksista. Nyt tikittää jo omassakin päässä.",
+  "linkit": [
+   "Sveitsi",
+   "La Chaux-de-Fonds"
+  ],
+  "jatkot": [
+   "Miten kvartsikello eroaa mekaanisesta kellosta?",
+   "Miksi Sveitsi tunnetaan kellojen valmistuksesta?"
+  ]
+ },
+ {
+  "kohde": "kohde:gruyeres",
+  "kysymys": "Mistä gruyère-juusto sai nimensä?",
+  "uusi": false,
+  "vastaus": "Kas vaan, tää on herkullinen kysymys. Gruyère-juusto on nimetty [[Gruyèresin]] mukaan, keskiaikaisen pikkukaupungin, joka seisoo kukkulan laella Fribourgin kantonissa. Seudun elanto on perustunut laidunmaahan ja karjatalouteen, joten juuston valmistus sopii maisemaan. Juustoa käytetään paljon sveitsiläisessä keittiössä, ja tunnetuin juustofonduen sekoitus on moitié-moitié: puolet [[gruyèrea]] ja puolet [[vacherinia]]. Pullan perään ikävöin silti enemmän kuin juuston.",
+  "linkit": [
+   "Gruyèresin",
+   "gruyèrea",
+   "vacherinia"
+  ],
+  "jatkot": [
+   "Mitä juustofondue on?",
+   "Mitä alppilaidun tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:gruyeres",
+  "kysymys": "Kuinka suuri osa pitäjän maasta on alppilaidunta?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Pitäjän maasta 22,9 prosenttia on alppilaidunta, mikä on yli puolet kaikesta maatalouskäytössä olevasta maasta. Maatalouskäytössä on yhteensä 40,5 prosenttia pitäjän maasta, ja siitä peltoa on vain 4,6 prosenttia pitäjän maasta ja tavallista laidunta 12,9 prosenttia. Puolet pitäjästä on metsää. Luvut kertovat, että seudun elanto perustuu [[karjatalouteen]] eikä viljelyyn, ja se näkyy [[Gruyèresin]] juustoperinteessä. Tää oli nyt kyl numeroiden juhlaa.",
+  "linkit": [
+   "karjatalouteen",
+   "Gruyèresin"
+  ],
+  "jatkot": [
+   "Mitä alppilaidun tarkoittaa?",
+   "Miksi Alpeilla siirretään karja kesäksi vuorille?"
+  ]
+ },
+ {
+  "kohde": "kohde:gruyeres",
+  "kysymys": "Mitä juustofondue on?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Juustofondue on sveitsiläinen ruoka, jossa sulatettua juustoa lämmitetään yhteisessä padassa ja leipäpaloja kastetaan siihen pitkillä haarukoilla. Tunnetuin sekoitus on moitié-moitié, puolet [[gruyèrea]] ja puolet [[vacherinia]]. Juustofondue oli 1900-luvun alussa tuttu vain muutamassa laaksossa, mutta [[Sveitsin juustoliitto]] teki siitä kansallisruoan mainoskampanjalla, ja armeijan keittokirja levitti reseptin koko maahan 1950-luvulla. Vanha sääntö kuuluu, että pataan pudonnut leipä maksaa laulun. Minä en laula, mutta pulla olisi hyvä dippi.",
+  "linkit": [
+   "gruyèrea",
+   "vacherinia",
+   "Sveitsin juustoliitto"
+  ],
+  "jatkot": [
+   "Mitä alppilaidun tarkoittaa?",
+   "Mitä kieltä Fribourgin kantonissa puhutaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:gruyeres",
+  "kysymys": "Mitä alppilaidun tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Tuota niin, selitän. Alppilaidun on korkealla vuoristossa sijaitseva laidunmaa, jonne karja viedään kesäksi syömään vuoristoruohoa, kun alempana olevat niityt jätetään heinän tekoon. Alppilaiduntamisella on pitkä perinne [[Alpeilla]], ja siihen liittyy usein myös juuston valmistus alppimajoilla. [[Gruyèresin]] seudulla alppilaitumia on lähes neljännes pitäjän pinta-alasta, ja juuri se selittää, miksi alueella on vahva juustoperinne. Vuoristoilma kuulostaa kyyhkystä kiinnostavammalta kuin karjan jäljet.",
+  "linkit": [
+   "Alpeilla",
+   "Gruyèresin"
+  ],
+  "jatkot": [
+   "Miten gruyère-juusto valmistetaan?",
+   "Mikä Alpit ovat ja miten ne syntyivät?"
+  ]
+ },
+ {
+  "kohde": "kohde:gruyeres",
+  "kysymys": "Mitä kieltä Fribourgin kantonissa puhutaan?",
+  "uusi": true,
+  "vastaus": "No jopas, hyvä kysymys. Fribourgin kantoni on kaksikielinen: ranska ja saksa ovat sen virallisia kieliä. Ranskankieliset asuvat enimmäkseen kantonin eteläosassa, ja [[Gruyèresin]] seutu kuuluu ranskankieliseen alueeseen, kun taas saksankielisiä on enemmän pohjoisessa. [[Sveitsissä]] on yhteensä neljä kansalliskieltä: saksa, ranska, italia ja retoromaani. Kielialueen raja kulkee siis kantonin sisällä, ei kantonin rajalla. Ei ole helppoa olla kirjekyyhky tuollaisessa maassa.",
+  "linkit": [
+   "Gruyèresin",
+   "Sveitsissä"
+  ],
+  "jatkot": [
+   "Mitä kieliä Sveitsissä puhutaan?",
+   "Mikä on retoromaani kielenä?"
+  ]
+ },
+ {
+  "kohde": "kohde:rutli",
+  "kysymys": "Miksi niitystä tuli kansallinen symboli vasta 1700-luvulla?",
+  "uusi": false,
+  "vastaus": "Ai se, tästä on pitkä tarina. Rütlin niitty on perinteisessä sveitsiläisessä historiankirjoituksessa [[Rütlin valan]] paikka, mutta symboliksi se nousi vasta 1700-luvulla kansallisromantiikan myötä, kun kiinnostus kansallisiin muistoihin ja kansan tarinoihin kasvoi. 1780-luvulla ehdotettiin vapaudenmuistomerkkiä, vaikka hanke ei toteutunut. Vuonna 1804 [[Friedrich Schiller]] julkaisi näytelmän [[Wilhelm Tell]], joka dramatisoi valan, ja vuonna 1820 syntyi isänmaallinen Rütlilied-laulu. Historioitsijat suhtautuvat valan tarkkaan ajankohtaan ja kulkuun varauksella, ja minä myös. Siinä vasta symboli, jonka tarina on jälkikäteen tehty.",
+  "linkit": [
+   "Rütlin valan",
+   "Friedrich Schiller",
+   "Wilhelm Tell"
+  ],
+  "jatkot": [
+   "Kuka Wilhelm Tell oli?",
+   "Milloin Sveitsin kansallispäivää vietetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:rutli",
+  "kysymys": "Mitä Rütlillä tapahtui heinäkuussa 1940?",
+  "uusi": false,
+  "vastaus": "Niin, tämä on vakavampaa. Heinäkuun 1940 lopulla Sveitsin armeijan ylipäällikkö [[Henri Guisan]] kokosi armeijan upseerit [[Rütlin niitylle]] ja kertoi heille Sveitsin puolustusaikeista Euroopan sodan keskellä. Tilaisuus liittyy puolustusstrategiaan, jossa vastarinta keskitettiin Alppien linnoitettuun sisäosaan. Valinta ei ollut sattumaa, sillä niitty oli jo vuosisatoja muistuttanut sveitsiläisiä alkuperäisestä valaliitosta, ja paikan symboliarvo oli suuri. Kokoontumisella haluttiin vahvistaa maan itsenäisyyden tahtoa vaikeana aikana. Tapahtumasta on nyt kulunut yli kahdeksankymmentä vuotta, ja Sveitsi on säilynyt itsenäisenä.",
+  "linkit": [
+   "Henri Guisan",
+   "Rütlin niitylle"
+  ],
+  "jatkot": [
+   "Kuka Henri Guisan oli?",
+   "Miksi Sveitsi pysyi puolueettomana toisessa maailmansodassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:rutli",
+  "kysymys": "Kuka Wilhelm Tell oli?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Wilhelm Tell on sveitsiläinen kansansankari, taitava jousiampuja, jonka tarinan mukaan hänet pakotettiin ampumaan omenaa poikansa päästä ja joka sittemmin vastusti Habsburgien käskynhaltijaa. Historiantutkijat pitävät häntä yleensä legendaarisena hahmona, eikä hänen olemassaolostaan ole varmaa todistetta. Tarina levisi laajalle [[Friedrich Schillerin]] vuonna 1804 julkaisemasta näytelmästä, ja siitä tuli [[Sveitsin]] vapaustaistelun symboli. Gioachino Rossini sävelsi aiheesta oopperan. Tarkka ampuja, vaikka tarina taitaa olla vähän kaunisteltu.",
+  "linkit": [
+   "Friedrich Schillerin",
+   "Sveitsin"
+  ],
+  "jatkot": [
+   "Milloin Sveitsin kansallispäivää vietetään?",
+   "Mitä Habsburgien suku oli ja mistä se tuli?"
+  ]
+ },
+ {
+  "kohde": "kohde:rutli",
+  "kysymys": "Mikä on Luzernin järvi?",
+  "uusi": true,
+  "vastaus": "Joo, tän järven tunnen. Luzernin järvi on Keski-Sveitsissä sijaitseva vuoristojärvi, jonka rantoja ympäröivät jyrkät vuoret ja jonka muoto on rikkonainen, monen lahden ja haaran sarja. Sen saksankielinen nimi on Vierwaldstättersee eli Neljän metsäkantonin järvi, ja nimi viittaa kantoneihin [[Uri]], Schwyz, Unterwalden ja Luzern, jotka ympäröivät järveä. [[Rütlin niitty]] on sen rannalla Urin kantonissa, ja sinne pääsee veneellä järveltä. Järvellä liikennöi myös höyrylaivoja, mikä on mukava näky lintuperspektiivistä.",
+  "linkit": [
+   "Uri",
+   "Rütlin niitty"
+  ],
+  "jatkot": [
+   "Mitä neljä metsäkantonia olivat?",
+   "Miten vuoristojärvet ovat syntyneet?"
+  ]
+ },
+ {
+  "kohde": "kohde:rutli",
+  "kysymys": "Milloin Sveitsin kansallispäivää vietetään?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Sveitsin kansallispäivää vietetään 1. elokuuta. Päivä liittyy perinteiseen käsitykseen [[Sveitsin]] valaliiton syntymisestä vuonna 1291, jolloin Uri, Schwyz ja Unterwalden tekivät liittosopimuksen. Päivä tunnetaan ilotulituksista ja iltanuotioista, ja monet kylät ja kaupungit järjestävät juhlia. [[Rütlin valan]] tarina on osa samaa perinnettä, vaikka historioitsijat suhtautuvat valan yksityiskohtiin varauksella. Elokuun alku on kyl vuoden parhaita aikoja lentää ilotulitusten yli.",
+  "linkit": [
+   "Sveitsin",
+   "Rütlin valan"
+  ],
+  "jatkot": [
+   "Mikä oli vuoden 1291 liittosopimus?",
+   "Mitkä olivat Sveitsin alkuperäiset kolme kantonia?"
+  ]
+ },
+ {
+  "kohde": "kohde:landwasserin-viadukti",
+  "kysymys": "Miksi kaarre on niin jyrkkä?",
+  "uusi": false,
+  "vastaus": "No niin, tämä on insinöörin ratkaisu. Landwasserin viadukti on rakennettu vuoristokurun ylle, jossa rata täytyi sovittaa maastoon: siksi silta on kaareva ja kaarteen säde on sata metriä, pienin koko radalla. Kantavia kaaria on kuusi, ja ne lepäävät viiden korkean pilarin varassa. Radan kaltevuus sillalla on kaksi prosenttia, joten kaarteeseen ei tarvittu jyrkkää nousua. Silta on osa [[Albula-rataa]], jonka omistaa [[Rhätische Bahn]], ja se kuuluu maailmanperintöön. En ole varma, miksi insinööri ei valinnut suoraa linjaa, mutta kaarre toimii.",
+  "linkit": [
+   "Albula-rataa",
+   "Rhätische Bahn"
+  ],
+  "jatkot": [
+   "Mikä on Rhätische Bahn?",
+   "Miten viadukti eroaa tavallisesta sillasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:landwasserin-viadukti",
+  "kysymys": "Mihin junat katoavat heti sillan jälkeen?",
+  "uusi": false,
+  "vastaus": "Katotaas. Heti sillan jälkeen rata jatkuu tunneliin, joka alkaa suoraan kallioseinämästä. Juna ylittää [[Landwasserin viaduktin]] ja katoaa Landwasserin tunneliin, joten näky on dramaattinen ja siksi silta on kuvatuimpia ratasiltoja [[Sveitsissä]]. Silta on osa [[Albula-rataa]] Tiefencastelin ja Filisurin välillä Graubündenin kantonissa, ja rata on liikenteessä yhä, sillä Rhätische Bahn omistaa ja liikennöi sitä. Tunnelin tarkkaa pituutta en muista. Kyyhkynä pysyn mieluummin tunnelin ulkopuolella.",
+  "linkit": [
+   "Landwasserin viaduktin",
+   "Sveitsissä",
+   "Albula-rataa"
+  ],
+  "jatkot": [
+   "Miten Albula-rata on rakennettu vuoristoon?",
+   "Mikä on kalkkikivi?"
+  ]
+ },
+ {
+  "kohde": "kohde:landwasserin-viadukti",
+  "kysymys": "Mikä on Rhätische Bahn?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Rhätische Bahn eli Retoromaaninen rautatie on Graubündenin kantonissa toimiva rautatieyhtiö, joka liikennöi kapearaiteisella metrin raideleveydellä. Yhtiö omistaa ja liikennöi [[Landwasserin viaduktia]] ja koko [[Albula-rataa]], joka kuuluu maailmanperintöluetteloon yhdessä Bernina-radan kanssa. Rata on kuuluisa jyrkistä kaarteistaan, tunneleistaan ja silloistaan, joilla se kiipeää Alppien läpi. Yhtiö kuljettaa matkustajia ja tavaraa vuoristolaaksoihin, joihin muuten olisi hankala päästä. Kyyhky olisi nopeampi, mutta ei mahtuisi samaan vaunuun.",
+  "linkit": [
+   "Landwasserin viaduktia",
+   "Albula-rataa"
+  ],
+  "jatkot": [
+   "Mitä tarkoittaa kapearaiteinen rautatie?",
+   "Mikä on Bernina-rata?"
+  ]
+ },
+ {
+  "kohde": "kohde:landwasserin-viadukti",
+  "kysymys": "Mistä kalkkikivi syntyy?",
+  "uusi": true,
+  "vastaus": "Joo, tän tiedän. Kalkkikivi on sedimenttikivilaji, joka koostuu pääosin kalsiumkarbonaatista. Se syntyy yleensä merissä ja järvissä, joissa kalsiumkarbonaattia sisältävät eliöiden kuoret ja luurangot kerrostuvat pohjaan ja sementoituvat vuosimiljoonien kuluessa kiveksi. Osa kalkkikivestä saostuu myös suoraan vedestä. Kalkkikiveä on käytetty rakennusmateriaalina pitkään, ja sitä on käytetty myös [[Landwasserin viaduktin]] muurauksessa. [[Alpeilla]] ja [[Juravuorilla]] kalkkikivi on tavallista. Nyt on kivi kerrottu, ja nostan itseni kauas pilvien yläpuolelle.",
+  "linkit": [
+   "Landwasserin viaduktin",
+   "Alpeilla",
+   "Juravuorilla"
+  ],
+  "jatkot": [
+   "Miten Juravuoret ovat syntyneet?",
+   "Mitä muita rakennusmateriaaleja Alpeilla on käytetty?"
+  ]
+ },
+ {
+  "kohde": "kohde:landwasserin-viadukti",
+  "kysymys": "Mitä kieliä Graubündenissa puhutaan?",
+  "uusi": true,
+  "vastaus": "Tuota niin, kiva kysymys. Graubünden on Sveitsin kantoneista ainoa kolmikielinen: siellä puhutaan saksaa, retoromaania ja italiaa. Saksa on yleisin kieli, [[retoromaani]] on yksi Sveitsin neljästä kansalliskielestä ja sitä puhutaan vain osassa kantonia, ja italiaa puhutaan eteläisissä laaksoissa. Retoromaanilla on useita murteita ja kirjakielen muotoja. [[Graubünden]] on lisäksi pinta-alaltaan Sveitsin suurin kantoni. Kolme kieltä on minulle vähän, kun yritän pitää yhdenkin hallussa.",
+  "linkit": [
+   "retoromaani",
+   "Graubünden"
+  ],
+  "jatkot": [
+   "Mikä on retoromaani kielenä?",
+   "Mitä kieliä Sveitsissä puhutaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:reininputous",
+  "kysymys": "Kuinka paljon virtaama vaihtelee vuoden mittaan?",
+  "uusi": false,
+  "vastaus": "Kato, tähän on ihan oikeita lukuja. [[Reininputouksen]] virtaama vaihtelee selvästi vuodenaikojen mukaan: talvikuukausina keskimääräinen virtaama on noin 250 kuutiometriä sekunnissa ja kesällä noin 600, eli kesällä vettä tulee yli kaksi kertaa enemmän. Ääriarvot ovat vielä kauempana toisistaan, sillä suurin mitattu virtaama oli 1 250 kuutiometriä sekunnissa vuonna 1965 ja pienin 95 kuutiometriä vuonna 1921. Putousta kutsutaan Euroopan voimakkaimmaksi [[Ylä-Reinin]] putoukseksi. Kesäisin siinä kyl riittää pärskettä.",
+  "linkit": [
+   "Reininputouksen",
+   "Ylä-Reinin"
+  ],
+  "jatkot": [
+   "Miksi putous on syntynyt juuri tähän kohtaan?",
+   "Kuinka korkea ja leveä putous on?"
+  ]
+ },
+ {
+  "kohde": "kohde:reininputous",
+  "kysymys": "Miksi putouksen keskellä oleva kallio ei kulu?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Keskellä oleva kallio kuluu sekin, mutta erittäin hitaasti, koska alueen kivilajit kestävät kulutusta hyvin. Juuri kulutusta kestävät kivilajit kavensivat uomaa ja synnyttivät putouksen viime [[jääkaudella]], ja samaan kestävyyteen perustuu todennäköisesti myös kallion säilyminen virtaavan veden keskellä. Tarkasta kivilajista en ole varma, joten en halua väittää siitä enempää. Putouksen yläpuolella virtaa [[Rein]], joka on muuttanut reittiään monta kertaa, ja nykyinen uoma on näistä nuorimpia. Kallionkin kanssa pitää olla kärsivällinen, sen minä sanon.",
+  "linkit": [
+   "jääkaudella",
+   "Rein"
+  ],
+  "jatkot": [
+   "Milloin putous syntyi?",
+   "Miten Reinin reitti on muuttunut ajan kuluessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:reininputous",
+  "kysymys": "Kuinka korkea Sveitsin korkein vesiputous on?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Sveitsin korkein vesiputous on [[Mürrenbachin putous]], jonka korkeus on 417 metriä. Se on siis moninkertaisesti korkeampi kuin 23 metriä korkea [[Reininputous]], joka puolestaan vaikuttaa ennen kaikkea valtavalla vesimäärällään ja 150 metrin leveydellään.\n\nMinä arvostan putouksessa mieluummin voimaa kuin korkeutta. Putoaminen kun ei ole kyyhkyn lempipuuhaa.",
+  "linkit": [
+   "Mürrenbachin putous",
+   "Reininputous"
+  ],
+  "jatkot": [
+   "Kuinka paljon vettä Reininputouksessa virtaa?",
+   "Miten vesiputous ylipäätään syntyy?"
+  ]
+ },
+ {
+  "kohde": "kohde:reininputous",
+  "kysymys": "Milloin Reininputous syntyi?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Putous syntyi viime [[jääkauden]] aikana noin 14 000–17 000 vuotta sitten, kun kulutusta kestävät kivilajit kavensivat joen uomaa. Reinin reitti on kuitenkin vaihtunut monta kertaa: noin 132 000 vuotta sitten joki virtasi [[Schaffhausenista]] länteen [[Klettgaun]] laaksoon, ja tuo vanha uoma täyttyi soralla. Nykyinen putous on siis nuori verrattuna joen pitkään historiaan. Ikää on, mut ei läheskään minun sukuni verran.",
+  "linkit": [
+   "jääkauden",
+   "Schaffhausenista",
+   "Klettgaun"
+  ],
+  "jatkot": [
+   "Mikä on Würm-jäätiköityminen?",
+   "Mihin Rein virtaa Sveitsin jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:reininputous",
+  "kysymys": "Kuinka leveä ja korkea putous on?",
+  "uusi": true,
+  "vastaus": "Katotaas. Putouksen leveys on noin 150 metriä ja korkeus 23 metriä. Se sijaitsee [[Schaffhausenin]] ja Zürichin kantonien rajalla, noin kolme kilometriä Schaffhausenin kaupungista etelään ja aivan [[Saksan]] rajan tuntumassa. Mittasuhteiltaan se on siis leveä mutta matala, ja sen vaikuttavuus syntyy ennen kaikkea vesimäärästä. Ylhäältä katsottuna se varmaan näyttää leveältä valkoiselta raidalta.",
+  "linkit": [
+   "Schaffhausenin",
+   "Saksan"
+  ],
+  "jatkot": [
+   "Kuinka kauan putous on ollut paikallaan?",
+   "Mikä on Euroopan korkein vesiputous?"
+  ]
+ },
+ {
+  "kohde": "kohde:augusta-raurica",
+  "kysymys": "Kuinka monta paikkaa teatterissa oli?",
+  "uusi": false,
+  "vastaus": "Ai tota. [[Augusta Rauricin]] teatterissa oli 8000–10 000 paikkaa, ja sitä kuvataan [[Alppien]] pohjoispuolen suurimmaksi roomalaiseksi teatteriksi. Paikkamäärä on arvio, joten tarkkaa lukua ei kannata pitää varmana.\n\nKahdeksantuhatta ihmistä yhdessä penkkirivistössä kuulostaa minusta melkoiselta parvelta. Kyyhkynä kunnioitan väenpaljoutta kaukaa.",
+  "linkit": [
+   "Augusta Rauricin",
+   "Alppien"
+  ],
+  "jatkot": [
+   "Kuinka paljon asukkaita Augusta Rauricassa oli?",
+   "Mitä roomalaisia teattereita on säilynyt Euroopassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:augusta-raurica",
+  "kysymys": "Mikä löytyi Kaiseraugstista vuosina 1961–1962?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Vuosina 1961–1962 linnoituksen alueelta löytyi niin sanottu Kaiseraugstin [[hopea-aarre]]. Löytöpaikka oli [[Augusta Rauricin]] roomalaisen kaupungin alue, mutta aarteen tarkasta sisällöstä ja iästä en ole varma, joten en halua arvailla. Hopeaa en itse kanna, mutta kirjeitä kyl.",
+  "linkit": [
+   "hopea-aarre",
+   "Augusta Rauricin"
+  ],
+  "jatkot": [
+   "Mitä hopea-aarre sisälsi?",
+   "Milloin Augusta Raurica perustettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:augusta-raurica",
+  "kysymys": "Kuka perusti Augusta Rauricin?",
+  "uusi": true,
+  "vastaus": "No jopas. Lähteiden mukaan kaupunki perustettiin noin vuonna 44 eaa. [[Lucius Munatius Plancuksen]] toimesta, mutta vuosiluku on likimääräinen. Nykyään kaupungin raunioalue sijaitsee [[Augstin]] ja [[Kaiseraugstin]] kohdalla Sveitsissä. Pitkä nimi, lyhyt vastaus, ihan hyvä diili.",
+  "linkit": [
+   "Lucius Munatius Plancuksen",
+   "Augstin",
+   "Kaiseraugstin"
+  ],
+  "jatkot": [
+   "Kuinka suuri Augusta Raurica oli huippuaikanaan?",
+   "Millainen teatteri kaupungissa oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:augusta-raurica",
+  "kysymys": "Kuinka paljon asukkaita Augusta Rauricassa oli?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Menestyksen huippuaikana 200-luvulla asukkaita arvioidaan olleen noin 20 000. Kyseessä on arvio eikä tarkka väestölaskenta, sillä [[antiikin]] kaupunkien asukasmääriä pystytään selvittämään vain epäsuorasti. Kaupunki kuului [[Rooman valtakunnan]] pohjoisiin alueisiin. Kahdestakymmenestätuhannesta minä en jaksaisi laskea edes puolta.",
+  "linkit": [
+   "antiikin",
+   "Rooman valtakunnan"
+  ],
+  "jatkot": [
+   "Mihin Rooman valtakunnan provinssiin Augusta Raurica kuului?",
+   "Kuinka monta paikkaa kaupungin teatterissa oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:augusta-raurica",
+  "kysymys": "Mitä alueella voi nykyään nähdä?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Alueella on roomalaismuseo, rekonstruoitu [[roomalaistalo]] ja [[ulkoilmamuseo]], joiden avulla kävijä voi tutustua kaupungin elämään. Lisäksi alueella ovat roomalaisen kaupungin rauniot, joista suurin osa on nähtävissä Augstin ja Kaiseraugstin kohdalla. Kunhan siellä on penkki ja hyvä ikkunalauta, minä olen tyytyväinen.",
+  "linkit": [
+   "roomalaistalo",
+   "ulkoilmamuseo"
+  ],
+  "jatkot": [
+   "Millaista elämä oli roomalaisessa kaupungissa?",
+   "Kuinka kauan Augusta Raurica oli asuttu?"
+  ]
+ },
+ {
+  "kohde": "kohde:habsburgin-linna",
+  "kysymys": "Kuka rakennutti linnan noin vuonna 1020?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Linnan rakennutti noin vuonna 1020 kreivi [[Radbot]] yhdessä [[Strasbourgin]] piispa Wernerin kanssa. Radbotin pojanpoika Otto II alkoi myöhemmin käyttää arvonimessään lisäystä \"von Habsburg\", ja linnasta sai nimensä [[Habsburgien]] hallitsijasuku. Kreivi ja piispa rakentamassa, sellaista ei näe enää torilla.",
+  "linkit": [
+   "Radbot",
+   "Strasbourgin",
+   "Habsburgien"
+  ],
+  "jatkot": [
+   "Milloin Habsburgit siirsivät valtansa Itävaltaan?",
+   "Mitä linnasta on jäljellä nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:habsburgin-linna",
+  "kysymys": "Kuka omistaa linnan nykyään?",
+  "uusi": false,
+  "vastaus": "Ai se. Linnan omistaa nykyään [[Aargaun kantoni]]. Habsburgien suvun omistuksessa linna pysyi vuoteen 1415, jolloin Aargau joutui sveitsiläiselle [[valaliitolle]]. Linna jäi, suku lähti, se on vanha tarina.",
+  "linkit": [
+   "Aargaun kantoni",
+   "valaliitolle"
+  ],
+  "jatkot": [
+   "Miksi Aargau siirtyi sveitsiläisille vuonna 1415?",
+   "Kuka Rudolf I oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:habsburgin-linna",
+  "kysymys": "Milloin Habsburgien valtakeskus siirtyi Itävaltaan?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: vuosi oli 1276. Silloin [[Rudolf I]] siirsi Habsburgien suvun valtakeskuksen [[Itävaltaan]]. Linna Aargaussa jäi kuitenkin suvun omistukseen aina vuoteen 1415 asti, jolloin alue joutui sveitsiläiselle valaliitolle. Vuosiluvut pysyy kyyhkyn päässä, vaikka muu ei.",
+  "linkit": [
+   "Rudolf I",
+   "Itävaltaan"
+  ],
+  "jatkot": [
+   "Kuinka kauan Habsburgit hallitsivat Itävaltaa?",
+   "Missä Aargaun kantoni sijaitsee Sveitsissä?"
+  ]
+ },
+ {
+  "kohde": "kohde:habsburgin-linna",
+  "kysymys": "Mitä linnasta on jäljellä nykyään?",
+  "uusi": true,
+  "vastaus": "Mmm— Linnan länsiosa on kunnostettu, ja siellä toimii ravintola sekä pieni näyttely. Itäosat ovat raunioina. Linna kohoaa [[Aare-joen]] lähellä [[Aargaun]] kantonissa, ja sen omistaa nykyään kantoni itse.\n\nRavintola linnassa kuulostaa erinomaiselta ajatukselta. Toivon hartaasti, että tarjolla on jotain taikinaista, mutta tiedä häntä, enkä halua keksiä.",
+  "linkit": [
+   "Aare-joen",
+   "Aargaun"
+  ],
+  "jatkot": [
+   "Milloin linna rakennettiin?",
+   "Kuka linnan nykyään omistaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:habsburgin-linna",
+  "kysymys": "Mistä Habsburgien suvun nimi tulee?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Suvun nimi tulee linnasta. Radbotin pojanpoika [[Otto II]] alkoi käyttää arvonimessään lisäystä \"von Habsburg\", ja nimi vakiintui [[hallitsijasuvun]] tunnukseksi. Kotipaikka nimen antajana, sehän on ihan kyyhkymäistä.",
+  "linkit": [
+   "Otto II",
+   "hallitsijasuvun"
+  ],
+  "jatkot": [
+   "Kuka rakennutti Habsburgin linnan?",
+   "Milloin suku siirtyi Itävaltaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:saint-ursanne",
+  "kysymys": "Kenen mukaan kaupunki on nimetty?",
+  "uusi": false,
+  "vastaus": "Ai se, tän minä tiedän. Saint-Ursannen nimen taustalla on 600-luvun munkki [[Ursicinus]], joka perusti paikalle luostarin. Kaupunki sijaitsee [[Jurassa]] [[Doubs-joen]] mutkassa ennen joen virtaamista Ranskaan. Nimiä minä kannan, tämäkin oli helppo.",
+  "linkit": [
+   "Ursicinus",
+   "Jurassa",
+   "Doubs-joen"
+  ],
+  "jatkot": [
+   "Missä Saint-Ursanne sijaitsee?",
+   "Mikä on Clos du Doubsin kunta?"
+  ]
+ },
+ {
+  "kohde": "kohde:saint-ursanne",
+  "kysymys": "Mikä joki kiertää kaupunkia?",
+  "uusi": false,
+  "vastaus": "Katotaas. Kaupunkia kiertää [[Doubs-joki]]. Saint-Ursanne sijaitsee [[Jurassa]] joen mutkassa ennen kuin joki virtaa [[Ranskaan]].\n\nJoenmutka on kyyhkylle hyvä maamerkki: jos mutkassa on vielä vanha silta, tietää olevansa oikeassa paikassa.",
+  "linkit": [
+   "Doubs-joki",
+   "Jurassa",
+   "Ranskaan"
+  ],
+  "jatkot": [
+   "Mihin Doubs-joki lopulta virtaa?",
+   "Mikä on Jura Sveitsissä?"
+  ]
+ },
+ {
+  "kohde": "kohde:saint-ursanne",
+  "kysymys": "Mikä on Clos du Doubs?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. [[Clos du Doubs]] on kunta, johon Saint-Ursanne on kuulunut vuodesta 2009. Nimi viittaa luultavasti [[Doubs-joen]] kiertämään alueeseen, mutta en ole siitä varma. Ei paha kyyhkyltä, ranskaa kun ei ole edes oma kieleni.",
+  "linkit": [
+   "Clos du Doubs",
+   "Doubs-joen"
+  ],
+  "jatkot": [
+   "Mitä kuntaliitos tarkoittaa?",
+   "Mikä on Saint-Ursannen luostarikirkko?"
+  ]
+ },
+ {
+  "kohde": "kohde:saint-ursanne",
+  "kysymys": "Mitä nähtävyyksiä vanhassakaupungissa on?",
+  "uusi": true,
+  "vastaus": "Sepä sattui: tästä on tarjolla kokonainen lista. Saint-Ursannen vanhassakaupungissa on romaaninen [[luostarikirkko]], [[kollegiaattikirkko]], keskiaikaisia taloja, [[erakkomaja]] ja 1700-luvun silta. Kokonaisuus on tiivis ja keskiaikainen. Sillan alta kyyhky lentää mieluummin kuin yli.",
+  "linkit": [
+   "luostarikirkko",
+   "kollegiaattikirkko",
+   "erakkomaja"
+  ],
+  "jatkot": [
+   "Mikä on romaaninen tyyli?",
+   "Milloin Saint-Ursannen luostari perustettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:saint-ursanne",
+  "kysymys": "Minkä tunnustuksen kaupunki on saanut?",
+  "uusi": true,
+  "vastaus": "No niin, tähän on selvä vastaus. Saint-Ursanne on saanut tunnustuksen yhtenä maailman parhaista [[matkailukylistä]]. Tunnustuksen takana on YK:n matkailujärjestö [[UNWTO]], ja minä vuonna se myönnettiin, siitä en ole varma. Kyseessä on pieni [[keskiaikainen]] kaupunki Jurassa.\n\nMinun mielestäni pienen kylän kehu on aina isoa arvokkaampi. Kyyhkynä tiedän, että hyvä paikka tunnistetaan jo ylhäältä.",
+  "linkit": [
+   "matkailukylistä",
+   "UNWTO",
+   "keskiaikainen"
+  ],
+  "jatkot": [
+   "Mikä UNWTO on?",
+   "Millaisia keskiaikaisia kaupunkeja Sveitsissä on?"
+  ]
+ },
+ {
+  "kohde": "kohde:solothurnin-katedraali",
+  "kysymys": "Milloin katedraali vihittiin käyttöön?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä muistan. Katedraali vihittiin käyttöön 26. syyskuuta 1773, kun [[Lausannen]] piispa [[Joseph Niklaus von Montenach]] vihki kirkon. Rakennustyöt olivat alkaneet vuonna 1763, joten urakka kesti noin kymmenen vuotta. Tarkka päivämäärä, kyl se kelpaa.",
+  "linkit": [
+   "Lausannen",
+   "Joseph Niklaus von Montenach"
+  ],
+  "jatkot": [
+   "Kuka katedraalin suunnitteli?",
+   "Mikä on uusklassismi?"
+  ]
+ },
+ {
+  "kohde": "kohde:solothurnin-katedraali",
+  "kysymys": "Keiden patsaat reunustavat portaikkoa?",
+  "uusi": false,
+  "vastaus": "Tost minä osaan kertoo. Länsijulkisivulle johtavan monumentaalisen portaikon reunustavat [[Mooseksen]] ja [[Gideonin]] patsaat. Ne seisovat roomalaistyylisten [[suihkukaivojen]] päällä. Patsaan olalla olisi hyvä levähtää, mut en kehtaa.",
+  "linkit": [
+   "Mooseksen",
+   "Gideonin",
+   "suihkukaivojen"
+  ],
+  "jatkot": [
+   "Kuka Mooses oli?",
+   "Kuka Gideon oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:solothurnin-katedraali",
+  "kysymys": "Kuka katedraalin suunnitteli?",
+  "uusi": true,
+  "vastaus": "Ai niin, tämä. [[Solothurnin]] katedraalin suunnitteli asconalainen [[Gaetano Matteo Pisoni]]. Hänen veljenpoikansa [[Paolo Antonio Pisoni]] otti rakennustyön johdon vuonna 1772, vuotta ennen kirkon vihkimistä.\n\nSuvussa kulkeva ammatti on minulle tuttu asia. Meidän suvussa kulkevat kirjeet, heillä katedraalit.",
+  "linkit": [
+   "Solothurnin",
+   "Gaetano Matteo Pisoni",
+   "Paolo Antonio Pisoni"
+  ],
+  "jatkot": [
+   "Milloin katedraali vihittiin käyttöön?",
+   "Missä Ascona sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:solothurnin-katedraali",
+  "kysymys": "Missä tyylissä katedraali on rakennettu?",
+  "uusi": true,
+  "vastaus": "Ai tyylikö? Katedraali on uusklassinen kirkko, eli se edustaa [[uusklassismia]]. Uusklassismi otti esikuvikseen [[antiikin]] rakennustaidetta, mikä näkyy esimerkiksi portaikon reunoilla olevissa roomalaistyylisissä suihkukaivoissa. Tyylisuunnat menevät joskus sekaisin, mut tämä pysyi kasassa.",
+  "linkit": [
+   "uusklassismia",
+   "antiikin"
+  ],
+  "jatkot": [
+   "Mikä on barokki?",
+   "Milloin uusklassismi oli suosittua?"
+  ]
+ },
+ {
+  "kohde": "kohde:solothurnin-katedraali",
+  "kysymys": "Kuinka kauan katedraalin rakentaminen kesti?",
+  "uusi": true,
+  "vastaus": "Laskeskellaan. Rakennustyöt alkoivat vuonna 1763 ja kirkko vihittiin 26. syyskuuta 1773, joten rakentaminen kesti noin kymmenen vuotta. Työn johto vaihtui matkan varrella, sillä [[Paolo Antonio Pisoni]] otti sen haltuunsa vuonna 1772. Kirkko seisoo [[Solothurnin]] vanhassakaupungissa [[Aare-joen]] rannalla. Kymmenen vuotta, minulta menee viestin viennissä vähemmän.",
+  "linkit": [
+   "Paolo Antonio Pisoni",
+   "Solothurnin",
+   "Aare-joen"
+  ],
+  "jatkot": [
+   "Kuka katedraalin suunnitteli?",
+   "Mikä on Solothurn?"
+  ]
+ },
+ {
+  "kohde": "kohde:titlis",
+  "kysymys": "Kuinka korkea Titlis on?",
+  "uusi": false,
+  "vastaus": "Kato, tän minä pystyn sanomaan ihan numerolla. Titlis on 3 238 metriä korkea vuori, joka kohoaa [[Uri-Alpeilla]] [[Obwaldenin]] ja Bernin kantonien rajalla. Sen juurella sijaitsevan [[Engelbergin]] kylän korkeus on 996 metriä, joten korkeuseroa huipulle on yli kaksi kilometriä. Ylhäältä katsottuna se on kyl ihan kunnon kumpare.",
+  "linkit": [
+   "Uri-Alpeilla",
+   "Obwaldenin",
+   "Engelbergin"
+  ],
+  "jatkot": [
+   "Millainen paikka Engelberg on?",
+   "Mitä jäätiköitä Titlisillä on?"
+  ]
+ },
+ {
+  "kohde": "kohde:titlis",
+  "kysymys": "Milloin köysirata Klein Titlisille avattiin?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Köysirata vihittiin käyttöön maaliskuussa 1967. Rata kulkee [[Engelbergistä]] kolmella osuudella [[Klein Titlisille]], joka sijaitsee 3 028 metrin korkeudessa, ja yhdellä osuudella kulkee pyörivä [[Rotair]]-hytti. Minä kyl valitsisin siivet.",
+  "linkit": [
+   "Engelbergistä",
+   "Klein Titlisille",
+   "Rotair"
+  ],
+  "jatkot": [
+   "Millainen paikka Engelberg on?",
+   "Milloin Titlisille kiivettiin ensimmäisen kerran?"
+  ]
+ },
+ {
+  "kohde": "kohde:titlis",
+  "kysymys": "Kuka kiipesi ensimmäisenä Titlisin huipulle?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Titlisin ensimmäinen nousu tehtiin vuonna 1739, kun [[Ignaz Hess]], J. E. Waser ja kaksi muuta engelbergiläistä kiipesivät huipulle. Nousijat lähtivät [[Engelbergin]] kylästä, joten saavutus oli aivan paikallinen, ja siitä on kulunut lähes kolmesataa vuotta.\n\nMinä pidän siitä, että ensimmäisen nousun tekivät paikalliset eivätkä kaukaiset kuuluisuudet. Siinä on samaa kuin postinkuljetuksessa: reitin tuntee parhaiten se, joka kulkee sitä.",
+  "linkit": [
+   "Ignaz Hess",
+   "Engelbergin"
+  ],
+  "jatkot": [
+   "Miten vuorelle kiivettiin 1700-luvulla?",
+   "Missä Uri-Alpit sijaitsevat?"
+  ]
+ },
+ {
+  "kohde": "kohde:titlis",
+  "kysymys": "Mikä on Rotair-hytti?",
+  "uusi": true,
+  "vastaus": "Ai se. Rotair on pyörivä köysiratahytti, joka kulkee Titlisin radan yhdellä osuudella. Hytti pyörii matkan aikana, joten matkustajat näkevät vuoristomaiseman ja jäätiköt joka suuntaan ilman, että heidän tarvitsee siirtyä paikaltaan. Rata alkaa [[Engelbergistä]] ja päättyy [[Klein Titlisille]]. Minä pyörin kyllä ilmankin.",
+  "linkit": [
+   "Engelbergistä",
+   "Klein Titlisille"
+  ],
+  "jatkot": [
+   "Kuinka korkealla Klein Titlis on?",
+   "Millainen Titlis Cliff Walk on?"
+  ]
+ },
+ {
+  "kohde": "kohde:titlis",
+  "kysymys": "Mikä on Titlis Cliff Walk?",
+  "uusi": true,
+  "vastaus": "Mmm— riippusilta, tietysti. Titlis Cliff Walk on jalankulkijoille tarkoitettu riippusilta, joka avattiin joulukuussa 2012 Titlisin huipun alueella. Silta ylittää vuoren jyrkänteen korkealla ilmassa, ja sille pääsee samoilla köysiradoilla, jotka kulkevat [[Klein Titlisille]] [[Engelbergistä]] lähtien. Minulle kävisi kyl pelkkä kaide.",
+  "linkit": [
+   "Klein Titlisille",
+   "Engelbergistä"
+  ],
+  "jatkot": [
+   "Millainen paikka Klein Titlis on?",
+   "Mikä on Titlis-jäätikkö?"
+  ]
+ },
+ {
+  "kohde": "kohde:arenenberg",
+  "kysymys": "Kuka osti tilan vuonna 1817?",
+  "uusi": false,
+  "vastaus": "Sepä sattui: tän muistan hyvin. Tilan osti vuonna 1817 [[Hortense de Beauharnais]], joka muutti sinne vuonna 1818. Hän piti Arenenbergissä pariisilaistyylisiä salonkeja [[Bodenjärven]] rannalla. Hänen poikansa, tuleva [[Napoleon III]], vietti paikalla nuoruuttaan ja sai Sveitsin kansalaisuuden. Järvenrannalla pidettävä salonki, kyl minä sellaiselle laskeutuisin.",
+  "linkit": [
+   "Hortense de Beauharnais",
+   "Bodenjärven",
+   "Napoleon III"
+  ],
+  "jatkot": [
+   "Kuka Hortense de Beauharnais oli?",
+   "Milloin Napoleon III hallitsi Ranskaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:arenenberg",
+  "kysymys": "Mitä linnassa on nykyään?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Arenenbergin linnassa toimii nykyään [[Napoleon-museo]], ja kohde on Sveitsin kansallisesti merkittävä kulttuuriperintökohde. Linna sijaitsee [[Thurgaun]] kantonissa Salensteinin kunnassa [[Bodenjärven]] Untersee-osan rannalla. Minä tykkään museoista, joissa on leveä ikkunalauta.",
+  "linkit": [
+   "Napoleon-museo",
+   "Thurgaun",
+   "Bodenjärven"
+  ],
+  "jatkot": [
+   "Mikä Bodenjärven Untersee-osa on?",
+   "Mikä on Thurgaun kantoni?"
+  ]
+ },
+ {
+  "kohde": "kohde:arenenberg",
+  "kysymys": "Kuka oli Hortense de Beauharnais?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Hortense de Beauharnais oli keisarinna [[Joséphinen]] tytär ja siten [[Napoleon Bonaparten]] tytärpuoli. Hän meni naimisiin Napoleonin veljen Louis Bonaparten kanssa ja oli Hollannin kuningatar, ja hänen poikansa oli tuleva [[Napoleon III]]. Napoleonin kukistuttua perhe joutui lähtemään Ranskasta, ja Hortense osti vuonna 1817 Arenenbergin.\n\nHänen elämänsä muistuttaa minusta kirjettä, joka vaihtaa osoitetta moneen kertaan: Pariisista Hollantiin ja sieltä Sveitsiin. Minun sukuni tuntee sen tunteen hyvin.",
+  "linkit": [
+   "Joséphinen",
+   "Napoleon Bonaparten",
+   "Napoleon III"
+  ],
+  "jatkot": [
+   "Miksi Bonaparten suku joutui lähtemään Ranskasta?",
+   "Kuka oli Napoleon Bonaparte?"
+  ]
+ },
+ {
+  "kohde": "kohde:arenenberg",
+  "kysymys": "Mikä on Bodenjärven Untersee-osa?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Bodenjärvi jakautuu kahteen pääosaan, itäiseen Oberseehen ja läntiseen Unterseehen, ja niitä yhdistää [[Reinin]] jokiosuus. Untersee on pienempi ja matalampi kuin Obersee, ja sen rannoilla on aluetta sekä Sveitsistä että [[Saksasta]]. Sen rannalla sijaitsee myös [[Arenenbergin linna]]. Ylhäältä katsottuna se on kyl hyvän näköinen järvi.",
+  "linkit": [
+   "Reinin",
+   "Saksasta",
+   "Arenenbergin linna"
+  ],
+  "jatkot": [
+   "Mitkä maat rajoittuvat Bodenjärveen?",
+   "Mikä on Rein?"
+  ]
+ },
+ {
+  "kohde": "kohde:arenenberg",
+  "kysymys": "Milloin Napoleon III hallitsi Ranskaa?",
+  "uusi": true,
+  "vastaus": "Nyt muistan. Napoleon III oli Ranskan presidentti vuodesta 1848 ja keisari vuodesta 1852 aina vuoteen 1870. Hän oli [[Napoleon Bonaparten]] veljenpoika, ja nuoruutensa hän vietti osin Sveitsissä [[Arenenbergissä]]. Hänen valtakautensa päättyi syksyllä 1870 [[Sedanin]] tappioon Preussia vastaan, minkä jälkeen Ranska muuttui tasavallaksi. Onpas siitä onneksi pitkä aika.",
+  "linkit": [
+   "Napoleon Bonaparten",
+   "Arenenbergissä",
+   "Sedanin"
+  ],
+  "jatkot": [
+   "Mikä Ranskan toinen keisarikunta oli?",
+   "Mitä tapahtui Sedanin taistelussa?"
+  ]
+ },
+ {
+  "kohde": "kohde:ebenalp-wildkirchli",
+  "kysymys": "Milloin Ebenalpin köysirata avattiin?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Ebenalpin köysirata on toiminut vuodesta 1955. Se kulkee [[Wasserauenista]] Ebenalpin huipulle, joka on 1 640 metriä korkea ja [[Alpstein-vuoriston]] pohjoisin huippu. Huipun jyrkänteen alla sijaitsee [[Wildkirchlin]] luolasto. Köysirata on minulle liikaa vaivaa, siivet riittää.",
+  "linkit": [
+   "Wasserauenista",
+   "Alpstein-vuoriston",
+   "Wildkirchlin"
+  ],
+  "jatkot": [
+   "Mikä Wildkirchli on?",
+   "Missä Alpstein-vuoristo sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:ebenalp-wildkirchli",
+  "kysymys": "Kuka perusti erakkomajan Wildkirchlin yläluolaan?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Erakkomajan Wildkirchlin yläluolaan perusti vuonna 1658 pappi [[Paulus Ulmann]]. Samalla hän perusti alaluolaan kappelin. Luolat sijaitsevat [[Ebenalpin]] jyrkänteen alla, ja ne toimivat pyhiinvaelluskohteena erakon kuolemaan vuonna 1851 asti.\n\nMinä en jaksaisi erakkona päivääkään, sillä luolassa ei käy kukaan kertomassa uutisia, ja minä elän uutisista. Silti lähes kaksi vuosisataa jatkunut pyhiinvaellus kertoo, että paikassa oli vetovoimaa.",
+  "linkit": [
+   "Paulus Ulmann",
+   "Ebenalpin"
+  ],
+  "jatkot": [
+   "Millaista erakon elämä luolassa oli?",
+   "Mikä on Ebenalp?"
+  ]
+ },
+ {
+  "kohde": "kohde:ebenalp-wildkirchli",
+  "kysymys": "Mikä Wildkirchli on?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Wildkirchli on [[Ebenalpin]] jyrkänteen alla sijaitseva luolasto Appenzellin Alpeilla. Sen [[Altarhöhle-luolasta]] on löytynyt piikivityökaluja [[neandertalinihmisen]] ajalta, noin 40 000 vuoden takaa. Vuonna 1658 pappi [[Paulus Ulmann]] perusti alaluolaan kappelin ja yläluolaan erakkomajan, ja luolat olivat pyhiinvaelluskohde vuoteen 1851 asti. Neljäkymmentätuhatta vuotta on kyl pitkä aika.",
+  "linkit": [
+   "Ebenalpin",
+   "Altarhöhle-luolasta",
+   "neandertalinihmisen",
+   "Paulus Ulmann"
+  ],
+  "jatkot": [
+   "Keitä neandertalinihmiset olivat?",
+   "Mikä Ebenalpin huippu on?"
+  ]
+ },
+ {
+  "kohde": "kohde:ebenalp-wildkirchli",
+  "kysymys": "Keitä neandertalinihmiset olivat?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Neandertalinihmiset olivat sukupuuttoon kuollut ihmislaji, joka eli [[Euroopassa]] ja Länsi-Aasiassa ennen nykyihmistä ja osin sen rinnalla. Heidän arvioidaan kadonneen noin 40 000 vuotta sitten. Jälkiä heistä on löytynyt myös Sveitsin [[Wildkirchlin]] luolista, joista on kaivettu esiin [[piikivityökaluja]]. Onpas ollu pitkä aikajana.",
+  "linkit": [
+   "Euroopassa",
+   "Wildkirchlin",
+   "piikivityökaluja"
+  ],
+  "jatkot": [
+   "Miten neandertalinihmiset elivät?",
+   "Mikä erottaa nykyihmisen neandertalinihmisestä?"
+  ]
+ },
+ {
+  "kohde": "kohde:ebenalp-wildkirchli",
+  "kysymys": "Missä Alpstein-vuoristo sijaitsee?",
+  "uusi": true,
+  "vastaus": "Katotaas. Alpstein on [[Appenzellin Alppien]] vuoristoryhmä Koillis-Sveitsissä, ja sen korkein huippu on [[Säntis]], noin 2 500 metriä. [[Ebenalp]] on sen pohjoisin huippu 1 640 metrin korkeudessa. Vuoristo ulottuu useamman kantonin alueelle, myös [[Appenzell Innerrhodenin]] kantoniin. Ylhäältä ne näyttävät kyl melko jykeviltä.",
+  "linkit": [
+   "Appenzellin Alppien",
+   "Säntis",
+   "Ebenalp",
+   "Appenzell Innerrhodenin"
+  ],
+  "jatkot": [
+   "Mikä on Säntis?",
+   "Millainen kanton Appenzell Innerrhoden on?"
+  ],
+  "paikka": {
+   "nimi": "Alpstein",
+   "lat": 47.25,
+   "lon": 9.35,
+   "tarkkuus": "alue"
+  }
+ },
+ {
+  "kohde": "kohde:stanserhorn",
+  "kysymys": "Minä vuonna CabriO-köysirata avattiin?",
+  "uusi": false,
+  "vastaus": "No jopas, tän tiedän. CabriO-köysirata avattiin vuonna 2012, tarkemmin 29. kesäkuuta. Sen kaksikerroksisessa hytissä on avoin yläkansi, ja hytti kuljettaa 60 matkustajaa [[Kältistä]] [[Stanserhornin]] huipulle kuudessa minuutissa. Stanserhorn sijaitsee [[Nidwaldenin]] kantonissa. Avoin yläkansi kuulostaa kyyhkyn mielestä ihan oikealta ajatukselta.",
+  "linkit": [
+   "Kältistä",
+   "Stanserhornin",
+   "Nidwaldenin"
+  ],
+  "jatkot": [
+   "Millainen oli Stanserhornin vanha köysirautatie?",
+   "Mitä Stanserhornin huipulla on nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:stanserhorn",
+  "kysymys": "Kuinka monta järveä huipulta näkyy selkeällä säällä?",
+  "uusi": false,
+  "vastaus": "Ai tota. Selkeällä säällä [[Stanserhornin]] huipulta erottuu kymmenen järveä, joihin kuuluu varmasti [[Neljän metsäkantonin järvi]]. En osaa luetella kaikkia kymmentä varmasti. Huippu on 1 898 metriä korkea, ja siellä on pyörivä ravintola vuodelta 2001 ja näköalataso vuodelta 2003.\n\nKymmenen järveä yhdellä silmäyksellä on kyyhkylle työmaan paras puoli, sillä reitin suunnittelu on helppoa, kun kaikki vesi näkyy kerralla.",
+  "linkit": [
+   "Stanserhornin",
+   "Neljän metsäkantonin järvi"
+  ],
+  "jatkot": [
+   "Mikä on Neljän metsäkantonin järvi?",
+   "Mitä Stanserhornin huipulla on nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:stanserhorn",
+  "kysymys": "Mikä on Stanserhornin CabriO-hytin erikoisuus?",
+  "uusi": true,
+  "vastaus": "Hei, tuo on hauska yksityiskohta. CabriO-köysiradan erikoisuus on kaksikerroksinen hytti, jonka yläkansi on avoin. Matkustajat voivat siis seistä ylhäällä taivaan alla ja katsella maisemaa ilman ikkunaa. Hytti vie 60 matkustajaa, ja matka [[Kältistä]] [[Stanserhornin]] huipulle kestää kuusi minuuttia. Rata avattiin 29. kesäkuuta 2012. Avoin kansi kuulostaa kyl minun paikaltani.",
+  "linkit": [
+   "Kältistä",
+   "Stanserhornin"
+  ],
+  "jatkot": [
+   "Milloin Stanserhornin vanha köysirautatie rakennettiin?",
+   "Mikä on Nidwaldenin kantoni?"
+  ]
+ },
+ {
+  "kohde": "kohde:stanserhorn",
+  "kysymys": "Millainen oli Stanserhornin vanha köysirautatie?",
+  "uusi": true,
+  "vastaus": "Jaa, se vanha. Stanserhornin huipulle rakennettiin vuosina 1891–1893 kolmiosainen sähkökäyttöinen [[köysirautatie]]. Se palveli matkustajia jo kauan ennen nykyistä [[CabriO]]-köysirataa, joka avattiin vuonna 2012. Rata johtaa [[Nidwaldenin]] kantonissa kohoavalle huipulle, joka on 1 898 metriä korkea. Sähköä jo 1890-luvulla, ei paha.",
+  "linkit": [
+   "köysirautatie",
+   "CabriO",
+   "Nidwaldenin"
+  ],
+  "jatkot": [
+   "Mikä CabriO-köysirata on?",
+   "Mikä on Nidwaldenin kantoni?"
+  ]
+ },
+ {
+  "kohde": "kohde:stanserhorn",
+  "kysymys": "Mitä Stanserhornin huipulla on nykyään?",
+  "uusi": true,
+  "vastaus": "No niin, huipulle. Stanserhornin huipulla on pyörivä ravintola vuodelta 2001 ja näköalataso vuodelta 2003. Selkeällä säällä sieltä erottuu kymmenen järveä. Huipulle pääsee [[CabriO]]-köysiradalla, joka lähtee [[Kältistä]], ja huippu sijaitsee [[Nidwaldenin]] kantonissa 1 898 metrin korkeudessa. Minä en kyl tarvitse ravintolaa, kunhan tarjolla on murunen.",
+  "linkit": [
+   "CabriO",
+   "Kältistä",
+   "Nidwaldenin"
+  ],
+  "jatkot": [
+   "Mikä CabriO-köysirata on?",
+   "Mikä on Nidwaldenin kantoni?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-christoffelturm",
+  "kysymys": "Miltä Bernin Christoffelturm näytti loistoaikanaan?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Christoffelturm oli [[Bernin]] kolmannen kaupunginmuurin portti, joka rakennettiin vuosina 1344–1346. Tarkasta ulkoasusta minulla ei ole varmaa tietoa, mutta kyseessä oli korkea porttitorni osana kaupunginmuuria, ja nimi viittaa todennäköisesti pyhään [[Kristoforokseen]]. Torni purettiin rautatieaseman tieltä, ja purku alkoi vuonna 1865. Sen tarkemman kuvan jätän kyl piirtäjille.",
+  "linkit": [
+   "Bernin",
+   "Kristoforokseen"
+  ],
+  "jatkot": [
+   "Miksi Bernin kaupunginmuureja purettiin?",
+   "Mitä muita vanhoja torneja Bernissä on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-christoffelturm",
+  "kysymys": "Miksi Bernin Christoffelturm katosi?",
+  "uusi": false,
+  "vastaus": "Just niin, tästä on tarina. Bernin kaupunginvaltuusto päätti purkaa tornin rautatieaseman tieltä, ja päätös syntyi vain neljän äänen erolla. Purku alkoi vuonna 1865. Torni oli rakennettu vuosina 1344–1346 [[Bernin]] kolmannen [[kaupunginmuurin]] portiksi.\n\nNeljän äänen ero on pienempi kuin yhden parven koko, ja silti se ratkaisi tornin kohtalon. Minä pidän vanhoista porteista, koska ne ovat hyviä istuinpaikkoja.",
+  "linkit": [
+   "Bernin",
+   "kaupunginmuurin"
+  ],
+  "jatkot": [
+   "Milloin Bernin rautatieasema rakennettiin?",
+   "Mikä Bernin kolmas kaupunginmuuri oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-christoffelturm",
+  "kysymys": "Onko Bern Sveitsin pääkaupunki?",
+  "uusi": true,
+  "vastaus": "Joo, tän tunnen. Sveitsillä ei ole virallisesti nimettyä pääkaupunkia, mutta Bern on liittovaltion kaupunki eli [[Bundesstadt]], jossa hallitus ja parlamentti istuvat. Asema vakiintui vuonna 1848 liittovaltion perustamisen yhteydessä. Maan suurin kaupunki on [[Zürich]]. Pääkaupunki-sana on siis vähän liukas.",
+  "linkit": [
+   "Bundesstadt",
+   "Zürich"
+  ],
+  "jatkot": [
+   "Miksi Sveitsillä ei ole virallista pääkaupunkia?",
+   "Mikä on Zürichin rooli Sveitsissä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-christoffelturm",
+  "kysymys": "Mitä Röstigraben tarkoittaa?",
+  "uusi": true,
+  "vastaus": "No niin, ruokapuoli. Röstigraben eli röstihauta on leikillinen nimi saksan- ja ranskankielisen Sveitsin väliselle kielirajalle. Nimi tulee [[röstistä]], raastetusta perunasta pannulle painetusta kakusta, joka oli alun perin [[Bernin]] seudun maanviljelijöiden aamiaista. Rajan molemmin puolin puhutaan eri kieltä ja äänestetään eri tavalla. Minä olisin kyl nimennyt rajan pullan mukaan.",
+  "linkit": [
+   "röstistä",
+   "Bernin"
+  ],
+  "jatkot": [
+   "Mitä kieliä Sveitsissä puhutaan?",
+   "Miten rösti valmistetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-christoffelturm",
+  "kysymys": "Mitä Albert Einstein teki Bernissä vuonna 1905?",
+  "uusi": true,
+  "vastaus": "Ai, se patentti-ihminen. Albert Einstein työskenteli Bernin [[patenttivirastossa]] kolmannen luokan teknisenä asiantuntijana, ja vuonna 1905 hän oli 26-vuotias. Samana vuonna hän kirjoitti neljä tutkimusta, jotka muuttivat fysiikkaa. Ideoistaan hän keskusteli ystävänsä ja työtoverinsa [[Michele Besson]] kanssa sekä tuttavapiirissä, joka kutsui itseään leikillään [[Olympia-akatemiaksi]]. Virkamieheksi aika hyvä saldo.",
+  "linkit": [
+   "patenttivirastossa",
+   "Michele Besson",
+   "Olympia-akatemiaksi"
+  ],
+  "jatkot": [
+   "Mitä suhteellisuusteoria tarkoittaa?",
+   "Millainen mies Michele Besso oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-porte-neuve",
+  "kysymys": "Miltä Geneven Porte Neuve näytti loistoaikanaan?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Tarkkaa kuvaa en tähän osaa antaa. Porte Neuve rakennettiin 1740-luvulla Geneven läntiseksi pääportiksi, ja se kuului kaupunkia ympäröineeseen [[linnoitusvyöhykkeeseen]]. Sen täsmällisestä ulkoasusta en ole varma, enkä halua keksiä yksityiskohtia; varmaa on, että portti oli kaupungin tärkeä länsiaukko, jonka kautta liikenne kulki muurien läpi. Portti purettiin vuonna 1853, ja sen paikalla on nykyisin [[Place Neuve]]. Tarkempia kuvia kannattaa etsiä vanhoista kaupunkikartoista ja piirroksista. Portit on kyl kyyhkyn mielestä parhaita istuinpaikkoja.",
+  "linkit": [
+   "linnoitusvyöhykkeeseen",
+   "Place Neuve"
+  ],
+  "jatkot": [
+   "Milloin Geneven linnoitukset purettiin?",
+   "Millainen Place Neuve on nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-porte-neuve",
+  "kysymys": "Miksi Geneven Porte Neuve katosi?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Tän minä osaan kertoo lyhyesti. Porte Neuve purettiin vuonna 1853, koska Geneven linnoitusvyöhyke purettiin 1850-luvulla kaupungin [[laajenemisen]] tieltä. Muurien ja porttien sisään ei enää mahtunut kasvava kaupunki, joten kaupunki avattiin ympäröiville alueille. Portin paikalle syntyi nykyinen [[Place Neuve]]. Sama kohtalo oli monella muullakin eurooppalaisella kaupungilla 1800-luvulla, kun linnoitusten sotilaallinen merkitys väheni. Kyl minä tän kaiken muistin ilman muistiinpanoja.",
+  "linkit": [
+   "laajenemisen",
+   "Place Neuve"
+  ],
+  "jatkot": [
+   "Miksi eurooppalaisten kaupunkien muureja purettiin 1800-luvulla?",
+   "Minkä kokoinen Geneve on nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-porte-neuve",
+  "kysymys": "Miksi kaupunkien linnoitusmuureja purettiin 1800-luvulla?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Hyvä kysymys tuo. Linnoitusmuurit purettiin 1800-luvulla pääosin siksi, että kaupungit kasvoivat nopeasti [[teollistumisen]] ja väestönkasvun myötä, eikä muurien sisäpuolelle enää mahtunut asukkaita, tehtaita eikä liikennettä. Lisäksi sotatekniikka oli kehittynyt, jolloin muurit eivät enää suojanneet tehokkaasti, ja [[rautatiet]] ja uudet kadut tarvitsivat tilaa. Monessa kaupungissa muurien paikalle rakennettiin kehäkatuja tai puistoja; Wienin Ringstrasse on tunnettu esimerkki tästä. Lähteet kertovat tapauksesta toiseen vaihtelevia syitä, joten yleiskuva on tässä riittävä. Pitkä vastaus, mut muurit eivät kaatuneet itsestään.",
+  "linkit": [
+   "teollistumisen",
+   "rautatiet"
+  ],
+  "jatkot": [
+   "Mikä on Wienin Ringstrasse?",
+   "Miten rautatiet muuttivat eurooppalaisia kaupunkeja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-porte-neuve",
+  "kysymys": "Mihin kaupunkiportteja alun perin tarvittiin?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Portit on aihe, jonka minä tunnen läheltä. [[Kaupunkiportit]] olivat muuriin tehtyjä kulkuaukkoja, joiden kautta ihmiset, tavarat ja eläimet pääsivät kaupunkiin ja sieltä pois. Niitä voitiin sulkea yöksi tai vaaran uhatessa, jolloin muuri pysyi yhtenäisenä suojana. Porteilla valvottiin myös kauppaa: [[tulleja]] ja maksuja kannettiin usein juuri porteilla. Porttien lähelle syntyi usein vartiopaikkoja ja majataloja matkalaisille. Meikäläisten muistiinpanojen mukaan kirjeetkin kulkivat porttien kautta, kunnes kyyhkyt keksivät oikopolun.\n\nVakavasti ottaen portit olivat kaupungin ovi ja lukko samassa, ja siksi niiden kunnossapito kiinnosti vallanpitäjiä aina. Sukuni tuntee ne paremmin ylhäältä kuin alhaalta.",
+  "linkit": [
+   "Kaupunkiportit",
+   "tulleja"
+  ],
+  "jatkot": [
+   "Miten kaupungin portit suljettiin yöksi?",
+   "Mitä tulli tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-porte-neuve",
+  "kysymys": "Mikä on bastioni ja miksi niitä rakennettiin?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Linnoitusasia on kyl vähän kuivaa. Bastioni on linnoitusmuurista ulospäin työntyvä, yleensä viisikulmaisen tai nuolenkärkimäisen muotoinen osa, jonka tehtävä oli antaa puolustajille mahdollisuus ampua muurin edustaa pitkin sivusta. Se kehitettiin 1400- ja 1500-luvuilla, kun [[tykistö]] oli tehnyt vanhat pystysuorat keskiaikaiset [[muurit]] haavoittuviksi. Bastioneja tehtiin matalammiksi ja paksummiksi, jotta ne kestäisivät tykintulta. Monen eurooppalaisen kaupungin vanha linnoitusvyöhyke perustui juuri tähän ratkaisuun, ja Genevessäkin kaupungin linnoitukset kuuluivat samaan perinteeseen. Tosin täsmällisiä vuosilukuja en lupaa, vaan puhun yleiskuvasta. Ja minä jaksoin selittää tämän ilman yhtäkään pullaa.",
+  "linkit": [
+   "tykistö",
+   "muurit"
+  ],
+  "jatkot": [
+   "Miten tykistö muutti linnoitusten rakentamista?",
+   "Mitä eroa on muurilla ja bastionilla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-grand-hotel-schreiber-rigi-kulm",
+  "kysymys": "Miltä Rigi Kulmin Grand Hotel Schreiber näytti loistoaikanaan?",
+  "uusi": false,
+  "vastaus": "No niin. Katotaas. Arkkitehti Horace Édouard Davinet suunnitteli [[Rigi Kulmin]] huipulle komean suurhotellin, joka avattiin vuonna 1875. Se rakennettiin Euroopan ensimmäisen [[vuoristorautatien]] päätepisteen yhteyteen, ja siitä tuli 1800-luvun lopulla yläluokan suosima auringonnousukohde. Tarkkaa ulkoasua, esimerkiksi julkisivun värejä tai kerrosten määrää, en ole varma kuvaamaan, mutta hotellia luonnehditaan komeaksi suurhotelliksi, joka hallitsi huippua. Myöhemmin hotelli purettiin ja korvattiin vaatimattomammalla hospiisityylisellä rakennuksella. Ylhäältä katsottuna se on kyl ollut huikea näky.",
+  "linkit": [
+   "Rigi Kulmin",
+   "vuoristorautatien"
+  ],
+  "jatkot": [
+   "Miksi Rigille rakennettiin vuoristorautatie?",
+   "Millaisia suurhotelleja Alpeilla rakennettiin 1800-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-grand-hotel-schreiber-rigi-kulm",
+  "kysymys": "Miksi Rigi Kulmin Grand Hotel Schreiber katosi?",
+  "uusi": false,
+  "vastaus": "Ai tota. Täsmällistä syytä purkamiselle en tiedä. Hotelli purettiin kokonaan ja korvattiin vaatimattomammalla hospiisityylisellä rakennuksella, mutta purkamisen tarkkaa syytä ja ajankohtaa en ole varma kertomaan. Yleisesti ottaen suurhotellien kysyntä [[Alpeilla]] muuttui 1900-luvulla, kun matkailun tavat ja asiakaskunta vaihtuivat ja vanhojen puurakenteisten hotellien ylläpito kävi kalliiksi; tämä on yleiskuva eikä varmaa tietoa juuri tästä hotellista. Rakennus oli avattu 1875 [[vuoristorautatien]] päätepisteen yhteyteen. Tästä kannattaa kysyä paikallisarkistosta, en minä sitä tiedä.",
+  "linkit": [
+   "Alpeilla",
+   "vuoristorautatien"
+  ],
+  "jatkot": [
+   "Millainen Rigi Kulmin nykyinen rakennus on?",
+   "Miksi Alppien suurhotellit menettivät suosiotaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-grand-hotel-schreiber-rigi-kulm",
+  "kysymys": "Miten hammasratavuoristorautatie toimii?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Hyvä kysymys tuo. Hammasrata on rautatie, jonka kiskojen välissä on erillinen hammastettu kisko. Veturin alla oleva hammaspyörä tarttuu tähän kiskoon, jolloin juna ei luista eikä liu'u taaksepäin, vaikka rinne olisi hyvin jyrkkä. Tällä tavalla vuoristoon voitiin rakentaa rautatie, jota tavallinen [[kitkaveturi]] ei olisi jaksanut kulkea. Rigin rata Vitznausta huipulle oli 1800-luvun merkittävä esimerkki tästä tekniikasta, ja sen suunnittelussa vaikutti sveitsiläinen insinööri [[Niklaus Riggenbach]]. Jos haluat tarkan jyrkkyysprosentin, siitä en ole varma. Kyl minä pysyn lentäen paremmin pystyssä kuin juna.",
+  "linkit": [
+   "kitkaveturi",
+   "Niklaus Riggenbach"
+  ],
+  "jatkot": [
+   "Kuka oli Niklaus Riggenbach?",
+   "Missä muualla Euroopassa on hammasratoja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-grand-hotel-schreiber-rigi-kulm",
+  "kysymys": "Missä Rigi-vuori sijaitsee?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Tost minä osaan kertoo. Rigi on vuori Keski-Sveitsissä, [[Luzernin]]- ja Zugin- sekä Lauerzinjärven välisellä alueella; sen huippu Rigi Kulm tarjoaa näkymiä ympäröiville järville ja [[Alpeille]]. Vuorta kutsutaan usein vuorten kuningattareksi, vaikka tämä on enemmän matkailun nimitys kuin virallinen. Huipulle pääsee vuoristoradoilla, ja Vitznau–Rigi-rata oli Euroopan ensimmäinen vuoristorautatie. Tarkkaa korkeutta en lupaa muistista, sillä pienikin virhe on virhe. Maisemat ovat kyl sellaiset, että kyyhkykin pysähtyisi katsomaan.",
+  "linkit": [
+   "Luzernin",
+   "Alpeille"
+  ],
+  "jatkot": [
+   "Millä tavoin Rigille pääsee nykyään?",
+   "Mikä tekee Rigin huipulta näkymästä erityisen?"
+  ],
+  "paikka": {
+   "nimi": "Rigi",
+   "lat": 47.06,
+   "lon": 8.49,
+   "tarkkuus": "alue"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-grand-hotel-schreiber-rigi-kulm",
+  "kysymys": "Miksi vuoren huipulle noustiin katsomaan auringonnousua?",
+  "uusi": true,
+  "vastaus": "Ai se. Sepä sattui. Auringonnousun katsominen vuorelta oli 1800-luvulla suosittu seurapiirien huvi, koska korkealta näkee horisontin laajasti ja valo muuttuu nousun hetkellä nopeasti. [[Romantiikan]] aikakaudella ihmiset hakivat vaikuttavia luontoelämyksiä, ja [[Alpit]] olivat tähän erityisen sopivia. Rautatien tulo teki huipulle pääsyn helpoksi, jolloin sinne saattoi nousta myös kokemattomampi matkailija ilman pitkää vaellusta. Rigi Kulm tunnettiin juuri tästä tarkoituksesta. Kerran minäkin näin auringonnousun katolta, mut tuolloin ei ollut ketään kertomassa, että se oli tyylikästä.",
+  "linkit": [
+   "Romantiikan",
+   "Alpit"
+  ],
+  "jatkot": [
+   "Mitä romantiikka tarkoitti 1800-luvun taiteessa?",
+   "Miten vuoristomatkailu alkoi Alpeilla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-geneve",
+  "kysymys": "Miksi Geneveä kutsutaan rauhan pääkaupungiksi?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: Geneve. Tän minä olen lukenut monta kertaa. Nimitys liittyy siihen, että Genevestä on tullut kansainvälisen [[diplomatian]] keskus. Kaupungissa on aloittanut toimintansa Henry Dunantin perustama [[Punainen Risti]], ja vuonna 1864 siellä allekirjoitettiin ensimmäinen [[Geneven sopimus]] sodan haavoittuneiden suojelemiseksi. Ensimmäisen maailmansodan jälkeen Genevestä tuli myös [[Kansainliiton]] kotikaupunki. Nimitys on siis ennen kaikkea kuvaus kaupungin roolista neuvottelujen ja humanitaarisen työn paikkana, ei lupaus siitä, että rauha olisi aina pysynyt. Onpas siit onneksi jo pitkä aika, kun ensimmäinen sopimus tehtiin.",
+  "linkit": [
+   "diplomatian",
+   "Punainen Risti",
+   "Geneven sopimus",
+   "Kansainliiton"
+  ],
+  "jatkot": [
+   "Kuka Henry Dunant oli?",
+   "Mikä Kansainliitto oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-geneve",
+  "kysymys": "Mitä Genevessä sovittiin vuonna 1864?",
+  "uusi": false,
+  "vastaus": "Kääk. Noin kauas taaksepäin. Vuonna 1864 Genevessä allekirjoitettiin ensimmäinen [[Geneven sopimus]], jonka tarkoitus oli suojella sodan haavoittuneita. Sopimus liittyi Henry Dunantin perustaman [[Punaisen Ristin]] toimintaan, joka oli alkanut samassa kaupungissa. Sopimuksen ajatuksena oli, että haavoittuneita sotilaita ja heitä hoitavia on kohdeltava turvallisesti riippumatta siitä, kumpaa osapuolta he edustavat. Sen jälkeen sopimusta on täydennetty myöhemmillä sopimuksilla, joista tarkat vuodet jätän tässä kertomatta. Se on yli sataviisikymmentä vuotta vanha asia, ja se on yhä tärkeä.",
+  "linkit": [
+   "Geneven sopimus",
+   "Punaisen Ristin"
+  ],
+  "jatkot": [
+   "Miksi Punaisen Ristin tunnus on punainen risti valkoisella?",
+   "Mitä myöhemmät Geneven sopimukset koskevat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-geneve",
+  "kysymys": "Miksi Punaisen Ristin tunnus on punainen risti valkoisella?",
+  "uusi": true,
+  "vastaus": "Mmm— Nyt tähän tulee tarkkuutta. Punaisen Ristin tunnus on Sveitsin lipun värit käänteisinä: punaisella pohjalla oleva valkoinen risti vaihdettiin valkoiselle pohjalle punaiseksi ristiksi. Ratkaisu kunnioittaa Sveitsiä, jossa [[Punainen Risti]] syntyi, ja [[Henry Dunantin]] kotimaata. Tunnus on tarkoitettu suojaamaan haavoittuneita ja heitä auttavia, ja siksi sen käyttöä on säädelty kansainvälisillä sopimuksilla. Tarkkoja päätöspäiviä en ole varma muistamaan, mutta tunnuksen ajatus on selvä. Kyl se on kyyhkyn silmään ihan selkeä merkki.",
+  "linkit": [
+   "Punainen Risti",
+   "Henry Dunantin"
+  ],
+  "jatkot": [
+   "Mikä on Punainen Puolikuu?",
+   "Miten Punainen Risti on kehittynyt vuosien mittaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-geneve",
+  "kysymys": "Mikä oli Kansainliitto?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Tätä minä tiedän. Kansainliitto oli ensimmäisen maailmansodan jälkeen perustettu kansainvälinen järjestö, jonka päämaja oli [[Genevessä]] ja jonka tarkoitus oli ylläpitää rauhaa jäsenvaltioiden välisellä yhteistyöllä. Järjestö perustettiin noin vuonna 1920 sodan raskaiden kokemusten jälkeen. Se ei kuitenkaan onnistunut estämään uutta suursotaa, ja toisen maailmansodan jälkeen sen tehtävää jatkoi [[Yhdistyneet kansakunnat]]. Eräät suurvallat eivät olleet mukana, mikä heikensi sen vaikutusvaltaa. Onpas siitä pitkä aika ja onneksi.",
+  "linkit": [
+   "Genevessä",
+   "Yhdistyneet kansakunnat"
+  ],
+  "jatkot": [
+   "Miksi Kansainliitto ei onnistunut tehtävässään?",
+   "Mikä on Yhdistyneiden kansakuntien tehtävä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-geneve",
+  "kysymys": "Millä kielellä Genevessä puhutaan?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Helppo kysymys, hyvä. Genevessä puhutaan pääasiassa ranskaa, sillä kaupunki sijaitsee Sveitsin ranskankielisellä [[Romandian]] alueella. Sveitsissä on useita virallisia kieliä, joten ranskan lisäksi maassa käytetään muun muassa saksaa ja italiaa. Kansainvälisten järjestöjen vuoksi kaupungissa kuulee myös englantia ja monia muita kieliä. Kaupunki sijaitsee [[Rhône]]-joen ja Genevenjärven kohdalla Sveitsin lounaiskulmassa. Sveitsin leivonnaisista en tiedä nimeä, mutta kyl ne kuulostavat hyviltä, vaikka en voi vannoa.\n\nRanska on arkikieli, ja minäkin tulen sillä toimeen: sukuni on lentänyt Ranskaan ennenkin. Pullaa ei silti ole kukaan tarjonnut.",
+  "linkit": [
+   "Romandian",
+   "Rhône"
+  ],
+  "jatkot": [
+   "Mitä muita kieliä Sveitsissä puhutaan?",
+   "Mikä Romandia on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lavaux",
+  "kysymys": "Ketkä raivasivat Lavaux'n ensimmäiset viinipenkereet?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Katolta se näkyy hyvin. Lavaux'n ensimmäiset viinipenkereet raivasivat 1000-luvulla alkaen [[benediktiini]]- ja [[sistersiläismunkit]]. Penkereiden raivaaminen jatkui sukupolvien ajan, ja viininviljelyllä on alueella takanaan lähes 800 vuotta historiaa. Kivetyt penkereet kiertyvät noin 30 kilometrin matkalla Genevenjärven pohjoisrannalla Vaudin kantonissa. Munkkien merkitys viininviljelylle oli keskiajalla laajemmin suuri eri puolilla Eurooppaa, mutta tässä riittää tämä alue. Munkkien työ on kyl kestänyt paremmin kuin useimmat kirjeet.",
+  "linkit": [
+   "benediktiini",
+   "sistersiläismunkit"
+  ],
+  "jatkot": [
+   "Miksi munkit viljelivät viiniä keskiajalla?",
+   "Millaisia kylät kuten Saint-Saphorin ovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lavaux",
+  "kysymys": "Mikä rypälelajike on alueen tärkein?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Se on helppo. Alueen tärkein rypälelajike on [[chasselas]], joka antaa nimensä myös monille paikallisille valkoviineille. Lajike on Lavaux'n viinitarhoilla niin keskeinen, että alueen viininviljely tunnetaan siitä laajalti. Viinitarhat sijaitsevat [[Genevenjärven]] pohjoisrannalla Vaudin kantonissa, ja penkereiltä avautuu näkymä järven yli Savoijin vuorille. Muista rypälelajikkeista en tässä ole varma. Kyl minä muistan tän ilman muistiinpanoja.",
+  "linkit": [
+   "chasselas",
+   "Genevenjärven"
+  ],
+  "jatkot": [
+   "Millainen viini chasselasista valmistetaan?",
+   "Mitä Vaudin kantoni on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lavaux",
+  "kysymys": "Millainen viini chasselasista valmistetaan?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Viinitietoa tulee. Chasselasista valmistetaan yleensä kuivaa, kevyttä ja raikasta [[valkoviiniä]], jonka maku on usein hillitty ja hedelmäinen. Tarkka maku riippuu kuitenkin alueesta, maaperästä, vuosikerrasta ja valmistajasta, joten yhtä ainoaa kuvausta ei voi antaa. [[Lavaux]]'ssa viljellyt rypäleet kasvavat järvenrannan jyrkillä, kivetyillä penkereillä, ja nämä olosuhteet vaikuttavat viinin luonteeseen. Hyvin tarkkoja makuhuomioita en uskalla esittää, sillä en ole varma niistä. Maistamaan kyyhky ei pääse, mut lukea saa.",
+  "linkit": [
+   "valkoviiniä",
+   "Lavaux"
+  ],
+  "jatkot": [
+   "Mitä ruokaa chasselas-viinin kanssa tarjotaan?",
+   "Miten penkereet vaikuttavat rypäleiden kypsymiseen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lavaux",
+  "kysymys": "Miksi viiniä viljellään jyrkillä rinteillä?",
+  "uusi": true,
+  "vastaus": "No jopas. Tuo on hyvä kysymys. Jyrkät rinteet sopivat viinirypäleelle, koska ne saavat paljon auringonvaloa ja vesi valuu niistä pois, eikä juuret jää märkään. Rinteisiin rakennetut [[penkereet]] ehkäisevät maan valumista alas ja tekevät työstä mahdollista. Lavaux'ssa kerrotaan usein myös, että kivimuurit varastoivat päivän lämpöä ja järvi heijastaa valoa viinitarhoihin; tämä on yleinen kuvaus, jonka tarkkuudesta en ole varma. Penkereet kiertyvät noin 30 kilometrin matkalla [[Genevenjärven]] yllä. Rinne on kyl työläs, mut maisema palkitsee.",
+  "linkit": [
+   "penkereet",
+   "Genevenjärven"
+  ],
+  "jatkot": [
+   "Miten penkereet rakennetaan kivistä?",
+   "Mitä muita viinialueita Euroopassa on jyrkillä rinteillä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lavaux",
+  "kysymys": "Missä maissa Genevenjärvi sijaitsee?",
+  "uusi": true,
+  "vastaus": "Katotaas. Tämän tietää helposti. Genevenjärvi sijaitsee Sveitsin ja Ranskan rajalla: pohjoisranta on Sveitsin puolella ja eteläranta suurelta osin [[Ranskan]] puolella. [[Rhône]]-joki virtaa järvestä ulos Geneven kohdalla. Pohjoisrannalla, Vaudin kantonissa, on Lavaux'n viinitarhoja, ja järven yli näkyy Savoijin vuoria. Tarkkaa pinta-alaa tai syvyyttä en ole varma kertomaan. Ylhäältä katsoen järvi näyttää hienolta maalaukselta.\n\nRajanylitys on vesillä helppo, ja siitä minä pidän: kyyhky ei tarvitse passia. Sukuni on aina ollut tässä valtion kannalla.",
+  "linkit": [
+   "Ranskan",
+   "Rhône"
+  ],
+  "jatkot": [
+   "Missä Rhône-joki saa alkunsa?",
+   "Mitä kaupunkeja Genevenjärven rannalla on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-cern",
+  "kysymys": "Missä CERN sijaitsee?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Tän minä tiedän. CERN eli Euroopan hiukkasfysiikan tutkimuskeskus toimii Meyrinissä, [[Geneven]] länsipuolella aivan Ranskan rajalla. Se on maailman suurimpia hiukkasfysiikan laboratorioita, ja sen ydin on [[Large Hadron Collider]], maan alle louhittu rengasmainen hiukkaskiihdytin. Keskus perustettiin vuonna 1954 kahdentoista Länsi-Euroopan valtion sopimuksella. Rakenteet ulottuvat maan alla myös Ranskan puolelle. Hyvä että minulla on kartta päässä.",
+  "linkit": [
+   "Geneven",
+   "Large Hadron Collider"
+  ],
+  "jatkot": [
+   "Mikä on Large Hadron Collider?",
+   "Miksi CERN perustettiin?"
+  ],
+  "paikka": {
+   "nimi": "CERN",
+   "lat": 46.23,
+   "lon": 6.05,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-cern",
+  "kysymys": "Mikä maailmanlaajuinen keksintö syntyi CERNin tarpeesta jakaa tietoa?",
+  "uusi": false,
+  "vastaus": "Ai tota. Selvä juttu. CERNin tarpeesta jakaa tietoa syntyi [[World Wide Web]]. Tutkijat tarvitsivat 1980-luvun lopulla keinon jakaa tietoa eri puolilla maailmaa oleville kollegoilleen, ja tästä tarpeesta alkoi kehitys, josta tuli maailmanlaajuinen verkko. Web on eri asia kuin [[internet]], joka on tietoliikenneverkko; web on sen päällä toimiva tapa julkaista ja löytää sivuja. Keskus toimii Meyrinissä Geneven länsipuolella ja se perustettiin vuonna 1954. Minä lähetän kirjeitä vanhaan malliin, mut ymmärrän idean.",
+  "linkit": [
+   "World Wide Web",
+   "internet"
+  ],
+  "jatkot": [
+   "Kuka kehitti World Wide Webin CERNissä?",
+   "Mitä eroa on internetillä ja webillä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-cern",
+  "kysymys": "Mikä on Large Hadron Collider?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: tämä on se iso rengas. Large Hadron Collider on CERNin hiukkaskiihdytin, valtava maan alle louhittu rengasmainen laite. Siinä hiukkasia kiihdytetään lähes valon nopeuteen ja törmäytetään toisiinsa, jotta tutkijat voivat havaita, mitä törmäyksissä syntyy. Renkaan ympärysmitta on noin 27 kilometriä, mutta tarkan luvun sanon varauksella. Laitteen tuloksiin kuuluu muun muassa [[Higgsin hiukkasen]] havaitseminen vuonna 2012. Kiihdytin sijaitsee [[CERNin]] alueella Geneven lähistöllä. Jos minun pitäisi lentää tuo rengas ympäri, sanoisin että otetaan pullataukoja.",
+  "linkit": [
+   "Higgsin hiukkasen",
+   "CERNin"
+  ],
+  "jatkot": [
+   "Mikä on Higgsin hiukkanen?",
+   "Miten hiukkaset kiihdytetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-cern",
+  "kysymys": "Kuka keksi World Wide Webin?",
+  "uusi": true,
+  "vastaus": "No niin. Tähän on selvä vastaus. World Wide Webin kehitti brittiläinen tutkija [[Tim Berners-Lee]] CERNissä 1980-luvun lopulla ja 1990-luvun alussa. Hänen työnsä oli vastaus siihen, että tutkijoiden piti jakaa tietoa kollegoilleen eri puolilla maailmaa. Keksintö ei ollut yhden ihmisen työ yksin, sillä myös muut CERNin työntekijät ja myöhemmin monet muut osallistuivat sen kehittämiseen ja levittämiseen. Tarkkoja päivämääriä en ole varma kertomaan. [[World Wide Web]] on silti hänen nimeensä yleisimmin yhdistetty. Ihmeellistä, että kyyhky on päässyt näin pitkälle asiassa.",
+  "linkit": [
+   "Tim Berners-Lee",
+   "World Wide Web"
+  ],
+  "jatkot": [
+   "Milloin World Wide Web avattiin yleiseen käyttöön?",
+   "Mikä on selain?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-cern",
+  "kysymys": "Mitä hiukkasfysiikka tutkii?",
+  "uusi": true,
+  "vastaus": "Mmm— Iso aihe, tiivistän. Hiukkasfysiikka tutkii aineen pienimpiä rakenneosia ja niiden välisiä voimia. Tutkijat selvittävät esimerkiksi, mistä [[alkeishiukkaset]] koostuvat ja miten ne vuorovaikuttavat keskenään. Tutkimuksessa käytetään suuria laitteita, kuten [[hiukkaskiihdyttimiä]], joissa hiukkasia törmäytetään ja törmäysten tuloksia tarkkaillaan ilmaisimilla. Euroopassa tutkimusta tehdään erityisesti CERNissä, joka toimii Meyrinissä Geneven länsipuolella. Aihe on laaja, joten tämä on vain lyhyt yleiskuva. Kyl minä sentään ymmärsin vähän.\n\nMinä olen enemmän lintuhiukkasten asiantuntija. Silti kaiken suuren tutkimuksen alkupiste on yksi pieni hiukkanen.",
+  "linkit": [
+   "alkeishiukkaset",
+   "hiukkaskiihdyttimiä"
+  ],
+  "jatkot": [
+   "Mitä alkeishiukkasia tunnetaan?",
+   "Miten hiukkasia havaitaan kiihdyttimessä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fribourg",
+  "kysymys": "Kuka perusti Fribourgin ja minä vuonna?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Fribourgin perusti Zähringenin herttua [[Berthold IV]] vuonna 1157 kalliolle, jota [[Sarine-joki]] suojaa kolmelta sivulta. Kaupungin nimi tulee saksan sanoista \"vapaa\" ja \"linnoitus\", mikä sopii hyvin tuollaiseen paikkaan. Herttuakunnan sammuttua vuonna 1218 kaupunki siirtyi [[Kyburgin]] suvulle, ja vuonna 1277 se myytiin Habsburgeille. Ei paha muisti kyyhkyltä.",
+  "linkit": [
+   "Berthold IV",
+   "Sarine-joki",
+   "Kyburgin"
+  ],
+  "jatkot": [
+   "Miksi Fribourg sijaitsee kielirajalla?",
+   "Mitä Fribourgissa valmistettiin keskiajalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fribourg",
+  "kysymys": "Mistä kahdesta sanasta kaupungin saksankielinen nimi Freiburg muodostuu?",
+  "uusi": false,
+  "vastaus": "No niin, tähän löytyy vastaus. Saksankielinen nimi Freiburg muodostuu sanoista \"frei\", joka tarkoittaa vapaata, ja \"Burg\", joka tarkoittaa linnoitusta. Nimi viittaa kaupunkiin, jonka [[Zähringenin]] herttua perusti vuonna 1157 jokimutkan suojaamalle kalliolle. Kaupungin täydellinen saksankielinen nimi on Freiburg im Üechtland, jolla se erotetaan [[Freiburg im Breisgausta]]. Pelkkä nimi kertoo jo yllättävän paljon.",
+  "linkit": [
+   "Zähringenin",
+   "Freiburg im Breisgausta"
+  ],
+  "jatkot": [
+   "Mistä Üechtland-nimi tulee?",
+   "Miten Fribourgin kaksi kieltä jakautuvat kaupungissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fribourg",
+  "kysymys": "Minkä joen mutkassa Fribourg sijaitsee?",
+  "uusi": true,
+  "vastaus": "Kas vaan, helppo kysymys. Fribourg sijaitsee [[Sarine-joen]] mutkassa, jonka rajaaman kallion päälle kaupunki perustettiin vuonna 1157. Joki suojaa kalliota kolmelta sivulta, ja siksi paikka sopi hyvin linnoitetuksi kaupungiksi. Sarine on ranskankielinen nimi, ja saksaksi joki tunnetaan nimellä Saane. Siis vanhakaupunki on rakennettu joen ympäröimälle [[kalliolle]]. Sieltä näkee kyl kauas.",
+  "linkit": [
+   "Sarine-joen",
+   "kalliolle"
+  ],
+  "jatkot": [
+   "Mihin jokeen Sarine laskee?",
+   "Millainen Fribourgin vanhakaupunki on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fribourg",
+  "kysymys": "Mitä kieliä Fribourgin kaduilla kuulee?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Fribourgin kaduilla kuulee sekä [[ranskaa]] että [[saksaa]], sillä kaupunki sijaitsee kielirajalla saksankielisen ja ranskankielisen Sveitsin välissä. Kielirajalla elävä kaupunki on tottunut vaihtamaan kieltä jopa kesken keskustelun. Vanhakaupunki on säilynyt yhtenä Sveitsin parhaiten säilyneistä, joten kielet kuuluvat keskiaikaisessa miljöössä. Täällä olis kyl hyvä oppia kaksi kieltä yhdellä kävelyllä.",
+  "linkit": [
+   "ranskaa",
+   "saksaa"
+  ],
+  "jatkot": [
+   "Millaisia kielirajoja Sveitsissä on?",
+   "Kuinka monta virallista kieltä Sveitsillä on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fribourg",
+  "kysymys": "Mistä tuotteista Fribourg oli tunnettu 1300-luvulla?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Fribourg oli jo 1300-luvulla tunnettu [[kangas- ja nahkatuotannostaan]] ympäri Keski-Eurooppaa. Kaupunki oli tuolloin siirtynyt Kyburgin suvulta [[Habsburgeille]], ja käsityöläisten tuotteet liikkuivat laajalla alueella. Jokimutkan suojaama kalliokaupunki tarjosi sopivan paikan sekä työlle että kaupalle. Tarkempia tuotantolukuja en ole varma tietäväni, joten jätän ne mainitsematta. Hyvin muistin tuonkin.",
+  "linkit": [
+   "kangas- ja nahkatuotannostaan",
+   "Habsburgeille"
+  ],
+  "jatkot": [
+   "Miten nahkaa on perinteisesti valmistettu?",
+   "Mitkä kaupungit olivat keskiajan kauppakaupunkeja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zurich",
+  "kysymys": "Mikä oli Zürichin roomalaisaikainen nimi?",
+  "uusi": false,
+  "vastaus": "Ai se. Zürichin roomalaisaikainen nimi oli [[Turicum]]. Roomalaiset perustivat paikalle tulliaseman, ja siitä kaupunki on kehittynyt Sveitsin suurimmaksi kaupungiksi. Nimi on säilynyt nykyisessä muodossa Zürich, vaikka sen ääntäminen on matkan varrella muuttunut. Zürich sijaitsee [[Zürichinjärven]] luoteiskärjessä, ja tulliasema sijaitsi siis jo silloin vilkkaalla paikalla. Latinaa, ja minä sentään osaan sitä.",
+  "linkit": [
+   "Turicum",
+   "Zürichinjärven"
+  ],
+  "jatkot": [
+   "Miten Zürich kehittyi keskiajalla?",
+   "Mitä muuta roomalaiset rakensivat nykyisen Sveitsin alueelle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zurich",
+  "kysymys": "Kuka johti Zürichin uskonpuhdistusta 1500-luvulla?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Zürichin uskonpuhdistusta johti [[Huldrych Zwingli]], jonka johdolla kaupungista tuli vuonna 1519 yksi protestanttisen [[uskonpuhdistuksen]] tärkeimmistä keskuksista Euroopassa. Zürich oli tuolloin valtakunnanvälitön kaupunki Pyhän saksalais-roomalaisen keisarikunnan alaisuudessa. Zwinglin vaikutus ulottui kaupungin ulkopuolelle muihin sveitsiläisiin kantoneihin. Vuosiluvuista olen kyl varma vain tuosta 1519.",
+  "linkit": [
+   "Huldrych Zwingli",
+   "uskonpuhdistuksen"
+  ],
+  "jatkot": [
+   "Mikä erotti Zwinglin ja Lutherin opit toisistaan?",
+   "Miten uskonpuhdistus levisi muualle Sveitsiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zurich",
+  "kysymys": "Mikä joki virtaa Zürichin halki?",
+  "uusi": true,
+  "vastaus": "Kato, tämä on helppo. Zürichin halki virtaa [[Limmat-joki]], joka laskee Zürichinjärvestä. Joen rannoilla sijaitsee tornien täyttämä vanhakaupunki, jonka tunnistaa kauas. Zürich sijaitsee [[Zürichinjärven]] luoteiskärjessä, joten joki lähtee kaupungin kohdalta järvestä pohjoiseen. Mitä muuta jokirantakaupunki voisi toivoa kuin hyviä leivonnaisia, mutta niistä en tiedä Zürichin versiota.",
+  "linkit": [
+   "Limmat-joki",
+   "Zürichinjärven"
+  ],
+  "jatkot": [
+   "Mihin Limmat-joki päätyy järven jälkeen?",
+   "Mitä nähtävyyksiä Zürichin vanhakaupungissa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zurich",
+  "kysymys": "Mitä valtakunnanvälittömyys keskiajalla tarkoitti?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Valtakunnanvälittömyys tarkoitti keskiajalla sitä, että kaupunki oli suoraan keisarin alaisuudessa eikä minkään välissä olevan herran tai ruhtinaan alainen. [[Zürich]] sai tämän erioikeuden [[Pyhän saksalais-roomalaisen keisarikunnan]] aikana, ja se antoi kaupungille huomattavan itsenäisyyden omissa asioissaan. Käytännössä kaupunki hallitsi itseään, mutta kuului silti keisarikuntaan. Tarkkaa vuotta erioikeuden saamiselle en ole varma. Hirmuinen sana, mutta selvisin siitä.",
+  "linkit": [
+   "Zürich",
+   "Pyhän saksalais-roomalaisen keisarikunnan"
+  ],
+  "jatkot": [
+   "Mitä muita valtakunnanvälittömiä kaupunkeja oli keisarikunnassa?",
+   "Miten kaupunki hallitsi itseään keskiajalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zurich",
+  "kysymys": "Missä järvessä Zürich sijaitsee?",
+  "uusi": true,
+  "vastaus": "Ai tota. Zürich sijaitsee [[Zürichinjärven]] luoteiskärjessä, siinä päässä järveä, josta [[Limmat]] lähtee virtaamaan. Järvi on suuri vesistö Sveitsin pohjoisosassa, ja kaupunki on kasvanut sen rannalle. Kaupunki on Sveitsin suurin ja samalla Zürichin kantonin pääkaupunki. Tarkkoja mittoja järvestä en ole varma. Ylhäältä katsottuna se näyttää kyl kauniilta.",
+  "linkit": [
+   "Zürichinjärven",
+   "Limmat"
+  ],
+  "jatkot": [
+   "Mitä Zürichinjärvellä voi tehdä?",
+   "Mitkä ovat Sveitsin muut suuret järvet?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-basel",
+  "kysymys": "Mitä väriainetta Alexander Clavel alkoi valmistaa Baselissa vuonna 1859?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Alexander Clavel alkoi valmistaa Baselissa vuonna 1859 synteettistä [[fuksiinia]], väriainetta, jota tarvittiin silkkinauhateollisuudessa. Clavel oli itse silkinvärjääjä, ja hän oli yksi ensimmäisistä, jotka valmistivat tällaista väriainetta Sveitsissä. Väriaineen valmistuksessa syntyi [[arseenihuuruja]], minkä vuoksi tehdas siirrettiin vuonna 1864 kaupungin laidalle Klybeckin Reininrantaan. Ja tämän kaiken kerroin ilman muistiinpanoja.",
+  "linkit": [
+   "fuksiinia",
+   "arseenihuuruja"
+  ],
+  "jatkot": [
+   "Miksi arseenia käytettiin väriaineiden valmistuksessa?",
+   "Miten Basel kehittyi kemianteollisuuden keskukseksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-basel",
+  "kysymys": "Kenelle Clavel myi tehtaansa juuri ennen kuolemaansa?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Clavel myi tehtaansa alkuvuodesta 1873 kemisti [[Robert Bindschedlerille]] ja liikemies [[Albert Buschille]]. Siitä kaupasta kasvoi vuosikymmenten kuluessa kemianjätti [[Ciba]]. Kysymyksessä on oletus kuolemasta, enkä ole varma Clavelin kuolinajasta, joten sitä en voi vahvistaa. Kauppa tehtiin siis alkuvuodesta 1873 ja kohteena oli Klybeckin tehdas Reinin rannalla. Oikaisu meni nyt lyhyeksi.",
+  "linkit": [
+   "Robert Bindschedlerille",
+   "Albert Buschille",
+   "Ciba"
+  ],
+  "jatkot": [
+   "Mitä Ciba valmisti myöhemmin?",
+   "Mistä Basel sai nykyisen lääketeollisuutensa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-basel",
+  "kysymys": "Miksi väritehdas siirrettiin Baselin laidalle 1860-luvulla?",
+  "uusi": true,
+  "vastaus": "No niin. Väriaineen valmistuksessa syntyi [[arseenihuuruja]], jotka ajoivat Clavelin tehtaan vuonna 1864 pois kaupungin keskeltä Klybeckin [[Reininrantaan]]. Arseeni on myrkyllistä, joten tehdas haluttiin kauemmas asutuksesta. Sama ongelma seurasi monia varhaisia kemiantehtaita Euroopassa. Tehdas valmisti synteettistä fuksiinia silkkinauhateollisuudelle. Hyvä että ilmanlaatua pidettiin silloinkin edes jotenkin mielessä.",
+  "linkit": [
+   "arseenihuuruja",
+   "Reininrantaan"
+  ],
+  "jatkot": [
+   "Mihin fuksiinia käytettiin silkkiteollisuudessa?",
+   "Miten Reini on vaikuttanut Baselin kehitykseen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-basel",
+  "kysymys": "Mistä yrityksestä Clavelin tehtaasta kasvoi myöhemmin?",
+  "uusi": true,
+  "vastaus": "Mmm— Clavelin tehtaasta kasvoi vuosikymmenten kuluessa kemianjätti [[Ciba]]. Alkuvuodesta 1873 Clavel myi tehtaansa kemisti [[Robert Bindschedlerille]] ja liikemies Albert Buschille, ja tästä kaupasta kehitys lähti liikkeelle. Basel on sittemmin kasvanut Sveitsin kemian- ja lääketeollisuuden keskukseksi. Yrityksen myöhemmistä vaiheista en ole varma kertomaan tarkemmin.\n\nPienestä värinkeittäjästä suureksi yritykseksi, ja kaikki alkoi Reinin rannalta. Siivekkäänä arvostan tuollaista nousua.",
+  "linkit": [
+   "Ciba",
+   "Robert Bindschedlerille"
+  ],
+  "jatkot": [
+   "Mitä muita suuria yrityksiä Baselissa toimii?",
+   "Miksi lääketeollisuus keskittyi juuri Basel-seudulle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-basel",
+  "kysymys": "Minkä joen varrella Basel sijaitsee?",
+  "uusi": true,
+  "vastaus": "Kas vaan, tämä on helppo. Basel sijaitsee [[Reinin]] varrella, ja se on [[Sveitsin]] kolmanneksi suurin kaupunki. Rein on yksi Euroopan tärkeimmistä jokiväylistä, ja Baselissa on pitkään ollut satamatoimintaa. Väritehtaan siirto Klybeckin rantaan vuonna 1864 liittyi juuri tähän jokimaisemaan. Joesta olen varma, satamasta vähemmän tarkkojen lukujen osalta. Jokirannasta näkee kyl hyvin.",
+  "linkit": [
+   "Reinin",
+   "Sveitsin"
+  ],
+  "jatkot": [
+   "Mistä Rein saa alkunsa?",
+   "Mitä maita Rein virtaa läpi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-emmental",
+  "kysymys": "Mistä kahdesta joesta Emmental-laakso koostuu?",
+  "uusi": false,
+  "vastaus": "Kato, tähän on selvä vastaus. Emmental on kukkulainen laakso Bernin kantonissa, ja se sijaitsee [[Emme-joen]] ja [[Ilfis-joen]] varrella. Nimi Emmental viittaa Emme-jokeen, ja sana \"tal\" tarkoittaa saksaksi laaksoa. Laakson tärkeimmät kylät ovat [[Burgdorf]] ja Langnau, ja seutu elää pääasiassa maidontuotannosta. Joet ovat siis olleet laaksossa päänäyttämönä. Sanoin senkin hyvin.",
+  "linkit": [
+   "Emme-joen",
+   "Ilfis-joen",
+   "Burgdorf"
+  ],
+  "jatkot": [
+   "Millainen Emmentalin maisema on?",
+   "Miten Emmentaler-juusto valmistetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-emmental",
+  "kysymys": "Kuka kuvasi emmentalilaista talonpoikaiselämää kirjoissaan?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Emmentalilaista talonpoikaiselämää kuvasi 1800-luvun alkupuolella pappi ja kirjailija [[Jeremias Gotthelf]]. Hänen romaaninsa tekivät laakson tunnetuksi kaukana kotikantonin, [[Bernin]] kantonin, ulkopuolella. Gotthelfin teoksissa seudun maatalot, perheet ja tavat ovat keskeisessä asemassa. Kirjailijan tarkkoja teoksia en ole varma luettelemaan. Sepä oli kiva kysymys kirjallisuudesta.",
+  "linkit": [
+   "Jeremias Gotthelf",
+   "Bernin"
+  ],
+  "jatkot": [
+   "Mitä muuta Gotthelf kirjoitti papin työnsä ohella?",
+   "Millaista maalaiselämä Sveitsissä oli 1800-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-emmental",
+  "kysymys": "Mitkä ovat Emmentalin tärkeimmät kylät?",
+  "uusi": true,
+  "vastaus": "Sepä sattui: tään tiedän. Emmentalin tärkeimmät kylät ovat [[Burgdorf]] ja [[Langnau]]. Molemmat sijaitsevat kukkulaisessa laaksossa Bernin kantonissa, jonka asukkaat elävät pääasiassa maidontuotannosta. Burgdorf ja Langnau ovat siis laakson keskuksia, ja juuri täältä on kotoisin tunnettu reikäinen Emmentaler-juusto. Asukaslukuja en ole varma. Pulla puuttuu kyl listalta, mutta juusto kelpaa.",
+  "linkit": [
+   "Burgdorf",
+   "Langnau"
+  ],
+  "jatkot": [
+   "Mitä Burgdorfissa on nähtävää?",
+   "Miten Emmentaler-juusto levisi maailmalle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-emmental",
+  "kysymys": "Miltä perinteiset emmentalilaiset maatalot näyttävät?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Perinteiset emmentalilaiset maatalot tunnistaa niiden jyrkistä, lähes maahan asti ulottuvista kattokaarista. Katto on talon näyttävin osa, ja se peittää suuren osan rakennuksesta. Talot sijaitsevat kukkulaisessa laaksossa [[Bernin]] kantonissa, jonka maidontuotanto on pitkään ollut seudun elinkeino. [[Jeremias Gotthelf]] kuvasi 1800-luvun alkupuolella romaaneissaan juuri tällaista talonpoikaiselämää.\n\nYlhäältä katsoen se on ihan ymmärrettävää: katto on iso, ja minä arvostan hyvää räystästä. Siinä on suojaa sekä sateelta että kyyhkyn ruokatauolta.",
+  "linkit": [
+   "Bernin",
+   "Jeremias Gotthelf"
+  ],
+  "jatkot": [
+   "Mistä materiaaleista emmentalilaiset talot on rakennettu?",
+   "Miksi katot tehtiin niin jyrkiksi ja laskeviksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-emmental",
+  "kysymys": "Missä kantonissa Emmental sijaitsee?",
+  "uusi": true,
+  "vastaus": "Ai tota. Emmental sijaitsee [[Bernin]] kantonissa Sveitsissä. Se on kukkulainen laakso, jonka tärkeimmät kylät ovat Burgdorf ja Langnau, ja seutu elää pääasiassa maidontuotannosta. Kantonin pääkaupunki on Bern, joka on samalla Sveitsin liittovaltion hallinnollinen keskus. Emmentalista on kotoisin reikäinen [[Emmentaler-juusto]], joka on levinnyt maailmalle. Nopea vastaus, ja silti ehdin ajatella pullaa.",
+  "linkit": [
+   "Bernin",
+   "Emmentaler-juusto"
+  ],
+  "jatkot": [
+   "Mitä muita alueita Bernin kantonissa on?",
+   "Mikä tekee Emmentaler-juustosta erilaisen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lugano",
+  "kysymys": "Minkä kahden mahtisuvun kanssa Lugano kiisteli ennen liittymistään Sveitsiin?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Luganosta kiistelivät vuosisatojen ajan [[Comon]] ja [[Milanon]] ruhtinaat, ennen kuin kaupunki liittyi vanhaan Sveitsin valaliittoon vuonna 1513. Kaupunki mainitaan markkinapaikkana jo vuodesta 984. Ruhtinassukujen tarkkoja nimiä en ole varma, joten jätän ne mainitsematta. Kiistelyn kohteena oli siis markkinapaikkana ja liikennepaikkana arvokas kaupunki Luganonjärven rannalla. Tarkka sukutarina jää sitten toiselle kyyhkylle.",
+  "linkit": [
+   "Comon",
+   "Milanon"
+  ],
+  "jatkot": [
+   "Miksi Lugano liittyi Sveitsin valaliittoon?",
+   "Mitä Ticinon kantoni on historiassa ollut?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lugano",
+  "kysymys": "Minä vuonna Ticinon kantoni perustettiin?",
+  "uusi": false,
+  "vastaus": "No niin, vuosiluku on tässä tärkeä. Ticinon kantoni perustettiin vuonna 1803, ja samana vuonna [[Lugano]] sai oman poliittisen kunnallishallintonsa. Lugano on kantonin suurin kaupunki ja italiankielisen Sveitsin merkittävin keskus. Kaupunki oli liittynyt vanhaan [[Sveitsin valaliittoon]] jo vuonna 1513, joten kantonin perustaminen tuli vasta paljon myöhemmin. Hyvä muisti, vaikka sanonkin itse.",
+  "linkit": [
+   "Lugano",
+   "Sveitsin valaliittoon"
+  ],
+  "jatkot": [
+   "Mitä tapahtui Ticinon alueella ennen vuotta 1803?",
+   "Miten Sveitsin kantonit ovat syntyneet?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lugano",
+  "kysymys": "Mikä vuori kohoaa Luganon ympärillä?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Luganon ympärillä kohoaa jyrkkiä vuoria, joista yksi on [[San Salvatore]]. Kaupunki sijaitsee [[Luganonjärven]] rannalla, ja vuoret ympäröivät sitä lähes joka puolelta. Vuoren korkeuden suhteen en ole varma luvusta, joten jätän sen kertomatta. Kaupungin ympäristö on siis jyrkkää ja maisemaltaan näyttävää. Siivillä sinne pääsis kyl nopeammin.",
+  "linkit": [
+   "San Salvatore",
+   "Luganonjärven"
+  ],
+  "jatkot": [
+   "Millaista Luganonjärvi on?",
+   "Voiko San Salvatorelle nousta kävellen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lugano",
+  "kysymys": "Millä kielellä Luganossa puhutaan?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Luganossa puhutaan [[italiaa]], vaikka Sveitsi muuten on saksan- ja ranskankielinen. Lugano on Ticinon kantonin suurin kaupunki ja italiankielisen Sveitsin merkittävin keskus. Kieli selittyy alueen historialla: [[Comon]] ja Milanon ruhtinaat kiistelivät kaupungista vuosisatoja ennen kuin se liittyi Sveitsin valaliittoon. Katujen kieli on siis eri kuin suuressa osassa maata. Italiankielisessä kaupungissa olis kyl kiva kuulla pullakin nimeltä.",
+  "linkit": [
+   "italiaa",
+   "Comon"
+  ],
+  "jatkot": [
+   "Mitä kieliä Sveitsissä virallisesti puhutaan?",
+   "Miten italia on säilynyt Ticinossa Sveitsin osana?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lugano",
+  "kysymys": "Minä vuonna Lugano liittyi Sveitsin valaliittoon?",
+  "uusi": true,
+  "vastaus": "Mmm— Lugano liittyi vanhaan [[Sveitsin valaliittoon]] vuonna 1513. Sitä ennen [[Comon]] ja Milanon ruhtinaat olivat kiistelleet kaupungista vuosisatoja, ja Lugano oli mainittu markkinapaikkana jo vuodesta 984. Ticinon kantoni perustettiin vasta vuonna 1803, jolloin Lugano sai oman poliittisen kunnallishallintonsa. Valaliittoon liittyminen oli siis käänne kaupungin pitkässä historiassa. Hyvin pysyi vuosiluvut mielessä.",
+  "linkit": [
+   "Sveitsin valaliittoon",
+   "Comon"
+  ],
+  "jatkot": [
+   "Millainen Sveitsin valaliitto oli 1500-luvulla?",
+   "Mitä muutoksia Luganossa tapahtui vuonna 1803?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-st-moritz",
+  "kysymys": "Minkä vedon Caspar Badrutt löi brittivieraidensa kanssa?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: tämä on hyvä tarina. Hotelli-isäntä löi vetoa neljän brittiläisen kesävieraansa kanssa syyskuussa 1864 siitä, viihtyisivätkö he [[St. Moritzissa]] talvella. Jos vieraat eivät pitäisi kylästä talvisin, hän maksaisi heidän matkakulunsa, mutta jos he pitäisivät siitä, he saisivat jäädä hänen vierainaan niin pitkäksi aikaa kuin halusivat. Vieraat ihastuivat, ja kylästä tuli [[Alppien]] ensimmäinen talvikohde. Isäntä ei hävinnyt, sen minä kyl sanon.",
+  "linkit": [
+   "St. Moritzissa",
+   "Alppien"
+  ],
+  "jatkot": [
+   "Miten talvimatkailu Alpeilla on sittemmin kehittynyt?",
+   "Missä St. Moritz sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-st-moritz",
+  "kysymys": "Mihin vuosisataan St. Moritzin lähteille tehdyt pyhiinvaellukset juontavat?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Tarkkaa vuosisataa en osaa sanoa varmasti, mutta tiedetään, että [[mineraalilähteille]] on tehty pyhiinvaelluksia jo keskiajalta asti. Myöhemmin, 1500-luvulla, myös lääkäri [[Paracelsus]] vietti kylässä aikaa, joten paikka oli tunnettu jo tuolloin. Kylä sijaitsee [[Ylä-Engadinissa]] Graubündenin kantonissa. Vanhat polut ovat kyl minun makuuni.",
+  "linkit": [
+   "mineraalilähteille",
+   "Paracelsus",
+   "Ylä-Engadinissa"
+  ],
+  "jatkot": [
+   "Mitä mineraalilähteet ovat?",
+   "Kuka Paracelsus oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-st-moritz",
+  "kysymys": "Missä kantonissa St. Moritz sijaitsee?",
+  "uusi": true,
+  "vastaus": "Ai se. Helppo. St. Moritz sijaitsee Sveitsin [[Graubündenin]] kantonissa, korkealla [[Ylä-Engadinissa]], lähes 1 800 metrin korkeudessa. Se on kylpyläkylä, jonka [[mineraalilähteille]] on tehty pyhiinvaelluksia jo keskiajalta asti. Korkealta kaikki näyttää pieneltä, siit minä tiedän.",
+  "linkit": [
+   "Graubündenin",
+   "Ylä-Engadinissa",
+   "mineraalilähteille"
+  ],
+  "jatkot": [
+   "Mikä on Ylä-Engadin?",
+   "Mitä kieliä Graubündenissä puhutaan?"
+  ],
+  "paikka": {
+   "nimi": "St. Moritz",
+   "lat": 46.49,
+   "lon": 9.84,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-st-moritz",
+  "kysymys": "Kuka lääkäri vietti aikaa St. Moritzissa 1500-luvulla?",
+  "uusi": true,
+  "vastaus": "Katotaas. Lääkäri oli [[Paracelsus]], joka vietti 1500-luvulla aikaa kylässä. Kylän [[mineraalilähteille]] oli tehty pyhiinvaelluksia jo keskiajalta asti, joten paikka tunnettiin kylpylänä jo hänen aikanaan. Paracelsus oli tunnettu [[renessanssin]] ajan lääkäri ja luonnonfilosofi. Kyl lääkäri tietää, minne kannattaa mennä.",
+  "linkit": [
+   "Paracelsus",
+   "mineraalilähteille",
+   "renessanssin"
+  ],
+  "jatkot": [
+   "Milloin Paracelsus eli?",
+   "Mitä Paracelsus tutki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-st-moritz",
+  "kysymys": "Kuinka korkealla St. Moritz sijaitsee?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. St. Moritz sijaitsee lähes 1 800 metrin korkeudessa, [[Ylä-Engadinissa]] Sveitsin [[Graubündenin]] kantonissa. Se on kylpyläkylä, jossa [[talvimatkailu]] sai Alpeilla alkunsa syyskuussa 1864. Minusta se on kyl ihan mukava lentokorkeus.",
+  "linkit": [
+   "Ylä-Engadinissa",
+   "Graubündenin",
+   "talvimatkailu"
+  ],
+  "jatkot": [
+   "Mikä on Ylä-Engadin?",
+   "Mikä on Graubünden?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-scuol",
+  "kysymys": "Mikä kieli on Scuolin virallinen kieli?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Scuolin virallinen kieli on [[retoromaani]] eli [[romantsi]], latinasta polveutuva kieli. Sitä puhutaan enää tässä yhdessä sveitsiläiskantonissa, [[Graubündenin]] kantonissa. Latina elää, ja suku on tyytyväinen.",
+  "linkit": [
+   "retoromaani",
+   "romantsi",
+   "Graubündenin"
+  ],
+  "jatkot": [
+   "Kuinka monta ihmistä puhuu romantsia?",
+   "Mitä muita kieliä Sveitsissä puhutaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-scuol",
+  "kysymys": "Milloin Scuolin parantavia lähteitä alettiin käyttää laajemmin?",
+  "uusi": false,
+  "vastaus": "No niin, katsotaas. Scuolin parantavia lähteitä on käytetty laajemmin vasta 1860-luvulta lähtien, ja [[kylpylämatkailu]] oli tuolloin vasta alkamassa. Kylä sijaitsee [[Ala-Engadinissa]] Graubündenin kantonissa. Aika tuore juttu, meikäläisten suvun rinnalla.",
+  "linkit": [
+   "kylpylämatkailu",
+   "Ala-Engadinissa"
+  ],
+  "jatkot": [
+   "Mikä on Ala-Engadin?",
+   "Mitä kylpylämatkailu tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-scuol",
+  "kysymys": "Mikä on retoromaani eli romantsi?",
+  "uusi": true,
+  "vastaus": "Mmm— hyvä kysymys. Retoromaani eli romantsi on latinasta polveutuva kieli, jota puhutaan enää [[Graubündenin]] kantonissa Sveitsissä. Kieli jakautuu viiteen [[murteeseen]], joiden puhujat eivät aina ymmärrä toisiaan. Scuolin ympäristössä puhuttua muotoa kutsutaan [[valladeriksi]]. Roomalaista sukua, sanon minä, vaikka kukaan ei kuuntele.",
+  "linkit": [
+   "Graubündenin",
+   "murteeseen",
+   "valladeriksi"
+  ],
+  "jatkot": [
+   "Milloin romantsista tuli Sveitsin kansalliskieli?",
+   "Mihin muihin kieliin romantsi on sukua?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-scuol",
+  "kysymys": "Kuinka monta murretta romantsilla on?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Romantsilla on viisi murretta, ja niiden puhujat eivät aina ymmärrä toisiaan. Scuolin ympäristössä puhuttua muotoa kutsutaan [[valladeriksi]]. Kielelle syntyi 1800-luvun puolivälissä [[elvytysliike]], ja vuonna 1860 se otettiin opetusaineeksi opettajaseminaariin. Viis murretta, ja minä pärjään yhdellä.",
+  "linkit": [
+   "valladeriksi",
+   "elvytysliike"
+  ],
+  "jatkot": [
+   "Mikä on valladeri?",
+   "Missä romantsia puhutaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-scuol",
+  "kysymys": "Missä kantonissa Scuol sijaitsee?",
+  "uusi": true,
+  "vastaus": "Ai tota. Scuol on kylä [[Ala-Engadinissa]] Sveitsin [[Graubündenin]] kantonissa. Kylän virallinen kieli on [[retoromaani]], ja sen parantavien lähteiden käyttö levisi laajemmin 1860-luvulta alkaen. Pieni kylä, mutta kartalta se löytyy kyl.",
+  "linkit": [
+   "Ala-Engadinissa",
+   "Graubündenin",
+   "retoromaani"
+  ],
+  "jatkot": [
+   "Mitä Graubündenin kantonissa on nähtävää?",
+   "Kuinka kaukana Scuol on St. Moritzista?"
+  ],
+  "paikka": {
+   "nimi": "Scuol",
+   "lat": 46.8,
+   "lon": 10.3,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-aletsch",
+  "kysymys": "Kuinka monesta pienemmästä jäätiköstä Aletschin jäätikkö syntyy?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Aletschin jäätikkö syntyy neljän pienemmän jäätikön yhtyessä [[Konkordiaplatzilla]], jossa jää on paksuimmillaan yli 900 metriä. Sieltä jäätikkö jatkaa kohti [[Rhônen]] laaksoa. Se on [[Alppien]] suurin jäätikkö. Neljä yhdeksi, kuin lentue illalla katolla.",
+  "linkit": [
+   "Konkordiaplatzilla",
+   "Rhônen",
+   "Alppien"
+  ],
+  "jatkot": [
+   "Mitkä huiput reunustavat Aletschin jäätikköä?",
+   "Mikä on Konkordiaplatz?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-aletsch",
+  "kysymys": "Mikä joki saa alkunsa Aletschin jäätiköltä?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Aletschin jäätikkö antaa alkunsa [[Massa-joelle]], joka virtaa kohti [[Rhônen]] laaksoa. Jäätikkö sijaitsee [[Berner Alpeilla]] Valais'n kantonissa. Pienet joet ovat joskus isojen alku, kuten tässä.",
+  "linkit": [
+   "Massa-joelle",
+   "Rhônen",
+   "Berner Alpeilla"
+  ],
+  "jatkot": [
+   "Mihin Rhône-joki laskee?",
+   "Miten jäätiköt syntyvät?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-aletsch",
+  "kysymys": "Kuinka pitkä Aletschin jäätikkö on?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Aletschin jäätikkö on noin 20–23 kilometriä pitkä, ja lähteet antavat hieman eri lukuja. Sen laajuus on lähes 82 neliökilometriä, ja paksuimmillaan jää on yli 900 metriä. Jäätikkö sijaitsee [[Berner Alpeilla]] Valais'n kantonissa, ja se on [[Alppien]] suurin jäätikkö. Pitkä se on, mutta lentäen menee nopeammin.",
+  "linkit": [
+   "Berner Alpeilla",
+   "Alppien"
+  ],
+  "jatkot": [
+   "Kuinka nopeasti jäätikkö virtaa?",
+   "Milloin Unesco otti jäätikön maailmanperintöluetteloon?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-aletsch",
+  "kysymys": "Mikä Konkordiaplatz on?",
+  "uusi": true,
+  "vastaus": "Kato, tää on hyvä paikka. Konkordiaplatz on kohta [[Berner Alpeilla]], jossa neljä pienempää jäätikköä yhtyy [[Aletschin jäätiköksi]]. Siellä jää on paksuimmillaan yli 900 metriä, ja sieltä jäätikkö jatkaa kohti [[Rhônen]] laaksoa. Jää kokoontuu sinne kuin kyyhkyt torille.",
+  "linkit": [
+   "Berner Alpeilla",
+   "Aletschin jäätiköksi",
+   "Rhônen"
+  ],
+  "jatkot": [
+   "Kuinka paksua jäätikköjää voi olla?",
+   "Mikä on Jungfrau?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-aletsch",
+  "kysymys": "Miten Aletschin jäätikkö on muuttunut vuoden 1870 jälkeen?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Jäätikkö on vetäytymässä: vuodesta 1870 se on lyhentynyt yli kolme kilometriä, ja viime vuosikymmeninä lyheneminen on ollut nopeaa. Silti se on yhä [[Alppien]] suurin jäätikkö, ja [[Unesco]] otti sen ympäristöineen [[maailmanperintöluetteloon]] vuonna 2001. Hyvä, että joku on pitänyt tarkkaa kirjaa.",
+  "linkit": [
+   "Alppien",
+   "Unesco",
+   "maailmanperintöluetteloon"
+  ],
+  "jatkot": [
+   "Miksi jäätiköt vetäytyvät?",
+   "Mitä maailmanperintöluettelo tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-grande-dixence",
+  "kysymys": "Missä kantonissa Grande Dixence sijaitsee?",
+  "uusi": false,
+  "vastaus": "No jopas. Grande Dixence sijaitsee Sveitsin [[Valais'n]] kantonissa, [[Val d'Hérémencen]] perukoilla. Se on 285 metriä korkea betoninen painovoimapato, jota pidetään Sveitsin ja Euroopan korkeimpana patona. Pato patoaa [[Dixence-joen]] Lac des Dix -tekojärveksi. Jättipato, ja minä vain pikkulintu sen vieressä.",
+  "linkit": [
+   "Valais'n",
+   "Val d'Hérémencen",
+   "Dixence-joen"
+  ],
+  "jatkot": [
+   "Mikä on painovoimapato?",
+   "Kuinka monta voimalaitosta pato syöttää?"
+  ],
+  "paikka": {
+   "nimi": "Grande Dixence",
+   "lat": 46.08,
+   "lon": 7.4,
+   "tarkkuus": "alue"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-grande-dixence",
+  "kysymys": "Mihin tarkoitukseen pato rakennetaan?",
+  "uusi": false,
+  "vastaus": "Sepä sattui: tämän minä muistan. Pato rakennetaan sähköntuotantoa varten, sillä sodanjälkeinen teollisuus tarvitsi 1900-luvun puolivälissä yhä enemmän sähköä. Se syöttää vettä neljälle [[voimalaitokselle]]. Ensimmäinen, paljon pienempi [[Dixencen]] pato valmistui 1935 ja nykyinen jättipato vuonna 1961. Minä pärjään ilman sähköä, kunhan on tuulta.",
+  "linkit": [
+   "voimalaitokselle",
+   "Dixencen"
+  ],
+  "jatkot": [
+   "Miten vesivoimala tuottaa sähköä?",
+   "Kuinka monta kotitaloutta voimalaitokset palvelevat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-grande-dixence",
+  "kysymys": "Kuinka korkea Grande Dixence on?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Grande Dixence on 285 metriä korkea betoninen [[painovoimapato]], jota pidetään Sveitsin ja Euroopan korkeimpana patona. Se patoaa [[Dixence-joen]] Lac des Dix -tekojärveksi [[Valais'n]] kantonissa. Korkealle ylletty, mutta minä lennän silti yli.",
+  "linkit": [
+   "painovoimapato",
+   "Dixence-joen",
+   "Valais'n"
+  ],
+  "jatkot": [
+   "Miten painovoimapato pysyy pystyssä?",
+   "Milloin pato valmistui?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-grande-dixence",
+  "kysymys": "Minkä järven Grande Dixence muodostaa?",
+  "uusi": true,
+  "vastaus": "Just niin, tämä on helppo. Pato patoaa [[Dixence-joen]] Lac des Dix -nimiseksi [[tekojärveksi]], joka sijaitsee [[Val d'Hérémencen]] perukoilla. Järven vesi syötetään neljälle voimalaitokselle. Hyvä lintuallas, vaikkakin vähän kylmä.",
+  "linkit": [
+   "Dixence-joen",
+   "tekojärveksi",
+   "Val d'Hérémencen"
+  ],
+  "jatkot": [
+   "Mikä on tekojärvi?",
+   "Missä Val d'Hérémence sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-grande-dixence",
+  "kysymys": "Milloin nykyinen Grande Dixence -jättipato valmistui?",
+  "uusi": true,
+  "vastaus": "Selvä, tuo onnistuu. Nykyinen jättipato valmistui vuonna 1961. Ensimmäinen, paljon pienempi [[Dixencen]] pato oli valmistunut jo 1935, ja sen jälkeen kasvanut sähköntarve vaati suurempaa ratkaisua. Alue on [[Val d'Hérémencen]] perukoilla Valais'n kantonissa. Hyvä muisti, vai mitä.",
+  "linkit": [
+   "Dixencen",
+   "Val d'Hérémencen"
+  ],
+  "jatkot": [
+   "Miksi sodanjälkeinen teollisuus tarvitsi sähköä?",
+   "Kuinka paljon vettä Lac des Dix pitää sisällään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vevey",
+  "kysymys": "Minkä ongelman Daniel Peter yritti ratkaista?",
+  "uusi": false,
+  "vastaus": "Hmm, tuo on hyvä. Paikallinen makeistehtailija Peter yritti keksiä tavan valmistaa [[maitosuklaata]], mutta maidon vedestä ei tahtonut päästä eroon ilman että suklaa homehtui. [[Henri Nestlé]] neuvoi häntä, ja ratkaisu löytyi vasta vuosia myöhemmin. Sen jälkeen Peter yhdisti yrityksensä [[Nestlén]] kanssa. Pulla olisi kyl ollut helpompi.",
+  "linkit": [
+   "maitosuklaata",
+   "Henri Nestlé",
+   "Nestlén"
+  ],
+  "jatkot": [
+   "Milloin maitosuklaa keksittiin?",
+   "Mikä on konssaus?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vevey",
+  "kysymys": "Mitä Henri Nestlé myi Veveystä käsin?",
+  "uusi": false,
+  "vastaus": "Ai se. Vuonna 1867 hän alkoi myydä itse kehittämäänsä [[äidinmaidonkorviketta]], jonka reseptin hän oli keksinyt pelastaakseen kylän vauvoja. Kaupunki sijaitsee [[Genevenjärven]] rannalla, ja siitä on tullut sveitsiläisen [[elintarviketeollisuuden]] syntysija. Kyl siinä on hyvä syy muistaa nimi.",
+  "linkit": [
+   "äidinmaidonkorviketta",
+   "Genevenjärven",
+   "elintarviketeollisuuden"
+  ],
+  "jatkot": [
+   "Mikä on Nestlé nykyään?",
+   "Miksi äidinmaidonkorviketta alettiin kehittää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vevey",
+  "kysymys": "Miksi Henri Nestlé kehitti äidinmaidonkorvikkeen?",
+  "uusi": true,
+  "vastaus": "Odotas ny hetki. Nestlé keksi reseptin pelastaakseen kylän vauvoja. Hän alkoi myydä korviketta Veveystä käsin vuonna 1867, ja kaupungista tuli sveitsiläisen [[elintarviketeollisuuden]] syntysija. Myöhemmin hän neuvoi myös makeistehtailija [[Daniel Peteriä]] maitosuklaan kehittelyssä. Hieno syy aloittaa, sen minä sanon.",
+  "linkit": [
+   "elintarviketeollisuuden",
+   "Daniel Peteriä"
+  ],
+  "jatkot": [
+   "Miten äidinmaidonkorvike eroaa äidinmaidosta?",
+   "Kuka Daniel Peter oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vevey",
+  "kysymys": "Missä Vevey sijaitsee?",
+  "uusi": true,
+  "vastaus": "No niin, katsotaas. Vevey on pieni kaupunki [[Genevenjärven]] rannalla Sveitsissä. Siitä on tullut sveitsiläisen [[elintarviketeollisuuden]] syntysija: siellä [[Henri Nestlé]] alkoi vuonna 1867 myydä äidinmaidonkorviketta. Järven rannalla on aina hyvä laskeutua.",
+  "linkit": [
+   "Genevenjärven",
+   "elintarviketeollisuuden",
+   "Henri Nestlé"
+  ],
+  "jatkot": [
+   "Kuinka suuri Genevenjärvi on?",
+   "Mitä muita kaupunkeja Genevenjärven rannalla on?"
+  ],
+  "paikka": {
+   "nimi": "Vevey",
+   "lat": 46.46,
+   "lon": 6.84,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-vevey",
+  "kysymys": "Mitä konssaus on suklaanvalmistuksessa?",
+  "uusi": true,
+  "vastaus": "Mmm— tämä on makea aihe. Konssaus on menetelmä, jossa suklaamassaa sekoitetaan tunteja, ja se tekee suklaasta sileää ja suussa sulavaa. Keksintö liitetään sveitsiläiseen [[Rodolphe Lindtiin]], joka jätti sekoituskoneensa vahingossa käymään koko viikonlopuksi vuonna 1879. Aiemmin 1800-luvulla suklaa oli karkeaa ja rakeista, kunnes [[Daniel Peter]] oli keksinyt sekoittaa siihen maitojauhetta. Viikonloppu hukkaan, ja silti maailma sai parempaa suklaata.",
+  "linkit": [
+   "Rodolphe Lindtiin",
+   "Daniel Peter"
+  ],
+  "jatkot": [
+   "Miten suklaa valmistetaan kaakaopavuista?",
+   "Kuinka paljon sveitsiläiset syövät suklaata?"
+  ]
+ }
+]

@@ -77,7 +77,7 @@ Mitä alppilaidun tarkoittaa?
 
 ### 13.2
 KYSYMYS: Kuinka suuri osa pitäjän maasta on alppilaidunta?
-Annas ku mietin. Pitäjän maasta 22,9 prosenttia on alppilaidunta, mikä on yli puolet kaikesta maatalouskäytössä olevasta maasta. Maatalouskäytössä on yhteensä 40,5 prosenttia pitäjän maasta, ja siitä peltoa on vain 4,6 prosenttia pitäjän maasta ja tavallista laidunta 12,9 prosenttia. Puolet pitäjästä on metsää. Luvut kertovat, että seudun elanto perustuu karjatalouteen eikä viljelyyn, ja se näkyy [[Gruyèresin]] juustoperinteessä. Tää oli nyt kyl numeroiden juhlaa.
+Annas ku mietin. Pitäjän maasta 22,9 prosenttia on alppilaidunta, mikä on yli puolet kaikesta maatalouskäytössä olevasta maasta. Maatalouskäytössä on yhteensä 40,5 prosenttia pitäjän maasta, ja siitä peltoa on vain 4,6 prosenttia pitäjän maasta ja tavallista laidunta 12,9 prosenttia. Puolet pitäjästä on metsää. Luvut kertovat, että seudun elanto perustuu [[karjatalouteen]] eikä viljelyyn, ja se näkyy [[Gruyèresin]] juustoperinteessä. Tää oli nyt kyl numeroiden juhlaa.
 JATKOT:
 Mitä alppilaidun tarkoittaa?
 Miksi Alpeilla siirretään karja kesäksi vuorille?
@@ -98,7 +98,7 @@ Mikä Alpit ovat ja miten ne syntyivät?
 
 ### 13.5
 KYSYMYS: Mitä kieltä Fribourgin kantonissa puhutaan?
-No jopas, hyvä kysymys. Fribourgin kantoni on kaksikielinen: ranska ja saksa ovat sen virallisia kieliä. Ranskankieliset asuvat enimmäkseen kantonin eteläosassa, ja [[Gruyèresin]] seutu kuuluu ranskankieliseen alueeseen, kun taas saksankielisiä on enemmän pohjoisessa. Sveitsissä on yhteensä neljä kansalliskieltä: saksa, ranska, italia ja retoromaani. Kielialueen raja kulkee siis kantonin sisällä, ei kantonin rajalla. Ei ole helppoa olla kirjekyyhky tuollaisessa maassa.
+No jopas, hyvä kysymys. Fribourgin kantoni on kaksikielinen: ranska ja saksa ovat sen virallisia kieliä. Ranskankieliset asuvat enimmäkseen kantonin eteläosassa, ja [[Gruyèresin]] seutu kuuluu ranskankieliseen alueeseen, kun taas saksankielisiä on enemmän pohjoisessa. [[Sveitsissä]] on yhteensä neljä kansalliskieltä: saksa, ranska, italia ja retoromaani. Kielialueen raja kulkee siis kantonin sisällä, ei kantonin rajalla. Ei ole helppoa olla kirjekyyhky tuollaisessa maassa.
 JATKOT:
 Mitä kieliä Sveitsissä puhutaan?
 Mikä on retoromaani kielenä?
@@ -126,7 +126,7 @@ Mitä Habsburgien suku oli ja mistä se tuli?
 
 ### 14.4
 KYSYMYS: Mikä on Luzernin järvi?
-Joo, tän järven tunnen. Luzernin järvi on Keski-Sveitsissä sijaitseva vuoristojärvi, jonka rantoja ympäröivät jyrkät vuoret ja jonka muoto on rikkonainen, monen lahden ja haaran sarja. Sen saksankielinen nimi on Vierwaldstättersee eli Neljän metsäkantonin järvi, ja nimi viittaa kantoneihin Uri, Schwyz, Unterwalden ja Luzern, jotka ympäröivät järveä. [[Rütlin niitty]] on sen rannalla Urin kantonissa, ja sinne pääsee veneellä järveltä. Järvellä liikennöi myös höyrylaivoja, mikä on mukava näky lintuperspektiivistä.
+Joo, tän järven tunnen. Luzernin järvi on Keski-Sveitsissä sijaitseva vuoristojärvi, jonka rantoja ympäröivät jyrkät vuoret ja jonka muoto on rikkonainen, monen lahden ja haaran sarja. Sen saksankielinen nimi on Vierwaldstättersee eli Neljän metsäkantonin järvi, ja nimi viittaa kantoneihin [[Uri]], Schwyz, Unterwalden ja Luzern, jotka ympäröivät järveä. [[Rütlin niitty]] on sen rannalla Urin kantonissa, ja sinne pääsee veneellä järveltä. Järvellä liikennöi myös höyrylaivoja, mikä on mukava näky lintuperspektiivistä.
 JATKOT:
 Mitä neljä metsäkantonia olivat?
 Miten vuoristojärvet ovat syntyneet?
@@ -168,7 +168,7 @@ Mitä muita rakennusmateriaaleja Alpeilla on käytetty?
 
 ### 15.5
 KYSYMYS: Mitä kieliä Graubündenissa puhutaan?
-Tuota niin, kiva kysymys. Graubünden on Sveitsin kantoneista ainoa kolmikielinen: siellä puhutaan saksaa, retoromaania ja italiaa. Saksa on yleisin kieli, retoromaani on yksi Sveitsin neljästä kansalliskielestä ja sitä puhutaan vain osassa kantonia, ja italiaa puhutaan eteläisissä laaksoissa. Retoromaanilla on useita murteita ja kirjakielen muotoja. [[Graubünden]] on lisäksi pinta-alaltaan Sveitsin suurin kantoni. Kolme kieltä on minulle vähän, kun yritän pitää yhdenkin hallussa.
+Tuota niin, kiva kysymys. Graubünden on Sveitsin kantoneista ainoa kolmikielinen: siellä puhutaan saksaa, retoromaania ja italiaa. Saksa on yleisin kieli, [[retoromaani]] on yksi Sveitsin neljästä kansalliskielestä ja sitä puhutaan vain osassa kantonia, ja italiaa puhutaan eteläisissä laaksoissa. Retoromaanilla on useita murteita ja kirjakielen muotoja. [[Graubünden]] on lisäksi pinta-alaltaan Sveitsin suurin kantoni. Kolme kieltä on minulle vähän, kun yritän pitää yhdenkin hallussa.
 JATKOT:
 Mikä on retoromaani kielenä?
 Mitä kieliä Sveitsissä puhutaan?

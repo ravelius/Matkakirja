@@ -21,7 +21,7 @@ Miten rautatiet muuttivat eurooppalaisia kaupunkeja?
 
 ### 26.4
 KYSYMYS: Mihin kaupunkiportteja alun perin tarvittiin?
-Tuota niin. Portit on aihe, jonka minä tunnen läheltä. Kaupunkiportit olivat muuriin tehtyjä kulkuaukkoja, joiden kautta ihmiset, tavarat ja eläimet pääsivät kaupunkiin ja sieltä pois. Niitä voitiin sulkea yöksi tai vaaran uhatessa, jolloin muuri pysyi yhtenäisenä suojana. Porteilla valvottiin myös kauppaa: [[tulleja]] ja maksuja kannettiin usein juuri porteilla. Porttien lähelle syntyi usein vartiopaikkoja ja majataloja matkalaisille. Meikäläisten muistiinpanojen mukaan kirjeetkin kulkivat porttien kautta, kunnes kyyhkyt keksivät oikopolun.
+Tuota niin. Portit on aihe, jonka minä tunnen läheltä. [[Kaupunkiportit]] olivat muuriin tehtyjä kulkuaukkoja, joiden kautta ihmiset, tavarat ja eläimet pääsivät kaupunkiin ja sieltä pois. Niitä voitiin sulkea yöksi tai vaaran uhatessa, jolloin muuri pysyi yhtenäisenä suojana. Porteilla valvottiin myös kauppaa: [[tulleja]] ja maksuja kannettiin usein juuri porteilla. Porttien lähelle syntyi usein vartiopaikkoja ja majataloja matkalaisille. Meikäläisten muistiinpanojen mukaan kirjeetkin kulkivat porttien kautta, kunnes kyyhkyt keksivät oikopolun.
 
 Vakavasti ottaen portit olivat kaupungin ovi ja lukko samassa, ja siksi niiden kunnossapito kiinnosti vallanpitäjiä aina. Sukuni tuntee ne paremmin ylhäältä kuin alhaalta.
 JATKOT:
@@ -30,7 +30,7 @@ Mitä tulli tarkoittaa?
 
 ### 26.5
 KYSYMYS: Mikä on bastioni ja miksi niitä rakennettiin?
-Joo, tän minä tiedän. Linnoitusasia on kyl vähän kuivaa. Bastioni on linnoitusmuurista ulospäin työntyvä, yleensä viisikulmaisen tai nuolenkärkimäisen muotoinen osa, jonka tehtävä oli antaa puolustajille mahdollisuus ampua muurin edustaa pitkin sivusta. Se kehitettiin 1400- ja 1500-luvuilla, kun [[tykistö]] oli tehnyt vanhat pystysuorat keskiaikaiset muurit haavoittuviksi. Bastioneja tehtiin matalammiksi ja paksummiksi, jotta ne kestäisivät tykintulta. Monen eurooppalaisen kaupungin vanha linnoitusvyöhyke perustui juuri tähän ratkaisuun, ja Genevessäkin kaupungin linnoitukset kuuluivat samaan perinteeseen. Tosin täsmällisiä vuosilukuja en lupaa, vaan puhun yleiskuvasta. Ja minä jaksoin selittää tämän ilman yhtäkään pullaa.
+Joo, tän minä tiedän. Linnoitusasia on kyl vähän kuivaa. Bastioni on linnoitusmuurista ulospäin työntyvä, yleensä viisikulmaisen tai nuolenkärkimäisen muotoinen osa, jonka tehtävä oli antaa puolustajille mahdollisuus ampua muurin edustaa pitkin sivusta. Se kehitettiin 1400- ja 1500-luvuilla, kun [[tykistö]] oli tehnyt vanhat pystysuorat keskiaikaiset [[muurit]] haavoittuviksi. Bastioneja tehtiin matalammiksi ja paksummiksi, jotta ne kestäisivät tykintulta. Monen eurooppalaisen kaupungin vanha linnoitusvyöhyke perustui juuri tähän ratkaisuun, ja Genevessäkin kaupungin linnoitukset kuuluivat samaan perinteeseen. Tosin täsmällisiä vuosilukuja en lupaa, vaan puhun yleiskuvasta. Ja minä jaksoin selittää tämän ilman yhtäkään pullaa.
 JATKOT:
 Miten tykistö muutti linnoitusten rakentamista?
 Mitä eroa on muurilla ja bastionilla?
@@ -58,7 +58,7 @@ Missä muualla Euroopassa on hammasratoja?
 
 ### 27.4
 KYSYMYS: Missä Rigi-vuori sijaitsee?
-Odotas vähän. Tost minä osaan kertoo. Rigi on vuori Keski-Sveitsissä, [[Luzernin]]- ja Zugin- sekä Lauerzinjärven välisellä alueella; sen huippu Rigi Kulm tarjoaa näkymiä ympäröiville järville ja Alpeille. Vuorta kutsutaan usein vuorten kuningattareksi, vaikka tämä on enemmän matkailun nimitys kuin virallinen. Huipulle pääsee vuoristoradoilla, ja Vitznau–Rigi-rata oli Euroopan ensimmäinen vuoristorautatie. Tarkkaa korkeutta en lupaa muistista, sillä pienikin virhe on virhe. Maisemat ovat kyl sellaiset, että kyyhkykin pysähtyisi katsomaan.
+Odotas vähän. Tost minä osaan kertoo. Rigi on vuori Keski-Sveitsissä, [[Luzernin]]- ja Zugin- sekä Lauerzinjärven välisellä alueella; sen huippu Rigi Kulm tarjoaa näkymiä ympäröiville järville ja [[Alpeille]]. Vuorta kutsutaan usein vuorten kuningattareksi, vaikka tämä on enemmän matkailun nimitys kuin virallinen. Huipulle pääsee vuoristoradoilla, ja Vitznau–Rigi-rata oli Euroopan ensimmäinen vuoristorautatie. Tarkkaa korkeutta en lupaa muistista, sillä pienikin virhe on virhe. Maisemat ovat kyl sellaiset, että kyyhkykin pysähtyisi katsomaan.
 JATKOT:
 Millä tavoin Rigille pääsee nykyään?
 Mikä tekee Rigin huipulta näkymästä erityisen?
@@ -66,7 +66,7 @@ PAIKKA: Rigi | 47.06 | 8.49 | alue
 
 ### 27.5
 KYSYMYS: Miksi vuoren huipulle noustiin katsomaan auringonnousua?
-Ai se. Sepä sattui. Auringonnousun katsominen vuorelta oli 1800-luvulla suosittu seurapiirien huvi, koska korkealta näkee horisontin laajasti ja valo muuttuu nousun hetkellä nopeasti. [[Romantiikan]] aikakaudella ihmiset hakivat vaikuttavia luontoelämyksiä, ja Alpit olivat tähän erityisen sopivia. Rautatien tulo teki huipulle pääsyn helpoksi, jolloin sinne saattoi nousta myös kokemattomampi matkailija ilman pitkää vaellusta. Rigi Kulm tunnettiin juuri tästä tarkoituksesta. Kerran minäkin näin auringonnousun katolta, mut tuolloin ei ollut ketään kertomassa, että se oli tyylikästä.
+Ai se. Sepä sattui. Auringonnousun katsominen vuorelta oli 1800-luvulla suosittu seurapiirien huvi, koska korkealta näkee horisontin laajasti ja valo muuttuu nousun hetkellä nopeasti. [[Romantiikan]] aikakaudella ihmiset hakivat vaikuttavia luontoelämyksiä, ja [[Alpit]] olivat tähän erityisen sopivia. Rautatien tulo teki huipulle pääsyn helpoksi, jolloin sinne saattoi nousta myös kokemattomampi matkailija ilman pitkää vaellusta. Rigi Kulm tunnettiin juuri tästä tarkoituksesta. Kerran minäkin näin auringonnousun katolta, mut tuolloin ei ollut ketään kertomassa, että se oli tyylikästä.
 JATKOT:
 Mitä romantiikka tarkoitti 1800-luvun taiteessa?
 Miten vuoristomatkailu alkoi Alpeilla?
@@ -87,14 +87,14 @@ Mitä myöhemmät Geneven sopimukset koskevat?
 
 ### 28.3
 KYSYMYS: Miksi Punaisen Ristin tunnus on punainen risti valkoisella?
-Mmm— Nyt tähän tulee tarkkuutta. Punaisen Ristin tunnus on Sveitsin lipun värit käänteisinä: punaisella pohjalla oleva valkoinen risti vaihdettiin valkoiselle pohjalle punaiseksi ristiksi. Ratkaisu kunnioittaa Sveitsiä, jossa [[Punainen Risti]] syntyi, ja Henry Dunantin kotimaata. Tunnus on tarkoitettu suojaamaan haavoittuneita ja heitä auttavia, ja siksi sen käyttöä on säädelty kansainvälisillä sopimuksilla. Tarkkoja päätöspäiviä en ole varma muistamaan, mutta tunnuksen ajatus on selvä. Kyl se on kyyhkyn silmään ihan selkeä merkki.
+Mmm— Nyt tähän tulee tarkkuutta. Punaisen Ristin tunnus on Sveitsin lipun värit käänteisinä: punaisella pohjalla oleva valkoinen risti vaihdettiin valkoiselle pohjalle punaiseksi ristiksi. Ratkaisu kunnioittaa Sveitsiä, jossa [[Punainen Risti]] syntyi, ja [[Henry Dunantin]] kotimaata. Tunnus on tarkoitettu suojaamaan haavoittuneita ja heitä auttavia, ja siksi sen käyttöä on säädelty kansainvälisillä sopimuksilla. Tarkkoja päätöspäiviä en ole varma muistamaan, mutta tunnuksen ajatus on selvä. Kyl se on kyyhkyn silmään ihan selkeä merkki.
 JATKOT:
 Mikä on Punainen Puolikuu?
 Miten Punainen Risti on kehittynyt vuosien mittaan?
 
 ### 28.4
 KYSYMYS: Mikä oli Kansainliitto?
-Selvä juttu. Tätä minä tiedän. Kansainliitto oli ensimmäisen maailmansodan jälkeen perustettu kansainvälinen järjestö, jonka päämaja oli Genevessä ja jonka tarkoitus oli ylläpitää rauhaa jäsenvaltioiden välisellä yhteistyöllä. Järjestö perustettiin noin vuonna 1920 sodan raskaiden kokemusten jälkeen. Se ei kuitenkaan onnistunut estämään uutta suursotaa, ja toisen maailmansodan jälkeen sen tehtävää jatkoi [[Yhdistyneet kansakunnat]]. Eräät suurvallat eivät olleet mukana, mikä heikensi sen vaikutusvaltaa. Onpas siitä pitkä aika ja onneksi.
+Selvä juttu. Tätä minä tiedän. Kansainliitto oli ensimmäisen maailmansodan jälkeen perustettu kansainvälinen järjestö, jonka päämaja oli [[Genevessä]] ja jonka tarkoitus oli ylläpitää rauhaa jäsenvaltioiden välisellä yhteistyöllä. Järjestö perustettiin noin vuonna 1920 sodan raskaiden kokemusten jälkeen. Se ei kuitenkaan onnistunut estämään uutta suursotaa, ja toisen maailmansodan jälkeen sen tehtävää jatkoi [[Yhdistyneet kansakunnat]]. Eräät suurvallat eivät olleet mukana, mikä heikensi sen vaikutusvaltaa. Onpas siitä pitkä aika ja onneksi.
 JATKOT:
 Miksi Kansainliitto ei onnistunut tehtävässään?
 Mikä on Yhdistyneiden kansakuntien tehtävä?
@@ -117,21 +117,21 @@ Millaisia kylät kuten Saint-Saphorin ovat?
 
 ### 29.2
 KYSYMYS: Mikä rypälelajike on alueen tärkein?
-Tuota niin. Se on helppo. Alueen tärkein rypälelajike on [[chasselas]], joka antaa nimensä myös monille paikallisille valkoviineille. Lajike on Lavaux'n viinitarhoilla niin keskeinen, että alueen viininviljely tunnetaan siitä laajalti. Viinitarhat sijaitsevat Genevenjärven pohjoisrannalla Vaudin kantonissa, ja penkereiltä avautuu näkymä järven yli Savoijin vuorille. Muista rypälelajikkeista en tässä ole varma. Kyl minä muistan tän ilman muistiinpanoja.
+Tuota niin. Se on helppo. Alueen tärkein rypälelajike on [[chasselas]], joka antaa nimensä myös monille paikallisille valkoviineille. Lajike on Lavaux'n viinitarhoilla niin keskeinen, että alueen viininviljely tunnetaan siitä laajalti. Viinitarhat sijaitsevat [[Genevenjärven]] pohjoisrannalla Vaudin kantonissa, ja penkereiltä avautuu näkymä järven yli Savoijin vuorille. Muista rypälelajikkeista en tässä ole varma. Kyl minä muistan tän ilman muistiinpanoja.
 JATKOT:
 Millainen viini chasselasista valmistetaan?
 Mitä Vaudin kantoni on?
 
 ### 29.3
 KYSYMYS: Millainen viini chasselasista valmistetaan?
-Hetkinen ny. Viinitietoa tulee. Chasselasista valmistetaan yleensä kuivaa, kevyttä ja raikasta valkoviiniä, jonka maku on usein hillitty ja hedelmäinen. Tarkka maku riippuu kuitenkin alueesta, maaperästä, vuosikerrasta ja valmistajasta, joten yhtä ainoaa kuvausta ei voi antaa. [[Lavaux]]'ssa viljellyt rypäleet kasvavat järvenrannan jyrkillä, kivetyillä penkereillä, ja nämä olosuhteet vaikuttavat viinin luonteeseen. Hyvin tarkkoja makuhuomioita en uskalla esittää, sillä en ole varma niistä. Maistamaan kyyhky ei pääse, mut lukea saa.
+Hetkinen ny. Viinitietoa tulee. Chasselasista valmistetaan yleensä kuivaa, kevyttä ja raikasta [[valkoviiniä]], jonka maku on usein hillitty ja hedelmäinen. Tarkka maku riippuu kuitenkin alueesta, maaperästä, vuosikerrasta ja valmistajasta, joten yhtä ainoaa kuvausta ei voi antaa. [[Lavaux]]'ssa viljellyt rypäleet kasvavat järvenrannan jyrkillä, kivetyillä penkereillä, ja nämä olosuhteet vaikuttavat viinin luonteeseen. Hyvin tarkkoja makuhuomioita en uskalla esittää, sillä en ole varma niistä. Maistamaan kyyhky ei pääse, mut lukea saa.
 JATKOT:
 Mitä ruokaa chasselas-viinin kanssa tarjotaan?
 Miten penkereet vaikuttavat rypäleiden kypsymiseen?
 
 ### 29.4
 KYSYMYS: Miksi viiniä viljellään jyrkillä rinteillä?
-No jopas. Tuo on hyvä kysymys. Jyrkät rinteet sopivat viinirypäleelle, koska ne saavat paljon auringonvaloa ja vesi valuu niistä pois, eikä juuret jää märkään. Rinteisiin rakennetut [[penkereet]] ehkäisevät maan valumista alas ja tekevät työstä mahdollista. Lavaux'ssa kerrotaan usein myös, että kivimuurit varastoivat päivän lämpöä ja järvi heijastaa valoa viinitarhoihin; tämä on yleinen kuvaus, jonka tarkkuudesta en ole varma. Penkereet kiertyvät noin 30 kilometrin matkalla Genevenjärven yllä. Rinne on kyl työläs, mut maisema palkitsee.
+No jopas. Tuo on hyvä kysymys. Jyrkät rinteet sopivat viinirypäleelle, koska ne saavat paljon auringonvaloa ja vesi valuu niistä pois, eikä juuret jää märkään. Rinteisiin rakennetut [[penkereet]] ehkäisevät maan valumista alas ja tekevät työstä mahdollista. Lavaux'ssa kerrotaan usein myös, että kivimuurit varastoivat päivän lämpöä ja järvi heijastaa valoa viinitarhoihin; tämä on yleinen kuvaus, jonka tarkkuudesta en ole varma. Penkereet kiertyvät noin 30 kilometrin matkalla [[Genevenjärven]] yllä. Rinne on kyl työläs, mut maisema palkitsee.
 JATKOT:
 Miten penkereet rakennetaan kivistä?
 Mitä muita viinialueita Euroopassa on jyrkillä rinteillä?
