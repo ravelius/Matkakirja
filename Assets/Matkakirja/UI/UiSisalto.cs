@@ -66,7 +66,8 @@ namespace Matkakirja.Natiivi
         /// "hallinnon paikka"); null = ei tietoa (PT 10.10.: maakortin ensimmäinen rivi).</summary>
         public string Paakaupunki, PaakaupunkiAsema;
         /// <summary>Skeema 1.61: pääkaupungin Codex-havainnekuvat (maat.*.paakaupunki.kuvat; PT 10.10. 20.5x): maakortin pikkukuvarivi
-        /// pääkaupunkirivin alla, napautus Kuvasuurennokseen. Selite = kuvateksti (tai motiivi), lähderivi "Havainnekuva".</summary>
+        /// pääkaupunkirivin alla, napautus Kuvasuurennokseen. Selite = kuvateksti ("… Havainnekuva."; motiivi on vain kirjain A/B), lähderivi datan
+        /// lahde ("Matkakirjan havainnekuva", puuttuessa "Havainnekuva").</summary>
         public readonly List<VirtaKuva> PaakaupunkiKuvat = new List<VirtaKuva>();
         public bool OnTiedot => Vakiluku != null || PintaAla != null || Demokratia != null || Keskitulo != null || Tervehdykset.Count > 0;
     }
@@ -335,7 +336,7 @@ namespace Matkakirja.Natiivi
                         var url = kv != null ? MiniJson.Teksti(kv, "url") : null;
                         if (string.IsNullOrEmpty(url)) continue;
                         string motiivi = MiniJson.Teksti(kv, "motiivi"), kuvateksti = MiniJson.Teksti(kv, "kuvateksti");
-                        m.PaakaupunkiKuvat.Add(new VirtaKuva { Osoite = url, Lyhyt = motiivi ?? kuvateksti, Selite = kuvateksti ?? motiivi, Lahde = HavainneLahde });
+                        m.PaakaupunkiKuvat.Add(new VirtaKuva { Osoite = url, Lyhyt = kuvateksti ?? motiivi, Selite = kuvateksti ?? motiivi, Lahde = MiniJson.Teksti(kv, "lahde") ?? HavainneLahde });
                     }
                 }
                 var lippuUrl = MiniJson.Teksti(a, "lippuUrl");
