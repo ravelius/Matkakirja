@@ -5,6 +5,16 @@ Edellinen: viesti-natiiviseppa-luovutus-20261010-aamu.md (TILA-osiot 08.0x–11.
 Viestit: SendMessage-raja oli täynnä → varakanava mcp__ccd_session_mgmt__send_message (PT local_593b89a1…, Julkaisija local_22b29f10…,
 LS1 local_45a869de…, LS2 local_fc4fcc54…, NUI local_33ba1387…, Pelikoodari local_97810d35…, Sisältökirjuri local_256f6a15…).
 
+## TILA 19.4x — JUNA 180 KERTYY, MUISTIAJO YÖN JÄLKEEN
+- **JUNA 180 = natiiviseppa/juna-180 d6494497a** (BUILD 179 75fcc2b1b:n päällä; wt j175): Pelikoodari pulu-bih-lux-mlt e2b97a8a4, NUI pallo-koysi-sumuun
+  e341491f7, LS2 peking-vesikerroin 2c2305012, Natiiviseppä todistusajo-kuittaus 80d418513, LS1 museo-varjot-180 9106d012f (lattiaheijastus + sali-v2).
+  L1346/P456/K461, unity 0. Lisää muistia: KYLLÄ (peilikamera HDR ~11 Mt, sali-v2) → MUISTIAJO (Pariisi A/B + Olavinlinna + museo; scratchpad
+  4b38df01…/ketju179.sh-kaava: laite179.sh + muisti179.sh + museo-muisti-ipad.sh) VASTA YÖN UUDELLEENKÄYNNISTYKSEN JÄLKEEN (PT: swap); jos museo kaatuu →
+  LS1:n kytkin "museo heijastus 0". Juna 180 ei lähde ennen muistiporttia + omistajan kippikorjauksia + kartan KIIRE (PT 19.3x).
+- **TODISTUSAJO-KUITTAUS 80d418513** (wt proto-natiiviseppa-tyokalut, haara natiiviseppa/todistusajo-kuittaus): komentotiedoston luku ≤ 5 s + 0,5 s ennen
+  seuraavaa askelta; VIRHE estää kuittauksen. Todiste lokit/todistus-todistusajo-kuittaus-2-20261010-1924 OK. Roolit tiedotettu. Poista wt, kun juna 180 masterissa.
+- Mac 179 ja simu-.app 179 tehty (ks. 18.3x).
+
 ## TILA 18.3x — BUILD 179 LUKITTU (TF Applelle), JUNA 180 ALKAA
 - **BUILD 179 = 75fcc2b1b938024696affccf4bdad48ceee22de1** (master; juna/b13 45b93a2e0 = juna-179 c9b1aa726 + LS1 pariisi-esittely a6771263c; L1344/P456/K461,
   unity 0; käännöspalvelu 8ab2e947c 18.09, vahti 18.28). Taidemuseo mukana (LS1 museo-kombo 691969c66 sis. museo-muisti) → muistiajo 179 Release e97fa2eaf:
