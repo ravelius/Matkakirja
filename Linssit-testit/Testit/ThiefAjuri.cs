@@ -12,12 +12,11 @@ namespace Matkakirja.Linssit.Testit
     {
         const double Dt = Huonesimulaatio.Dt, MaxOdotus = 42, LaajaOdotus = 75, OdotusAskel = 0.5, Jalkeen = 0.5, PiiloSade = 5, PukeutuminenS = 2;
         static int loppuK;
-        // Rauhallinen ylitys (PT 10.10. 10.1x, v46z): pisteestä 69 lähdetään vasta, kun kukaan ei epäile (Huonesimulaatio.Vaara), ja ylitys
-        // keskeytyy, jos joku alkaa epäillä. Syy: v46z:n kappeli-kavely alkaa y 8,6:sta (v46w 8,2), joten portaat-vartija tulee portailta
-        // pelaajan osaan kirkkotorni-portaat jo y 8,5:ssä, näkee pisteessä 69 odottavan pelaajan ja etsii; vaaran aikana osarajan ylitys 69 → 70
-        // ei tee tarkistuspistettä (peli toimii oikein), jolloin kiinni 70 palaisi Tott-kammioon eikä komeroon. Joukossa kohdeindeksit: 69 = reitti:pelaaja-70.
-        // v47a (palatsi-viipale pois) ei poista tarvetta: ilman ylitystä kiinni 70 → tarkistuspiste 5,0 m komerosta (Siirtoseppä 10.10.).
-        static readonly HashSet<int> RauhallinenYlitys = new HashSet<int> { 69 };
+        // Rauhallinen ylitys (PT 10.10. 10.1x, v46z): kohdeindeksit, joihin lähdetään vasta, kun kukaan ei epäile (Huonesimulaatio.Vaara).
+        // Tyhjä 10.10. alkaen: yleinen sääntö Kulje-metodissa (osarajaa ei ylitetä epäilyn aikana) korvasi pisteen 69 (v46z: portaat-vartija
+        // portaiden yläpäässä, ylitys 69 → 70 ilman tarkistuspistettä → kiinni 70 palasi Tott-kammioon). Siirtoseppä: vartijan kierto 42 s,
+        // syvennys 69 turvallinen; sokko lähtö 15/61 kiinni (pelaaja palaa syvennykseen), joten peliin ei muutosta.
+        static readonly HashSet<int> RauhallinenYlitys = new HashSet<int> { };
 
         sealed class Suunnitelma { public KavelyMerkki Piilo, Esine; public (double X, double Y, double Z) Kohde; public double Odotus; public bool Hiipii; public Huonesimulaatio Tulos; public double Aika; }
 
@@ -41,7 +40,12 @@ namespace Matkakirja.Linssit.Testit
         static bool Kulje(Huonesimulaatio w, (double X, double Y, double Z) q, bool hiipii, bool tarkka, int kiinni0, bool rauha = false)
         {
             if (rauha && w.Vaara()) return false;
-            for (int i = 0; i < 6000; i++) { if (w.Askel(q, hiipii)) return true; if (tarkka && !Turvallinen(w, kiinni0) || rauha && w.Vaara()) return false; }
+            for (int i = 0; i < 6000; i++)
+            {
+                string osa = w.PelaajanOsa; bool vaara = w.Vaara(); bool perilla = w.Askel(q, hiipii);
+                if (tarkka && vaara && w.PelaajanOsa != osa) return false;   // osaraja vain ilman epäilyä (muuten ei tarkistuspistettä)
+                if (perilla) return true; if (tarkka && !Turvallinen(w, kiinni0) || rauha && w.Vaara()) return false;
+            }
             return false;
         }
 
