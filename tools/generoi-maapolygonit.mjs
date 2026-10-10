@@ -210,6 +210,21 @@ const MIN_KOKO = 3;
  * ennallaan, koska koko uudelleenajo siirtäisi 43 maan rannikkoa.
  */
 const PIENI_KOKO = 0.6;
+
+/*
+ * NATURAL EARTHISTA PUUTTUVAT SAARET (kartan kokonaistarkistus, PT 10.10.2026,
+ * vain Eurooppa): NE 10m ei tunne näitä saaria lainkaan, joten niiden
+ * karttavalot jäivät 17–29 km:n päähän maasta. Rengas otetaan tarkasta
+ * rantaviivasta (--meri, GSHHG full): se GSHHG-rengas, joka sisältää pisteen,
+ * tai lähin alle 1 km:n päässä. Käsittely kuten PIENET SAARET. Vaatii --meri;
+ * ilman sitä saaret jäävät pois kuten ennenkin.
+ */
+const LISASAARET = [
+  { iso: 'IRL', nimi: 'Skellig Michael', lat: 51.771, lon: -10.54 },
+  { iso: 'ISL', nimi: 'Flatey (Breiðafjörður)', lat: 65.3759, lon: -22.912 },
+  { iso: 'ISL', nimi: 'Eldey', lat: 63.7409, lon: -22.9576 },
+  { iso: 'SWE', nimi: 'Marstrand', lat: 57.8828, lon: 11.582 },
+];
 /** Talletustarkkuus: kymmenesosa lautayksikköä eli noin 330 metriä. */
 const TARKKUUS = 10;
 
@@ -748,6 +763,38 @@ for (const iso of pelimaat) {
     pisteita += kevyt.length;
   }
   if (renkaat.length) maat[iso] = renkaat;
+}
+
+for (const s of LISASAARET) {
+  if (!tarkka) break;
+  const sisalla = (r) => {
+    let on = false;
+    for (let i = 0, j = r.length - 1; i < r.length; j = i++) {
+      if ((r[i][1] > s.lat) !== (r[j][1] > s.lat)
+        && s.lon < ((r[j][0] - r[i][0]) * (s.lat - r[i][1])) / (r[j][1] - r[i][1]) + r[i][0]) on = !on;
+    }
+    return on;
+  };
+  const lahin = (r) => Math.min(...r.map(([lon, lat]) => Math.hypot((lon - s.lon) * Math.cos(s.lat * Math.PI / 180), lat - s.lat)));
+  const ehdokkaat = tarkka.renkaat.filter((r) => {
+    let [w, so, e, n] = [Infinity, Infinity, -Infinity, -Infinity];
+    for (const [lon, lat] of r) { w = Math.min(w, lon); e = Math.max(e, lon); so = Math.min(so, lat); n = Math.max(n, lat); }
+    return e - w < 0.5 && w - 0.02 < s.lon && s.lon < e + 0.02 && so - 0.02 < s.lat && s.lat < n + 0.02;
+  });
+  const rengas = ehdokkaat.find(sisalla) ?? ehdokkaat.filter((r) => lahin(r) < 0.009).sort((a, b) => lahin(a) - lahin(b))[0];
+  if (!rengas) throw new Error(`LISASAARET: ${s.nimi} ei löydy tarkasta rantaviivasta`);
+  const laudalla = puraRengas(rengas, projektio);
+  const r = (v) => Math.round(v * TARKKUUS) / TARKKUUS;
+  let kevyt = yksinkertaista(laudalla, TOLERANSSI).map(([x, y]) => [r(x), r(y)]);
+  if (kevyt.length < 4 || Math.abs(pinta(kevyt)) < 0.05) {
+    const kx = laudalla.reduce((t, [x]) => t + x, 0) / laudalla.length;
+    const ky = laudalla.reduce((t, [, y]) => t + y, 0) / laudalla.length;
+    kevyt = [[r(kx), r(ky - 0.3)], [r(kx + 0.3), r(ky)], [r(kx), r(ky + 0.3)], [r(kx - 0.3), r(ky)], [r(kx), r(ky - 0.3)]];
+  }
+  (maat[s.iso] ??= []).push(koodaa(suunnista(kevyt)));
+  renkaita++;
+  pisteita += kevyt.length;
+  console.log(`Lisäsaari ${s.nimi} (${s.iso}): ${rengas.length} kärkeä → ${kevyt.length}`);
 }
 
 const ulos = {
