@@ -400,6 +400,8 @@ namespace Matkakirja.Natiivi
             Kutsu = new Kutsuminiatyyri(kerros); // nostojen merkkien päälle samassa kerroksessa
             Kartuscha = new Kartuscha(kerros);
             Kartuscha.AukiMuuttui += auki => Matkavalinta?.VaistaLiiku(auki);
+            // Pääkaupunkipisteen napautus avaa maan kartuschan (skeema 1.60; pisteet KaupunkiMerkit.kevyet).
+            KaupunkiMerkit.PaakaupunkiNapautettu = (maa, _) => Kartuscha?.NaytaMaa(maa);
             MaakuntaNimet = new MaakuntanimetKartalla(kerros, Kartuscha);
             Erikoisnostot = new Erikoisnostot(kerros, Kartuscha);   // ajattelijoiden kipsipäät karttaobjekteina (kehittäjätila, web #3866)
             KaupunkiPallot = new KaupunkiPallot(kerros);   // kaupunkiopas karttaelementtinä: kuumailmapallo sallituissa kaupungeissa (omistaja 7.10.)
