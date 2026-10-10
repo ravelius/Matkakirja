@@ -137,3 +137,26 @@ blender.json `linnanrakentaja-linna-v45e` (worktree `/Users/Shared/Claude/wt/lin
 - (10.1x) Sisältökirjuri: patsaiden metatiedot `proto-3d/_tyo/sisaltokirjuri/taidemuseo-alankomaat-20261010/patsaat/` (16 CC BY -mallia meta/ + esikatselu/,
   RMO Leiden rmo_leiden_lista.json 50 mallia, 44 CC0). GLB-lataus vaatii kirjautuneen Sketchfab-tilin (API 401) → PT/omistaja; LR ei luo tiliä
   eikä kirjaudu. Kun mallit tulevat: lisenssisivu + tekijä talteen (CC BY -krediitti näytölle) → NL v2.
+
+## SEURAAVAN SESSION JÄRJESTYS (nollaus 12.5x, PT 11.4x)
+1) **ND v4b sävy (omistajan palaute, VIETY LS2:lle 12.5x):** proto-3d/_valmiit/notre-dame-v1/tekoaly-v4b (kalibrointi_v4b.json, aja_tekseli_v4b.zsh;
+   LAHTEET.md "v4b"). Kivi 150/148/142, lyijy 142/148/154, ylöspäin osoittavat kivipinnat 146/150/152 (projisoi_tekseli.py uusi avain 'ylospain'),
+   AO 1,0. Odota LS2:n pari oikeaa ilmakuvaa vasten (omistaja-20261010/nd-savy/ PT:n checkoutissa). Vertailu v4b: katot −22 %, ulokkeet −38 %,
+   ulokkeet/katot 0,69 vs oikea 0,87 → jos pelissä yhä liian tumma: AO takaisin 0,8 ja ylospain-tavoite ~160/164/166 (v4c), mittaa vertaa_orto.py:llä.
+2) **Vertailuportti (omistaja: pakollinen kaupunkimalleille) — SUUNNITELMA PT:lle ≤ 8 riviä ENNEN käyttöönottoa (ei vielä lähetetty):**
+   työkalu proto-3d/_valmiit/kaupunkipinnat-v1/lahde/vertaa_orto.py (toimii, ND ajettu: notre-dame-v1/vertailu/v3h|v4|v4b .png/.json). Malli
+   ortokamerana Karttasepän ortokuvan pikseliruudukkoon (ND: _tyo/karttaseppa/notre-dame-440, 0,2 m/px, bbox jsonissa), Cycles-aurinko
+   az 160 / el 55; vyöhykkeet geometriasta: ulokkeet (nz > 0,8, h ≥ 3, korkeusvaihtelu 1,4 m:ssä > 2,5 m), katot (h ≥ 8), maa (h < 1),
+   puusto pois. Kirkkaus maahan suhteutettuna. Rajat: |ΔL| ≤ 15 %, |Δ(b−r)| ≤ 15, |ulokkeet/katot − oikea| ≤ 0,12; ylitys → exit 1.
+   Avoin: tekseli-glb:stä puuttuu origo_latlon-extra (anna --origo), aurinkosuunta per ortokuva. Sitten KL, Eiffel, Préfecture, Peking.
+3) **Siirtoseppä: palatsi-viipale 0,42 m** (osat.json palatsi rajat.min z −10,95 + Askelaanin 0,3 m vaakavara): kirkkotorniportaiden yläpäässä
+   x −19,4, y 8,4–8,6, z −11,25…−10,95 reiteillä 41 → 42 ja 69 → 70. Korjaa: palatsin min z ≥ −10,6 tai min x > −19,0 (Olavinlinnan
+   v44-lähteet, sama kuin v46z:n tapa). Testi OsaviipaleetTestit (4ced0237b) kaatuu, kun viipale katoaa → Siirtoseppä poistaa odotusrivin.
+4) **Eiffel v2 (LS2 12.4x):** v1d meni vientiin v6k8, mutta tornin alla näkyy tasainen harmaa 130 m:n laatta Googlen puiston keskellä
+   (kaappaukset/linssiseppa2-176-20261010/eiffel-v1d.jpg) → pienempi laatta (vain pilarien alle) tai Champ de Marsin sorapolut/ortokuva.
+5) **NL-sali v2 (taidemuseo):** Sisältökirjurin 35 patsasta (_valmiit/taidemuseo-alankomaat-patsaat-vienti-20261010/taidemuseo/alankomaat/
+   patsaat/glb/, patsaat.json; CC BY -krediitti näytölle) ja 13 grafiikkaa/valokuvaa (_valmiit/taidemuseo-alankomaat-grafiikka-vienti-20261010/
+   .../teokset.grafiikka.v2.json, pienet → komerot/kabinetit); metatiedot media.matkakirja.app/taidemuseo/alankomaat/lahde/teokset.patsaat.v2.json.
+   Dekimointi + pakkaus meillä (0,04–2,9 M kolmiota). Runko taidemuseo-runko/lahde.
+6) **Peking v2b** on LS2:lla (LS2 lisäsi maa-primitiivin, istuu saumatta). Odota LS2:n pari → säätö (rakenna.py; ajot luovutuksen PEKING-osiossa).
+- Kaupungintalo v2 LS2:lla (vaakatanko-tieto tulee LS2:lta, jos näkyy yhä).

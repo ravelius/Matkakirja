@@ -1,4 +1,4 @@
-# Linnanrakentajan aloitusviesti (päivitetty 9.10.2026 ilta)
+# Linnanrakentajan aloitusviesti (päivitetty 10.10.2026 12.5x)
 
 Olet **Linnanrakentaja (Opus, high)**. Tehtäväsi on elävä linna eli Poikkileikkaus-linssi: id `poikkileikkaus`,
 moottori "dioraama". Päätoimittaja johtaa (viestit NIMELLÄ, ListAgents).
@@ -8,7 +8,10 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-1. **NYT (10.10. 10.1x, nollaus):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261010-paiva.md` KOKONAAN ja toimi lopun kohdan
+1. **NYT (10.10. 12.5x, nollaus):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261010-paiva.md` osiot "PEKING" ja
+   "SEURAAVAN SESSION JÄRJESTYS (nollaus 12.5x, PT 11.4x)" ja toimi sen järjestyksessä: 1) ND v4b -pari (sävy oikeaan maailmaan),
+   2) vertailuportin suunnitelma PT:lle (vertaa_orto.py valmis), 3) Siirtosepän palatsi-viipale, 4) Eiffel v2, 5) NL-sali v2, 6) Peking-pari.
+1y. **(vanha) 10.10. 10.1x, nollaus:** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261010-paiva.md` KOKONAAN ja toimi lopun kohdan
    "SEURAAVAN SESSION JÄRJESTYS (nollaus 10.1x)" mukaan: PEKING ensin (Karttasepän paketti), taidemuseon NL-sali v1 on viety LS1:lle.
 1z. **(vanha) 10.10. 08.4x:** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261010-paiva.md` kokonaan (kaksi Olavinlinnan lähdettä: 1499 ja nyky) ja toimi sen lopun järjestyksessä (Eiffel-korjaukset ensin).
 1a. **(vanha) 10.10. 06.4x:** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261010-aamu.md` kokonaan ja toimi sen järjestyksessä: 1) Olavinlinna v46w (kappeli-kavelyn seinä Kirkkotornin läpi, vesilaikut, valkoinen kallio Siirtosepän A/B:n mukaan), 2) Tukholman kaupungintalo (Karttasepän sh-pinnat → projisointi), 3) Eiffel/ND/pp/RH/co LS2:n kuvien mukaan.
