@@ -10,6 +10,6 @@ Vaihe 0 tehty (konteksti, säädata Open-Meteo OK, malli).
 | tirana | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | 5 varoitusta (lisenssi CC BY 3.0 pl, pyöreä luku) |
 | skopje | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | 0 varoitusta |
 | podgorica | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | 3 varoitusta (pyöreät luvut lähteestä); koordinaatit vanha silta, Ribnica Macilla |
-| chisinau | ✓ | | | | | | kysymykset ja yksi kohde ohuita |
+| chisinau | ✓ | ✓ | | | | | kysymykset ja yksi kohde ohuita |
 | minsk | ✓ | | | | | | kohde 3 ohut (5 faktaa), Gorki 7 |
 | bratislava | ✓ | | | | | | faktapohjassa viimeistelemättömiä kohtia (kysymys 5, osio 4) |
