@@ -41,6 +41,9 @@ import { MIKSERI_POLKU, MIKSERI_HISTORIA_POLKU, hoidaMikseriLuku, hoidaMikseriTa
 import { SAA_RAJAPINTA, SAA_UA, SAA_VALIMUISTI_S, SAA_LAHDE, saaAvain, jasennaSaa } from './saa.js';
 import { kuluKentat, valitseMalli, kuluRivi } from './kulut.js';
 import { tarkistaSyote, TURVA_JATKOT } from './opas-turva.js';
+import {
+  AIKUINEN_OTSAKE, KURATOITU_KEHOTE, SEURANNAN_TTL_S, kuratoituSyote, ohjausVastaus, pulunTila, puuttuvaKuratoidaan, seurantaAvain, tarkistaVastaus,
+} from './kuratoitu.js';
 import { oppaanEsittely, valmisKohde, omatKohteet, esittelynAlku } from './opas-esittely.js';
 import { OPAS_SALLITUT, sallittuKaupunki, pisteSallittu, sallittuAluePisteelle, kokeilut, sallitutPyynnolle } from './sallitut.js';
 import { vuosiluvutSanoiksi } from './puhesanat.js';
@@ -972,14 +975,15 @@ ne luetaan ääneen.`;
  *                   erillistä "Pelaajan tilanne juuri nyt" -viestiä.
  */
 export function pulunKehote({
-  muoto = 'teksti', natiivi = false, puhetagit = false, kehys = null, konteksti = '',
+  muoto = 'teksti', natiivi = false, puhetagit = false, kehys = null, konteksti = '', kuratoitu = false,
 } = {}) {
   if (muoto === 'aani') {
     return `${JARJESTELMAKEHOTE}\n\n${AANIKESKUSTELUKEHOTE}`
+      + (kuratoitu ? `\n\n${KURATOITU_KEHOTE}` : '')
       + `\n\n${kehysOhje('aloitus')}`
       + (konteksti ? `\n\nPELAAJAN TILANNE KESKUSTELUN ALKAESSA\n${konteksti}` : '');
   }
-  const { lohkot, loppu } = pulunKehoteOsat({ natiivi, puhetagit, kehys });
+  const { lohkot, loppu } = pulunKehoteOsat({ natiivi, puhetagit, kehys, kuratoitu });
   return [...lohkot, loppu].join('\n\n');
 }
 
@@ -989,9 +993,11 @@ export function pulunKehote({
  * kirjoitti koko kehotteen uudelleen (cw 14 438, cr 0). Nyt pohja ja äänitagit ovat välimuistilohkoja (etuliite pysyy
  * samana) ja kehyslaji tulee välimuistirajan jälkeen — yhä viimeisenä ohjeena ennen kirjoittamista.
  */
-export function pulunKehoteOsat({ natiivi = false, puhetagit = false, kehys = null } = {}) {
+export function pulunKehoteOsat({ natiivi = false, puhetagit = false, kehys = null, kuratoitu = false } = {}) {
   return {
     lohkot: [`${JARJESTELMAKEHOTE}\n\n${KASITEKEHOTE}\n\n${JATKOKEHOTE}\n\n${PAIKKAKEHOTE}`,
+      // Kuratoitu live (alle 18 / ikä tuntematon, kuratoitu.js): oma lohko pohjan perään, pohjan välimuisti yhteinen.
+      ...(kuratoitu ? [KURATOITU_KEHOTE] : []),
       // Äänitagit selaimelle ja tagit siivoavalle natiiville (ks. PUHETAGIKEHOTE).
       ...(!natiivi || puhetagit ? [PUHETAGIKEHOTE] : [])],
     loppu: kehysOhje(kehysLaji(kehys)),
@@ -1125,7 +1131,8 @@ function korsOtsakkeet(origin, sallitut) {
     'access-control-allow-methods': 'POST, OPTIONS',
     // Kehittäjäotsake on sallittava erikseen, tai selain ei päästä
     // esilentoa (OPTIONS) läpi eikä pyyntö lähde lainkaan.
-    'access-control-allow-headers': `content-type, ${KEHITTAJA_OTSAKE}, ${TESTI_OTSAKE}, ${TESTITUNNUS_OTSAKE}, ${AANILUPA_OTSAKE}`,
+    // Ikätieto (kuratoitu live, kuratoitu.js) kulkee webistä samalla esilennolla.
+    'access-control-allow-headers': `content-type, ${KEHITTAJA_OTSAKE}, ${TESTI_OTSAKE}, ${TESTITUNNUS_OTSAKE}, ${AANILUPA_OTSAKE}, ${AIKUINEN_OTSAKE}`,
     'access-control-max-age': '86400',
     vary: 'Origin',
   };
@@ -1660,11 +1667,11 @@ export const REALTIME_VAD_HILJAISUUS_MS = 600;
  */
 export function realtimeIstunto({
   aani = XAI_AANI_OLETUS, konteksti = '', taajuus = 24000, pohdinta = 'none',
-  hiljaisuusMs = REALTIME_VAD_HILJAISUUS_MS,
+  hiljaisuusMs = REALTIME_VAD_HILJAISUUS_MS, kuratoitu = false,
 } = {}) {
   return {
     voice: XAI_AANET.includes(aani) ? aani : XAI_AANI_OLETUS,
-    instructions: pulunKehote({ muoto: 'aani', konteksti }),
+    instructions: pulunKehote({ muoto: 'aani', konteksti, kuratoitu }),
     /*
      * Pohdinta pois oletuksena: xAI:n oletus 'high' ajattelee ennen
      * jokaista vastausta, ja reaaliaikaisessa keskustelussa viive on
@@ -1732,6 +1739,9 @@ async function hoidaRealtime(pyynto, env, kors, runko) {
   // Varaus kirjataan vasta onnistuneesta tokenista: epäonnistunut ei maksa.
   const uusi = await kasvataLaskuri(kv, avain, 60 * 60 * 30, istuntoMin);
   const taajuus = Number(runko?.taajuus);
+  // Kuratoitu live (kuratoitu.js): äänessä ei ole tekstisuodatusta, joten vain kehoteosio + seurantalaskuri.
+  const kuratoitu = pulunTila(pyynto.headers, { kehittaja: true, puuttuvaKuratoitu: puuttuvaKuratoidaan(env) }) === 'kuratoitu';
+  if (kuratoitu) await kasvataHarvaLaskuri(kv, seurantaAvain(new Date(), 'realtime', 'vastattu'), SEURANNAN_TTL_S, 1, { kynnys: 20 });
   return vastaa({
     token,
     vanhenee: Number(data?.expires_at) || null,
@@ -1744,6 +1754,7 @@ async function hoidaRealtime(pyynto, env, kors, runko) {
       konteksti: siivoaTeksti(runko?.konteksti, KONTEKSTIN_KATTO),
       taajuus,
       pohdinta: runko?.pohdinta,
+      kuratoitu,
     }),
   }, kors);
 }
@@ -1977,8 +1988,15 @@ async function jatkaKeskenJaanyt(env, { jarjestelma, viestit }, raaka) {
   }
 }
 
+/** Valmis vastaus asiakkaan SSE-muodossa (kuratoidun liven suodatus): yksi pala + loppu, kuten mallin virrassa. */
+function valmisStriimi(kors, data) {
+  const runko = `event: pala\ndata: ${JSON.stringify({ teksti: data.vastaus })}\n\n`
+    + `event: loppu\ndata: ${JSON.stringify(data)}\n\n`;
+  return new Response(runko, { status: 200, headers: { ...SSE_OTSAKKEET, ...korsOtsakkeet(kors.origin, kors.sallitut) } });
+}
+
 async function striimaaVastaus(env, kors, {
-  jarjestelma, kysymys = '', viestit, maxTokens, lisaohje = null, ajat = null,
+  jarjestelma, kysymys = '', viestit, maxTokens, lisaohje = null, ajat = null, kuratointi = null,
 }) {
   const ylavirta = await kutsuRajapintaa(env, {
     jarjestelma, viestit, maxTokens, striimi: true, lisaohje,
@@ -2017,8 +2035,13 @@ async function striimaaVastaus(env, kors, {
     let stop = null;
     const kaytto = {};
     let striiminMalli = null;
+    /*
+     * KURATOITU LIVE (kuratoitu.js): koko tähänastinen raakateksti tarkistetaan ennen jokaista palaa. Osuma lopettaa
+     * virran lukemisen, eikä osuvaa palaa lähetetä; loppu-tapahtuman ohjaus korvaa asiakkaalla kuplan tekstin.
+     */
+    let estetty = null;
     try {
-      for (;;) {
+      lue: for (;;) {
         const { value, done } = await lukija.read();
         if (done) break;
         jono += purkaja.decode(value, { stream: true });
@@ -2029,6 +2052,8 @@ async function striimaaVastaus(env, kors, {
           const pala = striimiPala(rivi);
           if (pala?.teksti) {
             raaka += pala.teksti;
+            estetty = kuratointi ? kuratointi.tarkista(raaka) : null;
+            if (estetty) { lukija.cancel().catch(() => {}); break lue; }
             const nakyva = suodatin.lisaa(pala.teksti);
             if (nakyva) await laheta('pala', { teksti: nakyva });
           } else if (pala?.virhe) {
@@ -2042,6 +2067,12 @@ async function striimaaVastaus(env, kors, {
         }
       }
       console.log(kuluRivi(env, striiminMalli ?? valitseMalli(env, { oletus: MALLI_OLETUS }), kaytto));
+      if (estetty) {
+        console.log(`pollo: kuratoitu vastaus estetty (${estetty})`);
+        await kuratointi.kirjaa('vastaus-estetty');
+        await laheta('loppu', ohjausVastaus());
+        return;
+      }
       // Sanarajaan pysähtynyt vastaus saa yhden jatkon samaan kuplaan.
       let kesken = stop === 'max_tokens';
       if (kesken) {
@@ -2064,8 +2095,13 @@ async function striimaaVastaus(env, kors, {
       // Paikkarivi luetaan RAAKATEKSTISTÄ: se on JATKOT-lohkon alla,
       // eikä sitä ole koskaan lähetetty pelaajalle palana.
       const paikka = poimiPaikka(raaka);
-      if (vastaus) {
+      if (vastaus && kuratointi?.tarkista(raaka)) {
+        // Sanarajan jatko toi osuman (jatkoa ei tarkisteta paloittain).
+        await kuratointi.kirjaa('vastaus-estetty');
+        await laheta('loppu', ohjausVastaus());
+      } else if (vastaus) {
         const kaksi = await varmistaJatkot(env, { jatkot, kysymys, vastaus });
+        if (kuratointi) await kuratointi.kirjaa('vastattu');
         await laheta('loppu', { vastaus, jatkot: kaksi, syy: null, ...(paikka ? { paikka } : {}) });
       } else {
         /*
@@ -2082,7 +2118,9 @@ async function striimaaVastaus(env, kors, {
           { virhe: virtaVirhe, stop },
         );
         if (paikattu.syy === null) paikattu.jatkot = await varmistaJatkot(env, { jatkot: paikattu.jatkot, kysymys, vastaus: paikattu.vastaus });
-        await laheta('loppu', paikattu);
+        const paikkausEstetty = paikattu.syy === null && kuratointi?.tarkista(`${paikattu.vastaus}\n${paikattu.jatkot.join('\n')}`);
+        if (kuratointi) await kuratointi.kirjaa(paikkausEstetty ? 'vastaus-estetty' : 'vastattu');
+        await laheta('loppu', paikkausEstetty ? ohjausVastaus() : paikattu);
       }
     } catch {
       // Katkennut virta: asiakas näyttää siihen asti tulleen tekstin ja
@@ -3876,6 +3914,24 @@ export default {
     if (tehtava === 'vastaus' && !kysymys) {
       return vastaa({ virhe: 'kysely', viesti: 'Kysymys puuttuu.' }, { status: 400, ...kors });
     }
+    // --- kuratoitu live (alle 18 / ikä tuntematon; kuratoitu.js) ------
+    const kehittaja = kehittajaOhitus(pyynto, env);
+    const kuratoitu = pulunTila(pyynto.headers, { kehittaja, puuttuvaKuratoitu: puuttuvaKuratoidaan(env) }) === 'kuratoitu';
+    const kirjaaKuratoitu = (tulos) => {
+      const kirjoitus = kasvataHarvaLaskuri(env.POLLO_KV ?? null, seurantaAvain(new Date(), tehtava, tulos), SEURANNAN_TTL_S, 1,
+        { kynnys: 20 }).catch(() => {});
+      if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(kirjoitus);
+      return kirjoitus;
+    };
+    if (kuratoitu && tehtava === 'vastaus') {
+      // Kysymyksen suodatus ennen rajoja ja mallia: valmis ohjaus samassa muodossa (striimi tai JSON).
+      const suodatettu = kuratoituSyote(kysymys);
+      if (suodatettu) {
+        console.log(`pollo: kuratoitu kysymys → suodatin (${suodatettu.tyyppi})`);
+        await kirjaaKuratoitu(suodatettu.tyyppi);
+        return runko?.striimi ? valmisStriimi(kors, suodatettu.vastaus) : vastaa(suodatettu.vastaus, kors);
+      }
+    }
     // Astronauttien kuva näytöllä (kuvasirut.js): ehdotukset kuvan tiedoista ja KV:stä; välimuistiosuma ei kuluta rajoja.
     const kuva = siivoaKuva(runko?.kuva);
     const kuvaAvain = tehtava === 'ehdotukset' && kuva ? await kuvaSirujenAvain(kuva) : null;
@@ -3889,7 +3945,6 @@ export default {
     const nyt = new Date();
     const pAvain = await paivaAvain(pyynto.headers.get('cf-connecting-ip'), nyt, env.IP_SUOLA);
     const kAvain = kuukausiAvain(nyt);
-    const kehittaja = kehittajaOhitus(pyynto, env);
     const raja = kehittaja ? { ok: true } : tarkistaRajat({
       paiva: testitunnusOhitus(pyynto, env) ? 0 : await lueLaskuri(kv, pAvain),
       kuukausi: await lueHarvaLaskuri(kv, kAvain),
@@ -3920,11 +3975,11 @@ export default {
     try {
       if (tehtava === 'ehdotukset' && kuva) {
         const teksti = await kysyMallilta(env, {
-          jarjestelma: `${JARJESTELMAKEHOTE}\n\n${KUVASIRUKEHOTE}`,
+          jarjestelma: `${JARJESTELMAKEHOTE}\n\n${kuratoitu ? `${KURATOITU_KEHOTE}\n\n` : ''}${KUVASIRUKEHOTE}`,
           viestit: [{ role: 'user', content: kuvaKontekstiksi(kuva) }],
           maxTokens: 250,
         });
-        const ehdotukset = poimiEhdotukset(teksti, KUVASIRUJA);
+        const ehdotukset = poimiEhdotukset(teksti, KUVASIRUJA).filter((e) => !kuratoitu || !tarkistaVastaus(e));
         // Vain täysi lista talteen: vajaa vastaus generoidaan seuraavalla katselulla uudelleen.
         if (ehdotukset.length === KUVASIRUJA && env.POLLO_KV) {
           const talletus = env.POLLO_KV.put(kuvaAvain, JSON.stringify(ehdotukset), { expirationTtl: KUVASIRUJEN_TTL_S }).catch(() => {});
@@ -3934,14 +3989,21 @@ export default {
       }
       if (tehtava === 'ehdotukset') {
         const teksti = await kysyMallilta(env, {
-          jarjestelma: `${JARJESTELMAKEHOTE}\n\n${EHDOTUSKEHOTE}`,
+          jarjestelma: `${JARJESTELMAKEHOTE}\n\n${kuratoitu ? `${KURATOITU_KEHOTE}\n\n` : ''}${EHDOTUSKEHOTE}`,
           viestit: [{
             role: 'user',
             content: `Pelaajan tilanne juuri nyt:\n\n${konteksti || '(ei tietoa näkymästä)'}`,
           }],
           maxTokens: 200,
         });
-        return vastaa({ ehdotukset: poimiEhdotukset(teksti, 3) }, kors);
+        const ehdotukset = poimiEhdotukset(teksti, 3);
+        if (kuratoitu) {
+          // Estetty siru pudotetaan (asiakas näyttää sen mitä on); seurantaan vain luku.
+          const sallitut = ehdotukset.filter((e) => !tarkistaVastaus(e));
+          await kirjaaKuratoitu(sallitut.length < ehdotukset.length ? 'vastaus-estetty' : 'vastattu');
+          return vastaa({ ehdotukset: sallitut }, kors);
+        }
+        return vastaa({ ehdotukset }, kors);
       }
 
       const viestit = [];
@@ -3975,7 +4037,7 @@ export default {
        */
       // Pohja ja äänitagit välimuistilohkoina, kehyslaji rajan jälkeen (K3; pulunKehoteOsat).
       const osat = pulunKehoteOsat({
-        natiivi, puhetagit: runko?.puhetagit === 1, kehys: runko?.kehys,
+        natiivi, puhetagit: runko?.puhetagit === 1, kehys: runko?.kehys, kuratoitu,
       });
       const kehote = osat.lohkot;
       // Ääneen luettava vastaus alkaa lyhyellä virkkeellä (ks. LUETTAVAN_ALKU).
@@ -3993,6 +4055,7 @@ export default {
           maxTokens: MAX_TOKENS,
           lisaohje,
           ajat: { alkuMs, rajatMs },
+          kuratointi: kuratoitu ? { tarkista: tarkistaVastaus, kirjaa: kirjaaKuratoitu } : null,
         });
       }
 
@@ -4009,12 +4072,27 @@ export default {
       if (!vastaus) {
         const paikattu = await paikkaaTyhja(env, kutsu, { stop: kerralla.stop });
         if (paikattu.syy === null) paikattu.jatkot = await varmistaJatkot(env, { jatkot: paikattu.jatkot, kysymys, vastaus: paikattu.vastaus });
+        if (kuratoitu) {
+          const estetty = paikattu.syy === null && tarkistaVastaus(`${paikattu.vastaus}\n${paikattu.jatkot.join('\n')}`);
+          await kirjaaKuratoitu(estetty ? 'vastaus-estetty' : 'vastattu');
+          if (estetty) return vastaa(ohjausVastaus(), kors);
+        }
         return vastaa(paikattu, kors);
       }
       // Valinnainen paikkakenttä mukaan vain, jos malli sen kirjoitti
       // (ks. PAIKKAKEHOTE). Puuttuva kenttä = vastaus kuten ennenkin.
       const paikka = poimiPaikka(kerralla.teksti);
+      if (kuratoitu && tarkistaVastaus(kerralla.teksti)) {
+        console.log('pollo: kuratoitu vastaus estetty');
+        await kirjaaKuratoitu('vastaus-estetty');
+        return vastaa(ohjausVastaus(), kors);
+      }
       const kaksi = await varmistaJatkot(env, { jatkot, kysymys, vastaus });
+      if (kuratoitu && kaksi.some((j) => tarkistaVastaus(j))) {
+        await kirjaaKuratoitu('vastaus-estetty');
+        return vastaa(ohjausVastaus(), kors);
+      }
+      if (kuratoitu) await kirjaaKuratoitu('vastattu');
       return vastaa({ vastaus, jatkot: kaksi, syy: null, ...(paikka ? { paikka } : {}) }, kors);
     } catch (virhe) {
       // Vain tilakoodi lokiin — ei avainta, ei pelaajan tekstiä.

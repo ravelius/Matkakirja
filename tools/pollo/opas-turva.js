@@ -34,3 +34,11 @@ export function tarkistaSyote(teksti) {
   if (ASIATON.test(t)) return { tyyppi: 'asiaton', teksti: VASTAUS_ASIATON };
   return null;
 }
+
+/** Mallin oma teksti (kuratoitu live, kuratoitu.js) → null tai 'henkilotieto'|'asiaton'. Hätäkuvio koskee vain pelaajaa. */
+export function tarkistaSisalto(teksti) {
+  const t = String(teksti ?? '');
+  if (HENKILOTIETO.some((r) => r.test(t))) return 'henkilotieto';
+  if (ASIATON.test(t)) return 'asiaton';
+  return null;
+}

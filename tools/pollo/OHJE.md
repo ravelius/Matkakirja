@@ -354,6 +354,7 @@ uudelleen) tai kun ajetaan `npx wrangler deploy` komentoriviltä.
 | `POLLO_KUUKAUSIRAJA` | `1500` | **Kova kuukausikatto** koko palvelulle. Kun se täyttyy, pöllö lopettaa vastaamisen kuun loppuun asti. |
 | `POLLO_MALLI` | `claude-haiku-4-5-20251001` | Käytettävä malli. Halvin ja nopein riittää — pöllö vastaa lyhyesti. |
 | `OPAS_TESTI_MALLI` | `claude-haiku-5-5` | Testi- ja kehitysliikenteen malli (proto3d-/kehityskäännökset, node/curl, testiotsakkeet; tools/pollo/kulut.js). `pois` = tuotantomalli kaikille. Jaetut välimuistit (kohteet, Liiku, valmiit kysymykset, suosikit) generoidaan aina tuotantomallilla. Jokaisesta mallikutsusta lokirivi `kulu: <reitti> <testi\|peli> <malli> in= cw= cr= out=`. |
+| `PULU_PUUTTUVA_KURATOITU` | (ei asetettu) | Kuratoitu live alle 18-vuotiaille (tools/pollo/kuratoitu.js): otsake `x-matkakirja-aikuinen: 0` kuratoi aina. `1` = myös otsakkeeton pyyntö (vanha appi, web ilman ikäkyselyä) kuratoidaan. Asetetaan vasta, kun vanhan TF-apin todennus on tehty. Seurantalaskurit KV:ssä `kuratoitu:<päivä>:<tehtävä>:<tulos>` (ei IP:tä eikä tekstiä). |
 
 Ylityksestä pelaaja saa siistin viestin ("Pöllö on vastannut sinulle jo
 monta kertaa tänään"), ei virhettä.
