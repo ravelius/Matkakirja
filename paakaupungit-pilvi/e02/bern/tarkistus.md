@@ -76,3 +76,10 @@ Yhteenveto: VÄÄRIN 4, EPÄVARMA 12.
 | Kysymysten vihjeet | Q1 ks. EPÄVARMA; Q2–Q5 eivät paljasta vastausta. |
 | Minitehtävä | Vastaus löytyy saman sivun nostosta L1; ei toista kaupungin kysymyksiä; fakta ei ole nostovirke sanasta sanaan; ei palkkiota. Ainoa virhe: oikea vaihtoehto pisin (VÄÄRIN yllä). |
 | Faktapohjan ristiriidat | Marzilibahn 105 m (Marzili Funicular) vs 106 m (Bern); sisältö käyttää 105 m ilman "lyhin"-väitettä, hyväksyttävä. |
+
+## Korjattu
+
+- Minitehtävä: vaihtoehdot pidennetty ("Yhä portaalin ympärillä kirkon seinässä", "Zürichin Grossmünsterin kirkossa", "Ne tuhoutuivat reformaation aikana 1528"), oikea ei enää pisin.
+- L2 nosto 2: "osa lasimaalauksista" 1441–1450; kuoleman tanssin ikkunan hahmot Niklaus Manuel 1516–1519; näytelmät 1300-luvulta (lyhyt ja selite vastaavasti); Pariisi-lause ja ikkunamitat tiivistetty pituuden vuoksi (2,92 × 13,15 m).
+- Kuvatekstien "lähteen mukaan" poistettu (matkailijalle.kuva, jaksot[0].kuva).
+- Q1 vihje, Q2 kysymys ja intro, Mutzopolis, "korkein tuomiokirkko" (fact, nähtävyys, parasta), Zytglogge "suuri kello", Liittopalatsi itäsiipi 1892, Küng/Heintz-muotoilu, kaupunkilehden johdanto, kello 10,5 t ja lyhyt "kellot soivat päivittäin", "neljän kansalliskielen maassa" poistettu, L3 lyhyt Münsterplattformista.

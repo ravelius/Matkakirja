@@ -14,7 +14,7 @@
   }
  },
  "artikkeli": {
-  "intro": "Bern on **Sveitsin liittokaupunki**, jossa ovat maan hallituksen ja parlamentin kotipaikka. Perustuslaki ei nimeä virallista pääkaupunkia, joten liittokaupunki on tarkin nimitys. Asukkaita on 146 867 (31.12.2025). Vanhakaupunki nousee **Aare-joen ympäröimälle mäkiniemelle**, ja se on kuulunut Unescon maailmanperintökohteisiin vuodesta 1983.\n\nPerimätiedon mukaan herttua Berchtold V perusti kaupungin 1191, ja karhu on ollut sen sinetissä ja vaakunassa ainakin 1220-luvulta. Vuoden 1405 suurpalo tuhosi suurimman osan puutaloista, ja tilalle nousi vähitellen hiekkakivikaupunki, jonka holvikäytäviä on lähteen mukaan kuusi kilometriä. Liittokokouksen enemmistö valitsi Bernin hallituksen kotipaikaksi 28.11.1848.\n\nIsoisän matkavuonna 1873 kaupunki oli ollut hallituksen kotipaikka jo neljännesvuosisadan. Ensimmäinen liittopalatsi oli valmistunut 1857, mutta kupolilla varustettua parlamenttirakennusta ei vielä ollut, ja tuomiokirkon torni oli kesken: se valmistui vasta **1893**. Vanhankaupungin muoto ja kaduntasoiset holvikäytävät olivat kuitenkin jo silloin tuttuja.",
+  "intro": "Bern on **Sveitsin liittokaupunki**, jossa ovat maan hallituksen ja parlamentin kotipaikka. Perustuslaki ei nimeä virallista pääkaupunkia; Bern on hallituksen kotipaikka eli liittokaupunki. Asukkaita on 146 867 (31.12.2025). Vanhakaupunki nousee **Aare-joen ympäröimälle mäkiniemelle**, ja se on kuulunut Unescon maailmanperintökohteisiin vuodesta 1983.\n\nPerimätiedon mukaan herttua Berchtold V perusti kaupungin 1191, ja karhu on ollut sen sinetissä ja vaakunassa ainakin 1220-luvulta. Vuoden 1405 suurpalo tuhosi suurimman osan puutaloista, ja tilalle nousi vähitellen hiekkakivikaupunki, jonka holvikäytäviä on lähteen mukaan kuusi kilometriä. Liittokokouksen enemmistö valitsi Bernin hallituksen kotipaikaksi 28.11.1848.\n\nIsoisän matkavuonna 1873 kaupunki oli ollut hallituksen kotipaikka jo neljännesvuosisadan. Ensimmäinen liittopalatsi oli valmistunut 1857, mutta kupolilla varustettua parlamenttirakennusta ei vielä ollut, ja tuomiokirkon torni oli kesken: se valmistui vasta **1893**. Vanhankaupungin muoto ja kaduntasoiset holvikäytävät olivat kuitenkin jo silloin tuttuja.",
   "teksti": "== Nimi ja alku ==\nBern on Sveitsin tasangolla, noin 20 kilometriä Bernin Alppien pohjoispuolella, ja Aare-joki kiertää vanhaakaupunkia. Keskiaikaisen kaupungin perusti Zähringenin suku, ja perimätiedon mukaan Berchtold V perusti sen 1191. Nimen alkuperä on epävarma: karhuselitys on lähteen mukaan kansanetymologiaa, ja nykyään pidetään todennäköisenä kelttiläistä nimeä.\n\n== Hiekkakivestä rakennettu ==\nVuoden 1405 suurpalon jälkeen puutalot korvattiin vähitellen hiekkakivirakennuksilla, ja holvikäytävät syntyivät 1400-luvulla. Tuomiokirkon rakentaminen aloitettiin 1421, ja se pysähtyi lähes kolmeksi vuosisadaksi 1575 jälkeen.\n\n== Liittokaupunki ==\nVuonna 1848 Bern valittiin hallituksen kotipaikaksi, ja ensimmäinen liittopalatsi valmistui 1857. Nykyinen parlamenttirakennus rakennettiin 1894–1902."
  },
  "kysymykset": [
@@ -28,12 +28,12 @@
    ],
    "correct": 0,
    "level": 1,
-   "hint": "Vaakunaeläin on metsissä elävä suurpeto, jolla on paksu turkki.",
+   "hint": "Kansantarun mukaan herttua nimesi kaupungin ensimmäisellä metsästysretkellään kohtaamansa eläimen mukaan.",
    "fact": "Karhu on ollut Bernin sinetissä ja vaakunassa ainakin 1220-luvulta. Perimätiedon mukaan herttua nimesi kaupungin ensimmäisen metsästyksessä kohtaamansa eläimen mukaan.",
    "source": "https://en.wikipedia.org/wiki/Bern"
   },
   {
-   "q": "Millä nimellä Berniä kutsutaan, koska perustuslaki ei nimeä Sveitsille virallista pääkaupunkia?",
+   "q": "Mitä nimitystä Bernistä käytetään, kun Sveitsin perustuslaki ei nimeä virallista pääkaupunkia?",
    "options": [
     "Liittokaupunki",
     "Kruununkaupunki",
@@ -85,7 +85,7 @@
    "correct": 0,
    "level": 3,
    "hint": "Rakennustyö aloitettiin 1421, ja torni oli kauan kesken.",
-   "fact": "Tuomiokirkon rakennus aloitettiin 1421. Noin 100 metriä korkea torni valmistui lopulta 1893, ja lähteen mukaan se on Sveitsin korkein tuomiokirkon torni.",
+   "fact": "Tuomiokirkon rakennus aloitettiin 1421. Noin 100 metriä korkea torni valmistui lopulta 1893, ja lähteen mukaan kirkko on Sveitsin korkein tuomiokirkko.",
    "source": "https://en.wikipedia.org/wiki/Bern_Minster"
   }
  ],
@@ -105,7 +105,7 @@
   {
    "id": "kaupunki",
    "nimi": "Bern",
-   "johdanto": "Bern on Sveitsin liittokaupunki, jonka vanhakaupunki nousee Aare-joen mäkiniemelle ja jossa hiekkakivinen keskiaika on säilynyt ehjänä. Täällä on kansan hallituksen kotipaikka, ja kaupungin kilvessä kävelee karhu.",
+   "johdanto": "Bern on Sveitsin liittokaupunki, jonka vanhakaupunki nousee Aare-joen mäkiniemelle ja jossa hiekkakivinen keskiaika on säilynyt ehjänä. Täällä on liittovaltion hallituksen ja parlamentin kotipaikka, ja kaupungin kilvessä kävelee karhu.",
    "kansikuvat": [
     {
      "tiedosto": "Bern, Blick von der Kirchfeldbrücke auf die Altstadt mit Münster und Münsterplattform sowie die Aare mit der Matteschwelle bei Sonnenuntergang - 2018 (45115470384).jpg",
@@ -129,7 +129,7 @@
    "nostot": [
     {
      "otsikko": "Karhu vai rako",
-     "teksti": "Kansantaru kertoo, että herttua Berchtold V lupasi nimetä uuden kaupungin ensimmäisen metsästyksessä kohtaamansa eläimen mukaan, ja se oli karhu. Lähteen mukaan yhteys sanaan Bär on kuitenkin kansanetymologiaa. Pitkään nimeä pidettiin peräisin Veronasta, jota keskiyläsaksaksi sanottiin Berniksi. Nykyään todennäköisempänä pidetään kelttiläistä juurta: 1980-luvulla löytyneessä sinkkitaulussa on Engehalbinselin entisen asutuksen nimi Brenodor. Karhu on silti kaupungin sinetissä ja vaakunassa ainakin 1220-luvulta, ja 1800-luvulla kaupunkia leikillä kutsuttiin Mutzopolisiksi, koska Mutz tarkoittaa murteessa karhua.",
+     "teksti": "Kansantaru kertoo, että herttua Berchtold V lupasi nimetä uuden kaupungin ensimmäisen metsästyksessä kohtaamansa eläimen mukaan, ja se oli karhu. Lähteen mukaan yhteys sanaan Bär on kuitenkin kansanetymologiaa. Pitkään nimeä pidettiin peräisin Veronasta, jota keskiyläsaksaksi sanottiin Berniksi. Nykyään todennäköisempänä pidetään kelttiläistä juurta: 1980-luvulla löytyneessä sinkkitaulussa on Engehalbinselin entisen asutuksen nimi Brenodor. Karhu on silti kaupungin sinetissä ja vaakunassa ainakin 1220-luvulta, ja kaupunkia on leikillä kutsuttu myös Mutzopolisiksi, koska Mutz tarkoittaa murteessa karhua.",
      "tiedosto": "Bemalte Sandsteinskulptur Bär mit Wappen (Walter Schnegg 1952) 01.jpg",
      "lyhyt": "Karhu on ollut Bernin sinetissä ja vaakunassa ainakin 1220-luvulta.",
      "selite": "Karhu on Bernin vaakunaeläin: se on kuvattu kaupungin sinetissä ja vaakunassa ainakin 1220-luvulta lähtien.",
@@ -168,7 +168,7 @@
     "kuva": {
      "tiedosto": "Altstadt Bern - Kreuzgassbrunnen und Gerechtigkeitsgasse (2022).jpg",
      "lyhyt": "Vanhankaupungin holvikäytäviä on yhteensä noin kuusi kilometriä.",
-     "selite": "Bernin vanhankaupungin holvikäytäviä on lähteen mukaan yhteensä kuusi kilometriä, ja ne ovat osa Unescon maailmanperintökohdetta.",
+     "selite": "Bernin vanhankaupungin holvikäytäviä on yhteensä kuusi kilometriä, ja ne ovat osa Unescon maailmanperintökohdetta.",
      "lahde": "JoachimKohler-HB, Wikimedia Commons (CC BY-SA 4.0)"
     },
     "kappale": "Bern on Sveitsin liittokaupunki ja Bernin kantonin pääkaupunki, ja siellä asuu 146 867 ihmistä (31.12.2025). Kaupunki on Sveitsin tasangolla, noin 20 kilometriä Bernin Alppien pohjoispuolella, ja vanhakaupunki on Aare-joen kiertämällä niemekkeellä. Suurin osa asukkaista puhuu äidinkielenään saksaa, ja valuutta on Sveitsin frangi. Kaupunki on mäkinen, sillä korkeuseroa on enintään 60 metriä. Vanhakaupunki on Unescon maailmanperintökohde vuodesta 1983. Isot lentokentät ovat Zürichissä, Genevessä ja Baselissa, alle kahden tunnin junamatkan päässä.",
@@ -184,7 +184,7 @@
        "kuva": {
         "tiedosto": "Bern Hauptbahnhof (2014).jpg",
         "lyhyt": "Bernin päärautatieasema avattiin vaiheittain 1858–1860.",
-        "selite": "Bernin päärautatieasema avattiin vaiheittain 1858–1860, ja se on lähteen mukaan Sveitsin toiseksi vilkkain.",
+        "selite": "Bernin päärautatieasema avattiin vaiheittain 1858–1860, ja se on Sveitsin toiseksi vilkkain.",
         "lahde": "JoachimKohler-HB, Wikimedia Commons (CC BY-SA 4.0)"
        }
       },
@@ -239,7 +239,7 @@
        {
         "mita": "Tuomiokirkon portaali ja torni",
         "tahdet": 3,
-        "selite": "Viimeisen tuomion veistokset ja noin sadan metrin torni, lähteen mukaan Sveitsin korkein."
+        "selite": "Viimeisen tuomion veistokset ja noin sadan metrin torni, ja lähteen mukaan kirkko on Sveitsin korkein tuomiokirkko."
        },
        {
         "mita": "Bundeshaus ja Bundesplatz",
@@ -260,7 +260,7 @@
       "hyvaTietaa": [
        {
         "otsikko": "Frangi ja saksa",
-        "teksti": "Valuutta on Sveitsin frangi, ja Bern on saksankielinen kaupunki neljän kansalliskielen maassa."
+        "teksti": "Valuutta on Sveitsin frangi, ja Bern on saksankielinen kaupunki."
        },
        {
         "otsikko": "Lentoasema on pieni",
@@ -288,9 +288,9 @@
     "kysymys": "Missä Münsterin pääportaalin suurten patsaiden alkuperäiset ovat nykyään?",
     "vaihtoehdot": [
      "Bernin historiallisessa museossa",
-     "Yhä portaalin ympärillä",
-     "Zürichin tuomiokirkossa",
-     "Ne tuhoutuivat 1528"
+     "Yhä portaalin ympärillä kirkon seinässä",
+     "Zürichin Grossmünsterin kirkossa",
+     "Ne tuhoutuivat reformaation aikana 1528"
     ],
     "oikea": 0,
     "fakta": "Portaalin suuret vapaasti seisovat patsaat on korvattu jäljennöksillä, mutta noin 170 pienempää hahmoa on yhä alkuperäisiä."
@@ -298,19 +298,19 @@
    "nostot": [
     {
      "otsikko": "Viimeinen tuomio kivessä",
-     "teksti": "Münsterin päätuloportaalin yllä on lähteen mukaan yksi Euroopan täydellisimmistä myöhäisgoottilaisista veistoskokoelmista. Aiheena on viimeinen tuomio: jumalattomat ovat alastomina oikealla, vanhurskaat valkoisissa vaatteissa vasemmalla, ja keskellä seisovat Oikeus ja arkkienkeli Mikael nostetulla miekalla. Veistäjänä oli Erhard Küng Westfalenin Stadtlohnista, ja patsaat veistettiin 1460–1501. Portaalin suuret, vapaasti seisovat patsaat, yhteensä 47, ovat nykyään jäljennöksiä, ja alkuperäiset säilytetään Bernin historiallisessa museossa. Veistokset olivat ainoat Münsterin patsaat, jotka säilyivät reformaation ikonoklasmista.",
+     "teksti": "Münsterin päätuloportaalin yllä on lähteen mukaan yksi Euroopan täydellisimmistä myöhäisgoottilaisista veistoskokoelmista. Aiheena on viimeinen tuomio: jumalattomat ovat oikealla, vanhurskaat vasemmalla, ja keskellä seisovat Oikeus ja arkkienkeli Mikael. Veistokset teki pääosin Erhard Küng Westfalenin Stadtlohnista, ja ne on lähteen mukaan veistetty 1460–1501 välillä; keskellä seisovan Oikeuden on veistänyt Daniel Heintz. Portaalin suuret, vapaasti seisovat patsaat (47) ovat nykyään jäljennöksiä, ja alkuperäiset säilytetään Bernin historiallisessa museossa. Veistokset olivat ainoat Münsterin patsaat, jotka säilyivät reformaation ikonoklasmista.",
      "tiedosto": "Berner Münster (Hauptportal mit Jüngstem Gericht - Erhart Küng 1458-1485).jpg",
      "lyhyt": "Münsterin päätuloportaalin viimeisen tuomion veistokset ovat Erhard Küngin työtä.",
-     "selite": "Münsterin päätuloportaalin viimeisen tuomion veistokset ovat Erhard Küngin työtä, ja ne säilyivät reformaation ikonoklasmista.",
+     "selite": "Münsterin päätuloportaalin viimeisen tuomion veistokset ovat pääosin Erhard Küngin työtä, ja ne säilyivät reformaation ikonoklasmista.",
      "lahde": "Yair Haklai, Wikimedia Commons (CC BY-SA 4.0)",
      "wiki": "Bern Minster"
     },
     {
      "otsikko": "Kuoleman tanssi lasissa",
-     "teksti": "Münsterin lasimaalaukset on tehty 1441–1450, ja lähteen mukaan ne kuuluvat Sveitsin arvokkaimpiin. Yhdessä ikkunassa kuolema luurankona tavoittaa ihmisiä kaikista yhteiskuntaluokista. Kuoleman tanssin aihe sai alkunsa 1300-luvulla Mustan surman aikaan, ja vuoteen 1425 mennessä sen hahmot olivat Pariisin Pyhien viattomien kirkon hautausmaalla. Ikkunat ovat keskeltä 2,92 metriä leveitä ja 13,15 metriä korkeita. Raekuuro vaurioitti vuonna 1520 oikean puoleisia ikkunoita, ja ne korvattiin 1868.",
+     "teksti": "Osa Münsterin lasimaalauksista on tehty 1441–1450, ja lähteen mukaan ne kuuluvat Sveitsin arvokkaimpiin. Kuoleman tanssin ikkunassa kuolema luurankona tavoittaa ihmisiä kaikista yhteiskuntaluokista; ikkunan hahmot on lähteen mukaan tehnyt Niklaus Manuel 1516–1519. Kuoleman tanssi -näytelmät saivat alkunsa 1300-luvulla Mustan surman aikaan. Ikkunat ovat keskeltä 2,92 × 13,15 metriä. Raekuuro vaurioitti vuonna 1520 oikean puoleisia ikkunoita, ja ne korvattiin 1868.",
      "tiedosto": "Bern Münster Totentanzfenster detail3.jpg",
-     "lyhyt": "Kuoleman tanssin aihe sai alkunsa 1300-luvulla Mustan surman aikaan.",
-     "selite": "Kuoleman tanssin aiheessa luurankona kuvattu kuolema tavoittaa ihmisiä kaikista yhteiskuntaluokista; aihe sai alkunsa 1300-luvulla Mustan surman aikaan.",
+     "lyhyt": "Kuoleman tanssi -näytelmät saivat alkunsa 1300-luvulla Mustan surman aikaan.",
+     "selite": "Kuoleman tanssin ikkunassa luurankona kuvattu kuolema tavoittaa ihmisiä kaikista yhteiskuntaluokista; aiheen näytelmät saivat alkunsa 1300-luvulla Mustan surman aikaan.",
      "lahde": "Photo: Andreas Praefcke, Wikimedia Commons (CC BY 3.0)",
      "wiki": "Bern Minster"
     },
@@ -318,7 +318,7 @@
      "otsikko": "Kuvat, jotka kaadettiin terassille",
      "teksti": "Bern omaksui reformaation Bernin kiistakeskustelun (6.–26.1.1528) jälkeen. Samana vuonna Münsteristä poistettiin kaikki 43 sivualttaria, ja lähes kaikki sisämaalaukset ja koristeet kaadettiin viereiseen Münsterplattformiin. Lähteen mukaan terassi onkin arkeologisesti rikas paikka. Sisälle jäivät lasimaalaukset ja kuoripenkit: penkit tehtiin 1522–1525 Schaffhausenista palkatuilla mestareilla, ja lähteen mukaan ne ovat Sveitsin ensimmäiset renessanssityyliset kuoripenkit. Penkit korjattiin 1863–64.",
      "tiedosto": "Münsterplattform Bern 01.jpg",
-     "lyhyt": "Reformaation aikana 1528 Münsteristä poistettiin kaikki 43 sivualttaria.",
+     "lyhyt": "Münsterplattformille kaadettiin reformaation aikana 1528 kirkon maalauksia ja koristeita.",
      "selite": "Münsterplattform on tuomiokirkon viereinen terassi, jonne kaadettiin reformaation aikana 1528 lähes kaikki kirkon sisämaalaukset ja koristeet.",
      "lahde": "H.Helmlechner, Wikimedia Commons (CC BY-SA 4.0)",
      "wiki": "Bern Minster"
@@ -381,7 +381,7 @@
  "nahtavyydet": {
   "Zytglogge": {
    "aika": "noin 1218–1220",
-   "teksti": "Zytglogge eli kelloportti rakennettiin noin 1218–1220 kaupungin läntisen muurin porttitorniksi, ja sitä korotettiin seitsemän metriä noin 1270–1275. Kun muuri siirtyi 1344–1346, tornista tuli naisvankila. Nimi Zytglogge, aikakello, on kirjattu ensi kerran 1413.\n\nTorni paloi tyhjäksi 1405, ja samana vuonna valettiin uusi iso tuntikello. Tähtitieteellisen kellon mekanismi uusittiin 1527–1530 Kaspar Brunnerin työnä. Kolme minuuttia ennen tasatuntia kellon eläinhahmot ja narri esiintyvät, ja kultainen Kronos-hahmo lyö kelloa; nykyinen hahmo on 1930 tehty rekonstruktio.\n\nIsoisän matkavuonna 1873 portti oli seissyt paikallaan yli 600 vuotta. Nykyinen ulkoasu on pääosin vuosien 1770–71 kunnostuksesta, ja palautus tehtiin 1981–83. Lähteen mukaan se on kaupungin vanhin muistomerkki.",
+   "teksti": "Zytglogge eli kelloportti rakennettiin noin 1218–1220 kaupungin läntisen muurin porttitorniksi, ja sitä korotettiin seitsemän metriä noin 1270–1275. Kun muuri siirtyi 1344–1346, tornista tuli naisvankila. Nimi Zytglogge, aikakello, on kirjattu ensi kerran 1413.\n\nTorni paloi tyhjäksi 1405, ja samana vuonna valettiin uusi suuri kello. Tähtitieteellisen kellon mekanismi uusittiin 1527–1530 Kaspar Brunnerin työnä. Kolme minuuttia ennen tasatuntia kellon eläinhahmot ja narri esiintyvät, ja kultainen Kronos-hahmo lyö kelloa; nykyinen hahmo on 1930 tehty rekonstruktio.\n\nIsoisän matkavuonna 1873 portti oli seissyt paikallaan yli 600 vuotta. Nykyinen ulkoasu on pääosin vuosien 1770–71 kunnostuksesta, ja palautus tehtiin 1981–83. Lähteen mukaan se on kaupungin vanhin muistomerkki.",
    "kuvat": [
     {
      "tiedosto": "Zytglogge in Bern Switzerland by Robbie Conceptuel.png",
@@ -394,11 +394,11 @@
   },
   "Bernin tuomiokirkko": {
    "aika": "1421–1893",
-   "teksti": "Bernin tuomiokirkon, Münsterin, rakentaminen aloitettiin 11.3.1421 Matthäus Ensingerin johdolla. Edellinen kirkko purettiin 1449–1451, ja vanha torni seisoi vielä 1493 asti. Rakentaminen pysähtyi lähes kolmeksi vuosisadaksi 1575 jälkeen, ja noin 100 metrin torni valmistui lopulta 1893.\n\nUrut asennettiin kolmessa vaiheessa 1727–1783. Suurin kello on noin kymmenen tonnia painava, ja kellot soivat päivittäin keskipäivällä ja kello 18. Sisätilassa on säilynyt lasimaalauksia 1441–1450 ja kuoripenkit, vaikka reformaation myötä 1528 poistettiin kaikki 43 sivualttaria.\n\nIsoisän matkavuonna 1873 tornista puuttui vielä huippu: kello- ja tornityö valmistui vasta 1893, ja lähteen mukaan se on Sveitsin korkein tuomiokirkon torni.",
+   "teksti": "Bernin tuomiokirkon, Münsterin, rakentaminen aloitettiin 11.3.1421 Matthäus Ensingerin johdolla. Edellinen kirkko purettiin 1449–1451, ja vanha torni seisoi vielä 1493 asti. Rakentaminen pysähtyi lähes kolmeksi vuosisadaksi 1575 jälkeen, ja noin 100 metrin torni valmistui lopulta 1893.\n\nUrut asennettiin kolmessa vaiheessa 1727–1783. Suurin kello painaa noin 10,5 tonnia, ja kellot soivat päivittäin keskipäivällä ja kello 18. Sisätilassa on säilynyt lasimaalauksia 1441–1450 ja kuoripenkit, vaikka reformaation myötä 1528 poistettiin kaikki 43 sivualttaria.\n\nIsoisän matkavuonna 1873 tornista puuttui vielä huippu: kello- ja tornityö valmistui vasta 1893, ja lähteen mukaan kirkko on Sveitsin korkein tuomiokirkko.",
    "kuvat": [
     {
      "tiedosto": "Bern munster.jpg",
-     "lyhyt": "Münsterin rakentaminen aloitettiin 1421, ja sen suurin kello soi päivittäin.",
+     "lyhyt": "Münsterin rakentaminen aloitettiin 1421, ja sen kellot soivat päivittäin.",
      "selite": "Münsterin rakentaminen aloitettiin 1421 Matthäus Ensingerin johdolla, ja kellot soivat päivittäin keskipäivällä ja kello 18.",
      "lahde": "Pugefco, Wikimedia Commons (CC BY-SA 4.0)"
     }
@@ -407,7 +407,7 @@
   },
   "Liittopalatsi": {
    "aika": "1852–1902",
-   "teksti": "Bundeshaus on kolmen rakennuksen kokonaisuus, joka on yli 300 metriä pitkä. Länsisiipi rakennettiin 1852–1857 Jakob Friedrich Studerin suunnitelmien mukaan, ja siihen sijoitettiin hallinto, hallitus ja parlamentti. Itäsiipi valmistui 1884–1892, ja kupolilla varustettu parlamenttirakennus rakennettiin 1894–1902 Hans Wilhelm Auerin johdolla.\n\nParlamenttirakennuksen kupolin ulkokorkeus on 64 metriä, ja sen mosaiikissa on vaakuna ja motto Unus pro omnibus, omnes pro uno. Lähteen mukaan rakennuksessa on 30 kivilajia 13 kantonista, ja sen koristeluun osallistui 38 sveitsiläistä taiteilijaa. Rakennuksen kustannus oli 7,2 miljoonaa frangia.\n\nIsoisän matkavuonna 1873 vain länsisiipi oli valmis. Se tunnettiin silloin nimellä Bundes-Rathaus, eikä itäsiipeä tai kupolirakennusta ollut vielä olemassa.",
+   "teksti": "Bundeshaus on kolmen rakennuksen kokonaisuus, joka on yli 300 metriä pitkä. Länsisiipi rakennettiin 1852–1857 Jakob Friedrich Studerin suunnitelmien mukaan, ja siihen sijoitettiin hallinto, hallitus ja parlamentti. Itäsiipi valmistui 1892, ja kupolilla varustettu parlamenttirakennus rakennettiin 1894–1902 Hans Wilhelm Auerin johdolla.\n\nParlamenttirakennuksen kupolin ulkokorkeus on 64 metriä, ja sen mosaiikissa on vaakuna ja motto Unus pro omnibus, omnes pro uno. Lähteen mukaan rakennuksessa on 30 kivilajia 13 kantonista, ja sen koristeluun osallistui 38 sveitsiläistä taiteilijaa. Rakennuksen kustannus oli 7,2 miljoonaa frangia.\n\nIsoisän matkavuonna 1873 vain länsisiipi oli valmis. Se tunnettiin silloin nimellä Bundes-Rathaus, eikä itäsiipeä tai kupolirakennusta ollut vielä olemassa.",
    "kuvat": [
     {
      "tiedosto": "Bundeshauskuppel-von-Süden.JPG",
