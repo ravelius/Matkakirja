@@ -59,3 +59,7 @@ Python-kuvatyökalut: `/Users/Shared/Claude/proto-3d/_tyo/venv-rembg/bin/python 
 - (23.0x) Vertailuportti Olavinlinna nyky tehty ja raportoitu PT:lle (json kaappaukset/linnanrakentaja-olavinlinna-20261010/); vertaa_orto.py:n
   --origo + --meta -siirtovirhe korjattu (vanha vertaa_orto_ennen_origo.py). Levysiivous 7,6 Gi (codex-ohje-v46t → T7 symlinkillä).
 - ODOTTAA: Siirtosepän v47e-pelikuvat, LS2:n museo v2g -pelikuva + täysi läpipeluulista (junan 180 jälkeen), LS2:n Pariisi v2 ja ND v5f -parit.
+- (23.4x) **v47e HYLÄTTY** Siirtosepän pelikuvissa (laiturin oikealle paljastui natiivin suorareunainen vesilaatta, kun jalusta 0,8 ×; portin
+  −6,0-tasanne päättyi metrin jyrkänteeseen). **v47f VIETY (00.2x):** 1499 PALA b257fdf63e18f222 (blender d9e8157ba18d3b20), NYKY PALA
+  695db038346095af (blender e1c6c2cd18dee278), v45k b9aacdf04 / ca0821cf6. Rantakivet v2b (jalusta täysleveä, 4–7 lohkopintaa; v2a tallessa
+  glb-v2a/), portti loiva rantakallio (ranta1499_portti.py v47f; v47e-json ranta1499_v47e.json). Siirtosepän pelikuvapari odottaa.
