@@ -335,6 +335,10 @@ namespace Matkakirja.Natiivi
             if (Lennolla) return;
             vaihto?.Pause();
             if (string.IsNullOrEmpty(k) || k != kaupunki) return;
+            // UUSI ESITTELY KÄYNNISSÄ (PT 22.1x, juna 180: iPhonella ja iPadilla pakka ja Ohita eivät näkyneet): esittely alkaa
+            // saapumisesta, ja saapumisluenta ilman luentoa päättyy heti → tämä Loppui tuli kesken esittelyn ja LoppuiJatko tyhjensi
+            // pakan, piilotti Ohitan ja aloitti Livian kommentin esittelyn päälle. Livian vuoro tulee esittelyn lopussa (NykyIntro).
+            if (introKaupunki == k) return;
             // PARIISIN ESITTELY (omistaja 10.10. 17.3x, sitova): saapumisesitys jatkuu samalla pakalla ja Ohitalla nykyintron
             // kuvilla C1–C5 musiikin tahdissa; Livian vuoro sen jälkeen (LoppuiJatko).
             if (IntroSaapuessa && KaupunkiIntro.OnIntro(k) && ohjain?.LuentoOhitettu != true && !introSoitettu.Contains(k) && NykyIntro(k))
