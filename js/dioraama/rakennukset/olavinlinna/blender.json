@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "9a29525aa19fd2f3",
-  "kansio": "dioraama/olavinlinna/blender/9a29525aa19fd2f3/",
+  "hash": "30fa12007ccfabe4",
+  "kansio": "dioraama/olavinlinna/blender/30fa12007ccfabe4/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-0-6x6.astcm",
@@ -1420,8 +1420,8 @@
     },
     {
       "polku": "kavely/osat.json",
-      "sha256": "ecd053feba64849ffa5b0be56b8471da003cecd266fadf95824ec3a225bd6611",
-      "tavuja": 32300
+      "sha256": "ef86f08cb6dba83b4d1a096832f17f4851b4dfb810205aae2a7a7002edcc314e",
+      "tavuja": 31918
     },
     {
       "polku": "kavely/ovi-tammi-100x190-normaali-6x6.astcm",
@@ -2275,23 +2275,23 @@
     },
     {
       "polku": "kavely/valot/kappeli-kavely-4x4.astcm",
-      "sha256": "85f7d58648c4bedb0354fe0909da4c41956507aa386e375e4d2e9581e5793332",
+      "sha256": "47da4f8b11b6dba1285289e57bdf167a2cab049f9336d179ac5db50e8296fd8a",
       "tavuja": 1398144
     },
     {
       "polku": "kavely/valot/kappeli-kavely-512-4x4.astcm",
-      "sha256": "4e6c38d91712f022732fcaf57885159ec6ce1c639bd32d9be70831d5a20e1841",
+      "sha256": "54beae35c5961f04f7242c1421fe910390a332bd87181cd1a2a612eaecc915c4",
       "tavuja": 349568
     },
     {
       "polku": "kavely/valot/kappeli-kavely-512.jpg",
-      "sha256": "06bdb347d7fdb0f92b348fc0d890578774c4cb444b94bdcb1fa810e3aa1b5af9",
-      "tavuja": 83129
+      "sha256": "c98b1bcd9801c4441cc0dc19276f31b46b6922eaf304fadb01a9b772aec8389f",
+      "tavuja": 83137
     },
     {
       "polku": "kavely/valot/kappeli-kavely.jpg",
-      "sha256": "4630ff2b5223b412aaa5d75f667b4612903958b99deeb71252b9e017ba3376b5",
-      "tavuja": 230670
+      "sha256": "18220280a95b0ab5f3f96d8fd5134eb4b0e56b64881742959ac621c9e9b478c4",
+      "tavuja": 230755
     },
     {
       "polku": "kavely/valot/kirkkotorni-portaat-4x4.astcm",
