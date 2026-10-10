@@ -9,6 +9,6 @@ Alku: 2026-10-10T21:59:24Z. Agenttien kulutus: kirjataan kahden ensimmäisen kau
 | monaco | ✓ | | | | | | |
 | andorralavella | ✓ | | | | | | |
 | sanmarino | ✓ | | | | | | |
-| reykjavik | | | | | | | |
+| reykjavik | ✓ | | | | | | |
 
 Vaihe 0 ✓ (konteksti, sää: 6 säärivia Open-Meteosta).
