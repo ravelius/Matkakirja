@@ -45,7 +45,7 @@ namespace Matkakirja.Linssit.Testit
             var koodi = Koodi();
             foreach (var t in Tehosteet) Oleta.Tosi(koodi.Contains("\"" + t + "\""), $"tehoste {t} kytketty");
             Oleta.Tosi(File.ReadAllText(Path.Combine(Juuri, "Assets/Matkakirja/Linssit/Unity/DioraamaSovitin.cs")).Contains("/aanet-lapi-v2/manifest.json")
-                && File.ReadAllText(Path.Combine(Juuri, "Assets/Matkakirja/Linssit/Unity/DioraamaSovitin.cs")).Contains("/repliikit-lapi-v1/manifest.json"), "manifestit");
+                && File.ReadAllText(Path.Combine(Juuri, "Assets/Matkakirja/Linssit/Unity/DioraamaSovitin.cs")).Contains("/repliikit-lapi-v2/manifest.json"), "manifestit");
         }
 
         [Testi] static void KertojanAanitunnisteetTaulussa()
