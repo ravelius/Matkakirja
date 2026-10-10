@@ -37,6 +37,11 @@ tai devicectl device install app (bundle fi.matkakirja.peli.kehitys), sitten mui
 - TF 175 TÄNÄÄN 6.7:llä (omistaja): ehdot testit 6.7 + käännös + iPad Release-muistiajo läpi; muutosloki 175 (maininta Unity 6.7:stä
   pelaajan kielellä) PT:lle; LR:n kartiokuori vain jos ehtii.
 
+## TILA 09.0x
+- PT 08.5x pyysi varautumaan uudelleenlukitukseen (esittelyn valkoiset kivet), 09.0x PERUI: kivet jo 6.3:ssa, ei regressio → BUILD 175
+  86ef3b3e6 pysyy (Julkaisija → TF; muutosloki tiivistetty PT:llä 245 merkkiin).
+- JUNA 176 runko natiiviseppa/juna-176 = 86ef3b3e6 (wt j175 vaihdettu tähän haaraan). PT kuittaa LS1 u67-haarat ja pohja-175 erikseen.
+
 ## TILA 08.5x — JUNA 175 LUKITTU (Unity 6.7)
 - BUILD 175 = **86ef3b3e630c49012b33a552b3ff475d4cd82604** (proton master; juna/b13 8d6ff7bc9; simukäännös ee95d97c8 08.49; puu identtinen,
   diff 0). Muutosloki 175 BUILD-commitin viestissä ja PT:lle. Julkaisija → tf-kaynnista.sh 175. Lukko vapaa 08.49.
