@@ -1420,9 +1420,10 @@
   "kohde": "kohde:hahmotelma-adrspach",
   "kysymys": "Mikä lintu pesii Adršpachin kallioilla?",
   "uusi": false,
-  "vastaus": "Joo, tän minä tiedän. Sukulaisia kai. Alueen kalliolla pesii [[muuttohaukka]], ja Adršpachin alue on yksi Euroopan suurimpia sen pysyviä pesimäpaikkoja. Haukat käyttävät pystysuoria kallioseinämiä pesäpaikkoinaan, ja siksi osa kallioista suljetaan pesimäaikaan, jotta lintujen pesintä ei häiriintyisi. Alue on suojeltu kansallisena luonnonsuojelualueena vuodesta 1933. Pysyttelen kunnioittavasti kauempana.",
+  "vastaus": "Joo, tän minä tiedän. Sukulaisia kai. Alueen kalliolla pesii [[muuttohaukka]], ja [[Adršpachin]] alue on yksi Euroopan suurimpia sen pysyviä pesimäpaikkoja. Haukat käyttävät pystysuoria kallioseinämiä pesäpaikkoinaan, ja siksi osa kallioista suljetaan pesimäaikaan, jotta lintujen pesintä ei häiriintyisi. Alue on suojeltu kansallisena luonnonsuojelualueena vuodesta 1933. Pysyttelen kunnioittavasti kauempana.",
   "linkit": [
-   "muuttohaukka"
+   "muuttohaukka",
+   "Adršpachin"
   ],
   "jatkot": [
    "Miten muuttohaukka metsästää?",
