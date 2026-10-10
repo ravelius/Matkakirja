@@ -340,5 +340,1918 @@
    "Mitä soittimia sevdalinkassa käytetään?",
    "Miten sevdalinka eroaa muusta balkanilaisesta musiikista?"
   ]
+ },
+ {
+  "kohde": "kohde:neretva",
+  "kysymys": "Miksi karstijoen vesi on niin kylmää?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Tost minä osaan kertoo, vaikka kylmä vesi ei kyyhkyn lempiaihe oo. Karstijoen vesi on kylmää, koska suuri osa siitä on peräisin sadevedestä ja lumen sulamisvedestä, joka suodattuu [[kalkkikiven]] rakoihin ja virtaa maan alla ennen kuin purkautuu lähteinä pintaan. Maan alla vesi ei lämpene auringossa vaan omaksuu kallion lämpötilan, joka vuoristossa on matala. [[Neretvan]] kaltaisessa joessa korkeus, vuoristoilmasto ja syvät, varjoisat kanjonit pitävät lämpötilan alhaisena, ja lähdevesi virtaa niin nopeasti, ettei se ehdi lämmetä matkalla. Vastaavaa on muillakin [[karstialueen]] joilla. Kyl siin siivet jäätyis pelkästä ajatuksesta.",
+  "linkit": [
+   "kalkkikiven",
+   "Neretvan",
+   "karstialueen"
+  ],
+  "jatkot": [
+   "Miten karstialueen lähteet syntyvät?",
+   "Miksi kalkkikivi liukenee veteen?"
+  ]
+ },
+ {
+  "kohde": "kohde:neretva",
+  "kysymys": "Mitä kaloja Neretvan vesistössä elää?",
+  "uusi": false,
+  "vastaus": "Kato, kalat. Ne kiinnostaa minua lähinnä ylhäältä päin. Neretvan vesistössä elää useita kotoperäisiä kalalajeja, eli lajeja, joita ei tavata muualla. Tunnetuimpia ovat taimenet, kuten marmoritaimen ja Adrianmeren valuma-alueen oma pehmeäsuinen taimen, joka tunnetaan nimellä Salmo obtusirostris. Täydellisestä lajilistasta en ole varma, ja kotoperäisten kalojen tarkka määrä vaihtelee lähteestä riippuen. Niiden runsaus selittyy sillä, että karstialueen joet ovat pitkään olleet toisistaan eristyneitä ja kylmä, puhdas vesi on suosinut erikoistuneita lajeja. Taimenet viihtyvät nimenomaan [[kylmässä]] ja happirikkaassa vedessä, jollaista vuoristojoki tarjoaa. No, ei paha kalatieto linnulta.",
+  "linkit": [
+   "kylmässä"
+  ],
+  "jatkot": [
+   "Mitä tarkoittaa kotoperäinen laji?",
+   "Miksi taimen viihtyy kylmässä vedessä?"
+  ]
+ },
+ {
+  "kohde": "kohde:neretva",
+  "kysymys": "Miksi Mostarin Vanha silta on niin kuuluisa?",
+  "uusi": true,
+  "vastaus": "Ai se silta. Sen minä muistan, vaikka en uskaltanut laskeutua alas. Mostarin [[Vanha silta]] ylittää Neretvan yhdellä korkealla kaarella, ja se rakennettiin 1500-luvulla ottomaanien aikana. Silta tuhoutui 1990-luvun sodassa ja rakennettiin uudelleen, minkä jälkeen se on kuulunut [[UNESCOn]] maailmanperintökohteisiin. Se on tullut tunnetuksi sekä muotonsa että perinteensä vuoksi: nuoret miehet ovat hypänneet sillalta jokeen jo pitkään, ja nykyisin hypystä järjestetään kilpailu. Sillan ympärillä oleva kaupunginosa on hyvä esimerkki ottomaanien ajan kaupunkirakenteesta. Tarkkaa vuotta en tässä uskalla sanoa, koska lähteet antavat rakentamisajalle hieman vaihtelevia lukuja.\n\nSillalta hyppääminen on kyyhkyn silmin hyvin outoa, koska me lennämme alas mieluummin siivet auki.",
+  "linkit": [
+   "Vanha silta",
+   "UNESCOn"
+  ],
+  "jatkot": [
+   "Miten Mostarin kaupunki rakentui sillan ympärille?",
+   "Mitä ottomaanien ajan rakennuksia Mostarissa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:neretva",
+  "kysymys": "Mikä tekee karstista erityisen maastotyypin?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Karstista on pitkä lista, mut yritän tiivistää. Karsti on maastotyyppi, joka syntyy, kun vesi liuottaa kalkkikiveä tai muuta helposti liukenevaa kiveä. Tästä seuraa tyypillisiä muotoja: [[luolia]], vajoamia eli dolineja, kallionkoloja ja maan alle katoavia jokia, jotka voivat purkautua pintaan kaukana lähtöpisteestään. Pinnalla alue voi olla kuivaa, vaikka maan alla virtaa runsaasti vettä. Nimi karst tulee Sloveniasta, jossa Valvasor kuvasi ilmiötä jo 1600-luvun lopulla, ja siitä sana levisi tutkijoiden kielenkäyttöön. [[Dinaaristen Alppien]] alue on yksi Euroopan tunnetuimmista karstialueista. Ja kyl minä tän kaiken kannoin päässäni.",
+  "linkit": [
+   "luolia",
+   "Dinaaristen Alppien"
+  ],
+  "jatkot": [
+   "Miten luolat syntyvät kalkkikiveen?",
+   "Mikä on doliini?"
+  ]
+ },
+ {
+  "kohde": "kohde:neretva",
+  "kysymys": "Mihin mereen Neretva laskee?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Joki on pitkä matkaaja, vähän kuin meikäläiset. Neretva laskee Adrianmereen, ja sen suisto sijaitsee Kroatian puolella. Joki virtaa ensin Bosnia ja Hertsegovinan vuoristossa, kulkee Mostarin kautta ja jatkaa kohti rannikkoa, jossa laakso levenee hedelmälliseksi [[suistoalueeksi]]. Neretvan suisto tunnetaan viljelyksistään, ja sitä pidetään tärkeänä hedelmä- ja vihannesviljelyalueena sekä lintujen levähdyspaikkana. Suisto on myös [[Adrianmeren]] rannikon kosteikoista merkittäviä. Joen kokonaispituudesta lähteet esittävät hieman erilaisia lukuja. Ei paha, kun muistin ihan kaiken suunnistamatta.",
+  "linkit": [
+   "suistoalueeksi",
+   "Adrianmeren"
+  ],
+  "jatkot": [
+   "Mitä suistossa viljellään?",
+   "Miksi suistoalueet ovat tärkeitä linnuille?"
+  ]
+ },
+ {
+  "kohde": "kohde:sutjeska",
+  "kysymys": "Miten aarniometsä eroaa talousmetsästä?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Metsä on metsä, mut tässä on iso ero. Aarniometsä on luonnontilainen metsä, jota ihminen ei ole hakannut tai muokannut, ja siksi siinä on puita monenikäisiä ja -kokoisia. Siellä on paljon vanhoja ja kuolleita puita, jotka lahotessaan tarjoavat elinympäristön sienille, hyönteisille, linnuille ja sammalille. Talousmetsää sen sijaan hoidetaan puuntuotantoa varten: puut ovat usein samanikäisiä, ne hakataan kasvettuaan ja uusi metsä istutetaan tai uudistetaan. Siksi talousmetsä on yleensä lajistoltaan köyhempi. Perućica-aarniometsä on esimerkki harvinaisesta metsästä, jonka [[pyökit]] ovat kasvaneet vuosisatoja ilman hakkuita. Eikä kukaan ole koskaan kysynyt, mitä kyyhky metsästä ajattelee.",
+  "linkit": [
+   "pyökit"
+  ],
+  "jatkot": [
+   "Miksi kuollut puu on tärkeä metsälle?",
+   "Kuinka vanhaksi pyökki voi elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:sutjeska",
+  "kysymys": "Millainen eläin on gemssi?",
+  "uusi": false,
+  "vastaus": "Ai tota. Gemssi on minulle vähän kaukainen serkku vuorilta, vaikka ei lintu. Gemssi eli [[gemssi]] on vuoristoissa elävä, vuohen näköinen sorkkaeläin, joka kuuluu vuohiantiloopeihin. Sillä on lyhyet, koukkumaiset sarvet, jotka ovat sekä uroksilla että naarailla, ja talvella turkki on tummempi kuin kesällä. Gemssi liikkuu varmasti jyrkillä rinteillä ja kallioilla ja elää usein laumoina. Euroopassa sitä tavataan Alpeilla ja Balkanin vuorilla, ja Balkanilla elää oma alalajinsa. Ravinnoksi kelpaavat ruohot, yrtit ja lehdet, ja talvella myös havut. Hyvä kysymys tuo, vaikka vuorikiipeily ei oo minun tapani.",
+  "linkit": [
+   "gemssi"
+  ],
+  "jatkot": [
+   "Miten gemssi pysyy jyrkillä kallioilla?",
+   "Mitkä muut eläimet elävät Balkanin vuorilla?"
+  ]
+ },
+ {
+  "kohde": "kohde:sutjeska",
+  "kysymys": "Kuinka korkea Maglić on?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Korkeudet ovat just niitä lukuja, joissa kyyhky ei halua arvata. Maglić on Bosnia ja Hertsegovinan korkein vuori, ja sen huippu kohoaa noin 2 400 metrin korkeuteen. Se sijaitsee [[Sutjeskan kansallispuiston]] alueella lähellä Montenegron rajaa, ja rajalinja kulkee vuoren huipun tuntumassa. Tarkka korkeus ilmoitetaan eri lähteissä hieman eri tavoin, joten pyöristän mieluummin kuin arvaan. Vuoristo kuuluu Dinaaristen Alppien eteläosiin, ja sen rinteillä kasvaa laajoja metsiä ja korkeammalla kalliota. Matkalla huipulle ylitetään eri kasvillisuusvyöhykkeitä. Maglić on lisäksi [[Perućican]] aarniometsän yläpuolella kohoava näyttävä vuori.",
+  "linkit": [
+   "Sutjeskan kansallispuiston",
+   "Perućican"
+  ],
+  "jatkot": [
+   "Mitä vuoristossa kasvaa puurajan yläpuolella?",
+   "Miten korkeus mitataan vuorilla?"
+  ]
+ },
+ {
+  "kohde": "kohde:sutjeska",
+  "kysymys": "Millainen lintu maakotka on?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Maakotka on kyyhkyn silmin vähän pelottava kollega. Maakotka on suuri petolintu, jonka siipien kärkiväli on usein yli kaksi metriä. Sen höyhenpuku on tummanruskea, ja niskassa on kullanruskea sävy, josta nimi tulee. Se elää vuoristoissa, metsäisillä ja avoimilla alueilla ja metsästää pienempiä nisäkkäitä ja lintuja, ja välillä myös raatoja. Maakotka pesii yleensä korkeille kallioille tai suurille puille ja käyttää pesää usein vuosikausia. Laji on Euroopassa elänyt vuoristoseuduilla vakaammin kuin alankoalueilla, ja sen [[lentoa]] on helppo seurata ilmavirroissa kaarrellessa.\n\nMaakotkan lento on aivan eri sarjaa kuin kyyhkyn, ja minä kunnioitan sitä hiljaa ja turvaetäisyydeltä.",
+  "linkit": [
+   "lentoa"
+  ],
+  "jatkot": [
+   "Mitä muita petolintuja vuoristossa elää?",
+   "Miten muuttohaukka metsästää?"
+  ]
+ },
+ {
+  "kohde": "kohde:sutjeska",
+  "kysymys": "Mitä karhu tekee talvella?",
+  "uusi": true,
+  "vastaus": "Odotas vähän, tästä on kerrottavaa. Talvella karhu vetäytyy talvilepoon, jota kutsutaan usein talviuneksi, vaikka kyseessä ei ole aivan sama asia kuin pienempien eläinten talviuni. Se hakeutuu pesään, joka voi olla kolo, luola tai kuoppa, ja viettää siellä suuren osan talvesta. Syksyllä karhu syö runsaasti ja kerää rasvakerroksen, jonka varassa se elää talven yli. Lepo on kevyttä: ruumiinlämpö laskee vain vähän, ja karhu voi herätä, jos häiriö on suuri. Naaraat synnyttävät poikasensa pesässä talven aikana. Euroopassa [[ruskokarhu]] elää esimerkiksi Balkanin ja Karpaattien metsissä. Hyvä kysymys, vaikka kyyhky ei talviunta tunne.",
+  "linkit": [
+   "ruskokarhu"
+  ],
+  "jatkot": [
+   "Mitä karhu syö kesällä ja syksyllä?",
+   "Missä muualla Euroopassa ruskokarhu elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:travnik",
+  "kysymys": "Mitä Bosnian kuvernöörin työhön kuului?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Kuvernööri, siis vezir, kuulostaa tärkeältä, ja se olikin. Bosnian kuvernööri edusti ottomaanien sulttaania maakunnassa. Hänen tehtäviinsä kuuluivat yleensä verojen kantaminen, järjestyksen ylläpito, sotilaallisten joukkojen johtaminen ja yhteydenpito paikallisiin aatelisiin ja hallintovirkamiehiin. Hän myös välitti sulttaanin määräykset eteenpäin ja huolehti maakunnan rajojen turvallisuudesta. Tarkka tehtäväjako vaihteli aikakauden ja kuvernöörin mukaan, ja paikalliset ylimykset pystyivät joskus rajoittamaan hänen valtaansa. Travnikista tuli [[kuvernöörin]] asuinpaikka, ja kaupungissa toimi sen vuoksi myös hallinto ja virkamiehiä. Ei kai pöllö tätä parempaa ois osannut sanoa.",
+  "linkit": [
+   "kuvernöörin"
+  ],
+  "jatkot": [
+   "Mikä oli ottomaanien vilajetti?",
+   "Millaista elämä oli ottomaanien ajan kaupungissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:travnik",
+  "kysymys": "Miksi hallinto siirtyi lopulta pois Travnikista?",
+  "uusi": false,
+  "vastaus": "No niin, tää on vähän hankala. Siirrosta puhutaan eri lähteissä hieman eri tavoin, joten kerron sen minkä tiedän. Hallintokeskus siirtyi 1800-luvun puolivälissä Sarajevoon, kun ottomaanien keskushallinto uudisti maakuntahallintoa ja pyrki kaventamaan paikallisten ylimysten valtaa. Sarajevo oli Bosnian suurin kaupunki ja tärkeä kauppakeskus, joten se soveltui hallinnon kotipaikaksi paremmin kuin Lašvan laaksossa oleva Travnik. Siirron tarkoista syistä ja yksityiskohdista en ole täysin varma. Travnik säilytti silti merkityksensä paikallisena kaupunkina, ja sen kuvernöörinaikainen perintö näkyy yhä [[vanhassakaupungissa]] ja linnassa. Taisin mennä vähän yli, mut ihan hyvä.",
+  "linkit": [
+   "vanhassakaupungissa"
+  ],
+  "jatkot": [
+   "Miten Sarajevosta tuli Bosnian pääkaupunki?",
+   "Mitä Travnikissa on nähtävää nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:travnik",
+  "kysymys": "Mikä on karstilähde?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Karstilähde on paikka, jossa maan alla virrannut vesi purkautuu pintaan. Kalkkikivialueella sade- ja sulamisvesi liukenee maaperän rakoihin ja luoliin ja kulkeutuu maan alla, kunnes se kohtaa tiiviimmän kerroksen tai ulostulon ja purskahtaa esiin lähteenä. Karstilähteet voivat olla hyvin vuolaita, ja jotkin niistä muodostavat heti suuren joen tai kirkkaan lammen. Vesi on yleensä kylmää ja kirkasta, koska se on kulkenut kiven läpi. Lähteen vesimäärä vaihtelee sateiden ja lumien sulamisen mukaan. Travnikin [[Plava Voda]] on tällainen karstilähde, joka purkautuu vanhankaupungin keskelle. Kyl se on kauniimpaa katsoa kuin selittää.",
+  "linkit": [
+   "Plava Voda"
+  ],
+  "jatkot": [
+   "Miksi karstilähteen vesi on kirkasta?",
+   "Mikä on luolajoki?"
+  ]
+ },
+ {
+  "kohde": "kohde:travnik",
+  "kysymys": "Mikä oli Bobovac ja miksi se oli tärkeä?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Bobovac oli keskisessä Bosniassa sijainnut keskiaikainen linnoitus, jota pidetään Bosnian kuninkaiden tärkeimpänä linnoituksena. Sinne oli koottu valtakunnan kruununjalokivet, ja siellä olivat myös kuninkaiden haudat. Linnoitus oli rakennettu turvallisuutta ajatellen, eikä sinne johtanut kunnollista tietä. Se kesti [[ottomaanien]] piirityksiä vuosikymmeniä, kunnes se menetettiin vuonna 1463, samana vuonna kun Bosnian viimeinen kuningas Stjepan Tomašević vangittiin ja kuoli. Bobovacin merkitys liittyy [[Tvrtko I:n]] aikaan, jolloin Bosnian kuningaskunta oli suurimmillaan. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "ottomaanien",
+   "Tvrtko I:n"
+  ],
+  "jatkot": [
+   "Kuka oli Tvrtko I?",
+   "Miten ottomaanit valtasivat Bosnian?"
+  ]
+ },
+ {
+  "kohde": "kohde:travnik",
+  "kysymys": "Mitä Vlašić-vuorella voi tehdä?",
+  "uusi": true,
+  "vastaus": "Kato, vuori. Vlašić kohoaa Travnikin yllä, ja katsoin sitä sieltä usein ylhäältä. Vlašić on Keski-Bosnian vuori, joka on suosittu ulkoilualue. Talvella siellä voi hiihtää ja laskea laskettelua, ja kesällä vaeltaa vuoristoniityillä ja nauttia maisemista. Vuori tunnetaan myös laiduntamisesta: sen rinteillä on perinteisesti pidetty lampaita ja valmistettu juustoa, ja alueen juustoa pidetään paikallisena erikoisuutena. Tarkemmat tiedot hiihtokeskuksen laskettelurinteistä en ole varma, joten kannattaa tarkistaa ne ajantasaisesta lähteestä. Vuoren korkeus on noin 1 900 metriä, ja se kuuluu [[Dinaaristen Alppien]] vuoristoon.\n\nVlašićin juustosta tulee ainakin minun mieleeni heti pulla, vaikka juusto ja pulla ovat täysin eri asia.",
+  "linkit": [
+   "Dinaaristen Alppien"
+  ],
+  "jatkot": [
+   "Millaista juustoa Keski-Bosniassa valmistetaan?",
+   "Millaiset ovat Dinaaristen Alppien vuoret?"
+  ]
+ },
+ {
+  "kohde": "kohde:neum",
+  "kysymys": "Mikä oli Ragusan tasavalta?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Ragusa on kaupunkina nykyinen Dubrovnik, ja sen tuntee minun sukuni. Ragusan tasavalta oli Dubrovnikin kaupunki ympäristöineen muodostama itsenäinen kauppavaltio Adrianmeren rannikolla. Sitä hallitsi kauppiasaatelisto, ja valtio selvisi vuosisatoja neuvottelemalla taitavasti naapureidensa, kuten Venetsian ja ottomaanien, kanssa. Tasavalta tunnettiin kaupastaan ja laivoistaan, ja Dubrovnikin vanhakaupunki on nykyään [[UNESCOn]] maailmanperintökohde. Tasavalta lakkasi olemasta 1800-luvun alussa Napoleonin sotien aikana. Sen perintö näkyy yhä [[Dubrovnikin]] kaupunkikuvassa ja muistoissa. Tosin pitkän selityksen jälkeen minä kaipaan pullaa.",
+  "linkit": [
+   "UNESCOn",
+   "Dubrovnikin"
+  ],
+  "jatkot": [
+   "Miten Dubrovnik pysyi itsenäisenä vuosisatoja?",
+   "Mitä Dubrovnikissa on nähtävää?"
+  ]
+ },
+ {
+  "kohde": "kohde:neum",
+  "kysymys": "Miten kapea käytävä toimii nykyään?",
+  "uusi": false,
+  "vastaus": "Joo, tää on käytännön asia. Käytävä on Bosnia ja Hertsegovinan Adrianmeren rannikko, joka katkaisee Kroatian rannikon kahtia, joten Neum on nykyisin kahden valtion rajojen välissä. Matkustajat, jotka kulkevat Kroatian eteläosiin rannikkotietä pitkin, joutuvat ylittämään Bosnian rajan ja sitten palaamaan Kroatiaan. Rajanylitykset tapahtuvat yleensä rajatarkastuksissa, ja Kroatian liityttyä Euroopan unioniin raja on myös EU:n ulkoraja. Rajanylitys vaikuttaa liikenteeseen erityisesti kesällä, jolloin matkailijoita on paljon, ja jonot voivat olla pitkiä. Kroatia on rakentanut [[Pelješacin sillan]] tarjoamaan vaihtoehtoisen yhteyden. Täytyy kyllä sanoa, että tämä on aika monimutkainen käytävä.",
+  "linkit": [
+   "Pelješacin sillan"
+  ],
+  "jatkot": [
+   "Mikä on Pelješacin silta?",
+   "Miksi Kroatia liittyi Euroopan unioniin?"
+  ]
+ },
+ {
+  "kohde": "kohde:neum",
+  "kysymys": "Mikä oli Karlowitzin rauha?",
+  "uusi": true,
+  "vastaus": "Ai tota. Rauha, joka teki Neumista erikoisen. Karlowitzin rauha solmittiin vuonna 1699, ja sillä päätettiin [[ottomaanien]] ja Pyhän liigan välinen sota. Liigaan kuuluivat muun muassa Habsburgien monarkia, Venetsia ja Puola. Rauhassa ottomaanit joutuivat luovuttamaan paljon alueita, esimerkiksi suuren osan Unkaria Habsburgeille. Se oli ensimmäinen kerta, kun ottomaanit joutuivat tunnustamaan merkittävän alueellisen tappion Euroopassa, ja se merkitsi käännekohtaa imperiumin ja sen naapureiden suhteissa. Rauhaan liittyivät myös Ragusan rannikkoa koskeneet järjestelyt, joiden perintö näkyy yhä [[Neumin]] käytävässä. Lyhyt aihe, onneksi pitkä aika.",
+  "linkit": [
+   "ottomaanien",
+   "Neumin"
+  ],
+  "jatkot": [
+   "Mikä oli Pyhä liiga?",
+   "Miten Habsburgit saivat Unkarin hallintaansa?"
+  ]
+ },
+ {
+  "kohde": "kohde:neum",
+  "kysymys": "Millainen meri Adrianmeri on?",
+  "uusi": true,
+  "vastaus": "Tuota niin, meri. Adrianmeri on Välimeren pohjoinen haara, joka sijaitsee Italian niemimaan ja Balkanin niemimaan välissä. Se on suhteellisen kapea ja pitkä, ja pohjoisosa on matala, kun taas eteläosa on syvempi. Meri on verrattain lämmin ja suolainen, vaikka joet, kuten Po, tuovat siihen makeaa vettä. Itäinen rannikko on kallioista ja saarten rikasta, kun taas länsirannikko on tasaisempi ja hiekkaisempi. [[Adrianmeri]] on ollut tärkeä kauppa- ja kulkureitti vuosisatojen ajan, ja sen rannoilla sijaitsevat muun muassa Venetsia, Dubrovnik ja Split. Tuo [[Venetsia]] mainittiin ensimmäisenä, ja kyyhkyt ovat siellä tuttuja.",
+  "linkit": [
+   "Adrianmeri",
+   "Venetsia"
+  ],
+  "jatkot": [
+   "Miksi Adrianmeren itärannikolla on niin paljon saaria?",
+   "Mitä kaupunkeja Adrianmeren rannalla on?"
+  ]
+ },
+ {
+  "kohde": "kohde:neum",
+  "kysymys": "Mikä on Pelješacin silta?",
+  "uusi": true,
+  "vastaus": "Katotaas. Silta on asia, jonka minä ymmärrän, koska ylitän sellaisia lentäen. Pelješacin silta on Kroatian rakentama silta, joka yhdistää Kroatian mantereen eteläosan Pelješacin niemimaahan ohittaen Bosnia ja Hertsegovinan Neumin kaistaleen. Silta avattiin liikenteelle vuonna 2022, ja se mahdollistaa matkustamisen Kroatian sisällä ilman rajanylitystä. Hanke oli osittain EU:n rahoittama, ja sen tavoitteena oli parantaa yhteyksiä [[Dubrovnikin]] alueelle. Sillan pituudesta ja tarkoista tiedoista en ole varma, joten jätän ne pois. Se on yksi [[Kroatian]] merkittävimmistä liikennehankkeista viime vuosilta.\n\nTuolta ylhäältä Neumin kaistale näyttäisi varmaan ihan tavalliselta rannikolta, vaikka rajaviranomaiset ovat eri mieltä.",
+  "linkit": [
+   "Dubrovnikin",
+   "Kroatian"
+  ],
+  "jatkot": [
+   "Miten Pelješacin niemimaa eroaa muusta Kroatiasta?",
+   "Mitä Pelješacilla tuotetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:banjaluka",
+  "kysymys": "Kuka oli bani?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Bani eli ban oli keskiaikainen arvonimi, jota käytettiin Unkarin ja Kroatian kuningaskunnissa sekä Bosniassa. Ban oli hallitsija tai maakunnan käskynhaltija, jolla oli sotilaallista ja hallinnollista valtaa. Bosniassa ban oli aluksi maan johtaja, ja bosnialaiset hallitsijat käyttivät arvonimeä ennen kuin Bosniasta tuli kuningaskunta. Tarkat tehtävät ja valtasuhteet vaihtelivat ajan ja alueen mukaan. Banja Lukan nimen arvellaan tarkoittavan banin niittyä, ja sen taustalla voi olla juuri tämä [[ban]]-arvonimi. Nimen tarkasta alkuperästä en ole täysin varma, mutta tämä selitys on yleisin. Ja kyl minä sen sinulle selitin ihan pitkästi.",
+  "linkit": [
+   "ban"
+  ],
+  "jatkot": [
+   "Mitä tarkoittaa Bosnian kuningaskunta?",
+   "Mikä oli keskiaikainen Unkarin kuningaskunta?"
+  ]
+ },
+ {
+  "kohde": "kohde:banjaluka",
+  "kysymys": "Millaista trappistijuusto on?",
+  "uusi": false,
+  "vastaus": "Mmm— juusto, nyt tulee hyviä muistoja. Trappistijuusto on pehmeä tai puolikova, mietoa makua oleva juusto, jota valmistetaan lehmänmaidosta. Sen rakenne on tasainen ja juoksevan lempeä, ja sisällä on yleensä pieniä reikiä. Juusto on saanut nimensä [[trappistimunkkien]] mukaan, jotka valmistivat sitä luostareissaan, ja se on levinnyt eri maihin eri nimillä ja hieman eri tavoin valmistettuna. Tarkka resepti ja kypsytysaika vaihtelevat valmistajan mukaan, joten yleistä kuvausta parempaa en voi antaa. Banja Lukan [[Mariastern]]-luostari tunnetaan trappistijuuston valmistuksesta.\n\nJuusto ei ole pulla, mutta kyllä minä sen siivun siltä istumalta nappaisin.",
+  "linkit": [
+   "trappistimunkkien",
+   "Mariastern"
+  ],
+  "jatkot": [
+   "Miten juusto kypsytetään?",
+   "Millaisia luostarijuustoja Euroopassa valmistetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:banjaluka",
+  "kysymys": "Mikä on Vrbas-joki?",
+  "uusi": true,
+  "vastaus": "Kato, joki. Näitä riittää Bosniassa. Vrbas on Bosnia ja Hertsegovinan joki, joka saa alkunsa keskisen maan vuoristosta ja virtaa pohjoiseen kohti Savaa. Joki kulkee kanjonien ja laaksojen läpi ja halkoo myös Banja Lukan kaupungin. Se on suosittu vesiurheilun paikka, ja sen virtauksissa järjestetään koskenlaskua ja melontaa. Joen laaksossa on myös historiallisia linnoituksia ja kyliä, jotka kertovat alueen pitkästä historiasta. Kaupungissa Vrbas on ollut asukkaille tärkeä virkistyspaikka. Joen tarkasta pituudesta en ole varma, joten jätän luvun pois. [[Vrbasin]] vesi on kirkasta ja kylmää, mikä viehättää monia kävijöitä. Tuli taas mietittyä aika paljon.",
+  "linkit": [
+   "Vrbasin"
+  ],
+  "jatkot": [
+   "Mitä Sava-joki on?",
+   "Mitä Banja Lukassa voi tehdä?"
+  ]
+ },
+ {
+  "kohde": "kohde:banjaluka",
+  "kysymys": "Keitä sefardijuutalaiset ovat?",
+  "uusi": true,
+  "vastaus": "No jopas, tähän tarvitaan vakavuutta. Sefardijuutalaiset ovat juutalaisia, joiden esivanhemmat asuivat Iberian niemimaalla eli nykyisessä Espanjassa ja Portugalissa. Heidät karkotettiin Espanjasta vuonna 1492 ja Portugalista pian sen jälkeen, minkä jälkeen monet asettuivat muun muassa Ottomaanien valtakunnan alueelle, myös Bosniaan. Sefardit säilyttivät oman kielensä, ladinon eli judeoespanjan, joka perustuu keskiaikaiseen espanjaan ja sisältää aineksia heprean ja muiden kielten sanastoa. Sefardiyhteisöt vaikuttivat kaupankäyntiin, kulttuuriin ja uskonnolliseen elämään alueilla, joissa he asuivat. Banja Lukaan sefardeja muutti 1800-luvulla. Heidän jälkensä näkyy edelleen [[kulttuuriperinnössä]].\n\nLähteet esittävät joitakin yksityiskohtia eri tavoin, joten tarkemmista luvuista en mene takuuseen.",
+  "linkit": [
+   "kulttuuriperinnössä"
+  ],
+  "jatkot": [
+   "Mikä on ladino?",
+   "Miksi juutalaiset karkotettiin Espanjasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:banjaluka",
+  "kysymys": "Keitä trappistit ovat?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Trappistit ovat katolisen kirkon munkkijärjestö, joka syntyi 1600-luvulla kystersiläisluostarien uudistusliikkeenä. Nimi tulee La Trappen luostarista Ranskasta. Trappistit noudattavat Benedictuksen sääntöä, jossa korostuvat rukous, työ ja yksinkertainen elämä. Munkit elävät perinteisesti luostarin sisällä ja tekevät käsityötä, viljelevät maata ja valmistavat tuotteita, kuten juustoa, olutta ja leipää, joilla luostari elättää itsensä. Trappistiolut on nykyään maailmankuuluja, ja tuote voi kantaa trappistimerkintää vain tiettyjen ehtojen täyttyessä. Banja Lukan lähellä on toiminut trappistiluostari, ja [[trappistit]] ovat vaikuttaneet kaupunkiin pysyvästi. Ei se pelkkää munkkeutta ollut, mut ihan hyvin tiivistin.",
+  "linkit": [
+   "trappistit"
+  ],
+  "jatkot": [
+   "Mikä erottaa benediktiinit ja kystersiläiset?",
+   "Miten trappistiolut valmistetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:vjetrenica",
+  "kysymys": "Miten luolaeläin tulee toimeen ilman valoa?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Pimeässä pärjääminen on kyllä taitolaji. Pimeän luolan eläimet ovat sopeutuneet elämään ilman valoa monin tavoin: monilta puuttuu väri, ja silmät ovat surkastuneet pieniksi tai kadonneet kokonaan, koska ne eivät pimeässä auta. Tilalle ovat kehittyneet tarkka tuntoaisti, haju ja veden värähtelyjen aistiminen. Ravintoa luolaan kulkeutuu pääosin ulkoa veden ja lepakoiden mukana, joten monet lajit elävät hitaasti ja tarvitsevat vain vähän energiaa. [[Vjetrenican]] luolasta on löydetty yli kaksisataa lajia, ja osa niistä on tunnettu ainoastaan sieltä. Minä pysyn kyllä mieluummin päivänvalossa.",
+  "linkit": [
+   "Vjetrenican"
+  ],
+  "jatkot": [
+   "Miksi osa luolaeläimistä on väriltään valkoisia?",
+   "Mitä luolalepakot syövät?"
+  ]
+ },
+ {
+  "kohde": "kohde:vjetrenica",
+  "kysymys": "Miksi luolan suusta puhaltaa kylmää?",
+  "uusi": false,
+  "vastaus": "Kato, tuuliluola. Hyvä kysymys tuo. Luolan sisäilman lämpötila pysyy ympäri vuoden lähes samana ja on kesällä selvästi ulkoilmaa viileämpi. Kylmä ilma on lämmintä tiheämpää ja raskaampaa, joten se valuu luolan syvyyksistä alas kohti suuaukkoa, ja kesähelteellä se tuntuu aukolla viileänä virtauksena. Kun luolalla on aukkoja eri korkeuksilla, ilma kiertää kuin savupiipussa, ja talvella virtauksen suunta voi kääntyä päinvastaiseksi. Siksi [[Vjetrenican]] nimi tarkoittaakin tuuliluolaa, ja ilmiö on tuttu monista [[karstialueiden]] luolista. Hetken siinä viilenee, vaikka pitkin päivää olisi hiki.",
+  "linkit": [
+   "Vjetrenican",
+   "karstialueiden"
+  ],
+  "jatkot": [
+   "Mikä on luolan lämpötila vuoden ympäri?",
+   "Miksi kalkkikivialueilla on paljon luolia?"
+  ]
+ },
+ {
+  "kohde": "kohde:vjetrenica",
+  "kysymys": "Millainen eläin on olmi?",
+  "uusi": true,
+  "vastaus": "Ai se. Joo, tän minä tiedän. Olmi on Dinaarisilla vuorilla asuva luolissa elävä salamanteri, jota kutsutaan myös luolasalamanteriksi. Sen ruumis on pitkä ja kalpea, raajat ovat lyhyet ja ulkoiset kidukset näkyvät päässä punertavina tupsuina. Silmät ovat kehittymättömät ja ihon alla, mutta olmi aistii ympäristöään hajulla, tunnolla ja veden värähtelyillä. Se elää kokonaan vedessä, pärjää hyvin pitkään ilman ruokaa ja voi elää erittäin vanhaksi, mutta tarkkaa ikää en uskalla sanoa. Olmi mainitaan usein [[Dinaridien]] luolien tunnetuimpana asukkaana, ja sen kuuluminen [[Vjetrenican]] luolan lajistoon on lähteiden mukaan tunnettu asia.\n\nMinä olen lintu, ja sellaisen pitäisi nähdä, minne lentää. Olmi vain odottaa pimeässä vuosikymmeniä, enkä ole varma, kumpi meistä on viisaampi.",
+  "linkit": [
+   "Dinaridien",
+   "Vjetrenican"
+  ],
+  "jatkot": [
+   "Miksi olmia kutsutaan joskus luolalohikäärmeeksi?",
+   "Missä muualla olmeja elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:vjetrenica",
+  "kysymys": "Miten karstiin syntyy luola?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Tost minä osaan kertoo. Karstiluola syntyy, kun hieman hapan vesi liuottaa kalkkikiveä hitaasti vuosituhansien kuluessa. Sadevesi ottaa ilmasta ja maaperästä hiilidioksidia, jolloin siitä tulee heikkoa hiilihappoa, ja se liuottaa kallion halkeamia leveämmiksi, kunnes niistä muodostuu käytäviä ja saleja. Liukeneminen jatkuu pitkään, ja vesi kuljettaa liuenneen kiven mukanaan pois. [[Karstialueilla]] vettä sinkoutuu paljon maan alle, ja siksi pinnalla on vähän jokia mutta maan alla runsaasti luolia. Tämän kaiken [[Vjetrenican]] kaltainen luola kertoo, jos osaa kuunnella. Kyyhky ei kyllä jaksaisi odottaa niin kauan.",
+  "linkit": [
+   "Karstialueilla",
+   "Vjetrenican"
+  ],
+  "jatkot": [
+   "Mitä ovat dolinit eli kuopat karstimaisemassa?",
+   "Kuinka nopeasti kalkkikivi liukenee?"
+  ]
+ },
+ {
+  "kohde": "kohde:vjetrenica",
+  "kysymys": "Mitä ovat tippukivet?",
+  "uusi": true,
+  "vastaus": "Mmm— tippukivet. Selvä juttu. Tippukivet ovat luolissa kasvavia kalkkikiveä sisältäviä muodostumia. Kun kalsiumia sisältävä vesi tippuu luolan katosta, osa liuenneesta kalkista saostuu kiinteäksi ja jää kattoon, ja pisaroiden mukana lattialle tippuva vesi jättää sinnekin saostumaa. Kattoon muodostuvaa pitkää kärkeä kutsutaan riippukiveksi ja lattialle kasvavaa pylvästä pylvääksi. Kun ne kasvavat yhteen, syntyy [[tippukivipylväs]]. Kasvu on erittäin hidasta, vain murto-osan millimetristä vuodessa. Luolissa kuten [[Vjetrenicassa]] tippukivet kertovat siitä, miten kauan vesi on työtään tehnyt. Pylväät ovat sentään kasvaneet hitaammin kuin minä lopetan puhumisen.",
+  "linkit": [
+   "tippukivipylväs",
+   "Vjetrenicassa"
+  ],
+  "jatkot": [
+   "Kumpi on riippukivi ja kumpi pylväs?",
+   "Voiko tippukiviin koskea luolakäynnillä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hutovoblato",
+  "kysymys": "Mikä Ramsar-kosteikko on?",
+  "uusi": false,
+  "vastaus": "No niin, kosteikot ovat lintujen kotia. Ramsar-kosteikko on kansainvälisesti tärkeäksi nimetty kosteikkoalue, joka kuuluu kosteikkojen suojelua koskevaan Ramsarin sopimukseen. Sopimus allekirjoitettiin vuonna 1971 Iranin Ramsarin kaupungissa, josta se on saanut nimensä. Alue otetaan mukaan, kun se on esimerkiksi tärkeä vesilinnuille tai harvinaisille luontotyypeille, ja maa sitoutuu suojelemaan sitä ja käyttämään sitä kestävästi. [[Hutovo Blato]] on ollut Ramsar-alue vuodesta 2001, ja siellä levähtää muuttomatkallaan yli 240 lintulajia. [[Neretvan]] suiston kosteikot ovat siis tärkeä pysähdyspaikka. Tässä on kyyhkyn arkea.",
+  "linkit": [
+   "Hutovo Blato",
+   "Neretvan"
+  ],
+  "jatkot": [
+   "Mitä hyötyä kosteikoista on luonnolle?",
+   "Miksi muuttolinnut tarvitsevat levähdyspaikkoja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hutovoblato",
+  "kysymys": "Mitä lintuja täällä levähtää?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Katsotaas. Alueella levähtää muuttomatkallaan yli 240 lintulajia, ja muuttoaikaan järven ympärille kerääntyy kymmeniätuhansia lintuja kerralla. Tarkkaa lajilistaa en ole varma muistavani, mutta tyypillisiä Välimeren alueen kosteikkojen vesilintuja ovat sorsat, haikarat ja kahlaajat, ja tällaisilla soilla elää myös kaulushaikaroiden kaltaisia piileskeleviä lajeja. Linnut tulevat ravinnon ja suojan perässä, koska [[Hutovo Blaton]] tulvivat suot tarjoavat kalaa, hyönteisiä ja piilopaikkoja. Kosteikko sijaitsee [[Neretvan]] alajuoksulla lähellä Adrianmerta, jota moni linnuista käyttää reittinsä suuntaajana. Kyllä minäkin tykkäisin pysähtyä.",
+  "linkit": [
+   "Hutovo Blaton",
+   "Neretvan"
+  ],
+  "jatkot": [
+   "Milloin muuttolintuja näkee parhaiten kosteikolla?",
+   "Miten lintuja voi tarkkailla häiritsemättä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hutovoblato",
+  "kysymys": "Mistä linnut tietävät muuttoreittinsä?",
+  "uusi": true,
+  "vastaus": "Ai tota. Tämä on kyyhkyn ammattialaa. Muuttolintu tarvitsee suunnan ja reitin, ja ne löytyvät useasta eri lähteestä. Osa suunnasta on perittyä, sillä nuorilla linnuilla on synnynnäinen taipumus lentää tiettyyn suuntaan tiettyinä vuodenaikoina. Linnut käyttävät apunaan auringon asentoa, tähtiä ja maapallon magneettikenttää, ja moni oppii myös maamerkkejä kuten jokia, rannikkoja ja vuoristoja. Tarkka mekanismi tunnetaan vain osittain, ja tutkijat ovat edelleen eri mieltä joistakin yksityiskohdista. Kosteikot kuten [[Hutovo Blato]] toimivat tärkeinä lepopaikkoina näillä reiteillä, ja muuttoa tutkitaan muun muassa [[rengastuksen]] avulla.\n\nMinun suvullani oli tähän oma erikoistaito, ja meikäläisten muistiinpanojen mukaan se perustui pitkälti hyvään suuntavaistoon ja sinnikkyyteen. En ole varma, mikä siitä oli oikein tutkittua.",
+  "linkit": [
+   "Hutovo Blato",
+   "rengastuksen"
+  ],
+  "jatkot": [
+   "Miten lintujen rengastus toimii?",
+   "Miksi osa lintulajeista ei muuta lainkaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hutovoblato",
+  "kysymys": "Miksi joki voi virrata kumpaankin suuntaan?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Jokien suunta on yleensä selvä, mutta tässä ei. Joen virtaussuunnan määrää vedenpinnan korkeusero, sillä vesi liikkuu aina kohti alempaa pintaa. Jos joki yhtyy toiseen jokeen tai suistoon, jonka vedenpinta nousee, esimerkiksi runsaiden sateiden tai sulamisvesien takia, korkeampi vesi voi työntää alajuoksulta vettä takaisin sivujokeen. [[Krupa]] virtaa [[Hutovo Blaton]] kosteikon läpi juuri näin: kun [[Neretvan]] vesi nousee, se työntää Krupan takaisin ylävirtaan, ja kun vesi laskee, joki virtaa taas normaalisuuntaan. Euroopassa tällaista pidetään harvinaisena. Joskus vesikin kääntyy ympäri.",
+  "linkit": [
+   "Krupa",
+   "Hutovo Blaton",
+   "Neretvan"
+  ],
+  "jatkot": [
+   "Miten tulvat vaikuttavat jokien virtaussuuntaan?",
+   "Mikä on joen suisto?"
+  ]
+ },
+ {
+  "kohde": "kohde:hutovoblato",
+  "kysymys": "Mitä kosteikot tekevät tulville?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Ai että tulvista. Kosteikot toimivat luonnon omina tulvapuskureina. Märkä maaperä, ruovikot ja kasvillisuus imevät ja pidättävät runsaan sade- tai sulamisveden, ja vesi vapautuu alavirtaan hitaammin, joten tulvahuippu tasoittuu. Samalla kosteikko suodattaa vettä: kasvit ja sedimentti sitovat ravinteita ja epäpuhtauksia. Siksi kosteikkojen kuivattaminen voi tehdä tulvista pahempia, mikä on yksi syy niiden suojeluun. [[Hutovo Blato]] ja muut [[Neretvan]] alajuoksun suot ovat tästä hyvä esimerkki. Ja linnut saavat tarjoilut kaupan päälle.",
+  "linkit": [
+   "Hutovo Blato",
+   "Neretvan"
+  ],
+  "jatkot": [
+   "Miksi kosteikkoja on kuivattu maailmalla?",
+   "Miten kosteikkoja voidaan ennallistaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:maglic",
+  "kysymys": "Mitkä ovat Dinaridit?",
+  "uusi": false,
+  "vastaus": "No jopas. Vuoria on vaikka kuinka monta. Dinaridit ovat Kaakkois-Euroopassa luoteesta kaakkoon kulkeva vuoristo, joka ulottuu Adrianmeren itärannikon suuntaisesti Sloveniasta ja Kroatiasta Bosnia ja Hertsegovinan ja Montenegron kautta Albaniaan saakka. Vuoristo koostuu pääosin kalkkikivestä, joten alueella on paljon [[karstia]], luolia ja kuoppia. Korkeimmat huiput ovat noin kahden ja puolen kilometrin korkeudessa, ja yksi niistä on [[Maglić]]. Vuoriston nimi tulee Dinara-vuoresta Kroatiassa. Ihan siististi pysyin kartalla.",
+  "linkit": [
+   "karstia",
+   "Maglić"
+  ],
+  "jatkot": [
+   "Miksi Dinaridit ovat niin kalkkikivipitoisia?",
+   "Mikä Dinara-vuori on?"
+  ]
+ },
+ {
+  "kohde": "kohde:maglic",
+  "kysymys": "Miksi kaksoishuipuista käytetympi on matalampi?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Hyvä huomio. Syytä ei ole kerrottu varmasti, mutta järkeenkäypiä selityksiä on muutama. Bosnia ja Hertsegovinan puolella oleva huippu on helpompi lähestyä tavallisia reittejä pitkin, sillä korkeampi huippu on Montenegron puolella ja sinne pääsy voi edellyttää rajanylitystä tai erillistä lupaa rajavyöhykkeen takia. Lisäksi [[Maglićin]] kaksi huippua ovat vain kaksi metriä toistensa erolla, joten vaellusreitti valitaan useammin helppouden kuin korkeuden mukaan. Tarkkoja syitä en ole varma, joten en vahvista mitään varmasti. Eikä kaksi metriä kyyhkyn silmin paljon ole.",
+  "linkit": [
+   "Maglićin"
+  ],
+  "jatkot": [
+   "Tarvitseeko Maglićille nousuun erillisen luvan?",
+   "Millaista on vaellus Bosnian vuoristossa?"
+  ]
+ },
+ {
+  "kohde": "kohde:maglic",
+  "kysymys": "Miten vuoristot syntyvät?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Vuorten synty on iso aihe. Suurin osa vuoristoista syntyy, kun maankuoren laatat liikkuvat ja törmäävät toisiinsa. Laattojen välinen paine poimuttaa ja nostaa kiviä, ja pitkän ajan kuluessa syntyy vuoristo. Toiset vuoret syntyvät tulivuoritoiminnasta tai siitä, että maankuoren lohkot nousevat murroslinjoja pitkin. Eroosio, kuten tuuli, vesi ja jää, kuluttaa vuoria samalla alas. [[Dinaridit]] ovat osa Euroopan vuoristoja, jotka ovat muotoutuneet Afrikan ja Euraasian laattojen liikkeiden seurauksena, ja [[Maglić]] kuuluu niihin. Tarkkoja vaiheita en uskalla tässä luetella. Tämä oli pitkä kurssi.",
+  "linkit": [
+   "Dinaridit",
+   "Maglić"
+  ],
+  "jatkot": [
+   "Mitä ovat mannerlaatat?",
+   "Miksi vuoret madaltuvat ajan myötä?"
+  ]
+ },
+ {
+  "kohde": "kohde:maglic",
+  "kysymys": "Miten korkeus vaikuttaa ilmastoon vuorilla?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Ylhäältä sen näkee parhaiten. Mitä korkeammalle noustaan, sitä kylmemmäksi ilma käy: keskimäärin lämpötila laskee noin kuusi astetta tuhatta metriä kohti, vaikka tarkka luku vaihtelee sään mukaan. Ilma on myös ohuempaa, joten happea on vähemmän, ja tuuli ja auringon säteily voivat olla voimakkaampia. Vuorilla satanee usein enemmän kuin ympäröivillä alankoalueilla, ja ylhäällä sade tulee lumena. Kasvillisuus vaihtuu vyöhykkeittäin, kun kasvuaika lyhenee: alhaalla metsää, ylempänä alppiniittyjä ja kallioita. Näin käy esimerkiksi [[Dinaridien]] huipuilla kuten [[Maglićilla]], joka kohoaa yli kahden kilometrin.\n\nMinun mielestäni vuoristo on kyyhkylle oikeastaan hyvä paikka katsoa, kun on sopiva sää. Liian korkealle ei silti ole pakko nousta.",
+  "linkit": [
+   "Dinaridien",
+   "Maglićilla"
+  ],
+  "jatkot": [
+   "Mitä ovat puurajan ja lumirajan erot?",
+   "Miksi vuorilla sataa enemmän kuin laaksoissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:maglic",
+  "kysymys": "Miten valtioiden raja kulkee vuoristossa?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Rajakysymys. Vuoristossa valtioiden raja seuraa usein luonnollista linjaa, kuten harjannetta tai vedenjakajaa, koska sen on helppo tunnistaa maastossa. Aina näin ei kuitenkaan ole: raja voi perustua historiallisiin sopimuksiin, hallintoalueiden rajoihin tai mittauksiin, jotka on tehty maastoon erikseen rajapyykein. [[Maglić]] on tästä esimerkki, sillä raja kulkee vuoren yli Bosnia ja Hertsegovinan sekä Montenegron välillä, ja korkeampi huippu on Montenegron puolella. Tarkkaa rajalinjaa en ole varma kuvailemaan, joten en ala sitä yksityiskohtaisesti tekemään. Kyyhky ei rajoja kysele.",
+  "linkit": [
+   "Maglić"
+  ],
+  "jatkot": [
+   "Millä merkeillä rajat merkitään maastoon?",
+   "Mitä ovat vedenjakajat?"
+  ]
+ },
+ {
+  "kohde": "kohde:adrianmeri",
+  "kysymys": "Miksi maan rannikko on niin lyhyt?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Joo, tän minä tiedän. Bosnia ja Hertsegovinalla on rantaa Adrianmerellä vain kapea kaistale [[Neumin]] kohdalla, ja syy on historiallinen. Rannikko on ollut vuosisatojen ajan Dubrovnikin tasavallan ja sittemmin muiden valtioiden hallussa, ja Neumin kaistale jäi nykyisen Bosnia ja Hertsegovinan alueelle vanhoilla rajanvedoilla. Tarkat ajankohdat ja sopimukset en ole varma kertomaan, mutta kaistaleen kummallakin puolella on nykyisin [[Kroatia]]n aluetta. Kaistaleesta on tullut merkittävä osa maan merikuvaa, vaikka se on pieni. Kyyhky ylittää sen silmänräpäyksessä.",
+  "linkit": [
+   "Neumin",
+   "Kroatia"
+  ],
+  "jatkot": [
+   "Mikä on Neum ja miten sinne pääsee?",
+   "Miten Kroatian rannikko on jakautunut?"
+  ]
+ },
+ {
+  "kohde": "kohde:adrianmeri",
+  "kysymys": "Mikä Otranton salmi on?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Katotaas. Otranton salmi on Adrianmeren eteläpäässä oleva kapea meriväylä, joka yhdistää Adrianmeren Joonianmereen ja erottaa Italian niemimaan kantapään Albanian rannikosta. Salmen leveys on lähteiden mukaan hieman yli kuusikymmentä kilometriä, mutta en ole varma tarkasta luvusta. Sen nimi tulee Otranton kaupungista Italian puolella. Salmi on tärkeä laivaväylä, ja sen yli kulkee muuttolintujen reittejä. [[Adrianmeri]] on tämän kautta yhteydessä [[Välimereen]] ja avomereen. Aika lyhyt matka kyyhkylle, ei paha.",
+  "linkit": [
+   "Adrianmeri",
+   "Välimereen"
+  ],
+  "jatkot": [
+   "Mikä Joonianmeri on?",
+   "Mitä Otranton kaupunki on?"
+  ]
+ },
+ {
+  "kohde": "kohde:adrianmeri",
+  "kysymys": "Mikä aiheuttaa bora-tuulen?",
+  "uusi": true,
+  "vastaus": "Ai tota. Bora, no jopas. Bora on kylmä ja puuskainen tuuli, joka puhaltaa Adrianmeren itärannikolla vuoristosta kohti merta. Se syntyy, kun kylmä ilma kerääntyy vuorten taakse ylängölle ja purkautuu tiheänä ja raskaana alas vuorten rinteitä pitkin mereen. [[Dinaridien]] vuoristo toimii tässä esteenä ja ohjaa ilman solien kautta rannikolle, jolloin puuskat voivat olla erittäin voimakkaita. Bora on tyypillisesti kuiva ja kylmä, ja sitä esiintyy erityisesti talvella. [[Adrianmerellä]] se vaikuttaa laivaliikenteeseen ja sillalle ajamiseen. Tällaisessa tuulessa kyyhky pysyy mieluummin sisällä.",
+  "linkit": [
+   "Dinaridien",
+   "Adrianmerellä"
+  ],
+  "jatkot": [
+   "Mikä on bora-tuulen vastakohta Adrianmerellä?",
+   "Miten tuuli vaikuttaa Adrianmeren laivaliikenteeseen?"
+  ]
+ },
+ {
+  "kohde": "kohde:adrianmeri",
+  "kysymys": "Miksi meri on suolaista?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Meriveden suola tulee pääosin kivistä. Sade ja joet liuottavat kivistä mineraaleja ja suoloja ja kuljettavat ne mereen. Vesi haihtuu merestä ilmaan, mutta suolat jäävät veteen, joten pitoisuus on kasvanut hyvin pitkän ajan kuluessa. Lisäksi merenpohjan tulivuoritoiminta ja kuumat lähteet tuovat veteen aineita. Merivesi on keskimäärin suolaisuudeltaan noin kolmeen ja puoleen prosenttiin, mutta se vaihtelee: [[Adrianmeri]] on [[Itämerta]] suolaisempi, koska Itämereen virtaa paljon makeaa vettä. Siitä on pitkä matka jokiin.",
+  "linkit": [
+   "Adrianmeri",
+   "Itämerta"
+  ],
+  "jatkot": [
+   "Miksi Itämeri on vähäsuolainen?",
+   "Miten suolaa saadaan merivedestä?"
+  ]
+ },
+ {
+  "kohde": "kohde:adrianmeri",
+  "kysymys": "Mikä on Pon laakso?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Hetkinen. Pon laakso on laaja tasanko Pohjois-Italiassa, jonka halki virtaa [[Po]]-joki Alpeilta Adrianmerelle. Joki on Italian pisin, ja laakso on yksi maan tärkeimmistä maatalous- ja teollisuusalueista. Tasanko on syntynyt joen tuomista sedimenteistä, ja Po muodostaa Adrianmeren rannalla laajan suiston. Pohjoisessa laaksoa rajaavat Alpit ja etelässä Apenniinit. Laakso on [[Adrianmeren]] luoteisin päätepiste, kuten tietoruudussakin sanotaan. Kyllä sieltä kelpaa katsella, vähän kuin leivinpaperi levitettynä.",
+  "linkit": [
+   "Po",
+   "Adrianmeren"
+  ],
+  "jatkot": [
+   "Miten Po-joen suisto on syntynyt?",
+   "Mitä Pon laaksossa viljellään?"
+  ]
+ },
+ {
+  "kohde": "kohde:blidinje",
+  "kysymys": "Mikä stećak on?",
+  "uusi": false,
+  "vastaus": "Kato, tän minä osaan. Stećak on keskiaikainen hautakivi, jollaisia on Bosnia ja Hertsegovinassa, Kroatiassa, Montenegrossa ja Serbiassa. Kivet on veistetty kalkkikivestä, ja ne ovat muodoltaan laatta-, arkku- tai ristimäisiä. Monissa on koristeita ja kuvioita, kuten metsästyskohtauksia, ristejä, kuutamoita ja ritarikuvia, ja jotkut kantavat kirjoituksia. Ajoitus on suurin piirtein 1100-luvulta 1500-luvulle. Unesco on ottanut [[stećakit]] maailmanperintöluetteloon, ja yksi kokonaisuuden kalmistoista on [[Dugo Poljen]] kalmisto [[Blidinjen]] ylängöllä. Hiljaisia kivimuistomerkkejä, ja kauniita.",
+  "linkit": [
+   "stećakit",
+   "Dugo Poljen",
+   "Blidinjen"
+  ],
+  "jatkot": [
+   "Mitä stećakien kuvat tarkoittavat?",
+   "Miten stećakit ovat säilyneet?"
+  ]
+ },
+ {
+  "kohde": "kohde:blidinje",
+  "kysymys": "Miksi munika kasvaa juuri täällä?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Puusta on kyse. Munika eli Balkanin vuoristomänty kasvaa Balkanin niemimaan vuoristoissa, yleensä kalkkikivisillä ja kuivilla, kivisillä rinteillä, joilla muut puut eivät pärjää. Se sietää kylmää, tuulta ja karua maaperää sekä lyhyttä kasvukautta, joten korkeat karstiylängöt sopivat sille. Lisäksi sen valkea runko erottaa sen muista männyistä. Täsmällistä syytä, miksi laji viihtyy juuri [[Masna Lukan]] rinteillä, en ole varma kertomaan, mutta [[Blidinjen]] korkeus ja ilmasto sopivat sen vaatimuksiin. [[Munikan]] kasvupaikat ovat melko rajallisia. Ei se puu mikään kyyhkyn lempipuu ole, jos totta puhutaan.\n\nMunika on kuulemma hyvin hidaskasvuinen ja voi elää todella vanhaksi, mutta en ole varma tarkasta iästä. Pidän siitä, että yksi puu jaksaa seistä niin pitkään yhdessä paikassa, vaikka minä en jaksa.",
+  "linkit": [
+   "Masna Lukan",
+   "Blidinjen",
+   "Munikan"
+  ],
+  "jatkot": [
+   "Miten munika eroaa tavallisesta männystä?",
+   "Mitä muita puita Balkanin vuorilla kasvaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:blidinje",
+  "kysymys": "Miksi karstialueilla on vähän pintavesiä?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Karstialueen kallio on liukenevaa kalkkikiveä, johon on vuosisatojen kuluessa muodostunut halkeamia, rakoja ja onkaloita. Sadevesi ja sulamisvesi imeytyvät niiden kautta nopeasti maan alle sen sijaan, että ne virtaisivat pinnalla puroina ja jokina. Vesi kulkee luolissa ja maanalaisissa vesiväylissä ja nousee pintaan lähteinä usein kaukana imeytymiskohdasta. Siksi maisema voi olla kuiva ja kivinen, vaikka sataisi paljon. [[Blidinjen]] ylänkö on tällaista karstia, ja sen järven pinta-ala vaihtelee vuodenajan mukaan. Kuivassa maisemassa tarvitaan siis hyvää suunnistustaitoa.",
+  "linkit": [
+   "Blidinjen"
+  ],
+  "jatkot": [
+   "Mitä ovat ponorit eli nielut?",
+   "Mistä karstialueilla saa juomavettä?"
+  ]
+ },
+ {
+  "kohde": "kohde:blidinje",
+  "kysymys": "Miten järven pinta-ala voi vaihdella vuodenajan mukaan?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Katotaas. Järven pinta-ala riippuu siitä, kuinka paljon vettä siihen tulee ja kuinka paljon sitä poistuu. Keväällä lumen sulaminen ja sateet täyttävät järven, jolloin se laajenee tasaisilla rannoillaan, ja kuivempana kesänä haihdunta pienentää sitä. Karstialueilla järvet voivat lisäksi tyhjentyä maanalaisten vesiväylien kautta, jolloin vedenpinta laskee nopeasti. [[Blidinjen]] järvi on tällainen: sen pinta-ala vaihtelee kahden ja puolen ja kuuden neliökilometrin välillä. Tarkkaa syytä juuri tälle järvelle en ole varma, mutta periaate on tämä. Kyllä siinä lintu näkee eron jo ilmasta.",
+  "linkit": [
+   "Blidinjen"
+  ],
+  "jatkot": [
+   "Mitä tarkoittaa haihdunta?",
+   "Miten karstijärvet eroavat tavallisista järvistä?"
+  ]
+ },
+ {
+  "kohde": "kohde:blidinje",
+  "kysymys": "Miksi vuorilla sataa enemmän kuin laaksoissa?",
+  "uusi": true,
+  "vastaus": "No niin, tää on sääoppia. Kun ilmavirtaus kohtaa vuoren, ilma pakotetaan nousemaan rinnettä ylös. Noustessaan ilma jäähtyy, ja kylmempi ilma ei pysty sitomaan yhtä paljon vesihöyryä, joten vesihöyry tiivistyy pilviksi ja satamaan vuoren tuulenpuoleisella rinteellä. Vuoren toisella puolella ilma laskeutuu ja lämpenee, ja sade jää vähäisemmäksi, joten syntyy niin sanottu sadevarjo. Siksi korkeilla huipuilla ja ylängöillä, kuten [[Blidinjen]] ympärillä [[Dinaridien]] vuoristossa, sataa usein runsaasti ja talvella lunta. Siksi [[Risovacin]] hiihtokeskuskin toimii. Lumi on kyyhkylle kyllä vähän hankalaa.\n\nMinä pidän itse enemmän kuivasta säästä, mutta pitää myöntää, että vuoristo tekee kauniin maiseman juuri sateen ansiosta.",
+  "linkit": [
+   "Blidinjen",
+   "Dinaridien",
+   "Risovacin"
+  ],
+  "jatkot": [
+   "Mikä on sadevarjo?",
+   "Millainen on Dinaridien ilmasto?"
+  ]
+ },
+ {
+  "kohde": "kohde:bobovac",
+  "kysymys": "Ketä mausoleumiin haudattiin?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Kuninkaiden asioissa pitää olla tarkka. Mausoleumin viidestä haudasta on löytynyt yhdeksän vainajaa, ja heidän joukossaan on tunnistettu kuninkaat [[Dabiša]], Ostoja, Ostojić, [[Tvrtko II]] ja Tomaš. Lisäksi löydettiin naisen luuranko, jonka arvellaan olevan Tvrtko II:n puoliso, kuningatar [[Dorothea]]. Muiden vainajien henkilöllisyydestä en ole varma. Pitkä nimiluettelo, mut ei se muistia kauheasti rasittanu.",
+  "linkit": [
+   "Dabiša",
+   "Tvrtko II",
+   "Dorothea"
+  ],
+  "jatkot": [
+   "Kuka oli kuningas Tvrtko II?",
+   "Mitä Bosnian kuningatar Dorotheasta tiedetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:bobovac",
+  "kysymys": "Miksi kuninkaan istuin siirtyi Jajceen?",
+  "uusi": false,
+  "vastaus": "No niin. Kuningas [[Stjepan Tomašević]] siirsi istuimensa [[Jajceen]], kun [[osmanien]] painostus kasvoi. Osmanit valtasivat Bobovacin vuonna 1463, ja itsenäinen keskiaikainen Bosnian kuningaskunta päättyi samana vuonna. Onpas siitä onneksi jo pitkä aika.",
+  "linkit": [
+   "Stjepan Tomašević",
+   "Jajceen",
+   "osmanien"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Jajce on?",
+   "Miten osmanit valloittivat Bosnian?"
+  ]
+ },
+ {
+  "kohde": "kohde:bobovac",
+  "kysymys": "Mitä tarkoittaa romaanis-goottilainen rakennustyyli?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Romaanis-goottilaisella tyylillä tarkoitetaan siirtymävaiheen rakentamista, jossa [[romaaninen]] ja [[goottilainen]] piirteet esiintyvät samassa rakennuksessa. Romaaniselle tyylille ovat ominaisia pyöreät kaaret ja paksut muurit, goottilaiselle suippokaaret, [[rippiholvit]] ja korkeus. Keskiajan Euroopassa tyylit vaihtuivat vähitellen, joten sekoitus on tavallinen eikä rajaa voi vetää tarkasti. Bobovacissa goottilaisen tyylin rinnalla on tällaisia piirteitä osassa rakennuksia. Holvien alla pysyy ainakin kuivana, sen minä tiedän omasta kokemuksesta.",
+  "linkit": [
+   "romaaninen",
+   "goottilainen",
+   "rippiholvit"
+  ],
+  "jatkot": [
+   "Mikä on goottilaisen rakennustyylin tunnusmerkki?",
+   "Mitä on romaaninen arkkitehtuuri?"
+  ]
+ },
+ {
+  "kohde": "kohde:bobovac",
+  "kysymys": "Mikä oli paanin asema keskiaikaisessa Bosniassa?",
+  "uusi": true,
+  "vastaus": "Ai se. Paani oli Bosnian hallitsijan arvonimi aikana ennen kuningaskuntaa. Tällainen hallitsija oli [[Stjepan II]], jonka kaudella Bobovac rakennettiin. Kuninkaan arvonimen Bosnian hallitsija sai vasta, kun [[Tvrtko I]] kruunattiin vuonna 1377. Paanin valta oli ajoittain sidoksissa naapurimaa [[Unkarin]] vaikutusvaltaan, mutta suhteiden yksityiskohdista en ole varma. Ei paha kyyhkyltä, vaikka vuosilukuja oli ny kaksi.",
+  "linkit": [
+   "Stjepan II",
+   "Tvrtko I",
+   "Unkarin"
+  ],
+  "jatkot": [
+   "Milloin Bosnian kuningaskunta syntyi?",
+   "Kuka oli Stjepan II Kotromanić?"
+  ]
+ },
+ {
+  "kohde": "kohde:bobovac",
+  "kysymys": "Miksi keskiajalla rakennettiin linnat vuorten rinteille?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Korkea sijainti toi useita etuja: rinteeltä näki kauas, joten lähestyvä vihollinen huomattiin ajoissa, ja jyrkkä maasto vaikeutti hyökkäystä sekä raskaiden piiritysvälineiden tuomista muurien luo. Linna saattoi myös valvoa laaksossa kulkevia reittejä. Siksi esimerkiksi [[Bobovac]] oli Bosnian hallitsijoille se kahdesta pääpaikasta, jota pystyi puolustamaan, kun taas [[Sutjeskan]] kuninkaankartanon puolustaminen oli hankalampaa. Ylhäältä näkee kyllä kaiken, sen minä tiedän ammattilaisena.",
+  "linkit": [
+   "Bobovac",
+   "Sutjeskan"
+  ],
+  "jatkot": [
+   "Miten linnoja puolustettiin piirityksessä?",
+   "Mikä on Sutjeskan kuninkaankartano?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mile-kruunajaiskirkko",
+  "kysymys": "Miltä Milen kruunajaiskirkko näytti loistoaikanaan?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Tarkkaa kuvaa kirkon ulkonäöstä loistoajoilta en pysty antamaan, enkä halua arvailla. Varmaa on, että Milen kirkko [[Arnautovićissa]] rakennettiin 1300-luvulla Bosnian kuninkaiden kruunajais- ja hautauskirkoksi, joten sillä oli suuri merkitys valtakunnalle. Siellä kruunattiin [[Tvrtko I]] ensimmäiseksi Bosnian kuninkaaksi vuonna 1377. Valtakunnan kukistumisen jälkeen kirkko raunioitui, ja nykyään siitä on jäljellä vain rauniot. Kuvitelmia minä en kanna, vain kirjeitä.",
+  "linkit": [
+   "Arnautovićissa",
+   "Tvrtko I"
+  ],
+  "jatkot": [
+   "Kuka oli Tvrtko I?",
+   "Mitä Bosnian kuninkaiden kruunajaisista tiedetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mile-kruunajaiskirkko",
+  "kysymys": "Miksi Milen kruunajaiskirkko katosi?",
+  "uusi": false,
+  "vastaus": "Tuota niin. [[Bosnian kuningaskunta]] kukistui [[osmanien]] valloituksessa vuonna 1463, yli viisisataa vuotta sitten. Sen jälkeen kirkko ei enää ollut kruunajaisten eikä kuninkaiden hautaamisen paikka, ja rakennus raunioitui. Tarkoista vaiheista, kuten siitä, milloin ja miten rakennus lopulta tuhoutui, en ole varma. Rauniot ovat sentään jääneet muistuttamaan.",
+  "linkit": [
+   "Bosnian kuningaskunta",
+   "osmanien"
+  ],
+  "jatkot": [
+   "Milloin osmanit valloittivat Bosnian?",
+   "Mitä Milen kirkosta on kaivettu esiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mile-kruunajaiskirkko",
+  "kysymys": "Miten kuninkaat kruunattiin keskiajan Euroopassa?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Keskiajan Euroopassa kruunajaiset olivat uskonnollinen ja valtiollinen seremonia, jonka johti yleensä piispa tai arkkipiispa. Hallitsija vannoi valan, hänet [[voideltiin]] pyhällä öljyllä, ja hänelle luovutettiin vallan tunnukset, kuten [[kruunu]] ja [[valtikka]]. Tavat vaihtelivat maittain ja aikakausittain, eikä Bosnian kuninkaiden kruunajaisten yksityiskohdista ole minulla tarkkaa tietoa. Kruunu kuulostaa raskaalta, ja minä kannan jo kirjeitä.",
+  "linkit": [
+   "voideltiin",
+   "kruunu",
+   "valtikka"
+  ],
+  "jatkot": [
+   "Mitä valtikka ja valtakunnanomena symboloivat?",
+   "Missä Euroopan kuninkaat on perinteisesti kruunattu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mile-kruunajaiskirkko",
+  "kysymys": "Miksi kuninkaita haudattiin kirkkoihin?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Keskiajan kristityille hautapaikalla oli väliä: kirkon sisään tai sen viereen haudatun uskottiin saavan osansa pyhästä maasta, lähelle alttaria ja [[pyhäinjäännöksiä]], ja haudan äärellä rukoiltiin vainajan sielun puolesta. Hallitsijalle kirkkohauta oli myös arvovaltakysymys, sillä yhteinen hautapaikka sitoi hallitsijasuvun yhteen ja osoitti sen jatkuvuuden. Niin oli Bosniassakin: [[Milen kirkko]] rakennettiin sekä kruunajaisten että kuninkaiden hautaamisen paikaksi. Onpas ikiaikainen tapa.",
+  "linkit": [
+   "pyhäinjäännöksiä",
+   "Milen kirkko"
+  ],
+  "jatkot": [
+   "Missä Euroopan hallitsijat on haudattu?",
+   "Mitä on pyhäinjäännös?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-mile-kruunajaiskirkko",
+  "kysymys": "Millaisia uskontoja keskiaikaisessa Bosniassa oli?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Keskiaikaisessa Bosniassa eli rinnakkain katolisia ja ortodokseja, ja lisäksi maassa oli oma kristillinen yhteisönsä, jota kutsutaan [[Bosnian kirkoksi]]. Sen luonteesta tutkijat ovat olleet eri mieltä: aiemmin sitä pidettiin dualistisena harhaoppina, mutta nykyisin yleisempi näkemys on, ettei tämä selitys pidä, ja yhteisön tarkka asema suhteessa Roomaan on edelleen kiistanalainen. [[Islam]] tuli alueelle vasta [[osmanien]] myötä 1400-luvulla. Uskoja oli monta, ja linnut ne vaan lenti kaikkien yli.",
+  "linkit": [
+   "Bosnian kirkoksi",
+   "Islam",
+   "osmanien"
+  ],
+  "jatkot": [
+   "Mitä tarkoittaa dualismi uskonnoissa?",
+   "Milloin islam levisi Bosniaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bobovacin-kuninkaanlinna",
+  "kysymys": "Miltä Bobovacin kuninkaanlinna näytti loistoaikanaan?",
+  "uusi": false,
+  "vastaus": "Mmm— sepä on kaunis ajatus. Bobovac oli keskiajan [[Bosnian kuningaskunnan]] linnoitettu pääkaupunki 1300-luvun puolivälistä lähtien. Kaivausten perusteella linnassa on ollut kolme palatsia kolmella eri terassitasolla, ja rakennukset olivat pääosin [[goottilaista]] tyyliä. Linnaan oli koottu valtakunnan [[kruunu]] ja kuninkaiden haudat, eikä sinne turvallisuussyistä johtanut kunnollista tietä. Tarkkaa kuvaa muureista ja tornien korkeudesta en ole varma. Katolta nähtynä se olis ollut näky, sen uskallan sanoa.",
+  "linkit": [
+   "Bosnian kuningaskunnan",
+   "goottilaista",
+   "kruunu"
+  ],
+  "jatkot": [
+   "Miksi linnoihin koottiin kuninkaiden hautoja?",
+   "Mitä Bobovacissa on kaivauksissa löydetty?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bobovacin-kuninkaanlinna",
+  "kysymys": "Miksi Bobovacin kuninkaanlinna on nykyään raunioina?",
+  "uusi": false,
+  "vastaus": "No niin. Lähteiden mukaan [[osmanit]] valtasivat ja hävittivät linnan kolmen päivän piirityksen jälkeen 21.5.1463, kun viimeinen kuningas [[Stjepan Tomašević]] oli juuri paennut [[Jajceen]]. Erään kertomuksen mukaan linna ei kaatunut pelkän piirityksen vuoksi vaan se kavallettiin viholliselle, ja tässä lähteet poikkeavat toisistaan. Tapahtumasta on yli viisisataa vuotta, ja maailma oli silloin toinen: valtakuntien kohtalo ratkesi vielä linnoilla ja piirityksillä. Kivijalat ja muurinpohjat ovat yhä näkyvissä rinteellä. Onneksi ne ovat sentään jääneet.",
+  "linkit": [
+   "osmanit",
+   "Stjepan Tomašević",
+   "Jajceen"
+  ],
+  "jatkot": [
+   "Millainen oli Bosnia osmanien aikana?",
+   "Voiko Bobovacin raunioilla käydä nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bobovacin-kuninkaanlinna",
+  "kysymys": "Miksi Bobovacille ei rakennettu kunnollista tietä?",
+  "uusi": true,
+  "vastaus": "Ai tota. Syy oli turvallisuus. Linnaan oli koottu valtakunnan [[kruununjalokivet]] ja kuninkaiden haudat, joten sen haluttiin pysyvän vaikeasti lähestyttävänä: kunnollisen tien puuttuminen hidasti vihollisen etenemistä ja vaikeutti raskaiden varusteiden tuomista linnan luo. Lähteiden mukaan linna kesti [[osmanien]] piirityksiä vuosikymmeniä. Siipien kanssa tie on vähän sivuseikka.",
+  "linkit": [
+   "kruununjalokivet",
+   "osmanien"
+  ],
+  "jatkot": [
+   "Mitä ovat kruununjalokivet?",
+   "Miten linnat suunniteltiin turvallisiksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bobovacin-kuninkaanlinna",
+  "kysymys": "Miten linnoja piiritettiin 1400-luvulla?",
+  "uusi": true,
+  "vastaus": "Katotaas. Piiritys perustui yleensä joko saartoon tai hyökkäykseen. [[Saarrossa]] linnan huolto katkaistiin, jotta ruoka ja vesi loppuisivat. Hyökkäyksessä muureja yritettiin murtaa tai ylittää piiritystorneilla, tikkailla ja kaivamalla tunneleita muurien alle. 1400-luvulla [[ruutiaseet]] ja [[tykit]] alkoivat muuttaa piiritystä, koska ne pystyivät rikkomaan vanhoja muureja, ja puolustajat vastasivat rakentamalla paksumpia muureja. Itse en kyllä piirittäisi mitään, minä lennän muurin yli.",
+  "linkit": [
+   "Saarrossa",
+   "ruutiaseet",
+   "tykit"
+  ],
+  "jatkot": [
+   "Milloin tykit tulivat sotaan?",
+   "Miten Konstantinopol valloitettiin vuonna 1453?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bobovacin-kuninkaanlinna",
+  "kysymys": "Kuka oli Tvrtko I Kotromanić?",
+  "uusi": true,
+  "vastaus": "Just niin, hänestä on kerrottavaa. Tvrtko I Kotromanić kruunattiin Bosnian ensimmäiseksi kuninkaaksi vuonna 1377, ja hänen hallintoaikanaan [[Bosnian kuningaskunta]] laajeni lähteiden mukaan suurimpaan ulottuvuuteensa. Kuninkaiden pääasiallinen linnoitus oli hänen aikanaan [[Bobovac]] Keski-Bosniassa. Enempää en tästä miehestä tiedä, ja sanon sen suoraan.",
+  "linkit": [
+   "Bosnian kuningaskunta",
+   "Bobovac"
+  ],
+  "jatkot": [
+   "Mitä Kotromanićien suvusta tiedetään?",
+   "Millä alueilla Bosnian kuningaskunta sijaitsi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sarajevo",
+  "kysymys": "Mistä Sarajevon nimi juontuu?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: nimi on mietityttänyt monia. Yleisimmän selityksen mukaan nimi Sarajevo juontuu turkkilaisesta sanasta saray, joka tarkoittaa palatsia tai kartanoa, ja slaavilaisesta paikannimien päätteestä -evo. Selityksen mukaan nimi viittaa rakennuksiin, jotka kaupungin ensimmäinen kuvernööri [[Isa-Beg Ishaković]] rakennutti: moskeijaan, katettuun toriin, hammamiin ja karavaanimajataloon. Kaupungin perustivat [[ottomaanit]] 1450-luvulla. Nimen tarkasta alkuperästä en ole kuitenkaan varma. Pitkä tarina yhdestä nimestä, mut kyl se kannatti.",
+  "linkit": [
+   "Isa-Beg Ishaković",
+   "ottomaanit"
+  ],
+  "jatkot": [
+   "Kuka oli Isa-Beg Ishaković?",
+   "Mikä on hammam?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sarajevo",
+  "kysymys": "Miksi Sarajevoa on kutsuttu Euroopan Jerusalemiksi?",
+  "uusi": false,
+  "vastaus": "Tost minä osaan kertoo. Lempinimi viittaa kaupungin uskonnolliseen ja kulttuuriseen moninaisuuteen. Samassa kaupunginosassa sijaitsevat [[moskeija]], [[katolinen kirkko]], [[ortodoksikirkko]] ja [[synagoga]], joten usean uskonnon palvontapaikat ovat aivan toistensa lähellä. Moninaisuus on kehittynyt vuosisatojen kuluessa, ja siihen lempinimi perustuu. Räystäitä riittää kaikkien uskontojen taloissa, ja kyyhkyt tykkää niistä kaikista.",
+  "linkit": [
+   "moskeija",
+   "katolinen kirkko",
+   "ortodoksikirkko",
+   "synagoga"
+  ],
+  "jatkot": [
+   "Millaisia uskonnollisia yhteisöjä Sarajevossa on?",
+   "Milloin juutalaiset asettuivat Sarajevoon?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sarajevo",
+  "kysymys": "Mikä on Baščaršija ja miksi se on tärkeä?",
+  "uusi": true,
+  "vastaus": "Kato, tästä tulee hyvä. Baščaršija on Sarajevon vanha kauppatori ja kaupungin sydän, ja se on ollut sitä kaupungin perustamisesta asti. Alue on ottomaanikaudelta periytyvä kauppa- ja käsityöläisalue. Siellä on 1600-luvulta peräisin oleva [[Morića Han]] -karavaanimajatalo, jossa tarjoillaan yhä [[tufahijaa]], ottomaanikauden keittiöstä periytyvää jälkiruokaa: kokonainen omena haudutetaan sokeriliemessä, täytetään jauhetuilla saksanpähkinöillä ja kruunataan kermavaahdolla. Bosnian leivistä tunnen somunin, ja se on minulle jo melkein pullaa.",
+  "linkit": [
+   "Morića Han",
+   "tufahijaa"
+  ],
+  "jatkot": [
+   "Mitä on bosnialainen kahvikulttuuri?",
+   "Mitä on somun?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sarajevo",
+  "kysymys": "Milloin Sarajevoon tuli raitiovaunu?",
+  "uusi": true,
+  "vastaus": "No jopas. Hevosvetoinen raitiovaunu aloitti liikennöinnin Sarajevossa vuonna 1885, kun [[Itävalta-Unkarin]] hallinta Bosniassa oli alkanut vuonna 1878. Rata kulki kaupungintalon, [[Vijećnican]], ohi [[Miljacka]]-joen vartta. Raitiovaunuliikenne jatkuu kaupungissa yhä, ja osa nykyisistä reiteistä kulkee samoja katuja kuin 1800-luvun hevosvaunu. Kiskot pysyy, vaikka kaikki muu vaihtuu, ja siinä on jotain lohdullista.",
+  "linkit": [
+   "Itävalta-Unkarin",
+   "Vijećnican",
+   "Miljacka"
+  ],
+  "jatkot": [
+   "Milloin raitiovaunut sähköistettiin Sarajevossa?",
+   "Mikä on Vijećnica?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sarajevo",
+  "kysymys": "Mitkä ovat Dinaariset vuoret?",
+  "uusi": true,
+  "vastaus": "Ai se. Dinaariset vuoret ovat Balkanin länsiosassa kulkeva vuoristo, joka ulottuu [[Adrianmeren]] itärannikon suuntaisesti Sloveniasta noin Albaniaan asti. Vuoristo koostuu pitkälti [[kalkkikivestä]], ja sille on tyypillistä [[karstimaisema]]: luolia, kuoppia ja maanalaisia vesiväyliä. Sarajevo sijaitsee vuorten keskellä Miljacka-joen laaksossa. Vuoria on enemmän kuin ehdin lentää.",
+  "linkit": [
+   "Adrianmeren",
+   "kalkkikivestä",
+   "karstimaisema"
+  ],
+  "jatkot": [
+   "Mikä on karstimaisema?",
+   "Mitä Dinaarisilla vuorilla harrastetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bjelasnica",
+  "kysymys": "Mistä Bjelašnican nimi tulee?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Nimi tulee sanasta bijel, joka tarkoittaa valkoista, ja sillä todennäköisesti viitataan lumeen. Vuori on [[Dinaaristen vuorten]] huippu [[Sarajevon]] lounaispuolella, noin kahdenkymmenen minuutin matkan päässä kaupungista, ja sen korkein kohta kohoaa 2 067 metriin. Itse olen harmaa, mut valkoinen kelpaa kyllä.",
+  "linkit": [
+   "Dinaaristen vuorten",
+   "Sarajevon"
+  ],
+  "jatkot": [
+   "Mitkä ovat Dinaaristen vuorten korkeimmat huiput?",
+   "Millainen Sarajevon ympäristön ilmasto on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bjelasnica",
+  "kysymys": "Ketkä voittivat kultaa Bjelašnican rinteillä vuoden 1984 olympialaisissa?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Miesten alppihiihdon kultamitalit jaettiin kolmen eri kilpailijan kesken. Laskettelun voitti yhdysvaltalainen Bill Johnson, joka oli ennustanut voittonsa etukäteen, ja pujottelun yhdysvaltalainen Phil Mahre, jonka kaksoisveli Steve Mahre sai hopeaa. Suurpujottelun voitti sveitsiläinen [[Max Julen]], ja hopeaa tuli jugoslavialaiselle [[Jure Frankolle]]. Minä en veikkaa koskaan mitään, ja siksi kai olen pysynyt reitillä.",
+  "linkit": [
+   "Max Julen",
+   "Jure Frankolle"
+  ],
+  "jatkot": [
+   "Kuka oli Jure Franko?",
+   "Miten syöksylasku-kilpailu etenee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bjelasnica",
+  "kysymys": "Mitä lajeja alppihiihtoon kuuluu?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Alppihiihto jaetaan nopeuslajeihin ja tekniikkalajeihin. Nopeuslajeja ovat [[syöksylasku]] ja [[supersuurpujottelu]], tekniikkalajeja [[pujottelu]] ja [[suurpujottelu]]. Lisäksi on yhdistetty, jossa yhdistyvät nopeus- ja tekniikkalaji. Supersuurpujottelu otettiin olympiaohjelmaan vuoden 1988 talviolympialaisissa, joten vuoden 1984 kisoissa sitä ei vielä ollut. Ilmassa viihdyn kyl paremmin, ja laskeutuminen on aina se hankala osuus.",
+  "linkit": [
+   "syöksylasku",
+   "supersuurpujottelu",
+   "pujottelu",
+   "suurpujottelu"
+  ],
+  "jatkot": [
+   "Mitä eroa on pujottelulla ja suurpujottelulla?",
+   "Milloin alppihiihto tuli olympialaisiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bjelasnica",
+  "kysymys": "Millaista luontoa Dinaaristen vuorten rinteillä on?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Dinaarisilla vuorilla luonto vaihtelee korkeuden mukaan: alempana kasvaa lehti- ja sekametsiä, joissa tavataan esimerkiksi pyökkiä ja kuusta, ylempänä on vuoristoniittyjä ja paljaita [[kalkkikivi]]rinteitä. Alueen eläimistöön kuuluvat [[ruskeakarhu]], [[susi]] ja [[ilves]], joita elää muuallakin Euroopan vuoristoissa. Tarkemmin jokaisen yksittäisen vuoren kasvillisuudesta en ole varma. Karhut jätän kyllä muille, minä pysyn ilmassa.",
+  "linkit": [
+   "kalkkikivi",
+   "ruskeakarhu",
+   "susi",
+   "ilves"
+  ],
+  "jatkot": [
+   "Elääkö Bosniassa vielä ruskeakarhuja?",
+   "Mikä on ilves?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bjelasnica",
+  "kysymys": "Miten Sarajevo sai vuoden 1984 talviolympialaiset?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. [[Kansainvälinen olympiakomitea]] myönsi talviolympialaiset Sarajevolle 1970-luvun lopulla, ja [[Jugoslavia]] toimi isäntänä helmikuussa 1984. Kilpailuja järjestettiin kaupungin ympäristön vuorilla: miesten alppihiihto hiihdettiin [[Bjelašnican]] rinteillä. Päätöksen tarkoista vaiheista en ole varma. Jälkikäteen minä niistä kisoista kuulin, perimätietona suvun siipien alta.",
+  "linkit": [
+   "Kansainvälinen olympiakomitea",
+   "Jugoslavia",
+   "Bjelašnican"
+  ],
+  "jatkot": [
+   "Mitkä muut vuoret isännöivät olympialajeja Sarajevossa?",
+   "Mitä olympiarakennuksille on tapahtunut sen jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kravice",
+  "kysymys": "Mitä joen vettä Kravicen putoukset kuljettavat?",
+  "uusi": false,
+  "vastaus": "No niin, tän minä tiedän. Kravicen putoukset kuljettavat [[Trebižat]]-joen vettä. Joki virtaa [[Hertsegovinan]] [[karstialueella]], ja putoukset muodostavat siellä suuren tuffikivisen putoussarjan. Putousten korkeus on noin kaksikymmentäviisi metriä, ja niiden alla oleva allas on halkaisijaltaan noin sata kaksikymmentä metriä. Aika paljon kivityötä yhdeltä joelta.",
+  "linkit": [
+   "Trebižat",
+   "Hertsegovinan",
+   "karstialueella"
+  ],
+  "jatkot": [
+   "Mikä saa kalkin kerrostumaan putousten reunoille?",
+   "Minne Trebižat-joki lopulta virtaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kravice",
+  "kysymys": "Kuka omisti putousten ympäristön ja mitä hän teki paikkakunnalleen?",
+  "uusi": false,
+  "vastaus": "Ai tota. Putousten ympäristön omisti aikanaan [[Zaim-beg Selimić]], ljubuškilainen kunnanvaltuutettu, maanomistaja ja hyväntekijä. Hänet muistetaan siis paitsi maiden haltijana myös ihmisenä, joka tuki paikallisyhteisöään, mutta hänen tekojensa yksityiskohdista en ole varma. [[Ljubuški]] sijaitsee putouksista noin kymmenen kilometrin päässä pohjoiseen. Hyväntekijöitä minä arvostan, varsinkin pullaa tarjoavia.",
+  "linkit": [
+   "Zaim-beg Selimić",
+   "Ljubuški"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Ljubuški on?",
+   "Mitä tekemistä Kravicen putousten ympärillä on kesällä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kravice",
+  "kysymys": "Mikä on kalkkitufa ja miten se syntyy putousten ympärille?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Kalkkitufa on huokoista kalkkikiveä, joka syntyy, kun [[kalsiumia]] sisältävä vesi vapauttaa liuennutta kalkkia ja se kerrostuu kasvien, [[sammalten]] ja levien ympärille. Prosessi on hidas, ja vuosisatojen kuluessa kerrostumat kasvavat kynnyksiksi, joiden yli vesi putoaa. Kravicen kaltaiset putoukset syntyvät juuri tällä tavalla kalkkipitoisessa [[karstijoessa]]. Kivi kasvaa nopeammin kuin minä jaksan odottaa.",
+  "linkit": [
+   "kalsiumia",
+   "sammalten",
+   "karstijoessa"
+  ],
+  "jatkot": [
+   "Miksi sammal auttaa kalkkia kerrostumaan?",
+   "Missä muualla Euroopassa on tufaputouksia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kravice",
+  "kysymys": "Mikä on karstialue ja miksi joet katoavat siellä maan alle?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. [[Karstialue]] on kalkkikivisten kallioiden maisema, jossa sadevesi liuottaa kiveä vähitellen ja avaa siihen rakoja, onkaloita ja [[luolia]]. Siksi pinnalla on vähän virtaavaa vettä, ja joet voivat kadota maan alle ja ilmaantua sieltä uudelleen kaukanakin. Maisemaan kuuluu myös pyöreitä painanteita, joita kutsutaan [[dolinoiksi]]. Ylhäältä katsottuna maisema näyttää ihan reikäjuustolta.",
+  "linkit": [
+   "Karstialue",
+   "luolia",
+   "dolinoiksi"
+  ],
+  "jatkot": [
+   "Mistä sana karsti on peräisin?",
+   "Miten luolat syntyvät kalkkikiveen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kravice",
+  "kysymys": "Mistä Hertsegovinan alueen nimi tulee?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: nimi tulee sanasta herceg, joka tarkoittaa herttuaa ja joka on lainattu saksan kielen sanasta Herzog. Nimen taustalla on [[Stjepan Vukčić Kosača]], keskiaikainen mahtimies, joka otti 1400-luvun puolivälissä herttuan arvon, ja hänen hallitsemaansa aluetta alettiin kutsua [[herttuakunnaksi]]. Nimi on säilynyt, vaikka herttuakunta on ollut historiaa jo vuosisatoja. Tarkasta vuodesta en ole varma. Ja tän kaiken minä kannoin päässäni.",
+  "linkit": [
+   "Stjepan Vukčić Kosača",
+   "herttuakunnaksi"
+  ],
+  "jatkot": [
+   "Mikä on Bosnian kuningaskunta ja milloin se päättyi?",
+   "Miten Hertsegovina eroaa Bosniasta maantieteellisesti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tuzla",
+  "kysymys": "Mistä Tuzlan nimi tulee?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Tuzlan nimi tulee ottomaanien turkin sanasta tuzla, joka tarkoittaa suolakaivosta, ja se viittaa kaupungin alla oleviin laajoihin [[suolaesiintymiin]], joita on louhittu vuosisatoja. Keskiajalla paikkaa kutsuttiin nimellä [[Soli]], \"suolat\", ja jo 900-luvulla [[Bysantin]] lähteet tuntevat sen linnoituksena nimeltä Salines. Nykyinen kaupunki juontuu vuodesta 1510, jolloin siitä tuli tärkeä [[ottomaanien]] varuskuntakaupunki. Kyl siinä suolaa piisasi.",
+  "linkit": [
+   "suolaesiintymiin",
+   "Soli",
+   "Bysantin",
+   "ottomaanien"
+  ],
+  "jatkot": [
+   "Miksi suolaa louhittiin verotulojen lähteeksi?",
+   "Mikä Bysantti oli ja missä sen valta ulottui?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tuzla",
+  "kysymys": "Mikä Panonsko-järvi on ja miksi se on Euroopassa ainutlaatuinen?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Panonsko-järvi on Tuzlan keskuspuistossa sijaitseva suolajärvi, jonka vesi on suolaista, koska kaupungin alla on laajat [[suolaesiintymät]], joita on louhittu vuosisatoja. Lähteiden mukaan järvi on syntynyt pitkälti [[suolanlouhinnan]] seurauksena maanpinnan painuessa, mutta tästä en ole täysin varma. Sitä kutsutaan usein Euroopan ainutlaatuiseksi suolajärveksi; en ole varma, miten väite on rajattu, sillä suolaisia järviä on muuallakin Euroopassa. Meri keskellä kaupunkia, ja minä en uskalla edes kastaa siipeä.",
+  "linkit": [
+   "suolaesiintymät",
+   "suolanlouhinnan"
+  ],
+  "jatkot": [
+   "Miten suolanlouhinta voi painaa maanpintaa alas?",
+   "Millaisia suolajärviä Euroopassa muuten on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tuzla",
+  "kysymys": "Miksi suola oli ennen vanhaan niin arvokas kauppatavara?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Suola oli arvokasta, koska se säilytti ruokaa aikana, jolloin jääkaappeja ei ollut: lihaa ja kalaa suolattiin, jotta ne kestivät talven yli. Suolaa tarvittiin myös ihmisten ja eläinten ravinnossa, ja koska sitä ei saatu kaikkialta, siitä tuli arvokas kauppatavara. Valtiot ymmärsivät, että suolan louhintaa ja kauppaa voitiin verottaa, kuten [[Tuzlan]] suolakaivokset ottomaanien aikaan osoittavat. Nykyään suola on halpaa, ja hyvä niin, sillä pulla ilman suolaa ei maistu.",
+  "linkit": [
+   "Tuzlan"
+  ],
+  "jatkot": [
+   "Miten ruokaa säilytettiin ennen jääkaappeja?",
+   "Missä suolaa louhitaan nykyään eniten?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tuzla",
+  "kysymys": "Onko englannin sana salary todella peräisin suolasta?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Englannin sana salary tulee latinan sanasta [[salarium]], ja se on perinteisesti yhdistetty suolaan, latinaksi sal. Antiikin kirjoittajat mainitsevat suolan ja palkan yhteyden, ja tarina siitä, että [[roomalaisten]] sotilaille maksettiin palkka suolana, on yleinen. Tutkijat eivät kuitenkaan ole yksimielisiä siitä, mitä salarium alun perin tarkoitti, joten varmaa selitystä ei voi antaa.\n\nSukuni sai palkkansa jyvinä, eikä kukaan ole koskaan kysynyt, olisinko mieluummin halunnut suolaa. Suolatut jyvät olisivat ehkä kelvanneet.",
+  "linkit": [
+   "salarium",
+   "roomalaisten"
+  ],
+  "jatkot": [
+   "Miten roomalaiset sotilaat saivat palkkansa?",
+   "Mistä muista sanoista suola on jättänyt jälkensä kieleen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tuzla",
+  "kysymys": "Mikä Bosnia ja Hertsegovinan pääkaupunki on?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Bosnia ja Hertsegovinan pääkaupunki on [[Sarajevo]], joka on myös maan suurin kaupunki. Tuzla on kolmanneksi suurin, ja toiseksi suurimpana mainitaan yleensä [[Banja Luka]]. Tunnettuihin muihin kaupunkeihin kuuluu myös [[Mostar]]. Helppo kysymys, kiitos siitä.",
+  "linkit": [
+   "Sarajevo",
+   "Banja Luka",
+   "Mostar"
+  ],
+  "jatkot": [
+   "Millainen valtio Bosnia ja Hertsegovina on hallinnoltaan?",
+   "Mitä kieliä Bosniassa ja Hertsegovinassa puhutaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-konjic",
+  "kysymys": "Mikä on Konjicin puunveisto ja mihin sitä käytetään?",
+  "uusi": false,
+  "vastaus": "Katotaas. Konjicin puunveisto on perinne, jossa huonekaluja ja koristeesineitä veistetään käsin puusta. Esineet ovat osa paikallisyhteisön identiteettiä, ja niitä käytetään huonekaluina ja koristeina. [[Unesco]] lisäsi perinteen [[ihmiskunnan aineettoman kulttuuriperinnön]] listalle vuonna 2017. Puuta, taitoa ja aikaa, siinä resepti.",
+  "linkit": [
+   "Unesco",
+   "ihmiskunnan aineettoman kulttuuriperinnön"
+  ],
+  "jatkot": [
+   "Mitä ihmiskunnan aineeton kulttuuriperintö tarkoittaa?",
+   "Millaisia puunveiston perinteitä Euroopassa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-konjic",
+  "kysymys": "Kuinka vanha Konjicin Stara Ćuprija -silta on ja mihin sen kuva on päätynyt?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Stara Ćuprija on Konjicin tunnusmerkki, kivinen silta [[Neretvan]] yli, ja se on peräisin [[ottomaanien]] ajalta. Tarkasta rakennusvuodesta en ole varma, joten jätän sen sanomatta. Sillan kuva on päätynyt Konjicin omaan vaakunaan, ja silta toimii siis myös kaupungin tunnuksena. Silta on kestänyt paremmin kuin minun muistini.",
+  "linkit": [
+   "Neretvan",
+   "ottomaanien"
+  ],
+  "jatkot": [
+   "Miten kivisiltoja rakennettiin ottomaanien aikaan?",
+   "Mitä Konjicin vaakunassa muuta on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-konjic",
+  "kysymys": "Minne Neretva-joki virtaa ja mitä kaupunkeja sen varrella on?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Neretva virtaa [[Adrianmereen]]. Joen varrella ovat Konjicin lisäksi muun muassa [[Jablanica]] ja [[Mostar]], ja alajuoksulla joki kulkee Kroatian puolelle, jossa se laskee mereen laajan suistoalueen kautta; sen varrella on muun muassa Metković. Pitkä joki, hyvä lentoreitti.",
+  "linkit": [
+   "Adrianmereen",
+   "Jablanica",
+   "Mostar"
+  ],
+  "jatkot": [
+   "Millainen on Neretvan suistoalue ja mitä siellä viljellään?",
+   "Miksi joet muodostavat usein valtioiden rajoja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-konjic",
+  "kysymys": "Mikä Dubrovnikin tasavalta oli ja milloin se päättyi?",
+  "uusi": true,
+  "vastaus": "Sepä sattui: Dubrovnikin tasavalta oli itsenäinen kaupunkivaltio [[Adrianmeren]] rannalla, joka vaurastui merikaupalla ja diplomatialla. Se tunnettiin myös nimellä [[Ragusa]]. Tasavalta päättyi 1800-luvun alussa [[Napoleonin]] sotien aikaan, noin vuonna 1808. Sen kauppayhteydet ulottuivat sisämaahan, ja siksi Konjicin ensimmäinen kirjallinen maininta löytyy juuri sen asiakirjoista. Kauppa kuljetti sillon kaikkea, toivottavasti myös pullaa.",
+  "linkit": [
+   "Adrianmeren",
+   "Ragusa",
+   "Napoleonin"
+  ],
+  "jatkot": [
+   "Millainen on Dubrovnikin vanhakaupunki nykyään?",
+   "Miten kaupunkivaltiot eroavat tavallisista valtioista?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-konjic",
+  "kysymys": "Miksi kaarisilta kestää paremmin kuin suora kivipalkki?",
+  "uusi": true,
+  "vastaus": "Mmm— Kaarisilta kestää suoraa kivipalkkia paremmin, koska kaaren muoto ohjaa kuorman painon pääosin puristukseksi pitkin kaarta kohti tukia. Kivi kestää hyvin [[puristusta]] mutta huonosti vetoa, ja suora palkki joutuu keskeltä taipuessaan vedon alle, kun taas kaari pysyy kasassa omalla painollaan ja tukiensa varassa. Kaarirakenteita käyttivät laajasti jo antiikin [[roomalaiset]].\n\nSukuni on roomalaista, joten kaaria on kunnioitettu meillä jo pitkään. Ne ovat kauniita myös ylhäältä katsottuna.",
+  "linkit": [
+   "puristusta",
+   "roomalaiset"
+  ],
+  "jatkot": [
+   "Miten roomalaiset rakensivat akveduktit?",
+   "Mikä on holvikaari ja missä sitä käytetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tvrdos",
+  "kysymys": "Mitkä rypälelajikkeet ovat Tvrdošin viinin tärkeimmät?",
+  "uusi": false,
+  "vastaus": "Ai se. Tvrdošin viinin tärkeimmät rypälelajikkeet ovat [[Vranac]] ja [[Žilavka]]. Vranac on tumma punaviinirypäle ja Žilavka valkoviinirypäle, ja molemmat kuuluvat seudun tunnettuihin lajikkeisiin. Luostarin viinikellarit, joista yksi on peräisin 1500-luvulta, ovat suosittu matkailukohde [[Trebinjen]] seudulla. Viiniä en juo, mutta pullan kanssa se sopisi.",
+  "linkit": [
+   "Vranac",
+   "Žilavka",
+   "Trebinjen"
+  ],
+  "jatkot": [
+   "Miten punaviini ja valkoviini eroavat toisistaan?",
+   "Millaista viiniä Hertsegovinassa perinteisesti valmistetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tvrdos",
+  "kysymys": "Mitä luostarille tapahtui vuonna 1694?",
+  "uusi": false,
+  "vastaus": "Tuota niin. [[Venetsian]] laivasto tuhosi luostarin vuonna 1694, ja se oli silloin Hertsegovinan arkkipiispojen istuin. Tapahtuma ajoittuu Venetsian ja [[ottomaanien]] välisten sotien aikaan, yli kolmesataa vuotta sitten, jolloin rajat ja vallanpitäjät olivat alueella aivan toiset kuin nykyään. Luostari rakennettiin uudelleen, ja nykyinen rakennus valmistui vasta vuonna 1924. Onpas siitä onneksi pitkä aika.",
+  "linkit": [
+   "Venetsian",
+   "ottomaanien"
+  ],
+  "jatkot": [
+   "Mitä arkkipiispa tekee ortodoksisessa kirkossa?",
+   "Miten Venetsia ja ottomaanit kilpailivat Adrianmeren alueesta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tvrdos",
+  "kysymys": "Mikä on serbiortodoksinen kirkko?",
+  "uusi": true,
+  "vastaus": "No jopas. Serbiortodoksinen kirkko on [[itäortodoksisen]] kirkon yhteyteen kuuluva itsenäinen kirkko, jonka johtajana on patriarkka ja jonka keskus on [[Belgradissa]]. Se on tärkeä osa serbien kulttuuria ja historiaa, ja luostareilla, kuten Tvrdošilla, on ollut siinä erityinen paikka. Kirkko käyttää jumalanpalveluselämässään [[juliaanista kalenteria]], joten joulua vietetään tammikuun alussa. Kunnioitus kuuluu kyyhkyllekin.",
+  "linkit": [
+   "itäortodoksisen",
+   "Belgradissa",
+   "juliaanista kalenteria"
+  ],
+  "jatkot": [
+   "Mikä on itäortodoksisen ja katolisen kirkon ero?",
+   "Miten ortodoksinen joulu poikkeaa länsimaisesta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tvrdos",
+  "kysymys": "Millainen ilmasto Itä-Hertsegovinassa on?",
+  "uusi": true,
+  "vastaus": "Just niin, ilmasto on lähellä [[Välimeren]] ilmastoa: kesät ovat kuumia ja kuivia, talvet leutoja ja sateisia. Sisämaassa ilmasto vaihtelee korkeuden mukaan, mutta [[Trebinjen]] seutu on lämmintä, ja se sopii viiniköynnöksille, jotka tarvitsevat paljon aurinkoa. Aurinko ja minä, hyvä yhdistelmä.",
+  "linkit": [
+   "Välimeren",
+   "Trebinjen"
+  ],
+  "jatkot": [
+   "Miksi viiniköynnös viihtyy kuivalla ja kivisellä maaperällä?",
+   "Mikä on Välimeren ilmasto?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tvrdos",
+  "kysymys": "Miten punaviini ja valkoviini eroavat valmistustavaltaan?",
+  "uusi": true,
+  "vastaus": "Odotas hetki. Punaviini valmistetaan tummista rypäleistä niin, että liemi käy yhdessä kuorien kanssa, jolloin viiniin tulee väri ja [[tanniinit]]. Valkoviini taas valmistetaan yleensä puristamalla mehu irti ennen [[käymistä]], joten kuoret eivät pääse vaikuttamaan ja viini on vaaleampaa ja kevyempää. Valkoviiniä voi tehdä myös tummista rypäleistä, jos mehu erotetaan kuorista heti. Maistamatta en ota kantaa.",
+  "linkit": [
+   "tanniinit",
+   "käymistä"
+  ],
+  "jatkot": [
+   "Mitä ovat tanniinit ja miltä ne maistuvat?",
+   "Miksi viinejä säilytetään tammitynnyreissä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-livno",
+  "kysymys": "Mihin tekniikkaan livnonjuuston valmistus perustuu ja mistä maidosta se alun perin tehtiin?",
+  "uusi": false,
+  "vastaus": "Ai juustoa. Livnonjuusto eli Livanjski sir perustuu [[gruyère]]-juuston valmistustekniikkaan, ja seudulla sitä on alettu valmistaa 1800-luvulla. Alun perin juusto tehtiin [[lampaanmaidosta]], mutta nykyään se tehdään useimmiten lampaan- ja lehmänmaidon seoksesta.\n\nMinä olen pullaihminen, mutta tällaisen juuston kanssa tuore leipä olisi täydellinen yhdistelmä. Täällä on varmasti oma pullansa, en vain tiedä sen nimeä.",
+  "linkit": [
+   "gruyère",
+   "lampaanmaidosta"
+  ],
+  "jatkot": [
+   "Miksi lampaanmaidosta tehdään usein juustoa?",
+   "Miten gruyère-juusto valmistetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-livno",
+  "kysymys": "Kuka suunnitteli Livnon moskeijan?",
+  "uusi": false,
+  "vastaus": "No niin, tän minä tiedän. Moskeijan, joka rakennettiin 1570-luvulla, suunnittelijaksi mainitaan arkkitehti [[Mimar Sinan]], [[ottomaanien]] valtakunnan tunnettu päärakennusmestari; en ole varma, kuinka varmasti tämä tiedetään. Moskeijan nimi on Hajji Ahmed the Ducat Minterin moskeija. Sen [[kellotorni]] valmistui noin vuonna 1659 eli lähes sata vuotta myöhemmin. Rakennus on kestänyt aikaa paremmin kuin minä.",
+  "linkit": [
+   "Mimar Sinan",
+   "ottomaanien",
+   "kellotorni"
+  ],
+  "jatkot": [
+   "Mitä muita rakennuksia Mimar Sinan suunnitteli?",
+   "Millainen on ottomaanien ajan moskeijan rakenne?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-livno",
+  "kysymys": "Elääkö Livnon seudulla villihevosia?",
+  "uusi": true,
+  "vastaus": "Ai tota. Livnon seudulla laiduntaa vapaana puoliksi villiintyneitä hevosia, jotka tunnetaan [[Livanjsko polje]] -tasangolla ja [[Cincar-vuoren]] juurella. Hevosten määrästä tai alkuperästä en ole varma, ja siksi jätän luvut pois. Ne ovat osa seudun maisemaa ja paikallista kulttuuria. Kyllä minä hevosen selässä istuisin, jos olisin vähän isompi.",
+  "linkit": [
+   "Livanjsko polje",
+   "Cincar-vuoren"
+  ],
+  "jatkot": [
+   "Mikä erottaa villihevosen villiintyneestä hevosesta?",
+   "Mikä on polje karstialueella?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-livno",
+  "kysymys": "Miksi lampaanmaidosta tehdään usein juustoa eikä juotavaa maitoa?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Lampaanmaito on rasva- ja valkuaispitoisempaa kuin lehmänmaito, joten siitä saadaan juustoa enemmän ja sen maku on voimakkaampi. Lampaita pidetään usein laitumilla [[karstialueilla]] ja vuoristossa, joissa lehmien pito on vaikeampaa, ja lampaanmaitoa saadaan eläintä kohden vähemmän, joten sitä kannattaa jalostaa säilyvämmäksi tuotteeksi. [[Livnon]] seutu on tästä hyvä esimerkki. Maito on hyvää, mutta juusto kestää kauemmin.",
+  "linkit": [
+   "karstialueilla",
+   "Livnon"
+  ],
+  "jatkot": [
+   "Mitä juustoja lampaanmaidosta tehdään Euroopassa?",
+   "Miten juusto valmistetaan maidosta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-livno",
+  "kysymys": "Mihin kellotorneja käytettiin ottomaanien aikaisissa kaupungeissa?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Ottomaanien ajan kaupungeissa kellotornit osoittivat aikaa niin kauppiaille kuin asukkaille ja auttoivat seuraamaan [[rukousajat]]. Bosniassa tällaista tornia kutsutaan nimellä [[sahat-kula]], ja niitä on monissa vanhoissa kaupungeissa. Kellotorni oli myös kaupungin ylpeys ja tunnusmerkki. Aikataulut olivat siis jo silloin tärkeitä, vaikka kyyhky ei niitä tarvitse.",
+  "linkit": [
+   "rukousajat",
+   "sahat-kula"
+  ],
+  "jatkot": [
+   "Miten aikaa mitattiin ennen mekaanisia kelloja?",
+   "Mitä sahat-kula tarkoittaa ja missä niitä on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-prokosko",
+  "kysymys": "Mikä eläinlaji tekee Prokoškon järvestä tieteellisesti erityisen?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Prokoškon järven tieteellisesti erityinen eläinlaji on [[bosnialainen alppitriton]], harvinainen vuoristovesiliskon alalaji, joka säilyttää toukkamaisia piirteitään vielä aikuisenakin. Järvi sijaitsee [[Vranican]] vuoristossa noin 1 670 metrin korkeudessa. Ornitologi Othmar Reiser kiinnitti huomion järven eliölajistoon vuonna 1891, ja herpetologi [[Franz Werner]] kuvasi tritonin vuonna 1902. Pienestä liskosta tuli ihan iso nimi.",
+  "linkit": [
+   "bosnialainen alppitriton",
+   "Vranican",
+   "Franz Werner"
+  ],
+  "jatkot": [
+   "Millainen eläin vuoristovesilisko on?",
+   "Mikä Vranican vuoristo on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-prokosko",
+  "kysymys": "Miksi järveen istutettu kalifornianpurotaimen osoittautui virheeksi?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Kalifornianpurotaimen istutettiin järveen myöhemmin, ja se osoittautui virheeksi, koska laji saalistaa tritonia. Koska [[bosnialainen alppitriton]] on harvinainen alalaji ja koko [[Prokoškon järven]] tieteellinen merkitys perustuu siihen, saalistava kala uhkaa juuri sitä, mistä järvi on tunnettu. Tarkkaa istutusvuotta en ole varma, joten jätän sen sanomatta. Tällaiset [[vieraslajit]] ovat usein hankalia, koska ne ilmestyvät paikkaan, jossa luonto ei ole varautunut niihin. Kalat harvoin kysyvät, kenen ruokalistalle ne uivat.",
+  "linkit": [
+   "bosnialainen alppitriton",
+   "Prokoškon järven",
+   "vieraslajit"
+  ],
+  "jatkot": [
+   "Mitä vieraslajilla tarkoitetaan?",
+   "Miten harvinaisia lajeja suojellaan vuoristojärvissä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-prokosko",
+  "kysymys": "Mikä Nadkrstac on ja missä se on suhteessa järveen?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. [[Nadkrstac]] on Vranican vuoriston korkein huippu, ja se ympäröi Prokoškon järveä, joka lepää [[Vranican]] rinteellä Fojnican kunnassa. Järvi on noin 1 670 metrin korkeudessa, joten huippu kohoaa sen yläpuolelle. Huipun tarkkaa korkeutta en ole varma sanomaan, joten jätän sen pois. Vuoristojärvet ovat usein juuri tällaisia: korkealla, kylmän veden ympäröiminä ja vuorten reunustamina. Kyyhkynkin siivet jäävät tuollaisella korkeudella vähän jäykiksi.",
+  "linkit": [
+   "Nadkrstac",
+   "Vranican"
+  ],
+  "jatkot": [
+   "Millainen on Vranican vuoriston luonto?",
+   "Miten vuoristojärvet yleensä syntyvät?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-prokosko",
+  "kysymys": "Miten Prokoškon järvi arvellaan syntyneen?",
+  "uusi": true,
+  "vastaus": "Ai tota. Prokoškon järven allas arvellaan syntyneen soraisen maa-aineksen kasautumisesta [[riolitti]]kallion päälle. Kyse on siis uskomuksesta eikä täysin varmasta tiedosta, ja syntytapa kuuluu samaan joukkoon kuin monen muun vuoristojärven synty, jossa maaperä ja kallio muovaavat altaan. Riolitti on tulivuoriperäinen kivilaji, joka on kemialliselta koostumukseltaan lähellä graniittia. Kallio ei päästä vettä helposti lävitseen, mikä auttaa altaan pysymään vedellä täytettynä, mutta tästä en ole aivan varma.\n\nMinusta järvi on kuin yksi iso kuoppa, jonka ylhäältä näkee heti. Maan sisäisistä asioista en kuitenkaan tiedä läheskään yhtä paljon kuin taivaalta näkyvistä.",
+  "linkit": [
+   "riolitti"
+  ],
+  "jatkot": [
+   "Mitä riolitti on kivilajina?",
+   "Miten jääkausi on muovannut vuoristojärviä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-prokosko",
+  "kysymys": "Mitä tarkoittaa, että eläin säilyttää toukkamaisia piirteitä aikuisena?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Ilmiötä kutsutaan neotenia, ja siinä eläin kypsyy sukukypsäksi mutta säilyttää toukkavaiheen piirteitä, esimerkiksi ulkoiset kidukset tai vesielämään sopeutuneen ruumiinrakenteen. Tunnetuin esimerkki on [[aksolotli]], mutta myös monet [[vesilisko]]t voivat säilyttää toukkamaisia piirteitä. [[Bosnialaisen alppitritonin]] tapauksessa kyse on Prokoškon järven harvinaisesta alalajista, joka säilyttää toukkamaisia piirteitään vielä aikuisenakin. Tarkkaa selitystä sille, miksi juuri tämä alalaji on kehittynyt näin, en ole varma. No, minä kasvoin aikuiseksi nopeasti.",
+  "linkit": [
+   "aksolotli",
+   "vesilisko",
+   "Bosnialaisen alppitritonin"
+  ],
+  "jatkot": [
+   "Mikä ero on liskolla ja salamanterilla?",
+   "Miksi sammakkoeläimet tarvitsevat vettä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-doboj",
+  "kysymys": "Kuka rakennutti Dobojin linnan ensimmäisen kivilinnoituksen ja milloin?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Ensimmäinen kivilinnoitus rakennettiin 1200-luvun alussa entisen roomalaisen leirin paikalle, mutta en ole varma, kuka sen rakennutti, joten en lähde nimeämään ketään. Myöhemmin linna oli Bosnian kuninkaallisen [[Kotromanić]]-suvun linnoitus. Sitä laajennettiin vuonna 1415, jolloin [[Doboj]] mainitaan ensi kertaa kirjallisessa lähteessä, ja [[ottomaanit]] laajensivat sitä vuonna 1490. Rakentajan nimeä tarjoaisin mielelläni, jos tietäisin sen.",
+  "linkit": [
+   "Kotromanić",
+   "Doboj",
+   "ottomaanit"
+  ],
+  "jatkot": [
+   "Keitä Kotromanićit olivat?",
+   "Mikä Doboj on nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-doboj",
+  "kysymys": "Miksi Doboj on nykyään maan tärkein rautatiesolmu?",
+  "uusi": false,
+  "vastaus": "Kas vaan. [[Doboj]] on maan suurin rautatiesolmu ja [[Banja Lukan]] ohella Bosna-joen laakson tärkein liikennekeskus. Syynä on kaupungin sijainti [[Bosna]]-joen varrella Pohjois-Bosniassa, jossa kulkureitit kohtaavat. Tarkkoja ratayhteyksiä en ole varma luettelemaan, joten jätän ne mainitsematta. Alue on ollut liikenteen risteyskohta jo kauan, sillä linnakin kohoaa kaupungin yläpuolella laakson valvojana. Minä lennän ilman raiteita, mutta arvostan niitä silti.",
+  "linkit": [
+   "Doboj",
+   "Banja Lukan",
+   "Bosna"
+  ],
+  "jatkot": [
+   "Miten rautatiesolmu toimii?",
+   "Millainen Bosna-joki on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-doboj",
+  "kysymys": "Mikä suku omisti Dobojin linnan keskiajalla?",
+  "uusi": true,
+  "vastaus": "Ai se. Dobojin linna oli aikanaan Bosnian kuninkaallisen [[Kotromanić]]-suvun linnoitus. Suku hallitsi Bosniaa keskiajalla, ja linnan paikalla oli sitä ennen roomalainen leiri. Linnaa laajennettiin vuonna 1415, jolloin [[Doboj]] mainitaan ensi kertaa kirjallisessa lähteessä, ja myöhemmin [[ottomaanit]] laajensivat sitä edelleen vuonna 1490. Sukunimi on vaikea, mutta kyllä minä sen opin.",
+  "linkit": [
+   "Kotromanić",
+   "Doboj",
+   "ottomaanit"
+  ],
+  "jatkot": [
+   "Millainen oli Bosnian kuningaskunta keskiajalla?",
+   "Mitä ottomaanit tekivät Balkanilla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-doboj",
+  "kysymys": "Mikä Bosna-joki on ja minne se virtaa?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. [[Bosna]] on Bosnia ja Hertsegovinan läpi pohjoiseen virtaava joki, joka laskee [[Savaan]]. Joki on antanut nimensä koko maalle, ja sen laaksoa pitkin kulkevat tärkeät liikenneyhteydet. Dobojin kaupunki ja sen linna sijaitsevat Bosna-joen varrella Pohjois-Bosniassa. Joen pituutta en ole varma sanomaan, joten jätän sen pois. Joet ovat kyyhkyn lempiopasteita, koska ne näkee korkealta kauas.",
+  "linkit": [
+   "Bosna",
+   "Savaan"
+  ],
+  "jatkot": [
+   "Mihin Sava-joki laskee?",
+   "Miksi maa on saanut nimensä joesta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-doboj",
+  "kysymys": "Mikä Bosnian kuningaskunta oli ja milloin se päättyi?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Bosnian kuningaskunta oli keskiaikainen valtio Balkanilla, ja sen hallitsijasuku oli [[Kotromanić]]-suku. Kuningaskunta koki lopun ottomaanien vallatessa maan; yleisesti esitetty vuosi on 1463, mutta en ole varma kaikista yksityiskohdista. Dobojin linna oli yksi tämän suvun linnoituksista, ja se laajeni myöhemmin [[ottomaanien]] aikana. Kuningaskunnat tulevat ja menevät, mutta linnat jäävät.",
+  "linkit": [
+   "Kotromanić",
+   "ottomaanien"
+  ],
+  "jatkot": [
+   "Miten ottomaanit valloittivat Bosnian?",
+   "Keitä Kotromanićit olivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-gradacac",
+  "kysymys": "Kuka oli Husein-kapetan Gradaščević ja mistä lisänimi \"Bosnian lohikäärme\" tulee?",
+  "uusi": false,
+  "vastaus": "No jopas. Husein-kapetan Gradaščević oli Gradačacin kapteenisuvun kuuluisin jäsen, ja hänestä käytettiin nimeä Zmaj od Bosne eli \"Bosnian lohikäärme\". Hän nousi vuonna 1831 lähes kaikkien Bosnian ottomaanikapteenien johtoon kansannousussa, jonka tavoitteena oli [[autonomia]] ja joka vastusti sulttaani [[Mahmud II:n]] uudistuksia. Sana zmaj tarkoittaa lohikäärmettä, ja nimen oletetaan viittaavan hänen asemaansa johtajana, mutta lisänimen tarkkaa alkuperää en ole varma. Hänen suku kehitti [[Gradačac]]in kaupunkia 1700-luvulta lähtien, ja hänen rakennuttamansa torni kohoaa kaupungin linnoituksessa. Onpas siitä onneksi pitkä aika.",
+  "linkit": [
+   "autonomia",
+   "Mahmud II:n",
+   "Gradačac"
+  ],
+  "jatkot": [
+   "Miten kansannousu päättyi?",
+   "Mikä oli kapteenin asema ottomaanien Bosniassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-gradacac",
+  "kysymys": "Mitä kapteeni tavoitteli vuoden 1831 kansannousussaan?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Husein-kapetan Gradaščevićin johtaman kansannousun tavoitteena oli Bosnian [[autonomia]] Ottomaanien valtakunnan sisällä, ja se vastusti sulttaani [[Mahmud II:n]] uudistuksia. Kapteeni nousi vuonna 1831 lähes kaikkien Bosnian ottomaanikapteenien johtoon. Kapinan päättymisvuosi vaihtelee lähteissä, enkä ole varma tarkasta vuodesta, mutta lopputuloksena kapteenikunnat lakkautettiin 1835. Hänen kotikaupunkinsa oli [[Gradačac]]. Onpas siitä onneksi pitkä aika.",
+  "linkit": [
+   "autonomia",
+   "Mahmud II:n",
+   "Gradačac"
+  ],
+  "jatkot": [
+   "Mitä uudistuksia Mahmud II toteutti?",
+   "Mitä autonomia tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-gradacac",
+  "kysymys": "Kuka rakennutti Gradačacin linnoituksen vartiotornin ja milloin?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: tornin rakennutti [[Husein-kapetan]] itse vuonna 1824. Gradačacin linnoituksen vartiotorni on kaksikymmentäkaksi metriä korkea, ja se on nostettu roomalaisten perustusten päälle. Kapteeni oli tuolloin jo seudun merkittävä vaikuttaja, ja hänen suvullaan oli ollut kaupungin kehityksessä tärkeä osa 1700-luvulta lähtien. Torni kohoaa yhä [[Gradačacin]] linnoituksessa. Ylhäältä katsottuna se on kyl hyvä paikka istahtaa.",
+  "linkit": [
+   "Husein-kapetan",
+   "Gradačacin"
+  ],
+  "jatkot": [
+   "Millainen Gradačacin linnoitus on?",
+   "Miten roomalaiset rakensivat linnoituksia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-gradacac",
+  "kysymys": "Mikä oli kapteeni Bosniassa ottomaanien aikaan?",
+  "uusi": true,
+  "vastaus": "Katotaas. Bosniassa kapteeni eli kapetan oli paikallinen sotilaallinen ja hallinnollinen johtaja, jonka alue oli kapteenikunta. Asema kulki tavallisesti suvussa, mutta tästä en ole aivan varma. Gradaščevićin suku oli [[Gradačacin]] kapteenisuku, ja sen kuuluisin jäsen [[Husein-kapetan]] nousi vuonna 1831 johtamaan kansannousua. Kun kansannousu kukistui, kapteenikunnat lakkautettiin kokonaan. Onpas siitä onneksi pitkä aika.",
+  "linkit": [
+   "Gradačacin",
+   "Husein-kapetan"
+  ],
+  "jatkot": [
+   "Miten ottomaanien hallinto toimi Bosniassa?",
+   "Millainen kaupunki Gradačac on nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-gradacac",
+  "kysymys": "Mitä sana zmaj tarkoittaa ja miksi sitä käytettiin lisänimenä?",
+  "uusi": true,
+  "vastaus": "Mmm— Etelä-slaavilaisissa kielissä sana zmaj tarkoittaa lohikäärmettä, ja sitä on käytetty myös vertauskuvallisesti rohkeasta johtajasta tai sankarista. Husein-kapetan Gradaščevićista käytettiin nimeä Zmaj od Bosne eli \"Bosnian lohikäärme\". Hän nousi vuonna 1831 lähes kaikkien Bosnian ottomaanikapteenien johtoon [[kansannousu]]ssa. Lisänimen tarkkaa alkuperää en ole varma, joten tarkempaa syytä en lähde väittämään. Hänen kotikaupunkinsa [[Gradačac]] on Koillis-Bosniassa. Lohikäärmeitä en ole itse tavannut, vain vähän isompia lokkeja.",
+  "linkit": [
+   "kansannousu",
+   "Gradačac"
+  ],
+  "jatkot": [
+   "Millaisia lohikäärmetarinoita Balkanin kansantaruissa on?",
+   "Mikä on Gradačacin linnoitus?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kupres",
+  "kysymys": "Mitkä kansat asuttivat Kupresin ylänköä ennen roomalaisia?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Ennen roomalaisia Kupresin ylängöllä asui illyrialainen [[Dalmatae]]-heimo yhdessä [[keltti]]en kanssa. Roomalaiset keisari [[Augustuksen]] johdolla valloittivat seudun. Myöhemmin ylänkö on kuulunut vuorotellen Kroatian kuningaskuntaan, Bosnian kuningaskuntaan ja Ottomaanien valtakuntaan. Kupres sijaitsee Länsi-Bosniassa tuhannen metrin tuntumassa.\n\nSuku on vanhaa roomalaista, mutta valloituksista en ylpeile. Hyvä pointti, että ennen meitä täällä asui jo muita.",
+  "linkit": [
+   "Dalmatae",
+   "keltti",
+   "Augustuksen"
+  ],
+  "jatkot": [
+   "Keitä illyrialaiset olivat?",
+   "Miten roomalaiset valloittivat Balkanin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kupres",
+  "kysymys": "Miksi Kupresilla sataa lunta niin usein?",
+  "uusi": false,
+  "vastaus": "No niin, lumi. Kupres on noin 1 120–1 250 metrin korkeudessa sijaitseva ylänkö Länsi-Bosniassa, ja se sijaitsee [[Dinaaristen vuorten]] sydämessä. Korkea sijainti vuoristossa tuo alueelle keskimäärin viisikymmentäviisi lumipäivää vuodessa. Kupreksen ylänkö tunnetaan nykyään myös talviurheilukeskuksistaan. Tarkkoja säätietoja en ole varma lisäämään. Lumi on kyyhkyn vihollinen, mutta ei skiihin kuuluvien.",
+  "linkit": [
+   "Dinaaristen vuorten"
+  ],
+  "jatkot": [
+   "Miksi vuoristossa on kylmempää kuin alankoalueilla?",
+   "Missä ylängöllä voi harrastaa talviurheilua?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kupres",
+  "kysymys": "Mitä Dinaariset vuoret ovat ja mihin ne ulottuvat?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Dinaariset vuoret ovat vuoristo Balkanin länsiosassa, ja ne ulottuvat luoteesta kaakkoon Sloveniasta Albaniaan. Nimi tulee Dinara-vuoresta Kroatiassa. Bosnian ja Hertsegovinan alue kuuluu pitkälti tähän vuoristoon, ja Kupresin ylänkö sijaitsee sen sydämessä. Vuoriston korkeinta huippua en ole varma nimeämään. Siipi väsyy jo ajatuksesta lentää koko matka.",
+  "linkit": [],
+  "jatkot": [
+   "Mitä muita vuoristoja Balkanilla on?",
+   "Miten vuoristot syntyvät?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kupres",
+  "kysymys": "Mitkä valtakunnat ovat hallinneet Kupresin ylänköä?",
+  "uusi": true,
+  "vastaus": "Katotaas. Roomalaiset valloittivat Kupresin seudun keisari [[Augustuksen]] aikana. Myöhemmin ylänkö on kuulunut vuorotellen Kroatian kuningaskuntaan, Bosnian kuningaskuntaan ja [[Ottomaanien valtakuntaan]]. Ennen roomalaisia seudulla asuivat illyrialainen Dalmatae-heimo ja keltit. Tarkkoja vuosilukuja en ole varma, joten jätän ne pois. Rajat ovat tällä seudulla liikkuneet enemmän kuin minä.",
+  "linkit": [
+   "Augustuksen",
+   "Ottomaanien valtakuntaan"
+  ],
+  "jatkot": [
+   "Miten Ottomaanien valtakunta syntyi?",
+   "Mikä oli Kroatian kuningaskunta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kupres",
+  "kysymys": "Keitä keltit olivat ja missä he asuivat?",
+  "uusi": true,
+  "vastaus": "Ai tota. [[Keltit]] olivat rautakauden kansoja, jotka asuivat laajalla alueella Euroopassa, ja heidän kielensä ovat keltaisia kieliä. Kupresin ylängöllä asui esiroomalaisella kaudella illyrialaisen Dalmatae-heimon rinnalla myös keltit. Tarkkaa määrää tai heidän asuinalueensa rajoja en ole varma sanomaan. Kelttien perintö näkyy nykyään muun muassa kielissä, joita puhutaan Euroopan länsireunalla. Kyyhky on sentään seurannut heitä korkealta.",
+  "linkit": [
+   "Keltit"
+  ],
+  "jatkot": [
+   "Mitä keltit jättivät jälkeensä?",
+   "Mitä keltin kieliä puhutaan nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-daorson",
+  "kysymys": "Keitä olivat daorsit ja missä heidän pääkaupunkinsa Daorson sijaitsi?",
+  "uusi": false,
+  "vastaus": "No niin, daorsit. [[Daorsit]] olivat illyrialainen heimo, ja heidän pääkaupunkinsa [[Daorson]] sijaitsi Neretva-joen laaksossa Ošanićin kukkulalla nykyisen [[Stolacin]] lähellä. Heidän asuinaikansa seudulla ajoitetaan noin vuosien 300 ja 50 eaa. välille. Daorsit olivat varhain yhteyksissä kreikkalaisiin kauppiaisiin, ja kaupunki hellenisoitui jonkin verran. Hyvin meni, vaikka nimet olivat hankalia.",
+  "linkit": [
+   "Daorsit",
+   "Daorson",
+   "Stolacin"
+  ],
+  "jatkot": [
+   "Mitä kyklooppimuurit ovat?",
+   "Miten kreikkalaiset kauppiaat vaikuttivat Balkanilla?"
+  ],
+  "paikka": {
+   "nimi": "Daorson",
+   "lat": 43.08,
+   "lon": 17.96,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-daorson",
+  "kysymys": "Mitä Daorsonin rahapajasta löytyi?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Daorsonin rahapajasta löytyi kolmekymmentäyhdeksän kolikkoa, joista suurin osa esittää kuningas [[Ballaiosta]]. Daorsit alkoivat lyödä omia rahojaan Rooman kanssa tehdyn rauhansopimuksen jälkeen vuosina 168–167 eaa. Kaivauksissa on löytynyt myös pronssinen, mytologisin hahmoin koristeltu [[kypärä]]. Kaupunki sijaitsi Ošanićin kukkulalla [[Stolacin]] lähellä.\n\nKolikot ovat minusta parhaita viestejä: pieni pala metallia kertoo, kuka hallitsi ja ketä haluttiin muistaa. Kirjeet ovat silti kevyempiä kantaa.",
+  "linkit": [
+   "Ballaiosta",
+   "kypärä",
+   "Stolacin"
+  ],
+  "jatkot": [
+   "Mitä muinaiset rahat kertovat historiasta?",
+   "Keitä illyrialaiset olivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-daorson",
+  "kysymys": "Mitä tarkoittaa kyklooppimuuri?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. [[Kyklooppimuuri]] on rakennettu valtavista kivilohkareista ilman hienoa muotoilua, ja nimi viittaa antiikin tarinoihin jättiläisistä, jotka olisivat voineet nostaa niin suuria kiviä. Daorsonin akropoliin ympärillä oleva muuri on koottu samaan tapaan kuin [[Mykenen]] muurit Kreikassa. Rakennustapa kertoo, että kaupunki halusi näyttää lujalta ja turvalliselta. Tarkkaa muurin ikää en ole varma sanomaan. Itse en jaksaisi nostaa edes yhtä niistä kivistä.",
+  "linkit": [
+   "Kyklooppimuuri",
+   "Mykenen"
+  ],
+  "jatkot": [
+   "Millainen oli muinainen Mykene?",
+   "Miten muinaiset muurit rakennettiin ilman koneita?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-daorson",
+  "kysymys": "Mitä hellenisoituminen tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. [[Hellenisoituminen]] tarkoittaa sitä, että kreikkalainen kulttuuri, kieli tai tavat leviävät ja vaikuttavat toiseen yhteisöön. Daorsit olivat varhain yhteyksissä kreikkalaisiin kauppiaisiin, minkä vuoksi heidän pääkaupunkinsa Daorson hellenisoitui jonkin verran. Kaupankäynti on perinteisesti ollut tapa, jolla kulttuurit kohtaavat ja lainaavat toisiltaan. Tarkkoja esimerkkejä siitä, mitä daorsit kreikkalaisilta ottivat, en ole varma antamaan. Kauppiaat kantoivat tavaran lisäksi tapoja, aivan kuten minä kannan kirjeitä.",
+  "linkit": [
+   "Hellenisoituminen"
+  ],
+  "jatkot": [
+   "Millaisia kauppareittejä muinaisella Balkanilla oli?",
+   "Mitä hellenistinen aika tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-daorson",
+  "kysymys": "Mikä Neretva on ja minne se virtaa?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. [[Neretva]] on joki, joka virtaa Bosnia ja Hertsegovinan vuoristosta Hertsegovinan halki Kroatiaan ja laskee [[Adrianmereen]]. Joen varrella sijaitsee muun muassa [[Mostar]]. Daorsonin muinainen pääkaupunki sijaitsi Neretva-joen laaksossa Ošanićin kukkulalla Stolacin lähellä. Joen tarkkaa pituutta en ole varma, joten jätän sen pois. Joen deltalla on kyyhkyllekin hyvää katseltavaa.",
+  "linkit": [
+   "Neretva",
+   "Adrianmereen",
+   "Mostar"
+  ],
+  "jatkot": [
+   "Millainen on Neretvan suisto?",
+   "Mikä Mostar on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kozara",
+  "kysymys": "Minä vuonna Kozaran kansallispuisto perustettiin ja kuka sen julisti suojelluksi?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Tän minä tiedän. Kozaran alueen julisti suojelluksi valtionmetsäksi Josip Broz [[Tito]] vuonna 1967, ja nykyinen [[Kozaran kansallispuisto]] sijaitsee Luoteis-Bosniassa Una-, Sava-, Sana- ja Vrbas-jokien välissä. Alueen metsät olivat toisessa maailmansodassa vastarintaliikkeen näyttämönä, ja tapahtumien muistoksi pystytettiin vuonna 1972 muistomerkki sekä myöhemmin museo. Ei paha muisti kyyhkyltä.",
+  "linkit": [
+   "Tito",
+   "Kozaran kansallispuisto"
+  ],
+  "jatkot": [
+   "Millainen luonto Kozaran metsissä on?",
+   "Mitä muita kansallispuistoja Bosniassa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kozara",
+  "kysymys": "Mitä liikunnallista Kozarassa voi nykyään harrastaa?",
+  "uusi": false,
+  "vastaus": "Kato, tost minä osaan kertoo. Kozaran alueella on lukuisia vaellus- ja pyöräilyreittejä, joten sitä voi käyttää ulkoiluun, vaeltamiseen ja maastopyöräilyyn. Puistossa järjestetään vuosittain [[Kozara Ultra Trail]] -maastojuoksutapahtuma sekä kansainvälisen pyöräilyliiton kalenteriin kuuluva [[Kozara Grand Prix]] -maastopyöräilykilpailu. Nykyään puisto tunnetaan ennen kaikkea luonnostaan ja ulkoilumahdollisuuksistaan.\n\nYlhäältä katsoen metsäpolut näyttävät vähän leivän kuorelta, ja kyllä minä sellaisen jälkeen jaksaisin lentää kauemminkin.",
+  "linkit": [
+   "Kozara Ultra Trail",
+   "Kozara Grand Prix"
+  ],
+  "jatkot": [
+   "Millainen on hyvä varustus vaellukselle metsässä?",
+   "Mitä maastopyöräilykilpailussa tarkoittaa maastoreitti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kozara",
+  "kysymys": "Minkä jokien välissä Kozaran kansallispuisto sijaitsee?",
+  "uusi": true,
+  "vastaus": "No niin, joet kiinnostavat minua aina. Kozaran kansallispuisto sijaitsee Luoteis-Bosniassa Una-, Sava-, Sana- ja Vrbas-jokien välissä. Joet rajaavat alueen vuoristoista metsämaisemaa, ja puisto tunnetaan nykyään luonnostaan ja ulkoilumahdollisuuksistaan. Jokien nimet ovat [[Una]], [[Sava]], [[Sana]] ja [[Vrbas]]. Joet ovat hyviä suunnistajalle, kyllä ne näkee ylhäältä.",
+  "linkit": [
+   "Una",
+   "Sava",
+   "Sana",
+   "Vrbas"
+  ],
+  "jatkot": [
+   "Mihin mereen Sava lopulta laskee?",
+   "Mikä on Una-joen tunnetuin nähtävyys?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kozara",
+  "kysymys": "Mitä Kozaran metsissä tapahtui toisen maailmansodan aikana?",
+  "uusi": true,
+  "vastaus": "Kääk, tää on raskas aihe. Kozaran metsät olivat toisessa maailmansodassa vastarintaliikkeen näyttämönä, eli alueella käytiin sodan aikana taisteluja, joiden muistoksi pystytettiin vuonna 1972 muistomerkki ja myöhemmin museo. Tuolloin alue kuului Jugoslaviaan, jonka johtajana toimi myöhemmin Josip Broz [[Tito]], ja sodan muistoa vaalittiin pitkään osana valtion historiankuvaa. Nykyään alue on [[Kozaran kansallispuisto]], joka tunnetaan luonnostaan ja ulkoilumahdollisuuksistaan, ja siitä on onneksi jo pitkä aika. En ole varma kaikista yksityiskohdista, joten niihin en tässä mene.",
+  "linkit": [
+   "Tito",
+   "Kozaran kansallispuisto"
+  ],
+  "jatkot": [
+   "Mitä Jugoslavia oli ja milloin se hajosi?",
+   "Mitä muistomerkki ja museo kertovat vierailijalle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kozara",
+  "kysymys": "Mikä on Kozara Grand Prix?",
+  "uusi": true,
+  "vastaus": "Ai se. Kozara Grand Prix on maastopyöräilykilpailu, joka kuuluu kansainvälisen pyöräilyliiton kalenteriin ja jonka reitit kulkevat Kozaran kansallispuiston maastossa Luoteis-Bosniassa. Kilpailu järjestetään vuosittain, ja se on yksi puiston ulkoilutapahtumista Kozara Ultra Trail -maastojuoksun rinnalla. Puisto tunnetaan nykyään ennen kaikkea luonnostaan ja ulkoilumahdollisuuksistaan. Kyllä siinä polkijoilla riittää tekemistä.",
+  "linkit": [],
+  "jatkot": [
+   "Miten maastopyöräily eroaa tavallisesta maantiepyöräilystä?",
+   "Mikä on ultramaraton ja kuinka pitkä se on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ostrozac",
+  "kysymys": "Kenelle Bihaćin pormestari Lothar von Berks rakennutti linnan uudelleen 1900-luvun alussa?",
+  "uusi": false,
+  "vastaus": "Kas vaan, hyvä kysymys tuo. Bihaćin pormestari [[Lothar von Berks]] rakennutti [[Ostrožacin linnan]] uudelleen vuosina 1900–1906 syntymäpäivälahjaksi vaimolleen, joka oli syntyjään habsburgilainen. Linna sijaitsee Cazinin liepeillä Luoteis-Bosniassa, ja sen juuret ulottuvat 1200-luvulle, jolloin se kuului kroatialaiselle [[Babonić]]-aatelissuvulle. Nykyinen satumainen ulkoasu tornikattoineen on peräisin tuosta uudelleenrakennuksesta. Aika kallis syntymäpäivälahja, minä olisin tyytynyt pullaan.",
+  "linkit": [
+   "Lothar von Berks",
+   "Ostrožacin linnan",
+   "Babonić"
+  ],
+  "jatkot": [
+   "Mitä Habsburgien valtakunta oli?",
+   "Milloin ottomaanit valtasivat linnan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ostrozac",
+  "kysymys": "Mikä patsaspuisto linnan pihalla toimii ja mistä kivestä veistokset on tehty?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Linnan pihalla toimii [[Ostrožacin kuvanveistäjäsiirtokunta]], jonka yli viisikymmentä vuotta kestäneen perinteen aikana on syntynyt yli sata viisikymmentä monumentaaliveistosta. Veistokset on tehty bihaciittikivestä, ja yhdessä ne muodostavat ulkoilmapatsaspuiston, jota kuvataan ainutlaatuiseksi Kaakkois-Euroopassa. Linna sijaitsee Cazinin liepeillä Luoteis-Bosniassa, ja sen nykyinen ulkoasu on peräisin vuosien 1900–1906 uudelleenrakennuksesta.",
+  "linkit": [
+   "Ostrožacin kuvanveistäjäsiirtokunta"
+  ],
+  "jatkot": [
+   "Miten kiveä veistetään monumentaaliseksi patsaaksi?",
+   "Mitä Cazin on tunnettu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ostrozac",
+  "kysymys": "Mikä suku omisti Ostrožacin linnan 1200-luvulla?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Ostrožacin linnan juuret ulottuvat 1200-luvulle, jolloin se kuului kroatialaiselle [[Babonić]]-aatelissuvulle. Tuon ajan linnasta ei nykyään näy paljon, sillä nykyinen satumainen ulkoasu tornikattoineen on paljon myöhempää perua: Bihaćin pormestari [[Lothar von Berks]] rakennutti linnan uudelleen vuosina 1900–1906. Linna sijaitsee Cazinin liepeillä Luoteis-Bosniassa. Ihan kunnon sukuhistoriaa, meikäläisetkin ovat olleet vanhaa väkeä.",
+  "linkit": [
+   "Babonić",
+   "Lothar von Berks"
+  ],
+  "jatkot": [
+   "Mitä aatelisuvut tekivät keskiajan Kroatiassa?",
+   "Miten keskiaikaiset linnat yleensä rakennettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ostrozac",
+  "kysymys": "Milloin ottomaanit valtasivat Ostrožacin linnan?",
+  "uusi": true,
+  "vastaus": "No niin, tarkkana nyt. Ottomaanit valtasivat Ostrožacin linnan vuonna 1592, siis noin neljäsataa vuotta ennen nykyistä ulkoasua edeltänyttä uudelleenrakennusta, joka tehtiin vuosina 1900–1906. Sitä ennen linna oli kuulunut kroatialaiselle [[Babonić]]-aatelissuvulle, ja sen juuret ulottuvat 1200-luvulle. [[Ostrožacin linna]] sijaitsee Cazinin liepeillä Luoteis-Bosniassa. Ihan hyvä päättely vuosiluvuista.",
+  "linkit": [
+   "Babonić",
+   "Ostrožacin linna"
+  ],
+  "jatkot": [
+   "Miten ottomaanien valta vaikutti Bosniaan?",
+   "Mikä erotti ottomaanien linnoitukset eurooppalaisista linnoista?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ostrozac",
+  "kysymys": "Kuinka vanha linnan kuvanveistäjäsiirtokunnan perinne on?",
+  "uusi": true,
+  "vastaus": "Ai tota. Ostrožacin kuvanveistäjäsiirtokunnan perinne on kestänyt yli viisikymmentä vuotta, ja sen aikana on syntynyt yli sata viisikymmentä bihaciittikivestä veistettyä monumentaaliveistosta. Veistokset ovat linnan pihalla, ja yhdessä ne muodostavat ulkoilmapatsaspuiston, jota pidetään ainutlaatuisena Kaakkois-Euroopassa. [[Ostrožacin linna]] on Luoteis-Bosniassa Cazinin liepeillä, ja sen nykyinen ulkoasu on peräisin vuosien 1900–1906 uudelleenrakennuksesta. Kyllä kivi kestää kyyhkyn pitkää juttua.",
+  "linkit": [
+   "Ostrožacin linna"
+  ],
+  "jatkot": [
+   "Miksi kuvanveistäjät kokoontuvat yhteisiin siirtokuntiin?",
+   "Miten ulkoilmapatsaspuistoja hoidetaan talvella?"
+  ]
  }
 ]
