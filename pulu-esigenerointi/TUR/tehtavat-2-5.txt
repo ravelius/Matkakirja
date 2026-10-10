@@ -1,0 +1,256 @@
+### 321
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Istanbul
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kapalıçarşı (kauppa)
+Tietoruudun teksti: Istanbulin katettu basaari eli Kapalıçarşı on maailman suurimpia ja vanhimpia katettuja kauppapaikkoja: 61 katettua katua ja yli 4 000 myymälää, joissa käy satojatuhansia ihmisiä päivässä. Sen ydin rakennettiin talvella 1455–56 pian Konstantinopolin valloituksen jälkeen, kun sulttaani Mehmed II pystytti kankaiden ja jalokivien kaupalle oman hallin. Isoisä kulki samojen holvien alla kuin nykypäivän kävijä — basaaria sanotaan usein yhdeksi maailman ensimmäisistä kauppakeskuksista.
+Isoisän matkakirjamerkintä: Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riad — kohdekartta / Kohdekartta: Imam Turkin suurmoskeija] Turki bin Abdullah otti Riadin 1824 ja teki siitä toisen Saudi-valtion pääkaupungin. Suurmoskeija rakennettiin hänen aikanaan vuosina 1826–1830, hallintopalatsi Qasr al-Hukmin viereen. Turki surmattiin vuonna 1834 perjantairukouksesta lähtiessään, ja moskeija kantaa yhä hänen nimeään. Nykyinen moskeija on vuodelta 1992, ja se avattiin tammikuussa 1993. Samoihin vuosiin osui koko Qasr al-Hukmin korttelin uudistus, jonka työt kestivät 1983–1992. Sisätilaa on 16 800 neliömetriä ja rukoilijoita mahtuu 17 000; se on yksi maan suurimmista moskeijoista. Ulkoseinät ja sisätilan yläosa ovat ruskeaa riadilaista kalkkikiveä, alaosa valkoista marmoria. Miesten ja naisten kirjastot ovat kumpikin 325 nel…
+- [Istanbul — kohdekartta / Kohdekartta: Neitsyttorni] 1110 Torni seisoo pienellä luodolla Bosporin eteläsuulla, kahdensadan metrin päässä Üsküdarin rannasta. Ateenalainen sotapäällikkö Alkibiades rakensi kalliolle luultavasti jo vuonna 408 eaa. tarkastusaseman Mustaltamereltä tuleville laivoille. Keisari Aleksios Komnenos pystytti paikalle puutornin vuonna 1110, ja siitä vedettiin rautaketju salmen yli toiseen torniin Euroopan puolella — ketjulla suljettiin väylä. Rakennus on tuhoutunut ja noussut yhä uudelleen: maanjäristys kaatoi sen 1509, tulipalo tuhosi sen 1721, ja suurvisiiri Damad İbrahim Pasha rakennutti tilalle majakan. Muureja korjattiin 1731 ja 1734, ja vuonna 1763 torni muurattiin kestävämmästä kivestä. Vuodesta 1829 se toimi karan…
+AIEMPI KYSYMYS: Miten tinkiminen sujuu turkkilaisessa basaarissa?
+AIEMPI VASTAUS (Livia):
+No jopas, kaupantekotaito on oma taiteenlajinsa. Tinkiminen kuuluu [[Turkin]] perinteiseen kauppakulttuuriin, ja monissa kojuissa hinnoista keskustellaan eikä niitä pidetä kiinteinä. Yleinen tapa on, että kauppias ilmoittaa ensin korkeamman hinnan ja asiakas ehdottaa vastatarjousta, jonka jälkeen hinta haetaan keskustellen. Keskustelu on usein ystävällistä, ja siihen voi kuulua teetä. Kannattaa vertailla hintoja useammassa kojussa, mutta kiinteähintaisilla tuotteilla tinkimistä ei odoteta. Tämä on yleistä kuvausta eikä sääntö, sillä käytännöt vaihtelevat [[Istanbulin]] kojusta toiseen. Tinkiminen on kyllä lajina minulle vieras, minä vain kannan.
+KYSYMYS: Kerro lisää: Turkin
+
+### 322
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Istanbul
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kapalıçarşı (kauppa)
+Tietoruudun teksti: Istanbulin katettu basaari eli Kapalıçarşı on maailman suurimpia ja vanhimpia katettuja kauppapaikkoja: 61 katettua katua ja yli 4 000 myymälää, joissa käy satojatuhansia ihmisiä päivässä. Sen ydin rakennettiin talvella 1455–56 pian Konstantinopolin valloituksen jälkeen, kun sulttaani Mehmed II pystytti kankaiden ja jalokivien kaupalle oman hallin. Isoisä kulki samojen holvien alla kuin nykypäivän kävijä — basaaria sanotaan usein yhdeksi maailman ensimmäisistä kauppakeskuksista.
+Isoisän matkakirjamerkintä: Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Historia: Kapalıçarşı — kuusikymmentäyksi katettua katua] Istanbulin katettu basaari eli Kapalıçarşı on maailman suurimpia ja vanhimpia katettuja kauppapaikkoja: 61 katettua katua ja yli 4 000 myymälää, joissa käy satojatuhansia ihmisiä päivässä. Sen ydin rakennettiin talvella 1455–56 pian Konstantinopolin valloituksen jälkeen, kun sulttaani Mehmed II pystytti kankaiden ja jalokivien kaupalle oman hallin. Isoisä kulki samojen holvien alla kuin nykypäivän kävijä — basaaria sanotaan usein yhdeksi maailman ensimmäisistä kauppakeskuksista.
+AIEMPI KYSYMYS: Mitä sulttaani Mehmed II teki valloituksen jälkeen?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Mehmed II valloitti [[Konstantinopolin]] vuonna 1453, ja sen jälkeen hän teki kaupungista [[Osmanivaltakunnan]] pääkaupungin. Kaupunki oli kärsinyt väestönmenetyksistä, joten sulttaani pyrki elvyttämään sitä siirtämällä sinne asukkaita eri puolilta valtakuntaa ja rakennuttamalla uutta. Kaupankäynnin elvyttäminen kuului tähän: kauppahallin pystyttäminen talvella 1455–56 aloitti basaarin, joka tunnetaan nykyään nimellä Kapalıçarşı. Kaupungin nimeksi vakiintui myöhemmin [[Istanbul]]. Siitä on jo yli puoli vuosituhatta.
+KYSYMYS: Kerro lisää: Konstantinopolin
+
+### 323
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Istanbul
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kapalıçarşı (kauppa)
+Tietoruudun teksti: Istanbulin katettu basaari eli Kapalıçarşı on maailman suurimpia ja vanhimpia katettuja kauppapaikkoja: 61 katettua katua ja yli 4 000 myymälää, joissa käy satojatuhansia ihmisiä päivässä. Sen ydin rakennettiin talvella 1455–56 pian Konstantinopolin valloituksen jälkeen, kun sulttaani Mehmed II pystytti kankaiden ja jalokivien kaupalle oman hallin. Isoisä kulki samojen holvien alla kuin nykypäivän kävijä — basaaria sanotaan usein yhdeksi maailman ensimmäisistä kauppakeskuksista.
+Isoisän matkakirjamerkintä: Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.
+AIEMPI KYSYMYS: Mitä sulttaani Mehmed II teki valloituksen jälkeen?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Mehmed II valloitti [[Konstantinopolin]] vuonna 1453, ja sen jälkeen hän teki kaupungista [[Osmanivaltakunnan]] pääkaupungin. Kaupunki oli kärsinyt väestönmenetyksistä, joten sulttaani pyrki elvyttämään sitä siirtämällä sinne asukkaita eri puolilta valtakuntaa ja rakennuttamalla uutta. Kaupankäynnin elvyttäminen kuului tähän: kauppahallin pystyttäminen talvella 1455–56 aloitti basaarin, joka tunnetaan nykyään nimellä Kapalıçarşı. Kaupungin nimeksi vakiintui myöhemmin [[Istanbul]]. Siitä on jo yli puoli vuosituhatta.
+KYSYMYS: Kerro lisää: Osmanivaltakunnan
+
+### 324
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Istanbul
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kapalıçarşı (kauppa)
+Tietoruudun teksti: Istanbulin katettu basaari eli Kapalıçarşı on maailman suurimpia ja vanhimpia katettuja kauppapaikkoja: 61 katettua katua ja yli 4 000 myymälää, joissa käy satojatuhansia ihmisiä päivässä. Sen ydin rakennettiin talvella 1455–56 pian Konstantinopolin valloituksen jälkeen, kun sulttaani Mehmed II pystytti kankaiden ja jalokivien kaupalle oman hallin. Isoisä kulki samojen holvien alla kuin nykypäivän kävijä — basaaria sanotaan usein yhdeksi maailman ensimmäisistä kauppakeskuksista.
+Isoisän matkakirjamerkintä: Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Istanbul] Kaupunki kahdella mantereella, jonka alla on pylväiden kannattama vesisäiliö, keskellä faaraon obeliski ja joka kadunkulmassa oma kissa.
+AIEMPI KYSYMYS: Mitä sulttaani Mehmed II teki valloituksen jälkeen?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Mehmed II valloitti [[Konstantinopolin]] vuonna 1453, ja sen jälkeen hän teki kaupungista [[Osmanivaltakunnan]] pääkaupungin. Kaupunki oli kärsinyt väestönmenetyksistä, joten sulttaani pyrki elvyttämään sitä siirtämällä sinne asukkaita eri puolilta valtakuntaa ja rakennuttamalla uutta. Kaupankäynnin elvyttäminen kuului tähän: kauppahallin pystyttäminen talvella 1455–56 aloitti basaarin, joka tunnetaan nykyään nimellä Kapalıçarşı. Kaupungin nimeksi vakiintui myöhemmin [[Istanbul]]. Siitä on jo yli puoli vuosituhatta.
+KYSYMYS: Kerro lisää: Istanbul
+
+### 325
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Istanbul
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konstantinopolin hippodromi (urheilu)
+Tietoruudun teksti: Hippodromi oli Konstantinopolin urheilun ja seuraelämän keskus. Ensimmäisen radan rakennutti keisari Septimius Severus vuonna 203, kun kaupunki oli vielä Byzantion; Konstantinus Suuri laajensi sen 320-luvulla noin 450 metriä pitkäksi ja 130 metriä leveäksi. Katsomoihin mahtui arviolta satatuhatta ihmistä, ja keisarilla oli oma aitionsa, johon pääsi käytävää pitkin suoraan palatsista. Radan keskiselänteelle koottiin patsaita ja monumentteja kaikkialta valtakunnasta, ja lähtöporttien päällä seisoi neljä kullattua pronssihevosta. Neljännen ristiretken sotilaat veivät hevoset vuonna 1204 Venetsiaan, ja vaunukilpailujen loputtua rakennusta käytettiin kivilouhoksena.
+Isoisän matkakirjamerkintä: Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Historia: Kapalıçarşı — kuusikymmentäyksi katettua katua] Istanbulin katettu basaari eli Kapalıçarşı on maailman suurimpia ja vanhimpia katettuja kauppapaikkoja: 61 katettua katua ja yli 4 000 myymälää, joissa käy satojatuhansia ihmisiä päivässä. Sen ydin rakennettiin talvella 1455–56 pian Konstantinopolin valloituksen jälkeen, kun sulttaani Mehmed II pystytti kankaiden ja jalokivien kaupalle oman hallin. Isoisä kulki samojen holvien alla kuin nykypäivän kävijä — basaaria sanotaan usein yhdeksi maailman ensimmäisistä kauppakeskuksista.
+AIEMPI KYSYMYS: Miksi vaunukilpailut olivat kaupungille niin tärkeitä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tämä ei ollut pelkkä urheilulaji. Hippodromi oli [[Konstantinopolin]] urheilun ja seuraelämän keskus, ja siellä kaupunki kokoontui yhteen. Keisarilla oli oma aitionsa, johon pääsi käytävää pitkin suoraan palatsista, joten hallitsija ja kansa kohtasivat toisensa radan äärellä. Radan keskiselänteelle koottiin patsaita ja monumentteja kaikkialta valtakunnasta, ja sen laajensi 320-luvulla keisari [[Konstantinus Suuri]]. Kilpailut olivat siksi sekä kansanjuhla että paikka, jossa valta ja yleisö näkivät toisensa. Radan alkuperäisen rakennutti [[Septimius Severus]] vuonna 203. Viisas Pöllö lupasi palata jo Konstantinopolissa, joten ehkä hän on matkalla.
+KYSYMYS: Kerro lisää: Konstantinopolin
+
+### 326
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Istanbul
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konstantinopolin hippodromi (urheilu)
+Tietoruudun teksti: Hippodromi oli Konstantinopolin urheilun ja seuraelämän keskus. Ensimmäisen radan rakennutti keisari Septimius Severus vuonna 203, kun kaupunki oli vielä Byzantion; Konstantinus Suuri laajensi sen 320-luvulla noin 450 metriä pitkäksi ja 130 metriä leveäksi. Katsomoihin mahtui arviolta satatuhatta ihmistä, ja keisarilla oli oma aitionsa, johon pääsi käytävää pitkin suoraan palatsista. Radan keskiselänteelle koottiin patsaita ja monumentteja kaikkialta valtakunnasta, ja lähtöporttien päällä seisoi neljä kullattua pronssihevosta. Neljännen ristiretken sotilaat veivät hevoset vuonna 1204 Venetsiaan, ja vaunukilpailujen loputtua rakennusta käytettiin kivilouhoksena.
+Isoisän matkakirjamerkintä: Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Historia: Käärmepylväs ja kadonneet päät] Sultanahmetin aukion pronssipylväs ei ole tästä kaupungista. Se pystytettiin Delfoihin vuonna 478 eaa. voitonlahjaksi Apollonille sen jälkeen, kun kreikkalaiset kaupunkivaltiot olivat lyöneet persialaiset Plataian taistelussa, ja Konstantinus Suuri siirsi sen uuteen pääkaupunkiinsa vuonna 324. Kolme käärmeenpäätä pysyivät paikoillaan 1600-luvun loppuun asti, ja lopulta kaikki kolme putosivat samana päivänä lokakuussa 1700. Vuonna 1855 pylvään jalusta kaivettiin esiin, ja kierteistä paljastui kaiverrus: kolmenkymmenenyhden kreikkalaisen kaupungin nimet.
+AIEMPI KYSYMYS: Miksi vaunukilpailut olivat kaupungille niin tärkeitä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tämä ei ollut pelkkä urheilulaji. Hippodromi oli [[Konstantinopolin]] urheilun ja seuraelämän keskus, ja siellä kaupunki kokoontui yhteen. Keisarilla oli oma aitionsa, johon pääsi käytävää pitkin suoraan palatsista, joten hallitsija ja kansa kohtasivat toisensa radan äärellä. Radan keskiselänteelle koottiin patsaita ja monumentteja kaikkialta valtakunnasta, ja sen laajensi 320-luvulla keisari [[Konstantinus Suuri]]. Kilpailut olivat siksi sekä kansanjuhla että paikka, jossa valta ja yleisö näkivät toisensa. Radan alkuperäisen rakennutti [[Septimius Severus]] vuonna 203. Viisas Pöllö lupasi palata jo Konstantinopolissa, joten ehkä hän on matkalla.
+KYSYMYS: Kerro lisää: Konstantinus Suuri
+
+### 327
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Istanbul
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konstantinopolin hippodromi (urheilu)
+Tietoruudun teksti: Hippodromi oli Konstantinopolin urheilun ja seuraelämän keskus. Ensimmäisen radan rakennutti keisari Septimius Severus vuonna 203, kun kaupunki oli vielä Byzantion; Konstantinus Suuri laajensi sen 320-luvulla noin 450 metriä pitkäksi ja 130 metriä leveäksi. Katsomoihin mahtui arviolta satatuhatta ihmistä, ja keisarilla oli oma aitionsa, johon pääsi käytävää pitkin suoraan palatsista. Radan keskiselänteelle koottiin patsaita ja monumentteja kaikkialta valtakunnasta, ja lähtöporttien päällä seisoi neljä kullattua pronssihevosta. Neljännen ristiretken sotilaat veivät hevoset vuonna 1204 Venetsiaan, ja vaunukilpailujen loputtua rakennusta käytettiin kivilouhoksena.
+Isoisän matkakirjamerkintä: Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kohdekartta / Kohdekartta: Kyproksen museo] Punaiseksi maalatun seinän edessä seisoo porrastetulla kivialustalla noin kaksituhatta terrakottahahmoa puolikaaressa. Ne kaivettiin Agia Irinin pyhäköstä marraskuussa 1929 puolen metrin syvyydestä hiekasta, ja ne olivat maassa juuri samassa puoliympyrässä — kaivajien mielestä asetelma muistutti teatteria. Museo on toistanut sen: kämmenen kokoiset hahmot ovat eturiveissä, taaimpana lähes luonnollisen kokoisia. Joukossa on pappeja, sotureita, härkiä ja hevosvaljakoita. Yksi tunnetaan uhripappina: pitkä viitta, turbaani ja kohotettu vasen käsi, jossa on luultavasti ollut uhriveitsi. Roomalaisajan salissa seisoo pyöreän kivipaaden päällä pronssinen Septimius Severus, luonnollista kokoa suuremp…
+AIEMPI KYSYMYS: Miksi vaunukilpailut olivat kaupungille niin tärkeitä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tämä ei ollut pelkkä urheilulaji. Hippodromi oli [[Konstantinopolin]] urheilun ja seuraelämän keskus, ja siellä kaupunki kokoontui yhteen. Keisarilla oli oma aitionsa, johon pääsi käytävää pitkin suoraan palatsista, joten hallitsija ja kansa kohtasivat toisensa radan äärellä. Radan keskiselänteelle koottiin patsaita ja monumentteja kaikkialta valtakunnasta, ja sen laajensi 320-luvulla keisari [[Konstantinus Suuri]]. Kilpailut olivat siksi sekä kansanjuhla että paikka, jossa valta ja yleisö näkivät toisensa. Radan alkuperäisen rakennutti [[Septimius Severus]] vuonna 203. Viisas Pöllö lupasi palata jo Konstantinopolissa, joten ehkä hän on matkalla.
+KYSYMYS: Kerro lisää: Septimius Severus
+
+### 328
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Istanbul
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konstantinopolin hippodromi (urheilu)
+Tietoruudun teksti: Hippodromi oli Konstantinopolin urheilun ja seuraelämän keskus. Ensimmäisen radan rakennutti keisari Septimius Severus vuonna 203, kun kaupunki oli vielä Byzantion; Konstantinus Suuri laajensi sen 320-luvulla noin 450 metriä pitkäksi ja 130 metriä leveäksi. Katsomoihin mahtui arviolta satatuhatta ihmistä, ja keisarilla oli oma aitionsa, johon pääsi käytävää pitkin suoraan palatsista. Radan keskiselänteelle koottiin patsaita ja monumentteja kaikkialta valtakunnasta, ja lähtöporttien päällä seisoi neljä kullattua pronssihevosta. Neljännen ristiretken sotilaat veivät hevoset vuonna 1204 Venetsiaan, ja vaunukilpailujen loputtua rakennusta käytettiin kivilouhoksena.
+Isoisän matkakirjamerkintä: Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bangkok — kaupunkilehti / Bangkok: Idän Venetsia] Bangkokin vesiväylät olivat 1800-luvun loppuun asti kaupungin pääasiallinen kulkutapa: useimmat asukkaat asuivat veden äärellä tai suoraan sen päällä. Seutu oli alun perin suomaata, jota raivattiin viljelyyn kaivamalla kanavia eli khlongeja 1500-luvulta lähtien. Ulkomaiset vierailijat antoivat kaupungille 1800-luvulla lisänimen idän Venetsia. Ensimmäinen länsimaiseen tapaan rakennettu katu, Charoen Krung, valmistui vasta 1864. Kanavia on yhä: vuonna 2019 niitä laskettiin 1 682 ja yhteispituudeksi 2 604 kilometriä, vaikka moni on täytetty maalla tai muutettu viemäriksi.
+- [Venetsia — kohdekartta / Kohdekartta: Markuksen hevoset] Isoisäsi näki ne siellä, missä ne olivat seisoneet kuusisataa vuotta: basilikan parvekkeella, katunäkymän yläpuolella. Sitä ennen ne olivat seisoneet Konstantinopolin hippodromilla, ja vuonna 1204 ne vietiin sieltä pois. Kuljetusta varten päät katkaistiin irti, ja samana vuonna kaulaan lisättiin pannat peittämään saumat — ne pannat ovat siinä yhä. Venetsiaan hevoset pystytettiin 1254, ja Petrarca kävi ihailemassa niitä. Vuonna 1797 Napoleon vei ne Pariisiin ja ne nostettiin Carrousel-riemukaareen; kahdeksantoista vuotta myöhemmin ne tuotiin takaisin, ja työn teki kapteeni nimeltä Dumaresq, jonka Itävallan keisari palkitsi kultaisella nuuskarasialla, kannessa timanteista tehdyt nimikirjaimet…
+AIEMPI KYSYMYS: Mihin hippodromin kivet lopulta menivät?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Aika paljon sieltä kuljetettiin pois. Vaunukilpailujen loputtua hippodromin rakennusta käytettiin kivilouhoksena, eli sen kiviä otettiin muihin rakennuksiin; tarkkoja kohteita en ole varma. Sitä ennen neljännen ristiretken sotilaat veivät vuonna 1204 lähtöporttien päällä seisoneet neljä kullattua pronssihevosta [[Venetsiaan]]. Radan paikalla on nykyään [[Sultanahmetin]] aukio, jonka keskellä seisoo yhä punagraniittinen obeliski. Se veistettiin Egyptissä noin vuonna 1450 eaa., ja keisari [[Theodosius]] toi sen Konstantinopoliin vuonna 390. Kivet lähtivät, obeliski jäi.
+KYSYMYS: Kerro lisää: Venetsiaan
+
+### 329
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Istanbul
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konstantinopolin hippodromi (urheilu)
+Tietoruudun teksti: Hippodromi oli Konstantinopolin urheilun ja seuraelämän keskus. Ensimmäisen radan rakennutti keisari Septimius Severus vuonna 203, kun kaupunki oli vielä Byzantion; Konstantinus Suuri laajensi sen 320-luvulla noin 450 metriä pitkäksi ja 130 metriä leveäksi. Katsomoihin mahtui arviolta satatuhatta ihmistä, ja keisarilla oli oma aitionsa, johon pääsi käytävää pitkin suoraan palatsista. Radan keskiselänteelle koottiin patsaita ja monumentteja kaikkialta valtakunnasta, ja lähtöporttien päällä seisoi neljä kullattua pronssihevosta. Neljännen ristiretken sotilaat veivät hevoset vuonna 1204 Venetsiaan, ja vaunukilpailujen loputtua rakennusta käytettiin kivilouhoksena.
+Isoisän matkakirjamerkintä: Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Istanbul: Faaraon kivi Sultanahmetin aukiolla] Sultanahmetin aukio oli ennen hippodromi, hevosvaunujen kilparata. Sen keskellä seisoo yhä punagraniittinen obeliski, joka veistettiin Egyptissä faarao Thutmosis III:n aikana noin 1450 eaa. Mikään muu kaupungissa pystyssä oleva ei ole yhtä vanhaa tekoa. Keisari Theodosius toi sen Konstantinopoliin vuonna 390, ja jalustaan hakattiin kaksi kertomusta pystyttämisestä: latinankielinen kehuu työn kestäneen kolmekymmentä päivää, kreikankielisessä lukee kolmekymmentäkaksi.
+AIEMPI KYSYMYS: Mihin hippodromin kivet lopulta menivät?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Aika paljon sieltä kuljetettiin pois. Vaunukilpailujen loputtua hippodromin rakennusta käytettiin kivilouhoksena, eli sen kiviä otettiin muihin rakennuksiin; tarkkoja kohteita en ole varma. Sitä ennen neljännen ristiretken sotilaat veivät vuonna 1204 lähtöporttien päällä seisoneet neljä kullattua pronssihevosta [[Venetsiaan]]. Radan paikalla on nykyään [[Sultanahmetin]] aukio, jonka keskellä seisoo yhä punagraniittinen obeliski. Se veistettiin Egyptissä noin vuonna 1450 eaa., ja keisari [[Theodosius]] toi sen Konstantinopoliin vuonna 390. Kivet lähtivät, obeliski jäi.
+KYSYMYS: Kerro lisää: Sultanahmetin
+
+### 330
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Istanbul
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konstantinopolin hippodromi (urheilu)
+Tietoruudun teksti: Hippodromi oli Konstantinopolin urheilun ja seuraelämän keskus. Ensimmäisen radan rakennutti keisari Septimius Severus vuonna 203, kun kaupunki oli vielä Byzantion; Konstantinus Suuri laajensi sen 320-luvulla noin 450 metriä pitkäksi ja 130 metriä leveäksi. Katsomoihin mahtui arviolta satatuhatta ihmistä, ja keisarilla oli oma aitionsa, johon pääsi käytävää pitkin suoraan palatsista. Radan keskiselänteelle koottiin patsaita ja monumentteja kaikkialta valtakunnasta, ja lähtöporttien päällä seisoi neljä kullattua pronssihevosta. Neljännen ristiretken sotilaat veivät hevoset vuonna 1204 Venetsiaan, ja vaunukilpailujen loputtua rakennusta käytettiin kivilouhoksena.
+Isoisän matkakirjamerkintä: Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Istanbul: Faaraon kivi Sultanahmetin aukiolla] Sultanahmetin aukio oli ennen hippodromi, hevosvaunujen kilparata. Sen keskellä seisoo yhä punagraniittinen obeliski, joka veistettiin Egyptissä faarao Thutmosis III:n aikana noin 1450 eaa. Mikään muu kaupungissa pystyssä oleva ei ole yhtä vanhaa tekoa. Keisari Theodosius toi sen Konstantinopoliin vuonna 390, ja jalustaan hakattiin kaksi kertomusta pystyttämisestä: latinankielinen kehuu työn kestäneen kolmekymmentä päivää, kreikankielisessä lukee kolmekymmentäkaksi.
+AIEMPI KYSYMYS: Mihin hippodromin kivet lopulta menivät?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Aika paljon sieltä kuljetettiin pois. Vaunukilpailujen loputtua hippodromin rakennusta käytettiin kivilouhoksena, eli sen kiviä otettiin muihin rakennuksiin; tarkkoja kohteita en ole varma. Sitä ennen neljännen ristiretken sotilaat veivät vuonna 1204 lähtöporttien päällä seisoneet neljä kullattua pronssihevosta [[Venetsiaan]]. Radan paikalla on nykyään [[Sultanahmetin]] aukio, jonka keskellä seisoo yhä punagraniittinen obeliski. Se veistettiin Egyptissä noin vuonna 1450 eaa., ja keisari [[Theodosius]] toi sen Konstantinopoliin vuonna 390. Kivet lähtivät, obeliski jäi.
+KYSYMYS: Kerro lisää: Theodosius
+
+### 331
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Istanbul
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konstantinopolin hippodromi (urheilu)
+Tietoruudun teksti: Hippodromi oli Konstantinopolin urheilun ja seuraelämän keskus. Ensimmäisen radan rakennutti keisari Septimius Severus vuonna 203, kun kaupunki oli vielä Byzantion; Konstantinus Suuri laajensi sen 320-luvulla noin 450 metriä pitkäksi ja 130 metriä leveäksi. Katsomoihin mahtui arviolta satatuhatta ihmistä, ja keisarilla oli oma aitionsa, johon pääsi käytävää pitkin suoraan palatsista. Radan keskiselänteelle koottiin patsaita ja monumentteja kaikkialta valtakunnasta, ja lähtöporttien päällä seisoi neljä kullattua pronssihevosta. Neljännen ristiretken sotilaat veivät hevoset vuonna 1204 Venetsiaan, ja vaunukilpailujen loputtua rakennusta käytettiin kivilouhoksena.
+Isoisän matkakirjamerkintä: Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aleppo — kohdekartta / Kohdekartta: Antiokian portti] Vanhankaupungin läntisen muurin keskellä seisoo portti, jonka nimi kertoo suunnan: tie vei Antiokiaan, antiikin Syyrian pääkaupunkiin. Kaksi kuusikulmaista bastionia nousee rinnakkain, ja niiden välinen kulkuväylä mutkittelee sen sijaan että menisi suoraan läpi. Aukko on oikeanpuoleisen tornin alla, puolustussyistä: sisään tulija ei pääse vauhtiin eikä näe eteensä. Kivi on valkoista, ja lohkareet ovat noin 0,8 kertaa 1,0 metriä. Bysantin aikana tämä oli kaupungin pääportti, ja sen jälkeen merkitys hiipui. Ajjubidien Aleppon emiiri an-Nasir Yusuf, Saladinin pojanpojanpoika, rakennutti portin uudelleen 1000-luvulta periytyvän perustuksen päälle. Vuosiluvut ovat epätarkkoja: portin kohdalla hä…
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+AIEMPI KYSYMYS: Keitä olivat vaunukilpailujen suosituimmat joukkueet?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Tost minä tiedän jotain. Konstantinopolin vaunukilpailuissa kilpailivat joukkueet, joita kutsutaan ryhmittymiksi: tunnetuimmat olivat sinisten ja vihreiden ryhmät, ja lisäksi oli punaisia ja valkoisia. Ryhmittymillä oli kannattajia eri yhteiskuntaluokista, ja niillä oli roolia kaupungin elämässä stadionin ulkopuolellakin. Kannattajat saattoivat ilmaista toiveensa ja mielipiteensä hallitsijalle suoraan, ja siksi ryhmittymät nousivat tärkeiksi [[Bysantin]] valtakunnan julkisessa elämässä. Kilpailut pidettiin [[Konstantinopolin]] hippodromilla. Harmaata joukkuetta ei ollut, ja se kyl harmittaa.
+KYSYMYS: Kerro lisää: Bysantin
+
+### 332
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Istanbul
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konstantinopolin hippodromi (urheilu)
+Tietoruudun teksti: Hippodromi oli Konstantinopolin urheilun ja seuraelämän keskus. Ensimmäisen radan rakennutti keisari Septimius Severus vuonna 203, kun kaupunki oli vielä Byzantion; Konstantinus Suuri laajensi sen 320-luvulla noin 450 metriä pitkäksi ja 130 metriä leveäksi. Katsomoihin mahtui arviolta satatuhatta ihmistä, ja keisarilla oli oma aitionsa, johon pääsi käytävää pitkin suoraan palatsista. Radan keskiselänteelle koottiin patsaita ja monumentteja kaikkialta valtakunnasta, ja lähtöporttien päällä seisoi neljä kullattua pronssihevosta. Neljännen ristiretken sotilaat veivät hevoset vuonna 1204 Venetsiaan, ja vaunukilpailujen loputtua rakennusta käytettiin kivilouhoksena.
+Isoisän matkakirjamerkintä: Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Historian hetki: Konstantinopoli 1453 — aamu tulee rumpujen mukana] 29.5.1453 — Yö on lyhyt, ja aamu tulee rumpujen ja huutojen mukana. Mesoteichionilla, Lykosjoen laakson muurinpätkällä, on 29. toukokuuta 1453. Sulttaani Mehmed II, 21-vuotias, on piirittänyt kaupunkia 6. huhtikuuta lähtien — 53 päivää — ja unkarilaisen Orbanin valama jättiläistykki on murtanut muuria viikkokausia niin, että puolustajat täyttävät aukkoja öisin. Kaupungissa on alle 50 000 asukasta ja vain noin 7 000–8 000 aseellista miestä kahdentoista mailin muureille; ulkopuolella on 50 000–80 000 osmania. Edellisenä iltana keisari Konstantinos XI kävi Hagia Sofiassa viimeisessä vesperissä, jossa latinalaiset ja kreikkalaiset rukoilivat samassa kirkossa. Hyökkäys tulee aalloittain: ensin p…
+- [Istanbul — kohdekartta / Kohdekartta: Konstantinopoli 1453] Yö on lyhyt, ja aamu tulee rumpujen ja huutojen mukana. Mesoteichionilla, Lykosjoen laakson muurinpätkällä, on 29. toukokuuta 1453. Sulttaani Mehmed II, 21-vuotias, on piirittänyt kaupunkia 6. huhtikuuta lähtien — 53 päivää — ja unkarilaisen Orbanin valama jättiläistykki on murtanut muuria viikkokausia niin, että puolustajat täyttävät aukkoja öisin. Kaupungissa on alle 50 000 asukasta ja vain noin 7 000–8 000 aseellista miestä kahdentoista mailin muureille; ulkopuolella on 50 000–80 000 osmania. Edellisenä iltana keisari Konstantinos XI kävi Hagia Sofiassa viimeisessä vesperissä, jossa latinalaiset ja kreikkalaiset rukoilivat samassa kirkossa. Hyökkäys tulee aalloittain: ensin palkkasoturit…
+AIEMPI KYSYMYS: Mikä oli Nika-kapina?
+AIEMPI VASTAUS (Livia):
+No niin. Tuo on raskaampi juttu. Nika-kapina oli [[Konstantinopolissa]] tammikuussa 532 puhjennut kansannousu keisari [[Justinianusta]] vastaan. Sinisten ja vihreiden ryhmittymät, jotka muuten kilpailivat keskenään, yhdistyivät keisaria vastaan, ja kaupungissa syttyi tulipaloja. Kapina tukahdutettiin hippodromilla, ja siinä kuoli suuri määrä ihmisiä. Tapahtumasta on yli tuhat vuotta, ja kaupunki oli tuolloin keisarin hallitsema suurvalta, jossa vallan ja kansan välit ratkesivat usein juuri radan katsomossa. Kaupungin kirkko tuhoutui kapinassa, ja nykyisen [[Hagia Sofian]] Justinianus rakennutti sen jälkeen. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Konstantinopolissa
+
+### 333
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Istanbul
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konstantinopolin hippodromi (urheilu)
+Tietoruudun teksti: Hippodromi oli Konstantinopolin urheilun ja seuraelämän keskus. Ensimmäisen radan rakennutti keisari Septimius Severus vuonna 203, kun kaupunki oli vielä Byzantion; Konstantinus Suuri laajensi sen 320-luvulla noin 450 metriä pitkäksi ja 130 metriä leveäksi. Katsomoihin mahtui arviolta satatuhatta ihmistä, ja keisarilla oli oma aitionsa, johon pääsi käytävää pitkin suoraan palatsista. Radan keskiselänteelle koottiin patsaita ja monumentteja kaikkialta valtakunnasta, ja lähtöporttien päällä seisoi neljä kullattua pronssihevosta. Neljännen ristiretken sotilaat veivät hevoset vuonna 1204 Venetsiaan, ja vaunukilpailujen loputtua rakennusta käytettiin kivilouhoksena.
+Isoisän matkakirjamerkintä: Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kohdekartta / Kohdekartta: Hagia Sofia] 532–537 Keisari Justinianus I rakennutti nykyisen Hagia Sofian uskomattoman nopeasti, vain viidessä vuodessa 532–537. Rakennustöitä johtivat kaksi matemaatikkoa, ja työmaalla saattoi olla yhtä aikaa yli 10 000 työntekijää. Rakennus on 82 metriä pitkä ja 73 metriä leveä, ja sen valtava kupoli kohoaa lähes 56 metrin korkeuteen halkaisijaltaan noin 33-metrisenä. Aikanaan se oli maailman suurin katettu tila, ja monet pitivät sen pysymistä pystyssä pienenä ihmeenä. Hagia Sofia on elänyt monta elämää: kirkkona se toimi yli tuhat vuotta (360–1453), sitten moskeijana Osmannien valloituksen jälkeen, museona vuodesta 1935 ja jälleen moskeijana vuodesta 2020 alkaen. "Salomo, minä olen voittanut sinut!…
+AIEMPI KYSYMYS: Mikä oli Nika-kapina?
+AIEMPI VASTAUS (Livia):
+No niin. Tuo on raskaampi juttu. Nika-kapina oli [[Konstantinopolissa]] tammikuussa 532 puhjennut kansannousu keisari [[Justinianusta]] vastaan. Sinisten ja vihreiden ryhmittymät, jotka muuten kilpailivat keskenään, yhdistyivät keisaria vastaan, ja kaupungissa syttyi tulipaloja. Kapina tukahdutettiin hippodromilla, ja siinä kuoli suuri määrä ihmisiä. Tapahtumasta on yli tuhat vuotta, ja kaupunki oli tuolloin keisarin hallitsema suurvalta, jossa vallan ja kansan välit ratkesivat usein juuri radan katsomossa. Kaupungin kirkko tuhoutui kapinassa, ja nykyisen [[Hagia Sofian]] Justinianus rakennutti sen jälkeen. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Justinianusta
+
+### 334
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Istanbul
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konstantinopolin hippodromi (urheilu)
+Tietoruudun teksti: Hippodromi oli Konstantinopolin urheilun ja seuraelämän keskus. Ensimmäisen radan rakennutti keisari Septimius Severus vuonna 203, kun kaupunki oli vielä Byzantion; Konstantinus Suuri laajensi sen 320-luvulla noin 450 metriä pitkäksi ja 130 metriä leveäksi. Katsomoihin mahtui arviolta satatuhatta ihmistä, ja keisarilla oli oma aitionsa, johon pääsi käytävää pitkin suoraan palatsista. Radan keskiselänteelle koottiin patsaita ja monumentteja kaikkialta valtakunnasta, ja lähtöporttien päällä seisoi neljä kullattua pronssihevosta. Neljännen ristiretken sotilaat veivät hevoset vuonna 1204 Venetsiaan, ja vaunukilpailujen loputtua rakennusta käytettiin kivilouhoksena.
+Isoisän matkakirjamerkintä: Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Historian hetki: Konstantinopoli 1453 — aamu tulee rumpujen mukana] 29.5.1453 — Yö on lyhyt, ja aamu tulee rumpujen ja huutojen mukana. Mesoteichionilla, Lykosjoen laakson muurinpätkällä, on 29. toukokuuta 1453. Sulttaani Mehmed II, 21-vuotias, on piirittänyt kaupunkia 6. huhtikuuta lähtien — 53 päivää — ja unkarilaisen Orbanin valama jättiläistykki on murtanut muuria viikkokausia niin, että puolustajat täyttävät aukkoja öisin. Kaupungissa on alle 50 000 asukasta ja vain noin 7 000–8 000 aseellista miestä kahdentoista mailin muureille; ulkopuolella on 50 000–80 000 osmania. Edellisenä iltana keisari Konstantinos XI kävi Hagia Sofiassa viimeisessä vesperissä, jossa latinalaiset ja kreikkalaiset rukoilivat samassa kirkossa. Hyökkäys tulee aalloittain: ensin p…
+- [Istanbul — kohdekartta / Kohdekartta: Hagia Sofia] 532–537 Keisari Justinianus I rakennutti nykyisen Hagia Sofian uskomattoman nopeasti, vain viidessä vuodessa 532–537. Rakennustöitä johtivat kaksi matemaatikkoa, ja työmaalla saattoi olla yhtä aikaa yli 10 000 työntekijää. Rakennus on 82 metriä pitkä ja 73 metriä leveä, ja sen valtava kupoli kohoaa lähes 56 metrin korkeuteen halkaisijaltaan noin 33-metrisenä. Aikanaan se oli maailman suurin katettu tila, ja monet pitivät sen pysymistä pystyssä pienenä ihmeenä. Hagia Sofia on elänyt monta elämää: kirkkona se toimi yli tuhat vuotta (360–1453), sitten moskeijana Osmannien valloituksen jälkeen, museona vuodesta 1935 ja jälleen moskeijana vuodesta 2020 alkaen. "Salomo, minä olen voittanut sinut!…
+AIEMPI KYSYMYS: Mikä oli Nika-kapina?
+AIEMPI VASTAUS (Livia):
+No niin. Tuo on raskaampi juttu. Nika-kapina oli [[Konstantinopolissa]] tammikuussa 532 puhjennut kansannousu keisari [[Justinianusta]] vastaan. Sinisten ja vihreiden ryhmittymät, jotka muuten kilpailivat keskenään, yhdistyivät keisaria vastaan, ja kaupungissa syttyi tulipaloja. Kapina tukahdutettiin hippodromilla, ja siinä kuoli suuri määrä ihmisiä. Tapahtumasta on yli tuhat vuotta, ja kaupunki oli tuolloin keisarin hallitsema suurvalta, jossa vallan ja kansan välit ratkesivat usein juuri radan katsomossa. Kaupungin kirkko tuhoutui kapinassa, ja nykyisen [[Hagia Sofian]] Justinianus rakennutti sen jälkeen. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Hagia Sofian
+
+### 335
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Istanbul
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konstantinopolin hippodromi (urheilu)
+Tietoruudun teksti: Hippodromi oli Konstantinopolin urheilun ja seuraelämän keskus. Ensimmäisen radan rakennutti keisari Septimius Severus vuonna 203, kun kaupunki oli vielä Byzantion; Konstantinus Suuri laajensi sen 320-luvulla noin 450 metriä pitkäksi ja 130 metriä leveäksi. Katsomoihin mahtui arviolta satatuhatta ihmistä, ja keisarilla oli oma aitionsa, johon pääsi käytävää pitkin suoraan palatsista. Radan keskiselänteelle koottiin patsaita ja monumentteja kaikkialta valtakunnasta, ja lähtöporttien päällä seisoi neljä kullattua pronssihevosta. Neljännen ristiretken sotilaat veivät hevoset vuonna 1204 Venetsiaan, ja vaunukilpailujen loputtua rakennusta käytettiin kivilouhoksena.
+Isoisän matkakirjamerkintä: Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venetsia — kohdekartta / Kohdekartta: Pyhän Markuksen tori] 1902 Pyhän Markuksen tori on Venetsian sydän, jota Napoleonin kerrotaan kutsuneen "Euroopan olohuoneeksi". Torin laidalla kohoaa Pyhän Markuksen basilika: pyhän Markuksen jäännökset tuotiin sinne salaa Alexandriasta, ja ensimmäinen kirkko niille valmistui jo vuonna 836. 14. heinäkuuta 1902 kello 9.53 vieressä kohoava 98,6 metriä korkea kellotorni, campanile, romahti täysin muutamassa sekunnissa. Ihmeen kaupalla kukaan ei loukkaantunut — ainoa uhri oli vahtimestarin kissa. Torni rakennettiin uudelleen tismalleen samanlaisena ja avattiin taas vuonna 1912. Torilla asuu myös kymmeniä pulukatraita. Matalan sijaintinsa vuoksi tori tulvii yhä usein: vuonna 1966 vesi nousi peräti 194 senttiä.
+AIEMPI KYSYMYS: Missä Konstantinopolin pronssihevoset nykyään ovat?
+AIEMPI VASTAUS (Livia):
+Ai se. Tuon minä osaan vastata. Neljä kullattua pronssihevosta veivät neljännen ristiretken sotilaat vuonna 1204 [[Venetsiaan]], jossa ne sijoitettiin [[Pyhän Markuksen basilikan]] yhteyteen. Näin ainakin kerrotaan, että alkuperäiset hevoset on nykyään suojattu basilikan sisällä ja ulkona on jäljennökset, mutta tästä en ole täysin varma. Hevoset seisoivat alun perin hippodromin lähtöporttien päällä. Retki Venetsiaan kesti niiltä varmasti kauemmin kuin minulta. Kaukaa reissattu, kuten minäkin.
+KYSYMYS: Kerro lisää: Pyhän Markuksen basilikan

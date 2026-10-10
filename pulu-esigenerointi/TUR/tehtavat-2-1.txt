@@ -1,0 +1,1138 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Troija (historia)
+Tietoruudun teksti: Kaupungin sijainti oli kadonnut vuosisadoiksi, kunnes englantilaissyntyinen Frank Calvert kaivoi Hisarlıkin kummulla vuodesta 1865 ja tunnisti paikan oikein. Heinrich Schliemann jatkoi siitä: kaivauskaudet 1871–1873 paljastivat yhdeksän päällekkäistä kaupunkia, ja viimeisenä kaivauspäivänä kesäkuussa 1873 hän löysi kullan, jota kutsui Priamoksen aarteeksi. Isoisän matkan aikana Troija oli maailman kuumin kaivaus.
+AIEMPI KYSYMYS: Kuinka pitkälle kaivaukset ovat ehtineet nykyään?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Troijan kaivaukset ovat kestäneet jo yli puolitoista vuosisataa, eikä työ ole vieläkään valmis. Schliemannin jälkeen kumpua kaivoi [[Wilhelm Dörpfeld]], ja 1930-luvulla työtä jatkoi yhdysvaltalainen ryhmä [[Carl Blegenin]] johdolla. Uudempi suurkaivaus alkoi vuonna 1988 [[Manfred Korfmannin]] johdolla, ja tutkimus Hisarlıkin kummulla jatkuu yhä. Paikalta on erotettu yhdeksän päävaihetta, jotka jakautuvat lukuisiin alavaiheisiin, ja alue on Unescon maailmanperintökohde. Ja minä kun luulin, että yksi kaivauskesä riittäisi.
+KYSYMYS: Kerro lisää: Wilhelm Dörpfeld
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Troija (historia)
+Tietoruudun teksti: Kaupungin sijainti oli kadonnut vuosisadoiksi, kunnes englantilaissyntyinen Frank Calvert kaivoi Hisarlıkin kummulla vuodesta 1865 ja tunnisti paikan oikein. Heinrich Schliemann jatkoi siitä: kaivauskaudet 1871–1873 paljastivat yhdeksän päällekkäistä kaupunkia, ja viimeisenä kaivauspäivänä kesäkuussa 1873 hän löysi kullan, jota kutsui Priamoksen aarteeksi. Isoisän matkan aikana Troija oli maailman kuumin kaivaus.
+AIEMPI KYSYMYS: Kuinka pitkälle kaivaukset ovat ehtineet nykyään?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Troijan kaivaukset ovat kestäneet jo yli puolitoista vuosisataa, eikä työ ole vieläkään valmis. Schliemannin jälkeen kumpua kaivoi [[Wilhelm Dörpfeld]], ja 1930-luvulla työtä jatkoi yhdysvaltalainen ryhmä [[Carl Blegenin]] johdolla. Uudempi suurkaivaus alkoi vuonna 1988 [[Manfred Korfmannin]] johdolla, ja tutkimus Hisarlıkin kummulla jatkuu yhä. Paikalta on erotettu yhdeksän päävaihetta, jotka jakautuvat lukuisiin alavaiheisiin, ja alue on Unescon maailmanperintökohde. Ja minä kun luulin, että yksi kaivauskesä riittäisi.
+KYSYMYS: Kerro lisää: Carl Blegenin
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Troija (historia)
+Tietoruudun teksti: Kaupungin sijainti oli kadonnut vuosisadoiksi, kunnes englantilaissyntyinen Frank Calvert kaivoi Hisarlıkin kummulla vuodesta 1865 ja tunnisti paikan oikein. Heinrich Schliemann jatkoi siitä: kaivauskaudet 1871–1873 paljastivat yhdeksän päällekkäistä kaupunkia, ja viimeisenä kaivauspäivänä kesäkuussa 1873 hän löysi kullan, jota kutsui Priamoksen aarteeksi. Isoisän matkan aikana Troija oli maailman kuumin kaivaus.
+AIEMPI KYSYMYS: Kuinka pitkälle kaivaukset ovat ehtineet nykyään?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Troijan kaivaukset ovat kestäneet jo yli puolitoista vuosisataa, eikä työ ole vieläkään valmis. Schliemannin jälkeen kumpua kaivoi [[Wilhelm Dörpfeld]], ja 1930-luvulla työtä jatkoi yhdysvaltalainen ryhmä [[Carl Blegenin]] johdolla. Uudempi suurkaivaus alkoi vuonna 1988 [[Manfred Korfmannin]] johdolla, ja tutkimus Hisarlıkin kummulla jatkuu yhä. Paikalta on erotettu yhdeksän päävaihetta, jotka jakautuvat lukuisiin alavaiheisiin, ja alue on Unescon maailmanperintökohde. Ja minä kun luulin, että yksi kaivauskesä riittäisi.
+KYSYMYS: Kerro lisää: Manfred Korfmannin
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Troija (historia)
+Tietoruudun teksti: Kaupungin sijainti oli kadonnut vuosisadoiksi, kunnes englantilaissyntyinen Frank Calvert kaivoi Hisarlıkin kummulla vuodesta 1865 ja tunnisti paikan oikein. Heinrich Schliemann jatkoi siitä: kaivauskaudet 1871–1873 paljastivat yhdeksän päällekkäistä kaupunkia, ja viimeisenä kaivauspäivänä kesäkuussa 1873 hän löysi kullan, jota kutsui Priamoksen aarteeksi. Isoisän matkan aikana Troija oli maailman kuumin kaivaus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Berliinin karhu] Berliinin sinetissä on ollut karhu yhtäjaksoisesti 22. maaliskuuta 1280 lähtien: ensimmäinen todistettu sinetti on turkkurien kiltakirjeessä, ja siinä lukee "olen Berliinin porvarien sinetti". Vitsi on siinä, ettei karhulla todennäköisesti ole kaupungin nimen kanssa mitään tekemistä: tutkijoiden pääsääntöisen käsityksen mukaan paikannimi on slaavilaista perua sanasta berl, suo, ja karhu on kansanetymologiaa — puhuva vaakuna. Kaupunki otti asian silti kirjaimellisesti. 17. elokuuta 1939 se sai neljä elävää karhua, jotka asetettiin Köllnischer Parkiin lämmitettävään tiiliseen tarhaan vallihautoineen. Sinne muutti karhusukupolvi toisensa jälkeen: Nante ja Jette, joka synnytti 33 pentua ja jonk…
+AIEMPI KYSYMYS: Mitä Priamoksen aarteelle tapahtui löydön jälkeen?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Schliemann vei löytämänsä kullan salaa pois Osmanien valtakunnasta, ja kokoelma päätyi lopulta [[Berliinin]] museoihin. Toisen maailmansodan lopulla, vuonna 1945, esineet kuljetettiin pois Berliinistä, ja niiden kohtalo pysyi vuosikymmeniä hämärän peitossa. Vasta 1990-luvulla Venäjä myönsi, että kulta oli Moskovassa, ja pääosa siitä on esillä [[Pushkin-museossa]]. Turkki, Saksa ja Venäjä ovat kiistelleet kullan omistuksesta. Tutkijoiden mukaan aarre on lisäksi yli tuhat vuotta vanhempaa kuin Homeroksen kuvaama Troijan sota, joten kuningas Priamoksen nimi on aarteelle myöhemmin annettu.
+
+Kyllä minä tiedän, miltä tuntuu kuljettaa jotain arvokasta väärään osoitteeseen. Minä sentään löydän aina perille.
+KYSYMYS: Kerro lisää: Berliinin
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Troija (historia)
+Tietoruudun teksti: Kaupungin sijainti oli kadonnut vuosisadoiksi, kunnes englantilaissyntyinen Frank Calvert kaivoi Hisarlıkin kummulla vuodesta 1865 ja tunnisti paikan oikein. Heinrich Schliemann jatkoi siitä: kaivauskaudet 1871–1873 paljastivat yhdeksän päällekkäistä kaupunkia, ja viimeisenä kaivauspäivänä kesäkuussa 1873 hän löysi kullan, jota kutsui Priamoksen aarteeksi. Isoisän matkan aikana Troija oli maailman kuumin kaivaus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Magadan — kohdekartta / Kohdekartta: Pushkinin kirjasto] alueen tieteellinen kirjasto Magadanin alueen yleinen tieteellinen kirjasto on nimetty Aleksandr Pushkinin mukaan, ja se on kartan eteläisin kohde. Rakennus on toista maailmansotaa myöhempää aikaa: keltatiilinen, kolmikerroksinen ja kaartuva, ja sen matalampaan siipeen on kiinnitetty suurin kirjaimin kirjaston nimi. Sisäänkäynnin yläpuolella on musta metalliin leikattu Pushkinin sivuprofiili. Kirjasto on osa kaupungin laitosten rypästä. Sen naapurissa, alle sadan metrin päässä, on Magadanin alueen kotiseutumuseo Karl Marxin valtakadulla, ja kaupungissa on lisäksi geologinen museo ja yliopisto. Museon kokoelmiin kuuluu luonnonhistoriallista aineistoa, muun muassa mammutinjäänteitä — Kolyman …
+- [Jakutsk — kohdekartta / Kohdekartta: Pushkinin draamateatteri] kaupungin teatterikortteli Valtiollinen akateeminen venäläinen draamateatteri on nimetty Aleksandr Pushkinin mukaan, ja se on Jakutskin neljästä teatterista se, joka näyttelee venäjäksi. Muut kolme ovat Ojunskin Saha-teatteri, Suorun Omolloonin nuorisoteatteri ja Sivtsevin ooppera- ja balettiteatteri. Talo on klassisistinen: hiekankeltainen julkisivu, valkoiset korinttilaispylväät ja päätykolmio, jonka alla lukee teatterin koko nimi kahdella rivillä. Neljä teatteria on paljon 355 000 asukkaan kaupungille, ja niiden lisäksi on vielä sirkus ja museot: Sahan kansallinen taidemuseo, Jaroslavskin historia- ja kulttuurimuseo sekä maailman ainoat khomukselle ja ikiroudalle omistetut museot. Vuonna…
+AIEMPI KYSYMYS: Mitä Priamoksen aarteelle tapahtui löydön jälkeen?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Schliemann vei löytämänsä kullan salaa pois Osmanien valtakunnasta, ja kokoelma päätyi lopulta [[Berliinin]] museoihin. Toisen maailmansodan lopulla, vuonna 1945, esineet kuljetettiin pois Berliinistä, ja niiden kohtalo pysyi vuosikymmeniä hämärän peitossa. Vasta 1990-luvulla Venäjä myönsi, että kulta oli Moskovassa, ja pääosa siitä on esillä [[Pushkin-museossa]]. Turkki, Saksa ja Venäjä ovat kiistelleet kullan omistuksesta. Tutkijoiden mukaan aarre on lisäksi yli tuhat vuotta vanhempaa kuin Homeroksen kuvaama Troijan sota, joten kuningas Priamoksen nimi on aarteelle myöhemmin annettu.
+
+Kyllä minä tiedän, miltä tuntuu kuljettaa jotain arvokasta väärään osoitteeseen. Minä sentään löydän aina perille.
+KYSYMYS: Kerro lisää: Pushkin-museossa
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Troija (historia)
+Tietoruudun teksti: Kaupungin sijainti oli kadonnut vuosisadoiksi, kunnes englantilaissyntyinen Frank Calvert kaivoi Hisarlıkin kummulla vuodesta 1865 ja tunnisti paikan oikein. Heinrich Schliemann jatkoi siitä: kaivauskaudet 1871–1873 paljastivat yhdeksän päällekkäistä kaupunkia, ja viimeisenä kaivauspäivänä kesäkuussa 1873 hän löysi kullan, jota kutsui Priamoksen aarteeksi. Isoisän matkan aikana Troija oli maailman kuumin kaivaus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Historian hetki: Hisarlık 1873 — kulta kaivannon seinämässä] toukokuu 1873 — Kaivannon seinämän juuresta, muurin alta, on tullut esiin kuparinen astia, ja sen sisältä alkaa nousta kultaa: diadeemeja, korvakoruja, nappeja, tuhansia pieniä kultaesineitä sekä hopeaa ja pronssia. Heinrich Schliemann on 51-vuotias, rikastunut kauppias, joka on tullut kummulle todistaakseen, että Homeroksen Troija oli totta, ja hän nimeää löydön saman tien Priamoksen aarteeksi. Oman kertomuksensa mukaan hän lähetti työmiehet tauolle ja kaivoi kullan esiin itse veitsellä, jottei kukaan näkisi; tutkijat ovat sittemmin epäilleet kertomusta, ja ne kaivajat, joiden käsien kautta löydöt kulkivat, jäivät hänen sankaritarinansa ulkopuolelle. Päiväkirjaan hän kirjoitti myös, että v…
+- [Turkki — maalehti / Historia: Yhdeksän kaupunkia päällekkäin] 1873 — Homeroksen Troijaa pidettiin pitkään pelkkänä taruna, kunnes Länsi-Turkin rannikolta kaivettiin esiin Hisarlıkin kumpu. Kummussa on yhdeksän kaupunkia päällekkäin: aina kun kaupunki tuhoutui, uusi rakennettiin raunioiden päälle, ja kumpu kasvoi kerros kerrokselta. Heinrich Schliemann aloitti kaivaukset 1870-luvulla ja kaivoi kummun läpi suuren kuilun. Vuonna 1873 hän löysi kultaesineitä, joita hän kutsui Priamoksen aarteeksi — mutta esineet olivat yli tuhat vuotta vanhempia kuin kerrottu sota. Kiireessä hän tuhosi juuri sen kerroksen, jota etsi.
+AIEMPI KYSYMYS: Mitä Homeroksen Iliaassa kerrotaan Troijan sodasta?
+AIEMPI VASTAUS (Livia):
+No niin, Homerosta kysytään. [[Homeroksen]] Iliaassa ei kerrota koko Troijan sotaa vaan muutaman viikon jakso sodan kymmenentenä vuonna. Aiheena on [[Akhilleuksen]] viha, kun Agamemnon ottaa häneltä sotapalkinnoksi saadun naisen ja Akhilleus vetäytyy taistelusta. Teos päättyy Hektorin hautajaisiin. Troijan hevonen ei kuulu Iliaaseen vaan se tunnetaan myöhemmistä kertomuksista, ja siihen viitataan [[Odysseiassa]] sekä [[Vergiliuksen]] runoelmassa. Itse tykkään kyl lyhyemmistä kirjeistä.
+KYSYMYS: Kerro lisää: Homeroksen
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Troija (historia)
+Tietoruudun teksti: Kaupungin sijainti oli kadonnut vuosisadoiksi, kunnes englantilaissyntyinen Frank Calvert kaivoi Hisarlıkin kummulla vuodesta 1865 ja tunnisti paikan oikein. Heinrich Schliemann jatkoi siitä: kaivauskaudet 1871–1873 paljastivat yhdeksän päällekkäistä kaupunkia, ja viimeisenä kaivauspäivänä kesäkuussa 1873 hän löysi kullan, jota kutsui Priamoksen aarteeksi. Isoisän matkan aikana Troija oli maailman kuumin kaivaus.
+AIEMPI KYSYMYS: Mitä Homeroksen Iliaassa kerrotaan Troijan sodasta?
+AIEMPI VASTAUS (Livia):
+No niin, Homerosta kysytään. [[Homeroksen]] Iliaassa ei kerrota koko Troijan sotaa vaan muutaman viikon jakso sodan kymmenentenä vuonna. Aiheena on [[Akhilleuksen]] viha, kun Agamemnon ottaa häneltä sotapalkinnoksi saadun naisen ja Akhilleus vetäytyy taistelusta. Teos päättyy Hektorin hautajaisiin. Troijan hevonen ei kuulu Iliaaseen vaan se tunnetaan myöhemmistä kertomuksista, ja siihen viitataan [[Odysseiassa]] sekä [[Vergiliuksen]] runoelmassa. Itse tykkään kyl lyhyemmistä kirjeistä.
+KYSYMYS: Kerro lisää: Akhilleuksen
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Troija (historia)
+Tietoruudun teksti: Kaupungin sijainti oli kadonnut vuosisadoiksi, kunnes englantilaissyntyinen Frank Calvert kaivoi Hisarlıkin kummulla vuodesta 1865 ja tunnisti paikan oikein. Heinrich Schliemann jatkoi siitä: kaivauskaudet 1871–1873 paljastivat yhdeksän päällekkäistä kaupunkia, ja viimeisenä kaivauspäivänä kesäkuussa 1873 hän löysi kullan, jota kutsui Priamoksen aarteeksi. Isoisän matkan aikana Troija oli maailman kuumin kaivaus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Tarut ja sadut: Seireenit olivat lintuja, eivät merenneitoja] n. 480 eaa. — Odysseiassa noita Kirke varoittaa Odysseusta: seireenien laulua ei voi kuunnella ja jäädä henkiin. Miehistö tukkii korvansa mehiläisvahalla, ja Odysseus sidotaan mastoon, jotta hän kuulisi laulun mutta ei pääsisi hyppäämään mereen. Vanhimmissa kuvissa seireeni ei ole merenneito vaan lintu, jolla on naisen pää — sellaisia ne olivat kreikkalaisessa taiteessa jo 600-luvulla eaa. Merenneidon hahmon ne saivat vasta keskiajalla. Erään myöhemmän tarinan mukaan seireenit heittäytyivät mereen, kun laiva pääsi ohi.
+AIEMPI KYSYMYS: Mitä Homeroksen Iliaassa kerrotaan Troijan sodasta?
+AIEMPI VASTAUS (Livia):
+No niin, Homerosta kysytään. [[Homeroksen]] Iliaassa ei kerrota koko Troijan sotaa vaan muutaman viikon jakso sodan kymmenentenä vuonna. Aiheena on [[Akhilleuksen]] viha, kun Agamemnon ottaa häneltä sotapalkinnoksi saadun naisen ja Akhilleus vetäytyy taistelusta. Teos päättyy Hektorin hautajaisiin. Troijan hevonen ei kuulu Iliaaseen vaan se tunnetaan myöhemmistä kertomuksista, ja siihen viitataan [[Odysseiassa]] sekä [[Vergiliuksen]] runoelmassa. Itse tykkään kyl lyhyemmistä kirjeistä.
+KYSYMYS: Kerro lisää: Odysseiassa
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Troija (historia)
+Tietoruudun teksti: Kaupungin sijainti oli kadonnut vuosisadoiksi, kunnes englantilaissyntyinen Frank Calvert kaivoi Hisarlıkin kummulla vuodesta 1865 ja tunnisti paikan oikein. Heinrich Schliemann jatkoi siitä: kaivauskaudet 1871–1873 paljastivat yhdeksän päällekkäistä kaupunkia, ja viimeisenä kaivauspäivänä kesäkuussa 1873 hän löysi kullan, jota kutsui Priamoksen aarteeksi. Isoisän matkan aikana Troija oli maailman kuumin kaivaus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venetsia — kohdekartta / Kohdekartta: Aldon paino] Tässä kaupungissa keksittiin se, mitä isoisäsi kantoi takintaskussaan. Aldo Manuzio muutti Venetsiaan 1490 ja perusti painonsa 1494; ensimmäinen kirja ilmestyi seuraavana keväänä. Siihen aikaan kirja oli huonekalu. Klassikoihin painettiin selitykset tekstin ympärille, niteestä tuli painava, ja kirjastoissa kirjat oli usein ketjutettu pulpettiin kiinni — lukija ei liikkunut, kirja liikkui vielä vähemmän. Manuzio käänsi asetelman ympäri. Hän jätti selitykset pois, pienensi sivun noin postikortin kokoiseksi ja kutsui tulosta latinaksi kannettaviksi pikkukirjoiksi. Vuonna 1501 hän painoi tässä koossa Vergiliuksen. Sitä varten hän tilasi bolognalaiselta Francesco Griffolta kirjasimen, joka jälji…
+AIEMPI KYSYMYS: Mitä Homeroksen Iliaassa kerrotaan Troijan sodasta?
+AIEMPI VASTAUS (Livia):
+No niin, Homerosta kysytään. [[Homeroksen]] Iliaassa ei kerrota koko Troijan sotaa vaan muutaman viikon jakso sodan kymmenentenä vuonna. Aiheena on [[Akhilleuksen]] viha, kun Agamemnon ottaa häneltä sotapalkinnoksi saadun naisen ja Akhilleus vetäytyy taistelusta. Teos päättyy Hektorin hautajaisiin. Troijan hevonen ei kuulu Iliaaseen vaan se tunnetaan myöhemmistä kertomuksista, ja siihen viitataan [[Odysseiassa]] sekä [[Vergiliuksen]] runoelmassa. Itse tykkään kyl lyhyemmistä kirjeistä.
+KYSYMYS: Kerro lisää: Vergiliuksen
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Troija (historia)
+Tietoruudun teksti: Kaupungin sijainti oli kadonnut vuosisadoiksi, kunnes englantilaissyntyinen Frank Calvert kaivoi Hisarlıkin kummulla vuodesta 1865 ja tunnisti paikan oikein. Heinrich Schliemann jatkoi siitä: kaivauskaudet 1871–1873 paljastivat yhdeksän päällekkäistä kaupunkia, ja viimeisenä kaivauspäivänä kesäkuussa 1873 hän löysi kullan, jota kutsui Priamoksen aarteeksi. Isoisän matkan aikana Troija oli maailman kuumin kaivaus.
+AIEMPI KYSYMYS: Miksi Troijan sijainti oli tärkeä kaupankäynnille?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo, ylhäältä sen näkee heti. Troija sijaitsi Anatolian luoteiskulmassa lähellä [[Dardanellien]] suuta, jonka kautta kulkee reitti Egeanmereltä [[Marmaranmerelle]] ja edelleen [[Mustallemerelle]]. Salmi ja sen rannoilla kulkenut maareitti Euroopan ja Aasian välillä tekivät seudusta kauppapaikan. Tutkijoiden mukaan salmen virtaukset ja vallitsevat tuulet pysäyttivät usein purjealuksia, jolloin satamia ja tarvikkeita tarvittiin. Hisarlık oli aikoinaan lähempänä merta kuin nyt, sillä jokien tuoma maa-aines on siirtänyt rantaviivaa. Kyyhky tosin lentää yli eikä tarvitse satamaa.
+KYSYMYS: Kerro lisää: Dardanellien
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Troija (historia)
+Tietoruudun teksti: Kaupungin sijainti oli kadonnut vuosisadoiksi, kunnes englantilaissyntyinen Frank Calvert kaivoi Hisarlıkin kummulla vuodesta 1865 ja tunnisti paikan oikein. Heinrich Schliemann jatkoi siitä: kaivauskaudet 1871–1873 paljastivat yhdeksän päällekkäistä kaupunkia, ja viimeisenä kaivauspäivänä kesäkuussa 1873 hän löysi kullan, jota kutsui Priamoksen aarteeksi. Isoisän matkan aikana Troija oli maailman kuumin kaivaus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Tiede ja keksinnöt: Plataani, jonka oksat lepäävät tolppien päällä] n. 460 eaa. — Hippokrates syntyi Kosin saarella noin vuonna 460 eaa. Hänen mukaansa on nimetty lääkärinvala, vaikka teksti kirjoitettiin todennäköisesti vasta hänen kuolemansa jälkeen. Kosin kaupungin keskellä kasvaa plataani, jonka juurella hänen kerrotaan opettaneen oppilaitaan. Puun oksat ovat käyneet niin painaviksi, että ne on jouduttu tukemaan metallitolpilla. Hippokrates matkusti potilaiden luo ainakin Thessaliaan, Traakiaan ja Marmaranmerelle asti. Hän on myös ensimmäinen, joka mainitsee kirjoituksissaan Khioksen mastiksin kyyneleet.
+AIEMPI KYSYMYS: Miksi Troijan sijainti oli tärkeä kaupankäynnille?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo, ylhäältä sen näkee heti. Troija sijaitsi Anatolian luoteiskulmassa lähellä [[Dardanellien]] suuta, jonka kautta kulkee reitti Egeanmereltä [[Marmaranmerelle]] ja edelleen [[Mustallemerelle]]. Salmi ja sen rannoilla kulkenut maareitti Euroopan ja Aasian välillä tekivät seudusta kauppapaikan. Tutkijoiden mukaan salmen virtaukset ja vallitsevat tuulet pysäyttivät usein purjealuksia, jolloin satamia ja tarvikkeita tarvittiin. Hisarlık oli aikoinaan lähempänä merta kuin nyt, sillä jokien tuoma maa-aines on siirtänyt rantaviivaa. Kyyhky tosin lentää yli eikä tarvitse satamaa.
+KYSYMYS: Kerro lisää: Marmaranmerelle
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Troija (historia)
+Tietoruudun teksti: Kaupungin sijainti oli kadonnut vuosisadoiksi, kunnes englantilaissyntyinen Frank Calvert kaivoi Hisarlıkin kummulla vuodesta 1865 ja tunnisti paikan oikein. Heinrich Schliemann jatkoi siitä: kaivauskaudet 1871–1873 paljastivat yhdeksän päällekkäistä kaupunkia, ja viimeisenä kaivauspäivänä kesäkuussa 1873 hän löysi kullan, jota kutsui Priamoksen aarteeksi. Isoisän matkan aikana Troija oli maailman kuumin kaivaus.
+AIEMPI KYSYMYS: Miksi Troijan sijainti oli tärkeä kaupankäynnille?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo, ylhäältä sen näkee heti. Troija sijaitsi Anatolian luoteiskulmassa lähellä [[Dardanellien]] suuta, jonka kautta kulkee reitti Egeanmereltä [[Marmaranmerelle]] ja edelleen [[Mustallemerelle]]. Salmi ja sen rannoilla kulkenut maareitti Euroopan ja Aasian välillä tekivät seudusta kauppapaikan. Tutkijoiden mukaan salmen virtaukset ja vallitsevat tuulet pysäyttivät usein purjealuksia, jolloin satamia ja tarvikkeita tarvittiin. Hisarlık oli aikoinaan lähempänä merta kuin nyt, sillä jokien tuoma maa-aines on siirtänyt rantaviivaa. Kyyhky tosin lentää yli eikä tarvitse satamaa.
+KYSYMYS: Kerro lisää: Mustallemerelle
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Troija (historia)
+Tietoruudun teksti: Kaupungin sijainti oli kadonnut vuosisadoiksi, kunnes englantilaissyntyinen Frank Calvert kaivoi Hisarlıkin kummulla vuodesta 1865 ja tunnisti paikan oikein. Heinrich Schliemann jatkoi siitä: kaivauskaudet 1871–1873 paljastivat yhdeksän päällekkäistä kaupunkia, ja viimeisenä kaivauspäivänä kesäkuussa 1873 hän löysi kullan, jota kutsui Priamoksen aarteeksi. Isoisän matkan aikana Troija oli maailman kuumin kaivaus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Historian hetki: Hisarlık 1873 — kulta kaivannon seinämässä] toukokuu 1873 — Kaivannon seinämän juuresta, muurin alta, on tullut esiin kuparinen astia, ja sen sisältä alkaa nousta kultaa: diadeemeja, korvakoruja, nappeja, tuhansia pieniä kultaesineitä sekä hopeaa ja pronssia. Heinrich Schliemann on 51-vuotias, rikastunut kauppias, joka on tullut kummulle todistaakseen, että Homeroksen Troija oli totta, ja hän nimeää löydön saman tien Priamoksen aarteeksi. Oman kertomuksensa mukaan hän lähetti työmiehet tauolle ja kaivoi kullan esiin itse veitsellä, jottei kukaan näkisi; tutkijat ovat sittemmin epäilleet kertomusta, ja ne kaivajat, joiden käsien kautta löydöt kulkivat, jäivät hänen sankaritarinansa ulkopuolelle. Päiväkirjaan hän kirjoitti myös, että v…
+- [Turkki — maalehti / Historia: Yhdeksän kaupunkia päällekkäin] 1873 — Homeroksen Troijaa pidettiin pitkään pelkkänä taruna, kunnes Länsi-Turkin rannikolta kaivettiin esiin Hisarlıkin kumpu. Kummussa on yhdeksän kaupunkia päällekkäin: aina kun kaupunki tuhoutui, uusi rakennettiin raunioiden päälle, ja kumpu kasvoi kerros kerrokselta. Heinrich Schliemann aloitti kaivaukset 1870-luvulla ja kaivoi kummun läpi suuren kuilun. Vuonna 1873 hän löysi kultaesineitä, joita hän kutsui Priamoksen aarteeksi — mutta esineet olivat yli tuhat vuotta vanhempia kuin kerrottu sota. Kiireessä hän tuhosi juuri sen kerroksen, jota etsi.
+- [Turkki — maalehti / Historian hetki] Toukokuun lopulla 1873 Hisarlıkin kaivannon seinämästä nousi kuparinen astia täynnä kultaa, ja Heinrich Schliemann nimesi sen Priamoksen aarteeksi — väärästä kerroksesta.
+AIEMPI KYSYMYS: Kuka oli Frank Calvert ja miksi hänet unohdettiin?
+AIEMPI VASTAUS (Livia):
+Ai se. Frank Calvert oli englantilaissyntyinen, [[Dardanellien]] seudulla elänyt harrastajaarkeologi, joka omisti osan [[Hisarlıkin]] kummusta. Hän kaivoi siellä jo 1860-luvulla ja päätteli, että kumpu kätkee Homeroksen Troijan. Hän kertoi ajatuksensa [[Heinrich Schliemannille]], ja yhteistyö alkoi. Schliemann sai kaivauksista kuitenkin suurimman julkisuuden ja kunnian, ja Calvertin osuus jäi pitkään varjoon. Vasta myöhemmin tutkijat ovat nostaneet hänen työnsä uudelleen esiin. Kyl kyyhky tietää, miltä tuntuu jäädä kuoren ulkopuolelle.
+KYSYMYS: Kerro lisää: Hisarlıkin
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Troija (historia)
+Tietoruudun teksti: Kaupungin sijainti oli kadonnut vuosisadoiksi, kunnes englantilaissyntyinen Frank Calvert kaivoi Hisarlıkin kummulla vuodesta 1865 ja tunnisti paikan oikein. Heinrich Schliemann jatkoi siitä: kaivauskaudet 1871–1873 paljastivat yhdeksän päällekkäistä kaupunkia, ja viimeisenä kaivauspäivänä kesäkuussa 1873 hän löysi kullan, jota kutsui Priamoksen aarteeksi. Isoisän matkan aikana Troija oli maailman kuumin kaivaus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Historian hetki: Hisarlık 1873 — kulta kaivannon seinämässä] toukokuu 1873 — Kaivannon seinämän juuresta, muurin alta, on tullut esiin kuparinen astia, ja sen sisältä alkaa nousta kultaa: diadeemeja, korvakoruja, nappeja, tuhansia pieniä kultaesineitä sekä hopeaa ja pronssia. Heinrich Schliemann on 51-vuotias, rikastunut kauppias, joka on tullut kummulle todistaakseen, että Homeroksen Troija oli totta, ja hän nimeää löydön saman tien Priamoksen aarteeksi. Oman kertomuksensa mukaan hän lähetti työmiehet tauolle ja kaivoi kullan esiin itse veitsellä, jottei kukaan näkisi; tutkijat ovat sittemmin epäilleet kertomusta, ja ne kaivajat, joiden käsien kautta löydöt kulkivat, jäivät hänen sankaritarinansa ulkopuolelle. Päiväkirjaan hän kirjoitti myös, että v…
+- [Turkki — maalehti / Historia: Yhdeksän kaupunkia päällekkäin] 1873 — Homeroksen Troijaa pidettiin pitkään pelkkänä taruna, kunnes Länsi-Turkin rannikolta kaivettiin esiin Hisarlıkin kumpu. Kummussa on yhdeksän kaupunkia päällekkäin: aina kun kaupunki tuhoutui, uusi rakennettiin raunioiden päälle, ja kumpu kasvoi kerros kerrokselta. Heinrich Schliemann aloitti kaivaukset 1870-luvulla ja kaivoi kummun läpi suuren kuilun. Vuonna 1873 hän löysi kultaesineitä, joita hän kutsui Priamoksen aarteeksi — mutta esineet olivat yli tuhat vuotta vanhempia kuin kerrottu sota. Kiireessä hän tuhosi juuri sen kerroksen, jota etsi.
+- [Turkki — maalehti / Historian hetki] Toukokuun lopulla 1873 Hisarlıkin kaivannon seinämästä nousi kuparinen astia täynnä kultaa, ja Heinrich Schliemann nimesi sen Priamoksen aarteeksi — väärästä kerroksesta.
+AIEMPI KYSYMYS: Kuka oli Frank Calvert ja miksi hänet unohdettiin?
+AIEMPI VASTAUS (Livia):
+Ai se. Frank Calvert oli englantilaissyntyinen, [[Dardanellien]] seudulla elänyt harrastajaarkeologi, joka omisti osan [[Hisarlıkin]] kummusta. Hän kaivoi siellä jo 1860-luvulla ja päätteli, että kumpu kätkee Homeroksen Troijan. Hän kertoi ajatuksensa [[Heinrich Schliemannille]], ja yhteistyö alkoi. Schliemann sai kaivauksista kuitenkin suurimman julkisuuden ja kunnian, ja Calvertin osuus jäi pitkään varjoon. Vasta myöhemmin tutkijat ovat nostaneet hänen työnsä uudelleen esiin. Kyl kyyhky tietää, miltä tuntuu jäädä kuoren ulkopuolelle.
+KYSYMYS: Kerro lisää: Heinrich Schliemannille
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Efesos (historia)
+Tietoruudun teksti: Efesos oli antiikin maailman kuuluisin pyhiinvaelluskohde: Artemiin temppeli, yksi seitsemästä ihmeestä, valmistui täällä noin 550 eaa. ja siinä oli yli sata 17-metristä marmoripylvästä. Kaupungin teatteriin mahtui 24 000 katsojaa. Brittiläinen arkkitehti John Turtle Wood etsi kadonnutta temppeliä British Museumin rahoituksella vuodesta 1863 ja löysi sen kivijalan 1869 — kaivaukset olivat vielä käynnissä isoisän matkan aikaan.
+AIEMPI KYSYMYS: Miksi kaupunki lopulta hylättiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Efesoksen hylkääminen tapahtui hitaasti, ja siihen vaikutti useampi tekijä. Tärkein syy oli sataman liettyminen: [[Küçük Menderes]] -joen tuoma maa-aines täytti lahden, meri etääntyi kaupungista, ja kauppa ja laivaliikenne siirtyivät muualle. Lähteiden mukaan soistuminen lisäsi myös tauteja. [[Artemiin temppelin]] ympärille rakentunut palvonta heikkeni kristinuskon vahvistuessa, ja [[goottien]] hyökkäys 200-luvulla vahingoitti temppeliä. Asutus siirtyi vähitellen läheiselle [[Selçukin]] mäelle, ja muinainen kaupunki autioitui keskiajalla.
+
+Satama täyttyi mudasta, mikä on kyyhkyn silmin kaikkein hankalin tapa menettää kaupunki. Minä ainakin huomaan, jos laituri alkaa kuivua.
+KYSYMYS: Kerro lisää: Küçük Menderes
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Efesos (historia)
+Tietoruudun teksti: Efesos oli antiikin maailman kuuluisin pyhiinvaelluskohde: Artemiin temppeli, yksi seitsemästä ihmeestä, valmistui täällä noin 550 eaa. ja siinä oli yli sata 17-metristä marmoripylvästä. Kaupungin teatteriin mahtui 24 000 katsojaa. Brittiläinen arkkitehti John Turtle Wood etsi kadonnutta temppeliä British Museumin rahoituksella vuodesta 1863 ja löysi sen kivijalan 1869 — kaivaukset olivat vielä käynnissä isoisän matkan aikaan.
+AIEMPI KYSYMYS: Miksi kaupunki lopulta hylättiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Efesoksen hylkääminen tapahtui hitaasti, ja siihen vaikutti useampi tekijä. Tärkein syy oli sataman liettyminen: [[Küçük Menderes]] -joen tuoma maa-aines täytti lahden, meri etääntyi kaupungista, ja kauppa ja laivaliikenne siirtyivät muualle. Lähteiden mukaan soistuminen lisäsi myös tauteja. [[Artemiin temppelin]] ympärille rakentunut palvonta heikkeni kristinuskon vahvistuessa, ja [[goottien]] hyökkäys 200-luvulla vahingoitti temppeliä. Asutus siirtyi vähitellen läheiselle [[Selçukin]] mäelle, ja muinainen kaupunki autioitui keskiajalla.
+
+Satama täyttyi mudasta, mikä on kyyhkyn silmin kaikkein hankalin tapa menettää kaupunki. Minä ainakin huomaan, jos laituri alkaa kuivua.
+KYSYMYS: Kerro lisää: Artemiin temppelin
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Efesos (historia)
+Tietoruudun teksti: Efesos oli antiikin maailman kuuluisin pyhiinvaelluskohde: Artemiin temppeli, yksi seitsemästä ihmeestä, valmistui täällä noin 550 eaa. ja siinä oli yli sata 17-metristä marmoripylvästä. Kaupungin teatteriin mahtui 24 000 katsojaa. Brittiläinen arkkitehti John Turtle Wood etsi kadonnutta temppeliä British Museumin rahoituksella vuodesta 1863 ja löysi sen kivijalan 1869 — kaivaukset olivat vielä käynnissä isoisän matkan aikaan.
+AIEMPI KYSYMYS: Miksi kaupunki lopulta hylättiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Efesoksen hylkääminen tapahtui hitaasti, ja siihen vaikutti useampi tekijä. Tärkein syy oli sataman liettyminen: [[Küçük Menderes]] -joen tuoma maa-aines täytti lahden, meri etääntyi kaupungista, ja kauppa ja laivaliikenne siirtyivät muualle. Lähteiden mukaan soistuminen lisäsi myös tauteja. [[Artemiin temppelin]] ympärille rakentunut palvonta heikkeni kristinuskon vahvistuessa, ja [[goottien]] hyökkäys 200-luvulla vahingoitti temppeliä. Asutus siirtyi vähitellen läheiselle [[Selçukin]] mäelle, ja muinainen kaupunki autioitui keskiajalla.
+
+Satama täyttyi mudasta, mikä on kyyhkyn silmin kaikkein hankalin tapa menettää kaupunki. Minä ainakin huomaan, jos laituri alkaa kuivua.
+KYSYMYS: Kerro lisää: goottien
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Efesos (historia)
+Tietoruudun teksti: Efesos oli antiikin maailman kuuluisin pyhiinvaelluskohde: Artemiin temppeli, yksi seitsemästä ihmeestä, valmistui täällä noin 550 eaa. ja siinä oli yli sata 17-metristä marmoripylvästä. Kaupungin teatteriin mahtui 24 000 katsojaa. Brittiläinen arkkitehti John Turtle Wood etsi kadonnutta temppeliä British Museumin rahoituksella vuodesta 1863 ja löysi sen kivijalan 1869 — kaivaukset olivat vielä käynnissä isoisän matkan aikaan.
+AIEMPI KYSYMYS: Miksi kaupunki lopulta hylättiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Efesoksen hylkääminen tapahtui hitaasti, ja siihen vaikutti useampi tekijä. Tärkein syy oli sataman liettyminen: [[Küçük Menderes]] -joen tuoma maa-aines täytti lahden, meri etääntyi kaupungista, ja kauppa ja laivaliikenne siirtyivät muualle. Lähteiden mukaan soistuminen lisäsi myös tauteja. [[Artemiin temppelin]] ympärille rakentunut palvonta heikkeni kristinuskon vahvistuessa, ja [[goottien]] hyökkäys 200-luvulla vahingoitti temppeliä. Asutus siirtyi vähitellen läheiselle [[Selçukin]] mäelle, ja muinainen kaupunki autioitui keskiajalla.
+
+Satama täyttyi mudasta, mikä on kyyhkyn silmin kaikkein hankalin tapa menettää kaupunki. Minä ainakin huomaan, jos laituri alkaa kuivua.
+KYSYMYS: Kerro lisää: Selçukin
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Efesos (historia)
+Tietoruudun teksti: Efesos oli antiikin maailman kuuluisin pyhiinvaelluskohde: Artemiin temppeli, yksi seitsemästä ihmeestä, valmistui täällä noin 550 eaa. ja siinä oli yli sata 17-metristä marmoripylvästä. Kaupungin teatteriin mahtui 24 000 katsojaa. Brittiläinen arkkitehti John Turtle Wood etsi kadonnutta temppeliä British Museumin rahoituksella vuodesta 1863 ja löysi sen kivijalan 1869 — kaivaukset olivat vielä käynnissä isoisän matkan aikaan.
+AIEMPI KYSYMYS: Minne temppelin löydöt vietiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[John Turtle Woodin]] kaivamat Artemiin temppelin löydöt, muun muassa veistoksin koristeltu pylväänosa ja arkkitehtuuriosia, kuljetettiin 1800-luvulla Lontooseen [[British Museumiin]], jossa Efesoksen kokoelma on yhä. Itävaltalaiset arkeologit aloittivat omat kaivauksensa 1890-luvulla, ja heidän löytöjään on [[Wieniin]] sijoitetussa Efesos-museossa. Osa esineistöstä on nykyään esillä myös [[Selçukin]] museossa lähellä kaivauspaikkaa. Ihan ku posti olis menny kolmeen osoitteeseen.
+KYSYMYS: Kerro lisää: John Turtle Woodin
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Efesos (historia)
+Tietoruudun teksti: Efesos oli antiikin maailman kuuluisin pyhiinvaelluskohde: Artemiin temppeli, yksi seitsemästä ihmeestä, valmistui täällä noin 550 eaa. ja siinä oli yli sata 17-metristä marmoripylvästä. Kaupungin teatteriin mahtui 24 000 katsojaa. Brittiläinen arkkitehti John Turtle Wood etsi kadonnutta temppeliä British Museumin rahoituksella vuodesta 1863 ja löysi sen kivijalan 1869 — kaivaukset olivat vielä käynnissä isoisän matkan aikaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Punta Arenas — kaupunkilehti / Salmi ja Etelämanner: Beaglen jäljillä ja Darwinin pyynnöstä] Salmi kartoitettiin kunnolla vasta 1800-luvulla. Phillip Parker King mittasi rannat 1826–1830 HMS Adventurella yhdessä HMS Beaglen kanssa, ja työstä kerrottiin Lontoon maantieteellisen seuran kahdessa kokouksessa 1831. Richard Charles Mayne johti HMS Nassaun mittausretkeä 1866–1869; luonnontieteilijänä oli Robert Oliver Cunningham. Charles Darwin pyysi amiraliteettia käskemään Maynen keräämään venelastin verran sukupuuttoon kuolleiden nelijalkaisten fossiileja, ja löydöt vietiin British Museumiin. Amiraliteetti kokosi salmen purjehdusohjeet 1871, kaksi vuotta ennen isoisän matkaa. Vuoden 1881 rajasopimuksessa Argentiina tunnusti salmen Chilelle.
+- [Karthago — kaupunkilehti / Karthago: Englantilaisen kaivajan mosaiikit] Marraskuussa 1856 englantilainen matkakirjailija ja pastori Nathan Davis aloitti Britannian ulkoministeriön rahoittamat kaivaukset Karthagossa. Tammikuussa 1857 hän löysi ensimmäisen suuren löytönsä, kuukausia ja vuodenaikoja kuvaavan mosaiikkilattian, ja kehitti samalla menetelmän, jolla herkät mosaiikit voitiin irrottaa maasta rikkomatta niitä – tekniikka on käytössä yhä. Vuosina 1857–1860 Lontoon British Museumiin saapui Karthagosta kymmeniä laatikollisia löytöjä, ja isoisän matkavuoteen 1873 mennessä osa kaupungin kauneimmista roomalaisista lattiakuvioista oli jo asetettu näytteille Englannissa, kaukana omalta rannaltaan.
+AIEMPI KYSYMYS: Minne temppelin löydöt vietiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[John Turtle Woodin]] kaivamat Artemiin temppelin löydöt, muun muassa veistoksin koristeltu pylväänosa ja arkkitehtuuriosia, kuljetettiin 1800-luvulla Lontooseen [[British Museumiin]], jossa Efesoksen kokoelma on yhä. Itävaltalaiset arkeologit aloittivat omat kaivauksensa 1890-luvulla, ja heidän löytöjään on [[Wieniin]] sijoitetussa Efesos-museossa. Osa esineistöstä on nykyään esillä myös [[Selçukin]] museossa lähellä kaivauspaikkaa. Ihan ku posti olis menny kolmeen osoitteeseen.
+KYSYMYS: Kerro lisää: British Museumiin
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Efesos (historia)
+Tietoruudun teksti: Efesos oli antiikin maailman kuuluisin pyhiinvaelluskohde: Artemiin temppeli, yksi seitsemästä ihmeestä, valmistui täällä noin 550 eaa. ja siinä oli yli sata 17-metristä marmoripylvästä. Kaupungin teatteriin mahtui 24 000 katsojaa. Brittiläinen arkkitehti John Turtle Wood etsi kadonnutta temppeliä British Museumin rahoituksella vuodesta 1863 ja löysi sen kivijalan 1869 — kaivaukset olivat vielä käynnissä isoisän matkan aikaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Historian hetki: Sarajevo 1914 — auto pysähtyy väärään paikkaan] 28.6.1914 — Kuljettaja tajuaa virheen vasta, kun on jo kääntynyt väärään kujaan: reitti piti muuttaa sairaalavierailun vuoksi, mutta kukaan ei ehtinyt kertoa sitä hänelle. Se on sunnuntai 28. kesäkuuta 1914, ja arkkiherttua Franz Ferdinand istuu avoautossa vaimonsa Sophien vierellä Sarajevossa, missä joku on jo aiemmin samana aamuna heittänyt pommin heidän saattueensa kohti. Kuljettaja yrittää perua autoa takaisin Latin-sillan kupeessa, mutta moottori sammuu juuri siinä kohtaa, missä nuori Gavrilo Princip seisoo katukahvilan edessä — yksi kuudesta salamurhaajasta, joka oli jo luullut suunnitelman epäonnistuneen. Princip ampuu kahdesti muutaman metrin päästä. Hän yrittää vielä nielaista syan…
+- [Slovenia — maalehti / Ruoka: Mehiläisten opettaja maalasi pesät] 1770 — Anton Janša syntyi noin vuonna 1734 Breznican kylässä ja lähti lukutaidottomana opiskelemaan maalariksi Wieniin. Isän yli sadan pesän parissa kasvanut mies valitsi lopulta mehiläiset, ja vuonna 1770 hänestä tuli kaikkien Itävallan maiden ensimmäinen keisarillinen mehiläishoidon opettaja. Hän muotoili pesät niin, että ne voi pinota kuin palikat, koristi niiden etupuolet maalauksilla ja neuvoi viemään pesät kukkivien niittyjen luo. Seudun oma krainilainen mehiläinen on tunnettu rauhallisuudestaan ja hunajavarastoistaan. Maria Teresia määräsi hänen kuolemansa jälkeen kaikki opettajat käyttämään hänen kirjojaan.
+AIEMPI KYSYMYS: Minne temppelin löydöt vietiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[John Turtle Woodin]] kaivamat Artemiin temppelin löydöt, muun muassa veistoksin koristeltu pylväänosa ja arkkitehtuuriosia, kuljetettiin 1800-luvulla Lontooseen [[British Museumiin]], jossa Efesoksen kokoelma on yhä. Itävaltalaiset arkeologit aloittivat omat kaivauksensa 1890-luvulla, ja heidän löytöjään on [[Wieniin]] sijoitetussa Efesos-museossa. Osa esineistöstä on nykyään esillä myös [[Selçukin]] museossa lähellä kaivauspaikkaa. Ihan ku posti olis menny kolmeen osoitteeseen.
+KYSYMYS: Kerro lisää: Wieniin
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Efesos (historia)
+Tietoruudun teksti: Efesos oli antiikin maailman kuuluisin pyhiinvaelluskohde: Artemiin temppeli, yksi seitsemästä ihmeestä, valmistui täällä noin 550 eaa. ja siinä oli yli sata 17-metristä marmoripylvästä. Kaupungin teatteriin mahtui 24 000 katsojaa. Brittiläinen arkkitehti John Turtle Wood etsi kadonnutta temppeliä British Museumin rahoituksella vuodesta 1863 ja löysi sen kivijalan 1869 — kaivaukset olivat vielä käynnissä isoisän matkan aikaan.
+AIEMPI KYSYMYS: Kuka sytytti Artemiin temppelin tuleen?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Perimätiedon mukaan tulipalon sytytti [[Herostratos]]-niminen mies vuonna 356 eaa. Hänen kerrotaan halunneen tulla tunnetuksi vaikka kuuluisimmalla pahalla teolla, ja efesolaisten kerrotaan päättäneen rangaista häntä unohduksella, jolloin hänen nimeään ei saanut mainita. Nimi säilyi silti kirjoituksissa. Saman perimätiedon mukaan tuo yö oli myös [[Aleksanteri Suuren]] syntymäyö. Temppeli rakennettiin sittemmin uudelleen. Kyl se mies sai tahtonsa läpi, kun minäkin sen nimen muistan.
+KYSYMYS: Kerro lisää: Herostratos
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Efesos (historia)
+Tietoruudun teksti: Efesos oli antiikin maailman kuuluisin pyhiinvaelluskohde: Artemiin temppeli, yksi seitsemästä ihmeestä, valmistui täällä noin 550 eaa. ja siinä oli yli sata 17-metristä marmoripylvästä. Kaupungin teatteriin mahtui 24 000 katsojaa. Brittiläinen arkkitehti John Turtle Wood etsi kadonnutta temppeliä British Museumin rahoituksella vuodesta 1863 ja löysi sen kivijalan 1869 — kaivaukset olivat vielä käynnissä isoisän matkan aikaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Novosibirsk — kohdekartta / Kohdekartta: Aleksanteri Nevskin katedraali] 1896–1899 Katedraali on kaupungin ensimmäisiä kivirakennuksia. Se rakennettiin vuosina 1896–1899, siis samaan aikaan kuin rautatiesilta ja sen ympärille kasvava taajama, ja vihittiin käyttöön 29. joulukuuta 1899. Katedraalin aseman se sai vuonna 1915. Tyyli on uusbysanttilainen: massiivinen keskuskupoli, punatiiliset seinät ja kaari-ikkunoiden rivistöt. Mallina oli Pietarissa muutamaa vuotta aiemmin rakennettu Armollisen Jumalanäidin kirkko. Tiili on täällä poikkeuksellisen näkyvässä osassa — sitä ei ole rapattu lainkaan, ja koristeaiheet on ladottu itse muurauksesta. Kirkko on myös muistomerkki. Se pystytettiin keisari Aleksanteri III:n muistolle: hän oli pannut alulle Transsiperian radan,…
+AIEMPI KYSYMYS: Kuka sytytti Artemiin temppelin tuleen?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Perimätiedon mukaan tulipalon sytytti [[Herostratos]]-niminen mies vuonna 356 eaa. Hänen kerrotaan halunneen tulla tunnetuksi vaikka kuuluisimmalla pahalla teolla, ja efesolaisten kerrotaan päättäneen rangaista häntä unohduksella, jolloin hänen nimeään ei saanut mainita. Nimi säilyi silti kirjoituksissa. Saman perimätiedon mukaan tuo yö oli myös [[Aleksanteri Suuren]] syntymäyö. Temppeli rakennettiin sittemmin uudelleen. Kyl se mies sai tahtonsa läpi, kun minäkin sen nimen muistan.
+KYSYMYS: Kerro lisää: Aleksanteri Suuren
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Efesos (historia)
+Tietoruudun teksti: Efesos oli antiikin maailman kuuluisin pyhiinvaelluskohde: Artemiin temppeli, yksi seitsemästä ihmeestä, valmistui täällä noin 550 eaa. ja siinä oli yli sata 17-metristä marmoripylvästä. Kaupungin teatteriin mahtui 24 000 katsojaa. Brittiläinen arkkitehti John Turtle Wood etsi kadonnutta temppeliä British Museumin rahoituksella vuodesta 1863 ja löysi sen kivijalan 1869 — kaivaukset olivat vielä käynnissä isoisän matkan aikaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Mihin Efesos liittyy kristinuskon historiassa?
+AIEMPI VASTAUS (Livia):
+No jopas. Efesos oli yksi varhaisen kristinuskon tärkeistä keskuksista. Apostoli [[Paavali]] vietti kaupungissa merkittävän ajan, ja Uuden testamentin Efesolaiskirje on perinteisesti liitetty häneen, vaikka sen kirjoittajasta on tutkijoiden kesken eriäviä näkemyksiä. Perimätiedon mukaan myös apostoli [[Johannes]] eli Efesoksessa. Vuonna 431 kaupungissa pidettiin [[Efesoksen kirkolliskokous]], jossa käsiteltiin Jeesuksen luonnetta. Lisäksi perinne yhdistää seudun [[Neitsyt Marian]] viimeisiin vuosiin, mutta paikan historiallisuus on epävarma. Enemmän matkalaisia ku minä oon kirjeitä kantanut.
+KYSYMYS: Kerro lisää: Paavali
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Efesos (historia)
+Tietoruudun teksti: Efesos oli antiikin maailman kuuluisin pyhiinvaelluskohde: Artemiin temppeli, yksi seitsemästä ihmeestä, valmistui täällä noin 550 eaa. ja siinä oli yli sata 17-metristä marmoripylvästä. Kaupungin teatteriin mahtui 24 000 katsojaa. Brittiläinen arkkitehti John Turtle Wood etsi kadonnutta temppeliä British Museumin rahoituksella vuodesta 1863 ja löysi sen kivijalan 1869 — kaivaukset olivat vielä käynnissä isoisän matkan aikaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kohdekartta / Kohdekartta: Pyhän Johannes Kastajan basilika] 1839–1855 Basilika on Newfoundlandin siihenastisen historian suurin rakennushanke. Kaivutyöt alkoivat toukokuussa 1839, peruskivi laskettiin toukokuussa 1841, ja kirkko vihittiin 9. syyskuuta 1855. Valmistuessaan se oli Pohjois-Amerikan suurin kirkkorakennus, ja se on yhä Kanadan suurin katedraalikirkko ja maan toiseksi suurin kirkko. Se on myös yksi harvoista rakennuksista, jotka selvisivät vuoden 1892 suurpalosta. Kirkko ei ole suunnattu tavalliseen tapaan itä–länsi- akselille eikä se katso satamansuulle. Sen julkisivu on käännetty talvipäivänseisauksen nousevan ja kesäpäivänseisauksen laskevan auringon linjaan — samalla periaatteella kuin keskiaikainen Chartresin katedraali. Piispa Micha…
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Mihin Efesos liittyy kristinuskon historiassa?
+AIEMPI VASTAUS (Livia):
+No jopas. Efesos oli yksi varhaisen kristinuskon tärkeistä keskuksista. Apostoli [[Paavali]] vietti kaupungissa merkittävän ajan, ja Uuden testamentin Efesolaiskirje on perinteisesti liitetty häneen, vaikka sen kirjoittajasta on tutkijoiden kesken eriäviä näkemyksiä. Perimätiedon mukaan myös apostoli [[Johannes]] eli Efesoksessa. Vuonna 431 kaupungissa pidettiin [[Efesoksen kirkolliskokous]], jossa käsiteltiin Jeesuksen luonnetta. Lisäksi perinne yhdistää seudun [[Neitsyt Marian]] viimeisiin vuosiin, mutta paikan historiallisuus on epävarma. Enemmän matkalaisia ku minä oon kirjeitä kantanut.
+KYSYMYS: Kerro lisää: Johannes
+
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Efesos (historia)
+Tietoruudun teksti: Efesos oli antiikin maailman kuuluisin pyhiinvaelluskohde: Artemiin temppeli, yksi seitsemästä ihmeestä, valmistui täällä noin 550 eaa. ja siinä oli yli sata 17-metristä marmoripylvästä. Kaupungin teatteriin mahtui 24 000 katsojaa. Brittiläinen arkkitehti John Turtle Wood etsi kadonnutta temppeliä British Museumin rahoituksella vuodesta 1863 ja löysi sen kivijalan 1869 — kaivaukset olivat vielä käynnissä isoisän matkan aikaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Izmir — kohdekartta / Kohdekartta: Smyrnan agora] 178 Torin lattiaa kannattaa kolmikerroksinen suorakaiteen muotoinen rakennus, joka on ladottu pylväiden ja kaarien varaan suuren sisäpihan ympärille ja jonka etusivulla nousevat portaat. Saksalainen arkeologi Rudolf Naumann ja İzmirin ja Efesoksen museoiden johtaja Selâhattin Kantar kaivoivat sen esiin vuosina 1931–1942. Läntisen pylväshallin korinttilaiset pylväät seisovat yhä rivissä, ja hallin toisessa kaaressa on keisarin vaimon Faustinan rintakuva. Kreikkalaiset rakensivat torin 300-luvulla eaa. Pagos-kukkulan pohjoisrinteen juurelle. Se oli kaupungin kaupan, oikeudenkäytön ja hallinnon keskus sekä opetuksen paikka. Vuoden 178 maanjäristys tuhosi sen, ja keisari Marcus Aurelius määräsi…
+- [Irkutsk — kohdekartta / Kohdekartta: Znamenskin luostari] Innokenti Irkutskilainen 1680–1731 Luostari on Ušakovkan takana, siis vanhan kaupungin ulkopuolella pohjoisessa — matkalla sinne ylitetään joki, ja jo Irkutskin varhaisissa kuvauksissa luostari, linnoitus ja satama luetaan sen toiselle puolelle. Nimi tulee Jumalanäidin Merkin ikonista. Ulkonäöltään rakennukset ovat samaa sukua kuin kaupungin muut vanhat kirkot: valkoiset seinäpinnat, vihreät telttakatot ja siniset kupolit. Tärkein asia on kuitenkin se, kenen takia tänne tullaan. Innokenti Irkutskilainen — syntyjään Ivan Kultšitski, noin 1680 syntynyt aatelismies Tšernigovin hiippakunnasta — vihittiin vuonna 1721 piispaksi Kiovan luolaluostarissa valmistautuakseen Kiinan-lähetystyöhön. Kiina…
+AIEMPI KYSYMYS: Mihin Efesos liittyy kristinuskon historiassa?
+AIEMPI VASTAUS (Livia):
+No jopas. Efesos oli yksi varhaisen kristinuskon tärkeistä keskuksista. Apostoli [[Paavali]] vietti kaupungissa merkittävän ajan, ja Uuden testamentin Efesolaiskirje on perinteisesti liitetty häneen, vaikka sen kirjoittajasta on tutkijoiden kesken eriäviä näkemyksiä. Perimätiedon mukaan myös apostoli [[Johannes]] eli Efesoksessa. Vuonna 431 kaupungissa pidettiin [[Efesoksen kirkolliskokous]], jossa käsiteltiin Jeesuksen luonnetta. Lisäksi perinne yhdistää seudun [[Neitsyt Marian]] viimeisiin vuosiin, mutta paikan historiallisuus on epävarma. Enemmän matkalaisia ku minä oon kirjeitä kantanut.
+KYSYMYS: Kerro lisää: Efesoksen kirkolliskokous
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Efesos (historia)
+Tietoruudun teksti: Efesos oli antiikin maailman kuuluisin pyhiinvaelluskohde: Artemiin temppeli, yksi seitsemästä ihmeestä, valmistui täällä noin 550 eaa. ja siinä oli yli sata 17-metristä marmoripylvästä. Kaupungin teatteriin mahtui 24 000 katsojaa. Brittiläinen arkkitehti John Turtle Wood etsi kadonnutta temppeliä British Museumin rahoituksella vuodesta 1863 ja löysi sen kivijalan 1869 — kaivaukset olivat vielä käynnissä isoisän matkan aikaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Port Moresby — kohdekartta / Kohdekartta: Pyhän Marian katedraali] 1889 alkaen Pyhän Marian katedraali on Port Moresbyn arkkihiippakunnan pääkirkko ja omistettu Neitsyt Marialle. Ulkoseinät ovat vaaleansiniset, ja pääsisäänkäynnin toisella puolen kohoaa valkoinen torni. Hiippakunta on kirkkoa vanhempi, ja sen nimi on vaihtunut kolmesti. Se perustettiin 10. toukokuuta 1889 Uuden-Guinean apostoliseksi vikariaatiksi, sai 1922 nimen Papuan vikariaatti ja 1946 Port Moresbyn vikariaatti; arkkihiippakunnaksi se korotettiin 15. marraskuuta 1966. Vuonna 2023 alueella oli 22 seurakuntaa ja noin 233 000 katolista eli 29 prosenttia väestöstä. Paavi Johannes Paavali II vieraili katedraalissa toukokuussa 1984 ja palasi hiippakuntaan tammikuussa 1995. Paavi Franciscus vi…
+- [Marseille — kaupunkilehti / Historia: Neitsyt, joka vahtii merenkulkijoita mäen laelta] Notre-Dame de la Garde -basilika kohoaa Marseillen korkeimmalla kalliolla, 149 metrin korkeudessa, ja sen kultainen Neitsyt Maria -patsas näkyy kauas merelle. Nykyinen basilika valmistui 1864, mutta paikalla on ollut pyhiinvaelluskohde jo 1200-luvulta, kun kukkulalle rakennettiin ensimmäinen pieni kappeli. Merenkulkijat ovat perinteisesti pitäneet basilikaa suojelijanaan ja jättäneet sinne kiitoslahjoja onnistuneista matkoista — kirkon seinillä riippuu yhä satoja pienoislaivoja ja muistolaattoja pelastuneista haaksirikoista. Marseillelaiset kutsuvat patsasta hellästi "La Bonne Mère", hyväksi äidiksi.
+AIEMPI KYSYMYS: Mihin Efesos liittyy kristinuskon historiassa?
+AIEMPI VASTAUS (Livia):
+No jopas. Efesos oli yksi varhaisen kristinuskon tärkeistä keskuksista. Apostoli [[Paavali]] vietti kaupungissa merkittävän ajan, ja Uuden testamentin Efesolaiskirje on perinteisesti liitetty häneen, vaikka sen kirjoittajasta on tutkijoiden kesken eriäviä näkemyksiä. Perimätiedon mukaan myös apostoli [[Johannes]] eli Efesoksessa. Vuonna 431 kaupungissa pidettiin [[Efesoksen kirkolliskokous]], jossa käsiteltiin Jeesuksen luonnetta. Lisäksi perinne yhdistää seudun [[Neitsyt Marian]] viimeisiin vuosiin, mutta paikan historiallisuus on epävarma. Enemmän matkalaisia ku minä oon kirjeitä kantanut.
+KYSYMYS: Kerro lisää: Neitsyt Marian
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Efesos (historia)
+Tietoruudun teksti: Efesos oli antiikin maailman kuuluisin pyhiinvaelluskohde: Artemiin temppeli, yksi seitsemästä ihmeestä, valmistui täällä noin 550 eaa. ja siinä oli yli sata 17-metristä marmoripylvästä. Kaupungin teatteriin mahtui 24 000 katsojaa. Brittiläinen arkkitehti John Turtle Wood etsi kadonnutta temppeliä British Museumin rahoituksella vuodesta 1863 ja löysi sen kivijalan 1869 — kaivaukset olivat vielä käynnissä isoisän matkan aikaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kohdekartta / Kohdekartta: Marcus Aureliuksen riemukaari] 165 Kaari pystytettiin vuonna 165 kokonaan marmorista. Rakennuttaja oli kaupungin virkamies Gaius Calpurnius Celsus, ja kaari muistaa Lucius Veruksen voittoja parthialaissodassa. Vuosi tiedetään poikkeuksellisen tarkasti kaaren omasta piirtokirjoituksesta: keisarille annetaan siinä arvonimi Armenicus mutta ei vielä Medicus eikä Parthicus, jotka hän sai vuonna 166. Myöhempi vuosi on siis poissuljettu. Muoto on quadrifrons eli nelisivuinen: kaari on avoin joka suuntaan, koska sen alitse kulki kaksi katua ristiin. Päällä on harvinainen kahdeksankulmainen kupoli. Päätykolmioissa ajavat kaupungin suojelusjumalat Apollo ja Minerva kaksivaljakoissa, joita vetävät aarnikotkat ja sfinksit. Neljä syv…
+AIEMPI KYSYMYS: Mikä Celsuksen kirjasto oli?
+AIEMPI VASTAUS (Livia):
+Ai se. Celsuksen kirjasto oli roomalaisen ajan rakennus Efesoksessa, jonka noin 100-luvun alkupuolella rakennutti [[Tiberius Julius Celsus Polemaeanuksen]] poika isänsä muistoksi, ja Celsus haudattiin rakennuksen alle. Julkisivu on kaksikerroksinen ja koristeltu patsailla, jotka esittävät hyveitä. Rakennus vaurioitui maanjäristyksissä ja tulipalossa, ja nykyinen julkisivu on koottu uudelleen alkuperäisistä osista 1900-luvun jälkipuoliskolla itävaltalaisten arkeologien työnä. Kirjasto oli [[Rooman]] vallan ajan rakennus, jossa kirjat ja hauta olivat samassa talossa.
+
+Kirjasto toimi hautana ja kirjastona yhtä aikaa, mikä on yksi niitä ratkaisuja, joita minä en ole vieläkään ymmärtänyt.
+KYSYMYS: Kerro lisää: Tiberius Julius Celsus Polemaeanuksen
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Efesos (historia)
+Tietoruudun teksti: Efesos oli antiikin maailman kuuluisin pyhiinvaelluskohde: Artemiin temppeli, yksi seitsemästä ihmeestä, valmistui täällä noin 550 eaa. ja siinä oli yli sata 17-metristä marmoripylvästä. Kaupungin teatteriin mahtui 24 000 katsojaa. Brittiläinen arkkitehti John Turtle Wood etsi kadonnutta temppeliä British Museumin rahoituksella vuodesta 1863 ja löysi sen kivijalan 1869 — kaivaukset olivat vielä käynnissä isoisän matkan aikaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vancouver — kohdekartta / Kohdekartta: Keskuskirjasto] 1995 Vancouverin kirjastolla on kolme taloa, ja tämä on kolmas. Ensimmäinen syntyi, kun teräsmagnaatti Andrew Carnegie lupasi 1901 viisikymmentätuhatta dollaria, jos kaupunki antaisi tontin ja viisituhatta dollaria vuodessa toimintaan. Kaupungin itä- ja länsipuoli riitelivät heti siitä, kumpi saisi kirjaston, ja asia ratkaistiin kansanäänestyksellä. Talo avattiin marraskuussa 1903, ja se toimii nykyään asukastalona. Keskuskirjasto muutti 1957 Burrard Streetille ja sieltä 1995 nykyiseen taloonsa. Nykyinen talo on kaupungin siihenastisista hankkeista suurin. Marraskuussa 1990 pidettiin kansanäänestys, jonka jälkeen järjestettiin suunnittelukilpailu. Moshe Safdien ja DA Architectsin ehdotus ol…
+- [Sofia — kaupunkilehti / Sofia: Serdica on minun Roomani] Sofian alla on toinen kaupunki. Roomalaisessa Serdicassa viihtyi keisari Konstantinus Suuri, jonka kerrotaan sanoneen siitä: Serdica on minun Roomani. Kun metroa kaivettiin vuosina 2010–2012, maasta paljastui kokonainen kortteli katuja, taloja ja kaupunginmuurin itäportti. Löytöjä ei peitetty takaisin. Nyt matkustaja nousee liukuportaita ylös keskelle katua, jota pitkin on kuljettu 1800 vuotta.
+AIEMPI KYSYMYS: Mikä Celsuksen kirjasto oli?
+AIEMPI VASTAUS (Livia):
+Ai se. Celsuksen kirjasto oli roomalaisen ajan rakennus Efesoksessa, jonka noin 100-luvun alkupuolella rakennutti [[Tiberius Julius Celsus Polemaeanuksen]] poika isänsä muistoksi, ja Celsus haudattiin rakennuksen alle. Julkisivu on kaksikerroksinen ja koristeltu patsailla, jotka esittävät hyveitä. Rakennus vaurioitui maanjäristyksissä ja tulipalossa, ja nykyinen julkisivu on koottu uudelleen alkuperäisistä osista 1900-luvun jälkipuoliskolla itävaltalaisten arkeologien työnä. Kirjasto oli [[Rooman]] vallan ajan rakennus, jossa kirjat ja hauta olivat samassa talossa.
+
+Kirjasto toimi hautana ja kirjastona yhtä aikaa, mikä on yksi niitä ratkaisuja, joita minä en ole vieläkään ymmärtänyt.
+KYSYMYS: Kerro lisää: Rooman
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kappadokia (luonto)
+Tietoruudun teksti: Kappadokian maisema syntyi tulivuorista: Erciyesin, Hasanin ja Göllüdağin purkaukset peittivät alueen paksuun tuhkakiveen, jota tuuli ja vesi ovat sitten kuluttaneet miljoonien vuosien ajan "keijunsavupiipuiksi". Pehmeään kiveen on kaiverrettu satoja kirkkoja ja luostareita — ja kokonaisia maanalaisia kaupunkeja, joissa on monikerroksisia puolustusjärjestelmiä: käytäviä sulkevia pyöreitä kivipaasia ja aukkoja katossa.
+AIEMPI KYSYMYS: Asuuko kallokolotaloissa vielä ihmisiä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kyllä, osa kallioon kaivetuista asunnoista on yhä asuttuja. Kappadokian kylissä, kuten [[Göremessä]] ja [[Uçhisarissa]], osa asukkaista elää tai on elänyt kallioon kaivetuissa taloissa, ja kolojen viileää sisälämpötilaa on käytetty myös varastoina ja talleina. Monet kolot on kuitenkin muutettu hotelleiksi ja ravintoloiksi, ja osa on jäänyt tyhjiksi, koska pehmeä kivi murenee ja kalliopudotukset ovat tehneet joistain asuinalueista vaarallisia. Minä asuisin kyl mielelläni kallion sisässä, siellä ei tuule.
+KYSYMYS: Kerro lisää: Göremessä
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kappadokia (luonto)
+Tietoruudun teksti: Kappadokian maisema syntyi tulivuorista: Erciyesin, Hasanin ja Göllüdağin purkaukset peittivät alueen paksuun tuhkakiveen, jota tuuli ja vesi ovat sitten kuluttaneet miljoonien vuosien ajan "keijunsavupiipuiksi". Pehmeään kiveen on kaiverrettu satoja kirkkoja ja luostareita — ja kokonaisia maanalaisia kaupunkeja, joissa on monikerroksisia puolustusjärjestelmiä: käytäviä sulkevia pyöreitä kivipaasia ja aukkoja katossa.
+AIEMPI KYSYMYS: Asuuko kallokolotaloissa vielä ihmisiä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kyllä, osa kallioon kaivetuista asunnoista on yhä asuttuja. Kappadokian kylissä, kuten [[Göremessä]] ja [[Uçhisarissa]], osa asukkaista elää tai on elänyt kallioon kaivetuissa taloissa, ja kolojen viileää sisälämpötilaa on käytetty myös varastoina ja talleina. Monet kolot on kuitenkin muutettu hotelleiksi ja ravintoloiksi, ja osa on jäänyt tyhjiksi, koska pehmeä kivi murenee ja kalliopudotukset ovat tehneet joistain asuinalueista vaarallisia. Minä asuisin kyl mielelläni kallion sisässä, siellä ei tuule.
+KYSYMYS: Kerro lisää: Uçhisarissa
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kappadokia (luonto)
+Tietoruudun teksti: Kappadokian maisema syntyi tulivuorista: Erciyesin, Hasanin ja Göllüdağin purkaukset peittivät alueen paksuun tuhkakiveen, jota tuuli ja vesi ovat sitten kuluttaneet miljoonien vuosien ajan "keijunsavupiipuiksi". Pehmeään kiveen on kaiverrettu satoja kirkkoja ja luostareita — ja kokonaisia maanalaisia kaupunkeja, joissa on monikerroksisia puolustusjärjestelmiä: käytäviä sulkevia pyöreitä kivipaasia ja aukkoja katossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Luonto: Keijujen savupiiput] 1963 — Kappadokian maaperä on tulivuorten tuhkaa, joka on painunut pehmeäksi kiveksi. Sade ja tuuli syövät sitä helposti, mutta siellä missä pehmeän kiven päällä on kovempi lohkare, kiveä jää jäljelle kapeaksi torniksi. Näitä torneja kutsutaan turkiksi nimellä peribacaları, keijujen savupiiput. Pehmeään kiveen on ollut helppo kaivaa: alueella on satoja kallioon hakattuja asuntoja ja kirkkoja sekä kokonaisia maanalaisia kaupunkeja. Derinkuyun maanalainen kaupunki laskeutuu kahdeksassa kerroksessa noin 85 metrin syvyyteen. Se löydettiin uudestaan vuonna 1963, kun talon seinän takaa paljastui käytävä.
+AIEMPI KYSYMYS: Kuinka syvälle maanalaiset kaupungit ulottuvat?
+AIEMPI VASTAUS (Livia):
+Katotaas. Yksi tunnetuimmista maanalaisista kaupungeista, [[Derinkuyu]], ulottuu usein esitettyjen tietojen mukaan noin 60 metrin syvyyteen, ja kerroksia mainitaan olevan kahdeksantoista. Lukuja kannattaa pitää suuntaa-antavina, sillä vain osa tiloista on tutkittu ja avattu kävijöille. Toinen tunnettu kaupunki on [[Kaymaklı]]. Kaupungeissa on ollut asuntoja, talleja, kaivoja, ilmanvaihtokuiluja ja varastoja, ja pyöreät kivipaasit sulkivat käytäviä sisäpuolelta.
+
+Minä olen korkealla viihtyvä lintu, joten kahdeksantoista kerrosta maan alla tuntuu minusta aivan käsittämättömältä.
+KYSYMYS: Kerro lisää: Derinkuyu
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kappadokia (luonto)
+Tietoruudun teksti: Kappadokian maisema syntyi tulivuorista: Erciyesin, Hasanin ja Göllüdağin purkaukset peittivät alueen paksuun tuhkakiveen, jota tuuli ja vesi ovat sitten kuluttaneet miljoonien vuosien ajan "keijunsavupiipuiksi". Pehmeään kiveen on kaiverrettu satoja kirkkoja ja luostareita — ja kokonaisia maanalaisia kaupunkeja, joissa on monikerroksisia puolustusjärjestelmiä: käytäviä sulkevia pyöreitä kivipaasia ja aukkoja katossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kappadokia — kaupunkilehti / Historia: Ovi, jonka sai kiinni vain sisältä] Kaymaklın maanalainen kaupunki avattiin matkailijoille vuonna 1964, ja se on yhdeksäntoista kilometriä Nevşehiristä. Käytävien välissä on pyöreitä kivilaattoja, jotka vieritettiin oviaukon eteen — ja jotka aukesivat vain sisäpuolelta, koska kahvaa ei ollut ulkopuolella. Jokainen kerros voitiin siis sulkea erikseen. Rakentamisen ajankohdasta ollaan eri mieltä: Turkin kulttuuriministeriön mukaan ensimmäiset luolat kaivoivat fryygialaiset 700–600-luvulla eKr., kun taas artikkelin toinen lähde katsoo kristittyjen aloittaneen työn vasta 700-luvulla jKr.
+AIEMPI KYSYMYS: Kuinka syvälle maanalaiset kaupungit ulottuvat?
+AIEMPI VASTAUS (Livia):
+Katotaas. Yksi tunnetuimmista maanalaisista kaupungeista, [[Derinkuyu]], ulottuu usein esitettyjen tietojen mukaan noin 60 metrin syvyyteen, ja kerroksia mainitaan olevan kahdeksantoista. Lukuja kannattaa pitää suuntaa-antavina, sillä vain osa tiloista on tutkittu ja avattu kävijöille. Toinen tunnettu kaupunki on [[Kaymaklı]]. Kaupungeissa on ollut asuntoja, talleja, kaivoja, ilmanvaihtokuiluja ja varastoja, ja pyöreät kivipaasit sulkivat käytäviä sisäpuolelta.
+
+Minä olen korkealla viihtyvä lintu, joten kahdeksantoista kerrosta maan alla tuntuu minusta aivan käsittämättömältä.
+KYSYMYS: Kerro lisää: Kaymaklı
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kappadokia (luonto)
+Tietoruudun teksti: Kappadokian maisema syntyi tulivuorista: Erciyesin, Hasanin ja Göllüdağin purkaukset peittivät alueen paksuun tuhkakiveen, jota tuuli ja vesi ovat sitten kuluttaneet miljoonien vuosien ajan "keijunsavupiipuiksi". Pehmeään kiveen on kaiverrettu satoja kirkkoja ja luostareita — ja kokonaisia maanalaisia kaupunkeja, joissa on monikerroksisia puolustusjärjestelmiä: käytäviä sulkevia pyöreitä kivipaasia ja aukkoja katossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kappadokia — kaupunkilehti / Kappadokia: Maisema on kovettunutta tuhkaa] Kappadokian muodot ovat tulivuorten työtä. Erciyes, Hasan ja Göllüdağ purkautuivat toistuvasti noin yhdeksän ja kolmen miljoonan vuoden välillä ja peittivät ylätasangon paksuilla tuhkakerroksilla. Niistä kovettui ignimbriittiä ja tuffia, jota tuuli ja vesi ovat sittemmin syöneet piikeiksi ja pilareiksi. Turkiksi ne ovat peribacalar, keijupiiput. Kansainvälinen geologian liitto valitsi Kappadokian mioseenikautisen ignimbriittisarjan lokakuussa 2022 sadan geologisen perintökohteen joukkoon.
+AIEMPI KYSYMYS: Miten keijunsavupiiput syntyvät?
+AIEMPI VASTAUS (Livia):
+Mmm— Keijunsavupiiput syntyvät eroosion tuloksena. [[Erciyes]]-tulivuoren ja muiden tulivuorten purkaukset kerrostivat alueelle tuhkaa, joka kovettui pehmeäksi [[tuffiksi]], ja päälle muodostui paikoin kovempaa kivikerrosta. Vesi ja tuuli kuluttivat pehmeää kiveä, mutta kovempi kivilaatta suojasi alapuolellaan olevaa tuffia, jolloin jäljelle jäi kapea pylväs, jonka päällä on suojaava lakki. Muotoutuminen on kestänyt miljoonia vuosia, ja kuluminen jatkuu yhä. Tässä menikin sitten miljoona vuotta yhdessä virkkeessä.
+KYSYMYS: Kerro lisää: Erciyes
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kappadokia (luonto)
+Tietoruudun teksti: Kappadokian maisema syntyi tulivuorista: Erciyesin, Hasanin ja Göllüdağin purkaukset peittivät alueen paksuun tuhkakiveen, jota tuuli ja vesi ovat sitten kuluttaneet miljoonien vuosien ajan "keijunsavupiipuiksi". Pehmeään kiveen on kaiverrettu satoja kirkkoja ja luostareita — ja kokonaisia maanalaisia kaupunkeja, joissa on monikerroksisia puolustusjärjestelmiä: käytäviä sulkevia pyöreitä kivipaasia ja aukkoja katossa.
+AIEMPI KYSYMYS: Miten keijunsavupiiput syntyvät?
+AIEMPI VASTAUS (Livia):
+Mmm— Keijunsavupiiput syntyvät eroosion tuloksena. [[Erciyes]]-tulivuoren ja muiden tulivuorten purkaukset kerrostivat alueelle tuhkaa, joka kovettui pehmeäksi [[tuffiksi]], ja päälle muodostui paikoin kovempaa kivikerrosta. Vesi ja tuuli kuluttivat pehmeää kiveä, mutta kovempi kivilaatta suojasi alapuolellaan olevaa tuffia, jolloin jäljelle jäi kapea pylväs, jonka päällä on suojaava lakki. Muotoutuminen on kestänyt miljoonia vuosia, ja kuluminen jatkuu yhä. Tässä menikin sitten miljoona vuotta yhdessä virkkeessä.
+KYSYMYS: Kerro lisää: tuffiksi
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kappadokia (luonto)
+Tietoruudun teksti: Kappadokian maisema syntyi tulivuorista: Erciyesin, Hasanin ja Göllüdağin purkaukset peittivät alueen paksuun tuhkakiveen, jota tuuli ja vesi ovat sitten kuluttaneet miljoonien vuosien ajan "keijunsavupiipuiksi". Pehmeään kiveen on kaiverrettu satoja kirkkoja ja luostareita — ja kokonaisia maanalaisia kaupunkeja, joissa on monikerroksisia puolustusjärjestelmiä: käytäviä sulkevia pyöreitä kivipaasia ja aukkoja katossa.
+AIEMPI KYSYMYS: Ketkä rakensivat maanalaiset kaupungit?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tarkkaa vastausta ei ole, ja tutkijat ovat eri mieltä siitä, kuka kaivoi ensimmäiset tilat. Pehmeään kiveen on voitu kaivaa luolia jo hyvin varhain, ja kaupungit ovat laajentuneet vähitellen vuosisatojen aikana. Joidenkin tutkijoiden mukaan alkuperä liittyy [[frygialaisiin]], ja toisten mukaan laajimmat osat kaivettiin vasta [[Bysantin]] aikana. Kristityt ovat käyttäneet kaupunkeja turvapaikkoina vihollisten hyökkäysten aikana, mutta tarkkoja vuosilukuja ei kannata esittää. En ole varma, ja se on parempi kuin keksiä.
+KYSYMYS: Kerro lisää: frygialaisiin
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kappadokia (luonto)
+Tietoruudun teksti: Kappadokian maisema syntyi tulivuorista: Erciyesin, Hasanin ja Göllüdağin purkaukset peittivät alueen paksuun tuhkakiveen, jota tuuli ja vesi ovat sitten kuluttaneet miljoonien vuosien ajan "keijunsavupiipuiksi". Pehmeään kiveen on kaiverrettu satoja kirkkoja ja luostareita — ja kokonaisia maanalaisia kaupunkeja, joissa on monikerroksisia puolustusjärjestelmiä: käytäviä sulkevia pyöreitä kivipaasia ja aukkoja katossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aleppo — kohdekartta / Kohdekartta: Antiokian portti] Vanhankaupungin läntisen muurin keskellä seisoo portti, jonka nimi kertoo suunnan: tie vei Antiokiaan, antiikin Syyrian pääkaupunkiin. Kaksi kuusikulmaista bastionia nousee rinnakkain, ja niiden välinen kulkuväylä mutkittelee sen sijaan että menisi suoraan läpi. Aukko on oikeanpuoleisen tornin alla, puolustussyistä: sisään tulija ei pääse vauhtiin eikä näe eteensä. Kivi on valkoista, ja lohkareet ovat noin 0,8 kertaa 1,0 metriä. Bysantin aikana tämä oli kaupungin pääportti, ja sen jälkeen merkitys hiipui. Ajjubidien Aleppon emiiri an-Nasir Yusuf, Saladinin pojanpojanpoika, rakennutti portin uudelleen 1000-luvulta periytyvän perustuksen päälle. Vuosiluvut ovat epätarkkoja: portin kohdalla hä…
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+AIEMPI KYSYMYS: Ketkä rakensivat maanalaiset kaupungit?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tarkkaa vastausta ei ole, ja tutkijat ovat eri mieltä siitä, kuka kaivoi ensimmäiset tilat. Pehmeään kiveen on voitu kaivaa luolia jo hyvin varhain, ja kaupungit ovat laajentuneet vähitellen vuosisatojen aikana. Joidenkin tutkijoiden mukaan alkuperä liittyy [[frygialaisiin]], ja toisten mukaan laajimmat osat kaivettiin vasta [[Bysantin]] aikana. Kristityt ovat käyttäneet kaupunkeja turvapaikkoina vihollisten hyökkäysten aikana, mutta tarkkoja vuosilukuja ei kannata esittää. En ole varma, ja se on parempi kuin keksiä.
+KYSYMYS: Kerro lisää: Bysantin
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kappadokia (luonto)
+Tietoruudun teksti: Kappadokian maisema syntyi tulivuorista: Erciyesin, Hasanin ja Göllüdağin purkaukset peittivät alueen paksuun tuhkakiveen, jota tuuli ja vesi ovat sitten kuluttaneet miljoonien vuosien ajan "keijunsavupiipuiksi". Pehmeään kiveen on kaiverrettu satoja kirkkoja ja luostareita — ja kokonaisia maanalaisia kaupunkeja, joissa on monikerroksisia puolustusjärjestelmiä: käytäviä sulkevia pyöreitä kivipaasia ja aukkoja katossa.
+AIEMPI KYSYMYS: Miksi Kappadokiassa lennetään kuumailmapalloilla?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kuumailmapallolennot ovat nousseet alueen tunnetuimmaksi matkailuelämykseksi. Syynä on osittain maisema: ylhäältä näkee [[keijunsavupiiput]], laaksot ja kalliokylät kokonaisuutena, ja monet lennot lähtevät [[Göremen]] seudulta. Lisäksi ilmasto sopii lentoon, sillä aamuisin ilma on usein tyyni ja laaksoissa on tilaa laskeutua. Ilmapalloja ohjataan korkeutta muuttamalla, koska eri korkeuksilla tuuli kulkee eri suuntiin, ja huono sää voi estää lennot. Minä tosin lennän ilman pilettiä.
+KYSYMYS: Kerro lisää: keijunsavupiiput
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kappadokia (luonto)
+Tietoruudun teksti: Kappadokian maisema syntyi tulivuorista: Erciyesin, Hasanin ja Göllüdağin purkaukset peittivät alueen paksuun tuhkakiveen, jota tuuli ja vesi ovat sitten kuluttaneet miljoonien vuosien ajan "keijunsavupiipuiksi". Pehmeään kiveen on kaiverrettu satoja kirkkoja ja luostareita — ja kokonaisia maanalaisia kaupunkeja, joissa on monikerroksisia puolustusjärjestelmiä: käytäviä sulkevia pyöreitä kivipaasia ja aukkoja katossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kappadokia — kaupunkilehti / Historia: Neljäsataa kirkkoa kalliossa] Göremen ympäristössä arvioidaan olevan noin neljäsataa kallioon louhittua kirkkoa. Osa on kokonaisia luolia, osa on paljastunut, kun ulompi kallio on rapautunut pois: silloin näkyvät holvit, apsidit ja pylväät kuin poikkileikkauksena. Freskot ajoittuvat 500-luvulta 1100-luvulle. Göremen kansallispuisto ja Kappadokian kalliokohteet hyväksyttiin Unescon maailmanperintöluetteloon vuonna 1985. Ensimmäinen kirjallinen maininta paikasta on Khalkedonin kirkolliskokouksen pöytäkirjoissa vuodelta 451.
+- [Kappadokia — kaupunkilehti / Kappadokia: Kyyhkysten lanta maalasi kirkot] Uçhisarin ja Göremen väliin jäävän laakson seiniin on louhittu satoja kyyhkyslakkoja: pieniä kammioita, joiden sisällä on orsia ja koloja pesiä varten. Ne eivät ole koristeita vaan maataloutta. Kyyhkysten lantaa käytettiin peltojen lannoitteena aina 1970-luvulle asti, ja samaa ainetta sekoitettiin luolakirkkojen maaleihin kirkastamaan värejä. Laakson yllä kohoaa Uçhisarin kuusikymmenmetrinen kalliolinnake, jonka sisään louhittuihin huoneisiin arvellaan mahtuneen tuhatkunta ihmistä.
+AIEMPI KYSYMYS: Miksi Kappadokiassa lennetään kuumailmapalloilla?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kuumailmapallolennot ovat nousseet alueen tunnetuimmaksi matkailuelämykseksi. Syynä on osittain maisema: ylhäältä näkee [[keijunsavupiiput]], laaksot ja kalliokylät kokonaisuutena, ja monet lennot lähtevät [[Göremen]] seudulta. Lisäksi ilmasto sopii lentoon, sillä aamuisin ilma on usein tyyni ja laaksoissa on tilaa laskeutua. Ilmapalloja ohjataan korkeutta muuttamalla, koska eri korkeuksilla tuuli kulkee eri suuntiin, ja huono sää voi estää lennot. Minä tosin lennän ilman pilettiä.
+KYSYMYS: Kerro lisää: Göremen
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pamukkale ja Hierapolis (luonto)
+Tietoruudun teksti: Rinteen valkoiset terassit ovat travertiinia: 17 kuumaa lähdettä (35–100 °C) tuo kalsiumkarbonaattia pintaan, hiilidioksidi karkaa, ja kivi saostuu hyllyiksi. Muodostuma on noin 2 700 metriä pitkä, 600 leveä ja 160 korkea. Sen päälle rakennettiin antiikin Hierapolis, jonka pyhin paikka oli Pluton portti — luola, josta nousi tukahduttavaa kaasua, ja jota pidettiin manalan ovena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Sacré-Cœur] 1875–1914 Basilika Sacré-Cœur eli Pyhän sydämen kirkko rakennettiin Montmartren kukkulan huipulle sen jälkeen, kun Ranska oli hävinnyt sodan Preussille vuonna 1870. Arkkitehti Paul Abadie valittiin suunnittelijaksi peräti 77 ehdotuksen joukosta, ja kirkko valmistui vasta 40 vuotta myöhemmin. Kirkon ulkoseinät on tehty erikoisesta travertiini-kalkkikivestä, joka valkenee sateella eikä koskaan tummu — siksi kirkko hohtaa yhä valkoisena, vaikka se on jo yli sata vuotta vanha. Sisällä kattoa koristaa yksi maailman suurimmista mosaiikeista, joka on koottu 25 000 pienestä keraamisesta palasesta. Tornissa riippuu "Savoyarde", Ranskan suurin kello, joka painaa lähes 19 tonnia. Kirkon huipulta, 200 …
+AIEMPI KYSYMYS: Saako terasseilla vielä kävellä?
+AIEMPI VASTAUS (Livia):
+Kato, hyvä että kysyit. Kyllä, mutta vain osalla terasseista ja tiukoin ehdoin. Kävijät saavat kulkea kalkkikivisillä terasseilla paljain jaloin merkittyjä reittejä pitkin, ja kenkien käyttö on kielletty, jotta herkkä [[travertiini]] ei vahingoittuisi. Veden johtamista eri altaille on säännelty, ja rinteen osia on suljettu suojelun vuoksi. Säännöt ja avoimet alueet vaihtelevat, joten ajantasaiset ohjeet kannattaa tarkistaa paikan päältä. Pamukkalen ja [[Hierapolisin]] alue on kuulunut maailmanperintökohteisiin 1980-luvun lopulta. Minä pääsen kai paljain jaloin, kyyhky kun ei kenkiä tarvii.
+KYSYMYS: Kerro lisää: travertiini
+
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pamukkale ja Hierapolis (luonto)
+Tietoruudun teksti: Rinteen valkoiset terassit ovat travertiinia: 17 kuumaa lähdettä (35–100 °C) tuo kalsiumkarbonaattia pintaan, hiilidioksidi karkaa, ja kivi saostuu hyllyiksi. Muodostuma on noin 2 700 metriä pitkä, 600 leveä ja 160 korkea. Sen päälle rakennettiin antiikin Hierapolis, jonka pyhin paikka oli Pluton portti — luola, josta nousi tukahduttavaa kaasua, ja jota pidettiin manalan ovena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Luonto: Puuvillalinna kasvaa vedestä] 190 eaa — Lounais-Turkissa maasta purkautuu lämmintä vettä, jossa on liuenneena kalkkia. Kun vesi valuu rinnettä alas ja jäähtyy, kalkki jää kiinni kiveen ja kovettuu travertiiniksi. Vuosituhansien aikana rinteeseen on kasvanut portaikko valkoisia altaita, joissa seisoo lämmintä sinertävää vettä. Turkiksi paikan nimi on Pamukkale, puuvillalinna. Rinteen päälle perustettiin noin vuonna 190 eaa. kaupunki Hierapolis, jonne tultiin kylpemään terveyden vuoksi. Nykyään altailla saa kävellä vain paljain jaloin, ettei valkoinen pinta likaannu.
+AIEMPI KYSYMYS: Saako terasseilla vielä kävellä?
+AIEMPI VASTAUS (Livia):
+Kato, hyvä että kysyit. Kyllä, mutta vain osalla terasseista ja tiukoin ehdoin. Kävijät saavat kulkea kalkkikivisillä terasseilla paljain jaloin merkittyjä reittejä pitkin, ja kenkien käyttö on kielletty, jotta herkkä [[travertiini]] ei vahingoittuisi. Veden johtamista eri altaille on säännelty, ja rinteen osia on suljettu suojelun vuoksi. Säännöt ja avoimet alueet vaihtelevat, joten ajantasaiset ohjeet kannattaa tarkistaa paikan päältä. Pamukkalen ja [[Hierapolisin]] alue on kuulunut maailmanperintökohteisiin 1980-luvun lopulta. Minä pääsen kai paljain jaloin, kyyhky kun ei kenkiä tarvii.
+KYSYMYS: Kerro lisää: Hierapolisin
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pamukkale ja Hierapolis (luonto)
+Tietoruudun teksti: Rinteen valkoiset terassit ovat travertiinia: 17 kuumaa lähdettä (35–100 °C) tuo kalsiumkarbonaattia pintaan, hiilidioksidi karkaa, ja kivi saostuu hyllyiksi. Muodostuma on noin 2 700 metriä pitkä, 600 leveä ja 160 korkea. Sen päälle rakennettiin antiikin Hierapolis, jonka pyhin paikka oli Pluton portti — luola, josta nousi tukahduttavaa kaasua, ja jota pidettiin manalan ovena.
+AIEMPI KYSYMYS: Miksi antiikin kaupunki rakennettiin juuri tähän?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kaupungin sijainnin ratkaisivat luultavasti lähteet. Kuumat ja kivennäispitoiset vedet tunnettiin parantavina, ja Hierapolisista kehittyi kylpyläkaupunki, jonne tultiin hakemaan helpotusta vaivoihin. Kaupunki perustettiin [[Pergamonin]] kuninkaiden aikaan, yleensä ajoitetaan noin 100-luvun eaa. alkupuolelle, ja se kasvoi [[Rooman]] vallan aikana merkittäväksi kaupungiksi. Kaupungin pyhyyttä lisäsi [[Pluton portti]], jota pidettiin manalan ovena. Kylpylä kuumilla lähteillä, ei huono idea.
+KYSYMYS: Kerro lisää: Pergamonin
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pamukkale ja Hierapolis (luonto)
+Tietoruudun teksti: Rinteen valkoiset terassit ovat travertiinia: 17 kuumaa lähdettä (35–100 °C) tuo kalsiumkarbonaattia pintaan, hiilidioksidi karkaa, ja kivi saostuu hyllyiksi. Muodostuma on noin 2 700 metriä pitkä, 600 leveä ja 160 korkea. Sen päälle rakennettiin antiikin Hierapolis, jonka pyhin paikka oli Pluton portti — luola, josta nousi tukahduttavaa kaasua, ja jota pidettiin manalan ovena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vancouver — kohdekartta / Kohdekartta: Keskuskirjasto] 1995 Vancouverin kirjastolla on kolme taloa, ja tämä on kolmas. Ensimmäinen syntyi, kun teräsmagnaatti Andrew Carnegie lupasi 1901 viisikymmentätuhatta dollaria, jos kaupunki antaisi tontin ja viisituhatta dollaria vuodessa toimintaan. Kaupungin itä- ja länsipuoli riitelivät heti siitä, kumpi saisi kirjaston, ja asia ratkaistiin kansanäänestyksellä. Talo avattiin marraskuussa 1903, ja se toimii nykyään asukastalona. Keskuskirjasto muutti 1957 Burrard Streetille ja sieltä 1995 nykyiseen taloonsa. Nykyinen talo on kaupungin siihenastisista hankkeista suurin. Marraskuussa 1990 pidettiin kansanäänestys, jonka jälkeen järjestettiin suunnittelukilpailu. Moshe Safdien ja DA Architectsin ehdotus ol…
+- [Sofia — kaupunkilehti / Sofia: Serdica on minun Roomani] Sofian alla on toinen kaupunki. Roomalaisessa Serdicassa viihtyi keisari Konstantinus Suuri, jonka kerrotaan sanoneen siitä: Serdica on minun Roomani. Kun metroa kaivettiin vuosina 2010–2012, maasta paljastui kokonainen kortteli katuja, taloja ja kaupunginmuurin itäportti. Löytöjä ei peitetty takaisin. Nyt matkustaja nousee liukuportaita ylös keskelle katua, jota pitkin on kuljettu 1800 vuotta.
+AIEMPI KYSYMYS: Miksi antiikin kaupunki rakennettiin juuri tähän?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kaupungin sijainnin ratkaisivat luultavasti lähteet. Kuumat ja kivennäispitoiset vedet tunnettiin parantavina, ja Hierapolisista kehittyi kylpyläkaupunki, jonne tultiin hakemaan helpotusta vaivoihin. Kaupunki perustettiin [[Pergamonin]] kuninkaiden aikaan, yleensä ajoitetaan noin 100-luvun eaa. alkupuolelle, ja se kasvoi [[Rooman]] vallan aikana merkittäväksi kaupungiksi. Kaupungin pyhyyttä lisäsi [[Pluton portti]], jota pidettiin manalan ovena. Kylpylä kuumilla lähteillä, ei huono idea.
+KYSYMYS: Kerro lisää: Rooman
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pamukkale ja Hierapolis (luonto)
+Tietoruudun teksti: Rinteen valkoiset terassit ovat travertiinia: 17 kuumaa lähdettä (35–100 °C) tuo kalsiumkarbonaattia pintaan, hiilidioksidi karkaa, ja kivi saostuu hyllyiksi. Muodostuma on noin 2 700 metriä pitkä, 600 leveä ja 160 korkea. Sen päälle rakennettiin antiikin Hierapolis, jonka pyhin paikka oli Pluton portti — luola, josta nousi tukahduttavaa kaasua, ja jota pidettiin manalan ovena.
+AIEMPI KYSYMYS: Miksi antiikin kaupunki rakennettiin juuri tähän?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kaupungin sijainnin ratkaisivat luultavasti lähteet. Kuumat ja kivennäispitoiset vedet tunnettiin parantavina, ja Hierapolisista kehittyi kylpyläkaupunki, jonne tultiin hakemaan helpotusta vaivoihin. Kaupunki perustettiin [[Pergamonin]] kuninkaiden aikaan, yleensä ajoitetaan noin 100-luvun eaa. alkupuolelle, ja se kasvoi [[Rooman]] vallan aikana merkittäväksi kaupungiksi. Kaupungin pyhyyttä lisäsi [[Pluton portti]], jota pidettiin manalan ovena. Kylpylä kuumilla lähteillä, ei huono idea.
+KYSYMYS: Kerro lisää: Pluton portti
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pamukkale ja Hierapolis (luonto)
+Tietoruudun teksti: Rinteen valkoiset terassit ovat travertiinia: 17 kuumaa lähdettä (35–100 °C) tuo kalsiumkarbonaattia pintaan, hiilidioksidi karkaa, ja kivi saostuu hyllyiksi. Muodostuma on noin 2 700 metriä pitkä, 600 leveä ja 160 korkea. Sen päälle rakennettiin antiikin Hierapolis, jonka pyhin paikka oli Pluton portti — luola, josta nousi tukahduttavaa kaasua, ja jota pidettiin manalan ovena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Muinaisuus: Teatterista tehtiin kehä ja takaisin] Kourion oli kaupunkikuningaskunta jyrkänteen päällä etelärannikolla. Herodotos kertoo kourionilaisten polveutuvan Argoksesta tulleista siirtolaisista, ja saman toistaa Strabon; akhaialaiset asettuivat paikalle 1100-luvulla eaa. Teatteri rakennettiin 100-luvulla eaa. ja se oli aluksi pienempi. Nykyiseen kokoonsa se laajennettiin 100-luvulla jaa., jolloin katsomoon mahtui 3 500 katsojaa. 200-luvun alkupuolella teatteri muutettiin areenaksi: näyttämön eteen pystytettiin metalliristikko petoeläinnäytöksiä varten ja kolme alinta istuinriviä purettiin, jotta katsojat olisivat kauempana kehästä. Saman vuosisadan puolivälin jälkeen areena muutettiin takaisin teatteriksi, ja alimmat karkeasti hakatu…
+- [Kappadokia — kaupunkilehti / Kappadokia: Punaisen joen savi] Avanos on rakennettu Kızılırmakin eli Punaisen joen mutkaan. Se on Turkin pisin kokonaan maan sisällä virtaava joki, 1 355 kilometriä, ja antiikissa se tunnettiin Halyksena. Joen punainen siltti on kaupungin savenvalajien raaka-aine, ja perinteen arvellaan ulottuvan heettiläisaikaan asti. Maantieteilijä Strabon mukaan Avanos oli tuolloin nimeltään Venessa ja Kappadokian kuningaskunnan kolmanneksi tärkein kaupunki. Vanhan kaupungin alla kulkee maanalaisia tiloja, joita savipajat käyttävät yhä varastoinaan.
+AIEMPI KYSYMYS: Mikä Pluton portti oli?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Pluton portti eli Ploutonion oli Hierapolisin pyhä luola, jonka aukosta nousi myrkyllistä kaasua. Antiikin kirjoittaja [[Strabon]] kertoo, että pienet eläimet kuolivat luolassa heti, kun taas [[Kybelen]] papit selvisivät. Kaasu on todennäköisesti hiilidioksidia, joka tulee maankuoren raoista, ja sama geologinen toiminta tuo kuumat lähteet pintaan. Italialaiset arkeologit tunnistivat luolan paikan 2000-luvulla.
+
+Pidän kyllä etäisyyttä kaikkeen, mistä nousee kaasua. Kyyhky on tarkka henkensä kanssa, kuten kanarialinnut kaivoksissa.
+KYSYMYS: Kerro lisää: Strabon
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pamukkale ja Hierapolis (luonto)
+Tietoruudun teksti: Rinteen valkoiset terassit ovat travertiinia: 17 kuumaa lähdettä (35–100 °C) tuo kalsiumkarbonaattia pintaan, hiilidioksidi karkaa, ja kivi saostuu hyllyiksi. Muodostuma on noin 2 700 metriä pitkä, 600 leveä ja 160 korkea. Sen päälle rakennettiin antiikin Hierapolis, jonka pyhin paikka oli Pluton portti — luola, josta nousi tukahduttavaa kaasua, ja jota pidettiin manalan ovena.
+AIEMPI KYSYMYS: Mikä Pluton portti oli?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Pluton portti eli Ploutonion oli Hierapolisin pyhä luola, jonka aukosta nousi myrkyllistä kaasua. Antiikin kirjoittaja [[Strabon]] kertoo, että pienet eläimet kuolivat luolassa heti, kun taas [[Kybelen]] papit selvisivät. Kaasu on todennäköisesti hiilidioksidia, joka tulee maankuoren raoista, ja sama geologinen toiminta tuo kuumat lähteet pintaan. Italialaiset arkeologit tunnistivat luolan paikan 2000-luvulla.
+
+Pidän kyllä etäisyyttä kaikkeen, mistä nousee kaasua. Kyyhky on tarkka henkensä kanssa, kuten kanarialinnut kaivoksissa.
+KYSYMYS: Kerro lisää: Kybelen
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pamukkale ja Hierapolis (luonto)
+Tietoruudun teksti: Rinteen valkoiset terassit ovat travertiinia: 17 kuumaa lähdettä (35–100 °C) tuo kalsiumkarbonaattia pintaan, hiilidioksidi karkaa, ja kivi saostuu hyllyiksi. Muodostuma on noin 2 700 metriä pitkä, 600 leveä ja 160 korkea. Sen päälle rakennettiin antiikin Hierapolis, jonka pyhin paikka oli Pluton portti — luola, josta nousi tukahduttavaa kaasua, ja jota pidettiin manalan ovena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Teheran — kohdekartta / Kohdekartta: Iranin kansallismuseo] Kansallismuseo on kaksi taloa vierekkäin. Muinaisen Iranin museo on tiiltä, ja julkisivun keskellä on soikea sasanidiholvi, jonka esikuva on Ktesifonin Taq Kasra pienemmässä mitassa. Sen piirsi ranskalainen André Godard; muurarimestarit olivat Morad Tabrizi ja Abbas Ali Memar. Tiili oli kotimaista; ulkoa tuotiin vain vitriinit ja osa metalliosista. Talo vihittiin 1937, ja kerrosalaa on noin 11 000 neliömetriä. Naapuritalo, islamilaisen ajan museo, on valkoista travertiinia ja pohjakaavaltaan Bishapurin mukainen kahdeksankulmainen risti. Vuosiluvut hajoavat: rakennus ajoitetaan vuosiin 1944–1950 tai 1958, perustamisvuodeksi merkitään 1972, ja museona se avattiin 1996. Seitsemässä salissa on …
+AIEMPI KYSYMYS: Mitä Pamukkale tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Pamukkale on turkkia ja tarkoittaa puuvillalinnaa tai puuvillalinnaketta (pamuk tarkoittaa puuvillaa ja kale linnaa). Nimi viittaa rinteen terasseihin, jotka valkoisina ja pehmeinä näyttävät kaukaa puuvillakasalta tai lumelta. Väri tulee kalsiumkarbonaatista, joka saostuu kuumasta vedestä [[travertiinia]] muodostaen. Rinteen päällä on antiikin [[Hierapolisin]] rauniot. Nimestä tulee minulle heti mieleen pehmeä pulla.
+KYSYMYS: Kerro lisää: travertiinia
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pamukkale ja Hierapolis (luonto)
+Tietoruudun teksti: Rinteen valkoiset terassit ovat travertiinia: 17 kuumaa lähdettä (35–100 °C) tuo kalsiumkarbonaattia pintaan, hiilidioksidi karkaa, ja kivi saostuu hyllyiksi. Muodostuma on noin 2 700 metriä pitkä, 600 leveä ja 160 korkea. Sen päälle rakennettiin antiikin Hierapolis, jonka pyhin paikka oli Pluton portti — luola, josta nousi tukahduttavaa kaasua, ja jota pidettiin manalan ovena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Luonto: Puuvillalinna kasvaa vedestä] 190 eaa — Lounais-Turkissa maasta purkautuu lämmintä vettä, jossa on liuenneena kalkkia. Kun vesi valuu rinnettä alas ja jäähtyy, kalkki jää kiinni kiveen ja kovettuu travertiiniksi. Vuosituhansien aikana rinteeseen on kasvanut portaikko valkoisia altaita, joissa seisoo lämmintä sinertävää vettä. Turkiksi paikan nimi on Pamukkale, puuvillalinna. Rinteen päälle perustettiin noin vuonna 190 eaa. kaupunki Hierapolis, jonne tultiin kylpemään terveyden vuoksi. Nykyään altailla saa kävellä vain paljain jaloin, ettei valkoinen pinta likaannu.
+AIEMPI KYSYMYS: Voiko Hierapolisin kuumassa vedessä uida?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kyllä: alueella on lämpimän lähdeveden allas, jota kutsutaan antiikkialtaaksi tai Kleopatran altaaksi. Veden pohjalla on antiikin rakennuksen pylväänosia, jotka ovat pudonneet maanjäristyksissä. Uiminen on maksullista, ja vesi on lämmintä ja kivennäispitoista. Nimi ei tarkoita, että Egyptin kuningatar Kleopatra olisi uinut siellä, vaan se on matkailussa vakiintunut kutsumanimi. Altaan lisäksi alueella kannattaa nähdä [[Hierapolisin teatteri]] ja laaja [[nekropoli]]. Kyl minäkin hetken kastaisin siipiä.
+KYSYMYS: Kerro lisää: Hierapolisin teatteri
+
+### 49
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pamukkale ja Hierapolis (luonto)
+Tietoruudun teksti: Rinteen valkoiset terassit ovat travertiinia: 17 kuumaa lähdettä (35–100 °C) tuo kalsiumkarbonaattia pintaan, hiilidioksidi karkaa, ja kivi saostuu hyllyiksi. Muodostuma on noin 2 700 metriä pitkä, 600 leveä ja 160 korkea. Sen päälle rakennettiin antiikin Hierapolis, jonka pyhin paikka oli Pluton portti — luola, josta nousi tukahduttavaa kaasua, ja jota pidettiin manalan ovena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marrakech — kohdekartta / Kohdekartta: Saadilaisten haudat] 1603 Kasbahin moskeijan eteläseinän takana on puutarha, jossa on haudattu saadilaissuvun hallitsijoita. Paikka on ollut hautausmaa jo almohadien aikaan, ja marinidisulttaani Abu al-Hasan haudattiin tänne väliaikaisesti 1351 kuoltuaan maanpaossa Korkeassa Atlaksessa; hänen marmorinen hautakivensä on yhä yhdessä kammiossa, vaikka ruumis siirrettiin muutamaa kuukautta myöhemmin Chellahiin. Itäinen mausoleumi rakennettiin ensin: Abdallah al-Ghalib pystytti sen vuosien 1557 ja 1574 välillä isänsä Muhammad al-Shaykhin muistoksi. Kokonaisuus sai nykyisen laajuutensa Ahmad al-Mansurin aikana. Tärkeimmät haudat on merkitty hienosti kaiverretuin marmorilaatoin, muut on peitetty värikkäällä zellijillä…
+AIEMPI KYSYMYS: Voiko Hierapolisin kuumassa vedessä uida?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kyllä: alueella on lämpimän lähdeveden allas, jota kutsutaan antiikkialtaaksi tai Kleopatran altaaksi. Veden pohjalla on antiikin rakennuksen pylväänosia, jotka ovat pudonneet maanjäristyksissä. Uiminen on maksullista, ja vesi on lämmintä ja kivennäispitoista. Nimi ei tarkoita, että Egyptin kuningatar Kleopatra olisi uinut siellä, vaan se on matkailussa vakiintunut kutsumanimi. Altaan lisäksi alueella kannattaa nähdä [[Hierapolisin teatteri]] ja laaja [[nekropoli]]. Kyl minäkin hetken kastaisin siipiä.
+KYSYMYS: Kerro lisää: nekropoli
+
+### 50
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ankara (kaupungit)
+Tietoruudun teksti: Isoisän matkan aikaan Ankara ei ollut pääkaupunki vaan Angoran vilajetin keskus — pääkaupunki oli Istanbul. Kelttiläiset galatalaiset asettuivat kaupunkiin 278 eaa. ja tekivät siitä yhden pääleiristään; keisari Augustus nosti sen 25 eaa. Galatian provinssin pääkaupungiksi, ja hänen tekojensa virallinen luettelo hakattiin marmoriin erään temppelin seiniin. Kaupungin nimi elää yhä angorakanin, angoravuohen ja angorakissan nimissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Historia: Presidentti opetti liitutaululla] 1928 — Turkkia oli kirjoitettu arabialaisin kirjaimin lähes tuhat vuotta, mutta ne sopivat huonosti turkin kielen vokaaleihin. Marraskuussa 1928 säädettiin laki, jolla siirryttiin latinalaisiin kirjaimiin. Uudessa aakkostossa on 29 kirjainta: mukaan otettiin ç, ğ, ı, ö, ş ja ü, ja pois jäivät q, w ja x. Mustafa Kemal Atatürk kiersi maata liitutaulun kanssa ja opetti kirjaimia toreilla ja kylissä. Samana syksynä hänelle annettiin nimitys başöğretmen, pääopettaja. Koko maa opetteli lukemaan uudestaan muutamassa vuodessa.
+AIEMPI KYSYMYS: Milloin Ankarasta tuli pääkaupunki?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Ankarasta tuli Turkin pääkaupunki 13. lokakuuta 1923, vähän ennen kuin tasavalta julistettiin 29. lokakuuta. [[Mustafa Kemal Atatürk]] oli johtanut kansallista vapaussotaa Ankarasta käsin jo vuodesta 1919, ja kansalliskokous kokoontui siellä huhtikuussa 1920. [[Istanbul]] oli siihen asti ollut [[Osmanien valtakunnan]] pääkaupunki. Yleensä mainitaan, että Ankara oli keskeisellä paikalla Anatoliassa ja kaukana meren uhista.
+
+Isoisän aikaan Ankara oli vielä maakunnan keskus, ja nyt kaupungissa asuu yli viisi miljoonaa ihmistä. Se on aika monta leivänmurua kyyhkylle.
+KYSYMYS: Kerro lisää: Mustafa Kemal Atatürk
+
+### 51
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ankara (kaupungit)
+Tietoruudun teksti: Isoisän matkan aikaan Ankara ei ollut pääkaupunki vaan Angoran vilajetin keskus — pääkaupunki oli Istanbul. Kelttiläiset galatalaiset asettuivat kaupunkiin 278 eaa. ja tekivät siitä yhden pääleiristään; keisari Augustus nosti sen 25 eaa. Galatian provinssin pääkaupungiksi, ja hänen tekojensa virallinen luettelo hakattiin marmoriin erään temppelin seiniin. Kaupungin nimi elää yhä angorakanin, angoravuohen ja angorakissan nimissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Historia: Valtio ilmoitti maksavansa vain puolet] 1875 — Osmanien valtakunta otti ensimmäisen ulkomaisen lainansa Krimin sodan aikana 1854, ja parikymmentä vuotta myöhemmin velanhoito söi valtaosan valtion tuloista. Lokakuun 6. päivänä 1875 hallitus julkaisi ramazan-asetuksen: seuraavat viisi vuotta velasta maksettaisiin vain puolet käteisenä ja loput uusina viiden prosentin obligaatioina. Seuraavana vuonna maksut loppuivat kokonaan. Sopu syntyi vasta 1881 muharrem-asetuksella, joka perusti eurooppalaisten velkojien johtaman velkahallinnon; se keräsi suoraan itselleen muun muassa suola-, tupakka-, leimavero- ja alkoholitulot. Virasto jäi Istanbuliin vuosikymmeniksi, ja sen talossa toimii nykyään Istanbul Erkek Lisesi -lukio.
+- [Istanbul — kaupunkilehti / Istanbul] Kaupunki kahdella mantereella, jonka alla on pylväiden kannattama vesisäiliö, keskellä faaraon obeliski ja joka kadunkulmassa oma kissa.
+AIEMPI KYSYMYS: Milloin Ankarasta tuli pääkaupunki?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Ankarasta tuli Turkin pääkaupunki 13. lokakuuta 1923, vähän ennen kuin tasavalta julistettiin 29. lokakuuta. [[Mustafa Kemal Atatürk]] oli johtanut kansallista vapaussotaa Ankarasta käsin jo vuodesta 1919, ja kansalliskokous kokoontui siellä huhtikuussa 1920. [[Istanbul]] oli siihen asti ollut [[Osmanien valtakunnan]] pääkaupunki. Yleensä mainitaan, että Ankara oli keskeisellä paikalla Anatoliassa ja kaukana meren uhista.
+
+Isoisän aikaan Ankara oli vielä maakunnan keskus, ja nyt kaupungissa asuu yli viisi miljoonaa ihmistä. Se on aika monta leivänmurua kyyhkylle.
+KYSYMYS: Kerro lisää: Istanbul
+
+### 52
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ankara (kaupungit)
+Tietoruudun teksti: Isoisän matkan aikaan Ankara ei ollut pääkaupunki vaan Angoran vilajetin keskus — pääkaupunki oli Istanbul. Kelttiläiset galatalaiset asettuivat kaupunkiin 278 eaa. ja tekivät siitä yhden pääleiristään; keisari Augustus nosti sen 25 eaa. Galatian provinssin pääkaupungiksi, ja hänen tekojensa virallinen luettelo hakattiin marmoriin erään temppelin seiniin. Kaupungin nimi elää yhä angorakanin, angoravuohen ja angorakissan nimissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+AIEMPI KYSYMYS: Milloin Ankarasta tuli pääkaupunki?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Ankarasta tuli Turkin pääkaupunki 13. lokakuuta 1923, vähän ennen kuin tasavalta julistettiin 29. lokakuuta. [[Mustafa Kemal Atatürk]] oli johtanut kansallista vapaussotaa Ankarasta käsin jo vuodesta 1919, ja kansalliskokous kokoontui siellä huhtikuussa 1920. [[Istanbul]] oli siihen asti ollut [[Osmanien valtakunnan]] pääkaupunki. Yleensä mainitaan, että Ankara oli keskeisellä paikalla Anatoliassa ja kaukana meren uhista.
+
+Isoisän aikaan Ankara oli vielä maakunnan keskus, ja nyt kaupungissa asuu yli viisi miljoonaa ihmistä. Se on aika monta leivänmurua kyyhkylle.
+KYSYMYS: Kerro lisää: Osmanien valtakunnan
+
+### 53
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ankara (kaupungit)
+Tietoruudun teksti: Isoisän matkan aikaan Ankara ei ollut pääkaupunki vaan Angoran vilajetin keskus — pääkaupunki oli Istanbul. Kelttiläiset galatalaiset asettuivat kaupunkiin 278 eaa. ja tekivät siitä yhden pääleiristään; keisari Augustus nosti sen 25 eaa. Galatian provinssin pääkaupungiksi, ja hänen tekojensa virallinen luettelo hakattiin marmoriin erään temppelin seiniin. Kaupungin nimi elää yhä angorakanin, angoravuohen ja angorakissan nimissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Augustuksen temppeli] Rooma valloitti Keski-Anatolian ja perusti Galatian maakunnan, jonka hallintokeskus oli Ancyra. Augustuksen ja Rooman temppeli rakennettiin sinne noin 25–20 eaa. Sitä laajennettiin 100-luvulla jaa., ja 400-luvulla siitä tehtiin kirkko. Pystyssä ovat enää sivuseinät ja koristeltu oviaukon kehys, ja kuuden pylvään paikat erottuvat yhä. Viereen nousi 1400-luvun alussa Hacı Bayramin moskeija. Augustus kuoli 19. elokuuta vuonna 14 jaa., ja selonteko hänen teoistaan oli valmistunut kuukautta aiemmin. Testamentissaan hän määräsi senaatin pystyttämään tekstin. Alkuperäinen kaiverrettiin kahteen pronssipilariin Roomaan mausoleumin eteen, eivätkä pilarit ole säilyneet. Ancyrassa latina hakattiin etei…
+- [Ankara — kohdekartta / Kohdekartta: Julianuksen pylväs] 362 Uluksen hallintokorttelissa seisoo yksinään noin viisitoista metriä korkea kivipylväs. Sitä ei ole veistetty yhdestä kivestä vaan muurattu kappaleista päällekkäin, ja varren pinta on uurrettu tiheiksi vaakarenkaiksi juuresta latvaan. Ylimpänä on lehtikoristeinen kapiteeli, jonka yläreunasta on lohjennut paloja. Turkiksi pylväs on Julianus Sütunu, mutta ankaralaisten oma nimi sille on Belkıs Minaresi, Belkısin minareetti. Keisari Julianus julisti sodan persialaisia vastaan vuonna 362 ja määräsi sotaretkelle reitin, joka kulki Ankaran kautta. Kun kaupunkiin tuli tieto, että keisari pysähtyy siellä matkallaan, valmistelut aloitettiin koko kaupungissa ja pylväs pystytettiin hänen kunniaksee…
+AIEMPI KYSYMYS: Onko Augustuksen kirjoitus yhä luettavissa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kyllä, suuri osa tekstistä on yhä luettavissa Augustuksen ja [[Rooman]] temppelin seinissä Ankarassa. Kirjoitus on Augustuksen tekojen selonteko, jota kutsutaan nimellä [[Res Gestae Divi Augusti]], ja Ancyrassa se on säilynyt sekä latinaksi että kreikaksi: latinankielinen teksti on temppelin esihuoneen seinillä ja kreikankielinen käännös rakennuksen ulkoseinällä. Teksti on aikojen saatossa kulunut ja vaurioitunut, mutta tutkijat ovat voineet lukea sen lähes kokonaan. Roomassa olleet pronssipilarit eivät ole säilyneet, joten Ankaran kirjoitus on pääasiallinen tekstin lähde. Viereen nousi 1400-luvun alussa [[Hacı Bayramin moskeija]]. Ja siinä missä kirjeet katoavat, tää seinä on pysynyt.
+KYSYMYS: Kerro lisää: Rooman
+
+### 54
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ankara (kaupungit)
+Tietoruudun teksti: Isoisän matkan aikaan Ankara ei ollut pääkaupunki vaan Angoran vilajetin keskus — pääkaupunki oli Istanbul. Kelttiläiset galatalaiset asettuivat kaupunkiin 278 eaa. ja tekivät siitä yhden pääleiristään; keisari Augustus nosti sen 25 eaa. Galatian provinssin pääkaupungiksi, ja hänen tekojensa virallinen luettelo hakattiin marmoriin erään temppelin seiniin. Kaupungin nimi elää yhä angorakanin, angoravuohen ja angorakissan nimissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Keksinnöt: Pappi rakensi sääkoneen pellolle] 1754 — Prokop Diviš oli pappi Příměticen kylässä ja uskoi, että ukkosen voi estää imemällä sähkön pois pilvistä. Kesäkuun 15. päivänä 1754 hän pystytti pellolleen nelikymmenmetrisen tangon, jonka päähän hän kiinnitti peltilaatikoita ja yli 400 metallipiikkiä. Raskaat ketjut johtivat rakennelman maahan, ja juuri siksi siitä tuli yksi maailman ensimmäisistä maadoitetuista ukkosenjohdattimista — vaikka Diviš itse luuli tekevänsä aivan muuta. Kuivana kesänä 1759 kyläläiset syyttivät konetta sateen puutteesta ja purkivat sen.
+AIEMPI KYSYMYS: Onko Augustuksen kirjoitus yhä luettavissa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kyllä, suuri osa tekstistä on yhä luettavissa Augustuksen ja [[Rooman]] temppelin seinissä Ankarassa. Kirjoitus on Augustuksen tekojen selonteko, jota kutsutaan nimellä [[Res Gestae Divi Augusti]], ja Ancyrassa se on säilynyt sekä latinaksi että kreikaksi: latinankielinen teksti on temppelin esihuoneen seinillä ja kreikankielinen käännös rakennuksen ulkoseinällä. Teksti on aikojen saatossa kulunut ja vaurioitunut, mutta tutkijat ovat voineet lukea sen lähes kokonaan. Roomassa olleet pronssipilarit eivät ole säilyneet, joten Ankaran kirjoitus on pääasiallinen tekstin lähde. Viereen nousi 1400-luvun alussa [[Hacı Bayramin moskeija]]. Ja siinä missä kirjeet katoavat, tää seinä on pysynyt.
+KYSYMYS: Kerro lisää: Res Gestae Divi Augusti
+
+### 55
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ankara (kaupungit)
+Tietoruudun teksti: Isoisän matkan aikaan Ankara ei ollut pääkaupunki vaan Angoran vilajetin keskus — pääkaupunki oli Istanbul. Kelttiläiset galatalaiset asettuivat kaupunkiin 278 eaa. ja tekivät siitä yhden pääleiristään; keisari Augustus nosti sen 25 eaa. Galatian provinssin pääkaupungiksi, ja hänen tekojensa virallinen luettelo hakattiin marmoriin erään temppelin seiniin. Kaupungin nimi elää yhä angorakanin, angoravuohen ja angorakissan nimissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kaupunkilehti / Ankara: Luostari ensin, moskeija sen viereen] Numan-niminen mies tapasi opettajansa uhrijuhlan aikaan ja otti nimen Bayram. Opettajan kuoltua vuonna 1412 hän palasi Ankaraan ja perusti Bayrami-veljeskunnan, jonka opetusta tultiin kuuntelemaan kauempaakin. Hacı Bayram Veli eli vuosina 1352–1430, ja hän rakensi dervissiluostarin sille paikalle, jossa nyt seisovat hänen hautansa ja moskeija. Moskeija valmistui 1427–28, kaksi vuotta ennen hänen kuolemaansa, seldžukkityyliin; arkkitehtia ei tiedetä. Käyttöalaa on alakerrassa 437 ja yläkerrassa 263 neliömetriä. 1500-luvulla Mimar Sinan teki rakennukseen kunnostustöitä, ja 1700-luvulla seiniin lisättiin Kütahyan laattoja.
+- [Ankara — kohdekartta / Kohdekartta: Augustuksen temppeli] Rooma valloitti Keski-Anatolian ja perusti Galatian maakunnan, jonka hallintokeskus oli Ancyra. Augustuksen ja Rooman temppeli rakennettiin sinne noin 25–20 eaa. Sitä laajennettiin 100-luvulla jaa., ja 400-luvulla siitä tehtiin kirkko. Pystyssä ovat enää sivuseinät ja koristeltu oviaukon kehys, ja kuuden pylvään paikat erottuvat yhä. Viereen nousi 1400-luvun alussa Hacı Bayramin moskeija. Augustus kuoli 19. elokuuta vuonna 14 jaa., ja selonteko hänen teoistaan oli valmistunut kuukautta aiemmin. Testamentissaan hän määräsi senaatin pystyttämään tekstin. Alkuperäinen kaiverrettiin kahteen pronssipilariin Roomaan mausoleumin eteen, eivätkä pilarit ole säilyneet. Ancyrassa latina hakattiin etei…
+AIEMPI KYSYMYS: Onko Augustuksen kirjoitus yhä luettavissa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kyllä, suuri osa tekstistä on yhä luettavissa Augustuksen ja [[Rooman]] temppelin seinissä Ankarassa. Kirjoitus on Augustuksen tekojen selonteko, jota kutsutaan nimellä [[Res Gestae Divi Augusti]], ja Ancyrassa se on säilynyt sekä latinaksi että kreikaksi: latinankielinen teksti on temppelin esihuoneen seinillä ja kreikankielinen käännös rakennuksen ulkoseinällä. Teksti on aikojen saatossa kulunut ja vaurioitunut, mutta tutkijat ovat voineet lukea sen lähes kokonaan. Roomassa olleet pronssipilarit eivät ole säilyneet, joten Ankaran kirjoitus on pääasiallinen tekstin lähde. Viereen nousi 1400-luvun alussa [[Hacı Bayramin moskeija]]. Ja siinä missä kirjeet katoavat, tää seinä on pysynyt.
+KYSYMYS: Kerro lisää: Hacı Bayramin moskeija
+
+### 56
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ankara (kaupungit)
+Tietoruudun teksti: Isoisän matkan aikaan Ankara ei ollut pääkaupunki vaan Angoran vilajetin keskus — pääkaupunki oli Istanbul. Kelttiläiset galatalaiset asettuivat kaupunkiin 278 eaa. ja tekivät siitä yhden pääleiristään; keisari Augustus nosti sen 25 eaa. Galatian provinssin pääkaupungiksi, ja hänen tekojensa virallinen luettelo hakattiin marmoriin erään temppelin seiniin. Kaupungin nimi elää yhä angorakanin, angoravuohen ja angorakissan nimissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Historia: Presidentti opetti liitutaululla] 1928 — Turkkia oli kirjoitettu arabialaisin kirjaimin lähes tuhat vuotta, mutta ne sopivat huonosti turkin kielen vokaaleihin. Marraskuussa 1928 säädettiin laki, jolla siirryttiin latinalaisiin kirjaimiin. Uudessa aakkostossa on 29 kirjainta: mukaan otettiin ç, ğ, ı, ö, ş ja ü, ja pois jäivät q, w ja x. Mustafa Kemal Atatürk kiersi maata liitutaulun kanssa ja opetti kirjaimia toreilla ja kylissä. Samana syksynä hänelle annettiin nimitys başöğretmen, pääopettaja. Koko maa opetteli lukemaan uudestaan muutamassa vuodessa.
+AIEMPI KYSYMYS: Mikä on Anıtkabir?
+AIEMPI VASTAUS (Livia):
+Ai se. Anıtkabir on [[Mustafa Kemal Atatürkin]] mausoleumi Ankarassa. Atatürk kuoli vuonna 1938, ja mausoleumi valmistui vuonna 1953, jolloin hänen arkkunsa siirrettiin sinne. Rakennuksen suunnittelivat arkkitehdit [[Emin Onat]] ja Orhan Arda, ja se valittiin suunnittelukilpailun kautta. Kompleksiin kuuluu myös museo, ja paikka on tärkeä kansallinen muistopaikka, jossa vierailee paljon turkkilaisia. Pitkä rinne ylös, minä kyl lentäisin.
+KYSYMYS: Kerro lisää: Mustafa Kemal Atatürkin
+
+### 57
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ankara (kaupungit)
+Tietoruudun teksti: Isoisän matkan aikaan Ankara ei ollut pääkaupunki vaan Angoran vilajetin keskus — pääkaupunki oli Istanbul. Kelttiläiset galatalaiset asettuivat kaupunkiin 278 eaa. ja tekivät siitä yhden pääleiristään; keisari Augustus nosti sen 25 eaa. Galatian provinssin pääkaupungiksi, ja hänen tekojensa virallinen luettelo hakattiin marmoriin erään temppelin seiniin. Kaupungin nimi elää yhä angorakanin, angoravuohen ja angorakissan nimissä.
+AIEMPI KYSYMYS: Mikä on Anıtkabir?
+AIEMPI VASTAUS (Livia):
+Ai se. Anıtkabir on [[Mustafa Kemal Atatürkin]] mausoleumi Ankarassa. Atatürk kuoli vuonna 1938, ja mausoleumi valmistui vuonna 1953, jolloin hänen arkkunsa siirrettiin sinne. Rakennuksen suunnittelivat arkkitehdit [[Emin Onat]] ja Orhan Arda, ja se valittiin suunnittelukilpailun kautta. Kompleksiin kuuluu myös museo, ja paikka on tärkeä kansallinen muistopaikka, jossa vierailee paljon turkkilaisia. Pitkä rinne ylös, minä kyl lentäisin.
+KYSYMYS: Kerro lisää: Emin Onat
+
+### 58
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ankara (kaupungit)
+Tietoruudun teksti: Isoisän matkan aikaan Ankara ei ollut pääkaupunki vaan Angoran vilajetin keskus — pääkaupunki oli Istanbul. Kelttiläiset galatalaiset asettuivat kaupunkiin 278 eaa. ja tekivät siitä yhden pääleiristään; keisari Augustus nosti sen 25 eaa. Galatian provinssin pääkaupungiksi, ja hänen tekojensa virallinen luettelo hakattiin marmoriin erään temppelin seiniin. Kaupungin nimi elää yhä angorakanin, angoravuohen ja angorakissan nimissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Augustuksen temppeli] Rooma valloitti Keski-Anatolian ja perusti Galatian maakunnan, jonka hallintokeskus oli Ancyra. Augustuksen ja Rooman temppeli rakennettiin sinne noin 25–20 eaa. Sitä laajennettiin 100-luvulla jaa., ja 400-luvulla siitä tehtiin kirkko. Pystyssä ovat enää sivuseinät ja koristeltu oviaukon kehys, ja kuuden pylvään paikat erottuvat yhä. Viereen nousi 1400-luvun alussa Hacı Bayramin moskeija. Augustus kuoli 19. elokuuta vuonna 14 jaa., ja selonteko hänen teoistaan oli valmistunut kuukautta aiemmin. Testamentissaan hän määräsi senaatin pystyttämään tekstin. Alkuperäinen kaiverrettiin kahteen pronssipilariin Roomaan mausoleumin eteen, eivätkä pilarit ole säilyneet. Ancyrassa latina hakattiin etei…
+AIEMPI KYSYMYS: Mistä angoravuohi ja angorakani ovat saaneet nimensä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Nimi tulee Ankaran vanhasta nimestä Angora, jota kaupungista käytettiin Euroopassa pitkään, ja nimen taustalla on antiikin [[Ancyra]]. Angoravuohesta saadaan [[mohair-villaa]], ja angorakanin pehmeä turkki kehrätään angoralangaksi. Angorakissa on pitkäkarvainen kissarotu, jonka juuret ovat samalla seudulla. Kaupungin nimi elää siis edelleen eläinten ja kankaiden nimissä. Kissat tosin vievät kaiken kunnian, harmi.
+KYSYMYS: Kerro lisää: Ancyra
+
+### 59
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ankara (kaupungit)
+Tietoruudun teksti: Isoisän matkan aikaan Ankara ei ollut pääkaupunki vaan Angoran vilajetin keskus — pääkaupunki oli Istanbul. Kelttiläiset galatalaiset asettuivat kaupunkiin 278 eaa. ja tekivät siitä yhden pääleiristään; keisari Augustus nosti sen 25 eaa. Galatian provinssin pääkaupungiksi, ja hänen tekojensa virallinen luettelo hakattiin marmoriin erään temppelin seiniin. Kaupungin nimi elää yhä angorakanin, angoravuohen ja angorakissan nimissä.
+AIEMPI KYSYMYS: Mistä angoravuohi ja angorakani ovat saaneet nimensä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Nimi tulee Ankaran vanhasta nimestä Angora, jota kaupungista käytettiin Euroopassa pitkään, ja nimen taustalla on antiikin [[Ancyra]]. Angoravuohesta saadaan [[mohair-villaa]], ja angorakanin pehmeä turkki kehrätään angoralangaksi. Angorakissa on pitkäkarvainen kissarotu, jonka juuret ovat samalla seudulla. Kaupungin nimi elää siis edelleen eläinten ja kankaiden nimissä. Kissat tosin vievät kaiken kunnian, harmi.
+KYSYMYS: Kerro lisää: mohair-villaa
+
+### 60
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ankara (kaupungit)
+Tietoruudun teksti: Isoisän matkan aikaan Ankara ei ollut pääkaupunki vaan Angoran vilajetin keskus — pääkaupunki oli Istanbul. Kelttiläiset galatalaiset asettuivat kaupunkiin 278 eaa. ja tekivät siitä yhden pääleiristään; keisari Augustus nosti sen 25 eaa. Galatian provinssin pääkaupungiksi, ja hänen tekojensa virallinen luettelo hakattiin marmoriin erään temppelin seiniin. Kaupungin nimi elää yhä angorakanin, angoravuohen ja angorakissan nimissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Anatolian sivilisaatioiden museo] Museo on kahdessa 1400-luvun ottomaanirakennuksessa Ankaran linnan eteläpuolella Atpazarın korttelissa. Näyttely on Mahmut Paşan bedestenissä eli katetussa kauppahallissa, jonka Mehmed II:n visiiri rakennutti vuosina 1464–1471: kymmenen kupolia kattaa suorakaiteen, ja hallissa oli 102 puotia vastakkain. Vieressä on Kurşunlu Han: keskellä piha ja pylväskäytävä, ympärillä kaksi kerrosta huoneita, 28 alhaalla ja 30 ylhäällä. Han on nykyään hallintosiipi, jossa ovat työhuoneet, kirjasto, esitelmäsali ja laboratorio. Kymmenkupolinen keskihalli on jätetty yhdeksi tilaksi, ja siinä seisovat suuret kivireliefit ja patsaat myöhäisheettiläiseltä ajalta: pitkäkaapuisia sotilaita, sotavaunuja, hierogly…
+AIEMPI KYSYMYS: Mitä Anatolian sivilisaatioiden museossa on esillä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Ankarassa sijaitseva museo esittelee Anatolian kulttuurien vaiheita esihistoriasta antiikin aikoihin. Kokoelmiin kuuluu esineistöä muun muassa [[Çatalhöyükin]] uusikivikautisesta asutuksesta sekä [[heettiläisten]] ja [[frygialaisten]] ajalta. Museo toimii restauroiduissa osmanien ajan rakennuksissa Ankaran linnan juurella. Kyl minä niin mielelläni lentäisin sinne kirjeen kanssa.
+KYSYMYS: Kerro lisää: Çatalhöyükin
+
+### 61
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ankara (kaupungit)
+Tietoruudun teksti: Isoisän matkan aikaan Ankara ei ollut pääkaupunki vaan Angoran vilajetin keskus — pääkaupunki oli Istanbul. Kelttiläiset galatalaiset asettuivat kaupunkiin 278 eaa. ja tekivät siitä yhden pääleiristään; keisari Augustus nosti sen 25 eaa. Galatian provinssin pääkaupungiksi, ja hänen tekojensa virallinen luettelo hakattiin marmoriin erään temppelin seiniin. Kaupungin nimi elää yhä angorakanin, angoravuohen ja angorakissan nimissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Historia: Kaksi suurvaltaa kirjoitti sodan loppuun] n. 1259 eaa — Hattusa oli heettiläisten pääkaupunki Keski-Anatoliassa. Sieltä johdettiin valtakuntaa, joka taisteli Egyptiä vastaan Kadeshissa ja teki taistelun jälkeen sopimuksen, jota pidetään maailman vanhimpana säilyneenä rauhansopimuksena. Erikoisinta on, että siitä on tallella molempien osapuolten oma versio: egyptiläinen hakattuna temppelin seinään ja heettiläinen poltettuun savitauluun. Savitaulu löytyi Hattusan raunioista vuonna 1906, ja se on kirjoitettu akkadiksi, ajan yleiskielellä. Suurennettu jäljennös sopimuksesta on esillä YK:n päämajassa New Yorkissa.
+AIEMPI KYSYMYS: Mitä Anatolian sivilisaatioiden museossa on esillä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Ankarassa sijaitseva museo esittelee Anatolian kulttuurien vaiheita esihistoriasta antiikin aikoihin. Kokoelmiin kuuluu esineistöä muun muassa [[Çatalhöyükin]] uusikivikautisesta asutuksesta sekä [[heettiläisten]] ja [[frygialaisten]] ajalta. Museo toimii restauroiduissa osmanien ajan rakennuksissa Ankaran linnan juurella. Kyl minä niin mielelläni lentäisin sinne kirjeen kanssa.
+KYSYMYS: Kerro lisää: heettiläisten
+
+### 62
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ankara (kaupungit)
+Tietoruudun teksti: Isoisän matkan aikaan Ankara ei ollut pääkaupunki vaan Angoran vilajetin keskus — pääkaupunki oli Istanbul. Kelttiläiset galatalaiset asettuivat kaupunkiin 278 eaa. ja tekivät siitä yhden pääleiristään; keisari Augustus nosti sen 25 eaa. Galatian provinssin pääkaupungiksi, ja hänen tekojensa virallinen luettelo hakattiin marmoriin erään temppelin seiniin. Kaupungin nimi elää yhä angorakanin, angoravuohen ja angorakissan nimissä.
+AIEMPI KYSYMYS: Mitä Anatolian sivilisaatioiden museossa on esillä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Ankarassa sijaitseva museo esittelee Anatolian kulttuurien vaiheita esihistoriasta antiikin aikoihin. Kokoelmiin kuuluu esineistöä muun muassa [[Çatalhöyükin]] uusikivikautisesta asutuksesta sekä [[heettiläisten]] ja [[frygialaisten]] ajalta. Museo toimii restauroiduissa osmanien ajan rakennuksissa Ankaran linnan juurella. Kyl minä niin mielelläni lentäisin sinne kirjeen kanssa.
+KYSYMYS: Kerro lisää: frygialaisten
+
+### 63
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: İzmir (kaupungit)
+Tietoruudun teksti: Smyrna oli 1800-luvulla Ottomaanien vilkkain länsisatama ja monikielinen kauppakaupunki: brittien arvion mukaan siellä asui 1865 noin 180 000 ihmistä, joista 80 000 kreikkalaisia. Turkin nykyalueen ensimmäinen rautatie lähti täältä — 130 kilometrin rata Aydınille aloitettiin 1856 ja valmistui 1867. Vuonna 1867 kaupunki sai vihdoin oman vilajettinsa. Isoisän aikaan se oli Istanbulin jälkeen valtakunnan tärkein portti länteen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Izmir — kaupunkilehti / İzmir: Unessa käskettiin muuttaa kukkulalle] Kadifekale seisoo Pagos-vuoren laella 186 metrin korkeudessa, noin kahden kilometrin päässä rantaviivasta. Ensimmäiset tunnetut muurit rakennutti Lysimakhos, yksi Aleksanteri Suuren seuraajista, ja samoihin aikoihin Smyrna siirrettiin tänne vanhalta paikaltaan kummulta, jolle mahtui vain muutama tuhat asukasta. Pausanias kertoo tarinan, jonka mukaan Aleksanteri nukahti metsästysretkellä plataanin alle ja näki unessa kaksi jumalatarta, jotka käskivät perustaa kaupungin juuri sille kukkulalle. Nykyiset muurit ovat keskiajalta.
+AIEMPI KYSYMYS: Milloin Smyrnasta tuli İzmir myös englanniksi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tässä on pieni nimikiemura. [[Smyrna]] on kaupungin vanha kreikkalainen nimi, ja turkkilaisessa käytössä kaupunkia on kutsuttu İzmiriksi jo pitkään; nimen katsotaan polveutuvan kreikan sanoista, jotka tarkoittavat matkaa Smyrnaan. Länsimaissa vanha nimi pysyi kuitenkin yleisenä, ja İzmir vakiintui kansainvälisesti [[Turkin tasavallan]] aikana, noin 1930-luvun alussa, kun viranomaisten ja postin käytössä alettiin vaatia turkkilaisia paikannimiä. Tarkasta päivämäärästä en ole varma, ja vanha nimi elää yhä historiallisessa käytössä. Nimi vaihtuu, mut kyyhky löytää perille.
+KYSYMYS: Kerro lisää: Smyrna
+
+### 64
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: İzmir (kaupungit)
+Tietoruudun teksti: Smyrna oli 1800-luvulla Ottomaanien vilkkain länsisatama ja monikielinen kauppakaupunki: brittien arvion mukaan siellä asui 1865 noin 180 000 ihmistä, joista 80 000 kreikkalaisia. Turkin nykyalueen ensimmäinen rautatie lähti täältä — 130 kilometrin rata Aydınille aloitettiin 1856 ja valmistui 1867. Vuonna 1867 kaupunki sai vihdoin oman vilajettinsa. Isoisän aikaan se oli Istanbulin jälkeen valtakunnan tärkein portti länteen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Tasavallan vuosi] Se huuto, jonka kuulit kahviloissa, oli aiheellista. Tasavallan johdossa vaihtui isoisäsi matkavuonna neljä miestä. Estanislao Figueras kesti helmikuusta kesäkuuhun. Francisco Pi y Margall aloitti 11. kesäkuuta ja kesti 37 päivää: hän kieltäytyi tukahduttamasta etelän kapinoita aseilla, koska kapinalliset noudattivat hänen omaa oppiaan. Nicolás Salmerón aloitti 18. heinäkuuta, ja kun kenraalit vaativat häntä vahvistamaan karkureiden kuolemantuomiot, hän erosi 6. syyskuuta — hän oli oikeusministerinä itse poistanut kuolemanrangaistuksen, ja hänen mausoleuminsa seinään on kirjoitettu, että hän luopui vallasta, jottei allekirjoittaisi kuolemantuomiota. Emilio Castelar aloitti 7. syyskuuta ja v…
+- [Riad — kohdekartta / Kohdekartta: Imam Turkin suurmoskeija] Turki bin Abdullah otti Riadin 1824 ja teki siitä toisen Saudi-valtion pääkaupungin. Suurmoskeija rakennettiin hänen aikanaan vuosina 1826–1830, hallintopalatsi Qasr al-Hukmin viereen. Turki surmattiin vuonna 1834 perjantairukouksesta lähtiessään, ja moskeija kantaa yhä hänen nimeään. Nykyinen moskeija on vuodelta 1992, ja se avattiin tammikuussa 1993. Samoihin vuosiin osui koko Qasr al-Hukmin korttelin uudistus, jonka työt kestivät 1983–1992. Sisätilaa on 16 800 neliömetriä ja rukoilijoita mahtuu 17 000; se on yksi maan suurimmista moskeijoista. Ulkoseinät ja sisätilan yläosa ovat ruskeaa riadilaista kalkkikiveä, alaosa valkoista marmoria. Miesten ja naisten kirjastot ovat kumpikin 325 nel…
+AIEMPI KYSYMYS: Milloin Smyrnasta tuli İzmir myös englanniksi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tässä on pieni nimikiemura. [[Smyrna]] on kaupungin vanha kreikkalainen nimi, ja turkkilaisessa käytössä kaupunkia on kutsuttu İzmiriksi jo pitkään; nimen katsotaan polveutuvan kreikan sanoista, jotka tarkoittavat matkaa Smyrnaan. Länsimaissa vanha nimi pysyi kuitenkin yleisenä, ja İzmir vakiintui kansainvälisesti [[Turkin tasavallan]] aikana, noin 1930-luvun alussa, kun viranomaisten ja postin käytössä alettiin vaatia turkkilaisia paikannimiä. Tarkasta päivämäärästä en ole varma, ja vanha nimi elää yhä historiallisessa käytössä. Nimi vaihtuu, mut kyyhky löytää perille.
+KYSYMYS: Kerro lisää: Turkin tasavallan
+
+### 65
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: İzmir (kaupungit)
+Tietoruudun teksti: Smyrna oli 1800-luvulla Ottomaanien vilkkain länsisatama ja monikielinen kauppakaupunki: brittien arvion mukaan siellä asui 1865 noin 180 000 ihmistä, joista 80 000 kreikkalaisia. Turkin nykyalueen ensimmäinen rautatie lähti täältä — 130 kilometrin rata Aydınille aloitettiin 1856 ja valmistui 1867. Vuonna 1867 kaupunki sai vihdoin oman vilajettinsa. Isoisän aikaan se oli Istanbulin jälkeen valtakunnan tärkein portti länteen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Izmir — kohdekartta / Kohdekartta: İzmirin kellotorni] 1901 Torni on 25 metriä korkea ja seisoo 81 neliömetrin alalla. Pohjakaava on kahdeksankulmainen ja kerroksia on neljä. Runko on rautaa ja lyijyä, pinta marmoria ja kiveä. Jalustan ympärille on ladottu kehäksi neljä şadırvania eli suihkulähdettä. Kellotauluja on niin ikään neljä, halkaisijaltaan 75 senttiä, ja neljännessä kerroksessa riippuu soittokello, jota kannattaa kaksitoista pylvästä. Aydınin vilajetin kuvernööri Kâmil Pasha kutsui İzmirin vaikutusvaltaiset koolle 1. elokuuta 1900. Kokouksessa päätettiin kellotornista, joka pystytettäisiin sulttaani Abdülhamid II:n valtaistuimelle nousun 25-vuotispäivän kunniaksi. Peruskivi laskettiin 1. syyskuuta 1900, torni valmistui elokuussa 1901 …
+AIEMPI KYSYMYS: Kulkeeko vuoden 1867 rata vielä Aydınille?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kyllä, 1850- ja 1860-luvuilla rakennettu yhteys on edelleen osa Turkin rautatieverkkoa, vaikka rataa ja kalustoa on uudistettu useaan kertaan. [[Aydınin]] suuntaan kulkee yhä junia, mutta aikataulut ja reittien yksityiskohdat muuttuvat, joten en ole varma nykyisestä liikenteestä. Radan rakennutti alun perin [[brittiläinen]] yhtiö, ja se oli osa [[Ottomaanien]] rautatieverkon varhaisinta vaihetta. Vanhat radat ne vaan jaksavat.
+KYSYMYS: Kerro lisää: Aydınin
+
+### 66
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: İzmir (kaupungit)
+Tietoruudun teksti: Smyrna oli 1800-luvulla Ottomaanien vilkkain länsisatama ja monikielinen kauppakaupunki: brittien arvion mukaan siellä asui 1865 noin 180 000 ihmistä, joista 80 000 kreikkalaisia. Turkin nykyalueen ensimmäinen rautatie lähti täältä — 130 kilometrin rata Aydınille aloitettiin 1856 ja valmistui 1867. Vuonna 1867 kaupunki sai vihdoin oman vilajettinsa. Isoisän aikaan se oli Istanbulin jälkeen valtakunnan tärkein portti länteen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bermuda — kaupunkilehti / Bermuda: Vanhin brittiläinen kaupunki Uudessa maailmassa] Sea Venturen selviytyjien perustama St. George's sai virallisen asemansa 1612, kun Lontoon Virginia-yhtiö lähetti saarille kuusikymmentä uutta siirtolaista. Kaupungista tuli Bermudan pääkaupunki ja tärkein satama aina vuoteen 1815 asti, ja se tunnetaan yhä vanhimpana yhtäjaksoisesti asuttuna brittiläisenä kaupunkina koko Uudessa maailmassa. Kapeat kujat ja vanhat kivitalot ovat säilyneet niin hyvin, että Unesco otti St. Georgen ja sitä ympäröivät linnoitukset maailmanperintöluetteloonsa vuonna 2000. Kaupungin keskellä seisoo yhä Pyhän Pietarin kirkko, jota pidetään vanhimpana yhä käytössä olevana anglikaanisena kirkkona läntisellä pallonpuoliskolla.
+- [Murzuk — kaupunkilehti / Orjakaravaanien risteysasema: Brittiläinen varakonsuli laskee orjia] Vuonna 1840 Britannian ulkoministeriö avasi Murzukiin varakonsulaatin, jonka yhtenä tehtävänä oli seurata ja hillitä keskisen Saharan orjakauppaa – kaupunki oli tuolloin sen vilkkaimman reitin tärkein välipysäkki Sudanin ja Tripolin välillä. Varakonsuli Giambattista Gagliuffi raportoi 1843–1854 Lontooseen vuosittaisia tilastoja karavaanien mukana kuljetetuista orjista, ja raporteista on tullut ainutlaatuinen lähde ajalta, jolloin kauppa oli vilkkaimmillaan. Vanha ottomaanilinnoitus toimi samaan aikaan paikallishallinnon tukikohtana, ja sen varjossa varakonsuli seurasi karavaanien tuloa ja lähtöä vuosikymmenten ajan.
+AIEMPI KYSYMYS: Kulkeeko vuoden 1867 rata vielä Aydınille?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kyllä, 1850- ja 1860-luvuilla rakennettu yhteys on edelleen osa Turkin rautatieverkkoa, vaikka rataa ja kalustoa on uudistettu useaan kertaan. [[Aydınin]] suuntaan kulkee yhä junia, mutta aikataulut ja reittien yksityiskohdat muuttuvat, joten en ole varma nykyisestä liikenteestä. Radan rakennutti alun perin [[brittiläinen]] yhtiö, ja se oli osa [[Ottomaanien]] rautatieverkon varhaisinta vaihetta. Vanhat radat ne vaan jaksavat.
+KYSYMYS: Kerro lisää: brittiläinen
+
+### 67
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: İzmir (kaupungit)
+Tietoruudun teksti: Smyrna oli 1800-luvulla Ottomaanien vilkkain länsisatama ja monikielinen kauppakaupunki: brittien arvion mukaan siellä asui 1865 noin 180 000 ihmistä, joista 80 000 kreikkalaisia. Turkin nykyalueen ensimmäinen rautatie lähti täältä — 130 kilometrin rata Aydınille aloitettiin 1856 ja valmistui 1867. Vuonna 1867 kaupunki sai vihdoin oman vilajettinsa. Isoisän aikaan se oli Istanbulin jälkeen valtakunnan tärkein portti länteen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Historian hetki: Hisarlık 1873 — kulta kaivannon seinämässä] toukokuu 1873 — Kaivannon seinämän juuresta, muurin alta, on tullut esiin kuparinen astia, ja sen sisältä alkaa nousta kultaa: diadeemeja, korvakoruja, nappeja, tuhansia pieniä kultaesineitä sekä hopeaa ja pronssia. Heinrich Schliemann on 51-vuotias, rikastunut kauppias, joka on tullut kummulle todistaakseen, että Homeroksen Troija oli totta, ja hän nimeää löydön saman tien Priamoksen aarteeksi. Oman kertomuksensa mukaan hän lähetti työmiehet tauolle ja kaivoi kullan esiin itse veitsellä, jottei kukaan näkisi; tutkijat ovat sittemmin epäilleet kertomusta, ja ne kaivajat, joiden käsien kautta löydöt kulkivat, jäivät hänen sankaritarinansa ulkopuolelle. Päiväkirjaan hän kirjoitti myös, että v…
+- [Tripoli — kaupunkilehti / Tripoli: Ottomaanien kellotorni seisoo kujien keskellä] Medinan aukiolla seisoo ottomaaniaikainen kellotorni, yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen kerroksen kulmissa on parittain pylväitä, ja niiden päällä kiertää koristeltu räystäslista. Muotokieli on eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää näkee myös medinan moskeijoissa, joissa marmoripylväät ja kaakelipinnat ovat rinnakkain arabialaisen kalligrafian kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on kujilta helpoin kiintopiste: kun torni näkyy, tietää olevansa medinan keskellä. Rappaus on paikoin lohkeillut ja paljastanut alta kiviaineksen.
+AIEMPI KYSYMYS: Kulkeeko vuoden 1867 rata vielä Aydınille?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kyllä, 1850- ja 1860-luvuilla rakennettu yhteys on edelleen osa Turkin rautatieverkkoa, vaikka rataa ja kalustoa on uudistettu useaan kertaan. [[Aydınin]] suuntaan kulkee yhä junia, mutta aikataulut ja reittien yksityiskohdat muuttuvat, joten en ole varma nykyisestä liikenteestä. Radan rakennutti alun perin [[brittiläinen]] yhtiö, ja se oli osa [[Ottomaanien]] rautatieverkon varhaisinta vaihetta. Vanhat radat ne vaan jaksavat.
+KYSYMYS: Kerro lisää: Ottomaanien
+
+### 68
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: İzmir (kaupungit)
+Tietoruudun teksti: Smyrna oli 1800-luvulla Ottomaanien vilkkain länsisatama ja monikielinen kauppakaupunki: brittien arvion mukaan siellä asui 1865 noin 180 000 ihmistä, joista 80 000 kreikkalaisia. Turkin nykyalueen ensimmäinen rautatie lähti täältä — 130 kilometrin rata Aydınille aloitettiin 1856 ja valmistui 1867. Vuonna 1867 kaupunki sai vihdoin oman vilajettinsa. Isoisän aikaan se oli Istanbulin jälkeen valtakunnan tärkein portti länteen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Izmir — kohdekartta / Kohdekartta: Kemeraltin basaari] Kemeraltın pääkuja ei kulje suoraan. Anafartalar caddesi kaartuu leveänä puolikuuna, ja kaari on vanhan rantaviivan muoto: kuja seuraa İzmirin sisälahden reunaa. Keskiajalla katua sanottiin mevlevien kaduksi, koska sen varrella oli sufiveljeskunnan kokoontumistalo dergah. Basaari syntyi vasta, kun lahden matalimmat kohdat täytettiin vuosina 1650–1670 ja kauppa levisi uudelle maalle. Loput sisälahdesta liettyi umpeen 1700-luvulla, ja rantaviiva sai nykyisen suoran muotonsa 1800-luvun alussa. Täytetylle maalle nousi karavaaniseraajeja. Vuonna 1744 valmistui Kızlarağası Han, josta tuli basaarin ydin ja joka on yhä pystyssä. Kortteliin rakennettiin 1600-luvulla myös Suuri ja Pieni Vezir Han: en…
+AIEMPI KYSYMYS: Mikä Kemeraltı on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tän minä tunnen katolta. [[Kemeraltı]] on İzmirin vanha basaarialue, jossa kapeat kujat kiertävät kauppoja, käsityöläisten pajoja, kahviloita ja ruokapaikkoja. Alueella sijaitsee muun muassa 1700-luvulla rakennettu [[Kızlarağası Han]], entinen karavaanisaarai, jossa toimii nykyään kauppoja ja kahvila, sekä [[Hisar-moskeija]]. Kemeraltı on yhä toimiva kauppa-alue eikä pelkkä nähtävyys, ja siellä on helppo eksyä. Ylhäältä sen sokkelon näkee kyl selvemmin.
+KYSYMYS: Kerro lisää: Kemeraltı
+
+### 69
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: İzmir (kaupungit)
+Tietoruudun teksti: Smyrna oli 1800-luvulla Ottomaanien vilkkain länsisatama ja monikielinen kauppakaupunki: brittien arvion mukaan siellä asui 1865 noin 180 000 ihmistä, joista 80 000 kreikkalaisia. Turkin nykyalueen ensimmäinen rautatie lähti täältä — 130 kilometrin rata Aydınille aloitettiin 1856 ja valmistui 1867. Vuonna 1867 kaupunki sai vihdoin oman vilajettinsa. Isoisän aikaan se oli Istanbulin jälkeen valtakunnan tärkein portti länteen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Izmir — kohdekartta / Kohdekartta: Kemeraltin basaari] Kemeraltın pääkuja ei kulje suoraan. Anafartalar caddesi kaartuu leveänä puolikuuna, ja kaari on vanhan rantaviivan muoto: kuja seuraa İzmirin sisälahden reunaa. Keskiajalla katua sanottiin mevlevien kaduksi, koska sen varrella oli sufiveljeskunnan kokoontumistalo dergah. Basaari syntyi vasta, kun lahden matalimmat kohdat täytettiin vuosina 1650–1670 ja kauppa levisi uudelle maalle. Loput sisälahdesta liettyi umpeen 1700-luvulla, ja rantaviiva sai nykyisen suoran muotonsa 1800-luvun alussa. Täytetylle maalle nousi karavaaniseraajeja. Vuonna 1744 valmistui Kızlarağası Han, josta tuli basaarin ydin ja joka on yhä pystyssä. Kortteliin rakennettiin 1600-luvulla myös Suuri ja Pieni Vezir Han: en…
+AIEMPI KYSYMYS: Mikä Kemeraltı on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tän minä tunnen katolta. [[Kemeraltı]] on İzmirin vanha basaarialue, jossa kapeat kujat kiertävät kauppoja, käsityöläisten pajoja, kahviloita ja ruokapaikkoja. Alueella sijaitsee muun muassa 1700-luvulla rakennettu [[Kızlarağası Han]], entinen karavaanisaarai, jossa toimii nykyään kauppoja ja kahvila, sekä [[Hisar-moskeija]]. Kemeraltı on yhä toimiva kauppa-alue eikä pelkkä nähtävyys, ja siellä on helppo eksyä. Ylhäältä sen sokkelon näkee kyl selvemmin.
+KYSYMYS: Kerro lisää: Kızlarağası Han
+
+### 70
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: İzmir (kaupungit)
+Tietoruudun teksti: Smyrna oli 1800-luvulla Ottomaanien vilkkain länsisatama ja monikielinen kauppakaupunki: brittien arvion mukaan siellä asui 1865 noin 180 000 ihmistä, joista 80 000 kreikkalaisia. Turkin nykyalueen ensimmäinen rautatie lähti täältä — 130 kilometrin rata Aydınille aloitettiin 1856 ja valmistui 1867. Vuonna 1867 kaupunki sai vihdoin oman vilajettinsa. Isoisän aikaan se oli Istanbulin jälkeen valtakunnan tärkein portti länteen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Izmir — kohdekartta / Kohdekartta: Hisarin moskeija] 1598 Nimi tarkoittaa linnoitusta. Hisar Camii, myös Hisarönün moskeija, seisoo Kemeraltın basaarikorttelissa İzmirin keskustassa, ja se on keskustan suurimpia moskeijoita: pohjakaava on suorakaide, 25 metriä kertaa 20. Sisäänkäyntiä vastapäätä kohoaa pääkupoli, jota kannattaa kahdeksan järeää pylvästä. Sen molemmin puolin on kolme suurta kupolia ja takaosassa ylhäällä vielä kolme pienempää. Pihan sivuja kiertää seitsemän kupolin rivi, ja pihalle avautuu şadırvan, suihkulähde, jonka ääressä peseydytään ennen rukousta. Rakennuttajaksi on kirjattu Aydınoğlu Yakup Bey, joka oli İzmirin osmanihallitsija vuosina 1592–1598, ja valmistumisvuodeksi 1598. Nykyinen asu ei ole alkuperäinen: rakennus on…
+AIEMPI KYSYMYS: Mikä Kemeraltı on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tän minä tunnen katolta. [[Kemeraltı]] on İzmirin vanha basaarialue, jossa kapeat kujat kiertävät kauppoja, käsityöläisten pajoja, kahviloita ja ruokapaikkoja. Alueella sijaitsee muun muassa 1700-luvulla rakennettu [[Kızlarağası Han]], entinen karavaanisaarai, jossa toimii nykyään kauppoja ja kahvila, sekä [[Hisar-moskeija]]. Kemeraltı on yhä toimiva kauppa-alue eikä pelkkä nähtävyys, ja siellä on helppo eksyä. Ylhäältä sen sokkelon näkee kyl selvemmin.
+KYSYMYS: Kerro lisää: Hisar-moskeija
+
+### 71
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: İzmir (kaupungit)
+Tietoruudun teksti: Smyrna oli 1800-luvulla Ottomaanien vilkkain länsisatama ja monikielinen kauppakaupunki: brittien arvion mukaan siellä asui 1865 noin 180 000 ihmistä, joista 80 000 kreikkalaisia. Turkin nykyalueen ensimmäinen rautatie lähti täältä — 130 kilometrin rata Aydınille aloitettiin 1856 ja valmistui 1867. Vuonna 1867 kaupunki sai vihdoin oman vilajettinsa. Isoisän aikaan se oli Istanbulin jälkeen valtakunnan tärkein portti länteen.
+AIEMPI KYSYMYS: Mitä antiikin kohteita İzmirin lähellä on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Annas ku mietin. Antiikin [[Efesos]] on yksi [[Egeanmeren]] rannikon tunnetuimmista raunioista, ja sinne pääsee İzmirin alueelta suhteellisen lyhyellä matkalla etelään. Pohjoisessa sijaitsee [[Pergamon]], jonka rauniot ovat nykyisen Bergaman kaupungin kohdalla ja jossa oli antiikin aikana kuuluisa kirjasto. Molemmat kuuluivat antiikissa Vähän Aasian kreikkalaiseen kulttuuripiiriin, samaan kuin Smyrna itse. Pitkä lista, mut kyl minä jaksoin.
+KYSYMYS: Kerro lisää: Efesos
+
+### 72
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: İzmir (kaupungit)
+Tietoruudun teksti: Smyrna oli 1800-luvulla Ottomaanien vilkkain länsisatama ja monikielinen kauppakaupunki: brittien arvion mukaan siellä asui 1865 noin 180 000 ihmistä, joista 80 000 kreikkalaisia. Turkin nykyalueen ensimmäinen rautatie lähti täältä — 130 kilometrin rata Aydınille aloitettiin 1856 ja valmistui 1867. Vuonna 1867 kaupunki sai vihdoin oman vilajettinsa. Isoisän aikaan se oli Istanbulin jälkeen valtakunnan tärkein portti länteen.
+AIEMPI KYSYMYS: Mitä antiikin kohteita İzmirin lähellä on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Annas ku mietin. Antiikin [[Efesos]] on yksi [[Egeanmeren]] rannikon tunnetuimmista raunioista, ja sinne pääsee İzmirin alueelta suhteellisen lyhyellä matkalla etelään. Pohjoisessa sijaitsee [[Pergamon]], jonka rauniot ovat nykyisen Bergaman kaupungin kohdalla ja jossa oli antiikin aikana kuuluisa kirjasto. Molemmat kuuluivat antiikissa Vähän Aasian kreikkalaiseen kulttuuripiiriin, samaan kuin Smyrna itse. Pitkä lista, mut kyl minä jaksoin.
+KYSYMYS: Kerro lisää: Egeanmeren
+
+### 73
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: İzmir (kaupungit)
+Tietoruudun teksti: Smyrna oli 1800-luvulla Ottomaanien vilkkain länsisatama ja monikielinen kauppakaupunki: brittien arvion mukaan siellä asui 1865 noin 180 000 ihmistä, joista 80 000 kreikkalaisia. Turkin nykyalueen ensimmäinen rautatie lähti täältä — 130 kilometrin rata Aydınille aloitettiin 1856 ja valmistui 1867. Vuonna 1867 kaupunki sai vihdoin oman vilajettinsa. Isoisän aikaan se oli Istanbulin jälkeen valtakunnan tärkein portti länteen.
+AIEMPI KYSYMYS: Mitä antiikin kohteita İzmirin lähellä on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Annas ku mietin. Antiikin [[Efesos]] on yksi [[Egeanmeren]] rannikon tunnetuimmista raunioista, ja sinne pääsee İzmirin alueelta suhteellisen lyhyellä matkalla etelään. Pohjoisessa sijaitsee [[Pergamon]], jonka rauniot ovat nykyisen Bergaman kaupungin kohdalla ja jossa oli antiikin aikana kuuluisa kirjasto. Molemmat kuuluivat antiikissa Vähän Aasian kreikkalaiseen kulttuuripiiriin, samaan kuin Smyrna itse. Pitkä lista, mut kyl minä jaksoin.
+KYSYMYS: Kerro lisää: Pergamon
+
+### 74
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: İzmir (kaupungit)
+Tietoruudun teksti: Smyrna oli 1800-luvulla Ottomaanien vilkkain länsisatama ja monikielinen kauppakaupunki: brittien arvion mukaan siellä asui 1865 noin 180 000 ihmistä, joista 80 000 kreikkalaisia. Turkin nykyalueen ensimmäinen rautatie lähti täältä — 130 kilometrin rata Aydınille aloitettiin 1856 ja valmistui 1867. Vuonna 1867 kaupunki sai vihdoin oman vilajettinsa. Isoisän aikaan se oli Istanbulin jälkeen valtakunnan tärkein portti länteen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Izmir — kaupunkilehti / Arki: Taikina lepää tuntikausia] Boyoz on İzmirin oma leivonnainen. Nimi tulee ladinon sanasta boyo, pieni pyöreä pulla; sefardijuutalaiset toivat leivonnaisen kaupunkiin sen jälkeen, kun heidät karkotettiin Espanjasta 1492. Taikinaan tulee jauhoja, auringonkukkaöljyä ja hieman tahinia, alun perin seesamiöljyä. Taikinaa vaivataan käsin ja levätetään useaan kertaan, ensin kaksi tuntia ja lopuksi useita tunteja, ja palasista pyöritellään pieniä palloja, jotka marinoituvat öljyssä puolesta tunnista tuntiin. Uuni on hyvin kuuma, ja pinnasta tulee kerroksinen. Seuraksi otetaan tummaa teetä ja kovaksi keitetty muna, jonka päälle ripotellaan runsaasti mustapippuria.
+AIEMPI KYSYMYS: Mitä boyoz on?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä osaan kertoo. [[Boyoz]] on İzmirin tunnetuin aamiaisleivonnainen: kerroksista taikinaa, joka kypsennetään öljyllä ja syödään tavallisesti keitetyn kananmunan ja teen kanssa. Sen alkuperä liitetään kaupungin [[sefardien]] yhteisöön, jonka mukana valmistustapa saapui kaupunkiin. Se on eri asia kuin [[simit]]-rinkeli, vaikka molempia myydään pienissä leipomoissa ja kojuissa.
+
+Turkissa tiedän simitin, mutta boyoz on ihan oma lukunsa. Minä en ole koskaan saanut sitä itse maistaa, vaikka ikkunalaudalla olen yrittänyt.
+KYSYMYS: Kerro lisää: Boyoz
+
+### 75
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: İzmir (kaupungit)
+Tietoruudun teksti: Smyrna oli 1800-luvulla Ottomaanien vilkkain länsisatama ja monikielinen kauppakaupunki: brittien arvion mukaan siellä asui 1865 noin 180 000 ihmistä, joista 80 000 kreikkalaisia. Turkin nykyalueen ensimmäinen rautatie lähti täältä — 130 kilometrin rata Aydınille aloitettiin 1856 ja valmistui 1867. Vuonna 1867 kaupunki sai vihdoin oman vilajettinsa. Isoisän aikaan se oli Istanbulin jälkeen valtakunnan tärkein portti länteen.
+AIEMPI KYSYMYS: Mitä boyoz on?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä osaan kertoo. [[Boyoz]] on İzmirin tunnetuin aamiaisleivonnainen: kerroksista taikinaa, joka kypsennetään öljyllä ja syödään tavallisesti keitetyn kananmunan ja teen kanssa. Sen alkuperä liitetään kaupungin [[sefardien]] yhteisöön, jonka mukana valmistustapa saapui kaupunkiin. Se on eri asia kuin [[simit]]-rinkeli, vaikka molempia myydään pienissä leipomoissa ja kojuissa.
+
+Turkissa tiedän simitin, mutta boyoz on ihan oma lukunsa. Minä en ole koskaan saanut sitä itse maistaa, vaikka ikkunalaudalla olen yrittänyt.
+KYSYMYS: Kerro lisää: sefardien
+
+### 76
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: İzmir (kaupungit)
+Tietoruudun teksti: Smyrna oli 1800-luvulla Ottomaanien vilkkain länsisatama ja monikielinen kauppakaupunki: brittien arvion mukaan siellä asui 1865 noin 180 000 ihmistä, joista 80 000 kreikkalaisia. Turkin nykyalueen ensimmäinen rautatie lähti täältä — 130 kilometrin rata Aydınille aloitettiin 1856 ja valmistui 1867. Vuonna 1867 kaupunki sai vihdoin oman vilajettinsa. Isoisän aikaan se oli Istanbulin jälkeen valtakunnan tärkein portti länteen.
+AIEMPI KYSYMYS: Mitä boyoz on?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä osaan kertoo. [[Boyoz]] on İzmirin tunnetuin aamiaisleivonnainen: kerroksista taikinaa, joka kypsennetään öljyllä ja syödään tavallisesti keitetyn kananmunan ja teen kanssa. Sen alkuperä liitetään kaupungin [[sefardien]] yhteisöön, jonka mukana valmistustapa saapui kaupunkiin. Se on eri asia kuin [[simit]]-rinkeli, vaikka molempia myydään pienissä leipomoissa ja kojuissa.
+
+Turkissa tiedän simitin, mutta boyoz on ihan oma lukunsa. Minä en ole koskaan saanut sitä itse maistaa, vaikka ikkunalaudalla olen yrittänyt.
+KYSYMYS: Kerro lisää: simit
+
+### 77
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bursa (kaupungit)
+Tietoruudun teksti: Bursa oli Ottomaanien ensimmäinen pääkaupunki: se vallattiin bysanttilaisilta 1326 ja toimi pääkaupunkina 1335-luvulta 1360-luvulle, kunnes hovi siirtyi Edirneen. Kaupunki oli jo 500-luvulla kuuluisa silkkikankaistaan, ja ottomaaniaikana se jakoi idän silkkiä — myös Ming-Kiinasta — Genovaan ja Firenzeen asti. Yllä kohoaa Uludağ, jota antiikissa kutsuttiin Mysian Olympokseksi.
+AIEMPI KYSYMYS: Kudotaanko Bursassa vielä silkkiä?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: silkki on [[Bursassa]] yhä elossa. Silkkikudonta jatkuu pienissä työpajoissa ja perheyrityksissä, ja kaupunki tunnetaan edelleen silkkikankaistaan ja huiveistaan. Vanha [[Koza Han]] on keskiaikainen kauppahalli, jossa silkkiperhosen koteloita on perinteisesti myyty ja jossa nykyään myydään silkkituotteita. Tuotannon mittakaava on pienentynyt vanhasta, ja tarkkoja tuotantomääriä en tiedä. Huivi kävisi kyl, mutta mihin minä sen laittaisin.
+KYSYMYS: Kerro lisää: Bursassa
+
+### 78
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bursa (kaupungit)
+Tietoruudun teksti: Bursa oli Ottomaanien ensimmäinen pääkaupunki: se vallattiin bysanttilaisilta 1326 ja toimi pääkaupunkina 1335-luvulta 1360-luvulle, kunnes hovi siirtyi Edirneen. Kaupunki oli jo 500-luvulla kuuluisa silkkikankaistaan, ja ottomaaniaikana se jakoi idän silkkiä — myös Ming-Kiinasta — Genovaan ja Firenzeen asti. Yllä kohoaa Uludağ, jota antiikissa kutsuttiin Mysian Olympokseksi.
+AIEMPI KYSYMYS: Kudotaanko Bursassa vielä silkkiä?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: silkki on [[Bursassa]] yhä elossa. Silkkikudonta jatkuu pienissä työpajoissa ja perheyrityksissä, ja kaupunki tunnetaan edelleen silkkikankaistaan ja huiveistaan. Vanha [[Koza Han]] on keskiaikainen kauppahalli, jossa silkkiperhosen koteloita on perinteisesti myyty ja jossa nykyään myydään silkkituotteita. Tuotannon mittakaava on pienentynyt vanhasta, ja tarkkoja tuotantomääriä en tiedä. Huivi kävisi kyl, mutta mihin minä sen laittaisin.
+KYSYMYS: Kerro lisää: Koza Han
+
+### 79
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bursa (kaupungit)
+Tietoruudun teksti: Bursa oli Ottomaanien ensimmäinen pääkaupunki: se vallattiin bysanttilaisilta 1326 ja toimi pääkaupunkina 1335-luvulta 1360-luvulle, kunnes hovi siirtyi Edirneen. Kaupunki oli jo 500-luvulla kuuluisa silkkikankaistaan, ja ottomaaniaikana se jakoi idän silkkiä — myös Ming-Kiinasta — Genovaan ja Firenzeen asti. Yllä kohoaa Uludağ, jota antiikissa kutsuttiin Mysian Olympokseksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historia: Linna, jota sulttaani ei saanut] 1450 — Marraskuussa 1443 Gjergj Kastrioti eli Skanderbeg karkasi osmanien armeijasta kesken sotaretken, ratsasti Krujëhun väärennetyillä asiakirjoilla ja otti linnan haltuunsa juonella. Hän luopui islamista, palasi kristityksi ja aloitti 25 vuotta kestäneen kapinan. Toukokuussa 1450 sulttaani Murad II saapui linnan juurelle noin 100 000 sotilaan – niistä 60 000 ratsuväkeä – kanssa, mukanaan nuori poikansa, tuleva Mehmed II. Piiritys kesti lokakuuhun asti, yli viisi kuukautta. Ottomaanit menettivät noin 20 000 miestä ja albaanit yli tuhat, ennen kuin sulttaani luovutti ja vetäytyi Edirneen. Krujë pysyi valloittamattomana koko Skanderbegin elinajan.
+AIEMPI KYSYMYS: Miksi hovi siirtyi pois Bursasta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ottomaanit siirsivät hovin [[Edirneen]] 1300-luvun jälkipuoliskolla, ja syynä pidetään yleensä valtion laajenemista [[Balkanille]]. Edirne sijaitsee [[Trakiassa]] Euroopan puolella, mistä sotaretkiä Balkanille oli helpompi johtaa kuin Anatoliasta. Bursa jäi silti tärkeäksi: sinne haudattiin varhaisia sulttaaneja, ja se säilyi kaupan ja silkin keskuksena. Tarkka siirron ajankohta vaihtelee lähteittäin, joten en ole varma vuodesta. Hovi lähti, silkki jäi, näin on meikäläisille kerrottu.
+KYSYMYS: Kerro lisää: Edirneen
+
+### 80
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bursa (kaupungit)
+Tietoruudun teksti: Bursa oli Ottomaanien ensimmäinen pääkaupunki: se vallattiin bysanttilaisilta 1326 ja toimi pääkaupunkina 1335-luvulta 1360-luvulle, kunnes hovi siirtyi Edirneen. Kaupunki oli jo 500-luvulla kuuluisa silkkikankaistaan, ja ottomaaniaikana se jakoi idän silkkiä — myös Ming-Kiinasta — Genovaan ja Firenzeen asti. Yllä kohoaa Uludağ, jota antiikissa kutsuttiin Mysian Olympokseksi.
+AIEMPI KYSYMYS: Miksi hovi siirtyi pois Bursasta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ottomaanit siirsivät hovin [[Edirneen]] 1300-luvun jälkipuoliskolla, ja syynä pidetään yleensä valtion laajenemista [[Balkanille]]. Edirne sijaitsee [[Trakiassa]] Euroopan puolella, mistä sotaretkiä Balkanille oli helpompi johtaa kuin Anatoliasta. Bursa jäi silti tärkeäksi: sinne haudattiin varhaisia sulttaaneja, ja se säilyi kaupan ja silkin keskuksena. Tarkka siirron ajankohta vaihtelee lähteittäin, joten en ole varma vuodesta. Hovi lähti, silkki jäi, näin on meikäläisille kerrottu.
+KYSYMYS: Kerro lisää: Balkanille

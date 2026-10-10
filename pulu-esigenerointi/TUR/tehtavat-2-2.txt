@@ -1,0 +1,1052 @@
+### 81
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bursa (kaupungit)
+Tietoruudun teksti: Bursa oli Ottomaanien ensimmäinen pääkaupunki: se vallattiin bysanttilaisilta 1326 ja toimi pääkaupunkina 1335-luvulta 1360-luvulle, kunnes hovi siirtyi Edirneen. Kaupunki oli jo 500-luvulla kuuluisa silkkikankaistaan, ja ottomaaniaikana se jakoi idän silkkiä — myös Ming-Kiinasta — Genovaan ja Firenzeen asti. Yllä kohoaa Uludağ, jota antiikissa kutsuttiin Mysian Olympokseksi.
+AIEMPI KYSYMYS: Miksi hovi siirtyi pois Bursasta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ottomaanit siirsivät hovin [[Edirneen]] 1300-luvun jälkipuoliskolla, ja syynä pidetään yleensä valtion laajenemista [[Balkanille]]. Edirne sijaitsee [[Trakiassa]] Euroopan puolella, mistä sotaretkiä Balkanille oli helpompi johtaa kuin Anatoliasta. Bursa jäi silti tärkeäksi: sinne haudattiin varhaisia sulttaaneja, ja se säilyi kaupan ja silkin keskuksena. Tarkka siirron ajankohta vaihtelee lähteittäin, joten en ole varma vuodesta. Hovi lähti, silkki jäi, näin on meikäläisille kerrottu.
+KYSYMYS: Kerro lisää: Trakiassa
+
+### 82
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bursa (kaupungit)
+Tietoruudun teksti: Bursa oli Ottomaanien ensimmäinen pääkaupunki: se vallattiin bysanttilaisilta 1326 ja toimi pääkaupunkina 1335-luvulta 1360-luvulle, kunnes hovi siirtyi Edirneen. Kaupunki oli jo 500-luvulla kuuluisa silkkikankaistaan, ja ottomaaniaikana se jakoi idän silkkiä — myös Ming-Kiinasta — Genovaan ja Firenzeen asti. Yllä kohoaa Uludağ, jota antiikissa kutsuttiin Mysian Olympokseksi.
+AIEMPI KYSYMYS: Mitä Uludağilla voi tehdä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tost minä osaan kertoo. [[Uludağ]] kohoaa Bursan yläpuolelle, ja sen huippu on noin 2500 metrin korkeudessa. Antiikissa vuorta kutsuttiin nimellä [[Mysian Olympos]], ja nykyään se on Turkin tunnetuimpia hiihtokeskuksia, jonne pääsee [[Bursasta]] köysiradalla tai tietä pitkin. Talvella vuorella lasketellaan, ja kesällä siellä vaelletaan; osa vuoresta on kansallispuistoa. Ylös minä lentäisin, mut köysirata ois tietysti mukavampi.
+KYSYMYS: Kerro lisää: Uludağ
+
+### 83
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bursa (kaupungit)
+Tietoruudun teksti: Bursa oli Ottomaanien ensimmäinen pääkaupunki: se vallattiin bysanttilaisilta 1326 ja toimi pääkaupunkina 1335-luvulta 1360-luvulle, kunnes hovi siirtyi Edirneen. Kaupunki oli jo 500-luvulla kuuluisa silkkikankaistaan, ja ottomaaniaikana se jakoi idän silkkiä — myös Ming-Kiinasta — Genovaan ja Firenzeen asti. Yllä kohoaa Uludağ, jota antiikissa kutsuttiin Mysian Olympokseksi.
+AIEMPI KYSYMYS: Mitä Uludağilla voi tehdä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tost minä osaan kertoo. [[Uludağ]] kohoaa Bursan yläpuolelle, ja sen huippu on noin 2500 metrin korkeudessa. Antiikissa vuorta kutsuttiin nimellä [[Mysian Olympos]], ja nykyään se on Turkin tunnetuimpia hiihtokeskuksia, jonne pääsee [[Bursasta]] köysiradalla tai tietä pitkin. Talvella vuorella lasketellaan, ja kesällä siellä vaelletaan; osa vuoresta on kansallispuistoa. Ylös minä lentäisin, mut köysirata ois tietysti mukavampi.
+KYSYMYS: Kerro lisää: Mysian Olympos
+
+### 84
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bursa (kaupungit)
+Tietoruudun teksti: Bursa oli Ottomaanien ensimmäinen pääkaupunki: se vallattiin bysanttilaisilta 1326 ja toimi pääkaupunkina 1335-luvulta 1360-luvulle, kunnes hovi siirtyi Edirneen. Kaupunki oli jo 500-luvulla kuuluisa silkkikankaistaan, ja ottomaaniaikana se jakoi idän silkkiä — myös Ming-Kiinasta — Genovaan ja Firenzeen asti. Yllä kohoaa Uludağ, jota antiikissa kutsuttiin Mysian Olympokseksi.
+AIEMPI KYSYMYS: Mitä Uludağilla voi tehdä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tost minä osaan kertoo. [[Uludağ]] kohoaa Bursan yläpuolelle, ja sen huippu on noin 2500 metrin korkeudessa. Antiikissa vuorta kutsuttiin nimellä [[Mysian Olympos]], ja nykyään se on Turkin tunnetuimpia hiihtokeskuksia, jonne pääsee [[Bursasta]] köysiradalla tai tietä pitkin. Talvella vuorella lasketellaan, ja kesällä siellä vaelletaan; osa vuoresta on kansallispuistoa. Ylös minä lentäisin, mut köysirata ois tietysti mukavampi.
+KYSYMYS: Kerro lisää: Bursasta
+
+### 85
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bursa (kaupungit)
+Tietoruudun teksti: Bursa oli Ottomaanien ensimmäinen pääkaupunki: se vallattiin bysanttilaisilta 1326 ja toimi pääkaupunkina 1335-luvulta 1360-luvulle, kunnes hovi siirtyi Edirneen. Kaupunki oli jo 500-luvulla kuuluisa silkkikankaistaan, ja ottomaaniaikana se jakoi idän silkkiä — myös Ming-Kiinasta — Genovaan ja Firenzeen asti. Yllä kohoaa Uludağ, jota antiikissa kutsuttiin Mysian Olympokseksi.
+AIEMPI KYSYMYS: Mikä on İskender kebap?
+AIEMPI VASTAUS (Livia):
+Ai tota. Se on kyl suosikki. [[İskender kebap]] on bursalainen ruokalaji, jossa ohueksi viipaloitua lihaa tarjoillaan paahdetun leivän päällä tomaattikastikkeen, sulatetun voin ja jogurtin kanssa. Se on saanut nimensä kokki İskender Efendiltä, joka kehitti annoksen 1800-luvulla [[Bursassa]]. Annos tunnetaan koko Turkissa, mutta Bursaa pidetään sen kotikaupunkina.
+
+Minä tyytyisin leipään. Voi ja jogurtti menisivät kyllä hyvin, mutta liha jääköön niille, jotka siitä pitävät.
+KYSYMYS: Kerro lisää: İskender kebap
+
+### 86
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bursa (kaupungit)
+Tietoruudun teksti: Bursa oli Ottomaanien ensimmäinen pääkaupunki: se vallattiin bysanttilaisilta 1326 ja toimi pääkaupunkina 1335-luvulta 1360-luvulle, kunnes hovi siirtyi Edirneen. Kaupunki oli jo 500-luvulla kuuluisa silkkikankaistaan, ja ottomaaniaikana se jakoi idän silkkiä — myös Ming-Kiinasta — Genovaan ja Firenzeen asti. Yllä kohoaa Uludağ, jota antiikissa kutsuttiin Mysian Olympokseksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+- [Pariisi — kohdekartta / Kohdekartta: Bastilji 1789] Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvottelut kestäv…
+AIEMPI KYSYMYS: Millainen moskeija Bursan Ulu Cami on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Ulu Cami]] eli Suuri moskeija on Bursan keskeinen pyhäkkö, joka valmistui 1300-luvun lopulla sulttaani Bayezidin aikana. Sen katto koostuu kahdestakymmenestä kupolista, ja sisätilaa koristavat suuret kalligrafiset tekstitaulut. Moskeija edustaa varhaista [[ottomaanien]] monikupolista rakennustyyliä ja on yksi kaupungin tunnetuimmista nähtävyyksistä. Kaksikymmentä kupolia on aika paljon kattoa laskeutua.
+KYSYMYS: Kerro lisää: Ulu Cami
+
+### 87
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bursa (kaupungit)
+Tietoruudun teksti: Bursa oli Ottomaanien ensimmäinen pääkaupunki: se vallattiin bysanttilaisilta 1326 ja toimi pääkaupunkina 1335-luvulta 1360-luvulle, kunnes hovi siirtyi Edirneen. Kaupunki oli jo 500-luvulla kuuluisa silkkikankaistaan, ja ottomaaniaikana se jakoi idän silkkiä — myös Ming-Kiinasta — Genovaan ja Firenzeen asti. Yllä kohoaa Uludağ, jota antiikissa kutsuttiin Mysian Olympokseksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Historian hetki: Hisarlık 1873 — kulta kaivannon seinämässä] toukokuu 1873 — Kaivannon seinämän juuresta, muurin alta, on tullut esiin kuparinen astia, ja sen sisältä alkaa nousta kultaa: diadeemeja, korvakoruja, nappeja, tuhansia pieniä kultaesineitä sekä hopeaa ja pronssia. Heinrich Schliemann on 51-vuotias, rikastunut kauppias, joka on tullut kummulle todistaakseen, että Homeroksen Troija oli totta, ja hän nimeää löydön saman tien Priamoksen aarteeksi. Oman kertomuksensa mukaan hän lähetti työmiehet tauolle ja kaivoi kullan esiin itse veitsellä, jottei kukaan näkisi; tutkijat ovat sittemmin epäilleet kertomusta, ja ne kaivajat, joiden käsien kautta löydöt kulkivat, jäivät hänen sankaritarinansa ulkopuolelle. Päiväkirjaan hän kirjoitti myös, että v…
+- [Tripoli — kaupunkilehti / Tripoli: Ottomaanien kellotorni seisoo kujien keskellä] Medinan aukiolla seisoo ottomaaniaikainen kellotorni, yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen kerroksen kulmissa on parittain pylväitä, ja niiden päällä kiertää koristeltu räystäslista. Muotokieli on eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää näkee myös medinan moskeijoissa, joissa marmoripylväät ja kaakelipinnat ovat rinnakkain arabialaisen kalligrafian kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on kujilta helpoin kiintopiste: kun torni näkyy, tietää olevansa medinan keskellä. Rappaus on paikoin lohkeillut ja paljastanut alta kiviaineksen.
+AIEMPI KYSYMYS: Millainen moskeija Bursan Ulu Cami on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Ulu Cami]] eli Suuri moskeija on Bursan keskeinen pyhäkkö, joka valmistui 1300-luvun lopulla sulttaani Bayezidin aikana. Sen katto koostuu kahdestakymmenestä kupolista, ja sisätilaa koristavat suuret kalligrafiset tekstitaulut. Moskeija edustaa varhaista [[ottomaanien]] monikupolista rakennustyyliä ja on yksi kaupungin tunnetuimmista nähtävyyksistä. Kaksikymmentä kupolia on aika paljon kattoa laskeutua.
+KYSYMYS: Kerro lisää: ottomaanien
+
+### 88
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konya (kaupungit)
+Tietoruudun teksti: Konya oli Rum-seldžukkien sulttaanikunnan pääkaupunki, josta hallittiin lähes koko Anatoliaa. Runoilija ja mystikko Rumi eli täällä loppuelämänsä, ja vuonna 1273 hänen seuraajansa perustivat mevlevi-veljeskunnan, joka tunnetaan pyörivinä dervisheinä. Rumin turkoosikupolinen hauta on yhä kaupungin tärkein nähtävyys. Kaupungin nimi juontaa todennäköisesti heettiläisestä paikannimestä Ikkuwaniya.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Musiikki: Tanssi, joka on rukous] 1273 — Konyassa kuoli vuonna 1273 runoilija Mevlana Celaleddin Rumi. Hänen seuraajansa perustivat mevlevi-veljeskunnan, joka tunnetaan pyörivistä dervisseistä. Sema-seremoniassa dervissi pyörii paikallaan pitkä valkoinen hame levällään. Puku on vertauskuvallinen: korkea huopalakki muistuttaa hautakiveä ja valkoinen hame käärinliinaa. Oikea kämmen käännetään ylös taivasta kohti ja vasen alas maata kohti, ikään kuin saatu annettaisiin eteenpäin. Musiikin johtaa ney, ruokohuilu, jonka ääni on tarkoituksella hengittävä.
+AIEMPI KYSYMYS: Pyörivätkö dervishit vielä nykyään?
+AIEMPI VASTAUS (Livia):
+Mmm— tästä on kiva kertoo. Kyllä pyörivät, mutta nykyään lähinnä seremonioina ja esityksinä. [[Sema-seremoniaa]] esitetään [[Konyassa]] vuosittain joulukuussa, jolloin muistetaan Rumin kuolemaa, ja myös muualla Turkissa. Dervissiveljeskunnat kiellettiin Turkissa vuonna 1925, ja sema sallittiin myöhemmin kulttuuriperintönä; [[Unescon]] aineettoman kulttuuriperinnön luetteloon se kirjattiin vuonna 2008. Minulle riittää pyörimiseksi yksi kierros torin yllä.
+KYSYMYS: Kerro lisää: Sema-seremoniaa
+
+### 89
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konya (kaupungit)
+Tietoruudun teksti: Konya oli Rum-seldžukkien sulttaanikunnan pääkaupunki, josta hallittiin lähes koko Anatoliaa. Runoilija ja mystikko Rumi eli täällä loppuelämänsä, ja vuonna 1273 hänen seuraajansa perustivat mevlevi-veljeskunnan, joka tunnetaan pyörivinä dervisheinä. Rumin turkoosikupolinen hauta on yhä kaupungin tärkein nähtävyys. Kaupungin nimi juontaa todennäköisesti heettiläisestä paikannimestä Ikkuwaniya.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Musiikki: Tanssi, joka on rukous] 1273 — Konyassa kuoli vuonna 1273 runoilija Mevlana Celaleddin Rumi. Hänen seuraajansa perustivat mevlevi-veljeskunnan, joka tunnetaan pyörivistä dervisseistä. Sema-seremoniassa dervissi pyörii paikallaan pitkä valkoinen hame levällään. Puku on vertauskuvallinen: korkea huopalakki muistuttaa hautakiveä ja valkoinen hame käärinliinaa. Oikea kämmen käännetään ylös taivasta kohti ja vasen alas maata kohti, ikään kuin saatu annettaisiin eteenpäin. Musiikin johtaa ney, ruokohuilu, jonka ääni on tarkoituksella hengittävä.
+AIEMPI KYSYMYS: Pyörivätkö dervishit vielä nykyään?
+AIEMPI VASTAUS (Livia):
+Mmm— tästä on kiva kertoo. Kyllä pyörivät, mutta nykyään lähinnä seremonioina ja esityksinä. [[Sema-seremoniaa]] esitetään [[Konyassa]] vuosittain joulukuussa, jolloin muistetaan Rumin kuolemaa, ja myös muualla Turkissa. Dervissiveljeskunnat kiellettiin Turkissa vuonna 1925, ja sema sallittiin myöhemmin kulttuuriperintönä; [[Unescon]] aineettoman kulttuuriperinnön luetteloon se kirjattiin vuonna 2008. Minulle riittää pyörimiseksi yksi kierros torin yllä.
+KYSYMYS: Kerro lisää: Konyassa
+
+### 90
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konya (kaupungit)
+Tietoruudun teksti: Konya oli Rum-seldžukkien sulttaanikunnan pääkaupunki, josta hallittiin lähes koko Anatoliaa. Runoilija ja mystikko Rumi eli täällä loppuelämänsä, ja vuonna 1273 hänen seuraajansa perustivat mevlevi-veljeskunnan, joka tunnetaan pyörivinä dervisheinä. Rumin turkoosikupolinen hauta on yhä kaupungin tärkein nähtävyys. Kaupungin nimi juontaa todennäköisesti heettiläisestä paikannimestä Ikkuwaniya.
+AIEMPI KYSYMYS: Pyörivätkö dervishit vielä nykyään?
+AIEMPI VASTAUS (Livia):
+Mmm— tästä on kiva kertoo. Kyllä pyörivät, mutta nykyään lähinnä seremonioina ja esityksinä. [[Sema-seremoniaa]] esitetään [[Konyassa]] vuosittain joulukuussa, jolloin muistetaan Rumin kuolemaa, ja myös muualla Turkissa. Dervissiveljeskunnat kiellettiin Turkissa vuonna 1925, ja sema sallittiin myöhemmin kulttuuriperintönä; [[Unescon]] aineettoman kulttuuriperinnön luetteloon se kirjattiin vuonna 2008. Minulle riittää pyörimiseksi yksi kierros torin yllä.
+KYSYMYS: Kerro lisää: Unescon
+
+### 91
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konya (kaupungit)
+Tietoruudun teksti: Konya oli Rum-seldžukkien sulttaanikunnan pääkaupunki, josta hallittiin lähes koko Anatoliaa. Runoilija ja mystikko Rumi eli täällä loppuelämänsä, ja vuonna 1273 hänen seuraajansa perustivat mevlevi-veljeskunnan, joka tunnetaan pyörivinä dervisheinä. Rumin turkoosikupolinen hauta on yhä kaupungin tärkein nähtävyys. Kaupungin nimi juontaa todennäköisesti heettiläisestä paikannimestä Ikkuwaniya.
+AIEMPI KYSYMYS: Mitä Rumi itse kirjoitti?
+AIEMPI VASTAUS (Livia):
+Just niin, kirjoittanutta riitti. Rumi kirjoitti pääosin persiaksi. Tunnetuin teos on [[Mesnevi]], pitkä opettavainen runoteos, joka alkaa ruokohuilun valituksella, ja ruokohuilu eli [[ney]] on yhä mevlevien musiikin keskeinen soitin. Toinen tärkeä teos on [[Divan-ı Kebir]], suuri lyyristen runojen kokoelma. Runot käsittelevät rakkautta, kaipausta ja ihmisen yhteyttä jumalaan. Runoja riittää, ja minä luin vain otsikot.
+KYSYMYS: Kerro lisää: Mesnevi
+
+### 92
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konya (kaupungit)
+Tietoruudun teksti: Konya oli Rum-seldžukkien sulttaanikunnan pääkaupunki, josta hallittiin lähes koko Anatoliaa. Runoilija ja mystikko Rumi eli täällä loppuelämänsä, ja vuonna 1273 hänen seuraajansa perustivat mevlevi-veljeskunnan, joka tunnetaan pyörivinä dervisheinä. Rumin turkoosikupolinen hauta on yhä kaupungin tärkein nähtävyys. Kaupungin nimi juontaa todennäköisesti heettiläisestä paikannimestä Ikkuwaniya.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Musiikki: Tanssi, joka on rukous] 1273 — Konyassa kuoli vuonna 1273 runoilija Mevlana Celaleddin Rumi. Hänen seuraajansa perustivat mevlevi-veljeskunnan, joka tunnetaan pyörivistä dervisseistä. Sema-seremoniassa dervissi pyörii paikallaan pitkä valkoinen hame levällään. Puku on vertauskuvallinen: korkea huopalakki muistuttaa hautakiveä ja valkoinen hame käärinliinaa. Oikea kämmen käännetään ylös taivasta kohti ja vasen alas maata kohti, ikään kuin saatu annettaisiin eteenpäin. Musiikin johtaa ney, ruokohuilu, jonka ääni on tarkoituksella hengittävä.
+AIEMPI KYSYMYS: Mitä Rumi itse kirjoitti?
+AIEMPI VASTAUS (Livia):
+Just niin, kirjoittanutta riitti. Rumi kirjoitti pääosin persiaksi. Tunnetuin teos on [[Mesnevi]], pitkä opettavainen runoteos, joka alkaa ruokohuilun valituksella, ja ruokohuilu eli [[ney]] on yhä mevlevien musiikin keskeinen soitin. Toinen tärkeä teos on [[Divan-ı Kebir]], suuri lyyristen runojen kokoelma. Runot käsittelevät rakkautta, kaipausta ja ihmisen yhteyttä jumalaan. Runoja riittää, ja minä luin vain otsikot.
+KYSYMYS: Kerro lisää: ney
+
+### 93
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konya (kaupungit)
+Tietoruudun teksti: Konya oli Rum-seldžukkien sulttaanikunnan pääkaupunki, josta hallittiin lähes koko Anatoliaa. Runoilija ja mystikko Rumi eli täällä loppuelämänsä, ja vuonna 1273 hänen seuraajansa perustivat mevlevi-veljeskunnan, joka tunnetaan pyörivinä dervisheinä. Rumin turkoosikupolinen hauta on yhä kaupungin tärkein nähtävyys. Kaupungin nimi juontaa todennäköisesti heettiläisestä paikannimestä Ikkuwaniya.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Musiikki: Sama soitin neljässä koossa] 1500-luvulta — Bağlama eli saz on pitkävartinen kielisoitin, jonka runko on kaiverrettu yhdestä puukappaleesta päärynän muotoiseksi. Samaa soitinta tehdään useassa koossa: pienin on cura, sitten çöğür, sitten bağlama ja suurin divan sazı. Kieliä on kuusi tai seitsemän, ja ne on ryhmitelty kolmeen pariin. Erikoisimmat ovat nauhat: ne on sidottu kaulaan langalla, joten niitä voi siirtää. Siksi soittimella saa myös sävelet, jotka jäävät pianon koskettimien väliin. Sazia soittavat aşıkit, laulaja-runoilijat, jotka kiersivät kylästä kylään.
+AIEMPI KYSYMYS: Mitä Rumi itse kirjoitti?
+AIEMPI VASTAUS (Livia):
+Just niin, kirjoittanutta riitti. Rumi kirjoitti pääosin persiaksi. Tunnetuin teos on [[Mesnevi]], pitkä opettavainen runoteos, joka alkaa ruokohuilun valituksella, ja ruokohuilu eli [[ney]] on yhä mevlevien musiikin keskeinen soitin. Toinen tärkeä teos on [[Divan-ı Kebir]], suuri lyyristen runojen kokoelma. Runot käsittelevät rakkautta, kaipausta ja ihmisen yhteyttä jumalaan. Runoja riittää, ja minä luin vain otsikot.
+KYSYMYS: Kerro lisää: Divan-ı Kebir
+
+### 94
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konya (kaupungit)
+Tietoruudun teksti: Konya oli Rum-seldžukkien sulttaanikunnan pääkaupunki, josta hallittiin lähes koko Anatoliaa. Runoilija ja mystikko Rumi eli täällä loppuelämänsä, ja vuonna 1273 hänen seuraajansa perustivat mevlevi-veljeskunnan, joka tunnetaan pyörivinä dervisheinä. Rumin turkoosikupolinen hauta on yhä kaupungin tärkein nähtävyys. Kaupungin nimi juontaa todennäköisesti heettiläisestä paikannimestä Ikkuwaniya.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Musiikki: Tanssi, joka on rukous] 1273 — Konyassa kuoli vuonna 1273 runoilija Mevlana Celaleddin Rumi. Hänen seuraajansa perustivat mevlevi-veljeskunnan, joka tunnetaan pyörivistä dervisseistä. Sema-seremoniassa dervissi pyörii paikallaan pitkä valkoinen hame levällään. Puku on vertauskuvallinen: korkea huopalakki muistuttaa hautakiveä ja valkoinen hame käärinliinaa. Oikea kämmen käännetään ylös taivasta kohti ja vasen alas maata kohti, ikään kuin saatu annettaisiin eteenpäin. Musiikin johtaa ney, ruokohuilu, jonka ääni on tarkoituksella hengittävä.
+AIEMPI KYSYMYS: Mikä Mevlana-museo on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Mevlana-museo]] on Konyan tunnetuin nähtävyys, ja siellä on runoilija [[Rumin]] turkoosikupolinen hauta. Rakennus toimii nykyään museona, ja siellä on esillä [[mevlevi-veljeskunnan]] historiaan liittyviä esineitä, käsikirjoituksia ja soittimia. Alue on myös pyhiinvaelluskohde, jonne tulee vierailijoita sekä Turkista että ulkomailta. Siel hiljenee kyyhkynenkin.
+KYSYMYS: Kerro lisää: Mevlana-museo
+
+### 95
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konya (kaupungit)
+Tietoruudun teksti: Konya oli Rum-seldžukkien sulttaanikunnan pääkaupunki, josta hallittiin lähes koko Anatoliaa. Runoilija ja mystikko Rumi eli täällä loppuelämänsä, ja vuonna 1273 hänen seuraajansa perustivat mevlevi-veljeskunnan, joka tunnetaan pyörivinä dervisheinä. Rumin turkoosikupolinen hauta on yhä kaupungin tärkein nähtävyys. Kaupungin nimi juontaa todennäköisesti heettiläisestä paikannimestä Ikkuwaniya.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jordania — maalehti / Ruoka: Uuni kaivetaan hiekkaan] Wadi Rumin beduiinien juhlaruoka on zarb, ja sen uuni on maan alla. Hiekkaan kaivetaan kuoppa, jonka pohjalle sytytetään hiillos. Päälle lasketaan teline, jonka tasoille on aseteltu lihaa, tomaattia ja sipulia, ja mukaan menee pata riisiä. Kuoppa peitetään kannella ja hiekalla, jotta lämpö ja höyry jäävät sisään, ja ateria hautuu siellä tunteja. Kun kansi nostetaan, hiekasta nousee ensin höyry ja sitten koko ruoka kerralla. Valmistuminen vie koko iltapäivän, joten zarb tehdään vieraille ja juhlaan.
+AIEMPI KYSYMYS: Mikä Mevlana-museo on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Mevlana-museo]] on Konyan tunnetuin nähtävyys, ja siellä on runoilija [[Rumin]] turkoosikupolinen hauta. Rakennus toimii nykyään museona, ja siellä on esillä [[mevlevi-veljeskunnan]] historiaan liittyviä esineitä, käsikirjoituksia ja soittimia. Alue on myös pyhiinvaelluskohde, jonne tulee vierailijoita sekä Turkista että ulkomailta. Siel hiljenee kyyhkynenkin.
+KYSYMYS: Kerro lisää: Rumin
+
+### 96
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konya (kaupungit)
+Tietoruudun teksti: Konya oli Rum-seldžukkien sulttaanikunnan pääkaupunki, josta hallittiin lähes koko Anatoliaa. Runoilija ja mystikko Rumi eli täällä loppuelämänsä, ja vuonna 1273 hänen seuraajansa perustivat mevlevi-veljeskunnan, joka tunnetaan pyörivinä dervisheinä. Rumin turkoosikupolinen hauta on yhä kaupungin tärkein nähtävyys. Kaupungin nimi juontaa todennäköisesti heettiläisestä paikannimestä Ikkuwaniya.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Musiikki: Tanssi, joka on rukous] 1273 — Konyassa kuoli vuonna 1273 runoilija Mevlana Celaleddin Rumi. Hänen seuraajansa perustivat mevlevi-veljeskunnan, joka tunnetaan pyörivistä dervisseistä. Sema-seremoniassa dervissi pyörii paikallaan pitkä valkoinen hame levällään. Puku on vertauskuvallinen: korkea huopalakki muistuttaa hautakiveä ja valkoinen hame käärinliinaa. Oikea kämmen käännetään ylös taivasta kohti ja vasen alas maata kohti, ikään kuin saatu annettaisiin eteenpäin. Musiikin johtaa ney, ruokohuilu, jonka ääni on tarkoituksella hengittävä.
+AIEMPI KYSYMYS: Mikä Mevlana-museo on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Mevlana-museo]] on Konyan tunnetuin nähtävyys, ja siellä on runoilija [[Rumin]] turkoosikupolinen hauta. Rakennus toimii nykyään museona, ja siellä on esillä [[mevlevi-veljeskunnan]] historiaan liittyviä esineitä, käsikirjoituksia ja soittimia. Alue on myös pyhiinvaelluskohde, jonne tulee vierailijoita sekä Turkista että ulkomailta. Siel hiljenee kyyhkynenkin.
+KYSYMYS: Kerro lisää: mevlevi-veljeskunnan
+
+### 97
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konya (kaupungit)
+Tietoruudun teksti: Konya oli Rum-seldžukkien sulttaanikunnan pääkaupunki, josta hallittiin lähes koko Anatoliaa. Runoilija ja mystikko Rumi eli täällä loppuelämänsä, ja vuonna 1273 hänen seuraajansa perustivat mevlevi-veljeskunnan, joka tunnetaan pyörivinä dervisheinä. Rumin turkoosikupolinen hauta on yhä kaupungin tärkein nähtävyys. Kaupungin nimi juontaa todennäköisesti heettiläisestä paikannimestä Ikkuwaniya.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Teheran — kohdekartta / Kohdekartta: Iranin kansallismuseo] Kansallismuseo on kaksi taloa vierekkäin. Muinaisen Iranin museo on tiiltä, ja julkisivun keskellä on soikea sasanidiholvi, jonka esikuva on Ktesifonin Taq Kasra pienemmässä mitassa. Sen piirsi ranskalainen André Godard; muurarimestarit olivat Morad Tabrizi ja Abbas Ali Memar. Tiili oli kotimaista; ulkoa tuotiin vain vitriinit ja osa metalliosista. Talo vihittiin 1937, ja kerrosalaa on noin 11 000 neliömetriä. Naapuritalo, islamilaisen ajan museo, on valkoista travertiinia ja pohjakaavaltaan Bishapurin mukainen kahdeksankulmainen risti. Vuosiluvut hajoavat: rakennus ajoitetaan vuosiin 1944–1950 tai 1958, perustamisvuodeksi merkitään 1972, ja museona se avattiin 1996. Seitsemässä salissa on …
+- [Isfahan — kohdekartta / Kohdekartta: Jameh-moskeija] Perjantaimoskeija ei ole yhden kauden rakennus vaan pino niitä. Ensimmäinen moskeija nousi paikalle noin vuonna 771 savitiilestä, pohjaltaan noin 52 × 90 metriä; jäänteet kaivettiin esiin 1970-luvulla. Vuosina 840–841 tilalle tehtiin suurempi, noin 88 × 128 metriä, ja rukoussuunta käännettiin toiseen kulmaan. Unesco otti moskeijan maailmanperintöluetteloon 2012 omana kohteenaan, ei osana aukiota. Seldžukit lisäsivät kaksi kupolia kahdessa vuodessa. Malik Shaahin vesiiri Nizam al-Mulk korvasi mihrabin edestä pilarit kupolisalilla 1086–1087; se oli valmistuessaan islamilaisen maailman suurin muurattu kupoli, ja siinä on kahdeksan kaarta. Kilpailija Taj al-Mulk rakensi 1088–1089 toisen kupolin…
+AIEMPI KYSYMYS: Keitä seldžukit olivat?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Seldžukit]] olivat turkkilainen valtasuku, joka vahvisti asemaansa Lähi-idässä 1000-luvulla ja voitti [[Bysantin]] armeijan Malazgirtin taistelussa vuonna 1071. Sen jälkeen turkkilaisia heimoja asettui Anatoliaan, ja [[Rum-seldžukkien sulttaanikunta]] muodostui alueen merkittäväksi valtioksi, jonka pääkaupunki oli Konya. Valtio oli kauppa- ja kulttuurikeskus, ja se rakennutti karavaanisaarayeja Anatolian kauppateiden varrelle. Sulttaanikunnan valta heikkeni mongolien tulon jälkeen 1200-luvulla. Viisas Pöllö hoitaisi tämän lyhyemmin, mut hän on kai taas matkoilla.
+KYSYMYS: Kerro lisää: Seldžukit
+
+### 98
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konya (kaupungit)
+Tietoruudun teksti: Konya oli Rum-seldžukkien sulttaanikunnan pääkaupunki, josta hallittiin lähes koko Anatoliaa. Runoilija ja mystikko Rumi eli täällä loppuelämänsä, ja vuonna 1273 hänen seuraajansa perustivat mevlevi-veljeskunnan, joka tunnetaan pyörivinä dervisheinä. Rumin turkoosikupolinen hauta on yhä kaupungin tärkein nähtävyys. Kaupungin nimi juontaa todennäköisesti heettiläisestä paikannimestä Ikkuwaniya.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aleppo — kohdekartta / Kohdekartta: Antiokian portti] Vanhankaupungin läntisen muurin keskellä seisoo portti, jonka nimi kertoo suunnan: tie vei Antiokiaan, antiikin Syyrian pääkaupunkiin. Kaksi kuusikulmaista bastionia nousee rinnakkain, ja niiden välinen kulkuväylä mutkittelee sen sijaan että menisi suoraan läpi. Aukko on oikeanpuoleisen tornin alla, puolustussyistä: sisään tulija ei pääse vauhtiin eikä näe eteensä. Kivi on valkoista, ja lohkareet ovat noin 0,8 kertaa 1,0 metriä. Bysantin aikana tämä oli kaupungin pääportti, ja sen jälkeen merkitys hiipui. Ajjubidien Aleppon emiiri an-Nasir Yusuf, Saladinin pojanpojanpoika, rakennutti portin uudelleen 1000-luvulta periytyvän perustuksen päälle. Vuosiluvut ovat epätarkkoja: portin kohdalla hä…
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+AIEMPI KYSYMYS: Keitä seldžukit olivat?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Seldžukit]] olivat turkkilainen valtasuku, joka vahvisti asemaansa Lähi-idässä 1000-luvulla ja voitti [[Bysantin]] armeijan Malazgirtin taistelussa vuonna 1071. Sen jälkeen turkkilaisia heimoja asettui Anatoliaan, ja [[Rum-seldžukkien sulttaanikunta]] muodostui alueen merkittäväksi valtioksi, jonka pääkaupunki oli Konya. Valtio oli kauppa- ja kulttuurikeskus, ja se rakennutti karavaanisaarayeja Anatolian kauppateiden varrelle. Sulttaanikunnan valta heikkeni mongolien tulon jälkeen 1200-luvulla. Viisas Pöllö hoitaisi tämän lyhyemmin, mut hän on kai taas matkoilla.
+KYSYMYS: Kerro lisää: Bysantin
+
+### 99
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konya (kaupungit)
+Tietoruudun teksti: Konya oli Rum-seldžukkien sulttaanikunnan pääkaupunki, josta hallittiin lähes koko Anatoliaa. Runoilija ja mystikko Rumi eli täällä loppuelämänsä, ja vuonna 1273 hänen seuraajansa perustivat mevlevi-veljeskunnan, joka tunnetaan pyörivinä dervisheinä. Rumin turkoosikupolinen hauta on yhä kaupungin tärkein nähtävyys. Kaupungin nimi juontaa todennäköisesti heettiläisestä paikannimestä Ikkuwaniya.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Isfahan — kohdekartta / Kohdekartta: Isfahanin basaari] Basaari on käytävä kahden eri-ikäisen kaupungin välillä. Eteläpää aukeaa Naqsh-e Jahanille, joka rakennettiin vuosina 1598–1629, ja pohjoispää vie Kohneh- eli Vanhalle aukiolle vanhan kaupungin ytimeen. Väliin jää holvattua, katettua katua noin kaksi kilometriä. Se on Lähi-idän vanhimpia ja suurimpia basaareja. Osat ovat eri-ikäisiä. Nykyinen rakennus on safavidien ajalta, ja rakennusvuodeksi Naqsh-e Jahanin pohjoislaidalle merkitään 1620. Vanhin osa on 1000-luvulta, seldžukkien ajalta: se syntyi Jameh-moskeijan lounaiskyljelle ja Kohneh-aukion laitaan, ja kaarikäytäviä ja huoneita liitettiin siihen myöhemmin lisää. Tarkkoja vuosia näille osille ei anneta, vain se, että ne ovat yli tuhat vu…
+- [Kappadokia — kaupunkilehti / Historia: Yösija koko karavaanille] Aksarayn lähellä sijaitseva Sultanhanı on seldžukkien karavaaniseraali, ja sen rakennusvuosi 1229 lukee piirtokirjoituksessa. Rakennuttaja oli sulttaani Kayqubad I. Tulipalo tuhosi osan rakennuksesta, ja kuvernööri Seraceddin Ahmed Kerimeddin korjautti ja laajensi sen vuonna 1278 sulttaani Kaykhusraw III:n aikana. Muurien sisään jää 4 900 neliömetriä, mikä tekee siitä Turkin suurimman keskiaikaisen karavaaniseraalin: kauppiaat, eläimet ja tavarat yöpyivät saman portin takana.
+AIEMPI KYSYMYS: Keitä seldžukit olivat?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Seldžukit]] olivat turkkilainen valtasuku, joka vahvisti asemaansa Lähi-idässä 1000-luvulla ja voitti [[Bysantin]] armeijan Malazgirtin taistelussa vuonna 1071. Sen jälkeen turkkilaisia heimoja asettui Anatoliaan, ja [[Rum-seldžukkien sulttaanikunta]] muodostui alueen merkittäväksi valtioksi, jonka pääkaupunki oli Konya. Valtio oli kauppa- ja kulttuurikeskus, ja se rakennutti karavaanisaarayeja Anatolian kauppateiden varrelle. Sulttaanikunnan valta heikkeni mongolien tulon jälkeen 1200-luvulla. Viisas Pöllö hoitaisi tämän lyhyemmin, mut hän on kai taas matkoilla.
+KYSYMYS: Kerro lisää: Rum-seldžukkien sulttaanikunta
+
+### 100
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konya (kaupungit)
+Tietoruudun teksti: Konya oli Rum-seldžukkien sulttaanikunnan pääkaupunki, josta hallittiin lähes koko Anatoliaa. Runoilija ja mystikko Rumi eli täällä loppuelämänsä, ja vuonna 1273 hänen seuraajansa perustivat mevlevi-veljeskunnan, joka tunnetaan pyörivinä dervisheinä. Rumin turkoosikupolinen hauta on yhä kaupungin tärkein nähtävyys. Kaupungin nimi juontaa todennäköisesti heettiläisestä paikannimestä Ikkuwaniya.
+AIEMPI KYSYMYS: Mitä Konyan alueella syödään?
+AIEMPI VASTAUS (Livia):
+Katotaas. Konyan tunnetuin ruoka on [[etli ekmek]], pitkänomainen ohut leipä, jonka päällä on hienonnettua lihaa ja mausteita. Toinen paikallinen ruoka on [[fırın kebabı]], hitaasti uunissa kypsennetty lammasliha. Konyassa syödään myös leivonnaisia ja keittoja, ja pöydässä on usein ayran-jogurttijuomaa. Minä sain taas vain murut, kuten aina.
+KYSYMYS: Kerro lisää: etli ekmek
+
+### 101
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konya (kaupungit)
+Tietoruudun teksti: Konya oli Rum-seldžukkien sulttaanikunnan pääkaupunki, josta hallittiin lähes koko Anatoliaa. Runoilija ja mystikko Rumi eli täällä loppuelämänsä, ja vuonna 1273 hänen seuraajansa perustivat mevlevi-veljeskunnan, joka tunnetaan pyörivinä dervisheinä. Rumin turkoosikupolinen hauta on yhä kaupungin tärkein nähtävyys. Kaupungin nimi juontaa todennäköisesti heettiläisestä paikannimestä Ikkuwaniya.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Ruokaa ja tapakulttuuria: Kebab sai leivän Berliinissä] 1970-luku — Pystyvartaassa paistettu liha on vanha turkkilainen tapa, mutta ajatus tunkea se leivän sisään ja syödä kävellen syntyi Berliinissä 1970-luvulla. Turkkilaiset siirtolaiset myivät annosta tehdastyöläisille, joilla oli lyhyt ruokatunti. Nyt döner on Saksan myydyimpiä pikaruokia, ja Berliinissä siitä kiistellään yhä: kuka keksi, mitä kuuluu sisään ja mikä kioski on paras.
+AIEMPI KYSYMYS: Mitä Konyan alueella syödään?
+AIEMPI VASTAUS (Livia):
+Katotaas. Konyan tunnetuin ruoka on [[etli ekmek]], pitkänomainen ohut leipä, jonka päällä on hienonnettua lihaa ja mausteita. Toinen paikallinen ruoka on [[fırın kebabı]], hitaasti uunissa kypsennetty lammasliha. Konyassa syödään myös leivonnaisia ja keittoja, ja pöydässä on usein ayran-jogurttijuomaa. Minä sain taas vain murut, kuten aina.
+KYSYMYS: Kerro lisää: fırın kebabı
+
+### 102
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trabzon (kaupungit)
+Tietoruudun teksti: Miletoksesta tulleet kreikkalaiset perustivat kaupungin 756 eaa. Se oli ensimmäinen kreikkalainen kaupunki, jonka Ksenofonin kymmenentuhannen palkkasoturin joukko tavoitti taistellessaan tiensä ulos Persiasta. Neljännen ristiretken jälkeen 1204 siitä tuli Trapezuntin keisarikunnan pääkaupunki — kaikkein pisimpään säilynyt Bysantin seuraajavaltio, joka kaatui vasta 1461, kahdeksan vuotta Konstantinopolin jälkeen. Marco Polo päätti paluumatkansa tähän satamaan.
+AIEMPI KYSYMYS: Mistä nimi Trapezous tulee?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Nimi [[Trapezous]] tulee [[kreikan]] sanasta trapeza, joka tarkoittaa pöytää. Sen selitetään viittaavan kaupungin vanhan keskustan sijaintiin tasaisella, pöydän kaltaisella kalliotasanteella meren rannalla. Nykyinen turkkilainen nimi [[Trabzon]] on muodostunut samasta kreikkalaisesta nimestä. Nimestä on esitetty muitakin selityksiä, mutta pöytäselitys on tavallisin. Pöytä, mutta ei minulle ole sitä koskaan katettu.
+KYSYMYS: Kerro lisää: Trapezous
+
+### 103
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trabzon (kaupungit)
+Tietoruudun teksti: Miletoksesta tulleet kreikkalaiset perustivat kaupungin 756 eaa. Se oli ensimmäinen kreikkalainen kaupunki, jonka Ksenofonin kymmenentuhannen palkkasoturin joukko tavoitti taistellessaan tiensä ulos Persiasta. Neljännen ristiretken jälkeen 1204 siitä tuli Trapezuntin keisarikunnan pääkaupunki — kaikkein pisimpään säilynyt Bysantin seuraajavaltio, joka kaatui vasta 1461, kahdeksan vuotta Konstantinopolin jälkeen. Marco Polo päätti paluumatkansa tähän satamaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Tiede: Kreikan ensimmäinen tutkimuslaitos nousi kukkulalle] 1842 — Ateenan kansallinen observatorio perustettiin vuonna 1842 Nymfien kukkulalle, ja se on Kreikan vanhin tutkimuslaitos — vain vuosikymmen sen jälkeen, kun Kreikka oli tunnustettu itsenäiseksi kuningaskunnaksi. Rakennuksen suunnitteli tanskalainen arkkitehti Theophil Hansen, ja rahoituksen antoi kreikkalainen liikemies Georgios Sinas Wienistä. Observatorio teki tähtitieteen lisäksi meteorologisia ja seismologisia havaintoja, ja isoisän matkan aikaan se on toiminut jo yli kolmekymmentä vuotta.
+AIEMPI KYSYMYS: Mistä nimi Trapezous tulee?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Nimi [[Trapezous]] tulee [[kreikan]] sanasta trapeza, joka tarkoittaa pöytää. Sen selitetään viittaavan kaupungin vanhan keskustan sijaintiin tasaisella, pöydän kaltaisella kalliotasanteella meren rannalla. Nykyinen turkkilainen nimi [[Trabzon]] on muodostunut samasta kreikkalaisesta nimestä. Nimestä on esitetty muitakin selityksiä, mutta pöytäselitys on tavallisin. Pöytä, mutta ei minulle ole sitä koskaan katettu.
+KYSYMYS: Kerro lisää: kreikan
+
+### 104
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trabzon (kaupungit)
+Tietoruudun teksti: Miletoksesta tulleet kreikkalaiset perustivat kaupungin 756 eaa. Se oli ensimmäinen kreikkalainen kaupunki, jonka Ksenofonin kymmenentuhannen palkkasoturin joukko tavoitti taistellessaan tiensä ulos Persiasta. Neljännen ristiretken jälkeen 1204 siitä tuli Trapezuntin keisarikunnan pääkaupunki — kaikkein pisimpään säilynyt Bysantin seuraajavaltio, joka kaatui vasta 1461, kahdeksan vuotta Konstantinopolin jälkeen. Marco Polo päätti paluumatkansa tähän satamaan.
+AIEMPI KYSYMYS: Mistä nimi Trapezous tulee?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Nimi [[Trapezous]] tulee [[kreikan]] sanasta trapeza, joka tarkoittaa pöytää. Sen selitetään viittaavan kaupungin vanhan keskustan sijaintiin tasaisella, pöydän kaltaisella kalliotasanteella meren rannalla. Nykyinen turkkilainen nimi [[Trabzon]] on muodostunut samasta kreikkalaisesta nimestä. Nimestä on esitetty muitakin selityksiä, mutta pöytäselitys on tavallisin. Pöytä, mutta ei minulle ole sitä koskaan katettu.
+KYSYMYS: Kerro lisää: Trabzon
+
+### 105
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trabzon (kaupungit)
+Tietoruudun teksti: Miletoksesta tulleet kreikkalaiset perustivat kaupungin 756 eaa. Se oli ensimmäinen kreikkalainen kaupunki, jonka Ksenofonin kymmenentuhannen palkkasoturin joukko tavoitti taistellessaan tiensä ulos Persiasta. Neljännen ristiretken jälkeen 1204 siitä tuli Trapezuntin keisarikunnan pääkaupunki — kaikkein pisimpään säilynyt Bysantin seuraajavaltio, joka kaatui vasta 1461, kahdeksan vuotta Konstantinopolin jälkeen. Marco Polo päätti paluumatkansa tähän satamaan.
+AIEMPI KYSYMYS: Miten Trapezuntin keisarikunta säilyi niin pitkään?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Trapezuntin keisarikunta]] syntyi vuonna 1204 ja kaatui 1461, ja sen pitkää ikää selitetään usein sijainnilla: kaupunki oli jyrkkien vuorten ja [[Mustanmeren]] välissä, mikä vaikeutti maayhteyksiä hyökkääjille ja teki meriyhteyksistä kaupalle tärkeitä. Keisarikunta hyötyi myös satamansa kaupasta. Lisäksi hallitsijat tekivät liittoja ja avioliittoja naapureiden kanssa ja maksoivat tarvittaessa veroa vahvemmille. Se kesti kahdeksan vuotta pidempään kuin [[Konstantinopoli]]. Historioitsijat korostavat näitä tekijöitä, mutta painotukset vaihtelevat. Sinnikkyydessä minä tunnistan sukulaissieluja.
+KYSYMYS: Kerro lisää: Trapezuntin keisarikunta
+
+### 106
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trabzon (kaupungit)
+Tietoruudun teksti: Miletoksesta tulleet kreikkalaiset perustivat kaupungin 756 eaa. Se oli ensimmäinen kreikkalainen kaupunki, jonka Ksenofonin kymmenentuhannen palkkasoturin joukko tavoitti taistellessaan tiensä ulos Persiasta. Neljännen ristiretken jälkeen 1204 siitä tuli Trapezuntin keisarikunnan pääkaupunki — kaikkein pisimpään säilynyt Bysantin seuraajavaltio, joka kaatui vasta 1461, kahdeksan vuotta Konstantinopolin jälkeen. Marco Polo päätti paluumatkansa tähän satamaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Musiikki: Rivissä, olat tärisemässä] Postikortti n. 1910 — Mustanmeren rannikolla tanssitaan horonia. Tanssijat asettuvat riviin tai piiriin, tarttuvat toisiaan käsistä tai olkapäistä ja liikkuvat yhtenä nopeasti tärisevänä ketjuna. Tanssin säestää kemençe, kapea kolmikielinen jouhisoitin, jota pidetään pystyssä ja soitetaan jousella. Ääni on kimeä ja tahti niin tiheä, ettei siihen ehdi kuin harjaantunut jalka. Kalastajakylissä kerrotaan, että tärinä on opittu sardellilta, joka pyristelee verkosta nostettuna. Sardelli on rannikon tärkein kala.
+- [Turkki — maalehti / Musiikki] Turkin soittimet jakautuvat maan mukaan: pitkävartinen kielisoitin kylistä, ruokohuilu dervissiluostarista, rummun ja torven pari ulkoilmaan ja kolmikielinen jouhisoitin Mustanmeren rannalta.
+AIEMPI KYSYMYS: Miten Trapezuntin keisarikunta säilyi niin pitkään?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Trapezuntin keisarikunta]] syntyi vuonna 1204 ja kaatui 1461, ja sen pitkää ikää selitetään usein sijainnilla: kaupunki oli jyrkkien vuorten ja [[Mustanmeren]] välissä, mikä vaikeutti maayhteyksiä hyökkääjille ja teki meriyhteyksistä kaupalle tärkeitä. Keisarikunta hyötyi myös satamansa kaupasta. Lisäksi hallitsijat tekivät liittoja ja avioliittoja naapureiden kanssa ja maksoivat tarvittaessa veroa vahvemmille. Se kesti kahdeksan vuotta pidempään kuin [[Konstantinopoli]]. Historioitsijat korostavat näitä tekijöitä, mutta painotukset vaihtelevat. Sinnikkyydessä minä tunnistan sukulaissieluja.
+KYSYMYS: Kerro lisää: Mustanmeren
+
+### 107
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trabzon (kaupungit)
+Tietoruudun teksti: Miletoksesta tulleet kreikkalaiset perustivat kaupungin 756 eaa. Se oli ensimmäinen kreikkalainen kaupunki, jonka Ksenofonin kymmenentuhannen palkkasoturin joukko tavoitti taistellessaan tiensä ulos Persiasta. Neljännen ristiretken jälkeen 1204 siitä tuli Trapezuntin keisarikunnan pääkaupunki — kaikkein pisimpään säilynyt Bysantin seuraajavaltio, joka kaatui vasta 1461, kahdeksan vuotta Konstantinopolin jälkeen. Marco Polo päätti paluumatkansa tähän satamaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Historia: Kapalıçarşı — kuusikymmentäyksi katettua katua] Istanbulin katettu basaari eli Kapalıçarşı on maailman suurimpia ja vanhimpia katettuja kauppapaikkoja: 61 katettua katua ja yli 4 000 myymälää, joissa käy satojatuhansia ihmisiä päivässä. Sen ydin rakennettiin talvella 1455–56 pian Konstantinopolin valloituksen jälkeen, kun sulttaani Mehmed II pystytti kankaiden ja jalokivien kaupalle oman hallin. Isoisä kulki samojen holvien alla kuin nykypäivän kävijä — basaaria sanotaan usein yhdeksi maailman ensimmäisistä kauppakeskuksista.
+- [Istanbul — kaupunkilehti / Istanbul: Faaraon kivi Sultanahmetin aukiolla] Sultanahmetin aukio oli ennen hippodromi, hevosvaunujen kilparata. Sen keskellä seisoo yhä punagraniittinen obeliski, joka veistettiin Egyptissä faarao Thutmosis III:n aikana noin 1450 eaa. Mikään muu kaupungissa pystyssä oleva ei ole yhtä vanhaa tekoa. Keisari Theodosius toi sen Konstantinopoliin vuonna 390, ja jalustaan hakattiin kaksi kertomusta pystyttämisestä: latinankielinen kehuu työn kestäneen kolmekymmentä päivää, kreikankielisessä lukee kolmekymmentäkaksi.
+AIEMPI KYSYMYS: Miten Trapezuntin keisarikunta säilyi niin pitkään?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Trapezuntin keisarikunta]] syntyi vuonna 1204 ja kaatui 1461, ja sen pitkää ikää selitetään usein sijainnilla: kaupunki oli jyrkkien vuorten ja [[Mustanmeren]] välissä, mikä vaikeutti maayhteyksiä hyökkääjille ja teki meriyhteyksistä kaupalle tärkeitä. Keisarikunta hyötyi myös satamansa kaupasta. Lisäksi hallitsijat tekivät liittoja ja avioliittoja naapureiden kanssa ja maksoivat tarvittaessa veroa vahvemmille. Se kesti kahdeksan vuotta pidempään kuin [[Konstantinopoli]]. Historioitsijat korostavat näitä tekijöitä, mutta painotukset vaihtelevat. Sinnikkyydessä minä tunnistan sukulaissieluja.
+KYSYMYS: Kerro lisää: Konstantinopoli
+
+### 108
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trabzon (kaupungit)
+Tietoruudun teksti: Miletoksesta tulleet kreikkalaiset perustivat kaupungin 756 eaa. Se oli ensimmäinen kreikkalainen kaupunki, jonka Ksenofonin kymmenentuhannen palkkasoturin joukko tavoitti taistellessaan tiensä ulos Persiasta. Neljännen ristiretken jälkeen 1204 siitä tuli Trapezuntin keisarikunnan pääkaupunki — kaikkein pisimpään säilynyt Bysantin seuraajavaltio, joka kaatui vasta 1461, kahdeksan vuotta Konstantinopolin jälkeen. Marco Polo päätti paluumatkansa tähän satamaan.
+AIEMPI KYSYMYS: Mikä on Sumelan luostari?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on se kallion kylki. [[Sumelan luostari]] on kreikkalaisortodoksinen luostari Maçkan lähellä Trabzonin eteläpuolella, rakennettu jyrkän kallioseinämän kylkeen. Perimätiedon mukaan sen perustus ulottuu 300-luvulle, ja vanhimmat säilyneet osat ovat keskiajalta. Luostari oli omistettu Neitsyt Marialle, ja kallioon on maalattu ikoneja ja freskoja. [[Trapezuntin keisarikunnan]] aikana siitä tuli tärkeä pyhiinvaelluskohde. Kallion kyljessä, sehän on ihan kyyhkyn mieleen.
+KYSYMYS: Kerro lisää: Sumelan luostari
+
+### 109
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trabzon (kaupungit)
+Tietoruudun teksti: Miletoksesta tulleet kreikkalaiset perustivat kaupungin 756 eaa. Se oli ensimmäinen kreikkalainen kaupunki, jonka Ksenofonin kymmenentuhannen palkkasoturin joukko tavoitti taistellessaan tiensä ulos Persiasta. Neljännen ristiretken jälkeen 1204 siitä tuli Trapezuntin keisarikunnan pääkaupunki — kaikkein pisimpään säilynyt Bysantin seuraajavaltio, joka kaatui vasta 1461, kahdeksan vuotta Konstantinopolin jälkeen. Marco Polo päätti paluumatkansa tähän satamaan.
+AIEMPI KYSYMYS: Mikä on Sumelan luostari?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on se kallion kylki. [[Sumelan luostari]] on kreikkalaisortodoksinen luostari Maçkan lähellä Trabzonin eteläpuolella, rakennettu jyrkän kallioseinämän kylkeen. Perimätiedon mukaan sen perustus ulottuu 300-luvulle, ja vanhimmat säilyneet osat ovat keskiajalta. Luostari oli omistettu Neitsyt Marialle, ja kallioon on maalattu ikoneja ja freskoja. [[Trapezuntin keisarikunnan]] aikana siitä tuli tärkeä pyhiinvaelluskohde. Kallion kyljessä, sehän on ihan kyyhkyn mieleen.
+KYSYMYS: Kerro lisää: Trapezuntin keisarikunnan
+
+### 110
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trabzon (kaupungit)
+Tietoruudun teksti: Miletoksesta tulleet kreikkalaiset perustivat kaupungin 756 eaa. Se oli ensimmäinen kreikkalainen kaupunki, jonka Ksenofonin kymmenentuhannen palkkasoturin joukko tavoitti taistellessaan tiensä ulos Persiasta. Neljännen ristiretken jälkeen 1204 siitä tuli Trapezuntin keisarikunnan pääkaupunki — kaikkein pisimpään säilynyt Bysantin seuraajavaltio, joka kaatui vasta 1461, kahdeksan vuotta Konstantinopolin jälkeen. Marco Polo päätti paluumatkansa tähän satamaan.
+AIEMPI KYSYMYS: Mikä on Trabzonin Hagia Sofia?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Trabzonin Hagia Sofia]] on bysanttilainen kirkko, joka rakennettiin 1200-luvulla Trapezuntin keisarikunnan aikana merelle avautuvalle kukkulalle. Kirkon seinillä on säilynyt keskiaikaisia [[freskoja]], ja sen ulkoseinät on koristeltu reliefein. Rakennus on toiminut ottomaanien aikana moskeijana, myöhemmin museona, ja se muutettiin uudelleen moskeijaksi 2010-luvulla.
+
+Samalla nimellä on moni kirkko, mutta tämä on ihan oma kokonsa. Minä pidän sen merinäkymästä.
+KYSYMYS: Kerro lisää: Trabzonin Hagia Sofia
+
+### 111
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trabzon (kaupungit)
+Tietoruudun teksti: Miletoksesta tulleet kreikkalaiset perustivat kaupungin 756 eaa. Se oli ensimmäinen kreikkalainen kaupunki, jonka Ksenofonin kymmenentuhannen palkkasoturin joukko tavoitti taistellessaan tiensä ulos Persiasta. Neljännen ristiretken jälkeen 1204 siitä tuli Trapezuntin keisarikunnan pääkaupunki — kaikkein pisimpään säilynyt Bysantin seuraajavaltio, joka kaatui vasta 1461, kahdeksan vuotta Konstantinopolin jälkeen. Marco Polo päätti paluumatkansa tähän satamaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Sofian katedraali] 1037 Pyhän Sofian katedraali on Kiovan vanhin säilynyt suurkirkko. Ruhtinas Jaroslav Viisas rakennutti sen ilmeisesti vuonna 1037 samalle kentälle, jolla hänen joukkonsa olivat vuotta aiemmin voittaneet aroilta hyökänneet petšenegit. Kirkko oli 1000-luvulla yksi Euroopan suurimmista rakennuksista: sen keskiosa on neliö, jonka sivu on 30 metriä – täsmälleen sama mitta kuin Konstantinopolin Hagia Sofian pääkupolin alla olevalla neliöllä. Alun perin katedraalia peitti peräti 13 kupolia. Kirkon seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma: mosaiikkeja on 260 neliömetriä ja freskoja peräti 3 000 neliömetriä. Kahdeksan taitavaa käsityöläistä latoi kultataustaise…
+- [Astana — kohdekartta / Kohdekartta: Astana Opera] 2010–2013 Oopperatalo nousi Vasemmalle rannalle yhdeksän hehtaarin tontille. Rakentaminen alkoi 6. heinäkuuta 2010, ja talo avattiin vuonna 2013 kazakstanilaisella oopperalla Birzhan ja Sara. Suunnittelusta vastasi italialainen arkkitehtitoimisto ABDR ja rakentamisesta Mabetex-yhtiö. Harjakorkeus on 32 metriä ja kerrosala 64 163 neliömetriä; pelkkää näyttämöalaa on 3 000 neliömetriä. Saleja on kaksi. Pääsalissa on 1 250 paikkaa ja orkesterisyvennys, johon mahtuu 120 soittajaa; kamarimusiikkisalissa on 250 paikkaa. Aulassa riippuu kolmentoista metrin korkeudessa kruunu, joka painaa 1,6 tonnia. Akustiikan suunnittelivat italialaiset Enrico Moretti ja Maria Cairoli. Julkisivu on antiikin kreik…
+AIEMPI KYSYMYS: Mikä on Trabzonin Hagia Sofia?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Trabzonin Hagia Sofia]] on bysanttilainen kirkko, joka rakennettiin 1200-luvulla Trapezuntin keisarikunnan aikana merelle avautuvalle kukkulalle. Kirkon seinillä on säilynyt keskiaikaisia [[freskoja]], ja sen ulkoseinät on koristeltu reliefein. Rakennus on toiminut ottomaanien aikana moskeijana, myöhemmin museona, ja se muutettiin uudelleen moskeijaksi 2010-luvulla.
+
+Samalla nimellä on moni kirkko, mutta tämä on ihan oma kokonsa. Minä pidän sen merinäkymästä.
+KYSYMYS: Kerro lisää: freskoja
+
+### 112
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trabzon (kaupungit)
+Tietoruudun teksti: Miletoksesta tulleet kreikkalaiset perustivat kaupungin 756 eaa. Se oli ensimmäinen kreikkalainen kaupunki, jonka Ksenofonin kymmenentuhannen palkkasoturin joukko tavoitti taistellessaan tiensä ulos Persiasta. Neljännen ristiretken jälkeen 1204 siitä tuli Trapezuntin keisarikunnan pääkaupunki — kaikkein pisimpään säilynyt Bysantin seuraajavaltio, joka kaatui vasta 1461, kahdeksan vuotta Konstantinopolin jälkeen. Marco Polo päätti paluumatkansa tähän satamaan.
+AIEMPI KYSYMYS: Miksi Mustanmeren rannikolla kasvatetaan teetä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Mustanmeren itäinen rannikko on Turkin teenviljelyn keskus, ja tunnetuin teealue on [[Rize]] Trabzonin itäpuolella. Alueella on leuto ja kostea ilmasto, ja sateita tulee runsaasti, mikä sopii teepensaalle. Turkissa [[tee]] on arkinen juoma, jota tarjotaan pienistä tulppaanin muotoisista laseista. Simit kävisi kyl tuon kanssa, mut en valita.
+KYSYMYS: Kerro lisää: Rize
+
+### 113
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trabzon (kaupungit)
+Tietoruudun teksti: Miletoksesta tulleet kreikkalaiset perustivat kaupungin 756 eaa. Se oli ensimmäinen kreikkalainen kaupunki, jonka Ksenofonin kymmenentuhannen palkkasoturin joukko tavoitti taistellessaan tiensä ulos Persiasta. Neljännen ristiretken jälkeen 1204 siitä tuli Trapezuntin keisarikunnan pääkaupunki — kaikkein pisimpään säilynyt Bysantin seuraajavaltio, joka kaatui vasta 1461, kahdeksan vuotta Konstantinopolin jälkeen. Marco Polo päätti paluumatkansa tähän satamaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Ruoka ja juoma: Teetä juodaan enemmän kuin missään] Nykyisin — Turkissa juodaan teetä yli kolme kiloa henkeä kohti vuodessa, enemmän kuin missään muussa maassa. Istanbulissa se näkyy kadulla: teenkantaja kulkee kaupasta kauppaan tarjotin köysien varassa keinuen eikä läikytä tippaakaan. Tee keitetään kaksiosaisessa pannussa, jossa alhaalla kiehuu vesi ja päällä hautuu väkevä uute. Se tarjoillaan tulppaanin muotoisessa korvattomassa lasissa, josta pidetään kiinni reunasta, jottei sormia polta.
+- [Irkutsk — kaupunkilehti / Irkutsk: Tee ja silkki tulivat Kjahtan kautta] Ensimmäinen maantie Moskovasta Irkutskiin, Siperian valtatie, valmistui vuonna 1760, ja se vauhditti kaupungin taloutta. Samaan aikaan Kjahtan rajakauppapaikan kautta Kiinasta tuodut tavarat — tee ja silkki etunenässä — tulivat Irkutskissa ensi kertaa laajalti saataville; Kjahta oli perustettu vuonna 1727. Vuonna 1821 Irkutskista tuli Itä-Siperian kenraalikuvernöörin istuin, ja vuoden 1897 väenlaskussa asukkaita oli 51 473. Sähköt vedettiin 1896, draamateatteri sai kivitalonsa 1897 ja ensimmäinen juna saapui kaupunkiin 16. elokuuta 1898.
+- [Malesia — maalehti / Ruoka: Tee vedetään astiasta toiseen] Teh tarik tarkoittaa vedettyä teetä. Vahva musta tee sekoitetaan makeutettuun kondensoituun maitoon, ja seos kaadetaan kädet suorina edestakaisin kahden astian välillä. Veto jäähdyttää juoman juotavaksi ja nostaa pintaan tiheän vaahtopään. Kiinalaiset toivat mustan teen 1830-luvulla ja eteläintialaiset katukokit kehittivät vetotekniikan 1850-luvun jälkeen. Kojut palvelivat kumiplantaasien portilla jo 1870-luvulla, ja sodan jälkeen kallis tee vaihtui teepölyyn, jonka karvauden kondensoitu maito peitti.
+AIEMPI KYSYMYS: Miksi Mustanmeren rannikolla kasvatetaan teetä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Mustanmeren itäinen rannikko on Turkin teenviljelyn keskus, ja tunnetuin teealue on [[Rize]] Trabzonin itäpuolella. Alueella on leuto ja kostea ilmasto, ja sateita tulee runsaasti, mikä sopii teepensaalle. Turkissa [[tee]] on arkinen juoma, jota tarjotaan pienistä tulppaanin muotoisista laseista. Simit kävisi kyl tuon kanssa, mut en valita.
+KYSYMYS: Kerro lisää: tee
+
+### 114
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göbekli Tepe (historia)
+Tietoruudun teksti: Kukkulan huipulle rakennettiin suuria ympyränmuotoisia rakennelmia T-kirjaimen muotoisine kivipylväineen noin 9500–8000 eaa. — ne ovat maailman vanhimpia tunnettuja megaliitteja, tuhansia vuosia vanhempia kuin savi, kirjoitus tai metalli. Pylväisiin on veistetty villieläimiä sekä ihmismäisiä käsiä ja vaatteita. Kohde huomattiin kartoituksessa 1963, mutta sen merkitys tajuttiin vasta 1994. Vuoteen 2021 mennessä siitä oli kaivettu noin kymmenesosa.
+AIEMPI KYSYMYS: Ketkä pylväät pystyttivät?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Pylväät pystyttivät metsästäjät ja keräilijät, jotka elivät ennen maanviljelyn ja savenpolton aikaa. Tutkijat arvelevat, että työhön osallistui yhteisö, joka kokoontui paikalle rakentamaan ja viettämään seremonioita; rakentajien nimiä tai kieltä ei tunneta, koska kirjoitusta ei vielä ollut. Pylväät ovat T:n muotoisia, ja niihin on veistetty kettuja, käärmeitä, kurkia ja villisikoja, ja ne kuuluvat maailman vanhimpiin tunnettuihin [[megaliitteihin]]. [[Göbekli Tepe]] on yli kuusituhatta vuotta vanhempi kuin Egyptin pyramidit. Kurki on kiva, mutta olisihan siinä voinut olla pulukin.
+KYSYMYS: Kerro lisää: megaliitteihin
+
+### 115
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göbekli Tepe (historia)
+Tietoruudun teksti: Kukkulan huipulle rakennettiin suuria ympyränmuotoisia rakennelmia T-kirjaimen muotoisine kivipylväineen noin 9500–8000 eaa. — ne ovat maailman vanhimpia tunnettuja megaliitteja, tuhansia vuosia vanhempia kuin savi, kirjoitus tai metalli. Pylväisiin on veistetty villieläimiä sekä ihmismäisiä käsiä ja vaatteita. Kohde huomattiin kartoituksessa 1963, mutta sen merkitys tajuttiin vasta 1994. Vuoteen 2021 mennessä siitä oli kaivettu noin kymmenesosa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kabul — kaupunkilehti / Kabul: Museo, jota pidettiin maailman parhaiden joukossa] Afganistanin kansallismuseo avattiin 1919 kuningas Amanullah Khanin aikana. Kokoelma oli aluksi Bagh-e Balan palatsissa ja muutti 1922 omiin tiloihinsa — museon oma infoboksi laskee perustamisvuodeksi juuri tuon — ja sai nykyisen paikkansa Darulamanin alueelta 1931. Museota pidettiin aikanaan yhtenä maailman hienoimmista. Vuoteen 1978 mennessä kokoelmassa oli yli satatuhatta esinettä: Bagramin norsunluukaiverruksia ensimmäiseltä vuosisadalta, Ai-Khanoumin kreikkalaisia pylväänpäitä, Tepe Fullolin hopeamaljan sirpaleita kolmannelta vuosituhannelta eaa. ja Surkh Kotalin kreikkalaisin kirjaimin kirjoitettu bakriankielinen piirtokirjoitus.
+AIEMPI KYSYMYS: Ketkä pylväät pystyttivät?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Pylväät pystyttivät metsästäjät ja keräilijät, jotka elivät ennen maanviljelyn ja savenpolton aikaa. Tutkijat arvelevat, että työhön osallistui yhteisö, joka kokoontui paikalle rakentamaan ja viettämään seremonioita; rakentajien nimiä tai kieltä ei tunneta, koska kirjoitusta ei vielä ollut. Pylväät ovat T:n muotoisia, ja niihin on veistetty kettuja, käärmeitä, kurkia ja villisikoja, ja ne kuuluvat maailman vanhimpiin tunnettuihin [[megaliitteihin]]. [[Göbekli Tepe]] on yli kuusituhatta vuotta vanhempi kuin Egyptin pyramidit. Kurki on kiva, mutta olisihan siinä voinut olla pulukin.
+KYSYMYS: Kerro lisää: Göbekli Tepe
+
+### 116
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göbekli Tepe (historia)
+Tietoruudun teksti: Kukkulan huipulle rakennettiin suuria ympyränmuotoisia rakennelmia T-kirjaimen muotoisine kivipylväineen noin 9500–8000 eaa. — ne ovat maailman vanhimpia tunnettuja megaliitteja, tuhansia vuosia vanhempia kuin savi, kirjoitus tai metalli. Pylväisiin on veistetty villieläimiä sekä ihmismäisiä käsiä ja vaatteita. Kohde huomattiin kartoituksessa 1963, mutta sen merkitys tajuttiin vasta 1994. Vuoteen 2021 mennessä siitä oli kaivettu noin kymmenesosa.
+AIEMPI KYSYMYS: Miksi kaivauksia tehdään niin hitaasti?
+AIEMPI VASTAUS (Livia):
+No niin, tähän on useita syitä. [[Göbekli Tepellä]] kohde on laaja, ja vuoteen 2021 mennessä siitä oli kaivettu noin kymmenesosa. [[Nykyarkeologia]] pyrkii suojelemaan löydöksiä, ja osa alueesta jätetään tarkoituksella kaivamatta, jotta tulevat tutkijat voivat käyttää parempia menetelmiä. Kaivaus on tehtävä huolellisesti, koska [[pylväät]] ja kivet ovat herkkiä sään vaikutukselle ja jokainen kerros kertoo jotain. Kärsivällisyys on arkeologin tärkein työkalu, ja minä en sitä omista.
+KYSYMYS: Kerro lisää: Göbekli Tepellä
+
+### 117
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göbekli Tepe (historia)
+Tietoruudun teksti: Kukkulan huipulle rakennettiin suuria ympyränmuotoisia rakennelmia T-kirjaimen muotoisine kivipylväineen noin 9500–8000 eaa. — ne ovat maailman vanhimpia tunnettuja megaliitteja, tuhansia vuosia vanhempia kuin savi, kirjoitus tai metalli. Pylväisiin on veistetty villieläimiä sekä ihmismäisiä käsiä ja vaatteita. Kohde huomattiin kartoituksessa 1963, mutta sen merkitys tajuttiin vasta 1994. Vuoteen 2021 mennessä siitä oli kaivettu noin kymmenesosa.
+AIEMPI KYSYMYS: Miksi kaivauksia tehdään niin hitaasti?
+AIEMPI VASTAUS (Livia):
+No niin, tähän on useita syitä. [[Göbekli Tepellä]] kohde on laaja, ja vuoteen 2021 mennessä siitä oli kaivettu noin kymmenesosa. [[Nykyarkeologia]] pyrkii suojelemaan löydöksiä, ja osa alueesta jätetään tarkoituksella kaivamatta, jotta tulevat tutkijat voivat käyttää parempia menetelmiä. Kaivaus on tehtävä huolellisesti, koska [[pylväät]] ja kivet ovat herkkiä sään vaikutukselle ja jokainen kerros kertoo jotain. Kärsivällisyys on arkeologin tärkein työkalu, ja minä en sitä omista.
+KYSYMYS: Kerro lisää: Nykyarkeologia
+
+### 118
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göbekli Tepe (historia)
+Tietoruudun teksti: Kukkulan huipulle rakennettiin suuria ympyränmuotoisia rakennelmia T-kirjaimen muotoisine kivipylväineen noin 9500–8000 eaa. — ne ovat maailman vanhimpia tunnettuja megaliitteja, tuhansia vuosia vanhempia kuin savi, kirjoitus tai metalli. Pylväisiin on veistetty villieläimiä sekä ihmismäisiä käsiä ja vaatteita. Kohde huomattiin kartoituksessa 1963, mutta sen merkitys tajuttiin vasta 1994. Vuoteen 2021 mennessä siitä oli kaivettu noin kymmenesosa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Historia: Pylväät nostettiin ennen kyliä] 9500 eaa — Kaakkois-Turkissa on kukkula, jonka laelle metsästäjät ja keräilijät pystyttivät jättiläismäisiä kivipylväitä noin 9500 vuotta ennen ajanlaskun alkua. Se on yli kuusituhatta vuotta ennen Egyptin pyramideja. Pylväät ovat T:n muotoisia, korkeimmat noin viisi ja puoli metriä, ja niiden kylkiin on veistetty kettuja, käärmeitä, kurkia ja villisikoja. Rakentajat eivät vielä osanneet polttaa savesta ruukkuja eivätkä viljelleet peltoa. Kukkulaa luultiin pitkään keskiaikaiseksi hautausmaaksi, ja kunnolliset kaivaukset alkoivat vasta vuonna 1995.
+AIEMPI KYSYMYS: Miksi kaivauksia tehdään niin hitaasti?
+AIEMPI VASTAUS (Livia):
+No niin, tähän on useita syitä. [[Göbekli Tepellä]] kohde on laaja, ja vuoteen 2021 mennessä siitä oli kaivettu noin kymmenesosa. [[Nykyarkeologia]] pyrkii suojelemaan löydöksiä, ja osa alueesta jätetään tarkoituksella kaivamatta, jotta tulevat tutkijat voivat käyttää parempia menetelmiä. Kaivaus on tehtävä huolellisesti, koska [[pylväät]] ja kivet ovat herkkiä sään vaikutukselle ja jokainen kerros kertoo jotain. Kärsivällisyys on arkeologin tärkein työkalu, ja minä en sitä omista.
+KYSYMYS: Kerro lisää: pylväät
+
+### 119
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göbekli Tepe (historia)
+Tietoruudun teksti: Kukkulan huipulle rakennettiin suuria ympyränmuotoisia rakennelmia T-kirjaimen muotoisine kivipylväineen noin 9500–8000 eaa. — ne ovat maailman vanhimpia tunnettuja megaliitteja, tuhansia vuosia vanhempia kuin savi, kirjoitus tai metalli. Pylväisiin on veistetty villieläimiä sekä ihmismäisiä käsiä ja vaatteita. Kohde huomattiin kartoituksessa 1963, mutta sen merkitys tajuttiin vasta 1994. Vuoteen 2021 mennessä siitä oli kaivettu noin kymmenesosa.
+AIEMPI KYSYMYS: Mitä Göbekli Tepen lähellä on nähtävää?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Lähin suuri kaupunki on [[Şanlıurfa]], joka on lyhyen ajomatkan päässä kukkulalta. Kaupungista löytyy muun muassa [[Balıklıgöl]]-allas, kalojen täyttämä pyhä lampi, sekä vanha basaarialue. Alueella on myös muita esihistoriallisia kohteita, kuten [[Karahan Tepe]], jota kaivetaan samoin kuin Göbekli Tepeä.
+
+Minä olen lentänyt Urfan yli vain ohimennen. Pyhät kalat saavat kuulemma ruokansa ennen kuin minä.
+KYSYMYS: Kerro lisää: Şanlıurfa
+
+### 120
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göbekli Tepe (historia)
+Tietoruudun teksti: Kukkulan huipulle rakennettiin suuria ympyränmuotoisia rakennelmia T-kirjaimen muotoisine kivipylväineen noin 9500–8000 eaa. — ne ovat maailman vanhimpia tunnettuja megaliitteja, tuhansia vuosia vanhempia kuin savi, kirjoitus tai metalli. Pylväisiin on veistetty villieläimiä sekä ihmismäisiä käsiä ja vaatteita. Kohde huomattiin kartoituksessa 1963, mutta sen merkitys tajuttiin vasta 1994. Vuoteen 2021 mennessä siitä oli kaivettu noin kymmenesosa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Luonto: Parvi pesii suolan päällä] Kesäisin — Keski-Anatoliassa on Turkin toiseksi suurin järvi, Tuz Gölü eli Suolajärvi. Se on hyvin matala, ja kesän kuivuessa järven pinnalle jää paksu valkoinen suolakuori. Juuri matala ja suolainen vesi tekee siitä hyvän pesimäpaikan, koska maapedot eivät pääse pesille: se on Turkin tärkein flamingoalue, ja hyvänä kesänä siellä kuoriutuu kymmeniätuhansia poikasia. Aikuisen flamingon vaaleanpunainen väri tulee ravinnosta, pikkuäyriäisistä ja levistä, joita lintu siivilöi vedestä nokallaan. Poikaset ovat ensin harmaita.
+AIEMPI KYSYMYS: Mitä Göbekli Tepen lähellä on nähtävää?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Lähin suuri kaupunki on [[Şanlıurfa]], joka on lyhyen ajomatkan päässä kukkulalta. Kaupungista löytyy muun muassa [[Balıklıgöl]]-allas, kalojen täyttämä pyhä lampi, sekä vanha basaarialue. Alueella on myös muita esihistoriallisia kohteita, kuten [[Karahan Tepe]], jota kaivetaan samoin kuin Göbekli Tepeä.
+
+Minä olen lentänyt Urfan yli vain ohimennen. Pyhät kalat saavat kuulemma ruokansa ennen kuin minä.
+KYSYMYS: Kerro lisää: Balıklıgöl
+
+### 121
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göbekli Tepe (historia)
+Tietoruudun teksti: Kukkulan huipulle rakennettiin suuria ympyränmuotoisia rakennelmia T-kirjaimen muotoisine kivipylväineen noin 9500–8000 eaa. — ne ovat maailman vanhimpia tunnettuja megaliitteja, tuhansia vuosia vanhempia kuin savi, kirjoitus tai metalli. Pylväisiin on veistetty villieläimiä sekä ihmismäisiä käsiä ja vaatteita. Kohde huomattiin kartoituksessa 1963, mutta sen merkitys tajuttiin vasta 1994. Vuoteen 2021 mennessä siitä oli kaivettu noin kymmenesosa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kabul — kaupunkilehti / Kabul: Museo, jota pidettiin maailman parhaiden joukossa] Afganistanin kansallismuseo avattiin 1919 kuningas Amanullah Khanin aikana. Kokoelma oli aluksi Bagh-e Balan palatsissa ja muutti 1922 omiin tiloihinsa — museon oma infoboksi laskee perustamisvuodeksi juuri tuon — ja sai nykyisen paikkansa Darulamanin alueelta 1931. Museota pidettiin aikanaan yhtenä maailman hienoimmista. Vuoteen 1978 mennessä kokoelmassa oli yli satatuhatta esinettä: Bagramin norsunluukaiverruksia ensimmäiseltä vuosisadalta, Ai-Khanoumin kreikkalaisia pylväänpäitä, Tepe Fullolin hopeamaljan sirpaleita kolmannelta vuosituhannelta eaa. ja Surkh Kotalin kreikkalaisin kirjaimin kirjoitettu bakriankielinen piirtokirjoitus.
+AIEMPI KYSYMYS: Mitä Göbekli Tepen lähellä on nähtävää?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Lähin suuri kaupunki on [[Şanlıurfa]], joka on lyhyen ajomatkan päässä kukkulalta. Kaupungista löytyy muun muassa [[Balıklıgöl]]-allas, kalojen täyttämä pyhä lampi, sekä vanha basaarialue. Alueella on myös muita esihistoriallisia kohteita, kuten [[Karahan Tepe]], jota kaivetaan samoin kuin Göbekli Tepeä.
+
+Minä olen lentänyt Urfan yli vain ohimennen. Pyhät kalat saavat kuulemma ruokansa ennen kuin minä.
+KYSYMYS: Kerro lisää: Karahan Tepe
+
+### 122
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göbekli Tepe (historia)
+Tietoruudun teksti: Kukkulan huipulle rakennettiin suuria ympyränmuotoisia rakennelmia T-kirjaimen muotoisine kivipylväineen noin 9500–8000 eaa. — ne ovat maailman vanhimpia tunnettuja megaliitteja, tuhansia vuosia vanhempia kuin savi, kirjoitus tai metalli. Pylväisiin on veistetty villieläimiä sekä ihmismäisiä käsiä ja vaatteita. Kohde huomattiin kartoituksessa 1963, mutta sen merkitys tajuttiin vasta 1994. Vuoteen 2021 mennessä siitä oli kaivettu noin kymmenesosa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Onko Göbekli Tepe Unescon maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kyllä: [[Göbekli Tepe]] kirjattiin Unescon [[maailmanperintöluetteloon]] vuonna 2018. Kohteen arvo perustuu siihen, että se on poikkeuksellisen vanha todiste suurista yhteisöllisistä rakennustöistä ennen maanviljelyn ja kylien syntyä. Kaivaukset ovat yhä käynnissä, ja kohteelle on rakennettu suojakatoksia, jotka suojaavat pylväitä sateelta ja auringolta. Ikää on sen verran, että minun sukuni lentoreitit ovat nuoria sen rinnalla.
+KYSYMYS: Kerro lisää: maailmanperintöluetteloon
+
+### 123
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göbekli Tepe (historia)
+Tietoruudun teksti: Kukkulan huipulle rakennettiin suuria ympyränmuotoisia rakennelmia T-kirjaimen muotoisine kivipylväineen noin 9500–8000 eaa. — ne ovat maailman vanhimpia tunnettuja megaliitteja, tuhansia vuosia vanhempia kuin savi, kirjoitus tai metalli. Pylväisiin on veistetty villieläimiä sekä ihmismäisiä käsiä ja vaatteita. Kohde huomattiin kartoituksessa 1963, mutta sen merkitys tajuttiin vasta 1994. Vuoteen 2021 mennessä siitä oli kaivettu noin kymmenesosa.
+AIEMPI KYSYMYS: Kuka oli Klaus Schmidt?
+AIEMPI VASTAUS (Livia):
+No jopas. [[Klaus Schmidt]] oli saksalainen arkeologi, joka johti Göbekli Tepen kaivauksia 1990-luvun puolivälistä kuolemaansa asti vuonna 2014. Hän työskenteli [[Saksan arkeologisen instituutin]] palveluksessa ja ymmärsi, että kukkulan kivet eivät olleet keskiaikaisen hautausmaan jäänteitä vaan paljon vanhempi rakennelma. Hänen tulkintansa mukaan paikka oli yhteisön rituaalinen kokoontumispaikka. Tulkinnoista keskustellaan edelleen, koska kirjoitettuja lähteitä ei ole. Kärsivällisyyttä sillä miehellä oli, enemmän kuin minulla.
+KYSYMYS: Kerro lisää: Klaus Schmidt
+
+### 124
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göbekli Tepe (historia)
+Tietoruudun teksti: Kukkulan huipulle rakennettiin suuria ympyränmuotoisia rakennelmia T-kirjaimen muotoisine kivipylväineen noin 9500–8000 eaa. — ne ovat maailman vanhimpia tunnettuja megaliitteja, tuhansia vuosia vanhempia kuin savi, kirjoitus tai metalli. Pylväisiin on veistetty villieläimiä sekä ihmismäisiä käsiä ja vaatteita. Kohde huomattiin kartoituksessa 1963, mutta sen merkitys tajuttiin vasta 1994. Vuoteen 2021 mennessä siitä oli kaivettu noin kymmenesosa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dakar — kohdekartta / Kohdekartta: Pasteur-instituutti] 1896 ja 1913 Vuonna 1896 ranskalainen lääkäri ja mikrobiologi Émile Marchoux, joka oli opiskellut Louis Pasteurin johdolla, perusti mikrobiologisen laboratorion Saint-Louis'hin. Se oli silloin siirtomaan pääkaupunki. Kun Dakarista tuli uusi pääkaupunki 1902, laitos siirrettiin sinne 1913 — ja se on toiminut samassa kaupungissa siitä lähtien, myös Senegalin itsenäistymisen jälkeen. Instituutti on osa maailmanlaajuista Pasteur-instituuttia, jota se hallinnoi yhdessä Senegalin valtion kanssa. Painopiste on mikrobiologiassa ja virologiassa, erityisesti hyönteisten levittämissä viruksissa. Talon merkittävin saavutus on keltakuumeessa: tauti eristettiin Afrikassa ensimmäisen kerran juuri täällä, …
+AIEMPI KYSYMYS: Kuka oli Klaus Schmidt?
+AIEMPI VASTAUS (Livia):
+No jopas. [[Klaus Schmidt]] oli saksalainen arkeologi, joka johti Göbekli Tepen kaivauksia 1990-luvun puolivälistä kuolemaansa asti vuonna 2014. Hän työskenteli [[Saksan arkeologisen instituutin]] palveluksessa ja ymmärsi, että kukkulan kivet eivät olleet keskiaikaisen hautausmaan jäänteitä vaan paljon vanhempi rakennelma. Hänen tulkintansa mukaan paikka oli yhteisön rituaalinen kokoontumispaikka. Tulkinnoista keskustellaan edelleen, koska kirjoitettuja lähteitä ei ole. Kärsivällisyyttä sillä miehellä oli, enemmän kuin minulla.
+KYSYMYS: Kerro lisää: Saksan arkeologisen instituutin
+
+### 125
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ararat (luonto · vuori)
+Tietoruudun teksti: Suuri Ararat on Turkin korkein huippu, 5 137 metriä; sen vieressä kohoaa Pieni Ararat, 3 896 metriä. Keskiajalta lähtien Euroopassa vuori on samastettu Raamatun "Araratin vuoriin", joille Nooan arkin kerrotaan laskeutuneen — vaikka kiistanalaista on, tarkoittaako Genesis 8:4 juuri tätä vuorta. Ensimmäinen tunnettu nousu tehtiin 1829: Friedrich Parrot, Khachatur Abovian ja neljä muuta. Turkiksi vuori on Ağrı Dağı, armeniaksi Masis.
+AIEMPI KYSYMYS: Onko vuori yhä tulivuori?
+AIEMPI VASTAUS (Livia):
+Kato, hyvä kysymys tuo. Ararat on rakenteeltaan [[kerrostulivuori]], ja se on nykyään lepotilassa. Vuorta pidetään geologisesti mahdollisesti yhä aktiivisena, ja joidenkin lähteiden mukaan se on purkautunut 1800-luvulla, mutta lähteet eivät ole asiasta yksimielisiä. Suuren Araratin huippua peittää pysyvä [[jäätikkö]], ja Pieni Ararat kuuluu samaan tulivuorimassiiviin. [[Turkin]] korkein huippu on siis nukkuva eikä sammunut jättiläinen. Ei hassumpaa kyyhkyltä.
+KYSYMYS: Kerro lisää: kerrostulivuori
+
+### 126
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ararat (luonto · vuori)
+Tietoruudun teksti: Suuri Ararat on Turkin korkein huippu, 5 137 metriä; sen vieressä kohoaa Pieni Ararat, 3 896 metriä. Keskiajalta lähtien Euroopassa vuori on samastettu Raamatun "Araratin vuoriin", joille Nooan arkin kerrotaan laskeutuneen — vaikka kiistanalaista on, tarkoittaako Genesis 8:4 juuri tätä vuorta. Ensimmäinen tunnettu nousu tehtiin 1829: Friedrich Parrot, Khachatur Abovian ja neljä muuta. Turkiksi vuori on Ağrı Dağı, armeniaksi Masis.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kilimandžaro — kaupunkilehti / Kilimanjaron luonto: Sulava jäätikkö] Kilimanjaron huipulla oli 1900-luvun alussa laaja jääkenttä, mutta lämpötilan nousun ja ilman kuivumisen myötä jäätiköt ovat kutistuneet dramaattisesti: lähes 85 prosenttia jääpeitteestä suli lokakuun 1912 ja kesäkuun 2011 välillä, ja sulaminen on kiihtynyt vuosikymmen vuosikymmeneltä. Tutkijoiden arvioiden mukaan viimeisetkin jäätiköt, kuten huipun läheinen Furtwänglerin jäätikkö, saattavat kadota kokonaan vuosisadan puoliväliin mennessä. Katoava lumi ja jää ovat samalla se ilmiö, jonka Rebmann näki jo 1848 – vain paljon runsaampana.
+- [Sveitsi — maalehti / Vuoret: Jäätikkö, joka virtaa kuin joki] 2001 — Aletschin jäätikkö on Alppien suurin: noin kaksikymmentä kilometriä pitkä ja paksuimmalta kohdalta lähes tuhat metriä syvä jäämassa. Se ei ole paikallaan vaan valuu alaspäin muutamia satoja metrejä vuodessa — niin hitaasti, ettei sitä näe, mutta pinnan tummat juovat kertovat virtauksen suunnan kuin joen pyörteet. Unesco otti jäätikön ympäristöineen maailmanperintöluetteloon vuonna 2001. Jäätikkö on lyhentynyt viime vuosikymmeninä nopeasti.
+AIEMPI KYSYMYS: Onko vuori yhä tulivuori?
+AIEMPI VASTAUS (Livia):
+Kato, hyvä kysymys tuo. Ararat on rakenteeltaan [[kerrostulivuori]], ja se on nykyään lepotilassa. Vuorta pidetään geologisesti mahdollisesti yhä aktiivisena, ja joidenkin lähteiden mukaan se on purkautunut 1800-luvulla, mutta lähteet eivät ole asiasta yksimielisiä. Suuren Araratin huippua peittää pysyvä [[jäätikkö]], ja Pieni Ararat kuuluu samaan tulivuorimassiiviin. [[Turkin]] korkein huippu on siis nukkuva eikä sammunut jättiläinen. Ei hassumpaa kyyhkyltä.
+KYSYMYS: Kerro lisää: jäätikkö
+
+### 127
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ararat (luonto · vuori)
+Tietoruudun teksti: Suuri Ararat on Turkin korkein huippu, 5 137 metriä; sen vieressä kohoaa Pieni Ararat, 3 896 metriä. Keskiajalta lähtien Euroopassa vuori on samastettu Raamatun "Araratin vuoriin", joille Nooan arkin kerrotaan laskeutuneen — vaikka kiistanalaista on, tarkoittaako Genesis 8:4 juuri tätä vuorta. Ensimmäinen tunnettu nousu tehtiin 1829: Friedrich Parrot, Khachatur Abovian ja neljä muuta. Turkiksi vuori on Ağrı Dağı, armeniaksi Masis.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riad — kohdekartta / Kohdekartta: Imam Turkin suurmoskeija] Turki bin Abdullah otti Riadin 1824 ja teki siitä toisen Saudi-valtion pääkaupungin. Suurmoskeija rakennettiin hänen aikanaan vuosina 1826–1830, hallintopalatsi Qasr al-Hukmin viereen. Turki surmattiin vuonna 1834 perjantairukouksesta lähtiessään, ja moskeija kantaa yhä hänen nimeään. Nykyinen moskeija on vuodelta 1992, ja se avattiin tammikuussa 1993. Samoihin vuosiin osui koko Qasr al-Hukmin korttelin uudistus, jonka työt kestivät 1983–1992. Sisätilaa on 16 800 neliömetriä ja rukoilijoita mahtuu 17 000; se on yksi maan suurimmista moskeijoista. Ulkoseinät ja sisätilan yläosa ovat ruskeaa riadilaista kalkkikiveä, alaosa valkoista marmoria. Miesten ja naisten kirjastot ovat kumpikin 325 nel…
+- [Turkki — maalehti / Historia: Yhdeksän kaupunkia päällekkäin] 1873 — Homeroksen Troijaa pidettiin pitkään pelkkänä taruna, kunnes Länsi-Turkin rannikolta kaivettiin esiin Hisarlıkin kumpu. Kummussa on yhdeksän kaupunkia päällekkäin: aina kun kaupunki tuhoutui, uusi rakennettiin raunioiden päälle, ja kumpu kasvoi kerros kerrokselta. Heinrich Schliemann aloitti kaivaukset 1870-luvulla ja kaivoi kummun läpi suuren kuilun. Vuonna 1873 hän löysi kultaesineitä, joita hän kutsui Priamoksen aarteeksi — mutta esineet olivat yli tuhat vuotta vanhempia kuin kerrottu sota. Kiireessä hän tuhosi juuri sen kerroksen, jota etsi.
+AIEMPI KYSYMYS: Onko vuori yhä tulivuori?
+AIEMPI VASTAUS (Livia):
+Kato, hyvä kysymys tuo. Ararat on rakenteeltaan [[kerrostulivuori]], ja se on nykyään lepotilassa. Vuorta pidetään geologisesti mahdollisesti yhä aktiivisena, ja joidenkin lähteiden mukaan se on purkautunut 1800-luvulla, mutta lähteet eivät ole asiasta yksimielisiä. Suuren Araratin huippua peittää pysyvä [[jäätikkö]], ja Pieni Ararat kuuluu samaan tulivuorimassiiviin. [[Turkin]] korkein huippu on siis nukkuva eikä sammunut jättiläinen. Ei hassumpaa kyyhkyltä.
+KYSYMYS: Kerro lisää: Turkin
+
+### 128
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ararat (luonto · vuori)
+Tietoruudun teksti: Suuri Ararat on Turkin korkein huippu, 5 137 metriä; sen vieressä kohoaa Pieni Ararat, 3 896 metriä. Keskiajalta lähtien Euroopassa vuori on samastettu Raamatun "Araratin vuoriin", joille Nooan arkin kerrotaan laskeutuneen — vaikka kiistanalaista on, tarkoittaako Genesis 8:4 juuri tätä vuorta. Ensimmäinen tunnettu nousu tehtiin 1829: Friedrich Parrot, Khachatur Abovian ja neljä muuta. Turkiksi vuori on Ağrı Dağı, armeniaksi Masis.
+AIEMPI KYSYMYS: Kuinka usein huipulle noustaan nykyään?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tarkkaa nykyistä nousijamäärää kerrassaan en tiedä, mutta kerron sen, minkä varmasti tiedän. Ararat on suosittu vuorikiipeilykohde, ja nousu tehdään käytännössä kesäkaudella, kun alarinteiden lumi on sulanut. Vuori sijaitsee lähellä [[Turkin]] rajaa, joten nousuun tarvitaan yleensä viranomaisen lupa, ja lupakäytännöt ovat vaihdelleet vuosien mittaan. Yli viiden kilometrin korkeudessa myös [[vuoristotautia]] on syytä varoa, vaikka reitti ei ole teknisesti äärimmäisen vaikea. Ja tän kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: vuoristotautia
+
+### 129
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ararat (luonto · vuori)
+Tietoruudun teksti: Suuri Ararat on Turkin korkein huippu, 5 137 metriä; sen vieressä kohoaa Pieni Ararat, 3 896 metriä. Keskiajalta lähtien Euroopassa vuori on samastettu Raamatun "Araratin vuoriin", joille Nooan arkin kerrotaan laskeutuneen — vaikka kiistanalaista on, tarkoittaako Genesis 8:4 juuri tätä vuorta. Ensimmäinen tunnettu nousu tehtiin 1829: Friedrich Parrot, Khachatur Abovian ja neljä muuta. Turkiksi vuori on Ağrı Dağı, armeniaksi Masis.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Luonto: Pylväät, jotka laava latoi] 60 milj. vuotta sitten — Pohjois-Irlannin rannikolla on noin 40 000 kivipylvästä, jotka nousevat merestä kuin ladotut askelmat. Ne syntyivät, kun paksu laavakerros jäähtyi hyvin hitaasti. Jäähtyessään laava kutistui ja halkeili, ja halkeamat etsivät lyhimmän reitin — siksi useimmista pylväistä tuli kuusikulmaisia. Osassa on kuitenkin neljä, viisi, seitsemän tai kahdeksan sivua. Vanha tarina selittää saman toisin: jättiläinen Fionn mac Cumhaill rakensi kivitien Skotlantiin päästäkseen tappelemaan toisen jättiläisen kanssa.
+- [Tansania — maalehti / Luonto: Laava, jota voi katsoa päivällä kuin mutavirtaa] Ol Doinyo Lengai on maailman ainoa tulivuori, joka purkaa natrokarbonatiittia. Sen laava on 540–593-asteista — tavallinen basalttilaava on satoja asteita kuumempaa — ja niin juoksevaa, että se virtaa yhdestä viiteen metriä sekunnissa ja on tunnetuista laavoista kaikkein ohuinta. Päivänvalossa virta näyttää mudalta tai öljyltä ja hehkuu vasta pimeässä. Tuore laava on musta tai ruskea, mutta se muuttuu tunneissa tai päivissä lumivalkoiseksi. Maasait ja sonjot kutsuvat vuorta Jumalan vuoreksi.
+- [Etelä-Korea — maalehti / Luonto: Laava kaivoi itselleen käytävän] Manjanggulin luola on lähes yhdeksän kilometriä pitkä, paikoin 23 metriä leveä ja 30 korkea. Se ei ole veden liuottama vaan laavaputki: laavavirta kaivoi sen itse. Virran pinta jähmettyi katoksi, mutta sisällä kuuma laava jatkoi matkaansa, ja kun purkaus loppui, putki jäi tyhjäksi käytäväksi. Katosta valuneesta laavasta on jäänyt riippuvia tippukiviä, ja luolan perällä seisoo 7,6 metriä korkea laavapylväs, joka on maailman suurin tunnettu. Luola kuuluu Jejun maailmanperintökohteeseen.
+AIEMPI KYSYMYS: Miksi vuorella on kaksi huippua?
+AIEMPI VASTAUS (Livia):
+No niin, tost minä osaan kertoo. Suuri ja Pieni Ararat ovat kaksi erillistä tulivuorikartiota, jotka ovat kohonneet samalta laajalta tulivuorialueelta ja joita erottaa matala satula. Ne ovat syntyneet eri purkausvaiheissa kasaantuneista [[laavavirtausten]] ja tuhkakerrosten kerrostumista, ja Suuri Ararat on kohonnut selvästi korkeammaksi. Tämä on tavallista [[tulivuorikentillä]], joilla uusia purkausaukkoja avautuu vanhan viereen. Pieni Ararat näkyy hyvin Suuren rinnalla, ja yhdessä ne muodostavat tutun kaksoissiluetin. Pitkältä matkalta kyllä erottaa kaksikon heti.
+KYSYMYS: Kerro lisää: laavavirtausten
+
+### 130
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ararat (luonto · vuori)
+Tietoruudun teksti: Suuri Ararat on Turkin korkein huippu, 5 137 metriä; sen vieressä kohoaa Pieni Ararat, 3 896 metriä. Keskiajalta lähtien Euroopassa vuori on samastettu Raamatun "Araratin vuoriin", joille Nooan arkin kerrotaan laskeutuneen — vaikka kiistanalaista on, tarkoittaako Genesis 8:4 juuri tätä vuorta. Ensimmäinen tunnettu nousu tehtiin 1829: Friedrich Parrot, Khachatur Abovian ja neljä muuta. Turkiksi vuori on Ağrı Dağı, armeniaksi Masis.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Luonto: Osorno-tulivuori] Llanquihuen järven yli kohoaa Osorno, 2652 metriä korkea ja lähes täydellisen symmetrinen jäätikköhuippuinen tulivuori, jota on verrattu Japanin Fuji-vuoreen. Osorno on purkautunut ainakin yksitoista kertaa vuosien 1575 ja 1869 välillä, ja viimeisin purkaus tapahtui juuri 1869 - vain neljä vuotta ennen kuin isoisä kulki samalla seudulla vuonna 1873. Luonnontutkija Charles Darwin näki vuonna 1835 Osornon purkautuvan Beagle-aluksen kannelta lähellä Ancudia ja pohti päiväkirjassaan, liittyvätkö kaukaiset tulivuoret toisiinsa maan alla. Yli sadan vuoden ajan Osorno on ollut hiljaa, ja nykyään sen rinteillä hiihdetään ja vaelletaan.
+- [Myanmar — maalehti / Luonto: Tulivuori, jolla on kolmekymmentäseitsemän asukasta] Popa on sammunut tulivuori keskisessä Myanmarissa noin viidenkymmenen kilometrin päässä Baganista, ja sitä on kutsuttu Burman Olympokseksi. Vuoren lounaispuolella kohoaa Taung Kalat, jyrkkäseinäinen laavatulppa, jonka laella on luostari; erakko U Khandi piti aikanaan kunnossa sinne johtavat 777 porrasta. Popa on maan tärkein natinpalvonnan keskus: pyhätössä ovat esillä kaikki 37 virallista nattia, mutta vain neljä niistä asuu vuorella. Kansanusko kieltää pukeutumasta punaiseen, mustaan tai vihreään ja tuomasta mukana lihaa, etenkään sianlihaa. Vuoren yli kahdensadan lähdettä tekevät siitä keitaan kuivalla keskitasangolla.
+AIEMPI KYSYMYS: Miksi vuorella on kaksi huippua?
+AIEMPI VASTAUS (Livia):
+No niin, tost minä osaan kertoo. Suuri ja Pieni Ararat ovat kaksi erillistä tulivuorikartiota, jotka ovat kohonneet samalta laajalta tulivuorialueelta ja joita erottaa matala satula. Ne ovat syntyneet eri purkausvaiheissa kasaantuneista [[laavavirtausten]] ja tuhkakerrosten kerrostumista, ja Suuri Ararat on kohonnut selvästi korkeammaksi. Tämä on tavallista [[tulivuorikentillä]], joilla uusia purkausaukkoja avautuu vanhan viereen. Pieni Ararat näkyy hyvin Suuren rinnalla, ja yhdessä ne muodostavat tutun kaksoissiluetin. Pitkältä matkalta kyllä erottaa kaksikon heti.
+KYSYMYS: Kerro lisää: tulivuorikentillä
+
+### 131
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ararat (luonto · vuori)
+Tietoruudun teksti: Suuri Ararat on Turkin korkein huippu, 5 137 metriä; sen vieressä kohoaa Pieni Ararat, 3 896 metriä. Keskiajalta lähtien Euroopassa vuori on samastettu Raamatun "Araratin vuoriin", joille Nooan arkin kerrotaan laskeutuneen — vaikka kiistanalaista on, tarkoittaako Genesis 8:4 juuri tätä vuorta. Ensimmäinen tunnettu nousu tehtiin 1829: Friedrich Parrot, Khachatur Abovian ja neljä muuta. Turkiksi vuori on Ağrı Dağı, armeniaksi Masis.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Damaskos — kohdekartta / Kohdekartta: Kisanin portti] Portti seisoo vanhankaupungin muurin kaakkoiskulmassa. Muurin kehä on 4,5 kilometriä ja se rajaa 86 hehtaaria. Muurin rakensivat roomalaiset, ja ajjubidit ja mamelukit vahvistivat sitä myöhemmin; vuoden 634 piirityksen kuvauksissa muuri on 11 metriä korkea. Julkisivu on ladottu suurista vaaleista kivilohkareista, ja kahden ulkonevan tornin väliin jäävä keskiosa on koristeltu hakatuin listoin ja pyörein kivimedaljongein. Roomalaiset omistivat kunkin portin yhdelle taivaankappaleelle, ja Kisanin portti sai Saturnuksen. Porttien lukumäärässä on lähteiden välillä hajontaa: vuoden 634 piirityksestä kertovassa luettelossa niitä on kuusi. Nimensä Kisanin portti sai orjasta, joka tuli tunnetuksi ka…
+- [Salalah — kohdekartta / Kohdekartta: Nabi Umranin hauta] perimätieto, ajoittamaton Salalahia on kutsuttu profeettojen kaupungiksi. Seudulla on neljä hautaa, joita perimätieto pitää islamin profeettojen leposijoina: Nabi Imran, Nabi Ayoub eli Raamatun Job, Nabi Houd ja Nabi Salih. Näistä Imranin hauta on ainoa, joka on kaupungin sisällä — muut ovat vuorilla ja rannikolla kymmenien kilometrien päässä. Kuka Imran oli, siitä ei olla yksimielisiä. Osa pitää häntä Neitsyt Marian isänä eli kristillisen perinteen Joakimina, osa Mooseksen isänä. Koraanin kolmas suura on nimeltään Al Imran, Imranin suku, ja siinä kerrotaan Marian syntymästä. Salalahin oma artikkeli pitää todennäköisimpänä, että kyseessä on paikallinen profeetta, jonka nimi on myöhemmin yhd…
+AIEMPI KYSYMYS: Mitä Raamatussa kerrotaan Nooan arkista?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Raamatun]] [[Genesiksen]] mukaan Nooa rakensi Jumalan käskystä arkin, johon hän otti perheensä ja eläimiä pareittain, ennen kuin [[vedenpaisumus]] peitti maan. Kun vesi alkoi laskea, arkki laskeutui "Araratin vuorille", ja Nooa lähetti linnun etsimään kuivaa maata. Teksti puhuu Araratin vuorista eli seudusta, ei välttämättä yhdestä huipusta, ja siksi tarinan paikka on tutkijoille ja uskonnollisille perinteille yhä keskustelun aihe. Vastaavia tulvakertomuksia tunnetaan myös muiden muinaisten kansojen perinteistä. Sepä oli kunnon kertomus.
+KYSYMYS: Kerro lisää: Raamatun
+
+### 132
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ararat (luonto · vuori)
+Tietoruudun teksti: Suuri Ararat on Turkin korkein huippu, 5 137 metriä; sen vieressä kohoaa Pieni Ararat, 3 896 metriä. Keskiajalta lähtien Euroopassa vuori on samastettu Raamatun "Araratin vuoriin", joille Nooan arkin kerrotaan laskeutuneen — vaikka kiistanalaista on, tarkoittaako Genesis 8:4 juuri tätä vuorta. Ensimmäinen tunnettu nousu tehtiin 1829: Friedrich Parrot, Khachatur Abovian ja neljä muuta. Turkiksi vuori on Ağrı Dağı, armeniaksi Masis.
+AIEMPI KYSYMYS: Mitä Raamatussa kerrotaan Nooan arkista?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Raamatun]] [[Genesiksen]] mukaan Nooa rakensi Jumalan käskystä arkin, johon hän otti perheensä ja eläimiä pareittain, ennen kuin [[vedenpaisumus]] peitti maan. Kun vesi alkoi laskea, arkki laskeutui "Araratin vuorille", ja Nooa lähetti linnun etsimään kuivaa maata. Teksti puhuu Araratin vuorista eli seudusta, ei välttämättä yhdestä huipusta, ja siksi tarinan paikka on tutkijoille ja uskonnollisille perinteille yhä keskustelun aihe. Vastaavia tulvakertomuksia tunnetaan myös muiden muinaisten kansojen perinteistä. Sepä oli kunnon kertomus.
+KYSYMYS: Kerro lisää: Genesiksen
+
+### 133
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ararat (luonto · vuori)
+Tietoruudun teksti: Suuri Ararat on Turkin korkein huippu, 5 137 metriä; sen vieressä kohoaa Pieni Ararat, 3 896 metriä. Keskiajalta lähtien Euroopassa vuori on samastettu Raamatun "Araratin vuoriin", joille Nooan arkin kerrotaan laskeutuneen — vaikka kiistanalaista on, tarkoittaako Genesis 8:4 juuri tätä vuorta. Ensimmäinen tunnettu nousu tehtiin 1829: Friedrich Parrot, Khachatur Abovian ja neljä muuta. Turkiksi vuori on Ağrı Dağı, armeniaksi Masis.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Käsityö: Maalaus tehdään veden pinnalle] 1400-luvulta — Ebrussa maalataan veden pinnalle. Veteen sekoitetaan kasvista saatua kitrettä, joka tekee siitä sitkeää, niin että väri jää kellumaan pinnalle eikä sekoitu veteen. Värit pudotellaan pinnalle siveltimellä, jonka varsi on ruusunoksaa ja harjas hevosenjouhta, ja kuviota ohjataan ohuella piikillä. Kun kuvio on valmis, paperi lasketaan varovasti veden päälle ja nostetaan pois: kuvio siirtyy paperiin kerralla. Samaa kuviota ei voi tehdä kahdesti. Nimi tulee todennäköisesti persian pilveä tarkoittavasta sanasta.
+AIEMPI KYSYMYS: Mitä Raamatussa kerrotaan Nooan arkista?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Raamatun]] [[Genesiksen]] mukaan Nooa rakensi Jumalan käskystä arkin, johon hän otti perheensä ja eläimiä pareittain, ennen kuin [[vedenpaisumus]] peitti maan. Kun vesi alkoi laskea, arkki laskeutui "Araratin vuorille", ja Nooa lähetti linnun etsimään kuivaa maata. Teksti puhuu Araratin vuorista eli seudusta, ei välttämättä yhdestä huipusta, ja siksi tarinan paikka on tutkijoille ja uskonnollisille perinteille yhä keskustelun aihe. Vastaavia tulvakertomuksia tunnetaan myös muiden muinaisten kansojen perinteistä. Sepä oli kunnon kertomus.
+KYSYMYS: Kerro lisää: vedenpaisumus
+
+### 134
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ararat (luonto · vuori)
+Tietoruudun teksti: Suuri Ararat on Turkin korkein huippu, 5 137 metriä; sen vieressä kohoaa Pieni Ararat, 3 896 metriä. Keskiajalta lähtien Euroopassa vuori on samastettu Raamatun "Araratin vuoriin", joille Nooan arkin kerrotaan laskeutuneen — vaikka kiistanalaista on, tarkoittaako Genesis 8:4 juuri tätä vuorta. Ensimmäinen tunnettu nousu tehtiin 1829: Friedrich Parrot, Khachatur Abovian ja neljä muuta. Turkiksi vuori on Ağrı Dağı, armeniaksi Masis.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lalibela — kohdekartta / Kohdekartta: Biete Lehem] 1100–1200-luku Biete Lehem on maanalainen monoliittikirkko Jordan-puron eteläisessä ryhmässä, ja se on kirkoista pienimpiä. Nimi tulee Betlehemistä: heprean bet lehem tarkoittaa leivän taloa, ja amharaksi kirkkoa kutsutaan Pyhän leivän taloksi. Nimi ei ole sattumaa vaan osa suunnitelmaa. Lalibelan rakennusten nimet ja sijoittelu toistavat Jerusalemin ja Pyhän maan paikkoja niin, että pyhiinvaeltaja voi kiertää ne kävellen: kaupungin läpi kulkee Jordan, kirkkojen joukossa on Golgata ja Betlehem, ja ryhmien on tulkittu esittävän maallista ja taivaallista Jerusalemia. Nimen käytännöllinen puoli on sekin uskottava: leivän talo on ollut myös leivän talo. Naapurikirkko Biete Gabriel-Rufael on läh…
+AIEMPI KYSYMYS: Mistä nimi Ararat on peräisin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Nimi Ararat on [[heprean]] kielen muoto, joka esiintyy [[Raamatun]] Genesiksessä; sen katsotaan yleisesti palautuvan muinaiseen Urartun valtakuntaan, joka sijaitsi alueella. Urartu oli rautakauden valtio Itä-Anatoliassa Vanjärven seutuvilla. Seudun omat nimet vuorelle ovat toisenlaisia: turkiksi se on Ağrı Dağı ja armeniaksi Masis, joten Ararat on eurooppalaisessa perinteessä vakiintunut raamatullinen nimi. Tarkka sanan alkuperä on kuitenkin tutkijoille jossain määrin epävarma. Hyvin muistin, sanon minä.
+KYSYMYS: Kerro lisää: heprean
+
+### 135
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanjärvi (luonto)
+Tietoruudun teksti: Vanjärvi on Turkin suurin järvi ja yksi maailman harvoista yli 3 000 neliökilometrin umpijärvistä: tulivuorenpurkaus tukki sen laskujoen esihistoriallisella ajalla. Vesi on niin emäksistä (pH 9,7–9,8), ettei se yleensä jäädy talvellakaan. Pohjalta on löydetty jopa 40 metriä korkeita mikrobialiittitorneja, joita sinilevät ovat kasvattaneet. Pitkään järven ainoa tunnettu kala oli inci kefali, helmisalakka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+AIEMPI KYSYMYS: Mistä järven vesi tulee, jos se ei laske mihinkään?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Umpijärven vesi tulee ympäröivältä valuma-alueelta: lumen sulamisvesistä, sateesta ja järveen laskevista joista ja puroista. Vettä poistuu pääasiassa [[haihtumisen]] kautta, ja kun haihtuva vesi jättää suolat ja mineraalit jälkeensä, ne kertyvät vuosituhansien kuluessa järveen. Siksi Vanjärven vesi on muuttunut hyvin emäksiseksi, ja järveä kutsutaan [[soodajärveksi]]. [[Turkin]] suurimman järven vesitase siis pysyy tasapainossa, kun tulo ja haihtuminen ovat suunnilleen yhtä suuret. No siinä sitä riitti.
+KYSYMYS: Kerro lisää: haihtumisen
+
+### 136
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanjärvi (luonto)
+Tietoruudun teksti: Vanjärvi on Turkin suurin järvi ja yksi maailman harvoista yli 3 000 neliökilometrin umpijärvistä: tulivuorenpurkaus tukki sen laskujoen esihistoriallisella ajalla. Vesi on niin emäksistä (pH 9,7–9,8), ettei se yleensä jäädy talvellakaan. Pohjalta on löydetty jopa 40 metriä korkeita mikrobialiittitorneja, joita sinilevät ovat kasvattaneet. Pitkään järven ainoa tunnettu kala oli inci kefali, helmisalakka.
+AIEMPI KYSYMYS: Mistä järven vesi tulee, jos se ei laske mihinkään?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Umpijärven vesi tulee ympäröivältä valuma-alueelta: lumen sulamisvesistä, sateesta ja järveen laskevista joista ja puroista. Vettä poistuu pääasiassa [[haihtumisen]] kautta, ja kun haihtuva vesi jättää suolat ja mineraalit jälkeensä, ne kertyvät vuosituhansien kuluessa järveen. Siksi Vanjärven vesi on muuttunut hyvin emäksiseksi, ja järveä kutsutaan [[soodajärveksi]]. [[Turkin]] suurimman järven vesitase siis pysyy tasapainossa, kun tulo ja haihtuminen ovat suunnilleen yhtä suuret. No siinä sitä riitti.
+KYSYMYS: Kerro lisää: soodajärveksi
+
+### 137
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanjärvi (luonto)
+Tietoruudun teksti: Vanjärvi on Turkin suurin järvi ja yksi maailman harvoista yli 3 000 neliökilometrin umpijärvistä: tulivuorenpurkaus tukki sen laskujoen esihistoriallisella ajalla. Vesi on niin emäksistä (pH 9,7–9,8), ettei se yleensä jäädy talvellakaan. Pohjalta on löydetty jopa 40 metriä korkeita mikrobialiittitorneja, joita sinilevät ovat kasvattaneet. Pitkään järven ainoa tunnettu kala oli inci kefali, helmisalakka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riad — kohdekartta / Kohdekartta: Imam Turkin suurmoskeija] Turki bin Abdullah otti Riadin 1824 ja teki siitä toisen Saudi-valtion pääkaupungin. Suurmoskeija rakennettiin hänen aikanaan vuosina 1826–1830, hallintopalatsi Qasr al-Hukmin viereen. Turki surmattiin vuonna 1834 perjantairukouksesta lähtiessään, ja moskeija kantaa yhä hänen nimeään. Nykyinen moskeija on vuodelta 1992, ja se avattiin tammikuussa 1993. Samoihin vuosiin osui koko Qasr al-Hukmin korttelin uudistus, jonka työt kestivät 1983–1992. Sisätilaa on 16 800 neliömetriä ja rukoilijoita mahtuu 17 000; se on yksi maan suurimmista moskeijoista. Ulkoseinät ja sisätilan yläosa ovat ruskeaa riadilaista kalkkikiveä, alaosa valkoista marmoria. Miesten ja naisten kirjastot ovat kumpikin 325 nel…
+- [Turkki — maalehti / Historia: Yhdeksän kaupunkia päällekkäin] 1873 — Homeroksen Troijaa pidettiin pitkään pelkkänä taruna, kunnes Länsi-Turkin rannikolta kaivettiin esiin Hisarlıkin kumpu. Kummussa on yhdeksän kaupunkia päällekkäin: aina kun kaupunki tuhoutui, uusi rakennettiin raunioiden päälle, ja kumpu kasvoi kerros kerrokselta. Heinrich Schliemann aloitti kaivaukset 1870-luvulla ja kaivoi kummun läpi suuren kuilun. Vuonna 1873 hän löysi kultaesineitä, joita hän kutsui Priamoksen aarteeksi — mutta esineet olivat yli tuhat vuotta vanhempia kuin kerrottu sota. Kiireessä hän tuhosi juuri sen kerroksen, jota etsi.
+AIEMPI KYSYMYS: Mistä järven vesi tulee, jos se ei laske mihinkään?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Umpijärven vesi tulee ympäröivältä valuma-alueelta: lumen sulamisvesistä, sateesta ja järveen laskevista joista ja puroista. Vettä poistuu pääasiassa [[haihtumisen]] kautta, ja kun haihtuva vesi jättää suolat ja mineraalit jälkeensä, ne kertyvät vuosituhansien kuluessa järveen. Siksi Vanjärven vesi on muuttunut hyvin emäksiseksi, ja järveä kutsutaan [[soodajärveksi]]. [[Turkin]] suurimman järven vesitase siis pysyy tasapainossa, kun tulo ja haihtuminen ovat suunnilleen yhtä suuret. No siinä sitä riitti.
+KYSYMYS: Kerro lisää: Turkin
+
+### 138
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanjärvi (luonto)
+Tietoruudun teksti: Vanjärvi on Turkin suurin järvi ja yksi maailman harvoista yli 3 000 neliökilometrin umpijärvistä: tulivuorenpurkaus tukki sen laskujoen esihistoriallisella ajalla. Vesi on niin emäksistä (pH 9,7–9,8), ettei se yleensä jäädy talvellakaan. Pohjalta on löydetty jopa 40 metriä korkeita mikrobialiittitorneja, joita sinilevät ovat kasvattaneet. Pitkään järven ainoa tunnettu kala oli inci kefali, helmisalakka.
+AIEMPI KYSYMYS: Millainen kala inci kefali on?
+AIEMPI VASTAUS (Livia):
+Ai se. Inci kefali eli helmisalakka on [[karppikalat]] -heimoon kuuluva pieni kala, jonka tieteellinen nimi on Alburnus tarichi. Se elää Vanjärven vahvasti emäksisessä vedessä, jossa useimmat muut kalat eivät pärjää, ja se on lajina melko ainutlaatuinen. Keväällä kala nousee [[kutuvaelluksen]] aikana järveen laskeviin makeavetisiin jokiin ja puroihin lisääntymään, ja juuri silloin sitä on perinteisesti pyydetty. Nimi tarkoittaa suomeksi helmikalaa, ja nimi viittaa kalan hohtavaan olemukseen.
+
+Ylhäältä se järvi on turkoosi kuin koru, ja kalat kyllä jätän muille. Minä ottaisin mieluummin simitin.
+KYSYMYS: Kerro lisää: karppikalat
+
+### 139
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanjärvi (luonto)
+Tietoruudun teksti: Vanjärvi on Turkin suurin järvi ja yksi maailman harvoista yli 3 000 neliökilometrin umpijärvistä: tulivuorenpurkaus tukki sen laskujoen esihistoriallisella ajalla. Vesi on niin emäksistä (pH 9,7–9,8), ettei se yleensä jäädy talvellakaan. Pohjalta on löydetty jopa 40 metriä korkeita mikrobialiittitorneja, joita sinilevät ovat kasvattaneet. Pitkään järven ainoa tunnettu kala oli inci kefali, helmisalakka.
+AIEMPI KYSYMYS: Millainen kala inci kefali on?
+AIEMPI VASTAUS (Livia):
+Ai se. Inci kefali eli helmisalakka on [[karppikalat]] -heimoon kuuluva pieni kala, jonka tieteellinen nimi on Alburnus tarichi. Se elää Vanjärven vahvasti emäksisessä vedessä, jossa useimmat muut kalat eivät pärjää, ja se on lajina melko ainutlaatuinen. Keväällä kala nousee [[kutuvaelluksen]] aikana järveen laskeviin makeavetisiin jokiin ja puroihin lisääntymään, ja juuri silloin sitä on perinteisesti pyydetty. Nimi tarkoittaa suomeksi helmikalaa, ja nimi viittaa kalan hohtavaan olemukseen.
+
+Ylhäältä se järvi on turkoosi kuin koru, ja kalat kyllä jätän muille. Minä ottaisin mieluummin simitin.
+KYSYMYS: Kerro lisää: kutuvaelluksen
+
+### 140
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanjärvi (luonto)
+Tietoruudun teksti: Vanjärvi on Turkin suurin järvi ja yksi maailman harvoista yli 3 000 neliökilometrin umpijärvistä: tulivuorenpurkaus tukki sen laskujoen esihistoriallisella ajalla. Vesi on niin emäksistä (pH 9,7–9,8), ettei se yleensä jäädy talvellakaan. Pohjalta on löydetty jopa 40 metriä korkeita mikrobialiittitorneja, joita sinilevät ovat kasvattaneet. Pitkään järven ainoa tunnettu kala oli inci kefali, helmisalakka.
+AIEMPI KYSYMYS: Voiko Vanjärvessä uida?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Vanjärvessä]] voi uida, ja sen rannoilla on uimarantoja, joilla paikalliset ja matkailijat käyvät etenkin kesäisin. Vesi on hyvin [[emäksistä]], ja se tuntuu uidessa pehmeältä ja liukkaalta iholla. Silmiin ja haavoihin se voi kirvellä, joten silmät kannattaa pitää kiinni tai suojata ja suolaisen kuivumisen jälkeen ihon pesu makealla vedellä on suositeltavaa. Veden korkea [[pH-arvo]], 9,7–9,8, tekee siitä erilaisen kuin tavallinen järvi. Itse en ole uinut, vain lentänyt yli. Kevyt veto kyllä.
+KYSYMYS: Kerro lisää: Vanjärvessä
+
+### 141
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanjärvi (luonto)
+Tietoruudun teksti: Vanjärvi on Turkin suurin järvi ja yksi maailman harvoista yli 3 000 neliökilometrin umpijärvistä: tulivuorenpurkaus tukki sen laskujoen esihistoriallisella ajalla. Vesi on niin emäksistä (pH 9,7–9,8), ettei se yleensä jäädy talvellakaan. Pohjalta on löydetty jopa 40 metriä korkeita mikrobialiittitorneja, joita sinilevät ovat kasvattaneet. Pitkään järven ainoa tunnettu kala oli inci kefali, helmisalakka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Luonto: Kissa, joka menee veteen] 1955 — Vanjärven seudulla Itä-Turkissa elää kissarotu, joka poikkeaa useimmista kissoista yhdessä asiassa: se ui mielellään. Van-kissan turkki on lähes kokonaan valkoinen, ja väriä on vain päässä ja hännässä. Monella yksilöllä silmät ovat eriväriset, toinen sininen ja toinen kullanruskea. Kaksi brittiläistä tutkijaa toi rodun Eurooppaan vuonna 1955. Kissojen kotijärvi on Turkin suurin järvi, mutta sen vesi on niin emäksistä, että siinä elää vain yksi kalalaji, helmisärki, joka nousee keväisin jokiin kutemaan.
+AIEMPI KYSYMYS: Voiko Vanjärvessä uida?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Vanjärvessä]] voi uida, ja sen rannoilla on uimarantoja, joilla paikalliset ja matkailijat käyvät etenkin kesäisin. Vesi on hyvin [[emäksistä]], ja se tuntuu uidessa pehmeältä ja liukkaalta iholla. Silmiin ja haavoihin se voi kirvellä, joten silmät kannattaa pitää kiinni tai suojata ja suolaisen kuivumisen jälkeen ihon pesu makealla vedellä on suositeltavaa. Veden korkea [[pH-arvo]], 9,7–9,8, tekee siitä erilaisen kuin tavallinen järvi. Itse en ole uinut, vain lentänyt yli. Kevyt veto kyllä.
+KYSYMYS: Kerro lisää: emäksistä
+
+### 142
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanjärvi (luonto)
+Tietoruudun teksti: Vanjärvi on Turkin suurin järvi ja yksi maailman harvoista yli 3 000 neliökilometrin umpijärvistä: tulivuorenpurkaus tukki sen laskujoen esihistoriallisella ajalla. Vesi on niin emäksistä (pH 9,7–9,8), ettei se yleensä jäädy talvellakaan. Pohjalta on löydetty jopa 40 metriä korkeita mikrobialiittitorneja, joita sinilevät ovat kasvattaneet. Pitkään järven ainoa tunnettu kala oli inci kefali, helmisalakka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kaupunkilehti / Kuvataide: Maalari kirjasi arvonimensä maalaukseen jälkikäteen] Velázquezin rinnassa Las Meninas-teoksessa näkyy Santiagon ritarikunnan risti — mutta Velázquez sai ritarikunnan jäsenyyden vasta 1659, kolme vuotta maalauksen valmistumisen jälkeen. Perimätiedon mukaan joko kuningas itse maalasi ristin lisää jälkikäteen tai Velázquez lisäsi sen itse saatuaan arvonimen — kumpikaan ei ole varmuudella todistettu, mutta risti on joka tapauksessa myöhempi lisäys alkuperäiseen maalaukseen.
+AIEMPI KYSYMYS: Voiko Vanjärvessä uida?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Vanjärvessä]] voi uida, ja sen rannoilla on uimarantoja, joilla paikalliset ja matkailijat käyvät etenkin kesäisin. Vesi on hyvin [[emäksistä]], ja se tuntuu uidessa pehmeältä ja liukkaalta iholla. Silmiin ja haavoihin se voi kirvellä, joten silmät kannattaa pitää kiinni tai suojata ja suolaisen kuivumisen jälkeen ihon pesu makealla vedellä on suositeltavaa. Veden korkea [[pH-arvo]], 9,7–9,8, tekee siitä erilaisen kuin tavallinen järvi. Itse en ole uinut, vain lentänyt yli. Kevyt veto kyllä.
+KYSYMYS: Kerro lisää: pH-arvo
+
+### 143
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanjärvi (luonto)
+Tietoruudun teksti: Vanjärvi on Turkin suurin järvi ja yksi maailman harvoista yli 3 000 neliökilometrin umpijärvistä: tulivuorenpurkaus tukki sen laskujoen esihistoriallisella ajalla. Vesi on niin emäksistä (pH 9,7–9,8), ettei se yleensä jäädy talvellakaan. Pohjalta on löydetty jopa 40 metriä korkeita mikrobialiittitorneja, joita sinilevät ovat kasvattaneet. Pitkään järven ainoa tunnettu kala oli inci kefali, helmisalakka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Churchill — kaupunkilehti / Churchill: Linnoitus jota rakennettiin kymmenen vuotta] Vuodesta 1731 alkaen Hudson’s Bay Company korvasi vanhan hirsiaseman valtavalla kivilinnoituksella, jonka rakentaminen kesti kymmenisen vuotta. Neliönmuotoisen Prince of Wales Fortin sivut olivat 90 metriä pitkiä ja muurit lähes 6 metriä korkeita ja tyvestään 9 metriä paksuja — yhtiön kuninkaallinen peruskirja nimittäin vaati Rupert’s Landin turvaamista linnoituksin. Muureille asetettiin lopulta 42 tykkiä, joista raskaimmat painoivat yli 2 500 kilogrammaa, ja joen toisella puolella Cape Merryn patteri piti vielä kuutta lisää. Isoisän aikana muurit seisoivat yhä, vaikka mikään vihollislaivasto ei ollut niitä koskaan todella joutunut testaamaan.
+AIEMPI KYSYMYS: Millaisia nähtävyyksiä Vanjärven rannalla on?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tähän osaan vastata. Järven rannalla ja saarilla on pitkän historian jälkiä. Itäisellä rannalla Vanin kaupungin tuntumassa kohoaa muinaisen Urartun ajan [[linnoitus]] korkealla kalliolla, ja järven [[Akdamarin]] saarella on armenialainen kirkko, joka on rakennettu noin 900-luvulla ja jonka seiniä koristavat reliefit. Matkailijat tulevat myös ihastelemaan järven turkoosia vettä ja ympäröiviä vuoria. Seudulla on pitkä historia, ja tarkat rakennusvuodet vaihtelevat lähteittäin. Pitkältä ne kyllä näyttävät.
+KYSYMYS: Kerro lisää: linnoitus
+
+### 144
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanjärvi (luonto)
+Tietoruudun teksti: Vanjärvi on Turkin suurin järvi ja yksi maailman harvoista yli 3 000 neliökilometrin umpijärvistä: tulivuorenpurkaus tukki sen laskujoen esihistoriallisella ajalla. Vesi on niin emäksistä (pH 9,7–9,8), ettei se yleensä jäädy talvellakaan. Pohjalta on löydetty jopa 40 metriä korkeita mikrobialiittitorneja, joita sinilevät ovat kasvattaneet. Pitkään järven ainoa tunnettu kala oli inci kefali, helmisalakka.
+AIEMPI KYSYMYS: Millaisia nähtävyyksiä Vanjärven rannalla on?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tähän osaan vastata. Järven rannalla ja saarilla on pitkän historian jälkiä. Itäisellä rannalla Vanin kaupungin tuntumassa kohoaa muinaisen Urartun ajan [[linnoitus]] korkealla kalliolla, ja järven [[Akdamarin]] saarella on armenialainen kirkko, joka on rakennettu noin 900-luvulla ja jonka seiniä koristavat reliefit. Matkailijat tulevat myös ihastelemaan järven turkoosia vettä ja ympäröiviä vuoria. Seudulla on pitkä historia, ja tarkat rakennusvuodet vaihtelevat lähteittäin. Pitkältä ne kyllä näyttävät.
+KYSYMYS: Kerro lisää: Akdamarin
+
+### 145
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanjärvi (luonto)
+Tietoruudun teksti: Vanjärvi on Turkin suurin järvi ja yksi maailman harvoista yli 3 000 neliökilometrin umpijärvistä: tulivuorenpurkaus tukki sen laskujoen esihistoriallisella ajalla. Vesi on niin emäksistä (pH 9,7–9,8), ettei se yleensä jäädy talvellakaan. Pohjalta on löydetty jopa 40 metriä korkeita mikrobialiittitorneja, joita sinilevät ovat kasvattaneet. Pitkään järven ainoa tunnettu kala oli inci kefali, helmisalakka.
+AIEMPI KYSYMYS: Miten mikrobialiittitornit syntyvät?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Mikrobialiitit ovat kalkkipitoisia kerrostumia, joita mikrobit rakentavat. Vanjärven pohjalla [[sinilevät]] eli syanobakteerit sitovat vedestä ja pohjavedestä karbonaattia, ja siitä saostuu [[kalsiumkarbonaatti]]a kiinteäksi kerrokseksi. Kerros kasvaa hitaasti vuosisatojen ja vuosituhansien kuluessa, ja lopulta syntyy torni, jollaisia on Vanjärvellä löydetty jopa 40 metrin korkuisia. Torneja on ihmetelty, koska ne ovat harvinaisen suuria, ja ne kertovat järven kemiasta ja vedentason vaihteluista. Tornit sijaitsevat [[Turkin]] suurimmalla järvellä. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: sinilevät
+
+### 146
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanjärvi (luonto)
+Tietoruudun teksti: Vanjärvi on Turkin suurin järvi ja yksi maailman harvoista yli 3 000 neliökilometrin umpijärvistä: tulivuorenpurkaus tukki sen laskujoen esihistoriallisella ajalla. Vesi on niin emäksistä (pH 9,7–9,8), ettei se yleensä jäädy talvellakaan. Pohjalta on löydetty jopa 40 metriä korkeita mikrobialiittitorneja, joita sinilevät ovat kasvattaneet. Pitkään järven ainoa tunnettu kala oli inci kefali, helmisalakka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rub al-Khali — kaupunkilehti / Luonto: Järvien pohjat hiekan seassa] Aavikon keskivaiheilla on koholla olevia kovettuneita laikkuja, joissa on kalsiumkarbonaattia, kipsiä, liejusavea ja savea. Ne ovat matalien järvien pohjia. Järviä syntyi kahdesti, 6 000–5 000 ja 3 000–2 000 vuotta sitten, kun sadetta tuli monsuunin tapaan rajusti; useimmat kuivuivat parissa vuodessa, mutta lounaassa Mundafanin alueella vesi säilyi jopa kahdeksansataa vuotta, koska Tuwaiqin jyrkänteeltä valui lisää. Kerrostumista on löytynyt virtahevon, vesipuhvelin ja pitkäsarvisen naudan luita, etanoita ja makean veden simpukoita — ja piikivityökaluja, mutta ei yhtään ihmisen luuta.
+AIEMPI KYSYMYS: Miten mikrobialiittitornit syntyvät?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Mikrobialiitit ovat kalkkipitoisia kerrostumia, joita mikrobit rakentavat. Vanjärven pohjalla [[sinilevät]] eli syanobakteerit sitovat vedestä ja pohjavedestä karbonaattia, ja siitä saostuu [[kalsiumkarbonaatti]]a kiinteäksi kerrokseksi. Kerros kasvaa hitaasti vuosisatojen ja vuosituhansien kuluessa, ja lopulta syntyy torni, jollaisia on Vanjärvellä löydetty jopa 40 metrin korkuisia. Torneja on ihmetelty, koska ne ovat harvinaisen suuria, ja ne kertovat järven kemiasta ja vedentason vaihteluista. Tornit sijaitsevat [[Turkin]] suurimmalla järvellä. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: kalsiumkarbonaatti
+
+### 147
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on maailman suurin meromiktinen vesialue: pinnalla virtaa kevyt makea vesi ulos Bosporin kautta, pohjalla painuu raskas suolainen vesi sisään, eivätkä kerrokset sekoitu. Siksi yli 90 prosenttia meren syvästä vedestä on hapetonta. Juuri hapettomuus on tehnyt siitä meriarkeologien unelman: puurunkoiset laivanhylyt säilyvät pohjassa käytännössä lahoamatta.
+AIEMPI KYSYMYS: Kuinka syvälle hapeton kerros ulottuu?
+AIEMPI VASTAUS (Livia):
+Mmm— Hapeton kerros alkaa Mustallamerellä noin sadan–kahdensadan metrin syvyydestä, ja tarkka raja vaihtelee alueittain ja vuodenajoittain. Sen alapuolella vesi on lähes kokonaan vailla happea ja sisältää runsaasti [[rikkivetyä]], joka syntyy hapettomissa oloissa. Pinnan makeampi vesi ja pohjan raskas suolainen vesi eivät [[kerrostuneisuuden]] vuoksi juuri sekoitu, ja suolainen vesi tulee sisään [[Bosporin]] kautta Marmaranmereltä. Meren suurin syvyys on yli kaksi kilometriä, joten valtaosa meren vesimassasta on hapetonta. Siinä oli aika paljon happea sanottavana.
+KYSYMYS: Kerro lisää: rikkivetyä
+
+### 148
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on maailman suurin meromiktinen vesialue: pinnalla virtaa kevyt makea vesi ulos Bosporin kautta, pohjalla painuu raskas suolainen vesi sisään, eivätkä kerrokset sekoitu. Siksi yli 90 prosenttia meren syvästä vedestä on hapetonta. Juuri hapettomuus on tehnyt siitä meriarkeologien unelman: puurunkoiset laivanhylyt säilyvät pohjassa käytännössä lahoamatta.
+AIEMPI KYSYMYS: Kuinka syvälle hapeton kerros ulottuu?
+AIEMPI VASTAUS (Livia):
+Mmm— Hapeton kerros alkaa Mustallamerellä noin sadan–kahdensadan metrin syvyydestä, ja tarkka raja vaihtelee alueittain ja vuodenajoittain. Sen alapuolella vesi on lähes kokonaan vailla happea ja sisältää runsaasti [[rikkivetyä]], joka syntyy hapettomissa oloissa. Pinnan makeampi vesi ja pohjan raskas suolainen vesi eivät [[kerrostuneisuuden]] vuoksi juuri sekoitu, ja suolainen vesi tulee sisään [[Bosporin]] kautta Marmaranmereltä. Meren suurin syvyys on yli kaksi kilometriä, joten valtaosa meren vesimassasta on hapetonta. Siinä oli aika paljon happea sanottavana.
+KYSYMYS: Kerro lisää: kerrostuneisuuden
+
+### 149
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on maailman suurin meromiktinen vesialue: pinnalla virtaa kevyt makea vesi ulos Bosporin kautta, pohjalla painuu raskas suolainen vesi sisään, eivätkä kerrokset sekoitu. Siksi yli 90 prosenttia meren syvästä vedestä on hapetonta. Juuri hapettomuus on tehnyt siitä meriarkeologien unelman: puurunkoiset laivanhylyt säilyvät pohjassa käytännössä lahoamatta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kohdekartta / Kohdekartta: Neitsyttorni] 1110 Torni seisoo pienellä luodolla Bosporin eteläsuulla, kahdensadan metrin päässä Üsküdarin rannasta. Ateenalainen sotapäällikkö Alkibiades rakensi kalliolle luultavasti jo vuonna 408 eaa. tarkastusaseman Mustaltamereltä tuleville laivoille. Keisari Aleksios Komnenos pystytti paikalle puutornin vuonna 1110, ja siitä vedettiin rautaketju salmen yli toiseen torniin Euroopan puolella — ketjulla suljettiin väylä. Rakennus on tuhoutunut ja noussut yhä uudelleen: maanjäristys kaatoi sen 1509, tulipalo tuhosi sen 1721, ja suurvisiiri Damad İbrahim Pasha rakennutti tilalle majakan. Muureja korjattiin 1731 ja 1734, ja vuonna 1763 torni muurattiin kestävämmästä kivestä. Vuodesta 1829 se toimi karan…
+- [Istanbul — kohdekartta / Kohdekartta: Sirkecin asema] 1890 Rata Euroopasta Istanbuliin valmistui vaiheittain: ensimmäiset viisitoista kilometriä Halkalıin rakennettiin 1870–1871, ja jatke Sirkeciin valmistui heinäkuussa 1872. Sulttaani Abdülaziz oli itse päättänyt linjauksen — rata kiertää Marmaranmeren rantaa Topkapın palatsin alapuutarhan muurien vierestä. Vuonna 1873 päätepysäkiksi tehtiin "väliaikainen" asema. Lopullisen asemarakennuksen työt alkoivat helmikuussa 1888, ja talo avattiin 3. marraskuuta 1890. Piirtäjä oli preussilainen August Jasmund, jonka Saksan hallitus oli lähettänyt Istanbuliin tutkimaan osmanilaista arkkitehtuuria. Tulos on tunnetuimpia esimerkkejä eurooppalaisesta orientalismista: 1 200 neliömetriä, kaasuvalaistus ja t…
+AIEMPI KYSYMYS: Kuinka syvälle hapeton kerros ulottuu?
+AIEMPI VASTAUS (Livia):
+Mmm— Hapeton kerros alkaa Mustallamerellä noin sadan–kahdensadan metrin syvyydestä, ja tarkka raja vaihtelee alueittain ja vuodenajoittain. Sen alapuolella vesi on lähes kokonaan vailla happea ja sisältää runsaasti [[rikkivetyä]], joka syntyy hapettomissa oloissa. Pinnan makeampi vesi ja pohjan raskas suolainen vesi eivät [[kerrostuneisuuden]] vuoksi juuri sekoitu, ja suolainen vesi tulee sisään [[Bosporin]] kautta Marmaranmereltä. Meren suurin syvyys on yli kaksi kilometriä, joten valtaosa meren vesimassasta on hapetonta. Siinä oli aika paljon happea sanottavana.
+KYSYMYS: Kerro lisää: Bosporin
+
+### 150
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on maailman suurin meromiktinen vesialue: pinnalla virtaa kevyt makea vesi ulos Bosporin kautta, pohjalla painuu raskas suolainen vesi sisään, eivätkä kerrokset sekoitu. Siksi yli 90 prosenttia meren syvästä vedestä on hapetonta. Juuri hapettomuus on tehnyt siitä meriarkeologien unelman: puurunkoiset laivanhylyt säilyvät pohjassa käytännössä lahoamatta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Perth — kohdekartta / Kohdekartta: His Majesty's -teatteri] 1904 Teatteri rakennettiin kultavuosien rahalla. Perthin väkiluku kasvoi 1890-luvun kultalöytöjen jälkeen nopeasti, ja paikallispoliitikko Thomas Molloy tilasi arkkitehti William G. Wolfilta teatterin ja hotellin yhdistelmän Hay Streetin ja King Streetin kulmaan. Nimi annettiin juuri kruunatun Edvard VII:n kunniaksi. Urakan voitti Friederich Liebe, joka oli aiemmin rakentanut Bulgarian parlamenttitalon Sofiaan ja tehnyt työtä Budapestin oopperatalossa. Tontin alla virtasi maanalainen puro, ja perustusten kestävyydestä esitettiin julkisesti epäilyjä kesken rakennustyön. Liebe suunnitteli ojat veden ohjaamiseksi ja jatkoi, mutta kun lasku tuli, Molloy kieltäytyi maksamasta ylimääräisiä 17 000…
+- [Sofia — kohdekartta / Kohdekartta: Pyhän Yrjön rotunda] 300-luku Sofian keskustassa, hotellin ja presidentinlinnan välisellä pihalla, seisoo pyöreä punatiilinen rakennus. Se on kaupungin vanhin yhä pystyssä oleva rakennus: rotunda pystytettiin jo 300-luvun alussa, alun perin roomalaisen kylpylän kupolikattoiseksi saliksi – kauan ennen kuin siitä tuli kirkko. Kupoli kohoaa lähes 14 metrin korkeuteen, ja sisäseinillä on peräti viisi eri aikakauden freskokerrosta päällekkäin. Vaikuttavin niistä on peräisin 900-luvulta, Bulgarian niin sanotulta kultakaudelta: maalauksissa on 22 yli kaksimetristä profeettaa ja enkeli, jonka kasvot on maalattu niin taidokkaasti, että ne ovat innoittaneet taiteilijoita vuosisatojen ajan. 1500-luvulla osmanit muuttivat …
+AIEMPI KYSYMYS: Millaisia hylkyjä pohjasta on löytynyt?
+AIEMPI VASTAUS (Livia):
+No jopas. Hapettomassa syvässä vedessä ei elä puuta syöviä eliöitä, ja siksi hylyt ovat säilyneet poikkeuksellisen hyvin. Meriarkeologisissa tutkimuksissa, muun muassa [[Bulgarian]] vesillä tehdyssä laajassa kartoituksessa, on löydetty satoja metrejä syvyydestä antiikin kauppa-aluksia, keskiajan ja ottomaanien ajan aluksia sekä [[kasakkojen]] soutuveneitä. Joistakin hylyistä ovat säilyneet mastot, köydet ja kannen rakenteet. Löydöt kertovat, miten [[meriarkeologian]] avulla voidaan tutkia vuosisatojen kauppareittejä. Kyllä siinä oli ihmettelemistä.
+KYSYMYS: Kerro lisää: Bulgarian
+
+### 151
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on maailman suurin meromiktinen vesialue: pinnalla virtaa kevyt makea vesi ulos Bosporin kautta, pohjalla painuu raskas suolainen vesi sisään, eivätkä kerrokset sekoitu. Siksi yli 90 prosenttia meren syvästä vedestä on hapetonta. Juuri hapettomuus on tehnyt siitä meriarkeologien unelman: puurunkoiset laivanhylyt säilyvät pohjassa käytännössä lahoamatta.
+AIEMPI KYSYMYS: Millaisia hylkyjä pohjasta on löytynyt?
+AIEMPI VASTAUS (Livia):
+No jopas. Hapettomassa syvässä vedessä ei elä puuta syöviä eliöitä, ja siksi hylyt ovat säilyneet poikkeuksellisen hyvin. Meriarkeologisissa tutkimuksissa, muun muassa [[Bulgarian]] vesillä tehdyssä laajassa kartoituksessa, on löydetty satoja metrejä syvyydestä antiikin kauppa-aluksia, keskiajan ja ottomaanien ajan aluksia sekä [[kasakkojen]] soutuveneitä. Joistakin hylyistä ovat säilyneet mastot, köydet ja kannen rakenteet. Löydöt kertovat, miten [[meriarkeologian]] avulla voidaan tutkia vuosisatojen kauppareittejä. Kyllä siinä oli ihmettelemistä.
+KYSYMYS: Kerro lisää: kasakkojen
+
+### 152
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on maailman suurin meromiktinen vesialue: pinnalla virtaa kevyt makea vesi ulos Bosporin kautta, pohjalla painuu raskas suolainen vesi sisään, eivätkä kerrokset sekoitu. Siksi yli 90 prosenttia meren syvästä vedestä on hapetonta. Juuri hapettomuus on tehnyt siitä meriarkeologien unelman: puurunkoiset laivanhylyt säilyvät pohjassa käytännössä lahoamatta.
+AIEMPI KYSYMYS: Millaisia hylkyjä pohjasta on löytynyt?
+AIEMPI VASTAUS (Livia):
+No jopas. Hapettomassa syvässä vedessä ei elä puuta syöviä eliöitä, ja siksi hylyt ovat säilyneet poikkeuksellisen hyvin. Meriarkeologisissa tutkimuksissa, muun muassa [[Bulgarian]] vesillä tehdyssä laajassa kartoituksessa, on löydetty satoja metrejä syvyydestä antiikin kauppa-aluksia, keskiajan ja ottomaanien ajan aluksia sekä [[kasakkojen]] soutuveneitä. Joistakin hylyistä ovat säilyneet mastot, köydet ja kannen rakenteet. Löydöt kertovat, miten [[meriarkeologian]] avulla voidaan tutkia vuosisatojen kauppareittejä. Kyllä siinä oli ihmettelemistä.
+KYSYMYS: Kerro lisää: meriarkeologian
+
+### 153
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on maailman suurin meromiktinen vesialue: pinnalla virtaa kevyt makea vesi ulos Bosporin kautta, pohjalla painuu raskas suolainen vesi sisään, eivätkä kerrokset sekoitu. Siksi yli 90 prosenttia meren syvästä vedestä on hapetonta. Juuri hapettomuus on tehnyt siitä meriarkeologien unelman: puurunkoiset laivanhylyt säilyvät pohjassa käytännössä lahoamatta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Miksi Mustameri on vähemmän suolainen kuin valtameret?
+AIEMPI VASTAUS (Livia):
+Just niin, hyvä pointti. Mustanmeren pintaveden suolapitoisuus on noin puolet valtamerten tasosta. Syynä on suuri määrä makeaa vettä: mereen laskevat muun muassa [[Tonava]], [[Dnepr]] ja Dnestr, ja tulevan joki- ja sadeveden määrä on suuri verrattuna haihtumiseen. Yhteys valtamereen on kapea [[Bosporin]] salmi, joten suolaista vettä virtaa sisään vain rajallisesti. Tämä yhdistelmä synnyttää pinnan makeamman vesikerroksen sekä sen alle painuvan suolaisen veden.
+
+Ylhäältä katsottuna suistojen kietoutuvat haarat näyttävät suoraan sanottuna hienoilta. Ja sen perässä kelpaisi simit.
+KYSYMYS: Kerro lisää: Tonava
+
+### 154
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on maailman suurin meromiktinen vesialue: pinnalla virtaa kevyt makea vesi ulos Bosporin kautta, pohjalla painuu raskas suolainen vesi sisään, eivätkä kerrokset sekoitu. Siksi yli 90 prosenttia meren syvästä vedestä on hapetonta. Juuri hapettomuus on tehnyt siitä meriarkeologien unelman: puurunkoiset laivanhylyt säilyvät pohjassa käytännössä lahoamatta.
+AIEMPI KYSYMYS: Miksi Mustameri on vähemmän suolainen kuin valtameret?
+AIEMPI VASTAUS (Livia):
+Just niin, hyvä pointti. Mustanmeren pintaveden suolapitoisuus on noin puolet valtamerten tasosta. Syynä on suuri määrä makeaa vettä: mereen laskevat muun muassa [[Tonava]], [[Dnepr]] ja Dnestr, ja tulevan joki- ja sadeveden määrä on suuri verrattuna haihtumiseen. Yhteys valtamereen on kapea [[Bosporin]] salmi, joten suolaista vettä virtaa sisään vain rajallisesti. Tämä yhdistelmä synnyttää pinnan makeamman vesikerroksen sekä sen alle painuvan suolaisen veden.
+
+Ylhäältä katsottuna suistojen kietoutuvat haarat näyttävät suoraan sanottuna hienoilta. Ja sen perässä kelpaisi simit.
+KYSYMYS: Kerro lisää: Dnepr
+
+### 155
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on maailman suurin meromiktinen vesialue: pinnalla virtaa kevyt makea vesi ulos Bosporin kautta, pohjalla painuu raskas suolainen vesi sisään, eivätkä kerrokset sekoitu. Siksi yli 90 prosenttia meren syvästä vedestä on hapetonta. Juuri hapettomuus on tehnyt siitä meriarkeologien unelman: puurunkoiset laivanhylyt säilyvät pohjassa käytännössä lahoamatta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kaupunkilehti / Historia: Kaupunki, jonka perustivat kreikkalaiset merenkulkijat] Kreikkalaiset siirtolaiset Vähän-Aasian Fokaian kaupungista perustivat Massalian noin vuonna 600 eaa. luonnonsatamaan, joka on nykyinen Vieux-Port. Massaliasta tuli nopeasti tärkeä kauppasatama, joka välitti viiniä, öljyä ja keramiikkaa Välimereltä sisämaahan päin — ja Ranskan vanhin kaupunki oli syntynyt. Kaupungin muinaiset satamamuurit ja rakennusten perustukset ovat säilyneet Jardin des Vestiges -puutarhassa keskellä nykyistä kaupunkia — kaivaukset paljastivat ne 1960-luvulla ostoskeskuksen rakennustöiden yhteydessä.
+- [Ras Hafun — kaupunkilehti / Ras Hafun: Antiikin Opone] Muinaiset kreikkalaiset ja roomalaiset merenkulkijat tunsivat tämän rannikon Oponen kauppakaupunkina. Se mainitaan noin ensimmäisellä vuosisadalla jaa. kirjoitetussa merenkulkuoppaassa Periplus Maris Erythraei, joka luetteloi Egyptistä lähtevien kauppareittien satamat aina Intiaan asti. Oppaan mukaan Oponesta vietiin suuria määriä kanelia ja erityisen hienoa kilpikonnankuorta, ja nykyarkeologit yhdistävät kuvauksen juuri Ras Hafunin niemeen. Kaupunki kukoisti vuosisatoja ennen ajanlaskun alkua ja vielä pitkään sen jälkeenkin, kunnes toiminta hiipui noin 500-luvulla jaa.
+AIEMPI KYSYMYS: Mistä Mustameri on saanut nimensä?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tästä on useita selityksiä. [[Antiikin kreikkalaiset]] kutsuivat merta ensin nimellä [[Pontos Axeinos]], "vieraanvaraton", ja nimi vaihtui myöhemmin muotoon Euxeinos eli vieraanvarainen. Mustan värin yksi selitys on myrskyisä sää ja tumma vesi. Toinen on idänkansojen tapa nimetä ilmansuuntia väreillä, jolloin musta tarkoittaisi pohjoista. Varmaa selitystä ei ole, ja tutkijat ovat asiasta eri mieltä. Ei sentään koko päivää kulunut.
+KYSYMYS: Kerro lisää: Antiikin kreikkalaiset
+
+### 156
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on maailman suurin meromiktinen vesialue: pinnalla virtaa kevyt makea vesi ulos Bosporin kautta, pohjalla painuu raskas suolainen vesi sisään, eivätkä kerrokset sekoitu. Siksi yli 90 prosenttia meren syvästä vedestä on hapetonta. Juuri hapettomuus on tehnyt siitä meriarkeologien unelman: puurunkoiset laivanhylyt säilyvät pohjassa käytännössä lahoamatta.
+AIEMPI KYSYMYS: Mistä Mustameri on saanut nimensä?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tästä on useita selityksiä. [[Antiikin kreikkalaiset]] kutsuivat merta ensin nimellä [[Pontos Axeinos]], "vieraanvaraton", ja nimi vaihtui myöhemmin muotoon Euxeinos eli vieraanvarainen. Mustan värin yksi selitys on myrskyisä sää ja tumma vesi. Toinen on idänkansojen tapa nimetä ilmansuuntia väreillä, jolloin musta tarkoittaisi pohjoista. Varmaa selitystä ei ole, ja tutkijat ovat asiasta eri mieltä. Ei sentään koko päivää kulunut.
+KYSYMYS: Kerro lisää: Pontos Axeinos
+
+### 157
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on maailman suurin meromiktinen vesialue: pinnalla virtaa kevyt makea vesi ulos Bosporin kautta, pohjalla painuu raskas suolainen vesi sisään, eivätkä kerrokset sekoitu. Siksi yli 90 prosenttia meren syvästä vedestä on hapetonta. Juuri hapettomuus on tehnyt siitä meriarkeologien unelman: puurunkoiset laivanhylyt säilyvät pohjassa käytännössä lahoamatta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Luonto: Kissa, joka menee veteen] 1955 — Vanjärven seudulla Itä-Turkissa elää kissarotu, joka poikkeaa useimmista kissoista yhdessä asiassa: se ui mielellään. Van-kissan turkki on lähes kokonaan valkoinen, ja väriä on vain päässä ja hännässä. Monella yksilöllä silmät ovat eriväriset, toinen sininen ja toinen kullanruskea. Kaksi brittiläistä tutkijaa toi rodun Eurooppaan vuonna 1955. Kissojen kotijärvi on Turkin suurin järvi, mutta sen vesi on niin emäksistä, että siinä elää vain yksi kalalaji, helmisärki, joka nousee keväisin jokiin kutemaan.
+AIEMPI KYSYMYS: Mitkä maat ympäröivät Mustaamerta?
+AIEMPI VASTAUS (Livia):
+Katotaas. Mustanmeren rannikolla on kuusi valtiota: [[Turkki]] etelässä, [[Bulgaria]] ja [[Romania]] lännessä, [[Ukraina]] ja Venäjä pohjoisessa ja koillisessa sekä Georgia itäisellä rannikolla. Pohjoisimmilla rannoilla meri rajoittuu Krimin niemimaahan, ja eteläisen rannikon muodostaa Turkin pitkä Mustanmeren rannikko. Rannikon yhdistävät kauppa, kalastus ja satamat, ja kaikki kuusi valtiota ovat yhteydessä Välimereen Bosporin ja Dardanellien kautta. Kyllä näitä riittää luetteloitavaksi.
+KYSYMYS: Kerro lisää: Turkki
+
+### 158
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on maailman suurin meromiktinen vesialue: pinnalla virtaa kevyt makea vesi ulos Bosporin kautta, pohjalla painuu raskas suolainen vesi sisään, eivätkä kerrokset sekoitu. Siksi yli 90 prosenttia meren syvästä vedestä on hapetonta. Juuri hapettomuus on tehnyt siitä meriarkeologien unelman: puurunkoiset laivanhylyt säilyvät pohjassa käytännössä lahoamatta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sofia — kaupunkilehti / Ruoka: Bakteeri sai nimensä Bulgariasta] Perinteinen bulgarialainen jogurtti, kiselo mlyako, käy paksuksi bakteerilla, joka sai tieteellisen nimensä "Lactobacillus bulgaricus" juuri Bulgarian mukaan — bulgarialainen lääketieteen opiskelija Stamen Grigorov tunnisti bakteerin Geneven yliopistossa 1905. Jogurtti oli tunnettu Balkanilla vuosisatoja ennen sitä, ja perinteisesti sitä tehdään lampaanmaidosta savisissa astioissa. Zhenski pazarin juustotiskeiltä sitä saa yhä suoraan valmistajilta.
+AIEMPI KYSYMYS: Mitkä maat ympäröivät Mustaamerta?
+AIEMPI VASTAUS (Livia):
+Katotaas. Mustanmeren rannikolla on kuusi valtiota: [[Turkki]] etelässä, [[Bulgaria]] ja [[Romania]] lännessä, [[Ukraina]] ja Venäjä pohjoisessa ja koillisessa sekä Georgia itäisellä rannikolla. Pohjoisimmilla rannoilla meri rajoittuu Krimin niemimaahan, ja eteläisen rannikon muodostaa Turkin pitkä Mustanmeren rannikko. Rannikon yhdistävät kauppa, kalastus ja satamat, ja kaikki kuusi valtiota ovat yhteydessä Välimereen Bosporin ja Dardanellien kautta. Kyllä näitä riittää luetteloitavaksi.
+KYSYMYS: Kerro lisää: Bulgaria
+
+### 159
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on maailman suurin meromiktinen vesialue: pinnalla virtaa kevyt makea vesi ulos Bosporin kautta, pohjalla painuu raskas suolainen vesi sisään, eivätkä kerrokset sekoitu. Siksi yli 90 prosenttia meren syvästä vedestä on hapetonta. Juuri hapettomuus on tehnyt siitä meriarkeologien unelman: puurunkoiset laivanhylyt säilyvät pohjassa käytännössä lahoamatta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Romanian ateneum] 1888 Romanian ateneum on pyöreä, kupolikattoinen konserttitalo Bukarestin sydämessä. Idea rakennuksesta syntyi jo vuonna 1865, kun joukko sivistyneitä romanialaisia perusti kulttuuriseuran. Rahaa rakennukseen kerättiin tavallisilta ihmisiltä tunnuslauseella "Anna yksi leu Ateneumille!", ja rakennus vihittiin käyttöön vuonna 1888, vaikka viimeistelytyöt jatkuivat vielä vuoteen 1897 asti. Sisällä konserttisalissa on 794 istumapaikkaa, ja katon alla kiertää valtava freskomaalaus, 75 metriä pitkä ja 3 metriä korkea. Maalari Costin Petrescu kuvasi siihen koko Romanian historian aina roomalaisten valloituksista 1900-luvun alun suureen yhdistymiseen asti. Joulukuussa vuonna 1919 rakennuksessa teht…
+AIEMPI KYSYMYS: Mitkä maat ympäröivät Mustaamerta?
+AIEMPI VASTAUS (Livia):
+Katotaas. Mustanmeren rannikolla on kuusi valtiota: [[Turkki]] etelässä, [[Bulgaria]] ja [[Romania]] lännessä, [[Ukraina]] ja Venäjä pohjoisessa ja koillisessa sekä Georgia itäisellä rannikolla. Pohjoisimmilla rannoilla meri rajoittuu Krimin niemimaahan, ja eteläisen rannikon muodostaa Turkin pitkä Mustanmeren rannikko. Rannikon yhdistävät kauppa, kalastus ja satamat, ja kaikki kuusi valtiota ovat yhteydessä Välimereen Bosporin ja Dardanellien kautta. Kyllä näitä riittää luetteloitavaksi.
+KYSYMYS: Kerro lisää: Romania
+
+### 160
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on maailman suurin meromiktinen vesialue: pinnalla virtaa kevyt makea vesi ulos Bosporin kautta, pohjalla painuu raskas suolainen vesi sisään, eivätkä kerrokset sekoitu. Siksi yli 90 prosenttia meren syvästä vedestä on hapetonta. Juuri hapettomuus on tehnyt siitä meriarkeologien unelman: puurunkoiset laivanhylyt säilyvät pohjassa käytännössä lahoamatta.
+AIEMPI KYSYMYS: Mitkä maat ympäröivät Mustaamerta?
+AIEMPI VASTAUS (Livia):
+Katotaas. Mustanmeren rannikolla on kuusi valtiota: [[Turkki]] etelässä, [[Bulgaria]] ja [[Romania]] lännessä, [[Ukraina]] ja Venäjä pohjoisessa ja koillisessa sekä Georgia itäisellä rannikolla. Pohjoisimmilla rannoilla meri rajoittuu Krimin niemimaahan, ja eteläisen rannikon muodostaa Turkin pitkä Mustanmeren rannikko. Rannikon yhdistävät kauppa, kalastus ja satamat, ja kaikki kuusi valtiota ovat yhteydessä Välimereen Bosporin ja Dardanellien kautta. Kyllä näitä riittää luetteloitavaksi.
+KYSYMYS: Kerro lisää: Ukraina

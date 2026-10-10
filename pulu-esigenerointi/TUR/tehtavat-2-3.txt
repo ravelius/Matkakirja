@@ -1,0 +1,1039 @@
+### 161
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kızılırmak (luonto · joki)
+Tietoruudun teksti: Heettiläisille Maraššantiya oli valtakunnan länsiraja, ja antiikissa Halys erotti Lyydian Persian valtakunnasta. Sen rannalla käytiin 28. toukokuuta 585 eaa. "pimennyksen taistelu": kesken taistelun aurinko pimeni, ja järkyttyneet osapuolet solmivat rauhan siihen paikkaan. Kun Lyydian Kroisos vihdoin ylitti joen 547 eaa. hyökätäkseen Kyyros Suurta vastaan, hän hävisi — ja Persia ulottui Egeanmerelle asti.
+AIEMPI KYSYMYS: Miksi jokea kutsutaan punaiseksi?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kızılırmak tarkoittaa turkiksi "punaista jokea": kızıl on punainen ja ırmak joki. Nimi viittaa veden punertavaan väriin, jonka antavat joen kuljettamat punaruskeat [[sedimentit]], kuten rautapitoinen savi ja hiekka, jotka joki huuhtoo mukaansa Anatolian ylängöltä. Antiikissa jokea sanottiin nimellä Halys, ja nimen on joissain lähteissä arveltu liittyvän kreikan suolaa tarkoittavaan sanaan alueen suolaesiintymien vuoksi. Joki virtaa lopulta [[Mustaanmereen]]. Kyllä väri näkyy ylhäältäkin.
+KYSYMYS: Kerro lisää: sedimentit
+
+### 162
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kızılırmak (luonto · joki)
+Tietoruudun teksti: Heettiläisille Maraššantiya oli valtakunnan länsiraja, ja antiikissa Halys erotti Lyydian Persian valtakunnasta. Sen rannalla käytiin 28. toukokuuta 585 eaa. "pimennyksen taistelu": kesken taistelun aurinko pimeni, ja järkyttyneet osapuolet solmivat rauhan siihen paikkaan. Kun Lyydian Kroisos vihdoin ylitti joen 547 eaa. hyökätäkseen Kyyros Suurta vastaan, hän hävisi — ja Persia ulottui Egeanmerelle asti.
+AIEMPI KYSYMYS: Miksi jokea kutsutaan punaiseksi?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kızılırmak tarkoittaa turkiksi "punaista jokea": kızıl on punainen ja ırmak joki. Nimi viittaa veden punertavaan väriin, jonka antavat joen kuljettamat punaruskeat [[sedimentit]], kuten rautapitoinen savi ja hiekka, jotka joki huuhtoo mukaansa Anatolian ylängöltä. Antiikissa jokea sanottiin nimellä Halys, ja nimen on joissain lähteissä arveltu liittyvän kreikan suolaa tarkoittavaan sanaan alueen suolaesiintymien vuoksi. Joki virtaa lopulta [[Mustaanmereen]]. Kyllä väri näkyy ylhäältäkin.
+KYSYMYS: Kerro lisää: Mustaanmereen
+
+### 163
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kızılırmak (luonto · joki)
+Tietoruudun teksti: Heettiläisille Maraššantiya oli valtakunnan länsiraja, ja antiikissa Halys erotti Lyydian Persian valtakunnasta. Sen rannalla käytiin 28. toukokuuta 585 eaa. "pimennyksen taistelu": kesken taistelun aurinko pimeni, ja järkyttyneet osapuolet solmivat rauhan siihen paikkaan. Kun Lyydian Kroisos vihdoin ylitti joen 547 eaa. hyökätäkseen Kyyros Suurta vastaan, hän hävisi — ja Persia ulottui Egeanmerelle asti.
+AIEMPI KYSYMYS: Kuka voitti pimennyksen taistelun?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kumpikaan osapuoli ei voittanut. Taistelu käytiin [[Lyydian]] ja Meedian välillä, ja kesken taistelun tapahtunut [[auringonpimennys]] pelästytti sotilaat niin, että taistelu keskeytettiin ja osapuolet solmivat rauhan. Rauhansopimusta vahvistettiin lähteiden mukaan myös avioliitolla kuningasperheiden kesken. Taistelun ajankohta on tavallisesti sidottu vuoteen 585 eaa., ja pimennys on antiikin kreikkalaisen historiankirjoituksen tunnetuimpia tähtitieteellisiä tapahtumia. Rajajoeksi vakiintui Halys, nykyinen Kızılırmak. Se on vanha tarina, mutta edelleen hyvä.
+KYSYMYS: Kerro lisää: Lyydian
+
+### 164
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kızılırmak (luonto · joki)
+Tietoruudun teksti: Heettiläisille Maraššantiya oli valtakunnan länsiraja, ja antiikissa Halys erotti Lyydian Persian valtakunnasta. Sen rannalla käytiin 28. toukokuuta 585 eaa. "pimennyksen taistelu": kesken taistelun aurinko pimeni, ja järkyttyneet osapuolet solmivat rauhan siihen paikkaan. Kun Lyydian Kroisos vihdoin ylitti joen 547 eaa. hyökätäkseen Kyyros Suurta vastaan, hän hävisi — ja Persia ulottui Egeanmerelle asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Titicaca — kaupunkilehti / Titicaca-järvi: Auringon pyhä saari] Auringon saareksi kutsuttu Isla del Sol on Titicacan suurin saari ja oli inkoille tärkein pyhiinvaelluskohde. Saarella on yli 80 rauniota, joista suurin osa ajoittuu 1400-luvulle ja inkavallan huippukauteen: kivisiä temppeleitä, labyrinttimäinen Chinkana-rakennus sekä jyrkkiä viljelysterasseja, jotka yhä kannattelevat maissi- ja perunapeltoja. Saarella ei ole moottoriajoneuvoja lainkaan, vaan kapeat polut kulkevat kylästä toiseen kukkuloiden yli. Nykyään saarella asuu noin 800 perhettä maanviljelystä, kalastuksesta ja yhä enemmän matkailusta – veneet Copacabanan rannalta tuovat vierailijoita rantaan, jota pidettiin kerran auringon syntysijana.
+- [Titicaca — kaupunkilehti / Titicaca-järvi: Auringon lapset nousevat järvestä] Inkojen perimätiedon mukaan aurinkojumala Inti loi kaksi lastaan, Manco Cápacin ja Mama Ocllon, ja lähetti heidät nousemaan Titicaca-järvestä opettamaan ihmisille maanviljelyä ja kudontaa. Espanjalaisen kronikoitsija Bernabé Cobon mukaan sisarpari – joka oli myös aviopari, inkasuvun tavan mukaan – kohosi esiin Isla del Solin pyhältä Titi Qala -kalliolta, jonka uskottiin olevan auringon asuinsija. Sieltä sisarukset vaelsivat kohti Cuzcoa kultaisen sauvan kanssa ja perustivat kaupungin, jossa sauva vaipui maahan. Toisessa versiossa Manco Cápac nousee maan alta luolasta – kumpikaan ei ole peräisin ajalta ennen espanjalaisten saapumista.
+AIEMPI KYSYMYS: Kuka voitti pimennyksen taistelun?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kumpikaan osapuoli ei voittanut. Taistelu käytiin [[Lyydian]] ja Meedian välillä, ja kesken taistelun tapahtunut [[auringonpimennys]] pelästytti sotilaat niin, että taistelu keskeytettiin ja osapuolet solmivat rauhan. Rauhansopimusta vahvistettiin lähteiden mukaan myös avioliitolla kuningasperheiden kesken. Taistelun ajankohta on tavallisesti sidottu vuoteen 585 eaa., ja pimennys on antiikin kreikkalaisen historiankirjoituksen tunnetuimpia tähtitieteellisiä tapahtumia. Rajajoeksi vakiintui Halys, nykyinen Kızılırmak. Se on vanha tarina, mutta edelleen hyvä.
+KYSYMYS: Kerro lisää: auringonpimennys
+
+### 165
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kızılırmak (luonto · joki)
+Tietoruudun teksti: Heettiläisille Maraššantiya oli valtakunnan länsiraja, ja antiikissa Halys erotti Lyydian Persian valtakunnasta. Sen rannalla käytiin 28. toukokuuta 585 eaa. "pimennyksen taistelu": kesken taistelun aurinko pimeni, ja järkyttyneet osapuolet solmivat rauhan siihen paikkaan. Kun Lyydian Kroisos vihdoin ylitti joen 547 eaa. hyökätäkseen Kyyros Suurta vastaan, hän hävisi — ja Persia ulottui Egeanmerelle asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riad — kohdekartta / Kohdekartta: Imam Turkin suurmoskeija] Turki bin Abdullah otti Riadin 1824 ja teki siitä toisen Saudi-valtion pääkaupungin. Suurmoskeija rakennettiin hänen aikanaan vuosina 1826–1830, hallintopalatsi Qasr al-Hukmin viereen. Turki surmattiin vuonna 1834 perjantairukouksesta lähtiessään, ja moskeija kantaa yhä hänen nimeään. Nykyinen moskeija on vuodelta 1992, ja se avattiin tammikuussa 1993. Samoihin vuosiin osui koko Qasr al-Hukmin korttelin uudistus, jonka työt kestivät 1983–1992. Sisätilaa on 16 800 neliömetriä ja rukoilijoita mahtuu 17 000; se on yksi maan suurimmista moskeijoista. Ulkoseinät ja sisätilan yläosa ovat ruskeaa riadilaista kalkkikiveä, alaosa valkoista marmoria. Miesten ja naisten kirjastot ovat kumpikin 325 nel…
+- [Turkki — maalehti / Historia: Yhdeksän kaupunkia päällekkäin] 1873 — Homeroksen Troijaa pidettiin pitkään pelkkänä taruna, kunnes Länsi-Turkin rannikolta kaivettiin esiin Hisarlıkin kumpu. Kummussa on yhdeksän kaupunkia päällekkäin: aina kun kaupunki tuhoutui, uusi rakennettiin raunioiden päälle, ja kumpu kasvoi kerros kerrokselta. Heinrich Schliemann aloitti kaivaukset 1870-luvulla ja kaivoi kummun läpi suuren kuilun. Vuonna 1873 hän löysi kultaesineitä, joita hän kutsui Priamoksen aarteeksi — mutta esineet olivat yli tuhat vuotta vanhempia kuin kerrottu sota. Kiireessä hän tuhosi juuri sen kerroksen, jota etsi.
+AIEMPI KYSYMYS: Minne Kızılırmak laskee?
+AIEMPI VASTAUS (Livia):
+Kato, sen tiedän. Kızılırmak virtaa Anatolian ylängöltä [[Turkin]] halki ja laskee pohjoisessa [[Mustaanmereen]]. Joen matka on yli tuhat kilometriä, ja sen suulle on muodostunut laaja [[suisto]], joka tunnetaan runsaasta lintuelämästään. Joki mutkittelee ensin keskisen ylängön halki ja kulkee sitten vuoristoalueiden läpi merelle. Suistoalueet ovat tärkeitä muuttolinnuille, mikä on minulle henkilökohtaisesti tärkeää. Kyllä siellä lentäisin mielelläni.
+KYSYMYS: Kerro lisää: Turkin
+
+### 166
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kızılırmak (luonto · joki)
+Tietoruudun teksti: Heettiläisille Maraššantiya oli valtakunnan länsiraja, ja antiikissa Halys erotti Lyydian Persian valtakunnasta. Sen rannalla käytiin 28. toukokuuta 585 eaa. "pimennyksen taistelu": kesken taistelun aurinko pimeni, ja järkyttyneet osapuolet solmivat rauhan siihen paikkaan. Kun Lyydian Kroisos vihdoin ylitti joen 547 eaa. hyökätäkseen Kyyros Suurta vastaan, hän hävisi — ja Persia ulottui Egeanmerelle asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto: Suisto, jossa asuu 5500 lajia] 1991 — Tonavan suisto on Euroopan suurin säilynyt kosteikko, ja se levittäytyy yli 4100 neliökilometrille Romanian ja Ukrainan rajalla. Alueella elää yli 5500 kasvi- ja eläinlajia — enemmän kuin missään muualla Euroopassa — ja monimuotoisuudessa sen ohittavat maailmassa vain Australian Suuri valliriutta ja Galapagossaaret. Suistossa pesii yli 300 lintulajia, muun muassa suurin osa Euroopan pelikaaneista ja punakaulahanhista, ja vesissä ui lähes 90 kalalajia, joukossa sampia. Unesco otti suiston maailmanperintöluetteloon vuonna 1991, vuosi sen jälkeen kun siitä oli tehty biosfäärialue.
+AIEMPI KYSYMYS: Minne Kızılırmak laskee?
+AIEMPI VASTAUS (Livia):
+Kato, sen tiedän. Kızılırmak virtaa Anatolian ylängöltä [[Turkin]] halki ja laskee pohjoisessa [[Mustaanmereen]]. Joen matka on yli tuhat kilometriä, ja sen suulle on muodostunut laaja [[suisto]], joka tunnetaan runsaasta lintuelämästään. Joki mutkittelee ensin keskisen ylängön halki ja kulkee sitten vuoristoalueiden läpi merelle. Suistoalueet ovat tärkeitä muuttolinnuille, mikä on minulle henkilökohtaisesti tärkeää. Kyllä siellä lentäisin mielelläni.
+KYSYMYS: Kerro lisää: suisto
+
+### 167
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kızılırmak (luonto · joki)
+Tietoruudun teksti: Heettiläisille Maraššantiya oli valtakunnan länsiraja, ja antiikissa Halys erotti Lyydian Persian valtakunnasta. Sen rannalla käytiin 28. toukokuuta 585 eaa. "pimennyksen taistelu": kesken taistelun aurinko pimeni, ja järkyttyneet osapuolet solmivat rauhan siihen paikkaan. Kun Lyydian Kroisos vihdoin ylitti joen 547 eaa. hyökätäkseen Kyyros Suurta vastaan, hän hävisi — ja Persia ulottui Egeanmerelle asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Anatolian sivilisaatioiden museo] Museo on kahdessa 1400-luvun ottomaanirakennuksessa Ankaran linnan eteläpuolella Atpazarın korttelissa. Näyttely on Mahmut Paşan bedestenissä eli katetussa kauppahallissa, jonka Mehmed II:n visiiri rakennutti vuosina 1464–1471: kymmenen kupolia kattaa suorakaiteen, ja hallissa oli 102 puotia vastakkain. Vieressä on Kurşunlu Han: keskellä piha ja pylväskäytävä, ympärillä kaksi kerrosta huoneita, 28 alhaalla ja 30 ylhäällä. Han on nykyään hallintosiipi, jossa ovat työhuoneet, kirjasto, esitelmäsali ja laboratorio. Kymmenkupolinen keskihalli on jätetty yhdeksi tilaksi, ja siinä seisovat suuret kivireliefit ja patsaat myöhäisheettiläiseltä ajalta: pitkäkaapuisia sotilaita, sotavaunuja, hierogly…
+AIEMPI KYSYMYS: Keitä heettiläiset olivat?
+AIEMPI VASTAUS (Livia):
+No niin, heettiläiset olivat Anatolian kansa, joka rakensi laajan valtakunnan [[pronssikauden]] aikana, noin 1600–1200 eaa. Valtakunnan pääkaupunki Hattusa sijaitsi Kızılırmakin kaaren sisäpuolella nykyisen Turkin keskiosassa. Heettiläiset puhuivat yhtä varhaisimmista kirjallisista [[indoeurooppalaisten kielten]] ryhmästä ja kirjoittivat savitauluille [[nuolenpääkirjoitusta]]. He olivat aikansa suurvaltoja Egyptin ja Babylonian rinnalla. Valtakunta romahti pronssikauden lopun suuressa murroksessa, ja syiden selvittäminen on yhä tutkijoiden työtä. Tämä oli varsin kunnioitettava kansa.
+KYSYMYS: Kerro lisää: pronssikauden
+
+### 168
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kızılırmak (luonto · joki)
+Tietoruudun teksti: Heettiläisille Maraššantiya oli valtakunnan länsiraja, ja antiikissa Halys erotti Lyydian Persian valtakunnasta. Sen rannalla käytiin 28. toukokuuta 585 eaa. "pimennyksen taistelu": kesken taistelun aurinko pimeni, ja järkyttyneet osapuolet solmivat rauhan siihen paikkaan. Kun Lyydian Kroisos vihdoin ylitti joen 547 eaa. hyökätäkseen Kyyros Suurta vastaan, hän hävisi — ja Persia ulottui Egeanmerelle asti.
+AIEMPI KYSYMYS: Keitä heettiläiset olivat?
+AIEMPI VASTAUS (Livia):
+No niin, heettiläiset olivat Anatolian kansa, joka rakensi laajan valtakunnan [[pronssikauden]] aikana, noin 1600–1200 eaa. Valtakunnan pääkaupunki Hattusa sijaitsi Kızılırmakin kaaren sisäpuolella nykyisen Turkin keskiosassa. Heettiläiset puhuivat yhtä varhaisimmista kirjallisista [[indoeurooppalaisten kielten]] ryhmästä ja kirjoittivat savitauluille [[nuolenpääkirjoitusta]]. He olivat aikansa suurvaltoja Egyptin ja Babylonian rinnalla. Valtakunta romahti pronssikauden lopun suuressa murroksessa, ja syiden selvittäminen on yhä tutkijoiden työtä. Tämä oli varsin kunnioitettava kansa.
+KYSYMYS: Kerro lisää: indoeurooppalaisten kielten
+
+### 169
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kızılırmak (luonto · joki)
+Tietoruudun teksti: Heettiläisille Maraššantiya oli valtakunnan länsiraja, ja antiikissa Halys erotti Lyydian Persian valtakunnasta. Sen rannalla käytiin 28. toukokuuta 585 eaa. "pimennyksen taistelu": kesken taistelun aurinko pimeni, ja järkyttyneet osapuolet solmivat rauhan siihen paikkaan. Kun Lyydian Kroisos vihdoin ylitti joen 547 eaa. hyökätäkseen Kyyros Suurta vastaan, hän hävisi — ja Persia ulottui Egeanmerelle asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Historia: Savisylinteri, joka luetaan yhä] Kyroksen sylinteri on noin 23 senttimetriä pitkä savikappale, johon on painettu nuolenpääkirjoitusta akkadin kielellä. Se tehtiin sen jälkeen kun Kyros II valloitti Babylonin vuonna 539 eaa., ja siihen kirjattiin kuninkaan käskyjä: temppelit korjataan ja pois viedyt jumalankuvat palautetaan koteihinsa. Sylinteri kaivettiin esiin Babylonin raunioista vuonna 1879, ja se on nykyään British Museumissa. Sitä on toisinaan kutsuttu maailman ensimmäiseksi ihmisoikeusjulistukseksi. Museo itse ei allekirjoita nimitystä: teksti noudattaa vanhaa mesopotamialaista perinnettä, jossa uusi hallitsija ilmoittaa korjaavansa edeltäjänsä laiminlyönnit.
+- [Kuwait — maalehti / Rakennukset: Saari oli Dilmunin kaupan solmukohta] Failakan saari on kahdenkymmenen kilometrin päässä Kuwait Cityn rannikosta. Sinne asetuttiin noin vuoden 2000 eaa. tienoilla, kun merenpinta laski, ja Urin kauppiaat pitivät saarella tukikohtaa. Dilmunin aikaan saari tunnettiin nimellä Agarum, ja sitä pidettiin Enzak-jumalan maana. Saarelta on löytynyt nuolenpääkirjoitusta ja sinettejä, joihin on kaiverrettu kuninkaiden nimiä. Kivikorttelit on kaivettu esiin ja peitetty paikoin suojaverkoilla, jottei tuuli kuluttaisi muureja.
+- [Irak — maalehti / Muinaisuus: Kahdentoista taulun runoelma] Gilgamesh-eepos on maailman vanhimpia säilyneitä kertomuksia. Vanhimmat sumerinkieliset runot ajoittuvat noin 2100-luvulle eaa., ja akkadinkielinen vakioversio koottiin kahdelletoista savitaululle noin vuosina 1300–1000 eaa.; kokoajaksi mainitaan Sin-leqi-unninni. Kuvan kappale on eepoksen viides taulu, ja se on Sulaymaniyahin museossa. Kirjoitus on nuolenpääkirjoitusta: kiilanmuotoisia painaumia, jotka syntyvät painamalla ruokokynän kulmaa kosteaan saveen.
+AIEMPI KYSYMYS: Keitä heettiläiset olivat?
+AIEMPI VASTAUS (Livia):
+No niin, heettiläiset olivat Anatolian kansa, joka rakensi laajan valtakunnan [[pronssikauden]] aikana, noin 1600–1200 eaa. Valtakunnan pääkaupunki Hattusa sijaitsi Kızılırmakin kaaren sisäpuolella nykyisen Turkin keskiosassa. Heettiläiset puhuivat yhtä varhaisimmista kirjallisista [[indoeurooppalaisten kielten]] ryhmästä ja kirjoittivat savitauluille [[nuolenpääkirjoitusta]]. He olivat aikansa suurvaltoja Egyptin ja Babylonian rinnalla. Valtakunta romahti pronssikauden lopun suuressa murroksessa, ja syiden selvittäminen on yhä tutkijoiden työtä. Tämä oli varsin kunnioitettava kansa.
+KYSYMYS: Kerro lisää: nuolenpääkirjoitusta
+
+### 170
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kızılırmak (luonto · joki)
+Tietoruudun teksti: Heettiläisille Maraššantiya oli valtakunnan länsiraja, ja antiikissa Halys erotti Lyydian Persian valtakunnasta. Sen rannalla käytiin 28. toukokuuta 585 eaa. "pimennyksen taistelu": kesken taistelun aurinko pimeni, ja järkyttyneet osapuolet solmivat rauhan siihen paikkaan. Kun Lyydian Kroisos vihdoin ylitti joen 547 eaa. hyökätäkseen Kyyros Suurta vastaan, hän hävisi — ja Persia ulottui Egeanmerelle asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irak — maalehti / Muinaisuus: Kolme portaikkoa kuun jumalan luo] Urin ziggurat on porrastettu torni, jonka Ur-Nammu aloitti noin 2100-luvulla eaa. ja jonka hänen seuraajansa Shulgi sai valmiiksi noin vuonna 2000 eaa. Pohja on noin 64 metriä pitkä ja 45 metriä leveä, ja korkeutta oli yli 30 metriä. Sisus on kuivattua savitiiltä, mutta ulkokuori on poltettua tiiltä — siksi rinteet ovat yhä pystyssä. Huipulla oli kuun jumalan Nannan pyhäkkö. Uusbabylonialainen kuningas Nabonidus korjasi tornin 500-luvulla eaa., ja julkisivu ja portaikko muurattiin uudelleen 1980-luvulla.
+AIEMPI KYSYMYS: Miten auringonpimennys syntyy?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Auringonpimennys syntyy, kun [[Kuun]] rata kuljettaa sen Maan ja Auringon väliin, jolloin Kuun varjo osuu Maan pinnalle. Kokonaispimennys nähdään vain kapealla alueella, jossa Kuu peittää Auringon kokonaan, ja sen ulkopuolella näkyy osittainen pimennys. Kokonaisuudessaan ilmiö toistuu laskettavissa olevasti, ja nykyään tähtitieteilijät pystyvät ennustamaan pimennykset vuosisadoiksi eteenpäin. Antiikissa ilmiö koettiin usein pelottavana enteenä, ja [[kokonaispimennys]] saattoi pysäyttää kokonaisen taistelun.
+
+Minä näen varjon kulkevan maan päällä, ja se on ylhäältä todella kaunis ja hiukan pelottava. Linnut menevät hiljaa, ja minäkin.
+KYSYMYS: Kerro lisää: Kuun
+
+### 171
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kızılırmak (luonto · joki)
+Tietoruudun teksti: Heettiläisille Maraššantiya oli valtakunnan länsiraja, ja antiikissa Halys erotti Lyydian Persian valtakunnasta. Sen rannalla käytiin 28. toukokuuta 585 eaa. "pimennyksen taistelu": kesken taistelun aurinko pimeni, ja järkyttyneet osapuolet solmivat rauhan siihen paikkaan. Kun Lyydian Kroisos vihdoin ylitti joen 547 eaa. hyökätäkseen Kyyros Suurta vastaan, hän hävisi — ja Persia ulottui Egeanmerelle asti.
+AIEMPI KYSYMYS: Miten auringonpimennys syntyy?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Auringonpimennys syntyy, kun [[Kuun]] rata kuljettaa sen Maan ja Auringon väliin, jolloin Kuun varjo osuu Maan pinnalle. Kokonaispimennys nähdään vain kapealla alueella, jossa Kuu peittää Auringon kokonaan, ja sen ulkopuolella näkyy osittainen pimennys. Kokonaisuudessaan ilmiö toistuu laskettavissa olevasti, ja nykyään tähtitieteilijät pystyvät ennustamaan pimennykset vuosisadoiksi eteenpäin. Antiikissa ilmiö koettiin usein pelottavana enteenä, ja [[kokonaispimennys]] saattoi pysäyttää kokonaisen taistelun.
+
+Minä näen varjon kulkevan maan päällä, ja se on ylhäältä todella kaunis ja hiukan pelottava. Linnut menevät hiljaa, ja minäkin.
+KYSYMYS: Kerro lisää: kokonaispimennys
+
+### 172
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gaziantep (ruoka)
+Tietoruudun teksti: Gaziantep on kuulu baklavastaan: ohuista taikinalevyistä, pähkinöistä ja makeasta liemestä kerrostettu leivonnainen tehdään täällä seudun omista pistaaseista ja tarjotaan usein kaymak-kerman kera. Kaupungin baklavaresepti saapui vuonna 1871 leipurilta, joka oli oppinut taidon Damaskoksessa — kaksi vuotta ennen isoisän matkaa. Vuonna 2013 Antep-baklava sai EU:n suojatun maantieteellisen merkinnän ensimmäisenä turkkilaisena tuotteena.
+AIEMPI KYSYMYS: Montako taikinakerrosta baklavassa on?
+AIEMPI VASTAUS (Livia):
+Mmm— Tarkkaa lukua ei voi antaa, sillä määrä vaihtelee leipurin ja reseptin mukaan. Perinteisessä baklavassa on kuitenkin kymmeniä hyvin ohuita [[yufka]]-taikinalevyjä, joiden väliin siveltään sulatettua [[voita]] ja ripotellaan murskattuja pähkinöitä. Gaziantepissa pähkinänä käytetään seudun omia pistaaseja, ja valmis leivonnainen kastetaan makeaan liemeen. Kerrokset rullataan ohueksi pitkällä kapealla kaulimella, ja taito on vaativa, minkä vuoksi baklavamestarit ovat arvostettuja. Suosittu tapa on tarjota baklava [[kaymak]]-kerman kera.
+
+Minä katson noita kerroksia ylhäältä ja ajattelen vain yhtä asiaa. Pulla on pulla, mutta tuo on jo taidetta.
+KYSYMYS: Kerro lisää: yufka
+
+### 173
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gaziantep (ruoka)
+Tietoruudun teksti: Gaziantep on kuulu baklavastaan: ohuista taikinalevyistä, pähkinöistä ja makeasta liemestä kerrostettu leivonnainen tehdään täällä seudun omista pistaaseista ja tarjotaan usein kaymak-kerman kera. Kaupungin baklavaresepti saapui vuonna 1871 leipurilta, joka oli oppinut taidon Damaskoksessa — kaksi vuotta ennen isoisän matkaa. Vuonna 2013 Antep-baklava sai EU:n suojatun maantieteellisen merkinnän ensimmäisenä turkkilaisena tuotteena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kongo — maalehti / Ruoka: Kansallisruoka, joka on palmun voita] Moambe on öljypalmun hedelmien hedelmälihasta puristettua palmuvoita, ja poulet à la moambe tarkoittaa kanaa, joka on haudutettu siinä. Ruokaan tulee pinaattia ja tulista pilipiliä, ja seuraksi riisiä, bataattia, kovaksi keitettyjä kananmunia tai maniokkitahnaa; kana voidaan vaihtaa ankkaan tai kalaan. Sama ruoka on kansallisruoka neljässä maassa: Kongon demokraattisessa tasavallassa, Kongon tasavallassa, Gabonissa nimellä poulet nyembwe ja Angolassa nimellä moamba de galinha. Kikongoksi kana on nsusu, ja joen toisella puolella maapähkinäversio kulkee nimellä muamba nsusu.
+- [Mongolia — maalehti / Ruoka: Valkoinen ruoka talven varalle] Maito keitetään ensin, jotta pinnalta saadaan öröm, paksu kerma. Kuoritusta maidosta tehdään byaslag-juustoa, hieman hapatettua aartsia, jogurttia, kefiriä ja shimiin arkhia, kevyttä maitoviinaa — sekä aaruulia, kuivattuja rahkapaloja, jotka kovettuvat niin sitkeiksi että kestävät talven yli. Kaikkea tätä sanotaan yhteisnimellä tsagaan idee, valkoinen ruoka, ja se on uudenvuoden pöydän ydin. Päivän juoma on süütei tsai, suolattu maitotee, jossa on voita ja usein paahdettua viljaa. Kun teehen lisää riisiä, lihaa tai pieniä bansh-nyyttejä, siitä tulee ateria.
+AIEMPI KYSYMYS: Montako taikinakerrosta baklavassa on?
+AIEMPI VASTAUS (Livia):
+Mmm— Tarkkaa lukua ei voi antaa, sillä määrä vaihtelee leipurin ja reseptin mukaan. Perinteisessä baklavassa on kuitenkin kymmeniä hyvin ohuita [[yufka]]-taikinalevyjä, joiden väliin siveltään sulatettua [[voita]] ja ripotellaan murskattuja pähkinöitä. Gaziantepissa pähkinänä käytetään seudun omia pistaaseja, ja valmis leivonnainen kastetaan makeaan liemeen. Kerrokset rullataan ohueksi pitkällä kapealla kaulimella, ja taito on vaativa, minkä vuoksi baklavamestarit ovat arvostettuja. Suosittu tapa on tarjota baklava [[kaymak]]-kerman kera.
+
+Minä katson noita kerroksia ylhäältä ja ajattelen vain yhtä asiaa. Pulla on pulla, mutta tuo on jo taidetta.
+KYSYMYS: Kerro lisää: voita
+
+### 174
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gaziantep (ruoka)
+Tietoruudun teksti: Gaziantep on kuulu baklavastaan: ohuista taikinalevyistä, pähkinöistä ja makeasta liemestä kerrostettu leivonnainen tehdään täällä seudun omista pistaaseista ja tarjotaan usein kaymak-kerman kera. Kaupungin baklavaresepti saapui vuonna 1871 leipurilta, joka oli oppinut taidon Damaskoksessa — kaksi vuotta ennen isoisän matkaa. Vuonna 2013 Antep-baklava sai EU:n suojatun maantieteellisen merkinnän ensimmäisenä turkkilaisena tuotteena.
+AIEMPI KYSYMYS: Montako taikinakerrosta baklavassa on?
+AIEMPI VASTAUS (Livia):
+Mmm— Tarkkaa lukua ei voi antaa, sillä määrä vaihtelee leipurin ja reseptin mukaan. Perinteisessä baklavassa on kuitenkin kymmeniä hyvin ohuita [[yufka]]-taikinalevyjä, joiden väliin siveltään sulatettua [[voita]] ja ripotellaan murskattuja pähkinöitä. Gaziantepissa pähkinänä käytetään seudun omia pistaaseja, ja valmis leivonnainen kastetaan makeaan liemeen. Kerrokset rullataan ohueksi pitkällä kapealla kaulimella, ja taito on vaativa, minkä vuoksi baklavamestarit ovat arvostettuja. Suosittu tapa on tarjota baklava [[kaymak]]-kerman kera.
+
+Minä katson noita kerroksia ylhäältä ja ajattelen vain yhtä asiaa. Pulla on pulla, mutta tuo on jo taidetta.
+KYSYMYS: Kerro lisää: kaymak
+
+### 175
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gaziantep (ruoka)
+Tietoruudun teksti: Gaziantep on kuulu baklavastaan: ohuista taikinalevyistä, pähkinöistä ja makeasta liemestä kerrostettu leivonnainen tehdään täällä seudun omista pistaaseista ja tarjotaan usein kaymak-kerman kera. Kaupungin baklavaresepti saapui vuonna 1871 leipurilta, joka oli oppinut taidon Damaskoksessa — kaksi vuotta ennen isoisän matkaa. Vuonna 2013 Antep-baklava sai EU:n suojatun maantieteellisen merkinnän ensimmäisenä turkkilaisena tuotteena.
+AIEMPI KYSYMYS: Miten pistaasit korjataan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Pistaasit kerätään yleensä loppukesällä tai alkusyksyllä, kun hedelmä on kypsynyt ja ulkokuori alkaa avautua. Sato korjataan käsin tai puita ravistelemalla, ja pähkinät kuoritaan pian korjuun jälkeen pehmeästä ulkokuoresta, koska kuori värjää ja pilaa sisuksen. Kuorittu pähkinä kuivataan ennen varastointia. Pistaasipuu on sukua [[mangolle]] ja [[cashewpähkinälle]], ja se menestyy kuumassa ja kuivassa ilmastossa. Korjuutavat vaihtelevat tilan koon ja alueen mukaan, joten kaikkea en voi varmasti sanoa. Eipä ollut paha esitys.
+KYSYMYS: Kerro lisää: mangolle
+
+### 176
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gaziantep (ruoka)
+Tietoruudun teksti: Gaziantep on kuulu baklavastaan: ohuista taikinalevyistä, pähkinöistä ja makeasta liemestä kerrostettu leivonnainen tehdään täällä seudun omista pistaaseista ja tarjotaan usein kaymak-kerman kera. Kaupungin baklavaresepti saapui vuonna 1871 leipurilta, joka oli oppinut taidon Damaskoksessa — kaksi vuotta ennen isoisän matkaa. Vuonna 2013 Antep-baklava sai EU:n suojatun maantieteellisen merkinnän ensimmäisenä turkkilaisena tuotteena.
+AIEMPI KYSYMYS: Miten pistaasit korjataan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Pistaasit kerätään yleensä loppukesällä tai alkusyksyllä, kun hedelmä on kypsynyt ja ulkokuori alkaa avautua. Sato korjataan käsin tai puita ravistelemalla, ja pähkinät kuoritaan pian korjuun jälkeen pehmeästä ulkokuoresta, koska kuori värjää ja pilaa sisuksen. Kuorittu pähkinä kuivataan ennen varastointia. Pistaasipuu on sukua [[mangolle]] ja [[cashewpähkinälle]], ja se menestyy kuumassa ja kuivassa ilmastossa. Korjuutavat vaihtelevat tilan koon ja alueen mukaan, joten kaikkea en voi varmasti sanoa. Eipä ollut paha esitys.
+KYSYMYS: Kerro lisää: cashewpähkinälle
+
+### 177
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gaziantep (ruoka)
+Tietoruudun teksti: Gaziantep on kuulu baklavastaan: ohuista taikinalevyistä, pähkinöistä ja makeasta liemestä kerrostettu leivonnainen tehdään täällä seudun omista pistaaseista ja tarjotaan usein kaymak-kerman kera. Kaupungin baklavaresepti saapui vuonna 1871 leipurilta, joka oli oppinut taidon Damaskoksessa — kaksi vuotta ennen isoisän matkaa. Vuonna 2013 Antep-baklava sai EU:n suojatun maantieteellisen merkinnän ensimmäisenä turkkilaisena tuotteena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rub al-Khali — kaupunkilehti / Luonto: Järvien pohjat hiekan seassa] Aavikon keskivaiheilla on koholla olevia kovettuneita laikkuja, joissa on kalsiumkarbonaattia, kipsiä, liejusavea ja savea. Ne ovat matalien järvien pohjia. Järviä syntyi kahdesti, 6 000–5 000 ja 3 000–2 000 vuotta sitten, kun sadetta tuli monsuunin tapaan rajusti; useimmat kuivuivat parissa vuodessa, mutta lounaassa Mundafanin alueella vesi säilyi jopa kahdeksansataa vuotta, koska Tuwaiqin jyrkänteeltä valui lisää. Kerrostumista on löytynyt virtahevon, vesipuhvelin ja pitkäsarvisen naudan luita, etanoita ja makean veden simpukoita — ja piikivityökaluja, mutta ei yhtään ihmisen luuta.
+AIEMPI KYSYMYS: Mitä kaymak on?
+AIEMPI VASTAUS (Livia):
+Ai se. Kaymak on paksu, rasvainen kerma, jota valmistetaan perinteisesti [[vesipuhvelin]] tai lehmän maidosta kuumentamalla maito hitaasti ja antamalla pinnalle muodostua kermakerroksen. Kerros kerätään talteen ja jäähdytetään. Se on makeutta vastaan tasapainoa tuova pehmeä lisuke: [[Turkin]] keittiössä kaymakia tarjotaan baklavan, hunajan ja leivonnaisten kanssa, ja monin paikoin myös aamiaispöydässä. Maultaan se on lempeän maitoinen ja koostumukseltaan tiivis. Nyt tuli kerrasta suu vedessä.
+KYSYMYS: Kerro lisää: vesipuhvelin
+
+### 178
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gaziantep (ruoka)
+Tietoruudun teksti: Gaziantep on kuulu baklavastaan: ohuista taikinalevyistä, pähkinöistä ja makeasta liemestä kerrostettu leivonnainen tehdään täällä seudun omista pistaaseista ja tarjotaan usein kaymak-kerman kera. Kaupungin baklavaresepti saapui vuonna 1871 leipurilta, joka oli oppinut taidon Damaskoksessa — kaksi vuotta ennen isoisän matkaa. Vuonna 2013 Antep-baklava sai EU:n suojatun maantieteellisen merkinnän ensimmäisenä turkkilaisena tuotteena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riad — kohdekartta / Kohdekartta: Imam Turkin suurmoskeija] Turki bin Abdullah otti Riadin 1824 ja teki siitä toisen Saudi-valtion pääkaupungin. Suurmoskeija rakennettiin hänen aikanaan vuosina 1826–1830, hallintopalatsi Qasr al-Hukmin viereen. Turki surmattiin vuonna 1834 perjantairukouksesta lähtiessään, ja moskeija kantaa yhä hänen nimeään. Nykyinen moskeija on vuodelta 1992, ja se avattiin tammikuussa 1993. Samoihin vuosiin osui koko Qasr al-Hukmin korttelin uudistus, jonka työt kestivät 1983–1992. Sisätilaa on 16 800 neliömetriä ja rukoilijoita mahtuu 17 000; se on yksi maan suurimmista moskeijoista. Ulkoseinät ja sisätilan yläosa ovat ruskeaa riadilaista kalkkikiveä, alaosa valkoista marmoria. Miesten ja naisten kirjastot ovat kumpikin 325 nel…
+- [Turkki — maalehti / Historia: Yhdeksän kaupunkia päällekkäin] 1873 — Homeroksen Troijaa pidettiin pitkään pelkkänä taruna, kunnes Länsi-Turkin rannikolta kaivettiin esiin Hisarlıkin kumpu. Kummussa on yhdeksän kaupunkia päällekkäin: aina kun kaupunki tuhoutui, uusi rakennettiin raunioiden päälle, ja kumpu kasvoi kerros kerrokselta. Heinrich Schliemann aloitti kaivaukset 1870-luvulla ja kaivoi kummun läpi suuren kuilun. Vuonna 1873 hän löysi kultaesineitä, joita hän kutsui Priamoksen aarteeksi — mutta esineet olivat yli tuhat vuotta vanhempia kuin kerrottu sota. Kiireessä hän tuhosi juuri sen kerroksen, jota etsi.
+AIEMPI KYSYMYS: Mitä kaymak on?
+AIEMPI VASTAUS (Livia):
+Ai se. Kaymak on paksu, rasvainen kerma, jota valmistetaan perinteisesti [[vesipuhvelin]] tai lehmän maidosta kuumentamalla maito hitaasti ja antamalla pinnalle muodostua kermakerroksen. Kerros kerätään talteen ja jäähdytetään. Se on makeutta vastaan tasapainoa tuova pehmeä lisuke: [[Turkin]] keittiössä kaymakia tarjotaan baklavan, hunajan ja leivonnaisten kanssa, ja monin paikoin myös aamiaispöydässä. Maultaan se on lempeän maitoinen ja koostumukseltaan tiivis. Nyt tuli kerrasta suu vedessä.
+KYSYMYS: Kerro lisää: Turkin
+
+### 179
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gaziantep (ruoka)
+Tietoruudun teksti: Gaziantep on kuulu baklavastaan: ohuista taikinalevyistä, pähkinöistä ja makeasta liemestä kerrostettu leivonnainen tehdään täällä seudun omista pistaaseista ja tarjotaan usein kaymak-kerman kera. Kaupungin baklavaresepti saapui vuonna 1871 leipurilta, joka oli oppinut taidon Damaskoksessa — kaksi vuotta ennen isoisän matkaa. Vuonna 2013 Antep-baklava sai EU:n suojatun maantieteellisen merkinnän ensimmäisenä turkkilaisena tuotteena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lalibela — kohdekartta / Kohdekartta: Biete Medhane Alem] 1100–1200-luku Maailman Vapahtajan taloa pidetään maailman suurimpana monoliittikirkkona: se on kokonaan yhtä kivipaatta, jonka ympäriltä kallio on louhittu pois. Se rakennettiin Zagwe-dynastian aikana ja kuuluu Jordan-puron pohjoiseen ryhmään. Kirkkoa ympäröi pilarikäytävä, ja koko rakennus on tehty samasta kivestä kuin sen katto ja lattia. Täällä säilytetään Lalibelan ristiä, Etiopian arvokkaimpia uskonnollisia perintöesineitä. Kirkko on myös yksi niistä viidestä, joiden päälle pystytettiin 2008 Euroopan unionin rahoituksella suojakatokset. Ne oli tarkoitettu väliaikaisiksi siihen asti, kunnes pysyvämpi ratkaisu löytyisi, mutta ne ovat yhä paikoillaan — ja niiden paino on nyt oma ongelman…
+- [Latvia — maalehti / Ruoka: Juusto joka muistuttaa aurinkoa] Juhannus — Jāņu siers on hapanmaitojuusto, jota Latviassa valmistetaan juhannukseksi eli Jāņi-juhlaksi. Se tehdään kuumentamalla piimää tai rahkaa yhdessä voin, kananmunien ja kuminan kanssa, kunnes seos hyytyy kiinteäksi, pyöreäksi kakuksi. Pyöreä muoto ja keltainen sävy vertautuvat aurinkoon, jota juhannuksena juhlitaan päivän valoisimpana aikana. Perinnettä on vaalittu jo yli tuhat vuotta, ja vuonna 2015 Jāņu siers sai Euroopan unionin aidon perinteisen tuotteen suojan. Juustoa tarjotaan juhannusyönä oluen kanssa, ja monet perheet valmistavat sen yhä itse kotikeittiössä isoäidin ohjeella.
+AIEMPI KYSYMYS: Mikä on suojattu maantieteellinen merkintä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Suojattu maantieteellinen merkintä on [[Euroopan unionin]] laatumerkintä, joka rajaa tuotteen nimen käytön tietyn alueen tuotteille, joiden ominaisuudet tai maine liittyvät alkuperään. Merkintä edellyttää, että tuotteen valmistusvaiheista vähintään yksi tapahtuu kyseisellä alueella. Tiukempi nimisuoja on suojattu alkuperänimitys, jonka saaneiden tuotteiden, kuten [[Parmigiano Reggiano]] -juuston, kaikkien vaiheiden pitää tapahtua alueella. Antep-baklava sai merkinnän vuonna 2013 ensimmäisenä turkkilaisena tuotteena. Juuri tällä tavoin nimi säilyy aitona.
+KYSYMYS: Kerro lisää: Euroopan unionin
+
+### 180
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gaziantep (ruoka)
+Tietoruudun teksti: Gaziantep on kuulu baklavastaan: ohuista taikinalevyistä, pähkinöistä ja makeasta liemestä kerrostettu leivonnainen tehdään täällä seudun omista pistaaseista ja tarjotaan usein kaymak-kerman kera. Kaupungin baklavaresepti saapui vuonna 1871 leipurilta, joka oli oppinut taidon Damaskoksessa — kaksi vuotta ennen isoisän matkaa. Vuonna 2013 Antep-baklava sai EU:n suojatun maantieteellisen merkinnän ensimmäisenä turkkilaisena tuotteena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Ruoka: Parmigiano kypsyy vuosia] Parmigiano Reggiano -kiekko painaa noin 40 kiloa ja kypsyy vähintään vuoden, usein kolmekin, ennen kuin tarkastaja koputtaa sitä vasaralla ja kuuntelee, onko sisus ehjä. Vain Parman seudulla tehty juusto saa kantaa nimeä, ja resepti on ollut sama lähes tuhat vuotta: maitoa, suolaa ja aikaa. Kiekot ovat niin arvokkaita, että jotkut italialaiset pankit hyväksyvät niitä lainan vakuudeksi — holveissa kypsyy juustoa kuin kultaharkkoja.
+AIEMPI KYSYMYS: Mikä on suojattu maantieteellinen merkintä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Suojattu maantieteellinen merkintä on [[Euroopan unionin]] laatumerkintä, joka rajaa tuotteen nimen käytön tietyn alueen tuotteille, joiden ominaisuudet tai maine liittyvät alkuperään. Merkintä edellyttää, että tuotteen valmistusvaiheista vähintään yksi tapahtuu kyseisellä alueella. Tiukempi nimisuoja on suojattu alkuperänimitys, jonka saaneiden tuotteiden, kuten [[Parmigiano Reggiano]] -juuston, kaikkien vaiheiden pitää tapahtua alueella. Antep-baklava sai merkinnän vuonna 2013 ensimmäisenä turkkilaisena tuotteena. Juuri tällä tavoin nimi säilyy aitona.
+KYSYMYS: Kerro lisää: Parmigiano Reggiano
+
+### 181
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gaziantep (ruoka)
+Tietoruudun teksti: Gaziantep on kuulu baklavastaan: ohuista taikinalevyistä, pähkinöistä ja makeasta liemestä kerrostettu leivonnainen tehdään täällä seudun omista pistaaseista ja tarjotaan usein kaymak-kerman kera. Kaupungin baklavaresepti saapui vuonna 1871 leipurilta, joka oli oppinut taidon Damaskoksessa — kaksi vuotta ennen isoisän matkaa. Vuonna 2013 Antep-baklava sai EU:n suojatun maantieteellisen merkinnän ensimmäisenä turkkilaisena tuotteena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Ruokaa ja tapakulttuuria: Kebab sai leivän Berliinissä] 1970-luku — Pystyvartaassa paistettu liha on vanha turkkilainen tapa, mutta ajatus tunkea se leivän sisään ja syödä kävellen syntyi Berliinissä 1970-luvulla. Turkkilaiset siirtolaiset myivät annosta tehdastyöläisille, joilla oli lyhyt ruokatunti. Nyt döner on Saksan myydyimpiä pikaruokia, ja Berliinissä siitä kiistellään yhä: kuka keksi, mitä kuuluu sisään ja mikä kioski on paras.
+AIEMPI KYSYMYS: Mitä muuta Gaziantepissa syödään baklavan lisäksi?
+AIEMPI VASTAUS (Livia):
+Katotaas. Gaziantepin keittiö on laaja ja kuulu. Siellä syödään monenlaisia [[kebab]]-ruokia, lahmacunia eli ohutta lihalla täytettyä leipää, ja aamiaisella tarjotaan esimerkiksi beyran-keittoa, jossa on lampaanlihaa ja mausteita, sekä [[katmer]]-leivonnaista, jossa on pistaasia ja kermaa. Kaupunki on saanut [[Unescon]] luovien kaupunkien verkostossa gastronomian kaupungin aseman, ja ruokakulttuuri onkin osa sen identiteettiä. Ruokalajien yksityiskohdat vaihtelevat ravintolasta toiseen, ja kaikkea en tunne tarkasti. No olipas siinä taas ruokalista.
+KYSYMYS: Kerro lisää: kebab
+
+### 182
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gaziantep (ruoka)
+Tietoruudun teksti: Gaziantep on kuulu baklavastaan: ohuista taikinalevyistä, pähkinöistä ja makeasta liemestä kerrostettu leivonnainen tehdään täällä seudun omista pistaaseista ja tarjotaan usein kaymak-kerman kera. Kaupungin baklavaresepti saapui vuonna 1871 leipurilta, joka oli oppinut taidon Damaskoksessa — kaksi vuotta ennen isoisän matkaa. Vuonna 2013 Antep-baklava sai EU:n suojatun maantieteellisen merkinnän ensimmäisenä turkkilaisena tuotteena.
+AIEMPI KYSYMYS: Mitä muuta Gaziantepissa syödään baklavan lisäksi?
+AIEMPI VASTAUS (Livia):
+Katotaas. Gaziantepin keittiö on laaja ja kuulu. Siellä syödään monenlaisia [[kebab]]-ruokia, lahmacunia eli ohutta lihalla täytettyä leipää, ja aamiaisella tarjotaan esimerkiksi beyran-keittoa, jossa on lampaanlihaa ja mausteita, sekä [[katmer]]-leivonnaista, jossa on pistaasia ja kermaa. Kaupunki on saanut [[Unescon]] luovien kaupunkien verkostossa gastronomian kaupungin aseman, ja ruokakulttuuri onkin osa sen identiteettiä. Ruokalajien yksityiskohdat vaihtelevat ravintolasta toiseen, ja kaikkea en tunne tarkasti. No olipas siinä taas ruokalista.
+KYSYMYS: Kerro lisää: katmer
+
+### 183
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gaziantep (ruoka)
+Tietoruudun teksti: Gaziantep on kuulu baklavastaan: ohuista taikinalevyistä, pähkinöistä ja makeasta liemestä kerrostettu leivonnainen tehdään täällä seudun omista pistaaseista ja tarjotaan usein kaymak-kerman kera. Kaupungin baklavaresepti saapui vuonna 1871 leipurilta, joka oli oppinut taidon Damaskoksessa — kaksi vuotta ennen isoisän matkaa. Vuonna 2013 Antep-baklava sai EU:n suojatun maantieteellisen merkinnän ensimmäisenä turkkilaisena tuotteena.
+AIEMPI KYSYMYS: Mitä muuta Gaziantepissa syödään baklavan lisäksi?
+AIEMPI VASTAUS (Livia):
+Katotaas. Gaziantepin keittiö on laaja ja kuulu. Siellä syödään monenlaisia [[kebab]]-ruokia, lahmacunia eli ohutta lihalla täytettyä leipää, ja aamiaisella tarjotaan esimerkiksi beyran-keittoa, jossa on lampaanlihaa ja mausteita, sekä [[katmer]]-leivonnaista, jossa on pistaasia ja kermaa. Kaupunki on saanut [[Unescon]] luovien kaupunkien verkostossa gastronomian kaupungin aseman, ja ruokakulttuuri onkin osa sen identiteettiä. Ruokalajien yksityiskohdat vaihtelevat ravintolasta toiseen, ja kaikkea en tunne tarkasti. No olipas siinä taas ruokalista.
+KYSYMYS: Kerro lisää: Unescon
+
+### 184
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gelibolu (merenkulku)
+Tietoruudun teksti: Gelibolun satamakaupungissa lapset "tuuditettiin uneen meren ja laivojen kehtolaululla", kirjoitti 1500-luvun historioitsija Ibn Kemal. Täällä syntyi Piri Reis, osmanien laivaston kartantekijä, jonka vuoden 1513 maailmankartta nojasi muun muassa Kolumbuksen sittemmin kadonneeseen karttaan ja jonka merikirja Kitab-ı Bahriye kuvasi rannikot laivureille. Isoisän aikaan kartta makasi unohdettuna Topkapın palatsissa: se löytyi uudelleen vasta 1929 ja on siitä asti ollut Turkille kansallisylpeyden aihe.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mosambik — maalehti / Historia: Postimerkit, joita ei ollut tarkoitettu kirjeisiin] 1895–1929 — Niassan yhtiö sai 1891 toimiluvan yli 160 000 neliökilometriin maan pohjoisosassa ja julkaisi toimintansa aikana 141 postimerkkiä. Vain pieni osa niistä oli oikeasti postikäytössä: loput painettiin Lontoon vilkkaille keräilymarkkinoille. Ensimmäinen erä meni pilalle 1895, kun kuvernööri toi Englannista 158 miljoonan reisin edestä merkkejä, jotka oli painettu Englannissa — toimilupa vaati painamista Portugalissa, ja hallitus julisti erän mitättömäksi. Vuoden 1901 omissa merkeissä oli kaksi kuva-aihetta: seitsemässä kirahvi syömässä palmun latvasta ja kuudessa dromedaaripari. Samuel Beckett antoi Molloyn kertojan ihailla juuri sitä kirahvimerkkiä.
+AIEMPI KYSYMYS: Mitä karttaan on piirretty Amerikasta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin, tost kartasta on väitelty paljon. [[Piri Reisin]] kartta on säilynyt vain osittain: säilyneessä osassa näkyvät Atlantin valtameri, Euroopan ja Pohjois-Afrikan länsirannikot, Etelä-Amerikan itärannikko sekä Karibian saaria. Kartantekijä nojasi lähteinä muun muassa [[Kolumbuksen]] karttaan, jota ei ole sittemmin löydetty. Tutkijat tulkitsevat rannikkojen yksityiskohtia eri tavoin, joten kaikesta piirretystä ei olla yksimielisiä. Kartta makasi unohdettuna [[Topkapın palatsissa]], kunnes se löytyi uudelleen vuonna 1929, ja siitä on tullut Turkille kansallisylpeyden aihe. Kyl siin kartassa riittää katsottavaa.
+KYSYMYS: Kerro lisää: Piri Reisin
+
+### 185
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gelibolu (merenkulku)
+Tietoruudun teksti: Gelibolun satamakaupungissa lapset "tuuditettiin uneen meren ja laivojen kehtolaululla", kirjoitti 1500-luvun historioitsija Ibn Kemal. Täällä syntyi Piri Reis, osmanien laivaston kartantekijä, jonka vuoden 1513 maailmankartta nojasi muun muassa Kolumbuksen sittemmin kadonneeseen karttaan ja jonka merikirja Kitab-ı Bahriye kuvasi rannikot laivureille. Isoisän aikaan kartta makasi unohdettuna Topkapın palatsissa: se löytyi uudelleen vasta 1929 ja on siitä asti ollut Turkille kansallisylpeyden aihe.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [PRI — maalehti / Historia: Borikén kohtaa Kolumbuksen] 1493 — Marraskuun 19. päivänä 1493 Kristoffer Kolumbus laski ankkurin saarelle, jota sen asukkaat kutsuivat Borikéniksi, jalojen ihmisten maaksi. Hän nimesi sen San Juan Bautistaksi. Saarella eli arviolta 30 000–60 000 taínoa pienissä kylissä, joita johtivat kasiikit eli päälliköt; mahtavin heistä oli Agüeybaná. Keskellä saarta, nykyisen Utuadon kukkuloilla, taínot kokoontuivat kivillä reunustetuille seremonia-aukioille pelaamaan pallopeliä batey ja tanssimaan areítoja, joissa suvun tarinat siirtyivät sukupolvelta toiselle. Espanjalaisten mukanaan tuomat sairaudet ja pakkotyö tuhosivat taínoväestön lähes kokonaan jo muutamassa vuosikymmenessä.
+- [Uzbekistan — maalehti / Tiede: Maili, joka vei Kolumbuksen harhaan] 800-luku — Al-Farghani oli liikanimensä perusteella kotoisin Quvasta Ferganan laaksosta. Hänen tähtitieteen oppikirjansa tiivisti Ptolemaioksen Almagestin ja korjasi sen lukuja; latinaksi se käännettiin 1135, ja Danten käsitys maailmankaikkeuden rakenteesta on peräisin siitä. Kolumbus käytti hänen laskemaansa maapallon ympärysmittaa, mutta luki arabialaisen mailin roomalaisena: 7 091 jalan sijasta 4 856. Maapallo kutistui laskuissa, ja Kolumbus luuli purjehtivansa oikotietä Aasiaan. Kairossa hän rakennutti Rawdan saarelle nilometrin, joka valmistui vuonna 861. Kuun kraatteri Alfraganus on nimetty hänen mukaansa.
+AIEMPI KYSYMYS: Mitä karttaan on piirretty Amerikasta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin, tost kartasta on väitelty paljon. [[Piri Reisin]] kartta on säilynyt vain osittain: säilyneessä osassa näkyvät Atlantin valtameri, Euroopan ja Pohjois-Afrikan länsirannikot, Etelä-Amerikan itärannikko sekä Karibian saaria. Kartantekijä nojasi lähteinä muun muassa [[Kolumbuksen]] karttaan, jota ei ole sittemmin löydetty. Tutkijat tulkitsevat rannikkojen yksityiskohtia eri tavoin, joten kaikesta piirretystä ei olla yksimielisiä. Kartta makasi unohdettuna [[Topkapın palatsissa]], kunnes se löytyi uudelleen vuonna 1929, ja siitä on tullut Turkille kansallisylpeyden aihe. Kyl siin kartassa riittää katsottavaa.
+KYSYMYS: Kerro lisää: Kolumbuksen
+
+### 186
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gelibolu (merenkulku)
+Tietoruudun teksti: Gelibolun satamakaupungissa lapset "tuuditettiin uneen meren ja laivojen kehtolaululla", kirjoitti 1500-luvun historioitsija Ibn Kemal. Täällä syntyi Piri Reis, osmanien laivaston kartantekijä, jonka vuoden 1513 maailmankartta nojasi muun muassa Kolumbuksen sittemmin kadonneeseen karttaan ja jonka merikirja Kitab-ı Bahriye kuvasi rannikot laivureille. Isoisän aikaan kartta makasi unohdettuna Topkapın palatsissa: se löytyi uudelleen vasta 1929 ja on siitä asti ollut Turkille kansallisylpeyden aihe.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kohdekartta / Kohdekartta: Topkapın palatsi] 1459–1465 Sulttaani Mehmed II aloitti palatsin rakentamisen vuonna 1459, ja se oli valmis noin vuonna 1465. Seuraavat lähes 400 vuotta se oli Osmannien sulttaanien koti ja valtakunnan hallintokeskus, kunnes hovi muutti Dolmabahçen palatsiin 1850-luvulla. Palatsin haaremissa asuivat sulttaanin äiti, vaimot ja loppu perhe — tiloja oli yli 400 huonetta. Keittiöt puolestaan valmistivat ruokaa jopa 4000 hengelle päivittäin, ja siellä työskenteli yli 800 kokkia ja apulaista. Aarrekammiossa säilytetään yhä sulttaanien kalleuksia, kuten Lusikkamestarin timanttia ja Topkapin tikaria. Vuodesta 1924 palatsi on ollut museo, jossa kuka tahansa voi käydä katsomassa, miten sulttaanit elivät.
+AIEMPI KYSYMYS: Mitä karttaan on piirretty Amerikasta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin, tost kartasta on väitelty paljon. [[Piri Reisin]] kartta on säilynyt vain osittain: säilyneessä osassa näkyvät Atlantin valtameri, Euroopan ja Pohjois-Afrikan länsirannikot, Etelä-Amerikan itärannikko sekä Karibian saaria. Kartantekijä nojasi lähteinä muun muassa [[Kolumbuksen]] karttaan, jota ei ole sittemmin löydetty. Tutkijat tulkitsevat rannikkojen yksityiskohtia eri tavoin, joten kaikesta piirretystä ei olla yksimielisiä. Kartta makasi unohdettuna [[Topkapın palatsissa]], kunnes se löytyi uudelleen vuonna 1929, ja siitä on tullut Turkille kansallisylpeyden aihe. Kyl siin kartassa riittää katsottavaa.
+KYSYMYS: Kerro lisää: Topkapın palatsissa
+
+### 187
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gelibolu (merenkulku)
+Tietoruudun teksti: Gelibolun satamakaupungissa lapset "tuuditettiin uneen meren ja laivojen kehtolaululla", kirjoitti 1500-luvun historioitsija Ibn Kemal. Täällä syntyi Piri Reis, osmanien laivaston kartantekijä, jonka vuoden 1513 maailmankartta nojasi muun muassa Kolumbuksen sittemmin kadonneeseen karttaan ja jonka merikirja Kitab-ı Bahriye kuvasi rannikot laivureille. Isoisän aikaan kartta makasi unohdettuna Topkapın palatsissa: se löytyi uudelleen vasta 1929 ja on siitä asti ollut Turkille kansallisylpeyden aihe.
+AIEMPI KYSYMYS: Millainen osmanien laivasto oli 1500-luvulla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Osmanien laivasto kasvoi 1500-luvulla yhdeksi Välimeren voimakkaimmista merivoimista, ja sen selkäranka olivat soutu- ja purjegalleerit. [[Gelibolu]] oli merkittävä laivastotukikohta, jossa alukset rakennettiin ja huollettiin. Tunnetuimpia meritaisteluja olivat [[Prevezan]] taistelu vuonna 1538, jonka osmanit voittivat, ja [[Lepanton]] taistelu vuonna 1571, jossa laivasto kärsi raskaan tappion. Laivastoa kuitenkin jälleenrakennettiin tämän jälkeen nopeasti. Onpas siit jo pitkä aika.
+KYSYMYS: Kerro lisää: Gelibolu
+
+### 188
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gelibolu (merenkulku)
+Tietoruudun teksti: Gelibolun satamakaupungissa lapset "tuuditettiin uneen meren ja laivojen kehtolaululla", kirjoitti 1500-luvun historioitsija Ibn Kemal. Täällä syntyi Piri Reis, osmanien laivaston kartantekijä, jonka vuoden 1513 maailmankartta nojasi muun muassa Kolumbuksen sittemmin kadonneeseen karttaan ja jonka merikirja Kitab-ı Bahriye kuvasi rannikot laivureille. Isoisän aikaan kartta makasi unohdettuna Topkapın palatsissa: se löytyi uudelleen vasta 1929 ja on siitä asti ollut Turkille kansallisylpeyden aihe.
+AIEMPI KYSYMYS: Millainen osmanien laivasto oli 1500-luvulla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Osmanien laivasto kasvoi 1500-luvulla yhdeksi Välimeren voimakkaimmista merivoimista, ja sen selkäranka olivat soutu- ja purjegalleerit. [[Gelibolu]] oli merkittävä laivastotukikohta, jossa alukset rakennettiin ja huollettiin. Tunnetuimpia meritaisteluja olivat [[Prevezan]] taistelu vuonna 1538, jonka osmanit voittivat, ja [[Lepanton]] taistelu vuonna 1571, jossa laivasto kärsi raskaan tappion. Laivastoa kuitenkin jälleenrakennettiin tämän jälkeen nopeasti. Onpas siit jo pitkä aika.
+KYSYMYS: Kerro lisää: Prevezan
+
+### 189
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gelibolu (merenkulku)
+Tietoruudun teksti: Gelibolun satamakaupungissa lapset "tuuditettiin uneen meren ja laivojen kehtolaululla", kirjoitti 1500-luvun historioitsija Ibn Kemal. Täällä syntyi Piri Reis, osmanien laivaston kartantekijä, jonka vuoden 1513 maailmankartta nojasi muun muassa Kolumbuksen sittemmin kadonneeseen karttaan ja jonka merikirja Kitab-ı Bahriye kuvasi rannikot laivureille. Isoisän aikaan kartta makasi unohdettuna Topkapın palatsissa: se löytyi uudelleen vasta 1929 ja on siitä asti ollut Turkille kansallisylpeyden aihe.
+AIEMPI KYSYMYS: Millainen osmanien laivasto oli 1500-luvulla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Osmanien laivasto kasvoi 1500-luvulla yhdeksi Välimeren voimakkaimmista merivoimista, ja sen selkäranka olivat soutu- ja purjegalleerit. [[Gelibolu]] oli merkittävä laivastotukikohta, jossa alukset rakennettiin ja huollettiin. Tunnetuimpia meritaisteluja olivat [[Prevezan]] taistelu vuonna 1538, jonka osmanit voittivat, ja [[Lepanton]] taistelu vuonna 1571, jossa laivasto kärsi raskaan tappion. Laivastoa kuitenkin jälleenrakennettiin tämän jälkeen nopeasti. Onpas siit jo pitkä aika.
+KYSYMYS: Kerro lisää: Lepanton
+
+### 190
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gelibolu (merenkulku)
+Tietoruudun teksti: Gelibolun satamakaupungissa lapset "tuuditettiin uneen meren ja laivojen kehtolaululla", kirjoitti 1500-luvun historioitsija Ibn Kemal. Täällä syntyi Piri Reis, osmanien laivaston kartantekijä, jonka vuoden 1513 maailmankartta nojasi muun muassa Kolumbuksen sittemmin kadonneeseen karttaan ja jonka merikirja Kitab-ı Bahriye kuvasi rannikot laivureille. Isoisän aikaan kartta makasi unohdettuna Topkapın palatsissa: se löytyi uudelleen vasta 1929 ja on siitä asti ollut Turkille kansallisylpeyden aihe.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Velho — kaupunkilehti / Porto Velho] Porto Velho versoi Rio Madeiran rantaan sademetsän keskelle vasta 1900-luvun alussa, kuolonuhreja vaatineen rautatiehankkeen leirinä. Nykyisin puoli miljoonaa ihmistä elää täällä joen tulvista, kumista, tinasta ja soijasta.
+AIEMPI KYSYMYS: Miten merikartat tehtiin 1500-luvulla?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo, navigointi on kyyhkyn ydinosaamista. Merikartat piirrettiin 1500-luvulla käsin, yleensä pergamentille. Mallina olivat Välimerellä käytetyt [[portolaanikartat]], joihin merkittiin rannikot, satamat ja kompassisuunnat verkostona kulkevina viivoina. Tietoa kerättiin merimiesten havainnoista ja aiemmista kartoista, ja uusien löytöretkien tiedot lisättiin vanhoihin pohjiin. Myös [[Piri Reisin]] merikirja [[Kitab-ı Bahriye]] kokosi rannikkotietoa laivureiden käyttöön.
+
+Minä en tarvitse karttaa, koska löydän kotiin vaistolla. Silti arvostan sitä, että joku jaksoi piirtää rannat valmiiksi.
+KYSYMYS: Kerro lisää: portolaanikartat
+
+### 191
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gelibolu (merenkulku)
+Tietoruudun teksti: Gelibolun satamakaupungissa lapset "tuuditettiin uneen meren ja laivojen kehtolaululla", kirjoitti 1500-luvun historioitsija Ibn Kemal. Täällä syntyi Piri Reis, osmanien laivaston kartantekijä, jonka vuoden 1513 maailmankartta nojasi muun muassa Kolumbuksen sittemmin kadonneeseen karttaan ja jonka merikirja Kitab-ı Bahriye kuvasi rannikot laivureille. Isoisän aikaan kartta makasi unohdettuna Topkapın palatsissa: se löytyi uudelleen vasta 1929 ja on siitä asti ollut Turkille kansallisylpeyden aihe.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Algeria — maalehti / Historia: Emiiri, joka rakensi valtion sodan keskelle] 1832–1847 — Abd al-Qadir ibn Muhyi al-Din syntyi vuosien 1806 ja 1808 välillä. Nuorena hän teki kaksi pyhiinvaellusta Mekkaan ja kävi Damaskoksessa ja Bagdadissa; paluumatkalla häneen teki vaikutuksen se, miten Egyptin Muhammad Ali uudisti maataan. Vuonna 1832 hänet nimitettiin emiiriksi, ja hän johti vastarintaa Ranskan valloitusta vastaan viisitoista vuotta rakentaen samalla omaa hallintoa. Antautumisen jälkeen 1847 hän oli vankina Ranskassa lähes viisi vuotta. Napoleon III vapautti hänet, ja 1855 hän asettui Damaskokseen, jossa hän kirjoitti pääteoksensa Kitab al-Mawaqif ja esti 1860 kaupungin kristityn yhteisön joukkomurhan.
+AIEMPI KYSYMYS: Miten merikartat tehtiin 1500-luvulla?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo, navigointi on kyyhkyn ydinosaamista. Merikartat piirrettiin 1500-luvulla käsin, yleensä pergamentille. Mallina olivat Välimerellä käytetyt [[portolaanikartat]], joihin merkittiin rannikot, satamat ja kompassisuunnat verkostona kulkevina viivoina. Tietoa kerättiin merimiesten havainnoista ja aiemmista kartoista, ja uusien löytöretkien tiedot lisättiin vanhoihin pohjiin. Myös [[Piri Reisin]] merikirja [[Kitab-ı Bahriye]] kokosi rannikkotietoa laivureiden käyttöön.
+
+Minä en tarvitse karttaa, koska löydän kotiin vaistolla. Silti arvostan sitä, että joku jaksoi piirtää rannat valmiiksi.
+KYSYMYS: Kerro lisää: Kitab-ı Bahriye
+
+### 192
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gelibolu (merenkulku)
+Tietoruudun teksti: Gelibolun satamakaupungissa lapset "tuuditettiin uneen meren ja laivojen kehtolaululla", kirjoitti 1500-luvun historioitsija Ibn Kemal. Täällä syntyi Piri Reis, osmanien laivaston kartantekijä, jonka vuoden 1513 maailmankartta nojasi muun muassa Kolumbuksen sittemmin kadonneeseen karttaan ja jonka merikirja Kitab-ı Bahriye kuvasi rannikot laivureille. Isoisän aikaan kartta makasi unohdettuna Topkapın palatsissa: se löytyi uudelleen vasta 1929 ja on siitä asti ollut Turkille kansallisylpeyden aihe.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Teheran — kohdekartta / Kohdekartta: Sepahsalarin moskeija] Rakennuttaja Mirza Hosein Khan Sepahsalar oli Naser al-Din Shaahin suurvisiiri 1871–1873 ja sitä ennen Iranin lähettiläs Konstantinopolissa. Työ alkoi hänen käskystään 1879 ja ensimmäinen vaihe valmistui 1884; Sepahsalar kuoli 1881, ja siitä eteenpäin rakennuttajaksi merkitään shaahi. Saman pihan ympärillä on moskeija ja madrasa eli koulu. Pihaa kiertää kaksikerroksinen kaarikäytävä, ja sen takana on oppilashuoneita, kaikkiaan noin 60. Minareetteja on kahdeksan, iranilaisessa moskeijassa poikkeuksellinen määrä, ja kukin on 37 metriä korkea. Rukoussalin kupoli on niin ikään 37 metriä korkea, ja sitä kannattaa 44 pylvästä. Pohjan mitat ovat 62 kertaa 61 metriä; pinta-alaksi lähde ilmoittaa 16…
+- [Istanbul — kohdekartta / Kohdekartta: Camondon portaat] Sinä vuonna, jona isoisäsi pakkasi matkalaukkunsa, tämä kaupunki hautasi rikkaimman pankkiirinsa. Kreivi Abraham Salomon Camondo oli Istanbulin juutalaisen yhteisön patriarkka ja ottomaanihallituksen pankkiiri jo ennen kuin Ottoman Bank oli olemassa. Vuonna 1858 hän perusti koulun Peri Paşaan, pääkaupungin köyhimpään ja tiheimmin asuttuun kaupunginosaan — ja osa rabbeista julisti hänet siitä hyvästä pannaan. Koulu toimi silti kolmekymmentäkaksi vuotta ja koulutti valtaosan valtakunnan juutalaisista virkamiehistä. Camondo kuoli 92-vuotiaana Pariisissa 30. maaliskuuta 1873, ja hänen toiveensa mukaan hänet tuotiin takaisin tänne: hautajaiset pidettiin 14. huhtikuuta Hasköyn juutalaisella hauta…
+AIEMPI KYSYMYS: Mikä Topkapın palatsi on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, pöllö on vielä matkoilla ja minä tuuraan. Topkapın palatsi on [[Istanbulin]] vanhassa kaupungissa sijaitseva entinen osmanisulttaanien palatsi. Se rakennettiin [[Konstantinopolin valloituksen]] jälkeen 1400-luvun puolivälin tienoilla, ja sulttaanit asuivat ja hallitsivat siellä pitkään, kunnes hovi siirtyi 1800-luvulla muualle. Nykyään palatsi on museo, ja se kuuluu Istanbulin historiallisten alueiden Unescon maailmanperintökohteeseen. Kattoja siellä kyl riittäis.
+KYSYMYS: Kerro lisää: Istanbulin
+
+### 193
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gelibolu (merenkulku)
+Tietoruudun teksti: Gelibolun satamakaupungissa lapset "tuuditettiin uneen meren ja laivojen kehtolaululla", kirjoitti 1500-luvun historioitsija Ibn Kemal. Täällä syntyi Piri Reis, osmanien laivaston kartantekijä, jonka vuoden 1513 maailmankartta nojasi muun muassa Kolumbuksen sittemmin kadonneeseen karttaan ja jonka merikirja Kitab-ı Bahriye kuvasi rannikot laivureille. Isoisän aikaan kartta makasi unohdettuna Topkapın palatsissa: se löytyi uudelleen vasta 1929 ja on siitä asti ollut Turkille kansallisylpeyden aihe.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Historia: Kapalıçarşı — kuusikymmentäyksi katettua katua] Istanbulin katettu basaari eli Kapalıçarşı on maailman suurimpia ja vanhimpia katettuja kauppapaikkoja: 61 katettua katua ja yli 4 000 myymälää, joissa käy satojatuhansia ihmisiä päivässä. Sen ydin rakennettiin talvella 1455–56 pian Konstantinopolin valloituksen jälkeen, kun sulttaani Mehmed II pystytti kankaiden ja jalokivien kaupalle oman hallin. Isoisä kulki samojen holvien alla kuin nykypäivän kävijä — basaaria sanotaan usein yhdeksi maailman ensimmäisistä kauppakeskuksista.
+AIEMPI KYSYMYS: Mikä Topkapın palatsi on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, pöllö on vielä matkoilla ja minä tuuraan. Topkapın palatsi on [[Istanbulin]] vanhassa kaupungissa sijaitseva entinen osmanisulttaanien palatsi. Se rakennettiin [[Konstantinopolin valloituksen]] jälkeen 1400-luvun puolivälin tienoilla, ja sulttaanit asuivat ja hallitsivat siellä pitkään, kunnes hovi siirtyi 1800-luvulla muualle. Nykyään palatsi on museo, ja se kuuluu Istanbulin historiallisten alueiden Unescon maailmanperintökohteeseen. Kattoja siellä kyl riittäis.
+KYSYMYS: Kerro lisää: Konstantinopolin valloituksen
+
+### 194
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gelibolu (merenkulku)
+Tietoruudun teksti: Gelibolun satamakaupungissa lapset "tuuditettiin uneen meren ja laivojen kehtolaululla", kirjoitti 1500-luvun historioitsija Ibn Kemal. Täällä syntyi Piri Reis, osmanien laivaston kartantekijä, jonka vuoden 1513 maailmankartta nojasi muun muassa Kolumbuksen sittemmin kadonneeseen karttaan ja jonka merikirja Kitab-ı Bahriye kuvasi rannikot laivureille. Isoisän aikaan kartta makasi unohdettuna Topkapın palatsissa: se löytyi uudelleen vasta 1929 ja on siitä asti ollut Turkille kansallisylpeyden aihe.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+AIEMPI KYSYMYS: Mitä merimiehet söivät pitkillä purjehduksilla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: ruoka-asia, se on minun heikkouteni. Pitkillä purjehduksilla ruoan piti säilyä, joten laivoilla syötiin kovaa [[laivakorppua]], suolattua tai kuivattua lihaa ja kalaa sekä kuivattuja papuja. Välimerellä alukset kuljettivat usein myös oliiviöljyä. Tuoretta ruokaa saatiin lähinnä satamissa, ja pitkillä valtamerimatkoilla vihannesten ja hedelmien puute aiheutti usein [[keripukkia]]. Minä olisin kyl ottanut mukaan simitin.
+KYSYMYS: Kerro lisää: laivakorppua
+
+### 195
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gelibolu (merenkulku)
+Tietoruudun teksti: Gelibolun satamakaupungissa lapset "tuuditettiin uneen meren ja laivojen kehtolaululla", kirjoitti 1500-luvun historioitsija Ibn Kemal. Täällä syntyi Piri Reis, osmanien laivaston kartantekijä, jonka vuoden 1513 maailmankartta nojasi muun muassa Kolumbuksen sittemmin kadonneeseen karttaan ja jonka merikirja Kitab-ı Bahriye kuvasi rannikot laivureille. Isoisän aikaan kartta makasi unohdettuna Topkapın palatsissa: se löytyi uudelleen vasta 1929 ja on siitä asti ollut Turkille kansallisylpeyden aihe.
+AIEMPI KYSYMYS: Mitä merimiehet söivät pitkillä purjehduksilla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: ruoka-asia, se on minun heikkouteni. Pitkillä purjehduksilla ruoan piti säilyä, joten laivoilla syötiin kovaa [[laivakorppua]], suolattua tai kuivattua lihaa ja kalaa sekä kuivattuja papuja. Välimerellä alukset kuljettivat usein myös oliiviöljyä. Tuoretta ruokaa saatiin lähinnä satamissa, ja pitkillä valtamerimatkoilla vihannesten ja hedelmien puute aiheutti usein [[keripukkia]]. Minä olisin kyl ottanut mukaan simitin.
+KYSYMYS: Kerro lisää: keripukkia
+
+### 196
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanin kissa (eläimet)
+Tietoruudun teksti: Vanjärven seudulla elää oma kissakantansa, jota ei ole jalostettu rotukirjoihin: kookas, liidunvalkoinen Vanin kissa, jonka silmät ovat siniset, meripihkanväriset tai kuuluisimmillaan yksi kumpaakin. Kissa tunnetaan "uivana kissana", sillä sen on nähty uivan Vanjärvessä. Puhtaita yksilöitä laskettiin 1992 enää 92, ja valkoista kantaa on vuodesta 1995 kasvattanut tutkimuskeskus Yüzüncü Yıl -yliopiston kampuksella Vanissa.
+AIEMPI KYSYMYS: Miksi kissa oppi uimaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, kissa ja vesi, harvinainen yhdistelmä. Kissoja pidetään yleensä vesikammoisina, mutta [[Vanin kissa]] on poikkeus, sillä sen on nähty uivan [[Vanjärvessä]]. Varmaa tutkittua selitystä uimiselle en tunne. Yleisesti arvellaan, että alueen kuumat kesät ja viileä järvivesi ovat voineet houkutella kissoja veteen, mutta se on oletus eikä varmistettu tieto. Kanta on kehittynyt alueella omissa oloissaan, eikä sitä ole jalostettu rotukirjoihin. Minä pysyn mieluummin kuivalla katolla.
+KYSYMYS: Kerro lisää: Vanin kissa
+
+### 197
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanin kissa (eläimet)
+Tietoruudun teksti: Vanjärven seudulla elää oma kissakantansa, jota ei ole jalostettu rotukirjoihin: kookas, liidunvalkoinen Vanin kissa, jonka silmät ovat siniset, meripihkanväriset tai kuuluisimmillaan yksi kumpaakin. Kissa tunnetaan "uivana kissana", sillä sen on nähty uivan Vanjärvessä. Puhtaita yksilöitä laskettiin 1992 enää 92, ja valkoista kantaa on vuodesta 1995 kasvattanut tutkimuskeskus Yüzüncü Yıl -yliopiston kampuksella Vanissa.
+AIEMPI KYSYMYS: Miksi kissa oppi uimaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, kissa ja vesi, harvinainen yhdistelmä. Kissoja pidetään yleensä vesikammoisina, mutta [[Vanin kissa]] on poikkeus, sillä sen on nähty uivan [[Vanjärvessä]]. Varmaa tutkittua selitystä uimiselle en tunne. Yleisesti arvellaan, että alueen kuumat kesät ja viileä järvivesi ovat voineet houkutella kissoja veteen, mutta se on oletus eikä varmistettu tieto. Kanta on kehittynyt alueella omissa oloissaan, eikä sitä ole jalostettu rotukirjoihin. Minä pysyn mieluummin kuivalla katolla.
+KYSYMYS: Kerro lisää: Vanjärvessä
+
+### 198
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanin kissa (eläimet)
+Tietoruudun teksti: Vanjärven seudulla elää oma kissakantansa, jota ei ole jalostettu rotukirjoihin: kookas, liidunvalkoinen Vanin kissa, jonka silmät ovat siniset, meripihkanväriset tai kuuluisimmillaan yksi kumpaakin. Kissa tunnetaan "uivana kissana", sillä sen on nähty uivan Vanjärvessä. Puhtaita yksilöitä laskettiin 1992 enää 92, ja valkoista kantaa on vuodesta 1995 kasvattanut tutkimuskeskus Yüzüncü Yıl -yliopiston kampuksella Vanissa.
+AIEMPI KYSYMYS: Voiko tutkimuskeskuksessa vierailla?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Siitä, voiko tutkimuskeskuksessa vierailla ja millä ehdoilla, minulla ei ole varmaa tietoa. Tiedossa on, että valkoista kantaa on kasvatettu vuodesta 1995 [[Yüzüncü Yıl -yliopiston]] kampuksella [[Vanissa]], joten ajantasaiset vierailutiedot kannattaa kysyä suoraan yliopistolta tai paikalliselta matkailutoimistolta. Harmi, ois mennyt perille.
+KYSYMYS: Kerro lisää: Yüzüncü Yıl -yliopiston
+
+### 199
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanin kissa (eläimet)
+Tietoruudun teksti: Vanjärven seudulla elää oma kissakantansa, jota ei ole jalostettu rotukirjoihin: kookas, liidunvalkoinen Vanin kissa, jonka silmät ovat siniset, meripihkanväriset tai kuuluisimmillaan yksi kumpaakin. Kissa tunnetaan "uivana kissana", sillä sen on nähty uivan Vanjärvessä. Puhtaita yksilöitä laskettiin 1992 enää 92, ja valkoista kantaa on vuodesta 1995 kasvattanut tutkimuskeskus Yüzüncü Yıl -yliopiston kampuksella Vanissa.
+AIEMPI KYSYMYS: Voiko tutkimuskeskuksessa vierailla?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Siitä, voiko tutkimuskeskuksessa vierailla ja millä ehdoilla, minulla ei ole varmaa tietoa. Tiedossa on, että valkoista kantaa on kasvatettu vuodesta 1995 [[Yüzüncü Yıl -yliopiston]] kampuksella [[Vanissa]], joten ajantasaiset vierailutiedot kannattaa kysyä suoraan yliopistolta tai paikalliselta matkailutoimistolta. Harmi, ois mennyt perille.
+KYSYMYS: Kerro lisää: Vanissa
+
+### 200
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanin kissa (eläimet)
+Tietoruudun teksti: Vanjärven seudulla elää oma kissakantansa, jota ei ole jalostettu rotukirjoihin: kookas, liidunvalkoinen Vanin kissa, jonka silmät ovat siniset, meripihkanväriset tai kuuluisimmillaan yksi kumpaakin. Kissa tunnetaan "uivana kissana", sillä sen on nähty uivan Vanjärvessä. Puhtaita yksilöitä laskettiin 1992 enää 92, ja valkoista kantaa on vuodesta 1995 kasvattanut tutkimuskeskus Yüzüncü Yıl -yliopiston kampuksella Vanissa.
+AIEMPI KYSYMYS: Millainen järvi Vanjärvi on?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Vanjärvi on Itä-Turkin vuoristoalueella sijaitseva Turkin suurin järvi, ja se on suolainen ja emäksinen [[soodajärvi]], josta ei ole laskujokea. Vedessä elää niukasti kalalajeja, joista tunnetuin on helmikala. Järven [[Akdamarin]] saarella on 900-luvulla rakennettu armenialainen kirkko, joka on yksi alueen tunnetuimmista nähtävyyksistä. Ei oikein kyyhkyn uimapaikka.
+KYSYMYS: Kerro lisää: soodajärvi
+
+### 201
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanin kissa (eläimet)
+Tietoruudun teksti: Vanjärven seudulla elää oma kissakantansa, jota ei ole jalostettu rotukirjoihin: kookas, liidunvalkoinen Vanin kissa, jonka silmät ovat siniset, meripihkanväriset tai kuuluisimmillaan yksi kumpaakin. Kissa tunnetaan "uivana kissana", sillä sen on nähty uivan Vanjärvessä. Puhtaita yksilöitä laskettiin 1992 enää 92, ja valkoista kantaa on vuodesta 1995 kasvattanut tutkimuskeskus Yüzüncü Yıl -yliopiston kampuksella Vanissa.
+AIEMPI KYSYMYS: Millainen järvi Vanjärvi on?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Vanjärvi on Itä-Turkin vuoristoalueella sijaitseva Turkin suurin järvi, ja se on suolainen ja emäksinen [[soodajärvi]], josta ei ole laskujokea. Vedessä elää niukasti kalalajeja, joista tunnetuin on helmikala. Järven [[Akdamarin]] saarella on 900-luvulla rakennettu armenialainen kirkko, joka on yksi alueen tunnetuimmista nähtävyyksistä. Ei oikein kyyhkyn uimapaikka.
+KYSYMYS: Kerro lisää: Akdamarin
+
+### 202
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanin kissa (eläimet)
+Tietoruudun teksti: Vanjärven seudulla elää oma kissakantansa, jota ei ole jalostettu rotukirjoihin: kookas, liidunvalkoinen Vanin kissa, jonka silmät ovat siniset, meripihkanväriset tai kuuluisimmillaan yksi kumpaakin. Kissa tunnetaan "uivana kissana", sillä sen on nähty uivan Vanjärvessä. Puhtaita yksilöitä laskettiin 1992 enää 92, ja valkoista kantaa on vuodesta 1995 kasvattanut tutkimuskeskus Yüzüncü Yıl -yliopiston kampuksella Vanissa.
+AIEMPI KYSYMYS: Miksi eräillä valkoisilla kissoilla on eriväriset silmät?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on hyvä kysymys. Silmien erivärisyyttä kutsutaan [[heterokromiaksi]], ja valkoisilla kissoilla se liittyy värin eli pigmentin jakautumiseen. Valkoisen turkin geenit voivat estää pigmentin pääsyn toiseen silmään, jolloin se on sininen, kun taas toisessa silmässä on enemmän väriä ja se voi olla esimerkiksi meripihkan tai kullan värinen. Sinisilmäisillä valkoisilla kissoilla esiintyy myös tavallista useammin [[kuuroutta]], vaikka kaikki eivät ole kuuroja. Tän verran kyl tiedän.
+KYSYMYS: Kerro lisää: heterokromiaksi
+
+### 203
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanin kissa (eläimet)
+Tietoruudun teksti: Vanjärven seudulla elää oma kissakantansa, jota ei ole jalostettu rotukirjoihin: kookas, liidunvalkoinen Vanin kissa, jonka silmät ovat siniset, meripihkanväriset tai kuuluisimmillaan yksi kumpaakin. Kissa tunnetaan "uivana kissana", sillä sen on nähty uivan Vanjärvessä. Puhtaita yksilöitä laskettiin 1992 enää 92, ja valkoista kantaa on vuodesta 1995 kasvattanut tutkimuskeskus Yüzüncü Yıl -yliopiston kampuksella Vanissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Musiikki: Kuuro säveltäjä kuuli musiikin päässään] Bonnissa syntynyt Ludwig van Beethoven alkoi menettää kuuloaan alle kolmekymppisenä — säveltäjälle pahin mahdollinen kohtalo. Hän ei lopettanut vaan sävelsi päänsä sisällä: keskustelut käytiin vihkoihin kirjoittamalla, ja flyygelistä hän sahasi jalat, jotta tunsi sävelet lattian värinänä. Yhdeksännen sinfonian kantaesityksessä 1824 täysin kuuro Beethoven piti kääntää kasvot yleisöön päin, jotta hän näki suosionosoitukset, joita ei kuullut. Sinfonian loppuhymni Oodi ilolle on nykyään Euroopan unionin hymni.
+AIEMPI KYSYMYS: Miksi eräillä valkoisilla kissoilla on eriväriset silmät?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on hyvä kysymys. Silmien erivärisyyttä kutsutaan [[heterokromiaksi]], ja valkoisilla kissoilla se liittyy värin eli pigmentin jakautumiseen. Valkoisen turkin geenit voivat estää pigmentin pääsyn toiseen silmään, jolloin se on sininen, kun taas toisessa silmässä on enemmän väriä ja se voi olla esimerkiksi meripihkan tai kullan värinen. Sinisilmäisillä valkoisilla kissoilla esiintyy myös tavallista useammin [[kuuroutta]], vaikka kaikki eivät ole kuuroja. Tän verran kyl tiedän.
+KYSYMYS: Kerro lisää: kuuroutta
+
+### 204
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanin kissa (eläimet)
+Tietoruudun teksti: Vanjärven seudulla elää oma kissakantansa, jota ei ole jalostettu rotukirjoihin: kookas, liidunvalkoinen Vanin kissa, jonka silmät ovat siniset, meripihkanväriset tai kuuluisimmillaan yksi kumpaakin. Kissa tunnetaan "uivana kissana", sillä sen on nähty uivan Vanjärvessä. Puhtaita yksilöitä laskettiin 1992 enää 92, ja valkoista kantaa on vuodesta 1995 kasvattanut tutkimuskeskus Yüzüncü Yıl -yliopiston kampuksella Vanissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Ruoka ja juoma: Teetä juodaan enemmän kuin missään] Nykyisin — Turkissa juodaan teetä yli kolme kiloa henkeä kohti vuodessa, enemmän kuin missään muussa maassa. Istanbulissa se näkyy kadulla: teenkantaja kulkee kaupasta kauppaan tarjotin köysien varassa keinuen eikä läikytä tippaakaan. Tee keitetään kaksiosaisessa pannussa, jossa alhaalla kiehuu vesi ja päällä hautuu väkevä uute. Se tarjoillaan tulppaanin muotoisessa korvattomassa lasissa, josta pidetään kiinni reunasta, jottei sormia polta.
+- [Turkki — maalehti / Ruoka ja juoma: Juoma, jota myydään vain talvella] 1876 — Boza on paksua ja vaaleaa, ja se tehdään hapattamalla hirssiä tai bulguria. Lämpimässä se pilaantuu, joten kausi alkaa vasta kun ilmat kylmenevät. Ennen vanhaan myyjä käveli iltapimeällä kadulla ja huusi pitkään bo-zaa, jotta ikkunat aukeaisivat. Matkakirjailija Evliya Çelebi laski 1600-luvun Istanbulissa satoja bozapuoteja. Vefan korttelissa avattiin puoti vuonna 1876, ja se on yhä samassa paikassa.
+- [Turkki — maalehti / Ruoka ja juoma] Istanbulissa juodaan lasi kerrallaan ympäri vuoden — ja yhtä juomaa saa vain silloin, kun on kylmä.
+AIEMPI KYSYMYS: Miten Turkissa suhtaudutaan kissoihin?
+AIEMPI VASTAUS (Livia):
+Ai tota. Turkissa, erityisesti [[Istanbulissa]], kadunkissat ovat tuttu näky, ja monet asukkaat ruokkivat ja hoitavat niitä yhdessä. Kissoille jätetään ruokaa ja vettä kaduille, ja kauppiaat sekä kahvilanpitäjät sietävät niitä ovenpielissään. Istanbulin kadunkissoista on tehty myös dokumenttielokuva [[Kedi]], joka valmistui vuonna 2016.
+
+Minä katson kissoja katolta turvallisen välimatkan päästä. Kyyhkyn ammattiylpeys ei silti estä myöntämästä, että kaupunki näyttää lämpimämmältä, kun kissa nukkuu ikkunalaudalla.
+KYSYMYS: Kerro lisää: Istanbulissa
+
+### 205
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanin kissa (eläimet)
+Tietoruudun teksti: Vanjärven seudulla elää oma kissakantansa, jota ei ole jalostettu rotukirjoihin: kookas, liidunvalkoinen Vanin kissa, jonka silmät ovat siniset, meripihkanväriset tai kuuluisimmillaan yksi kumpaakin. Kissa tunnetaan "uivana kissana", sillä sen on nähty uivan Vanjärvessä. Puhtaita yksilöitä laskettiin 1992 enää 92, ja valkoista kantaa on vuodesta 1995 kasvattanut tutkimuskeskus Yüzüncü Yıl -yliopiston kampuksella Vanissa.
+AIEMPI KYSYMYS: Miten Turkissa suhtaudutaan kissoihin?
+AIEMPI VASTAUS (Livia):
+Ai tota. Turkissa, erityisesti [[Istanbulissa]], kadunkissat ovat tuttu näky, ja monet asukkaat ruokkivat ja hoitavat niitä yhdessä. Kissoille jätetään ruokaa ja vettä kaduille, ja kauppiaat sekä kahvilanpitäjät sietävät niitä ovenpielissään. Istanbulin kadunkissoista on tehty myös dokumenttielokuva [[Kedi]], joka valmistui vuonna 2016.
+
+Minä katson kissoja katolta turvallisen välimatkan päästä. Kyyhkyn ammattiylpeys ei silti estä myöntämästä, että kaupunki näyttää lämpimämmältä, kun kissa nukkuu ikkunalaudalla.
+KYSYMYS: Kerro lisää: Kedi
+
+### 206
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kırkpınar (urheilu)
+Tietoruudun teksti: Edirnen liepeillä on painittu öljypainia joka vuosi vuodesta 1360: Kırkpınar, "neljänkymmenen lähteen" turnaus, pitää Guinnessin ennätystä maailman pisimpään jatkuneena urheilukilpailuna. Pehlivanit eli painijat pukeutuvat vain nahkaisiin polvihousuihin, kıspeteihin, ja valelevat itsensä oliiviöljyllä ennen jokaista ottelua. Kolmipäiväisen turnauksen voittaja kantaa päänpainijan arvoa seuraavaan Kırkpınariin asti. Isoisän matkan aikaan perinne oli jo yli 500 vuotta vanha.
+AIEMPI KYSYMYS: Miksi painijat öljyävät itsensä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Oliiviöljyn tarkoitus on tehdä iho liukkaaksi, jolloin vastustajaa on vaikea tarttua lujaa ja ottelu vaatii enemmän taitoa ja kestävyyttä pelkän voiman sijaan. Painijat eli [[pehlivanit]] valelevat itsensä öljyllä ennen jokaista ottelua, ja ainoa vaatetus on nahkaiset polvihousut eli [[kıspet]]. Käytäntö on osa [[Kırkpınarin]] perinnettä, joka on jatkunut vuosisatoja. Minä ainakin lipsuisin otteesta heti.
+KYSYMYS: Kerro lisää: pehlivanit
+
+### 207
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kırkpınar (urheilu)
+Tietoruudun teksti: Edirnen liepeillä on painittu öljypainia joka vuosi vuodesta 1360: Kırkpınar, "neljänkymmenen lähteen" turnaus, pitää Guinnessin ennätystä maailman pisimpään jatkuneena urheilukilpailuna. Pehlivanit eli painijat pukeutuvat vain nahkaisiin polvihousuihin, kıspeteihin, ja valelevat itsensä oliiviöljyllä ennen jokaista ottelua. Kolmipäiväisen turnauksen voittaja kantaa päänpainijan arvoa seuraavaan Kırkpınariin asti. Isoisän matkan aikaan perinne oli jo yli 500 vuotta vanha.
+AIEMPI KYSYMYS: Miksi painijat öljyävät itsensä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Oliiviöljyn tarkoitus on tehdä iho liukkaaksi, jolloin vastustajaa on vaikea tarttua lujaa ja ottelu vaatii enemmän taitoa ja kestävyyttä pelkän voiman sijaan. Painijat eli [[pehlivanit]] valelevat itsensä öljyllä ennen jokaista ottelua, ja ainoa vaatetus on nahkaiset polvihousut eli [[kıspet]]. Käytäntö on osa [[Kırkpınarin]] perinnettä, joka on jatkunut vuosisatoja. Minä ainakin lipsuisin otteesta heti.
+KYSYMYS: Kerro lisää: kıspet
+
+### 208
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kırkpınar (urheilu)
+Tietoruudun teksti: Edirnen liepeillä on painittu öljypainia joka vuosi vuodesta 1360: Kırkpınar, "neljänkymmenen lähteen" turnaus, pitää Guinnessin ennätystä maailman pisimpään jatkuneena urheilukilpailuna. Pehlivanit eli painijat pukeutuvat vain nahkaisiin polvihousuihin, kıspeteihin, ja valelevat itsensä oliiviöljyllä ennen jokaista ottelua. Kolmipäiväisen turnauksen voittaja kantaa päänpainijan arvoa seuraavaan Kırkpınariin asti. Isoisän matkan aikaan perinne oli jo yli 500 vuotta vanha.
+AIEMPI KYSYMYS: Miksi painijat öljyävät itsensä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Oliiviöljyn tarkoitus on tehdä iho liukkaaksi, jolloin vastustajaa on vaikea tarttua lujaa ja ottelu vaatii enemmän taitoa ja kestävyyttä pelkän voiman sijaan. Painijat eli [[pehlivanit]] valelevat itsensä öljyllä ennen jokaista ottelua, ja ainoa vaatetus on nahkaiset polvihousut eli [[kıspet]]. Käytäntö on osa [[Kırkpınarin]] perinnettä, joka on jatkunut vuosisatoja. Minä ainakin lipsuisin otteesta heti.
+KYSYMYS: Kerro lisää: Kırkpınarin
+
+### 209
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kırkpınar (urheilu)
+Tietoruudun teksti: Edirnen liepeillä on painittu öljypainia joka vuosi vuodesta 1360: Kırkpınar, "neljänkymmenen lähteen" turnaus, pitää Guinnessin ennätystä maailman pisimpään jatkuneena urheilukilpailuna. Pehlivanit eli painijat pukeutuvat vain nahkaisiin polvihousuihin, kıspeteihin, ja valelevat itsensä oliiviöljyllä ennen jokaista ottelua. Kolmipäiväisen turnauksen voittaja kantaa päänpainijan arvoa seuraavaan Kırkpınariin asti. Isoisän matkan aikaan perinne oli jo yli 500 vuotta vanha.
+AIEMPI KYSYMYS: Miten ottelu ratkeaa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Perinteisessä [[öljypainissa]] tavoitteena on saada vastustaja selälleen tai muuten kukistettua otteella. Koska iho on liukas, otteita haetaan usein polvihousujen kautta, ja ottelu voi pitkittyä. Kolmipäiväisen [[Kırkpınarin]] turnauksen voittaja saa päänpainijan arvon seuraavaan turnaukseen asti. Nykysääntöjen yksityiskohdista, kuten aikarajoista ja pisteytyksestä, en ole varma. Itse seuraisin ottelua mieluummin katolta.
+KYSYMYS: Kerro lisää: öljypainissa
+
+### 210
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kırkpınar (urheilu)
+Tietoruudun teksti: Edirnen liepeillä on painittu öljypainia joka vuosi vuodesta 1360: Kırkpınar, "neljänkymmenen lähteen" turnaus, pitää Guinnessin ennätystä maailman pisimpään jatkuneena urheilukilpailuna. Pehlivanit eli painijat pukeutuvat vain nahkaisiin polvihousuihin, kıspeteihin, ja valelevat itsensä oliiviöljyllä ennen jokaista ottelua. Kolmipäiväisen turnauksen voittaja kantaa päänpainijan arvoa seuraavaan Kırkpınariin asti. Isoisän matkan aikaan perinne oli jo yli 500 vuotta vanha.
+AIEMPI KYSYMYS: Mistä Kırkpınar on saanut nimensä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Nimi tarkoittaa neljääkymmentä lähdettä. Tarina yhdistää sen [[Edirnen]] seudun lähteisiin ja varhaisiin [[osmanien]] sotureihin, jotka legendan mukaan painivat keskenään. Tarkat yksityiskohdat vaihtelevat kertojasta toiseen, joten tarinaa kannattaa pitää perimätietona eikä todistettuna tapahtumana. Turnausta on painittu Edirnen liepeillä noin 1300-luvulta lähtien, ja sen sanotaan olevan maailman pisimpään jatkunut urheilukilpailu. Neljäkymmentä lähdettä kuulostaa kyyhkyn mielestä hyvältä juomapaikalta.
+KYSYMYS: Kerro lisää: Edirnen
+
+### 211
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kırkpınar (urheilu)
+Tietoruudun teksti: Edirnen liepeillä on painittu öljypainia joka vuosi vuodesta 1360: Kırkpınar, "neljänkymmenen lähteen" turnaus, pitää Guinnessin ennätystä maailman pisimpään jatkuneena urheilukilpailuna. Pehlivanit eli painijat pukeutuvat vain nahkaisiin polvihousuihin, kıspeteihin, ja valelevat itsensä oliiviöljyllä ennen jokaista ottelua. Kolmipäiväisen turnauksen voittaja kantaa päänpainijan arvoa seuraavaan Kırkpınariin asti. Isoisän matkan aikaan perinne oli jo yli 500 vuotta vanha.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+AIEMPI KYSYMYS: Mistä Kırkpınar on saanut nimensä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Nimi tarkoittaa neljääkymmentä lähdettä. Tarina yhdistää sen [[Edirnen]] seudun lähteisiin ja varhaisiin [[osmanien]] sotureihin, jotka legendan mukaan painivat keskenään. Tarkat yksityiskohdat vaihtelevat kertojasta toiseen, joten tarinaa kannattaa pitää perimätietona eikä todistettuna tapahtumana. Turnausta on painittu Edirnen liepeillä noin 1300-luvulta lähtien, ja sen sanotaan olevan maailman pisimpään jatkunut urheilukilpailu. Neljäkymmentä lähdettä kuulostaa kyyhkyn mielestä hyvältä juomapaikalta.
+KYSYMYS: Kerro lisää: osmanien
+
+### 212
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kırkpınar (urheilu)
+Tietoruudun teksti: Edirnen liepeillä on painittu öljypainia joka vuosi vuodesta 1360: Kırkpınar, "neljänkymmenen lähteen" turnaus, pitää Guinnessin ennätystä maailman pisimpään jatkuneena urheilukilpailuna. Pehlivanit eli painijat pukeutuvat vain nahkaisiin polvihousuihin, kıspeteihin, ja valelevat itsensä oliiviöljyllä ennen jokaista ottelua. Kolmipäiväisen turnauksen voittaja kantaa päänpainijan arvoa seuraavaan Kırkpınariin asti. Isoisän matkan aikaan perinne oli jo yli 500 vuotta vanha.
+AIEMPI KYSYMYS: Missä Edirne sijaitsee?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämän reitin olen lentänyt. Edirne sijaitsee Turkin Euroopan puoleisessa osassa, [[Itä-Traakiassa]], lähellä [[Kreikan]] ja [[Bulgarian]] rajoja. Kaupunki oli osmanien pääkaupunki ennen kuin Konstantinopoli valloitettiin vuonna 1453. Nykyään se on rajakaupunki ja tunnettu muun muassa lähistön [[Kırkpınarin]] painiperinteestä. Rajamailla riittää kyl katsottavaa ylhäältäkin.
+KYSYMYS: Kerro lisää: Itä-Traakiassa
+
+### 213
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kırkpınar (urheilu)
+Tietoruudun teksti: Edirnen liepeillä on painittu öljypainia joka vuosi vuodesta 1360: Kırkpınar, "neljänkymmenen lähteen" turnaus, pitää Guinnessin ennätystä maailman pisimpään jatkuneena urheilukilpailuna. Pehlivanit eli painijat pukeutuvat vain nahkaisiin polvihousuihin, kıspeteihin, ja valelevat itsensä oliiviöljyllä ennen jokaista ottelua. Kolmipäiväisen turnauksen voittaja kantaa päänpainijan arvoa seuraavaan Kırkpınariin asti. Isoisän matkan aikaan perinne oli jo yli 500 vuotta vanha.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Tiede: Kreikan ensimmäinen tutkimuslaitos nousi kukkulalle] 1842 — Ateenan kansallinen observatorio perustettiin vuonna 1842 Nymfien kukkulalle, ja se on Kreikan vanhin tutkimuslaitos — vain vuosikymmen sen jälkeen, kun Kreikka oli tunnustettu itsenäiseksi kuningaskunnaksi. Rakennuksen suunnitteli tanskalainen arkkitehti Theophil Hansen, ja rahoituksen antoi kreikkalainen liikemies Georgios Sinas Wienistä. Observatorio teki tähtitieteen lisäksi meteorologisia ja seismologisia havaintoja, ja isoisän matkan aikaan se on toiminut jo yli kolmekymmentä vuotta.
+AIEMPI KYSYMYS: Missä Edirne sijaitsee?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämän reitin olen lentänyt. Edirne sijaitsee Turkin Euroopan puoleisessa osassa, [[Itä-Traakiassa]], lähellä [[Kreikan]] ja [[Bulgarian]] rajoja. Kaupunki oli osmanien pääkaupunki ennen kuin Konstantinopoli valloitettiin vuonna 1453. Nykyään se on rajakaupunki ja tunnettu muun muassa lähistön [[Kırkpınarin]] painiperinteestä. Rajamailla riittää kyl katsottavaa ylhäältäkin.
+KYSYMYS: Kerro lisää: Kreikan
+
+### 214
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kırkpınar (urheilu)
+Tietoruudun teksti: Edirnen liepeillä on painittu öljypainia joka vuosi vuodesta 1360: Kırkpınar, "neljänkymmenen lähteen" turnaus, pitää Guinnessin ennätystä maailman pisimpään jatkuneena urheilukilpailuna. Pehlivanit eli painijat pukeutuvat vain nahkaisiin polvihousuihin, kıspeteihin, ja valelevat itsensä oliiviöljyllä ennen jokaista ottelua. Kolmipäiväisen turnauksen voittaja kantaa päänpainijan arvoa seuraavaan Kırkpınariin asti. Isoisän matkan aikaan perinne oli jo yli 500 vuotta vanha.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Perth — kohdekartta / Kohdekartta: His Majesty's -teatteri] 1904 Teatteri rakennettiin kultavuosien rahalla. Perthin väkiluku kasvoi 1890-luvun kultalöytöjen jälkeen nopeasti, ja paikallispoliitikko Thomas Molloy tilasi arkkitehti William G. Wolfilta teatterin ja hotellin yhdistelmän Hay Streetin ja King Streetin kulmaan. Nimi annettiin juuri kruunatun Edvard VII:n kunniaksi. Urakan voitti Friederich Liebe, joka oli aiemmin rakentanut Bulgarian parlamenttitalon Sofiaan ja tehnyt työtä Budapestin oopperatalossa. Tontin alla virtasi maanalainen puro, ja perustusten kestävyydestä esitettiin julkisesti epäilyjä kesken rakennustyön. Liebe suunnitteli ojat veden ohjaamiseksi ja jatkoi, mutta kun lasku tuli, Molloy kieltäytyi maksamasta ylimääräisiä 17 000…
+- [Sofia — kohdekartta / Kohdekartta: Pyhän Yrjön rotunda] 300-luku Sofian keskustassa, hotellin ja presidentinlinnan välisellä pihalla, seisoo pyöreä punatiilinen rakennus. Se on kaupungin vanhin yhä pystyssä oleva rakennus: rotunda pystytettiin jo 300-luvun alussa, alun perin roomalaisen kylpylän kupolikattoiseksi saliksi – kauan ennen kuin siitä tuli kirkko. Kupoli kohoaa lähes 14 metrin korkeuteen, ja sisäseinillä on peräti viisi eri aikakauden freskokerrosta päällekkäin. Vaikuttavin niistä on peräisin 900-luvulta, Bulgarian niin sanotulta kultakaudelta: maalauksissa on 22 yli kaksimetristä profeettaa ja enkeli, jonka kasvot on maalattu niin taidokkaasti, että ne ovat innoittaneet taiteilijoita vuosisatojen ajan. 1500-luvulla osmanit muuttivat …
+AIEMPI KYSYMYS: Missä Edirne sijaitsee?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämän reitin olen lentänyt. Edirne sijaitsee Turkin Euroopan puoleisessa osassa, [[Itä-Traakiassa]], lähellä [[Kreikan]] ja [[Bulgarian]] rajoja. Kaupunki oli osmanien pääkaupunki ennen kuin Konstantinopoli valloitettiin vuonna 1453. Nykyään se on rajakaupunki ja tunnettu muun muassa lähistön [[Kırkpınarin]] painiperinteestä. Rajamailla riittää kyl katsottavaa ylhäältäkin.
+KYSYMYS: Kerro lisää: Bulgarian
+
+### 215
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kırkpınar (urheilu)
+Tietoruudun teksti: Edirnen liepeillä on painittu öljypainia joka vuosi vuodesta 1360: Kırkpınar, "neljänkymmenen lähteen" turnaus, pitää Guinnessin ennätystä maailman pisimpään jatkuneena urheilukilpailuna. Pehlivanit eli painijat pukeutuvat vain nahkaisiin polvihousuihin, kıspeteihin, ja valelevat itsensä oliiviöljyllä ennen jokaista ottelua. Kolmipäiväisen turnauksen voittaja kantaa päänpainijan arvoa seuraavaan Kırkpınariin asti. Isoisän matkan aikaan perinne oli jo yli 500 vuotta vanha.
+AIEMPI KYSYMYS: Mitä muita perinteisiä painilajeja Euroopassa on?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä riittää kerrottavaa. Euroopassa on useita vanhoja paikallisia painimuotoja. Islannissa harrastetaan [[glímaa]], jossa painijat tarttuvat toistensa vyöhön, ja Sveitsissä on [[Schwingen]], jota painitaan hiekka- tai sahanpurukehässä. Bretagnessa tunnetaan painiperinne [[gouren]], ja Cornwallissa on oma painiperinteensä. Kyyhkyt vaan seuraa sivusta.
+KYSYMYS: Kerro lisää: glímaa
+
+### 216
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kırkpınar (urheilu)
+Tietoruudun teksti: Edirnen liepeillä on painittu öljypainia joka vuosi vuodesta 1360: Kırkpınar, "neljänkymmenen lähteen" turnaus, pitää Guinnessin ennätystä maailman pisimpään jatkuneena urheilukilpailuna. Pehlivanit eli painijat pukeutuvat vain nahkaisiin polvihousuihin, kıspeteihin, ja valelevat itsensä oliiviöljyllä ennen jokaista ottelua. Kolmipäiväisen turnauksen voittaja kantaa päänpainijan arvoa seuraavaan Kırkpınariin asti. Isoisän matkan aikaan perinne oli jo yli 500 vuotta vanha.
+AIEMPI KYSYMYS: Mitä muita perinteisiä painilajeja Euroopassa on?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä riittää kerrottavaa. Euroopassa on useita vanhoja paikallisia painimuotoja. Islannissa harrastetaan [[glímaa]], jossa painijat tarttuvat toistensa vyöhön, ja Sveitsissä on [[Schwingen]], jota painitaan hiekka- tai sahanpurukehässä. Bretagnessa tunnetaan painiperinne [[gouren]], ja Cornwallissa on oma painiperinteensä. Kyyhkyt vaan seuraa sivusta.
+KYSYMYS: Kerro lisää: Schwingen
+
+### 217
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kırkpınar (urheilu)
+Tietoruudun teksti: Edirnen liepeillä on painittu öljypainia joka vuosi vuodesta 1360: Kırkpınar, "neljänkymmenen lähteen" turnaus, pitää Guinnessin ennätystä maailman pisimpään jatkuneena urheilukilpailuna. Pehlivanit eli painijat pukeutuvat vain nahkaisiin polvihousuihin, kıspeteihin, ja valelevat itsensä oliiviöljyllä ennen jokaista ottelua. Kolmipäiväisen turnauksen voittaja kantaa päänpainijan arvoa seuraavaan Kırkpınariin asti. Isoisän matkan aikaan perinne oli jo yli 500 vuotta vanha.
+AIEMPI KYSYMYS: Mitä muita perinteisiä painilajeja Euroopassa on?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä riittää kerrottavaa. Euroopassa on useita vanhoja paikallisia painimuotoja. Islannissa harrastetaan [[glímaa]], jossa painijat tarttuvat toistensa vyöhön, ja Sveitsissä on [[Schwingen]], jota painitaan hiekka- tai sahanpurukehässä. Bretagnessa tunnetaan painiperinne [[gouren]], ja Cornwallissa on oma painiperinteensä. Kyyhkyt vaan seuraa sivusta.
+KYSYMYS: Kerro lisää: gouren
+
+### 218
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Halikarnassoksen mausoleumi (historia)
+Tietoruudun teksti: Nykyisen Bodrumin paikalla seisoi vuosina 353–351 eaa. rakennettu noin 45-metrinen hauta Karian satraapille Mausolokselle ja hänen sisarelleen ja puolisolleen Artemisia toiselle. Kreikkalaisarkkitehdit Satyros ja Pythios suunnittelivat sen, ja neljä aikansa kuuluisinta kuvanveistäjää koristeli kunkin sivun. Rakennus oli niin ihailtu, että sen nimestä tuli sana mausoleumi. Maanjäristykset kaatoivat sen keskiajalla, ja Pyhän Johanneksen ritarit käyttivät kivet Bodrumin linnaan vuodesta 1494. Isoisäsi matkaa edeltäneellä vuosikymmenellä brittiarkeologi Charles Newton kaivoi paikan esiin: veistokset lastattiin laivaan lokakuussa 1857 ja ovat nyt British Museumissa.
+AIEMPI KYSYMYS: Miksi hautaa kutsutaan mausoleumiksi?
+AIEMPI VASTAUS (Livia):
+No niin, sanojen alkuperä on hauska aihe. Sana mausoleumi tulee [[Mausoloksen]] nimestä. Mausolos oli Karian satraappi, ja hänelle sekä hänen puolisolleen ja sisarelleen Artemisialle rakennettiin 300-luvulla eaa. [[Halikarnassoksen]] kaupunkiin, nykyisen Bodrumin paikalle, niin ihailtu hauta, että nimeä alettiin käyttää kaikista suurista hautarakennuksista. Hautaa pidettiin yhtenä [[antiikin seitsemästä ihmeestä]]. Aika hyvä maine yhdelle hautakivelle.
+KYSYMYS: Kerro lisää: Mausoloksen
+
+### 219
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Halikarnassoksen mausoleumi (historia)
+Tietoruudun teksti: Nykyisen Bodrumin paikalla seisoi vuosina 353–351 eaa. rakennettu noin 45-metrinen hauta Karian satraapille Mausolokselle ja hänen sisarelleen ja puolisolleen Artemisia toiselle. Kreikkalaisarkkitehdit Satyros ja Pythios suunnittelivat sen, ja neljä aikansa kuuluisinta kuvanveistäjää koristeli kunkin sivun. Rakennus oli niin ihailtu, että sen nimestä tuli sana mausoleumi. Maanjäristykset kaatoivat sen keskiajalla, ja Pyhän Johanneksen ritarit käyttivät kivet Bodrumin linnaan vuodesta 1494. Isoisäsi matkaa edeltäneellä vuosikymmenellä brittiarkeologi Charles Newton kaivoi paikan esiin: veistokset lastattiin laivaan lokakuussa 1857 ja ovat nyt British Museumissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Los Angeles — kohdekartta / Kohdekartta: Kaupungintalo] 1928 Kaupunginvaltuusto sääti 1905, ettei mikään uusi talo saa olla kolmeatoista kerrosta tai 46:ta metriä korkeampi — kaupunkikuvan piti pysyä yhtenäisenä. Kun oma kaupungintalo valmistui 1928, se sai julkisena rakennuksena poikkeuksen: 32 kerrosta ja 138 metriä eli kolme kertaa niin korkea kuin mikään muu. Sääntö kumottiin kansanäänestyksellä vasta 1957, ja kaupungintalo pysyi kaupungin korkeimpana rakennuksena vuoteen 1966. Sen piirsivät John Parkinson, John C. Austin ja Albert C. Martin, ja se vihittiin 26. huhtikuuta 1928. Talossa on kaksi kertomisen arvoista yksityiskohtaa. Tornin betoniin sekoitettiin hiekkaa Kalifornian jokaisesta 58 piirikunnasta ja vettä sen 21 historiallisesta lä…
+AIEMPI KYSYMYS: Miksi hautaa kutsutaan mausoleumiksi?
+AIEMPI VASTAUS (Livia):
+No niin, sanojen alkuperä on hauska aihe. Sana mausoleumi tulee [[Mausoloksen]] nimestä. Mausolos oli Karian satraappi, ja hänelle sekä hänen puolisolleen ja sisarelleen Artemisialle rakennettiin 300-luvulla eaa. [[Halikarnassoksen]] kaupunkiin, nykyisen Bodrumin paikalle, niin ihailtu hauta, että nimeä alettiin käyttää kaikista suurista hautarakennuksista. Hautaa pidettiin yhtenä [[antiikin seitsemästä ihmeestä]]. Aika hyvä maine yhdelle hautakivelle.
+KYSYMYS: Kerro lisää: Halikarnassoksen
+
+### 220
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Halikarnassoksen mausoleumi (historia)
+Tietoruudun teksti: Nykyisen Bodrumin paikalla seisoi vuosina 353–351 eaa. rakennettu noin 45-metrinen hauta Karian satraapille Mausolokselle ja hänen sisarelleen ja puolisolleen Artemisia toiselle. Kreikkalaisarkkitehdit Satyros ja Pythios suunnittelivat sen, ja neljä aikansa kuuluisinta kuvanveistäjää koristeli kunkin sivun. Rakennus oli niin ihailtu, että sen nimestä tuli sana mausoleumi. Maanjäristykset kaatoivat sen keskiajalla, ja Pyhän Johanneksen ritarit käyttivät kivet Bodrumin linnaan vuodesta 1494. Isoisäsi matkaa edeltäneellä vuosikymmenellä brittiarkeologi Charles Newton kaivoi paikan esiin: veistokset lastattiin laivaan lokakuussa 1857 ja ovat nyt British Museumissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Los Angeles — kohdekartta / Kohdekartta: Kaupungintalo] 1928 Kaupunginvaltuusto sääti 1905, ettei mikään uusi talo saa olla kolmeatoista kerrosta tai 46:ta metriä korkeampi — kaupunkikuvan piti pysyä yhtenäisenä. Kun oma kaupungintalo valmistui 1928, se sai julkisena rakennuksena poikkeuksen: 32 kerrosta ja 138 metriä eli kolme kertaa niin korkea kuin mikään muu. Sääntö kumottiin kansanäänestyksellä vasta 1957, ja kaupungintalo pysyi kaupungin korkeimpana rakennuksena vuoteen 1966. Sen piirsivät John Parkinson, John C. Austin ja Albert C. Martin, ja se vihittiin 26. huhtikuuta 1928. Talossa on kaksi kertomisen arvoista yksityiskohtaa. Tornin betoniin sekoitettiin hiekkaa Kalifornian jokaisesta 58 piirikunnasta ja vettä sen 21 historiallisesta lä…
+AIEMPI KYSYMYS: Miksi hautaa kutsutaan mausoleumiksi?
+AIEMPI VASTAUS (Livia):
+No niin, sanojen alkuperä on hauska aihe. Sana mausoleumi tulee [[Mausoloksen]] nimestä. Mausolos oli Karian satraappi, ja hänelle sekä hänen puolisolleen ja sisarelleen Artemisialle rakennettiin 300-luvulla eaa. [[Halikarnassoksen]] kaupunkiin, nykyisen Bodrumin paikalle, niin ihailtu hauta, että nimeä alettiin käyttää kaikista suurista hautarakennuksista. Hautaa pidettiin yhtenä [[antiikin seitsemästä ihmeestä]]. Aika hyvä maine yhdelle hautakivelle.
+KYSYMYS: Kerro lisää: antiikin seitsemästä ihmeestä
+
+### 221
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Halikarnassoksen mausoleumi (historia)
+Tietoruudun teksti: Nykyisen Bodrumin paikalla seisoi vuosina 353–351 eaa. rakennettu noin 45-metrinen hauta Karian satraapille Mausolokselle ja hänen sisarelleen ja puolisolleen Artemisia toiselle. Kreikkalaisarkkitehdit Satyros ja Pythios suunnittelivat sen, ja neljä aikansa kuuluisinta kuvanveistäjää koristeli kunkin sivun. Rakennus oli niin ihailtu, että sen nimestä tuli sana mausoleumi. Maanjäristykset kaatoivat sen keskiajalla, ja Pyhän Johanneksen ritarit käyttivät kivet Bodrumin linnaan vuodesta 1494. Isoisäsi matkaa edeltäneellä vuosikymmenellä brittiarkeologi Charles Newton kaivoi paikan esiin: veistokset lastattiin laivaan lokakuussa 1857 ja ovat nyt British Museumissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sisilia — kaupunkilehti / Sisilia: Ritarit narujen varassa] Opera dei pupi on sisilialainen nukketeatteri, jossa metrin mittaiset haarniskoidut ritarit taistelevat Kaarle Suuren tarinoissa. Sama tarina jatkui iltaa toisensa jälkeen kuukausia, ja yleisö tuli katsomaan kuin televisiosarjaa. Unesco suojeli perinteen 2001.
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Elmon linnake] 1552 (rakennus), 1565 (piiritys) Linnake rakennettiin 1552 vartioimaan kahden sataman, Grand Harbourin ja Marsamxettin, suuta samalta kapealta niemenkärjeltä, jolle Valletta myöhemmin nousi. Tähden muotoinen muuri oli aikanaan uutta linnoitustekniikkaa, mutta osmanien saapuessa 1565 moni piti sitä silti liian pienenä kestämään pitkää piiritystä. Se piti pintansa lähes kuukauden, 18. toukokuuta – 23. kesäkuuta, vaikka miehistö oli moninkertaisesti alivoimainen. Yöllä veneet toivat Birgusta lisää puolustajia ja veivät haavoittuneita pois, ja monet pahoin haavoittuneet ritarit kieltäytyivät poistumasta: he pyysivät kantaa itsensä tuoleilla muurille jatkaakseen taistelua istualtaan viimeiseen a…
+- [Valletta — kaupunkilehti / Historia: Lähes neljän kuukauden piiritys] Sulttaani Suleiman Suuri lähetti vuonna 1565 valtavan laivaston ajamaan ritarit Maltalta. Piiritys kesti 18. toukokuuta – 8. syyskuuta, ja saarta puolusti noin 500 ritaria ja 6 000 jalkaväen sotilasta. Osmanit hyökkäsivät ensin Pyhän Elmon linnakkeeseen Sciberras-vuoren kärjessä, nykyisen Vallettan paikalla, ja sen valtaaminen 23. kesäkuuta maksoi heille ainakin 6 000 miestä. Birgu ja Senglea kestivät silti pommituksen, jossa aikalaiskertoja Francisco Balbin mukaan ammuttiin noin 130 000 tykinkuulaa. Voiton jälkeen Euroopasta virtasi Maltalle rahaa, ja suurmestari Jean de Valette rakensi Sciberras-vuorelle linnoitetun kaupungin, joka sai hänen nimensä.
+AIEMPI KYSYMYS: Mitä Bodrumin linnasta on nykyään nähtävissä?
+AIEMPI VASTAUS (Livia):
+Ai se. Bodrumin linna eli Pyhän Pietarin linna on yhä pystyssä sataman äärellä. [[Pyhän Johanneksen ritarit]] rakensivat sen 1400-luvun lopulta alkaen, ja osa rakennuskivistä saatiin Halikarnassoksen mausoleumin raunioista. Nykyään linnassa toimii [[vedenalaisen arkeologian museo]], jonka näyttelyissä on merestä nostettuja hylkylöytöjä, ja linnassa on torneja, joiden nimet viittaavat ritarikunnan eri kansalaisuuksiin. Avoinna olevat osat kannattaa tarkistaa paikan päältä. Tost linnasta kyl näkis kauas.
+KYSYMYS: Kerro lisää: Pyhän Johanneksen ritarit
+
+### 222
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Halikarnassoksen mausoleumi (historia)
+Tietoruudun teksti: Nykyisen Bodrumin paikalla seisoi vuosina 353–351 eaa. rakennettu noin 45-metrinen hauta Karian satraapille Mausolokselle ja hänen sisarelleen ja puolisolleen Artemisia toiselle. Kreikkalaisarkkitehdit Satyros ja Pythios suunnittelivat sen, ja neljä aikansa kuuluisinta kuvanveistäjää koristeli kunkin sivun. Rakennus oli niin ihailtu, että sen nimestä tuli sana mausoleumi. Maanjäristykset kaatoivat sen keskiajalla, ja Pyhän Johanneksen ritarit käyttivät kivet Bodrumin linnaan vuodesta 1494. Isoisäsi matkaa edeltäneellä vuosikymmenellä brittiarkeologi Charles Newton kaivoi paikan esiin: veistokset lastattiin laivaan lokakuussa 1857 ja ovat nyt British Museumissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salta — kohdekartta / Kohdekartta: Korkean vuoriston arkeologian museo] 2004 MAAM eli Museo de Arqueología de Alta Montaña perustettiin yhtä löytöä varten. Arkeologit Johan Reinhard ja María Constanza Ceruti löysivät 16. maaliskuuta 1999 retkikuntansa kanssa kolmen inkalapsen haudan lähes 6 700 metrin korkeudesta Llullaillacon tulivuoren huipulta. Lapset kuolivat vuosien 1462 ja 1507 välillä capacocha-menossa, ja heidät haudattiin puolentoista metrin syvyyteen kulta-, hopea- ja simpukkakuvioiden, kudonnaisten ja keramiikan kanssa. Vuoren kylmyys ja aavikon kuivuus säilyttivät pehmytkudokset, hiukset ja sisäelimet, ja siksi museo rakennettiin kylmäsäilytyksen ympärille. Ruumiit ovat kapseleissa, joissa happipitoisuutta on alennettu, lämpötila pidetään vakaana ka…
+AIEMPI KYSYMYS: Mitä Bodrumin linnasta on nykyään nähtävissä?
+AIEMPI VASTAUS (Livia):
+Ai se. Bodrumin linna eli Pyhän Pietarin linna on yhä pystyssä sataman äärellä. [[Pyhän Johanneksen ritarit]] rakensivat sen 1400-luvun lopulta alkaen, ja osa rakennuskivistä saatiin Halikarnassoksen mausoleumin raunioista. Nykyään linnassa toimii [[vedenalaisen arkeologian museo]], jonka näyttelyissä on merestä nostettuja hylkylöytöjä, ja linnassa on torneja, joiden nimet viittaavat ritarikunnan eri kansalaisuuksiin. Avoinna olevat osat kannattaa tarkistaa paikan päältä. Tost linnasta kyl näkis kauas.
+KYSYMYS: Kerro lisää: vedenalaisen arkeologian museo
+
+### 223
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Halikarnassoksen mausoleumi (historia)
+Tietoruudun teksti: Nykyisen Bodrumin paikalla seisoi vuosina 353–351 eaa. rakennettu noin 45-metrinen hauta Karian satraapille Mausolokselle ja hänen sisarelleen ja puolisolleen Artemisia toiselle. Kreikkalaisarkkitehdit Satyros ja Pythios suunnittelivat sen, ja neljä aikansa kuuluisinta kuvanveistäjää koristeli kunkin sivun. Rakennus oli niin ihailtu, että sen nimestä tuli sana mausoleumi. Maanjäristykset kaatoivat sen keskiajalla, ja Pyhän Johanneksen ritarit käyttivät kivet Bodrumin linnaan vuodesta 1494. Isoisäsi matkaa edeltäneellä vuosikymmenellä brittiarkeologi Charles Newton kaivoi paikan esiin: veistokset lastattiin laivaan lokakuussa 1857 ja ovat nyt British Museumissa.
+AIEMPI KYSYMYS: Kuka oli kuningatar Artemisia toinen?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Artemisia toinen oli [[Mausoloksen]] sisar ja puoliso sekä [[Karian]] hallitsija miehensä kuoleman jälkeen. Hänen aikanaan haudan rakennustyö oli käynnissä, ja hänet liitetään vahvasti monumentin syntyyn. Lähteiden mukaan hän kuoli muutaman vuoden Mausoloksen jälkeen, ja haudan kerrotaan olleen tarkoitettu heille molemmille. Aikamoinen virkaura.
+KYSYMYS: Kerro lisää: Karian
+
+### 224
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Halikarnassoksen mausoleumi (historia)
+Tietoruudun teksti: Nykyisen Bodrumin paikalla seisoi vuosina 353–351 eaa. rakennettu noin 45-metrinen hauta Karian satraapille Mausolokselle ja hänen sisarelleen ja puolisolleen Artemisia toiselle. Kreikkalaisarkkitehdit Satyros ja Pythios suunnittelivat sen, ja neljä aikansa kuuluisinta kuvanveistäjää koristeli kunkin sivun. Rakennus oli niin ihailtu, että sen nimestä tuli sana mausoleumi. Maanjäristykset kaatoivat sen keskiajalla, ja Pyhän Johanneksen ritarit käyttivät kivet Bodrumin linnaan vuodesta 1494. Isoisäsi matkaa edeltäneellä vuosikymmenellä brittiarkeologi Charles Newton kaivoi paikan esiin: veistokset lastattiin laivaan lokakuussa 1857 ja ovat nyt British Museumissa.
+AIEMPI KYSYMYS: Mitä British Museumissa on Halikarnassoksen mausoleumista?
+AIEMPI VASTAUS (Livia):
+Kato, sinne ne kivet päätyivät. British Museumiin päätyi [[Charles Newtonin]] 1850-luvun lopulla johtamien kaivausten löytöjä: veistoksia, [[friisin]] osia ja suuria patsaita. Friisi esittää kreikkalaisten ja amatsonien taistelua. Esillä on myös hevosia ja vaunuja esittäviä veistoksia haudan huipulta sekä patsaita, joita on perinteisesti pidetty Mausoloksen ja Artemisian kuvina. Lontoo on kyl kaukana Bodrumista.
+KYSYMYS: Kerro lisää: Charles Newtonin
+
+### 225
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Halikarnassoksen mausoleumi (historia)
+Tietoruudun teksti: Nykyisen Bodrumin paikalla seisoi vuosina 353–351 eaa. rakennettu noin 45-metrinen hauta Karian satraapille Mausolokselle ja hänen sisarelleen ja puolisolleen Artemisia toiselle. Kreikkalaisarkkitehdit Satyros ja Pythios suunnittelivat sen, ja neljä aikansa kuuluisinta kuvanveistäjää koristeli kunkin sivun. Rakennus oli niin ihailtu, että sen nimestä tuli sana mausoleumi. Maanjäristykset kaatoivat sen keskiajalla, ja Pyhän Johanneksen ritarit käyttivät kivet Bodrumin linnaan vuodesta 1494. Isoisäsi matkaa edeltäneellä vuosikymmenellä brittiarkeologi Charles Newton kaivoi paikan esiin: veistokset lastattiin laivaan lokakuussa 1857 ja ovat nyt British Museumissa.
+AIEMPI KYSYMYS: Mitä British Museumissa on Halikarnassoksen mausoleumista?
+AIEMPI VASTAUS (Livia):
+Kato, sinne ne kivet päätyivät. British Museumiin päätyi [[Charles Newtonin]] 1850-luvun lopulla johtamien kaivausten löytöjä: veistoksia, [[friisin]] osia ja suuria patsaita. Friisi esittää kreikkalaisten ja amatsonien taistelua. Esillä on myös hevosia ja vaunuja esittäviä veistoksia haudan huipulta sekä patsaita, joita on perinteisesti pidetty Mausoloksen ja Artemisian kuvina. Lontoo on kyl kaukana Bodrumista.
+KYSYMYS: Kerro lisää: friisin
+
+### 226
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Halikarnassoksen mausoleumi (historia)
+Tietoruudun teksti: Nykyisen Bodrumin paikalla seisoi vuosina 353–351 eaa. rakennettu noin 45-metrinen hauta Karian satraapille Mausolokselle ja hänen sisarelleen ja puolisolleen Artemisia toiselle. Kreikkalaisarkkitehdit Satyros ja Pythios suunnittelivat sen, ja neljä aikansa kuuluisinta kuvanveistäjää koristeli kunkin sivun. Rakennus oli niin ihailtu, että sen nimestä tuli sana mausoleumi. Maanjäristykset kaatoivat sen keskiajalla, ja Pyhän Johanneksen ritarit käyttivät kivet Bodrumin linnaan vuodesta 1494. Isoisäsi matkaa edeltäneellä vuosikymmenellä brittiarkeologi Charles Newton kaivoi paikan esiin: veistokset lastattiin laivaan lokakuussa 1857 ja ovat nyt British Museumissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kohdekartta / Kohdekartta: Zeuksen temppeli] 561 eaa. – 131 jaa. Zeuksen temppeli on yksi antiikin ajan suurimmista rakennushankkeista — ja hitaimmista. Sen rakentaminen aloitettiin jo 500-luvulla eaa., mutta työt keskeytyivät moneen kertaan. Temppeli valmistui vasta vuonna 131 jaa., kun Rooman keisari Hadrianus vihki sen käyttöön — rakentamiseen meni siis yli 600 vuotta! Valmiina temppeli oli valtava: yli 110 metriä pitkä, ja sitä ympäröi 104 jättimäistä korinttilaista pylvästä, joista jokainen oli 17 metriä korkea. Sisällä seisoi kultaa ja norsunluuta oleva jättipatsas itse Zeuksesta. Nykyään pystyssä on enää 15 pylvästä. Yhden pylvään ottomaanihallitsija tuhotti vuonna 1759 kalkin polttamista varten, ja toinen kaatui myrskyssä vuon…
+AIEMPI KYSYMYS: Mitkä ovat muut antiikin seitsemän ihmettä?
+AIEMPI VASTAUS (Livia):
+No jopas, kokonainen lista. Antiikin seitsemän ihmettä olivat Gizan suuri pyramidi, Babylonin riippuvat puutarhat, [[Zeuksen patsas]] Olympiassa, [[Artemiin temppeli]] Efesoksessa, Halikarnassoksen mausoleumi, [[Rodoksen kolossi]] ja Aleksandrian majakka. Listasta on ollut eri versioita, ja eri kirjoittajat mainitsivat osin eri kohteita. Näistä vain Gizan pyramidi on säilynyt nykypäivään. Yksikään niistä ei ole mahtunut kyyhkyn reitille.
+KYSYMYS: Kerro lisää: Zeuksen patsas
+
+### 227
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Halikarnassoksen mausoleumi (historia)
+Tietoruudun teksti: Nykyisen Bodrumin paikalla seisoi vuosina 353–351 eaa. rakennettu noin 45-metrinen hauta Karian satraapille Mausolokselle ja hänen sisarelleen ja puolisolleen Artemisia toiselle. Kreikkalaisarkkitehdit Satyros ja Pythios suunnittelivat sen, ja neljä aikansa kuuluisinta kuvanveistäjää koristeli kunkin sivun. Rakennus oli niin ihailtu, että sen nimestä tuli sana mausoleumi. Maanjäristykset kaatoivat sen keskiajalla, ja Pyhän Johanneksen ritarit käyttivät kivet Bodrumin linnaan vuodesta 1494. Isoisäsi matkaa edeltäneellä vuosikymmenellä brittiarkeologi Charles Newton kaivoi paikan esiin: veistokset lastattiin laivaan lokakuussa 1857 ja ovat nyt British Museumissa.
+AIEMPI KYSYMYS: Mitkä ovat muut antiikin seitsemän ihmettä?
+AIEMPI VASTAUS (Livia):
+No jopas, kokonainen lista. Antiikin seitsemän ihmettä olivat Gizan suuri pyramidi, Babylonin riippuvat puutarhat, [[Zeuksen patsas]] Olympiassa, [[Artemiin temppeli]] Efesoksessa, Halikarnassoksen mausoleumi, [[Rodoksen kolossi]] ja Aleksandrian majakka. Listasta on ollut eri versioita, ja eri kirjoittajat mainitsivat osin eri kohteita. Näistä vain Gizan pyramidi on säilynyt nykypäivään. Yksikään niistä ei ole mahtunut kyyhkyn reitille.
+KYSYMYS: Kerro lisää: Artemiin temppeli
+
+### 228
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Halikarnassoksen mausoleumi (historia)
+Tietoruudun teksti: Nykyisen Bodrumin paikalla seisoi vuosina 353–351 eaa. rakennettu noin 45-metrinen hauta Karian satraapille Mausolokselle ja hänen sisarelleen ja puolisolleen Artemisia toiselle. Kreikkalaisarkkitehdit Satyros ja Pythios suunnittelivat sen, ja neljä aikansa kuuluisinta kuvanveistäjää koristeli kunkin sivun. Rakennus oli niin ihailtu, että sen nimestä tuli sana mausoleumi. Maanjäristykset kaatoivat sen keskiajalla, ja Pyhän Johanneksen ritarit käyttivät kivet Bodrumin linnaan vuodesta 1494. Isoisäsi matkaa edeltäneellä vuosikymmenellä brittiarkeologi Charles Newton kaivoi paikan esiin: veistokset lastattiin laivaan lokakuussa 1857 ja ovat nyt British Museumissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Saari, jonka vuokra oli yksi haukka] 1530 — Johanniittaritarit menettivät tukikohtansa Rodoksella vuonna 1522, kun osmanit valtasivat saaren kuuden kuukauden piirityksen jälkeen. Seitsemän vuoden vaelluksen jälkeen keisari Kaarle V antoi heille Sisilian kuninkaana Maltan, Gozon ja Pohjois-Afrikan Tripolin ikuiseksi läänitykseksi. Vuosimaksu oli yksi maltalainen haukka, joka lähetettiin Sisilian varakuninkaalle. Suurmestari Philippe Villiers de L'Isle-Adam purjehti Suureen satamaan 26. lokakuuta 1530, mutta moni ritari haaveili yhä Rodoksen takaisinvaltaamisesta, sillä Malta oli pieni ja karu saari. Ritarit asettuivat Birgun kaupunkiin ja rakensivat sen vanhan linnan uudelleen Pyhän Angelon linnakkeeksi.
+AIEMPI KYSYMYS: Mitkä ovat muut antiikin seitsemän ihmettä?
+AIEMPI VASTAUS (Livia):
+No jopas, kokonainen lista. Antiikin seitsemän ihmettä olivat Gizan suuri pyramidi, Babylonin riippuvat puutarhat, [[Zeuksen patsas]] Olympiassa, [[Artemiin temppeli]] Efesoksessa, Halikarnassoksen mausoleumi, [[Rodoksen kolossi]] ja Aleksandrian majakka. Listasta on ollut eri versioita, ja eri kirjoittajat mainitsivat osin eri kohteita. Näistä vain Gizan pyramidi on säilynyt nykypäivään. Yksikään niistä ei ole mahtunut kyyhkyn reitille.
+KYSYMYS: Kerro lisää: Rodoksen kolossi
+
+### 229
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Theodosiuksen muurit (historia)
+Tietoruudun teksti: Theodosiuksen muurit suojasivat Konstantinopolia mereltä merelle kaupungin länsipuolella. Ensimmäinen vaihe valmistui vuonna 413 keisari Theodosius toisen alaikäisyyden aikana, kun idän prefekti Anthemios johti työtä; vuosien 437 ja 447 maanjäristysten jälkeen eteen rakennettiin toinen, matalampi muuri ja leveä vallihauta. Kokonaisuus oli kolmiportainen: yli kaksikymmentä metriä leveä ja jopa kymmenen metriä syvä hauta, 8,5 metriä korkea ulkomuuri ja sen takana 12 metriä korkea ja 4,5–6 metriä paksu päämuuri, jota vahvisti 96 tornia. Muuraus on kalkkikiveä, jonka läpi kulkee tiiliraitoja: ne sitovat kivikuoren ja laastiytimen yhteen ja auttavat kestämään maanjäristyksiä. Muurit torjuivat avaarien, arabien, rusien ja bulgaarien piiritykset, eikä ottomaanien tykistö kyennyt murtamaan niitä edes vuoden 1453 lähes kaksi kuukautta kestäneessä piirityksessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sana — kohdekartta / Kohdekartta: Talhan moskeija] 1619–1620 Qubbat Talha on yksi Sanaan vanhimmista moskeijoista, ja sen rakennutti osmanien käskynhaltija Hadji Mehmed Pasha vuosina 1619–1620 ensimmäisen osmanimiehityksen aikana. Minareetti tehtiin samaan aikaan. Vuosina 1831–1832 moskeija kunnostettiin osittain imaami al-Mahdi Abdallahin käskystä; siitä kertoo rukoussalin seinään hakattu kirjoitus. Talha on Al-Bakiriyyan pikkuveli. Se valmistui kaksikymmentäkolme vuotta myöhemmin ja lainasi osan edeltäjänsä muotokielestä, mutta jäi selvästi pienemmäksi: rukoussali on vaatimaton ja minareetti matala, ja juuri siksi rakennus istuu kapeiden kujien väliin luontevammin kuin iso esikuvansa. Kokonaisuuteen kuuluu rukoussalin ja minareetin lisäks…
+- [Istanbul — kohdekartta / Kohdekartta: Suuri basaari] 1455–1461 Suuri basaari alkoi nousta Istanbuliin jo talvella 1455–1456, heti sen jälkeen kun sulttaani Mehmed II oli vallannut kaupungin. Basaarin sydän, kalleuksien kauppahalli Cevahir Bedesten, valmistui vuonna 1461. Aluksi siellä myytiin lähinnä kangasta ja koruja, mutta vuosisatojen kuluessa ympärille rakentui lisää katettuja katuja, kunnes koko kortteli peittyi holvikattojen alle. Nykyisin basaarissa on 61 katettua katua ja jopa 4000 kauppaa, joissa työskentelee noin 26 000 ihmistä. Kadut on jaettu ammattikunnittain: yhdellä myydään koruja, toisella mattoja, kolmannella mausteita tai nahkatavaroita. Vuonna 2014 basaaria pidettiin maailman käydyimpänä nähtävyytenä yli 91 miljoonalla vuo…
+AIEMPI KYSYMYS: Miten Konstantinopoli lopulta vallattiin, jos muuri kesti?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Muurit pitivät vuosisatoja, mutta vuonna 1453 sulttaani [[Mehmed II]] johti kaupungin piiritystä, jossa osmanien suuret tykit vaurioittivat osia muureista. Puolustajat korjasivat vaurioita, mutta heitä oli selvästi vähemmän kuin hyökkääjiä. Lisäksi osmanien laivoja saatiin [[Kultaiseen sarveen]], jolloin puolustajien oli vartioitava myös merenpuoleisia muureja. Ratkaiseva hyökkäys tehtiin 29. toukokuuta 1453, ja kaupunki kaatui samana päivänä; historioitsijat tulkitsevat tapahtumien yksityiskohtia hieman eri tavoin. Tapahtumasta on yli viisisataa vuotta, ja se päätti [[Bysantin]] valtakunnan. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Mehmed II
+
+### 230
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Theodosiuksen muurit (historia)
+Tietoruudun teksti: Theodosiuksen muurit suojasivat Konstantinopolia mereltä merelle kaupungin länsipuolella. Ensimmäinen vaihe valmistui vuonna 413 keisari Theodosius toisen alaikäisyyden aikana, kun idän prefekti Anthemios johti työtä; vuosien 437 ja 447 maanjäristysten jälkeen eteen rakennettiin toinen, matalampi muuri ja leveä vallihauta. Kokonaisuus oli kolmiportainen: yli kaksikymmentä metriä leveä ja jopa kymmenen metriä syvä hauta, 8,5 metriä korkea ulkomuuri ja sen takana 12 metriä korkea ja 4,5–6 metriä paksu päämuuri, jota vahvisti 96 tornia. Muuraus on kalkkikiveä, jonka läpi kulkee tiiliraitoja: ne sitovat kivikuoren ja laastiytimen yhteen ja auttavat kestämään maanjäristyksiä. Muurit torjuivat avaarien, arabien, rusien ja bulgaarien piiritykset, eikä ottomaanien tykistö kyennyt murtamaan niitä edes vuoden 1453 lähes kaksi kuukautta kestäneessä piirityksessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Libya — maalehti / Musiikki: Säkkipilli, joka päättyy kahteen sarveen] Zukra on libyalainen säkkipilli, jossa on kaksoisputki ja kaksi lehmänsarvea putkien päissä. Se on rakenteeltaan vanhempi kuin tunisialainen serkkunsa mizwad, ja sitä soitetaan maan eri puolilla eri tavoin: etelässä ja lännessä säkin kanssa, idässä suoraan suulla ilman säkkiä, jolloin soitin on käytännössä kaksoisklarinetti. Zukra kuuluu juhliin, häihin ja hautajaisiin. Sen rinnalla soivat bambuhuilu, tamburiini, oud ja darbuka — ja taputus, joka on niin monimutkaista, että se on oma soittimensa. Beduiinien kiertävät runolaulajat ovat levittäneet lauluja maan halki; huda on kamelinajajan laulu, jonka rytmin sanotaan matkivan kävelevän kamelin askelia.
+AIEMPI KYSYMYS: Miten Konstantinopoli lopulta vallattiin, jos muuri kesti?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Muurit pitivät vuosisatoja, mutta vuonna 1453 sulttaani [[Mehmed II]] johti kaupungin piiritystä, jossa osmanien suuret tykit vaurioittivat osia muureista. Puolustajat korjasivat vaurioita, mutta heitä oli selvästi vähemmän kuin hyökkääjiä. Lisäksi osmanien laivoja saatiin [[Kultaiseen sarveen]], jolloin puolustajien oli vartioitava myös merenpuoleisia muureja. Ratkaiseva hyökkäys tehtiin 29. toukokuuta 1453, ja kaupunki kaatui samana päivänä; historioitsijat tulkitsevat tapahtumien yksityiskohtia hieman eri tavoin. Tapahtumasta on yli viisisataa vuotta, ja se päätti [[Bysantin]] valtakunnan. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Kultaiseen sarveen
+
+### 231
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Theodosiuksen muurit (historia)
+Tietoruudun teksti: Theodosiuksen muurit suojasivat Konstantinopolia mereltä merelle kaupungin länsipuolella. Ensimmäinen vaihe valmistui vuonna 413 keisari Theodosius toisen alaikäisyyden aikana, kun idän prefekti Anthemios johti työtä; vuosien 437 ja 447 maanjäristysten jälkeen eteen rakennettiin toinen, matalampi muuri ja leveä vallihauta. Kokonaisuus oli kolmiportainen: yli kaksikymmentä metriä leveä ja jopa kymmenen metriä syvä hauta, 8,5 metriä korkea ulkomuuri ja sen takana 12 metriä korkea ja 4,5–6 metriä paksu päämuuri, jota vahvisti 96 tornia. Muuraus on kalkkikiveä, jonka läpi kulkee tiiliraitoja: ne sitovat kivikuoren ja laastiytimen yhteen ja auttavat kestämään maanjäristyksiä. Muurit torjuivat avaarien, arabien, rusien ja bulgaarien piiritykset, eikä ottomaanien tykistö kyennyt murtamaan niitä edes vuoden 1453 lähes kaksi kuukautta kestäneessä piirityksessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aleppo — kohdekartta / Kohdekartta: Antiokian portti] Vanhankaupungin läntisen muurin keskellä seisoo portti, jonka nimi kertoo suunnan: tie vei Antiokiaan, antiikin Syyrian pääkaupunkiin. Kaksi kuusikulmaista bastionia nousee rinnakkain, ja niiden välinen kulkuväylä mutkittelee sen sijaan että menisi suoraan läpi. Aukko on oikeanpuoleisen tornin alla, puolustussyistä: sisään tulija ei pääse vauhtiin eikä näe eteensä. Kivi on valkoista, ja lohkareet ovat noin 0,8 kertaa 1,0 metriä. Bysantin aikana tämä oli kaupungin pääportti, ja sen jälkeen merkitys hiipui. Ajjubidien Aleppon emiiri an-Nasir Yusuf, Saladinin pojanpojanpoika, rakennutti portin uudelleen 1000-luvulta periytyvän perustuksen päälle. Vuosiluvut ovat epätarkkoja: portin kohdalla hä…
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+AIEMPI KYSYMYS: Miten Konstantinopoli lopulta vallattiin, jos muuri kesti?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Muurit pitivät vuosisatoja, mutta vuonna 1453 sulttaani [[Mehmed II]] johti kaupungin piiritystä, jossa osmanien suuret tykit vaurioittivat osia muureista. Puolustajat korjasivat vaurioita, mutta heitä oli selvästi vähemmän kuin hyökkääjiä. Lisäksi osmanien laivoja saatiin [[Kultaiseen sarveen]], jolloin puolustajien oli vartioitava myös merenpuoleisia muureja. Ratkaiseva hyökkäys tehtiin 29. toukokuuta 1453, ja kaupunki kaatui samana päivänä; historioitsijat tulkitsevat tapahtumien yksityiskohtia hieman eri tavoin. Tapahtumasta on yli viisisataa vuotta, ja se päätti [[Bysantin]] valtakunnan. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Bysantin
+
+### 232
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Theodosiuksen muurit (historia)
+Tietoruudun teksti: Theodosiuksen muurit suojasivat Konstantinopolia mereltä merelle kaupungin länsipuolella. Ensimmäinen vaihe valmistui vuonna 413 keisari Theodosius toisen alaikäisyyden aikana, kun idän prefekti Anthemios johti työtä; vuosien 437 ja 447 maanjäristysten jälkeen eteen rakennettiin toinen, matalampi muuri ja leveä vallihauta. Kokonaisuus oli kolmiportainen: yli kaksikymmentä metriä leveä ja jopa kymmenen metriä syvä hauta, 8,5 metriä korkea ulkomuuri ja sen takana 12 metriä korkea ja 4,5–6 metriä paksu päämuuri, jota vahvisti 96 tornia. Muuraus on kalkkikiveä, jonka läpi kulkee tiiliraitoja: ne sitovat kivikuoren ja laastiytimen yhteen ja auttavat kestämään maanjäristyksiä. Muurit torjuivat avaarien, arabien, rusien ja bulgaarien piiritykset, eikä ottomaanien tykistö kyennyt murtamaan niitä edes vuoden 1453 lähes kaksi kuukautta kestäneessä piirityksessä.
+AIEMPI KYSYMYS: Kuka vastasi muurien korjaamisesta?
+AIEMPI VASTAUS (Livia):
+Kas vaan, korjaustöitä. Muurien rakennustyötä johti 400-luvun alussa idän prefekti [[Anthemios]], ja maanjäristysten vaurioiden jälkeen vuosina 437 ja 447 työ jatkui uusilla rakennelmilla. Lähteiden mukaan vuoden 447 vauriot korjattiin poikkeuksellisen nopeasti kaupungin prefektin johdolla, ja töihin osallistui kaupunkilaisia. Muurien kunnossapito kuului muutenkin [[Konstantinopolin]] hallinnolle ja keisarille. Tost muurista riittää kyl kertomista.
+KYSYMYS: Kerro lisää: Anthemios
+
+### 233
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Theodosiuksen muurit (historia)
+Tietoruudun teksti: Theodosiuksen muurit suojasivat Konstantinopolia mereltä merelle kaupungin länsipuolella. Ensimmäinen vaihe valmistui vuonna 413 keisari Theodosius toisen alaikäisyyden aikana, kun idän prefekti Anthemios johti työtä; vuosien 437 ja 447 maanjäristysten jälkeen eteen rakennettiin toinen, matalampi muuri ja leveä vallihauta. Kokonaisuus oli kolmiportainen: yli kaksikymmentä metriä leveä ja jopa kymmenen metriä syvä hauta, 8,5 metriä korkea ulkomuuri ja sen takana 12 metriä korkea ja 4,5–6 metriä paksu päämuuri, jota vahvisti 96 tornia. Muuraus on kalkkikiveä, jonka läpi kulkee tiiliraitoja: ne sitovat kivikuoren ja laastiytimen yhteen ja auttavat kestämään maanjäristyksiä. Muurit torjuivat avaarien, arabien, rusien ja bulgaarien piiritykset, eikä ottomaanien tykistö kyennyt murtamaan niitä edes vuoden 1453 lähes kaksi kuukautta kestäneessä piirityksessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Historia: Kapalıçarşı — kuusikymmentäyksi katettua katua] Istanbulin katettu basaari eli Kapalıçarşı on maailman suurimpia ja vanhimpia katettuja kauppapaikkoja: 61 katettua katua ja yli 4 000 myymälää, joissa käy satojatuhansia ihmisiä päivässä. Sen ydin rakennettiin talvella 1455–56 pian Konstantinopolin valloituksen jälkeen, kun sulttaani Mehmed II pystytti kankaiden ja jalokivien kaupalle oman hallin. Isoisä kulki samojen holvien alla kuin nykypäivän kävijä — basaaria sanotaan usein yhdeksi maailman ensimmäisistä kauppakeskuksista.
+AIEMPI KYSYMYS: Kuka vastasi muurien korjaamisesta?
+AIEMPI VASTAUS (Livia):
+Kas vaan, korjaustöitä. Muurien rakennustyötä johti 400-luvun alussa idän prefekti [[Anthemios]], ja maanjäristysten vaurioiden jälkeen vuosina 437 ja 447 työ jatkui uusilla rakennelmilla. Lähteiden mukaan vuoden 447 vauriot korjattiin poikkeuksellisen nopeasti kaupungin prefektin johdolla, ja töihin osallistui kaupunkilaisia. Muurien kunnossapito kuului muutenkin [[Konstantinopolin]] hallinnolle ja keisarille. Tost muurista riittää kyl kertomista.
+KYSYMYS: Kerro lisää: Konstantinopolin
+
+### 234
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Theodosiuksen muurit (historia)
+Tietoruudun teksti: Theodosiuksen muurit suojasivat Konstantinopolia mereltä merelle kaupungin länsipuolella. Ensimmäinen vaihe valmistui vuonna 413 keisari Theodosius toisen alaikäisyyden aikana, kun idän prefekti Anthemios johti työtä; vuosien 437 ja 447 maanjäristysten jälkeen eteen rakennettiin toinen, matalampi muuri ja leveä vallihauta. Kokonaisuus oli kolmiportainen: yli kaksikymmentä metriä leveä ja jopa kymmenen metriä syvä hauta, 8,5 metriä korkea ulkomuuri ja sen takana 12 metriä korkea ja 4,5–6 metriä paksu päämuuri, jota vahvisti 96 tornia. Muuraus on kalkkikiveä, jonka läpi kulkee tiiliraitoja: ne sitovat kivikuoren ja laastiytimen yhteen ja auttavat kestämään maanjäristyksiä. Muurit torjuivat avaarien, arabien, rusien ja bulgaarien piiritykset, eikä ottomaanien tykistö kyennyt murtamaan niitä edes vuoden 1453 lähes kaksi kuukautta kestäneessä piirityksessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sevilla — kaupunkilehti / Historia: Amfiteatterin muurit purettiin padoksi] Yhdeksän kilometrin päässä Sevillasta seisoo Itálica, jonka Scipio perusti vuonna 206 eaa. haavoittuneille veteraaneilleen ja nimesi Italian mukaan. Se oli ensimmäinen roomalainen asutus koko Hispaniassa, ja siellä syntyi kaksi Rooman keisaria, Trajanus ja Hadrianus. Kaupungin amfiteatteri oli aikanaan valtakunnan kolmanneksi suurin: siihen mahtui 25 000 katsojaa, vaikka kaupungissa asui arviolta 8 000 ihmistä. Sitten tuli hitaampi tuho kuin mikään sota: raunioita louhittiin rakennusaineeksi vuosisatoja, ja vuonna 1740 Sevillan kaupunki määräsi amfiteatterin muurit purettaviksi — kiviä tarvittiin Guadalquiviriin rakennettavaan patoon.
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Vesi sadan mailin päästä] Roomalaiset epäröivät pitkään Karthagon paikan uudelleenkäytössä, mutta Gaius Julius Caesar määräsi vuonna 44 eaa. uuden siirtokunnan perustettavaksi täsmälleen samalle niemelle. Kaupunki kasvoi nopeasti, ja 100-luvulla jaa. siitä oli tullut Rooman valtakunnan läntisen osan toiseksi suurin kaupunki, jossa asui parhaimmillaan satojatuhansia ihmisiä. Näin suuri väestö tarvitsi vettä, jota ei riittänyt lähialueelta: keisari Hadrianuksen aikana rakennettu vesijohto kuljetti vettä Zaghouanin vuorilta peräti 132 kilometrin matkan Karthagoon asti, ja se on yhä yksi pisimmistä koko Rooman valtakunnan tunnetuista vesijohdoista.
+AIEMPI KYSYMYS: Mikä oli Bysantin valtakunta?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on vähän sukuasia. Bysantin valtakunta oli [[Rooman valtakunnan]] itäinen jatke, jonka pääkaupunki oli [[Konstantinopoli]]. Valtakunnan pääkieli oli kreikka, ja sen uskonto oli kristinusko ortodoksisessa muodossaan. Nimi Bysantti on myöhempi, sillä valtakunnan asukkaat kutsuivat itseään roomalaisiksi. Valtakunta päättyi Konstantinopolin valloitukseen vuonna 1453.
+
+Minun sukuni on vanhaa roomalaista, joten pidän tätä jatkumoa melkein oman perheeni tarinana. Kirjeet kulkivat näilläkin reiteillä, kuulemma.
+KYSYMYS: Kerro lisää: Rooman valtakunnan
+
+### 235
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Theodosiuksen muurit (historia)
+Tietoruudun teksti: Theodosiuksen muurit suojasivat Konstantinopolia mereltä merelle kaupungin länsipuolella. Ensimmäinen vaihe valmistui vuonna 413 keisari Theodosius toisen alaikäisyyden aikana, kun idän prefekti Anthemios johti työtä; vuosien 437 ja 447 maanjäristysten jälkeen eteen rakennettiin toinen, matalampi muuri ja leveä vallihauta. Kokonaisuus oli kolmiportainen: yli kaksikymmentä metriä leveä ja jopa kymmenen metriä syvä hauta, 8,5 metriä korkea ulkomuuri ja sen takana 12 metriä korkea ja 4,5–6 metriä paksu päämuuri, jota vahvisti 96 tornia. Muuraus on kalkkikiveä, jonka läpi kulkee tiiliraitoja: ne sitovat kivikuoren ja laastiytimen yhteen ja auttavat kestämään maanjäristyksiä. Muurit torjuivat avaarien, arabien, rusien ja bulgaarien piiritykset, eikä ottomaanien tykistö kyennyt murtamaan niitä edes vuoden 1453 lähes kaksi kuukautta kestäneessä piirityksessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Historia: Kapalıçarşı — kuusikymmentäyksi katettua katua] Istanbulin katettu basaari eli Kapalıçarşı on maailman suurimpia ja vanhimpia katettuja kauppapaikkoja: 61 katettua katua ja yli 4 000 myymälää, joissa käy satojatuhansia ihmisiä päivässä. Sen ydin rakennettiin talvella 1455–56 pian Konstantinopolin valloituksen jälkeen, kun sulttaani Mehmed II pystytti kankaiden ja jalokivien kaupalle oman hallin. Isoisä kulki samojen holvien alla kuin nykypäivän kävijä — basaaria sanotaan usein yhdeksi maailman ensimmäisistä kauppakeskuksista.
+- [Istanbul — kaupunkilehti / Istanbul: Faaraon kivi Sultanahmetin aukiolla] Sultanahmetin aukio oli ennen hippodromi, hevosvaunujen kilparata. Sen keskellä seisoo yhä punagraniittinen obeliski, joka veistettiin Egyptissä faarao Thutmosis III:n aikana noin 1450 eaa. Mikään muu kaupungissa pystyssä oleva ei ole yhtä vanhaa tekoa. Keisari Theodosius toi sen Konstantinopoliin vuonna 390, ja jalustaan hakattiin kaksi kertomusta pystyttämisestä: latinankielinen kehuu työn kestäneen kolmekymmentä päivää, kreikankielisessä lukee kolmekymmentäkaksi.
+AIEMPI KYSYMYS: Mikä oli Bysantin valtakunta?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on vähän sukuasia. Bysantin valtakunta oli [[Rooman valtakunnan]] itäinen jatke, jonka pääkaupunki oli [[Konstantinopoli]]. Valtakunnan pääkieli oli kreikka, ja sen uskonto oli kristinusko ortodoksisessa muodossaan. Nimi Bysantti on myöhempi, sillä valtakunnan asukkaat kutsuivat itseään roomalaisiksi. Valtakunta päättyi Konstantinopolin valloitukseen vuonna 1453.
+
+Minun sukuni on vanhaa roomalaista, joten pidän tätä jatkumoa melkein oman perheeni tarinana. Kirjeet kulkivat näilläkin reiteillä, kuulemma.
+KYSYMYS: Kerro lisää: Konstantinopoli
+
+### 236
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Theodosiuksen muurit (historia)
+Tietoruudun teksti: Theodosiuksen muurit suojasivat Konstantinopolia mereltä merelle kaupungin länsipuolella. Ensimmäinen vaihe valmistui vuonna 413 keisari Theodosius toisen alaikäisyyden aikana, kun idän prefekti Anthemios johti työtä; vuosien 437 ja 447 maanjäristysten jälkeen eteen rakennettiin toinen, matalampi muuri ja leveä vallihauta. Kokonaisuus oli kolmiportainen: yli kaksikymmentä metriä leveä ja jopa kymmenen metriä syvä hauta, 8,5 metriä korkea ulkomuuri ja sen takana 12 metriä korkea ja 4,5–6 metriä paksu päämuuri, jota vahvisti 96 tornia. Muuraus on kalkkikiveä, jonka läpi kulkee tiiliraitoja: ne sitovat kivikuoren ja laastiytimen yhteen ja auttavat kestämään maanjäristyksiä. Muurit torjuivat avaarien, arabien, rusien ja bulgaarien piiritykset, eikä ottomaanien tykistö kyennyt murtamaan niitä edes vuoden 1453 lähes kaksi kuukautta kestäneessä piirityksessä.
+AIEMPI KYSYMYS: Mitä Kultainen portti oli?
+AIEMPI VASTAUS (Livia):
+Just niin, Kultainen portti. Se oli Konstantinopolin maanpuoleisen muurin juhlallinen kulkuportti, jota käytettiin keisarillisissa seremonioissa. Portti kuului [[Theodosiuksen muurien]] linjaan. Osmanien aikana sen ympärille rakennettiin [[Yedikulen]] linnoitus. Kulta kyl kiinnostaa kyyhkyäkin.
+KYSYMYS: Kerro lisää: Theodosiuksen muurien
+
+### 237
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Theodosiuksen muurit (historia)
+Tietoruudun teksti: Theodosiuksen muurit suojasivat Konstantinopolia mereltä merelle kaupungin länsipuolella. Ensimmäinen vaihe valmistui vuonna 413 keisari Theodosius toisen alaikäisyyden aikana, kun idän prefekti Anthemios johti työtä; vuosien 437 ja 447 maanjäristysten jälkeen eteen rakennettiin toinen, matalampi muuri ja leveä vallihauta. Kokonaisuus oli kolmiportainen: yli kaksikymmentä metriä leveä ja jopa kymmenen metriä syvä hauta, 8,5 metriä korkea ulkomuuri ja sen takana 12 metriä korkea ja 4,5–6 metriä paksu päämuuri, jota vahvisti 96 tornia. Muuraus on kalkkikiveä, jonka läpi kulkee tiiliraitoja: ne sitovat kivikuoren ja laastiytimen yhteen ja auttavat kestämään maanjäristyksiä. Muurit torjuivat avaarien, arabien, rusien ja bulgaarien piiritykset, eikä ottomaanien tykistö kyennyt murtamaan niitä edes vuoden 1453 lähes kaksi kuukautta kestäneessä piirityksessä.
+AIEMPI KYSYMYS: Mitä Kultainen portti oli?
+AIEMPI VASTAUS (Livia):
+Just niin, Kultainen portti. Se oli Konstantinopolin maanpuoleisen muurin juhlallinen kulkuportti, jota käytettiin keisarillisissa seremonioissa. Portti kuului [[Theodosiuksen muurien]] linjaan. Osmanien aikana sen ympärille rakennettiin [[Yedikulen]] linnoitus. Kulta kyl kiinnostaa kyyhkyäkin.
+KYSYMYS: Kerro lisää: Yedikulen
+
+### 238
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Theodosiuksen muurit (historia)
+Tietoruudun teksti: Theodosiuksen muurit suojasivat Konstantinopolia mereltä merelle kaupungin länsipuolella. Ensimmäinen vaihe valmistui vuonna 413 keisari Theodosius toisen alaikäisyyden aikana, kun idän prefekti Anthemios johti työtä; vuosien 437 ja 447 maanjäristysten jälkeen eteen rakennettiin toinen, matalampi muuri ja leveä vallihauta. Kokonaisuus oli kolmiportainen: yli kaksikymmentä metriä leveä ja jopa kymmenen metriä syvä hauta, 8,5 metriä korkea ulkomuuri ja sen takana 12 metriä korkea ja 4,5–6 metriä paksu päämuuri, jota vahvisti 96 tornia. Muuraus on kalkkikiveä, jonka läpi kulkee tiiliraitoja: ne sitovat kivikuoren ja laastiytimen yhteen ja auttavat kestämään maanjäristyksiä. Muurit torjuivat avaarien, arabien, rusien ja bulgaarien piiritykset, eikä ottomaanien tykistö kyennyt murtamaan niitä edes vuoden 1453 lähes kaksi kuukautta kestäneessä piirityksessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kohdekartta / Kohdekartta: Sirkecin asema] 1890 Rata Euroopasta Istanbuliin valmistui vaiheittain: ensimmäiset viisitoista kilometriä Halkalıin rakennettiin 1870–1871, ja jatke Sirkeciin valmistui heinäkuussa 1872. Sulttaani Abdülaziz oli itse päättänyt linjauksen — rata kiertää Marmaranmeren rantaa Topkapın palatsin alapuutarhan muurien vierestä. Vuonna 1873 päätepysäkiksi tehtiin "väliaikainen" asema. Lopullisen asemarakennuksen työt alkoivat helmikuussa 1888, ja talo avattiin 3. marraskuuta 1890. Piirtäjä oli preussilainen August Jasmund, jonka Saksan hallitus oli lähettänyt Istanbuliin tutkimaan osmanilaista arkkitehtuuria. Tulos on tunnetuimpia esimerkkejä eurooppalaisesta orientalismista: 1 200 neliömetriä, kaasuvalaistus ja t…
+AIEMPI KYSYMYS: Mitä muita muureja Konstantinopolissa oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Konstantinopoli oli suojattu myös merenpuoleisilla muureilla [[Marmaranmeren]] ja [[Kultaisen sarven]] rannoilla. Ennen Theodosiuksen muureja kaupungin länsipuolella oli [[Konstantinus Suuren]] aikainen muuri, joka jäi kaupungin sisälle sen kasvaessa. Lisäksi Blakhernain kaupunginosan puolustusta vahvistettiin omilla muureillaan. Muuria muurin perään.
+KYSYMYS: Kerro lisää: Marmaranmeren
+
+### 239
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Theodosiuksen muurit (historia)
+Tietoruudun teksti: Theodosiuksen muurit suojasivat Konstantinopolia mereltä merelle kaupungin länsipuolella. Ensimmäinen vaihe valmistui vuonna 413 keisari Theodosius toisen alaikäisyyden aikana, kun idän prefekti Anthemios johti työtä; vuosien 437 ja 447 maanjäristysten jälkeen eteen rakennettiin toinen, matalampi muuri ja leveä vallihauta. Kokonaisuus oli kolmiportainen: yli kaksikymmentä metriä leveä ja jopa kymmenen metriä syvä hauta, 8,5 metriä korkea ulkomuuri ja sen takana 12 metriä korkea ja 4,5–6 metriä paksu päämuuri, jota vahvisti 96 tornia. Muuraus on kalkkikiveä, jonka läpi kulkee tiiliraitoja: ne sitovat kivikuoren ja laastiytimen yhteen ja auttavat kestämään maanjäristyksiä. Muurit torjuivat avaarien, arabien, rusien ja bulgaarien piiritykset, eikä ottomaanien tykistö kyennyt murtamaan niitä edes vuoden 1453 lähes kaksi kuukautta kestäneessä piirityksessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vladivostok — kohdekartta / Kohdekartta: Kultaisen sarven silta] avattu 2012 Kultaisen sarven lahti teki Vladivostokista sataman, mutta se myös halkaisi kaupungin: Tšurkinin puolelle pääsi vuosikymmenten ajan vain lautalla tai pitkällä kierrolla lahden pohjukan kautta, pahimmillaan puolentoista–kahden tunnin matkalla. Silta tilattiin 2006, rakennustyöt alkoivat heinäkuussa 2008, ja elokuussa 2012 vuoden 2012 APEC-huippukokouksen alla lahden yli avattiin 1 387 metrin vinoköysisilta. Ylitys kestää nyt viidestä kymmeneen minuuttia. Mitat ovat kaupungin mittakaavassa valtavat: pääjänne on 737 metriä, V-kirjaimen muotoiset pylonit nousevat 222 metriin ja kannen alla on kuusikymmentä metriä vapaata korkeutta laivoille. Samana kesänä valmistui toinenkin jättilä…
+AIEMPI KYSYMYS: Mitä muita muureja Konstantinopolissa oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Konstantinopoli oli suojattu myös merenpuoleisilla muureilla [[Marmaranmeren]] ja [[Kultaisen sarven]] rannoilla. Ennen Theodosiuksen muureja kaupungin länsipuolella oli [[Konstantinus Suuren]] aikainen muuri, joka jäi kaupungin sisälle sen kasvaessa. Lisäksi Blakhernain kaupunginosan puolustusta vahvistettiin omilla muureillaan. Muuria muurin perään.
+KYSYMYS: Kerro lisää: Kultaisen sarven
+
+### 240
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Theodosiuksen muurit (historia)
+Tietoruudun teksti: Theodosiuksen muurit suojasivat Konstantinopolia mereltä merelle kaupungin länsipuolella. Ensimmäinen vaihe valmistui vuonna 413 keisari Theodosius toisen alaikäisyyden aikana, kun idän prefekti Anthemios johti työtä; vuosien 437 ja 447 maanjäristysten jälkeen eteen rakennettiin toinen, matalampi muuri ja leveä vallihauta. Kokonaisuus oli kolmiportainen: yli kaksikymmentä metriä leveä ja jopa kymmenen metriä syvä hauta, 8,5 metriä korkea ulkomuuri ja sen takana 12 metriä korkea ja 4,5–6 metriä paksu päämuuri, jota vahvisti 96 tornia. Muuraus on kalkkikiveä, jonka läpi kulkee tiiliraitoja: ne sitovat kivikuoren ja laastiytimen yhteen ja auttavat kestämään maanjäristyksiä. Muurit torjuivat avaarien, arabien, rusien ja bulgaarien piiritykset, eikä ottomaanien tykistö kyennyt murtamaan niitä edes vuoden 1453 lähes kaksi kuukautta kestäneessä piirityksessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aleppo — kaupunkilehti / Aleppo: Katedraalin pylväät jäivät kouluun] Vanhankaupungin al-Jalloumin korttelissa seisoo al-Halawiyya-koulu. Sen paikalla oli 400-luvulla Aleppon suuri bysanttilainen katedraali, jonka rakennutti Helena, keisari Konstantinus Suuren äiti. Vuonna 1124 ristiretkeläiset ryöstelivät kaupungin ympäristöä, ja Aleppon ylituomari Ibn al-Khashshab alkoi muuttaa katedraalia moskeijaksi. Vuonna 1149 Nur ad-Din teki rakennuksesta madrasan eli uskonnollisen koulun hanafilaisen lakikoulukunnan seuraajille. Kirkosta ei purettu kaikkea: vanhan katedraalin pylväät seisovat yhä salissa, ja niiden päissä ovat akantinlehdiksi veistetyt kapiteelit.
+AIEMPI KYSYMYS: Mitä muita muureja Konstantinopolissa oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Konstantinopoli oli suojattu myös merenpuoleisilla muureilla [[Marmaranmeren]] ja [[Kultaisen sarven]] rannoilla. Ennen Theodosiuksen muureja kaupungin länsipuolella oli [[Konstantinus Suuren]] aikainen muuri, joka jäi kaupungin sisälle sen kasvaessa. Lisäksi Blakhernain kaupunginosan puolustusta vahvistettiin omilla muureillaan. Muuria muurin perään.
+KYSYMYS: Kerro lisää: Konstantinus Suuren
