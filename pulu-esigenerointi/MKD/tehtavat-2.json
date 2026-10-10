@@ -1,0 +1,398 @@
+[
+ {
+  "n": 1,
+  "kohta": "kohde:ohridinjarvi",
+  "kasite": "Prespajärveltä",
+  "kysymys": "Kerro lisää: Prespajärveltä"
+ },
+ {
+  "n": 2,
+  "kohta": "kohde:ohridinjarvi",
+  "kasite": "endeemisiä",
+  "kysymys": "Kerro lisää: endeemisiä"
+ },
+ {
+  "n": 3,
+  "kohta": "kohde:ohridinjarvi",
+  "kasite": "endeemistä",
+  "kysymys": "Kerro lisää: endeemistä"
+ },
+ {
+  "n": 4,
+  "kohta": "kohde:ohridinjarvi",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 5,
+  "kohta": "kohde:ohridinjarvi",
+  "kasite": "karstikanavien",
+  "kysymys": "Kerro lisää: karstikanavien"
+ },
+ {
+  "n": 6,
+  "kohta": "kohde:ohridinjarvi",
+  "kasite": "Ohrid",
+  "kysymys": "Kerro lisää: Ohrid"
+ },
+ {
+  "n": 7,
+  "kohta": "kohde:ohridinjarvi",
+  "kasite": "Struga",
+  "kysymys": "Kerro lisää: Struga"
+ },
+ {
+  "n": 8,
+  "kohta": "kohde:ohridinjarvi",
+  "kasite": "Pogradec",
+  "kysymys": "Kerro lisää: Pogradec"
+ },
+ {
+  "n": 9,
+  "kohta": "kohde:ohridinjarvi",
+  "kasite": "Unesco",
+  "kysymys": "Kerro lisää: Unesco"
+ },
+ {
+  "n": 10,
+  "kohta": "kohde:ohridinjarvi",
+  "kasite": "maailmanperintökohteeksi",
+  "kysymys": "Kerro lisää: maailmanperintökohteeksi"
+ },
+ {
+  "n": 11,
+  "kohta": "kohde:matkan-kanjoni",
+  "kasite": "Vrelo-luola",
+  "kysymys": "Kerro lisää: Vrelo-luola"
+ },
+ {
+  "n": 12,
+  "kohta": "kohde:matkan-kanjoni",
+  "kasite": "Treskan",
+  "kysymys": "Kerro lisää: Treskan"
+ },
+ {
+  "n": 13,
+  "kohta": "kohde:matkan-kanjoni",
+  "kasite": "luostaria",
+  "kysymys": "Kerro lisää: luostaria"
+ },
+ {
+  "n": 14,
+  "kohta": "kohde:matkan-kanjoni",
+  "kasite": "Skopjen",
+  "kysymys": "Kerro lisää: Skopjen"
+ },
+ {
+  "n": 15,
+  "kohta": "kohde:matkan-kanjoni",
+  "kasite": "Treska-joki",
+  "kysymys": "Kerro lisää: Treska-joki"
+ },
+ {
+  "n": 16,
+  "kohta": "kohde:matkan-kanjoni",
+  "kasite": "luolaa",
+  "kysymys": "Kerro lisää: luolaa"
+ },
+ {
+  "n": 17,
+  "kohta": "kohde:matkan-kanjoni",
+  "kasite": "Vrelo-luolan",
+  "kysymys": "Kerro lisää: Vrelo-luolan"
+ },
+ {
+  "n": 18,
+  "kohta": "kohde:stobi",
+  "kasite": "Erigon",
+  "kysymys": "Kerro lisää: Erigon"
+ },
+ {
+  "n": 19,
+  "kohta": "kohde:stobi",
+  "kasite": "Axios",
+  "kysymys": "Kerro lisää: Axios"
+ },
+ {
+  "n": 20,
+  "kohta": "kohde:stobi",
+  "kasite": "Gradskon",
+  "kysymys": "Kerro lisää: Gradskon"
+ },
+ {
+  "n": 21,
+  "kohta": "kohde:stobi",
+  "kasite": "basilika",
+  "kysymys": "Kerro lisää: basilika"
+ },
+ {
+  "n": 22,
+  "kohta": "kohde:stobi",
+  "kasite": "synagogan",
+  "kysymys": "Kerro lisää: synagogan"
+ },
+ {
+  "n": 23,
+  "kohta": "kohde:stobi",
+  "kasite": "Rooman",
+  "kysymys": "Kerro lisää: Rooman"
+ },
+ {
+  "n": 24,
+  "kohta": "kohde:stobi",
+  "kasite": "municipiumin",
+  "kysymys": "Kerro lisää: municipiumin"
+ },
+ {
+  "n": 25,
+  "kohta": "kohde:stobi",
+  "kasite": "Macedonia Salutaris",
+  "kysymys": "Kerro lisää: Macedonia Salutaris"
+ },
+ {
+  "n": 26,
+  "kohta": "kohde:stobi",
+  "kasite": "maanjäristys",
+  "kysymys": "Kerro lisää: maanjäristys"
+ },
+ {
+  "n": 27,
+  "kohta": "kohde:stobi",
+  "kasite": "ostrogoottien",
+  "kysymys": "Kerro lisää: ostrogoottien"
+ },
+ {
+  "n": 28,
+  "kohta": "kohde:stobi",
+  "kasite": "piispanbasilikan",
+  "kysymys": "Kerro lisää: piispanbasilikan"
+ },
+ {
+  "n": 29,
+  "kohta": "kohde:stobi",
+  "kasite": "riikinkukkomosaiikki",
+  "kysymys": "Kerro lisää: riikinkukkomosaiikki"
+ },
+ {
+  "n": 30,
+  "kohta": "kohde:stobi",
+  "kasite": "denarin",
+  "kysymys": "Kerro lisää: denarin"
+ },
+ {
+  "n": 31,
+  "kohta": "kohde:herakleia-lynkestis",
+  "kasite": "Filippos II",
+  "kysymys": "Kerro lisää: Filippos II"
+ },
+ {
+  "n": 32,
+  "kohta": "kohde:herakleia-lynkestis",
+  "kasite": "Heraklesin",
+  "kysymys": "Kerro lisää: Heraklesin"
+ },
+ {
+  "n": 33,
+  "kohta": "kohde:herakleia-lynkestis",
+  "kasite": "Bitolan",
+  "kysymys": "Kerro lisää: Bitolan"
+ },
+ {
+  "n": 34,
+  "kohta": "kohde:herakleia-lynkestis",
+  "kasite": "Via Egnatian",
+  "kysymys": "Kerro lisää: Via Egnatian"
+ },
+ {
+  "n": 35,
+  "kohta": "kohde:herakleia-lynkestis",
+  "kasite": "Bysantionin",
+  "kysymys": "Kerro lisää: Bysantionin"
+ },
+ {
+  "n": 36,
+  "kohta": "kohde:herakleia-lynkestis",
+  "kasite": "Adrianmeren",
+  "kysymys": "Kerro lisää: Adrianmeren"
+ },
+ {
+  "n": 37,
+  "kohta": "kohde:herakleia-lynkestis",
+  "kasite": "teatteri",
+  "kysymys": "Kerro lisää: teatteri"
+ },
+ {
+  "n": 38,
+  "kohta": "kohde:herakleia-lynkestis",
+  "kasite": "basilika",
+  "kysymys": "Kerro lisää: basilika"
+ },
+ {
+  "n": 39,
+  "kohta": "kohde:herakleia-lynkestis",
+  "kasite": "lattiamosaiikki",
+  "kysymys": "Kerro lisää: lattiamosaiikki"
+ },
+ {
+  "n": 40,
+  "kohta": "kohde:herakleia-lynkestis",
+  "kasite": "maanjäristyksen",
+  "kysymys": "Kerro lisää: maanjäristyksen"
+ },
+ {
+  "n": 41,
+  "kohta": "kohde:herakleia-lynkestis",
+  "kasite": "slaavien",
+  "kysymys": "Kerro lisää: slaavien"
+ },
+ {
+  "n": 42,
+  "kohta": "kohde:mavrovon-jarvi",
+  "kasite": "tekojärvi",
+  "kysymys": "Kerro lisää: tekojärvi"
+ },
+ {
+  "n": 43,
+  "kohta": "kohde:mavrovon-jarvi",
+  "kasite": "Šar-vuoret",
+  "kysymys": "Kerro lisää: Šar-vuoret"
+ },
+ {
+  "n": 44,
+  "kohta": "kohde:mavrovon-jarvi",
+  "kasite": "Pyhän Nikolain kirkko",
+  "kysymys": "Kerro lisää: Pyhän Nikolain kirkko"
+ },
+ {
+  "n": 45,
+  "kohta": "kohde:mavrovon-jarvi",
+  "kasite": "Mavrovon kansallispuistoon",
+  "kysymys": "Kerro lisää: Mavrovon kansallispuistoon"
+ },
+ {
+  "n": 46,
+  "kohta": "kohde:mavrovon-jarvi",
+  "kasite": "Skopjesta",
+  "kysymys": "Kerro lisää: Skopjesta"
+ },
+ {
+  "n": 47,
+  "kohta": "kohde:mavrovon-jarvi",
+  "kasite": "Bistran vuoret",
+  "kysymys": "Kerro lisää: Bistran vuoret"
+ },
+ {
+  "n": 48,
+  "kohta": "kohde:mavrovon-jarvi",
+  "kasite": "taimenia",
+  "kysymys": "Kerro lisää: taimenia"
+ },
+ {
+  "n": 49,
+  "kohta": "kohde:kokinon-observatorio",
+  "kasite": "Tatićev Kamen",
+  "kysymys": "Kerro lisää: Tatićev Kamen"
+ },
+ {
+  "n": 50,
+  "kohta": "kohde:kokinon-observatorio",
+  "kasite": "Pohjois-Makedoniassa",
+  "kysymys": "Kerro lisää: Pohjois-Makedoniassa"
+ },
+ {
+  "n": 51,
+  "kohta": "kohde:kokinon-observatorio",
+  "kasite": "pronssikautiseksi",
+  "kysymys": "Kerro lisää: pronssikautiseksi"
+ },
+ {
+  "n": 52,
+  "kohta": "kohde:kokinon-observatorio",
+  "kasite": "Kokinon",
+  "kysymys": "Kerro lisää: Kokinon"
+ },
+ {
+  "n": 53,
+  "kohta": "kohde:kokinon-observatorio",
+  "kasite": "aurinko-observatoriona",
+  "kysymys": "Kerro lisää: aurinko-observatoriona"
+ },
+ {
+  "n": 54,
+  "kohta": "kohde:kokinon-observatorio",
+  "kasite": "Kumanovosta",
+  "kysymys": "Kerro lisää: Kumanovosta"
+ },
+ {
+  "n": 55,
+  "kohta": "kohde:kokinon-observatorio",
+  "kasite": "Euroopan",
+  "kysymys": "Kerro lisää: Euroopan"
+ },
+ {
+  "n": 56,
+  "kohta": "kohde:kokinon-observatorio",
+  "kasite": "päivänseisaukset",
+  "kysymys": "Kerro lisää: päivänseisaukset"
+ },
+ {
+  "n": 57,
+  "kohta": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
+  "kasite": "Jugoslavian",
+  "kysymys": "Kerro lisää: Jugoslavian"
+ },
+ {
+  "n": 58,
+  "kohta": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
+  "kasite": "Skopjen maanjäristys",
+  "kysymys": "Kerro lisää: Skopjen maanjäristys"
+ },
+ {
+  "n": 59,
+  "kohta": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
+  "kasite": "Skopjeen",
+  "kysymys": "Kerro lisää: Skopjeen"
+ },
+ {
+  "n": 60,
+  "kohta": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
+  "kasite": "maanjäristys",
+  "kysymys": "Kerro lisää: maanjäristys"
+ },
+ {
+  "n": 61,
+  "kohta": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
+  "kasite": "maanjäristyksen",
+  "kysymys": "Kerro lisää: maanjäristyksen"
+ },
+ {
+  "n": 62,
+  "kohta": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
+  "kasite": "Skopjen",
+  "kysymys": "Kerro lisää: Skopjen"
+ },
+ {
+  "n": 63,
+  "kohta": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
+  "kasite": "Pohjois-Makedonia",
+  "kysymys": "Kerro lisää: Pohjois-Makedonia"
+ },
+ {
+  "n": 64,
+  "kohta": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
+  "kasite": "Aleksanteri Suuren",
+  "kysymys": "Kerro lisää: Aleksanteri Suuren"
+ },
+ {
+  "n": 65,
+  "kohta": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
+  "kasite": "Vardar",
+  "kysymys": "Kerro lisää: Vardar"
+ },
+ {
+  "n": 66,
+  "kohta": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
+  "kasite": "Kale",
+  "kysymys": "Kerro lisää: Kale"
+ }
+]

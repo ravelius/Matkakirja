@@ -1,0 +1,871 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ohridinjärvi (luonto · järvi)
+Tietoruudun teksti: Ohridinjärvi on Pohjois-Makedonian ja Albanian rajalla sijaitseva vuoristojärvi, jonka pinta-ala on 358 neliökilometriä ja suurin syvyys 288 metriä. Järven arvioidaan syntyneen 3–5 miljoonaa vuotta sitten, ja sen vesi tulee osin maanalaisten karstikanavien kautta Prespajärveltä. Siellä elää yli 200 endeemistä lajia, joita ei tavata muualla. Pohjois-Makedonian osuus on 69 prosenttia pinta-alasta, ja rannalla ovat Ohrid ja Struga. Albanian puolella sijaitsee Pogradec. Unescon maailmanperintökohteeksi järvi merkittiin vuonna 1979, ja Albanian puoli liitettiin siihen vuonna 2019.
+AIEMPI KYSYMYS: Kuinka vanha Ohridinjärvi on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tää on kyl hyvä kysymys. Ohridinjärven arvioidaan syntyneen 3–5 miljoonaa vuotta sitten, ja se on yksi Euroopan vanhimmista ja syvimmistä järvistä. Sen vesi tulee osin maanalaisten kanavien kautta [[Prespajärveltä]], ja järvessä elää [[endeemisiä]] lajeja, joita ei tavata muualla maailmassa. Melkoinen ikä, vaikka suku on vanhaa sekin.
+KYSYMYS: Kerro lisää: Prespajärveltä
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ohridinjärvi (luonto · järvi)
+Tietoruudun teksti: Ohridinjärvi on Pohjois-Makedonian ja Albanian rajalla sijaitseva vuoristojärvi, jonka pinta-ala on 358 neliökilometriä ja suurin syvyys 288 metriä. Järven arvioidaan syntyneen 3–5 miljoonaa vuotta sitten, ja sen vesi tulee osin maanalaisten karstikanavien kautta Prespajärveltä. Siellä elää yli 200 endeemistä lajia, joita ei tavata muualla. Pohjois-Makedonian osuus on 69 prosenttia pinta-alasta, ja rannalla ovat Ohrid ja Struga. Albanian puolella sijaitsee Pogradec. Unescon maailmanperintökohteeksi järvi merkittiin vuonna 1979, ja Albanian puoli liitettiin siihen vuonna 2019.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanganjika — kaupunkilehti / Tanganjikan kirjoahvenet: Sadat lajit, jotka syntyivät samassa järvessä] Tanganjikajärvessä elää ainakin 250 kirjoahvenlajia, ja niistä lähes kaikki, noin 98 prosenttia, ovat endeemisiä eli löytyvät vain tästä yhdestä järvestä. Miljoonien vuosien eristyksissä lajit ovat erikoistuneet kukin omaan koloonsa, ruokavalioonsa ja käyttäytymiseensä niin voimakkaasti, että tutkijat pitävät järveä yhtenä maailman merkittävimmistä paikoista lajiutumisen tutkimiseen. Osa lajeista elää kallioisilla rannoilla levää kaapien, osa avovedessä saalistaen ja osa jopa toistensa suomuja syöden.
+AIEMPI KYSYMYS: Kuinka vanha Ohridinjärvi on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tää on kyl hyvä kysymys. Ohridinjärven arvioidaan syntyneen 3–5 miljoonaa vuotta sitten, ja se on yksi Euroopan vanhimmista ja syvimmistä järvistä. Sen vesi tulee osin maanalaisten kanavien kautta [[Prespajärveltä]], ja järvessä elää [[endeemisiä]] lajeja, joita ei tavata muualla maailmassa. Melkoinen ikä, vaikka suku on vanhaa sekin.
+KYSYMYS: Kerro lisää: endeemisiä
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ohridinjärvi (luonto · järvi)
+Tietoruudun teksti: Ohridinjärvi on Pohjois-Makedonian ja Albanian rajalla sijaitseva vuoristojärvi, jonka pinta-ala on 358 neliökilometriä ja suurin syvyys 288 metriä. Järven arvioidaan syntyneen 3–5 miljoonaa vuotta sitten, ja sen vesi tulee osin maanalaisten karstikanavien kautta Prespajärveltä. Siellä elää yli 200 endeemistä lajia, joita ei tavata muualla. Pohjois-Makedonian osuus on 69 prosenttia pinta-alasta, ja rannalla ovat Ohrid ja Struga. Albanian puolella sijaitsee Pogradec. Unescon maailmanperintökohteeksi järvi merkittiin vuonna 1979, ja Albanian puoli liitettiin siihen vuonna 2019.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [BMU — maalehti / Luonto: Puu joka melkein hävisi kokonaan] 1946–1953 — Bermudankataja oli saariston maisemaa hallinnut puulaji, jonka punertavasta puusta tehtiin laivoja, huonekaluja ja taloja. Toisen maailmansodan aikana tukikohtien rakentaminen toi saarelle vahingossa kaksi kilpikaskaslajia, jotka levisivät hallitsemattomasti. Vuosina 1946–1953 tuho, jota Bermudalla kutsutaan nimellä "The Blight", tappoi noin 95–99 prosenttia saariston katajista muutamassa vuodessa ja autioitti maiseman. Vain pieni osa puista osoittautui vastustuskykyiseksi, ja niiden jälkikasvu muodostaa nykyisen, noin kymmenesosan entisestä kannasta olevan populaation. Tuho vei mukanaan myös kaksi endeemistä kaskaslajia ja yhden mehiläislajin.
+- [Viktoria Nyanza — kaupunkilehti / Evoluution laboratorio: Satojen lajien parvi] Kun edellinen kuivakausi noin 15 000 vuotta sitten päättyi ja Viktorianjärvi täyttyi uudelleen vedellä, järveen jäi vain kourallinen kirjoahvenlajien esi-isiä. Evoluutio teki tehtävänsä huimaa vauhtia: tutkijoiden mukaan järvessä ehti kehittyä yli 500 endeemistä kirjoahvenlajia, jotka jakoivat keskenään lähes jokaisen kuviteltavissa olevan ravintolähteen — osa söi vain kotiloita, osa toisten kalojen suomuja, osa toisten kalojen munia suoraan emokalan suusta. Tämä oli nopein tunnettu selkärankaisten lajiutumistapahtuma koko maapallolla, ja se tapahtui geologisessa mittakaavassa silmänräpäyksessä, vain muutamassa tuhannessa vuodessa.
+AIEMPI KYSYMYS: Kuinka monta endeemistä lajia järvessä elää?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on helppo. Ohridinjärvessä elää yli 200 [[endeemistä]] lajia, eli lajia, joita ei tavata muualla maailmassa. Järvi on myös [[Unescon]] maailmanperintökohde, ja sen suurin syvyys on 288 metriä. Yli kaksisataa, enkä ole yhtäkään tavannut.
+KYSYMYS: Kerro lisää: endeemistä
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ohridinjärvi (luonto · järvi)
+Tietoruudun teksti: Ohridinjärvi on Pohjois-Makedonian ja Albanian rajalla sijaitseva vuoristojärvi, jonka pinta-ala on 358 neliökilometriä ja suurin syvyys 288 metriä. Järven arvioidaan syntyneen 3–5 miljoonaa vuotta sitten, ja sen vesi tulee osin maanalaisten karstikanavien kautta Prespajärveltä. Siellä elää yli 200 endeemistä lajia, joita ei tavata muualla. Pohjois-Makedonian osuus on 69 prosenttia pinta-alasta, ja rannalla ovat Ohrid ja Struga. Albanian puolella sijaitsee Pogradec. Unescon maailmanperintökohteeksi järvi merkittiin vuonna 1979, ja Albanian puoli liitettiin siihen vuonna 2019.
+AIEMPI KYSYMYS: Kuinka monta endeemistä lajia järvessä elää?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on helppo. Ohridinjärvessä elää yli 200 [[endeemistä]] lajia, eli lajia, joita ei tavata muualla maailmassa. Järvi on myös [[Unescon]] maailmanperintökohde, ja sen suurin syvyys on 288 metriä. Yli kaksisataa, enkä ole yhtäkään tavannut.
+KYSYMYS: Kerro lisää: Unescon
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ohridinjärvi (luonto · järvi)
+Tietoruudun teksti: Ohridinjärvi on Pohjois-Makedonian ja Albanian rajalla sijaitseva vuoristojärvi, jonka pinta-ala on 358 neliökilometriä ja suurin syvyys 288 metriä. Järven arvioidaan syntyneen 3–5 miljoonaa vuotta sitten, ja sen vesi tulee osin maanalaisten karstikanavien kautta Prespajärveltä. Siellä elää yli 200 endeemistä lajia, joita ei tavata muualla. Pohjois-Makedonian osuus on 69 prosenttia pinta-alasta, ja rannalla ovat Ohrid ja Struga. Albanian puolella sijaitsee Pogradec. Unescon maailmanperintökohteeksi järvi merkittiin vuonna 1979, ja Albanian puoli liitettiin siihen vuonna 2019.
+AIEMPI KYSYMYS: Mistä Ohridinjärven vesi tulee?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tää on kyl hyvä kysymys. Ohridinjärven vesi tulee osin maanalaisten [[karstikanavien]] kautta [[Prespajärveltä]]. Vesi kulkee siis osittain maan alla, näkymättömiä väyliä pitkin. Minä pysyn mieluummin pinnalla.
+KYSYMYS: Kerro lisää: karstikanavien
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ohridinjärvi (luonto · järvi)
+Tietoruudun teksti: Ohridinjärvi on Pohjois-Makedonian ja Albanian rajalla sijaitseva vuoristojärvi, jonka pinta-ala on 358 neliökilometriä ja suurin syvyys 288 metriä. Järven arvioidaan syntyneen 3–5 miljoonaa vuotta sitten, ja sen vesi tulee osin maanalaisten karstikanavien kautta Prespajärveltä. Siellä elää yli 200 endeemistä lajia, joita ei tavata muualla. Pohjois-Makedonian osuus on 69 prosenttia pinta-alasta, ja rannalla ovat Ohrid ja Struga. Albanian puolella sijaitsee Pogradec. Unescon maailmanperintökohteeksi järvi merkittiin vuonna 1979, ja Albanian puoli liitettiin siihen vuonna 2019.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Balkanin Jerusalem] 9.–13. vuosisata — Ohridin järvi on yksi Euroopan vanhimmista ja syvimmistä järvistä – sen pohjassa elää lajeja, joita ei tavata muualla maailmassa. Rannalla kohoava Ohridin kaupunki oli 800-luvun lopulla Pyhän Kliment Ohridilaisen koulun ansiosta slaavilaisen kirjallisuuden ja kyrillisen kirjaimiston tärkeimpiä keskuksia Euroopassa. Keskiajalla kaupungissa kerrottiin olleen 365 kirkkoa, yksi joka päivälle – legenda liioittelee, mutta kuuluisin jäljellä olevista on kalliolle Kaneon niemelle rakennettu Pyhän Johanneksen kirkko 1200-luvulta. Unesco liitti järven ja vanhankaupungin maailmanperintöluetteloon jo 1979.
+AIEMPI KYSYMYS: Mitkä kaupungit sijaitsevat Ohridinjärven rannalla?
+AIEMPI VASTAUS (Livia):
+No niin, tän tiedän. Ohridinjärven rannalla sijaitsevat Pohjois-Makedonian puolella [[Ohrid]] ja [[Struga]] sekä Albanian puolella [[Pogradec]]. Järvi on kahden maan rajalla, ja Pohjois-Makedonian osuus on 69 prosenttia pinta-alasta. Kolme kaupunkia, kaksi maata ja yksi kyyhky, joka ei välitä rajoista.
+KYSYMYS: Kerro lisää: Ohrid
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ohridinjärvi (luonto · järvi)
+Tietoruudun teksti: Ohridinjärvi on Pohjois-Makedonian ja Albanian rajalla sijaitseva vuoristojärvi, jonka pinta-ala on 358 neliökilometriä ja suurin syvyys 288 metriä. Järven arvioidaan syntyneen 3–5 miljoonaa vuotta sitten, ja sen vesi tulee osin maanalaisten karstikanavien kautta Prespajärveltä. Siellä elää yli 200 endeemistä lajia, joita ei tavata muualla. Pohjois-Makedonian osuus on 69 prosenttia pinta-alasta, ja rannalla ovat Ohrid ja Struga. Albanian puolella sijaitsee Pogradec. Unescon maailmanperintökohteeksi järvi merkittiin vuonna 1979, ja Albanian puoli liitettiin siihen vuonna 2019.
+AIEMPI KYSYMYS: Mitkä kaupungit sijaitsevat Ohridinjärven rannalla?
+AIEMPI VASTAUS (Livia):
+No niin, tän tiedän. Ohridinjärven rannalla sijaitsevat Pohjois-Makedonian puolella [[Ohrid]] ja [[Struga]] sekä Albanian puolella [[Pogradec]]. Järvi on kahden maan rajalla, ja Pohjois-Makedonian osuus on 69 prosenttia pinta-alasta. Kolme kaupunkia, kaksi maata ja yksi kyyhky, joka ei välitä rajoista.
+KYSYMYS: Kerro lisää: Struga
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ohridinjärvi (luonto · järvi)
+Tietoruudun teksti: Ohridinjärvi on Pohjois-Makedonian ja Albanian rajalla sijaitseva vuoristojärvi, jonka pinta-ala on 358 neliökilometriä ja suurin syvyys 288 metriä. Järven arvioidaan syntyneen 3–5 miljoonaa vuotta sitten, ja sen vesi tulee osin maanalaisten karstikanavien kautta Prespajärveltä. Siellä elää yli 200 endeemistä lajia, joita ei tavata muualla. Pohjois-Makedonian osuus on 69 prosenttia pinta-alasta, ja rannalla ovat Ohrid ja Struga. Albanian puolella sijaitsee Pogradec. Unescon maailmanperintökohteeksi järvi merkittiin vuonna 1979, ja Albanian puoli liitettiin siihen vuonna 2019.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Luonto: Prespajärvi ja sen Maligradin saari] vuodesta 1999 — Suuri Prespajärvi lepää 853 metrin korkeudessa kolmen maan rajalla, ja Albanian osuus sen 259 neliökilometrin pinta-alasta on 46,3 neliökilometriä. Albanian puolella järven rannat kuuluvat vuonna 1999 perustettuun Prespan kansallispuistoon, jonka pinta-ala on noin 276 neliökilometriä. Pieneltä Maligradin saarelta löytyy paikallisen aatelismiehen vuonna 1369 rakennuttama Pyhän Marian kirkko. Prespan vedet purkautuvat karstin maanalaisten kanavien kautta lähteinä Ohridjärveen, jonka pinta on noin 150 metriä alempana. Ohridjärven Albanian puolella sijaitsee Pogradec, ja UNESCO ulotti järven suojelualueen Albanian rannalle vuonna 2019.
+AIEMPI KYSYMYS: Mitkä kaupungit sijaitsevat Ohridinjärven rannalla?
+AIEMPI VASTAUS (Livia):
+No niin, tän tiedän. Ohridinjärven rannalla sijaitsevat Pohjois-Makedonian puolella [[Ohrid]] ja [[Struga]] sekä Albanian puolella [[Pogradec]]. Järvi on kahden maan rajalla, ja Pohjois-Makedonian osuus on 69 prosenttia pinta-alasta. Kolme kaupunkia, kaksi maata ja yksi kyyhky, joka ei välitä rajoista.
+KYSYMYS: Kerro lisää: Pogradec
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ohridinjärvi (luonto · järvi)
+Tietoruudun teksti: Ohridinjärvi on Pohjois-Makedonian ja Albanian rajalla sijaitseva vuoristojärvi, jonka pinta-ala on 358 neliökilometriä ja suurin syvyys 288 metriä. Järven arvioidaan syntyneen 3–5 miljoonaa vuotta sitten, ja sen vesi tulee osin maanalaisten karstikanavien kautta Prespajärveltä. Siellä elää yli 200 endeemistä lajia, joita ei tavata muualla. Pohjois-Makedonian osuus on 69 prosenttia pinta-alasta, ja rannalla ovat Ohrid ja Struga. Albanian puolella sijaitsee Pogradec. Unescon maailmanperintökohteeksi järvi merkittiin vuonna 1979, ja Albanian puoli liitettiin siihen vuonna 2019.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Arabiemiirikunnat — maalehti / Keidas: Kahvi kaadetaan kupin pohjalle] Arabialainen kahvi eli gahwa paahdetaan vaaleaksi ja maustetaan kardemummalla, joskus myös sahramilla. Se keitetään kupariseen tai teräksiseen kannuun, jota sanotaan dallaksi, ja kaadetaan pieniin korvattomiin kuppeihin vain pohjalle asti — jotta kuppi pysyy kädessä kuumana vain hetken ja jotta tarjoaja voi kaataa lisää. Vieras juo tavallisesti yhdestä kolmeen kuppia ja heiluttaa sitten kuppia kädessään, mikä tarkoittaa kiitos, riittää. Unesco lisäsi tavan aineettoman kulttuuriperinnön luetteloon vuonna 2015.
+AIEMPI KYSYMYS: Milloin Ohridinjärvi liitettiin Unescon maailmanperintöluetteloon?
+AIEMPI VASTAUS (Livia):
+Ai se, muistan. Joo, tää oli iso juttu. [[Unesco]] merkitsi järven [[maailmanperintökohteeksi]] vuonna 1979 yhdessä Ohridin vanhankaupungin kanssa. Albanian puoli liitettiin kohteeseen vuonna 2019, joten nykyään suojelu kattaa järven molemmat rannat. Melkein viiskyt vuotta, ei paha.
+KYSYMYS: Kerro lisää: Unesco
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ohridinjärvi (luonto · järvi)
+Tietoruudun teksti: Ohridinjärvi on Pohjois-Makedonian ja Albanian rajalla sijaitseva vuoristojärvi, jonka pinta-ala on 358 neliökilometriä ja suurin syvyys 288 metriä. Järven arvioidaan syntyneen 3–5 miljoonaa vuotta sitten, ja sen vesi tulee osin maanalaisten karstikanavien kautta Prespajärveltä. Siellä elää yli 200 endeemistä lajia, joita ei tavata muualla. Pohjois-Makedonian osuus on 69 prosenttia pinta-alasta, ja rannalla ovat Ohrid ja Struga. Albanian puolella sijaitsee Pogradec. Unescon maailmanperintökohteeksi järvi merkittiin vuonna 1979, ja Albanian puoli liitettiin siihen vuonna 2019.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Milloin Ohridinjärvi liitettiin Unescon maailmanperintöluetteloon?
+AIEMPI VASTAUS (Livia):
+Ai se, muistan. Joo, tää oli iso juttu. [[Unesco]] merkitsi järven [[maailmanperintökohteeksi]] vuonna 1979 yhdessä Ohridin vanhankaupungin kanssa. Albanian puoli liitettiin kohteeseen vuonna 2019, joten nykyään suojelu kattaa järven molemmat rannat. Melkein viiskyt vuotta, ei paha.
+KYSYMYS: Kerro lisää: maailmanperintökohteeksi
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Matkan kanjoni (luonto · vuori)
+Tietoruudun teksti: Matkan kanjoni on Skopjen länsipuolella Pohjois-Makedoniassa, ja sen läpi virtaa Treska-joki. Alue kattaa noin 5 000 hehtaaria, ja kanjonissa on kymmenen luolaa, joiden pituus vaihtelee 20 metristä 176 metriin. Vrelo-luola Treskan oikealla rannalla oli mukana New7Wonders of Nature -kilpailun 77 ehdokkaan joukossa, ja sen uskotaan olevan yksi Euroopan syvimmistä luolista. Rinteillä on kolme luostaria, joista Pyhän Andreaksen luostari perustettiin noin vuonna 1388. Kanjonilla vaelletaan ja melotaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Luonto: Lähde, joka antoi maalle nimen] Vrelo Bosne on karstilähde, jossa kylmä vesi nousee kalkkikiven läpi kirkkaisiin altaisiin Sarajevon länsilaidalla, Dinaaristen vuorten juurella. Täältä alkaa Bosna-joki, joka virtaa halki koko maan ja antoi sille nimen. Lähdealue on suojeltu luonnonmuistomerkki, jonka altaissa ja saarekkeissa elää yli kaksikymmentä eläinlajia ja kymmeniä kasviyhdyskuntia aivan pääkaupungin kupeessa.
+AIEMPI KYSYMYS: Mikä Matkan kanjonin luola oli mukana 77 luonnonihmeen ehdokkaan joukossa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tän minä tiedän. [[Vrelo-luola]] Treskan oikealla rannalla oli mukana New7Wonders of Nature -kilpailun 77 ehdokkaan joukossa. Sen uskotaan olevan yksi Euroopan syvimmistä luolista, ja se sijaitsee [[Treskan]] varrella. Kuuluisa luola, ja minä en mene sinne.
+KYSYMYS: Kerro lisää: Vrelo-luola
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Matkan kanjoni (luonto · vuori)
+Tietoruudun teksti: Matkan kanjoni on Skopjen länsipuolella Pohjois-Makedoniassa, ja sen läpi virtaa Treska-joki. Alue kattaa noin 5 000 hehtaaria, ja kanjonissa on kymmenen luolaa, joiden pituus vaihtelee 20 metristä 176 metriin. Vrelo-luola Treskan oikealla rannalla oli mukana New7Wonders of Nature -kilpailun 77 ehdokkaan joukossa, ja sen uskotaan olevan yksi Euroopan syvimmistä luolista. Rinteillä on kolme luostaria, joista Pyhän Andreaksen luostari perustettiin noin vuonna 1388. Kanjonilla vaelletaan ja melotaan.
+AIEMPI KYSYMYS: Mikä Matkan kanjonin luola oli mukana 77 luonnonihmeen ehdokkaan joukossa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tän minä tiedän. [[Vrelo-luola]] Treskan oikealla rannalla oli mukana New7Wonders of Nature -kilpailun 77 ehdokkaan joukossa. Sen uskotaan olevan yksi Euroopan syvimmistä luolista, ja se sijaitsee [[Treskan]] varrella. Kuuluisa luola, ja minä en mene sinne.
+KYSYMYS: Kerro lisää: Treskan
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Matkan kanjoni (luonto · vuori)
+Tietoruudun teksti: Matkan kanjoni on Skopjen länsipuolella Pohjois-Makedoniassa, ja sen läpi virtaa Treska-joki. Alue kattaa noin 5 000 hehtaaria, ja kanjonissa on kymmenen luolaa, joiden pituus vaihtelee 20 metristä 176 metriin. Vrelo-luola Treskan oikealla rannalla oli mukana New7Wonders of Nature -kilpailun 77 ehdokkaan joukossa, ja sen uskotaan olevan yksi Euroopan syvimmistä luolista. Rinteillä on kolme luostaria, joista Pyhän Andreaksen luostari perustettiin noin vuonna 1388. Kanjonilla vaelletaan ja melotaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Peking — kohdekartta / Kohdekartta: Yonghe-temppeli] 1694, luostariksi 1744 Rakennus alkoi prinssin kotina. Kangxi-keisari antoi sen 1702 neljännelle pojalleen Yinzhenille, ja tämän tuleva seuraaja, Qianlong-keisari, syntyi talon itäsiivessä 1711. Kun Yinzhen nousi valtaistuimelle Yongzheng-keisarina, talosta tuli Harmonian ja rauhan palatsi — ja keisarin arvon merkiksi sen turkoosit tiilikatot vaihdettiin keltaisiin, jotka oli varattu vain keisarille. Vuonna 1744 Qianlong muutti palatsin tiibetinbuddhalaiseksi luostariksi. Siitä tuli Qing-kauden merkittävin buddhalainen temppeli, jonka rakennuksissa kiinalainen ja tiibetiläinen tyyli kulkevat rinnakkain ja jonne muutti munkkeja Mongoliasta ja Tiibetistä asti. Kuuluisin aarre on Kymmenentuhan…
+AIEMPI KYSYMYS: Kuinka vanha on kanjonin Pyhän Andreaksen luostari?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tää menee vuosiluvuilla. Pyhän Andreaksen luostari perustettiin noin vuonna 1388, joten se on yli kuusisataa vuotta vanha. Rinteillä on yhteensä kolme [[luostaria]], ja kanjoni sijaitsee [[Skopjen]] länsipuolella Pohjois-Makedoniassa. Vanhempi kuin kaikki minun pesäni.
+KYSYMYS: Kerro lisää: luostaria
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Matkan kanjoni (luonto · vuori)
+Tietoruudun teksti: Matkan kanjoni on Skopjen länsipuolella Pohjois-Makedoniassa, ja sen läpi virtaa Treska-joki. Alue kattaa noin 5 000 hehtaaria, ja kanjonissa on kymmenen luolaa, joiden pituus vaihtelee 20 metristä 176 metriin. Vrelo-luola Treskan oikealla rannalla oli mukana New7Wonders of Nature -kilpailun 77 ehdokkaan joukossa, ja sen uskotaan olevan yksi Euroopan syvimmistä luolista. Rinteillä on kolme luostaria, joista Pyhän Andreaksen luostari perustettiin noin vuonna 1388. Kanjonilla vaelletaan ja melotaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Linnoitus maanjäristysten raunioilla] 6. vuosisata – — Vardar-joen mutkaan roomalaiset perustivat Scupin kaupungin, josta kasvoi tärkeä uskonnollinen ja kaupallinen keskus temppeleineen ja teattereineen. Vuonna 518 maanjäristys tuhosi Scupin lähes kokonaan, ja keisari Justinianus I käski rakentaa uuden linnoituksen läheiselle kukkulalle – osin juuri raunioituneen kaupungin kivistä. Kaivauksissa linnoituksen alta on paljastunut Scupin asukkaiden taloja, jotka jäivät uuden Kale-nimisen muurin alle vuosisadoiksi. Muureja on sittemmin rakennettu uudelleen bysanttilaisten, slaavien ja osmanien aikana, ja ne ovat kestäneet myös Skopjen toisen suuren maanjäristyksen vuonna 1963.
+- [Pohjois-Makedonia — maalehti / Historia: Ratsastava soturi torilla] 2011 — Skopjen pääaukiolle nousi syyskuussa 2011 pronssipatsas: hevonen ratsastajineen 10-metrisen suihkulähdejalustan päällä, yhteensä lähes 25 metriä korkea. Firenzessä valettu, Valentina Stevanovskan suunnittelema teos paljastettiin itsenäisyysäänestyksen 20-vuotispäivänä, mutta se ristittiin virallisesti vain "Ratsastavaksi soturiksi" – naapurimaa Kreikka piti Aleksanteri Suuren nimen käyttöä oman historiansa omimisena. Yli 20 vuotta kestänyt nimikiista ratkesi vasta 2018 Prespan sopimuksella, kun maan nimeksi vahvistettiin Pohjois-Makedonia. Patsas on osa Skopje 2014 -hanketta, joka täytti kaupungin sadoilla uusilla patsailla.
+AIEMPI KYSYMYS: Kuinka vanha on kanjonin Pyhän Andreaksen luostari?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tää menee vuosiluvuilla. Pyhän Andreaksen luostari perustettiin noin vuonna 1388, joten se on yli kuusisataa vuotta vanha. Rinteillä on yhteensä kolme [[luostaria]], ja kanjoni sijaitsee [[Skopjen]] länsipuolella Pohjois-Makedoniassa. Vanhempi kuin kaikki minun pesäni.
+KYSYMYS: Kerro lisää: Skopjen
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Matkan kanjoni (luonto · vuori)
+Tietoruudun teksti: Matkan kanjoni on Skopjen länsipuolella Pohjois-Makedoniassa, ja sen läpi virtaa Treska-joki. Alue kattaa noin 5 000 hehtaaria, ja kanjonissa on kymmenen luolaa, joiden pituus vaihtelee 20 metristä 176 metriin. Vrelo-luola Treskan oikealla rannalla oli mukana New7Wonders of Nature -kilpailun 77 ehdokkaan joukossa, ja sen uskotaan olevan yksi Euroopan syvimmistä luolista. Rinteillä on kolme luostaria, joista Pyhän Andreaksen luostari perustettiin noin vuonna 1388. Kanjonilla vaelletaan ja melotaan.
+AIEMPI KYSYMYS: Mitä Matkan kanjonissa voi tehdä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Katotaas. Matkan kanjonilla vaelletaan ja melotaan, ja kanjonin läpi virtaa [[Treska-joki]]. Alueella on myös kymmenen [[luolaa]] sekä kolme luostaria rinteillä. Minä pysyn kyl ilmassa, melominen on teidän hommanne.
+KYSYMYS: Kerro lisää: Treska-joki
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Matkan kanjoni (luonto · vuori)
+Tietoruudun teksti: Matkan kanjoni on Skopjen länsipuolella Pohjois-Makedoniassa, ja sen läpi virtaa Treska-joki. Alue kattaa noin 5 000 hehtaaria, ja kanjonissa on kymmenen luolaa, joiden pituus vaihtelee 20 metristä 176 metriin. Vrelo-luola Treskan oikealla rannalla oli mukana New7Wonders of Nature -kilpailun 77 ehdokkaan joukossa, ja sen uskotaan olevan yksi Euroopan syvimmistä luolista. Rinteillä on kolme luostaria, joista Pyhän Andreaksen luostari perustettiin noin vuonna 1388. Kanjonilla vaelletaan ja melotaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Afganistan — maalehti / Kuvataide: Mestari, joka piilotettiin luolaan] 1455–1535 — Kamal ud-Din Behzad syntyi Heratissa noin 1455, jäi varhain orvoksi ja kasvoi hovin kirjastonhoitajan ja maalarin Mirak Naqqashin huomassa. Vuonna 1486 sulttaani Husayn Bayqara nimitti hänet Heratin hovipajojen johtajaksi. Behzad jätti kuviinsa tyhjää tilaa, antoi jokaiselle hahmolle omat kasvot ja piilotti kuviin pieniä kertomuksia. Tarun mukaan shaahi Ismail kätki hänet Chaldiranin taistelun aikana 1514 luolaan kuin aarteen. Vuonna 1522 hän siirtyi Tabrizin hovipajan johtoon. Töitä jäljiteltiin niin paljon, että tutkijat kiistelevät yhä siitä, mitkä kuvat ovat hänen.
+- [Kiina — maalehti / Historia: Luola muurattiin umpeen tuhanneksi vuodeksi] 366 — Mogaon luolat on hakattu jyrkänteeseen 25 kilometriä Dunhuangin keidaskaupungista kaakkoon, keskelle Silkkitien risteystä. Ensimmäinen luola kaivettiin vuonna 366 mietiskelypaikaksi, ja työ jatkui 1300-luvulle asti: luolatemppeleitä on noin viisisataa ja maalauksia tuhannen vuoden ajalta. Vuonna 1900 löytyi luola, joka oli muurattu umpeen 1000-luvulla. Sen sisältä tuli esiin valtava määrä kirjakääröjä ja asiakirjoja. Kokoelma hajosi ympäri maailmaa, ja suurimmat osat ovat nyt Pekingissä, Lontoossa, Pariisissa ja Berliinissä.
+AIEMPI KYSYMYS: Mitä Matkan kanjonissa voi tehdä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Katotaas. Matkan kanjonilla vaelletaan ja melotaan, ja kanjonin läpi virtaa [[Treska-joki]]. Alueella on myös kymmenen [[luolaa]] sekä kolme luostaria rinteillä. Minä pysyn kyl ilmassa, melominen on teidän hommanne.
+KYSYMYS: Kerro lisää: luolaa
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Matkan kanjoni (luonto · vuori)
+Tietoruudun teksti: Matkan kanjoni on Skopjen länsipuolella Pohjois-Makedoniassa, ja sen läpi virtaa Treska-joki. Alue kattaa noin 5 000 hehtaaria, ja kanjonissa on kymmenen luolaa, joiden pituus vaihtelee 20 metristä 176 metriin. Vrelo-luola Treskan oikealla rannalla oli mukana New7Wonders of Nature -kilpailun 77 ehdokkaan joukossa, ja sen uskotaan olevan yksi Euroopan syvimmistä luolista. Rinteillä on kolme luostaria, joista Pyhän Andreaksen luostari perustettiin noin vuonna 1388. Kanjonilla vaelletaan ja melotaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Luonto: Lähde, joka antoi maalle nimen] Vrelo Bosne on karstilähde, jossa kylmä vesi nousee kalkkikiven läpi kirkkaisiin altaisiin Sarajevon länsilaidalla, Dinaaristen vuorten juurella. Täältä alkaa Bosna-joki, joka virtaa halki koko maan ja antoi sille nimen. Lähdealue on suojeltu luonnonmuistomerkki, jonka altaissa ja saarekkeissa elää yli kaksikymmentä eläinlajia ja kymmeniä kasviyhdyskuntia aivan pääkaupungin kupeessa.
+AIEMPI KYSYMYS: Kuinka pitkiä Matkan kanjonin luolat ovat?
+AIEMPI VASTAUS (Livia):
+Ai tota. Hyvä kysymys. Kanjonissa on kymmenen [[luolaa]], joiden pituus vaihtelee 20 metristä 176 metriin. Treskan oikealla rannalla sijaitsevan [[Vrelo-luolan]] uskotaan olevan yksi Euroopan syvimmistä luolista. Minä en kyl luolissa viihdy, siellä ei kanna kirjepostia.
+KYSYMYS: Kerro lisää: Vrelo-luolan
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stobi (historia)
+Tietoruudun teksti: Stobi on antiikin kaupungin raunioita Pohjois-Makedoniassa Gradskon lähellä, kohdassa, jossa Erigon (Crna) ja Axios (Vardar) yhtyvät. Paikalle syntyi asutus jo arkaaisella kaudella, ja vuonna 69 eaa. Stobi sai Rooman valtakunnassa municipiumin aseman; myöhemmin se oli Macedonia Salutaris -provinssin pääkaupunki. Kaupungin monikulttuurisuudesta kertoo synagoga, jonka tilalle rakennettiin myöhemmin kristillinen basilika. Stobia koettelivat ostrogoottien ryöstö vuonna 479, maanjäristys 518 ja 500-luvun hyökkäykset. Nykyään paikka on arkeologinen kohde, ja piispanbasilikan riikinkukkomosaiikki on kuvattu Pohjois-Makedonian 10 denarin setelissä.
+AIEMPI KYSYMYS: Missä joet Erigon ja Axios kohtaavat?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Joet [[Erigon]] eli Crna ja [[Axios]] eli Vardar yhtyvät Stobin kohdalla Pohjois-Makedoniassa, [[Gradskon]] lähellä. Kohta on antiikin kaupungin raunioiden luona. Kaksi jokea, yksi kyyhky, ei hätää.
+KYSYMYS: Kerro lisää: Erigon
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stobi (historia)
+Tietoruudun teksti: Stobi on antiikin kaupungin raunioita Pohjois-Makedoniassa Gradskon lähellä, kohdassa, jossa Erigon (Crna) ja Axios (Vardar) yhtyvät. Paikalle syntyi asutus jo arkaaisella kaudella, ja vuonna 69 eaa. Stobi sai Rooman valtakunnassa municipiumin aseman; myöhemmin se oli Macedonia Salutaris -provinssin pääkaupunki. Kaupungin monikulttuurisuudesta kertoo synagoga, jonka tilalle rakennettiin myöhemmin kristillinen basilika. Stobia koettelivat ostrogoottien ryöstö vuonna 479, maanjäristys 518 ja 500-luvun hyökkäykset. Nykyään paikka on arkeologinen kohde, ja piispanbasilikan riikinkukkomosaiikki on kuvattu Pohjois-Makedonian 10 denarin setelissä.
+AIEMPI KYSYMYS: Missä joet Erigon ja Axios kohtaavat?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Joet [[Erigon]] eli Crna ja [[Axios]] eli Vardar yhtyvät Stobin kohdalla Pohjois-Makedoniassa, [[Gradskon]] lähellä. Kohta on antiikin kaupungin raunioiden luona. Kaksi jokea, yksi kyyhky, ei hätää.
+KYSYMYS: Kerro lisää: Axios
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stobi (historia)
+Tietoruudun teksti: Stobi on antiikin kaupungin raunioita Pohjois-Makedoniassa Gradskon lähellä, kohdassa, jossa Erigon (Crna) ja Axios (Vardar) yhtyvät. Paikalle syntyi asutus jo arkaaisella kaudella, ja vuonna 69 eaa. Stobi sai Rooman valtakunnassa municipiumin aseman; myöhemmin se oli Macedonia Salutaris -provinssin pääkaupunki. Kaupungin monikulttuurisuudesta kertoo synagoga, jonka tilalle rakennettiin myöhemmin kristillinen basilika. Stobia koettelivat ostrogoottien ryöstö vuonna 479, maanjäristys 518 ja 500-luvun hyökkäykset. Nykyään paikka on arkeologinen kohde, ja piispanbasilikan riikinkukkomosaiikki on kuvattu Pohjois-Makedonian 10 denarin setelissä.
+AIEMPI KYSYMYS: Missä joet Erigon ja Axios kohtaavat?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Joet [[Erigon]] eli Crna ja [[Axios]] eli Vardar yhtyvät Stobin kohdalla Pohjois-Makedoniassa, [[Gradskon]] lähellä. Kohta on antiikin kaupungin raunioiden luona. Kaksi jokea, yksi kyyhky, ei hätää.
+KYSYMYS: Kerro lisää: Gradskon
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stobi (historia)
+Tietoruudun teksti: Stobi on antiikin kaupungin raunioita Pohjois-Makedoniassa Gradskon lähellä, kohdassa, jossa Erigon (Crna) ja Axios (Vardar) yhtyvät. Paikalle syntyi asutus jo arkaaisella kaudella, ja vuonna 69 eaa. Stobi sai Rooman valtakunnassa municipiumin aseman; myöhemmin se oli Macedonia Salutaris -provinssin pääkaupunki. Kaupungin monikulttuurisuudesta kertoo synagoga, jonka tilalle rakennettiin myöhemmin kristillinen basilika. Stobia koettelivat ostrogoottien ryöstö vuonna 479, maanjäristys 518 ja 500-luvun hyökkäykset. Nykyään paikka on arkeologinen kohde, ja piispanbasilikan riikinkukkomosaiikki on kuvattu Pohjois-Makedonian 10 denarin setelissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Minkä uskonnon rakennuksen tilalle Stobin basilika rakennettiin?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Tän minä tiedän. Stobin kristillinen [[basilika]] rakennettiin [[synagogan]] eli juutalaisen palvontarakennuksen tilalle. Se kertoo kaupungin monikulttuurisuudesta. Eipä sekään pieni muutos ollu.
+KYSYMYS: Kerro lisää: basilika
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stobi (historia)
+Tietoruudun teksti: Stobi on antiikin kaupungin raunioita Pohjois-Makedoniassa Gradskon lähellä, kohdassa, jossa Erigon (Crna) ja Axios (Vardar) yhtyvät. Paikalle syntyi asutus jo arkaaisella kaudella, ja vuonna 69 eaa. Stobi sai Rooman valtakunnassa municipiumin aseman; myöhemmin se oli Macedonia Salutaris -provinssin pääkaupunki. Kaupungin monikulttuurisuudesta kertoo synagoga, jonka tilalle rakennettiin myöhemmin kristillinen basilika. Stobia koettelivat ostrogoottien ryöstö vuonna 479, maanjäristys 518 ja 500-luvun hyökkäykset. Nykyään paikka on arkeologinen kohde, ja piispanbasilikan riikinkukkomosaiikki on kuvattu Pohjois-Makedonian 10 denarin setelissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Manaus — kohdekartta / Kohdekartta: Beit Yaacovin synagoga] 1962 Amazonin juutalaisyhteisö on vanha ja sen synagoga nuori. Manausin seurakunta syntyi kahdesta aiemmasta, joiden juuret ovat 1920-luvulla; nykyinen talo valmistui 1962, kun seurakunnat yhdistyivät. Se on yksi Pohjois-Brasilian suurimmista ja vaikutusvaltaisimmista amazonianjuutalaisten seurakunnista. Yhteisö tuli jokea pitkin kaupan mukana. Marokon juutalaiset alkoivat 1800-luvun alussa muuttaa Brasiliaan, ja moni päätyi Amazonille: he perustivat kauppaverkostoja, jotka ulottuivat Belémistä ja Manausista jokivarren takamaille asti, ja toimivat välikäsinä kumin tuottajien ja vientisatamien välillä. Manaus on tässä poikkeus, sillä sinne saapuivat ensin elsassilaiset juutalaiset Ranskan–Pr…
+- [Hobart — kohdekartta / Kohdekartta: Hobartin synagoga] 1845 Argyle Streetin synagoga vihittiin 4. heinäkuuta 1845, ja se on Australian vanhin synagogarakennus. Tyyli on harvinainen: egyptiläinen kertaustyyli, jota tunnistaa ikkunoiden puolisuunnikkaan muodosta ja pylväiden lootuskapiteeleista. Piirustukset teki hobartilainen arkkitehti James Thomson, skotlantilainen vanki, joka oli saanut armahduksen 1829. Tontti oli osa entisen vangin Judah Solomonin puutarhaa. Salissa on 150 istumapaikkaa, ja takaosassa on kovat penkit juutalaisille vangeille, jotka marssitettiin alkuaikoina jumalanpalvelukseen aseellisen vartion saattamina. Uskotaan, ettei maailmassa ole toista juutalaista rukoushuonetta, jossa olisi vangeille varatut paikat. Rakennus on Tas…
+AIEMPI KYSYMYS: Minkä uskonnon rakennuksen tilalle Stobin basilika rakennettiin?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Tän minä tiedän. Stobin kristillinen [[basilika]] rakennettiin [[synagogan]] eli juutalaisen palvontarakennuksen tilalle. Se kertoo kaupungin monikulttuurisuudesta. Eipä sekään pieni muutos ollu.
+KYSYMYS: Kerro lisää: synagogan
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stobi (historia)
+Tietoruudun teksti: Stobi on antiikin kaupungin raunioita Pohjois-Makedoniassa Gradskon lähellä, kohdassa, jossa Erigon (Crna) ja Axios (Vardar) yhtyvät. Paikalle syntyi asutus jo arkaaisella kaudella, ja vuonna 69 eaa. Stobi sai Rooman valtakunnassa municipiumin aseman; myöhemmin se oli Macedonia Salutaris -provinssin pääkaupunki. Kaupungin monikulttuurisuudesta kertoo synagoga, jonka tilalle rakennettiin myöhemmin kristillinen basilika. Stobia koettelivat ostrogoottien ryöstö vuonna 479, maanjäristys 518 ja 500-luvun hyökkäykset. Nykyään paikka on arkeologinen kohde, ja piispanbasilikan riikinkukkomosaiikki on kuvattu Pohjois-Makedonian 10 denarin setelissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vancouver — kohdekartta / Kohdekartta: Keskuskirjasto] 1995 Vancouverin kirjastolla on kolme taloa, ja tämä on kolmas. Ensimmäinen syntyi, kun teräsmagnaatti Andrew Carnegie lupasi 1901 viisikymmentätuhatta dollaria, jos kaupunki antaisi tontin ja viisituhatta dollaria vuodessa toimintaan. Kaupungin itä- ja länsipuoli riitelivät heti siitä, kumpi saisi kirjaston, ja asia ratkaistiin kansanäänestyksellä. Talo avattiin marraskuussa 1903, ja se toimii nykyään asukastalona. Keskuskirjasto muutti 1957 Burrard Streetille ja sieltä 1995 nykyiseen taloonsa. Nykyinen talo on kaupungin siihenastisista hankkeista suurin. Marraskuussa 1990 pidettiin kansanäänestys, jonka jälkeen järjestettiin suunnittelukilpailu. Moshe Safdien ja DA Architectsin ehdotus ol…
+- [Sofia — kaupunkilehti / Sofia: Serdica on minun Roomani] Sofian alla on toinen kaupunki. Roomalaisessa Serdicassa viihtyi keisari Konstantinus Suuri, jonka kerrotaan sanoneen siitä: Serdica on minun Roomani. Kun metroa kaivettiin vuosina 2010–2012, maasta paljastui kokonainen kortteli katuja, taloja ja kaupunginmuurin itäportti. Löytöjä ei peitetty takaisin. Nyt matkustaja nousee liukuportaita ylös keskelle katua, jota pitkin on kuljettu 1800 vuotta.
+AIEMPI KYSYMYS: Minkä aseman Stobi sai Rooman valtakunnassa vuonna 69 eaa.?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Hyvä kysymys tuo. Stobi sai vuonna 69 eaa. [[Rooman]] valtakunnassa [[municipiumin]] aseman. Myöhemmin se oli [[Macedonia Salutaris]] -provinssin pääkaupunki. Arvonimiä riitti roomalaisilla kyl.
+KYSYMYS: Kerro lisää: Rooman
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stobi (historia)
+Tietoruudun teksti: Stobi on antiikin kaupungin raunioita Pohjois-Makedoniassa Gradskon lähellä, kohdassa, jossa Erigon (Crna) ja Axios (Vardar) yhtyvät. Paikalle syntyi asutus jo arkaaisella kaudella, ja vuonna 69 eaa. Stobi sai Rooman valtakunnassa municipiumin aseman; myöhemmin se oli Macedonia Salutaris -provinssin pääkaupunki. Kaupungin monikulttuurisuudesta kertoo synagoga, jonka tilalle rakennettiin myöhemmin kristillinen basilika. Stobia koettelivat ostrogoottien ryöstö vuonna 479, maanjäristys 518 ja 500-luvun hyökkäykset. Nykyään paikka on arkeologinen kohde, ja piispanbasilikan riikinkukkomosaiikki on kuvattu Pohjois-Makedonian 10 denarin setelissä.
+AIEMPI KYSYMYS: Minkä aseman Stobi sai Rooman valtakunnassa vuonna 69 eaa.?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Hyvä kysymys tuo. Stobi sai vuonna 69 eaa. [[Rooman]] valtakunnassa [[municipiumin]] aseman. Myöhemmin se oli [[Macedonia Salutaris]] -provinssin pääkaupunki. Arvonimiä riitti roomalaisilla kyl.
+KYSYMYS: Kerro lisää: municipiumin
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stobi (historia)
+Tietoruudun teksti: Stobi on antiikin kaupungin raunioita Pohjois-Makedoniassa Gradskon lähellä, kohdassa, jossa Erigon (Crna) ja Axios (Vardar) yhtyvät. Paikalle syntyi asutus jo arkaaisella kaudella, ja vuonna 69 eaa. Stobi sai Rooman valtakunnassa municipiumin aseman; myöhemmin se oli Macedonia Salutaris -provinssin pääkaupunki. Kaupungin monikulttuurisuudesta kertoo synagoga, jonka tilalle rakennettiin myöhemmin kristillinen basilika. Stobia koettelivat ostrogoottien ryöstö vuonna 479, maanjäristys 518 ja 500-luvun hyökkäykset. Nykyään paikka on arkeologinen kohde, ja piispanbasilikan riikinkukkomosaiikki on kuvattu Pohjois-Makedonian 10 denarin setelissä.
+AIEMPI KYSYMYS: Minkä aseman Stobi sai Rooman valtakunnassa vuonna 69 eaa.?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Hyvä kysymys tuo. Stobi sai vuonna 69 eaa. [[Rooman]] valtakunnassa [[municipiumin]] aseman. Myöhemmin se oli [[Macedonia Salutaris]] -provinssin pääkaupunki. Arvonimiä riitti roomalaisilla kyl.
+KYSYMYS: Kerro lisää: Macedonia Salutaris
+
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stobi (historia)
+Tietoruudun teksti: Stobi on antiikin kaupungin raunioita Pohjois-Makedoniassa Gradskon lähellä, kohdassa, jossa Erigon (Crna) ja Axios (Vardar) yhtyvät. Paikalle syntyi asutus jo arkaaisella kaudella, ja vuonna 69 eaa. Stobi sai Rooman valtakunnassa municipiumin aseman; myöhemmin se oli Macedonia Salutaris -provinssin pääkaupunki. Kaupungin monikulttuurisuudesta kertoo synagoga, jonka tilalle rakennettiin myöhemmin kristillinen basilika. Stobia koettelivat ostrogoottien ryöstö vuonna 479, maanjäristys 518 ja 500-luvun hyökkäykset. Nykyään paikka on arkeologinen kohde, ja piispanbasilikan riikinkukkomosaiikki on kuvattu Pohjois-Makedonian 10 denarin setelissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Linnoitus maanjäristysten raunioilla] 6. vuosisata – — Vardar-joen mutkaan roomalaiset perustivat Scupin kaupungin, josta kasvoi tärkeä uskonnollinen ja kaupallinen keskus temppeleineen ja teattereineen. Vuonna 518 maanjäristys tuhosi Scupin lähes kokonaan, ja keisari Justinianus I käski rakentaa uuden linnoituksen läheiselle kukkulalle – osin juuri raunioituneen kaupungin kivistä. Kaivauksissa linnoituksen alta on paljastunut Scupin asukkaiden taloja, jotka jäivät uuden Kale-nimisen muurin alle vuosisadoiksi. Muureja on sittemmin rakennettu uudelleen bysanttilaisten, slaavien ja osmanien aikana, ja ne ovat kestäneet myös Skopjen toisen suuren maanjäristyksen vuonna 1963.
+- [San Francisco — kaupunkilehti / San Francisco: Maanjäristys ja päiväkausia tulta] Kello 5.12 aamulla 18. huhtikuuta 1906 voimakas maanjäristys ravisteli San Franciscoa ja Pohjois-Kaliforniaa. Sortuneiden talojen katkenneista kaasuputkista syttyi tulipaloja, jotka levisivät hallitsemattomina useiden päivien ajan, ja kun vesijohdot olivat poikki, Presidion tykistö räjäytti kokonaisia kortteleita palokujiksi. Arvion mukaan yli kolme neljäsosaa kaupungista ja koko keskusta jäi raunioiksi, ja yli puolet 400 000 asukkaasta menetti kotinsa. Uhriluvusta ei ole yksimielisyyttä: aikalaisraporteissa kuolleita oli 498, nykyarvioissa useita tuhansia. Jälleenrakennus oli nopeaa, ja kaupunki juhli toipumistaan maailmannäyttelyssä 1915.
+AIEMPI KYSYMYS: Mitä Stobille tapahtui vuonna 518?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Vuonna 518 Stobia koetteli [[maanjäristys]]. Sitä ennen kaupunkia oli koetellut [[ostrogoottien]] ryöstö vuonna 479, ja 500-luvulla sitä koettelivat vielä hyökkäykset. Tapahtumat ovat noin puolentoista tuhannen vuoden takaa, ja nykyään paikka on arkeologinen kohde. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: maanjäristys
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stobi (historia)
+Tietoruudun teksti: Stobi on antiikin kaupungin raunioita Pohjois-Makedoniassa Gradskon lähellä, kohdassa, jossa Erigon (Crna) ja Axios (Vardar) yhtyvät. Paikalle syntyi asutus jo arkaaisella kaudella, ja vuonna 69 eaa. Stobi sai Rooman valtakunnassa municipiumin aseman; myöhemmin se oli Macedonia Salutaris -provinssin pääkaupunki. Kaupungin monikulttuurisuudesta kertoo synagoga, jonka tilalle rakennettiin myöhemmin kristillinen basilika. Stobia koettelivat ostrogoottien ryöstö vuonna 479, maanjäristys 518 ja 500-luvun hyökkäykset. Nykyään paikka on arkeologinen kohde, ja piispanbasilikan riikinkukkomosaiikki on kuvattu Pohjois-Makedonian 10 denarin setelissä.
+AIEMPI KYSYMYS: Mitä Stobille tapahtui vuonna 518?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Vuonna 518 Stobia koetteli [[maanjäristys]]. Sitä ennen kaupunkia oli koetellut [[ostrogoottien]] ryöstö vuonna 479, ja 500-luvulla sitä koettelivat vielä hyökkäykset. Tapahtumat ovat noin puolentoista tuhannen vuoden takaa, ja nykyään paikka on arkeologinen kohde. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: ostrogoottien
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stobi (historia)
+Tietoruudun teksti: Stobi on antiikin kaupungin raunioita Pohjois-Makedoniassa Gradskon lähellä, kohdassa, jossa Erigon (Crna) ja Axios (Vardar) yhtyvät. Paikalle syntyi asutus jo arkaaisella kaudella, ja vuonna 69 eaa. Stobi sai Rooman valtakunnassa municipiumin aseman; myöhemmin se oli Macedonia Salutaris -provinssin pääkaupunki. Kaupungin monikulttuurisuudesta kertoo synagoga, jonka tilalle rakennettiin myöhemmin kristillinen basilika. Stobia koettelivat ostrogoottien ryöstö vuonna 479, maanjäristys 518 ja 500-luvun hyökkäykset. Nykyään paikka on arkeologinen kohde, ja piispanbasilikan riikinkukkomosaiikki on kuvattu Pohjois-Makedonian 10 denarin setelissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+AIEMPI KYSYMYS: Missä setelissä Stobin riikinkukkomosaiikki on kuvattuna?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Joo, muistan tän. Stobin [[piispanbasilikan]] [[riikinkukkomosaiikki]] on kuvattu Pohjois-Makedonian 10 [[denarin]] setelissä. Denari on maan rahayksikkö. Riikinkukko on siis rahassa, kyyhky ei.
+KYSYMYS: Kerro lisää: piispanbasilikan
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stobi (historia)
+Tietoruudun teksti: Stobi on antiikin kaupungin raunioita Pohjois-Makedoniassa Gradskon lähellä, kohdassa, jossa Erigon (Crna) ja Axios (Vardar) yhtyvät. Paikalle syntyi asutus jo arkaaisella kaudella, ja vuonna 69 eaa. Stobi sai Rooman valtakunnassa municipiumin aseman; myöhemmin se oli Macedonia Salutaris -provinssin pääkaupunki. Kaupungin monikulttuurisuudesta kertoo synagoga, jonka tilalle rakennettiin myöhemmin kristillinen basilika. Stobia koettelivat ostrogoottien ryöstö vuonna 479, maanjäristys 518 ja 500-luvun hyökkäykset. Nykyään paikka on arkeologinen kohde, ja piispanbasilikan riikinkukkomosaiikki on kuvattu Pohjois-Makedonian 10 denarin setelissä.
+AIEMPI KYSYMYS: Missä setelissä Stobin riikinkukkomosaiikki on kuvattuna?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Joo, muistan tän. Stobin [[piispanbasilikan]] [[riikinkukkomosaiikki]] on kuvattu Pohjois-Makedonian 10 [[denarin]] setelissä. Denari on maan rahayksikkö. Riikinkukko on siis rahassa, kyyhky ei.
+KYSYMYS: Kerro lisää: riikinkukkomosaiikki
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stobi (historia)
+Tietoruudun teksti: Stobi on antiikin kaupungin raunioita Pohjois-Makedoniassa Gradskon lähellä, kohdassa, jossa Erigon (Crna) ja Axios (Vardar) yhtyvät. Paikalle syntyi asutus jo arkaaisella kaudella, ja vuonna 69 eaa. Stobi sai Rooman valtakunnassa municipiumin aseman; myöhemmin se oli Macedonia Salutaris -provinssin pääkaupunki. Kaupungin monikulttuurisuudesta kertoo synagoga, jonka tilalle rakennettiin myöhemmin kristillinen basilika. Stobia koettelivat ostrogoottien ryöstö vuonna 479, maanjäristys 518 ja 500-luvun hyökkäykset. Nykyään paikka on arkeologinen kohde, ja piispanbasilikan riikinkukkomosaiikki on kuvattu Pohjois-Makedonian 10 denarin setelissä.
+AIEMPI KYSYMYS: Missä setelissä Stobin riikinkukkomosaiikki on kuvattuna?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Joo, muistan tän. Stobin [[piispanbasilikan]] [[riikinkukkomosaiikki]] on kuvattu Pohjois-Makedonian 10 [[denarin]] setelissä. Denari on maan rahayksikkö. Riikinkukko on siis rahassa, kyyhky ei.
+KYSYMYS: Kerro lisää: denarin
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Herakleia Lynkestis (historia)
+Tietoruudun teksti: Herakleia Lynkestis on antiikin kaupungin arkeologinen kohde noin kaksi kilometriä Bitolan keskustasta etelään Pohjois-Makedoniassa. Makedonian kuningas Filippos II perusti kaupungin 300-luvun eaa. puolivälissä, ja se nimettiin Heraklesin mukaan. Roomalaisaikana kaupunki menestyi Via Egnatian varrella, joka yhdisti Bysantionin ja Adrianmeren rannikon. Kohteessa on teatteri sekä pieni ja suuri basilika, ja suuren basilikan narteksin lattiamosaiikki on 500-luvulta, mutta kaupunki autioitui vähitellen vuoden 518 maanjäristyksen ja noin vuoden 585 slaavien hyökkäysten jälkeen.
+AIEMPI KYSYMYS: Kuka perusti Herakleia Lynkestiksen?
+AIEMPI VASTAUS (Livia):
+Ai se. Tän minä tiedän. Herakleia Lynkestiksen perusti Makedonian kuningas [[Filippos II]] 300-luvun eaa. puolivälissä. Kaupunki nimettiin [[Heraklesin]] mukaan, ja se sijaitsee noin kaksi kilometriä [[Bitolan]] keskustasta etelään. Kuninkaat perustivat, kyyhkyt kantoivat kirjeet.
+KYSYMYS: Kerro lisää: Filippos II
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Herakleia Lynkestis (historia)
+Tietoruudun teksti: Herakleia Lynkestis on antiikin kaupungin arkeologinen kohde noin kaksi kilometriä Bitolan keskustasta etelään Pohjois-Makedoniassa. Makedonian kuningas Filippos II perusti kaupungin 300-luvun eaa. puolivälissä, ja se nimettiin Heraklesin mukaan. Roomalaisaikana kaupunki menestyi Via Egnatian varrella, joka yhdisti Bysantionin ja Adrianmeren rannikon. Kohteessa on teatteri sekä pieni ja suuri basilika, ja suuren basilikan narteksin lattiamosaiikki on 500-luvulta, mutta kaupunki autioitui vähitellen vuoden 518 maanjäristyksen ja noin vuoden 585 slaavien hyökkäysten jälkeen.
+AIEMPI KYSYMYS: Kuka perusti Herakleia Lynkestiksen?
+AIEMPI VASTAUS (Livia):
+Ai se. Tän minä tiedän. Herakleia Lynkestiksen perusti Makedonian kuningas [[Filippos II]] 300-luvun eaa. puolivälissä. Kaupunki nimettiin [[Heraklesin]] mukaan, ja se sijaitsee noin kaksi kilometriä [[Bitolan]] keskustasta etelään. Kuninkaat perustivat, kyyhkyt kantoivat kirjeet.
+KYSYMYS: Kerro lisää: Heraklesin
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Herakleia Lynkestis (historia)
+Tietoruudun teksti: Herakleia Lynkestis on antiikin kaupungin arkeologinen kohde noin kaksi kilometriä Bitolan keskustasta etelään Pohjois-Makedoniassa. Makedonian kuningas Filippos II perusti kaupungin 300-luvun eaa. puolivälissä, ja se nimettiin Heraklesin mukaan. Roomalaisaikana kaupunki menestyi Via Egnatian varrella, joka yhdisti Bysantionin ja Adrianmeren rannikon. Kohteessa on teatteri sekä pieni ja suuri basilika, ja suuren basilikan narteksin lattiamosaiikki on 500-luvulta, mutta kaupunki autioitui vähitellen vuoden 518 maanjäristyksen ja noin vuoden 585 slaavien hyökkäysten jälkeen.
+AIEMPI KYSYMYS: Kuka perusti Herakleia Lynkestiksen?
+AIEMPI VASTAUS (Livia):
+Ai se. Tän minä tiedän. Herakleia Lynkestiksen perusti Makedonian kuningas [[Filippos II]] 300-luvun eaa. puolivälissä. Kaupunki nimettiin [[Heraklesin]] mukaan, ja se sijaitsee noin kaksi kilometriä [[Bitolan]] keskustasta etelään. Kuninkaat perustivat, kyyhkyt kantoivat kirjeet.
+KYSYMYS: Kerro lisää: Bitolan
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Herakleia Lynkestis (historia)
+Tietoruudun teksti: Herakleia Lynkestis on antiikin kaupungin arkeologinen kohde noin kaksi kilometriä Bitolan keskustasta etelään Pohjois-Makedoniassa. Makedonian kuningas Filippos II perusti kaupungin 300-luvun eaa. puolivälissä, ja se nimettiin Heraklesin mukaan. Roomalaisaikana kaupunki menestyi Via Egnatian varrella, joka yhdisti Bysantionin ja Adrianmeren rannikon. Kohteessa on teatteri sekä pieni ja suuri basilika, ja suuren basilikan narteksin lattiamosaiikki on 500-luvulta, mutta kaupunki autioitui vähitellen vuoden 518 maanjäristyksen ja noin vuoden 585 slaavien hyökkäysten jälkeen.
+AIEMPI KYSYMYS: Minkä antiikin tien varrella kaupunki sijaitsi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Roomalaisaikana kaupunki menestyi [[Via Egnatian]] varrella, joka yhdisti [[Bysantionin]] ja [[Adrianmeren]] rannikon. Tie oli tärkeä kulkureitti halki Balkanin. Minä lensin kyl suoremmin.
+KYSYMYS: Kerro lisää: Via Egnatian
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Herakleia Lynkestis (historia)
+Tietoruudun teksti: Herakleia Lynkestis on antiikin kaupungin arkeologinen kohde noin kaksi kilometriä Bitolan keskustasta etelään Pohjois-Makedoniassa. Makedonian kuningas Filippos II perusti kaupungin 300-luvun eaa. puolivälissä, ja se nimettiin Heraklesin mukaan. Roomalaisaikana kaupunki menestyi Via Egnatian varrella, joka yhdisti Bysantionin ja Adrianmeren rannikon. Kohteessa on teatteri sekä pieni ja suuri basilika, ja suuren basilikan narteksin lattiamosaiikki on 500-luvulta, mutta kaupunki autioitui vähitellen vuoden 518 maanjäristyksen ja noin vuoden 585 slaavien hyökkäysten jälkeen.
+AIEMPI KYSYMYS: Minkä antiikin tien varrella kaupunki sijaitsi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Roomalaisaikana kaupunki menestyi [[Via Egnatian]] varrella, joka yhdisti [[Bysantionin]] ja [[Adrianmeren]] rannikon. Tie oli tärkeä kulkureitti halki Balkanin. Minä lensin kyl suoremmin.
+KYSYMYS: Kerro lisää: Bysantionin
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Herakleia Lynkestis (historia)
+Tietoruudun teksti: Herakleia Lynkestis on antiikin kaupungin arkeologinen kohde noin kaksi kilometriä Bitolan keskustasta etelään Pohjois-Makedoniassa. Makedonian kuningas Filippos II perusti kaupungin 300-luvun eaa. puolivälissä, ja se nimettiin Heraklesin mukaan. Roomalaisaikana kaupunki menestyi Via Egnatian varrella, joka yhdisti Bysantionin ja Adrianmeren rannikon. Kohteessa on teatteri sekä pieni ja suuri basilika, ja suuren basilikan narteksin lattiamosaiikki on 500-luvulta, mutta kaupunki autioitui vähitellen vuoden 518 maanjäristyksen ja noin vuoden 585 slaavien hyökkäysten jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Adrianmeren suola 1200-luvulta] 1200-luvulta — Sečovljen suola-altaat Piranin lähellä ovat olleet toiminnassa jo 1200-luvulta. Ne ovat Välimeren pohjoisimpia suolantuotantoalueita ja harvoja paikkoja, joissa suolaa tehdään yhä perinteisin menetelmin: merivesi haihtuu matalissa altaissa, ja jäljelle jää suola. Tuote myydään nimellä Piranin suola, ja sillä on EU:n suojattu alkuperänimitys. Alue on myös 650 hehtaarin kosteikko, jolla on nähty yli 280 lintulajia, ja siellä toimiva suolanvalmistuksen museo sai Europa Nostra -palkinnon vuonna 2003. Altaiden reunoilla kasvaa suolaa vaativia kasveja.
+AIEMPI KYSYMYS: Minkä antiikin tien varrella kaupunki sijaitsi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Roomalaisaikana kaupunki menestyi [[Via Egnatian]] varrella, joka yhdisti [[Bysantionin]] ja [[Adrianmeren]] rannikon. Tie oli tärkeä kulkureitti halki Balkanin. Minä lensin kyl suoremmin.
+KYSYMYS: Kerro lisää: Adrianmeren
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Herakleia Lynkestis (historia)
+Tietoruudun teksti: Herakleia Lynkestis on antiikin kaupungin arkeologinen kohde noin kaksi kilometriä Bitolan keskustasta etelään Pohjois-Makedoniassa. Makedonian kuningas Filippos II perusti kaupungin 300-luvun eaa. puolivälissä, ja se nimettiin Heraklesin mukaan. Roomalaisaikana kaupunki menestyi Via Egnatian varrella, joka yhdisti Bysantionin ja Adrianmeren rannikon. Kohteessa on teatteri sekä pieni ja suuri basilika, ja suuren basilikan narteksin lattiamosaiikki on 500-luvulta, mutta kaupunki autioitui vähitellen vuoden 518 maanjäristyksen ja noin vuoden 585 slaavien hyökkäysten jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Perth — kohdekartta / Kohdekartta: His Majesty's -teatteri] 1904 Teatteri rakennettiin kultavuosien rahalla. Perthin väkiluku kasvoi 1890-luvun kultalöytöjen jälkeen nopeasti, ja paikallispoliitikko Thomas Molloy tilasi arkkitehti William G. Wolfilta teatterin ja hotellin yhdistelmän Hay Streetin ja King Streetin kulmaan. Nimi annettiin juuri kruunatun Edvard VII:n kunniaksi. Urakan voitti Friederich Liebe, joka oli aiemmin rakentanut Bulgarian parlamenttitalon Sofiaan ja tehnyt työtä Budapestin oopperatalossa. Tontin alla virtasi maanalainen puro, ja perustusten kestävyydestä esitettiin julkisesti epäilyjä kesken rakennustyön. Liebe suunnitteli ojat veden ohjaamiseksi ja jatkoi, mutta kun lasku tuli, Molloy kieltäytyi maksamasta ylimääräisiä 17 000…
+- [New Orleans — kohdekartta / Kohdekartta: Saenger-teatteri] 1927 Teatteri avattiin 4. helmikuuta 1927. Salissa oli neljätuhatta paikkaa, rakentaminen kesti kolme vuotta ja maksoi 2,5 miljoonaa dollaria, ja avajaiset keräsivät tuhannet ihmiset kulkueeseen Canal Streetille. Kallein lippu maksoi 65 senttiä, ja samalla lipulla näki mykkäelokuvan ja näytelmän sekä kuuli talon oman orkesterin. Saenger oli veljesten Julian ja Abe Saengerin teatteriketjun lippulaiva, ja se on niitä harvoja ketjun elokuvapalatseja, jotka ovat yhä pystyssä. Arkkitehti Emile Weil suunnitteli sisätilan atmosfääriteatteriksi, joka jäljittelee italialaista barokkipihaa. Kattoon asennettiin 150 lamppua tähtikuvioiden muotoon, ja erikoistehostekoneet heijastivat sisälle liikkuvia p…
+AIEMPI KYSYMYS: Mitä nähtävää Herakleia Lynkestiksen kohteessa on?
+AIEMPI VASTAUS (Livia):
+Mmm— kato. Kohteessa on [[teatteri]] sekä pieni ja suuri [[basilika]]. Suuren basilikan narteksin [[lattiamosaiikki]] on 500-luvulta. Kyllä minä istuisin mieluusti teatterin kaiteella.
+KYSYMYS: Kerro lisää: teatteri
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Herakleia Lynkestis (historia)
+Tietoruudun teksti: Herakleia Lynkestis on antiikin kaupungin arkeologinen kohde noin kaksi kilometriä Bitolan keskustasta etelään Pohjois-Makedoniassa. Makedonian kuningas Filippos II perusti kaupungin 300-luvun eaa. puolivälissä, ja se nimettiin Heraklesin mukaan. Roomalaisaikana kaupunki menestyi Via Egnatian varrella, joka yhdisti Bysantionin ja Adrianmeren rannikon. Kohteessa on teatteri sekä pieni ja suuri basilika, ja suuren basilikan narteksin lattiamosaiikki on 500-luvulta, mutta kaupunki autioitui vähitellen vuoden 518 maanjäristyksen ja noin vuoden 585 slaavien hyökkäysten jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Mitä nähtävää Herakleia Lynkestiksen kohteessa on?
+AIEMPI VASTAUS (Livia):
+Mmm— kato. Kohteessa on [[teatteri]] sekä pieni ja suuri [[basilika]]. Suuren basilikan narteksin [[lattiamosaiikki]] on 500-luvulta. Kyllä minä istuisin mieluusti teatterin kaiteella.
+KYSYMYS: Kerro lisää: basilika
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Herakleia Lynkestis (historia)
+Tietoruudun teksti: Herakleia Lynkestis on antiikin kaupungin arkeologinen kohde noin kaksi kilometriä Bitolan keskustasta etelään Pohjois-Makedoniassa. Makedonian kuningas Filippos II perusti kaupungin 300-luvun eaa. puolivälissä, ja se nimettiin Heraklesin mukaan. Roomalaisaikana kaupunki menestyi Via Egnatian varrella, joka yhdisti Bysantionin ja Adrianmeren rannikon. Kohteessa on teatteri sekä pieni ja suuri basilika, ja suuren basilikan narteksin lattiamosaiikki on 500-luvulta, mutta kaupunki autioitui vähitellen vuoden 518 maanjäristyksen ja noin vuoden 585 slaavien hyökkäysten jälkeen.
+AIEMPI KYSYMYS: Mitä nähtävää Herakleia Lynkestiksen kohteessa on?
+AIEMPI VASTAUS (Livia):
+Mmm— kato. Kohteessa on [[teatteri]] sekä pieni ja suuri [[basilika]]. Suuren basilikan narteksin [[lattiamosaiikki]] on 500-luvulta. Kyllä minä istuisin mieluusti teatterin kaiteella.
+KYSYMYS: Kerro lisää: lattiamosaiikki
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Herakleia Lynkestis (historia)
+Tietoruudun teksti: Herakleia Lynkestis on antiikin kaupungin arkeologinen kohde noin kaksi kilometriä Bitolan keskustasta etelään Pohjois-Makedoniassa. Makedonian kuningas Filippos II perusti kaupungin 300-luvun eaa. puolivälissä, ja se nimettiin Heraklesin mukaan. Roomalaisaikana kaupunki menestyi Via Egnatian varrella, joka yhdisti Bysantionin ja Adrianmeren rannikon. Kohteessa on teatteri sekä pieni ja suuri basilika, ja suuren basilikan narteksin lattiamosaiikki on 500-luvulta, mutta kaupunki autioitui vähitellen vuoden 518 maanjäristyksen ja noin vuoden 585 slaavien hyökkäysten jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Juan — kaupunkilehti / Linnoitukset: Muuri joka kesti maanjäristyksen] San Juanin kaupunginmuurit alkoivat nousta 1500-luvulla, ja parhaimmillaan ne kiersivät koko kalliosaaren — yksi Pohjois-Amerikan kolmesta yhä lähes kokonaisena säilyneestä kaupunginmuurijärjestelmästä, samaan seuraan kuuluvat vain Québecin ja Campechen muurit. Muurit ovat paikoin yli kymmenen metriä korkeat ja useita metrejä paksut, ja niiden sisään rakennettiin porttien lisäksi tykkitasanteita ja vartiotorneja. Vuonna 1867 voimakas maanjäristys vaurioitti osaa muurista — vain kuusi vuotta ennen isoisän matkaa. Nykyisin noin kolme neljäsosaa alkuperäisistä muureista on yhä pystyssä, ja niiden päältä avautuu näkymä kaupunkiin ja merelle.
+- [Pohjois-Makedonia — maalehti / Historia: Linnoitus maanjäristysten raunioilla] 6. vuosisata – — Vardar-joen mutkaan roomalaiset perustivat Scupin kaupungin, josta kasvoi tärkeä uskonnollinen ja kaupallinen keskus temppeleineen ja teattereineen. Vuonna 518 maanjäristys tuhosi Scupin lähes kokonaan, ja keisari Justinianus I käski rakentaa uuden linnoituksen läheiselle kukkulalle – osin juuri raunioituneen kaupungin kivistä. Kaivauksissa linnoituksen alta on paljastunut Scupin asukkaiden taloja, jotka jäivät uuden Kale-nimisen muurin alle vuosisadoiksi. Muureja on sittemmin rakennettu uudelleen bysanttilaisten, slaavien ja osmanien aikana, ja ne ovat kestäneet myös Skopjen toisen suuren maanjäristyksen vuonna 1963.
+AIEMPI KYSYMYS: Miksi Herakleia Lynkestis autioitui?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Kaupunki autioitui vähitellen vuoden 518 [[maanjäristyksen]] ja noin vuoden 585 [[slaavien]] hyökkäysten jälkeen. Sitä ennen se oli menestynyt roomalaisaikana Via Egnatian varrella. Tapahtumat ovat puolentoista tuhannen vuoden takaa, ja paikka on sittemmin muuttunut arkeologiseksi kohteeksi. Hiljainen paikka nykyään, ja hyvä niin.
+KYSYMYS: Kerro lisää: maanjäristyksen
+
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Herakleia Lynkestis (historia)
+Tietoruudun teksti: Herakleia Lynkestis on antiikin kaupungin arkeologinen kohde noin kaksi kilometriä Bitolan keskustasta etelään Pohjois-Makedoniassa. Makedonian kuningas Filippos II perusti kaupungin 300-luvun eaa. puolivälissä, ja se nimettiin Heraklesin mukaan. Roomalaisaikana kaupunki menestyi Via Egnatian varrella, joka yhdisti Bysantionin ja Adrianmeren rannikon. Kohteessa on teatteri sekä pieni ja suuri basilika, ja suuren basilikan narteksin lattiamosaiikki on 500-luvulta, mutta kaupunki autioitui vähitellen vuoden 518 maanjäristyksen ja noin vuoden 585 slaavien hyökkäysten jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Linnoitus maanjäristysten raunioilla] 6. vuosisata – — Vardar-joen mutkaan roomalaiset perustivat Scupin kaupungin, josta kasvoi tärkeä uskonnollinen ja kaupallinen keskus temppeleineen ja teattereineen. Vuonna 518 maanjäristys tuhosi Scupin lähes kokonaan, ja keisari Justinianus I käski rakentaa uuden linnoituksen läheiselle kukkulalle – osin juuri raunioituneen kaupungin kivistä. Kaivauksissa linnoituksen alta on paljastunut Scupin asukkaiden taloja, jotka jäivät uuden Kale-nimisen muurin alle vuosisadoiksi. Muureja on sittemmin rakennettu uudelleen bysanttilaisten, slaavien ja osmanien aikana, ja ne ovat kestäneet myös Skopjen toisen suuren maanjäristyksen vuonna 1963.
+AIEMPI KYSYMYS: Miksi Herakleia Lynkestis autioitui?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Kaupunki autioitui vähitellen vuoden 518 [[maanjäristyksen]] ja noin vuoden 585 [[slaavien]] hyökkäysten jälkeen. Sitä ennen se oli menestynyt roomalaisaikana Via Egnatian varrella. Tapahtumat ovat puolentoista tuhannen vuoden takaa, ja paikka on sittemmin muuttunut arkeologiseksi kohteeksi. Hiljainen paikka nykyään, ja hyvä niin.
+KYSYMYS: Kerro lisää: slaavien
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mavrovon järvi ja Pyhän Nikolain kirkko (luonto · järvi)
+Tietoruudun teksti: Mavrovon järvi on tekojärvi Pohjois-Makedonian länsiosassa, alle sadan kilometrin päässä Skopjesta. Sen pinta-ala on 1 370 hehtaaria, pisimmillään järvi on noin 10 kilometriä ja syvimmillään 50 metriä. Pohjoisessa kohoavat Šar-vuoret ja etelässä Bistran vuoret, joiden huiput ylittävät 2 500 metriä. Rannan tunnetuin nähtävyys on Pyhän Nikolain kirkko, joka seisoo järvessä vain puoliksi veden peitossa. Alue on kuulunut Mavrovon kansallispuistoon vuodesta 1952, ja kesällä järvellä uidaan, soudetaan ja kalastetaan taimenia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Thaimaa — maalehti / Luonto: Sademetsä ja tekojärvi] Khao Sokin kansallispuisto Etelä-Thaimaassa on ikivihreää trooppista sademetsää, jossa sataa runsaasti lähes ympäri vuoden. Puiston keskellä on Cheow Lanin järvi, joka ei ole luonnon tekemä: se syntyi, kun jokeen rakennettiin pato ja laakso täyttyi vedellä. Veden noustua entiset kukkulanhuiput jäivät saariksi, ja kalkkikivijyrkänteet nousevat nyt suoraan järvestä. Aamuisin vesi höyryää ja sumu jää roikkumaan puiden latvoihin.
+AIEMPI KYSYMYS: Kuinka syvä Mavrovon järvi on enimmillään?
+AIEMPI VASTAUS (Livia):
+No niin, helppo. Mavrovon järvi on syvimmillään 50 metriä. Se on [[tekojärvi]], joka on pisimmillään noin 10 kilometriä ja jonka pinta-ala on 1 370 hehtaaria. Pohjoisessa kohoavat [[Šar-vuoret]]. Ihan sopiva syvyys kyyhkylle, joka ei uimaan mene.
+KYSYMYS: Kerro lisää: tekojärvi
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mavrovon järvi ja Pyhän Nikolain kirkko (luonto · järvi)
+Tietoruudun teksti: Mavrovon järvi on tekojärvi Pohjois-Makedonian länsiosassa, alle sadan kilometrin päässä Skopjesta. Sen pinta-ala on 1 370 hehtaaria, pisimmillään järvi on noin 10 kilometriä ja syvimmillään 50 metriä. Pohjoisessa kohoavat Šar-vuoret ja etelässä Bistran vuoret, joiden huiput ylittävät 2 500 metriä. Rannan tunnetuin nähtävyys on Pyhän Nikolain kirkko, joka seisoo järvessä vain puoliksi veden peitossa. Alue on kuulunut Mavrovon kansallispuistoon vuodesta 1952, ja kesällä järvellä uidaan, soudetaan ja kalastetaan taimenia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Appalakit — kaupunkilehti / Appalakit: Joki joka on vanhempi kuin vuoret ympärillään] New River kiemurtelee syvässä kanjonissa Appalakkien poikki ja tunnetaan yhtenä maailman vanhimmista joista: sen uskotaan uurtaneen uomaansa jo kauan ennen kuin ympärillä kohoavat vuoret olivat edes olemassa, vaikka tarkka ikä on geologien kesken kiistanalainen. Poikkeuksellista joelle on myös suunta – se virtaa etelästä pohjoiseen, vastoin useimpien itärannikon jokien tavanomaista reittiä. Nykyään kanjonin yli kaartuu teräksinen New River Gorge -silta, jonka kaaren alla joki näkyy kapeana nauhana syvällä metsäisten rinteiden välissä.
+- [Appalakit — kaupunkilehti / Appalakit: Vuoret jotka olivat jo vanhoja ennen dinosauruksia] Appalakkien tarina alkoi jo lähes miljardi vuotta sitten mannerten yhteentörmäyksissä: viimeisin niistä, noin 270 miljoonaa vuotta sitten tapahtunut Alleghenyn vuorenpoiminta, syntyi kun Pohjois-Amerikka ja Afrika törmäsivät toisiinsa ja kohottivat kertaalleen Himalajan veroisia huippuja. Sen jälkeen 240 miljoonaa vuotta vesi, tuuli, jää ja painovoima ovat kuluttaneet piikit pyöreiksi selänteiksi. Puiden ilmaan päästämä isopreeni verhoaa rinteet vielä tänäkin päivänä siniseen usvaan, josta Blue Ridge -vuoret saivat aikoinaan nimensä.
+AIEMPI KYSYMYS: Kuinka syvä Mavrovon järvi on enimmillään?
+AIEMPI VASTAUS (Livia):
+No niin, helppo. Mavrovon järvi on syvimmillään 50 metriä. Se on [[tekojärvi]], joka on pisimmillään noin 10 kilometriä ja jonka pinta-ala on 1 370 hehtaaria. Pohjoisessa kohoavat [[Šar-vuoret]]. Ihan sopiva syvyys kyyhkylle, joka ei uimaan mene.
+KYSYMYS: Kerro lisää: Šar-vuoret
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mavrovon järvi ja Pyhän Nikolain kirkko (luonto · järvi)
+Tietoruudun teksti: Mavrovon järvi on tekojärvi Pohjois-Makedonian länsiosassa, alle sadan kilometrin päässä Skopjesta. Sen pinta-ala on 1 370 hehtaaria, pisimmillään järvi on noin 10 kilometriä ja syvimmillään 50 metriä. Pohjoisessa kohoavat Šar-vuoret ja etelässä Bistran vuoret, joiden huiput ylittävät 2 500 metriä. Rannan tunnetuin nähtävyys on Pyhän Nikolain kirkko, joka seisoo järvessä vain puoliksi veden peitossa. Alue on kuulunut Mavrovon kansallispuistoon vuodesta 1952, ja kesällä järvellä uidaan, soudetaan ja kalastetaan taimenia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Novosibirsk — kaupunkilehti / Historia: Asema nimeltä Ob, kaupunki nimeltä Novonikolajevsk] Aseman nimi oli pitkään vanhempi kuin kaupungin. Kun rautatiesilta valmistui keväällä 1897, sen kupeessa asui 7 800 ihmistä paikassa, joka oli kaksi vuotta aiemmin nimetty Novonikolajevskiksi pyhän Nikolauksen ja hallitsija Nikolai II:n mukaan — mutta aikatauluissa pysäkki oli yhä pelkkä Ob, ja niin se pysyi vuoteen 1909. Kaupungiksi paikka korotettiin joulukuussa 1903, ja vuonna 1907 asukkaita oli jo yli 47 000. 1910-luvun alussa se oli maan ensimmäisiä paikkoja, joissa alkeisopetuksesta tehtiin pakollista. Nykyisen nimensä kaupunki sai vuonna 1926.
+- [Vladivostok — kohdekartta / Kohdekartta: Sukellusvene S-56] vesille 1939, museona 1975 Korabelnajan rantakadulla makaa kuivalla maalla kokonainen sukellusvene. S-56 aloitti matkansa erikoisesti: runko rakennettiin Leningradissa 1936, kuljetettiin osina rautateitse halki mantereen ja koottiin Dalzavodin telakalla, ja vesille vene laskettiin joulukuussa 1939. Sota vei sen vielä pidemmälle: Tyynenmeren laivastosta vene siirrettiin pohjoiseen Tyynenmeren ja Atlantin yli Panaman kanavan kautta. Pohjoisilla vesillä se upotti neljä alusta, ja palveluksestaan se sai kaartin arvon ja Punalipun kunniamerkin. Museolaivaksi vene nostettiin vuonna 1975; sisällä pääsee kulkemaan osastosta toiseen lähes vapaasti. Sama rantakatu on pieni ulkoilmamuseo muutenkin. Ai…
+AIEMPI KYSYMYS: Mikä kirkko on järvessä puoliksi veden peitossa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kirkko on [[Pyhän Nikolain kirkko]], rannan tunnetuin nähtävyys. Se seisoo tekojärvessä vain puoliksi veden peitossa, ja alue kuuluu [[Mavrovon kansallispuistoon]]. Kirkolla jalat kasteena, kuin minulla lätäkössä.
+KYSYMYS: Kerro lisää: Pyhän Nikolain kirkko
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mavrovon järvi ja Pyhän Nikolain kirkko (luonto · järvi)
+Tietoruudun teksti: Mavrovon järvi on tekojärvi Pohjois-Makedonian länsiosassa, alle sadan kilometrin päässä Skopjesta. Sen pinta-ala on 1 370 hehtaaria, pisimmillään järvi on noin 10 kilometriä ja syvimmillään 50 metriä. Pohjoisessa kohoavat Šar-vuoret ja etelässä Bistran vuoret, joiden huiput ylittävät 2 500 metriä. Rannan tunnetuin nähtävyys on Pyhän Nikolain kirkko, joka seisoo järvessä vain puoliksi veden peitossa. Alue on kuulunut Mavrovon kansallispuistoon vuodesta 1952, ja kesällä järvellä uidaan, soudetaan ja kalastetaan taimenia.
+AIEMPI KYSYMYS: Mikä kirkko on järvessä puoliksi veden peitossa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kirkko on [[Pyhän Nikolain kirkko]], rannan tunnetuin nähtävyys. Se seisoo tekojärvessä vain puoliksi veden peitossa, ja alue kuuluu [[Mavrovon kansallispuistoon]]. Kirkolla jalat kasteena, kuin minulla lätäkössä.
+KYSYMYS: Kerro lisää: Mavrovon kansallispuistoon
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mavrovon järvi ja Pyhän Nikolain kirkko (luonto · järvi)
+Tietoruudun teksti: Mavrovon järvi on tekojärvi Pohjois-Makedonian länsiosassa, alle sadan kilometrin päässä Skopjesta. Sen pinta-ala on 1 370 hehtaaria, pisimmillään järvi on noin 10 kilometriä ja syvimmillään 50 metriä. Pohjoisessa kohoavat Šar-vuoret ja etelässä Bistran vuoret, joiden huiput ylittävät 2 500 metriä. Rannan tunnetuin nähtävyys on Pyhän Nikolain kirkko, joka seisoo järvessä vain puoliksi veden peitossa. Alue on kuulunut Mavrovon kansallispuistoon vuodesta 1952, ja kesällä järvellä uidaan, soudetaan ja kalastetaan taimenia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Ratsastava soturi torilla] 2011 — Skopjen pääaukiolle nousi syyskuussa 2011 pronssipatsas: hevonen ratsastajineen 10-metrisen suihkulähdejalustan päällä, yhteensä lähes 25 metriä korkea. Firenzessä valettu, Valentina Stevanovskan suunnittelema teos paljastettiin itsenäisyysäänestyksen 20-vuotispäivänä, mutta se ristittiin virallisesti vain "Ratsastavaksi soturiksi" – naapurimaa Kreikka piti Aleksanteri Suuren nimen käyttöä oman historiansa omimisena. Yli 20 vuotta kestänyt nimikiista ratkesi vasta 2018 Prespan sopimuksella, kun maan nimeksi vahvistettiin Pohjois-Makedonia. Patsas on osa Skopje 2014 -hanketta, joka täytti kaupungin sadoilla uusilla patsailla.
+AIEMPI KYSYMYS: Onko Mavrovon järvi luonnonjärvi vai tekojärvi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Mavrovon järvi on [[tekojärvi]] Pohjois-Makedonian länsiosassa, alle sadan kilometrin päässä [[Skopjesta]]. Sen pinta-ala on 1 370 hehtaaria, ja alue on kuulunut [[Mavrovon kansallispuistoon]] vuodesta 1952. Ihmisen tekemä järvi, ja silti kaunis.
+KYSYMYS: Kerro lisää: Skopjesta
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mavrovon järvi ja Pyhän Nikolain kirkko (luonto · järvi)
+Tietoruudun teksti: Mavrovon järvi on tekojärvi Pohjois-Makedonian länsiosassa, alle sadan kilometrin päässä Skopjesta. Sen pinta-ala on 1 370 hehtaaria, pisimmillään järvi on noin 10 kilometriä ja syvimmillään 50 metriä. Pohjoisessa kohoavat Šar-vuoret ja etelässä Bistran vuoret, joiden huiput ylittävät 2 500 metriä. Rannan tunnetuin nähtävyys on Pyhän Nikolain kirkko, joka seisoo järvessä vain puoliksi veden peitossa. Alue on kuulunut Mavrovon kansallispuistoon vuodesta 1952, ja kesällä järvellä uidaan, soudetaan ja kalastetaan taimenia.
+AIEMPI KYSYMYS: Mitkä vuoret ympäröivät Mavrovon järveä?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Pohjoisessa kohoavat [[Šar-vuoret]] ja etelässä [[Bistran vuoret]], joiden huiput ylittävät 2 500 metriä. Siellä yläilmoissa minä viihtyisin.
+KYSYMYS: Kerro lisää: Bistran vuoret
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mavrovon järvi ja Pyhän Nikolain kirkko (luonto · järvi)
+Tietoruudun teksti: Mavrovon järvi on tekojärvi Pohjois-Makedonian länsiosassa, alle sadan kilometrin päässä Skopjesta. Sen pinta-ala on 1 370 hehtaaria, pisimmillään järvi on noin 10 kilometriä ja syvimmillään 50 metriä. Pohjoisessa kohoavat Šar-vuoret ja etelässä Bistran vuoret, joiden huiput ylittävät 2 500 metriä. Rannan tunnetuin nähtävyys on Pyhän Nikolain kirkko, joka seisoo järvessä vain puoliksi veden peitossa. Alue on kuulunut Mavrovon kansallispuistoon vuodesta 1952, ja kesällä järvellä uidaan, soudetaan ja kalastetaan taimenia.
+AIEMPI KYSYMYS: Mitä kesällä voi tehdä Mavrovon järvellä?
+AIEMPI VASTAUS (Livia):
+Ai niin, kesä. Kesällä Mavrovon järvellä uidaan, soudetaan ja kalastetaan [[taimenia]]. Järvi sijaitsee alueella, joka on kuulunut [[Mavrovon kansallispuistoon]] vuodesta 1952. Kesällä kaipaisin kyl pullaa laiturille.
+KYSYMYS: Kerro lisää: taimenia
+
+### 49
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kokino (historia)
+Tietoruudun teksti: Kokino on pronssikautinen arkeologinen kohde Tatićev Kamen -huipulla Pohjois-Makedoniassa, noin 30 kilometrin päässä Kumanovosta. Alue sijaitsee 1 010–1 030 metrin korkeudessa, ja löydöt ulottuvat 1800-luvulta eaa. aina 600-luvulle eaa. Kahdella tasanteella sijaitseva kalliokohde tulkitaan pronssikautiseksi aurinko-observatorioksi, ja alemmalla tasanteella on neljä kiviistuinta. Tulkinta on kuitenkin kiistanalainen: asiantuntijoiden mukaan tähtäyspisteitä ja merkkejä on niin paljon, että suuntaukset voivat olla sattumaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kohdekartta / Kohdekartta: Historiallinen aukio] 1723 alkaen Tämä on se paikka, josta kaupunki alkoi. Vasili Tatištšev etsi vuonna 1721 Uralilta kohtaa, jossa olisi sekä malmia että metsää, ja valitsi Iset-joen rannan. Työ seisahtui, kun Berg-kollegio ei hyväksynyt hanketta, ja jatkui vasta 12. maaliskuuta 1723 Georg Wilhelm de Genninin johdolla. Järjestys oli tarkka: ensin padottiin joki, sitten rakennettiin ruukki, joka kävi padon voimalla. Vasarapajaa koeajettiin 18. marraskuuta 1723, ja siitä päivästä lasketaan kaupungin ikä. Ruukista kasvoi kokonainen tehdaskortteli padon molemmin puolin. Vuonna 1725 siellä alettiin lyödä kuparirahaa, ja myöhemmin alue tunnettiin mekaanisena tehtaana ja rahapajana. Sen muurit, portit ja osa halleista…
+- [Jekaterinburg — kaupunkilehti / Jekaterinburg: Pato tuli ensin, kaupunki vasta sen jälkeen] Vasili Tatištšev etsi vuonna 1721 Uralilta paikkaa, jossa olisi sekä malmia että metsää, ja valitsi Iset-joen rannan muutaman virstan päästä Uktusin ruukista. Berg-kollegio ei hyväksynyt hanketta, työ pysähtyi ja Tatištšev menetti Uralin vuoritoimen johdon; rakentaminen jatkui vasta 12. maaliskuuta 1723 Georg Wilhelm de Genninin johdolla. Ensin padottiin joki, vasta sitten nousi ruukki. Kesäkuun 8. päivänä de Gennin lähetti keisarin puolisolle Katariinalle tarjottimen, joka oli taottu ensimmäisestä kuparisulatuksesta, ja pyysi saada nimetä ruukin tämän mukaan. Vasarapajaa koeajettiin 18. marraskuuta 1723.
+AIEMPI KYSYMYS: Miltä ajalta Kokinon löydöt ovat?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Annas ku katson ylhäältä. Kokinon löydöt ulottuvat 1800-luvulta eaa. aina 600-luvulle eaa., joten ne kattavat yli tuhat vuotta. Kohde sijaitsee [[Tatićev Kamen]] -huipulla [[Pohjois-Makedoniassa]], ja sitä on tulkittu [[pronssikautiseksi]] aurinko-observatorioksi. Tulkinta on kuitenkin kiistanalainen. Tuhat vuotta on pitkä aika, mut kallio vaan seisoo.
+KYSYMYS: Kerro lisää: Tatićev Kamen
+
+### 50
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kokino (historia)
+Tietoruudun teksti: Kokino on pronssikautinen arkeologinen kohde Tatićev Kamen -huipulla Pohjois-Makedoniassa, noin 30 kilometrin päässä Kumanovosta. Alue sijaitsee 1 010–1 030 metrin korkeudessa, ja löydöt ulottuvat 1800-luvulta eaa. aina 600-luvulle eaa. Kahdella tasanteella sijaitseva kalliokohde tulkitaan pronssikautiseksi aurinko-observatorioksi, ja alemmalla tasanteella on neljä kiviistuinta. Tulkinta on kuitenkin kiistanalainen: asiantuntijoiden mukaan tähtäyspisteitä ja merkkejä on niin paljon, että suuntaukset voivat olla sattumaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Ruoka: Ajvar, syksyn punainen purkki] syksyisin — Ajvar on paahdetuista paprikoista tehty tahna, joka kuuluu koko Balkanin talvivarastoihin, myös Pohjois-Makedoniassa. Perinteisessä valmistuksessa kokonaisia paprikoita paahdetaan avotulella, jäähdytetään, kuoritaan ja perataan, minkä jälkeen liha jauhetaan tai hienonnetaan. Massaa kypsytetään tuntikausia auringonkukkaöljyssä ja suolassa, ja valmis tahna suljetaan steriileihin lasipurkkeihin. Työ tehdään syksyllä, kun paprikat ovat parhaimmillaan, ja purkit kuuluvat zimnica-nimiseen talviruokavarastoon. Nimi juontuu turkin sanasta havyar, joka tarkoittaa kaviaaria.
+AIEMPI KYSYMYS: Miltä ajalta Kokinon löydöt ovat?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Annas ku katson ylhäältä. Kokinon löydöt ulottuvat 1800-luvulta eaa. aina 600-luvulle eaa., joten ne kattavat yli tuhat vuotta. Kohde sijaitsee [[Tatićev Kamen]] -huipulla [[Pohjois-Makedoniassa]], ja sitä on tulkittu [[pronssikautiseksi]] aurinko-observatorioksi. Tulkinta on kuitenkin kiistanalainen. Tuhat vuotta on pitkä aika, mut kallio vaan seisoo.
+KYSYMYS: Kerro lisää: Pohjois-Makedoniassa
+
+### 51
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kokino (historia)
+Tietoruudun teksti: Kokino on pronssikautinen arkeologinen kohde Tatićev Kamen -huipulla Pohjois-Makedoniassa, noin 30 kilometrin päässä Kumanovosta. Alue sijaitsee 1 010–1 030 metrin korkeudessa, ja löydöt ulottuvat 1800-luvulta eaa. aina 600-luvulle eaa. Kahdella tasanteella sijaitseva kalliokohde tulkitaan pronssikautiseksi aurinko-observatorioksi, ja alemmalla tasanteella on neljä kiviistuinta. Tulkinta on kuitenkin kiistanalainen: asiantuntijoiden mukaan tähtäyspisteitä ja merkkejä on niin paljon, että suuntaukset voivat olla sattumaa.
+AIEMPI KYSYMYS: Miltä ajalta Kokinon löydöt ovat?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Annas ku katson ylhäältä. Kokinon löydöt ulottuvat 1800-luvulta eaa. aina 600-luvulle eaa., joten ne kattavat yli tuhat vuotta. Kohde sijaitsee [[Tatićev Kamen]] -huipulla [[Pohjois-Makedoniassa]], ja sitä on tulkittu [[pronssikautiseksi]] aurinko-observatorioksi. Tulkinta on kuitenkin kiistanalainen. Tuhat vuotta on pitkä aika, mut kallio vaan seisoo.
+KYSYMYS: Kerro lisää: pronssikautiseksi
+
+### 52
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kokino (historia)
+Tietoruudun teksti: Kokino on pronssikautinen arkeologinen kohde Tatićev Kamen -huipulla Pohjois-Makedoniassa, noin 30 kilometrin päässä Kumanovosta. Alue sijaitsee 1 010–1 030 metrin korkeudessa, ja löydöt ulottuvat 1800-luvulta eaa. aina 600-luvulle eaa. Kahdella tasanteella sijaitseva kalliokohde tulkitaan pronssikautiseksi aurinko-observatorioksi, ja alemmalla tasanteella on neljä kiviistuinta. Tulkinta on kuitenkin kiistanalainen: asiantuntijoiden mukaan tähtäyspisteitä ja merkkejä on niin paljon, että suuntaukset voivat olla sattumaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Ruoka: Kokin resepti syntyi Moskovan hienoimmassa ravintolassa] 1860-luku — Ranskalais-belgialainen kokki Lucien Olivier loi 1860-luvulla Moskovan Hermitage-ravintolan tunnusruoan: majoneesilla sidotun salaatin, jossa oli pyytä, rapujen pyrstöjä, kaviaaria, kapriksia ja oliiveja. Olivier piti tarkan reseptin salassa eikä paljastanut sitä edes keittiöhenkilökunnalleen, ja vasta hänen kuolemansa jälkeen vuonna 1894 julkaistiin versio ohjeesta. Vallankumouksen jälkeen kalliit ja harvinaiset aineet vaihtuivat halvempiin: pyystä tuli kanaa tai keittomakkaraa, rapujen pyrstöistä keitettyjä kananmunia ja oliiveista suolakurkkua ja herneitä. Tästä yksinkertaistetusta versiosta tuli neuvostoajan uudenvuodenpöydän vakioruoka, jota ilman juhla ei ollut täydellinen.
+AIEMPI KYSYMYS: Miksi observatoriotulkinta on kiistanalainen?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tää on hyvä kysymys. Osa asiantuntijoista pitää [[Kokinon]] kohdetta pronssikautisena [[aurinko-observatoriona]], jossa kahden tasanteen kallioon tehdyt merkit ja tähtäyspisteet osoittavat taivaan tapahtumiin. Toisten mukaan tähtäyspisteitä ja merkkejä on niin paljon, että suuntaukset voivat olla pelkkää sattumaa: kun merkkejä on riittävästi, jokin niistä osuu aina johonkin. Asiaa ei siis ole ratkaistu, ja molemmat kannat ovat tutkijoiden piirissä vakiintuneita. Kyyhky pysyy kuivin jaloin molempien kantojen välissä.
+KYSYMYS: Kerro lisää: Kokinon
+
+### 53
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kokino (historia)
+Tietoruudun teksti: Kokino on pronssikautinen arkeologinen kohde Tatićev Kamen -huipulla Pohjois-Makedoniassa, noin 30 kilometrin päässä Kumanovosta. Alue sijaitsee 1 010–1 030 metrin korkeudessa, ja löydöt ulottuvat 1800-luvulta eaa. aina 600-luvulle eaa. Kahdella tasanteella sijaitseva kalliokohde tulkitaan pronssikautiseksi aurinko-observatorioksi, ja alemmalla tasanteella on neljä kiviistuinta. Tulkinta on kuitenkin kiistanalainen: asiantuntijoiden mukaan tähtäyspisteitä ja merkkejä on niin paljon, että suuntaukset voivat olla sattumaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Samarkand — kohdekartta / Kohdekartta: Ulugbekin observatorio] 1420-luku Ulugbek oli Timurin pojanpoika ja Samarkandin hallitsija, joka oli ennen kaikkea tähtitieteilijä. Hän kutsui kaupunkiin yli kuusikymmentä matemaatikkoa ja tähtitieteilijää, ja observatorion perustukset laskettiin 1420-luvun alkupuolella. Rakennus valmistui noin vuonna 1428. Se oli lieriön muotoinen, halkaisijaltaan 46 metriä ja korkeudeltaan kolmisenkymmentä metriä, ja se seisoi kukkulalla parikymmentä metriä ympäristöään ylempänä. Keskellä lieriötä oli Fakhri-sekstantti, jonka säde oli 40,04 metriä — aikansa suurin tähtitieteellinen mittalaite. Niin suuri kaari ei olisi mahtunut rakennuksen sisään pystysuunnassa, joten se rakennettiin osittain maan alle noin kahden metrin levyise…
+- [Quito — kaupunkilehti / Tiede: Observatorio joka kantoi retkikunnan perintöä eteenpäin] Quiton observatorio, joka avattiin La Alameda -puistoon 1873, ei syntynyt tyhjästä: se jatkoi tiedeperinnettä, jonka ranskalais-espanjalainen retkikunta oli aloittanut 130 vuotta aiemmin. Kokoelmissa on 1800-luvun mittalaitteita, muun muassa Repsoldin meridiaanipiiri ja 1875 Münchenissä valmistettu 24-senttinen Merzin kaukoputki. 1900-luvun alussa toinen ranskalainen retkikunta työskenteli samoissa tiloissa vahvistaakseen vanhat mittaustulokset – sen vuosiksi lähteet antavat joko 1901–1906 tai 1902–1914.
+AIEMPI KYSYMYS: Miksi observatoriotulkinta on kiistanalainen?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tää on hyvä kysymys. Osa asiantuntijoista pitää [[Kokinon]] kohdetta pronssikautisena [[aurinko-observatoriona]], jossa kahden tasanteen kallioon tehdyt merkit ja tähtäyspisteet osoittavat taivaan tapahtumiin. Toisten mukaan tähtäyspisteitä ja merkkejä on niin paljon, että suuntaukset voivat olla pelkkää sattumaa: kun merkkejä on riittävästi, jokin niistä osuu aina johonkin. Asiaa ei siis ole ratkaistu, ja molemmat kannat ovat tutkijoiden piirissä vakiintuneita. Kyyhky pysyy kuivin jaloin molempien kantojen välissä.
+KYSYMYS: Kerro lisää: aurinko-observatoriona
+
+### 54
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kokino (historia)
+Tietoruudun teksti: Kokino on pronssikautinen arkeologinen kohde Tatićev Kamen -huipulla Pohjois-Makedoniassa, noin 30 kilometrin päässä Kumanovosta. Alue sijaitsee 1 010–1 030 metrin korkeudessa, ja löydöt ulottuvat 1800-luvulta eaa. aina 600-luvulle eaa. Kahdella tasanteella sijaitseva kalliokohde tulkitaan pronssikautiseksi aurinko-observatorioksi, ja alemmalla tasanteella on neljä kiviistuinta. Tulkinta on kuitenkin kiistanalainen: asiantuntijoiden mukaan tähtäyspisteitä ja merkkejä on niin paljon, että suuntaukset voivat olla sattumaa.
+AIEMPI KYSYMYS: Miten korkealla Kokino sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kato, tää on helppo. Siivin tän mittaa nopeasti. Kokino sijaitsee noin 1 010–1 030 metrin korkeudessa [[Tatićev Kamen]] -huipulla, noin 30 kilometrin päässä [[Kumanovosta]]. Kohde on jaettu kahteen tasanteeseen, ja alemmalla tasanteella on neljä kiviistuinta. Ylhäältä katsoen se on ihan mukava lepopaikka.
+KYSYMYS: Kerro lisää: Kumanovosta
+
+### 55
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kokino (historia)
+Tietoruudun teksti: Kokino on pronssikautinen arkeologinen kohde Tatićev Kamen -huipulla Pohjois-Makedoniassa, noin 30 kilometrin päässä Kumanovosta. Alue sijaitsee 1 010–1 030 metrin korkeudessa, ja löydöt ulottuvat 1800-luvulta eaa. aina 600-luvulle eaa. Kahdella tasanteella sijaitseva kalliokohde tulkitaan pronssikautiseksi aurinko-observatorioksi, ja alemmalla tasanteella on neljä kiviistuinta. Tulkinta on kuitenkin kiistanalainen: asiantuntijoiden mukaan tähtäyspisteitä ja merkkejä on niin paljon, että suuntaukset voivat olla sattumaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Barcelona — kohdekartta / Kohdekartta: Boquerian kauppahalli] 1840–1853 Boquerian kauppahalli on yksi Euroopan vanhimmista ja vilkkaimmista toreista, ja sen juuret ulottuvat todella kauas: jo vuonna 1217 kaupunginportin lähellä myytiin lihaa samalla paikalla. Vuosisatojen kuluessa myyjiä tuli lisää, ja 1400-luvulla torilla myytiin erityisesti sikoja. Nykyinen katettu halli alkoi rakentua vuonna 1840, ja se avattiin virallisesti vuonna 1853. Myöhemmin halliin rakennettiin oma kalaosasto, ja vuonna 1914 koko markkinan päälle nostettiin näyttävä metallikatto, joka suojaa myyjiä ja ostajia edelleen tänäkin päivänä. Torin nimi Boqueria juontuu luultavasti katalaanin sanasta 'boc', joka tarkoittaa vuohta – ennen vanhaan siellä nimittäin myytiin paljon vuohe…
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Mitä pronssikausi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tost minä osaan kertoo. Pronssikausi on esihistorian ajanjakso, jolloin työkalut ja aseet tehtiin pääosin pronssista, joka on kuparin ja tinan seos. Ajanjakson ajoitus vaihtelee alueittain: Euroopassa se sijoittuu karkeasti kolmannelta vuosituhannelta eaa. rautakauden alkuun, ja Balkanilla sen loppuvaiheet osuvat ensimmäisen vuosituhannen eaa. alkuun. [[Kokinon]] löydöt kuuluvat tähän aikaan, ja sama aikakausi tunnetaan myös [[Euroopan]] muista kalliokohteista ja hautakumpuista.
+
+Suku on kantanut viestejä metalliaikojen halki, ja pronssi on minusta aina vaikuttanut jotenkin liian painavalta lentämiseen. Rautakausi tuli sitten ja otti pronssin paikan, eikä kukaan kysynyt pullaa kummallakaan.
+KYSYMYS: Kerro lisää: Euroopan
+
+### 56
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kokino (historia)
+Tietoruudun teksti: Kokino on pronssikautinen arkeologinen kohde Tatićev Kamen -huipulla Pohjois-Makedoniassa, noin 30 kilometrin päässä Kumanovosta. Alue sijaitsee 1 010–1 030 metrin korkeudessa, ja löydöt ulottuvat 1800-luvulta eaa. aina 600-luvulle eaa. Kahdella tasanteella sijaitseva kalliokohde tulkitaan pronssikautiseksi aurinko-observatorioksi, ja alemmalla tasanteella on neljä kiviistuinta. Tulkinta on kuitenkin kiistanalainen: asiantuntijoiden mukaan tähtäyspisteitä ja merkkejä on niin paljon, että suuntaukset voivat olla sattumaa.
+AIEMPI KYSYMYS: Mihin muinaista aurinko-observatoriota voitiin käyttää?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Hyvä kysymys tuo. Muinaista aurinko-observatoriota voitiin käyttää auringon nousu- ja laskupaikkojen seuraamiseen horisontissa, jolloin tärkeät hetket kuten [[päivänseisaukset]] ja tasausten ajankohdat saatiin merkittyä. Sen avulla seurattiin vuodenkiertoa ja ajoitettiin kalenteria, esimerkiksi maanviljelyn ja juhlien kannalta tärkeitä hetkiä. Kokinon kohdalla tämä on tulkinta, jota ei ole varmistettu, sillä [[Kokinon]] merkkien tarkoitus on tutkijoiden kesken kiistanalainen. Ja minä kun luulin, että kalenteri oli keksitty meitä kyyhkyjä varten.
+KYSYMYS: Kerro lisää: päivänseisaukset
+
+### 57
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skopjen vanha rautatieasema (historia)
+Tietoruudun teksti: Skopjen keskusasema oli 1900-luvun puolivälissä Jugoslavian vilkkaimpia rautatieasemia, tyylikäs kivirakennus kellotorneineen. Maanjäristys iski kaupunkiin 26.7.1963 kello 5.17, tappaen yli tuhat ihmistä ja tuhoten suuren osan kaupungista; aseman kello pysähtyi täsmälleen järistyksen hetkeen. Osittain sortunut rakennus toimii nykyään kaupunginmuseona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Plečnikin ja Secessionin Ljubljana: Secession-katu ja Jugoslavian korkein talo] Vuoden 1895 maanjäristyksen jälkeen osa Ljubljanasta rakennettiin uudelleen Wienin secession-tyyliin. Miklošičeva-kadun alaosa Prešerenin aukion päässä täyttyi pääosin secession-palatseista, esimerkiksi Grand Hotel Union valmistui vuosina 1903–1905. Vladimir Šubicin suunnittelema Nebotičnik-pilvenpiirtäjä avattiin 21. helmikuuta 1933. Sen 13 kerrosta ja 70,35 metriä tekivät siitä Jugoslavian kuningaskunnan korkeimman rakennuksen, ja tyyliltään se yhdistää uusklassismia ja art decoa.
+AIEMPI KYSYMYS: Miltä Skopjen vanha rautatieasema näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Kato, katotaas. Tän aseman minä tunnen ylhäältä päin. Skopjen keskusasema oli 1900-luvun puolivälissä yksi [[Jugoslavian]] vilkkaimmista rautatieasemista. Se oli tyylikäs kivirakennus, jossa oli kellotorni. Rakennus kuului kaupungin tärkeimpiin paikkoihin, kunnes [[Skopjen maanjäristys]] vuonna 1963 muutti kaupungin ilmeen. Nykyään osittain sortunut rakennus toimii kaupunginmuseona. Onpas siinä kellotorni, jonka vierestä olis ollut mukava lähteä matkaan.
+KYSYMYS: Kerro lisää: Jugoslavian
+
+### 58
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skopjen vanha rautatieasema (historia)
+Tietoruudun teksti: Skopjen keskusasema oli 1900-luvun puolivälissä Jugoslavian vilkkaimpia rautatieasemia, tyylikäs kivirakennus kellotorneineen. Maanjäristys iski kaupunkiin 26.7.1963 kello 5.17, tappaen yli tuhat ihmistä ja tuhoten suuren osan kaupungista; aseman kello pysähtyi täsmälleen järistyksen hetkeen. Osittain sortunut rakennus toimii nykyään kaupunginmuseona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Linnoitus maanjäristysten raunioilla] 6. vuosisata – — Vardar-joen mutkaan roomalaiset perustivat Scupin kaupungin, josta kasvoi tärkeä uskonnollinen ja kaupallinen keskus temppeleineen ja teattereineen. Vuonna 518 maanjäristys tuhosi Scupin lähes kokonaan, ja keisari Justinianus I käski rakentaa uuden linnoituksen läheiselle kukkulalle – osin juuri raunioituneen kaupungin kivistä. Kaivauksissa linnoituksen alta on paljastunut Scupin asukkaiden taloja, jotka jäivät uuden Kale-nimisen muurin alle vuosisadoiksi. Muureja on sittemmin rakennettu uudelleen bysanttilaisten, slaavien ja osmanien aikana, ja ne ovat kestäneet myös Skopjen toisen suuren maanjäristyksen vuonna 1963.
+AIEMPI KYSYMYS: Miltä Skopjen vanha rautatieasema näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Kato, katotaas. Tän aseman minä tunnen ylhäältä päin. Skopjen keskusasema oli 1900-luvun puolivälissä yksi [[Jugoslavian]] vilkkaimmista rautatieasemista. Se oli tyylikäs kivirakennus, jossa oli kellotorni. Rakennus kuului kaupungin tärkeimpiin paikkoihin, kunnes [[Skopjen maanjäristys]] vuonna 1963 muutti kaupungin ilmeen. Nykyään osittain sortunut rakennus toimii kaupunginmuseona. Onpas siinä kellotorni, jonka vierestä olis ollut mukava lähteä matkaan.
+KYSYMYS: Kerro lisää: Skopjen maanjäristys
+
+### 59
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skopjen vanha rautatieasema (historia)
+Tietoruudun teksti: Skopjen keskusasema oli 1900-luvun puolivälissä Jugoslavian vilkkaimpia rautatieasemia, tyylikäs kivirakennus kellotorneineen. Maanjäristys iski kaupunkiin 26.7.1963 kello 5.17, tappaen yli tuhat ihmistä ja tuhoten suuren osan kaupungista; aseman kello pysähtyi täsmälleen järistyksen hetkeen. Osittain sortunut rakennus toimii nykyään kaupunginmuseona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Ratsastava soturi torilla] 2011 — Skopjen pääaukiolle nousi syyskuussa 2011 pronssipatsas: hevonen ratsastajineen 10-metrisen suihkulähdejalustan päällä, yhteensä lähes 25 metriä korkea. Firenzessä valettu, Valentina Stevanovskan suunnittelema teos paljastettiin itsenäisyysäänestyksen 20-vuotispäivänä, mutta se ristittiin virallisesti vain "Ratsastavaksi soturiksi" – naapurimaa Kreikka piti Aleksanteri Suuren nimen käyttöä oman historiansa omimisena. Yli 20 vuotta kestänyt nimikiista ratkesi vasta 2018 Prespan sopimuksella, kun maan nimeksi vahvistettiin Pohjois-Makedonia. Patsas on osa Skopje 2014 -hanketta, joka täytti kaupungin sadoilla uusilla patsailla.
+AIEMPI KYSYMYS: Miksi Skopjen vanha rautatieasema on nykyään raunioina?
+AIEMPI VASTAUS (Livia):
+Kääk. Tää on raskas aihe. [[Skopjeen]] iski [[maanjäristys]] 26.7.1963 kello 5.17. Se tappoi yli tuhat ihmistä ja tuhosi suuren osan kaupungista, ja aseman kello pysähtyi täsmälleen järistyksen hetkeen. Osittain sortunut rakennus on säilytetty muistona, ja nykyään siinä toimii kaupunginmuseo. Tapahtumasta on kulunut yli kuusikymmentä vuotta, ja kaupunki on rakennettu sen jälkeen uudelleen. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Skopjeen
+
+### 60
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skopjen vanha rautatieasema (historia)
+Tietoruudun teksti: Skopjen keskusasema oli 1900-luvun puolivälissä Jugoslavian vilkkaimpia rautatieasemia, tyylikäs kivirakennus kellotorneineen. Maanjäristys iski kaupunkiin 26.7.1963 kello 5.17, tappaen yli tuhat ihmistä ja tuhoten suuren osan kaupungista; aseman kello pysähtyi täsmälleen järistyksen hetkeen. Osittain sortunut rakennus toimii nykyään kaupunginmuseona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Linnoitus maanjäristysten raunioilla] 6. vuosisata – — Vardar-joen mutkaan roomalaiset perustivat Scupin kaupungin, josta kasvoi tärkeä uskonnollinen ja kaupallinen keskus temppeleineen ja teattereineen. Vuonna 518 maanjäristys tuhosi Scupin lähes kokonaan, ja keisari Justinianus I käski rakentaa uuden linnoituksen läheiselle kukkulalle – osin juuri raunioituneen kaupungin kivistä. Kaivauksissa linnoituksen alta on paljastunut Scupin asukkaiden taloja, jotka jäivät uuden Kale-nimisen muurin alle vuosisadoiksi. Muureja on sittemmin rakennettu uudelleen bysanttilaisten, slaavien ja osmanien aikana, ja ne ovat kestäneet myös Skopjen toisen suuren maanjäristyksen vuonna 1963.
+- [San Francisco — kaupunkilehti / San Francisco: Maanjäristys ja päiväkausia tulta] Kello 5.12 aamulla 18. huhtikuuta 1906 voimakas maanjäristys ravisteli San Franciscoa ja Pohjois-Kaliforniaa. Sortuneiden talojen katkenneista kaasuputkista syttyi tulipaloja, jotka levisivät hallitsemattomina useiden päivien ajan, ja kun vesijohdot olivat poikki, Presidion tykistö räjäytti kokonaisia kortteleita palokujiksi. Arvion mukaan yli kolme neljäsosaa kaupungista ja koko keskusta jäi raunioiksi, ja yli puolet 400 000 asukkaasta menetti kotinsa. Uhriluvusta ei ole yksimielisyyttä: aikalaisraporteissa kuolleita oli 498, nykyarvioissa useita tuhansia. Jälleenrakennus oli nopeaa, ja kaupunki juhli toipumistaan maailmannäyttelyssä 1915.
+AIEMPI KYSYMYS: Miksi Skopjen vanha rautatieasema on nykyään raunioina?
+AIEMPI VASTAUS (Livia):
+Kääk. Tää on raskas aihe. [[Skopjeen]] iski [[maanjäristys]] 26.7.1963 kello 5.17. Se tappoi yli tuhat ihmistä ja tuhosi suuren osan kaupungista, ja aseman kello pysähtyi täsmälleen järistyksen hetkeen. Osittain sortunut rakennus on säilytetty muistona, ja nykyään siinä toimii kaupunginmuseo. Tapahtumasta on kulunut yli kuusikymmentä vuotta, ja kaupunki on rakennettu sen jälkeen uudelleen. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: maanjäristys
+
+### 61
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skopjen vanha rautatieasema (historia)
+Tietoruudun teksti: Skopjen keskusasema oli 1900-luvun puolivälissä Jugoslavian vilkkaimpia rautatieasemia, tyylikäs kivirakennus kellotorneineen. Maanjäristys iski kaupunkiin 26.7.1963 kello 5.17, tappaen yli tuhat ihmistä ja tuhoten suuren osan kaupungista; aseman kello pysähtyi täsmälleen järistyksen hetkeen. Osittain sortunut rakennus toimii nykyään kaupunginmuseona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Juan — kaupunkilehti / Linnoitukset: Muuri joka kesti maanjäristyksen] San Juanin kaupunginmuurit alkoivat nousta 1500-luvulla, ja parhaimmillaan ne kiersivät koko kalliosaaren — yksi Pohjois-Amerikan kolmesta yhä lähes kokonaisena säilyneestä kaupunginmuurijärjestelmästä, samaan seuraan kuuluvat vain Québecin ja Campechen muurit. Muurit ovat paikoin yli kymmenen metriä korkeat ja useita metrejä paksut, ja niiden sisään rakennettiin porttien lisäksi tykkitasanteita ja vartiotorneja. Vuonna 1867 voimakas maanjäristys vaurioitti osaa muurista — vain kuusi vuotta ennen isoisän matkaa. Nykyisin noin kolme neljäsosaa alkuperäisistä muureista on yhä pystyssä, ja niiden päältä avautuu näkymä kaupunkiin ja merelle.
+- [Pohjois-Makedonia — maalehti / Historia: Linnoitus maanjäristysten raunioilla] 6. vuosisata – — Vardar-joen mutkaan roomalaiset perustivat Scupin kaupungin, josta kasvoi tärkeä uskonnollinen ja kaupallinen keskus temppeleineen ja teattereineen. Vuonna 518 maanjäristys tuhosi Scupin lähes kokonaan, ja keisari Justinianus I käski rakentaa uuden linnoituksen läheiselle kukkulalle – osin juuri raunioituneen kaupungin kivistä. Kaivauksissa linnoituksen alta on paljastunut Scupin asukkaiden taloja, jotka jäivät uuden Kale-nimisen muurin alle vuosisadoiksi. Muureja on sittemmin rakennettu uudelleen bysanttilaisten, slaavien ja osmanien aikana, ja ne ovat kestäneet myös Skopjen toisen suuren maanjäristyksen vuonna 1963.
+AIEMPI KYSYMYS: Miten Skopjea jälleenrakennettiin maanjäristyksen jälkeen?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on iso aihe. Joo, katotaas. Vuoden 1963 [[maanjäristyksen]] jälkeen [[Skopjen]] jälleenrakennus oli suuri kansainvälinen hanke: apua ja asiantuntemusta tuli useista maista, ja kaupunkia suunniteltiin uudelleen. Lähteiden mukaan hankkeessa oli mukana japanilainen arkkitehti Kenzo Tange, mutta en ole varma hänen osuutensa tarkoista yksityiskohdista. Kaupungin ilme muuttui voimakkaasti, ja sen vanha keskusta jäi osittain muistoksi tuhosta. Tarkemmat vuosiluvut jätän sanomatta, koska en ole niistä varma.
+KYSYMYS: Kerro lisää: maanjäristyksen
+
+### 62
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skopjen vanha rautatieasema (historia)
+Tietoruudun teksti: Skopjen keskusasema oli 1900-luvun puolivälissä Jugoslavian vilkkaimpia rautatieasemia, tyylikäs kivirakennus kellotorneineen. Maanjäristys iski kaupunkiin 26.7.1963 kello 5.17, tappaen yli tuhat ihmistä ja tuhoten suuren osan kaupungista; aseman kello pysähtyi täsmälleen järistyksen hetkeen. Osittain sortunut rakennus toimii nykyään kaupunginmuseona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Linnoitus maanjäristysten raunioilla] 6. vuosisata – — Vardar-joen mutkaan roomalaiset perustivat Scupin kaupungin, josta kasvoi tärkeä uskonnollinen ja kaupallinen keskus temppeleineen ja teattereineen. Vuonna 518 maanjäristys tuhosi Scupin lähes kokonaan, ja keisari Justinianus I käski rakentaa uuden linnoituksen läheiselle kukkulalle – osin juuri raunioituneen kaupungin kivistä. Kaivauksissa linnoituksen alta on paljastunut Scupin asukkaiden taloja, jotka jäivät uuden Kale-nimisen muurin alle vuosisadoiksi. Muureja on sittemmin rakennettu uudelleen bysanttilaisten, slaavien ja osmanien aikana, ja ne ovat kestäneet myös Skopjen toisen suuren maanjäristyksen vuonna 1963.
+- [Pohjois-Makedonia — maalehti / Historia: Ratsastava soturi torilla] 2011 — Skopjen pääaukiolle nousi syyskuussa 2011 pronssipatsas: hevonen ratsastajineen 10-metrisen suihkulähdejalustan päällä, yhteensä lähes 25 metriä korkea. Firenzessä valettu, Valentina Stevanovskan suunnittelema teos paljastettiin itsenäisyysäänestyksen 20-vuotispäivänä, mutta se ristittiin virallisesti vain "Ratsastavaksi soturiksi" – naapurimaa Kreikka piti Aleksanteri Suuren nimen käyttöä oman historiansa omimisena. Yli 20 vuotta kestänyt nimikiista ratkesi vasta 2018 Prespan sopimuksella, kun maan nimeksi vahvistettiin Pohjois-Makedonia. Patsas on osa Skopje 2014 -hanketta, joka täytti kaupungin sadoilla uusilla patsailla.
+AIEMPI KYSYMYS: Miten Skopjea jälleenrakennettiin maanjäristyksen jälkeen?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on iso aihe. Joo, katotaas. Vuoden 1963 [[maanjäristyksen]] jälkeen [[Skopjen]] jälleenrakennus oli suuri kansainvälinen hanke: apua ja asiantuntemusta tuli useista maista, ja kaupunkia suunniteltiin uudelleen. Lähteiden mukaan hankkeessa oli mukana japanilainen arkkitehti Kenzo Tange, mutta en ole varma hänen osuutensa tarkoista yksityiskohdista. Kaupungin ilme muuttui voimakkaasti, ja sen vanha keskusta jäi osittain muistoksi tuhosta. Tarkemmat vuosiluvut jätän sanomatta, koska en ole niistä varma.
+KYSYMYS: Kerro lisää: Skopjen
+
+### 63
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skopjen vanha rautatieasema (historia)
+Tietoruudun teksti: Skopjen keskusasema oli 1900-luvun puolivälissä Jugoslavian vilkkaimpia rautatieasemia, tyylikäs kivirakennus kellotorneineen. Maanjäristys iski kaupunkiin 26.7.1963 kello 5.17, tappaen yli tuhat ihmistä ja tuhoten suuren osan kaupungista; aseman kello pysähtyi täsmälleen järistyksen hetkeen. Osittain sortunut rakennus toimii nykyään kaupunginmuseona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Ruoka: Tikveš, Makedonian viinilaakso] yli 2 500 vuotta — Kavadarcin ja Negotinon ympärillä levittäytyvä Tikvešin tasanko on Pohjois-Makedonian tunnetuin viinialue. Seudulla kerrotaan viiniä valmistetun yli 2 500 vuotta, ja lämmin, kuiva ilmasto sopii rypäleille. Paikallisia punaviinilajikkeita ovat vranec ja kratošija, ja valkoisista tunnetaan smederevka. Viinitarhat ulottuvat Vardar-joen laaksosta kumpuileville rinteille, ja syksyllä sadonkorjuu täyttää tilojen pihat. Kavadarcin kaupunki on alueen keskus, ja monet viinitilat ottavat vieraita vastaan.
+- [Pohjois-Makedonia — maalehti / Historia: Ratsastava soturi torilla] 2011 — Skopjen pääaukiolle nousi syyskuussa 2011 pronssipatsas: hevonen ratsastajineen 10-metrisen suihkulähdejalustan päällä, yhteensä lähes 25 metriä korkea. Firenzessä valettu, Valentina Stevanovskan suunnittelema teos paljastettiin itsenäisyysäänestyksen 20-vuotispäivänä, mutta se ristittiin virallisesti vain "Ratsastavaksi soturiksi" – naapurimaa Kreikka piti Aleksanteri Suuren nimen käyttöä oman historiansa omimisena. Yli 20 vuotta kestänyt nimikiista ratkesi vasta 2018 Prespan sopimuksella, kun maan nimeksi vahvistettiin Pohjois-Makedonia. Patsas on osa Skopje 2014 -hanketta, joka täytti kaupungin sadoilla uusilla patsailla.
+- [Pohjois-Makedonia — maalehti / Historia] Pohjois-Makedonia on maa, jossa antiikin roomalaiskaupungin rauniot, keskiaikaisen Bysantin kirkot ja vuoden 1903 kymmenen päivän tasavalta kerrostuvat samalle maaperälle. Jopa maan oma nimi ja pääkaupungin suurin patsas ovat olleet kiistan aiheita – historia täällä ei ole koskaan pelkkää menneisyyttä.
+AIEMPI KYSYMYS: Mikä on Prespan sopimus?
+AIEMPI VASTAUS (Livia):
+Ai se. Tost minä tiedän kyl jotain. Prespan sopimus on vuonna 2018 tehty sopimus, joka ratkaisi yli 20 vuotta kestäneen nimikiistan Kreikan ja Pohjois-Makedonian välillä. Kreikka piti Makedonia-nimen käyttöä oman historiansa omimisena, ja sopimuksella maan nimeksi vahvistettiin [[Pohjois-Makedonia]]. Kiistan taustalla oli muun muassa [[Aleksanteri Suuren]] nimen käyttö, joka näkyi myös Skopjen pääaukion patsaan nimessä: virallisesti se on vain Ratsastava soturi.
+
+Kyyhkyn silmin nimikiista on outo juttu, koska taivaalla ei ole rajoja, vaikka kaikki muuten kulkee vanhojen reittien mukaan. Kreikan puolella täällä on varmasti oma pullansa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: Pohjois-Makedonia
+
+### 64
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skopjen vanha rautatieasema (historia)
+Tietoruudun teksti: Skopjen keskusasema oli 1900-luvun puolivälissä Jugoslavian vilkkaimpia rautatieasemia, tyylikäs kivirakennus kellotorneineen. Maanjäristys iski kaupunkiin 26.7.1963 kello 5.17, tappaen yli tuhat ihmistä ja tuhoten suuren osan kaupungista; aseman kello pysähtyi täsmälleen järistyksen hetkeen. Osittain sortunut rakennus toimii nykyään kaupunginmuseona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Ratsastava soturi torilla] 2011 — Skopjen pääaukiolle nousi syyskuussa 2011 pronssipatsas: hevonen ratsastajineen 10-metrisen suihkulähdejalustan päällä, yhteensä lähes 25 metriä korkea. Firenzessä valettu, Valentina Stevanovskan suunnittelema teos paljastettiin itsenäisyysäänestyksen 20-vuotispäivänä, mutta se ristittiin virallisesti vain "Ratsastavaksi soturiksi" – naapurimaa Kreikka piti Aleksanteri Suuren nimen käyttöä oman historiansa omimisena. Yli 20 vuotta kestänyt nimikiista ratkesi vasta 2018 Prespan sopimuksella, kun maan nimeksi vahvistettiin Pohjois-Makedonia. Patsas on osa Skopje 2014 -hanketta, joka täytti kaupungin sadoilla uusilla patsailla.
+- [Novosibirsk — kohdekartta / Kohdekartta: Aleksanteri Nevskin katedraali] 1896–1899 Katedraali on kaupungin ensimmäisiä kivirakennuksia. Se rakennettiin vuosina 1896–1899, siis samaan aikaan kuin rautatiesilta ja sen ympärille kasvava taajama, ja vihittiin käyttöön 29. joulukuuta 1899. Katedraalin aseman se sai vuonna 1915. Tyyli on uusbysanttilainen: massiivinen keskuskupoli, punatiiliset seinät ja kaari-ikkunoiden rivistöt. Mallina oli Pietarissa muutamaa vuotta aiemmin rakennettu Armollisen Jumalanäidin kirkko. Tiili on täällä poikkeuksellisen näkyvässä osassa — sitä ei ole rapattu lainkaan, ja koristeaiheet on ladottu itse muurauksesta. Kirkko on myös muistomerkki. Se pystytettiin keisari Aleksanteri III:n muistolle: hän oli pannut alulle Transsiperian radan,…
+AIEMPI KYSYMYS: Mikä on Prespan sopimus?
+AIEMPI VASTAUS (Livia):
+Ai se. Tost minä tiedän kyl jotain. Prespan sopimus on vuonna 2018 tehty sopimus, joka ratkaisi yli 20 vuotta kestäneen nimikiistan Kreikan ja Pohjois-Makedonian välillä. Kreikka piti Makedonia-nimen käyttöä oman historiansa omimisena, ja sopimuksella maan nimeksi vahvistettiin [[Pohjois-Makedonia]]. Kiistan taustalla oli muun muassa [[Aleksanteri Suuren]] nimen käyttö, joka näkyi myös Skopjen pääaukion patsaan nimessä: virallisesti se on vain Ratsastava soturi.
+
+Kyyhkyn silmin nimikiista on outo juttu, koska taivaalla ei ole rajoja, vaikka kaikki muuten kulkee vanhojen reittien mukaan. Kreikan puolella täällä on varmasti oma pullansa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: Aleksanteri Suuren
+
+### 65
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skopjen vanha rautatieasema (historia)
+Tietoruudun teksti: Skopjen keskusasema oli 1900-luvun puolivälissä Jugoslavian vilkkaimpia rautatieasemia, tyylikäs kivirakennus kellotorneineen. Maanjäristys iski kaupunkiin 26.7.1963 kello 5.17, tappaen yli tuhat ihmistä ja tuhoten suuren osan kaupungista; aseman kello pysähtyi täsmälleen järistyksen hetkeen. Osittain sortunut rakennus toimii nykyään kaupunginmuseona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Linnoitus maanjäristysten raunioilla] 6. vuosisata – — Vardar-joen mutkaan roomalaiset perustivat Scupin kaupungin, josta kasvoi tärkeä uskonnollinen ja kaupallinen keskus temppeleineen ja teattereineen. Vuonna 518 maanjäristys tuhosi Scupin lähes kokonaan, ja keisari Justinianus I käski rakentaa uuden linnoituksen läheiselle kukkulalle – osin juuri raunioituneen kaupungin kivistä. Kaivauksissa linnoituksen alta on paljastunut Scupin asukkaiden taloja, jotka jäivät uuden Kale-nimisen muurin alle vuosisadoiksi. Muureja on sittemmin rakennettu uudelleen bysanttilaisten, slaavien ja osmanien aikana, ja ne ovat kestäneet myös Skopjen toisen suuren maanjäristyksen vuonna 1963.
+- [Pohjois-Makedonia — maalehti / Ruoka: Tikveš, Makedonian viinilaakso] yli 2 500 vuotta — Kavadarcin ja Negotinon ympärillä levittäytyvä Tikvešin tasanko on Pohjois-Makedonian tunnetuin viinialue. Seudulla kerrotaan viiniä valmistetun yli 2 500 vuotta, ja lämmin, kuiva ilmasto sopii rypäleille. Paikallisia punaviinilajikkeita ovat vranec ja kratošija, ja valkoisista tunnetaan smederevka. Viinitarhat ulottuvat Vardar-joen laaksosta kumpuileville rinteille, ja syksyllä sadonkorjuu täyttää tilojen pihat. Kavadarcin kaupunki on alueen keskus, ja monet viinitilat ottavat vieraita vastaan.
+AIEMPI KYSYMYS: Mikä joki virtaa Skopjen halki?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Joo, tää on helppo. Skopjen halki virtaa [[Vardar]]-joki. Roomalaiset perustivat sen mutkaan Scupin kaupungin, josta kasvoi tärkeä uskonnollinen ja kaupallinen keskus. Vuonna 518 maanjäristys tuhosi Scupin lähes kokonaan, ja uusi linnoitus, [[Kale]], rakennettiin läheiselle kukkulalle osin raunioituneen kaupungin kivistä. Joki on siis nähnyt kaupungin kahdesti hajoavan. Hyvä joki, vaikkei se kyyhkyjen reitti olekaan.
+KYSYMYS: Kerro lisää: Vardar
+
+### 66
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skopjen vanha rautatieasema (historia)
+Tietoruudun teksti: Skopjen keskusasema oli 1900-luvun puolivälissä Jugoslavian vilkkaimpia rautatieasemia, tyylikäs kivirakennus kellotorneineen. Maanjäristys iski kaupunkiin 26.7.1963 kello 5.17, tappaen yli tuhat ihmistä ja tuhoten suuren osan kaupungista; aseman kello pysähtyi täsmälleen järistyksen hetkeen. Osittain sortunut rakennus toimii nykyään kaupunginmuseona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Linnoitus maanjäristysten raunioilla] 6. vuosisata – — Vardar-joen mutkaan roomalaiset perustivat Scupin kaupungin, josta kasvoi tärkeä uskonnollinen ja kaupallinen keskus temppeleineen ja teattereineen. Vuonna 518 maanjäristys tuhosi Scupin lähes kokonaan, ja keisari Justinianus I käski rakentaa uuden linnoituksen läheiselle kukkulalle – osin juuri raunioituneen kaupungin kivistä. Kaivauksissa linnoituksen alta on paljastunut Scupin asukkaiden taloja, jotka jäivät uuden Kale-nimisen muurin alle vuosisadoiksi. Muureja on sittemmin rakennettu uudelleen bysanttilaisten, slaavien ja osmanien aikana, ja ne ovat kestäneet myös Skopjen toisen suuren maanjäristyksen vuonna 1963.
+AIEMPI KYSYMYS: Mikä joki virtaa Skopjen halki?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Joo, tää on helppo. Skopjen halki virtaa [[Vardar]]-joki. Roomalaiset perustivat sen mutkaan Scupin kaupungin, josta kasvoi tärkeä uskonnollinen ja kaupallinen keskus. Vuonna 518 maanjäristys tuhosi Scupin lähes kokonaan, ja uusi linnoitus, [[Kale]], rakennettiin läheiselle kukkulalle osin raunioituneen kaupungin kivistä. Joki on siis nähnyt kaupungin kahdesti hajoavan. Hyvä joki, vaikkei se kyyhkyjen reitti olekaan.
+KYSYMYS: Kerro lisää: Kale
