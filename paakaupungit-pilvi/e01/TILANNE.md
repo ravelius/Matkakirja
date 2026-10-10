@@ -10,6 +10,6 @@ Vaihe 0 tehty (konteksti, säädata Open-Meteo OK, malli).
 | tirana | ✓ | | | | | | |
 | skopje | ✓ | | | | | | |
 | podgorica | ✓ | | | | | | |
-| chisinau | | | | | | | |
+| chisinau | ✓ | | | | | | kysymykset ja yksi kohde ohuita |
 | minsk | | | | | | | |
 | bratislava | | | | | | | |
