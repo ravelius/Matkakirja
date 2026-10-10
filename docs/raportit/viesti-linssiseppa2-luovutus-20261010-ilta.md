@@ -10,9 +10,9 @@ skriptit `proto-3d/_tyo/linssiseppa2/skriptit-20261009/`, arkit `docs/raportit/k
    per huone, ~0,9 Mt) talteen varaksi, jos peili on iPadilla liian raskas. Käännösvuoro peruttu.
 2. **ND v6k14 VIETY** (Julkaisija 18.0x: 41 tiedostoa, portti 0, uusin-4 → v6k14). LR jatkaa v5c:llä → sama arkki (arkit-nd5b.py-malli, vuoro-nd5b.sh-malli; tekijärivi The wub CC BY-SA 4.0
    lisättävä käsin mallit.jsoniin; mittaa-julkisivu.py tavoite L 150–160, mittaa-parvis.py lyijy).
-3. **PEKING-PARI ILMAKEHÄ PÄÄLLÄ** SEURAAVA: juna 179 käännetty (BUILD 75fcc2b1b, käännös 8ab2e947c; skripti skriptit-20261009/vuoro-peking179.sh <junan .app>; simuvuoro pyydetty; junassa ilmakeha-kaikkialla d3885f6d1 +
-   peking-vesivari efc88563c): peking3/ktx + VESI peking1/vesi, vuoro-peking3v.sh-malli junan .app:lla, vs Google-kaupunki
-   (lokit/linssiseppa2-peking1-pariisi) → PT arvioi oman vesivärikertoimen tarpeen.
+3. **PEKING-PARI ILMAKEHÄ PÄÄLLÄ VALMIS** 18.33 (junan 179 .app lokit/juna-1.1.179-75fcc2b1, kuvat lokit/linssiseppa2-peking179):
+   arkki kaappaukset/linssiseppa2-179-20261010/peking-179-ilmakeha.jpg → PT. Vallihauta 27/47/60 (ennen 17/38/35, oikea 54/80/68):
+   ilmakehä sinistää. PT päättää oman vesivärikertoimen tarpeesta.
 
 ## TÄNÄÄN VALMISTA (iltapäivä–ilta)
 - Junaan 179 (PT kuittasi, SHA:t Natiivisepälle): ilmakeha-kaikkialla d3885f6d1 (omistaja 16.4x), peking-vesivari efc88563c
