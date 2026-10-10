@@ -78,6 +78,14 @@ namespace Matkakirja.Natiivi
                 var askeleet = new List<string>();
                 foreach (var t in aanet.Keys) if (t.StartsWith("askel-", StringComparison.Ordinal) || t.StartsWith("hiipiminen-", StringComparison.Ordinal)) askeleet.Add("Tehoste:" + t);
                 Rekisteroi("tehosteet", SeikkailuVartijat.PelaajanAskeleet, askeleet.ToArray());
+                // Suoraan omalla tunnuksellaan soitettavat pankin klipit (SeikkailuVartijat: Silmukka("sydan-nopea-01"), juna 175):
+                // ei korvaaja eikä askel → oma rekisteröinti, muuten äänivahti näkee rekisteröimättömän (läpipeluu 10.10. yö, pelaaja-11).
+                var korvaajat = new HashSet<string>(StringComparer.Ordinal);
+                foreach (var v in Korvaavat.Values) korvaajat.UnionWith(v);
+                foreach (var a in aanet.Values)
+                    if (a.Pakattu && !korvaajat.Contains(a.Tunnus) && !a.Tunnus.StartsWith("askel-", StringComparison.Ordinal)
+                        && !a.Tunnus.StartsWith("hiipiminen-", StringComparison.Ordinal))
+                        Rekisteroi(Ryhma(a.Tunnus), a.Tunnus, "Tehoste:" + a.Tunnus);
             }
             Valmis = true;
             kirjaa?.Invoke($"seikkailu: tehosteet {aanet.Count} ({Lyhyt(url)})");

@@ -653,8 +653,10 @@ namespace Matkakirja.Natiivi
             // Linnan historia (Siirtoseppä, kuva-arkki 9.10. virhe 3): ei Pulua eikä huonekorttia historian aikana (ohjaajan suunnitelma).
             if (Matkakirja.Natiivi.SeikkailuHistoria.Kaynnissa) pulu.style.visibility = puluAlue.style.visibility = lauta.style.visibility = Visibility.Hidden;
             // Pelattava pala (Raamattu: pelissä ei Pulun reunakuvaa; omistajan iPad TF 179: minipulu tapin päällä laiturilla ja
-            // soutukohtauksessa): minipulu ja sen napautusalue piiloon pelaajan ja veneen ajaksi.
-            if (SeikkailuPelaaja.Aktiivinen != null || SeikkailuVene.Aktiivinen != null) pulu.style.visibility = puluAlue.style.visibility = Visibility.Hidden;
+            // soutukohtauksessa): minipulu ja sen napautusalue piiloon pelaajan ja veneen ajaksi. Läpipeluu 10.10. yö (tekstivahti
+            // "Kuuntele"): myös infotaulun Kuuntele-nappi, joka ei ole pelin käyttöliittymää (huoneen kuunnelma jatkuu äänenä).
+            if (SeikkailuPelaaja.Aktiivinen != null || SeikkailuVene.Aktiivinen != null)
+                pulu.style.visibility = puluAlue.style.visibility = kuunteleNappi.style.visibility = Visibility.Hidden;
             var linssi = DioraamaSovitin.Linssi;
             var rakennus = linssi?.Rakennus;
             // Kehittäjän Kuori-nappi ×:n alle oikeaan reunaan (katselmus 1.1 (78): kiinteä top 110 osui × -nappiin).
