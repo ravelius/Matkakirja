@@ -37,6 +37,17 @@ tai devicectl device install app (bundle fi.matkakirja.peli.kehitys), sitten mui
 - TF 175 TÄNÄÄN 6.7:llä (omistaja): ehdot testit 6.7 + käännös + iPad Release-muistiajo läpi; muutosloki 175 (maininta Unity 6.7:stä
   pelaajan kielellä) PT:lle; LR:n kartiokuori vain jos ehtii.
 
+## TILA 08.5x — JUNA 175 LUKITTU (Unity 6.7)
+- BUILD 175 = **86ef3b3e630c49012b33a552b3ff475d4cd82604** (proton master; juna/b13 8d6ff7bc9; simukäännös ee95d97c8 08.49; puu identtinen,
+  diff 0). Muutosloki 175 BUILD-commitin viestissä ja PT:lle. Julkaisija → tf-kaynnista.sh 175. Lukko vapaa 08.49.
+- Runko 8d6ff7bc9 = a4c6539e5 + NUI paallekkain-korjaus 6e4c69702, fonttikoot c7ba0df9c, asettelutesti-kuvat e6ee17e66 (PT 08.4x).
+- Muistiajo 175 (Release d85e703fc): r26 A 0,72 Gt, r27 B 0,76 Gt, ei jetsamia; ab175-67 A1 Olavinlinna linna vapaa 0,74 Gt, Exception/VIRHE 0;
+  lämpö serious kolmannessa peräkkäisessä ajossa (Kuuma-tila 30 fps, suunniteltu).
+- Pääkopio Matkakirja-proto on nyt ProjectVersion 6000.7.0b4 → Julkaisija siirtää kirjastosymlinkin, kun pääkopion Library on 6.7;
+  T7-kopiota proto-natiiviseppa-unity67 EI poisteta ennen sitä.
+- JUNA 176 alkaa 86ef3b3e6:n päältä. Odottaa: LS1 maa-dtm-175-u67 29be895b8 + ls-aanet-175-u67 b59f82584 (kuittaamatta), pohja-175 (kuvapari),
+  LR Stadshuset v1 (kuitattu teknisesti, ASTC-ehto).
+
 ## TILA 08.3x
 - RUNKO natiiviseppa/juna-175 = **a4c6539e5** (wt j175) = d85e703fc (b5c57ee2a + Siirtoseppä 6bd5a6f5d v46x-nyky kartiokatot) + Julkaisija
   unity-polku-175 920e5311c (vain työkalut/testit 6.7:lle). T7-kopio unity-67 = d85e703fc (EI poisteta: Julkaisijan Library-symlinkki
@@ -63,7 +74,7 @@ tai devicectl device install app (bundle fi.matkakirja.peli.kehitys), sitten mui
 |---|---|---|---|---|
 | 173 | 39bb6921561fda7dcce7d11205adc90e6d315a51 | 85436c355 | be06cd054 | omistaja hyväksyi, TF 38022048008 käynnissä 06.5x (kiinteä SHA) |
 | 174 | **c47bded2c643b619f3b8ced9cb434f6d0e7c427a** (uudelleenlukitus 06.14; ensimmäinen 5f84c3594) | **3ca7ab1ba** | de2b23c05 | omistaja hyväksyi, TF 173:n jälkeen (Julkaisija) |
-| 175 | – | – | – | runko natiiviseppa/juna-175 **b7df7c444** (wt/proto-natiiviseppa-j175; + pulu-maat-23 078f8e8a4) |
+| 175 | **86ef3b3e630c49012b33a552b3ff475d4cd82604** (Unity 6.7) | **8d6ff7bc9** | ee95d97c8 | lukittu 08.5x, Julkaisija → TF |
 
 - Portti 173 (iPad Pro 13, v6h3): A 0,66 / B 0,72 Gt. Muistiajo 174: A 0,68 / B 0,75 / A v6hk3 0,75 Gt. v6k4 (ND v3d + KL v6j, KTX2):
   A 0,74 Gt → uusin-4 → v6k4 (Julkaisija). 172 kaatuu yhä v6b3:lla (jetsam 41 s), rivi PT:lle annettu.
