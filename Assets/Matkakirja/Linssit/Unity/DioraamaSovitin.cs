@@ -260,7 +260,10 @@ namespace Matkakirja.Natiivi
             Vaihtui?.Invoke(linssi);
             LukitseVaaka(true);
 
-            if (PelattavaPalaPyydetty && DioraamaLevyvalimuisti.TestiOsoitin != PelattavaPalaHash)
+            // Kiinnitetty paketti myös esittelyyn (PT 10.10., juna 175: vanhoja appeja ei rikota): Olavinlinna avautuu PelattavaPala.Hashin
+            // paketista eikä uusin.json:sta, kun kehittäjä ei ole asettanut omaa osoitinta ("poikki osoitin <hash>" voittaa).
+            bool kiinnitaEsittely = RakennusId == Oletusrakennus && DioraamaLevyvalimuisti.TestiOsoitin == null && !peiliPaalla;
+            if ((PelattavaPalaPyydetty || kiinnitaEsittely) && DioraamaLevyvalimuisti.TestiOsoitin != PelattavaPalaHash)
             {
                 // Ennen latausta: pala-paketti osoittimeksi; jo ladattu tuotantorakennus unohdetaan (ladataan uudelleen alla).
                 if (peiliPaalla) AsetaPeili("pois");
