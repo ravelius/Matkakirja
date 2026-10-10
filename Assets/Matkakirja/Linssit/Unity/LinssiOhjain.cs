@@ -2232,6 +2232,7 @@ namespace Matkakirja.Natiivi
                     else if (osat.Length > 2 && osat[1] == "intro")
                     {
                         if (osat[2] == "ohita") Kirjaa($"opas: intro ohita → {(OpasSovitin.IntroOhita() ? "ok" : "ei käynnissä")}");
+                        else if (osat[2] == "pallossa" && osat.Length > 3) { OpasSovitin.IntroPallossa = osat[3] == "1"; Kirjaa($"opas: intro pallossa {(OpasSovitin.IntroPallossa ? "päällä" : "pois")}"); }
                         else { if (osat[2] != "tila") OpasSovitin.IntroPaalla = osat[2] == "1"; Kirjaa("opas: " + OpasSovitin.IntroTila()); }
                     }
                     else if (osat.Length > 2 && osat[1] == "opastus" && osat[2] == "nollaa") { OpasSovitin.OpastusKuultu = false; Kirjaa("opas: opastus nollattu (seuraava kyyti soittaa)"); }

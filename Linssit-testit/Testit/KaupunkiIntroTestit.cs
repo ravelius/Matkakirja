@@ -1,6 +1,7 @@
 // Pariisin nykyintro (docs/kohtaukset/pallokierros/pariisi-nykyintro.md; PT 9.10.2026: 31 s, C1–C5, nyt-rivi nousussa): aikajana,
 // leikkaukset tahdin iskuille (124 bpm ±50 ms), nyt-rivi 15,5 s, C5:n puuttuessa kova leikkaus, ohitus kohtaukseen 7, avaus 33,5 s.
 using System;
+using System.Linq;
 using Matkakirja.Linssit.Kierros;
 
 namespace Matkakirja.Linssit.Testit
@@ -155,6 +156,18 @@ namespace Matkakirja.Linssit.Testit
         {
             Oleta.Tosi(KaupunkiIntro.KoriPalaa(true) >= KaupunkiIntro.C5TaysiS && KaupunkiIntro.KoriPalaa(true) <= KaupunkiIntro.PaluuAlkaaS, "C5:n kanssa kori palaa, kun C5 peittää ruudun");
             Oleta.Sama(KaupunkiIntro.SiirtymaS, KaupunkiIntro.KoriPalaa(false), "ilman C5:tä kovan leikkauksen kohdalla");
+        }
+
+        [Testi] static void SaapumisesityksenKuvasarja()
+        {
+            // Omistaja 10.10. 17.3x: C1–C5 saapumisesityksen pakkaan kukin kerran otoksensa alussa, tahdin iskulla, järjestyksessä.
+            var l = KaupunkiIntro.Kuvasarja();
+            Oleta.Sama("1,2,3,4,5", string.Join(",", l.Select(x => x.Kuva)));
+            Oleta.Sama(KaupunkiIntro.Tahti(4), l[0].AlkuS, "C1 avausnäkymän jälkeen");
+            Oleta.Sama(KaupunkiIntro.SiirtymaS, l[4].AlkuS, "C5 siirtymässä");
+            for (int i = 1; i < l.Count; i++) Oleta.Tosi(l[i].AlkuS > l[i - 1].AlkuS, "kasvava aika");
+            foreach (var x in l) Oleta.Tosi(System.Math.Abs(x.AlkuS / KaupunkiIntro.TahtiS - System.Math.Round(x.AlkuS / KaupunkiIntro.TahtiS)) < 1e-9, "tahdin iskulla");
+            Oleta.Tosi(KaupunkiIntro.KuvasarjaLoppuS > l[4].AlkuS, "C5 näkyy ennen loppua");
         }
     }
 }

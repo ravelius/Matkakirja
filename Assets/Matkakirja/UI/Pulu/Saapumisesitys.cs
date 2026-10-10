@@ -37,6 +37,7 @@
 using System;
 using System.Linq;
 using System.Collections.Generic;
+using Matkakirja.Linssit.Kierros;
 using Matkakirja.Peli;
 using UnityEngine.UIElements;
 
@@ -328,6 +329,15 @@ namespace Matkakirja.Natiivi
             if (Lennolla) return;
             vaihto?.Pause();
             if (string.IsNullOrEmpty(k) || k != kaupunki) return;
+            // PARIISIN ESITTELY (omistaja 10.10. 17.3x, sitova): saapumisesitys jatkuu samalla pakalla ja Ohitalla nykyintron
+            // kuvilla C1–C5 musiikin tahdissa; Livian vuoro sen jälkeen (LoppuiJatko).
+            if (IntroSaapuessa && KaupunkiIntro.OnIntro(k) && ohjain?.LuentoOhitettu != true && NykyIntro(k)) return;
+            LoppuiJatko(k);
+        }
+
+        void LoppuiJatko(string k)
+        {
+            if (string.IsNullOrEmpty(k) || k != kaupunki) return;
             // Arvioijakierros 30.9.: luennan kuvat ja Ohita pois heti luennan päättyessä (kuvat lentävät matkakirjaan);
             // Livian kommentin PuluCam-kuvat tulevat tämän jälkeen ilman Ohitaa ja häipyvät hiljaisuuden jälkeen.
             kortti.Kuvat.LuentoKaynnissa = false;
@@ -362,6 +372,7 @@ namespace Matkakirja.Natiivi
         void VaiennaPaikanPuhe()
         {
             vuoro = int.MaxValue; // Kommentti(v, i) ei enää jatka ketjua tässä kaupungissa
+            LopetaIntro(true);
             vaihto?.Pause();
             luentoOdotus?.Pause();
             Aanet.Pysayta(AaniKanava.Puhe);
@@ -369,6 +380,73 @@ namespace Matkakirja.Natiivi
             // Luennan kuvapakka ei jää seuraavan paikan päälle (Pelikoodarin havainto c535aea: maailmahypyssä Ateenan
             // kuva jäi Lontoon trailerin alle ja sen jälkeen): kuvat lentävät vielä tämän paikan matkakirjaan.
             kortti.Kuvat.Tyhjenna(true);
+        }
+
+        /// <summary>Pariisin nykyintro saapumisesityksen jatkona (oletus päällä).</summary>
+        public static bool IntroSaapuessa = true;
+        IVisualElementScheduledItem introAjo;
+        string introKaupunki;
+
+        /// <summary>
+        /// Nykyintron kuvat C1–C5 (KaupunkiIntro.Kuvasarja) saapumisesityksen pakkaan musiikin tahdissa: nopea kaupunkijakso
+        /// (Aanisoitin.KaupunkiIntro) alkaa heti, kuvat tulevat otostensa alussa kappaleen kohdasta (KaupunkiIntroAlkoi), luennan
+        /// viimeinen kuva näkyy C1:een asti. Ohita näkyy koko ajan (sama nappi kuin luennassa, PeliOhjain.OhitaLuento →
+        /// VaiennaPaikanPuhe → LopetaIntro). Ilman musiikkia (MusiikkiOdotusS) kuvat tulevat samoin ajoin hiljaa. false = ei alkanut.
+        /// </summary>
+        bool NykyIntro(string k)
+        {
+            var aani = Aanisoitin.Instanssi;
+            if (aani == null) return false;
+            LopetaIntro(false);
+            var sarja = KaupunkiIntro.Kuvasarja();
+            bool soi = aani.KaupunkiIntro(k, KaupunkiIntro.MusiikinKatkoS, KaupunkiIntro.MusiikinHaivytysS, KaupunkiIntro.HidasAlkaaS);
+            float alku = UnityEngine.Time.unscaledTime;
+            float? musiikki = null;
+            Action<string, float> kuuntelija = (kk, kohta) => { if (KaupunkiIntro.OnIntro(kk)) musiikki = UnityEngine.Time.unscaledTime - kohta; };
+            if (soi) Aanisoitin.KaupunkiIntroAlkoi += kuuntelija;
+            introKaupunki = k;
+            kortti.Kuvat.LuentoKaynnissa = true;   // Ohita näkyviin kuten luennan ajan
+            UnityEngine.Debug.Log($"MATKAKIRJA ui saapuminen: {k} nykyintro alkaa ({sarja.Count} kuvaa, musiikki {(soi ? "odotetaan" : "ei")})");
+            int seuraava = 0;
+            introAjo = Ajastin.Execute(() =>
+            {
+                if (introKaupunki != k || kaupunki != k) { LopetaIntro(false); return; }
+                float nyt = UnityEngine.Time.unscaledTime;
+                // Kello = kappaleen kohta; ilman musiikkia (tai ennen sen alkua aikarajan jälkeen) intron alusta.
+                float? t = musiikki.HasValue ? nyt - musiikki.Value
+                    : !soi || nyt - alku > KaupunkiIntro.MusiikkiOdotusS ? nyt - alku - (soi ? (float)KaupunkiIntro.MusiikkiOdotusS : 0f) : (float?)null;
+                if (t == null) return;
+                while (seuraava < sarja.Count && t.Value >= sarja[seuraava].AlkuS)
+                {
+                    int nro = sarja[seuraava++].Kuva;
+                    kortti.Kuvat.Lisaa(new VirtaKuva
+                    {
+                        Osoite = KaupunkiIntro.KuvaUrl(nro), Lyhyt = Kieli.T("ui.nosto.havainnekuva"),
+                        Selite = Kieli.T("ui.nosto.havainnekuva"), Lahde = Kieli.T("ui.opas.lahde.havainnekuva"),
+                    });
+                    UnityEngine.Debug.Log($"MATKAKIRJA ui saapuminen: {k} nykyintro kuva c{nro} {t.Value:0.0} s");
+                }
+                if (t.Value >= KaupunkiIntro.KuvasarjaLoppuS)
+                {
+                    UnityEngine.Debug.Log($"MATKAKIRJA ui saapuminen: {k} nykyintro loppui");
+                    LopetaIntro(false);
+                    LoppuiJatko(k);
+                }
+            }).Every(100);
+            introLopetus = () => { if (soi) Aanisoitin.KaupunkiIntroAlkoi -= kuuntelija; };
+            return true;
+        }
+
+        Action introLopetus;
+
+        /// <summary>Intron ajastin ja musiikkikuuntelija pois; vaienna = Ohita tai lähtö (nopea jakso pois kuten oppaan ohituksessa).</summary>
+        void LopetaIntro(bool vaienna)
+        {
+            if (introKaupunki == null) return;
+            introAjo?.Pause(); introAjo = null;
+            introLopetus?.Invoke(); introLopetus = null;
+            if (vaienna) { Aanisoitin.Instanssi?.KaupunkiIntroOhita(); UnityEngine.Debug.Log($"MATKAKIRJA ui saapuminen: {introKaupunki} nykyintro ohitettu"); }
+            introKaupunki = null;
         }
 
         void Kommentti(Saapumisvirta v, int i)
