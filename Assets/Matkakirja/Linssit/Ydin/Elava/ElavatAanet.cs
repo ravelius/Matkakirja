@@ -157,7 +157,7 @@ namespace Matkakirja.Linssit.Elava
         public readonly HashSet<int> IsoVesi = new HashSet<int>();
         /// <summary>Onko klippi saatavilla (Unity: ladattu); null = kaikki. Suodattaa sarjan, tyhjä → alkuperäinen.</summary>
         public Predicate<string> Saatavilla;
-        public static readonly string[] PyoranKellot = Yhdista(PalloElavaAanet.PyoranKello, PalloSoundlyAanet.PyoraKello),
+        public static readonly string[] PyoranKellot = Yhdista(Yhdista(PalloElavaAanet.PyoranKello, PalloSoundlyAanet.PyoraKello), PalloKaupunkiAanet.PyoranKelloPisteet),   // + kaupunki-pisteet-v1 (Pelikoodari 10.10.)
             Torvet = Yhdista(PalloElavaAanet.LaivanTorvi, PalloSoundlyAanet.TorviLautta), TorvetIso = Yhdista(Torvet, PalloSoundlyAanet.TorviIso);
         static string[] Yhdista(string[] a, string[] b) { var c = new string[a.Length + b.Length]; a.CopyTo(c, 0); b.CopyTo(c, a.Length); return c; }
         readonly Random rnd;
