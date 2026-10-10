@@ -427,14 +427,19 @@ namespace Matkakirja.Linssit.Kierros
             if (!(SamaKulma(a, tasainenA) && SamaKulma(b, tasainenB) && rhoMin == tasainenRho))
             {
                 tasainenA = a; tasainenB = b; tasainenRho = rhoMin;
-                (double e, double n, double u) ed = default;
+                (double e, double n, double u) ed = default; double edSuunta = 0;
                 for (int i = 0; i <= TasainenN; i++)
                 {
                     double p = (double)i / TasainenN;
-                    var k = KameraPaikka(PalloPolku(a, b, p, matka, rhoMin), a.Lat, a.Lon);
+                    var kk = PalloPolku(a, b, p, matka, rhoMin);
+                    var k = KameraPaikka(kk, a.Lat, a.Lon);
                     tasainenP[i] = p;
-                    tasainenS[i] = i == 0 ? 0 : tasainenS[i - 1] + Math.Sqrt((k.e - ed.e) * (k.e - ed.e) + (k.n - ed.n) * (k.n - ed.n) + (k.u - ed.u) * (k.u - ed.u));
-                    ed = k;
+                    // KÄÄNTÖ MUKAAN KAARENPITUUTEEN (PT 10.10. 20.5x, lyhyet lennot; Venetsia 80 m:n hyppy 19 °/s): kun silmä kulkee
+                    // lyhyen lennon suoraa polkua (TryLyhytSuora) ja katse kääntyy lähes paikallaan, pelkkä silmän matka kiidätti
+                    // parametrin käännön yli ~0,3 s:ssa. Käännös lasketaan kuvan liikkeenä (katse-etäisyys × kulma, rad).
+                    double dk = i == 0 ? 0 : kk.EtaisyysM * Math.Abs(KierrosLento.Kiedo(kk.Suuntima - edSuunta)) * Math.PI / 180;
+                    tasainenS[i] = i == 0 ? 0 : tasainenS[i - 1] + Math.Sqrt((k.e - ed.e) * (k.e - ed.e) + (k.n - ed.n) * (k.n - ed.n) + (k.u - ed.u) * (k.u - ed.u) + dk * dk);
+                    ed = k; edSuunta = kk.Suuntima;
                 }
                 // p(s) luonnollisena kuutiosplinina (toiset derivaatat M): lineaarinen tulkinta portaisti nopeuden solmukohdissa
                 // (kiihtyvyyspiikit), spline pitää nopeuden ja kiihtyvyyden jatkuvina.

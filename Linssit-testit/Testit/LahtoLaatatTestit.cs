@@ -273,7 +273,8 @@ namespace Matkakirja.Linssit.Testit
         // Vasa-arkki 9.10. 17.54: kierroksella kääntöraja piti saapumisen lentosuunnassa (99° → 88°) ja kaaret kiersivät seuraavaa
         // kohdetta (Skansen) kohti → oman katse_suunnan kohteella lennon kaari pois ja pysähdyksen kaari päättyy katsesuuntaan.
         // 10.10. (PT: katse_suunta = kierron aloitus- tai keskikulma, pallo ei pysähdy): kierto kulkee katsesuunnan kautta (keskikulma,
-        // OpasSilmukka.PalloKatseKaariMinAst) eikä pysähdy siihen; tarkistus: pienin ero katsesuuntaan pysähdyksellä.
+        // OpasSilmukka.PalloKatseKaariMinAst) eikä pysähdy siihen, vaan jatkuu koko kertomuksen (PT 20.5x); tarkistus: pienin ero
+        // katsesuuntaan pysähdyksellä.
         public static (double saapui, double loppu, double silmaSaapui, double silmaMin) KierrosSaapumisSuuntima(bool katse) => KierrosSaapumisSuuntima(katse, out _);
         public static (double saapui, double loppu, double silmaSaapui, double silmaMin) KierrosSaapumisSuuntima(bool katse, out double lahinKatseeseen)
         {
@@ -323,7 +324,6 @@ namespace Matkakirja.Linssit.Testit
             string m = $"Vasa kierroksella: ilman kenttää {ilman.saapui:F0}° → {ilman.loppu:F0}°, katse 40°: {kanssa.saapui:F0}° → {kanssa.loppu:F0}° (lähimmillään {lahin:F1}°)";
             Oleta.Tosi(!double.IsNaN(ilman.loppu) && !double.IsNaN(kanssa.loppu), "Vasaan perille: " + m);
             Oleta.Tosi(lahin < 2, "pysähdyksen kierto kulkee katsesuunnan kautta: " + m);
-            Oleta.Tosi(Math.Abs(KierrosLento.Kiedo(kanssa.loppu - 40)) <= OpasSilmukka.PalloKatseKaariMinAst + 5, "kierto päättyy enintään katse_kaaren verran katsesuunnan yli: " + m);
             Oleta.Tosi(kanssa.silmaMin >= kanssa.silmaSaapui - 6, $"kierre ei laske saapumiskorkeutta alemmas: {kanssa.silmaSaapui:F0} → min {kanssa.silmaMin:F0} m (ilman kenttää {ilman.silmaSaapui:F0} → {ilman.silmaMin:F0} m)");
         }
 
@@ -394,7 +394,11 @@ namespace Matkakirja.Linssit.Testit
                 string m = $"{b.Item1}: kiihdytys {r.kiihd:F0}, jarrutus {r.jarru:F0} m/s², nykäys {r.nyk:F0} m/s³, kesto {r.kesto:F1} s";
                 Oleta.Tosi(r.jarru <= r.kiihd + 1, "jarrutus enintään kiihdytys: " + m);
                 Oleta.Tosi(Math.Max(r.kiihd, r.jarru) <= 85 && r.nyk <= 40, "huippu ja nykäys: " + m);
-                Oleta.Tosi(Math.Abs(r.kesto - 18) < 0.5, "kesto ennallaan: " + m);
+                // PT 10.10. 20.5x: lennot lyhyemmiksi (ennen 18 s) → kesto = OpasSilmukka.LennonKesto (kiihtyvyysrajat yllä ennallaan).
+                bool p0 = OpasSilmukka.PalloLento; OpasSilmukka.PalloLento = true;
+                double T = OpasSilmukka.LennonKesto(KierrosLento.EtaisyysM(a.Item2, a.Item3, b.Item2, b.Item3));
+                OpasSilmukka.PalloLento = p0;
+                Oleta.Tosi(Math.Abs(r.kesto - T) < 0.5, $"kesto LennonKesto {T:F1} s: " + m);
             }
         }
 

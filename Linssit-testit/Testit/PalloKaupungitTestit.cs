@@ -158,7 +158,7 @@ namespace Matkakirja.Linssit.Testit
         /// KOHDEKAARI (omistaja 9.10., Päätoimittaja: "selvästi enemmän kiertoa, ja kiertäessä pallo laskeutuu ja lähestyy (spiraali)"):
         /// pysähdyksittäin silmän kiertokulma kohteen ympäri (°), katse-etäisyyden ja silmän korkeuden muutos saapumisesta lähtöön (osuus).
         /// </summary>
-        public sealed class Kaari { public string Kaupunki; public double KiertoKa, KiertoMax, EtMuutos, KorkeusMuutos, NousuMax; public string NousuKohta; public int Pysahdyksia; }
+        public sealed class Kaari { public string Kaupunki; public double KiertoKa, KiertoMax, KiertoYli, EtMuutos, KorkeusMuutos, NousuMax; public string NousuKohta; public int Pysahdyksia; }
         public static Kaari MittaaKaari(Kaupunki c)
         {
             var r = Aja(c, false); var tu = new Kaari { Kaupunki = c.Nimi };
@@ -181,6 +181,7 @@ namespace Matkakirja.Linssit.Testit
                 }
                 kulma = Math.Abs(kulma) * 180 / Math.PI;
                 tu.Pysahdyksia++; kierto += kulma; tu.KiertoMax = Math.Max(tu.KiertoMax, kulma);
+                tu.KiertoYli = Math.Max(tu.KiertoYli, kulma - OpasSilmukka.PalloKiertoMaxAstS * (b - a0) * Dt);   // yli tasaisen kierron
                 et += 1 - r[b].EtM / Math.Max(1, r[a].EtM);
                 double u0 = r[a].U - 35, u1 = r[b].U - 35; kork += 1 - u1 / Math.Max(1, u0);
             }
@@ -232,7 +233,10 @@ namespace Matkakirja.Linssit.Testit
                 // Ennen 9.10. (juna 168): kierto ka 4–9° (max 6–16°), ei laskua; lennon nousu Pariisissa 1 320 m (sumennusnosto).
                 // a3ad152f5: pysähdyksen kaari 6–13°; nyt kaari alkaa jo lennon loppuosalla (kokonaiskierto).
                 Oleta.Tosi(m.KiertoKa >= 40, $"{m.Kaupunki}: kokonaiskierto kohteen ympäri keskimäärin {m.KiertoKa:F0}° (≥ 40°; Päätoimittaja 45–90°)");
-                Oleta.Tosi(m.KiertoMax <= 100, $"{m.Kaupunki}: suurin kokonaiskierto {m.KiertoMax:F0}° (≤ 100°)");
+                // PT 10.10. 20.5x: kierto jatkuu koko kertomuksen (ennen ≤ 100°): kokonaiskierto enintään tasainen kierto (PalloKiertoMaxAstS
+                // × aika) + 120° lennon lähestymisen geometriaa (silmä ohittaa kohteen sivulta, kun tulosuunta on kääntörajan takia
+                // sivulla: Tukholman kaupungintalo f65ed2a39:ssä 95° pelkällä lennolla, linjaus 2:ssa 110°; kamera itse kääntyy ≤ 10°/s).
+                Oleta.Tosi(m.KiertoYli <= 120, $"{m.Kaupunki}: suurin kokonaiskierto {m.KiertoMax:F0}°, tasaisen kierron yli {m.KiertoYli:F0}° (≤ 120°)");
                 Oleta.Tosi(m.KorkeusMuutos > 0, $"{m.Kaupunki}: pallo laskeutuu pysähdyksellä ({100 * m.KorkeusMuutos:F1} %)");
                 // Nopea lento (≥ PalloNopeaMinM) saa nousta kaaressa (omistaja 9.10. 13.1x, PT: "nosta lentoa kaaressa matkan keskellä
                 // nopeuden sijaan"; OpasKuvaus.NopeusRho), enintään 300 m; muut ≤ 150 m (PT: "siirtymälento matalammaksi").
@@ -273,12 +277,16 @@ namespace Matkakirja.Linssit.Testit
                     var (pe, pn) = Enu(c, c.Kohteet[i]); var (qe, qn) = Enu(c, c.Kohteet[i + 1]);
                     double ue = qe - pe, un = qn - pn, l = Math.Max(1, Math.Sqrt(ue * ue + un * un)); ue /= l; un /= l;
                     double paras = double.MinValue, pahin = 0, seis = 0, pisin = 0; int pahinK = a, pisinK = a;
-                    // Taaksepäin vain lennolla (omistaja 9.10.: kohdekaari kiertää kohdetta, myös seuraavasta poispäin; kumoaa 18.4x:n rajan).
+                    // Seuraava kierron säteen sisällä (Budapest Kalastajanlinnake → Matiaksenkirkko 52 m, kierron säde 150 m): PT 10.10. 20.5x
+                    // kierto jatkuu tasaisena ja lento vain rajaa uudelleen, joten osuuden suunta ei kuvaa silmän etenemistä → ei taaksepäin-rajaa.
+                    bool sateenSisalla = l < Math.Sqrt(Math.Pow(r[a].E - pe, 2) + Math.Pow(r[a].N - pn, 2));
+                    // Taaksepäin vain lennolla (omistaja 9.10.: kohdekaari kiertää kohdetta, myös seuraavasta poispäin; kumoaa 18.4x:n rajan),
+                    // ja PT 10.10. 20.5x: lähtö kierron tangentin suuntaan myös seuraavasta poispäin → vasta lähdön jatkon hiivuttua.
                     int lahtoK = Math.Max(a, r.FindLastIndex(b, b - a + 1, x => x.Kohde == i && Pysahdyksella(x.Vaihe)));
                     for (int k = a; k <= b; k++)
                     {
                         double ete = (r[k].E - pe) * ue + (r[k].N - pn) * un;
-                        if (k >= lahtoK) { paras = Math.Max(paras, ete); if (paras - ete > pahin) { pahin = paras - ete; pahinK = k; } }
+                        if (!sateenSisalla && k >= lahtoK + (int)(OpasSilmukka.PalloLahtoHiipuuS / Dt)) { paras = Math.Max(paras, ete); if (paras - ete > pahin) { pahin = paras - ete; pahinK = k; } }
                         if (k > a) { double v = Math.Sqrt(Math.Pow((r[k].E - r[k - 1].E) / Dt, 2) + Math.Pow((r[k].N - r[k - 1].N) / Dt, 2)); seis = v < 0.2 && !r[k].Leijuu && Pysahdyksella(r[k].Vaihe) ? seis + Dt : 0; if (seis > pisin) { pisin = seis; pisinK = k; } }   // leijunta kaaren päässä sallittu (omistaja 18.4x); lennon S-käyräinen lähtö levosta ei ole seisomista
                     }
                     double Kulma(int k) { var (ce, cn) = (r[k].E - pe, r[k].N - pn); double a1 = Math.Atan2(cn, ce), a2 = Math.Atan2(qn - pn, qe - pe); double d = Math.Abs(a1 - a2) % (2 * Math.PI); return Math.Min(d, 2 * Math.PI - d) * 180 / Math.PI; }
@@ -337,8 +345,9 @@ namespace Matkakirja.Linssit.Testit
 
         /// <summary>
         /// PUHEEN JA LENNON TAHDISTUS (Päätoimittaja 8.10. ilta, juna 168/169): kerronta ei soi lähdön hetkellä (lento alkaa vasta
-        /// äänen ja LoppuTaukoS:n jälkeen), kerronta alkaa lennon alussa (omistaja 9.10.: PalloPuheAlkuS lähdöstä, ei taukoja) ja
-        /// hiljaisuus kerronnan lopusta seuraavan alkuun on enintään HiljaisuusMaxS, kun lähdön siltalause (SiltaS) täyttää lennon alun.
+        /// äänen ja LoppuTaukoS:n jälkeen), ja kerronta alkaa PalloPuheEnnenKiertoaS…PalloPuheEnnenKiertoaMaxS (3–6 s) ennen saapumista
+        /// (PT 10.10. 20.5x: kertomus kuuluu kohteen kiertoon; kumoaa omistajan 9.10. "kerronta lennon alussa" — lento musiikin kanssa
+        /// ei ole EI TAUKOJA -säännön tyhjä tauko). Hiljaisuus pysähdyksellä (kerronnan lopusta lähtöön) enintään HiljaisuusMaxS.
         /// Siirto-osuudet (tumma ruutu) ohitetaan.
         /// </summary>
         // Nykytila 8.10.: nopea 6,0–6,8 s, pitkät (~15 s) lennot 8,2–8,3 s; raja kiristetään Päätoimittajan valinnan jälkeen.
@@ -372,14 +381,14 @@ namespace Matkakirja.Linssit.Testit
                         if (pj < 0) continue;
                         double loppu = e.t + e.kesto, ennen = loppu - tap[pj].t;
                         tu.PuheEnnen = Math.Max(tu.PuheEnnen, ennen);
-                        // Omistaja 9.10. ("liikaa taukoja"): kerronta alkaa lennon alussa (PalloPuheAlkuS lähdöstä), ei odota saapumista.
+                        // PT 10.10. 20.5x: kerronta alkaa, kun kohde on selvästi kuvassa ja pallo jo hidastaa (3–6 s ennen saapumista).
                         double lahdosta = tap[pj].t - e.t;
-                        if (lahdosta < OpasSilmukka.PalloPuheAlkuS - 0.5) tu.Viat.Add($"{vk} {k.Nimi}: kerronta alkaa {lahdosta:F1} s lähdöstä (ennen nousua)");
-                        if (!hidas && lahdosta > OpasSilmukka.PalloPuheAlkuS + 1.0 && e.kesto > OpasSilmukka.PalloPuheAlkuS + OpasSilmukka.PuheEnnenS)
-                            tu.Viat.Add($"{vk} {k.Nimi}: kerronta alkaa vasta {lahdosta:F1} s lähdöstä (lento {e.kesto:F1} s)");
+                        if (lahdosta < OpasSilmukka.PuheAikaisinS - 0.5) tu.Viat.Add($"{vk} {k.Nimi}: kerronta alkaa {lahdosta:F1} s lähdöstä (ennen nousua)");
+                        if (ennen < OpasSilmukka.PalloPuheEnnenKiertoaS - 0.5 || ennen > OpasSilmukka.PalloPuheEnnenKiertoaMaxS + 0.5)
+                            tu.Viat.Add($"{vk} {k.Nimi}: kerronta alkaa {ennen:F1} s ennen saapumista (lento {e.kesto:F1} s)");
                         if (!double.IsNaN(hiljaaAlkoi))
                         {
-                            double hiljaisuus = (tap[pj].t - hiljaaAlkoi) - SiltaS;
+                            double hiljaisuus = e.t - hiljaaAlkoi;   // pysähdyksellä ilman kerrontaa ennen lähtöä
                             // Hidas verkko: laattaodotus (LahtoOdotusMaxS 5 s) on hiljaisuutta — raportoidaan, raja vasta Päätoimittajan
                             // valinnan jälkeen (lyhyempi laattaodotus pallossa tai lisälause), ks. docs/raportit/puhe-ja-lento-37-kaupunkia.
                             if (hidas) { tu.HiljaisuusHidas = Math.Max(tu.HiljaisuusHidas, hiljaisuus); hiljaaAlkoi = double.NaN; continue; }
