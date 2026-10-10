@@ -1793,5 +1793,361 @@
    "Miten jäätiköt muokkaavat maisemaa?",
    "Miksi monet jäätiköt ovat pienentyneet viime vuosikymmeninä?"
   ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-preikestolen",
+  "kysymys": "Mikä oli Preikestolenin vanha paikallinen nimi, ja mitä se tarkoittaa?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Tän minä muistan. Preikestolenin vanha paikallinen nimi oli [[Hyvlatonnå]], joka tarkoittaa höylän hammasta. Nimi Prekestolen otettiin käyttöön vasta noin vuonna 1900, kun [[Stavangerin]] retkeilyseura halusi markkinoida paikkaa vaelluskohteena. Kalliotasanne kohoaa 604 metriä [[Lysevuonon]] yläpuolelle, ja sen lakitasanne on vain noin 25 kertaa 25 metriä. Ei paha muistityö kyyhkyltä.",
+  "linkit": [
+   "Hyvlatonnå",
+   "Stavangerin",
+   "Lysevuonon"
+  ],
+  "jatkot": [
+   "Miksi nimi Prekestolen otettiin käyttöön vasta noin vuonna 1900?",
+   "Kuinka suuri Preikestolenin lakitasanne on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-preikestolen",
+  "kysymys": "Miksi kalliolle ei ole asennettu turva-aitoja?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Kalliolle ei ole koskaan asennettu aitoja tai muita turvalaitteita, koska viranomaiset ovat katsoneet niiden pilaavan maiseman. Tasanne kohoaa 604 metriä [[Lysevuonon]] yläpuolelle, ja se on nykyään myös suosittu [[BASE-hyppääjien]] pudotuspaikka. Itse luotan siipiini, en kaiteisiin.",
+  "linkit": [
+   "Lysevuonon",
+   "BASE-hyppääjien"
+  ],
+  "jatkot": [
+   "Kuinka paljon matkailijoita Preikestolenilla käy vuosittain?",
+   "Milloin Preikestolenin polkua parannettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-preikestolen",
+  "kysymys": "Kuinka korkealle Preikestolen kohoaa Lysevuonon yläpuolelle?",
+  "uusi": true,
+  "vastaus": "Kato, tän minä tiedän. Preikestolen kohoaa 604 metriä Lysevuonon yläpuolelle. Se sijaitsee [[Rogalannin]] [[Strandin]] kunnassa, ja sen lakitasanne on vain noin 25 kertaa 25 metriä. Kyseessä on jyrkkä kalliotasanne, jonka reunalle ei ole asennettu aitoja.\n\nKuusisataa metriä on siivekkäälle pieni hyppy. Ihmisille se on ilmeisesti eri asia, ja sen kyllä ymmärrän.",
+  "linkit": [
+   "Rogalannin",
+   "Strandin"
+  ],
+  "jatkot": [
+   "Miksi Preikestolenilla ei ole turva-aitoja?",
+   "Millainen kaupunki Stavanger on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-preikestolen",
+  "kysymys": "Miksi nimi Prekestolen otettiin käyttöön vasta noin vuonna 1900?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Nimi Prekestolen otettiin käyttöön vasta noin vuonna 1900, kun [[Stavangerin]] retkeilyseura halusi markkinoida paikkaa vaelluskohteena. Sitä ennen paikalla oli vanha paikallinen nimi [[Hyvlatonnå]], joka tarkoittaa höylän hammasta. Uusi nimi liittyi siis retkeilyn edistämiseen. Viestinnän ammattilainen minä tunnistan kyllä hyvän markkinoinnin.",
+  "linkit": [
+   "Stavangerin",
+   "Hyvlatonnå"
+  ],
+  "jatkot": [
+   "Mitä tarkoittaa nimi Hyvlatonnå?",
+   "Milloin Preikestolenin polkua parannettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-preikestolen",
+  "kysymys": "Ketkä parantivat Preikestolenin polkua vuonna 2013?",
+  "uusi": true,
+  "vastaus": "Ai tota. Polkua parannettiin vuonna 2013 nepalilaisten sherpojen voimin. Polku johtaa [[Lysevuonon]] yläpuolella kohoavalle kalliotasanteelle [[Rogalannissa]], ja vuonna 2024 kohteessa kävi jo noin 300 000 matkailijaa. Jalat siinä on tarvittu, ei siivet.",
+  "linkit": [
+   "Lysevuonon",
+   "Rogalannissa"
+  ],
+  "jatkot": [
+   "Kuinka kauan Preikestolenin vaellus kestää?",
+   "Mikä on BASE-hyppy?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sognefjord",
+  "kysymys": "Mistä Sognevuonon nimen arvellaan juontuvan?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: tää on arvoituksellinen juttu. Sognevuonon nimen on arveltu juontuvan vanhasta sanasta, joka viittaa vuonon suulla tuntuvaan voimakkaaseen [[vuorovesivirtaukseen]]. Kyse on kuitenkin arvelusta eikä varmasta tiedosta. Sognevuono on [[Norjan]] pisin ja syvin vuono, ja se ulottuu 205 kilometriä sisämaahan [[Skjoldenin]] kylään. Kuninkaalla on vähän salaperäinen nimi, mut siitä tykkään.",
+  "linkit": [
+   "vuorovesivirtaukseen",
+   "Norjan",
+   "Skjoldenin"
+  ],
+  "jatkot": [
+   "Kuinka syvä Sognevuono on syvimmillään?",
+   "Mitä vuonot ovat ja miten ne syntyvät?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sognefjord",
+  "kysymys": "Mikä jäätikkö kohoaa Sognevuonon sisäosan yläpuolella, ja miksi se on merkittävä?",
+  "uusi": false,
+  "vastaus": "Mmm— kyl tän tiedän. Sognevuonon sisäosan yläpuolella kohoaa [[Jostedalsbreen]], joka on lähteiden mukaan mannereurooppalaisen alueen suurin jäätikkö. Idässä sijaitsee [[Hurrungane-vuoristo]], joka nousee jopa 2 400 metriin. Jäätikkö ja vuono samassa maisemassa, kyllä siinä on ylhäältä katsoen näkemistä.",
+  "linkit": [
+   "Jostedalsbreen",
+   "Hurrungane-vuoristo"
+  ],
+  "jatkot": [
+   "Kuinka korkealle Hurrungane-vuoristo nousee?",
+   "Miten jäätiköt muokkaavat vuonoja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sognefjord",
+  "kysymys": "Kuinka syvä Sognevuono on syvimmillään?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Lasken ensin. Sognevuonon syvin kohta on 1 308 metriä merenpinnan alapuolella. Vuono on myös [[Norjan]] pisin: se ulottuu 205 kilometriä sisämaahan [[Skjoldenin]] kylään, ja koko järjestelmän tilavuus on noin 500 kuutiokilometriä.\n\nYli tuhat kolmesataa metriä alaspäin on minulle ihan liikaa, sillä lennän mieluummin ylöspäin. Vesi ei ole minun elementtini.",
+  "linkit": [
+   "Norjan",
+   "Skjoldenin"
+  ],
+  "jatkot": [
+   "Mistä Sognevuonon nimen arvellaan juontuvan?",
+   "Mikä on Nærøyvuono?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sognefjord",
+  "kysymys": "Mikä Nærøyvuono on suhteessa Sognevuonoon?",
+  "uusi": true,
+  "vastaus": "Ai se. Nærøyvuono on kapea vuono ja yksi Sognevuonon lukuisista sivuhaaroista. Sognevuonon pääosa ulottuu sisämaahan asti [[Skjoldenin]] kylään [[Lusterin]] kunnassa, ja koko järjestelmän tilavuus on noin 500 kuutiokilometriä. Pieni haara, iso järjestelmä.",
+  "linkit": [
+   "Skjoldenin",
+   "Lusterin"
+  ],
+  "jatkot": [
+   "Kuinka pitkä Sognevuono on?",
+   "Millaisia kuntia vuonon varrella on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sognefjord",
+  "kysymys": "Kuinka korkealle Hurrungane-vuoristo nousee?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Hurrungane-vuoristo sijaitsee idässä ja nousee jopa 2 400 metriin. Sognevuonon sisäosan yläpuolella kohoaa puolestaan [[Jostedalsbreen]], jonka mainitaan olevan mannereurooppalaisen alueen suurin jäätikkö. Alue on [[Norjan]] vuoristoisinta seutua. Ylhäältä katsoen kaikki nuo huiput näyttävät siltä, että mukaan pitäisi ottaa eväs.",
+  "linkit": [
+   "Jostedalsbreen",
+   "Norjan"
+  ],
+  "jatkot": [
+   "Mikä on Jostedalsbreen?",
+   "Miten vuorille nousevia reittejä Norjassa merkitään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-oljemuseo",
+  "kysymys": "Miksi Norjan öljymuseon rakennus muistuttaa merenpuolelta katsottuna porauslauttaa?",
+  "uusi": false,
+  "vastaus": "No jopas. Norjan öljymuseon eli [[Norsk Oljemuseumin]] arkkitehtuuri jäljittelee merenpuolelta katsottuna pientä öljynporauslauttaa. Se sopii museon aiheeseen, sillä näyttely kertoo Norjan öljyhistoriasta 1960-luvun puolivälistä alkaen ensimmäisistä [[Pohjanmeren]] porauslautoista nykyaikaisiin tuotantolaivoihin. Museo avattiin vuonna 1999 [[Stavangerin]] satamassa.\n\nSatamassa on siis pieni porauslautta, joka ei koskaan lähde merelle. Se sopii minulle, sillä sen katolle minä laskeudun mielelläni.",
+  "linkit": [
+   "Norsk Oljemuseumin",
+   "Pohjanmeren",
+   "Stavangerin"
+  ],
+  "jatkot": [
+   "Milloin Norjan öljyhistoria alkoi?",
+   "Miten öljynporaus merellä toimii?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-oljemuseo",
+  "kysymys": "Mikä teki Stavangerista Norjan öljypääkaupungin?",
+  "uusi": false,
+  "vastaus": "Sepä sattui: tästä on kirjoitettu paljon. Stavangerista tuli Norjan öljypääkaupunki, kun Phillips Petroleum löysi läheltä [[Ekofiskin]] kentän vuonna 1969. Öljy alkoi virrata suoraan tankkereihin jo vuonna 1971. Aiheesta kertoo [[Norjan öljymuseo]] Stavangerin satamassa. Öljystä en tiedä muuta kuin että se ei sovi siipien kanssa yhteen.",
+  "linkit": [
+   "Ekofiskin",
+   "Norjan öljymuseo"
+  ],
+  "jatkot": [
+   "Mikä on Ekofiskin kenttä?",
+   "Miten öljy kuljetettiin merellä tankkereilla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-oljemuseo",
+  "kysymys": "Mitä Norjan öljymuseo esittelee?",
+  "uusi": true,
+  "vastaus": "Katotaas. Museo esittelee Norjan öljyhistoriaa 1960-luvun puolivälistä alkaen: ensimmäisistä [[Pohjanmeren]] porauslautoista teräs- ja betonilauttojen kautta nykyaikaisiin tuotantolaivoihin ja merenpohjan järjestelmiin. Museo avattiin vuonna 1999, ja se sijaitsee [[Stavangerissa]]. Pitkä kaari yhdeltä museolta.",
+  "linkit": [
+   "Pohjanmeren",
+   "Stavangerissa"
+  ],
+  "jatkot": [
+   "Kuinka suuri öljymuseon rakennus on?",
+   "Mitä eroa on teräs- ja betonilautoilla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-oljemuseo",
+  "kysymys": "Kuinka suuri Norjan öljymuseon rakennus on?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Museorakennus on noin 5 000 neliömetrin kokoinen ja sijaitsee näyttävällä paikalla [[Stavangerin]] satamassa. [[Norsk Oljemuseum]] avattiin vuonna 1999, ja se on tehnyt harvinaisesta teollisuushistoriasta suositun matkailukohteen vanhan kalastuskaupungin keskellä. Satamassa tuoksuu varmaan kalalle ja pullalle, ainakin toivon niin.",
+  "linkit": [
+   "Stavangerin",
+   "Norsk Oljemuseum"
+  ],
+  "jatkot": [
+   "Miksi Stavanger tunnetaan öljypääkaupunkina?",
+   "Mitä muuta Stavangerissa on nähtävää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-oljemuseo",
+  "kysymys": "Miksi öljymuseo on suosittu matkailukohde?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Museo on tehnyt harvinaisesta teollisuushistoriasta suositun matkailukohteen vanhan kalastuskaupungin keskellä. Sijainti on näyttävä, sillä museo on [[Stavangerin]] satamassa, ja rakennus muistuttaa merenpuolelta pientä porauslauttaa. Stavangerin öljyhistoria alkoi [[Ekofiskin]] kentän löydöstä vuonna 1969. Ylhäältä se näyttää kyllä aika komealta.",
+  "linkit": [
+   "Stavangerin",
+   "Ekofiskin"
+  ],
+  "jatkot": [
+   "Milloin Norjan öljymuseo avattiin?",
+   "Mitä Pohjanmeren porauslautat ovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-voss",
+  "kysymys": "Miksi smalahovea sai vuoden 1998 jälkeen valmistaa vain karitsanpäistä?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Tota en ihan varmasti tiedä. En ole varma, mitä vuoteen 1998 liittyvää sääntöä kysymys tarkoittaa, joten en uskalla väittää mitään syytä. Varmaa on, että smalahove on [[Vossin]] seudun tunnettu ruoka: poltettu, suolattu ja savustettu lampaanpää, jota keitetään tai höyrytetään kolmisen tuntia ja tarjoillaan [[lanttumuusin]], perunoiden ja [[akvaviitin]] kanssa. Kyyhkyllä on rajansa, ja tää on yksi niistä.",
+  "linkit": [
+   "Vossin",
+   "lanttumuusin",
+   "akvaviitin"
+  ],
+  "jatkot": [
+   "Miten smalahove valmistetaan?",
+   "Millainen ruoka smalahove oli alun perin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-voss",
+  "kysymys": "Mihin kahteen kuntaan Voss jaettiin vuonna 1868?",
+  "uusi": false,
+  "vastaus": "Just niin, tän minä muistan. Voss-kunta jaettiin vuonna 1868 pohjoiseen [[Vossestrandiin]] ja eteläiseen, pienempään Vossiin. Vuonna 1885 sen läntinen osa erosi vielä omaksi [[Evangerin]] kunnakseen. Vossin hallintokeskus on Vossevangenin kylä Vangsvatnet-järven rannalla. Kuntaliitoksia ja -jakoja, ja minä vain lentelen rajojen yli.",
+  "linkit": [
+   "Vossestrandiin",
+   "Evangerin"
+  ],
+  "jatkot": [
+   "Mitä Vossin nimi todennäköisesti tarkoittaa?",
+   "Missä päin Norjaa Voss sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-voss",
+  "kysymys": "Miten smalahove valmistetaan?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Smalahove valmistetaan polttamalla, suolaamalla ja savustamalla lampaanpää. Sitä keitetään tai höyrytetään kolmisen tuntia, ja se tarjoillaan [[lanttumuusin]], perunoiden ja [[akvaviitin]] kanssa. Ruoka tunnetaan erityisesti [[Vossin]] seudulla.\n\nPulla pysyy minun suosikkinani, vaikka kunnioitan rohkeita. Norjassakin on varmasti oma pullansa, en vaan tiedä sen nimee.",
+  "linkit": [
+   "lanttumuusin",
+   "akvaviitin",
+   "Vossin"
+  ],
+  "jatkot": [
+   "Millainen ruoka smalahove oli alun perin?",
+   "Mitä akvaviitti on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-voss",
+  "kysymys": "Mitä Vossin nimi todennäköisesti tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Ai se. Kunnan nimi juontuu todennäköisesti muinaisesta sanasta, joka viittaa veteen. Se liittyy alun perin [[Vangsvatnet-järven]] nimeen, ja Voss on kunta sekä perinteinen maakunta [[Länsi-Norjassa]]. Vesi nimessä, vesi alla, ja minä tässä lentämässä.",
+  "linkit": [
+   "Vangsvatnet-järven",
+   "Länsi-Norjassa"
+  ],
+  "jatkot": [
+   "Mihin kahteen kuntaan Voss jaettiin vuonna 1868?",
+   "Mikä on Vossevangen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-voss",
+  "kysymys": "Millainen ruoka smalahove oli alun perin?",
+  "uusi": true,
+  "vastaus": "No niin, tän minä muistan. Smalahove oli alun perin köyhien joulua edeltävää ruokaa. Nykyään se houkuttelee matkailijoita kokeilemaan sitä nimenomaan erikoisena ja rohkeana elämyksenä [[Länsi-Norjan]] [[Vossin]] seudulla. Köyhän ruoasta elämykseksi, se on kyllä matka.",
+  "linkit": [
+   "Länsi-Norjan",
+   "Vossin"
+  ],
+  "jatkot": [
+   "Miten smalahove valmistetaan?",
+   "Mitä lanttumuusi on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-notodden",
+  "kysymys": "Mihin keksintöön Norsk Hydron ensimmäinen tehdas Notoddenilla perustui, ja kuka sen kehitti?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: tää on hieno juttu. Tehdas perustui menetelmään, jolla typpi sidotaan ilmasta keinolannoitteeksi. Sen kehitti norjalainen tiedemies [[Kristian Birkeland]], ja insinööri [[Sam Eyde]] hyödynsi sitä, kun Norsk Hydro perustettiin 2. joulukuuta 1905. Tuotanto Notoddenissa alkoi vuonna 1907. Ilmasta lannoitetta, ja minä kun luulin ilman olevan vain lentämistä varten.",
+  "linkit": [
+   "Kristian Birkeland",
+   "Sam Eyde"
+  ],
+  "jatkot": [
+   "Miksi tehdas rakennettiin kosken äärelle?",
+   "Miksi typpilannoite oli tärkeää maataloudelle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-notodden",
+  "kysymys": "Miksi tehdas piti rakentaa juuri kosken äärelle?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Menetelmä vaati valtavasti sähköenergiaa, joten yhtiö rakensi voimalaitoksen Notoddenin lähellä sijaitsevaan [[Svelgfossenin]] koskeen. Toinen, vielä suurempi tehdas avattiin vuonna 1911 [[Rjukanissa]], jonka voimalle rakennettiin oma rautatiekin.\n\nJoka kerta kun näen kosken, ajattelen vain vettä. Insinöörit ajattelivat sähköä ja minä pullaa, kukin tavallaan.",
+  "linkit": [
+   "Svelgfossenin",
+   "Rjukanissa"
+  ],
+  "jatkot": [
+   "Milloin Norsk Hydro perustettiin?",
+   "Miten vesivoimalaitos tuottaa sähköä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-notodden",
+  "kysymys": "Miksi Hydro teki vuonna 1927 yhteistyötä IG Farbenin kanssa?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Kilpailutilanne muuttui: 1920-luvulla Hydron menetelmä ei enää pystynyt kilpailemaan uuden [[Haber–Bosch-prosessin]] kanssa. Siksi yhtiö solmi vuonna 1927 kumppanuuden saksalaisen yhtiön kanssa. Alkuperäinen [[Birkelandin]] menetelmä oli vaatinut valtavasti sähköenergiaa. Uusi keksintö voitti vanhan, näin se maailmassa menee.",
+  "linkit": [
+   "Haber–Bosch-prosessin",
+   "Birkelandin"
+  ],
+  "jatkot": [
+   "Mikä on Haber–Bosch-prosessi?",
+   "Kuka oli Kristian Birkeland?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-notodden",
+  "kysymys": "Keitä Norsk Hydron rahoittajat olivat?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Yhtiön rahoittajina olivat ruotsalainen [[Wallenberg-suku]] ja ranskalaiset pankit. Yhtiö perustettiin 2. joulukuuta 1905, ja insinööri [[Sam Eyde]] hyödynsi [[Kristian Birkelandin]] menetelmää typen sitomiseksi ilmasta. Rahaa tuli rajojen yli, aivan kuin kirjeitä ennen.",
+  "linkit": [
+   "Wallenberg-suku",
+   "Sam Eyde",
+   "Kristian Birkelandin"
+  ],
+  "jatkot": [
+   "Milloin Rjukanin tehdas avattiin?",
+   "Miksi Hydro solmi kumppanuuden vuonna 1927?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-notodden",
+  "kysymys": "Milloin Norsk Hydro perustettiin ja millä nimellä?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Norsk Hydro perustettiin 2. joulukuuta 1905 nimellä Norsk hydro-elektrisk Kvælstofaktieselskab. Perustamisen taustalla oli [[Kristian Birkelandin]] kehittämä menetelmä typen sitomiseksi ilmasta keinolannoitteeksi, jota [[Sam Eyde]] hyödynsi, ja ensimmäinen tehdas aloitti tuotannon vuonna 1907. Tuo nimi on ihan oma lajinsa, en yritäkään lausua sitä ääneen.",
+  "linkit": [
+   "Kristian Birkelandin",
+   "Sam Eyde"
+  ],
+  "jatkot": [
+   "Mihin Hydro on sittemmin kehittynyt?",
+   "Mitä keinolannoite on?"
+  ]
  }
 ]
