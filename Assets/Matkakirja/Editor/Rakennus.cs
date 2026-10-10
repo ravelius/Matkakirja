@@ -859,6 +859,7 @@ namespace Matkakirja.Editori
             finally { if (appStore) PlayerSettings.SetScriptingDefineSymbols(kohde, maaritteet); }
             MacKuvake(Path.Combine(kansio, "Matkakirja 3D.app"));
             MacNayttonimi(Path.Combine(kansio, "Matkakirja 3D.app"));
+            MacPlugariTunnisteet(Path.Combine(kansio, "Matkakirja 3D.app"));
             Debug.Log($"MATKAKIRJA: Mac-vienti {PlayerSettings.GetApplicationIdentifier(kohde)} {PlayerSettings.bundleVersion} " +
                       $"({PlayerSettings.macOS.buildNumber}), {PlayerSettings.GetScriptingBackend(kohde)}");
         }
@@ -886,6 +887,31 @@ namespace Matkakirja.Editori
                 if (p.ExitCode != 0) throw new Exception($"Mac-näyttönimi: plutil {avain} → {p.ExitCode}: {p.StandardError.ReadToEnd()}");
             }
             Debug.Log($"MATKAKIRJA: Mac-näyttönimi {Nayttonimi} ({plist})");
+        }
+
+        /// <summary>
+        /// Mac TF 176 (10.10.2026, altool 90276 + 90334): Steam Audion PlugIns/phonon.bundle ja audioplugin_phonon.bundle tulevat
+        /// ilman CFBundleIdentifieria (Apple näki "$bundleIdentifier") ja pakettityypillä APPL. Jokaiselle PlugIns-bundlelle, jolta
+        /// tunniste puuttuu: fi.matkakirja.peli.&lt;nimi&gt; (alaviiva → viiva, tunnisteessa vain kirjaimet, numerot, viiva ja piste) ja
+        /// tyypiksi BNDL. Allekirjoitus tehdään vasta TF-ajossa (proto3d-mac-testflight.yml), joten plistiä saa muuttaa tässä.
+        /// </summary>
+        static void MacPlugariTunnisteet(string app)
+        {
+            var plugarit = Path.Combine(app, "Contents", "PlugIns");
+            if (!Directory.Exists(plugarit)) return;
+            foreach (var plist in Directory.GetFiles(plugarit, "Info.plist", SearchOption.AllDirectories))
+            {
+                if (!plist.Replace('\\', '/').EndsWith(".bundle/Contents/Info.plist")) continue;
+                var doc = new UnityEditor.iOS.Xcode.PlistDocument();
+                doc.ReadFromFile(plist);
+                if (!string.IsNullOrEmpty(doc.root["CFBundleIdentifier"]?.AsString())) continue;
+                string nimi = Path.GetFileNameWithoutExtension(Path.GetDirectoryName(Path.GetDirectoryName(plist)));
+                string id = "fi.matkakirja.peli." + System.Text.RegularExpressions.Regex.Replace(nimi, "[^A-Za-z0-9.-]", "-");
+                doc.root.SetString("CFBundleIdentifier", id);
+                doc.root.SetString("CFBundlePackageType", "BNDL");
+                doc.WriteToFile(plist);
+                Debug.Log($"MATKAKIRJA: Mac-plugari {nimi}.bundle CFBundleIdentifier {id}, tyyppi BNDL");
+            }
         }
 
         static void MacKuvake(string app)
