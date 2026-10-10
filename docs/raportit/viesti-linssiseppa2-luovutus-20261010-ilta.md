@@ -5,15 +5,12 @@ Julkaisija jakaa käännös- ja simuvuorot (SendMessage "Julkaisija (Opus, high)
 skriptit `proto-3d/_tyo/linssiseppa2/skriptit-20261009/`, arkit `docs/raportit/kaappaukset/linssiseppa2-177-20261010/`.
 
 ## KESKEN (järjestys)
-1. **TAIDEMUSEON LATTIAHEIJASTUS v2** (18.2x): ajo 1 (käännös dfd373c04 = 3de6981d1; todistus-lattia-ipad-20261010-1806,
-   -puhelin-1810) toimi (kuvaus 1,3–116 ms, 0 virhettä), mutta parketti sumeni mip 4,25:lle → ero lattiassa keskimäärin 1,3/255 eikä aulan
-   kuva osunut lattiaan. Korjaus **50071113d** (karheus² · 2 → mip: marmori 1,3, parketti 2,8 / 7; L 1326/1326, unity 0) + skenaariot
-   katse lattiaan (aula 0 −18, KG 90 −22, Yövartio 0 −15). Julkaisija antaa KÄÄNNÖS NYT ~18.35 → `museo-lattia/kaanna-ja-aja.zsh kaanna`,
-   sitten simu → `kaanna-ja-aja.zsh aja <käännös-SHA>`. Tulos: pari puhelin pysty + iPad vaaka → PT; sitten iPad Pro 13 Release -mittaus.
-   SSR vain jos pari vaatii.
+1. **LATTIAHEIJASTUS SIIRTYI LS1:LLE** (PT 18.2x: LS1:n peilikamera 45e35e9e6 kytketty v2f-varjojen kanssa). Havainnot lähetetty LS1:lle
+   (karheus² → mip, katse lattiaan, skenaariot museo-lattia/sk-lattia-*.txt). Oma haara linssiseppa2/museo-lattia 50071113d (kuutio kerran
+   per huone, ~0,9 Mt) talteen varaksi, jos peili on iPadilla liian raskas. Käännösvuoro peruttu.
 2. **ND v6k14 VIETY** (Julkaisija 18.0x: 41 tiedostoa, portti 0, uusin-4 → v6k14). LR jatkaa v5c:llä → sama arkki (arkit-nd5b.py-malli, vuoro-nd5b.sh-malli; tekijärivi The wub CC BY-SA 4.0
    lisättävä käsin mallit.jsoniin; mittaa-julkisivu.py tavoite L 150–160, mittaa-parvis.py lyijy).
-3. **PEKING-PARI ILMAKEHÄ PÄÄLLÄ** kun juna 179 käännetty (Natiiviseppä ilmoittaa; junassa ilmakeha-kaikkialla d3885f6d1 +
+3. **PEKING-PARI ILMAKEHÄ PÄÄLLÄ** SEURAAVA: juna 179 käännetty (BUILD 75fcc2b1b, käännös 8ab2e947c; skripti skriptit-20261009/vuoro-peking179.sh <junan .app>; simuvuoro pyydetty; junassa ilmakeha-kaikkialla d3885f6d1 +
    peking-vesivari efc88563c): peking3/ktx + VESI peking1/vesi, vuoro-peking3v.sh-malli junan .app:lla, vs Google-kaupunki
    (lokit/linssiseppa2-peking1-pariisi) → PT arvioi oman vesivärikertoimen tarpeen.
 
