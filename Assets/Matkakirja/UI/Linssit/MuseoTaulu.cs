@@ -171,15 +171,22 @@ namespace Matkakirja.Natiivi
         /// Kapea pystyruutu (puhelin; PT 10.10. museo2: Yövartion nimi vei kolme riviä ja alarivi osui kehyksen päälle): nimikyltin
         /// otsikko tyylikirjan Otsikko-koossa, jolloin pisimmätkin nimet (Staalmeesters, 56 merkkiä) mahtuvat kahdelle riville
         /// Poistun vasemmalle puolelle; leveämmällä Nimiö kuten ennen.
+        /// MATALA vaakaruutu (puhelin vaakana; PT 11.10. 00.3x KIIRE, omistaja TF 180: otsikko peitti taulun yläosan): nimikyltti
+        /// ylös (10 pt) ja pienemmäksi, jolloin kyltti vie vain ylimmän ~15 %:n ja taulu (MuseoKierros.Katseluasento: 17–77 %) jää vapaaksi.
         /// </summary>
         void AsetteleNimi()
         {
-            float w = otsikko.parent != null ? otsikko.parent.resolvedStyle.width : 0;
+            float w = otsikko.parent != null ? otsikko.parent.resolvedStyle.width : 0, h = otsikko.parent != null ? otsikko.parent.resolvedStyle.height : 0;
             if (!(w > 0)) return;
-            float koko = w < KapeaLeveys ? Tyylikirja.Koko.Otsikko : Tyylikirja.Koko.Nimio;
+            bool matala = h > 0 && h < MatalaKorkeus;
+            float koko = w < KapeaLeveys || matala ? Tyylikirja.Koko.Otsikko : Tyylikirja.Koko.Nimio;
             if (nimi.resolvedStyle.fontSize != koko) nimi.style.fontSize = koko;
+            float ala = matala ? Tyylikirja.Koko.Leipa : Tyylikirja.Koko.Valiotsikko;
+            if (alarivi.resolvedStyle.fontSize != ala) alarivi.style.fontSize = ala;
+            float yla = matala ? 10f : 76f;
+            if (otsikko.resolvedStyle.top != yla) otsikko.style.top = yla;
         }
-        const float KapeaLeveys = 520f;
+        const float KapeaLeveys = 520f, MatalaKorkeus = 520f;
 
         void AsetteleKortti()
         {

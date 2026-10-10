@@ -5,7 +5,7 @@
 // Linnanrakentajan reitti, tauko/seuraava/edellinen), vapaa kulku (SeikkailuTapit: vasen tappi liike, veto katse) ja teoksen
 // esittely napista (MuseoTaulu, KORTTI-pohja). Näyttämö dioraaman tapaan omassa kerroksessa ja kuvassa (MuseoNayttamo).
 // Testikomennot (linssi-komento.txt): "linssi taidemuseo" avaa; "museo tila|kierros|vapaa|seuraava|edellinen|tauko 0|1|
-// siirry <n>|paikka <x> <z> <yaw> [pitch]|esittele [0|1]|liiku <eteen> <sivulle> <kääntö> <s>|katse <yaw> <pitch>|valotus <ev>|huone [0|1]|sali glb|halli|lod0|lod1|auto"; "museo kuvajuuri <url|pois>", "museo astc pois".
+// siirry <n>|paikka <x> <z> <yaw> [pitch]|teos <nro 1…|id>|esittele [0|1]|liiku <eteen> <sivulle> <kääntö> <s>|katse <yaw> <pitch>|valotus <ev>|huone [0|1]|sali glb|halli|lod0|lod1|auto"; "museo kuvajuuri <url|pois>", "museo astc pois".
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -126,6 +126,7 @@ namespace Matkakirja.Natiivi
             // ASTC (MuseoTekstuurit) on ensisijainen; JPEG vain sen puuttuessa, ettei myöhässä valmistuva JPEG ylikirjoita seinätasoa.
             if (!Astc && !string.IsNullOrEmpty(KuvaJuuri)) o.StartCoroutine(rakennus.LataaKuvat(sali, KuvaJuuri, o.Kirjaa));
             Kierros = new MuseoKierros(sali);
+            if (nayttamo.Kamera != null) Kierros.SovitaPysahdykset(nayttamo.Kamera.aspect);
             teosjarjestys.Clear();
             foreach (int i in Kierros.Pysahdykset) teosjarjestys.Add(sali.HaeRipustus(sali.Reitti[i].Kohde)?.Teos.Id);
             tekstuurit = nayttamo.gameObject.AddComponent<MuseoTekstuurit>();
@@ -163,6 +164,7 @@ namespace Matkakirja.Natiivi
                 Kierros.VapaaLiike(liike.y, liike.x, kaanto, nosto, dt);
             }
             else Kierros.Paivita(dt);
+            if (nayttamo.Kamera != null) Kierros.SovitaPysahdykset(nayttamo.Kamera.aspect);   // vain muuttuessa (kierto, avaus)
             nayttamo.Paivita(sali, Kierros.Nykyinen, dt);
             tekstuurit?.Paivita(nayttamo.Kamera, Kierros.NykyinenTeos?.Teos.Id, teosjarjestys, Kierros.Kohta);
             veistokset?.Paivita(nayttamo.Kamera);
@@ -314,6 +316,14 @@ namespace Matkakirja.Natiivi
                 case "katse" when osat.Length > 3:
                     if (Kierros.Vaihe != MuseoVaihe.Vapaa) Kierros.Vapaa();
                     Kierros.VapaaLiike(0, 0, L(osat[2]) / (MuseoKierros.VapaaKaantoAs * 1.0), L(osat[3]) / (MuseoKierros.VapaaKaantoAs * 1.0), 1.0);
+                    break;
+                case "teos" when osat.Length > 2:
+                    {
+                        var r = int.TryParse(osat[2], NumberStyles.Integer, CultureInfo.InvariantCulture, out int nro) && nro >= 1 && nro <= sali.Ripustukset.Count
+                            ? sali.Ripustukset[nro - 1] : sali.Ripustukset.Find(x => x.Teos.Id == osat[2]);
+                        if (r == null || !Kierros.NaytaTeos(r)) o.Kirjaa($"museo: teos {osat[2]} ei katseluasentoa");
+                        else o.Kirjaa($"museo: teos {r.Teos.Id} {r.Teos.Otsikko} ({r.Paikka.Id}) katseluasento {Kierros.Nykyinen}");
+                    }
                     break;
                 case "paikka" when osat.Length > 4:
                     if (!Kierros.Aseta(L(osat[2]), L(osat[3]), L(osat[4]), osat.Length > 5 ? L(osat[5]) : 0)) o.Kirjaa($"museo: paikka {osat[2]} {osat[3]} ei sallittu");

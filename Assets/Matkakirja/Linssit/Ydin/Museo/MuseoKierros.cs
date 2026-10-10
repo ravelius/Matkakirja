@@ -218,6 +218,76 @@ namespace Matkakirja.Linssit.Museo
             Nykyinen = new MuseoAsento(p, p + suunta);
         }
 
+        // --- Katseluasento (PT 11.10. 00.3x KIIRE, omistaja TF 180: "Taulut näkyvät liian kaukaa ja matalalta") -----------------
+        /// <summary>Museokameran pystysuora näkökenttä (MuseoNayttamo.Kamera.fieldOfView).</summary>
+        public const double KameraFovAste = 58;
+        /// <summary>Teos kehyksineen täyttää tämän osan ruudun korkeudesta (enintään TayttoLeveys leveydestä) ja sen keskipiste on
+        /// KeskiY:n kohdalla ylhäältä: vapaa kaista nimikyltin (ylin ~15 %) ja ohjausnappien (alin ~20 %) välissä.</summary>
+        public const double TayttoKorkeus = 0.60, TayttoLeveys = 0.80, KeskiY = 0.47, LahinM = 0.45, PaspisM = 0.065;   // LahinM: seinävara 0,35 m + 0,1 (pienet grafiikat lähelle)
+        readonly Dictionary<int, (V3 P, V3 Katse)> lrAsennot = new Dictionary<int, (V3, V3)>();
+        public double Kuvasuhde { get; private set; }
+
+        /// <summary>Teoksen katseluasento: silmä teoksen keskikorkeudella ja katse kohtisuoraan seinään (ei vinoa perspektiiviä),
+        /// etäisyys teoksen ulkomitoista (kehys, passepartout) ja ruudun kuvasuhteesta (leveys/korkeus). Jos piste ei ole sallittu
+        /// (seinä, toinen huone), lähemmäs 0,1 m kerrallaan; null, jos mikään ei käy.</summary>
+        public MuseoAsento? Katseluasento(Ripustus r, double kuvasuhde)
+        {
+            if (r?.Paikka == null || kuvasuhde <= 0) return null;
+            var pk = r.Paikka;
+            var (W, H) = Ulkomitat(r);
+            double t = Math.Tan(KameraFovAste / 2 * Math.PI / 180);
+            double d = Math.Max(LahinM, Math.Max(H / 2 / (TayttoKorkeus * t), W / 2 / (TayttoLeveys * kuvasuhde * t)));
+            var n = pk.Normaali; double nl = Math.Sqrt(n.X * n.X + n.Z * n.Z); if (nl < 1e-9) return null;
+            double nx = n.X / nl, nz = n.Z / nl;
+            var c = pk.Keskipiste;
+            for (; d >= LahinM - 1e-9; d -= 0.1)
+            {
+                double silma = c.Y - (0.5 - KeskiY) * 2 * d * t;   // teos hieman ruudun keskikohdan yläpuolelle, ilman kallistusta
+                var p = new V3(c.X + nx * d, silma, c.Z + nz * d);
+                if (Sallittu(p)) return new MuseoAsento(p, new V3(p.X - nx * KatseEteenM, silma, p.Z - nz * KatseEteenM));
+            }
+            return null;
+        }
+
+        /// <summary>Teoksen ulkomitat seinällä (m): kangas + passepartout (grafiikka) + kehysprofiilin leveys molemmin puolin.</summary>
+        public (double W, double H) Ulkomitat(Ripustus r)
+        {
+            var pk = r.Paikka;
+            double kehys = sali.Kehykset.TryGetValue(pk.Kehysprofiili ?? sali.Oletuskehys ?? "", out var prof) ? prof.LeveysCm / 100 : 0.08;
+            double paspis = pk.Grafiikka ? 2 * PaspisM : 0;
+            return (r.Leveys + paspis + 2 * kehys, r.Korkeus + paspis + 2 * kehys);
+        }
+
+        /// <summary>Pysähdysten asennot teoksista ruudun kuvasuhteelle (sovitin kutsuu avauksessa ja kuvasuhteen muuttuessa; LR:n
+        /// reittipiste jää, jos katseluasentoa ei löydy). Pysähdyksessä ollessa asento vaihtuu heti (kierto).</summary>
+        public void SovitaPysahdykset(double kuvasuhde)
+        {
+            if (kuvasuhde <= 0 || Math.Abs(kuvasuhde - Kuvasuhde) < 0.01) return;
+            Kuvasuhde = kuvasuhde;
+            foreach (int i in Pysahdykset)
+            {
+                var rp = sali.Reitti[i];
+                if (!lrAsennot.TryGetValue(i, out var lr)) lrAsennot[i] = lr = (rp.P, rp.Katse);
+                var a = Katseluasento(sali.HaeRipustus(rp.Kohde), kuvasuhde);
+                rp.P = a?.P ?? lr.P; rp.Katse = a?.Katse ?? lr.Katse;
+            }
+            if (Vaihe == MuseoVaihe.Pysahtyy) { var k = sali.Reitti[Pysahdykset[Kohta]]; Nykyinen = new MuseoAsento(k.P, k.Katse); Versio++; }
+            else if (Vaihe == MuseoVaihe.Siirtyy && polku != null && polku.Count > 1)
+            { polku[polku.Count - 1] = sali.Reitti[Pysahdykset[Kohta]].P; polunMatka = Matkat(polku); }   // matkalla oleva siirtymä uuteen päätepisteeseen
+        }
+
+        /// <summary>QA (kuva-arkki kaikista teoksista): vapaa kulku teoksen katseluasentoon nykyisellä kuvasuhteella.</summary>
+        public bool NaytaTeos(Ripustus r)
+        {
+            var a = Katseluasento(r, Kuvasuhde > 0 ? Kuvasuhde : 4.0 / 3);
+            if (a == null) return false;
+            if (Vaihe != MuseoVaihe.Vapaa) Vapaa();
+            var d = a.Value.Suunta;
+            yaw = Math.Atan2(d.X, -d.Z) * 180 / Math.PI; pitch = 0;
+            Nykyinen = a.Value; Versio++;
+            return true;
+        }
+
         /// <summary>QA (LS2 10.10.: kierroksen ulkopuoliset salit kuvaan): vapaa kulku pisteeseen (x, z) suuntaan yaw/pitch (astetta;
         /// yaw 0 = −Z, 90 = +X). Palauttaa false, jos paikka ei ole sallittu (seinässä tai salin ulkopuolella).</summary>
         public bool Aseta(double x, double z, double yawAste, double pitchAste = 0)

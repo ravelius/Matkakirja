@@ -214,6 +214,35 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(k.NykyinenTeos.Teos.Id == "SK-C-5", "siirry Yövartioon");
         }
 
+        [Testi] static void KatseluasentoKaikilleTeoksille()
+        {
+            // PT 11.10. 00.3x KIIRE (omistaja TF 180: "liian kaukaa ja matalalta"): jokainen teos iPhonella ja iPadilla vaakana.
+            var s = Alankomaat(); var k = new MuseoKierros(s);
+            double t = Math.Tan(MuseoKierros.KameraFovAste / 2 * Math.PI / 180);
+            var lyhyet = new System.Collections.Generic.List<string>();
+            foreach (double ks in new[] { 2622.0 / 1206, 4.0 / 3 })
+                foreach (var r in s.Ripustukset)
+                {
+                    var a = k.Katseluasento(r, ks);
+                    Oleta.Tosi(a != null, $"{r.Teos.Id} ({r.Paikka.Id}) {ks:F2}: katseluasento löytyy");
+                    var p = a.Value.P; var d = a.Value.Suunta; var n = r.Paikka.Normaali;
+                    Oleta.Tosi(Math.Abs(d.Y) < 1e-9 && d.X * n.X + d.Z * n.Z < -0.999, $"{r.Teos.Id}: katse vaakasuoraan kohtisuoraan seinään");
+                    double et = (p - r.Paikka.Keskipiste).Pituus;
+                    var (w, h) = k.Ulkomitat(r);   // kehys ja passepartout mukana
+                    double fh = h / (2 * et * t), fw = w / (2 * et * t * ks);
+                    Oleta.Tosi(fh <= MuseoKierros.TayttoKorkeus + 1e-6 && fw <= MuseoKierros.TayttoLeveys + 1e-6, $"{r.Teos.Id} {ks:F2}: mahtuu ({fh:F2} × {fw:F2})");
+                    Oleta.Tosi(Math.Abs(p.Y - r.Paikka.Keskipiste.Y) < 0.04 * et + 1e-6, $"{r.Teos.Id}: silmä teoksen keskikorkeudella ({p.Y:F2} / {r.Paikka.Keskipiste.Y:F2})");
+                    if (fh < 0.50 && fw < 0.70) lyhyet.Add($"{r.Teos.Id} {ks:F2} {fh:F2}/{fw:F2} {et:F1} m");
+                }
+            Oleta.Tosi(lyhyet.Count == 0, "teos täyttää ruudun (huone ei rajaa liikaa): " + string.Join("; ", lyhyet));
+            k.SovitaPysahdykset(2622.0 / 1206);
+            foreach (int i in k.Pysahdykset)
+            {
+                var rp = s.Reitti[i]; var r = s.HaeRipustus(rp.Kohde);
+                Oleta.Tosi((rp.P - k.Katseluasento(r, 2622.0 / 1206).Value.P).Pituus < 1e-9, $"pysähdys {rp.Kohde} katseluasennossa");
+            }
+        }
+
         [Testi] static void AsetaPaikka()
         {
             var k = new MuseoKierros(Alankomaat());
