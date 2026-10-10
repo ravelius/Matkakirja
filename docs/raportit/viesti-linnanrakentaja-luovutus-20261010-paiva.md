@@ -176,3 +176,10 @@ blender.json `linnanrakentaja-linna-v45e` (worktree `/Users/Shared/Claude/wt/lin
 - Tulokset `kaupunkipinnat-v1/vertailu-portti/<kohde>.{json,png,log}`: KL v6j maa −27 % sävy +20, katot +17 % (Copernicus 2 m, vain sisäinen);
   Préfecture v1b maa −19, katot −24, ulokkeet −40 %; Eiffel v1d katot −42, ulokkeet −49 %; ND v4b katot −29, ulokkeet −45 %. Kohdistus täsmää kaikissa.
 - Peking: S2 10 m → vain jalanjälki/maa (ei ajettu, laattoja 24).
+- Vertailuportin suunnitelma lähetetty PT:lle 12.1x (8 riviä; suositus: sitova uusille versioille).
+
+## (12.1x–12.3x) EIFFEL v2 → LS2:lle pelipariin
+- `eiffel-v1/lahde/eiffel_v2.py` (LAHTEET.md v2): pääpalkit geometriana + hieno ristikko alfatekstuurina (MASK, yksi materiaali + atlas 2048 × 1024),
+  Cycles-valo leivottu COLOR_0:aan (ANSA: vertex-leivonta antoi 0, koska palkkien kärjet ovat solmujen sisällä → leivontakopio, tahkot kutistettu 0,8),
+  maa graniitti (CC0) + tornin varjo. Tarkistus `lahde/eiffel_peli.py` (emissio = pelin kaltainen). Portti: maa −1 % → läpi; torni ei vertailukelpoinen
+  (kallistuu ilmakuvassa). v1d: glb-v1d/. Odottaa LS2:n paria (Google vs v2 880/600/250 m) → säätö (väri 136/98/68, valon kontrasti 0,18 + 0,95·valo).
