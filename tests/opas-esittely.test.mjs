@@ -2,7 +2,7 @@
 // mallikutsua; kohde ilman valmista tekstiä ja vapaat toiveet live-mallilla.
 import test, { beforeEach } from 'node:test';
 import assert from 'node:assert/strict';
-import worker, { katseSuunta, katseKaari } from '../tools/pollo/worker.js';
+import worker, { katseSuunta, katseKaari, katseLoppu, laskuOsuus } from '../tools/pollo/worker.js';
 import { tyhjennaReunamuisti } from '../tools/pollo/reuna.js';
 import { tyhjennaKuvalista } from '../tools/pollo/opas-kuvat.js';
 import { oppaanEsittely, kaupunkiId, tyhjennaEsittelyt, valmisKohde, valmiinPaikka } from '../tools/pollo/opas-esittely.js';
@@ -312,9 +312,9 @@ test('historia_polut: kehityskaupunkien historiaosiot (Tukholma, Pariisi) omasta
   assert.deepEqual(Object.keys(OPAS_AINEISTOT.historia_yksityiskohdat_polut).sort(), Object.keys(OPAS_AINEISTOT.historia_polut).sort());
 });
 
-test('esittely_polut: Pariisi v1f (v1e + Louvren paikka pyramidille), äänet ennallaan', async () => {
+test('esittely_polut: Pariisi v1g (v1f + Notre-Damen katse_suunta/katse_loppu/lasku_osuus), äänet ennallaan', async () => {
   const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
-  assert.equal(OPAS_AINEISTOT.esittely_polut.pariisi, 'opas/esittely-v1f/pariisi.json');
+  assert.equal(OPAS_AINEISTOT.esittely_polut.pariisi, 'opas/esittely-v1g/pariisi.json');
 });
 
 test('esittelyn omat lat/lon voittavat kohdelistan (Louvren pyramidi, LS1/PT 10.10.)', async () => {
@@ -368,4 +368,20 @@ test('katse_kaari (LS1/PT 9.10., juna 174): litteä kenttä pysähdykseen, rajat
   assert.equal(d.id, 'Q100'); assert.equal(d.katse_suunta, 295); assert.equal(d.katse_kaari, 12);
   const toka = await opas(env, { kaydyt: ['Q100'], istunto: 'kk1' });
   assert.ok(!('katse_kaari' in toka.d), 'kenttä puuttuu → ei vastauksessa');
+});
+
+test('katse_loppu ja lasku_osuus (LS1/PT 11.10., juna 181): litteät kentät pysähdykseen, rajaukset, puuttuva/virheellinen pois', async () => {
+  assert.deepEqual(katseLoppu(true), { katse_loppu: true });
+  for (const v of [false, undefined, null, 'true', 1, 0, '']) assert.deepEqual(katseLoppu(v), {}, String(v));
+  assert.deepEqual(laskuOsuus(0.5), { lasku_osuus: 0.5 });
+  assert.deepEqual(laskuOsuus(0.05), { lasku_osuus: 0.2 });
+  assert.deepEqual(laskuOsuus(3), { lasku_osuus: 1 });
+  assert.deepEqual(laskuOsuus('0.7'), { lasku_osuus: 0.7 });
+  for (const v of [undefined, null, '', 'hidas', NaN, Infinity]) assert.deepEqual(laskuOsuus(v), {}, String(v));
+  const env = ymparisto();
+  env.OPAS_ESITTELY_TESTI.testila = { ...ESITTELY, kohteet: ESITTELY.kohteet.map((k, i) => (i === 0 ? { ...k, katse_suunta: 117, katse_loppu: true, lasku_osuus: 0.5 } : k)) };
+  const { d } = await opas(env, { toive: 'Esittele kaupunki', istunto: 'kl1' });
+  assert.equal(d.id, 'Q100'); assert.equal(d.katse_suunta, 117); assert.equal(d.katse_loppu, true); assert.equal(d.lasku_osuus, 0.5);
+  const toka = await opas(env, { kaydyt: ['Q100'], istunto: 'kl1' });
+  assert.ok(!('katse_loppu' in toka.d) && !('lasku_osuus' in toka.d), 'kentät puuttuvat → ei vastauksessa');
 });
