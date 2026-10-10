@@ -1,7 +1,7 @@
 # Kaupunkimusiikin pohjatyö, 46 Euroopan kaupunkia (10.10.2026)
 
 Pelikoodarille kehotepohjaksi (kaupunkikohtainen kappale). Kattaa kaupungit, joilta oma kappale vielä puuttuu (16 tehtyä + Pariisi pois): 32 aiempaa pelikaupunkia ja 14 uutta pääkaupunkia (Andorra la Vella, Vaduz, Monaco, San Marino, Vatikaani, Tirana, Minsk, Podgorica, Skopje, Chișinău, Belgrad, Zagreb, Bratislava, Bern). Ei kappaleiden nimiä, elävien artistien nimiä, hymnejä eikä tunnistettavia sävelmiä.
-Huom: soitin- ja tyylifaktat on kirjoitettu agenttien omasta tiedosta (ei verkkotarkistusta); tarkista epävarmat ennen generointia (Lapin joiku-viittaus, Riian paimentorvi/kokle, Sarajevon šargija, Krakovan tornitorvi).
+Huom: soitin-, tyyli- ja tempofaktat on tarkistettu verkkolähteillä 10.10.2026 (Wikipedia + muita lähteitä; epävarmat Lappi, Riika, Sarajevo ja Krakova käyty läpi yksitellen, kaikki 46 kaupunkia luettu läpi). Korjattu tai poistettu: Lappi (kantele suomalainen, kehärumpu ja joiku saamelaisia), Riika (ganurags on sarviklarinetti, ei torvi), Sarajevo (def poistettu, ei vahvistettu; rytmi laulajan ohjaama), Krakova (hejnał on trumpetti; poloneesin tempo), Barcelona, Andorra, Košice (fujara on keskislovakialainen), Lissabon (cavaquinho ja tahtilaji pois), Sisilia, Valletta, Ateena, Vilna, Bergen, Minsk, Podgorica (tamburica pois), Skopje, Chișinău, Belgrad, Ljubljana, Tirana. Loput kohdat (mm. barcarolle 6/8, sardana, rebetikon 9/8 ja 4/4, klapa, lijerica ja linđo, zurla ja tapan, 7/8 ja 11/8, talharpa, langspil, marranzano, żaqq, lyra) ovat lähteiden tai vakiintuneen yleistiedon mukaan oikein (osa vain yleistiedolla, ei erillistä lähdettä). Lähteillä varmistamatta jäi vain yksityiskohtia (esim. skudučiai-soittajien tarkka pillimäärä, fadon tahtilaji, Luxemburgin klarinetit).
 
 Koneluettava versio: `/Users/Shared/Claude/proto-3d/_tyo/sisaltokirjuri/kaupunkimusiikki-20261010/pohja-osa-{1,2,3}.json` (kentät nimi, kuvaus_fi, soittimet, tyylit, rytmi_tempo, nyky_ja_perinne, tunnelma).
 
@@ -49,9 +49,9 @@ Satamakaupungin aamussa soi provencelainen galoubet-huilu ja tamburin-rumpu, jot
 
 Alfaman kapeilla kujilla kuuluu fado: portugalilainen kaksitoistakielinen kitara ja klassinen kitara soittavat saudaden, kaipauksen ja kaihon tunnelmaa. Soittimet kuljettavat hidasta, painavaa tunnelmaa, jonka lomassa raitiovaunun kilinä ja Tejo-joen tuuli kuuluvat taustalla.
 
-- Soittimet: portugalilainen kitara (guitarra portuguesa), klassinen kitara (viola), bassokitara (viola baixo), cavaquinho, harmonikka, viulu
+- Soittimet: portugalilainen kitara (guitarra portuguesa), klassinen kitara (viola), bassokitara (viola baixo), harmonikka, viulu
 - Tyylit: fado, portugalilainen kansanmusiikki, kaupunkilaisballadi ilman sanoja
-- Rytmi ja tempo: Hidas ja vapaasti hengittävä, noin 60–75 iskua minuutissa, 4/4-mitassa; fadon tauot ja viivästetyt aloitukset ovat tärkeitä.
+- Rytmi ja tempo: Hidas ja vapaasti hengittävä, noin 60–75 iskua minuutissa; fadon tauot ja viivästetyt aloitukset ovat tärkeitä.
 - Nykyaika ja perinne: Guitarra portuguesa soi nykyaikaisessa kokoonpanossa pehmeän ambient-alustan ja hienovaraisen sellon kanssa, jolloin saudade tuntuu sekä vanhalta että tältä päivältä.
 - Tunnelma: kaihoisa, lämmin, haikea
 
@@ -61,7 +61,7 @@ Katalonialainen cobla-orkesteri soittaa sardana-tanssia torilla: tenora, tible, 
 
 - Soittimet: tenora, tible, fiscorn, flabiol ja tamborí, trumpetti, pasuuna, kontrabasso, espanjalainen kitara
 - Tyylit: cobla-musiikki, sardana-piirretanssi, rumba catalana, Välimeren kitaramusiikki
-- Rytmi ja tempo: Sardana 6/8-mitassa tasaisen rauhallisesti, noin 100–115 iskua minuutissa; rumba catalana reippaampi ja keinuva, noin 110–125.
+- Rytmi ja tempo: Sardana 6/8- tai 2/4-mitassa tasaisen rauhallisesti, noin 100–120 iskua minuutissa; rumba catalana reippaampi ja keinuva, noin 110–125.
 - Nykyaika ja perinne: Cobla soi nykyaikaisessa kokoonpanossa lämpimien syntikkapintojen ja hienovaraisen tanssirytmin kanssa, mutta tenoran ruokopilliääni pysyy tunnistettavana.
 - Tunnelma: aurinkoinen, ylpeä, tanssillinen
 
@@ -97,17 +97,17 @@ Kallioiden ja linnoitusten kaupungissa soi harmonikka, klarinetti ja pieni vaski
 
 ## Košice
 
-Itä-Slovakian kaupungissa soivat fujara-huilu, dudy-säkkipilli, viulu ja cimbalom-vasaravalkko, ja romanimuusikkojen nopea ja lyyrinen soitto kuuluu kaduilla. Hitaat, vapaat laulumaiset osat vaihtuvat tulisiin tanssimaisiin kuvioihin.
+Itä-Slovakian kaupungissa soivat koncovka-huilu, dudy-säkkipilli, viulu ja cimbalom-vasaravalkko, ja romanimuusikkojen nopea ja lyyrinen soitto kuuluu kaduilla. Hitaat, vapaat laulumaiset osat vaihtuvat tulisiin tanssimaisiin kuvioihin.
 
-- Soittimet: fujara (pitkä alapuhallushuilu), koncovka-huilu, dudy (slovakialainen säkkipilli), viulu, cimbalom, kontrabasso
+- Soittimet: koncovka-huilu, dudy (slovakialainen säkkipilli), viulu, cimbalom, kontrabasso
 - Tyylit: slovakialainen kansanmusiikki, romanimuusikkojen kahvilamusiikki, kaupunkikansanmusiikki
 - Rytmi ja tempo: Hitaasta vapaasta alkuosasta nopeaan 2/4- tai 4/4-tanssiin, noin 70–150 iskua minuutissa; synkopoitu ja rubato-henkinen.
-- Nykyaika ja perinne: Fujaran matala, uninen ääni ja cimbalomin helähtely soivat nykyaikaisessa kokoonpanossa yhdessä kamarijousien ja hienovaraisen elektronisen pulssin kanssa.
+- Nykyaika ja perinne: Koncovka-huilun pehmeä, uninen ääni ja cimbalomin helähtely soivat nykyaikaisessa kokoonpanossa yhdessä kamarijousien ja hienovaraisen elektronisen pulssin kanssa.
 - Tunnelma: kaihoisa, tulinen, itäeurooppalainen
 
 ## Ljubljana
 
-Ljubljanican rantakahviloissa soi slovenialainen alppipolka: tiirikka-harmonikka (frajtonarica), klarinetti, trumpetti, kitara ja basso. Sävy on reipas ja ystävällinen, ja valssit ja ländlerit kutsuvat tanssimaan. Taustalla kuuluu myös sitra ja alppien kansanperinne.
+Ljubljanican rantakahviloissa soi slovenialainen alppipolka: diatoninen harmonikka (frajtonarica), klarinetti, trumpetti, kitara ja basso. Sävy on reipas ja ystävällinen, ja valssit ja ländlerit kutsuvat tanssimaan. Taustalla kuuluu myös sitra ja alppien kansanperinne.
 
 - Soittimet: diatoninen harmonikka (frajtonarica), klarinetti, trumpetti, kitara, kontrabasso, sitra
 - Tyylit: slovenialainen kansanmusiikki, alppipolka, ländler ja valssi, kahvilamusiikki
@@ -117,12 +117,12 @@ Ljubljanican rantakahviloissa soi slovenialainen alppipolka: tiirikka-harmonikka
 
 ## Krakova
 
-Vanhankaupungin torilla soi torvi tornista, ja Kazimierzin kortteleissa klarinetti ja viulu kantavat klezmer-perintöä. Puolalaiset tanssit krakowiak, mazurkka ja poloneesi tuovat rytmiä: viulu, kontrabasso ja harmonikka tekevät niistä eläviä.
+Vanhankaupungin torilla soi trumpettisignaali kirkon tornista, ja Kazimierzin kortteleissa klarinetti ja viulu kantavat klezmer-perintöä. Puolalaiset tanssit krakowiak, mazurkka ja poloneesi tuovat rytmiä: viulu, kontrabasso ja harmonikka tekevät niistä eläviä.
 
 - Soittimet: trumpetti (torvisignaali tornista), klarinetti, viulu, kontrabasso, harmonikka, tsimbali (cimbalom)
 - Tyylit: klezmer, puolalainen kansantanssimusiikki, krakowiak, mazurkka ja poloneesi
-- Rytmi ja tempo: Krakowiak synkopoituna 2/4-mitassa noin 120–140, mazurkka ja poloneesi 3/4-mitassa noin 90–120; klezmer-osat vapaasti rubato-henkisiä.
-- Nykyaika ja perinne: Klarinetin vinkuva klezmer-ääni soi nykyaikaisessa kokoonpanossa jousikvartetin ja hienovaraisen rytmipohjan kanssa, ja tornin torvi kaikuu kaukaa kaupungin yllä.
+- Rytmi ja tempo: Krakowiak synkopoituna 2/4-mitassa noin 120–140, mazurkka ja poloneesi 3/4-mitassa, poloneesi arvokkaan kävelevä ja mazurkka vilkkaampi, yhteensä noin 70–130; klezmer-osat vapaasti rubato-henkisiä.
+- Nykyaika ja perinne: Klarinetin vinkuva klezmer-ääni soi nykyaikaisessa kokoonpanossa jousikvartetin ja hienovaraisen rytmipohjan kanssa, ja tornin trumpettisignaali kaikuu kaukaa kaupungin yllä.
 - Tunnelma: kaihoisa, ylväs, eloisa
 
 ## Alpit
@@ -169,7 +169,7 @@ Ikuisen kaupungin aukioilla soivat kirkonkellot, urut ja suihkulähteiden solina
 
 Sisilian kylätorien ja juhlien äänimaisema: marranzano-leukaharpun värisevä, hypnoottinen sointi kulkee tamburellon kilinän ja zampognan nasaalin ruokopillisävyn päällä. Friscalettu-huilu laulaa ylös-alas kiemurtelevia, arabivaikutteisia modaalisia kulkuja, ja mandoliini ja organetto-harmonikka vetävät tarantellan eteenpäin. Ääni on kuumaa, kuivaa ja maanläheistä.
 
-- Soittimet: marranzano (leukaharppu), zampogna (säkkipilli), friscalettu (puuhuilu), tamburello (kehärumpu), mandoliini, organetto (diatoninen harmonikka)
+- Soittimet: marranzano (leukaharppu), zampogna (säkkipilli), friscalettu (ruokohuilu), tamburello (kehärumpu), mandoliini, organetto (diatoninen harmonikka)
 - Tyylit: sisilialainen tarantella, cantastorie (kiertävän tarinalaulajan tyyli), arabivaikutteinen modaalinen kansanmusiikki
 - Rytmi ja tempo: kuusi kahdeksasosaa, vilkas ja kiihtyvä tanssitempo, noin 120-150 iskua minuutissa
 - Nykyaika ja perinne: Nykyaikaisessa kokoonpanossa marranzanon ja tamburellon rytmit sulautuvat akustiseen bassoon ja hienovaraiseen elektroniseen rumpukuvioon, jolloin muinainen leukaharppu toimii rytmisenä äänivärinä.
@@ -177,9 +177,9 @@ Sisilian kylätorien ja juhlien äänimaisema: marranzano-leukaharpun värisevä
 
 ## Valletta
 
-Vallettan kapeilla kujilla soivat juhlapäivän (festa) vaskisoittokunta ja kirkonkellot, jotka kaikuvat kalkkikivimuurien väliltä. Taustalla kuuluvat maltalaisen kansanmusiikin säkkipilli żaqq, ruokopilli żummara ja tambur-kehärumpu. Akustinen kitara säestää improvisoitua għana-laulutyyliä, jossa melodia on hidasta ja ornamentoitua.
+Vallettan kapeilla kujilla soivat juhlapäivän (festa) vaskisoittokunta ja kirkonkellot, jotka kaikuvat kalkkikivimuurien väliltä. Taustalla kuuluvat maltalaisen kansanmusiikin säkkipilli żaqq, ruokopilli żummara ja tanbur-kehärumpu. Akustinen kitara säestää improvisoitua għana-laulutyyliä, jossa melodia on hidasta ja ornamentoitua.
 
-- Soittimet: żaqq (maltalainen säkkipilli), żummara (ruokopilli), tambur (kehärumpu), akustinen kitara, torvisoittokunnan vaskipuhaltimet, kirkonkellot
+- Soittimet: żaqq (maltalainen säkkipilli), żummara (ruokopilli), tanbur (kehärumpu), akustinen kitara, torvisoittokunnan vaskipuhaltimet, kirkonkellot
 - Tyylit: festa-soittokuntamusiikki, għana (improvisoitu kansanlaulu), välimerellinen kansanmusiikki
 - Rytmi ja tempo: keskitempoinen marssirytmi, noin 100-110 iskua minuutissa, vaihtelee vapaan rytmin għana-osuuksiin
 - Nykyaika ja perinne: Nykyaikaisessa sovituksessa festa-soittokunnan vaskikuvio kohtaa elektronisen bassorummun ja kitaran kaiun, ja żaqq-säkkipilli soi pitkien syntetisaattoripintojen päällä.
@@ -187,7 +187,7 @@ Vallettan kapeilla kujilla soivat juhlapäivän (festa) vaskisoittokunta ja kirk
 
 ## Ateena
 
-Ateenan satamakortteleiden savuinen kaupunkimusiikki: bouzoukin ja baglaman terävä, metallinen sointi kuljettaa rebetikon haikeaa ja uhmakasta tunnelmaa, jota santouri ja harmonikka värittävät. Rytmi on usein 9/8 tai 7/8, jolloin tahti tuntuu epätasaiselta ja vetävältä. Laulut kertovat arjesta ja kaipauksesta, ei juhlinnasta.
+Ateenan satamakortteleiden savuinen kaupunkimusiikki: bouzoukin ja baglaman terävä, metallinen sointi kuljettaa rebetikon haikeaa ja uhmakasta tunnelmaa, jota santouri ja harmonikka värittävät. Rytmi on usein 9/8, jolloin tahti tuntuu epätasaiselta ja vetävältä. Laulut kertovat arjesta ja kaipauksesta, ei juhlinnasta.
 
 - Soittimet: bouzouki, baglamas, santouri (vasaroitu kantele), harmonikka, oud, akustinen kitara
 - Tyylit: rebetiko, laïká (kaupunkilainen kansanmusiikki), smyrneika (Vähän-Aasian kaupunkityyli)
@@ -217,11 +217,11 @@ Dubrovnikin kiviset muurit ja kaikuvat aukiot tekevät klapa-laulusta erityisen:
 
 ## Sarajevo
 
-Sarajevon kahvilamusiikki on itämaisen ja läntisen Euroopan kohtauspaikka: šargija, bosnialainen pitkäkaulainen luuttu, ja def-kehärumpu kantavat sevdahin kaihoisaa tunnelmaa. Harmonikka ja viulu tuovat keski-eurooppalaista sävyä, ja klarinetti kietoutuu laulavaan melodiaan. Rytmi on hidas, ja soinnit tuntuvat pitkiltä ja haikeilta.
+Sarajevon kahvilamusiikki on itämaisen ja läntisen Euroopan kohtauspaikka: šargija, bosnialainen pitkäkaulainen luuttu, ja harmonikka kantavat sevdahin kaihoisaa tunnelmaa. Viulu tuo keski-eurooppalaista sävyä, ja välillä klarinetti kietoutuu laulavaan melodiaan. Rytmi on hidas tai keskitempoinen, ja soinnit tuntuvat pitkiltä ja haikeilta.
 
-- Soittimet: šargija (pitkäkaulainen luuttu), saz, harmonikka, viulu, def (kehärumpu), klarinetti
+- Soittimet: šargija (pitkäkaulainen luuttu), saz, harmonikka, viulu, kontrabasso, klarinetti
 - Tyylit: sevdah (sevdalinka), osmanivaikutteinen kaupunkimusiikki, itä-länsi-kahvilamusiikki
-- Rytmi ja tempo: hidas, vapaasti venyvä tai rauhallinen 2/4, noin 50-80 iskua minuutissa
+- Rytmi ja tempo: hidas tai keskitempoinen, laulajan ohjaama ja vapaasti venyvä, noin 50-80 iskua minuutissa
 - Nykyaika ja perinne: Nykyaikaisessa kokoonpanossa šargijan lämmin soundi yhdistyy kontrabasson ja hillityn jazzmaisen rumpukoukun kanssa, jolloin sevdahin melankolia saa tilavan, yöllisen kahvilatunnelman.
 - Tunnelma: kaihoisa, intiimi, hitaasti sykkivä
 
@@ -267,9 +267,9 @@ Tallinnan keskiaikainen vanhakaupunki soi kaiuttavana ja lämpimänä: kannel ja
 
 ## Riika
 
-Riian kultainen ja runollinen ääni syntyy kokle-kanteleesta, joka soi pehmeästi ja kirkkaasti, sekä dūdas-säkkipillistä ja paimentorvesta. Tuomiokirkon urut täyttävät tilan kuoron kanssa, ja viulu tuo esiin latvialaisen kansanlaulun melodisuutta. Kesäyön juhla ja yhteislaulu ovat perinteen ytimessä.
+Riian kultainen ja runollinen ääni syntyy kokle-kanteleesta, joka soi pehmeästi ja kirkkaasti, sekä dūdas-säkkipillistä ja ganurags-paimenpillistä. Tuomiokirkon urut täyttävät tilan kuoron kanssa, ja viulu tuo esiin latvialaisen kansanlaulun melodisuutta. Kesäyön juhla ja yhteislaulu ovat perinteen ytimessä.
 
-- Soittimet: kokle (latvialainen kantele), dūdas (säkkipilli), ganurags (paimentorvi), urut, viulu
+- Soittimet: kokle (latvialainen kantele), dūdas (säkkipilli), ganurags (paimenen sarviklarinetti), urut, viulu
 - Tyylit: latvialainen kansanmusiikki, kuoromusiikki, uusi jazz
 - Rytmi ja tempo: rauhallinen tai keskitempoinen, noin 70-100 iskua minuutissa, kuoro kantaa pitkiä fraaseja
 - Nykyaika ja perinne: Nykyaikaisessa kokoonpanossa kokle soi uuden jazzin pehmeän pianon ja hiljaisen bassorummun päällä, ja kuorotekstuurit lisäävät sävyä kuin kaikuva katedraali.
@@ -277,12 +277,12 @@ Riian kultainen ja runollinen ääni syntyy kokle-kanteleesta, joka soi pehmeäs
 
 ## Vilna
 
-Vilnan barokkikaupungin ääni on hypnoottinen ja hämyisä: kanklės-kantele ja skudučiai-huiluryhmä rakentavat limittäin kulkevia, moniäänisiä sävelkulkuja, joissa jokainen soittaja puhaltaa vain yhden sävelen. Birbynė-ruokopilli tuo kansanomaisen sävyn, ja viulu ja klarinetti kertovat kaupungin klezmer-perinteestä.
+Vilnan barokkikaupungin ääni on hypnoottinen ja hämyisä: kanklės-kantele ja skudučiai-panhuiluryhmä rakentavat limittäin kulkevia, moniäänisiä sävelkulkuja, joissa jokainen soittaja vastaa vain omasta pillistään. Birbynė-ruokopilli tuo kansanomaisen sävyn, ja viulu ja klarinetti kertovat kaupungin klezmer-perinteestä.
 
-- Soittimet: kanklės (liettualainen kantele), skudučiai (huiluryhmä), birbynė (ruokopilli), viulu, klarinetti
+- Soittimet: kanklės (liettualainen kantele), skudučiai (panhuilu, jota soittaa usea soittaja), birbynė (ruokopilli), viulu, klarinetti
 - Tyylit: liettualainen monisointuinen kansanmusiikki, klezmer, kuoromusiikki, jazz
 - Rytmi ja tempo: rauhallinen tai keskitempoinen, noin 60-90 iskua minuutissa, toistuva kaanonmainen kudos
-- Nykyaika ja perinne: Nykyaikaisessa kokoonpanossa skudučiai-huilujen limittyvät sävelet soivat hitaan syntetisaattoripedin ja kaikuvan pianon päällä, jolloin muinainen kaanon tuntuu minimalistiselta nykymusiikilta.
+- Nykyaika ja perinne: Nykyaikaisessa kokoonpanossa skudučiai-pillien limittyvät sävelet soivat hitaan syntetisaattoripedin ja kaikuvan pianon päällä, jolloin muinainen kaanon tuntuu minimalistiselta nykymusiikilta.
 - Tunnelma: hypnoottinen, barokkinen, hämyinen
 
 ## Bergen
@@ -291,16 +291,16 @@ Bergenin sateinen satamakaupunki soi juhlallisena ja kosteana: hardingfele, jonk
 
 - Soittimet: hardingfele (resonanssikielinen viulu), langeleik (norjalainen sitra), pasuunat ja torvet, virveli- ja marssirummut, urut
 - Tyylit: norjalainen kansanmusiikki, torvisoittokunta, kuoromusiikki, pohjoinen metalli
-- Rytmi ja tempo: marssi noin 100-120 iskua minuutissa, hardingfele-osuudet halling- ja springar-tanssirytmeissä, usein 3/4 tai 6/8
+- Rytmi ja tempo: marssi noin 100-120 iskua minuutissa, hardingfele-osuudet halling- ja springar-tanssirytmeissä: halling 2/4 tai 6/8, springar 3/4
 - Nykyaika ja perinne: Nykyaikaisessa kokoonpanossa hardingfelen kirkas, resonoiva soundi sulautuu raskaan, vääristetyn kitaran ja tumman rumpusoundin kanssa, jolloin perinteen kylmyys kasvaa raskaaksi pohjoiseksi äänimaisemaksi.
 - Tunnelma: synkkä, kostea, juhlallinen
 
 ## Lappi (Rovaniemi)
 
-Lapin avara ja hiljainen äänimaisema syntyy harvoista äänistä: kantele, huilu ja kehärumpu soivat pitkien taukojen välillä. Viulu ja harmonikka tuovat pohjoisen kylätanssien lämpöä, ja joiku-henkinen äänenkäyttö antaa tunnelmaan pohjoisen maan hengen. Ääni on kuin tunturiaukea, kirkas ja kaukainen.
+Lapin avara ja hiljainen äänimaisema syntyy harvoista äänistä: suomalaisen perinteen kantele ja huilu sekä saamelaisen perinteen kehärumpu soivat pitkien taukojen välillä. Viulu ja harmonikka tuovat pohjoisen kylätanssien lämpöä, ja saamelaisen joiun henkeä kunnioittava, sanaton ja toistuva laulanta antaa tunnelmaan pohjoisen maan hengen. Ääni on kuin tunturiaukea, kirkas ja kaukainen.
 
-- Soittimet: kantele, viulu, kehärumpu, harmonikka, huilu
-- Tyylit: pohjoinen kansanmusiikki, ambient, minimalistinen
+- Soittimet: kantele (suomalainen perinne), viulu, kehärumpu (saamelaisen rummun hengessä), harmonikka, huilu
+- Tyylit: pohjoinen kansanmusiikki (suomalainen ja saamelainen vaikutus), ambient, minimalistinen
 - Rytmi ja tempo: hidas, vapaasti hengittävä tai rauhallinen pulssi, noin 50-80 iskua minuutissa
 - Nykyaika ja perinne: Nykyaikaisessa kokoonpanossa kantelen kirkkaat soinnit ja kehärummun pehmeä syke soivat ambient-syntetisaattorin pitkien pintojen päällä, ja äänimaisemaan jää tilaa hiljaisuudelle.
 - Tunnelma: avara, hiljainen, mystinen
@@ -327,10 +327,10 @@ Islannin avarat tulivuorimaisemat ja Reykjavikin hämärä soivat harvasanaisest
 
 ## Andorra la Vella
 
-Pyreneiden vuoristokylän ja katalaanisen kulttuurin sävyjä: coblan puupuhaltimet, kaksoisruokoinen tenora ja pieni flabiol-huilu kulkevat rumpujen kanssa ilmavassa vuoristoilmassa. Contrapàs-tyyppinen kehätanssi ja sardana-henkinen tasainen pulssi antavat rytmin. Harmonikka ja kitara tuovat arjen lämpöä, kellot kajahtavat laaksossa.
+Pyreneiden vuoristokylän ja katalaanisen kulttuurin sävyjä: coblan puupuhaltimet, kaksoisruokoinen tenora ja pieni flabiol-huilu kulkevat rumpujen kanssa ilmavassa vuoristoilmassa. Contrapàs-juhlatanssin kaksi- ja kolmijakoinen vuorottelu ja sardana-henkinen tasainen pulssi antavat rytmin. Harmonikka ja kitara tuovat arjen lämpöä, kellot kajahtavat laaksossa.
 
 - Soittimet: tenora, flabiol-huilu ja tamborí-rumpu, gralla, harmonikka, akustinen kitara, vaskipuhaltimet (cobla), kirkonkellot
-- Tyylit: katalaaninen cobla-musiikki, kehätanssimusiikki (contrapàs-henkinen), pyreneiden kansanmusiikki
+- Tyylit: katalaaninen cobla-musiikki, juhlatanssimusiikki (contrapàs-henkinen), pyreneiden kansanmusiikki
 - Rytmi ja tempo: Rauhallinen ja tasainen, 6/8- ja 2/4-tunnun välillä, noin 90-110 iskua minuutissa.
 - Nykyaika ja perinne: Tenoran lämmin ruokosoundi soi nykyaikaisessa akustisessa kokoonpanossa kitaran ja hienovaraisen kontrabasson rinnalla, ikään kuin cobla tapaisi kaupungin kahvilamusiikin.
 - Tunnelma: ilmava, lämmin, vuoristoinen
@@ -377,9 +377,9 @@ Basilikan valtavassa tilassa soi urkujen syvä basso ja pitkä kaiku. Gregoriaan
 
 ## Tirana
 
-Albanialaisen musiikin ytimessä on moniääninen iso-laulutapa, jossa murisevat bordunat kantavat melodiaa, ja soittimissa çiftelia ja sharkia. Kaupungin toreilla ja häissä klarinetti, harmonikka ja puhallinorkesteri soittavat hurjia ja haikeita tansseja. Daf-kehärumpu pitää pulssin tiukkana.
+Albanialaisen musiikin ytimessä on moniääninen iso-laulutapa, jossa murisevat bordunat tukevat melodiaa, ja soittimissa çiftelia ja sharkia. Kaupungin toreilla ja häissä klarinetti, harmonikka ja puhallinorkesteri soittavat hurjia ja haikeita tansseja. Dajre-tamburiini pitää pulssin tiukkana.
 
-- Soittimet: çifteli, sharki, klarinetti, harmonikka, daf-kehärumpu, lahuta, vaskipuhallinorkesteri (tuuba, trumpetit)
+- Soittimet: çifteli, sharki, klarinetti, harmonikka, dajre (tamburiini), lahuta, vaskipuhallinorkesteri (tuuba, trumpetit)
 - Tyylit: albanialainen iso-moniääninen laulutapa (soitinversio), häätanssimusiikki, kaupunkimainen klarinettimusiikki, vaskisoittokuntamusiikki
 - Rytmi ja tempo: Vaihteleva: haikea hidas osa noin 60-70, sitten vauhdikas tanssi 120-140 iskua minuutissa, osin epäsymmetrisellä tunnolla.
 - Nykyaika ja perinne: Çiftelin terävä, kielisoittimen helinä ja klarinetin kaareva melodia soivat nykyaikaisen perkussiokokoonpanon ja akustisen basson kanssa, jolloin vuoristoperinne kohtaa kaupungin kahvilarytmin.
@@ -387,10 +387,10 @@ Albanialaisen musiikin ytimessä on moniääninen iso-laulutapa, jossa murisevat
 
 ## Minsk
 
-Valkovenäläisen maaseudun ja kaupungin sointi: duda-säkkipilli, kimeä zhaleika-sarvi ja cimbaly-vasaracimbalom soivat harmonikan ja viulun kanssa. Polkan ja kehätanssin reipas 2/4-tahti tuo hilpeyttä, hitaammat sävyt metsien ja jokien rauhaa. Talvinen ilma tekee soinnista kirkkaan ja tummanpuhuvan.
+Valkovenäläisen maaseudun ja kaupungin sointi: duda-säkkipilli, kimeä zhaleika-ruokopilli ja cimbaly-vasaracimbalom soivat harmonikan ja viulun kanssa. Polkan ja kehätanssin reipas 2/4-tahti tuo hilpeyttä, hitaammat sävyt metsien ja jokien rauhaa. Talvinen ilma tekee soinnista kirkkaan ja tummanpuhuvan.
 
-- Soittimet: duda (säkkipilli), zhaleika, cimbaly (vasaracimbalom), harmonikka (bajaani), viulu, jousibasso, puinen huilu (sopilka)
-- Tyylit: valkovenäläinen kansantanssimusiikki, polkka, rituaalimainen kevät- ja kesäjuhlan soitinmusiikki, taraf-tyylinen pienkokoonpano
+- Soittimet: duda (säkkipilli), zhaleika (ruokopilli), cimbaly (vasaracimbalom), harmonikka (bajaani), viulu, jousibasso, puinen huilu (sapilka)
+- Tyylit: valkovenäläinen kansantanssimusiikki, polkka, rituaalimainen kevät- ja kesäjuhlan soitinmusiikki, perinteinen pienkokoonpano
 - Rytmi ja tempo: Reipas, kevyt 2/4-polkkatahti noin 110-130 iskua minuutissa; välillä hitaampi, ilmava 3/4-osuus.
 - Nykyaika ja perinne: Dudan matala burdunaääni ja cimbalyn helisevä sointi kuuluvat nykyaikaisessa folk-yhtyeessä, jossa kontrabasso, kehärumpu ja hillitty elektroninen rytmipohja viestivät kaupungin nykypäivästä.
 - Tunnelma: kirkas, metsäinen, talvinen
@@ -399,7 +399,7 @@ Valkovenäläisen maaseudun ja kaupungin sointi: duda-säkkipilli, kimeä zhalei
 
 Montenegron vuoristojen ja Morača-joen äänimaisema: yksikielinen gusle-jousisoitin säestää matalaa, juhlallista resitointia ilman sanoja, ja šargija sekä harmonikka tuovat tanssiin vauhtia. Kuivassa kesäilmassa vaskisoittokunta soittaa oro-kehätansseja. Kovat kalliot ja tuulinen laakso kuuluvat jokaisessa soinnissa.
 
-- Soittimet: gusle, šargija, harmonikka, klarinetti, frula (paimenhuilu), vaskisoittokunta (trumpetit, tuuba, virveli), tamburica
+- Soittimet: gusle, šargija, harmonikka, klarinetti, frula (paimenhuilu), vaskisoittokunta (trumpetit, tuuba, virveli)
 - Tyylit: dinaarinen kansanmusiikki, oro-kehätanssimusiikki, balkanilainen vaskisoittokunta, gusle-säestys
 - Rytmi ja tempo: Gusle-osio vapaa ja rauhallinen, noin 60; oro-tanssi reipas ja pulssimainen, noin 110-140 iskua minuutissa.
 - Nykyaika ja perinne: Guslen kuiva, kaareva jousisointi yhdistyy nykyaikaisen jousiyhtyeen ja hienon perkussiopohjan kanssa, jolloin vuoristoeepoksen vakavuus saa elokuvamaisen, modernin ilmeen.
@@ -407,7 +407,7 @@ Montenegron vuoristojen ja Morača-joen äänimaisema: yksikielinen gusle-jousis
 
 ## Skopje
 
-Vanhan basaarin kaduilla kumisee suuri tapan-rumpu ja zurla-oboe soi terävästi. Gajda-säkkipilli, kaval-huilu ja klarinetti kuljettavat hypnoottisia, epäsymmetrisiä tahteja kuten 7/8 ja 11/8. Hääsoittoa muistuttava, rento ja intohimoinen tunnelma sekä romanialaisten vaskipuhaltimien sävyt tekevät soinnista värikkään.
+Vanhan basaarin kaduilla kumisee suuri tapan-rumpu ja zurla-oboe soi terävästi. Gajda-säkkipilli, kaval-huilu ja klarinetti kuljettavat hypnoottisia, epäsymmetrisiä tahteja kuten 7/8 ja 11/8. Hääsoittoa muistuttava, rento ja intohimoinen tunnelma sekä romanimuusikoiden vaskipuhaltimien sävyt tekevät soinnista värikkään.
 
 - Soittimet: tapan (suuri rumpu), zurla, gajda, kaval, klarinetti, tambura, vaskipuhaltimet
 - Tyylit: makedonialainen häätanssimusiikki, epäsymmetrisen tahdin kansantanssit, romanimusiikin vaskisoittokuntatyyli, kaupunkikahviloiden pienkokoonpano
@@ -421,7 +421,7 @@ Moldovalainen taraf-yhtye soittaa puistoissa ja viinikellareissa: țambal-vasara
 
 - Soittimet: țambal (cimbalom), nai (panhuilu), cobza, fluier (huilu), viulu, klarinetti, harmonikka, kontrabasso
 - Tyylit: moldovalainen lăutărească-taraf-musiikki, doina (vapaa soolo), hora ja sârba -tyyliset tanssit, puhallinorkesteri (fanfară)
-- Rytmi ja tempo: Doina vapaa ja haikea, noin 50-60; hora kiertävä 3/8 noin 90-110; sârba nopea 2/4 noin 150-170.
+- Rytmi ja tempo: Doina vapaa ja haikea, noin 50-60; hora kiertävä 2/4 noin 90-110; sârba nopea 2/4 noin 150-170.
 - Nykyaika ja perinne: Panhuilun hento sointi ja cimbalomin sirpaleinen helinä soivat nykyisessä jazz-sävytteisessä kokoonpanossa, jossa kontrabasso ja vähäeleinen rumpupohja tuovat uuden, kaupunkimaisen kehyksen.
 - Tunnelma: haikea, hilpeä, viinintuoksuinen
 
@@ -432,7 +432,7 @@ Tonavan ja Savan yhtymäkohdan suurkaupungissa kuuluu kafanan harmonikka, viulu 
 - Soittimet: harmonikka, viulu, klarinetti, vaskisoittokunta (trumpetit, tuuba, flyygelitorvet), frula, tamburica, kontrabasso
 - Tyylit: balkanilainen vaskisoittokunta, kafana-kaupunkimusiikki, kolo-kehätanssi, vojvodinalainen tamburica-musiikki
 - Rytmi ja tempo: Kolo nopea ja pulssimainen, noin 130-160 iskua minuutissa; kafana-osuus hitaampi ja haikea, noin 70-90.
-- Nykyaika ja perinne: Vaskisoittokunnan rouheat, nopeat torvikuviot soivat nykyaikaisessa jazz- ja funk-kokoonpanossa, jossa urkuprosessori ja basso antavat modernin, yöllisen suurkaupungin sävyn.
+- Nykyaika ja perinne: Vaskisoittokunnan rouheat, nopeat torvikuviot soivat nykyaikaisessa jazz- ja funk-kokoonpanossa, jossa urut ja basso antavat modernin, yöllisen suurkaupungin sävyn.
 - Tunnelma: tulinen, yöllinen, rosoinen
 
 ## Zagreb
