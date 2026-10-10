@@ -11,6 +11,7 @@
 // yhteensopivina.
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Matkakirja.Peli
 {
@@ -30,7 +31,21 @@ namespace Matkakirja.Peli
         public bool Saari;
         public bool Lentokentta;
         public bool Aloitus;
+        /// <summary>Alkulennon kohde (paketin lahtokohde = webin ETUSIVUN_KOHTEET; omistaja 10.10. 23.4x); null = kenttä puuttuu.</summary>
+        public bool? Lahtokohde;
         public string Tyyppi;    // ambience, esim. "kaupunki"
+
+        /// <summary>
+        /// Alkulennon kohteet listan järjestyksessä: jos paketissa on lahtokohde-kenttä (ainakin yhdellä kaupungilla),
+        /// valitaan lahtokohde == true; muuten aloitus kuten ennen (vanhat paketit). Aloitus jää Mannerlennon ja
+        /// aarteiden sijoituksen kentäksi (Kaupat, Laatat), joten kohteiden piilotus ei muuta niitä.
+        /// </summary>
+        public static List<Kaupunki> Lahtokohteet(IEnumerable<Kaupunki> kaupungit)
+        {
+            var lista = kaupungit.ToList();
+            bool kentta = lista.Any(k => k.Lahtokohde.HasValue);
+            return lista.Where(k => kentta ? k.Lahtokohde == true : k.Aloitus).ToList();
+        }
     }
 
     /// <summary>
