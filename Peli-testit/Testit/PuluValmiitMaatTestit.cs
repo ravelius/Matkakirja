@@ -43,6 +43,13 @@ namespace Matkakirja.Peli.Testit
             "kohde:sutjeska / perućica-aarniometsä",                                                 // BIH (linkki muodossa [[Perućican]])
             "kohde:travnik / dinaaristen alppien",                                                   // BIH (linkki vain Neretvan kohteissa)
             "kohde:hahmotelma-altmunster / rudolfin",                                                // LUX (ei linkkiä missään vastauksessa)
+            "kohde:hahmotelma-butrint / kylpylät",                                                   // ALB (ei linkkiä)
+            "kohde:hahmotelma-vanha-minsk / luftwaffe",                                              // BLR (ei linkkiä)
+            "kohde:sorokan-linnoitus / tapani suuri", "kohde:milestii-mici / guinnessin ennätyskirjaan",
+            "kohde:cricovan-viinikellarit / kalkkikiveä", "kohde:tipovan-luostari / osmanien valtakuntaa",
+            "kohde:hahmotelma-orheiul-vechi / krimin tataarien", "kohde:hahmotelma-orheiul-vechi / luolaluostareihin",
+            "kohde:hahmotelma-orheiul-vechi / luolaluostareita",                                     // MDA (linkit muissa muodoissa tai kohteissa)
+            "kohde:taran-kanjoni / drinaan",                                                         // MNE (linkki vain Biogradska gorassa ja Plavjärvellä)
         };
 
         static void Maa(string maa, int kohtia, int kysymyksia, int lisaa)
