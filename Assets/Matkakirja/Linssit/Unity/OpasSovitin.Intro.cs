@@ -40,7 +40,9 @@ namespace Matkakirja.Natiivi
         double AvausLisaS => (OpastusKuultu || opastusSiirretty ? 0 : OpastusArvioS) + AvausLepoS;
         /// <summary>Avauksen ääni odottaa intron aikajanaa (33,5 s tai ilman C5:tä 31,5 s).</summary>
         bool IntroOdottaa() => introKaynnissa && !introAvausVapaa;
-        bool IntroVoimassa(int versio) => versio == introVersio && silmukka != null && Kaupunkitila && Viimeisin == this;
+        bool IntroVoimassa(int versio) => versio == introVersio && silmukka != null && Kaupunkitila && Viimeisin == this && KaupunkitilaId == introKaupunki;
+        /// <summary>Kaupunki, jonka intro on käynnissä (kaupungin vaihto päättää sen, TF 176).</summary>
+        string introKaupunki;
 
         /// <summary>Komento "opas intro tila".</summary>
         public static string IntroTila()
@@ -72,7 +74,7 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa($"opas: intro {kaupunkiId} ohitettu: vapaa muisti {vapaaAlussa / 1e9:F2} Gt < {IntroOhitusRajaGt:F1} Gt (avaus kuten ennen)");
                 return false;
             }
-            introKaynnissa = true; introAvausVapaa = false; introOhitusPyynto = false;
+            introKaynnissa = true; introAvausVapaa = false; introOhitusPyynto = false; introKaupunki = kaupunkiId;
             opastusSiirretty = !OpastusKuultu;
             o.StartCoroutine(EsitysIntro(kaupunkiId, ++introVersio));
             return introKaynnissa;   // ilman kaupunkijaksoa intro päättyy heti (avaus ja opastus kuten ennen)
