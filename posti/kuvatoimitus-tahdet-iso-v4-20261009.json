@@ -1,0 +1,276 @@
+{
+  "task": "tahdet-foto-iso-v4-20261009",
+  "taskNumber": 60,
+  "requestedImages": 1,
+  "generationLimit": 2,
+  "generationCalls": 2,
+  "imageCount": 1,
+  "omittedItems": [],
+  "allR2ReadbacksByteExact": true,
+  "productionComplete": true,
+  "editorAcceptance": false,
+  "gameIntegrated": false,
+  "published": false,
+  "updatedAt": "2026-10-10T11:33:05.201839+00:00",
+  "publicImageDataOnly": true,
+  "assets": [
+    {
+      "sha256": "268f57496c29246c9ce1c7642c8c350552136620db8e5be020efce2540459aa4",
+      "bytes": 134254,
+      "dimensions": [
+        1600,
+        900
+      ],
+      "format": "JPEG",
+      "quality": 90,
+      "mode": "RGB",
+      "opaque": true,
+      "caption": "Otava ja Pohjantähti pimeän järven yllä, messinkinen kaukoputki rannalla. Havainnekuva.",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "method": "New builtin imagegen attempt2; no input images for selected generation; full-canvas normalization only; owner-permitted relocation of eight new-generated star PSFs to exact coordinates; scene preserved before JPEG; final decoded-JPEG pixel detection measured centroids, aperture flux and segment directions.",
+      "r2Key": "linssikatalogi/tahdet-foto-iso-v4.jpg",
+      "url": "https://media.matkakirja.app/linssikatalogi/tahdet-foto-iso-v4.jpg?t=268f57496c29246c",
+      "canonicalUrl": "https://media.matkakirja.app/linssikatalogi/tahdet-foto-iso-v4.jpg",
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "cacheBustedPreflightHttp": 404,
+      "cacheBustedReadback": true,
+      "byteExactReadback": true,
+      "conditionalIfNoneMatch": "*",
+      "s3PutHttp": 200,
+      "id": "tahdet-foto-iso-v4",
+      "filename": "tahdet-foto-iso-v4.jpg",
+      "generationPrompt": "Generate ONE wholly NEW photographic-looking night landscape from this TEXT ONLY. NO input image copying or editing. 16:9 landscape, 1600 × 900, opaque RGB. Real-camera photograph aesthetic: quiet dark Finnish lake, low distant conifer tree line, natural dark navy/black sky, subtle photographic noise, subdued natural colors. A brass refracting telescope with believable small eyepiece and optical tube is on a wooden tripod in the lower RIGHT, below y=670, not glowing, no people. The highest forest peaks must be BELOW y=650. The lake and shoreline occupy only the lower quarter. No moon, no Milky Way, no clouds across principal stars, no city, no buildings, no text or logo, no HDR, no CGI, no painting.\n\nCRITICAL: There are NO constellation lines at all. NO connecting lines of any brightness, NO polygon, NO dotted path, NO thread, NO faint diagram. Just isolated photographic stellar POINTS in a natural dark sky. NO rings, NO labels, NO names, NO letters, NO digits, NO graphical icons, NO decorative rays or cross-shaped flares. All sky features are points or natural photographic grain, with clean dark sky between them.\n\nPlace EXACTLY EIGHT visible main stellar points at these positions on the 1600 × 900 canvas. Origin upper-left; x rightward, y downward. Coordinates below are instructions, not image text. Tiny white/neutral core, subtle photographic optical glow, never large circles. Seven Big Dipper stars form a compact low central pattern between x=583 and x=884, y=441 and y=585. Polaris is separate above them at x=760, y=120. Do not move the whole pattern upward, rotate or mirror it. The tree line is below the entire pattern.\n\nPohjantähti / Polaris at (760,120), magnitude 2.0.\nDubhe at (861,441), magnitude 1.8.\nMerak at (884,502), magnitude 2.4.\nPhecda at (804,553), magnitude 2.4.\nMegrez at (765,514), magnitude 3.3: unmistakably the DIMMEST of the seven Big Dipper stars, but visible.\nAlioth at (701,524), magnitude 1.8.\nMizar at (649,528), magnitude 2.3.\nAlkaid at (583,585), magnitude 1.9.\n\nOnly these seven Big Dipper points and Polaris may be bright. No Mizar double star or Alcor companion. A few background stars outside the pattern may be very faint and much dimmer than Megrez. In x=520..950 and y=390..630, absolutely NO extra principal star, no lines and no background point similarly bright to any of the seven. Keep the upper sky sparse as well. Do not add another constellation. Make the physical landscape and telescope real and natural; astronomical precision governs ONLY the eight point locations.\n",
+      "measuredStars": [
+        {
+          "star": "Pohjantähti",
+          "target": [
+            760,
+            120
+          ],
+          "measured": [
+            760.093038247309,
+            119.97773517003023
+          ],
+          "deviationPx": 0.0956652398518403,
+          "maxAllowedPx": 16,
+          "pass": true,
+          "peakLuminance": 246.0666,
+          "peakExcessLuminance": 224.5151,
+          "integratedExcessR6": 5611.8641
+        },
+        {
+          "star": "Dubhe",
+          "target": [
+            861,
+            441
+          ],
+          "measured": [
+            860.8719212577704,
+            440.93827779340376
+          ],
+          "deviationPx": 0.142175226387113,
+          "maxAllowedPx": 16,
+          "pass": true,
+          "peakLuminance": 254.14959999999996,
+          "peakExcessLuminance": 228.41439999999997,
+          "integratedExcessR6": 5023.682999999999
+        },
+        {
+          "star": "Merak",
+          "target": [
+            884,
+            502
+          ],
+          "measured": [
+            884.0773788454276,
+            502.12342255280555
+          ],
+          "deviationPx": 0.1456729633828575,
+          "maxAllowedPx": 16,
+          "pass": true,
+          "peakLuminance": 253.72439999999997,
+          "peakExcessLuminance": 224.13359999999997,
+          "integratedExcessR6": 4589.6782
+        },
+        {
+          "star": "Phecda",
+          "target": [
+            804,
+            553
+          ],
+          "measured": [
+            803.9801661234039,
+            552.9747398448934
+          ],
+          "deviationPx": 0.032116321346586145,
+          "maxAllowedPx": 16,
+          "pass": true,
+          "peakLuminance": 254.14959999999996,
+          "peakExcessLuminance": 224.41439999999997,
+          "integratedExcessR6": 3611.9413999999997
+        },
+        {
+          "star": "Megrez",
+          "target": [
+            765,
+            514
+          ],
+          "measured": [
+            764.9421869451235,
+            514.1846203774187
+          ],
+          "deviationPx": 0.19346067577773732,
+          "maxAllowedPx": 16,
+          "pass": true,
+          "peakLuminance": 172.94379999999998,
+          "peakExcessLuminance": 146.35299999999998,
+          "integratedExcessR6": 686.5265999999999
+        },
+        {
+          "star": "Alioth",
+          "target": [
+            701,
+            524
+          ],
+          "measured": [
+            700.955330203717,
+            524.0128623647236
+          ],
+          "deviationPx": 0.046484740789242376,
+          "maxAllowedPx": 16,
+          "pass": true,
+          "peakLuminance": 254.14959999999996,
+          "peakExcessLuminance": 225.05619999999996,
+          "integratedExcessR6": 3827.476599999999
+        },
+        {
+          "star": "Mizar",
+          "target": [
+            649,
+            528
+          ],
+          "measured": [
+            648.9825119311639,
+            528.1306833609505
+          ],
+          "deviationPx": 0.13184829684498403,
+          "maxAllowedPx": 16,
+          "pass": true,
+          "peakLuminance": 253.08659999999998,
+          "peakExcessLuminance": 223.84879999999998,
+          "integratedExcessR6": 2849.8057999999996
+        },
+        {
+          "star": "Alkaid",
+          "target": [
+            583,
+            585
+          ],
+          "measured": [
+            582.9088970519675,
+            585.013057772841
+          ],
+          "deviationPx": 0.09203397509492603,
+          "maxAllowedPx": 16,
+          "pass": true,
+          "peakLuminance": 253.72439999999997,
+          "peakExcessLuminance": 221.13359999999997,
+          "integratedExcessR6": 3946.767999999999
+        }
+      ],
+      "measuredSegments": [
+        {
+          "segment": "Dubhe→Merak",
+          "targetDirectionDeg": 69.3,
+          "measuredDirectionDeg": 69.22995633157718,
+          "deviationDeg": 0.07004366842281229,
+          "maxAllowedDeg": 5,
+          "pass": true
+        },
+        {
+          "segment": "Merak→Phecda",
+          "targetDirectionDeg": 147.5,
+          "measuredDirectionDeg": 147.58976115305543,
+          "deviationDeg": 0.0897611530554343,
+          "maxAllowedDeg": 5,
+          "pass": true
+        },
+        {
+          "segment": "Phecda→Megrez",
+          "targetDirectionDeg": -135.0,
+          "measuredDirectionDeg": -135.18246966810554,
+          "deviationDeg": 0.18246966810554,
+          "maxAllowedDeg": 5,
+          "pass": true
+        },
+        {
+          "segment": "Megrez→Dubhe",
+          "targetDirectionDeg": -37.2,
+          "measuredDirectionDeg": -37.36323955398076,
+          "deviationDeg": 0.16323955398075896,
+          "maxAllowedDeg": 5,
+          "pass": true
+        },
+        {
+          "segment": "Megrez→Alioth",
+          "targetDirectionDeg": 171.1,
+          "measuredDirectionDeg": 171.26773750729777,
+          "deviationDeg": 0.16773750729777248,
+          "maxAllowedDeg": 5,
+          "pass": true
+        },
+        {
+          "segment": "Alioth→Mizar",
+          "targetDirectionDeg": 175.6,
+          "measuredDirectionDeg": 175.46990260728109,
+          "deviationDeg": 0.13009739271890908,
+          "maxAllowedDeg": 5,
+          "pass": true
+        },
+        {
+          "segment": "Mizar→Alkaid",
+          "targetDirectionDeg": 139.2,
+          "measuredDirectionDeg": 139.2750391153423,
+          "deviationDeg": 0.07503911534232088,
+          "maxAllowedDeg": 5,
+          "pass": true
+        },
+        {
+          "segment": "Dubhe→Pohjantähti",
+          "targetDirectionDeg": -107.5,
+          "measuredDirectionDeg": -107.43184542215481,
+          "deviationDeg": 0.06815457784517776,
+          "maxAllowedDeg": 5,
+          "pass": true
+        }
+      ],
+      "brightness": {
+        "metric": "Sum of positive excess Rec.709 luminance within radius 6 px above median annulus 7..10 px background, measured from decoded image pixels",
+        "megrezFlux": 686.5265999999999,
+        "nextDimmestBigDipperFlux": 2849.8057999999996,
+        "megrezToNextDimmestRatio": 0.24090294152675246,
+        "megrezDimmestBigDipperPass": true,
+        "megrezClearlyDimmestObservedPass": true,
+        "mainStarCount": 8,
+        "brightDetectionThresholdFlux": 514.8949499999999,
+        "detectedStarsAboveThreshold": 8,
+        "extraSimilarlyBrightStars": [],
+        "extraSimilarlyBrightStarsPass": true,
+        "brightestNonMainFlux": 343.74940000000004,
+        "brightestNonMainFluxInPattern": 203.97559999999976,
+        "inPatternBackgroundFluxToMegrezRatio": 0.29711244983078555
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "rootVisualObservations": "Tumma yötaivas, järvi ja metsänreuna; messinkinen kaukoputki oikealla. Kahdeksan päätähteä, ei havaittuja viivoja, tekstiä tai ihmisiä. Megrez selvästi himmein.",
+      "rootIndependentGeometryVerification": true,
+      "limits": [
+        "Kirkkaus on valmiin kuvapinnan apertuuriluminanssia, ei kalibroitua tähtifotometriaa.",
+        "Pieni optinen ja JPG-kvantisaatiosta tuleva asymmetria on huomioitu mitatuissa keskipisteissä."
+      ]
+    }
+  ]
+}
